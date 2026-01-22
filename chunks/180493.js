@@ -1,4 +1,7 @@
-i.d(n, { default: () => h }), i(896048);
+i.d(n, {
+    default: () => h,
+}),
+    i(896048);
 var l = i(627968),
     e = i(64700),
     a = i(284009),
@@ -10,6 +13,7 @@ var l = i(627968),
     u = i(130771),
     p = i(269927),
     g = i(985018);
+
 function h(t) {
     var n, i;
     let { transitionState: a, application: h, onClose: m } = t,
@@ -61,7 +65,9 @@ function h(t) {
                       messageType: d.YCn.WARNING,
                       children: [
                           g.intl.string(g.t.Caz8nL),
-                          (0, l.jsx)(d.hKd, { size: 4 }),
+                          (0, l.jsx)(d.hKd, {
+                              size: 4,
+                          }),
                           (0, l.jsx)(d.Text, {
                               variant: "text-sm/normal",
                               children: g.intl.string(g.t.u4ddHZ),
@@ -75,7 +81,9 @@ function h(t) {
                       children: j.message,
                   })
                 : null,
-            (0, l.jsx)(d.hKd, { size: 16 }),
+            (0, l.jsx)(d.hKd, {
+                size: 16,
+            }),
             (0, l.jsx)(d.l6P, {
                 selectionMode: "single",
                 label: I ? g.intl.string(g.t.xZ6ZL6) : g.intl.string(g.t.bfmKdK),

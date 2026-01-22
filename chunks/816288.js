@@ -1,9 +1,12 @@
-n.d(t, { A: () => x }), n(896048);
+n.d(t, {
+    A: () => x,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
     a = n.n(i),
-    s = n(432022),
+    s = n(108531),
     o = n(158954),
     c = n(311907),
     u = n(397927),
@@ -18,6 +21,7 @@ var r = n(627968),
     y = n(333354),
     O = n(985018),
     j = n(375395);
+
 function v(e) {
     let { guild: t, withMargin: i } = e,
         v = (0, m.A)(t),
@@ -46,7 +50,9 @@ function v(e) {
             [_, t.premiumSubscriberCount],
         );
     l.useEffect(() => {
-        I({ width: "calc(".concat(C, "% - 4px)") });
+        I({
+            width: "calc(".concat(C, "% - 4px)"),
+        });
     }, [C, I]);
     let N = _ >= v;
     return (0, r.jsx)(u.DUT, {
@@ -61,7 +67,9 @@ function v(e) {
         onClick: () => {
             E();
         },
-        className: a()(j.kL, { [j.aF]: i }),
+        className: a()(j.kL, {
+            [j.aF]: i,
+        }),
         onContextMenu: (e) => {
             x &&
                 (0, d.L3)(e, async () => {
@@ -95,7 +103,10 @@ function v(e) {
                                 }
                                 return e;
                             })({}, n)),
-                            (i = i = { guild: t }),
+                            (i = i =
+                                {
+                                    guild: t,
+                                }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(i))
                                 : (function (e, t) {
@@ -116,9 +127,13 @@ function v(e) {
         children: (0, r.jsxs)("div", {
             className: j.hQ,
             children: [
-                (0, r.jsx)("div", { className: j.L$ }),
+                (0, r.jsx)("div", {
+                    className: j.L$,
+                }),
                 (0, r.jsx)(s.animated.div, {
-                    className: a()(j.qB, { [j.mu]: C <= 5 }),
+                    className: a()(j.qB, {
+                        [j.mu]: C <= 5,
+                    }),
                     style: S,
                 }),
                 (0, r.jsxs)("div", {
@@ -147,7 +162,9 @@ function v(e) {
                                     className: a()(j.Qq, j.ue),
                                     variant: "text-xs/semibold",
                                     children: N
-                                        ? O.intl.formatToPlainString(y.default["Ehpq+7"], { appliedBoostCount: _ })
+                                        ? O.intl.formatToPlainString(y.default["Ehpq+7"], {
+                                              appliedBoostCount: _,
+                                          })
                                         : O.intl.formatToPlainString(y.default["/rbPDs"], {
                                               appliedBoostCount: _,
                                               maxBoostCount: v,
@@ -167,6 +184,7 @@ function v(e) {
         }),
     });
 }
+
 function x(e) {
     let { guild: t, withMargin: n } = e;
     return (0, r.jsx)(v, {

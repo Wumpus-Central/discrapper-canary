@@ -1,4 +1,7 @@
-n.d(t, { A: () => h }), n(896048);
+n.d(t, {
+    A: () => h,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -9,6 +12,7 @@ var r = n(627968),
     u = n(442433);
 n(687599);
 var d = n(102752);
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,6 +38,7 @@ function p(e) {
     }
     return e;
 }
+
 function f(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -100,7 +105,13 @@ let h = function (e) {
                                                     n.e("32418"),
                                                     n.e("99871"),
                                                 ]).then(n.bind(n, 668569));
-                                                return (t) => (0, r.jsx)(e, f(p({}, t), { user: h }));
+                                                return (t) =>
+                                                    (0, r.jsx)(
+                                                        e,
+                                                        f(p({}, t), {
+                                                            user: h,
+                                                        }),
+                                                    );
                                             },
                                             {
                                                 onClose: () => {
@@ -119,7 +130,9 @@ let h = function (e) {
                             },
                             e,
                         ),
-                        { children: l(O || b || I) },
+                        {
+                            children: l(O || b || I),
+                        },
                     ),
                 ),
             }),

@@ -1,10 +1,13 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var i = n(627968),
     l = n(158954),
     s = n(311907),
     r = n(610136),
     a = n(594061),
     d = n(985018);
+
 function o(e) {
     let { guildId: t } = e,
         n = (0, s.bG)([r.A], () => r.A.getGuildAlertSettings()[t]);

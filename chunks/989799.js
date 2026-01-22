@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -11,6 +13,7 @@ var r = n(627968),
     f = n(237248),
     p = n(338821),
     _ = n(732611);
+
 function h(e) {
     let {
             guildId: t,
@@ -30,7 +33,9 @@ function h(e) {
             defaultSoundsOnly: T,
         } = e,
         { fetching: C, maybeFetchData: N } = (0, f.A)(),
-        R = (0, d.A)({ location: "SoundboardSoundPicker" }),
+        R = (0, d.A)({
+            location: "SoundboardSoundPicker",
+        }),
         { analyticsLocations: w } = (0, c.Ay)(l.A.SOUNDBOARD_POPOUT);
     return (
         i.useEffect(() => {

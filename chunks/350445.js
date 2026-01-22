@@ -52,7 +52,9 @@ e.exports = function (e, t, n, d) {
                               done: !0,
                               value: r(e, n, t, i),
                           }
-                    : { done: !1 };
+                    : {
+                          done: !1,
+                      };
             });
         i(String.prototype, e, m[0]), i(u, f, m[1]);
     }

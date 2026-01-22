@@ -1,4 +1,8 @@
-n.d(t, { A: () => N }), n(321073), n(896048);
+n.d(t, {
+    A: () => N,
+}),
+    n(321073),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(158954),
@@ -15,6 +19,7 @@ var r = n(627968),
     m = n(926140),
     g = n(985018),
     E = n(777563);
+
 function b(e, t, n) {
     return (
         t in e
@@ -28,6 +33,7 @@ function b(e, t, n) {
         e
     );
 }
+
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -44,6 +50,7 @@ function y(e) {
     }
     return e;
 }
+
 function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -56,6 +63,7 @@ function O(e, t) {
     }
     return n;
 }
+
 function A(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -67,11 +75,17 @@ function A(e, t) {
         e
     );
 }
+
 function v() {}
 let S = [m.rD.VOICE_CHANNEL];
+
 function I(e) {
-    e.setOptions({ voiceChannelGuildFilter: null }), e.setLimit(1 / 0);
+    e.setOptions({
+        voiceChannelGuildFilter: null,
+    }),
+        e.setLimit(1 / 0);
 }
+
 function T() {
     return (0, r.jsx)("div", {
         className: E.i1,
@@ -83,6 +97,7 @@ function T() {
         }),
     });
 }
+
 function C(e) {
     let t = "" !== e,
         n = (0, s.yK)([p.Ay, f.A, h.A], () => {
@@ -97,6 +112,7 @@ function C(e) {
         }, [t]);
     return t ? null : n;
 }
+
 function N(e) {
     var t, n;
     let { keybind: a } = e,
@@ -112,7 +128,14 @@ function N(e) {
                         w,
                         A(y({}, e), {
                             onSelect: (e) => {
-                                d(e), l.A.setKeybind(A(y({}, s.current), { params: { channelId: e } }));
+                                d(e),
+                                    l.A.setKeybind(
+                                        A(y({}, s.current), {
+                                            params: {
+                                                channelId: e,
+                                            },
+                                        }),
+                                    );
                             },
                         }),
                     ),
@@ -127,7 +150,9 @@ function N(e) {
                 children: [
                     (0, r.jsx)("div", {
                         className: E.$X,
-                        children: (0, r.jsx)(P, { channelId: c }),
+                        children: (0, r.jsx)(P, {
+                            channelId: c,
+                        }),
                     }),
                     (0, r.jsx)(u.A.Child, {
                         grow: 0,
@@ -143,6 +168,7 @@ function N(e) {
         }),
     });
 }
+
 function R(e) {
     let [t, n] = i.useState(0),
         r = i.useRef(e);
@@ -157,6 +183,7 @@ function R(e) {
         }
     );
 }
+
 function w(e) {
     let { transitionState: t, onClose: n, onSelect: s } = e,
         l = i.useId(),
@@ -182,6 +209,7 @@ function w(e) {
             });
     }, [O]);
     let v = null != y ? y.length : b.length;
+
     function N(e) {
         let { row: t } = e,
             i = (() => {
@@ -215,6 +243,7 @@ function w(e) {
             i.id,
         );
     }
+
     function w(e) {
         let t = e.key.toLowerCase();
         if ("arrowdown" === t || "arrowup" === t || "enter" === t || "escape" === t)
@@ -286,6 +315,7 @@ function w(e) {
         listProps: D,
     });
 }
+
 function P(e) {
     let { channelId: t } = e,
         {

@@ -1,4 +1,8 @@
-n.d(t, { A: () => Z }), n(896048), n(321073);
+n.d(t, {
+    A: () => Z,
+}),
+    n(896048),
+    n(321073);
 var r,
     i = n(989349),
     a = n.n(i),
@@ -10,6 +14,7 @@ var r,
     d = n(821124),
     f = n(513461),
     p = n(212455);
+
 function _(e, t, n) {
     return (
         t in e
@@ -23,6 +28,7 @@ function _(e, t, n) {
         e
     );
 }
+
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -39,6 +45,7 @@ function h(e) {
     }
     return e;
 }
+
 function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -51,6 +58,7 @@ function m(e, t) {
     }
     return n;
 }
+
 function g(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -65,12 +73,15 @@ function g(e, t) {
 let E = "DELETED",
     b = new Map(),
     y = {};
+
 function O(e) {
     return y[e];
 }
+
 function A(e, t) {
     (y[e] = t), b.set(e, a()());
 }
+
 function v(e, t, n) {
     if (t !== n && null != t) {
         if (t === f.B5.SUBMITTED) {
@@ -83,14 +94,17 @@ function v(e, t, n) {
         }
     }
 }
+
 function S(e) {
     let { joinRequest: t } = e;
     k(t);
 }
 let I = !1;
+
 function T() {
     I = !0;
 }
+
 function C(e) {
     let { status: t, requests: n, total: r, guildId: i } = e;
     (I = !1),
@@ -99,11 +113,13 @@ function C(e) {
             k(e);
         });
 }
+
 function N() {
     I = !1;
 }
 let R = (e) => "guild-join-request=".concat(e),
     w = (e, t) => "guild-".concat(e, "-").concat(t);
+
 function P(e) {
     let t = [];
     return t.push(R(e.joinRequestId)), t.push(w(e.guildId, e.applicationStatus)), t;
@@ -111,18 +127,22 @@ function P(e) {
 let D = new o.J(P, (e) => "".concat(e.joinRequestId)),
     x = new o.J(P, (e) => "".concat(e.joinRequestId)),
     L = new o.J(P, (e) => "".concat(e.actionedAt));
+
 function j(e) {
     return D.get(e);
 }
+
 function M(e) {
     delete z[e], D.delete(e), x.delete(e), L.delete(e);
 }
+
 function k(e) {
     (z[e.joinRequestId] = e),
         D.set(e.joinRequestId, e),
         (0, d.ar)(e.applicationStatus) && (L.delete(e.joinRequestId), x.set(e.joinRequestId, e)),
         (0, d.mf)(e.applicationStatus) && (x.delete(e.joinRequestId), L.set(e.joinRequestId, e));
 }
+
 function U(e) {
     var t;
     let { guildId: n, request: r } = e,
@@ -132,24 +152,32 @@ function U(e) {
     let s = null == (t = j(i.joinRequestId)) ? void 0 : t.applicationStatus;
     return v(n, i.applicationStatus, s), k(i), !0;
 }
+
 function G(e) {
     let { id: t, guildId: n } = e,
         r = j(t);
     null != r && (v(n, E, r.applicationStatus), M(t));
 }
+
 function V(e) {
     let { guildId: t, action: n } = e;
     D.values(w(t, f.B5.SUBMITTED)).forEach((e) => {
-        k(g(h({}, e), { applicationStatus: n }));
+        k(
+            g(h({}, e), {
+                applicationStatus: n,
+            }),
+        );
     }),
         A(t, 0);
 }
 let F = {};
+
 function B(e) {
     let { guildId: t, applicationTab: n } = e;
     n !== F[t] && (F[t] = n);
 }
 let H = {};
+
 function Y(e) {
     var t;
     let { guildId: n, sortOrder: r } = e;
@@ -159,6 +187,7 @@ function Y(e) {
     "REVIEW_APPLICATION" !== i && ((0, d.mf)(i) && L.clear(), (0, d.ar)(i) && x.clear());
 }
 let W = {};
+
 function K(e) {
     let { guildId: t, request: n } = e;
     W[t] = n;

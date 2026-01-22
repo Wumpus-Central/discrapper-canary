@@ -8,6 +8,7 @@ var r = n(311907),
     s = n(869146),
     o = n(392164),
     l = n(652215);
+
 function c() {
     var e, t;
     let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : s.A,
@@ -16,6 +17,7 @@ function c() {
         ? e
         : window;
 }
+
 function u() {
     let e = (0, a.V)();
     return (0, r.bG)([s.A], () => c(s.A, e));

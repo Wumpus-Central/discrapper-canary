@@ -1,8 +1,11 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(64700),
     i = n(473193),
     a = n(203982),
     s = n(652215);
+
 function o(e) {
     let { shouldSubscribe: t, subscribeToGroupId: n, authorId: o } = e,
         l = r.useContext(i.C);

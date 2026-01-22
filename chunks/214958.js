@@ -9,14 +9,16 @@
             s = r.object && e && !e.nodeType && e,
             o = a && s && "object" == typeof n.g && n.g;
         o && (o.global === o || o.window === o || o.self === o) && (i = o);
-        var l = 9007199254740991,
+        var l = 0x1fffffffffffff,
             c = /\bOpera/,
             u = Object.prototype,
             d = u.hasOwnProperty,
             f = u.toString;
+
         function p(e) {
             return (e = String(e)).charAt(0).toUpperCase() + e.slice(1);
         }
+
         function _(e, t, n) {
             var r = {
                 "10.0": "10",
@@ -59,28 +61,35 @@
                 ))
             );
         }
+
         function h(e, t) {
             var n = -1,
                 r = e ? e.length : 0;
             if ("number" == typeof r && r > -1 && r <= l) for (; ++n < r; ) t(e[n], n, e);
             else g(e, t);
         }
+
         function m(e) {
             return (e = A(e)), /^(?:webOS|i(?:OS|P))/.test(e) ? e : p(e);
         }
+
         function g(e, t) {
             for (var n in e) d.call(e, n) && t(e[n], n, e);
         }
+
         function E(e) {
             return null == e ? p(e) : f.call(e).slice(8, -1);
         }
+
         function b(e, t) {
             var n = null != e ? typeof e[t] : "number";
             return !/^(?:boolean|number|string|undefined)$/.test(n) && ("object" != n || !!e[t]);
         }
+
         function y(e) {
             return String(e).replace(/([ -])(?!$)/g, "$1?");
         }
+
         function O(e, t) {
             var n = null;
             return (
@@ -90,9 +99,11 @@
                 n
             );
         }
+
         function A(e) {
             return String(e).replace(/^ +| +$/g, "");
         }
+
         function v(e) {
             var t,
                 n,
@@ -315,14 +326,22 @@
                         Kindle: 1,
                         "Kindle Fire": 1,
                     },
-                    Asus: { Transformer: 1 },
-                    "Barnes & Noble": { Nook: 1 },
-                    BlackBerry: { PlayBook: 1 },
+                    Asus: {
+                        Transformer: 1,
+                    },
+                    "Barnes & Noble": {
+                        Nook: 1,
+                    },
+                    BlackBerry: {
+                        PlayBook: 1,
+                    },
                     Google: {
                         "Google TV": 1,
                         Nexus: 1,
                     },
-                    HP: { TouchPad: 1 },
+                    HP: {
+                        TouchPad: 1,
+                    },
                     HTC: {},
                     Huawei: {},
                     Lenovo: {},
@@ -331,12 +350,16 @@
                         Xbox: 1,
                         "Xbox One": 1,
                     },
-                    Motorola: { Xoom: 1 },
+                    Motorola: {
+                        Xoom: 1,
+                    },
                     Nintendo: {
                         "Wii U": 1,
                         Wii: 1,
                     },
-                    Nokia: { Lumia: 1 },
+                    Nokia: {
+                        Lumia: 1,
+                    },
                     Oppo: {},
                     Samsung: {
                         "Galaxy S": 1,
@@ -392,11 +415,13 @@
                     "Windows 98;",
                     "Windows ",
                 ]);
+
             function B(t) {
                 return O(t, function (t, n) {
                     return t || (RegExp("\\b" + (n.pattern || y(n)) + "\\b", "i").exec(e) && (n.label || n));
                 });
             }
+
             function H(t) {
                 return O(t, function (t, n, r) {
                     return (
@@ -408,11 +433,13 @@
                     );
                 });
             }
+
             function Y(t) {
                 return O(t, function (t, n) {
                     return t || (RegExp("\\b" + (n.pattern || y(n)) + "\\b", "i").exec(e) && (n.label || n));
                 });
             }
+
             function W(t) {
                 return O(t, function (t, n) {
                     var r = n.pattern || y(n);
@@ -424,6 +451,7 @@
                     );
                 });
             }
+
             function K(t) {
                 return O(t, function (t, n) {
                     var r = n.pattern || y(n);
@@ -447,6 +475,7 @@
                     );
                 });
             }
+
             function z(t) {
                 return O(t, function (t, n) {
                     return (
@@ -456,6 +485,7 @@
                     );
                 });
             }
+
             function q() {
                 return this.description || "";
             }

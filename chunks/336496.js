@@ -1,4 +1,7 @@
-n.d(t, { default: () => b }), n(896048);
+n.d(t, {
+    default: () => b,
+}),
+    n(896048);
 var i = n(627968),
     r = n(64700),
     l = n(158954),
@@ -8,6 +11,7 @@ var i = n(627968),
     c = n(652215),
     d = n(985018),
     u = n(48854);
+
 function b(e) {
     let { guildId: t, transitionState: n, onClose: b } = e,
         [f, p] = r.useState([]),

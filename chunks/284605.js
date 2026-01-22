@@ -1,4 +1,7 @@
-n.d(t, { i: () => S }), n(228524);
+n.d(t, {
+    i: () => S,
+}),
+    n(228524);
 var r = n(627968);
 n(64700);
 var i = n(417597),
@@ -18,6 +21,7 @@ var i = n(417597),
     E = n(897518),
     b = n(10979),
     y = n(652215);
+
 function O(e, t, n) {
     return (
         t in e
@@ -31,6 +35,7 @@ function O(e, t, n) {
         e
     );
 }
+
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -48,6 +53,7 @@ function A(e) {
     return e;
 }
 let v = 600;
+
 function S(e) {
     let {
             guildProductListing: t,
@@ -88,7 +94,9 @@ function S(e) {
             _.q(D.id, t.id);
         },
         B = () => {
-            (0, o.F)({ listing: t });
+            (0, o.F)({
+                listing: t,
+            });
         },
         H = () => {
             (0, d.C)((0, p.KW)(n, t.id));

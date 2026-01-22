@@ -1,9 +1,13 @@
-n.d(t, { A: () => o }), n(228524);
+n.d(t, {
+    A: () => o,
+}),
+    n(228524);
 var l = n(627968);
 n(64700);
 var r = n(397927),
     i = n(985018),
     a = n(137898);
+
 function o(e) {
     let { displayName: t, description: n, icon: o, isLoading: c, isConnected: s, canConnect: u, onConnect: d } = e;
     return (0, l.jsxs)("div", {

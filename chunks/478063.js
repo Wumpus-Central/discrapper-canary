@@ -1,4 +1,6 @@
-n.d(t, { A: () => I });
+n.d(t, {
+    A: () => I,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -9,6 +11,7 @@ var r = n(627968),
     u = n(573435);
 n(883392);
 var d = n(657323);
+
 function f(e, t, n) {
     return (
         t in e
@@ -22,6 +25,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -38,6 +42,7 @@ function p(e) {
     }
     return e;
 }
+
 function _(e, t) {
     if (null == e) return {};
     var n,
@@ -54,6 +59,7 @@ function _(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function h(e, t) {
     if (null == e) return {};
     var n,
@@ -65,6 +71,7 @@ function h(e, t) {
     return i;
 }
 let m = {};
+
 function g(e, t, n) {
     let r = c.vCh[e],
         i = r.size / 1.5,
@@ -81,6 +88,7 @@ function g(e, t, n) {
     return (m[n] = u), u;
 }
 let E = 1 / 4;
+
 function b(e) {
     let { height: t, fillColor: n } = e;
     return (0, r.jsx)("div", {
@@ -99,6 +107,7 @@ function b(e) {
         }),
     });
 }
+
 function y(e) {
     let { isTyping: t, statusCoords: n, status: i } = e,
         a = (0, c.S31)(c.clD.ONLINE);
@@ -126,6 +135,7 @@ function y(e) {
             })
           : null;
 }
+
 function O(e) {
     let { src: t, size: n } = e;
     return (0, r.jsx)("img", {
@@ -204,9 +214,11 @@ let A = {
         back: u.hW.DIAGONAL_FACEPILE_BACK_120,
     },
 };
+
 function v(e) {
     return A[e].back;
 }
+
 function S(e, t, n) {
     return t ? A[n].typing : e ? A[n].status : A[n].default;
 }

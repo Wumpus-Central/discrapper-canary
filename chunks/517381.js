@@ -1,4 +1,8 @@
-n.d(t, { A: () => x }), n(896048), n(321073);
+n.d(t, {
+    A: () => x,
+}),
+    n(896048),
+    n(321073);
 var r,
     i = n(311907),
     a = n(73153),
@@ -7,6 +11,7 @@ var r,
     l = n(815807),
     c = n(961350),
     u = n(994500);
+
 function d(e, t, n) {
     return (
         t in e
@@ -79,31 +84,38 @@ class f {
 let p = new Map(),
     _ = new Map(),
     h = new Map();
+
 function m(e) {
     var t;
     return null != (t = p.get(e)) ? t : new f();
 }
+
 function g(e) {
     let t = m(e);
     return p.set(e, t), t;
 }
+
 function E(e, t) {
     let n = _.get(e);
     if (null == n) return !1;
     let r = t(n);
     return _.set(e, r), !0;
 }
+
 function b(e, t) {
     return t(m(e));
 }
+
 function y() {
     (p = new Map()), (_ = new Map()), (h = new Map());
 }
+
 function O(e) {
     e.ids.forEach((e) => {
         g(e).handleSearchStart();
     });
 }
+
 function A(e) {
     e.data.forEach((e) => {
         let t = g(e.id),
@@ -119,6 +131,7 @@ function A(e) {
         });
     });
 }
+
 function v(e) {
     let t = e.message.id;
     if (null == t) return !1;
@@ -127,6 +140,7 @@ function v(e) {
     let r = (0, o.IU)(n, e.message);
     _.set(t, r);
 }
+
 function S(e) {
     let { type: t, messageId: n, userId: r, emoji: i } = e;
     if (!(0, l.vp)(e)) return !1;
@@ -136,29 +150,35 @@ function S(e) {
         return "MESSAGE_REACTION_ADD" === t ? n.addReaction(i, a, e.colors, r) : n.removeReaction(i, a, r);
     });
 }
+
 function I(e) {
     let { messageId: t, reactions: n } = e,
         r = c.default.getId();
     return E(t, (e) => e.addReactionBatch(n, r));
 }
+
 function T(e) {
     let { messageId: t } = e;
     return E(t, (e) => e.set("reactions", []));
 }
+
 function C(e) {
     let { messageId: t, emoji: n } = e;
     return E(t, (e) => e.removeReactionsForEmoji(n));
 }
+
 function N(e) {
     e.ids.forEach((e) => {
         g(e).handleSearchIndexing();
     });
 }
+
 function R(e) {
     e.ids.forEach((t) => {
         g(t).handleSearchFailure(e.error);
     });
 }
+
 function w(e) {
     let t = p.get(e.id);
     if (null == t) return !1;
@@ -169,6 +189,7 @@ function w(e) {
     }),
         p.delete(e.id);
 }
+
 function P(e) {
     (p = new Map()), (_ = new Map()), (h = new Map());
 }

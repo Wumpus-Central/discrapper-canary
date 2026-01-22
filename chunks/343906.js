@@ -37,6 +37,7 @@ var r = n(627968),
     L = n(985018),
     j = n(976744),
     M = n(896498);
+
 function k(e, t, n) {
     return (
         t in e
@@ -50,6 +51,7 @@ function k(e, t, n) {
         e
     );
 }
+
 function U(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -67,6 +69,7 @@ function U(e) {
     return e;
 }
 let G = 65;
+
 function V() {
     let e = i.useCallback(() => {
         (0, d.mMO)(async () => {
@@ -86,6 +89,7 @@ function V() {
         }),
     });
 }
+
 function F(e) {
     let { displayType: t } = e,
         n = i.useCallback(() => {
@@ -95,7 +99,9 @@ function F(e) {
         o = (0, E._w)(t),
         c = (0, E.Gn)(t),
         u = (0, E.Ju)(t),
-        { loadMore: f, isMoreLoading: m } = (0, g.A)({ onError: n }),
+        { loadMore: f, isMoreLoading: m } = (0, g.A)({
+            onError: n,
+        }),
         b = (0, h.kN)().get(t),
         [y, A] = i.useState(P.PH),
         v = i.useCallback(() => {
@@ -119,7 +125,14 @@ function F(e) {
                         n.event_id,
                     );
                 }
-                if ((0, h.Is)(n)) return (0, r.jsx)(S.A, { guildId: n.entity_id }, n.event_id);
+                if ((0, h.Is)(n))
+                    return (0, r.jsx)(
+                        S.A,
+                        {
+                            guildId: n.entity_id,
+                        },
+                        n.event_id,
+                    );
                 if ((0, h.u7)(n)) {
                     let e = _.A.getPurchaseInfo(n.entity_id);
                     return null == e
@@ -168,12 +181,20 @@ function F(e) {
             R(),
             (0, r.jsx)("div", {
                 className: j.o1,
-                style: { maxHeight: w.length * G },
-                children: w.map((e, t) => N({ row: t })),
+                style: {
+                    maxHeight: w.length * G,
+                },
+                children: w.map((e, t) =>
+                    N({
+                        row: t,
+                    }),
+                ),
             }),
             w.length < c
                 ? (0, r.jsx)(d.DUT, {
-                      className: s()(j.FQ, { [j.r9]: m }),
+                      className: s()(j.FQ, {
+                          [j.r9]: m,
+                      }),
                       onClick: v,
                       role: "button",
                       "aria-disabled": m,
@@ -198,7 +219,9 @@ let B = () => {
         let e = (0, O.A)(),
             t = (0, A.vx)(),
             n = (0, m.y)(
-                L.intl.formatToPlainString(x.default["7hqFl9"], { activeLinks: t.length }),
+                L.intl.formatToPlainString(x.default["7hqFl9"], {
+                    activeLinks: t.length,
+                }),
                 L.intl.string(x.default["Q/D/0Q"]),
             ),
             i = (0, h.cV)(!!e),
@@ -261,7 +284,10 @@ let Y = () => {
             t = (0, c.bG)([_.A], () => _.A.getSelectedTeenId()),
             { selectTeenUser: n } = (0, g.A)({}),
             a = (e) => {
-                n(e), f.default.track(D.HAw.FAMILY_CENTER_ACTION, { action: P.qb.SelectTeen });
+                n(e),
+                    f.default.track(D.HAw.FAMILY_CENTER_ACTION, {
+                        action: P.qb.SelectTeen,
+                    });
             },
             s = e.map((e) => ({
                 label: e.id,
@@ -349,7 +375,13 @@ let Y = () => {
                                         t
                                             ? e.map((e) => {
                                                   let [t] = e;
-                                                  return (0, r.jsx)(F, { displayType: t }, "".concat(t, "-list"));
+                                                  return (0, r.jsx)(
+                                                      F,
+                                                      {
+                                                          displayType: t,
+                                                      },
+                                                      "".concat(t, "-list"),
+                                                  );
                                               })
                                             : (0, r.jsx)(R.A, {
                                                   className: j.RL,

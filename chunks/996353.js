@@ -15,11 +15,16 @@ var r = n(64700),
     f = n(188275),
     p = n(985018);
 let _ = 4;
+
 function h(e) {
     let { user: t, numItems: n = d.pl, location: p, source: _ } = e,
         h = (0, c.Ay)(t.id),
-        m = (0, o.a)({ location: p }),
-        { showRecommendations: g } = (0, l.u)({ location: p }),
+        m = (0, o.a)({
+            location: p,
+        }),
+        { showRecommendations: g } = (0, l.u)({
+            location: p,
+        }),
         E = r.useMemo(() => (_ === d.mQ.POPOUT ? g : _ !== d.mQ.DM_SIDE_PANEL || m), [_, m, g]),
         b = r.useMemo(() => (_ === d.mQ.POPOUT ? d.B5.POPOUT : d.B5.USER_PROFILE), [_]),
         {
@@ -77,19 +82,24 @@ function h(e) {
         fetchState: r.useMemo(
             () =>
                 v || S || I
-                    ? { status: "loading" }
+                    ? {
+                          status: "loading",
+                      }
                     : null != T
                       ? {
                             status: "error",
                             error: T,
                         }
-                      : { status: "success" },
+                      : {
+                            status: "success",
+                        },
             [v, S, I, T],
         ),
         defaultWishlistId: y,
         wishlist: O,
     };
 }
+
 function m(e) {
     let { user: t, numItems: n = d.pl, source: i, location: a } = e,
         {

@@ -7,7 +7,7 @@ var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
-    o = n(432022),
+    o = n(108531),
     l = n(158954),
     c = n(311907),
     u = n(453903),
@@ -17,6 +17,7 @@ var r = n(627968),
     _ = n(283024),
     h = n(818348),
     m = n(248789);
+
 function g(e, t, n) {
     return (
         t in e
@@ -30,6 +31,7 @@ function g(e, t, n) {
         e
     );
 }
+
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -46,6 +48,7 @@ function E(e) {
     }
     return e;
 }
+
 function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -58,6 +61,7 @@ function b(e, t) {
     }
     return n;
 }
+
 function y(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -69,6 +73,7 @@ function y(e, t) {
         e
     );
 }
+
 function O(e, t) {
     if (null == e) return {};
     var n,
@@ -85,6 +90,7 @@ function O(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function A(e, t) {
     if (null == e) return {};
     var n,
@@ -102,6 +108,7 @@ let v = i.createContext(null),
     C = 10,
     N = 4,
     R = h.FX;
+
 function w() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "center",
         t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "top",
@@ -122,6 +129,7 @@ function w() {
             return 0;
     }
 }
+
 function P(e) {
     var t;
     let {
@@ -199,7 +207,12 @@ function P(e) {
         eo = i.useMemo(
             () => ({
                 position: W,
-                caretConfig: null != D ? D : { align: "center" },
+                caretConfig:
+                    null != D
+                        ? D
+                        : {
+                              align: "center",
+                          },
             }),
             [W, D],
         ),

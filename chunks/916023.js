@@ -25,15 +25,24 @@ let r = (0, n(945810).mj)({
         },
     },
 });
+
 function i(e) {
     let { location: t } = e;
-    return r.useConfig({ location: t }).enabled;
+    return r.useConfig({
+        location: t,
+    }).enabled;
 }
+
 function a(e) {
     let { location: t } = e;
-    return r.getConfig({ location: t }).enabled;
+    return r.getConfig({
+        location: t,
+    }).enabled;
 }
+
 function s(e) {
     let { location: t } = e;
-    return r.useConfig({ location: t }).wishlistRetargetingEnabled;
+    return r.useConfig({
+        location: t,
+    }).wishlistRetargetingEnabled;
 }

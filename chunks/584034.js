@@ -1,4 +1,9 @@
-n.d(t, { A: () => D }), n(938796), n(896048), n(492834);
+n.d(t, {
+    A: () => D,
+}),
+    n(938796),
+    n(896048),
+    n(492834);
 var i = n(627968),
     a = n(64700),
     l = n(735438),
@@ -28,6 +33,7 @@ var i = n(627968),
     C = n(652215),
     S = n(838541),
     N = n(26896);
+
 function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -53,6 +59,7 @@ function L(e) {
     }
     return e;
 }
+
 function U(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -76,6 +83,7 @@ let I = (e) => {
         { attachments: n } = t;
     if (0 === n.length) return null;
     let a = 1 === n.length;
+
     function o(e, t) {
         return (0, u.iW)(e.originalItem, t);
     }
@@ -166,6 +174,7 @@ let I = (e) => {
         }),
     });
 };
+
 function D(e) {
     var t;
     let n,
@@ -260,7 +269,13 @@ function D(e) {
                                 width: 0,
                                 height: 0,
                             });
-                    }).then((t) => u((n) => U(L({}, n), { [e.id]: t }))),
+                    }).then((t) =>
+                        u((n) =>
+                            U(L({}, n), {
+                                [e.id]: t,
+                            }),
+                        ),
+                    ),
                 ),
         ).finally(() => b(!1));
     }, [A.attachments]),
@@ -287,8 +302,15 @@ function D(e) {
                             roleIcon: void 0,
                             hideTimestamp: !1,
                         }),
-                        childrenAccessories: (0, i.jsx)(I, { message: O }),
-                        childrenMessageContent: (0, E.A)({ message: O }, D.content),
+                        childrenAccessories: (0, i.jsx)(I, {
+                            message: O,
+                        }),
+                        childrenMessageContent: (0, E.A)(
+                            {
+                                message: O,
+                            },
+                            D.content,
+                        ),
                         hasThread: !1,
                         hasReply: !1,
                         author: S,

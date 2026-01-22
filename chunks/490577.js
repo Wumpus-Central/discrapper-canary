@@ -1,8 +1,14 @@
-n.d(t, { W: () => d }), n(65821), n(321073), n(896048);
+n.d(t, {
+    W: () => d,
+}),
+    n(65821),
+    n(321073),
+    n(896048);
 var r = n(61090),
     i = n(887018),
     a = n(129966),
     s = n(860407);
+
 function o(e, t, n) {
     return (
         t in e
@@ -16,6 +22,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -32,6 +39,7 @@ function l(e) {
     }
     return e;
 }
+
 function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -44,6 +52,7 @@ function c(e, t) {
     }
     return n;
 }
+
 function u(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -87,7 +96,12 @@ class d {
         let n = "key" in e ? e.key[0] : e.table,
             i = () =>
                 a.v.executeAsync(null != t ? t : e.type, (t) => {
-                    this.raw.execute(t, u(l({}, e), { handle: 0 }));
+                    this.raw.execute(
+                        t,
+                        u(l({}, e), {
+                            handle: 0,
+                        }),
+                    );
                 });
         return null === t
             ? i()
@@ -97,7 +111,15 @@ class d {
         if (null == this.raw) throw Error("database is no longer open (database: ".concat(this));
         let t = "key" in e ? e.key[0] : e.table;
         return r.A.time("\uD83D\uDCBE", "SYNC: ".concat(e.type, " ").concat(null != t ? t : ""), () =>
-            this.raw.execute(null, u(l({}, e), { handle: 0 }), { synchronous: !0 }),
+            this.raw.execute(
+                null,
+                u(l({}, e), {
+                    handle: 0,
+                }),
+                {
+                    synchronous: !0,
+                },
+            ),
         );
     }
     fullVacuum() {
@@ -121,10 +143,18 @@ class d {
         });
     }
     instantaneousState() {
-        return null == this.raw ? s.z9.Closed : (this.lastState = this.executeSync({ type: "db.state" }));
+        return null == this.raw
+            ? s.z9.Closed
+            : (this.lastState = this.executeSync({
+                  type: "db.state",
+              }));
     }
     async instantaneousStateAsync() {
-        return null == this.raw ? s.z9.Closed : (this.lastState = await this.execute({ type: "db.state" }));
+        return null == this.raw
+            ? s.z9.Closed
+            : (this.lastState = await this.execute({
+                  type: "db.state",
+              }));
     }
     state() {
         return this.lastState;

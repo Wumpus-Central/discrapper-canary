@@ -1,7 +1,11 @@
-n.d(t, { C: () => o }), n(896048);
+n.d(t, {
+    C: () => o,
+}),
+    n(896048);
 var r = n(64700),
     i = n(873298),
     a = n(253932);
+
 function s() {
     let [e, t] = r.useState("cozy");
     return (
@@ -20,6 +24,7 @@ function s() {
         e
     );
 }
+
 function o() {
     let e = a.Xi.useSetting(),
         t = s();

@@ -17,5 +17,7 @@ let c = () =>
             height: 40,
         }),
         bannerHeader: o.intl.string(o.t.EouHwv),
-        bannerSubtext: o.intl.format(o.t.PThBel, { appealLink: s.q }),
+        bannerSubtext: o.intl.format(o.t.PThBel, {
+            appealLink: s.q,
+        }),
     });

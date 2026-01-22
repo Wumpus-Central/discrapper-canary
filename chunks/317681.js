@@ -26,10 +26,12 @@ var r = n(155718),
     d = n(711371),
     f = n(551483);
 let p = RegExp("([\\p{L}\\p{N}\\p{sc=Deva}\\p{sc=Thai}_-]+):", "gu");
+
 function _(e) {
     let t = d.VW.richValue(e)[0];
     return null == t || "applicationCommand" !== t.type ? null : [t, f.Xg];
 }
+
 function h(e) {
     var t, n;
     if (null == e.selection) return null;
@@ -51,6 +53,7 @@ function h(e) {
           ? n
           : null;
 }
+
 function m(e) {
     let t = _(e),
         n = [],
@@ -58,6 +61,7 @@ function m(e) {
     if (null != r) for (let e of r) d.AS.isType(e, "applicationCommandOption") && n.push(e.optionName);
     return n;
 }
+
 function g(e, t, n) {
     let r = {};
     if (null == t.options) return {};
@@ -73,6 +77,7 @@ function g(e, t, n) {
     }
     return r;
 }
+
 function E(e, t, n, i) {
     let a = n.children.map((n) => {
         if (t.type === r.n4.ATTACHMENT) {
@@ -96,7 +101,9 @@ function E(e, t, n, i) {
         }
         return {
             type: "text",
-            text: (0, u.IQ)(n, { mode: "raw" }),
+            text: (0, u.IQ)(n, {
+                mode: "raw",
+            }),
         };
     });
     if (t.type !== r.n4.STRING) {
@@ -105,6 +112,7 @@ function E(e, t, n, i) {
     }
     return a;
 }
+
 function b(e, t, n, r, a) {
     if (null == e.options) return {};
     let o = Object.fromEntries(
@@ -124,6 +132,7 @@ function b(e, t, n, r, a) {
     );
     return i._y(n, o), o;
 }
+
 function y(e, t, n, r, o) {
     var l;
     let [c] = r,
@@ -138,8 +147,16 @@ function y(e, t, n, r, o) {
             channelId: n,
             allowEmptyValues: o,
         });
-    return i.H2(n, { [c.optionName]: { lastValidationResult: p } }), p;
+    return (
+        i.H2(n, {
+            [c.optionName]: {
+                lastValidationResult: p,
+            },
+        }),
+        p
+    );
 }
+
 function O(e, t) {
     if (null == t.options || 0 === t.options.length) return [];
     let n = d.VW.richValue(e),

@@ -1,4 +1,7 @@
-n.d(t, { A: () => M }), n(321073);
+n.d(t, {
+    A: () => M,
+}),
+    n(321073);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -30,6 +33,7 @@ var r = n(627968),
     P = n(806931),
     w = n(985018),
     R = n(433122);
+
 function D(e) {
     let { channelId: t, guildId: n } = e,
         l = (0, c.yK)([S.A, I.A], () => {
@@ -50,7 +54,9 @@ function D(e) {
                       u.m,
                       {
                           position: "bottom",
-                          text: w.intl.formatToPlainString(w.t.JjdizN, { username: e.user.username }),
+                          text: w.intl.formatToPlainString(w.t.JjdizN, {
+                              username: e.user.username,
+                          }),
                           children: (0, r.jsx)(C.Ay, {
                               user: e.user,
                               speaking: !0,
@@ -63,6 +69,7 @@ function D(e) {
               ),
           });
 }
+
 function M(e) {
     let { channel: t, isChatOpen: n } = e,
         i = l.useRef(null),
@@ -84,9 +91,13 @@ function M(e) {
             [o],
         ),
         w = t.isGuildVoiceOrThread() && !n,
-        { hasParticipantsPanel: M } = (0, T.A)({ location: "ChannelCallHeaderToolbar" }),
+        { hasParticipantsPanel: M } = (0, T.A)({
+            location: "ChannelCallHeaderToolbar",
+        }),
         L = !S && M && (t.isGuildVoiceOrThread() || t.isGroupDM()),
-        { enabled: G, inInbox: k } = A.A.useExperiment({ location: "ChannelCallHeaderToolbar" }),
+        { enabled: G, inInbox: k } = A.A.useExperiment({
+            location: "ChannelCallHeaderToolbar",
+        }),
         U = [];
     return (
         u &&
@@ -153,7 +164,12 @@ function M(e) {
                     {
                         targetElementRef: i,
                         position: "bottom",
-                        renderPopout: () => (0, r.jsx)(x.A, { children: (0, r.jsx)(N.A, { channel: t }) }),
+                        renderPopout: () =>
+                            (0, r.jsx)(x.A, {
+                                children: (0, r.jsx)(N.A, {
+                                    channel: t,
+                                }),
+                            }),
                         children: (e, t) => {
                             var n, r;
                             let { isShown: a } = t;
@@ -211,13 +227,25 @@ function M(e) {
                     "call-members-popout",
                 ),
             ),
-        G && !k && U.push((0, r.jsx)(y.A, { className: R.x6 }, "for-later")),
+        G &&
+            !k &&
+            U.push(
+                (0, r.jsx)(
+                    y.A,
+                    {
+                        className: R.x6,
+                    },
+                    "for-later",
+                ),
+            ),
         L &&
             U.push(
                 (0, r.jsx)(
                     _.A,
                     {
-                        className: a()(R.x6, { [R.Lt]: n }),
+                        className: a()(R.x6, {
+                            [R.Lt]: n,
+                        }),
                         onClick: () => f.A.toggleParticipantsList(t.id, !S),
                     },
                     "participants-list-button",
@@ -229,7 +257,9 @@ function M(e) {
                     E.V,
                     {
                         channelId: t.id,
-                        className: a()(R.x6, { [R.Lt]: S }),
+                        className: a()(R.x6, {
+                            [R.Lt]: S,
+                        }),
                         disabled: n,
                     },
                     "chat-spacer",

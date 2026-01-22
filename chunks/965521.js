@@ -1,7 +1,10 @@
-n.d(t, { u: () => l });
+n.d(t, {
+    u: () => l,
+});
 var r = n(961350),
     i = n(803301),
     a = n(487329);
+
 function s(e, t, n) {
     return (
         t in e
@@ -15,6 +18,7 @@ function s(e, t, n) {
         e
     );
 }
+
 function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -38,6 +42,13 @@ let l = {
                 let { userId: t, videoStreamId: n } = e;
                 return r.default.getId() !== t && null == n;
             })
-            .map((e) => o({ type: a.iy.VIDEO_STREAM_RECEIVER_READY_TIMEOUT_NO_STREAM }, e)),
+            .map((e) =>
+                o(
+                    {
+                        type: a.iy.VIDEO_STREAM_RECEIVER_READY_TIMEOUT_NO_STREAM,
+                    },
+                    e,
+                ),
+            ),
     makeErrorContextKey: (e) => "".concat(e.mediaContext, ":").concat(e.userId),
 };

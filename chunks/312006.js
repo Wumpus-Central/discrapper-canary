@@ -1,4 +1,7 @@
-n.d(t, { Ay: () => M }), n(896048);
+n.d(t, {
+    Ay: () => M,
+}),
+    n(896048);
 var r,
     i = n(735438),
     a = n.n(i),
@@ -14,6 +17,7 @@ var r,
     h = n(233993),
     m = n(105530),
     g = n(418208);
+
 function E(e, t, n) {
     return (
         t in e
@@ -32,10 +36,12 @@ let b = {},
         speaker: !1,
         moderator: !1,
     };
+
 function O(e, t) {
     let n = p.A.getVoiceStateForChannel(t, e);
     return (0, m.eY)(n) === m.zF.ON_STAGE;
 }
+
 function A(e, t, n) {
     return _.$3({
         permission: h.QY,
@@ -45,6 +51,7 @@ function A(e, t, n) {
         roles: u.A.getUnsafeMutableRoles(t.id),
     });
 }
+
 function v(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = l.A.getChannel(t),
@@ -57,18 +64,21 @@ function v(e, t) {
           }
         : y;
 }
+
 function S(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     null == b[t] && (b[t] = {});
     let r = v(e, t, n);
     return (b[t][e] = r), r;
 }
+
 function I(e, t) {
     var n;
     if (null == t) return !1;
     let r = l.A.getChannel(t);
     return null != r && !!r.isGuildStageVoice() && (null == (n = b[t]) || delete n[e], !0);
 }
+
 function T(e, t) {
     for (let n in b) {
         let r = l.A.getBasicChannel(n);
@@ -76,23 +86,28 @@ function T(e, t) {
     }
     return !0;
 }
+
 function C(e) {
     let t = Object.values(l.A.getMutableGuildChannelsForGuild(e)).filter((e) => e.isGuildStageVoice());
     for (let e of t) delete b[e.id];
     return t.length > 0;
 }
+
 function N(e) {
     let { channels: t } = e;
     for (let e of t) delete b[e.id];
 }
+
 function R(e) {
     let { guildId: t } = e;
     C(t);
 }
+
 function w(e) {
     let { guildId: t, user: n } = e;
     return null != n && null != t && T(n.id, t);
 }
+
 function P(e) {
     let { voiceStates: t } = e;
     return (
@@ -103,12 +118,15 @@ function P(e) {
         }, !1)
     );
 }
+
 function D(e) {
     return C(e.guildId);
 }
+
 function x() {
     b = {};
 }
+
 function L(e) {
     let { guild: t } = e;
     for (let e in b) {

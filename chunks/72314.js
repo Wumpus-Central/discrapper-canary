@@ -1,8 +1,11 @@
-n.d(t, { A: () => E });
+n.d(t, {
+    A: () => E,
+});
 var r,
     i = n(311907),
     a = n(52133),
     s = n(73153);
+
 function o(e, t, n) {
     return (
         t in e
@@ -18,7 +21,10 @@ function o(e, t, n) {
 }
 let l = {},
     c = {},
-    u = { scrollTop: 0 };
+    u = {
+        scrollTop: 0,
+    };
+
 function d(e) {
     return {
         guildId: e,
@@ -26,6 +32,7 @@ function d(e) {
         scrollTo: null,
     };
 }
+
 function f(e) {
     let { channelId: t, scrollTop: n, scrollHeight: r, offsetHeight: i } = e,
         s = l[t];
@@ -43,19 +50,23 @@ function f(e) {
         l[t] = e;
     }
 }
+
 function p(e) {
     let { scrollTop: t } = e;
     u.scrollTop = t;
 }
+
 function _(e) {
     let { channelId: t } = e;
     h(t) && delete l[t];
 }
+
 function h(e) {
     if (null == l[e]) return;
     let { scrollTop: t, scrollHeight: n, offsetHeight: r } = l[e];
     return t === n - r;
 }
+
 function m(e) {
     let { guildId: t, scrollTop: n, scrollTo: r } = e;
     null == c[t] && (c[t] = d(t)), void 0 !== n && (c[t].scrollTop = n);

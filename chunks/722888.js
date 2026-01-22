@@ -7,6 +7,7 @@ var r = n(64700),
     a = n(599941),
     s = n(544199),
     o = n(697627);
+
 function l(e, t) {
     let n = (0, i.bG)([o.A], () => o.A.getPriceTiersForGuildAndType(e, t)),
         a = (0, i.bG)([o.A], () => o.A.getPriceTiersFetchStateForGuildAndType(e, t));
@@ -20,6 +21,7 @@ function l(e, t) {
         }
     );
 }
+
 function c(e) {
     let { fetchSubscriptionsSettings: t, loading: n, error: i } = (0, a.XE)();
     r.useEffect(() => {

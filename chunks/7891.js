@@ -1,4 +1,8 @@
-n.d(t, { A: () => I }), n(896048), n(747238);
+n.d(t, {
+    A: () => I,
+}),
+    n(896048),
+    n(747238);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -21,8 +25,8 @@ var r = n(627968),
     v = n(985018),
     A = n(218251);
 let E = [
-        14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 2196594, 4752414, 13064760, 13058360, 12401000,
-        12933021, 5659039, 4092591, 5868359, 6586142, 8876063, 8484432, 9979976, 5269106, 3421236,
+        0xdb2389, 0xba2be9, 8804082, 6576370, 5335282, 2652110, 2128781, 2196594, 4752414, 0xc75a38, 0xc74138, 12401e3,
+        0xc5579d, 5659039, 4092591, 5868359, 6586142, 8876063, 8484432, 9979976, 5269106, 3421236,
     ],
     N =
         /^(https?:\/\/)?(?:m\.|www\.)?(youtu\.be|youtube\.com)\/(embed\/|v\/|watch\?v=|watch\?.+&v=)?((\w|-){11})(?:\S+)?$/,
@@ -85,7 +89,12 @@ let E = [
                                             });
                                     }
                                     return e;
-                                })({ enabled: S }, (0, m.H$)(l.id)),
+                                })(
+                                    {
+                                        enabled: S,
+                                    },
+                                    (0, m.H$)(l.id),
+                                ),
                             ));
             },
             U = y.X7G.ROLE_SUBSCRIPTION_STORE_PAGE(L),
@@ -125,7 +134,9 @@ let E = [
                     children: [
                         (0, r.jsx)(g.A, {
                             value: U,
-                            className: s()({ [A.r9]: B }),
+                            className: s()({
+                                [A.r9]: B,
+                            }),
                         }),
                         (0, r.jsx)("div", {
                             "data-button-hoisted-classname-wrapper": !0,
@@ -148,7 +159,9 @@ let E = [
                         children: [
                             (0, r.jsx)(f.Text, {
                                 variant: "text-md/medium",
-                                style: { backgroundColor: "#".concat(I.toString(16).padStart(6, "0")) },
+                                style: {
+                                    backgroundColor: "#".concat(I.toString(16).padStart(6, "0")),
+                                },
                                 className: A.pB,
                                 children: v.intl.string(v.t.l6iM36),
                             }),
@@ -213,6 +226,7 @@ let E = [
             ],
         });
     };
+
 function T() {
     let e = (0, o.bG)([x.A], () => x.A.getGuild()),
         t = (0, j.X)(),
@@ -224,6 +238,7 @@ function T() {
           })
         : (0, r.jsx)(f.y$y, {});
 }
+
 function I() {
     let e = (0, o.bG)([x.A], () => x.A.getGuild());
     return (0, r.jsx)(j.H, {

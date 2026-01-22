@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var a = n(627968),
     l = n(311907),
     i = n(342494),
@@ -9,6 +11,7 @@ var a = n(627968),
     d = n(518477),
     u = n(49999),
     m = n(985018);
+
 function p(e) {
     let { targetElementRef: t, markAsDismissed: n, children: p } = e,
         h = (0, l.bG)([o.default], () => o.default.getId()),
@@ -20,7 +23,9 @@ function p(e) {
                 targetElementRef: t,
                 title: m.intl.string(m.t.gxcsSq),
                 body: m.intl.string(m.t["8L7E5l"]),
-                caretConfig: { align: "start" },
+                caretConfig: {
+                    align: "start",
+                },
                 graphic: {
                     type: "image",
                     src: f

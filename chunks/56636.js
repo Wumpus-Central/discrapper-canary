@@ -6,7 +6,9 @@ n.d(t, {
 var r = function (e, t) {
     return (r =
         Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array &&
+        ({
+            __proto__: [],
+        } instanceof Array &&
             function (e, t) {
                 e.__proto__ = t;
             }) ||
@@ -14,9 +16,11 @@ var r = function (e, t) {
             for (var n in t) Object.prototype.hasOwnProperty.call(t, n) && (e[n] = t[n]);
         })(e, t);
 };
+
 function i(e, t) {
     if ("function" != typeof t && null !== t)
         throw TypeError("Class extends value " + String(t) + " is not a constructor or null");
+
     function n() {
         this.constructor = e;
     }
@@ -31,6 +35,7 @@ var a = function () {
             return e;
         }).apply(this, arguments);
 };
+
 function s(e, t, n) {
     if (n || 2 == arguments.length)
         for (var r, i = 0, a = t.length; i < a; i++)

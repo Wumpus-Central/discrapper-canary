@@ -1,4 +1,9 @@
-n.d(t, { A: () => M }), n(896048), n(638769), n(321073);
+n.d(t, {
+    A: () => M,
+}),
+    n(896048),
+    n(638769),
+    n(321073);
 var r,
     i = n(735438),
     a = n.n(i),
@@ -15,6 +20,7 @@ var r,
     m = n(661191),
     g = n(427262),
     E = n(652215);
+
 function b(e, t, n) {
     return (
         t in e
@@ -169,9 +175,11 @@ class O {
             (this.allUserIds = new Set());
     }
 }
+
 function A() {
     y = {};
 }
+
 function v(e) {
     var t, n;
     if (!(e.id in y)) return !1;
@@ -182,15 +190,18 @@ function v(e) {
         }),
         null == (n = e.removedMemberIds) || n.forEach((t) => y[e.id].removeUserId(t));
 }
+
 function S(e) {
     let { threadId: t, guildId: n, members: r } = e,
         i = l.A.getChannel(t),
         a = null == i ? void 0 : i.parent_id;
     null != a && ((y[t] = new O(n, a, t)), y[t].rebuild(r.map((e) => e.user_id)));
 }
+
 function I(e) {
     return N(e.user.id);
 }
+
 function T(e) {
     let { updates: t } = e;
     return t
@@ -200,15 +211,18 @@ function T(e) {
         })
         .some((e) => e);
 }
+
 function C(e) {
     return e.members.reduce((e, t) => N(t.user.id) || e, !1);
 }
+
 function N(e) {
     if (null == e) return !1;
     let t = !1;
     for (let n in y) y[n].updateUserId(e) && (t = !0);
     return t;
 }
+
 function R(e) {
     let { presences: t } = e,
         n = a()(t)
@@ -223,6 +237,7 @@ function R(e) {
     for (let e in y) y[e].updateMultipleUserIds(n) && (r = !0);
     return r;
 }
+
 function w(e) {
     let { chunks: t } = e,
         n = !1;
@@ -232,23 +247,27 @@ function w(e) {
     }
     return n;
 }
+
 function P(e) {
     var t;
     let { channel: n } = e;
     if (!(n.id in y) || (null == (t = n.threadMetadata) ? void 0 : t.archived) !== !0) return !1;
     delete y[n.id];
 }
+
 function D(e) {
     let { channel: t } = e;
     if (!(t.id in y)) return !1;
     delete y[t.id];
 }
+
 function x(e) {
     let { guildId: t } = e,
         n = !1;
     for (let e in y) y[e].guildId === t && (y[e].rebuild(), (n = !0));
     return n;
 }
+
 function L(e) {
     let { channels: t } = e,
         n = new Set(t.map((e) => e.id)),

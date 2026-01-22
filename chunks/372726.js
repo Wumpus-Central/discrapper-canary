@@ -1,10 +1,13 @@
-r.d(t, { F: () => o });
+r.d(t, {
+    F: () => o,
+});
 var a = r(627968),
     n = r(64700),
     s = r(397927),
     i = r(200330),
     l = r(321987),
     c = r(628103);
+
 function o(e) {
     let { data: t, onDenied: r, onError: o, onSuccess: d } = e,
         u = (0, c.n)(r, o, d),

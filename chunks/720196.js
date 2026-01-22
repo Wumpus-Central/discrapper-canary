@@ -1,4 +1,7 @@
-n.d(t, { A: () => O }), n(896048);
+n.d(t, {
+    A: () => O,
+}),
+    n(896048);
 var r = n(391973),
     i = n(439372),
     a = n(626584),
@@ -6,6 +9,7 @@ var r = n(391973),
     o = n(41984),
     l = n(589051),
     c = n(652215);
+
 function u(e, t, n) {
     return (
         t in e
@@ -21,7 +25,7 @@ function u(e, t, n) {
 }
 let d = new a.A("OverlayWidgetPinManager"),
     f = {},
-    p = 28800000,
+    p = 288e5,
     _ = !1,
     h = new Set([c.uss.GO_LIVE]),
     m = new Set([

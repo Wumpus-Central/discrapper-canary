@@ -61,6 +61,7 @@ let r = Symbol.for("@ts-pattern/matcher"),
             : [];
     },
     u = (e, t) => e.reduce((e, n) => e.concat(t(n)), []);
+
 function d(...e) {
     if (1 === e.length) {
         let [t] = e;
@@ -72,6 +73,7 @@ function d(...e) {
     }
     throw Error(`isMatching wasn't given the right number of arguments: expected 1 or 2, received ${e.length}.`);
 }
+
 function f(e) {
     return Object.assign(e, {
         optional: () => _(e),
@@ -80,12 +82,15 @@ function f(e) {
         select: (t) => (void 0 === t ? y(e) : y(t, e)),
     });
 }
+
 function p(e) {
     let t;
     return Object.assign(
         Object.assign((t = e), {
             *[Symbol.iterator]() {
-                yield Object.assign(t, { [i]: !0 });
+                yield Object.assign(t, {
+                    [i]: !0,
+                });
             },
         }),
         {
@@ -94,6 +99,7 @@ function p(e) {
         },
     );
 }
+
 function _(e) {
     return f({
         [r]: () => ({
@@ -126,6 +132,7 @@ let h = (e, t) => {
         for (let [n, r] of e.entries()) if (!t(r, n)) return !1;
         return !0;
     };
+
 function g(...e) {
     return f({
         [r]: () => ({
@@ -144,6 +151,7 @@ function g(...e) {
         }),
     });
 }
+
 function E(...e) {
     return f({
         [r]: () => ({
@@ -165,16 +173,26 @@ function E(...e) {
         }),
     });
 }
+
 function b(e) {
-    return { [r]: () => ({ match: (t) => ({ matched: !!e(t) }) }) };
+    return {
+        [r]: () => ({
+            match: (t) => ({
+                matched: !!e(t),
+            }),
+        }),
+    };
 }
+
 function y(...e) {
     let t = "string" == typeof e[0] ? e[0] : void 0,
         n = 2 === e.length ? e[1] : "string" == typeof e[0] ? void 0 : e[0];
     return f({
         [r]: () => ({
             match: (e) => {
-                let r = { [null != t ? t : a]: e };
+                let r = {
+                    [null != t ? t : a]: e,
+                };
                 return {
                     matched:
                         void 0 === n ||
@@ -188,12 +206,15 @@ function y(...e) {
         }),
     });
 }
+
 function O(e) {
     return "number" == typeof e;
 }
+
 function A(e) {
     return "string" == typeof e;
 }
+
 function v(e) {
     return "bigint" == typeof e;
 }
@@ -288,8 +309,14 @@ var Q = {
         return p({
             [r]: () => ({
                 match: (t) => {
-                    if (!Array.isArray(t)) return { matched: !1 };
-                    if (0 === e.length) return { matched: !0 };
+                    if (!Array.isArray(t))
+                        return {
+                            matched: !1,
+                        };
+                    if (0 === e.length)
+                        return {
+                            matched: !0,
+                        };
                     let n = e[0],
                         r = {};
                     if (0 === t.length)
@@ -318,14 +345,20 @@ var Q = {
         return f({
             [r]: () => ({
                 match: (t) => {
-                    if (!(t instanceof Set)) return { matched: !1 };
+                    if (!(t instanceof Set))
+                        return {
+                            matched: !1,
+                        };
                     let n = {};
                     if (0 === t.size)
                         return {
                             matched: !0,
                             selections: n,
                         };
-                    if (0 === e.length) return { matched: !0 };
+                    if (0 === e.length)
+                        return {
+                            matched: !0,
+                        };
                     let r = (e, t) => {
                             n[e] = (n[e] || []).concat([t]);
                         },
@@ -344,7 +377,10 @@ var Q = {
             [r]: () => ({
                 match: (t) => {
                     var n;
-                    if (!(t instanceof Map)) return { matched: !1 };
+                    if (!(t instanceof Map))
+                        return {
+                            matched: !1,
+                        };
                     let r = {};
                     if (0 === t.size)
                         return {
@@ -354,7 +390,10 @@ var Q = {
                     let i = (e, t) => {
                         r[e] = (r[e] || []).concat([t]);
                     };
-                    if (0 === e.length) return { matched: !0 };
+                    if (0 === e.length)
+                        return {
+                            matched: !0,
+                        };
                     if (1 === e.length)
                         throw Error(
                             `\`P.map\` wasn't given enough arguments. Expected (key, value), received ${null == ((n = e[0])) ? void 0 : n.toString()}`,
@@ -429,6 +468,7 @@ let $ = {
     matched: !1,
     value: void 0,
 };
+
 function J(e) {
     return new ee(e, $);
 }

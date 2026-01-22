@@ -1,4 +1,7 @@
-n.d(t, { A: () => h }), n(228524);
+n.d(t, {
+    A: () => h,
+}),
+    n(228524);
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -10,6 +13,7 @@ var i = n(503698),
     u = n(411342),
     d = n(985018),
     f = n(721960);
+
 function p(e) {
     let { hidePurchaseToUnlockBadge: t, showDraftBadge: n, className: i, children: o } = e;
     return (0, r.jsxs)("div", {
@@ -42,6 +46,7 @@ function p(e) {
         ],
     });
 }
+
 function _(e) {
     let { onShowFullDescription: t, variant: n } = e,
         i = (0, r.jsxs)(r.Fragment, {
@@ -72,6 +77,7 @@ function _(e) {
               children: i,
           });
 }
+
 function h(e) {
     let {
             imageUrl: t,
@@ -107,7 +113,9 @@ function h(e) {
                         alt: "",
                         src: t,
                         className: f.K_,
-                        style: { height: C },
+                        style: {
+                            height: C,
+                        },
                     }),
                 }),
                 (0, r.jsxs)("div", {
@@ -139,7 +147,14 @@ function h(e) {
                                 v || null == h || "" === h.name
                                     ? null
                                     : (0, r.jsxs)(r.Fragment, {
-                                          children: [(0, r.jsx)(s.hKd, { size: 16 }), (0, r.jsx)(u.A, { role: h })],
+                                          children: [
+                                              (0, r.jsx)(s.hKd, {
+                                                  size: 16,
+                                              }),
+                                              (0, r.jsx)(u.A, {
+                                                  role: h,
+                                              }),
+                                          ],
                                       }),
                             ],
                         }),
@@ -183,7 +198,9 @@ function h(e) {
               },
               children: (0, r.jsx)(s.sqX, {
                   tag: "article",
-                  "aria-label": d.intl.formatToPlainString(d.t["e+TmJa"], { productName: n }),
+                  "aria-label": d.intl.formatToPlainString(d.t["e+TmJa"], {
+                      productName: n,
+                  }),
                   className: a()(f.Um, A ? f.sG : f.Wi, f.GA),
                   onClick: y,
                   children: D,

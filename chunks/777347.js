@@ -13,6 +13,7 @@ var r = l(64700),
     u = l(696451),
     d = l(71393),
     c = l(661191);
+
 function f(e, t) {
     let l = (0, n.yK)([o.A], () => {
             var t;
@@ -37,7 +38,15 @@ function f(e, t) {
     r.useEffect(() => {
         p.length > 0 && p.forEach((t) => a.A.requestMember(e, t));
     }, [e, p]);
-    let m = r.useMemo(() => (p.length > 0 ? { [e]: p } : {}), [e, p]);
+    let m = r.useMemo(
+        () =>
+            p.length > 0
+                ? {
+                      [e]: p,
+                  }
+                : {},
+        [e, p],
+    );
     (0, s.E)(m, "GuildPowerupsRecentActivity");
     let v = (0, n.bG)([d.A], () => {
         var t;
@@ -50,6 +59,7 @@ function f(e, t) {
         f
     );
 }
+
 function p(e) {
     let t = new Date(c.default.extractTimestamp(e.id)),
         {

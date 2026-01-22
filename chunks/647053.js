@@ -68,6 +68,7 @@ let a = [
     ],
     o = s.concat([r.F.WEBHOOK_INCOMING, r.F.BOT]),
     l = ["rpc.api"];
+
 function c(e, t) {
     switch (e) {
         case r.F.IDENTIFY:
@@ -178,9 +179,11 @@ function c(e, t) {
             return [e];
     }
 }
+
 function u(e) {
     return e === r.F.SDK_SOCIAL_LAYER_PRESENCE || e === r.F.SDK_SOCIAL_LAYER;
 }
+
 function d(e) {
     return e.includes(r.F.DM_CHANNELS_MESSAGES_WRITE) || e.includes(r.F.SDK_SOCIAL_LAYER)
         ? i.intl.format(i.t.o0GMBD, {})

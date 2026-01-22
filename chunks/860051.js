@@ -1,4 +1,7 @@
-a.r(t), a.d(t, { default: () => s });
+a.r(t),
+    a.d(t, {
+        default: () => s,
+    });
 var c = a(627968),
     n = a(311907),
     l = a(627363),
@@ -8,6 +11,7 @@ var c = a(627968),
     i = a(620148),
     f = a(33445),
     b = a(985018);
+
 function s(e) {
     var t, a;
     let { windowKey: s } = e,

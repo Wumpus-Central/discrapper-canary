@@ -24,6 +24,7 @@ var r = n(835245),
     a = n(927813);
 let s = "purchase_token",
     o = 60 * a.A.Millis.DAY;
+
 function l() {
     let e = i.w.get(s);
     if (null != e && e.expires >= Date.now()) return e.purchaseToken;
@@ -42,5 +43,16 @@ async function c() {
             .split("")
             .map((e) => e.charCodeAt(0)),
     );
-    return btoa(String.fromCharCode(...new Uint8Array(await window.crypto.subtle.digest({ name: "SHA-256" }, e))));
+    return btoa(
+        String.fromCharCode(
+            ...new Uint8Array(
+                await window.crypto.subtle.digest(
+                    {
+                        name: "SHA-256",
+                    },
+                    e,
+                ),
+            ),
+        ),
+    );
 }

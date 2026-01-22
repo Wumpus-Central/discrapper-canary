@@ -1,8 +1,12 @@
-n.d(t, { A: () => c }), n(896048);
+n.d(t, {
+    A: () => c,
+}),
+    n(896048);
 var r = n(517846),
     i = n(439372),
     a = n(236698),
     s = n(859703);
+
 function o(e, t, n) {
     return (
         t in e
@@ -41,7 +45,9 @@ class l extends i.A {
                     this.questCompletionStates.set(e, i);
             }),
             o(this, "onQuestCompleted", (e) => {
-                (0, a.hs)(r.w.QUEST_COMPLETED, { quest_id: e });
+                (0, a.hs)(r.w.QUEST_COMPLETED, {
+                    quest_id: e,
+                });
             }),
             o(this, "stores", new Map([[s.A, this.handleQuestStoreChange]])),
             o(this, "actions", {

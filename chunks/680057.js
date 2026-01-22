@@ -413,11 +413,15 @@ e.exports = function (e) {
             },
             {
                 begin: [/~/, /\s*/, t.concat(t.either(...s), /(?=\s*[\(.*\)])/)],
-                scope: { 3: "built_in" },
+                scope: {
+                    3: "built_in",
+                },
             },
             {
                 begin: [/~/, /\s*\w+(?=\s*[\(.*\)])/, "(?!.*/\b(" + t.either(...s) + ")\b)"],
-                scope: { 2: "title.function" },
+                scope: {
+                    2: "title.function",
+                },
             },
             {
                 scope: "title.function",

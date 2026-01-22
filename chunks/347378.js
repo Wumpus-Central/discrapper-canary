@@ -1,4 +1,7 @@
-n.d(t, { E: () => h }), n(896048);
+n.d(t, {
+    E: () => h,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -41,7 +44,9 @@ let h = () => {
             },
             {
                 text: "".concat(
-                    p.intl.format(p.t.yxFzdO, { planPremiumType: l.Ay.getTierDisplayNameByPlanId("".concat(t)) }),
+                    p.intl.format(p.t.yxFzdO, {
+                        planPremiumType: l.Ay.getTierDisplayNameByPlanId("".concat(t)),
+                    }),
                 ),
                 onClick: v,
                 disabled: b,
@@ -55,24 +60,36 @@ let h = () => {
     return (0, r.jsxs)(o.Modal, {
         size: "md",
         transitionState: e,
-        title: "".concat(p.intl.format(p.t.LZunzZ, { planPremiumType: l.Ay.getTierDisplayNameByPlanId("".concat(t)) })),
+        title: "".concat(
+            p.intl.format(p.t.LZunzZ, {
+                planPremiumType: l.Ay.getTierDisplayNameByPlanId("".concat(t)),
+            }),
+        ),
         subtitle:
             0 !== n.total
                 ? p.intl.format(p.t.ycyeBx, {
                       renewalDate: n.subscriptionPeriodStart,
                       rate: (0, c.CE)((0, c.$g)(n.total, n.currency), I, T),
                   })
-                : p.intl.format(p.t["+y0Tjy"], { renewalDate: n.subscriptionPeriodStart }),
+                : p.intl.format(p.t["+y0Tjy"], {
+                      renewalDate: n.subscriptionPeriodStart,
+                  }),
         actions: S,
         onClose: async () => a(),
         children: [
             (0, r.jsxs)(u.Yx, {
                 isPremiumRebrand: !0,
-                className: s()({ [_.JD]: O }),
+                className: s()({
+                    [_.JD]: O,
+                }),
                 children: [
-                    (0, r.jsx)(u.Xd, { children: p.intl.string(p.t.iqhIp4) }),
+                    (0, r.jsx)(u.Xd, {
+                        children: p.intl.string(p.t.iqhIp4),
+                    }),
                     (0, r.jsx)(u.oR, {
-                        label: p.intl.formatToPlainString(p.t.r3jVZq, { planName: l.Ay.getDisplayName("".concat(t)) }),
+                        label: p.intl.formatToPlainString(p.t.r3jVZq, {
+                            planName: l.Ay.getDisplayName("".concat(t)),
+                        }),
                         value: "".concat(C),
                         className: _.aD,
                     }),

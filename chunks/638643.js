@@ -40,7 +40,9 @@ async function _(e) {
                         currentGuildId: h,
                     });
             },
-            { stackingBehavior: "stack" },
+            {
+                stackingBehavior: "stack",
+            },
         ),
             (h = await e);
     }
@@ -77,6 +79,7 @@ async function _(e) {
         b
     );
 }
+
 function h(e) {
     let { appId: t, skuId: n, analyticsLocations: r } = e;
     (0, s.A)({

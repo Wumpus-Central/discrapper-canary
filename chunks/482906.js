@@ -1,4 +1,7 @@
-n.d(t, { default: () => A }), n(896048);
+n.d(t, {
+    default: () => A,
+}),
+    n(896048);
 var r = n(627968),
     a = n(64700),
     s = n(110259),
@@ -22,11 +25,16 @@ let N = function () {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : b.default.locale;
     return "https://".concat(h.XlF, "/hc/").concat(e.toLowerCase(), "/requests/new?ticket_form_id=360000168511");
 };
+
 function A(e) {
     let { guild: t, toUser: b, fromUser: A, onClose: x, transitionState: I } = e,
         [R, g] = a.useState(!1),
         v = t.features.has(h.GuildFeatures.VERIFIED) || t.features.has(h.GuildFeatures.PARTNERED),
-        w = v ? j.intl.format(j.t.A37vwK, { ticketUrl: N() }) : null,
+        w = v
+            ? j.intl.format(j.t.A37vwK, {
+                  ticketUrl: N(),
+              })
+            : null,
         S =
             t.features.has(h.GuildFeatures.CREATOR_MONETIZABLE) ||
             t.features.has(h.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL);
@@ -105,7 +113,9 @@ function A(e) {
             e.body.code === h.t02.NEW_OWNER_INELIGIBLE_FOR_SERVER_SUBSCRIPTION &&
                 (0, i.A)({
                     title: j.intl.string(j.t["m+nQlm"]),
-                    subtitle: j.intl.format(j.t.wG747U, { server_subscription_owner_transfer_article: h.Oi0 }),
+                    subtitle: j.intl.format(j.t.wG747U, {
+                        server_subscription_owner_transfer_article: h.Oi0,
+                    }),
                     confirmText: j.intl.string(j.t["NX+WJN"]),
                 });
         }
@@ -222,10 +232,14 @@ function A(e) {
                     (0, r.jsx)(l.po8, {
                         messageType: l.YCn.INFO,
                         className: E.rk,
-                        children: j.intl.format(j.t.LAlucb, { server_subscription_owner_transfer_article: h.Oi0 }),
+                        children: j.intl.format(j.t.LAlucb, {
+                            server_subscription_owner_transfer_article: h.Oi0,
+                        }),
                     }),
                 (0, r.jsx)(l.Checkbox, {
-                    label: j.intl.format(j.t.xm6ACJ, { username: (0, O.QV)(b) }),
+                    label: j.intl.format(j.t.xm6ACJ, {
+                        username: (0, O.QV)(b),
+                    }),
                     disabled: v,
                     checked: R,
                     onChange: function (e) {

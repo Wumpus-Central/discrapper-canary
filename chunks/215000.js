@@ -1,4 +1,6 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var a = n(627968);
 n(64700);
 var l = n(397927),
@@ -13,7 +15,9 @@ let c = function () {
             (0, a.jsx)(l.Text, {
                 variant: "text-md/normal",
                 color: "text-feedback-info",
-                style: { marginBottom: "8px" },
+                style: {
+                    marginBottom: "8px",
+                },
                 children: "Click the button below to clear your Minor Reward Capping History.",
             }),
             (0, a.jsx)(l.Button, {

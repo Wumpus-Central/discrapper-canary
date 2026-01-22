@@ -26,10 +26,13 @@ async function l(e, t) {
     let n = a.Rsh.APPLICATION_DISCLOSURES(e);
     await r.Bo.post({
         url: n,
-        body: { disclosures: t },
+        body: {
+            disclosures: t,
+        },
         rejectWithError: !1,
     });
 }
+
 function c(e) {
     switch (e) {
         case i.mo.IP_LOCATION:

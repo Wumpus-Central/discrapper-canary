@@ -13,6 +13,7 @@ var l = n(503698),
     s = n(375901),
     o = n(652215),
     c = n(423059);
+
 function u(e) {
     let { locked: t = !1, channelType: n } = e,
         l = n === o.rbe.GUILD_VOICE || n === o.rbe.GUILD_STAGE_VOICE ? a.oyn : t ? a.I$d : a.N$i;
@@ -26,6 +27,7 @@ function u(e) {
         }),
     });
 }
+
 function d(e) {
     let { children: t, className: n } = e;
     return (0, r.jsx)(a.Heading, {
@@ -35,6 +37,7 @@ function d(e) {
         children: t,
     });
 }
+
 function f(e) {
     let { children: t, className: n } = e;
     return (0, r.jsx)(a.Text, {
@@ -111,7 +114,10 @@ let p = function (e) {
             },
             u,
         )),
-        (n = n = { children: o }),
+        (n = n =
+            {
+                children: o,
+            }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
             : (function (e, t) {

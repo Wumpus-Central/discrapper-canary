@@ -1,4 +1,7 @@
-n.d(t, { A: () => m }), n(896048);
+n.d(t, {
+    A: () => m,
+}),
+    n(896048);
 var l = n(627968),
     r = n(64700),
     a = n(843472),
@@ -13,7 +16,9 @@ let m = (e) => {
         [m, b] = r.useState(!1),
         p = r.useCallback(() => {
             b(!0),
-                i.Ay.trackWithMetadata(d.HAw.IAR_DELETE_MESSAGE_BUTTON_CLICKED, { report_id: n }),
+                i.Ay.trackWithMetadata(d.HAw.IAR_DELETE_MESSAGE_BUTTON_CLICKED, {
+                    report_id: n,
+                }),
                 a.A.deleteMessage(t.getChannelId(), t.id);
         }, [t, n]),
         x = r.useMemo(() => {
@@ -22,7 +27,9 @@ let m = (e) => {
                 null != e &&
                 e.type !== d.rbe.DM &&
                 e.type !== d.rbe.GROUP_DM &&
-                c.A.canWithPartialContext(d.xBc.MANAGE_MESSAGES, { channelId: e.id })
+                c.A.canWithPartialContext(d.xBc.MANAGE_MESSAGES, {
+                    channelId: e.id,
+                })
             );
         }, [t]);
     return null != t && x

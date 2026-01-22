@@ -33,7 +33,9 @@
                         return (
                             n && t(e.prototype, n),
                             r && t(e, r),
-                            Object.defineProperty(e, "prototype", { writable: !1 }),
+                            Object.defineProperty(e, "prototype", {
+                                writable: !1,
+                            }),
                             e
                         );
                     }),
@@ -42,6 +44,7 @@
                 },
                 525: (e, t, n) => {
                     var r = n(331);
+
                     function i() {
                         return (
                             "u" > typeof Reflect && Reflect.get
@@ -89,7 +92,9 @@
                                 configurable: !0,
                             },
                         })),
-                            Object.defineProperty(e, "prototype", { writable: !1 }),
+                            Object.defineProperty(e, "prototype", {
+                                writable: !1,
+                            }),
                             t && r(e, t);
                     }),
                         (e.exports.__esModule = !0),
@@ -97,7 +102,11 @@
                 },
                 318: (e) => {
                     (e.exports = function (e) {
-                        return e && e.__esModule ? e : { default: e };
+                        return e && e.__esModule
+                            ? e
+                            : {
+                                  default: e,
+                              };
                     }),
                         (e.exports.__esModule = !0),
                         (e.exports.default = e.exports);
@@ -164,6 +173,7 @@
                     window,
                         (e.exports = (function (e) {
                             var t = {};
+
                             function n(r) {
                                 if (t[r]) return t[r].exports;
                                 var i = (t[r] = {
@@ -186,8 +196,12 @@
                                 (n.r = function (e) {
                                     "u" > typeof Symbol &&
                                         Symbol.toStringTag &&
-                                        Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }),
-                                        Object.defineProperty(e, "__esModule", { value: !0 });
+                                        Object.defineProperty(e, Symbol.toStringTag, {
+                                            value: "Module",
+                                        }),
+                                        Object.defineProperty(e, "__esModule", {
+                                            value: !0,
+                                        });
                                 }),
                                 (n.t = function (e, t) {
                                     if (
@@ -318,6 +332,7 @@
                                     n(0);
                                     var t = n(2),
                                         r = n(4);
+
                                     function i(e) {
                                         (this._options = e || {}),
                                             (this._backend = null),
@@ -547,6 +562,7 @@
                                     var t = window.AudioContext || window.webkitAudioContext,
                                         r = n(0),
                                         i = n(3);
+
                                     function a(e, t, n) {
                                         var i = n.audioContext || a.initSharedAudioContext();
                                         if (
@@ -735,7 +751,9 @@
                                             function (t) {
                                                 e.push(t),
                                                     window.postMessage(
-                                                        { nextTickBrowserPingMessage: !0 },
+                                                        {
+                                                            nextTickBrowserPingMessage: !0,
+                                                        },
                                                         document.location.toString(),
                                                     );
                                             }
@@ -751,6 +769,7 @@
                                     (e.exports = (function () {
                                         return (function (e) {
                                             var t = {};
+
                                             function n(r) {
                                                 if (t[r]) return t[r].exports;
                                                 var i = (t[r] = {
@@ -776,7 +795,9 @@
                                                         Object.defineProperty(e, Symbol.toStringTag, {
                                                             value: "Module",
                                                         }),
-                                                        Object.defineProperty(e, "__esModule", { value: !0 });
+                                                        Object.defineProperty(e, "__esModule", {
+                                                            value: !0,
+                                                        });
                                                 }),
                                                 (n.t = function (e, t) {
                                                     if (
@@ -1282,7 +1303,10 @@
                 },
                 893: (e, t, n) => {
                     var r = n(318);
-                    Object.defineProperty(t, "__esModule", { value: !0 }), (t.default = void 0);
+                    Object.defineProperty(t, "__esModule", {
+                        value: !0,
+                    }),
+                        (t.default = void 0);
                     var i = r(n(575)),
                         a = r(n(913));
                     t.default = (function () {
@@ -1331,7 +1355,10 @@
                 },
                 523: (e, t, n) => {
                     var r = n(318);
-                    Object.defineProperty(t, "__esModule", { value: !0 }), (t.default = void 0);
+                    Object.defineProperty(t, "__esModule", {
+                        value: !0,
+                    }),
+                        (t.default = void 0);
                     var i = r(n(575)),
                         a = r(n(913));
                     t.default = new ((function () {
@@ -1403,12 +1430,16 @@
                 },
                 408: (e, t, n) => {
                     var r = n(318);
-                    Object.defineProperty(t, "__esModule", { value: !0 }), (t.default = void 0);
+                    Object.defineProperty(t, "__esModule", {
+                        value: !0,
+                    }),
+                        (t.default = void 0);
                     var i = r(n(575)),
                         a = r(n(913)),
                         s = r(n(205)),
                         o = r(n(585)),
                         l = r(n(754));
+
                     function c(e) {
                         var t = (function () {
                             if ("u" < typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
@@ -1435,6 +1466,7 @@
                     t.default = (function (e) {
                         (0, s.default)(n, e);
                         var t = c(n);
+
                         function n() {
                             return (0, i.default)(this, n), t.apply(this, arguments);
                         }
@@ -1478,12 +1510,16 @@
                 },
                 319: (e, t, n) => {
                     var r = n(318);
-                    Object.defineProperty(t, "__esModule", { value: !0 }), (t.default = void 0);
+                    Object.defineProperty(t, "__esModule", {
+                        value: !0,
+                    }),
+                        (t.default = void 0);
                     var i = r(n(575)),
                         a = r(n(913)),
                         s = r(n(205)),
                         o = r(n(585)),
                         l = r(n(754));
+
                     function c(e) {
                         var t = (function () {
                             if ("u" < typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
@@ -1510,6 +1546,7 @@
                     t.default = (function (e) {
                         (0, s.default)(n, e);
                         var t = c(n);
+
                         function n() {
                             return (0, i.default)(this, n), t.apply(this, arguments);
                         }
@@ -1569,7 +1606,10 @@
                 },
                 445: (e, t, n) => {
                     var r = n(318);
-                    Object.defineProperty(t, "__esModule", { value: !0 }), (t.default = void 0);
+                    Object.defineProperty(t, "__esModule", {
+                        value: !0,
+                    }),
+                        (t.default = void 0);
                     var i = r(n(575)),
                         a = r(n(913)),
                         s = r(n(539)),
@@ -1665,7 +1705,10 @@
                 },
                 964: (e, t, n) => {
                     var r = n(318);
-                    Object.defineProperty(t, "__esModule", { value: !0 }), (t.default = void 0);
+                    Object.defineProperty(t, "__esModule", {
+                        value: !0,
+                    }),
+                        (t.default = void 0);
                     var i = r(n(575)),
                         a = r(n(913)),
                         s = r(n(525)),
@@ -1675,6 +1718,7 @@
                         u = r(n(408)),
                         d = r(n(319)),
                         f = r(n(445));
+
                     function p(e) {
                         var t = (function () {
                             if ("u" < typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
@@ -1721,6 +1765,7 @@
                         m = new ((function (e) {
                             (0, o.default)(n, e);
                             var t = p(n);
+
                             function n() {
                                 var e;
                                 return (
@@ -1818,7 +1863,9 @@
                                                                 "\nOGVLoader.base = " +
                                                                 JSON.stringify(m.base);
                                                             try {
-                                                                p = new Blob([e], { type: "application/javascript" });
+                                                                p = new Blob([e], {
+                                                                    type: "application/javascript",
+                                                                });
                                                             } catch (t) {
                                                                 (window.BlobBuilder =
                                                                     window.BlobBuilder ||
@@ -1864,7 +1911,10 @@
                 },
                 759: (e, t, n) => {
                     var r = n(318);
-                    Object.defineProperty(t, "__esModule", { value: !0 }), (t.default = void 0);
+                    Object.defineProperty(t, "__esModule", {
+                        value: !0,
+                    }),
+                        (t.default = void 0);
                     var i = r(n(913)),
                         a = r(n(575)),
                         s = r(n(309)),
@@ -1881,9 +1931,13 @@
                 },
                 278: (e, t, n) => {
                     var r = n(318);
-                    Object.defineProperty(t, "__esModule", { value: !0 }), (t.default = void 0);
+                    Object.defineProperty(t, "__esModule", {
+                        value: !0,
+                    }),
+                        (t.default = void 0);
                     var i = r(n(913)),
                         a = r(n(575));
+
                     function s(e, t, n) {
                         var r = e.split(t, n).map(function (e) {
                             return (function (e) {
@@ -1918,7 +1972,10 @@
                 },
                 869: (e, t, n) => {
                     var r = n(318);
-                    Object.defineProperty(t, "__esModule", { value: !0 }), (t.default = void 0);
+                    Object.defineProperty(t, "__esModule", {
+                        value: !0,
+                    }),
+                        (t.default = void 0);
                     var i = r(n(575)),
                         a = r(n(913)),
                         s = r(n(506)),
@@ -1937,6 +1994,7 @@
                         b = r(n(168)),
                         y = r(n(625)),
                         O = r(n(302));
+
                     function A(e) {
                         var t = (function () {
                             if ("u" < typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
@@ -1999,6 +2057,7 @@
                         k = "LINEAR_TO_TARGET",
                         U = "exact",
                         G = "fast";
+
                     function V() {
                         var e = document.createElement("ogvjs");
                         return (
@@ -2016,6 +2075,7 @@
                     var F = (function (e) {
                         (0, o.default)(n, e);
                         var t = A(n);
+
                         function n(e) {
                             var r;
                             if (
@@ -2076,7 +2136,7 @@
                                 (r._startedPlaybackInDocument = !1),
                                 (r._stream = void 0),
                                 (r._framesProcessed = 0),
-                                (r._targetPerFrameTime = 1000 / 60),
+                                (r._targetPerFrameTime = 1e3 / 60),
                                 (r._actualPerFrameTime = 0),
                                 (r._totalFrameTime = 0),
                                 (r._totalFrameCount = 0),
@@ -2275,7 +2335,7 @@
                                         get: function () {
                                             return this._videoInfo
                                                 ? 0 == this._videoInfo.fps
-                                                    ? this._totalFrameCount / (this._totalFrameTime / 1000)
+                                                    ? this._totalFrameCount / (this._totalFrameTime / 1e3)
                                                     : this._videoInfo.fps
                                                 : 0;
                                         },
@@ -2403,7 +2463,7 @@
                                                 ? (this._audioFeeder.tempo = t)
                                                 : this._paused ||
                                                   ((this._initialPlaybackOffset = this._getPlaybackTime()),
-                                                  (this._initialPlaybackPosition = (t * v()) / 1000)),
+                                                  (this._initialPlaybackPosition = (t * v()) / 1e3)),
                                                 (this._playbackRate = t),
                                                 this._fireEventAsync("ratechange");
                                         },
@@ -2507,7 +2567,9 @@
                                         value: function () {
                                             var e = this,
                                                 t = this._options,
-                                                n = { bufferSize: 8192 };
+                                                n = {
+                                                    bufferSize: 8192,
+                                                };
                                             t.audioContext && (n.audioContext = t.audioContext),
                                                 t.audioDestination && (n.output = t.audioDestination),
                                                 t.audioBackendFactory && (n.backendFactory = t.audioBackendFactory);
@@ -2542,7 +2604,7 @@
                                                 this._audioFeeder.start();
                                                 var t = this._audioFeeder.getPlaybackState();
                                                 this._initialPlaybackPosition = t.playbackPosition;
-                                            } else this._initialPlaybackPosition = (this._playbackRate * v()) / 1000;
+                                            } else this._initialPlaybackPosition = (this._playbackRate * v()) / 1e3;
                                             void 0 !== e && (this._initialPlaybackOffset = e),
                                                 (this._prebufferingAudio = !1),
                                                 this._log(
@@ -2568,7 +2630,7 @@
                                                 ? this._initialPlaybackOffset
                                                 : (this._audioFeeder
                                                       ? (e = e || this._audioFeeder.getPlaybackState()).playbackPosition
-                                                      : (this._playbackRate * v()) / 1000) -
+                                                      : (this._playbackRate * v()) / 1e3) -
                                                       this._initialPlaybackPosition +
                                                       this._initialPlaybackOffset;
                                         },
@@ -2640,6 +2702,7 @@
                                                 late: t.dropped,
                                                 dropped: t.dropped,
                                             };
+
                                             function s(e) {
                                                 return Math.round(10 * e) / 10;
                                             }
@@ -2863,7 +2926,7 @@
                                             var e,
                                                 t = this;
                                             if (
-                                                ((e = this._codec.hasVideo ? this._targetPerFrameTime / 1000 : 1 / 256),
+                                                ((e = this._codec.hasVideo ? this._targetPerFrameTime / 1e3 : 1 / 256),
                                                 this._codec.hasVideo)
                                             ) {
                                                 if (this._pendingFrame) return;
@@ -2886,7 +2949,9 @@
                                                     var n = this._codec.frameTimestamp;
                                                     return (
                                                         this._pendingFrame++,
-                                                        this._pendingFrames.push({ frameEndTimestamp: n }),
+                                                        this._pendingFrames.push({
+                                                            frameEndTimestamp: n,
+                                                        }),
                                                         this._decodedFrames.splice(0, this._decodedFrames.length),
                                                         this._codec.decodeFrame(function (e) {
                                                             t._pendingFrame--,
@@ -2932,7 +2997,7 @@
                                                 t,
                                                 n = this;
                                             if (this._codec.hasVideo)
-                                                (t = this._codec.frameTimestamp), (e = this._targetPerFrameTime / 1000);
+                                                (t = this._codec.frameTimestamp), (e = this._targetPerFrameTime / 1e3);
                                             else {
                                                 if (!this._codec.hasAudio)
                                                     throw Error(
@@ -2979,7 +3044,7 @@
                                         key: "_setupVideo",
                                         value: function () {
                                             this._videoInfo.fps > 0
-                                                ? (this._targetPerFrameTime = 1000 / this._videoInfo.fps)
+                                                ? (this._targetPerFrameTime = 1e3 / this._videoInfo.fps)
                                                 : (this._targetPerFrameTime = 16.667),
                                                 (this._canvas.width = this._videoInfo.displayWidth),
                                                 (this._canvas.height = this._videoInfo.displayHeight),
@@ -3261,8 +3326,7 @@
                                                                 this._framePipelineDepth + this._frameParallelism &&
                                                             this._codec.frameReady),
                                                         r &&
-                                                            ((l =
-                                                                1000 * (this._decodedFrames[0].frameEndTimestamp - s)),
+                                                            ((l = 1e3 * (this._decodedFrames[0].frameEndTimestamp - s)),
                                                             (this._actualPerFrameTime = this._targetPerFrameTime - l));
                                                     var c = this._targetPerFrameTime;
                                                     if (this._prebufferingAudio)
@@ -3281,7 +3345,7 @@
                                                                     "skipping already-decoded late frame at " +
                                                                         f.frameEndTimestamp,
                                                                 ),
-                                                                    (l = 1000 * (f.frameEndTimestamp - s)),
+                                                                    (l = 1e3 * (f.frameEndTimestamp - s)),
                                                                     (this._frameEndTimestamp = f.frameEndTimestamp),
                                                                     (this._actualPerFrameTime =
                                                                         this._targetPerFrameTime - l),
@@ -3292,7 +3356,7 @@
                                                         var p = this._codec.nextKeyframeTimestamp,
                                                             _ =
                                                                 p -
-                                                                (this._targetPerFrameTime / 1000) *
+                                                                (this._targetPerFrameTime / 1e3) *
                                                                     (this._framePipelineDepth + this._pendingFrame);
                                                         if (p >= 0 && p != this._codec.frameTimestamp && s >= _) {
                                                             this._log(
@@ -3308,7 +3372,7 @@
                                                                 this._lateFrames++,
                                                                     this._framesProcessed++,
                                                                     (this._frameEndTimestamp = m.frameEndTimestamp),
-                                                                    (l = 1000 * (m.frameEndTimestamp - s)),
+                                                                    (l = 1e3 * (m.frameEndTimestamp - s)),
                                                                     (this._actualPerFrameTime =
                                                                         this._targetPerFrameTime - l),
                                                                     (m.dropped = !0),
@@ -3320,7 +3384,7 @@
                                                                 this._lateFrames++,
                                                                     this._framesProcessed++,
                                                                     (this._frameEndTimestamp = E.frameEndTimestamp),
-                                                                    (l = 1000 * (E.frameEndTimestamp - s)),
+                                                                    (l = 1e3 * (E.frameEndTimestamp - s)),
                                                                     (this._actualPerFrameTime =
                                                                         this._targetPerFrameTime - l),
                                                                     (E.dropped = !0),
@@ -3335,7 +3399,7 @@
                                                                     frameEndTimestamp: this._codec.frameTimestamp,
                                                                     dropped: !0,
                                                                 };
-                                                                (l = 1000 * (b.frameEndTimestamp - s)),
+                                                                (l = 1e3 * (b.frameEndTimestamp - s)),
                                                                     (this._actualPerFrameTime =
                                                                         this._targetPerFrameTime - l),
                                                                     this._lateFrames++,
@@ -3359,13 +3423,15 @@
                                                         0 == this._videoInfo.fps &&
                                                             this._codec.frameTimestamp - this._frameEndTimestamp > 0 &&
                                                             (this._targetPerFrameTime =
-                                                                1000 *
+                                                                1e3 *
                                                                 (this._codec.frameTimestamp - this._frameEndTimestamp)),
                                                         (this._totalFrameTime += this._targetPerFrameTime),
                                                         this._totalFrameCount++;
                                                     var y = (this._frameEndTimestamp = this._codec.frameTimestamp);
                                                     this._pendingFrame++,
-                                                        this._pendingFrames.push({ frameEndTimestamp: y });
+                                                        this._pendingFrames.push({
+                                                            frameEndTimestamp: y,
+                                                        });
                                                     var O = this._pendingFrames,
                                                         A = !1,
                                                         v = this._time(function () {
@@ -3473,7 +3539,7 @@
                                                         var C = 0;
                                                         this._codec.hasAudio &&
                                                             this._audioFeeder &&
-                                                            (C = 1000 * this._audioFeeder.durationBuffered),
+                                                            (C = 1e3 * this._audioFeeder.durationBuffered),
                                                             C > 0
                                                                 ? (this._log("play loop: ending pending " + C + " ms"),
                                                                   this._pingProcessing(Math.max(0, C)))
@@ -3666,7 +3732,7 @@
                                                                   ? (t._stream = t._options.stream)
                                                                   : (t._stream = new f.default({
                                                                         url: t.src,
-                                                                        cacheSize: 16777216,
+                                                                        cacheSize: 0x1000000,
                                                                         progressive: !1,
                                                                     })),
                                                                   t._stream
@@ -3703,6 +3769,7 @@
                                         key: "canPlayType",
                                         value: function (e) {
                                             var t = new E.default(e);
+
                                             function n(e) {
                                                 if (t.codecs) {
                                                     var n = 0,
@@ -3871,7 +3938,10 @@
                 },
                 580: (e, t, n) => {
                     var r = n(318);
-                    Object.defineProperty(t, "__esModule", { value: !0 }), (t.default = void 0);
+                    Object.defineProperty(t, "__esModule", {
+                        value: !0,
+                    }),
+                        (t.default = void 0);
                     var i = r(n(575)),
                         a = r(n(913));
                     t.default = function (e) {
@@ -3968,7 +4038,10 @@
                 },
                 168: (e, t, n) => {
                     var r = n(318);
-                    Object.defineProperty(t, "__esModule", { value: !0 }), (t.default = void 0);
+                    Object.defineProperty(t, "__esModule", {
+                        value: !0,
+                    }),
+                        (t.default = void 0);
                     var i = r(n(575)),
                         a = r(n(913));
                     t.default = (function () {
@@ -4000,10 +4073,14 @@
                 },
                 625: (e, t, n) => {
                     var r = n(318);
-                    Object.defineProperty(t, "__esModule", { value: !0 }), (t.default = void 0);
+                    Object.defineProperty(t, "__esModule", {
+                        value: !0,
+                    }),
+                        (t.default = void 0);
                     var i = r(n(575)),
                         a = r(n(913)),
                         s = r(n(964));
+
                     function o(e, t) {
                         var n = ("u" > typeof Symbol && e[Symbol.iterator]) || e["@@iterator"];
                         if (!n) {
@@ -4031,7 +4108,9 @@
                                     s: i,
                                     n: function () {
                                         return r >= e.length
-                                            ? { done: !0 }
+                                            ? {
+                                                  done: !0,
+                                              }
                                             : {
                                                   done: !1,
                                                   value: e[r++],
@@ -4070,6 +4149,7 @@
                             },
                         };
                     }
+
                     function l(e, t) {
                         (null == t || t > e.length) && (t = e.length);
                         for (var n = 0, r = Array(t); n < t; n++) r[n] = e[n];
@@ -4328,9 +4408,7 @@
                                                         try {
                                                             for (s.s(); !(i = s.n()).done; ) {
                                                                 var l = i.value,
-                                                                    c = Math.round(
-                                                                        (r * t.audioFormat.rate) / 1000000000,
-                                                                    );
+                                                                    c = Math.round((r * t.audioFormat.rate) / 1e9);
                                                                 c > 0
                                                                     ? a.push(
                                                                           l.subarray(
@@ -4430,7 +4508,9 @@
                                                                     });
                                                             });
                                                     },
-                                                    { worker: this.options.worker },
+                                                    {
+                                                        worker: this.options.worker,
+                                                    },
                                                 );
                                         } else e();
                                     },
@@ -4477,7 +4557,9 @@
                                                                     });
                                                             });
                                                     },
-                                                    { worker: this.options.worker && !this.options.threading },
+                                                    {
+                                                        worker: this.options.worker && !this.options.threading,
+                                                    },
                                                 );
                                         } else e();
                                     },
@@ -4489,7 +4571,10 @@
                 },
                 539: (e, t, n) => {
                     var r = n(318);
-                    Object.defineProperty(t, "__esModule", { value: !0 }), (t.default = void 0);
+                    Object.defineProperty(t, "__esModule", {
+                        value: !0,
+                    }),
+                        (t.default = void 0);
                     var i = r(n(8)),
                         a = r(n(575)),
                         s = r(n(913));
@@ -4532,7 +4617,9 @@
                     })())();
                 },
                 309: (e, t) => {
-                    Object.defineProperty(t, "__esModule", { value: !0 }),
+                    Object.defineProperty(t, "__esModule", {
+                        value: !0,
+                    }),
                         (t.default = void 0),
                         (t.default = function (e, t) {
                             for (var n in t) t.hasOwnProperty(n) && (e[n] = t[n]);
@@ -4564,9 +4651,11 @@
                             var s = i.get;
                             return void 0 !== s ? s.call(r) : void 0;
                         };
+
                     function a(e, t) {
                         if (!(e instanceof t)) throw TypeError("Cannot call a class as a function");
                     }
+
                     function s(e, t) {
                         if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
                         return t && ("object" == typeof t || "function" == typeof t) ? t : e;
@@ -4654,6 +4743,7 @@
                             return n && e(t.prototype, n), r && e(t, r), t;
                         };
                     })();
+
                     function i(e) {
                         if (206 == e.status)
                             return (function (e) {
@@ -4663,6 +4753,7 @@
                         var t = e.getResponseHeader("Content-Length");
                         return null === t || "" === t ? -1 : parseInt(t, 10);
                     }
+
                     function a(e) {
                         var t = e.getResponseHeader("Content-Range");
                         return t && t.match(/^bytes (\d+)-(\d+)\/(\d+)/);
@@ -4852,9 +4943,11 @@
                             var s = i.get;
                             return void 0 !== s ? s.call(r) : void 0;
                         };
+
                     function a(e, t) {
                         if (!(e instanceof t)) throw TypeError("Cannot call a class as a function");
                     }
+
                     function s(e, t) {
                         if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
                         return t && ("object" == typeof t || "function" == typeof t) ? t : e;
@@ -4951,9 +5044,11 @@
                             var s = i.get;
                             return void 0 !== s ? s.call(r) : void 0;
                         };
+
                     function a(e, t) {
                         if (!(e instanceof t)) throw TypeError("Cannot call a class as a function");
                     }
+
                     function s(e, t) {
                         if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
                         return t && ("object" == typeof t || "function" == typeof t) ? t : e;
@@ -5109,9 +5204,11 @@
                             var s = i.get;
                             return void 0 !== s ? s.call(r) : void 0;
                         };
+
                     function a(e, t) {
                         if (!(e instanceof t)) throw TypeError("Cannot call a class as a function");
                     }
+
                     function s(e, t) {
                         if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
                         return t && ("object" == typeof t || "function" == typeof t) ? t : e;
@@ -5189,6 +5286,7 @@
                             return n && e(t.prototype, n), r && e(t, r), t;
                         };
                     })();
+
                     function n(e, t) {
                         if (!(e instanceof t)) throw TypeError("Cannot call a class as a function");
                     }
@@ -5302,6 +5400,7 @@
                             return n && e(t.prototype, n), r && e(t, r), t;
                         };
                     })();
+
                     function i(e, t) {
                         if (!(e instanceof t)) throw TypeError("Cannot call a class as a function");
                     }
@@ -5312,7 +5411,9 @@
                                 n = t.cacheSize,
                                 r = void 0 === n ? 0 : n;
                             i(this, e);
-                            var s = new a({ eof: !0 });
+                            var s = new a({
+                                eof: !0,
+                            });
                             (this.head = s),
                                 (this.tail = s),
                                 (this.readOffset = 0),
@@ -5634,7 +5735,9 @@
                                 }),
                                 (this.url = r),
                                 (this.headers = {}),
-                                (this._cache = new i({ cacheSize: l })),
+                                (this._cache = new i({
+                                    cacheSize: l,
+                                })),
                                 (this._backend = null),
                                 (this._cachever = 0),
                                 (this._chunkSize = s);
@@ -5854,7 +5957,10 @@
                     })();
                 },
                 302: (e, t, n) => {
-                    n.r(t), n.d(t, { default: () => r });
+                    n.r(t),
+                        n.d(t, {
+                            default: () => r,
+                        });
                     let r =
                         "data:audio/mpeg;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjU5LjE2LjEwMAAAAAAAAAAAAAAA//tQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASW5mbwAAAA8AAAACAAAEEwCZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZ//////////////////////////////////////////////////////////////////8AAAAATGF2YzU5LjE4AAAAAAAAAAAAAAAAJAZAAAAAAAAABBMIw3vfAAAAAAAAAAAAAAAAAAAAAP/7kGQAD/AAAGkAAAAIAAANIAAAAQAAAaQAAAAgAAA0gAAABExBTUUzLjEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVUxBTUUzLjEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/7kmRAj/AAAGkAAAAIAAANIAAAAQAAAaQAAAAgAAA0gAAABFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVU=";
                 },
@@ -5887,6 +5993,7 @@
                     !(function () {
                         var t = n(487),
                             r = n(627);
+
                         function i(e) {
                             var t = this,
                                 n = e.getContext("2d"),
@@ -5943,12 +6050,14 @@
                     !(function () {
                         var t = n(487),
                             r = n(826);
+
                         function i(e) {
                             var t,
                                 n,
                                 a = this,
                                 s = i.contextForCanvas(e);
                             if (null === s) throw Error("WebGL unavailable");
+
                             function o(e, t) {
                                 var n = s.createShader(e);
                                 if (
@@ -5977,9 +6086,11 @@
                                 b = {},
                                 y = {},
                                 O = {};
+
                             function A(e, t) {
                                 return (b[e] && !t) || (b[e] = s.createTexture()), b[e];
                             }
+
                             function v(e, t, n, r, a) {
                                 var o = !b[e] || t,
                                     l = A(e, t);
@@ -6037,8 +6148,8 @@
                                                     for (var t = e, n = new Uint32Array(t), r = 0; r < t; r += 4)
                                                         (n[r] = 255),
                                                             (n[r + 1] = 65280),
-                                                            (n[r + 2] = 16711680),
-                                                            (n[r + 3] = 4278190080);
+                                                            (n[r + 2] = 0xff0000),
+                                                            (n[r + 3] = 0xff000000);
                                                     return (O[e] = new Uint8Array(n.buffer));
                                                 })(n),
                                             ));
@@ -6062,6 +6173,7 @@
                                               ))
                                             : s.texSubImage2D(s.TEXTURE_2D, 0, 0, 0, n, r, s.ALPHA, s.UNSIGNED_BYTE, a);
                             }
+
                             function S(e, t, r, i) {
                                 var a = b[e];
                                 s.useProgram(n);
@@ -6093,6 +6205,7 @@
                                     s.drawArrays(s.TRIANGLES, 0, E.length / 2),
                                     s.bindFramebuffer(s.FRAMEBUFFER, null);
                             }
+
                             function I(e, n, r) {
                                 s.activeTexture(n),
                                     s.bindTexture(s.TEXTURE_2D, b[e]),
@@ -6102,6 +6215,7 @@
                                     s.texParameteri(s.TEXTURE_2D, s.TEXTURE_MAG_FILTER, s.LINEAR),
                                     s.uniform1i(s.getUniformLocation(t, e), r);
                             }
+
                             function T(e, t) {
                                 var n = o(s.VERTEX_SHADER, e),
                                     r = o(s.FRAGMENT_SHADER, t),
@@ -6353,10 +6467,13 @@
                 },
             },
             t = {};
+
         function n(r) {
             var i = t[r];
             if (void 0 !== i) return i.exports;
-            var a = (t[r] = { exports: {} });
+            var a = (t[r] = {
+                exports: {},
+            });
             return e[r](a, a.exports, n), a.exports;
         }
         (n.d = (e, t) => {
@@ -6372,15 +6489,21 @@
             (n.r = (e) => {
                 "u" > typeof Symbol &&
                     Symbol.toStringTag &&
-                    Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }),
-                    Object.defineProperty(e, "__esModule", { value: !0 });
+                    Object.defineProperty(e, Symbol.toStringTag, {
+                        value: "Module",
+                    }),
+                    Object.defineProperty(e, "__esModule", {
+                        value: !0,
+                    });
             });
         var r = {};
         return (
             (() => {
                 var e = r,
                     t = n(318);
-                Object.defineProperty(e, "__esModule", { value: !0 }),
+                Object.defineProperty(e, "__esModule", {
+                    value: !0,
+                }),
                     Object.defineProperty(e, "OGVCompat", {
                         enumerable: !0,
                         get: function () {

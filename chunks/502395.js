@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -9,6 +11,7 @@ var i = n(311907),
     c = n(430452),
     u = n(531525),
     d = n(985018);
+
 function f() {
     let { sidechainEnabled: e, sidechainStrength: t } = (0, i.cf)([c.A], () => ({
             sidechainEnabled: c.A.getSidechainCompression(),
@@ -22,13 +25,19 @@ function f() {
                 label: d.intl.string(d.t["/jwMtn"]),
                 description: d.intl.string(d.t.zlA23F),
                 checked: e,
-                onChange: (e) => s.A.setSidechainCompression(e, { analyticsLocations: n }),
+                onChange: (e) =>
+                    s.A.setSidechainCompression(e, {
+                        analyticsLocations: n,
+                    }),
             }),
             (0, r.jsx)(a.Apm, {
                 label: d.intl.string(d.t.fhEzfj),
                 initialValue: t,
                 minValue: 1,
-                onValueChange: (e) => s.A.setSidechainCompressionStrength(e, { analyticsLocations: n }),
+                onValueChange: (e) =>
+                    s.A.setSidechainCompressionStrength(e, {
+                        analyticsLocations: n,
+                    }),
             }),
         ],
     });

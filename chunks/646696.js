@@ -1,4 +1,7 @@
-n.d(t, { A: () => A }), n(896048);
+n.d(t, {
+    A: () => A,
+}),
+    n(896048);
 var r = n(439372),
     i = n(183636),
     a = n(927813),
@@ -11,6 +14,7 @@ var r = n(439372),
     f = n(302654),
     p = n(677402),
     _ = n(654487);
+
 function h(e, t, n) {
     return (
         t in e
@@ -32,13 +36,20 @@ let m = a.A.Millis.DAY,
 class O extends r.A {
     _fetch(e) {
         if (
-            !(0, p.s)({ location: _.rE.QUESTS_MANAGER }) ||
+            !(0, p.s)({
+                location: _.rE.QUESTS_MANAGER,
+            }) ||
             l.A.isFetchingCurrentQuests ||
             (0, s.I)() ||
-            ((0, o.N1)(), u.Bw.getConfig({ location: _.rE.QUESTS_MANAGER }).enabled && "focused" !== i.A.getState())
+            ((0, o.N1)(),
+            u.Bw.getConfig({
+                location: _.rE.QUESTS_MANAGER,
+            }).enabled && "focused" !== i.A.getState())
         )
             return;
-        let { enableNewRequestBehavior: t } = f.A.getConfig({ location: "QuestFetchManager" });
+        let { enableNewRequestBehavior: t } = f.A.getConfig({
+            location: "QuestFetchManager",
+        });
         t || (0, o.r8)(c.yW.DESKTOP_ACCOUNT_PANEL_AREA, e);
     }
     constructor(...e) {
@@ -52,7 +63,9 @@ class O extends r.A {
                 this.lastFetchAttemptedAt = Date.now();
             }),
             h(this, "handlePostConnectionOpen", () => {
-                let e = (0, d.u)({ location: _.rE.QUESTS_MANAGER });
+                let e = (0, d.u)({
+                    location: _.rE.QUESTS_MANAGER,
+                });
                 window.clearTimeout(this.initialFetchTimerId),
                     window.clearTimeout(this.recurringFetchTimerId),
                     (this.recurringFetchTimerId = window.setInterval(() => {

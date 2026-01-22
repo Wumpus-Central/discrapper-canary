@@ -1,4 +1,6 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(562465),
     i = n(73153),
     a = n(652215);
@@ -13,7 +15,9 @@ let s = {
         });
     },
     clearMentions() {
-        i.h.dispatch({ type: "CLEAR_MENTIONS" });
+        i.h.dispatch({
+            type: "CLEAR_MENTIONS",
+        });
     },
     truncateMentions(e) {
         i.h.dispatch({
@@ -52,7 +56,9 @@ let s = {
                     });
                 },
                 () => {
-                    i.h.dispatch({ type: "LOAD_RECENT_MENTIONS_FAILURE" });
+                    i.h.dispatch({
+                        type: "LOAD_RECENT_MENTIONS_FAILURE",
+                    });
                 },
             )
         );
@@ -70,6 +76,8 @@ let s = {
             });
     },
     setRecentMentionsStale() {
-        i.h.dispatch({ type: "SET_RECENT_MENTIONS_STALE" });
+        i.h.dispatch({
+            type: "SET_RECENT_MENTIONS_STALE",
+        });
     },
 };

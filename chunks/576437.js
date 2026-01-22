@@ -1,4 +1,6 @@
-n.d(t, { M: () => A });
+n.d(t, {
+    M: () => A,
+});
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -18,7 +20,9 @@ let A = (e) => {
     let { children: t, isForceShowSharingPopout: n, setIsForceShowSharingPopout: A, popoutTargetRef: y } = e,
         O = (function (e) {
             let { isForceShowSharingPopout: t } = e,
-                { isQuestBarEmpty: n, hasLoadedQuestBar: r } = (0, c.c9)({ location: m.rE.CONFLICT_CHECKS }),
+                { isQuestBarEmpty: n, hasLoadedQuestBar: r } = (0, c.c9)({
+                    location: m.rE.CONFLICT_CHECKS,
+                }),
                 l = u.tz.useSetting(),
                 a = (0, i.bG)([d.A], () => d.A.getLayers().includes(b.zgK.USER_SETTINGS)),
                 s = (0, i.bG)([f.A], () => f.A.getStatus()),
@@ -29,9 +33,14 @@ let A = (e) => {
                 if (s === b.clD.INVISIBLE) return t ? h.u5.Status : h.u5.StatusNux;
             }
             return null;
-        })({ isForceShowSharingPopout: n });
+        })({
+            isForceShowSharingPopout: n,
+        });
     (0, l.useEffect)(() => {
-        n && p.default.track(b.HAw.OPEN_POPOUT, { type: "SharingPrivacyPopout" });
+        n &&
+            p.default.track(b.HAw.OPEN_POPOUT, {
+                type: "SharingPrivacyPopout",
+            });
     }, [n]);
     let j = n ? [] : [a.M.SHARE_ACTIVITY_COACHMARK_V2];
     return (0, r.jsx)(s.Ay, {

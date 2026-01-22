@@ -1,4 +1,6 @@
-n.d(t, { A: () => y });
+n.d(t, {
+    A: () => y,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -17,6 +19,7 @@ var i = n(503698),
     g = n(788868),
     E = n(985018),
     b = n(587590);
+
 function y(e) {
     var t, n, i, y;
     let { type: O, textValue: A, maxCharacterCount: v, showRemainingCharsAfterCount: S, className: I } = e,
@@ -35,7 +38,9 @@ function y(e) {
             0 === L
                 ? E.intl.string(E.t.tU6YQ7)
                 : L > 0
-                  ? E.intl.formatToPlainString(E.t.qH8uFW, { count: L })
+                  ? E.intl.formatToPlainString(E.t.qH8uFW, {
+                        count: L,
+                    })
                   : E.intl.string(E.t.YSRIqa),
         { analyticsLocations: U } = (0, u.Ay)(c.A.CHARACTER_COUNT);
     if (!((P && L >= 0) || !j || (D && !j))) return null;
@@ -50,7 +55,9 @@ function y(e) {
                     children: [
                         P && G
                             ? (0, r.jsx)(o.m, {
-                                  text: E.intl.formatToPlainString(E.t.vcvHa0, { maxLength: N }),
+                                  text: E.intl.formatToPlainString(E.t.vcvHa0, {
+                                      maxLength: N,
+                                  }),
                                   position: "top",
                                   children: (0, r.jsx)(l.tvc, {
                                       size: "md",
@@ -74,7 +81,11 @@ function y(e) {
                               }),
                     ],
                 }),
-                (0, r.jsx)(l.AC4, { children: E.intl.format(E.t.qH8uFW, { count: L }) }),
+                (0, r.jsx)(l.AC4, {
+                    children: E.intl.format(E.t.qH8uFW, {
+                        count: L,
+                    }),
+                }),
                 D && !j
                     ? (0, r.jsx)(h.A, {
                           className: b.UX,

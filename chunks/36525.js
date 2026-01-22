@@ -1,4 +1,7 @@
-n.d(t, { A: () => f }), n(896048);
+n.d(t, {
+    A: () => f,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(990078),
@@ -27,7 +30,7 @@ let f = function (e) {
     return (
         i.useEffect(() => {
             function e() {
-                v(!0), setTimeout(() => v(!1), 1000);
+                v(!0), setTimeout(() => v(!1), 1e3);
             }
             return (
                 l._.subscribe(c.jej.EMPHASIZE_NOTICE, e),

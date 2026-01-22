@@ -1,2 +1,4 @@
-n.d(t, { n: () => r });
+n.d(t, {
+    n: () => r,
+});
 let r = new WeakMap();

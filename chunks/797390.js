@@ -1,4 +1,7 @@
-n.d(t, { R: () => h }), n(321073);
+n.d(t, {
+    R: () => h,
+}),
+    n(321073);
 var r = n(313961),
     i = n(652896),
     a = n(616356),
@@ -9,6 +12,7 @@ var r = n(313961),
     u = n(601900),
     d = n(548370),
     f = n(652215);
+
 function p(e, t, n) {
     return (
         t in e
@@ -22,6 +26,7 @@ function p(e, t, n) {
         e
     );
 }
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -54,7 +59,14 @@ let h = {
                       null == m ||
                           ((p.short.frameRate < (0, d.s1)(m.maxFrameRate) ||
                               p.long.frameRate < (0, d.s1)(m.maxFrameRate)) &&
-                              e.push(_({ type: c.iy.STREAM_VIEW_LOW_FPS }, (0, u.id)((0, i._z)(t))))),
+                              e.push(
+                                  _(
+                                      {
+                                          type: c.iy.STREAM_VIEW_LOW_FPS,
+                                      },
+                                      (0, u.id)((0, i._z)(t)),
+                                  ),
+                              )),
                       e
                   );
               }, [])

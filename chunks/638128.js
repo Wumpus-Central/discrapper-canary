@@ -1,10 +1,14 @@
-n.d(t, { A: () => h }), n(896048);
+n.d(t, {
+    A: () => h,
+}),
+    n(896048);
 var r,
     i = n(311907),
     a = n(506774),
     s = n(73153),
     o = n(11057),
     l = n(454235);
+
 function c(e, t, n) {
     return (
         t in e
@@ -21,6 +25,7 @@ function c(e, t, n) {
 let u = "SpellcheckStore",
     d = !0,
     f = new Set();
+
 function p() {
     a.w.set(u, {
         enabled: d,

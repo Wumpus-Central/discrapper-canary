@@ -1,4 +1,7 @@
-Object.defineProperty(t, "__esModule", { value: !0 }), (t.Alpha = void 0);
+Object.defineProperty(t, "__esModule", {
+    value: !0,
+}),
+    (t.Alpha = void 0);
 var n =
         Object.assign ||
         function (e) {
@@ -32,9 +35,15 @@ var n =
         return (t.default = e), t;
     })(r(738331)),
     u = c(r(896132));
+
 function c(e) {
-    return e && e.__esModule ? e : { default: e };
+    return e && e.__esModule
+        ? e
+        : {
+              default: e,
+          };
 }
+
 function p(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return t && ("object" == typeof t || "function" == typeof t) ? t : e;
@@ -42,6 +51,7 @@ function p(e, t) {
 var d = (t.Alpha = (function (e) {
     if ("function" != typeof e && null !== e)
         throw TypeError("Super expression must either be null or a function, not " + typeof e);
+
     function t() {
         if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
         for (var e, r, n, o = arguments.length, a = Array(o), i = 0; i < o; i++) a[i] = arguments[i];
@@ -169,13 +179,21 @@ var d = (t.Alpha = (function (e) {
                         );
                     return i.default.createElement(
                         "div",
-                        { style: r.alpha },
+                        {
+                            style: r.alpha,
+                        },
                         i.default.createElement(
                             "div",
-                            { style: r.checkboard },
-                            i.default.createElement(u.default, { renderers: this.props.renderers }),
+                            {
+                                style: r.checkboard,
+                            },
+                            i.default.createElement(u.default, {
+                                renderers: this.props.renderers,
+                            }),
                         ),
-                        i.default.createElement("div", { style: r.gradient }),
+                        i.default.createElement("div", {
+                            style: r.gradient,
+                        }),
                         i.default.createElement(
                             "div",
                             {
@@ -189,10 +207,14 @@ var d = (t.Alpha = (function (e) {
                             },
                             i.default.createElement(
                                 "div",
-                                { style: r.pointer },
+                                {
+                                    style: r.pointer,
+                                },
                                 this.props.pointer
                                     ? i.default.createElement(this.props.pointer, this.props)
-                                    : i.default.createElement("div", { style: r.slider }),
+                                    : i.default.createElement("div", {
+                                          style: r.slider,
+                                      }),
                             ),
                         ),
                     );

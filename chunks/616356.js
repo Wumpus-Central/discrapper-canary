@@ -1,5 +1,9 @@
 let r, i, a, s, o, l;
-n.d(t, { A: () => es }), n(896048), n(321073);
+n.d(t, {
+    A: () => es,
+}),
+    n(896048),
+    n(321073);
 var c,
     u = n(311907),
     d = n(73153),
@@ -20,6 +24,7 @@ var c,
     T = n(977997),
     C = n(652215),
     N = n(502075);
+
 function R(e, t, n) {
     return (
         t in e
@@ -33,6 +38,7 @@ function R(e, t, n) {
         e
     );
 }
+
 function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -49,6 +55,7 @@ function w(e) {
     }
     return e;
 }
+
 function P(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -61,6 +68,7 @@ function P(e, t) {
     }
     return n;
 }
+
 function D(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -75,21 +83,26 @@ function D(e, t) {
 let x = null,
     L = {},
     j = null;
+
 function M() {
     (r = new Map()), (i = {}), (a = {}), (s = {});
 }
+
 function k(e) {
     var t;
     null == i[e.ownerId] && (i[e.ownerId] = {}), (i[e.ownerId][null != (t = e.guildId) ? t : C.eGj] = e);
 }
+
 function U(e, t) {
     var n;
     let r = null != t ? t : C.eGj;
     return (null == (n = i[e]) ? void 0 : n[r]) != null && (delete i[e][r], !0);
 }
+
 function G(e) {
     r.delete(e);
 }
+
 function V() {
     let e = [];
     for (let t in i) {
@@ -98,6 +111,7 @@ function V() {
     }
     return e;
 }
+
 function F(e) {
     let { applicationStreamState: t } = e;
     (i = t.streamsByUserAndGuild),
@@ -105,6 +119,7 @@ function F(e) {
         (a = t.rtcStreams),
         (s = t.streamerActiveStreamMetadatas);
 }
+
 function B(e) {
     let { voiceStates: t } = e;
     return t.reduce((e, t) => {
@@ -126,13 +141,20 @@ function B(e) {
         }
     }, !1);
 }
+
 function H(e) {
     let { streamKey: t } = e,
         n = (0, _.Iy)(t);
     r.delete(t),
-        r.set(t, D(w({}, n), { state: C.XYD.CONNECTING })),
+        r.set(
+            t,
+            D(w({}, n), {
+                state: C.XYD.CONNECTING,
+            }),
+        ),
         n.ownerId === b.default.getId() && (L[n.channelId] = !1);
 }
+
 function Y(e) {
     var t;
     let {
@@ -181,6 +203,7 @@ function Y(e) {
             state: C.XYD.CONNECTING,
         });
 }
+
 function W(e) {
     for (let t of e.applications) {
         let e = p.Ay.getGameForPID(t.id);
@@ -192,6 +215,7 @@ function W(e) {
             if (null != e) return e;
         }
 }
+
 function K(e) {
     let { settings: t, endReason: n, errorCode: i } = e;
     if (
@@ -216,6 +240,7 @@ function K(e) {
     }
     return a;
 }
+
 function z(e) {
     let { existing: t, content: n } = e;
     if (null == n || ((o = null == (l = W(n)) ? void 0 : l.pid), !t)) return !1;
@@ -233,23 +258,32 @@ function z(e) {
     }
     return a;
 }
+
 function q(e) {
     let { streamKey: t } = e;
     s[t] = null;
 }
+
 function X(e) {
     let { streamKey: t, region: n, viewerIds: i, paused: s } = e;
-    r.set(t, D(w({}, (0, _.Iy)(t)), { state: s ? C.XYD.PAUSED : C.XYD.ACTIVE })),
+    r.set(
+        t,
+        D(w({}, (0, _.Iy)(t)), {
+            state: s ? C.XYD.PAUSED : C.XYD.ACTIVE,
+        }),
+    ),
         (a[t] = {
             streamKey: t,
             region: n,
             viewerIds: i,
         });
 }
+
 function Z(e) {
     let { streamKey: t } = e;
     G(t);
 }
+
 function Q(e) {
     let { id: t, channelId: n } = e;
     (x = t),
@@ -258,6 +292,7 @@ function Q(e) {
         }),
         null == t || ((0, _.wL)(t) && t.includes(b.default.getId()) && (L[n] = !1));
 }
+
 function $(e) {
     let { streamKey: t, unavailable: i, reason: s } = e;
     delete a[t];
@@ -277,14 +312,27 @@ function $(e) {
             }),
             (l = C.XYD.ENDED);
     } else o.state === C.XYD.FAILED && s === C.H2B.USER_REQUESTED && (l = C.XYD.FAILED);
-    r.set(t, D(w({}, o), { state: l })), l === C.XYD.ENDED && x !== t && G(t);
+    r.set(
+        t,
+        D(w({}, o), {
+            state: l,
+        }),
+    ),
+        l === C.XYD.ENDED && x !== t && G(t);
 }
+
 function J(e) {
     let { streamKey: t } = e,
         n = r.get(t);
     if (null == n) return !1;
-    r.set(t, D(w({}, n), { state: C.XYD.FAILED }));
+    r.set(
+        t,
+        D(w({}, n), {
+            state: C.XYD.FAILED,
+        }),
+    );
 }
+
 function ee(e) {
     let { streamKey: t, state: n } = e;
     if (null == t) return !1;
@@ -300,21 +348,30 @@ function ee(e) {
             a = C.XYD.ACTIVE;
     }
     if (a === i.state) return !1;
-    r.set(t, D(w({}, i), { state: a }));
+    r.set(
+        t,
+        D(w({}, i), {
+            state: a,
+        }),
+    );
 }
+
 function et(e) {
     let { channelId: t, selfStreamHidden: n } = e;
     (0, _.wL)(x) && (null == x ? void 0 : x.includes(b.default.getId())) && !1 === L[t] && !0 === n && (x = null),
         (L[t] = n);
 }
+
 function en(e) {
     let { intent: t } = e;
     j = t;
 }
+
 function er(e, t) {
     let n = y.A.getBasicChannel(t);
     return e === N.U4.CALL || (null != n && v.A.canBasicChannel(C.hVb.VIEW_CHANNEL, n));
 }
+
 function ei(e) {
     if (er(e.streamType, e.channelId)) return !0;
     let t = y.A.getBasicChannel(e.channelId);
@@ -329,7 +386,9 @@ class ea extends (c = u.Ay.PersistedStore) {
                 Object.assign(L, null == e ? void 0 : e.selfStreamParticipantsHidden);
     }
     getState() {
-        return { selfStreamParticipantsHidden: L };
+        return {
+            selfStreamParticipantsHidden: L,
+        };
     }
     isSelfStreamHidden(e) {
         var t;

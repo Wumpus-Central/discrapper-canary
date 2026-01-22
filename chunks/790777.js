@@ -1,12 +1,16 @@
-r.d(t, { A: () => c });
+r.d(t, {
+    A: () => c,
+});
 var a = r(1139),
     n = r(64700),
     s = r(431384);
+
 function o(e, t) {
     (null == t || t > e.length) && (t = e.length);
     for (var r = 0, a = Array(t); r < t; r++) a[r] = e[r];
     return a;
 }
+
 function i(e, t) {
     var r = 0,
         a = !1;
@@ -39,7 +43,9 @@ function i(e, t) {
                             s: n,
                             n: function () {
                                 return a >= e.length
-                                    ? { done: !0 }
+                                    ? {
+                                          done: !0,
+                                      }
                                     : {
                                           done: !1,
                                           value: e[a++],

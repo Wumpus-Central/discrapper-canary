@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968);
 n(64700);
 var i = n(110259),
@@ -8,6 +10,7 @@ var i = n(110259),
     o = n(970573),
     c = n(985018),
     u = n(777409);
+
 function d(e) {
     let { onDismiss: t } = e;
     return (
@@ -18,7 +21,9 @@ function d(e) {
         (0, r.jsxs)(a.Ay, {
             className: u.ci,
             children: [
-                (0, r.jsx)(a.hE, { children: c.intl.string(c.t.bVbB63) }),
+                (0, r.jsx)(a.hE, {
+                    children: c.intl.string(c.t.bVbB63),
+                }),
                 (0, r.jsx)(s.Text, {
                     className: u.PK,
                     variant: "text-md/normal",

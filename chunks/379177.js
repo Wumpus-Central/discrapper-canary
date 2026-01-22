@@ -28,5 +28,11 @@ let n = (0, l(945810).mj)({
             },
         },
     }),
-    r = (e) => n.useConfig({ location: e }).enabled,
-    s = (e) => n.useConfig({ location: e }).rentalDuration;
+    r = (e) =>
+        n.useConfig({
+            location: e,
+        }).enabled,
+    s = (e) =>
+        n.useConfig({
+            location: e,
+        }).rentalDuration;

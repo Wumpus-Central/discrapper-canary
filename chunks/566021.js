@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(627968),
     i = n(110259),
     a = n(397927),
@@ -6,6 +8,7 @@ var r = n(627968),
     o = n(139286),
     l = n(359549),
     c = n(985018);
+
 function u(e) {
     let { application: t, analyticsLocation: n } = e,
         { analyticsLocations: u } = (0, s.Ay)(n),
@@ -16,7 +19,9 @@ function u(e) {
     (0, o.A)({
         name: i.ImpressionNames.CLOUD_PLAY_CTA,
         type: i.ImpressionTypes.VIEW,
-        properties: { location_stack: u },
+        properties: {
+            location_stack: u,
+        },
     });
     let f = () => {
         null == d || d();

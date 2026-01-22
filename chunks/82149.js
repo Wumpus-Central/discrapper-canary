@@ -16,6 +16,7 @@ let c = "stage:",
     u = 1,
     d = 2,
     f = 4;
+
 function p(e, t) {
     let n = 0,
         i = r.default.getId();
@@ -26,6 +27,7 @@ function p(e, t) {
     let p = n.toString(16);
     return "".concat(c).concat(e.guild_id, ":").concat(e.id, ":").concat(p, ":").concat(t.id);
 }
+
 function _(e) {
     if (null == e || null == e.party) return;
     let { id: t, size: n } = e.party;
@@ -46,9 +48,11 @@ function _(e) {
         return null;
     }
 }
+
 function h(e) {
     return (null == e ? void 0 : e.application_id) === o.SS;
 }
+
 function m(e) {
     let t = _(e);
     if (null == t) return !1;

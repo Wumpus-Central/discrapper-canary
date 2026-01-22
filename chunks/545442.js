@@ -10,6 +10,7 @@ var r = n(627968),
     o = n(990078),
     l = n(36075),
     c = n(707616);
+
 function u(e, t, n) {
     return (
         t in e
@@ -23,6 +24,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -39,6 +41,7 @@ function d(e) {
     }
     return e;
 }
+
 function f(e) {
     var t;
     let { color: n, colors: a, className: o, background: u = !0, hoverOverride: d } = e,
@@ -130,6 +133,7 @@ function f(e) {
               ],
           });
 }
+
 function p(e) {
     let { color: t, colors: n, name: i, tooltip: a = !0 } = e;
     return null == t && null == n
@@ -144,6 +148,7 @@ function p(e) {
             })
           : (0, r.jsx)(f, d({}, e));
 }
+
 function _(e) {
     let { color: t, colors: n, className: i } = e,
         { gradientStyle: a, gradientClassname: o } = (0, l.v5)({
@@ -152,9 +157,18 @@ function _(e) {
         });
     if (null == t && null == n) return null;
     let u = null != n && null != n.primaryColor && null != n.secondaryColor,
-        f = d({}, u ? a : { backgroundColor: null != t ? t : void 0 });
+        f = d(
+            {},
+            u
+                ? a
+                : {
+                      backgroundColor: null != t ? t : void 0,
+                  },
+        );
     return (0, r.jsx)("span", {
-        className: s()(c.Ni, i, { [o]: u }),
+        className: s()(c.Ni, i, {
+            [o]: u,
+        }),
         style: f,
     });
 }

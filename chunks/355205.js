@@ -1,4 +1,8 @@
-n.d(t, { A: () => eT }), n(321073), n(896048);
+n.d(t, {
+    A: () => eT,
+}),
+    n(321073),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -75,6 +79,7 @@ var r = n(627968),
     ev = n(654487),
     ex = n(985018),
     eE = n(176869);
+
 function e_(e, t, n) {
     return (
         t in e
@@ -88,6 +93,7 @@ function e_(e, t, n) {
         e
     );
 }
+
 function eC(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -104,6 +110,7 @@ function eC(e) {
     }
     return e;
 }
+
 function eS(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -124,7 +131,9 @@ function eS(e, t) {
 }
 let eI = (0, y.A)(function (e) {
     let { message: t } = e;
-    return (0, r.jsx)(eh.A, { children: t });
+    return (0, r.jsx)(eh.A, {
+        children: t,
+    });
 });
 class eN extends l.PureComponent {
     renderSparkles() {
@@ -143,7 +152,12 @@ class eN extends l.PureComponent {
         });
     }
     renderActions() {
-        return (0, r.jsx)(eg.f, eS(eC({}, this.props), { inviteButtonRef: this.inviteButtonRef }));
+        return (0, r.jsx)(
+            eg.f,
+            eS(eC({}, this.props), {
+                inviteButtonRef: this.inviteButtonRef,
+            }),
+        );
     }
     renderAccountLinkPopover() {
         let {
@@ -185,7 +199,9 @@ class eN extends l.PureComponent {
                                 align: "right",
                                 shouldShow: !0,
                                 onRequestClose: () => a(eO.i.USER_DISMISS),
-                                caretConfig: { align: "end" },
+                                caretConfig: {
+                                    align: "end",
+                                },
                                 actions: [
                                     {
                                         text: ex.intl.string(ex.t.YdkBCH),
@@ -216,7 +232,9 @@ class eN extends l.PureComponent {
                                   targetElementRef: this.accountLinkUpsellTargetRef,
                                   position: "top",
                                   align: "left",
-                                  caretConfig: { align: "start" },
+                                  caretConfig: {
+                                      align: "start",
+                                  },
                                   actions: [
                                       {
                                           text: ex.intl.string(ex.t.aRIFWD),
@@ -234,7 +252,9 @@ class eN extends l.PureComponent {
                                     graphic: {
                                         type: "dynamic",
                                         component: f.DynamicGraphicComponent.ACCOUNT_LINK_DISPLAY,
-                                        props: { application: l },
+                                        props: {
+                                            application: l,
+                                        },
                                     },
                                     title: ex.intl.formatToPlainString(t.altTitle ? ex.t.hUbQT2 : ex.t["lo6H6+"], {
                                         gameName: l.name,
@@ -245,12 +265,17 @@ class eN extends l.PureComponent {
                                     shouldShow: !0,
                                     gradientColor: "purple",
                                     onRequestClose: () => a(eO.i.USER_DISMISS),
-                                    caretConfig: { align: "end" },
+                                    caretConfig: {
+                                        align: "end",
+                                    },
                                     actions: [
                                         {
                                             text: ex.intl.string(t.altCta ? ex.t.jynBQ5 : ex.t.lw71Nf),
                                             onClick: () => {
-                                                a(eO.i.TAKE_ACTION), A({ analyticsLocations: h });
+                                                a(eO.i.TAKE_ACTION),
+                                                    A({
+                                                        analyticsLocations: h,
+                                                    });
                                             },
                                         },
                                     ],
@@ -298,7 +323,9 @@ class eN extends l.PureComponent {
                 (0, r.jsxs)("div", {
                     className: eE.pq,
                     children: [
-                        (0, r.jsx)(eb.A, { children: l }),
+                        (0, r.jsx)(eb.A, {
+                            children: l,
+                        }),
                         null != n &&
                             (0, r.jsxs)("div", {
                                 className: eE.qi,
@@ -331,7 +358,9 @@ class eN extends l.PureComponent {
                 setIsForceShowSharingPopout: o,
             } = this.props;
         if (null == n || null == t) return null;
-        let c = { start: n.connectedSince },
+        let c = {
+                start: n.connectedSince,
+            },
             u = i;
         null != a && null != l
             ? ((e = eA.BVt.CHANNEL(a.id, l.id)), (u = "".concat(u, " / ").concat(a.name)))
@@ -366,7 +395,14 @@ class eN extends l.PureComponent {
                         setIsForceShowSharingPopout: o,
                         children: (0, r.jsxs)("div", {
                             className: eE.pq,
-                            children: [f, null != l && (0, Z.pQ)(l.type) ? d : (0, r.jsx)(eI, { timestamps: c })],
+                            children: [
+                                f,
+                                null != l && (0, Z.pQ)(l.type)
+                                    ? d
+                                    : (0, r.jsx)(eI, {
+                                          timestamps: c,
+                                      }),
+                            ],
                         }),
                     }),
                 ],
@@ -379,7 +415,9 @@ class eN extends l.PureComponent {
     renderFrame() {
         let { application: e, frame: t } = this.props;
         if (null == t || null == e) return null;
-        let n = { start: t.connectedSince },
+        let n = {
+                start: t.connectedSince,
+            },
             l = (0, r.jsx)(h.DUT, {
                 onClick: this.handleFrameLinkClick,
                 onMouseDown: (e) => {
@@ -401,7 +439,12 @@ class eN extends l.PureComponent {
                     }),
                     (0, r.jsxs)("div", {
                         className: eE.pq,
-                        children: [l, (0, r.jsx)(eI, { timestamps: n })],
+                        children: [
+                            l,
+                            (0, r.jsx)(eI, {
+                                timestamps: n,
+                            }),
+                        ],
                     }),
                 ],
             });
@@ -460,7 +503,11 @@ class eN extends l.PureComponent {
             e_(this, "inviteButtonRef", l.createRef()),
             e_(this, "handleApplicationLinkClick", () => {
                 let { isActivityPopoutOpen: e } = this.props;
-                this.handleChannelLinkClick(), e && b.h.dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" });
+                this.handleChannelLinkClick(),
+                    e &&
+                        b.h.dispatch({
+                            type: "ACTIVITY_POPOUT_WINDOW_OPEN",
+                        });
             }),
             e_(this, "handleChannelLinkClick", () => {
                 var e;
@@ -482,7 +529,9 @@ class eN extends l.PureComponent {
             e_(this, "handleFrameLinkClick", () => {
                 let { frame: e, isActivityPopoutOpen: t } = this.props;
                 (o()(null != e, "Frame cannot be null during navigation click"), t)
-                    ? b.h.dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" })
+                    ? b.h.dispatch({
+                          type: "ACTIVITY_POPOUT_WINDOW_OPEN",
+                      })
                     : k.A.updateFrameLayoutMode({
                           applicationId: e.applicationId,
                           layoutMode: ej.y.FOCUSED,
@@ -573,9 +622,13 @@ let eT = (0, O.A)(function (e) {
     l.useEffect(() => {
         eg !== (null == O ? void 0 : O.id) && eb(!1);
     }, [O, eg]);
-    let { isQuestBarEmpty: em, hasLoadedQuestBar: ey } = (0, Q.c9)({ location: ev.rE.CONFLICT_CHECKS }),
+    let { isQuestBarEmpty: em, hasLoadedQuestBar: ey } = (0, Q.c9)({
+            location: ev.rE.CONFLICT_CHECKS,
+        }),
         { parentAnalyticsLocation: eO, analyticsLocations: ej } = (0, I.Ay)(),
-        ex = ep.A.useConfig({ location: "ActivityPanelGameCard" }),
+        ex = ep.A.useConfig({
+            location: "ActivityPanelGameCard",
+        }),
         eE = (0, c.K)((e) => {
             if (e && null != Z) {
                 var t;

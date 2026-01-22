@@ -13,6 +13,7 @@ var r = n(193439),
     a = n(340287),
     s = function () {},
     o = "u" > typeof document ? i.useLayoutEffect : s;
+
 function l(e, t) {
     let n, r, i;
     if (e === t) return !0;
@@ -34,13 +35,16 @@ function l(e, t) {
     }
     return e != e && t != t;
 }
+
 function c(e) {
     return "u" < typeof window ? 1 : (e.ownerDocument.defaultView || window).devicePixelRatio || 1;
 }
+
 function u(e, t) {
     let n = c(e);
     return Math.round(t * n) / n;
 }
+
 function d(e) {
     let t = i.useRef(e);
     return (
@@ -50,6 +54,7 @@ function d(e) {
         t
     );
 }
+
 function f(e) {
     void 0 === e && (e = {});
     let {
@@ -164,7 +169,9 @@ function f(e) {
                 ? {
                       ...e,
                       transform: "translate(" + t + "px, " + r + "px)",
-                      ...(c(V.floating) >= 1.5 && { willChange: "transform" }),
+                      ...(c(V.floating) >= 1.5 && {
+                          willChange: "transform",
+                      }),
                   }
                 : {
                       position: n,

@@ -46,7 +46,9 @@ if (!O) {
                 }))
         : ((i = !0),
           (a = E.createTextNode("")),
-          new g(v).observe(a, { characterData: !0 }),
+          new g(v).observe(a, {
+              characterData: !0,
+          }),
           (r = function () {
               a.data = i = !i;
           })),

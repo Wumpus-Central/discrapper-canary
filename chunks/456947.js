@@ -1,4 +1,6 @@
-r.d(t, { default: () => p });
+r.d(t, {
+    default: () => p,
+});
 var n = r(627968);
 r(64700);
 var o = r(158954),
@@ -30,6 +32,7 @@ let a = (e) => {
         ],
     });
 };
+
 function p(e) {
     var t, r;
     let { transitionState: l, onClose: p } = e,

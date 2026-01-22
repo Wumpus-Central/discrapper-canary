@@ -1,4 +1,6 @@
-n.d(t, { mf: () => c });
+n.d(t, {
+    mf: () => c,
+});
 var r = n(310784),
     i = n.n(r);
 let a = [
@@ -20,6 +22,7 @@ let a = [
     s = [0, 45, 90, 135, 180, 225, 270, 315],
     o = [20, 40, 60, 80],
     l = ["analogous", "complementary", "split-complementary", "triadic"];
+
 function c() {
     let e = o[Math.floor(Math.random() * o.length)],
         t = s[Math.floor(Math.random() * s.length)];
@@ -47,6 +50,7 @@ function c() {
         };
     }
 }
+
 function u(e, t, n, r) {
     return [
         i()
@@ -58,21 +62,25 @@ function u(e, t, n, r) {
             .hex(),
     ];
 }
+
 function d(e, t, n, r) {
     let a = (r + 180) % 360,
         s = i().hsl(a, t, n).hex();
     return [e, i().mix(e, s, 0.5).hex(), s];
 }
+
 function f(e, t, n, r) {
     let a = (r + 150) % 360,
         s = (r + 210) % 360;
     return [e, i().hsl(a, t, n).hex(), i().hsl(s, t, n).hex()];
 }
+
 function p(e, t, n, r) {
     let a = (r + 120) % 360,
         s = (r + 240) % 360;
     return [e, i().hsl(a, t, n).hex(), i().hsl(s, t, n).hex()];
 }
+
 function _(e, t) {
     try {
         let n = i()(e),

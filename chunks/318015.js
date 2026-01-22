@@ -32,9 +32,15 @@ let a = (0, r.C)({
         },
     ],
 });
+
 function s(e) {
-    return a.getCurrentConfig({ location: e }).enableObfuscation;
+    return a.getCurrentConfig({
+        location: e,
+    }).enableObfuscation;
 }
+
 function o(e) {
-    return a.useExperiment({ location: e }).enableObfuscation;
+    return a.useExperiment({
+        location: e,
+    }).enableObfuscation;
 }

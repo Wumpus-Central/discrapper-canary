@@ -1,4 +1,6 @@
-i.d(e, { F: () => o });
+i.d(e, {
+    F: () => o,
+});
 var n = i(419954),
     l = i(954571),
     s = i(253932),
@@ -10,6 +12,9 @@ let o = (0, n.zD)(r.X.CAMERA_PREVIEW_PREFERENCE, {
     useSubtitle: () => a.intl.string(a.t.WNbX4O),
     useValue: s.bm.useSetting,
     setValue: (t) => {
-        s.bm.updateSetting(t), l.default.track(u.HAw.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: t });
+        s.bm.updateSetting(t),
+            l.default.track(u.HAw.UPDATE_USER_SETTINGS_LOCAL, {
+                always_preview_video: t,
+            });
     },
 });

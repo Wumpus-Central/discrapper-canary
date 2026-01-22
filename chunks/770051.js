@@ -18,7 +18,9 @@ r(
                     function (e, n) {
                         i(t, e, n);
                     },
-                    { AS_ENTRIES: !0 },
+                    {
+                        AS_ENTRIES: !0,
+                    },
                 );
             return t;
         },

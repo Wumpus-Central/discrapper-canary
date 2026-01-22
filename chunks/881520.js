@@ -1,8 +1,11 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r,
     i = n(311907),
     a = n(73153),
     s = n(37962);
+
 function o(e, t, n) {
     return (
         t in e
@@ -16,6 +19,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -32,6 +36,7 @@ function l(e) {
     }
     return e;
 }
+
 function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -44,6 +49,7 @@ function c(e, t) {
     }
     return n;
 }
+
 function u(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -56,6 +62,7 @@ function u(e, t) {
     );
 }
 let d = {};
+
 function f(e) {
     let { feedbackType: t, cooldown: n, chance: r } = e;
     d[t] = u(l({}, s.u[t]), {
@@ -63,6 +70,7 @@ function f(e) {
         chance: r,
     });
 }
+
 function p(e) {
     let { feedbackType: t } = e;
     delete d[t];

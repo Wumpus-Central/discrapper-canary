@@ -56,10 +56,12 @@ let g = -1,
             ? m.LO.NONE
             : P(t.map((t) => (U(t.getUserSettingsWithDefaults()[e]) ? t.harmType : null)).filter(p.Vq));
     };
+
 function A(e) {
     let t = b(e);
     return v(e, t);
 }
+
 function v(e, t) {
     var n, r;
     if (t === m.LO.NONE || null == e) return !1;
@@ -99,6 +101,7 @@ function v(e, t) {
     for (let e of i) if (v(e.message, t)) return !0;
     return !1;
 }
+
 function S(e) {
     return (Array.isArray(e) ? e : [e])
         .flatMap((e) => {
@@ -118,6 +121,7 @@ function S(e) {
         })
         .map((e) => ("proxy_url" in e ? (0, l.Uv)(e) : e));
 }
+
 function I(e, t) {
     var n, r;
     let i = null != t ? t : b(e);
@@ -166,6 +170,7 @@ function I(e, t) {
     for (let e of a) if (I(e.message, i)) return !0;
     return !1;
 }
+
 function T(e) {
     var t, n, r, i;
     let a = b(e);
@@ -203,16 +208,19 @@ function T(e) {
         embedIds: null != (n = null == o ? void 0 : o.map((e, t) => "embed_".concat(t)).filter(Boolean)) ? n : [],
     };
 }
+
 function C(e, t) {
     if (t === m.LO.NONE) return [];
     let n = D(t);
     return 0 === n.length ? [] : n.filter((t) => w(t, e)).map((e) => m.Jn[e].obscureReason);
 }
+
 function N(e, t) {
     if (t === m.LO.NONE) return !1;
     let n = D(t);
     return 0 !== n.length && n.filter((t) => w(t, e)).length > 0;
 }
+
 function R(e, t) {
     if (t === m.LO.NONE || s.Ay.get("explicit_media_redaction_ignore_pending_scan")) return !1;
     let n = D(t);
@@ -228,6 +236,7 @@ function R(e, t) {
             return !1;
     }
 }
+
 function w(e, t) {
     var n, i, a, o;
     if (null == e) return !1;
@@ -247,6 +256,7 @@ function w(e, t) {
             return !1;
     }
 }
+
 function P(e) {
     let t = m.LO.NONE;
     for (let n of e)
@@ -262,12 +272,14 @@ function P(e) {
         }
     return t;
 }
+
 function D(e) {
     if (e === m.LO.NONE) return [];
     let t = [];
     for (let n of E()) (e & n.bitmask) > 0 && t.push(n.harmType);
     return t;
 }
+
 function x(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [c.A, d.A],
         [r, i] = n,
@@ -281,6 +293,7 @@ function x(e, t) {
               : _.v.NON_FRIEND_DM
           : _.v.GUILD;
 }
+
 function L(e, t) {
     var n, r, i, a, s, o, l;
     return (
@@ -312,6 +325,7 @@ function L(e, t) {
         ) && k(V(e), t)
     );
 }
+
 function j(e, t) {
     var n;
     return (
@@ -327,6 +341,7 @@ function j(e, t) {
         k(null != (n = e.content_scan_version) ? n : e.contentScanVersion, t)
     );
 }
+
 function M(e, t) {
     var n;
     return (
@@ -342,13 +357,16 @@ function M(e, t) {
         k(null == (n = e.contentScanMetadata) ? void 0 : n.version, t)
     );
 }
+
 function k(e, t) {
     let n = h.A.validContentScanVersion;
     return e !== g && (t.includes(m.kn.GORE) || t.includes(m.kn.SELF_HARM) ? null == e || e < n : null == e);
 }
+
 function U(e) {
     return null != e && [i.TO.BLOCK, i.TO.BLUR].includes(e);
 }
+
 function G(e) {
     var t, n;
     let r = null,
@@ -369,6 +387,7 @@ function G(e) {
         authorId: i,
     };
 }
+
 function V(e) {
     return null != e.content_scan_version
         ? e.content_scan_version

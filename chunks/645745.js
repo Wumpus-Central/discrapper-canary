@@ -1,4 +1,7 @@
-n.d(t, { A: () => g }), n(896048);
+n.d(t, {
+    A: () => g,
+}),
+    n(896048);
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -53,7 +56,9 @@ let g = function (e) {
                         (0, r.jsx)(a.Text, {
                             variant: "text-md/normal",
                             className: f.vk,
-                            children: u.intl.format(u.t.jnhD0S, { count: E }),
+                            children: u.intl.format(u.t.jnhD0S, {
+                                count: E,
+                            }),
                         }),
                         (0, r.jsx)(c.A, {
                             className: f.IC,

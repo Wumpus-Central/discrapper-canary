@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -27,12 +29,17 @@ let m = (e) => {
         null == t)
     )
         return null;
-    let y = () => (0, l.openUserSettings)(o.X.SUBSCRIPTIONS_PANEL, { section: p.nc_.SUBSCRIPTIONS }),
+    let y = () =>
+            (0, l.openUserSettings)(o.X.SUBSCRIPTIONS_PANEL, {
+                section: p.nc_.SUBSCRIPTIONS,
+            }),
         O = (null != b ? u.Ay.getSkuIdForPlan(b.planId) : null) === f.pe.TIER_1;
     return (
         (n = null != g ? g : E ? "always-white" : "text-default"),
         (0, r.jsxs)(s.ZpM, {
-            className: a()(h.kL, m, { [h.He]: E }),
+            className: a()(h.kL, m, {
+                [h.He]: E,
+            }),
             type: s.ZpM.Types.CUSTOM,
             children: [
                 (0, r.jsx)(s.EpV, {
@@ -40,7 +47,9 @@ let m = (e) => {
                     width: 20,
                     height: 20,
                     color: "currentColor",
-                    className: a()(h.Kk, { [h.Pt]: E }),
+                    className: a()(h.Kk, {
+                        [h.Pt]: E,
+                    }),
                 }),
                 (0, r.jsx)(s.Text, {
                     variant: "text-sm/medium",

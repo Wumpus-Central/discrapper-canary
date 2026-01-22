@@ -11,11 +11,14 @@ var a = n(627968),
     o = n(954571),
     c = n(966284),
     d = n(652215);
+
 function u(e) {
     let { sitekey: t, action: n, onVerify: i } = e,
         [r, u] = l.useState("uninitialized"),
         m = l.useCallback((e) => {
-            o.default.track(d.HAw.RECAPTCHA_MODAL_EVENT, { recaptcha_event_name: e });
+            o.default.track(d.HAw.RECAPTCHA_MODAL_EVENT, {
+                recaptcha_event_name: e,
+            });
         }, []),
         p = l.useCallback(
             (e) => {
@@ -34,7 +37,11 @@ function u(e) {
                         p(
                             await (null == (e = window) ? void 0 : e.grecaptcha).enterprise.execute(
                                 t,
-                                null != n ? { action: n } : void 0,
+                                null != n
+                                    ? {
+                                          action: n,
+                                      }
+                                    : void 0,
                             ),
                         ),
                         u("loaded");
@@ -124,8 +131,16 @@ let m = (e) => {
                     });
             }
             return e;
-        })({ sitekey: d._Ak }, s)),
-        (n = n = { theme: o }),
+        })(
+            {
+                sitekey: d._Ak,
+            },
+            s,
+        )),
+        (n = n =
+            {
+                theme: o,
+            }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
             : (function (e, t) {

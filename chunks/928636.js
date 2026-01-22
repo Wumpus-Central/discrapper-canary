@@ -1,4 +1,9 @@
-n.d(t, { A: () => eO }), n(747238), n(812715), n(896048);
+n.d(t, {
+    A: () => eO,
+}),
+    n(747238),
+    n(812715),
+    n(896048);
 var r,
     i = n(627968),
     l = n(64700),
@@ -91,7 +96,15 @@ let es = [14, 14, 12, 12, 10, 8, 6],
     },
     ep = (e) => {
         let { inset: t, className: n } = e;
-        return (0, i.jsx)("div", { className: s()(ea.me, { [ea.C5]: t }, n) });
+        return (0, i.jsx)("div", {
+            className: s()(
+                ea.me,
+                {
+                    [ea.C5]: t,
+                },
+                n,
+            ),
+        });
     },
     ef = (e) => {
         let { onCloudPlayClick: t, analyticsLocations: n } = e;
@@ -99,7 +112,9 @@ let es = [14, 14, 12, 12, 10, 8, 6],
             (0, T.A)({
                 name: o.ImpressionNames.CLOUD_PLAY_CTA,
                 type: o.ImpressionTypes.VIEW,
-                properties: { location_stack: n },
+                properties: {
+                    location_stack: n,
+                },
             }),
             (0, i.jsx)(p.m, {
                 text: el.intl.string(el.t.JVwWva),
@@ -167,7 +182,9 @@ let es = [14, 14, 12, 12, 10, 8, 6],
             ? null
             : (0, i.jsxs)(i.Fragment, {
                   children: [
-                      (0, i.jsx)(ep, { className: ea.gi }),
+                      (0, i.jsx)(ep, {
+                          className: ea.gi,
+                      }),
                       (0, i.jsxs)("div", {
                           className: ea.DK,
                           children: [
@@ -182,7 +199,9 @@ let es = [14, 14, 12, 12, 10, 8, 6],
                                             }),
                                       (0, i.jsx)(f.Text, {
                                           variant: "text-xs/medium",
-                                          children: el.intl.formatToPlainString(el.t.RmiYF3, { gameName: l }),
+                                          children: el.intl.formatToPlainString(el.t.RmiYF3, {
+                                              gameName: l,
+                                          }),
                                       }),
                                   ],
                               }),
@@ -365,7 +384,10 @@ let eE = (e) => {
                 },
                 a,
             )),
-            (n = n = { children: r }),
+            (n = n =
+                {
+                    children: r,
+                }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                 : (function (e, t) {
@@ -423,7 +445,9 @@ let eE = (e) => {
                                           className: ea.I,
                                           children: (0, i.jsx)("div", {
                                               className: ea.lB,
-                                              style: { fontSize: null != (t = es[A.length]) ? t : es[es.length - 1] },
+                                              style: {
+                                                  fontSize: null != (t = es[A.length]) ? t : es[es.length - 1],
+                                              },
                                               children: A,
                                           }),
                                       }),
@@ -442,7 +466,9 @@ let eE = (e) => {
                         onClick: () => {
                             h.default.selectVoiceChannel(r.id), (0, K.iN)(r.id);
                         },
-                        focusProps: { ringTarget: u },
+                        focusProps: {
+                            ringTarget: u,
+                        },
                         children: (0, i.jsxs)("div", {
                             className: ea.U6,
                             children: [eo(n.name, ea.BJ), ec(d, ea.BJ)],
@@ -475,7 +501,11 @@ let eE = (e) => {
                         (0, i.jsxs)("div", {
                             children: [
                                 eo(n),
-                                ec(el.intl.formatToPlainString(el.t.C4WXvc, { memberCount: r.totalSize })),
+                                ec(
+                                    el.intl.formatToPlainString(el.t.C4WXvc, {
+                                        memberCount: r.totalSize,
+                                    }),
+                                ),
                             ],
                         }),
                         (0, i.jsx)(er.A, {
@@ -510,7 +540,9 @@ let eE = (e) => {
             ? (0, i.jsxs)(ed, {
                   children: [
                       (0, i.jsxs)("div", {
-                          className: s()(ea.tL, { [ea._2]: b }),
+                          className: s()(ea.tL, {
+                              [ea._2]: b,
+                          }),
                           children: [
                               null != h && 0 !== Object.keys(h).length
                                   ? (0, i.jsxs)("div", {
@@ -519,7 +551,9 @@ let eE = (e) => {
                                             (0, i.jsx)("img", {
                                                 alt: null != (r = h.large_text) ? r : "",
                                                 src: null != (l = u(m, h.large_image, [160, 160])) ? l : _,
-                                                className: s()(ea.nX, { [ea.p8]: null != h.small_image }),
+                                                className: s()(ea.nX, {
+                                                    [ea.p8]: null != h.small_image,
+                                                }),
                                             }),
                                             null != h.small_image
                                                 ? (0, i.jsx)("img", {
@@ -549,7 +583,9 @@ let eE = (e) => {
                                               ? null
                                               : ec(
                                                     (0, E.A)(c)
-                                                        ? (0, i.jsx)(eu, { timestamps: e })
+                                                        ? (0, i.jsx)(eu, {
+                                                              timestamps: e,
+                                                          })
                                                         : (0, i.jsx)(H.Ay, {
                                                               start: e.start,
                                                               end: e.end,
@@ -580,7 +616,9 @@ let eE = (e) => {
             children: (0, i.jsxs)("div", {
                 className: ea.oc,
                 children: [
-                    (0, i.jsx)($.A, { className: ea.Ai }),
+                    (0, i.jsx)($.A, {
+                        className: ea.Ai,
+                    }),
                     (0, i.jsxs)("div", {
                         className: ea.__invalid_xboxSectionDetails,
                         children: [eo(t), ec(el.intl.string(el.t["JG9r+9"]))],
@@ -609,7 +647,9 @@ let eE = (e) => {
                                   (0, i.jsx)("img", {
                                       alt: null != (t = n.large_text) ? t : "",
                                       src: p(a, n.large_image, [160, 160]),
-                                      className: s()(ea.nX, ea.Dy, { [ea.p8]: null != n.small_image }),
+                                      className: s()(ea.nX, ea.Dy, {
+                                          [ea.p8]: null != n.small_image,
+                                      }),
                                   }),
                                   u
                                       ? null
@@ -716,7 +756,9 @@ let eE = (e) => {
                 userId: l.id,
                 guildId: o,
             }),
-            m = (0, U.a)({ displayNameStyles: g });
+            m = (0, U.a)({
+                displayNameStyles: g,
+            });
         return (0, i.jsxs)(ed, {
             children: [
                 (0, i.jsxs)("div", {
@@ -731,7 +773,9 @@ let eE = (e) => {
                         (0, i.jsxs)("div", {
                             children: [eo(en.Ay.getName(l), m), ec(A)],
                         }),
-                        (0, i.jsx)(w.Ay, { size: w.Ay.Sizes.SMALL }),
+                        (0, i.jsx)(w.Ay, {
+                            size: w.Ay.Sizes.SMALL,
+                        }),
                     ],
                 }),
                 h,
@@ -759,7 +803,12 @@ let eE = (e) => {
         if (null == u) return null;
         let A = x.A.getApplication(u);
         if (null == A) return null;
-        let m = null != t.created_at && t.created_at > 0 ? { start: t.created_at } : void 0,
+        let m =
+                null != t.created_at && t.created_at > 0
+                    ? {
+                          start: t.created_at,
+                      }
+                    : void 0,
             _ = (0, ee.uD)(A.id, s, 300);
         return (0, i.jsxs)(ed, {
             children: [
@@ -784,7 +833,9 @@ let eE = (e) => {
                                   children: (0, i.jsx)(f.Text, {
                                       color: "text-muted",
                                       variant: "text-sm/normal",
-                                      children: (0, i.jsx)(eu, { timestamps: m }),
+                                      children: (0, i.jsx)(eu, {
+                                          timestamps: m,
+                                      }),
                                   }),
                               })
                             : null,

@@ -1,10 +1,16 @@
-n.d(t, { w: () => o }), n(747238), n(896048), n(321073);
+n.d(t, {
+    w: () => o,
+}),
+    n(747238),
+    n(896048),
+    n(321073);
 var l = n(64700),
     r = n(735438),
     a = n(724442),
     i = n(998218),
     s = n(36491),
     c = n(304162);
+
 function o(e, t, n) {
     let o = l.useRef(new Map()),
         [, d] = l.useState(null),
@@ -19,7 +25,7 @@ function o(e, t, n) {
                         return;
                     }
                     m(r.uniq(l).slice(0, c.A8));
-                }, 1000),
+                }, 1e3),
             [t, o, m],
         );
     l.useEffect(() => {
@@ -66,5 +72,7 @@ function o(e, t, n) {
                 e.length > 0 ? e : null
             );
         }, [u, f]);
-    return { embeds: e ? null : g };
+    return {
+        embeds: e ? null : g,
+    };
 }

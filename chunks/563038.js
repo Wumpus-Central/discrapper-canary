@@ -1,4 +1,7 @@
-n.d(l, { default: () => V }), n(65821);
+n.d(l, {
+    default: () => V,
+}),
+    n(65821);
 var t = n(627968),
     i = n(64700),
     s = n(503698),
@@ -33,20 +36,25 @@ var t = n(627968),
     O = n(788868),
     k = n(985018),
     D = n(929252);
+
 function U() {
     let { analyticsLocations: e, sourceAnalyticsLocations: l } = (0, g.Ay)(x.A.PREMIUM_UPSELL_TOOLTIP);
     return (
         i.useEffect(() => {
             L.default.track(b.HAw.PREMIUM_UPSELL_VIEWED, {
                 type: O.e.GUILD_CAP_INLINE_INVITE_MODAL,
-                location: { page: b.liQ.NATIVE_INVITE_MODAL },
+                location: {
+                    page: b.liQ.NATIVE_INVITE_MODAL,
+                },
                 location_stack: l,
             });
         }, [l]),
         (0, t.jsxs)(c.DUT, {
             onClick: () =>
                 (0, j.A)({
-                    analyticsSource: { page: b.ThZ.EXTERNAL_INVITE_LINK_MODAL },
+                    analyticsSource: {
+                        page: b.ThZ.EXTERNAL_INVITE_LINK_MODAL,
+                    },
                     analyticsLocation: {
                         page: b.ThZ.EXTERNAL_INVITE_LINK_MODAL,
                         section: b.JJy.GUILD_CAP_UPSELL_MODAL,
@@ -72,13 +80,16 @@ function U() {
         })
     );
 }
+
 function z(e) {
     let { className: l } = e;
     return (0, t.jsxs)("div", {
         "aria-hidden": "true",
         className: a()(D.zc, l),
         children: [
-            (0, t.jsx)(p.A, { className: D.Mk }),
+            (0, t.jsx)(p.A, {
+                className: D.Mk,
+            }),
             (0, t.jsx)(c.qYV, {
                 size: "custom",
                 color: "currentColor",
@@ -86,10 +97,13 @@ function z(e) {
                 width: 40,
                 height: 40,
             }),
-            (0, t.jsx)(T.A, { className: D.sY }),
+            (0, t.jsx)(T.A, {
+                className: D.sY,
+            }),
         ],
     });
 }
+
 function F(e) {
     let { transitionState: l } = e,
         n = (0, _.GV)(),
@@ -104,7 +118,9 @@ function F(e) {
             children: (0, t.jsxs)("div", {
                 className: D.ow,
                 children: [
-                    (0, t.jsx)(z, { className: D.M6 }),
+                    (0, t.jsx)(z, {
+                        className: D.M6,
+                    }),
                     (0, t.jsx)(c.Heading, {
                         id: n,
                         variant: "heading-xl/semibold",
@@ -126,6 +142,7 @@ function F(e) {
         }),
     });
 }
+
 function V(e) {
     var l, n, s, a, h, j;
     let p,
@@ -182,11 +199,15 @@ function V(e) {
     )
         return null;
     if (w.state === b.elq.EXPIRED || w.state === b.elq.BANNED || w.state === b.elq.ERROR)
-        return (0, t.jsx)(F, { transitionState: z });
+        return (0, t.jsx)(F, {
+            transitionState: z,
+        });
     if (null == w.channel) return null;
+
     function X() {
         null != w && R.A.acceptInvite(w);
     }
+
     function ee() {
         var e;
         L.default.track(b.HAw.INVITE_ACCEPT_DISMISSED, {
@@ -212,7 +233,12 @@ function V(e) {
     return (
         (O = es
             ? k.intl.string(k.t["e/6Ogt"])
-            : k.intl.format(k.t["9sWQNT"], { usernameHook: () => (0, t.jsx)("span", { children: K }) })),
+            : k.intl.format(k.t["9sWQNT"], {
+                  usernameHook: () =>
+                      (0, t.jsx)("span", {
+                          children: K,
+                      }),
+              })),
         (0, t.jsx)(g.f5, {
             value: $,
             children: (0, t.jsx)(u.dWK, {
@@ -340,7 +366,9 @@ function V(e) {
                         null != T &&
                             (0, t.jsx)("div", {
                                 className: D.ll,
-                                style: { backgroundImage: "url(".concat(T, ")") },
+                                style: {
+                                    backgroundImage: "url(".concat(T, ")"),
+                                },
                             }),
                     ],
                 }),

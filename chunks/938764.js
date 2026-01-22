@@ -1,8 +1,12 @@
-n.d(t, { A: () => h }), n(321073);
+n.d(t, {
+    A: () => h,
+}),
+    n(321073);
 var r,
     l = n(311907),
     i = n(73153),
     a = n(370876);
+
 function s(e, t, n) {
     return (
         t in e
@@ -16,6 +20,7 @@ function s(e, t, n) {
         e
     );
 }
+
 function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -32,6 +37,7 @@ function o(e) {
     }
     return e;
 }
+
 function c(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -70,7 +76,7 @@ class p extends (r = l.Ay.Store) {
     shouldFetch(e, t) {
         var n, r;
         let l = null == (r = f[e]) || null == (n = r[t]) ? void 0 : n.lastSearchedAt;
-        return null == l || Date.now() - l > 120000;
+        return null == l || Date.now() - l > 12e4;
     }
 }
 s(p, "displayName", "GuildDirectorySearchStore");
@@ -84,7 +90,9 @@ let h = new p(i.h, {
     },
     GUILD_DIRECTORY_SEARCH_SUCCESS: function (e) {
         let { channelId: t, query: n, results: r } = e;
-        d[t] = c(o({}, d[t]), { fetching: !1 });
+        d[t] = c(o({}, d[t]), {
+            fetching: !1,
+        });
         let l = [];
         r.forEach((e) => {
             let t = (0, a.mR)(e);
@@ -99,7 +107,9 @@ let h = new p(i.h, {
     },
     GUILD_DIRECTORY_SEARCH_FAILURE: function (e) {
         let { channelId: t } = e;
-        d[t] = c(o({}, d[t]), { fetching: !1 });
+        d[t] = c(o({}, d[t]), {
+            fetching: !1,
+        });
     },
     GUILD_DIRECTORY_SEARCH_CLEAR: function (e) {
         let { channelId: t } = e;
@@ -123,6 +133,10 @@ let h = new p(i.h, {
         let i = f[n][l];
         if (null == i) return;
         let a = i.results.filter((e) => e.guildId !== r);
-        f[n] = c(o({}, f[n]), { [d[n].mostRecentQuery]: c(o({}, i), { results: a }) });
+        f[n] = c(o({}, f[n]), {
+            [d[n].mostRecentQuery]: c(o({}, i), {
+                results: a,
+            }),
+        });
     },
 });

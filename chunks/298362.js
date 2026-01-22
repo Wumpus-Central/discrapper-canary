@@ -106,6 +106,7 @@ let i = {
         años: "year",
     },
     l = `(?:${(0, r.uJ)(s)}|[0-9]+|[0-9]+\\.[0-9]+|un?|uno?|una?|algunos?|unos?|demi-?)`;
+
 function c(e) {
     let t = e.toLowerCase();
     if (void 0 !== s[t]) return s[t];
@@ -116,16 +117,18 @@ function c(e) {
     return parseFloat(t);
 }
 let u = "[0-9]{1,4}(?![^\\s]\\d)(?:\\s*[a|d]\\.?\\s*c\\.?|\\s*a\\.?\\s*d\\.?)?";
+
 function d(e) {
     if (e.match(/^[0-9]{1,4}$/)) {
         let t = parseInt(e);
-        return t < 100 && (t > 50 ? (t += 1900) : (t += 2000)), t;
+        return t < 100 && (t > 50 ? (t += 1900) : (t += 2e3)), t;
     }
     return e.match(/a\.?\s*c\.?/i) ? -parseInt((e = e.replace(/a\.?\s*c\.?/i, ""))) : parseInt(e);
 }
 let f = `(${l})\\s{0,5}(${(0, r.uJ)(o)})\\s{0,5}`,
     p = RegExp(f, "i"),
     _ = (0, r.mb)("", f);
+
 function h(e) {
     let t = {},
         n = e,
@@ -133,6 +136,7 @@ function h(e) {
     for (; r; ) m(t, r), (n = n.substring(r[0].length)), (r = p.exec(n));
     return t;
 }
+
 function m(e, t) {
     let n = c(t[1]);
     e[o[t[2].toLowerCase()]] = n;

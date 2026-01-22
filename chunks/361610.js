@@ -9,6 +9,7 @@ n.d(t, {
     n(321073);
 var r = n(73153),
     i = n(36124);
+
 function a(e, t) {
     r.h.dispatch({
         type: "GUILD_SUBSCRIPTIONS_MEMBERS_ADD",
@@ -16,6 +17,7 @@ function a(e, t) {
         userIds: t,
     });
 }
+
 function s(e, t) {
     r.h.dispatch({
         type: "GUILD_SUBSCRIPTIONS_MEMBERS_REMOVE",
@@ -23,18 +25,21 @@ function s(e, t) {
         userIds: t,
     });
 }
+
 function o(e) {
     r.h.dispatch({
         type: "GUILD_SUBSCRIPTIONS_ADD_MEMBER_UPDATES",
         guildId: e,
     });
 }
+
 function l(e) {
     r.h.dispatch({
         type: "GUILD_SUBSCRIPTIONS_REMOVE_MEMBER_UPDATES",
         guildId: e,
     });
 }
+
 function c(e, t, n) {
     r.h.dispatch({
         type: "GUILD_SUBSCRIPTIONS_CHANNEL",
@@ -43,13 +48,16 @@ function c(e, t, n) {
         ranges: n,
     });
 }
+
 function u(e) {
     let { guildId: t, channelId: n, y: r, height: a, rowHeight: s } = e;
+
     function o(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
         return Math.max(0, Math.ceil(Math.ceil(e / s)) + t);
     }
     let l = [];
+
     function u(e) {
         let t = e + (i.JM - 1);
         return l.push([e, t]), t + 1;

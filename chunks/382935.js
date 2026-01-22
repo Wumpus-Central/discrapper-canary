@@ -1,4 +1,7 @@
-l.d(t, { A: () => S }), l(896048);
+l.d(t, {
+    A: () => S,
+}),
+    l(896048);
 var n = l(627968),
     a = l(64700),
     i = l(503698),
@@ -68,6 +71,7 @@ let j = (e) =>
             );
         }),
     );
+
 function S(e) {
     var t;
     let l,
@@ -183,7 +187,9 @@ function S(e) {
                           label: p.intl.string(p.t.h95hcn),
                           helperText: G.freeformConfig.hideHelpdeskLink
                               ? void 0
-                              : p.intl.format(p.t.ybi2tD, { helpdeskURL: v.A.getSubmitRequestURL() }),
+                              : p.intl.format(p.t.ybi2tD, {
+                                    helpdeskURL: v.A.getSubmitRequestURL(),
+                                }),
                           value: K,
                           maxLength: g.u0,
                           onChange: Y,

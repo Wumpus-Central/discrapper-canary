@@ -1,4 +1,7 @@
-n.d(t, { p: () => h }), n(896048);
+n.d(t, {
+    p: () => h,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -11,6 +14,7 @@ var r = n(627968),
     f = n(985018),
     p = n(58477),
     _ = n(72290);
+
 function h() {
     let e = (0, a.bG)([l.default], () => l.default.locale),
         [t, h] = i.useState(e),
@@ -49,7 +53,9 @@ function h() {
                 _.nextTick(() => {
                     o.Ay.updateLocale(e),
                         (0, s.OoC)(u.USER_SETTINGS_MODAL_KEY) &&
-                            (0, u.openUserSettings)(c.X.LANGUAGE_AND_TIME_PANEL, { section: d.nc_.LANGUAGE });
+                            (0, u.openUserSettings)(c.X.LANGUAGE_AND_TIME_PANEL, {
+                                section: d.nc_.LANGUAGE,
+                            });
                 });
         }, []);
     return (0, r.jsx)(s.ZiE, {

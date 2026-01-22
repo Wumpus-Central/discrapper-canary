@@ -4,4 +4,6 @@ function r() {
         ? 0
         : parseInt(null != (e = null == (t = platform) ? void 0 : t.version) ? e : "0", 10);
 }
-n.d(t, { U: () => r });
+n.d(t, {
+    U: () => r,
+});

@@ -1,9 +1,11 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968),
     i = n(64700),
     l = n(503698),
     s = n.n(l),
-    a = n(432022),
+    a = n(108531),
     c = n(397927),
     o = n(995591);
 class d extends i.Component {
@@ -70,8 +72,16 @@ class d extends i.Component {
                         });
                 }
                 return e;
-            })({ size: "md" }, l)),
-            (t = t = { color: "currentColor" }),
+            })(
+                {
+                    size: "md",
+                },
+                l,
+            )),
+            (t = t =
+                {
+                    color: "currentColor",
+                }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
                 : (function (e, t) {
@@ -100,9 +110,15 @@ let u = (0, a.animated)(d),
                 {
                     key: (e) => e.name,
                     initial: null,
-                    from: { opacity: 0 },
-                    enter: { opacity: 1 },
-                    leave: { opacity: 0 },
+                    from: {
+                        opacity: 0,
+                    },
+                    enter: {
+                        opacity: 1,
+                    },
+                    leave: {
+                        opacity: 0,
+                    },
                 },
                 "animate-always",
             );

@@ -1,4 +1,6 @@
-n.d(t, { H: () => I });
+n.d(t, {
+    H: () => I,
+});
 var r = n(627968),
     i = n(64700),
     a = n(941861),
@@ -15,6 +17,7 @@ var r = n(627968),
     m = n(763600),
     g = n(985018),
     E = n(161222);
+
 function b(e, t, n) {
     return (
         t in e
@@ -28,6 +31,7 @@ function b(e, t, n) {
         e
     );
 }
+
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -44,6 +48,7 @@ function y(e) {
     }
     return e;
 }
+
 function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -56,6 +61,7 @@ function O(e, t) {
     }
     return n;
 }
+
 function A(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -67,6 +73,7 @@ function A(e, t) {
         e
     );
 }
+
 function v(e, t) {
     if (null == e) return {};
     var n,
@@ -83,6 +90,7 @@ function v(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function S(e, t) {
     if (null == e) return {};
     var n,
@@ -93,6 +101,7 @@ function S(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function I(e) {
     var t, n, b;
     let {
@@ -102,7 +111,9 @@ function I(e) {
             previewUrl: T = I,
             disableMediaViewer: C = !1,
             action: N,
-            caretConfig: R = { align: "center" },
+            caretConfig: R = {
+                align: "center",
+            },
             badge: w,
             textLink: P,
             onWatchVideo: D,
@@ -211,7 +222,9 @@ function I(e) {
                       alignmentStrategy: "edge",
                       align: M.align,
                   }
-                : { alignmentStrategy: "trigger-center" },
+                : {
+                      alignmentStrategy: "trigger-center",
+                  },
         );
     return (0, r.jsx)(
         u.x,
@@ -219,7 +232,9 @@ function I(e) {
             children: (0, r.jsxs)("div", {
                 ref: L,
                 children: [
-                    (0, r.jsx)(_.p, { onClick: Y }),
+                    (0, r.jsx)(_.p, {
+                        onClick: Y,
+                    }),
                     (0, r.jsx)(f.F, {}),
                     (0, r.jsx)("div", {
                         className: E.s,
@@ -231,7 +246,11 @@ function I(e) {
                         badge: w,
                         textLink: P,
                     }),
-                    null != N ? (0, r.jsx)(d.Z, { actions: [N] }) : null,
+                    null != N
+                        ? (0, r.jsx)(d.Z, {
+                              actions: [N],
+                          })
+                        : null,
                 ],
             }),
         }),

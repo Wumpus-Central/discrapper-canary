@@ -6,7 +6,7 @@ n.d(t, {
     n(896048);
 var r = n(627968),
     i = n(64700),
-    a = n(432022),
+    a = n(108531),
     s = n(417597),
     o = n(397927),
     l = n(775602),
@@ -24,6 +24,7 @@ var r = n(627968),
     y = n(788868),
     O = n(985018),
     A = n(325234);
+
 function v(e, t, n) {
     return (
         t in e
@@ -37,6 +38,7 @@ function v(e, t, n) {
         e
     );
 }
+
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -53,6 +55,7 @@ function S(e) {
     }
     return e;
 }
+
 function I(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -65,6 +68,7 @@ function I(e, t) {
     }
     return n;
 }
+
 function T(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -76,28 +80,44 @@ function T(e, t) {
         e
     );
 }
-let C = 3000;
+let C = 3e3;
+
 function N(e) {
     if (null == e || e === b.TVA.NONE) return "";
     let t = [
-        O.intl.formatToPlainString(O.t["dLlKX/"], { numEmojiSlots: y.TG[e].limits.emoji }),
-        O.intl.formatToPlainString(O.t["+ANIfv"], { numStickerSlots: y.TG[e].limits.stickers }),
-        O.intl.formatToPlainString(O.t["4gt60b"], { numSoundboardSlots: y.TG[e].limits.soundboardSounds }),
+        O.intl.formatToPlainString(O.t["dLlKX/"], {
+            numEmojiSlots: y.TG[e].limits.emoji,
+        }),
+        O.intl.formatToPlainString(O.t["+ANIfv"], {
+            numStickerSlots: y.TG[e].limits.stickers,
+        }),
+        O.intl.formatToPlainString(O.t["4gt60b"], {
+            numSoundboardSlots: y.TG[e].limits.soundboardSounds,
+        }),
         O.intl.formatToPlainString(O.t.XahSjZ, {
             resolution: y.TG[e].limits.screenShareQualityResolution,
             framerate: y.TG[e].limits.screenShareQualityFramerate,
         }),
-        O.intl.formatToPlainString(O.t.NbNs7S, { bitrate: y.TG[e].limits.bitrate / 1000 }),
-        O.intl.formatToPlainString(O.t.VVKcpn, { filesize: y.TG[e].limits.fileSize / 1024 / 1024 }),
-        O.intl.formatToPlainString(O.t.TbpCvv, { numVideoStageSeats: y.TG[e].limits.stageVideoUsers }),
+        O.intl.formatToPlainString(O.t.NbNs7S, {
+            bitrate: y.TG[e].limits.bitrate / 1e3,
+        }),
+        O.intl.formatToPlainString(O.t.VVKcpn, {
+            filesize: y.TG[e].limits.fileSize / 1024 / 1024,
+        }),
+        O.intl.formatToPlainString(O.t.TbpCvv, {
+            numVideoStageSeats: y.TG[e].limits.stageVideoUsers,
+        }),
         O.intl.string(O.t.LDyX3i),
         O.intl.string(O.t.YtGlPW),
     ];
     e >= b.TVA.TIER_2 && (t.push(O.intl.string(O.t.SztbtN)), t.push(O.intl.string(O.t["3GK91n"]))),
         e >= b.TVA.TIER_3 && t.push(O.intl.string(O.t["XUUJd+"]));
     let n = t[Math.floor(Math.random() * t.length)];
-    return O.intl.format(O.t["/dOAmQ"], { perk: n });
+    return O.intl.format(O.t["/dOAmQ"], {
+        perk: n,
+    });
 }
+
 function R(e) {
     let {
             guildTier: t,
@@ -111,19 +131,30 @@ function R(e) {
             if (l) {
                 let e = c.currentPeriodEnd;
                 return (
-                    c.isPausedForFractionalPremium && (e = u.endsAt.toDate()), O.intl.format(O.t.Z4ULRD, { date: e })
+                    c.isPausedForFractionalPremium && (e = u.endsAt.toDate()),
+                    O.intl.format(O.t.Z4ULRD, {
+                        date: e,
+                    })
                 );
             }
             let e = null != n.premiumGuildSubscription ? h.default.extractTimestamp(n.premiumGuildSubscription.id) : 0;
-            return O.intl.formatToPlainString(O.t.lY2Bur, { date: new Date(e) });
+            return O.intl.formatToPlainString(O.t.lY2Bur, {
+                date: new Date(e),
+            });
         }, [n, l, c, u]),
         f = i.useMemo(() => N(t), [t]),
         p = (0, o.pnh)(
             s,
             {
-                from: { opacity: 0 },
-                enter: { opacity: 1 },
-                leave: { opacity: 0 },
+                from: {
+                    opacity: 0,
+                },
+                enter: {
+                    opacity: 1,
+                },
+                leave: {
+                    opacity: 0,
+                },
             },
             "animate-always",
         );
@@ -148,6 +179,7 @@ function R(e) {
               }),
           );
 }
+
 function w(e) {
     let {
             guildTier: t,
@@ -163,6 +195,7 @@ function w(e) {
         y = (0, p.I5)(n),
         v = (0, c.A)(),
         I = i.useRef(null);
+
     function C(e) {
         let { closePopout: t } = e;
         return (0, r.jsx)(u.A, {
@@ -222,10 +255,14 @@ function w(e) {
                     }),
                 ],
             }),
-            !_ && (0, r.jsx)("div", { className: A.eX }),
+            !_ &&
+                (0, r.jsx)("div", {
+                    className: A.eX,
+                }),
         ],
     });
 }
+
 function P(e) {
     let {
             guildId: t,
@@ -259,6 +296,7 @@ function P(e) {
         ],
     });
 }
+
 function D(e) {
     let { guildId: t, appliedGuildBoosts: n, premiumSubscription: i } = e,
         a = (0, s.bG)([f.A], () => f.A.getGuild(t), [t]),
@@ -307,6 +345,7 @@ function D(e) {
         ],
     });
 }
+
 function x(e) {
     let { appliedGuildBoosts: t, premiumSubscription: n } = e,
         a = i.useMemo(() => {
@@ -338,10 +377,13 @@ function x(e) {
                           ),
                       ),
                   }),
-                  (0, r.jsx)("div", { className: A.vK }),
+                  (0, r.jsx)("div", {
+                      className: A.vK,
+                  }),
               ],
           });
 }
+
 function L(e) {
     let { guildBoostSlots: t, premiumSubscription: n } = e,
         [a, s] = i.useState(!1);
@@ -395,7 +437,9 @@ function L(e) {
                     ),
                 ),
             }),
-            (0, r.jsx)("div", { className: A.vK }),
+            (0, r.jsx)("div", {
+                className: A.vK,
+            }),
         ],
     });
 }

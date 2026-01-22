@@ -9,6 +9,7 @@ n.d(t, {
 var r = n(735438),
     i = n.n(r);
 let a = new (n(626584).A)("DragAndDropUtils");
+
 function s(e) {
     let { oldOrdering: t, newOrdering: n, idGetter: r, existingPositionGetter: i, ascending: s = !0 } = e,
         o = n.length;
@@ -31,11 +32,13 @@ function s(e) {
     }
     return s || d.reverse(), d;
 }
+
 function o(e, t, n) {
     let r = e[t],
         i = [...e];
     return i.splice(t, 1), i.splice(n, 0, r), i;
 }
+
 function l(e) {
     let {
         objectArray: t,

@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -9,6 +11,7 @@ var i = n(397927),
     o = n(322388),
     d = n(985018),
     u = n(369529);
+
 function f(e) {
     let { addFormField: t, onSelect: n, guild: c, allowTerms: f } = e;
     return (0, r.jsx)(i.W1t, {

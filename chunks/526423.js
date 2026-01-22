@@ -1,4 +1,7 @@
-n.d(t, { A: () => p }), n(896048);
+n.d(t, {
+    A: () => p,
+}),
+    n(896048);
 var r = n(562465),
     i = n(73153),
     s = n(830215),
@@ -8,6 +11,7 @@ var r = n(562465),
     c = n(954571),
     u = n(272355),
     d = n(652215);
+
 function h(e, t) {
     c.default.track(d.HAw.BROWSER_HANDOFF_SUCCEEDED, {
         authenticated: e,

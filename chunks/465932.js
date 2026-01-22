@@ -17,7 +17,9 @@ let d = (e) => {
             null != e &&
                 e.features.has(u.GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED) &&
                 o.A.getMonetizationRestrictionsFetchState(e.id) === o.e.NOT_FETCHED &&
-                s.LJ(e.id, { signal: t });
+                s.LJ(e.id, {
+                    signal: t,
+                });
         }, [e, t]);
         let n = null == e ? void 0 : e.id;
         return {

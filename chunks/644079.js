@@ -13,6 +13,7 @@ n.d(t, {
 var r = n(989349),
     i = n.n(r),
     a = n(405269);
+
 function s(e, t, n) {
     return (
         t in e
@@ -93,8 +94,16 @@ class y {
             let n = _(h, e);
             if (null != n) {
                 t.push(n.clone());
-                let r = n.add({ hours: 12 });
-                r.isBefore(h.clone().add({ hours: 24 })) && p(r.format("LT")) === p(e) && t.push(r);
+                let r = n.add({
+                    hours: 12,
+                });
+                r.isBefore(
+                    h.clone().add({
+                        hours: 24,
+                    }),
+                ) &&
+                    p(r.format("LT")) === p(e) &&
+                    t.push(r);
             }
         }
         return t;

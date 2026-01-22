@@ -1,4 +1,7 @@
-n.d(t, { A: () => f }), n(896048);
+n.d(t, {
+    A: () => f,
+}),
+    n(896048);
 var a = n(627968);
 n(64700);
 var l = n(989349),
@@ -39,6 +42,7 @@ let m = (e) => {
             },
         },
     ];
+
 function f() {
     let e = (0, r.bG)([o.A], () => o.A.getDCFEvents()),
         t = (0, c.Ay)((e) => e.candidates),

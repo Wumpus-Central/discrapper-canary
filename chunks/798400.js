@@ -1,4 +1,6 @@
-n.d(t, { A: () => R });
+n.d(t, {
+    A: () => R,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -20,6 +22,7 @@ var r = n(627968),
     O = n(985018),
     A = n(308021),
     v = n(211134);
+
 function S(e, t, n) {
     return (
         t in e
@@ -33,6 +36,7 @@ function S(e, t, n) {
         e
     );
 }
+
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -49,6 +53,7 @@ function I(e) {
     }
     return e;
 }
+
 function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -61,6 +66,7 @@ function T(e, t) {
     }
     return n;
 }
+
 function C(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -72,6 +78,7 @@ function C(e, t) {
         e
     );
 }
+
 function N(e) {
     let { numDaysPlayed: t, game: n, index: a } = e,
         l = (0, i.useContext)(f.P),
@@ -87,7 +94,9 @@ function N(e) {
                   }),
         T = (0, E.vy)();
     return (0, r.jsxs)(E.vw, {
-        className: s()(v.Y_, { [v.Nf]: 0 === a }),
+        className: s()(v.Y_, {
+            [v.Nf]: 0 === a,
+        }),
         spring: T,
         children: [
             (0, r.jsx)(_.A, {
@@ -102,7 +111,9 @@ function N(e) {
                               })
                             : (0, r.jsx)("div", {
                                   className: v.CC,
-                                  style: { borderColor: p },
+                                  style: {
+                                      borderColor: p,
+                                  },
                                   children: (0, r.jsx)(o._7Z, {
                                       size: "lg",
                                       className: v.QQ,
@@ -110,7 +121,9 @@ function N(e) {
                               }),
                         (0, r.jsx)("div", {
                             className: v.Tm,
-                            style: { backgroundColor: p },
+                            style: {
+                                backgroundColor: p,
+                            },
                             children: (0, r.jsxs)(g.A, {
                                 variant: "text-lg/normal",
                                 className: A.sH,
@@ -128,11 +141,14 @@ function N(e) {
             (0, r.jsx)(g.A, {
                 variant: "text-sm/bold",
                 className: v.Mf,
-                children: O.intl.format(y.default.MugpMu, { numSessions: t }),
+                children: O.intl.format(y.default.MugpMu, {
+                    numSessions: t,
+                }),
             }),
         ],
     });
 }
+
 function R() {
     let e = (0, i.useContext)(f.P),
         t = (0, c.rdh)(e.primaryColor).hex(),
@@ -188,14 +204,24 @@ function R() {
                                         ),
                                 }),
                             }),
-                            (0, r.jsx)(h.e, { slide: b.P7.GAMING }),
+                            (0, r.jsx)(h.e, {
+                                slide: b.P7.GAMING,
+                            }),
                         ],
                     }),
                 ],
             }),
             (0, r.jsx)("div", {
                 className: v.ag,
-                children: a.map((e, t) => (0, r.jsx)(N, C(I({}, e), { index: t }), "game-".concat(t))),
+                children: a.map((e, t) =>
+                    (0, r.jsx)(
+                        N,
+                        C(I({}, e), {
+                            index: t,
+                        }),
+                        "game-".concat(t),
+                    ),
+                ),
             }),
         ],
     });

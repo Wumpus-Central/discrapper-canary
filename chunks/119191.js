@@ -16,6 +16,7 @@ var i = n(311907),
     p = n(652215),
     _ = n(985018),
     h = n(352143);
+
 function m(e, t, n) {
     let {
         highlightAdminWarningIfElevated: i,
@@ -47,6 +48,7 @@ let g = (e, t) =>
                 ),
         }),
     });
+
 function E(e) {
     let {
             keybind: t,
@@ -71,7 +73,9 @@ function E(e) {
                         onSettingsClick: (e) => {
                             e.stopPropagation(),
                                 (0, o.A)(void 0, !0),
-                                (0, u.openUserSettings)(c.X.OVERLAY_PANEL, { section: p.nc_.OVERLAY });
+                                (0, u.openUserSettings)(c.X.OVERLAY_PANEL, {
+                                    section: p.nc_.OVERLAY,
+                                });
                         },
                     })
                   : _.intl.string(_.t.PIeSHF),
@@ -96,7 +100,14 @@ function E(e) {
               : (0, r.jsx)(r.Fragment, {
                     children: _.intl.format(n, {
                         keybind: t,
-                        keybindHook: (e) => (0, r.jsx)(f.b, { keybind: t }, t.join("+")),
+                        keybindHook: (e) =>
+                            (0, r.jsx)(
+                                f.b,
+                                {
+                                    keybind: t,
+                                },
+                                t.join("+"),
+                            ),
                     }),
                 })
           : m;

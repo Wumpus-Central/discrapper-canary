@@ -1,8 +1,12 @@
-n.d(t, { A: () => b }), n(896048);
+n.d(t, {
+    A: () => b,
+}),
+    n(896048);
 var r,
     i = n(311907),
     a = n(73153),
     s = n(155718);
+
 function o(e, t, n) {
     return (
         t in e
@@ -19,32 +23,39 @@ function o(e, t, n) {
 let l = !1,
     c = [],
     u = !1;
+
 function d() {
     (c = []), (l = !1), (u = !1);
 }
+
 function f() {
     if (u) return !1;
     u = !0;
 }
+
 function p() {
     if (!u) return !1;
     u = !1;
 }
+
 function _(e) {
     let { credentials: t } = e,
         n = !1;
     return c !== t && ((c = t), (n = !0)), l || ((l = !0), (n = !0)), n;
 }
+
 function h(e) {
     let { credential: t } = e;
     if (t.type !== s.Wq.WEBAUTHN || void 0 !== c.find((e) => e.id === t.id)) return !1;
     c = [...c, t];
 }
+
 function m(e) {
     let { credential: t } = e;
     if (t.type !== s.Wq.WEBAUTHN) return !1;
     c = c.map((e) => (e.id === t.id ? t : e));
 }
+
 function g(e) {
     let { credential: t } = e;
     if (t.type !== s.Wq.WEBAUTHN) return !1;

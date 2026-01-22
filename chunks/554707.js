@@ -80,6 +80,7 @@ async function u(e) {
     }
     return null;
 }
+
 function d(e) {
     let t = new Uint8Array(e.data.buffer);
     return i()(t).toString(16);

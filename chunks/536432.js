@@ -34,11 +34,13 @@ var r = n(417597),
     v = n(980504),
     S = n(652215),
     I = n(698279);
+
 function T() {
     var e;
     let t = o.dG.getSetting();
     return null != (e = null == t ? void 0 : t.volume) ? e : 100;
 }
+
 function C(e, t) {
     return (
         (null == t ? void 0 : t.guild_id) == null ||
@@ -47,6 +49,7 @@ function C(e, t) {
         e.guildId === (null == t ? void 0 : t.guild_id)
     );
 }
+
 function N(e, t, n) {
     let r = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
     return (
@@ -55,16 +58,22 @@ function N(e, t, n) {
         (!r || t.available)
     );
 }
+
 function R(e) {
-    let { mute: t, suppress: n } = (0, u.k)({ channel: e });
+    let { mute: t, suppress: n } = (0, u.k)({
+        channel: e,
+    });
     return !t && !n;
 }
+
 function w(e, t, n, r) {
     (0, E.qP)(t, e, y.Zm.SOUNDBOARD), (0, d.Wv)(t, e, __OVERLAY__, n, r);
 }
+
 function P(e, t) {
     (0, E.qP)(t, e, y.Zm.JOINED_VOICE_CHANNEL), (0, d.Rc)(t, e, __OVERLAY__);
 }
+
 function D() {
     var e, t;
     return Object.values(null != (e = null == (t = c.A.settings.guilds) ? void 0 : t.guilds) ? e : {}).some(
@@ -84,6 +93,7 @@ async function x(e) {
         P(a, n.id);
     }
 }
+
 function L(e) {
     let { isSoundboardButtonDisabled: t = !1 } = e,
         n = (0, r.bG)([_.default], () => _.default.getCurrentUser()),
@@ -94,6 +104,7 @@ function L(e) {
     }
     return a;
 }
+
 function j(e, t) {
     (0, l.TG)(
         e,
@@ -109,6 +120,7 @@ function j(e, t) {
         l.Sb.INFREQUENT_USER_ACTION,
     );
 }
+
 function M(e, t, n) {
     (0, l.TG)(
         e,
@@ -131,6 +143,7 @@ function M(e, t, n) {
         l.Sb.INFREQUENT_USER_ACTION,
     );
 }
+
 function k(e) {
     let { guildId: t, changeType: n, soundType: r, soundSource: i, location: a } = e;
     h.default.track(S.HAw.USER_CUSTOM_CALL_SOUND_SETTING_UPDATED, {
@@ -141,10 +154,14 @@ function k(e) {
         sound_source: i,
     });
 }
+
 function U(e) {
     let { location: t } = e;
-    h.default.track(S.HAw.USER_CUSTOM_CALL_SOUND_SETTING_GUILD_REMOVED, { location_stack: t });
+    h.default.track(S.HAw.USER_CUSTOM_CALL_SOUND_SETTING_GUILD_REMOVED, {
+        location_stack: t,
+    });
 }
+
 function G(e) {
     let { sound: t, location: n } = e;
     a.Ay.trackWithMetadata(S.HAw.EXPRESSION_FAVORITED, {

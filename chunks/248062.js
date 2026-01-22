@@ -35,7 +35,9 @@ let u = (0, c.createContext)(null),
                     close: (null == _ ? void 0 : _.close) || (() => {}),
                 },
             }),
-            m = (0, o.$)(e, { global: !0 });
+            m = (0, o.$)(e, {
+                global: !0,
+            });
         return c.createElement(
             "section",
             {
@@ -64,7 +66,9 @@ let u = (0, c.createContext)(null),
                             {
                                 slots: {
                                     [i.P_]: {},
-                                    close: { onPress: () => (null == _ ? void 0 : _.close()) },
+                                    close: {
+                                        onPress: () => (null == _ ? void 0 : _.close()),
+                                    },
                                 },
                             },
                         ],

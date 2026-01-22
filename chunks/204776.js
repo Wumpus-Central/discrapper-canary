@@ -6,6 +6,7 @@ n.d(t, {
 var r = n(485845),
     i = n(264322),
     a = n(73510);
+
 function s(e) {
     let { customInstallUrl: t, installParams: n, integrationTypesConfig: r } = e;
     return (
@@ -19,6 +20,7 @@ function s(e) {
             ))
     );
 }
+
 function o(e) {
     let { customInstallUrl: t, installParams: n, integrationTypesConfig: i } = e;
     return (
@@ -31,6 +33,7 @@ function o(e) {
         r.b.USER_INSTALL in i
     );
 }
+
 function l(e) {
     let { applicationId: t, channel: n, commandIntegrationTypes: s } = e;
     return !(

@@ -43,7 +43,9 @@ let o = Object.freeze({
         (0, r.jsxs)("linearGradient", {
             id: o.PREMIUM_TIER_1,
             children: [
-                (0, r.jsx)("stop", { stopColor: s.A.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css }),
+                (0, r.jsx)("stop", {
+                    stopColor: s.A.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css,
+                }),
                 (0, r.jsx)("stop", {
                     offset: "1",
                     stopColor: s.A.unsafe_rawColors.PREMIUM_TIER_1_PURPLE.css,
@@ -54,7 +56,9 @@ let o = Object.freeze({
         (0, r.jsxs)("linearGradient", {
             id: o.PREMIUM_TIER_2,
             children: [
-                (0, r.jsx)("stop", { stopColor: s.A.unsafe_rawColors.PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS.css }),
+                (0, r.jsx)("stop", {
+                    stopColor: s.A.unsafe_rawColors.PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS.css,
+                }),
                 (0, r.jsx)("stop", {
                     offset: "0.502368",
                     stopColor: s.A.unsafe_rawColors.PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS_2.css,
@@ -69,7 +73,9 @@ let o = Object.freeze({
         (0, r.jsxs)("linearGradient", {
             id: o.PREMIUM_GUILD,
             children: [
-                (0, r.jsx)("stop", { stopColor: s.A.unsafe_rawColors.GUILD_BOOSTING_BLUE.css }),
+                (0, r.jsx)("stop", {
+                    stopColor: s.A.unsafe_rawColors.GUILD_BOOSTING_BLUE.css,
+                }),
                 (0, r.jsx)("stop", {
                     offset: "1",
                     stopColor: s.A.unsafe_rawColors.GUILD_BOOSTING_PURPLE.css,

@@ -12,6 +12,7 @@ var i = n(503698),
     l = n(150934),
     c = n(460890),
     u = n(22789);
+
 function d(e, t, n) {
     return (
         t in e
@@ -25,6 +26,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -41,6 +43,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -53,6 +56,7 @@ function p(e, t) {
     }
     return n;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -64,6 +68,7 @@ function _(e, t) {
         e
     );
 }
+
 function h(e, t) {
     if (null == e) return {};
     var n,
@@ -80,6 +85,7 @@ function h(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function m(e, t) {
     if (null == e) return {};
     var n,
@@ -90,13 +96,16 @@ function m(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function g(e) {
     let { leading: t, actions: n = [], actionsFullWidth: i = !1, leadingLayout: l = "default" } = e;
     if (null == t && n.length < 1) return null;
     let c = ["primary", "critical-primary", "expressive"],
         d = n.findLastIndex((e) => null != e.variant && c.includes(e.variant));
     return (0, r.jsxs)("footer", {
-        className: a()(u.actionBar, u.section, { [u.actionBarLayoutChatInput]: "chat-input" === l }),
+        className: a()(u.actionBar, u.section, {
+            [u.actionBarLayoutChatInput]: "chat-input" === l,
+        }),
         children: [
             null != t &&
                 (0, r.jsx)("div", {
@@ -104,7 +113,9 @@ function g(e) {
                     children: t,
                 }),
             (0, r.jsx)("div", {
-                className: a()(u.actionBarTrailing, { [u.actionBarTrailingFullWidth]: i }),
+                className: a()(u.actionBarTrailing, {
+                    [u.actionBarTrailingFullWidth]: i,
+                }),
                 children: (0, r.jsx)(o.e, {
                     fullWidth: i,
                     children:
@@ -114,7 +125,12 @@ function g(e) {
                                   var n;
                                   return (0, r.jsx)(
                                       s.$,
-                                      f({ autoFocus: null != (n = e.autoFocus) ? n : d === t }, e),
+                                      f(
+                                          {
+                                              autoFocus: null != (n = e.autoFocus) ? n : d === t,
+                                          },
+                                          e,
+                                      ),
                                       t,
                                   );
                               }),
@@ -123,6 +139,7 @@ function g(e) {
         ],
     });
 }
+
 function E(e) {
     let { label: t } = e,
         n = h(e, ["label"]),

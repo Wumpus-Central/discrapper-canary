@@ -1,4 +1,8 @@
-n.d(t, { A: () => g }), n(747238), n(896048);
+n.d(t, {
+    A: () => g,
+}),
+    n(747238),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(835245),
@@ -12,6 +16,7 @@ var r = n(627968),
     f = n(613057),
     h = n(985018),
     A = n(742249);
+
 function g(e) {
     let { applicationId: t } = e.match.params,
         [g, m] = i.useState(!1),

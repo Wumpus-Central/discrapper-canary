@@ -1,4 +1,8 @@
-n.d(t, { A: () => O }), n(321073), n(896048);
+n.d(t, {
+    A: () => O,
+}),
+    n(321073),
+    n(896048);
 var r = n(627968);
 n(64700);
 var i = n(956793),
@@ -19,6 +23,7 @@ var i = n(956793),
     _ = n(812808);
 n(595);
 var E = n(652215);
+
 function O(e) {
     let { party: t, onChannelContextMenu: n, quest: O } = e,
         y = (0, _.G)(),
@@ -128,7 +133,9 @@ function O(e) {
                         ? x(
                               (0, r.jsx)(
                                   b.A.XboxSection,
-                                  { title: w.name },
+                                  {
+                                      title: w.name,
+                                  },
                                   "xbox-".concat(null != (p = P.session_id) ? p : t),
                               ),
                           )
@@ -195,8 +202,20 @@ function O(e) {
                 null != w &&
                 (0, h.zS)(P, O) &&
                 (null == O.userStatus || !(0, f.gO)(O.userStatus, d.uF.ACTIVITY_PANEL)) &&
-                x((0, r.jsx)(A.A, { quest: O }, "quest-".concat(O.id, "-").concat(null != (j = P.session_id) ? j : t)));
+                x(
+                    (0, r.jsx)(
+                        A.A,
+                        {
+                            quest: O,
+                        },
+                        "quest-".concat(O.id, "-").concat(null != (j = P.session_id) ? j : t),
+                    ),
+                );
         }),
-        j.length > 0 ? (0, r.jsx)(b.A.Body, { children: j }) : null
+        j.length > 0
+            ? (0, r.jsx)(b.A.Body, {
+                  children: j,
+              })
+            : null
     );
 }

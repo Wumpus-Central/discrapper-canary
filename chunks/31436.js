@@ -5,6 +5,7 @@ n.d(t, {
 }),
     n(65821);
 var r = n(841117);
+
 function i(e) {
     console.warn("[libdiscore] ".concat(e));
 }
@@ -34,6 +35,7 @@ async function a() {
                 await (0, r.eU)(t);
         }
 }
+
 function s() {
     let e = u();
     if (null != e) return e;
@@ -50,20 +52,25 @@ function s() {
         return d(e), e;
     }
 }
+
 function o(e) {
     window._libdiscoreUnsupportedBrowser = e;
 }
+
 function l(e) {
     window._libdiscoreWasm = e;
 }
+
 function c() {
     if (void 0 !== window._libdiscoreWasm) return window._libdiscoreWasm;
     throw Error("libdiscoreWasm is not initialized");
 }
+
 function u() {
     var e;
     return null != (e = window._libdiscoreInitPromise) ? e : null;
 }
+
 function d(e) {
     window._libdiscoreInitPromise = e;
 }

@@ -108,7 +108,9 @@ var r = n(627968),
 let eg = () => {
     let { analyticsLocations: e } = (0, c.Ay)(l.A.PREMIUM_MARKETING_PERK_CARD),
         t = (0, o.Ay)(),
-        n = (0, S.Xq)(L.f3 / 1024, { useKibibytes: !0 }),
+        n = (0, S.Xq)(L.f3 / 1024, {
+            useKibibytes: !0,
+        }),
         em = (0, a.bG)([v.A], () => v.A.getPremiumTypeSubscription()),
         eg = null != em ? T.Ay.getPremiumPlanItem(em) : null,
         eE = (null != eg ? T.Ay.getSkuIdForPlan(eg.planId) : null) === L.pe.TIER_2,
@@ -147,7 +149,9 @@ let eg = () => {
             (0, m.pX)(j.BVt.COLLECTIBLES_SHOP);
         },
         eP = () => {
-            (0, b.A)(U.J.CLIPS, { analyticsLocations: e });
+            (0, b.A)(U.J.CLIPS, {
+                analyticsLocations: e,
+            });
         },
         eD = () => {
             let e = (0, E.WJ)("openCustomAppSettings");
@@ -160,7 +164,11 @@ let eg = () => {
             window.open(I.A.getArticleURL(j.MVz.CLIPS), "_blank");
         },
         eL = () => {
-            eI || (0, p.Dr)(s.M.PERMADECOS_NITRO_HOME_CARD_NEW_BADGE, { dismissAction: M.i.TAKE_ACTION }), eT();
+            eI ||
+                (0, p.Dr)(s.M.PERMADECOS_NITRO_HOME_CARD_NEW_BADGE, {
+                    dismissAction: M.i.TAKE_ACTION,
+                }),
+                eT();
         },
         ej = i.useCallback(() => {
             (0, y.openUserSettings)(
@@ -169,7 +177,10 @@ let eg = () => {
                     section: j.nc_.PROFILE_CUSTOMIZATION,
                     analyticsLocations: e,
                 },
-                () => (0, _.L)({ analyticsLocations: e }),
+                () =>
+                    (0, _.L)({
+                        analyticsLocations: e,
+                    }),
             );
         }, [e]),
         eM = new Date(),
@@ -385,8 +396,12 @@ let eg = () => {
             },
             largeUploads: {
                 name: "largeUploads",
-                title: G.intl.formatToPlainString(G.t.jqhAdL, { premiumMaxSize: n }),
-                subtitle: G.intl.formatToPlainString(G.t["HI+cfm"], { premiumMaxSize: n }),
+                title: G.intl.formatToPlainString(G.t.jqhAdL, {
+                    premiumMaxSize: n,
+                }),
+                subtitle: G.intl.formatToPlainString(G.t["HI+cfm"], {
+                    premiumMaxSize: n,
+                }),
                 perkImage: eu,
                 description: G.intl.string(G.t["R0gx+0"]),
             },
@@ -431,7 +446,9 @@ let eg = () => {
                 name: "permadecos",
                 title: G.intl.string(G.t["57ngoo"]),
                 subtitle: G.intl.string(G.t.piFFjd),
-                description: G.intl.format(G.t.Pd7olh, { learnMoreLink: I.A.getArticleURL(j.MVz.PERMADECOS) }),
+                description: G.intl.format(G.t.Pd7olh, {
+                    learnMoreLink: I.A.getArticleURL(j.MVz.PERMADECOS),
+                }),
                 descriptionCta: ey ? G.intl.string(G.t.jVcuVY) : G.intl.string(G.t.JST6jl),
                 isPremiumGetCta: !ey,
                 onCtaClick: ey ? eL : void 0,
@@ -462,11 +479,16 @@ let eg = () => {
                 name: "recurring3PPromotions",
                 title: G.intl.string(G.t.m7PucM),
                 subtitle: " ",
-                onCtaClick: () => (0, N.uE)({ analyticsLocations: e }),
+                onCtaClick: () =>
+                    (0, N.uE)({
+                        analyticsLocations: e,
+                    }),
                 pillText: G.intl.string(G.t.oW0eUd).toLocaleUpperCase(),
                 description: G.intl.format(G.t.zh1X7u, {}),
                 descriptionCta: G.intl.string(G.t.w7s5Qr),
-                customContent: (0, r.jsx)(R.U, { percentage: eU }),
+                customContent: (0, r.jsx)(R.U, {
+                    percentage: eU,
+                }),
             },
             premiumGroup: (0, C.u)(),
         };
@@ -479,7 +501,10 @@ let eg = () => {
                 pillText: G.intl.string(G.t["jyYgZ+"]).toLocaleUpperCase(),
                 perkComponent: (0, r.jsx)(w.A, {}),
                 cardVariant: D.PJ.NITRO_GRADIENT_HOVER_BORDER,
-                onClick: () => (0, P.D)({ analyticsLocations: e }),
+                onClick: () =>
+                    (0, P.D)({
+                        analyticsLocations: e,
+                    }),
             }),
         eG
     );

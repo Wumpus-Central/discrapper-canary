@@ -6,4 +6,7 @@ function r(e) {
     }
     return t;
 }
-n.d(t, { A: () => r }), n(896048);
+n.d(t, {
+    A: () => r,
+}),
+    n(896048);

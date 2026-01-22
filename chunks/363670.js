@@ -17,6 +17,7 @@ var r = n(627968),
     d = n(868065),
     f = n(332225);
 let p = [u.R_];
+
 function _(e) {
     var t, n, r, i;
     let o = (0, a.bG)([l.A], () => l.A.getMatchingActivity(e)),
@@ -36,10 +37,13 @@ function _(e) {
         user: c,
     };
 }
+
 function h(e) {
     let { entry: t, channel: n, selected: i, hovered: a } = e,
         { activity: s, artist: l } = _(t),
-        { largeImage: h } = (0, o.nO)({ entry: t });
+        { largeImage: h } = (0, o.nO)({
+            entry: t,
+        });
     return null == s
         ? (0, r.jsx)(d.eG, {})
         : (0, r.jsxs)(d.Zp, {
@@ -52,7 +56,9 @@ function h(e) {
                               channelId: n.id,
                               guildId: n.guild_id,
                           }),
-                          (0, r.jsx)(d.ZB, { children: l.replace(/; /g, ", ") }),
+                          (0, r.jsx)(d.ZB, {
+                              children: l.replace(/; /g, ", "),
+                          }),
                           (0, r.jsx)(u.mG, {
                               location: u.N5.CARD,
                               children: p.map((e, n) =>

@@ -1,4 +1,8 @@
-a.r(t), a.d(t, { default: () => b }), a(896048);
+a.r(t),
+    a.d(t, {
+        default: () => b,
+    }),
+    a(896048);
 var s = a(627968),
     l = a(64700),
     r = a(341856),
@@ -67,4 +71,6 @@ class h extends l.Component {
             });
     }
 }
-let b = o.Ay.connectStores([d.default], () => ({ locale: d.default.locale }))(h);
+let b = o.Ay.connectStores([d.default], () => ({
+    locale: d.default.locale,
+}))(h);

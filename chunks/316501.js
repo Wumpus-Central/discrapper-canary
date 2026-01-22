@@ -20,6 +20,7 @@ var r = n(695497),
     o = n(111162),
     l = n(723702),
     c = n(650583);
+
 function u(e, t, n) {
     return (
         t in e
@@ -33,6 +34,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -100,8 +102,9 @@ let f = new s.A("KeyboardLayoutMapUtils"),
         Minus: "-",
         BracketLeft: "[",
         BracketRight: "]",
-        IntlBackslash: "\xA7",
+        IntlBackslash: "\xa7",
     });
+
 function m(e) {
     return null == e ? e : e.toLocaleLowerCase();
 }
@@ -153,9 +156,11 @@ async function b() {
         }
     return !1;
 }
+
 function y() {
     return E;
 }
+
 function O(e) {
     let t = new Set(),
         n = {};
@@ -169,6 +174,7 @@ function O(e) {
     }
     return n;
 }
+
 function A(e) {
     return {
         keyCode: e.keyCode,
@@ -177,10 +183,12 @@ function A(e) {
     };
 }
 let v = "keyboard-layout-map";
+
 function S() {
     var e;
     return null != (e = a.w.get(v)) ? e : null;
 }
+
 function I(e) {
     a.w.set(v, e);
 }
@@ -446,6 +454,7 @@ class C extends T {
 }
 let N = null,
     R = null;
+
 function w() {
     return null != R
         ? R
@@ -465,6 +474,7 @@ function w() {
                   e();
           }));
 }
+
 function P() {
     return null == N ? (w(), null) : N;
 }
@@ -472,16 +482,19 @@ async function D() {
     var e;
     await b(), null == (e = P()) || e.reset();
 }
+
 function x() {
     var e, t;
     let n = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     return n ? y() : null != (e = null == (t = P()) ? void 0 : t.getLayoutMap()) ? e : y();
 }
+
 function L(e) {
     var t, n;
     let r = null != e ? m(e) : void 0;
     if (null != r) return null != (t = null == (n = P()) ? void 0 : n.findCodeFromKeyboardLayoutMap(r)) ? t : void 0;
 }
+
 function j(e) {
     let t = A(e);
     if (null != t.key) {
@@ -492,6 +505,7 @@ function j(e) {
     }
     return null;
 }
+
 function M(e) {
     var t, n, r, i;
     let a = null != e ? m(e) : void 0;
@@ -512,6 +526,7 @@ function M(e) {
         return null;
     }
 }
+
 function k(e) {
     var t, n, r, i;
     let a = null != (t = null == (n = P()) ? void 0 : n.findKeyboardEventByKeyCode(e)) ? t : null;

@@ -1,9 +1,11 @@
-t.d(a, { A: () => n });
+t.d(a, {
+    A: () => n,
+});
 var i = t(981737);
 let n = {
     ordinalNumber: function (e, a) {
         var t = Number(e);
-        return (null == a ? void 0 : a.unit) === "week" ? t + "ª" : t + "º";
+        return (null == a ? void 0 : a.unit) === "week" ? t + "\xaa" : t + "\xba";
     },
     era: (0, i.A)({
         values: {
@@ -17,7 +19,7 @@ let n = {
         values: {
             narrow: ["1", "2", "3", "4"],
             abbreviated: ["T1", "T2", "T3", "T4"],
-            wide: ["1º trimestre", "2º trimestre", "3º trimestre", "4º trimestre"],
+            wide: ["1\xba trimestre", "2\xba trimestre", "3\xba trimestre", "4\xba trimestre"],
         },
         defaultWidth: "wide",
         argumentCallback: function (e) {
@@ -31,7 +33,7 @@ let n = {
             wide: [
                 "janeiro",
                 "fevereiro",
-                "março",
+                "mar\xe7o",
                 "abril",
                 "maio",
                 "junho",
@@ -49,8 +51,16 @@ let n = {
         values: {
             narrow: ["D", "S", "T", "Q", "Q", "S", "S"],
             short: ["dom", "seg", "ter", "qua", "qui", "sex", "sab"],
-            abbreviated: ["domingo", "segunda", "terça", "quarta", "quinta", "sexta", "sábado"],
-            wide: ["domingo", "segunda-feira", "terça-feira", "quarta-feira", "quinta-feira", "sexta-feira", "sábado"],
+            abbreviated: ["domingo", "segunda", "ter\xe7a", "quarta", "quinta", "sexta", "s\xe1bado"],
+            wide: [
+                "domingo",
+                "segunda-feira",
+                "ter\xe7a-feira",
+                "quarta-feira",
+                "quinta-feira",
+                "sexta-feira",
+                "s\xe1bado",
+            ],
         },
         defaultWidth: "wide",
     }),
@@ -61,7 +71,7 @@ let n = {
                 pm: "p",
                 midnight: "mn",
                 noon: "md",
-                morning: "manhã",
+                morning: "manh\xe3",
                 afternoon: "tarde",
                 evening: "tarde",
                 night: "noite",
@@ -71,7 +81,7 @@ let n = {
                 pm: "PM",
                 midnight: "meia-noite",
                 noon: "meio-dia",
-                morning: "manhã",
+                morning: "manh\xe3",
                 afternoon: "tarde",
                 evening: "tarde",
                 night: "noite",
@@ -81,7 +91,7 @@ let n = {
                 pm: "p.m.",
                 midnight: "meia-noite",
                 noon: "meio-dia",
-                morning: "manhã",
+                morning: "manh\xe3",
                 afternoon: "tarde",
                 evening: "tarde",
                 night: "noite",
@@ -94,7 +104,7 @@ let n = {
                 pm: "p",
                 midnight: "mn",
                 noon: "md",
-                morning: "da manhã",
+                morning: "da manh\xe3",
                 afternoon: "da tarde",
                 evening: "da tarde",
                 night: "da noite",
@@ -104,7 +114,7 @@ let n = {
                 pm: "PM",
                 midnight: "meia-noite",
                 noon: "meio-dia",
-                morning: "da manhã",
+                morning: "da manh\xe3",
                 afternoon: "da tarde",
                 evening: "da tarde",
                 night: "da noite",
@@ -114,7 +124,7 @@ let n = {
                 pm: "p.m.",
                 midnight: "meia-noite",
                 noon: "meio-dia",
-                morning: "da manhã",
+                morning: "da manh\xe3",
                 afternoon: "da tarde",
                 evening: "da tarde",
                 night: "da noite",

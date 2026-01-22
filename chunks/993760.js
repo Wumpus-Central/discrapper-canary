@@ -1,9 +1,21 @@
-n.d(t, { m: () => c }), n(896048), n(693327), n(554719), n(680155), n(323874), n(14289), n(35956), n(65821), n(457529);
+n.d(t, {
+    m: () => c,
+}),
+    n(896048),
+    n(693327),
+    n(554719),
+    n(680155),
+    n(323874),
+    n(14289),
+    n(35956),
+    n(65821),
+    n(457529);
 var r = n(972347),
     i = n(118356),
     a = n(205693),
     s = n(206607),
     o = n(264572).Buffer;
+
 function l(e, t, n) {
     return (
         t in e
@@ -92,7 +104,15 @@ class c extends r.A {
     setupEncryptionWorker() {
         let e = new Worker(
             new URL("/assets/" + n.u("52584"), n.b),
-            Object.assign({}, { name: "encryption-worker" }, { type: void 0 }),
+            Object.assign(
+                {},
+                {
+                    name: "encryption-worker",
+                },
+                {
+                    type: void 0,
+                },
+            ),
         );
         return (
             (e.onmessage = (e) => {
@@ -107,7 +127,9 @@ class c extends r.A {
             (e.onmessageerror = (e) => {
                 this.logger.error("Encryption worker message error", e);
             }),
-            e.postMessage({ type: s.lA.INITIALIZE }),
+            e.postMessage({
+                type: s.lA.INITIALIZE,
+            }),
             e
         );
     }

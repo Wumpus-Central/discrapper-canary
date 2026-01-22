@@ -1,7 +1,10 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(29583),
     i = n(892227),
     a = n(618027);
+
 function s(e, t) {
     var n =
         e.getFullYear() - t.getFullYear() ||
@@ -13,6 +16,7 @@ function s(e, t) {
         e.getMilliseconds() - t.getMilliseconds();
     return n < 0 ? -1 : n > 0 ? 1 : n;
 }
+
 function o(e, t) {
     (0, a.A)(2, arguments);
     var n = (0, r.default)(e),

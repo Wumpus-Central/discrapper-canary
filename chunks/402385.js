@@ -1,4 +1,8 @@
-n.d(t, { A: () => M }), n(896048), n(321073);
+n.d(t, {
+    A: () => M,
+}),
+    n(896048),
+    n(321073);
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -29,6 +33,7 @@ var r = n(627968),
     T = n(49999),
     P = n(731854),
     w = n(985018);
+
 function R(e, t, n) {
     return (
         t in e
@@ -129,10 +134,14 @@ class D extends l.PureComponent {
                             ? (0, r.jsx)(s.AM, {
                                   targetElementRef: this.iconRef,
                                   title: w.intl.string(w.t.HOPqzR),
-                                  body: w.intl.format(w.t.xAW71b, { helpdeskUrl: N.DY }),
+                                  body: w.intl.format(w.t.xAW71b, {
+                                      helpdeskUrl: N.DY,
+                                  }),
                                   position: "bottom",
                                   align: "center",
-                                  caretConfig: { align: "center" },
+                                  caretConfig: {
+                                      align: "center",
+                                  },
                                   onRequestClose: () => n(T.i.USER_DISMISS),
                               })
                             : null;
@@ -162,7 +171,9 @@ class D extends l.PureComponent {
                 let { callUnavailable: t, callActive: n, dismissibleContentTypes: r } = this.props;
                 if (
                     (r.includes(a.M.ACTIVITY_GDM_CALL_TOOLTIP) &&
-                        (0, h.Dr)(a.M.ACTIVITY_GDM_CALL_TOOLTIP, { dismissAction: T.i.AUTO }),
+                        (0, h.Dr)(a.M.ACTIVITY_GDM_CALL_TOOLTIP, {
+                            dismissAction: T.i.AUTO,
+                        }),
                     t)
                 );
                 else if (n) return this.handleJoinCall(!1);
@@ -181,6 +192,7 @@ class D extends l.PureComponent {
             });
     }
 }
+
 function M(e) {
     var t;
     let { channel: n } = e,

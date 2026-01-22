@@ -1,9 +1,12 @@
-n.d(t, { Lj: () => l });
+n.d(t, {
+    Lj: () => l,
+});
 var r = n(768620),
     i = n(993871),
     a = n(244553),
     s = n(54946),
     o = n(172060);
+
 function l(e) {
     return {
         beginDrag: (0, r.S)(e),

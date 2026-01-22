@@ -1,8 +1,11 @@
-r.d(t, { default: () => l });
+r.d(t, {
+    default: () => l,
+});
 var n = r(627968);
 r(64700);
 var o = r(158954),
     c = r(985018);
+
 function l(e) {
     var t, r;
     let { ruleName: l } = e,
@@ -68,7 +71,9 @@ function l(e) {
         (r = r =
             {
                 title: c.intl.string(c.t.Hy8XgL),
-                subtitle: c.intl.format(c.t.hO7PgW, { ruleName: p }),
+                subtitle: c.intl.format(c.t.hO7PgW, {
+                    ruleName: p,
+                }),
                 confirmText: c.intl.string(c.t["cY+Oob"]),
             }),
         Object.getOwnPropertyDescriptors

@@ -1,4 +1,6 @@
-t(697509)(r, "__esModule", { value: !0 }),
+t(697509)(r, "__esModule", {
+    value: !0,
+}),
     (r.default = void 0),
     (r.default = {
         abstract: !1,
@@ -24,7 +26,9 @@ t(697509)(r, "__esModule", { value: !0 }),
                             constraints: [">1"],
                             name: "size",
                         },
-                        { name: "multiple" },
+                        {
+                            name: "multiple",
+                        },
                     ],
                     name: "select",
                 },
@@ -44,21 +48,31 @@ t(697509)(r, "__esModule", { value: !0 }),
             },
             {
                 concept: {
-                    attributes: [{ name: "multiple" }],
+                    attributes: [
+                        {
+                            name: "multiple",
+                        },
+                    ],
                     name: "select",
                 },
                 module: "HTML",
             },
             {
-                concept: { name: "datalist" },
+                concept: {
+                    name: "datalist",
+                },
                 module: "HTML",
             },
             {
-                concept: { name: "list" },
+                concept: {
+                    name: "list",
+                },
                 module: "ARIA",
             },
             {
-                concept: { name: "select" },
+                concept: {
+                    name: "select",
+                },
                 module: "XForms",
             },
         ],

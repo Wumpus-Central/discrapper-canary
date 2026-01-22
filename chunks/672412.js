@@ -1,4 +1,10 @@
-a.d(t, { A: () => p }), a(896048), a(321073), a(65821), a(492834);
+a.d(t, {
+    A: () => p,
+}),
+    a(896048),
+    a(321073),
+    a(65821),
+    a(492834);
 var o = a(626584),
     i = a(430452),
     l = a(723702),
@@ -7,6 +13,7 @@ var o = a(626584),
     r = a(572164),
     d = a(846126),
     c = a(464414);
+
 function u(e, t, a) {
     return (
         t in e
@@ -20,6 +27,7 @@ function u(e, t, a) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var a = null != arguments[t] ? arguments[t] : {},
@@ -165,7 +173,9 @@ let h = new o.A("MLNativeModuleManager"),
                 fileName: e,
             }));
             for (let { id: e, exists: a } of await n.Ay.checkMLModelFilesExist(t))
-                this.state.modelState[e] = { status: a ? d.D.DOWNLOADED : d.D.MISSING };
+                this.state.modelState[e] = {
+                    status: a ? d.D.DOWNLOADED : d.D.MISSING,
+                };
         }
         async prefetchMLModels() {
             if (__OVERLAY__) return;
@@ -233,8 +243,18 @@ let h = new o.A("MLNativeModuleManager"),
                 .catch((t) => {
                     (null == t ? void 0 : t.USER_CANCELED_DOWNLOAD)
                         ? h.info("User canceled the download for ML model", e)
-                        : h.error("Failed to download ML model", f({ reason: t }, e)),
-                        (this.state.modelState[a] = { status: d.D.MISSING });
+                        : h.error(
+                              "Failed to download ML model",
+                              f(
+                                  {
+                                      reason: t,
+                                  },
+                                  e,
+                              ),
+                          ),
+                        (this.state.modelState[a] = {
+                            status: d.D.MISSING,
+                        });
                 })
                 .finally(() => {
                     this.activeDownloads.delete(a);

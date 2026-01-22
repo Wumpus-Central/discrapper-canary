@@ -1,4 +1,6 @@
-t(697509)(r, "__esModule", { value: !0 }),
+t(697509)(r, "__esModule", {
+    value: !0,
+}),
     (r.default = void 0),
     (r.default = {
         abstract: !1,
@@ -7,36 +9,52 @@ t(697509)(r, "__esModule", { value: !0 }),
         childrenPresentational: !1,
         nameFrom: ["author", "contents"],
         prohibitedProps: [],
-        props: { "aria-level": null },
+        props: {
+            "aria-level": null,
+        },
         relatedConcepts: [
             {
-                concept: { name: "h1" },
+                concept: {
+                    name: "h1",
+                },
                 module: "HTML",
             },
             {
-                concept: { name: "h2" },
+                concept: {
+                    name: "h2",
+                },
                 module: "HTML",
             },
             {
-                concept: { name: "h3" },
+                concept: {
+                    name: "h3",
+                },
                 module: "HTML",
             },
             {
-                concept: { name: "h4" },
+                concept: {
+                    name: "h4",
+                },
                 module: "HTML",
             },
             {
-                concept: { name: "h5" },
+                concept: {
+                    name: "h5",
+                },
                 module: "HTML",
             },
             {
-                concept: { name: "h6" },
+                concept: {
+                    name: "h6",
+                },
                 module: "HTML",
             },
         ],
         requireContextRole: [],
         requiredContextRole: [],
         requiredOwnedElements: [],
-        requiredProps: { "aria-level": 2 },
+        requiredProps: {
+            "aria-level": 2,
+        },
         superClass: [["roletype", "structure", "sectionhead"]],
     });

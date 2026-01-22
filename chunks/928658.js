@@ -28,6 +28,7 @@ var r = n(58149),
     c = n(369053),
     u = n(882276),
     d = n(652215);
+
 function f(e, t, n) {
     return (
         t in e
@@ -41,6 +42,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -57,6 +59,7 @@ function p(e) {
     }
     return e;
 }
+
 function _(e, t) {
     x(l.t0.GUILD_DIRECTORY_ENTRY, {
         channel_id: e.channelId,
@@ -68,9 +71,12 @@ function _(e, t) {
                 record: e,
             },
             {},
-            { onSubmit: t },
+            {
+                onSubmit: t,
+            },
         );
 }
+
 function h(e, t, n) {
     x(l.t0.MESSAGE, {
         message_id: e.id,
@@ -82,9 +88,12 @@ function h(e, t, n) {
                 record: e,
             },
             {},
-            { onSubmit: n },
+            {
+                onSubmit: n,
+            },
         );
 }
+
 function m(e, t, n) {
     x(l.t0.MESSAGE, {
         message_id: e.id,
@@ -95,21 +104,33 @@ function m(e, t, n) {
                 name: l.t0.MESSAGE,
                 record: e,
             },
-            { variant: "staff" },
-            { onSubmit: n },
+            {
+                variant: "staff",
+            },
+            {
+                onSubmit: n,
+            },
         );
 }
+
 function g(e, t, n) {
-    x(l.t0.GUILD, { guild_id: e.id }),
+    x(l.t0.GUILD, {
+        guild_id: e.id,
+    }),
         (0, u.T)(
             {
                 name: l.t0.GUILD,
                 record: e,
             },
-            { variant: "staff" },
-            { onSubmit: n },
+            {
+                variant: "staff",
+            },
+            {
+                onSubmit: n,
+            },
         );
 }
+
 function E(e, t) {
     let n = i.A.getStageInstanceByChannel(e.id);
     null != n &&
@@ -124,9 +145,12 @@ function E(e, t) {
                 record: n,
             },
             {},
-            { onSubmit: t },
+            {
+                onSubmit: t,
+            },
         ));
 }
+
 function b(e, t) {
     var n;
     x(l.t0.GUILD_SCHEDULED_EVENT, {
@@ -140,9 +164,12 @@ function b(e, t) {
                 record: e,
             },
             {},
-            { onSubmit: t },
+            {
+                onSubmit: t,
+            },
         );
 }
+
 function y(e, t) {
     x(l.t0.FIRST_DM, {
         message_id: e.id,
@@ -167,13 +194,18 @@ async function O(e, t) {
                 name: l.t0.FIRST_DM,
                 record: e,
             },
-            { variant: "_first_dm_ham_v1" },
+            {
+                variant: "_first_dm_ham_v1",
+            },
         ),
             null == t || t();
     } catch (e) {}
 }
+
 function A(e, t, n, r) {
-    x(l.t0.USER, { reported_user_id: e.id }),
+    x(l.t0.USER, {
+        reported_user_id: e.id,
+    }),
         (0, u.T)(
             {
                 name: l.t0.USER,
@@ -187,15 +219,20 @@ function A(e, t, n, r) {
             },
         );
 }
+
 function v(e, t, n, r) {
-    x(l.t0.USER, { reported_user_id: e.id }),
+    x(l.t0.USER, {
+        reported_user_id: e.id,
+    }),
         (0, u.T)(
             {
                 name: l.t0.USER,
                 record: e,
                 contextualGuildId: t,
             },
-            { variant: "staff" },
+            {
+                variant: "staff",
+            },
             {
                 onSubmit: n,
                 isEligibleForFeedback: !1,
@@ -203,9 +240,12 @@ function v(e, t, n, r) {
             },
         );
 }
+
 function S(e, t) {
     let n = new s.A({});
-    x(l.tY.USER, { reported_user_id: n.id }),
+    x(l.tY.USER, {
+        reported_user_id: n.id,
+    }),
         (0, u.T)(
             {
                 name: l.tY.USER,
@@ -220,9 +260,12 @@ function S(e, t) {
             },
         );
 }
+
 function I(e, t) {
     let n = (0, o.dangerouslyConstructGuildRecordFromUntypedObject)({});
-    x(l.tY.GUILD, { guild_id: n.id }),
+    x(l.tY.GUILD, {
+        guild_id: n.id,
+    }),
         (0, u.T)(
             {
                 name: l.tY.GUILD,
@@ -237,10 +280,13 @@ function I(e, t) {
             },
         );
 }
+
 function T(e, t) {
     x(l.tY.MEDIA_TAKEDOWN, {}),
         (0, u.T)(
-            { name: l.tY.MEDIA_TAKEDOWN },
+            {
+                name: l.tY.MEDIA_TAKEDOWN,
+            },
             {},
             {
                 onClose: t,
@@ -250,6 +296,7 @@ function T(e, t) {
             },
         );
 }
+
 function C(e, t) {
     let n = new a.Ay({});
     x(l.tY.MESSAGE, {
@@ -277,13 +324,16 @@ async function N(e, t, n) {
                 name: l.t0.MESSAGE,
                 record: e,
             },
-            { variant: "safety_alerts_headless_v1" },
+            {
+                variant: "safety_alerts_headless_v1",
+            },
         ),
             null == t || t();
     } catch (e) {
         null == n || n();
     }
 }
+
 function R(e, t) {
     x(l.t0.MESSAGE, {
         message_id: e.id,
@@ -294,10 +344,15 @@ function R(e, t) {
                 name: l.t0.MESSAGE,
                 record: e,
             },
-            { variant: "safety_alerts_v1" },
-            { onSubmit: t },
+            {
+                variant: "safety_alerts_v1",
+            },
+            {
+                onSubmit: t,
+            },
         );
 }
+
 function w(e, t, n, r) {
     var i;
     (0, u.T)(
@@ -314,6 +369,7 @@ function w(e, t, n, r) {
         },
     );
 }
+
 function P(e) {
     let { application: t, entrypoint: n, contextualGuildId: i, contextualChannelId: a, onSubmit: s, appContext: o } = e;
     r.Ay.trackWithMetadata(d.HAw.REPORT_APPLICATION_CLICKED, {
@@ -340,6 +396,7 @@ function P(e) {
             },
         );
 }
+
 function D(e, t) {
     (0, u.T)(
         {
@@ -353,6 +410,15 @@ function D(e, t) {
         },
     );
 }
+
 function x(e, t) {
-    r.Ay.trackWithMetadata(d.HAw.IAR_MODAL_OPEN, p({ report_type: e }, t));
+    r.Ay.trackWithMetadata(
+        d.HAw.IAR_MODAL_OPEN,
+        p(
+            {
+                report_type: e,
+            },
+            t,
+        ),
+    );
 }

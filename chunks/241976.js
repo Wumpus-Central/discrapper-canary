@@ -4,6 +4,7 @@ var r = n(587321),
     s = n(797686),
     o = n(494277),
     l = n(670200);
+
 function c(e) {
     for (
         ;
@@ -12,11 +13,13 @@ function c(e) {
         e = e.firstChild;
     return e;
 }
+
 function u(e) {
     for (; e.lastChild && ((o(e.lastChild) && "true" === e.lastChild.getAttribute("data-blocks")) || i(e.lastChild)); )
         e = e.lastChild;
     return e;
 }
+
 function d(e, t, n) {
     var a = t,
         d = r(a);
@@ -46,6 +49,7 @@ function d(e, t, n) {
         offset: m,
     };
 }
+
 function f(e) {
     var t = e.textContent;
     return "\n" === t ? 0 : t.length;

@@ -1,4 +1,9 @@
-n.d(t, { A: () => P }), n(896048), n(65821), n(457529);
+n.d(t, {
+    A: () => P,
+}),
+    n(896048),
+    n(65821),
+    n(457529);
 var r = n(627968),
     i = n(64700),
     s = n(430370),
@@ -26,6 +31,7 @@ var r = n(627968),
     O = n(473169);
 let I = n(906118),
     T = new m.A("LoginQRSocket");
+
 function C(e) {
     let { text: t = "" } = e,
         [n, s] = i.useState(!1);
@@ -79,6 +85,7 @@ let R = (e) => {
         children: n,
     });
 };
+
 function w(e) {
     let { state: t, cancel: n, errorMessage: i, conditionalMediationAbortController: l, isPasswordlessActive: a } = e;
     switch (t.step) {
@@ -86,14 +93,20 @@ function w(e) {
         case 1:
             return (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, r.jsx)(C, { text: 1 === t.step ? "https://discord.com/ra/".concat(t.fingerprint) : "" }),
+                    (0, r.jsx)(C, {
+                        text: 1 === t.step ? "https://discord.com/ra/".concat(t.fingerprint) : "",
+                    }),
                     (0, r.jsx)(p.hE, {
                         className: O.QB,
                         children: S.intl.string(S.t.UPiHaL),
                     }),
                     null != i
-                        ? (0, r.jsx)(R, { children: i })
-                        : (0, r.jsx)(p.tK, { children: S.intl.format(S.t["Qq+A6i"], {}) }),
+                        ? (0, r.jsx)(R, {
+                              children: i,
+                          })
+                        : (0, r.jsx)(p.tK, {
+                              children: S.intl.format(S.t["Qq+A6i"], {}),
+                          }),
                     (0, r.jsx)(c.BJc, {
                         padding: 8,
                         align: "center",
@@ -138,7 +151,9 @@ function w(e) {
                         children: S.intl.string(S.t.apGCUT),
                     }),
                     (0, r.jsx)(p.tK, {
-                        children: S.intl.format(S.t.Cbl5JK, { username: "".concat(b.Ay.getUserTag(e)) }),
+                        children: S.intl.format(S.t.Cbl5JK, {
+                            username: "".concat(b.Ay.getUserTag(e)),
+                        }),
                     }),
                     (0, r.jsx)("div", {
                         className: N.Z,
@@ -153,9 +168,12 @@ function w(e) {
         }
         case 4:
         case 5:
-            return (0, r.jsx)(c.y$y, { type: c.y$y.Type.WANDERING_CUBES });
+            return (0, r.jsx)(c.y$y, {
+                type: c.y$y.Type.WANDERING_CUBES,
+            });
     }
 }
+
 function P(e) {
     let { authTokenCallback: t, conditionalMediationAbortController: n } = e,
         s = (0, a.bG)([A.default], () => A.default.getIsPasswordlessActive()),
@@ -167,12 +185,16 @@ function P(e) {
         } = (function (e) {
             let [t, n] = i.useState(0),
                 [r, s] = i.useState(!1),
-                [a, o] = i.useState({ step: 0 }),
+                [a, o] = i.useState({
+                    step: 0,
+                }),
                 [c, u] = i.useState(null),
                 d = (0, h.A)(),
-                p = i.useMemo(() => new l.A(1500, 30000), []),
+                p = i.useMemo(() => new l.A(1500, 3e4), []),
                 g = (0, f.A)(() => {
-                    o({ step: 0 }),
+                    o({
+                        step: 0,
+                    }),
                         d
                             ? n((e) => e + 1)
                             : (T.info(
@@ -182,7 +204,9 @@ function P(e) {
                 }),
                 m = i.useCallback(() => {
                     T.error("Could not complete QR code login, trying to restart with a new QR code."),
-                        o({ step: 0 }),
+                        o({
+                            step: 0,
+                        }),
                         p.pending || p.fail(g);
                 }, [g, p]);
             return (
@@ -204,13 +228,19 @@ function P(e) {
                         a = null,
                         c = null,
                         d = !0;
+
                     function h() {
                         if (null != s) return s;
                         throw Error("No key pair set");
                     }
                     let f = () => {
                         d
-                            ? ((d = !1), r.send(JSON.stringify({ op: "heartbeat" })))
+                            ? ((d = !1),
+                              r.send(
+                                  JSON.stringify({
+                                      op: "heartbeat",
+                                  }),
+                              ))
                             : (i("heartbeat timeout, reconnecting."), r.close(), m());
                     };
                     return (
@@ -274,7 +304,10 @@ function P(e) {
                                 case "finish": {
                                     x._.dispatch(j.jej.WAVE_EMPHASIZE), i("remote auth handshake finished.");
                                     let t = s.encrypted_token;
-                                    o({ step: 5 }), e(await (0, E.S4)(h(), t), await (0, E.Fs)(h()));
+                                    o({
+                                        step: 5,
+                                    }),
+                                        e(await (0, E.S4)(h(), t), await (0, E.Fs)(h()));
                                     return;
                                 }
                                 case "cancel":
@@ -319,7 +352,7 @@ function P(e) {
                                 (r.onmessage = () => null),
                                 (r.onclose = () => null),
                                 (r.onerror = () => null),
-                                r.close(1000),
+                                r.close(1e3),
                                 p.cancel(),
                                 null != c && clearTimeout(c),
                                 null != a && clearInterval(a);
@@ -352,7 +385,9 @@ function P(e) {
                 null != u.ticket &&
                 o.Bo.post({
                     url: j.Rsh.REMOTE_AUTH_LOGIN,
-                    body: { ticket: u.ticket },
+                    body: {
+                        ticket: u.ticket,
+                    },
                     oldFormErrors: !0,
                     rejectWithError: !0,
                 })
@@ -373,7 +408,9 @@ function P(e) {
         }, [u, t, d, g]),
         (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)("div", { className: N.AC }),
+                (0, r.jsx)("div", {
+                    className: N.AC,
+                }),
                 (0, r.jsx)(c.YC2, {
                     fillParent: !0,
                     className: N.ZF,

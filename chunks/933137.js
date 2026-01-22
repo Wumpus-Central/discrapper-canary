@@ -1,4 +1,6 @@
-n.d(t, { y: () => S });
+n.d(t, {
+    y: () => S,
+});
 var r = n(627968),
     i = n(64700),
     l = n(311907),
@@ -21,6 +23,7 @@ var r = n(627968),
     v = n(652215),
     A = n(985018),
     E = n(771661);
+
 function N(e) {
     let { pendingState: t } = e,
         n = i.useRef(!1),
@@ -42,7 +45,9 @@ function N(e) {
                 rules: t.termRules,
             });
         case y.J.APPLY:
-            return (0, r.jsx)(p.g, { pendingFields: t.pendingVerificationFields });
+            return (0, r.jsx)(p.g, {
+                pendingFields: t.pendingVerificationFields,
+            });
         case y.J.DISCOVERABLE:
             return (0, r.jsx)(x.t, {
                 fetchDiscoveryData: l,
@@ -52,6 +57,7 @@ function N(e) {
             });
     }
 }
+
 function _(e) {
     let { guildId: t } = e,
         { nsfwLevel: n, ownerConfiguredContentLevel: a } = (0, l.cf)([d.A], () => {
@@ -82,6 +88,7 @@ function _(e) {
         disabled: f,
     });
 }
+
 function S() {
     let e = (0, l.bG)([f.A], () => f.A.getProps().guild),
         t = (0, l.bG)([j.A], () => j.A.pendingState),
@@ -110,12 +117,25 @@ function S() {
                 activeType: d,
                 guild: e,
             }),
-            (0, r.jsx)("div", { className: E.y }),
+            (0, r.jsx)("div", {
+                className: E.y,
+            }),
             !n &&
                 (0, r.jsxs)(r.Fragment, {
-                    children: [(0, r.jsx)(_, { guildId: e.id }), (0, r.jsx)("div", { className: E.y })],
+                    children: [
+                        (0, r.jsx)(_, {
+                            guildId: e.id,
+                        }),
+                        (0, r.jsx)("div", {
+                            className: E.y,
+                        }),
+                    ],
                 }),
-            (0, r.jsx)("div", { children: (0, r.jsx)(N, { pendingState: t }) }),
+            (0, r.jsx)("div", {
+                children: (0, r.jsx)(N, {
+                    pendingState: t,
+                }),
+            }),
         ],
     });
 }

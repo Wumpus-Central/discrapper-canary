@@ -1,4 +1,7 @@
-n.d(t, { A: () => E }), n(896048);
+n.d(t, {
+    A: () => E,
+}),
+    n(896048);
 var i,
     r = n(627968),
     s = n(64700),
@@ -15,6 +18,7 @@ var i,
     g = n(439817),
     y = n(985018),
     A = n(90901);
+
 function m(e, t, n) {
     return (
         t in e
@@ -28,9 +32,12 @@ function m(e, t, n) {
         e
     );
 }
+
 function O(e) {
     let { closePopout: t } = e;
-    return (0, r.jsx)(f.A, { onClose: t });
+    return (0, r.jsx)(f.A, {
+        onClose: t,
+    });
 }
 class v extends (i = s.PureComponent) {
     render() {
@@ -53,7 +60,13 @@ class v extends (i = s.PureComponent) {
                       }),
             l = n ? "div" : h.Ay;
         return (0, r.jsxs)(l, {
-            className: o()(A.E, { [A.H]: !n }, i),
+            className: o()(
+                A.E,
+                {
+                    [A.H]: !n,
+                },
+                i,
+            ),
             children: [
                 (0, r.jsx)(d.A, {
                     isOverlay: !0,
@@ -72,5 +85,9 @@ class v extends (i = s.PureComponent) {
             });
     }
 }
-m(v, "defaultProps", { contained: !1 });
-let E = a.Ay.connectStores([u.A], () => ({ selectedGuildId: u.A.getGuildId() }))(v);
+m(v, "defaultProps", {
+    contained: !1,
+});
+let E = a.Ay.connectStores([u.A], () => ({
+    selectedGuildId: u.A.getGuildId(),
+}))(v);

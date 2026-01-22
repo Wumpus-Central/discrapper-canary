@@ -1,4 +1,6 @@
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -9,6 +11,7 @@ var i = n(397927),
     c = n(307600),
     u = n(738104),
     d = n(652215);
+
 function f(e, t, n) {
     return (
         t in e
@@ -22,6 +25,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -38,6 +42,7 @@ function p(e) {
     }
     return e;
 }
+
 function _(e) {
     var t;
     let { platformType: f, location: _, overrideUrl: h, successRedirect: m } = e;
@@ -50,7 +55,16 @@ function _(e) {
             : f === d.fg2.DOMAIN
               ? (0, i.mMO)(async () => {
                     let { default: e } = await n.e("78250").then(n.bind(n, 983665));
-                    return (t) => (0, r.jsx)(e, p({ analyticsLocation: [null != _ ? _ : "unknown"] }, t));
+                    return (t) =>
+                        (0, r.jsx)(
+                            e,
+                            p(
+                                {
+                                    analyticsLocation: [null != _ ? _ : "unknown"],
+                                },
+                                t,
+                            ),
+                        );
                 })
               : (null == (t = a.A.get(f)) ? void 0 : t.isFederated) === !0
                 ? (0, i.mMO)(async () => {

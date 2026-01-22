@@ -1,4 +1,6 @@
-i.d(e, { Y: () => S });
+i.d(e, {
+    Y: () => S,
+});
 var n = i(311907),
     l = i(419954),
     s = i(994500),
@@ -11,7 +13,9 @@ var n = i(311907),
 let S = (0, l.zZ)(u.X.CONTENT_AND_SOCIAL_RESTRICTED_USERS_CATEGORY, {
     useTitle: () => A.intl.string(A.t["3wRort"]),
     useSubtitle: () =>
-        A.intl.format(A.t["0aNQo9"], { helpArticle: r.A.getArticleURL(T.MVz.STEALTH_REMEDIATION_FEATURE_GUIDE) }),
+        A.intl.format(A.t["0aNQo9"], {
+            helpArticle: r.A.getArticleURL(T.MVz.STEALTH_REMEDIATION_FEATURE_GUIDE),
+        }),
     buildLayout: () => [a.T, o.H],
     usePredicate: () => {
         let { hasBlockedUsers: t, hasIgnoredUsers: e } = (0, n.cf)([s.A], () => ({

@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -7,6 +9,7 @@ var i = n(311907),
     c = n(616075),
     o = n(652215),
     s = n(985018);
+
 function u(e) {
     let t = (0, i.bG)([a.A], () => a.A.getGuildId()),
         u = e.type === o.rbe.GUILD_CATEGORY,
@@ -49,7 +52,10 @@ function u(e) {
                                   }
                                   return e;
                               })({}, n)),
-                              (l = l = { parentId: e.id }),
+                              (l = l =
+                                  {
+                                      parentId: e.id,
+                                  }),
                               Object.getOwnPropertyDescriptors
                                   ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
                                   : (function (e, t) {

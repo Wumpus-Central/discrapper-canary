@@ -1,5 +1,8 @@
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 var r = n(155718);
+
 function i(e) {
     switch (e) {
         case "android":

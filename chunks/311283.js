@@ -1,11 +1,16 @@
-n.d(t, { A: () => u }), n(896048);
+n.d(t, {
+    A: () => u,
+}),
+    n(896048);
 var r = n(64700);
 let l = new Map(),
     i = new Map(),
     a = new Map();
+
 function s(e) {
     return l.has(e) || l.set(e, !1), l.get(e);
 }
+
 function o(e) {
     var t;
     let n, r, l, s;
@@ -41,9 +46,11 @@ function o(e) {
         i.get(e)
     );
 }
+
 function c(e, t) {
     e !== s(t) && (l.set(t, e), o(t).forEach((t) => t(e)));
 }
+
 function u() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : window,
         [t, n] = r.useState(s(e));

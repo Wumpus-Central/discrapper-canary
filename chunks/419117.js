@@ -1,4 +1,8 @@
-i.d(e, { A: () => d }), i(321073), i(896048);
+i.d(e, {
+    A: () => d,
+}),
+    i(321073),
+    i(896048);
 var n = i(627968),
     l = i(64700),
     s = i(284009),
@@ -6,10 +10,12 @@ var n = i(627968),
     u = i(199966),
     a = i(963935),
     o = i(985018);
+
 function T(t) {
     let { title: e } = t;
     return e;
 }
+
 function A(t) {
     let { useTitle: e, settingKey: i, formatter: n, index: l } = t,
         s = e();
@@ -21,6 +27,7 @@ function A(t) {
           })
         : s;
 }
+
 function S(t) {
     let { setting: e, formatter: i, index: l } = t;
     return () =>
@@ -35,9 +42,11 @@ function S(t) {
             e.key,
         );
 }
+
 function E(t) {
     return t.type === a.Z6.LIST;
 }
+
 function d(t, e) {
     var i, n;
     let { limit: s = 2, formatter: A = T } = null != e ? e : {};

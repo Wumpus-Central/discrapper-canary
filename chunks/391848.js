@@ -1,4 +1,7 @@
-n.d(t, { A: () => F }), n(896048);
+n.d(t, {
+    A: () => F,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -194,12 +197,16 @@ let D = 512,
                         {
                             role: "group",
                             "aria-label": i.name,
-                            className: s()(w.Wy, { [w.YD]: n }),
+                            className: s()(w.Wy, {
+                                [w.YD]: n,
+                            }),
                             children: [
                                 t,
                                 0 === a.length &&
                                     (0, r.jsx)(c.A, {
-                                        message: R.intl.format(R.t.WoQXT6, { applicationName: i.name }),
+                                        message: R.intl.format(R.t.WoQXT6, {
+                                            applicationName: i.name,
+                                        }),
                                         noResultsImageURL: P,
                                         className: w.qK,
                                     }),
@@ -287,6 +294,7 @@ let D = 512,
             })
         );
     });
+
 function B(e) {
     e.preventDefault();
 }

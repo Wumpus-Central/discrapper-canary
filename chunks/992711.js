@@ -1,4 +1,7 @@
-n.d(t, { A: () => b }), n(896048);
+n.d(t, {
+    A: () => b,
+}),
+    n(896048);
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -11,6 +14,7 @@ var i = n(311907),
     u = n(539916),
     f = n(985018),
     g = n(821683);
+
 function b(e) {
     let { guildId: t, scrollToQuestions: n } = e,
         b = (0, i.bG)([a.A], () => a.A.isAdvancedMode(t)),
@@ -44,12 +48,16 @@ function b(e) {
                     (0, r.jsx)(s.Text, {
                         variant: "text-xs/bold",
                         color: "text-brand",
-                        children: f.intl.format(f.t.kvroKO, { count: y }),
+                        children: f.intl.format(f.t.kvroKO, {
+                            count: y,
+                        }),
                     }),
                     (0, r.jsx)(s.Text, {
                         variant: "text-xs/bold",
                         color: "text-muted",
-                        children: f.intl.format(f.t["0MjxJ5"], { count: O }),
+                        children: f.intl.format(f.t["0MjxJ5"], {
+                            count: O,
+                        }),
                     }),
                 ],
             }),
@@ -65,7 +73,9 @@ function b(e) {
                     (0, r.jsx)(s.Text, {
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: f.intl.format(f.t.PwXgSy, { count: u.Kd }),
+                        children: f.intl.format(f.t.PwXgSy, {
+                            count: u.Kd,
+                        }),
                     }),
                 ],
             }),

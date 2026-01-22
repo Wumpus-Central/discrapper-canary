@@ -1,4 +1,7 @@
-n.d(t, { A: () => z }), n(321073);
+n.d(t, {
+    A: () => z,
+}),
+    n(321073);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -34,6 +37,7 @@ var r = n(627968),
     j = n(979653),
     M = n(255631),
     k = n(193023);
+
 function U(e, t, n) {
     return (
         t in e
@@ -47,6 +51,7 @@ function U(e, t, n) {
         e
     );
 }
+
 function G(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -63,6 +68,7 @@ function G(e) {
     }
     return e;
 }
+
 function V(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -75,6 +81,7 @@ function V(e, t) {
     }
     return n;
 }
+
 function F(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -177,7 +184,9 @@ let B = () => {
                     children: t,
                 }),
                 (0, r.jsx)("td", {
-                    className: s()(x.Hn, { [x.SD]: c }),
+                    className: s()(x.Hn, {
+                        [x.SD]: c,
+                    }),
                     children: n,
                 }),
                 (0, r.jsx)("td", {
@@ -222,7 +231,9 @@ let B = () => {
             el = (0, _.A)(),
             ec = (0, w.R)(es, eo, er, ea, el.fractionalState),
             eu = (0, b.cg)(),
-            { enabled: ed } = O.K.useExperiment({ location: "PlanComparisonTable" });
+            { enabled: ed } = O.K.useExperiment({
+                location: "PlanComparisonTable",
+            });
         if (!V || !z) return null;
         let ef = ed ? D.intl.string(D.t.XXENra) : D.intl.string(D.t.ED4UVD),
             ep = {
@@ -353,9 +364,18 @@ let B = () => {
                             (0, r.jsxs)("table", {
                                 className: x.tp,
                                 children: [
-                                    (0, r.jsx)("thead", { children: (0, r.jsx)(W, G({}, ep)) }),
+                                    (0, r.jsx)("thead", {
+                                        children: (0, r.jsx)(W, G({}, ep)),
+                                    }),
                                     (0, r.jsx)("tbody", {
-                                        children: ec.map((e, t) => (0, i.createElement)(K, F(G({}, e), { key: t }))),
+                                        children: ec.map((e, t) =>
+                                            (0, i.createElement)(
+                                                K,
+                                                F(G({}, e), {
+                                                    key: t,
+                                                }),
+                                            ),
+                                        ),
                                     }),
                                 ],
                             }),

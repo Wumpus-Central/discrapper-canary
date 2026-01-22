@@ -37,7 +37,9 @@ let d = async () => {
                     error_source: o.q.PRIVATE_BROWSING_PERK_INSTALLATION_STATUS,
                 }),
                 a.A.captureException(e instanceof Error ? e : Error(JSON.stringify(e)), {
-                    tags: { source: o.q.PRIVATE_BROWSING_PERK_INSTALLATION_STATUS },
+                    tags: {
+                        source: o.q.PRIVATE_BROWSING_PERK_INSTALLATION_STATUS,
+                    },
                 }),
                 l.Lk.ERROR
             );

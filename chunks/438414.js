@@ -1,9 +1,13 @@
-n.d(t, { A: () => f }), n(896048);
+n.d(t, {
+    A: () => f,
+}),
+    n(896048);
 var r = n(205327),
     i = n(261020),
     a = n(424994),
     s = n(272984),
     o = n(985018);
+
 function l(e, t, n) {
     return (
         t in e
@@ -17,6 +21,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -33,6 +38,7 @@ function c(e) {
     }
     return e;
 }
+
 function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -45,6 +51,7 @@ function u(e, t) {
     }
     return n;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -56,6 +63,7 @@ function d(e, t) {
         e
     );
 }
+
 function f(e) {
     let t,
         { entry: n, baseEntryData: l } = e,
@@ -65,14 +73,21 @@ function f(e) {
         m = f.name,
         g = {
             onClick: () => (0, i.n)(s.M0.TRACK, u.external_id),
-            ariaDescription: o.intl.formatToPlainString(o.t.xTsar2, { itemName: p }),
+            ariaDescription: o.intl.formatToPlainString(o.t.xTsar2, {
+                itemName: p,
+            }),
         },
         E = {
             onClick: () => (0, i.n)(s.M0.ARTIST, f.external_id),
-            ariaDescription: o.intl.formatToPlainString(o.t.xTsar2, { itemName: m }),
+            ariaDescription: o.intl.formatToPlainString(o.t.xTsar2, {
+                itemName: m,
+            }),
         };
     return (
-        _ === r.X.SPOTIFY && (t = { type: a.a4.SPOTIFY }),
+        _ === r.X.SPOTIFY &&
+            (t = {
+                type: a.a4.SPOTIFY,
+            }),
         d(c({}, l), {
             title: p,
             subtitle: m,

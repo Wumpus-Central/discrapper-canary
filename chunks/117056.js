@@ -1,4 +1,7 @@
-n.d(t, { A: () => m }), n(896048);
+n.d(t, {
+    A: () => m,
+}),
+    n(896048);
 var l = n(627968),
     r = n(64700),
     a = n(314116),
@@ -28,14 +31,20 @@ let m = (e) => {
         ? null
         : (0, l.jsx)(o.PQ, {
               title: u.intl.string(u.t.cU96ip),
-              description: u.intl.formatToPlainString(u.t["26mR6/"], { guildName: null == p ? void 0 : p.name }),
+              description: u.intl.formatToPlainString(u.t["26mR6/"], {
+                  guildName: null == p ? void 0 : p.name,
+              }),
               buttonText: m ? u.intl.string(u.t["9Ak99h"]) : u.intl.string(u.t.F3qExp),
               buttonDisabled: m,
               buttonVariant: "critical-primary",
               onButtonPress: () => {
                   (0, a.A)({
-                      title: u.intl.formatToPlainString(u.t["1GX6P/"], { name: p.name }),
-                      subtitle: u.intl.format(u.t.ZEXC0r, { name: p.name }),
+                      title: u.intl.formatToPlainString(u.t["1GX6P/"], {
+                          name: p.name,
+                      }),
+                      subtitle: u.intl.format(u.t.ZEXC0r, {
+                          name: p.name,
+                      }),
                       confirmText: u.intl.string(u.t.J2TBi3),
                       onConfirm: g,
                   });

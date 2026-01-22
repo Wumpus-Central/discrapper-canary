@@ -18,6 +18,7 @@ let s = -1,
         searchPlaceholder: null,
         bottomPosition: null,
     });
+
 function l() {
     let e = (0, i.h)()((0, r.eh)((e) => o)),
         t = () => e.getState(),
@@ -33,13 +34,25 @@ function l() {
             );
         },
         s = (t) => {
-            (0, a.r)(() => e.setState({ activeCategoryIndex: t }));
+            (0, a.r)(() =>
+                e.setState({
+                    activeCategoryIndex: t,
+                }),
+            );
         },
         l = (t) => {
-            (0, a.r)(() => e.setState({ searchPlaceholder: t }));
+            (0, a.r)(() =>
+                e.setState({
+                    searchPlaceholder: t,
+                }),
+            );
         },
         c = (t) => {
-            (0, a.r)(() => e.setState({ bottomPosition: t }));
+            (0, a.r)(() =>
+                e.setState({
+                    bottomPosition: t,
+                }),
+            );
         },
         u = () => {
             (0, a.r)(() => e.setState(o));

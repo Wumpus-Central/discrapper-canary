@@ -3,6 +3,7 @@ n.d(t, {
     y: () => r,
 });
 var l = n(533117);
+
 function r(e, t, n, l, r) {
     e.save(),
         e.beginPath(),
@@ -11,6 +12,7 @@ function r(e, t, n, l, r) {
         e.fill(),
         e.restore();
 }
+
 function i(e, t, n, r) {
     e.save();
     let i = l.A.getAvatarImage(r);

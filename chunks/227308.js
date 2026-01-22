@@ -1,4 +1,7 @@
-n.d(t, { A: () => y }), n(896048);
+n.d(t, {
+    A: () => y,
+}),
+    n(896048);
 var i = n(627968),
     r = n(64700),
     s = n(503698),
@@ -13,6 +16,7 @@ var i = n(627968),
     f = n(672396),
     b = n(652215),
     g = n(283446);
+
 function y(e) {
     let { locked: t, keybind: n } = e,
         s = r.useRef(null),
@@ -45,6 +49,7 @@ function y(e) {
         }),
     });
 }
+
 function A(e) {
     let { notification: t, position: n, keybind: r, locked: s } = e;
     return (0, i.jsx)("div", {

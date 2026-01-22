@@ -1,7 +1,10 @@
-Object.defineProperty(t, "__esModule", { value: !0 }),
+Object.defineProperty(t, "__esModule", {
+    value: !0,
+}),
     (t.isWEBM = t.isSWF = t.isOGG = t.isMP4 = t.isMOV = t.isMKV = t.isM4V = t.isFLV = t.isAVI = void 0);
 let r = n(835986),
     i = n(817762);
+
 function a(e) {
     let t = (0, i.getFileChunk)(e);
     return !!r.FileTypes.checkByFileType(t, "m4v") && (0, i.isftypStringIncluded)(t);

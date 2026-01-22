@@ -1,10 +1,14 @@
-n.d(t, { A: () => N }), n(896048);
+n.d(t, {
+    A: () => N,
+}),
+    n(896048);
 var r,
     i = n(607399),
     a = n(311907),
     s = n(73153),
     o = n(142120),
     l = n(253595);
+
 function c(e, t, n) {
     return (
         t in e
@@ -18,6 +22,7 @@ function c(e, t, n) {
         e
     );
 }
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,6 +39,7 @@ function u(e) {
     }
     return e;
 }
+
 function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -46,6 +52,7 @@ function d(e, t) {
     }
     return n;
 }
+
 function f(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -63,9 +70,11 @@ let p = {},
     h = !0,
     m = {},
     g = !1;
+
 function E() {
     return l.A;
 }
+
 function b() {
     if (((m = {}), !h))
         for (let [e, t] of Object.entries(E())) {
@@ -73,18 +82,30 @@ function b() {
             if (((m[e] = n), n && null != t.prerequisites)) for (let n of t.prerequisites) !1 !== p[n] && (m[e] = !1);
         }
 }
+
 function y(e) {
-    (p = f(u({}, p), { [e.tutorialId]: !1 })), (_ = u({}, _)), delete _[e.tutorialId], b();
+    (p = f(u({}, p), {
+        [e.tutorialId]: !1,
+    })),
+        (_ = u({}, _)),
+        delete _[e.tutorialId],
+        b();
 }
+
 function O(e) {
-    _ = f(u({}, _), { [e.tutorialId]: e.renderData });
+    _ = f(u({}, _), {
+        [e.tutorialId]: e.renderData,
+    });
 }
+
 function A(e) {
     (_ = u({}, _)), delete _[e.tutorialId];
 }
+
 function v() {
     h = !0;
 }
+
 function S(e) {
     let { tutorial: t } = e;
     (g = !0),
@@ -93,9 +114,11 @@ function S(e) {
         null != t && ((h = t.indicators_suppressed), t.indicators_confirmed.forEach((e) => (p[e] = !1))),
         b();
 }
+
 function I() {
     g = !1;
 }
+
 function T(e) {
     return i.Fr && ["writing-messages", "organize-by-topic"].includes(e);
 }

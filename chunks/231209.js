@@ -1,4 +1,7 @@
-l.d(t, { A: () => D }), l(896048);
+l.d(t, {
+    A: () => D,
+}),
+    l(896048);
 var n = l(627968),
     r = l(64700),
     s = l(503698),
@@ -61,7 +64,10 @@ let P = (e) => {
                     }
                     return e;
                 })({}, I.ue)),
-                (s = s = { name: k.intl.string(k.t.bfXHLB) }),
+                (s = s =
+                    {
+                        name: k.intl.string(k.t.bfXHLB),
+                    }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(s))
                     : (function (e, t) {
@@ -265,7 +271,9 @@ let P = (e) => {
                                 children: (0, n.jsx)(
                                     "div",
                                     {
-                                        className: a()(R.v1, R.Of, { [R.J1]: 0 === l || s }),
+                                        className: a()(R.v1, R.Of, {
+                                            [R.J1]: 0 === l || s,
+                                        }),
                                         children: r,
                                     },
                                     l,
@@ -353,7 +361,9 @@ let P = (e) => {
                             transitioning: s === I.Pf.OUT,
                         }),
                         (0, n.jsx)(L.A, {
-                            style: { left: 1850 },
+                            style: {
+                                left: 1850,
+                            },
                             peaking: m,
                             transitioning: s === I.Pf.OUT,
                         }),

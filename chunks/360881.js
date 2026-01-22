@@ -1,10 +1,13 @@
-n.d(t, { v: () => c });
+n.d(t, {
+    v: () => c,
+});
 var r = n(64700),
     i = n(803082),
     a = n(339241),
     s = n(96441),
     o = n(8321),
     l = n(757260);
+
 function c(e, t, n) {
     let c = (0, a.KZ)({
             ...e,
@@ -43,7 +46,12 @@ function c(e, t, n) {
         labelProps: (0, i.v)(
             p,
             A,
-            (0, r.useMemo)(() => ({ onMouseDown: (e) => e.preventDefault() }), []),
+            (0, r.useMemo)(
+                () => ({
+                    onMouseDown: (e) => e.preventDefault(),
+                }),
+                [],
+            ),
         ),
         inputProps: {
             ..._,

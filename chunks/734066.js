@@ -103,45 +103,109 @@ let o = (0, r.C)({
             },
         ],
     });
+
 function c() {
     if (!(0, s.A)(a.A)) return !1;
-    let { enableClips: e } = l.getCurrentConfig({ location: "areClipsEnabled" }, { autoTrackExposure: !1 }),
-        { enableClips: t } = o.getCurrentConfig({ location: "areClipsEnabled" }, { autoTrackExposure: !1 }),
-        { enableViewerClipping: n } = i.A.getCurrentConfig({ location: "areClipsEnabled" }, { autoTrackExposure: !1 });
+    let { enableClips: e } = l.getCurrentConfig(
+            {
+                location: "areClipsEnabled",
+            },
+            {
+                autoTrackExposure: !1,
+            },
+        ),
+        { enableClips: t } = o.getCurrentConfig(
+            {
+                location: "areClipsEnabled",
+            },
+            {
+                autoTrackExposure: !1,
+            },
+        ),
+        { enableViewerClipping: n } = i.A.getCurrentConfig(
+            {
+                location: "areClipsEnabled",
+            },
+            {
+                autoTrackExposure: !1,
+            },
+        );
     return e || t || n;
 }
+
 function u() {
     let e = (0, s.A)(a.A),
-        { enableClips: t } = l.useExperiment({ location: "useEnableClips" }, { autoTrackExposure: !1 }),
-        { enableClips: n } = o.useExperiment({ location: "useEnableClips" }, { autoTrackExposure: !1 }),
-        { enableViewerClipping: r } = i.A.useExperiment({ location: "useEnableClips" }, { autoTrackExposure: !1 });
+        { enableClips: t } = l.useExperiment(
+            {
+                location: "useEnableClips",
+            },
+            {
+                autoTrackExposure: !1,
+            },
+        ),
+        { enableClips: n } = o.useExperiment(
+            {
+                location: "useEnableClips",
+            },
+            {
+                autoTrackExposure: !1,
+            },
+        ),
+        { enableViewerClipping: r } = i.A.useExperiment(
+            {
+                location: "useEnableClips",
+            },
+            {
+                autoTrackExposure: !1,
+            },
+        );
     return (n || t || r) && e;
 }
+
 function d() {
     let { enableScreenshotKeybind: e } = o.getCurrentConfig(
-        { location: "isScreenshotKeybindEnabled" },
-        { autoTrackExposure: !1 },
+        {
+            location: "isScreenshotKeybindEnabled",
+        },
+        {
+            autoTrackExposure: !1,
+        },
     );
     return e;
 }
+
 function f() {
     let { enableScreenshotKeybind: e } = o.useExperiment(
-        { location: "useScreenshotKeybindEnabled" },
-        { autoTrackExposure: !1 },
+        {
+            location: "useScreenshotKeybindEnabled",
+        },
+        {
+            autoTrackExposure: !1,
+        },
     );
     return e;
 }
+
 function p() {
     let { enableVoiceOnlyClips: e } = o.getCurrentConfig(
-        { location: "areVoiceOnlyClipsEnabled" },
-        { autoTrackExposure: !1 },
+        {
+            location: "areVoiceOnlyClipsEnabled",
+        },
+        {
+            autoTrackExposure: !1,
+        },
     );
     return e;
 }
+
 function _() {
     let { enableAdvancedSignals: e } = o.getCurrentConfig(
-        { location: "areAdvancedSignalsEnabled" },
-        { autoTrackExposure: !1 },
+        {
+            location: "areAdvancedSignalsEnabled",
+        },
+        {
+            autoTrackExposure: !1,
+        },
     );
     return e;
 }

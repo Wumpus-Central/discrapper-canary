@@ -1,4 +1,6 @@
-n.d(t, { A: () => S });
+n.d(t, {
+    A: () => S,
+});
 var l = n(627968),
     i = n(64700),
     r = n(503698),
@@ -54,6 +56,7 @@ let g = i.memo(function (e) {
                   }),
           });
 });
+
 function S(e) {
     var t;
     let { item: n, hideMediaOptions: i, onClose: r } = e,
@@ -61,7 +64,10 @@ function S(e) {
     return (0, l.jsxs)("div", {
         className: E.XV,
         children: [
-            null != o && (0, l.jsx)(g, { message: o }),
+            null != o &&
+                (0, l.jsx)(g, {
+                    message: o,
+                }),
             (0, l.jsx)(b.A, {
                 item: n,
                 hideMediaOptions: i,

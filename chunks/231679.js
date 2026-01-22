@@ -1,4 +1,6 @@
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});
 var i = n(627968);
 let r = n(64700).memo(function (e) {
     let { layout: t, layoutSize: n, className: r, renderWidget: s } = e;

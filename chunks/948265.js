@@ -1,4 +1,6 @@
-c.d(t, { default: () => f });
+c.d(t, {
+    default: () => f,
+});
 var a = c(627968);
 c(64700);
 var n = c(87719),
@@ -6,6 +8,7 @@ var n = c(87719),
     s = c(244975),
     o = c(652215),
     r = c(985018);
+
 function f(e) {
     let { premiumUpsellType: t, title: c, body: f, glowUp: p, analyticsSource: b, onClose: A, onSecondaryClick: l } = e,
         i = (function (e, t) {

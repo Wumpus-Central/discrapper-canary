@@ -1,4 +1,7 @@
-n.d(t, { A: () => p }), n(896048);
+n.d(t, {
+    A: () => p,
+}),
+    n(896048);
 var i = n(627968);
 n(64700);
 var r = n(311907),
@@ -10,6 +13,7 @@ var r = n(311907),
     d = n(427603),
     u = n(980504),
     h = n(761121);
+
 function p() {
     let [e, t] = (0, r.yK)([s.A], () => [s.A.enabled, s.A.keepOpen]),
         n = (0, r.bG)([c.A], () => c.A.getVoiceChannelId()),

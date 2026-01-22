@@ -6,6 +6,7 @@ function r(e) {
     for (let e = 0; e < n.length; e++) i[e] = n.charCodeAt(e);
     return r;
 }
+
 function i(e) {
     let t = new Uint8Array(e),
         n = "";
@@ -18,6 +19,7 @@ n.d(t, {
 });
 var a = "copy",
     s = "convert";
+
 function o(e, t, n) {
     if (t === a) return n;
     if (t === s) return e(n);
@@ -42,6 +44,7 @@ function o(e, t, n) {
         return r;
     }
 }
+
 function l(e, t) {
     return {
         required: !0,
@@ -49,12 +52,14 @@ function l(e, t) {
         derive: t,
     };
 }
+
 function c(e) {
     return {
         required: !0,
         schema: e,
     };
 }
+
 function u(e) {
     return {
         required: !1,
@@ -134,18 +139,22 @@ var d = {
         }),
         clientExtensionResults: l(p, (e) => e.getClientExtensionResults()),
     };
+
 function E(e) {
     return o(r, _, e);
 }
+
 function b(e) {
     return o(i, h, e);
 }
 async function y(e) {
     return b(await navigator.credentials.create(E(e)));
 }
+
 function O(e) {
     return o(r, m, e);
 }
+
 function A(e) {
     return o(i, g, e);
 }

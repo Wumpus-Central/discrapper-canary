@@ -17,6 +17,7 @@ var r = n(284009),
     d = n(88001),
     f = n(519412),
     p = n(985018);
+
 function _(e) {
     let t = e.slice();
     return (
@@ -28,6 +29,7 @@ function _(e) {
         t
     );
 }
+
 function h(e) {
     return e.filter((e) => {
         let { subscriptionPlanId: t } = e;
@@ -48,11 +50,14 @@ let m = (e) => h(_((0, c.Z)(e.invoiceItems))),
                 : 0)
         );
     };
+
 function b(e, t, n, r) {
     let i = g(e, a.iS.PREMIUM_TRIAL);
     switch (e.subscriptionPlanId) {
         case u.gD.PREMIUM_GROUP_MONTH:
-            return p.intl.formatToPlainString(f.default["8bPDtb"], { premiumGroupProductName: (0, d.DP)() });
+            return p.intl.formatToPlainString(f.default["8bPDtb"], {
+                premiumGroupProductName: (0, d.DP)(),
+            });
         case u.gD.PREMIUM_MONTH_LEGACY:
         case u.gD.PREMIUM_YEAR_LEGACY:
         case u.gD.PREMIUM_MONTH_TIER_0:
@@ -71,19 +76,28 @@ function b(e, t, n, r) {
                 intervalCount: t.intervalCount,
             });
         case u.gD.PREMIUM_MONTH_GUILD:
-            return p.intl.format(p.t["3BYyip"], { num: e.quantity });
+            return p.intl.format(p.t["3BYyip"], {
+                num: e.quantity,
+            });
         case u.gD.PREMIUM_YEAR_GUILD:
-            return p.intl.format(p.t.JVW4UN, { num: e.quantity });
+            return p.intl.format(p.t.JVW4UN, {
+                num: e.quantity,
+            });
     }
     switch (t.interval) {
         case u.WT.MONTH:
-            if (1 === t.intervalCount) return p.intl.formatToPlainString(p.t["6oq128"], { planName: t.name });
+            if (1 === t.intervalCount)
+                return p.intl.formatToPlainString(p.t["6oq128"], {
+                    planName: t.name,
+                });
             return p.intl.formatToPlainString(p.t["9ydggS"], {
                 planName: t.name,
                 intervalCount: t.intervalCount,
             });
         case u.WT.YEAR:
-            return p.intl.formatToPlainString(p.t.V6UFQM, { planName: t.name });
+            return p.intl.formatToPlainString(p.t.V6UFQM, {
+                planName: t.name,
+            });
     }
     throw Error("Unexpected invoice plan: ".concat(e.subscriptionPlanId));
 }

@@ -1,11 +1,13 @@
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});
 var r = {};
 r = {
     calendar: "Takvim",
-    day: "gün",
-    dayPeriod: "ÖÖ/ÖS",
+    day: "g\xfcn",
+    dayPeriod: "\xd6\xd6/\xd6S",
     endDate: "Bitiş Tarihi",
-    era: "çağ",
+    era: "\xe7ağ",
     hour: "saat",
     minute: "dakika",
     month: "ay",
@@ -13,8 +15,8 @@ r = {
     selectedDateDescription: (e) => `Se\xe7ilen Tarih: ${e.date}`,
     selectedRangeDescription: (e) => `Se\xe7ilen Aral\u{131}k: ${e.startDate} - ${e.endDate}`,
     selectedTimeDescription: (e) => `Se\xe7ilen Zaman: ${e.time}`,
-    startDate: "Başlangıç Tarihi",
+    startDate: "Başlangı\xe7 Tarihi",
     timeZoneName: "saat dilimi",
-    weekday: "haftanın günü",
+    weekday: "haftanın g\xfcn\xfc",
     year: "yıl",
 };

@@ -495,8 +495,12 @@ e.exports = function (e) {
                 scope: "number",
                 contains: [e.BACKSLASH_ESCAPE],
                 variants: [
-                    { begin: /\b((\d+'([bhodBHOD]))[0-9xzXZa-fA-F_]+)/ },
-                    { begin: /\B(('([bhodBHOD]))[0-9xzXZa-fA-F_]+)/ },
+                    {
+                        begin: /\b((\d+'([bhodBHOD]))[0-9xzXZa-fA-F_]+)/,
+                    },
+                    {
+                        begin: /\B(('([bhodBHOD]))[0-9xzXZa-fA-F_]+)/,
+                    },
                     {
                         begin: /\b[0-9][0-9_]*/,
                         relevance: 0,
@@ -506,7 +510,9 @@ e.exports = function (e) {
             {
                 scope: "variable",
                 variants: [
-                    { begin: "#\\((?!parameter).+\\)" },
+                    {
+                        begin: "#\\((?!parameter).+\\)",
+                    },
                     {
                         begin: "\\.\\w+",
                         relevance: 0,

@@ -1,6 +1,9 @@
-n.d(t, { I: () => a });
+n.d(t, {
+    I: () => a,
+});
 var r = n(64700);
-let i = 1000;
+let i = 1e3;
+
 function a(e) {
     let { keyboardDelegate: t, selectionManager: n, onTypeSelect: a } = e,
         o = (0, r.useRef)({
@@ -32,8 +35,13 @@ function a(e) {
                     }, i));
             }
         };
-    return { typeSelectProps: { onKeyDownCapture: t.getKeyForSearch ? l : void 0 } };
+    return {
+        typeSelectProps: {
+            onKeyDownCapture: t.getKeyForSearch ? l : void 0,
+        },
+    };
 }
+
 function s(e) {
     return 1 !== e.length && /^[A-Z]/i.test(e) ? "" : e;
 }

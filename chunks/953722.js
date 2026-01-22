@@ -1,4 +1,7 @@
-n.d(t, { default: () => j }), n(896048);
+n.d(t, {
+    default: () => j,
+}),
+    n(896048);
 var l = n(627968),
     i = n(64700),
     s = n(158954),
@@ -12,6 +15,7 @@ var l = n(627968),
     m = n(851091),
     g = n(909806),
     C = n(946116);
+
 function j(e) {
     let {
             directoryChannelId: t,

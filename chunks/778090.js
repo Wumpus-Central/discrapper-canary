@@ -1,4 +1,5 @@
 var i = a(264572).Buffer;
+
 function r(t, e, a, i) {
     if (((null == t ? void 0 : t.startsWith("/")) && (t = t.substr(1)), "string" == typeof e || e instanceof Date)) {
         let r = new Date(e),
@@ -40,6 +41,7 @@ function r(t, e, a, i) {
         return r.format("YYYYMMDD") + (a ? "" : "T" + r.format("HHmmss") + (i || t ? "" : "Z"));
     }
 }
+
 function n(t) {
     return String(t)
         .replace(/[\\;,"]/g, function (t) {
@@ -47,19 +49,25 @@ function n(t) {
         })
         .replace(/(?:\r\n|\r|\n)/g, "\\n");
 }
+
 function s(t) {
     return null != t && null != t._isAMomentObject;
 }
+
 function o(t) {
     return s(t) && "function" == typeof t.tz;
 }
+
 function d(t) {
     return "object" == typeof t && null !== t && !(t instanceof Date) && !s(t) && !l(t);
 }
+
 function l(t) {
     return "object" == typeof t && null !== t && "function" == typeof t.toJSDate;
 }
-Object.defineProperty(e, "__esModule", { value: !0 }),
+Object.defineProperty(e, "__esModule", {
+    value: !0,
+}),
     (e.toDurationString =
         e.toJSON =
         e.isRRule =

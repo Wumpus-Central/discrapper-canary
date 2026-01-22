@@ -1,4 +1,7 @@
-n.d(t, { default: () => j }), n(896048);
+n.d(t, {
+    default: () => j,
+}),
+    n(896048);
 var i = n(627968),
     l = n(64700),
     a = n(158954),
@@ -28,15 +31,22 @@ let j = (e) => {
                 null == e
                     ? null
                     : (null == e ? void 0 : e.id) != null
-                      ? { emojiId: e.id }
-                      : { emojiName: e.optionallyDiverseSequence },
+                      ? {
+                            emojiId: e.id,
+                        }
+                      : {
+                            emojiName: e.optionallyDiverseSequence,
+                        },
             );
         },
         _ = async () => {
             if (I) {
                 w(!0), k(!1);
                 try {
-                    await (0, o.RT)(v.id, { defaultReactionEmoji: h }), g();
+                    await (0, o.RT)(v.id, {
+                        defaultReactionEmoji: h,
+                    }),
+                        g();
                 } catch (e) {
                     k(!0);
                 } finally {
@@ -65,7 +75,9 @@ let j = (e) => {
             },
         ],
         children: [
-            (0, i.jsx)(c.A, { reactionEmoji: h }),
+            (0, i.jsx)(c.A, {
+                reactionEmoji: h,
+            }),
             (0, i.jsxs)(r.ButtonGroup, {
                 size: "sm",
                 className: m.v,

@@ -6,5 +6,7 @@ n(
         proto: !0,
         forced: [].forEach !== o,
     },
-    { forEach: o },
+    {
+        forEach: o,
+    },
 );

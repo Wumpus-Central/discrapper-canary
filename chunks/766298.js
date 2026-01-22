@@ -1,4 +1,8 @@
-n.d(i, { A: () => A }), n(228524), n(896048);
+n.d(i, {
+    A: () => A,
+}),
+    n(228524),
+    n(896048);
 var t = n(627968),
     a = n(64700),
     s = n(311907),
@@ -13,6 +17,7 @@ var t = n(627968),
     p = n(985018),
     N = n(211499),
     u = n(299916);
+
 function A(e) {
     let { className: i, isDsaEligible: n, onClose: A, onNext: h, onBack: j } = e,
         _ = (0, s.bG)([o.A], () => o.A.getAppealClassificationId()),

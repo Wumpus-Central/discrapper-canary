@@ -111,7 +111,12 @@ let v = (e, t) => {
             className: A.S,
             children: (0, r.jsxs)(I, {
                 children: [
-                    "THREE_COLUMN" === l && (0, r.jsx)(T, { children: (0, r.jsx)(R, { sku: t }) }),
+                    "THREE_COLUMN" === l &&
+                        (0, r.jsx)(T, {
+                            children: (0, r.jsx)(R, {
+                                sku: t,
+                            }),
+                        }),
                     (0, r.jsxs)(C, {
                         className: A.Hi,
                         children: [
@@ -120,7 +125,9 @@ let v = (e, t) => {
                                 (0, r.jsx)(d.Text, {
                                     variant: "text-sm/normal",
                                     className: A.TU,
-                                    children: O.intl.format(O.t["es/G6j"], { date: c }),
+                                    children: O.intl.format(O.t["es/G6j"], {
+                                        date: c,
+                                    }),
                                 }),
                         ],
                     }),
@@ -132,6 +139,7 @@ let v = (e, t) => {
             }),
         });
     };
+
 function D(e) {
     let { sku: t, skuPricePreview: n, application: i } = e;
     l()(null != n.amount, "SKU must have a price set."),
@@ -149,11 +157,19 @@ function D(e) {
         children: [
             (0, r.jsxs)(I, {
                 children: [
-                    "THREE_COLUMN" === s && (0, r.jsx)(T, { children: (0, r.jsx)(R, { sku: t }) }),
+                    "THREE_COLUMN" === s &&
+                        (0, r.jsx)(T, {
+                            children: (0, r.jsx)(R, {
+                                sku: t,
+                            }),
+                        }),
                     (0, r.jsxs)(C, {
                         className: A.Hi,
                         children: [
-                            E && (0, r.jsx)(h.Q, { application: i }),
+                            E &&
+                                (0, r.jsx)(h.Q, {
+                                    application: i,
+                                }),
                             (0, r.jsx)(d.Text, {
                                 variant: "text-sm/semibold",
                                 children: t.name,
@@ -169,7 +185,12 @@ function D(e) {
             null != m &&
                 (0, r.jsxs)(I, {
                     children: [
-                        "THREE_COLUMN" === s && (0, r.jsx)(T, { children: (0, r.jsx)(w, { discount: m }) }),
+                        "THREE_COLUMN" === s &&
+                            (0, r.jsx)(T, {
+                                children: (0, r.jsx)(w, {
+                                    discount: m,
+                                }),
+                            }),
                         (0, r.jsx)(C, {
                             className: A.ys,
                             children: m.description,

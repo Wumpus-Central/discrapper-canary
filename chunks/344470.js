@@ -1,6 +1,11 @@
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 var r = n(668459);
-let i = { read: a };
+let i = {
+    read: a,
+};
+
 function a(e, t) {
     let n = s(e, t),
         r = u(e, t, n);
@@ -12,9 +17,11 @@ function a(e, t) {
         Subsampling: r && d(e, t, r.value, n),
     };
 }
+
 function s(e, t) {
     return r.A.getShortAt(e, t);
 }
+
 function o(e, t, n) {
     let i = 2;
     if (3 > n) return;
@@ -24,6 +31,7 @@ function o(e, t, n) {
         description: "" + a,
     };
 }
+
 function l(e, t, n) {
     let i = 3;
     if (5 > n) return;
@@ -33,6 +41,7 @@ function l(e, t, n) {
         description: `${a}px`,
     };
 }
+
 function c(e, t, n) {
     let i = 5;
     if (7 > n) return;
@@ -42,6 +51,7 @@ function c(e, t, n) {
         description: `${a}px`,
     };
 }
+
 function u(e, t, n) {
     let i = 7;
     if (8 > n) return;
@@ -51,6 +61,7 @@ function u(e, t, n) {
         description: "" + a,
     };
 }
+
 function d(e, t, n, i) {
     let a = 8;
     if (8 + 3 * n > i) return;
@@ -64,6 +75,7 @@ function d(e, t, n, i) {
         description: s.length > 1 ? f(s) + p(s) : "",
     };
 }
+
 function f(e) {
     let t = {
         1: "Y",
@@ -74,6 +86,7 @@ function f(e) {
     };
     return e.map((e) => t[e[0]]).join("");
 }
+
 function p(e) {
     let t = {
         17: "4:4:4 (1 1)",

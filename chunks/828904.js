@@ -31,6 +31,7 @@ let D = {
     [C.r8.LOW]: "Low Quality Stream",
     [C.r8.HIGH]: "High Quality Stream",
 };
+
 function R(e) {
     let t = [],
         n = 0;
@@ -65,6 +66,7 @@ let F = {
     ssrc: 1,
     codec: 2,
 };
+
 function S(e) {
     let {
             streams: t,
@@ -80,9 +82,12 @@ function S(e) {
         w = (0, o.bG)([g.A], () => (N ? g.A.getGuildId() : null)),
         T = (0, o.bG)([f.default], () => (N && null != S ? f.default.getUser(S) : null)),
         L = (0, o.bG)([y.Ay], () => (N && null != w && null != S ? y.Ay.getNick(w, S) : null));
-    if (null == t || (N && null == S) || 0 === t.length) return (0, r.jsx)(d.y$y, { type: d.y$y.Type.SPINNING_CIRCLE });
+    if (null == t || (N && null == S) || 0 === t.length)
+        return (0, r.jsx)(d.y$y, {
+            type: d.y$y.Type.SPINNING_CIRCLE,
+        });
     let O = P;
-    N && null != T && (O = "".concat(P, " \u2014 ").concat(null != L ? L : v.Ay.getName(T)));
+    N && null != T && (O = "".concat(P, " — ").concat(null != L ? L : v.Ay.getName(T)));
     let M = t.map((e, t) => {
             let n, a;
             return (0, r.jsx)(

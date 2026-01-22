@@ -1,4 +1,7 @@
-a.d(i, { default: () => v }), a(896048);
+a.d(i, {
+    default: () => v,
+}),
+    a(896048);
 var t = a(627968),
     s = a(64700),
     l = a(397927),
@@ -14,6 +17,7 @@ var t = a(627968),
     f = a(985018),
     x = a(510272),
     h = a(230279);
+
 function g() {
     return [
         {
@@ -106,7 +110,7 @@ let v = function (e) {
                                           onFileSizeError: () => {
                                               _(!0);
                                           },
-                                          maxFileSizeBytes: 256000,
+                                          maxFileSizeBytes: 256e3,
                                           filters: w,
                                           text: f.intl.string(f.t.sdCQY4),
                                           size: "md",

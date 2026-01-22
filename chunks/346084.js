@@ -1,4 +1,7 @@
-n.d(t, { A: () => A }), n(896048);
+n.d(t, {
+    A: () => A,
+}),
+    n(896048);
 var r,
     i = n(735438),
     l = n.n(i),
@@ -8,6 +11,7 @@ var r,
     u = n(287809),
     c = n(38910),
     d = n(858885);
+
 function p(e, t, n) {
     return (
         t in e
@@ -25,6 +29,7 @@ let g = {},
     f = 0,
     h = !1,
     m = !1;
+
 function O(e) {
     var t;
     let n = null != e.contact_names && e.contact_names.length >= 2 ? e.contact_names.slice(0, 2) : [];
@@ -80,7 +85,10 @@ let A = new E(o.h, {
                 }
                 return e;
             })({}, g)),
-            (n = n = { [r.key]: r }),
+            (n = n =
+                {
+                    [r.key]: r,
+                }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                 : (function (e, t) {

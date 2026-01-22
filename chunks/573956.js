@@ -1,4 +1,6 @@
-n.d(t, { G: () => x });
+n.d(t, {
+    G: () => x,
+});
 var r = n(627968),
     l = n(64700),
     i = n(417597),
@@ -19,6 +21,7 @@ var r = n(627968),
     O = n(746080),
     j = n(790782),
     v = n(985018);
+
 function x(e) {
     let { guild: t, selected: x } = e,
         E = (0, f.A)(t),
@@ -71,7 +74,10 @@ function x(e) {
                                 }
                                 return e;
                             })({}, n)),
-                            (i = i = { guild: t }),
+                            (i = i =
+                                {
+                                    guild: t,
+                                }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(i))
                                 : (function (e, t) {

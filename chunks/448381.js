@@ -13,6 +13,7 @@ var r = n(665260),
 let o = /\.(mp3|m4a|ogg|opus|wav|flac)$/i,
     l = (e) => "IMAGE" === e || "VIDEO" === e || "CLIP" === e || "VISUAL_PLACEHOLDER" === e,
     c = (e) => "IMAGE" === e || "VIDEO" === e || "VISUAL_PLACEHOLDER" === e;
+
 function u(e, t) {
     let { filename: n, width: l, height: c } = e;
     if (t && null != l && l > 0 && null != c && c > 0)
@@ -28,6 +29,7 @@ function u(e, t) {
           ? "PLAINTEXT_PREVIEW"
           : "OTHER";
 }
+
 function d(e) {
     let { contentType: t, width: n, height: r } = e;
     if (null != n && n > 0 && null != r && r > 0) {

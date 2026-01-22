@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var r = n(627968),
     l = n(64700),
     i = n(33851),
@@ -12,6 +14,7 @@ var r = n(627968),
     f = n(652215),
     b = n(985018),
     m = n(328151);
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,6 +40,7 @@ function p(e) {
     }
     return e;
 }
+
 function j(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -55,25 +59,46 @@ function j(e, t) {
         e
     );
 }
+
 function g(e) {
     let { guildId: t, onClose: n } = e,
         i = (0, a.bG)([u.A], () => u.A.getSearchStateByGuildId(t), [t], o()),
         g = (0, d.Tj)(t),
         h = l.useCallback(() => {
             i.requireUnusualDmActivity || g(d.Zp.UNUSUAL_DM_ACTIVITY),
-                (0, C.Ld)(t, j(p({}, i), { requireUnusualDmActivity: !i.requireUnusualDmActivity }));
+                (0, C.Ld)(
+                    t,
+                    j(p({}, i), {
+                        requireUnusualDmActivity: !i.requireUnusualDmActivity,
+                    }),
+                );
         }, [t, i, g]),
         x = l.useCallback(() => {
             i.requireCommunicationDisabled || g(d.Zp.COMMUNICATION_DISABLED),
-                (0, C.Ld)(t, j(p({}, i), { requireCommunicationDisabled: !i.requireCommunicationDisabled }));
+                (0, C.Ld)(
+                    t,
+                    j(p({}, i), {
+                        requireCommunicationDisabled: !i.requireCommunicationDisabled,
+                    }),
+                );
         }, [t, i, g]),
         y = l.useCallback(() => {
             i.requireUnusualAccountActivity || g(d.Zp.UNUSUAL_ACCOUNT_ACTIVITY),
-                (0, C.Ld)(t, j(p({}, i), { requireUnusualAccountActivity: !i.requireUnusualAccountActivity }));
+                (0, C.Ld)(
+                    t,
+                    j(p({}, i), {
+                        requireUnusualAccountActivity: !i.requireUnusualAccountActivity,
+                    }),
+                );
         }, [t, i, g]),
         O = l.useCallback(() => {
             i.requireUsernameQuarantined || g(d.Zp.USERNAME_QUARANTINED),
-                (0, C.Ld)(t, j(p({}, i), { requireUsernameQuarantined: !i.requireUsernameQuarantined }));
+                (0, C.Ld)(
+                    t,
+                    j(p({}, i), {
+                        requireUsernameQuarantined: !i.requireUsernameQuarantined,
+                    }),
+                );
         }, [t, i, g]);
     return (0, r.jsx)(s.W1t, {
         navId: "member-safety-flags",

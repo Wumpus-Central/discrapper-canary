@@ -36,18 +36,27 @@ var r = n(627968),
     D = n(985018),
     x = n(514177),
     L = n(939383);
+
 function j(e) {
     if (null == e) return null;
     let t = u()(e),
         n = t.diff(u()(), "h");
     if (n > 24) {
         let e = t.diff(u()(), "d");
-        return D.intl.formatToPlainString(D.t.xs9VPm, { numDays: e });
+        return D.intl.formatToPlainString(D.t.xs9VPm, {
+            numDays: e,
+        });
     }
-    if (n > 1) return D.intl.formatToPlainString(D.t.p7KX59, { numHours: n });
+    if (n > 1)
+        return D.intl.formatToPlainString(D.t.p7KX59, {
+            numHours: n,
+        });
     let r = t.diff(u()(), "minutes");
-    return D.intl.formatToPlainString(D.t["XtQ+Ap"], { numMinutes: r });
+    return D.intl.formatToPlainString(D.t["XtQ+Ap"], {
+        numMinutes: r,
+    });
 }
+
 function M(e) {
     var t, n, i;
     let { className: a, children: o, withBottomMargin: l, discountOffer: c, trialOffer: u } = e,
@@ -69,8 +78,14 @@ function M(e) {
                         color: "currentColor",
                         className: x.Xo,
                     }),
-                    p === w.pe.TIER_0 && (0, r.jsx)(O.A, { className: x.Vn }),
-                    p === w.pe.TIER_2 && (0, r.jsx)(y.A, { className: x.Vn }),
+                    p === w.pe.TIER_0 &&
+                        (0, r.jsx)(O.A, {
+                            className: x.Vn,
+                        }),
+                    p === w.pe.TIER_2 &&
+                        (0, r.jsx)(y.A, {
+                            className: x.Vn,
+                        }),
                 ],
             }),
             (0, r.jsx)(h.Text, {
@@ -82,7 +97,9 @@ function M(e) {
             (0, r.jsx)(R.ir, {
                 text:
                     null != c
-                        ? D.intl.formatToPlainString(D.t.iiLbvu, { percent: c.discount.amount })
+                        ? D.intl.formatToPlainString(D.t.iiLbvu, {
+                              percent: c.discount.amount,
+                          })
                         : D.intl.string(D.t.IBYG5U),
                 colorOptions: p === w.pe.TIER_0 ? R.at.PREMIUM_TIER_0_WHITE_FILL : R.at.PREMIUM_TIER_2_WHITE_FILL,
             }),
@@ -94,6 +111,7 @@ function M(e) {
         ],
     });
 }
+
 function k(e) {
     var t, n;
     let {
@@ -107,7 +125,9 @@ function k(e) {
         [d, f] = i.useState(!1),
         p =
             null != u
-                ? D.intl.formatToPlainString(D.t.bkQ4bH, { percent: u.discount.amount })
+                ? D.intl.formatToPlainString(D.t.bkQ4bH, {
+                      percent: u.discount.amount,
+                  })
                 : (0, v.FY)({
                       intervalType: null == c || null == (t = c.subscription_trial) ? void 0 : t.interval,
                       intervalCount: null == c || null == (n = c.subscription_trial) ? void 0 : n.interval_count,
@@ -125,9 +145,12 @@ function k(e) {
         onSubscribeModalClose: (e) => {
             f(!1), e && (null == s || s());
         },
-        textOptions: { textOverride: p },
+        textOptions: {
+            textOverride: p,
+        },
     });
 }
+
 function U(e) {
     var t, n;
     let i = null == (n = (0, C.V)()) ? void 0 : n.subscription_trial,
@@ -145,6 +168,7 @@ function U(e) {
         }),
     });
 }
+
 function G(e) {
     let { subscriptionTier: t, onClose: n, analyticsLocationObject: i, trialOffer: a, discountOffer: s } = e;
     return (0, r.jsxs)("div", {
@@ -169,6 +193,7 @@ function G(e) {
         ],
     });
 }
+
 function V(e) {
     let { onClose: t, analyticsLocationObject: n } = e,
         i = (0, C.V)();
@@ -183,7 +208,9 @@ function V(e) {
             (0, r.jsx)(h.Heading, {
                 variant: "heading-md/semibold",
                 color: "text-default",
-                children: D.intl.format(D.t["fF+cgd"], { onClick: () => (0, T.Z)() }),
+                children: D.intl.format(D.t["fF+cgd"], {
+                    onClick: () => (0, T.Z)(),
+                }),
             }),
             (0, r.jsx)(k, {
                 trialOffer: i,
@@ -200,6 +227,7 @@ function V(e) {
         ],
     });
 }
+
 function F(e) {
     let { headingText: t, context: n, children: i, trialOffer: a, discountOffer: s } = e;
     return (0, r.jsxs)("div", {
@@ -223,6 +251,7 @@ function F(e) {
         ],
     });
 }
+
 function B(e) {
     let {
             headingText: t,
@@ -237,7 +266,9 @@ function B(e) {
         } = e,
         T = (0, d.bG)([g.A], () => g.A.useReducedMotion),
         C = (0, m.Ay)(),
-        N = (0, A.Xq)(I.eM / A.XF, { useKibibytes: !0 });
+        N = (0, A.Xq)(I.eM / A.XF, {
+            useKibibytes: !0,
+        });
     switch (c) {
         case w.e.EMPTY_STICKER_PICKER_UPSELL:
             return (0, r.jsxs)(r.Fragment, {
@@ -472,7 +503,9 @@ function B(e) {
             );
         case w.e.MESSAGE_LENGTH_IN_EDITOR_UPSELL:
             return (0, r.jsxs)("div", {
-                className: s()(x.iW, { [x.WP]: !T }),
+                className: s()(x.iW, {
+                    [x.WP]: !T,
+                }),
                 children: [
                     (0, r.jsx)(h.Text, {
                         variant: "text-lg/bold",
@@ -485,7 +518,9 @@ function B(e) {
                         className: x.Ed,
                         children: D.intl.string(D.t.ZvHg3N),
                     }),
-                    (0, r.jsx)("div", { className: x.yF }),
+                    (0, r.jsx)("div", {
+                        className: x.yF,
+                    }),
                     (0, r.jsx)(M, {
                         trialOffer: y,
                         discountOffer: O,

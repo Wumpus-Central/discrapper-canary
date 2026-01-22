@@ -1,4 +1,6 @@
-r.d(t, { T: () => d });
+r.d(t, {
+    T: () => d,
+});
 var n = r(321733),
     o = r(212246),
     i = r(162551),
@@ -6,6 +8,7 @@ var n = r(321733),
     s = r(201672),
     c = r(939932),
     u = r(490580);
+
 function d(e, t, r) {
     var d = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
     (0, s.cl)("DropTarget", "type, spec, collect[, options]", e, t, r, d);

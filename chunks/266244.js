@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var i = n(627968),
     r = n(64700),
     s = n(311907),
@@ -39,7 +41,9 @@ let b = () => (0, a.WU)("DM_SEARCH"),
                 (0, i.jsx)("section", {
                     className: f.C3,
                     "aria-label": p.intl.string(p.t.StREWK),
-                    children: (0, i.jsx)(o.A, { guildId: null }),
+                    children: (0, i.jsx)(o.A, {
+                        guildId: null,
+                    }),
                 }),
             ],
         });

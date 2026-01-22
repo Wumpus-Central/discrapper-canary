@@ -1,4 +1,7 @@
-n.d(t, { A: () => h }), n(896048);
+n.d(t, {
+    A: () => h,
+}),
+    n(896048);
 var r,
     i = n(311907),
     a = n(73153),
@@ -7,6 +10,7 @@ var r,
     l = n(287809),
     c = n(688151),
     u = n(115093);
+
 function d(e, t, n) {
     return (
         t in e
@@ -21,6 +25,7 @@ function d(e, t, n) {
     );
 }
 let f = "production" === u.B.DEVELOPMENT || window.GLOBAL_ENV.RELEASE_CHANNEL === u.B.STAGING;
+
 function p() {
     f = (0, s.I9)(l.default.getCurrentUser());
 }

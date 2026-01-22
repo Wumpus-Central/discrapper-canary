@@ -1,6 +1,9 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(417161),
     a = n(116825);
+
 function o(e, t, n) {
     return (
         (t = (0, a.A)(t)) in e

@@ -1,10 +1,13 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(64700),
     l = n(311907),
     i = n(354583),
     a = n(616356),
     s = n(383501),
     o = n(977997);
+
 function c(e) {
     var t;
     let n = (0, l.bG)([s.A], () => s.A.getGuildId()),

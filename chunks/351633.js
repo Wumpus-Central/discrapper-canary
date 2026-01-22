@@ -1,4 +1,6 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(627968);
 n(64700);
 var l = n(397927),
@@ -6,6 +8,7 @@ var l = n(397927),
     s = n(406704),
     o = n(985018),
     i = n(993229);
+
 function c(e) {
     let { channel: t, header: n, startThread: c } = e,
         u = (0, s.n)(t),
@@ -25,7 +28,9 @@ function c(e) {
                             height: 36,
                         }),
                     }),
-                    (0, r.jsx)(a.A, { className: i.uf }),
+                    (0, r.jsx)(a.A, {
+                        className: i.uf,
+                    }),
                 ],
             }),
             (0, r.jsx)(l.Heading, {

@@ -1,4 +1,8 @@
-n.d(t, { A: () => O }), n(896048), n(65821);
+n.d(t, {
+    A: () => O,
+}),
+    n(896048),
+    n(65821);
 var r = n(627968),
     i = n(64700),
     a = n(342393),
@@ -18,6 +22,7 @@ var h = n(739508),
     E = n(985018),
     b = n(676032);
 let y = new Set([_.pn.SKU_SELECT, _.pn.AWAITING_AUTHENTICATION, _.pn.AWAITING_PURCHASE_TOKEN_AUTH, _.pn.CONFIRM]);
+
 function O(e) {
     let {
             steps: t,
@@ -109,7 +114,9 @@ function O(e) {
                                       }),
                                   }),
                             N
-                                ? (0, r.jsx)(c.y$y, { className: b.CI })
+                                ? (0, r.jsx)(c.y$y, {
+                                      className: b.CI,
+                                  })
                                 : (0, r.jsx)(c.YC2, {
                                       className: b.C9,
                                       overrideKey: O,

@@ -3,4 +3,6 @@ function a(e, t) {
     for (var r = 0, a = Array(t); r < t; r++) a[r] = e[r];
     return a;
 }
-r.d(t, { A: () => a });
+r.d(t, {
+    A: () => a,
+});

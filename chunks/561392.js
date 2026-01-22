@@ -7,6 +7,7 @@ var r = n(64700),
     i = n(862019),
     a = n(879821),
     s = n(193439);
+
 function o(e) {
     let {
             defaultOpen: t,
@@ -49,9 +50,13 @@ function o(e) {
                                 width: "".concat(t.reference.width, "px"),
                             }),
                             null != h.current &&
-                                Object.assign(n.floating.style, { width: "".concat(h.current(t.reference), "px") }),
+                                Object.assign(n.floating.style, {
+                                    width: "".concat(h.current(t.reference), "px"),
+                                }),
                             null != _.current &&
-                                Object.assign(n.floating.style, { maxHeight: "".concat(_.current(t.reference), "px") });
+                                Object.assign(n.floating.style, {
+                                    maxHeight: "".concat(_.current(t.reference), "px"),
+                                });
                     },
                 }),
                 (0, a.UU)(),
@@ -62,7 +67,11 @@ function o(e) {
             placement: o,
             strategy: "fixed",
         }),
-        y = (0, i.s9)(b, { bubbles: { escapeKey: !1 } }),
+        y = (0, i.s9)(b, {
+            bubbles: {
+                escapeKey: !1,
+            },
+        }),
         { getReferenceProps: O, getFloatingProps: A } = (0, i.bv)([y]);
     return {
         isOpen: f,

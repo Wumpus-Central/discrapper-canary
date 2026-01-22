@@ -34,21 +34,24 @@ var r = n(735438),
 let f = /sketchfab/i,
     p = /^https:\/\/sketchfab\.com/i,
     _ = /youtube|steam|imgur|vimeo|sketchfab|soundcloud|streamable|twitch|vid\.me|twitter/i,
-    h = 1492472454139,
+    h = 0x15b7e4a5bfb,
     m = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop$/,
     g = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop\/([0-9]+)$/,
     E = RegExp("^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/shop"),
     b = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/game-shop\/([0-9]+)\/([0-9]+)/,
     y = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/game-shop\/([0-9]+)\/([0-9]+)/;
+
 function O(e) {
     let { width: t, height: n } = e;
     return t > 0 && n > 0;
 }
+
 function A(e, t, n) {
     if ((null != t && f.test(t.name)) || p.test(n.url)) return !1;
     let r = null != n.proxy_url || /^https:/i.test(n.url);
     return null != e && c.default.extractTimestamp(e) < h && (r = r && null != t && _.test(t.name)), r;
 }
+
 function v(e) {
     let {
         url: t,
@@ -74,6 +77,7 @@ function v(e) {
         contentType: null != d ? d : void 0,
     };
 }
+
 function S(e, t, n) {
     let r = {
         id: i().uniqueId("embed_"),
@@ -127,7 +131,9 @@ function S(e, t, n) {
                 (r.thumbnail = {
                     width: n.video.width,
                     height: n.video.height,
-                    url: I(n.video.proxy_url, { format: "webp" }),
+                    url: I(n.video.proxy_url, {
+                        format: "webp",
+                    }),
                 }),
             null != r.thumbnail && O(n.video) && A(t, n.provider, n.video) && (r.video = v(n.video))),
         d.p.has(r.type))
@@ -144,6 +150,7 @@ function S(e, t, n) {
     } else r.fields = [];
     return r;
 }
+
 function I(e, t) {
     let n = new URL(e);
     return (
@@ -153,6 +160,7 @@ function I(e, t) {
         n.toString()
     );
 }
+
 function T(e) {
     let t = new Map(),
         n = [];
@@ -171,19 +179,24 @@ function T(e) {
         n
     );
 }
+
 function C(e) {
     let { image: t, video: n, type: r, author: i, rawTitle: a } = e;
     return (null != t || null != n) && (r === u.Auw.GIFV || (r !== u.Auw.RICH && null == i && null == a));
 }
+
 function N(e) {
     return e.type === u.Auw.ARTICLE && null != e.url && (g.test(e.url) || m.test(e.url));
 }
+
 function R(e) {
     return e.type === u.Auw.ARTICLE && null != e.url && E.test(e.url);
 }
+
 function w(e) {
     return e.type === u.Auw.ARTICLE && null != e.url && (y.test(e.url) || b.test(e.url));
 }
+
 function P(e, t, n) {
     var r;
     return null != t && null != n
@@ -201,9 +214,11 @@ function P(e, t, n) {
                 maxMediaHeight: 300,
             };
 }
+
 function D(e, t) {
     return e.isPrivate() ? !e.isManaged() : t.can(u.xBc.EMBED_LINKS, e);
 }
+
 function x(e) {
     return (
         "" !== e.content || e.messageSnapshots.some((e) => "" !== e.message.content || e.message.attachments.length > 0)

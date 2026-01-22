@@ -10,12 +10,15 @@ n.d(t, {
     wl: () => l,
 });
 var r = n(341915);
+
 function i(e) {
     return [r.uF.GIFT_INVENTORY_FOR_YOU, r.uF.GIFT_INVENTORY_OTHER].includes(e);
 }
+
 function a(e) {
     return e === r.uF.GIFT_INVENTORY_FOR_YOU || !i(e);
 }
+
 function s(e) {
     let { quest: t, location: n } = e,
         { userStatus: r } = t;
@@ -24,6 +27,6 @@ function s(e) {
 let o = 100,
     l = 20,
     c = 32,
-    u = 1000,
+    u = 1e3,
     d = 460,
     f = 280;

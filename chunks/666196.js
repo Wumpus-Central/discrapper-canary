@@ -1,4 +1,6 @@
-i.d(e, { G: () => T });
+i.d(e, {
+    G: () => T,
+});
 var n = i(311907),
     l = i(955572),
     s = i(775602),
@@ -12,4 +14,6 @@ let o = (0, r.zD)(u.X.ENABLE_SWITCH_ICONS, {
         setValue: (t) => (0, l.Gm)(t),
         hasIcon: !0,
     }),
-    T = (0, r.zZ)(u.X.INPUTS, { buildLayout: () => [o] });
+    T = (0, r.zZ)(u.X.INPUTS, {
+        buildLayout: () => [o],
+    });

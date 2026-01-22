@@ -192,6 +192,7 @@ let a = {
         ...u,
     },
     f = `(?:${(0, r.uJ)(l)}|[0-9]+|[0-9]+\\.[0-9]+|half(?:\\s{0,2}an?)?|an?\\b(?:\\s{0,2}few)?|few|several|the|a?\\s{0,2}couple\\s{0,2}(?:of)?)`;
+
 function p(e) {
     let t = e.toLowerCase();
     if (void 0 !== l[t]) return l[t];
@@ -203,11 +204,13 @@ function p(e) {
     return parseFloat(t);
 }
 let _ = `(?:${(0, r.uJ)(c)}|[0-9]{1,2}(?:st|nd|rd|th)?)`;
+
 function h(e) {
     let t = e.toLowerCase();
     return void 0 !== c[t] ? c[t] : parseInt((t = t.replace(/(?:st|nd|rd|th)$/i, "")));
 }
 let m = "(?:[1-9][0-9]{0,3}\\s{0,2}(?:BE|AD|BC|BCE|CE)|[1-2][0-9]{3}|[5-9][0-9]|2[0-5])";
+
 function g(e) {
     if (/BE/i.test(e)) return parseInt((e = e.replace(/BE/i, ""))) - 543;
     if (/BCE?/i.test(e)) return -parseInt((e = e.replace(/BCE?/i, "")));
@@ -221,6 +224,7 @@ let E = `(${f})\\s{0,3}(${(0, r.uJ)(d)})`,
     O = "\\s{0,5},?(?:\\s*and)?\\s{0,5}",
     A = (0, r.mb)("(?:(?:about|around)\\s{0,3})?", E, O),
     v = (0, r.mb)("(?:(?:about|around)\\s{0,3})?", y, O);
+
 function S(e) {
     let t = {},
         n = e,
@@ -228,6 +232,7 @@ function S(e) {
     for (; r; ) I(t, r), (n = n.substring(r[0].length).trim()), (r = b.exec(n));
     return 0 == Object.keys(t).length ? null : t;
 }
+
 function I(e, t) {
     if (t[0].match(/^[a-zA-Z]+$/)) return;
     let n = p(t[1]);

@@ -22,12 +22,15 @@ let i = [
     a = i.join(":not([hidden]),") + ",[tabindex]:not([disabled]):not([hidden])";
 i.push('[tabindex]:not([tabindex="-1"]):not([disabled])');
 let s = i.join(':not([hidden]):not([tabindex="-1"]),');
+
 function o(e) {
     return e.matches(a) && (0, r.J)(e) && !c(e);
 }
+
 function l(e) {
     return e.matches(s) && (0, r.J)(e) && !c(e);
 }
+
 function c(e) {
     let t = e;
     for (; null != t; ) {

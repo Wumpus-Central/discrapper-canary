@@ -1,4 +1,6 @@
-n.d(t, { A: () => E });
+n.d(t, {
+    A: () => E,
+});
 var r = n(627968);
 n(64700);
 var i = n(448761),
@@ -19,6 +21,7 @@ let p = {
         [i.l.REPORT_TO_MOD_DELETED_MESSAGE]: () => d.default["4023i8"],
         [i.l.REPORT_TO_MOD_CLOSED_REPORT]: () => d.default.UE81zV,
     };
+
 function h(e) {
     let { type: t } = e,
         n = null;
@@ -45,6 +48,7 @@ function h(e) {
           })
         : null;
 }
+
 function m(e) {
     var t;
     let { message: n, channel: i, compact: s } = e,
@@ -75,12 +79,15 @@ function m(e) {
         targetHook: v,
     });
     return (0, r.jsx)(c.A, {
-        iconNode: (0, r.jsx)(h, { type: m }),
+        iconNode: (0, r.jsx)(h, {
+            type: m,
+        }),
         timestamp: n.timestamp,
         compact: s,
         children: I,
     });
 }
+
 function g(e) {
     var t;
     let { message: n, channel: i, compact: a } = e,
@@ -101,12 +108,15 @@ function g(e) {
         actorHook: g,
     });
     return (0, r.jsx)(c.A, {
-        iconNode: (0, r.jsx)(h, { type: u }),
+        iconNode: (0, r.jsx)(h, {
+            type: u,
+        }),
         timestamp: n.timestamp,
         compact: a,
         children: b,
     });
 }
+
 function E(e) {
     let { message: t, channel: n, compact: a } = e,
         { type: s } = t;

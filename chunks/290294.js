@@ -1,4 +1,6 @@
-n.d(t, { A: () => O });
+n.d(t, {
+    A: () => O,
+});
 var l = n(627968);
 n(64700);
 var r = n(503698),
@@ -16,6 +18,7 @@ var r = n(503698),
     T = n(316076),
     f = n(985018),
     h = n(438536);
+
 function I() {
     return (0, l.jsxs)("div", {
         className: h.wx,
@@ -43,6 +46,7 @@ function I() {
         ],
     });
 }
+
 function O(e) {
     let { userId: t, guildId: n, location: r, className: u, onNavigate: f } = e,
         O = (0, i.bG)([c.default], () => c.default.getUser(t), [t]),
@@ -56,7 +60,9 @@ function O(e) {
                   (0, l.jsxs)(s.HOs, {
                       className: h.WH,
                       children: [
-                          (0, l.jsx)(A.A, { member: N }),
+                          (0, l.jsx)(A.A, {
+                              member: N,
+                          }),
                           (0, l.jsx)(T.A, {
                               userId: t,
                               guildId: n,
@@ -65,9 +71,15 @@ function O(e) {
                               member: N,
                               onNavigate: f,
                           }),
-                          (0, l.jsx)(d.A, { member: N }),
-                          (0, l.jsx)(E.A, { member: N }),
-                          (0, l.jsx)(_.A, { member: N }),
+                          (0, l.jsx)(d.A, {
+                              member: N,
+                          }),
+                          (0, l.jsx)(E.A, {
+                              member: N,
+                          }),
+                          (0, l.jsx)(_.A, {
+                              member: N,
+                          }),
                       ],
                   }),
               ],

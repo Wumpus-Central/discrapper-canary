@@ -1,4 +1,7 @@
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});
+
 function r(e) {
     return {
         name: e.name,

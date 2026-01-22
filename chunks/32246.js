@@ -1,4 +1,6 @@
-l.d(t, { A: () => g });
+l.d(t, {
+    A: () => g,
+});
 var n = l(627968);
 l(64700);
 var a = l(503698),
@@ -14,6 +16,7 @@ var a = l(503698),
     b = l(985018),
     p = l(880203),
     x = l(248997);
+
 function g(e) {
     let { selectedFontId: t, setSelectedFontId: l, displayName: a, className: g } = e,
         j = t !== r.x.DEFAULT,
@@ -45,7 +48,9 @@ function g(e) {
                             text: b.intl.string(a.name),
                             asContainer: !0,
                             children: (0, n.jsx)(c.DUT, {
-                                className: s()(x.SO, { [x.wH]: r }),
+                                className: s()(x.SO, {
+                                    [x.wH]: r,
+                                }),
                                 onClick: () => l(e),
                                 "aria-label": b.intl.string(a.name),
                                 children: (0, n.jsx)(i.EYj, {
@@ -65,7 +70,9 @@ function g(e) {
                 (0, n.jsxs)("div", {
                     className: x.Lb,
                     children: [
-                        (0, n.jsx)(i.mir, { size: "lg" }),
+                        (0, n.jsx)(i.mir, {
+                            size: "lg",
+                        }),
                         (0, n.jsx)(i.EYj, {
                             variant: "text-sm/normal",
                             color: "text-subtle",

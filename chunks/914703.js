@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(627968);
 n(64700);
 var l = n(397927),
@@ -7,6 +9,7 @@ var l = n(397927),
     s = n(867455),
     o = n(607508),
     c = n(37411);
+
 function u(e) {
     let { channel: t, closePopout: n, onSelect: u, navId: d, label: f } = e,
         p = (0, i.A)(t, "Notifications Bell"),
@@ -30,7 +33,10 @@ function u(e) {
                             group: "thread-notifications",
                             id: "".concat(n),
                             label: i,
-                            action: () => s.A.setNotificationSettings(t, { flags: n }),
+                            action: () =>
+                                s.A.setNotificationSettings(t, {
+                                    flags: n,
+                                }),
                             checked: n === b,
                         },
                         n,

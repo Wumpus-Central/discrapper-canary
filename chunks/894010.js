@@ -5,10 +5,13 @@ n.d(t, {
 var r = n(562465),
     i = n(73153),
     a = n(652215);
+
 function s(e, t) {
     r.Bo.patch({
         url: a.Rsh.GAME_NOTIFICATION_SETTING_UPDATE(e),
-        body: { muted: t },
+        body: {
+            muted: t,
+        },
         rejectWithError: !0,
     }).then((e) => {
         let { body: t } = e;

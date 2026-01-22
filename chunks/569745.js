@@ -1,4 +1,7 @@
-n.d(t, { Q: () => s }), n(896048);
+n.d(t, {
+    Q: () => s,
+}),
+    n(896048);
 var r = n(960488),
     i = n(302495),
     l = n(901123);
@@ -10,11 +13,29 @@ let a = new Set([
     l.BV.SETTINGS(":section", ":subsection?"),
     l.BV.USER_GUILD_NOTIFICATION_SETTINGS(i.p.guildId()),
     l.BV.APPLICATION_LIBRARY_INVENTORY,
-    l.BV.WELCOME(i.p.guildId({ optional: !0 }), i.p.channelId({ optional: !0 })),
-    l.BV.GUILD_EVENT_DETAILS(i.p.guildId({ optional: !0 }), ":guildEventId"),
+    l.BV.WELCOME(
+        i.p.guildId({
+            optional: !0,
+        }),
+        i.p.channelId({
+            optional: !0,
+        }),
+    ),
+    l.BV.GUILD_EVENT_DETAILS(
+        i.p.guildId({
+            optional: !0,
+        }),
+        ":guildEventId",
+    ),
     l.BV.GUILD_SETTINGS(i.p.guildId(), ":section?", ":subsection?"),
     l.BV.CHANNEL_THREAD_VIEW(i.p.guildId(), i.p.channelId(), ":threadId", ":messageId?"),
-    l.BV.CHANNEL(i.p.guildId(), i.p.channelId({ optional: !0 }), ":messageId?"),
+    l.BV.CHANNEL(
+        i.p.guildId(),
+        i.p.channelId({
+            optional: !0,
+        }),
+        ":messageId?",
+    ),
     l.BV.ACTIVITY,
     l.BV.ACTIVITIES,
     l.BV.ACTIVITIES_HAPPENING_NOW,
@@ -38,7 +59,15 @@ let a = new Set([
     l.BV.APPLICATION_DIRECTORY,
     l.BV.GAME_SHOP(i.p.guildId(), ":shopSkuId?", ":shopSlug?"),
 ]);
+
 function s(e) {
-    for (let t of a) if (null != (0, r.B6)(e, { path: t })) return !0;
+    for (let t of a)
+        if (
+            null !=
+            (0, r.B6)(e, {
+                path: t,
+            })
+        )
+            return !0;
     return !1;
 }

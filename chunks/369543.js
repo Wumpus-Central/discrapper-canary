@@ -5,18 +5,21 @@ n.d(t, {
     n(896048),
     n(638769);
 var r = n(403362);
+
 function i(e, t) {
     let n = e.find((e) => e.processId === t);
     return null == n ? null : l(e, n);
 }
 let a = "1402418696126992445",
     s = "league of legends.exe";
+
 function o(e, t) {
     let n = t.processPath.length > 1 ? t.processPath[t.processPath.length - 2] : 0,
         r = e.filter((e) => e.applicationId === a && e.processPath.includes(n)),
         i = r.find((e) => e.executableName === s);
     return void 0 !== i ? i : r.length > 0 ? r[0] : null;
 }
+
 function l(e, t) {
     var n;
     if (null == t) return null;
@@ -47,6 +50,7 @@ function l(e, t) {
     let u = null != (n = l.find((e) => null != e.application.windowHandle)) ? n : l[0];
     return null == u ? null : u.application;
 }
+
 function c(e, t) {
     return e.length - t.length;
 }

@@ -1,4 +1,6 @@
-n.d(t, { A: () => j }),
+n.d(t, {
+    A: () => j,
+}),
     n(927092),
     n(212978),
     n(648691),
@@ -67,6 +69,7 @@ let _ = 256,
     x = (e) => {
         e.bufferData(e.ARRAY_BUFFER, new Float32Array(w), e.STATIC_DRAW);
     };
+
 function L(e, t, n, r, o) {
     let l = i.useRef(null);
     i.useEffect(() => {
@@ -131,7 +134,7 @@ function L(e, t, n, r, o) {
                         i.bindBuffer(i.ARRAY_BUFFER, y),
                         i.vertexAttribPointer(p, 2, i.FLOAT, !1, 0, 0);
                     let c = e.clientWidth / e.clientHeight,
-                        u = s.fN(s.vt(), O, c, 1, 2000),
+                        u = s.fN(s.vt(), O, c, 1, 2e3),
                         m = s.t5(s.vt(), v, I, S),
                         E = s.lw(s.vt(), u, m),
                         T = s.vt();
@@ -149,6 +152,7 @@ function L(e, t, n, r, o) {
             return (n = requestAnimationFrame(A)), () => cancelAnimationFrame(n);
         }, [r, o, e, t]);
 }
+
 function j(e) {
     let { emoji: t } = e,
         [n, a] = i.useState(null),

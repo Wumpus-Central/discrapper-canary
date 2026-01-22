@@ -39,6 +39,7 @@ var i = n(627968),
 let O = (0, f.Ld)(),
     B = (0, f.Ld)(),
     L = (0, T.xI)(c.A.IMPORT_BENEFITS_MODAL_ROLE_ICON_SIZE);
+
 function z(e) {
     var t;
     let { emojiId: n, emojiName: l, className: r } = e,
@@ -50,6 +51,7 @@ function z(e) {
         className: r,
     });
 }
+
 function D(e) {
     let { icon: t, children: n, checked: l, disabled: r = !1, onChange: s } = e,
         o = l || r;
@@ -95,6 +97,7 @@ function D(e) {
         ],
     });
 }
+
 function G(e) {
     let { title: t, selectAllText: n, benefits: l, dupeBenefits: r, selectedBenefits: a, onToggleBenefit: s } = e,
         o = l.every((e) => a.has(e));
@@ -162,6 +165,7 @@ function G(e) {
           })
         : null;
 }
+
 function P(e) {
     let {
             transitionState: t,
@@ -178,12 +182,14 @@ function P(e) {
         j = l.useMemo(() => u.filter(y.b1), [u]),
         p = l.useMemo(() => new Set(g.filter((e) => r.some((t) => t.ref_id === e.ref_id))), [g, r]),
         b = l.useMemo(() => new Set(j.filter((e) => a.some((t) => (0, d.A)(e, t)))), [a, j]);
+
     function v(e, t) {
         h((n) => {
             let i = new Set(n);
             return t ? i.add(e) : i.delete(e), i;
         });
     }
+
     function N(e) {
         e.preventDefault();
         let t = u.filter((e) => x.has(e));
@@ -198,7 +204,11 @@ function P(e) {
         children: (0, i.jsxs)(s.Modal, {
             transitionState: t,
             onClose: c,
-            title: E.intl.format(E.t["7zpiYL"], { tierName: n.name }).toString(),
+            title: E.intl
+                .format(E.t["7zpiYL"], {
+                    tierName: n.name,
+                })
+                .toString(),
             actions: [
                 {
                     variant: "secondary",
@@ -239,6 +249,7 @@ function P(e) {
         }),
     });
 }
+
 function F(e) {
     var t;
     let { guildId: n, role: l, channelCount: r, onSelect: a } = e,
@@ -303,17 +314,22 @@ function F(e) {
                     (0, i.jsx)(m.Text, {
                         color: "text-default",
                         variant: "text-sm/normal",
-                        children: E.intl.format(E.t["2KzH89"], { num: r }),
+                        children: E.intl.format(E.t["2KzH89"], {
+                            num: r,
+                        }),
                     }),
                 ],
             }),
             (0, i.jsx)("div", {
                 className: M.eF,
-                children: (0, i.jsx)(S.A, { direction: S.A.Directions.RIGHT }),
+                children: (0, i.jsx)(S.A, {
+                    direction: S.A.Directions.RIGHT,
+                }),
             }),
         ],
     });
 }
+
 function R(e) {
     let { guild: t, onSelect: n } = e,
         r = (0, o.bG)([_.A], () => _.A.getSortedRoles(t.id)),
@@ -374,6 +390,7 @@ function R(e) {
               children: E.intl.string(E.t.u09gKk),
           });
 }
+
 function H(e) {
     let { onClose: t, guildId: n, onSelect: l } = e,
         r = (0, o.bG)([C.A], () => C.A.getGuild(n));
@@ -407,6 +424,7 @@ function H(e) {
               ],
           });
 }
+
 function Q(e) {
     let { onClose: t, guildId: n, role: r, onCancel: a, onImport: s } = e,
         o = l.useRef(r);
@@ -428,6 +446,7 @@ function Q(e) {
         }),
         u = l.useMemo(() => (0, A.A)(c, d), [c, d]),
         [f, g] = l.useState(() => new Set(u.map((e) => e.id)));
+
     function j(e, t) {
         g((n) => {
             let i = new Set(n);
@@ -446,7 +465,9 @@ function Q(e) {
                     (0, i.jsx)(m.Heading, {
                         id: B,
                         variant: "heading-md/semibold",
-                        children: E.intl.format(E.t.iuPodG, { roleName: d.name }),
+                        children: E.intl.format(E.t.iuPodG, {
+                            roleName: d.name,
+                        }),
                     }),
                     (0, i.jsx)(m.s_y, {
                         "data-migration-pending": !0,
@@ -531,6 +552,7 @@ function Q(e) {
         ],
     });
 }
+
 function K(e) {
     let { transitionState: t, guildId: n, onClose: r, onImport: a } = e,
         [s, o] = l.useState();

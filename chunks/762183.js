@@ -1,4 +1,6 @@
-n.d(t, { K: () => i });
+n.d(t, {
+    K: () => i,
+});
 var r = n(253932);
 let i = () => {
     let e = r.Zt.useSetting(),

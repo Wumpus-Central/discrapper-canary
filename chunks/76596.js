@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var l = n(627968),
     r = n(64700),
     i = n(397927),
@@ -7,6 +9,7 @@ var l = n(627968),
     o = n(937773),
     c = n(512805),
     u = n(307731);
+
 function d(e) {
     let { className: t, emojiClassName: n, emoji: d, setEmoji: m, channel: p } = e,
         j = r.useRef(null),
@@ -39,7 +42,9 @@ function d(e) {
                         let { emoji: r, willClose: i } = e;
                         null != r &&
                             (null == r.id
-                                ? m({ name: null != (n = r.optionallyDiverseSequence) ? n : "" })
+                                ? m({
+                                      name: null != (n = r.optionallyDiverseSequence) ? n : "",
+                                  })
                                 : m({
                                       id: r.id,
                                       name: null != (l = r.originalName) ? l : r.name,

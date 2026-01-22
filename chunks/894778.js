@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var r = n(353640),
     l = n(499867),
     a = n(121894),
@@ -7,6 +9,7 @@ var r = n(353640),
     c = n(954571),
     s = n(315290),
     u = n(652215);
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -32,6 +35,7 @@ function d(e) {
     }
     return e;
 }
+
 function p(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -50,6 +54,7 @@ function p(e, t) {
         e
     );
 }
+
 function f(e, t) {
     if (null == e) return {};
     var n,
@@ -78,6 +83,7 @@ function f(e, t) {
             (r = n[l]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function b(e) {
     var t = (function (e, t) {
         if ("object" !== _(e) || null === e) return e;
@@ -91,11 +97,13 @@ function b(e) {
     })(e, "string");
     return "symbol" === _(t) ? t : String(t);
 }
+
 function _(e) {
     return e && "u" > typeof Symbol && e.constructor === Symbol ? "symbol" : typeof e;
 }
 let m = "UserFlowAnalyticsStore_current",
     S = "UserFlowAnalyticsStore";
+
 function N(e) {
     if (e === s.do.UNKNOWN) return null;
     let t = o.w.get("".concat(S, "-").concat(e));
@@ -119,6 +127,7 @@ let I = (0, r.v)()(
         },
     })),
 );
+
 function O(e, t) {
     let n = I.getState().flows,
         { [e]: r } = n,
@@ -141,6 +150,7 @@ function O(e, t) {
             });
         });
 }
+
 function T(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = e;
@@ -170,6 +180,7 @@ function T(e, t) {
                 });
             }));
 }
+
 function E() {
     return null != I.getState().activeFlow();
 }
@@ -184,7 +195,13 @@ I.subscribe(
                 let t = "".concat(S, "-").concat(e.type);
                 e.ended
                     ? (o.w.remove(t), o.w.remove(m))
-                    : (o.w.set("".concat(S, "-").concat(e.type), p(d({}, e), { version: 1 })), o.w.set(m, e.type));
+                    : (o.w.set(
+                          "".concat(S, "-").concat(e.type),
+                          p(d({}, e), {
+                              version: 1,
+                          }),
+                      ),
+                      o.w.set(m, e.type));
             })(e),
             c.default.track(
                 u.HAw.NUO_TRANSITION,
@@ -195,9 +212,11 @@ I.subscribe(
                     seconds_on_from_step:
                         "function" != typeof (null == (t = e.lastTimestamp) ? void 0 : t.getTime)
                             ? 0
-                            : (e.currentTimestamp.getTime() - e.lastTimestamp.getTime()) / 1000,
+                            : (e.currentTimestamp.getTime() - e.lastTimestamp.getTime()) / 1e3,
                 },
-                { flush: !0 },
+                {
+                    flush: !0,
+                },
             ),
             e.ended)
         ) {

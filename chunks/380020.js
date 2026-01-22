@@ -1,7 +1,11 @@
-n.d(t, { A: () => c }), n(896048);
+n.d(t, {
+    A: () => c,
+}),
+    n(896048);
 var r = n(73153),
     i = n(439372),
     a = n(461213);
+
 function s(e, t, n) {
     return (
         t in e
@@ -20,6 +24,7 @@ class o extends i.A {
         super(...e), s(this, "stores", new Map().set(a.A, l));
     }
 }
+
 function l() {
     r.h.dispatch({
         type: "SELF_PRESENCE_STORE_UPDATE",

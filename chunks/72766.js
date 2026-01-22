@@ -1,6 +1,6 @@
 e.exports = function (e) {
     return {
-        name: "Caché Object Script",
+        name: "Cach\xe9 Object Script",
         case_insensitive: !0,
         aliases: ["cls"],
         keywords:

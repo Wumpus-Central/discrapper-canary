@@ -21,6 +21,7 @@ var r = n(812729),
     h = n(70738),
     m = n(902822),
     g = n(266047);
+
 function E(e, t, n) {
     return (
         t in e
@@ -34,6 +35,7 @@ function E(e, t, n) {
         e
     );
 }
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -50,6 +52,7 @@ function b(e) {
     }
     return e;
 }
+
 function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -62,6 +65,7 @@ function y(e, t) {
     }
     return n;
 }
+
 function O(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -75,9 +79,11 @@ function O(e, t) {
 }
 let A = -1,
     v = new u.A("MemberSafetySearchManager");
+
 function S(e) {
     return "guild_".concat(e);
 }
+
 function I(e) {
     return {
         requestState: e,
@@ -91,24 +97,32 @@ function I(e) {
     };
 }
 let T = (0, s.v)((e) => ({}));
+
 function C(e, t) {
     let n = T.getState()[e];
     return (
         null == n && (n = I(1)),
         (n = b({}, n, t)),
         (0, o.r)(() => {
-            T.setState((t) => O(b({}, t), { [e]: n }));
+            T.setState((t) =>
+                O(b({}, t), {
+                    [e]: n,
+                }),
+            );
         }),
         n
     );
 }
+
 function N(e) {
     return T.getState()[e];
 }
+
 function R(e) {
     let t = N(e);
     return null == t && C(e, (t = I(1))), t;
 }
+
 function w(e) {
     (0, o.r)(() => {
         T.setState((t) => {
@@ -117,6 +131,7 @@ function w(e) {
         });
     });
 }
+
 function P(e, t, n, r, i) {
     let a = N(e);
     if ((null == a ? void 0 : a.requestState) === 2) {
@@ -133,6 +148,7 @@ function P(e, t, n, r, i) {
         sort: i,
     });
 }
+
 function D(e) {
     null != N(e) &&
         C(e, {
@@ -150,6 +166,7 @@ async function x(e) {
                 lastUpdated: Date.now(),
             });
 }
+
 function L(e) {
     C(e, {
         requestState: 4,
@@ -157,19 +174,29 @@ function L(e) {
         lastUpdated: Date.now(),
     });
 }
+
 function j(e) {
     w(S(e));
 }
+
 function M(e) {
     return null != e && e.length > 1;
 }
+
 function k(e) {
     let t = {},
         n = {},
         { query: r } = e;
     if (M(r)) {
         let [e, n] = (0, _.H)(r);
-        e.length > 0 && (t.usernames = { or_query: e }), n.length > 0 && (t.user_id = { or_query: n });
+        e.length > 0 &&
+            (t.usernames = {
+                or_query: e,
+            }),
+            n.length > 0 &&
+                (t.user_id = {
+                    or_query: n,
+                });
     }
     let {
             requireUnusualDmActivity: i,
@@ -178,13 +205,26 @@ function k(e) {
             requireUsernameQuarantined: o,
         } = e,
         l = {};
-    i && (l.unusual_dm_activity_until = { range: { gte: Date.now() - h.tX } }),
-        a && (l.communication_disabled_until = { range: { gte: Date.now() } }),
+    i &&
+        (l.unusual_dm_activity_until = {
+            range: {
+                gte: Date.now() - h.tX,
+            },
+        }),
+        a &&
+            (l.communication_disabled_until = {
+                range: {
+                    gte: Date.now(),
+                },
+            }),
         s && (l.unusual_account_activity = s),
         o && (l.automod_quarantined_username = o),
         Object.keys(l).length > 0 && (n.safety_signals = l);
     let { selectedRoleIds: c } = e;
-    c.size > 0 && (t.role_ids = { and_query: Array.from(c) });
+    c.size > 0 &&
+        (t.role_ids = {
+            and_query: Array.from(c),
+        });
     let { selectedJoinDateOption: u } = e;
     if (null != u.afterDate) {
         var d;
@@ -206,9 +246,15 @@ function k(e) {
         });
     }
     let { selectedSourceInviteCode: m } = e;
-    null != m && (t.source_invite_code = { or_query: [m] });
+    null != m &&
+        (t.source_invite_code = {
+            or_query: [m],
+        });
     let { selectedJoinSourceType: g } = e;
-    null != g && (t.join_source_type = { or_query: [g] });
+    null != g &&
+        (t.join_source_type = {
+            or_query: [g],
+        });
     let E = {
             or_query: n,
             and_query: t,
@@ -216,12 +262,15 @@ function k(e) {
         { selectedSort: y } = e;
     return null != y && (E.sort = y), E;
 }
+
 function U(e, t) {
     return null == t ? e : b({}, e, t);
 }
+
 function G(e, t) {
     return Math.floor(Math.max(e - 1, 0) / t);
 }
+
 function V(e) {
     let t = (0, p.n4)(e),
         n = e.pageSize * (e.currentPage - 1),
@@ -233,6 +282,7 @@ function V(e) {
         nextPageChunkNumber: G(i, t),
     };
 }
+
 function F(e, t) {
     var n;
     let { currentPageChunkNumber: r, previousPageChunkNumber: i, nextPageChunkNumber: a } = V(t),
@@ -255,6 +305,7 @@ function F(e, t) {
             return 1;
     }
 }
+
 function B(e, t, n) {
     var r, i, a, s, o, l;
     let c = F(e, n),
@@ -262,7 +313,12 @@ function B(e, t, n) {
         f = (0, p.n4)(n);
     switch (c) {
         case 0:
-            return [null, { limit: f }];
+            return [
+                null,
+                {
+                    limit: f,
+                },
+            ];
         case 1:
             return [
                 null != (r = t.cursor) ? r : null,
@@ -291,6 +347,7 @@ function B(e, t, n) {
             (0, d.xb)(c);
     }
 }
+
 function H(e, t) {
     let n = R(e);
     return i()(n.query, t);
@@ -325,12 +382,14 @@ async function Y(e) {
     }
     await x(o);
 }
+
 function W(e) {
     return T((t) => {
         var n;
         return (null == (n = t[S(e)]) ? void 0 : n.requestState) === 2;
     });
 }
+
 function K(e) {
     return T((t) => {
         var n;

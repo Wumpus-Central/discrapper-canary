@@ -1,9 +1,12 @@
-n.d(t, { K: () => s });
+n.d(t, {
+    K: () => s,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
     l = n(985018),
     a = n(400783);
+
 function s(e) {
     let { onDiscardApplication: t, onContinueApplication: n, guild: s } = e;
     return (0, r.jsxs)("div", {
@@ -21,7 +24,9 @@ function s(e) {
                 color: "text-strong",
                 children:
                     null != s
-                        ? l.intl.formatToPlainString(l.t.f5Jaw7, { guildName: s.name })
+                        ? l.intl.formatToPlainString(l.t.f5Jaw7, {
+                              guildName: s.name,
+                          })
                         : l.intl.string(l.t["0sTyEb"]),
             }),
             (0, r.jsxs)("div", {

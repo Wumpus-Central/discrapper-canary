@@ -1,5 +1,8 @@
-n.d(t, { N: () => i });
+n.d(t, {
+    N: () => i,
+});
 var r = n(601727);
+
 function i(e, t, n, r) {
     let { offsets: i, sizes: c } = a(t, n + 3),
         u = e.getUint8(i.offsetSize) >> 4;
@@ -17,6 +20,7 @@ function i(e, t, n, r) {
         length: r,
     };
 }
+
 function a(e, t) {
     let n = {
         item: {
@@ -36,7 +40,9 @@ function a(e, t) {
     return (
         (r.itemCount = t + 2),
         (r.items = r.itemCount + n.itemCount),
-        (r.item = { itemId: 0 }),
+        (r.item = {
+            itemId: 0,
+        }),
         (r.item.constructionMethod = r.item.itemId + n.item.itemId),
         (r.item.dataReferenceIndex = r.item.constructionMethod + n.item.constructionMethod),
         {
@@ -45,18 +51,23 @@ function a(e, t) {
         }
     );
 }
+
 function s(e, t, n) {
     if (1 === n || 2 === n) return 15 & e.getUint8(t);
 }
+
 function o(e, t, n) {
     return n < 2 ? e.getUint16(t) : 2 === n ? e.getUint32(t) : void 0;
 }
+
 function l(e, t, n, r, i, a, s, o) {
     if (void 0 === o) return [];
     let l = [],
         f = n.items;
     for (let n = 0; n < o; n++) {
-        let n = { extents: [] };
+        let n = {
+            extents: [],
+        };
         (n.itemId = c(e, f, t)),
             (f += r.item.itemId),
             (n.constructionMethod = 1 === t || 2 === t ? 15 & e.getUint16(f) : void 0),
@@ -78,12 +89,15 @@ function l(e, t, n, r, i, a, s, o) {
     }
     return l;
 }
+
 function c(e, t, n) {
     return n < 2 ? e.getUint16(t) : 2 === n ? e.getUint32(t) : void 0;
 }
+
 function u(e, t, n, r) {
     if ((1 === t || 2 === t) && r > 0) return d(e, n, r);
 }
+
 function d(e, t, n) {
     return 4 === n
         ? e.getUint32(t)

@@ -1,6 +1,9 @@
-n.d(t, { w: () => a });
+n.d(t, {
+    w: () => a,
+});
 var r = n(62447),
     i = n(985018);
+
 function a(e) {
     let t = (0, r.t)(e);
     if (null != e.privacy_policy_url && null != e.terms_of_service_url) {
@@ -26,5 +29,7 @@ function a(e) {
         });
     }
     let n = t ? i.t["8LemYv"] : i.t["3Ywek3"];
-    return i.intl.formatToPlainString(n, { application: e.name });
+    return i.intl.formatToPlainString(n, {
+        application: e.name,
+    });
 }

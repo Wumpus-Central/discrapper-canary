@@ -18,6 +18,7 @@ var i = n(192308),
     c = n(366098),
     u = n(652215),
     d = n(231723);
+
 function f(e, t, n) {
     return (
         t in e
@@ -31,6 +32,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -47,6 +49,7 @@ function p(e) {
     }
     return e;
 }
+
 function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -59,6 +62,7 @@ function _(e, t) {
     }
     return n;
 }
+
 function h(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -70,28 +74,49 @@ function h(e, t) {
         e
     );
 }
+
 function m(e, t) {
     (0, i.openModalLazy)(
         async () => {
             let { default: t } = await n.e("86317").then(n.bind(n, 467164));
-            return (n) => (0, r.jsx)(t, h(p({}, n), { channel: e }));
+            return (n) =>
+                (0, r.jsx)(
+                    t,
+                    h(p({}, n), {
+                        channel: e,
+                    }),
+                );
         },
-        { contextKey: t === u.BRT.POPOUT ? d.KX : d.SY },
+        {
+            contextKey: t === u.BRT.POPOUT ? d.KX : d.SY,
+        },
     );
 }
+
 function g(e, t) {
     (0, i.openModalLazy)(
         async () => {
             let { default: t } = await n.e("35934").then(n.bind(n, 25997));
-            return (n) => (0, r.jsx)(t, h(p({}, n), { channel: e }));
+            return (n) =>
+                (0, r.jsx)(
+                    t,
+                    h(p({}, n), {
+                        channel: e,
+                    }),
+                );
         },
-        { contextKey: t === u.BRT.POPOUT ? d.KX : d.SY },
+        {
+            contextKey: t === u.BRT.POPOUT ? d.KX : d.SY,
+        },
     );
 }
+
 function E(e) {}
+
 function b(e) {
     (0, a.iN)(e.id);
 }
+
 function y(e, t) {
     (0, i.openModalLazy)(async () => {
         let { default: i } = await n.e("34070").then(n.bind(n, 200629));
@@ -105,24 +130,36 @@ function y(e, t) {
             );
     });
 }
+
 function O(e, t) {
     (0, i.openModalLazy)(
         async () => {
             let { default: t } = await n.e("70102").then(n.bind(n, 118101));
-            return (n) => (0, r.jsx)(t, h(p({}, n), { channel: e }));
+            return (n) =>
+                (0, r.jsx)(
+                    t,
+                    h(p({}, n), {
+                        channel: e,
+                    }),
+                );
         },
-        { contextKey: t === u.BRT.POPOUT ? d.KX : d.SY },
+        {
+            contextKey: t === u.BRT.POPOUT ? d.KX : d.SY,
+        },
     );
 }
+
 function A(e) {
     let t = s.default.getId(),
         n = (0, c.G1)(e),
         r = (0, c.Gc)(e);
     return !o.Ay.isModerator(t, e) && (n > 0 || r > 0);
 }
+
 function v(e, t) {
     t !== e.id && (0, l.ek)(!0), b(e);
 }
+
 function S(e, t) {
     return (
         (0, i.openModalLazy)(async () => {

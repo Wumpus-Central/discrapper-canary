@@ -7,7 +7,7 @@ var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
-    o = n(432022),
+    o = n(108531),
     l = n(311907),
     c = n(397927),
     u = n(684013),
@@ -19,6 +19,7 @@ var r = n(627968),
     m = n(652215),
     g = n(985018),
     E = n(879716);
+
 function b(e, t, n) {
     return (
         t in e
@@ -32,6 +33,7 @@ function b(e, t, n) {
         e
     );
 }
+
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -48,6 +50,7 @@ function y(e) {
     }
     return e;
 }
+
 function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -60,6 +63,7 @@ function O(e, t) {
     }
     return n;
 }
+
 function A(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -71,6 +75,7 @@ function A(e, t) {
         e
     );
 }
+
 function v(e, t) {
     if (null == e) return {};
     var n,
@@ -87,6 +92,7 @@ function v(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function S(e, t) {
     if (null == e) return {};
     var n,
@@ -97,6 +103,7 @@ function S(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function I(e) {
     e.currentTarget.scrollTo(0, 0);
 }
@@ -152,6 +159,7 @@ let T = i.memo(function (e) {
         F = i.useCallback(() => {
             L(!1);
         }, []);
+
     function B() {
         return (0, r.jsx)(d.A, {
             className: E.r,
@@ -159,6 +167,7 @@ let T = i.memo(function (e) {
             "aria-label": g.intl.string(g.t.LnEgqX),
         });
     }
+
     function H() {
         let e = "function" == typeof y ? y(j, M) : y;
         return null != y
@@ -170,6 +179,7 @@ let T = i.memo(function (e) {
               })
             : null;
     }
+
     function Y() {
         return null == f && null == h
             ? null
@@ -201,6 +211,7 @@ let T = i.memo(function (e) {
                   ],
               });
     }
+
     function W() {
         return null == v
             ? null
@@ -216,13 +227,16 @@ let T = i.memo(function (e) {
                     children: v,
                 });
     }
+
     function K() {
         let e = null == C ? void 0 : C(j, M);
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)(o.animated.div, {
                     className: E.VM,
-                    style: { opacity: N },
+                    style: {
+                        opacity: N,
+                    },
                     children: [
                         W(),
                         (0, r.jsxs)("div", {
@@ -269,7 +283,13 @@ let T = i.memo(function (e) {
                     onMouseOver: V,
                     onMouseLeave: F,
                     onClick: b,
-                    className: s()(E.kL, { [E.vk]: null != b }, P),
+                    className: s()(
+                        E.kL,
+                        {
+                            [E.vk]: null != b,
+                        },
+                        P,
+                    ),
                     children: K(),
                 }),
             }),
@@ -277,6 +297,7 @@ let T = i.memo(function (e) {
         ],
     });
 });
+
 function C(e) {
     let {
         springs: { opacity: t, scale: n, transform: i, height: a },
@@ -300,6 +321,7 @@ function C(e) {
         children: u,
     });
 }
+
 function N(e) {
     let { observe: t, children: n } = e;
     return t
@@ -314,6 +336,7 @@ let R = {
     friction: 8,
     tension: 300,
 };
+
 function w() {
     let [e, t] = i.useState(!1),
         [n, r] = i.useState(!1),
@@ -334,6 +357,7 @@ function w() {
         }, []),
     };
 }
+
 function P(e) {
     let { notification: t, index: n, locked: a, pinned: s, transitionState: o, cleanUp: l } = e,
         {

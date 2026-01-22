@@ -5,6 +5,7 @@ n.d(t, {
     pE: () => a,
 });
 var r = n(73153);
+
 function l(e) {
     let { eventId: t, stageId: n } = e;
     (null != t || null != n) &&
@@ -14,18 +15,21 @@ function l(e) {
             stageId: n,
         });
 }
+
 function i(e) {
     r.h.dispatch({
         type: "UPCOMING_GUILD_EVENT_NOTICE_HIDE",
         eventId: e,
     });
 }
+
 function a(e) {
     r.h.dispatch({
         type: "UPCOMING_GUILD_EVENT_NOTICE_SEEN",
         guildEventId: e,
     });
 }
+
 function s(e) {
     r.h.dispatch({
         type: "EVENT_BANNER_DISMISS",

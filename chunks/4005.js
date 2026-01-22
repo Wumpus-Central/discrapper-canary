@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(627968),
     i = n(64700),
     a = n(158954),
@@ -7,6 +9,7 @@ var r = n(627968),
     l = n(827343),
     c = n(430452),
     u = n(985018);
+
 function d(e, t, n) {
     return (
         t in e
@@ -20,6 +23,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -39,9 +43,11 @@ function f(e) {
 let p = () => {
     let e = (0, s.bG)([c.A], () => c.A.isInteractionRequired(), []),
         t = i.useRef(null);
+
     function n() {
         null !== t.current && ((0, o.OoC)(t.current), (t.current = null));
     }
+
     function d() {
         l.A.interact();
     }

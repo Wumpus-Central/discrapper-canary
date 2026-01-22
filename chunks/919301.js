@@ -1,4 +1,6 @@
-n.d(t, { WT: () => S });
+n.d(t, {
+    WT: () => S,
+});
 var r = n(627968),
     i = n(64700),
     a = n(688810),
@@ -11,6 +13,7 @@ var r = n(627968),
     f = n(639149),
     p = n(941673),
     _ = n(818348);
+
 function h(e, t, n) {
     return (
         t in e
@@ -24,6 +27,7 @@ function h(e, t, n) {
         e
     );
 }
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -40,6 +44,7 @@ function m(e) {
     }
     return e;
 }
+
 function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -52,6 +57,7 @@ function g(e, t) {
     }
     return n;
 }
+
 function E(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -63,6 +69,7 @@ function E(e, t) {
         e
     );
 }
+
 function b(e, t) {
     if (null == e) return {};
     var n,
@@ -79,6 +86,7 @@ function b(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function y(e, t) {
     if (null == e) return {};
     var n,
@@ -90,7 +98,9 @@ function y(e, t) {
     return i;
 }
 let O = (0, s.Mz)(),
-    A = { renderStep: (e) => (0, r.jsx)(d.M, m({}, e)) },
+    A = {
+        renderStep: (e) => (0, r.jsx)(d.M, m({}, e)),
+    },
     v = (e) => {
         let { renderStep: t, paymentModalStepProps: n } = e,
             { handleStepChange: r, handleClose: a } = n,
@@ -104,7 +114,9 @@ let O = (0, s.Mz)(),
                 () => ({
                     layout: "custom-step-body",
                     renderStepBody: s,
-                    primaryCTAButtonProps: { disabled: o },
+                    primaryCTAButtonProps: {
+                        disabled: o,
+                    },
                 }),
                 [s, o],
             ),
@@ -212,8 +224,12 @@ let O = (0, s.Mz)(),
             });
         },
         UnifiedCheckoutStepDefinitions: {
-            [c.pn.GIFT_CUSTOMIZATION]: { StepController: v },
-            [c.pn.REVIEW]: { legacyStepConfig: !0 },
+            [c.pn.GIFT_CUSTOMIZATION]: {
+                StepController: v,
+            },
+            [c.pn.REVIEW]: {
+                legacyStepConfig: !0,
+            },
         },
         CUSTOM_CONFIRM_STEP_CONFIG: A,
     };

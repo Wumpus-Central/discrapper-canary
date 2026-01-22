@@ -1,8 +1,11 @@
-n.d(t, { p: () => o });
+n.d(t, {
+    p: () => o,
+});
 var r = n(73153),
     i = n(954571),
     a = n(312671),
     s = n(652215);
+
 function o(e, t) {
     i.default.track(s.HAw.SOUNDPACK_UPDATED, {
         soundpack: e,

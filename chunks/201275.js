@@ -8,6 +8,7 @@ var r = n(64700),
     a = n(317525),
     s = n(71393),
     o = n(376304);
+
 function l(e, t) {
     var n;
     if (null == e) return;
@@ -21,6 +22,7 @@ function l(e, t) {
             unicodeEmoji: i,
         };
 }
+
 function c(e) {
     let { guildId: t, roleId: n, size: c = 20, role: u, guild: d } = e,
         { guild: f, role: p } = (0, i.cf)(
@@ -37,6 +39,7 @@ function c(e) {
         if (null != _ && null != h && (0, o.fm)(_, h)) return l(h, c);
     }, [_, h, c]);
 }
+
 function u(e, t) {
     let n = (0, i.bG)([s.A], () => s.A.getGuild(e));
     if (null != n && (0, o.fm)(n, t)) return l(t);

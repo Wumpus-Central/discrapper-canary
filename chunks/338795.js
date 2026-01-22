@@ -1,4 +1,6 @@
-i.d(e, { J: () => b });
+i.d(e, {
+    J: () => b,
+});
 var n = i(934551),
     l = i(98207),
     s = i(631670),
@@ -19,14 +21,18 @@ var n = i(934551),
 let O = (0, r.dT)(T.X.ACCOUNT_STANDING_TAB, {
         getTitle: () => N.intl.string(N.t["Vov/9o"]),
         onItemSelect: () => {
-            o.default.track(c.HAw.MY_ACCOUNT_PAGE_TAB_NAVIGATE, { target_tab_name: S.D.STANDING });
+            o.default.track(c.HAw.MY_ACCOUNT_PAGE_TAB_NAVIGATE, {
+                target_tab_name: S.D.STANDING,
+            });
         },
         buildLayout: () => [I.Q],
     }),
     C = (0, r.dT)(T.X.ACCOUNT_SECURITY_TAB, {
         getTitle: () => N.intl.string(N.t.Am9YHi),
         onItemSelect: () => {
-            o.default.track(c.HAw.MY_ACCOUNT_PAGE_TAB_NAVIGATE, { target_tab_name: S.D.SECURITY });
+            o.default.track(c.HAw.MY_ACCOUNT_PAGE_TAB_NAVIGATE, {
+                target_tab_name: S.D.SECURITY,
+            });
         },
         buildLayout: () => [d.P, E.o, _.s],
     }),

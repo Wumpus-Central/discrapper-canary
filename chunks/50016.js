@@ -1,4 +1,6 @@
-n.d(t, { W: () => o });
+n.d(t, {
+    W: () => o,
+});
 var r = n(852015),
     i = n(124651),
     a = n(716115),
@@ -30,7 +32,15 @@ class o {
             let l = t,
                 c = o.repeat,
                 u = o.localName;
-            switch ((o.oneof && (l = l[o.oneof]).oneofKind !== u && (l = t[o.oneof] = { oneofKind: u }), o.kind)) {
+            switch (
+                (o.oneof &&
+                    (l = l[o.oneof]).oneofKind !== u &&
+                    (l = t[o.oneof] =
+                        {
+                            oneofKind: u,
+                        }),
+                o.kind)
+            ) {
                 case "scalar":
                 case "enum":
                     let d = "enum" == o.kind ? i.LN.INT32 : o.T,

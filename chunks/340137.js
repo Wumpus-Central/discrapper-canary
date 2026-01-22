@@ -1,4 +1,7 @@
-n.d(t, { A: () => E }), n(896048);
+n.d(t, {
+    A: () => E,
+}),
+    n(896048);
 var r = n(554146),
     i = n(406935),
     a = n(451988),
@@ -9,6 +12,7 @@ var r = n(554146),
     u = n(594061),
     d = n(461213),
     f = n(652215);
+
 function p(e, t, n) {
     return (
         t in e
@@ -71,14 +75,22 @@ class g extends s.A {
                               () => {
                                   (0, o.A)({
                                       nextStatus: f.clD.ONLINE,
-                                      analyticsContext: { location: { object: f.ZSU.CUSTOM_STATUS_MANAGER } },
+                                      analyticsContext: {
+                                          location: {
+                                              object: f.ZSU.CUSTOM_STATUS_MANAGER,
+                                          },
+                                      },
                                   });
                               },
                               !0,
                           )
                         : ((0, o.A)({
                               nextStatus: f.clD.ONLINE,
-                              analyticsContext: { location: { object: f.ZSU.CUSTOM_STATUS_MANAGER } },
+                              analyticsContext: {
+                                  location: {
+                                      object: f.ZSU.CUSTOM_STATUS_MANAGER,
+                                  },
+                              },
                           }),
                           _.stop());
                 } else null != _ && _.stop();
@@ -89,7 +101,9 @@ class g extends s.A {
                     u.wc.updateAsync(
                         "status",
                         (e) => {
-                            e.statusCreatedAtMs = i.ol.create({ value: "".concat(Date.now()) });
+                            e.statusCreatedAtMs = i.ol.create({
+                                value: "".concat(Date.now()),
+                            });
                         },
                         u.Sb.INFREQUENT_USER_ACTION,
                     );

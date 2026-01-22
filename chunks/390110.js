@@ -10,5 +10,7 @@ r(
         enumerable: !0,
         forced: i.setImmediate !== o,
     },
-    { setImmediate: o },
+    {
+        setImmediate: o,
+    },
 );

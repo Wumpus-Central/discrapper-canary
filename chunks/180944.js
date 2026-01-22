@@ -5,6 +5,7 @@ n.d(t, {
     n(65821);
 var r = n(860407),
     i = n(367973);
+
 function a(e, t, n) {
     return (
         t in e
@@ -18,6 +19,7 @@ function a(e, t, n) {
         e
     );
 }
+
 function s(e, t) {
     return 0 === t.length
         ? e
@@ -27,6 +29,7 @@ function s(e, t) {
               generation: e.generation,
           };
 }
+
 function o(e, t) {
     return 0 === t.length ? e : e.map((e) => s(e, t));
 }
@@ -36,7 +39,14 @@ class l {
     }
     async get(e) {
         var t;
-        return null != (t = (await this.getMany(e, { limit: 1 }))[0]) ? t : null;
+        return null !=
+            (t = (
+                await this.getMany(e, {
+                    limit: 1,
+                })
+            )[0])
+            ? t
+            : null;
     }
     getMany() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],

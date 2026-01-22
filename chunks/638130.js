@@ -1,4 +1,6 @@
-n.d(t, { f: () => h });
+n.d(t, {
+    f: () => h,
+});
 var r = n(627968);
 n(64700);
 var i = n(444802),
@@ -12,6 +14,7 @@ var i = n(444802),
     f = n(652215),
     p = n(985018),
     _ = n(456144);
+
 function h() {
     let e = (0, i.WX)(),
         t = [
@@ -34,7 +37,9 @@ function h() {
         children: [
             (0, r.jsx)(c._, {
                 header: p.intl.string(p.t["Hj/But"]),
-                description: p.intl.format(p.t.dliU4j, { learnMoreLink: a.A.getArticleURL(e) }),
+                description: p.intl.format(p.t.dliU4j, {
+                    learnMoreLink: a.A.getArticleURL(e),
+                }),
             }),
             (0, r.jsx)(s.A, {
                 parentSetting: d.H.CONTENT_SOCIAL,

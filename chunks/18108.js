@@ -1,4 +1,6 @@
-n.d(t, { g: () => o });
+n.d(t, {
+    g: () => o,
+});
 let r = (e, t) => {
         let n = i(e, t);
         if (n > 0) {
@@ -53,6 +55,7 @@ let r = (e, t) => {
         for (; r < n; r++) if (e[r] !== t[r]) return r;
         return ++r;
     };
+
 function o(e, t, n) {
     let { caseSensitive: i = !1 } = null != n ? n : {};
     return i ? r(e, t) : r(e.toLowerCase(), t.toLowerCase());

@@ -1,4 +1,7 @@
-n.d(t, { A: () => _ }), n(228524);
+n.d(t, {
+    A: () => _,
+}),
+    n(228524);
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -13,7 +16,9 @@ var i = n(503698),
 let p = (e) => {
         let { header: t, description: n, icon: i, inModal: s } = e;
         return (0, r.jsxs)("div", {
-            className: a()(d.nM, f.QB, { [d.zE]: s }),
+            className: a()(d.nM, f.QB, {
+                [d.zE]: s,
+            }),
             children: [
                 (0, r.jsx)("div", {
                     className: d.zc,
@@ -78,31 +83,41 @@ let p = (e) => {
                 (0, r.jsx)(p, {
                     header: m,
                     description: g,
-                    icon: (0, r.jsx)(s.ChatIcon, { size: "md" }),
+                    icon: (0, r.jsx)(s.ChatIcon, {
+                        size: "md",
+                    }),
                     inModal: t,
                 }),
                 (0, r.jsx)(p, {
                     header: u.intl.string(c.default.GNs2ZH),
                     description: u.intl.string(c.default.Ief2xc),
-                    icon: (0, r.jsx)(o._jp, { size: "md" }),
+                    icon: (0, r.jsx)(o._jp, {
+                        size: "md",
+                    }),
                     inModal: t,
                 }),
                 (0, r.jsx)(p, {
                     header: u.intl.string(c.default.PjM3r5),
                     description: E,
-                    icon: (0, r.jsx)(o.BFk, { size: "md" }),
+                    icon: (0, r.jsx)(o.BFk, {
+                        size: "md",
+                    }),
                     inModal: t,
                 }),
                 (0, r.jsx)(p, {
                     header: b,
                     description: y,
-                    icon: (0, r.jsx)(s.FlagIcon, { size: "md" }),
+                    icon: (0, r.jsx)(s.FlagIcon, {
+                        size: "md",
+                    }),
                     inModal: t,
                 }),
                 (0, r.jsx)(p, {
                     header: u.intl.string(c.default.UCuHM8),
                     description: O,
-                    icon: (0, r.jsx)(s.SettingsIcon, { size: "md" }),
+                    icon: (0, r.jsx)(s.SettingsIcon, {
+                        size: "md",
+                    }),
                     inModal: t,
                 }),
                 (0, r.jsx)(o.Text, {

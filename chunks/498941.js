@@ -1,4 +1,6 @@
-t.d(e, { A: () => n });
+t.d(e, {
+    A: () => n,
+});
 var i = {
     lessThanXSeconds: {
         one: "bir saniyeden az",
@@ -26,8 +28,8 @@ var i = {
         other: "{{count}} saat",
     },
     xDays: {
-        one: "1 gün",
-        other: "{{count}} gün",
+        one: "1 g\xfcn",
+        other: "{{count}} g\xfcn",
     },
     aboutXWeeks: {
         one: "yaklaşık 1 hafta",
@@ -70,6 +72,6 @@ let n = function (a, e, t) {
         null != t && t.addSuffix)
     )
         if (t.comparison && t.comparison > 0) return n + " sonra";
-        else return n + " önce";
+        else return n + " \xf6nce";
     return n;
 };

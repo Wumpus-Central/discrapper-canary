@@ -1,4 +1,13 @@
-n.d(t, { A: () => _ }), n(896048), n(693327), n(554719), n(680155), n(323874), n(14289), n(35956);
+n.d(t, {
+    A: () => _,
+}),
+    n(896048),
+    n(693327),
+    n(554719),
+    n(680155),
+    n(323874),
+    n(14289),
+    n(35956);
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -14,6 +23,7 @@ var i = n(397927),
     h = n(546983),
     A = n(652215),
     g = n(985018);
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -39,6 +49,7 @@ function m(e) {
     }
     return e;
 }
+
 function b(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -98,7 +109,14 @@ let _ = (0, f.A)(
                     let { clientId: s, location: o } = l;
                     if (null == s || s === n) {
                         if (((D = !0), null == o)) {
-                            t(new p.A({ errorCode: A.Lw6.OAUTH2_ERROR }, "OAuth2 Error: No location provided")),
+                            t(
+                                new p.A(
+                                    {
+                                        errorCode: A.Lw6.OAUTH2_ERROR,
+                                    },
+                                    "OAuth2 Error: No location provided",
+                                ),
+                            ),
                                 a.lock();
                             return;
                         }
@@ -106,7 +124,16 @@ let _ = (0, f.A)(
                             ? a.lock()
                             : null == new URL(o).searchParams.get("error")
                               ? (0, i.qfG)(
-                                    (e) => (0, r.jsx)(c.Sm, m({ application: R }, e)),
+                                    (e) =>
+                                        (0, r.jsx)(
+                                            c.Sm,
+                                            m(
+                                                {
+                                                    application: R,
+                                                },
+                                                e,
+                                            ),
+                                        ),
                                     {
                                         onCloseCallback: () => {
                                             a.lock();
@@ -182,7 +209,14 @@ let _ = (0, f.A)(
                     onCloseCallback: () => {
                         k(),
                             D ||
-                                (t(new p.A({ errorCode: A.Lw6.OAUTH2_ERROR }, "User cancelled authorization")),
+                                (t(
+                                    new p.A(
+                                        {
+                                            errorCode: A.Lw6.OAUTH2_ERROR,
+                                        },
+                                        "User cancelled authorization",
+                                    ),
+                                ),
                                 a.lock());
                     },
                 },

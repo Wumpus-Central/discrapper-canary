@@ -14,6 +14,7 @@ var r = n(627968),
     d = n(830215),
     f = n(287809),
     p = n(985018);
+
 function _(e, t, n) {
     return (
         t in e
@@ -27,6 +28,7 @@ function _(e, t, n) {
         e
     );
 }
+
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -43,12 +45,15 @@ function h(e) {
     }
     return e;
 }
+
 function m(e) {
     return d.A.verifyResend()
         .then(() => {
             (0, c.A)({
                 title: p.intl.string(p.t.LykQYk),
-                subtitle: p.intl.format(p.t.azKEPy, { email: e.email }),
+                subtitle: p.intl.format(p.t.azKEPy, {
+                    email: e.email,
+                }),
             });
         })
         .catch((e) => {
@@ -76,6 +81,7 @@ function m(e) {
                 );
         });
 }
+
 function g(e) {
     let { size: t, variant: n } = e,
         a = (0, l.bG)([f.default], () => f.default.getCurrentUser());

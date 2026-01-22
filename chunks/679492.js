@@ -12,6 +12,7 @@ var r = n(627968),
     o = n(451988),
     l = n(8925);
 let c = i.createContext(void 0);
+
 function u(e) {
     let { value: t, children: n } = e;
     return (0, r.jsx)(c.Provider, {
@@ -19,6 +20,7 @@ function u(e) {
         children: n,
     });
 }
+
 function d() {
     let [e, t] = i.useState(null),
         [n, r] = i.useState(null),
@@ -67,9 +69,11 @@ function d() {
         )
     );
 }
+
 function f() {
     return i.useContext(c);
 }
+
 function p() {
     let e = f();
     return (

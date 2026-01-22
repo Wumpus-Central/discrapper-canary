@@ -1,7 +1,10 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 var r = n(294384),
     l = n(998418),
     i = n(568065);
+
 function a(e, t) {
     let n = (0, l.Ay)(e, t),
         a = n.type !== i.b_.INACTIVE,

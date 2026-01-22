@@ -1,4 +1,8 @@
-n.d(t, { e: () => w }), n(896048), n(733351);
+n.d(t, {
+    e: () => w,
+}),
+    n(896048),
+    n(733351);
 var r = n(627968),
     i = n(64700),
     a = n(310784),
@@ -18,6 +22,7 @@ var r = n(627968),
     b = n(520650),
     y = n(985018),
     O = n(217590);
+
 function A() {
     return (0, r.jsx)("div", {
         className: O.wG,
@@ -32,15 +37,22 @@ let v = (0, c.Fe)({
     }),
     S = 5,
     I = "#000000";
+
 function T(e, t) {
     return e.length < 1 ? 0 : (t / (e.length - 1)) * 80 + 10;
 }
+
 function C(e) {
     let { colors: t, selectedIndex: n, onColorSelect: a } = e,
         [s, o] = i.useMemo(() => {
             let e = t.map((e, n) => T(t, n)),
                 n = t.map((t, n) => "".concat(t, " ").concat(e[n], "%")).join(", ");
-            return [e, { background: "linear-gradient(to right, ".concat(n, ")") }];
+            return [
+                e,
+                {
+                    background: "linear-gradient(to right, ".concat(n, ")"),
+                },
+            ];
         }, [t]);
     return (0, r.jsx)("div", {
         className: O.wS,
@@ -53,18 +65,24 @@ function C(e) {
                 {
                     children: [
                         (0, r.jsx)(_.DUT, {
-                            className: l()(O.pX, { [O.wH]: c }),
+                            className: l()(O.pX, {
+                                [O.wH]: c,
+                            }),
                             style: {
                                 left: "".concat(o, "%"),
                                 backgroundColor: e,
                             },
                             onClick: () => a(t),
-                            children: (0, r.jsx)("div", { className: O.Px }),
+                            children: (0, r.jsx)("div", {
+                                className: O.Px,
+                            }),
                         }),
                         c &&
                             (0, r.jsx)("div", {
                                 className: O.gQ,
-                                style: { left: "".concat(o, "%") },
+                                style: {
+                                    left: "".concat(o, "%"),
+                                },
                             }),
                     ],
                 },
@@ -73,20 +91,28 @@ function C(e) {
         }),
     });
 }
+
 function N(e) {
     let { color: t } = e,
-        n = i.useMemo(() => ({ backgroundColor: (0, u.qt)(t) ? t : I }), [t]);
+        n = i.useMemo(
+            () => ({
+                backgroundColor: (0, u.qt)(t) ? t : I,
+            }),
+            [t],
+        );
     return (0, r.jsx)("div", {
         className: O.ld,
         style: n,
         "aria-label": "Color preview",
     });
 }
+
 function R(e) {
     if (!(0, u.qt)(e)) return e;
     let t = s()(e);
     return t.set("hsl.h", (t.get("hsl.h") + 15) % 360).hex();
 }
+
 function w(e) {
     let { value: t, onChange: n, className: a, colors: s, setColors: o } = e,
         c = (0, h.A)(),
@@ -162,7 +188,9 @@ function w(e) {
             (0, r.jsxs)("div", {
                 className: O.Xr,
                 children: [
-                    (0, r.jsx)(N, { color: T }),
+                    (0, r.jsx)(N, {
+                        color: T,
+                    }),
                     (0, r.jsx)("input", {
                         className: O.Im,
                         value: T.toUpperCase(),

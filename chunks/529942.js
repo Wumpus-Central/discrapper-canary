@@ -22,6 +22,7 @@ var r = n(73153),
     h = n(209700),
     m = n(652215),
     g = n(746080);
+
 function E(e, t, n) {
     return (
         t in e
@@ -35,6 +36,7 @@ function E(e, t, n) {
         e
     );
 }
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -51,6 +53,7 @@ function b(e) {
     }
     return e;
 }
+
 function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -63,6 +66,7 @@ function y(e, t) {
     }
     return n;
 }
+
 function O(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -74,12 +78,21 @@ function O(e, t) {
         e
     );
 }
+
 function A(e, t) {
     p.default.track(
         m.HAw.VIEW_AS_ROLES_SELECTED,
-        O(b({ num_roles: Object.keys(t.roles).length }, (0, i.H$)(e)), {
-            is_viewing_as_member: t.type === h._.NEW_MEMBER,
-        }),
+        O(
+            b(
+                {
+                    num_roles: Object.keys(t.roles).length,
+                },
+                (0, i.H$)(e),
+            ),
+            {
+                is_viewing_as_member: t.type === h._.NEW_MEMBER,
+            },
+        ),
     ),
         r.h.dispatch({
             type: "IMPERSONATE_UPDATE",
@@ -88,15 +101,24 @@ function A(e, t) {
         }),
         I(e);
 }
+
 function v(e, t) {
     let n = _.A.getData(e);
     null != n &&
         n.type === t.type &&
         (p.default.track(
             m.HAw.VIEW_AS_ROLES_SELECTED,
-            O(b({ num_roles: Object.keys(n.roles).length }, (0, i.H$)(e)), {
-                is_viewing_as_member: n.type === h._.NEW_MEMBER,
-            }),
+            O(
+                b(
+                    {
+                        num_roles: Object.keys(n.roles).length,
+                    },
+                    (0, i.H$)(e),
+                ),
+                {
+                    is_viewing_as_member: n.type === h._.NEW_MEMBER,
+                },
+            ),
         ),
         r.h.dispatch({
             type: "IMPERSONATE_UPDATE",
@@ -105,12 +127,14 @@ function v(e, t) {
         }),
         I(e));
 }
+
 function S(e) {
     r.h.dispatch({
         type: "IMPERSONATE_STOP",
         guildId: e,
     });
 }
+
 function I(e) {
     let t = d.A.getChannelId(e),
         n = s.A.getChannel(t);
@@ -119,6 +143,7 @@ function I(e) {
         null != t && (0, a.pX)(m.BVt.CHANNEL(e, t.id));
     }
 }
+
 function T(e, t) {
     let n = [...o.Ay.getSelectableChannelIds(e), ...o.Ay.getVocalChannelIds(e)],
         r = Array.from(t);
@@ -130,6 +155,7 @@ function T(e, t) {
         return i.length > 0 && C(e, i, []), !1;
     });
 }
+
 function C(e, t, n) {
     let r = new Set(f.Ay.getOptedInChannels(e));
     t.forEach((e) => r.add(e)),
@@ -139,6 +165,7 @@ function C(e, t, n) {
             optInChannels: r,
         });
 }
+
 function N(e, t) {
     T(e, t);
     let n = {};
@@ -148,6 +175,15 @@ function N(e, t) {
         roles: n,
     });
 }
+
 function R(e, t) {
-    v(e, b({ type: h._.NEW_MEMBER }, t));
+    v(
+        e,
+        b(
+            {
+                type: h._.NEW_MEMBER,
+            },
+            t,
+        ),
+    );
 }

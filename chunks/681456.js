@@ -12,27 +12,39 @@ var r = "dnd-core/ADD_SOURCE",
     i = "dnd-core/ADD_TARGET",
     a = "dnd-core/REMOVE_SOURCE",
     s = "dnd-core/REMOVE_TARGET";
+
 function o(e) {
     return {
         type: r,
-        payload: { sourceId: e },
+        payload: {
+            sourceId: e,
+        },
     };
 }
+
 function l(e) {
     return {
         type: i,
-        payload: { targetId: e },
+        payload: {
+            targetId: e,
+        },
     };
 }
+
 function c(e) {
     return {
         type: a,
-        payload: { sourceId: e },
+        payload: {
+            sourceId: e,
+        },
     };
 }
+
 function u(e) {
     return {
         type: s,
-        payload: { targetId: e },
+        payload: {
+            targetId: e,
+        },
     };
 }

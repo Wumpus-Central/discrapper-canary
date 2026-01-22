@@ -1,5 +1,8 @@
 let r;
-n.d(t, { A: () => k }), n(896048);
+n.d(t, {
+    A: () => k,
+}),
+    n(896048);
 var i,
     a = n(311907),
     s = n(506774),
@@ -13,6 +16,7 @@ var i,
     _ = n(461213),
     h = n(531685),
     m = n(652215);
+
 function g(e, t, n) {
     return (
         t in e
@@ -35,6 +39,7 @@ let E = "IncomingCallStore",
     S = new Map(),
     I = new Set(),
     T = !1;
+
 function C() {
     let e = h.A.windowSize();
     return null != r && r.x + b < e.width && r.y + y < e.height
@@ -44,10 +49,12 @@ function C() {
               y: e.height / 2 - y / 2,
           };
 }
+
 function N(e) {
     if (null == e || null == S.get(e)) return !1;
     S.delete(e), (I = new Set(I)).delete(e);
 }
+
 function R(e) {
     let { channelId: t, ringing: n } = e;
     if (
@@ -75,6 +82,7 @@ function R(e) {
     }
     return !!I.has(t) && !r && N(t);
 }
+
 function w(e) {
     let { channelId: t } = e;
     return (
@@ -87,10 +95,12 @@ function w(e) {
         N(t)
     );
 }
+
 function P(e) {
     let { channelId: t } = e;
     return N(t);
 }
+
 function D(e) {
     let { x: t, y: n } = e;
     return (
@@ -102,13 +112,16 @@ function D(e) {
         !1
     );
 }
+
 function x(e) {
     let { channel: t } = e;
     return N(t.id);
 }
+
 function L() {
     T = _.A.getStatus() === m.clD.DND || c.NO.getSetting();
 }
+
 function j() {
     let e = f.default.getId();
     I.forEach((t) => {

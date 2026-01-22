@@ -1,4 +1,7 @@
-n.d(t, { A: () => w }), n(228524);
+n.d(t, {
+    A: () => w,
+}),
+    n(228524);
 var r = n(627968),
     i = n(503698),
     a = n.n(i),
@@ -22,6 +25,7 @@ var r = n(627968),
     v = n(271469),
     S = n(985018),
     I = n(410758);
+
 function T(e, t, n) {
     return (
         t in e
@@ -35,6 +39,7 @@ function T(e, t, n) {
         e
     );
 }
+
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -51,6 +56,7 @@ function C(e) {
     }
     return e;
 }
+
 function N(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -63,6 +69,7 @@ function N(e, t) {
     }
     return n;
 }
+
 function R(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -74,6 +81,7 @@ function R(e, t) {
         e
     );
 }
+
 function w() {
     let e = (0, E.h)(O.A.testModeApplicationId),
         { analyticsLocations: t } = (0, g.Ay)(m.A.SDK_DEBUG_TOOLS),
@@ -84,7 +92,9 @@ function w() {
             chosenFlow: u,
             connectionApp: p,
             debug: { isSubscribedToAuthorizeRequest: T, oauth2Token: C, hasConnectionEntrypointUrl: N, validFlows: R },
-        } = (0, A.RD)(e, { debug: !0 }),
+        } = (0, A.RD)(e, {
+            debug: !0,
+        }),
         w = (0, c.bG)([y.A], () => null != e && y.A.isConnected(e.id)),
         x = (0, c.bG)([_.Ay], () => _.Ay.getSelfEmbeddedActivities()),
         L = "authorization_debug",
@@ -103,13 +113,17 @@ function w() {
                             className: I.if,
                             children: (0, r.jsx)(l.DZT, {
                                 variant: "heading-lg/extrabold",
-                                children: S.intl.format(v.default.KoK4J9, { appName: "" }),
+                                children: S.intl.format(v.default.KoK4J9, {
+                                    appName: "",
+                                }),
                             }),
                         }),
                     }),
                     (0, r.jsx)("div", {
                         className: I.rf,
-                        children: (0, r.jsx)(l.y$y, { className: I.u1 }),
+                        children: (0, r.jsx)(l.y$y, {
+                            className: I.u1,
+                        }),
                     }),
                 ],
             }),
@@ -124,7 +138,9 @@ function w() {
                                 className: I.if,
                                 children: (0, r.jsx)(l.DZT, {
                                     variant: "heading-lg/extrabold",
-                                    children: S.intl.format(v.default.KoK4J9, { appName: e.name }),
+                                    children: S.intl.format(v.default.KoK4J9, {
+                                        appName: e.name,
+                                    }),
                                 }),
                             }),
                             (0, r.jsx)(l.K0, {
@@ -149,7 +165,9 @@ function w() {
                                     (0, r.jsx)(
                                         d.VQ0.Item,
                                         {
-                                            className: a()(I.Mf, { [I.wH]: e.id === L }),
+                                            className: a()(I.Mf, {
+                                                [I.wH]: e.id === L,
+                                            }),
                                             id: e.id,
                                             "aria-label": e.name,
                                             children: e.name,
@@ -224,7 +242,10 @@ function w() {
                             (0, r.jsx)(l.$nd, {
                                 variant: "secondary",
                                 disabled: !n || i,
-                                onClick: () => s({ analyticsLocations: t }),
+                                onClick: () =>
+                                    s({
+                                        analyticsLocations: t,
+                                    }),
                                 text: S.intl.string(v.default.w0pN4R),
                                 fullWidth: !0,
                             }),
@@ -252,9 +273,12 @@ function w() {
     return (0, r.jsx)("div", {
         "data-app-right-panel": !0,
         className: I.nE,
-        children: (0, r.jsx)(l.Fmo, { children: null != e ? k() : M() }),
+        children: (0, r.jsx)(l.Fmo, {
+            children: null != e ? k() : M(),
+        }),
     });
 }
+
 function P(e) {
     let { overallStatus: t, name: n, steps: i, isChosen: a } = e;
     return (0, r.jsxs)("div", {
@@ -277,6 +301,7 @@ function P(e) {
         ],
     });
 }
+
 function D(e) {
     let { text: t, status: n } = e;
     return (0, r.jsxs)("div", {
@@ -287,16 +312,21 @@ function D(e) {
                 color: "text-subtle",
                 children: t,
             }),
-            (0, r.jsx)(L, { status: n }),
+            (0, r.jsx)(L, {
+                status: n,
+            }),
         ],
     });
 }
+
 function x(e) {
     let { status: t, text: n, description: i, learnMoreLink: a } = e;
     return (0, r.jsxs)("div", {
         className: I.jf,
         children: [
-            (0, r.jsx)(L, { status: t }),
+            (0, r.jsx)(L, {
+                status: t,
+            }),
             (0, r.jsxs)("div", {
                 className: I.bc,
                 children: [
@@ -321,6 +351,7 @@ function x(e) {
         ],
     });
 }
+
 function L(e) {
     let { status: t } = e,
         n = {
@@ -329,14 +360,39 @@ function L(e) {
         };
     switch (t) {
         case 0:
-            return (0, r.jsx)(l.yr3, R(C({}, n), { color: u.A.colors.ICON_FEEDBACK_POSITIVE }));
+            return (0, r.jsx)(
+                l.yr3,
+                R(C({}, n), {
+                    color: u.A.colors.ICON_FEEDBACK_POSITIVE,
+                }),
+            );
         case 1:
-            return (0, r.jsx)(l.aXh, R(C({}, n), { color: u.A.colors.ICON_FEEDBACK_CRITICAL }));
+            return (0, r.jsx)(
+                l.aXh,
+                R(C({}, n), {
+                    color: u.A.colors.ICON_FEEDBACK_CRITICAL,
+                }),
+            );
         case 2:
-            return (0, r.jsx)(l.Uzd, R(C({}, n), { color: u.A.colors.ICON_FEEDBACK_POSITIVE }));
+            return (0, r.jsx)(
+                l.Uzd,
+                R(C({}, n), {
+                    color: u.A.colors.ICON_FEEDBACK_POSITIVE,
+                }),
+            );
         case 3:
-            return (0, r.jsx)(l.id, R(C({}, n), { color: u.A.colors.ICON_FEEDBACK_WARNING }));
+            return (0, r.jsx)(
+                l.id,
+                R(C({}, n), {
+                    color: u.A.colors.ICON_FEEDBACK_WARNING,
+                }),
+            );
         case 4:
-            return (0, r.jsx)(l.PGe, R(C({}, n), { color: u.A.colors.ICON_FEEDBACK_CRITICAL }));
+            return (0, r.jsx)(
+                l.PGe,
+                R(C({}, n), {
+                    color: u.A.colors.ICON_FEEDBACK_CRITICAL,
+                }),
+            );
     }
 }

@@ -1,4 +1,7 @@
-n.d(t, { A: () => v }), n(896048);
+n.d(t, {
+    A: () => v,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -16,6 +19,7 @@ var r = n(627968),
     m = n(652215),
     b = n(985018),
     _ = n(308685);
+
 function E(e, t, n) {
     return (
         t in e
@@ -29,6 +33,7 @@ function E(e, t, n) {
         e
     );
 }
+
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -45,6 +50,7 @@ function O(e) {
     }
     return e;
 }
+
 function y(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -73,10 +79,14 @@ class I extends i.PureComponent {
             children: [
                 (0, r.jsx)(g.A, {
                     children: this.isHost()
-                        ? b.intl.formatToPlainString(b.t["6UJ7mh"], { count: this.props.party.length })
+                        ? b.intl.formatToPlainString(b.t["6UJ7mh"], {
+                              count: this.props.party.length,
+                          })
                         : b.intl.string(b.t.RZufbH),
                 }),
-                (0, r.jsx)(A.A, { children: b.intl.string(b.t["0ZHLIi"]) }),
+                (0, r.jsx)(A.A, {
+                    children: b.intl.string(b.t["0ZHLIi"]),
+                }),
             ],
         });
     }

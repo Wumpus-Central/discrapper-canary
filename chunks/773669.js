@@ -1,4 +1,7 @@
-n.r(t), n.d(t, { default: () => g });
+n.r(t),
+    n.d(t, {
+        default: () => g,
+    });
 var r,
     i = n(311907),
     a = n(73153),
@@ -6,6 +9,7 @@ var r,
     o = n(77729),
     l = n(617617),
     c = n(985018);
+
 function u(e, t, n) {
     return (
         t in e
@@ -29,11 +33,13 @@ async function d() {
 }
 let f = c.intl.currentLocale,
     p = c.systemLocale;
+
 function _() {
     var e, t;
     let n = null == (t = l.A.settings.localization) || null == (e = t.locale) ? void 0 : e.value;
     return null != n && "" !== n && n !== f && ((f = n), (0, s.Av)(f), !0);
 }
+
 function h(e) {
     (f = e.locale), (0, s.Av)(f);
 }

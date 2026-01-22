@@ -1,4 +1,8 @@
-n.d(t, { A: () => F }), n(321073), n(896048);
+n.d(t, {
+    A: () => F,
+}),
+    n(321073),
+    n(896048);
 var r,
     i = n(311907),
     a = n(73153),
@@ -7,6 +11,7 @@ var r,
     l = n(961350),
     c = n(652215),
     u = n(788868);
+
 function d(e, t, n) {
     return (
         t in e
@@ -20,6 +25,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +42,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -48,6 +55,7 @@ function p(e, t) {
     }
     return n;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -71,6 +79,7 @@ let h = null,
     S = null,
     I = !1,
     T = null;
+
 function C(e) {
     let { subscriptions: t, lastLazyPerkSync: n } = e,
         r = {},
@@ -93,6 +102,7 @@ function C(e) {
         (b = s),
         (T = n);
 }
+
 function N(e) {
     let { activeSubscriptions: t, record: n } = e,
         r = t.findIndex((e) => e.id === n.id);
@@ -102,12 +112,18 @@ function N(e) {
         return U(n) && n.status !== c.Dmq.ENDED ? (e[r] = n) : e.splice(r, 1), e;
     }
 }
+
 function R(e) {
     let { subscription: t } = e;
     if (t.user_id !== l.default.getId()) return;
     let n = o.h.createFromServer(t);
-    (h = _(f({}, h), { [n.id]: n })),
-        U(n) && (m = _(f({}, m), { [n.id]: n })),
+    (h = _(f({}, h), {
+        [n.id]: n,
+    })),
+        U(n) &&
+            (m = _(f({}, m), {
+                [n.id]: n,
+            })),
         null != E &&
             n.type === c.rzx.GUILD &&
             (E = N({
@@ -121,6 +137,7 @@ function R(e) {
                 record: n,
             }));
 }
+
 function w(e) {
     let { subscription: t } = e;
     if (((y = !0), (I = !1), null != t)) {
@@ -131,9 +148,11 @@ function w(e) {
         g = o.h.createFromServer(t);
     }
 }
+
 function P() {
     I = !1;
 }
+
 function D(e) {
     let { subscription: t } = e;
     if (((A = !0), null != t)) {
@@ -144,20 +163,25 @@ function D(e) {
         O = o.h.createFromServer(t);
     }
 }
+
 function x() {
     v = !0;
 }
+
 function L() {
     I = !0;
 }
+
 function j(e) {
     let { eligible: t } = e;
     (S = t), (v = !1);
 }
+
 function M(e) {
     let {} = e;
     (S = !1), (v = !1);
 }
+
 function k() {
     (h = null),
         (m = null),
@@ -171,9 +195,11 @@ function k() {
         (I = !1),
         (T = null);
 }
+
 function U(e) {
     return e.status !== c.Dmq.UNPAID;
 }
+
 function G(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
         r = n ? m : h;

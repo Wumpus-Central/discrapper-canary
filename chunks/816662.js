@@ -24,6 +24,7 @@ var r = n(735438),
     m = n(477427),
     g = n(652215),
     E = n(355097);
+
 function b(e, t, n) {
     return (
         t in e
@@ -37,6 +38,7 @@ function b(e, t, n) {
         e
     );
 }
+
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -53,6 +55,7 @@ function y(e) {
     }
     return e;
 }
+
 function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -65,6 +68,7 @@ function O(e, t) {
     }
     return n;
 }
+
 function A(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -76,15 +80,24 @@ function A(e, t) {
         e
     );
 }
+
 function v(e, t, n, r) {
     if (null == e) return;
     if (u.A.isFullServerPreview(e)) return void (0, c.$u)(e, n ? [t] : [], n ? [] : [t]);
     let a = _.Ay.getChannelIdFlags(e, t);
     n || (a = (0, i.lA)(a, E.vv.FAVORITED, !1));
     let o = (0, m.ME)(e, t),
-        f = { flags: (0, i.lA)(a, E.vv.OPT_IN_ENABLED, n) },
-        b = { channel_overrides: { [t]: f } };
-    d.A.saveUserGuildSettingsBulk({ [e]: b }),
+        f = {
+            flags: (0, i.lA)(a, E.vv.OPT_IN_ENABLED, n),
+        },
+        b = {
+            channel_overrides: {
+                [t]: f,
+            },
+        };
+    d.A.saveUserGuildSettingsBulk({
+        [e]: b,
+    }),
         s.h.dispatch({
             type: "USER_GUILD_SETTINGS_CHANNEL_UPDATE",
             guildId: e,
@@ -108,21 +121,29 @@ function v(e, t, n, r) {
             }),
         );
 }
+
 function S(e, t, n, r) {
     if (null == e) return;
     if (u.A.isFullServerPreview(e)) {
-        (0, c.$u)(e, n ? [t] : [], n ? [] : [t]), (0, c.Z$)(e, { optInEnabled: !0 });
+        (0, c.$u)(e, n ? [t] : [], n ? [] : [t]),
+            (0, c.Z$)(e, {
+                optInEnabled: !0,
+            });
         return;
     }
     let a = _.Ay.getChannelIdFlags(e, t);
     n || (a = (0, i.lA)(a, E.vv.FAVORITED, !1));
     let o = (0, m.ME)(e, t),
-        f = { flags: (0, i.lA)(a, E.vv.OPT_IN_ENABLED, n) };
+        f = {
+            flags: (0, i.lA)(a, E.vv.OPT_IN_ENABLED, n),
+        };
     if (!_.Ay.isOptInEnabled(e)) {
         let n = (0, i.lA)(_.Ay.getGuildFlags(e), E.n3.OPT_IN_CHANNELS_ON, !0);
         d.A.saveUserGuildSettingsBulk({
             [e]: {
-                channel_overrides: { [t]: f },
+                channel_overrides: {
+                    [t]: f,
+                },
                 flags: n,
             },
         });
@@ -152,28 +173,39 @@ function S(e, t, n, r) {
 }
 async function I(e, t) {
     if (null == e || u.A.isFullServerPreview(e)) return;
-    let n = { channel_overrides: t };
-    await d.A.saveUserGuildSettingsBulk({ [e]: n }),
+    let n = {
+        channel_overrides: t,
+    };
+    await d.A.saveUserGuildSettingsBulk({
+        [e]: n,
+    }),
         s.h.dispatch({
             type: "USER_GUILD_SETTINGS_REMOVE_PENDING_CHANNEL_UPDATES",
             guildId: e,
             updates: t,
         });
 }
-let T = (0, r.debounce)((e, t) => I(e, t), 1000);
+let T = (0, r.debounce)((e, t) => I(e, t), 1e3);
+
 function C(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = arguments.length > 3 ? arguments[3] : void 0;
     if (null == e) return;
     if (u.A.isFullServerPreview(e)) {
-        (0, c.$u)(e, t, []), n && (0, c.Z$)(e, { optInEnabled: !0 });
+        (0, c.$u)(e, t, []),
+            n &&
+                (0, c.Z$)(e, {
+                    optInEnabled: !0,
+                });
         return;
     }
     let a = {};
     if (
         (t.forEach((t) => {
             let n = _.Ay.getChannelIdFlags(e, t);
-            a[t] = { flags: (0, i.lA)(n, E.vv.OPT_IN_ENABLED, !0) };
+            a[t] = {
+                flags: (0, i.lA)(n, E.vv.OPT_IN_ENABLED, !0),
+            };
         }),
         n)
     ) {
@@ -203,10 +235,20 @@ function C(e, t) {
                 }),
             );
 }
+
 function N(e, t, n) {
-    if (u.A.isFullServerPreview(e)) return void (0, c.Z$)(e, { optInEnabled: t });
+    if (u.A.isFullServerPreview(e))
+        return void (0, c.Z$)(e, {
+            optInEnabled: t,
+        });
     let r = _.Ay.getGuildFlags(e);
-    o.A.updateGuildNotificationSettings(e, { flags: (0, i.lA)(r, E.n3.OPT_IN_CHANNELS_ON, t) }, m.G_.optedIn(t)),
+    o.A.updateGuildNotificationSettings(
+        e,
+        {
+            flags: (0, i.lA)(r, E.n3.OPT_IN_CHANNELS_ON, t),
+        },
+        m.G_.optedIn(t),
+    ),
         h.default.track(
             g.HAw.CHANNEL_LIST_UPDATED,
             A(y({}, (0, l.H$)(e)), {
@@ -215,11 +257,19 @@ function N(e, t, n) {
             }),
         );
 }
+
 function R(e, t, n, r) {
     if (null == e || u.A.isFullServerPreview(e)) return;
     let a = _.Ay.getChannelIdFlags(e, t);
     !(0, i.Lt)(a, E.vv.OPT_IN_ENABLED) && n && (a = (0, i.lA)(a, E.vv.OPT_IN_ENABLED, !0)),
-        o.A.updateChannelOverrideSettings(e, t, { flags: (0, i.lA)(a, E.vv.FAVORITED, n) }, m.G_.favorited(n)),
+        o.A.updateChannelOverrideSettings(
+            e,
+            t,
+            {
+                flags: (0, i.lA)(a, E.vv.FAVORITED, n),
+            },
+            m.G_.favorited(n),
+        ),
         h.default.track(
             g.HAw.CHANNEL_LIST_UPDATED,
             A(y({}, (0, l.H$)(e)), {
@@ -228,6 +278,7 @@ function R(e, t, n, r) {
             }),
         );
 }
+
 function w(e) {
     (0, f.TG)(
         e,
@@ -240,6 +291,7 @@ function w(e) {
         f.Sb.INFREQUENT_USER_ACTION,
     );
 }
+
 function P(e, t) {
     s.h.dispatch({
         type: "DISMISS_FAVORITE_SUGGESTION",

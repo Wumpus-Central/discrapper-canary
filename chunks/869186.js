@@ -1,4 +1,8 @@
-n.d(t, { k: () => g }), n(896048), n(321073);
+n.d(t, {
+    k: () => g,
+}),
+    n(896048),
+    n(321073);
 var r = n(64700),
     i = n(179771),
     a = n(311907),
@@ -20,6 +24,7 @@ let h = {
         limit: _.Hi,
         includeFrecency: !0,
     };
+
 function g(e) {
     let { context: t, onlyActivityApps: n, allowCommandFetch: r, includeAuthorizedAppsAndFetch: i } = e,
         { sectionDescriptors: a, loading: s } = l.cu({
@@ -38,6 +43,7 @@ function g(e) {
         }),
     };
 }
+
 function E(e) {
     let { sectionDescriptors: t, context: n, onlyActivityApps: o, includeAuthorizedAppsAndFetch: l } = e,
         h = (0, a.bG)([d.default], () => d.default.getFetchState());

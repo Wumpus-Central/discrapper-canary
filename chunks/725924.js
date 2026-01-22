@@ -1,7 +1,11 @@
-n.d(t, { A: () => o }), n(321073);
+n.d(t, {
+    A: () => o,
+}),
+    n(321073);
 var r = n(64700),
     l = n(420975),
     i = n(207115);
+
 function o(e, t) {
     var n, o;
     let a = (0, i.A)(e, t),
@@ -71,7 +75,10 @@ function o(e, t) {
                 }
                 return e;
             })({}, u)),
-            (o = o = { children: f }),
+            (o = o =
+                {
+                    children: f,
+                }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(o))
                 : (function (e, t) {

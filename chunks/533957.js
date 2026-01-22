@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -6,6 +8,7 @@ var i = n(311907),
     a = n(576705),
     c = n(652215),
     o = n(985018);
+
 function u(e, t) {
     let u = (0, i.bG)([a.A], () => a.A.can(c.xBc.MANAGE_CHANNELS, e), [e]);
     return __OVERLAY__ || !u

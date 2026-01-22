@@ -1,5 +1,8 @@
-n.d(t, { A: () => l });
+n.d(t, {
+    A: () => l,
+});
 var r = n(963935);
+
 function i(e, t, n) {
     return (
         t in e
@@ -13,6 +16,7 @@ function i(e, t, n) {
         e
     );
 }
+
 function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -29,6 +33,7 @@ function a(e) {
     }
     return e;
 }
+
 function s(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -41,6 +46,7 @@ function s(e, t) {
     }
     return n;
 }
+
 function o(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -52,6 +58,7 @@ function o(e, t) {
         e
     );
 }
+
 function l(e, t, n) {
     var i, s, c, u, d, f, p, _;
     let h = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
@@ -68,18 +75,35 @@ function l(e, t, n) {
             e
         );
     let m = h;
-    e.type === r.Z6.SIDEBAR_ITEM && (m = o(a({}, h), { panel: e.layout[0] })),
-        e.type === r.Z6.PANEL && (m = o(a({}, h), { panel: e })),
-        e.type === r.Z6.CATEGORY && (m = o(a({}, h), { category: e })),
-        e.type === r.Z6.ACCORDION && (m = o(a({}, h), { accordion: e })),
-        e.type === r.Z6.TAB_ITEM && (m = o(a({}, h), { tab: e }));
+    e.type === r.Z6.SIDEBAR_ITEM &&
+        (m = o(a({}, h), {
+            panel: e.layout[0],
+        })),
+        e.type === r.Z6.PANEL &&
+            (m = o(a({}, h), {
+                panel: e,
+            })),
+        e.type === r.Z6.CATEGORY &&
+            (m = o(a({}, h), {
+                category: e,
+            })),
+        e.type === r.Z6.ACCORDION &&
+            (m = o(a({}, h), {
+                accordion: e,
+            })),
+        e.type === r.Z6.TAB_ITEM &&
+            (m = o(a({}, h), {
+                tab: e,
+            }));
     let g = e.layout.map((e) => l(e, t, n, m)).filter((e) => null != e);
     if (
         0 === g.length &&
         !("StronglyDiscouragedCustomComponent" in e || (e.type === r.Z6.SIDEBAR_ITEM && "onClick" in e))
     )
         return null;
-    let E = o(a({}, e), { layout: g });
+    let E = o(a({}, e), {
+        layout: g,
+    });
     return (
         n.register({
             node: E,

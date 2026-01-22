@@ -1,4 +1,6 @@
-i.d(e, { O: () => _ });
+i.d(e, {
+    O: () => _,
+});
 var n = i(627968),
     l = i(64700),
     s = i(158954),
@@ -37,7 +39,9 @@ let _ = (0, a.E2)(T.X.VOICE_INPUT_SENSITIVITY_FIELD_SET, {
                         className: d.B,
                         children: (0, n.jsx)(s.wx6, {
                             type: "warning",
-                            children: E.intl.format(E.t["O13I+O"], { onEnableClick: () => u.A.enable(!0) }),
+                            children: E.intl.format(E.t["O13I+O"], {
+                                onEnableClick: () => u.A.enable(!0),
+                            }),
                         }),
                     }),
                 [I],

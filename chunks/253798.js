@@ -10,6 +10,7 @@ var r = n(627968),
     a = n(61881),
     s = n(735321);
 let o = l.createContext(null);
+
 function c(e) {
     let { widgetType: t, children: n } = e,
         c = (0, i.bG)([a.A], () => {
@@ -29,6 +30,7 @@ function c(e) {
         children: n,
     });
 }
+
 function u() {
     let e = l.useContext(o);
     if (null == e)

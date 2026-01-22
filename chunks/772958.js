@@ -14,12 +14,20 @@ var r = n(64700),
     u = n(972049),
     c = n(652215);
 let s = new o.A("a11y_violations"),
-    d = (0, a.v)(() => ({ check: null }));
+    d = (0, a.v)(() => ({
+        check: null,
+    }));
+
 function f(e) {
     let t = (0, r.useCallback)((e) => {
         var t;
         if (e.hash !== (null == (t = d.getState().check) ? void 0 : t.hash))
-            for (let [t, n] of ((0, l.r)(() => d.setState({ check: e })), e.violations.entries()))
+            for (let [t, n] of ((0, l.r)(() =>
+                d.setState({
+                    check: e,
+                }),
+            ),
+            e.violations.entries()))
                 for (let e of n.instances.values())
                     for (let { trace: n, hash: r } of e) {
                         let e = JSON.stringify(r);
@@ -37,6 +45,7 @@ function f(e) {
     }, []);
     (0, u.dL)(e, t);
 }
+
 function h() {
     var e = d((e) => {
         var t, n;

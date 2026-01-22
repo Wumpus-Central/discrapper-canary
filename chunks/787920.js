@@ -10,6 +10,7 @@ var r = n(56636),
     o = n(222367),
     l = n(734481),
     c = n(327854);
+
 function u(e) {
     for (var t = [], n = Object.keys(e), i = 0, l = n; i < l.length; i++) {
         var c = l[i];
@@ -18,6 +19,7 @@ function u(e) {
     if (t.length) throw Error("Invalid options: " + t.join(", "));
     return (0, r.Cl)({}, e);
 }
+
 function d(e) {
     var t = (0, r.Cl)((0, r.Cl)({}, s.lp), u(e));
     if (((0, a.Wo)(t.byeaster) && (t.freq = s.p3.YEARLY), !((0, a.Wo)(t.freq) && s.p3.FREQUENCIES[t.freq])))
@@ -104,11 +106,14 @@ function d(e) {
         (0, a.Wo)(t.bysecond)
             ? (0, a.Et)(t.bysecond) && (t.bysecond = [t.bysecond])
             : (t.bysecond = t.freq < s.p3.SECONDLY ? [t.dtstart.getUTCSeconds()] : null),
-        { parsedOptions: t }
+        {
+            parsedOptions: t,
+        }
     );
 }
+
 function f(e) {
-    var t = e.dtstart.getTime() % 1000;
+    var t = e.dtstart.getTime() % 1e3;
     if (!(0, i.d)(e.freq)) return [];
     var n = [];
     return (

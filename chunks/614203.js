@@ -1,4 +1,7 @@
-n.d(e, { A: () => h }), n(896048);
+n.d(e, {
+    A: () => h,
+}),
+    n(896048);
 var l = n(627968),
     r = n(64700),
     a = n(621466),
@@ -10,6 +13,7 @@ var l = n(627968),
     d = n(454235),
     p = n(652215),
     b = n(985018);
+
 function g(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
@@ -35,6 +39,7 @@ function g(t) {
     }
     return t;
 }
+
 function f(t, e) {
     return (
         (e = null != e ? e : {}),
@@ -53,12 +58,19 @@ function f(t, e) {
         t
     );
 }
+
 function h(t) {
     let { text: e = "", target: n } = t,
         h = (0, i.bG)([c.A], () => c.A.isEnabled()),
         y = (0, i.bG)([c.A], () => c.A.hasLearnedWord(e), [e]),
-        m = r.useRef(f(g({}, t), { spellcheckEnabled: h }));
-    m.current = f(g({}, t), { spellcheckEnabled: h });
+        m = r.useRef(
+            f(g({}, t), {
+                spellcheckEnabled: h,
+            }),
+        );
+    m.current = f(g({}, t), {
+        spellcheckEnabled: h,
+    });
     let T = r.useRef(!1),
         [S, j] = r.useState(!1),
         [x, C] = r.useState([]),

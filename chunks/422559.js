@@ -1,4 +1,7 @@
-t.r(n), t.d(n, { default: () => j });
+t.r(n),
+    t.d(n, {
+        default: () => j,
+    });
 var l = t(627968),
     r = t(64700),
     i = t(311907),
@@ -30,6 +33,7 @@ var l = t(627968),
     v = t(595818),
     U = t(652215),
     y = t(985018);
+
 function L(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         t = arguments.length > 2 ? arguments[2] : void 0;
@@ -154,11 +158,14 @@ class P extends r.PureComponent {
                     title: "" !== c.name ? c.name : y.intl.string(y.t["154/bL"]),
                     sections: U,
                 }),
-                (0, l.jsx)(f.w, { guildId: c.id }),
+                (0, l.jsx)(f.w, {
+                    guildId: c.id,
+                }),
             ],
         });
     }
 }
+
 function j() {
     var e, n, t;
     let {

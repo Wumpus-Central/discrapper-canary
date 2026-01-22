@@ -21,6 +21,7 @@ let r = new (n(626584).A)("mp4box"),
         isFragmented: null,
         containerFormat: null,
     };
+
 function a(e) {
     if (e.startsWith("avc1")) return "H.264/AVC";
     if (e.startsWith("hev1") || e.startsWith("hvc1")) return "H.265/HEVC";
@@ -29,6 +30,7 @@ function a(e) {
     if (e.startsWith("av01")) return "AV1";
     return e;
 }
+
 function s(e) {
     if (e.startsWith("mp4a.40.2")) return "AAC-LC";
     if (e.startsWith("mp4a.40.5")) return "HE-AAC";
@@ -38,15 +40,17 @@ function s(e) {
     else if ("vorbis" === e) return "Vorbis";
     return e;
 }
+
 function o(e) {
     return null === e
         ? "N/A"
-        : e < 1000
+        : e < 1e3
           ? "".concat(e, " bps")
-          : e < 1000000
-            ? "".concat((e / 1000).toFixed(1), " Kbps")
-            : "".concat((e / 1000000).toFixed(2), " Mbps");
+          : e < 1e6
+            ? "".concat((e / 1e3).toFixed(1), " Kbps")
+            : "".concat((e / 1e6).toFixed(2), " Mbps");
 }
+
 function l(e) {
     if (null === e) return "N/A";
     switch (e) {
@@ -62,9 +66,11 @@ function l(e) {
             return "".concat(e, " channels");
     }
 }
+
 function c(e) {
-    return null === e ? "N/A" : e < 1000 ? "".concat(e, " Hz") : "".concat((e / 1000).toFixed(1), " kHz");
+    return null === e ? "N/A" : e < 1e3 ? "".concat(e, " Hz") : "".concat((e / 1e3).toFixed(1), " kHz");
 }
+
 function u(e) {
     if (0 === e.length) return "MP4";
     let t = e[0];
@@ -79,6 +85,7 @@ function u(e) {
     else if ("iso6" === t) return "MP4 (ISO/IEC 14496-12:2012)";
     return "MP4 (".concat(t, ")");
 }
+
 function d(e) {
     let t = e;
     if (null != t.nb_samples && null != t.duration && null != t.timescale && 0 !== t.timescale) {
@@ -89,8 +96,8 @@ function d(e) {
 }
 let f = 524288,
     p = 524288,
-    _ = 5000,
-    h = 5000;
+    _ = 5e3,
+    h = 5e3;
 async function m(e) {
     try {
         let t;
@@ -98,7 +105,9 @@ async function m(e) {
         let { default: o } = await n.e("25777").then(n.t.bind(n, 293384, 19)),
             l = null;
         try {
-            let t = await fetch(e, { method: "HEAD" });
+            let t = await fetch(e, {
+                method: "HEAD",
+            });
             if (t.ok) {
                 let e = t.headers.get("Content-Length");
                 null != e && (l = parseInt(e, 10));
@@ -107,7 +116,9 @@ async function m(e) {
         try {
             t = await fetch(e, {
                 method: "GET",
-                headers: { Range: "bytes=0-".concat(f - 1) },
+                headers: {
+                    Range: "bytes=0-".concat(f - 1),
+                },
             });
         } catch (e) {
             return r.warn("Range request failed, likely CORS issue:", e), i;
@@ -168,7 +179,9 @@ async function m(e) {
                         try {
                             let t = await fetch(e, {
                                 method: "GET",
-                                headers: { Range: "bytes=".concat(l - p, "-").concat(l - 1) },
+                                headers: {
+                                    Range: "bytes=".concat(l - p, "-").concat(l - 1),
+                                },
                             });
                             if (t.ok || 206 === t.status) {
                                 let e,

@@ -1,4 +1,6 @@
-n.d(t, { H: () => h });
+n.d(t, {
+    H: () => h,
+});
 var r = n(627968);
 n(64700);
 var i = n(158954),
@@ -15,6 +17,7 @@ var i = n(158954),
     m = n(652215),
     p = n(985018),
     x = n(632275);
+
 function h() {
     let { analyticsLocations: e } = (0, a.Ay)(s.A.GUILD_SETTINGS_BOOST_PERKS_PAGE),
         t = (0, l.bG)([d.A], () => d.A.getProps().guild, []),
@@ -39,20 +42,28 @@ function h() {
                           canManageGuild: h,
                           premiumProgressBarEnabled: t.premiumProgressBarEnabled,
                       }),
-                      (0, r.jsx)("div", { className: x.y }),
+                      (0, r.jsx)("div", {
+                          className: x.y,
+                      }),
                       (0, r.jsx)(u.l, {
                           guild: t,
                           canManageGuild: h,
                       }),
-                      (0, r.jsx)("div", { className: x.y }),
+                      (0, r.jsx)("div", {
+                          className: x.y,
+                      }),
                       j
                           ? (0, r.jsxs)(r.Fragment, {
                                 children: [
                                     n &&
                                         (0, r.jsxs)(r.Fragment, {
                                             children: [
-                                                (0, r.jsx)(g.u, { guild: t }),
-                                                (0, r.jsx)("div", { className: x.y }),
+                                                (0, r.jsx)(g.u, {
+                                                    guild: t,
+                                                }),
+                                                (0, r.jsx)("div", {
+                                                    className: x.y,
+                                                }),
                                             ],
                                         }),
                                     (0, r.jsx)(f.I, {
@@ -70,8 +81,12 @@ function h() {
                                     n &&
                                         (0, r.jsxs)(r.Fragment, {
                                             children: [
-                                                (0, r.jsx)("div", { className: x.y }),
-                                                (0, r.jsx)(g.u, { guild: t }),
+                                                (0, r.jsx)("div", {
+                                                    className: x.y,
+                                                }),
+                                                (0, r.jsx)(g.u, {
+                                                    guild: t,
+                                                }),
                                             ],
                                         }),
                                 ],

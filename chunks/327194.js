@@ -1,4 +1,8 @@
-n.d(t, { P: () => S }), n(65821), n(896048);
+n.d(t, {
+    P: () => S,
+}),
+    n(65821),
+    n(896048);
 var r = n(77729),
     i = n(626584),
     a = n(869146),
@@ -13,6 +17,7 @@ var r = n(77729),
     _ = n(237984),
     h = n(672396),
     m = n(392164);
+
 function g(e, t, n) {
     return (
         t in e
@@ -27,6 +32,7 @@ function g(e, t, n) {
     );
 }
 let E = new i.A("OverlayV3NativeModule");
+
 function b(e, t, n) {
     (0, d._r)(e, "renderer_window_focus_changed", {
         windowHandle: t,
@@ -34,14 +40,21 @@ function b(e, t, n) {
     }),
         (0, d.cS)(e, null != t ? (0, f.Oy)(t) : null, n);
 }
+
 function y(e) {
-    (0, d._r)(e, "renderer_window_focus_lost", { popoutInitializationStages: u.A.getPopoutInitializationStages() }),
+    (0, d._r)(e, "renderer_window_focus_lost", {
+        popoutInitializationStages: u.A.getPopoutInitializationStages(),
+    }),
         (0, d.C7)(e);
 }
+
 function O(e) {
-    (0, d._r)(e, "successfully_shown", { popoutInitializationStages: u.A.getPopoutInitializationStages() }),
+    (0, d._r)(e, "successfully_shown", {
+        popoutInitializationStages: u.A.getPopoutInitializationStages(),
+    }),
         (0, d.oW)(e);
 }
+
 function A(e) {
     (0, d._r)(null, "window_handle_initialized", {
         real_initialized: e,
@@ -49,6 +62,7 @@ function A(e) {
     }),
         (0, d.i0)(e);
 }
+
 function v(e) {
     var t, n, r, i;
     null == (t = e.setFocusCallback) || t.call(e, b),
@@ -129,13 +143,27 @@ class S {
                 });
         } catch (t) {
             E.error("Error creating OOP host window:", t),
-                (0, d._r)(e, "host_window_mounting_failed", { error: t }, l.QJ.Error);
+                (0, d._r)(
+                    e,
+                    "host_window_mounting_failed",
+                    {
+                        error: t,
+                    },
+                    l.QJ.Error,
+                );
         }
         try {
             r.A.window.setBackgroundThrottling(!1);
         } catch (t) {
             E.error("Error setting background throttling:", t),
-                (0, d._r)(e, "background_throttling_setting_failed", { error: t }, l.QJ.Error);
+                (0, d._r)(
+                    e,
+                    "background_throttling_setting_failed",
+                    {
+                        error: t,
+                    },
+                    l.QJ.Error,
+                );
         }
         let n = null;
         try {

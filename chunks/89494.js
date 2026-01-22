@@ -11,6 +11,7 @@ var r = n(3388),
     s = n(297987),
     o = n(401705),
     l = n(64700);
+
 function c(e) {
     let t = e;
     return (
@@ -21,9 +22,16 @@ function c(e) {
         t
     );
 }
+
 function u(e, t) {
-    Object.defineProperty(e, "target", { value: t }), Object.defineProperty(e, "currentTarget", { value: t });
+    Object.defineProperty(e, "target", {
+        value: t,
+    }),
+        Object.defineProperty(e, "currentTarget", {
+            value: t,
+        });
 }
+
 function d(e) {
     let t = (0, l.useRef)({
         isFocused: !1,
@@ -53,13 +61,19 @@ function d(e) {
                             r.disabled && n(c(e)),
                             t.current.observer && (t.current.observer.disconnect(), (t.current.observer = null));
                     };
-                r.addEventListener("focusout", i, { once: !0 }),
+                r.addEventListener("focusout", i, {
+                    once: !0,
+                }),
                     (t.current.observer = new MutationObserver(() => {
                         if (t.current.isFocused && r.disabled) {
                             var e;
                             null == (e = t.current.observer) || e.disconnect();
                             let n = r === document.activeElement ? null : document.activeElement;
-                            r.dispatchEvent(new FocusEvent("blur", { relatedTarget: n })),
+                            r.dispatchEvent(
+                                new FocusEvent("blur", {
+                                    relatedTarget: n,
+                                }),
+                            ),
                                 r.dispatchEvent(
                                     new FocusEvent("focusout", {
                                         bubbles: !0,
@@ -78,6 +92,7 @@ function d(e) {
     );
 }
 let f = !1;
+
 function p(e) {
     for (; e && !(0, a.t)(e); ) e = e.parentElement;
     let t = (0, s.mD)(e),

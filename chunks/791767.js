@@ -1,4 +1,6 @@
-n.d(t, { A: () => E });
+n.d(t, {
+    A: () => E,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -36,11 +38,15 @@ let E = {
             t === g.a3B.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE ||
             t === g.a3B.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE ||
             u.A.isEmailReverification(t)
-                ? (0, o.P3)({ location: "verification-legacy" })
+                ? (0, o.P3)({
+                      location: "verification-legacy",
+                  })
                     ? (0, a.B8)(
                           (e) => {
                               let { closeLayer: t } = e;
-                              return (0, r.jsx)(c.A, { onClose: t });
+                              return (0, r.jsx)(c.A, {
+                                  onClose: t,
+                              });
                           },
                           {
                               layerKey: b._s,
@@ -92,7 +98,9 @@ let E = {
                     ? (0, a.B8)(
                           (e) => {
                               let { closeLayer: t } = e;
-                              return (0, r.jsx)(c.A, { onClose: t });
+                              return (0, r.jsx)(c.A, {
+                                  onClose: t,
+                              });
                           },
                           {
                               layerKey: b._s,

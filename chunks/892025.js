@@ -1,4 +1,6 @@
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});
 var r = {};
 r = {
     rangeOverflow: (e) => `Waarde moet ${e.maxValue} of eerder zijn.`,

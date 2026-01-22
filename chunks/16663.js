@@ -1,4 +1,6 @@
-n.d(e, { A: () => b });
+n.d(e, {
+    A: () => b,
+});
 var l = n(627968);
 n(64700);
 var a = n(397927),
@@ -14,6 +16,7 @@ var a = n(397927),
     g = n(996988),
     p = n(985018),
     h = n(98167);
+
 function b(t) {
     var e;
     let { user: n, previewText: b, previewEmoji: T, previewStatus: A, placeHolderText: y, transitionState: O } = t,
@@ -62,7 +65,10 @@ function b(t) {
                         }),
                     ],
                 }),
-                (null == S ? void 0 : S.profileEffect) != null && (0, l.jsx)(r.A, { skuId: S.profileEffect.skuId }),
+                (null == S ? void 0 : S.profileEffect) != null &&
+                    (0, l.jsx)(r.A, {
+                        skuId: S.profileEffect.skuId,
+                    }),
                 (0, l.jsx)("div", {
                     className: h.QV,
                     inert: !0,

@@ -16,7 +16,12 @@ var r = n(410323),
     E =
         o &&
         !i(function () {
-            return 8 !== _(function () {}, "length", { value: 8 }).length;
+            return (
+                8 !==
+                _(function () {}, "length", {
+                    value: 8,
+                }).length
+            );
         }),
     b = String(String).split("String"),
     y = (e.exports = function (e, t, n) {
@@ -30,10 +35,19 @@ var r = n(410323),
                           configurable: !0,
                       })
                     : (e.name = t)),
-            E && n && s(n, "arity") && e.length !== n.arity && _(e, "length", { value: n.arity });
+            E &&
+                n &&
+                s(n, "arity") &&
+                e.length !== n.arity &&
+                _(e, "length", {
+                    value: n.arity,
+                });
         try {
             n && s(n, "constructor") && n.constructor
-                ? o && _(e, "prototype", { writable: !1 })
+                ? o &&
+                  _(e, "prototype", {
+                      writable: !1,
+                  })
                 : e.prototype && (e.prototype = void 0);
         } catch (e) {}
         var r = d(e);

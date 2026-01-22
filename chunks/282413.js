@@ -1,4 +1,6 @@
-n.d(t, { o: () => g });
+n.d(t, {
+    o: () => g,
+});
 var r,
     i = n(627968),
     a = n(64700),
@@ -10,6 +12,7 @@ var r,
     d = n(235986),
     f = n(652215),
     p = n(712449);
+
 function _(e, t, n) {
     return (
         t in e
@@ -23,7 +26,7 @@ function _(e, t, n) {
         e
     );
 }
-let h = 3000,
+let h = 3e3,
     m = {
         [f.DUB.NORMAL]: p.qb,
         [f.DUB.MINIMUM]: p.Bp,
@@ -52,12 +55,17 @@ class g extends a.PureComponent {
     render() {
         return (0, i.jsx)(l.A.div, {
             className: o()(p.$c, this.props.className),
-            style: { opacity: this.state.animation },
+            style: {
+                opacity: this.state.animation,
+            },
             children: this.props.children,
         });
     }
     constructor(e) {
-        super(e), (this.state = { animation: new l.A.Value(0) });
+        super(e),
+            (this.state = {
+                animation: new l.A.Value(0),
+            });
     }
 }
 class E extends (r = a.PureComponent) {
@@ -77,7 +85,9 @@ class E extends (r = a.PureComponent) {
                       idle: !1,
                       layoutProp: e.layout,
                   }
-                : { layoutProp: e.layout }
+                : {
+                      layoutProp: e.layout,
+                  }
             : null;
     }
     componentDidUpdate(e) {
@@ -89,14 +99,22 @@ class E extends (r = a.PureComponent) {
         return (0, i.jsx)(u.F, {
             className: p.yG,
             component: "div",
-            children: (0, i.jsx)(g, { children: e }, r),
+            children: (0, i.jsx)(
+                g,
+                {
+                    children: e,
+                },
+                r,
+            ),
         });
     }
     renderContents() {
         let { top: e, center: t, bottom: n, layout: r, focused: a } = this.props,
             { idle: s } = this.state;
         return (0, i.jsx)(d.A, {
-            className: o()(p.Ki, m[r], { [p.N7]: s }),
+            className: o()(p.Ki, m[r], {
+                [p.N7]: s,
+            }),
             direction: d.A.Direction.VERTICAL,
             justify: d.A.Justify.CENTER,
             children: (0, i.jsxs)(d.A, {
@@ -105,7 +123,9 @@ class E extends (r = a.PureComponent) {
                 children: [
                     this.renderBackground(),
                     (0, i.jsxs)(d.A, {
-                        className: o()(p.IR, { [p.in]: a }),
+                        className: o()(p.IR, {
+                            [p.in]: a,
+                        }),
                         direction: d.A.Direction.VERTICAL,
                         justify: d.A.Justify.BETWEEN,
                         children: [
@@ -132,7 +152,9 @@ class E extends (r = a.PureComponent) {
     render() {
         let { layout: e, className: t, animated: n } = this.props;
         return (0, i.jsx)("div", {
-            className: o()(p.hP, m[e], t, { [p.CS]: n }),
+            className: o()(p.hP, m[e], t, {
+                [p.CS]: n,
+            }),
             children: this.renderContents(),
         });
     }
@@ -142,8 +164,15 @@ class E extends (r = a.PureComponent) {
             _(this, "handleMouseEvent", () => {
                 let { layout: e } = this.props;
                 (e === f.DUB.FULL_SCREEN || e === f.DUB.NO_CHAT) &&
-                    (this._timeout.start(h, () => this.setState({ idle: !0 })),
-                    this.state.idle && this.setState({ idle: !1 }));
+                    (this._timeout.start(h, () =>
+                        this.setState({
+                            idle: !0,
+                        }),
+                    ),
+                    this.state.idle &&
+                        this.setState({
+                            idle: !1,
+                        }));
             }),
             (this.state = {
                 idle: !1,

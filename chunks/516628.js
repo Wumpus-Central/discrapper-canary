@@ -25,7 +25,9 @@ let o = (e) => {
             case i.j.TOO_BIG:
             case a.t02.INVALID_FILE_ASSET_SIZE:
             case a.t02.INVALID_FORM_BODY:
-                return u.intl.formatToPlainString(u.t.kIO9jy, { maxSize: s.i9 });
+                return u.intl.formatToPlainString(u.t.kIO9jy, {
+                    maxSize: s.i9,
+                });
             case a.t02.INVALID_FILE_ASSET_SIZE_RESIZE_GIF:
                 return u.intl.string(u.t.sp16MU);
             case i.j.MISSING_IMAGE_DATA:

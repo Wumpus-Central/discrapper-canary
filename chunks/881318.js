@@ -1,4 +1,6 @@
-i.d(e, { $: () => T });
+i.d(e, {
+    $: () => T,
+});
 var n = i(311907),
     l = i(827343),
     s = i(419954),
@@ -17,7 +19,9 @@ let T = (0, s.zD)(u.X.ADVANCED_VOICE_ACTIVITY_PROCESSING_SETTING, {
     },
     setValue: function (t) {
         let e = r.A.getMode();
-        l.A.setMode(e, { vadUseKrisp: t });
+        l.A.setMode(e, {
+            vadUseKrisp: t,
+        });
     },
     useDisabled: function () {
         return (0, n.bG)([r.A], () => {

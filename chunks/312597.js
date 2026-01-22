@@ -1,7 +1,11 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 var r = n(9631),
     i = n(643479);
-let a = { read: _ },
+let a = {
+        read: _,
+    },
     s = 84,
     o = 128,
     l = "acsp",
@@ -10,9 +14,11 @@ let a = { read: _ },
     d = "text",
     f = "sig ",
     p = 12;
+
 function _(e, t, n) {
     return n && t[0].compressionMethod !== i.Gl ? h(e, t) : g(e, t);
 }
+
 function h(e, t) {
     if (!m(t[0].compressionMethod)) return {};
     let n = new DataView(e.buffer.slice(t[0].offset, t[0].offset + t[0].length));
@@ -20,9 +26,11 @@ function h(e, t) {
         .then(O)
         .catch(() => ({}));
 }
+
 function m(e) {
     return e === i.FH;
 }
+
 function g(e, t) {
     try {
         let n = t.reduce((e, t) => e + t.length, 0),
@@ -41,15 +49,19 @@ function g(e, t) {
         return {};
     }
 }
+
 function E(e) {
     return Array.isArray(e) ? new DataView(Uint8Array.from(e).buffer).buffer : e.buffer;
 }
+
 function b(e) {
     return e.length < o + 4;
 }
+
 function y(e, t) {
     return e.length < t + p;
 }
+
 function O(e) {
     let t = e.buffer,
         n = e.getUint32();
@@ -111,9 +123,11 @@ function O(e) {
     }
     return a;
 }
+
 function A(e) {
     return String.fromCharCode.apply(null, new Uint8Array(e));
 }
+
 function v(e, t, n) {
     r.f[t]
         ? (e[r.f[t].name] = {

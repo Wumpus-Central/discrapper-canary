@@ -1,4 +1,6 @@
-t(697509)(r, "__esModule", { value: !0 }),
+t(697509)(r, "__esModule", {
+    value: !0,
+}),
     (r.default = void 0),
     (r.default = {
         abstract: !1,
@@ -13,15 +15,21 @@ t(697509)(r, "__esModule", { value: !0 }),
         },
         relatedConcepts: [
             {
-                concept: { name: "details" },
+                concept: {
+                    name: "details",
+                },
                 module: "HTML",
             },
             {
-                concept: { name: "fieldset" },
+                concept: {
+                    name: "fieldset",
+                },
                 module: "HTML",
             },
             {
-                concept: { name: "optgroup" },
+                concept: {
+                    name: "optgroup",
+                },
                 module: "HTML",
             },
         ],

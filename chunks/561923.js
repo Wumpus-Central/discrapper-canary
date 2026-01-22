@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -14,6 +16,7 @@ var r = n(627968),
     m = n(652215),
     p = n(985018),
     x = n(7791);
+
 function h(e) {
     var t;
     let { profile: n, canManageGuild: l } = e,
@@ -27,8 +30,12 @@ function h(e) {
     (0, b.A)(y, m.nd0.PROFILE_VISIBILITY);
     let v = i.useCallback(() => {
             j
-                ? g.A.updateGuildProfile(h, { visibility: u.n.RESTRICTED })
-                : g.A.updateGuildProfile(h, { visibility: O ? u.n.PUBLIC_WITH_RECRUITMENT : u.n.PUBLIC });
+                ? g.A.updateGuildProfile(h, {
+                      visibility: u.n.RESTRICTED,
+                  })
+                : g.A.updateGuildProfile(h, {
+                      visibility: O ? u.n.PUBLIC_WITH_RECRUITMENT : u.n.PUBLIC,
+                  });
         }, [h, O, j]),
         A = i.useCallback(() => {
             g.A.setSection(m.BEX.ACCESS, m.nd0.ACCESS_DISCOVERABLE);
@@ -67,7 +74,9 @@ function h(e) {
                 ],
             }),
             (0, r.jsx)("div", {
-                className: s()(x.fi, { [x.Rl]: j }),
+                className: s()(x.fi, {
+                    [x.Rl]: j,
+                }),
                 children: (0, r.jsx)(f.A, {
                     guildId: h,
                     name: null,

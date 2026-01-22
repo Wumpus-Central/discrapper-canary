@@ -26,6 +26,7 @@ var r,
     A = n(543465),
     v = n(287809),
     S = n(652215);
+
 function I(e, t, n) {
     return (
         t in e
@@ -39,6 +40,7 @@ function I(e, t, n) {
         e
     );
 }
+
 function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -69,12 +71,14 @@ let C = "recentMentionFilterSettings",
     L = !1,
     j = 0,
     M = !1;
+
 function k(e) {
     (R = {}),
         e.forEach((e) => {
             null == R[e.getChannelId()] && (R[e.getChannelId()] = 0), R[e.getChannelId()]++;
         });
 }
+
 function U(e) {
     let { addedMessages: t, deletedMessages: n } = e;
     null != t &&
@@ -86,15 +90,23 @@ function U(e) {
                 null != R[e.getChannelId()] && (R[e.getChannelId()] = Math.max(0, R[e.getChannelId()] - 1));
             });
 }
+
 function G(e) {
     let { guildId: t } = e;
-    (P = !0), null == t && x.guildFilter === S.KE7.THIS_SERVER && Z({ guildFilter: S.KE7.ALL_SERVERS });
+    (P = !0),
+        null == t &&
+            x.guildFilter === S.KE7.THIS_SERVER &&
+            Z({
+                guildFilter: S.KE7.ALL_SERVERS,
+            });
 }
+
 function V(e) {
     if (e instanceof h.Ay) return e;
     let t = E.A.getMessage(e.channel_id, e.id);
     return null != t ? t : (0, d.rh)(e);
 }
+
 function F(e) {
     let t = g.A.getBasicChannel(e.channel_id);
     if (
@@ -123,10 +135,13 @@ function F(e) {
             return !1;
     }
 }
+
 function B(e) {
     let { hasMoreAfter: t, messages: n, isAfter: r } = e,
         i = a().map(n, V);
-    U({ addedMessages: i }),
+    U({
+        addedMessages: i,
+    }),
         r ? (N = N.concat(i)) : ((N = i), (w = {})),
         a().forEach(i, (e) => {
             w[e.id] = !0;
@@ -136,9 +151,11 @@ function B(e) {
         (j = (0, l.tB)()),
         (L = !0);
 }
+
 function H() {
     P = !1;
 }
+
 function Y(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
     if ((0, p.A)(e) && !S.MRS.SELF_MENTIONABLE_SYSTEM.has(e.type)) return null;
@@ -173,6 +190,7 @@ function Y(e) {
           e)
         : null;
 }
+
 function W(e) {
     let { channelId: t, message: n } = e,
         r = v.default.getCurrentUser();
@@ -188,8 +206,13 @@ function W(e) {
         return !1;
     let i = Y(n, t);
     if (null == i) return !1;
-    (N = N.slice()).unshift(i), (w[i.id] = !0), U({ addedMessages: [i] });
+    (N = N.slice()).unshift(i),
+        (w[i.id] = !0),
+        U({
+            addedMessages: [i],
+        });
 }
+
 function K(e) {
     let t = e.message.id;
     if (null == t || null == w[t]) return !1;
@@ -200,6 +223,7 @@ function K(e) {
         r = (N = N.slice())[n];
     null != r && (N[n] = (0, d.IU)(r, e.message));
 }
+
 function z(e) {
     if (null == w[e]) return !1;
     delete w[e],
@@ -214,14 +238,17 @@ function z(e) {
             return n !== e;
         }));
 }
+
 function q(e) {
     let { id: t } = e;
     return z(t);
 }
+
 function X(e) {
     let { ids: t } = e;
     a().forEach(t, z);
 }
+
 function Z(e) {
     let t = T({}, x);
     (x = a().defaults(a().pick(e, ["guildFilter", "roleFilter", "everyoneFilter"]), x)), o.w.set(C, x);
@@ -237,13 +264,16 @@ function Z(e) {
         k((N = i)),
         0 === N.length && (L = !1);
 }
+
 function Q() {
     if (x.guildFilter !== S.KE7.THIS_SERVER) return !1;
     L = !1;
 }
+
 function $() {
     (N = []), (w = {}), (L = !1), (M = !1), (R = {});
 }
+
 function J(e) {
     let { guild: t } = e,
         n = [];
@@ -251,26 +281,40 @@ function J(e) {
         let r = g.A.getChannel(e.channel_id);
         return (null != r && r.getGuildId() !== t.id) || (delete w[e.id], n.push(e), !1);
     })),
-        U({ deletedMessages: n });
+        U({
+            deletedMessages: n,
+        });
 }
+
 function ee() {
-    U({ deletedMessages: a().filter(N, (e) => y.A.isBlockedOrIgnoredForMessage(e)) }),
+    U({
+        deletedMessages: a().filter(N, (e) => y.A.isBlockedOrIgnoredForMessage(e)),
+    }),
         (N = N.filter((e) => !y.A.isBlockedOrIgnoredForMessage(e)));
 }
+
 function et(e) {
     let { channel: t } = e,
         n = [];
-    (N = a().filter(N, (e) => e.channel_id !== t.id || (delete w[e.id], n.push(e), !1))), U({ deletedMessages: n });
+    (N = a().filter(N, (e) => e.channel_id !== t.id || (delete w[e.id], n.push(e), !1))),
+        U({
+            deletedMessages: n,
+        });
 }
+
 function en(e) {
     $();
 }
+
 function er(e) {
     let { size: t } = e;
-    U({ deletedMessages: N.slice(t) });
+    U({
+        deletedMessages: N.slice(t),
+    });
     for (let e = t; e < N.length; ++e) delete w[N[e].id];
     N.length > (N = N.slice(0, t)).length && (D = !0);
 }
+
 function ei(e) {
     M = !0;
 }

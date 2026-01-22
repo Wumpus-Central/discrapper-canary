@@ -1,4 +1,6 @@
-t.d(e, { default: () => b });
+t.d(e, {
+    default: () => b,
+});
 var i = t(627968);
 t(64700);
 var s = t(503698),
@@ -48,7 +50,9 @@ let b = (a) => {
             return (0, i.jsxs)(
                 "div",
                 {
-                    className: l()(g.qS, { [g.Ny]: v || j }),
+                    className: l()(g.qS, {
+                        [g.Ny]: v || j,
+                    }),
                     children: [
                         (0, i.jsx)("img", {
                             src: r,
@@ -72,7 +76,9 @@ let b = (a) => {
                                         variant: "text-xs/normal",
                                         color: "text-muted",
                                         className: g.h8,
-                                        children: f.intl.formatToPlainString(f.t.Hu4jfi, { date: S }),
+                                        children: f.intl.formatToPlainString(f.t.Hu4jfi, {
+                                            date: S,
+                                        }),
                                     }),
                                 j &&
                                     (0, i.jsx)(n.EYj, {
@@ -149,7 +155,9 @@ let b = (a) => {
                               (0, i.jsx)(n.EYj, {
                                   variant: "text-md/medium",
                                   className: g.uI,
-                                  children: f.intl.format(f.t.ffatnT, { onClick: O }),
+                                  children: f.intl.format(f.t.ffatnT, {
+                                      onClick: O,
+                                  }),
                               }),
                               (0, i.jsx)("div", {
                                   className: g.C_,
@@ -157,8 +165,12 @@ let b = (a) => {
                               }),
                               (0, i.jsx)(v.A, {
                                   className: g.xF,
-                                  premiumModalAnalyticsLocation: { page: N.liQ.TIERED_TENURE_BADGES_MODAL },
-                                  textOptions: { subscribeText: f.intl.string(f.t.JST6jl) },
+                                  premiumModalAnalyticsLocation: {
+                                      page: N.liQ.TIERED_TENURE_BADGES_MODAL,
+                                  },
+                                  textOptions: {
+                                      subscribeText: f.intl.string(f.t.JST6jl),
+                                  },
                                   subscriptionTier: _.pe.TIER_2,
                                   showGradient: !0,
                                   color: d.XD.BRAND,

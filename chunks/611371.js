@@ -1,9 +1,12 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(627968);
 n(64700);
 var i = n(827734),
     a = n(397927),
     s = n(985018);
+
 function o(e, t, n) {
     return (
         t in e
@@ -17,6 +20,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -33,6 +37,7 @@ function l(e) {
     }
     return e;
 }
+
 function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -45,6 +50,7 @@ function c(e, t) {
     }
     return n;
 }
+
 function u(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -56,6 +62,7 @@ function u(e, t) {
         e
     );
 }
+
 function d(e, t) {
     if (null == e) return {};
     var n,
@@ -72,6 +79,7 @@ function d(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function f(e, t) {
     if (null == e) return {};
     var n,
@@ -82,6 +90,7 @@ function f(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function p(e) {
     let { className: t, color: n = i.A.unsafe_rawColors.BRAND_500.css } = e,
         o = d(e, ["className", "color"]);

@@ -1,4 +1,6 @@
-n.d(t, { A: () => w });
+n.d(t, {
+    A: () => w,
+});
 var l = n(627968),
     r = n(64700),
     s = n(503698),
@@ -17,6 +19,7 @@ var l = n(627968),
     v = n(988794),
     m = n(985018),
     _ = n(939947);
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,6 +45,7 @@ function p(e) {
     }
     return e;
 }
+
 function y(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -60,6 +64,7 @@ function y(e, t) {
         e
     );
 }
+
 function A(e) {
     let { children: t } = e;
     return (0, l.jsxs)("div", {
@@ -81,6 +86,7 @@ function A(e) {
         ],
     });
 }
+
 function N() {
     return (0, l.jsx)(A, {
         children: (0, l.jsx)(c.Heading, {
@@ -91,6 +97,7 @@ function N() {
         }),
     });
 }
+
 function O() {
     return (0, l.jsx)(A, {
         children: (0, l.jsx)(c.Heading, {
@@ -101,6 +108,7 @@ function O() {
         }),
     });
 }
+
 function k(e) {
     let { count: t } = e;
     return (0, l.jsxs)("div", {
@@ -119,11 +127,14 @@ function k(e) {
             (0, l.jsx)(c.Text, {
                 color: "text-default",
                 variant: "text-md/normal",
-                children: m.intl.format(m.t.BdQTfR, { userRemainCount: t }),
+                children: m.intl.format(m.t.BdQTfR, {
+                    userRemainCount: t,
+                }),
             }),
         ],
     });
 }
+
 function I(e) {
     let { eventUser: t, guildId: n, onContextMenu: s } = e,
         d = r.useRef(null),
@@ -150,7 +161,9 @@ function I(e) {
                           p(
                               {
                                   innerRef: d,
-                                  className: i()(_.f0, _.fv, { [_.wH]: f }),
+                                  className: i()(_.f0, _.fv, {
+                                      [_.wH]: f,
+                                  }),
                                   onContextMenu: (e) => s(e, o),
                               },
                               e,
@@ -177,6 +190,7 @@ function I(e) {
               },
           });
 }
+
 function S(e) {
     let { eventUsers: t, guildId: n, usersNotShownCount: r = 0, onContextMenu: s } = e;
     return (0, l.jsxs)(c.IpV, {
@@ -193,10 +207,14 @@ function S(e) {
                     e.user_id,
                 ),
             ),
-            r > 0 && (0, l.jsx)(k, { count: r }),
+            r > 0 &&
+                (0, l.jsx)(k, {
+                    count: r,
+                }),
         ],
     });
 }
+
 function C(e) {
     let { children: t, style: n } = e;
     return (0, l.jsx)("div", {
@@ -205,13 +223,17 @@ function C(e) {
         children: t,
     });
 }
+
 function E(e) {
     let { children: t, height: n } = e;
     return (0, l.jsx)(C, {
-        style: { height: n },
+        style: {
+            height: n,
+        },
         children: t,
     });
 }
+
 function w(e) {
     let { guildEvent: t, recurrenceId: r, eventUsers: s, loading: i, error: a, containerHeight: u } = e,
         o = (0, j.A)(t.guild_id, t.id, r);
@@ -245,7 +267,13 @@ function w(e) {
                               let { default: e } = await Promise.all([n.e("97262"), n.e("32418"), n.e("8893")]).then(
                                   n.bind(n, 668569),
                               );
-                              return (n) => (0, l.jsx)(e, y(p({}, n), { user: t }));
+                              return (n) =>
+                                  (0, l.jsx)(
+                                      e,
+                                      y(p({}, n), {
+                                          user: t,
+                                      }),
+                                  );
                           });
                       },
                       usersNotShownCount: f,

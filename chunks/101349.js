@@ -1,4 +1,6 @@
-n.d(t, { N: () => u });
+n.d(t, {
+    N: () => u,
+});
 var r = n(64700),
     i = n(554352),
     a = n(418034),
@@ -8,6 +10,7 @@ var r = n(64700),
         return Promise.resolve(null);
     },
     c = [];
+
 function u(e) {
     var t = e.placement,
         n = void 0 === t ? "bottom" : t,
@@ -42,7 +45,9 @@ function u(e) {
                         {
                             name: "arrow",
                             enabled: null != v,
-                            options: { element: v },
+                            options: {
+                                element: v,
+                            },
                         },
                     ]),
                 };

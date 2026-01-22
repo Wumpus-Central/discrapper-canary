@@ -1,4 +1,7 @@
-l.d(t, { A: () => N }), l(896048);
+l.d(t, {
+    A: () => N,
+}),
+    l(896048);
 var n = l(627968),
     r = l(64700),
     s = l(503698),
@@ -100,13 +103,17 @@ let N = (e) => {
                                               onClick: () =>
                                                   (0, u.A)(p.A.getArticleURL(j.MVz.DATA_USED_FOR_RECOMMENDED)),
                                               className: I.sT,
-                                              children: (0, n.jsx)(c.mir, { size: "sm" }),
+                                              children: (0, n.jsx)(c.mir, {
+                                                  size: "sm",
+                                              }),
                                           }),
                                       }),
                               ],
                           }),
                           (0, n.jsxs)("div", {
-                              className: a()(I.IE, { [T.T3]: H }),
+                              className: a()(I.IE, {
+                                  [T.T3]: H,
+                              }),
                               children: [
                                   (0, n.jsx)(c.Text, {
                                       variant: "text-md/medium",
@@ -171,7 +178,9 @@ let N = (e) => {
                                             "div",
                                             {
                                                 className: I.Z2,
-                                                children: (0, n.jsx)(x.A, { skipPulseAnimation: !0 }),
+                                                children: (0, n.jsx)(x.A, {
+                                                    skipPulseAnimation: !0,
+                                                }),
                                             },
                                             "".concat(e.skuId, "-").concat(t),
                                         );

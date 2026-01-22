@@ -1,8 +1,12 @@
-n.d(t, { A: () => T }), n(896048);
+n.d(t, {
+    A: () => T,
+}),
+    n(896048);
 var r,
     i = n(311907),
     a = n(73153),
     s = n(532555);
+
 function o(e, t, n) {
     return (
         t in e
@@ -16,6 +20,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -32,6 +37,7 @@ function l(e) {
     }
     return e;
 }
+
 function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -44,6 +50,7 @@ function c(e, t) {
     }
     return n;
 }
+
 function u(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -56,9 +63,11 @@ function u(e, t) {
     );
 }
 let d = {};
+
 function f() {
     d = {};
 }
+
 function p(e) {
     return (
         null == d[e] &&
@@ -71,6 +80,7 @@ function p(e) {
         d[e]
     );
 }
+
 function _(e) {
     let { guildId: t, catalog: n } = e;
     d = u(l({}, d), {
@@ -80,6 +90,7 @@ function _(e) {
         }),
     });
 }
+
 function h(e) {
     let { guildId: t, instances: n } = e;
     d = u(l({}, d), {
@@ -89,15 +100,30 @@ function h(e) {
         }),
     });
 }
+
 function m(e) {
     let { guildId: t, skuId: n, instructions: r } = e;
-    d = u(l({}, d), { [t]: u(l({}, p(t)), { instructions: u(l({}, p(t).instructions), { [n]: r }) }) });
+    d = u(l({}, d), {
+        [t]: u(l({}, p(t)), {
+            instructions: u(l({}, p(t).instructions), {
+                [n]: r,
+            }),
+        }),
+    });
 }
+
 function g(e) {
     let { guildId: t, instance: n } = e,
         r = p(t);
-    d = u(l({}, d), { [t]: u(l({}, r), { instances: u(l({}, r.instances), { [n.id]: n }) }) });
+    d = u(l({}, d), {
+        [t]: u(l({}, r), {
+            instances: u(l({}, r.instances), {
+                [n.id]: n,
+            }),
+        }),
+    });
 }
+
 function E(e, t) {
     return Object.values(t).reduce((e, t) => {
         var n, r, i, a, s;
@@ -116,6 +142,7 @@ function E(e, t) {
         );
     }, 0);
 }
+
 function b(e) {
     let { guildId: t, unlockedGameServers: n } = e,
         r = E(t, n);
@@ -126,16 +153,28 @@ function b(e) {
         }),
     });
 }
+
 function y(e) {
     let { guildId: t, gameServer: n } = e,
         r = p(t);
-    d = u(l({}, d), { [t]: u(l({}, r), { instances: u(l({}, r.instances), { [n.id]: (0, s.A)(n) }) }) });
+    d = u(l({}, d), {
+        [t]: u(l({}, r), {
+            instances: u(l({}, r.instances), {
+                [n.id]: (0, s.A)(n),
+            }),
+        }),
+    });
 }
+
 function O(e) {
     let { guildId: t, gameServerId: n } = e,
         r = p(t);
-    delete r.instances[n], (d = u(l({}, d), { [t]: l({}, r) }));
+    delete r.instances[n],
+        (d = u(l({}, d), {
+            [t]: l({}, r),
+        }));
 }
+
 function A(e) {
     let { guildId: t, entitlements: n } = e,
         r = p(t);
@@ -153,6 +192,7 @@ function A(e) {
         }),
         S(t, r);
 }
+
 function v(e) {
     let { guildId: t, entitlements: n } = e,
         r = p(t);
@@ -161,9 +201,14 @@ function v(e) {
     }),
         S(t, r);
 }
+
 function S(e, t) {
     let n = E(e, t.entitlements);
-    d = u(l({}, d), { [e]: u(l({}, t), { appliedBoosts: n }) });
+    d = u(l({}, d), {
+        [e]: u(l({}, t), {
+            appliedBoosts: n,
+        }),
+    });
 }
 class I extends (r = i.Ay.Store) {
     getState() {

@@ -26,6 +26,7 @@ let l = [
         a.M.VANITY_URL_POWERUP_ROLLBACK_MODAL,
         a.M.VANITY_URL_POWERUP_EDUCATIONAL_POPOVER,
     ];
+
 function o(e) {
     switch (e) {
         case a.V.GUILD_POWERUP_LEVEL_1_COACHMARK:

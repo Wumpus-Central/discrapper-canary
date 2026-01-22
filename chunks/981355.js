@@ -1,5 +1,9 @@
-n.d(t, { A: () => r }), n(896048);
+n.d(t, {
+    A: () => r,
+}),
+    n(896048);
 var l = n(64700);
+
 function r() {
     arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     let [e, t] = l.useState(

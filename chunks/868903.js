@@ -30,17 +30,25 @@ let v = (0, A.createContext)(null),
             ([e, t] = (0, a.JT)(e, t, v)),
             A.createElement(
                 o.DN.Provider,
-                { value: null },
-                A.createElement(m.GQ, { content: e.children }, (n) =>
-                    A.createElement(T, {
-                        props: e,
-                        forwardedRef: t,
-                        collection: n,
-                    }),
+                {
+                    value: null,
+                },
+                A.createElement(
+                    m.GQ,
+                    {
+                        content: e.children,
+                    },
+                    (n) =>
+                        A.createElement(T, {
+                            props: e,
+                            forwardedRef: t,
+                            collection: n,
+                        }),
                 ),
             )
         );
     });
+
 function T({ props: e, forwardedRef: t, collection: n }) {
     var r;
     let i = (0, A.useRef)(null),
@@ -54,7 +62,9 @@ function T({ props: e, forwardedRef: t, collection: n }) {
             collection: n,
         }),
         y = (0, O.Z)(b, p),
-        v = (0, E.$)(u, { global: !0 }),
+        v = (0, E.$)(u, {
+            global: !0,
+        }),
         I = Object.fromEntries(Object.entries(v).map(([e, t]) => [e, "id" === e ? t : void 0])),
         {
             gridProps: T,
@@ -123,6 +133,7 @@ let C = (0, A.forwardRef)(function (e, t) {
           })
         : A.createElement(m.pM, e);
 });
+
 function N({ props: e, forwardedRef: t }) {
     let n = (0, A.useContext)(o.DN),
         { CollectionRoot: r } = (0, A.useContext)(i.zL),
@@ -141,7 +152,9 @@ function N({ props: e, forwardedRef: t }) {
             values: _,
         }),
         m = (0, i.l2)(n.selectionManager.focusedKey),
-        g = (0, E.$)(e, { global: !0 });
+        g = (0, E.$)(e, {
+            global: !0,
+        });
     return A.createElement(
         "div",
         {
@@ -166,8 +179,21 @@ function N({ props: e, forwardedRef: t }) {
 let R = (0, m.KU)(g._B, (e, t, n) => {
     let s = (0, A.useContext)(o.DN),
         l = (0, y.U)(t),
-        { focusProps: u, isFocusVisible: d } = (0, p.o)({ within: !1 }),
-        { rowProps: f, gridCellProps: m, removeButtonProps: g, ...O } = (0, _.O)({ item: n }, s, l),
+        { focusProps: u, isFocusVisible: d } = (0, p.o)({
+            within: !1,
+        }),
+        {
+            rowProps: f,
+            gridCellProps: m,
+            removeButtonProps: g,
+            ...O
+        } = (0, _.O)(
+            {
+                item: n,
+            },
+            s,
+            l,
+        ),
         { hoverProps: v, isHovered: S } = (0, h.M)({
             isDisabled: !O.allowsSelection,
             onHoverStart: n.props.onHoverStart,
@@ -190,7 +216,9 @@ let R = (0, m.KU)(g._B, (e, t, n) => {
     (0, A.useEffect)(() => {
         n.textValue;
     }, [n.textValue]);
-    let T = (0, E.$)(e, { global: !0 });
+    let T = (0, E.$)(e, {
+        global: !0,
+    });
     return (
         delete T.id,
         delete T.onClick,
@@ -213,15 +241,29 @@ let R = (0, m.KU)(g._B, (e, t, n) => {
                 "div",
                 {
                     ...m,
-                    style: { display: "contents" },
+                    style: {
+                        display: "contents",
+                    },
                 },
                 A.createElement(
                     a.Kq,
                     {
                         values: [
-                            [r.k, { slots: { remove: g } }],
+                            [
+                                r.k,
+                                {
+                                    slots: {
+                                        remove: g,
+                                    },
+                                },
+                            ],
                             [i.zL, i.N],
-                            [c.r, { isSelected: O.isSelected }],
+                            [
+                                c.r,
+                                {
+                                    isSelected: O.isSelected,
+                                },
+                            ],
                         ],
                     },
                     I.children,

@@ -1,4 +1,7 @@
-n.d(t, { A: () => m }), n(896048);
+n.d(t, {
+    A: () => m,
+}),
+    n(896048);
 var r,
     l = n(311907),
     i = n(73153),
@@ -6,6 +9,7 @@ var r,
     s = n(927813),
     o = n(661191),
     c = n(322387);
+
 function u(e, t, n) {
     return (
         t in e
@@ -19,6 +23,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,6 +40,7 @@ function d(e) {
     }
     return e;
 }
+
 function f(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -96,6 +102,7 @@ class b extends (r = l.Ay.PersistedStore) {
         return h.hasNewMentions || h.isDataStale || h.isRefreshing;
     }
 }
+
 function g() {
     (h.hasNewMentions = !1), (h.isDataStale = !1), (h.isRefreshing = !1);
 }
@@ -105,12 +112,18 @@ let m = new b(i.h, {
         let { message: t } = e;
     },
     NOTIFICATION_CENTER_SET_TAB: function (e) {
-        h = f(d({}, h), { tab: e.tab });
+        h = f(d({}, h), {
+            tab: e.tab,
+        });
     },
     NOTIFICATION_CENTER_ITEMS_LOCAL_ACK: function (e) {
         let { localIds: t } = e;
         t.forEach((e) => {
-            h = f(d({}, h), { localItemAcks: f(d({}, h.localItemAcks), { [e]: Date.now() }) });
+            h = f(d({}, h), {
+                localItemAcks: f(d({}, h.localItemAcks), {
+                    [e]: Date.now(),
+                }),
+            });
         });
     },
     NOTIFICATION_CENTER_REFRESH: function () {

@@ -1,4 +1,7 @@
-n.d(t, { A: () => m }), n(896048);
+n.d(t, {
+    A: () => m,
+}),
+    n(896048);
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -10,6 +13,7 @@ var i = n(503698),
     u = n(292366),
     d = n(324877),
     f = n(996017);
+
 function p(e, t, n) {
     return (
         t in e
@@ -23,6 +27,7 @@ function p(e, t, n) {
         e
     );
 }
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -39,6 +44,7 @@ function _(e) {
     }
     return e;
 }
+
 function h(e) {
     switch (e.type) {
         case s.I5.BUTTON:
@@ -47,6 +53,7 @@ function h(e) {
             return (0, r.jsx)(d.A, _({}, e));
     }
 }
+
 function m(e) {
     let { components: t, accessory: n, renderComponents: i } = e,
         { message: u } = (0, l.jc)(),
@@ -61,11 +68,15 @@ function m(e) {
                 className: f.Y_,
                 children: [
                     (0, r.jsx)("div", {
-                        className: a()(f.zt, { [f.uf]: m }),
+                        className: a()(f.zt, {
+                            [f.uf]: m,
+                        }),
                         children: i(t),
                     }),
                     (0, r.jsx)("div", {
-                        className: a()(f.LP, { [f.HQ]: _ }),
+                        className: a()(f.LP, {
+                            [f.HQ]: _,
+                        }),
                         children: h(n),
                     }),
                 ],

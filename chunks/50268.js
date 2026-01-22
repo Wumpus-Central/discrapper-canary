@@ -1,4 +1,6 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(627968);
 n(64700);
 var i = n(284009),
@@ -6,6 +8,7 @@ var i = n(284009),
     s = n(397927),
     o = n(253932),
     l = n(957565);
+
 function c(e) {
     let {
             id: t,
@@ -17,6 +20,7 @@ function c(e) {
             focusedClassName: f,
         } = e,
         p = o.Q_.useSetting();
+
     function _(e) {
         let n = null != c && e.shiftKey ? c : t;
         a()(null != n, "cannot copy null text"), (0, l.C)(n, i);

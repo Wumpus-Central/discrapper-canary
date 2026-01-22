@@ -9,6 +9,7 @@ var r = n(58149),
     s = n(124759),
     o = n(652215),
     l = n(375577);
+
 function c(e, t, n) {
     return (
         t in e
@@ -22,6 +23,7 @@ function c(e, t, n) {
         e
     );
 }
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -38,9 +40,11 @@ function u(e) {
     }
     return e;
 }
+
 function d(e) {
     return ((0, i.A)(e) && e.messageReference.guild_id === s.Vi) || (null != e.author && e.author.id === s.hs);
 }
+
 function f() {
     return l;
 }

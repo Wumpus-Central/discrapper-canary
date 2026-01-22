@@ -1,4 +1,6 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var r = n(627968),
     i = n(64700),
     l = n(125744),
@@ -10,6 +12,7 @@ var r = n(627968),
     u = n(555337),
     f = n(652215),
     g = n(985018);
+
 function b(e, t) {
     let n = (0, s.bG)([u.A], () => u.A.getProps().integrations);
     return i.useMemo(

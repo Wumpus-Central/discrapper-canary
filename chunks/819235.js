@@ -1,4 +1,7 @@
-n.d(t, { A: () => H }), n(896048);
+n.d(t, {
+    A: () => H,
+}),
+    n(896048);
 var r = n(735438),
     i = n(306264),
     a = n(73153),
@@ -15,6 +18,7 @@ var r = n(735438),
     m = n(99753),
     g = n(424994),
     E = n(652215);
+
 function b(e, t, n) {
     return (
         t in e
@@ -36,11 +40,15 @@ let y = 4,
     I = new Set(),
     T = new Map(),
     C = null,
-    N = (0, r.debounce)(_.Q1, 3000, { trailing: !0 });
+    N = (0, r.debounce)(_.Q1, 3e3, {
+        trailing: !0,
+    });
+
 function R() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
     return Math.random() * (e + 1) * O;
 }
+
 function w(e, t) {
     a.h.dispatch({
         type: "CONTENT_INVENTORY_SET_FEED_STATE",
@@ -48,6 +56,7 @@ function w(e, t) {
         state: t,
     });
 }
+
 function P(e) {
     if (
         I.has(e) ||
@@ -67,11 +76,15 @@ function P(e) {
     }
     return !0;
 }
+
 function D(e) {
-    w(e, { loading: !1 });
+    w(e, {
+        loading: !1,
+    });
     let t = S.get(e);
     void 0 !== t && (clearTimeout(t), S.delete(e));
 }
+
 function x() {
     var e;
     let t = null != (e = T.get(A)) ? e : 0;
@@ -101,7 +114,10 @@ async function L(e) {
     if (P(t) || r)
         try {
             let e = m.A.getFeed(t);
-            I.add(t), w(t, { loading: !0 });
+            I.add(t),
+                w(t, {
+                    loading: !0,
+                });
             let r = await (0, _.sy)({
                 token: null == e ? void 0 : e.refresh_token,
                 feedId: t,
@@ -114,7 +130,9 @@ async function L(e) {
             }),
                 T.set(t, 0),
                 I.delete(t),
-                w(t, { loading: !1 }),
+                w(t, {
+                    loading: !1,
+                }),
                 t === A && ((C = null), x());
         } catch (s) {
             var i;
@@ -142,15 +160,19 @@ async function L(e) {
             I.delete(t);
         }
 }
+
 function j() {
     x();
 }
+
 function M() {
     j();
 }
+
 function k() {
     D(A);
 }
+
 function U(e) {
     let { feedId: t, feature: n } = e;
     D(t),
@@ -160,17 +182,20 @@ function U(e) {
             force: !0,
         });
 }
+
 function G(e) {
     let { refreshAfterMs: t } = e,
         n = m.A.getFeed(A);
     (null == n ? void 0 : n.refresh_stale_inbox_after_ms) == null ||
         ((C = new Date(Date.now() + (null != t ? t : n.refresh_stale_inbox_after_ms)).toUTCString()), x());
 }
+
 function V(e) {
     var t;
     let { connectionId: n, track: r } = e;
     null == n || ((null == (t = c.A.getAccount(n, E.fg2.SPOTIFY)) ? void 0 : t.showActivity) && N(n, r));
 }
+
 function F() {
     L({
         feedId: g.X1.GLOBAL_FEED,

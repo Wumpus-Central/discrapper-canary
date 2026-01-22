@@ -1,4 +1,6 @@
-n.d(t, { A: () => D });
+n.d(t, {
+    A: () => D,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -25,6 +27,7 @@ var r = n(627968),
     T = n(985018),
     C = n(953239),
     N = n(669149);
+
 function R(e, t) {
     if (null == e) return {};
     var n,
@@ -41,6 +44,7 @@ function R(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function w(e, t) {
     if (null == e) return {};
     var n,
@@ -51,6 +55,7 @@ function w(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function P(e) {
     switch (e) {
         case S.e.ANIMATED_AVATAR_MODAL_UPSELL:
@@ -64,6 +69,7 @@ function P(e) {
             return !1;
     }
 }
+
 function D(e) {
     var t, n, a;
     let {
@@ -211,7 +217,11 @@ function D(e) {
                         intervalType: null == eg || null == (t = eg.subscription_trial) ? void 0 : t.interval,
                         intervalCount: null == eg || null == (n = eg.subscription_trial) ? void 0 : n.interval_count,
                     });
-                } else null != eE && (e = T.intl.formatToPlainString(T.t.bkQ4bH, { percent: eE.discount.amount }));
+                } else
+                    null != eE &&
+                        (e = T.intl.formatToPlainString(T.t.bkQ4bH, {
+                            percent: eE.discount.amount,
+                        }));
             return (0, r.jsx)(y.A, {
                 className: el,
                 showGradient: es || eo,
@@ -223,7 +233,9 @@ function D(e) {
                     null == z || z(), K();
                 },
                 onSubscribeModalClose: q,
-                textOptions: { textOverride: null != $ ? $ : e },
+                textOptions: {
+                    textOverride: null != $ ? $ : e,
+                },
             });
         },
         eC = et ? s()(C.JS, C.OV, F) : s()(C.JS, F),
@@ -286,11 +298,28 @@ function D(e) {
                                         className: C.kQ,
                                         children: [
                                             (0, r.jsxs)(c.Heading, {
-                                                className: s()(C.wx, { [C.k]: es }, H),
+                                                className: s()(
+                                                    C.wx,
+                                                    {
+                                                        [C.k]: es,
+                                                    },
+                                                    H,
+                                                ),
                                                 variant: "heading-xl/bold",
-                                                children: [w, ee ? (0, r.jsx)(p.A, { className: C.TN }) : null],
+                                                children: [
+                                                    w,
+                                                    ee
+                                                        ? (0, r.jsx)(p.A, {
+                                                              className: C.TN,
+                                                          })
+                                                        : null,
+                                                ],
                                             }),
-                                            eS ? (0, r.jsx)(v.A, { affinities: ev }) : void 0,
+                                            eS
+                                                ? (0, r.jsx)(v.A, {
+                                                      affinities: ev,
+                                                  })
+                                                : void 0,
                                             eu,
                                             (0, r.jsx)(c.Text, {
                                                 variant: ep ? "text-sm/normal" : "text-md/normal",
@@ -304,15 +333,21 @@ function D(e) {
                 }),
                 (0, r.jsxs)(c.jlY, {
                     "data-migration-pending": !0,
-                    className: s()(C.qr, e_, { [C.I$]: es }),
+                    className: s()(C.qr, e_, {
+                        [C.I$]: es,
+                    }),
                     children: [
                         (0, r.jsxs)("div", {
-                            className: s()(C.E3, { [C.Q_]: es }),
+                            className: s()(C.E3, {
+                                [C.Q_]: es,
+                            }),
                             children: [
                                 null != Z
                                     ? (0, r.jsx)(l.$n, {
                                           "data-migration-pending": !0,
-                                          className: s()(C.Dc, Q, { [C.HZ]: es }),
+                                          className: s()(C.Dc, Q, {
+                                              [C.HZ]: es,
+                                          }),
                                           onClick: X,
                                           size: l.$n.Sizes.SMALL,
                                           color: es ? l.$n.Colors.CUSTOM : l.$n.Colors.PRIMARY,

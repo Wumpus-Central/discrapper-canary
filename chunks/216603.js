@@ -1,4 +1,7 @@
-n.d(e, { default: () => d }), n(896048);
+n.d(e, {
+    default: () => d,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     c = n(621466),
@@ -8,6 +11,7 @@ var r = n(627968),
     s = n(723702),
     u = n(837921),
     p = n(985018);
+
 function d(t) {
     let { text: e, target: n, onHeightUpdate: d, onSelect: b } = t,
         f = l.useCallback(() => {
@@ -27,7 +31,7 @@ function d(t) {
                       {
                           id: "cut",
                           label: p.intl.string(p.t.pNPVhe),
-                          hint: (0, s.isMac)() ? "\u2318X" : "Ctrl+X",
+                          hint: (0, s.isMac)() ? "⌘X" : "Ctrl+X",
                           action: () => setTimeout(() => u.Ay.cut(), 0),
                       },
                       "cut",
@@ -37,7 +41,7 @@ function d(t) {
                       {
                           id: "copy",
                           label: p.intl.string(p.t.OpuAlK),
-                          hint: (0, s.isMac)() ? "\u2318C" : "Ctrl+C",
+                          hint: (0, s.isMac)() ? "⌘C" : "Ctrl+C",
                           action: () => u.Ay.copy(e),
                       },
                       "copy",
@@ -50,15 +54,19 @@ function d(t) {
         "aria-label": p.intl.string(p.t.NWlDSI),
         onSelect: b,
         children: [
-            (0, r.jsx)(i.rXV, { children: y }),
-            (0, r.jsx)(i.rXV, { children: h }),
+            (0, r.jsx)(i.rXV, {
+                children: y,
+            }),
+            (0, r.jsx)(i.rXV, {
+                children: h,
+            }),
             (0, r.jsxs)(i.rXV, {
                 children: [
                     O,
                     (0, r.jsx)(i.Drp, {
                         id: "paste",
                         label: p.intl.string(p.t.lMUxVi),
-                        hint: (0, s.isMac)() ? "\u2318V" : "Ctrl+V",
+                        hint: (0, s.isMac)() ? "⌘V" : "Ctrl+V",
                         action: () => setTimeout(() => u.Ay.paste(), 0),
                     }),
                 ],

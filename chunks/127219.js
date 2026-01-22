@@ -11,6 +11,7 @@ var i = n(341915),
     l = (function (e) {
         return (e.NOT_FOUND = "not_found"), (e.MOBILE_ONLY = "mobile_only"), e;
     })({});
+
 function c(e) {
     let { questId: t, reason: n = "not_found" } = e;
     return (0, r.jsx)(a.i, {

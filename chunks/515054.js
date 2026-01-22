@@ -18,6 +18,7 @@ var r = n(627968),
     g = n(133583),
     m = n(518477),
     y = n(96124);
+
 function O(e) {
     var t, n;
     let { children: l, className: i, scrollerRef: o } = e,
@@ -86,7 +87,10 @@ function O(e) {
             },
             c,
         )),
-        (n = n = { children: l }),
+        (n = n =
+            {
+                children: l,
+            }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
             : (function (e, t) {
@@ -102,6 +106,7 @@ function O(e) {
         t),
     );
 }
+
 function j(e) {
     let { user: t, currentUser: n, section: l, displayProfile: i, guildId: a, channelId: s, onClose: o } = e;
     return l === m.RP.ACTIVITY
@@ -132,9 +137,12 @@ function j(e) {
                     channelId: s,
                 })
               : l === m.RP.WISHLIST
-                ? (0, r.jsx)(g.A, { profileOwner: t })
+                ? (0, r.jsx)(g.A, {
+                      profileOwner: t,
+                  })
                 : null;
 }
+
 function x(e) {
     var t;
     let {
@@ -200,7 +208,11 @@ function x(e) {
                 "aria-label": h,
                 className: y.NM,
                 children: (0, r.jsx)(s.Fmo, {
-                    component: (0, r.jsx)(s.AC4, { children: (0, r.jsx)(s.H, { children: h }) }),
+                    component: (0, r.jsx)(s.AC4, {
+                        children: (0, r.jsx)(s.H, {
+                            children: h,
+                        }),
+                    }),
                     children: (0, r.jsx)(j, {
                         user: n,
                         currentUser: i,

@@ -1,4 +1,6 @@
-i.d(n, { A: () => c });
+i.d(n, {
+    A: () => c,
+});
 var e = i(627968);
 i(64700);
 var r = i(311907),
@@ -8,6 +10,7 @@ var r = i(311907),
     s = i(607508),
     o = i(37411),
     u = i(985018);
+
 function c(t) {
     let n = (0, s.X)(t);
     return (0, r.bG)([a.A], () => a.A.hasJoined(t.id))
@@ -22,7 +25,10 @@ function c(t) {
                           group: "thread-notifications",
                           id: "".concat(r),
                           label: a,
-                          action: () => d.A.setNotificationSettings(t, { flags: r }),
+                          action: () =>
+                              d.A.setNotificationSettings(t, {
+                                  flags: r,
+                              }),
                           checked: r === n,
                       },
                       r,

@@ -1,4 +1,6 @@
-s.d(t, { default: () => x });
+s.d(t, {
+    default: () => x,
+});
 var n = s(627968);
 s(64700);
 var e = s(158954),
@@ -10,6 +12,7 @@ var e = s(158954),
     c = s(638324),
     u = s(355097),
     A = s(985018);
+
 function R(i) {
     let { guildId: t } = i;
     return (0, n.jsxs)(l.A, {
@@ -40,9 +43,10 @@ function R(i) {
         ],
     });
 }
+
 function x(i) {
     let { guild: t, transitionState: s, onClose: r } = i,
-        l = "".concat(A.intl.string(A.t.BayiAo), "\u2014").concat(null != t ? t.name : "??");
+        l = "".concat(A.intl.string(A.t.BayiAo), "—").concat(null != t ? t.name : "??");
     return (0, n.jsx)(e.Modal, {
         transitionState: s,
         size: "sm",
@@ -55,6 +59,8 @@ function x(i) {
             },
         ],
         onClose: () => Promise.resolve(r()),
-        children: (0, n.jsx)(R, { guildId: t.id }),
+        children: (0, n.jsx)(R, {
+            guildId: t.id,
+        }),
     });
 }

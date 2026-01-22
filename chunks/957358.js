@@ -1,4 +1,7 @@
-n.d(t, { A: () => p }), n(896048);
+n.d(t, {
+    A: () => p,
+}),
+    n(896048);
 var r,
     i = n(627968),
     l = n(64700),
@@ -6,6 +9,7 @@ var r,
     s = n.n(a),
     o = n(998304),
     c = n(542692);
+
 function u(e, t, n) {
     return (
         t in e
@@ -113,5 +117,7 @@ class d extends (r = l.PureComponent) {
             });
     }
 }
-u(d, "defaultProps", { animate: !0 });
+u(d, "defaultProps", {
+    animate: !0,
+});
 let p = d;

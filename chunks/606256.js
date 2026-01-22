@@ -1,4 +1,7 @@
-n.d(t, { A: () => p }), n(896048);
+n.d(t, {
+    A: () => p,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -86,12 +89,16 @@ let p = l.forwardRef(function (e, t) {
                                     null == S || S(), P(!1);
                                 },
                                 onMouseDown: I,
-                                className: a()(f.oZ, x, { [f.wH]: m || T }),
+                                className: a()(f.oZ, x, {
+                                    [f.wH]: m || T,
+                                }),
                                 onClick: h,
                                 "aria-label": "string" == typeof A && null == E ? A : E,
                                 "aria-selected": m,
                                 onContextMenu: b,
-                                focusProps: { enabled: !1 },
+                                focusProps: {
+                                    enabled: !1,
+                                },
                             },
                             N,
                         )),

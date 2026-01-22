@@ -1,4 +1,7 @@
-l.d(t, { A: () => r });
+l.d(t, {
+    A: () => r,
+});
+
 function r(e, t, l) {
     let r = l[e.pingUrl],
         n = l[t.pingUrl];

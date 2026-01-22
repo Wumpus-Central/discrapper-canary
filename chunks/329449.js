@@ -1,9 +1,13 @@
-n.d(t, { A: () => E }), n(896048), n(142703);
+n.d(t, {
+    A: () => E,
+}),
+    n(896048),
+    n(142703);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
     a = n.n(i),
-    s = n(432022),
+    s = n(108531),
     o = n(311907),
     c = n(397927),
     u = n(765671),
@@ -31,7 +35,7 @@ let v = l.memo(function (e) {
                 });
             let e = setTimeout(() => {
                 f(!1), null != a && (0, b.Nu)(a);
-            }, 2000);
+            }, 2e3);
             return () => clearTimeout(e);
         }, [a]);
         let p = null != a ? "100%" : "200%",
@@ -70,24 +74,34 @@ let v = l.memo(function (e) {
                 }),
                 (0, r.jsxs)("div", {
                     className: j._Z,
-                    style: { color: i },
+                    style: {
+                        color: i,
+                    },
                     children: [
                         (0, r.jsx)(c.Text, {
                             className: j.On,
-                            style: { color: i },
+                            style: {
+                                color: i,
+                            },
                             variant: "text-sm/bold",
-                            children: O.intl.format(O.t["6bgVlq"], { multiplier: n }),
+                            children: O.intl.format(O.t["6bgVlq"], {
+                                multiplier: n,
+                            }),
                         }),
                         s &&
                             (0, r.jsxs)(r.Fragment, {
                                 children: [
                                     (0, r.jsx)("div", {
                                         className: a()(j.QA, j.kb),
-                                        style: { backgroundColor: i },
+                                        style: {
+                                            backgroundColor: i,
+                                        },
                                     }),
                                     (0, r.jsx)("div", {
                                         className: a()(j.QA, j.pG),
-                                        style: { backgroundColor: i },
+                                        style: {
+                                            backgroundColor: i,
+                                        },
                                     }),
                                 ],
                             }),
@@ -133,7 +147,7 @@ let v = l.memo(function (e) {
             _ = a && d && i;
         l.useEffect(() => {
             _ && O(!0);
-            let e = setTimeout(() => O(_), 1000);
+            let e = setTimeout(() => O(_), 1e3);
             return () => clearTimeout(e);
         }, [_]);
         let C = (0, c.zhh)({

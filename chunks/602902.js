@@ -1,4 +1,8 @@
-n.d(t, { K: () => v }), n(321073), n(896048);
+n.d(t, {
+    K: () => v,
+}),
+    n(321073),
+    n(896048);
 var r = n(627968);
 n(64700);
 var i = n(192308),
@@ -16,6 +20,7 @@ var i = n(192308),
     m = n(399925),
     g = n(696016),
     E = n(652215);
+
 function b(e, t, n) {
     return (
         t in e
@@ -29,6 +34,7 @@ function b(e, t, n) {
         e
     );
 }
+
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -45,6 +51,7 @@ function y(e) {
     }
     return e;
 }
+
 function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -57,6 +64,7 @@ function O(e, t) {
     }
     return n;
 }
+
 function A(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -92,10 +100,22 @@ async function v(e, t) {
                     a = (0, h.A)(i);
                 if (r.type === _.nQ.CLIP || r.type === _.nQ.VOICE_CLIP) {
                     let i = "".concat("" !== a ? a : "clip", ".mp4");
-                    t.push(new File([e], i, { type: "video/mp4" })), n.push({ clip: r });
+                    t.push(
+                        new File([e], i, {
+                            type: "video/mp4",
+                        }),
+                    ),
+                        n.push({
+                            clip: r,
+                        });
                 } else if (r.type === _.nQ.SCREENSHOT) {
                     let r = "".concat("" !== a ? a : "screenshot", ".jpeg");
-                    t.push(new File([e], r, { type: "image/jpeg" })), n.push({});
+                    t.push(
+                        new File([e], r, {
+                            type: "image/jpeg",
+                        }),
+                    ),
+                        n.push({});
                 }
                 d.default.track(E.HAw.CLIP_SHARED, {
                     location_stack: O,

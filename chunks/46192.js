@@ -1,4 +1,7 @@
-n.d(t, { A: () => _ }), n(896048);
+n.d(t, {
+    A: () => _,
+}),
+    n(896048);
 var r = n(627968),
     i = n(311907),
     a = n(631670),
@@ -10,6 +13,7 @@ var r = n(627968),
     d = n(877272),
     f = n(622865),
     p = n(985018);
+
 function _(e) {
     var t, n;
     let { className: _, textSize: h = 18 } = e,
@@ -27,7 +31,11 @@ function _(e) {
             O || (0, l.qm)();
         },
         v = async () => {
-            O && !y && (await (0, a.yu)({ avatarDecoration: g }));
+            O &&
+                !y &&
+                (await (0, a.yu)({
+                    avatarDecoration: g,
+                }));
         };
     return (0, r.jsx)(u.A, {
         disabled: y,
@@ -35,7 +43,9 @@ function _(e) {
         className: _,
         children: (0, r.jsx)(d.A, {
             variant: "eyebrow",
-            style: { fontSize: h },
+            style: {
+                fontSize: h,
+            },
             children: O
                 ? y
                     ? p.intl.string(p.t["h+WsPb"])

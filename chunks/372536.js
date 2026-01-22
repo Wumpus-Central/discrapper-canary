@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(627968),
     l = n(64700),
     i = n(397927),
@@ -44,7 +46,9 @@ let u = (e) => {
                             {
                                 guild: t,
                                 source: s.PE1.HUB_DIRECTORY,
-                                analyticsLocation: { section: s.JJy.HUB_WELCOME_CTA },
+                                analyticsLocation: {
+                                    section: s.JJy.HUB_WELCOME_CTA,
+                                },
                             }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(i))
@@ -74,7 +78,9 @@ let u = (e) => {
             (0, r.jsx)(i.Heading, {
                 className: c._U,
                 variant: "heading-xl/semibold",
-                children: o.intl.format(o.t.vyvrpC, { guildName: t.name }),
+                children: o.intl.format(o.t.vyvrpC, {
+                    guildName: t.name,
+                }),
             }),
             (0, r.jsx)(i.Text, {
                 variant: "text-md/normal",

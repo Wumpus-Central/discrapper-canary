@@ -19,6 +19,7 @@ var r = n(877413),
     f = n(234379),
     p = n(294106),
     _ = n(340287);
+
 function h(e, t, n) {
     return (
         t in e
@@ -32,6 +33,7 @@ function h(e, t, n) {
         e
     );
 }
+
 function m(e, t) {
     if (null == e) return {};
     var n,
@@ -41,6 +43,7 @@ function m(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
+
 function g(e, t) {
     if (null == e) return {};
     var n,
@@ -157,7 +160,10 @@ var y = new WeakMap(),
         var { target: r } = t;
         if (K(r) && r.matches('[contentEditable="false"]')) return !1;
         var { document: i } = ey.getWindow(e);
-        if (i.contains(r)) return ey.hasDOMNode(e, r, { editable: !0 });
+        if (i.contains(r))
+            return ey.hasDOMNode(e, r, {
+                editable: !0,
+            });
         var a = n.find((e) => {
             var { addedNodes: t, removedNodes: n } = e;
             for (var i of t) if (i === r || i.contains(r)) return !0;
@@ -229,7 +235,11 @@ var y = new WeakMap(),
         focus(e) {
             var t = ey.toDOMNode(e, e),
                 n = ey.findDocumentOrShadowRoot(e);
-            w.set(e, !0), n.activeElement !== t && t.focus({ preventScroll: !0 });
+            w.set(e, !0),
+                n.activeElement !== t &&
+                    t.focus({
+                        preventScroll: !0,
+                    });
         },
         deselect(e) {
             var { selection: t } = e,
@@ -272,7 +282,9 @@ var y = new WeakMap(),
         toDOMPoint(e, t) {
             var [n] = d.KE.node(e, t.path),
                 r = ey.toDOMNode(e, n);
-            d.KE.void(e, { at: t }) &&
+            d.KE.void(e, {
+                at: t,
+            }) &&
                 (t = {
                     path: t.path,
                     offset: 0,
@@ -339,7 +351,9 @@ var y = new WeakMap(),
             if (d.Hg.isElement(s) && d.KE.isVoid(e, s)) {
                 var l = a.getBoundingClientRect(),
                     c = e.isInline(s) ? r - l.left < l.left + l.width - r : i - l.top < l.top + l.height - i,
-                    u = d.KE.point(e, o, { edge: c ? "start" : "end" }),
+                    u = d.KE.point(e, o, {
+                        edge: c ? "start" : "end",
+                    }),
                     f = c ? d.KE.before(e, u) : d.KE.after(e, u);
                 if (f) return d.KE.range(e, f);
             }
@@ -421,7 +435,12 @@ var y = new WeakMap(),
             }
             if (el && !l && !r) {
                 var v = o.hasAttribute("data-slate-node") ? o : o.closest("[data-slate-node]");
-                if (v && ey.hasDOMNode(e, v, { editable: !0 })) {
+                if (
+                    v &&
+                    ey.hasDOMNode(e, v, {
+                        editable: !0,
+                    })
+                ) {
                     var S = ey.toSlateNode(e, v),
                         { path: I, offset: T } = d.KE.start(e, ey.findPath(e, S));
                     return (
@@ -502,7 +521,9 @@ var y = new WeakMap(),
                         at: m.focus,
                         mode: "highest",
                     }) &&
-                    (m = d.KE.unhangRange(e, m, { voids: !0 })),
+                    (m = d.KE.unhangRange(e, m, {
+                        voids: !0,
+                    })),
                 m
             );
         },
@@ -511,7 +532,11 @@ var y = new WeakMap(),
             return d.KE.hasPath(e, n.path) && d.KE.hasPath(e, r.path);
         },
         hasTarget: (e, t) => z(t) && ey.hasDOMNode(e, t),
-        hasEditableTarget: (e, t) => z(t) && ey.hasDOMNode(e, t, { editable: !0 }),
+        hasEditableTarget: (e, t) =>
+            z(t) &&
+            ey.hasDOMNode(e, t, {
+                editable: !0,
+            }),
         hasSelectableTarget: (e, t) => ey.hasEditableTarget(e, t) || ey.isTargetInsideNonReadonlyVoid(e, t),
         isTargetInsideNonReadonlyVoid(e, t) {
             if (R.get(e)) return !1;
@@ -560,16 +585,22 @@ var y = new WeakMap(),
             o = d.wA.parent(s),
             l = !0 === n[B];
         return a.isVoid(r)
-            ? c.createElement(eP, { length: d.bP.string(r).length })
+            ? c.createElement(eP, {
+                  length: d.bP.string(r).length,
+              })
             : "" !== n.text || r.children[r.children.length - 1] !== i || a.isInline(r) || "" !== d.KE.string(a, o)
               ? "" === n.text
-                  ? c.createElement(eP, { isMarkPlaceholder: l })
+                  ? c.createElement(eP, {
+                        isMarkPlaceholder: l,
+                    })
                   : t && "\n" === n.text.slice(-1)
                     ? c.createElement(eR, {
                           isTrailing: !0,
                           text: n.text,
                       })
-                    : c.createElement(eR, { text: n.text })
+                    : c.createElement(eR, {
+                          text: n.text,
+                      })
               : c.createElement(eP, {
                     isLineBreak: !0,
                     isMarkPlaceholder: l,
@@ -585,7 +616,13 @@ var y = new WeakMap(),
                 var e = i();
                 r.current && r.current.textContent !== e && (r.current.textContent = e);
             }),
-            c.createElement(ew, { ref: r }, a)
+            c.createElement(
+                ew,
+                {
+                    ref: r,
+                },
+                a,
+            )
         );
     },
     ew = (0, c.memo)(
@@ -693,7 +730,9 @@ var y = new WeakMap(),
             p = c.createElement(c.Fragment, null, a(_), p);
         }
         return s({
-            attributes: { "data-slate-leaf": !0 },
+            attributes: {
+                "data-slate-leaf": !0,
+            },
             children: p,
             leaf: t,
             text: r,
@@ -851,7 +890,15 @@ var y = new WeakMap(),
     eF = (e) => {
         var { attributes: t, children: n, element: r } = e,
             i = ex().isInline(r) ? "span" : "div";
-        return c.createElement(i, Object.assign({}, t, { style: { position: "relative" } }), n);
+        return c.createElement(
+            i,
+            Object.assign({}, t, {
+                style: {
+                    position: "relative",
+                },
+            }),
+            n,
+        );
     },
     eB = (0, c.createContext)(() => []),
     eH = () => (0, c.useContext)(eB),
@@ -1079,6 +1126,7 @@ var e5 = el
           var { children: t } = e;
           return c.createElement(c.Fragment, null, t);
       };
+
 function e7(e, t) {
     var { path: n, diff: r } = t;
     if (!d.KE.hasPath(e, n)) return !1;
@@ -1091,19 +1139,23 @@ function e7(e, t) {
     var s = d.bP.get(e, a);
     return d.EY.isText(s) && s.text.startsWith(r.text);
 }
+
 function e8(e) {
     for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
     return n.reduce((e, t) => e.slice(0, t.start) + t.text + e.slice(t.end), e);
 }
+
 function e9(e, t) {
     for (var n = Math.min(e.length, t.length), r = 0; r < n; r++) if (e.charAt(r) !== t.charAt(r)) return r;
     return n;
 }
+
 function te(e, t, n) {
     for (var r = Math.min(e.length, t.length, n), i = 0; i < r; i++)
         if (e.charAt(e.length - i - 1) !== t.charAt(t.length - i - 1)) return i;
     return r;
 }
+
 function tt(e, t) {
     var { start: n, end: r, text: i } = t,
         a = e.slice(n, r),
@@ -1117,6 +1169,7 @@ function tt(e, t) {
         };
     return c.start === c.end && 0 === c.text.length ? null : c;
 }
+
 function tn(e, t, n) {
     var r = Math.min(t.start, n.start),
         i = Math.max(0, Math.min(t.start + t.text.length, n.end) - n.start),
@@ -1132,6 +1185,7 @@ function tn(e, t, n) {
         text: o,
     });
 }
+
 function tr(e) {
     var { path: t, diff: n } = e;
     return {
@@ -1145,6 +1199,7 @@ function tr(e) {
         },
     };
 }
+
 function ti(e, t) {
     var { path: n, offset: r } = t;
     if (!d.KE.hasPath(e, n)) return null;
@@ -1168,6 +1223,7 @@ function ti(e, t) {
         offset: r,
     };
 }
+
 function ta(e, t) {
     var n = ti(e, t.anchor);
     if (!n) return null;
@@ -1184,6 +1240,7 @@ function ta(e, t) {
           }
         : null;
 }
+
 function ts(e, t, n) {
     var r = k.get(e),
         i =
@@ -1193,14 +1250,19 @@ function ts(e, t, n) {
                       var { path: n } = e;
                       return d.wA.equals(n, t.path);
                   });
-    if (!i || t.offset <= i.diff.start) return d.bR.transform(t, n, { affinity: "backward" });
+    if (!i || t.offset <= i.diff.start)
+        return d.bR.transform(t, n, {
+            affinity: "backward",
+        });
     var { diff: a } = i;
     if (t.offset <= a.start + a.text.length) {
         var s = {
                 path: t.path,
                 offset: a.start,
             },
-            o = d.bR.transform(s, n, { affinity: "backward" });
+            o = d.bR.transform(s, n, {
+                affinity: "backward",
+            });
         return o
             ? {
                   path: o.path,
@@ -1212,7 +1274,9 @@ function ts(e, t, n) {
             path: t.path,
             offset: t.offset - a.text.length + a.end - a.start,
         },
-        c = d.bR.transform(l, n, { affinity: "backward" });
+        c = d.bR.transform(l, n, {
+            affinity: "backward",
+        });
     return c
         ? "split_node" === n.type && d.wA.equals(n.path, t.path) && l.offset < n.position && a.start < n.position
             ? c
@@ -1222,6 +1286,7 @@ function ts(e, t, n) {
               }
         : null;
 }
+
 function to(e, t, n) {
     var r = ts(e, t.anchor, n);
     if (!r) return null;
@@ -1238,6 +1303,7 @@ function to(e, t, n) {
           }
         : null;
 }
+
 function tl(e, t) {
     var { path: n, diff: r, id: i } = e;
     switch (t.type) {
@@ -1288,7 +1354,9 @@ function tl(e, t) {
                 return {
                     diff: r,
                     id: i,
-                    path: d.wA.transform(n, t, { affinity: "backward" }),
+                    path: d.wA.transform(n, t, {
+                        affinity: "backward",
+                    }),
                 };
             if (t.position > r.start)
                 return {
@@ -1307,7 +1375,9 @@ function tl(e, t) {
                     text: r.text,
                 },
                 id: i,
-                path: d.wA.transform(n, t, { affinity: "forward" }),
+                path: d.wA.transform(n, t, {
+                    affinity: "forward",
+                }),
             };
         case "merge_node":
             if (!d.wA.equals(t.path, n))
@@ -1335,6 +1405,7 @@ function tl(e, t) {
           }
         : null;
 }
+
 function tc(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -1347,6 +1418,7 @@ function tc(e, t) {
     }
     return n;
 }
+
 function tu(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {};
@@ -1366,6 +1438,7 @@ var td = 25,
     tf = 200,
     tp = function () {},
     t_ = (e) => (null == e ? void 0 : e.constructor.name) === "DataTransfer";
+
 function th(e) {
     var { editor: t, scheduleOnDOMSelectionChange: n, onDOMSelectionChange: r } = e,
         i = !1,
@@ -1397,7 +1470,11 @@ function th(e) {
         p = () => {
             if ((s && (clearTimeout(s), (s = null)), o && (clearTimeout(o), (o = null)), !y() && !b())) return void u();
             i || ((i = !0), setTimeout(() => (i = !1))), b() && (i = "action");
-            var e = t.selection && d.KE.rangeRef(t, t.selection, { affinity: "forward" });
+            var e =
+                t.selection &&
+                d.KE.rangeRef(t, t.selection, {
+                    affinity: "forward",
+                });
             M.set(t, t.marks), tp("flush", U.get(t), k.get(t));
             for (var a = y(); (l = null == (p = k.get(t)) ? void 0 : p[0]); ) {
                 var l,
@@ -1472,7 +1549,13 @@ function th(e) {
                 i.splice(s, 1), h();
                 return;
             }
-            i[s] = tu(tu({}, i[s]), {}, { diff: o });
+            i[s] = tu(
+                tu({}, i[s]),
+                {},
+                {
+                    diff: o,
+                },
+            );
         },
         g = function (e) {
             var { at: i } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
@@ -1553,14 +1636,24 @@ function th(e) {
                                 })
                             );
                         }
-                        return g(() => d.KE.deleteFragment(t, { direction: _ }), { at: r });
+                        return g(
+                            () =>
+                                d.KE.deleteFragment(t, {
+                                    direction: _,
+                                }),
+                            {
+                                at: r,
+                            },
+                        );
                     }
                 }
                 switch (n) {
                     case "deleteByComposition":
                     case "deleteByCut":
                     case "deleteByDrag":
-                        return g(() => d.KE.deleteFragment(t), { at: r });
+                        return g(() => d.KE.deleteFragment(t), {
+                            at: r,
+                        });
                     case "deleteContent":
                     case "deleteContentForward":
                         var { anchor: N } = r;
@@ -1573,7 +1666,9 @@ function th(e) {
                                     end: N.offset + 1,
                                 });
                         }
-                        return g(() => d.KE.deleteForward(t), { at: r });
+                        return g(() => d.KE.deleteForward(t), {
+                            at: r,
+                        });
                     case "deleteContentBackward":
                         var w,
                             P,
@@ -1585,30 +1680,91 @@ function th(e) {
                                 start: D.offset - 1,
                                 end: D.offset,
                             });
-                        return g(() => d.KE.deleteBackward(t), { at: r });
+                        return g(() => d.KE.deleteBackward(t), {
+                            at: r,
+                        });
                     case "deleteEntireSoftLine":
                         return g(
                             () => {
-                                d.KE.deleteBackward(t, { unit: "line" }), d.KE.deleteForward(t, { unit: "line" });
+                                d.KE.deleteBackward(t, {
+                                    unit: "line",
+                                }),
+                                    d.KE.deleteForward(t, {
+                                        unit: "line",
+                                    });
                             },
-                            { at: r },
+                            {
+                                at: r,
+                            },
                         );
                     case "deleteHardLineBackward":
-                        return g(() => d.KE.deleteBackward(t, { unit: "block" }), { at: r });
+                        return g(
+                            () =>
+                                d.KE.deleteBackward(t, {
+                                    unit: "block",
+                                }),
+                            {
+                                at: r,
+                            },
+                        );
                     case "deleteSoftLineBackward":
-                        return g(() => d.KE.deleteBackward(t, { unit: "line" }), { at: r });
+                        return g(
+                            () =>
+                                d.KE.deleteBackward(t, {
+                                    unit: "line",
+                                }),
+                            {
+                                at: r,
+                            },
+                        );
                     case "deleteHardLineForward":
-                        return g(() => d.KE.deleteForward(t, { unit: "block" }), { at: r });
+                        return g(
+                            () =>
+                                d.KE.deleteForward(t, {
+                                    unit: "block",
+                                }),
+                            {
+                                at: r,
+                            },
+                        );
                     case "deleteSoftLineForward":
-                        return g(() => d.KE.deleteForward(t, { unit: "line" }), { at: r });
+                        return g(
+                            () =>
+                                d.KE.deleteForward(t, {
+                                    unit: "line",
+                                }),
+                            {
+                                at: r,
+                            },
+                        );
                     case "deleteWordBackward":
-                        return g(() => d.KE.deleteBackward(t, { unit: "word" }), { at: r });
+                        return g(
+                            () =>
+                                d.KE.deleteBackward(t, {
+                                    unit: "word",
+                                }),
+                            {
+                                at: r,
+                            },
+                        );
                     case "deleteWordForward":
-                        return g(() => d.KE.deleteForward(t, { unit: "word" }), { at: r });
+                        return g(
+                            () =>
+                                d.KE.deleteForward(t, {
+                                    unit: "word",
+                                }),
+                            {
+                                at: r,
+                            },
+                        );
                     case "insertLineBreak":
-                        return g(() => d.KE.insertSoftBreak(t), { at: r });
+                        return g(() => d.KE.insertSoftBreak(t), {
+                            at: r,
+                        });
                     case "insertParagraph":
-                        return g(() => d.KE.insertBreak(t), { at: r });
+                        return g(() => d.KE.insertBreak(t), {
+                            at: r,
+                        });
                     case "insertCompositionText":
                     case "deleteCompositionText":
                     case "insertFromComposition":
@@ -1617,7 +1773,10 @@ function th(e) {
                     case "insertFromYank":
                     case "insertReplacementText":
                     case "insertText":
-                        if (t_(i)) return g(() => ey.insertData(t, i), { at: r });
+                        if (t_(i))
+                            return g(() => ey.insertData(t, i), {
+                                at: r,
+                            });
                         var L = null != i ? i : "";
                         if (
                             (j.get(t) && (L = L.replace("\uFEFF", "")),
@@ -1631,7 +1790,9 @@ function th(e) {
                                         n && d.KE.insertText(t, n), r !== e.length - 1 && d.KE.insertSoftBreak(t);
                                     });
                                 },
-                                { at: r },
+                                {
+                                    at: r,
+                                },
                             );
                         if (d.wA.equals(r.anchor.path, r.focus.path)) {
                             var [M, U] = d.Q6.edges(r),
@@ -1652,10 +1813,18 @@ function th(e) {
                                         ? G
                                         : !!(c && d.Q6.isCollapsed(r)) &&
                                           c.end + c.text.length === M.offset &&
-                                          tu(tu({}, c), {}, { text: c.text + L }));
+                                          tu(
+                                              tu({}, c),
+                                              {},
+                                              {
+                                                  text: c.text + L,
+                                              },
+                                          ));
                             if (l) return void m(M.path, G);
                         }
-                        return g(() => d.KE.insertText(t, L), { at: r });
+                        return g(() => d.KE.insertText(t, L), {
+                            at: r,
+                        });
                 }
             }
         },
@@ -1707,6 +1876,7 @@ function th(e) {
         handleInput: v,
     };
 }
+
 function tm() {
     var e = (0, c.useRef)(!1);
     return (
@@ -1722,6 +1892,7 @@ function tm() {
         e.current
     );
 }
+
 function tg(e, t, n) {
     var [r] = (0, c.useState)(() => new MutationObserver(t));
     eC(() => {
@@ -1733,6 +1904,7 @@ function tg(e, t, n) {
         }, []);
 }
 var tE = ["node"];
+
 function tb(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -1745,6 +1917,7 @@ function tb(e, t) {
     }
     return n;
 }
+
 function ty(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {};
@@ -1765,15 +1938,26 @@ var tO = {
     childList: !0,
     characterData: !0,
 };
+
 function tA(e) {
     var { node: t } = e,
         n = g(e, tE);
     if (!el) return null;
     var r = ex(),
         i = tm(),
-        [a] = (0, c.useState)(() => th(ty({ editor: r }, n)));
+        [a] = (0, c.useState)(() =>
+            th(
+                ty(
+                    {
+                        editor: r,
+                    },
+                    n,
+                ),
+            ),
+        );
     return tg(t, a.handleDomMutations, tO), L.set(r, a.scheduleFlush), i && a.flush(), a;
 }
+
 function tv() {
     var e = ex(),
         t = (0, c.useRef)(!1),
@@ -1811,6 +1995,7 @@ var tS = [
         "disableDefaultStyles",
     ],
     tI = ["text"];
+
 function tT(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -1823,6 +2008,7 @@ function tT(e, t) {
     }
     return n;
 }
+
 function tC(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {};
@@ -2054,7 +2240,7 @@ var tN = (e) => c.createElement(c.Fragment, null, eK(e)),
                                         at: s.path,
                                         match: (e) => d.Hg.isElement(e) && d.KE.isBlock(N, e),
                                     });
-                                    b && d.bP.string(b[0]).includes("\t") && (a = !1);
+                                    b && d.bP.string(b[0]).includes("	") && (a = !1);
                                 }
                             }
                             if (!n.startsWith("delete") || n.startsWith("deleteBy")) {
@@ -2074,7 +2260,9 @@ var tN = (e) => c.createElement(c.Fragment, null, eK(e)),
                             if (!i) {
                                 if ((a || e.preventDefault(), t && d.Q6.isExpanded(t) && n.startsWith("delete"))) {
                                     var v = n.endsWith("Backward") ? "backward" : "forward";
-                                    d.KE.deleteFragment(N, { direction: v });
+                                    d.KE.deleteFragment(N, {
+                                        direction: v,
+                                    });
                                     return;
                                 }
                                 switch (n) {
@@ -2091,26 +2279,42 @@ var tN = (e) => c.createElement(c.Fragment, null, eK(e)),
                                         d.KE.deleteBackward(N);
                                         break;
                                     case "deleteEntireSoftLine":
-                                        d.KE.deleteBackward(N, { unit: "line" }),
-                                            d.KE.deleteForward(N, { unit: "line" });
+                                        d.KE.deleteBackward(N, {
+                                            unit: "line",
+                                        }),
+                                            d.KE.deleteForward(N, {
+                                                unit: "line",
+                                            });
                                         break;
                                     case "deleteHardLineBackward":
-                                        d.KE.deleteBackward(N, { unit: "block" });
+                                        d.KE.deleteBackward(N, {
+                                            unit: "block",
+                                        });
                                         break;
                                     case "deleteSoftLineBackward":
-                                        d.KE.deleteBackward(N, { unit: "line" });
+                                        d.KE.deleteBackward(N, {
+                                            unit: "line",
+                                        });
                                         break;
                                     case "deleteHardLineForward":
-                                        d.KE.deleteForward(N, { unit: "block" });
+                                        d.KE.deleteForward(N, {
+                                            unit: "block",
+                                        });
                                         break;
                                     case "deleteSoftLineForward":
-                                        d.KE.deleteForward(N, { unit: "line" });
+                                        d.KE.deleteForward(N, {
+                                            unit: "line",
+                                        });
                                         break;
                                     case "deleteWordBackward":
-                                        d.KE.deleteBackward(N, { unit: "word" });
+                                        d.KE.deleteBackward(N, {
+                                            unit: "word",
+                                        });
                                         break;
                                     case "deleteWordForward":
-                                        d.KE.deleteForward(N, { unit: "word" });
+                                        d.KE.deleteForward(N, {
+                                            unit: "word",
+                                        });
                                         break;
                                     case "insertLineBreak":
                                         d.KE.insertSoftBreak(N);
@@ -2177,12 +2381,24 @@ var tN = (e) => c.createElement(c.Fragment, null, eK(e)),
             var { anchor: ei } = N.selection,
                 ea = d.bP.leaf(N, ei.path),
                 eo = g(ea, tI);
-            if (!d.EY.equals(ea, er, { loose: !0 })) {
+            if (
+                !d.EY.equals(ea, er, {
+                    loose: !0,
+                })
+            ) {
                 q.hasMarkPlaceholder = !0;
                 var ed = Object.fromEntries(Object.keys(eo).map((e) => [e, null]));
                 et.push(
                     tC(
-                        tC(tC({ [B]: !0 }, ed), er),
+                        tC(
+                            tC(
+                                {
+                                    [B]: !0,
+                                },
+                                ed,
+                            ),
+                            er,
+                        ),
                         {},
                         {
                             anchor: ei,
@@ -2198,7 +2414,13 @@ var tN = (e) => c.createElement(c.Fragment, null, eK(e)),
                 if (e) {
                     var { anchor: t } = e,
                         n = d.bP.leaf(N, t.path);
-                    if (er && !d.EY.equals(n, er, { loose: !0 })) return void j.set(N, er);
+                    if (
+                        er &&
+                        !d.EY.equals(n, er, {
+                            loose: !0,
+                        })
+                    )
+                        return void j.set(N, er);
                 }
                 j.delete(N);
             });
@@ -2206,10 +2428,14 @@ var tN = (e) => c.createElement(c.Fragment, null, eK(e)),
         var ep = null == (t = S.get(N)) || null == (n = t.getBoundingClientRect()) ? void 0 : n.height;
         return c.createElement(
             ez.Provider,
-            { value: p },
+            {
+                value: p,
+            },
             c.createElement(
                 eB.Provider,
-                { value: o },
+                {
+                    value: o,
+                },
                 c.createElement(
                     e5,
                     {
@@ -2246,7 +2472,11 @@ var tN = (e) => c.createElement(c.Fragment, null, eK(e)),
                                                       whiteSpace: "pre-wrap",
                                                       wordWrap: "break-word",
                                                   },
-                                                  ep ? { minHeight: ep } : {},
+                                                  ep
+                                                      ? {
+                                                            minHeight: ep,
+                                                        }
+                                                      : {},
                                               ),
                                     ),
                                     b,
@@ -2326,8 +2556,12 @@ var tN = (e) => c.createElement(c.Fragment, null, eK(e)),
                                                 if (!p) {
                                                     var o = d.KE.start(N, n),
                                                         l = d.KE.end(N, n),
-                                                        c = d.KE.void(N, { at: o }),
-                                                        u = d.KE.void(N, { at: l });
+                                                        c = d.KE.void(N, {
+                                                            at: o,
+                                                        }),
+                                                        u = d.KE.void(N, {
+                                                            at: l,
+                                                        });
                                                     if (c && u && d.wA.equals(c[1], u[1])) {
                                                         var f = d.KE.range(N, o);
                                                         d.gB.select(N, f);
@@ -2464,7 +2698,9 @@ var tN = (e) => c.createElement(c.Fragment, null, eK(e)),
                                                         at: n,
                                                         voids: !0,
                                                     }) &&
-                                                    d.gB.delete(N, { at: t }),
+                                                    d.gB.delete(N, {
+                                                        at: t,
+                                                    }),
                                                 ey.insertData(N, r),
                                                 ey.isFocused(N) || ey.focus(N);
                                         }
@@ -2535,7 +2771,10 @@ var tN = (e) => c.createElement(c.Fragment, null, eK(e)),
                                                     return;
                                                 }
                                                 if (e2.isMoveLineForward(t)) {
-                                                    e.preventDefault(), d.gB.move(N, { unit: "line" });
+                                                    e.preventDefault(),
+                                                        d.gB.move(N, {
+                                                            unit: "line",
+                                                        });
                                                     return;
                                                 }
                                                 if (e2.isExtendLineBackward(t)) {
@@ -2558,20 +2797,32 @@ var tN = (e) => c.createElement(c.Fragment, null, eK(e)),
                                                 if (e2.isMoveBackward(t)) {
                                                     e.preventDefault(),
                                                         n && d.Q6.isCollapsed(n)
-                                                            ? d.gB.move(N, { reverse: !a })
-                                                            : d.gB.collapse(N, { edge: "start" });
+                                                            ? d.gB.move(N, {
+                                                                  reverse: !a,
+                                                              })
+                                                            : d.gB.collapse(N, {
+                                                                  edge: "start",
+                                                              });
                                                     return;
                                                 }
                                                 if (e2.isMoveForward(t)) {
                                                     e.preventDefault(),
                                                         n && d.Q6.isCollapsed(n)
-                                                            ? d.gB.move(N, { reverse: a })
-                                                            : d.gB.collapse(N, { edge: "end" });
+                                                            ? d.gB.move(N, {
+                                                                  reverse: a,
+                                                              })
+                                                            : d.gB.collapse(N, {
+                                                                  edge: "end",
+                                                              });
                                                     return;
                                                 }
                                                 if (e2.isMoveWordBackward(t)) {
                                                     e.preventDefault(),
-                                                        n && d.Q6.isExpanded(n) && d.gB.collapse(N, { edge: "focus" }),
+                                                        n &&
+                                                            d.Q6.isExpanded(n) &&
+                                                            d.gB.collapse(N, {
+                                                                edge: "focus",
+                                                            }),
                                                         d.gB.move(N, {
                                                             unit: "word",
                                                             reverse: !a,
@@ -2580,7 +2831,11 @@ var tN = (e) => c.createElement(c.Fragment, null, eK(e)),
                                                 }
                                                 if (e2.isMoveWordForward(t)) {
                                                     e.preventDefault(),
-                                                        n && d.Q6.isExpanded(n) && d.gB.collapse(N, { edge: "focus" }),
+                                                        n &&
+                                                            d.Q6.isExpanded(n) &&
+                                                            d.gB.collapse(N, {
+                                                                edge: "focus",
+                                                            }),
                                                         d.gB.move(N, {
                                                             unit: "word",
                                                             reverse: a,
@@ -2601,7 +2856,9 @@ var tN = (e) => c.createElement(c.Fragment, null, eK(e)),
                                                             (d.KE.isInline(N, l) || d.KE.isBlock(N, l))
                                                         ) {
                                                             e.preventDefault(),
-                                                                d.KE.deleteBackward(N, { unit: "block" });
+                                                                d.KE.deleteBackward(N, {
+                                                                    unit: "block",
+                                                                });
                                                             return;
                                                         }
                                                     }
@@ -2619,43 +2876,63 @@ var tN = (e) => c.createElement(c.Fragment, null, eK(e)),
                                                     if (e2.isDeleteBackward(t)) {
                                                         e.preventDefault(),
                                                             n && d.Q6.isExpanded(n)
-                                                                ? d.KE.deleteFragment(N, { direction: "backward" })
+                                                                ? d.KE.deleteFragment(N, {
+                                                                      direction: "backward",
+                                                                  })
                                                                 : d.KE.deleteBackward(N);
                                                         return;
                                                     }
                                                     if (e2.isDeleteForward(t)) {
                                                         e.preventDefault(),
                                                             n && d.Q6.isExpanded(n)
-                                                                ? d.KE.deleteFragment(N, { direction: "forward" })
+                                                                ? d.KE.deleteFragment(N, {
+                                                                      direction: "forward",
+                                                                  })
                                                                 : d.KE.deleteForward(N);
                                                         return;
                                                     }
                                                     if (e2.isDeleteLineBackward(t)) {
                                                         e.preventDefault(),
                                                             n && d.Q6.isExpanded(n)
-                                                                ? d.KE.deleteFragment(N, { direction: "backward" })
-                                                                : d.KE.deleteBackward(N, { unit: "line" });
+                                                                ? d.KE.deleteFragment(N, {
+                                                                      direction: "backward",
+                                                                  })
+                                                                : d.KE.deleteBackward(N, {
+                                                                      unit: "line",
+                                                                  });
                                                         return;
                                                     }
                                                     if (e2.isDeleteLineForward(t)) {
                                                         e.preventDefault(),
                                                             n && d.Q6.isExpanded(n)
-                                                                ? d.KE.deleteFragment(N, { direction: "forward" })
-                                                                : d.KE.deleteForward(N, { unit: "line" });
+                                                                ? d.KE.deleteFragment(N, {
+                                                                      direction: "forward",
+                                                                  })
+                                                                : d.KE.deleteForward(N, {
+                                                                      unit: "line",
+                                                                  });
                                                         return;
                                                     }
                                                     if (e2.isDeleteWordBackward(t)) {
                                                         e.preventDefault(),
                                                             n && d.Q6.isExpanded(n)
-                                                                ? d.KE.deleteFragment(N, { direction: "backward" })
-                                                                : d.KE.deleteBackward(N, { unit: "word" });
+                                                                ? d.KE.deleteFragment(N, {
+                                                                      direction: "backward",
+                                                                  })
+                                                                : d.KE.deleteBackward(N, {
+                                                                      unit: "word",
+                                                                  });
                                                         return;
                                                     }
                                                     if (e2.isDeleteWordForward(t)) {
                                                         e.preventDefault(),
                                                             n && d.Q6.isExpanded(n)
-                                                                ? d.KE.deleteFragment(N, { direction: "forward" })
-                                                                : d.KE.deleteForward(N, { unit: "word" });
+                                                                ? d.KE.deleteFragment(N, {
+                                                                      direction: "forward",
+                                                                  })
+                                                                : d.KE.deleteForward(N, {
+                                                                      unit: "word",
+                                                                  });
                                                         return;
                                                     }
                                                 }
@@ -2698,7 +2975,9 @@ var tN = (e) => c.createElement(c.Fragment, null, eK(e)),
         if (t.getBoundingClientRect && (!e.selection || (e.selection && d.Q6.isCollapsed(e.selection)))) {
             var n = t.startContainer.parentElement;
             (n.getBoundingClientRect = t.getBoundingClientRect.bind(t)),
-                (0, u.A)(n, { scrollMode: "if-needed" }),
+                (0, u.A)(n, {
+                    scrollMode: "if-needed",
+                }),
                 delete n.getBoundingClientRect;
         }
     },
@@ -2714,14 +2993,18 @@ var tN = (e) => c.createElement(c.Fragment, null, eK(e)),
     },
     tj = (0, c.createContext)(!1),
     tM = () => (0, c.useContext)(tj);
+
 function tk(e) {
     return e instanceof Error;
 }
 var tU = (0, c.createContext)({}),
     tG = (e, t) => e === t;
+
 function tV(e) {
     var t = (0, c.useRef)([]).current,
-        n = (0, c.useRef)({ editor: e }).current,
+        n = (0, c.useRef)({
+            editor: e,
+        }).current,
         r = (0, c.useCallback)((e) => {
             (n.editor = e), t.forEach((t) => t(e));
         }, []);
@@ -2800,11 +3083,27 @@ var tF = ["editor", "children", "onChange", "value"],
             }, []),
             c.createElement(
                 tU.Provider,
-                { value: u },
+                {
+                    value: u,
+                },
                 c.createElement(
                     eX.Provider,
-                    { value: o },
-                    c.createElement(eD.Provider, { value: o.editor }, c.createElement(tj.Provider, { value: _ }, n)),
+                    {
+                        value: o,
+                    },
+                    c.createElement(
+                        eD.Provider,
+                        {
+                            value: o.editor,
+                        },
+                        c.createElement(
+                            tj.Provider,
+                            {
+                                value: _,
+                            },
+                            n,
+                        ),
+                    ),
                 ),
             )
         );
@@ -2820,7 +3119,11 @@ var tF = ["editor", "children", "onChange", "value"],
     },
     tW = (e, t) => {
         var n = d.KE.range(e, d.Q6.end(t)),
-            r = Array.from(d.KE.positions(e, { at: t })),
+            r = Array.from(
+                d.KE.positions(e, {
+                    at: t,
+                }),
+            ),
             i = 0,
             a = r.length,
             s = Math.floor(a / 2);
@@ -2830,6 +3133,7 @@ var tF = ["editor", "children", "onChange", "value"],
             tY(e, d.KE.range(e, r[s]), n) ? (a = s) : (i = s), (s = Math.floor((i + a) / 2));
         return d.KE.range(e, r[a], n);
     };
+
 function tK(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -2842,6 +3146,7 @@ function tK(e, t) {
     }
     return n;
 }
+
 function tz(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {};
@@ -2885,7 +3190,10 @@ var tq = function (e) {
                         var [, r] = t,
                             i = d.KE.range(n, r, n.selection.anchor),
                             s = tW(n, i);
-                        d.Q6.isCollapsed(s) || d.gB.delete(n, { at: s });
+                        d.Q6.isCollapsed(s) ||
+                            d.gB.delete(n, {
+                                at: s,
+                            });
                     }
                 }
             }),
@@ -2902,7 +3210,18 @@ var tq = function (e) {
                 var l = U.get(n);
                 if (null != l && l.at) {
                     var c = d.bR.isPoint(null == l ? void 0 : l.at) ? ts(n, l.at, e) : to(n, l.at, e);
-                    U.set(n, c ? tz(tz({}, l), {}, { at: c }) : null);
+                    U.set(
+                        n,
+                        c
+                            ? tz(
+                                  tz({}, l),
+                                  {},
+                                  {
+                                      at: c,
+                                  },
+                              )
+                            : null,
+                    );
                 }
                 switch (e.type) {
                     case "insert_text":
@@ -2933,8 +3252,12 @@ var tq = function (e) {
                 var { selection: r } = n;
                 if (r) {
                     var [i, a] = d.Q6.edges(r),
-                        s = d.KE.void(n, { at: i.path }),
-                        o = d.KE.void(n, { at: a.path });
+                        s = d.KE.void(n, {
+                            at: i.path,
+                        }),
+                        o = d.KE.void(n, {
+                            at: a.path,
+                        });
                     if (!d.Q6.isCollapsed(r) || s) {
                         var l = ey.toDOMRange(n, r),
                             c = l.cloneContents(),
@@ -2994,7 +3317,13 @@ var tq = function (e) {
                 if (t) {
                     var r = t.split(/\r\n|\r|\n/),
                         i = !1;
-                    for (var a of r) i && d.gB.splitNodes(n, { always: !0 }), n.insertText(a), (i = !0);
+                    for (var a of r)
+                        i &&
+                            d.gB.splitNodes(n, {
+                                always: !0,
+                            }),
+                            n.insertText(a),
+                            (i = !0);
                     return !0;
                 }
                 return !1;
@@ -3010,7 +3339,9 @@ var tq = function (e) {
     },
     tX = (e, t) => {
         var n = [];
-        for (var [r, i] of d.KE.levels(e, { at: t })) {
+        for (var [r, i] of d.KE.levels(e, {
+            at: t,
+        })) {
             var a = ey.findKey(e, r);
             n.push([i, a]);
         }

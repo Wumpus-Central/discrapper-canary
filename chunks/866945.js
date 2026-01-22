@@ -1,4 +1,6 @@
-n.d(t, { e: () => f });
+n.d(t, {
+    e: () => f,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -8,6 +10,7 @@ var r = n(627968),
     c = n(835002),
     u = n(985018),
     d = n(486529);
+
 function f(e) {
     let { label: t, labelHook: n, count: a, dismissNotice: f, className: p, noticeType: _ } = e,
         h = null != f;
@@ -23,7 +26,9 @@ function f(e) {
     return (0, r.jsxs)("div", {
         className: s()(d.I, p),
         children: [
-            (0, r.jsx)(o.mir, { size: "md" }),
+            (0, r.jsx)(o.mir, {
+                size: "md",
+            }),
             (0, r.jsx)(o.Text, {
                 variant: "text-sm/medium",
                 color: "interactive-text-active",

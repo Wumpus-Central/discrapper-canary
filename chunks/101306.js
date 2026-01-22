@@ -1,10 +1,14 @@
-n.d(t, { h: () => m }), n(896048);
+n.d(t, {
+    h: () => m,
+}),
+    n(896048);
 var r = n(439372),
     i = n(436283),
     a = n(954571),
     s = n(490203),
     o = n(49807),
     l = n(652215);
+
 function c(e, t, n) {
     return (
         t in e
@@ -27,6 +31,7 @@ async function d(e) {
             application_id: e.application.id,
         });
 }
+
 function f(e) {
     (0, o.A)(e),
         a.default.track(l.HAw.OPEN_MODAL, {
@@ -34,12 +39,14 @@ function f(e) {
             application_id: e.application.id,
         });
 }
+
 function p(e) {
     let { application: t } = e,
         n = i.Ay.getIFrameModalApplicationId(),
         r = i.Ay.getIFrameModalKey();
     t.id === n && null != n && (0, s.A)(n, r);
 }
+
 function _(e, t) {
     let n = null != t ? Date.now() - t : void 0;
     a.default.track(l.HAw.MODAL_DISMISSED, {

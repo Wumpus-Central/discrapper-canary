@@ -11,6 +11,7 @@ var a = l(311907),
     c = l(652215),
     d = l(746080);
 let o = 656;
+
 function u(e) {
     let { pageWidth: n, onSidebarResize: l } = e,
         u = (0, a.bG)([s.Ay], () => s.Ay.getSidebarState(d.VV.GUILD_HOME));

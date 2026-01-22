@@ -1,4 +1,6 @@
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});
 let r = (0, n(143770).A)({
     kind: "user",
     id: "2025-08_search_phrase_matching",

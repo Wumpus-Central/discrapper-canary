@@ -11,6 +11,7 @@ var r,
     l = n(73153),
     c = n(557009),
     u = n(67480);
+
 function d(e, t, n) {
     return (
         t in e
@@ -32,18 +33,23 @@ var f = (function (e) {
         e
     );
 })({});
+
 function p(e) {
     return "subscription_listing:".concat(e);
 }
+
 function _(e) {
     return "application:".concat(e);
 }
+
 function h(e) {
     return "plan:".concat(e);
 }
+
 function m(e, t, n) {
     return "entitlement:".concat(e, ":").concat(n, ":").concat(t);
 }
+
 function g(e, t) {
     return "entitlement:".concat(t, ":").concat(e);
 }
@@ -61,30 +67,37 @@ let E = new o.J(
     ),
     O = {},
     A = {};
+
 function v(e) {
     var t;
     for (let n of (E.set(e.id, e), null != (t = e.subscription_listings) ? t : [])) S(n);
 }
+
 function S(e) {
     b.set(e.id, e);
 }
+
 function I() {
     E.clear(), b.clear(), y.clear(), (O = {}), (A = {});
 }
+
 function T(e) {
     let { applicationId: t, groupListingId: n } = e;
     O[t] = 1;
     let r = E.get(n);
     if (null != r) for (let e of r.subscription_listings_ids) b.delete(e);
 }
+
 function C(e) {
     let { applicationId: t, groupListing: n } = e;
     (O[t] = 2), v(n);
 }
+
 function N(e) {
     let { applicationId: t } = e;
     O[t] = 2;
 }
+
 function R(e) {
     let { groupListing: t } = e;
     v(t);

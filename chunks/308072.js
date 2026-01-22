@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -8,9 +10,12 @@ var r = n(627968),
     o = n(585958),
     d = n(760751),
     u = n(677230);
+
 function f(e) {
     let { applicationId: t, selected: n, onClick: l, disabled: f } = e,
-        { isFetching: g, coverImageUrl: b } = (0, o.n)(t, { coverImageSize: 256 }),
+        { isFetching: g, coverImageUrl: b } = (0, o.n)(t, {
+            coverImageSize: 256,
+        }),
         m = (0, c.bG)([d.A], () => {
             var e, n;
             return null != (e = null == (n = d.A.getDetectableGame(t)) ? void 0 : n.name) ? e : "";
@@ -25,7 +30,9 @@ function f(e) {
                     : null == b
                       ? (0, r.jsx)("div", {
                             className: u.gP,
-                            children: (0, r.jsx)(a._7Z, { size: "lg" }),
+                            children: (0, r.jsx)(a._7Z, {
+                                size: "lg",
+                            }),
                         })
                       : (0, r.jsx)("img", {
                             className: u.Su,
@@ -52,7 +59,9 @@ function f(e) {
                     n &&
                         (0, r.jsx)("div", {
                             className: u.jK,
-                            children: (0, r.jsx)(a.P7L, { checked: n }),
+                            children: (0, r.jsx)(a.P7L, {
+                                checked: n,
+                            }),
                         }),
                     x,
                 ],

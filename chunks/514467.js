@@ -1,8 +1,11 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(444746),
     i = n(273101),
     a = n(559374),
     s = n(190792);
+
 function o(e, t, n) {
     void 0 === t && (t = !1), void 0 === n && (n = !1);
     var o = e.getBoundingClientRect(),

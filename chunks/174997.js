@@ -1,9 +1,12 @@
-n.d(t, { A: () => l });
+n.d(t, {
+    A: () => l,
+});
 var r = n(29583),
     i = n(992663),
     a = n(683706),
     s = n(618027),
     o = n(333081);
+
 function l(e, t) {
     (0, s.A)(2, arguments);
     var n,

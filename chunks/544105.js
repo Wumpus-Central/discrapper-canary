@@ -48,7 +48,7 @@ let d = new Set(["xbox", "playstation"]);
 i.yTV.XBOX, i.yTV.PS5;
 var f = (function (e) {
     return (
-        (e[(e.CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED = 270000)] = "CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED"),
+        (e[(e.CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED = 27e4)] = "CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED"),
         (e[(e.CONSOLE_DEVICE_UNAVAILABLE = 270001)] = "CONSOLE_DEVICE_UNAVAILABLE"),
         (e[(e.CONSOLE_DEVICE_UNVAILABLE_FROM_OTHER_USERS = 270002)] = "CONSOLE_DEVICE_UNVAILABLE_FROM_OTHER_USERS"),
         (e[(e.CONSOLE_DEVICE_COMMUNICATION_RESTRICTED = 270003)] = "CONSOLE_DEVICE_COMMUNICATION_RESTRICTED"),
@@ -59,5 +59,5 @@ var f = (function (e) {
         e
     );
 })({});
-let p = new Set([270000]),
+let p = new Set([27e4]),
     _ = "console error alert";

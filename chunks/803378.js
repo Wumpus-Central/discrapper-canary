@@ -1,10 +1,15 @@
 let i, r, l;
-n.d(t, { A: () => h }), n(446912), n(896048);
+n.d(t, {
+    A: () => h,
+}),
+    n(446912),
+    n(896048);
 var a,
     s = n(311907),
     o = n(73153),
     c = n(168186),
     d = n(200662);
+
 function u(e, t, n) {
     return (
         t in e
@@ -21,6 +26,7 @@ function u(e, t, n) {
 let b = {},
     f = {},
     p = !1;
+
 function m() {
     (i = void 0), (b = {}), (f = {}), (r = void 0), (l = void 0), (p = !1);
 }
@@ -87,7 +93,10 @@ let h = new g(o.h, {
                 }
                 return e;
             })({}, s)),
-            (n = n = { permissions: (0, d.UZ)(a) }),
+            (n = n =
+                {
+                    permissions: (0, d.UZ)(a),
+                }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                 : (function (e, t) {

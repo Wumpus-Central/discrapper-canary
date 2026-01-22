@@ -10,9 +10,11 @@ var r = n(627968),
     o = n(579908),
     l = n(636194);
 let c = i.createContext(void 0);
+
 function u(e, t) {
     return i.useMemo(() => e === l.e.FETCHED && !0 !== t.current, [e, t]);
 }
+
 function d(e) {
     let t = i.useContext(c);
     if (null == t)
@@ -25,6 +27,7 @@ function d(e) {
     let { listingsLoaded: n, fetchGroupListingsForGuild: r } = t;
     return r(), n;
 }
+
 function f(e) {
     let {
             guildId: t,

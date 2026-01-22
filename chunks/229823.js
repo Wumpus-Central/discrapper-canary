@@ -1,4 +1,6 @@
-i.d(e, { j: () => T });
+i.d(e, {
+    j: () => T,
+});
 var n = i(311907),
     l = i(274372),
     s = i(399925),
@@ -21,22 +23,30 @@ let T = (0, r.Hn)(u.X.CLIPS_RESOLUTION, {
         {
             id: "480p",
             value: a.on.RESOLUTION_480,
-            label: o.intl.formatToPlainString(o.t.TEOC0I, { resolution: a.on.RESOLUTION_480 }),
+            label: o.intl.formatToPlainString(o.t.TEOC0I, {
+                resolution: a.on.RESOLUTION_480,
+            }),
         },
         {
             id: "720p",
             value: a.on.RESOLUTION_720,
-            label: o.intl.formatToPlainString(o.t.TEOC0I, { resolution: a.on.RESOLUTION_720 }),
+            label: o.intl.formatToPlainString(o.t.TEOC0I, {
+                resolution: a.on.RESOLUTION_720,
+            }),
         },
         {
             id: "1080p",
             value: a.on.RESOLUTION_1080,
-            label: o.intl.formatToPlainString(o.t.TEOC0I, { resolution: a.on.RESOLUTION_1080 }),
+            label: o.intl.formatToPlainString(o.t.TEOC0I, {
+                resolution: a.on.RESOLUTION_1080,
+            }),
         },
         {
             id: "1440p",
             value: a.on.RESOLUTION_1440,
-            label: o.intl.formatToPlainString(o.t.TEOC0I, { resolution: a.on.RESOLUTION_1440 }),
+            label: o.intl.formatToPlainString(o.t.TEOC0I, {
+                resolution: a.on.RESOLUTION_1440,
+            }),
         },
         {
             id: "source",

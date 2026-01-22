@@ -1,4 +1,6 @@
-n.d(t, { A: () => y });
+n.d(t, {
+    A: () => y,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -17,6 +19,7 @@ var i = n(503698),
     g = n(694230);
 let E = "https://cdn.discordapp.com/assets/22_211_SuperReactions_GTM_Hero_v09.mp4",
     b = 32;
+
 function y(e) {
     var t, n;
     let { onDismiss: i } = e,
@@ -47,7 +50,9 @@ function y(e) {
                     (0, r.jsx)("div", {
                         className: g.jo,
                         children: (0, r.jsx)(c.A, {
-                            className: a()(g.vK, { [g.Vk]: S }),
+                            className: a()(g.vK, {
+                                [g.Vk]: S,
+                            }),
                             src: E,
                             loop: !0,
                             autoPlay: !y,
@@ -96,7 +101,9 @@ function y(e) {
                                       className: g.sk,
                                       children: (0, r.jsx)(f.A, {
                                           subscriptionTier: h.pe.TIER_2,
-                                          textOptions: { textOverride: m.intl.string(m.t.sEAnVH) },
+                                          textOptions: {
+                                              textOverride: m.intl.string(m.t.sEAnVH),
+                                          },
                                       }),
                                   }),
                               ],

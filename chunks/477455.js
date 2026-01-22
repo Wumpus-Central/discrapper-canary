@@ -1,4 +1,6 @@
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});
 var r = {};
 r = {
     ascending: "crescătoare",
@@ -6,7 +8,7 @@ r = {
     columnSize: (e) => `${e.value} pixeli`,
     descending: "descrescătoare",
     descendingSort: (e) => `sortate dup\u{103} coloana ${e.columnName} \xeen ordine descresc\u{103}toare`,
-    resizerDescription: "Apăsați pe Enter pentru a începe redimensionarea",
+    resizerDescription: "Apăsați pe Enter pentru a \xeencepe redimensionarea",
     select: "Selectare",
     selectAll: "Selectare totală",
     sortable: "coloană sortabilă",

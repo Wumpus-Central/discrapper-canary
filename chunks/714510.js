@@ -29,6 +29,7 @@ var a = n(773669),
     b = n(652215),
     y = n(788868),
     O = n(985018);
+
 function A(e, t, n) {
     return (
         t in e
@@ -42,6 +43,7 @@ function A(e, t, n) {
         e
     );
 }
+
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -58,6 +60,7 @@ function v(e) {
     }
     return e;
 }
+
 function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -70,6 +73,7 @@ function S(e, t) {
     }
     return n;
 }
+
 function I(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -82,9 +86,11 @@ function I(e, t) {
     );
 }
 let T = "NVIDIA GeForce NOW";
+
 function C(e, t, n) {
     return n ? O.intl.formatToPlainString(e, t) : O.intl.format(e, t);
 }
+
 function N(e, t, n, r) {
     let { targetMinutes: i } = (0, g.fc)(e),
         a = (0, g.I3)(e),
@@ -94,7 +100,12 @@ function N(e, t, n, r) {
             sourceQuestContent: r,
         }),
         o = (0, h.ui)(e);
-    if ((0, _.g5)(e) && !(0, _.t)({ quest: e }))
+    if (
+        (0, _.g5)(e) &&
+        !(0, _.t)({
+            quest: e,
+        })
+    )
         return O.intl.format(O.t["l4S+cQ"], {
             minutes: i,
             onClick: s,
@@ -111,15 +122,25 @@ function N(e, t, n, r) {
                   onClick: s,
                   gameTitle: e.config.messages.gameTitle,
               });
-    if (o) return O.intl.format(O.t.Hu8SKW, { targetMinutes: i });
+    if (o)
+        return O.intl.format(O.t.Hu8SKW, {
+            targetMinutes: i,
+        });
     if ((0, _.vv)(e)) {
         let t = (0, m.Xi)(e.config),
             n = null == t ? void 0 : t.messages.videoTitle;
-        return null == n ? O.intl.string(O.t["o+e9yh"]) : O.intl.formatToPlainString(O.t["9m9Mna"], { videoTitle: n });
+        return null == n
+            ? O.intl.string(O.t["o+e9yh"])
+            : O.intl.formatToPlainString(O.t["9m9Mna"], {
+                  videoTitle: n,
+              });
     }
     if (null != a) return a.title;
     if ((0, _.vl)(e))
-        if ((0, h._e)(e)) return O.intl.format(O.t["1NaRSs"], { minutes: i });
+        if ((0, h._e)(e))
+            return O.intl.format(O.t["1NaRSs"], {
+                minutes: i,
+            });
         else
             return O.intl.format(O.t.xHXCyf, {
                 minutes: i,
@@ -127,14 +148,16 @@ function N(e, t, n, r) {
             });
     let l = O.t["6zWtV8"];
     return (
-        (0, _.t)({ quest: e }) &&
-            (l = e.config.features.includes(E.Li.NON_GAMING_PLAY_QUEST) ? O.t.fe7Xec : O.t["wmOh/q"]),
+        (0, _.t)({
+            quest: e,
+        }) && (l = e.config.features.includes(E.Li.NON_GAMING_PLAY_QUEST) ? O.t.fe7Xec : O.t["wmOh/q"]),
         O.intl.format(l, {
             minutes: i,
             gameTitle: e.config.messages.gameTitle,
         })
     );
 }
+
 function R(e) {
     let t,
         { quest: n, taskDetails: r, withoutMarkdown: i, hasNitro: a, collectibleRewardDuration: s } = e,
@@ -171,6 +194,7 @@ function R(e) {
         i,
     );
 }
+
 function w(e) {
     let t,
         { quest: n, taskDetails: r, withoutMarkdown: i, hasNitro: a, collectibleRewardDuration: s } = e,
@@ -191,6 +215,7 @@ function w(e) {
         i,
     );
 }
+
 function P(e) {
     let t,
         { quest: n, taskDetails: r, withoutMarkdown: i, hasNitro: a, collectibleRewardDuration: s } = e,
@@ -227,6 +252,7 @@ function P(e) {
         i,
     );
 }
+
 function D(e) {
     let { quest: t, taskDetails: n, withoutMarkdown: r } = e,
         { targetMinutes: i } = n,
@@ -240,6 +266,7 @@ function D(e) {
         r,
     );
 }
+
 function x(e, t, n, r) {
     var i;
     let a,
@@ -267,6 +294,7 @@ function x(e, t, n, r) {
         r,
     );
 }
+
 function L(e) {
     let { quest: t, taskDetails: n, withoutMarkdown: r, questContent: i } = e,
         a = n.targetMinutes,
@@ -313,6 +341,7 @@ function L(e) {
                 r,
             );
 }
+
 function j(e) {
     let t,
         { quest: n, taskDetails: r, withoutMarkdown: i, hasNitro: a, collectibleRewardDuration: s } = e,
@@ -332,6 +361,7 @@ function j(e) {
         i,
     );
 }
+
 function M(e) {
     var t;
     let { quest: n, gameSheetHook: r, rewardNameWithArticle: i, targetMinutes: a } = e,
@@ -352,6 +382,7 @@ function M(e) {
         gameSheetHook: r,
     });
 }
+
 function k(e) {
     let {
             quest: t,
@@ -384,6 +415,7 @@ function k(e) {
         gameSheetHook: f,
     });
 }
+
 function U(e) {
     let {
             quest: t,
@@ -434,7 +466,11 @@ function U(e) {
             hasNitro: f,
             collectibleRewardDuration: m,
         });
-    if ((0, p.kr)({ quest: t }))
+    if (
+        (0, p.kr)({
+            quest: t,
+        })
+    )
         return D({
             quest: t,
             taskDetails: n,
@@ -458,6 +494,7 @@ function U(e) {
               collectibleRewardDuration: m,
           });
 }
+
 function G(e) {
     var t;
     return U(
@@ -469,6 +506,7 @@ function G(e) {
         }),
     );
 }
+
 function V(e) {
     let { quest: t, questContent: n, sourceQuestContent: r } = e,
         a = (0, g.BL)({
@@ -487,6 +525,7 @@ function V(e) {
         }),
     );
 }
+
 function F(e, t, n) {
     var r, i;
     let a = (0, g.fc)(e),
@@ -502,13 +541,16 @@ function F(e, t, n) {
         l = (null == (r = e.userStatus) ? void 0 : r.claimedAt) != null,
         c = (0, g.S5)(null == (i = e.userStatus) ? void 0 : i.claimedAt);
     return l
-        ? O.intl.formatToPlainString(O.t.lOVr0O, { claimDate: c })
+        ? O.intl.formatToPlainString(O.t.lOVr0O, {
+              claimDate: c,
+          })
         : null != s
           ? s.description
           : null != o
             ? o
             : null;
 }
+
 function B(e) {
     var t, n;
     let {
@@ -539,7 +581,10 @@ function B(e) {
             onGameSheetClosed: c,
         }),
         C = null != y ? y.percentComplete : b.percentComplete;
-    if (A) return O.intl.formatToPlainString(O.t.APddvF, { expirationDate: m });
+    if (A)
+        return O.intl.formatToPlainString(O.t.APddvF, {
+            expirationDate: m,
+        });
     if (i)
         if (s === u.X0.SELECT) return O.intl.string(O.t.sWUpN8);
         else {
@@ -561,6 +606,7 @@ function B(e) {
             });
     return O.intl.string(O.t.S6UUc5);
 }
+
 function H(e) {
     var t, n;
     let r = (0, i.bG)([a.default], () => a.default.locale),
@@ -571,8 +617,12 @@ function H(e) {
         f = null != c ? c.percentComplete : s.percentComplete;
     if (d) return O.intl.string(O.t["ij5E/5"]);
     if ((null == (n = e.userStatus) ? void 0 : n.enrolledAt) != null && f > 0) {
-        let e = (0, l.l9)(r, f, { roundingMode: "floor" });
-        return O.intl.formatToPlainString(O.t.lVZaXD, { percent: e });
+        let e = (0, l.l9)(r, f, {
+            roundingMode: "floor",
+        });
+        return O.intl.formatToPlainString(O.t.lVZaXD, {
+            percent: e,
+        });
     }
     return o === u.X0.SELECT
         ? O.intl.string(O.t.EMrUHQ)
@@ -580,18 +630,31 @@ function H(e) {
           ? O.intl.string(O.t.mOrpXG)
           : O.intl.string(O.t["7e5k7L"]);
 }
+
 function Y(e) {
     return (0, _.IO)(e);
 }
+
 function W(e) {
-    return (0, _.g5)(e) || (0, _.vl)(e) ? 0 : (0, _.fE)({ quest: e }) ? 1 : Y(e) ? 2 : 3 * !!(0, _.Cr)(e);
+    return (0, _.g5)(e) || (0, _.vl)(e)
+        ? 0
+        : (0, _.fE)({
+                quest: e,
+            })
+          ? 1
+          : Y(e)
+            ? 2
+            : 3 * !!(0, _.Cr)(e);
 }
+
 function K(e) {
     return r.useMemo(() => W(e), [e]);
 }
+
 function z(e, t) {
     return !0;
 }
+
 function q(e) {
     let { quest: t, application: n, shortText: r = !1 } = e;
     switch (K(t)) {
@@ -612,10 +675,13 @@ function q(e) {
                 : O.intl.string(O.t.l7E81v);
     }
 }
+
 function X(e) {
     var t, n, r, i, a;
     let { quest: s, rewardCode: o } = e,
-        l = (0, p.kr)({ quest: s }),
+        l = (0, p.kr)({
+            quest: s,
+        }),
         c = null != (t = null == o ? void 0 : o.platform) ? t : u.pY.CROSS_PLATFORM,
         d = l
             ? (0, p.cg)({

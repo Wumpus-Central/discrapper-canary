@@ -1,4 +1,6 @@
-i.d(e, { Q: () => T });
+i.d(e, {
+    Q: () => T,
+});
 var n = i(311907),
     l = i(817281),
     s = i(419954),
@@ -14,6 +16,8 @@ let T = (0, s.zD)(u.X.VOICE_SWITCH_CHANNEL_ALERT_SETTING, {
     },
     setValue: function (t) {
         (0, a.A)("switch_channel_warning_enabled", t, !r.Ay.disableVoiceChannelChangeAlert),
-            l.Ay.updatedUnsyncedSettings({ disableVoiceChannelChangeAlert: !t });
+            l.Ay.updatedUnsyncedSettings({
+                disableVoiceChannelChangeAlert: !t,
+            });
     },
 });

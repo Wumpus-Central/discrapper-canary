@@ -1,7 +1,10 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var r,
     i = n(311907),
     a = n(73153);
+
 function s(e, t, n) {
     return (
         t in e
@@ -15,6 +18,7 @@ function s(e, t, n) {
         e
     );
 }
+
 function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -31,6 +35,7 @@ function o(e) {
     }
     return e;
 }
+
 function l(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -43,6 +48,7 @@ function l(e, t) {
     }
     return n;
 }
+
 function c(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -59,6 +65,7 @@ let u = {
         currentMessage: null,
     },
     d = u;
+
 function f(e) {
     let { messageId: t, channelId: n } = e;
     d = c(o({}, d), {
@@ -68,11 +75,17 @@ function f(e) {
         },
     });
 }
+
 function p() {
-    d = c(o({}, d), { currentMessage: null });
+    d = c(o({}, d), {
+        currentMessage: null,
+    });
 }
+
 function _(e) {
-    d = c(o({}, d), { speechRate: e.speechRate });
+    d = c(o({}, d), {
+        speechRate: e.speechRate,
+    });
 }
 class h extends (r = i.Ay.DeviceSettingsStore) {
     initialize(e) {

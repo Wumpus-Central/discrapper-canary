@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(64700),
     l = n(311907),
     i = n(704824),
@@ -8,9 +10,12 @@ var r = n(64700),
     c = n(287809),
     u = n(403362),
     d = n(395332);
+
 function f(e) {
     let t = (0, l.bG)([c.default], () => c.default.getCurrentUser()),
-        n = (0, d.DB)({ location: e.location }),
+        n = (0, d.DB)({
+            location: e.location,
+        }),
         f = r.useMemo(() => (null == n ? void 0 : n.filter((e) => e.isEligibleForSuggestions())), [n]),
         p = r.useMemo(() => {
             var e;
@@ -23,7 +28,9 @@ function f(e) {
     return r.useMemo(
         () =>
             O
-                ? { isLoading: O }
+                ? {
+                      isLoading: O,
+                  }
                 : {
                       isLoading: O,
                       suggestions: f

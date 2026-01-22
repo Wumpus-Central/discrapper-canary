@@ -1,4 +1,6 @@
-n.d(t, { n: () => _ });
+n.d(t, {
+    n: () => _,
+});
 var r = n(545759),
     i = n(953683),
     a = n(36262),
@@ -10,4 +12,6 @@ var r = n(545759),
     d = n(800993),
     f = n(614534),
     p = [i.A, a.A, s.A, o.A, l.A, c.A, u.A, d.A, f.A],
-    _ = (0, r.U)({ defaultModifiers: p });
+    _ = (0, r.U)({
+        defaultModifiers: p,
+    });

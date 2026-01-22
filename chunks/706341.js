@@ -1,4 +1,8 @@
-n.d(t, { A: () => T }), n(321073), n(896048);
+n.d(t, {
+    A: () => T,
+}),
+    n(321073),
+    n(896048);
 var r = n(735438),
     i = n(73153),
     a = n(378939),
@@ -12,6 +16,7 @@ var r = n(735438),
     p = n(320697),
     _ = n(849077),
     h = n(652215);
+
 function m(e, t, n) {
     return (
         t in e
@@ -25,6 +30,7 @@ function m(e, t, n) {
         e
     );
 }
+
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -41,6 +47,7 @@ function g(e) {
     }
     return e;
 }
+
 function E(e, t) {
     if (null == e) return {};
     var n,
@@ -57,6 +64,7 @@ function E(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function b(e, t) {
     if (null == e) return {};
     var n,
@@ -69,6 +77,7 @@ function b(e, t) {
 }
 let y = 5,
     O = 1500;
+
 function A(e) {
     return a.A.fetchRecentMentions({
         before: e,
@@ -79,6 +88,7 @@ function A(e) {
     });
 }
 let v = (0, r.throttle)(I, O);
+
 function S(e) {
     let t = p.A.getChannelInfoMap(),
         n = [];
@@ -131,7 +141,9 @@ async function I(e) {
                 hasMoreToLoad: !0,
             });
     } catch (e) {
-        i.h.dispatch({ type: "NOTIFICATIONS_INBOX_LOAD_MORE_INBOX_FAILURE" });
+        i.h.dispatch({
+            type: "NOTIFICATIONS_INBOX_LOAD_MORE_INBOX_FAILURE",
+        });
     }
 }
 let T = {
@@ -140,12 +152,24 @@ let T = {
             [t = {}] = [e],
             { preload: n = !1 } = t,
             r = E(t, ["preload"]);
-        if (!p.A.canLoadMore({ preload: n })) return !1;
+        if (
+            !p.A.canLoadMore({
+                preload: n,
+            })
+        )
+            return !1;
         i.h.dispatch({
             type: "NOTIFICATIONS_INBOX_LOAD_MORE_INBOX_START",
             preload: n,
         }),
-            v(g({ preload: n }, r));
+            v(
+                g(
+                    {
+                        preload: n,
+                    },
+                    r,
+                ),
+            );
     },
     inboxItemClick: function (e) {
         let { message: t, channel: n, isUnread: r, isSidebar: a, viewId: l, track: u = !0 } = e;

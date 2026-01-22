@@ -1,4 +1,7 @@
-l.d(n, { A: () => L }), l(896048);
+l.d(n, {
+    A: () => L,
+}),
+    l(896048);
 var t = l(627968),
     a = l(64700),
     r = l(503698),
@@ -27,6 +30,7 @@ var t = l(627968),
     w = l(985018),
     E = l(159453),
     G = l(638990);
+
 function M(e) {
     for (var n = 1; n < arguments.length; n++) {
         var l = null != arguments[n] ? arguments[n] : {},
@@ -52,6 +56,7 @@ function M(e) {
     }
     return e;
 }
+
 function S(e, n) {
     return (
         (n = null != n ? n : {}),
@@ -84,11 +89,17 @@ let D = v.O + 300 + 64,
                     "aria-hidden": !0,
                 }),
                 (0, t.jsxs)(h.A.Title, {
-                    children: [(0, t.jsx)(c.AC4, { children: n.name }), w.intl.string(w.t.VbpLyU)],
+                    children: [
+                        (0, t.jsx)(c.AC4, {
+                            children: n.name,
+                        }),
+                        w.intl.string(w.t.VbpLyU),
+                    ],
                 }),
             ],
         });
     });
+
 function L(e) {
     var n, l;
     let { guild: r, width: h } = e,
@@ -138,12 +149,16 @@ function L(e) {
                           [G.jl]: H && L,
                       }),
                       children: [
-                          (0, t.jsx)(P, { guild: r }),
+                          (0, t.jsx)(P, {
+                              guild: r,
+                          }),
                           (0, t.jsx)(
                               c.GtU,
                               S(M({}, U), {
                                   children: (0, t.jsxs)("div", {
-                                      className: i()(E.$d, { [E.Mk]: Q }),
+                                      className: i()(E.$d, {
+                                          [E.Mk]: Q,
+                                      }),
                                       children: [
                                           (0, t.jsx)("div", {
                                               className: E.QI,
@@ -163,7 +178,10 @@ function L(e) {
                                                                   guildId: r.id,
                                                                   welcomeMessage: V,
                                                               }),
-                                                          K && (0, t.jsx)(N.A, { guildId: r.id }),
+                                                          K &&
+                                                              (0, t.jsx)(N.A, {
+                                                                  guildId: r.id,
+                                                              }),
                                                           !K || Q
                                                               ? (0, t.jsx)(O.Ay, {
                                                                     guild: r,

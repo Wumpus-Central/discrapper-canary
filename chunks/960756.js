@@ -22,6 +22,7 @@ var r = n(627968),
     m = n(539916),
     p = n(985018),
     x = n(818110);
+
 function h(e) {
     let t,
         { title: n, description: i, icon: l, hasStarted: a, status: c, onEdit: o, extra: d } = e;
@@ -131,17 +132,20 @@ function h(e) {
         ],
     });
 }
+
 function j(e) {
     let t = (0, l.bG)([a.A], () => a.A.getDefaultChannelIds(e)),
         n = i.useMemo(() => new Set(t), [t]),
         [r] = (0, c.tb)(e, n);
     return r.length >= m.Kd;
 }
+
 function O(e) {
     let t = j(e),
         n = (0, b.Mj)(e);
     return t || n;
 }
+
 function y(e) {
     let { guildId: t, onEdit: n, disableGoodStatus: o } = e,
         d = (0, l.yK)([a.A], () => a.A.getDefaultChannelIds(t)),
@@ -158,8 +162,12 @@ function y(e) {
                   numFromQuestions: u - O,
               })
             : y
-              ? p.intl.formatToPlainString(p.t.HxEwSv, { numDefaultChannels: O })
-              : p.intl.formatToPlainString(p.t.vPwmA0, { numChattableChannels: m.Kd });
+              ? p.intl.formatToPlainString(p.t.HxEwSv, {
+                    numDefaultChannels: O,
+                })
+              : p.intl.formatToPlainString(p.t.vPwmA0, {
+                    numChattableChannels: m.Kd,
+                });
     return (0, r.jsx)(h, {
         title: A ? p.intl.string(p.t.YZookV) : p.intl.string(p.t["4GSygh"]),
         description: E,
@@ -173,6 +181,7 @@ function y(e) {
         onEdit: n,
     });
 }
+
 function v(e) {
     let { guildId: t, onEdit: n, disableGoodStatus: i } = e,
         o = (0, l.yK)([a.A], () => a.A.getDefaultChannelIds(t)),
@@ -196,7 +205,9 @@ function v(e) {
                     (0, r.jsx)(
                         "span",
                         {
-                            style: { color: j > 85 ? "var(--text-strong)" : "var(--status-warning)" },
+                            style: {
+                                color: j > 85 ? "var(--text-strong)" : "var(--status-warning)",
+                            },
                             children: e,
                         },
                         t,
@@ -213,6 +224,7 @@ function v(e) {
         })
     );
 }
+
 function A(e) {
     let { guildId: t, onEdit: n, disableGoodStatus: c } = e,
         d = (0, l.bG)([f.A], () => f.A.getSettings()),
@@ -254,6 +266,7 @@ function A(e) {
         })
     );
 }
+
 function E(e) {
     let { guildId: t, onEdit: n, disableGoodStatus: i } = e,
         { enabled: a } = g.A.useExperiment(
@@ -261,14 +274,20 @@ function E(e) {
                 guildId: t,
                 location: "guild_settings",
             },
-            { autoTrackExposure: !0 },
+            {
+                autoTrackExposure: !0,
+            },
         ),
         c = (0, l.yK)([d.A], () => d.A.getEditedConnections());
     if (!a) return null;
     let o = c.length > 0,
         u = "none";
     o && !i && (u = "good");
-    let f = o ? p.intl.format(p.t["9swnQZ"], { count: c.length }) : p.intl.string(p.t["3d3Cd5"]);
+    let f = o
+        ? p.intl.format(p.t["9swnQZ"], {
+              count: c.length,
+          })
+        : p.intl.string(p.t["3d3Cd5"]);
     return (0, r.jsx)(h, {
         title: p.intl.string(p.t.oL60eW),
         description: f,

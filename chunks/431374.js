@@ -1,4 +1,7 @@
-n.d(e, { default: () => M }), n(896048);
+n.d(e, {
+    default: () => M,
+}),
+    n(896048);
 var l = n(627968),
     a = n(64700),
     r = n(503698),
@@ -31,11 +34,16 @@ var l = n(627968),
     E = n(985018),
     U = n(501336);
 let C = "CLEAR_AFTER";
+
 function M(t) {
     var e, n;
     let { transitionState: r, onClose: M, sourceAnalyticsLocations: k = [], prompt: H = null } = t,
-        Y = (0, S.h)({ location: "CustomStatusModalWithPreview" }),
-        I = (0, O.R)({ location: "CustomStatusModalWithPreview" }),
+        Y = (0, S.h)({
+            location: "CustomStatusModalWithPreview",
+        }),
+        I = (0, O.R)({
+            location: "CustomStatusModalWithPreview",
+        }),
         { analyticsLocations: L } = (0, h.Ay)(k, p.A.CUSTOM_STATUS_MODAL),
         F = (0, s.bG)([A.default], () => {
             var t;
@@ -304,7 +312,9 @@ function M(t) {
                                 }),
                         ],
                     }),
-                    (0, l.jsx)(d.AC4, { children: "".concat(E.intl.string(E.t.EVV6uZ), ": ").concat(J) }),
+                    (0, l.jsx)(d.AC4, {
+                        children: "".concat(E.intl.string(E.t.EVV6uZ), ": ").concat(J),
+                    }),
                 ],
             }),
         ],

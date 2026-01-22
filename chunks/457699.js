@@ -1,9 +1,12 @@
-n.d(t, { A: () => E });
+n.d(t, {
+    A: () => E,
+});
 var r,
     i = n(311907),
     a = n(73153),
     s = n(141468),
     o = n(390248);
+
 function l(e, t, n) {
     return (
         t in e
@@ -18,9 +21,11 @@ function l(e, t, n) {
     );
 }
 let c = {};
+
 function u(e) {
     return "".concat(e.channel_id, ":").concat(e.id);
 }
+
 function d(e) {
     let { data: t } = e;
     (c = {}),
@@ -33,6 +38,7 @@ function d(e) {
             });
         });
 }
+
 function f(e) {
     let { message: t } = e;
     if (null == t.id || null == t.channel_id) return !1;
@@ -47,6 +53,7 @@ function f(e) {
         !0)
     );
 }
+
 function p(e) {
     let { messageId: t, channelId: n } = e,
         r = u({
@@ -56,12 +63,15 @@ function p(e) {
         i = c[r];
     null != i && (c[r] = (0, o.Td)(i));
 }
+
 function _() {
     m();
 }
+
 function h() {
     m();
 }
+
 function m() {
     c = {};
 }

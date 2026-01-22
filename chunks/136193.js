@@ -7,6 +7,7 @@ var r = n(371926),
 let a = "row-header-column-" + Math.random().toString(36).slice(2),
     s = "row-header-column-" + Math.random().toString(36).slice(2);
 for (; a === s; ) s = "row-header-column-" + Math.random().toString(36).slice(2);
+
 function o(e, t) {
     if (0 === t.length) return [];
     let n = [],
@@ -181,7 +182,9 @@ class l extends i.Z {
                 hasChildNodes: !1,
                 rendered: null,
                 childNodes: [],
-                props: { isSelectionCell: !0 },
+                props: {
+                    isSelectionCell: !0,
+                },
             };
             l.unshift(e);
         }
@@ -196,7 +199,9 @@ class l extends i.Z {
                 hasChildNodes: !1,
                 rendered: null,
                 childNodes: [],
-                props: { isDragButtonCell: !0 },
+                props: {
+                    isDragButtonCell: !0,
+                },
             };
             l.unshift(e);
         }

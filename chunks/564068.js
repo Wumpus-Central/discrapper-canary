@@ -1,4 +1,7 @@
-n.d(t, { A: () => O }), n(228524);
+n.d(t, {
+    A: () => O,
+}),
+    n(228524);
 var r = n(627968);
 n(64700);
 var i = n(110259),
@@ -21,6 +24,7 @@ let y = () => {
     let e = (0, l.Ay)();
     return (0, s.qB)(e) ? n(454333) : n(674463);
 };
+
 function O(e) {
     let { onClose: t, guildId: n, emojiId: s } = e,
         l = y(),
@@ -35,18 +39,24 @@ function O(e) {
         },
     });
     let A = () => {
-            (0, f.pX)(m.BVt.CHANNEL(n, g.VV.ROLE_SUBSCRIPTIONS), { sourceLocationStack: O });
+            (0, f.pX)(m.BVt.CHANNEL(n, g.VV.ROLE_SUBSCRIPTIONS), {
+                sourceLocationStack: O,
+            });
         },
         v = (0, a.bG)([p.A], () => p.A.getGuild(n)),
         S = (0, a.bG)([_.A], () => null != n && _.A.getUserSubscriptionRoles(n).size > 0),
         I = S
             ? E.intl.string(E.t.GoLM9z)
-            : E.intl.formatToPlainString(E.t["h0u/Hi"], { serverName: null == v ? void 0 : v.name }),
+            : E.intl.formatToPlainString(E.t["h0u/Hi"], {
+                  serverName: null == v ? void 0 : v.name,
+              }),
         T = S ? E.intl.string(E.t.PjZ7Db) : E.intl.string(E.t.p8FG1D);
     return (0, r.jsxs)("div", {
         className: b.kL,
         children: [
-            (0, r.jsx)("div", { className: b.Tp }),
+            (0, r.jsx)("div", {
+                className: b.Tp,
+            }),
             (0, r.jsxs)("div", {
                 className: b.Qs,
                 children: [
@@ -66,21 +76,27 @@ function O(e) {
                         src: l,
                         className: b.Tn,
                     }),
-                    (0, r.jsx)(o.hKd, { size: 22 }),
+                    (0, r.jsx)(o.hKd, {
+                        size: 22,
+                    }),
                     (0, r.jsx)(o.Heading, {
                         color: "text-strong",
                         variant: "heading-lg/extrabold",
                         className: b.wx,
                         children: E.intl.string(E.t.cBjkcx),
                     }),
-                    (0, r.jsx)(o.hKd, { size: 4 }),
+                    (0, r.jsx)(o.hKd, {
+                        size: 4,
+                    }),
                     (0, r.jsx)(o.Text, {
                         color: "text-default",
                         variant: "text-md/normal",
                         className: b.h_,
                         children: I,
                     }),
-                    (0, r.jsx)(o.hKd, { size: 24 }),
+                    (0, r.jsx)(o.hKd, {
+                        size: 24,
+                    }),
                     (0, r.jsx)(h.A, {
                         text: T,
                         onClick: A,

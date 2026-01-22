@@ -1,4 +1,7 @@
-n.d(t, { A: () => T }), n(896048);
+n.d(t, {
+    A: () => T,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -35,6 +38,7 @@ let v = {
         default: 84,
         compact: 72,
     };
+
 function N(e) {
     var t, n;
     let { onClick: l, selectedOverride: s = !1, popoutProps: o, ref: A, focusSectionProps: m } = e,
@@ -46,13 +50,17 @@ function N(e) {
             backForwardButtons: x,
             titlebarIconSize: P,
             titlebarHoverHighlight: w,
-        } = (0, f.p)({ location: "NotificationsInboxTitleBarButton" }),
+        } = (0, f.p)({
+            location: "NotificationsInboxTitleBarButton",
+        }),
         L = (0, r.jsx)(d.XFE, {
             className: I.icon,
             color: E || j ? d.LU0.colors.ICON_STRONG : d.LU0.colors.ICON_MUTED,
             size: P,
         }),
-        { badge: R, badgeType: D } = (0, _.ux)({ isSelected: T }),
+        { badge: R, badgeType: D } = (0, _.ux)({
+            isSelected: T,
+        }),
         M = (0, g.isDesktop)() && x,
         k = (0, h.C)(),
         U = (0, g.isMac)() ? v[k] : M ? S[k] : C[k];
@@ -97,7 +105,9 @@ function N(e) {
                     })(
                         {
                             innerRef: A,
-                            className: a()(I.clickableContainer, { [I.withHoverHighlight]: w }),
+                            className: a()(I.clickableContainer, {
+                                [I.withHoverHighlight]: w,
+                            }),
                         },
                         m,
                         o,
@@ -127,7 +137,9 @@ function N(e) {
                                                           mask: p.Ay.Masks.HEADER_BAR_BADGE_BOTTOM,
                                                           children: L,
                                                       }),
-                                                      (0, r.jsx)("div", { className: a()(I.unreadDot, I[P]) }),
+                                                      (0, r.jsx)("div", {
+                                                          className: a()(I.unreadDot, I[P]),
+                                                      }),
                                                   ],
                                               })
                                             : L,
@@ -153,10 +165,13 @@ function N(e) {
         ],
     });
 }
+
 function T() {
     let { focusSectionProps: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         t = i.useRef(null),
-        { notificationCenterVariant: n } = (0, m.X8)({ location: "NotificationsInboxButton" }),
+        { notificationCenterVariant: n } = (0, m.X8)({
+            location: "NotificationsInboxButton",
+        }),
         l = (0, o.bG)([A.A], () => A.A.getChannelId()),
         a = i.useMemo(() => O.BVt.CHANNEL(O.gNP, null != l ? l : void 0), [l]),
         c = (0, _.HN)();

@@ -1,4 +1,6 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var r = n(627968),
     i = n(64700),
     a = n(502572),
@@ -11,6 +13,7 @@ var r = n(627968),
     f = n(652215),
     p = n(985018),
     _ = n(572523);
+
 function h(e, t, n) {
     return (
         t in e
@@ -24,6 +27,7 @@ function h(e, t, n) {
         e
     );
 }
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -40,6 +44,7 @@ function m(e) {
     }
     return e;
 }
+
 function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -52,6 +57,7 @@ function g(e, t) {
     }
     return n;
 }
+
 function E(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -67,6 +73,7 @@ let b = function () {
     let e = i.useRef(null),
         { analyticsLocations: t } = (0, l.Ay)(),
         { fractionalState: h } = (0, c.A)();
+
     function g(n) {
         null != e.current && (0, o.OoC)(e.current),
             (0, u.g)({
@@ -84,7 +91,13 @@ let b = function () {
         e.current = await (0, o.mMO)(
             async () => {
                 let { default: e } = await Promise.resolve().then(n.bind(n, 770101));
-                return (t) => (0, r.jsx)(e, E(m({}, t), { onSelectGuild: g }));
+                return (t) =>
+                    (0, r.jsx)(
+                        e,
+                        E(m({}, t), {
+                            onSelectGuild: g,
+                        }),
+                    );
             },
             {
                 onCloseRequest: () => {
@@ -93,7 +106,9 @@ let b = function () {
             },
         );
     }
-    let y = (0, d.Nc)({ fractionalState: h });
+    let y = (0, d.Nc)({
+        fractionalState: h,
+    });
     return (0, r.jsxs)("div", {
         className: _.iE,
         children: [
@@ -128,7 +143,13 @@ let b = function () {
                                   {
                                       text: y,
                                       "aria-label": y.toString(),
-                                      children: (e) => (0, r.jsx)("span", E(m({}, e), { children: l })),
+                                      children: (e) =>
+                                          (0, r.jsx)(
+                                              "span",
+                                              E(m({}, e), {
+                                                  children: l,
+                                              }),
+                                          ),
                                   },
                                   t,
                               )

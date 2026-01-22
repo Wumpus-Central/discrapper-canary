@@ -467,10 +467,10 @@ var z = (function (e) {
     })({}),
     X = (function (e) {
         return (
-            (e[(e.UNKNOWN_ERROR = 1000)] = "UNKNOWN_ERROR"),
+            (e[(e.UNKNOWN_ERROR = 1e3)] = "UNKNOWN_ERROR"),
             (e[(e.SERVICE_UNAVAILABLE = 1001)] = "SERVICE_UNAVAILABLE"),
             (e[(e.TRANSACTION_ABORTED = 1002)] = "TRANSACTION_ABORTED"),
-            (e[(e.INVALID_PAYLOAD = 4000)] = "INVALID_PAYLOAD"),
+            (e[(e.INVALID_PAYLOAD = 4e3)] = "INVALID_PAYLOAD"),
             (e[(e.INVALID_COMMAND = 4002)] = "INVALID_COMMAND"),
             (e[(e.INVALID_GUILD = 4003)] = "INVALID_GUILD"),
             (e[(e.INVALID_EVENT = 4004)] = "INVALID_EVENT"),
@@ -489,7 +489,7 @@ var z = (function (e) {
             (e[(e.INVALID_PROVIDER = 4019)] = "INVALID_PROVIDER"),
             (e[(e.INVALID_CONNECTION_CALLBACK_STATE = 4020)] = "INVALID_CONNECTION_CALLBACK_STATE"),
             (e[(e.BAD_REQUEST_FOR_PROVIDER = 4021)] = "BAD_REQUEST_FOR_PROVIDER"),
-            (e[(e.OAUTH2_ERROR = 5000)] = "OAUTH2_ERROR"),
+            (e[(e.OAUTH2_ERROR = 5e3)] = "OAUTH2_ERROR"),
             (e[(e.SELECT_CHANNEL_TIMED_OUT = 5001)] = "SELECT_CHANNEL_TIMED_OUT"),
             (e[(e.GET_GUILD_TIMED_OUT = 5002)] = "GET_GUILD_TIMED_OUT"),
             (e[(e.SELECT_VOICE_FORCE_REQUIRED = 5003)] = "SELECT_VOICE_FORCE_REQUIRED"),
@@ -506,10 +506,10 @@ var z = (function (e) {
     })({}),
     Z = (function (e) {
         return (
-            (e[(e.CLOSE_NORMAL = 1000)] = "CLOSE_NORMAL"),
+            (e[(e.CLOSE_NORMAL = 1e3)] = "CLOSE_NORMAL"),
             (e[(e.CLOSE_UNSUPPORTED = 1003)] = "CLOSE_UNSUPPORTED"),
             (e[(e.CLOSE_ABNORMAL = 1006)] = "CLOSE_ABNORMAL"),
-            (e[(e.INVALID_CLIENTID = 4000)] = "INVALID_CLIENTID"),
+            (e[(e.INVALID_CLIENTID = 4e3)] = "INVALID_CLIENTID"),
             (e[(e.INVALID_ORIGIN = 4001)] = "INVALID_ORIGIN"),
             (e[(e.RATELIMITED = 4002)] = "RATELIMITED"),
             (e[(e.TOKEN_REVOKED = 4003)] = "TOKEN_REVOKED"),

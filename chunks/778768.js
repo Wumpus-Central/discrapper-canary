@@ -1,4 +1,7 @@
-n.d(t, { w: () => T }), n(896048);
+n.d(t, {
+    w: () => T,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -24,6 +27,7 @@ var r = n(627968),
     _ = n(985018),
     C = n(357694),
     S = n(248789);
+
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -50,11 +54,14 @@ function I(e) {
     return e;
 }
 let N = "VoiceInviteSuggestionsPopover";
+
 function T(e) {
     let { channel: t, onHoverOrFocus: i, setPopoutRef: s, closePopout: u } = e,
         f = l.useRef(null),
         p = (0, x.L7)(f),
-        m = (0, x.kt)({ channel: t }),
+        m = (0, x.kt)({
+            channel: t,
+        }),
         { analyticsLocations: A } = (0, b.Ay)(h.A.VOICE_INVITE_SUGGESTIONS_POPOVER);
     (0, g.A)({
         name: c.ImpressionNames.VOICE_INVITE_SUGGESTIONS_POPOVER,
@@ -151,6 +158,7 @@ function T(e) {
         }),
     });
 }
+
 function P(e) {
     let { channel: t, user: n } = e,
         i = l.useRef(null),
@@ -184,7 +192,9 @@ function P(e) {
                           user: n,
                           inviteKey: r,
                           location: N,
-                          inviteAnalyticsMetadata: { source: E.PE1.VOICE_INVITE_SUGGESTIONS },
+                          inviteAnalyticsMetadata: {
+                              source: E.PE1.VOICE_INVITE_SUGGESTIONS,
+                          },
                       },
                       (e) => {
                           h(e ? "success" : null);
@@ -207,7 +217,9 @@ function P(e) {
     return (0, r.jsxs)(d.DUT, {
         innerRef: i,
         tag: "li",
-        className: a()(C.nM, { [C.vk]: !b }),
+        className: a()(C.nM, {
+            [C.vk]: !b,
+        }),
         "aria-disabled": b,
         onClick: g,
         "aria-label": w,

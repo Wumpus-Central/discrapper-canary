@@ -1,4 +1,6 @@
-s.d(e, { K: () => r });
+s.d(e, {
+    K: () => r,
+});
 var l = s(562465),
     a = s(73153),
     n = s(568004),
@@ -12,7 +14,9 @@ async function r(t, e, s, r) {
         try {
             let n = await l.Bo.post({
                 url: i.Rsh.APPLICATION_BUILD_SIZE(t, e, s),
-                body: { manifest_ids: r },
+                body: {
+                    manifest_ids: r,
+                },
                 oldFormErrors: !0,
                 rejectWithError: !0,
             });

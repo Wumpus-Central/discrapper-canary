@@ -1,4 +1,8 @@
-l.d(t, { default: () => v }), l(321073), l(896048);
+l.d(t, {
+    default: () => v,
+}),
+    l(321073),
+    l(896048);
 var n = l(627968),
     a = l(64700),
     i = l(158954),
@@ -8,6 +12,7 @@ var n = l(627968),
     d = l(191485),
     b = l(670455),
     O = l(985018);
+
 function o(e) {
     let {
             title: t,
@@ -65,8 +70,12 @@ function o(e) {
 }
 let v = function (e) {
     let { searchContext: t, rating: l, transitionState: r, onClose: v } = e,
-        E = (0, d.L)({ getOptions: s.aK }),
-        f = (0, d.L)({ getOptions: s.mX }),
+        E = (0, d.L)({
+            getOptions: s.aK,
+        }),
+        f = (0, d.L)({
+            getOptions: s.mX,
+        }),
         c = l === b.P0.BAD,
         { questionItems: g, questionTitles: _ } = a.useMemo(() => {
             let e = [],
@@ -119,7 +128,12 @@ let v = function (e) {
                             });
                     }
                     return e;
-                })({ title: t }, e),
+                })(
+                    {
+                        title: t,
+                    },
+                    e,
+                ),
             );
         }, [g, _, p]),
         D = a.useMemo(() => g.every(s.GP), [g]),

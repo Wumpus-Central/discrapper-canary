@@ -17,6 +17,7 @@ var r = n(889137),
             e
         );
     })({});
+
 function l(e, t) {
     return (0, r.YW)([t, e])
         .with([i.orn.ALL_MESSAGES, a.e.ALL_MESSAGES], () => "all_messages")
@@ -26,6 +27,7 @@ function l(e, t) {
         .with([i.orn.NO_MESSAGES, a.e.ONLY_MENTIONS], () => "nothing")
         .otherwise(() => "custom");
 }
+
 function c(e) {
     return (0, r.YW)(e)
         .with("all_messages", () => s.intl.string(s.t.hZrr6k))

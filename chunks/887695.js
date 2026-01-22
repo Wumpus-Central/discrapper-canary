@@ -233,6 +233,7 @@ let p = (0, c.xI)(u.A.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
             }
         );
     };
+
 function y(e) {
     let {
         categories: t,
@@ -286,6 +287,7 @@ function y(e) {
         };
     }, [t, n, i, o, s, a]);
 }
+
 function O(e) {
     let {
             columnCounts: t,

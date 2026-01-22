@@ -1,4 +1,8 @@
-n.d(t, { A: () => S }), n(896048), n(667532);
+n.d(t, {
+    A: () => S,
+}),
+    n(896048),
+    n(667532);
 var r = n(310953),
     i = n(473529),
     a = n(335934),
@@ -26,19 +30,24 @@ let g = () => {
         h.BVt.QUEST_HOME_V2,
     ].filter(p.Vq);
 };
+
 function E(e, t) {
     return e < 0 ? t - 1 : e >= t ? 0 : e;
 }
+
 function b(e) {
     return g().findIndex((t) => e.startsWith(t));
 }
+
 function y(e, t) {
     (0, _.i)(e, t);
 }
+
 function O(e) {
     let t = d.A.getCurrentRoute();
     e === h.BVt.APPLICATION_STORE && null != t ? (0, _.a)(t) : (0, _.a)(e);
 }
+
 function A(e) {
     let { channelId: t, path: n, basePath: r } = l.A.getState(),
         i = f.A.getPrivateChannelIds(),
@@ -48,13 +57,17 @@ function A(e) {
     let o = a[s];
     g().includes(o) ? O(o) : y(h.ME, o);
 }
+
 function v(e, t) {
     let n = l.A.getState().channelId,
-        a = (0, r.A)(t, { withCurrentVoiceChannel: !0 }).map((e) => e.id);
+        a = (0, r.A)(t, {
+            withCurrentVoiceChannel: !0,
+        }).map((e) => e.id);
     (0, i.K)(t) && a.unshift(m.VV.GUILD_HOME);
     let s = E((null != n ? a.indexOf(n) : -1) + e, a.length);
     y(t, a[s]);
 }
+
 function S() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
         t = l.A.getState().guildId;

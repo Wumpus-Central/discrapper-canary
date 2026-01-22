@@ -1,4 +1,6 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var r = n(627968),
     i = n(412703),
     a = n(311907),
@@ -11,6 +13,7 @@ var r = n(627968),
     f = n(545986),
     p = n(654487),
     _ = n(985018);
+
 function h(e, t) {
     switch (e) {
         case i.n.WATCH_VIDEO:
@@ -26,6 +29,7 @@ function h(e, t) {
             return _.intl.string(_.t.kUQLMJ);
     }
 }
+
 function m(e) {
     switch (e) {
         case i.n.ACHIEVEMENT_IN_GAME:
@@ -37,6 +41,7 @@ function m(e) {
             return l.Cy.ACCEPT_QUEST;
     }
 }
+
 function g(e, t) {
     let { launchInGameActivity: n } = (0, u.zW)(t);
     if ((0, d.BS)(t))
@@ -56,6 +61,7 @@ function g(e, t) {
             return null;
     }
 }
+
 function E(e, t, n, r) {
     return e === i.n.WATCH_VIDEO
         ? async () => {
@@ -98,7 +104,13 @@ let b = function (e) {
             questContentRowIndex: p,
         },
         b = t.id,
-        { isEnrolling: y } = (0, a.cf)([c.A], () => ({ isEnrolling: c.A.isEnrolling(b) }), [b]),
+        { isEnrolling: y } = (0, a.cf)(
+            [c.A],
+            () => ({
+                isEnrolling: c.A.isEnrolling(b),
+            }),
+            [b],
+        ),
         O = (0, f.Oz)(t),
         A = g(n, t),
         v = h(n, t.config.features),

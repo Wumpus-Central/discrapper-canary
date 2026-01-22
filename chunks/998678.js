@@ -58,6 +58,7 @@ var r = n(627968),
     J = n(985018),
     ee = n(240452),
     et = n(676032);
+
 function en(e, t, n) {
     return (
         t in e
@@ -71,6 +72,7 @@ function en(e, t, n) {
         e
     );
 }
+
 function er(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -87,6 +89,7 @@ function er(e) {
     }
     return e;
 }
+
 function ei(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -99,6 +102,7 @@ function ei(e, t) {
     }
     return n;
 }
+
 function ea(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -110,6 +114,7 @@ function ea(e, t) {
         e
     );
 }
+
 function es(e, t) {
     if (null == e) return {};
     var n,
@@ -126,6 +131,7 @@ function es(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function eo(e, t) {
     if (null == e) return {};
     var n,
@@ -153,14 +159,21 @@ let el = new C.A("AddPaymentStep.tsx"),
         postalCode: "",
         state: "",
     };
+
 function ed(e) {
     let { paymentSourceTypeRestrictions: t } = e,
         n = null != t && t.length > 0 ? q.f.ADD_NEW_PAYMENT_METHOD : void 0;
     return (0, r.jsxs)("div", {
         className: ee.rf,
-        children: [(0, r.jsx)(q.j, { paymentRestrictionBannerType: n }), (0, r.jsx)(_.A, er({}, e))],
+        children: [
+            (0, r.jsx)(q.j, {
+                paymentRestrictionBannerType: n,
+            }),
+            (0, r.jsx)(_.A, er({}, e)),
+        ],
     });
 }
+
 function ef(e) {
     let { onCardInfoChange: t } = e,
         n = (0, l.bG)([k.A], () => k.A.error);
@@ -172,24 +185,28 @@ function ef(e) {
         }),
     });
 }
+
 function ep() {
     return (0, r.jsx)("div", {
         className: ee.rf,
         children: (0, r.jsx)(h.A, {}),
     });
 }
+
 function e_() {
     return (0, r.jsx)("div", {
         className: ee.rf,
         children: (0, r.jsx)(m.A, {}),
     });
 }
+
 function eh() {
     return (0, r.jsx)("div", {
         className: ee.rf,
         children: (0, r.jsx)(Q.A, {}),
     });
 }
+
 function em() {
     let e = (0, l.bG)([M.A], () => M.A.isBusy),
         t = (0, l.bG)([k.A], () => k.A.stripePaymentMethod);
@@ -199,6 +216,7 @@ function em() {
         submitting: e,
     });
 }
+
 function eg(e) {
     let { billingAddressInfo: t, onBillingAddressChange: n, paymentSourceType: i } = e,
         a = (0, l.bG)([k.A], () => k.A.error);
@@ -212,12 +230,17 @@ function eg(e) {
         }),
     });
 }
+
 function eE() {
-    return (0, r.jsx)(E.N, { className: ee.rf });
+    return (0, r.jsx)(E.N, {
+        className: ee.rf,
+    });
 }
+
 function eb(e) {
     return () => (null != k.A.error && (0, p.ET)(), e());
 }
+
 function ey(e) {
     let { onPrimary: t, onBack: n } = e,
         i = es(e, ["onPrimary", "onBack"]),
@@ -235,6 +258,7 @@ function ey(e) {
         )
     );
 }
+
 function eO(e) {
     var t;
     let n,
@@ -284,6 +308,7 @@ function eO(e) {
             appendSteps: E,
             paymentElementsEnabled: eA,
         });
+
     function ej(e) {
         switch (e) {
             case R.pn.CREDIT_CARD_INFORMATION:
@@ -291,7 +316,9 @@ function eO(e) {
             case R.pn.CASH_APP_INFORMATION:
                 return ex;
             default:
-                return { steps: [R.pn.ADD_PAYMENT_STEPS] };
+                return {
+                    steps: [R.pn.ADD_PAYMENT_STEPS],
+                };
         }
     }
     let [eM, ek] = i.useState(ev),
@@ -329,6 +356,7 @@ function eO(e) {
         },
         [eM, O],
     );
+
     function ez(e) {
         (0, c.showToast)(
             (0, c.createToast)(void 0 !== es ? es : J.intl.string(J.t["VJPg+l"]), c.ToastType.SUCCESS, {
@@ -365,6 +393,7 @@ function eO(e) {
         to = null != ts ? ts : "",
         tl = (0, l.bG)([F.A], () => F.A.get(to), [to]),
         tc = null == tl || null == (t = tl.eligiblePaymentGateways) ? void 0 : t.map((e) => e.valueOf());
+
     function tu(e) {
         eZ(e.id), ez(e);
     }
@@ -455,7 +484,13 @@ function eO(e) {
                     null != k.A.error && (0, p.ET)();
                 },
                 tR = (e, t) => {
-                    e3((e) => ea(er({}, e), { info: t })), eF(eN), tu(e);
+                    e3((e) =>
+                        ea(er({}, e), {
+                            info: t,
+                        }),
+                    ),
+                        eF(eN),
+                        tu(e);
                 };
             const tw = () => {
                 eF(ew), eK(R.pn.PAYMENT_TYPE);
@@ -517,7 +552,9 @@ function eO(e) {
                 },
                 paymentSourceTypeRestrictions: tc,
             })),
-                (s = (0, r.jsx)(ey, { onBack: b }));
+                (s = (0, r.jsx)(ey, {
+                    onBack: b,
+                }));
             break;
         case R.pn.PAYMENT_ELEMENT:
             if (!eA) throw (0, d.ne)("Payment Elements not enabled, invalid step", !0);
@@ -537,7 +574,13 @@ function eO(e) {
                         let e = tO.current,
                             { paymentMethod: t } = await (0, d.YB)(eu, e),
                             { billingAddressInfo: n } = (0, H.uK)(t);
-                        e3((e) => ea(er({}, e), { info: n })), tT(), eK(R.pn.ADDRESS);
+                        e3((e) =>
+                            ea(er({}, e), {
+                                info: n,
+                            }),
+                        ),
+                            tT(),
+                            eK(R.pn.ADDRESS);
                     } else {
                         let e = (0, v.eI)(tE);
                         null != e ? eK(e) : eK(R.pn.ADDRESS);
@@ -570,7 +613,10 @@ function eO(e) {
                 e6(!0);
                 try {
                     let t = await (0, d.YJ)(eu, e);
-                    e0({ token: t }), eK(R.pn.ADDRESS);
+                    e0({
+                        token: t,
+                    }),
+                        eK(R.pn.ADDRESS);
                 } catch (e) {
                     var t;
                     el.error(null != (t = e.message) ? t : JSON.stringify(e));
@@ -584,7 +630,13 @@ function eO(e) {
                         info: e,
                         isValid: t,
                     }),
-                        e3((t) => ea(er({}, t), { info: ea(er({}, t.info), { name: e.name }) }));
+                        e3((t) =>
+                            ea(er({}, t), {
+                                info: ea(er({}, t.info), {
+                                    name: e.name,
+                                }),
+                            }),
+                        );
                 },
             });
             let tL = !eQ.isValid,
@@ -633,7 +685,9 @@ function eO(e) {
                 type: $.he.EPS,
                 onAccountHolderNameChange: (e) =>
                     e3({
-                        info: ea(er({}, e2.info), { name: e }),
+                        info: ea(er({}, e2.info), {
+                            name: e,
+                        }),
                         isValid: e2.isValid,
                     }),
                 onEPSBankChange: (e) => tr(e),
@@ -654,7 +708,9 @@ function eO(e) {
                 type: $.he.IDEAL,
                 onAccountHolderNameChange: (e) =>
                     e3({
-                        info: ea(er({}, e2.info), { name: e }),
+                        info: ea(er({}, e2.info), {
+                            name: e,
+                        }),
                         isValid: e2.isValid,
                     }),
                 billingAddressInfo: e2.info,
@@ -672,12 +728,16 @@ function eO(e) {
                 type: $.he.PRZELEWY24,
                 onNameChange: (e) =>
                     e3({
-                        info: ea(er({}, e2.info), { name: e }),
+                        info: ea(er({}, e2.info), {
+                            name: e,
+                        }),
                         isValid: e2.isValid,
                     }),
                 onEmailChange: (e) =>
                     e3({
-                        info: ea(er({}, e2.info), { email: e }),
+                        info: ea(er({}, e2.info), {
+                            email: e,
+                        }),
                         isValid: e2.isValid,
                     }),
                 onP24BankChange: (e) => {
@@ -724,7 +784,10 @@ function eO(e) {
             });
             break;
         case R.pn.PAYMENT_REQUEST_INFORMATION:
-            (n = (0, r.jsx)(em, {})), (s = (0, r.jsx)(ey, { onBack: () => eK(R.pn.PAYMENT_TYPE) }));
+            (n = (0, r.jsx)(em, {})),
+                (s = (0, r.jsx)(ey, {
+                    onBack: () => eK(R.pn.PAYMENT_TYPE),
+                }));
             break;
         case R.pn.CASH_APP_INFORMATION:
             let tY = null != te,
@@ -801,7 +864,14 @@ function eO(e) {
                         case $.he.PRZELEWY24:
                             try {
                                 if (void 0 === ti) throw (0, d.i0)("Bank required for Przelewy24");
-                                let e = await (0, d.TD)(eu, { p24Bank: ti }, e2.info, W);
+                                let e = await (0, d.TD)(
+                                    eu,
+                                    {
+                                        p24Bank: ti,
+                                    },
+                                    e2.info,
+                                    W,
+                                );
                                 tu(e);
                             } catch (e) {}
                             break;
@@ -959,9 +1029,16 @@ function eO(e) {
                           isEligibleForTrial: en,
                       }),
                   (0, r.jsxs)(D.dZ, {
-                      children: [(0, r.jsx)(j.A, { className: ee._8 }), tQ],
+                      children: [
+                          (0, r.jsx)(j.A, {
+                              className: ee._8,
+                          }),
+                          tQ,
+                      ],
                   }),
-                  (0, r.jsx)(D.UX, { children: t$ }),
+                  (0, r.jsx)(D.UX, {
+                      children: t$,
+                  }),
               ],
           })
         : (0, r.jsx)(z.A, {
@@ -975,6 +1052,7 @@ function eO(e) {
               footer: t$,
           });
 }
+
 function eA(e) {
     let {
         defaultPaymentSourceId: t,
@@ -1000,7 +1078,9 @@ function eA(e) {
         })),
         [m, g] = i.useState(""),
         [E, b] = i.useState(""),
-        [y, A] = i.useState(() => ({ token: null })),
+        [y, A] = i.useState(() => ({
+            token: null,
+        })),
         [v, S, I, T, C] = (0, l.yK)([k.A], () => [
             k.A.braintreeEmail,
             k.A.braintreeNonce,
@@ -1032,7 +1112,11 @@ function eA(e) {
         [B, H] = (0, l.yK)([V.A], () => [V.A.purchaseTokenAuthState, V.A.purchaseTokenHash]);
     return (
         i.useEffect(() => {
-            null != L && null != M.current && M.current.scrollIntoView({ behavior: "smooth" });
+            null != L &&
+                null != M.current &&
+                M.current.scrollIntoView({
+                    behavior: "smooth",
+                });
         }, [L]),
         {
             paymentSources: n,

@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var r,
     i = n(311907),
     a = n(73153),
@@ -6,6 +8,7 @@ var r,
     o = n(661191),
     l = n(961350),
     c = n(994500);
+
 function u(e, t, n) {
     return (
         t in e
@@ -22,6 +25,7 @@ function u(e, t, n) {
 let d = 10,
     f = 180 * s.A.Millis.DAY,
     p = !1;
+
 function _() {
     return p !== (p = c.A.getFriendIDs().length >= d && o.default.extractTimestamp(l.default.getId()) < Date.now() - f);
 }
@@ -34,4 +38,6 @@ class h extends (r = i.Ay.Store) {
     }
 }
 u(h, "displayName", "PremiumPromoStore");
-let m = new h(a.h, { CONNECTION_OPEN: _ });
+let m = new h(a.h, {
+    CONNECTION_OPEN: _,
+});

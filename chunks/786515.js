@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(627968),
     l = n(64700),
     i = n(417597),
@@ -8,6 +10,7 @@ var r = n(627968),
     c = n(709562),
     u = n(60504),
     d = n(985018);
+
 function f() {
     return (f =
         Object.assign ||
@@ -19,6 +22,7 @@ function f() {
             return e;
         }).apply(this, arguments);
 }
+
 function p() {
     let e = (0, i.bG)([o.A], () => !o.A.visibleOverlayCanvas),
         t = l.useRef(null);

@@ -5,6 +5,7 @@ n.d(t, {
 let r = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/".split(""),
     i = [];
 for (let e = 0; e < r.length; e++) i[r[e].charCodeAt(0)] = e;
+
 function a(e) {
     let t = (3 * e.length) / 4;
     "=" == e[e.length - 2] ? (t -= 2) : "=" == e[e.length - 1] && (t -= 1);
@@ -20,7 +21,7 @@ function a(e) {
                     a = 0;
                 case "\n":
                 case "\r":
-                case "\t":
+                case "	":
                 case " ":
                     continue;
                 default:
@@ -43,6 +44,7 @@ function a(e) {
     if (1 == a) throw Error("invalid base64 string.");
     return n.subarray(0, r);
 }
+
 function s(e) {
     let t = "",
         n = 0,

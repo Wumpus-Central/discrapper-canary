@@ -49,7 +49,9 @@ self.addEventListener("message", async (t) => {
                 (o[e.id] = r),
                 (s[e.id] = e),
                 (l[e.id] = e.name.length > 0 ? e.name : "track_".concat(e.id)),
-                a.setExtractionOptions(e.id, null, { nbSamples: 1 / 0 });
+                a.setExtractionOptions(e.id, null, {
+                    nbSamples: 1 / 0,
+                });
         }
         a.start();
     };

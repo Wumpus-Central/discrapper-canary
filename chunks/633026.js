@@ -1,4 +1,6 @@
-l.d(t, { A: () => h });
+l.d(t, {
+    A: () => h,
+});
 var n = l(627968);
 l(64700);
 var r = l(503698),
@@ -50,8 +52,15 @@ let m = {
                   className: p.os,
                   children: [
                       (0, n.jsx)("div", {
-                          className: s()(p.vK, { [p.no]: O }),
-                          style: null != _ ? { background: _ } : void 0,
+                          className: s()(p.vK, {
+                              [p.no]: O,
+                          }),
+                          style:
+                              null != _
+                                  ? {
+                                        background: _,
+                                    }
+                                  : void 0,
                           children:
                               null != S &&
                               (0, n.jsx)(b.A, {
@@ -64,9 +73,13 @@ let m = {
                           className: p.xX,
                           children: [
                               (0, n.jsx)("div", {
-                                  className: s()(p.bC, { [p.no]: O }),
+                                  className: s()(p.bC, {
+                                      [p.no]: O,
+                                  }),
                                   children: l
-                                      ? (0, n.jsx)("div", { className: p.Hw })
+                                      ? (0, n.jsx)("div", {
+                                            className: p.Hw,
+                                        })
                                       : (0, n.jsx)("div", {
                                             className: p.Hw,
                                             children: (0, n.jsxs)("div", {
@@ -92,7 +105,9 @@ let m = {
                                                             className: p.Tm,
                                                             style:
                                                                 null != r.bannerTextColor
-                                                                    ? { color: r.bannerTextColor }
+                                                                    ? {
+                                                                          color: r.bannerTextColor,
+                                                                      }
                                                                     : void 0,
                                                             children: r.summary,
                                                         }),

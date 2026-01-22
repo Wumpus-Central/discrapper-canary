@@ -1,9 +1,12 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(735438),
     i = n.n(r),
     a = n(223637),
     s = n(542664),
     o = n(46054);
+
 function l(e, t, n) {
     return (
         t in e
@@ -17,6 +20,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -33,6 +37,7 @@ function c(e) {
     }
     return e;
 }
+
 function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -45,6 +50,7 @@ function u(e, t) {
     }
     return n;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -62,8 +68,15 @@ let f = i().omit(s.A.RULES, ["codeBlock", "heading"]),
             var r;
             let i = a.A.parse(e, t, n),
                 s = Math.min(6, (null != (r = n.initialHeaderLevel) ? r : 3) + i.level);
-            return d(c({}, i), { level: s });
+            return d(c({}, i), {
+                level: s,
+            });
         },
     }),
-    _ = o.A.combineAndInjectMentionRule(f, [o.A.createReactRules(o.A.defaultReactRuleOptions), { header: p }]),
+    _ = o.A.combineAndInjectMentionRule(f, [
+        o.A.createReactRules(o.A.defaultReactRuleOptions),
+        {
+            header: p,
+        },
+    ]),
     h = o.A.reactParserFor(_);

@@ -1,6 +1,9 @@
-l.d(t, { A: () => i });
+l.d(t, {
+    A: () => i,
+});
 var r = l(64700),
     n = l(621466);
+
 function i(e) {
     let { targetRef: t, onShouldClose: l, topThreshold: i = 40, bottomThreshold: s = 60, enabled: o = !0 } = e;
     r.useEffect(() => {
@@ -25,7 +28,9 @@ function i(e) {
                 capture: !0,
             }),
             () => {
-                document.removeEventListener("scroll", r, { capture: !0 });
+                document.removeEventListener("scroll", r, {
+                    capture: !0,
+                });
             }
         );
     }, [o, t, l, i, s]);

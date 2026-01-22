@@ -1,10 +1,14 @@
-n.d(t, { A: () => m }), n(896048);
+n.d(t, {
+    A: () => m,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
     o = n(397927),
     l = n(6976);
+
 function c(e, t, n) {
     return (
         t in e
@@ -18,6 +22,7 @@ function c(e, t, n) {
         e
     );
 }
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,6 +39,7 @@ function u(e) {
     }
     return e;
 }
+
 function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -46,6 +52,7 @@ function d(e, t) {
     }
     return n;
 }
+
 function f(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -57,6 +64,7 @@ function f(e, t) {
         e
     );
 }
+
 function p(e, t) {
     if (null == e) return {};
     var n,
@@ -73,6 +81,7 @@ function p(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function _(e, t) {
     if (null == e) return {};
     var n,
@@ -83,6 +92,7 @@ function _(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function h(e) {
     let { alt: t } = e,
         n = p(e, ["alt"]),
@@ -104,6 +114,7 @@ function h(e) {
         ],
     });
 }
+
 function m(e) {
     let { src: t, backgroundSrc: n, alt: i, aspectRatio: a, className: o, imageChildClassName: c } = e,
         d = p(e, ["src", "backgroundSrc", "alt", "aspectRatio", "className", "imageChildClassName"]);
@@ -115,9 +126,13 @@ function m(e) {
                 alt: i,
                 className: l.iL,
             }),
-            (0, r.jsx)("div", { className: l.CC }),
             (0, r.jsx)("div", {
-                style: { aspectRatio: a },
+                className: l.CC,
+            }),
+            (0, r.jsx)("div", {
+                style: {
+                    aspectRatio: a,
+                },
                 className: l.ZS,
                 children: (0, r.jsx)(
                     h,

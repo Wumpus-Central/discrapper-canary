@@ -1,4 +1,7 @@
-n.d(t, { A: () => O }), n(896048);
+n.d(t, {
+    A: () => O,
+}),
+    n(896048);
 var a = n(627968),
     l = n(64700),
     i = n(110259),
@@ -21,6 +24,7 @@ var a = n(627968),
     _ = n(652215),
     A = n(53516),
     C = n(985018);
+
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -46,6 +50,7 @@ function S(e) {
     }
     return e;
 }
+
 function O() {
     let { action: e, theme: t } = (0, r.cf)([g.A, b.A], () => ({
             action: g.A.getAction(),
@@ -135,7 +140,9 @@ function O() {
             onCaptchaVerify: (e) => {
                 s.Bo.post({
                     url: _.Rsh.CAPTCHA,
-                    body: { captcha_key: e },
+                    body: {
+                        captcha_key: e,
+                    },
                     oldFormErrors: !0,
                     rejectWithError: !0,
                 }).then(d.jH, () => {
@@ -186,7 +193,9 @@ function O() {
                                 ),
                             );
                     },
-                    { Layer: f.Ay },
+                    {
+                        Layer: f.Ay,
+                    },
                 );
             },
         })

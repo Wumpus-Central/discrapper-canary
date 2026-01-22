@@ -7,7 +7,14 @@ e.exports = function (e) {
         contains: [
             {
                 className: "variable",
-                variants: [{ begin: /\$[\w\d#@][\w\d_]*/ }, { begin: /\$\{(.*?)\}/ }],
+                variants: [
+                    {
+                        begin: /\$[\w\d#@][\w\d_]*/,
+                    },
+                    {
+                        begin: /\$\{(.*?)\}/,
+                    },
+                ],
             },
             {
                 className: "string",

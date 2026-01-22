@@ -1,4 +1,8 @@
-t.d(l, { A: () => y }), t(896048), t(228524);
+t.d(l, {
+    A: () => y,
+}),
+    t(896048),
+    t(228524);
 var n = t(627968),
     i = t(311907),
     r = t(397927),
@@ -18,6 +22,7 @@ var n = t(627968),
     g = t(996988),
     v = t(985018),
     b = t(599929);
+
 function I(e) {
     for (var l = 1; l < arguments.length; l++) {
         var t = null != arguments[l] ? arguments[l] : {},
@@ -43,6 +48,7 @@ function I(e) {
     }
     return e;
 }
+
 function y(e) {
     let {
             user: l,
@@ -79,7 +85,9 @@ function y(e) {
         ],
         w = (0, p.Ay)(l.id, S),
         G = c.Ay.getName(null == w ? void 0 : w.guildId, y, l),
-        M = v.intl.formatToPlainString(v.t.KRe1Fk, { name: G });
+        M = v.intl.formatToPlainString(v.t.KRe1Fk, {
+            name: G,
+        });
     return (0, n.jsx)(a.f5, {
         value: L,
         children: (0, n.jsx)(u.of, {
@@ -99,7 +107,9 @@ function y(e) {
                     displayProfile: w,
                     themeType: g.d.MODAL_V2,
                     children: [
-                        (0, n.jsx)("div", { className: b.Tp }),
+                        (0, n.jsx)("div", {
+                            className: b.Tp,
+                        }),
                         (0, n.jsxs)("div", {
                             className: b.Qs,
                             children: [
@@ -118,7 +128,9 @@ function y(e) {
                                         (0, n.jsx)(r.Text, {
                                             variant: "text-md/medium",
                                             color: "text-default",
-                                            children: v.intl.format(C ? v.t.T7QiLn : v.t.MnEowy, { username: G }),
+                                            children: v.intl.format(C ? v.t.T7QiLn : v.t.MnEowy, {
+                                                username: G,
+                                            }),
                                         }),
                                     ],
                                 }),

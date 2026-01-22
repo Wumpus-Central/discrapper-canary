@@ -1,4 +1,6 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var r,
     i = n(735438),
     a = n.n(i),
@@ -6,6 +8,7 @@ var r,
     o = n(506774),
     l = n(73153),
     c = n(731854);
+
 function u(e, t, n) {
     return (
         t in e
@@ -23,14 +26,17 @@ let d = "CertifiedDeviceStore",
     f = {},
     p = {},
     _ = 0;
+
 function h(e, t, n) {
     let r = p[e];
     return null != r ? n(r) : t;
 }
+
 function m(e, t) {
     let n = f[e];
     null != n && n.forEach((e) => delete p[e.id]), (f[e] = t), t.forEach((e) => (p[e.id] = e));
 }
+
 function g(e) {
     let { applicationId: t, devices: n } = e;
     m(t, n), o.w.set(d, f), _++;
@@ -82,4 +88,6 @@ class E extends (r = s.Ay.Store) {
     }
 }
 u(E, "displayName", "CertifiedDeviceStore");
-let b = new E(l.h, { CERTIFIED_DEVICES_SET: g });
+let b = new E(l.h, {
+    CERTIFIED_DEVICES_SET: g,
+});

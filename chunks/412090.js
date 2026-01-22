@@ -1,4 +1,7 @@
-n.d(t, { _: () => A }), n(896048);
+n.d(t, {
+    _: () => A,
+}),
+    n(896048);
 var r = n(627968),
     i = n(397927),
     a = n(854354),
@@ -13,6 +16,7 @@ var r = n(627968),
     _ = n(985018),
     h = n(756366),
     m = n(220264);
+
 function g(e, t, n) {
     return (
         t in e
@@ -26,6 +30,7 @@ function g(e, t, n) {
         e
     );
 }
+
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -110,7 +115,9 @@ let b = (e, t) => {
             intervalType: r,
             intervalCount: i,
             currency: a,
-            label: _.intl.format(h.default["57B1ks"], { renewalDate: e.subscriptionPeriodEnd }),
+            label: _.intl.format(h.default["57B1ks"], {
+                renewalDate: e.subscriptionPeriodEnd,
+            }),
             totalLineItemLabel: b(r, i),
         };
     },
@@ -155,7 +162,11 @@ let b = (e, t) => {
         }
         return (0, r.jsxs)("div", {
             children: [
-                (0, r.jsx)("div", { style: { height: 12 } }),
+                (0, r.jsx)("div", {
+                    style: {
+                        height: 12,
+                    },
+                }),
                 I,
                 (0, r.jsx)(i.Text, {
                     variant: "text-md/normal",
@@ -163,9 +174,17 @@ let b = (e, t) => {
                     className: m.S,
                     children: _.intl.string(_.t["YH7B+D"]),
                 }),
-                (0, r.jsx)("div", { style: { height: 30 } }),
+                (0, r.jsx)("div", {
+                    style: {
+                        height: 30,
+                    },
+                }),
                 S,
-                (0, r.jsx)("div", { style: { height: 12 } }),
+                (0, r.jsx)("div", {
+                    style: {
+                        height: 12,
+                    },
+                }),
             ],
         });
     };

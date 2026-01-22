@@ -1,4 +1,6 @@
-n.d(t, { qB: () => r });
+n.d(t, {
+    qB: () => r,
+});
 let r = {
     origin: {
         x: -36,

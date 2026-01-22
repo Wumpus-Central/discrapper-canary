@@ -8,9 +8,11 @@ var r = n(136722),
     i = n(34457),
     l = n(558393),
     s = n(652215);
+
 function a(e) {
     return r.X8(e.permissions, s.Lti);
 }
+
 function c(e, t) {
     let n = [],
         r = l.A.getGuildPermissionSpecMap(e);

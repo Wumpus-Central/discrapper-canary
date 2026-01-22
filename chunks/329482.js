@@ -1,4 +1,6 @@
-n.d(t, { A: () => j });
+n.d(t, {
+    A: () => j,
+});
 var a = n(627968);
 n(64700);
 var l = n(503698),
@@ -16,12 +18,15 @@ var l = n(503698),
     x = n(737045),
     b = n(574068),
     g = n(661251);
+
 function v(e) {
     let { title: t, can: n } = e,
         l = n ? o.A9s : o.PGe,
         r = (0, a.jsx)("div", {
             className: i()(b.v_, n ? b.uU : b.Ss),
-            children: (0, a.jsx)(l, { className: b.Kk }),
+            children: (0, a.jsx)(l, {
+                className: b.Kk,
+            }),
         });
     return (0, a.jsxs)("div", {
         className: b.z8,
@@ -37,6 +42,7 @@ function v(e) {
         ],
     });
 }
+
 function j() {
     let e = (0, s.bG)([p.A], () => p.A.getChannelId()),
         t = (0, s.bG)([h.A], () => h.A.getGuildId()),

@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -18,7 +20,9 @@ let u = () =>
                 }),
                 (0, r.jsx)(s.tK, {
                     className: c.VA,
-                    children: o.intl.format(o.t.KQgoxG, { underageMessage: o.intl.string(o.t.WqEH4D) }),
+                    children: o.intl.format(o.t.KQgoxG, {
+                        underageMessage: o.intl.string(o.t.WqEH4D),
+                    }),
                 }),
                 (0, r.jsx)(i.Button, {
                     icon: i.I9m,

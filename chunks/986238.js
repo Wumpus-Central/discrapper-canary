@@ -44,7 +44,7 @@ let r = {
         },
         {
             id: "1month",
-            value: 2628000,
+            value: 2628e3,
             label: "1 Month",
         },
     ],

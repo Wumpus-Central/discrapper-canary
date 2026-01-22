@@ -1,4 +1,7 @@
-n.d(t, { A: () => E }), n(896048);
+n.d(t, {
+    A: () => E,
+}),
+    n(896048);
 var i,
     r = n(64700),
     s = n(735438),
@@ -11,6 +14,7 @@ var i,
     h = n(899699),
     p = n(456797),
     f = n(723702);
+
 function b(e, t, n) {
     return (
         t in e
@@ -29,11 +33,13 @@ let g = {
         y: 0,
     },
     y = !1;
+
 function A(e) {
     let { clientX: t, clientY: n } = e;
     (y = !0), (g.x = t), (g.y = n);
 }
 let m = new Map();
+
 function O(e, t) {
     if (null == t) m.delete(e), 0 === m.size && (window.removeEventListener("mousemove", A), (y = !1));
     else {
@@ -120,5 +126,5 @@ class E extends (i = r.PureComponent) {
 }
 b(E, "defaultProps", {
     observe: !0,
-    observeInterval: 1000,
+    observeInterval: 1e3,
 });

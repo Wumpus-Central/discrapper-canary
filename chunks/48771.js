@@ -1,8 +1,11 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
     l = n(60501);
+
 function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -31,7 +34,11 @@ function s(e) {
 let a = {
     open() {
         (0, i.mMO)(async () => {
-            if (l.J.getConfig({ location: "EnableCommunityModalActionCreators" }).enabled) {
+            if (
+                l.J.getConfig({
+                    location: "EnableCommunityModalActionCreators",
+                }).enabled
+            ) {
                 let { default: e } = await Promise.all([n.e("20115"), n.e("85981")]).then(n.bind(n, 939006));
                 return (t) => (0, r.jsx)(e, s({}, t));
             }

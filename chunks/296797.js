@@ -1,4 +1,7 @@
-n.d(t, { A: () => p }), n(896048);
+n.d(t, {
+    A: () => p,
+}),
+    n(896048);
 var r = n(544420),
     i = n(110782),
     a = n(439372),
@@ -7,6 +10,7 @@ var r = n(544420),
     l = n(927813),
     c = n(723702),
     u = n(953384);
+
 function d(e, t, n) {
     return (
         t in e
@@ -46,7 +50,9 @@ class f extends a.A {
         super(...e),
             d(this, "intervalId", void 0),
             d(this, "nonGameIntervalId", void 0),
-            d(this, "actions", { POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen() });
+            d(this, "actions", {
+                POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen(),
+            });
     }
 }
 let p = new f();

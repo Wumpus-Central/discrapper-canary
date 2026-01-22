@@ -1,4 +1,6 @@
-n.d(t, { A: () => E });
+n.d(t, {
+    A: () => E,
+});
 var a = n(627968),
     l = n(64700),
     i = n(503698),
@@ -21,6 +23,7 @@ var a = n(627968),
     _ = n(52093),
     A = n(985018),
     C = n(883476);
+
 function S(e) {
     return (0, a.jsx)(c.Text, {
         className: C.eW,
@@ -29,11 +32,14 @@ function S(e) {
         children: e.children,
     });
 }
+
 function O(e) {
     let { quest: t, useReducedMotion: n } = e,
         i = (0, h.J)(),
         o = (0, j.H1)(t.id, f.uF.QUEST_BAR_V2, f.uF.QUEST_BAR_V2),
-        d = (0, j.Xf)({ useReducedMotion: n }),
+        d = (0, j.Xf)({
+            useReducedMotion: n,
+        }),
         g = (0, m.Ut)(),
         y = (0, p.go)(),
         {
@@ -60,10 +66,14 @@ function O(e) {
                 header: e
                     ? (0, v.ui)(t)
                         ? A.intl.string(A.t.N33EuL)
-                        : A.intl.formatToPlainString(A.t["28Ql27"], { gameTitle: n })
+                        : A.intl.formatToPlainString(A.t["28Ql27"], {
+                              gameTitle: n,
+                          })
                     : (0, v.ui)(t)
                       ? A.intl.string(A.t.YstzGO)
-                      : A.intl.formatToPlainString(A.t.gX0Qcx, { gameTitle: n }),
+                      : A.intl.formatToPlainString(A.t.gX0Qcx, {
+                            gameTitle: n,
+                        }),
                 renderBody: e
                     ? () =>
                           (0, a.jsx)(a.Fragment, {
@@ -96,7 +106,13 @@ function O(e) {
                                           n,
                                       );
                                   }
-                                  return (0, a.jsx)(S, { children: e.message }, n);
+                                  return (0, a.jsx)(
+                                      S,
+                                      {
+                                          children: e.message,
+                                      },
+                                      n,
+                                  );
                               }),
                           })
                     : () =>
@@ -106,7 +122,9 @@ function O(e) {
                               variant: "text-xxs/normal",
                               children: (0, v.ui)(t)
                                   ? A.intl.string(A.t.bUyEZZ)
-                                  : A.intl.format(A.t.GXqvC1, { gameTitle: n }),
+                                  : A.intl.format(A.t.GXqvC1, {
+                                        gameTitle: n,
+                                    }),
                           }),
             };
         }, [_, t, i, y]);
@@ -128,15 +146,26 @@ function O(e) {
                         children: N,
                     }),
                     (0, a.jsx)(c.DUT, {
-                        className: r()(C.w, { [C.r9]: O }),
+                        className: r()(C.w, {
+                            [C.r9]: O,
+                        }),
                         onClick: () => E(),
                         children: d.render(),
                     }),
                 ],
             }),
             (0, a.jsxs)("div", {
-                className: r()({ [C.Iu]: O }),
-                children: [T(), 0 === _.length ? null : (0, a.jsx)(S, { children: o })],
+                className: r()({
+                    [C.Iu]: O,
+                }),
+                children: [
+                    T(),
+                    0 === _.length
+                        ? null
+                        : (0, a.jsx)(S, {
+                              children: o,
+                          }),
+                ],
             }),
         ],
     });
@@ -219,14 +248,18 @@ let E = function (e) {
                             (0, a.jsx)(_.L5, {
                                 children: (0, v.ui)(t)
                                     ? A.intl.string(A.t["5tXqFe"])
-                                    : A.intl.formatToPlainString(A.t["+8JB6Y"], { gameTitle: o }),
+                                    : A.intl.formatToPlainString(A.t["+8JB6Y"], {
+                                          gameTitle: o,
+                                      }),
                             }),
                         isComplete: i || c,
                     },
                     {
                         renderContent: () =>
                             (0, a.jsx)(_.L5, {
-                                children: A.intl.formatToPlainString(A.t.HhfrYS, { numMinutes: n.targetMinutes }),
+                                children: A.intl.formatToPlainString(A.t.HhfrYS, {
+                                    numMinutes: n.targetMinutes,
+                                }),
                             }),
                         isComplete: c,
                     },

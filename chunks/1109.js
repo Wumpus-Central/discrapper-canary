@@ -1,4 +1,6 @@
-n.d(t, { A: () => E });
+n.d(t, {
+    A: () => E,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -36,5 +38,9 @@ let o = "1",
     E = (e) => {
         let { agency: t, rating: n, className: i } = e,
             a = _[t][n];
-        return null == a ? null : (0, r.jsx)("div", { className: l()(s.ZL, a, i) });
+        return null == a
+            ? null
+            : (0, r.jsx)("div", {
+                  className: l()(s.ZL, a, i),
+              });
     };

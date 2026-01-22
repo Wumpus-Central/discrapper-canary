@@ -52,7 +52,9 @@ let L = () => {
             g = () => {
                 if (!s || o) return null;
                 let e = u
-                    ? D.intl.formatToPlainString(D.t.bkQ4bH, { percent: null == c ? void 0 : c.discount.amount })
+                    ? D.intl.formatToPlainString(D.t.bkQ4bH, {
+                          percent: null == c ? void 0 : c.discount.amount,
+                      })
                     : D.intl.string(D.t.mr4K7D);
                 return (0, r.jsxs)("div", {
                     className: x.gY,
@@ -95,7 +97,9 @@ let L = () => {
                                 onClick: () => L(),
                             }),
                         }),
-                        (0, r.jsx)("div", { className: x.BU }),
+                        (0, r.jsx)("div", {
+                            className: x.BU,
+                        }),
                         (0, r.jsx)(A.Ay, {
                             type: P.e.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL,
                             subscriptionTier: P.pe.TIER_2,
@@ -125,12 +129,23 @@ let L = () => {
             children: [
                 (0, r.jsxs)(h.Ay, {
                     type: h.v0.SETTINGS,
-                    children: [(0, r.jsx)(h.Ay.Basic, { className: x.a6 }), (0, r.jsx)(M, {}), (0, r.jsx)(_.A, {}), I],
+                    children: [
+                        (0, r.jsx)(h.Ay.Basic, {
+                            className: x.a6,
+                        }),
+                        (0, r.jsx)(M, {}),
+                        (0, r.jsx)(_.A, {}),
+                        I,
+                    ],
                 }),
-                !m && (0, r.jsx)(l.cGx, { className: x.yF }),
+                !m &&
+                    (0, r.jsx)(l.cGx, {
+                        className: x.yF,
+                    }),
             ],
         });
     };
+
 function M() {
     let e = (0, v.qo)(),
         {
@@ -147,14 +162,18 @@ function M() {
         ? null
         : (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(l.cGx, { gap: 24 }),
+                  (0, r.jsx)(l.cGx, {
+                      gap: 24,
+                  }),
                   (0, r.jsx)(l.dOG, {
                       label: D.intl.string(D.t.yF54Ks),
                       checked: e && (0, o.qB)(t) && !n,
                       disabled: t !== R.NJ8.LIGHT || n || null != i || s,
                       onChange: c.LO,
                   }),
-                  (0, r.jsx)(l.cGx, { gap: 24 }),
+                  (0, r.jsx)(l.cGx, {
+                      gap: 24,
+                  }),
               ],
           });
 }

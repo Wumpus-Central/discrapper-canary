@@ -23,6 +23,7 @@ var l = n(311907),
     A = n(49999),
     v = n(985018),
     j = n(641131);
+
 function h(e) {
     let t = (0, l.bG)([m.A], () => m.A.getGuildId()),
         n = (0, b.Qo)(t);
@@ -36,6 +37,7 @@ function h(e) {
           })
         : null;
 }
+
 function E() {
     return (0, r.jsx)(u.Ay, {
         contentTypes: [i.M.REPORT_TO_MOD_NEW_TAG],
@@ -53,24 +55,32 @@ function E() {
         },
     });
 }
+
 function S(e) {
     let t = (0, l.bG)([g.A], () => g.A.hasReportedMessage(e.channel_id, e.id)),
         n = (0, p.KB)(e);
     return ((0, c.l0)(() => {
-        n && (0, d.Dr)(i.M.REPORT_TO_MOD_NEW_TAG, { dismissAction: A.i.AUTO_DISMISS });
+        n &&
+            (0, d.Dr)(i.M.REPORT_TO_MOD_NEW_TAG, {
+                dismissAction: A.i.AUTO_DISMISS,
+            });
     }),
     n)
         ? (0, r.jsx)(a.Drp, {
               id: "report-to-mod",
               label: t ? v.intl.string(j.default["8wsdng"]) : v.intl.string(j.default["1D+vqy"]),
               action: () => {
-                  (0, d.Dr)(i.M.REPORT_TO_MOD_NEW_TAG, { dismissAction: A.i.USER_DISMISS }), (0, f.dy)(e);
+                  (0, d.Dr)(i.M.REPORT_TO_MOD_NEW_TAG, {
+                      dismissAction: A.i.USER_DISMISS,
+                  }),
+                      (0, f.dy)(e);
               },
               icon: (0, r.jsx)(E, {}),
               disabled: t,
           })
         : null;
 }
+
 function _(e) {
     let t = (0, l.bG)([s.Ay], () => s.Ay.get("iar_testing")),
         n = (0, l.bG)([y.default], () => y.default.getCurrentUser());

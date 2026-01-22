@@ -77,7 +77,9 @@ async function c(e) {
             E
         );
     } catch (e) {
-        n.h.dispatch({ type: "GUILD_DISCOVERY_METADATA_FETCH_FAIL" });
+        n.h.dispatch({
+            type: "GUILD_DISCOVERY_METADATA_FETCH_FAIL",
+        });
     }
 }
 async function d(e) {
@@ -99,6 +101,7 @@ async function d(e) {
         });
     }
 }
+
 function u(e, t) {
     n.h.dispatch({
         type: "GUILD_UPDATE_DISCOVERY_METADATA",
@@ -106,6 +109,7 @@ function u(e, t) {
         primaryCategoryId: t,
     });
 }
+
 function _(e, t) {
     n.h.dispatch({
         type: "GUILD_UPDATE_DISCOVERY_METADATA",
@@ -113,6 +117,7 @@ function _(e, t) {
         keywords: t,
     });
 }
+
 function p(e, t) {
     n.h.dispatch({
         type: "GUILD_UPDATE_DISCOVERY_METADATA",
@@ -120,6 +125,7 @@ function p(e, t) {
         emojiDiscoverabilityEnabled: t,
     });
 }
+
 function E(e, t) {
     n.h.dispatch({
         type: "GUILD_UPDATE_DISCOVERY_METADATA",
@@ -127,6 +133,7 @@ function E(e, t) {
         isPublished: t,
     });
 }
+
 function h(e, t) {
     n.h.dispatch({
         type: "GUILD_UPDATE_DISCOVERY_METADATA",
@@ -134,6 +141,7 @@ function h(e, t) {
         about: t,
     });
 }
+
 function O(e, t) {
     n.h.dispatch({
         type: "GUILD_UPDATE_DISCOVERY_METADATA",
@@ -141,6 +149,7 @@ function O(e, t) {
         reasonsToJoin: t,
     });
 }
+
 function I(e, t) {
     n.h.dispatch({
         type: "GUILD_UPDATE_DISCOVERY_METADATA",
@@ -218,6 +227,7 @@ async function A(e) {
         );
     }
 }
+
 function T(e, t) {
     i.Bo.put({
         url: s.Rsh.GUILD_DISCOVERY_UPDATE_CATEGORY(e, t),
@@ -239,6 +249,7 @@ function T(e, t) {
             });
         });
 }
+
 function y(e, t) {
     i.Bo.del({
         url: s.Rsh.GUILD_DISCOVERY_UPDATE_CATEGORY(e, t),

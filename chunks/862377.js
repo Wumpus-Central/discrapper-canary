@@ -1,4 +1,6 @@
-n.d(i, { default: () => o });
+n.d(i, {
+    default: () => o,
+});
 var r = n(627968);
 n(64700);
 var a = n(478437),
@@ -16,12 +18,16 @@ let o = (t) => {
         n.type === a.r.GUILD_CATEGORY
             ? {
                   title: e.intl.string(e.t["4VpUw8"]),
-                  body: e.intl.format(e.t.GuhMa5, { channelName: i }),
+                  body: e.intl.format(e.t.GuhMa5, {
+                      channelName: i,
+                  }),
                   confirm: e.intl.string(e.t.xOscRh),
               }
             : {
                   title: e.intl.string(e.t["4VpUw8"]),
-                  body: e.intl.format(e.t["2z/hBg"], { channelName: i }),
+                  body: e.intl.format(e.t["2z/hBg"], {
+                      channelName: i,
+                  }),
                   confirm: e.intl.string(e.t.gGs6TT),
               });
     return (0, r.jsx)(s.aFV, {

@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var i = n(627968);
 n(64700);
 var r = n(735438),
@@ -8,6 +10,7 @@ var r = n(735438),
     c = n(970278),
     d = n(406704),
     s = n(985018);
+
 function u(e) {
     let t = (0, d.H_)(e),
         r = (0, a.bG)([c.A], () => !l().isEmpty(c.A.getThreadsForGuild(e.id)));
@@ -46,7 +49,12 @@ function u(e) {
                                           });
                                   }
                                   return e;
-                              })({ guildId: e.id }, n),
+                              })(
+                                  {
+                                      guildId: e.id,
+                                  },
+                                  n,
+                              ),
                           );
                   });
               },

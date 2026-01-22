@@ -1,4 +1,8 @@
-n.d(t, { A: () => b }), n(896048), n(321073);
+n.d(t, {
+    A: () => b,
+}),
+    n(896048),
+    n(321073);
 var r = n(439372),
     i = n(851581),
     a = n(954571),
@@ -7,6 +11,7 @@ var r = n(439372),
     l = n(321034),
     c = n(837921),
     u = n(652215);
+
 function d(e, t, n) {
     return (
         t in e
@@ -20,6 +25,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,6 +43,7 @@ function f(e) {
     return e;
 }
 let p = 5 * s.A.Millis.MINUTE;
+
 function _() {
     return o.isPlatformEmbedded;
 }
@@ -78,6 +85,7 @@ async function h() {
         G
     );
 }
+
 function m() {
     let e = l.A.getMemoryHeapStats(),
         t = l.A.getBlinkMemoryInfo(),
@@ -156,7 +164,9 @@ class E extends r.A {
     constructor(...e) {
         super(...e),
             d(this, "_heartbeatAnalyticsInterval", null),
-            d(this, "actions", { POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen() });
+            d(this, "actions", {
+                POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen(),
+            });
     }
 }
 let b = new E();

@@ -1,9 +1,12 @@
-n.d(t, { x: () => o });
+n.d(t, {
+    x: () => o,
+});
 var r = n(311907),
     l = n(519480),
     i = n(370876),
     a = n(222823),
     s = n(661191);
+
 function o(e) {
     return (0, r.bG)([l.A, a.Ay], () => {
         var t;

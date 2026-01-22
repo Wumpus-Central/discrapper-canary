@@ -1,9 +1,12 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
     a = n(985018),
     s = n(643850);
+
 function o(e) {
     let { name: t, onRetry: n } = e,
         o = null != t ? t : a.intl.string(a.t["11pdXZ"]);

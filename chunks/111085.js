@@ -1,7 +1,11 @@
-n.d(t, { A: () => d }), n(896048);
+n.d(t, {
+    A: () => d,
+}),
+    n(896048);
 var r,
     i = n(311907),
     a = n(73153);
+
 function s(e, t, n) {
     return (
         t in e
@@ -15,7 +19,10 @@ function s(e, t, n) {
         e
     );
 }
-let o = { sentGifts: {} };
+let o = {
+    sentGifts: {},
+};
+
 function l(e, t) {
     return "".concat(e, ":").concat(t);
 }
@@ -41,10 +48,11 @@ class c extends (r = i.Ay.PersistedStore) {
         for (let [t, n] of Object.entries(o.sentGifts)) new Date(n.expiresAt) < e && delete o.sentGifts[t];
     }
 }
+
 function u(e) {
     let t = l(e.skuId, e.recipientId),
         n = new Date(),
-        r = new Date(n.getTime() + 172800000);
+        r = new Date(n.getTime() + 1728e5);
     o.sentGifts[t] = {
         skuId: e.skuId,
         recipientId: e.recipientId,
@@ -53,4 +61,6 @@ function u(e) {
     };
 }
 s(c, "displayName", "SentGiftsStore"), s(c, "persistKey", "SentGiftsStore");
-let d = new c(a.h, { WISHLIST_GIFT_SENT: u });
+let d = new c(a.h, {
+    WISHLIST_GIFT_SENT: u,
+});

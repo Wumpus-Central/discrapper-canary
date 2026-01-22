@@ -7,6 +7,7 @@ var r = n(924985),
     i = n(32603),
     a = n(281405),
     s = n(652215);
+
 function o(e, t, n) {
     return {
         hasDivider:
@@ -32,6 +33,7 @@ function o(e, t, n) {
             n !== e.voiceChannelsSectionNumber,
     };
 }
+
 function c(e) {
     let { category: t, voiceStates: n, selectedChannelId: i, selectedVoiceChannelId: a } = e;
     return (

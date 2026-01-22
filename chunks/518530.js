@@ -1,4 +1,6 @@
-n.d(t, { A: () => j });
+n.d(t, {
+    A: () => j,
+});
 var r = n(627968),
     l = n(64700),
     i = n(554146),
@@ -20,7 +22,9 @@ var r = n(627968),
 let j = function (e) {
     let { channel: t, guild: n, maxWidth: j } = e;
     l.useEffect(() => {
-        (0, f.Dr)(i.M.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK, { dismissAction: A.i.AUTO });
+        (0, f.Dr)(i.M.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK, {
+            dismissAction: A.i.AUTO,
+        });
     }, []);
     let v = l.useCallback(() => {
             s.A.updateChatOpen(t.id, !1), b._.safeDispatch(m.jej.FOCUS_CHAT_BUTTON);
@@ -47,7 +51,9 @@ let j = function (e) {
                         icon: a.oyn,
                         "aria-label": y.intl.string(y.t.Kx5kCN),
                     }),
-                    (0, r.jsx)(p.Ay.Title, { children: t.name }),
+                    (0, r.jsx)(p.Ay.Title, {
+                        children: t.name,
+                    }),
                 ],
             }),
             (0, r.jsx)("div", {

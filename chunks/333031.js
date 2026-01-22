@@ -39,11 +39,17 @@ e.exports = function (e) {
                 className: "built_in",
                 begin: "@__" + e.IDENT_RE,
             },
-            { begin: "@" + e.IDENT_RE },
-            { begin: e.IDENT_RE + "\\\\" + e.IDENT_RE },
+            {
+                begin: "@" + e.IDENT_RE,
+            },
+            {
+                begin: e.IDENT_RE + "\\\\" + e.IDENT_RE,
+            },
         ];
     r.contains = i;
-    let a = e.inherit(e.TITLE_MODE, { begin: n }),
+    let a = e.inherit(e.TITLE_MODE, {
+            begin: n,
+        }),
         s = "(\\(.*\\)\\s*)?\\B[-=]>",
         o = {
             className: "params",

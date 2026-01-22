@@ -21,6 +21,7 @@ var r = n(627968),
     E = n(788868),
     b = n(985018),
     y = n(611853);
+
 function O(e, t, n) {
     return (
         t in e
@@ -34,6 +35,7 @@ function O(e, t, n) {
         e
     );
 }
+
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -50,6 +52,7 @@ function A(e) {
     }
     return e;
 }
+
 function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -62,6 +65,7 @@ function v(e, t) {
     }
     return n;
 }
+
 function S(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -134,7 +138,13 @@ let I = (e) => {
                 );
             };
         if (!o) return v();
-        let I = (e) => (0, r.jsx)(_.MV, S(A({}, e), { node: n }));
+        let I = (e) =>
+            (0, r.jsx)(
+                _.MV,
+                S(A({}, e), {
+                    node: n,
+                }),
+            );
         return (0, r.jsx)(c.YNO, {
             animation: c.YNO.Animation.TRANSLATE,
             align: "center",
@@ -214,7 +224,11 @@ let I = (e) => {
                                           }
                                         : void 0,
                                     onMouseLeave: () => {
-                                        T && (p.default.track(m.HAw.CLOSE_POPOUT, { nonce: x }), N(!1));
+                                        T &&
+                                            (p.default.track(m.HAw.CLOSE_POPOUT, {
+                                                nonce: x,
+                                            }),
+                                            N(!1));
                                     },
                                     tag: "span",
                                     className: s()(y.qq, {
@@ -241,7 +255,11 @@ let I = (e) => {
             animation: c.YNO.Animation.FADE,
             align: "center",
             onRequestClose: () => {
-                p.default.track(m.HAw.CLOSE_POPOUT, { nonce: x }), N(!1), w(!1);
+                p.default.track(m.HAw.CLOSE_POPOUT, {
+                    nonce: x,
+                }),
+                    N(!1),
+                    w(!1);
             },
             autoInvert: !0,
             nudgeAlignIntoViewport: !0,

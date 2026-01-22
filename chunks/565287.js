@@ -18,6 +18,7 @@ var r,
     g = n(795101),
     m = n(309829),
     A = n(136643);
+
 function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -68,7 +69,9 @@ let E = (e) => {
             S
                 ? (_(!0),
                   c
-                      .rQ({ withAnalyticsToken: !0 })
+                      .rQ({
+                          withAnalyticsToken: !0,
+                      })
                       .then(() => O())
                       .catch(() => _(!1)))
                 : O();
@@ -95,7 +98,9 @@ let E = (e) => {
                 y("selection");
             }, []),
             L = s.useCallback(() => {
-                (0, a.mMO)(() => Promise.resolve((e) => (0, i.jsx)(E, x({}, e))), { dismissable: !1 });
+                (0, a.mMO)(() => Promise.resolve((e) => (0, i.jsx)(E, x({}, e))), {
+                    dismissable: !1,
+                });
             }, []),
             k = s.useCallback(
                 (e) =>
@@ -121,7 +126,9 @@ let E = (e) => {
                               gap: 16,
                               align: "center",
                               justify: "center",
-                              style: { minHeight: "200px" },
+                              style: {
+                                  minHeight: "200px",
+                              },
                               children: (0, i.jsx)(a.y$y, {}),
                           })
                         : (0, i.jsxs)(a.tN_, {
@@ -131,7 +138,9 @@ let E = (e) => {
                               children: [
                                   (0, i.jsx)(a.q7S, {
                                       id: "selection",
-                                      children: (0, i.jsx)(g.u, { onNavigate: w }),
+                                      children: (0, i.jsx)(g.u, {
+                                          onNavigate: w,
+                                      }),
                                   }),
                                   (0, i.jsx)(a.q7S, {
                                       id: "dsa",
@@ -161,7 +170,9 @@ let E = (e) => {
     },
     b = () => (
         s.useEffect(() => {
-            (0, a.mMO)(() => Promise.resolve((e) => (0, i.jsx)(E, x({}, e))), { dismissable: !1 });
+            (0, a.mMO)(() => Promise.resolve((e) => (0, i.jsx)(E, x({}, e))), {
+                dismissable: !1,
+            });
         }, []),
         null
     );

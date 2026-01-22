@@ -1,4 +1,9 @@
-n.d(t, { A: () => B }), n(228524), n(896048), n(321073);
+n.d(t, {
+    A: () => B,
+}),
+    n(228524),
+    n(896048),
+    n(321073);
 var r = n(627968),
     i = n(64700),
     a = n(735438),
@@ -30,6 +35,7 @@ var r = n(627968),
     P = n(985018),
     D = n(924348),
     x = n(473169);
+
 function L(e, t, n) {
     return (
         t in e
@@ -43,6 +49,7 @@ function L(e, t, n) {
         e
     );
 }
+
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -59,6 +66,7 @@ function j(e) {
     }
     return e;
 }
+
 function M(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -71,6 +79,7 @@ function M(e, t) {
     }
     return n;
 }
+
 function k(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -82,10 +91,12 @@ function k(e, t) {
         e
     );
 }
+
 function U(e) {
     let { children: t } = e;
     return t([_.Q_.MESSAGE, _.Q_.NAVIGATION, _.Q_.DND, _.Q_.CHAT, _.Q_.VOICE_AND_VIDEO, _.Q_.MISCELLANEOUS]);
 }
+
 function G() {
     return s()((0, _.Bx)())
         .filter((e) => e.description !== P.intl.string(P.t.HnNtEI))
@@ -174,22 +185,38 @@ class V extends i.PureComponent {
     }
     renderExtraSettings() {
         let { action: e } = this.props.keybind;
-        return e === R.hCu.SWITCH_TO_VOICE_CHANNEL ? (0, r.jsx)(C.A, { keybind: this.props.keybind }) : void 0;
+        return e === R.hCu.SWITCH_TO_VOICE_CHANNEL
+            ? (0, r.jsx)(C.A, {
+                  keybind: this.props.keybind,
+              })
+            : void 0;
     }
     constructor(...e) {
         super(...e),
             L(this, "handleActionChanged", (e) => {
-                d.A.setKeybind(k(j({}, this.props.keybind), { action: e }));
+                d.A.setKeybind(
+                    k(j({}, this.props.keybind), {
+                        action: e,
+                    }),
+                );
             }),
             L(this, "handleShortcutChange", (e) => {
-                d.A.setKeybind(k(j({}, this.props.keybind), { shortcut: e }));
+                d.A.setKeybind(
+                    k(j({}, this.props.keybind), {
+                        shortcut: e,
+                    }),
+                );
             }),
             L(this, "handleDeleteKeybind", () => {
                 d.A.deleteKeybind(this.props.keybind.id);
             }),
             L(this, "handleEnableDisable", () => {
                 let { keybind: e } = this.props;
-                d.A.setKeybind(k(j({}, this.props.keybind), { enabled: !e.enabled }));
+                d.A.setKeybind(
+                    k(j({}, this.props.keybind), {
+                        enabled: !e.enabled,
+                    }),
+                );
             });
     }
 }
@@ -202,7 +229,14 @@ class F extends i.PureComponent {
                 enableClips: r,
                 enableScreenshotKeybind: i,
             } = this.props,
-            a = E.A.getCurrentConfig({ location: "UserSettingsKeybinds" }, { autoTrackExposure: !1 }).separateKeybind
+            a = E.A.getCurrentConfig(
+                {
+                    location: "UserSettingsKeybinds",
+                },
+                {
+                    autoTrackExposure: !1,
+                },
+            ).separateKeybind
                 ? [
                       {
                           id: "vad-priority",
@@ -343,8 +377,14 @@ class F extends i.PureComponent {
                 [R.hCu.TOGGLE_STREAMER_MODE]: P.intl.string(P.t.YszLLx),
             };
         return (
-            E.A.getCurrentConfig({ location: "UserSettingsKeybinds" }, { autoTrackExposure: !1 }).separateKeybind &&
-                (i[R.hCu.VAD_PRIORITY] = P.intl.string(P.t.rSe8IZ)),
+            E.A.getCurrentConfig(
+                {
+                    location: "UserSettingsKeybinds",
+                },
+                {
+                    autoTrackExposure: !1,
+                },
+            ).separateKeybind && (i[R.hCu.VAD_PRIORITY] = P.intl.string(P.t.rSe8IZ)),
             (0, b.L)() && (i[R.hCu.TOGGLE_CAMERA] = P.intl.string(P.t.v1JBtL)),
             e && (i[R.hCu.TOGGLE_OVERLAY_INPUT_LOCK] = P.intl.string(P.t.IoP5vc)),
             t && (0, I.isWindows)() && (i[R.hCu.TOGGLE_GO_LIVE_STREAMING] = P.intl.string(P.t.s4C238)),
@@ -453,10 +493,14 @@ class F extends i.PureComponent {
                         : (0, r.jsx)(u.po8, {
                               messageType: u.YCn.INFO,
                               className: D.Ly,
-                              children: P.intl.format(P.t.mPi3F3, { downloadLink: R.X7G.DOWNLOAD }),
+                              children: P.intl.format(P.t.mPi3F3, {
+                                  downloadLink: R.X7G.DOWNLOAD,
+                              }),
                           }),
                 }),
-                (0, r.jsx)(u.cGx, { className: x.IE }),
+                (0, r.jsx)(u.cGx, {
+                    className: x.IE,
+                }),
                 (0, r.jsxs)(u.BJc, {
                     gap: 48,
                     children: [
@@ -473,7 +517,9 @@ class F extends i.PureComponent {
                                         }),
                                         (0, r.jsx)("div", {
                                             className: D.DM,
-                                            children: (0, r.jsx)(u.e7I, { shortcut: p.z.binds["0"] }),
+                                            children: (0, r.jsx)(u.e7I, {
+                                                shortcut: p.z.binds["0"],
+                                            }),
                                         }),
                                     ],
                                 }),
@@ -511,7 +557,9 @@ class F extends i.PureComponent {
                                                                                 children: e.binds.map((e) =>
                                                                                     (0, r.jsx)(
                                                                                         u.e7I,
-                                                                                        { shortcut: e },
+                                                                                        {
+                                                                                            shortcut: e,
+                                                                                        },
                                                                                         e,
                                                                                     ),
                                                                                 ),
@@ -542,6 +590,7 @@ class F extends i.PureComponent {
             });
     }
 }
+
 function B() {
     i.useEffect(
         () => (

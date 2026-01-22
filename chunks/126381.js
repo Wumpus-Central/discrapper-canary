@@ -1,3 +1,7 @@
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});
 var r = {};
-r = { Empty: "Prázdne" };
+r = {
+    Empty: "Pr\xe1zdne",
+};

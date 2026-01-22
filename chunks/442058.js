@@ -1,4 +1,6 @@
-n.d(t, { h: () => a });
+n.d(t, {
+    h: () => a,
+});
 var r = n(371926),
     i = n(403992);
 class a extends i.J {

@@ -1,10 +1,13 @@
-n.d(t, { A: () => l });
+n.d(t, {
+    A: () => l,
+});
 var r = n(627968);
 n(64700);
 var i = n(638075),
     a = n(763754),
     s = n(888675),
     o = n(985018);
+
 function l(e) {
     let { message: t, usernameHook: l, compact: c } = e,
         u = (0, a.Ay)(t),

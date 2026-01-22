@@ -1,4 +1,7 @@
-n.d(t, { A: () => y }), n(896048);
+n.d(t, {
+    A: () => y,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(311907),
@@ -15,6 +18,7 @@ var r = n(627968),
     g = n(985018),
     m = n(629859),
     b = n(473169);
+
 function _(e, t, n) {
     return (
         t in e
@@ -44,8 +48,18 @@ class E extends i.PureComponent {
             { path: n, label: i, editingPath: l, isDefault: a, metadata: o } = this.props;
         return (
             null != o &&
-                ((e = null != o.availableKB ? (0, f.Xq)(o.availableKB, { useKibibytes: !0 }) : null),
-                (t = null != o.totalKB ? (0, f.Xq)(o.totalKB, { useKibibytes: !0 }) : null)),
+                ((e =
+                    null != o.availableKB
+                        ? (0, f.Xq)(o.availableKB, {
+                              useKibibytes: !0,
+                          })
+                        : null),
+                (t =
+                    null != o.totalKB
+                        ? (0, f.Xq)(o.totalKB, {
+                              useKibibytes: !0,
+                          })
+                        : null)),
             (0, r.jsxs)(u.A, {
                 className: m.ce,
                 align: u.A.Align.CENTER,
@@ -132,7 +146,9 @@ class E extends i.PureComponent {
                                     label: g.intl.string(g.t.Z2MWuH),
                                 }),
                             }),
-                            (0, r.jsx)(s.cGx, { className: m.me }),
+                            (0, r.jsx)(s.cGx, {
+                                className: m.me,
+                            }),
                             (0, r.jsxs)(u.A, {
                                 children: [
                                     (0, r.jsx)(s.Button, {
@@ -216,10 +232,14 @@ class E extends i.PureComponent {
                     this.handleStopEditing();
             }),
             _(this, "handleLabelChange", (e) => {
-                this.setState({ label: e });
+                this.setState({
+                    label: e,
+                });
             }),
             _(this, "handleToggleDefault", () => {
-                this.setState({ isDefault: !this.state.isDefault });
+                this.setState({
+                    isDefault: !this.state.isDefault,
+                });
             });
     }
 }
@@ -272,14 +292,18 @@ class O extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            _(this, "state", { editingPath: null }),
+            _(this, "state", {
+                editingPath: null,
+            }),
             _(this, "handleAddInstallationLocation", () => {
                 A.Ay.showOpenDialog(["openDirectory"]).then((e) => {
                     null != e && 0 !== e.length && null != e[0] && "undefined" !== e[0] && (0, o.SA)(e[0]);
                 });
             }),
             _(this, "handleToggleEditing", (e) => {
-                this.setState({ editingPath: e });
+                this.setState({
+                    editingPath: e,
+                });
             });
     }
 }

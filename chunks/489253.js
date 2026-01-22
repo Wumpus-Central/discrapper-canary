@@ -1,4 +1,8 @@
-n.d(t, { A: () => x }), n(228524), n(896048);
+n.d(t, {
+    A: () => x,
+}),
+    n(228524),
+    n(896048);
 var l = n(627968),
     a = n(64700),
     r = n(172218),
@@ -12,6 +16,7 @@ var l = n(627968),
     h = n(652215),
     m = n(985018),
     b = n(265005);
+
 function f(e) {
     let { applicationId: t, similarApplications: n, onSelectApplication: i, similarLoadId: s } = e,
         c = (function (e) {
@@ -52,10 +57,13 @@ function f(e) {
         ),
     });
 }
+
 function g(e) {
     var t, n, r;
     let { applicationId: c, similarApplication: u, onSelectApplication: m, position: f, similarLoadId: g } = e,
-        x = (0, p.A)({ application: u }),
+        x = (0, p.A)({
+            application: u,
+        }),
         v = null == (n = u.categories) ? void 0 : n[0],
         j = a.useMemo(
             () =>
@@ -145,7 +153,9 @@ let x = function (e) {
         : (0, l.jsxs)("div", {
               className: b.hd,
               children: [
-                  (0, l.jsx)("div", { className: b.yF }),
+                  (0, l.jsx)("div", {
+                      className: b.yF,
+                  }),
                   (0, l.jsx)(i.Heading, {
                       variant: "heading-sm/semibold",
                       color: "text-strong",

@@ -26,9 +26,11 @@ n(652215);
 let c,
     u = "/__development/build_overrides",
     d = (0, s.isAndroid)() ? c.Version.split(" - ")[0] : (0, s.isIOS)() ? c.Version : void 0;
+
 function f(e) {
     return "".concat(location.protocol, "//").concat(location.host).concat(e);
 }
+
 function p() {
     let e = o.A.safeParseWithQuery(f(u));
     return null == e
@@ -44,6 +46,7 @@ function p() {
               () => null,
           ));
 }
+
 function _(e) {
     if (y(e)) return Promise.resolve(O(e));
     let t = o.A.safeParseWithQuery(e);
@@ -62,9 +65,11 @@ function _(e) {
               () => null,
           ));
 }
+
 function h() {
     return -1 !== window.document.cookie.indexOf("".concat(l.ZR, "="));
 }
+
 function m() {
     try {
         var e;
@@ -76,13 +81,16 @@ function m() {
     }
 }
 let g = RegExp("^https://(?:ptb\\.|canary\\.)?(discordapp|discord)\\.com/__development/link?[\\S]+$", "i");
+
 function E(e) {
     return null != e && g.test(e);
 }
 let b = RegExp("^dev://branch/([\\w-./]+)$", "i");
+
 function y(e) {
     return null != e && b.test(e);
 }
+
 function O(e) {
     let t = e.match(b);
     if (null == t || 2 !== t.length) return null;
@@ -109,6 +117,7 @@ let A = "s",
         "discordapp.com",
     ]),
     S = new Set(["/__development/link", "/__development/link/"]);
+
 function I(e) {
     if (y(e))
         return {

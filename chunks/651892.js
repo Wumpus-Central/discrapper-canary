@@ -18,6 +18,7 @@ var r = n(957565),
     o = n(261331),
     l = n(654487),
     c = n(985018);
+
 function u(e) {
     var t, n;
     let { quest: r, taskDetails: i, thirdPartyTaskDetails: a } = e;
@@ -33,27 +34,36 @@ function u(e) {
                 ? c.intl.string(c.t.JMbfnc)
                 : c.intl.string(c.t["7e5k7L"]);
     }
-    return c.intl.formatToPlainString(c.t.EQa7os, { questName: r.config.messages.questName });
+    return c.intl.formatToPlainString(c.t.EQa7os, {
+        questName: r.config.messages.questName,
+    });
 }
+
 function d(e) {
     let { isTargetedDisclosure: t, isVideoQuest: n, gamePublisher: r, gameTitle: i, cosponsorName: a } = e;
     return t
         ? null == a
-            ? c.intl.formatToPlainString(c.t.Piihy1, { gamePublisher: r })
+            ? c.intl.formatToPlainString(c.t.Piihy1, {
+                  gamePublisher: r,
+              })
             : c.intl.formatToPlainString(c.t.DV47Gy, {
                   gamePublisher: r,
                   cosponsorName: a,
               })
         : n && "en-US" === c.intl.currentLocale
-          ? c.intl.formatToPlainString(c.t.zDHY3s, { gamePublisher: r })
+          ? c.intl.formatToPlainString(c.t.zDHY3s, {
+                gamePublisher: r,
+            })
           : c.intl.formatToPlainString(c.t.euizJY, {
                 gamePublisher: r,
                 gameTitle: i,
             });
 }
+
 function f(e) {
     return e.config.ctaConfig.buttonLabel;
 }
+
 function p(e) {
     switch (e) {
         case l.kL.SUGGESTED:
@@ -66,6 +76,7 @@ function p(e) {
             return c.intl.string(c.t["BB+2tX"]);
     }
 }
+
 function _(e) {
     switch (e) {
         case l.BQ.VIRTUAL_CURRENCY:
@@ -80,6 +91,7 @@ function _(e) {
             return c.intl.string(c.t["1nJR4p"]);
     }
 }
+
 function h(e) {
     switch (e) {
         case "reward":
@@ -89,6 +101,7 @@ function h(e) {
     }
 }
 let m = (e) => "".concat(location.protocol, "//").concat(location.host, "/quests/").concat(e);
+
 function g(e) {
     return e.ctaConfig.link;
 }
@@ -103,6 +116,7 @@ let E = (e, t) => {
     }),
         (0, r.C)(m(e));
 };
+
 function b(e) {
     if (0 === e.rewardsConfig.rewards.length) throw Error("Quest ".concat(e.id, " has no rewards configured"));
     return e.rewardsConfig.rewards[0];

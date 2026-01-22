@@ -1,4 +1,5 @@
 let r;
+
 function i(e, t) {
     var n = ("u" > typeof Symbol && e[Symbol.iterator]) || e["@@iterator"];
     if (!n) {
@@ -10,7 +11,9 @@ function i(e, t) {
                 s: i,
                 n: function () {
                     return r >= e.length
-                        ? { done: !0 }
+                        ? {
+                              done: !0,
+                          }
                         : {
                               done: !1,
                               value: e[r++],
@@ -49,6 +52,7 @@ function i(e, t) {
         },
     };
 }
+
 function a(e, t) {
     if (e) {
         if ("string" == typeof e) return s(e, t);
@@ -58,6 +62,7 @@ function a(e, t) {
         if ("Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return s(e, t);
     }
 }
+
 function s(e, t) {
     (null == t || t > e.length) && (t = e.length);
     for (var n = 0, r = Array(t); n < t; n++) r[n] = e[n];
@@ -78,6 +83,7 @@ let o = n(882630),
     _ = d.hasOwn,
     h = n(531679),
     m = n(427879);
+
 function g() {}
 e.exports = function (e, n) {
     return "function" == typeof n
@@ -93,12 +99,14 @@ let E = (t = e.exports);
         throw Error("Browser-only version of superagent could not find XHR");
     });
 let b = "".trim ? (e) => e.trim() : (e) => e.replace(/(^\s*|\s*$)/g, "");
+
 function y(e) {
     if (!f(e)) return e;
     let t = [];
     for (let n in e) _(e, n) && O(t, n, e[n]);
     return t.join("&");
 }
+
 function O(e, t, n) {
     if (void 0 !== n) {
         if (null === n) return void e.push(encodeURI(t));
@@ -119,6 +127,7 @@ function O(e, t, n) {
         else e.push(encodeURI(t) + "=" + encodeURIComponent(n));
     }
 }
+
 function A(e) {
     let t,
         n,
@@ -130,6 +139,7 @@ function A(e) {
             : (r[decodeURIComponent(t.slice(0, n))] = decodeURIComponent(t.slice(n + 1)));
     return r;
 }
+
 function v(e) {
     let t,
         n,
@@ -142,9 +152,11 @@ function v(e) {
             ((r = n.slice(0, t).toLowerCase()), (i = b(n.slice(t + 1))), (s[r] = i));
     return s;
 }
+
 function S(e) {
     return /[/+]json($|[^-\w])/i.test(e);
 }
+
 function I(e) {
     (this.req = e),
         (this.xhr = this.req.xhr),
@@ -166,6 +178,7 @@ function I(e) {
             : (this.body =
                   "HEAD" === this.req.method ? null : this._parseBody(this.text ? this.text : this.xhr.response));
 }
+
 function T(e, t) {
     let n = this;
     (this._query = this._query || []),
@@ -247,7 +260,10 @@ function T(e, t) {
     (T.prototype.auth = function (e, t, n) {
         1 == arguments.length && (t = ""),
             "object" == typeof t && null !== t && ((n = t), (t = "")),
-            n || (n = { type: "function" == typeof btoa ? "basic" : "auto" });
+            n ||
+                (n = {
+                    type: "function" == typeof btoa ? "basic" : "auto",
+                });
         let r = n.encoder
             ? n.encoder
             : (e) => {
@@ -377,6 +393,7 @@ for (var C = 0, N = ["GET", "POST", "OPTIONS", "PATCH", "PUT", "DELETE"]; C < N.
         return this._setDefaults(r), n && r.end(n), r;
     };
 }
+
 function R(e, t, n) {
     let r = E("DELETE", e);
     return "function" == typeof t && ((n = t), (t = null)), t && r.send(t), n && r.end(n), r;

@@ -1,4 +1,6 @@
-r.d(t, { a6: () => f }),
+r.d(t, {
+    a6: () => f,
+}),
     r(65821),
     r(927092),
     r(212978),
@@ -35,6 +37,7 @@ let o = null,
         10: "VP8_ENC_ERROR_USER_ABORT: user abort requested",
         11: "VP8_ENC_ERROR_LAST: list terminator",
     };
+
 function n(e, t) {
     let r = e._WebPAnimEncoderGetError(t);
     if (0 === r) return "";
@@ -43,6 +46,7 @@ function n(e, t) {
     for (; 0 !== e.HEAPU8[r + a] && a < 256; ) (o += String.fromCharCode(e.HEAPU8[r + a])), a++;
     return o;
 }
+
 function i(e, t, r) {
     let o = e._malloc(t);
     if (0 === o) throw Error("Failed to allocate ".concat(t, " bytes for ").concat(r, " - out of WASM memory"));
@@ -52,7 +56,9 @@ async function l() {
     if (null != o) return o;
     try {
         let e = (await r.e("37971").then(r.bind(r, 543198))).default;
-        return (o = await e({ locateFile: (e) => (e.endsWith(".wasm") ? new URL(r(14927), r.b).href : e) }));
+        return (o = await e({
+            locateFile: (e) => (e.endsWith(".wasm") ? new URL(r(14927), r.b).href : e),
+        }));
     } catch (t) {
         let e = Error("WebP module failed to load. Ensure webp_wasm.js and webp_wasm.wasm are built and available.");
         throw ((e.cause = t), e);
@@ -363,5 +369,7 @@ async function f(e) {
                 (h = e),
                 (p = t));
     }
-    return await s(_, h, p, { quality: u });
+    return await s(_, h, p, {
+        quality: u,
+    });
 }

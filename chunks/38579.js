@@ -1,4 +1,6 @@
-r.d(t, { A: () => s });
+r.d(t, {
+    A: () => s,
+});
 var n = r(64700),
     o = r(205662),
     a = r(717519),
@@ -39,12 +41,24 @@ let s = function (e) {
                         borderRadius: "0 0 2px 2px",
                     },
                 },
-                active: { check: { display: "block" } },
-                "color-#FFFFFF": {
-                    color: { boxShadow: "inset 0 0 0 1px #ddd" },
-                    check: { color: "#333" },
+                active: {
+                    check: {
+                        display: "block",
+                    },
                 },
-                transparent: { check: { color: "#333" } },
+                "color-#FFFFFF": {
+                    color: {
+                        boxShadow: "inset 0 0 0 1px #ddd",
+                    },
+                    check: {
+                        color: "#333",
+                    },
+                },
+                transparent: {
+                    check: {
+                        color: "#333",
+                    },
+                },
             },
             {
                 first: u,
@@ -61,8 +75,16 @@ let s = function (e) {
             style: d.color,
             onClick: void 0 === r ? function () {} : r,
             onHover: s,
-            focusStyle: { boxShadow: "0 0 4px " + t },
+            focusStyle: {
+                boxShadow: "0 0 4px " + t,
+            },
         },
-        n.createElement("div", { style: d.check }, n.createElement(l.default, null)),
+        n.createElement(
+            "div",
+            {
+                style: d.check,
+            },
+            n.createElement(l.default, null),
+        ),
     );
 };

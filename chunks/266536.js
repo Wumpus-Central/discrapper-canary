@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(627968),
     i = n(64700),
     a = n(861382),
@@ -14,7 +16,9 @@ let p = {
     stores: [u.Ay],
     matches(e, t, n, r, i) {
         var s;
-        let { enabled: u } = (0, o.sA)("MentionSuggestionAutocompletes", { autoTrackExposure: !0 });
+        let { enabled: u } = (0, o.sA)("MentionSuggestionAutocompletes", {
+            autoTrackExposure: !0,
+        });
         return (
             !(!u || e.isDM()) &&
             !!c.ng.getSetting() &&
@@ -43,7 +47,9 @@ let p = {
                 onHover: c,
                 onClick: u,
             } = e,
-            { suggestionDesign: d } = (0, o.sA)("MentionSuggestionAutocompletes", { autoTrackExposure: !1 }),
+            { suggestionDesign: d } = (0, o.sA)("MentionSuggestionAutocompletes", {
+                autoTrackExposure: !1,
+            }),
             f = t.map((e, t) =>
                 (0, r.jsx)(
                     s.Ay.UserSuggestion,
@@ -63,7 +69,13 @@ let p = {
                     e.user.id,
                 ),
             );
-        return (0, r.jsx)(i.Fragment, { children: f }, "mention-suggestions");
+        return (0, r.jsx)(
+            i.Fragment,
+            {
+                children: f,
+            },
+            "mention-suggestions",
+        );
     },
     onSelect(e) {
         let {
@@ -81,7 +93,9 @@ let p = {
                 a.insertText(n + (0, f.JB)(o.user, s, a.hidePersonalInformation) + r, n + (0, f.z$)(o.user) + r, {
                     replaceFullWord: !0,
                 }),
-            { type: d.kc.MENTION }
+            {
+                type: d.kc.MENTION,
+            }
         );
     },
 };

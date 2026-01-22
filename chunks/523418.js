@@ -1,4 +1,6 @@
-n.d(t, { b: () => f });
+n.d(t, {
+    b: () => f,
+});
 var r = n(397927),
     i = n(723702),
     a = n(360619),
@@ -6,6 +8,7 @@ var r = n(397927),
     o = n(531525),
     l = n(857266),
     c = n(985018);
+
 function u(e) {
     return [
         {
@@ -36,6 +39,7 @@ function u(e) {
         },
     ];
 }
+
 function d(e, t) {
     let n = u(e).filter((e) => null == e.predicate || !e.predicate());
     if (null != t && t.size > 0) {
@@ -44,6 +48,7 @@ function d(e, t) {
     }
     return n;
 }
+
 function f() {
     return d((0, s.b_)(), (0, a.AC)(o.H.GAMES));
 }

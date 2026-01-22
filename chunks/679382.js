@@ -1,4 +1,6 @@
-n.d(t, { A: () => A });
+n.d(t, {
+    A: () => A,
+});
 var r,
     i = n(61090),
     a = n(311907),
@@ -10,6 +12,7 @@ var r,
     d = n(71393),
     f = n(41237),
     p = n(514983);
+
 function _(e, t, n) {
     return (
         t in e
@@ -45,6 +48,7 @@ let h = 2,
     E = () => {
         h = 0;
     };
+
 function b(e) {
     let { guild: t } = e;
     1 === h && "update" === t.stickers.op && null == t.stickers.items && (h = 0);

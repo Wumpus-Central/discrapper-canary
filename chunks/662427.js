@@ -1,7 +1,10 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r,
     i = n(311907),
     a = n(73153);
+
 function s(e, t, n) {
     return (
         t in e
@@ -16,6 +19,7 @@ function s(e, t, n) {
     );
 }
 let o = [];
+
 function l(e) {
     let { eligibleGuilds: t } = e;
     o = t;
@@ -26,4 +30,6 @@ class c extends (r = i.Ay.Store) {
     }
 }
 s(c, "displayName", "CreatorMonetizationMarketingStore");
-let u = new c(a.h, { CREATOR_MONETIZATION_NAG_ACTIVATE_ELIGIBLITY_FETCH_SUCCESS: l });
+let u = new c(a.h, {
+    CREATOR_MONETIZATION_NAG_ACTIVATE_ELIGIBLITY_FETCH_SUCCESS: l,
+});

@@ -1,4 +1,7 @@
-n.d(t, { A: () => E }), n(228524);
+n.d(t, {
+    A: () => E,
+}),
+    n(228524);
 var r = n(627968),
     i = n(64700),
     s = n(311907),
@@ -15,6 +18,7 @@ var r = n(627968),
     m = n(401755),
     A = n(985018),
     x = n(473169);
+
 function _(e, t, n) {
     e.preventDefault(),
         f.default.track(g.HAw.GUILD_TEMPLATE_APP_OPENED, {
@@ -27,6 +31,7 @@ function _(e, t, n) {
         i = null != r ? r : h.default.getId();
     c.A.openMobileApp(n.state === m.QB.RESOLVED ? t : void 0, i);
 }
+
 function E(e) {
     let { code: t } = e,
         n = (0, s.bG)([o.A], () => o.A.getGuildTemplate(t));
@@ -34,7 +39,9 @@ function E(e) {
         (0, d.d)("guild_template_mobile");
     }, []),
     null == n || n.state === m.QB.RESOLVING)
-        ? (0, r.jsx)(a.Ay, { children: (0, r.jsx)(l.y$y, {}) })
+        ? (0, r.jsx)(a.Ay, {
+              children: (0, r.jsx)(l.y$y, {}),
+          })
         : n.state === m.QB.RESOLVED
           ? (0, r.jsxs)(a.Ay, {
                 children: [

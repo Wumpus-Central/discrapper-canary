@@ -11,10 +11,16 @@ var r = n(945810);
 let i = (0, r.mj)({
         name: "2025-08-quest-ad-fetch-active-check",
         kind: "user",
-        defaultConfig: { enabled: !1 },
+        defaultConfig: {
+            enabled: !1,
+        },
         variations: {
-            0: { enabled: !1 },
-            1: { enabled: !0 },
+            0: {
+                enabled: !1,
+            },
+            1: {
+                enabled: !0,
+            },
         },
     }),
     a = (0, r.mj)({
@@ -40,7 +46,9 @@ let i = (0, r.mj)({
         },
     }),
     s = (e) => {
-        let { enabled: t, variant: n } = a.getConfig({ location: e });
+        let { enabled: t, variant: n } = a.getConfig({
+            location: e,
+        });
         return 0 === n
             ? {
                   enabled: t,
@@ -59,8 +67,14 @@ let i = (0, r.mj)({
     o = (0, r.mj)({
         name: "2025-11-quest-home-takeover-client-rollout",
         kind: "user",
-        defaultConfig: { enabled: !1 },
-        variations: { 1: { enabled: !0 } },
+        defaultConfig: {
+            enabled: !1,
+        },
+        variations: {
+            1: {
+                enabled: !0,
+            },
+        },
     });
 var l = (function (e) {
     return (
@@ -94,12 +108,24 @@ let c = (0, r.mj)({
     u = (0, r.mj)({
         name: "2025-11-video-end-card-v2",
         kind: "user",
-        defaultConfig: { enabled: !1 },
-        variations: { 1: { enabled: !0 } },
+        defaultConfig: {
+            enabled: !1,
+        },
+        variations: {
+            1: {
+                enabled: !0,
+            },
+        },
     }),
     d = (0, r.mj)({
         name: "2025-12-quest-cta-refactor-rollout",
         kind: "user",
-        defaultConfig: { enabled: !1 },
-        variations: { 1: { enabled: !0 } },
+        defaultConfig: {
+            enabled: !1,
+        },
+        variations: {
+            1: {
+                enabled: !0,
+            },
+        },
     });

@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var i = n(627968);
 n(64700);
 var r = n(503698),
@@ -8,6 +10,7 @@ var r = n(503698),
     s = n(309010),
     c = n(494566),
     u = n(5172);
+
 function d(e) {
     let { locked: t } = e,
         n = (0, a.bG)([s.A], () => s.A.getVoiceChannelId()),

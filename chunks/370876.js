@@ -12,6 +12,7 @@ var r = n(284009),
     i = n(735438),
     a = n.n(i),
     s = n(946116);
+
 function o(e) {
     var t, n, r, i, a, o, c;
     return (
@@ -35,13 +36,16 @@ function o(e) {
     );
 }
 let c = 5;
+
 function u(e) {
     return a().orderBy(e, [(e) => e.approximateMemberCount], ["desc"]);
 }
+
 function d(e) {
     var t;
     return ((t = e.filter((e) => e.featurableInDirectory)), a().orderBy(t, [(e) => e.createdAt], ["desc"])).slice(0, c);
 }
+
 function f(e) {
     return u(e);
 }

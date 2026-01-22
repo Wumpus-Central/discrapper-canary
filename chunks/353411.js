@@ -19,6 +19,7 @@ var r = n(64700),
     h = n(881335),
     m = n(272984);
 let g = 30 * l.A.Millis.SECOND;
+
 function E(e) {
     let { currentUserTrackId: t, syncingWithUser: n, syncingWithParty: i } = e,
         [o, l] = r.useState(!1),
@@ -42,9 +43,11 @@ function E(e) {
         }
     );
 }
+
 function b(e, t) {
     return (0, i.cf)([u.A, o.default], () => (0, p.A)(u.A, o.default, t, e), [e, t]);
 }
+
 function y(e, t, n) {
     let i = b(e, t),
         { notPlayable: a, isCurrentUser: s, playingSameTrack: o } = i,
@@ -61,6 +64,7 @@ function y(e, t, n) {
         spotifyData: i,
     };
 }
+
 function O(e, t, n, i) {
     let a = null != i ? i : c.Ay.getName(t),
         s = b(e, t),
@@ -78,6 +82,7 @@ function O(e, t, n, i) {
         spotifyData: s,
     };
 }
+
 function A(e, t, n) {
     let i = b(e, t),
         { notPlayable: a, syncingWithUser: s, syncingWithParty: o, isCurrentUser: l } = i,

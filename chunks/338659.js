@@ -1,5 +1,9 @@
-n.d(t, { s: () => c }), n(321073);
+n.d(t, {
+    s: () => c,
+}),
+    n(321073);
 var r = n(265486);
+
 function i(e, t, n) {
     return (
         t in e
@@ -16,7 +20,7 @@ function i(e, t, n) {
 let a = 1.5,
     s = 5,
     o = 1,
-    l = 1000;
+    l = 1e3;
 class c {
     async fetchCodecInfo() {
         let e = "" !== this.videoElement.src ? this.videoElement.src : this.videoElement.currentSrc;

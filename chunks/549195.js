@@ -1,4 +1,6 @@
-Object.defineProperty(t, "__esModule", { value: !0 }),
+Object.defineProperty(t, "__esModule", {
+    value: !0,
+}),
     (t.isWEBP =
         t.isPSD =
         t.isPPM =

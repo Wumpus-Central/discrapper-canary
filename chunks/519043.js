@@ -19,7 +19,7 @@ t.exports = (function () {
             (this.startTime_ = 0),
             (this.endTime_ = 1),
             (this.graph_ = null),
-            (this.scale_ = 1000 / this.devicePixelRatio),
+            (this.scale_ = 1e3 / this.devicePixelRatio),
             this.updateScrollbarRange_(!0);
     }
     t.prototype = {
@@ -90,7 +90,7 @@ t.exports = (function () {
             }
         },
         drawTimeLabels: function (t, i, e, s, a) {
-            var h = 60000 * Math.ceil(a / 60000);
+            var h = 6e4 * Math.ceil(a / 6e4);
             for (
                 t.textBaseline = "bottom",
                     t.textAlign = "center",
@@ -103,7 +103,7 @@ t.exports = (function () {
                 var n = Math.round((h - a) / this.scale_);
                 if (n >= i) break;
                 var r = new Date(h).toLocaleTimeString(this.timeLocales, this.timeOptions);
-                t.fillText(r, n, s), t.beginPath(), t.lineTo(n, 1), t.lineTo(n, e), t.stroke(), (h += 60000);
+                t.fillText(r, n, s), t.beginPath(), t.lineTo(n, 1), t.lineTo(n, e), t.stroke(), (h += 6e4);
             }
         },
         getDataSeriesCount: function () {

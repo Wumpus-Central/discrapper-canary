@@ -1,4 +1,6 @@
-n.d(t, { c: () => a });
+n.d(t, {
+    c: () => a,
+});
 var r = n(476575),
     i =
         (n(72290),
@@ -104,6 +106,7 @@ var r = n(476575),
                 });
         };
     })();
+
 function s(e, t) {
     var n = e.findIndex(t);
     return n < 0 ? e.length : n;

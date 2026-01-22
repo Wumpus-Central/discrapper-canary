@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var l = n(627968);
 n(64700);
 var i = n(311907),
@@ -13,13 +15,16 @@ var i = n(311907),
     b = n(309010),
     g = n(652215),
     f = n(985018);
+
 function m(e) {
     let { user: t, context: m, label: O, joinCallVideo: p, id: y, onCall: E } = e,
         v = (0, s.aL)(),
         h = (0, i.bG)([u.default], () => u.default.getId() === t.id),
         j = (0, i.bG)([A.A], () => A.A.isBlocked(t.id)),
         x = (0, i.bG)([b.A, c.A], () => b.A.getVoiceChannelId() === c.A.getDMFromUserId(t.id)),
-        { copyVariant: S } = o.o.useConfig({ location: "useCallUserItem" });
+        { copyVariant: S } = o.o.useConfig({
+            location: "useCallUserItem",
+        });
     if (h || m === g.BRT.POPOUT || x || t.bot || t.isProvisional) return null;
     let M = () => {
             null == E || E(),
@@ -66,7 +71,12 @@ function m(e) {
                                           });
                                   }
                                   return e;
-                              })({ onSubmit: M }, t),
+                              })(
+                                  {
+                                      onSubmit: M,
+                                  },
+                                  t,
+                              ),
                           );
                   });
               }

@@ -9,6 +9,7 @@ var l,
     a = n(73153),
     s = n(967198),
     o = n(977997);
+
 function u(e, t, n) {
     return (
         t in e
@@ -22,6 +23,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -38,6 +40,7 @@ function c(e) {
     }
     return e;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -64,20 +67,29 @@ var f =
 let g = {},
     h = {},
     m = null;
+
 function b(e) {
     null != h[e] && (clearTimeout(h[e]), delete h[e]);
 }
+
 function y(e) {
     b(e),
         (h[e] = setTimeout(() => {
             let t = g[e];
-            null != t && ((g[e] = d(c({}, t), { style: "GENTLE_AMBIENT" })), p.emitChange()), delete h[e];
-        }, 2000));
+            null != t &&
+                ((g[e] = d(c({}, t), {
+                    style: "GENTLE_AMBIENT",
+                })),
+                p.emitChange()),
+                delete h[e];
+        }, 2e3));
 }
+
 function N() {
     for (let e of Object.keys(h)) clearTimeout(h[e]);
     (h = {}), (g = {});
 }
+
 function A() {
     return N(), !0;
 }
@@ -130,7 +142,12 @@ let p = new E(a.h, {
                             !0)
                           : 0 === i
                             ? (b(e), delete g[e], !0)
-                            : null != l && i !== r && ((g[e] = d(c({}, l), { userCount: i })), !0);
+                            : null != l &&
+                              i !== r &&
+                              ((g[e] = d(c({}, l), {
+                                  userCount: i,
+                              })),
+                              !0);
                 })(e, t) && (a = !0);
             return a;
         },

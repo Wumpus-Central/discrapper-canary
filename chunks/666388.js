@@ -1,4 +1,6 @@
-n.d(t, { A: () => C });
+n.d(t, {
+    A: () => C,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -24,6 +26,7 @@ var i = n(311907),
     S = n(985018),
     I = n(629338),
     T = n(183959);
+
 function C(e) {
     let {
             user: t,
@@ -46,7 +49,9 @@ function C(e) {
         fade: !0,
         className: T.rf,
         children: [
-            (0, r.jsx)(p.A, { userId: t.id }),
+            (0, r.jsx)(p.A, {
+                userId: t.id,
+            }),
             (0, r.jsx)(m.A, {
                 user: t,
                 guildId: null == N ? void 0 : N.id,
@@ -68,7 +73,12 @@ function C(e) {
             }),
             (0, r.jsx)(A.A, {
                 user: t,
-                onOpenProfile: (e) => (null == w ? void 0 : w({ tabSection: e })),
+                onOpenProfile: (e) =>
+                    null == w
+                        ? void 0
+                        : w({
+                              tabSection: e,
+                          }),
             }),
             (0, r.jsxs)("div", {
                 className: I.U,

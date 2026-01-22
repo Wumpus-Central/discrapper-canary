@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968),
     i = n(64700),
     l = n(311907),
@@ -15,7 +17,9 @@ let h = function (e) {
         n = o.A.useField("categoryId"),
         h = (0, l.bG)([c.A], () => c.A.getCategoryName(n)),
         A = i.useCallback(() => {
-            o.A.setState({ categoryId: u.Iq }),
+            o.A.setState({
+                categoryId: u.Iq,
+            }),
                 s.A.loadCategoryResults({
                     loadId: t,
                     categoryId: u.Iq,
@@ -23,8 +27,18 @@ let h = function (e) {
                     languageCode: o.A.getField("languageCode"),
                 });
         }, [t]),
-        g = n === u.Iq ? d.intl.string(d.t.Ivw1Is) : d.intl.formatToPlainString(d.t["+1WAFb"], { categoryName: h }),
-        m = n === u.Iq ? d.intl.string(d.t.aXvEjd) : d.intl.format(d.t.XLioqn, { onClick: A });
+        g =
+            n === u.Iq
+                ? d.intl.string(d.t.Ivw1Is)
+                : d.intl.formatToPlainString(d.t["+1WAFb"], {
+                      categoryName: h,
+                  }),
+        m =
+            n === u.Iq
+                ? d.intl.string(d.t.aXvEjd)
+                : d.intl.format(d.t.XLioqn, {
+                      onClick: A,
+                  });
     return (0, r.jsxs)("div", {
         className: p.kL,
         children: [

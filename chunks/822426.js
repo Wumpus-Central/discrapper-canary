@@ -1,4 +1,6 @@
-n.d(t, { K: () => f });
+n.d(t, {
+    K: () => f,
+});
 var l = n(627968);
 n(64700);
 var r = n(284009),
@@ -11,6 +13,7 @@ var r = n(284009),
     d = n(166532),
     p = n(800471),
     m = n(985018);
+
 function f(e) {
     let { handleStepChange: t, handleClose: n } = e,
         {
@@ -34,7 +37,9 @@ function f(e) {
         (0, l.jsx)(a.A, {
             premiumType: b,
             titleText: m.intl.string(m.t["7VcWW0"]),
-            subtitleText: m.intl.format(m.t.Qk34Ik, { subscriptionName: v }),
+            subtitleText: m.intl.format(m.t.Qk34Ik, {
+                subscriptionName: v,
+            }),
             footer: (0, l.jsxs)(s.ButtonGroup, {
                 direction: "horizontal-reverse",
                 align: "center",

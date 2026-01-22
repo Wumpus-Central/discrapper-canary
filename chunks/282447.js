@@ -1,10 +1,13 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968),
     i = n(64700),
     l = n(308528),
     a = n(442433),
     s = n(707606),
     o = n(71393);
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -30,6 +33,7 @@ function c(e) {
     }
     return e;
 }
+
 function u(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -48,6 +52,7 @@ function u(e, t) {
         e
     );
 }
+
 function d(e) {
     return (0, s.A)(
         class extends i.Component {
@@ -63,7 +68,9 @@ function d(e) {
                 );
             }
             handleMessageUser(e, t) {
-                return l.A.openPrivateChannel({ recipientIds: t.id });
+                return l.A.openPrivateChannel({
+                    recipientIds: t.id,
+                });
             }
             handleUserContextMenu(e, t, i) {
                 (0, a.L3)(
@@ -72,9 +79,17 @@ function d(e) {
                         let { default: e } = await Promise.all([n.e("97262"), n.e("32418"), n.e("99871")]).then(
                             n.bind(n, 668569),
                         );
-                        return (n) => (0, r.jsx)(e, u(c({}, n), { user: t }));
+                        return (n) =>
+                            (0, r.jsx)(
+                                e,
+                                u(c({}, n), {
+                                    user: t,
+                                }),
+                            );
                     },
-                    { onClose: i },
+                    {
+                        onClose: i,
+                    },
                 );
             }
             handleGuildContextMenu(e, t) {
@@ -96,7 +111,13 @@ function d(e) {
                         n.e("54469"),
                         n.e("71675"),
                     ]).then(n.bind(n, 544676));
-                    return (n) => (0, r.jsx)(e, u(c({}, n), { guild: t }));
+                    return (n) =>
+                        (0, r.jsx)(
+                            e,
+                            u(c({}, n), {
+                                guild: t,
+                            }),
+                        );
                 });
             }
             handleChannelContextMenu(e, t) {

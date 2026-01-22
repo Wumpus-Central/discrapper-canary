@@ -1,4 +1,7 @@
-n.d(t, { A: () => b }), n(896048);
+n.d(t, {
+    A: () => b,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -15,6 +18,7 @@ var r = n(627968),
     m = n(985018),
     g = n(273764),
     E = n(127243);
+
 function b(e) {
     let { channelId: t, option: n, keyboardModeEnabled: a } = e,
         b = i.useRef(null),
@@ -114,12 +118,16 @@ function b(e) {
               channelId: t,
               keyboardModeEnabled: a,
               onKeyDown: S,
-              className: s()(g.xd, { [g.LB]: y }),
+              className: s()(g.xd, {
+                  [g.LB]: y,
+              }),
               draftType: d.C.SlashCommand,
               ref: v,
               children: [
                   (0, r.jsx)("span", {
-                      className: s()(g.fS, { [g.Vg]: y }),
+                      className: s()(g.fS, {
+                          [g.Vg]: y,
+                      }),
                       children: n.displayName,
                   }),
                   (0, r.jsx)(o.DUT, {

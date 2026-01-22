@@ -58,6 +58,7 @@ var r = n(627968),
     V = n(650583),
     F = n(985018),
     B = n(702926);
+
 function H(e, t, n) {
     return (
         t in e
@@ -71,6 +72,7 @@ function H(e, t, n) {
         e
     );
 }
+
 function Y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -87,6 +89,7 @@ function Y(e) {
     }
     return e;
 }
+
 function W(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -99,6 +102,7 @@ function W(e, t) {
     }
     return n;
 }
+
 function K(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -110,6 +114,7 @@ function K(e, t) {
         e
     );
 }
+
 function z(e, t) {
     if (null == e) return {};
     var n,
@@ -126,6 +131,7 @@ function z(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function q(e, t) {
     if (null == e) return {};
     var n,
@@ -146,6 +152,7 @@ let X = {
     Q = (e) => (t) => {
         null == e || e(t), (0, j.y5)(t);
     };
+
 function $(e) {
     let {
             onVolumeChange: t,
@@ -232,7 +239,10 @@ function $(e) {
                     children: (0, r.jsx)(d.YNO, {
                         targetElementRef: R,
                         animation: d.YNO.Animation.FADE,
-                        renderPopout: () => (0, r.jsx)(C, { altText: l }),
+                        renderPopout: () =>
+                            (0, r.jsx)(C, {
+                                altText: l,
+                            }),
                         children: (e) =>
                             (0, r.jsx)(d.vN3, {
                                 offset: 4,
@@ -263,9 +273,11 @@ function $(e) {
         ],
     });
 }
+
 function J(e) {
     return (0, r.jsx)($, Y({}, e));
 }
+
 function ee(e) {
     let { onVolumeChange: t, volume: n, onMute: a, onVolumeShow: s, onVolumeHide: o, renderAdjacentContent: l } = e,
         c = z(e, ["onVolumeChange", "volume", "onMute", "onVolumeShow", "onVolumeHide", "renderAdjacentContent"]),
@@ -291,6 +303,7 @@ function ee(e) {
         ],
     });
 }
+
 function et(e) {
     let { onVolumeChange: t, volume: n, onMute: i } = e,
         a = z(e, ["onVolumeChange", "volume", "onMute"]),
@@ -308,6 +321,7 @@ function et(e) {
         )
     );
 }
+
 function en(e) {
     let {
             alt: t,
@@ -363,7 +377,10 @@ function en(e) {
                     children: (0, r.jsx)(d.YNO, {
                         targetElementRef: b,
                         animation: d.YNO.Animation.FADE,
-                        renderPopout: () => (0, r.jsx)(E, { altText: t }),
+                        renderPopout: () =>
+                            (0, r.jsx)(E, {
+                                altText: t,
+                            }),
                         children: (e) =>
                             (0, r.jsx)(d.vN3, {
                                 offset: 4,
@@ -373,7 +390,9 @@ function en(e) {
                                         type: "button",
                                         ref: b,
                                         "aria-label": F.intl.string(F.t.fSiQ3A),
-                                        className: s()(B.DV, { [B.I5]: u }),
+                                        className: s()(B.DV, {
+                                            [B.I5]: u,
+                                        }),
                                         children: F.intl.string(F.t.jCV1Tz),
                                     }),
                                 ),
@@ -389,9 +408,11 @@ function en(e) {
         ],
     });
 }
+
 function er(e) {
     return (0, r.jsx)(h.A, Y({}, e));
 }
+
 function ei(e) {
     let { renderAdjacentContent: t } = e,
         n = z(e, ["renderAdjacentContent"]);
@@ -399,12 +420,14 @@ function ei(e) {
         children: [(0, r.jsx)(S.A, Y({}, n)), null != t && t()],
     });
 }
+
 function ea(e) {
     return (0, r.jsx)(E.A, Y({}, e));
 }
 var es = (function (e) {
     return (e[(e.OLD_MESSAGES = 0)] = "OLD_MESSAGES"), (e[(e.REPLY = 1)] = "REPLY"), e;
 })({});
+
 function eo(e) {
     switch (e) {
         case 0:
@@ -415,6 +438,7 @@ function eo(e) {
             return (0, L.xb)(e);
     }
 }
+
 function el(e) {
     switch (e) {
         case 0:
@@ -494,6 +518,7 @@ let ec = (e) => {
                       }),
         });
     };
+
 function ed(e) {
     let { content: t, channelId: n } = e,
         [a] = i.useState(() => (0, y.Ld)("NewMessagesBarJumpToNewMessages_")),
@@ -524,7 +549,9 @@ function ed(e) {
     return c
         ? null
         : (0, r.jsxs)("div", {
-              className: s()(B.eb, { [B.y7]: c }),
+              className: s()(B.eb, {
+                  [B.y7]: c,
+              }),
               children: [
                   (0, r.jsx)(d.vN3, {
                       offset: 4,
@@ -560,6 +587,7 @@ function ed(e) {
               ],
           });
 }
+
 function ef(e) {
     var t, n, a;
     let { channel: o, content: _, scrollManager: h } = e,
@@ -629,7 +657,9 @@ function ef(e) {
                         (0, I.C6)(null);
                     },
                     1200,
-                    { trailing: !1 },
+                    {
+                        trailing: !1,
+                    },
                 ),
             [],
         ),
@@ -695,7 +725,10 @@ function ef(e) {
     i.useEffect(() => {
         if (null != S && q) {
             var e;
-            null == (e = R.current) || e.scrollTo({ top: S });
+            null == (e = R.current) ||
+                e.scrollTo({
+                    top: S,
+                });
         }
     }, [S, q]);
     let J = i.useCallback(
@@ -857,7 +890,9 @@ function ef(e) {
                                                       lineClamp: 1,
                                                       children: F.intl.string(F.t.q21fUr),
                                                   }),
-                                                  (0, r.jsx)(O.A, { className: B.Zx }),
+                                                  (0, r.jsx)(O.A, {
+                                                      className: B.Zx,
+                                                  }),
                                               ],
                                           }),
                                           (0, r.jsx)(d.DUT, {
@@ -883,12 +918,15 @@ function ef(e) {
               })
     );
 }
+
 function ep(e, t) {
     return null != t && e.length === t.length && !e.some((e, n) => t[n] !== e);
 }
+
 function e_(e, t) {
     return null != t && e.length === t.length && !e.some((e, n) => !ep(e, t[n]));
 }
+
 function eh(e) {
     var t, n, a;
     let { channel: o, scrollManager: p } = e,
@@ -960,7 +998,9 @@ function eh(e) {
                         (0, I.C6)(null);
                     },
                     1200,
-                    { trailing: !1 },
+                    {
+                        trailing: !1,
+                    },
                 ),
             [],
         ),
@@ -1032,7 +1072,10 @@ function eh(e) {
     i.useEffect(() => {
         if (null != A && K) {
             var e;
-            null == (e = S.current) || e.scrollTo({ top: A });
+            null == (e = S.current) ||
+                e.scrollTo({
+                    top: A,
+                });
         }
     }, [A, K]);
     let J = i.useCallback(
@@ -1135,7 +1178,9 @@ function eh(e) {
                                       (0, r.jsx)(d.DUT, {
                                           "aria-label": F.intl.string(F.t["4huCnC"]),
                                           onClick: Q,
-                                          className: s()(B.ZM, B.vz, { [B.jf]: null == V }),
+                                          className: s()(B.ZM, B.vz, {
+                                              [B.jf]: null == V,
+                                          }),
                                           children: (0, r.jsx)(D.A, {
                                               width: 16,
                                               height: 16,
@@ -1145,7 +1190,9 @@ function eh(e) {
                                       (0, r.jsx)(d.DUT, {
                                           "aria-label": F.intl.string(F.t["58KOoF"]),
                                           onClick: Z,
-                                          className: s()(B.ZM, B.mt, { [B.jf]: null == k }),
+                                          className: s()(B.ZM, B.mt, {
+                                              [B.jf]: null == k,
+                                          }),
                                           children: (0, r.jsx)(D.A, {
                                               width: 16,
                                               height: 16,
@@ -1179,7 +1226,9 @@ function eh(e) {
                                                       lineClamp: 1,
                                                       children: F.intl.string(F.t.q21fUr),
                                                   }),
-                                                  (0, r.jsx)(O.A, { className: B.Zx }),
+                                                  (0, r.jsx)(O.A, {
+                                                      className: B.Zx,
+                                                  }),
                                               ],
                                           }),
                                           (0, r.jsx)(d.DUT, {
@@ -1240,7 +1289,9 @@ let em = function (e) {
             className: t,
             children: (0, r.jsx)("div", {
                 className: B.wH,
-                children: (0, r.jsx)("div", { className: B.j3 }),
+                children: (0, r.jsx)("div", {
+                    className: B.j3,
+                }),
             }),
         });
     };

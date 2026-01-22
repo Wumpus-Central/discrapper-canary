@@ -1,4 +1,7 @@
-n.d(t, { A: () => U }), n(321073);
+n.d(t, {
+    A: () => U,
+}),
+    n(321073);
 var r,
     i = n(627968),
     l = n(64700),
@@ -19,6 +22,7 @@ var r,
     E = n(652215),
     O = n(985018),
     y = n(136042);
+
 function I(e, t, n) {
     return (
         t in e
@@ -32,6 +36,7 @@ function I(e, t, n) {
         e
     );
 }
+
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -48,6 +53,7 @@ function v(e) {
     }
     return e;
 }
+
 function S(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -120,6 +126,7 @@ let C = (0, A.Fe)({
         friction: 10,
         tension: 100,
     };
+
 function D() {
     return l.useEffect(() => (h.A.enable(), h.A.enableTemp(f.w), () => h.A.disableTemp()), []), null;
 }
@@ -142,34 +149,105 @@ class M extends (r = l.PureComponent) {
     }
     componentWillEnter(e) {
         let { opacity: t, scale: n } = this.state;
-        n.setValue(1.1), t.setValue(0), e(), this.setState({ animating: !0 }, () => this.animateIn());
+        n.setValue(1.1),
+            t.setValue(0),
+            e(),
+            this.setState(
+                {
+                    animating: !0,
+                },
+                () => this.animateIn(),
+            );
     }
     componentWillLeave(e) {
-        this.setState({ animating: !0 }, () => this.animateOut(e));
+        this.setState(
+            {
+                animating: !0,
+            },
+            () => this.animateOut(e),
+        );
     }
     animateIn(e) {
         c.Ay.Emitter.pause(500);
         let { opacity: t, scale: n } = this.state;
-        o.A.parallel([o.A.spring(t, v({ toValue: 1 }, R)), o.A.spring(n, v({ toValue: 1 }, R))]).start(() =>
-            this.animateComplete(e),
-        );
+        o.A.parallel([
+            o.A.spring(
+                t,
+                v(
+                    {
+                        toValue: 1,
+                    },
+                    R,
+                ),
+            ),
+            o.A.spring(
+                n,
+                v(
+                    {
+                        toValue: 1,
+                    },
+                    R,
+                ),
+            ),
+        ]).start(() => this.animateComplete(e));
     }
     animateOut(e) {
         c.Ay.Emitter.pause(500);
         let { opacity: t, scale: n } = this.state;
-        o.A.parallel([o.A.spring(t, v({ toValue: 0 }, R)), o.A.spring(n, v({ toValue: 1.1 }, R))]).start(() => {
+        o.A.parallel([
+            o.A.spring(
+                t,
+                v(
+                    {
+                        toValue: 0,
+                    },
+                    R,
+                ),
+            ),
+            o.A.spring(
+                n,
+                v(
+                    {
+                        toValue: 1.1,
+                    },
+                    R,
+                ),
+            ),
+        ]).start(() => {
             e(), _._.dispatch(E.jej.LAYER_POP_COMPLETE);
         });
     }
     animateUnder() {
         c.Ay.Emitter.pause(500);
         let { opacity: e, scale: t } = this.state;
-        o.A.parallel([o.A.spring(e, v({ toValue: 0 }, R)), o.A.spring(t, v({ toValue: 0.93 }, R))]).start(() =>
-            this.animateComplete(),
-        );
+        o.A.parallel([
+            o.A.spring(
+                e,
+                v(
+                    {
+                        toValue: 0,
+                    },
+                    R,
+                ),
+            ),
+            o.A.spring(
+                t,
+                v(
+                    {
+                        toValue: 0.93,
+                    },
+                    R,
+                ),
+            ),
+        ]).start(() => this.animateComplete());
     }
     animateComplete(e) {
-        this.setState({ animating: !1 }, e);
+        this.setState(
+            {
+                animating: !1,
+            },
+            e,
+        );
     }
     render() {
         let { animating: e } = this.state,
@@ -246,7 +324,9 @@ class M extends (r = l.PureComponent) {
                         },
                         c,
                     ),
-                    { children: l },
+                    {
+                        children: l,
+                    },
                 ),
             );
         return a
@@ -262,7 +342,17 @@ class M extends (r = l.PureComponent) {
             { reducedMotion: r } = this.context;
         return {
             opacity: t,
-            transform: r.enabled || e ? void 0 : [{ scale: n }, { translateZ: 0 }],
+            transform:
+                r.enabled || e
+                    ? void 0
+                    : [
+                          {
+                              scale: n,
+                          },
+                          {
+                              translateZ: 0,
+                          },
+                      ],
         };
     }
     constructor(e) {
@@ -278,7 +368,10 @@ class M extends (r = l.PureComponent) {
             });
     }
 }
-I(M, "defaultProps", { baseLayer: !1 }), I(M, "contextType", d.CZY);
+I(M, "defaultProps", {
+    baseLayer: !1,
+}),
+    I(M, "contextType", d.CZY);
 class k extends l.PureComponent {
     componentDidMount() {
         _._.subscribe(E.jej.LAYER_POP_ESCAPE_KEY, p.jH);
@@ -324,7 +417,10 @@ class k extends l.PureComponent {
     renderArtisanalHack() {
         return (0, i.jsx)(d.NPJ, {
             theme: this.props.sidebarTheme,
-            children: (e) => (0, i.jsx)("div", { className: s()(y.bg, e) }),
+            children: (e) =>
+                (0, i.jsx)("div", {
+                    className: s()(y.bg, e),
+                }),
         });
     }
     render() {
@@ -340,6 +436,7 @@ class k extends l.PureComponent {
         });
     }
 }
+
 function U(e) {
     let t = (0, m.NC)(),
         n = (0, c.bG)([b.A], () => b.A.getLayers()),

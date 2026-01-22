@@ -10,6 +10,7 @@ for (
     ++s
 )
     (n[s] = a[s]), (r[a.charCodeAt(s)] = s);
+
 function l(e) {
     var t = e.length;
     if (t % 4 > 0) throw Error("Invalid string. Length must be a multiple of 4");
@@ -18,15 +19,18 @@ function l(e) {
     var r = n === t ? 0 : 4 - (n % 4);
     return [n, r];
 }
+
 function c(e) {
     var t = l(e),
         n = t[0],
         r = t[1];
     return ((n + r) * 3) / 4 - r;
 }
+
 function u(e, t, n) {
     return ((t + n) * 3) / 4 - n;
 }
+
 function d(e) {
     var t,
         n,
@@ -54,14 +58,17 @@ function d(e) {
         c
     );
 }
+
 function f(e) {
     return n[(e >> 18) & 63] + n[(e >> 12) & 63] + n[(e >> 6) & 63] + n[63 & e];
 }
+
 function p(e, t, n) {
     for (var r = [], i = t; i < n; i += 3)
-        r.push(f(((e[i] << 16) & 16711680) + ((e[i + 1] << 8) & 65280) + (255 & e[i + 2])));
+        r.push(f(((e[i] << 16) & 0xff0000) + ((e[i + 1] << 8) & 65280) + (255 & e[i + 2])));
     return r.join("");
 }
+
 function _(e) {
     for (var t, r = e.length, i = r % 3, a = [], s = 16383, o = 0, l = r - i; o < l; o += s)
         a.push(p(e, o, o + s > l ? l : o + s));

@@ -1,4 +1,7 @@
-n.d(t, { A: () => j }), n(896048);
+n.d(t, {
+    A: () => j,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -24,6 +27,7 @@ var r = n(627968),
     I = n(652215),
     T = n(985018),
     C = n(945354);
+
 function N(e, t, n) {
     return (
         t in e
@@ -37,6 +41,7 @@ function N(e, t, n) {
         e
     );
 }
+
 function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -53,6 +58,7 @@ function R(e) {
     }
     return e;
 }
+
 function w(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -65,6 +71,7 @@ function w(e, t) {
     }
     return n;
 }
+
 function P(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -76,6 +83,7 @@ function P(e, t) {
         e
     );
 }
+
 function D(e, t) {
     if (null == e) return {};
     var n,
@@ -92,6 +100,7 @@ function D(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function x(e, t) {
     if (null == e) return {};
     var n,
@@ -143,7 +152,9 @@ class L extends i.PureComponent {
         return null == n
             ? null
             : (0, r.jsx)("div", {
-                  className: s()(C.yt, { [C.P0]: i }),
+                  className: s()(C.yt, {
+                      [C.P0]: i,
+                  }),
                   children: (0, r.jsxs)("div", {
                       className: C.Rh,
                       children: [
@@ -189,6 +200,7 @@ class L extends i.PureComponent {
               });
     }
 }
+
 function j(e) {
     let { user: t, channel: n } = e,
         a = D(e, ["user", "channel"]),
@@ -198,7 +210,12 @@ function j(e) {
         f = (0, o.bG)([h.default], () => h.default.getId()),
         y = (0, A.AO)(c),
         v = (0, o.bG)([E.A], () => (0, A.nr)(c, E.A)),
-        S = i.useMemo(() => ({ [n.guild_id]: [t.id] }), [n.guild_id, t.id]);
+        S = i.useMemo(
+            () => ({
+                [n.guild_id]: [t.id],
+            }),
+            [n.guild_id, t.id],
+        );
     return (
         (0, u.E)(S, "StreamPreviewPopout"),
         (0, r.jsx)(

@@ -18,6 +18,7 @@ let c = new Set([
     a.t02.AUTOMOD_TITLE_BLOCKED,
     a.t02.AUTOMOD_INVALID_RUST_SERVICE_RESPONSE,
 ]);
+
 function u(e, t) {
     if (null == e) return null;
     let { code: n, message: r } = e;
@@ -32,6 +33,7 @@ function u(e, t) {
           ? s.intl.string(s.t.ipgKDg)
           : null;
 }
+
 function d(e) {
     let t = i.A.getChannel(e.message.channelId);
     return (0, r.Qn)(e)
@@ -42,6 +44,7 @@ function d(e) {
             ? s.intl.string(s.t.ipgKDg)
             : s.intl.string(s.t.zQ69pv);
 }
+
 function f(e, t) {
     let n = u(t);
     return null != n ? n : null == e ? s.intl.string(s.t.zQ69pv) : d(e);

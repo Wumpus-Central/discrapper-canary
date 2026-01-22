@@ -1,4 +1,7 @@
-n.d(t, { A: () => g }), n(896048);
+n.d(t, {
+    A: () => g,
+}),
+    n(896048);
 var r = n(64700),
     i = n(989349),
     a = n.n(i),
@@ -12,6 +15,7 @@ var r = n(64700),
     p = n(985018);
 let _ = "M/D/YY",
     h = "M/D/YY";
+
 function m(e) {
     let { subscription: t } = e,
         n = a()(t.currentPeriodEnd).format(_),
@@ -30,6 +34,7 @@ function m(e) {
         isTrial: c,
     };
 }
+
 function g(e) {
     let t = (0, d.M)(e),
         n = (0, s.bG)([u.A], () => u.A.getSubscriptionListingForPlan(t)),
@@ -41,7 +46,12 @@ function g(e) {
     r.useEffect(() => {
         l && null != a && null == u.A.getSubscriptionSettings(a.id) && _(a.id);
     }, [l, a, _]);
-    let h = null == n ? void 0 : m({ subscription: e });
+    let h =
+        null == n
+            ? void 0
+            : m({
+                  subscription: e,
+              });
     return {
         guild: a,
         expanded: l,

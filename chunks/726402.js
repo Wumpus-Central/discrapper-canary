@@ -1,5 +1,8 @@
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 var r = n(514467);
+
 function i(e) {
     var t = (0, r.A)(e),
         n = e.offsetWidth,

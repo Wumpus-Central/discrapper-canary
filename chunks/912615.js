@@ -1,4 +1,8 @@
-n.d(t, { A: () => E }), n(896048), n(747238);
+n.d(t, {
+    A: () => E,
+}),
+    n(896048),
+    n(747238);
 var r = n(627968),
     i = n(64700),
     a = n(158954),
@@ -13,6 +17,7 @@ var r = n(627968),
     _ = n(361151),
     h = n(473169);
 let m = /^\d+$|^$/;
+
 function g(e, t, n) {
     if (null == e) return null;
     switch (e) {
@@ -22,6 +27,7 @@ function g(e, t, n) {
             return (0, u.Ay)(n);
     }
 }
+
 function E(e) {
     let { onClose: t, transitionState: n } = e,
         {
@@ -42,15 +48,19 @@ function E(e) {
         let e = g(S, A, y);
         null != (await c.q1(y, e)) && t();
     }
+
     function N() {
         c.cL(), O(""), I(null);
     }
+
     function R(e) {
         O(e);
     }
+
     function w(e) {
         I(e);
     }
+
     function P() {
         return null == E
             ? null
@@ -62,6 +72,7 @@ function E(e) {
                   }),
               });
     }
+
     function D() {
         return "localhost" !== S
             ? null

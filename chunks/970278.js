@@ -1,4 +1,7 @@
-n.d(t, { A: () => D }), n(896048);
+n.d(t, {
+    A: () => D,
+}),
+    n(896048);
 var r,
     i = n(735438),
     a = n.n(i),
@@ -7,6 +10,7 @@ var r,
     l = n(95701),
     c = n(734057),
     u = n(661191);
+
 function d(e, t, n) {
     return (
         t in e
@@ -20,6 +24,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +41,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -48,6 +54,7 @@ function p(e, t) {
     }
     return n;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -61,26 +68,31 @@ function _(e, t) {
 }
 let h = {},
     m = new Set();
+
 function g(e) {
     return {
         id: e.id,
         parentId: e.parent_id,
     };
 }
+
 function E(e) {
     e in h && delete h[e];
 }
+
 function b(e) {
     null != e.threads &&
         e.threads.length > 0 &&
         ((h[e.id] = {}), e.threads.filter((e) => l.A_.has(e.type)).forEach((t) => y(e.id, t))),
         e.hasThreadsSubscription && m.add(e.id);
 }
+
 function y(e, t) {
     let n = h[e],
         r = t.parent_id;
     r in n || (n[r] = {}), (h[e][r][t.id] = g(t));
 }
+
 function O(e) {
     (h = {}),
         m.clear(),
@@ -88,6 +100,7 @@ function O(e) {
             b(e);
         });
 }
+
 function A(e) {
     let { channels: t } = e;
     (h = {}),
@@ -98,14 +111,17 @@ function A(e) {
                 (h[t] = {}), e.forEach((e) => y(t, e));
             });
 }
+
 function v(e) {
     let { guild: t } = e;
     E(t.id), b(t);
 }
+
 function S(e) {
     let { guild: t } = e;
     E(t.id);
 }
+
 function I(e) {
     var t, n;
     let { channel: r } = e;
@@ -113,23 +129,35 @@ function I(e) {
     if ((null == (t = r.threadMetadata) ? void 0 : t.archived) === !0) return C(r);
     {
         let e = null != (n = h[r.guild_id]) ? n : {};
-        h[r.guild_id] = _(f({}, e), { [r.parent_id]: _(f({}, e[r.parent_id]), { [r.id]: g(r) }) });
+        h[r.guild_id] = _(f({}, e), {
+            [r.parent_id]: _(f({}, e[r.parent_id]), {
+                [r.id]: g(r),
+            }),
+        });
     }
 }
+
 function T(e) {
     let { guildId: t, threads: n, channelIds: r } = e;
     for (let e in (null == r && m.add(t), (h[t] = f({}, h[t])), h[t])) h[t][e] = f({}, h[t][e]);
     n.forEach((e) => y(t, e));
 }
+
 function C(e) {
     let { guild_id: t, parent_id: n, id: r } = e;
     if (null == t || null == n || !(t in h) || !(n in h[t]) || !(r in h[t][n])) return !1;
-    (h[t] = _(f({}, h[t]), { [n]: f({}, h[t][n]) })), delete h[t][n][r], a().isEmpty(h[t][n]) && delete h[t][n];
+    (h[t] = _(f({}, h[t]), {
+        [n]: f({}, h[t][n]),
+    })),
+        delete h[t][n][r],
+        a().isEmpty(h[t][n]) && delete h[t][n];
 }
+
 function N(e) {
     let { channel: t } = e;
     return C(t);
 }
+
 function R(e) {
     let { channel: t } = e;
     if (null == t.guild_id || !(t.guild_id in h)) return !1;

@@ -1,5 +1,8 @@
-s.d(t, { A: () => n });
+s.d(t, {
+    A: () => n,
+});
 var l = s(627968);
+
 function n(e) {
     let { color: t = "white", className: s } = e;
     return (0, l.jsx)("svg", {

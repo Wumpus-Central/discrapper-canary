@@ -18,6 +18,7 @@ var r,
     _ = n(508382),
     h = n(365912),
     m = n(992910);
+
 function g(e, t, n) {
     return (
         t in e
@@ -31,6 +32,7 @@ function g(e, t, n) {
         e
     );
 }
+
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -47,6 +49,7 @@ function E(e) {
     }
     return e;
 }
+
 function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -59,6 +62,7 @@ function b(e, t) {
     }
     return n;
 }
+
 function y(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -71,10 +75,12 @@ function y(e, t) {
     );
 }
 let O = new WeakMap();
+
 function A(e) {
     let t = (0, u.p3)(e, m.qd);
     return null == t && (t = (0, u.wB)(e, _.IP)), null != t ? t : null;
 }
+
 function v(e, t) {
     if (e.contains(t)) return !0;
     let n = A(t);
@@ -87,10 +93,12 @@ function v(e, t) {
     return !1;
 }
 let S = 12;
+
 function I(e) {
     let { positionKey: t, position: n, align: r } = e;
     return null != t ? t : "".concat(n, ":").concat(r);
 }
+
 function T(e, t, n, r) {
     switch (e) {
         case "top":
@@ -108,6 +116,7 @@ function T(e, t, n, r) {
             throw Error("Unexpected position: ".concat(e));
     }
 }
+
 function C(e, t, n) {
     return {
         top: e.top - n,
@@ -118,6 +127,7 @@ function C(e, t, n) {
         height: e.height,
     };
 }
+
 function N(e) {
     switch (e) {
         case "top":
@@ -136,6 +146,7 @@ function N(e) {
             throw Error();
     }
 }
+
 function R(e, t, n) {
     if (
         null != e &&
@@ -147,14 +158,20 @@ function R(e, t, n) {
     ) {
         let t = "top" === n.position ? "bottom" : "top",
             r = n.style[t];
-        return y(E({}, n), { style: y(E({}, n.style), { [t]: (null == r ? 0 : r) + e }) });
+        return y(E({}, n), {
+            style: y(E({}, n.style), {
+                [t]: (null == r ? 0 : r) + e,
+            }),
+        });
     }
     return n;
 }
+
 function w(e) {
     let { targetRef: t, overrideTargetRect: n } = e;
     return null != n ? n : (c()(null != t.current, "Invalid ref"), t.current.getBoundingClientRect());
 }
+
 function P(e, t) {
     let n = w(e),
         r = w(t);
@@ -184,7 +201,9 @@ class D extends (r = a.Component) {
                 let i = this.formatDimension(this.nudgeLeftAlignment(e.left + a, t, n)),
                     s = this.formatDimension(e.left + a) - i;
                 return {
-                    style: y(E({}, r), { left: i }),
+                    style: y(E({}, r), {
+                        left: i,
+                    }),
                     nudge: s,
                 };
             }
@@ -192,7 +211,9 @@ class D extends (r = a.Component) {
                 let i = this.formatDimension(n.offsetWidth - e.right - a),
                     s = this.nudgeRightAlignment(i, t, n);
                 return {
-                    style: y(E({}, r), { right: i + s }),
+                    style: y(E({}, r), {
+                        right: i + s,
+                    }),
                     nudge: 0,
                 };
             }
@@ -201,7 +222,9 @@ class D extends (r = a.Component) {
                     s = this.formatDimension(this.nudgeLeftAlignment(i, t, n)),
                     o = this.formatDimension(i) - s;
                 return {
-                    style: y(E({}, r), { left: s }),
+                    style: y(E({}, r), {
+                        left: s,
+                    }),
                     nudge: o,
                 };
             }
@@ -231,7 +254,9 @@ class D extends (r = a.Component) {
                 let i = this.formatDimension(this.nudgeTopAlignment(e.top + a, t, n)),
                     s = this.formatDimension(e.top + a) - i;
                 return {
-                    style: y(E({}, r), { top: i }),
+                    style: y(E({}, r), {
+                        top: i,
+                    }),
                     nudge: s,
                 };
             }
@@ -239,7 +264,9 @@ class D extends (r = a.Component) {
                 let i = this.formatDimension(this.nudgeBottomAlignment(e.bottom + a, t, n)),
                     s = this.formatDimension(e.bottom + a) - i;
                 return {
-                    style: y(E({}, r), { bottom: i }),
+                    style: y(E({}, r), {
+                        bottom: i,
+                    }),
                     nudge: s,
                 };
             }
@@ -248,7 +275,9 @@ class D extends (r = a.Component) {
                     s = this.formatDimension(this.nudgeTopAlignment(i, t, n)),
                     o = this.formatDimension(i) - s;
                 return {
-                    style: y(E({}, r), { top: s }),
+                    style: y(E({}, r), {
+                        top: s,
+                    }),
                     nudge: o,
                 };
             }
@@ -263,19 +292,33 @@ class D extends (r = a.Component) {
             o = C(a, s.left, s.top);
         switch (e) {
             case "top":
-                return this.getHorizontalAlignmentStyle(o, t, n, { bottom: n.offsetHeight - o.top + i });
+                return this.getHorizontalAlignmentStyle(o, t, n, {
+                    bottom: n.offsetHeight - o.top + i,
+                });
             case "bottom":
-                return this.getHorizontalAlignmentStyle(o, t, n, { top: o.bottom + i });
+                return this.getHorizontalAlignmentStyle(o, t, n, {
+                    top: o.bottom + i,
+                });
             case "left":
-                return this.getVerticalAlignmentStyle(o, t, n, { right: n.offsetWidth - o.left + i });
+                return this.getVerticalAlignmentStyle(o, t, n, {
+                    right: n.offsetWidth - o.left + i,
+                });
             case "right":
-                return this.getVerticalAlignmentStyle(o, t, n, { left: o.right + i });
+                return this.getVerticalAlignmentStyle(o, t, n, {
+                    left: o.right + i,
+                });
             case "overlap_vertical":
-                return this.getHorizontalAlignmentStyle(o, t, n, { [r]: 0 });
+                return this.getHorizontalAlignmentStyle(o, t, n, {
+                    [r]: 0,
+                });
             case "overlap_horizontal":
-                return this.getVerticalAlignmentStyle(o, t, n, { [r]: S });
+                return this.getVerticalAlignmentStyle(o, t, n, {
+                    [r]: S,
+                });
             case "center":
-                return this.getVerticalAlignmentStyle(o, t, n, { left: o.left + o.width / 2 - t.offsetWidth / 2 + i });
+                return this.getVerticalAlignmentStyle(o, t, n, {
+                    left: o.left + o.width / 2 - t.offsetWidth / 2 + i,
+                });
             case "window_center":
                 return this.getVerticalAlignmentStyle(o, t, n, {
                     left: Math.max((window.innerWidth - t.offsetWidth) / 2, 0),
@@ -327,7 +370,14 @@ class D extends (r = a.Component) {
                 ) {
                     let e = this.calculatePositionStyle(i, n, r, a),
                         t = T(N(a), e.style, n, r);
-                    t > l && ((s = E({ position: a }, e)), (l = t));
+                    t > l &&
+                        ((s = E(
+                            {
+                                position: a,
+                            },
+                            e,
+                        )),
+                        (l = t));
                 }
             }
         }
@@ -336,7 +386,14 @@ class D extends (r = a.Component) {
     componentDidMount() {
         var e, t;
         let { targetRef: n, onMount: r } = this.props;
-        this.setState(E({ isPositioned: !0 }, this.calculateState()));
+        this.setState(
+            E(
+                {
+                    isPositioned: !0,
+                },
+                this.calculateState(),
+            ),
+        );
         let i = this.elementRef.current;
         c()(null != i, "Missing elementRef"),
             null != n.current && O.set(i, n.current),
@@ -397,9 +454,18 @@ class D extends (r = a.Component) {
                                     [m.CA]: !1,
                                     [m.Hc]: a,
                                 }),
-                                style: y(E({ position: r ? "fixed" : "absolute" }, this.state.style), {
-                                    "--reference-position-layer-max-height": null != _ ? "".concat(_, "px") : void 0,
-                                }),
+                                style: y(
+                                    E(
+                                        {
+                                            position: r ? "fixed" : "absolute",
+                                        },
+                                        this.state.style,
+                                    ),
+                                    {
+                                        "--reference-position-layer-max-height":
+                                            null != _ ? "".concat(_, "px") : void 0,
+                                    },
+                                ),
                                 ref: this.elementRef,
                                 children: (0, i.jsx)(d.xp, {
                                     containerRef: this.elementRef,

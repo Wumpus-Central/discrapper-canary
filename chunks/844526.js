@@ -1,4 +1,6 @@
-n.d(t, { A: () => j });
+n.d(t, {
+    A: () => j,
+});
 var a = n(627968),
     l = n(64700),
     i = n(311907),
@@ -16,6 +18,7 @@ var a = n(627968),
     b = n(652215),
     g = n(49999),
     v = n(985018);
+
 function j(e) {
     let { groupName: t, targetElementRef: n } = e,
         l = (0, h.A)(),
@@ -26,7 +29,9 @@ function j(e) {
         ? null
         : (0, a.jsx)(c.zJ, {
               contentType: r.M.NITRO_TENURE_BADGE_LEVEL_UP,
-              timeRecurringConfig: { cooldownDurationMs: 1209600000 },
+              timeRecurringConfig: {
+                  cooldownDurationMs: 12096e5,
+              },
               groupName: t,
               children: (e) => {
                   let { visibleContent: t, markAsDismissed: i } = e;
@@ -39,14 +44,19 @@ function j(e) {
               },
           });
 }
+
 function y(e) {
     var t;
     let { recentlyLeveledTenureBadge: n, markAsDismissed: i, targetElementRef: r, shouldShow: o } = e,
         c = x.sp.indexOf(n),
-        u = (0, f.I)(x.sp[c > 0 ? c - 1 : c], { ambient: !0 }),
+        u = (0, f.I)(x.sp[c > 0 ? c - 1 : c], {
+            ambient: !0,
+        }),
         h = (0, l.useCallback)(() => {
             i(g.i.TAKE_ACTION),
-                d.A.setState({ shouldRenderTenureLevelUp: !0 }),
+                d.A.setState({
+                    shouldRenderTenureLevelUp: !0,
+                }),
                 m._.dispatch(b.jej.SHOW_ACCOUNT_PROFILE_POPOUT, {});
         }, [i]),
         j = (0, l.useCallback)(() => {
@@ -67,7 +77,9 @@ function y(e) {
         targetElementRef: r,
         onRequestClose: j,
         shouldShow: o,
-        caretConfig: { align: "center" },
+        caretConfig: {
+            align: "center",
+        },
         graphic:
             null != u
                 ? {

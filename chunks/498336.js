@@ -1,4 +1,7 @@
-n.d(t, { A: () => O }), n(896048);
+n.d(t, {
+    A: () => O,
+}),
+    n(896048);
 var a = n(627968),
     l = n(989349),
     i = n.n(l),
@@ -38,6 +41,7 @@ async function S(e) {
         rejectWithError: !0,
     });
 }
+
 function O() {
     let e = (0, r.bG)([j.A], () => j.A.getGuildId()),
         t = (0, r.bG)([v.A], () => {

@@ -1,4 +1,7 @@
-n.d(l, { default: () => o }), n(321073);
+n.d(l, {
+    default: () => o,
+}),
+    n(321073);
 var i = n(627968);
 n(64700);
 var e = n(397927),
@@ -7,6 +10,7 @@ var e = n(397927),
     r = n(292024),
     u = n(652215),
     d = n(985018);
+
 function o(t) {
     let { role: l, guild: n, onSelect: o } = t,
         p = [],

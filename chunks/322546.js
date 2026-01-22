@@ -4,9 +4,11 @@ r.d(t, {
     ke: () => u,
 });
 var n = r(201672);
+
 function o(e, t) {
     if (!(e instanceof t)) throw TypeError("Cannot call a class as a function");
 }
+
 function i(e, t) {
     for (var r = 0; r < t.length; r++) {
         var n = t[r];
@@ -16,9 +18,11 @@ function i(e, t) {
             Object.defineProperty(e, n.key, n);
     }
 }
+
 function a(e, t, r) {
     return t && i(e.prototype, t), r && i(e, r), e;
 }
+
 function s(e, t, r) {
     return (
         t in e
@@ -71,7 +75,9 @@ var c = (function () {
         e
     );
 })();
-s(c, "empty", { dispose: n.lQ });
+s(c, "empty", {
+    dispose: n.lQ,
+});
 var u = (function () {
         function e() {
             o(this, e), s(this, "isDisposed", !1), s(this, "disposables", void 0);

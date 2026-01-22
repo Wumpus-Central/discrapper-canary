@@ -1,4 +1,6 @@
-l.d(t, { A: () => v }),
+l.d(t, {
+    A: () => v,
+}),
     l(896048),
     l(693327),
     l(554719),
@@ -61,7 +63,12 @@ let p = new Map(),
                 i = (t) => {
                     if (a) return;
                     let { waveform: l, error: n } = t.data;
-                    null != n ? d.nx.error("Failed to load waveform:", n) : (p.set(e, { waveform: l }), C(l));
+                    null != n
+                        ? d.nx.error("Failed to load waveform:", n)
+                        : (p.set(e, {
+                              waveform: l,
+                          }),
+                          C(l));
                 };
             return (
                 n.addEventListener("message", i),

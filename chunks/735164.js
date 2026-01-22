@@ -16,18 +16,30 @@ var r = n(627968),
     c = n(580630),
     u = n(985018),
     d = n(600834);
-let f = i.createContext({ isPremiumRebrand: !1 }),
+let f = i.createContext({
+        isPremiumRebrand: !1,
+    }),
     p = () => i.useContext(f).isPremiumRebrand;
+
 function _(e) {
     let { children: t, className: n, isPremiumRebrand: i = !1 } = e;
     return (0, r.jsx)(f.Provider, {
-        value: { isPremiumRebrand: i },
+        value: {
+            isPremiumRebrand: i,
+        },
         children: (0, r.jsx)("div", {
-            className: s()(d.tp, { [d.u0]: i }, n),
+            className: s()(
+                d.tp,
+                {
+                    [d.u0]: i,
+                },
+                n,
+            ),
             children: t,
         }),
     });
 }
+
 function h(e) {
     let { children: t } = e;
     return p()
@@ -42,6 +54,7 @@ function h(e) {
               children: t,
           });
 }
+
 function m(e) {
     let { label: t, value: n, className: i } = e;
     return p()
@@ -75,6 +88,7 @@ function m(e) {
               ],
           });
 }
+
 function g(e) {
     let {
             label: t,
@@ -98,7 +112,11 @@ function g(e) {
                 label: t,
                 value: (0, r.jsxs)(r.Fragment, {
                     children: [
-                        h ? u.intl.formatToPlainString(u.t.hXcaLT, { price: (0, c.$g)(0, f) }) : n,
+                        h
+                            ? u.intl.formatToPlainString(u.t.hXcaLT, {
+                                  price: (0, c.$g)(0, f),
+                              })
+                            : n,
                         null != y
                             ? (0, r.jsxs)("div", {
                                   className: d.ns,
@@ -113,7 +131,9 @@ function g(e) {
                 (0, r.jsx)(o.Text, {
                     variant: "text-md/medium",
                     className: d.lk,
-                    children: u.intl.format(u.t.v9QeON, { price: O }),
+                    children: u.intl.format(u.t.v9QeON, {
+                        price: O,
+                    }),
                 }),
             null != y
                 ? (0, r.jsxs)("div", {
@@ -130,6 +150,7 @@ function g(e) {
         ],
     });
 }
+
 function E(e) {
     let { extended: t = !1, negativeMarginTop: n = !1, negativeMarginBottom: i = !1 } = e;
     return (0, r.jsx)("div", {
@@ -140,6 +161,7 @@ function E(e) {
         }),
     });
 }
+
 function b(e) {
     let { label: t, value: n, className: i } = e;
     return (0, r.jsxs)("div", {
@@ -156,6 +178,7 @@ function b(e) {
         ],
     });
 }
+
 function y(e) {
     let { children: t, className: n } = e;
     return (0, r.jsx)("div", {

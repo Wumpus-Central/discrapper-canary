@@ -1,6 +1,9 @@
-n.d(t, { F: () => a });
+n.d(t, {
+    F: () => a,
+});
 var r = n(144914),
     i = n(652215);
+
 function a(e, t, n) {
     let a = t.getState(e.id, e.branchId),
         s = n.getQueuePosition(e.id, e.branchId),

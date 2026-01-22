@@ -1,4 +1,6 @@
-i.d(e, { U: () => g });
+i.d(e, {
+    U: () => g,
+});
 var n = i(311907),
     l = i(419117),
     s = i(419954),
@@ -23,7 +25,9 @@ let g = (0, s.bd)(u.X.INPUT_PROFILE_VOICE_ADVANCED_ACCORDION, {
         return (
             (t = u.X.INPUT_PROFILE_VOICE_ADVANCED_ACCORDION),
             (e = (0, n.bG)([r.A], () => r.A.isInputProfileCustom())),
-            (0, l.A)(t, { limit: e ? 3 : 2 })
+            (0, l.A)(t, {
+                limit: e ? 3 : 2,
+            })
         );
     },
     buildLayout: () => [a.C, S.$, T.l, _.A, A.Q, o.e, E.W, d.i],

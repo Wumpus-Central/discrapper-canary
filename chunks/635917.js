@@ -30,6 +30,7 @@ var r = n(350972),
     T = n(652002),
     C = n(629078);
 let N = 60;
+
 function R() {
     return {
         id: r.LW.DEFAULT,
@@ -38,6 +39,7 @@ function R() {
         isPremium: !1,
     };
 }
+
 function w() {
     return [
         {
@@ -174,9 +176,11 @@ function w() {
         },
     ];
 }
+
 function P() {
     return [R(), ...w()];
 }
+
 function D(e) {
     let t = P().find((t) => t.id === e);
     return null != t ? t : R();

@@ -1,10 +1,14 @@
-n.d(t, { A: () => o }), n(492834);
+n.d(t, {
+    A: () => o,
+}),
+    n(492834);
 var r = n(64700),
     a = n(927813),
     l = n(218394),
     i = n(665171);
 let s = 30 * a.A.Millis.SECOND,
     c = 5 * a.A.Millis.SECOND;
+
 function o(e) {
     let t = (0, l.j)();
     r.useEffect(() => {

@@ -1,7 +1,10 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(73153),
     i = n(272355),
     l = n(422258);
+
 function a(e) {
     let {
         channel: { id: t },

@@ -1,10 +1,13 @@
-n.d(t, { A: () => l });
+n.d(t, {
+    A: () => l,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
     a = n.n(i),
     s = n(397927),
     o = n(164974);
+
 function l(e) {
     let { message: t, error: n, onClick: i, submitting: l, className: c, ctaMessage: u } = e;
     return (0, r.jsxs)("div", {
@@ -26,7 +29,9 @@ function l(e) {
                     }),
                     (0, r.jsxs)("div", {
                         children: [
-                            (0, r.jsx)(s.hKd, { size: 1 }),
+                            (0, r.jsx)(s.hKd, {
+                                size: 1,
+                            }),
                             (0, r.jsx)(s.Text, {
                                 className: o.pq,
                                 variant: "text-sm/normal",

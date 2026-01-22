@@ -1,7 +1,10 @@
-n.d(t, { M: () => l });
+n.d(t, {
+    M: () => l,
+});
 var i = n(627968);
 n(64700);
 var r = n(397927);
+
 function l(e) {
     (0, r.mMO)(async () => {
         let { default: t } = await n.e("4075").then(n.bind(n, 59430));
@@ -34,7 +37,10 @@ function l(e) {
                     }
                     return e;
                 })({}, n)),
-                (l = l = { guildId: e }),
+                (l = l =
+                    {
+                        guildId: e,
+                    }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(l))
                     : (function (e, t) {

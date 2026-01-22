@@ -9,6 +9,7 @@ let s = {
     readUnknownField: !0,
     readerFactory: (e) => new l(e),
 };
+
 function o(e) {
     return e ? Object.assign(Object.assign({}, s), e) : s;
 }

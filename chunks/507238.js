@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968);
 n(64700);
 var l = n(989349),
@@ -11,6 +13,7 @@ var l = n(989349),
     d = n(543465),
     f = n(477427),
     p = n(985018);
+
 function h(e, t) {
     let n = null == e ? void 0 : e.id,
         { muted: l, muteConfig: h } = (0, a.cf)(
@@ -29,12 +32,26 @@ function h(e, t) {
                 id: "unmute-guild",
                 label: p.intl.string(p.t.De0BTC),
                 subtext: b,
-                action: () => o.A.updateGuildNotificationSettings(n, { muted: !1 }, f.fd.Unmuted),
+                action: () =>
+                    o.A.updateGuildNotificationSettings(
+                        n,
+                        {
+                            muted: !1,
+                        },
+                        f.fd.Unmuted,
+                    ),
             })
           : (0, r.jsx)(s.Drp, {
                 id: "mute-guild",
                 label: p.intl.string(p.t.vRzp7P),
-                action: () => o.A.updateGuildNotificationSettings(n, { muted: !0 }, f.fd.Muted),
+                action: () =>
+                    o.A.updateGuildNotificationSettings(
+                        n,
+                        {
+                            muted: !0,
+                        },
+                        f.fd.Muted,
+                    ),
                 children: (0, c.gv)().map((e) => {
                     let { value: l, label: a } = e;
                     return (0, r.jsx)(

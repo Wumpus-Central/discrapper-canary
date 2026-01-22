@@ -6,8 +6,9 @@ n.d(t, {
 let r = (e) => new Promise((t) => setTimeout(t, e)),
     i = 50,
     a = 500,
-    s = 5000,
+    s = 5e3,
     o = () => Promise.resolve();
+
 function l(e) {
     o = e;
 }

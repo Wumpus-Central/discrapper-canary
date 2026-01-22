@@ -1,4 +1,8 @@
-a.d(n, { default: () => d }), a(896048), a(65821);
+a.d(n, {
+    default: () => d,
+}),
+    a(896048),
+    a(65821);
 var e = a(627968),
     i = a(64700),
     l = a(158954),
@@ -7,6 +11,7 @@ var e = a(627968),
     o = a(777574),
     u = a(738104),
     c = a(985018);
+
 function d(t) {
     var n, a;
     let { onClose: d, transitionState: g, location: h, successRedirect: m, platformType: p } = t,
@@ -32,8 +37,12 @@ function d(t) {
         w = (0, o.x)(f, p);
     return (0, e.jsx)(l.Modal, {
         transitionState: g,
-        title: c.intl.formatToPlainString(c.t["ImMhq+"], { serviceName: y }),
-        subtitle: c.intl.formatToPlainString(c.t["7TByKh"], { serviceName: y }),
+        title: c.intl.formatToPlainString(c.t["ImMhq+"], {
+            serviceName: y,
+        }),
+        subtitle: c.intl.formatToPlainString(c.t["7TByKh"], {
+            serviceName: y,
+        }),
         onClose: d,
         actions: [
             {

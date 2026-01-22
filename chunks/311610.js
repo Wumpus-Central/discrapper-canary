@@ -24,26 +24,41 @@ var r = n(617179),
         return e.withMutations(function (e) {
             c(u, e, function (e) {
                 var t = e.getChildKeys();
-                return e.merge({ children: t.delete(t.indexOf(s)) });
+                return e.merge({
+                    children: t.delete(t.indexOf(s)),
+                });
             }),
                 c(f, e, function (e) {
-                    return e.merge({ nextSibling: d });
+                    return e.merge({
+                        nextSibling: d,
+                    });
                 }),
                 c(d, e, function (e) {
-                    return e.merge({ prevSibling: f });
+                    return e.merge({
+                        prevSibling: f,
+                    });
                 }),
                 c(_, e, function (e) {
-                    return e.merge({ prevSibling: s });
+                    return e.merge({
+                        prevSibling: s,
+                    });
                 }),
                 c(h, e, function (e) {
-                    return e.merge({ nextSibling: s });
+                    return e.merge({
+                        nextSibling: s,
+                    });
                 }),
                 c(p, e, function (e) {
                     var t = e.getChildKeys(),
                         n = t.indexOf(o),
                         r = a ? n + 1 : 0 !== n ? n - 1 : 0,
                         i = t.toArray();
-                    return i.splice(r, 0, s), e.merge({ children: l(i) });
+                    return (
+                        i.splice(r, 0, s),
+                        e.merge({
+                            children: l(i),
+                        })
+                    );
                 }),
                 c(s, e, function (e) {
                     return e.merge({

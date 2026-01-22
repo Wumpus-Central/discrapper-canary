@@ -1996,17 +1996,17 @@ let ey = 100,
     eI = 200,
     eT = 100,
     eC = 250,
-    eN = 2000,
-    eR = 4000,
+    eN = 2e3,
+    eR = 4e3,
     ew = 250,
     eP = 100,
-    eD = 1000,
+    eD = 1e3,
     ex = 100,
     eL = 256,
     ej = 32,
     eM = 190,
     ek = 32,
-    eU = 600000,
+    eU = 6e5,
     eG = 6 * u.A.Seconds.HOUR,
     eV = [
         0,
@@ -2025,8 +2025,8 @@ let ey = 100,
         eG,
     ],
     eF = 10,
-    eB = 10485760,
-    eH = 524288000,
+    eB = 0xa00000,
+    eH = 524288e3,
     eY = (e) => "||".concat(e, "||"),
     eW = /^\|\|([\s\S]+?)\|\|/,
     eK = /^<id:(home|browse|customize|guide|linked-roles)(?::(\d+))?>/,
@@ -2070,16 +2070,16 @@ var eq = (function (e) {
     })({});
 let eJ = 128,
     e0 = 1024,
-    e1 = 2000,
-    e2 = 8000,
-    e3 = 64000,
-    e6 = 96000,
-    e4 = 1000,
+    e1 = 2e3,
+    e2 = 8e3,
+    e3 = 64e3,
+    e6 = 96e3,
+    e4 = 1e3,
     e5 = "0000",
     e7 = "1",
     e8 = 99,
-    e9 = 10000,
-    te = 10000,
+    e9 = 1e4,
+    te = 1e4,
     tt = 50,
     tn = 150,
     tr = 300,
@@ -2324,7 +2324,7 @@ var ty = (function (e) {
             (e[(e.PHONE_CARRIER_TYPE_NOT_MOBILE = 70005)] = "PHONE_CARRIER_TYPE_NOT_MOBILE"),
             (e[(e.PHONE_VERIFICATION_REQUIRED = 70007)] = "PHONE_VERIFICATION_REQUIRED"),
             (e[(e.PHONE_ALREADY_CLAIMED_GENERIC = 70011)] = "PHONE_ALREADY_CLAIMED_GENERIC"),
-            (e[(e.RELATIONSHIP_INCOMING_DISABLED = 80000)] = "RELATIONSHIP_INCOMING_DISABLED"),
+            (e[(e.RELATIONSHIP_INCOMING_DISABLED = 8e4)] = "RELATIONSHIP_INCOMING_DISABLED"),
             (e[(e.RELATIONSHIP_INCOMING_BLOCKED = 80001)] = "RELATIONSHIP_INCOMING_BLOCKED"),
             (e[(e.RELATIONSHIP_INVALUD_USER_BOT = 80002)] = "RELATIONSHIP_INVALUD_USER_BOT"),
             (e[(e.RELATIONSHIP_INVALID_SELF = 80003)] = "RELATIONSHIP_INVALID_SELF"),
@@ -2332,7 +2332,7 @@ var ty = (function (e) {
             (e[(e.RELATIONSHIP_ALREADY_FRIENDS = 80007)] = "RELATIONSHIP_ALREADY_FRIENDS"),
             (e[(e.RELATIONSHIP_INVALID_NO_CONFIRMATION = 80013)] = "RELATIONSHIP_INVALID_NO_CONFIRMATION"),
             (e[(e.REACTION_BLOCKED = 90001)] = "REACTION_BLOCKED"),
-            (e[(e.LISTING_ALREADY_JOINED = 120000)] = "LISTING_ALREADY_JOINED"),
+            (e[(e.LISTING_ALREADY_JOINED = 12e4)] = "LISTING_ALREADY_JOINED"),
             (e[(e.LISTING_TOO_MANY_MEMBERS = 120001)] = "LISTING_TOO_MANY_MEMBERS"),
             (e[(e.LISTING_JOIN_BLOCKED = 120002)] = "LISTING_JOIN_BLOCKED"),
             (e[(e.REQUEST_TO_JOIN_USER_INELIGIBLE = 150023)] = "REQUEST_TO_JOIN_USER_INELIGIBLE"),
@@ -2341,7 +2341,7 @@ var ty = (function (e) {
             (e[(e.TOO_MANY_THREADS = 160006)] = "TOO_MANY_THREADS"),
             (e[(e.TOO_MANY_ANNOUNCEMENT_THREADS = 160007)] = "TOO_MANY_ANNOUNCEMENT_THREADS"),
             (e[(e.POGGERMODE_TEMPORARILY_DISABLED = 170008)] = "POGGERMODE_TEMPORARILY_DISABLED"),
-            (e[(e.AUTOMOD_MESSAGE_BLOCKED = 200000)] = "AUTOMOD_MESSAGE_BLOCKED"),
+            (e[(e.AUTOMOD_MESSAGE_BLOCKED = 2e5)] = "AUTOMOD_MESSAGE_BLOCKED"),
             (e[(e.AUTOMOD_TITLE_BLOCKED = 200001)] = "AUTOMOD_TITLE_BLOCKED"),
             (e[(e.AUTOMOD_INVALID_RUST_SERVICE_RESPONSE = 200002)] = "AUTOMOD_INVALID_RUST_SERVICE_RESPONSE"),
             (e[(e.MONETIZATION_TERMS_NOT_ACCEPTED = 210003)] = "MONETIZATION_TERMS_NOT_ACCEPTED"),
@@ -2351,12 +2351,12 @@ var ty = (function (e) {
             (e[(e.CREATOR_MONETIZATION_PAYMENT_TEAM_REQUIRED = 210026)] = "CREATOR_MONETIZATION_PAYMENT_TEAM_REQUIRED"),
             (e[(e.CREATOR_MONETIZATION_PAYMENT_ACCOUNT_VERIFICATION_REQUIRED = 210027)] =
                 "CREATOR_MONETIZATION_PAYMENT_ACCOUNT_VERIFICATION_REQUIRED"),
-            (e[(e.HARMFUL_LINK_MESSAGE_BLOCKED = 240000)] = "HARMFUL_LINK_MESSAGE_BLOCKED"),
+            (e[(e.HARMFUL_LINK_MESSAGE_BLOCKED = 24e4)] = "HARMFUL_LINK_MESSAGE_BLOCKED"),
             (e[(e.HARMFUL_URL_BLOCKED = 240001)] = "HARMFUL_URL_BLOCKED"),
-            (e[(e.USER_LIMITED_ACCESS_DEFAULT = 340000)] = "USER_LIMITED_ACCESS_DEFAULT"),
+            (e[(e.USER_LIMITED_ACCESS_DEFAULT = 34e4)] = "USER_LIMITED_ACCESS_DEFAULT"),
             (e[(e.USER_FRIEND_REQUEST_LIMITED_ACCESS = 340007)] = "USER_FRIEND_REQUEST_LIMITED_ACCESS"),
             (e[(e.USER_LIMITED_ACCESS_MAX = 349999)] = "USER_LIMITED_ACCESS_MAX"),
-            (e[(e.GUILD_LIMITED_ACCESS_DEFAULT = 400000)] = "GUILD_LIMITED_ACCESS_DEFAULT"),
+            (e[(e.GUILD_LIMITED_ACCESS_DEFAULT = 4e5)] = "GUILD_LIMITED_ACCESS_DEFAULT"),
             (e[(e.GUILD_FILE_UPLOAD_RATE_LIMITED_ACCESS = 400001)] = "GUILD_FILE_UPLOAD_RATE_LIMITED_ACCESS"),
             (e[(e.GUILD_JOIN_INVITE_LIMITED_ACCESS = 400002)] = "GUILD_JOIN_INVITE_LIMITED_ACCESS"),
             (e[(e.GUILD_GO_LIVE_LIMITED_ACCESS = 400003)] = "GUILD_GO_LIVE_LIMITED_ACCESS"),
@@ -2375,10 +2375,10 @@ var ty = (function (e) {
             (e[(e.DSA_RSL_REPORT_INELIGIBLE = 521004)] = "DSA_RSL_REPORT_INELIGIBLE"),
             (e[(e.DSA_APPEAL_REQUEST_DEFLECTION = 522001)] = "DSA_APPEAL_REQUEST_DEFLECTION"),
             (e[(e.CONTENT_INVENTORY_ENTRY_INVALID_PERMISSION = 560006)] = "CONTENT_INVENTORY_ENTRY_INVALID_PERMISSION"),
-            (e[(e.ACCOUNT_REVERT_INVALID_TOKEN = 620000)] = "ACCOUNT_REVERT_INVALID_TOKEN"),
+            (e[(e.ACCOUNT_REVERT_INVALID_TOKEN = 62e4)] = "ACCOUNT_REVERT_INVALID_TOKEN"),
             (e[(e.ACCOUNT_REVERT_EMAIL_ALREADY_TAKEN = 620001)] = "ACCOUNT_REVERT_EMAIL_ALREADY_TAKEN"),
             (e[(e.ACCOUNT_REVERT_ACCOUNT_NOT_FOUND = 620002)] = "ACCOUNT_REVERT_ACCOUNT_NOT_FOUND"),
-            (e[(e.USER_GUILD_JOIN_LARGE_GUILD_UNDERAGE_DISALLOWED = 700000)] =
+            (e[(e.USER_GUILD_JOIN_LARGE_GUILD_UNDERAGE_DISALLOWED = 7e5)] =
                 "USER_GUILD_JOIN_LARGE_GUILD_UNDERAGE_DISALLOWED"),
             e
         );
@@ -3529,7 +3529,9 @@ var tB = (function (e) {
     tY = (function (e) {
         return (e[(e.PRIVATE = 0)] = "PRIVATE"), (e[(e.PUBLIC = 1)] = "PUBLIC"), e;
     })({});
-let tW = Object.freeze({ GAME_INVITE_FRAGMENT: "/_discord/join?secret=" }),
+let tW = Object.freeze({
+        GAME_INVITE_FRAGMENT: "/_discord/join?secret=",
+    }),
     tK = new Set(["facebook", "contacts"]),
     tz = new Set(["spotify", "xbox", "playstation", "playstation-stg", "crunchyroll"]),
     tq = Object.freeze({
@@ -3537,11 +3539,11 @@ let tW = Object.freeze({ GAME_INVITE_FRAGMENT: "/_discord/join?secret=" }),
         IOS: "https://itunes.apple.com/app/discord/id985746746",
         ANDROID: "https://play.google.com/store/apps/details?id=com.discord",
     }),
-    tX = 10070709,
+    tX = 0x99aab5,
     tZ = (0, l.Hl)(tX),
     tQ = [
-        1752220, 3066993, 3447003, 10181046, 15277667, 15844367, 15105570, 15158332, 9807270, 6323595, 1146986, 2067276,
-        2123412, 7419530, 11342935, 12745742, 11027200, 10038562, 9936031, 5533306,
+        1752220, 3066993, 3447003, 0x9b59b6, 0xe91e63, 0xf1c40f, 0xe67e22, 0xe74c3c, 9807270, 6323595, 1146986, 2067276,
+        2123412, 7419530, 0xad1457, 0xc27c0e, 0xa84300, 0x992d22, 9936031, 5533306,
     ];
 var t$ = (function (e) {
         return (
@@ -5262,8 +5264,8 @@ var na = (function (e) {
     nl = (function (e) {
         return (
             (e[(e.STAFF = 1)] = "STAFF"),
-            (e[(e.COLLABORATOR = 1125899906842624)] = "COLLABORATOR"),
-            (e[(e.RESTRICTED_COLLABORATOR = 2251799813685248)] = "RESTRICTED_COLLABORATOR"),
+            (e[(e.COLLABORATOR = 0x4000000000000)] = "COLLABORATOR"),
+            (e[(e.RESTRICTED_COLLABORATOR = 0x8000000000000)] = "RESTRICTED_COLLABORATOR"),
             (e[(e.PARTNER = 2)] = "PARTNER"),
             (e[(e.HYPESQUAD = 4)] = "HYPESQUAD"),
             (e[(e.BUG_HUNTER_LEVEL_1 = 8)] = "BUG_HUNTER_LEVEL_1"),
@@ -5282,7 +5284,7 @@ var na = (function (e) {
             (e[(e.MFA_SMS = 16)] = "MFA_SMS"),
             (e[(e.PREMIUM_PROMO_DISMISSED = 32)] = "PREMIUM_PROMO_DISMISSED"),
             (e[(e.HAS_UNREAD_URGENT_MESSAGES = 8192)] = "HAS_UNREAD_URGENT_MESSAGES"),
-            (e[(e.QUARANTINED = 17592186044416)] = "QUARANTINED"),
+            (e[(e.QUARANTINED = 0x100000000000)] = "QUARANTINED"),
             e
         );
     })({}),
@@ -5305,11 +5307,11 @@ var na = (function (e) {
             (e[(e.EMBEDDED_FIRST_PARTY = 1048576)] = "EMBEDDED_FIRST_PARTY"),
             (e[(e.CLOUD_GAMING_DEMO = 2048)] = "CLOUD_GAMING_DEMO"),
             (e[(e.APPLICATION_COMMAND_BADGE = 8388608)] = "APPLICATION_COMMAND_BADGE"),
-            (e[(e.SOCIAL_LAYER_INTEGRATION = 134217728)] = "SOCIAL_LAYER_INTEGRATION"),
-            (e[(e.PROMOTED = 536870912)] = "PROMOTED"),
-            (e[(e.PARTNER = 1073741824)] = "PARTNER"),
-            (e[(e.PARENT = 8589934592)] = "PARENT"),
-            (e[(e.DISABLE_RELATIONSHIPS_ACCESS = 17179869184)] = "DISABLE_RELATIONSHIPS_ACCESS"),
+            (e[(e.SOCIAL_LAYER_INTEGRATION = 0x8000000)] = "SOCIAL_LAYER_INTEGRATION"),
+            (e[(e.PROMOTED = 0x20000000)] = "PROMOTED"),
+            (e[(e.PARTNER = 0x40000000)] = "PARTNER"),
+            (e[(e.PARENT = 0x200000000)] = "PARENT"),
+            (e[(e.DISABLE_RELATIONSHIPS_ACCESS = 0x400000000)] = "DISABLE_RELATIONSHIPS_ACCESS"),
             e
         );
     })({}),
@@ -5353,7 +5355,7 @@ let nd = Object.freeze({
             linux: "linux",
         },
     }),
-    nf = 86400000;
+    nf = 864e5;
 var np = (function (e) {
         return (
             (e.NORMAL = "normal"),
@@ -6288,7 +6290,7 @@ var rE = (function (e) {
     })({});
 let rO = 2500,
     rA = 0,
-    rv = 2592000000;
+    rv = 2592e6;
 var rS = (function (e) {
         return (e.USERS = "users"), (e.ROLES = "roles"), (e.EVERYONE = "everyone"), e;
     })({}),
@@ -6329,4 +6331,4 @@ let rD = Object.freeze({
         __DO_NOT_USE__STOREFRONT_MESSAGE_EMBED_PARENT_SKU: (e) => (null != e ? "useParentSkuData/".concat(e) : null),
     }),
     rx = 4096,
-    rL = 1771876800000;
+    rL = 17718768e5;

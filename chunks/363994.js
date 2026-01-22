@@ -1,4 +1,7 @@
-n.d(t, { A: () => p }), n(896048);
+n.d(t, {
+    A: () => p,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(800342),
@@ -6,6 +9,7 @@ var r = n(627968),
     s = n(506164),
     o = n(985018),
     c = n(385288);
+
 function u(e, t, n) {
     return (
         t in e
@@ -30,7 +34,9 @@ class d extends i.PureComponent {
                 modalType: a.A5.NSFW_APP_LISTING,
                 onAgree: this.handleAgree,
                 onDisagree: this.handleDisagree,
-                title: o.intl.formatToPlainString(o.t.n5PGEY, { name: e }),
+                title: o.intl.formatToPlainString(o.t.n5PGEY, {
+                    name: e,
+                }),
                 description: o.intl.string(o.t["bJx/aL"]),
                 agreement: o.intl.string(o.t.odZq8d),
                 disagreement: o.intl.string(o.t.hieTsG),

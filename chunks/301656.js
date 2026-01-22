@@ -1,4 +1,7 @@
-n.d(t, { A: () => h }), n(638769);
+n.d(t, {
+    A: () => h,
+}),
+    n(638769);
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -11,6 +14,7 @@ var r = n(627968),
     f = n(508971),
     p = n(985018),
     _ = n(872722);
+
 function h(e) {
     let { onBackClick: t } = e,
         n = (0, a.bG)([u.A], () => u.A.getAllUnlockedAchievements()),
@@ -101,13 +105,23 @@ function h(e) {
                         }),
                         (0, r.jsx)("div", {
                             className: _.Eh,
-                            children: m.map((e) => (0, r.jsx)(f.A, { achievementId: e.id }, e.id)),
+                            children: m.map((e) =>
+                                (0, r.jsx)(
+                                    f.A,
+                                    {
+                                        achievementId: e.id,
+                                    },
+                                    e.id,
+                                ),
+                            ),
                         }),
                     ],
                 }),
             (0, r.jsx)("div", {
                 className: _.yF,
-                children: (0, r.jsx)("div", { className: _.F3 }),
+                children: (0, r.jsx)("div", {
+                    className: _.F3,
+                }),
             }),
         ],
     });

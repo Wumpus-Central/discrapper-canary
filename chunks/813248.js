@@ -1,4 +1,7 @@
-l.d(t, { default: () => N }), l(896048);
+l.d(t, {
+    default: () => N,
+}),
+    l(896048);
 var n = l(627968),
     r = l(64700),
     i = l(311907),
@@ -22,6 +25,7 @@ var n = l(627968),
     _ = l(788868),
     O = l(985018),
     E = l(106866);
+
 function C(e) {
     var t, l, c, m, A;
     let {
@@ -165,6 +169,7 @@ function C(e) {
         ],
     });
 }
+
 function N(e) {
     let { transitionState: t, analyticsLocations: l, onClose: o, guildId: u, initialSelectedNameplate: d } = e,
         p = (0, i.bG)([A.default], () => A.default.getCurrentUser()),

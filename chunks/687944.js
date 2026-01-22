@@ -1,4 +1,6 @@
-n.d(t, { A: () => R });
+n.d(t, {
+    A: () => R,
+});
 var r = n(627968);
 n(64700);
 var i = n(990078),
@@ -19,6 +21,7 @@ var i = n(990078),
     b = n(985018),
     y = n(424850),
     O = n(818724);
+
 function A(e, t, n) {
     return (
         t in e
@@ -32,6 +35,7 @@ function A(e, t, n) {
         e
     );
 }
+
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -48,6 +52,7 @@ function v(e) {
     }
     return e;
 }
+
 function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -60,6 +65,7 @@ function S(e, t) {
     }
     return n;
 }
+
 function I(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -76,6 +82,7 @@ let T = {
     section: E.JJy.SETTINGS_PREMIUM,
     object: E.ZSU.CARD,
 };
+
 function C(e) {
     let { premiumSubscription: t, discountInfo: n, invoicePreview: i, isDiscountActive: s } = e,
         o = f.Ay.getPlanIdFromInvoice(t, i),
@@ -97,7 +104,9 @@ function C(e) {
             (0, r.jsx)(a.Heading, {
                 variant: "heading-xl/semibold",
                 color: "text-strong",
-                children: b.intl.format(b.t["50bA2I"], { percent: n.percentage }),
+                children: b.intl.format(b.t["50bA2I"], {
+                    percent: n.percentage,
+                }),
             }),
             (0, r.jsx)(a.Text, {
                 variant: "text-sm/medium",
@@ -118,6 +127,7 @@ function C(e) {
         ],
     });
 }
+
 function N(e) {
     let { discountOffer: t, premiumSubscription: n } = e,
         i = (0, _.tQ)(n, g.gD.PREMIUM_MONTH_TIER_2, t);
@@ -126,7 +136,9 @@ function N(e) {
             (0, r.jsx)(a.Heading, {
                 variant: "heading-xl/semibold",
                 color: "text-strong",
-                children: b.intl.format(b.t.sFO20P, { percent: t.discount.amount }),
+                children: b.intl.format(b.t.sFO20P, {
+                    percent: t.discount.amount,
+                }),
             }),
             (0, r.jsx)(a.Text, {
                 variant: "text-sm/medium",
@@ -243,7 +255,9 @@ let R = function (e) {
                                   }),
                               ],
                           }),
-                          (0, r.jsx)("div", { className: y.T }),
+                          (0, r.jsx)("div", {
+                              className: y.T,
+                          }),
                           (0, r.jsxs)("div", {
                               className: y.ly,
                               children: [

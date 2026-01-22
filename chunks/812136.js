@@ -1,4 +1,6 @@
-r.d(t, { F: () => w });
+r.d(t, {
+    F: () => w,
+});
 var n = r(627968);
 r(64700);
 var i = r(503698),
@@ -20,6 +22,7 @@ var i = r(503698),
     x = r(746080),
     y = r(985018),
     m = r(227090);
+
 function v(e) {
     let {
         icon: t,
@@ -82,6 +85,7 @@ function v(e) {
         ],
     });
 }
+
 function w(e) {
     let { guild: t } = e,
         r = (0, p.YZ)(t.id, "guild_shop_category_selector"),
@@ -166,7 +170,9 @@ function w(e) {
                 className: m.wx,
                 children: y.intl.string(y.t.GF433I),
             }),
-            (0, n.jsx)(c.hKd, { size: 12 }),
+            (0, n.jsx)(c.hKd, {
+                size: 12,
+            }),
             (0, n.jsxs)("div", {
                 className: m.uW,
                 children: [

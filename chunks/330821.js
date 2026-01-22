@@ -1,4 +1,7 @@
-Object.defineProperty(t, "__esModule", { value: !0 }), (t.isZIP = t.isRAR = t.isLZH = t.is7Z = void 0);
+Object.defineProperty(t, "__esModule", {
+    value: !0,
+}),
+    (t.isZIP = t.isRAR = t.isLZH = t.is7Z = void 0);
 let r = n(835986),
     i = n(817762);
 (t.is7Z = function (e) {

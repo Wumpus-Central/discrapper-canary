@@ -1,4 +1,6 @@
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var r,
     i = n(627968),
     a = n(64700),
@@ -6,6 +8,7 @@ var r,
     o = n.n(s),
     l = n(397927),
     c = n(262633);
+
 function u(e, t, n) {
     return (
         t in e
@@ -37,7 +40,9 @@ class p extends (r = a.PureComponent) {
         return (0, i.jsx)(l.z$m, {
             size: "md",
             color: "currentColor",
-            className: o()(t, { [f[e]]: !0 }),
+            className: o()(t, {
+                [f[e]]: !0,
+            }),
         });
     }
 }

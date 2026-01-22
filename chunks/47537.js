@@ -6,6 +6,7 @@ function r(e, t) {
               e.tag === t.tag &&
               e.badge === t.badge;
 }
+
 function i(e) {
     if (null == e) return null;
     if ("identityGuildId" in e) return e;

@@ -35,7 +35,9 @@ r(
         constructor: !0,
         forced: h || I,
     },
-    { DOMException: I ? b : E },
+    {
+        DOMException: I ? b : E,
+    },
 );
 var T = a(m),
     C = T.prototype;

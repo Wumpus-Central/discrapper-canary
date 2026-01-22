@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var r = n(627968),
     l = n(64700),
     i = n(33851),
@@ -16,6 +18,7 @@ let b = [
     c.mF.ORDER_BY_USER_ID_DESC,
     c.mF.ORDER_BY_USER_ID_ASC,
 ];
+
 function m(e) {
     let { guildId: t, onClose: n } = e,
         i = (0, a.bG)([d.A], () => d.A.getSearchStateByGuildId(t), [t], o()),
@@ -49,7 +52,10 @@ function m(e) {
                         }
                         return e;
                     })({}, i)),
-                    (r = r = { selectedSort: e }),
+                    (r = r =
+                        {
+                            selectedSort: e,
+                        }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
                         : (function (e, t) {

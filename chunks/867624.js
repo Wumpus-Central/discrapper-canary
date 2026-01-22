@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(627968);
 n(64700);
 var l = n(311907),
@@ -10,6 +12,7 @@ var l = n(311907),
     u = n(652215),
     d = n(521732),
     f = n(985018);
+
 function p(e) {
     let { channel: t } = e,
         n = (0, l.bG)([s.A], () => s.A.shouldShowTopicsBar());

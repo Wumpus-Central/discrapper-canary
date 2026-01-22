@@ -1,4 +1,7 @@
-l.d(t, { G: () => N }), l(896048);
+l.d(t, {
+    G: () => N,
+}),
+    l(896048);
 var n = l(627968),
     r = l(64700),
     s = l(503698),
@@ -28,11 +31,14 @@ var j = l(49999),
     L = l(518477),
     T = l(985018),
     I = l(78716);
+
 function N(e) {
     let { selectedTab: t, handleTransition: l } = e,
         s = (0, f.Ay)(),
         N = (0, o.bG)([A.default], () => A.default.getCurrentUser()),
-        { enabled: k } = (0, E.Z)({ location: "collectibles_shop_header_bar" }),
+        { enabled: k } = (0, E.Z)({
+            location: "collectibles_shop_header_bar",
+        }),
         { searchQuery: R } = (0, S.v)(),
         P = r.useRef(null),
         [D, w] = r.useState(!1);
@@ -81,7 +87,9 @@ function N(e) {
                 sectionType: y.JJy.ORBS_BALANCE_MENU,
                 ctaObject: y.ZSU.CTA_TO_QUEST_HOME,
             }),
-                (0, p.navigateToQuestHome)({ fromContent: i.u.ORBS_BALANCE_MENU });
+                (0, p.navigateToQuestHome)({
+                    fromContent: i.u.ORBS_BALANCE_MENU,
+                });
         }, [z]),
         K = r.useCallback(() => {
             (null == N ? void 0 : N.id) != null &&

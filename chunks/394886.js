@@ -1,5 +1,8 @@
-r.d(t, { G: () => u });
+r.d(t, {
+    G: () => u,
+});
 var n = r(321733);
+
 function i(e, t, r) {
     return (
         t in e
@@ -17,6 +20,7 @@ var o = !1,
     a = !1,
     u = (function () {
         var e;
+
         function t(e) {
             if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
             i(this, "internalMonitor", void 0), i(this, "sourceId", null), (this.internalMonitor = e.getMonitor());

@@ -1,4 +1,7 @@
-n.d(t, { w: () => f }), n(896048);
+n.d(t, {
+    w: () => f,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(389544),
@@ -8,6 +11,7 @@ var r = n(627968),
     c = n(460890),
     u = n(605752),
     d = n(270597);
+
 function f(e) {
     var t, n, a;
     let {
@@ -128,7 +132,7 @@ function f(e) {
                         k.isPlaying &&
                             (M.current = setTimeout(() => {
                                 k.pause();
-                            }, 5000));
+                            }, 5e3));
                     },
                     t = () => {
                         clearTimeout(M.current);

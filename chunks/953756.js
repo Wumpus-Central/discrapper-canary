@@ -49,15 +49,18 @@ let a = i.createContext(null),
             });
         },
     };
+
 function o() {
     let e = i.useContext(a);
     if (null == e) throw Error("Cannot use the ComponentLayoutLimitContext system when not within the context");
     return e;
 }
+
 function l(e) {
     let { isParentWidthLimited: t, parentContainerInnerWidth: n } = o();
     return t && n === e;
 }
+
 function c() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         t = i.useRef(null),

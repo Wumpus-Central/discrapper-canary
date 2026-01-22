@@ -1,7 +1,11 @@
-n.d(t, { A: () => s }), n(896048);
+n.d(t, {
+    A: () => s,
+}),
+    n(896048);
 var r = n(64700),
     i = n(181658),
     l = n(493540);
+
 function s(e) {
     let [t, n] = r.useState(),
         [s, a] = r.useState(!1),

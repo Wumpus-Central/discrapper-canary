@@ -1,4 +1,8 @@
-n.d(t, { A: () => M }), n(321073), n(896048);
+n.d(t, {
+    A: () => M,
+}),
+    n(321073),
+    n(896048);
 var r,
     i = n(311907),
     a = n(73153),
@@ -9,6 +13,7 @@ var r,
     u = n(808728),
     d = n(71393),
     f = n(652215);
+
 function p(e, t, n) {
     return (
         t in e
@@ -25,6 +30,7 @@ function p(e, t, n) {
 let _ = null,
     h = {},
     m = null;
+
 function g() {
     return {
         _categories: [],
@@ -32,9 +38,11 @@ function g() {
     };
 }
 let E = g();
+
 function b(e, t) {
     e.index = t;
 }
+
 function y(e) {
     let t = u.Ay.getChannels(e),
         n = g(),
@@ -62,21 +70,25 @@ function y(e) {
         n
     );
 }
+
 function O() {
     (h = {}), null != _ && y(_);
 }
+
 function A(e) {
     let {
         guild: { id: t },
     } = e;
     (h[t] = void 0), _ === t && y(t);
 }
+
 function v(e) {
     let {
         guild: { id: t },
     } = e;
     delete h[t];
 }
+
 function S(e) {
     let {
         channel: { guild_id: t },
@@ -84,34 +96,41 @@ function S(e) {
     if (null == t) return !1;
     (h[t] = void 0), _ === t && y(t);
 }
+
 function I(e) {
     let { channels: t } = e,
         n = !1;
     for (let { guild_id: e } of t) null != e && ((h[e] = void 0), (n = !0), _ === e && y(e));
     return n;
 }
+
 function T(e) {
     let { guildId: t, user: n } = e;
     if (l.default.getId() !== n.id) return !1;
     (h[t] = void 0), t === _ && y(t);
 }
+
 function C() {
     if (null == _) return !1;
     y(_);
 }
+
 function N(e) {
     let { guildId: t } = e;
     (h[t] = void 0), t === _ && y(t);
 }
+
 function R(e, t) {
     if (((m = t), null == e || null == e.getGuildId())) return !1;
     let n = e.getGuildId();
     return null != n && ((h[n] = void 0), n === _ && y(n), !0);
 }
+
 function w(e) {
     let { channelId: t } = e;
     return null == t && null != m ? R(c.A.getChannel(m), null) : R(c.A.getChannel(t), t);
 }
+
 function P(e) {
     let { voiceStates: t } = e;
     return t.reduce((e, t) => {
@@ -119,14 +138,17 @@ function P(e) {
         return l.default.getSessionId() !== r ? e : R(c.A.getChannel(n), n) || e;
     }, !1);
 }
+
 function D(e) {
     let { guildId: t } = e;
     if (((_ = null != t ? t : null), null == t || null != h[t])) return !1;
     y(t);
 }
+
 function x() {
     y(f.YYv);
 }
+
 function L(e) {
     let t = h[e];
     return null != t ? t : y(e);

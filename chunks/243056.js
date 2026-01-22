@@ -1,4 +1,7 @@
-n.d(t, { A: () => v }), n(896048);
+n.d(t, {
+    A: () => v,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -13,6 +16,7 @@ var r = n(627968),
     b = n(513461),
     m = n(985018),
     p = n(592454);
+
 function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -38,6 +42,7 @@ function x(e) {
     }
     return e;
 }
+
 function h(e) {
     let { type: t } = e,
         n = i.useMemo(() => {
@@ -83,6 +88,7 @@ function h(e) {
               ],
           });
 }
+
 function j(e) {
     let { title: t, children: n, fieldStyle: i, field: l } = e;
     return (0, r.jsx)("div", {
@@ -108,12 +114,15 @@ function j(e) {
                               className: p.ID,
                               children: t,
                           }),
-                          (0, r.jsx)(h, { type: l.field_type }),
+                          (0, r.jsx)(h, {
+                              type: l.field_type,
+                          }),
                       ],
                   }),
     });
 }
 let O = "FORM_FIELD";
+
 function y(e) {
     let { index: t, field: n, isDropHovered: l, onDrop: d, fieldStyle: g } = e,
         m = (0, a.debounce)(async (e, t, n) => {
@@ -159,10 +168,14 @@ function y(e) {
         (0, r.jsxs)("div", {
             ref: h,
             "data-dnd-name": "field-".concat(t),
-            className: s()(p.cK, { [p.TG]: l }),
+            className: s()(p.cK, {
+                [p.TG]: l,
+            }),
             children: [
                 (0, r.jsx)("div", {
-                    className: s()(p.VU, { [p.oE]: g === b.Vf.COMPACT }),
+                    className: s()(p.VU, {
+                        [p.oE]: g === b.Vf.COMPACT,
+                    }),
                     children: (0, r.jsx)(f.WP0, {
                         size: "xs",
                         className: p.co,
@@ -174,9 +187,12 @@ function y(e) {
         })
     );
 }
+
 function v(e) {
     return (0, r.jsxs)("div", {
-        className: s()(p.e4, { [p.oE]: e.fieldStyle === b.Vf.COMPACT }),
+        className: s()(p.e4, {
+            [p.oE]: e.fieldStyle === b.Vf.COMPACT,
+        }),
         children: [
             (0, r.jsx)("div", {
                 className: p.Th,
@@ -193,14 +209,18 @@ function v(e) {
                             className: p.hP,
                             onClick: e.onEdit,
                             "aria-label": m.intl.string(m.t.bt75uw),
-                            children: (0, r.jsx)(f.R2l, { size: "xs" }),
+                            children: (0, r.jsx)(f.R2l, {
+                                size: "xs",
+                            }),
                         }),
                         e.canRemove &&
                             (0, r.jsx)(f.DUT, {
                                 className: p.hP,
                                 onClick: e.onRemove,
                                 "aria-label": m.intl.string(m.t.N86XcP),
-                                children: (0, r.jsx)(f.ucK, { size: "xs" }),
+                                children: (0, r.jsx)(f.ucK, {
+                                    size: "xs",
+                                }),
                             }),
                     ],
                 }),

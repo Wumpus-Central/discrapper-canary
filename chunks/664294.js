@@ -3,6 +3,7 @@ var n = decodeURIComponent,
     r = encodeURIComponent,
     i = /; */,
     a = /^[\u0009\u0020-\u007e\u0080-\u00ff]+$/;
+
 function s(e, t) {
     if ("string" != typeof e) throw TypeError("argument str must be a string");
     var r = {},
@@ -21,6 +22,7 @@ function s(e, t) {
         r
     );
 }
+
 function o(e, t, n) {
     var i = n || {},
         s = i.encode || r;
@@ -49,6 +51,7 @@ function o(e, t, n) {
         l.join("; ")
     );
 }
+
 function l(e, t) {
     try {
         return t(e);

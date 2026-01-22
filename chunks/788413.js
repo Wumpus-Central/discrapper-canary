@@ -3,6 +3,7 @@ n.d(t, {
     n: () => l,
 });
 var r = n(741918);
+
 function i(e, t, n) {
     return (
         t in e
@@ -16,6 +17,7 @@ function i(e, t, n) {
         e
     );
 }
+
 function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -32,6 +34,7 @@ function a(e) {
     }
     return e;
 }
+
 function s(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -44,6 +47,7 @@ function s(e, t) {
     }
     return n;
 }
+
 function o(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -58,12 +62,15 @@ function o(e, t) {
 var l = (function (e) {
     return (e.UPDATE_COLUMN_COUNTS = "UPDATE_COLUMN_COUNTS"), (e.SET_FOCUSED_POSITION = "SET_FOCUSED_POSITION"), e;
 })({});
+
 function c(e, t) {
     return Number.isNaN(e) ? t : Number.isNaN(t) ? e : Math.max(e, t);
 }
+
 function u(e, t) {
     return Number.isNaN(e) ? t : Number.isNaN(t) ? e : Math.min(e, t);
 }
+
 function d(e, t) {
     let { columnCounts: n } = t,
         r = u(c(0, n.length - 1), e.focusedY);
@@ -73,6 +80,7 @@ function d(e, t) {
         focusedY: r,
     });
 }
+
 function f(e, t) {
     let { x: n, y: r } = t,
         i = c(0, u(r, e.columnCounts.length - 1));
@@ -81,6 +89,7 @@ function f(e, t) {
         focusedY: i,
     });
 }
+
 function p(e, t) {
     let n = c(0, e.focusedY - 1);
     return o(a({}, e), {
@@ -88,6 +97,7 @@ function p(e, t) {
         focusedY: n,
     });
 }
+
 function _(e, t) {
     let n = u(e.focusedY + 1, e.columnCounts.length - 1);
     return o(a({}, e), {
@@ -95,6 +105,7 @@ function _(e, t) {
         focusedY: n,
     });
 }
+
 function h(e, t) {
     let n = e.focusedY !== e.columnCounts.length - 1 && e.focusedX + 1 === e.columnCounts[e.focusedY],
         r = n ? 0 : u(e.focusedX + 1, e.columnCounts[e.focusedY] - 1),
@@ -104,6 +115,7 @@ function h(e, t) {
         focusedY: i,
     });
 }
+
 function m(e, t) {
     let n = 0 !== e.focusedY && 0 === e.focusedX,
         r = n ? e.focusedY - 1 : e.focusedY,
@@ -113,18 +125,26 @@ function m(e, t) {
         focusedY: r,
     });
 }
+
 function g(e, t) {
-    return o(a({}, e), { focusedX: 0 });
+    return o(a({}, e), {
+        focusedX: 0,
+    });
 }
+
 function E(e, t) {
-    return o(a({}, e), { focusedX: e.columnCounts[e.focusedY] - 1 });
+    return o(a({}, e), {
+        focusedX: e.columnCounts[e.focusedY] - 1,
+    });
 }
+
 function b(e, t) {
     return o(a({}, e), {
         focusedX: 0,
         focusedY: 0,
     });
 }
+
 function y(e, t) {
     let n = e.columnCounts.length - 1;
     return o(a({}, e), {
@@ -132,6 +152,7 @@ function y(e, t) {
         focusedY: n,
     });
 }
+
 function O(e, t) {
     switch (t.type) {
         case r.X2.NAVIGATE_UP:

@@ -1,4 +1,6 @@
-n.d(e, { A: () => N });
+n.d(e, {
+    A: () => N,
+});
 var i = n(627968);
 n(64700);
 var r = n(311907),
@@ -14,6 +16,7 @@ var r = n(311907),
     A = n(661191),
     S = n(652215),
     f = n(985018);
+
 function N(t) {
     let e = t.isForumPost(),
         n = (0, r.bG)([g.default], () => t.isOwner(g.default.getId()), [t]),

@@ -20,6 +20,7 @@ var i = n(503698),
     h = n(389797),
     m = n(270516),
     g = n(480540);
+
 function E(e) {
     let { className: t } = e,
         n = (0, c.Ay)(),
@@ -37,7 +38,9 @@ function E(e) {
                 variant: "text-md/normal",
                 color: "text-default",
                 children: [
-                    (0, r.jsx)("p", { children: _.intl.string(_.t.fev8MQ) }),
+                    (0, r.jsx)("p", {
+                        children: _.intl.string(_.t.fev8MQ),
+                    }),
                     (0, r.jsx)("p", {
                         children: _.intl.format(_.t.IHxEJU, {
                             helpdeskArticle: d.A.getArticleURL(p.MVz.BLOCKED_PAYMENTS),
@@ -53,9 +56,13 @@ function E(e) {
         ],
     });
 }
+
 function b() {
-    return (0, r.jsx)(E, { className: h.W0 });
+    return (0, r.jsx)(E, {
+        className: h.W0,
+    });
 }
+
 function y(e) {
     let { onClose: t } = e;
     return (0, r.jsxs)(r.Fragment, {
@@ -72,11 +79,14 @@ function y(e) {
             (0, r.jsx)(l.$mQ, {
                 className: h.Gv,
                 "data-migration-pending": !0,
-                children: (0, r.jsx)(E, { className: h.yl }),
+                children: (0, r.jsx)(E, {
+                    className: h.yl,
+                }),
             }),
         ],
     });
 }
+
 function O(e) {
     let { className: t } = e;
     return (0, f.H)()

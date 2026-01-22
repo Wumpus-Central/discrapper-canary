@@ -57,7 +57,9 @@ let k = {
                 onUserPopoutClosed: F,
                 trackRankingItemInteraction: B,
             } = e,
-            { largeImage: H } = (0, A.nO)({ entry: y }),
+            { largeImage: H } = (0, A.nO)({
+                entry: y,
+            }),
             { user: Y, details: W, appName: K, activity: z, embeddedActivity: q } = (0, L.u)(y),
             { primaryColor: X, secondaryColor: Z } = (0, R.A)(null == H ? void 0 : H.src),
             Q = (0, s.bG)([E.default], () => E.default.locale),
@@ -104,7 +106,15 @@ let k = {
         if (null == Y) return null;
         let ef = (0, r.jsx)(P.mG, {
                 location: null == $ ? P.N5.POPOUT : P.N5.STREAMING_POPOUT,
-                children: w.n.map((e, t) => (0, r.jsx)(e, { entry: y }, t)),
+                children: w.n.map((e, t) =>
+                    (0, r.jsx)(
+                        e,
+                        {
+                            entry: y,
+                        },
+                        t,
+                    ),
+                ),
             }),
             ep =
                 null == J

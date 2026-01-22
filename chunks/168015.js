@@ -1,5 +1,9 @@
-n.d(t, { A: () => l }), n(896048);
+n.d(t, {
+    A: () => l,
+}),
+    n(896048);
 var r = n(64700);
+
 function l() {
     let [e, t] = (0, r.useState)(window.innerWidth >= 1132);
     return (

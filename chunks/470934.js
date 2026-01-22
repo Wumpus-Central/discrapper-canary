@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(64700),
     l = n(311907),
     i = n(985018),
@@ -6,6 +8,7 @@ var r = n(64700),
     s = n(998418),
     o = n(568065),
     c = n(333354);
+
 function u(e, t, n) {
     let u = (0, l.bG)([a.A], () => a.A.getStateForGuild(e)),
         d = (0, s.Ay)(e, t);

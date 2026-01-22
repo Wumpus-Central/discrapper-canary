@@ -87,7 +87,9 @@ let R = {
             en = i.useMemo(
                 () =>
                     null != a
-                        ? I.intl.formatToPlainString(I.t.YJig7C, { a11y_text: a.label })
+                        ? I.intl.formatToPlainString(I.t.YJig7C, {
+                              a11y_text: a.label,
+                          })
                         : I.intl.string(I.t.SZeUdR),
                 [a],
             );
@@ -162,7 +164,9 @@ let R = {
                                         statusColor: q,
                                         className: T.my,
                                     }),
-                                    (0, r.jsx)("div", { className: T.gM }),
+                                    (0, r.jsx)("div", {
+                                        className: T.gM,
+                                    }),
                                 ],
                             }),
                         ],

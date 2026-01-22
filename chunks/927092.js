@@ -10,6 +10,8 @@ r(
         constructor: !0,
         forced: i[o] !== l,
     },
-    { ArrayBuffer: l },
+    {
+        ArrayBuffer: l,
+    },
 ),
     s(o);

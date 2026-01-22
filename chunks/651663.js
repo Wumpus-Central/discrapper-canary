@@ -1,4 +1,7 @@
-n.d(t, { default: () => w }), n(896048);
+n.d(t, {
+    default: () => w,
+}),
+    n(896048);
 var i = n(627968),
     a = n(64700),
     r = n(575593),
@@ -22,6 +25,7 @@ var i = n(627968),
     _ = n(654487),
     y = n(985018),
     C = n(885283);
+
 function E(e) {
     var t;
     let { quest: n, avatarDeco: a, onUseNow: r, user: s, mode: d } = e,
@@ -71,6 +75,7 @@ function E(e) {
         ],
     });
 }
+
 function w(e) {
     var t, n, l;
     let { initialQuest: c, onClose: b, transitionState: y, preview: C, location: w, sourceQuestContent: D } = e,
@@ -86,7 +91,12 @@ function w(e) {
                 }, [t, n]),
                 s = async () => {
                     if (null == i)
-                        return g.A.addBreadcrumb({ message: "Error saving avatar decoration; it is null" }), !1;
+                        return (
+                            g.A.addBreadcrumb({
+                                message: "Error saving avatar decoration; it is null",
+                            }),
+                            !1
+                        );
                     (0, u.Dx)(i);
                     let e = x.A.getAllPending(),
                         t = (0, m.Sk)(e),

@@ -10,6 +10,7 @@ t.a(e, async function (e, r) {
             _ = e([o]);
         o = (_.then ? (await _)() : _)[0];
         let d = (0, u.createContext)(null);
+
         function c() {
             return (0, u.useContext)(d);
         }
@@ -30,6 +31,7 @@ t.a(e, async function (e, r) {
             "quote",
             "small",
         ]);
+
         function l({ node: e, renderers: n, ...t }) {
             let r = n[e.type];
             if (
@@ -118,7 +120,9 @@ t.a(e, async function (e, r) {
                     });
                 }
                 case "empty":
-                    return (0, i.jsx)(r, { ...t });
+                    return (0, i.jsx)(r, {
+                        ...t,
+                    });
                 case "small":
                     return (0, i.jsx)(r, {
                         node: e,
@@ -132,6 +136,7 @@ t.a(e, async function (e, r) {
                     throw TypeError(`Unknown node type "${e.type}"`);
             }
         }
+
         function f({ nodes: e, renderers: n }) {
             return (0, i.jsx)(i.Fragment, {
                 children: e.map((t, r) =>
@@ -148,6 +153,7 @@ t.a(e, async function (e, r) {
                 ),
             });
         }
+
         function a({ content: e, renderers: n }) {
             let t = (0, u.useMemo)(() => {
                     let e = Object.keys(n).filter((e) => b.has(e));

@@ -1,4 +1,7 @@
-n.d(t, { A: () => L }), n(896048);
+n.d(t, {
+    A: () => L,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -129,7 +132,9 @@ let A = {
                                   })
                                 : (0, r.jsx)("td", {
                                       colSpan: 7,
-                                      children: (0, r.jsx)(h.A, { searchState: a }),
+                                      children: (0, r.jsx)(h.A, {
+                                          searchState: a,
+                                      }),
                                   }),
                     }),
                 ],

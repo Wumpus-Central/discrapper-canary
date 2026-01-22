@@ -1,4 +1,7 @@
-n.d(t, { A: () => b }), n(896048);
+n.d(t, {
+    A: () => b,
+}),
+    n(896048);
 var r = n(73153),
     i = n(58149),
     a = n(329551),
@@ -9,6 +12,7 @@ var r = n(73153),
     u = n(383501),
     d = n(309010),
     f = n(287809);
+
 function p(e, t, n) {
     return (
         t in e
@@ -22,6 +26,7 @@ function p(e, t, n) {
         e
     );
 }
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -38,6 +43,7 @@ function _(e) {
     }
     return e;
 }
+
 function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -50,6 +56,7 @@ function h(e, t) {
     }
     return n;
 }
+
 function m(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -91,6 +98,7 @@ let g = (e, t) => {
             video_effect_detail: (0, o._V)(t),
         };
     };
+
 function b(e, t, n, i) {
     let a = d.A.getVoiceChannelId(),
         o = l.A.getChannel(a);

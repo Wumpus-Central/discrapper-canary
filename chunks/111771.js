@@ -1,4 +1,8 @@
-n.d(t, { A: () => m }), n(896048), n(228524);
+n.d(t, {
+    A: () => m,
+}),
+    n(896048),
+    n(228524);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -11,6 +15,7 @@ var r = n(627968),
     f = n(441442),
     g = n(985018),
     b = n(604175);
+
 function m(e) {
     var t, n, l;
     let { changeTitle: m, value: p, options: x, className: h, onChange: j } = e,
@@ -51,7 +56,14 @@ function m(e) {
                     highlightColor: e.highlightColor,
                     className: s()(b.bi, O === e.value && b.wH),
                     selected: O === e.value,
-                    action: O === e.value ? (0, r.jsx)(o.A, { className: b.VB }) : (0, r.jsx)(c.A, { className: b.VB }),
+                    action:
+                        O === e.value
+                            ? (0, r.jsx)(o.A, {
+                                  className: b.VB,
+                              })
+                            : (0, r.jsx)(c.A, {
+                                  className: b.VB,
+                              }),
                     onClick: () => {
                         e.disabled ||
                             e.value === O ||
@@ -60,7 +72,7 @@ function m(e) {
                             y(e.value),
                             (_.current = setTimeout(() => {
                                 N(!1), A(!1);
-                            }, 1000)));
+                            }, 1e3)));
                     },
                     disabled: e.disabled,
                 },

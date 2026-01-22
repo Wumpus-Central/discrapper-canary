@@ -1,4 +1,7 @@
-n.d(t, { c: () => f }), n(896048);
+n.d(t, {
+    c: () => f,
+}),
+    n(896048);
 var l = n(627968),
     r = n(64700),
     i = n(503698),
@@ -8,6 +11,7 @@ var l = n(627968),
     c = n(957565),
     u = n(985018),
     d = n(770778);
+
 function f(e) {
     var t, n;
     let { chunks: i, className: f, onCopy: p } = e,

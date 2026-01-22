@@ -1,4 +1,7 @@
-n.d(t, { A: () => d }), n(896048);
+n.d(t, {
+    A: () => d,
+}),
+    n(896048);
 var r = n(64700),
     i = n(311907),
     a = n(451988),
@@ -7,6 +10,7 @@ var r = n(64700),
     l = n(816733),
     c = n(927578),
     u = n(788868);
+
 function d(e, t) {
     let n = (0, i.bG)([l.A], () => l.A.getUserDiscountOffer(e)),
         [d, f] = r.useState((0, s.w)(n)),

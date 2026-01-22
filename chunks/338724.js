@@ -28,6 +28,7 @@ var n,
         (n[(n.EMAIL_CONFIRMATION = 1)] = "EMAIL_CONFIRMATION"),
         (n[(n.VERIFICATION_FORM = 2)] = "VERIFICATION_FORM"),
         n);
+
 function g(e, t, l) {
     let [n, i] = r.useState(!1),
         c = (0, s.bG)([f.A], () => f.A.get(e)),
@@ -66,6 +67,7 @@ function g(e, t, l) {
         verificationForm: null != x ? x : c,
     };
 }
+
 function j(e, t, l) {
     let n = (0, s.bG)([c.A], () => c.A.getGuild(e)),
         a = (0, s.bG)([i.A], () => i.A.getGuild());
@@ -74,6 +76,7 @@ function j(e, t, l) {
         [l, a, e, n, t],
     );
 }
+
 function p(e) {
     let t = !(null == e ? void 0 : e.isClaimed()),
         l = null == e ? void 0 : e.verified,
@@ -91,6 +94,7 @@ function p(e) {
         }
     );
 }
+
 function C(e) {
     let t = (0, b.YN)((e) => e.hasUnsubmittedChanges);
     r.useEffect(

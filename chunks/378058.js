@@ -84,7 +84,9 @@ let { API_ENDPOINT: _, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: m, ASSET_ENDPOINT: 
             c = !1;
         try {
             let { getForceSdrEmojisStickersConfig: e } = n(796272);
-            c = e({ location: "sticker_url" }).enabled;
+            c = e({
+                location: "sticker_url",
+            }).enabled;
         } catch (e) {}
         let u = c ? "&force_sdr=true" : "",
             f = s === d.y3.WEBP ? "&quality=lossless" : "";
@@ -136,12 +138,14 @@ let { API_ENDPOINT: _, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: m, ASSET_ENDPOINT: 
         return void 0 !== a.A.getGuild(t);
     },
     M = [];
+
 function k() {
     var e, t;
     return null != (e = null == (t = i.A.frecencyWithoutFetchingLatest.favoriteStickers) ? void 0 : t.stickerIds)
         ? e
         : M;
 }
+
 function U(e) {
     return k().includes(e);
 }

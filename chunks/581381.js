@@ -31,6 +31,7 @@ var r = n(294845),
     N = n(493364),
     R = n(652215),
     w = n(355097);
+
 function P(e, t, n) {
     return (
         t in e
@@ -44,12 +45,14 @@ function P(e, t, n) {
         e
     );
 }
-let D = 3000,
+let D = 3e3,
     x = 800,
     L = {};
+
 function j(e) {
     return "".concat(e.channel_id, ":").concat(e.id);
 }
+
 function M() {
     Object.values(L).forEach((e) => {
         let { timeout: t } = e;
@@ -57,6 +60,7 @@ function M() {
     }),
         (L = {});
 }
+
 function k(e, t) {
     if (null == e.id || null == e.channel_id) return !1;
     let n = j(e);
@@ -66,6 +70,7 @@ function k(e, t) {
     }
     return !1;
 }
+
 function U(e, t, n) {
     if (t === v.VL.UPDATE) {
         var r, i;
@@ -94,6 +99,7 @@ function U(e, t, n) {
     }
     (0, v.rA)(n, t);
 }
+
 function G(e) {
     if (k(e, v.VL.TIMEOUT)) {
         let t = m.A.getMessage(e.channel_id, e.id);
@@ -122,16 +128,20 @@ let V = (e, t) => {
         );
     }
 };
+
 function F(e) {
     return null == L[j(e)];
 }
+
 function B(e, t) {
     let { forceBatchScan: n = !1, jitter: r = !1 } = null != t ? t : {},
         i = (null == t ? void 0 : t.isMessageUpdate) ? e.filter((e) => (0, T.mS)(e)).filter(F) : e.filter(F);
     i.forEach((e) => {
         let t = j(e);
         null == L[t] &&
-            (d.A.increment({ name: o.K.EXPLICIT_MEDIA_SCAN_CLIENT_TIMEOUT_CREATE }),
+            (d.A.increment({
+                name: o.K.EXPLICIT_MEDIA_SCAN_CLIENT_TIMEOUT_CREATE,
+            }),
             (L[t] = {
                 setAt: Date.now(),
                 timeout: setTimeout(() => {
@@ -149,6 +159,7 @@ function B(e, t) {
           }, Math.random() * x)
         : V(i, a);
 }
+
 function H(e) {
     let t = {},
         n = {};
@@ -270,6 +281,7 @@ function H(e) {
         }
     );
 }
+
 function Y(e) {
     function t(e) {
         return null != e;
@@ -301,6 +313,7 @@ function Y(e) {
         attributesByChannelId: o.channelLookup,
     };
 }
+
 function W(e) {
     function t(e) {
         return null != e;
@@ -330,6 +343,7 @@ function W(e) {
         attributesByMessageId: o.messageLookup,
     };
 }
+
 function K(e, t) {
     let { messagesPendingScan: n, attributesByChannelId: r, attributesByMessageId: i } = Y(e);
     return (
@@ -362,6 +376,7 @@ function K(e, t) {
         n.length > 0 && (B(n, t), !0)
     );
 }
+
 function z(e) {
     let { messagesPendingScan: t, attributesByChannelId: n, attributesByMessageId: r } = W(e);
     return (
@@ -394,6 +409,7 @@ function z(e) {
         t.length > 0 && (B(t), !0)
     );
 }
+
 function q(e) {
     var t, n, r, i, a, s;
     let { message: o } = e;
@@ -420,8 +436,14 @@ function q(e) {
         c = _.Ay.getCurrentSidebarChannelId(l);
     if (o.channel_id !== l && o.channel_id !== c) return !1;
     let d = m.A.getMessage(o.channel_id, o.id);
-    return null != d && K([d], { isMessageUpdate: !0 });
+    return (
+        null != d &&
+        K([d], {
+            isMessageUpdate: !0,
+        })
+    );
 }
+
 function X(e) {
     var t, n;
     let { channelId: r, message: i, optimistic: a, isPushNotification: s } = e;
@@ -433,8 +455,11 @@ function X(e) {
     if (!c) return !1;
     let d = null == (t = null == u ? void 0 : u.isPrivate()) || t,
         f = (null == u ? void 0 : u.memberCount) == null || (null == u ? void 0 : u.memberCount) > 100;
-    return K([i], { jitter: d && f });
+    return K([i], {
+        jitter: d && f,
+    });
 }
+
 function Z(e) {
     let { channelId: t, messages: n } = e;
     if (null == t || null == n) return !1;
@@ -442,6 +467,7 @@ function Z(e) {
         i = _.Ay.getCurrentSidebarChannelId(r);
     return (t === r || t === i) && K(n);
 }
+
 function Q(e) {
     let { data: t } = e,
         n = !1;
@@ -454,6 +480,7 @@ function Q(e) {
         n
     );
 }
+
 function $(e) {
     let { pins: t } = e;
     return K(
@@ -463,32 +490,45 @@ function $(e) {
         }),
     );
 }
+
 function J(e) {
     let { guildId: t, threads: n } = e;
     return null != n && E.A.getGuildId() === t && K(b.default.keys(n).map((e) => n[e].first_message));
 }
+
 function ee(e) {
     let { guildId: t, firstMessages: n } = e;
-    return null != n && E.A.getGuildId() === t && K(n, { forceBatchScan: !0 });
+    return (
+        null != n &&
+        E.A.getGuildId() === t &&
+        K(n, {
+            forceBatchScan: !0,
+        })
+    );
 }
+
 function et(e) {
     let { channelId: t } = e;
     return null != t && ea(t);
 }
+
 function en(e) {
     let { channelId: t } = e;
     return (0, N.B)(), null != t && t === g.A.getChannelId() && ea(t);
 }
+
 function er(e) {
     let { settings: t, local: n } = e;
     if (!n || t.type !== w.oD.PRELOADED_USER_SETTINGS) return !1;
     let r = g.A.getChannelId();
     return null != r && ea(r);
 }
+
 function ei(e) {
     let { channelId: t, chatOpen: n } = e;
     return !!n && ea(t);
 }
+
 function ea(e) {
     let t = m.A.getMessages(e);
     return 0 !== t.length && z(t);

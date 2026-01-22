@@ -48,7 +48,10 @@ let i = c.isPlatformEmbedded
                           }
                           return e;
                       })({}, t || {})),
-                      (n = n = { fingerprint: l.default.getFingerprint() }),
+                      (n = n =
+                          {
+                              fingerprint: l.default.getFingerprint(),
+                          }),
                       Object.getOwnPropertyDescriptors
                           ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(n))
                           : (function (e, t) {

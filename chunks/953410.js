@@ -1,4 +1,6 @@
-i.d(e, { g: () => E });
+i.d(e, {
+    g: () => E,
+});
 var n = i(627968),
     l = i(311907),
     s = i(419954),
@@ -20,6 +22,8 @@ let E = (0, s.E2)(u.X.ACCOUNT_BACKUP_CODES_SETTING, {
     },
     Component: function () {
         let t = (0, l.bG)([r.A], () => r.A.getBackupCodes());
-        return (0, n.jsx)(a.A, { backupCodes: t });
+        return (0, n.jsx)(a.A, {
+            backupCodes: t,
+        });
     },
 });

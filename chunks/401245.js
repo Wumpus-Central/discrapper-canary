@@ -1,4 +1,8 @@
-n.d(t, { A: () => S }), n(321073), n(896048);
+n.d(t, {
+    A: () => S,
+}),
+    n(321073),
+    n(896048);
 var r = n(554146),
     i = n(439372),
     a = n(626584),
@@ -12,6 +16,7 @@ var r = n(554146),
     p = n(805026),
     _ = n(652215),
     h = n(49999);
+
 function m(e, t, n) {
     return (
         t in e
@@ -25,6 +30,7 @@ function m(e, t, n) {
         e
     );
 }
+
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -41,6 +47,7 @@ function g(e) {
     }
     return e;
 }
+
 function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -53,6 +60,7 @@ function E(e, t) {
     }
     return n;
 }
+
 function b(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -65,6 +73,7 @@ function b(e, t) {
     );
 }
 let y = new a.A("VoiceFilterManager");
+
 function O(e) {
     var t;
     let n = c.Ay.getVoiceFilters();
@@ -122,7 +131,9 @@ class v extends i.A {
                             url: n[t].url,
                             fileName: (0, p.L)(t),
                         },
-                        { reason: u.O.AUTO_PREFETCH },
+                        {
+                            reason: u.O.AUTO_PREFETCH,
+                        },
                     ));
     }
     handleVoiceFilterDownloadFailed(e) {
@@ -153,8 +164,12 @@ class v extends i.A {
             });
         }
         null !== t &&
-            ((0, s.Dr)(r.M.VOICE_FILTER_IN_CALL_COACHMARK, { dismissAction: h.i.INDIRECT_ACTION }),
-            (0, s.Dr)(r.M.VOICE_FILTER_FIRST_USE_COACHMARK, { dismissAction: h.i.INDIRECT_ACTION }),
+            ((0, s.Dr)(r.M.VOICE_FILTER_IN_CALL_COACHMARK, {
+                dismissAction: h.i.INDIRECT_ACTION,
+            }),
+            (0, s.Dr)(r.M.VOICE_FILTER_FIRST_USE_COACHMARK, {
+                dismissAction: h.i.INDIRECT_ACTION,
+            }),
             l.default.track(
                 _.HAw.VOICE_FILTER_ENABLED,
                 b(
@@ -165,13 +180,17 @@ class v extends i.A {
                         },
                         (0, u.A)(n),
                     ),
-                    { time_to_activate_native_ms: i },
+                    {
+                        time_to_activate_native_ms: i,
+                    },
                 ),
             ));
     }
     handleVoiceFilterApplyFailed(e) {
         let { voiceFilterId: t } = e;
-        l.default.track(_.HAw.VOICE_FILTER_ACTIVATE_FAILED, { active_voice_filter_id: null != t ? t : null });
+        l.default.track(_.HAw.VOICE_FILTER_ACTIVATE_FAILED, {
+            active_voice_filter_id: null != t ? t : null,
+        });
     }
     handleVoiceFilterDownloadCanceled() {
         c.Ay.stopVoiceFilterDownloads();

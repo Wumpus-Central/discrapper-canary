@@ -1,4 +1,7 @@
-n.d(t, { A: () => A }), n(733351);
+n.d(t, {
+    A: () => A,
+}),
+    n(733351);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -16,6 +19,7 @@ var r = n(627968),
     g = n(652215),
     E = n(985018),
     b = n(836836);
+
 function y(e, t, n) {
     return (
         t in e
@@ -29,6 +33,7 @@ function y(e, t, n) {
         e
     );
 }
+
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -100,7 +105,9 @@ let A = function (e) {
                     placeholder: E.intl.string(E.t.XPGZXP),
                     autoFocus: !0,
                 }),
-                (0, r.jsx)(f.X2, { renderListItem: (e) => (0, r.jsx)(p.c, O({}, e)) }),
+                (0, r.jsx)(f.X2, {
+                    renderListItem: (e) => (0, r.jsx)(p.c, O({}, e)),
+                }),
             ],
         }),
     });

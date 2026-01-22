@@ -1,4 +1,7 @@
-n.d(t, { A: () => eu }), n(896048);
+n.d(t, {
+    A: () => eu,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -51,6 +54,7 @@ var r = n(627968),
     Z = n(307731),
     $ = n(985018),
     ee = n(127999);
+
 function et(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -77,9 +81,11 @@ function et(e) {
     return e;
 }
 let en = [g.Ay.getByName("100"), g.Ay.getByName("laughing"), g.Ay.getByName("sparkling_heart")].filter(F.Vq);
+
 function er(e) {
     e.stopPropagation();
 }
+
 function el(e) {
     let { message: t, channel: n, canReport: r, onClose: l, updatePosition: i } = e;
     return (0, J.c)({
@@ -121,8 +127,12 @@ let ei = l.memo(function (e) {
                 o = null == e.id ? e.uniqueName : e.name,
                 c =
                     null != i
-                        ? $.intl.formatToPlainString($.t.vjeruO, { emojiName: o })
-                        : $.intl.formatToPlainString($.t.L1JQwE, { emojiName: o });
+                        ? $.intl.formatToPlainString($.t.vjeruO, {
+                              emojiName: o,
+                          })
+                        : $.intl.formatToPlainString($.t.L1JQwE, {
+                              emojiName: o,
+                          });
             return (0, r.jsx)(
                 Y.qv,
                 {
@@ -166,6 +176,7 @@ let ei = l.memo(function (e) {
         }),
     });
 });
+
 function ea(e) {
     let {
             channel: t,
@@ -249,9 +260,13 @@ function ea(e) {
                 er =
                     null != en &&
                     n.type === Q.lAJ.USER_JOIN &&
-                    G.A.canWithPartialContext(Q.xBc.MANAGE_GUILD, { guildId: en }),
+                    G.A.canWithPartialContext(Q.xBc.MANAGE_GUILD, {
+                        guildId: en,
+                    }),
                 el = (0, y.m)(n),
-                { enabled: ei } = I.A.useExperiment({ location: "message_utilities" }),
+                { enabled: ei } = I.A.useExperiment({
+                    location: "message_utilities",
+                }),
                 ea = (0, u.bG)([N.A], () => null != N.A.getSavedMessage(t.id, n.id)),
                 es = (0, c.A)(a),
                 eo = (0, u.bG)([p.A], () => p.A.keyboardModeEnabled);
@@ -289,10 +304,14 @@ function ea(e) {
                     channel: n.channel_id,
                     location: "expanding_buttons",
                 }),
-                Z({ moreUtilities: !R });
+                Z({
+                    moreUtilities: !R,
+                });
         }, [R, Z, n]),
         es = l.useCallback(() => {
-            Z({ emojiPicker: !V });
+            Z({
+                emojiPicker: !V,
+            });
         }, [V, Z]),
         eo = (0, T.Id)(t),
         eu = n.hasFlag(Q.pr7.CROSSPOSTED);
@@ -576,6 +595,7 @@ function ea(e) {
         ],
     });
 }
+
 function es(e) {
     let { channel: t, message: n } = e,
         l = (0, u.bG)([j.A], () => null != j.A.getMessage(n.id), [n.id]),
@@ -605,24 +625,32 @@ function es(e) {
         ],
     });
 }
+
 function eo(e) {
     let { type: t, emoji: n, channel: r, message: l, location: i, isBurst: a = !1 } = e;
     if (null == n) return;
     let s = (0, _.jq)(n);
     "add" === t
-        ? (0, E.BB)(r.id, l.id, s, i, { burst: a })
+        ? (0, E.BB)(r.id, l.id, s, i, {
+              burst: a,
+          })
         : (0, E.et)({
               channelId: r.id,
               messageId: l.id,
               emoji: s,
               location: i,
-              options: { burst: a },
+              options: {
+                  burst: a,
+              },
           });
 }
+
 function ec(e, t, n) {
     let l = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         i = et(
-            { openPopoutType: "message_reaction_emoji_picker" },
+            {
+                openPopoutType: "message_reaction_emoji_picker",
+            },
             l && {
                 openPopoutType: "message_super_reaction_emoji_picker",
                 page: null != e.getGuildId() ? Q.liQ.GUILD_CHANNEL : Q.liQ.DM_CHANNEL,

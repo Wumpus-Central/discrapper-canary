@@ -15,6 +15,7 @@ var r = n(627968),
     u = n(834730),
     d = n(15626),
     f = n(104983);
+
 function p(e, t) {
     if (null == e) return {};
     var n,
@@ -31,6 +32,7 @@ function p(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function _(e, t) {
     if (null == e) return {};
     var n,
@@ -41,6 +43,7 @@ function _(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function h(e) {
     let { id: t, errorMessage: n, helperText: r, successMessage: a, description: s } = e,
         [o, l] = i.useState(!1),
@@ -68,6 +71,7 @@ function h(e) {
         [c, t, u, g, n, p, h, d, _, f, o, l],
     );
 }
+
 function m(e) {
     let {
         label: t,
@@ -117,6 +121,7 @@ function m(e) {
         ]),
     };
 }
+
 function g(e) {
     let {
             label: t,
@@ -147,7 +152,9 @@ function g(e) {
         U = j
             ? (0, r.jsx)("legend", {
                   id: N,
-                  children: (0, r.jsx)(o.A, { children: t }),
+                  children: (0, r.jsx)(o.A, {
+                      children: t,
+                  }),
               })
             : null,
         G = null != t && "" !== t,
@@ -182,7 +189,9 @@ function g(e) {
                       null != O
                           ? (0, r.jsx)("span", {
                                 className: f.fC,
-                                children: (0, r.jsx)(s.E, { type: O }),
+                                children: (0, r.jsx)(s.E, {
+                                    type: O,
+                                }),
                             })
                           : null,
                   ],
@@ -203,13 +212,22 @@ function g(e) {
             ref: T,
             className: f.kL,
             "data-layout": b,
-            style: null != L ? { "--custom-field-horizontal-control-width": L } : void 0,
+            style:
+                null != L
+                    ? {
+                          "--custom-field-horizontal-control-width": L,
+                      }
+                    : void 0,
             "data-disabled": a,
             "aria-describedby": j ? P : void 0,
             disabled: j ? a : void 0,
             children: [
                 U,
-                G && n ? (0, r.jsx)(o.A, { children: F }) : null,
+                G && n
+                    ? (0, r.jsx)(o.A, {
+                          children: F,
+                      })
+                    : null,
                 (G && !n) || V
                     ? (0, r.jsxs)("div", {
                           className: f._A,
@@ -235,6 +253,7 @@ function g(e) {
         }),
     });
 }
+
 function E(e) {
     let { successMessage: t, errorMessage: n, helperText: i, trailing: s, helperTextId: o, errorMessageId: d } = e,
         p = (0, r.jsx)("div", {}),

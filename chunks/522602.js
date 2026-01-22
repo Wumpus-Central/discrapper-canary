@@ -1,4 +1,9 @@
-n.d(t, { A: () => w }), n(896048), n(321073), n(228524);
+n.d(t, {
+    A: () => w,
+}),
+    n(896048),
+    n(321073),
+    n(228524);
 var r,
     i = n(735438),
     a = n.n(i),
@@ -10,6 +15,7 @@ var r,
     d = n(31717),
     f = n(652215),
     p = n(985018);
+
 function _(e, t, n) {
     return (
         t in e
@@ -25,18 +31,22 @@ function _(e, t, n) {
 }
 let h = new Map(),
     m = [];
+
 function g(e, t) {
     var n, r;
     return null != (n = null == (r = E(e)) ? void 0 : r.get(t)) ? n : m;
 }
+
 function E(e) {
     var t;
     return null != (t = h.get(e)) ? t : new Map();
 }
+
 function b(e, t, n) {
     let r = E(e);
     r.set(t, n), h.set(e, r);
 }
+
 function y(e) {
     let { channelId: t } = e,
         n = [...g(t, d.C.ChannelMessage)];
@@ -48,7 +58,9 @@ let O = (e) => {
     s.length + t.length > f.XgB && r !== d.C.SlashCommand && r !== d.C.ApplicationLauncherCommand
         ? l.A.show({
               title: p.intl.string(p.t.wOr6hB),
-              body: p.intl.formatToPlainString(p.t["qqyp/e"], { limit: f.XgB }),
+              body: p.intl.formatToPlainString(p.t["qqyp/e"], {
+                  limit: f.XgB,
+              }),
           })
         : (a().forEach(t, (e) => {
               let t = new c.bK(e, n, s.length, i);
@@ -56,6 +68,7 @@ let O = (e) => {
           }),
           b(n, r, s));
 };
+
 function A(e) {
     let { channelId: t, id: n, draftType: r } = e,
         i = [...g(t, r)],
@@ -70,6 +83,7 @@ function A(e) {
         );
     a > -1 && (i.splice(a, 1)[0].removeFromMsgDraft(), b(t, r, i));
 }
+
 function v(e) {
     let { channelId: t, attachmentIds: n, draftType: r } = e,
         i = [...g(t, r)];
@@ -79,6 +93,7 @@ function v(e) {
     }),
         b(t, r, i);
 }
+
 function S(e) {
     let { channelId: t, id: n, filename: r, description: i, spoiler: a, thumbnail: s, draftType: o } = e,
         l = [...g(t, o)].map(
@@ -93,20 +108,24 @@ function S(e) {
         );
     b(t, o, l);
 }
+
 function I(e) {
     let { channelId: t, id: n, file: r, draftType: i, allowOptimization: a } = e,
         s = [...g(t, i)].filter((e) => e.id !== n),
         o = new c.bK(r, t, void 0, a);
     o.upload(), s.push(o), b(t, i, s);
 }
+
 function T(e) {
     let { channelId: t, uploads: n, draftType: r } = e;
     b(t, r, n);
 }
+
 function C(e) {
     let { channelId: t, draftType: n } = e;
     b(t, n, []);
 }
+
 function N(e) {
     let { baseChannelId: t } = e;
     b(t, d.C.FirstThreadMessage, []);

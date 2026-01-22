@@ -1,9 +1,13 @@
-n.d(t, { A: () => c }), n(896048);
+n.d(t, {
+    A: () => c,
+}),
+    n(896048);
 var r = n(64700),
     i = n(311907),
     l = n(287809),
     s = n(41237),
     a = n(631576);
+
 function c(e) {
     let [t, n] = r.useState("loading"),
         c = (0, i.bG)([s.A], () => s.A.getStickersByGuildId(e));
@@ -56,7 +60,10 @@ function c(e) {
                               }
                               return e;
                           })({}, e)),
-                          (r = r = { user: t }),
+                          (r = r =
+                              {
+                                  user: t,
+                              }),
                           Object.getOwnPropertyDescriptors
                               ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
                               : (function (e, t) {
@@ -75,5 +82,7 @@ function c(e) {
                   return e;
               }),
           }
-        : { status: t };
+        : {
+              status: t,
+          };
 }

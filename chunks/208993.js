@@ -1,4 +1,6 @@
-r.d(t, { A: () => u });
+r.d(t, {
+    A: () => u,
+});
 var n = r(627968);
 r(64700);
 var l = r(397927),
@@ -118,7 +120,9 @@ let d = (e) => {
                             variant: "text-lg/bold",
                             children: i,
                         }),
-                        (0, n.jsx)(s.A, { user: a }),
+                        (0, n.jsx)(s.A, {
+                            user: a,
+                        }),
                     ],
                 }),
             ],

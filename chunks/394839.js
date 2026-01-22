@@ -1,4 +1,7 @@
-n.d(t, { A: () => D }), n(896048);
+n.d(t, {
+    A: () => D,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -12,6 +15,7 @@ var r = n(627968),
     p = n(96782),
     _ = n(838541),
     h = n(907423);
+
 function m(e, t, n) {
     return (
         t in e
@@ -25,6 +29,7 @@ function m(e, t, n) {
         e
     );
 }
+
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -41,6 +46,7 @@ function g(e) {
     }
     return e;
 }
+
 function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -53,6 +59,7 @@ function E(e, t) {
     }
     return n;
 }
+
 function b(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -66,6 +73,7 @@ function b(e, t) {
 }
 let y = 4,
     O = Math.round((_.Rk - y) / 2);
+
 function A(e) {
     return i.useMemo(() => {
         let [t, n] = u().partition(e, (e) => (0, f.Xg)(e.item.type)),
@@ -77,6 +85,7 @@ function A(e) {
         };
     }, [e]);
 }
+
 function v(e) {
     let { visualMediaItems: t, maxWidth: n, footer: i } = e;
     null != i && l()(1 === t.length, "footer only gets applied to single items");
@@ -128,6 +137,7 @@ function v(e) {
         ],
     });
 }
+
 function S(e) {
     let { itemsForLayout: t, maxWidth: n, isSingleImage: i, footer: a } = e,
         o = t[0];
@@ -146,6 +156,7 @@ function S(e) {
         }),
     });
 }
+
 function I(e) {
     let { itemsForLayout: t, maxWidth: n } = e,
         i = Math.round((n - y) / 2);
@@ -167,6 +178,7 @@ function I(e) {
         ),
     });
 }
+
 function T(e) {
     let { itemsForLayout: t, maxWidth: n } = e,
         i = Math.round((2 * (n - y)) / 3),
@@ -204,6 +216,7 @@ function T(e) {
         ],
     });
 }
+
 function C(e) {
     let { itemsForLayout: t, maxWidth: n } = e,
         i = Math.round((n - y) / 2);
@@ -223,6 +236,7 @@ function C(e) {
         ),
     });
 }
+
 function N(e) {
     let { itemsForLayout: t, maxWidth: n } = e,
         i = Math.round((n - 2 * y) / 3);
@@ -247,7 +261,10 @@ let R = (e) => ({
         imgContainerClassName: h.nh,
         imgClassName: h.g2,
     }),
-    w = (e) => ({ className: s()(e, h.g2) });
+    w = (e) => ({
+        className: s()(e, h.g2),
+    });
+
 function P(e) {
     let {
             props: t,
@@ -269,7 +286,12 @@ function P(e) {
         });
     return (0, r.jsx)(d.G.Provider, {
         value: t.gifFavoriteButton,
-        children: (0, r.jsx)(p.Ay, b(g({}, u), { footer: o })),
+        children: (0, r.jsx)(
+            p.Ay,
+            b(g({}, u), {
+                footer: o,
+            }),
+        ),
     });
 }
 let D = function (e) {
@@ -280,7 +302,9 @@ let D = function (e) {
         children: [
             i.length > 0 &&
                 (0, r.jsx)("div", {
-                    className: s()(h.XU, { [h.dM]: n }),
+                    className: s()(h.XU, {
+                        [h.dM]: n,
+                    }),
                     children: (0, r.jsx)(v, {
                         visualMediaItems: i,
                         maxWidth: l,
@@ -295,7 +319,9 @@ let D = function (e) {
                     return (0, r.jsx)(
                         "div",
                         {
-                            className: s()(h.XU, { [h.dM]: n }),
+                            className: s()(h.XU, {
+                                [h.dM]: n,
+                            }),
                             children: (0, r.jsx)(v, {
                                 visualMediaItems: [e],
                                 footer: t,
@@ -313,7 +339,9 @@ let D = function (e) {
                             "div",
                             {
                                 className: h.Br,
-                                children: (0, r.jsx)(P, { props: e }),
+                                children: (0, r.jsx)(P, {
+                                    props: e,
+                                }),
                             },
                             e.item.uniqueId,
                         ),

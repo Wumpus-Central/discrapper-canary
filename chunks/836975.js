@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968),
     l = n(64700),
     a = n(503698),
@@ -8,6 +10,7 @@ var r = n(627968),
     c = n(663535),
     u = n(985018),
     d = n(340399);
+
 function h(e) {
     let { channel: t, threadIds: n, startThread: a, goToThread: h } = e,
         g = l.useCallback(

@@ -1,4 +1,7 @@
-n.d(t, { A: () => w }), n(228524);
+n.d(t, {
+    A: () => w,
+}),
+    n(228524);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -16,6 +19,7 @@ var r = n(627968),
     g = n(412136),
     E = n(985018),
     b = n(782635);
+
 function y(e, t, n) {
     return (
         t in e
@@ -29,6 +33,7 @@ function y(e, t, n) {
         e
     );
 }
+
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -45,6 +50,7 @@ function O(e) {
     }
     return e;
 }
+
 function A(e, t) {
     if (null == e) return {};
     var n,
@@ -61,6 +67,7 @@ function A(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function v(e, t) {
     if (null == e) return {};
     var n,
@@ -72,6 +79,7 @@ function v(e, t) {
     return i;
 }
 let S = 16;
+
 function I() {
     return (0, r.jsx)("svg", {
         width: "24",
@@ -87,6 +95,7 @@ function I() {
         }),
     });
 }
+
 function T(e) {
     let t,
         { hasNoVotes: n, victorEmoji: i } = e;
@@ -106,8 +115,12 @@ function T(e) {
           })
         : null;
 }
+
 function C(e) {
-    if (0 === e.totalVotes) return { type: "NO_VOTES" };
+    if (0 === e.totalVotes)
+        return {
+            type: "NO_VOTES",
+        };
     let t = null != e.victorAnswerId,
         n = e.totalVotes > 0 ? Math.round((e.victorAnswerVotes / e.totalVotes) * 100) : 0;
     return t
@@ -121,6 +134,7 @@ function C(e) {
               tiedVotePercentage: n,
           };
 }
+
 function N(e) {
     let t,
         { type: n } = e,
@@ -161,7 +175,7 @@ function N(e) {
                         variant: "text-xs/medium",
                         color: a,
                         scaleFontToUserSetting: !0,
-                        children: [E.intl.string(E.t.ufIDIx), " \u2022 ", o, "%"],
+                        children: [E.intl.string(E.t.ufIDIx), " • ", o, "%"],
                     }),
                 ],
             });
@@ -190,12 +204,19 @@ function N(e) {
         children: t,
     });
 }
+
 function R(e) {
     let { className: t, data: n, onClickPollLink: a } = e,
         o = i.useMemo(() => C(n), [n]),
         l = null != n.victorEmoji || "NO_VOTES" === o.type;
     return (0, r.jsxs)("div", {
-        className: s()(b.kL, { [b.FS]: l }, t),
+        className: s()(
+            b.kL,
+            {
+                [b.FS]: l,
+            },
+            t,
+        ),
         children: [
             (0, r.jsx)(T, {
                 hasNoVotes: "NO_VOTES" === o.type,
@@ -212,6 +233,7 @@ function R(e) {
         ],
     });
 }
+
 function w(e) {
     var t;
     let { message: n, channel: a, compact: s, disableInteraction: l = !1 } = e,
@@ -240,7 +262,9 @@ function w(e) {
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(_.A, {
-                      iconNode: (0, r.jsx)(c.YRe, { size: "xs" }),
+                      iconNode: (0, r.jsx)(c.YRe, {
+                          size: "xs",
+                      }),
                       timestamp: n.timestamp,
                       compact: s,
                       children: E.intl.format(E.t.VJcK41, {

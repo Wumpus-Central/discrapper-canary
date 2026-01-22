@@ -22,6 +22,7 @@ let p = "data-client-themes",
             return null == t ? null : (0, f.hm)(e, t);
         }, [e]);
     };
+
 function h() {
     let e = (0, o.bG)([l.A], () => l.A.theme),
         { colors: t, chassisMixAmount: n, gradientAngle: i, setAll: a } = (0, u.ko)(),
@@ -47,6 +48,7 @@ function h() {
         r.useMemo(() => (0 === t.length ? null : (0, f.dY)(t, i, n, e)), [t, n, i, e])
     );
 }
+
 function m() {
     let e = _(),
         t = h();

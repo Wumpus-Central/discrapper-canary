@@ -1,6 +1,7 @@
 var t = "%[a-f0-9]{2}",
     n = RegExp("(" + t + ")|([^%]+?)", "gi"),
     r = RegExp("(" + t + ")+", "gi");
+
 function i(e, t) {
     try {
         return [decodeURIComponent(e.join(""))];
@@ -11,6 +12,7 @@ function i(e, t) {
         r = e.slice(t);
     return Array.prototype.concat.call([], i(n), i(r));
 }
+
 function a(e) {
     try {
         return decodeURIComponent(e);
@@ -19,11 +21,12 @@ function a(e) {
         return e;
     }
 }
+
 function s(e) {
     for (
         var t = {
-                "%FE%FF": "\uFFFD\uFFFD",
-                "%FF%FE": "\uFFFD\uFFFD",
+                "%FE%FF": "��",
+                "%FF%FE": "��",
             },
             n = r.exec(e);
         n;
@@ -36,7 +39,7 @@ function s(e) {
         }
         n = r.exec(e);
     }
-    t["%C2"] = "\uFFFD";
+    t["%C2"] = "�";
     for (var s = Object.keys(t), o = 0; o < s.length; o++) {
         var l = s[o];
         e = e.replace(RegExp(l, "g"), t[l]);

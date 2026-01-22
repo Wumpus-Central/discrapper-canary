@@ -1,4 +1,7 @@
-n.d(t, { A: () => S }), n(896048);
+n.d(t, {
+    A: () => S,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -16,6 +19,7 @@ var r = n(627968),
     g = n(652215),
     E = n(693591),
     b = n(985018);
+
 function y(e, t, n) {
     return (
         t in e
@@ -29,6 +33,7 @@ function y(e, t, n) {
         e
     );
 }
+
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -45,6 +50,7 @@ function O(e) {
     }
     return e;
 }
+
 function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -57,6 +63,7 @@ function A(e, t) {
     }
     return n;
 }
+
 function v(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -68,6 +75,7 @@ function v(e, t) {
         e
     );
 }
+
 function S(e) {
     let {
             onLearnMore: t,
@@ -98,7 +106,11 @@ function S(e) {
     }),
         i.useEffect(() => {
             let { isVideoBackgroundSupported: e, onSelectBackgroundOption: t, selectedBackgroundOption: n } = M.current;
-            e ? (0, p.S1)(n, S, { track: !1 }).catch(() => t(null)) : null != n && t(null);
+            e
+                ? (0, p.S1)(n, S, {
+                      track: !1,
+                  }).catch(() => t(null))
+                : null != n && t(null);
         }, [S]);
     let k = function (e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
@@ -114,10 +126,15 @@ function S(e) {
         },
         U = (e) => {
             A(e),
-                (0, p.S1)(e, S, { location: L.location })
+                (0, p.S1)(e, S, {
+                    location: L.location,
+                })
                     .then(() => R(null))
                     .catch(() => {
-                        R(b.intl.string(b.t.ejrSLe)), (0, p.S1)(null, S, { location: L.location });
+                        R(b.intl.string(b.t.ejrSLe)),
+                            (0, p.S1)(null, S, {
+                                location: L.location,
+                            });
                     });
         },
         G = () => {
@@ -128,7 +145,9 @@ function S(e) {
                         e,
                         v(O({}, n), {
                             onLearnMore: t,
-                            analyticsSource: v(O({}, L.location), { object: g.ZSU.BUTTON_CTA }),
+                            analyticsSource: v(O({}, L.location), {
+                                object: g.ZSU.BUTTON_CTA,
+                            }),
                         }),
                     );
             });

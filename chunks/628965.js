@@ -1,9 +1,12 @@
-n.d(t, { A: () => x });
+n.d(t, {
+    A: () => x,
+});
 var r,
     i = n(311907),
     a = n(73153),
     s = n(287809),
     o = n(652215);
+
 function l(e, t, n) {
     return (
         t in e
@@ -17,6 +20,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -44,9 +48,11 @@ let u = o.XlH.CLOSED,
     E = null,
     b = [],
     y = null;
+
 function O(e) {
     A(e);
 }
+
 function A(e) {
     var t, n, r, i;
     let a = s.default.getCurrentUser();
@@ -76,9 +82,11 @@ function A(e) {
         (b = null != (r = e.analyticsLocations) ? r : []),
         (y = null != (i = e.searchParams) ? i : null);
 }
+
 function v() {
     (u = o.XlH.CLOSED), (h = null), (m = null), (d = null), (f = {}), (p = {}), (E = null), (b = []), (y = null);
 }
+
 function S(e) {
     var t;
     (d = e.section),
@@ -86,23 +94,28 @@ function S(e) {
         (b = null != (t = e.analyticsLocations) ? t : []),
         null != e.subsection && (f[d] = e.subsection);
 }
+
 function I(e) {
     let { forSection: t } = e;
     null != t ? delete f[t] : null != d && delete f[d];
 }
+
 function T(e) {
     let { forSection: t } = e;
     null != t ? delete p[t] : null != d && delete p[d];
 }
+
 function C(e) {
     let { settings: t } = e;
     null == m && (m = {});
     let n = m[o.nc_.ACCOUNT];
     m[o.nc_.ACCOUNT] = c({}, n, t);
 }
+
 function N() {
     u = o.XlH.SUBMITTING;
 }
+
 function R() {
     let e = s.default.getCurrentUser();
     w(),
@@ -123,9 +136,11 @@ function R() {
                 }),
             ));
 }
+
 function w() {
     (u = o.XlH.OPEN), (_ = {});
 }
+
 function P(e) {
     var t;
     if (u !== o.XlH.SUBMITTING) return !1;

@@ -14,6 +14,7 @@ var r,
     u = n(652215),
     d = n(985018),
     p = n(149460);
+
 function f(e, t, n) {
     return (
         t in e
@@ -37,7 +38,9 @@ let A = Object.freeze({
             renderContent: (e) =>
                 (0, i.jsxs)(l.Fragment, {
                     children: [
-                        (0, i.jsx)(o.SGT, { note: d.intl.string(d.t.Y4vMY8) }),
+                        (0, i.jsx)(o.SGT, {
+                            note: d.intl.string(d.t.Y4vMY8),
+                        }),
                         (0, i.jsx)("div", {
                             "data-button-hoisted-classname-wrapper": !0,
                             className: p.x6,
@@ -55,14 +58,20 @@ let A = Object.freeze({
             darkSrc: n(492055),
             width: 421,
             height: 218,
-            renderContent: () => (0, i.jsx)(o.SGT, { note: d.intl.string(d.t.v7HbiQ) }),
+            renderContent: () =>
+                (0, i.jsx)(o.SGT, {
+                    note: d.intl.string(d.t.v7HbiQ),
+                }),
         },
         SECTION_BLOCKED: {
             lightSrc: n(751906),
             darkSrc: n(689818),
             width: 433,
             height: 232,
-            renderContent: () => (0, i.jsx)(o.SGT, { note: d.intl.string(d.t["9xdyWB"]) }),
+            renderContent: () =>
+                (0, i.jsx)(o.SGT, {
+                    note: d.intl.string(d.t["9xdyWB"]),
+                }),
         },
         SECTION_PENDING: {
             lightSrc: n(826223),
@@ -73,7 +82,9 @@ let A = Object.freeze({
                 (0, i.jsxs)("div", {
                     className: p.y7,
                     children: [
-                        (0, i.jsx)(o.SGT, { note: d.intl.string(d.t["aCYQ+P"]) }),
+                        (0, i.jsx)(o.SGT, {
+                            note: d.intl.string(d.t["aCYQ+P"]),
+                        }),
                         null != e &&
                             (0, i.jsx)(o.Button, {
                                 variant: "secondary",
@@ -89,14 +100,20 @@ let A = Object.freeze({
             darkSrc: n(317017),
             width: 415,
             height: 200,
-            renderContent: () => (0, i.jsx)(o.SGT, { note: d.intl.string(d.t["vgI/EF"]) }),
+            renderContent: () =>
+                (0, i.jsx)(o.SGT, {
+                    note: d.intl.string(d.t["vgI/EF"]),
+                }),
         },
         SECTION_NO_RESULTS: {
             lightSrc: n(939333),
             darkSrc: n(492055),
             width: 421,
             height: 218,
-            renderContent: () => (0, i.jsx)(o.SGT, { note: d.intl.string(d.t["7sW4h1"]) }),
+            renderContent: () =>
+                (0, i.jsx)(o.SGT, {
+                    note: d.intl.string(d.t["7sW4h1"]),
+                }),
         },
     }),
     g = (e) => {
@@ -104,13 +121,17 @@ let A = Object.freeze({
             n = d.intl.string(d.t["oi+B4p"]);
         return (0, i.jsx)(o.ppr, {
             theme: t,
-            children: (0, i.jsx)(o.SGT, { note: n }),
+            children: (0, i.jsx)(o.SGT, {
+                note: n,
+            }),
         });
     };
 class m extends l.PureComponent {
     render() {
         let { type: e, onClick: t, theme: n } = this.props,
-            r = { opacity: this.state.opacity },
+            r = {
+                opacity: this.state.opacity,
+            },
             l = (function (e) {
                 switch (e) {
                     case u.m3P.ADD_FRIEND:
@@ -132,7 +153,9 @@ class m extends l.PureComponent {
             ? (0, i.jsx)(a.A.div, {
                   className: p.VD,
                   style: r,
-                  children: (0, i.jsx)(g, { theme: n }),
+                  children: (0, i.jsx)(g, {
+                      theme: n,
+                  }),
               })
             : (0, i.jsx)(a.A.div, {
                   className: p.VD,
@@ -145,7 +168,9 @@ class m extends l.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            f(this, "state", { opacity: new a.A.Value(1) }),
+            f(this, "state", {
+                opacity: new a.A.Value(1),
+            }),
             f(this, "componentWillEnter", (e) => {
                 this.state.opacity.setValue(0),
                     a.A.timing(this.state.opacity, {
@@ -161,4 +186,12 @@ class m extends l.PureComponent {
             });
     }
 }
-let b = s.Ay.connectStores([c.A], () => ({ theme: c.A.theme }), { forwardRef: !0 })(m);
+let b = s.Ay.connectStores(
+    [c.A],
+    () => ({
+        theme: c.A.theme,
+    }),
+    {
+        forwardRef: !0,
+    },
+)(m);

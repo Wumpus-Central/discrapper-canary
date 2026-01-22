@@ -1,4 +1,11 @@
-l.d(t, { default: () => S }), l(896048), l(321073), l(228524), l(638769), l(733351);
+l.d(t, {
+    default: () => S,
+}),
+    l(896048),
+    l(321073),
+    l(228524),
+    l(638769),
+    l(733351);
 var n = l(627968),
     i = l(64700),
     r = l(158954),
@@ -17,6 +24,7 @@ var n = l(627968),
     f = l(539916),
     x = l(985018),
     O = l(819401);
+
 function S(e) {
     var t;
     let { transitionState: l, onClose: S, connection: v, index: L } = e,
@@ -113,8 +121,12 @@ function S(e) {
                         connection_type: e.type,
                         description: (0, h.uJ)(t) ? void 0 : t,
                     },
-                    null != e.applicationId && { application_id: e.applicationId },
-                    null != e.providerId && { provider_id: e.providerId },
+                    null != e.applicationId && {
+                        application_id: e.applicationId,
+                    },
+                    null != e.providerId && {
+                        provider_id: e.providerId,
+                    },
                 ),
                 n = (0, f.Ii)(l);
             n.length > 0 ? P(n) : (m ? (0, _.yM)(L, l) : (0, _.sF)(l), S());
@@ -143,7 +155,9 @@ function S(e) {
                                   height: 20,
                                   color: "currentColor",
                               }),
-                        (0, n.jsx)("span", { children: e.label }),
+                        (0, n.jsx)("span", {
+                            children: e.label,
+                        }),
                     ],
                 }),
             [],
@@ -171,7 +185,9 @@ function S(e) {
                               height: 20,
                               color: "currentColor",
                           }),
-                    (0, n.jsx)("span", { children: t.label }),
+                    (0, n.jsx)("span", {
+                        children: t.label,
+                    }),
                 ],
             });
         }, []);

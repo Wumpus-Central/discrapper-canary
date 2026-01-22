@@ -1,4 +1,8 @@
-n.d(t, { A: () => _ }), n(896048), n(321073);
+n.d(t, {
+    A: () => _,
+}),
+    n(896048),
+    n(321073);
 var r = n(64700),
     i = n(136722),
     a = n(311907),
@@ -10,6 +14,7 @@ var r = n(64700),
     d = n(818348);
 let f = [],
     p = new Set();
+
 function _(e) {
     let { entries: t, channelId: n } = e,
         _ = (0, a.bG)([o.A], () => o.A.getChannel(n)),

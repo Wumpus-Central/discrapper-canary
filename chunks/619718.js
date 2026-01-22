@@ -1,11 +1,13 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(64700),
     i = n(284009),
     a = n.n(i),
     s = n(964486);
-let o = 1000 / 24,
+let o = 1e3 / 24,
     l = 3,
-    c = 3000,
+    c = 3e3,
     u = function (e) {
         let {
                 minInterval: t = o,

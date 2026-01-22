@@ -1,4 +1,7 @@
-n.d(t, { A: () => E }), n(938796);
+n.d(t, {
+    A: () => E,
+}),
+    n(938796);
 var r = n(627968);
 n(64700);
 var i = n(665260),
@@ -15,6 +18,7 @@ var i = n(665260),
     h = n(644447),
     m = n(207963),
     g = n(652215);
+
 function E(e) {
     let { message: t } = (0, m.jc)(),
         n = (0, a.bG)([_.A], () => _.A.getChannel(null == t ? void 0 : t.channel_id)),
@@ -41,6 +45,7 @@ function E(e) {
                       srcToOnClickOverride: {},
                       srcToHandlePreloadImage: {},
                   };
+
     function T(e, n) {
         var r;
         let i = e.originalItem;

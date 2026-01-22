@@ -1,4 +1,7 @@
-n.d(t, { A: () => x }), n(938796);
+n.d(t, {
+    A: () => x,
+}),
+    n(938796);
 var r = n(627968),
     i = n(64700),
     l = n(311907),
@@ -13,6 +16,7 @@ var r = n(627968),
     f = n(482132),
     b = n(376747),
     g = n(985018);
+
 function x(e) {
     let { handleStepChange: t, handleClose: n } = e,
         { subscriptionMetadataRequest: x, selectedSku: j, selectedStoreListing: h, application: v } = (0, d.P5)(),
@@ -29,20 +33,28 @@ function x(e) {
                           confirmCta: g.intl.string(g.t.PBHFSq),
                           onConfirm: O,
                           onCancel: n,
-                          title: g.intl.format(g.t["6n6oXA"], { tier: j.name }),
+                          title: g.intl.format(g.t["6n6oXA"], {
+                              tier: j.name,
+                          }),
                           subtitle: S
                               ? g.intl.string(g.t.lzAoKB)
-                              : g.intl.formatToPlainString(g.t["GqaY/j"], { guildName: null == P ? void 0 : P.name }),
+                              : g.intl.formatToPlainString(g.t["GqaY/j"], {
+                                    guildName: null == P ? void 0 : P.name,
+                                }),
                           showOpenDiscord: !1,
                       })
                     : (0, r.jsx)(o.Uf, {
                           icon: null == h ? void 0 : h.thumbnail,
                           storeListingBenefits: null == h ? void 0 : h.benefits,
                           application: null != v ? v : void 0,
-                          title: g.intl.format(g.t.haiCxc, { tier: j.name }),
+                          title: g.intl.format(g.t.haiCxc, {
+                              tier: j.name,
+                          }),
                           subtitle: S ? g.intl.string(g.t.RvtbP5) : g.intl.string(g.t.zY39Zu),
                           description: S
-                              ? g.intl.formatToPlainString(g.t.QCe4rY, { applicationName: null == v ? void 0 : v.name })
+                              ? g.intl.formatToPlainString(g.t.QCe4rY, {
+                                    applicationName: null == v ? void 0 : v.name,
+                                })
                               : g.intl.string(g.t.n1Pu8C),
                       }),
             }),

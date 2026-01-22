@@ -1,4 +1,8 @@
-n.d(e, { default: () => c }), n(896048), n(733351);
+n.d(e, {
+    default: () => c,
+}),
+    n(896048),
+    n(733351);
 var r = n(627968),
     a = n(64700),
     i = n(158954),
@@ -7,6 +11,7 @@ var r = n(627968),
     o = n(545059),
     s = n(870391),
     d = n(985018);
+
 function c(t) {
     var e;
     let { onClose: n, transitionState: c, groupId: p } = t,

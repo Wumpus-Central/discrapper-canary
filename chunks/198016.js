@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -11,18 +13,23 @@ var r = n(627968),
     f = n(278597),
     p = n(985018),
     _ = n(920178);
+
 function h(e) {
     let { context: t, entrypoint: n, title: a, look: h, items: m, sectionName: g, sectionOverallPosition: E } = e,
         b = (0, u.f)(),
         y = i.useMemo(() => (n === c.s4.TEXT ? d.Gt : d.wW), [n]);
     return (0, r.jsxs)("section", {
         className: _.kL,
-        "aria-label": p.intl.formatToPlainString(p.t.iobNIB, { sectionTitle: a }),
+        "aria-label": p.intl.formatToPlainString(p.t.iobNIB, {
+            sectionTitle: a,
+        }),
         children: [
             (0, r.jsxs)("div", {
                 className: _.wx,
                 children: [
-                    (0, r.jsx)(f.A, { className: _.Gv }),
+                    (0, r.jsx)(f.A, {
+                        className: _.Gv,
+                    }),
                     (0, r.jsx)(o.Heading, {
                         variant: "heading-md/medium",
                         color: "text-strong",

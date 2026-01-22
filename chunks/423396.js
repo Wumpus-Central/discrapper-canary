@@ -1,4 +1,7 @@
-n.d(t, { Gu: () => N }), n(896048);
+n.d(t, {
+    Gu: () => N,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(397927),
@@ -14,6 +17,7 @@ var r = n(627968),
     h = n(788868),
     m = n(985018),
     g = n(749226);
+
 function E(e, t, n) {
     return (
         t in e
@@ -27,6 +31,7 @@ function E(e, t, n) {
         e
     );
 }
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -43,6 +48,7 @@ function b(e) {
     }
     return e;
 }
+
 function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -55,6 +61,7 @@ function y(e, t) {
     }
     return n;
 }
+
 function O(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -70,7 +77,9 @@ let A = [
         {
             key: s.pn.REVIEW,
             renderStep: (e) => (0, r.jsx)(c._M, b({}, e)),
-            options: { useBreadcrumbLabel: () => m.intl.string(m.t.QBnNHq) },
+            options: {
+                useBreadcrumbLabel: () => m.intl.string(m.t.QBnNHq),
+            },
         },
         {
             key: s.pn.ADD_PAYMENT_STEPS,
@@ -82,7 +91,9 @@ let A = [
                         text: "Add Payment Steps Placeholder",
                     }),
                 ),
-            options: { useBreadcrumbLabel: () => m.intl.string(m.t.QBnNHq) },
+            options: {
+                useBreadcrumbLabel: () => m.intl.string(m.t.QBnNHq),
+            },
         },
         {
             key: s.pn.CONFIRM,
@@ -94,7 +105,9 @@ let A = [
                         text: "Confirm Step Placeholder",
                     }),
                 ),
-            options: { useBreadcrumbLabel: () => m.intl.string(m.t.QBnNHq) },
+            options: {
+                useBreadcrumbLabel: () => m.intl.string(m.t.QBnNHq),
+            },
         },
         {
             key: s.pn.PLAN_SELECT,
@@ -106,7 +119,9 @@ let A = [
                         text: "Plan Select Step Placeholder",
                     }),
                 ),
-            options: { useBreadcrumbLabel: () => m.intl.string(m.t.QBnNHq) },
+            options: {
+                useBreadcrumbLabel: () => m.intl.string(m.t.QBnNHq),
+            },
         },
     ],
     v = () =>
@@ -185,7 +200,9 @@ let A = [
         i.useEffect(() => {
             S.current || null == b || ((S.current = !0), O(b));
         }, [b, y]);
-        let { isLoadedForPremiumSKUs: I, selectedPlan: T } = (0, d.n1)({ subscriptionPlanId: y });
+        let { isLoadedForPremiumSKUs: I, selectedPlan: T } = (0, d.n1)({
+            subscriptionPlanId: y,
+        });
         return !p && null != m && I && E && null != T
             ? (0, r.jsxs)("div", {
                   className: g.Cd,

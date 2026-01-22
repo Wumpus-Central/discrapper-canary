@@ -1,4 +1,6 @@
-n.d(t, { Ay: () => j });
+n.d(t, {
+    Ay: () => j,
+});
 var i,
     r,
     l = n(627968),
@@ -8,6 +10,7 @@ var i,
     c = n(397927),
     d = n(235986),
     u = n(657737);
+
 function b(e, t, n) {
     return (
         t in e
@@ -21,6 +24,7 @@ function b(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,6 +41,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -55,6 +60,7 @@ function p(e, t) {
         e
     );
 }
+
 function m(e, t) {
     if (null == e) return {};
     var n,
@@ -94,10 +100,20 @@ class g extends (i = a.PureComponent) {
                   children: (0, l.jsx)(c.HOs, {
                       fade: !0,
                       className: u.XG,
-                      children: (0, l.jsx)(d.A.Child, p(f({}, n), { wrap: !0 })),
+                      children: (0, l.jsx)(
+                          d.A.Child,
+                          p(f({}, n), {
+                              wrap: !0,
+                          }),
+                      ),
                   }),
               })
-            : (0, l.jsx)(d.A.Child, p(f({}, n), { wrap: !0 }));
+            : (0, l.jsx)(
+                  d.A.Child,
+                  p(f({}, n), {
+                      wrap: !0,
+                  }),
+              );
     }
 }
 b(g, "defaultProps", {

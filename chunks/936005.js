@@ -1,4 +1,7 @@
-n.d(t, { A: () => a }), n(896048);
+n.d(t, {
+    A: () => a,
+}),
+    n(896048);
 let r = [
         ["position", "absolute"],
         ["top", "-100px"],
@@ -11,6 +14,7 @@ let r = [
         ["width", "200px"],
         ["height", "200px"],
     ];
+
 function a() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
         t = document.createElement("div"),

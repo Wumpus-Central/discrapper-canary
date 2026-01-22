@@ -1,4 +1,6 @@
-n.d(t, { e: () => o });
+n.d(t, {
+    e: () => o,
+});
 var r = n(627968),
     i = n(397927),
     a = n(324861),
@@ -17,7 +19,9 @@ let o = {
                         (0, r.jsx)(i.Text, {
                             variant: "text-md/normal",
                             color: "text-feedback-info",
-                            style: { marginBottom: "8px" },
+                            style: {
+                                marginBottom: "8px",
+                            },
                             children: "Use this to reset your user's DCF Orb Onboarding state.",
                         }),
                         (0, r.jsx)(i.Button, {

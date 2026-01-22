@@ -15,6 +15,7 @@ var i = n(989349),
     c = n(954571),
     d = n(183389),
     u = n(652215);
+
 function b(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
     if (0 !== t.length) {
@@ -76,7 +77,15 @@ async function f(e, t) {
         : t
           ? n.add(u.GuildFeatures.NON_COMMUNITY_RAID_ALERTS)
           : n.delete(u.GuildFeatures.NON_COMMUNITY_RAID_ALERTS),
-        await s.A.saveGuild(e.id, { features: n }, { throwErr: !0 });
+        await s.A.saveGuild(
+            e.id,
+            {
+                features: n,
+            },
+            {
+                throwErr: !0,
+            },
+        );
 }
 async function p(e, t, n, i) {
     let a = r()().add(i, "hours").toISOString();

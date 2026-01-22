@@ -1,4 +1,7 @@
-n.d(e, { default: () => f }), n(896048);
+n.d(e, {
+    default: () => f,
+}),
+    n(896048);
 var i = n(627968),
     l = n(64700),
     a = n(158954),
@@ -12,6 +15,7 @@ var i = n(627968),
     h = n(269927),
     p = n(985018),
     x = n(976164);
+
 function g(t) {
     let { selectedTeamId: e, onSetSelectedTeamId: n, teamOptions: l } = t;
     return (0, i.jsx)("div", {
@@ -37,6 +41,7 @@ function g(t) {
             }),
     });
 }
+
 function f(t) {
     let { guildId: e, requireTeamSetup: n, onClose: x, transitionState: f } = t,
         [j, v] = l.useState(),

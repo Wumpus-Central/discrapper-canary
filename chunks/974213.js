@@ -58,7 +58,9 @@ let A = (0, O.createContext)(null),
                 },
                 defaultClassName: "react-aria-CheckboxGroup",
             }),
-            C = (0, E.$)(e, { global: !0 });
+            C = (0, E.$)(e, {
+                global: !0,
+            });
         return O.createElement(
             "div",
             {
@@ -156,7 +158,9 @@ let A = (0, O.createContext)(null),
                     isRequired: e.isRequired || !1,
                 },
             }),
-            G = (0, E.$)(e, { global: !0 });
+            G = (0, E.$)(e, {
+                global: !0,
+            });
         return (
             delete G.id,
             delete G.onClick,
@@ -179,7 +183,9 @@ let A = (0, O.createContext)(null),
                 },
                 O.createElement(
                     h.s,
-                    { elementType: "span" },
+                    {
+                        elementType: "span",
+                    },
                     O.createElement("input", {
                         ...(0, u.v)(T, L),
                         ref: S,

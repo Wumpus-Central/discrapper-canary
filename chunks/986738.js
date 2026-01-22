@@ -1,4 +1,6 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(627968);
 n(64700);
 var l = n(827734),
@@ -6,6 +8,7 @@ var l = n(827734),
     a = n(823508),
     s = n(47868),
     o = n(985018);
+
 function c(e) {
     let { className: t, guildId: c } = e,
         u = (0, a.A)();
@@ -52,7 +55,10 @@ function c(e) {
                             }
                             return e;
                         })({}, t)),
-                        (l = l = { guildId: c }),
+                        (l = l =
+                            {
+                                guildId: c,
+                            }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
                             : (function (e, t) {

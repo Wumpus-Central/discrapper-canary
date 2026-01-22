@@ -8,6 +8,7 @@ var i = RegExp(
     "(\\\\.)|([\\/.])?(?:(?:\\:(\\w+)(?:\\(((?:\\\\.|[^\\\\()])+)\\))?|\\(((?:\\\\.|[^\\\\()])+)\\))([+*?])?|(\\*))",
     "g",
 );
+
 function a(e, t) {
     for (var n, r = [], a = 0, s = 0, o = "", l = (t && t.delimiter) || "/"; null != (n = i.exec(e)); ) {
         var c = n[0],
@@ -43,19 +44,23 @@ function a(e, t) {
     }
     return s < e.length && (o += e.substr(s)), o && r.push(o), r;
 }
+
 function s(e, t) {
     return c(a(e, t));
 }
+
 function o(e) {
     return encodeURI(e).replace(/[\/?#]/g, function (e) {
         return "%" + e.charCodeAt(0).toString(16).toUpperCase();
     });
 }
+
 function l(e) {
     return encodeURI(e).replace(/[?#]/g, function (e) {
         return "%" + e.charCodeAt(0).toString(16).toUpperCase();
     });
 }
+
 function c(e) {
     for (var t = Array(e.length), n = 0; n < e.length; n++)
         "object" == typeof e[n] && (t[n] = RegExp("^(?:" + e[n].pattern + ")$"));
@@ -103,18 +108,23 @@ function c(e) {
         return a;
     };
 }
+
 function u(e) {
     return e.replace(/([.+*?=^!:${}()[\]|\/\\])/g, "\\$1");
 }
+
 function d(e) {
     return e.replace(/([=!:$\/()])/g, "\\$1");
 }
+
 function f(e, t) {
     return (e.keys = t), e;
 }
+
 function p(e) {
     return e.sensitive ? "" : "i";
 }
+
 function _(e, t) {
     var n = e.source.match(/\((?!\?)/g);
     if (n)
@@ -131,13 +141,16 @@ function _(e, t) {
             });
     return f(e, t);
 }
+
 function h(e, t, n) {
     for (var r = [], i = 0; i < e.length; i++) r.push(E(e[i], t, n).source);
     return f(RegExp("(?:" + r.join("|") + ")", p(n)), t);
 }
+
 function m(e, t, n) {
     return g(a(e, n), t, n);
 }
+
 function g(e, t, n) {
     r(t) || ((n = t || n), (t = []));
     for (var i = (n = n || {}).strict, a = !1 !== n.end, s = "", o = 0; o < e.length; o++) {
@@ -160,6 +173,7 @@ function g(e, t, n) {
         f(RegExp("^" + s, p(n)), t)
     );
 }
+
 function E(e, t, n) {
     return (r(t) || ((n = t || n), (t = [])), (n = n || {}), e instanceof RegExp)
         ? _(e, t)

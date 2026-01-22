@@ -14,6 +14,7 @@ var r = n(34045),
     c = n(797632),
     u = n(880652),
     d = n(652215);
+
 function f(e, t, n) {
     let r = c.A.getSurvey(e);
     if (null == r) return null;
@@ -46,12 +47,15 @@ function f(e, t, n) {
         i
     );
 }
+
 function p(e) {
     return !!s.Ay.shouldAllowSurveyAction() && r.M[e] >= 100 * Math.random();
 }
 async function _(e, t) {
     if (!p(e)) return;
-    let n = { action_type: e };
+    let n = {
+        action_type: e,
+    };
     null != t && (n.metadata = t);
     try {
         var r;
@@ -91,19 +95,29 @@ let h = {
     submitSurveyResponse: async function (e, t) {
         let n = l.i.getState().getDisplayedQuestions(e),
             r = f(e, t, null != n ? n : []);
-        if (null == r) return { responseId: "null" };
+        if (null == r)
+            return {
+                responseId: "null",
+            };
         try {
             return {
                 responseId: (
                     await i.Bo.post({
                         url: d.Rsh.EMBEDDED_SURVEY_RESPONSE(e),
-                        body: { values_json: JSON.stringify(r) },
+                        body: {
+                            values_json: JSON.stringify(r),
+                        },
                         rejectWithError: !0,
                     })
                 ).body.responseId,
             };
         } catch (e) {
-            return o.A.captureException(e), { responseId: "null" };
+            return (
+                o.A.captureException(e),
+                {
+                    responseId: "null",
+                }
+            );
         }
     },
     fireSurveyAction: _,

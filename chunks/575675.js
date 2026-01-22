@@ -1,8 +1,13 @@
-n.d(t, { A: () => c }), n(896048), n(65821);
+n.d(t, {
+    A: () => c,
+}),
+    n(896048),
+    n(65821);
 var r = n(627968),
     i = n(64700),
     a = n(52133),
     s = n(968441);
+
 function o(e, t, n) {
     return (
         t in e
@@ -16,6 +21,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,10 +41,12 @@ function l(e) {
 let c = function (e, t, n) {
     return null != n && n.forwardRef ? d(e, t) : f(e, t);
 };
+
 function u(e) {
     var t, n;
     return null != (t = null != (n = e.displayName) ? n : e.name) ? t : "<Unknown>";
 }
+
 function d(e, t) {
     return (n) => {
         var c;
@@ -53,7 +61,16 @@ function d(e, t) {
             render() {
                 let { forwardedConnectStoresRef: e, childProps: t } = this.props,
                     i = this.memoizedGetStateFromStores(t);
-                return (0, r.jsx)(n, l({ ref: e }, t, i));
+                return (0, r.jsx)(
+                    n,
+                    l(
+                        {
+                            ref: e,
+                        },
+                        t,
+                        i,
+                    ),
+                );
             }
             constructor(...n) {
                 super(...n),
@@ -81,6 +98,7 @@ function d(e, t) {
         return (_.displayName = "ForwardRef(".concat(d, ")")), _;
     };
 }
+
 function f(e, t) {
     return (n) => {
         var c;
@@ -115,6 +133,7 @@ function f(e, t) {
         return o(f, "displayName", d), f;
     };
 }
+
 function p(e) {
     let t = null,
         n = null,

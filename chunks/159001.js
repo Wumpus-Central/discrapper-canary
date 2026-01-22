@@ -32,14 +32,26 @@ async function s(e, t) {
         displayNameStyles: f,
     } = t;
     if (null == e) throw Error("Need guildId");
-    i.h.dispatch({ type: "GUILD_IDENTITY_SETTINGS_SUBMIT" });
+    i.h.dispatch({
+        type: "GUILD_IDENTITY_SETTINGS_SUBMIT",
+    });
     let p = {
         nick: s,
         avatar: o,
         avatar_description: l,
         avatar_id: c,
         avatar_decoration_sku_id: void 0 !== u ? (null != (n = null == u ? void 0 : u.skuId) ? n : null) : void 0,
-        collectibles: void 0 !== d ? { nameplate: null === d ? null : { sku_id: d.skuId } } : void 0,
+        collectibles:
+            void 0 !== d
+                ? {
+                      nameplate:
+                          null === d
+                              ? null
+                              : {
+                                    sku_id: d.skuId,
+                                },
+                  }
+                : void 0,
         display_name_font_id: void 0 !== f ? (null !== f ? f.fontId : null) : void 0,
         display_name_effect_id: void 0 !== f ? (null !== f ? f.effectId : null) : void 0,
         display_name_colors: void 0 !== f ? (null !== f ? f.colors : null) : void 0,
@@ -53,13 +65,18 @@ async function s(e, t) {
             }),
             n = t.body;
         return (
-            i.h.dispatch({ type: "GUILD_IDENTITY_SETTINGS_SUBMIT_SUCCESS" }),
+            i.h.dispatch({
+                type: "GUILD_IDENTITY_SETTINGS_SUBMIT_SUCCESS",
+            }),
             i.h.dispatch({
                 type: "GUILD_MEMBER_PROFILE_UPDATE",
                 guildMember: n,
                 guildId: e,
             }),
-            (null != o || null != c) && i.h.dispatch({ type: "RECENT_AVATARS_UPDATE" }),
+            (null != o || null != c) &&
+                i.h.dispatch({
+                    type: "RECENT_AVATARS_UPDATE",
+                }),
             t
         );
     } catch (t) {
@@ -74,78 +91,103 @@ async function s(e, t) {
         );
     }
 }
+
 function o(e) {
     i.h.dispatch({
         type: "GUILD_IDENTITY_SETTINGS_SET_GUILD",
         guild: e,
     });
 }
+
 function l(e) {
     i.h.dispatch({
         type: "GUILD_IDENTITY_SETTINGS_INIT",
         guild: e,
     });
 }
+
 function c() {
-    i.h.dispatch({ type: "GUILD_IDENTITY_SETTINGS_RESET_AND_CLOSE_FORM" });
+    i.h.dispatch({
+        type: "GUILD_IDENTITY_SETTINGS_RESET_AND_CLOSE_FORM",
+    });
 }
+
 function u(e) {
     i.h.dispatch({
         type: "GUILD_IDENTITY_SETTINGS_SET_PENDING_AVATAR",
         avatar: e,
     });
 }
+
 function d(e) {
     i.h.dispatch({
         type: "GUILD_IDENTITY_SETTINGS_SET_PENDING_COLLECTIBLES_ITEM",
         item: e,
     });
 }
+
 function f(e) {
     i.h.dispatch({
         type: "GUILD_IDENTITY_SETTINGS_SET_PENDING_BANNER",
         banner: e,
     });
 }
+
 function p(e) {
     i.h.dispatch({
         type: "GUILD_IDENTITY_SETTINGS_SET_PENDING_BIO",
         bio: e,
     });
 }
+
 function _(e) {
     i.h.dispatch({
         type: "GUILD_IDENTITY_SETTINGS_SET_PENDING_PRONOUNS",
         pronouns: e,
     });
 }
+
 function h(e) {
     i.h.dispatch({
         type: "GUILD_IDENTITY_SETTINGS_SET_PENDING_NICKNAME",
         nickname: e,
     });
 }
+
 function m(e) {
     i.h.dispatch({
         type: "GUILD_IDENTITY_SETTINGS_SET_PENDING_THEME_COLORS",
         themeColors: e,
     });
 }
+
 function g(e) {
     i.h.dispatch({
         type: "GUILD_IDENTITY_SETTINGS_SET_PENDING_DISPLAY_NAME_STYLES",
         displayNameStyles: e,
     });
 }
+
 function E() {
-    i.h.dispatch({ type: "GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES" });
+    i.h.dispatch({
+        type: "GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES",
+    });
 }
+
 function b() {
-    i.h.dispatch({ type: "GUILD_IDENTITY_SETTINGS_RESET_PENDING_PROFILE_CHANGES" });
+    i.h.dispatch({
+        type: "GUILD_IDENTITY_SETTINGS_RESET_PENDING_PROFILE_CHANGES",
+    });
 }
+
 function y() {
-    i.h.dispatch({ type: "GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING" });
+    i.h.dispatch({
+        type: "GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING",
+    });
 }
+
 function O() {
-    i.h.dispatch({ type: "GUILD_IDENTITY_SETTINGS_CLEAR_ERRORS" });
+    i.h.dispatch({
+        type: "GUILD_IDENTITY_SETTINGS_CLEAR_ERRORS",
+    });
 }

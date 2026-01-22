@@ -29,12 +29,15 @@ var r = (function (e) {
         e
     );
 })({});
+
 function i(e) {
     return "layout" in e;
 }
+
 function a(e) {
     return e.every((e) => 10 === e.type) && e.length > 0;
 }
+
 function s(e) {
     return e.every((e) => 5 === e.type) && e.length > 0;
 }

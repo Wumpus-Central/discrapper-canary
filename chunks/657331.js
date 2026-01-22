@@ -16,7 +16,9 @@ let f = (0, r.FT9)(r._3J.SIZE_120),
     p = new o.A("UserProfileModalActionCreators"),
     _ = async (e) => {
         let t = l.default.getId() === e,
-            { recentActivityTabEnabled: n } = (0, u.f)({ location: "UserProfileModalActionCreators" });
+            { recentActivityTabEnabled: n } = (0, u.f)({
+                location: "UserProfileModalActionCreators",
+            });
         if (n || t)
             try {
                 await (0, s.A)(e);
@@ -80,6 +82,9 @@ async function h(e) {
             disableActionsForPreview: O,
         });
 }
+
 function m() {
-    i.h.dispatch({ type: "USER_PROFILE_MODAL_CLOSE" });
+    i.h.dispatch({
+        type: "USER_PROFILE_MODAL_CLOSE",
+    });
 }

@@ -1,4 +1,7 @@
-n.d(t, { P: () => _ }), n(228524);
+n.d(t, {
+    P: () => _,
+}),
+    n(228524);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -8,6 +11,7 @@ var r = n(627968),
     c = n(438842),
     u = n(879472),
     d = n(838934);
+
 function f(e, t, n) {
     return (
         t in e
@@ -21,6 +25,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,11 +42,22 @@ function p(e) {
     }
     return e;
 }
+
 function _(e) {
     let { profile: t, className: n } = e,
         { gamesToDisplay: a, lastGameToDisplay: f, remainingGames: _ } = (0, l.A)(t),
         h = i.useMemo(
-            () => t.traits.map((e, t) => p({ key: "trait-".concat(t) }, e)).filter((e) => e.label.length > 0),
+            () =>
+                t.traits
+                    .map((e, t) =>
+                        p(
+                            {
+                                key: "trait-".concat(t),
+                            },
+                            e,
+                        ),
+                    )
+                    .filter((e) => e.label.length > 0),
             [t],
         ),
         m = t.description.length > 0;
@@ -62,8 +78,12 @@ function _(e) {
                       remainingGames: _,
                       activity: t.gameActivity,
                   }),
-                  (0, r.jsx)(u.w, { items: h }),
+                  (0, r.jsx)(u.w, {
+                      items: h,
+                  }),
               ],
           })
-        : (0, r.jsx)("div", { className: d.C3 });
+        : (0, r.jsx)("div", {
+              className: d.C3,
+          });
 }

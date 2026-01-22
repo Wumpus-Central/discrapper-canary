@@ -419,7 +419,9 @@ class b extends s.G {
 new b();
 class y extends s.G {
     create(e) {
-        let t = { asset: "" };
+        let t = {
+            asset: "",
+        };
         return (
             globalThis.Object.defineProperty(t, a.$, {
                 enumerable: !1,
@@ -795,7 +797,9 @@ class N extends s.G {
 let R = new N();
 class w extends s.G {
     create(e) {
-        let t = { applicationId: "0" };
+        let t = {
+            applicationId: "0",
+        };
         return (
             globalThis.Object.defineProperty(t, a.$, {
                 enumerable: !1,
@@ -1254,7 +1258,9 @@ class j extends s.G {
 let M = new j();
 class k extends s.G {
     create(e) {
-        let t = { map: {} };
+        let t = {
+            map: {},
+        };
         return (
             globalThis.Object.defineProperty(t, a.$, {
                 enumerable: !1,
@@ -1378,7 +1384,9 @@ class G extends s.G {
 let V = new G();
 class F extends s.G {
     create(e) {
-        let t = { shards: [] };
+        let t = {
+            shards: [],
+        };
         return (
             globalThis.Object.defineProperty(t, a.$, {
                 enumerable: !1,
@@ -1432,7 +1440,9 @@ class F extends s.G {
 new F();
 class B extends s.G {
     create(e) {
-        let t = { questsCompleted: 0 };
+        let t = {
+            questsCompleted: 0,
+        };
         return (
             globalThis.Object.defineProperty(t, a.$, {
                 enumerable: !1,
@@ -1671,7 +1681,9 @@ let J = new $();
 class ee extends s.G {
     create(e) {
         let t = {
-            state: { oneofKind: void 0 },
+            state: {
+                oneofKind: void 0,
+            },
             reason: 0,
             annotations: [],
         };
@@ -1906,7 +1918,9 @@ class en extends s.G {
 let er = new en();
 class ei extends s.G {
     create(e) {
-        let t = { country: "" };
+        let t = {
+            country: "",
+        };
         return (
             globalThis.Object.defineProperty(t, a.$, {
                 enumerable: !1,

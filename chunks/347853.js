@@ -7,6 +7,7 @@ n(64700);
 var l = n(397927),
     i = n(73153),
     r = n(573879);
+
 function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -32,6 +33,7 @@ function s(e) {
     }
     return e;
 }
+
 function o() {
     (0, l.mMO)(
         async () => {
@@ -49,6 +51,7 @@ function o() {
         },
     );
 }
+
 function c() {
     (0, l.mMO)(
         async () => {
@@ -58,7 +61,10 @@ function c() {
                 return (0, a.jsx)(
                     e,
                     ((n = s({}, t)),
-                    (l = l = { onBackPressed: o }),
+                    (l = l =
+                        {
+                            onBackPressed: o,
+                        }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
                         : (function (e, t) {

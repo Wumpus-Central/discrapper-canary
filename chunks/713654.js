@@ -12,6 +12,7 @@ var r = n(397927),
     c = n(746080),
     u = n(652215),
     d = n(985018);
+
 function f(e, t, n, r) {
     if (null == e) return null;
     if (e.id === (null == t ? void 0 : t.rulesChannelId)) return d.intl.string(d.t["/7EhaT"]);
@@ -60,6 +61,7 @@ function f(e, t, n, r) {
             return null;
     }
 }
+
 function p(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         { locked: d = !1, video: f = !1, stream: p = !1, hasActiveThreads: _ = !1, textFocused: h = !1 } = n;
@@ -131,6 +133,7 @@ function p(e, t) {
             return null;
     }
 }
+
 function _(e) {
     switch (e) {
         case u.rbe.GUILD_ANNOUNCEMENT:

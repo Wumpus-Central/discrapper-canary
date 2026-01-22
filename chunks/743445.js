@@ -32,6 +32,7 @@ var i = n(735438),
     I = n(972711),
     T = n(554707),
     C = n(652215);
+
 function N(e, t, n) {
     return (
         t in e
@@ -45,6 +46,7 @@ function N(e, t, n) {
         e
     );
 }
+
 function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -61,6 +63,7 @@ function R(e) {
     }
     return e;
 }
+
 function w(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -73,6 +76,7 @@ function w(e, t) {
     }
     return n;
 }
+
 function P(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -99,9 +103,17 @@ class x extends Error {
     }
     static rejectionHandler(e) {
         return (t) => {
-            if (t instanceof o.oh) throw new x(e, { response: t });
-            if (t instanceof Error) throw new x(e, { cause: t });
-            throw new x(e, { cause: Error(String(t)) });
+            if (t instanceof o.oh)
+                throw new x(e, {
+                    response: t,
+                });
+            if (t instanceof Error)
+                throw new x(e, {
+                    cause: t,
+                });
+            throw new x(e, {
+                cause: Error(String(t)),
+            });
         };
     }
     canRetry() {
@@ -121,7 +133,9 @@ class x extends Error {
                           .concat(s, ":status_")
                           .concat(null != (r = null == a ? void 0 : a.status) ? r : 0)
                     : "".concat(e, ":").concat(s);
-        super(o, { cause: i }),
+        super(o, {
+            cause: i,
+        }),
             N(this, "kind", void 0),
             N(this, "phase", void 0),
             N(this, "messageShort", void 0),
@@ -248,7 +262,9 @@ class k extends v.Ay {
                           ? e.type
                           : "application/octet-stream")
                 : ((e = this.item.file), (t = "application/octet-stream"));
-        let n = (0, _.Q)({ location: "CloudUpload" });
+        let n = (0, _.Q)({
+            location: "CloudUpload",
+        });
         if (n.enableNewRetry)
             return (
                 (0, I.gd)(this.item) &&
@@ -258,7 +274,9 @@ class k extends v.Ay {
                 (this._resumptionEnabled = n.enableResumption),
                 await this.uploadFileWithResumption(this.responseUrl, e, t)
             );
-        let r = { "Content-Type": t };
+        let r = {
+            "Content-Type": t,
+        };
         void 0 !== this.contentHash && (r[L] = this.contentHash);
         let i = R(
             {
@@ -276,10 +294,14 @@ class k extends v.Ay {
     async getResumePosition(e) {
         let t = {
             url: e,
-            headers: { "Content-Range": "bytes */*" },
+            headers: {
+                "Content-Range": "bytes */*",
+            },
             rejectWithError: !0,
             retries: 0,
-            timeout: { deadline: 30 * b.A.Millis.SECOND },
+            timeout: {
+                deadline: 30 * b.A.Millis.SECOND,
+            },
             signal: this._abortController.signal,
         };
         return await this._uploadHttpClient
@@ -317,9 +339,16 @@ class k extends v.Ay {
         }
         e.onRequestProgress = a().throttle(this.createResumeAwareProgressFn(t), 50);
         let r = await this._uploadHttpClient
-            .doUpload(e, { fileByteRange: { start: t } })
+            .doUpload(e, {
+                fileByteRange: {
+                    start: t,
+                },
+            })
             .catch(x.rejectionHandler("upload"));
-        if (200 !== r.status && 201 !== r.status) throw new x("upload", { response: r });
+        if (200 !== r.status && 201 !== r.status)
+            throw new x("upload", {
+                response: r,
+            });
         return r;
     }
     async uploadFileWithResumption(e, t, n) {
@@ -327,7 +356,9 @@ class k extends v.Ay {
             o = {
                 url: e,
                 body: t,
-                headers: { "Content-Type": n },
+                headers: {
+                    "Content-Type": n,
+                },
                 signal: this._abortController.signal,
                 onRequestProgress: a().throttle(this.createResumeAwareProgressFn(0), 50),
                 retries: 0,
@@ -401,7 +432,9 @@ class k extends v.Ay {
         }
         let a = await r.getUploadPayload(this),
             s = (0, S.B)(this.item.target),
-            l = (0, d.N)({ location: "CloudUpload.upload" });
+            l = (0, d.N)({
+                location: "CloudUpload.upload",
+            });
         if (null == a.filename || "" === a.filename) {
             D.error("File does not have a filename.", JSON.stringify(a)), this.handleError(C.t02.INVALID_FILE_ASSET);
             return;
@@ -422,8 +455,15 @@ class k extends v.Ay {
         if (c.Ay.get("upload_fail_50") && 0.5 > Math.random())
             return void setTimeout(() => {
                 this.handleError(500);
-            }, 1000);
-        let f = p.A.getCurrentConfig({ location: "CloudUpload" }, { autoTrackExposure: !0 }),
+            }, 1e3);
+        let f = p.A.getCurrentConfig(
+                {
+                    location: "CloudUpload",
+                },
+                {
+                    autoTrackExposure: !0,
+                },
+            ),
             _ = null;
         f.enabled;
         try {
@@ -435,11 +475,15 @@ class k extends v.Ay {
                         R(
                             {
                                 url: e,
-                                body: { files: [a] },
+                                body: {
+                                    files: [a],
+                                },
                             },
                             this.createAttachmentUrlRetryOpts(),
                         ),
-                        { rejectWithError: !1 },
+                        {
+                            rejectWithError: !1,
+                        },
                     ),
                 );
             });
@@ -591,14 +635,18 @@ class k extends v.Ay {
     static async tryConvertToWebP(e, t, n) {
         var r, i, a;
         let s,
-            o = (0, f.i)({ location: "CloudUpload.maybeConvertToWebP" });
+            o = (0, f.i)({
+                location: "CloudUpload.maybeConvertToWebP",
+            });
         if (!o.enabled) return D.warn("webp conversion skipped for ".concat(n, ": not enabled")), null;
         if (null == e) return D.warn("webp conversion skipped for ".concat(n, ": no file")), null;
         if (null != o.maxFileSizeBytes && e.size > o.maxFileSizeBytes)
             return D.warn("webp conversion skipped for ".concat(n, ": too big")), null;
         if (t()) return null;
         let l = performance.now(),
-            c = { compressTimeMs: 0 };
+            c = {
+                compressTimeMs: 0,
+            };
         try {
             if (((s = await (0, T.L5)(e)), t())) return null;
             if (s.success && null != s.convertedBlob)

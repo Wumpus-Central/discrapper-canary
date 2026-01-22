@@ -1,9 +1,11 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var a = n(627968),
     l = n(64700),
     i = n(503698),
     r = n.n(i),
-    s = n(432022),
+    s = n(108531),
     o = n(311907),
     c = n(397927),
     d = n(775602),
@@ -60,7 +62,9 @@ let g = (e) => {
                 }),
             }),
             (0, a.jsxs)(s.animated.div, {
-                className: r()(b.pm, { [b.nd]: i }),
+                className: r()(b.pm, {
+                    [b.nd]: i,
+                }),
                 style: {
                     transform: (0, s.to)(
                         [
@@ -78,11 +82,15 @@ let g = (e) => {
                 },
                 children: [
                     (0, a.jsx)("div", {
-                        className: r()({ [b.Iu]: !i }),
+                        className: r()({
+                            [b.Iu]: !i,
+                        }),
                         children: n,
                     }),
                     (0, a.jsx)(s.animated.div, {
-                        className: r()(b.ol, { [b.yZ]: i }),
+                        className: r()(b.ol, {
+                            [b.yZ]: i,
+                        }),
                         style: {
                             opacity: j.to({
                                 range: [0, 1],

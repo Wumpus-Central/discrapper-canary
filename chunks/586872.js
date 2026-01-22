@@ -1,7 +1,10 @@
-n.d(t, { L: () => u });
+n.d(t, {
+    L: () => u,
+});
 var r = n(73153),
     i = n(425059),
     a = n(141468);
+
 function s(e, t, n) {
     return (
         t in e
@@ -15,6 +18,7 @@ function s(e, t, n) {
         e
     );
 }
+
 function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -31,6 +35,7 @@ function o(e) {
     }
     return e;
 }
+
 function l(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -43,6 +48,7 @@ function l(e, t) {
     }
     return n;
 }
+
 function c(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -57,7 +63,11 @@ function c(e, t) {
 async function u(e) {
     let { channelId: t, message: n, items: s, shouldUploadFailureSendNotification: l } = e,
         u = new i.A(),
-        d = (0, a.rh)(c(o({}, n), { id: u._file.id }));
+        d = (0, a.rh)(
+            c(o({}, n), {
+                id: u._file.id,
+            }),
+        );
     u.on("start", (e) => {
         r.h.dispatch({
             type: "UPLOAD_START",

@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968);
 n(64700);
 var l = n(311907),
@@ -10,6 +12,7 @@ var l = n(311907),
     u = n(330465),
     d = n(65611),
     f = n(652215);
+
 function p(e, t) {
     (0, i.L3)(e, async () => {
         let { default: e } = await n.e("49056").then(n.bind(n, 97187));
@@ -42,7 +45,10 @@ function p(e, t) {
                     }
                     return e;
                 })({}, n)),
-                (i = i = { guild: t }),
+                (i = i =
+                    {
+                        guild: t,
+                    }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(i))
                     : (function (e, t) {
@@ -60,6 +66,7 @@ function p(e, t) {
         };
     });
 }
+
 function h(e) {
     let { guildNode: t } = e,
         n = t.id,
@@ -79,7 +86,9 @@ function h(e) {
               contextMenu: p,
               lowerBadge:
                   (null == i ? void 0 : i.applicationStatus) === a.B5.REJECTED
-                      ? (0, d.eW)({ guildJoinRequestStatus: i.applicationStatus })
+                      ? (0, d.eW)({
+                            guildJoinRequestStatus: i.applicationStatus,
+                        })
                       : void 0,
               route: f.BVt.GUILD_MEMBER_VERIFICATION(n),
           });

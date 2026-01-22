@@ -148,7 +148,9 @@ e.exports = function (e) {
             {
                 className: "variable",
                 variants: [
-                    { begin: t.concat(/\$/, t.optional(/::/), n, "(::", n, ")*") },
+                    {
+                        begin: t.concat(/\$/, t.optional(/::/), n, "(::", n, ")*"),
+                    },
                     {
                         begin: "\\$\\{(::)?[a-zA-Z_]((::)?[a-zA-Z0-9_])*",
                         end: "\\}",
@@ -159,7 +161,11 @@ e.exports = function (e) {
             {
                 className: "string",
                 contains: [e.BACKSLASH_ESCAPE],
-                variants: [e.inherit(e.QUOTE_STRING_MODE, { illegal: null })],
+                variants: [
+                    e.inherit(e.QUOTE_STRING_MODE, {
+                        illegal: null,
+                    }),
+                ],
             },
             r,
         ],

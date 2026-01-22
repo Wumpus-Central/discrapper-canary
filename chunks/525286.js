@@ -1,4 +1,6 @@
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 let r = (0, n(600975).C)({
         kind: "user",
         id: "2024-10_golive_simulcast",
@@ -13,7 +15,7 @@ let r = (0, n(600975).C)({
                 label: "Simulcast",
                 config: {
                     simulcastEnabled: !0,
-                    lqStreamBitrate: 1500000,
+                    lqStreamBitrate: 15e5,
                 },
             },
             {
@@ -21,7 +23,7 @@ let r = (0, n(600975).C)({
                 label: "Simulcast, no pacer for LQ",
                 config: {
                     simulcastEnabled: !0,
-                    lqStreamBitrate: 1500000,
+                    lqStreamBitrate: 15e5,
                     workerExperimentString:
                         "bandwidth_estimation/trendline-window-duration-3750,robust-estimator/worker-lq-no-pacer",
                 },
@@ -29,10 +31,31 @@ let r = (0, n(600975).C)({
         ],
     }),
     i = {
-        getConfig: () => r.getCurrentConfig({ location: "getConfig" }, { autoTrackExposure: !1 }),
+        getConfig: () =>
+            r.getCurrentConfig(
+                {
+                    location: "getConfig",
+                },
+                {
+                    autoTrackExposure: !1,
+                },
+            ),
         simulcastEnabled: () =>
-            r.getCurrentConfig({ location: "simulcastEnabled" }, { autoTrackExposure: !0 }).simulcastEnabled,
+            r.getCurrentConfig(
+                {
+                    location: "simulcastEnabled",
+                },
+                {
+                    autoTrackExposure: !0,
+                },
+            ).simulcastEnabled,
         workerExperimentString: () =>
-            r.getCurrentConfig({ location: "workerExperimentString" }, { autoTrackExposure: !1 })
-                .workerExperimentString,
+            r.getCurrentConfig(
+                {
+                    location: "workerExperimentString",
+                },
+                {
+                    autoTrackExposure: !1,
+                },
+            ).workerExperimentString,
     };

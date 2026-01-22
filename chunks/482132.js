@@ -15,6 +15,7 @@ var r = n(627968),
     f = n(166532),
     p = n(788868),
     _ = n(804686);
+
 function h(e, t) {
     if (null == e) return {};
     var n,
@@ -31,6 +32,7 @@ function h(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function m(e, t) {
     if (null == e) return {};
     var n,
@@ -41,6 +43,7 @@ function m(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function g(e) {
     let { header: t, isLargeModal: n } = e;
     return {
@@ -49,6 +52,7 @@ function g(e) {
         stepProps: h(e, ["header", "isLargeModal"]),
     };
 }
+
 function E(e) {
     var t, n, a, o, c, h;
     let m,
@@ -123,7 +127,9 @@ function E(e) {
                                   ),
                               }),
                           }),
-                          (0, r.jsx)("div", { ref: (e) => S(e) }),
+                          (0, r.jsx)("div", {
+                              ref: (e) => S(e),
+                          }),
                           (0, r.jsx)("div", {
                               ref: (e) => {
                                   I(e);
@@ -134,11 +140,13 @@ function E(e) {
         ],
     });
 }
+
 function b(e) {
     let { children: t } = e,
         { bodyNode: n } = (0, d.P5)();
     return null == n ? null : c.createPortal(t, n);
 }
+
 function y(e) {
     let { children: t } = e,
         { footerNode: n } = (0, d.P5)();

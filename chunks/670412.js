@@ -1,4 +1,7 @@
-n.d(t, { A: () => h }), n(896048);
+n.d(t, {
+    A: () => h,
+}),
+    n(896048);
 var r = n(488428),
     i = n(269438),
     a = n(562465),
@@ -9,6 +12,7 @@ var r = n(488428),
     u = n(965660),
     d = n(324580),
     f = n(652215);
+
 function p(e, t, n) {
     return (
         t in e
@@ -25,20 +29,28 @@ function p(e, t, n) {
 class _ extends o.A {
     constructor(...e) {
         super(...e),
-            p(this, "actions", { POST_CONNECTION_OPEN: () => this.handleConnectionOpen() }),
+            p(this, "actions", {
+                POST_CONNECTION_OPEN: () => this.handleConnectionOpen(),
+            }),
             p(this, "queue", new Set()),
             p(this, "isFetchEnabled", !1),
             p(this, "handleConnectionOpen", () => {
                 (this.isFetchEnabled = !0),
                     this.queue.forEach((e) => {
-                        e === d.Iq ? this.fetchFeaturedGuilds() : this.fetchCategoryFeaturedGuilds({ categoryId: e });
+                        e === d.Iq
+                            ? this.fetchFeaturedGuilds()
+                            : this.fetchCategoryFeaturedGuilds({
+                                  categoryId: e,
+                              });
                     });
             }),
             p(this, "fetchFeaturedGuilds", async (e) => {
                 var t;
                 if (!this.isFetchEnabled) return void this.queue.add(d.Iq);
                 let n = null != (t = null == e ? void 0 : e.forceRefresh) && t,
-                    o = c.A.getLastFetchTimestamp({ categoryId: d.Iq });
+                    o = c.A.getLastFetchTimestamp({
+                        categoryId: d.Iq,
+                    });
                 if (n || (0, u.M9)(o)) {
                     s.h.dispatch({
                         type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_START",
@@ -69,14 +81,18 @@ class _ extends o.A {
                             categoryId: d.Iq,
                             error: e,
                         }),
-                            l.uf({ categoryId: d.Iq });
+                            l.uf({
+                                categoryId: d.Iq,
+                            });
                     }
                 }
             }),
             p(this, "fetchCategoryFeaturedGuilds", async (e) => {
                 let { categoryId: t, forceRefresh: n = !1 } = e;
                 if (!this.isFetchEnabled) return void this.queue.add(t);
-                let i = c.A.getLastFetchTimestamp({ categoryId: t });
+                let i = c.A.getLastFetchTimestamp({
+                    categoryId: t,
+                });
                 if (n || (0, u.M9)(i)) {
                     s.h.dispatch({
                         type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_START",
@@ -86,7 +102,9 @@ class _ extends o.A {
                     try {
                         let e = await a.Bo.get({
                                 url: f.Rsh.GUILD_DISCOVERY,
-                                query: r.stringify({ categories: [t] }),
+                                query: r.stringify({
+                                    categories: [t],
+                                }),
                                 oldFormErrors: !0,
                                 rejectWithError: !1,
                             }),
@@ -104,7 +122,9 @@ class _ extends o.A {
                             categoryId: t,
                             error: e,
                         }),
-                            l.uf({ categoryId: t });
+                            l.uf({
+                                categoryId: t,
+                            });
                     }
                 }
             });

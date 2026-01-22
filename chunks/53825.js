@@ -1,4 +1,6 @@
-i.d(e, { N: () => c });
+i.d(e, {
+    N: () => c,
+});
 var n = i(627968),
     l = i(64700),
     s = i(284009),
@@ -50,7 +52,10 @@ let c = (0, S.E2)(d.X.CLIPS_SCREENSHOT_KEYBIND, {
                         }
                         return t;
                     })({}, e)),
-                    (n = n = { shortcut: t }),
+                    (n = n =
+                        {
+                            shortcut: t,
+                        }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(n))
                         : (function (t, e) {

@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -8,6 +10,7 @@ var r = n(627968),
     c = n(778712),
     u = n(985018),
     d = n(353074);
+
 function f(e) {
     let { affinities: t, className: n } = e,
         a = (e) => (null != e.globalName ? e.globalName : e.username),

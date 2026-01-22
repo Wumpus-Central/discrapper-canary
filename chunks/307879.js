@@ -22,6 +22,7 @@ var r = n(503698),
     O = n(652215),
     S = n(985018),
     E = n(944171);
+
 function A(e) {
     let { isTooltip: t = !1 } = e,
         n = [
@@ -65,7 +66,9 @@ function A(e) {
                   children: S.intl.format(S.t["8XLD3r"], {}),
               });
     return (0, l.jsxs)("div", {
-        className: i()(E.SI, E.f5, { [E.YL]: t }),
+        className: i()(E.SI, E.f5, {
+            [E.YL]: t,
+        }),
         children: [
             r,
             (0, l.jsx)("div", {
@@ -75,7 +78,9 @@ function A(e) {
                     return (0, l.jsxs)(
                         "div",
                         {
-                            className: i()(E.CQ, { [E.wH]: o }),
+                            className: i()(E.CQ, {
+                                [E.wH]: o,
+                            }),
                             children: [
                                 (0, l.jsx)("span", {
                                     role: "img",
@@ -106,6 +111,7 @@ function A(e) {
         ],
     });
 }
+
 function x() {
     let e = [
         {
@@ -133,8 +139,11 @@ function x() {
             adminTitle: S.intl.string(S.t["uvM+xc"]),
         },
     ];
-    return (0, l.jsx)(d.e, { testimonials: e });
+    return (0, l.jsx)(d.e, {
+        testimonials: e,
+    });
 }
+
 function _() {
     let e = (0, s.bG)([N.A], () => N.A.getGuildId()),
         t = (0, s.bG)([g.A], () => g.A.getGuild(e)),
@@ -360,7 +369,9 @@ function _() {
                                           return (0, l.jsxs)(
                                               "div",
                                               {
-                                                  className: i()(E.CQ, E.p9, { [E.wH]: s }),
+                                                  className: i()(E.CQ, E.p9, {
+                                                      [E.wH]: s,
+                                                  }),
                                                   children: [
                                                       (0, l.jsxs)("div", {
                                                           className: E.Ix,
@@ -374,7 +385,9 @@ function _() {
                                                           ],
                                                       }),
                                                       (0, l.jsx)("div", {
-                                                          className: i()(E.kv, { [E.wH]: s }),
+                                                          className: i()(E.kv, {
+                                                              [E.wH]: s,
+                                                          }),
                                                           children:
                                                               s &&
                                                               (0, l.jsx)(a.A9s, {

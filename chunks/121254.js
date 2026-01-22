@@ -26,6 +26,7 @@ var r = n(284009),
     E = n(71393),
     b = n(860689),
     y = n(7864);
+
 function O(e, t, n) {
     return (
         t in e
@@ -39,6 +40,7 @@ function O(e, t, n) {
         e
     );
 }
+
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -55,6 +57,7 @@ function A(e) {
     }
     return e;
 }
+
 function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -67,6 +70,7 @@ function v(e, t) {
     }
     return n;
 }
+
 function S(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -78,6 +82,7 @@ function S(e, t) {
         e
     );
 }
+
 function I(e, t) {
     if (null == e) return {};
     var n,
@@ -94,6 +99,7 @@ function I(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function T(e, t) {
     if (null == e) return {};
     var n,
@@ -108,6 +114,7 @@ let C = new p.A("ReadyPayloadUtils"),
     N = {},
     R = null,
     w = {};
+
 function P(e, t) {
     var n;
     let [r, ...i] = [e, t],
@@ -148,6 +155,7 @@ function P(e, t) {
         })
     );
 }
+
 function D() {
     let e = o.A.database();
     return Promise.all([
@@ -163,6 +171,7 @@ function D() {
         };
     });
 }
+
 function x(e, t, n) {
     var r;
     let [a, ...o] = [e, t, n],
@@ -201,13 +210,16 @@ function x(e, t, n) {
         })
     );
 }
+
 function L(e, t, n) {
     return null == R || R.identifyTime !== e || (null != t && t.some((e) => e.id === R.guild.id)) ? null : n(R.guild);
 }
+
 function j(e) {
     let t = _.A.getGuildEmojis(e);
     return null != t ? Object.values(t) : null;
 }
+
 function M(e, t) {
     var n;
     let r = E.A.getGuild(e.id),
@@ -230,6 +242,7 @@ function M(e, t) {
         i
     );
 }
+
 function k(e, t) {
     let n = [];
     return (
@@ -245,10 +258,12 @@ function k(e, t) {
         n
     );
 }
+
 function U(e) {
     let t = N[e];
     return delete N[e], t;
 }
+
 function G(e) {
     null != o.A.database() &&
         !1 === e.databaseOk &&
@@ -268,6 +283,7 @@ function G(e) {
             });
     }
 }
+
 function V(e, t, n) {
     null != t || (t = []), null != n || (n = []);
     let r = new Set(n);
@@ -283,6 +299,7 @@ function V(e, t, n) {
         }
     );
 }
+
 function F(e) {
     var t, n, r, i, a, s, o, l;
     let c = U(e.id);
@@ -351,6 +368,7 @@ function F(e) {
         hasThreadsSubscription: e.has_threads_subscription,
     };
 }
+
 function B(e, t) {
     var n, r, i, a, s, o, l, c;
     if ((null == t && (t = U(e.id)), "partial" !== e.data_mode))
@@ -422,6 +440,7 @@ function B(e, t) {
         hasThreadsSubscription: e.has_threads_subscription,
     };
 }
+
 function H(e) {
     let t = [];
     if (null != e) for (let n of e) null != n.most_recent_message && t.push(n.most_recent_message);

@@ -23,7 +23,9 @@ let r = (() => {
     })();
 if (null == n.g.performance.timing)
     try {
-        n.g.performance.timing = { navigationStart: r };
+        n.g.performance.timing = {
+            navigationStart: r,
+        };
     } catch (e) {}
 if (null == n.g.performance.timeOrigin)
     try {

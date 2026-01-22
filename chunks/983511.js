@@ -1,4 +1,8 @@
-n.d(t, { default: () => k }), n(65821), n(896048);
+n.d(t, {
+    default: () => k,
+}),
+    n(65821),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(735438),
@@ -28,6 +32,7 @@ var r = n(627968),
     R = n(818348),
     w = n(985018),
     P = n(397415);
+
 function D(e) {
     let {
             premiumSubscription: t,
@@ -37,15 +42,22 @@ function D(e) {
             onClose: s,
             transitionState: l,
         } = e,
-        c = w.intl.format(w.t.otHdfR, { endDate: t.currentPeriodEnd });
+        c = w.intl.format(w.t.otHdfR, {
+            endDate: t.currentPeriodEnd,
+        });
     t.isPurchasedExternally && null != t.paymentGateway
         ? (c = w.intl.format(w.t.HbpFLg, {
               paymentGatewayName: R.qm[t.paymentGateway],
               subscriptionManagementLink: (0, I.tW)(t.paymentGateway, "SUBSCRIPTION_MANAGEMENT"),
           }))
         : t.isPausedForFractionalPremium
-          ? (c = w.intl.format(w.t.Hzqe6y, { expirationDate: n.endsAt.toDate() }))
-          : i && (c = w.intl.format(w.t.gXSnul, { endDate: t.currentPeriodEnd }));
+          ? (c = w.intl.format(w.t.Hzqe6y, {
+                expirationDate: n.endsAt.toDate(),
+            }))
+          : i &&
+            (c = w.intl.format(w.t.gXSnul, {
+                endDate: t.currentPeriodEnd,
+            }));
     let u = i ? w.intl.string(w.t.iIoSd6) : w.intl.string(w.t.Skzv0u),
         d = t.isPurchasedExternally
             ? []
@@ -69,10 +81,18 @@ function D(e) {
         actions: d,
         children: (0, r.jsxs)("div", {
             className: P.rf,
-            children: [(0, r.jsx)("div", { className: P.OC }), (0, r.jsx)("div", { children: c })],
+            children: [
+                (0, r.jsx)("div", {
+                    className: P.OC,
+                }),
+                (0, r.jsx)("div", {
+                    children: c,
+                }),
+            ],
         }),
     });
 }
+
 function x() {
     let e = Object.values(O.A.boostSlots),
         t = s().sortBy(
@@ -88,7 +108,9 @@ async function L(e, t, n, r) {
     await (0, d.HJ)(i),
         await (0, u.nV)(
             e,
-            { items: a },
+            {
+                items: a,
+            },
             {
                 amount: 0,
                 currency: e.currency,
@@ -97,6 +119,7 @@ async function L(e, t, n, r) {
             n,
         );
 }
+
 function j(e) {
     var t, n, a;
     let { premiumSubscription: s, guildBoostSlotId: o, fractionalPremiumInfo: u, onBack: d, onNext: _, onClose: O } = e,
@@ -160,11 +183,15 @@ function j(e) {
         }),
         W = H || Y ? B.total - V.total : -V.total,
         { interval: K, intervalCount: z } = k,
-        q = w.intl.format(w.t["0W23cu"], { endDate: B.subscriptionPeriodStart });
+        q = w.intl.format(w.t["0W23cu"], {
+            endDate: B.subscriptionPeriodStart,
+        });
     return (
         s.isPausedForFractionalPremium &&
             u.fetched &&
-            (q = w.intl.format(w.t.eb0xgS, { expirationDate: u.endsAt.toDate() })),
+            (q = w.intl.format(w.t.eb0xgS, {
+                expirationDate: u.endsAt.toDate(),
+            })),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(C.A, {
@@ -183,13 +210,19 @@ function j(e) {
                                     children: R,
                                 }),
                             }),
-                        (0, r.jsx)("div", { children: q }),
+                        (0, r.jsx)("div", {
+                            children: q,
+                        }),
                         (0, r.jsxs)(E.Yx, {
                             className: P.S,
                             children: [
-                                (0, r.jsx)(E.Xd, { children: w.intl.string(w.t.iqhIp4) }),
+                                (0, r.jsx)(E.Xd, {
+                                    children: w.intl.string(w.t.iqhIp4),
+                                }),
                                 (0, r.jsx)(E.oR, {
-                                    label: w.intl.format(w.t["Vg+LRr"], { subscriptionCount: 1 }),
+                                    label: w.intl.format(w.t["Vg+LRr"], {
+                                        subscriptionCount: 1,
+                                    }),
                                     value: (0, T.CE)((0, T.$g)(W, s.currency), K, z),
                                     className: P.Au,
                                 }),
@@ -226,13 +259,16 @@ function j(e) {
                                 }
                             },
                         }),
-                        (0, r.jsx)(b.A, { onClick: d }),
+                        (0, r.jsx)(b.A, {
+                            onClick: d,
+                        }),
                     ],
                 }),
             ],
         })
     );
 }
+
 function M(e) {
     let { premiumSubscription: t, fractionalPremiumInfo: n, onClose: i, transitionState: a } = e,
         s = t.currentPeriodEnd;
@@ -253,12 +289,19 @@ function M(e) {
         children: (0, r.jsxs)("div", {
             className: P.rf,
             children: [
-                (0, r.jsx)("div", { className: P.OC }),
-                (0, r.jsx)("div", { children: w.intl.format(w.t["H+z0ns"], { endDate: s }) }),
+                (0, r.jsx)("div", {
+                    className: P.OC,
+                }),
+                (0, r.jsx)("div", {
+                    children: w.intl.format(w.t["H+z0ns"], {
+                        endDate: s,
+                    }),
+                }),
             ],
         }),
     });
 }
+
 function k(e) {
     let t,
         { guildBoostSlot: n, transitionState: a, onClose: s } = e;

@@ -1,4 +1,6 @@
-n.d(t, { $: () => _ });
+n.d(t, {
+    $: () => _,
+});
 var r = n(457312),
     i = n(701366),
     a = n(217512),
@@ -9,9 +11,11 @@ var r = n(457312),
     u = n(803082),
     d = n(47276),
     f = n(64700);
+
 function p(e) {
     return e && e.__esModule ? e.default : e;
 }
+
 function _(e, t) {
     let n = (0, d.o)(p(i.A), "@react-aria/calendar"),
         _ = (0, s.$)(e),
@@ -22,7 +26,7 @@ function _(e, t) {
     }, [m]);
     let g = (0, r.ZI)(t);
     (0, o.w)(() => {
-        g && (0, a.iP)(g, "polite", 4000);
+        g && (0, a.iP)(g, "polite", 4e3);
     }, [g]);
     let E = (0, l.X1)([!!e.errorMessage, e.isInvalid, e.validationState]);
     r.OX.set(t, {
@@ -60,7 +64,9 @@ function _(e, t) {
             isDisabled: S,
             onFocusChange: v,
         },
-        errorMessageProps: { id: E },
+        errorMessageProps: {
+            id: E,
+        },
         title: h,
     };
 }

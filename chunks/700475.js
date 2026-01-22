@@ -1,18 +1,29 @@
-n.d(t, { a: () => s });
+n.d(t, {
+    a: () => s,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
     l = n(587895),
     a = n(851907);
+
 function s(e) {
     let { applicationId: t, customId: s, linkId: o, message: c, onShare: u } = e,
         d = l.A.getApplication(t);
     if (null == d) return void u(!1, !1);
-    let p = null != (0, a.LU)({ applicationId: d.id }) ? i.KX8 : i.SYi,
+    let p =
+            null !=
+            (0, a.LU)({
+                applicationId: d.id,
+            })
+                ? i.KX8
+                : i.SYi,
         f = !1;
+
     function h(e) {
         u(e, f);
     }
+
     function A() {
         f = !0;
     }

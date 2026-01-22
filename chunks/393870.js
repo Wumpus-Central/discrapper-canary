@@ -1,4 +1,7 @@
-l.d(e, { default: () => w }), l(896048);
+l.d(e, {
+    default: () => w,
+}),
+    l(896048);
 var r = l(627968);
 l(64700);
 var n = l(106778),
@@ -56,7 +59,9 @@ let w = (t) => {
         })(V),
         { promotionalRewardCollectedText: W, openProfileSettings: $ } =
             ((l = (0, c.A)()),
-            (w = (0, d.A)({ analyticsLocations: B })),
+            (w = (0, d.A)({
+                analyticsLocations: B,
+            })),
             {
                 giftingPromotionConfig: l,
                 promotionalRewardCollectedText:
@@ -146,7 +151,9 @@ let w = (t) => {
                     actions: tt,
                 }),
                 null != Q
-                    ? (0, r.jsx)(x.K, { options: Q })
+                    ? (0, r.jsx)(x.K, {
+                          options: Q,
+                      })
                     : (0, r.jsx)(v.A, {
                           confettiTarget: z.current,
                           confettiCanvas: H,

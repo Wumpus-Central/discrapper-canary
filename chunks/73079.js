@@ -1,4 +1,8 @@
-n.d(t, { A: () => D }), n(896048), n(321073);
+n.d(t, {
+    A: () => D,
+}),
+    n(896048),
+    n(321073);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -19,6 +23,7 @@ var r = n(627968),
     y = n(985018),
     O = n(577991),
     A = n(20976);
+
 function v(e, t, n) {
     return (
         t in e
@@ -32,6 +37,7 @@ function v(e, t, n) {
         e
     );
 }
+
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -48,6 +54,7 @@ function S(e) {
     }
     return e;
 }
+
 function I(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -60,6 +67,7 @@ function I(e, t) {
     }
     return n;
 }
+
 function T(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -90,7 +98,7 @@ let C = new _.A("ChoosePaymentSourceType"),
         [b.hes.IDEAL]: h.Ay.Types.IDEAL,
         [b.hes.CASH_APP]: h.Ay.Types.CASH_APP,
     },
-    R = 1000,
+    R = 1e3,
     w = "40c266_1";
 class P extends i.PureComponent {
     componentDidMount() {
@@ -110,7 +118,13 @@ class P extends i.PureComponent {
                 .concat(t.join(", "), ". Max time allowed: ")
                 .concat(R, " ms"),
         );
-        let n = t.reduce((e, t) => T(S({}, e), { ["".concat(t, "Loaded")]: !0 }), {});
+        let n = t.reduce(
+            (e, t) =>
+                T(S({}, e), {
+                    ["".concat(t, "Loaded")]: !0,
+                }),
+            {},
+        );
         this.setState(n);
     }
     arePaymentRequestWalletsLoading() {
@@ -123,7 +137,9 @@ class P extends i.PureComponent {
     }
     toggleAllPayments() {
         let { showAllPaymentMethods: e } = this.state;
-        this.setState({ showAllPaymentMethods: !e });
+        this.setState({
+            showAllPaymentMethods: !e,
+        });
     }
     createPaymentButtons(e) {
         return e.map((e) => {
@@ -171,7 +187,10 @@ class P extends i.PureComponent {
                 paymentRequestPaymentContext: u,
             },
             g = h.map((e, t) => {
-                let n = () => this.setState({ ["".concat(e, "Loaded")]: !0 }),
+                let n = () =>
+                        this.setState({
+                            ["".concat(e, "Loaded")]: !0,
+                        }),
                     i = {
                         onValidPaymentRequest: n,
                         onPaymentRequestFailure: n,
@@ -209,12 +228,19 @@ class P extends i.PureComponent {
                     children: (0, r.jsxs)(c.DUT, {
                         onClick: () => this.toggleAllPayments(),
                         className: s()(A.Uu, O.pn),
-                        children: [y.intl.string(y.t["4uiQmz"]), (0, r.jsx)(d.A, { open: t })],
+                        children: [
+                            y.intl.string(y.t["4uiQmz"]),
+                            (0, r.jsx)(d.A, {
+                                open: t,
+                            }),
+                        ],
                     }),
                 }),
                 t &&
                     (0, r.jsx)("div", {
-                        className: s()(A.LV, A.xM, O.eH, O.kL, { [A.Uu]: t }),
+                        className: s()(A.LV, A.xM, O.eH, O.kL, {
+                            [A.Uu]: t,
+                        }),
                         children: b,
                     }),
             ],
@@ -228,12 +254,17 @@ class P extends i.PureComponent {
                             className: O.R,
                             children: g,
                         }),
-                        (0, r.jsx)(c.y$y, { type: c.y$y.Type.SPINNING_CIRCLE }),
+                        (0, r.jsx)(c.y$y, {
+                            type: c.y$y.Type.SPINNING_CIRCLE,
+                        }),
                     ],
                 })),
             (0, r.jsxs)("div", {
                 children: [
-                    _ && (0, r.jsx)("hr", { className: O.cL }),
+                    _ &&
+                        (0, r.jsx)("hr", {
+                            className: O.cL,
+                        }),
                     (0, r.jsx)("div", {
                         className: i,
                         children: (0, r.jsx)(c.D0$, {
@@ -241,7 +272,10 @@ class P extends i.PureComponent {
                             children: I,
                         }),
                     }),
-                    _ && (0, r.jsx)("hr", { className: O.nD }),
+                    _ &&
+                        (0, r.jsx)("hr", {
+                            className: O.nD,
+                        }),
                 ],
             })
         );

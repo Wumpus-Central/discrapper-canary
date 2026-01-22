@@ -1,4 +1,6 @@
-n.d(t, { A: () => E });
+n.d(t, {
+    A: () => E,
+});
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -30,6 +32,7 @@ let v = {
         y: 0,
     },
 };
+
 function x(e) {
     (0, s.L3)(e, async () => {
         let { default: e } = await n.e("17288").then(n.bind(n, 4571));
@@ -64,6 +67,7 @@ function x(e) {
             );
     });
 }
+
 function E(e) {
     let { disableTooltip: t, lastTargetNode: n } = e,
         s = (0, i.yK)([h.A], () => h.A.getGuildsArray()),
@@ -77,14 +81,18 @@ function E(e) {
             onClick: () => {
                 (0, u.Sn)()
                     ? (0, d.A)({
-                          analyticsSource: { page: A.ThZ.CREATE_JOIN_GUILD_MODAL },
+                          analyticsSource: {
+                              page: A.ThZ.CREATE_JOIN_GUILD_MODAL,
+                          },
                           analyticsLocation: {
                               page: A.ThZ.CREATE_JOIN_GUILD_MODAL,
                               section: A.JJy.GUILD_CAP_UPSELL_MODAL,
                           },
                           analyticsLocations: S,
                       })
-                    : c.A.openCreateGuildModal({ location: "Guild List" });
+                    : c.A.openCreateGuildModal({
+                          location: "Guild List",
+                      });
             },
             selected: C,
             onContextMenu: x,

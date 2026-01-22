@@ -1,4 +1,7 @@
-n.d(t, { A: () => ey }), n(896048);
+n.d(t, {
+    A: () => ey,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -61,6 +64,7 @@ var r = n(627968),
     eo = n(985018),
     ec = n(563429),
     eu = n(117816);
+
 function ed(e) {
     let { channel: t } = e,
         { parentAnalyticsLocation: n } = (0, p.Ay)(),
@@ -96,7 +100,11 @@ function ed(e) {
                 onClick: () => {
                     (0, A.X)(n, A.O.REQUEST_TO_SPEAK, !o),
                         O(!0),
-                        b ? u.A.showAgeVerificationGetStartedModal({ entryPoint: d.q1.STAGE_CHANNEL_RAISE_HAND }) : f();
+                        b
+                            ? u.A.showAgeVerificationGetStartedModal({
+                                  entryPoint: d.q1.STAGE_CHANNEL_RAISE_HAND,
+                              })
+                            : f();
                 },
                 color: o ? "green" : void 0,
                 disabled: !h && !o,
@@ -137,15 +145,26 @@ let ef = l.memo(function (e) {
             (0, r.jsxs)("div", {
                 className: ec.qi,
                 children: [
-                    (0, r.jsx)(eg, { channelId: t.id }),
-                    n ? (0, r.jsx)(ed, { channel: t }) : null,
-                    (0, r.jsx)(w.A, { channel: t }),
+                    (0, r.jsx)(eg, {
+                        channelId: t.id,
+                    }),
+                    n
+                        ? (0, r.jsx)(ed, {
+                              channel: t,
+                          })
+                        : null,
+                    (0, r.jsx)(w.A, {
+                        channel: t,
+                    }),
                 ],
             }),
-            (0, r.jsx)(eh, { channel: t }),
+            (0, r.jsx)(eh, {
+                channel: t,
+            }),
         ],
     });
 });
+
 function ep(e) {
     let { channel: t } = e,
         { parentAnalyticsLocation: n } = (0, p.Ay)();
@@ -153,13 +172,16 @@ function ep(e) {
         isTrayButton: !0,
         onClick: () => {
             ((0, A.X)(n, A.O.SPEAK_ON_STAGE), (0, el.Cf)(t.id))
-                ? u.A.showAgeVerificationGetStartedModal({ entryPoint: d.q1.STAGE_CHANNEL_RAISE_HAND })
+                ? u.A.showAgeVerificationGetStartedModal({
+                      entryPoint: d.q1.STAGE_CHANNEL_RAISE_HAND,
+                  })
                 : (0, z.e7)(t, !1);
         },
         iconComponent: s.LvC,
         label: eo.intl.string(eo.t["8Joh+p"]),
     });
 }
+
 function eh(e) {
     let { channel: t, onSelect: n } = e,
         a = (0, _.Us)(),
@@ -195,7 +217,9 @@ function eh(e) {
                           "aria-label": eo.intl.string(eo.t["3Uj+2p"]),
                           onClose: l,
                           onSelect: n,
-                          onInteraction: (0, y.s)("End Stage", x, { entrypoint: es.GK.CARET }),
+                          onInteraction: (0, y.s)("End Stage", x, {
+                              entrypoint: es.GK.CARET,
+                          }),
                           children: (0, r.jsx)(s.Drp, {
                               id: "end-stage",
                               color: "danger",
@@ -232,6 +256,7 @@ function eh(e) {
                 onClick: S,
             });
 }
+
 function eb(e) {
     let { channel: t } = e,
         { parentAnalyticsLocation: n } = (0, p.Ay)();
@@ -244,6 +269,7 @@ function eb(e) {
         },
     });
 }
+
 function eg(e) {
     let { channelId: t } = e,
         { parentAnalyticsLocation: n } = (0, p.Ay)(),
@@ -289,7 +315,9 @@ let em = l.memo(function (e) {
         V = (0, Q.qT)(t.id),
         H = E > 0,
         W = (_ && !V) || (null != G && G.user.id !== (null == C ? void 0 : C.id)),
-        z = (0, y.s)("AudioDeviceMenu", n, { entrypoint: es.GK.CARET }),
+        z = (0, y.s)("AudioDeviceMenu", n, {
+            entrypoint: es.GK.CARET,
+        }),
         q = l.useRef(null),
         X = l.useRef(null);
     if (null == C) return null;
@@ -301,7 +329,9 @@ let em = l.memo(function (e) {
                 children: (0, r.jsx)(g.A, {
                     onClose: t,
                     minimal: !0,
-                    onInteraction: (0, y.s)("VideoDeviceMenu", n, { entrypoint: es.GK.CARET }),
+                    onInteraction: (0, y.s)("VideoDeviceMenu", n, {
+                        entrypoint: es.GK.CARET,
+                    }),
                 }),
             });
         },
@@ -389,17 +419,37 @@ let em = l.memo(function (e) {
                               disabled: W,
                           })
                         : null,
-                    (0, r.jsx)(eg, { channelId: t.id }),
-                    L && (0, r.jsx)(ed, { channel: t }),
-                    L && u && a && d && (0, r.jsx)(ep, { channel: t }),
-                    L && !a && (0, r.jsx)(eb, { channel: t }),
-                    (0, r.jsx)(w.A, { channel: t }),
+                    (0, r.jsx)(eg, {
+                        channelId: t.id,
+                    }),
+                    L &&
+                        (0, r.jsx)(ed, {
+                            channel: t,
+                        }),
+                    L &&
+                        u &&
+                        a &&
+                        d &&
+                        (0, r.jsx)(ep, {
+                            channel: t,
+                        }),
+                    L &&
+                        !a &&
+                        (0, r.jsx)(eb, {
+                            channel: t,
+                        }),
+                    (0, r.jsx)(w.A, {
+                        channel: t,
+                    }),
                 ],
             }),
-            (0, r.jsx)(eh, { channel: t }),
+            (0, r.jsx)(eh, {
+                channel: t,
+            }),
         ],
     });
 });
+
 function eA(e) {
     let { channel: t } = e;
     return (0, r.jsxs)("div", {
@@ -407,9 +457,13 @@ function eA(e) {
         children: [
             (0, r.jsx)("div", {
                 className: ec.qi,
-                children: (0, r.jsx)(eg, { channelId: t.id }),
+                children: (0, r.jsx)(eg, {
+                    channelId: t.id,
+                }),
             }),
-            (0, r.jsx)(eh, { channel: t }),
+            (0, r.jsx)(eh, {
+                channel: t,
+            }),
         ],
     });
 }
@@ -423,7 +477,9 @@ let ey = l.memo(function (e) {
         u = (0, i.bG)([h.A], () => (null != t ? h.A.getSelectedParticipant(t.id) : null)),
         d = !c && null == u;
     return n
-        ? (0, r.jsx)(eA, { channel: t })
+        ? (0, r.jsx)(eA, {
+              channel: t,
+          })
         : l || a
           ? (0, r.jsxs)("div", {
                 className: ec.My,
@@ -431,19 +487,31 @@ let ey = l.memo(function (e) {
                     (0, r.jsxs)("div", {
                         className: ec.Ac,
                         children: [
-                            d ? (0, r.jsx)(x.A, { channelId: null == t ? void 0 : t.id }) : null,
-                            (0, r.jsx)("div", { className: ec.me }),
+                            d
+                                ? (0, r.jsx)(x.A, {
+                                      channelId: null == t ? void 0 : t.id,
+                                  })
+                                : null,
+                            (0, r.jsx)("div", {
+                                className: ec.me,
+                            }),
                             d && s && !o
                                 ? (0, r.jsx)(E.A, {
                                       highlight: !0,
                                       channel: t,
                                   })
                                 : null,
-                            (0, r.jsx)("div", { className: ec.me }),
+                            (0, r.jsx)("div", {
+                                className: ec.me,
+                            }),
                         ],
                     }),
-                    (0, r.jsx)(em, { channel: t }),
+                    (0, r.jsx)(em, {
+                        channel: t,
+                    }),
                 ],
             })
-          : (0, r.jsx)(ef, { channel: t });
+          : (0, r.jsx)(ef, {
+                channel: t,
+            });
 });

@@ -1,8 +1,12 @@
-n.d(t, { m: () => s }), n(896048);
+n.d(t, {
+    m: () => s,
+}),
+    n(896048);
 var a = n(64700),
     l = n(216456),
     i = n(341915),
     r = n(652215);
+
 function s(e) {
     let {
             quest: t,
@@ -62,7 +66,9 @@ function s(e) {
                 sourceQuestContent: i.uF.QUEST_BAR_V2,
             }),
                 (h.current = !0),
-                C({ withDelay: !0 });
+                C({
+                    withDelay: !0,
+                });
         }, [C, m, t.id]),
         N = a.useCallback(() => {
             var e;

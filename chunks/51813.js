@@ -4,6 +4,7 @@ n.d(t, {
     qX: () => l,
 });
 var r = n(64700);
+
 function i(e, t) {
     var n = function (e) {
             return t && (0, r.isValidElement)(e) ? t(e) : e;
@@ -19,6 +20,7 @@ function i(e, t) {
         i
     );
 }
+
 function a(e, t) {
     function n(n) {
         return n in t ? t[n] : e[n];
@@ -40,9 +42,11 @@ function a(e, t) {
     for (r = 0; r < a.length; r++) o[a[r]] = n(a[r]);
     return o;
 }
+
 function s(e, t, n) {
     return null != n[t] ? n[t] : e.props[t];
 }
+
 function o(e, t) {
     return i(e.children, function (n) {
         return (0, r.cloneElement)(n, {
@@ -54,6 +58,7 @@ function o(e, t) {
         });
     });
 }
+
 function l(e, t, n) {
     var o = i(e.children),
         l = a(t, o);
@@ -82,7 +87,9 @@ function l(e, t, n) {
                             exit: s(a, "exit", e),
                             enter: s(a, "enter", e),
                         }))
-                      : (l[i] = (0, r.cloneElement)(a, { in: !1 }));
+                      : (l[i] = (0, r.cloneElement)(a, {
+                            in: !1,
+                        }));
             }
         }),
         l

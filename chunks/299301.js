@@ -87,7 +87,9 @@ let _ = (e) => {
         if ("PREMIUM_WITH_TRIAL" === t.type)
             return (0, r.jsxs)("div", {
                 children: [
-                    (0, r.jsx)(l.pK, { negativeMarginTop: !m }),
+                    (0, r.jsx)(l.pK, {
+                        negativeMarginTop: !m,
+                    }),
                     (0, r.jsxs)(l.Yx, {
                         className: a()(f.SU, v),
                         children: [
@@ -135,7 +137,9 @@ let _ = (e) => {
                         (0, r.jsxs)(l.Yx, {
                             className: a()(f.SU, v),
                             children: [
-                                (0, r.jsx)(l.Xd, { children: d.intl.string(d.t["2eh+Co"]) }),
+                                (0, r.jsx)(l.Xd, {
+                                    children: d.intl.string(d.t["2eh+Co"]),
+                                }),
                                 (0, r.jsx)(u.mT, {
                                     invoice: S,
                                     newPlan: E,

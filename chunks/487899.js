@@ -1,4 +1,7 @@
-n.d(t, { L: () => r }), n(896048);
+n.d(t, {
+    L: () => r,
+}),
+    n(896048);
 var r = (function (e) {
     return (
         (e[(e.APPLICATION = 1)] = "APPLICATION"),

@@ -35,6 +35,7 @@ var T =
     (l[(l.NO_AGREEMENT = 1)] = "NO_AGREEMENT"),
     (l[(l.AGREED = 2)] = "AGREED"),
     l);
+
 function f(e, t) {
     var n, l;
     let r = (0, i.bG)([E.default], () => E.default.getUser(e), [e]),
@@ -50,6 +51,7 @@ function f(e, t) {
               : 1
         : 0;
 }
+
 function h(e, t) {
     var n;
     let l = (0, i.bG)([E.default], () => E.default.getUser(e), [e]),
@@ -60,14 +62,17 @@ function h(e, t) {
         u = (null == r ? void 0 : r.joinedAt) != null;
     return l.verified || o || u || s;
 }
+
 function I(e) {
     let t = (0, i.bG)([o.default], () => o.default.locale);
     return r.useMemo(() => new Date(d.default.extractTimestamp(e)).toLocaleDateString(t, g), [e, t]);
 }
+
 function O(e) {
     let t = (0, i.bG)([o.default], () => o.default.locale);
     return r.useMemo(() => new Date(d.default.extractTimestamp(e)).toLocaleDateString(t, A), [e, t]);
 }
+
 function N(e, t) {
     let n = (0, i.bG)([o.default], () => o.default.locale),
         l = (0, i.bG)([c.Ay], () => c.Ay.getMember(t, e), [t, e]),

@@ -1,4 +1,7 @@
-n.d(t, { A: () => m }), n(896048);
+n.d(t, {
+    A: () => m,
+}),
+    n(896048);
 var i = n(627968),
     r = n(64700),
     l = n(311907),
@@ -11,6 +14,7 @@ var i = n(627968),
     p = n(243612),
     h = n(652215),
     f = n(553777);
+
 function m(e) {
     let { locked: t } = e,
         n = (0, p.b4)(),
@@ -44,7 +48,7 @@ function m(e) {
         }, []),
         x = (0, u.Dk)(() => O, [O]),
         j = (0, u.Dk)(() => v, [v]),
-        I = (0, a.I)(u.Y, 3000, []);
+        I = (0, a.I)(u.Y, 3e3, []);
     r.useEffect(() => {
         0 === x.size ||
             t ||
@@ -147,7 +151,10 @@ function m(e) {
                         }
                         return e;
                     })({}, n)),
-                    (r = r = { userId: t }),
+                    (r = r =
+                        {
+                            userId: t,
+                        }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(r))
                         : (function (e, t) {

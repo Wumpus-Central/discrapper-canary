@@ -1,5 +1,8 @@
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 var r = n(200427);
+
 function i(e, t) {
     e.classList
         ? e.classList.add(t)

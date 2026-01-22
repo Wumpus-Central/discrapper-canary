@@ -5,6 +5,7 @@ n.d(t, {
 var r = n(954571),
     i = n(814758),
     l = n(652215);
+
 function s(e, t) {
     let n = !1,
         i = {
@@ -18,6 +19,7 @@ function s(e, t) {
         (null == t || e.rulesChannelId !== t.rulesChannelId) && ((i.rules_channel_id = e.rulesChannelId), (n = !0)),
         n && r.default.track(l.HAw.GUILD_SETTINGS_DISCOVERY_UPDATED, i);
 }
+
 function a(e) {
     var t, n;
     return null != (t = null == (n = i.Dz[e]) ? void 0 : n.map((e) => e())) ? t : [];

@@ -1,10 +1,14 @@
-n.d(t, { A: () => v }), n(896048);
+n.d(t, {
+    A: () => v,
+}),
+    n(896048);
 var r = n(562465),
     i = n(439372),
     a = n(924985),
     s = n(734057),
     o = n(927813),
     l = n(652215);
+
 function c(e, t, n) {
     return (
         t in e
@@ -18,6 +22,7 @@ function c(e, t, n) {
         e
     );
 }
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,6 +39,7 @@ function u(e) {
     }
     return e;
 }
+
 function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -46,6 +52,7 @@ function d(e, t) {
     }
     return n;
 }
+
 function f(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -60,9 +67,11 @@ function f(e, t) {
 let p = {},
     _ = 0,
     h = 15 * o.A.Millis.SECOND;
+
 function m() {
     p = u({}, a.A.getCollapsedCategories());
 }
+
 function g() {
     __OVERLAY__ || (clearTimeout(_), (_ = setTimeout(() => b({}), h)));
 }
@@ -73,7 +82,13 @@ async function E(e, t) {
               body: t,
               rejectWithError: !1,
           })
-        : await b(null != t ? { [null != e ? e : l.ME]: t } : {});
+        : await b(
+              null != t
+                  ? {
+                        [null != e ? e : l.ME]: t,
+                    }
+                  : {},
+          );
 }
 async function b(e) {
     clearTimeout(_);
@@ -97,12 +112,15 @@ async function b(e) {
           (
               await r.Bo.patch({
                   url: l.Rsh.USER_GUILD_SETTINGS_BULK,
-                  body: { guilds: e },
+                  body: {
+                      guilds: e,
+                  },
                   rejectWithError: !1,
               })
           ).body)
         : [];
 }
+
 function y() {
     let e = {},
         t = a.A.getCollapsedCategories();
@@ -110,6 +128,7 @@ function y() {
     for (let n in p) t[n] !== p[n] && (e[n] = !0);
     return e;
 }
+
 function O() {
     p = u({}, a.A.getCollapsedCategories());
 }

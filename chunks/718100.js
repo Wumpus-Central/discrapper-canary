@@ -1,4 +1,6 @@
-r.d(t, { A: () => O });
+r.d(t, {
+    A: () => O,
+});
 var n = r(627968),
     l = r(64700),
     i = r(503698),
@@ -13,6 +15,7 @@ var n = r(627968),
     x = r(278539),
     g = r(985018),
     b = r(606586);
+
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
@@ -38,6 +41,7 @@ function A(e) {
     }
     return e;
 }
+
 function h(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -56,6 +60,7 @@ function h(e, t) {
         e
     );
 }
+
 function f(e, t) {
     if (null == e) return {};
     var r,
@@ -90,10 +95,18 @@ let v = () => 80,
             c = f(e, ["children", "className", "onSelect", "isSelected"]);
         return (0, n.jsx)(
             s.DUT,
-            h(A({ className: a()(b.eA, i ? b.wH : void 0, r) }, c), {
-                onClick: l,
-                children: t,
-            }),
+            h(
+                A(
+                    {
+                        className: a()(b.eA, i ? b.wH : void 0, r),
+                    },
+                    c,
+                ),
+                {
+                    onClick: l,
+                    children: t,
+                },
+            ),
         );
     },
     j = (e) => {
@@ -237,7 +250,9 @@ let v = () => 80,
                 let { header: r } = u[e];
                 return (0, n.jsx)("div", {
                     className: b.so,
-                    style: h(A({}, t), { position: "absolute" }),
+                    style: h(A({}, t), {
+                        position: "absolute",
+                    }),
                     children: (0, n.jsx)(s.Text, {
                         variant: "text-md/medium",
                         children: r,

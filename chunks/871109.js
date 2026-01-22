@@ -10,6 +10,7 @@ var r,
     s = n(73153),
     o = n(927813),
     l = n(661191);
+
 function c(e, t, n) {
     return (
         t in e
@@ -35,13 +36,16 @@ let d = {},
     f = {},
     p = {},
     _ = 10 * o.A.Millis.MINUTE,
-    h = 1000000000000;
+    h = 1e12;
+
 function m(e) {
     return "guild:".concat(e);
 }
+
 function g(e) {
     return "guild:".concat(e, ":published");
 }
+
 function E(e) {
     let t = l.default.extractTimestamp(e.id);
     return e.published ? -t : -t + h;
@@ -54,9 +58,11 @@ let b = new a.J(
         (e) => E(e),
     ),
     y = [];
+
 function O() {
     b.clear(), (d = {}), (f = {}), (p = {});
 }
+
 function A(e) {
     let { guildId: t } = e;
     (d[t] = 1),
@@ -64,6 +70,7 @@ function A(e) {
             b.delete(e.id);
         });
 }
+
 function v(e) {
     let { guildId: t, products: n } = e;
     (d[t] = 2),
@@ -72,30 +79,37 @@ function v(e) {
             b.set(e.id, e), (f[e.id] = 2);
         });
 }
+
 function S(e) {
     let { guildId: t } = e;
     d[t] = 2;
 }
+
 function I(e) {
     let { productId: t } = e;
     f[t] = 1;
 }
+
 function T(e) {
     let { product: t } = e;
     (f[t.id] = 2), b.set(t.id, t);
 }
+
 function C(e) {
     let { productId: t, error: n } = e;
     (f[t] = 2), 404 === n.status && b.delete(t);
 }
+
 function N(e) {
     let { product: t } = e;
     b.set(t.id, t);
 }
+
 function R(e) {
     let { product: t } = e;
     b.set(t.id, t);
 }
+
 function w(e) {
     let { productId: t } = e;
     b.delete(t);

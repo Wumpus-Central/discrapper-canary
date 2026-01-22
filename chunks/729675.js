@@ -28,6 +28,7 @@ var i = n(981737),
         "९": "9",
         "०": "0",
     };
+
 function o(e) {
     return Number(
         e.toString().replace(/[१२३४५६७८९०]/g, function (e) {
@@ -35,6 +36,7 @@ function o(e) {
         }),
     );
 }
+
 function d(e) {
     return e.toString().replace(/\d/g, function (e) {
         return a[e];

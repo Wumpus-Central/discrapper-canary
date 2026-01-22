@@ -27,6 +27,7 @@ var r = n(627968),
     x = n(652215),
     E = n(985018),
     _ = n(852570);
+
 function C(e) {
     var t, n, i, s, y, C, I;
     let { onJump: N, showTutorial: T, setSeenTutorial: P, closePopout: w } = e,
@@ -49,7 +50,10 @@ function C(e) {
             let s = a[r];
             if (null == s) return;
             let { scrollTop: o, offsetHeight: c } = l.getScrollerState();
-            (s.offsetTop < o || s.offsetTop > o + c) && l.scrollTo({ to: s.offsetTop });
+            (s.offsetTop < o || s.offsetTop > o + c) &&
+                l.scrollTo({
+                    to: s.offsetTop,
+                });
         }),
         (s = D),
         (y = M),
@@ -82,7 +86,9 @@ function C(e) {
             );
         }, [C]),
         l.useEffect(() => {
-            g.default.track(x.HAw.OPEN_POPOUT, { type: "Inbox" });
+            g.default.track(x.HAw.OPEN_POPOUT, {
+                type: "Inbox",
+            });
         }, []),
         l.useEffect(
             () => (
@@ -196,9 +202,17 @@ function C(e) {
                             onScroll: L === v.mJ.Done ? void 0 : k,
                             className: a()(_.XG, "group-spacing-".concat(U)),
                             children: [
-                                T ? (0, r.jsx)(S, { setSeenTutorial: P }) : null,
+                                T
+                                    ? (0, r.jsx)(S, {
+                                          setSeenTutorial: P,
+                                      })
+                                    : null,
                                 (0, j.A)(G, M, N),
-                                L === v.mJ.Done ? null : (0, r.jsx)(d.y$y, { className: _.u1 }),
+                                L === v.mJ.Done
+                                    ? null
+                                    : (0, r.jsx)(d.y$y, {
+                                          className: _.u1,
+                                      }),
                             ],
                         }),
                     Object.getOwnPropertyDescriptors
@@ -219,6 +233,7 @@ function C(e) {
         }),
     });
 }
+
 function S(e) {
     let { setSeenTutorial: t } = e;
     return (0, r.jsxs)("div", {
@@ -258,6 +273,7 @@ function S(e) {
         ],
     });
 }
+
 function I() {
     return (0, r.jsx)(O.A, {
         Icon: d.K$s,
@@ -266,4 +282,7 @@ function I() {
         tip: E.intl.string(E.t.cvcKzX),
     });
 }
-let N = () => (0, r.jsx)(y.A, { onClick: () => m._.dispatch(x.jej.INBOX_MARK_ALL_UNREADS_READ) });
+let N = () =>
+    (0, r.jsx)(y.A, {
+        onClick: () => m._.dispatch(x.jej.INBOX_MARK_ALL_UNREADS_READ),
+    });

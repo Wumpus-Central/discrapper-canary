@@ -11,6 +11,7 @@ var r = (function (e) {
         e
     );
 })({});
+
 function i(e) {
     if (null == e) return null;
     try {
@@ -19,6 +20,7 @@ function i(e) {
         return null;
     }
 }
+
 function a(e) {
     if (null == e) return null;
     let t = i(e);

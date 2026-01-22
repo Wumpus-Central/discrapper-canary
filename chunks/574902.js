@@ -1,4 +1,8 @@
-i.d(e, { A: () => f }), i(896048), i(321073);
+i.d(e, {
+    A: () => f,
+}),
+    i(896048),
+    i(321073);
 var s = i(111956),
     n = i.n(s),
     r = i(319060),
@@ -6,6 +10,7 @@ var s = i(111956),
     h = i(406340),
     l = i(364298),
     o = i(852431);
+
 function c(t, e, i) {
     return (
         e in t
@@ -21,8 +26,9 @@ function c(t, e, i) {
 }
 let d = (0, a.xI)(r.A.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
     u = 1 / 60;
+
 function p() {
-    return Math.min(Math.max(Math.min(0.8 * window.innerWidth, 0.8 * window.innerHeight), 780), 1000);
+    return Math.min(Math.max(Math.min(0.8 * window.innerWidth, 0.8 * window.innerHeight), 780), 1e3);
 }
 let f = class {
     initialize() {

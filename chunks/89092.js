@@ -1,4 +1,7 @@
-n.d(t, { A: () => N }), n(896048);
+n.d(t, {
+    A: () => N,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -23,6 +26,7 @@ var r = n(627968),
     H = n(985018),
     w = n(236671),
     A = n(918372);
+
 function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -48,6 +52,7 @@ function D(e) {
     }
     return e;
 }
+
 function S(e, t) {
     if (null == e) return {};
     var n,
@@ -94,7 +99,9 @@ let _ = l.forwardRef(function (e, t) {
                     {
                         innerRef: m,
                         onClick: c,
-                        className: o()(w.WV, { [w.o1]: null != c }),
+                        className: o()(w.WV, {
+                            [w.o1]: null != c,
+                        }),
                         children: [
                             (0, r.jsx)(u.Text, {
                                 variant: "eyebrow",
@@ -133,6 +140,7 @@ let _ = l.forwardRef(function (e, t) {
         })
     );
 });
+
 function N(e) {
     let { guildId: t, currentPagedMembers: n } = e,
         i = l.useRef(null),
@@ -183,7 +191,9 @@ function N(e) {
                             }),
                         }),
                     }),
-                (0, r.jsx)(_, { label: H.intl.string(H.t.Es7n9c) }),
+                (0, r.jsx)(_, {
+                    label: H.intl.string(H.t.Es7n9c),
+                }),
                 E
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
@@ -302,7 +312,10 @@ function N(e) {
                     position: "bottom",
                     spacing: 4,
                     align: "left",
-                    renderPopout: () => (0, r.jsx)(O.A, { guildId: t }),
+                    renderPopout: () =>
+                        (0, r.jsx)(O.A, {
+                            guildId: t,
+                        }),
                     children: (e) => {
                         let { onClick: t } = e,
                             n = S(e, ["onClick"]);

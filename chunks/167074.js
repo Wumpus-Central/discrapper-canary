@@ -1,4 +1,6 @@
-n.d(t, { f: () => u });
+n.d(t, {
+    f: () => u,
+});
 var r = n(136722),
     i = n(311907),
     a = n(406704),
@@ -6,6 +8,7 @@ var r = n(136722),
     o = n(576705),
     l = n(287809),
     c = n(652215);
+
 function u(e) {
     let t = e.getGuildId(),
         n = (0, i.bG)([s.Ay, l.default], () => {
@@ -26,7 +29,9 @@ function u(e) {
                 i = o.A.computePermissions(e),
                 s = r.zy(i, c.xBc.SEND_MESSAGES),
                 l = (0, a.UJ)(e);
-            return { messagesDisabled: n || (!t && !s) || l };
+            return {
+                messagesDisabled: n || (!t && !s) || l,
+            };
         }, [e, n]);
     return !u;
 }

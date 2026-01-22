@@ -1,5 +1,8 @@
 let r, i, a;
-n.d(t, { A: () => K }), n(896048);
+n.d(t, {
+    A: () => K,
+}),
+    n(896048);
 var s,
     o = n(735438),
     l = n(311907),
@@ -9,6 +12,7 @@ var s,
     f = n(773669),
     p = n(993408),
     _ = n(758836);
+
 function h(e, t, n) {
     return (
         t in e
@@ -112,8 +116,12 @@ let m = new Map(),
     H = () => {
         if (!u.A.hasLoadedExperiments) return;
         let { giftRecommendationAlgorithm: e } = d.P.getCurrentConfig(
-            { location: "CollectiblesCategoryStore handleExperimentChange" },
-            { autoTrackExposure: !1 },
+            {
+                location: "CollectiblesCategoryStore handleExperimentChange",
+            },
+            {
+                autoTrackExposure: !1,
+            },
         );
         e !== C && (i = void 0), (C = e);
     },

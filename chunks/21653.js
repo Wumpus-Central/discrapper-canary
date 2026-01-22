@@ -1,4 +1,7 @@
-n.d(t, { default: () => V }), n(896048);
+n.d(t, {
+    default: () => V,
+}),
+    n(896048);
 var l,
     r = n(627968),
     i = n(64700),
@@ -31,6 +34,7 @@ var l,
     D = n(652215),
     k = n(985018),
     G = n(643637);
+
 function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -63,6 +67,7 @@ var M =
     (l[(l.PREVIEW = 2)] = "PREVIEW"),
     (l[(l.SUCCESS = 3)] = "SUCCESS"),
     l);
+
 function U(e) {
     let { modal: t } = e,
         { createMultipleConfetti: n } = i.useContext(d.x);
@@ -129,6 +134,7 @@ function U(e) {
         null
     );
 }
+
 function z(e) {
     let {
             guildId: t,
@@ -213,7 +219,11 @@ function z(e) {
             parentComponent: "ScheduleEventModal",
             "data-migration-pending": !0,
             children: [
-                !X && H ? (0, r.jsx)(U, { modal: Y.current }) : null,
+                !X && H
+                    ? (0, r.jsx)(U, {
+                          modal: Y.current,
+                      })
+                    : null,
                 (0, r.jsxs)(o.$mQ, {
                     className: G.Qs,
                     scrollerRef: Y,
@@ -318,6 +328,7 @@ function z(e) {
         })
     );
 }
+
 function V(e) {
     let { guildId: t, guildScheduledEventId: l, transitionState: s, onClose: u } = e;
     (0, a.bG)([h.A], () => h.A.getGuild(t));

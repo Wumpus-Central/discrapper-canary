@@ -45,10 +45,12 @@ let R = {
     LOCKED: L.yg,
     HOISTING_NOT_CONNECTED: L.oh,
 };
+
 function G(e) {
     e.preventDefault(), e.stopPropagation();
 }
 let P = _.Ay.getEnableHardwareAcceleration() ? d.JsQ : d.euF;
+
 function H(e) {
     let { channel: t, size: n = d._3J.SIZE_20 } = e;
     return (0, l.jsx)(P, {
@@ -57,6 +59,7 @@ function H(e) {
         size: n,
     });
 }
+
 function U(e) {
     let { channel: t, size: n = d._3J.SIZE_20 } = e,
         r = (0, o.bG)([I.default], () => I.default.getUser(null == t ? void 0 : t.recipients[0])),
@@ -126,11 +129,15 @@ let k = r.memo(function (e) {
                 switch (e.type) {
                     case w.rbe.DM:
                         return function () {
-                            return (0, l.jsx)(U, { channel: e });
+                            return (0, l.jsx)(U, {
+                                channel: e,
+                            });
                         };
                     case w.rbe.GROUP_DM:
                         return function () {
-                            return (0, l.jsx)(H, { channel: e });
+                            return (0, l.jsx)(H, {
+                                channel: e,
+                            });
                         };
                     default:
                         return (0, N.gU)(e, t, n);
@@ -246,7 +253,9 @@ let k = r.memo(function (e) {
                       em = (0, b.Ay)(f),
                       eb = f.isGuildVocal(),
                       ey = (0, l.jsx)("div", {
-                          className: a()({ [L.ow]: X }),
+                          className: a()({
+                              [L.ow]: X,
+                          }),
                           ref: ef,
                           children: (0, l.jsxs)(
                               v.A,
@@ -288,7 +297,9 @@ let k = r.memo(function (e) {
                               (c = c =
                                   {
                                       "aria-label": K,
-                                      focusProps: { enabled: !1 },
+                                      focusProps: {
+                                          enabled: !1,
+                                      },
                                       children: [
                                           (0, l.jsxs)("div", {
                                               className: L.Y5,
@@ -303,7 +314,9 @@ let k = r.memo(function (e) {
                                                       withGuildIcon: $,
                                                   }),
                                                   (0, l.jsx)(u.A, {
-                                                      className: a()(L.UU, { [L.NW]: ee }),
+                                                      className: a()(L.UU, {
+                                                          [L.NW]: ee,
+                                                      }),
                                                       "aria-hidden": !0,
                                                       children: (0, l.jsx)(F, {
                                                           channel: f,
@@ -321,7 +334,9 @@ let k = r.memo(function (e) {
                                           }),
                                           null != H
                                               ? (0, l.jsx)("div", {
-                                                    className: a()(L.MA, { [L.lY]: $ }),
+                                                    className: a()(L.MA, {
+                                                        [L.lY]: $,
+                                                    }),
                                                     children: (0, l.jsx)(d.Text, {
                                                         color: null != U ? U : "text-muted",
                                                         variant: "text-xs/medium",
@@ -396,13 +411,19 @@ let k = r.memo(function (e) {
                           onMouseEnter: V,
                           onMouseLeave: q,
                           children: [
-                              !es && A && !m && (0, l.jsx)("div", { className: a()(L.gy, et ? L.WS : void 0) }),
+                              !es &&
+                                  A &&
+                                  !m &&
+                                  (0, l.jsx)("div", {
+                                      className: a()(L.gy, et ? L.WS : void 0),
+                                  }),
                               null != (n = null == I ? void 0 : I(ey)) ? n : ey,
                           ],
                       }),
                   });
               })
             : null;
+
 function F(e) {
     var t, n, i;
     let { channel: a, name: s } = e,

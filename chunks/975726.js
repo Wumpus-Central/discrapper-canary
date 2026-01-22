@@ -1,4 +1,8 @@
-n.d(t, { default: () => q }), n(747238), n(812715);
+n.d(t, {
+    default: () => q,
+}),
+    n(747238),
+    n(812715);
 var r = n(627968),
     a = n(64700),
     i = n(158954),
@@ -27,6 +31,7 @@ var r = n(627968),
     E = n(654487),
     R = n(985018),
     k = n(491284);
+
 function D(e) {
     let { rewardCode: t, questContent: n, questId: a, sourceQuestContent: i, className: l, inputClassName: d } = e,
         u = (0, s.bG)([x.A], () => x.A.hidePersonalInformation),
@@ -49,6 +54,7 @@ function D(e) {
               },
           });
 }
+
 function P(e) {
     var t;
     let {
@@ -128,11 +134,14 @@ function P(e) {
                 variant: "text-sm/medium",
                 color: "text-default",
                 className: k.tG,
-                children: m.A.parse(x, !1, { allowLinks: !0 }),
+                children: m.A.parse(x, !1, {
+                    allowLinks: !0,
+                }),
             }),
         }),
     });
 }
+
 function L(e) {
     let { quest: t, questContent: n, rewardCode: a, sourceQuestContent: i, onClaimInstructions: s } = e;
     return (0, r.jsxs)("div", {
@@ -159,7 +168,9 @@ function L(e) {
                     (0, r.jsx)(l.Text, {
                         variant: "text-sm/medium",
                         color: "text-subtle",
-                        children: R.intl.format(R.t["ESmp2+"], { onClaimInstructions: s }),
+                        children: R.intl.format(R.t["ESmp2+"], {
+                            onClaimInstructions: s,
+                        }),
                     }),
                 ],
             }),
@@ -174,6 +185,7 @@ function L(e) {
         ],
     });
 }
+
 function q(e) {
     var t;
     let n,
@@ -294,7 +306,9 @@ function q(e) {
                                           },
                                       }),
                                   ),
-                              { stackingBehavior: "replace" },
+                              {
+                                  stackingBehavior: "replace",
+                              },
                           );
                       },
                   }),

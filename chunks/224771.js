@@ -45,8 +45,12 @@ async function u(e) {
                 orderId: e,
             }),
             (0, a.pM)(t, {
-                tags: { source: "OrderActionCreators_getOrder" },
-                extra: { orderId: e },
+                tags: {
+                    source: "OrderActionCreators_getOrder",
+                },
+                extra: {
+                    orderId: e,
+                },
             }),
             null
         );

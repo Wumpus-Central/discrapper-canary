@@ -1,4 +1,6 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 var r = n(643479),
     i = n(761799);
 let a = {
@@ -39,9 +41,11 @@ let a = {
     k = "http://ns.adobe.com/xap/1.0/\0",
     U = "http://ns.adobe.com/xmp/extension/\0",
     G = "Photoshop 3.0";
+
 function V(e) {
     return !!e && e.byteLength >= s && e.getUint16(0) === o;
 }
+
 function F(e) {
     let t,
         n,
@@ -93,62 +97,77 @@ function F(e) {
         mpfDataOffset: E,
     };
 }
+
 function B(e, t) {
     return e.getUint16(t) === A;
 }
+
 function H(e, t) {
     return e.getUint16(t) === v;
 }
+
 function Y(e, t) {
     let n = E.length;
     return e.getUint16(t) === w && (0, r.hT)(e, t + c, n) === E;
 }
+
 function W(e, t) {
     let n = O.length;
     return e.getUint16(t) === w && (0, r.hT)(e, t + c, n) === O;
 }
+
 function K(e, t) {
     let n = j.length;
     return e.getUint16(t) === N && (0, r.hT)(e, t + c, n) === j && 0 === e.getUint8(t + c + n);
 }
+
 function z(e, t) {
     let n = M.length;
     return e.getUint16(t) === R && (0, r.hT)(e, t + c, n) === M && 0 === e.getUint8(t + c + n);
 }
+
 function q(e, t) {
     return e.getUint16(t) === R && X(e, t);
 }
+
 function X(e, t) {
     let n = k.length;
     return (0, r.hT)(e, t + c, n) === k;
 }
+
 function Z(e, t) {
     return e.getUint16(t) === R && Q(e, t);
 }
+
 function Q(e, t) {
     let n = U.length;
     return (0, r.hT)(e, t + c, n) === U;
 }
+
 function $(e, t) {
     return {
         dataOffset: e + _,
         length: t - (_ - u),
     };
 }
+
 function J(e, t) {
     return {
         dataOffset: e + h,
         length: t - (h - u),
     };
 }
+
 function ee(e, t) {
     let n = G.length;
     return e.getUint16(t) === P && (0, r.hT)(e, t + c, n) === G && 0 === e.getUint8(t + c + n);
 }
+
 function et(e, t) {
     let n = e.getUint16(t);
     return (n >= N && n <= D) || n === x || n === A || n === v || n === S || n === I || n === T || n === C;
 }
+
 function en(e, t) {
     return e.getUint16(t) === L;
 }

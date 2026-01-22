@@ -32,12 +32,15 @@ let a = (0, r.C)({
         },
     ],
 });
+
 function s(e, t) {
     return a.useExperiment(
         {
             guildId: e,
             location: t,
         },
-        { autoTrackExposure: !1 },
+        {
+            autoTrackExposure: !1,
+        },
     );
 }

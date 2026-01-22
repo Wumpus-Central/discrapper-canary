@@ -1,4 +1,7 @@
-n.d(t, { A: () => v }), n(896048);
+n.d(t, {
+    A: () => v,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -18,6 +21,7 @@ var r = n(627968),
     b = n(698279),
     y = n(985018),
     O = n(111314);
+
 function A(e, t) {
     let { disabled: n, type: a, channel: A } = e,
         [v, S] = i.useState(!1),
@@ -39,7 +43,7 @@ function A(e, t) {
                 clearTimeout(w.current),
                 (w.current = setTimeout(() => {
                     S(!1), (w.current = 0);
-                }, 2000));
+                }, 2e3));
         }, []);
     (0, _.Vo)({
         event: E.jej.FAVORITE_GIF,

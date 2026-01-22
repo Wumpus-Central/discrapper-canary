@@ -1,4 +1,6 @@
-n.d(t, { default: () => p });
+n.d(t, {
+    default: () => p,
+});
 var r = n(627968);
 n(64700);
 var o = n(87719),
@@ -7,6 +9,7 @@ var o = n(87719),
     a = n(652215),
     i = n(985018),
     u = n(736975);
+
 function p(e) {
     let { channel: t, onClose: n } = e,
         p = (function (e, t) {

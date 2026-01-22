@@ -1,4 +1,6 @@
-c.d(e, { A: () => s });
+c.d(e, {
+    A: () => s,
+});
 var a = c(627968);
 c(64700);
 var t = c(653812);
@@ -23,7 +25,12 @@ let s = (r) => {
             (0, a.jsx)("svg", {
                 viewBox: "0 0 ".concat(100, " ").concat(100),
                 className: t.DT,
-                style: null != i ? { "--custom-backdrop-blur-amount": "".concat(i, "px") } : void 0,
+                style:
+                    null != i
+                        ? {
+                              "--custom-backdrop-blur-amount": "".concat(i, "px"),
+                          }
+                        : void 0,
                 children: (0, a.jsx)("circle", {
                     cx: 50,
                     cy: 50,
@@ -44,7 +51,9 @@ let s = (r) => {
                         fill: "none",
                         strokeLinecap: "round",
                         transform: "rotate(-90 ".concat(50, " ").concat(50, ")"),
-                        style: { strokeDasharray: u },
+                        style: {
+                            strokeDasharray: u,
+                        },
                     }),
                     (0, a.jsx)("circle", {
                         cx: 50,

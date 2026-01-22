@@ -218,7 +218,9 @@ let P = (e, t) => (n) => {
             C = (0, E.AZ)(n),
             R = n.entity_type === N.Ps.EXTERNAL;
         return (0, r.jsx)(f.A, {
-            className: s()({ [w.vk]: c }),
+            className: s()({
+                [w.vk]: c,
+            }),
             children: (0, r.jsxs)(l.DUT, {
                 onClick: b,
                 children: [

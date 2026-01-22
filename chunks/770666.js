@@ -1,10 +1,14 @@
-n.d(t, { A: () => c }), n(896048);
+n.d(t, {
+    A: () => c,
+}),
+    n(896048);
 var r = n(311907),
     l = n(931991),
     i = n(808728),
     a = n(71393),
     s = n(576705),
     o = n(652215);
+
 function c(e, t) {
     return (0, r.bG)([a.A, i.Ay, s.A], () => {
         let n = a.A.getGuild(e);

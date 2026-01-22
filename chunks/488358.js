@@ -1,4 +1,11 @@
-l.d(t, { default: () => et }), l(228524), l(896048), l(638769), l(864466), l(443073);
+l.d(t, {
+    default: () => et,
+}),
+    l(228524),
+    l(896048),
+    l(638769),
+    l(864466),
+    l(443073);
 var n = l(627968),
     a = l(64700),
     i = l(503698),
@@ -45,6 +52,7 @@ var n = l(627968),
     W = l(652215),
     B = l(985018),
     $ = l(102448);
+
 function Q(e) {
     for (var t = 1; t < arguments.length; t++) {
         var l = null != arguments[t] ? arguments[t] : {},
@@ -70,6 +78,7 @@ function Q(e) {
     }
     return e;
 }
+
 function Z(e) {
     let { platformType: t, className: l } = e,
         a = (0, N.Ay)(),
@@ -80,13 +89,18 @@ function Z(e) {
         className: c()($.tV, l),
     });
 }
+
 function X(e) {
     let { channel: t, className: l } = e,
         a = (0, C.gU)(t);
     return (0, n.jsxs)("div", {
         className: c()($.HA, l),
         children: [
-            null != a ? (0, n.jsx)(a, { className: $.er }) : null,
+            null != a
+                ? (0, n.jsx)(a, {
+                      className: $.er,
+                  })
+                : null,
             (0, n.jsx)(p.Heading, {
                 variant: "heading-lg/semibold",
                 color: "text-default",
@@ -96,6 +110,7 @@ function X(e) {
         ],
     });
 }
+
 function J(e) {
     let t,
         { connectionType: l, connectionMetadataField: a, operator: i, value: c, result: s, description: r } = e,
@@ -158,6 +173,7 @@ function J(e) {
         })
     );
 }
+
 function q(e) {
     let { eligibilityStatesGroups: t, onPlatformConnect: l, onPlatformConnected: i } = e,
         [s, o] = a.useState({}),
@@ -256,7 +272,10 @@ function q(e) {
                                               }),
                                               o(
                                                   ((n = Q({}, s)),
-                                                  (a = a = { [t]: Date.now() }),
+                                                  (a = a =
+                                                      {
+                                                          [t]: Date.now(),
+                                                      }),
                                                   Object.getOwnPropertyDescriptors
                                                       ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(a))
                                                       : (function (e, t) {
@@ -292,8 +311,16 @@ function q(e) {
                                           }),
                                       })
                                     : null,
-                                null != S ? (0, n.jsx)(Z, { platformType: S.type }) : null,
-                                null != P ? (0, n.jsx)(v.A, { user: P }) : null,
+                                null != S
+                                    ? (0, n.jsx)(Z, {
+                                          platformType: S.type,
+                                      })
+                                    : null,
+                                null != P
+                                    ? (0, n.jsx)(v.A, {
+                                          user: P,
+                                      })
+                                    : null,
                                 (0, n.jsxs)("div", {
                                     className: $.EZ,
                                     children: [
@@ -361,6 +388,7 @@ function q(e) {
             }),
     });
 }
+
 function ee(e) {
     let t,
         l,
@@ -385,7 +413,9 @@ function ee(e) {
             })),
         W.ewM.has(c.type) &&
             (l = (0, n.jsx)(p.dOG, {
-                label: B.intl.format(B.t["6u6J0q"], { platform: v.name }),
+                label: B.intl.format(B.t["6u6J0q"], {
+                    platform: v.name,
+                }),
                 checked: u,
                 onChange: (e) => {
                     m(e), j.A.setShowActivity(c.type, c.id, e);
@@ -417,6 +447,7 @@ function ee(e) {
         })
     );
 }
+
 function et(e) {
     let { transitionState: t, onClose: l, guildId: i, role: c } = e,
         [s, o] = a.useState(0),
@@ -437,22 +468,41 @@ function et(e) {
         es = Object.values((0, u.bG)([P.A], () => P.A.getMutableGuildChannelsForGuild(i))).filter(
             (e) => D.A.can(W.xBc.VIEW_CHANNEL, e) && D.A.can(W.xBc.SEND_MESSAGES, e) && (0, T.A)(e).includes(c),
         );
+
     function er() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         null == l || l(), e && (0, p.OoC)(K.CB, p.SYi);
     }
+
     function eo() {
-        er(!0), (0, I.openUserSettings)(S.X.AUTHORIZED_APPS_PANEL, { section: W.nc_.AUTHORIZED_APPS });
+        er(!0),
+            (0, I.openUserSettings)(S.X.AUTHORIZED_APPS_PANEL, {
+                section: W.nc_.AUTHORIZED_APPS,
+            });
     }
+
     function ed() {
-        er(!0), (0, I.openUserSettings)(S.X.CONNECTIONS_PANEL, { section: W.nc_.CONNECTIONS });
+        er(!0),
+            (0, I.openUserSettings)(S.X.CONNECTIONS_PANEL, {
+                section: W.nc_.CONNECTIONS,
+            });
     }
     async function eu() {
         g(!0), await b.A.assignGuildRoleConnection(i, c.id);
     }
+
     function em() {
-        U.default.track(W.HAw.PASSPORT_CHALLENGE_STARTED, Q({ role_id: c.id }, (0, A.H$)(i)));
+        U.default.track(
+            W.HAw.PASSPORT_CHALLENGE_STARTED,
+            Q(
+                {
+                    role_id: c.id,
+                },
+                (0, A.H$)(i),
+            ),
+        );
     }
+
     function ex(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
         Z(e),
@@ -472,7 +522,15 @@ function et(e) {
             });
         }, [i, c.id, V]),
         a.useEffect(() => {
-            U.default.track(W.HAw.PASSPORT_CHALLENGE_VIEWED, Q({ role_id: c.id }, (0, A.H$)(i)));
+            U.default.track(
+                W.HAw.PASSPORT_CHALLENGE_VIEWED,
+                Q(
+                    {
+                        role_id: c.id,
+                    },
+                    (0, A.H$)(i),
+                ),
+            );
         }, [i, c.id]),
         a.useEffect(() => {
             _ &&
@@ -480,7 +538,15 @@ function et(e) {
                 ec.roles.includes(c.id) &&
                 (g(!1),
                 es.length > 0 ? o(2) : null == l || l(),
-                U.default.track(W.HAw.PASSPORT_CHALLENGE_FINISHED, Q({ role_id: c.id }, (0, A.H$)(i))));
+                U.default.track(
+                    W.HAw.PASSPORT_CHALLENGE_FINISHED,
+                    Q(
+                        {
+                            role_id: c.id,
+                        },
+                        (0, A.H$)(i),
+                    ),
+                ));
         }, [_, es.length, ec, i, c.id, l]),
         (0, n.jsxs)(p.EOs, {
             size: p.rIJ.MEDIUM,
@@ -503,7 +569,9 @@ function et(e) {
                                             children: B.intl.string(B.t.zOZh3R),
                                         }),
                                     }),
-                                    (0, n.jsx)(p.s_y, { onClick: () => er() }),
+                                    (0, n.jsx)(p.s_y, {
+                                        onClick: () => er(),
+                                    }),
                                 ],
                             });
                         case 1: {
@@ -522,9 +590,13 @@ function et(e) {
                                     (0, n.jsx)(p.Heading, {
                                         variant: "heading-xl/semibold",
                                         className: $.TK,
-                                        children: B.intl.format(B.t.yQvgBO, { platformName: l }),
+                                        children: B.intl.format(B.t.yQvgBO, {
+                                            platformName: l,
+                                        }),
                                     }),
-                                    (0, n.jsx)(p.s_y, { onClick: () => er() }),
+                                    (0, n.jsx)(p.s_y, {
+                                        onClick: () => er(),
+                                    }),
                                 ],
                             });
                         }
@@ -538,7 +610,9 @@ function et(e) {
                                         className: $.TK,
                                         children: B.intl.string(B.t.najNdz),
                                     }),
-                                    (0, n.jsx)(p.s_y, { onClick: () => er(!0) }),
+                                    (0, n.jsx)(p.s_y, {
+                                        onClick: () => er(!0),
+                                    }),
                                 ],
                             });
                         default:
@@ -556,7 +630,9 @@ function et(e) {
                                 return (0, n.jsx)(p.$mQ, {
                                     children:
                                         j || null == d
-                                            ? (0, n.jsx)(p.y$y, { className: $.NL })
+                                            ? (0, n.jsx)(p.y$y, {
+                                                  className: $.NL,
+                                              })
                                             : (0, n.jsxs)(n.Fragment, {
                                                   children: [
                                                       (0, n.jsx)(p.Text, {
@@ -564,7 +640,9 @@ function et(e) {
                                                           color: "text-default",
                                                           children: B.intl.format(
                                                               t ? B.t.jHfRvZ : e ? B.t["mOQ8k+"] : B.t.U0olLg,
-                                                              { roleName: c.name },
+                                                              {
+                                                                  roleName: c.name,
+                                                              },
                                                           ),
                                                       }),
                                                       (0, n.jsx)(p.IpV, {
@@ -617,7 +695,9 @@ function et(e) {
                                             className: $.m1,
                                             children:
                                                 null == e && null == t
-                                                    ? (0, n.jsx)(p.y$y, { className: $.bD })
+                                                    ? (0, n.jsx)(p.y$y, {
+                                                          className: $.bD,
+                                                      })
                                                     : (0, n.jsxs)(n.Fragment, {
                                                           children: [
                                                               null != e
@@ -723,7 +803,15 @@ function et(e) {
                                         }),
                                         (0, n.jsx)(p.IpV, {
                                             className: $.eu,
-                                            children: es.map((e) => (0, n.jsx)(X, { channel: e }, e.id)),
+                                            children: es.map((e) =>
+                                                (0, n.jsx)(
+                                                    X,
+                                                    {
+                                                        channel: e,
+                                                    },
+                                                    e.id,
+                                                ),
+                                            ),
                                         }),
                                     ],
                                 });

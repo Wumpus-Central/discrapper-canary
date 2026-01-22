@@ -1,4 +1,7 @@
-n.d(t, { A: () => f }), n(896048);
+n.d(t, {
+    A: () => f,
+}),
+    n(896048);
 var r = n(627968);
 n(64700);
 var i = n(793574),
@@ -9,6 +12,7 @@ var i = n(793574),
     c = n(246097),
     u = n(96440),
     d = n(768349);
+
 function f(e) {
     let { applicationId: t, customId: n, referrerId: f, linkId: p, message: _ } = e,
         { analyticsLocations: h } = (0, a.Ay)(i.A.ACTIVITY_BOOKMARK),

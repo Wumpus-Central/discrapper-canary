@@ -1,9 +1,12 @@
-n.d(t, { A: () => l });
+n.d(t, {
+    A: () => l,
+});
 var r = n(734057),
     i = n(383501),
     a = n(528767),
     s = n(954571),
     o = n(652215);
+
 function l(e, t, n) {
     var l, c;
     s.default.track(o.HAw.VOICE_CALL_TRANSFER, {

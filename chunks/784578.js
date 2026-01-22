@@ -1,4 +1,6 @@
-n.d(t, { default: () => p });
+n.d(t, {
+    default: () => p,
+});
 var r = n(627968);
 n(64700);
 var i = n(110259),
@@ -8,9 +10,17 @@ var i = n(110259),
     o = n(612200),
     c = n(652215),
     u = n(985018);
+
 function d() {
-    return (0, o.IO)(), (0, a.pX)(c.BVt.LOGIN, { source: "existing_user_age_gate_underage" }), Promise.resolve();
+    return (
+        (0, o.IO)(),
+        (0, a.pX)(c.BVt.LOGIN, {
+            source: "existing_user_age_gate_underage",
+        }),
+        Promise.resolve()
+    );
 }
+
 function p(e) {
     let { underageMessage: t, transitionState: n } = e;
     return (0, r.jsx)(l.Modal, {
@@ -37,7 +47,9 @@ function p(e) {
         trackingProps: {
             impression: {
                 impressionName: i.ImpressionNames.USER_AGE_GATE_UNDERAGE,
-                impressionProperties: { existing_user: !0 },
+                impressionProperties: {
+                    existing_user: !0,
+                },
             },
         },
     });

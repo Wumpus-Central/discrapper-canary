@@ -17,6 +17,7 @@ let s = {
     width: "1px",
     whiteSpace: "nowrap",
 };
+
 function o(e = {}) {
     let { style: t, isFocusable: n } = e,
         [r, l] = (0, i.useState)(!1),
@@ -43,6 +44,7 @@ function o(e = {}) {
         },
     };
 }
+
 function l(e) {
     let { children: t, elementType: n = "div", isFocusable: a, style: s, ...l } = e,
         { visuallyHiddenProps: c } = o(e);

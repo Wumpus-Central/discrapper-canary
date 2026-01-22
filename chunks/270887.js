@@ -1,4 +1,6 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var r = n(735438),
     i = n.n(r),
     a = n(181079),
@@ -14,6 +16,7 @@ var r = n(735438),
 let h = -3,
     m = -2,
     g = -1;
+
 function E(e) {
     let t = o.A.getState().guildId;
     if (null == t) return m;

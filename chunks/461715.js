@@ -15,6 +15,7 @@ var r = n(833291),
     u = n(381941),
     d = n(985018);
 let f = 40;
+
 function p(e) {
     var t, n, r, i, a;
     let {
@@ -68,6 +69,7 @@ function p(e) {
         contentScanVersion: c.content_scan_version,
     };
 }
+
 function _(e) {
     if (null == e) return;
     let t = (0, r.l7)(e);
@@ -75,11 +77,13 @@ function _(e) {
     let n = (0, r.tl)(t);
     if (null != n) return (0, i.vu)(n);
 }
+
 function h(e) {
     if (null == e) return !1;
     let { height: t, width: n } = e;
     return null != t && null != n && t >= n;
 }
+
 function m(e, t) {
     let n = a.A.getGuild(e);
     if (null == n || null == t) return !1;

@@ -7,6 +7,7 @@ n.d(t, {
 var r = n(562465),
     i = n(73153),
     a = n(652215);
+
 function s(e) {
     return r.Bo.get({
         url: a.Rsh.GUILD_VANITY_URL(e),
@@ -24,19 +25,26 @@ function s(e) {
         });
     });
 }
+
 function o() {
-    i.h.dispatch({ type: "GUILD_SETTINGS_VANITY_URL_RESET" });
+    i.h.dispatch({
+        type: "GUILD_SETTINGS_VANITY_URL_RESET",
+    });
 }
+
 function l(e) {
     i.h.dispatch({
         type: "GUILD_SETTINGS_VANITY_URL_SET",
         code: e,
     });
 }
+
 function c(e, t, n) {
     return r.Bo.patch({
         url: a.Rsh.GUILD_VANITY_URL(e),
-        body: { code: t },
+        body: {
+            code: t,
+        },
         oldFormErrors: !0,
         rejectWithError: !1,
     }).then(

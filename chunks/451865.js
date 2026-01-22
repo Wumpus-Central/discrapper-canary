@@ -19,16 +19,27 @@ var r = n(617179),
                 var t = e.getChildKeys(),
                     n = t.indexOf(r) + 1,
                     a = t.toArray();
-                return a.splice(n, 0, i), e.merge({ children: l(a) });
+                return (
+                    a.splice(n, 0, i),
+                    e.merge({
+                        children: l(a),
+                    })
+                );
             }),
                 u(t.getNextSiblingKey(), e, function (e) {
-                    return e.merge({ prevSibling: i });
+                    return e.merge({
+                        prevSibling: i,
+                    });
                 }),
                 u(r, e, function (e) {
-                    return e.merge({ nextSibling: i });
+                    return e.merge({
+                        nextSibling: i,
+                    });
                 }),
                 u(i, e, function (e) {
-                    return e.merge({ prevSibling: r });
+                    return e.merge({
+                        prevSibling: r,
+                    });
                 });
         });
     };

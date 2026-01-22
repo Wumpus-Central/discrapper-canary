@@ -1,4 +1,7 @@
-n.d(t, { A: () => h }), n(896048);
+n.d(t, {
+    A: () => h,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(397927),
@@ -14,6 +17,7 @@ var r = n(627968),
     m = n(585632),
     p = n(2242),
     x = n(985018);
+
 function h(e) {
     let { allSubscriptionListings: t } = e,
         { editStateId: n, guildId: h } = (0, a.O)(),
@@ -80,7 +84,9 @@ function h(e) {
                                                 "aria-labelledby": e.labelId,
                                                 disabled: N,
                                             }),
-                                            (0, r.jsx)(l.hKd, { size: 8 }),
+                                            (0, r.jsx)(l.hKd, {
+                                                size: 8,
+                                            }),
                                         ],
                                     }),
                                 (0, r.jsx)(g.A, {}),

@@ -8,6 +8,7 @@ var r = n(496431),
     i = n(405269),
     a = n(728458),
     s = n(985018);
+
 function o(e, t, n) {
     return (
         t in e
@@ -21,6 +22,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,7 +39,7 @@ function l(e) {
     }
     return e;
 }
-let c = 60000;
+let c = 6e4;
 var u = (function (e) {
     return (
         (e[(e.SHORT_TIME_LEFT = 0)] = "SHORT_TIME_LEFT"),
@@ -48,6 +50,7 @@ var u = (function (e) {
         e
     );
 })({});
+
 function d(e) {
     let t = l({}, e);
     if (
@@ -97,6 +100,7 @@ function d(e) {
           }
         : t;
 }
+
 function f(e, t) {
     let n;
     switch (t) {

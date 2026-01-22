@@ -1,4 +1,9 @@
-n.d(t, { A: () => W }), n(321073), n(896048), n(938796);
+n.d(t, {
+    A: () => W,
+}),
+    n(321073),
+    n(896048),
+    n(938796);
 var r,
     i = n(812729),
     a = n.n(i),
@@ -27,6 +32,7 @@ var r,
     N = n(309010),
     R = n(528767),
     w = n(652215);
+
 function P(e, t, n) {
     return (
         t in e
@@ -40,6 +46,7 @@ function P(e, t, n) {
         e
     );
 }
+
 function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -56,6 +63,7 @@ function D(e) {
     }
     return e;
 }
+
 function x(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -68,6 +76,7 @@ function x(e, t) {
     }
     return n;
 }
+
 function L(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -81,6 +90,7 @@ function L(e, t) {
 }
 let j = [],
     M = {};
+
 function k() {
     var e, t;
     let n = [],
@@ -91,7 +101,15 @@ function k() {
     let i = E.A.getActivities();
     n.push(...i);
     let s = C.A.getStream();
-    null != s && n.push(D({ type: w.$pd.STREAMING }, s));
+    null != s &&
+        n.push(
+            D(
+                {
+                    type: w.$pd.STREAMING,
+                },
+                s,
+            ),
+        );
     let l = new Set();
     o().forEach(M, (e) => {
         let [, t] = e;
@@ -110,14 +128,24 @@ function k() {
                     type: w.$pd.PLAYING,
                     name: c.name,
                     application_id: null != (e = c.id) ? e : null == t ? void 0 : t.id,
-                    timestamps: { start: c.start },
+                    timestamps: {
+                        start: c.start,
+                    },
                 },
                 (0, y.CO)(c),
             ),
         );
     }
     let v = O.A.getActivity();
-    null != v && n.push(D({ type: w.$pd.LISTENING }, v));
+    null != v &&
+        n.push(
+            D(
+                {
+                    type: w.$pd.LISTENING,
+                },
+                v,
+            ),
+        );
     let P = g.A.getCurrentHangStatus();
     if (null != P) {
         let e = g.A.getCustomHangStatus(),
@@ -135,22 +163,27 @@ function k() {
     }
     a()(j, n) || (j = n);
 }
+
 function U() {
     (M = {}), k();
 }
+
 function G(e) {
     let { socketId: t, pid: n, activity: r, partyPrivacy: i } = e;
     if (a()(M[t], [n, r, i])) return !1;
     null != r ? (M[t] = [n, r, i]) : delete M[t], k();
 }
+
 function V(e) {
     let { socketId: t } = e;
     delete M[t], k();
 }
+
 function F(e) {
     let { localActivities: t } = e;
     (M = D({}, t)), k();
 }
+
 function B() {
     let e = {},
         t = !1;
@@ -164,10 +197,20 @@ function B() {
                 (0, f.e)(s),
                 o,
             );
-        u !== c ? ((e[i] = [a, L(D({}, s), { flags: u }), o]), (t = !0)) : (e[i] = [a, s, o]);
+        u !== c
+            ? ((e[i] = [
+                  a,
+                  L(D({}, s), {
+                      flags: u,
+                  }),
+                  o,
+              ]),
+              (t = !0))
+            : (e[i] = [a, s, o]);
     }
     return t ? ((M = e), "APPLICATION_ACTIVITIES_CHANGED") : "NO_CHANGES";
 }
+
 function H() {
     B(), k();
 }

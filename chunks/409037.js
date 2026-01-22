@@ -11,7 +11,10 @@ function r(e, t, n) {
         e
     );
 }
-n.d(t, { c: () => i }), n(896048);
+n.d(t, {
+    c: () => i,
+}),
+    n(896048);
 class i {
     cleanUp(e) {
         this.cancel(e), this.delete(e);

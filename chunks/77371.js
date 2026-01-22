@@ -1,4 +1,6 @@
-i.d(e, { C: () => I });
+i.d(e, {
+    C: () => I,
+});
 var n = i(627968),
     l = i(158954),
     s = i(311907),
@@ -21,7 +23,10 @@ let I = (0, a.E2)(T.X.VOICE_PUSH_TO_TALK_KEYBIND_SETTING, {
                 return t;
             }),
             e = d.intl.format(d.t.HVvn5T, {
-                onClick: () => (0, A.openUserSettings)(T.X.KEYBINDS_PANEL, { section: E.nc_.KEYBINDS }),
+                onClick: () =>
+                    (0, A.openUserSettings)(T.X.KEYBINDS_PANEL, {
+                        section: E.nc_.KEYBINDS,
+                    }),
             });
         return (0, n.jsx)(l.D0$, {
             label: d.intl.string(d.t["o+BJQR"]),
@@ -31,7 +36,10 @@ let I = (0, a.E2)(T.X.VOICE_PUSH_TO_TALK_KEYBIND_SETTING, {
                 className: _.e,
                 children: (0, n.jsx)(u.A, {
                     defaultValue: t,
-                    onChange: (t) => r.A.setMode(E.TBI.PUSH_TO_TALK, { shortcut: t }),
+                    onChange: (t) =>
+                        r.A.setMode(E.TBI.PUSH_TO_TALK, {
+                            shortcut: t,
+                        }),
                 }),
             }),
         });

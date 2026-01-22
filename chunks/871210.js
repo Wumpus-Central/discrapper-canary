@@ -19,6 +19,7 @@ var r = n(989349),
     c = n(963334),
     u = n(789622),
     d = n(985018);
+
 function h(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     return l.Ay.getUserAvatarURL(
@@ -32,6 +33,7 @@ function h(e) {
         80,
     );
 }
+
 function f(e) {
     let t = (0, o.sS)(e.username).replace(u.uA, "").replace(u.SY, ".").toLowerCase();
     return "".concat(t).concat(e.discriminator).substring(0, 32);
@@ -39,6 +41,7 @@ function f(e) {
 let p = ["@", "#", ":"],
     g = ["```", "discord", "hypesquad", "system message", "system mesage", "sustem message", "sustem mesage", "clyde"],
     m = ["discordtag", "everyone", "here", "discord nitro", "discord", "snowsgiving"];
+
 function A(e) {
     var t;
     let n = e.username.toLowerCase();
@@ -55,9 +58,11 @@ function A(e) {
     for (let e of g) if (n.includes(e.toLowerCase())) return !0;
     return !1;
 }
+
 function x(e) {
     return e.toLowerCase().replace(/\s/g, "").replace("@", "");
 }
+
 function _(e) {
     let t = a.default.extractTimestamp(e);
     try {
@@ -65,30 +70,56 @@ function _(e) {
     } catch (e) {}
     return null;
 }
+
 function E(e) {
     return (0, s.YW)(e)
-        .with({ rateLimited: !0 }, () => ({
-            type: c.q.RATE_LIMIT,
-            message: d.intl.string(d.t.T15lqn),
-        }))
-        .with({ error: s.P.not(s.P.nullish) }, (e) => {
-            let { error: t } = e;
-            return {
+        .with(
+            {
+                rateLimited: !0,
+            },
+            () => ({
+                type: c.q.RATE_LIMIT,
+                message: d.intl.string(d.t.T15lqn),
+            }),
+        )
+        .with(
+            {
+                error: s.P.not(s.P.nullish),
+            },
+            (e) => {
+                let { error: t } = e;
+                return {
+                    type: c.q.ERROR,
+                    message: t,
+                };
+            },
+        )
+        .with(
+            {
+                taken: !1,
+            },
+            () => ({
+                type: c.q.AVAILABLE,
+                message: d.intl.string(d.t.PgfBSx),
+            }),
+        )
+        .with(
+            {
+                taken: !0,
+            },
+            () => ({
                 type: c.q.ERROR,
-                message: t,
-            };
-        })
-        .with({ taken: !1 }, () => ({
-            type: c.q.AVAILABLE,
-            message: d.intl.string(d.t.PgfBSx),
-        }))
-        .with({ taken: !0 }, () => ({
-            type: c.q.ERROR,
-            message: d.intl.string(d.t.mCrAUb),
-        }))
-        .with({ error: s.P.nullish }, () => ({
-            type: c.q.INTERNAL_ERROR,
-            message: "",
-        }))
+                message: d.intl.string(d.t.mCrAUb),
+            }),
+        )
+        .with(
+            {
+                error: s.P.nullish,
+            },
+            () => ({
+                type: c.q.INTERNAL_ERROR,
+                message: "",
+            }),
+        )
         .otherwise(() => void 0);
 }

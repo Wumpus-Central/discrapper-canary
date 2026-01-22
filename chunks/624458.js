@@ -1,4 +1,6 @@
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var r = n(562465),
     i = n(73153),
     a = n(157559),
@@ -29,7 +31,9 @@ let _ = {
         let { guildId: t, status: n = u.B5.SUBMITTED, before: a, after: s, limit: o = 25, force: l = !1 } = e,
             p = l || !c.A.hasFetched(t);
         if (!c.A.isFetching() && p) {
-            i.h.dispatch({ type: "GUILD_JOIN_REQUESTS_FETCH_START" });
+            i.h.dispatch({
+                type: "GUILD_JOIN_REQUESTS_FETCH_START",
+            });
             try {
                 var _;
                 let e = await r.Bo.get({
@@ -56,7 +60,12 @@ let _ = {
                     e
                 );
             } catch (e) {
-                throw (i.h.dispatch({ type: "GUILD_JOIN_REQUESTS_FETCH_FAILURE" }), e);
+                throw (
+                    (i.h.dispatch({
+                        type: "GUILD_JOIN_REQUESTS_FETCH_FAILURE",
+                    }),
+                    e)
+                );
             }
         }
     },
@@ -130,7 +139,9 @@ let _ = {
     actionAllPendingJoinRequests: async (e, t) => {
         let n = await r.Bo.patch({
             url: f.Rsh.GUILD_JOIN_REQUESTS(e),
-            body: { action: t },
+            body: {
+                action: t,
+            },
             rejectWithError: !1,
         });
         return (

@@ -16,10 +16,13 @@ var r = n(64700),
             (e[(e.JOIN_GUILD = 0)] = "JOIN_GUILD"), (e[(e.GET_NITRO = 1)] = "GET_NITRO"), (e[(e.NONE = 2)] = "NONE"), e
         );
     })({});
+
 function f(e, t, n, d) {
     let f = e.guildId === c.mV,
         p = (0, a.bG)([s.default], () => o.Ay.canUseSoundboardEverywhere(s.default.getCurrentUser())),
-        _ = (0, l.tj)({ location: "useSoundmojiGuildInfoData" }),
+        _ = (0, l.tj)({
+            location: "useSoundmojiGuildInfoData",
+        }),
         h = e.guildId !== (null == t ? void 0 : t.guild_id);
     return {
         buttonType: r.useMemo(() => (f || !_ ? 2 : _ && !p ? 1 : n || null == d ? 2 : 0), [f, p, _, n, d]),
@@ -33,8 +36,18 @@ function f(e, t, n, d) {
                 canSendSoundmojis: _,
                 isDefaultSound: f,
             })
-                .with({ canSendSoundmojis: !1 }, () => u.intl.string(u.t.x2kyyJ))
-                .with({ isDefaultSound: !0 }, () => u.intl.string(u.t.AabHep))
+                .with(
+                    {
+                        canSendSoundmojis: !1,
+                    },
+                    () => u.intl.string(u.t.x2kyyJ),
+                )
+                .with(
+                    {
+                        isDefaultSound: !0,
+                    },
+                    () => u.intl.string(u.t.AabHep),
+                )
                 .with(
                     {
                         isInGuild: !1,

@@ -1,7 +1,11 @@
-n.d(t, { L: () => g }), n(896048);
+n.d(t, {
+    L: () => g,
+}),
+    n(896048);
 var r = n(627968),
     i = n(397927),
     a = n(562519);
+
 function s(e, t, n) {
     return (
         t in e
@@ -15,6 +19,7 @@ function s(e, t, n) {
         e
     );
 }
+
 function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -31,6 +36,7 @@ function o(e) {
     }
     return e;
 }
+
 function l(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -43,6 +49,7 @@ function l(e, t) {
     }
     return n;
 }
+
 function c(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -57,14 +64,17 @@ function c(e, t) {
 let u = 5 * n(927813).A.Millis.DAY,
     d = 3,
     f = new a.A("overlay_survey_timestamps");
+
 function p() {
     return Array.from(f.values()).reduce((e, t) => Math.max(e, t), 0);
 }
+
 function _() {
     let e = Date.now(),
         t = p();
     return null != t && e - t < u;
 }
+
 function h() {
     return (
         Array.from(f.values()).filter((e) => {
@@ -73,10 +83,12 @@ function h() {
         }).length >= d
     );
 }
+
 function m() {
     let e = Date.now();
     f.add(e);
 }
+
 function g(e, t) {
     _() ||
         h() ||

@@ -1,4 +1,6 @@
-i.d(e, { p: () => A });
+i.d(e, {
+    p: () => A,
+});
 var n = i(311907),
     l = i(955572),
     s = i(775602),
@@ -12,7 +14,9 @@ let A = (0, r.zD)(u.X.SYNC_PROFILE_THEMES, {
     useSubtitle: () =>
         T.intl.format(T.t.u6UjrL, {
             onThemeClick() {
-                (0, a.openUserSettings)(u.X.APPEARANCE_PANEL, { section: o.nc_.APPEARANCE });
+                (0, a.openUserSettings)(u.X.APPEARANCE_PANEL, {
+                    section: o.nc_.APPEARANCE,
+                });
             },
         }),
     useValue: () => (0, n.bG)([s.A], () => s.A.syncProfileThemeWithUserTheme),

@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -9,6 +11,7 @@ var r = n(627968),
     u = n(946356),
     d = n(985018),
     f = n(348406);
+
 function p(e) {
     let { previewData: t, className: n, onClick: a } = e,
         { trackUserProfileAction: p } = (0, c.NJ)(),

@@ -17,9 +17,13 @@ var r = n(73153),
     f = n(655943),
     g = n(539916),
     b = n(985018);
+
 function m() {
-    r.h.dispatch({ type: "GUILD_SETTINGS_DEFAULT_CHANNELS_RESET" });
+    r.h.dispatch({
+        type: "GUILD_SETTINGS_DEFAULT_CHANNELS_RESET",
+    });
 }
+
 function p(e) {
     r.h.dispatch({
         type: "GUILD_SETTINGS_DEFAULT_CHANNELS_TOGGLE",
@@ -43,9 +47,15 @@ async function x(e) {
         return;
     }
     if (d.A.hasChanges()) {
-        r.h.dispatch({ type: "GUILD_SETTINGS_DEFAULT_CHANNELS_SUBMIT" });
+        r.h.dispatch({
+            type: "GUILD_SETTINGS_DEFAULT_CHANNELS_SUBMIT",
+        });
         try {
-            let i = n ? (0, u.xR)(e, { ignoreDefaultPrompt: !0 }) : null,
+            let i = n
+                    ? (0, u.xR)(e, {
+                          ignoreDefaultPrompt: !0,
+                      })
+                    : null,
                 l = null != i ? i.map(g.SA) : void 0;
             await (0, u.YN)(e.id, {
                 default_channel_ids: t,
@@ -60,7 +70,9 @@ async function x(e) {
                     r.h.dispatch({
                         type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_SUCCESS",
                         guildId: e.id,
-                        updates: { prompts: i },
+                        updates: {
+                            prompts: i,
+                        },
                     });
         } catch (n) {
             var x;
@@ -69,7 +81,9 @@ async function x(e) {
                 title: b.intl.string(b.t.iLdiqY),
                 body: [e, t].filter(o.Vq).join(": "),
             }),
-                r.h.dispatch({ type: "GUILD_SETTINGS_DEFAULT_CHANNELS_SAVE_FAILED" });
+                r.h.dispatch({
+                    type: "GUILD_SETTINGS_DEFAULT_CHANNELS_SAVE_FAILED",
+                });
         }
     }
 }

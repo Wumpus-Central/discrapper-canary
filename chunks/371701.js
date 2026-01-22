@@ -1,4 +1,6 @@
-n.d(t, { A: () => O });
+n.d(t, {
+    A: () => O,
+});
 var r = n(627968),
     i = n(417597),
     l = n(397927),
@@ -15,11 +17,17 @@ var r = n(627968),
     p = n(839837),
     x = n(89791),
     h = n(985018);
+
 function j(e) {
     let { listingId: t } = e,
         n = (0, m.az)(t);
-    return null == n ? null : (0, r.jsx)(a.fh, { children: n.name });
+    return null == n
+        ? null
+        : (0, r.jsx)(a.fh, {
+              children: n.name,
+          });
 }
+
 function O(e) {
     var t, n, a;
     let { guildId: m } = e,
@@ -29,7 +37,9 @@ function O(e) {
     return O.loading || null == v
         ? (0, r.jsx)(l.y$y, {})
         : null == O.application
-          ? (0, r.jsx)(u.A, { guild: v })
+          ? (0, r.jsx)(u.A, {
+                guild: v,
+            })
           : (0, r.jsxs)(d.A, {
                 children: [
                     (0, r.jsx)(o.A, {

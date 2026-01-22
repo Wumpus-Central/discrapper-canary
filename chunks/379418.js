@@ -45,6 +45,7 @@ let o = {
 Object.setPrototypeOf(o, null);
 let c = Object.keys(o).join("|"),
     u = new RegExp("^<t:(-?\\d{1,17})(?::(".concat(c, "))?>"));
+
 function d(e) {
     let { timestamp: t, format: n } = e,
         r = i()(Number(t) * s.A.Millis.SECOND);
@@ -61,12 +62,14 @@ function d(e) {
         }
     );
 }
+
 function f(e, t) {
     return d({
         timestamp: e,
         format: t,
     });
 }
+
 function p(e, t) {
     return null != t ? "<t:".concat(e, ":").concat(t, ">") : "<t:".concat(e, ">");
 }

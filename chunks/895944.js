@@ -1,4 +1,7 @@
-n.d(t, { A: () => R }), n(896048);
+n.d(t, {
+    A: () => R,
+}),
+    n(896048);
 var r,
     i = n(410530),
     a = n(892227),
@@ -13,6 +16,7 @@ var r,
     _ = n(474090),
     h = n(649032),
     m = n(788868);
+
 function g(e, t, n) {
     return (
         t in e
@@ -26,10 +30,13 @@ function g(e, t, n) {
         e
     );
 }
-let E = 86400000,
-    b = 30000,
-    y = 3600000,
-    O = new c.Z({ ttlMs: E });
+let E = 864e5,
+    b = 3e4,
+    y = 36e5,
+    O = new c.Z({
+        ttlMs: E,
+    });
+
 function A() {
     let e = O.getValue();
     if (null == e) return !1;
@@ -47,12 +54,15 @@ function A() {
     }
     return !1;
 }
+
 function v() {
     (0, d.I9)(f.default.getCurrentUser()) ? O.setTtl(b) : A() ? O.setTtl(y) : O.setTtl(E);
 }
+
 function S() {
     O.setLoading();
 }
+
 function I(e) {
     let { programRewards: t } = e;
     if (!O.isLoading()) return !1;
@@ -63,10 +73,12 @@ function I(e) {
         O.setValue(n),
         v();
 }
+
 function T() {
     if (!O.isLoading()) return !1;
     O.setError();
 }
+
 function C() {
     O.clear();
 }

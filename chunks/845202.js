@@ -1,4 +1,7 @@
-n.d(t, { A: () => M }), n(896048);
+n.d(t, {
+    A: () => M,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     o = n(503698),
@@ -14,6 +17,7 @@ var r = n(627968),
     m = n(737045),
     b = n(985018),
     w = n(181988);
+
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -39,6 +43,7 @@ function y(e) {
     }
     return e;
 }
+
 function p(e, t) {
     if (null == e) return {};
     var n,
@@ -67,6 +72,7 @@ function p(e, t) {
             (r = n[l]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
     return o;
 }
+
 function g(e) {
     var t = (function (e, t) {
         if ("object" !== j(e) || null === e) return e;
@@ -80,16 +86,20 @@ function g(e) {
     })(e, "string");
     return "symbol" === j(t) ? t : String(t);
 }
+
 function j(e) {
     return e && "u" > typeof Symbol && e.constructor === Symbol ? "symbol" : typeof e;
 }
 let O = (0, d.Ld)(),
     v = (0, d.Ld)();
+
 function S(e) {
     return "".concat(e.rowType, ":").concat(e.id);
 }
 let R = l.createContext({
-        searchRef: { current: null },
+        searchRef: {
+            current: null,
+        },
         selectedSection: 0,
         selectedRow: -1,
         roles: [],
@@ -106,6 +116,7 @@ let R = l.createContext({
         onRemovePendingAddition: () => {},
     }),
     E = [];
+
 function T(e) {
     let { roles: t = E, members: n = E, users: r = E, guilds: o = E } = e;
     return l.useMemo(() => [t.length, n.length, r.length, o.length], [t.length, n.length, r.length, o.length]);
@@ -122,6 +133,7 @@ let C = (e) => {
         t,
     );
 };
+
 function P(e) {
     var t, n;
     let { id: o, sectionIndex: u, rowIndex: d, rows: x, children: f, showCheckbox: b, showRowLabel: p } = e,
@@ -146,7 +158,9 @@ function P(e) {
                 id: o,
                 key: k,
                 role: "option",
-                className: s()(w.d, { [w.A5]: j === u && O === d }),
+                className: s()(w.d, {
+                    [w.A5]: j === u && O === d,
+                }),
                 onClick: (e) => {
                     L || (e.preventDefault(), P.rowType !== m.T6.EMPTY_STATE && T(P));
                 },
@@ -272,7 +286,10 @@ let k = (e) => {
                                 children: o.username,
                             })
                           : null,
-                      o.bot && (0, r.jsx)(u.A, { verified: o.verifiedBot }),
+                      o.bot &&
+                          (0, r.jsx)(u.A, {
+                              verified: o.verifiedBot,
+                          }),
                   ],
               });
     },
@@ -367,6 +384,7 @@ let k = (e) => {
                     section: 0,
                     row: -1,
                 });
+
             function O(e) {
                 var t;
                 let n = S(e);
@@ -518,13 +536,21 @@ let k = (e) => {
             let { section: t } = e;
             switch (t) {
                 case m.oO.ROLES:
-                    return (0, r.jsx)(C, { title: b.intl.string(b.t["LPJmL/"]) });
+                    return (0, r.jsx)(C, {
+                        title: b.intl.string(b.t["LPJmL/"]),
+                    });
                 case m.oO.MEMBERS:
-                    return (0, r.jsx)(C, { title: b.intl.string(b.t["9Oq93m"]) });
+                    return (0, r.jsx)(C, {
+                        title: b.intl.string(b.t["9Oq93m"]),
+                    });
                 case m.oO.USERS:
-                    return (0, r.jsx)(C, { title: b.intl.string(b.t.nqDUBX) });
+                    return (0, r.jsx)(C, {
+                        title: b.intl.string(b.t.nqDUBX),
+                    });
                 case m.oO.GUILDS:
-                    return (0, r.jsx)(C, { title: b.intl.string(b.t["7hB4kg"]) });
+                    return (0, r.jsx)(C, {
+                        title: b.intl.string(b.t["7hB4kg"]),
+                    });
                 default:
                     return null;
             }
@@ -533,13 +559,21 @@ let k = (e) => {
             let { section: t, row: n } = e;
             switch (t) {
                 case m.oO.ROLES:
-                    return (0, r.jsx)(k, { index: n });
+                    return (0, r.jsx)(k, {
+                        index: n,
+                    });
                 case m.oO.MEMBERS:
-                    return (0, r.jsx)(I, { index: n });
+                    return (0, r.jsx)(I, {
+                        index: n,
+                    });
                 case m.oO.USERS:
-                    return (0, r.jsx)(L, { index: n });
+                    return (0, r.jsx)(L, {
+                        index: n,
+                    });
                 case m.oO.GUILDS:
-                    return (0, r.jsx)(A, { index: n });
+                    return (0, r.jsx)(A, {
+                        index: n,
+                    });
             }
             return null;
         },

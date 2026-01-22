@@ -7,6 +7,7 @@ var r = n(735438),
     i = n.n(r),
     a = n(635377),
     s = n.n(a);
+
 function o(e, t, n) {
     return (
         t in e
@@ -22,6 +23,7 @@ function o(e, t, n) {
 }
 let l = 100,
     c = [[0, 99]];
+
 function u(e) {
     let t = {};
     return (
@@ -41,7 +43,11 @@ class f {
     }
     _get(e) {
         var t;
-        return null != (t = this._subscriptions[e]) ? t : new (s())({ max: d });
+        return null != (t = this._subscriptions[e])
+            ? t
+            : new (s())({
+                  max: d,
+              });
     }
     clear(e) {
         delete this._subscriptions[e];

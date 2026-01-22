@@ -1,6 +1,9 @@
-n.d(t, { P: () => a });
+n.d(t, {
+    P: () => a,
+});
 var r = n(627968),
     i = n(750390);
+
 function a(e) {
     let { graphic: t, layout: n } = e;
     if ("type" in t)
@@ -9,7 +12,9 @@ function a(e) {
                 let { color: a } = t;
                 return (0, r.jsx)("div", {
                     className: i.m4,
-                    style: { backgroundColor: a },
+                    style: {
+                        backgroundColor: a,
+                    },
                 });
             case "avatar":
                 let { src: s } = t;
@@ -30,5 +35,7 @@ function a(e) {
         }
     let l = "inline" === n ? "xs" : "sm",
         c = t;
-    return (0, r.jsx)(c, { size: l });
+    return (0, r.jsx)(c, {
+        size: l,
+    });
 }

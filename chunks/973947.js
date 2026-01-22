@@ -1,4 +1,7 @@
-n.d(t, { I: () => N }), n(896048);
+n.d(t, {
+    I: () => N,
+}),
+    n(896048);
 var l = n(627968),
     r = n(64700),
     i = n(503698),
@@ -21,6 +24,7 @@ var l = n(627968),
     v = n(257645),
     O = n(985018),
     x = n(854147);
+
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -74,7 +78,9 @@ let N = (e) => {
             playSound: G,
             stopSound: H,
             preloadSound: B,
-        } = (0, f.A)(null != M ? M[U] : null, { soundId: t.id }),
+        } = (0, f.A)(null != M ? M[U] : null, {
+            soundId: t.id,
+        }),
         Y = x[t.styleKey],
         W = r.useCallback(() => {
             n || !I
@@ -82,12 +88,25 @@ let N = (e) => {
                   w &&
                       p.default.track(
                           E.HAw.VOICE_FILTER_LIMITED_TIME_VOICE_SELECTED,
-                          S({ voice_filter_id: t.id }, (0, m.A)(i)),
+                          S(
+                              {
+                                  voice_filter_id: t.id,
+                              },
+                              (0, m.A)(i),
+                          ),
                       ))
                 : (0, d.n)();
         }, [n, I, N, t.id, i, w]),
         z = r.useCallback(() => {
-            p.default.track(E.HAw.VOICE_FILTER_PREVIEW_PLAYED, S({ voice_filter_id: t.id }, (0, m.A)(i))),
+            p.default.track(
+                E.HAw.VOICE_FILTER_PREVIEW_PLAYED,
+                S(
+                    {
+                        voice_filter_id: t.id,
+                    },
+                    (0, m.A)(i),
+                ),
+            ),
                 G({
                     volume: 0.5,
                     outputChannel: v.a.VOICE,
@@ -131,7 +150,9 @@ let N = (e) => {
                             className: x.iconTreatmentsWrapper,
                             children: [
                                 (0, l.jsxs)("div", {
-                                    className: a()(x.profile, { [x.underDevelopment]: t.underDevelopment }),
+                                    className: a()(x.profile, {
+                                        [x.underDevelopment]: t.underDevelopment,
+                                    }),
                                     children: [
                                         (0, l.jsx)("img", {
                                             className: x.thumbnail,
@@ -139,7 +160,9 @@ let N = (e) => {
                                             src: null == j ? void 0 : j.iconURL,
                                             draggable: !1,
                                         }),
-                                        (0, l.jsx)("div", { className: x.insetBorder }),
+                                        (0, l.jsx)("div", {
+                                            className: x.insetBorder,
+                                        }),
                                     ],
                                 }),
                                 T &&
@@ -197,7 +220,11 @@ let N = (e) => {
                                     color: t.underDevelopment ? "text-muted" : "text-strong",
                                     children: [t.underDevelopment ? "\uD83D\uDEA7 " : "", K],
                                 }),
-                                k && !L ? (0, l.jsx)(u.s3U, { size: "xxs" }) : null,
+                                k && !L
+                                    ? (0, l.jsx)(u.s3U, {
+                                          size: "xxs",
+                                      })
+                                    : null,
                             ],
                         }),
                     ],
@@ -208,9 +235,13 @@ let N = (e) => {
                     asContainer: !0,
                     text: O.intl.string(F ? O.t.ItuPbp : O.t["0gtbE8"]),
                     children: (0, l.jsx)(u.DUT, {
-                        className: a()([x.hoverButtonCircle, x.previewButton], { [x.visible]: F }),
+                        className: a()([x.hoverButtonCircle, x.previewButton], {
+                            [x.visible]: F,
+                        }),
                         onClick: F ? H : z,
-                        "aria-label": O.intl.formatToPlainString(O.t.gDzvjd, { voiceFilterName: K }),
+                        "aria-label": O.intl.formatToPlainString(O.t.gDzvjd, {
+                            voiceFilterName: K,
+                        }),
                         children: F
                             ? (0, l.jsx)(u.wFz, {
                                   size: "custom",

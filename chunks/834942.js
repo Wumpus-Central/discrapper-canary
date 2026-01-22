@@ -1,4 +1,9 @@
-n.d(t, { A: () => R }), n(896048), n(938796), n(321073);
+n.d(t, {
+    A: () => R,
+}),
+    n(896048),
+    n(938796),
+    n(321073);
 var r,
     i = n(665260),
     a = n(311907),
@@ -11,6 +16,7 @@ var r,
     f = n(287809),
     p = n(652215),
     _ = n(340837);
+
 function h(e, t, n) {
     return (
         t in e
@@ -34,6 +40,7 @@ let m = {
     },
     g = new Set(),
     E = {};
+
 function b(e) {
     let t;
     y(e), g.add(e);
@@ -53,8 +60,8 @@ function b(e) {
             r = null == a.joinedAt || new Date(a.joinedAt) < t;
         if (!(n.features.has(p.GuildFeatures.GUILD_ONBOARDING_EVER_ENABLED) && !r) && e.size > 0) return;
     }
-    let h = +r.createdAt + 60000 * p.$8o.ACCOUNT_AGE - Date.now(),
-        m = +n.joinedAt + 60000 * p.$8o.MEMBER_AGE - Date.now(),
+    let h = +r.createdAt + 6e4 * p.$8o.ACCOUNT_AGE - Date.now(),
+        m = +n.joinedAt + 6e4 * p.$8o.MEMBER_AGE - Date.now(),
         b = n.verificationLevel >= p.PvD.LOW && !r.isClaimed(),
         O = !1,
         A = !1,
@@ -90,32 +97,40 @@ function b(e) {
             timeoutRef: t,
         });
 }
+
 function y(e) {
     let t = E[e];
     null != t && clearTimeout(t.timeoutRef), delete E[e];
 }
+
 function O() {
     for (let e in (g.clear(), E)) y(e);
 }
+
 function A() {
     l.default.keys(E).forEach(y);
 }
+
 function v(e) {
     g.delete(e.guild.id), b(e.guild.id);
 }
+
 function S(e) {
     let { guild: t } = e;
     y(t.id);
 }
+
 function I(e) {
     var t;
     let { guildId: n, user: r } = e;
     if (r.id !== (null == (t = f.default.getCurrentUser()) ? void 0 : t.id)) return !1;
     g.delete(n);
 }
+
 function T() {
     g.clear();
 }
+
 function C(e) {
     let { guildId: t } = e;
     b(t);

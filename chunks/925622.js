@@ -88,7 +88,7 @@ let C = "dismissedCommunityFeaturesUpsell",
                 .catch(() => j(!1));
         });
         let O = (0, l.bG)([h.A], () => h.A.getGuild("942897714956472401")),
-            y = c.features.has(_.GuildFeatures.COMMUNITY) && b >= 1000 && p && null == O;
+            y = c.features.has(_.GuildFeatures.COMMUNITY) && b >= 1e3 && p && null == O;
         if (t && n && !y) return null;
         let A = async () => {
             try {
@@ -236,7 +236,9 @@ let C = "dismissedCommunityFeaturesUpsell",
                     });
             },
             T = (e) => {
-                v.A.updateGuild({ description: e });
+                v.A.updateGuild({
+                    description: e,
+                });
             };
         return (0, r.jsxs)(f.BJc, {
             gap: 24,
@@ -260,7 +262,9 @@ let C = "dismissedCommunityFeaturesUpsell",
                     value: null != (e = s.rulesChannelId) ? e : void 0,
                     options: h,
                     onSelectionChange: (e) => {
-                        v.A.updateGuild({ rulesChannelId: e });
+                        v.A.updateGuild({
+                            rulesChannelId: e,
+                        });
                     },
                     disabled: !c,
                 }),
@@ -273,7 +277,9 @@ let C = "dismissedCommunityFeaturesUpsell",
                     value: null != (t = s.publicUpdatesChannelId) ? t : void 0,
                     options: h,
                     onSelectionChange: (e) => {
-                        v.A.updateGuild({ publicUpdatesChannelId: e });
+                        v.A.updateGuild({
+                            publicUpdatesChannelId: e,
+                        });
                     },
                     disabled: !u,
                 }),
@@ -286,7 +292,9 @@ let C = "dismissedCommunityFeaturesUpsell",
                     value: null != (n = s.safetyAlertsChannelId) ? n : void 0,
                     options: h,
                     onSelectionChange: (e) => {
-                        v.A.updateGuild({ safetyAlertsChannelId: e });
+                        v.A.updateGuild({
+                            safetyAlertsChannelId: e,
+                        });
                     },
                     disabled: !c,
                 }),
@@ -299,7 +307,9 @@ let C = "dismissedCommunityFeaturesUpsell",
                     value: s.preferredLocale,
                     options: m,
                     onSelectionChange: (e) => {
-                        v.A.updateGuild({ preferredLocale: e });
+                        v.A.updateGuild({
+                            preferredLocale: e,
+                        });
                     },
                     disabled: !c,
                 }),
@@ -370,5 +380,7 @@ let C = "dismissedCommunityFeaturesUpsell",
             ? null
             : e.features.has(_.GuildFeatures.COMMUNITY)
               ? (0, r.jsx)(R, {})
-              : (0, r.jsx)(E.A, { guild: e });
+              : (0, r.jsx)(E.A, {
+                    guild: e,
+                });
     };

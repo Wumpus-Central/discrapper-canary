@@ -1,19 +1,24 @@
-n.d(t, { M: () => f });
+n.d(t, {
+    M: () => f,
+});
 var r = n(114099),
     i = n(297987),
     a = n(241827),
     s = n(64700);
 let o = !1,
     l = 0;
+
 function c() {
     (o = !0),
         setTimeout(() => {
             o = !1;
         }, 50);
 }
+
 function u(e) {
     "touch" === e.pointerType && c();
 }
+
 function d() {
     if ("u" > typeof document)
         return (
@@ -24,6 +29,7 @@ function d() {
             }
         );
 }
+
 function f(e) {
     let { onHoverStart: t, onHoverChange: n, onHoverEnd: l, isDisabled: c } = e,
         [u, f] = (0, s.useState)(!1),
@@ -48,7 +54,9 @@ function f(e) {
                             (e) => {
                                 p.isHovered && p.target && !(0, a.sD)(p.target, e.target) && r(e, e.pointerType);
                             },
-                            { capture: !0 },
+                            {
+                                capture: !0,
+                            },
                         ),
                         t &&
                             t({
@@ -94,7 +102,13 @@ function f(e) {
         }, [t, n, l, c, p, _, h]);
     return (
         (0, s.useEffect)(() => {
-            c && g({ currentTarget: p.target }, p.pointerType);
+            c &&
+                g(
+                    {
+                        currentTarget: p.target,
+                    },
+                    p.pointerType,
+                );
         }, [c]),
         {
             hoverProps: m,

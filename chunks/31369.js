@@ -1,7 +1,10 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r,
     i = n(311907),
     a = n(73153);
+
 function s(e, t, n) {
     return (
         t in e
@@ -16,8 +19,11 @@ function s(e, t, n) {
     );
 }
 let o = n(927813).A.Millis.HOUR,
-    l = { lastReportedAtMs: null },
+    l = {
+        lastReportedAtMs: null,
+    },
     c = l;
+
 function u(e) {
     let { timestampMs: t } = e;
     return (c.lastReportedAtMs = t), !0;
@@ -35,4 +41,6 @@ class d extends (r = i.Ay.PersistedStore) {
     }
 }
 s(d, "displayName", "FriendOnlineTimerStore"), s(d, "persistKey", "FriendOnlineTimerStore");
-let f = new d(a.h, { FRIEND_ONLINE_TIMER_REPORTED: u });
+let f = new d(a.h, {
+    FRIEND_ONLINE_TIMER_REPORTED: u,
+});

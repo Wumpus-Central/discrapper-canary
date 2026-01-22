@@ -1,4 +1,7 @@
-n.d(t, { A: () => b }), n(896048);
+n.d(t, {
+    A: () => b,
+}),
+    n(896048);
 var a = n(627968),
     l = n(64700),
     i = n(503698),
@@ -59,7 +62,9 @@ let x = (e) => {
                 }),
                 !n &&
                     (0, a.jsx)("div", {
-                        style: { marginTop: 16 },
+                        style: {
+                            marginTop: 16,
+                        },
                         children: (0, a.jsx)(s.wx6, {
                             type: "warning",
                             children: (0, a.jsxs)(s.BJc, {
@@ -116,7 +121,9 @@ let x = (e) => {
                         case 3:
                             return (0, a.jsx)(p.A, {});
                         default:
-                            return (0, a.jsx)(x, { setTab: t });
+                            return (0, a.jsx)(x, {
+                                setTab: t,
+                            });
                     }
                 })(),
             ],

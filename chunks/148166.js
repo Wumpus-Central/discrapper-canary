@@ -1,9 +1,13 @@
-r.d(t, { default: () => a }), r(896048);
+r.d(t, {
+    default: () => a,
+}),
+    r(896048);
 var n = r(627968),
     o = r(64700),
     c = r(397927),
     l = r(985018),
     i = r(290468);
+
 function a(e) {
     var t, r;
     let { header: a, body: p, onSubmit: s } = e,

@@ -1,1 +1,3 @@
-e.exports = { o: "a284dc4b2785e174" };
+e.exports = {
+    o: "a284dc4b2785e174",
+};

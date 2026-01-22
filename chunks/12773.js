@@ -1,7 +1,10 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(562465),
     i = n(73153),
     l = n(652215);
+
 function s(e) {
     return r.Bo.get({
         url: l.Rsh.GUILD_TOP_READ_CHANNELS(e),

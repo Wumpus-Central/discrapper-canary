@@ -8,6 +8,7 @@ var r,
     a = n.n(i),
     s = n(311907),
     o = n(73153);
+
 function l(e, t, n) {
     return (
         t in e
@@ -21,6 +22,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,6 +39,7 @@ function c(e) {
     }
     return e;
 }
+
 function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -49,6 +52,7 @@ function u(e, t) {
     }
     return n;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -60,6 +64,7 @@ function d(e, t) {
         e
     );
 }
+
 function f(e, t) {
     if (null == e) return {};
     var n,
@@ -76,6 +81,7 @@ function f(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function p(e, t) {
     if (null == e) return {};
     var n,
@@ -92,14 +98,24 @@ var _ = (function (e) {
 let h = (e, t) => "".concat(e, "-").concat(t),
     m = 25,
     g = {
-        rates: { voice_message: 1 },
-        positions: new (a())({ max: m }),
+        rates: {
+            voice_message: 1,
+        },
+        positions: new (a())({
+            max: m,
+        }),
     },
     E = c({}, g);
+
 function b(e) {
     let { rate: t, playbackType: n } = e;
-    E = d(c({}, E), { rates: d(c({}, E.rates), { [n]: t }) });
+    E = d(c({}, E), {
+        rates: d(c({}, E.rates), {
+            [n]: t,
+        }),
+    });
 }
+
 function y(e) {
     let { cacheKey: t, position: n, duration: r } = e;
     n > 0.5 && n < 0.95 * r ? E.positions.set(t, n) : E.positions.del(t);

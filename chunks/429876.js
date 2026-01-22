@@ -1,4 +1,7 @@
-l.d(t, { A: () => O }), l(896048);
+l.d(t, {
+    A: () => O,
+}),
+    l(896048);
 var n = l(627968),
     r = l(64700),
     s = l(503698),
@@ -20,6 +23,7 @@ var n = l(627968),
     x = l(652215),
     S = l(985018),
     C = l(356365);
+
 function O(e) {
     let { tab: t, sortedCategories: l, initialCategoryId: s, showFilterInitially: a = !0, onUnmount: c } = e;
     (0, d.S)();
@@ -64,7 +68,11 @@ function O(e) {
                             initialCategoryId: s,
                         }),
                     }),
-                    h && !v && (0, n.jsx)("div", { className: C.yF }),
+                    h &&
+                        !v &&
+                        (0, n.jsx)("div", {
+                            className: C.yF,
+                        }),
                     h &&
                         !v &&
                         (0, n.jsx)(i.HOs, {
@@ -142,7 +150,9 @@ let _ = (e) => {
                                 children: (0, n.jsx)(f.A, {}),
                             }),
                             (0, n.jsxs)("div", {
-                                className: a()(C.wR, { [C.Im]: t }),
+                                className: a()(C.wR, {
+                                    [C.Im]: t,
+                                }),
                                 children: [
                                     (0, n.jsxs)("div", {
                                         className: C.Ul,
@@ -201,7 +211,9 @@ let _ = (e) => {
                                   o,
                               )
                             : (0, n.jsx)(u.R9, {
-                                  newValue: { pageIndex: N },
+                                  newValue: {
+                                      pageIndex: N,
+                                  },
                                   children: (0, n.jsx)(b.A, {
                                       sortedCategories: O,
                                       setCategoryRef: _,

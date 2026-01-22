@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968);
 n(64700);
 var l = n(442433),
@@ -8,11 +10,15 @@ var l = n(442433),
     o = n(652215),
     c = n(746080),
     u = n(985018);
+
 function d(e) {
     let { guild: t, selected: d } = e;
     return (0, r.jsx)(s.G, {
         id: "subscriptions-".concat(t.id),
-        renderIcon: (e) => (0, r.jsx)(i.A, { className: e }),
+        renderIcon: (e) =>
+            (0, r.jsx)(i.A, {
+                className: e,
+            }),
         text: u.intl.string(u.t["KzCF/6"]),
         selected: d,
         onClick: () => {
@@ -51,7 +57,10 @@ function d(e) {
                                 }
                                 return e;
                             })({}, n)),
-                            (i = i = { guild: t }),
+                            (i = i =
+                                {
+                                    guild: t,
+                                }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(i))
                                 : (function (e, t) {

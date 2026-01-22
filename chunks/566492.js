@@ -1,6 +1,9 @@
-n.d(t, { P: () => A });
+n.d(t, {
+    P: () => A,
+});
 var r = n(508425),
     i = n(945096);
+
 function a(e, t, n) {
     return (
         t in e
@@ -14,6 +17,7 @@ function a(e, t, n) {
         e
     );
 }
+
 function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -30,6 +34,7 @@ function s(e) {
     }
     return e;
 }
+
 function o(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -42,6 +47,7 @@ function o(e, t) {
     }
     return n;
 }
+
 function l(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -64,6 +70,7 @@ let c = "--custom-display-name-styles-gradient-start-color",
     g = "--custom-display-name-styles-neon-stroke-color",
     E = "--custom-display-name-styles-wrap",
     b = "--custom-display-name-styles-font-opacity";
+
 function y(e) {
     let { main: t, light1: n, light2: r, dark1: a, dark2: s, toonStroke: o, neonStroke: l } = (0, i.$0)(e);
     return {
@@ -76,6 +83,7 @@ function y(e) {
         [g]: l,
     };
 }
+
 function O(e) {
     return 0 === e.length
         ? {}
@@ -85,6 +93,7 @@ function O(e) {
               [d]: e[0],
           };
 }
+
 function A(e, t) {
     let { shouldWrap: n = !1, fontOpacity: i = 1 } =
             arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},

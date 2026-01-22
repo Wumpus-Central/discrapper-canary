@@ -27,6 +27,7 @@ let g = {
     [h.P7.QUESTS]: "Quests",
     [h.P7.END]: "Entry",
 };
+
 function E(e) {
     let { slide: t, className: n } = e,
         a = i.useContext(f.P),
@@ -51,6 +52,7 @@ function E(e) {
         }),
     });
 }
+
 function b(e) {
     let { slide: t, className: n } = e,
         i = (0, _.vy)();

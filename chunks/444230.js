@@ -1,9 +1,12 @@
-n.d(t, { U: () => o });
+n.d(t, {
+    U: () => o,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
     a = n(297486),
     s = n(503396);
+
 function o(e) {
     let { searchQuery: t, textContent: n, type: o } = e;
     return (

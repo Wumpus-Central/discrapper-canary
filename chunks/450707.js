@@ -4,6 +4,7 @@ n.d(t, {
 });
 var r = n(624793),
     i = n(985018);
+
 function a(e, t, n) {
     return (
         t in e
@@ -17,6 +18,7 @@ function a(e, t, n) {
         e
     );
 }
+
 function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -33,6 +35,7 @@ function s(e) {
     }
     return e;
 }
+
 function o(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -45,6 +48,7 @@ function o(e, t) {
     }
     return n;
 }
+
 function l(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -99,7 +103,9 @@ let u = (e) => {
             } = e,
             _ = null;
         return t === r.rV.APPLICATION && null != n
-            ? i.intl.formatToPlainString(i.t.uERlTd, { appName: n.name })
+            ? i.intl.formatToPlainString(i.t.uERlTd, {
+                  appName: n.name,
+              })
             : a
               ? s
                   ? d
@@ -128,7 +134,9 @@ let u = (e) => {
                         : i.intl.string(i.t.jQy3aM)
                 : l
                   ? i.intl.string(i.t.FJ6Z01)
-                  : i.intl.format(i.t.U6vLcA, { openPremiumSettings: p });
+                  : i.intl.format(i.t.U6vLcA, {
+                        openPremiumSettings: p,
+                    });
     },
     f = (e) => {
         let { isPremium: t, hasJoinedEmojiSourceGuild: n, isUnusableRoleSubscriptionEmoji: r, isDiscoverable: a } = e,

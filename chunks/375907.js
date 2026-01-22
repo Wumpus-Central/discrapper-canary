@@ -1,6 +1,9 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 var l = n(64700),
     r = n(884362);
+
 function a(e) {
     let { listRef: t, padding: n, channel: a, isEnabled: i } = e,
         s = l.useCallback(
@@ -14,7 +17,10 @@ function a(e) {
                             padding: n,
                             callback: () => {
                                 var t;
-                                null == (t = document.querySelector(e)) || t.focus({ preventScroll: !0 });
+                                null == (t = document.querySelector(e)) ||
+                                    t.focus({
+                                        preventScroll: !0,
+                                    });
                             },
                         }));
             },
@@ -24,7 +30,10 @@ function a(e) {
             () =>
                 new Promise((e) => {
                     let n = t.current;
-                    null == n || n.scrollToTop({ callback: () => requestAnimationFrame(e) });
+                    null == n ||
+                        n.scrollToTop({
+                            callback: () => requestAnimationFrame(e),
+                        });
                 }),
             [t],
         ),
@@ -32,7 +41,10 @@ function a(e) {
             () =>
                 new Promise((e) => {
                     let n = t.current;
-                    null == n || n.scrollToBottom({ callback: () => requestAnimationFrame(e) });
+                    null == n ||
+                        n.scrollToBottom({
+                            callback: () => requestAnimationFrame(e),
+                        });
                 }),
             [t],
         );

@@ -1,5 +1,8 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 var r = n(985018);
+
 function i(e, t, n) {
     return (
         t in e
@@ -20,7 +23,11 @@ class a {
     announceDrag(e, t) {
         if (null == e) return;
         let n = this.getName(e, t);
-        this.announce(r.intl.formatToPlainString(r.t["vHD/Je"], { itemName: n }));
+        this.announce(
+            r.intl.formatToPlainString(r.t["vHD/Je"], {
+                itemName: n,
+            }),
+        );
     }
     announceHover(e, t) {
         null != e && this.announce(this.getName(e, t));

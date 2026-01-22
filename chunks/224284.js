@@ -1,4 +1,8 @@
-n.d(t, { y: () => u }), n(747238), n(733351);
+n.d(t, {
+    y: () => u,
+}),
+    n(747238),
+    n(733351);
 var r = n(627968),
     l = n(64700),
     o = n(397927),
@@ -6,6 +10,7 @@ var r = n(627968),
     s = n(405670),
     a = n(579473),
     c = n(438655);
+
 function u(e) {
     var t;
     let { quest: n, onClose: u } = e,
@@ -45,7 +50,9 @@ function u(e) {
                     (0, r.jsx)(o.DUT, {
                         onClick: u,
                         className: c.GI,
-                        children: (0, r.jsx)(o.PGe, { color: "currentColor" }),
+                        children: (0, r.jsx)(o.PGe, {
+                            color: "currentColor",
+                        }),
                     }),
                 ],
             }),
@@ -59,12 +66,22 @@ function u(e) {
                             (null == d ? void 0 : d.fetchStatus) === s.Lx.FETCHING
                                 ? (0, r.jsx)("div", {
                                       className: c.Cw,
-                                      children: (0, r.jsx)(o.y$y, { type: o.y$y.Type.WANDERING_CUBES }),
+                                      children: (0, r.jsx)(o.y$y, {
+                                          type: o.y$y.Type.WANDERING_CUBES,
+                                      }),
                                   })
                                 : (0, r.jsx)(o.Heading, {
                                       variant: "heading-md/normal",
                                       color: "text-muted",
-                                      children: m.map((e, t) => (0, r.jsx)("p", { children: e }, t)),
+                                      children: m.map((e, t) =>
+                                          (0, r.jsx)(
+                                              "p",
+                                              {
+                                                  children: e,
+                                              },
+                                              t,
+                                          ),
+                                      ),
                                   }),
                     }),
                 }),

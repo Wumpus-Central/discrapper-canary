@@ -16,26 +16,45 @@ var r = n(627968),
     h = n(622543),
     A = n(985018),
     g = n(413611);
+
 function m(e) {
     let { applicationId: t, size: n = "default" } = e,
         i = (0, o.bG)([h.A], () => h.A.getApplicationWidgetConfig(t));
     return (0, r.jsxs)("div", {
-        className: a()(g.kL, { [g.PG]: "small" === n }),
+        className: a()(g.kL, {
+            [g.PG]: "small" === n,
+        }),
         children: [
             (0, r.jsxs)("div", {
                 className: g.Qs,
                 children: [
-                    (0, r.jsx)("div", { className: g.wx }),
-                    (0, r.jsx)("div", { className: g.yF }),
+                    (0, r.jsx)("div", {
+                        className: g.wx,
+                    }),
+                    (0, r.jsx)("div", {
+                        className: g.yF,
+                    }),
                     (0, r.jsxs)("div", {
                         className: g.M1,
                         children: [
-                            (0, r.jsx)("div", { className: g.dJ }),
-                            (0, r.jsx)("div", { className: g.dJ }),
-                            (0, r.jsx)("div", { className: g.dJ }),
-                            (0, r.jsx)("div", { className: g.dJ }),
-                            (0, r.jsx)("div", { className: g.dJ }),
-                            (0, r.jsx)("div", { className: g.dJ }),
+                            (0, r.jsx)("div", {
+                                className: g.dJ,
+                            }),
+                            (0, r.jsx)("div", {
+                                className: g.dJ,
+                            }),
+                            (0, r.jsx)("div", {
+                                className: g.dJ,
+                            }),
+                            (0, r.jsx)("div", {
+                                className: g.dJ,
+                            }),
+                            (0, r.jsx)("div", {
+                                className: g.dJ,
+                            }),
+                            (0, r.jsx)("div", {
+                                className: g.dJ,
+                            }),
                         ],
                     }),
                 ],
@@ -49,11 +68,14 @@ function m(e) {
                               alt: "",
                               className: g.oz,
                           })
-                        : (0, r.jsx)("div", { className: g.FQ }),
+                        : (0, r.jsx)("div", {
+                              className: g.FQ,
+                          }),
             }),
         ],
     });
 }
+
 function b(e) {
     let { applicationId: t, size: n = "default" } = e,
         { trackUserProfileAction: l } = (0, f.NJ)(),
@@ -66,24 +88,34 @@ function b(e) {
                     action: "PRESS_APPLICATION_WIDGET_PLACEHOLDER_CONNECT",
                     applicationId: t,
                 }),
-                m({ analyticsLocations: _ }));
+                m({
+                    analyticsLocations: _,
+                }));
         }, [h, l, t, m, _]);
     return "default" !== n || null == a
         ? null
         : (0, r.jsxs)("div", {
               className: g.qr,
               children: [
-                  (0, r.jsx)(s.A5T, { size: "xs" }),
+                  (0, r.jsx)(s.A5T, {
+                      size: "xs",
+                  }),
                   (0, r.jsx)(s.EYj, {
                       variant: "text-sm/medium",
                       color: "text-subtle",
                       children: b
                           ? o
-                              ? A.intl.format(A.t.wiyuG9, { applicationName: a.name })
+                              ? A.intl.format(A.t.wiyuG9, {
+                                    applicationName: a.name,
+                                })
                               : h
-                                ? A.intl.format(A.t.RNWFOQ, { onConnect: E })
+                                ? A.intl.format(A.t.RNWFOQ, {
+                                      onConnect: E,
+                                  })
                                 : A.intl.string(A.t["9TX4UT"])
-                          : (0, r.jsx)("div", { className: g.bg }),
+                          : (0, r.jsx)("div", {
+                                className: g.bg,
+                            }),
                   }),
               ],
           });

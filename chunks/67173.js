@@ -1,9 +1,12 @@
-n.d(t, { A: () => S }), n(896048);
+n.d(t, {
+    A: () => S,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
     a = n.n(l),
-    s = n(432022),
+    s = n(108531),
     o = n(837381),
     c = n(554146),
     u = n(192308),
@@ -43,10 +46,14 @@ let I = Math.ceil(Math.sqrt(115200)),
                 };
             })(),
             x = i.useCallback(() => {
-                b.A.getState().setUtmCurrentContext({ utmContentCurrent: "PRIMARY_QUEST_HOME" });
+                b.A.getState().setUtmCurrentContext({
+                    utmContentCurrent: "PRIMARY_QUEST_HOME",
+                });
             }, []),
             [{ glowSpring: P }, w] = (0, d.zhh)(() => ({
-                from: { glowSpring: 0 },
+                from: {
+                    glowSpring: 0,
+                },
                 config: {
                     clamp: !0,
                     mass: 1,
@@ -55,7 +62,9 @@ let I = Math.ceil(Math.sqrt(115200)),
                 },
             })),
             [{ shineSpring: L }, R] = (0, d.zhh)(() => ({
-                from: { shineSpring: 0 },
+                from: {
+                    shineSpring: 0,
+                },
                 config: {
                     clamp: !0,
                     mass: 1,
@@ -64,7 +73,9 @@ let I = Math.ceil(Math.sqrt(115200)),
                 },
             })),
             D = i.useCallback(() => {
-                R({ shineSpring: 1 }),
+                R({
+                    shineSpring: 1,
+                }),
                     w({
                         glowSpring: 1,
                         delay: 200,
@@ -95,7 +106,9 @@ let I = Math.ceil(Math.sqrt(115200)),
             V = i.useCallback((e) => {
                 G(e.contentRect.width);
             }, []),
-            B = (0, f.w)(V, [], { fireOnMount: !0 });
+            B = (0, f.w)(V, [], {
+                fireOnMount: !0,
+            });
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)("div", {
@@ -137,7 +150,9 @@ let I = Math.ceil(Math.sqrt(115200)),
                             return e;
                         })(
                             {
-                                className: a()({ [y.h6]: T }),
+                                className: a()({
+                                    [y.h6]: T,
+                                }),
                                 icon: d.r2v,
                                 listItemRef: C,
                                 onClick: x,

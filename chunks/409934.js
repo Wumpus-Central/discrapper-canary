@@ -1,4 +1,8 @@
-n.d(t, { A: () => E }), n(747238), n(896048);
+n.d(t, {
+    A: () => E,
+}),
+    n(747238),
+    n(896048);
 var r,
     i = n(627968),
     s = n(64700),
@@ -14,6 +18,7 @@ var r,
     g = n(652215),
     m = n(985018),
     A = n(473169);
+
 function x(e, t, n) {
     return (
         t in e
@@ -62,7 +67,9 @@ class _ extends (r = s.PureComponent) {
             (0, u.d)("disable_server_highlight_notifications");
     }
     renderBusy() {
-        return (0, i.jsx)(p.Ay, { children: (0, i.jsx)(p.CK, {}) });
+        return (0, i.jsx)(p.Ay, {
+            children: (0, i.jsx)(p.CK, {}),
+        });
     }
     renderSuccess() {
         let { defaultRoute: e, transitionTo: t } = this.props,
@@ -73,7 +80,11 @@ class _ extends (r = s.PureComponent) {
                     className: A.QB,
                     children: m.intl.string(m.t.Z33eiP),
                 }),
-                (0, i.jsx)(p.tK, { children: m.intl.format(m.t.NRWtfC, { guildName: n.name }) }),
+                (0, i.jsx)(p.tK, {
+                    children: m.intl.format(m.t.NRWtfC, {
+                        guildName: n.name,
+                    }),
+                }),
                 (0, i.jsx)("div", {
                     className: A.eT,
                     children: (0, i.jsx)(c.Button, {
@@ -106,7 +117,9 @@ class _ extends (r = s.PureComponent) {
                     className: A.QB,
                     children: m.intl.string(m.t.ox9hIS),
                 }),
-                (0, i.jsx)(p.tK, { children: m.intl.string(m.t["/dcuR5"]) }),
+                (0, i.jsx)(p.tK, {
+                    children: m.intl.string(m.t["/dcuR5"]),
+                }),
                 (0, i.jsx)("div", {
                     className: A.eT,
                     children: (0, i.jsx)(c.Button, {
@@ -131,5 +144,9 @@ class _ extends (r = s.PureComponent) {
             });
     }
 }
-x(_, "defaultProps", { transitionTo: (e) => n.g.location.assign(e) });
-let E = a.Ay.connectStores([d.A], () => ({ defaultRoute: d.A.defaultRoute }))(_);
+x(_, "defaultProps", {
+    transitionTo: (e) => n.g.location.assign(e),
+});
+let E = a.Ay.connectStores([d.A], () => ({
+    defaultRoute: d.A.defaultRoute,
+}))(_);

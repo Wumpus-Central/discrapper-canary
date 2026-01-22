@@ -1,4 +1,6 @@
-n.d(t, { A: () => y });
+n.d(t, {
+    A: () => y,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -16,6 +18,7 @@ var r = n(627968),
     g = n(653183),
     E = n(652215),
     b = n(417711);
+
 function y() {
     i.useEffect(() => {
         c.h.wait(() => {
@@ -33,10 +36,14 @@ function y() {
         ? (0, r.jsxs)("div", {
               className: b.kL,
               children: [
-                  (0, r.jsx)("div", { className: b.Tp }),
+                  (0, r.jsx)("div", {
+                      className: b.Tp,
+                  }),
                   (0, r.jsx)("div", {
                       className: b.Qs,
-                      children: (0, r.jsx)(g.A, { premiumSubscription: t }),
+                      children: (0, r.jsx)(g.A, {
+                          premiumSubscription: t,
+                      }),
                   }),
               ],
           })

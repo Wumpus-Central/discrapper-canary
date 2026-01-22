@@ -1,4 +1,6 @@
-n.d(t, { A: () => S });
+n.d(t, {
+    A: () => S,
+});
 var i = n(627968),
     r = n(64700),
     l = n(503698),
@@ -23,6 +25,7 @@ var i = n(627968),
     N = n(652215),
     E = n(985018),
     T = n(393800);
+
 function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -48,6 +51,7 @@ function w(e) {
     }
     return e;
 }
+
 function C(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -66,6 +70,7 @@ function C(e, t) {
         e
     );
 }
+
 function S(e) {
     let { guild: t, id: l, type: a, isLocked: s, lockTooltipText: c } = e,
         d = !s || null != c;
@@ -113,6 +118,7 @@ function S(e) {
             });
     }
 }
+
 function _(e) {
     let { guild: t, id: n, isLocked: l, lockTooltipText: s, openEntryContextMenu: o } = e,
         d = (0, p.Ap)(t.id),
@@ -166,10 +172,15 @@ function _(e) {
                             children: ["(", g, ")"],
                         })
                       : null,
-                  l ? (0, i.jsx)(k, { tooltipText: s }) : null,
+                  l
+                      ? (0, i.jsx)(k, {
+                            tooltipText: s,
+                        })
+                      : null,
               ],
           });
 }
+
 function I(e) {
     var t;
     let { guild: l, id: s, isLocked: o, lockTooltipText: d } = e,
@@ -204,7 +215,15 @@ function I(e) {
               className: T.Cv,
               children: [
                   null != p
-                      ? (0, i.jsx)(h.A, w({ className: a()(T.__invalid_icon, T.Sl) }, p))
+                      ? (0, i.jsx)(
+                            h.A,
+                            w(
+                                {
+                                    className: a()(T.__invalid_icon, T.Sl),
+                                },
+                                p,
+                            ),
+                        )
                       : (0, i.jsx)(u.iTF, {
                             size: "custom",
                             width: 23,
@@ -218,10 +237,15 @@ function I(e) {
                       variant: "text-md/normal",
                       children: f.name,
                   }),
-                  o ? (0, i.jsx)(k, { tooltipText: d }) : null,
+                  o
+                      ? (0, i.jsx)(k, {
+                            tooltipText: d,
+                        })
+                      : null,
               ],
           });
 }
+
 function P(e) {
     let { guild: t, id: n, isLocked: r, lockTooltipText: l, openEntryContextMenu: a } = e,
         s = (0, c.bG)([A.default], () => A.default.getUser(n)),
@@ -255,10 +279,15 @@ function P(e) {
                             variant: "text-sm/normal",
                             children: v.Ay.getUserTag(s),
                         }),
-                  r ? (0, i.jsx)(k, { tooltipText: l }) : null,
+                  r
+                      ? (0, i.jsx)(k, {
+                            tooltipText: l,
+                        })
+                      : null,
               ],
           });
 }
+
 function k(e) {
     let { tooltipText: t } = e;
     return (0, i.jsx)(d.m, {

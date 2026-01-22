@@ -1,4 +1,8 @@
-n.d(t, { A: () => O }), n(896048), n(321073);
+n.d(t, {
+    A: () => O,
+}),
+    n(896048),
+    n(321073);
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -15,6 +19,7 @@ var r = n(627968),
     g = n(357064),
     m = n(985018),
     A = n(971090);
+
 function y(e) {
     let { onActivate: t, children: n } = e,
         o = l.useRef(null),
@@ -74,7 +79,9 @@ function y(e) {
                                         }),
                                     ],
                                 }),
-                                (0, r.jsx)("div", { className: A.ed }),
+                                (0, r.jsx)("div", {
+                                    className: A.ed,
+                                }),
                             ],
                         }),
                     position: "right",
@@ -136,6 +143,7 @@ function y(e) {
         })
     );
 }
+
 function O(e) {
     let { onActivate: t } = e,
         [n, O] = l.useState(!1),

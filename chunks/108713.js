@@ -25,6 +25,7 @@ var r = n(216348),
     h = n(350701),
     m = n(652215),
     g = n(985018);
+
 function E(e, t, n) {
     return (
         t in e
@@ -38,6 +39,7 @@ function E(e, t, n) {
         e
     );
 }
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -54,6 +56,7 @@ function b(e) {
     }
     return e;
 }
+
 function y(e, t) {
     var n, r;
     d.default.track(m.HAw.REMOTE_COMMAND_SENT, {
@@ -64,7 +67,9 @@ function y(e, t) {
 async function O() {
     let e = _.default.getAwaitingRemoteSessionInfo(),
         t = null == e ? void 0 : e.nonce;
-    s.h.dispatch({ type: "REMOTE_SESSION_DISCONNECT" });
+    s.h.dispatch({
+        type: "REMOTE_SESSION_DISCONNECT",
+    });
     let n = [];
     ((null == e ? void 0 : e.type) === m.fg2.PLAYSTATION ||
         (null == e ? void 0 : e.type) === m.fg2.PLAYSTATION_STAGING) &&
@@ -81,12 +86,14 @@ async function O() {
         });
     }
 }
+
 function A(e) {
     s.h.dispatch({
         type: "REMOTE_SESSION_CONNECT",
         sessionId: e,
     });
 }
+
 function v(e, t) {
     let { selfMute: n, selfDeaf: r } = t;
     s.h.dispatch({
@@ -100,15 +107,19 @@ function v(e, t) {
     }),
         y("VOICE_STATE_UPDATE", e);
 }
+
 function S(e) {
     s.h.dispatch({
         type: "REMOTE_COMMAND",
         sessionId: e,
-        payload: { type: "DISCONNECT" },
+        payload: {
+            type: "DISCONNECT",
+        },
     }),
         y("DISCONNECT", e),
         O();
 }
+
 function I(e, t, n, r) {
     let i = (0, l.o)(n);
     null != i &&
@@ -133,7 +144,11 @@ async function T() {
         e = (
             await a.Bo.post({
                 url: m.Rsh.CONNECT_REQUEST_CREATE,
-                body: { analytics_properties: { handoff_type: t } },
+                body: {
+                    analytics_properties: {
+                        handoff_type: t,
+                    },
+                },
                 rejectWithError: !1,
             })
         ).body.nonce;
@@ -142,6 +157,7 @@ async function T() {
     }
     return e;
 }
+
 function C(e) {
     return a.Bo.del({
         url: m.Rsh.CONNECT_REQUEST(e),
@@ -179,6 +195,7 @@ async function N(e) {
         n
     );
 }
+
 function R(e, t) {
     s.h.dispatch({
         type: "GAME_CONSOLE_SELECT_DEVICE",

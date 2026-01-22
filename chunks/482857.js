@@ -1,4 +1,6 @@
-n.d(e, { A: () => G });
+n.d(e, {
+    A: () => G,
+});
 var l = n(627968);
 n(64700);
 var i = n(311907),
@@ -26,6 +28,7 @@ var i = n(311907),
     P = n(988794),
     x = n(652215),
     w = n(985018);
+
 function D(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
@@ -51,6 +54,7 @@ function D(t) {
     }
     return t;
 }
+
 function k(t, e) {
     return (
         (e = null != e ? e : {}),
@@ -69,6 +73,7 @@ function k(t, e) {
         t
     );
 }
+
 function G(t) {
     let { guild: e, channel: G, guildScheduledEvent: N, isActive: S, recurrenceId: I, onActionTaken: T } = t,
         { scheduled_start_time: L, id: V, entity_type: X, guild_id: R } = N,
@@ -80,6 +85,7 @@ function G(t) {
         U = (0, i.bG)([h.A], () => null == G || !G.isGuildVocal() || h.A.can(x.xBc.CONNECT, G), [G]),
         B = (0, c.H)(R),
         Y = (0, E.A)(I, V);
+
     function Z(t) {
         t.stopPropagation(), (0, O.A)(V, I, R);
     }

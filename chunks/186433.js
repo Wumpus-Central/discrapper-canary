@@ -47,12 +47,20 @@ let H = (0, c.createRoot)(B),
         "/oauth2/authorize": S.A,
         "/one-time": V.A,
     };
+
 function W(e, t, n) {
     var r;
     let i = null != n ? new URLSearchParams(n) : null;
     (null != (r = Y[t]) && r.call(Y, i)) || (0, T.pX)(t);
 }
-let K = (e) => H.render((0, l.jsx)(D.e, { children: (0, l.jsx)(P.A, { children: (0, l.jsx)(e, {}) }) }));
+let K = (e) =>
+    H.render(
+        (0, l.jsx)(D.e, {
+            children: (0, l.jsx)(P.A, {
+                children: (0, l.jsx)(e, {}),
+            }),
+        }),
+    );
 if (null != w.A) {
     null == (r = w.A.setUncaughtExceptionHandler) ||
         r.call(w.A, (e, t) => {
@@ -69,7 +77,9 @@ if (null != w.A) {
             hostVersion: e,
             moduleVersions: n,
         }),
-        b.A.setTags({ nativeBuildNumber: null == t ? void 0 : t.toString() });
+        b.A.setTags({
+            nativeBuildNumber: null == t ? void 0 : t.toString(),
+        });
     let l = Object.keys(n)
         .filter((e) => null != n[e])
         .map((e) => "".concat(e, ": ").concat(n[e]))

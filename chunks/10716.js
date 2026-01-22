@@ -9,6 +9,7 @@ var r,
     s = n(73153),
     o = n(253932),
     l = n(652215);
+
 function c(e, t, n) {
     return (
         t in e
@@ -22,6 +23,7 @@ function c(e, t, n) {
         e
     );
 }
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -38,6 +40,7 @@ function u(e) {
     }
     return e;
 }
+
 function d() {
     return {
         lastUsedObject: {},
@@ -52,29 +55,36 @@ var p = (function (e) {
 })({});
 let _ = "INITIALIZED",
     h = [];
+
 function m() {
     (f = d()), (_ = "INITIALIZED"), (h = []);
 }
+
 function g() {
     f.useActivityUrlOverride = !f.useActivityUrlOverride;
 }
+
 function E(e) {
     let { activityUrlOverride: t } = e;
     f.activityUrlOverride = t;
 }
+
 function b(e) {
     let { applicationId: t, timestamp: n } = e;
     if (null == h.find((e) => e.id === t)) return !1;
     f.lastUsedObject[t] = n;
 }
+
 function y(e) {
     let { applications: t } = e;
     (_ = "LOADED"), (h = t.filter((e) => null != e.flags && (0, i.Lt)(e.flags, l.gfo.EMBEDDED)));
 }
+
 function O(e) {
     let { type: t } = e;
     _ = "ERROR";
 }
+
 function A(e) {
     let { filter: t } = e;
     f.filter = t;

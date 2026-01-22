@@ -10,19 +10,23 @@ function r(e) {
                       : typeof e;
               })(e);
 }
+
 function i(e, t, n) {
     return t.split(".").reduce(function (e, t) {
         return e && e[t] ? e[t] : n || null;
     }, e);
 }
+
 function a(e, t) {
     return e.filter(function (e) {
         return e !== t;
     });
 }
+
 function s(e) {
     return "object" === r(e);
 }
+
 function o(e, t) {
     var n = new Map(),
         r = function (e) {
@@ -37,6 +41,7 @@ function o(e, t) {
         i
     );
 }
+
 function l(e, t) {
     return e.filter(function (e) {
         return t.indexOf(e) > -1;

@@ -18,6 +18,7 @@ let l = new Set(["*", "_", "~", "`", "|"]),
         inlineCode: "`",
         spoiler: "||",
     };
+
 function u(e, t, n) {
     if (null == e.selection)
         return {
@@ -33,6 +34,7 @@ function u(e, t, n) {
         after: i,
     };
 }
+
 function d(e, t) {
     let [n] = o.VW.node(e, t.path);
     if (!o.l5.isText(n)) return {};
@@ -74,6 +76,7 @@ function d(e, t) {
         c
     );
 }
+
 function f(e, t, n, r, i) {
     let a = _(t, r);
     a >= 0 &&
@@ -82,6 +85,7 @@ function f(e, t, n, r, i) {
             location: n + a,
         });
 }
+
 function p(e) {
     let { result: t, text: n, startIndex: r, syntax: i, type1: a, type2: s } = e,
         o = _(n, i);
@@ -95,6 +99,7 @@ function p(e) {
             location: o + r + 1,
         }));
 }
+
 function _(e, t) {
     let n = e.indexOf(t);
     if (n >= 0) {
@@ -103,6 +108,7 @@ function _(e, t) {
     }
     return n;
 }
+
 function h(e, t) {
     a.o.withSingleEntry(e, () => {
         o.VW.withoutNormalizing(e, () => {
@@ -149,7 +155,12 @@ function h(e, t) {
                     });
             } else {
                 let i = c[t];
-                s.b.insertText(e, i, { at: r }), s.b.insertText(e, i, { at: n });
+                s.b.insertText(e, i, {
+                    at: r,
+                }),
+                    s.b.insertText(e, i, {
+                        at: n,
+                    });
                 let a = f[0].text.length + i.length,
                     o = p[0].text.length + (_ ? 2 * i.length : i.length);
                 s.b.select(e, {
@@ -167,6 +178,7 @@ function h(e, t) {
     }),
         o.VW.focus(e);
 }
+
 function m(e, t) {
     let n = e.selection;
     if (null == n) return;
@@ -177,8 +189,26 @@ function m(e, t) {
         for (let [i, a] of o.VW.blocks(e))
             o.ZF.includes(n, a) &&
                 (r || "line" !== i.type
-                    ? r && i.type === t && s.b.setNodes(e, { type: "line" }, { at: a })
-                    : s.b.setNodes(e, { type: t }, { at: a }));
+                    ? r &&
+                      i.type === t &&
+                      s.b.setNodes(
+                          e,
+                          {
+                              type: "line",
+                          },
+                          {
+                              at: a,
+                          },
+                      )
+                    : s.b.setNodes(
+                          e,
+                          {
+                              type: t,
+                          },
+                          {
+                              at: a,
+                          },
+                      ));
     }),
         o.VW.focus(e);
 }

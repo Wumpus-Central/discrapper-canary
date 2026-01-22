@@ -1,4 +1,8 @@
-n.d(t, { A: () => C }), n(896048), n(733351);
+n.d(t, {
+    A: () => C,
+}),
+    n(896048),
+    n(733351);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -28,16 +32,22 @@ let S = (0, f.createChannelRecord)({
         let { input: t, username: n, sourceType: r, sourceDetails: i } = e;
         switch (r) {
             case y.dS.ACTIVITY:
-                let a = A.intl.formatToPlainString(A.t.WmvMCo, { username: n }),
+                let a = A.intl.formatToPlainString(A.t.WmvMCo, {
+                        username: n,
+                    }),
                     s = "\n> ".concat(i);
                 return null != i
                     ? "".concat(E.c5).concat(a, "*").concat(s, "\n").concat(t)
                     : "".concat(E.c5).concat(a, "*\n").concat(t);
             case y.dS.AVATAR:
-                let o = A.intl.formatToPlainString(A.t.lpaBsB, { username: n });
+                let o = A.intl.formatToPlainString(A.t.lpaBsB, {
+                    username: n,
+                });
                 return "".concat(E.c5).concat(o, "*\n").concat(t);
             case y.dS.STATUS:
-                let l = A.intl.formatToPlainString(A.t.lFXgFV, { username: n }),
+                let l = A.intl.formatToPlainString(A.t.lFXgFV, {
+                        username: n,
+                    }),
                     c = "\n> ".concat(i);
                 return null != i
                     ? "".concat(E.c5).concat(l, "*").concat(c, "\n").concat(t)
@@ -58,6 +68,7 @@ let S = (0, f.createChannelRecord)({
                 (0, p.xb)(e);
         }
     };
+
 function C(e) {
     let {
             user: t,
@@ -89,10 +100,16 @@ function C(e) {
     let V = async (e) => {
             if (null == e) return;
             o === y.dS.AVATAR
-                ? C({ action: "SEND_REPLY_AVATAR" })
+                ? C({
+                      action: "SEND_REPLY_AVATAR",
+                  })
                 : o === y.dS.STATUS
-                  ? C({ action: "SEND_REPLY_CUSTOM_STATUS" })
-                  : C({ action: "SEND_REPLY_ACTIVITY" });
+                  ? C({
+                        action: "SEND_REPLY_CUSTOM_STATUS",
+                    })
+                  : C({
+                        action: "SEND_REPLY_ACTIVITY",
+                    });
             let n = I({
                 input: e,
                 username: h.Ay.getName(t),
@@ -121,7 +138,9 @@ function C(e) {
         ref: U,
         onKeyDown: G,
         children: (0, r.jsx)("div", {
-            className: s()(v.kL, F, { [v.GE]: null != D }),
+            className: s()(v.kL, F, {
+                [v.GE]: null != D,
+            }),
             children: (0, r.jsx)(d.Ay, {
                 parentModalKey: E,
                 emojiPickerCloseOnModalOuterClick: !0,
@@ -129,7 +148,9 @@ function C(e) {
                 innerClassName: v.rn,
                 editorClassName: v.EN,
                 type: c.oU.USER_PROFILE_REPLY,
-                placeholder: A.intl.formatToPlainString(T(o), { username: _.Ay.getName(n, a, t) }),
+                placeholder: A.intl.formatToPlainString(T(o), {
+                    username: _.Ay.getName(n, a, t),
+                }),
                 channel: S,
                 textValue: x,
                 richValue: j,

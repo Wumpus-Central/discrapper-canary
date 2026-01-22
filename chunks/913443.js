@@ -1,9 +1,12 @@
-n.d(t, { g: () => a });
+n.d(t, {
+    g: () => a,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
     l = n(985018),
     s = n(89563);
+
 function a(e) {
     let { forceFetchGuildProfile: t } = e;
     return (0, r.jsxs)("main", {

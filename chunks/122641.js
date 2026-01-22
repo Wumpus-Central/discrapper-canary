@@ -1,4 +1,7 @@
-n.d(t, { A: () => m }), n(896048);
+n.d(t, {
+    A: () => m,
+}),
+    n(896048);
 var r,
     i = n(627968),
     a = n(64700),
@@ -6,6 +9,7 @@ var r,
     o = n.n(s),
     l = n(615300),
     c = n(785809);
+
 function u(e, t, n) {
     return (
         t in e
@@ -19,6 +23,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -43,6 +48,7 @@ let f = {
         DURATION: "DURATION",
         VOLUME: "VOLUME",
     };
+
 function _(e) {
     let t = 0 | e,
         n = t % 60;
@@ -68,7 +74,17 @@ class h extends (r = a.Component) {
     setGrabber(e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
             { animatedProgress: n } = this.state;
-        t ? l.A.spring(n, d({ toValue: e }, f)).start() : n.setValue(e);
+        t
+            ? l.A.spring(
+                  n,
+                  d(
+                      {
+                          toValue: e,
+                      },
+                      f,
+                  ),
+              ).start()
+            : n.setValue(e);
     }
     calculatePercentage(e, t) {
         let {
@@ -130,7 +146,9 @@ class h extends (r = a.Component) {
                                     outputRange: ["0%", "100%"],
                                 }),
                             },
-                            children: (0, i.jsx)("span", { className: c.Pq }),
+                            children: (0, i.jsx)("span", {
+                                className: c.Pq,
+                            }),
                         }),
                         t === p.DURATION
                             ? (0, i.jsx)(l.A.div, {
@@ -215,7 +233,9 @@ class h extends (r = a.Component) {
                 e(),
                     t.removeEventListener("mouseup", this.handleDragEnd, !1),
                     t.removeEventListener("mousemove", this.handleDragMove, !1),
-                    this.setState({ dragging: !1 });
+                    this.setState({
+                        dragging: !1,
+                    });
             }),
             u(this, "setBubbleRef", (e) => {
                 null == e
@@ -226,5 +246,8 @@ class h extends (r = a.Component) {
             });
     }
 }
-u(h, "Types", p), u(h, "defaultProps", { currentWindow: window });
+u(h, "Types", p),
+    u(h, "defaultProps", {
+        currentWindow: window,
+    });
 let m = h;

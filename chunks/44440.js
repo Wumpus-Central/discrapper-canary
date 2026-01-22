@@ -14,9 +14,12 @@ var r = n(627968),
     d = n(926277),
     p = n(931222),
     f = n(503330);
+
 function h(e) {
     let { categoryId: t, loadId: n } = e;
-    u.A.setState({ categoryId: t }),
+    u.A.setState({
+        categoryId: t,
+    }),
         c.A.loadCategoryResults({
             loadId: n,
             categoryId: t,
@@ -24,6 +27,7 @@ function h(e) {
             languageCode: u.A.getField("languageCode"),
         });
 }
+
 function A(e) {
     let { loadId: t, categoryId: n, count: l } = e,
         c = i.useCallback(() => {
@@ -34,10 +38,14 @@ function A(e) {
         }, [n, t]),
         p = u.A.useField("categoryId") === n,
         A = l.toLocaleString(o.default.locale),
-        g = (0, d.r)({ categoryId: n });
+        g = (0, d.r)({
+            categoryId: n,
+        });
     return (0, r.jsxs)(s.DUT, {
         onClick: c,
-        className: a()(f.L1, { [f.wH]: p }),
+        className: a()(f.L1, {
+            [f.wH]: p,
+        }),
         children: [
             (0, r.jsx)(s.Text, {
                 className: f.UU,

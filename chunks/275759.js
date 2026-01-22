@@ -19,6 +19,7 @@ var r,
     p = n(994500),
     _ = n(70730),
     h = n(652215);
+
 function m(e, t, n) {
     return (
         t in e
@@ -32,6 +33,7 @@ function m(e, t, n) {
         e
     );
 }
+
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -50,13 +52,14 @@ function g(e) {
 }
 let E = 5,
     b = 7,
-    y = 86400000,
-    O = 604800000,
-    A = 1209600000,
+    y = 864e5,
+    O = 6048e5,
+    A = 12096e5,
     v = 1,
     S = 5,
     I = 0.7,
     T = 0.5;
+
 function C() {
     return {
         messageGiftIntentLastShownMap: {},
@@ -73,9 +76,11 @@ let N = C(),
     D = {},
     x = null,
     L = null;
+
 function j() {
     return null != L ? L : Date.now();
 }
+
 function M(e, t) {
     let n = new Date(),
         r = new Date(e.getTime());
@@ -85,9 +90,11 @@ function M(e, t) {
     let a = new Date(r.getTime());
     return a.setDate(r.getDate() + b), n > i && n < a;
 }
+
 function k(e) {
     return !M(e, e.getFullYear()) && M(e, new Date().getFullYear());
 }
+
 function U() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     if (e) {
@@ -104,80 +111,104 @@ function U() {
             null != t && t.dmProbability > I && w.add(e), null != t && t.dmProbability > T && P.add(e);
         }
 }
+
 function G() {
     if (null != x) return void eo(x);
     if ((B(), !f.A.hasConsented(h.YAq.PERSONALIZATION))) return;
-    let { enabled: e } = _.u.getConfig({ location: "PremiumGiftingIntentStore updateFriendAnniversaries" });
+    let { enabled: e } = _.u.getConfig({
+        location: "PremiumGiftingIntentStore updateFriendAnniversaries",
+    });
     if (e) {
         for (let e of p.A.getFriendIDs()) {
             let t = p.A.getSince(e),
                 n = d.A.getUserAffinity(e);
             if (p.A.isFriend(e) && null != n && n.dmProbability > 0 && null != t) {
                 let n = new Date(t);
-                k(n) && (R.push(e), (D[e] = { friendsSince: n }));
+                k(n) &&
+                    (R.push(e),
+                    (D[e] = {
+                        friendsSince: n,
+                    }));
             }
         }
         R.sort((e, t) => d.A.compareByDmProbability(e, t)), U();
     }
 }
+
 function V(e) {
     return Math.round(o()().diff(e, "years", !0));
 }
+
 function F() {
     return Array.from(P).some((e) => !N.lastShownFriendsListGiftIntents.includes(e));
 }
+
 function B() {
     (R.length = 0), w.clear(), P.clear(), (D = {});
 }
+
 function H() {
     B();
 }
+
 function Y() {
     (N = C()), B();
 }
+
 function W() {
     N.lastShownFriendsListGiftIntents = Array.from(R);
 }
+
 function K(e) {
     let { recipientUserId: t } = e;
     Z(t);
 }
+
 function z() {
     N.giftUnreadNotificationLastDismissedTimes.push(j());
 }
+
 function q() {
     let e = j();
     N.giftUnreadNotificationLastDismissedTimes = N.giftUnreadNotificationLastDismissedTimes.filter(
         (t) => e - t <= 7 * y,
     );
 }
+
 function X(e) {
     let { recipientUserId: t } = e;
     Z(t);
 }
+
 function Z(e) {
     null == N.messageGiftIntentLastShownMap[e] && (N.messageGiftIntentLastShownMap[e] = j());
 }
+
 function Q() {
     let e = j();
     for (let t in N.messageGiftIntentLastShownMap)
         e - N.messageGiftIntentLastShownMap[t] > A && delete N.messageGiftIntentLastShownMap[t];
 }
+
 function $() {
     let e = j(),
         t = y * b * 2;
     for (let n in N.profilePopoutGiftIntentsDismissMap)
         e - N.profilePopoutGiftIntentsDismissMap[n] > t && delete N.profilePopoutGiftIntentsDismissMap[n];
 }
+
 function J() {
     N.lastShownFriendsListGiftIntents = [];
 }
+
 function ee() {
     N.messageGiftIntentLastShownMap = {};
 }
+
 function et() {
     N.giftUnreadNotificationLastDismissedTimes = [];
 }
+
 function en(e) {
     let { total: t } = e;
     if (null == t) {
@@ -186,23 +217,30 @@ function en(e) {
     }
     eo(t);
 }
+
 function er(e) {
     let { date: t } = e;
     L = t;
 }
+
 function ei() {
     L = null;
 }
+
 function ea(e) {
     let { recipientUserId: t } = e;
     N.profilePopoutGiftIntentsDismissMap[t] = j();
 }
+
 function es() {
     N.profilePopoutGiftIntentsDismissMap = {};
 }
+
 function eo(e) {
     B();
-    let { enabled: t } = _.u.getConfig({ location: "PremiumGiftingIntentStore generateFriendAnniversaries" });
+    let { enabled: t } = _.u.getConfig({
+        location: "PremiumGiftingIntentStore generateFriendAnniversaries",
+    });
     if (!t) return;
     x = e;
     let n = p.A.getFriendIDs().filter((e) => !p.A.isIgnored(e));
@@ -212,7 +250,10 @@ function eo(e) {
             let t = p.A.getSince(e);
             if (null != t) {
                 let n = new Date(t);
-                R.push(e), (D[e] = { friendsSince: n });
+                R.push(e),
+                    (D[e] = {
+                        friendsSince: n,
+                    });
             }
         }),
         R.sort((e, t) => d.A.compareByDmProbability(e, t)),

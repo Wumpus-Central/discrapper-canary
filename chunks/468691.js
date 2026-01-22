@@ -1,4 +1,7 @@
-n.d(t, { A: () => O }), n(896048);
+n.d(t, {
+    A: () => O,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -15,6 +18,7 @@ var r = n(627968),
     g = n(652215),
     m = n(985018),
     b = n(75755);
+
 function _(e, t, n) {
     return (
         t in e
@@ -62,8 +66,14 @@ class E extends i.Component {
             children: (0, r.jsx)(c.IWV, {
                 ref: this.searchBarRef,
                 onChange: d.n9,
-                onFocus: () => this.setState({ focused: !0 }),
-                onBlur: () => this.setState({ focused: !1 }),
+                onFocus: () =>
+                    this.setState({
+                        focused: !0,
+                    }),
+                onBlur: () =>
+                    this.setState({
+                        focused: !1,
+                    }),
                 onClear: () => {
                     this.reset(), this.focusInput();
                 },
@@ -75,7 +85,9 @@ class E extends i.Component {
     constructor(...e) {
         super(...e),
             _(this, "searchBarRef", i.createRef()),
-            _(this, "state", { focused: !1 }),
+            _(this, "state", {
+                focused: !1,
+            }),
             _(this, "handleKeyDown", (e) => {
                 var t, n, r;
                 let { activeRowKey: i, hasModalOpen: l, applicationViewItems: a } = this.props,
@@ -119,6 +131,7 @@ class E extends i.Component {
             });
     }
 }
+
 function O() {
     let e = (0, o.bG)([p.A], () => p.A.hasLayers()),
         t = (0, c.red)(c.DXt);

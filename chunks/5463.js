@@ -1,6 +1,7 @@
 function r(e) {
     return Math.max(Math.min(e, 1), 0);
 }
+
 function i(e, t) {
     let { top: n, bottom: i, left: a, right: s } = e;
     return {
@@ -10,6 +11,7 @@ function i(e, t) {
         right: null != s ? Math.floor(r(s) * t.width) : void 0,
     };
 }
+
 function a(e, t) {
     let { width: n, height: i, fixed: a = !1 } = e;
     return a
@@ -24,6 +26,7 @@ function a(e, t) {
               fixed: a,
           };
 }
+
 function s(e, t) {
     let { top: n, bottom: i, left: a, right: s } = e;
     return {
@@ -33,6 +36,7 @@ function s(e, t) {
         right: null != s ? r(s / t.width) : void 0,
     };
 }
+
 function o(e, t) {
     let { width: n, height: r, fixed: i } = e;
     return i
@@ -47,6 +51,7 @@ function o(e, t) {
               fixed: i,
           };
 }
+
 function l(e, t, n, r, i) {
     let { top: a, bottom: s, left: o, right: l } = e;
     if (
@@ -70,6 +75,7 @@ function l(e, t, n, r, i) {
         right: l,
     };
 }
+
 function c(e) {
     let { top: t, left: n, bottom: r, right: i } = e;
     return (
@@ -83,6 +89,7 @@ function c(e) {
         }
     );
 }
+
 function u(e) {
     let { top: t, left: n, bottom: r, right: i } = e;
     return (
@@ -98,11 +105,13 @@ function u(e) {
         }
     );
 }
+
 function d(e, t, n) {
     e = i(e, n);
     let { width: r, height: s } = a(t, n);
     return (r = "string" == typeof r ? 0 : r), (s = "string" == typeof s ? 0 : s), l(e, n.width, n.height, r, s);
 }
+
 function f(e, t, n) {
     let { top: r, left: i } = e,
         { x: a, y: d } =
@@ -136,6 +145,7 @@ function f(e, t, n) {
         o(t, n),
     ];
 }
+
 function p(e, t, n) {
     let { top: r, right: i } = e,
         { x: a, y: d } =
@@ -169,6 +179,7 @@ function p(e, t, n) {
         o(t, n),
     ];
 }
+
 function _(e, t) {
     let n = {
         top: void 0,

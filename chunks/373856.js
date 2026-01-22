@@ -11,6 +11,7 @@ var r = n(64700),
     c = n(652215);
 n(322076);
 var u = n(818348);
+
 function d(e, t, n) {
     return (
         t in e
@@ -24,6 +25,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -40,6 +42,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -52,6 +55,7 @@ function p(e, t) {
     }
     return n;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -64,7 +68,9 @@ function _(e, t) {
     );
 }
 let h = () => {
-        let { enabled: e } = (0, i.ik)({ location: "getBaseAnalyticsEventData" });
+        let { enabled: e } = (0, i.ik)({
+            location: "getBaseAnalyticsEventData",
+        });
         return {
             payment_type: c.frM[c.VVm.ONE_TIME],
             is_gift: !1,
@@ -87,7 +93,9 @@ let h = () => {
                         sku_id: r,
                         currency: c.Yri.DISCORD_ORB,
                     },
-                    null != a && { source: a },
+                    null != a && {
+                        source: a,
+                    },
                     h(),
                 ),
             );
@@ -115,9 +123,13 @@ let h = () => {
                                 regular_price: null != (r = n.orbPriceAmount) ? r : void 0,
                             },
                         ),
-                        { currency: c.Yri.DISCORD_ORB },
+                        {
+                            currency: c.Yri.DISCORD_ORB,
+                        },
                     ),
-                    null != d && { source: d },
+                    null != d && {
+                        source: d,
+                    },
                     h(),
                 );
             }, [E, p, t, i, d, n]);
@@ -144,16 +156,33 @@ let h = () => {
                                 }),
                             )
                           : e === c.HAw.PAYMENT_FLOW_CANCELED
-                            ? o.default.track(c.HAw.PAYMENT_FLOW_CANCELED, _(f({}, y), { duration_ms: n }))
+                            ? o.default.track(
+                                  c.HAw.PAYMENT_FLOW_CANCELED,
+                                  _(f({}, y), {
+                                      duration_ms: n,
+                                  }),
+                              )
                             : e === c.HAw.PAYMENT_FLOW_COMPLETED
-                              ? o.default.track(c.HAw.PAYMENT_FLOW_COMPLETED, _(f({}, y), { duration_ms: n }))
+                              ? o.default.track(
+                                    c.HAw.PAYMENT_FLOW_COMPLETED,
+                                    _(f({}, y), {
+                                        duration_ms: n,
+                                    }),
+                                )
                               : e === c.HAw.PAYMENT_FLOW_SUCCEEDED
-                                ? o.default.track(c.HAw.PAYMENT_FLOW_SUCCEEDED, _(f({}, y), { duration_ms: n }))
+                                ? o.default.track(
+                                      c.HAw.PAYMENT_FLOW_SUCCEEDED,
+                                      _(f({}, y), {
+                                          duration_ms: n,
+                                      }),
+                                  )
                                 : e === c.HAw.PAYMENT_FLOW_FAILED &&
                                   o.default.track(
                                       c.HAw.PAYMENT_FLOW_FAILED,
                                       f(
-                                          _(f({}, y), { duration_ms: n }),
+                                          _(f({}, y), {
+                                              duration_ms: n,
+                                          }),
                                           null != t
                                               ? {
                                                     payment_error_code: t.code,

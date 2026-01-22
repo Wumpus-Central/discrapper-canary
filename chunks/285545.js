@@ -1,4 +1,8 @@
-n.d(t, { i: () => A }), n(896048), n(321073);
+n.d(t, {
+    i: () => A,
+}),
+    n(896048),
+    n(321073);
 var r = n(64700),
     i = n(311907),
     l = n(919796),
@@ -11,6 +15,7 @@ var r = n(64700),
     p = n(639040),
     f = n(567061),
     h = n(118972);
+
 function A(e) {
     let { showDot: t, notificationItem: n } = e,
         [A, g] = r.useState(!1),
@@ -18,7 +23,10 @@ function A(e) {
         E = (0, i.bG)([c.A], () => c.A.getVersion(), []),
         O = (0, i.bG)([c.A], () => !(c.A.isFirstPageHydrated() && E > 0));
     r.useEffect(() => {
-        null != c.A.getLoadId() && s.k.trackFeedShown({ homeSessionId: "gravity" });
+        null != c.A.getLoadId() &&
+            s.k.trackFeedShown({
+                homeSessionId: "gravity",
+            });
     }, [E]);
     let y = (0, i.bG)([c.A], () => c.A.isRefreshing(), []),
         I = (0, i.bG)([c.A], () => c.A.isHydrating(), []),
@@ -145,7 +153,7 @@ function A(e) {
                     viewabilityConfig: {
                         waitForInteraction: !1,
                         viewAreaCoveragePercentThreshold: 50,
-                        minimumViewTime: 1000,
+                        minimumViewTime: 1e3,
                     },
                     onViewableItemsChanged: P,
                 },
@@ -185,7 +193,9 @@ function A(e) {
                           id: "loading",
                           timestamp: 0,
                           unread: !1,
-                          data: { kind: "loading" },
+                          data: {
+                              kind: "loading",
+                          },
                       })
                     : (m.forEach((t) => {
                           (0, d.yx)(t) || e.push(t);
@@ -195,7 +205,9 @@ function A(e) {
                               id: "end",
                               timestamp: 0,
                               unread: !1,
-                              data: { kind: "end" },
+                              data: {
+                                  kind: "end",
+                              },
                           }),
                       b.length > 0 &&
                           b.forEach((t) => {
@@ -206,7 +218,9 @@ function A(e) {
                               id: "bottomLoading",
                               timestamp: 0,
                               unread: !1,
-                              data: { kind: "bottomLoading" },
+                              data: {
+                                  kind: "bottomLoading",
+                              },
                           })),
                 {
                     data: e,

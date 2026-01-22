@@ -1,9 +1,12 @@
-n.d(t, { d: () => a });
+n.d(t, {
+    d: () => a,
+});
 var r = n(627968);
 n(64700);
 var i = n(990078),
     l = n(397927),
     s = n(40462);
+
 function a(e) {
     let { text: t, tooltipText: n, onClick: a, disabled: c } = e;
     return c

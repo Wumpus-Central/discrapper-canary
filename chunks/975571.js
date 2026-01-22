@@ -10,10 +10,12 @@ let o = "https://".concat(s.XlF),
     l = "https://".concat(s.hCb),
     c = "https://creator-support.discord.com",
     u = "https://support-apps.discord.com";
+
 function d(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o;
     return t + e;
 }
+
 function f() {
     return i.default.locale.toLowerCase();
 }

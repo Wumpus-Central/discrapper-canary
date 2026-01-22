@@ -1,10 +1,15 @@
-l.d(t, { A: () => o }), l(228524), l(896048);
+l.d(t, {
+    A: () => o,
+}),
+    l(228524),
+    l(896048);
 var n = l(627968),
     r = l(64700),
     i = l(158954),
     c = l(397927),
     a = l(985018),
     s = l(285553);
+
 function o(e) {
     let { errorText: t, title: l, description: o, transitionState: u, onCancel: d, onConfirm: f, children: b } = e,
         [h, p] = r.useState(!1),

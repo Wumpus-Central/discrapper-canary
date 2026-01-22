@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968);
 n(64700);
 var i = n(889137),
@@ -20,20 +22,52 @@ let d = (e) =>
               : e.type === u.$pd.COMPETING
                 ? [c.QA]
                 : [];
+
 function f(e) {
     let { entry: t } = e;
     return (0, r.jsx)(r.Fragment, {
-        children: [s.$X, s.tR, s.K7, s.fg, s.sp, s.MK].map((e, n) => (0, r.jsx)(e, { entry: t }, "entry-".concat(n))),
+        children: [s.$X, s.tR, s.K7, s.fg, s.sp, s.MK].map((e, n) =>
+            (0, r.jsx)(
+                e,
+                {
+                    entry: t,
+                },
+                "entry-".concat(n),
+            ),
+        ),
     });
 }
+
 function p(e) {
     let { entry: t } = e;
-    return (0, r.jsx)(r.Fragment, { children: [s.Xr].map((e, n) => (0, r.jsx)(e, { entry: t }, "entry-".concat(n))) });
+    return (0, r.jsx)(r.Fragment, {
+        children: [s.Xr].map((e, n) =>
+            (0, r.jsx)(
+                e,
+                {
+                    entry: t,
+                },
+                "entry-".concat(n),
+            ),
+        ),
+    });
 }
+
 function _(e) {
     let { entry: t } = e;
-    return (0, r.jsx)(r.Fragment, { children: [s.Y8].map((e, n) => (0, r.jsx)(e, { entry: t }, "entry-".concat(n))) });
+    return (0, r.jsx)(r.Fragment, {
+        children: [s.Y8].map((e, n) =>
+            (0, r.jsx)(
+                e,
+                {
+                    entry: t,
+                },
+                "entry-".concat(n),
+            ),
+        ),
+    });
 }
+
 function h(e) {
     let { user: t, activity: n, className: l } = e,
         c = (0, o.A)({
@@ -47,11 +81,31 @@ function h(e) {
               location: s.N5.USER_PROFILE,
               className: l,
               children: [
-                  u.map((e, t) => (0, r.jsx)(e, { activity: n }, "activity-".concat(t))),
+                  u.map((e, t) =>
+                      (0, r.jsx)(
+                          e,
+                          {
+                              activity: n,
+                          },
+                          "activity-".concat(t),
+                      ),
+                  ),
                   (0, i.YW)(c)
-                      .when(a.qQ, (e) => (0, r.jsx)(f, { entry: e }))
-                      .when(a.UQ, (e) => (0, r.jsx)(p, { entry: e }))
-                      .when(a.p6, (e) => (0, r.jsx)(_, { entry: e }))
+                      .when(a.qQ, (e) =>
+                          (0, r.jsx)(f, {
+                              entry: e,
+                          }),
+                      )
+                      .when(a.UQ, (e) =>
+                          (0, r.jsx)(p, {
+                              entry: e,
+                          }),
+                      )
+                      .when(a.p6, (e) =>
+                          (0, r.jsx)(_, {
+                              entry: e,
+                          }),
+                      )
                       .otherwise(() => null),
               ],
           });

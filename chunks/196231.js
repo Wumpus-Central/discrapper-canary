@@ -1,4 +1,6 @@
-l.d(t, { S: () => p });
+l.d(t, {
+    S: () => p,
+});
 var n = l(627968),
     r = l(64700),
     s = l(230109),
@@ -57,7 +59,12 @@ let p = (e) => {
                         });
                 }
                 return e;
-            })({}, null != C && { backgroundImage: "url(".concat(C, ")") }),
+            })(
+                {},
+                null != C && {
+                    backgroundImage: "url(".concat(C, ")"),
+                },
+            ),
             onClick: () => {
                 A({
                     sourceButton: "shop marketing tile",
@@ -90,7 +97,9 @@ let p = (e) => {
                         (0, n.jsx)(a.Heading, {
                             lineClamp: 4,
                             className: g.BN,
-                            style: { color: null != (l = null == E ? void 0 : E.bannerTextColor) ? l : "white" },
+                            style: {
+                                color: null != (l = null == E ? void 0 : E.bannerTextColor) ? l : "white",
+                            },
                             variant: "heading-md/medium",
                             children: _,
                         }),

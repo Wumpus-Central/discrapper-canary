@@ -14,6 +14,7 @@ var l = n(503698),
     o = n(513461),
     c = n(791606),
     u = n(283237);
+
 function d(e, t, n) {
     return (0, r.jsx)(s.hVq, {
         count: e,
@@ -21,6 +22,7 @@ function d(e, t, n) {
         "aria-hidden": n,
     });
 }
+
 function f() {
     return (0, r.jsx)(s.fkz, {
         icon: (0, s.kHD)(c.A),
@@ -28,6 +30,7 @@ function f() {
         className: u.yk,
     });
 }
+
 function p(e) {
     let t,
         {
@@ -53,6 +56,7 @@ function p(e) {
         isCurrentUserConnected: i,
     });
 }
+
 function h(e) {
     let { guildJoinRequestStatus: t } = e,
         [n, r] = (function (e) {
@@ -72,6 +76,7 @@ function h(e) {
         color: n,
     });
 }
+
 function b(e) {
     let { icon: t, color: n, isCurrentUserConnected: l } = e;
     return (0, r.jsx)(
@@ -103,9 +108,17 @@ function b(e) {
         })(
             {
                 icon: t,
-                className: i()(u.bG, { [u.gB]: l }),
+                className: i()(u.bG, {
+                    [u.gB]: l,
+                }),
             },
-            null == n ? { disableColor: !0 } : { color: n },
+            null == n
+                ? {
+                      disableColor: !0,
+                  }
+                : {
+                      color: n,
+                  },
         ),
     );
 }

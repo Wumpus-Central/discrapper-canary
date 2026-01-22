@@ -1,4 +1,6 @@
-n.d(t, { A: () => x });
+n.d(t, {
+    A: () => x,
+});
 var r,
     i = n(284009),
     a = n.n(i),
@@ -12,6 +14,7 @@ var r,
     p = n(405892),
     _ = n(761821),
     h = n(355097);
+
 function m(e, t, n) {
     return (
         t in e
@@ -25,6 +28,7 @@ function m(e, t, n) {
         e
     );
 }
+
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -58,6 +62,7 @@ let E = {
         [h.oD.FRECENCY_AND_FAVORITES_SETTINGS]: b,
     },
     O = !1;
+
 function A(e) {
     let { userSettingsProto: t } = e;
     null != t && ((E.proto = t), a()("string" != typeof E.proto, "UserSettingsProto cannot be a string"));
@@ -73,15 +78,18 @@ function A(e) {
         }),
         I();
 }
+
 function v() {
     I();
 }
+
 function S() {
     I(),
         Object.values(y).forEach((e) => {
             (e.proto = e.ProtoClass.create()), (e.editInfo = (0, h.O9)());
         });
 }
+
 function I() {
     Object.values(y).forEach((e) => {
         if (null != e.editInfo.timeout) {
@@ -95,13 +103,16 @@ function I() {
         }
     });
 }
+
 function T(e) {
     null != e.editInfo.timeout && clearTimeout(e.editInfo.timeout), (e.editInfo = (0, h.O9)());
 }
+
 function C(e) {
     let { userSettingsProto: t } = e;
     (E.proto = (0, _.Gd)(t)), a()("string" != typeof E.proto, "UserSettingsProto cannot be a string");
 }
+
 function N(e) {
     let {
         settings: { proto: t, type: n },
@@ -120,6 +131,7 @@ function N(e) {
               (o.editInfo.loaded = !0),
               (o.editInfo.loading = !1));
 }
+
 function R(e) {
     let {
         settings: { type: t, changes: n },
@@ -128,10 +140,12 @@ function R(e) {
     let r = y[t];
     return (r.editInfo = g({}, r.editInfo, n)), !1;
 }
+
 function w(e) {
     let { userSettings: t } = e;
     P(t);
 }
+
 function P(e) {
     null != e &&
         o().forEach(y, (t, n) => {
@@ -157,7 +171,9 @@ class D extends (r = l.Ay.PersistedStore) {
     }
     computeState() {
         return o().mapValues(y, (e) => {
-            let t = { proto: (0, _.ob)(e.ProtoClass, e.proto) };
+            let t = {
+                proto: (0, _.ob)(e.ProtoClass, e.proto),
+            };
             return (
                 null != e.editInfo.offlineEditDataVersion &&
                     null != e.editInfo.protoToSave &&

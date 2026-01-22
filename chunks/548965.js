@@ -11,6 +11,7 @@ var r = n(284009),
     i = n.n(r),
     a = n(306173),
     s = n(723426);
+
 function o(e, t, n) {
     return (
         t in e
@@ -44,8 +45,12 @@ class u {
     getCurrentConfig() {
         return (i()(null != this.inner, "experiment must be set before calling getCurrentConfig"),
         "getCurrentConfig" in this.inner)
-            ? this.inner.getCurrentConfig({ location: "default" })
-            : this.inner.getConfig({ location: "default" });
+            ? this.inner.getCurrentConfig({
+                  location: "default",
+              })
+            : this.inner.getConfig({
+                  location: "default",
+              });
     }
     constructor(e, t) {
         o(this, "id", void 0),
@@ -62,7 +67,14 @@ class d extends u {
         return this.label;
     }
     getTreatments() {
-        return [{ treatmentId: 0 }, { treatmentId: 1 }];
+        return [
+            {
+                treatmentId: 0,
+            },
+            {
+                treatmentId: 1,
+            },
+        ];
     }
     getCachedEnabled() {
         let e = this.getCachedConfig();
@@ -96,7 +108,17 @@ class f extends u {
         return "libdiscore '".concat(this.storeName, "' Migration");
     }
     getTreatments() {
-        return [{ treatmentId: 0 }, { treatmentId: 1 }, { treatmentId: 2 }];
+        return [
+            {
+                treatmentId: 0,
+            },
+            {
+                treatmentId: 1,
+            },
+            {
+                treatmentId: 2,
+            },
+        ];
     }
     constructor(e, t, n, r) {
         super(e, r), o(this, "storeName", void 0), o(this, "type", void 0), (this.storeName = t), (this.type = n);
@@ -107,7 +129,20 @@ class p extends u {
         return "libdiscore Telemetry";
     }
     getTreatments() {
-        return [{ treatmentId: 0 }, { treatmentId: 1 }, { treatmentId: 2 }, { treatmentId: 3 }];
+        return [
+            {
+                treatmentId: 0,
+            },
+            {
+                treatmentId: 1,
+            },
+            {
+                treatmentId: 2,
+            },
+            {
+                treatmentId: 3,
+            },
+        ];
     }
     getMetricsSampleRate() {
         let e = this.getCachedConfig();

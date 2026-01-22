@@ -1,4 +1,8 @@
-n.d(t, { A: () => h }), n(747238), n(321073);
+n.d(t, {
+    A: () => h,
+}),
+    n(747238),
+    n(321073);
 var i = n(627968),
     r = n(64700),
     l = n(158954),
@@ -13,6 +17,7 @@ var i = n(627968),
     p = n(652215),
     m = n(985018),
     g = n(58339);
+
 function h(e) {
     let { webhook: t, editedWebhook: n, channelOptions: h, isExpanded: x, errors: j, onToggleExpand: O } = e,
         y = r.useMemo(() => {
@@ -27,7 +32,9 @@ function h(e) {
         }, [t]),
         A = r.useCallback(() => {
             (0, a.A)({
-                title: m.intl.formatToPlainString(m.t.gBKqZ0, { name: t.name }),
+                title: m.intl.formatToPlainString(m.t.gBKqZ0, {
+                    name: t.name,
+                }),
                 subtitle: m.intl.string(m.t.zO9jrD),
                 confirmText: m.intl.string(m.t.CMy0Cj),
                 onConfirm: () => {
@@ -74,7 +81,9 @@ function h(e) {
             (N = (0, i.jsxs)("div", {
                 className: g.rf,
                 children: [
-                    (0, i.jsx)(s.cGx, { className: g.fV }),
+                    (0, i.jsx)(s.cGx, {
+                        className: g.fV,
+                    }),
                     (0, i.jsxs)(s.BJc, {
                         gap: 24,
                         children: [
@@ -86,7 +95,9 @@ function h(e) {
                                         label: m.intl.string(m.t.I1o5gV),
                                         value: n.name,
                                         onChange: (e) => {
-                                            c.A.updateWebhook({ name: e });
+                                            c.A.updateWebhook({
+                                                name: e,
+                                            });
                                         },
                                         maxLength: 80,
                                         error: j.name,
@@ -96,14 +107,18 @@ function h(e) {
                                         value: n.channel_id,
                                         options: h,
                                         onSelectionChange: (e) => {
-                                            c.A.updateWebhook({ channelId: e });
+                                            c.A.updateWebhook({
+                                                channelId: e,
+                                            });
                                         },
                                         selectionMode: "single",
                                         fullWidth: !0,
                                     }),
                                 ],
                             }),
-                            (0, i.jsx)(s.cGx, { className: g.Bd }),
+                            (0, i.jsx)(s.cGx, {
+                                className: g.Bd,
+                            }),
                             (0, i.jsx)(l.QWc, {
                                 onClick: A,
                                 size: "sm",

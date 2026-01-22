@@ -1,4 +1,6 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(397927),
     i = n(976860),
     a = n(240233),
@@ -11,7 +13,9 @@ let c = new a.A({
             t && (0, i.pX)(o.BVt.ME),
                 (0, r.showToast)(
                     (0, r.createToast)(
-                        l.intl.formatToPlainString(l.t.wx7O3L, { username: e.username }),
+                        l.intl.formatToPlainString(l.t.wx7O3L, {
+                            username: e.username,
+                        }),
                         r.ToastType.SUCCESS,
                     ),
                 );

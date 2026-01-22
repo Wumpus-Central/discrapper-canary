@@ -14,7 +14,7 @@ var r = n(627968);
 n(64700);
 var i = n(503698),
     a = n.n(i),
-    s = n(432022),
+    s = n(108531),
     o = n(827734),
     l = n(582754);
 n(397927);
@@ -23,6 +23,7 @@ var c = n(749401),
     d = n(652215),
     f = n(778712),
     p = n(529904);
+
 function _(e, t, n) {
     return (
         t in e
@@ -36,6 +37,7 @@ function _(e, t, n) {
         e
     );
 }
+
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -52,6 +54,7 @@ function h(e) {
     }
     return e;
 }
+
 function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -64,6 +67,7 @@ function m(e, t) {
     }
     return n;
 }
+
 function g(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -76,6 +80,7 @@ function g(e, t) {
     );
 }
 let E = 8;
+
 function b(e) {
     switch (e) {
         case d.clD.ONLINE:
@@ -93,27 +98,37 @@ function b(e) {
             return o.A.unsafe_rawColors.NEUTRAL_34;
     }
 }
+
 function y(e, t) {
-    let n = b(e).resolve({ saturation: 1 }).hex(),
+    let n = b(e)
+            .resolve({
+                saturation: 1,
+            })
+            .hex(),
         r = null != t ? t : n,
         i = (0, c.a)(r);
     return null != i ? i : void 0;
 }
+
 function O(e, t) {
     return t === f.F_.WHITE && e === d.clD.IDLE ? f.Iq.HIGH : f.Iq.LOW;
 }
+
 function A(e) {
     return (0, l.Mw)(e) ? f.F_.BLACK : f.F_.WHITE;
 }
+
 function v(e, t, n, r) {
     return "scale("
         .concat(t, ") translate(")
         .concat(0.5625 * e + r, " ")
         .concat(0.75 * e + n, ")");
 }
+
 function S(e, t, n) {
     return "".concat(0.5625 * e + n, "px ").concat(0.75 * e + t, "px");
 }
+
 function I(e) {
     let { size: t, status: n, isMobile: r, isTyping: i, topOffset: a = 0, leftOffset: s = 0 } = e,
         o = (a / E) * t,
@@ -250,6 +265,7 @@ function I(e) {
             };
     }
 }
+
 function T(e) {
     return "-"
         .concat(0.216506 * e, ",-")
@@ -258,6 +274,7 @@ function T(e) {
         .concat(0.216506 * e, ",")
         .concat(0.25 * e);
 }
+
 function C(e, t, n) {
     let {
         bgRadius: i,
@@ -301,7 +318,9 @@ function C(e, t, n) {
                 points: T(t),
                 fill: "black",
                 transform: h,
-                style: { transformOrigin: m },
+                style: {
+                    transformOrigin: m,
+                },
             }),
             (0, r.jsx)(s.animated.circle, {
                 fill: "black",
@@ -312,6 +331,7 @@ function C(e, t, n) {
         ],
     });
 }
+
 function N(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     if (n) return u.Ay.Masks.STATUS_TYPING;
@@ -332,6 +352,7 @@ function N(e, t) {
             return u.Ay.Masks.STATUS_ONLINE;
     }
 }
+
 function R(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
     return t === d.clD.ONLINE && n && !r
@@ -344,6 +365,7 @@ function R(e, t, n) {
               height: e,
           };
 }
+
 function w(e) {
     let { status: t, isMobile: n = !1, size: i = E, className: s, style: o, color: l } = e,
         c = t === d.clD.ONLINE && n,
@@ -361,7 +383,9 @@ function w(e) {
             ),
             {
                 children: (0, r.jsx)("div", {
-                    style: { backgroundColor: f },
+                    style: {
+                        backgroundColor: f,
+                    },
                     className: p.h,
                 }),
             },

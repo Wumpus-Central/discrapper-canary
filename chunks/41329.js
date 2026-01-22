@@ -1,4 +1,7 @@
-n.d(t, { A: () => b }), n(228524);
+n.d(t, {
+    A: () => b,
+}),
+    n(228524);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -14,6 +17,7 @@ n(827669);
 var _ = n(985018),
     h = n(27101);
 let m = 200;
+
 function g(e, t, n) {
     return (0, r.jsx)(
         f.A,
@@ -26,6 +30,7 @@ function g(e, t, n) {
         e.name,
     );
 }
+
 function E(e) {
     let { command: t, optionStates: n, onOptionClick: a } = e,
         {
@@ -87,8 +92,12 @@ function E(e) {
                           variant: "text-sm/normal",
                           children:
                               0 === o.length
-                                  ? _.intl.formatToPlainString(_.t["0mI72g"], { count: u.length })
-                                  : _.intl.formatToPlainString(_.t.BP8N0K, { count: u.length }),
+                                  ? _.intl.formatToPlainString(_.t["0mI72g"], {
+                                        count: u.length,
+                                    })
+                                  : _.intl.formatToPlainString(_.t.BP8N0K, {
+                                        count: u.length,
+                                    }),
                       }),
                   })
                 : null;
@@ -104,6 +113,7 @@ function E(e) {
         ],
     });
 }
+
 function b(e) {
     var t, n, a;
     let l,

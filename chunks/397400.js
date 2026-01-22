@@ -16,6 +16,7 @@ var l = n(64700),
     s = n(363487),
     u = n(522055),
     o = n(652215);
+
 function d(e, t, n) {
     l.useEffect(() => {
         r.default.track(o.HAw.OPEN_MODAL, {
@@ -26,6 +27,7 @@ function d(e, t, n) {
         });
     }, [e, t, n]);
 }
+
 function c(e, t) {
     l.useEffect(() => {
         r.default.track(o.HAw.GAME_SERVER_GAME_SELECT_OPENED, {
@@ -34,6 +36,7 @@ function c(e, t) {
         });
     }, [e, t]);
 }
+
 function m(e, t, n) {
     l.useEffect(() => {
         r.default.track(o.HAw.GAME_SERVER_SETTINGS_OPENED, {
@@ -43,6 +46,7 @@ function m(e, t, n) {
         });
     }, [e, t, n]);
 }
+
 function v(e) {
     let t = (0, s.A)(e),
         n = (0, a.bG)([u.A], () => u.A.getStateForGuild(e)),
@@ -62,6 +66,7 @@ function v(e) {
             }));
     }, [e, t, null == n ? void 0 : n.instances]);
 }
+
 function f(e, t, n, l) {
     r.default.track(o.HAw.GAME_SERVER_GAME_CLICKED, {
         guild_id: e,
@@ -70,6 +75,7 @@ function f(e, t, n, l) {
         location: l,
     });
 }
+
 function g(e) {
     let {
         guildId: t,
@@ -94,6 +100,7 @@ function g(e) {
         type: c,
     });
 }
+
 function b(e, t, n, l) {
     r.default.track(o.HAw.GAME_SERVER_JOIN_CLICKED, {
         guild_id: e,
@@ -102,6 +109,7 @@ function b(e, t, n, l) {
         game_server_id: l,
     });
 }
+
 function p(e, t, n) {
     r.default.track(o.HAw.GAME_SERVER_COPY_IP_CLICKED, {
         guild_id: e,
@@ -109,6 +117,7 @@ function p(e, t, n) {
         location: n,
     });
 }
+
 function _(e, t) {
     r.default.track(o.HAw.GAME_SERVER_VIEW_GAME_PANEL_CLICKED, {
         guild_id: e,

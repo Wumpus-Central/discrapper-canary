@@ -1,7 +1,10 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(311907),
     i = n(295405),
     a = n(166403);
+
 function s() {
     let e = (0, r.bG)([a.A], () => a.A.getPremiumTypeSubscription());
     return (0, r.bG)([i.A], () => {

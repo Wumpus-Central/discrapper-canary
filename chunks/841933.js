@@ -1,4 +1,6 @@
-l.d(t, { A: () => w });
+l.d(t, {
+    A: () => w,
+});
 var n = l(627968),
     r = l(64700),
     i = l(503698),
@@ -25,10 +27,13 @@ var n = l(627968),
     _ = l(985018),
     O = l(971517),
     N = l(186891);
+
 function I(e) {
     let { icon: t, label: l, onClick: r, disabled: i } = e;
     return (0, n.jsxs)(o.DUT, {
-        className: s()(O.hP, { [O.r9]: i }),
+        className: s()(O.hP, {
+            [O.r9]: i,
+        }),
         onClick: i ? T.tEg : r,
         "aria-label": l,
         children: [
@@ -46,6 +51,7 @@ function I(e) {
         ],
     });
 }
+
 function R(e) {
     let { user: t, guildId: l, joinRequest: r } = e,
         { analyticsLocations: i } = (0, u.Ay)(),
@@ -120,6 +126,7 @@ function R(e) {
         ],
     });
 }
+
 function D(e) {
     let { user: t, guildId: l, joinRequest: r } = e,
         {
@@ -152,6 +159,7 @@ function D(e) {
         ],
     });
 }
+
 function P(e) {
     var t;
     let { joinRequest: l } = e,
@@ -182,7 +190,9 @@ function P(e) {
                                           username: null != (t = i.global_name) ? t : i.username,
                                       }),
                                   }),
-                                  (0, n.jsx)("div", { className: O.Om }),
+                                  (0, n.jsx)("div", {
+                                      className: O.Om,
+                                  }),
                                   (0, n.jsx)(o.Text, {
                                       variant: "text-sm/normal",
                                       color: "text-muted",
@@ -195,13 +205,16 @@ function P(e) {
                         (0, n.jsx)(o.Text, {
                             variant: "text-sm/normal",
                             color: "text-muted",
-                            children: _.intl.formatToPlainString(_.t.fU5PPM, { rejectionReason: s }),
+                            children: _.intl.formatToPlainString(_.t.fU5PPM, {
+                                rejectionReason: s,
+                            }),
                         }),
                 ],
             }),
         ],
     });
 }
+
 function C(e) {
     var t;
     let { joinRequest: l } = e,
@@ -232,7 +245,9 @@ function C(e) {
                                           username: null != (t = i.global_name) ? t : i.username,
                                       }),
                                   }),
-                                  (0, n.jsx)("div", { className: O.Om }),
+                                  (0, n.jsx)("div", {
+                                      className: O.Om,
+                                  }),
                                   (0, n.jsx)(o.Text, {
                                       variant: "text-sm/normal",
                                       color: "text-muted",
@@ -246,6 +261,7 @@ function C(e) {
         ],
     });
 }
+
 function M(e) {
     let { user: t, joinRequest: l } = e;
     return (0, n.jsxs)(n.Fragment, {
@@ -294,9 +310,12 @@ function M(e) {
         ],
     });
 }
+
 function w(e) {
     let { guildId: t } = e,
-        l = (0, b.R)({ guildId: t }),
+        l = (0, b.R)({
+            guildId: t,
+        }),
         { user: i } = null != l ? l : {},
         a = r.useMemo(() => {
             var e;
@@ -330,8 +349,14 @@ function w(e) {
                                           guildId: t,
                                           joinRequest: l,
                                       }),
-                                  l.applicationStatus === j.B5.REJECTED && (0, n.jsx)(P, { joinRequest: l }),
-                                  l.applicationStatus === j.B5.APPROVED && (0, n.jsx)(C, { joinRequest: l }),
+                                  l.applicationStatus === j.B5.REJECTED &&
+                                      (0, n.jsx)(P, {
+                                          joinRequest: l,
+                                      }),
+                                  l.applicationStatus === j.B5.APPROVED &&
+                                      (0, n.jsx)(C, {
+                                          joinRequest: l,
+                                      }),
                               ],
                           }),
                           (0, n.jsxs)("div", {

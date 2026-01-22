@@ -1,4 +1,7 @@
-t.d(n, { A: () => O }), t(228524);
+t.d(n, {
+    A: () => O,
+}),
+    t(228524);
 var r = t(627968);
 t(64700);
 var l = t(311907),
@@ -21,6 +24,7 @@ var l = t(311907),
     A = t(895202),
     y = t(482857),
     C = t(652215);
+
 function O(e) {
     var n, t, O;
     let { guildEvent: N, truncate: k, onActionTaken: E, className: P, isNew: w } = e,

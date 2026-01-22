@@ -1,1 +1,3 @@
-e.exports = { k: "_78849bc4548bf314" };
+e.exports = {
+    k: "_78849bc4548bf314",
+};

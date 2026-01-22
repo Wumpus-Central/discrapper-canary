@@ -1,6 +1,9 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 var r = n(652215),
     i = n(818348);
+
 function a(e) {
     var t;
     let { activities: n, status: a, applicationStream: s, voiceChannel: o } = e;

@@ -28,6 +28,7 @@ var r = n(284009),
     p = n(463951),
     _ = n(577718),
     h = n(652215);
+
 function m(e) {
     return new Promise((t, n) => {
         let r = new Image();
@@ -60,6 +61,7 @@ async function g(e) {
         n = await t.blob();
     return new Uint8ClampedArray(await n.arrayBuffer());
 }
+
 function E(e, t, n, r, i) {
     (0, c.wq)({
         [e]: {
@@ -100,7 +102,14 @@ async function b(e, t, n) {
 }
 async function y(e, t) {
     let { track: n = !0, location: r } = t;
-    await b(a.Tr.CAMERA_BACKGROUND_LIVE, { type: a.Qo.INPUT_DEVICE }, e), n && (0, d.Uz)(e, r, "Enabled");
+    await b(
+        a.Tr.CAMERA_BACKGROUND_LIVE,
+        {
+            type: a.Qo.INPUT_DEVICE,
+        },
+        e,
+    ),
+        n && (0, d.Uz)(e, r, "Enabled");
 }
 async function O(e, t, n) {
     let { track: r = !0, location: i } = n;
@@ -115,9 +124,15 @@ async function O(e, t, n) {
         ),
         r && (0, d.Uz)(e, i, "Preview");
 }
+
 function A() {
     let e = s.default.getCurrentUser();
     if (null == e) return;
     let t = (0, l.i)(e);
-    (0, p.A)() && !u.A.hasBeenApplied && null != t && y(t, { track: !1 }).catch(h.tEg);
+    (0, p.A)() &&
+        !u.A.hasBeenApplied &&
+        null != t &&
+        y(t, {
+            track: !1,
+        }).catch(h.tEg);
 }

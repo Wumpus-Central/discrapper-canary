@@ -1,9 +1,14 @@
-n.d(t, { v: () => s });
+n.d(t, {
+    v: () => s,
+});
 var r = n(260431),
     i = n(723906),
     a = n(723372);
+
 function s(...e) {
-    let t = { ...e[0] };
+    let t = {
+        ...e[0],
+    };
     for (let n = 1; n < e.length; n++) {
         let s = e[n];
         for (let e in s) {

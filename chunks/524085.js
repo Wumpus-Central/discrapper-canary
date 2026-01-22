@@ -1,4 +1,7 @@
-n.d(e, { default: () => I }), n(896048);
+n.d(e, {
+    default: () => I,
+}),
+    n(896048);
 var a = n(627968),
     i = n(64700),
     l = n(158954),
@@ -19,6 +22,7 @@ var a = n(627968),
     O = n(985018),
     C = n(641131),
     h = n(471053);
+
 function f(t) {
     return {
         value: t,
@@ -35,6 +39,7 @@ let p = [
     f(T.DisableCommunicationDuration.DURATION_1_DAY),
     f(T.DisableCommunicationDuration.DURATION_1_WEEK),
 ];
+
 function I(t) {
     var e, n;
     let { guildId: f, userId: I, anaylticsLocations: M, transitionState: R, onClose: S, modReportId: y } = t,
@@ -62,7 +67,9 @@ function I(t) {
                         G(_.Nj.TIMEOUT),
                         (0, u.showToast)(
                             (0, u.createToast)(
-                                O.intl.formatToPlainString(O.t.O9C3Nt, { user: D.Ay.getName(f, null, U) }),
+                                O.intl.formatToPlainString(O.t.O9C3Nt, {
+                                    user: D.Ay.getName(f, null, U),
+                                }),
                                 u.ToastType.SUCCESS,
                             ),
                         ),
@@ -89,8 +96,12 @@ function I(t) {
         ? null
         : (0, a.jsx)(l.Modal, {
               transitionState: R,
-              title: O.intl.formatToPlainString(O.t.OhsOy0, { user: D.Ay.getName(f, null, U) }),
-              subtitle: O.intl.format(O.t.Ns83GT, { helpdeskArticle: T.MO }),
+              title: O.intl.formatToPlainString(O.t.OhsOy0, {
+                  user: D.Ay.getName(f, null, U),
+              }),
+              subtitle: O.intl.format(O.t.Ns83GT, {
+                  helpdeskArticle: T.MO,
+              }),
               actions: [
                   {
                       text: O.intl.string(O.t["ETE/oC"]),

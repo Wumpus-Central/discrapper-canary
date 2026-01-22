@@ -1,4 +1,7 @@
-n.d(t, { A: () => v }), n(733351);
+n.d(t, {
+    A: () => v,
+}),
+    n(733351);
 var r = n(627968),
     i = n(64700),
     l = n(397927),
@@ -20,6 +23,7 @@ var r = n(627968),
     O = n(488995),
     y = n(985018),
     I = n(734539);
+
 function v() {
     let e = i.useRef((0, f.YP)()),
         { onScroll: t, scrollPosition: n, resetScrollPosition: v } = (0, a.G)(),
@@ -32,7 +36,9 @@ function v() {
             onClearSearch: w,
             onSearchSubmit: L,
             isSearchVisible: R,
-        } = (0, g.X)({ loadId: e.current }),
+        } = (0, g.X)({
+            loadId: e.current,
+        }),
         D = h.A.useField("searchBarState"),
         {
             onTabsAvailableWidthChange: M,
@@ -43,7 +49,10 @@ function v() {
             isSearchBarVisible: j,
             isSearchBarEmpty: "" === x.trim(),
             searchBarState: D,
-            setSearchBarState: (e) => h.A.setState({ searchBarState: e }),
+            setSearchBarState: (e) =>
+                h.A.setState({
+                    searchBarState: e,
+                }),
         }),
         V = d.A.useField("fetchedQuery"),
         B = i.useCallback(
@@ -75,7 +84,10 @@ function v() {
             v();
         }, [C, v]),
         i.useEffect(() => {
-            R || d.A.setState({ scrollPosition: null });
+            R ||
+                d.A.setState({
+                    scrollPosition: null,
+                });
         }, [R]),
         (0, r.jsxs)("div", {
             className: I.kL,
@@ -83,13 +95,18 @@ function v() {
                 (0, r.jsxs)(o.Ay, {
                     variant: R ? o.Z5.RELATIVE : o.Z5.OVERLAY,
                     children: [
-                        !R && (0, r.jsx)(o.ns, { scrollPosition: n }),
+                        !R &&
+                            (0, r.jsx)(o.ns, {
+                                scrollPosition: n,
+                            }),
                         R
                             ? (0, r.jsx)(o.XQ, {
                                   icon: l.Zge,
                                   onClick: w,
                               })
-                            : (0, r.jsx)(o.T4, { icon: l.RR9 }),
+                            : (0, r.jsx)(o.T4, {
+                                  icon: l.RR9,
+                              }),
                         !R &&
                             (0, r.jsx)(c.A, {
                                 className: G,
@@ -103,7 +120,9 @@ function v() {
                                 variant: "heading-lg/semibold",
                                 color: "text-strong",
                                 className: I.ov,
-                                children: y.intl.format(y.t.zHdzqW, { query: V }),
+                                children: y.intl.format(y.t.zHdzqW, {
+                                    query: V,
+                                }),
                             }),
                         j &&
                             (0, r.jsx)(u.A, {

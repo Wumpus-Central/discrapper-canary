@@ -1,4 +1,6 @@
-i.d(e, { f: () => T });
+i.d(e, {
+    f: () => T,
+});
 var n = i(827343),
     l = i(793574),
     s = i(419954),
@@ -18,6 +20,8 @@ let T = (0, s.sN)(a.X.VOICE_INPUT_VOLUME_SETTING, {
     asValueChanges: function (t) {
         let e = [l.A.USER_SETTINGS_VOICE_AND_VIDEO],
             i = (0, u.w)(t);
-        n.A.setInputVolume(i, { analyticsLocations: e });
+        n.A.setInputVolume(i, {
+            analyticsLocations: e,
+        });
     },
 });

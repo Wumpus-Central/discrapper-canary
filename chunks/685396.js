@@ -8,6 +8,7 @@ var r = n(64700),
     s = n(7584),
     o = n(253932),
     l = n(652215);
+
 function c(e, t) {
     var n;
     let r = null;
@@ -34,16 +35,25 @@ function c(e, t) {
         name: "Custom Status",
         type: l.$pd.CUSTOM_STATUS,
         state: e.text.length > 0 ? e.text : void 0,
-        timestamps: i > 0 ? { end: i } : void 0,
+        timestamps:
+            i > 0
+                ? {
+                      end: i,
+                  }
+                : void 0,
         emoji: r,
         details: a,
-        metadata: { label: a },
+        metadata: {
+            label: a,
+        },
     };
 }
+
 function u(e) {
     let { emojiId: t } = e;
     return c(e, null != t && "0" !== t ? a.Ay.getUsableCustomEmojiById(t) : null);
 }
+
 function d() {
     let e = o.G2.useSetting(),
         t = null == e ? void 0 : e.emojiId,

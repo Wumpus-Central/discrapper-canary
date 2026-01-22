@@ -34,6 +34,7 @@ var i = n(627968),
     _ = n(731854),
     P = n(985018),
     D = n(384339);
+
 function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -59,6 +60,7 @@ function R(e) {
     }
     return e;
 }
+
 function L(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -207,7 +209,12 @@ let k = r.memo(function (e) {
                 g,
             );
         }, [o, c, g]);
-        let y = r.useMemo(() => ({ opacity: c.opacity }), [c.opacity]),
+        let y = r.useMemo(
+                () => ({
+                    opacity: c.opacity,
+                }),
+                [c.opacity],
+            ),
             A = r.useMemo(
                 () =>
                     a()({
@@ -266,6 +273,7 @@ let k = r.memo(function (e) {
             };
         return (0, N.$G)(s, c);
     };
+
 function z(e) {
     var t, n, l, a;
     let s = (0, o.bG)([E.A, A.A], () => A.A.getChannel(E.A.getVoiceChannelId())),

@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -7,6 +9,7 @@ var r = n(627968),
     l = n(485878),
     c = n(985018),
     u = n(254761);
+
 function d(e) {
     let { className: t } = e,
         { goBack: n } = (0, l.uM)(),

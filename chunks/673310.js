@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968),
     i = n(64700),
     l = n(397927),
@@ -10,6 +12,7 @@ var r = n(627968),
     d = n(244625),
     p = n(652215),
     f = n(277716);
+
 function h(e) {
     let { item: t } = e,
         n = i.useCallback(
@@ -36,7 +39,9 @@ function h(e) {
                             (0, o.ci)(t.data.item.channel_id, t.data.item.message_ids[0]);
                             break;
                         case "contentInventory":
-                            (0, c.openUserProfileModal)({ userId: t.data.content.author_id });
+                            (0, c.openUserProfileModal)({
+                                userId: t.data.content.author_id,
+                            });
                     }
             },
             [t],
@@ -45,10 +50,14 @@ function h(e) {
         className: f.k,
         onClick: n,
         children: [
-            (0, r.jsx)(d.A, { item: t }),
+            (0, r.jsx)(d.A, {
+                item: t,
+            }),
             (0, r.jsx)("div", {
                 className: f.o,
-                children: (0, r.jsx)(u.A, { item: t }),
+                children: (0, r.jsx)(u.A, {
+                    item: t,
+                }),
             }),
         ],
     });

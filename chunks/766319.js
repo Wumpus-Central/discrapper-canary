@@ -1,4 +1,7 @@
-n.d(t, { A: () => x }), n(896048);
+n.d(t, {
+    A: () => x,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(735438),
@@ -18,6 +21,7 @@ var r = n(627968),
     y = n(426127),
     O = n(985018),
     j = n(281783);
+
 function v(e) {
     let t,
         { activity: n, channel: i, userId: a } = e,
@@ -95,6 +99,7 @@ function v(e) {
         });
     }
 }
+
 function x(e) {
     let { userId: t, channel: n } = e,
         o = (0, s.bG)([b.default], () => b.default.getUser(t)),
@@ -117,7 +122,9 @@ function x(e) {
             name: a.ImpressionNames.VOICE_USER_ACTIVITY_POPOUT,
             properties: {},
         },
-        { disableTrack: A },
+        {
+            disableTrack: A,
+        },
     ),
     A)
         ? null

@@ -1,4 +1,6 @@
-n.d(t, { v: () => y });
+n.d(t, {
+    v: () => y,
+});
 var r = n(627968);
 n(64700);
 var i = n(646865),
@@ -17,6 +19,7 @@ var i = n(646865),
     g = n(652215),
     E = n(31545),
     b = n(319567);
+
 function y(e) {
     var t;
     let { applicationId: n, onMouseDown: y, onMouseMove: O, onMouseLeave: A, onFocus: v, idle: S } = e,
@@ -27,7 +30,10 @@ function y(e) {
             (0, c.X)(C, c.O.POPOUT, !0),
                 (0, s.A)({
                     onConfirm: async () => {
-                        await h.A.refreshProxyTicket({ applicationId: n }), (0, a.jp)();
+                        await h.A.refreshProxyTicket({
+                            applicationId: n,
+                        }),
+                            (0, a.jp)();
                     },
                 });
         };

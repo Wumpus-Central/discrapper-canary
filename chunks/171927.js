@@ -1,1 +1,3 @@
-e.exports = { Tg: "_41ecf44b18414575" };
+e.exports = {
+    Tg: "_41ecf44b18414575",
+};

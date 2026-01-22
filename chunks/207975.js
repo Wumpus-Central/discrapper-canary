@@ -1,11 +1,17 @@
-r.d(t, { A: () => c }), r(896048);
+r.d(t, {
+    A: () => c,
+}),
+    r(896048);
 var n = r(64700),
     l = r(677402),
     s = r(639214),
     i = r(830012),
     a = r(654487);
+
 function c(e, t, r) {
-    let c = (0, l.H)({ location: a.rE.STREAM_SOURCE_SELECT });
+    let c = (0, l.H)({
+        location: a.rE.STREAM_SOURCE_SELECT,
+    });
     return n.useMemo(() => {
         if (null == r || !c) return null;
         for (let a of r) {

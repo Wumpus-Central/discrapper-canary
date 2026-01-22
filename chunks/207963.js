@@ -27,6 +27,7 @@ var r = n(627968),
     y = n(814890),
     O = n(322980),
     A = n(270761);
+
 function v(e, t, n) {
     return (
         t in e
@@ -40,6 +41,7 @@ function v(e, t, n) {
         e
     );
 }
+
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -56,6 +58,7 @@ function S(e) {
     }
     return e;
 }
+
 function I(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -68,6 +71,7 @@ function I(e, t) {
     }
     return n;
 }
+
 function T(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -108,6 +112,7 @@ let C = (e) => {
             r
         );
     };
+
 function R(e) {
     return "app-widget-".concat(e.applicationId);
 }
@@ -141,6 +146,7 @@ let w = (e) => {
         ) || !!s
     );
 };
+
 function P(e, t) {
     var n, r;
     let a = i.useContext(M),
@@ -148,7 +154,15 @@ function P(e, t) {
             (t) => {
                 var n;
                 let r = (0, A.A)(e, t, null != a.modal ? "modal" : "message");
-                return null == (n = a.setValidationErrors) || n.call(a, (t) => T(S({}, t), { [e.id]: r })), null == r;
+                return (
+                    null == (n = a.setValidationErrors) ||
+                        n.call(a, (t) =>
+                            T(S({}, t), {
+                                [e.id]: r,
+                            }),
+                        ),
+                    null == r
+                );
             },
             [e, a],
         );
@@ -170,6 +184,7 @@ function P(e, t) {
         }
     );
 }
+
 function D(e, t, n, r) {
     var s;
     let o = (0, a.bG)([O.A], () => O.A.getInteractionComponentState(e.id, n.id)),
@@ -207,6 +222,7 @@ function D(e, t, n, r) {
         error: d,
     };
 }
+
 function x(e, t, n) {
     let r = (0, a.bG)([O.A], () => O.A.getInteractionComponentState(e.customId, t.id)),
         { error: o, validate: c } = P(t, r),
@@ -235,17 +251,20 @@ function x(e, t, n) {
         }
     );
 }
+
 function L(e) {
     return () => {
         throw Error("".concat(e, " does not support state"));
     };
 }
+
 function j(e) {
     return () => {
         throw Error("".concat(e, " does not support parents"));
     };
 }
 let M = i.createContext(null);
+
 function k(e) {
     let {
             children: t,
@@ -295,12 +314,15 @@ function k(e) {
         children: t,
     });
 }
+
 function U(e, t) {
     return i.useContext(M).useComponentState(e, t);
 }
+
 function G() {
     return i.useContext(M);
 }
+
 function V(e) {
     var t, n;
     return null != (t = null == (n = i.useContext(M).validationErrors) ? void 0 : n[e.id]) ? t : null;

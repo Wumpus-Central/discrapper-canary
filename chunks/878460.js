@@ -1,7 +1,10 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r,
     i = n(311907),
     a = n(73153);
+
 function s(e, t, n) {
     return (
         t in e
@@ -15,6 +18,7 @@ function s(e, t, n) {
         e
     );
 }
+
 function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -33,18 +37,22 @@ function o(e) {
 }
 let l = {},
     c = null;
+
 function u(e) {
     let { settings: t } = e;
     (l = t.categories), (c = t.initialized);
 }
+
 function d(e) {
     let { settings: t } = e;
     l = t.categories;
 }
+
 function f(e) {
     let { updates: t } = e;
     l = o({}, l, t);
 }
+
 function p() {
     (l = {}), (c = null);
 }

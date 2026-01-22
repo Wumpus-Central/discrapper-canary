@@ -47,11 +47,17 @@ async function p(e, t) {
         );
     }
 }
+
 function _() {
     l.fy.getState().activePanel === l.HP.APPLICATION_TEST_MODE_DEBUG && (0, l.Jp)(),
-        i.h.dispatch({ type: "DEVELOPER_TEST_MODE_RESET" });
+        i.h.dispatch({
+            type: "DEVELOPER_TEST_MODE_RESET",
+        });
 }
+
 function h() {
     l.fy.getState().activePanel === l.HP.APPLICATION_TEST_MODE_DEBUG && (0, l.Jp)(),
-        i.h.dispatch({ type: "DEVELOPER_TEST_MODE_RESET_ERROR" });
+        i.h.dispatch({
+            type: "DEVELOPER_TEST_MODE_RESET_ERROR",
+        });
 }

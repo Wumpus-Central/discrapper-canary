@@ -1,4 +1,7 @@
-r.d(t, { default: () => y }), r(896048);
+r.d(t, {
+    default: () => y,
+}),
+    r(896048);
 var n = r(627968),
     a = r(64700),
     s = r(158954),
@@ -112,7 +115,9 @@ class P extends a.Component {
             { result: r, sending: a } = this.props;
         switch (r.type) {
             case d.rD.GROUP_DM:
-                e = (0, n.jsx)(T, { channel: r.data.record });
+                e = (0, n.jsx)(T, {
+                    channel: r.data.record,
+                });
                 break;
             case d.rD.TEXT_CHANNEL: {
                 let { categoryName: t, guildName: a } = r;
@@ -173,6 +178,7 @@ class P extends a.Component {
             });
     }
 }
+
 function y(e) {
     let { transitionState: t, onClose: r } = e,
         {
@@ -194,11 +200,17 @@ function y(e) {
         T = a.useRef(null),
         S = a.useCallback(() => {
             var e;
-            null == (e = T.current) || e.scrollPageUp({ animate: !0 });
+            null == (e = T.current) ||
+                e.scrollPageUp({
+                    animate: !0,
+                });
         }, [T]),
         y = a.useCallback(() => {
             var e;
-            null == (e = T.current) || e.scrollPageDown({ animate: !0 });
+            null == (e = T.current) ||
+                e.scrollPageDown({
+                    animate: !0,
+                });
         }, [T]);
     a.useEffect(
         () => (
@@ -252,7 +264,9 @@ function y(e) {
         ? null
         : (0, n.jsx)(s.Modal, {
               transitionState: t,
-              title: v.intl.formatToPlainString(v.t["2tN7ih"], { name: h.name }),
+              title: v.intl.formatToPlainString(v.t["2tN7ih"], {
+                  name: h.name,
+              }),
               onClose: r,
               actions: [],
               input: (0, n.jsx)(l.IWV, {
@@ -265,7 +279,9 @@ function y(e) {
                   },
               }),
               size: "md",
-              "aria-label": v.intl.formatToPlainString(v.t["2tN7ih"], { name: h.name }),
+              "aria-label": v.intl.formatToPlainString(v.t["2tN7ih"], {
+                  name: h.name,
+              }),
               listProps:
                   u.length > 0
                       ? {
@@ -298,6 +314,10 @@ function y(e) {
                             },
                         }
                       : void 0,
-              children: 0 === u.length && (0, n.jsx)("div", { className: A.wV }),
+              children:
+                  0 === u.length &&
+                  (0, n.jsx)("div", {
+                      className: A.wV,
+                  }),
           });
 }

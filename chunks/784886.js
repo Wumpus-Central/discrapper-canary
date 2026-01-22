@@ -1,4 +1,8 @@
-n.d(t, { A: () => w }), n(896048), n(733351);
+n.d(t, {
+    A: () => w,
+}),
+    n(896048),
+    n(733351);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -21,6 +25,7 @@ var r = n(627968),
     A = n(788868),
     v = n(985018),
     S = n(787288);
+
 function I(e, t, n) {
     return (
         t in e
@@ -34,6 +39,7 @@ function I(e, t, n) {
         e
     );
 }
+
 function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -50,6 +56,7 @@ function T(e) {
     }
     return e;
 }
+
 function C(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -62,6 +69,7 @@ function C(e, t) {
     }
     return n;
 }
+
 function N(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -77,6 +85,7 @@ let R = (0, m.createChannelRecord)({
     id: "1",
     type: O.rbe.DM,
 });
+
 function w(e) {
     let { user: t, guildId: a, channelId: m, onClose: O, disableAutoFocus: I = !1, upsell: C = !1 } = e,
         { newestAnalyticsLocation: w, analyticsLocations: P } = (0, u.Ay)(),
@@ -87,10 +96,18 @@ function w(e) {
         U = i.useRef(null),
         G = i.useRef(null),
         { Component: V } = (0, o.V)(),
-        F = i.useMemo(() => N(T({}, d.oU.USER_PROFILE), { disableAutoFocus: I }), [I]),
+        F = i.useMemo(
+            () =>
+                N(T({}, d.oU.USER_PROFILE), {
+                    disableAutoFocus: I,
+                }),
+            [I],
+        ),
         B = i.useCallback(async () => {
             (0, h.xs)(t.id),
-                await c.A.openPrivateChannel({ recipientIds: [t.id] }),
+                await c.A.openPrivateChannel({
+                    recipientIds: [t.id],
+                }),
                 (0, l.mMO)(async () => {
                     let { default: e } = await n.e("95501").then(n.bind(n, 367516));
                     return (t) =>
@@ -124,10 +141,14 @@ function w(e) {
             [V, B, t, P],
         );
     return (0, r.jsx)(p.Ay, {
-        className: s()(S.kL, { [S.UX]: C }),
+        className: s()(S.kL, {
+            [S.UX]: C,
+        }),
         editorClassName: S.EN,
         type: F,
-        placeholder: v.intl.formatToPlainString(v.t["0ZQw/X"], { name: g.Ay.getName(a, m, t) }),
+        placeholder: v.intl.formatToPlainString(v.t["0ZQw/X"], {
+            name: g.Ay.getName(a, m, t),
+        }),
         channel: R,
         textValue: x,
         richValue: j,
@@ -153,7 +174,9 @@ function w(e) {
             try {
                 var i;
                 return (
-                    D({ action: "SEND_DIRECT_MESSAGE" }),
+                    D({
+                        action: "SEND_DIRECT_MESSAGE",
+                    }),
                     await (0, b.p)({
                         userId: t.id,
                         content: r,

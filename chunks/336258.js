@@ -12,6 +12,7 @@ var t = (function () {
         return n && e(t.prototype, n), r && e(t, r), t;
     };
 })();
+
 function n(e, t) {
     if (!(e instanceof t)) throw TypeError("Cannot call a class as a function");
 }

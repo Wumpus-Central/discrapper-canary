@@ -1,4 +1,7 @@
-n.d(t, { A: () => F }), n(896048);
+n.d(t, {
+    A: () => F,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -32,6 +35,7 @@ var r = n(627968),
     R = n(652215),
     D = n(349828),
     M = n(728444);
+
 function L(e, t, n) {
     return (
         t in e
@@ -45,6 +49,7 @@ function L(e, t, n) {
         e
     );
 }
+
 function G(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -61,6 +66,7 @@ function G(e) {
     }
     return e;
 }
+
 function k(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -196,22 +202,39 @@ class U extends N.Ay {
                     (this.resetTextChannelPopoutTimers(),
                     (this.enterTimer = setTimeout(() => {
                         null != this.props.embeddedApps && this.props.embeddedApps.length > 0
-                            ? this.setState({ shouldShowActivities: !0 })
-                            : this.props.channelIsContentGated || this.setState({ shouldShowThreadsPopout: !0 });
+                            ? this.setState({
+                                  shouldShowActivities: !0,
+                              })
+                            : this.props.channelIsContentGated ||
+                              this.setState({
+                                  shouldShowThreadsPopout: !0,
+                              });
                     }, 200)));
             }),
             L(this, "handleMouseLeave", () => {
                 this.resetTextChannelPopoutTimers(),
                     (this.exitTimer = setTimeout(() => {
-                        this.state.shouldShowActivities && this.setState({ shouldShowActivities: !1 }),
-                            this.state.shouldShowThreadsPopout && this.setState({ shouldShowThreadsPopout: !1 });
+                        this.state.shouldShowActivities &&
+                            this.setState({
+                                shouldShowActivities: !1,
+                            }),
+                            this.state.shouldShowThreadsPopout &&
+                                this.setState({
+                                    shouldShowThreadsPopout: !1,
+                                });
                     }, 250));
             }),
             L(this, "handleThreadsPopoutClose", () => {
-                this.resetTextChannelPopoutTimers(), this.setState({ shouldShowThreadsPopout: !1 });
+                this.resetTextChannelPopoutTimers(),
+                    this.setState({
+                        shouldShowThreadsPopout: !1,
+                    });
             }),
             L(this, "handleActivitiesPopoutClose", () => {
-                this.resetTextChannelPopoutTimers(), this.setState({ shouldShowActivities: !1 });
+                this.resetTextChannelPopoutTimers(),
+                    this.setState({
+                        shouldShowActivities: !1,
+                    });
             }),
             L(this, "handleClosePopout", () => {
                 this.state.shouldShowActivities && this.handleActivitiesPopoutClose(),
@@ -233,7 +256,12 @@ class U extends N.Ay {
                             onAction: this.handleActivitiesPopoutClose,
                             channel: t,
                         })
-                      : (0, r.jsx)(I.A, k(G({}, e), { channel: this.props.channel }));
+                      : (0, r.jsx)(
+                            I.A,
+                            k(G({}, e), {
+                                channel: this.props.channel,
+                            }),
+                        );
             }),
             L(this, "handleContextMenu", (e) => {
                 let { channel: t } = this.props;
@@ -274,7 +302,13 @@ class U extends N.Ay {
                 if (t.isModeratorReportChannel())
                     return void (0, u.L3)(e, async () => {
                         let { default: e } = await n.e("78580").then(n.bind(n, 907647));
-                        return (n) => (0, r.jsx)(e, k(G({}, n), { channel: t }));
+                        return (n) =>
+                            (0, r.jsx)(
+                                e,
+                                k(G({}, n), {
+                                    channel: t,
+                                }),
+                            );
                     });
                 let l = v.A.getGuild(t.getGuildId());
                 null != l &&
@@ -295,6 +329,7 @@ class U extends N.Ay {
     }
 }
 let V = (0, d.a)(U);
+
 function F(e) {
     let { channel: t, guild: n, disableSorting: l, isFavoriteCategory: i, muted: a, selected: o } = e,
         { hasActiveThreads: c, hasMoreActiveThreads: u } = (0, y.NR)(t),

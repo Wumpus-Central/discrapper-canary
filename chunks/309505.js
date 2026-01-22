@@ -1,4 +1,6 @@
-t(697509)(r, "__esModule", { value: !0 }),
+t(697509)(r, "__esModule", {
+    value: !0,
+}),
     (r.default = void 0),
     (r.default = {
         abstract: !1,
@@ -10,14 +12,18 @@ t(697509)(r, "__esModule", { value: !0 }),
         props: {},
         relatedConcepts: [
             {
-                concept: { name: "menuitem" },
+                concept: {
+                    name: "menuitem",
+                },
                 module: "ARIA",
             },
         ],
         requireContextRole: ["group", "menu", "menubar"],
         requiredContextRole: ["group", "menu", "menubar"],
         requiredOwnedElements: [],
-        requiredProps: { "aria-checked": null },
+        requiredProps: {
+            "aria-checked": null,
+        },
         superClass: [
             ["roletype", "widget", "input", "checkbox", "menuitemcheckbox"],
             ["roletype", "widget", "command", "menuitem", "menuitemcheckbox"],

@@ -1,4 +1,6 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -7,6 +9,7 @@ var i = n(311907),
     o = n(616075),
     s = n(652215),
     d = n(985018);
+
 function c(e) {
     let t = (0, i.bG)([a.A], () => a.A.getGuildId()),
         c = e.type === s.rbe.GUILD_CATEGORY,

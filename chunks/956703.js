@@ -1,4 +1,7 @@
-n.d(t, { A: () => E }), n(896048);
+n.d(t, {
+    A: () => E,
+}),
+    n(896048);
 var r,
     i = n(311907),
     a = n(73153),
@@ -7,6 +10,7 @@ var r,
     l = n(427157),
     c = n(734057),
     u = n(287809);
+
 function d(e, t, n) {
     return (
         t in e
@@ -35,9 +39,11 @@ class p {
         d(this, "users", void 0), d(this, "fetched", void 0), (this.fetched = !1), (this.users = new Map());
     }
 }
+
 function _() {
     f = {};
 }
+
 function h(e) {
     let { type: t, messageId: n, userId: r, emoji: i, reactionType: a } = e,
         s = p.ensure(n, i, a);
@@ -46,6 +52,7 @@ function h(e) {
         null != e && s.users.set(r, e);
     } else s.users.delete(r);
 }
+
 function m(e) {
     let { messageId: t, users: n, emoji: r, reactionType: i } = e,
         a = p.ensure(t, r, i);

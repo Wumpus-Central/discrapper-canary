@@ -1,9 +1,12 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(627968);
 n(64700);
 var l = n(175203),
     i = n(430452),
     a = n(348702);
+
 function s(e) {
     let { aspectRatio: t, className: n, children: s, width: o } = e,
         c = (function (e, t) {
@@ -39,11 +42,15 @@ function s(e) {
         })(e, ["aspectRatio", "className", "children", "width"]),
         u = i.A.getVideoComponent();
     return (0, r.jsx)("div", {
-        style: { width: o },
+        style: {
+            width: o,
+        },
         className: a.A,
         children: (0, r.jsxs)("div", {
             className: a.e,
-            style: { aspectRatio: t },
+            style: {
+                aspectRatio: t,
+            },
             children: [
                 (0, r.jsx)(
                     l.Ay,

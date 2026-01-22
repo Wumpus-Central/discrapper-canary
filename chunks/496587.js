@@ -1,6 +1,9 @@
-n.d(t, { A: () => l });
+n.d(t, {
+    A: () => l,
+});
 var r = n(627968),
     a = n(376463);
+
 function l(e) {
     let { children: t, actions: n } = e;
     return (0, r.jsx)("div", {
@@ -12,7 +15,9 @@ function l(e) {
                 null != n &&
                     (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, r.jsx)("div", { className: a.yF }),
+                            (0, r.jsx)("div", {
+                                className: a.yF,
+                            }),
                             (0, r.jsx)("div", {
                                 className: a.fH,
                                 children: n,

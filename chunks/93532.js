@@ -1,4 +1,6 @@
-n.d(t, { A: () => a }),
+n.d(t, {
+    A: () => a,
+}),
     n(896048),
     n(927092),
     n(212978),
@@ -31,5 +33,7 @@ async function a(e) {
         "uuid" === e.type && (t = e.start);
     let l = e.slice(0, t, e.type),
         c = e.slice(t + 4, t + 8 + 16, e.type);
-    return new Blob([l, new Uint8Array([0, 0, 0, 24]), c], { type: e.type });
+    return new Blob([l, new Uint8Array([0, 0, 0, 24]), c], {
+        type: e.type,
+    });
 }

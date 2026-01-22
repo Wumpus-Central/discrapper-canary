@@ -1,4 +1,6 @@
-n.d(t, { A: () => T });
+n.d(t, {
+    A: () => T,
+});
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -22,6 +24,7 @@ var r = n(627968),
     v = n(240626),
     S = n(788868),
     I = n(637676);
+
 function T(e) {
     let { premiumSubscription: t } = e,
         n = (0, a.bG)([m.A], () => m.A.boostSlots),
@@ -36,7 +39,9 @@ function T(e) {
         L = x.length > 0,
         j = T.length > x.length,
         M = (0, a.bG)([f.A], () => f.A.getCurrentUserAppliedBoosts()),
-        { fractionalState: k } = (0, s.A)({ forceFetch: !0 }),
+        { fractionalState: k } = (0, s.A)({
+            forceFetch: !0,
+        }),
         U = null == C ? void 0 : C.isPremiumGroupMember(),
         G = (null == t ? void 0 : t.isPausedOrPausePending) === !0 && k === S.xc.NONE,
         V = (null == t ? void 0 : t.isPausedOrPausePending) !== !0 && k === S.xc.NONE && !U,
@@ -45,7 +50,9 @@ function T(e) {
     return (0, r.jsxs)("div", {
         className: I.GO,
         children: [
-            (0, r.jsx)(o.kb, { className: I.ek }),
+            (0, r.jsx)(o.kb, {
+                className: I.ek,
+            }),
             (0, r.jsx)(b.A, {
                 hasGuildBoostSlots: D,
                 hasAppliedGuildBoosts: L,
@@ -83,8 +90,12 @@ function T(e) {
                 hideHeading: !0,
                 hideTier0: !0,
             }),
-            (0, r.jsx)(l.A, { cardClassName: I.KW }),
-            (0, r.jsx)(c.A, { className: I.JL }),
+            (0, r.jsx)(l.A, {
+                cardClassName: I.KW,
+            }),
+            (0, r.jsx)(c.A, {
+                className: I.JL,
+            }),
         ],
     });
 }

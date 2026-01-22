@@ -1,4 +1,7 @@
-r.d(t, { A: () => u }), r(896048);
+r.d(t, {
+    A: () => u,
+}),
+    r(896048);
 var n = r(627968),
     a = r(64700),
     l = r(397927),
@@ -7,6 +10,7 @@ var n = r(627968),
     i = r(333354),
     o = r(985018),
     d = r(260484);
+
 function u() {
     let [e, t] = a.useState("");
     return (0, n.jsxs)("div", {
@@ -32,8 +36,12 @@ function u() {
                                     (0, n.jsxs)("div", {
                                         className: d.oG,
                                         children: [
-                                            (0, n.jsx)("div", { className: d.sg }),
-                                            (0, n.jsx)("div", { className: d.It }),
+                                            (0, n.jsx)("div", {
+                                                className: d.sg,
+                                            }),
+                                            (0, n.jsx)("div", {
+                                                className: d.It,
+                                            }),
                                         ],
                                     }),
                                     (0, n.jsxs)("div", {
@@ -56,19 +64,29 @@ function u() {
                                     (0, n.jsxs)("div", {
                                         className: d.H3,
                                         children: [
-                                            (0, n.jsx)("div", { className: d.ns }),
+                                            (0, n.jsx)("div", {
+                                                className: d.ns,
+                                            }),
                                             (0, n.jsxs)("div", {
                                                 className: d.uP,
                                                 children: [
-                                                    (0, n.jsx)("div", { className: d.sV }),
+                                                    (0, n.jsx)("div", {
+                                                        className: d.sV,
+                                                    }),
                                                     (0, n.jsxs)("div", {
                                                         className: d.xS,
                                                         children: [
-                                                            (0, n.jsx)("div", { className: d.jd }),
-                                                            (0, n.jsx)("div", { className: d.r$ }),
+                                                            (0, n.jsx)("div", {
+                                                                className: d.jd,
+                                                            }),
+                                                            (0, n.jsx)("div", {
+                                                                className: d.r$,
+                                                            }),
                                                         ],
                                                     }),
-                                                    (0, n.jsx)("div", { className: d.bi }),
+                                                    (0, n.jsx)("div", {
+                                                        className: d.bi,
+                                                    }),
                                                 ],
                                             }),
                                         ],

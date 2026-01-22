@@ -24,6 +24,7 @@ var i = n(311907),
     O = n(985018),
     A = n(380297);
 let v = 3;
+
 function S(e) {
     let { user: t, guild: n, channel: S, onAction: I, onClose: T } = e,
         { themeType: C } = (0, g.E)(),
@@ -36,7 +37,13 @@ function S(e) {
     if (!w) return null;
     let D = () => {
             let e = (e) => {
-                e.stopPropagation(), (0, p.u)(n.id), null == I || I({ action: "OPEN_VOICE_GUILD" }), null == T || T();
+                e.stopPropagation(),
+                    (0, p.u)(n.id),
+                    null == I ||
+                        I({
+                            action: "OPEN_VOICE_GUILD",
+                        }),
+                    null == T || T();
             };
             return (0, r.jsx)(o.m, {
                 asContainer: !0,
@@ -56,13 +63,18 @@ function S(e) {
                     variant: "text-xs/normal",
                     color: "text-subtle",
                     lineClamp: 1,
-                    children: (0, r.jsx)(a.A, { children: R }),
+                    children: (0, r.jsx)(a.A, {
+                        children: R,
+                    }),
                 });
             let e = (e) => {
                 e.stopPropagation(),
                     c.default.selectVoiceChannel(S.id),
                     (0, f.iN)(S.id),
-                    null == I || I({ action: "OPEN_VOICE_CHANNEL" }),
+                    null == I ||
+                        I({
+                            action: "OPEN_VOICE_CHANNEL",
+                        }),
                     null == T || T();
             };
             return (0, r.jsx)(l.DUT, {
@@ -72,14 +84,18 @@ function S(e) {
                     variant: "text-xs/normal",
                     color: "text-subtle",
                     lineClamp: 1,
-                    children: (0, r.jsx)(a.A, { children: R }),
+                    children: (0, r.jsx)(a.A, {
+                        children: R,
+                    }),
                 }),
             });
         },
         L = C !== y.d.MODAL && C !== y.d.MODAL_V2 && C !== y.d.SIDEBAR;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(m.A, { className: A.Ph }),
+            (0, r.jsx)(m.A, {
+                className: A.Ph,
+            }),
             (0, r.jsxs)("div", {
                 className: A.gx,
                 children: [
@@ -109,7 +125,11 @@ function S(e) {
                         overflowCountColor: "text-subtle",
                         overflowCountClassName: A.NS,
                         onClickOverflow: (e) => {
-                            e.stopPropagation(), null == I || I({ action: "PRESS_VOICE_CHANNEL_AVATARS" });
+                            e.stopPropagation(),
+                                null == I ||
+                                    I({
+                                        action: "PRESS_VOICE_CHANNEL_AVATARS",
+                                    });
                         },
                         onUserClick: (e) => e.stopPropagation(),
                         disableUserPopout: !!L || ((e) => e === t.id),

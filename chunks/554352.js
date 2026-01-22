@@ -6,6 +6,7 @@ n.d(t, {
 var r = n(64700),
     i = r.createContext(),
     a = r.createContext();
+
 function s(e) {
     var t = e.children,
         n = r.useState(null),
@@ -20,5 +21,17 @@ function s(e) {
     var c = r.useCallback(function (e) {
         l.current || o(e);
     }, []);
-    return r.createElement(i.Provider, { value: s }, r.createElement(a.Provider, { value: c }, t));
+    return r.createElement(
+        i.Provider,
+        {
+            value: s,
+        },
+        r.createElement(
+            a.Provider,
+            {
+                value: c,
+            },
+            t,
+        ),
+    );
 }

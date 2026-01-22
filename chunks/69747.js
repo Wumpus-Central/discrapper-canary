@@ -1,7 +1,14 @@
-i.d(t, { A: () => o }), i(65821), i(228524), i(896048), i(321073);
+i.d(t, {
+    A: () => o,
+}),
+    i(65821),
+    i(228524),
+    i(896048),
+    i(321073);
 var l = i(837921),
     r = i(372684),
     n = i(985018);
+
 function a(e, t, i) {
     return (
         t in e
@@ -31,7 +38,9 @@ class o {
     async pollEvents() {
         try {
             var e, t, i, l, r, n, a, o, m, p, c, y, v, u, h, d;
-            let E = await s("eventdata", { eventID: this.nextEventId });
+            let E = await s("eventdata", {
+                eventID: this.nextEventId,
+            });
             if ((null == (e = E.Events) ? void 0 : e.length) > 0) {
                 if (this.isFirstPoll) this.isFirstPoll = !1;
                 else
@@ -113,7 +122,9 @@ class o {
                             eventType: r.rb.KILL,
                             importance: 0.5,
                             title: n.intl.string(n.t.ky6syM),
-                            description: n.intl.formatToPlainString(n.t["2sxvfW"], { name: e.victimName }),
+                            description: n.intl.formatToPlainString(n.t["2sxvfW"], {
+                                name: e.victimName,
+                            }),
                         };
                     if (e.playerIsAssister)
                         return {
@@ -121,7 +132,9 @@ class o {
                             eventType: r.rb.ASSIST,
                             importance: 0.5,
                             title: n.intl.string(n.t.ky6syM),
-                            description: n.intl.formatToPlainString(n.t.NyJvKf, { name: e.victimName }),
+                            description: n.intl.formatToPlainString(n.t.NyJvKf, {
+                                name: e.victimName,
+                            }),
                         };
                     if (e.victimIsActivePlayer)
                         return {
@@ -129,7 +142,9 @@ class o {
                             eventType: r.rb.DEATH,
                             importance: 0.5,
                             title: n.intl.string(n.t.ky6syM),
-                            description: n.intl.formatToPlainString(n.t["wZ/IFO"], { name: e.killerName }),
+                            description: n.intl.formatToPlainString(n.t["wZ/IFO"], {
+                                name: e.killerName,
+                            }),
                         };
                     return null;
                 case "Multikill":
@@ -178,7 +193,9 @@ class o {
                         eventType: r.rb.LEVEL_UP,
                         importance: 0,
                         title: n.intl.string(n.t["cp+kpc"]),
-                        description: n.intl.formatToPlainString(n.t["le5/P1"], { level: e.newLevel }),
+                        description: n.intl.formatToPlainString(n.t["le5/P1"], {
+                            level: e.newLevel,
+                        }),
                     };
                 case "ItemPurchase":
                     return {
@@ -186,7 +203,9 @@ class o {
                         eventType: r.rb.ITEM,
                         importance: 0,
                         title: n.intl.string(n.t["89CDAj"]),
-                        description: n.intl.formatToPlainString(n.t.cpRNkD, { itemName: e.itemName }),
+                        description: n.intl.formatToPlainString(n.t.cpRNkD, {
+                            itemName: e.itemName,
+                        }),
                     };
                 case "TurretKill":
                     if (e.playerHelpedKill)
@@ -212,16 +231,24 @@ class o {
                             type: r.Gy.GAME_EVENT,
                             eventType: r.rb.OBJECTIVE_KILL,
                             importance: 1,
-                            title: n.intl.formatToPlainString(n.t.DUQK8U, { drakeName: e.drakeName }),
-                            description: n.intl.formatToPlainString(n.t["8qsedd"], { killerName: e.killerName }),
+                            title: n.intl.formatToPlainString(n.t.DUQK8U, {
+                                drakeName: e.drakeName,
+                            }),
+                            description: n.intl.formatToPlainString(n.t["8qsedd"], {
+                                killerName: e.killerName,
+                            }),
                         };
                     if (e.playerHelpedKill)
                         return {
                             type: r.Gy.GAME_EVENT,
                             eventType: r.rb.OBJECTIVE_KILL,
                             importance: 0.5,
-                            title: n.intl.formatToPlainString(n.t["AjNN1/"], { drakeName: e.drakeName }),
-                            description: n.intl.formatToPlainString(n.t.HlopAO, { killerName: e.killerName }),
+                            title: n.intl.formatToPlainString(n.t["AjNN1/"], {
+                                drakeName: e.drakeName,
+                            }),
+                            description: n.intl.formatToPlainString(n.t.HlopAO, {
+                                killerName: e.killerName,
+                            }),
                         };
                     return null;
                 case "BaronKill":
@@ -231,7 +258,9 @@ class o {
                             eventType: r.rb.OBJECTIVE_KILL,
                             importance: e.playerHelpedKill ? 1 : 0.8,
                             title: n.intl.string(n.t["+WhzbK"]),
-                            description: n.intl.formatToPlainString(n.t.FUBbYu, { killerName: e.killerName }),
+                            description: n.intl.formatToPlainString(n.t.FUBbYu, {
+                                killerName: e.killerName,
+                            }),
                         };
                     if (e.playerHelpedKill)
                         return {
@@ -239,7 +268,9 @@ class o {
                             eventType: r.rb.OBJECTIVE_KILL,
                             importance: e.playerHelpedKill ? 0.8 : 0.5,
                             title: n.intl.string(n.t.KohKss),
-                            description: n.intl.formatToPlainString(n.t["4yYLUi"], { killerName: e.killerName }),
+                            description: n.intl.formatToPlainString(n.t["4yYLUi"], {
+                                killerName: e.killerName,
+                            }),
                         };
                     return null;
                 default:
@@ -254,7 +285,9 @@ class o {
                 var e, t;
                 let [i, l] = await Promise.all([
                         s("activeplayer"),
-                        s("playeritems", { riotId: this.activePlayerRiotId }),
+                        s("playeritems", {
+                            riotId: this.activePlayerRiotId,
+                        }),
                     ]),
                     r = new Map();
                 if (Array.isArray(l)) for (let e of l) r.set(e.itemID, e);

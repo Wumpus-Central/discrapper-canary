@@ -1,4 +1,7 @@
-r.d(t, { default: () => m }), r(896048);
+r.d(t, {
+    default: () => m,
+}),
+    r(896048);
 var n = r(627968),
     a = r(64700),
     i = r(503698),
@@ -14,6 +17,7 @@ var n = r(627968),
     y = r(996629),
     b = r(894101);
 let v = new Set([s.ip4.ENTERING, s.ip4.ENTERED]);
+
 function m(e) {
     let {
             onClose: t,
@@ -65,13 +69,17 @@ function m(e) {
             "rqtoken",
             "serveInvisible",
         ]),
-        A = (0, d.A)({ onReject: i });
+        A = (0, d.A)({
+            onReject: i,
+        });
     if (
         (a.useEffect(() => {
             l._.subscribe(h.jej.LAYER_POP_ESCAPE_KEY, t);
         }, [t]),
         a.useEffect(() => {
-            p.default.track(h.HAw.OPEN_MODAL, { type: "Captcha Modal" });
+            p.default.track(h.HAw.OPEN_MODAL, {
+                type: "Captcha Modal",
+            });
         }, []),
         null == m || !v.has(m))
     )
@@ -79,7 +87,10 @@ function m(e) {
     let R = (0, n.jsxs)("div", {
         className: o()(y.GC, y.P),
         children: [
-            E && (0, n.jsx)(s.y$y, { type: s.y$y.Type.SPINNING_CIRCLE }),
+            E &&
+                (0, n.jsx)(s.y$y, {
+                    type: s.y$y.Type.SPINNING_CIRCLE,
+                }),
             (0, n.jsx)(
                 u.A,
                 (function (e) {

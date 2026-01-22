@@ -1,4 +1,6 @@
-n.d(t, { A: () => A });
+n.d(t, {
+    A: () => A,
+});
 var r = n(627968);
 n(64700);
 var l = n(311907),
@@ -15,6 +17,7 @@ var l = n(311907),
     b = n(47868),
     g = n(985018),
     m = n(19801);
+
 function A(e) {
     let { channelId: t, showDismiss: A = !0 } = e,
         y = (0, l.bG)([o.A], () => o.A.getChannel(t), [t]),
@@ -39,7 +42,9 @@ function A(e) {
                               width: 20,
                           }),
                           color: i.A.unsafe_rawColors.GREEN_360.css,
-                          title: g.intl.formatToPlainString(v(e) ? g.t["1vGXqM"] : g.t.xMJyla, { eventName: e.name }),
+                          title: g.intl.formatToPlainString(v(e) ? g.t["1vGXqM"] : g.t.xMJyla, {
+                              eventName: e.name,
+                          }),
                           description: g.intl.formatToPlainString(g.t.PTebCR, {
                               startTime: (0, h.CC)(e.scheduled_start_time).startDateTimeString,
                           }),
@@ -79,7 +84,10 @@ function A(e) {
                                                     }
                                                     return e;
                                                 })({}, n)),
-                                                (i = i = { event: e }),
+                                                (i = i =
+                                                    {
+                                                        event: e,
+                                                    }),
                                                 Object.getOwnPropertyDescriptors
                                                     ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(i))
                                                     : (function (e, t) {
@@ -100,7 +108,9 @@ function A(e) {
                                             );
                                         };
                                     })
-                                  : (0, u.uR)({ eventId: e.id });
+                                  : (0, u.uR)({
+                                        eventId: e.id,
+                                    });
                           },
                           onDismiss: A
                               ? () => {

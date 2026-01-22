@@ -1,4 +1,7 @@
-n.d(t, { A: () => k }), n(321073);
+n.d(t, {
+    A: () => k,
+}),
+    n(321073);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -30,6 +33,7 @@ var r = n(627968),
     P = n(584905),
     D = n(698279),
     x = n(111314);
+
 function L(e) {
     let { disabled: t, channel: n } = e;
     return (0, c.bG)([g.A], () => Object.keys(g.A.promotionsByType[E.pt.GIFT_PROMOTION]).length > 0)
@@ -42,6 +46,7 @@ function L(e) {
               channel: n,
           });
 }
+
 function j(e) {
     var t, n, i, a, g, E, b, y;
     let { type: C, disabled: N, channel: j, handleSubmit: k, isEmpty: U, showAllButtons: G } = e,
@@ -51,12 +56,21 @@ function j(e) {
             activeCommand: p.A.getActiveCommand(j.id),
             activeCommandOption: p.A.getActiveOption(j.id),
         })),
-        { paymentsBlocked: Y } = _.A.useExperiment({ location: "dc120b_3" }, { autoTrackExposure: !1 }),
+        { paymentsBlocked: Y } = _.A.useExperiment(
+            {
+                location: "dc120b_3",
+            },
+            {
+                autoTrackExposure: !1,
+            },
+        ),
         {
             iconOrder: W,
             expressionsCombinedIntoEmojiButton: K,
             reducedGap: z,
-        } = v.C.useConfig({ location: "ChannelTextAreaButtons" }),
+        } = v.C.useConfig({
+            location: "ChannelTextAreaButtons",
+        }),
         q = (0, m.RQ)((e) => e.lastActiveView),
         X =
             (null == (t = C.gifs) ? void 0 : t.button) != null &&
@@ -137,7 +151,13 @@ function j(e) {
                 ee ||
                 Z.push({
                     key: "spacer",
-                    node: (0, r.jsx)("div", { className: x.jH }, "spacer"),
+                    node: (0, r.jsx)(
+                        "div",
+                        {
+                            className: x.jH,
+                        },
+                        "spacer",
+                    ),
                 })),
         (null == (g = C.emojis) ? void 0 : g.button) != null &&
             (null == B || (null != H && H.type !== u.n4.ATTACHMENT)))
@@ -189,10 +209,13 @@ function j(e) {
     return 0 === et.length
         ? null
         : (0, r.jsx)("div", {
-              className: s()(x.Uo, { [x.d5]: z }),
+              className: s()(x.Uo, {
+                  [x.d5]: z,
+              }),
               children: et,
           });
 }
+
 function M(e, t, n) {
     return (0, c.bG)([b.A, y.A], () => {
         let r = b.A.getStickerPreview(e, t.drafts.type),

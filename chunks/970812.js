@@ -1,4 +1,7 @@
-n.d(t, { A: () => E }), n(896048);
+n.d(t, {
+    A: () => E,
+}),
+    n(896048);
 var l = n(627968),
     r = n(64700),
     i = n(172218),
@@ -8,7 +11,12 @@ var l = n(627968),
     u = n(25639);
 let c = "ease-in-out",
     d = [8, 16, 11, 13, 6],
-    f = Array.from({ length: 5 }, (e, t) => t),
+    f = Array.from(
+        {
+            length: 5,
+        },
+        (e, t) => t,
+    ),
     g = 6.67 / 8,
     h =
         "M16.5 18H16a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1h-.5v-.5a2.5 2.5 0 0 0-5 0v.5Zm3.5 0v-.5a1 1 0 1 0-2 0v.5h2Z",
@@ -16,12 +24,14 @@ let c = "ease-in-out",
         .concat(12.33 - 15 * g, ", ")
         .concat(1 - 15.5 * g, ") scale(")
         .concat(g, ")");
+
 function b(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d,
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 2,
         l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 16;
     return t.map((t) => Math.max(n, Math.min(l, t + y(-e, e))));
 }
+
 function y(e, t) {
     return Math.random() * (t - e) + e;
 }
@@ -37,13 +47,13 @@ let N = [6, 10, 9, 16, 8],
                 burst: {
                     getHeights: () => b(4),
                     getAnimationDelay: () => y(64, 128),
-                    getStateDuration: () => y(3000, 6000),
+                    getStateDuration: () => y(3e3, 6e3),
                     getNextState: () => "quiet",
                 },
                 quiet: {
                     getHeights: () => b(3),
                     getAnimationDelay: () => y(64, 128),
-                    getStateDuration: () => y(1000, 3000),
+                    getStateDuration: () => y(1e3, 3e3),
                     getNextState: () => "burst",
                 },
             },
@@ -105,13 +115,13 @@ let N = [6, 10, 9, 16, 8],
                 burst: {
                     getHeights: () => b(4),
                     getAnimationDelay: () => y(64, 128),
-                    getStateDuration: () => y(3000, 6000),
+                    getStateDuration: () => y(3e3, 6e3),
                     getNextState: () => "quiet",
                 },
                 quiet: {
                     getHeights: () => b(3),
                     getAnimationDelay: () => y(64, 128),
-                    getStateDuration: () => y(1000, 3000),
+                    getStateDuration: () => y(1e3, 3e3),
                     getNextState: () => "burst",
                 },
             },
@@ -126,18 +136,19 @@ let N = [6, 10, 9, 16, 8],
                 burst: {
                     getHeights: () => b(7, N),
                     getAnimationDelay: () => y(64, 128),
-                    getStateDuration: () => y(3000, 6000),
+                    getStateDuration: () => y(3e3, 6e3),
                     getNextState: () => "quiet",
                 },
                 quiet: {
                     getHeights: () => b(4, N),
                     getAnimationDelay: () => y(64, 128),
-                    getStateDuration: () => y(1000, 3000),
+                    getStateDuration: () => y(1e3, 3e3),
                     getNextState: () => "burst",
                 },
             },
         },
     };
+
 function E(e) {
     let t,
         n,
@@ -285,7 +296,9 @@ function E(e) {
         ? (0, l.jsx)("span", {
               ref: x,
               className: b,
-              style: { display: "inline-flex" },
+              style: {
+                  display: "inline-flex",
+              },
               children: (0, l.jsxs)("svg", {
                   width: y,
                   height: y,
@@ -325,7 +338,9 @@ function E(e) {
         : (0, l.jsx)("span", {
               ref: x,
               className: b,
-              style: { display: "inline-flex" },
+              style: {
+                  display: "inline-flex",
+              },
               children: (0, l.jsxs)("svg", {
                   width: y,
                   height: y,

@@ -1,4 +1,6 @@
-n.d(t, { A: () => A });
+n.d(t, {
+    A: () => A,
+});
 var r = n(627968);
 n(64700);
 var i = n(73153),
@@ -23,6 +25,7 @@ let b = 8,
             stickers: [],
         },
     };
+
 function O(e, t) {
     return (0, r.jsx)(p.A, {
         sticker: e,
@@ -54,7 +57,9 @@ let A = {
                 command: a,
                 stickers: (o = l.slice(0, d)),
             },
-            metadata: { numStickerResults: o.length },
+            metadata: {
+                numStickerResults: o.length,
+            },
         };
     },
     renderResults(e) {
@@ -99,7 +104,10 @@ let A = {
                 guild: d,
                 queryText: p,
             } = e;
-        if (null == n || l >= r.length) return { type: null };
+        if (null == n || l >= r.length)
+            return {
+                type: null,
+            };
         let _ = s.A.getActiveCommand(u.id);
         (null == _ ? void 0 : _.inputType) === o.y$.BUILT_IN_INTEGRATION &&
             (i.h.dispatch({

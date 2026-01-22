@@ -1,4 +1,7 @@
-n.d(t, { A: () => d }), n(896048);
+n.d(t, {
+    A: () => d,
+}),
+    n(896048);
 var a = n(627968),
     l = n(64700),
     i = n(311907),
@@ -6,6 +9,7 @@ var a = n(627968),
     s = n(53705),
     o = n(154323),
     c = n(607335);
+
 function d() {
     let e = (0, i.bG)([o.A], () => o.A.allWithDescriptions(), [], i.My),
         t = l.useMemo(
@@ -24,7 +28,9 @@ function d() {
                                 },
                                 t,
                             ),
-                            (0, a.jsx)(r.cGx, { gap: 16 }),
+                            (0, a.jsx)(r.cGx, {
+                                gap: 16,
+                            }),
                         ],
                     });
                 }),

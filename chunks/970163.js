@@ -1,4 +1,8 @@
-n.d(t, { A: () => b }), n(896048), n(492834);
+n.d(t, {
+    A: () => b,
+}),
+    n(896048),
+    n(492834);
 var r = n(110259),
     i = n(933681),
     a = n(95701),
@@ -9,6 +13,7 @@ var r = n(110259),
     u = n(21599),
     d = n(172799),
     f = n(652215);
+
 function p(e, t, n) {
     return (
         t in e
@@ -22,6 +27,7 @@ function p(e, t, n) {
         e
     );
 }
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -38,6 +44,7 @@ function _(e) {
     }
     return e;
 }
+
 function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -50,6 +57,7 @@ function h(e, t) {
     }
     return n;
 }
+
 function m(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -61,6 +69,7 @@ function m(e, t) {
         e
     );
 }
+
 function g(e) {
     let t = null;
     if (null != e && null != e.channel) {
@@ -79,8 +88,15 @@ function g(e) {
     return t;
 }
 let E = new Map();
+
 function b(e, t, n) {
-    if ((l.default.track(f.HAw.INVITE_OPENED, { invite_code: e }), E.has(e))) return E.get(e);
+    if (
+        (l.default.track(f.HAw.INVITE_OPENED, {
+            invite_code: e,
+        }),
+        E.has(e))
+    )
+        return E.get(e);
     let a = (0, u.y$)(e),
         d = m(_({}, n), {
             with_counts: !0,
@@ -143,7 +159,9 @@ function b(e, t, n) {
                                 user_is_member:
                                     null != o.A.getGuild(null == i || null == (c = i.guild) ? void 0 : c.id),
                             },
-                            { flush: !0 },
+                            {
+                                flush: !0,
+                            },
                         );
                     }
                     return {
@@ -167,7 +185,9 @@ function b(e, t, n) {
                                 error_code: null == (o = r.body) ? void 0 : o.code,
                                 error_message: null == (c = r.body) ? void 0 : c.message,
                             },
-                            { flush: !0 },
+                            {
+                                flush: !0,
+                            },
                         );
                     }
                     return {

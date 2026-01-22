@@ -1,9 +1,13 @@
-n.d(t, { A: () => l }), n(896048);
+n.d(t, {
+    A: () => l,
+}),
+    n(896048);
 var r = n(64700),
     i = n(311907),
     a = n(734057),
     s = n(543465);
 let o = null;
+
 function l(e) {
     let t = (0, i.bG)([a.A], () => a.A.getPrivateChannelsVersion()),
         n = (0, i.bG)([a.A], () => a.A.getMutableDMsByUserIds(), [t]),

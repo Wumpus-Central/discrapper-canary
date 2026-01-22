@@ -1,6 +1,9 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(140851),
     i = n(528346);
+
 function a(e, t, n) {
     return (
         void 0 === n &&
@@ -16,6 +19,7 @@ function a(e, t, n) {
         }
     );
 }
+
 function s(e) {
     return [r.Mn, r.pG, r.sQ, r.kb].some(function (t) {
         return e[t] >= 0;
@@ -32,8 +36,12 @@ let o = {
             r = t.rects.reference,
             o = t.rects.popper,
             l = t.modifiersData.preventOverflow,
-            c = (0, i.A)(t, { elementContext: "reference" }),
-            u = (0, i.A)(t, { altBoundary: !0 }),
+            c = (0, i.A)(t, {
+                elementContext: "reference",
+            }),
+            u = (0, i.A)(t, {
+                altBoundary: !0,
+            }),
             d = a(c, r),
             f = a(u, o, l),
             p = s(d),

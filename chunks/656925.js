@@ -1,4 +1,6 @@
-r.d(t, { A: () => u });
+r.d(t, {
+    A: () => u,
+});
 var n = r(64700),
     l = r(311907),
     a = r(397927),
@@ -6,6 +8,7 @@ var n = r(64700),
     s = r(961350),
     o = r(101058),
     c = r(595535);
+
 function u(e) {
     let { avatarId: t, storageHash: r, size: u } = e,
         { onMouseEnter: f, onMouseLeave: d, shouldAnimate: p } = (0, i.A)(),

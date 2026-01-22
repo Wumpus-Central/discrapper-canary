@@ -1,4 +1,8 @@
-n.d(t, { A: () => J }), n(896048), n(65821);
+n.d(t, {
+    A: () => J,
+}),
+    n(896048),
+    n(65821);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -41,6 +45,7 @@ var r = n(627968),
     H = n(985018),
     B = n(728444),
     K = n(834201);
+
 function W(e, t, n) {
     return (
         t in e
@@ -54,6 +59,7 @@ function W(e, t, n) {
         e
     );
 }
+
 function z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -70,6 +76,7 @@ function z(e) {
     }
     return e;
 }
+
 function Y(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -143,7 +150,9 @@ class q extends L.Ay {
             { shouldShowGuildVerificationPopout: v } = this.state,
             x = this.getVoiceStatesCount(),
             E = (0, r.jsxs)("li", {
-                className: a()(this.getModeClass(), { [B.r9]: this.isDisabled() }),
+                className: a()(this.getModeClass(), {
+                    [B.r9]: this.isDisabled(),
+                }),
                 "data-dnd-name": e.name,
                 children: [
                     (0, r.jsx)(u.YNO, {
@@ -158,7 +167,9 @@ class q extends L.Ay {
                                 children: (0, r.jsxs)(k.Ay, {
                                     ref: this.channelItemRef,
                                     className: B.Ki,
-                                    iconClassName: a()({ [K.G]: null != h }),
+                                    iconClassName: a()({
+                                        [K.G]: null != h,
+                                    }),
                                     channel: e,
                                     selected: !j && t,
                                     connected: n,
@@ -202,15 +213,22 @@ class q extends L.Ay {
     constructor(...e) {
         super(...e),
             W(this, "channelItemRef", l.createRef()),
-            W(this, "state", { shouldShowGuildVerificationPopout: !1 }),
+            W(this, "state", {
+                shouldShowGuildVerificationPopout: !1,
+            }),
             W(this, "closeGuildVerificationPopout", () => {
-                this.setState({ shouldShowGuildVerificationPopout: !1 });
+                this.setState({
+                    shouldShowGuildVerificationPopout: !1,
+                });
             }),
             W(this, "handleClick", () => {
                 let { channel: e, locked: t, connected: n, unverifiedAccount: r } = this.props,
                     l = e.getGuildId();
                 null != l && (0, m.V)(l) && (0, g.Ze)(l),
-                    r && this.setState({ shouldShowGuildVerificationPopout: !0 }),
+                    r &&
+                        this.setState({
+                            shouldShowGuildVerificationPopout: !0,
+                        }),
                     t || n || e.isRoleSubscriptionTemplatePreviewChannel() || (0, j.av)(e),
                     __OVERLAY__ || (0, O.iN)(e.id);
             }),
@@ -277,11 +295,16 @@ class q extends L.Ay {
             W(this, "renderSubtitle", () => {
                 var e;
                 let t = null == (e = this.props.stageInstance) ? void 0 : e.topic;
-                return null == t ? null : (0, r.jsx)(o.A, { children: t });
+                return null == t
+                    ? null
+                    : (0, r.jsx)(o.A, {
+                          children: t,
+                      });
             });
     }
 }
 let X = (0, p.a)((0, h.F)(q));
+
 function J(e) {
     let { guild: t, channel: n, disableSorting: l, isFavoriteCategory: i, collapsed: a, voiceStates: o } = e,
         c = (0, s.cf)([w.Ay], () => ({

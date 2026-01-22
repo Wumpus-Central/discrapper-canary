@@ -18,6 +18,7 @@ var r = n(64700),
     _ = n(340837),
     h = n(355097),
     m = n(985018);
+
 function g(e) {
     return (0, i.bG)([o.default, l.Ay], () => {
         if (null == e) return !1;
@@ -25,6 +26,7 @@ function g(e) {
         return (0, f.TR)(l.Ay.getMember(e, t));
     }, [e]);
 }
+
 function E(e) {
     return (0, i.cf)([o.default, l.Ay, d.A, c.A], () => {
         let t = {
@@ -42,11 +44,16 @@ function E(e) {
         if (u.has(_.D.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME))
             if (null == e) {
                 var p;
-                t.nick = [m.intl.formatToPlainString(m.t.WBUh3O, { guildName: null != (p = i.name) ? p : "" })];
+                t.nick = [
+                    m.intl.formatToPlainString(m.t.WBUh3O, {
+                        guildName: null != (p = i.name) ? p : "",
+                    }),
+                ];
             } else t.nick = [m.intl.string(m.t.EPZCrM)];
         return u.has(_.D.AUTOMOD_QUARANTINED_BIO) && (t.bio = [m.intl.string(m.t.dZh1vz)]), t;
     }, [e]);
 }
+
 function b(e) {
     let { guildId: t, scrollPosition: o, analyticsLocations: l } = e,
         d = (0, i.bG)([c.A], () => c.A.getGuild(t), [t]),

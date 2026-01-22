@@ -1,4 +1,7 @@
-n.d(t, { A: () => b }), n(896048);
+n.d(t, {
+    A: () => b,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(827734),
@@ -11,6 +14,7 @@ var r = n(627968),
     f = n(985018),
     p = n(887008),
     h = n(206314);
+
 function b(e) {
     let { onClose: t, onConfirm: b, onCancel: g, channel: m, analyticsType: A, popoutText: y, animation: O } = e;
     l.useEffect(() => {
@@ -40,7 +44,12 @@ function b(e) {
                         });
                 }
                 return e;
-            })({ type: A }, (0, o.dI)(m)),
+            })(
+                {
+                    type: A,
+                },
+                (0, o.dI)(m),
+            ),
         );
     }, [A, m]);
     let j = l.useCallback(() => {

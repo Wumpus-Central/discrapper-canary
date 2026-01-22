@@ -1,4 +1,8 @@
-n.d(t, { A: () => y }), n(896048), n(65821);
+n.d(t, {
+    A: () => y,
+}),
+    n(896048),
+    n(65821);
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -10,6 +14,7 @@ var r = n(627968),
     d = n(45938),
     f = n(652215),
     p = n(985018);
+
 function _(e, t, n) {
     return (
         t in e
@@ -23,6 +28,7 @@ function _(e, t, n) {
         e
     );
 }
+
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -39,6 +45,7 @@ function h(e) {
     }
     return e;
 }
+
 function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -51,6 +58,7 @@ function m(e, t) {
     }
     return n;
 }
+
 function g(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -68,7 +76,9 @@ class b extends i.Component {
         let {
             analyticsContext: { location: e },
         } = this.props;
-        return g(h({}, e), { object: f.ZSU.BUTTON_CTA });
+        return g(h({}, e), {
+            object: f.ZSU.BUTTON_CTA,
+        });
     }
     render() {
         let { obscureInput: e } = this.props,
@@ -125,26 +135,47 @@ class b extends i.Component {
                 let { codeInput: t } = this.state;
                 if ("" === t) return;
                 let n = (0, d.Vd)(t);
-                if (null == n) return void this.setState({ hasError: !0 });
-                this.setState({ submitting: !0 });
+                if (null == n)
+                    return void this.setState({
+                        hasError: !0,
+                    });
+                this.setState({
+                    submitting: !0,
+                });
                 try {
                     let e = await o.A.resolveGiftCode(n);
                     if (null != e && null != e.giftCode.promotion)
-                        throw (this.setState({ isPromoCode: !0 }), Error("Cannnot redeem promotion code as gift"));
+                        throw (
+                            (this.setState({
+                                isPromoCode: !0,
+                            }),
+                            Error("Cannnot redeem promotion code as gift"))
+                        );
                     u.default.track(f.HAw.OPEN_MODAL, {
                         type: "gift_accept",
-                        location: g(h({}, this.analyticsLocation), { object: f.ZSU.BUTTON_CTA }),
+                        location: g(h({}, this.analyticsLocation), {
+                            object: f.ZSU.BUTTON_CTA,
+                        }),
                     }),
-                        (0, l.h)({ processedCode: n }),
-                        this.setState({ codeInput: "" });
+                        (0, l.h)({
+                            processedCode: n,
+                        }),
+                        this.setState({
+                            codeInput: "",
+                        });
                 } catch (e) {
-                    this.setState({ hasError: !0 });
+                    this.setState({
+                        hasError: !0,
+                    });
                 } finally {
-                    this.setState({ submitting: !1 });
+                    this.setState({
+                        submitting: !1,
+                    });
                 }
             });
     }
 }
+
 function y() {
     let e = i.useContext(u.AnalyticsContext),
         t = (0, a.bG)([c.A], () => c.A.enabled);

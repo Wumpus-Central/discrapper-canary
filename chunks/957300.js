@@ -1,8 +1,11 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
     l = n(801358);
+
 function s(e) {
     let { step: t, header: n, children: s } = e;
     return (0, r.jsxs)("div", {

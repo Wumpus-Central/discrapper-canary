@@ -1,11 +1,14 @@
-n.d(t, { A: () => u }), n(228524);
+n.d(t, {
+    A: () => u,
+}),
+    n(228524);
 var r = n(627968),
     i = n(158954),
     a = n(206418),
     s = n(224016),
     o = n(149757),
     l = n(985018),
-    c = n(916000);
+    c = n(916e3);
 let u = (e) => {
     let { profileBadge: t, tenureBadge: n } = e,
         u = (0, o.I)(n.id);

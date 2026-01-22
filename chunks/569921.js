@@ -1,7 +1,10 @@
-n.d(e, { A: () => i });
+n.d(e, {
+    A: () => i,
+});
 var l = n(253932),
     a = n(403918);
 let r = [a.yt.MINUTES_30, a.yt.HOURS_1, a.yt.HOURS_4];
+
 function i() {
     var t;
     let e = l.G2.getSetting();

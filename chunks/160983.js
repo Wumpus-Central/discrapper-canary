@@ -1,4 +1,7 @@
-t.d(l, { A: () => x }), t(321073);
+t.d(l, {
+    A: () => x,
+}),
+    t(321073);
 var n = t(777480),
     i = t(107563),
     r = t(994500),
@@ -11,6 +14,7 @@ var n = t(777480),
     f = t(186272),
     p = t(518477),
     m = t(985018);
+
 function x(e) {
     let { user: l, currentUser: t } = e,
         { mutualFriendsCount: x, mutualGuilds: A } = (0, d.A)(l),

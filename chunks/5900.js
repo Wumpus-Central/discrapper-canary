@@ -1,10 +1,13 @@
-n.d(t, { V: () => h });
+n.d(t, {
+    V: () => h,
+});
 var r = n(627968),
     i = n(64700),
     a = n(397927),
     s = n(459192),
     o = n(990078),
     l = n(710617);
+
 function c(e, t, n) {
     return (
         t in e
@@ -18,6 +21,7 @@ function c(e, t, n) {
         e
     );
 }
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,6 +38,7 @@ function u(e) {
     }
     return e;
 }
+
 function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -46,6 +51,7 @@ function d(e, t) {
     }
     return n;
 }
+
 function f(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -57,6 +63,7 @@ function f(e, t) {
         e
     );
 }
+
 function p(e, t) {
     if (null == e) return {};
     var n,
@@ -73,6 +80,7 @@ function p(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function _(e, t) {
     if (null == e) return {};
     var n,
@@ -118,7 +126,9 @@ let h = {
                                       align: l,
                                       customOffset: c,
                                   }
-                                : { align: l };
+                                : {
+                                      align: l,
+                                  };
                     }, [l, c]);
                 return (0, r.jsx)(
                     o.m,
@@ -288,7 +298,9 @@ let h = {
                                       align: h,
                                       customOffset: m,
                                   }
-                                : { align: h };
+                                : {
+                                      align: h,
+                                  };
                     }, [h, m]),
                     A = i.useMemo(
                         () =>

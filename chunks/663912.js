@@ -1,4 +1,6 @@
-n.d(t, { default: () => U });
+n.d(t, {
+    default: () => U,
+});
 var r = n(627968),
     l = n(64700),
     i = n(735438),
@@ -32,6 +34,7 @@ var r = n(627968),
     _ = n(652215),
     T = n(731854),
     k = n(985018);
+
 function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -57,6 +60,7 @@ function L(e) {
     }
     return e;
 }
+
 function N(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -75,12 +79,14 @@ function N(e, t) {
         e
     );
 }
+
 function M(e) {
     return (0, o.bG)([w.A], () => {
         let t = w.A.getActiveStreamForApplicationStream(e);
         return null != t && (0, E._z)(t) === (0, E._z)(e);
     });
 }
+
 function U(e) {
     let t,
         n,
@@ -106,8 +112,12 @@ function U(e) {
                 l = (0, h.Et)(),
                 i = e.ownerId === x.default.getId(),
                 { enableViewerClipping: s, ignoreSenderPreference: c } = y.A.useExperiment(
-                    { location: "StreamContextMenu" },
-                    { autoTrackExposure: !1 },
+                    {
+                        location: "StreamContextMenu",
+                    },
+                    {
+                        autoTrackExposure: !1,
+                    },
                 ),
                 u = (0, o.bG)([O.A], () => O.A.getIsAtMaxSaveClipOperations()),
                 d = (0, o.bG)([O.A], () => O.A.isViewerClippingAllowedForUser(e.ownerId)) || c;
@@ -131,7 +141,7 @@ function U(e) {
                             value: D.IP.SETTING_ADJUSTED,
                             userId: W.ownerId,
                         });
-                    }, 1000),
+                    }, 1e3),
                 [W.ownerId],
             )),
             (w = (0, v.A)(W.ownerId, T.x.STREAM, n)),
@@ -196,7 +206,10 @@ function U(e) {
                           (0, r.jsx)(a.sLh, {
                               id: "sidechain-compression",
                               label: k.intl.string(k.t["/jwMtn"]),
-                              action: () => s.A.setSidechainCompression(!i, { analyticsLocations: u }),
+                              action: () =>
+                                  s.A.setSidechainCompression(!i, {
+                                      analyticsLocations: u,
+                                  }),
                               checked: i,
                           }),
                           (0, r.jsx)(a.aK1, {
@@ -210,7 +223,9 @@ function U(e) {
                                           value: c,
                                           maxValue: 100,
                                           onChange: (e) =>
-                                              s.A.setSidechainCompressionStrength(e, { analyticsLocations: u }),
+                                              s.A.setSidechainCompressionStrength(e, {
+                                                  analyticsLocations: u,
+                                              }),
                                           "aria-label": k.intl.string(k.t.fhEzfj),
                                       }),
                                   ),
@@ -238,7 +253,7 @@ function U(e) {
                             value: D.IP.SETTING_ADJUSTED,
                             userId: W.ownerId,
                         });
-                    }, 1000),
+                    }, 1e3),
                 [W.ownerId],
             )),
             (q = (e) => {
@@ -288,12 +303,16 @@ function U(e) {
                 (0, r.jsxs)(a.rXV, {
                     children: [ea, el, es, ed, eb],
                 }),
-                (0, r.jsx)(a.rXV, { children: eo }),
+                (0, r.jsx)(a.rXV, {
+                    children: eo,
+                }),
                 (0, r.jsxs)(a.rXV, {
                     children: [ep, ef],
                 }),
                 ec,
-                (0, r.jsx)(a.rXV, { children: ei && eu }),
+                (0, r.jsx)(a.rXV, {
+                    children: ei && eu,
+                }),
             ],
         }),
     });

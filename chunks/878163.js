@@ -1,4 +1,7 @@
-n.d(t, { A: () => A }), n(896048);
+n.d(t, {
+    A: () => A,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -13,6 +16,7 @@ var r = n(627968),
     _ = n(975571),
     h = n(652215),
     m = n(985018);
+
 function g(e, t, n) {
     return (
         t in e
@@ -26,6 +30,7 @@ function g(e, t, n) {
         e
     );
 }
+
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,6 +47,7 @@ function E(e) {
     }
     return e;
 }
+
 function b(e, t) {
     if (null == e) return {};
     var n,
@@ -58,6 +64,7 @@ function b(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function y(e, t) {
     if (null == e) return {};
     var n,
@@ -68,6 +75,7 @@ function y(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function O(e) {
     let { currentGame: t } = e,
         n = b(e, ["currentGame"]),
@@ -82,7 +90,9 @@ function O(e) {
                 {
                     size: "md",
                     title: m.intl.string(m.t.eotlXE),
-                    subtitle: m.intl.formatToPlainString(m.t.Lw6KXV, { game: null == t ? void 0 : t.name }),
+                    subtitle: m.intl.formatToPlainString(m.t.Lw6KXV, {
+                        game: null == t ? void 0 : t.name,
+                    }),
                     actions: [
                         {
                             text: m.intl.string(m.t.psXQHP),
@@ -104,6 +114,7 @@ function O(e) {
         )
     );
 }
+
 function A() {
     let [e, t] = (0, a.yK)([u.Ay], () => [u.Ay.canShowAdminWarning, u.Ay.getVisibleGame()], []),
         n = (0, a.bG)([p.A], () => p.A.isConnected(), []),
@@ -114,11 +125,24 @@ function A() {
         i.useEffect(() => {
             if (!(0, d.yA)(u.Ay))
                 return (
-                    l ? (c.current = (0, o.qfG)((e) => (0, r.jsx)(O, E({ currentGame: t }, e)))) : e(),
+                    l
+                        ? (c.current = (0, o.qfG)((e) =>
+                              (0, r.jsx)(
+                                  O,
+                                  E(
+                                      {
+                                          currentGame: t,
+                                      },
+                                      e,
+                                  ),
+                              ),
+                          ))
+                        : e(),
                     () => {
                         e();
                     }
                 );
+
             function e() {
                 null !== c.current && ((0, o.OoC)(c.current), (c.current = null));
             }

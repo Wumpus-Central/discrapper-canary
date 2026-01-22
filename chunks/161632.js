@@ -1,4 +1,6 @@
-r.d(t, { A: () => o });
+r.d(t, {
+    A: () => o,
+});
 var n = Function.prototype.toString;
 let o = function (e) {
     if (null != e) {

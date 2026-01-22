@@ -27,9 +27,11 @@ let l = {
         color: "default",
         weight: "default",
     });
+
 function u() {
     return i.useContext(c);
 }
+
 function d(e) {
     let { children: t, size: n, color: a, weight: d } = e,
         f = u(),

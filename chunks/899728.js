@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var r = n(311907),
     i = n(988506),
     a = n(97352),
@@ -38,7 +40,9 @@ let p = (e) => {
                   helpCenterLink: u.TE,
                   premiumGroupProductName: (0, u.DP)(),
               })
-            : f.intl.format(t ? d.default["xF+upx"] : d.default.qqfnOm, { helpCenterLink: u.TE }),
+            : f.intl.format(t ? d.default["xF+upx"] : d.default.qqfnOm, {
+                  helpCenterLink: u.TE,
+              }),
     g = (e, t) => {
         let n = e === i.qT.MEMBER,
             a = (0, c.A)({

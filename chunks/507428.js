@@ -1,9 +1,15 @@
-n.d(t, { A: () => h }), n(65821), n(896048), n(747238);
+n.d(t, {
+    A: () => h,
+}),
+    n(65821),
+    n(896048),
+    n(747238);
 var r = n(284009),
     i = n.n(r),
     a = n(851541);
 n(273946);
 var s = n(583954);
+
 function o(e, t, n) {
     return (
         t in e
@@ -17,6 +23,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -33,6 +40,7 @@ function l(e) {
     }
     return e;
 }
+
 function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -45,6 +53,7 @@ function c(e, t) {
     }
     return n;
 }
+
 function u(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -101,7 +110,12 @@ class _ {
                 h: t.height,
             };
         return (
-            this.imageMap.set(e, u(l({}, s), { [i]: o })),
+            this.imageMap.set(
+                e,
+                u(l({}, s), {
+                    [i]: o,
+                }),
+            ),
             t.height > this.tallestImageHeight && (this.tallestImageHeight = t.height),
             (this.nextX += t.width + f),
             this.nextX > this.MAX_ROW_WIDTH && this.breakToNewRow(),
@@ -275,9 +289,14 @@ class h extends a.A {
             i = (e, t, n) => {
                 let i;
                 return (
-                    "strong" === e.type && this.setFont({ weight: 700 }),
+                    "strong" === e.type &&
+                        this.setFont({
+                            weight: 700,
+                        }),
                     (i = Array.isArray(e.content) ? a(e.content, t, n) : this.drawText(e.content, t, n)),
-                    this.setFont({ weight: r }),
+                    this.setFont({
+                        weight: r,
+                    }),
                     i
                 );
             },
@@ -310,7 +329,12 @@ class h extends a.A {
         Array.isArray(e) ? a(e, t, n) : i(e, t, n);
     }
     drawImage(e, t, n) {
-        let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : { fillMode: s.VZ.Stretch };
+        let r =
+            arguments.length > 3 && void 0 !== arguments[3]
+                ? arguments[3]
+                : {
+                      fillMode: s.VZ.Stretch,
+                  };
         i()(null != this.assetMap, "DiscordCavas: `drawImage` requires an AssetMap to be initialized.");
         let { fillMode: a } = r;
         if (null == this.context) return s.uS.Failure;

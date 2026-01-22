@@ -1,8 +1,11 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r,
     i = n(311907),
     a = n(73153),
     s = n(652215);
+
 function o(e, t, n) {
     return (
         t in e
@@ -17,6 +20,7 @@ function o(e, t, n) {
     );
 }
 let l = 0;
+
 function c(e) {
     let { port: t } = e;
     l = s.xEi - t;
@@ -27,4 +31,6 @@ class u extends (r = i.Ay.Store) {
     }
 }
 o(u, "displayName", "InstanceIdStore");
-let d = new u(a.h, { RPC_SERVER_READY: c });
+let d = new u(a.h, {
+    RPC_SERVER_READY: c,
+});

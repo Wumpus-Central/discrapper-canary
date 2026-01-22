@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(627968);
 n(64700);
 var i = n(960488),
@@ -9,9 +11,13 @@ var i = n(960488),
 let c = (e) => {
         let { hasLoadedExperiments: t, token: n } = e;
         return null != n
-            ? (0, r.jsx)(i.rd, { to: l.BVt.APP })
+            ? (0, r.jsx)(i.rd, {
+                  to: l.BVt.APP,
+              })
             : t
-              ? (0, r.jsx)(i.rd, { to: l.BVt.DEFAULT_LOGGED_OUT })
+              ? (0, r.jsx)(i.rd, {
+                    to: l.BVt.DEFAULT_LOGGED_OUT,
+                })
               : null;
     },
     u = a.Ay.connectStores([s.A, o.default], () => {

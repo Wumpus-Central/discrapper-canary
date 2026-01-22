@@ -1,4 +1,6 @@
-n.d(t, { A: () => F });
+n.d(t, {
+    A: () => F,
+});
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -35,6 +37,7 @@ var r = n(627968),
     L = n(985018),
     G = n(410132),
     k = n(119907);
+
 function U(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -60,6 +63,7 @@ function U(e) {
     }
     return e;
 }
+
 function V(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -206,6 +210,7 @@ let F = l.memo(function e(t) {
                 "aria-roledescription": L.intl.string(L.t.BAB0yK),
             });
 });
+
 function H(e) {
     let { className: t, count: n, compact: l, collapsedReason: i } = e;
     return (0, r.jsx)(E.A, {
@@ -222,7 +227,9 @@ function H(e) {
             }),
             children: (0, r.jsx)("div", {
                 className: G.Fo,
-                children: L.intl.format(i, { count: n }),
+                children: L.intl.format(i, {
+                    count: n,
+                }),
             }),
         }),
     });

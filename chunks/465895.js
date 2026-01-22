@@ -1,4 +1,8 @@
-n.d(t, { A: () => w }), n(896048), n(638769);
+n.d(t, {
+    A: () => w,
+}),
+    n(896048),
+    n(638769);
 var a = n(627968),
     l = n(64700),
     i = n(503698),
@@ -80,10 +84,13 @@ let A = async () => {
     N = async (e) => {
         await s.Bo.post({
             url: v.Rsh.CREATE_REVERSE_TRIAL,
-            body: { ends_at: e },
+            body: {
+                ends_at: e,
+            },
             rejectWithError: !0,
         });
     };
+
 function T(e) {
     var t, n, i, o, m;
     let { offer: p, offerOptions: b, forceRefetch: g } = e,
@@ -118,7 +125,14 @@ function T(e) {
         B = null != k && new Date(k).getTime() < Date.now(),
         G = (null == D ? void 0 : D.sku_id) === j.pe.TIER_0,
         F = async () => {
-            N(!0), U ? await V({ expiresAt: null }) : await (0, u.u1)(p), g(), N(!1);
+            N(!0),
+                U
+                    ? await V({
+                          expiresAt: null,
+                      })
+                    : await (0, u.u1)(p),
+                g(),
+                N(!1);
         },
         V = async (e) => {
             N(!0);
@@ -151,8 +165,12 @@ function T(e) {
                         return e;
                     })(
                         {},
-                        "expiresAt" in e && { expires_at: e.expiresAt },
-                        "referrerId" in e && { referrer_id: e.referrerId },
+                        "expiresAt" in e && {
+                            expires_at: e.expiresAt,
+                        },
+                        "referrerId" in e && {
+                            referrer_id: e.referrerId,
+                        },
                     ),
                     rejectWithError: !0,
                 });
@@ -164,7 +182,7 @@ function T(e) {
         if (_) {
             let e = setTimeout(() => {
                 A(!1);
-            }, 3000);
+            }, 3e3);
             return () => {
                 clearTimeout(e);
             };
@@ -172,7 +190,7 @@ function T(e) {
         if (C) {
             let e = setTimeout(() => {
                 O(!1);
-            }, 3000);
+            }, 3e3);
             return () => {
                 clearTimeout(e);
             };
@@ -269,7 +287,9 @@ function T(e) {
                             type: "datetime-local",
                             value: (0, f.Xm)(k),
                             onChange: (e) => {
-                                V({ expiresAt: "" !== e.target.value ? new Date(e.target.value).toISOString() : null });
+                                V({
+                                    expiresAt: "" !== e.target.value ? new Date(e.target.value).toISOString() : null,
+                                });
                             },
                         }),
                     ],
@@ -285,7 +305,10 @@ function T(e) {
                         (0, a.jsx)("input", {
                             type: "text",
                             value: null != (o = null == M ? void 0 : M.id) ? o : "",
-                            onChange: (e) => V({ referrerId: e.target.value }),
+                            onChange: (e) =>
+                                V({
+                                    referrerId: e.target.value,
+                                }),
                         }),
                     ],
                 }),
@@ -326,13 +349,16 @@ function T(e) {
                     }),
                 }),
                 (0, a.jsx)("div", {
-                    className: r()(y.g4, { [y.VP]: E || T }),
+                    className: r()(y.g4, {
+                        [y.VP]: E || T,
+                    }),
                     children: (0, a.jsx)(c.y$y, {}),
                 }),
             ],
         })
     );
 }
+
 function I(e) {
     var t, n;
     let { offer: i, offerOptions: o, forceRefetch: m } = e,
@@ -365,7 +391,14 @@ function I(e) {
         k = null != E,
         P = null != E && new Date(E).getTime() < Date.now(),
         R = async () => {
-            _(!0), k ? await D({ expiresAt: null }) : await (0, u.u1)(void 0, i), m(), _(!1);
+            _(!0),
+                k
+                    ? await D({
+                          expiresAt: null,
+                      })
+                    : await (0, u.u1)(void 0, i),
+                m(),
+                _(!1);
         },
         D = async (e) => {
             let { expiresAt: t } = e;
@@ -373,7 +406,9 @@ function I(e) {
             try {
                 await s.Bo.patch({
                     url: v.Rsh.UPDATE_USER_OFFER(O, "discount"),
-                    body: { expires_at: t },
+                    body: {
+                        expires_at: t,
+                    },
                     rejectWithError: !0,
                 });
             } finally {
@@ -384,7 +419,7 @@ function I(e) {
         if (p) {
             let e = setTimeout(() => {
                 x(!1);
-            }, 3000);
+            }, 3e3);
             return () => {
                 clearTimeout(e);
             };
@@ -392,7 +427,7 @@ function I(e) {
         if (b) {
             let e = setTimeout(() => {
                 g(!1);
-            }, 3000);
+            }, 3e3);
             return () => {
                 clearTimeout(e);
             };
@@ -481,7 +516,9 @@ function I(e) {
                             type: "datetime-local",
                             value: (0, f.Xm)(E),
                             onChange: (e) =>
-                                D({ expiresAt: "" !== e.target.value ? new Date(e.target.value).toISOString() : null }),
+                                D({
+                                    expiresAt: "" !== e.target.value ? new Date(e.target.value).toISOString() : null,
+                                }),
                         }),
                     ],
                 }),
@@ -523,13 +560,16 @@ function I(e) {
                     }),
                 }),
                 (0, a.jsx)("div", {
-                    className: r()(y.g4, { [y.VP]: j || A }),
+                    className: r()(y.g4, {
+                        [y.VP]: j || A,
+                    }),
                     children: (0, a.jsx)(c.y$y, {}),
                 }),
             ],
         })
     );
 }
+
 function w() {
     let [e, t] = l.useState([]),
         [n, i] = l.useState([]),
@@ -581,7 +621,7 @@ function w() {
             await E(), k(!0);
         },
         H = async () => {
-            let e = new Date(Date.now() + 60 * P * 1000).toISOString();
+            let e = new Date(Date.now() + 60 * P * 1e3).toISOString();
             await N(e), B();
         };
     return (0, a.jsx)(c.IpV, {
@@ -776,7 +816,9 @@ function w() {
                     (0, a.jsxs)("div", {
                         children: [
                             (0, a.jsx)(c.Text, {
-                                style: { marginTop: "15px" },
+                                style: {
+                                    marginTop: "15px",
+                                },
                                 variant: "text-md/bold",
                                 children: "Active reverse trial",
                             }),

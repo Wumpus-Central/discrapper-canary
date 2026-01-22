@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -13,6 +15,7 @@ var r = n(627968),
     _ = n(652215),
     h = n(985018),
     m = n(842130);
+
 function g() {
     let e = (0, o.uM)(),
         t = (0, a.bG)([l.A], () => l.A.hasConsented(_.YAq.USAGE_STATISTICS)),
@@ -31,7 +34,9 @@ function g() {
         setting: p.H.PRIVACY_DATA_IMPROVE_DISCORD_V2,
         children: (0, r.jsx)(d.Ay, {
             title: h.intl.string(h.t.XuADY2),
-            note: h.intl.format(h.t["igTSG/"], { helpdeskArticle: c.A.getArticleURL(_.MVz.DATA_PRIVACY_CONTROLS) }),
+            note: h.intl.format(h.t["igTSG/"], {
+                helpdeskArticle: c.A.getArticleURL(_.MVz.DATA_PRIVACY_CONTROLS),
+            }),
             value: t,
             onChange: n,
             disabled: e,

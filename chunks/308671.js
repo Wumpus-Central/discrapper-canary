@@ -6,5 +6,7 @@ r(
         stat: !0,
         forced: !0,
     },
-    { from: n(376990)(a.Map, a.set, !0) },
+    {
+        from: n(376990)(a.Map, a.set, !0),
+    },
 );

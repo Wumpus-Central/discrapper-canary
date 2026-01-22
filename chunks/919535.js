@@ -11,6 +11,7 @@ function r(e, t, n) {
         e
     );
 }
+
 function i(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
     return (
@@ -22,6 +23,7 @@ function i(e) {
         t
     );
 }
+
 function a(e, t) {
     if (Array.isArray(t)) {
         let { length: n } = t;
@@ -30,6 +32,7 @@ function a(e, t) {
     }
     e.push(t);
 }
+
 function s(e) {
     let t = null;
     for (let n = 0; n < e.length; n++) {
@@ -41,6 +44,7 @@ function s(e) {
         (t.content += r.content), e.splice(n, 1), n--;
     }
 }
+
 function o(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
     if (Array.isArray(t)) {
@@ -67,8 +71,14 @@ n.d(t, {
     n(65821);
 let l = {},
     c = 200;
+
 function u(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { limit: c };
+    let t =
+        arguments.length > 1 && void 0 !== arguments[1]
+            ? arguments[1]
+            : {
+                  limit: c,
+              };
     if (Array.isArray(e)) {
         let n = e.length;
         for (let r = 0; r < n; r++) {
@@ -86,9 +96,11 @@ function u(e) {
     }
     return e;
 }
+
 function d(e) {
     return i(e).join("");
 }
+
 function f(e) {
     let t = new Set(),
         n = [e];

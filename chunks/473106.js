@@ -1,4 +1,7 @@
-n.d(t, { _: () => M }), n(896048);
+n.d(t, {
+    _: () => M,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(488428),
@@ -27,6 +30,7 @@ var r = n(627968),
     N = n(652215),
     R = n(788868),
     w = n(749226);
+
 function P(e, t, n) {
     return (
         t in e
@@ -40,6 +44,7 @@ function P(e, t, n) {
         e
     );
 }
+
 function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -56,6 +61,7 @@ function D(e) {
     }
     return e;
 }
+
 function x(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -68,6 +74,7 @@ function x(e, t) {
     }
     return n;
 }
+
 function L(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -79,6 +86,7 @@ function L(e, t) {
         e
     );
 }
+
 function j(e) {
     let { selectedGuildForGuildSub: t } = e,
         n = (0, b.uk)(null == t ? void 0 : t.id)[0];
@@ -244,7 +252,9 @@ let M = {
                                                   guild: M,
                                                   analyticsLocation: {},
                                               })
-                                            : (0, r.jsx)("div", { children: "No Guild to boost" }),
+                                            : (0, r.jsx)("div", {
+                                                  children: "No Guild to boost",
+                                              }),
                                     ],
                                 }),
                                 (0, r.jsx)(u.cGx, {}),
@@ -308,7 +318,11 @@ let M = {
                                                 },
                                             ],
                                             onSelectionChange: (e) => {
-                                                F((t) => L(D({}, t), { plan_id: e }));
+                                                F((t) =>
+                                                    L(D({}, t), {
+                                                        plan_id: e,
+                                                    }),
+                                                );
                                             },
                                             selectionMode: "single",
                                             fullWidth: !0,
@@ -329,7 +343,11 @@ let M = {
                                                 },
                                             ],
                                             onSelectionChange: (e) => {
-                                                F((t) => L(D({}, t), { gift: e }));
+                                                F((t) =>
+                                                    L(D({}, t), {
+                                                        gift: e,
+                                                    }),
+                                                );
                                             },
                                             selectionMode: "single",
                                             fullWidth: !0,
@@ -364,7 +382,9 @@ let M = {
                                                 Q
                                                     ? (0, r.jsx)("div", {
                                                           className: w.wG,
-                                                          children: (0, r.jsx)(u.y$y, { type: u.tVU.SPINNING_CIRCLE }),
+                                                          children: (0, r.jsx)(u.y$y, {
+                                                              type: u.tVU.SPINNING_CIRCLE,
+                                                          }),
                                                       })
                                                     : (0, r.jsxs)("div", {
                                                           className: w.dB,
@@ -422,7 +442,9 @@ let M = {
                                         }),
                                         (0, r.jsx)(E.H, {
                                             guildId: null == H ? void 0 : H.id,
-                                            children: (0, r.jsx)(j, { selectedGuildForGuildSub: H }),
+                                            children: (0, r.jsx)(j, {
+                                                selectedGuildForGuildSub: H,
+                                            }),
                                         }),
                                     ],
                                 }),
@@ -457,7 +479,9 @@ let M = {
                                                     skuId: q,
                                                     openPremiumPaymentModal: () => !0,
                                                     analyticsLocations: [],
-                                                    analyticsLocationObject: { page: N.liQ.IN_APP },
+                                                    analyticsLocationObject: {
+                                                        page: N.liQ.IN_APP,
+                                                    },
                                                     context: N.BRT.APP,
                                                 }),
                                         }),

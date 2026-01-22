@@ -1,4 +1,6 @@
-l.d(t, { A: () => h });
+l.d(t, {
+    A: () => h,
+});
 var n = l(627968),
     a = l(64700),
     r = l(397927),
@@ -9,6 +11,7 @@ var n = l(627968),
     c = l(584794),
     d = l(429364),
     m = l(327742);
+
 function h(e) {
     let { transitionState: t, clip: l } = e,
         {
@@ -24,6 +27,7 @@ function h(e) {
         y = l.type === s.nQ.SCREENSHOT;
     a.useEffect(() => {
         if (!y) return document.addEventListener("keydown", e), () => document.removeEventListener("keydown", e);
+
         function e(e) {
             var t, l;
             if ((null == (t = document.activeElement) ? void 0 : t.tagName) === "INPUT") return;

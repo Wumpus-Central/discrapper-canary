@@ -1,7 +1,10 @@
-n.d(t, { A: () => l });
+n.d(t, {
+    A: () => l,
+});
 var r = n(499979),
     i = n(544180),
     a = n(652215);
+
 function s(e, t, n) {
     return (
         t in e
@@ -15,6 +18,7 @@ function s(e, t, n) {
         e
     );
 }
+
 function o(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
     return null != e ? Math.round(e) : t;
@@ -53,7 +57,7 @@ class l {
         };
     }
     incrementNetworkStats(e) {
-        let t = (e - this._lastSampleTimestamp) / 1000,
+        let t = (e - this._lastSampleTimestamp) / 1e3,
             n = i.A.getEffectiveConnectionSpeed();
         n === a.NKC.SLOW_TWO_G && (n = a.NKC.TWO_G);
         let r = i.A.getType();

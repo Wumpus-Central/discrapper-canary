@@ -1,4 +1,6 @@
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var r = n(627968);
 n(64700);
 var i = n(632553),
@@ -11,6 +13,7 @@ var i = n(632553),
     d = n(652215),
     f = n(985018),
     p = n(842130);
+
 function _() {
     let e = o.H1.useSetting(),
         t = (0, a.uM)(),
@@ -21,7 +24,9 @@ function _() {
         setting: u.H.PRIVACY_DATA_QUESTS_V2,
         children: (0, r.jsx)(c.Ay, {
             title: f.intl.string(n),
-            note: f.intl.format(_, { helpdeskArticle: s.A.getArticleURL(d.MVz.QUESTS_PRIVACY_CONTROLS) }),
+            note: f.intl.format(_, {
+                helpdeskArticle: s.A.getArticleURL(d.MVz.QUESTS_PRIVACY_CONTROLS),
+            }),
             value: !e,
             onChange: (e) => o.H1.updateSetting(!e),
             disabled: h || t,

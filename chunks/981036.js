@@ -11,6 +11,7 @@ var r = n(627968),
     l = n(999784),
     c = n(683433),
     u = n(513670);
+
 function d(e, t, n) {
     return (
         t in e
@@ -24,6 +25,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -40,6 +42,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -52,6 +55,7 @@ function p(e, t) {
     }
     return n;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -63,6 +67,7 @@ function _(e, t) {
         e
     );
 }
+
 function h(e, t) {
     if (null == e) return {};
     var n,
@@ -79,6 +84,7 @@ function h(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function m(e, t) {
     if (null == e) return {};
     var n,
@@ -98,7 +104,12 @@ let g = (e) => {
     },
     E = (e) => {
         let { onClick: t, loading: n, disabled: s, text: o, tooltipText: l } = e,
-            c = f({ text: o }, h(e, ["onClick", "loading", "disabled", "text", "tooltipText"])),
+            c = f(
+                {
+                    text: o,
+                },
+                h(e, ["onClick", "loading", "disabled", "text", "tooltipText"]),
+            ),
             u = (0, r.jsx)(
                 a.$nd,
                 _(f({}, c), {
@@ -133,7 +144,11 @@ let g = (e) => {
                 ),
                 {
                     children: [
-                        null != i ? (0, r.jsx)(c.A, { onClick: i }) : null,
+                        null != i
+                            ? (0, r.jsx)(c.A, {
+                                  onClick: i,
+                              })
+                            : null,
                         n && (0, r.jsx)(l.A, {}),
                         (0, r.jsx)(E, f({}, t)),
                     ],

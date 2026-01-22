@@ -1,4 +1,6 @@
-n.d(t, { A: () => S });
+n.d(t, {
+    A: () => S,
+});
 var r = n(627968),
     i = n(64700),
     l = n(280513),
@@ -136,7 +138,10 @@ let S = function () {
                                                           badgeColorPrimary: L,
                                                           badgeColorSecondary: k,
                                                       });
-                                                  } else b.A.updateGuildProfile(T.id, { tag: null });
+                                                  } else
+                                                      b.A.updateGuildProfile(T.id, {
+                                                          tag: null,
+                                                      });
                                               },
                                           }),
                                       ],
@@ -169,7 +174,10 @@ let S = function () {
                                 primaryColor: L,
                                 secondaryColor: k,
                             }),
-                            !D && (0, r.jsx)(O.A, { guildId: T.id }),
+                            !D &&
+                                (0, r.jsx)(O.A, {
+                                    guildId: T.id,
+                                }),
                         ],
                     }),
                 ],

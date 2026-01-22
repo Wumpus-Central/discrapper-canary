@@ -1,10 +1,13 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 var r = n(643479),
     i = n(761799);
 let a = {
     isWebpFile: s,
     findOffsets: o,
 };
+
 function s(e) {
     let t = 0,
         n = "RIFF",
@@ -12,6 +15,7 @@ function s(e) {
         a = "WEBP";
     return !!e && (0, r.hT)(e, t, n.length) === n && (0, r.hT)(e, i, a.length) === a;
 }
+
 function o(e) {
     let t,
         n,

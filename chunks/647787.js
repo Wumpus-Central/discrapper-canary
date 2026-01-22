@@ -56,7 +56,7 @@ var r = n(25611),
                             i = (0, r.e)();
                         } finally {
                             if (((f = !1), (e = n - d()), !o())) return;
-                            i ? t.run(1000) : e > 0 ? t.run(e) : t.start();
+                            i ? t.run(1e3) : e > 0 ? t.run(e) : t.start();
                         }
                     });
                 }

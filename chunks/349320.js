@@ -1,4 +1,6 @@
-n.d(t, { L: () => v });
+n.d(t, {
+    L: () => v,
+});
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -19,6 +21,7 @@ var r = n(627968),
     E = n(652215),
     O = n(985018),
     y = n(933460);
+
 function I(e) {
     var t, n;
     let { analyticsLocations: i } = (0, p.Ay)(d.A.ACTIVITY_PANEL),
@@ -55,7 +58,10 @@ function I(e) {
                 }
                 return e;
             })({}, e)),
-            (n = n = { guildId: l }),
+            (n = n =
+                {
+                    guildId: l,
+                }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                 : (function (e, t) {
@@ -85,7 +91,9 @@ let v = i.memo(function () {
     let { isSorting: t } = (0, f.A)();
     return (0, r.jsx)("section", {
         ref: e,
-        className: a()(y.C3, { [y.aB]: t }),
+        className: a()(y.C3, {
+            [y.aB]: t,
+        }),
         "aria-label": O.intl.string(O.t.StREWK),
         children: (0, r.jsxs)(s.xpW, {
             containerRef: e,
@@ -95,7 +103,9 @@ let v = i.memo(function () {
                 (0, r.jsx)(g.A, {}),
                 (0, r.jsx)(c.A, {
                     section: E.JJy.ACTIVITY_PANEL,
-                    children: (0, r.jsx)(I, { className: y.iz }),
+                    children: (0, r.jsx)(I, {
+                        className: y.iz,
+                    }),
                 }),
                 (0, r.jsx)(c.A, {
                     section: E.JJy.RTC_CONNECTION_PANEL,

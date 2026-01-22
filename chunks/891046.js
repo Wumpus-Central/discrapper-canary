@@ -1,4 +1,7 @@
-n.d(t, { A: () => V }), n(896048);
+n.d(t, {
+    A: () => V,
+}),
+    n(896048);
 var l = n(627968),
     r = n(64700),
     a = n(503698),
@@ -37,6 +40,7 @@ var l = n(627968),
     U = n(652215),
     F = n(985018),
     G = n(368964);
+
 function z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -62,6 +66,7 @@ function z(e) {
     }
     return e;
 }
+
 function H(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -107,6 +112,7 @@ let V = r.memo(function (e) {
               gridSectionBoundaries: d,
           });
 });
+
 function B(e) {
     let {
             id: t,
@@ -180,7 +186,9 @@ function B(e) {
         onClick: E,
         onFocus: V,
         onContextMenu: k,
-        className: i()(G.kL, m, { [G.nT]: j }),
+        className: i()(G.kL, m, {
+            [G.nT]: j,
+        }),
         style: z({}, h),
         children: [
             (0, l.jsx)(
@@ -188,7 +196,9 @@ function B(e) {
                 z(
                     {
                         onClick: E,
-                        focusProps: { ringTarget: p },
+                        focusProps: {
+                            ringTarget: p,
+                        },
                         onContextMenu: k,
                         "aria-label": F.intl.formatToPlainString(F.t.pgYN6c, {
                             title: n.name,
@@ -234,7 +244,9 @@ function B(e) {
                             variant: "heading-md/extrabold",
                             className: G.DD,
                             color: N ? "text-strong" : "text-muted",
-                            style: { width: "".concat(h.width - 2 * R.qf, "px") },
+                            style: {
+                                width: "".concat(h.width - 2 * R.qf, "px"),
+                            },
                             children: U,
                         }),
                     }),
@@ -265,6 +277,7 @@ function B(e) {
         ],
     });
 }
+
 function K(e) {
     let { channel: t, firstMessage: n, isFirstMessageLoaded: r, overrideMedia: a, coords: i } = e,
         { isBlocked: s, isIgnored: o } = (0, c.cf)([N.A], () => ({
@@ -291,6 +304,7 @@ function K(e) {
                 coords: i,
             });
 }
+
 function W(e) {
     let { channel: t, firstMessage: n, isFirstMessageLoaded: r, overrideMedia: a, coords: i } = e,
         s = (0, c.bG)([C.A], () => C.A.getChannel(t.parent_id)),
@@ -335,6 +349,7 @@ function W(e) {
               ],
           });
 }
+
 function q(e) {
     let { channel: t, facepileRef: n, firstMessage: r } = e,
         a = (0, m.m)(t.id),
@@ -358,7 +373,7 @@ function q(e) {
                               children: [
                                   (0, l.jsx)("span", {
                                       className: G.xE,
-                                      children: "\u2022",
+                                      children: "•",
                                   }),
                                   (0, l.jsxs)("div", {
                                       className: G.IW,
@@ -410,7 +425,11 @@ function q(e) {
 let J = (e) => e.preventDefault(),
     X = r.memo(function (e) {
         return (0, l.jsx)(l.Fragment, {
-            children: (0, v.LL)(H(z({}, e), { analyticsSource: "ForumPostMediaPreviewImage" })),
+            children: (0, v.LL)(
+                H(z({}, e), {
+                    analyticsSource: "ForumPostMediaPreviewImage",
+                }),
+            ),
         });
     }),
     Q = r.memo(function (e) {
@@ -465,7 +484,9 @@ let J = (e) => e.preventDefault(),
                                                   backgroundSrc: p,
                                                   aspectRatio: g.maxWidth / g.maxHeight,
                                                   alt: null != (r = g.alt) ? r : "",
-                                                  className: i()(G.EN, { [G.cd]: a }),
+                                                  className: i()(G.EN, {
+                                                      [G.cd]: a,
+                                                  }),
                                                   imageChildClassName: G.Rp,
                                               }),
                                           )
@@ -474,7 +495,9 @@ let J = (e) => e.preventDefault(),
                                                 d._V3,
                                                 H(z({}, g), {
                                                     className: G.il,
-                                                    imageClassName: i()(G.LW, { [G.cd]: a }),
+                                                    imageClassName: i()(G.LW, {
+                                                        [G.cd]: a,
+                                                    }),
                                                 }),
                                             )
                                           : (0, l.jsx)(
@@ -482,7 +505,9 @@ let J = (e) => e.preventDefault(),
                                                 H(z({}, g), {
                                                     autoPlay: c && !a,
                                                     containerClassName: G.EK,
-                                                    imageClassName: i()(G.rp, { [G.cd]: a }),
+                                                    imageClassName: i()(G.rp, {
+                                                        [G.cd]: a,
+                                                    }),
                                                     responsive: !0,
                                                 }),
                                             ),
@@ -542,6 +567,7 @@ let J = (e) => e.preventDefault(),
             ],
         });
     });
+
 function Y(e) {
     let { text: t, icon: n, pillClassName: r, iconClassName: a, textClassName: i } = e;
     return (0, l.jsxs)("div", {
@@ -559,6 +585,7 @@ function Y(e) {
         ],
     });
 }
+
 function Z(e) {
     let { channel: t, firstMessage: n, isFirstMessageLoaded: a, containerWidth: s, hasUnreads: c } = e,
         o = y.hH.useSetting(),
@@ -605,7 +632,9 @@ function Z(e) {
                 ],
             }),
             (0, l.jsx)("div", {
-                className: i()(G.kh, { [G.ZH]: !f }),
+                className: i()(G.kh, {
+                    [G.ZH]: !f,
+                }),
                 children: f
                     ? (0, l.jsx)(I.Ay, {
                           channel: t,
@@ -616,6 +645,7 @@ function Z(e) {
         ],
     });
 }
+
 function $(e) {
     let { message: t, containerWidth: n, channel: a } = e,
         [s, c] = (0, R.tm)(n - 2 * R.IZ),
@@ -644,7 +674,9 @@ function $(e) {
                 }),
             }),
             (0, l.jsx)("div", {
-                className: i()(G.kh, { [G.ZH]: !o }),
+                className: i()(G.kh, {
+                    [G.ZH]: !o,
+                }),
                 children: o
                     ? (0, l.jsx)(I.Ay, {
                           channel: a,

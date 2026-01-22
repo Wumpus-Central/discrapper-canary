@@ -1,4 +1,7 @@
-n.d(t, { A: () => S }), n(896048);
+n.d(t, {
+    A: () => S,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(735438),
@@ -21,6 +24,7 @@ var r = n(627968),
     v = n(518477),
     x = n(985018),
     E = n(940688);
+
 function _(e, t, n) {
     return (
         t in e
@@ -137,6 +141,7 @@ class C {
             (this.analyticsLocations = l);
     }
 }
+
 function S(e) {
     let { channel: t } = e,
         n = t.getRecipientId(),
@@ -177,11 +182,15 @@ function S(e) {
             O(!1);
         }, [O]);
     return 0 === g.getNicknameGuildPairs().length && 0 === i.length
-        ? (0, r.jsx)("div", { className: E.jH })
+        ? (0, r.jsx)("div", {
+              className: E.jH,
+          })
         : (0, r.jsxs)(p.f5, {
               value: b,
               children: [
-                  (0, r.jsx)(j.cG, { className: E.yF }),
+                  (0, r.jsx)(j.cG, {
+                      className: E.yF,
+                  }),
                   (0, r.jsx)(u.LpS, {
                       text: x.intl.string(x.t.l1QVfj),
                       disableColor: !0,

@@ -1,4 +1,7 @@
-n.d(t, { A: () => x }), n(896048);
+n.d(t, {
+    A: () => x,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     s = n(481613),
@@ -14,16 +17,21 @@ var r = n(627968),
     g = n(652215),
     m = n(985018),
     A = n(473169);
+
 function x(e) {
     let { location: t, transitionTo: s = f.pX } = e,
         [a, x] = i.useState("submitting");
+
     function _() {
         return "Android" === l().os.family || "iOS" === l().os.family
             ? null
             : (0, r.jsx)(o.Button, {
                   text: m.intl.string(m.t.dKhVQN),
                   fullWidth: !0,
-                  onClick: () => s(g.BVt.LOGIN, { source: "authorizeIPAdress" }),
+                  onClick: () =>
+                      s(g.BVt.LOGIN, {
+                          source: "authorizeIPAdress",
+                      }),
               });
     }
     return ((0, u.Ay)(() => {
@@ -78,7 +86,12 @@ function x(e) {
                 ],
             })
           : (0, r.jsxs)(h.Ay, {
-                children: [(0, r.jsx)(h.CK, {}), (0, r.jsx)(h.hE, { children: m.intl.string(m.t["9exy+V"]) })],
+                children: [
+                    (0, r.jsx)(h.CK, {}),
+                    (0, r.jsx)(h.hE, {
+                        children: m.intl.string(m.t["9exy+V"]),
+                    }),
+                ],
             });
 }
 a.Ay.initialize();

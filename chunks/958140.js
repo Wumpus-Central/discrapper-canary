@@ -1,4 +1,8 @@
-n.d(t, { h: () => U }), n(896048), n(733351);
+n.d(t, {
+    h: () => U,
+}),
+    n(896048),
+    n(733351);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -34,6 +38,7 @@ var P = n(652215),
     D = n(680930),
     M = n(658122),
     L = n(266915);
+
 function G(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -59,6 +64,7 @@ function G(e) {
     }
     return e;
 }
+
 function k(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -77,6 +83,7 @@ function k(e, t) {
         e
     );
 }
+
 function U(e) {
     var t, n, i, s;
     let { channel: U, setIsHangStatusInputFocused: V, setIsEmojiPickerOpen: F, setPopoutRef: H } = e,
@@ -199,7 +206,12 @@ function U(e) {
                 let n = (0, x.A)(t);
                 (!ed || e) &&
                     ((0, A.My)(n ? t : t.status, n ? null : t.emoji),
-                    m.default.track(P.HAw.HANG_STATUS_FAVORITE_CLICKED, k(G({}, (0, v.A)(U.id)), { favorited: !e })));
+                    m.default.track(
+                        P.HAw.HANG_STATUS_FAVORITE_CLICKED,
+                        k(G({}, (0, v.A)(U.id)), {
+                            favorited: !e,
+                        }),
+                    ));
             },
             [U.id, ed],
         ),
@@ -354,7 +366,9 @@ function U(e) {
                                             color: "text-muted",
                                             children: R.intl.string(R.t.k8fFjp),
                                         }),
-                                        (0, r.jsx)(p.Gg5, { size: "xxs" }),
+                                        (0, r.jsx)(p.Gg5, {
+                                            size: "xxs",
+                                        }),
                                     ],
                                 }),
                                 z.map((e, t) => ex(e, t, "favorite")),
@@ -376,7 +390,9 @@ function U(e) {
                                             color: "text-muted",
                                             children: R.intl.string(R.t["+9QSnj"]),
                                         }),
-                                        (0, r.jsx)(p.O4, { size: "xxs" }),
+                                        (0, r.jsx)(p.O4, {
+                                            size: "xxs",
+                                        }),
                                     ],
                                 }),
                             ],

@@ -1,4 +1,6 @@
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var r = n(627968),
     i = n(64700),
     a = n(397927),
@@ -9,6 +11,7 @@ var r = n(627968),
     u = n(985018),
     d = n(139674),
     f = n(473169);
+
 function p(e) {
     let {
             code: { code: t, consumed: n },
@@ -34,7 +37,9 @@ function p(e) {
             className: d.Uc,
             onKeyDown: l,
             children: [
-                (0, r.jsx)(a.P7L, { checked: n }),
+                (0, r.jsx)(a.P7L, {
+                    checked: n,
+                }),
                 (0, r.jsx)("span", {
                     className: d.aY,
                     children: s,
@@ -43,9 +48,22 @@ function p(e) {
         }),
     });
 }
+
 function _(e) {
     let { backupCodes: t } = e,
-        n = i.useCallback((e) => e.map((e) => (0, r.jsx)(p, { code: e }, e.code)), []),
+        n = i.useCallback(
+            (e) =>
+                e.map((e) =>
+                    (0, r.jsx)(
+                        p,
+                        {
+                            code: e,
+                        },
+                        e.code,
+                    ),
+                ),
+            [],
+        ),
         c = i.useCallback(async () => {
             let e = l.A.getVerificationKey();
             await s.A.confirmViewBackupCodes(e, !0);

@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(559374),
     i = n(619881),
     a = n(175924),
@@ -6,9 +8,11 @@ var r = n(559374),
     o = n(439776),
     l = n(543894),
     c = n(205219);
+
 function u(e) {
     return (0, s.sb)(e) && "fixed" !== (0, a.A)(e).position ? e.offsetParent : null;
 }
+
 function d(e) {
     var t = /firefox/i.test((0, c.A)());
     if (/Trident/i.test((0, c.A)()) && (0, s.sb)(e) && "fixed" === (0, a.A)(e).position) return null;
@@ -28,6 +32,7 @@ function d(e) {
     }
     return null;
 }
+
 function f(e) {
     for (var t = (0, r.A)(e), n = u(e); n && (0, o.A)(n) && "static" === (0, a.A)(n).position; ) n = u(n);
     return n && ("html" === (0, i.A)(n) || ("body" === (0, i.A)(n) && "static" === (0, a.A)(n).position))

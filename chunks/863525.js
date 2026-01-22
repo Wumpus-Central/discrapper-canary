@@ -1,4 +1,6 @@
-t(697509)(r, "__esModule", { value: !0 }),
+t(697509)(r, "__esModule", {
+    value: !0,
+}),
     (r.default = void 0),
     (r.default = {
         abstract: !0,
@@ -7,10 +9,14 @@ t(697509)(r, "__esModule", { value: !0 }),
         childrenPresentational: !1,
         nameFrom: ["author"],
         prohibitedProps: [],
-        props: { "aria-disabled": null },
+        props: {
+            "aria-disabled": null,
+        },
         relatedConcepts: [
             {
-                concept: { name: "input" },
+                concept: {
+                    name: "input",
+                },
                 module: "XForms",
             },
         ],

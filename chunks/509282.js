@@ -61,6 +61,7 @@ let w = (0, o.UT)([E.A, b.A, m.A], {
             s()(null != e && null != t, "appId is null"), await (0, u.JI)(t);
         },
     });
+
 function D(e, t) {
     var n, r;
     let { data: i } = w(e),
@@ -82,6 +83,7 @@ function D(e, t) {
         subscriptionPlan: s,
     };
 }
+
 function x(e) {
     let { appId: t, message: a } = e,
         s = (0, S.G)(t),
@@ -106,9 +108,13 @@ function x(e) {
                           itemCount: O,
                       })
                     : b > 0
-                      ? N.intl.formatToPlainString(N.t.GSfibA, { count: b })
+                      ? N.intl.formatToPlainString(N.t.GSfibA, {
+                            count: b,
+                        })
                       : O > 0
-                        ? N.intl.formatToPlainString(N.t.j7Go5A, { count: O })
+                        ? N.intl.formatToPlainString(N.t.j7Go5A, {
+                              count: O,
+                          })
                         : N.intl.string(N.t.rMA98g),
             [O, b],
         );
@@ -144,7 +150,9 @@ function x(e) {
         };
     return (0, r.jsx)(j, {
         appName: u.name,
-        title: N.intl.formatToPlainString(N.t.XDRjs5, { appName: u.name }),
+        title: N.intl.formatToPlainString(N.t.XDRjs5, {
+            appName: u.name,
+        }),
         description: I,
         link: ""
             .concat(location.protocol, "//")
@@ -162,6 +170,7 @@ function x(e) {
         }),
     });
 }
+
 function L(e) {
     var t, a;
     let { appId: s, skuId: c, message: u } = e,
@@ -323,6 +332,7 @@ function L(e) {
         }),
     });
 }
+
 function j(e) {
     let { appName: t, title: n, description: i, link: a, iconSrc: s, onIconClick: o, onLinkCopy: c, children: u } = e;
     return (0, r.jsxs)("div", {
@@ -334,7 +344,9 @@ function j(e) {
                     (0, r.jsxs)("div", {
                         className: R.qd,
                         children: [
-                            (0, r.jsx)(l.U1X, { size: "xxs" }),
+                            (0, r.jsx)(l.U1X, {
+                                size: "xxs",
+                            }),
                             (0, r.jsx)(l.Text, {
                                 variant: "eyebrow",
                                 color: "text-muted",
@@ -345,7 +357,10 @@ function j(e) {
                     O.p5 &&
                         (0, r.jsx)(l.K0, {
                             "aria-label": N.intl.string(N.t.WqhZss),
-                            icon: () => (0, r.jsx)(l.qYV, { size: "xs" }),
+                            icon: () =>
+                                (0, r.jsx)(l.qYV, {
+                                    size: "xs",
+                                }),
                             size: "sm",
                             onClick: () => {
                                 (0, O.C)(a, () => {
@@ -376,7 +391,12 @@ function j(e) {
                                 }),
                             (0, r.jsxs)("div", {
                                 className: R.Tf,
-                                style: null == i ? { justifyContent: "space-evenly" } : void 0,
+                                style:
+                                    null == i
+                                        ? {
+                                              justifyContent: "space-evenly",
+                                          }
+                                        : void 0,
                                 children: [
                                     (0, r.jsx)(l.Text, {
                                         variant: "heading-md/semibold",

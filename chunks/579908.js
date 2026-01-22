@@ -21,6 +21,7 @@ var r = n(499979),
     c = n(927813),
     u = n(695825),
     d = n(652215);
+
 function f(e, t, n) {
     return (
         t in e
@@ -34,6 +35,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -168,7 +170,9 @@ async function S(e) {
                 (0, o.H$)(t),
             ),
         ),
-        await v(t, n, { includeArchivedListings: !0 }),
+        await v(t, n, {
+            includeArchivedListings: !0,
+        }),
         null == s || s(c),
         i.h.dispatch({
             type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_LISTING",
@@ -185,7 +189,9 @@ async function I(e) {
             type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_LISTING",
             listing: s,
         }),
-        await v(t, r, { includeArchivedListings: !0 }),
+        await v(t, r, {
+            includeArchivedListings: !0,
+        }),
         s
     );
 }
@@ -203,7 +209,9 @@ async function T(e) {
                 type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS",
                 guildId: e,
             });
-            let { restrictions: r } = await u.iG(e, { signal: t });
+            let { restrictions: r } = await u.iG(e, {
+                signal: t,
+            });
             i.h.dispatch({
                 type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_SUCCESS",
                 guildId: e,

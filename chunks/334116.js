@@ -1,4 +1,7 @@
-n.d(t, { A: () => E }), n(896048);
+n.d(t, {
+    A: () => E,
+}),
+    n(896048);
 var r = n(627968),
     i = n(73153),
     l = n(391973),
@@ -9,6 +12,7 @@ var r = n(627968),
     u = n(574172),
     d = n(652215),
     p = n(644434);
+
 function f(e, t, n) {
     return (
         t in e
@@ -95,23 +99,39 @@ class _ extends a.A {
                         }
                 }
         })),
-            this._observer.observe(document.head, { childList: !0 });
+            this._observer.observe(document.head, {
+                childList: !0,
+            });
     }
     terminateStyleSheetObserver() {
         null != this._observer && (this._observer.disconnect(), (this._observer = null));
     }
     handleOpenRTCDebugPopout() {
-        u.open(d.MLl.RTC_DEBUG_POPOUT, (e) => (0, r.jsx)(m, { windowKey: e }), {
-            defaultWidth: 854,
-            defaultHeight: 480,
-        });
+        u.open(
+            d.MLl.RTC_DEBUG_POPOUT,
+            (e) =>
+                (0, r.jsx)(m, {
+                    windowKey: e,
+                }),
+            {
+                defaultWidth: 854,
+                defaultHeight: 480,
+            },
+        );
     }
     handleOpenActivityPopout() {
         (0, l.Vz)(p.G, c.A.getDefaultLayout(p.G, 3), 3),
-            u.open(d.MLl.ACTIVITY_POPOUT, (e) => (0, r.jsx)(b, { windowKey: e }), {
-                defaultWidth: 854,
-                defaultHeight: 480,
-            });
+            u.open(
+                d.MLl.ACTIVITY_POPOUT,
+                (e) =>
+                    (0, r.jsx)(b, {
+                        windowKey: e,
+                    }),
+                {
+                    defaultWidth: 854,
+                    defaultHeight: 480,
+                },
+            );
     }
     constructor(...e) {
         super(...e),

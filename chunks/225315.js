@@ -1,4 +1,6 @@
-d.d(e, { default: () => o });
+d.d(e, {
+    default: () => o,
+});
 var t = d(627968);
 d(64700);
 var f = d(612479),
@@ -6,6 +8,7 @@ var f = d(612479),
     c = d(670455),
     r = d(985018);
 let i = [b.tk.OTHER];
+
 function o(a) {
     let { transitionState: e, startRating: d, onClose: o, onSubmit: n } = a;
     return (0, t.jsx)(f.A, {

@@ -36,7 +36,9 @@ let f = (e) => {
                                           numMonths: t.discount.user_usage_limit,
                                           discountedPrice: a,
                                       })
-                                    : l.intl.format(l.t.tQvNll, { numMonths: t.discount.user_usage_limit }),
+                                    : l.intl.format(l.t.tQvNll, {
+                                          numMonths: t.discount.user_usage_limit,
+                                      }),
                         }),
                         (0, r.jsx)(p, {
                             userDiscountOffer: t,

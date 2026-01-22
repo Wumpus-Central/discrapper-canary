@@ -15,6 +15,7 @@ var r = n(627968),
     p = n(652215),
     _ = n(985018),
     h = n(735314);
+
 function m(e, t, n) {
     return (
         t in e
@@ -28,6 +29,7 @@ function m(e, t, n) {
         e
     );
 }
+
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -44,6 +46,7 @@ function g(e) {
     }
     return e;
 }
+
 function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -56,6 +59,7 @@ function E(e, t) {
     }
     return n;
 }
+
 function b(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -67,6 +71,7 @@ function b(e, t) {
         e
     );
 }
+
 function y(e, t) {
     if (null == e) return {};
     var n,
@@ -83,6 +88,7 @@ function y(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function O(e, t) {
     if (null == e) return {};
     var n,
@@ -103,9 +109,11 @@ var A = (function (e) {
         e
     );
 })({});
+
 function v(e) {
     e.stopPropagation();
 }
+
 function S(e, t) {
     let {
             id: n,
@@ -142,7 +150,10 @@ function S(e, t) {
                     case p.Ks6.ARROW_UP:
                         let t = e.shiftKey || e.altKey || e.ctrlKey || e.metaKey;
                         if (t) return;
-                        e.preventDefault(), d._.dispatchToLastSubscribed(p.jej.FOCUS_MESSAGES, { atEnd: !0 });
+                        e.preventDefault(),
+                            d._.dispatchToLastSubscribed(p.jej.FOCUS_MESSAGES, {
+                                atEnd: !0,
+                            });
                 }
                 null == S || S(e);
             }
@@ -154,7 +165,9 @@ function S(e, t) {
                 onFocus: w,
                 onBlur: P,
                 onKeyDown: L,
-                className: s()(h.Se, a, { [h.oi]: 2 === T }),
+                className: s()(h.Se, a, {
+                    [h.oi]: 2 === T,
+                }),
                 ref: t,
                 children: (0, r.jsxs)("div", {
                     className: h.PO,
@@ -164,11 +177,15 @@ function S(e, t) {
                             ? (0, r.jsx)("div", {
                                   className: h.TC,
                                   children: (0, r.jsx)("div", {
-                                      className: s()(h.KY, { [h.BN]: D }),
+                                      className: s()(h.KY, {
+                                          [h.BN]: D,
+                                      }),
                                       onContextMenu: v,
                                       "aria-label": _.intl.string(_.t["8Lu3Du"]),
                                       children: (0, r.jsx)(u.Ay, {
-                                          className: s()({ [h.BX]: D }),
+                                          className: s()({
+                                              [h.BX]: D,
+                                          }),
                                           children: E,
                                       }),
                                   }),

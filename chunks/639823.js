@@ -1,4 +1,7 @@
-n.d(t, { A: () => b }), n(896048);
+n.d(t, {
+    A: () => b,
+}),
+    n(896048);
 var r = n(451988),
     i = n(73153),
     l = n(956793),
@@ -27,7 +30,7 @@ class m extends a.A {
         if (null == e) return;
         let t = d.A.getChannelId();
         if (null == t) return;
-        g.start(18000000, () => {
+        g.start(18e6, () => {
             l.default.selectVoiceChannel(null);
         });
         let n = c.A.getGuild(d.A.getGuildId());

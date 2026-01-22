@@ -1,10 +1,13 @@
 let r, i, a, s, o, l, c, u, d, f, p, _, h, m, g, E, b, y, O;
-n.d(t, { A: () => ec });
+n.d(t, {
+    A: () => ec,
+});
 var A,
     v = n(575593),
     S = n(311907),
     I = n(73153),
     T = n(652215);
+
 function C(e, t, n) {
     return (
         t in e
@@ -20,36 +23,45 @@ function C(e, t, n) {
 }
 let N = T.XlH.CLOSED,
     R = {};
+
 function w() {
     (N = T.XlH.OPEN), (R = {});
 }
+
 function P() {
     (N = T.XlH.CLOSED), (R = {});
 }
+
 function D() {
     (N = T.XlH.SUBMITTING), (R = {});
 }
+
 function x(e) {
     var t;
     if (N !== T.XlH.SUBMITTING) return !1;
     (N = T.XlH.OPEN), (R = null != (t = e.errors) ? t : {});
 }
+
 function L(e) {
     let { section: t } = e;
     return t === T.nc_.ACCOUNT && w();
 }
+
 function j(e) {
     let { avatar: t } = e;
     (r = t), (g = void 0);
 }
+
 function M(e) {
     let { globalName: t } = e;
     i = t;
 }
+
 function k(e) {
     let { legacyUsernameDisabled: t } = e;
     p = t;
 }
+
 function U(e) {
     let { item: t } = e;
     t.type === v.R.AVATAR_DECORATION
@@ -58,86 +70,109 @@ function U(e) {
           ? (s = t.value)
           : t.type === v.R.NAMEPLATE && (o = t.value);
 }
+
 function G(e) {
     let { banner: t } = e;
     l = t;
 }
+
 function V(e) {
     let { bio: t } = e;
     c = t;
 }
+
 function F(e) {
     let { pronouns: t } = e;
     u = t;
 }
+
 function B(e) {
     let { color: t } = e;
     d = t;
 }
+
 function H(e) {
     let { themeColors: t } = e;
     f = t;
 }
+
 function Y(e) {
     let { primaryGuildId: t } = e;
     _ = t;
 }
+
 function W(e) {
     let { displayNameStyles: t } = e;
     h = t;
 }
+
 function K(e) {
     let { themeColors: t } = e;
     m = t;
 }
+
 function z(e) {
     let { avatar: t } = e;
     g = t;
 }
+
 function q(e) {
     let { avatarDecoration: t } = e;
     E = t;
 }
+
 function X(e) {
     let { profileEffect: t } = e;
     b = t;
 }
+
 function Z(e) {
     let { banner: t } = e;
     y = t;
 }
+
 function Q(e) {
     let { displayNameStyles: t } = e;
     O = t;
 }
+
 function $(e) {
     let { banner: t, themeColors: n, avatarDecoration: r, displayNameStyles: i } = e;
     (y = t), (m = n), (E = r), (O = i);
 }
+
 function J() {
     r = void 0;
 }
+
 function ee() {
     R = {};
 }
+
 function et() {
     en(), er(), ea(), es(), (R = {});
 }
+
 function en() {
     (r = void 0), (i = void 0), (a = void 0), (s = void 0), (o = void 0), (h = void 0);
 }
+
 function er() {
     (l = void 0), (c = void 0), (u = void 0), (d = void 0), (f = void 0), (s = void 0);
 }
+
 function ei() {
     (g = void 0), (E = void 0), (b = void 0), (y = void 0), (m = void 0), (O = void 0);
 }
+
 function ea() {
     p = void 0;
 }
+
 function es() {
     _ = void 0;
 }
+
 function eo() {
     et(), ei(), P();
 }

@@ -1,11 +1,15 @@
-r.d(t, { s: () => f });
+r.d(t, {
+    s: () => f,
+});
 var n,
     l,
     s = r(311907),
     i = r(250105),
     a = r(217222),
     c = r(128319);
-let o = { smarterSourceOrdering: !1 },
+let o = {
+        smarterSourceOrdering: !1,
+    },
     d = (0, i.Ay)({
         name: "2025-08-go-live-source-ordering",
         kind: "user",
@@ -37,7 +41,10 @@ let o = { smarterSourceOrdering: !1 },
                     }
                     return e;
                 })({}, o)),
-                (l = l = { smarterSourceOrdering: !0 }),
+                (l = l =
+                    {
+                        smarterSourceOrdering: !0,
+                    }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
                     : (function (e, t) {
@@ -53,13 +60,27 @@ let o = { smarterSourceOrdering: !1 },
                 n),
         },
     });
+
 function f(e) {
     let { location: t } = e;
     return (0, s.bG)([a.A], () =>
         (function (e) {
             let { location: t } = e,
-                { isInHoldout: r } = c.p.getCurrentConfig({ location: t }, { autoTrackExposure: !0 });
-            return r ? d.definition.defaultConfig : d.getConfig({ location: t });
-        })({ location: t }),
+                { isInHoldout: r } = c.p.getCurrentConfig(
+                    {
+                        location: t,
+                    },
+                    {
+                        autoTrackExposure: !0,
+                    },
+                );
+            return r
+                ? d.definition.defaultConfig
+                : d.getConfig({
+                      location: t,
+                  });
+        })({
+            location: t,
+        }),
     );
 }

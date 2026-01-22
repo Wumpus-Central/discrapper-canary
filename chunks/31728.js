@@ -9,6 +9,7 @@ n.d(t, {
     tw: () => l,
 });
 var r = n(73153);
+
 function i(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
     r.h.dispatch({
@@ -18,24 +19,28 @@ function i(e, t) {
         props: n,
     });
 }
+
 function a(e) {
     r.h.dispatch({
         type: "PICTURE_IN_PICTURE_CLOSE",
         id: e,
     });
 }
+
 function s(e) {
     r.h.dispatch({
         type: "PICTURE_IN_PICTURE_HIDE",
         id: e,
     });
 }
+
 function o(e) {
     r.h.dispatch({
         type: "PICTURE_IN_PICTURE_SHOW",
         id: e,
     });
 }
+
 function l(e, t) {
     r.h.dispatch({
         type: "PICTURE_IN_PICTURE_MOVE",
@@ -43,6 +48,7 @@ function l(e, t) {
         position: t,
     });
 }
+
 function c(e, t) {
     r.h.dispatch({
         type: "PICTURE_IN_PICTURE_RESIZE",
@@ -50,6 +56,7 @@ function c(e, t) {
         pipType: t,
     });
 }
+
 function u(e, t) {
     r.h.dispatch({
         type: "PICTURE_IN_PICTURE_UPDATE_RECT",
@@ -57,6 +64,7 @@ function u(e, t) {
         rect: t,
     });
 }
+
 function d(e) {
     r.h.dispatch({
         type: "PICTURE_IN_PICTURE_UPDATE_SELECTED_WINDOW",

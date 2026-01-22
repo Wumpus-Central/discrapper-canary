@@ -1,4 +1,6 @@
-n.d(t, { h: () => d });
+n.d(t, {
+    h: () => d,
+});
 var r = n(627968),
     l = n(397927),
     i = n(722523),
@@ -7,6 +9,7 @@ var r = n(627968),
     o = n(333354),
     c = n(985018),
     u = n(413526);
+
 function d(e, t) {
     if (null == t) return;
     let d = s.HO.has(t.skuId);
@@ -41,8 +44,12 @@ function d(e, t) {
                     return e;
                 })(
                     {
-                        title: c.intl.formatToPlainString(o.default.lFuOFF, { perkName: t.title }),
-                        description: c.intl.formatToPlainString(o.default.y3wHot, { perkName: t.title }),
+                        title: c.intl.formatToPlainString(o.default.lFuOFF, {
+                            perkName: t.title,
+                        }),
+                        description: c.intl.formatToPlainString(o.default.y3wHot, {
+                            perkName: t.title,
+                        }),
                         image: (0, r.jsx)(a.l, {
                             className: u.Sl,
                             powerup: t,

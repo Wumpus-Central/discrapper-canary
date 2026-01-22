@@ -1,9 +1,14 @@
-n.d(t, { A: () => c }), n(457529), n(321073);
+n.d(t, {
+    A: () => c,
+}),
+    n(457529),
+    n(321073);
 var r = n(64700),
     i = n(311907),
     l = n(4106),
     a = n(883344),
     s = n(596720);
+
 function o(e, t, n) {
     if (t.type === s.Mm.MESSAGE)
         return t.message.id === t.message.channel_id && null != t.threadChannel
@@ -62,7 +67,9 @@ function o(e, t, n) {
         return {
             id: e.id,
             timestamp: Date.now(),
-            data: { kind: "recommendedGuilds" },
+            data: {
+                kind: "recommendedGuilds",
+            },
             score: e.score,
             debugScore: JSON.stringify(e.score_components),
             unread: n,
@@ -81,6 +88,7 @@ function o(e, t, n) {
         };
     return null;
 }
+
 function c() {
     var e, t;
     let n = (0, i.bG)([a.A], () => a.A.getUnreadDisplayItems()),

@@ -1,5 +1,11 @@
 let l;
-n.d(t, { A: () => T }), n(896048), n(321073), n(733351), n(747238);
+n.d(t, {
+    A: () => T,
+}),
+    n(896048),
+    n(321073),
+    n(733351),
+    n(747238);
 var r,
     i = n(311907),
     a = n(73153),
@@ -14,6 +20,7 @@ var r,
     g = n(287809),
     m = n(645959),
     h = n(652215);
+
 function A(e, t, n) {
     return (
         t in e
@@ -32,6 +39,7 @@ let y = [o.rD.TEXT_CHANNEL, o.rD.GROUP_DM, o.rD.USER],
     E = null,
     v = [],
     O = [];
+
 function x(e) {
     (v = [...v, e]),
         (O = O.map((e) => {
@@ -53,7 +61,10 @@ function x(e) {
                     }
                     return e;
                 })({}, e)),
-                (n = n = { sent: v.includes(e.data.record.id) }),
+                (n = n =
+                    {
+                        sent: v.includes(e.data.record.id),
+                    }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                     : (function (e, t) {
@@ -71,9 +82,11 @@ function x(e) {
         })),
         j.emitChange();
 }
+
 function S() {
     (_ = null), null != l && (l.destroy(), (l = null)), null != E && E();
 }
+
 function N() {
     let e = null != _ && null != _.application_id ? f.A.getApplicationActivity(_.application_id) : null;
     if (null != _ && (null == e || null == e.party || null == e.party.id)) return S();

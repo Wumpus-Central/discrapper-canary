@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968);
 n(64700);
 var i = n(793574),
@@ -11,6 +13,7 @@ var i = n(793574),
     d = n(874864),
     p = n(985018),
     f = n(664795);
+
 function h(e) {
     let { guild: t, markAsDismissed: n } = e,
         h = (0, o.Os)(t, c.TVA.TIER_2),
@@ -19,7 +22,9 @@ function h(e) {
         guild: t,
         onDismissed: () => n(u.i.UNKNOWN),
         cta: p.intl.string(p.t.oPAx73),
-        message: p.intl.format(p.t.AcaNYw, { boostsNeeded: h }),
+        message: p.intl.format(p.t.AcaNYw, {
+            boostsNeeded: h,
+        }),
         type: c.n5X.GUILD_BANNER,
         image: f,
         onClick: () =>

@@ -1,4 +1,6 @@
-n.d(t, { A: () => j });
+n.d(t, {
+    A: () => j,
+});
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -14,6 +16,7 @@ var r = n(627968),
     b = n(636585),
     g = n(486020),
     m = n(787750);
+
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -39,6 +42,7 @@ function A(e) {
     }
     return e;
 }
+
 function y(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -57,13 +61,16 @@ function y(e, t) {
         e
     );
 }
+
 function O(e) {
     let { channel: t, speaker: i, className: b } = e,
         O = l.useRef(null),
         { newestAnalyticsLocation: j } = (0, d.Ay)(),
         v = (0, p.Us)(),
         { reducedMotion: x } = l.useContext(o.CZY),
-        E = (0, u.A)({ userId: i.id }),
+        E = (0, u.A)({
+            userId: i.id,
+        }),
         _ = null != i.member ? (0, g.xT)(i.member) : null,
         C = (e) => {
             (0, c.L3)(
@@ -90,7 +97,9 @@ function O(e) {
                             }),
                         );
                 },
-                { context: v },
+                {
+                    context: v,
+                },
             );
         };
     return (0, r.jsx)(h.A, {
@@ -124,6 +133,7 @@ function O(e) {
             }),
     });
 }
+
 function j(e) {
     let { speakers: t, channel: n } = e;
     return (0, r.jsx)(b.A, {

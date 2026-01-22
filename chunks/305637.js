@@ -1,4 +1,7 @@
-n.d(t, { A: () => E }), n(896048);
+n.d(t, {
+    A: () => E,
+}),
+    n(896048);
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -15,9 +18,12 @@ var i = n(311907),
     h = n(203982),
     m = n(652215),
     g = n(985018);
+
 function E(e) {
     let { isCurrentUser: t, applicationStream: n, onAction: E } = e,
-        { defaultWatchMultipleStreams: b } = (0, u.W)({ location: "WatchStreamButton" }),
+        { defaultWatchMultipleStreams: b } = (0, u.W)({
+            location: "WatchStreamButton",
+        }),
         { activeStream: y, watchingOtherStream: O } = (0, i.cf)([p.A], () => ({
             activeStream: p.A.getActiveStreamForApplicationStream(n),
             watchingOtherStream:
@@ -35,7 +41,10 @@ function E(e) {
             null != n &&
                 (null == E || E(),
                 l.default.selectVoiceChannel(n.channelId),
-                T || (0, c.Nl)(n, { forceMultiple: e }),
+                T ||
+                    (0, c.Nl)(n, {
+                        forceMultiple: e,
+                    }),
                 I.dispatch(m.jej.POPOUT_CLOSE),
                 h._.dispatch(m.jej.MODAL_CLOSE),
                 o.A.popAll());

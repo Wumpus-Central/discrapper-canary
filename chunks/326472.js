@@ -2,7 +2,9 @@ e.exports = function (e) {
     let t = {
             className: "string",
             variants: [
-                e.inherit(e.QUOTE_STRING_MODE, { begin: '((u8?|U)|L)?"' }),
+                e.inherit(e.QUOTE_STRING_MODE, {
+                    begin: '((u8?|U)|L)?"',
+                }),
                 {
                     begin: '(u8?|U)?R"',
                     end: '"',
@@ -17,14 +19,23 @@ e.exports = function (e) {
         },
         n = {
             className: "number",
-            variants: [{ begin: "\\b(\\d+(\\.\\d*)?|\\.\\d+)(u|U|l|L|ul|UL|f|F)" }, { begin: e.C_NUMBER_RE }],
+            variants: [
+                {
+                    begin: "\\b(\\d+(\\.\\d*)?|\\.\\d+)(u|U|l|L|ul|UL|f|F)",
+                },
+                {
+                    begin: e.C_NUMBER_RE,
+                },
+            ],
             relevance: 0,
         },
         r = {
             className: "meta",
             begin: "#",
             end: "$",
-            keywords: { keyword: "if else elif endif define undef ifdef ifndef" },
+            keywords: {
+                keyword: "if else elif endif define undef ifdef ifndef",
+            },
             contains: [
                 {
                     begin: /\\\n/,
@@ -33,9 +44,13 @@ e.exports = function (e) {
                 {
                     beginKeywords: "include",
                     end: "$",
-                    keywords: { keyword: "include" },
+                    keywords: {
+                        keyword: "include",
+                    },
                     contains: [
-                        e.inherit(t, { className: "string" }),
+                        e.inherit(t, {
+                            className: "string",
+                        }),
                         {
                             className: "string",
                             begin: "<",

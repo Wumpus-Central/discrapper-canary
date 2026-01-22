@@ -1,4 +1,7 @@
-n.d(t, { A: () => u }), n(638769);
+n.d(t, {
+    A: () => u,
+}),
+    n(638769);
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -7,6 +10,7 @@ var i = n(311907),
     o = n(183555),
     l = n(1659),
     c = n(166005);
+
 function u(e) {
     let { userId: t, guild: n } = e,
         u = (0, i.bG)([a.Ay], () => a.Ay.getMember(n.id, t)),
@@ -17,10 +21,22 @@ function u(e) {
         userId: t,
         guild: n,
         roles: f,
-        onAddRole: () => p({ action: "ADD_ROLE" }),
-        onRemoveRole: () => p({ action: "REMOVE_ROLE" }),
-        onExpand: () => p({ action: "EXPAND_ROLES" }),
-        onCollapse: () => p({ action: "COLLAPSE_ROLES" }),
+        onAddRole: () =>
+            p({
+                action: "ADD_ROLE",
+            }),
+        onRemoveRole: () =>
+            p({
+                action: "REMOVE_ROLE",
+            }),
+        onExpand: () =>
+            p({
+                action: "EXPAND_ROLES",
+            }),
+        onCollapse: () =>
+            p({
+                action: "COLLAPSE_ROLES",
+            }),
         allowEditing: !0,
     });
 }

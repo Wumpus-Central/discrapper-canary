@@ -1,4 +1,7 @@
-n.d(t, { A: () => S }), n(896048);
+n.d(t, {
+    A: () => S,
+}),
+    n(896048);
 var r = n(627968);
 n(64700);
 var i = n(735438),
@@ -16,6 +19,7 @@ var i = n(735438),
     m = n(37962),
     g = n(670455),
     E = n(652215);
+
 function b(e, t, n) {
     return (
         t in e
@@ -29,6 +33,7 @@ function b(e, t, n) {
         e
     );
 }
+
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -45,6 +50,7 @@ function y(e) {
     }
     return e;
 }
+
 function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -57,6 +63,7 @@ function O(e, t) {
     }
     return n;
 }
+
 function A(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -82,7 +89,7 @@ class v extends m.A {
             }),
             b(this, "handleVoiceChannelFeedback", (e) => {
                 let { analyticsData: t } = e;
-                (0, i.sum)(t.duration_speaking_voice_filter_ms) >= 5000 &&
+                (0, i.sum)(t.duration_speaking_voice_filter_ms) >= 5e3 &&
                     this.possiblyShowFeedbackModal(g.MW.VOICE_FILTER, () => {
                         (0, a.mMO)(async () => {
                             let { VoiceFilterFeedbackModal: e } = await Promise.all([
@@ -90,7 +97,13 @@ class v extends m.A {
                                 n.e("26484"),
                                 n.e("51997"),
                             ]).then(n.bind(n, 455071));
-                            return (n) => (0, r.jsx)(e, A(y({}, n), { analyticsData: t }));
+                            return (n) =>
+                                (0, r.jsx)(
+                                    e,
+                                    A(y({}, n), {
+                                        analyticsData: t,
+                                    }),
+                                );
                         });
                     }),
                     this.possiblyShowFeedbackModal(g.MW.VOICE, () => {
@@ -98,7 +111,13 @@ class v extends m.A {
                             let { default: e } = await Promise.all([n.e("16833"), n.e("49911"), n.e("36278")]).then(
                                 n.bind(n, 302252),
                             );
-                            return (n) => (0, r.jsx)(e, A(y({}, n), { analyticsData: t }));
+                            return (n) =>
+                                (0, r.jsx)(
+                                    e,
+                                    A(y({}, n), {
+                                        analyticsData: t,
+                                    }),
+                                );
                         });
                     });
             }),
@@ -137,7 +156,9 @@ class v extends m.A {
                                             },
                                             t,
                                         ),
-                                        { analyticsData: m },
+                                        {
+                                            analyticsData: m,
+                                        },
                                     ),
                                 );
                         });
@@ -150,7 +171,13 @@ class v extends m.A {
                         let { default: e } = await Promise.all([n.e("16833"), n.e("26484"), n.e("23866")]).then(
                             n.bind(n, 932140),
                         );
-                        return (n) => (0, r.jsx)(e, A(y({}, n), { analyticsData: t }));
+                        return (n) =>
+                            (0, r.jsx)(
+                                e,
+                                A(y({}, n), {
+                                    analyticsData: t,
+                                }),
+                            );
                     });
                 });
             }),
@@ -183,7 +210,9 @@ class v extends m.A {
                                         }),
                                     );
                             },
-                            { contextKey: m },
+                            {
+                                contextKey: m,
+                            },
                         );
                     });
             }),
@@ -222,7 +251,16 @@ class v extends m.A {
                         let { default: e } = await Promise.all([n.e("16833"), n.e("26484"), n.e("13146")]).then(
                             n.bind(n, 949004),
                         );
-                        return (n) => (0, r.jsx)(e, y({ dismissibleContent: t }, n));
+                        return (n) =>
+                            (0, r.jsx)(
+                                e,
+                                y(
+                                    {
+                                        dismissibleContent: t,
+                                    },
+                                    n,
+                                ),
+                            );
                     });
                 });
             });

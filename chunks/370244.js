@@ -1,4 +1,6 @@
-r.d(t, { A: () => i });
+r.d(t, {
+    A: () => i,
+});
 var n = r(64700),
     o = r(205662),
     a = r(702068);
@@ -7,22 +9,30 @@ let i = function (e) {
         r = e.hsl,
         i = (0, o.default)({
             default: {
-                swatches: { marginTop: "20px" },
+                swatches: {
+                    marginTop: "20px",
+                },
                 swatch: {
                     boxSizing: "border-box",
                     width: "20%",
                     paddingRight: "1px",
                     float: "left",
                 },
-                clear: { clear: "both" },
+                clear: {
+                    clear: "both",
+                },
             },
         });
     return n.createElement(
         "div",
-        { style: i.swatches },
+        {
+            style: i.swatches,
+        },
         n.createElement(
             "div",
-            { style: i.swatch },
+            {
+                style: i.swatch,
+            },
             n.createElement(a.A, {
                 hsl: r,
                 offset: ".80",
@@ -33,7 +43,9 @@ let i = function (e) {
         ),
         n.createElement(
             "div",
-            { style: i.swatch },
+            {
+                style: i.swatch,
+            },
             n.createElement(a.A, {
                 hsl: r,
                 offset: ".65",
@@ -43,7 +55,9 @@ let i = function (e) {
         ),
         n.createElement(
             "div",
-            { style: i.swatch },
+            {
+                style: i.swatch,
+            },
             n.createElement(a.A, {
                 hsl: r,
                 offset: ".50",
@@ -53,7 +67,9 @@ let i = function (e) {
         ),
         n.createElement(
             "div",
-            { style: i.swatch },
+            {
+                style: i.swatch,
+            },
             n.createElement(a.A, {
                 hsl: r,
                 offset: ".35",
@@ -63,7 +79,9 @@ let i = function (e) {
         ),
         n.createElement(
             "div",
-            { style: i.swatch },
+            {
+                style: i.swatch,
+            },
             n.createElement(a.A, {
                 hsl: r,
                 offset: ".20",
@@ -72,6 +90,8 @@ let i = function (e) {
                 last: !0,
             }),
         ),
-        n.createElement("div", { style: i.clear }),
+        n.createElement("div", {
+            style: i.clear,
+        }),
     );
 };

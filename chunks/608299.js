@@ -1,4 +1,7 @@
-n.d(t, { A: () => i }), n(228524);
+n.d(t, {
+    A: () => i,
+}),
+    n(228524);
 var r = n(73153);
 let i = {
     popFirstFile(e) {

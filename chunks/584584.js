@@ -1,4 +1,8 @@
-n.d(t, { A: () => N }), n(896048), n(321073);
+n.d(t, {
+    A: () => N,
+}),
+    n(896048),
+    n(321073);
 var r,
     i = n(735438),
     a = n.n(i),
@@ -14,6 +18,7 @@ var r,
     h = n(469778),
     m = n(67480),
     g = n(652215);
+
 function E(e, t, n) {
     return (
         t in e
@@ -31,6 +36,7 @@ let b = "DetectedOffPlatformPremiumPerksStore",
     y = {},
     O = {},
     A = [];
+
 function v() {
     let e = !1;
     for (let { id: t, distributor: n } of p.Ay.getRunningGames())
@@ -50,6 +56,7 @@ function v() {
                         (e = !0)));
     return e && S(), e;
 }
+
 function S() {
     let e = !1;
     for (let { skuId: t, applicationId: n } of a().values(O)) {
@@ -76,11 +83,13 @@ function S() {
     }
     return e;
 }
+
 function I(e) {
     let { skuId: t } = e;
     if ((delete y[t], A.includes(t))) return !1;
     A.push(t), o.w.set(b, A);
 }
+
 function T() {
     (y = {}), (O = {});
 }

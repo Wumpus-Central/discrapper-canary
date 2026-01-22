@@ -15,14 +15,25 @@ var r = n(945810),
 let a = (0, r.mj)({
     name: "2025-11-h265-no-software",
     kind: "user",
-    defaultConfig: { treatment: "control" },
+    defaultConfig: {
+        treatment: "control",
+    },
     variations: {
-        1: { treatment: "no_software_decode" },
-        2: { treatment: "disabled" },
-        3: { treatment: "no_software_decode_with_fallback" },
+        1: {
+            treatment: "no_software_decode",
+        },
+        2: {
+            treatment: "disabled",
+        },
+        3: {
+            treatment: "no_software_decode_with_fallback",
+        },
     },
 });
+
 function s(e) {
     let { location: t } = e;
-    return a.getConfig({ location: t });
+    return a.getConfig({
+        location: t,
+    });
 }

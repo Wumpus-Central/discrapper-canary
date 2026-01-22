@@ -10,6 +10,7 @@ var i = n(3388),
     o = n(341221);
 let l = !!("u" > typeof window && window.document && window.document.createElement),
     c = new Map();
+
 function u(e) {
     let [t, n] = (0, s.useState)(e),
         a = (0, s.useRef)(null),
@@ -38,6 +39,7 @@ function u(e) {
         u
     );
 }
+
 function d(e, t) {
     if (e === t) return e;
     let n = c.get(e);
@@ -45,6 +47,7 @@ function d(e, t) {
     let r = c.get(t);
     return r ? (r.forEach((t) => (t.current = e)), e) : t;
 }
+
 function f(e = []) {
     let t = u(),
         [n, r] = (0, a.y)(t),

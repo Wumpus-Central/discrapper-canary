@@ -11,6 +11,7 @@ var r = n(627968),
     c = n(985018),
     o = n(829050),
     d = n(584643);
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,6 +38,7 @@ function u(e) {
     return e;
 }
 let f = "role_subscriptions_eligibility_modal";
+
 function g(e) {
     let { guild: t, eligibility: i, eligibilityLoading: s, eligibilityError: a, refreshEligibility: o } = e;
     return (0, r.jsx)(l.Button, {
@@ -74,7 +76,9 @@ function g(e) {
                         );
                     };
                 },
-                { modalKey: f },
+                {
+                    modalKey: f,
+                },
             );
         },
         size: "md",
@@ -82,6 +86,7 @@ function g(e) {
         icon: l.EpV,
     });
 }
+
 function b(e) {
     let { guild: t, checkboxText: n } = e,
         { canSubmitAcceptance: a, error: o, loading: d, submitAcceptTermsRequest: u } = (0, s.A)(t.id),
@@ -95,7 +100,9 @@ function b(e) {
                 checked: f,
                 label: n,
             }),
-            (0, r.jsx)(l.hKd, { size: 24 }),
+            (0, r.jsx)(l.hKd, {
+                size: 24,
+            }),
             (0, r.jsx)(l.Button, {
                 disabled: !f || !a,
                 onClick: u,
@@ -106,7 +113,9 @@ function b(e) {
             null != o &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, r.jsx)(l.hKd, { size: 24 }),
+                        (0, r.jsx)(l.hKd, {
+                            size: 24,
+                        }),
                         (0, r.jsx)(l.wx6, {
                             type: "critical",
                             children: o.getAnyErrorMessage(),
@@ -116,6 +125,7 @@ function b(e) {
         ],
     });
 }
+
 function m(e) {
     let { guild: t, monetizationEligibility: n } = e,
         {
@@ -142,6 +152,7 @@ function m(e) {
               refreshEligibility: s,
           });
 }
+
 function p(e) {
     let { guild: t, monetizationEligibility: n } = e;
     return (0, r.jsxs)("div", {
@@ -160,13 +171,17 @@ function p(e) {
                         color: "text-strong",
                         children: c.intl.string(c.t["PqYfh/"]),
                     }),
-                    (0, r.jsx)(l.hKd, { size: 12 }),
+                    (0, r.jsx)(l.hKd, {
+                        size: 12,
+                    }),
                     (0, r.jsx)(l.Text, {
                         variant: "text-md/normal",
                         color: "text-default",
                         children: c.intl.string(c.t["41wkMc"]),
                     }),
-                    (0, r.jsx)(l.hKd, { size: 24 }),
+                    (0, r.jsx)(l.hKd, {
+                        size: 24,
+                    }),
                     (0, r.jsx)(m, {
                         guild: t,
                         monetizationEligibility: n,

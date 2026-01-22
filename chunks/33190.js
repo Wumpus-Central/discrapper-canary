@@ -1,4 +1,6 @@
-n.d(t, { k: () => h });
+n.d(t, {
+    k: () => h,
+});
 var r = n(627968);
 n(64700);
 var i = n(284009),
@@ -12,6 +14,7 @@ var i = n(284009),
     f = n(482132),
     p = n(985018),
     _ = n(724788);
+
 function h(e) {
     var t;
     let { handleClose: n } = e,
@@ -45,7 +48,9 @@ function h(e) {
                         variant: "text-md/normal",
                         children: y,
                     }),
-                    (0, r.jsx)("div", { className: _.yF }),
+                    (0, r.jsx)("div", {
+                        className: _.yF,
+                    }),
                     (0, r.jsx)(s.$nd, {
                         onClick: n,
                         text: p.intl.string(p.t.cpT0Cq),

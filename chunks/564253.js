@@ -1,4 +1,8 @@
-n.d(t, { A: () => m }), n(667532), n(896048);
+n.d(t, {
+    A: () => m,
+}),
+    n(667532),
+    n(896048);
 var r = n(478437),
     i = n(629357),
     a = n(580424),
@@ -11,6 +15,7 @@ var r = n(478437),
 n(827669);
 var f = n(746080),
     p = n(985018);
+
 function _(e) {
     switch (e.type) {
         case r.r.PUBLIC_THREAD:
@@ -25,6 +30,7 @@ function _(e) {
             return "#".concat(null != t ? t.name : e.name);
     }
 }
+
 function h(e) {
     return f.aQ.has(e.id) ? "<id:".concat(e.id, ">") : "<#".concat(e.id, ">");
 }
@@ -104,6 +110,11 @@ let m = {
                 options: r,
             } = e,
             i = t[n];
-        return r.insertText(_(i), h(i)), { type: d.kc.CHANNEL };
+        return (
+            r.insertText(_(i), h(i)),
+            {
+                type: d.kc.CHANNEL,
+            }
+        );
     },
 };

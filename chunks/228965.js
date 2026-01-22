@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(311907),
     i = n(811024),
     a = n(782091),
@@ -9,6 +11,7 @@ var r = n(311907),
     u = n(723702),
     d = n(818348),
     f = n(985018);
+
 function p(e) {
     let t,
         { context: n, application: p, activityAction: _ } = e,

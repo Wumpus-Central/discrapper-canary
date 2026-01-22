@@ -5,6 +5,7 @@ n.d(t, {
 var r = n(64700),
     i = n(768239),
     a = n(923870);
+
 function s() {
     return (s =
         Object.assign ||
@@ -16,14 +17,17 @@ function s() {
             return e;
         }).apply(this, arguments);
 }
+
 function o(e, t) {
     return f(e) || d(e, t) || c(e, t) || l();
 }
+
 function l() {
     throw TypeError(
         "Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
     );
 }
+
 function c(e, t) {
     if (e) {
         if ("string" == typeof e) return u(e, t);
@@ -33,11 +37,13 @@ function c(e, t) {
         if ("Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return u(e, t);
     }
 }
+
 function u(e, t) {
     (null == t || t > e.length) && (t = e.length);
     for (var n = 0, r = Array(t); n < t; n++) r[n] = e[n];
     return r;
 }
+
 function d(e, t) {
     if ("u" > typeof Symbol && Symbol.iterator in Object(e)) {
         var n = [],
@@ -62,9 +68,11 @@ function d(e, t) {
         return n;
     }
 }
+
 function f(e) {
     if (Array.isArray(e)) return e;
 }
+
 function p(e, t) {
     if (null == e) return {};
     var n,
@@ -77,6 +85,7 @@ function p(e, t) {
     }
     return i;
 }
+
 function _(e, t) {
     if (null == e) return {};
     var n,
@@ -95,8 +104,22 @@ var h = (0, r.createContext)(null),
             u = l[1];
         return r.createElement(
             h.Provider,
-            { value: null != t ? t : c },
-            r.createElement(i.Q, s({ backend: a.e }, n)),
-            t ? null : r.createElement("div", { ref: u }),
+            {
+                value: null != t ? t : c,
+            },
+            r.createElement(
+                i.Q,
+                s(
+                    {
+                        backend: a.e,
+                    },
+                    n,
+                ),
+            ),
+            t
+                ? null
+                : r.createElement("div", {
+                      ref: u,
+                  }),
         );
     };

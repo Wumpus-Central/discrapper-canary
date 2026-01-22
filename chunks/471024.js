@@ -13,6 +13,7 @@ var i,
     d = n(985018),
     u = n(58755),
     h = n(473169);
+
 function p(e, t, n) {
     return (
         t in e
@@ -34,7 +35,10 @@ let f = (e) => e.stopPropagation(),
             onMouseEnter: f,
             onMouseOver: f,
         }),
-    g = () => (0, r.jsx)("div", { className: u.yF }),
+    g = () =>
+        (0, r.jsx)("div", {
+            className: u.yF,
+        }),
     y = (e, t, n) =>
         (0, r.jsx)("div", {
             className: u.qD,
@@ -60,7 +64,11 @@ class m extends (i = s.PureComponent) {
     static getDerivedStateFromProps(e, t) {
         let { expand: n } = e,
             { expanded: i } = t;
-        return !i && n ? { expanded: !0 } : null;
+        return !i && n
+            ? {
+                  expanded: !0,
+              }
+            : null;
     }
     componentDidMount() {
         let { onNotificationShow: e } = this.props;
@@ -255,10 +263,15 @@ class m extends (i = s.PureComponent) {
                 null == t || t(e);
             }),
             p(this, "handleMouseEnter", () => {
-                this.props.disabled || this.setState({ expanded: !0 });
+                this.props.disabled ||
+                    this.setState({
+                        expanded: !0,
+                    });
             });
         const { expand: t } = e;
-        this.state = { expanded: t };
+        this.state = {
+            expanded: t,
+        };
     }
 }
 p(m, "defaultProps", {

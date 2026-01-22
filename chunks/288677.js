@@ -1,4 +1,6 @@
-n.d(e, { A: () => A });
+n.d(e, {
+    A: () => A,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -11,6 +13,7 @@ var i = n(311907),
     b = n(715671),
     s = n(651743),
     p = n(985018);
+
 function A(t, e) {
     let n = (0, i.bG)([a.Ay], () => a.Ay.getRunningVerifiedApplicationIds().includes(t.id), [t.id]),
         A = (0, i.bG)(
@@ -31,6 +34,11 @@ function A(t, e) {
         : (0, r.jsx)(l.Drp, {
               id: "launch",
               label: p.intl.string(p.t.XKUw8m),
-              action: () => b.playApplication(t.id, t, { analyticsParams: { location: e } }),
+              action: () =>
+                  b.playApplication(t.id, t, {
+                      analyticsParams: {
+                          location: e,
+                      },
+                  }),
           });
 }

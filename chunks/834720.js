@@ -1,4 +1,6 @@
-t.d(i, { Ay: () => d });
+t.d(i, {
+    Ay: () => d,
+});
 var n,
     l,
     r = t(311907),
@@ -61,7 +63,7 @@ let d = new o(s.h, {
                 gracePeriodEndDate: null != t.grace_period_end_date ? new Date(t.grace_period_end_date) : null,
                 retentionHealthy: t.retention_healthy,
                 engagementHealthy: t.engagement_healthy,
-                minimumGuildSize: null != t.minimum_size ? t.minimum_size : 1000,
+                minimumGuildSize: null != t.minimum_size ? t.minimum_size : 1e3,
                 healthScore: t.health_score,
                 minimumGuildAge: null != (i = t.minimum_age) ? i : 0,
                 age: t.age,

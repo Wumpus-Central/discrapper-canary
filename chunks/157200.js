@@ -1,4 +1,6 @@
-n.d(t, { A: () => x });
+n.d(t, {
+    A: () => x,
+});
 var a = n(627968);
 n(64700);
 var l = n(397927),
@@ -38,7 +40,9 @@ let f = (e) => {
               })
             : y
               ? (0, a.jsx)(r.R9, {
-                    newValue: { pageCategory: v === p.G2.HOME || null == j ? void 0 : j.pageCategory },
+                    newValue: {
+                        pageCategory: v === p.G2.HOME || null == j ? void 0 : j.pageCategory,
+                    },
                     children: (0, a.jsx)(c.A, {
                         primary: !0,
                         product: t,

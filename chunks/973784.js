@@ -7,7 +7,7 @@ e.exports = function (e, n, r, i) {
     if ("string" != typeof e || 0 === e.length) return a;
     var s = /\+/g;
     e = e.split(n);
-    var o = 1000;
+    var o = 1e3;
     i && "number" == typeof i.maxKeys && (o = i.maxKeys);
     var l = e.length;
     o > 0 && l > o && (l = o);

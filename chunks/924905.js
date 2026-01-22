@@ -7,6 +7,7 @@ var t = {
         return t.isImage(e) && ("jpeg" === r[1] || "pjpeg" === r[1]);
     },
 };
+
 function n(e) {
     return e.split("/");
 }

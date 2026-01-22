@@ -1,4 +1,7 @@
-n.d(t, { A: () => g }), n(896048);
+n.d(t, {
+    A: () => g,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -28,6 +31,7 @@ let h = [p.u8, p.n$, p.uN, p.no],
             }),
         });
     });
+
 function g(e) {
     let { channelId: t, callHeight: n } = e,
         i = (0, c.bG)([f.A], () => f.A.useReducedMotion),
@@ -64,7 +68,12 @@ function g(e) {
                                 });
                         }
                         return e;
-                    })({ key: (0, o.A)() }, r),
+                    })(
+                        {
+                            key: (0, o.A)(),
+                        },
+                        r,
+                    ),
                 ]);
         }
         return (

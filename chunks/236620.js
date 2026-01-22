@@ -1,4 +1,7 @@
-n.d(t, { y: () => u }), n(228524);
+n.d(t, {
+    y: () => u,
+}),
+    n(228524);
 var r = n(627968),
     i = n(64700),
     l = n(311907),
@@ -7,6 +10,7 @@ var r = n(627968),
     c = n(997509),
     o = n(652215),
     d = n(985018);
+
 function u(e) {
     let { label: t, description: n, helperText: u, guildId: f, defaultSettings: g, canManageGuild: b } = e,
         m = (0, l.bG)([a.A], () => a.A.getMemberCount(f)),
@@ -25,7 +29,9 @@ function u(e) {
             [m],
         ),
         x = i.useCallback((e) => {
-            c.A.updateGuild({ defaultMessageNotifications: e });
+            c.A.updateGuild({
+                defaultMessageNotifications: e,
+            });
         }, []);
     return (0, r.jsx)(s.z6M, {
         label: t,

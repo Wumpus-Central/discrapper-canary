@@ -1,4 +1,7 @@
-l.d(t, { _: () => p }), l(228524);
+l.d(t, {
+    _: () => p,
+}),
+    l(228524);
 var n = l(627968);
 l(64700);
 var a = l(990078),
@@ -12,6 +15,7 @@ var a = l(990078),
     f = l(927961),
     m = l(985018),
     b = l(127134);
+
 function p(e) {
     let { onApply: t, onSurpriseMe: l, onClose: p, canApply: x } = e,
         g = (0, o.L)(u.PremiumTypes.TIER_2),
@@ -22,7 +26,11 @@ function p(e) {
             icon: {
                 type: "rive",
                 asset: s.mdx,
-                riveProps: { dataBinding: { fill: s.LU0.colors.ICON_STRONG } },
+                riveProps: {
+                    dataBinding: {
+                        fill: s.LU0.colors.ICON_STRONG,
+                    },
+                },
             },
             text: m.intl.string(f.default.NOGFds),
         }),

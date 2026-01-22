@@ -1,4 +1,8 @@
-n.d(t, { A: () => S }), n(228524), n(896048);
+n.d(t, {
+    A: () => S,
+}),
+    n(228524),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -19,6 +23,7 @@ var r = n(627968),
     O = n(652215),
     y = n(985018),
     v = n(960552);
+
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -44,6 +49,7 @@ function A(e) {
     }
     return e;
 }
+
 function E(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -126,6 +132,7 @@ let N = (e) => {
         })
     );
 };
+
 function _(e, t) {
     return c()(
         null == e
@@ -160,7 +167,15 @@ let S = (e) => {
                         (n =
                             null == r
                                 ? void 0
-                                : r.map((e) => e.channel).reduce((e, t) => E(A({}, e), { [t.id]: t }), {}))
+                                : r
+                                      .map((e) => e.channel)
+                                      .reduce(
+                                          (e, t) =>
+                                              E(A({}, e), {
+                                                  [t.id]: t,
+                                              }),
+                                          {},
+                                      ))
                             ? n
                             : {};
                 return null == P
@@ -183,7 +198,9 @@ let S = (e) => {
                     color: "text-default",
                     children: y.intl.string(y.t.e1gm0f),
                 }),
-                (0, r.jsx)(b.y$y, { className: v.__invalid_spinner }),
+                (0, r.jsx)(b.y$y, {
+                    className: v.__invalid_spinner,
+                }),
             ],
         });
     let R = C ? y.t["WH+1Yz"] : y.t.a4MYDO,
@@ -199,12 +216,16 @@ let S = (e) => {
                 checked: null == S ? void 0 : S.safeEnvironment,
             },
             {
-                name: y.intl.formatToPlainString(y.t.NYovA2, { minMembers: S.minimumGuildSize }),
+                name: y.intl.formatToPlainString(y.t.NYovA2, {
+                    minMembers: S.minimumGuildSize,
+                }),
                 failingName: y.intl.formatToPlainString(y.t.wvJwYs, {
                     minMembers: S.minimumGuildSize.toLocaleString(),
                 }),
                 description: null,
-                failingDescription: y.intl.format(R, { minMembers: S.minimumGuildSize.toLocaleString() }),
+                failingDescription: y.intl.format(R, {
+                    minMembers: S.minimumGuildSize.toLocaleString(),
+                }),
                 checked: null == S ? void 0 : S.size,
             },
             {
@@ -265,7 +286,13 @@ let S = (e) => {
                                 onClick: () =>
                                     (0, b.mMO)(async () => {
                                         let { default: e } = await n.e("63401").then(n.bind(n, 247920));
-                                        return (t) => (0, r.jsx)(e, E(A({}, t), { guildChecklist: S }));
+                                        return (t) =>
+                                            (0, r.jsx)(
+                                                e,
+                                                E(A({}, t), {
+                                                    guildChecklist: S,
+                                                }),
+                                            );
                                     }),
                                 children: y.intl.string(y.t.qyiTH8),
                             }),
@@ -283,7 +310,9 @@ let S = (e) => {
                                   t,
                               ),
                       })
-                    : y.intl.formatToPlainString(y.t["6S/96D"], { minMembers: 200 }),
+                    : y.intl.formatToPlainString(y.t["6S/96D"], {
+                          minMembers: 200,
+                      }),
                 checked: null == S ? void 0 : S.healthy,
                 pending: null == S ? void 0 : S.healthScorePending,
             },
@@ -411,7 +440,11 @@ let S = (e) => {
                     {
                         children: [
                             (0, r.jsx)(N, A({}, e)),
-                            t < D.length - 1 ? (0, r.jsx)("hr", { className: v.me }) : null,
+                            t < D.length - 1
+                                ? (0, r.jsx)("hr", {
+                                      className: v.me,
+                                  })
+                                : null,
                         ],
                     },
                     "".concat(e.name),

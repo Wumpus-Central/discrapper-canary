@@ -1,4 +1,8 @@
-n.r(t), n.d(t, { default: () => E }), n(896048);
+n.r(t),
+    n.d(t, {
+        default: () => E,
+    }),
+    n(896048);
 var l = n(627968),
     r = n(64700),
     i = n(503698),
@@ -23,18 +27,27 @@ var l = n(627968),
     v = n(985018),
     _ = n(682628),
     N = n(638990);
+
 function w(e) {
     let { guild: t } = e,
         n = (0, A.A)(t);
     r.useEffect(() => {
-        (0, f.Dr)(c.M.CHANNEL_BROWSER_NEW_BADGE_NUX, { dismissAction: y.i.DISMISS });
+        (0, f.Dr)(c.M.CHANNEL_BROWSER_NEW_BADGE_NUX, {
+            dismissAction: y.i.DISMISS,
+        });
     });
     let i = n
-            ? v.intl.formatToPlainString(v.t.uqZgYe, { guildName: t.name })
-            : v.intl.formatToPlainString(v.t.velJea, { guildName: t.name }),
+            ? v.intl.formatToPlainString(v.t.uqZgYe, {
+                  guildName: t.name,
+              })
+            : v.intl.formatToPlainString(v.t.velJea, {
+                  guildName: t.name,
+              }),
         a = n ? v.intl.string(v.t.h9mGOP) : v.intl.string(v.t.et6wav);
     return (
-        (0, u.HU)({ location: i }),
+        (0, u.HU)({
+            location: i,
+        }),
         (0, l.jsxs)(b.A, {
             className: _.wx,
             innerClassname: _.MU,
@@ -46,11 +59,14 @@ function w(e) {
                     icon: o.kiI,
                     "aria-hidden": !0,
                 }),
-                (0, l.jsx)(b.A.Title, { children: a }),
+                (0, l.jsx)(b.A.Title, {
+                    children: a,
+                }),
             ],
         })
     );
 }
+
 function E(e) {
     let { guildId: t, selectedSection: n } = e,
         i = (0, s.bG)([x.A], () => x.A.getGuild(t)),
@@ -71,9 +87,13 @@ function E(e) {
         : (0, l.jsxs)(l.Fragment, {
               children: [
                   (0, l.jsxs)("div", {
-                      className: a()(N.TE, { [N.js]: y }),
+                      className: a()(N.TE, {
+                          [N.js]: y,
+                      }),
                       children: [
-                          (0, l.jsx)(w, { guild: i }),
+                          (0, l.jsx)(w, {
+                              guild: i,
+                          }),
                           (0, l.jsxs)("div", {
                               className: a()(N.Qs, _.kL),
                               children: [
@@ -107,7 +127,9 @@ function E(e) {
                                                               color: E
                                                                   ? d.A.unsafe_rawColors.BRAND_260.css
                                                                   : d.A.colors.BACKGROUND_MOD_STRONG.css,
-                                                              className: a()({ [_.Ad]: E }),
+                                                              className: a()({
+                                                                  [_.Ad]: E,
+                                                              }),
                                                           }),
                                                       ],
                                                   },
@@ -124,14 +146,19 @@ function E(e) {
                                               });
                                           case O.qC.BROWSE:
                                           default:
-                                              return (0, l.jsx)(p.A, { guildId: t });
+                                              return (0, l.jsx)(p.A, {
+                                                  guildId: t,
+                                              });
                                       }
                                   })(),
                               ],
                           }),
                       ],
                   }),
-                  y && (0, l.jsx)(p.W, { channelId: b }),
+                  y &&
+                      (0, l.jsx)(p.W, {
+                          channelId: b,
+                      }),
               ],
           });
 }

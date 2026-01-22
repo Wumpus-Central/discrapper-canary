@@ -1,7 +1,10 @@
-n.d(t, { t: () => s });
+n.d(t, {
+    t: () => s,
+});
 var r = n(734057),
     i = n(576705),
     a = n(652215);
+
 function s(e) {
     let t = r.A.getChannel(e),
         n = null == t ? void 0 : t.isPrivate(),

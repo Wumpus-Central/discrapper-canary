@@ -1,4 +1,6 @@
-n.d(t, { A: () => N });
+n.d(t, {
+    A: () => N,
+});
 var r = n(627968);
 n(64700);
 var i = n(580424),
@@ -23,6 +25,7 @@ let y = 8,
     A = 4,
     v = 40,
     S = 6;
+
 function I(e, t) {
     return (0, r.jsx)(d.A, {
         sticker: e,
@@ -30,9 +33,11 @@ function I(e, t) {
         size: 40,
     });
 }
+
 function T(e) {
     return "".concat(":").concat(e.name).concat(":");
 }
+
 function C(e) {
     var t;
     let n = e.animated ? "a" : "";
@@ -48,7 +53,11 @@ let N = {
     stores: [c.A],
     matches: (e, t, n, r, i) => n.length > 1,
     queryResults(e, t, n, r, i) {
-        let s = r.allowSoundmoji && (0, a.AA)({ location: "queryResults" }),
+        let s =
+                r.allowSoundmoji &&
+                (0, a.AA)({
+                    location: "queryResults",
+                }),
             c = r.allowStickers || s ? 0 : v,
             u = g.rs7 + c,
             {
@@ -76,7 +85,9 @@ let N = {
         let p = [];
         s &&
             ((p = _.Ay.querySoundmoji(n, e)
-                .map((e) => ({ sound: e }))
+                .map((e) => ({
+                    sound: e,
+                }))
                 .slice(0, A)),
             "-" === n[0] && (p = p.filter((e) => e.sound.name === n)));
         let h = d.slice(0, Math.max(S, u - f.length - p.length));
@@ -123,7 +134,11 @@ let N = {
                     getQuery: (e) => "".concat(":").concat(e),
                     key: "emoji",
                 }),
-                u && d && (0, r.jsx)(i.Ay.Divider, { className: b.y }),
+                u &&
+                    d &&
+                    (0, r.jsx)(i.Ay.Divider, {
+                        className: b.y,
+                    }),
                 (0, h.GM)({
                     query: o,
                     selectedIndex: s,
@@ -147,7 +162,11 @@ let N = {
                     indexOffset: t.length,
                     headerClassName: u ? b._ : void 0,
                 }),
-                (u || d) && a.length > 0 && (0, r.jsx)(i.Ay.Divider, { className: b.y }),
+                (u || d) &&
+                    a.length > 0 &&
+                    (0, r.jsx)(i.Ay.Divider, {
+                        className: b.y,
+                    }),
                 (0, h.GM)({
                     query: o,
                     selectedIndex: s,
@@ -231,6 +250,8 @@ let N = {
                 }
             );
         }
-        return { type: null };
+        return {
+            type: null,
+        };
     },
 };

@@ -1,9 +1,12 @@
-n.d(t, { A: () => j }), n(896048);
+n.d(t, {
+    A: () => j,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
-    o = n(432022),
+    o = n(108531),
     l = n(299619),
     c = n(311907),
     u = n(397927),
@@ -28,9 +31,10 @@ var r = n(627968),
     R = n(844636);
 let w = 2.8,
     P = 2,
-    D = 1000,
+    D = 1e3,
     x = 500,
-    L = 1000 + A.f;
+    L = 1e3 + A.f;
+
 function j(e) {
     let { onNextStep: t } = e,
         n = (0, c.bG)([h.A], () => h.A.getFetchState() === h.$.ERROR || null == h.A.getCheckpointData().messages),
@@ -43,14 +47,22 @@ function j(e) {
             e.currentTarget.currentTime >= w && j(!1);
         }, []),
         F = (0, u.zhh)({
-            from: { opacity: 0 },
-            to: { opacity: 1 },
+            from: {
+                opacity: 0,
+            },
+            to: {
+                opacity: 1,
+            },
             pause: a,
             delay: L,
         }),
         B = (0, u.zhh)({
-            from: { opacity: 0 },
-            to: { opacity: 1 },
+            from: {
+                opacity: 0,
+            },
+            to: {
+                opacity: 1,
+            },
             pause: a,
         });
     i.useEffect(() => {
@@ -147,7 +159,9 @@ function j(e) {
                       (0, r.jsx)(y.A, {
                           variant: "text-md/medium",
                           className: C.al,
-                          children: T.intl.format(I.default.g476ZL, { name: "Exyl" }),
+                          children: T.intl.format(I.default.g476ZL, {
+                              name: "Exyl",
+                          }),
                       }),
                   a
                       ? null
@@ -170,7 +184,9 @@ function j(e) {
                       autoPlay: !G,
                       muted: !0,
                       playsInline: !0,
-                      className: s()(C.GW, { [C.e8]: !a }),
+                      className: s()(C.GW, {
+                          [C.e8]: !a,
+                      }),
                       onTimeUpdate: a ? V : void 0,
                       children: (0, r.jsx)("source", {
                           src: N.A,
@@ -228,7 +244,9 @@ function j(e) {
                                     style: B,
                                     children: (0, r.jsx)(O.A, {
                                         className: C.Lv,
-                                        style: { color: U },
+                                        style: {
+                                            color: U,
+                                        },
                                     }),
                                 }),
                             ],

@@ -1,4 +1,6 @@
-i.d(l, { default: () => p });
+i.d(l, {
+    default: () => p,
+});
 var t = i(627968);
 i(64700);
 var d = i(311907),
@@ -43,7 +45,9 @@ let p = (n) => {
                     }),
                     (0, t.jsx)(s.A.Child, {
                         grow: 0,
-                        children: (0, t.jsx)(a.s_y, { onClick: l }),
+                        children: (0, t.jsx)(a.s_y, {
+                            onClick: l,
+                        }),
                     }),
                 ],
             }),
@@ -52,7 +56,9 @@ let p = (n) => {
                     className: h.rf,
                     children: [
                         (0, t.jsx)("div", {
-                            children: u.intl.format(u.t["NnE/6P"], { link: "https://dis.gd/dispatch-error" }),
+                            children: u.intl.format(u.t["NnE/6P"], {
+                                link: "https://dis.gd/dispatch-error",
+                            }),
                         }),
                         (0, t.jsx)("div", {
                             className: h.dr,

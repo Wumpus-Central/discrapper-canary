@@ -20,6 +20,7 @@ var r = n(627968),
     h = n(750506),
     m = n(87404),
     g = n(282664);
+
 function E(e, t, n) {
     return (
         t in e
@@ -33,6 +34,7 @@ function E(e, t, n) {
         e
     );
 }
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -49,6 +51,7 @@ function b(e) {
     }
     return e;
 }
+
 function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -61,6 +64,7 @@ function y(e, t) {
     }
     return n;
 }
+
 function O(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -85,6 +89,7 @@ let A = (0, _.xI)(d.A.FULL_SCREEN_LAYER_ANIMATION_DURATION),
                 });
             }),
     }));
+
 function S(e) {
     let { item: t, containerRef: n } = e;
     return (
@@ -104,7 +109,9 @@ function S(e) {
                 className: g.zr,
                 ref: n,
                 children: [
-                    (0, r.jsx)("div", { className: g.$E }),
+                    (0, r.jsx)("div", {
+                        className: g.$E,
+                    }),
                     t.render({
                         transitionState: null != t ? t.transitionState : 3,
                         closeLayer: () => R(t.key),
@@ -130,6 +137,7 @@ let I = {
         exitActive: g.zX,
         exitDone: g.hf,
     };
+
 function C() {
     let { reducedMotion: e } = i.useContext(f.CZY),
         t = e.enabled ? T : I,
@@ -151,7 +159,11 @@ function C() {
                         (0, u.r)(() => {
                             v.setState({
                                 fullScreenLayers: n.map((e) =>
-                                    e.key === i.key ? O(b({}, e), { transitionState: 2 }) : e,
+                                    e.key === i.key
+                                        ? O(b({}, e), {
+                                              transitionState: 2,
+                                          })
+                                        : e,
                                 ),
                             });
                         });
@@ -167,6 +179,7 @@ function C() {
         }),
     });
 }
+
 function N(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.freeze({}),
         { layerKey: n, Layer: r, disableAnimation: i = !1, showAppUnderLayer: a = !1 } = t,
@@ -192,11 +205,15 @@ function N(e) {
         o
     );
 }
+
 function R(e) {
     (0, u.r)(() => {
-        v.setState((t) => ({ fullScreenLayers: t.fullScreenLayers.filter((t) => t.key !== e) }));
+        v.setState((t) => ({
+            fullScreenLayers: t.fullScreenLayers.filter((t) => t.key !== e),
+        }));
     });
 }
+
 function w(e) {
     return {
         POP_LAYER: {

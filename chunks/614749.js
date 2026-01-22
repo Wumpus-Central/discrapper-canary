@@ -1,4 +1,6 @@
-n.d(t, { A: () => E });
+n.d(t, {
+    A: () => E,
+});
 var r = n(627968),
     i = n(64700),
     a = n(758879),
@@ -17,6 +19,7 @@ var r = n(627968),
 let E = () => {
     let e = d.dm.useSetting(),
         { categories: t, initialized: n } = (0, o.cf)([u.A], () => u.A.getEmailSettings());
+
     function E(e) {
         (0, c.CA)(_.HO.FAMILY_CENTER_DIGEST, e);
     }
@@ -55,7 +58,9 @@ let E = () => {
                                               onClick: f.default,
                                               to: {
                                                   pathname: p.BVt.FAMILY_CENTER,
-                                                  state: { scrollRestoration: !1 },
+                                                  state: {
+                                                      scrollRestoration: !1,
+                                                  },
                                               },
                                               children: m.intl.string(h.default.cUIXFY),
                                           }),

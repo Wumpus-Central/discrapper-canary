@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968);
 n(64700);
 var l = n(827734),
@@ -8,6 +10,7 @@ var l = n(827734),
     o = n(418208),
     c = n(47868),
     u = n(985018);
+
 function d(e) {
     let { className: t, channel: n, highlight: d } = e,
         f = (0, a.Us)();

@@ -1,4 +1,7 @@
-n.d(t, { A: () => O }), n(896048);
+n.d(t, {
+    A: () => O,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(827734),
@@ -16,6 +19,7 @@ var r = n(627968),
     j = n(652215),
     g = n(985018),
     h = n(678554);
+
 function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -41,6 +45,7 @@ function x(e) {
     }
     return e;
 }
+
 function y(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -59,6 +64,7 @@ function y(e, t) {
         e
     );
 }
+
 function O(e) {
     let { guildId: t } = e,
         O = (0, m.vA)(t),
@@ -98,7 +104,9 @@ function O(e) {
                 (0, r.jsx)(c.Text, {
                     variant: "heading-md/bold",
                     color: "text-default",
-                    children: g.intl.format(g.t.TstoSZ, { count: v.size }),
+                    children: g.intl.format(g.t.TstoSZ, {
+                        count: v.size,
+                    }),
                 }),
                 (0, r.jsx)(c.QWc, {
                     text: g.intl.string(g.t.yW6ZdE),

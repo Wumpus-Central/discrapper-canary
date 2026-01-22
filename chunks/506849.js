@@ -1,4 +1,7 @@
-n.d(t, { A: () => N }), n(228524);
+n.d(t, {
+    A: () => N,
+}),
+    n(228524);
 var i = n(627968);
 n(64700);
 var l = n(503698),
@@ -13,6 +16,7 @@ var l = n(503698),
     h = n(972192),
     m = n(985018),
     x = n(726228);
+
 function j(e) {
     return (0, i.jsx)("div", {
         className: x.bV,
@@ -24,6 +28,7 @@ function j(e) {
         }),
     });
 }
+
 function p(e) {
     return (0, i.jsx)("div", {
         className: x.yV,
@@ -34,10 +39,14 @@ function p(e) {
         }),
     });
 }
+
 function b(e) {
     return (0, i.jsxs)("div", {
         children: [
-            null != e.title && (0, i.jsx)(j, { title: e.title }),
+            null != e.title &&
+                (0, i.jsx)(j, {
+                    title: e.title,
+                }),
             (0, i.jsx)("div", {
                 className: s()(x.f5, {
                     [x.ou]: !0 !== e.noPadding,
@@ -48,6 +57,7 @@ function b(e) {
         ],
     });
 }
+
 function N(e) {
     var t, n;
     let { guildId: l } = e,
@@ -123,27 +133,45 @@ function N(e) {
                     (0, i.jsx)(b, {
                         noPadding: !0,
                         noContainer: !0,
-                        children: (0, i.jsx)(g.A, { guildId: l }),
+                        children: (0, i.jsx)(g.A, {
+                            guildId: l,
+                        }),
                     }),
                     (0, i.jsx)(b, {
                         title: m.intl.string(m.t.R9Ej96),
                         noPadding: !0,
-                        children: (0, i.jsx)(h.A, { guildId: l }),
+                        children: (0, i.jsx)(h.A, {
+                            guildId: l,
+                        }),
                     }),
                     (0, i.jsx)(b, {
                         title: m.intl.string(m.t["31DySj"]),
-                        children: (0, i.jsx)(o.A, { guildId: l }),
+                        children: (0, i.jsx)(o.A, {
+                            guildId: l,
+                        }),
                     }),
                     a &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [
-                                (0, i.jsx)(j, { title: m.intl.string(m.t.D9yVAH) }),
-                                (0, i.jsx)(p, { description: m.intl.string(m.t["0PhAOH"]) }),
-                                (0, i.jsx)(b, { children: (0, i.jsx)(u.A, { guildId: l }) }),
+                                (0, i.jsx)(j, {
+                                    title: m.intl.string(m.t.D9yVAH),
+                                }),
+                                (0, i.jsx)(p, {
+                                    description: m.intl.string(m.t["0PhAOH"]),
+                                }),
+                                (0, i.jsx)(b, {
+                                    children: (0, i.jsx)(u.A, {
+                                        guildId: l,
+                                    }),
+                                }),
                             ],
                         }),
-                    (0, i.jsx)(j, { title: m.intl.string(m.t.JrySi3) }),
-                    (0, i.jsx)(c.A, { guildId: l }),
+                    (0, i.jsx)(j, {
+                        title: m.intl.string(m.t.JrySi3),
+                    }),
+                    (0, i.jsx)(c.A, {
+                        guildId: l,
+                    }),
                 ],
             }),
         Object.getOwnPropertyDescriptors

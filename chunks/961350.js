@@ -1,5 +1,11 @@
 let r, i;
-n.r(t), n.d(t, { default: () => eU }), n(321073), n(142703), n(65821);
+n.r(t),
+    n.d(t, {
+        default: () => eU,
+    }),
+    n(321073),
+    n(142703),
+    n(65821);
 var a,
     s = n(247775),
     o = n(80703),
@@ -24,6 +30,7 @@ var a,
     T = n(536802),
     C = n(652215),
     N = n(204925);
+
 function R(e, t, n) {
     return (
         t in e
@@ -62,6 +69,7 @@ let w = new g.A("AuthenticationStore"),
     $ = !1,
     J = !1,
     ee = [];
+
 function et(e) {
     let t = null != s.getToken(),
         n = null != u.w.get(C.ilC);
@@ -70,13 +78,20 @@ function et(e) {
         storageHasToken: n,
     });
 }
+
 function en() {
     var e;
     let t = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     if (((U = u.w.get(P)), (V = null != (e = u.w.get(D)) ? e : null), null != Z)) return Z;
     let n = null != U ? U : s.getToken();
-    !(0, b.m)() || (!t && null != n) || I.A.isHandoffAvailable() || er({ withGuildExperiments: !0 });
+    !(0, b.m)() ||
+        (!t && null != n) ||
+        I.A.isHandoffAvailable() ||
+        er({
+            withGuildExperiments: !0,
+        });
 }
+
 function er(e) {
     let { withGuildExperiments: t } = e,
         n = {},
@@ -86,9 +101,13 @@ function er(e) {
         null != V && (n["X-Installation-ID"] = V),
         (Z = c.Bo.get({
             url: C.Rsh.EXPERIMENTS,
-            query: { with_guild_experiments: t },
+            query: {
+                with_guild_experiments: t,
+            },
             headers: n,
-            context: { location: (0, b.SB)() },
+            context: {
+                location: (0, b.SB)(),
+            },
             retries: 3,
             oldFormErrors: !0,
             rejectWithError: !1,
@@ -110,37 +129,49 @@ function er(e) {
                     (0, p.hK)();
             },
             () => {
-                (Z = null), d.h.dispatch({ type: "EXPERIMENTS_FETCH_FAILURE" });
+                (Z = null),
+                    d.h.dispatch({
+                        type: "EXPERIMENTS_FETCH_FAILURE",
+                    });
             },
         ));
 }
+
 function ei() {
     (G = U), (U = null), u.w.remove(P);
 }
+
 function ea(e, t) {
     et("setAuthToken called."), (null == t || t !== L) && s.removeAnalyticsToken(), s.setToken(e, t);
 }
+
 function es(e) {
     (F = e), s.setAnalyticsToken(e);
 }
+
 function eo() {
     return et("removeAuthToken called."), s.removeAnalyticsToken(), s.removeToken();
 }
+
 function el(e) {
     let { isPasswordAttempt: t } = e;
     (B = C.aUe.LOGGING_IN), (J = J || !0 === t);
 }
+
 function ec(e) {
     let { isMultiAccount: t } = e;
     (B = C.aUe.NONE), (W = ""), (K = !1), (z = null), (i = null), (r = null), t || (eh(), eo(), en(!1));
 }
+
 function eu() {
     B = C.aUe.NONE;
 }
+
 function ed(e) {
     let { token: t } = e;
     (B = C.aUe.NONE), ea(t), ei(), (W = ""), (K = !1), (z = null), (i = null), eh(), ($ = !1);
 }
+
 function ef(e) {
     let { error: t } = e;
     (W = ""),
@@ -150,9 +181,11 @@ function ef(e) {
         eh(),
         (B = null != (0, _.p)(t).date_of_birth ? C.aUe.LOGIN_AGE_GATE : C.aUe.NONE);
 }
+
 function ep() {
     $ = !0;
 }
+
 function e_(e) {
     let { error: t } = e;
     (W = ""),
@@ -162,6 +195,7 @@ function e_(e) {
         (i = null),
         (B = null != (0, _.W)(t).date_of_birth ? C.aUe.LOGIN_AGE_GATE : C.aUe.NONE);
 }
+
 function eh() {
     let e = [];
     null != z &&
@@ -169,30 +203,46 @@ function eh() {
             type: "webauthn",
             challenge: z,
         }),
-        q && e.push({ type: "totp" }),
-        X && e.push({ type: "backup" }),
-        K && e.push({ type: "sms" }),
+        q &&
+            e.push({
+                type: "totp",
+            }),
+        X &&
+            e.push({
+                type: "backup",
+            }),
+        K &&
+            e.push({
+                type: "sms",
+            }),
         (ee = e);
 }
+
 function em(e) {
     let { ticket: t, sms: n, webauthn: r, backup: a, totp: s, loginInstanceId: o } = e;
     null != t && ((W = t), (K = n), (z = null != r ? r : null), (X = a), (q = s), (i = o), eh()), (B = C.aUe.MFA_STEP);
 }
+
 function eg() {
     B = C.aUe.LOGGING_IN_MFA;
 }
+
 function eE(e) {
     (B = C.aUe.ACCOUNT_SCHEDULED_FOR_DELETION), (r = e.credentials);
 }
+
 function eb(e) {
     (B = C.aUe.ACCOUNT_DISABLED), (r = e.credentials);
 }
+
 function ey(e) {
     (B = C.aUe.PASSWORD_RECOVERY_PHONE_VERIFICATION), (r = e.credentials);
 }
+
 function eO(e) {
     (B = C.aUe.PHONE_IP_AUTHORIZATION), (r = e.credentials);
 }
+
 function eA(e) {
     let t = e.fingerprint;
     null == U
@@ -212,15 +262,18 @@ function eA(e) {
               dropped_fingerprint: (0, o.d)(t),
           });
 }
+
 function ev(e) {
     let { installation: t } = e;
     if (null != V && V.length > 0) return !1;
     (V = t), y.A.canUseInstallationId() && u.w.set(D, t);
 }
+
 function eS(e) {
     let { token: t } = e;
     ea(t), ei();
 }
+
 function eI(e) {
     var t;
     let {
@@ -247,6 +300,7 @@ function eI(e) {
                 installation: l.installation,
             });
 }
+
 function eT(e) {
     var t;
     let { user: n, sessionId: r, analyticsToken: i, token: a } = e;
@@ -259,25 +313,31 @@ function eT(e) {
         (L = n.id),
         u.w.set(x, n.id);
 }
+
 function eC(e) {
     let { code: t } = e;
     et("handleConnectionClosed called with code ".concat(t, "."));
     let r = n(192308).hasModalOpen;
     if (4004 === t) {
         if (H || r(N.jc) || r(N.Uy)) return void ew();
-        A.default.track(C.HAw.APP_USER_DEAUTHENTICATED, { user_id: u.w.get(x) }),
+        A.default.track(C.HAw.APP_USER_DEAUTHENTICATED, {
+            user_id: u.w.get(x),
+        }),
             eP(),
             setImmediate(() => (0, b.pX)(C.BVt.DEFAULT_LOGGED_OUT));
     }
 }
+
 function eN(e) {
     let { token: t, userId: n } = e;
     et("handleUpdateToken called"), ea(t, n), ei();
 }
+
 function eR(e) {
     let { authSessionIdHash: t } = e;
     null != t && (M = t);
 }
+
 function ew() {
     (H = !0),
         eP(),
@@ -285,6 +345,7 @@ function ew() {
             (0, b.pX)(C.BVt.REGISTER);
         });
 }
+
 function eP(e) {
     var t;
     et("handleLogout called.");
@@ -320,20 +381,25 @@ function eP(e) {
         (J = !1),
         eh();
 }
+
 function eD() {
     B = C.aUe.FORGOT_PASSWORD;
 }
+
 function ex() {
     B = C.aUe.NONE;
 }
+
 function eL(e) {
     let { user: t } = e;
     (L = t.id), void 0 !== t.authenticator_types && (Y = t.authenticator_types), u.w.set(x, t.id);
 }
+
 function ej(e) {
     let { suspendedUserToken: t } = e;
     ($ = !1), (Q = t), setImmediate(() => (0, b.pX)(C.BVt.ACCOUNT_STANDING));
 }
+
 function eM() {
     (Q = null), (B = C.aUe.NONE), eP(), setImmediate(() => (0, b.pX)(C.BVt.DEFAULT_LOGGED_OUT));
 }

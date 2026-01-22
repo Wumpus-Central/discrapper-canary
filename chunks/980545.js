@@ -1,4 +1,6 @@
-n.d(t, { A: () => v });
+n.d(t, {
+    A: () => v,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -16,6 +18,7 @@ var r = n(627968),
     g = n(985018),
     E = n(608821),
     b = n(641701);
+
 function y(e, t, n) {
     return (
         t in e
@@ -29,6 +32,7 @@ function y(e, t, n) {
         e
     );
 }
+
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -46,13 +50,21 @@ function O(e) {
     return e;
 }
 let A = "https://cdn.discordapp.com/assets/discovery/quests-wumpus-hikes-mountain-transparent-background.png";
+
 function v(e) {
     let { inOldSettings: t = !1 } = e,
         n = (0, l.Mw)((0, u.Ay)()),
-        a = i.useMemo(() => ({ backgroundImage: "url(".concat(A, ")") }), []),
+        a = i.useMemo(
+            () => ({
+                backgroundImage: "url(".concat(A, ")"),
+            }),
+            [],
+        ),
         y = i.useCallback(() => {
             (0, d.default)(),
-                (0, h.navigateToQuestHome)({ fromContent: _.uF.QUEST_HOME_MOVE_CALLOUT }),
+                (0, h.navigateToQuestHome)({
+                    fromContent: _.uF.QUEST_HOME_MOVE_CALLOUT,
+                }),
                 f.default.track(
                     m.HAw.QUEST_CONTENT_CLICKED,
                     O(
@@ -66,7 +78,9 @@ function v(e) {
                 );
         }, []);
     return (0, r.jsx)("div", {
-        className: s()(E.kL, { [E.Zd]: t }),
+        className: s()(E.kL, {
+            [E.Zd]: t,
+        }),
         style: a,
         children: (0, r.jsxs)(c.BJc, {
             className: E.FS,

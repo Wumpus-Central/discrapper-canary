@@ -16,6 +16,7 @@ var r = n(265930),
         decoratorKey: null,
         leaves: null,
     });
+
 function d(e, t) {
     var n = [];
     return (
@@ -39,6 +40,7 @@ function d(e, t) {
         a(n)
     );
 }
+
 function f(e, t) {
     return e === t;
 }

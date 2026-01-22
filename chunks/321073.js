@@ -4,11 +4,21 @@ var r = n(557939),
     s = n(496538),
     o = n(732376),
     l = n(503628)(function () {
-        return 4294967297 !== [].push.call({ length: 4294967296 }, 1);
+        return (
+            0x100000001 !==
+            [].push.call(
+                {
+                    length: 0x100000000,
+                },
+                1,
+            )
+        );
     }),
     c = function () {
         try {
-            Object.defineProperty([], "length", { writable: !1 }).push();
+            Object.defineProperty([], "length", {
+                writable: !1,
+            }).push();
         } catch (e) {
             return e instanceof TypeError;
         }

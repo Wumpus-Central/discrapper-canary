@@ -1,6 +1,9 @@
-n.d(t, { C: () => a });
+n.d(t, {
+    C: () => a,
+});
 var r = n(960731),
     i = n(428420);
+
 function a(e) {
     let t = {};
     for (let n of (Object.defineProperty(t, i.$, {
@@ -10,7 +13,10 @@ function a(e) {
     e.fields)) {
         let e = n.localName;
         if (!n.opt)
-            if (n.oneof) t[n.oneof] = { oneofKind: void 0 };
+            if (n.oneof)
+                t[n.oneof] = {
+                    oneofKind: void 0,
+                };
             else if (n.repeat) t[e] = [];
             else
                 switch (n.kind) {

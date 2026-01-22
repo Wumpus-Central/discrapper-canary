@@ -1,10 +1,14 @@
-i.d(n, { default: () => c }), i(896048);
+i.d(n, {
+    default: () => c,
+}),
+    i(896048);
 var e = i(627968),
     s = i(64700),
     a = i(158954),
     l = i(397927),
     r = i(411335),
     o = i(985018);
+
 function c(t) {
     let { initialCustomMessage: n, onSubmit: i, onClose: c, transitionState: u } = t,
         [d, h] = s.useState(n);

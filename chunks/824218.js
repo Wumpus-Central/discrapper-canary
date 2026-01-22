@@ -1,19 +1,26 @@
-n.d(t, { cd: () => l });
+n.d(t, {
+    cd: () => l,
+});
 var r = n(550505),
     i = n(318503),
     a = n(869922),
     s = n(587100);
+
 function o(e, t = 100, n = Infinity) {
     try {
         return c("", e, t, n);
     } catch (e) {
-        return { ERROR: `**non-serializable** (${e})` };
+        return {
+            ERROR: `**non-serializable** (${e})`,
+        };
     }
 }
+
 function l(e, t = 3, n = 102400) {
     let r = o(e, t);
     return p(r) > n ? l(e, t - 1, n) : r;
 }
+
 function c(e, t, n = Infinity, r = Infinity, s = (0, i.s)()) {
     let [o, l] = s;
     if (null == t || (["number", "boolean", "string"].includes(typeof t) && !Number.isNaN(t))) return t;
@@ -44,6 +51,7 @@ function c(e, t, n = Infinity, r = Infinity, s = (0, i.s)()) {
     }
     return l(t), _;
 }
+
 function u(e, t) {
     try {
         if ("domain" === e && t && "object" == typeof t && t._events) return "[Domain]";
@@ -64,13 +72,16 @@ function u(e, t) {
         return `**non-serializable** (${e})`;
     }
 }
+
 function d(e) {
     let t = Object.getPrototypeOf(e);
     return t ? t.constructor.name : "null prototype";
 }
+
 function f(e) {
     return ~-encodeURI(e).split(/%..|./).length;
 }
+
 function p(e) {
     return f(JSON.stringify(e));
 }

@@ -1,4 +1,6 @@
-r.d(t, { default: () => b });
+r.d(t, {
+    default: () => b,
+});
 var n = r(627968),
     o = r(64700),
     i = r(397927),
@@ -7,6 +9,7 @@ var n = r(627968),
     c = r(871648),
     u = r(915908),
     s = r(985018);
+
 function b(e) {
     let { onSelect: t, onClose: r, widget: b } = e,
         f = (0, a.A)(),

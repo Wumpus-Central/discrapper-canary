@@ -142,6 +142,7 @@ let a = {
         anno: "year",
     },
     d = `(?:${(0, r.uJ)(l)}|[0-9]+|[0-9]+\\.[0-9]+|half(?:\\s{0,2}un?)?|un?\\b(?:\\s{0,2}qualcuno)?|qualcuno|molti|a?\\s{0,2}alcuni\\s{0,2}(?:of)?)`;
+
 function f(e) {
     let t = e.toLowerCase();
     if (void 0 !== l[t]) return l[t];
@@ -153,6 +154,7 @@ function f(e) {
     return parseFloat(t);
 }
 let p = `(?:${(0, r.uJ)(c)}|[0-9]{1,2}(?:mo|ndo|rzo|simo|esimo)?)`;
+
 function _(e) {
     let t = e.toLowerCase();
     return void 0 !== c[t]
@@ -160,6 +162,7 @@ function _(e) {
         : parseInt((t = t.replace(/(?:imo|ndo|rzo|rto|nto|sto|tavo|nono|cimo|timo|esimo)$/i, "")));
 }
 let h = "(?:[1-9][0-9]{0,3}\\s{0,2}(?:BE|AD|BC|BCE|CE)|[1-2][0-9]{3}|[5-9][0-9])";
+
 function m(e) {
     if (/BE/i.test(e)) return parseInt((e = e.replace(/BE/i, ""))) - 543;
     if (/BCE?/i.test(e)) return -parseInt((e = e.replace(/BCE?/i, "")));
@@ -170,6 +173,7 @@ function m(e) {
 let g = `(${d})\\s{0,3}(${(0, r.uJ)(u)})`,
     E = RegExp(g, "i"),
     b = (0, r.mb)("(?:(?:about|around)\\s{0,3})?", g);
+
 function y(e) {
     let t = {},
         n = e,
@@ -177,6 +181,7 @@ function y(e) {
     for (; r; ) O(t, r), (n = n.substring(r[0].length).trim()), (r = E.exec(n));
     return t;
 }
+
 function O(e, t) {
     let n = f(t[1]);
     e[u[t[2].toLowerCase()]] = n;

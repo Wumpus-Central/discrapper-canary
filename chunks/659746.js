@@ -17,6 +17,7 @@ var r,
     p = n(998304),
     _ = n(788868),
     h = n(891252);
+
 function m(e, t, n) {
     return (
         t in e
@@ -30,6 +31,7 @@ function m(e, t, n) {
         e
     );
 }
+
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -46,6 +48,7 @@ function g(e) {
     }
     return e;
 }
+
 function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -58,6 +61,7 @@ function E(e, t) {
     }
     return n;
 }
+
 function b(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -69,6 +73,7 @@ function b(e, t) {
         e
     );
 }
+
 function y(e, t) {
     if (null == e) return {};
     var n,
@@ -85,6 +90,7 @@ function y(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function O(e, t) {
     if (null == e) return {};
     var n,
@@ -97,8 +103,8 @@ function O(e, t) {
 }
 let A = Object.freeze({
     DURATION: {
-        [_.PremiumTypes.TIER_0]: 1000,
-        [_.PremiumTypes.TIER_1]: 1000,
+        [_.PremiumTypes.TIER_0]: 1e3,
+        [_.PremiumTypes.TIER_1]: 1e3,
         [_.PremiumTypes.TIER_2]: 1500,
     },
     DELAY: {
@@ -393,6 +399,7 @@ class S extends (r = a.PureComponent) {
         super(...e), m(this, "animation", new l.A.Value(0));
     }
 }
+
 function I(e) {
     let { theme: t } = e,
         n = y(e, ["theme"]),

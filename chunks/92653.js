@@ -1,4 +1,6 @@
-r.d(t, { d: () => k });
+r.d(t, {
+    d: () => k,
+});
 var a = r(1139),
     n = r(106526),
     s = r(26412),
@@ -15,6 +17,7 @@ var a = r(1139),
     y = r(724374),
     g = r(190873),
     v = ["data", "keyPath", "postprocessValue", "hideRoot", "theme", "invertTheme"];
+
 function m(e, t) {
     var r = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -27,6 +30,7 @@ function m(e, t) {
     }
     return r;
 }
+
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {};
@@ -45,6 +49,7 @@ function A(e) {
 var w = function (e) {
     return e;
 };
+
 function O(e) {
     var t,
         r,
@@ -62,17 +67,29 @@ function O(e) {
             ).filter(function (t) {
                 return e[t];
             })).length > 0 &&
-                ((t = "string" == typeof t ? { extend: t } : A({}, t)),
+                ((t =
+                    "string" == typeof t
+                        ? {
+                              extend: t,
+                          }
+                        : A({}, t)),
                 a.forEach(function (a) {
                     console.error('Styling method "'.concat(a, '" is deprecated, use "theme" property instead')),
                         (t[r[a]] = function (t) {
                             for (var r = t.style, n = arguments.length, s = Array(n > 1 ? n - 1 : 0), o = 1; o < n; o++)
                                 s[o - 1] = arguments[o];
-                            return { style: A(A({}, r), e[a].apply(e, s)) };
+                            return {
+                                style: A(A({}, r), e[a].apply(e, s)),
+                            };
                         });
                 })),
             t);
-    return e.invertTheme && (n = (0, g.WJ)(n)), { styling: (0, y.A)(n) };
+    return (
+        e.invertTheme && (n = (0, g.WJ)(n)),
+        {
+            styling: (0, y.A)(n),
+        }
+    );
 }
 var k = (function (e) {
     (0, i.A)(u, e);
@@ -95,6 +112,7 @@ var k = (function (e) {
                     (0, c.A)(this, e)
                 );
             });
+
     function u(e) {
         var t;
         return (0, s.A)(this, u), ((t = r.call(this, e)).state = O(e)), t;

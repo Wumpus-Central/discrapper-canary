@@ -1,4 +1,6 @@
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});
 var r = {};
 r = {
     deselectedItem: (e) => `Vienums ${e.item} nav atlas\u{12B}ts.`,
@@ -6,10 +8,6 @@ r = {
     select: "Atlasīt",
     selectedAll: "Atlasīti visi vienumi.",
     selectedCount: (e, t) =>
-        `${t.plural(e.count, {
-            "=0": "Nav atlasīts neviens vienums",
-            one: () => `Atlas\u{12B}to vienumu skaits: ${t.number(e.count)}`,
-            other: () => `Atlas\u{12B}to vienumu skaits: ${t.number(e.count)}`,
-        })}.`,
+        `${t.plural(e.count, { "=0": "Nav atlasīts neviens vienums", one: () => `Atlas\u{12B}to vienumu skaits: ${t.number(e.count)}`, other: () => `Atlas\u{12B}to vienumu skaits: ${t.number(e.count)}` })}.`,
     selectedItem: (e) => `Atlas\u{12B}ts vienums ${e.item}.`,
 };

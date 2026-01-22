@@ -15,6 +15,7 @@ var i = n(397927),
     f = n(985018),
     p = n(511761),
     _ = n(271110);
+
 function h(e, t, n) {
     return (
         t in e
@@ -28,6 +29,7 @@ function h(e, t, n) {
         e
     );
 }
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -44,6 +46,7 @@ function m(e) {
     }
     return e;
 }
+
 function g(e, t) {
     if (null == e) return {};
     var n,
@@ -60,6 +63,7 @@ function g(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function E(e, t) {
     if (null == e) return {};
     var n,
@@ -70,13 +74,17 @@ function E(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function b(e) {
     var t, n;
     let { onClose: i, analyticsSource: h } = e,
         E = g(e, ["onClose", "analyticsSource"]),
         b = f.intl.format(f.t["JmbS+T"], {
             onClick: () => {
-                (0, s.openUserSettings)(a.X.NITRO_PANEL, { section: d.nc_.PREMIUM }), i();
+                (0, s.openUserSettings)(a.X.NITRO_PANEL, {
+                    section: d.nc_.PREMIUM,
+                }),
+                    i();
             },
         }),
         y = (0, l.V)(),
@@ -109,10 +117,20 @@ function b(e) {
         ),
     );
 }
+
 function y(e) {
     let { analytics: t } = e;
     (0, i.mMO)(async () => {
         let { default: e } = await Promise.resolve().then(n.bind(n, 32605));
-        return (n) => (0, r.jsx)(e, m({ analyticsSource: t }, n));
+        return (n) =>
+            (0, r.jsx)(
+                e,
+                m(
+                    {
+                        analyticsSource: t,
+                    },
+                    n,
+                ),
+            );
     });
 }

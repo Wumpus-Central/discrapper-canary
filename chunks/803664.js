@@ -1,4 +1,7 @@
-n.d(t, { A: () => _ }), n(896048);
+n.d(t, {
+    A: () => _,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -8,6 +11,7 @@ var r = n(627968),
     c = n(994500),
     u = n(287809),
     d = n(985018);
+
 function f(e, t, n) {
     return (
         t in e
@@ -21,6 +25,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,6 +42,7 @@ function p(e) {
     }
     return e;
 }
+
 function _(e) {
     let { user: t, location: f = "ContextMenu", onFriendRequestSent: _, onFriendRemove: h, appContext: m } = e,
         { id: g, username: E, bot: b } = t,
@@ -48,6 +54,7 @@ function _(e) {
         [A, v] = (0, a.yK)([c.A], () => [c.A.isFriend(g), c.A.isBlocked(g)], [g]),
         [S, I] = i.useState(!1);
     if (b || y) return null;
+
     function T() {
         (0, s.mMO)(
             async () => {
@@ -57,19 +64,29 @@ function _(e) {
                         e,
                         p(
                             {
-                                title: d.intl.formatToPlainString(d.t.fPLvZd, { name: E }),
-                                subtitle: d.intl.format(d.t.l5FFq6, { name: E }),
+                                title: d.intl.formatToPlainString(d.t.fPLvZd, {
+                                    name: E,
+                                }),
+                                subtitle: d.intl.format(d.t.l5FFq6, {
+                                    name: E,
+                                }),
                                 confirmText: d.intl.string(d.t.cvSt1J),
                                 cancelText: d.intl.string(d.t["ETE/oC"]),
                                 onConfirm: () => {
-                                    o.A.removeFriend(g, { location: f }), I(!1), null == h || h();
+                                    o.A.removeFriend(g, {
+                                        location: f,
+                                    }),
+                                        I(!1),
+                                        null == h || h();
                                 },
                             },
                             t,
                         ),
                     );
             },
-            { contextKey: null != m ? (0, s.TId)(m) : void 0 },
+            {
+                contextKey: null != m ? (0, s.TId)(m) : void 0,
+            },
         );
     }
     return A
@@ -85,7 +102,9 @@ function _(e) {
                   S ||
                       (o.A.addRelationship({
                           userId: g,
-                          context: { location: f },
+                          context: {
+                              location: f,
+                          },
                       }),
                       I(!0),
                       null == _ || _());

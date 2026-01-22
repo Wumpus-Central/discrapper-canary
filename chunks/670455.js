@@ -15,6 +15,7 @@ n.d(t, {
     uf: () => d,
 });
 var r = n(873298);
+
 function i(e, t, n) {
     return (
         t in e
@@ -28,6 +29,7 @@ function i(e, t, n) {
         e
     );
 }
+
 function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -44,6 +46,7 @@ function a(e) {
     }
     return e;
 }
+
 function s(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -56,6 +59,7 @@ function s(e, t) {
     }
     return n;
 }
+
 function o(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -84,9 +88,15 @@ let d = [
         r.iL.BLOCK_USER,
         r.iL.SEARCH_RESULTS,
         r.iL.AGE_VERIFICATION,
-    ].reduce((e, t, n) => o(a({}, e), { [t]: n }), {}),
+    ].reduce(
+        (e, t, n) =>
+            o(a({}, e), {
+                [t]: n,
+            }),
+        {},
+    ),
     f = ["bad", "neutral", "good"],
-    p = 8640000000000000;
+    p = 864e13;
 var _ = (function (e) {
         return (
             (e.CONNECTION = "CONNECTION"),

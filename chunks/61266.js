@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -10,6 +12,7 @@ var r = n(627968),
     d = n(560438),
     f = n(483496),
     p = n(206314);
+
 function _(e) {
     let t = (0, c.jc)();
     return (0, i.useMemo)(() => {
@@ -26,6 +29,7 @@ function _(e) {
               o.A.parse(e, !0, n));
     }, [e, t]);
 }
+
 function h(e) {
     let { content: t, className: n } = e,
         i = _(t),

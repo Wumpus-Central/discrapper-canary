@@ -1,4 +1,6 @@
-n.d(e, { A: () => f });
+n.d(e, {
+    A: () => f,
+});
 var l = n(627968);
 n(64700);
 var r = n(311907),
@@ -9,6 +11,7 @@ var r = n(311907),
     c = n(563312),
     s = n(823508),
     d = n(985018);
+
 function g(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
@@ -34,6 +37,7 @@ function g(t) {
     }
     return t;
 }
+
 function y(t, e) {
     return (
         (e = null != e ? e : {}),
@@ -52,6 +56,7 @@ function y(t, e) {
         t
     );
 }
+
 function f(t) {
     let { guildEventId: e, guild: f, channel: b, recurrenceId: p, isRecurrenceItem: A } = t,
         { canManageGuildEvent: v } = (0, u.nr)(null != b ? b : f),

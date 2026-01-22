@@ -1,4 +1,9 @@
-n.d(t, { A: () => g }), n(896048), n(747238), n(812715);
+n.d(t, {
+    A: () => g,
+}),
+    n(896048),
+    n(747238),
+    n(812715);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -16,11 +21,14 @@ let h = {
         openPopoutType: "gift_effect_emoji_picker",
     },
     m = f.b_.GIFT;
+
 function g(e) {
     let { setEmojiConfetti: t, emojiConfetti: n } = e,
         [a, d] = i.useState(!1),
         f = i.useRef(null),
-        g = (0, u.A)({ location: "GiftEmoji" }),
+        g = (0, u.A)({
+            location: "GiftEmoji",
+        }),
         E = s()(_.Qq, g && _.Ow),
         b = (e) =>
             (0, r.jsxs)("div", {
@@ -66,7 +74,9 @@ function g(e) {
                     className: _.vX,
                     listHeaderClassName: _.vX,
                     categoryListClassName: _.jv,
-                    searchProps: { accessory: (0, r.jsx)(r.Fragment, {}) },
+                    searchProps: {
+                        accessory: (0, r.jsx)(r.Fragment, {}),
+                    },
                 }),
             });
         },

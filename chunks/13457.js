@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968),
     s = n(64700),
     i = n(397927),
@@ -7,10 +9,13 @@ var r = n(627968),
     c = n(652215),
     l = n(985018),
     d = n(928490);
+
 function f(e) {
     let { onContinue: t, onClose: n } = e,
         f = o.A.getArticleURL(c.MVz.XBOX_CONNECTION),
-        b = l.intl.format(l.t.CIc3IN, { helpdeskArticleUrl: f }),
+        b = l.intl.format(l.t.CIc3IN, {
+            helpdeskArticleUrl: f,
+        }),
         u = s.useMemo(
             () => [
                 {

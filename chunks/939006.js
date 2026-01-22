@@ -1,4 +1,9 @@
-n.d(e, { default: () => R }), n(321073), n(228524), n(896048);
+n.d(e, {
+    default: () => R,
+}),
+    n(321073),
+    n(228524),
+    n(896048);
 var i = n(627968),
     l = n(64700),
     s = n(136722),
@@ -23,6 +28,7 @@ var i = n(627968),
     O = n(985018),
     C = n(513804),
     I = n(796343);
+
 function P() {
     return (P =
         Object.assign ||
@@ -34,6 +40,7 @@ function P() {
             return t;
         }).apply(this, arguments);
 }
+
 function A(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
@@ -59,6 +66,7 @@ function A(t) {
     }
     return t;
 }
+
 function N(t, e) {
     return (
         (e = null != e ? e : {}),
@@ -77,6 +85,7 @@ function N(t, e) {
         t
     );
 }
+
 function M(t) {
     let { guild: e, verificationLevelMet: n, contentFilterMet: s } = t;
     return (
@@ -104,6 +113,7 @@ function M(t) {
         })
     );
 }
+
 function w(t) {
     let {
         guild: e,
@@ -168,6 +178,7 @@ function w(t) {
         })
     );
 }
+
 function L(t) {
     let { title: e, description: n } = t;
     return (0, i.jsxs)(a.BJc, {
@@ -197,6 +208,7 @@ function L(t) {
         ],
     });
 }
+
 function T(t) {
     let { enabledPermissions: e, onGetPermisisonName: n } = t;
     return (0, i.jsxs)("div", {
@@ -216,7 +228,9 @@ function T(t) {
                         {
                             className: C.ce,
                             children: [
-                                (0, i.jsx)("div", { className: C.dT }),
+                                (0, i.jsx)("div", {
+                                    className: C.dT,
+                                }),
                                 (0, i.jsx)(a.Text, {
                                     variant: "text-sm/normal",
                                     color: "text-default",
@@ -231,6 +245,7 @@ function T(t) {
         ],
     });
 }
+
 function _(t) {
     let { disabledPermissions: e, onGetPermisisonName: n } = t,
         l = O.intl.string(O.t.Yo5qlq);
@@ -253,7 +268,9 @@ function _(t) {
                             {
                                 className: C.ce,
                                 children: [
-                                    (0, i.jsx)("div", { className: C.xE }),
+                                    (0, i.jsx)("div", {
+                                        className: C.xE,
+                                    }),
                                     (0, i.jsx)(a.Text, {
                                         variant: "text-sm/normal",
                                         color: "text-muted",
@@ -269,6 +286,7 @@ function _(t) {
         })
     );
 }
+
 function D(t) {
     let { permissions: e } = t,
         n = (t) => {
@@ -300,6 +318,7 @@ function D(t) {
         ],
     });
 }
+
 function B(t) {
     let { guild: e, defaultNotificationSettingsMet: n, everyonePermissionsMet: s } = t;
     l.useEffect(() => {
@@ -339,10 +358,14 @@ function B(t) {
                         }),
                 ],
             }),
-            !s && (0, i.jsx)(D, { permissions: r }),
+            !s &&
+                (0, i.jsx)(D, {
+                    permissions: r,
+                }),
         ],
     });
 }
+
 function G(t) {
     let { guild: e, policyAccepted: n, onPolicyAcceptedChange: s } = t;
     return (
@@ -367,11 +390,14 @@ function G(t) {
         })
     );
 }
+
 function R(t) {
     let {} = t,
         e = P({}, t);
     l.useEffect(() => {
-        m.default.track(v.HAw.OPEN_MODAL, { type: y.bK });
+        m.default.track(v.HAw.OPEN_MODAL, {
+            type: y.bK,
+        });
     }, []);
     let { guild: n } = (0, r.cf)([d.A], () => d.A.getProps()),
         [o, c] = l.useState("intro"),
@@ -393,8 +419,12 @@ function R(t) {
             if (null == K || !U) return;
             let t = D ? null : s.TF(K.permissions, y.e$);
             if (null != t && t !== K.permissions) {
-                let e = N(A({}, K), { permissions: t });
-                await (0, p.JY)(n.id, [e], void 0, void 0, void 0, { throwErr: !0 });
+                let e = N(A({}, K), {
+                    permissions: t,
+                });
+                await (0, p.JY)(n.id, [e], void 0, void 0, void 0, {
+                    throwErr: !0,
+                });
             }
             let e = A(
                 {
@@ -402,14 +432,26 @@ function R(t) {
                     rulesChannelId: C,
                     publicUpdatesChannelId: T,
                 },
-                !S && { verificationLevel: v.PvD.LOW },
-                !j && { explicitContentFilter: v.gh6.ALL_MEMBERS },
-                !Y && { defaultMessageNotifications: v.orn.ONLY_MENTIONS },
+                !S && {
+                    verificationLevel: v.PvD.LOW,
+                },
+                !j && {
+                    explicitContentFilter: v.gh6.ALL_MEMBERS,
+                },
+                !Y && {
+                    defaultMessageNotifications: v.orn.ONLY_MENTIONS,
+                },
             );
-            u.A.updateGuild(e), await u.A.saveGuild(n.id, e, { throwErr: !0 });
+            u.A.updateGuild(e),
+                await u.A.saveGuild(n.id, e, {
+                    throwErr: !0,
+                });
         },
         J = async () => {
-            m.default.track(v.HAw.MODAL_DISMISSED, { type: y.bK }), await e.onClose();
+            m.default.track(v.HAw.MODAL_DISMISSED, {
+                type: y.bK,
+            }),
+                await e.onClose();
         },
         V = [
             {
@@ -423,7 +465,9 @@ function R(t) {
                     },
                     gradientColor: "blue",
                 },
-                nextButtonProps: { text: O.intl.string(O.t.LhlgY9) },
+                nextButtonProps: {
+                    text: O.intl.string(O.t.LhlgY9),
+                },
             },
             {
                 stepKey: y.pj.SAFETY_CHECK,
@@ -436,7 +480,9 @@ function R(t) {
                     verificationLevelMet: S,
                     contentFilterMet: j,
                 }),
-                nextButtonProps: { text: O.intl.string(O.t.JFfins) },
+                nextButtonProps: {
+                    text: O.intl.string(O.t.JFfins),
+                },
             },
             {
                 stepKey: y.pj.BASICS,
@@ -454,18 +500,26 @@ function R(t) {
             },
             {
                 stepKey: y.pj.FINISH,
-                modalProps: { title: O.intl.string(O.t.EzGuSr) },
+                modalProps: {
+                    title: O.intl.string(O.t.EzGuSr),
+                },
                 body: (0, i.jsx)(B, {
                     guild: n,
                     defaultNotificationSettingsMet: Y,
                     everyonePermissionsMet: D,
                 }),
-                nextButtonProps: { text: O.intl.string(O.t.JFfins) },
+                nextButtonProps: {
+                    text: O.intl.string(O.t.JFfins),
+                },
             },
             {
                 stepKey: y.pj.RULES,
-                modalProps: { title: O.intl.string(O.t["Pj/s/a"]) },
-                nextButtonProps: { text: O.intl.string(O.t.XGl4ba) },
+                modalProps: {
+                    title: O.intl.string(O.t["Pj/s/a"]),
+                },
+                nextButtonProps: {
+                    text: O.intl.string(O.t.XGl4ba),
+                },
                 body: (0, i.jsx)(G, {
                     guild: n,
                     policyAccepted: U,

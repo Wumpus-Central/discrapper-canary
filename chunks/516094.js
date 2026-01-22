@@ -1,4 +1,9 @@
-l.d(t, { A: () => I }), l(228524), l(321073), l(896048);
+l.d(t, {
+    A: () => I,
+}),
+    l(228524),
+    l(321073),
+    l(896048);
 var n = l(627968),
     a = l(64700),
     r = l(503698),
@@ -21,6 +26,7 @@ var n = l(627968),
     C = l(696016),
     k = l(985018),
     N = l(938504);
+
 function E(e) {
     let { eventType: t, importance: l, style: r, title: i, description: s } = e,
         o = a.useMemo(() => (0 === l ? 16 : 0.5 === l ? 20 : 1 === l ? 24 : 16), [l]),
@@ -121,6 +127,7 @@ function E(e) {
               })
         : h;
 }
+
 function S(e) {
     let { videoLength: t, clip: l, onMouseDown: r } = e,
         { timeNotches: i, subNotches: s } = a.useMemo(() => {
@@ -165,7 +172,9 @@ function S(e) {
             for (let e = r; e < t; e += r)
                 if (!l.some((t) => 0.01 > Math.abs(t.time - e))) {
                     let l = (e / t) * 100;
-                    a.push({ position: l });
+                    a.push({
+                        position: l,
+                    });
                 }
             return {
                 timeNotches: l,
@@ -183,8 +192,12 @@ function S(e) {
                         "div",
                         {
                             className: N.MJ,
-                            style: { left: "".concat(e.position, "%") },
-                            children: (0, n.jsx)("div", { className: N.p }),
+                            style: {
+                                left: "".concat(e.position, "%"),
+                            },
+                            children: (0, n.jsx)("div", {
+                                className: N.p,
+                            }),
                         },
                         "sub-".concat(t),
                     ),
@@ -194,9 +207,13 @@ function S(e) {
                         "div",
                         {
                             className: N.Cv,
-                            style: { left: "".concat(e.position, "%") },
+                            style: {
+                                left: "".concat(e.position, "%"),
+                            },
                             children: [
-                                (0, n.jsx)("div", { className: N.d9 }),
+                                (0, n.jsx)("div", {
+                                    className: N.d9,
+                                }),
                                 (0, n.jsxs)(d.Text, {
                                     variant: "text-xxs/normal",
                                     color: "text-muted",
@@ -224,6 +241,7 @@ function S(e) {
         }),
     });
 }
+
 function w(e) {
     var t, l;
     let { clip: r, videoLength: i } = e,
@@ -237,7 +255,7 @@ function w(e) {
             (e) => {
                 var t, l;
                 if (null == i || i <= 0 || (null == (t = r.decision) ? void 0 : t.timestamp) == null) return null;
-                let n = (e - ((null == (l = r.decision) ? void 0 : l.timestamp) - r.length)) / 1000;
+                let n = (e - ((null == (l = r.decision) ? void 0 : l.timestamp) - r.length)) / 1e3;
                 return n < 0 || n > i ? null : (n / i) * 100;
             },
             [i, null == (l = r.decision) ? void 0 : l.timestamp, r.length],
@@ -255,13 +273,16 @@ function w(e) {
                           importance: null != (l = e.signal.importance) ? l : 0,
                           title: e.signal.title,
                           description: e.signal.description,
-                          style: { left: "".concat(a, "%") },
+                          style: {
+                              left: "".concat(a, "%"),
+                          },
                       },
                       "".concat(e.timestamp, "-").concat(t),
                   );
         }),
     });
 }
+
 function O(e) {
     var t, l;
     let { clip: r, videoLength: i } = e,
@@ -275,7 +296,7 @@ function O(e) {
             (e) => {
                 var t, l;
                 if (null == i || i <= 0 || (null == (t = r.decision) ? void 0 : t.timestamp) == null) return null;
-                let n = (e - ((null == (l = r.decision) ? void 0 : l.timestamp) - r.length)) / 1000;
+                let n = (e - ((null == (l = r.decision) ? void 0 : l.timestamp) - r.length)) / 1e3;
                 return n < 0 || n > i ? null : (n / i) * 100;
             },
             [i, null == (l = r.decision) ? void 0 : l.timestamp, r.length],
@@ -295,7 +316,9 @@ function O(e) {
                     position: "top",
                     children: (0, n.jsx)("div", {
                         className: N.HS,
-                        style: { left: "".concat(r, "%") },
+                        style: {
+                            left: "".concat(r, "%"),
+                        },
                         children: (0, n.jsx)(m.A, {
                             emojiId: null != (l = e.signal.emojiId) ? l : null,
                             emojiName: null != (a = e.signal.emojiName) ? a : null,
@@ -309,6 +332,7 @@ function O(e) {
         }),
     });
 }
+
 function A(e) {
     var t, l;
     let { clip: r, videoLength: i } = e,
@@ -322,7 +346,7 @@ function A(e) {
             (e) => {
                 var t, l;
                 if (null == i || i <= 0 || (null == (t = r.decision) ? void 0 : t.timestamp) == null) return null;
-                let n = (e - ((null == (l = r.decision) ? void 0 : l.timestamp) - r.length)) / 1000;
+                let n = (e - ((null == (l = r.decision) ? void 0 : l.timestamp) - r.length)) / 1e3;
                 return n < 0 || n > i ? null : (n / i) * 100;
             },
             [i, null == (l = r.decision) ? void 0 : l.timestamp, r.length],
@@ -340,7 +364,9 @@ function A(e) {
                           position: "top",
                           children: (0, n.jsx)("div", {
                               className: N.HS,
-                              style: { left: "".concat(l, "%") },
+                              style: {
+                                  left: "".concat(l, "%"),
+                              },
                               children: (0, n.jsx)(d.oyn, {
                                   size: "custom",
                                   width: 20,
@@ -480,7 +506,12 @@ let I = function (e) {
                     i = q.current;
                 if (null == i) return;
                 (i.width = a), (i.height = X);
-                let s = null == i ? void 0 : i.getContext("2d", { willReadFrequently: !0 });
+                let s =
+                    null == i
+                        ? void 0
+                        : i.getContext("2d", {
+                              willReadFrequently: !0,
+                          });
                 if (null == s) return;
                 let o = Q.current;
                 if ((null == (e = o[r]) ? void 0 : e.length) === r) {
@@ -578,7 +609,9 @@ let I = function (e) {
                 (0, n.jsx)("div", {
                     className: N.PH,
                     children: (0, n.jsxs)("div", {
-                        className: i()(N.IO, { [N.Dg]: null != z }),
+                        className: i()(N.IO, {
+                            [N.Dg]: null != z,
+                        }),
                         onMouseDown: et,
                         children: [
                             (0, n.jsx)("canvas", {
@@ -594,7 +627,9 @@ let I = function (e) {
                                     tabIndex: 0,
                                     ref: B,
                                     className: N.lG,
-                                    style: { left: null != c && c > 0 ? "".concat((M / c) * 100, "%") : 0 },
+                                    style: {
+                                        left: null != c && c > 0 ? "".concat((M / c) * 100, "%") : 0,
+                                    },
                                 }),
                             }),
                             (0, n.jsx)(p.A, {
@@ -614,7 +649,9 @@ let I = function (e) {
                                 children: [
                                     (0, n.jsx)(d.vN3, {
                                         children: (0, n.jsx)("button", {
-                                            className: i()(N.uI, { [N.cB]: "start" === z }),
+                                            className: i()(N.uI, {
+                                                [N.cB]: "start" === z,
+                                            }),
                                             onMouseDown: et,
                                             onKeyDown: Z,
                                             role: "slider",
@@ -624,12 +661,16 @@ let I = function (e) {
                                             "aria-valuetext": L(v),
                                             "aria-valuemax": b - C.zj,
                                             "aria-label": k.intl.string(k.t["+BTvw8"]),
-                                            children: (0, n.jsx)("div", { className: N.FV }),
+                                            children: (0, n.jsx)("div", {
+                                                className: N.FV,
+                                            }),
                                         }),
                                     }),
                                     (0, n.jsx)(d.vN3, {
                                         children: (0, n.jsx)("button", {
-                                            className: i()(N.H1, { [N.cB]: "end" === z }),
+                                            className: i()(N.H1, {
+                                                [N.cB]: "end" === z,
+                                            }),
                                             onMouseDown: et,
                                             onKeyDown: ee,
                                             role: "slider",
@@ -639,7 +680,9 @@ let I = function (e) {
                                             "aria-valuetext": L(b),
                                             "aria-valuemax": c,
                                             "aria-label": k.intl.string(k.t.bBgBYo),
-                                            children: (0, n.jsx)("div", { className: N.kn }),
+                                            children: (0, n.jsx)("div", {
+                                                className: N.kn,
+                                            }),
                                         }),
                                     }),
                                 ],
@@ -651,6 +694,7 @@ let I = function (e) {
         }),
     });
 };
+
 function T(e) {
     ((e = Math.round(100 * e) / 100) < 0 || 0.01 > Math.abs(e)) && (e = 0);
     let t = Math.floor(e / 60),
@@ -663,9 +707,14 @@ function T(e) {
         "".concat(t, ":").concat(l, ".").concat(n)
     );
 }
+
 function L(e) {
     let t = Math.floor(e / 60),
-        l = k.intl.formatToPlainString(k.t.iXLF9W, { minutes: t }),
-        n = k.intl.formatToPlainString(k.t.geSp4K, { seconds: e % 60 });
+        l = k.intl.formatToPlainString(k.t.iXLF9W, {
+            minutes: t,
+        }),
+        n = k.intl.formatToPlainString(k.t.geSp4K, {
+            seconds: e % 60,
+        });
     return "".concat(l, " ").concat(n);
 }

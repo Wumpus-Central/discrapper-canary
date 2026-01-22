@@ -1,4 +1,6 @@
-n.d(t, { A: () => l });
+n.d(t, {
+    A: () => l,
+});
 var r = n(73153);
 let l = {
     search(e, t) {
@@ -40,6 +42,8 @@ let l = {
         });
     },
     close() {
-        r.h.dispatch({ type: "PRIVATE_CHANNEL_RECIPIENTS_INVITE_CLOSE" });
+        r.h.dispatch({
+            type: "PRIVATE_CHANNEL_RECIPIENTS_INVITE_CLOSE",
+        });
     },
 };

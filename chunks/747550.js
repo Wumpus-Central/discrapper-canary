@@ -1,9 +1,14 @@
-n.d(t, { A: () => u }), n(896048), n(733351);
+n.d(t, {
+    A: () => u,
+}),
+    n(896048),
+    n(733351);
 var r = n(449054),
     i = n(417426),
     l = n(823448),
     a = n(351022),
     s = n(282026);
+
 function o(e, t, n) {
     return (
         t in e
@@ -94,7 +99,9 @@ let u = new (class extends c {
                         limit: 12,
                         withCounts: !0,
                     }),
-                    s.A.setState({ resultsQuery: t }));
+                    s.A.setState({
+                        resultsQuery: t,
+                    }));
             });
     }
 })();

@@ -1,4 +1,6 @@
-n.d(t, { A: () => S });
+n.d(t, {
+    A: () => S,
+});
 var r = n(627968),
     l = n(64700),
     a = n(311907),
@@ -21,19 +23,30 @@ var r = n(627968),
     y = n(838541),
     w = n(985018),
     O = n(106259);
+
 function S(e) {
-    return e.isActiveThread() ? (0, r.jsx)(T, { channel: e }) : (0, r.jsx)(C, { channel: e });
+    return e.isActiveThread()
+        ? (0, r.jsx)(T, {
+              channel: e,
+          })
+        : (0, r.jsx)(C, {
+              channel: e,
+          });
 }
+
 function T(e) {
     let { channel: t } = e,
         n = (0, a.bG)([A.A], () => A.A.getMostRecentMessage(t.id));
     return null == n
-        ? (0, r.jsx)(N, { channel: t })
+        ? (0, r.jsx)(N, {
+              channel: t,
+          })
         : (0, r.jsx)(k, {
               channel: t,
               message: n,
           });
 }
+
 function N(e) {
     let { channel: t } = e,
         n = (0, p.JO)(t);
@@ -41,12 +54,18 @@ function N(e) {
         className: O.W$,
         variant: "text-sm/normal",
         color: "text-default",
-        children: [w.intl.string(w.t.Jmh6n9), "\xA0 \u2022 \xA0", (0, p.aK)(n)],
+        children: [w.intl.string(w.t.Jmh6n9), "\xa0 • \xa0", (0, p.aK)(n)],
     });
 }
+
 function k(e) {
     let { channel: t, message: n } = e;
-    (0, i.E)({ [t.guild_id]: [n.author.id] }, "ThreadBrowserRowSubtext");
+    (0, i.E)(
+        {
+            [t.guild_id]: [n.author.id],
+        },
+        "ThreadBrowserRowSubtext",
+    );
     let c = (0, a.bG)([x.default], () => {
             var e;
             return null != (e = x.default.getUser(n.author.id)) ? e : n.author;
@@ -62,7 +81,12 @@ function k(e) {
             [n],
         ),
         T = l.useMemo(() => {
-            let e = null != n.content && "" !== n.content ? (0, u.Ay)(n, { formatInline: !0 }).content : null,
+            let e =
+                    null != n.content && "" !== n.content
+                        ? (0, u.Ay)(n, {
+                              formatInline: !0,
+                          }).content
+                        : null,
                 {
                     contentPlaceholder: t,
                     renderedContent: l,
@@ -74,7 +98,15 @@ function k(e) {
                     iconSize: y.eJ,
                 });
             return (0, r.jsxs)(r.Fragment, {
-                children: [s, null != l ? l : (0, r.jsx)("span", { children: t }), a],
+                children: [
+                    s,
+                    null != l
+                        ? l
+                        : (0, r.jsx)("span", {
+                              children: t,
+                          }),
+                    a,
+                ],
             });
         }, [n, w, S]);
     return (0, r.jsxs)(s.Text, {
@@ -93,13 +125,14 @@ function k(e) {
                 colorStrings: A,
                 className: O.fh,
             }),
-            ":\xA0",
+            ":\xa0",
             T,
-            "\xA0 \u2022 \xA0",
+            "\xa0 • \xa0",
             (0, p.aK)(v.default.extractTimestamp(n.id)),
         ],
     });
 }
+
 function C(e) {
     var t, n, l, u;
     let { channel: d } = e,
@@ -110,7 +143,12 @@ function C(e) {
                       null != (t = null == (u = d.threadMetadata) ? void 0 : u.archiveTimestamp) ? t : Date.now(),
                   ).getTime()
                 : v.default.extractTimestamp(h);
-    (0, i.E)({ [d.guild_id]: [d.ownerId] }, "ThreadBrowserRowSubtext");
+    (0, i.E)(
+        {
+            [d.guild_id]: [d.ownerId],
+        },
+        "ThreadBrowserRowSubtext",
+    );
     let A = (0, a.bG)([x.default], () => x.default.getUser(d.ownerId)),
         y = (0, a.bG)([m.Ay], () => m.Ay.getMember(d.guild_id, d.ownerId)),
         S = (0, g.gn)(
@@ -136,7 +174,9 @@ function C(e) {
                                   color: "currentColor",
                               }),
                           }),
-                          w.intl.format(w.t["5Wk9+o"], { time: (0, p.aK)(j) }),
+                          w.intl.format(w.t["5Wk9+o"], {
+                              time: (0, p.aK)(j),
+                          }),
                       ],
                   })
                 : (0, r.jsxs)(r.Fragment, {
@@ -163,9 +203,11 @@ function C(e) {
                           }),
                           (0, r.jsx)("span", {
                               className: O.xE,
-                              children: "\u2022",
+                              children: "•",
                           }),
-                          w.intl.format(w.t["5Wk9+o"], { time: (0, p.aK)(j) }),
+                          w.intl.format(w.t["5Wk9+o"], {
+                              time: (0, p.aK)(j),
+                          }),
                       ],
                   }),
     });

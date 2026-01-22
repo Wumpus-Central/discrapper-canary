@@ -28,6 +28,7 @@ let f = function (e) {
               ? i.Uk3
               : i._xR;
 };
+
 function p(e) {
     var t, n, a, c, d;
     let { activity: p } = e,
@@ -55,6 +56,7 @@ function p(e) {
         ],
     });
 }
+
 function _(e) {
     let { activity: t } = e;
     if ((0, a.A)(t) || null == t.party) return null;
@@ -66,6 +68,7 @@ function _(e) {
               text: n,
           });
 }
+
 function h(e) {
     var t;
     let { activity: n } = e,

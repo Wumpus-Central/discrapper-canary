@@ -1,4 +1,6 @@
-n.d(t, { A: () => E });
+n.d(t, {
+    A: () => E,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -13,6 +15,7 @@ var i = n(503698),
     p = n(985018),
     _ = n(333354),
     h = n(251983);
+
 function m(e) {
     let { tier: t, isActive: n } = e,
         i = t === f.TVA.TIER_1,
@@ -45,6 +48,7 @@ function m(e) {
         ],
     });
 }
+
 function g(e) {
     let { guild: t, definition: n } = e,
         { tier: i, perks: s } = n,
@@ -67,7 +71,9 @@ function g(e) {
                         className: h.$h,
                         children: [
                             (0, r.jsx)(c.Heading, {
-                                className: a()(h.JJ, { [h.eX]: !o }),
+                                className: a()(h.JJ, {
+                                    [h.eX]: !o,
+                                }),
                                 variant: "heading-xl/semibold",
                                 color: o ? "text-strong" : void 0,
                                 children: p.intl.string(
@@ -83,7 +89,9 @@ function g(e) {
                                     }),
                                     (0, r.jsx)(c.Text, {
                                         variant: "text-md/medium",
-                                        children: p.intl.format(p.t["pob/cL"], { subscriptions: l }),
+                                        children: p.intl.format(p.t["pob/cL"], {
+                                            subscriptions: l,
+                                        }),
                                     }),
                                 ],
                             }),
@@ -98,7 +106,9 @@ function g(e) {
                                 return (0, r.jsxs)(
                                     "div",
                                     {
-                                        className: a()(h.bK, { [h.o]: !o }),
+                                        className: a()(h.bK, {
+                                            [h.o]: !o,
+                                        }),
                                         children: [
                                             (0, r.jsx)(n, {
                                                 className: h.kf,
@@ -127,6 +137,7 @@ function g(e) {
         ],
     });
 }
+
 function E(e) {
     let { guild: t, className: n } = e;
     return (0, r.jsx)("div", {

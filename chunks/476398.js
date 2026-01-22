@@ -1,4 +1,9 @@
-n.d(t, { A: () => b }), n(896048), n(114821), n(339614);
+n.d(t, {
+    A: () => b,
+}),
+    n(896048),
+    n(114821),
+    n(339614);
 var a = n(627968),
     l = n(311907),
     i = n(397927),
@@ -12,6 +17,7 @@ var a = n(627968),
     p = n(583846),
     h = n(424994),
     f = n(805176);
+
 function x(e) {
     let { id: t } = e,
         n = (0, l.bG)([o.default], () => o.default.getUser(t));
@@ -31,6 +37,7 @@ function x(e) {
               }),
           });
 }
+
 function b() {
     var e;
     let t = (0, l.bG)([u.A], () => u.A.getFeed(h.X1.GLOBAL_FEED)),
@@ -86,7 +93,13 @@ function b() {
                 variant: "heading-md/semibold",
                 children: "Selected Content",
             }),
-            null != o ? (0, a.jsx)("ul", { children: o }) : (0, a.jsx)("div", { children: "(none?)" }),
+            null != o
+                ? (0, a.jsx)("ul", {
+                      children: o,
+                  })
+                : (0, a.jsx)("div", {
+                      children: "(none?)",
+                  }),
         ],
     });
 }

@@ -28,16 +28,20 @@ var r = n(735438),
     d = n(188275),
     f = n(652215);
 let p = l.QB ? "webp" : "jpg";
+
 function _(e) {
     return null != e && d.Pc.has(e.id);
 }
+
 function h(e) {
     return null != e && e.productLine === f.EZt.SOCIAL_LAYER_GAME_ITEM;
 }
+
 function m() {
     let e = o.A.getGuild(d.v8);
     return null != e && e.features.has(f.GuildFeatures.SOCIAL_LAYER_STOREFRONT) ? e.id : d.Kf;
 }
+
 function g(e) {
     var t, n;
     return (
@@ -45,6 +49,7 @@ function g(e) {
         (null != (t = null == (n = e.features) ? void 0 : n.has(f.GuildFeatures.SOCIAL_LAYER_STOREFRONT)) && t)
     );
 }
+
 function E(e) {
     return {
         applicationId: e.application_id,
@@ -74,6 +79,7 @@ function E(e) {
         application: null != e.application ? a.Ay.createFromServer(e.application) : void 0,
     };
 }
+
 function b(e) {
     if (null != e)
         return {
@@ -91,6 +97,7 @@ function b(e) {
             cardBackgroundImageAssetId: e.card_background_image_asset_id,
         };
 }
+
 function y(e) {
     return {
         skus: e.skus.map((e) => s.A.createFromServer(e)),
@@ -109,6 +116,7 @@ function y(e) {
         application: a.Ay.createFromServer(e.application),
     };
 }
+
 function O(e, t) {
     var n, r, i;
     if (
@@ -132,6 +140,7 @@ function O(e, t) {
               primaryIconLabel: a.label,
           };
 }
+
 function A(e) {
     var t, n, r;
     let i = null == e ? void 0 : e.applicationId,
@@ -147,6 +156,7 @@ function A(e) {
                   : e.thumbnailAssetId;
     if (null != a && null != i) return c.A.toURLSafe((0, l.YE)(i, a, 512, "webp"));
 }
+
 function v(e) {
     var t, n;
     if (
@@ -159,16 +169,25 @@ function v(e) {
             (0, l.YE)(e.applicationId, e.tenantMetadata.socialLayer.cardBackgroundImageAssetId, 1024, p),
         );
 }
+
 function S(e, t) {
     return ""
         .concat(location.protocol)
         .concat(window.GLOBAL_ENV.WEBAPP_ENDPOINT)
         .concat(f.BVt.GAME_SHOP(e, t.id, t.slug));
 }
+
 function I(e, t) {
     return "".concat(S(e, t), "\n\n");
 }
+
 function T(e, t) {
     let n = o.A.getGuild(e);
-    return null != n && g(n) && (0, u.xD)({ location: t });
+    return (
+        null != n &&
+        g(n) &&
+        (0, u.xD)({
+            location: t,
+        })
+    );
 }

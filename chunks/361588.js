@@ -1,9 +1,14 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 var i = n(136722),
     l = n(488926),
     r = n(652215);
+
 function a(e, t) {
-    let n = { [t.id]: t };
+    let n = {
+        [t.id]: t,
+    };
     return e.filter((e) => {
         let t = l.aH({
                 forceRoles: n,

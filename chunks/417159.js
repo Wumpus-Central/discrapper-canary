@@ -21,10 +21,14 @@ e.exports = (function (e) {
                     "public/DraftEditorPlaceholder/root": !0,
                     "public/DraftEditorPlaceholder/hasFocus": this.props.editorState.getSelection().getHasFocus(),
                 }),
-                t = { whiteSpace: "pre-wrap" };
+                t = {
+                    whiteSpace: "pre-wrap",
+                };
             return i.createElement(
                 "div",
-                { className: e },
+                {
+                    className: e,
+                },
                 i.createElement(
                     "div",
                     {

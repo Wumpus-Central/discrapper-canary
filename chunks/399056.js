@@ -1,4 +1,6 @@
-n.d(t, { A: () => j });
+n.d(t, {
+    A: () => j,
+});
 var r = n(627968),
     i = n(64700),
     l = n(417597),
@@ -10,6 +12,7 @@ var r = n(627968),
     u = n(987957),
     f = n(985018),
     g = n(659233);
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,6 +38,7 @@ function b(e) {
     }
     return e;
 }
+
 function m(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -54,6 +58,7 @@ function m(e, t) {
     );
 }
 let p = [];
+
 function x() {
     return (0, r.jsx)("div", {
         className: g.L8,
@@ -81,6 +86,7 @@ function x() {
         }),
     });
 }
+
 function h(e) {
     let { guildId: t, onAddAction: l } = e,
         a = i.useCallback(() => {
@@ -141,7 +147,11 @@ let j = function (e) {
             },
             [n],
         ),
-        O = n.map((e) => m(b({}, e), { id: e.channelId })),
+        O = n.map((e) =>
+            m(b({}, e), {
+                id: e.channelId,
+            }),
+        ),
         y = i.useCallback((e) => {
             (0, o.DE)(e);
         }, []),

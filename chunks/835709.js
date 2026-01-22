@@ -1,4 +1,8 @@
-n.d(t, { A: () => el }), n(321073), n(896048);
+n.d(t, {
+    A: () => el,
+}),
+    n(321073),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(735438),
@@ -43,6 +47,7 @@ var r = n(627968),
     Y = n(790782),
     W = n(985018),
     K = n(79220);
+
 function z(e, t, n) {
     return (
         t in e
@@ -56,6 +61,7 @@ function z(e, t, n) {
         e
     );
 }
+
 function q(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -72,6 +78,7 @@ function q(e) {
     }
     return e;
 }
+
 function X(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -84,6 +91,7 @@ function X(e, t) {
     }
     return n;
 }
+
 function Z(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -95,12 +103,14 @@ function Z(e, t) {
         e
     );
 }
+
 function Q(e) {
     L.A.requestPermission((t) => {
         let n = t ? B.kCE.ENABLED : B.kCE.BLOCKED;
         d.default.setPermissionsState(n, e);
     });
 }
+
 function $(e) {
     let { label: t, enabled: n, disabled: i, onPreview: a, onChange: s } = e;
     return (0, r.jsx)(u.dOG, {
@@ -108,9 +118,12 @@ function $(e) {
         checked: n,
         onChange: s,
         disabled: i,
-        description: W.intl.format(W.t.OOiGCM, { onClick: a }),
+        description: W.intl.format(W.t.OOiGCM, {
+            onClick: a,
+        }),
     });
 }
+
 function J(e) {
     let { disabledSounds: t, disableAllSounds: n, notifyMessagesInSelectedChannel: a } = e,
         s = i.useRef(null),
@@ -255,7 +268,10 @@ function J(e) {
                             u.BJc,
                             {
                                 children: [
-                                    i > 0 && (0, r.jsx)(u.cGx, { gap: 8 }),
+                                    i > 0 &&
+                                        (0, r.jsx)(u.cGx, {
+                                            gap: 8,
+                                        }),
                                     (0, r.jsx)(
                                         $,
                                         {
@@ -283,6 +299,7 @@ function J(e) {
         }),
     });
 }
+
 function ee() {
     let e = (0, o.bG)([g.A], () => g.A.getGuildAlertSettings()),
         [t, n] = i.useState(null),
@@ -374,14 +391,23 @@ class et extends i.PureComponent {
                 notifyMessagesInSelectedChannel: l,
                 focusMode: c,
             } = this.props,
-            d = M.A.getCurrentConfig({ location: "Messages" }).enabled || 0 === t ? 0 : 1,
+            d =
+                M.A.getCurrentConfig({
+                    location: "Messages",
+                }).enabled || 0 === t
+                    ? 0
+                    : 1,
             f = s()
                 .range(d, 11)
                 .map((e) => ({
                     id: "".concat(e, "min"),
                     value: 60 * e,
                     label:
-                        0 === e ? W.intl.string(W.t["0QN7cZ"]) : W.intl.formatToPlainString(W.t.iXLF9W, { minutes: e }),
+                        0 === e
+                            ? W.intl.string(W.t["0QN7cZ"])
+                            : W.intl.formatToPlainString(W.t.iXLF9W, {
+                                  minutes: e,
+                              }),
                 }));
         return (0, r.jsx)(G.A, {
             title: W.intl.string(W.t.HcoRu0),
@@ -437,12 +463,16 @@ class et extends i.PureComponent {
                                 selectionMode: "single",
                                 fullWidth: !0,
                             }),
-                            (0, r.jsx)(u.cGx, { gap: 16 }),
+                            (0, r.jsx)(u.cGx, {
+                                gap: 16,
+                            }),
                         ],
                     }),
                     this.renderTTS(),
                     (0, r.jsx)(ee, {}),
-                    (0, r.jsx)(u.cGx, { gap: 24 }),
+                    (0, r.jsx)(u.cGx, {
+                        gap: 24,
+                    }),
                     (0, r.jsx)(J, {
                         disabledSounds: a,
                         disableAllSounds: o,
@@ -487,7 +517,9 @@ class et extends i.PureComponent {
                             onChange: this.handleTTSChange,
                             value: this.props.ttsType,
                         }),
-                        (0, r.jsx)(u.cGx, { gap: 16 }),
+                        (0, r.jsx)(u.cGx, {
+                            gap: 16,
+                        }),
                     ],
                 });
             });
@@ -497,17 +529,29 @@ let en = (0, _.C)({
     kind: "user",
     id: "2024-01_mention_on_all_messages",
     label: "Mention on all messages",
-    defaultConfig: { enabled: !1 },
+    defaultConfig: {
+        enabled: !1,
+    },
     treatments: [
         {
             id: 1,
             label: "Increment mention count when receiving a message in a channel set to all messages",
-            config: { enabled: !0 },
+            config: {
+                enabled: !0,
+            },
         },
     ],
 });
+
 function er() {
-    let e = en.useExperiment({ location: "settings" }, { autoTrackExposure: !1 }).enabled,
+    let e = en.useExperiment(
+            {
+                location: "settings",
+            },
+            {
+                autoTrackExposure: !1,
+            },
+        ).enabled,
         t = (0, o.bG)([P.Ay], () => P.Ay.mentionOnAllMessages);
     return e
         ? (0, r.jsx)(T.x, {
@@ -524,6 +568,7 @@ function er() {
           })
         : null;
 }
+
 function ei() {
     let [e, t] = i.useState(!1),
         n = (0, o.bG)([D.default], () => {
@@ -559,10 +604,17 @@ async function es(e) {
         await f.A.setAccountFlag(H.i.USE_NEW_NOTIFICATIONS, !1),
         e(!1);
 }
+
 function eo(e) {
     let t = (0, y.kB)();
-    return (0, r.jsx)(et, Z(q({}, e), { focusMode: t }));
+    return (0, r.jsx)(
+        et,
+        Z(q({}, e), {
+            focusMode: t,
+        }),
+    );
 }
+
 function el() {
     let e = (0, o.cf)([w.A], () => ({
         disableUnreadBadge: w.A.getDisableUnreadBadge(),
@@ -573,8 +625,14 @@ function el() {
         ttsType: w.A.getTTSType(),
         notifyMessagesInSelectedChannel: w.A.getNotifyMessagesInSelectedChannel(),
     }));
-    return (0, r.jsx)(eo, Z(q({}, e), { afkTimeout: k.cU.useSetting() }));
+    return (0, r.jsx)(
+        eo,
+        Z(q({}, e), {
+            afkTimeout: k.cU.useSetting(),
+        }),
+    );
 }
+
 function ec() {
     let e = k.Zp.useSetting(),
         t = [
@@ -601,13 +659,19 @@ function ec() {
                 label: W.intl.string(W.t.Rq0NFs),
                 description: W.intl.string(W.t.oWF6eQ),
                 options: t,
-                onChange: (e) => n({ value: e }),
+                onChange: (e) =>
+                    n({
+                        value: e,
+                    }),
                 value: e,
             }),
-            (0, r.jsx)(u.cGx, { gap: 16 }),
+            (0, r.jsx)(u.cGx, {
+                gap: 16,
+            }),
         ],
     });
 }
+
 function eu() {
     let e = k.Bh.useSetting(),
         t = k.Yh.useSetting();
@@ -634,6 +698,7 @@ function eu() {
         ],
     });
 }
+
 function ed() {
     let e = k.oz.useSetting();
     return (0, r.jsx)(T.x, {
@@ -647,6 +712,7 @@ function ed() {
         }),
     });
 }
+
 function ef() {
     let e = k.NR.useSetting();
     return (0, r.jsx)(T.x, {
@@ -659,6 +725,7 @@ function ef() {
         }),
     });
 }
+
 function ep() {
     let e = k.JV.useSetting();
     return (0, r.jsx)(T.x, {
@@ -671,6 +738,7 @@ function ep() {
         }),
     });
 }
+
 function e_() {
     let e = k.T3.useSetting();
     return (0, r.jsx)(T.x, {
@@ -683,6 +751,7 @@ function e_() {
         }),
     });
 }
+
 function eh() {
     let e = k.Qr.useSetting();
     return (0, r.jsx)(T.x, {

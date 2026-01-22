@@ -1,4 +1,6 @@
-n.d(t, { D: () => A });
+n.d(t, {
+    D: () => A,
+});
 var r = n(64700),
     i = n(417597),
     a = n(717125),
@@ -14,6 +16,7 @@ var r = n(64700),
     h = n(752755),
     m = n(461715),
     g = n(652215);
+
 function E(e, t, n) {
     return (
         t in e
@@ -27,6 +30,7 @@ function E(e, t, n) {
         e
     );
 }
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -43,6 +47,7 @@ function b(e) {
     }
     return e;
 }
+
 function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -55,6 +60,7 @@ function y(e, t) {
     }
     return n;
 }
+
 function O(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -66,6 +72,7 @@ function O(e, t) {
         e
     );
 }
+
 function A(e, t) {
     let n = (0, _.$k)(),
         E = (0, m.CI)(e),
@@ -112,7 +119,11 @@ function A(e, t) {
                 selectedGuildId: N,
                 canAccess: R,
             });
-            return null == e ? null : O(b({}, e), { user: C });
+            return null == e
+                ? null
+                : O(b({}, e), {
+                      user: C,
+                  });
         }, [S, I, T, C, N, R]);
     return (
         r.useEffect(() => {

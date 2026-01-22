@@ -54,6 +54,7 @@ var r,
     H = n(652215),
     Y = n(732139),
     W = n(355097);
+
 function K(e, t, n) {
     return (
         t in e
@@ -67,6 +68,7 @@ function K(e, t, n) {
         e
     );
 }
+
 function z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -83,6 +85,7 @@ function z(e) {
     }
     return e;
 }
+
 function q(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -95,6 +98,7 @@ function q(e, t) {
     }
     return n;
 }
+
 function X(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -175,16 +179,19 @@ let J = 42,
     ea = {},
     es = {},
     eo = new Map();
+
 function el(e) {
     var t, n;
     let r = eu()[e];
     return null != r && null != (t = null == (n = ea[r]) ? void 0 : n.getEmoji(e)) ? t : void 0;
 }
+
 function ec(e) {
     var t, n;
     let r = eu()[e];
     return null != r && null != (t = null == (n = ea[r]) ? void 0 : n.getUsableEmoji(e)) ? t : void 0;
 }
+
 function eu() {
     if ((ed(), null == es)) for (let e in ((es = {}), ea)) for (let t of ea[e].emojiIds()) es[t] = e;
     return es;
@@ -204,6 +211,7 @@ async function ed() {
                 emojis: t,
             });
 }
+
 function ef(e) {
     let { emojis: t } = e;
     for (let [e] of t) !Object.hasOwn(ea, e) && T.A.isMember(e) && eA(e);
@@ -220,14 +228,16 @@ let ep = (e) => ({
     },
     numFrequentlyItems: J,
 });
+
 function e_(e) {
     return new p.A(z({}, ep(e)));
 }
+
 function eh(e) {
     return new p.A(
         X(z({}, ep(e)), {
             computeFrecency: (e, t, n) =>
-                null == n.maxTotalUse ? 0 : Math.trunc(1000 * ((e / n.maxTotalUse) * 0.2 + (t / 1000) * 0.8)),
+                null == n.maxTotalUse ? 0 : Math.trunc(1e3 * ((e / n.maxTotalUse) * 0.2 + (t / 1e3) * 0.8)),
             calculateMaxTotalUse: !0,
         }),
     );
@@ -474,15 +484,19 @@ class em {
 K(em, "_lastInstance", null);
 let eg = e_(em.resetFrequentlyUsed),
     eE = eh(em.resetFrequentlyUsedReactionEmojis);
+
 function eb() {
     (ea = {}), (es = {}), em.reset(), eo.clear(), (er = 3);
 }
+
 function ey(e) {
     null != ea[e] && delete ea[e];
 }
+
 function eO() {
     (es = null), em.reset(), (3 === er || 1 === er) && (eg.compute(), eE.compute());
 }
+
 function eA(e) {
     ey(e), em.clear(e);
     let t = U.A.getGuildEmojis(e);
@@ -492,39 +506,49 @@ function eA(e) {
     let r = (0, A.p)(e);
     ea[e] = new $(e, n.id, t, r);
 }
+
 function ev(e) {
     for (let t of (eb(), e.guilds)) eA(t.id);
     (er = +!!e.guilds.every((e) => null != e.emojis.items)), eO();
 }
+
 function eS(e) {
     for (let t in (eb(), e.emojis)) eA(t);
     (er = 1), eO();
 }
+
 function eI() {
     (Q.pendingUsages = []), (Q.emojiReactionPendingUsages = []);
 }
+
 function eT() {
     eb();
 }
+
 function eC(e) {
     1 === er && "update" === e.guild.emojis.op && null == e.guild.emojis.items && (er = 0), eA(e.guild.id), eO();
 }
+
 function eN(e) {
     eA(e.guild.id), eO();
 }
+
 function eR(e) {
     let { guildId: t } = e;
     eA(t), eO();
 }
+
 function ew(e) {
     let { guild: t } = e;
     ey(t.id), eo.delete(t.id), eO();
 }
+
 function eP(e) {
     var t;
     let { guildId: n, user: r } = e;
     r.id === (null == (t = w.default.getCurrentUser()) ? void 0 : t.id) && (eA(n), eO());
 }
+
 function eD(e) {
     if (!e.optimistic) return !1;
     let t =
@@ -534,6 +558,7 @@ function eD(e) {
     if (null == t) return !1;
     eU([t]), ek([t]);
 }
+
 function ex(e, t) {
     if (o().isEmpty(e) && o().isEmpty(Q.pendingUsages) && S.A.hasLoaded(W.oD.FRECENCY_AND_FAVORITES_SETTINGS))
         for (let e of [
@@ -571,6 +596,7 @@ function ex(e, t) {
         ])
             eE.track(e);
 }
+
 function eL() {
     var e, t, n, r, i, a;
     let s = null == (r = S.A.settings.textAndImages) || null == (n = r.diversitySurrogate) ? void 0 : n.value;
@@ -579,15 +605,24 @@ function eL() {
         c = null != (e = null == (i = l.emojiFrecency) ? void 0 : i.emojis) ? e : {},
         u = null != (t = null == (a = l.emojiReactionFrecency) ? void 0 : a.emojis) ? t : {};
     eg.overwriteHistory(
-        o().mapValues(c, (e) => X(z({}, e), { recentUses: e.recentUses.map(Number).filter((e) => e > 0) })),
+        o().mapValues(c, (e) =>
+            X(z({}, e), {
+                recentUses: e.recentUses.map(Number).filter((e) => e > 0),
+            }),
+        ),
         Q.pendingUsages,
     ),
         eE.overwriteHistory(
-            o().mapValues(u, (e) => X(z({}, e), { recentUses: e.recentUses.map(Number).filter((e) => e > 0) })),
+            o().mapValues(u, (e) =>
+                X(z({}, e), {
+                    recentUses: e.recentUses.map(Number).filter((e) => e > 0),
+                }),
+            ),
             Q.emojiReactionPendingUsages,
         ),
         ex(c, u);
 }
+
 function ej(e) {
     let {
         settings: { type: t },
@@ -596,10 +631,12 @@ function ej(e) {
     if ((g.A.setEmojiLocale(v.default.locale), t !== W.oD.FRECENCY_AND_FAVORITES_SETTINGS || !n)) return !1;
     (Q.pendingUsages = []), (Q.emojiReactionPendingUsages = []);
 }
+
 function eM(e) {
     let { emojiUsed: t } = e;
     ek(t);
 }
+
 function ek(e) {
     if (null == e) return !1;
     for (let r of e) {
@@ -615,6 +652,7 @@ function ek(e) {
     let r = e.length > 0;
     return r && (3 === er || 1 === er) && eg.compute(), r;
 }
+
 function eU(e) {
     if (null == e) return !1;
     for (let r of e) {
@@ -630,6 +668,7 @@ function eU(e) {
     let r = e.length > 0;
     return r && (3 === er || 1 === er) && eE.compute(), r;
 }
+
 function eG(e) {
     let {
             guildId: t,
@@ -639,11 +678,16 @@ function eG(e) {
     if (!(null != r && (0, b.U)(r))) return !1;
     eA(t), eO();
 }
+
 function eV(e) {
     let { guildId: t } = e,
         n = new Set(Q.expandedSectionsByGuildIds);
-    Q.expandedSectionsByGuildIds.has(t) ? n.delete(t) : n.add(t), (Q = X(z({}, Q), { expandedSectionsByGuildIds: n }));
+    Q.expandedSectionsByGuildIds.has(t) ? n.delete(t) : n.add(t),
+        (Q = X(z({}, Q), {
+            expandedSectionsByGuildIds: n,
+        }));
 }
+
 function eF(e) {
     let { guildId: t, topEmojisMetadata: n } = e;
     eo.set(t, {
@@ -715,7 +759,9 @@ class eB extends (r = d.Ay.PersistedStore) {
                     boostCapitalizedWords: n,
                     boostAtEnd: l,
                     boostsIgnoreDisambiguators: u,
-                } = M.A.getConfig({ location: "getSearchResultsOrder" }),
+                } = M.A.getConfig({
+                    location: "getSearchResultsOrder",
+                }),
                 d = RegExp("^".concat(s), "i"),
                 f = RegExp("".concat(s, "$"), "i"),
                 p = new RegExp("(^|_|[A-Z])".concat(s, "s?([A-Z]|_|$)")),

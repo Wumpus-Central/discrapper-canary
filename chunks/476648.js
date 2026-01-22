@@ -10,6 +10,7 @@ var r = n(627968),
     o = n(877272),
     l = n(834450);
 let c = 400;
+
 function u(e) {
     let { className: t, textClassName: n, text: a, variant: u, delay: d } = e,
         f = (0, i.useRef)(0),

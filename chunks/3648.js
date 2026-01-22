@@ -27,6 +27,7 @@ var r = n(627968),
     S = n(407494),
     I = n(101616),
     T = n(585048);
+
 function C(e, t, n) {
     return (
         t in e
@@ -40,6 +41,7 @@ function C(e, t, n) {
         e
     );
 }
+
 function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -56,6 +58,7 @@ function N(e) {
     }
     return e;
 }
+
 function R(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -68,6 +71,7 @@ function R(e, t) {
     }
     return n;
 }
+
 function w(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -79,6 +83,7 @@ function w(e, t) {
         e
     );
 }
+
 function P(e, t) {
     if (null == e) return {};
     var n,
@@ -95,6 +100,7 @@ function P(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function D(e, t) {
     if (null == e) return {};
     var n,
@@ -105,13 +111,16 @@ function D(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function x(e) {
     let { targetElementRef: t, onRequestClose: n, onActionClick: i } = e;
     return (0, r.jsx)(l.AM, {
         size: "lg",
         shouldShow: !0,
         position: "left",
-        caretConfig: { align: "center" },
+        caretConfig: {
+            align: "center",
+        },
         gradientColor: "blue",
         align: "center",
         onRequestClose: n,
@@ -131,13 +140,16 @@ function x(e) {
         },
     });
 }
+
 function L(e) {
     let { showPopover: t, onViewWishlist: n, onCardClick: l } = e,
         c = P(e, ["showPopover", "onViewWishlist", "onCardClick"]),
         u = i.useRef(null),
         d = (0, o.useHasAnyModalOpen)(),
         f = (0, a.bG)([m.A], () => m.A.hasLayers()),
-        h = (0, g.Jw)({ location: "wishlist-card" }),
+        h = (0, g.Jw)({
+            location: "wishlist-card",
+        }),
         [E, b] = (0, p.kn)(h ? [s.M.GAME_SHOP_WISHLIST_POPOVER] : [], O.m.SIDEBAR, !0),
         y = i.useCallback(() => {
             b(O.i.USER_DISMISS), l();
@@ -169,6 +181,7 @@ function L(e) {
         ],
     });
 }
+
 function j(e, t) {
     let {
             index: n,
@@ -231,6 +244,7 @@ function j(e, t) {
         e.skuId,
     );
 }
+
 function M(e) {
     let { item: t, card: n, analyticsLocations: i, profileOwner: a } = e,
         { data: s } = (0, d.YY)(t.sku.applicationId),
@@ -267,7 +281,9 @@ function M(e) {
                         (0, r.jsx)(c.Text, {
                             variant: "text-xs/medium",
                             color: "text-default",
-                            children: v.intl.format(v.t["CqpEC+"], { applicationName: null == s ? void 0 : s.name }),
+                            children: v.intl.format(v.t["CqpEC+"], {
+                                applicationName: null == s ? void 0 : s.name,
+                            }),
                         }),
                     ],
                 }),
@@ -275,6 +291,7 @@ function M(e) {
         ],
     });
 }
+
 function k(e, t) {
     let { profileOwner: n, analyticsLocations: i, wishlistId: a, onViewWishlist: s } = t,
         o = j(e, {

@@ -14,6 +14,7 @@ var n = i(64700),
     S = i(509381),
     E = i(731854),
     d = i(985018);
+
 function _() {
     return (0, s.bG)([a.A], () => a.A.getMode() === E.TB.PUSH_TO_TALK);
 }
@@ -25,7 +26,9 @@ let I = (0, u.zD)(o.X.VOICE_PUSH_TO_TALK_SETTING, {
         let t = (0, s.bG)([a.A], () => a.A.getMode());
         return n.useMemo(() => {
             if (!l.Av && t === E.TB.PUSH_TO_TALK)
-                return d.intl.format(d.t["VHI4+Y"], { onDownloadClick: () => (0, A._)("Help Text PTT") });
+                return d.intl.format(d.t["VHI4+Y"], {
+                    onDownloadClick: () => (0, A._)("Help Text PTT"),
+                });
         }, [t]);
     },
     usePredicate: function () {

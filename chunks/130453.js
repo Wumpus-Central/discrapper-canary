@@ -1,4 +1,7 @@
-r.d(t, { default: () => T }), r(896048);
+r.d(t, {
+    default: () => T,
+}),
+    r(896048);
 var n = r(627968),
     l = r(64700),
     i = r(311907),
@@ -24,6 +27,7 @@ var n = r(627968),
     S = r(788868),
     E = r(985018),
     I = r(153193);
+
 function k(e) {
     var t;
     let {
@@ -169,6 +173,7 @@ function k(e) {
         ],
     });
 }
+
 function T(e) {
     let {
             transitionState: t,

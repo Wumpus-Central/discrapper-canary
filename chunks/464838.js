@@ -1,4 +1,6 @@
-n.d(e, { A: () => A });
+n.d(e, {
+    A: () => A,
+});
 var r = n(627968);
 n(64700);
 var i = n(492917),
@@ -11,6 +13,7 @@ var i = n(492917),
     u = n(12105),
     x = n(985018),
     m = n(286965);
+
 function A(t) {
     let { senderId: e, trackAnalyticsEvent: n, onNavigate: A } = t,
         f = (0, s.bG)([l.default], () => {
@@ -19,8 +22,12 @@ function A(t) {
         });
     return (0, r.jsx)(u.A, {
         header: x.intl.string(x.t.sSMgC6),
-        description: x.intl.formatToPlainString(x.t.q2QrTY, { username: f }),
-        heroImage: (0, r.jsx)(i.$wK, { alt: x.intl.string(x.t["3QhxXJ"]) }),
+        description: x.intl.formatToPlainString(x.t.q2QrTY, {
+            username: f,
+        }),
+        heroImage: (0, r.jsx)(i.$wK, {
+            alt: x.intl.string(x.t["3QhxXJ"]),
+        }),
         children: (0, r.jsxs)("div", {
             className: m.UD,
             children: [

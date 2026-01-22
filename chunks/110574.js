@@ -36,6 +36,7 @@ var r = n(627968),
     x = n(31408),
     L = n(985018),
     j = n(645576);
+
 function M(e, t, n) {
     return (
         t in e
@@ -49,6 +50,7 @@ function M(e, t, n) {
         e
     );
 }
+
 function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -65,6 +67,7 @@ function k(e) {
     }
     return e;
 }
+
 function U(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -77,6 +80,7 @@ function U(e, t) {
     }
     return n;
 }
+
 function G(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -88,6 +92,7 @@ function G(e, t) {
         e
     );
 }
+
 function V(e, t) {
     if (null == e) return {};
     var n,
@@ -104,6 +109,7 @@ function V(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function F(e, t) {
     if (null == e) return {};
     var n,
@@ -134,7 +140,9 @@ let B = (0, R.xI)(l.A.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
         return null == t
             ? null
             : (0, r.jsx)(o.m, {
-                  text: L.intl.formatToPlainString(L.t.IWkAq7, { date: t }),
+                  text: L.intl.formatToPlainString(L.t.IWkAq7, {
+                      date: t,
+                  }),
                   asContainer: !0,
                   children: (0, r.jsx)(c.DUT, {
                       onClick: n,
@@ -167,7 +175,9 @@ let B = (0, R.xI)(l.A.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
         } = e;
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(K, { user: t }),
+                (0, r.jsx)(K, {
+                    user: t,
+                }),
                 (0, r.jsx)(Y, {
                     isOwner: n,
                     lostPermissionTooltipText: i,
@@ -195,7 +205,9 @@ let B = (0, R.xI)(l.A.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                 userId: null == o ? void 0 : o.id,
                 guildId: l,
             }),
-            f = (0, A.a)({ displayNameStyles: d }),
+            f = (0, A.a)({
+                displayNameStyles: d,
+            }),
             p = null == l && null != d;
         return (0, r.jsxs)(r.Fragment, {
             children: [
@@ -373,7 +385,9 @@ let B = (0, R.xI)(l.A.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                 userId: el,
                 guildId: L,
             }),
-            { voiceActivityStatusEnabled: eb } = (0, d.G)({ location: "MemberListItem" }),
+            { voiceActivityStatusEnabled: eb } = (0, d.G)({
+                location: "MemberListItem",
+            }),
             ey = eb ? eE : void 0,
             {
                 avatarDecorationSrc: eO,
@@ -426,7 +440,9 @@ let B = (0, R.xI)(l.A.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                                       },
                                       e,
                                   ),
-                                  { closePopout: () => eR(!0) },
+                                  {
+                                      closePopout: () => eR(!0),
+                                  },
                               ),
                           ),
                 [ew, ed, A, E, ec],

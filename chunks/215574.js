@@ -65,7 +65,9 @@ let h = (e) => {
     },
     m = (e) => {
         let { readable: r, writable: n } = e,
-            t = new TransformStream({ transform: S });
+            t = new TransformStream({
+                transform: S,
+            });
         r.pipeThrough(t).pipeTo(n);
     },
     p = (e) => {
@@ -194,6 +196,7 @@ let h = (e) => {
             t._free(o);
         }
     };
+
 function R(e) {
     switch (e) {
         case "opus":

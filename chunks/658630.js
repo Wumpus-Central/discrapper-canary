@@ -67,7 +67,9 @@ var n = e(834647),
                 g(
                     $({}, "a", {
                         get: function () {
-                            return $(this, "a", { value: 7 }).a;
+                            return $(this, "a", {
+                                value: 7,
+                            }).a;
                         },
                     }),
                 ).a
@@ -92,7 +94,10 @@ var n = e(834647),
         var n = h(r);
         return (v(e), p(te, n))
             ? (e.enumerable
-                  ? (p(t, G) && t[G][n] && (t[G][n] = !1), (e = g(e, { enumerable: d(0, !1) })))
+                  ? (p(t, G) && t[G][n] && (t[G][n] = !1),
+                    (e = g(e, {
+                        enumerable: d(0, !1),
+                    })))
                   : (p(t, G) || $(t, G, d(1, g(null))), (t[G][n] = !0)),
               tu(t, n, e))
             : $(t, n, e);
@@ -195,7 +200,10 @@ var n = e(834647),
                 return J(this).description;
             },
         }),
-        u || T(V, "propertyIsEnumerable", tp, { unsafe: !0 }))),
+        u ||
+            T(V, "propertyIsEnumerable", tp, {
+                unsafe: !0,
+            }))),
     n(
         {
             global: !0,
@@ -204,7 +212,9 @@ var n = e(834647),
             forced: !a,
             sham: !a,
         },
-        { Symbol: K },
+        {
+            Symbol: K,
+        },
     ),
     z(b(to), function (t) {
         R(t);
@@ -246,7 +256,9 @@ var n = e(834647),
             stat: !0,
             forced: !a,
         },
-        { getOwnPropertyNames: tv },
+        {
+            getOwnPropertyNames: tv,
+        },
     ),
     C(),
     N(K, U),

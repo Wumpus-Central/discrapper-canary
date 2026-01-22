@@ -1,5 +1,7 @@
 let r;
-n.d(t, { A: () => U });
+n.d(t, {
+    A: () => U,
+});
 var i,
     a = n(111956),
     s = n.n(a),
@@ -14,6 +16,7 @@ var i,
     h = n(961350),
     m = n(652215),
     g = n(731854);
+
 function E(e, t, n) {
     return (
         t in e
@@ -33,9 +36,11 @@ let b = Date.now(),
     A = !1,
     v = !1,
     S = !1;
+
 function I() {
     return A || v || ((0, _.isAndroid)() && S);
 }
+
 function T() {
     let e = f.cU.getSetting();
     0 === e || null != r || Date.now() - b > Math.min(e * p.A.Millis.SECOND, m.sdF) || I()
@@ -50,6 +55,7 @@ function T() {
               afk: !1,
           });
 }
+
 function C() {
     Date.now() - b > m.sdF || I()
         ? y ||
@@ -64,13 +70,19 @@ function C() {
               idle: !1,
           });
 }
+
 function N() {
     C(), T();
 }
+
 function R() {
     var e;
     let t = (e) => {
-        if (d.A.getConfig({ location: "checkNativeIdle" }).system_wide_input) {
+        if (
+            d.A.getConfig({
+                location: "checkNativeIdle",
+            }).system_wide_input
+        ) {
             let t = Date.now() - e;
             (null == r || t > r) && ((b = Math.max(t, b)), (r = null));
         }
@@ -84,8 +96,13 @@ function R() {
         e instanceof Promise ? e.then(t) : t(e);
     }
 }
+
 function w(e) {
-    d.A.getConfig({ location: "handlePowerEvent" }).power_events ? j({}) : (e && (r = Date.now()), N());
+    d.A.getConfig({
+        location: "handlePowerEvent",
+    }).power_events
+        ? j({})
+        : (e && (r = Date.now()), N());
 }
 if (!__OVERLAY__) {
     _.isPlatformEmbedded && (null === u.A || void 0 === u.A ? void 0 : u.A.remotePowerMonitor) != null
@@ -104,24 +121,31 @@ if (!__OVERLAY__) {
           }))
         : setInterval(N, 30 * p.A.Millis.SECOND);
     let e = s()(() => {
-        d.A.getConfig({ location: "handleGenericInput" }).generic_inputs && j({});
+        d.A.getConfig({
+            location: "handleGenericInput",
+        }).generic_inputs && j({});
     }, 500);
     window.addEventListener("mouseup", e), window.addEventListener("wheel", e), window.addEventListener("keypress", e);
 }
+
 function P(e) {
     y = e.idle;
 }
+
 function D(e) {
     O = e.afk;
 }
+
 function x(e) {
     let { userId: t, speakingFlags: n } = e;
     return n !== g.ME.NONE && t === h.default.getId() && j({}), !1;
 }
+
 function L(e) {
     let { state: t } = e;
     return (S = t === m.g6G.BACKGROUND), (r = null), (b = Date.now()), N(), !1;
 }
+
 function j(e) {
     let { timestamp: t, type: n } = e,
         i = "OVERLAY_SET_NOT_IDLE" === n && null != t;
@@ -138,8 +162,14 @@ function j(e) {
         !1)
     );
 }
+
 function M() {
-    if (!d.A.getConfig({ location: "handleSettingsProtoUpdate" }).settings_updates) return !1;
+    if (
+        !d.A.getConfig({
+            location: "handleSettingsProtoUpdate",
+        }).settings_updates
+    )
+        return !1;
     j({});
 }
 class k extends (i = o.Ay.Store) {

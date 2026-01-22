@@ -1,4 +1,9 @@
-n.d(t, { s: () => j }), n(228524), n(896048), n(667532);
+n.d(t, {
+    s: () => j,
+}),
+    n(228524),
+    n(896048),
+    n(667532);
 var r = n(627968),
     i = n(64700),
     l = n(136722),
@@ -15,6 +20,7 @@ var r = n(627968),
     p = n(985018);
 let x = "NO_CHANNEL",
     h = l.kg(m.xBc.VIEW_CHANNEL, m.xBc.CREATE_INSTANT_INVITE);
+
 function j(e) {
     let { label: t, description: n, guildId: l, widgetEnabled: m, widgetChannelId: j, enableLocalUpdate: O } = e,
         y = (0, s.bG)([o.Ay], () => o.Ay.getChannels(l)),

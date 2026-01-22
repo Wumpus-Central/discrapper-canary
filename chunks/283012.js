@@ -26,6 +26,7 @@ var l = n(627968),
     x = n(340837),
     _ = n(985018),
     j = n(658938);
+
 function T(e) {
     let { title: t, emojiId: n, emojiName: r, icon: i, completed: a, Icon: o, onClick: d } = e,
         u = (function (e, t) {
@@ -69,7 +70,9 @@ function T(e) {
                   })
                 : null;
     return (0, l.jsxs)(c.ZpM, {
-        className: s()(j.XI, { [j.xU]: null != d }),
+        className: s()(j.XI, {
+            [j.xU]: null != d,
+        }),
         onClick: d,
         children: [
             null != f
@@ -125,6 +128,7 @@ function T(e) {
         ],
     });
 }
+
 function b(e) {
     var t;
     let { action: n, completed: i } = e,
@@ -151,6 +155,7 @@ function b(e) {
         onClick: x,
     });
 }
+
 function v(e) {
     let { guildId: t } = e,
         n = (0, o.bG)([O.h], () => O.h.getNewMemberActions(t), [t]),

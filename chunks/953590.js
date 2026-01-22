@@ -23,6 +23,7 @@ var n = l(627968),
     j = l(995393),
     k = l(652215),
     _ = l(863876);
+
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var l = null != arguments[t] ? arguments[t] : {},
@@ -48,12 +49,19 @@ function A(e) {
     }
     return e;
 }
+
 function v() {
     var e, t;
     let l =
         ((e = ["grayscale(", ")"]),
         t || (t = e.slice(0)),
-        Object.freeze(Object.defineProperties(e, { raw: { value: Object.freeze(t) } })));
+        Object.freeze(
+            Object.defineProperties(e, {
+                raw: {
+                    value: Object.freeze(t),
+                },
+            }),
+        ));
     return (
         (v = function () {
             return l;
@@ -87,6 +95,7 @@ let E = 747,
         );
     },
     S = (e) => (0, n.jsx)(g.Ay, A({}, e));
+
 function y(e) {
     let t = "videoThumbnailSrc" in e ? e.videoThumbnailSrc : e.src,
         [l, n] = (0, b.rh)(t, "#000000"),
@@ -96,6 +105,7 @@ function y(e) {
         }, [l]);
     return null != t && "#000000" !== l ? r : void 0;
 }
+
 function N(e) {
     let { item: t, onPlay: l, onEnded: a, onClick: r, playable: s, isMuted: c } = e,
         i = y(t),
@@ -131,7 +141,9 @@ function N(e) {
             },
             c ? "player-muted" : "player-unmuted",
         ),
-        d = { background: i };
+        d = {
+            background: i,
+        };
     return s
         ? (0, n.jsx)("div", {
               className: _.AU,
@@ -145,9 +157,12 @@ function N(e) {
               children: o,
           });
 }
+
 function T(e) {
     let { item: t, setHasInteracted: l, onSetItem: a, isCurrentItem: r, itemIndex: s } = e,
-        c = { background: y(t) };
+        c = {
+            background: y(t),
+        };
     return r
         ? (0, n.jsx)(u.DUT, {
               onClick: () => l(!0),
@@ -176,7 +191,7 @@ let O = (0, d.A)((e) => {
             items: t,
             className: l,
             paused: r = !1,
-            autoplayInterval: s = 8000,
+            autoplayInterval: s = 8e3,
             onItemChange: c,
             isMuted: u = !0,
             onTrackClick: d,
@@ -266,7 +281,9 @@ let O = (0, d.A)((e) => {
             (e, l, a) => {
                 let r = l === (0, m.U3)(C, t.length);
                 return (0, n.jsx)(o.A.div, {
-                    className: i()(_.AS, { [_.Xt]: r }),
+                    className: i()(_.AS, {
+                        [_.Xt]: r,
+                    }),
                     style: null != a ? B(l, a) : null,
                     onMouseEnter: r ? null : () => V(l),
                     onMouseLeave: r ? null : z,
@@ -312,11 +329,15 @@ let O = (0, d.A)((e) => {
                           e,
                           (0, n.jsx)(p.Q8, {
                               onClick: F,
-                              className: i()(_.UE, { [_.h_]: D }),
+                              className: i()(_.UE, {
+                                  [_.h_]: D,
+                              }),
                           }),
                           (0, n.jsx)(p.Oj, {
                               onClick: q,
-                              className: i()(_.UE, { [_.h_]: M }),
+                              className: i()(_.UE, {
+                                  [_.h_]: M,
+                              }),
                           }),
                       ],
                   });

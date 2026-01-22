@@ -1,4 +1,8 @@
-n.d(t, { A: () => S }), n(321073), n(896048);
+n.d(t, {
+    A: () => S,
+}),
+    n(321073),
+    n(896048);
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -19,6 +23,7 @@ var i = n(503698),
     b = n(985018),
     y = n(121615),
     O = n(1624);
+
 function A(e, t, n) {
     return (
         t in e
@@ -32,6 +37,7 @@ function A(e, t, n) {
         e
     );
 }
+
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -74,7 +80,16 @@ let S = () => {
         R = () => {
             (0, c.mMO)(async () => {
                 let { default: e } = await n.e("37548").then(n.bind(n, 856103));
-                return (t) => (0, r.jsx)(e, v({ guildId: A.id }, t));
+                return (t) =>
+                    (0, r.jsx)(
+                        e,
+                        v(
+                            {
+                                guildId: A.id,
+                            },
+                            t,
+                        ),
+                    );
             });
         },
         w = null != (e = null == S ? void 0 : S.applicationStatus) ? e : _.B5.STARTED,

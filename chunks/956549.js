@@ -1,4 +1,6 @@
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var r = n(734057),
     i = n(287809),
     a = n(646865),
@@ -6,6 +8,7 @@ var r = n(734057),
     o = n(795816),
     l = n(817636),
     c = n(574152);
+
 function u(e, t, n) {
     return (
         t in e
@@ -19,6 +22,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,6 +39,7 @@ function d(e) {
     }
     return e;
 }
+
 function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -47,6 +52,7 @@ function f(e, t) {
     }
     return n;
 }
+
 function p(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -67,7 +73,13 @@ async function _(e) {
     } catch (e) {
         return !1;
     }
-    return (0, a.w)(n, () => h(p(d({}, e), { targetApplication: t })));
+    return (0, a.w)(n, () =>
+        h(
+            p(d({}, e), {
+                targetApplication: t,
+            }),
+        ),
+    );
 }
 async function h(e) {
     let {

@@ -1,4 +1,6 @@
-r.d(t, { s: () => G });
+r.d(t, {
+    s: () => G,
+});
 var n = r(627968),
     l = r(64700),
     s = r(503698),
@@ -27,6 +29,7 @@ var n = r(627968),
     w = r(513480),
     E = r(790782),
     T = r(967789);
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
@@ -52,6 +55,7 @@ function _(e) {
     }
     return e;
 }
+
 function D(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -70,6 +74,7 @@ function D(e, t) {
         e
     );
 }
+
 function k(e, t) {
     if (null == e) return {};
     var r,
@@ -98,6 +103,7 @@ function k(e, t) {
             (n = r[l]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (s[n] = e[n]);
     return s;
 }
+
 function C(e) {
     let {
             destination: t,
@@ -120,7 +126,9 @@ function C(e) {
         D(
             _(
                 {
-                    className: i()(T.HP, m, { [T.r9]: o }),
+                    className: i()(T.HP, m, {
+                        [T.r9]: o,
+                    }),
                     onClick: o ? void 0 : y,
                     "aria-selected": a,
                     "aria-setsize": f,
@@ -168,11 +176,14 @@ function C(e) {
         ),
     );
 }
+
 function I(e) {
     let { user: t, subLabel: r } = e,
         l = k(e, ["user", "subLabel"]),
         s = N.Ay.useName(t),
-        i = N.Ay.useUserTag(t, { decoration: "never" }),
+        i = N.Ay.useUserTag(t, {
+            decoration: "never",
+        }),
         u = (0, o.bG)([A.A], () => A.A.getNickname(t.id)),
         a = (0, o.bG)([O.A], () => O.A.getStatus(t.id));
     return (0, n.jsx)(
@@ -189,6 +200,7 @@ function I(e) {
         }),
     );
 }
+
 function R(e) {
     let { channel: t, subLabel: r } = e,
         l = k(e, ["channel", "subLabel"]),
@@ -207,6 +219,7 @@ function R(e) {
         }),
     );
 }
+
 function M(e) {
     let { channel: t, subLabel: r } = e,
         l = k(e, ["channel", "subLabel"]),
@@ -240,7 +253,7 @@ function M(e) {
                                   className: T.Ql,
                                   variant: "text-xs/medium",
                                   color: "text-subtle",
-                                  children: "\u2022",
+                                  children: "•",
                               }),
                               (0, n.jsx)(d.Text, {
                                   variant: "text-xs/medium",
@@ -266,6 +279,7 @@ function M(e) {
         }),
     );
 }
+
 function G(e) {
     let {
             rowData: t,
@@ -313,11 +327,35 @@ function G(e) {
                         className: c,
                     };
                 return b === f.rD.USER
-                    ? (0, n.jsx)(I, _({ user: h }, x))
+                    ? (0, n.jsx)(
+                          I,
+                          _(
+                              {
+                                  user: h,
+                              },
+                              x,
+                          ),
+                      )
                     : b === f.rD.GROUP_DM
-                      ? (0, n.jsx)(R, _({ channel: h }, x))
+                      ? (0, n.jsx)(
+                            R,
+                            _(
+                                {
+                                    channel: h,
+                                },
+                                x,
+                            ),
+                        )
                       : b === f.rD.TEXT_CHANNEL || b === f.rD.VOICE_CHANNEL
-                        ? (0, n.jsx)(M, _({ channel: h }, x))
+                        ? (0, n.jsx)(
+                              M,
+                              _(
+                                  {
+                                      channel: h,
+                                  },
+                                  x,
+                              ),
+                          )
                         : void (0, S.xb)(b);
             },
             [a, u, r, s, t, d, c, o],

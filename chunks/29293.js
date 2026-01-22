@@ -1,10 +1,14 @@
-n.d(t, { A: () => s }), n(896048);
+n.d(t, {
+    A: () => s,
+}),
+    n(896048);
 var l = n(627968);
 n(64700);
 var i = n(311907),
     r = n(397927),
     a = n(994500),
     o = n(985018);
+
 function s(e) {
     let { user: t, onAction: s, appContext: d } = e,
         u = t.id,
@@ -58,7 +62,9 @@ function s(e) {
                                 ),
                             );
                     },
-                    { contextKey: null != d ? (0, r.TId)(d) : void 0 },
+                    {
+                        contextKey: null != d ? (0, r.TId)(d) : void 0,
+                    },
                 );
         },
     });

@@ -24,6 +24,7 @@ var r = n(284009),
     E = n(743445),
     b = n(652215),
     y = n(381941);
+
 function O(e, t, n) {
     return (
         t in e
@@ -37,6 +38,7 @@ function O(e, t, n) {
         e
     );
 }
+
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -53,6 +55,7 @@ function A(e) {
     }
     return e;
 }
+
 function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -65,6 +68,7 @@ function v(e, t) {
     }
     return n;
 }
+
 function S(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -76,6 +80,7 @@ function S(e, t) {
         e
     );
 }
+
 function I(e, t) {
     if (null == e) return {};
     var n,
@@ -92,6 +97,7 @@ function I(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function T(e, t) {
     if (null == e) return {};
     var n,
@@ -154,7 +160,9 @@ class D extends m.A {
     startQueueMetricTimers(e) {
         let t = P.map((e) =>
             setTimeout(() => {
-                (0, o.zV)(b.HAw.SEND_MESSAGE_QUEUED, { queued_duration_ms: e });
+                (0, o.zV)(b.HAw.SEND_MESSAGE_QUEUED, {
+                    queued_duration_ms: e,
+                });
             }, e),
         );
         this.analyticsTimeouts.set(e, t);
@@ -174,7 +182,11 @@ class D extends m.A {
                 t(null, n);
             else if (429 === n.status) {
                 let e = parseInt(n.headers["retry-after"]);
-                isNaN(e) ? t(null, n) : t({ retryAfter: e * _.A.Millis.SECOND });
+                isNaN(e)
+                    ? t(null, n)
+                    : t({
+                          retryAfter: e * _.A.Millis.SECOND,
+                      });
             } else t(null, n);
         };
     }
@@ -183,9 +195,22 @@ class D extends m.A {
         let { channelId: r, analyticsLocation: i } = e,
             s = I(e, ["channelId", "analyticsLocation"]),
             o = null != (n = (0, d.A)()) ? n : i,
-            l = null != o ? { location: o } : void 0,
+            l =
+                null != o
+                    ? {
+                          location: o,
+                      }
+                    : void 0,
             f = (0, u.O)(),
-            _ = A({ mobile_network_type: p.A.getType() }, s, null != f && { signal_strength: f });
+            _ = A(
+                {
+                    mobile_network_type: p.A.getType(),
+                },
+                s,
+                null != f && {
+                    signal_strength: f,
+                },
+            );
         if (c.Ay.get("send_fail_100")) {
             this.logger.log("Skipping message send because send_fail_100 is enabled"),
                 t(null, {
@@ -228,9 +253,22 @@ class D extends m.A {
         let { channelId: r, analyticsLocation: i } = e,
             s = I(e, ["channelId", "analyticsLocation"]),
             o = null != (n = (0, d.A)()) ? n : i,
-            l = null != o ? { location: o } : void 0,
+            l =
+                null != o
+                    ? {
+                          location: o,
+                      }
+                    : void 0,
             f = (0, u.O)(),
-            _ = A({ mobile_network_type: p.A.getType() }, s, null != f && { signal_strength: f });
+            _ = A(
+                {
+                    mobile_network_type: p.A.getType(),
+                },
+                s,
+                null != f && {
+                    signal_strength: f,
+                },
+            );
         if (c.Ay.get("send_fail_100")) {
             this.logger.log("Skipping message send because send_fail_100 is enabled"),
                 t(null, {

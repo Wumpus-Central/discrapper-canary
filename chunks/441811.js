@@ -1,4 +1,6 @@
-n.d(t, { l: () => v });
+n.d(t, {
+    l: () => v,
+});
 var a = n(627968),
     l = n(64700),
     i = n(311907),
@@ -15,6 +17,7 @@ var a = n(627968),
     x = n(985018),
     b = n(439315);
 let g = new o.A("DisplayNameStylesCoachmark");
+
 function v(e) {
     let { markAsDismissed: t, targetElementRef: n, children: o } = e,
         { analyticsLocations: v } = (0, s.Ay)(),
@@ -29,7 +32,9 @@ function v(e) {
                         analyticsLocations: v,
                     },
                     () => {
-                        (0, m.L)({ analyticsLocations: v });
+                        (0, m.L)({
+                            analyticsLocations: v,
+                        });
                     },
                 );
         }, [t, v]),
@@ -52,7 +57,9 @@ function v(e) {
                     onRequestClose: A,
                     align: "right",
                     position: "top",
-                    caretConfig: { align: "center" },
+                    caretConfig: {
+                        align: "center",
+                    },
                     gradientColor: "nitro-pink",
                     graphic: {
                         type: "video",

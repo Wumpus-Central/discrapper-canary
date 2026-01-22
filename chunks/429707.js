@@ -12,6 +12,7 @@ var a = n(247775),
     c = n(274303),
     d = n(652215);
 let u = new s.A("MultiAccountActionCreators");
+
 function m() {
     let e = o.default.getId();
     c.A.getUsers().forEach(async (t) => {
@@ -30,7 +31,9 @@ function m() {
         try {
             n = await l.Bo.get({
                 url: d.Rsh.ME,
-                headers: { authorization: s },
+                headers: {
+                    authorization: s,
+                },
                 retries: 3,
                 rejectWithError: !1,
             });
@@ -52,8 +55,11 @@ function m() {
             });
     });
 }
+
 function p(e, t) {
-    u.log("Switching account to ".concat(e), { switchSynchronously: t });
+    u.log("Switching account to ".concat(e), {
+        switchSynchronously: t,
+    });
     let n = a.getToken(e);
     return null == n
         ? (u.log("Switching accounts failed because there was no token"),
@@ -64,6 +70,7 @@ function p(e, t) {
           Promise.resolve())
         : r.A.switchAccountToken(n, t);
 }
+
 function h(e) {
     i.h.dispatch({
         type: "MULTI_ACCOUNT_REMOVE_ACCOUNT",

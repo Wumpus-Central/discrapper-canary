@@ -1,4 +1,7 @@
-n.d(t, { A: () => d }), n(896048);
+n.d(t, {
+    A: () => d,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(459793),
@@ -7,6 +10,7 @@ var r = n(627968),
     o = n(937008),
     c = n(156312),
     u = n(534479);
+
 function d(e) {
     let { initialStep: t, initialPlanId: n, guildId: d, setAnalyticsData: p, handleClose: m } = e,
         {
@@ -27,7 +31,10 @@ function d(e) {
         E(!g || !x || j);
     }, [j, x, g]),
     i.useEffect(() => {
-        null != d && O({ guild_id: d });
+        null != d &&
+            O({
+                guild_id: d,
+            });
     }, [d, O]),
     i.useEffect(() => {
         y(n);
@@ -90,6 +97,8 @@ function d(e) {
     A)
         ? (0, r.jsx)(u.A, {})
         : f
-          ? (0, r.jsx)(l.oO, { onClose: m })
+          ? (0, r.jsx)(l.oO, {
+                onClose: m,
+            })
           : null;
 }

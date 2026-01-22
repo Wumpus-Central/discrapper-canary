@@ -1,4 +1,6 @@
-n.d(t, { A: () => P });
+n.d(t, {
+    A: () => P,
+});
 var r = n(627968),
     l = n(64700),
     i = n(735438),
@@ -25,6 +27,7 @@ var r = n(627968),
     C = n(652215),
     S = n(985018),
     I = n(266920);
+
 function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -50,6 +53,7 @@ function N(e) {
     }
     return e;
 }
+
 function T(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -68,6 +72,7 @@ function T(e, t) {
         e
     );
 }
+
 function P(e) {
     var t;
     let i,
@@ -84,7 +89,9 @@ function P(e) {
                     type: "SIDEBAR_CLOSE",
                     baseChannelId: t.parent_id,
                 }),
-                (0, y.N9)(t, { source: _.H9.VOICE_AUTO_OPEN }));
+                (0, y.N9)(t, {
+                    source: _.H9.VOICE_AUTO_OPEN,
+                }));
         }, [i, t]);
     let G = l.useRef(!1);
     if (
@@ -92,8 +99,15 @@ function P(e) {
             if (null == D || G.current) return;
             G.current = !0;
             let e = (0, f.C)(O.A.getChannel(D.id), !0);
-            (0, d.zV)(C.HAw.CHANNEL_OPENED, T(N({}, e, (0, d.qL)(D.id)), { channel_view: R })),
-                (0, p.k)(C.HAw.CHANNEL_OPENED_CLICKSTREAM, { channelId: D.id });
+            (0, d.zV)(
+                C.HAw.CHANNEL_OPENED,
+                T(N({}, e, (0, d.qL)(D.id)), {
+                    channel_view: R,
+                }),
+            ),
+                (0, p.k)(C.HAw.CHANNEL_OPENED_CLICKSTREAM, {
+                    channelId: D.id,
+                });
         }, [D, R]),
         null == D || null == M)
     )
@@ -119,7 +133,13 @@ function P(e) {
                     handleContextMenu: function (e) {
                         (0, c.L3)(e, async () => {
                             let { default: e } = await n.e("33").then(n.bind(n, 44536));
-                            return (t) => (0, r.jsx)(e, T(N({}, t), { channel: D }));
+                            return (t) =>
+                                (0, r.jsx)(
+                                    e,
+                                    T(N({}, t), {
+                                        channel: D,
+                                    }),
+                                );
                         });
                     },
                     handleClick: function () {

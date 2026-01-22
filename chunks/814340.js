@@ -1,4 +1,10 @@
-n.d(t, { A: () => Z }), n(65821), n(896048), n(747238), n(667532);
+n.d(t, {
+    A: () => Z,
+}),
+    n(65821),
+    n(896048),
+    n(747238),
+    n(667532);
 var r,
     l = n(627968),
     i = n(64700),
@@ -36,6 +42,7 @@ var r,
     G = n(652215),
     k = n(985018),
     U = n(171814);
+
 function V(e, t, n) {
     return (
         t in e
@@ -49,6 +56,7 @@ function V(e, t, n) {
         e
     );
 }
+
 function F(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -65,6 +73,7 @@ function F(e) {
     }
     return e;
 }
+
 function H(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -114,7 +123,9 @@ class K extends (r = i.Component) {
         );
     }
 }
-V(K, "defaultProps", { unread: !1 });
+V(K, "defaultProps", {
+    unread: !1,
+});
 let W = c.Ay.connectStores([_.Ay, j.A], (e) => {
         let { channel: t } = e;
         return {
@@ -128,11 +139,15 @@ let W = c.Ay.connectStores([_.Ay, j.A], (e) => {
         let { channel: t } = e;
         if (null == t.guild_id)
             throw Error("ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...");
-        return { voiceStates: S.Ay.getVoiceStates(t.guild_id)[t.id] };
+        return {
+            voiceStates: S.Ay.getVoiceStates(t.guild_id)[t.id],
+        };
     })(K),
     Y = c.Ay.connectStores([v.default], (e) => {
         let { guild: t } = e;
-        return { unread: v.default.hasUnread(t.id) };
+        return {
+            unread: v.default.hasUnread(t.id),
+        };
     })(D.OS),
     q = c.Ay.connectStores([_.Ay, E.A], (e) => {
         var t;
@@ -156,6 +171,7 @@ let W = c.Ay.connectStores([_.Ay, j.A], (e) => {
             isMobile: E.A.isMobileOnline(t.id),
         };
     })(D.KJ);
+
 function J(e, t, n) {
     return (0, l.jsx)(
         u.m,
@@ -182,7 +198,9 @@ class Q extends i.PureComponent {
             { current: i } = this.scrollerRef;
         null != i &&
             (r !== t.query
-                ? i.scrollTo({ to: 0 })
+                ? i.scrollTo({
+                      to: 0,
+                  })
                 : n &&
                   l >= 0 &&
                   i.scrollToIndex({
@@ -195,7 +213,10 @@ class Q extends i.PureComponent {
         (0, w.jD)();
     }
     search(e) {
-        this.setState({ query: e }), (0, w.$P)(e);
+        this.setState({
+            query: e,
+        }),
+            (0, w.$P)(e);
     }
     renderInput() {
         let { selectedIndex: e, results: t } = this.props,
@@ -260,14 +281,18 @@ class Q extends i.PureComponent {
         });
     }
     focusNode(e) {
-        T._.dispatch(G.jej.QUICKSWITCHER_RESULT_FOCUS, { node: e });
+        T._.dispatch(G.jej.QUICKSWITCHER_RESULT_FOCUS, {
+            node: e,
+        });
     }
     getRowId(e) {
         return "quick-switcher-".concat(this._listId, "-item-").concat(e);
     }
     renderProtip() {
         return (0, l.jsx)(A.A, {
-            className: s()(U.PP, { [U.ov]: this.state.query.length > 0 }),
+            className: s()(U.PP, {
+                [U.ov]: this.state.query.length > 0,
+            }),
             type: A.A.Types.INLINE,
             children: k.intl.format(k.t.wukqXQ, {
                 userSymbolHook: (e, t) => J(t, b.AT.USER, k.intl.string(k.t.GQRCGn)),
@@ -281,7 +306,11 @@ class Q extends i.PureComponent {
     renderTutorial() {
         let { query: e } = this.state,
             { seenTutorial: t, results: n } = this.props;
-        return t ? null : (0, l.jsx)(M.A, { hasQuery: e.length > 0 && n.length > 0 });
+        return t
+            ? null
+            : (0, l.jsx)(M.A, {
+                  hasQuery: e.length > 0 && n.length > 0,
+              });
     }
     render() {
         return (0, l.jsx)(o.dWK, {
@@ -311,7 +340,10 @@ class Q extends i.PureComponent {
             }),
             V(this, "handleMouseMove", () => {
                 let { mouseFocusDisabled: e } = this.state;
-                !1 !== e && this.setState({ mouseFocusDisabled: !1 });
+                !1 !== e &&
+                    this.setState({
+                        mouseFocusDisabled: !1,
+                    });
             }),
             V(this, "focusResult", (e) => {
                 this.state.mouseFocusDisabled || (0, w.wf)(this.props.results.indexOf(e));
@@ -427,7 +459,13 @@ class Q extends i.PureComponent {
                             case G.rbe.GUILD_DIRECTORY:
                                 return (0, f.L3)(e, async () => {
                                     let { default: e } = await n.e("29559").then(n.bind(n, 994058));
-                                    return (t) => (0, l.jsx)(e, H(F({}, t), { channel: r }));
+                                    return (t) =>
+                                        (0, l.jsx)(
+                                            e,
+                                            H(F({}, t), {
+                                                channel: r,
+                                            }),
+                                        );
                                 });
                         }
                         break;
@@ -463,7 +501,10 @@ class Q extends i.PureComponent {
             V(this, "handleKeyDown", (e) => {
                 let { mouseFocusDisabled: t, query: n } = this.state,
                     { results: r } = this.props;
-                !1 === t && this.setState({ mouseFocusDisabled: !0 });
+                !1 === t &&
+                    this.setState({
+                        mouseFocusDisabled: !0,
+                    });
                 let l = e.key.toLowerCase(),
                     { selectedIndex: i } = this.props;
                 switch (l) {
@@ -514,12 +555,21 @@ class Q extends i.PureComponent {
                 let { row: t } = e,
                     n = this.props.results[t],
                     { selectedIndex: r } = this.props,
-                    { showScores: i } = m.A.getCurrentConfig({ location: "62f4be_1" }, { autoTrackExposure: !1 });
+                    { showScores: i } = m.A.getCurrentConfig(
+                        {
+                            location: "62f4be_1",
+                        },
+                        {
+                            autoTrackExposure: !1,
+                        },
+                    );
                 switch (n.type) {
                     case b.rD.HEADER:
                         return (0, l.jsx)(
                             D.Y9,
-                            { children: n.record.text },
+                            {
+                                children: n.record.text,
+                            },
                             "".concat(n.type, "-").concat(n.record.id),
                         );
                     case b.rD.TEXT_CHANNEL:
@@ -653,10 +703,13 @@ class Q extends i.PureComponent {
             });
     }
 }
+
 function Z(e) {
     let t = (0, c.cf)([R.A], () => R.A.getProps()),
         n = (0, O.PH)(),
-        r = L.A.useExperiment({ location: "QuickSwitcher" }).enabled,
+        r = L.A.useExperiment({
+            location: "QuickSwitcher",
+        }).enabled,
         a = i.useMemo(
             () =>
                 r

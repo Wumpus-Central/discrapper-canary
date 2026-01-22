@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(64700),
     i = n(311907),
     a = n(475743),
@@ -6,6 +8,7 @@ var r = n(64700),
     o = n(429913),
     l = n(91242),
     c = n(207371);
+
 function u(e) {
     let { applicationId: t, context: n, launchingComponentId: u, onSubmissionComplete: d } = e,
         f = (0, o.h)(t),

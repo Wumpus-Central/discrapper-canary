@@ -1,4 +1,8 @@
-n.d(t, { default: () => S }), n(896048), n(65821);
+n.d(t, {
+    default: () => S,
+}),
+    n(896048),
+    n(65821);
 var r = n(627968),
     i = n(64700),
     a = n(284009),
@@ -22,7 +26,9 @@ async function O(e, t, n, r) {
     await (0, d.Ey)(n),
         await (0, u.nV)(
             e,
-            { items: i },
+            {
+                items: i,
+            },
             {
                 amount: 0,
                 currency: e.currency,
@@ -31,6 +37,7 @@ async function O(e, t, n, r) {
             r,
         );
 }
+
 function A(e) {
     let { errorMsg: t } = e;
     return (0, r.jsxs)("div", {
@@ -44,16 +51,27 @@ function A(e) {
                         children: t,
                     }),
                 }),
-            (0, r.jsx)("div", { children: b.intl.string(b.t.DY2CXs) }),
+            (0, r.jsx)("div", {
+                children: b.intl.string(b.t.DY2CXs),
+            }),
         ],
     });
 }
+
 function v() {
     return (0, r.jsxs)("div", {
         className: y.rf,
-        children: [(0, r.jsx)("div", { className: y.dk }), (0, r.jsx)("div", { children: b.intl.string(b.t.G27uHe) })],
+        children: [
+            (0, r.jsx)("div", {
+                className: y.dk,
+            }),
+            (0, r.jsx)("div", {
+                children: b.intl.string(b.t.G27uHe),
+            }),
+        ],
     });
 }
+
 function S(e) {
     let { guildBoostSlotId: t, transitionState: n, onClose: a } = e,
         { analyticsLocations: d } = (0, h.Ay)(_.A.GUILD_BOOST_UNCANCELLATION_MODAL);
@@ -123,7 +141,9 @@ function S(e) {
             if (null == y) return (0, r.jsx)(c.y$y, {});
             switch (S) {
                 case 1:
-                    return (0, r.jsx)(A, { errorMsg: N });
+                    return (0, r.jsx)(A, {
+                        errorMsg: N,
+                    });
                 case 2:
                     return (0, r.jsx)(v, {});
                 default:

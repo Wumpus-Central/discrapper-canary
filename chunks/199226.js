@@ -1,4 +1,8 @@
-t.d(n, { default: () => f }), t(896048), t(228524);
+t.d(n, {
+    default: () => f,
+}),
+    t(896048),
+    t(228524);
 var l = t(627968),
     i = t(64700),
     s = t(158954),
@@ -16,6 +20,7 @@ var l = t(627968),
     g = t(988794),
     A = t(985018),
     C = t(587880);
+
 function f(e) {
     var n;
     let { transitionState: t, event: f, onSuccess: N, onClose: p } = e,
@@ -34,7 +39,9 @@ function f(e) {
             null == N || N(), p(), (0, u.ek)(!1);
         },
         D = async () => {
-            await I(f, b, { onSuccess: O });
+            await I(f, b, {
+                onSuccess: O,
+            });
         };
     return (0, l.jsxs)(s.Modal, {
         transitionState: t,
@@ -69,7 +76,9 @@ function f(e) {
                   onClick: () => S(!b),
                   className: C.Qy,
                   children: [
-                      (0, l.jsx)(s.P7L, { checked: b }),
+                      (0, l.jsx)(s.P7L, {
+                          checked: b,
+                      }),
                       (0, l.jsx)(a.Text, {
                           color: "text-default",
                           variant: "text-sm/normal",
@@ -101,7 +110,10 @@ function f(e) {
                 guildEvent: f,
                 hideAgeVerificationNotice: !0,
             }),
-            g.Tn.has(f.entity_type) && (0, l.jsx)(d.A, { className: C.XI }),
+            g.Tn.has(f.entity_type) &&
+                (0, l.jsx)(d.A, {
+                    className: C.XI,
+                }),
             null != M && null != M.getAnyErrorMessage()
                 ? (0, l.jsx)(a.Text, {
                       color: "text-feedback-critical",

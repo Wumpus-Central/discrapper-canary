@@ -1,7 +1,11 @@
-n.d(t, { s: () => f }), n(228524);
+n.d(t, {
+    s: () => f,
+}),
+    n(228524);
 var r = n(627968),
     i = n(397927),
     a = n(267475);
+
 function s(e, t, n) {
     return (
         t in e
@@ -15,6 +19,7 @@ function s(e, t, n) {
         e
     );
 }
+
 function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -31,6 +36,7 @@ function o(e) {
     }
     return e;
 }
+
 function l(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -43,6 +49,7 @@ function l(e, t) {
     }
     return n;
 }
+
 function c(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -54,6 +61,7 @@ function c(e, t) {
         e
     );
 }
+
 function u(e, t) {
     if (null == e) return {};
     var n,
@@ -70,6 +78,7 @@ function u(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function d(e, t) {
     if (null == e) return {};
     var n,
@@ -92,9 +101,15 @@ let f = {
                     children: (0, r.jsxs)(i.nVY, {
                         label: "" === t ? void 0 : t,
                         children: [
-                            (0, r.jsx)(i.ksK, { label: "First Name" }),
-                            (0, r.jsx)(i.ksK, { label: "Last Name" }),
-                            (0, r.jsx)(i.ksK, { label: "Address" }),
+                            (0, r.jsx)(i.ksK, {
+                                label: "First Name",
+                            }),
+                            (0, r.jsx)(i.ksK, {
+                                label: "Last Name",
+                            }),
+                            (0, r.jsx)(i.ksK, {
+                                label: "Address",
+                            }),
                         ],
                     }),
                 });

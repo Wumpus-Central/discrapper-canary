@@ -1,4 +1,6 @@
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});
 let r = (function () {
     var e = {
             base: "https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/",
@@ -31,15 +33,19 @@ let r = (function () {
         s = /^(?:iframe|noframes|noscript|script|select|style|textarea)$/,
         o = String.fromCharCode;
     return e;
+
     function l(e, t) {
         return document.createTextNode(t ? e.replace(r, "") : e);
     }
+
     function c(e) {
         return e.replace(a, h);
     }
+
     function u(e, t) {
         return "".concat(t.base, t.size, "/", e, t.ext);
     }
+
     function d(e, t) {
         for (var n, r, i = e.childNodes, a = i.length; a--; )
             3 === (r = (n = i[a]).nodeType)
@@ -47,9 +53,11 @@ let r = (function () {
                 : 1 !== r || "ownerSVGElement" in n || s.test(n.nodeName.toLowerCase()) || d(n, t);
         return t;
     }
+
     function f(e) {
         return A(0 > e.indexOf(i) ? e.replace(r, "") : e);
     }
+
     function p(e, t) {
         for (var r, i, a, s, o, c, u, p, _, h, m, g, E, b = d(e, []), y = b.length; y--; ) {
             for (a = !1, s = document.createDocumentFragment(), c = (o = b[y]).nodeValue, p = 0; (u = n.exec(c)); ) {
@@ -72,6 +80,7 @@ let r = (function () {
         }
         return e;
     }
+
     function _(e, t) {
         return y(e, function (e) {
             var n,
@@ -102,22 +111,30 @@ let r = (function () {
             return i;
         });
     }
+
     function h(e) {
         return t[e];
     }
+
     function m() {
         return null;
     }
+
     function g(e) {
         return "number" == typeof e ? e + "x" + e : e;
     }
+
     function E(e) {
         var t = "string" == typeof e ? parseInt(e, 16) : e;
         return t < 65536 ? o(t) : o(55296 + ((t -= 65536) >> 10), 56320 + (1023 & t));
     }
+
     function b(t, n) {
         return (
-            (n && "function" != typeof n) || (n = { callback: n }),
+            (n && "function" != typeof n) ||
+                (n = {
+                    callback: n,
+                }),
             ("string" == typeof t ? _ : p)(t, {
                 callback: n.callback || u,
                 attributes: "function" == typeof n.attributes ? n.attributes : m,
@@ -129,14 +146,17 @@ let r = (function () {
             })
         );
     }
+
     function y(e, t) {
         return String(e).replace(n, t);
     }
+
     function O(e) {
         n.lastIndex = 0;
         var t = n.test(e);
         return (n.lastIndex = 0), t;
     }
+
     function A(e, t) {
         for (var n = [], r = 0, i = 0, a = 0; a < e.length; )
             (r = e.charCodeAt(a++)),

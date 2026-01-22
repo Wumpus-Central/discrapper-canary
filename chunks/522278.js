@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(627968),
     a = n(64700),
     i = n(503698),
@@ -64,7 +66,9 @@ class p extends a.PureComponent {
                         },
                         null != a ? "".concat(a, "-").concat(i) : i,
                     ),
-                (0, r.jsx)(o.cGx, { className: u.yF }),
+                (0, r.jsx)(o.cGx, {
+                    className: u.yF,
+                }),
             ],
         });
     }

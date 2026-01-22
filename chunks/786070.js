@@ -9,5 +9,7 @@ n(
             return !t;
         }),
     },
-    { isSupersetOf: o },
+    {
+        isSupersetOf: o,
+    },
 );

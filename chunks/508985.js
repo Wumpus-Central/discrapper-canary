@@ -8,5 +8,7 @@ n(
             Array.from(t);
         }),
     },
-    { from: o },
+    {
+        from: o,
+    },
 );

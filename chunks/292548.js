@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968),
     i = n(64700),
     a = n(665260),
@@ -8,6 +10,7 @@ var r = n(627968),
     c = n(942075),
     u = n(226139),
     d = n(652215);
+
 function f(e) {
     var t, n;
     let { channel: f, message: p } = e,

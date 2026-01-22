@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -8,13 +10,18 @@ var r = n(627968),
     c = n(775602),
     u = n(169909),
     d = n(457806);
+
 function f(e) {
     let { look: t = u.r0.LARGE_BANNER } = e,
         n = (0, o.bG)([c.A], () => c.A.useReducedMotion),
         { styleLarge: a, styleSmall: f } = i.useMemo(
             () => ({
-                styleLarge: { width: "".concat(10 + 50 * Math.random(), "%") },
-                styleSmall: { width: "".concat(30 + 60 * Math.random(), "%") },
+                styleLarge: {
+                    width: "".concat(10 + 50 * Math.random(), "%"),
+                },
+                styleSmall: {
+                    width: "".concat(30 + 60 * Math.random(), "%"),
+                },
             }),
             [],
         );
@@ -32,9 +39,15 @@ function f(e) {
                 }),
             }),
             (0, r.jsxs)("div", {
-                className: s()(d.TD, { [d.Ne]: t === u.r0.ROW }),
+                className: s()(d.TD, {
+                    [d.Ne]: t === u.r0.ROW,
+                }),
                 children: [
-                    (0, r.jsx)("div", { className: s()(d.Pz, { [d.Lu]: t === u.r0.ROW }) }),
+                    (0, r.jsx)("div", {
+                        className: s()(d.Pz, {
+                            [d.Lu]: t === u.r0.ROW,
+                        }),
+                    }),
                     (0, r.jsxs)("div", {
                         className: d.FS,
                         children: [
@@ -62,7 +75,10 @@ function f(e) {
                             }),
                         ],
                     }),
-                    t === u.r0.ROW && (0, r.jsx)("div", { className: d.ek }),
+                    t === u.r0.ROW &&
+                        (0, r.jsx)("div", {
+                            className: d.ek,
+                        }),
                 ],
             }),
         ],

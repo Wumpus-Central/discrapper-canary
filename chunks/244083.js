@@ -15,6 +15,7 @@ var r,
     d = n(652215),
     f = n(985018),
     p = n(478507);
+
 function _(e, t, n) {
     return (
         t in e
@@ -28,6 +29,7 @@ function _(e, t, n) {
         e
     );
 }
+
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -44,6 +46,7 @@ function h(e) {
     }
     return e;
 }
+
 function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -56,6 +59,7 @@ function m(e, t) {
     }
     return n;
 }
+
 function g(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -67,6 +71,7 @@ function g(e, t) {
         e
     );
 }
+
 function E(e, t) {
     if (null == e) return {};
     var n,
@@ -83,6 +88,7 @@ function E(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function b(e, t) {
     if (null == e) return {};
     var n,
@@ -102,7 +108,9 @@ var y = (function (e) {
 class A extends a.PureComponent {
     componentDidMount() {
         let { uniqueId: e } = this.props;
-        u.default.track(d.HAw.SHOW_TUTORIAL, { tutorial: e });
+        u.default.track(d.HAw.SHOW_TUTORIAL, {
+            tutorial: e,
+        });
     }
     componentWillUnmount() {
         u.default.track(d.HAw.CLOSE_TUTORIAL, {
@@ -169,10 +177,17 @@ class A extends a.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            _(this, "state", { confirmed: !1 }),
+            _(this, "state", {
+                confirmed: !1,
+            }),
             _(this, "handleDismiss", () => {
                 let { onClickComplete: e } = this.props;
-                this.setState({ confirmed: !0 }, () => (null == e ? void 0 : e()));
+                this.setState(
+                    {
+                        confirmed: !0,
+                    },
+                    () => (null == e ? void 0 : e()),
+                );
             });
     }
 }
@@ -208,13 +223,21 @@ class v extends (r = a.PureComponent) {
             m = "top" === _.position || "bottom" === _.position ? "center" : "top";
         return (0, i.jsx)(
             l.YNO,
-            g(h({ targetElementRef: p }, _), {
-                align: m,
-                spacing: null != d ? d : 0,
-                renderPopout: this.renderPopoutContent,
-                nudgeAlignIntoViewport: !0,
-                children: u,
-            }),
+            g(
+                h(
+                    {
+                        targetElementRef: p,
+                    },
+                    _,
+                ),
+                {
+                    align: m,
+                    spacing: null != d ? d : 0,
+                    renderPopout: this.renderPopoutContent,
+                    nudgeAlignIntoViewport: !0,
+                    children: u,
+                },
+            ),
         );
     }
     constructor(...e) {
@@ -224,7 +247,11 @@ class v extends (r = a.PureComponent) {
             }),
             _(this, "onClickSkipAll", (e) => {
                 let { onSkipAll: t, uniqueId: n } = this.props;
-                e(), t(), u.default.track(d.HAw.DISMISS_ALL_TUTORIALS, { tutorial: n });
+                e(),
+                    t(),
+                    u.default.track(d.HAw.DISMISS_ALL_TUTORIALS, {
+                        tutorial: n,
+                    });
             }),
             _(this, "renderPopoutContent", (e) => {
                 let { closePopout: t, position: n } = e,
@@ -260,4 +287,7 @@ class v extends (r = a.PureComponent) {
             });
     }
 }
-_(v, "TextAlignments", y), _(v, "defaultProps", { textAlign: "left" });
+_(v, "TextAlignments", y),
+    _(v, "defaultProps", {
+        textAlign: "left",
+    });

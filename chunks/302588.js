@@ -1,8 +1,12 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(682213);
+
 function i(e) {
     return e === Object(e) && 0 !== Object.keys(e).length;
 }
+
 function a(e, t) {
     void 0 === t && (t = "auto");
     var n = "scrollBehavior" in document.body.style;
@@ -19,6 +23,7 @@ function a(e, t) {
             : ((r.scrollTop = i), (r.scrollLeft = a));
     });
 }
+
 function s(e) {
     return !1 === e
         ? {

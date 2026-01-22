@@ -1,4 +1,6 @@
-n.d(t, { _: () => d });
+n.d(t, {
+    _: () => d,
+});
 var r = n(64700),
     i = n(508425),
     a = n(559949),
@@ -21,6 +23,7 @@ let c = {
         [i.z.TOON]: 3,
         [i.z.POP]: 3,
     };
+
 function d(e) {
     let t = (0, s.A)(e);
     return r.useMemo(() => {

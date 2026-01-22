@@ -41,7 +41,9 @@ let x = 24,
             l = s ? t : t.slice(0, L),
             u = t.length > L,
             f = t.length - L,
-            p = P.intl.formatToPlainString(P.t.XSdy72, { numTruncated: f }),
+            p = P.intl.formatToPlainString(P.t.XSdy72, {
+                numTruncated: f,
+            }),
             _ = () => o((e) => !e),
             m = (0, d.GV)();
         return 0 === t.length
@@ -56,7 +58,9 @@ let x = 24,
                           id: m,
                           children: n,
                       }),
-                      (0, r.jsx)(c.hKd, { size: 12 }),
+                      (0, r.jsx)(c.hKd, {
+                          size: 12,
+                      }),
                       (0, r.jsx)("ul", {
                           className: D.Pp,
                           "aria-labelledby": m,
@@ -91,6 +95,7 @@ let x = 24,
             i = (0, y.A)(t),
             [a] = g.UN(n, t),
             s = i.filter((e) => a.has(e.id));
+
         function o(e) {
             return _.Ay.getEmojiURL({
                 id: e.id,
@@ -107,9 +112,13 @@ let x = 24,
                           variant: "text-xs/bold",
                           color: "text-default",
                           className: D.bV,
-                          children: P.intl.format(P.t.NAnXEo, { count: s.length }),
+                          children: P.intl.format(P.t.NAnXEo, {
+                              count: s.length,
+                          }),
                       }),
-                      (0, r.jsx)(c.hKd, { size: 12 }),
+                      (0, r.jsx)(c.hKd, {
+                          size: 12,
+                      }),
                       (0, r.jsx)("div", {
                           className: D.vX,
                           children: s.map((e, t) => {
@@ -156,7 +165,9 @@ let x = 24,
                                   children: P.intl.string(P.t.FJZmYx),
                               }),
                               children: [
-                                  (0, r.jsx)(c.hKd, { size: 8 }),
+                                  (0, r.jsx)(c.hKd, {
+                                      size: 8,
+                                  }),
                                   (0, r.jsx)(v.A, {
                                       role: d,
                                       guildId: n,
@@ -273,7 +284,10 @@ let x = 24,
                                           (0, r.jsxs)(c.BJc, {
                                               gap: 16,
                                               children: [
-                                                  Q && (0, r.jsx)("div", { className: D.yF }),
+                                                  Q &&
+                                                      (0, r.jsx)("div", {
+                                                          className: D.yF,
+                                                      }),
                                                   j
                                                       ? (0, r.jsx)(c.Button, {
                                                             disabled: !0,

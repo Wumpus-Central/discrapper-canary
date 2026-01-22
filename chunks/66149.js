@@ -1,4 +1,8 @@
-n.d(t, { A: () => y }), n(801541), n(896048);
+n.d(t, {
+    A: () => y,
+}),
+    n(801541),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -14,22 +18,33 @@ var r = n(627968),
     b = n(985018),
     g = n(410132),
     m = n(119907);
+
 function A(e) {
     let { expanded: t, onClick: n, count: l, compact: i, collapsedReason: a } = e,
-        c = (0, s.YW)({ collapsedReason: a })
-            .with({ collapsedReason: b.t["VFWjc+"] }, () =>
-                (0, r.jsx)(o.G3N, {
-                    size: "md",
-                    color: "currentColor",
-                    className: g.Q6,
-                }),
+        c = (0, s.YW)({
+            collapsedReason: a,
+        })
+            .with(
+                {
+                    collapsedReason: b.t["VFWjc+"],
+                },
+                () =>
+                    (0, r.jsx)(o.G3N, {
+                        size: "md",
+                        color: "currentColor",
+                        className: g.Q6,
+                    }),
             )
-            .with({ collapsedReason: b.t["+FcYM/"] }, () =>
-                (0, r.jsx)(o.KTN, {
-                    size: "md",
-                    color: "currentColor",
-                    className: g.Q6,
-                }),
+            .with(
+                {
+                    collapsedReason: b.t["+FcYM/"],
+                },
+                () =>
+                    (0, r.jsx)(o.KTN, {
+                        size: "md",
+                        color: "currentColor",
+                        className: g.Q6,
+                    }),
             )
             .otherwise(() =>
                 (0, r.jsx)(o.PGe, {
@@ -48,8 +63,10 @@ function A(e) {
             children: (0, r.jsxs)("div", {
                 className: g.Fo,
                 children: [
-                    b.intl.format(a, { count: l }),
-                    " \u2014",
+                    b.intl.format(a, {
+                        count: l,
+                    }),
+                    " —",
                     " ",
                     (0, r.jsx)(o.DUT, {
                         tag: "span",

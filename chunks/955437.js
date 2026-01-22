@@ -9,6 +9,7 @@ var r = n(562465),
     l = n(954571),
     a = n(204925),
     o = n(652215);
+
 function c(e, t) {
     return (
         (0, s.A)(e, t),
@@ -19,7 +20,9 @@ function c(e, t) {
         r.Bo.patch({
             url: o.Rsh.ME,
             oldFormErrors: !0,
-            body: { date_of_birth: e.format("YYYY-MM-DD") },
+            body: {
+                date_of_birth: e.format("YYYY-MM-DD"),
+            },
             rejectWithError: !1,
         }).then((e) => {
             let n = e.body;
@@ -34,15 +37,21 @@ function c(e, t) {
         })
     );
 }
+
 function u(e) {
-    i.h.dispatch({ type: "AGE_GATE_PREVENT_UNDERAGE_REGISTRATION" }),
+    i.h.dispatch({
+        type: "AGE_GATE_PREVENT_UNDERAGE_REGISTRATION",
+    }),
         l.default.track(o.HAw.AGE_GATE_ACTION, {
             source: e,
             action: a.AM.AGE_GATE_PREVENT_UNDERAGE_REGISTRATION,
         });
 }
+
 function d(e) {
-    i.h.dispatch({ type: "AGE_GATE_LOGOUT_UNDERAGE_NEW_USER" }),
+    i.h.dispatch({
+        type: "AGE_GATE_LOGOUT_UNDERAGE_NEW_USER",
+    }),
         l.default.track(o.HAw.AGE_GATE_ACTION, {
             source: e,
             action: a.AM.AGE_GATE_LOGOUT_UNDERAGE_NEW_USER,

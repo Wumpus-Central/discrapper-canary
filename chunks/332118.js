@@ -1,10 +1,14 @@
-n.d(t, { f: () => c }), n(896048);
+n.d(t, {
+    f: () => c,
+}),
+    n(896048);
 var r = n(64700),
     i = n(311907),
     l = n(299091),
     a = n(408213),
     s = n(212455),
     o = n(652215);
+
 function c(e) {
     let [t, n] = r.useState(!0),
         c = (0, i.bG)([s.A], () => (null != e ? s.A.getJoinRequestGuild(e) : void 0)),

@@ -1,10 +1,13 @@
-r.d(t, { A: () => a });
+r.d(t, {
+    A: () => a,
+});
 var n = r(284009),
     o = r.n(n),
     l = r(964486),
     c = r(156312),
     i = r(881266),
     u = r(920241);
+
 function a(e) {
     let { handleClose: t } = e,
         { guildProductListing: r, guildId: n } = (0, u.S)(),

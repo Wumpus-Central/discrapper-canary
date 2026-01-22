@@ -35,6 +35,7 @@ var l = n(627968),
     P = n(707511);
 let D = c._3J.SIZE_80,
     k = c._3J.SIZE_40;
+
 function L(e) {
     let { channelId: t, participant: n } = e;
     return (0, E.uy)(t, n.id)
@@ -43,11 +44,16 @@ function L(e) {
               position: "bottom",
               children: (0, l.jsx)("div", {
                   className: P.bG,
-                  children: (0, l.jsx)(c.EpV, { color: c.LU0.colors.STATUS_WARNING_BACKGROUND }),
+                  children: (0, l.jsx)(c.EpV, {
+                      color: c.LU0.colors.STATUS_WARNING_BACKGROUND,
+                  }),
               }),
           })
-        : (0, l.jsx)(T.A, { userId: n.user.id });
+        : (0, l.jsx)(T.A, {
+              userId: n.user.id,
+          });
 }
+
 function M(e) {
     let {
             participant: t,
@@ -123,7 +129,9 @@ function M(e) {
                   W,
               )
         : (0, l.jsx)("div", {
-              className: a()(P.Qs, { [P.Kx]: M || U }),
+              className: a()(P.Qs, {
+                  [P.Kx]: M || U,
+              }),
               children: (0, l.jsx)(h.A, {
                   "aria-label": $,
                   avatarDecoration: el,

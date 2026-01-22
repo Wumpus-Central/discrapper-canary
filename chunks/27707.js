@@ -1,7 +1,7 @@
 (t.__esModule = !0),
     (t.default = {
         scheme: "brewer",
-        author: "timothée poisot (http://github.com/tpoisot)",
+        author: "timoth\xe9e poisot (http://github.com/tpoisot)",
         base00: "#0c0d0e",
         base01: "#2e2f30",
         base02: "#515253",

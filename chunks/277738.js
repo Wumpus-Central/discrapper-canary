@@ -11,6 +11,7 @@ n.d(t, {
 var r = n(731854);
 let i = null != navigator.mediaDevices && null != navigator.mediaDevices.enumerateDevices,
     a = i && "setSinkId" in HTMLAudioElement.prototype;
+
 function s(e) {
     return {
         id: r.dx,
@@ -19,12 +20,15 @@ function s(e) {
         name: "Default",
     };
 }
+
 function o() {
     return [s(r.oh.AUDIO_INPUT), s(r.oh.AUDIO_OUTPUT), s(r.oh.VIDEO_INPUT)];
 }
+
 function l(e, t) {
     return e.filter((e) => e.type === t);
 }
+
 function c() {
     return i
         ? navigator.mediaDevices

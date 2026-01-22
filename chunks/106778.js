@@ -6,11 +6,13 @@ n.d(t, {
 });
 var r = n(64700),
     i = n(835245);
+
 function a(e, t) {
     var n = e.x,
         r = e.y;
     return n > t.x && n < t.x + t.width && r > t.y && r < t.y + t.height;
 }
+
 function s(e, t, n, r) {
     var i = t > 0 ? -1 : 1,
         a = Math.abs(t);
@@ -159,7 +161,9 @@ var o = (function () {
     u = function (e, t) {
         return (u =
             Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array &&
+            ({
+                __proto__: [],
+            } instanceof Array &&
                 function (e, t) {
                     e.__proto__ = t;
                 }) ||
@@ -167,9 +171,11 @@ var o = (function () {
                 for (var n in t) Object.prototype.hasOwnProperty.call(t, n) && (e[n] = t[n]);
             })(e, t);
     };
+
 function d(e, t) {
     if ("function" != typeof t && null !== t)
         throw TypeError("Class extends value " + String(t) + " is not a constructor or null");
+
     function n() {
         this.constructor = e;
     }
@@ -184,6 +190,7 @@ var f = function () {
             return e;
         }).apply(this, arguments);
 };
+
 function p(e, t, n, r) {
     return new (n || (n = Promise))(function (i, a) {
         function s(e) {
@@ -193,6 +200,7 @@ function p(e, t, n, r) {
                 a(e);
             }
         }
+
         function o(e) {
             try {
                 l(r.throw(e));
@@ -200,6 +208,7 @@ function p(e, t, n, r) {
                 a(e);
             }
         }
+
         function l(e) {
             var t;
             e.done
@@ -214,6 +223,7 @@ function p(e, t, n, r) {
         l((r = r.apply(e, t || [])).next());
     });
 }
+
 function _(e, t) {
     var n,
         r,
@@ -240,6 +250,7 @@ function _(e, t) {
             }),
         a
     );
+
     function o(o) {
         return function (l) {
             return (function (o) {
@@ -364,7 +375,9 @@ var h = function (e) {
             }),
             (t.prototype.previewUpdate = function (t) {
                 var n = e.prototype.previewUpdate.call(this, t);
-                return f(f({}, n), { z: this._z.previewUpdate(t) });
+                return f(f({}, n), {
+                    z: this._z.previewUpdate(t),
+                });
             }),
             Object.defineProperty(t.prototype, "z", {
                 get: function () {
@@ -439,16 +452,20 @@ var h = function (e) {
             t
         );
     })(h);
+
 function O(e, t) {
     return e === t ? e : Math.random() * (t - e + 1) + e;
 }
+
 function A(e) {
     var t = Math.floor(O(0, e.length - 1));
     return [e[t], t];
 }
+
 function v(e, t) {
     return A([e, t])[0];
 }
+
 function S(e) {
     return "number" == typeof e
         ? {
@@ -457,6 +474,7 @@ function S(e) {
           }
         : e;
 }
+
 function I(e) {
     return "number" == typeof e
         ? {
@@ -466,6 +484,7 @@ function I(e) {
           }
         : e;
 }
+
 function T(e) {
     return (function (e) {
         switch (e.type) {
@@ -489,8 +508,13 @@ function T(e) {
                     A(e.easingFunctions)[0],
                 );
         }
-    })(f(f({}, e), { valueType: "number" }));
+    })(
+        f(f({}, e), {
+            valueType: "number",
+        }),
+    );
 }
+
 function C(e) {
     return (function (e) {
         switch (e.type) {
@@ -537,8 +561,13 @@ function C(e) {
                     e.uniformVectorValues,
                 );
         }
-    })(f(f({}, e), { valueType: "Vector2" }));
+    })(
+        f(f({}, e), {
+            valueType: "Vector2",
+        }),
+    );
 }
+
 function N(e) {
     return (function (e) {
         switch (e.type) {
@@ -592,11 +621,24 @@ function N(e) {
                     e.uniformVectorValues,
                 );
         }
-    })(f(f({}, e), { valueType: "Vector3" }));
+    })(
+        f(f({}, e), {
+            valueType: "Vector3",
+        }),
+    );
 }
+
 function R(e, t, n, r, i) {
     var a = (function (e, t) {
-            return f(f({ id: t }, l), e);
+            return f(
+                f(
+                    {
+                        id: t,
+                    },
+                    l,
+                ),
+                e,
+            );
         })(t, e),
         s = (function (e, t) {
             if (null != e) {
@@ -645,6 +687,7 @@ function R(e, t, n, r, i) {
         spriteHeight: n.spriteHeight,
     });
 }
+
 function w() {
     var e = r.useRef(!1),
         t = r.useRef({}),
@@ -744,7 +787,7 @@ var P = r.forwardRef(function (e, t) {
                                     ? (C.current = m(D))
                                     : (t.clearRect(0, 0, e.width, e.height), (C.current = null));
                             var n = Date.now();
-                            0 !== N.current && (P.current = 1000 / (n - N.current)), (N.current = n);
+                            0 !== N.current && (P.current = 1e3 / (n - N.current)), (N.current = n);
                         }
                     }
                 },
@@ -826,7 +869,7 @@ var P = r.forwardRef(function (e, t) {
                             ) {
                                 if (null != s) return s(e);
                                 if (null != i) {
-                                    var u = (-1000 / P.current) * 2,
+                                    var u = (-1e3 / P.current) * 2,
                                         d = (function (e, t) {
                                             for (var n = 0, r = Array.from(e.values()); n < r.length; n++) {
                                                 var i = r[n];
@@ -853,25 +896,33 @@ var P = r.forwardRef(function (e, t) {
             ),
             G = r.useCallback(
                 function (e) {
-                    return U(e, { clickHandler: l });
+                    return U(e, {
+                        clickHandler: l,
+                    });
                 },
                 [U, l],
             ),
             V = r.useCallback(
                 function (e) {
-                    return U(e, { clickHandler: c });
+                    return U(e, {
+                        clickHandler: c,
+                    });
                 },
                 [U, c],
             ),
             F = r.useCallback(
                 function (e) {
-                    return U(e, { mouseHandler: u });
+                    return U(e, {
+                        mouseHandler: u,
+                    });
                 },
                 [U, u],
             ),
             B = r.useCallback(
                 function (e) {
-                    return U(e, { mouseHandler: d });
+                    return U(e, {
+                        mouseHandler: d,
+                    });
                 },
                 [U, d],
             );
@@ -975,7 +1026,12 @@ var P = r.forwardRef(function (e, t) {
         var b = r.useCallback(
                 function () {
                     var e = u.current,
-                        t = null == e ? void 0 : e.getContext("2d", { willReadFrequently: !0 });
+                        t =
+                            null == e
+                                ? void 0
+                                : e.getContext("2d", {
+                                      willReadFrequently: !0,
+                                  });
                     null != t &&
                         null != e &&
                         (t.clearRect(0, 0, e.width, e.height),
@@ -1081,6 +1137,7 @@ var P = r.forwardRef(function (e, t) {
             })
         );
     });
+
 function L(e, t) {
     var n,
         i,

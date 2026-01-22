@@ -11,6 +11,7 @@ let s = () => l(i.default.getCurrentUser(), (0, a.kG)()),
             (0, r.bG)([i.default], () => i.default.getCurrentUser()),
             (0, a.Jz)(),
         );
+
 function l(e, t) {
     return !(null == e || e.hasUniqueUsername()) && !!e.hasVerifiedEmailOrPhone() && !!t;
 }

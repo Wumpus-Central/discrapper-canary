@@ -1,9 +1,12 @@
-r.d(t, { default: () => i });
+r.d(t, {
+    default: () => i,
+});
 var n = r(627968);
 r(64700);
 var o = r(158954),
     c = r(268749),
     l = r(985018);
+
 function i(e) {
     var t, r;
     let { ruleName: i, onConfirm: f } = e,
@@ -70,7 +73,9 @@ function i(e) {
         (r = r =
             {
                 title: l.intl.string(l.t.kknTmH),
-                subtitle: l.intl.format(l.t["ff/gx7"], { ruleName: b }),
+                subtitle: l.intl.format(l.t["ff/gx7"], {
+                    ruleName: b,
+                }),
                 confirmText: l.intl.string(l.t["cY+Oob"]),
                 onConfirm: () => {
                     u(null), null == f || f();

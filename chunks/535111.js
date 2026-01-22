@@ -1,4 +1,6 @@
-n.d(t, { O: () => m });
+n.d(t, {
+    O: () => m,
+});
 var r = n(627968);
 n(64700);
 var l = n(503698),
@@ -13,6 +15,7 @@ var l = n(503698),
     p = n(485599),
     h = n(985018),
     b = n(237235);
+
 function g(e) {
     let { name: t, applicationId: n } = e,
         l = (0, f.A)({
@@ -30,6 +33,7 @@ function g(e) {
         }),
     });
 }
+
 function m(e) {
     let {
             isStreaming: t,
@@ -78,7 +82,9 @@ function m(e) {
                                       applicationId: null == n ? void 0 : n.id,
                                   })
                                 : null,
-                            (0, r.jsx)(s.G, { onClick: i }),
+                            (0, r.jsx)(s.G, {
+                                onClick: i,
+                            }),
                         ],
                     }),
                 }),

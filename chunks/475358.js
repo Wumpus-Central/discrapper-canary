@@ -1,4 +1,7 @@
-n.d(t, { e: () => f }), n(747238);
+n.d(t, {
+    e: () => f,
+}),
+    n(747238);
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -6,6 +9,7 @@ var i = n(503698),
     s = n(574381),
     o = n(460890),
     l = n(359116);
+
 function c(e) {
     let { direction: t = "up" } = e;
     return (0, r.jsx)("svg", {
@@ -22,6 +26,7 @@ function c(e) {
         }),
     });
 }
+
 function u(e) {
     let { children: t, text: n, macText: i, label: a, macLabel: o } = e,
         c = (0, s.cX)() || (0, s.Sn)(),
@@ -35,63 +40,72 @@ function u(e) {
         children: f,
     });
 }
+
 function d(e) {
     return {
         ctrl: () =>
             (0, r.jsx)(u, {
-                macText: "\u2303",
+                macText: "⌃",
                 text: "ctrl",
                 label: e.KEY_CTRL_A11Y_LABEL,
             }),
         cmd: () =>
             (0, r.jsx)(u, {
-                macText: "\u2318",
+                macText: "⌘",
                 text: "cmd",
                 label: e.KEY_CMD_A11Y_LABEL,
             }),
         mod: () =>
             (0, r.jsx)(u, {
-                macText: "\u2318",
+                macText: "⌘",
                 text: "ctrl",
                 label: e.KEY_CTRL_A11Y_LABEL,
                 macLabel: e.KEY_CMD_A11Y_LABEL,
             }),
         alt: () =>
             (0, r.jsx)(u, {
-                macText: "\u2325",
+                macText: "⌥",
                 text: "alt",
                 label: e.KEY_ALT_A11Y_LABEL,
                 macLabel: e.KEY_OPTION_A11Y_LABEL,
             }),
         shift: () =>
             (0, r.jsx)(u, {
-                macText: "\u21E7",
+                macText: "⇧",
                 text: e.KEY_SHIFT,
                 label: e.KEY_SHIFT_A11Y_LABEL,
             }),
         up: () =>
             (0, r.jsx)(u, {
                 label: e.KEY_UP_A11Y_LABEL,
-                macText: "\u25B2",
-                children: (0, r.jsx)(c, { direction: "up" }),
+                macText: "▲",
+                children: (0, r.jsx)(c, {
+                    direction: "up",
+                }),
             }),
         down: () =>
             (0, r.jsx)(u, {
                 label: e.KEY_DOWN_A11Y_LABEL,
-                macText: "\u25BC",
-                children: (0, r.jsx)(c, { direction: "down" }),
+                macText: "▼",
+                children: (0, r.jsx)(c, {
+                    direction: "down",
+                }),
             }),
         left: () =>
             (0, r.jsx)(u, {
                 label: e.KEY_LEFT_A11Y_LABEL,
-                macText: "\u25C0",
-                children: (0, r.jsx)(c, { direction: "left" }),
+                macText: "◀",
+                children: (0, r.jsx)(c, {
+                    direction: "left",
+                }),
             }),
         right: () =>
             (0, r.jsx)(u, {
                 label: e.KEY_RIGHT_A11Y_LABEL,
-                macText: "\u25B6",
-                children: (0, r.jsx)(c, { direction: "right" }),
+                macText: "▶",
+                children: (0, r.jsx)(c, {
+                    direction: "right",
+                }),
             }),
         pageup: () => e.KEY_PAGEUP,
         pagedown: () => e.KEY_PAGEDOWN,
@@ -99,14 +113,14 @@ function d(e) {
         plus: () => "+",
         return: () =>
             (0, r.jsx)(u, {
-                macText: "\u23CE",
+                macText: "⏎",
                 text: e.KEY_ENTER,
                 label: e.KEY_ENTER_A11Y_LABEL,
                 macLabel: e.KEY_RETURN_A11Y_LABEL,
             }),
         enter: () =>
             (0, r.jsx)(u, {
-                macText: "\u23CE",
+                macText: "⏎",
                 text: e.KEY_ENTER,
                 label: e.KEY_ENTER_A11Y_LABEL,
                 macLabel: e.KEY_RETURN_A11Y_LABEL,
@@ -123,20 +137,23 @@ function d(e) {
             }),
         backspace: () =>
             (0, r.jsx)(u, {
-                macText: "\u232B",
+                macText: "⌫",
                 text: e.KEY_BACKSPACE,
                 label: e.KEY_BACKSPACE_A11Y_LABEL,
                 macLabel: e.KEY_DELETE_A11Y_LABEL,
             }),
     };
 }
+
 function f(e) {
     let { shortcut: t, dim: n = !1, className: i, keyClassName: s } = e,
         { i18n: c } = (0, o.G9)(),
         u = d(c),
         f = Array.isArray(t) ? t : t.split("+");
     return (0, r.jsx)("div", {
-        className: a()(l.combo, i, { [l.dim]: n }),
+        className: a()(l.combo, i, {
+            [l.dim]: n,
+        }),
         children: f
             .map((e) => (null != u[e] ? u[e]() : e))
             .map((e, t) =>

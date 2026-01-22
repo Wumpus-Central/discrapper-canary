@@ -1,4 +1,6 @@
-n.d(t, { default: () => E });
+n.d(t, {
+    default: () => E,
+});
 var s = n(627968),
     i = n(64700),
     r = n(110259),
@@ -17,6 +19,7 @@ var s = n(627968),
     A = n(652215),
     h = n(985018),
     p = n(927884);
+
 function E(e) {
     let { channelId: t, userId: n, transitionState: E, onClose: C } = e,
         k = i.useRef(!1),

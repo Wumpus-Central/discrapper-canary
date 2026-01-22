@@ -1,10 +1,14 @@
-n.d(t, { b: () => l });
+n.d(t, {
+    b: () => l,
+});
 var r = n(99478),
     i = n(142922);
 let a = 1911;
+
 function s(e) {
     return "minguo" === e.era ? e.year + a : 1 - e.year + a;
 }
+
 function o(e) {
     let t = e - a;
     return t > 0 ? ["minguo", t] : ["before_minguo", 1 - t];
@@ -38,6 +42,7 @@ class l extends i.FG {
         super(...e), (this.identifier = "roc");
     }
 }
+
 function c(e) {
     let [t, n] = (0, i.f5)(s(e));
     return new (0, r.ng)(t, n, e.month, e.day);

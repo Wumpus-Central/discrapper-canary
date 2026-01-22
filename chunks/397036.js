@@ -1,4 +1,8 @@
-n.d(t, { A: () => m }), n(896048), n(228524);
+n.d(t, {
+    A: () => m,
+}),
+    n(896048),
+    n(228524);
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -13,6 +17,7 @@ var r = n(627968),
     h = n(652215),
     b = n(985018),
     g = n(18318);
+
 function m(e) {
     let { guildId: t, channelId: n } = e,
         m = (0, u.e)({
@@ -37,7 +42,9 @@ function m(e) {
     null == O)
         ? (0, r.jsx)("div", {
               className: g.__invalid_spinnerContainer,
-              children: (0, r.jsx)(a.y$y, { className: g.__invalid_spinner }),
+              children: (0, r.jsx)(a.y$y, {
+                  className: g.__invalid_spinner,
+              }),
           })
         : (0, r.jsxs)(a.ArX, {
               className: g.$$,

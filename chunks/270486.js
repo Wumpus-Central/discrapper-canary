@@ -1,4 +1,7 @@
-n.d(t, { A: () => f }), n(896048);
+n.d(t, {
+    A: () => f,
+}),
+    n(896048);
 var l = n(627968),
     i = n(64700),
     r = n(615300),
@@ -11,12 +14,15 @@ var l = n(627968),
     h = n(147925),
     g = n(985018),
     m = n(272396);
+
 function f() {
     let e = (0, s.bG)([u.A], () => u.A.advancedMode),
         [t] = i.useState(new r.A.Value(+!!e));
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)(o.cGx, { className: m.BQ }),
+            (0, l.jsx)(o.cGx, {
+                className: m.BQ,
+            }),
             (0, l.jsx)(o.Fmo, {
                 component: (0, l.jsx)(a.$n, {
                     look: a.$n.Looks.BLANK,
@@ -52,7 +58,9 @@ function f() {
                 children:
                     e &&
                     (0, l.jsx)(r.A.div, {
-                        style: { opacity: t },
+                        style: {
+                            opacity: t,
+                        },
                         children: (0, l.jsx)(d.A, {}),
                     }),
             }),

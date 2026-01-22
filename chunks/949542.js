@@ -1,9 +1,13 @@
 var r = n(534535),
     i = "Unknown",
-    a = { "Mac OS": "Mac OS X" };
+    a = {
+        "Mac OS": "Mac OS X",
+    };
+
 function s(e) {
     return a[e] || e;
 }
+
 function o(e) {
     if (!e)
         return {

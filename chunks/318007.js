@@ -1,4 +1,7 @@
-n.d(t, { t: () => T }), n(896048);
+n.d(t, {
+    t: () => T,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -16,6 +19,7 @@ var r = n(627968),
     g = n(903618),
     E = n(985018),
     b = n(120459);
+
 function y(e, t, n) {
     return (
         t in e
@@ -29,6 +33,7 @@ function y(e, t, n) {
         e
     );
 }
+
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -45,6 +50,7 @@ function O(e) {
     }
     return e;
 }
+
 function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -57,6 +63,7 @@ function A(e, t) {
     }
     return n;
 }
+
 function v(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -68,6 +75,7 @@ function v(e, t) {
         e
     );
 }
+
 function S(e, t) {
     if (null == e) return {};
     var n,
@@ -84,6 +92,7 @@ function S(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function I(e, t) {
     if (null == e) return {};
     var n,
@@ -107,14 +116,18 @@ let T = (e) => {
         } = (0, c.Pv)(),
         [w, P] = i.useState(!1),
         D = i.useRef(null),
-        x = (0, o._u)({ orientation: "horizontal" }),
+        x = (0, o._u)({
+            orientation: "horizontal",
+        }),
         { ref: L } = x,
         j = S(x, ["ref"]),
         M = (0, d.lo)(y, t),
         k = M === d.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
         U = M !== d.tB.DEFAULT,
         G = (0, _._)(),
-        V = (0, p.A)({ location: "GiftAnimationOptions" }),
+        V = (0, p.A)({
+            location: "GiftAnimationOptions",
+        }),
         F = (e) => {
             null != R && R(null == e ? void 0 : e);
         };
@@ -132,7 +145,9 @@ let T = (e) => {
                                   shouldAnimate: !0,
                                   className: b.lY,
                               })
-                            : (0, r.jsx)(l.y$y, { className: b.u1 }),
+                            : (0, r.jsx)(l.y$y, {
+                                  className: b.u1,
+                              }),
                         k &&
                             (0, r.jsxs)("div", {
                                 className: s()(b.b7, V && b.Ow),
@@ -186,7 +201,9 @@ let T = (e) => {
                     },
                 ),
             ),
-            (0, r.jsx)("div", { className: b.__invalid_selectPlanDivider }),
+            (0, r.jsx)("div", {
+                className: b.__invalid_selectPlanDivider,
+            }),
         ],
     });
 };

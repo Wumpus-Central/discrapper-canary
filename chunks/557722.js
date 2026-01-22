@@ -44,7 +44,9 @@ let d = {
             i.Bo.post({
                 url: c.Rsh.RESEND_PHONE,
                 headers: t,
-                body: { phone: e },
+                body: {
+                    phone: e,
+                },
                 rejectWithError: !1,
             })
         );
@@ -72,7 +74,9 @@ let d = {
     addPhoneWithoutPassword: (e) =>
         i.Bo.post({
             url: c.Rsh.PHONE_VERIFY_NO_PASSWORD,
-            body: { code: e },
+            body: {
+                code: e,
+            },
             rejectWithError: !1,
         }),
     beginReverifyPhone: (e, t) =>
@@ -98,7 +102,9 @@ let d = {
     validatePhoneForSupport: (e) =>
         i.Bo.post({
             url: c.Rsh.VERIFY_PHONE_FOR_TICKET,
-            body: { token: e },
+            body: {
+                token: e,
+            },
             oldFormErrors: !0,
             rejectWithError: !1,
         }),
@@ -116,7 +122,9 @@ let d = {
                 code: t,
             },
             oldFormErrors: !0,
-            trackedActionData: { event: r.NetworkActionNames.USER_VERIFY_PHONE },
+            trackedActionData: {
+                event: r.NetworkActionNames.USER_VERIFY_PHONE,
+            },
             rejectWithError: !1,
         });
         return (

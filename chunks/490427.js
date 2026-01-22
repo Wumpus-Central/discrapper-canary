@@ -1,9 +1,12 @@
-n.d(t, { A: () => l });
+n.d(t, {
+    A: () => l,
+});
 var r = n(508675),
     i = n(95701),
     a = n(690521),
     s = n(488926),
     o = n(652215);
+
 function l(e) {
     let { activity: t, user: n, channel: l } = e;
     if (null == n || (null == t ? void 0 : t.type) !== o.$pd.CUSTOM_STATUS || null == t.emoji) return !1;

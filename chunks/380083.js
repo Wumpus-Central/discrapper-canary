@@ -32,6 +32,7 @@ var l,
     T = s(519412),
     P = s(985018),
     R = s(344524);
+
 function Z(e) {
     let t,
         { planId: s, startingPremiumSubscriptionPlanId: l, paymentSourceType: i } = e,
@@ -51,9 +52,13 @@ function Z(e) {
                     x.NcF.has(null != i ? i : x.hes.UNKNOWN) && (t = P.intl.format(P.t.MHAxpE, {}));
                 break;
             case f.gD.PREMIUM_YEAR_TIER_2:
-                (t = P.intl.formatToPlainString(P.t["M/Lknl"], { numFreeGuildSubscriptions: f.M4 })),
+                (t = P.intl.formatToPlainString(P.t["M/Lknl"], {
+                    numFreeGuildSubscriptions: f.M4,
+                })),
                     x.NcF.has(null != i ? i : x.hes.UNKNOWN) &&
-                        (t = P.intl.format(P.t.mULxLW, { numFreeGuildSubscriptions: f.M4 }));
+                        (t = P.intl.format(P.t.mULxLW, {
+                            numFreeGuildSubscriptions: f.M4,
+                        }));
                 break;
             case f.gD.PREMIUM_3_MONTH_TIER_2:
             case f.gD.PREMIUM_6_MONTH_TIER_2:
@@ -93,6 +98,7 @@ function Z(e) {
     });
 }
 var b = (((l = {}).DEEPLINK_TO_DESKTOP_APP = "deeplink_to_desktop_app"), l);
+
 function v(e) {
     let t,
         s,
@@ -147,7 +153,9 @@ function v(e) {
     else if (null != F)
         t = (0, n.jsx)("div", {
             className: R.Qq,
-            children: P.intl.format(P.t["tsQOs+"], { skuName: F.name }),
+            children: P.intl.format(P.t["tsQOs+"], {
+                skuName: F.name,
+            }),
         });
     else if (q && !b) {
         let e = M.A.get(l);
@@ -156,7 +164,9 @@ function v(e) {
                 ? (t = (0, n.jsxs)("div", {
                       className: R.Qq,
                       children: [
-                          (0, n.jsx)("p", { children: P.intl.string(P.t["L9lcG/"]) }),
+                          (0, n.jsx)("p", {
+                              children: P.intl.string(P.t["L9lcG/"]),
+                          }),
                           (0, n.jsx)("p", {
                               children: P.intl.format(P.t.EoDFuN, {
                                   helpCenterLink: p.A.getArticleURL(x.MVz.FRACTIONAL_PREMIUM_ABOUT),
@@ -168,7 +178,9 @@ function v(e) {
                   (t = (0, n.jsxs)("div", {
                       className: R.Qq,
                       children: [
-                          (0, n.jsx)("p", { children: P.intl.string(P.t.UPpbP3) }),
+                          (0, n.jsx)("p", {
+                              children: P.intl.string(P.t.UPpbP3),
+                          }),
                           (0, n.jsx)("p", {
                               children: P.intl.format(P.t.EoDFuN, {
                                   helpCenterLink: p.A.getArticleURL(x.MVz.FRACTIONAL_PREMIUM_ABOUT),
@@ -192,7 +204,9 @@ function v(e) {
                     }),
                     (0, n.jsx)("div", {
                         className: R.Qq,
-                        children: P.intl.format(P.t["6aZ0NR"], { guildName: j.name }),
+                        children: P.intl.format(P.t["6aZ0NR"], {
+                            guildName: j.name,
+                        }),
                     }),
                 ],
             }));
@@ -215,7 +229,9 @@ function v(e) {
         : "deeplink_to_desktop_app" === w || D === I.uH.APPLE_PAYMENT_LINK
           ? P.intl.string(P.t.qXV2XU)
           : null != F
-            ? P.intl.formatToPlainString(P.t["1qGgm4"], { skuName: F.name })
+            ? P.intl.formatToPlainString(P.t["1qGgm4"], {
+                  skuName: F.name,
+              })
             : b
               ? P.intl.string(P.t.QJ9EyM)
               : null != j
@@ -259,6 +275,7 @@ function v(e) {
               ],
           });
 }
+
 function j(e) {
     let { planId: t, onClose: s } = e,
         {

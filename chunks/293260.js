@@ -10,6 +10,7 @@ var i = n(311907),
     s = n(317525),
     o = n(370480),
     l = n(985018);
+
 function c(e, t, n) {
     return (
         t in e
@@ -23,6 +24,7 @@ function c(e, t, n) {
         e
     );
 }
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -39,6 +41,7 @@ function u(e) {
     }
     return e;
 }
+
 function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -51,6 +54,7 @@ function d(e, t) {
     }
     return n;
 }
+
 function f(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -63,6 +67,7 @@ function f(e, t) {
     );
 }
 let p = "guild-connection-roles";
+
 function _() {
     return {
         modalKey: p,
@@ -72,12 +77,20 @@ function _() {
         },
     };
 }
+
 function h(e) {
     (0, a.mMO)(async () => {
         let { default: t } = await n.e("92837").then(n.bind(n, 480900));
-        return (n) => (0, r.jsx)(t, f(u({}, n), { guildId: e }));
+        return (n) =>
+            (0, r.jsx)(
+                t,
+                f(u({}, n), {
+                    guildId: e,
+                }),
+            );
     }, _());
 }
+
 function m(e) {
     return (0, i.bG)([s.A], () => (0, o.N8)(s.A.getSortedRoles(e.id)), [e])
         ? (0, r.jsx)(a.Drp, {

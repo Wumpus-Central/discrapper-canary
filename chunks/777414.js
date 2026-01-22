@@ -1,4 +1,9 @@
-n.d(t, { A: () => er }), n(896048), n(65821), n(638769);
+n.d(t, {
+    A: () => er,
+}),
+    n(896048),
+    n(65821),
+    n(638769);
 var r = n(835245),
     i = n(499979),
     a = n(73153),
@@ -22,6 +27,7 @@ var r = n(835245),
     v = n(710093),
     S = n(652215),
     I = n(672396);
+
 function T(e, t, n) {
     return (
         t in e
@@ -35,6 +41,7 @@ function T(e, t, n) {
         e
     );
 }
+
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -51,6 +58,7 @@ function C(e) {
     }
     return e;
 }
+
 function N(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -63,6 +71,7 @@ function N(e, t) {
     }
     return n;
 }
+
 function R(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -288,9 +297,10 @@ class M {
             }),
             (this.lastscreenType = void 0),
             this.update(),
-            (this.updateScreenInterval = setInterval(() => this.update(), 10000));
+            (this.updateScreenInterval = setInterval(() => this.update(), 1e4));
     }
 }
+
 function k() {
     try {
         return crypto.randomUUID();
@@ -327,11 +337,27 @@ class U {
         }
         if (null == e) {
             let e = null != t ? p.default.getRenderMethod(t.pid) : null;
-            return C({ original_method: null != e ? e : f.Ue.Disabled }, a);
+            return C(
+                {
+                    original_method: null != e ? e : f.Ue.Disabled,
+                },
+                a,
+            );
         }
-        if (null == n) return C({ original_method: e }, a);
+        if (null == n)
+            return C(
+                {
+                    original_method: e,
+                },
+                a,
+            );
         let o = e !== n.original_method ? e : void 0;
-        return C(R(C({}, n), { any_other_method: null != o ? o : n.any_other_method }), a);
+        return C(
+            R(C({}, n), {
+                any_other_method: null != o ? o : n.any_other_method,
+            }),
+            a,
+        );
     }
     static getGameName(e) {
         var t, n;
@@ -592,6 +618,7 @@ class U {
             ee.hasConnection() && this.rtcConnectionTimer.start();
     }
 }
+
 function G() {
     let e = m.default.getFocusedPID();
     if (null == e || e === y.UNSET_PID || !p.default.isOverlayOOPEnabledForPid(e)) return null;
@@ -603,6 +630,7 @@ function G() {
               gameId: t.applicationId,
           };
 }
+
 function V(e) {
     for (let t of (D.verbose("handleRunningGamesChange", e), e.added)) {
         if (null != U.getByPid(t.pid)) {
@@ -615,6 +643,7 @@ function V(e) {
     }
     for (let t of e.removed) U.destroy(t), D.verbose("handleRunningGamesChange removed", t);
 }
+
 function F(e) {
     if (e.pid === y.DEV_PID) return;
     let t = U.getByPid(e.pid);
@@ -622,6 +651,7 @@ function F(e) {
         ? D.error("OVERLAY_SET_INPUT_LOCKED: Unable to find game", e, U.debug)
         : t.setLocked(e.locked);
 }
+
 function B(e) {
     var t;
     if ((D.verbose("OVERLAY_NOTIFICATION_EVENT", e), null == e.gameName && null == e.gameId)) return;
@@ -630,6 +660,7 @@ function B(e) {
         ? D.error("OVERLAY_NOTIFICATION_EVENT: Game not found.", e, U.debug)
         : n.notificationAnalytics.increment(e.notificationType, e.action);
 }
+
 function H(e) {
     var t;
     if ((D.verbose("OVERLAY_WIDGET_CHANGED", e), null == e.gameName && null == e.gameId)) return;
@@ -642,6 +673,7 @@ function H(e) {
         (r.pinned = e.pinned),
         r.visibleDuration.toggle(e.visible));
 }
+
 function Y(e) {
     if (
         (D.verbose("OVERLAY_FOCUSED", e),
@@ -652,6 +684,7 @@ function Y(e) {
     let t = U.getByPid(e.pid);
     null == t ? D.error("OVERLAY_FOCUSED: Game not found", e, U.debug) : t.gameSetFocused(!0);
 }
+
 function W(e) {
     var t;
     if ((D.verbose("SOUNDBOARD_SET_OVERLAY_ENABLED", e), e.pid === y.DEV_PID)) return;
@@ -660,6 +693,7 @@ function W(e) {
         ? D.error("SOUNDBOARD_SET_OVERLAY_ENABLED: Game not found", e, U.debug)
         : n.setSoundboardShown(e.enabled, !!e.enabled && null != (t = e.keepOpen) && t);
 }
+
 function K(e) {
     var t;
     if ((D.verbose("OVERLAY_MESSAGE_EVENT_ACTION", e), null == e.gameName && null == e.gameId)) return;
@@ -673,6 +707,7 @@ function K(e) {
             ++n.overlayMessageCreateCount;
     }
 }
+
 function z(e) {
     D.verbose("MESSAGE_ACKED", e);
     let t = G();
@@ -685,6 +720,7 @@ function z(e) {
               gameId: t.gameId,
           });
 }
+
 function q(e) {
     if (e.message.state !== S.cmJ.SENDING) return;
     D.verbose("MESSAGE_CREATE", e, Error().stack);
@@ -698,6 +734,7 @@ function q(e) {
               gameId: t.gameId,
           });
 }
+
 function X(e) {
     let t = (0, A.A)();
     null != t &&
@@ -705,6 +742,7 @@ function X(e) {
         t !== y.UNSET_PID &&
         (D.verbose("AUDIO_TOGGLE_SELF_MUTE", e), U.handleMuteToggled());
 }
+
 function Z(e) {
     D.verbose("WINDOW_FOCUS", e);
     let t = (0, O.Xg)();
@@ -715,11 +753,13 @@ function Z(e) {
           })
         : U.desktopSetFocused(e.focused);
 }
+
 function Q(e) {
     if (e.pid === y.DEV_PID || e.pid === y.UNSET_PID) return;
     let t = U.getByPid(e.pid);
     null == t ? D.error("OVERLAY_SUCCESSFULLY_SHOWN: Game not found", e, U.debug) : (t.successfullyShown = !0);
 }
+
 function $(e) {
     let t = U.getByPid(e.pid);
     null == t
@@ -727,6 +767,7 @@ function $(e) {
         : e.overlayMethod !== f.Ue.Disabled &&
           (D.verbose("OVERLAY_UPDATE_OVERLAY_METHOD", e), t.setOverlayMethod(e.overlayMethod));
 }
+
 function J(e) {
     let t = U.getByPid(e.pid);
     if (null == t) return void D.error("OVERLAY_TRACK_STATE_CHANGED: Game not found", e, U.debug);
@@ -786,7 +827,7 @@ P &&
     !__OVERLAY__ &&
     setInterval(async () => {
         for (let e of Object.values(U.debug.gamesByName)) D.verbose("Game analytics", await e.getAnalytics());
-    }, 5000);
+    }, 5e3);
 class en extends o.A {
     constructor(...e) {
         super(...e),

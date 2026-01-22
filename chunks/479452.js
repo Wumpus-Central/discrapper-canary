@@ -1,6 +1,8 @@
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});
 var r = {};
 r = {
-    removeButtonLabel: "Îndepărtaţi",
+    removeButtonLabel: "\xcendepărtaţi",
     removeDescription: "Apăsați pe Delete (Ștergere) pentru a elimina eticheta.",
 };

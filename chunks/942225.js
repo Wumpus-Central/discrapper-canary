@@ -1,4 +1,6 @@
-r.d(t, { A: () => O });
+r.d(t, {
+    A: () => O,
+});
 var n = r(627968),
     l = r(64700),
     i = r(503698),
@@ -57,13 +59,17 @@ let y = [
                     (0, n.jsx)(o.Text, {
                         variant: "text-xxs/normal",
                         color: "text-muted",
-                        children: f.intl.format(f.t.Io7ozn, { days: i.days.toString() }),
+                        children: f.intl.format(f.t.Io7ozn, {
+                            days: i.days.toString(),
+                        }),
                     }),
                 (0, n.jsxs)(o.Text, {
                     variant: "text-xxs/normal",
                     color: "text-muted",
                     children: [
-                        f.intl.format(f.t.gW9R4B, { date: s }),
+                        f.intl.format(f.t.gW9R4B, {
+                            date: s,
+                        }),
                         null != t.expiresAt &&
                             (0, n.jsxs)(n.Fragment, {
                                 children: [
@@ -177,7 +183,10 @@ let y = [
                               }),
                           ],
                       }),
-                      null != _ && (0, n.jsx)(j, { purchase: _ }),
+                      null != _ &&
+                          (0, n.jsx)(j, {
+                              purchase: _,
+                          }),
                   ],
               });
     };

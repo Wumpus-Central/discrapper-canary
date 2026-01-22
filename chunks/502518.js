@@ -15,6 +15,7 @@ var o = n(80703),
     c = n(562465),
     u = n(187207),
     d = n(818348);
+
 function f(e, t, n) {
     return (
         t in e
@@ -28,6 +29,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -44,6 +46,7 @@ function p(e) {
     }
     return e;
 }
+
 function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -56,6 +59,7 @@ function _(e, t) {
     }
     return n;
 }
+
 function h(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -69,10 +73,10 @@ function h(e, t) {
 }
 let m = "x-science-test",
     g = 1500,
-    E = 10000,
-    b = 3600000,
-    y = 60000,
-    O = 3600000,
+    E = 1e4,
+    b = 36e5,
+    y = 6e4,
+    O = 36e5,
     A = b,
     v = y,
     S = O,
@@ -91,9 +95,11 @@ let m = "x-science-test",
     k = !1,
     U = null,
     G = null;
+
 function V() {
     (C = 0), (N = 0), (R = 0), (D = 0), (x = Number.MAX_SAFE_INTEGER), (L = 0), (j = 0), (P = Date.now()), (w = T);
 }
+
 function F(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
     return e + t;
@@ -108,7 +114,10 @@ let B = null != (a = window.requestIdleCallback) ? a : (e) => setImmediate(() =>
     },
     W = [],
     K = null,
-    z = () => Promise.resolve({ sessionId: void 0 }),
+    z = () =>
+        Promise.resolve({
+            sessionId: void 0,
+        }),
     q = (e) => {
         var t;
         let {
@@ -122,19 +131,29 @@ let B = null != (a = window.requestIdleCallback) ? a : (e) => setImmediate(() =>
             scheduleWhenIdle: q = B,
             getLaunchSignature: X = () => null,
         } = e;
+
         function Z(e) {
             var t;
             if (null != i) return i;
             let n = null != (t = e.fingerprint) ? t : u();
             return null != n ? (0, o.d)(n) : null;
         }
+
         function Q() {
             return 0 !== W.length && (null != i ? null != r : null != u());
         }
+
         function $(e) {
             let { shouldFlushOnNextTick: t = !1 } = e;
-            null == K && Q() && (K = t ? setTimeout(J, 0) : q(J, { timeout: I }));
+            null == K &&
+                Q() &&
+                (K = t
+                    ? setTimeout(J, 0)
+                    : q(J, {
+                          timeout: I,
+                      }));
         }
+
         function J() {
             if (((K = null), !Q())) return Promise.resolve();
             let e = W.slice();
@@ -160,10 +179,17 @@ let B = null != (a = window.requestIdleCallback) ? a : (e) => setImmediate(() =>
                 n
             );
         }
+
         function ee(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : b,
                 n = Date.now(),
-                i = e.map((e) => h(p({}, e), { properties: h(p({}, e.properties), { client_send_timestamp: n }) })),
+                i = e.map((e) =>
+                    h(p({}, e), {
+                        properties: h(p({}, e.properties), {
+                            client_send_timestamp: n,
+                        }),
+                    }),
+                ),
                 a = {};
             return (
                 k || ((G = (0, s.A)()), (a[m] = G), (k = !0)),
@@ -185,6 +211,7 @@ let B = null != (a = window.requestIdleCallback) ? a : (e) => setImmediate(() =>
                 })
             );
         }
+
         function et() {
             let e = {
                 type: d.bZ.CLIENT_TELEMETRY,
@@ -208,6 +235,7 @@ let B = null != (a = window.requestIdleCallback) ? a : (e) => setImmediate(() =>
             };
             return V(), ee([e], d.mX.CLIENT_TELEMETRY);
         }
+
         function en() {
             if (null == M) return !1;
             switch (M.type) {
@@ -222,6 +250,7 @@ let B = null != (a = window.requestIdleCallback) ? a : (e) => setImmediate(() =>
             }
             return (M = null), !0;
         }
+
         function er() {
             if (null != M) return;
             let e = () => {
@@ -246,13 +275,22 @@ let B = null != (a = window.requestIdleCallback) ? a : (e) => setImmediate(() =>
                 ),
             };
         }
+
         function ei() {
             if (!en()) return;
         }
         (I = null != y ? y : g),
             (Y.handleConnectionOpen = function (e) {
                 let { analyticsToken: t, user: n } = e;
-                return null != t && (r = t), null != n.id && (i = n.id), er(), $({ shouldFlushOnNextTick: !1 }), !1;
+                return (
+                    null != t && (r = t),
+                    null != n.id && (i = n.id),
+                    er(),
+                    $({
+                        shouldFlushOnNextTick: !1,
+                    }),
+                    !1
+                );
             }),
             (Y.handleConnectionClosed = function () {
                 return J(), ei(), (r = null), (i = null), !1;
@@ -283,7 +321,13 @@ let B = null != (a = window.requestIdleCallback) ? a : (e) => setImmediate(() =>
                             let e = W.length - E;
                             (C = F(C, e)), (W = W.slice(-E));
                         }
-                        r ? $({ shouldFlushOnNextTick: !0 }) : $({ shouldFlushOnNextTick: !1 });
+                        r
+                            ? $({
+                                  shouldFlushOnNextTick: !0,
+                              })
+                            : $({
+                                  shouldFlushOnNextTick: !1,
+                              });
                     }),
                     !1
                 );

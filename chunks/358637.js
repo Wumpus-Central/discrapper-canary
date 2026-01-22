@@ -1,9 +1,11 @@
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});
 var r = {};
 r = {
     calendar: "Calendario",
-    day: "día",
-    dayPeriod: "a.\xA0m./p.\xA0m.",
+    day: "d\xeda",
+    dayPeriod: "a.\xa0m./p.\xa0m.",
     endDate: "Fecha final",
     era: "era",
     hour: "hora",
@@ -15,6 +17,6 @@ r = {
     selectedTimeDescription: (e) => `Hora seleccionada: ${e.time}`,
     startDate: "Fecha de inicio",
     timeZoneName: "zona horaria",
-    weekday: "día de la semana",
-    year: "año",
+    weekday: "d\xeda de la semana",
+    year: "a\xf1o",
 };

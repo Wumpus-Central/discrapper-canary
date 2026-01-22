@@ -1,4 +1,8 @@
-n.d(t, { A: () => g }), n(896048), n(321073);
+n.d(t, {
+    A: () => g,
+}),
+    n(896048),
+    n(321073);
 var r = n(339048),
     i = n(830382),
     l = n(800342),
@@ -49,7 +53,13 @@ async function h(e) {
     let { socket: t } = e;
     (0, u.C)(t.transport);
     let n = t.application.id;
-    if (null == n) throw new c.A({ errorCode: p.Lw6.INVALID_COMMAND }, "No application.");
+    if (null == n)
+        throw new c.A(
+            {
+                errorCode: p.Lw6.INVALID_COMMAND,
+            },
+            "No application.",
+        );
     if (o.A.inTestModeForApplication(n) || a.A.inDevModeForApplication(n)) {
         let e = await i.O1(n, !1),
             t = await f(n, e);
@@ -67,11 +77,18 @@ async function h(e) {
         )),
     ];
 }
+
 function A(e) {
     let { socket: t } = e;
     (0, u.C)(t.transport);
     let n = t.application.id;
-    if (null == n) throw new c.A({ errorCode: p.Lw6.INVALID_COMMAND }, "No application.");
+    if (null == n)
+        throw new c.A(
+            {
+                errorCode: p.Lw6.INVALID_COMMAND,
+            },
+            "No application.",
+        );
     return r.LM(n);
 }
 let g = {
@@ -85,10 +102,14 @@ let g = {
     },
     [p.e$_.GET_SKUS_EMBEDDED]: {
         [d.sm.ANY]: [d.VH, d.hj],
-        handler: async (e) => ({ skus: await h(e) }),
+        handler: async (e) => ({
+            skus: await h(e),
+        }),
     },
     [p.e$_.GET_ENTITLEMENTS_EMBEDDED]: {
         [d.sm.ANY]: [d.VH, d.hj],
-        handler: async (e) => ({ entitlements: await A(e) }),
+        handler: async (e) => ({
+            entitlements: await A(e),
+        }),
     },
 };

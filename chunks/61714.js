@@ -1,4 +1,8 @@
-n.d(t, { A: () => eo }), n(896048), n(638769);
+n.d(t, {
+    A: () => eo,
+}),
+    n(896048),
+    n(638769);
 var i,
     r = n(627968),
     s = n(64700),
@@ -52,6 +56,7 @@ var i,
     $ = n(731854),
     ee = n(985018),
     et = n(279952);
+
 function en(e, t, n) {
     return (
         t in e
@@ -65,6 +70,7 @@ function en(e, t, n) {
         e
     );
 }
+
 function ei(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -81,6 +87,7 @@ function ei(e) {
     }
     return e;
 }
+
 function er(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -99,6 +106,7 @@ function er(e, t) {
         e
     );
 }
+
 function es(e) {
     let {
             flipped: t = !1,
@@ -114,7 +122,9 @@ function es(e) {
             guildId: b,
             voiceState: g,
         } = e,
-        A = (0, Q.A)({ location: "overlay_voice_widget" }),
+        A = (0, Q.A)({
+            location: "overlay_voice_widget",
+        }),
         m = (0, a.bG)([H.default], () => H.default.showKeybindIndicators),
         O = (0, a.bG)([k.default], () => k.default.getId()),
         v = (0, a.bG)([G.A], () => G.A.isLocalMute(i.id)),
@@ -147,7 +157,9 @@ function es(e) {
                 speaking: !1,
                 flipped: t,
                 isStreaming: _,
-                iconClassName: o()(et.Ow, { [et.xt]: n }),
+                iconClassName: o()(et.Ow, {
+                    [et.xt]: n,
+                }),
                 isWatching: I,
                 isOverlay: !0,
                 size: u,
@@ -224,11 +236,15 @@ class el extends (i = s.PureComponent) {
     renderHeader() {
         let { pinned: e, title: t, isPreviewingInGame: n } = this.props;
         return (0, r.jsxs)(X.Ay.Bar, {
-            className: o()(et.bl, { [et.VH]: n }),
+            className: o()(et.bl, {
+                [et.VH]: n,
+            }),
             children: [
                 (0, r.jsxs)(X.Ay.Content, {
                     dynamicSize: !0,
-                    className: o()(et.Qs, { [et.R]: n }),
+                    className: o()(et.Qs, {
+                        [et.R]: n,
+                    }),
                     children: [
                         (0, r.jsx)(h.WP0, {
                             size: "custom",
@@ -246,7 +262,9 @@ class el extends (i = s.PureComponent) {
                         }),
                         (0, r.jsx)(h.Text, {
                             variant: "text-md/normal",
-                            style: { color: c.A.unsafe_rawColors.PRIMARY_200.css },
+                            style: {
+                                color: c.A.unsafe_rawColors.PRIMARY_200.css,
+                            },
                             className: et.DD,
                             children: t,
                         }),
@@ -305,7 +323,9 @@ class el extends (i = s.PureComponent) {
                                       className: et.Gt,
                                       game: l,
                                   })
-                                : (0, r.jsx)(j.A, { title: p }),
+                                : (0, r.jsx)(j.A, {
+                                      title: p,
+                                  }),
                             (0, r.jsxs)(O.A, {
                                 direction: O.A.Direction.VERTICAL,
                                 justify: O.A.Justify.BETWEEN,
@@ -316,7 +336,9 @@ class el extends (i = s.PureComponent) {
                                         variant: "text-sm/normal",
                                         children: ee.intl.string(ee.t.XKYej5),
                                     }),
-                                    (0, r.jsx)(C.A, { children: null != (e = null == c ? void 0 : c.name) ? e : f }),
+                                    (0, r.jsx)(C.A, {
+                                        children: null != (e = null == c ? void 0 : c.name) ? e : f,
+                                    }),
                                 ],
                             }),
                         ],
@@ -390,8 +412,12 @@ class el extends (i = s.PureComponent) {
                     n
                         ? null
                         : (0, r.jsx)(F.A, {
-                              className: o()({ [et.VH]: s }),
-                              contentClassName: o()({ [et.R]: s }),
+                              className: o()({
+                                  [et.VH]: s,
+                              }),
+                              contentClassName: o()({
+                                  [et.R]: s,
+                              }),
                               channel: l,
                               lobbyId: t,
                               context: e,
@@ -453,6 +479,7 @@ class el extends (i = s.PureComponent) {
             });
     }
 }
+
 function eo(e) {
     var t;
     let n = (0, a.bG)([V.A, L.A], () => L.A.getChannel(V.A.getVoiceChannelId())),
@@ -472,7 +499,9 @@ function eo(e) {
                     W.D,
                 ),
                 t = (0, a.bG)([k.default], () => k.default.getId()),
-                n = (0, Q.A)({ location: "voice_widget" });
+                n = (0, Q.A)({
+                    location: "voice_widget",
+                });
             return s.useMemo(
                 () => (n ? [...e].sort((e, n) => (e.user.id === t ? -1 : +(n.user.id === t))) : e),
                 [e, t, n],
@@ -498,19 +527,29 @@ function eo(e) {
         });
     return (0, r.jsx)(
         el,
-        er(ei(er(ei({}, u), { application: d }), e), {
-            sortedVoiceStates: l,
-            channel: n,
-            title: null != i ? i : "",
-            streamMetadata: o,
-            streamApplication:
-                null != (t = u.streamApplication)
-                    ? t
-                    : {
-                          id: null,
-                          name: null == o ? void 0 : o.sourceName,
-                      },
-        }),
+        er(
+            ei(
+                er(ei({}, u), {
+                    application: d,
+                }),
+                e,
+            ),
+            {
+                sortedVoiceStates: l,
+                channel: n,
+                title: null != i ? i : "",
+                streamMetadata: o,
+                streamApplication:
+                    null != (t = u.streamApplication)
+                        ? t
+                        : {
+                              id: null,
+                              name: null == o ? void 0 : o.sourceName,
+                          },
+            },
+        ),
     );
 }
-en(el, "defaultProps", { context: $.x.DEFAULT });
+en(el, "defaultProps", {
+    context: $.x.DEFAULT,
+});

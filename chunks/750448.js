@@ -1,4 +1,7 @@
-n.d(t, { A: () => j }), n(896048);
+n.d(t, {
+    A: () => j,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -14,9 +17,11 @@ var r = n(627968),
     b = n(985018);
 let g = "app-download-item",
     m = "add-server-item";
+
 function A() {
     return !1;
 }
+
 function y(e) {
     var t;
     let n = o.default.getMutableGuildStates();

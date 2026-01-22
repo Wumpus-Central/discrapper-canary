@@ -1,4 +1,6 @@
-i.d(e, { y: () => A });
+i.d(e, {
+    y: () => A,
+});
 var n = i(627968),
     l = i(64700),
     s = i(732955),
@@ -14,7 +16,9 @@ let A = (t) => {
         S = (0, a.lV)((t) => t.installationStatus),
         E = (0, l.useCallback)(() => {
             null == e || e(),
-                (0, r.u)(o.HAw.NITRO_WARP_CTA_CLICKED, { is_enable_warp: !1 }),
+                (0, r.u)(o.HAw.NITRO_WARP_CTA_CLICKED, {
+                    is_enable_warp: !1,
+                }),
                 S === u.Lk.ERROR && A(u.Lk.NOT_INSTALLED),
                 i(!0);
         }, [i, S, A, e]);

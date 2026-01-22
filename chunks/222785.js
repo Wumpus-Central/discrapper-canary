@@ -1,4 +1,6 @@
-n.d(t, { default: () => X });
+n.d(t, {
+    default: () => X,
+});
 var i = n(627968),
     r = n(64700),
     l = n(284009),
@@ -40,6 +42,7 @@ var i = n(627968),
     H = n(985018),
     J = n(583970),
     V = n(467249);
+
 function B(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -65,6 +68,7 @@ function B(e) {
     }
     return e;
 }
+
 function W(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -88,7 +92,9 @@ let X = r.memo(function (e) {
         Y = (0, o.bG)([U.default], () => U.default.getCurrentUser());
     a()(null != Y, "GuildHeaderPopout: user cannot be undefined"),
         r.useEffect(() => {
-            k.default.track(R.HAw.GUILD_DROPDOWN_MENU_VIEWED, { guild_id: t.id });
+            k.default.track(R.HAw.GUILD_DROPDOWN_MENU_VIEWED, {
+                guild_id: t.id,
+            });
         });
     let Q = (0, o.bG)([L.Ay], () => L.Ay.isGuildCollapsed(t.id), [t.id]),
         {
@@ -138,19 +144,29 @@ let X = r.memo(function (e) {
                 guildId: t.id,
                 location: "guild header",
             },
-            { autoTrackExposure: !1 },
+            {
+                autoTrackExposure: !1,
+            },
         ),
         { triggerGamingStats: ey } = u.W.useExperiment(
             {
                 guildId: t.id,
                 location: "guild header",
             },
-            { autoTrackExposure: !1 },
+            {
+                autoTrackExposure: !1,
+            },
         ),
         ej = r.useCallback(() => {
             (0, c.mMO)(async () => {
                 let { default: e } = await n.e("53485").then(n.bind(n, 20508));
-                return (n) => (0, i.jsx)(e, W(B({}, n), { guild: t }));
+                return (n) =>
+                    (0, i.jsx)(
+                        e,
+                        W(B({}, n), {
+                            guild: t,
+                        }),
+                    );
             });
         }, [t]);
     return ee || et
@@ -241,7 +257,13 @@ let X = r.memo(function (e) {
                                   action: () =>
                                       (0, c.mMO)(async () => {
                                           let { default: e } = await n.e("62026").then(n.bind(n, 585265));
-                                          return (n) => (0, i.jsx)(e, W(B({}, n), { guild: t }));
+                                          return (n) =>
+                                              (0, i.jsx)(
+                                                  e,
+                                                  W(B({}, n), {
+                                                      guild: t,
+                                                  }),
+                                              );
                                       }),
                               }),
                               el,
@@ -278,7 +300,9 @@ let X = r.memo(function (e) {
                                     action: () => {
                                         (0, x.K)({
                                             guildId: t.id,
-                                            location: { section: R.JJy.GUILD_HEADER_POPOUT },
+                                            location: {
+                                                section: R.JJy.GUILD_HEADER_POPOUT,
+                                            },
                                         });
                                     },
                                 }),
@@ -406,7 +430,13 @@ let X = r.memo(function (e) {
                                             let { default: e } = await Promise.all([n.e("64992"), n.e("67208")]).then(
                                                 n.bind(n, 401539),
                                             );
-                                            return (n) => (0, i.jsx)(e, W(B({}, n), { guildId: t.id }));
+                                            return (n) =>
+                                                (0, i.jsx)(
+                                                    e,
+                                                    W(B({}, n), {
+                                                        guildId: t.id,
+                                                    }),
+                                                );
                                         }),
                                 }),
                                 (0, i.jsx)(c.Drp, {
@@ -416,7 +446,13 @@ let X = r.memo(function (e) {
                                     action: () =>
                                         (0, c.mMO)(async () => {
                                             let { default: e } = await n.e("62026").then(n.bind(n, 585265));
-                                            return (n) => (0, i.jsx)(e, W(B({}, n), { guild: t }));
+                                            return (n) =>
+                                                (0, i.jsx)(
+                                                    e,
+                                                    W(B({}, n), {
+                                                        guild: t,
+                                                    }),
+                                                );
                                         }),
                                 }),
                             ],

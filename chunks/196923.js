@@ -1,4 +1,6 @@
-n.d(t, { A: () => N });
+n.d(t, {
+    A: () => N,
+});
 var r = n(627968),
     i = n(64700),
     a = n(735438),
@@ -16,6 +18,7 @@ var r = n(627968),
     g = n(503509),
     E = n(5867),
     b = n(235079);
+
 function y(e, t, n) {
     return (
         t in e
@@ -29,6 +32,7 @@ function y(e, t, n) {
         e
     );
 }
+
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -45,6 +49,7 @@ function O(e) {
     }
     return e;
 }
+
 function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -57,6 +62,7 @@ function A(e, t) {
     }
     return n;
 }
+
 function v(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -76,11 +82,13 @@ let S = {
         transform: "scale(1)",
         opacity: 1,
     };
+
 function T() {
-    return 500 !== s().random(1, 1000)
+    return 500 !== s().random(1, 1e3)
         ? "call_ringing"
         : s().sample(["call_ringing_beat", "call_ringing_snow_halation"]);
 }
+
 function C() {
     let e = (0, l.yK)([g.A, h.A, u.Ay], () =>
             g.A.getIncomingCalls().filter((e) => {
@@ -133,7 +141,14 @@ function C() {
                 friction: 18,
                 clamp: !0,
             },
-        })((e, t) => (0, r.jsx)(d.A, v(O({}, t), { animatedStyle: e })))
+        })((e, t) =>
+            (0, r.jsx)(
+                d.A,
+                v(O({}, t), {
+                    animatedStyle: e,
+                }),
+            ),
+        )
     );
 }
 let N = i.memo(C);

@@ -45,7 +45,12 @@ let y = !1,
                 soundboardSounds: e,
             });
         } catch (e) {
-            throw (s.h.dispatch({ type: "SOUNDBOARD_FETCH_DEFAULT_SOUNDS_FAILURE" }), new l.A(e));
+            throw (
+                (s.h.dispatch({
+                    type: "SOUNDBOARD_FETCH_DEFAULT_SOUNDS_FAILURE",
+                }),
+                new l.A(e))
+            );
         }
     },
     A = async () => {
@@ -55,7 +60,7 @@ let y = !1,
                 await a.Bo.get({
                     url: g.Rsh.TOP_SOUNDS_FOR_GUILDS,
                     rejectWithError: !1,
-                    timeout: 1000,
+                    timeout: 1e3,
                 })
             ).body;
             Object.entries(t.top_sounds_by_guild).forEach((t) => {
@@ -67,7 +72,9 @@ let y = !1,
                     topSoundsForGuilds: e,
                 });
         } catch (e) {
-            s.h.dispatch({ type: "SOUNDBOARD_TOP_SOUNDS_FOR_GUILDS_FAILURE" });
+            s.h.dispatch({
+                type: "SOUNDBOARD_TOP_SOUNDS_FOR_GUILDS_FAILURE",
+            });
         }
     },
     v = (e) =>
@@ -93,7 +100,9 @@ let y = !1,
         }),
     I = () => {
         if (!f.A.shouldFetchDefaultSounds()) return Promise.resolve();
-        s.h.dispatch({ type: "SOUNDBOARD_FETCH_DEFAULT_SOUNDS" });
+        s.h.dispatch({
+            type: "SOUNDBOARD_FETCH_DEFAULT_SOUNDS",
+        });
         let e = v("SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS");
         return (0, _.aY)("maybeFetchDefaultSounds") && A(), O(), e;
     },
@@ -102,7 +111,9 @@ let y = !1,
         if (0 === e.length) return Promise.resolve();
         let t = v("SOUNDBOARD_SOUNDS_RECEIVED");
         return (
-            s.h.dispatch({ type: "GUILD_SOUNDBOARD_FETCH" }),
+            s.h.dispatch({
+                type: "GUILD_SOUNDBOARD_FETCH",
+            }),
             s.h.dispatch({
                 type: "REQUEST_SOUNDBOARD_SOUNDS",
                 guildIds: e,
@@ -112,19 +123,29 @@ let y = !1,
     },
     C = () => {
         if (!f.A.shouldFetchTopSoundsForGuilds()) return Promise.resolve();
-        s.h.dispatch({ type: "SOUNDBOARD_TOP_SOUNDS_FOR_GUILDS_FETCH" });
+        s.h.dispatch({
+            type: "SOUNDBOARD_TOP_SOUNDS_FOR_GUILDS_FETCH",
+        });
         let e = S(["SOUNDBOARD_TOP_SOUNDS_FOR_GUILDS_SUCCESS", "SOUNDBOARD_TOP_SOUNDS_FOR_GUILDS_FAILURE"]);
         return A(), e;
     },
     N = async () => {
-        if (__OVERLAY__) return s.h.dispatch({ type: "OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST" }), Promise.all([]);
+        if (__OVERLAY__)
+            return (
+                s.h.dispatch({
+                    type: "OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST",
+                }),
+                Promise.all([])
+            );
         let e = performance.now(),
             t = !y;
         y = !0;
         let n = await Promise.all([I(), T(), C()]);
         if (t) {
             let t = performance.now() - e;
-            u.default.track(g.HAw.EXPRESSION_PICKER_SOUNDBOARD_SOUNDS_LOADED, { elapsed_ms: t });
+            u.default.track(g.HAw.EXPRESSION_PICKER_SOUNDBOARD_SOUNDS_LOADED, {
+                elapsed_ms: t,
+            });
         }
         return n;
     };
@@ -164,6 +185,7 @@ async function P(e, t) {
         rejectWithError: !1,
     });
 }
+
 function D(e) {
     c.bW.updateAsync(
         "favoriteSoundboardSounds",
@@ -171,13 +193,16 @@ function D(e) {
             i().size(t.soundIds) >= 250
                 ? (o.A.show({
                       title: b.intl.string(b.t["+XYXtZ"]),
-                      body: b.intl.formatToPlainString(b.t.JaIyFi, { count: 250 }),
+                      body: b.intl.formatToPlainString(b.t.JaIyFi, {
+                          count: 250,
+                      }),
                   }),
                   !1)
                 : !t.soundIds.includes(e) && void t.soundIds.push(e),
         E.Sb.INFREQUENT_USER_ACTION,
     );
 }
+
 function x(e) {
     c.bW.updateAsync(
         "favoriteSoundboardSounds",
@@ -198,6 +223,7 @@ async function L(e, t) {
         throw new l.A(e);
     }
 }
+
 function j(e, t, n) {
     s.h.dispatch({
         type: "GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY",
@@ -206,6 +232,7 @@ function j(e, t, n) {
         trigger: n,
     });
 }
+
 function M(e, t) {
     s.h.dispatch({
         type: "GUILD_SOUNDBOARD_SOUND_PLAY_START",
@@ -213,6 +240,7 @@ function M(e, t) {
         userId: t,
     });
 }
+
 function k(e, t) {
     s.h.dispatch({
         type: "GUILD_SOUNDBOARD_SOUND_PLAY_END",
@@ -220,6 +248,7 @@ function k(e, t) {
         userId: t,
     });
 }
+
 function U(e, t) {
     s.h.dispatch({
         type: "USER_SOUNDBOARD_SET_VOLUME",
@@ -227,6 +256,7 @@ function U(e, t) {
         location: t,
     });
 }
+
 function G(e) {
     s.h.dispatch({
         type: "SOUNDBOARD_MUTE_JOIN_SOUND",

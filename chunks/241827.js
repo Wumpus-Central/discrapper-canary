@@ -5,6 +5,7 @@ n.d(t, {
 });
 var r = n(297987),
     i = n(790637);
+
 function a(e, t) {
     if (!(0, i.Nf)()) return !!t && !!e && e.contains(t);
     if (!e || !t) return !1;
@@ -23,6 +24,7 @@ let s = (e = document) => {
         n = n.shadowRoot.activeElement;
     return n;
 };
+
 function o(e) {
     return (0, i.Nf)() && e.target.shadowRoot && e.composedPath ? e.composedPath()[0] : e.target;
 }

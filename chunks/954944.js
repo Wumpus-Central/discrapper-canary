@@ -18,28 +18,56 @@ e.exports = function (e) {
         s = {
             className: "number",
             variants: [
-                { begin: /[su]?0[xX][KMLHR]?[a-fA-F0-9]+/ },
-                { begin: /[-+]?\d+(?:[.]\d+)?(?:[eE][-+]?\d+(?:[.]\d+)?)?/ },
+                {
+                    begin: /[su]?0[xX][KMLHR]?[a-fA-F0-9]+/,
+                },
+                {
+                    begin: /[-+]?\d+(?:[.]\d+)?(?:[eE][-+]?\d+(?:[.]\d+)?)?/,
+                },
             ],
             relevance: 0,
         },
         o = {
             className: "symbol",
-            variants: [{ begin: /^\s*[a-z]+:/ }],
+            variants: [
+                {
+                    begin: /^\s*[a-z]+:/,
+                },
+            ],
             relevance: 0,
         },
         l = {
             className: "variable",
-            variants: [{ begin: t.concat(/%/, n) }, { begin: /%\d+/ }, { begin: /#\d+/ }],
+            variants: [
+                {
+                    begin: t.concat(/%/, n),
+                },
+                {
+                    begin: /%\d+/,
+                },
+                {
+                    begin: /#\d+/,
+                },
+            ],
         },
         c = {
             className: "title",
             variants: [
-                { begin: t.concat(/@/, n) },
-                { begin: /@\d+/ },
-                { begin: t.concat(/!/, n) },
-                { begin: t.concat(/!\d+/, n) },
-                { begin: /!\d+/ },
+                {
+                    begin: t.concat(/@/, n),
+                },
+                {
+                    begin: /@\d+/,
+                },
+                {
+                    begin: t.concat(/!/, n),
+                },
+                {
+                    begin: t.concat(/!\d+/, n),
+                },
+                {
+                    begin: /!\d+/,
+                },
             ],
         };
     return {
@@ -51,7 +79,9 @@ e.exports = function (e) {
         },
         contains: [
             r,
-            e.COMMENT(/;\s*$/, null, { relevance: 0 }),
+            e.COMMENT(/;\s*$/, null, {
+                relevance: 0,
+            }),
             e.COMMENT(/;/, /$/),
             {
                 className: "string",

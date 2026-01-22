@@ -1,4 +1,7 @@
-l.d(t, { A: () => S }), l(896048);
+l.d(t, {
+    A: () => S,
+}),
+    l(896048);
 var r = l(627968),
     n = l(64700),
     i = l(503698),
@@ -20,6 +23,7 @@ var r = l(627968),
     j = l(985018),
     _ = l(876380),
     E = l(206188);
+
 function y(e) {
     let t,
         { active: l, nextActive: n, position: i } = e;
@@ -28,7 +32,9 @@ function y(e) {
         (0, r.jsxs)("div", {
             className: E.progressContainer,
             children: [
-                (0, r.jsx)("div", { className: s()(E.progress, E[i], E[t]) }),
+                (0, r.jsx)("div", {
+                    className: s()(E.progress, E[i], E[t]),
+                }),
                 (0, r.jsx)("div", {
                     className: s()(E.boostContainer, _.JD, {
                         [E.boostContainerActive]: l,
@@ -43,6 +49,7 @@ function y(e) {
         })
     );
 }
+
 function I(e) {
     let { isActive: t, index: l } = e,
         { textColor: i, iconColor: s } = (0, v.A)(t),
@@ -90,6 +97,7 @@ function I(e) {
         ],
     });
 }
+
 function S(e) {
     let t,
         { guildId: l, index: i, powerup: s, nextPowerup: o } = e,

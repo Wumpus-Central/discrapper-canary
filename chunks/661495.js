@@ -84,5 +84,13 @@ e.exports = function (e, t, n, s, _, m, T) {
                 },
                 N,
             );
-    return (!a || T) && x[O] !== j && p(x, O, j, { name: _ }), (h[t] = j), N;
+    return (
+        (!a || T) &&
+            x[O] !== j &&
+            p(x, O, j, {
+                name: _,
+            }),
+        (h[t] = j),
+        N
+    );
 };

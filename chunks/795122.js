@@ -1,4 +1,6 @@
-n.d(t, { n: () => E });
+n.d(t, {
+    n: () => E,
+});
 var r = n(625557),
     i = n(723906),
     a = n(260431),
@@ -20,6 +22,7 @@ let m = {
         ltr: "ArrowLeft",
         rtl: "ArrowRight",
     };
+
 function E(e, t, n) {
     var E, y, O, A, v, S;
     let { node: I, isVirtualized: T } = e,
@@ -97,13 +100,22 @@ function E(e, t, n) {
                             e.preventDefault(),
                                 e.stopPropagation(),
                                 (0, u.l)(t),
-                                (0, s.o)(t, { containingElement: (0, o.m)(n.current) });
+                                (0, s.o)(t, {
+                                    containingElement: (0, o.m)(n.current),
+                                });
                         else if ((e.preventDefault(), e.stopPropagation(), "rtl" === C))
-                            (0, u.l)(n.current), (0, s.o)(n.current, { containingElement: (0, o.m)(n.current) });
+                            (0, u.l)(n.current),
+                                (0, s.o)(n.current, {
+                                    containingElement: (0, o.m)(n.current),
+                                });
                         else {
                             r.currentNode = n.current;
                             let e = b(r);
-                            e && ((0, u.l)(e), (0, s.o)(e, { containingElement: (0, o.m)(n.current) }));
+                            e &&
+                                ((0, u.l)(e),
+                                (0, s.o)(e, {
+                                    containingElement: (0, o.m)(n.current),
+                                }));
                         }
                     }
                     break;
@@ -114,13 +126,22 @@ function E(e, t, n) {
                             e.preventDefault(),
                                 e.stopPropagation(),
                                 (0, u.l)(t),
-                                (0, s.o)(t, { containingElement: (0, o.m)(n.current) });
+                                (0, s.o)(t, {
+                                    containingElement: (0, o.m)(n.current),
+                                });
                         else if ((e.preventDefault(), e.stopPropagation(), "ltr" === C))
-                            (0, u.l)(n.current), (0, s.o)(n.current, { containingElement: (0, o.m)(n.current) });
+                            (0, u.l)(n.current),
+                                (0, s.o)(n.current, {
+                                    containingElement: (0, o.m)(n.current),
+                                });
                         else {
                             r.currentNode = n.current;
                             let e = b(r);
-                            e && ((0, u.l)(e), (0, s.o)(e, { containingElement: (0, o.m)(n.current) }));
+                            e &&
+                                ((0, u.l)(e),
+                                (0, s.o)(e, {
+                                    containingElement: (0, o.m)(n.current),
+                                }));
                         }
                     }
                     break;
@@ -149,7 +170,9 @@ function E(e, t, n) {
                 "Tab" === e.key &&
                 "tab" === w
             ) {
-                let t = (0, d.N$)(n.current, { tabbable: !0 });
+                let t = (0, d.N$)(n.current, {
+                    tabbable: !0,
+                });
                 (t.currentNode = document.activeElement),
                     (e.shiftKey ? t.previousNode() : t.nextNode()) && e.stopPropagation();
             }
@@ -184,12 +207,17 @@ function E(e, t, n) {
         "aria-colindex": 1,
     };
     return {
-        rowProps: { ...(0, c.v)(W, j) },
+        rowProps: {
+            ...(0, c.v)(W, j),
+        },
         gridCellProps: K,
-        descriptionProps: { id: D },
+        descriptionProps: {
+            id: D,
+        },
         ...G,
     };
 }
+
 function b(e) {
     let t = null,
         n = null;

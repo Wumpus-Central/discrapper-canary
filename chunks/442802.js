@@ -1,10 +1,13 @@
-n.d(t, { A: () => u }), n(896048);
+n.d(t, {
+    A: () => u,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(106778);
 let a = [n(426560)],
     s = ["#FFFFFF"],
-    o = 1000 / 60,
+    o = 1e3 / 60,
     c = {
         velocity: {
             type: "static-random",
@@ -54,12 +57,19 @@ let a = [n(426560)],
             value: 0.3,
         },
     };
+
 function u(e) {
     let { className: t, firing: n = !0, wind: u = 2, sprites: d = a, spriteColors: p = s, confettiConfig: f } = e,
         [h, A] = i.useState(null),
         [g, m] = i.useState(null),
         b = (0, l.f9)(g, h),
-        _ = i.useMemo(() => new l.OH({ wind: u }), [u]),
+        _ = i.useMemo(
+            () =>
+                new l.OH({
+                    wind: u,
+                }),
+            [u],
+        ),
         E = i.useCallback(() => {
             var e, t;
             let n = null == g ? void 0 : g.getCanvas();

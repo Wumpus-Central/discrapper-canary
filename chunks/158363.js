@@ -1,4 +1,8 @@
-t.d(A, { A: () => x }), t(65821), t(896048);
+t.d(A, {
+    A: () => x,
+}),
+    t(65821),
+    t(896048);
 var r = t(64700),
     n = t(417597),
     l = t(562465),
@@ -17,6 +21,7 @@ var r = t(64700),
     v = t(253141),
     q = t(652215),
     h = t(985018);
+
 function C(e, A, t) {
     return (
         A in e
@@ -30,6 +35,7 @@ function C(e, A, t) {
         e
     );
 }
+
 function j(e) {
     for (var A = 1; A < arguments.length; A++) {
         var t = null != arguments[A] ? arguments[A] : {},
@@ -46,6 +52,7 @@ function j(e) {
     }
     return e;
 }
+
 function U(e, A) {
     return (
         (A = null != A ? A : {}),
@@ -70,7 +77,11 @@ class O {
         let t = this.target.getMaxAttachmentsCount();
         if (this.uploads.length >= t)
             throw (
-                (a.OR.announce(h.intl.formatToPlainString(h.t["0QDZ4J"], { maxAttachmentsCount: t })),
+                (a.OR.announce(
+                    h.intl.formatToPlainString(h.t["0QDZ4J"], {
+                        maxAttachmentsCount: t,
+                    }),
+                ),
                 Error("Too many attachments"))
             );
         e.target = c.m.GUILD_PRODUCT_ATTACHMENT;
@@ -89,11 +100,23 @@ class O {
                               reason: i,
                           }),
                       )
-                    : a.OR.announce(h.intl.formatToPlainString(h.t.mBkf6Z, { reason: i })),
-                    A((e) => U(j({}, e), { [r.id]: l }));
+                    : a.OR.announce(
+                          h.intl.formatToPlainString(h.t.mBkf6Z, {
+                              reason: i,
+                          }),
+                      ),
+                    A((e) =>
+                        U(j({}, e), {
+                            [r.id]: l,
+                        }),
+                    );
             }),
             r.on("progress", (e, t) => {
-                A((A) => U(j({}, A), { [r.id]: e / t }));
+                A((A) =>
+                    U(j({}, A), {
+                        [r.id]: e / t,
+                    }),
+                );
             }),
             (this.uploads = [...this.uploads, r]);
     }
@@ -227,6 +250,7 @@ class O {
             }));
     }
 }
+
 function x(e, A) {
     var t;
     let { editSkuId: l, onFileSizeError: a } = A,
@@ -235,7 +259,18 @@ function x(e, A) {
             editSkuId: l,
             onFileSizeError: a,
         }),
-        c = r.useMemo(() => new O(j({ guildId: e }, o)), [e, o]),
+        c = r.useMemo(
+            () =>
+                new O(
+                    j(
+                        {
+                            guildId: e,
+                        },
+                        o,
+                    ),
+                ),
+            [e, o],
+        ),
         [u, g] = r.useState(c.generateInitialProgresses),
         [, p] = r.useState(null);
     r.useLayoutEffect(() => {

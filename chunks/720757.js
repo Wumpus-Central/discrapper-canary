@@ -1,6 +1,12 @@
-n.d(t, { A: () => a }), n(747238), n(65821), n(896048);
+n.d(t, {
+    A: () => a,
+}),
+    n(747238),
+    n(65821),
+    n(896048);
 var r = n(64700),
     i = n(311907);
+
 function a(e, t, n) {
     let a = e,
         { name: s, kind: o, variations: l, defaultConfig: c } = a;

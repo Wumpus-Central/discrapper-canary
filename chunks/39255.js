@@ -14,6 +14,7 @@ var l,
     u = n(650583),
     E = n(985018),
     d = n(633175);
+
 function _(e, t, n) {
     return (
         t in e
@@ -184,7 +185,9 @@ class T extends (l = i.Component) {
                               (0, a.jsxs)(
                                   c.MzZ,
                                   {
-                                      focusProps: { offset: 4 },
+                                      focusProps: {
+                                          offset: 4,
+                                      },
                                       className: d.Tc,
                                       onClick: this.handleRemoveTag.bind(this, t),
                                       children: [
@@ -221,7 +224,9 @@ class T extends (l = i.Component) {
                                               null != e.color &&
                                               (0, a.jsx)("span", {
                                                   className: d.Mk,
-                                                  style: { backgroundColor: e.color },
+                                                  style: {
+                                                      backgroundColor: e.color,
+                                                  },
                                               }),
                                           (0, a.jsx)("span", {
                                               className: d.v6,
@@ -247,10 +252,14 @@ class T extends (l = i.Component) {
                     children: (l) =>
                         (0, a.jsx)("div", {
                             ref: this.containerRef,
-                            className: o()(A, d.kL, i, l, { [d.r9]: r }),
+                            className: o()(A, d.kL, i, l, {
+                                [d.r9]: r,
+                            }),
                             children: (0, a.jsxs)(c.IpV, {
                                 className: d.vW,
-                                style: { maxHeight: s },
+                                style: {
+                                    maxHeight: s,
+                                },
                                 children: [
                                     I,
                                     (0, a.jsx)(
@@ -272,7 +281,9 @@ class T extends (l = i.Component) {
                                             return e;
                                         })(
                                             {
-                                                className: o()(d.hF, { [d.He]: h }),
+                                                className: o()(d.hF, {
+                                                    [d.He]: h,
+                                                }),
                                                 type: "text",
                                                 ref: this.ref,
                                                 spellCheck: "false",

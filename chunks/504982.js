@@ -1,8 +1,11 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(954571),
     i = n(237774),
     l = n(862927),
     a = n(652215);
+
 function s(e) {
     var t, n, s;
     let { tab_opened: o, source: c } = e,

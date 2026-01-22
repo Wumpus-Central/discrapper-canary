@@ -1,4 +1,6 @@
-t.d(l, { A: () => c });
+t.d(l, {
+    A: () => c,
+});
 var n = t(627968),
     a = t(64700),
     s = t(397927),
@@ -6,6 +8,7 @@ var n = t(627968),
     d = t(183802),
     r = t(205830),
     o = t(770887);
+
 function c(e) {
     let { analyticsSectionId: l, applicationId: t, guildId: c, sectionTitle: u, skuIds: f, variant: g = d.s.SMALL } = e,
         p = a.useMemo(

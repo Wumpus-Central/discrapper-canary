@@ -1,7 +1,10 @@
-n.d(t, { V: () => s });
+n.d(t, {
+    V: () => s,
+});
 var r = n(562465),
     i = n(73153),
     a = n(652215);
+
 function s(e, t, n) {
     return (
         i.h.dispatch({
@@ -12,7 +15,9 @@ function s(e, t, n) {
         }),
         r.Bo.patch({
             url: a.Rsh.LIBRARY_APPLICATION_BRANCH(e, t),
-            body: { flags: n },
+            body: {
+                flags: n,
+            },
             oldFormErrors: !0,
             rejectWithError: !1,
         }).then((e) => {

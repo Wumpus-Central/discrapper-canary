@@ -342,7 +342,9 @@ e.exports = function (e) {
                 className: "keyword",
                 begin: "\\b(((abstract|primitive)\\s+)type|(mutable\\s+)?struct)\\b",
             },
-            { begin: /<:/ },
+            {
+                begin: /<:/,
+            },
         ]),
         (s.contains = r.contains),
         r

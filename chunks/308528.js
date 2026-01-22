@@ -1,4 +1,7 @@
-n.d(t, { A: () => T }), n(896048);
+n.d(t, {
+    A: () => T,
+}),
+    n(896048);
 var r = n(562465),
     i = n(582754),
     a = n(73153),
@@ -18,6 +21,7 @@ var r = n(562465),
     b = n(956793),
     y = n(652215),
     O = n(985018);
+
 function A(e, t, n) {
     return (
         t in e
@@ -31,6 +35,7 @@ function A(e, t, n) {
         e
     );
 }
+
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -47,6 +52,7 @@ function v(e) {
     }
     return e;
 }
+
 function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -59,6 +65,7 @@ function S(e, t) {
     }
     return n;
 }
+
 function I(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -92,8 +99,12 @@ let T = {
         try {
             let e = await r.Bo.post({
                 url: y.Rsh.USER_CHANNELS,
-                body: { recipients: l },
-                context: { location: a },
+                body: {
+                    recipients: l,
+                },
+                context: {
+                    location: a,
+                },
                 oldFormErrors: !0,
                 retries: 3,
                 rejectWithError: !1,
@@ -118,7 +129,9 @@ let T = {
             : (n &&
                   (null == t || t(),
                   null != (0, c.Y)()
-                      ? (0, f.iN)(i.id, { navigationReplace: !0 })
+                      ? (0, f.iN)(i.id, {
+                            navigationReplace: !0,
+                        })
                       : b.default.selectPrivateChannel(i.id)),
               i);
     },
@@ -126,7 +139,9 @@ let T = {
         let t = this._getRecipients(e),
             n = await r.Bo.post({
                 url: y.Rsh.USER_CHANNELS,
-                body: { recipients: t },
+                body: {
+                    recipients: t,
+                },
                 oldFormErrors: !0,
                 rejectWithError: !1,
             }),
@@ -165,7 +180,11 @@ let T = {
                 type: "CHANNEL_CREATE",
                 channel: t,
             }),
-            null != (0, c.Y)() ? (0, f.iN)(t.id, { navigationReplace: !0 }) : b.default.selectPrivateChannel(t.id),
+            null != (0, c.Y)()
+                ? (0, f.iN)(t.id, {
+                      navigationReplace: !0,
+                  })
+                : b.default.selectPrivateChannel(t.id),
             t
         );
     },
@@ -190,7 +209,9 @@ let T = {
             t && !__OVERLAY__ && (0, d.pX)(y.BVt.FRIENDS),
             r.Bo.del({
                 url: y.Rsh.CHANNEL(e),
-                query: { silent: n },
+                query: {
+                    silent: n,
+                },
                 oldFormErrors: !0,
                 rejectWithError: !1,
             })
@@ -236,7 +257,9 @@ let T = {
     addRecipient(e, t, n, a) {
         return r.Bo.put({
             url: y.Rsh.CHANNEL_RECIPIENT(e, t),
-            context: { location: n },
+            context: {
+                location: n,
+            },
             oldFormErrors: !0,
             rejectWithError: !0,
         })
@@ -261,7 +284,9 @@ let T = {
     setDMOwner: (e, t) =>
         r.Bo.patch({
             url: y.Rsh.CHANNEL(e),
-            body: { owner: t },
+            body: {
+                owner: t,
+            },
             oldFormErrors: !0,
             rejectWithError: !0,
         }),
@@ -269,7 +294,9 @@ let T = {
         let n = _.A.getChannel(e),
             i = await r.Bo.patch({
                 url: y.Rsh.CHANNEL(e),
-                body: { name: t },
+                body: {
+                    name: t,
+                },
                 oldFormErrors: !0,
                 rejectWithError: !0,
             }),
@@ -285,16 +312,28 @@ let T = {
                 new_icon_set: null != t,
                 location: n,
             };
-        m.default.track(y.HAw.CHANNEL_ICON_EDIT_PROGRESSED, I(v({}, a), { status: "initiated" }));
+        m.default.track(
+            y.HAw.CHANNEL_ICON_EDIT_PROGRESSED,
+            I(v({}, a), {
+                status: "initiated",
+            }),
+        );
         try {
             let n = await r.Bo.patch({
                 url: y.Rsh.CHANNEL(e),
-                body: { icon: t },
+                body: {
+                    icon: t,
+                },
                 oldFormErrors: !0,
                 rejectWithError: !0,
                 failImmediatelyWhenRateLimited: !0,
             });
-            m.default.track(y.HAw.CHANNEL_ICON_EDIT_PROGRESSED, I(v({}, a), { status: "success" }));
+            m.default.track(
+                y.HAw.CHANNEL_ICON_EDIT_PROGRESSED,
+                I(v({}, a), {
+                    status: "success",
+                }),
+            );
             let s = null == i ? void 0 : i.getGuildId();
             return null == s || (null == i ? void 0 : i.isThread()) || l.A.checkGuildTemplateDirty(s), n;
         } catch (e) {
@@ -323,10 +362,18 @@ let T = {
                 new_icon_set: null != s,
                 location: n,
             };
-        i && m.default.track(y.HAw.CHANNEL_ICON_EDIT_PROGRESSED, I(v({}, o), { status: "initiated" }));
+        i &&
+            m.default.track(
+                y.HAw.CHANNEL_ICON_EDIT_PROGRESSED,
+                I(v({}, o), {
+                    status: "initiated",
+                }),
+            );
         try {
             let s = await r.Bo.patch({
-                    context: { location: n },
+                    context: {
+                        location: n,
+                    },
                     url: y.Rsh.CHANNEL(e),
                     body: t,
                     oldFormErrors: !0,
@@ -335,7 +382,13 @@ let T = {
                 c = null == a ? void 0 : a.getGuildId();
             return (
                 null == c || (null == a ? void 0 : a.isThread()) || l.A.checkGuildTemplateDirty(c),
-                i && m.default.track(y.HAw.CHANNEL_ICON_EDIT_PROGRESSED, I(v({}, o), { status: "success" })),
+                i &&
+                    m.default.track(
+                        y.HAw.CHANNEL_ICON_EDIT_PROGRESSED,
+                        I(v({}, o), {
+                            status: "success",
+                        }),
+                    ),
                 s
             );
         } catch (e) {

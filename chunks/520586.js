@@ -34,6 +34,7 @@ var i = n(503698),
     w = n(183924),
     P = n(920409),
     D = n(87528);
+
 function x(e, t, n) {
     return (
         t in e
@@ -47,6 +48,7 @@ function x(e, t, n) {
         e
     );
 }
+
 function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -63,6 +65,7 @@ function L(e) {
     }
     return e;
 }
+
 function j(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -75,6 +78,7 @@ function j(e, t) {
     }
     return n;
 }
+
 function M(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -86,17 +90,30 @@ function M(e, t) {
         e
     );
 }
+
 function k(e) {
     return e.map((e, t) =>
         (0, r.jsxs)(r.Fragment, {
-            children: [U(e, t.toString()), (0, r.jsx)(s.AC4, { children: "," })],
+            children: [
+                U(e, t.toString()),
+                (0, r.jsx)(s.AC4, {
+                    children: ",",
+                }),
+            ],
         }),
     );
 }
+
 function U(e, t) {
     switch (e.type) {
         case o.I5.ACTION_ROW:
-            return (0, r.jsx)(N.A, M(L({}, e), { renderComponents: k }), t);
+            return (0, r.jsx)(
+                N.A,
+                M(L({}, e), {
+                    renderComponents: k,
+                }),
+                t,
+            );
         case o.I5.BUTTON:
             return (0, r.jsx)(d.A, L({}, e), t);
         case o.I5.STRING_SELECT:
@@ -110,7 +127,13 @@ function U(e, t) {
         case o.I5.TEXT_INPUT:
             return (0, r.jsx)(b.A, L({}, e), t);
         case o.I5.SECTION:
-            return (0, r.jsx)(P.A, M(L({}, e), { renderComponents: k }), t);
+            return (0, r.jsx)(
+                P.A,
+                M(L({}, e), {
+                    renderComponents: k,
+                }),
+                t,
+            );
         case o.I5.TEXT_DISPLAY:
             return (0, r.jsx)(S.A, L({}, e), t);
         case o.I5.MEDIA_GALLERY:
@@ -124,9 +147,21 @@ function U(e, t) {
         case o.I5.CONTENT_INVENTORY_ENTRY:
             return (0, r.jsx)(C.A, L({}, e), t);
         case o.I5.CONTAINER:
-            return (0, r.jsx)(R.A, M(L({}, e), { renderComponents: k }), t);
+            return (0, r.jsx)(
+                R.A,
+                M(L({}, e), {
+                    renderComponents: k,
+                }),
+                t,
+            );
         case o.I5.LABEL:
-            return (0, r.jsx)(w.A, M(L({}, e), { renderComponent: U }), t);
+            return (0, r.jsx)(
+                w.A,
+                M(L({}, e), {
+                    renderComponent: U,
+                }),
+                t,
+            );
         case o.I5.FILE_UPLOAD:
             return (0, r.jsx)(h.A, L({}, e), t);
         case o.I5.CHECKPOINT_CARD:
@@ -141,6 +176,7 @@ function U(e, t) {
             return (0, r.jsx)(T.A, {}, t);
     }
 }
+
 function G(e) {
     let { message: t, shouldDisableInteractiveComponents: n } = e,
         { components: i } = t,
@@ -153,13 +189,20 @@ function G(e) {
               children: (0, r.jsx)(u.O7.Root, {
                   containerInnerWidth: o,
                   children: (0, r.jsx)("div", {
-                      style: { width: "100%" },
+                      style: {
+                          width: "100%",
+                      },
                       ref: s,
                       children: (0, r.jsx)(u.O7.AutoMeasuredNestedContainer, {
                           children: (e) =>
                               (0, r.jsx)("div", {
                                   ref: e,
-                                  className: a()([D.k, { [D.z]: (0, l._c)(t) }]),
+                                  className: a()([
+                                      D.k,
+                                      {
+                                          [D.z]: (0, l._c)(t),
+                                      },
+                                  ]),
                                   children: k(i),
                               }),
                       }),

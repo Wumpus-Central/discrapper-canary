@@ -1,4 +1,7 @@
-n.d(t, { A: () => d }), n(264879);
+n.d(t, {
+    A: () => d,
+}),
+    n(264879);
 var r = n(627968);
 n(64700);
 var l = n(503698),
@@ -8,6 +11,7 @@ var l = n(503698),
     o = n(372684),
     c = n(226421),
     u = n(461583);
+
 function d() {
     var e, t;
     let n = (0, a.yK)([s.A], () => {
@@ -52,7 +56,10 @@ function d() {
                 }
                 return e;
             })({}, n)),
-            (t = t = { length: 4 }),
+            (t = t =
+                {
+                    length: 4,
+                }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
                 : (function (e, t) {
@@ -70,7 +77,13 @@ function d() {
             .map((e, t) =>
                 null != e
                     ? e.type === o.nQ.VOICE_CLIP
-                        ? (0, r.jsx)(c.A, { className: u.xn }, e.id)
+                        ? (0, r.jsx)(
+                              c.A,
+                              {
+                                  className: u.xn,
+                              },
+                              e.id,
+                          )
                         : (0, r.jsx)(
                               "img",
                               {

@@ -7,4 +7,6 @@ function r(e) {
               premiumSubscriptionGroupRole: e.premium_subscription_group_role,
           };
 }
-n.d(t, { f: () => r });
+n.d(t, {
+    f: () => r,
+});

@@ -1,9 +1,12 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var r,
     i = n(311907),
     a = n(73153),
     s = n(728458),
     o = n(185928);
+
 function l(e, t, n) {
     return (
         t in e
@@ -19,17 +22,23 @@ function l(e, t, n) {
 }
 let c = [],
     u = 0;
+
 function d(e) {
     try {
         let t = o.dP[e.base_theme];
         return e.colors.length > 0 && "number" == typeof e.gradient_angle && "number" == typeof e.base_mix && null != t;
     } catch (e) {
         return (
-            s.A.captureMessage("Invalid saved custom theme: " + e, { tags: { app_context: "SavedCustomThemeStore" } }),
+            s.A.captureMessage("Invalid saved custom theme: " + e, {
+                tags: {
+                    app_context: "SavedCustomThemeStore",
+                },
+            }),
             !1
         );
     }
 }
+
 function f() {
     u = 1;
 }
@@ -48,14 +57,21 @@ let p = (e) => {
     },
     _ = (e) => {
         let { error: t } = e;
-        (u = 3), s.A.captureException(t, { tags: { app_context: "SavedCustomThemeStore" } });
+        (u = 3),
+            s.A.captureException(t, {
+                tags: {
+                    app_context: "SavedCustomThemeStore",
+                },
+            });
     };
 class h extends (r = i.Ay.PersistedStore) {
     initialize(e) {
         null != e && (c = e.savedCustomThemes), (u = 0);
     }
     getState() {
-        return { savedCustomThemes: null != c ? c : [] };
+        return {
+            savedCustomThemes: null != c ? c : [],
+        };
     }
     getSavedCustomTheme() {
         return (null == c ? void 0 : c.length) > 0 && c[0].colors.length > 0 ? c[0] : null;

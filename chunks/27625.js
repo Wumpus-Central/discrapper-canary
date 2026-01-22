@@ -1,4 +1,6 @@
-i.d(s, { default: () => c });
+i.d(s, {
+    default: () => c,
+});
 var a = i(627968);
 i(64700);
 var n = i(397927),
@@ -6,6 +8,7 @@ var n = i(397927),
     r = i(915089),
     l = i(985018),
     d = i(36205);
+
 function c(t) {
     let { href: s, onClose: c, transitionState: o } = t,
         x = (0, r.GV)();

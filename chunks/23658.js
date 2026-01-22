@@ -14,6 +14,7 @@ var i = n(192308),
     d = n(954571),
     f = n(652215),
     p = n(985018);
+
 function _(e, t, n) {
     return (
         t in e
@@ -27,6 +28,7 @@ function _(e, t, n) {
         e
     );
 }
+
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -43,9 +45,12 @@ function h(e) {
     }
     return e;
 }
+
 function m(e) {
     let { title: t, help: n, showPremiumUpsell: i, transitionState: _, fileSize: h, onClose: m } = e,
-        g = (0, o.A)({ location: "UploadError" }),
+        g = (0, o.A)({
+            location: "UploadError",
+        }),
         E = () => {
             (0, s.A)(),
                 m(),
@@ -83,6 +88,9 @@ function m(e) {
           });
 }
 let g = "UPLOAD_ERROR_MODAL_KEY";
+
 function E(e) {
-    (0, i.openModal)((t) => (0, r.jsx)(m, h({}, t, e)), { modalKey: g });
+    (0, i.openModal)((t) => (0, r.jsx)(m, h({}, t, e)), {
+        modalKey: g,
+    });
 }

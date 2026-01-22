@@ -1,10 +1,13 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(627968),
     l = n(64700),
     i = n(607399),
     a = n(397927),
     s = n(194085),
     o = n(985018);
+
 function c(e) {
     let { channel: t, message: n, togglePopout: c, renderEmojiPicker: u, shouldShow: d } = e,
         f = l.useRef(null);

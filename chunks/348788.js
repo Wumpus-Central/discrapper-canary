@@ -1,4 +1,6 @@
-n.d(t, { E: () => E });
+n.d(t, {
+    E: () => E,
+});
 var r = n(457312),
     i = n(701366),
     a = n(352404),
@@ -13,9 +15,11 @@ var r = n(457312),
     _ = n(47276),
     h = n(849352),
     m = n(64700);
+
 function g(e) {
     return e && e.__esModule ? e.default : e;
 }
+
 function E(e, t, n) {
     let E,
         { date: b, isDisabled: y } = e,
@@ -55,8 +59,13 @@ function E(e, t, n) {
                     (e = A + ", "),
                 (e += S.format(w)),
                 P
-                    ? (e = v.format(I ? "todayDateSelected" : "todayDate", { date: e }))
-                    : I && (e = v.format("dateSelected", { date: e })),
+                    ? (e = v.format(I ? "todayDateSelected" : "todayDate", {
+                          date: e,
+                      }))
+                    : I &&
+                      (e = v.format("dateSelected", {
+                          date: e,
+                      })),
                 t.minValue && (0, a.ro)(b, t.minValue)
                     ? (e += ", " + v.format("minimumDate"))
                     : t.maxValue && (0, a.ro)(b, t.maxValue) && (e += ", " + v.format("maximumDate")),
@@ -122,8 +131,14 @@ function E(e, t, n) {
                         "virtual" === e.pointerType && (t.selectDate(b), t.setFocusedDate(b));
                     else {
                         t.selectDate(b);
-                        let e = b.add({ days: 1 });
-                        t.isInvalid(e) && (e = b.subtract({ days: 1 })), t.isInvalid(e) || t.setFocusedDate(e);
+                        let e = b.add({
+                            days: 1,
+                        });
+                        t.isInvalid(e) &&
+                            (e = b.subtract({
+                                days: 1,
+                            })),
+                            t.isInvalid(e) || t.setFocusedDate(e);
                     }
             },
         });
@@ -134,7 +149,9 @@ function E(e, t, n) {
                 ((0, l.e)(n.current),
                 "pointer" !== (0, p.ME)() &&
                     document.activeElement === n.current &&
-                    (0, c.o)(n.current, { containingElement: (0, u.m)(n.current) }));
+                    (0, c.o)(n.current, {
+                        containingElement: (0, u.m)(n.current),
+                    }));
         }, [T, n]);
     let V = (0, h.i)({
             day: "numeric",

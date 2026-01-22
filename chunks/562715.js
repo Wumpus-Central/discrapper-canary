@@ -1,4 +1,7 @@
-t.r(n), t.d(n, { default: () => d });
+t.r(n),
+    t.d(n, {
+        default: () => d,
+    });
 var r = t(584525),
     o = t(990152),
     a = t(405482),

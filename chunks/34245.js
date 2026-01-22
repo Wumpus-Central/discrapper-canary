@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var r = n(627968),
     i = n(64700),
     a = n(284009),
@@ -12,11 +14,19 @@ var r = n(627968),
     p = n(957565),
     _ = n(652215),
     h = n(985018);
+
 function m(e) {
     let { user: t, guildId: n, onSuccess: a } = e,
         m = (0, u.Ay)(t.id, null != n ? n : void 0),
         g = d.Q_.useSetting(),
-        { tidaWebformEnabled: E } = c.A.useExperiment({ location: "useCopyUserInfoItem" }, { autoTrackExposure: !1 }),
+        { tidaWebformEnabled: E } = c.A.useExperiment(
+            {
+                location: "useCopyUserInfoItem",
+            },
+            {
+                autoTrackExposure: !1,
+            },
+        ),
         b = (0, l.A)({
             id: t.id,
             label: h.intl.string(h.t["/AXYnE"]),

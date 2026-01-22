@@ -1,4 +1,6 @@
-n.d(t, { A: () => E });
+n.d(t, {
+    A: () => E,
+});
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -16,6 +18,7 @@ var r = n(627968),
     m = n(790782),
     b = n(985018),
     _ = n(656678);
+
 function E(e) {
     let { onOpen: t, onClose: n, "data-jump-section": l } = e,
         E = (0, s.bG)([A.default], () => A.default.getCurrentUser()),
@@ -24,7 +27,9 @@ function E(e) {
             [h.Ay],
             () => (null == E ? void 0 : E.id) != null && h.Ay.getMentionCount(E.id, m.P.NOTIFICATION_CENTER) > 0,
         ),
-        { titlebarIconSize: I, titlebarHoverHighlight: v } = (0, p.p)({ location: "RecentsButton" }),
+        { titlebarIconSize: I, titlebarHoverHighlight: v } = (0, p.p)({
+            location: "RecentsButton",
+        }),
         S = "sm" === I ? "refresh_sm" : "md",
         C = i.useMemo(
             () =>
@@ -38,7 +43,9 @@ function E(e) {
         targetElementRef: O,
         onOpen: t,
         onClose: n,
-        badgeState: { badgeForYou: y },
+        badgeState: {
+            badgeForYou: y,
+        },
         popoutPosition: "bottom",
         popoutAlign: "right",
         children: (e, t, n, i) => {
@@ -83,7 +90,9 @@ function E(e) {
                                     onClick: e,
                                     "data-jump-section": l,
                                     "aria-label": b.intl.string(b.t.GSmTKJ),
-                                    className: a()(_.vk, { [_.l9]: v }),
+                                    className: a()(_.vk, {
+                                        [_.l9]: v,
+                                    }),
                                     children:
                                         y || i
                                             ? (0, r.jsxs)(r.Fragment, {
@@ -95,7 +104,9 @@ function E(e) {
                                                           children: C,
                                                       }),
                                                       (0, r.jsx)("span", {
-                                                          className: a()(_.qS, { [_.mf]: "refresh_sm" === S }),
+                                                          className: a()(_.qS, {
+                                                              [_.mf]: "refresh_sm" === S,
+                                                          }),
                                                       }),
                                                   ],
                                               })

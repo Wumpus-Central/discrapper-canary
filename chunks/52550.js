@@ -1,4 +1,5 @@
 var r = n(724039);
+
 function i() {
     return (i =
         r ||
@@ -10,6 +11,7 @@ function i() {
             return e;
         }).apply(this, arguments);
 }
+
 function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -26,10 +28,12 @@ function a(e) {
     }
     return e;
 }
+
 function s(e) {
     if (void 0 === e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return e;
 }
+
 function o(e, t, n) {
     return (
         t in e
@@ -43,6 +47,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e, t) {
     (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
 }
@@ -179,15 +184,22 @@ var c = n(611668),
                     r && (o.onPaste = r),
                         i && (o.onCut = i),
                         s && (o.onCopy = s),
-                        (n._handler = a({}, x, { edit: o })[e]);
+                        (n._handler = a({}, x, {
+                            edit: o,
+                        })[e]);
                 }),
                 o(s(n), "exitCurrentMode", function () {
                     n.setMode("edit");
                 }),
                 o(s(n), "restoreEditorDOM", function (e) {
-                    n.setState({ contentsKey: n.state.contentsKey + 1 }, function () {
-                        n.focus(e);
-                    });
+                    n.setState(
+                        {
+                            contentsKey: n.state.contentsKey + 1,
+                        },
+                        function () {
+                            n.focus(e);
+                        },
+                    );
                 }),
                 o(s(n), "setClipboard", function (e) {
                     n._clipboard = e;
@@ -235,7 +247,9 @@ var c = n(611668),
                 (n.getEditorKey = function () {
                     return n._editorKey;
                 }),
-                (n.state = { contentsKey: 0 }),
+                (n.state = {
+                    contentsKey: 0,
+                }),
                 n
             );
         }
@@ -315,7 +329,9 @@ var c = n(611668),
                     };
                 return b.createElement(
                     "div",
-                    { className: h },
+                    {
+                        className: h,
+                    },
                     this._renderPlaceholder(),
                     b.createElement(
                         "div",
@@ -375,7 +391,12 @@ var c = n(611668),
                                 editor: this,
                                 editorState: l,
                             }),
-                            b.createElement(f, i({}, y, { key: "contents" + this.state.contentsKey })),
+                            b.createElement(
+                                f,
+                                i({}, y, {
+                                    key: "contents" + this.state.contentsKey,
+                                }),
+                            ),
                         ),
                     ),
                 );

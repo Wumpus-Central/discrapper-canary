@@ -1,4 +1,7 @@
-n.d(t, { A: () => D }), n(896048);
+n.d(t, {
+    A: () => D,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(417597),
@@ -19,6 +22,7 @@ var r = n(627968),
     j = n(652215),
     v = n(985018),
     y = n(22941);
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -44,6 +48,7 @@ function _(e) {
     }
     return e;
 }
+
 function A(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -62,6 +67,7 @@ function A(e, t) {
         e
     );
 }
+
 function N(e, t) {
     return (0, r.jsx)(
         "span",
@@ -72,6 +78,7 @@ function N(e, t) {
         t,
     );
 }
+
 function P(e) {
     let {
             headerId: t,
@@ -100,8 +107,15 @@ function P(e) {
             selectedChannelIds: S,
             itemHook: N,
         }),
-        T = (0, u.A)(n.id, 1000),
-        R = d.options.map((e) => _({ value: e.id }, e)),
+        T = (0, u.A)(n.id, 1e3),
+        R = d.options.map((e) =>
+            _(
+                {
+                    value: e.id,
+                },
+                e,
+            ),
+        ),
         G = d.options.filter((e) => P.includes(e.id)).map((e) => e.id);
     return (0, r.jsx)("div", {
         className: y.J1,
@@ -128,7 +142,7 @@ function P(e) {
                                               (0, r.jsx)(c.Text, {
                                                   variant: "text-xs/normal",
                                                   className: y.HE,
-                                                  children: "\xB7",
+                                                  children: "\xb7",
                                               }),
                                               (0, r.jsx)(c.Text, {
                                                   variant: "text-sm/medium",
@@ -218,6 +232,7 @@ function P(e) {
         }),
     });
 }
+
 function E(e) {
     let {
             headerId: t,
@@ -271,7 +286,7 @@ function E(e) {
                                               (0, r.jsx)(c.Text, {
                                                   variant: "text-xs/normal",
                                                   className: y.HE,
-                                                  children: "\xB7",
+                                                  children: "\xb7",
                                               }),
                                               (0, r.jsx)(c.Text, {
                                                   variant: "text-sm/medium",
@@ -358,6 +373,7 @@ function E(e) {
         }),
     });
 }
+
 function D(e) {
     let {
             guild: t,

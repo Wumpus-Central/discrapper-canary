@@ -1,4 +1,7 @@
-n.d(t, { A: () => P }), n(896048);
+n.d(t, {
+    A: () => P,
+}),
+    n(896048);
 var a = n(627968),
     l = n(64700),
     i = n(503698),
@@ -57,10 +60,13 @@ let w = [
         cellClassName: T.Hn,
         render(e) {
             let { type: t } = e;
-            return (0, a.jsx)(k, { type: t });
+            return (0, a.jsx)(k, {
+                type: t,
+            });
         },
     },
 ];
+
 function k(e) {
     var t, n;
     let { type: l } = e,
@@ -76,11 +82,14 @@ function k(e) {
                   })
                 : h.h.dispatch({
                       type: "CONTENT_INVENTORY_SET_FILTERS",
-                      filters: { types: new Set([l]) },
+                      filters: {
+                          types: new Set([l]),
+                      },
                   });
         },
     });
 }
+
 function P() {
     var e, t, n;
     let i,
@@ -173,7 +182,9 @@ function P() {
                             text: "Clear Impressions",
                             fullWidth: !0,
                             onClick: function () {
-                                h.h.dispatch({ type: "CONTENT_INVENTORY_DEBUG_CLEAR_IMPRESSIONS" });
+                                h.h.dispatch({
+                                    type: "CONTENT_INVENTORY_DEBUG_CLEAR_IMPRESSIONS",
+                                });
                             },
                         }),
                         (0, a.jsx)(p.Button, {
@@ -181,7 +192,9 @@ function P() {
                             text: "Log Impressions",
                             fullWidth: !0,
                             onClick: function () {
-                                h.h.dispatch({ type: "CONTENT_INVENTORY_DEBUG_LOG_IMPRESSIONS" });
+                                h.h.dispatch({
+                                    type: "CONTENT_INVENTORY_DEBUG_LOG_IMPRESSIONS",
+                                });
                             },
                         }),
                         (0, a.jsx)(p.Button, {
@@ -189,7 +202,9 @@ function P() {
                             text: s ? "Enable Impression Capping" : "Disable Impression Capping",
                             fullWidth: !0,
                             onClick: function () {
-                                h.h.dispatch({ type: "CONTENT_INVENTORY_DEBUG_TOGGLE_IMPRESSION_CAPPING" });
+                                h.h.dispatch({
+                                    type: "CONTENT_INVENTORY_DEBUG_TOGGLE_IMPRESSION_CAPPING",
+                                });
                             },
                         }),
                         (0, a.jsx)(p.Button, {
@@ -197,7 +212,9 @@ function P() {
                             text: c ? "Disable Fast Impression Capping" : "Enable Fast Impression Capping",
                             fullWidth: !0,
                             onClick: function () {
-                                h.h.dispatch({ type: "CONTENT_INVENTORY_DEBUG_TOGGLE_FAST_IMPRESSION_CAPPING" });
+                                h.h.dispatch({
+                                    type: "CONTENT_INVENTORY_DEBUG_TOGGLE_FAST_IMPRESSION_CAPPING",
+                                });
                             },
                         }),
                     ],
@@ -228,7 +245,11 @@ function P() {
                             children: G.map((e) =>
                                 (0, a.jsx)(
                                     "li",
-                                    { children: (0, a.jsx)(R, { application: e }) },
+                                    {
+                                        children: (0, a.jsx)(R, {
+                                            application: e,
+                                        }),
+                                    },
                                     "follow-game-".concat(e.id),
                                 ),
                             ),

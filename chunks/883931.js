@@ -1,4 +1,7 @@
-t.d(n, { A: () => c }), t(896048);
+t.d(n, {
+    A: () => c,
+}),
+    t(896048);
 var l = t(64700),
     i = t(198982),
     s = t(334086),
@@ -7,6 +10,7 @@ let a = {
     onSuccess: () => {},
     permissionOverwrites: [],
 };
+
 function c() {
     let [e, n] = l.useState(!1),
         [t, c] = l.useState(null);

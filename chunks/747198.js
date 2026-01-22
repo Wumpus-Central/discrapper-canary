@@ -1,4 +1,7 @@
-n.d(t, { i: () => m }), n(896048);
+n.d(t, {
+    i: () => m,
+}),
+    n(896048);
 var r = n(64700),
     i = n(635358),
     a = n(311907),
@@ -6,6 +9,7 @@ var r = n(64700),
     o = n(979286),
     l = n(590180),
     c = n(233525);
+
 function u(e, t, n) {
     return (
         t in e
@@ -19,6 +23,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,6 +40,7 @@ function d(e) {
     }
     return e;
 }
+
 function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -47,6 +53,7 @@ function f(e, t) {
     }
     return n;
 }
+
 function p(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -58,8 +65,9 @@ function p(e, t) {
         e
     );
 }
-let _ = 600000,
-    h = 600000;
+let _ = 6e5,
+    h = 6e5;
+
 function m(e, t, n) {
     (0, c.n)("useMaybeFetchCollectiblesCategoriesShared");
     let u = (0, a.bG)([s.A], () => s.A.hasLoadedExperiments),

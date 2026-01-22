@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968),
     i = n(64700),
     a = n(397927),
@@ -8,6 +10,7 @@ var r = n(627968),
     c = n(128450),
     u = n(985018),
     d = n(888920);
+
 function f(e) {
     let { user: t, guild: n, titleIcon: f } = e,
         { analyticsLocations: p } = (0, s.Ay)(),

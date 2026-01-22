@@ -7,6 +7,7 @@ Object.keys(n).forEach(function (e) {
     i[s.call(n[e].labels).sort().join("")] = e;
 });
 var c = {};
+
 function l(e, t) {
     if (!(this instanceof l)) return new l(e, t);
     if ((t && t in o && (t = null), t && !(t in n))) throw Error("Unknown model: " + t);
@@ -26,7 +27,7 @@ function l(e, t) {
         var d = s.call(e, 0, u);
         (this.color = f(d, u)), (this.valpha = "number" == typeof e[u] ? e[u] : 1);
     } else if ("number" == typeof e)
-        (e &= 16777215),
+        (e &= 0xffffff),
             (this.model = "rgb"),
             (this.color = [(e >> 16) & 255, (e >> 8) & 255, 255 & e]),
             (this.valpha = 1);
@@ -49,6 +50,7 @@ function l(e, t) {
         }
     (this.valpha = Math.max(0, Math.min(1, this.valpha))), Object.freeze && Object.freeze(this);
 }
+
 function u(e, t, r) {
     return (
         (e = Array.isArray(e) ? e : [e]).forEach(function (e) {
@@ -66,11 +68,13 @@ function u(e, t, r) {
         }
     );
 }
+
 function b(e) {
     return function (t) {
         return Math.max(0, Math.min(e, t));
     };
 }
+
 function f(e, t) {
     for (var r = 0; r < t; r++) "number" != typeof e[r] && (e[r] = 0);
     return e;
@@ -180,7 +184,7 @@ function f(e, t) {
     },
     isDark: function () {
         var e = this.rgb().color;
-        return (299 * e[0] + 587 * e[1] + 114 * e[2]) / 1000 < 128;
+        return (299 * e[0] + 587 * e[1] + 114 * e[2]) / 1e3 < 128;
     },
     isLight: function () {
         return !this.isDark();

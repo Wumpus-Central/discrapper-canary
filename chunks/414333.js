@@ -11,6 +11,7 @@ n(64700);
 var i = n(439626),
     a = n(834730),
     s = n(364309);
+
 function o(e, t, n) {
     return (
         t in e
@@ -24,6 +25,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -40,6 +42,7 @@ function l(e) {
     }
     return e;
 }
+
 function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -52,6 +55,7 @@ function c(e, t) {
     }
     return n;
 }
+
 function u(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -63,6 +67,7 @@ function u(e, t) {
         e
     );
 }
+
 function d(e, t) {
     if (null == e) return {};
     var n,
@@ -79,6 +84,7 @@ function d(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function f(e, t) {
     if (null == e) return {};
     var n,
@@ -89,9 +95,16 @@ function f(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function p(e) {
-    return (0, r.jsx)(i.fh, u(l({}, e), { className: s.Hn }));
+    return (0, r.jsx)(
+        i.fh,
+        u(l({}, e), {
+            className: s.Hn,
+        }),
+    );
 }
+
 function _(e) {
     let { children: t } = e,
         n = d(e, ["children"]);
@@ -107,15 +120,34 @@ function _(e) {
         }),
     );
 }
+
 function h(e) {
-    return (0, r.jsx)(i.fI, u(l({}, e), { className: s.nM }));
+    return (0, r.jsx)(
+        i.fI,
+        u(l({}, e), {
+            className: s.nM,
+        }),
+    );
 }
+
 function m(e) {
-    return (0, r.jsx)(i.BF, u(l({}, e), { className: s.rf }));
+    return (0, r.jsx)(
+        i.BF,
+        u(l({}, e), {
+            className: s.rf,
+        }),
+    );
 }
+
 function g(e) {
-    return (0, r.jsx)(i.A0, u(l({}, e), { className: s.wx }));
+    return (0, r.jsx)(
+        i.A0,
+        u(l({}, e), {
+            className: s.wx,
+        }),
+    );
 }
+
 function E(e) {
     let { header: t, footer: n, children: a } = e,
         o = d(e, ["header", "footer", "children"]);

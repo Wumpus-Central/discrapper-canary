@@ -28,15 +28,39 @@ let i = (0, r.mj)({
     a = (0, r.mj)({
         name: "2025-12-user-settings-redesign-3",
         kind: "user",
-        defaultConfig: { enabled: !1 },
+        defaultConfig: {
+            enabled: !1,
+        },
         variations: {
-            0: { enabled: !1 },
-            1: { enabled: !0 },
+            0: {
+                enabled: !1,
+            },
+            1: {
+                enabled: !0,
+            },
         },
     }),
-    s = (e) => i.useConfig({ location: e }).showRedesignedNotifications,
-    o = (e) => i.getConfig({ location: e }).showRedesignedNotifications,
-    l = (e) => i.useConfig({ location: e }).showRedesignedVoiceAndVideo,
-    c = (e) => i.getConfig({ location: e }).showRedesignedVoiceAndVideo,
-    u = (e) => a.useConfig({ location: e }).enabled,
-    d = (e) => a.getConfig({ location: e }).enabled;
+    s = (e) =>
+        i.useConfig({
+            location: e,
+        }).showRedesignedNotifications,
+    o = (e) =>
+        i.getConfig({
+            location: e,
+        }).showRedesignedNotifications,
+    l = (e) =>
+        i.useConfig({
+            location: e,
+        }).showRedesignedVoiceAndVideo,
+    c = (e) =>
+        i.getConfig({
+            location: e,
+        }).showRedesignedVoiceAndVideo,
+    u = (e) =>
+        a.useConfig({
+            location: e,
+        }).enabled,
+    d = (e) =>
+        a.getConfig({
+            location: e,
+        }).enabled;

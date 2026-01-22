@@ -1,4 +1,6 @@
-a.d(t, { default: () => n });
+a.d(t, {
+    default: () => n,
+});
 var c = a(627968);
 a(64700);
 var d = a(417597),
@@ -6,6 +8,7 @@ var d = a(417597),
     s = a(287809),
     u = a(954571),
     l = a(652215);
+
 function n(e) {
     let { transitionState: t, onClose: a, userId: n, onCancel: r, confirmBlock: o } = e,
         i = (0, d.bG)([s.default], () => s.default.getUser(n));

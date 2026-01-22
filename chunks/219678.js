@@ -1,8 +1,12 @@
-n.d(t, { A: () => f }), n(896048);
+n.d(t, {
+    A: () => f,
+}),
+    n(896048);
 var r = n(439372),
     i = n(217222),
     a = n(723702),
     s = n(751496);
+
 function o(e, t, n) {
     return (
         t in e
@@ -24,7 +28,9 @@ async function u() {
         (0, a.isWindows)() &&
         (null == (t = window.DiscordNative) || null == (e = t.settings) ? void 0 : e.set) != null
     ) {
-        let { enabled: e } = (0, s.b)({ location: "updateSwitch" });
+        let { enabled: e } = (0, s.b)({
+            location: "updateSwitch",
+        });
         await window.DiscordNative.settings.set("enableH264MFElectron", e), (c = e);
     }
 }
@@ -36,7 +42,9 @@ class d extends r.A {
                 "stores",
                 new Map().set(i.A, () => {
                     if (l) {
-                        let { enabled: e } = (0, s.b)({ location: "experimentStoreUpdate" });
+                        let { enabled: e } = (0, s.b)({
+                            location: "experimentStoreUpdate",
+                        });
                         c !== e && u();
                     }
                 }),

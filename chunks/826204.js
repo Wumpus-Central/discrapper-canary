@@ -1,4 +1,9 @@
-n.d(t, { default: () => y }), n(896048), n(228524), n(638769);
+n.d(t, {
+    default: () => y,
+}),
+    n(896048),
+    n(228524),
+    n(638769);
 var l = n(627968),
     r = n(64700),
     i = n(735438),
@@ -17,6 +22,7 @@ var l = n(627968),
     b = n(539916),
     x = n(985018),
     f = n(186314);
+
 function y(e) {
     let { transitionState: t, onClose: n, onSave: i, onDelete: p, option: j, guild: y, prompt: C, index: P } = e,
         k = (0, o.bG)([m.Ay], () => m.Ay.getDefaultChannel(y.id)),
@@ -84,7 +90,9 @@ function y(e) {
             [z, n],
         );
     return (0, l.jsx)(s.Modal, {
-        title: x.intl.formatToPlainString(x.t.yjS3zs, { index: P + 1 }),
+        title: x.intl.formatToPlainString(x.t.yjS3zs, {
+            index: P + 1,
+        }),
         subtitle: null != C.title && C.title.length > 0 ? C.title : x.intl.string(x.t.vY91C9),
         transitionState: t,
         onClose: n,
@@ -146,7 +154,11 @@ function y(e) {
                                 }),
                             ],
                         }),
-                        null == M.roles ? null : (0, l.jsx)(c.dzK, { error: M.roles }),
+                        null == M.roles
+                            ? null
+                            : (0, l.jsx)(c.dzK, {
+                                  error: M.roles,
+                              }),
                         (0, l.jsx)(O, {
                             guild: y,
                             roleIds: R,
@@ -170,6 +182,7 @@ function y(e) {
         }),
     });
 }
+
 function O(e) {
     let { guild: t, roleIds: n } = e,
         r = (0, o.bG)([p.A], () => p.A.getManyRoles(t.id, n).find(j.J));
@@ -189,7 +202,9 @@ function O(e) {
                       }),
                       (0, l.jsx)(c.Text, {
                           variant: "text-sm/normal",
-                          children: x.intl.format(x.t["5zPJEZ"], { permissions: (0, j.P)(t, r).join(", ") }),
+                          children: x.intl.format(x.t["5zPJEZ"], {
+                              permissions: (0, j.P)(t, r).join(", "),
+                          }),
                       }),
                   ],
               }),

@@ -23,7 +23,8 @@ var r = n(64700),
     y = n(985018);
 let O = 3,
     A = 0,
-    v = 3000;
+    v = 3e3;
+
 function S(e) {
     let {
             memberStoreProps: { groups: t, rows: n, version: A },
@@ -45,7 +46,11 @@ function S(e) {
                 i = T ? R.length : r,
                 a = R.slice(0, i);
             e = P
-                ? [{ type: s.S9.HIDDEN_CONTENT_INVENTORY }]
+                ? [
+                      {
+                          type: s.S9.HIDDEN_CONTENT_INVENTORY,
+                      },
+                  ]
                 : a.map((e) => ({
                       type: s.S9.CONTENT_INVENTORY,
                       entry: e,
@@ -81,7 +86,9 @@ function S(e) {
         F = r.useRef(0),
         B = r.useRef(R),
         H = r.useRef(void 0),
-        Y = r.useRef({ impressionCappedEntryIds: w }),
+        Y = r.useRef({
+            impressionCappedEntryIds: w,
+        }),
         W = r.useCallback(
             (e) => {
                 var t;
@@ -96,7 +103,9 @@ function S(e) {
             B.current = R;
         }, [R]),
         r.useEffect(() => {
-            Y.current = { impressionCappedEntryIds: w };
+            Y.current = {
+                impressionCappedEntryIds: w,
+            };
         }, [w]),
         r.useEffect(
             () => (

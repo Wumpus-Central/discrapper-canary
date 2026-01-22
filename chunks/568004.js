@@ -1,4 +1,8 @@
-n.d(t, { A: () => q }), n(896048), n(321073);
+n.d(t, {
+    A: () => q,
+}),
+    n(896048),
+    n(321073);
 var r,
     i = n(735438),
     a = n.n(i),
@@ -17,6 +21,7 @@ var r,
     E = n(927813),
     b = n(674378),
     y = n(144914);
+
 function O(e, t, n) {
     return (
         t in e
@@ -40,12 +45,15 @@ let A = new Set(),
     R = 6 * E.A.Millis.HOUR,
     w = 10 * E.A.Millis.MINUTE,
     P = new o.Ep();
+
 function D(e) {
     P.start(e + Math.random() * N, c.r);
 }
+
 function x() {
     return !p.l_.getSetting() && (D(R), L());
 }
+
 function L() {
     if (!(0, y.S)() || p.l_.getSetting()) return !1;
     let e = h.A.entitledBranchIds,
@@ -54,6 +62,7 @@ function L() {
     if (0 === t.length) return !1;
     l.h.wait(() => c.r(t));
 }
+
 function j() {
     if (!(0, y.S)()) return !1;
     for (let e of T) {
@@ -61,6 +70,7 @@ function j() {
         null != f.A.getApplication(t) && (T.delete(e), M(t, n));
     }
 }
+
 function M(e, t) {
     if (null != v[t] && g.A.shouldBeInstalled(e, t)) {
         let n = v[t],
@@ -75,10 +85,12 @@ function M(e, t) {
             });
     }
 }
+
 function k(e) {
     let { branchId: t } = e;
     A.add(t);
 }
+
 function U(e) {
     let { applicationId: t, branchId: n, locale: r, build: i } = e;
     A.delete(n);
@@ -97,22 +109,27 @@ function U(e) {
         }),
         M(t, n);
 }
+
 function G(e) {
     let { branchId: t } = e;
     A.delete(t), S.add(t);
 }
+
 function V(e) {
     let { buildId: t } = e;
     I.hasOwnProperty(t) || (I[t] = null);
 }
+
 function F(e) {
     let { buildId: t, sizeKB: n } = e;
     I[t] = n;
 }
+
 function B(e) {
     let { buildId: t } = e;
     null == I[t] && delete I[t];
 }
+
 function H(e) {
     let { branches: t } = e,
         n = {};
@@ -130,12 +147,15 @@ function H(e) {
     }
     D(R);
 }
+
 function Y() {
     D(w);
 }
+
 function W() {
     P.stop();
 }
+
 function K(e) {
     let { entitlements: t } = e;
     if (!(0, y.S)()) return !1;

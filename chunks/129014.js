@@ -1,4 +1,9 @@
-n.d(t, { default: () => g }), n(65821), n(747238), n(457529);
+n.d(t, {
+    default: () => g,
+}),
+    n(65821),
+    n(747238),
+    n(457529);
 var r = n(143236),
     i = n(481613),
     a = n.n(i),
@@ -8,6 +13,7 @@ var r = n(143236),
     c = n(636401),
     u = n(652215);
 let d = u.xEi + u.sJq - 1;
+
 function f(e, t) {
     if (null == e || null == t) throw Error("cmd and name required");
     return "".concat(e, ":").concat(t);
@@ -31,7 +37,9 @@ class m extends r.EventEmitter {
             try {
                 h = new WebSocket("ws://127.0.0.1:".concat(this.port, "/?v=").concat(u.dL4));
             } catch (e) {
-                this.disconnect({ code: u.YI$.CLOSE_ABNORMAL });
+                this.disconnect({
+                    code: u.YI$.CLOSE_ABNORMAL,
+                });
                 return;
             }
             null != h &&
@@ -48,13 +56,29 @@ class m extends r.EventEmitter {
                     if (n === u.e$_.DISPATCH) {
                         if (r === u.ZE4.READY) return void this.emit("connected");
                         if (r === u.ZE4.ERROR) {
-                            this.emit("error", new c.A({ errorCode: a.code }, a.message)), this.disconnect();
+                            this.emit(
+                                "error",
+                                new c.A(
+                                    {
+                                        errorCode: a.code,
+                                    },
+                                    a.message,
+                                ),
+                            ),
+                                this.disconnect();
                             return;
                         }
                         return void this.emit(f(n, r), a);
                     }
                     let s = null;
-                    r === u.ZE4.ERROR && ((s = new c.A({ errorCode: a.code }, a.message)), (a = null)),
+                    r === u.ZE4.ERROR &&
+                        ((s = new c.A(
+                            {
+                                errorCode: a.code,
+                            },
+                            a.message,
+                        )),
+                        (a = null)),
                         this.emit(f(n, i), s, a);
                 }),
                 (h.onclose = h.onerror = (e) => this.disconnect(e)));
@@ -109,7 +133,13 @@ class m extends r.EventEmitter {
             let {
                 body: { evt: t, data: n },
             } = e;
-            if (t === u.ZE4.ERROR) throw new c.A({ errorCode: n.code }, n.message);
+            if (t === u.ZE4.ERROR)
+                throw new c.A(
+                    {
+                        errorCode: n.code,
+                    },
+                    n.message,
+                );
             return n;
         });
     }

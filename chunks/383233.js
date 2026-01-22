@@ -13,6 +13,7 @@ var r = n(485845),
     o = n(505527),
     l = n(815807),
     c = n(652215);
+
 function u(e, t, n) {
     return (
         t in e
@@ -26,6 +27,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,6 +44,7 @@ function d(e) {
     }
     return e;
 }
+
 function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -54,6 +57,7 @@ function f(e, t) {
     }
     return n;
 }
+
 function p(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -140,7 +144,9 @@ class m extends _ {
                         a = p(d({}, a), {
                             me_burst: !!t || a.me_burst,
                             burst_count: e,
-                            count_details: p(d({}, a.count_details), { burst: e }),
+                            count_details: p(d({}, a.count_details), {
+                                burst: e,
+                            }),
                             burst_colors: r,
                         });
                     } else if (r === o.v.VOTE) {
@@ -148,7 +154,9 @@ class m extends _ {
                         let e = null != (c = null == (u = a.count_details) ? void 0 : u.vote) ? c : 0,
                             n = t && a.me_vote ? e : e + 1;
                         a = p(d({}, a), {
-                            count_details: p(d({}, a.count_details), { vote: n }),
+                            count_details: p(d({}, a.count_details), {
+                                vote: n,
+                            }),
                             me_vote: !!t || a.me_vote,
                         });
                     } else {
@@ -156,7 +164,9 @@ class m extends _ {
                         let e = t && a.me ? a.count : a.count + 1;
                         a = p(d({}, a), {
                             count: e,
-                            count_details: p(d({}, a.count_details), { normal: e }),
+                            count_details: p(d({}, a.count_details), {
+                                normal: e,
+                            }),
                             me: !!t || a.me,
                         });
                     }
@@ -225,14 +235,18 @@ class m extends _ {
                         t = p(d({}, t), {
                             burst_count: e,
                             me_burst: !a && t.me_burst,
-                            count_details: p(d({}, t.count_details), { burst: e }),
+                            count_details: p(d({}, t.count_details), {
+                                burst: e,
+                            }),
                         });
                     } else if (s === o.v.VOTE) {
                         var r, i;
                         let e = null != (r = null == (i = t.count_details) ? void 0 : i.vote) ? r : 0,
                             n = a && !t.me_vote ? e : e - 1;
                         t = p(d({}, t), {
-                            count_details: p(d({}, t.count_details), { vote: n }),
+                            count_details: p(d({}, t.count_details), {
+                                vote: n,
+                            }),
                             me_vote: !a && t.me_vote,
                         });
                     } else {
@@ -240,7 +254,9 @@ class m extends _ {
                         t = p(d({}, t), {
                             count: e,
                             me: !a && t.me,
-                            count_details: p(d({}, t.count_details), { normal: e }),
+                            count_details: p(d({}, t.count_details), {
+                                normal: e,
+                            }),
                         });
                     }
                     c = n;
@@ -387,6 +403,7 @@ class m extends _ {
             (this.changelogId = null != (r = e.changelog_id) ? r : e.changelogId || null);
     }
 }
+
 function g(e) {
     return (0, i.Lt)(e.flags, c.pr7.IS_COMPONENTS_V2);
 }

@@ -1,9 +1,12 @@
-n.d(t, { A: () => p }), n(896048);
+n.d(t, {
+    A: () => p,
+}),
+    n(896048);
 var l = n(627968),
     r = n(64700),
     a = n(503698),
     i = n.n(a),
-    s = n(432022),
+    s = n(108531),
     c = n(942381),
     o = n(397927),
     d = n(435183),
@@ -19,7 +22,9 @@ let p = r.memo(function (e) {
         p = (0, h.ST)(),
         { guidelinesOpen: j } = (0, h.kU)((e) => {
             let { guidelinesOpen: t } = e;
-            return { guidelinesOpen: t };
+            return {
+                guidelinesOpen: t,
+            };
         }, c.x),
         v = (0, m.S4)(t),
         [y, A] = r.useState(!1),
@@ -38,7 +43,9 @@ let p = r.memo(function (e) {
         S = (0, o.zhh)({
             opacity: +!!j,
             maxHeight: 500 * !!j,
-            config: { duration: 300 },
+            config: {
+                duration: 300,
+            },
             onRest: () => N(!j),
         });
     return null != t.topic && t.topic.length > 0
@@ -96,7 +103,9 @@ let p = r.memo(function (e) {
                                   selectable: !0,
                                   variant: "text-sm/normal",
                                   color: "text-default",
-                                  style: { maxHeight: 220 },
+                                  style: {
+                                      maxHeight: 220,
+                                  },
                                   className: i()(x.I4, b.PT),
                                   children: (0, l.jsx)("div", {
                                       ref: C,
@@ -111,7 +120,9 @@ let p = r.memo(function (e) {
                                   (0, l.jsxs)("div", {
                                       className: x.jP,
                                       children: [
-                                          (0, l.jsx)("div", { className: x.D7 }),
+                                          (0, l.jsx)("div", {
+                                              className: x.D7,
+                                          }),
                                           (0, l.jsx)("div", {
                                               className: x.kx,
                                               children: (0, l.jsx)(o.DUT, {
@@ -163,7 +174,10 @@ let p = r.memo(function (e) {
                                                                       }
                                                                       return e;
                                                                   })({}, n)),
-                                                                  (a = a = { channel: t }),
+                                                                  (a = a =
+                                                                      {
+                                                                          channel: t,
+                                                                      }),
                                                                   Object.getOwnPropertyDescriptors
                                                                       ? Object.defineProperties(
                                                                             r,

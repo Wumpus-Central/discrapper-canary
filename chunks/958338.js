@@ -12,6 +12,7 @@ var r = n(64700),
     s = n(958805),
     o = n(61881),
     c = n(911498);
+
 function u(e) {
     let { bump: t, bumpMultiple: n, gameIds: s } = (0, c.s)();
     !(function (e) {
@@ -52,13 +53,20 @@ function u(e) {
         });
         t.length > 0 && n(t, e);
     }, [o, e, n, d]);
-    let f = r.useMemo(() => o.map((e) => ({ applicationId: e })), [o]);
+    let f = r.useMemo(
+        () =>
+            o.map((e) => ({
+                applicationId: e,
+            })),
+        [o],
+    );
     return {
         applicationIds: o,
         games: f,
         onAddGame: u,
     };
 }
+
 function d(e, t) {
     let [n, i, a, u] = (0, l.yK)([o.A], () => [
             o.A.suggestedFetchAttempted,

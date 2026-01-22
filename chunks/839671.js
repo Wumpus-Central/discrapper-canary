@@ -1,4 +1,8 @@
-n.d(t, { A: () => b }), n(65821), n(638769);
+n.d(t, {
+    A: () => b,
+}),
+    n(65821),
+    n(638769);
 var l = n(627968);
 n(64700);
 var r = n(503698),
@@ -11,6 +15,7 @@ var r = n(503698),
     u = n(851822),
     m = n(307291);
 let f = [a.w.OFFICIAL, a.w.TWITTER, a.w.YOUTUBE];
+
 function x(e) {
     let { website: t, trackClick: n } = e,
         {
@@ -21,20 +26,26 @@ function x(e) {
             switch (e.category) {
                 case a.w.OFFICIAL:
                     return {
-                        icon: (0, l.jsx)(o.L_e, { colorClass: m.wP }),
+                        icon: (0, l.jsx)(o.L_e, {
+                            colorClass: m.wP,
+                        }),
                         action: c.Ws.WebsiteLink,
                         title: d.intl.string(d.t.fOUKvg),
                     };
                 case a.w.TWITTER:
                     return {
-                        icon: (0, l.jsx)(o.p3p, { colorClass: m.wP }),
+                        icon: (0, l.jsx)(o.p3p, {
+                            colorClass: m.wP,
+                        }),
                         action: c.Ws.XLink,
                         title: d.intl.string(d.t.INic4y),
                     };
                 case a.w.YOUTUBE:
                     return {
                         action: c.Ws.YouTubeLink,
-                        icon: (0, l.jsx)(o.CiD, { colorClass: m.wP }),
+                        icon: (0, l.jsx)(o.CiD, {
+                            colorClass: m.wP,
+                        }),
                         title: d.intl.string(d.t.lNmxbE),
                     };
                 default:

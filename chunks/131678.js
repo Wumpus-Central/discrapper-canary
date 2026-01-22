@@ -1,4 +1,6 @@
-n.d(t, { j: () => f });
+n.d(t, {
+    j: () => f,
+});
 var r = n(627968);
 n(64700);
 var i = n(554146),
@@ -13,7 +15,9 @@ let d = "PS two way upsell",
         let e = s.A.getArticleURL(l.MVz.PS_CONNECTION);
         return (0, r.jsx)(o.Z, {
             title: c.intl.string(c.t.v20wwm),
-            body: c.intl.format(c.t.lTZBit, { help_article: e }),
+            body: c.intl.format(c.t.lTZBit, {
+                help_article: e,
+            }),
             img: (0, r.jsx)("img", {
                 src: u,
                 width: "82",

@@ -1,4 +1,8 @@
-n.d(t, { A: () => D }), n(747238), n(896048);
+n.d(t, {
+    A: () => D,
+}),
+    n(747238),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -15,6 +19,7 @@ var r = n(627968),
     m = n(985018),
     g = n(772543),
     E = n(829681);
+
 function b(e, t, n) {
     return (
         t in e
@@ -28,6 +33,7 @@ function b(e, t, n) {
         e
     );
 }
+
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -44,6 +50,7 @@ function y(e) {
     }
     return e;
 }
+
 function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -56,6 +63,7 @@ function O(e, t) {
     }
     return n;
 }
+
 function A(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -67,6 +75,7 @@ function A(e, t) {
         e
     );
 }
+
 function v(e) {
     var t;
     let n = "utf-8",
@@ -78,13 +87,14 @@ function v(e) {
         throw t;
     }
 }
+
 function S(e, t) {
     let [n, r] = i.useState(!1),
         [a, s] = i.useState(null),
         [o, l] = i.useState(1);
     return (
         i.useEffect(() => {
-            let n = 50000;
+            let n = 5e4;
             !(async function () {
                 try {
                     var i, a;
@@ -111,6 +121,7 @@ function S(e, t) {
         }
     );
 }
+
 function I(e) {
     let { text: t, language: i } = e,
         a = () =>
@@ -131,16 +142,21 @@ function I(e) {
                 : (0, r.jsx)("pre", {
                       children: (0, r.jsx)("code", {
                           className: s()(E.kw, g.Xb, "hljs", n.language),
-                          dangerouslySetInnerHTML: { __html: n.value },
+                          dangerouslySetInnerHTML: {
+                              __html: n.value,
+                          },
                       }),
                   });
         },
         renderFallback: () => a(),
     });
 }
+
 function T(e) {
     let { expanded: t, setExpanded: n, isWholeFile: i, numLines: a } = e,
-        s = m.intl.formatToPlainString(i ? m.t.Go5Vvs : m.t.yJcYan, { lines: a });
+        s = m.intl.formatToPlainString(i ? m.t.Go5Vvs : m.t.yJcYan, {
+            lines: a,
+        });
     return (0, r.jsx)(c.m, {
         asContainer: !0,
         text: "".concat(t ? m.intl.string(m.t.iTcuma) : m.intl.string(m.t.dcl9MQ), " (").concat(s, ")"),
@@ -150,12 +166,15 @@ function T(e) {
                 n(!t);
             },
             children: [
-                (0, r.jsx)(_.A, { direction: t ? _.A.Directions.UP : _.A.Directions.DOWN }),
+                (0, r.jsx)(_.A, {
+                    direction: t ? _.A.Directions.UP : _.A.Directions.DOWN,
+                }),
                 t ? m.intl.string(m.t.iTcuma) : m.intl.string(m.t.dcl9MQ),
             ],
         }),
     });
 }
+
 function C(e) {
     let { url: t, fileName: n, fileSize: i } = e,
         a = "".concat(n, " (").concat((0, h.up)(i), ")");
@@ -192,6 +211,7 @@ function C(e) {
         ],
     });
 }
+
 function N(e) {
     let { language: t, setLanguage: n, align: a } = e,
         s = i.useRef(null);
@@ -216,7 +236,12 @@ function N(e) {
                             id: e,
                         })),
                         value: t,
-                        children: [(0, r.jsx)(l.a3, { placeholder: m.intl.string(m.t.GofftW) }), (0, r.jsx)(l.X2, {})],
+                        children: [
+                            (0, r.jsx)(l.a3, {
+                                placeholder: m.intl.string(m.t.GofftW),
+                            }),
+                            (0, r.jsx)(l.X2, {}),
+                        ],
                     }),
                 }),
             });
@@ -236,6 +261,7 @@ function N(e) {
             }),
     });
 }
+
 function R(e) {
     return (0, r.jsx)(c.m, {
         asContainer: !0,
@@ -252,6 +278,7 @@ function R(e) {
         }),
     });
 }
+
 function w(e) {
     var t;
     let {
@@ -274,8 +301,16 @@ function w(e) {
     A && l && y > O ? (v = "\n...") : A || (v = "..."),
         "" !== v &&
             (A
-                ? (v += " " + m.intl.formatToPlainString(m.t.DQnFp2, { lines: y - O }))
-                : (v += " " + m.intl.formatToPlainString(m.t["1+gGcK"], { formattedBytes: (0, h.up)(_) })));
+                ? (v +=
+                      " " +
+                      m.intl.formatToPlainString(m.t.DQnFp2, {
+                          lines: y - O,
+                      }))
+                : (v +=
+                      " " +
+                      m.intl.formatToPlainString(m.t["1+gGcK"], {
+                          formattedBytes: (0, h.up)(_),
+                      })));
     let S = (null == b ? void 0 : b.slice(0, O).join("\n")) + v,
         w = (0, f.sJ)(S),
         P = l || O < y;
@@ -283,10 +318,14 @@ function w(e) {
         className: s()(E, g.kL),
         children: [
             (0, r.jsx)("div", {
-                className: s()(g.FS, { [g.sz]: l }),
+                className: s()(g.FS, {
+                    [g.sz]: l,
+                }),
                 children:
                     null == o
-                        ? (0, r.jsx)(u.y$y, { className: g.u1 })
+                        ? (0, r.jsx)(u.y$y, {
+                              className: g.u1,
+                          })
                         : (0, r.jsx)(I, {
                               text: w,
                               language: d,
@@ -317,7 +356,9 @@ function w(e) {
                               ],
                           })
                         : null,
-                    (0, r.jsx)("div", { className: g.Kb }),
+                    (0, r.jsx)("div", {
+                        className: g.Kb,
+                    }),
                     (0, r.jsx)(C, {
                         url: n,
                         fileName: i,
@@ -333,6 +374,7 @@ function w(e) {
         ],
     });
 }
+
 function P(e) {
     let {
             url: t,
@@ -347,7 +389,12 @@ function P(e) {
         [f, p] = i.useState(o),
         _ = null != l ? l : "";
     return (
-        0 !== c && (_ += "... ".concat(m.intl.formatToPlainString(m.t["1+gGcK"], { formattedBytes: (0, h.up)(c) }))),
+        0 !== c &&
+            (_ += "... ".concat(
+                m.intl.formatToPlainString(m.t["1+gGcK"], {
+                    formattedBytes: (0, h.up)(c),
+                }),
+            )),
         (0, r.jsx)(u.dWK, {
             transitionState: s,
             "aria-label": m.intl.string(m.t["qxQjc+"]),
@@ -360,7 +407,9 @@ function P(e) {
                         className: g.ot,
                         children:
                             null == l
-                                ? (0, r.jsx)(u.y$y, { className: g.u1 })
+                                ? (0, r.jsx)(u.y$y, {
+                                      className: g.u1,
+                                  })
                                 : (0, r.jsx)(I, {
                                       text: _,
                                       language: f,
@@ -371,7 +420,9 @@ function P(e) {
                         className: g.Hx,
                         variant: "text-sm/normal",
                         children: [
-                            (0, r.jsx)("div", { className: g.Kb }),
+                            (0, r.jsx)("div", {
+                                className: g.Kb,
+                            }),
                             (0, r.jsx)(C, {
                                 url: t,
                                 fileName: n,

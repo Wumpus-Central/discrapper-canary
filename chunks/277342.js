@@ -1,4 +1,6 @@
-r.d(t, { q: () => s });
+r.d(t, {
+    q: () => s,
+});
 var n = r(64700),
     o = r(523875),
     u = r(270737),
@@ -6,6 +8,7 @@ var n = r(64700),
     l = r(267102),
     a = r(494783),
     c = r(652215);
+
 function s(e) {
     let t = (0, l.Us)(),
         { activeVoice: r } = (0, a.f)(),
@@ -43,7 +46,10 @@ function s(e) {
                 }
                 return e;
             })({}, f)),
-            (t = t = { Component: y }),
+            (t = t =
+                {
+                    Component: y,
+                }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
                 : (function (e, t) {

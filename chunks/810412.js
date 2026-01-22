@@ -19,6 +19,7 @@ var r = n(64700),
     u = (function (e) {
         return (e.OOP = "oop"), (e.OOP_GAME = "oop game"), (e.LEGACY = "legacy"), (e.LEGACY_GAME = "legacy game"), e;
     })({});
+
 function d(e) {
     switch (e) {
         case "oop":
@@ -56,6 +57,7 @@ async function f(e, t, r) {
                     : null,
         });
 }
+
 function p(e, t) {
     let [n, i] = r.useState(e()),
         a = r.useRef(e);
@@ -75,6 +77,7 @@ function p(e, t) {
         n
     );
 }
+
 function _(e, t) {
     var n, r, i;
     let { locked: a, shownUserIds: l, liveUserIds: u, contentInventoryIds: d } = t;
@@ -90,6 +93,7 @@ function _(e, t) {
             media_session_id: s.A.getMediaSessionId(),
         });
 }
+
 function h(e, t) {
     let { pinned: n, opacity: r } = t;
     o.default.track(c.HAw.WIDGET_SETTING_UPDATED, {
@@ -138,6 +142,7 @@ var m = (function (e) {
             e
         );
     })({});
+
 function E(e, t) {
     let { type: n, value: r, userId: i, secondaryValue: a } = t;
     o.default.track(c.HAw.WIDGET_INTERACTED, {

@@ -23,6 +23,7 @@ var u,
     T = n(967198),
     C = n(652215),
     N = n(746080);
+
 function R(e, t, n) {
     return (
         t in e
@@ -36,6 +37,7 @@ function R(e, t, n) {
         e
     );
 }
+
 function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -52,6 +54,7 @@ function w(e) {
     }
     return e;
 }
+
 function P(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -64,6 +67,7 @@ function P(e, t) {
     }
     return n;
 }
+
 function D(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -76,15 +80,17 @@ function D(e, t) {
     );
 }
 let x = "SelectedChannelStore",
-    L = 300000,
-    j = 60000,
+    L = 3e5,
+    j = 6e4,
     M = {},
     k = {},
     U = {},
     G = new Set();
+
 function V(e) {
     return String(e);
 }
+
 function F() {
     __OVERLAY__ ||
         h.w.set(x, {
@@ -106,12 +112,14 @@ function F() {
                 .value(),
         });
 }
+
 function B(e) {
     if (null != e) {
         let t = A.Ay.getDefaultChannel(e);
         if (null != t) return t.id;
     }
 }
+
 function H(e, t) {
     if (null == e || null == t || U[e] === t) return !1;
     let n = O.A.getChannel(t),
@@ -119,11 +127,13 @@ function H(e, t) {
         i = (null == n ? void 0 : n.getGuildId()) === e;
     return !!r && !!i && ((U[e] = t), !0);
 }
+
 function Y(e) {
     let t = O.A.getMutableBasicGuildChannelsForGuild(e),
         n = f().find(t, (e) => e.type === C.rbe.GUILD_VOICE);
     return null == n ? void 0 : n.id;
 }
+
 function W() {
     let e = !1,
         t = v.A.getGuildsArray();
@@ -143,6 +153,7 @@ function W() {
         e
     );
 }
+
 function K(e) {
     if (((r = e.sessionId), null != o)) {
         let e = O.A.getChannel(o);
@@ -150,6 +161,7 @@ function K(e) {
     }
     W() && F();
 }
+
 function z(e) {
     (r = e.sessionId),
         (o = e.selectedVoiceChannelId),
@@ -160,9 +172,11 @@ function z(e) {
         H(e.selectedGuildId, a),
         W();
 }
+
 function q() {
     r = null;
 }
+
 function X(e) {
     let { guildId: t, channelId: n } = e;
     if (void 0 === t) return !1;
@@ -173,6 +187,7 @@ function X(e) {
         M[V(t)] !== n && ((k[V(t)] = M[V(t)]), (M[V(t)] = a)),
         F();
 }
+
 function Z(e) {
     let { channelId: t } = e;
     if (null == t) {
@@ -182,6 +197,7 @@ function Z(e) {
     }
     (o = t), F();
 }
+
 function Q(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
     if ((G.delete(e), null == t)) {
@@ -198,10 +214,12 @@ function Q(e, t, n) {
         null != i && U[i] === e && (delete U[i], (a = !0)),
         a && F();
 }
+
 function $(e) {
     let { type: t, channel: n } = e;
     Q(n.id, n.guild_id, n.parent_id, "THREAD_DELETE" === t);
 }
+
 function J(e) {
     let { channels: t } = e;
     for (let e of t)
@@ -210,6 +228,7 @@ function J(e) {
             Q(e.id, e.guild_id, e.parent_id, t);
         }
 }
+
 function ee(e) {
     let { guild: t } = e;
     if (null == M[t.id]) {
@@ -217,6 +236,7 @@ function ee(e) {
         (M[t.id] = e), H(t.id, e), F();
     }
 }
+
 function et(e) {
     let {
         guild: { id: t, unavailable: n },
@@ -224,6 +244,7 @@ function et(e) {
     if ((o === M[t] && (o = null), n)) return !1;
     delete U[t], delete M[t], F();
 }
+
 function en(e) {
     let { voiceStates: t } = e;
     return t.reduce((e, t) => {
@@ -248,6 +269,7 @@ function en(e) {
         return !0;
     }, !1);
 }
+
 function er(e) {
     let { channelId: t, guildId: n } = e;
     (null == s || t !== s.channelId) &&
@@ -257,9 +279,11 @@ function er(e) {
         }),
         F());
 }
+
 function ei() {
     (M = {}), (a = null), (i = void 0), (U = {}), (s = {}), (o = null), h.w.remove(x);
 }
+
 function ea(e) {
     let { channel: t } = e;
     switch (t.type) {
@@ -290,7 +314,10 @@ class es extends (u = _.Ay.Store) {
                 (s = n.lastChannelFollowingDestination),
                 (l = n.lastConnectedTime),
                 (U = null != (t = n.mostRecentSelectedTextChannelIds) ? t : {}),
-                null != n.selectedChannelIds && (M = D(w({}, n.selectedChannelIds), { null: null }));
+                null != n.selectedChannelIds &&
+                    (M = D(w({}, n.selectedChannelIds), {
+                        null: null,
+                    }));
         }
         this.mustEmitChanges((e) => "CONNECTION_OPEN" !== e.type && "VOICE_STATE_UPDATES" !== e.type),
             this.waitFor(y.default, O.A, A.Ay, v.A, S.A, I.A, T.A);

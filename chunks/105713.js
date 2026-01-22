@@ -24,6 +24,7 @@ var r = n(627968),
     b = n(985018),
     y = n(331129),
     O = n(125049);
+
 function A(e, t, n) {
     return (
         t in e
@@ -37,6 +38,7 @@ function A(e, t, n) {
         e
     );
 }
+
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -53,6 +55,7 @@ function v(e) {
     }
     return e;
 }
+
 function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -65,6 +68,7 @@ function S(e, t) {
     }
     return n;
 }
+
 function I(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -76,6 +80,7 @@ function I(e, t) {
         e
     );
 }
+
 function T() {
     let { volume: e, onVolumeChange: t } = (0, m.A)();
     return (0, r.jsxs)(u.DUT, {
@@ -95,9 +100,12 @@ function T() {
         ],
     });
 }
+
 function C(e) {
     let { sound: t, forceShowBetaLabel: n = !1 } = e,
-        i = (0, h.tj)({ location: "SoundmojiBanner" }),
+        i = (0, h.tj)({
+            location: "SoundmojiBanner",
+        }),
         a = (0, o.bG)([f.default], () => _.Ay.canUseSoundboardEverywhere(f.default.getCurrentUser())),
         s = (0, o.bG)([d.A], () => d.A.getGuildId());
     return n || a || t.guildId === E.mV || t.guildId === s || !i
@@ -109,7 +117,9 @@ function C(e) {
         : (0, r.jsxs)("div", {
               className: y.Mq,
               children: [
-                  (0, r.jsx)("div", { className: y.Nh }),
+                  (0, r.jsx)("div", {
+                      className: y.Nh,
+                  }),
                   (0, r.jsxs)("div", {
                       className: y.Pc,
                       children: [
@@ -134,12 +144,15 @@ function C(e) {
               ],
           });
 }
+
 function N(e) {
     let { sound: t } = e;
     return (0, r.jsxs)("div", {
         className: s()(y.op, y.kX),
         children: [
-            (0, r.jsx)(C, { sound: t }),
+            (0, r.jsx)(C, {
+                sound: t,
+            }),
             (0, r.jsxs)("div", {
                 className: y.Br,
                 children: [
@@ -169,6 +182,7 @@ function N(e) {
         ],
     });
 }
+
 function R(e) {
     let { renderPopout: t, position: n, tooltipText: a, children: s, setTooltipShowing: o, clickableClassName: l } = e,
         [d, f] = i.useState(!1),
@@ -194,7 +208,11 @@ function R(e) {
             (0, r.jsx)(u.DUT, {
                 onClick: (e) => e.stopPropagation(),
                 onMouseOver: (e) => e.stopPropagation(),
-                children: t(I(v({}, e), { refreshPosition: m })),
+                children: t(
+                    I(v({}, e), {
+                        refreshPosition: m,
+                    }),
+                ),
             }),
         align: "center",
         nudgeAlignIntoViewport: !0,
@@ -228,6 +246,7 @@ function R(e) {
             }),
     });
 }
+
 function w(e) {
     let { sound: t, channel: n, setTooltipShowing: i } = e;
     return (0, r.jsxs)(r.Fragment, {

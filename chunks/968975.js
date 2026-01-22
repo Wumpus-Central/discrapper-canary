@@ -1,4 +1,8 @@
-n.d(t, { A: () => b }), n(896048), n(321073);
+n.d(t, {
+    A: () => b,
+}),
+    n(896048),
+    n(321073);
 var r = n(627968),
     i = n(64700),
     a = n(397927),
@@ -15,6 +19,7 @@ var r = n(627968),
     m = n(985018),
     g = n(250783);
 let E = 4;
+
 function b(e) {
     let { wishlistItems: t = [], profileOwner: n, onClick: b, wishlistId: y, cardSize: O, title: A } = e,
         { analyticsLocations: v } = (0, s.Ay)(),

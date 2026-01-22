@@ -1,4 +1,9 @@
-n.d(t, { A: () => j }), n(747238), n(896048), n(65821);
+n.d(t, {
+    A: () => j,
+}),
+    n(747238),
+    n(896048),
+    n(65821);
 var r = n(627968),
     i = n(64700),
     s = n(492462),
@@ -25,7 +30,14 @@ let b = (e) => {
             children: [
                 (0, r.jsxs)(o.BJc, {
                     gap: 8,
-                    children: [(0, r.jsx)(u.hE, { children: t }), (0, r.jsx)(u.tK, { children: n })],
+                    children: [
+                        (0, r.jsx)(u.hE, {
+                            children: t,
+                        }),
+                        (0, r.jsx)(u.tK, {
+                            children: n,
+                        }),
+                    ],
                 }),
                 (0, r.jsx)(o.Button, {
                     onClick: s,
@@ -36,6 +48,7 @@ let b = (e) => {
         }),
     });
 };
+
 function v(e) {
     let { match: t, location: l } = e,
         o = (0, s.parse)(l.search).token,
@@ -43,7 +56,9 @@ function v(e) {
         j = i.useRef(!1),
         y = i.useCallback(async (e) => {
             try {
-                p.default.track(x.HAw.ONE_TIME_LOGIN_ATTEMPTED, { source: "web_page" }),
+                p.default.track(x.HAw.ONE_TIME_LOGIN_ATTEMPTED, {
+                    source: "web_page",
+                }),
                     await c.A.oneTimeLogin(e),
                     v("login_success"),
                     p.default.track(x.HAw.LOGIN_SUCCESSFUL, {
@@ -151,7 +166,10 @@ function v(e) {
             subtitle: E.intl.string(E.t["5/lR0g"]),
             buttonText: E.intl.string(E.t["2ixEBi"]),
             buttonOnClick: () => {
-                p.default.track(x.HAw.ONE_TIME_LOGIN_CONTINUE_IN_BROWSER_CLICKED, { previous_status: d }), y(o);
+                p.default.track(x.HAw.ONE_TIME_LOGIN_CONTINUE_IN_BROWSER_CLICKED, {
+                    previous_status: d,
+                }),
+                    y(o);
             },
         });
     if ("app_launch_not_supported" === d)
@@ -168,12 +186,16 @@ function v(e) {
             subtitle: E.intl.string(E.t["S+YjYJ"]),
             buttonText: E.intl.string(E.t.j3cG2p),
             buttonOnClick: () => {
-                p.default.track(x.HAw.ONE_TIME_LOGIN_BACK_TO_LOGIN_CLICKED, { error_reason: e }),
+                p.default.track(x.HAw.ONE_TIME_LOGIN_BACK_TO_LOGIN_CLICKED, {
+                    error_reason: e,
+                }),
                     (0, h.pX)(x.BVt.LOGIN);
             },
         });
     }
-    return (0, r.jsx)(u.Ay, { children: (0, r.jsx)(u.CK, {}) });
+    return (0, r.jsx)(u.Ay, {
+        children: (0, r.jsx)(u.CK, {}),
+    });
 }
 let j = function (e) {
     let { enabled: t } = (0, d.lq)("OneTimeLoginCardWrapper");
@@ -206,5 +228,7 @@ let j = function (e) {
                   return e;
               })({}, e),
           )
-        : (0, r.jsx)(l.rd, { to: x.BVt.LOGIN });
+        : (0, r.jsx)(l.rd, {
+              to: x.BVt.LOGIN,
+          });
 };

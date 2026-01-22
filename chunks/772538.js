@@ -1,4 +1,7 @@
-n.d(t, { A: () => E }), n(896048);
+n.d(t, {
+    A: () => E,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(954571),
@@ -14,6 +17,7 @@ var r = n(627968),
 n(820575);
 var h = n(652215),
     m = n(985018);
+
 function g(e) {
     let { ingress: t, guildId: n } = e,
         c = l.pE.useSetting().includes(n),
@@ -44,6 +48,7 @@ function g(e) {
               }),
           });
 }
+
 function E(e) {
     let { ingress: t = p.bf.USER_SETTINGS_PRIVACY_SAFETY, guildId: n } = e,
         i = (0, c.Tx)();

@@ -15,6 +15,7 @@ var r = n(627968),
     f = n(194486),
     p = n(874880);
 let _ = 50;
+
 function h(e) {
     var t;
     let n = null == e || null == (t = e.parentElement) ? void 0 : t.getBoundingClientRect();
@@ -57,7 +58,9 @@ let m = i.forwardRef(function (e, t) {
                 b((e) => [...e, l]);
             }
         }, [g, y, O, m, n]);
-    i.useImperativeHandle(t, () => ({ addAnimation: A }));
+    i.useImperativeHandle(t, () => ({
+        addAnimation: A,
+    }));
     let v = i.useCallback((e) => {
         b((t) => {
             let n = [...t],

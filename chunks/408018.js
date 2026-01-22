@@ -4,11 +4,16 @@ function r() {
         richValue: [
             {
                 type: "line",
-                children: [{ text: "" }],
+                children: [
+                    {
+                        text: "",
+                    },
+                ],
             },
         ],
     };
 }
+
 function i(e) {
     return {
         textValue: e,
@@ -26,17 +31,27 @@ n.d(t, {
 let a = Object.freeze([
     Object.freeze({
         type: "line",
-        children: Object.freeze([Object.freeze({ text: "" })]),
+        children: Object.freeze([
+            Object.freeze({
+                text: "",
+            }),
+        ]),
     }),
 ]);
+
 function s(e) {
     return "" !== e
         ? e.split("\n").map((e) => ({
               type: "line",
-              children: [{ text: e }],
+              children: [
+                  {
+                      text: e,
+                  },
+              ],
           }))
         : a;
 }
+
 function o(e) {
     switch (e.type) {
         case "userMention":

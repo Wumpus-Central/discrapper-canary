@@ -1,5 +1,9 @@
-n.d(t, { D: () => i }), n(65821);
+n.d(t, {
+    D: () => i,
+}),
+    n(65821);
 let r = 8;
+
 function i(e, t, n) {
     if (e.byteLength < t) throw Error("data.byteLength must be greater than or equal to desiredLength");
     if (t % n != 0) throw Error("desiredLength must be a multiple of groupSize");

@@ -1,4 +1,7 @@
-n.d(t, { A: () => M }), n(321073);
+n.d(t, {
+    A: () => M,
+}),
+    n(321073);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -24,6 +27,7 @@ var r = n(627968),
     I = n(788868),
     T = n(985018),
     C = n(652804);
+
 function N(e, t, n) {
     return (
         t in e
@@ -37,6 +41,7 @@ function N(e, t, n) {
         e
     );
 }
+
 function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -53,6 +58,7 @@ function R(e) {
     }
     return e;
 }
+
 function w(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -65,6 +71,7 @@ function w(e, t) {
     }
     return n;
 }
+
 function P(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -76,6 +83,7 @@ function P(e, t) {
         e
     );
 }
+
 function D(e) {
     let {
             guildBoostSlot: t,
@@ -108,10 +116,14 @@ function D(e) {
                             ? (0, r.jsx)(u.Text, {
                                   color: "text-muted",
                                   variant: "text-sm/medium",
-                                  children: T.intl.format(T.t.Z4ULRD, { date: o.currentPeriodEnd }),
+                                  children: T.intl.format(T.t.Z4ULRD, {
+                                      date: o.currentPeriodEnd,
+                                  }),
                               })
                             : t.isOnCooldown() && null != p
-                              ? (0, r.jsx)(A.A, { cooldown: p.getTime() })
+                              ? (0, r.jsx)(A.A, {
+                                    cooldown: p.getTime(),
+                                })
                               : (0, r.jsx)(u.Text, {
                                     className: C.__invalid_unappliedGuildBoostSlotDescription,
                                     color: "text-muted",
@@ -171,6 +183,7 @@ function D(e) {
         t.id,
     );
 }
+
 function x(e) {
     (0, u.mMO)(
         async () => (t) =>
@@ -183,11 +196,29 @@ function x(e) {
             ),
     );
 }
+
 function L(e) {
-    (0, u.mMO)(async () => (t) => (0, r.jsx)(_.default, P(R({}, t), { guildBoostSlot: e })));
+    (0, u.mMO)(
+        async () => (t) =>
+            (0, r.jsx)(
+                _.default,
+                P(R({}, t), {
+                    guildBoostSlot: e,
+                }),
+            ),
+    );
 }
+
 function j(e) {
-    (0, u.mMO)(async () => (t) => (0, r.jsx)(h.default, P(R({}, t), { guildBoostSlotId: e.id })));
+    (0, u.mMO)(
+        async () => (t) =>
+            (0, r.jsx)(
+                h.default,
+                P(R({}, t), {
+                    guildBoostSlotId: e.id,
+                }),
+            ),
+    );
 }
 let M = function (e) {
     let t,
@@ -253,8 +284,12 @@ let M = function (e) {
     let z = M.length;
     if (
         ((t = H
-            ? T.intl.formatToPlainString(G ? T.t["3DW6Dc"] : T.t["/u15Qc"], { numUnappliedGuildBoostSlots: z })
-            : T.intl.formatToPlainString(G ? T.t["3DW6Dc"] : T.t.BPadnO, { numUnappliedGuildBoostSlots: z })),
+            ? T.intl.formatToPlainString(G ? T.t["3DW6Dc"] : T.t["/u15Qc"], {
+                  numUnappliedGuildBoostSlots: z,
+              })
+            : T.intl.formatToPlainString(G ? T.t["3DW6Dc"] : T.t.BPadnO, {
+                  numUnappliedGuildBoostSlots: z,
+              })),
         y.Ay.isPremium(v))
     ) {
         let e = (e, t) =>
@@ -271,7 +306,9 @@ let M = function (e) {
                 t,
             );
         n = G
-            ? T.intl.format(T.t.omcpSE, { learnMoreHook: e })
+            ? T.intl.format(T.t.omcpSE, {
+                  learnMoreHook: e,
+              })
             : T.intl.format(T.t["5mAkVi"], {
                   numUnappliedGuildBoostSlots: z,
                   learnMoreHook: e,
@@ -279,7 +316,9 @@ let M = function (e) {
     } else
         n = G
             ? T.intl.string(T.t["8pcUZi"])
-            : T.intl.formatToPlainString(T.t.Kaw82o, { numUnappliedGuildBoostSlots: z });
+            : T.intl.formatToPlainString(T.t.Kaw82o, {
+                  numUnappliedGuildBoostSlots: z,
+              });
     return (
         (a = _ && h === I.xc.NONE ? T.intl.string(T.t.mOWsF1) : T.intl.string(T.t.xr4m5B)),
         (0, r.jsx)("div", {

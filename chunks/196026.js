@@ -14,8 +14,12 @@ var n,
     c = r(993408),
     o = r(985018),
     u = (((n = {}).PURCHASE = "purchase"), (n.PREMIUM_PURCHASE = "premium_purchase"), (n.PREVIEW = "preview"), n);
-let d = { skuId: "None" },
-    m = { skuId: "Shop" },
+let d = {
+        skuId: "None",
+    },
+    m = {
+        skuId: "Shop",
+    },
     p = () => {
         let e = (0, i.bG)([s.A], () => s.A.purchases),
             [t, r] = (0, i.yK)([a.A], () => [a.A.categories, a.A.products]);

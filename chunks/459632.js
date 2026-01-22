@@ -1,4 +1,6 @@
-a.d(t, { A: () => i });
+a.d(t, {
+    A: () => i,
+});
 var c = a(627968);
 a(64700);
 var n = a(397927),
@@ -6,6 +8,7 @@ var n = a(397927),
     d = a(384059),
     r = a(709562),
     o = a(985018);
+
 function i(e) {
     let { onClick: t } = e,
         a = (function (e, t) {

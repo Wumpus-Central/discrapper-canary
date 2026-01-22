@@ -1,4 +1,8 @@
-n.d(t, { A: () => g }), n(896048), n(228524);
+n.d(t, {
+    A: () => g,
+}),
+    n(896048),
+    n(228524);
 var r = n(627968),
     i = n(64700),
     a = n(735438),
@@ -13,6 +17,7 @@ var r = n(627968),
     _ = n(985018),
     h = n(941708);
 let m = 36;
+
 function g() {
     let e = (0, d.K)(),
         t = (0, s.bG)([c.default], () => c.default.getCurrentUser()),
@@ -107,7 +112,9 @@ function g() {
                                 children: _.intl.format(O, {
                                     hook: (e) =>
                                         (0, r.jsx)(l.Text, {
-                                            style: { color: v.css },
+                                            style: {
+                                                color: v.css,
+                                            },
                                             variant: "heading-lg/bold",
                                             tag: "span",
                                             children: e,
@@ -123,9 +130,13 @@ function g() {
                     }),
                     (0, r.jsxs)("div", {
                         className: h.vK,
-                        style: { height: n },
+                        style: {
+                            height: n,
+                        },
                         children: [
-                            (0, r.jsx)("div", { className: h.n8 }),
+                            (0, r.jsx)("div", {
+                                className: h.n8,
+                            }),
                             Object.entries(y).map((t, n) => {
                                 let [i, a] = t,
                                     s = parseInt(i) === e.state;
@@ -148,7 +159,9 @@ function g() {
                                                           marginLeft: 0 === n ? -6 : 0,
                                                           marginRight: n === I - 1 ? -6 : 0,
                                                       },
-                                                      children: (0, r.jsx)("div", { className: h.Ie }),
+                                                      children: (0, r.jsx)("div", {
+                                                          className: h.Ie,
+                                                      }),
                                                   }),
                                             _.intl.format(a.status, {
                                                 hook: (e) =>

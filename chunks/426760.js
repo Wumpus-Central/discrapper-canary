@@ -1,4 +1,7 @@
-n.d(t, { A: () => C }), n(896048);
+n.d(t, {
+    A: () => C,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -23,6 +26,7 @@ var r = n(627968),
     S = n(652215),
     I = n(985018),
     T = n(200430);
+
 function C(e) {
     let { analyticsLocation: t, guild: n, onClose: C, scrollToPowerupCards: N } = e,
         [R, w] = i.useState(!0),
@@ -127,7 +131,9 @@ function C(e) {
                         (0, r.jsxs)("div", {
                             className: T.wx,
                             children: [
-                                (0, r.jsx)(E.A, { className: T.y2 }),
+                                (0, r.jsx)(E.A, {
+                                    className: T.y2,
+                                }),
                                 (0, r.jsxs)("div", {
                                     className: T.AZ,
                                     children: [
@@ -140,7 +146,9 @@ function C(e) {
                                             closeLayer: G,
                                             onCtaVisibilityChange: w,
                                         }),
-                                        (0, r.jsx)(b.A, { guild: n }),
+                                        (0, r.jsx)(b.A, {
+                                            guild: n,
+                                        }),
                                     ],
                                 }),
                             ],

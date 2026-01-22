@@ -1,4 +1,7 @@
-n.d(i, { default: () => E }), n(321073);
+n.d(i, {
+    default: () => E,
+}),
+    n(321073);
 var a = n(627968),
     l = n(64700),
     r = n(158954),
@@ -42,7 +45,9 @@ let E = function (t) {
                 variant: "primary",
             }),
         (0, a.jsx)(r.Modal, {
-            title: p.intl.formatToPlainString(p.t.chV4Jb, { count: n }),
+            title: p.intl.formatToPlainString(p.t.chV4Jb, {
+                count: n,
+            }),
             onClose: E,
             subtitle: g ? p.intl.string(p.t.EPoNRs) : p.intl.string(p.t["8+nq/G"]),
             transitionState: k,

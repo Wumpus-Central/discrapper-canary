@@ -1,4 +1,7 @@
-n.d(t, { ApplicationCommandShareModal: () => S }), n(896048);
+n.d(t, {
+    ApplicationCommandShareModal: () => S,
+}),
+    n(896048);
 var l = n(627968),
     r = n(64700),
     i = n(158954),
@@ -22,6 +25,7 @@ let A = [s.kc.CHAT],
     O = () => {
         (0, a.OoC)(y.C);
     };
+
 function S(e) {
     var t;
     let {
@@ -78,7 +82,9 @@ function S(e) {
             ((t = r.useMemo(
                 () =>
                     null == s
-                        ? { type: "contextless" }
+                        ? {
+                              type: "contextless",
+                          }
                         : {
                               type: "channel",
                               channel: s,
@@ -87,7 +93,9 @@ function S(e) {
             )),
             (0, p.ZA)(
                 t,
-                { commandTypes: A },
+                {
+                    commandTypes: A,
+                },
                 {
                     applicationId: n,
                     allowFetch: !0,
@@ -189,7 +197,9 @@ function S(e) {
             [P, K, y.options],
         ),
         Y = r.useCallback(() => {
-            X(M, { closeAfterSend: !0 });
+            X(M, {
+                closeAfterSend: !0,
+            });
         }, [X, M]);
     if (L)
         return (0, l.jsx)(i.Modal, {
@@ -198,7 +208,9 @@ function S(e) {
             transitionState: N.transitionState,
             onClose: S,
             actions: [],
-            children: (0, l.jsx)(a.y$y, { className: v.dc }),
+            children: (0, l.jsx)(a.y$y, {
+                className: v.dc,
+            }),
         });
     if (Z)
         return (0, l.jsx)(i.Modal, {
@@ -238,11 +250,18 @@ function S(e) {
                           }),
                       ],
                   }),
-        ee = x.intl.format(x.t.hajTkz, { appName: null == J ? void 0 : J.name });
+        ee = x.intl.format(x.t.hajTkz, {
+            appName: null == J ? void 0 : J.name,
+        });
     null == J && (ee = x.intl.string(x.t.fuFvwx));
-    let et = x.intl.format(x.t["DF+q2l"], { appName: null == J ? void 0 : J.name });
+    let et = x.intl.format(x.t["DF+q2l"], {
+        appName: null == J ? void 0 : J.name,
+    });
     return (
-        F && (et = x.intl.format(x.t["/KhyPe"], { count: 5 })),
+        F &&
+            (et = x.intl.format(x.t["/KhyPe"], {
+                count: 5,
+            })),
         (0, l.jsx)(i.Modal, {
             title: ee.toString(),
             subtitle: et,
@@ -263,7 +282,12 @@ function S(e) {
                     variant: "primary",
                 },
             ],
-            preview: void 0 !== C ? (0, l.jsx)(h.h, { previewMessage: C }) : null,
+            preview:
+                void 0 !== C
+                    ? (0, l.jsx)(h.h, {
+                          previewMessage: C,
+                      })
+                    : null,
             input: (0, l.jsx)(a.IWV, {
                 ref: V,
                 query: z,

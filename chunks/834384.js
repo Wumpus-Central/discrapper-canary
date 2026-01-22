@@ -1,4 +1,7 @@
-n.d(t, { A: () => H }), n(896048);
+n.d(t, {
+    A: () => H,
+}),
+    n(896048);
 var a = n(627968);
 n(64700);
 var l = n(635358),
@@ -43,8 +46,12 @@ let P = (e) => {
             } = e,
             p = (0, v.R8)(t, i, !1),
             h = d
-                ? w.intl.formatToPlainString(w.t["5U5RB5"], { discountOfferAmount: u })
-                : w.intl.formatToPlainString(w.t["cNSL/j"], { price: p });
+                ? w.intl.formatToPlainString(w.t["5U5RB5"], {
+                      discountOfferAmount: u,
+                  })
+                : w.intl.formatToPlainString(w.t["cNSL/j"], {
+                      price: p,
+                  });
         return (0, a.jsx)(r.Button, {
             variant: "primary",
             onClick: (e) => {
@@ -69,7 +76,9 @@ let P = (e) => {
             fullWidth: !0,
             disabled: t,
             onClick: (e) => e.stopPropagation(),
-            textOptions: { textOverride: null != n ? n : w.intl.string(w.t.sEAnVH) },
+            textOptions: {
+                textOverride: null != n ? n : w.intl.string(w.t.sEAnVH),
+            },
             subscriptionTier: I.pe.TIER_2,
             showGradient: !0,
         });
@@ -147,17 +156,24 @@ let P = (e) => {
             variant: "primary",
             text: w.intl.format(w.t["4NKuqc"], {
                 orbPrice: T.O0,
-                orbIconHook: () => (0, a.jsx)(m.A, { className: k.f }),
+                orbIconHook: () =>
+                    (0, a.jsx)(m.A, {
+                        className: k.f,
+                    }),
             }),
             onClick: (e) => {
                 e.stopPropagation(),
                     null == s || s("rental claim with orbs button"),
                     (0, p.B4)({
-                        skuId: (0, C.Y)({ product: t }),
+                        skuId: (0, C.Y)({
+                            product: t,
+                        }),
                         onCheckoutSuccess: (e) => {
                             var a, i;
                             let { entitlements: r } = e;
-                            (0, x.gB)({ variantsReturnStyle: l.g.VARIANTS_GROUP });
+                            (0, x.gB)({
+                                variantsReturnStyle: l.g.VARIANTS_GROUP,
+                            });
                             let s =
                                 (null == (a = r[0]) ? void 0 : a.ends_at) != null
                                     ? new Date(r[0].ends_at).toLocaleDateString(c, {
@@ -180,7 +196,9 @@ let P = (e) => {
                         rentalDuration: o,
                     });
             },
-            "aria-label": w.intl.formatToPlainString(w.t.DlNs2T, { orbPrice: T.O0 }),
+            "aria-label": w.intl.formatToPlainString(w.t.DlNs2T, {
+                orbPrice: T.O0,
+            }),
             fullWidth: !0,
         });
     },
@@ -200,7 +218,10 @@ let P = (e) => {
                     ? o
                     : w.intl.format(w.t.kAgx5L, {
                           orbPrice: n[0].amount,
-                          orbIconHook: () => (0, a.jsx)(m.A, { className: k.f }),
+                          orbIconHook: () =>
+                              (0, a.jsx)(m.A, {
+                                  className: k.f,
+                              }),
                       }),
             onClick: (e) => {
                 e.stopPropagation(),
@@ -213,7 +234,9 @@ let P = (e) => {
                         onCheckoutSuccess: (e) => {
                             var n;
                             let { entitlements: a } = e;
-                            (0, x.gB)({ variantsReturnStyle: l.g.VARIANTS_GROUP }),
+                            (0, x.gB)({
+                                variantsReturnStyle: l.g.VARIANTS_GROUP,
+                            }),
                                 (0, N.A)({
                                     product: t,
                                     analyticsLocations: i,
@@ -224,7 +247,9 @@ let P = (e) => {
                         analyticsLocations: i,
                     });
             },
-            "aria-label": w.intl.formatToPlainString(w.t["fNG/05"], { orbPrice: n[0].amount }),
+            "aria-label": w.intl.formatToPlainString(w.t["fNG/05"], {
+                orbPrice: n[0].amount,
+            }),
             fullWidth: !0,
         });
     },
@@ -280,7 +305,9 @@ let P = (e) => {
                 b.A.isClaiming === t.skuId,
                 null != b.A.isClaiming && b.A.isClaiming !== t.skuId,
             ]),
-            { handleUseNow: Y, isApplying: J } = (0, j.p)({ product: t });
+            { handleUseNow: Y, isApplying: J } = (0, j.p)({
+                product: t,
+            });
         if (null != r)
             return (0, a.jsx)(L, {
                 onClick: r,

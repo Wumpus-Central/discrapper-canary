@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var r = n(627968);
 n(64700);
 var l = n(990078),
@@ -9,6 +11,7 @@ var l = n(990078),
     o = n(652215),
     d = n(985018),
     u = n(778052);
+
 function m(e) {
     let { product: t } = e,
         n = (0, s.yt)(t, o.lid.PREMIUM_TIER_2);
@@ -30,7 +33,10 @@ function m(e) {
                 variant: "text-xs/medium",
                 children: d.intl.format(d.t.Sv8iic, {
                     price: m,
-                    subscribeNowHook: (e) => (0, r.jsx)(c.Z, { text: e }),
+                    subscribeNowHook: (e) =>
+                        (0, r.jsx)(c.Z, {
+                            text: e,
+                        }),
                 }),
             }),
         ],

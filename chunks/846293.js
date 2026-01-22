@@ -63,6 +63,7 @@ var r = n(481613),
     er = n(502075),
     ei = n(172799),
     ea = n(516607);
+
 function es(e, t, n) {
     return (
         t in e
@@ -76,6 +77,7 @@ function es(e, t, n) {
         e
     );
 }
+
 function eo(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -92,6 +94,7 @@ function eo(e) {
     }
     return e;
 }
+
 function el(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -104,6 +107,7 @@ function el(e, t) {
     }
     return n;
 }
+
 function ec(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -117,6 +121,7 @@ function ec(e, t) {
 }
 let eu = "invite",
     ed = null;
+
 function ef(e) {
     var t, n, r, i, a, l;
     let c = {};
@@ -142,9 +147,13 @@ function ef(e) {
         c
     );
 }
+
 function ep(e, t) {
-    return ec(eo({}, e), { invite_guild_scheduled_event_id: t.guildScheduledEventId });
+    return ec(eo({}, e), {
+        invite_guild_scheduled_event_id: t.guildScheduledEventId,
+    });
 }
+
 function e_(e, t, n) {
     var r, i;
     if ((null == n ? void 0 : n.targetType) === ei.yV.ROLE_SUBSCRIPTIONS_PURCHASE) return en.VV.ROLE_SUBSCRIPTIONS;
@@ -156,6 +165,7 @@ function e_(e, t, n) {
           ? r
           : t.id;
 }
+
 function eh(e, t) {
     let { type: n } = e,
         { transitionTo: r, welcomeModalChannelId: i, guildScheduledEvent: a } = null != t ? t : {},
@@ -171,6 +181,7 @@ function eh(e, t) {
         (e) => (null != r ? r(e, o) : (0, j.pX)(e, o))
     );
 }
+
 function em(e) {
     let { guildId: t, channel: r, options: i, analyticsLocations: a = [] } = e,
         s = B.A.getGuild(t),
@@ -238,14 +249,18 @@ function em(e) {
           })),
         eh(r, i)(y);
 }
+
 function eg(e) {
     let { guildScheduledEvent: t, welcomeModalChannelId: n } = e;
     null != t &&
         (0, v.B)(() => {
-            let e = { guildScheduledEventId: t.id };
+            let e = {
+                guildScheduledEventId: t.id,
+            };
             null != n && (e.welcomeModalChannelId = n), (0, C.Ul)(t, e);
         });
 }
+
 function eE(e, t, n) {
     return _.h.isDispatching()
         ? Promise.resolve().then(() => eE(e, t, n))
@@ -300,6 +315,7 @@ let eb = function (e, t) {
         let { guild_id: t, channel_id: n } = e;
         (0, N.Fd)(e) && null != n ? eb(n) : await $.A.transitionToGuildSync(t);
     };
+
 function eO(e, t) {
     var n;
     let { invite: r, action: i, inviter_id: a, invite_message_id: s } = e;
@@ -312,6 +328,7 @@ function eO(e, t) {
         location_stack: null != t ? t : null,
     });
 }
+
 function eA(e, t, n) {
     z.default.track(ee.HAw.INVITE_SERVER_CLICKED, {
         guild_id: e,
@@ -337,7 +354,9 @@ let ev = {
             let { body: a } = await d.Bo.post({
                 url: ee.Rsh.INSTANT_INVITES(e),
                 body: i,
-                context: { location: n },
+                context: {
+                    location: n,
+                },
                 rejectWithError: !0,
             });
             return (
@@ -361,9 +380,13 @@ let ev = {
     async mobileCreateInvite(e, t) {
         let n = H.A.getInvite(e.id);
         if (null != n && !n.isExpired()) return n.code;
-        let r = { max_age: q.A.Seconds.DAY },
+        let r = {
+                max_age: q.A.Seconds.DAY,
+            },
             i = await this.createInvite(e.id, r, t).catch(() =>
-                _.h.dispatch({ type: "NATIVE_APP_INSTANT_INVITE_GDM_SHARE_FAILED" }),
+                _.h.dispatch({
+                    type: "NATIVE_APP_INSTANT_INVITE_GDM_SHARE_FAILED",
+                }),
             );
         return null == i ? void 0 : i.code;
     },
@@ -372,7 +395,9 @@ let ev = {
             return null != ed ? ed.then((e) => e.body) : Promise.reject(Error("Invalid friend invite fetch request"));
         (ed = d.Bo.get({
             url: ee.Rsh.FRIEND_INVITES,
-            context: { location: e },
+            context: {
+                location: e,
+            },
             rejectWithError: !1,
         })),
             _.h.dispatch({
@@ -391,11 +416,15 @@ let ev = {
         );
     },
     createFriendInvite: (e, t) => (
-        _.h.dispatch({ type: "FRIEND_INVITE_CREATE_REQUEST" }),
+        _.h.dispatch({
+            type: "FRIEND_INVITE_CREATE_REQUEST",
+        }),
         d.Bo.post({
             url: ee.Rsh.FRIEND_INVITES,
             body: null != e ? e : {},
-            context: { location: t },
+            context: {
+                location: t,
+            },
             rejectWithError: !1,
         }).then(
             (e) => {
@@ -420,10 +449,14 @@ let ev = {
         )
     ),
     revokeFriendInvites: () => (
-        _.h.dispatch({ type: "FRIEND_INVITE_REVOKE_REQUEST" }),
+        _.h.dispatch({
+            type: "FRIEND_INVITE_REVOKE_REQUEST",
+        }),
         d.Bo.del({
             url: ee.Rsh.FRIEND_INVITES,
-            context: { location },
+            context: {
+                location,
+            },
             rejectWithError: !1,
         }).then((e) => {
             let { body: t } = e;
@@ -520,7 +553,9 @@ let ev = {
                   url: ee.Rsh.INVITE(l),
                   context: u,
                   oldFormErrors: !0,
-                  body: { session_id: c },
+                  body: {
+                      session_id: c,
+                  },
                   rejectWithError: !1,
               }).then(
                   async (e) => {
@@ -531,7 +566,9 @@ let ev = {
                           code: l,
                       });
                       let i = N.Ay.getGuildScheduledEvent(o.guildScheduledEventId),
-                          c = ec(eo({}, e.body), { guild_scheduled_event: i }),
+                          c = ec(eo({}, e.body), {
+                              guild_scheduled_event: i,
+                          }),
                           u =
                               null != (t = null == c ? void 0 : c.guild_id)
                                   ? t
@@ -540,7 +577,9 @@ let ev = {
                                     : r.id;
                       if (!s && null != u && c.new_member && !c.show_verification_form) {
                           let { default: e } = await Promise.resolve().then(n.bind(n, 967305));
-                          await e({ guildId: u });
+                          await e({
+                              guildId: u,
+                          });
                       }
                       return null == a || a(c), e.body;
                   },

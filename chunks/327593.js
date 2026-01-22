@@ -1,10 +1,14 @@
-n.d(t, { A: () => f }), n(896048);
+n.d(t, {
+    A: () => f,
+}),
+    n(896048);
 var r = n(73153),
     i = n(439372),
     a = n(927813),
     s = n(996744),
     o = n(971778),
     l = n(342887);
+
 function c(e, t, n) {
     return (
         t in e
@@ -18,6 +22,7 @@ function c(e, t, n) {
         e
     );
 }
+
 function u() {
     return (0, s.Lb)({
         location: "VoiceFiltersCatalogManager",
@@ -44,11 +49,16 @@ class d extends i.A {
             n = new Date(e.next_set_end).getTime() - new Date().getTime();
         t > 0
             ? (this.rolloverTimeout = setTimeout(() => {
-                  r.h.dispatch({ type: "VOICE_FILTER_UPDATE_LIMITED_TIME_VOICES" }), this._scheduleNextRollover();
+                  r.h.dispatch({
+                      type: "VOICE_FILTER_UPDATE_LIMITED_TIME_VOICES",
+                  }),
+                      this._scheduleNextRollover();
               }, t))
             : n > 0 &&
               (this.rolloverTimeout = setTimeout(() => {
-                  r.h.dispatch({ type: "VOICE_FILTER_UPDATE_LIMITED_TIME_VOICES" });
+                  r.h.dispatch({
+                      type: "VOICE_FILTER_UPDATE_LIMITED_TIME_VOICES",
+                  });
               }, n));
     }
     _scheduleRefresh() {

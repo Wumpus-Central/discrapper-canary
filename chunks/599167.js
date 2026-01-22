@@ -1,4 +1,6 @@
-n.d(t, { A: () => j });
+n.d(t, {
+    A: () => j,
+});
 var r = n(627968),
     i = n(64700),
     l = n(311907),
@@ -15,6 +17,7 @@ var r = n(627968),
     p = n(652215),
     x = n(705751),
     h = n(280215);
+
 function j() {
     let e,
         t = (0, l.bG)([d.A], () => d.A.getGuild()),
@@ -37,7 +40,9 @@ function j() {
                         config: y,
                     })
                   : v
-                    ? (0, r.jsx)(m.A, { guild: t })
+                    ? (0, r.jsx)(m.A, {
+                          guild: t,
+                      })
                     : (0, r.jsx)(g.A, {
                           guild: t,
                           application: n,

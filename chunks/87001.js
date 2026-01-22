@@ -1,4 +1,15 @@
-n.d(t, { A: () => ee }), n(896048), n(693327), n(554719), n(680155), n(323874), n(14289), n(35956), n(596829), n(65821);
+n.d(t, {
+    A: () => ee,
+}),
+    n(896048),
+    n(693327),
+    n(554719),
+    n(680155),
+    n(323874),
+    n(14289),
+    n(35956),
+    n(596829),
+    n(65821);
 var r,
     i = n(284009),
     a = n.n(i),
@@ -16,6 +27,7 @@ var r,
     g = n(475815),
     E = n(265383),
     b = n(652215);
+
 function y(e, t, n) {
     return (
         t in e
@@ -29,6 +41,7 @@ function y(e, t, n) {
         e
     );
 }
+
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -45,6 +58,7 @@ function O(e) {
     }
     return e;
 }
+
 function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -57,6 +71,7 @@ function A(e, t) {
     }
     return n;
 }
+
 function v(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -68,6 +83,7 @@ function v(e, t) {
         e
     );
 }
+
 function S(e, t) {
     if (null == e) return {};
     var n,
@@ -84,6 +100,7 @@ function S(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function I(e, t) {
     if (null == e) return {};
     var n,
@@ -105,6 +122,7 @@ let T = new d.A("PopoutWindowStore"),
     L = () => J.emitChange(),
     j = o().debounce(L, 150),
     M = !1;
+
 function k(e, t) {
     let n = t.document,
         r = n.head;
@@ -117,6 +135,7 @@ function k(e, t) {
         r.appendChild(t);
     }
 }
+
 function U(e) {
     let t = R[e];
     null == t ||
@@ -129,6 +148,7 @@ function U(e) {
             alwaysOnTop: !!h.isPlatformEmbedded && N[e],
         });
 }
+
 function G(e) {
     T.info("Unmounting popout window", e);
     let t = R[e];
@@ -144,6 +164,7 @@ function G(e) {
         delete P[e],
         delete w[e];
 }
+
 function V(e, t, r) {
     let i = e.document,
         s = new URL(t).origin,
@@ -157,9 +178,11 @@ function V(e, t, r) {
         a()(null != i.head, "Document head was null"),
         i.head.appendChild(c);
 }
+
 function F(e, t) {
     for (let e of document.querySelectorAll('link[rel="stylesheet"]')) V(t, e.href, e.integrity);
 }
+
 function B(e) {
     let t = R[e],
         n = P[e];
@@ -173,6 +196,7 @@ function B(e) {
     let i = (0, l.createRoot)(r.getElementById(x));
     a()(null != i, "No render target for popout!"), (w[e] = i), i.render(n(e));
 }
+
 function H(e) {
     let { key: t, features: n, render: r } = e;
     if (h.isPlatformEmbedded && !m.Ay.supportsFeature(b.BYE.POPOUT_WINDOWS))
@@ -228,9 +252,11 @@ function H(e) {
         h.isPlatformEmbedded && (m.Ay.setAlwaysOnTop(t, _), (N[t] = _), m.Ay.isAlwaysOnTop(t).then((e) => (N[t] = e))),
         D.add(t);
 }
+
 function Y(e) {
     D.has(e) && (B(e), D.delete(e), J.emitChange());
 }
+
 function W(e) {
     let t = R[e];
     null != t &&
@@ -241,6 +267,7 @@ function W(e) {
         }, 100),
         J.emitChange());
 }
+
 function K(e) {
     let { data: t } = e;
     if (!(t instanceof Object && t.discordPopoutEvent instanceof Object)) return;
@@ -253,6 +280,7 @@ function K(e) {
                 return W(n.key);
         }
 }
+
 function z(e) {
     if (null != e && !e.closed)
         try {
@@ -261,21 +289,25 @@ function z(e) {
             T.error("Error closing popout window", e);
         }
 }
+
 function q(e) {
     let { key: t } = e,
         n = R[t];
     null != n && !n.closed && (U(t), _.default.preventPopoutClose || z(n));
 }
+
 function X() {
     for (let e of Object.keys(R)) {
         let t = R[e];
         null != t && z(t);
     }
 }
+
 function Z(e) {
     let { key: t, alwaysOnTop: n } = e;
     h.isPlatformEmbedded && (m.Ay.setAlwaysOnTop(t, n), (N[t] = n), m.Ay.isAlwaysOnTop(t).then((e) => (N[t] = e)));
 }
+
 function Q(e) {
     let { url: t, integrity: n } = e;
     for (let e of Object.values(R)) null == e || e.closed || V(e, t, n);

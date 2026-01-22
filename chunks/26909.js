@@ -15,6 +15,7 @@ var r,
 n(73510);
 var u = n(705751),
     d = n(355097);
+
 function f(e, t, n) {
     return (
         t in e
@@ -28,6 +29,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -44,6 +46,7 @@ function p(e) {
     }
     return e;
 }
+
 function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -56,6 +59,7 @@ function _(e, t) {
     }
     return n;
 }
+
 function h(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -67,13 +71,16 @@ function h(e, t) {
         e
     );
 }
-let m = { pendingUsages: [] },
+let m = {
+        pendingUsages: [],
+    },
     g = new l.A({
         computeBonus: () => 1,
         lookupKey: (e) => e,
         afterCompute: () => {},
         numFrequentlyItems: u.h2,
     });
+
 function E(e, t) {
     return e
         .filter((e) => {
@@ -84,6 +91,7 @@ function E(e, t) {
         })
         .map((e) => e.split(":")[0]);
 }
+
 function b(e, t) {
     return 0 > Number(t.id)
         ? t.id
@@ -91,6 +99,7 @@ function b(e, t) {
           ? "".concat(t.id, ":").concat(e.guild.id)
           : t.id;
 }
+
 function y(e) {
     let {
         settings: { type: t },
@@ -99,6 +108,7 @@ function y(e) {
     if (t !== d.oD.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
     m.pendingUsages = [];
 }
+
 function O(e) {
     let { command: t, context: n } = e,
         r = b(n, t);
@@ -109,6 +119,7 @@ function O(e) {
         g.track(r),
         g.compute();
 }
+
 function A() {
     var e, t;
     let n =
@@ -118,7 +129,11 @@ function A() {
             ? e
             : {};
     g.overwriteHistory(
-        a().mapValues(n, (e) => h(p({}, e), { recentUses: e.recentUses.map(Number).filter((e) => e > 0) })),
+        a().mapValues(n, (e) =>
+            h(p({}, e), {
+                recentUses: e.recentUses.map(Number).filter((e) => e > 0),
+            }),
+        ),
         m.pendingUsages,
     );
 }

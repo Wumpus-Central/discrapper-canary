@@ -62,7 +62,9 @@ let c = async (e) => {
     },
     d = async (e, t, n) => {
         try {
-            i.h.dispatch({ type: "CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_START" }),
+            i.h.dispatch({
+                type: "CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_START",
+            }),
                 await r.Bo.del({
                     url: o.Rsh.DELETE_MY_CONTENT_INVENTORY_OUTBOX_ENTRY_HISTORY(e.id),
                     rejectWithError: !1,

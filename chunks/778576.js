@@ -1,4 +1,8 @@
-r.d(t, { A: () => E }), r(228524), r(896048);
+r.d(t, {
+    A: () => E,
+}),
+    r(228524),
+    r(896048);
 var n = r(627968),
     l = r(64700),
     a = r(503698),
@@ -17,6 +21,7 @@ var n = r(627968),
 r(363385);
 var h = r(985018),
     m = r(449998);
+
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
@@ -42,6 +47,7 @@ function j(e) {
     }
     return e;
 }
+
 function O(e) {
     let { avatar: t, index: r, onSelectRecentAvatar: a, onDeleteRecentAvatar: i, avatarButtonRef: s } = e,
         { id: u, storageHash: f, description: d = h.intl.string(h.t.lqaIxI) } = t,
@@ -99,6 +105,7 @@ function O(e) {
         ],
     });
 }
+
 function x(e) {
     let { avatars: t, onComplete: a, setFetchError: o, className: p } = e,
         b = (0, s.bG)([u.default], () => u.default.getCurrentUser()),
@@ -139,7 +146,9 @@ function x(e) {
                                     j(
                                         {
                                             imageUri: s,
-                                            file: new File([o], u, { type: d }),
+                                            file: new File([o], u, {
+                                                type: d,
+                                            }),
                                             originalAsset: e,
                                             onCrop: a,
                                             uploadType: A.HL.AVATAR,
@@ -149,7 +158,9 @@ function x(e) {
                                     ),
                                 );
                         },
-                        { contextKey: _ },
+                        {
+                            contextKey: _,
+                        },
                     );
                 } catch (e) {
                     o(h.intl.string(h.t.fZRH9P));
@@ -280,10 +291,20 @@ function x(e) {
                                             (0, n.jsxs)(n.Fragment, {
                                                 children: [h.intl.string(h.t.x0DsRS), " "],
                                             }),
-                                        h.intl.format(h.t["8W2HO3"], { numberOfEmptyAvatarSlots: P }),
+                                        h.intl.format(h.t["8W2HO3"], {
+                                            numberOfEmptyAvatarSlots: P,
+                                        }),
                                     ],
                                 }),
-                                [...Array(P)].map((e, t) => (0, n.jsx)(g.A, { className: m.rZ }, t)),
+                                [...Array(P)].map((e, t) =>
+                                    (0, n.jsx)(
+                                        g.A,
+                                        {
+                                            className: m.rZ,
+                                        },
+                                        t,
+                                    ),
+                                ),
                             ],
                         }),
                 ],
@@ -291,6 +312,7 @@ function x(e) {
         })
     );
 }
+
 function E(e) {
     let { className: t, onComplete: r } = e,
         { avatars: a, loading: s, error: o } = (0, p.b)(),
@@ -304,10 +326,14 @@ function E(e) {
             className: i()(m.kL, t),
             children: (0, n.jsx)(c.D0$, {
                 label: h.intl.string(h.t.Bnq9zK),
-                description: h.intl.format(h.t["+CyJu3"], { recentAvatarsLimit: 6 }),
+                description: h.intl.format(h.t["+CyJu3"], {
+                    recentAvatarsLimit: 6,
+                }),
                 errorMessage: g,
                 children: s
-                    ? (0, n.jsx)(c.y$y, { className: m.u1 })
+                    ? (0, n.jsx)(c.y$y, {
+                          className: m.u1,
+                      })
                     : (0, n.jsx)(x, {
                           avatars: a,
                           onComplete: r,

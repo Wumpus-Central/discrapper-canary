@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968),
     i = n(311907),
     a = n(688810),
@@ -11,6 +13,7 @@ var r = n(627968),
     f = n(652215),
     p = n(731854),
     _ = n(985018);
+
 function h() {
     let e = (0, i.bG)([c.A], () => c.A.isVideoAvailable()),
         { id: t } = (0, o.x5)(p.oh.VIDEO_INPUT),
@@ -24,9 +27,13 @@ function h() {
         helperText: (0, l.p)()
             ? _.intl.format(_.t.aJYgRt, {
                   onCameraSettingsClick: () => {
-                      d.A.setState({ previewEnabled: !1 }),
+                      d.A.setState({
+                          previewEnabled: !1,
+                      }),
                           window.open((0, l.i)(t)),
-                          u.default.track(f.HAw.SYSTEM_CAMERA_SETTINGS_OPENED, { location_stack: n });
+                          u.default.track(f.HAw.SYSTEM_CAMERA_SETTINGS_OPENED, {
+                              location_stack: n,
+                          });
                   },
               })
             : void 0,

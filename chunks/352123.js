@@ -7,6 +7,7 @@ var r = n(311907),
     i = n(71393),
     a = n(576705),
     s = n(652215);
+
 function o(e) {
     let t = (0, r.bG)([i.A], () => i.A.getGuild(e.guildId)),
         n = (0, r.bG)([l.A], () => l.A.getChannel(e.channelId)),
@@ -18,6 +19,7 @@ function o(e) {
         canRemove: o || c,
     };
 }
+
 function c(e) {
     return (0, r.bG)([a.A], () => a.A.can(s.xBc.SEND_MESSAGES, e));
 }

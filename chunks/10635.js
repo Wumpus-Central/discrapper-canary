@@ -1,4 +1,6 @@
-n.d(t, { A: () => R });
+n.d(t, {
+    A: () => R,
+});
 var r = n(627968),
     l = n(64700),
     i = n(158954),
@@ -28,6 +30,7 @@ var r = n(627968),
     N = n(985018),
     T = n(743789),
     P = n(673721);
+
 function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -53,6 +56,7 @@ function w(e) {
     }
     return e;
 }
+
 function R(e) {
     var t;
     let { user: n, channel: R } = e,
@@ -96,7 +100,11 @@ function R(e) {
                 children: [
                     (0, r.jsxs)(i.d_W, {
                         children: [
-                            (0, r.jsx)(S.A, { children: (0, r.jsx)(C.A, { user: n }) }),
+                            (0, r.jsx)(S.A, {
+                                children: (0, r.jsx)(C.A, {
+                                    user: n,
+                                }),
+                            }),
                             (0, r.jsxs)("div", {
                                 className: T.wx,
                                 children: [
@@ -145,7 +153,9 @@ function R(e) {
                                             (0, r.jsx)(x.A, {
                                                 heading: N.intl.string(N.t["A//N4k"]),
                                                 headingColor: "text-strong",
-                                                children: (0, r.jsx)(v.A, { userId: n.id }),
+                                                children: (0, r.jsx)(v.A, {
+                                                    userId: n.id,
+                                                }),
                                             }),
                                         ],
                                     }),

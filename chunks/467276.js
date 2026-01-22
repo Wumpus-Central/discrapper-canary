@@ -6,6 +6,7 @@ function r(e) {
     }
     return t;
 }
+
 function i(e) {
     return null !== e && "object" == typeof e && !Array.isArray(e);
 }

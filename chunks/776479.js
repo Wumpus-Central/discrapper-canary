@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var i = n(627968),
     r = n(64700),
     l = n(311907),
@@ -11,6 +13,7 @@ var i = n(627968),
     b = n(2655),
     f = n(985018),
     p = n(199271);
+
 function m(e) {
     let { application: t, canNavigate: n, guildId: d } = e,
         b = (0, l.bG)([c.A], () => c.A.isUnavailable());
@@ -47,6 +50,7 @@ function m(e) {
               ],
           });
 }
+
 function g(e) {
     let { applicationId: t, guildId: n } = e,
         { originalApplicationPermissions: r, editedTargetPermissions: l, selectedPermissionCount: a } = (0, d.A)(n, t);

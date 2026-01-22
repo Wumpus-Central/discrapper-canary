@@ -14,6 +14,7 @@ var r = n(627968),
     f = n(183555),
     p = n(652215),
     _ = n(985018);
+
 function h(e) {
     let { user: t, analyticsLocation: n } = e,
         r = (0, a.bG)([u.A], () => u.A.getRelationshipType(t.id) === p.eA$.PENDING_OUTGOING),
@@ -21,13 +22,24 @@ function h(e) {
         _ = (0, o.A)({
             user: t,
             location: n,
-            onFriendRemove: () => s({ action: "REMOVE_FRIEND" }),
-            onFriendRequestSent: () => s({ action: "SEND_FRIEND_REQUEST" }),
+            onFriendRemove: () =>
+                s({
+                    action: "REMOVE_FRIEND",
+                }),
+            onFriendRequestSent: () =>
+                s({
+                    action: "SEND_FRIEND_REQUEST",
+                }),
         }),
-        h = (0, l.A)({ user: t }),
-        m = (0, c.A)({ user: t });
+        h = (0, l.A)({
+            user: t,
+        }),
+        m = (0, c.A)({
+            user: t,
+        });
     return i.useMemo(() => [r ? null : _, h, m].filter(d.Vq), [h, _, r, m]);
 }
+
 function m(e) {
     let { menuItems: t, children: n, targetElementRef: i } = e;
     return (0, r.jsx)(s.YNO, {

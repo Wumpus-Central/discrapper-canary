@@ -1,4 +1,9 @@
-l.d(t, { MO: () => d }), l(896048), l(321073), l(667532);
+l.d(t, {
+    MO: () => d,
+}),
+    l(896048),
+    l(321073),
+    l(667532);
 var r = l(64700),
     n = l(512750),
     i = l(311907),
@@ -12,6 +17,7 @@ let a = Object.entries({
         return e;
     }, {}),
     u = [o.o9.LEVEL, o.o9.PERK];
+
 function d(e, t) {
     let l = (0, i.bG)([s.A], () => s.A.getStateForGuild(e));
     return r.useMemo(
@@ -52,7 +58,11 @@ function d(e, t) {
                         });
                     }
                     return (
-                        l && e === o.o9.PERK && r.unshift({ type: "gameServer" }),
+                        l &&
+                            e === o.o9.PERK &&
+                            r.unshift({
+                                type: "gameServer",
+                            }),
                         (function (e) {
                             let t = e.findIndex((e) => "singlePerk" === e.type && e.powerup.skuId === n.SL),
                                 l = e.findIndex((e) => "multiPerk" === e.type && "guildTagsBadgePacks" === e.group);

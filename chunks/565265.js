@@ -1,4 +1,7 @@
-n.d(t, { A: () => O }), n(896048);
+n.d(t, {
+    A: () => O,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -12,6 +15,7 @@ var r = n(627968),
     p = n(985018),
     h = n(980017),
     b = n(206314);
+
 function g(e, t, n) {
     return (
         t in e
@@ -25,6 +29,7 @@ function g(e, t, n) {
         e
     );
 }
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -41,6 +46,7 @@ function m(e) {
     }
     return e;
 }
+
 function A(e) {
     return e.matches("a") || "highlight" === e.className || e.className.includes("mention");
 }
@@ -67,7 +73,9 @@ class y extends l.Component {
                                   className: h.h8,
                               }),
                               null == e.linkedLobby || t
-                                  ? u.A.parseTopic(e.topic, !0, { channelId: e.id })
+                                  ? u.A.parseTopic(e.topic, !0, {
+                                        channelId: e.id,
+                                    })
                                   : p.intl.string(p.t["XJVlf/"]),
                           ],
                       }),

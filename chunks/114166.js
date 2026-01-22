@@ -9,6 +9,7 @@ var r,
     o = n.n(s),
     l = n(615300),
     c = n(531685);
+
 function u(e, t, n) {
     return (
         t in e
@@ -22,6 +23,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -38,6 +40,7 @@ function d(e) {
     }
     return e;
 }
+
 function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -50,6 +53,7 @@ function f(e, t) {
     }
     return n;
 }
+
 function p(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -64,6 +68,7 @@ function p(e, t) {
 var _ = (function (e) {
     return (e[(e.ABOVE = 0)] = "ABOVE"), (e[(e.VISIBLE = 1)] = "VISIBLE"), (e[(e.BELOW = 2)] = "BELOW"), e;
 })(_ || {});
+
 function h(e, t) {
     return {
         toValue: e,
@@ -71,6 +76,7 @@ function h(e, t) {
         easing: l.A.Easing.inOut(l.A.Easing.back()),
     };
 }
+
 function m(e, t, n) {
     if (null != t) {
         let r = Math.ceil(Math.log10(e + 1));
@@ -86,7 +92,9 @@ class g extends (r = a.PureComponent) {
                   currValue: e.value,
               }
             : null != i && i !== e.value
-              ? { nextValue: e.value }
+              ? {
+                    nextValue: e.value,
+                }
               : null;
     }
     componentDidUpdate(e, t) {
@@ -126,7 +134,9 @@ class g extends (r = a.PureComponent) {
                 right: 0,
                 bottom: 0,
             },
-            null != t && { color: t },
+            null != t && {
+                color: t,
+            },
         );
     }
     getMinWidth(e) {
@@ -170,11 +180,21 @@ class g extends (r = a.PureComponent) {
                         children: this.padValue(s),
                     }),
                     (0, i.jsx)(l.A.div, {
-                        style: d({ color: n }, this.getAnimatedStyle(this.prevAnimate)),
+                        style: d(
+                            {
+                                color: n,
+                            },
+                            this.getAnimatedStyle(this.prevAnimate),
+                        ),
                         children: null != r ? r(this.padValue(e)) : this.padValue(e),
                     }),
                     (0, i.jsx)(l.A.div, {
-                        style: d({ color: n }, this.getAnimatedStyle(this.currAnimate)),
+                        style: d(
+                            {
+                                color: n,
+                            },
+                            this.getAnimatedStyle(this.currAnimate),
+                        ),
                         children: null != r ? r(this.padValue(t)) : this.padValue(t),
                     }),
                 ],
@@ -193,7 +213,9 @@ class g extends (r = a.PureComponent) {
                           currValue: t,
                           nextValue: null,
                       })
-                    : this.setState({ prevValue: null });
+                    : this.setState({
+                          prevValue: null,
+                      });
             }),
             (this.state = {
                 prevValue: null,

@@ -1,8 +1,12 @@
-n.d(t, { A: () => a }), n(896048);
+n.d(t, {
+    A: () => a,
+}),
+    n(896048);
 var r = n(64700),
     i = n(486020),
     l = n(791275),
     s = n(652215);
+
 function a(e, t, n) {
     var a, c;
     let { isLoading: o, error: d, highlightedCreatorDetails: u } = (0, l.A)(e),

@@ -17,6 +17,7 @@ var r,
     f = n(287809),
     p = n(820883),
     _ = n(688963);
+
 function h(e, t, n) {
     return (
         t in e
@@ -30,6 +31,7 @@ function h(e, t, n) {
         e
     );
 }
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -46,6 +48,7 @@ function m(e) {
     }
     return e;
 }
+
 function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -58,6 +61,7 @@ function g(e, t) {
     }
     return n;
 }
+
 function E(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -80,23 +84,27 @@ let b = {
     A = 20,
     v = 35,
     S = "user-icon";
+
 function I(e, t) {
     if (e === S) return "user-icon-".concat(t);
     let n = e instanceof d.A ? e : null != e ? e.user : null;
     return null != n ? n.id : "user-".concat(t);
 }
+
 function T(e) {
     return (0, i.jsx)("div", {
         className: _.In,
         children: e,
     });
 }
+
 function C(e) {
     return (0, i.jsx)("div", {
         className: o()(_.In, _.iq),
         children: e,
     });
 }
+
 function N() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : b.SIZE_24;
     switch (e) {
@@ -112,6 +120,7 @@ function N() {
             return _.q1;
     }
 }
+
 function R() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : b.SIZE_24;
     switch (e) {
@@ -170,14 +179,33 @@ class w extends (r = a.PureComponent) {
             u = l ? C : s;
         if (!r) {
             if (null != n) {
-                if (n >= t) return (0, i.jsx)(a.Fragment, { children: u("".concat(t, "+"), t) }, "more-users");
+                if (n >= t)
+                    return (0, i.jsx)(
+                        a.Fragment,
+                        {
+                            children: u("".concat(t, "+"), t),
+                        },
+                        "more-users",
+                    );
                 else if (n > o.length) {
                     let e = n - o.length;
-                    return (0, i.jsx)(a.Fragment, { children: u("+".concat(e), e) }, "more-users");
+                    return (0, i.jsx)(
+                        a.Fragment,
+                        {
+                            children: u("+".concat(e), e),
+                        },
+                        "more-users",
+                    );
                 }
             } else if (c < o.length) {
                 let e = Math.min(o.length - c, 99);
-                return (0, i.jsx)(a.Fragment, { children: u("+".concat(e), e) }, "more-users");
+                return (0, i.jsx)(
+                    a.Fragment,
+                    {
+                        children: u("+".concat(e), e),
+                    },
+                    "more-users",
+                );
             }
         }
     }
@@ -218,7 +246,10 @@ class w extends (r = a.PureComponent) {
             guildId: r,
             fixed: !0,
             shouldShow: !0 === a && null != l,
-            onRequestClose: () => this.setState({ popoutUserId: null }),
+            onRequestClose: () =>
+                this.setState({
+                    popoutUserId: null,
+                }),
             clickTrap: !0,
             children: (n) =>
                 (0, i.jsxs)(
@@ -240,14 +271,20 @@ class w extends (r = a.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            h(this, "state", { popoutUserId: null }),
+            h(this, "state", {
+                popoutUserId: null,
+            }),
             h(this, "_ref", a.createRef()),
             h(this, "defaultRenderUser", (e, t, n) => {
                 let r,
                     { showUserPopout: a, guildId: s, size: c, dimEmptyUsers: u } = this.props;
                 if (null == e)
                     if (!this.props.showDefaultAvatarsForNullUsers)
-                        return (0, i.jsx)("div", { className: o()(_.F2, { [_.F_]: u }) });
+                        return (0, i.jsx)("div", {
+                            className: o()(_.F2, {
+                                [_.F_]: u,
+                            }),
+                        });
                     else {
                         let e = (null != n ? n : 0) % p.A.DEFAULT_AVATARS.length,
                             t = p.A.DEFAULT_AVATARS[e];
@@ -285,7 +322,11 @@ class w extends (r = a.PureComponent) {
                           {
                               className: _.UC,
                               onClick: () => {
-                                  null != this._ref.current && null != e && this.setState({ popoutUserId: e.id });
+                                  null != this._ref.current &&
+                                      null != e &&
+                                      this.setState({
+                                          popoutUserId: e.id,
+                                      });
                               },
                               tabIndex: -1,
                               children: d,

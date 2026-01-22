@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(514467),
     i = n(434891),
     a = n(619881),
@@ -7,12 +9,14 @@ var r = n(514467),
     l = n(688899),
     c = n(324049),
     u = n(273101);
+
 function d(e) {
     var t = e.getBoundingClientRect(),
         n = (0, u.LI)(t.width) / e.offsetWidth || 1,
         r = (0, u.LI)(t.height) / e.offsetHeight || 1;
     return 1 !== n || 1 !== r;
 }
+
 function f(e, t, n) {
     void 0 === n && (n = !1);
     var u = (0, s.sb)(t),

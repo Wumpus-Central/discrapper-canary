@@ -5,10 +5,11 @@ n.d(t, {
 });
 var r = n(294946),
     i = n(15020);
+
 function a(e, t, n, r) {
     if ("function" == typeof e.setBigUint64) return e.setBigUint64(t, n, r);
     let i = BigInt(32),
-        a = BigInt(4294967295),
+        a = BigInt(0xffffffff),
         s = Number((n >> i) & a),
         o = Number(n & a),
         l = 4 * !!r,

@@ -1,4 +1,7 @@
-i.d(e, { default: () => w }), i(896048);
+i.d(e, {
+    default: () => w,
+}),
+    i(896048);
 var a = i(627968),
     n = i(64700),
     s = i(158954),
@@ -30,6 +33,7 @@ var a = i(627968),
     y = i(652215),
     R = i(985018),
     O = i(836263);
+
 function w(t) {
     let {
             transitionState: e,
@@ -42,7 +46,9 @@ function w(t) {
             soundId: A,
             analyticsLocations: g,
         } = t,
-        [S, h] = n.useState({ state: "LINK" }),
+        [S, h] = n.useState({
+            state: "LINK",
+        }),
         [k, N] = n.useState(!1),
         T = (0, l.bG)([f.A], () => f.A.getApplication(i.applicationId)),
         b = (0, p.RD)(T),
@@ -121,9 +127,13 @@ function w(t) {
             N(!0),
                 await o.A.redeemGiftCode({
                     code: c.code,
-                    options: { channelId: u },
+                    options: {
+                        channelId: u,
+                    },
                 }),
-                h({ state: "SUCCESS" });
+                h({
+                    state: "SUCCESS",
+                });
         } catch (t) {
             h({
                 state: "ERROR",
@@ -180,8 +190,12 @@ let D = (t) => {
         r.code === y.t02.INVALID_GIFT_REDEMPTION_OWNED
             ? ((e = R.intl.string(R.t.uXnSGo)),
               (i = o
-                  ? R.intl.formatToPlainString(R.t["TNRN/e"], { applicationName: c.name })
-                  : R.intl.formatToPlainString(R.t.VkR30M, { applicationName: c.name })))
+                  ? R.intl.formatToPlainString(R.t["TNRN/e"], {
+                        applicationName: c.name,
+                    })
+                  : R.intl.formatToPlainString(R.t.VkR30M, {
+                        applicationName: c.name,
+                    })))
             : ((e = R.intl.string(R.t.dMYg1c)), (i = (0, k.eN)(r, d))),
         (0, a.jsxs)(s.dWK, {
             transitionState: n,
@@ -212,6 +226,7 @@ let D = (t) => {
         })
     );
 };
+
 function M(t) {
     let {
             sku: e,
@@ -254,7 +269,9 @@ function M(t) {
             application_id: i,
             is_gift: !0,
         }),
-            m({ analyticsLocations: t });
+            m({
+                analyticsLocations: t,
+            });
     }, [m]);
     if (!j)
         return (0, a.jsx)(s.dWK, {
@@ -290,11 +307,16 @@ function M(t) {
         canStartAuthorization: f,
         primaryCTAButtonProps: S,
         bodyText: p
-            ? R.intl.formatToPlainString(R.t.sL5yz7, { applicationName: i.name })
-            : R.intl.formatToPlainString(R.t.PaYE38, { applicationName: i.name }),
+            ? R.intl.formatToPlainString(R.t.sL5yz7, {
+                  applicationName: i.name,
+              })
+            : R.intl.formatToPlainString(R.t.PaYE38, {
+                  applicationName: i.name,
+              }),
         title: R.intl.string(R.t["Bn1J+a"]),
     });
 }
+
 function P(t) {
     let {
             transitionState: e,
@@ -328,7 +350,9 @@ function P(t) {
         return (0, a.jsx)(s.dWK, {
             transitionState: e,
             onClose: i,
-            children: (0, a.jsx)(s.cwr, { children: (0, a.jsx)(c.y$y, {}) }),
+            children: (0, a.jsx)(s.cwr, {
+                children: (0, a.jsx)(c.y$y, {}),
+            }),
         });
     let I =
         f && !m
@@ -372,14 +396,18 @@ function P(t) {
                 },
                 ref: (t) => A(t),
             }),
-            (0, a.jsx)(v.z, { sku: r }),
+            (0, a.jsx)(v.z, {
+                sku: r,
+            }),
             (0, a.jsxs)(s.cwr, {
                 children: [
                     (0, a.jsx)(s.EYj, {
                         variant: "text-md/normal",
                         color: "text-subtle",
                         className: O.j7,
-                        children: R.intl.formatToPlainString(R.t["6yrIzU"], { sender: k }),
+                        children: R.intl.formatToPlainString(R.t["6yrIzU"], {
+                            sender: k,
+                        }),
                     }),
                     null != u &&
                         "" !== u &&
@@ -404,7 +432,10 @@ function P(t) {
                             confettiTarget: j,
                             emojiName: x,
                         }),
-                    null != p && (0, a.jsx)(G, { soundId: p }),
+                    null != p &&
+                        (0, a.jsx)(G, {
+                            soundId: p,
+                        }),
                 ],
             }),
             (0, a.jsx)(s.H7u, {

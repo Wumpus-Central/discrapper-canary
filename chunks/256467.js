@@ -1,4 +1,7 @@
-r.r(t), r.d(t, { default: () => U });
+r.r(t),
+    r.d(t, {
+        default: () => U,
+    });
 var n = r(627968),
     i = r(64700),
     o = r(503698),
@@ -32,6 +35,7 @@ var n = r(627968),
     R = r(985018),
     N = r(86719),
     k = r(638990);
+
 function T(e) {
     var t;
     let { guildId: r, productId: i } = e,
@@ -51,25 +55,39 @@ function T(e) {
                           guild: s,
                           subscriptionsSettings: l,
                       }),
-                      (0, n.jsx)(d.hKd, { size: 32 }),
-                      p.length > 0 && (0, n.jsx)(P.F, { guild: s }),
+                      (0, n.jsx)(d.hKd, {
+                          size: 32,
+                      }),
+                      p.length > 0 &&
+                          (0, n.jsx)(P.F, {
+                              guild: s,
+                          }),
                       (0, n.jsxs)("div", {
                           className: N.v_,
                           children: [
-                              (0, n.jsx)(d.hKd, { size: 32 }),
-                              u && (0, n.jsx)(_.A, { guildId: r }),
+                              (0, n.jsx)(d.hKd, {
+                                  size: 32,
+                              }),
+                              u &&
+                                  (0, n.jsx)(_.A, {
+                                      guildId: r,
+                                  }),
                               a === m.B.GUILD_PRODUCTS &&
                                   (0, n.jsx)(v.h, {
                                       guildId: r,
                                       productId: i,
                                   }),
-                              a === m.B.GUILD_ROLE_SUBSCRIPTIONS && (0, n.jsx)(w.A, { guildId: r }),
+                              a === m.B.GUILD_ROLE_SUBSCRIPTIONS &&
+                                  (0, n.jsx)(w.A, {
+                                      guildId: r,
+                                  }),
                           ],
                       }),
                   ],
               }),
           });
 }
+
 function V(e) {
     let { guildId: t, productId: r } = e,
         o = (0, c.bG)([f.A], () => f.A.isConnected()),
@@ -90,7 +108,9 @@ function V(e) {
                     tab: v,
                 },
             },
-            { disableTrack: _ },
+            {
+                disableTrack: _,
+            },
         ),
         (0, n.jsxs)("div", {
             "data-has-border": !0,
@@ -103,7 +123,9 @@ function V(e) {
                             "aria-hidden": !0,
                             color: a.A.colors.INTERACTIVE_TEXT_ACTIVE.css,
                         }),
-                        (0, n.jsx)(j.A.Title, { children: R.intl.string(R.t.al5EXL) }),
+                        (0, n.jsx)(j.A.Title, {
+                            children: R.intl.string(R.t.al5EXL),
+                        }),
                         (0, n.jsx)(L.A, {}),
                     ],
                 }),
@@ -116,12 +138,17 @@ function V(e) {
                           })
                         : (0, n.jsx)(d.y$y, {}),
                 }),
-                (0, n.jsx)(C.A, { className: N.Dv }),
-                (0, n.jsx)(b.A, { className: N.xC }),
+                (0, n.jsx)(C.A, {
+                    className: N.Dv,
+                }),
+                (0, n.jsx)(b.A, {
+                    className: N.xC,
+                }),
             ],
         })
     );
 }
+
 function U(e) {
     let { guildId: t, productId: r, initialTab: i } = e;
     return (

@@ -1,10 +1,15 @@
-n.d(t, { A: () => b }), n(896048), n(321073);
+n.d(t, {
+    A: () => b,
+}),
+    n(896048),
+    n(321073);
 var r = n(490138),
     i = n(562465),
     a = n(723702),
     s = n(290805),
     o = n(245903),
     l = n(652215);
+
 function c(e, t, n) {
     return (
         t in e
@@ -18,6 +23,7 @@ function c(e, t, n) {
         e
     );
 }
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,6 +40,7 @@ function u(e) {
     }
     return e;
 }
+
 function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -46,6 +53,7 @@ function d(e, t) {
     }
     return n;
 }
+
 function f(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -58,6 +66,7 @@ function f(e, t) {
     );
 }
 let p = new Set(["darwin", "linux", "win32", "ios", "android"]);
+
 function _() {
     if ((0, a.isWeb)()) return "web";
     {
@@ -65,11 +74,12 @@ function _() {
         return p.has(e) ? e : null;
     }
 }
+
 function h() {
     let e = s.y;
     return null != e && r.f.ALL.has(e) ? e : null;
 }
-let m = 120000,
+let m = 12e4,
     g = 100;
 class E {
     _getMetricWithDefaults(e, t) {
@@ -95,7 +105,9 @@ class E {
     }
     distribution(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            r = f(u({}, this._getMetricWithDefaults(e, "distribution")), { value: t });
+            r = f(u({}, this._getMetricWithDefaults(e, "distribution")), {
+                value: t,
+            });
         this._metrics.push(r), (n || this._metrics.length >= g) && this._flush();
     }
     _flush() {
@@ -106,8 +118,8 @@ class E {
                 body: {
                     metrics: e,
                     client_info: {
-                        built_at: "1769101111997",
-                        build_number: "488133",
+                        built_at: "1769110173981",
+                        build_number: "488230",
                     },
                 },
                 retries: 1,

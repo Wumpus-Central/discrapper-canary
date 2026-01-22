@@ -1,4 +1,8 @@
-n.d(t, { A: () => F }), n(134528), n(947204);
+n.d(t, {
+    A: () => F,
+}),
+    n(134528),
+    n(947204);
 var r = n(627968),
     a = n(64700),
     i = n(735438),
@@ -25,7 +29,10 @@ class R extends a.PureComponent {
     render() {
         var e, t;
         let { transport: n, mediaSessionId: a, hidePersonalInformation: i, hostname: s } = this.props;
-        if (null == n) return (0, r.jsx)(o.y$y, { type: o.y$y.Type.SPINNING_CIRCLE });
+        if (null == n)
+            return (0, r.jsx)(o.y$y, {
+                type: o.y$y.Type.SPINNING_CIRCLE,
+            });
         let c =
                 ((e = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
@@ -52,7 +59,10 @@ class R extends a.PureComponent {
                     }
                     return e;
                 })({}, n)),
-                (t = t = { hostname: s }),
+                (t = t =
+                    {
+                        hostname: s,
+                    }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
                     : (function (e, t) {
@@ -86,7 +96,7 @@ class R extends a.PureComponent {
                     null == a && (a = null != n ? n.username : e.id),
                     {
                         displayName: a,
-                        bitrate: t / 1000,
+                        bitrate: t / 1e3,
                         lost: (100 * e.fractionLost) / 256,
                     }
                 );
@@ -103,7 +113,9 @@ class R extends a.PureComponent {
                         id: "bitrate-".concat(t),
                         justify: d.A.Justify.BETWEEN,
                         children: [
-                            (0, r.jsx)("span", { children: "Bitrate:" }),
+                            (0, r.jsx)("span", {
+                                children: "Bitrate:",
+                            }),
                             (0, r.jsxs)("span", {
                                 children: [n.toFixed(2), " Kbps"],
                             }),
@@ -113,7 +125,9 @@ class R extends a.PureComponent {
                         id: "lost-".concat(t),
                         justify: d.A.Justify.BETWEEN,
                         children: [
-                            (0, r.jsx)("span", { children: "Packet Loss:" }),
+                            (0, r.jsx)("span", {
+                                children: "Packet Loss:",
+                            }),
                             (0, r.jsxs)("span", {
                                 children: [a.toFixed(0), "%"],
                             }),
@@ -138,7 +152,11 @@ class R extends a.PureComponent {
                     children: E.intl.string(E.t.wU9IN2) + (null != a ? " - " + a : ""),
                 }),
                 (0, f.C6)(u),
-                0 === A.length ? null : (0, r.jsx)(o.cGx, { className: D.SX }),
+                0 === A.length
+                    ? null
+                    : (0, r.jsx)(o.cGx, {
+                          className: D.SX,
+                      }),
                 (0, f.C6)(A),
             ],
         });

@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -11,6 +13,7 @@ var r = n(627968),
     f = n(536482),
     p = n(985018),
     _ = n(185316);
+
 function h(e) {
     let { guild: t, isActivityRestricted: n, onToggleActivityRestrictedGuild: i } = e,
         l = (0, a.bG)([o.A], () => o.A.getMemberCount(t.id));
@@ -26,7 +29,9 @@ function h(e) {
             }),
             (0, r.jsx)(s.dOG, {
                 label: t.name,
-                description: p.intl.format(p.t.zRl6XR, { count: null != l ? l : 0 }),
+                description: p.intl.format(p.t.zRl6XR, {
+                    count: null != l ? l : 0,
+                }),
                 checked: !n,
                 onChange: (e) =>
                     i({
@@ -145,7 +150,9 @@ let m = function () {
             (0, r.jsx)(s.AC4, {
                 "aria-live": "polite",
                 role: "region",
-                children: p.intl.format(f.default.EvzDff, { count: e.length }),
+                children: p.intl.format(f.default.EvzDff, {
+                    count: e.length,
+                }),
             }),
             (0, r.jsxs)("ul", {
                 className: _.X1,

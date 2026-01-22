@@ -23,8 +23,12 @@ e.exports = function (e) {
         o = {
             scope: "variable",
             variants: [
-                { begin: /\$\d/ },
-                { begin: t.concat(/[$%@](?!")(\^\w\b|#\w+(::\w+)*|\{\w+\}|\w+(::\w*)*)/, "(?![A-Za-z])(?![@$%])") },
+                {
+                    begin: /\$\d/,
+                },
+                {
+                    begin: t.concat(/[$%@](?!")(\^\w\b|#\w+(::\w+)*|\{\w+\}|\w+(::\w*)*)/, "(?![A-Za-z])(?![@$%])"),
+                },
                 {
                     begin: /[$%@](?!")[^\s\w{=]|\$=/,
                     relevance: 0,
@@ -35,11 +39,21 @@ e.exports = function (e) {
         l = {
             className: "number",
             variants: [
-                { match: /0?\.[0-9][0-9_]+\b/ },
-                { match: /\bv?(0|[1-9][0-9_]*(\.[0-9_]+)?|[1-9][0-9_]*)\b/ },
-                { match: /\b0[0-7][0-7_]*\b/ },
-                { match: /\b0x[0-9a-fA-F][0-9a-fA-F_]*\b/ },
-                { match: /\b0b[0-1][0-1_]*\b/ },
+                {
+                    match: /0?\.[0-9][0-9_]+\b/,
+                },
+                {
+                    match: /\bv?(0|[1-9][0-9_]*(\.[0-9_]+)?|[1-9][0-9_]*)\b/,
+                },
+                {
+                    match: /\b0[0-7][0-7_]*\b/,
+                },
+                {
+                    match: /\b0x[0-9a-fA-F][0-9a-fA-F_]*\b/,
+                },
+                {
+                    match: /\b0b[0-1][0-1_]*\b/,
+                },
             ],
             relevance: 0,
         },
@@ -53,7 +67,9 @@ e.exports = function (e) {
         p = [
             o,
             e.HASH_COMMENT_MODE,
-            e.COMMENT(/^=\w/, /=cut/, { endsWithParent: !0 }),
+            e.COMMENT(/^=\w/, /=cut/, {
+                endsWithParent: !0,
+            }),
             a,
             {
                 className: "string",
@@ -123,10 +139,23 @@ e.exports = function (e) {
                     {
                         className: "regexp",
                         variants: [
-                            { begin: d("s|tr|y", t.either(...u, { capture: !0 })) },
-                            { begin: d("s|tr|y", "\\(", "\\)") },
-                            { begin: d("s|tr|y", "\\[", "\\]") },
-                            { begin: d("s|tr|y", "\\{", "\\}") },
+                            {
+                                begin: d(
+                                    "s|tr|y",
+                                    t.either(...u, {
+                                        capture: !0,
+                                    }),
+                                ),
+                            },
+                            {
+                                begin: d("s|tr|y", "\\(", "\\)"),
+                            },
+                            {
+                                begin: d("s|tr|y", "\\[", "\\]"),
+                            },
+                            {
+                                begin: d("s|tr|y", "\\{", "\\}"),
+                            },
                         ],
                         relevance: 2,
                     },
@@ -137,11 +166,27 @@ e.exports = function (e) {
                                 begin: /(m|qr)\/\//,
                                 relevance: 0,
                             },
-                            { begin: f("(?:m|qr)?", /\//, /\//) },
-                            { begin: f("m|qr", t.either(...u, { capture: !0 }), /\1/) },
-                            { begin: f("m|qr", /\(/, /\)/) },
-                            { begin: f("m|qr", /\[/, /\]/) },
-                            { begin: f("m|qr", /\{/, /\}/) },
+                            {
+                                begin: f("(?:m|qr)?", /\//, /\//),
+                            },
+                            {
+                                begin: f(
+                                    "m|qr",
+                                    t.either(...u, {
+                                        capture: !0,
+                                    }),
+                                    /\1/,
+                                ),
+                            },
+                            {
+                                begin: f("m|qr", /\(/, /\)/),
+                            },
+                            {
+                                begin: f("m|qr", /\[/, /\]/),
+                            },
+                            {
+                                begin: f("m|qr", /\{/, /\}/),
+                            },
                         ],
                     },
                 ],

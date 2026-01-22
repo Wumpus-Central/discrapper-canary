@@ -12,7 +12,9 @@ var r = n(562465),
 async function o(e) {
     let { skuId: t, paymentSourceId: n, paymentGateway: o, loadId: l } = e;
     i.h.wait(() => {
-        i.h.dispatch({ type: "ORDER_CREATE_START" });
+        i.h.dispatch({
+            type: "ORDER_CREATE_START",
+        });
     });
     try {
         let e = {};
@@ -31,7 +33,12 @@ async function o(e) {
                 await r.Bo.post({
                     url: s.Rsh.ORDER_CREATE,
                     body: c,
-                    context: null != l && "" !== l ? { load_id: l } : void 0,
+                    context:
+                        null != l && "" !== l
+                            ? {
+                                  load_id: l,
+                              }
+                            : void 0,
                     rejectWithError: !0,
                 })
             ).body;
@@ -45,17 +52,27 @@ async function o(e) {
             u
         );
     } catch (e) {
-        throw (await i.h.dispatch({ type: "ORDER_CREATE_FAIL" }), e);
+        throw (
+            (await i.h.dispatch({
+                type: "ORDER_CREATE_FAIL",
+            }),
+            e)
+        );
     }
 }
 async function l(e) {
     let { orderId: t, updates: n } = e;
     i.h.wait(() => {
-        i.h.dispatch({ type: "ORDER_UPDATE_START" });
+        i.h.dispatch({
+            type: "ORDER_UPDATE_START",
+        });
     });
     try {
         let e = {};
-        "paymentSourceId" in n && (e.billing_facet = { payment_source_id: n.paymentSourceId }),
+        "paymentSourceId" in n &&
+            (e.billing_facet = {
+                payment_source_id: n.paymentSourceId,
+            }),
             await r.Bo.patch({
                 url: s.Rsh.ORDER_UPDATE(t),
                 body: e,
@@ -66,7 +83,9 @@ async function l(e) {
                 orderId: t,
             });
     } catch (e) {
-        await i.h.dispatch({ type: "ORDER_UPDATE_FAIL" });
+        await i.h.dispatch({
+            type: "ORDER_UPDATE_FAIL",
+        });
     }
 }
 async function c(e) {
@@ -77,7 +96,12 @@ async function c(e) {
         let a = await r.Bo.post({
             url: s.Rsh.ORDER_SIGN(t),
             body: e,
-            context: null != i && "" !== i ? { load_id: i } : void 0,
+            context:
+                null != i && "" !== i
+                    ? {
+                          load_id: i,
+                      }
+                    : void 0,
             rejectWithError: !1,
         });
         if (null == a.body) throw Error("Invalid sign order response");

@@ -6,11 +6,13 @@ n.d(t, {
 var r = n(627968),
     i = n(64700);
 let l = i.createContext(void 0);
+
 function s() {
     let e = i.useContext(l);
     if (null == e) throw Error("No edit state; are you missing an <EditStateContextProvider />?");
     return e;
 }
+
 function a(e) {
     let { children: t } = e,
         n = (function (e, t) {

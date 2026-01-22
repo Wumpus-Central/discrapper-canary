@@ -1,4 +1,9 @@
-n.d(t, { A: () => C }), n(321073), n(896048), n(492834);
+n.d(t, {
+    A: () => C,
+}),
+    n(321073),
+    n(896048),
+    n(492834);
 var a = n(627968),
     l = n(64700),
     i = n(311907),
@@ -20,6 +25,7 @@ var a = n(627968),
     y = n(49999),
     _ = n(518477),
     A = n(985018);
+
 function C(e) {
     let { targetElementRef: t, onClose: n } = e,
         [C, S] = l.useState(!1),
@@ -32,7 +38,9 @@ function C(e) {
                 a = (0, x.A)(n),
                 r = l.useMemo(() => a.filter((e) => e instanceof h.R), [a]),
                 s =
-                    ((e = (0, d.ul)({ location: "UserProfileAccountPopoutApplicationWidgetCoachmark" })),
+                    ((e = (0, d.ul)({
+                        location: "UserProfileAccountPopoutApplicationWidgetCoachmark",
+                    })),
                     l.useMemo(() => (null == e ? void 0 : e.filter((e) => e.isEligibleForEditProfileUpsell())), [e])),
                 m = l.useMemo(() => {
                     var e;
@@ -99,7 +107,9 @@ function C(e) {
                                     src: s.config.editProfileUpsellImage,
                                 }
                               : void 0,
-                      title: A.intl.format(A.t.TXDztH, { applicationName: s.application.name }),
+                      title: A.intl.format(A.t.TXDztH, {
+                          applicationName: s.application.name,
+                      }),
                       body: o ? A.intl.string(A.t["63Kso0"]) : A.intl.string(A.t.HwXoeC),
                       onRequestClose: () => i(y.i.USER_DISMISS),
                       actions: [
@@ -112,7 +122,9 @@ function C(e) {
                                                 .then(() => {
                                                     let e;
                                                     return (
-                                                        (e = new h.R({ applicationId: s.application.id })),
+                                                        (e = new h.R({
+                                                            applicationId: s.application.id,
+                                                        })),
                                                         void ((0, f.Y5)(e),
                                                         O(
                                                             (function (e) {
@@ -145,7 +157,9 @@ function C(e) {
                                                                 }
                                                                 return e;
                                                             })(
-                                                                { action: "WIDGET_ADDED" },
+                                                                {
+                                                                    action: "WIDGET_ADDED",
+                                                                },
                                                                 e.getProfileEditAnalyticsOptions(),
                                                             ),
                                                         ),

@@ -1,4 +1,6 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -6,6 +8,7 @@ var i = n(311907),
     s = n(922590),
     o = n(622543),
     l = n(985018);
+
 function c(e) {
     let { userId: t, className: n } = e,
         c = (0, s.f1)(t),

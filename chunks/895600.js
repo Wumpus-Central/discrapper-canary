@@ -1,4 +1,7 @@
-r.d(t, { A: () => u }), r(228524);
+r.d(t, {
+    A: () => u,
+}),
+    r(228524);
 var s = r(627968);
 r(64700);
 var l = r(854378),
@@ -18,6 +21,7 @@ let c = {
     [a.IZ.LEAGUE_CLUBS]: r(629278),
     [a.IZ.GITHUB_HACKATHON]: r(263135),
 };
+
 function u(e) {
     let { headerId: t, guildTemplate: r } = e,
         u = r.code,
@@ -37,7 +41,9 @@ function u(e) {
                     id: t,
                     children: e,
                 }),
-                (0, s.jsx)(l.tK, { children: c }),
+                (0, s.jsx)(l.tK, {
+                    children: c,
+                }),
                 r.state === a.QB.RESOLVED
                     ? (0, s.jsx)(i.F, {
                           className: d.t5,

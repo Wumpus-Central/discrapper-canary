@@ -1,4 +1,8 @@
-n.d(t, { A: () => E }), n(747238), n(812715);
+n.d(t, {
+    A: () => E,
+}),
+    n(747238),
+    n(812715);
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -16,6 +20,7 @@ var r = n(627968),
     y = n(378058),
     O = n(652215),
     A = n(985018);
+
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -41,6 +46,7 @@ function v(e) {
     }
     return e;
 }
+
 function j(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -59,13 +65,21 @@ function j(e, t) {
         e
     );
 }
+
 function h(e) {
     return u.Ay.getByName(e.replace(/(^:|:$)/g, ""));
 }
+
 function E(e) {
     let { type: t, id: n, name: E, isInExpressionPicker: S = !1 } = e,
         { location: _ } = (0, c.p)(),
-        D = l.useMemo(() => j(v({}, _), { section: S ? O.JJy.EXPRESSION_PICKER : O.JJy.CONTEXT_MENU }), [_, S]),
+        D = l.useMemo(
+            () =>
+                j(v({}, _), {
+                    section: S ? O.JJy.EXPRESSION_PICKER : O.JJy.CONTEXT_MENU,
+                }),
+            [_, S],
+        ),
         I = (0, b.ln)(),
         P = (0, i.bG)([m.A], () => (t === f.g.STICKER && null != n ? m.A.getStickerById(n) : null)),
         T = null != P && I.includes(P.id),
@@ -93,7 +107,9 @@ function E(e) {
                     action: () => {
                         (0, p.Dt)({
                             sticker: P,
-                            location: j(v({}, D), { object: O.ZSU.STICKER }),
+                            location: j(v({}, D), {
+                                object: O.ZSU.STICKER,
+                            }),
                         }),
                             (0, g.uK)(null == P ? void 0 : P.id);
                     },
@@ -111,7 +127,9 @@ function E(e) {
                     action: () => {
                         (0, s.C5)({
                             emoji: w,
-                            location: j(v({}, D), { object: O.ZSU.EMOJI }),
+                            location: j(v({}, D), {
+                                object: O.ZSU.EMOJI,
+                            }),
                         }),
                             (0, a.V4)(w);
                     },

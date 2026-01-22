@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var l = n(627968),
     a = n(64700),
     r = n(311907),
@@ -18,8 +20,15 @@ let p = function (e) {
         m =
             t === c.lj || null == h
                 ? o.intl.string(o.t["FVJt+8"])
-                : o.intl.formatToPlainString(o.t.FjCaNB, { categoryName: h }),
-        b = t === c.lj ? o.intl.string(o.t.GXiMta) : o.intl.format(o.t.JaLoFF, { onClick: n });
+                : o.intl.formatToPlainString(o.t.FjCaNB, {
+                      categoryName: h,
+                  }),
+        b =
+            t === c.lj
+                ? o.intl.string(o.t.GXiMta)
+                : o.intl.format(o.t.JaLoFF, {
+                      onClick: n,
+                  });
     return (0, l.jsxs)("div", {
         className: d.kL,
         children: [

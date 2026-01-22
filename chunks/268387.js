@@ -1,5 +1,7 @@
 let r;
-n.d(t, { A: () => A });
+n.d(t, {
+    A: () => A,
+});
 var i,
     a = n(735438),
     s = n.n(a),
@@ -7,6 +9,7 @@ var i,
     l = n(506774),
     c = n(73153),
     u = n(652215);
+
 function d(e, t, n) {
     return (
         t in e
@@ -28,10 +31,12 @@ let f = "GameLibraryViewStore",
     g = s().debounce(() => {
         (m = !1), O.emitChange();
     }, p);
+
 function E(e) {
     let { key: t, isKeyboardEvent: n } = e;
     n && ((m = !0), g()), (r = t);
 }
+
 function b(e) {
     let { direction: t, key: n } = e;
     (_ = t),

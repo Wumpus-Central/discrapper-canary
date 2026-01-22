@@ -1,4 +1,7 @@
-n.d(t, { p: () => c }), n(747238);
+n.d(t, {
+    p: () => c,
+}),
+    n(747238);
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -14,7 +17,9 @@ let c = {
             name: "Avatar",
             component: function (e) {
                 let { size: t = l._3.SIZE_48, status: n } = e,
-                    { user: o } = (0, i.cf)([a.default], () => ({ user: a.default.getCurrentUser() })),
+                    { user: o } = (0, i.cf)([a.default], () => ({
+                        user: a.default.getCurrentUser(),
+                    })),
                     c = Number(t.split("_")[1]);
                 return (0, r.jsx)(s.eu, {
                     src: null == o ? void 0 : o.getAvatarURL(void 0, c),

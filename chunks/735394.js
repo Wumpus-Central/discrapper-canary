@@ -1,4 +1,6 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var r = n(136601),
     i = n(44134),
     a = n(216803),
@@ -12,6 +14,7 @@ var r = n(136601),
     p = "afternoon",
     _ = "evening",
     h = "night";
+
 function m(e, t) {
     var n = e > 0 ? "-" : "+",
         r = Math.abs(e),
@@ -21,9 +24,11 @@ function m(e, t) {
     var s = t || "";
     return n + String(i) + s + (0, l.A)(a, 2);
 }
+
 function g(e, t) {
     return e % 60 == 0 ? (e > 0 ? "-" : "+") + (0, l.A)(Math.abs(e) / 60, 2) : E(e, t);
 }
+
 function E(e, t) {
     var n = t || "",
         r = e > 0 ? "-" : "+",
@@ -37,18 +42,26 @@ let b = {
             case "G":
             case "GG":
             case "GGG":
-                return n.era(r, { width: "abbreviated" });
+                return n.era(r, {
+                    width: "abbreviated",
+                });
             case "GGGGG":
-                return n.era(r, { width: "narrow" });
+                return n.era(r, {
+                    width: "narrow",
+                });
             default:
-                return n.era(r, { width: "wide" });
+                return n.era(r, {
+                    width: "wide",
+                });
         }
     },
     y: function (e, t, n) {
         if ("yo" === t) {
             var r = e.getUTCFullYear(),
                 i = r > 0 ? r : 1 - r;
-            return n.ordinalNumber(i, { unit: "year" });
+            return n.ordinalNumber(i, {
+                unit: "year",
+            });
         }
         return c.A.y(e, t);
     },
@@ -59,7 +72,11 @@ let b = {
             var s = a % 100;
             return (0, l.A)(s, 2);
         }
-        return "Yo" === t ? n.ordinalNumber(a, { unit: "year" }) : (0, l.A)(a, t.length);
+        return "Yo" === t
+            ? n.ordinalNumber(a, {
+                  unit: "year",
+              })
+            : (0, l.A)(a, t.length);
     },
     R: function (e, t) {
         var n = (0, a.A)(e);
@@ -77,7 +94,9 @@ let b = {
             case "QQ":
                 return (0, l.A)(r, 2);
             case "Qo":
-                return n.ordinalNumber(r, { unit: "quarter" });
+                return n.ordinalNumber(r, {
+                    unit: "quarter",
+                });
             case "QQQ":
                 return n.quarter(r, {
                     width: "abbreviated",
@@ -103,7 +122,9 @@ let b = {
             case "qq":
                 return (0, l.A)(r, 2);
             case "qo":
-                return n.ordinalNumber(r, { unit: "quarter" });
+                return n.ordinalNumber(r, {
+                    unit: "quarter",
+                });
             case "qqq":
                 return n.quarter(r, {
                     width: "abbreviated",
@@ -128,7 +149,9 @@ let b = {
             case "MM":
                 return c.A.M(e, t);
             case "Mo":
-                return n.ordinalNumber(r + 1, { unit: "month" });
+                return n.ordinalNumber(r + 1, {
+                    unit: "month",
+                });
             case "MMM":
                 return n.month(r, {
                     width: "abbreviated",
@@ -154,7 +177,9 @@ let b = {
             case "LL":
                 return (0, l.A)(r + 1, 2);
             case "Lo":
-                return n.ordinalNumber(r + 1, { unit: "month" });
+                return n.ordinalNumber(r + 1, {
+                    unit: "month",
+                });
             case "LLL":
                 return n.month(r, {
                     width: "abbreviated",
@@ -174,18 +199,34 @@ let b = {
     },
     w: function (e, t, n, r) {
         var i = (0, s.A)(e, r);
-        return "wo" === t ? n.ordinalNumber(i, { unit: "week" }) : (0, l.A)(i, t.length);
+        return "wo" === t
+            ? n.ordinalNumber(i, {
+                  unit: "week",
+              })
+            : (0, l.A)(i, t.length);
     },
     I: function (e, t, n) {
         var r = (0, i.A)(e);
-        return "Io" === t ? n.ordinalNumber(r, { unit: "week" }) : (0, l.A)(r, t.length);
+        return "Io" === t
+            ? n.ordinalNumber(r, {
+                  unit: "week",
+              })
+            : (0, l.A)(r, t.length);
     },
     d: function (e, t, n) {
-        return "do" === t ? n.ordinalNumber(e.getUTCDate(), { unit: "date" }) : c.A.d(e, t);
+        return "do" === t
+            ? n.ordinalNumber(e.getUTCDate(), {
+                  unit: "date",
+              })
+            : c.A.d(e, t);
     },
     D: function (e, t, n) {
         var i = (0, r.A)(e);
-        return "Do" === t ? n.ordinalNumber(i, { unit: "dayOfYear" }) : (0, l.A)(i, t.length);
+        return "Do" === t
+            ? n.ordinalNumber(i, {
+                  unit: "dayOfYear",
+              })
+            : (0, l.A)(i, t.length);
     },
     E: function (e, t, n) {
         var r = e.getUTCDay();
@@ -223,7 +264,9 @@ let b = {
             case "ee":
                 return (0, l.A)(a, 2);
             case "eo":
-                return n.ordinalNumber(a, { unit: "day" });
+                return n.ordinalNumber(a, {
+                    unit: "day",
+                });
             case "eee":
                 return n.day(i, {
                     width: "abbreviated",
@@ -255,7 +298,9 @@ let b = {
             case "cc":
                 return (0, l.A)(a, t.length);
             case "co":
-                return n.ordinalNumber(a, { unit: "day" });
+                return n.ordinalNumber(a, {
+                    unit: "day",
+                });
             case "ccc":
                 return n.day(i, {
                     width: "abbreviated",
@@ -287,7 +332,9 @@ let b = {
             case "ii":
                 return (0, l.A)(i, t.length);
             case "io":
-                return n.ordinalNumber(i, { unit: "day" });
+                return n.ordinalNumber(i, {
+                    unit: "day",
+                });
             case "iii":
                 return n.day(r, {
                     width: "abbreviated",
@@ -393,26 +440,51 @@ let b = {
     h: function (e, t, n) {
         if ("ho" === t) {
             var r = e.getUTCHours() % 12;
-            return 0 === r && (r = 12), n.ordinalNumber(r, { unit: "hour" });
+            return (
+                0 === r && (r = 12),
+                n.ordinalNumber(r, {
+                    unit: "hour",
+                })
+            );
         }
         return c.A.h(e, t);
     },
     H: function (e, t, n) {
-        return "Ho" === t ? n.ordinalNumber(e.getUTCHours(), { unit: "hour" }) : c.A.H(e, t);
+        return "Ho" === t
+            ? n.ordinalNumber(e.getUTCHours(), {
+                  unit: "hour",
+              })
+            : c.A.H(e, t);
     },
     K: function (e, t, n) {
         var r = e.getUTCHours() % 12;
-        return "Ko" === t ? n.ordinalNumber(r, { unit: "hour" }) : (0, l.A)(r, t.length);
+        return "Ko" === t
+            ? n.ordinalNumber(r, {
+                  unit: "hour",
+              })
+            : (0, l.A)(r, t.length);
     },
     k: function (e, t, n) {
         var r = e.getUTCHours();
-        return (0 === r && (r = 24), "ko" === t) ? n.ordinalNumber(r, { unit: "hour" }) : (0, l.A)(r, t.length);
+        return (0 === r && (r = 24), "ko" === t)
+            ? n.ordinalNumber(r, {
+                  unit: "hour",
+              })
+            : (0, l.A)(r, t.length);
     },
     m: function (e, t, n) {
-        return "mo" === t ? n.ordinalNumber(e.getUTCMinutes(), { unit: "minute" }) : c.A.m(e, t);
+        return "mo" === t
+            ? n.ordinalNumber(e.getUTCMinutes(), {
+                  unit: "minute",
+              })
+            : c.A.m(e, t);
     },
     s: function (e, t, n) {
-        return "so" === t ? n.ordinalNumber(e.getUTCSeconds(), { unit: "second" }) : c.A.s(e, t);
+        return "so" === t
+            ? n.ordinalNumber(e.getUTCSeconds(), {
+                  unit: "second",
+              })
+            : c.A.s(e, t);
     },
     S: function (e, t) {
         return c.A.S(e, t);
@@ -465,7 +537,7 @@ let b = {
         }
     },
     t: function (e, t, n, r) {
-        var i = Math.floor((r._originalDate || e).getTime() / 1000);
+        var i = Math.floor((r._originalDate || e).getTime() / 1e3);
         return (0, l.A)(i, t.length);
     },
     T: function (e, t, n, r) {

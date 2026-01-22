@@ -1,13 +1,26 @@
 e.exports = function (e) {
     let t = e.regex,
-        n = e.COMMENT("//", "$", { contains: [{ begin: /\\\n/ }] }),
+        n = e.COMMENT("//", "$", {
+            contains: [
+                {
+                    begin: /\\\n/,
+                },
+            ],
+        }),
         r = "decltype\\(auto\\)",
         i = "[a-zA-Z_]\\w*::",
         a = "<[^<>]+>",
         s = "(" + r + "|" + t.optional(i) + "[a-zA-Z_]\\w*" + t.optional(a) + ")",
         o = {
             className: "type",
-            variants: [{ begin: "\\b[a-z\\d_]*_t\\b" }, { match: /\batomic_[a-z]{3,6}\b/ }],
+            variants: [
+                {
+                    begin: "\\b[a-z\\d_]*_t\\b",
+                },
+                {
+                    match: /\batomic_[a-z]{3,6}\b/,
+                },
+            ],
         },
         l = "\\\\(x[0-9A-Fa-f]{2}|u[0-9A-Fa-f]{4,8}|[0-7]{3}|\\S)",
         c = {
@@ -33,12 +46,18 @@ e.exports = function (e) {
         u = {
             className: "number",
             variants: [
-                { match: /\b(0b[01']+)/ },
-                { match: /(-?)\b([\d']+(\.[\d']*)?|\.[\d']+)((ll|LL|l|L)(u|U)?|(u|U)(ll|LL|l|L)?|f|F|b|B)/ },
+                {
+                    match: /\b(0b[01']+)/,
+                },
+                {
+                    match: /(-?)\b([\d']+(\.[\d']*)?|\.[\d']+)((ll|LL|l|L)(u|U)?|(u|U)(ll|LL|l|L)?|f|F|b|B)/,
+                },
                 {
                     match: /(-?)\b(0[xX][a-fA-F0-9]+(?:'[a-fA-F0-9]+)*(?:\.[a-fA-F0-9]*(?:'[a-fA-F0-9]*)*)?(?:[pP][-+]?[0-9]+)?(l|L)?(u|U)?)/,
                 },
-                { match: /(-?)\b\d+(?:'\d+)*(?:\.\d*(?:'\d*)*)?(?:[eE][-+]?\d+)?/ },
+                {
+                    match: /(-?)\b\d+(?:'\d+)*(?:\.\d*(?:'\d*)*)?(?:[eE][-+]?\d+)?/,
+                },
             ],
             relevance: 0,
         },
@@ -55,7 +74,9 @@ e.exports = function (e) {
                     begin: /\\\n/,
                     relevance: 0,
                 },
-                e.inherit(c, { className: "string" }),
+                e.inherit(c, {
+                    className: "string",
+                }),
                 {
                     className: "string",
                     begin: /<.*?>/,
@@ -195,7 +216,11 @@ e.exports = function (e) {
                 {
                     begin: p,
                     returnBegin: !0,
-                    contains: [e.inherit(f, { className: "title.function" })],
+                    contains: [
+                        e.inherit(f, {
+                            className: "title.function",
+                        }),
+                    ],
                     relevance: 0,
                 },
                 {
@@ -245,7 +270,12 @@ e.exports = function (e) {
                 className: "class",
                 beginKeywords: "enum class struct union",
                 end: /[{;:<>=]/,
-                contains: [{ beginKeywords: "final class struct" }, e.TITLE_MODE],
+                contains: [
+                    {
+                        beginKeywords: "final class struct",
+                    },
+                    e.TITLE_MODE,
+                ],
             },
         ]),
         exports: {

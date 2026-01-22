@@ -16,6 +16,7 @@ n.d(t, {
 var r = n(499979),
     i = n(687658),
     a = n(499954);
+
 function s(e, t, n) {
     return (
         t in e
@@ -29,7 +30,7 @@ function s(e, t, n) {
         e
     );
 }
-let o = [0, 500000, 1000000, 1500000, 2000000, 3000000, 4000000, 5000000, 6000000, 7000000, 8000000],
+let o = [0, 5e5, 1e6, 15e5, 2e6, 3e6, 4e6, 5e6, 6e6, 7e6, 8e6],
     l = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60],
     c = [720, 480, 360],
     u = [
@@ -153,16 +154,19 @@ var m = (function (e) {
         e
     );
 })({});
+
 function g(e) {
     if (null == e) return "unknown";
     for (let t of Object.keys(_)) if (e.toLowerCase().includes(t)) return _[t];
     return "uncategorized";
 }
+
 function E(e) {
     if (null == e) return "unknown";
     for (let t of Object.keys(h)) if (e.toLowerCase().includes(t)) return h[t];
     return "uncategorized";
 }
+
 function b(e) {
     if (null == e) return "UNKNOWN";
     if ("H264" === (e = e.toUpperCase())) return "H264";
@@ -359,7 +363,7 @@ class O {
                 localWant: m,
             } = t,
             { timestamp: g } = n,
-            E = (s - g) / 1000;
+            E = (s - g) / 1e3;
         if (
             ((this.intervalTotal += E),
             (this.resolutionTotal += u * E),
@@ -393,7 +397,7 @@ class O {
         c.forEach((e) => {
             u <= e && (this.resolutionBuckets[e] += E);
         });
-        let A = (s - O) / 1000,
+        let A = (s - O) / 1e3,
             v = ((i - b) * 8) / A,
             S = (a - y) / A;
         o.forEach((e) => {
@@ -501,7 +505,7 @@ class A extends O {
         let i =
             (this.statsWindow[this.statsWindow.length - 1].timestamp -
                 this.statsWindow[this.statsWindow.length - 2].timestamp) /
-            1000;
+            1e3;
         (this.targetFrames = this.targetFrames + e * i),
             (this.targetBytesNetwork = this.targetBytesNetwork + (t / 8) * i),
             (this.targetBytesMax = this.targetBytesMax + (n / 8) * i),

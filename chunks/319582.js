@@ -15,6 +15,7 @@ let c = {
     [o.Wb.SAFETY_SC_FILTERS_SEXUAL_MEDIA]: s.A,
     [o.Wb.SAFETY_SC_FILTERS_GRAPHIC_MEDIA]: i.A,
 };
+
 function d(e) {
     return l.useMemo(() => {
         var t;
@@ -30,6 +31,7 @@ function d(e) {
             : null;
     }, [e]);
 }
+
 function u(e, t) {
     return l.useMemo(
         () =>

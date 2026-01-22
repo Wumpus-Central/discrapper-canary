@@ -1,7 +1,11 @@
-n.d(t, { A: () => p }), n(896048);
+n.d(t, {
+    A: () => p,
+}),
+    n(896048);
 var r,
     i = n(311907),
     a = n(73153);
+
 function s(e, t, n) {
     return (
         t in e
@@ -17,14 +21,17 @@ function s(e, t, n) {
 }
 let o = new Set(),
     l = {};
+
 function c(e) {
     let { gameId: t, isLaunchable: n } = e;
     l[t] = n;
 }
+
 function u(e) {
     let { applicationId: t } = e;
     o.add(t);
 }
+
 function d(e) {
     let { applicationId: t } = e;
     o.delete(t);

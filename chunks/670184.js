@@ -1,6 +1,9 @@
-n.d(t, { U: () => a });
+n.d(t, {
+    U: () => a,
+});
 var r = n(74172),
     i = n(64700);
+
 function a(e) {
     let t = (0, r.Q)({
             usage: "search",

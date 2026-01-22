@@ -12,6 +12,7 @@ var i = n(311907),
     s = n(808728),
     a = n(64749),
     c = n(652215);
+
 function o(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
@@ -71,6 +72,7 @@ function o(e, t) {
         );
     }, [e, n, r, t]);
 }
+
 function d(e) {
     let {
             guildId: t,

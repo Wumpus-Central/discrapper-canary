@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -21,7 +23,9 @@ let d = (e) => {
     return (0, r.jsx)(o.Y.Consumer, {
         children: (e) =>
             (0, r.jsxs)("div", {
-                className: a()(i, u.iE, { [u.y7]: e.disableInteractions }),
+                className: a()(i, u.iE, {
+                    [u.y7]: e.disableInteractions,
+                }),
                 children: [
                     f && null == t
                         ? (0, r.jsx)("div", {

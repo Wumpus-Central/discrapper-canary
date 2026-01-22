@@ -1,4 +1,8 @@
-n.d(t, { A: () => m }), n(896048), n(321073);
+n.d(t, {
+    A: () => m,
+}),
+    n(896048),
+    n(321073);
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -10,6 +14,7 @@ var r = n(627968),
     d = n(652215),
     f = n(379066);
 let p = [];
+
 function _(e, t) {
     let n = (0, o.A)(e, t);
     return i.useMemo(() => {
@@ -22,6 +27,7 @@ function _(e, t) {
         );
     }, [n]);
 }
+
 function h(e) {
     let { application: t } = e;
     return (0, r.jsxs)("div", {
@@ -31,10 +37,13 @@ function h(e) {
                 game: t,
                 size: l.M.XXSMALL,
             }),
-            (0, r.jsx)("span", { children: t.name }),
+            (0, r.jsx)("span", {
+                children: t.name,
+            }),
         ],
     });
 }
+
 function m(e) {
     let { menuItemId: t, user: n, label: o, gameRelationships: f, onClick: m, color: g } = e,
         { id: E, bot: b } = n,
@@ -66,7 +75,9 @@ function m(e) {
                   color: g,
                   id: t,
                   label: o,
-                  subtext: (0, r.jsx)(h, { application: n }),
+                  subtext: (0, r.jsx)(h, {
+                      application: n,
+                  }),
                   onFocus: S,
                   action: () => m(n),
               });

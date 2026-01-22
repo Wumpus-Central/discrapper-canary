@@ -9,6 +9,7 @@ n.d(t, {
     n(284009);
 var r = n(9865),
     i = n(661191);
+
 function a(e, t, n) {
     return (
         t in e
@@ -22,6 +23,7 @@ function a(e, t, n) {
         e
     );
 }
+
 function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -38,9 +40,11 @@ function s(e) {
     }
     return e;
 }
+
 function o(e) {
     return e.sort(l), e;
 }
+
 function l(e, t) {
     let n = e.guildId;
     return e.id === n
@@ -53,9 +57,11 @@ function l(e, t) {
             ? t.position - e.position
             : i.default.compare(e.id, t.id);
 }
+
 function c(e, t) {
     return 0 > l(e, t);
 }
+
 function u(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
         i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [];

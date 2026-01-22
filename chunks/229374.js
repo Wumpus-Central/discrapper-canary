@@ -1,4 +1,9 @@
-n.d(t, { A: () => P }), n(747238), n(321073), n(896048);
+n.d(t, {
+    A: () => P,
+}),
+    n(747238),
+    n(321073),
+    n(896048);
 var l = n(627968),
     r = n(64700),
     a = n(503698),
@@ -31,6 +36,7 @@ var l = n(627968),
     M = n(652215),
     v = n(985018),
     j = n(274808);
+
 function U(e) {
     let { parentChannel: t, onSelectChannel: n } = e;
     if ((null == t ? void 0 : t.name) == null) return null;
@@ -64,6 +70,7 @@ function U(e) {
               children: a,
           });
 }
+
 function y(e) {
     var t, n, a;
     let {
@@ -97,7 +104,9 @@ function y(e) {
                 content: F,
                 embeds: [],
             },
-            { postProcessor: u },
+            {
+                postProcessor: u,
+            },
         ),
         K = r.useRef(null),
         [Y, z] = r.useState(!1);
@@ -156,7 +165,9 @@ function y(e) {
                             message: e,
                             index: n,
                             onJump: x,
-                            listItemProps: v.getItemProps({ index: n }),
+                            listItemProps: v.getItemProps({
+                                index: n,
+                            }),
                         },
                         "search-result-".concat(n),
                     );
@@ -190,7 +201,9 @@ let P = r.memo(function (e) {
                 let n = () => {
                     let t = S.A.getChannel(e.channel_id),
                         n = null != t ? t.getGuildId() : null;
-                    u.A.trackJump(e.channel_id, e.id, "Search Results", { search_id: b }),
+                    u.A.trackJump(e.channel_id, e.id, "Search Results", {
+                        search_id: b,
+                    }),
                         (0, h.pX)(M.BVt.CHANNEL(n, e.channel_id, e.id));
                 };
                 (0, f.A)(e, n) && n();
@@ -302,7 +315,13 @@ let P = r.memo(function (e) {
                             });
                     }
                     return e;
-                })({ ref: z }, W.getContainerProps(), J)),
+                })(
+                    {
+                        ref: z,
+                    },
+                    W.getContainerProps(),
+                    J,
+                )),
                 (a = a =
                     {
                         "aria-busy": P,
@@ -330,20 +349,34 @@ let P = r.memo(function (e) {
                           null == p || p(!k);
                       },
                       children: [
-                          (0, l.jsx)("div", { className: j.y }),
+                          (0, l.jsx)("div", {
+                              className: j.y,
+                          }),
                           (0, l.jsx)("div", {
                               className: j.__invalid_resultsBlockedText,
                               children: k
                                   ? A > 0 && T > 0
-                                      ? v.intl.formatToPlainString(v.t.OvJs9w, { count: A + T })
+                                      ? v.intl.formatToPlainString(v.t.OvJs9w, {
+                                            count: A + T,
+                                        })
                                       : A > 0
-                                        ? v.intl.formatToPlainString(v.t["n/1QFS"], { count: A })
-                                        : v.intl.formatToPlainString(v.t.ypezTA, { count: T })
+                                        ? v.intl.formatToPlainString(v.t["n/1QFS"], {
+                                              count: A,
+                                          })
+                                        : v.intl.formatToPlainString(v.t.ypezTA, {
+                                              count: T,
+                                          })
                                   : A > 0 && T > 0
-                                    ? v.intl.formatToPlainString(v.t.EJHRcV, { count: A + T })
+                                    ? v.intl.formatToPlainString(v.t.EJHRcV, {
+                                          count: A + T,
+                                      })
                                     : A > 0
-                                      ? v.intl.formatToPlainString(v.t.HTE8JP, { count: A })
-                                      : v.intl.formatToPlainString(v.t.e7f8r9, { count: T }),
+                                      ? v.intl.formatToPlainString(v.t.HTE8JP, {
+                                            count: A,
+                                        })
+                                      : v.intl.formatToPlainString(v.t.e7f8r9, {
+                                            count: T,
+                                        }),
                           }),
                       ],
                   })

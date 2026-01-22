@@ -42,7 +42,9 @@ let p = (0, f.createContext)(null),
                 y,
                 O,
             ),
-            { isFocusVisible: I, focusProps: T } = (0, s.o)({ within: !0 }),
+            { isFocusVisible: I, focusProps: T } = (0, s.o)({
+                within: !0,
+            }),
             C = (0, i.Sl)({
                 ...e,
                 id: void 0,
@@ -54,7 +56,9 @@ let p = (0, f.createContext)(null),
                     state: y,
                 },
             }),
-            N = (0, c.$)(g, { global: !0 });
+            N = (0, c.$)(g, {
+                global: !0,
+            });
         return f.createElement(
             i.Kq,
             {
@@ -94,13 +98,19 @@ let p = (0, f.createContext)(null),
     E = (0, f.forwardRef)(function (e, t) {
         let { role: n = "group" } = e,
             { panelProps: a, panelRef: o } = (0, f.useContext)(m),
-            { isFocusVisible: l, focusProps: p } = (0, s.o)({ within: !0 }),
+            { isFocusVisible: l, focusProps: p } = (0, s.o)({
+                within: !0,
+            }),
             _ = (0, i.Sl)({
                 ...e,
                 defaultClassName: "react-aria-DisclosurePanel",
-                values: { isFocusVisibleWithin: l },
+                values: {
+                    isFocusVisibleWithin: l,
+                },
             }),
-            h = (0, c.$)(e, { global: !0 });
+            h = (0, c.$)(e, {
+                global: !0,
+            });
         return f.createElement(
             "div",
             {

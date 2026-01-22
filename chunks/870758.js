@@ -1,10 +1,13 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
     l = n(239705),
     s = n(985018),
     a = n(86181);
+
 function c(e) {
     let { action: t, triggerType: n, toggled: c, onToggleAction: o } = e,
         d = (e) => () => o(e),

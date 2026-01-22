@@ -1,4 +1,7 @@
-n.d(t, { A: () => L }), n(938796);
+n.d(t, {
+    A: () => L,
+}),
+    n(938796);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -26,6 +29,7 @@ var r = n(627968),
     C = n(652215),
     N = n(985018),
     R = n(415097);
+
 function w(e, t, n) {
     return (
         t in e
@@ -39,6 +43,7 @@ function w(e, t, n) {
         e
     );
 }
+
 function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -55,6 +60,7 @@ function P(e) {
     }
     return e;
 }
+
 function D(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -67,6 +73,7 @@ function D(e, t) {
     }
     return n;
 }
+
 function x(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -78,6 +85,7 @@ function x(e, t) {
         e
     );
 }
+
 function L(e) {
     var t;
     let { application: a, context: w, className: D, sectionName: L } = e,
@@ -101,7 +109,9 @@ function L(e) {
             id: a.id,
             label: N.intl.string(N.t["+NP/b2"]),
         }),
-        Y = (0, I.r)({ application: a }),
+        Y = (0, I.r)({
+            application: a,
+        }),
         W = (0, o.Lt)(null != (t = a.flags) ? t : 0, C.gfo.EMBEDDED),
         K = "channel" === w.type ? w.channel : void 0;
     return (0, r.jsxs)("div", {
@@ -114,7 +124,14 @@ function L(e) {
                               applicationId: a.id,
                               referrerId: null == B ? void 0 : B.id,
                           })
-                        : (0, p.V)(P({ id: a.id }, k));
+                        : (0, p.V)(
+                              P(
+                                  {
+                                      id: a.id,
+                                  },
+                                  k,
+                              ),
+                          );
                     (0, O.C)(e, () =>
                         (0, c.showToast)((0, c.createToast)(N.intl.string(N.t["L/PwZf"]), c.ToastType.SUCCESS)),
                     ),
@@ -208,7 +225,9 @@ function L(e) {
                                     Y,
                                 ],
                             }),
-                            (0, r.jsx)(c.rXV, { children: H }),
+                            (0, r.jsx)(c.rXV, {
+                                children: H,
+                            }),
                         ],
                     });
                 },
@@ -217,15 +236,23 @@ function L(e) {
                 children: (e) =>
                     (0, r.jsx)(
                         c.DUT,
-                        x(P({ innerRef: j }, e), {
-                            onClick: e.onClick,
-                            className: s()(R.v, D),
-                            "aria-label": N.intl.string(N.t["UKOtz+"]),
-                            children: (0, r.jsx)(c.jNK, {
-                                size: "sm",
-                                color: c.LU0.colors.INTERACTIVE_TEXT_ACTIVE,
-                            }),
-                        }),
+                        x(
+                            P(
+                                {
+                                    innerRef: j,
+                                },
+                                e,
+                            ),
+                            {
+                                onClick: e.onClick,
+                                className: s()(R.v, D),
+                                "aria-label": N.intl.string(N.t["UKOtz+"]),
+                                children: (0, r.jsx)(c.jNK, {
+                                    size: "sm",
+                                    color: c.LU0.colors.INTERACTIVE_TEXT_ACTIVE,
+                                }),
+                            },
+                        ),
                     ),
             }),
         ],

@@ -26,6 +26,7 @@ var r = n(627968),
     O = n(379649);
 let A = "VoiceChannelStatusModal",
     v = 500;
+
 function S(e) {
     let { channel: t, transitionState: n, sourceAnalyticsLocations: S, onClose: I } = e,
         T = (0, s.bG)([u.A], () => u.A.getChannelStatus(t)),
@@ -49,9 +50,17 @@ function S(e) {
             let { invalidEmojis: n } = e;
             if (null != n && n.length > 0) {
                 let { errorMessage: e } = c.A.validateMessage(n, L, t.id);
-                return x(e), P(!1), { hasErrors: !0 };
+                return (
+                    x(e),
+                    P(!1),
+                    {
+                        hasErrors: !0,
+                    }
+                );
             }
-            return { hasErrors: !1 };
+            return {
+                hasErrors: !1,
+            };
         },
         U = async (e) => {
             N === T && I(), null == e || e.preventDefault(), x(null), P(!0);
@@ -97,7 +106,9 @@ function S(e) {
                 innerClassName: y.Tg,
                 textValue: N,
                 richValue: G,
-                placeholder: b.intl.formatToPlainString(b.t.DUXxBh, { channelName: t.name }),
+                placeholder: b.intl.formatToPlainString(b.t.DUXxBh, {
+                    channelName: t.name,
+                }),
                 focused: !0,
                 channel: t,
                 onChange: F,

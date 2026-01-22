@@ -1,4 +1,8 @@
-n.d(t, { default: () => f }), n(896048), n(321073);
+n.d(t, {
+    default: () => f,
+}),
+    n(896048),
+    n(321073);
 var l = n(627968),
     r = n(64700),
     a = n(731738),
@@ -39,7 +43,10 @@ let f = (e) => {
             let { destination: i } = e,
                 [, s] = i,
                 c = y[s];
-            if (void 0 === c) return void d.A.increment({ name: a.K.IN_APP_REPORT_NAVIGATE_TO_NONEXISTENT_NODE });
+            if (void 0 === c)
+                return void d.A.increment({
+                    name: a.K.IN_APP_REPORT_NAVIGATE_TO_NONEXISTENT_NODE,
+                });
             if (c.elements.some((e) => "skip" === e.type) && (null == (n = c.button) ? void 0 : n.type) === "next")
                 return U(
                     ((l = (function (e) {

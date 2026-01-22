@@ -22,8 +22,12 @@ e.exports = function (e) {
             e.C_BLOCK_COMMENT_MODE,
             e.COMMENT("/\\*\\*!", "\\*/"),
             e.C_NUMBER_MODE,
-            e.inherit(e.APOS_STRING_MODE, { illegal: null }),
-            e.inherit(e.QUOTE_STRING_MODE, { illegal: null }),
+            e.inherit(e.APOS_STRING_MODE, {
+                illegal: null,
+            }),
+            e.inherit(e.QUOTE_STRING_MODE, {
+                illegal: null,
+            }),
             {
                 className: "string",
                 begin: "'",

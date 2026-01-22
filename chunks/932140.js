@@ -1,4 +1,6 @@
-a.d(t, { default: () => O });
+a.d(t, {
+    default: () => O,
+});
 var r = a(627968),
     n = a(64700),
     c = a(397927),
@@ -8,6 +10,7 @@ var r = a(627968),
     o = a(652215),
     f = a(670455),
     i = a(985018);
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var a = null != arguments[t] ? arguments[t] : {},
@@ -34,11 +37,14 @@ function u(e) {
     return e;
 }
 let s = ["OTHER"];
+
 function O(e) {
     let { analyticsData: t, transitionState: O, onClose: p } = e;
     return (
         n.useEffect(() => {
-            d.default.track(o.HAw.OPEN_MODAL, { type: "Video Background Feedback" });
+            d.default.track(o.HAw.OPEN_MODAL, {
+                type: "Video Background Feedback",
+            });
         }, []),
         (0, r.jsx)(l.A, {
             modalType: "video_background",
@@ -104,7 +110,16 @@ function O(e) {
                         null != y &&
                             (0, c.mMO)(async () => {
                                 let { default: e } = await a.e("37836").then(a.bind(a, 845671));
-                                return (t) => (0, r.jsx)(e, u({ body: i.intl.string(i.t.aHB11f) }, t));
+                                return (t) =>
+                                    (0, r.jsx)(
+                                        e,
+                                        u(
+                                            {
+                                                body: i.intl.string(i.t.aHB11f),
+                                            },
+                                            t,
+                                        ),
+                                    );
                             }));
             },
             onClose: p,

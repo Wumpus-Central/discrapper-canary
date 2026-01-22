@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -8,6 +10,7 @@ var i = n(397927),
     l = n(657331),
     c = n(652215),
     u = n(985018);
+
 function d(e, t, n) {
     return (
         t in e
@@ -21,6 +24,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,6 +41,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e, t) {
     if (null == e) return {};
     var n,
@@ -53,6 +58,7 @@ function p(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function _(e, t) {
     if (null == e) return {};
     var n,
@@ -63,6 +69,7 @@ function _(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function h(e) {
     let { label: t, onAction: n, icon: d } = e,
         _ = p(e, ["label", "onAction", "icon"]),

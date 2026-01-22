@@ -1,4 +1,11 @@
-n.d(t, { default: () => A }), n(228524), n(638769), n(896048), n(134528), n(947204);
+n.d(t, {
+    default: () => A,
+}),
+    n(228524),
+    n(638769),
+    n(896048),
+    n(134528),
+    n(947204);
 var l = n(627968),
     i = n(64700),
     a = n(835245),
@@ -25,6 +32,7 @@ var l = n(627968),
     E = n(382913),
     _ = n(985018),
     C = n(433963);
+
 function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -55,6 +63,7 @@ let P = ["Android", "iOS", "Windows Mobile", "Windows", "Linux", "Mac OS X"].map
     label: e,
     value: e,
 }));
+
 function A(e) {
     var t, A, N, T;
     let { transitionState: B, onClose: D } = e,
@@ -98,11 +107,13 @@ function A(e) {
                 .concat(location.host)
                 .concat("/assets/", "version.")
                 .concat(window.GLOBAL_ENV.RELEASE_CHANNEL, ".json"),
-            query: { cache: e },
+            query: {
+                cache: e,
+            },
             rejectWithError: !0,
         }).then((e) => {
-            if (null != e.body && "4e1818290817afb4d92f289508416cc4e8e00823" !== e.body.hash) {
-                let e = new Date("1769101111997"),
+            if (null != e.body && "61528d3e3435ecbee37bf641aa64b9de561b202c" !== e.body.hash) {
+                let e = new Date("1769110173981"),
                     t = new Date(),
                     n = (0, O.Tf)(t, e);
                 n.hours > 6 && eb(n.hours);
@@ -157,7 +168,9 @@ function A(e) {
                           clientBuildNumber: es,
                           locale: ec,
                       }
-                    : { overridePlatformInformation: Q },
+                    : {
+                          overridePlatformInformation: Q,
+                      },
                 a,
             ).catch(() => ex(!0));
         eh(!1),
@@ -171,7 +184,10 @@ function A(e) {
                           return (0, l.jsx)(
                               e,
                               ((n = L({}, t)),
-                              (i = i = { asanaTask: r.body }),
+                              (i = i =
+                                  {
+                                      asanaTask: r.body,
+                                  }),
                               Object.getOwnPropertyDescriptors
                                   ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
                                   : (function (e, t) {
@@ -289,7 +305,9 @@ function A(e) {
                                             variant: "text-sm/normal",
                                             children: _.intl.format(_.t["yY60+7"], {
                                                 buildOverrideHook: () =>
-                                                    (0, l.jsx)("b", { children: null == ey ? void 0 : ey.id }),
+                                                    (0, l.jsx)("b", {
+                                                        children: null == ey ? void 0 : ey.id,
+                                                    }),
                                             }),
                                         }),
                                     ],
@@ -301,7 +319,9 @@ function A(e) {
                                     children: [
                                         (0, l.jsx)(d.Heading, {
                                             variant: "heading-md/medium",
-                                            children: _.intl.formatToPlainString(_.t["ql2Q/e"], { hours: eg }),
+                                            children: _.intl.formatToPlainString(_.t["ql2Q/e"], {
+                                                hours: eg,
+                                            }),
                                         }),
                                         (0, l.jsx)(d.Text, {
                                             variant: "text-sm/normal",
@@ -445,7 +465,7 @@ function A(e) {
                                 placeholder: _.intl.string(_.t.HewMzo),
                                 type: "text",
                                 value: K,
-                                maxLength: 5000,
+                                maxLength: 5e3,
                                 onChange: q,
                             }),
                             (0, l.jsx)(d.Checkbox, {

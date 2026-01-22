@@ -1,4 +1,6 @@
-r.d(t, { A: () => p });
+r.d(t, {
+    A: () => p,
+});
 var n = r(627968);
 r(64700);
 var o = r(397927),
@@ -9,6 +11,7 @@ var o = r(397927),
     c = r(652215),
     s = r(355097),
     b = r(985018);
+
 function p(e) {
     let { analyticsLocations: t } = (0, u.Ay)();
     return (0, n.jsx)(o.Drp, {

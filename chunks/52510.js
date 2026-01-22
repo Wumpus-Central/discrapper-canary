@@ -1,4 +1,6 @@
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 var r = n(116657);
 let i = {
     11: "ProcessingSoftware",
@@ -15,7 +17,7 @@ let i = {
                 6: "Transparency mask of multi-page image",
                 7: "Transparency mask of reduced-resolution multi-page image",
                 65537: "Alternate reduced-resolution image",
-                4294967295: "Invalid",
+                0xffffffff: "Invalid",
             })[e] || "Unknown",
     },
     255: {
@@ -347,6 +349,7 @@ let i = {
     51111: "NewRawImageDigest",
     51112: "RawToPreviewGain",
 };
+
 function a(e) {
     return new TextDecoder("utf-16").decode(new Uint8Array(e)).replace(/\u0000+$/, "");
 }

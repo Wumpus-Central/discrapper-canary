@@ -1,14 +1,17 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var a = n(627968),
     l = n(64700),
     i = n(503698),
     r = n.n(i),
-    s = n(432022),
+    s = n(108531),
     o = n(397927),
     c = n(915089),
     d = n(49999),
     u = n(985018),
     m = n(501785);
+
 function p(e) {
     let {
             markAsDismissed: t,
@@ -56,7 +59,9 @@ function p(e) {
                             onClick: () => {
                                 t(d.i.USER_DISMISS);
                             },
-                            children: (0, a.jsx)(o.PGe, { color: "currentColor" }),
+                            children: (0, a.jsx)(o.PGe, {
+                                color: "currentColor",
+                            }),
                         }),
                         (0, a.jsx)(o.Heading, {
                             id: b,

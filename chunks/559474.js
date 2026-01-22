@@ -19,6 +19,7 @@ var r = n(64700),
     i = n(397927),
     a = n(77350),
     s = n(940622);
+
 function o(e, t, n) {
     return (
         t in e
@@ -32,6 +33,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -48,6 +50,7 @@ function l(e) {
     }
     return e;
 }
+
 function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -60,6 +63,7 @@ function c(e, t) {
     }
     return n;
 }
+
 function u(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -268,7 +272,11 @@ let m = (e) => {
                 );
             }, []),
             c = r.useCallback(() => {
-                t((e) => u(l({}, e), { ignoredFilenames: [] }));
+                t((e) =>
+                    u(l({}, e), {
+                        ignoredFilenames: [],
+                    }),
+                );
             }, []);
         return {
             ignoredFilenames: e.ignoredFilenames,

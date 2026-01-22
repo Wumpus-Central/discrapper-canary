@@ -1,4 +1,9 @@
-n.d(t, { A: () => V }), n(896048), n(747238), n(65821);
+n.d(t, {
+    A: () => V,
+}),
+    n(896048),
+    n(747238),
+    n(65821);
 var r = n(488428),
     i = n(110259),
     a = n(179771),
@@ -32,6 +37,7 @@ var r = n(488428),
     x = n(985018);
 let L = 3,
     j = new p.A("GamesActionCreators");
+
 function M(e) {
     let {
         applicationId: t,
@@ -52,7 +58,9 @@ function M(e) {
                 if (r.startsWith("http")) {
                     let e = window.open(r, "_blank");
                     (null == e || e.closed || void 0 === e.closed) &&
-                        (j.warn("Deep link popup was blocked by browser, trying location.href", { applicationId: t }),
+                        (j.warn("Deep link popup was blocked by browser, trying location.href", {
+                            applicationId: t,
+                        }),
                         (window.location.href = r));
                 } else window.location.href = r;
                 return Promise.resolve();
@@ -93,6 +101,7 @@ function M(e) {
             }),
         );
 }
+
 function k(e, t) {
     return null == e || "" === e
         ? null
@@ -101,6 +110,7 @@ function k(e, t) {
               sku: t,
           };
 }
+
 function U(e) {
     return o.Bo.post({
         url: P.Rsh.OAUTH2_AUTHORIZE,
@@ -110,7 +120,9 @@ function U(e) {
             scope: [a.F.IDENTIFY].join(" "),
         },
         retries: 3,
-        body: { authorize: !0 },
+        body: {
+            authorize: !0,
+        },
         oldFormErrors: !0,
         rejectWithError: !1,
     }).then(
@@ -147,7 +159,10 @@ async function G(e) {
     if (i) {
         let e = d.A.getApplication(t);
         return null != e && (0, h.x)(e)
-            ? (await _.A.launchFrame({ applicationId: t }), 0)
+            ? (await _.A.launchFrame({
+                  applicationId: t,
+              }),
+              0)
             : (await (0, u.A)({
                     applicationId: t,
                     activityChannelId: null != r ? r : void 0,
@@ -215,7 +230,9 @@ let V = {
             type: "RUNNING_GAME_ADD_OVERRIDE",
             pid: e,
         }),
-            S.default.track(P.HAw.RUNNING_GAME_OVERRIDE_ADDED, { game_name: t });
+            S.default.track(P.HAw.RUNNING_GAME_OVERRIDE_ADDED, {
+                game_name: t,
+            });
     },
     toggleOverlay(e, t, n) {
         let r = (0, E.Zh)(e),
@@ -281,17 +298,28 @@ let V = {
                 }),
         ),
     getDetectableGamesSupplemental(e) {
-        let { forceFetch: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { forceFetch: !1 };
-        (0, m.v)(e, { forceFetch: t });
+        let { forceFetch: t } =
+            arguments.length > 1 && void 0 !== arguments[1]
+                ? arguments[1]
+                : {
+                      forceFetch: !1,
+                  };
+        (0, m.v)(e, {
+            forceFetch: t,
+        });
     },
     getDetectableGames() {
         if (!O.A.canFetchDetectableGames()) return;
         let e = O.A.detectableGamesEtag;
         c.h.wait(() => {
-            c.h.dispatch({ type: "GAMES_DATABASE_FETCH" }),
+            c.h.dispatch({
+                type: "GAMES_DATABASE_FETCH",
+            }),
                 C.A.get({
                     url: P.Rsh.GAMES_DETECTABLE,
-                    headers: { "If-None-Match": e },
+                    headers: {
+                        "If-None-Match": e,
+                    },
                     retries: 1,
                     oldFormErrors: !0,
                     trackedActionData: {
@@ -325,7 +353,9 @@ let V = {
                                   games: [],
                                   etag: O.A.detectableGamesEtag,
                               })
-                            : c.h.dispatch({ type: "GAMES_DATABASE_FETCH_FAIL" });
+                            : c.h.dispatch({
+                                  type: "GAMES_DATABASE_FETCH_FAIL",
+                              });
                     },
                 );
         });
@@ -333,10 +363,14 @@ let V = {
     getDetectableBlocklist() {
         if (!O.A.canFetchExecutableBlocklist()) return;
         let e = O.A.blocklistEtag;
-        c.h.dispatch({ type: "GAMES_BLOCKLIST_FETCH" }),
+        c.h.dispatch({
+            type: "GAMES_BLOCKLIST_FETCH",
+        }),
             o.Bo.get({
                 url: P.Rsh.GAMES_BLOCKLIST,
-                headers: { "If-None-Match": e },
+                headers: {
+                    "If-None-Match": e,
+                },
                 oldFormErrors: !0,
                 rejectWithError: !1,
             }).then(
@@ -363,7 +397,9 @@ let V = {
                               etag: O.A.blocklistEtag,
                           })
                         : (j.error("Failed to fetch games blocklist"),
-                          c.h.dispatch({ type: "GAMES_BLOCKLIST_FETCH_FAIL" }));
+                          c.h.dispatch({
+                              type: "GAMES_BLOCKLIST_FETCH_FAIL",
+                          }));
                 },
             );
     },
@@ -371,10 +407,14 @@ let V = {
         if (!g.A.canFetch()) return;
         let e = g.A.etag;
         c.h.wait(() => {
-            c.h.dispatch({ type: "NON_GAMES_DATABASE_FETCH" }),
+            c.h.dispatch({
+                type: "NON_GAMES_DATABASE_FETCH",
+            }),
                 o.Bo.get({
                     url: P.Rsh.NON_GAMES_DETECTABLE,
-                    headers: { "If-None-Match": e },
+                    headers: {
+                        "If-None-Match": e,
+                    },
                     retries: 1,
                     rejectWithError: !1,
                 }).then(
@@ -397,7 +437,9 @@ let V = {
                                   nonGames: [],
                                   etag: g.A.etag,
                               })
-                            : c.h.dispatch({ type: "NON_GAMES_DATABASE_FETCH_FAIL" });
+                            : c.h.dispatch({
+                                  type: "NON_GAMES_DATABASE_FETCH_FAIL",
+                              });
                     },
                 );
         });

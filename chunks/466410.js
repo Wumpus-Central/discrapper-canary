@@ -1,4 +1,7 @@
-n.d(t, { A: () => f }), n(321073);
+n.d(t, {
+    A: () => f,
+}),
+    n(321073);
 var i = n(627968);
 n(64700);
 var l = n(311907),
@@ -13,6 +16,7 @@ var l = n(311907),
     p = n(840065),
     b = n(531525),
     O = n(652215);
+
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -38,6 +42,7 @@ function E(e) {
     }
     return e;
 }
+
 function y(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -56,6 +61,7 @@ function y(e, t) {
         e
     );
 }
+
 function f() {
     let {
             layoutDebuggingEnabled: e,
@@ -152,7 +158,9 @@ function f() {
                                     label: "Tracing Requests",
                                     checked: P,
                                     action: () => {
-                                        (0, a.x)({ trace: !P });
+                                        (0, a.x)({
+                                            trace: !P,
+                                        });
                                     },
                                 },
                                 "tracing-requests",
@@ -164,7 +172,9 @@ function f() {
                                     label: "Forced Canary",
                                     checked: A,
                                     action: () => {
-                                        (0, a.x)({ canary: !A });
+                                        (0, a.x)({
+                                            canary: !A,
+                                        });
                                     },
                                 },
                                 "forced-canary",
@@ -188,7 +198,9 @@ function f() {
                                     label: "Source Maps",
                                     checked: j,
                                     action: () => {
-                                        (0, a.x)({ sourceMapsEnabled: !j });
+                                        (0, a.x)({
+                                            sourceMapsEnabled: !j,
+                                        });
                                     },
                                 },
                                 "source-maps",
@@ -200,7 +212,9 @@ function f() {
                                     label: "Idle Status Indicator",
                                     checked: _,
                                     action: () => {
-                                        (0, a.x)({ idleStatusIndicatorEnabled: !_ });
+                                        (0, a.x)({
+                                            idleStatusIndicatorEnabled: !_,
+                                        });
                                     },
                                 },
                                 "idle-status",
@@ -212,7 +226,9 @@ function f() {
                                     label: "Accessibility Auditing",
                                     checked: x,
                                     action: () => {
-                                        (0, a.x)({ axeEnabled: !x });
+                                        (0, a.x)({
+                                            axeEnabled: !x,
+                                        });
                                     },
                                 },
                                 "accessibility-auditing",
@@ -224,7 +240,9 @@ function f() {
                                     label: "Prevent Popouts From Closing",
                                     checked: D,
                                     action: () => {
-                                        (0, a.x)({ preventPopoutClose: !D });
+                                        (0, a.x)({
+                                            preventPopoutClose: !D,
+                                        });
                                     },
                                 },
                                 "prevent-popout-close",
@@ -236,7 +254,9 @@ function f() {
                                     label: "Preview Unpublished Collections",
                                     checked: L,
                                     action: () => {
-                                        (0, a.x)({ onlyShowPreviewAppCollections: !L });
+                                        (0, a.x)({
+                                            onlyShowPreviewAppCollections: !L,
+                                        });
                                     },
                                 },
                                 "preview-collections",
@@ -248,7 +268,9 @@ function f() {
                                     label: "Disable Collections Cache",
                                     checked: T,
                                     action: () => {
-                                        (0, a.x)({ disableAppCollectionsCache: !T });
+                                        (0, a.x)({
+                                            disableAppCollectionsCache: !T,
+                                        });
                                     },
                                 },
                                 "disable-collections-cache",
@@ -278,7 +300,9 @@ function f() {
                                     label: "Gateway Events",
                                     checked: f,
                                     action: () => {
-                                        (0, a.x)({ logGatewayEvents: !f });
+                                        (0, a.x)({
+                                            logGatewayEvents: !f,
+                                        });
                                     },
                                 },
                                 "gateway-events",
@@ -290,7 +314,9 @@ function f() {
                                     label: "Overlay RPC Events",
                                     checked: v,
                                     action: () => {
-                                        (0, a.x)({ logOverlayEvents: !v });
+                                        (0, a.x)({
+                                            logOverlayEvents: !v,
+                                        });
                                     },
                                 },
                                 "overlay-events",
@@ -302,7 +328,9 @@ function f() {
                                     label: "Analytics Events",
                                     checked: h,
                                     action: () => {
-                                        (0, a.x)({ logAnalyticsEvents: !h });
+                                        (0, a.x)({
+                                            logAnalyticsEvents: !h,
+                                        });
                                     },
                                 },
                                 "analytics-events",
@@ -314,7 +342,9 @@ function f() {
                                     label: "Analytics Debugger",
                                     checked: S,
                                     action: () => {
-                                        (0, a.x)({ analyticsDebuggerEnabled: !S });
+                                        (0, a.x)({
+                                            analyticsDebuggerEnabled: !S,
+                                        });
                                     },
                                 },
                                 "analytics-debugger",
@@ -343,7 +373,9 @@ function f() {
                                 label: "Enable Layout Debugging",
                                 checked: e,
                                 action: () => {
-                                    (0, a.x)({ layoutDebuggingEnabled: !e });
+                                    (0, a.x)({
+                                        layoutDebuggingEnabled: !e,
+                                    });
                                 },
                             },
                             "layout-debugging",

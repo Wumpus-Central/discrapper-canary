@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var l = n(627968),
     r = n(64700),
     a = n(311907),
@@ -10,6 +12,7 @@ var l = n(627968),
     E = n(486974),
     d = n(985018),
     _ = n(438536);
+
 function g(e) {
     let { userId: t, guildId: n } = e,
         g = (0, a.bG)([s.Ay], () => s.Ay.getGuildSidebarState(n), [n]),
@@ -20,7 +23,9 @@ function g(e) {
         N = r.useCallback(
             async (e) => {
                 if (null == g) return;
-                let l = (0, c.ry)(t, e, { include_nsfw: !0 });
+                let l = (0, c.ry)(t, e, {
+                    include_nsfw: !0,
+                });
                 await (0, o.z)(n, t, g.baseChannelId, {
                     modViewPanel: E.g.MESSAGE_HISTORY,
                     additionalSearchQuery: l,

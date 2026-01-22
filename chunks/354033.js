@@ -51,7 +51,9 @@ let A = 440,
                 return null == t && i !== d.pn.CONFIRM
                     ? null
                     : null == t
-                      ? (0, r.jsx)("div", { className: O.gI })
+                      ? (0, r.jsx)("div", {
+                            className: O.gI,
+                        })
                       : (0, r.jsx)("img", {
                             src: t,
                             alt: "",
@@ -59,7 +61,9 @@ let A = 440,
                         });
             })();
         return (0, r.jsxs)("div", {
-            className: a()(O.N1, { [O.TP]: c || null == _ }),
+            className: a()(O.N1, {
+                [O.TP]: c || null == _,
+            }),
             children: [
                 _,
                 f(),
@@ -114,7 +118,9 @@ let A = 440,
                                         (0, r.jsx)(l.Text, {
                                             color: "interactive-text-default",
                                             variant: "text-sm/normal",
-                                            children: y.intl.format(y.t["2ICUkG"], { count: u.length }),
+                                            children: y.intl.format(y.t["2ICUkG"], {
+                                                count: u.length,
+                                            }),
                                         }),
                                     ],
                                 }),
@@ -130,13 +136,17 @@ let A = 440,
                     className: O.RS,
                     variant: "heading-xl/semibold",
                     color: "text-default",
-                    children: y.intl.format(y.t["1HIsTk"], { serverName: null == a ? void 0 : a.name }),
+                    children: y.intl.format(y.t["1HIsTk"], {
+                        serverName: null == a ? void 0 : a.name,
+                    }),
                 }),
                 (0, r.jsx)(l.Text, {
                     className: O.sT,
                     variant: "text-md/normal",
                     color: "text-default",
-                    children: y.intl.format(y.t.oi3gip, { tier: n.name }),
+                    children: y.intl.format(y.t.oi3gip, {
+                        tier: n.name,
+                    }),
                 }),
                 p.length > 0 &&
                     (0, r.jsxs)(r.Fragment, {

@@ -9,4 +9,6 @@ let r = {
         [a.IWg.MODAL_CAROUSEL_PREV]: l.$4,
         [a.IWg.CLOSE_MODAL]: l.cu,
     },
-    i = { [a.IWg.CLOSE_MODAL]: l.cu };
+    i = {
+        [a.IWg.CLOSE_MODAL]: l.cu,
+    };

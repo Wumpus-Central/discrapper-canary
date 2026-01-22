@@ -1,4 +1,6 @@
-l.d(t, { A: () => o });
+l.d(t, {
+    A: () => o,
+});
 var n = l(627968),
     a = l(503698),
     i = l.n(a),
@@ -23,6 +25,7 @@ let b = {
         thumb: O.dE,
     },
 };
+
 function o(e) {
     let { ratingOptions: t = d.Rj, emojiKind: l = "face", textLabels: a, selectedRating: o, onChangeRating: c } = e;
     return null != a
@@ -32,7 +35,12 @@ function o(e) {
                   options: t.map((e) => ({
                       label: (0, n.jsxs)("div", {
                           className: O.SG,
-                          children: [(0, n.jsx)("div", { className: b[e][l] }), a[e]],
+                          children: [
+                              (0, n.jsx)("div", {
+                                  className: b[e][l],
+                              }),
+                              a[e],
+                          ],
                       }),
                       value: e,
                       className: i()(O.qq, o === e ? O.wH : null),
@@ -55,7 +63,9 @@ function o(e) {
                                         className: i()(O.Ld, o === e ? O.wH : null),
                                         artboard: b[e][l],
                                     })
-                                  : (0, n.jsx)("div", { className: i()(b[e][l], o === e ? O.wH : null) }),
+                                  : (0, n.jsx)("div", {
+                                        className: i()(b[e][l], o === e ? O.wH : null),
+                                    }),
                       },
                       e,
                   ),

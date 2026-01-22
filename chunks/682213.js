@@ -1,9 +1,11 @@
 function r(e) {
     return "object" == typeof e && null != e && 1 === e.nodeType;
 }
+
 function i(e, t) {
     return (!t || "hidden" !== e) && "visible" !== e && "clip" !== e;
 }
+
 function a(e, t) {
     if (e.clientHeight < e.scrollHeight || e.clientWidth < e.scrollWidth) {
         var n = getComputedStyle(e, null);
@@ -25,6 +27,7 @@ function a(e, t) {
     }
     return !1;
 }
+
 function s(e, t, n, r, i, a, s, o) {
     return (a < e && s > t) || (a > e && s < t)
         ? 0
@@ -34,7 +37,9 @@ function s(e, t, n, r, i, a, s, o) {
             ? s - t + i
             : 0;
 }
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var o = function (e, t) {
     var n = window,
         i = t.scrollMode,

@@ -17,6 +17,7 @@ var r = n(64700),
     d = n(403362),
     f = n(605431),
     p = n(366251);
+
 function h(e) {
     let { channel: t } = e,
         n = (0, l.bG)([s.A], () => s.A.getUserAffinitiesMap(), []),
@@ -49,6 +50,7 @@ function h(e) {
         )
         .slice(0, 5);
 }
+
 function b(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { enabled: n } = (0, a.B)({
@@ -65,6 +67,7 @@ function b(e) {
         }, [e]),
     };
 }
+
 function g(e) {
     let [t, n] = r.useState(!1),
         [a, s] = r.useState(!1),

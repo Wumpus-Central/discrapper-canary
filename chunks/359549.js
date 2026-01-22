@@ -17,9 +17,11 @@ var r = n(64700),
     p = n(652215),
     _ = n(49999);
 let h = new Set();
+
 function m(e) {
     return (0, i.Lt)(e.flags, p.gfo.CLOUD_GAMING_DEMO) && (0, i.Lt)(e.flags, p.gfo.EMBEDDED);
 }
+
 function g(e) {
     let { countryCode: t, activity: n } = e;
     return (
@@ -27,6 +29,7 @@ function g(e) {
         (!n.blocked_locales.includes(t) && (!(n.supported_locales.length > 0) || !!n.supported_locales.includes(t)))
     );
 }
+
 function E(e) {
     let t = null != e ? (0, f.A)(e) : null,
         n = null == t ? void 0 : t.id,
@@ -38,10 +41,16 @@ function E(e) {
         i
     );
 }
+
 function b(e) {
     let { data: t } = (0, u.Q)(),
         n = E(e),
-        { bot: r } = null != n ? n : { bot: null };
+        { bot: r } =
+            null != n
+                ? n
+                : {
+                      bot: null,
+                  };
     return (
         null != e &&
         ((null == e ? void 0 : e.embeddedActivityConfig) == null ||
@@ -60,19 +69,34 @@ function b(e) {
                     }))))
     );
 }
+
 function y(e) {
     let { application: t, analyticsLocations: n } = e,
         i = b(t),
-        { bot: o } = null != t ? t : { bot: null },
+        { bot: o } =
+            null != t
+                ? t
+                : {
+                      bot: null,
+                  },
         l = E(t),
-        { bot: u } = null != l ? l : { bot: null },
+        { bot: u } =
+            null != l
+                ? l
+                : {
+                      bot: null,
+                  },
         f = null == l ? void 0 : l.id,
         h = null == u ? void 0 : u.id;
     return r.useMemo(() => {
         if (!i || null == t) return null;
         let e = () => {
-            (0, c.Dr)(a.M.CLOUD_PLAY_NEW_BADGE, { dismissAction: _.i.TAKE_ACTION }),
-                (0, c.Dr)(a.M.CLOUD_PLAY_POPOVER, { dismissAction: _.i.TAKE_ACTION });
+            (0, c.Dr)(a.M.CLOUD_PLAY_NEW_BADGE, {
+                dismissAction: _.i.TAKE_ACTION,
+            }),
+                (0, c.Dr)(a.M.CLOUD_PLAY_POPOVER, {
+                    dismissAction: _.i.TAKE_ACTION,
+                });
         };
         return m(t) && null != o
             ? () => {

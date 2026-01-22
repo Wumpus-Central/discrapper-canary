@@ -1,5 +1,8 @@
 let r, i;
-n.d(t, { A: () => w }), n(896048);
+n.d(t, {
+    A: () => w,
+}),
+    n(896048);
 var l,
     a = n(735438),
     s = n.n(a),
@@ -11,6 +14,7 @@ var l,
     f = n(734057),
     h = n(652215),
     A = n(737045);
+
 function g(e, t, n) {
     return (
         t in e
@@ -24,6 +28,7 @@ function g(e, t, n) {
         e
     );
 }
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -40,6 +45,7 @@ function m(e) {
     }
     return e;
 }
+
 function b(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -68,11 +74,13 @@ let _ = new Set(),
     C = null,
     N = null,
     T = c.w.get(A.t0) || !1;
+
 function j(e) {
     let t = e.getGuildId(),
         n = m({}, e.permissionOverwrites);
     return null != t && null == n[t] && (n[t] = d.xT(t)), n;
 }
+
 function x() {
     if (((v = p.A.getChannel()), (S = p.A.getCategory()), null == v)) return !1;
     let e = v.getGuildId();
@@ -142,7 +150,9 @@ let w = new P(u.h, {
             allow: n,
             deny: i,
         })),
-            (y = b(m({}, y), { [t]: l })),
+            (y = b(m({}, y), {
+                [t]: l,
+            })),
             _.add(t),
             (E = h.XlH.OPEN),
             (O = !s().isEqual(y, I)),

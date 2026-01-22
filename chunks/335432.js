@@ -11,8 +11,19 @@ var r = n(209932),
     c = n(69945),
     u = n(652215);
 let d = /^<sound:(\d+):(\d+)>/;
+
 function f(e, t, n, a, l) {
-    if (!s.UL.getCurrentConfig({ location: "getSoundmojiASTFromString" }, { autoTrackExposure: !1 }).enabled) return;
+    if (
+        !s.UL.getCurrentConfig(
+            {
+                location: "getSoundmojiASTFromString",
+            },
+            {
+                autoTrackExposure: !1,
+            },
+        ).enabled
+    )
+        return;
     let d = r.A.getSoundById(a),
         f = (0, c.A)(d, e, t);
     if (null != n && null != t) {
@@ -25,6 +36,7 @@ function f(e, t, n, a, l) {
     }
     if (f && null != d) return d;
 }
+
 function p(e, t) {
     var n;
     let r = e[1],

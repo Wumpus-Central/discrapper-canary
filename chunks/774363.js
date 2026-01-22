@@ -1,4 +1,14 @@
-n.d(t, { A: () => b }), n(938796), n(896048), n(693327), n(554719), n(680155), n(323874), n(14289), n(35956);
+n.d(t, {
+    A: () => b,
+}),
+    n(938796),
+    n(896048),
+    n(693327),
+    n(554719),
+    n(680155),
+    n(323874),
+    n(14289),
+    n(35956);
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -25,6 +35,7 @@ let E = (e) => {
             return null;
     }
 };
+
 function b(e) {
     var t;
     let n,
@@ -39,14 +50,20 @@ function b(e) {
         } catch (e) {
             n = null;
         }
-    let C = u.v.useExperiment({ location: "oauth2_authorize" });
+    let C = u.v.useExperiment({
+        location: "oauth2_authorize",
+    });
     return (0, r.jsxs)("div", {
-        className: a()(g.B_, { [g.pN]: C.enabled }),
+        className: a()(g.B_, {
+            [g.pN]: C.enabled,
+        }),
         children: [
             null != n
                 ? (0, r.jsx)(y, {
                       icon: c.qYV,
-                      text: m.intl.format(m.t["5k5OKD"], { origin: n }),
+                      text: m.intl.format(m.t["5k5OKD"], {
+                          origin: n,
+                      }),
                   })
                 : null,
             (0, r.jsx)(y, {
@@ -55,12 +72,16 @@ function b(e) {
             }),
             (0, r.jsx)(y, {
                 icon: c.O4,
-                text: m.intl.formatToPlainString(m.t["+1bjc8"], { date: S }),
+                text: m.intl.formatToPlainString(m.t["+1bjc8"], {
+                    date: S,
+                }),
             }),
             l.includes(s.F.BOT) && null != O
                 ? (0, r.jsx)(y, {
                       icon: c.CnV,
-                      text: m.intl.formatToPlainString(m.t.UHGHSP, { guildCount: O }),
+                      text: m.intl.formatToPlainString(m.t.UHGHSP, {
+                          guildCount: O,
+                      }),
                   })
                 : null,
             (0, r.jsx)(y, {
@@ -82,6 +103,7 @@ function b(e) {
         ],
     });
 }
+
 function y(e) {
     let { icon: t, text: n } = e;
     return (0, r.jsxs)("div", {

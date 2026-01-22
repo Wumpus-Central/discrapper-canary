@@ -1,4 +1,6 @@
-n.d(t, { A: () => l });
+n.d(t, {
+    A: () => l,
+});
 var a = n(64700);
 let l = (e, t) => {
     let n = (0, a.useRef)(e);

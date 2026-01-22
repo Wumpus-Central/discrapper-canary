@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(627968),
     l = n(64700),
     i = n(435371),
@@ -7,6 +9,7 @@ var r = n(627968),
     o = n(914703),
     c = n(652215),
     u = n(985018);
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -32,6 +35,7 @@ function d(e) {
     }
     return e;
 }
+
 function f(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -50,6 +54,7 @@ function f(e, t) {
         e
     );
 }
+
 function p(e) {
     let { channel: t } = e,
         n = l.useRef(null);
@@ -74,7 +79,9 @@ function p(e) {
                           channel: t,
                           navId: "recents-notifications",
                           label: u.intl.string(u.t.ljs3Oe),
-                          location: { section: c.JJy.INBOX },
+                          location: {
+                              section: c.JJy.INBOX,
+                          },
                           includeGuildMute: !0,
                       }),
                   ),

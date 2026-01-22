@@ -85,7 +85,9 @@ let I = (e) => {
                             ? v.intl.string(v.t.wpSqAW)
                             : f.size <= 1
                               ? v.intl.string(v.t.ItpQxk)
-                              : v.intl.format(v.t.iW2stn, { nTrials: f.size })),
+                              : v.intl.format(v.t.iW2stn, {
+                                    nTrials: f.size,
+                                })),
                     (0, r.jsx)("div", {
                         className: s()(S.qr, S.h0),
                         children: (0, r.jsx)(c.Button, {
@@ -158,8 +160,12 @@ let I = (e) => {
                       onClose: t,
                       input: x(),
                       actions: [],
-                      actionBarInput: L({ eligibleRecipients: D }),
-                      children: j({ eligibleRecipients: D }),
+                      actionBarInput: L({
+                          eligibleRecipients: D,
+                      }),
+                      children: j({
+                          eligibleRecipients: D,
+                      }),
                   });
     },
     T = (e) => {
@@ -181,7 +187,12 @@ let I = (e) => {
         let y = () => {
             let e;
             return (
-                (e = p.size <= 1 ? v.intl.string(v.t.ItpQxk) : v.intl.format(v.t.iW2stn, { nTrials: p.size })),
+                (e =
+                    p.size <= 1
+                        ? v.intl.string(v.t.ItpQxk)
+                        : v.intl.format(v.t.iW2stn, {
+                              nTrials: p.size,
+                          })),
                 (0, r.jsx)("div", {
                     className: s()(S.qr, S.h0),
                     children: (0, r.jsx)(c.Button, {
@@ -234,7 +245,9 @@ let N = (e) => {
         [u, d] = i.useState([]),
         { analyticsLocations: h } = (0, p.Ay)([f.A.PREMIUM_MARKETING_REFERALL_PROGRAM_SHARE_MODAL]),
         m = async (e) => {
-            _.default.track(A.HAw.REFERRAL_PROGRAM_SHARE_CTA_CLICKED, { location_stack: h });
+            _.default.track(A.HAw.REFERRAL_PROGRAM_SHARE_CTA_CLICKED, {
+                location_stack: h,
+            });
             let t = await (0, g.xm)(Object.values(e).map((e) => e.id));
             d(
                 e.map((e) => ({

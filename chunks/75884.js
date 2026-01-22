@@ -20,7 +20,9 @@ var n = r(64700),
                                 height: "12px",
                                 position: "relative",
                             },
-                            Hue: { radius: "2px" },
+                            Hue: {
+                                radius: "2px",
+                            },
                         },
                     },
                     void 0 === a ? {} : a,
@@ -34,7 +36,9 @@ var n = r(64700),
             },
             n.createElement(
                 "div",
-                { style: p.hue },
+                {
+                    style: p.hue,
+                },
                 n.createElement(s.RG, {
                     style: p.Hue,
                     hsl: t,
@@ -44,7 +48,9 @@ var n = r(64700),
             ),
             n.createElement(
                 "div",
-                { style: p.swatches },
+                {
+                    style: p.swatches,
+                },
                 n.createElement(u.A, {
                     hsl: t,
                     onClick: r,
@@ -52,7 +58,9 @@ var n = r(64700),
             ),
         );
     };
-(p.propTypes = { styles: a().object }),
+(p.propTypes = {
+    styles: a().object,
+}),
     (p.defaultProps = {
         pointer: c.A,
         styles: {},

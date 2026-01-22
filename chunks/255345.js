@@ -1,8 +1,11 @@
-n.d(t, { I3: () => d });
+n.d(t, {
+    I3: () => d,
+});
 var r = n(64700),
     i = n(811024),
     a = n(550151),
     s = n(985018);
+
 function o(e, t, n) {
     return (
         t in e
@@ -16,6 +19,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -32,6 +36,7 @@ function l(e) {
     }
     return e;
 }
+
 function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -44,6 +49,7 @@ function c(e, t) {
     }
     return n;
 }
+
 function u(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -55,6 +61,7 @@ function u(e, t) {
         e
     );
 }
+
 function d(e) {
     let { embeddedActivity: t, joinability: n, currentEmbeddedActivity: i, channel: a } = e;
     return r.useMemo(
@@ -68,6 +75,7 @@ function d(e) {
         [t, n, i, a],
     );
 }
+
 function f(e) {
     let { embeddedActivity: t, joinability: n, currentEmbeddedActivity: r, channel: o } = e,
         c = null == t,

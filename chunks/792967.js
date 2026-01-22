@@ -1,4 +1,9 @@
-n.d(t, { A: () => d }), n(114821), n(339614), n(321073);
+n.d(t, {
+    A: () => d,
+}),
+    n(114821),
+    n(339614),
+    n(321073);
 var r = n(627968);
 n(64700);
 var l = n(735438),
@@ -8,6 +13,7 @@ var l = n(735438),
     o = n(712209),
     c = n(985018),
     u = n(48355);
+
 function d(e, t, n) {
     let { markChannelRead: l, markGuildRead: d, deleteChannel: f, toggle: p, getNumUnreadChannels: h } = t,
         b = null;

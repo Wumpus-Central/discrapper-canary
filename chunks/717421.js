@@ -1,8 +1,12 @@
-n.d(t, { z: () => c }), n(896048);
+n.d(t, {
+    z: () => c,
+}),
+    n(896048);
 var r = n(64700),
-    i = n(432022),
+    i = n(108531),
     a = n(844222),
     s = n(384494);
+
 function o(e, t, n) {
     return (
         t in e
@@ -16,6 +20,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -32,6 +37,7 @@ function l(e) {
     }
     return e;
 }
+
 function c(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "respect-motion-settings",
         n = arguments.length > 2 ? arguments[2] : void 0,

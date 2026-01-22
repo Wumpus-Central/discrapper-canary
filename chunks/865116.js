@@ -6,6 +6,7 @@ n.d(t, {
 var r,
     i = n(311907),
     a = n(73153);
+
 function s(e, t, n) {
     return (
         t in e
@@ -98,12 +99,15 @@ let l = {
         },
     },
     c = {};
+
 function u(e) {
     !1 === e.value ? delete c[e.toggle] : (c[e.toggle] = e.value);
 }
 class d extends (r = i.Ay.DeviceSettingsStore) {
     getUserAgnosticState() {
-        return { toggleStates: c };
+        return {
+            toggleStates: c,
+        };
     }
     initialize(e) {
         for (var t in l) {
@@ -133,4 +137,6 @@ class d extends (r = i.Ay.DeviceSettingsStore) {
     }
 }
 s(d, "displayName", "DevToolsDevSettingsStore"), s(d, "persistKey", "DevToolsDevSettingsStore");
-let f = new d(a.h, { DEV_TOOLS_DEV_SETTING_SET: u });
+let f = new d(a.h, {
+    DEV_TOOLS_DEV_SETTING_SET: u,
+});

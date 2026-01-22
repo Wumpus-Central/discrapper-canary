@@ -1,4 +1,6 @@
-n.d(t, { A: () => en });
+n.d(t, {
+    A: () => en,
+});
 var r,
     i = n(784041),
     a = n.n(i),
@@ -6,6 +8,7 @@ var r,
     o = n(73153),
     l = n(739010),
     c = n(239093);
+
 function u(e, t, n) {
     return (
         t in e
@@ -21,7 +24,9 @@ function u(e, t, n) {
 }
 let d = {},
     f = {},
-    p = { state: l.PN.ALL_GOOD },
+    p = {
+        state: l.PN.ALL_GOOD,
+    },
     _ = !1,
     h = !1,
     m = null,
@@ -40,9 +45,11 @@ let d = {},
     R = !1,
     w = c.qN.NONE,
     P = null;
+
 function D(e) {
     _ = !0;
 }
+
 function x(e) {
     let {
         classifications: t,
@@ -54,86 +61,123 @@ function x(e) {
     } = e;
     (d = a()(t, "id")), (p = n), (E = r), (b = i), (_ = !1), (h = !0), (m = null), (I = s), (y = o);
 }
+
 function L(e) {
     let { error: t } = e;
     (_ = !1), (h = !1), (m = t);
 }
+
 function j(e) {
     (f[e.classificationId] = l.nU.PENDING), (_ = !0);
 }
+
 function M(e) {
     let { classification: t, accountStanding: n, isDsaEligible: r, username: i, isAppealEligible: a } = e;
     (d[t.id] = t), (f[t.id] = l.nU.SUCCESS), (p = n), (_ = !1), (m = null), (E = r), (b = a), (h = !0), (I = i);
 }
+
 function k(e) {
     let { error: t, classificationId: n } = e;
     (_ = !1), (m = t), (f[n] = l.nU.FAILED), (h = !1);
 }
+
 function U(e) {
     let { classificationId: t } = e;
     g = t;
 }
+
 function G() {
     (g = null), (v = c.Iv.DIDNT_VIOLATE_POLICY), (S = "");
 }
+
 function V(e) {
     let { signal: t } = e;
     v = t;
 }
+
 function F(e) {
     let { userInput: t } = e;
     S = t;
 }
+
 function B(e) {
     let {} = e;
     (O = !0), (A = null);
 }
+
 function H(e) {
     let { classificationId: t } = e;
-    (O = !1), (A = null), (d[t].appeal_status = { status: l.Wi.REVIEW_PENDING });
+    (O = !1),
+        (A = null),
+        (d[t].appeal_status = {
+            status: l.Wi.REVIEW_PENDING,
+        });
 }
+
 function Y(e) {
     let { error: t } = e;
     (O = !1), (A = t);
 }
+
 function W(e) {
     let {} = e;
     (T = ""), (N = null), (R = !0);
 }
+
 function K(e) {
     let { verificationWebviewUrl: t } = e;
     (T = t), (N = null), (R = !1);
 }
+
 function z(e) {
     let { error: t } = e;
     (T = ""), (N = t), (R = !1);
 }
+
 function q(e) {
     let {} = e;
     (T = ""), (N = null), (R = !1);
 }
+
 function X(e) {
     let {} = e;
-    for (let e in ((w = c.qN.LOADING), d)) d[e].is_coppa && (d[e].appeal_status = { status: l.Wi.REVIEW_PENDING });
+    for (let e in ((w = c.qN.LOADING), d))
+        d[e].is_coppa &&
+            (d[e].appeal_status = {
+                status: l.Wi.REVIEW_PENDING,
+            });
 }
+
 function Z(e) {
     let {} = e;
     (w = c.qN.LOADING), (P = null);
 }
+
 function Q(e) {
     let {} = e;
     (w = c.qN.LOADING), (P = null), (C += 1);
 }
+
 function $(e) {
     let { success: t } = e;
     (w = t ? c.qN.SUCCESS : C < c.ti ? c.qN.LOADING : c.qN.FAILURE), (P = null);
 }
+
 function J(e) {
     let { error: t } = e;
     (w = c.qN.ERROR), (P = t);
 }
+
 function ee() {
-    (_ = !1), (d = {}), (p = { state: l.PN.ALL_GOOD }), (g = null), (v = c.Iv.DIDNT_VIOLATE_POLICY), (S = ""), (y = []);
+    (_ = !1),
+        (d = {}),
+        (p = {
+            state: l.PN.ALL_GOOD,
+        }),
+        (g = null),
+        (v = c.Iv.DIDNT_VIOLATE_POLICY),
+        (S = ""),
+        (y = []);
 }
 class et extends (r = s.Ay.Store) {
     isFetching() {

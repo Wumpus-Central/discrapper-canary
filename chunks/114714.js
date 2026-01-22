@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(73153),
     i = n(272355),
     l = n(927813),
@@ -16,7 +18,9 @@ class c extends i.A {
         (0, s.HF)("ICYMIManager", !1) &&
             (!(function e() {
                 let t = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                a.A.fetchDehydrated({ isInitialLoad: t }),
+                a.A.fetchDehydrated({
+                    isInitialLoad: t,
+                }),
                     null != o && clearTimeout(o),
                     (o = setTimeout(() => e(), 15 * l.A.Millis.MINUTE));
             })(!0),

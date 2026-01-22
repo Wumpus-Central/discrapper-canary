@@ -1,4 +1,6 @@
-i.d(e, { default: () => u });
+i.d(e, {
+    default: () => u,
+});
 var r = i(627968);
 i(64700);
 var s = i(158954),
@@ -10,11 +12,15 @@ var s = i(158954),
     d = i(985018),
     h = i(472230),
     p = i(973324);
+
 function u(t) {
     let { transitionState: e, onClose: i, channel: u } = t,
         g = (t) => {
             if (!t && (0, l.Cf)(u.id)) {
-                a.A.showAgeVerificationGetStartedModal({ entryPoint: o.q1.STAGE_CHANNEL_RAISE_HAND }), i();
+                a.A.showAgeVerificationGetStartedModal({
+                    entryPoint: o.q1.STAGE_CHANNEL_RAISE_HAND,
+                }),
+                    i();
                 return;
             }
             (0, c.e7)(u, t), i();

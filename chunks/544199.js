@@ -26,6 +26,7 @@ async function a(e, t) {
         });
     }
 }
+
 function s(e) {
     r.h.dispatch({
         type: "CREATOR_MONETIZATION_SET_HAS_SEEN_ONBOARDING_FOR_GUILD",

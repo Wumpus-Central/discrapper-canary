@@ -1,4 +1,6 @@
-n.d(t, { F: () => f });
+n.d(t, {
+    F: () => f,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -9,6 +11,7 @@ var i = n(503698),
     c = n(10716),
     u = n(985018),
     d = n(878753);
+
 function f(e) {
     let { hideSearch: t, className: n } = e,
         {
@@ -24,6 +27,7 @@ function f(e) {
             }),
             [],
         );
+
     function _() {
         l._9("");
     }

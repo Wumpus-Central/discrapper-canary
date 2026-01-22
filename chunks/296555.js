@@ -13,6 +13,7 @@ var a = n(627968),
     d = n(559474),
     u = n(327885),
     m = n(876607);
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -106,7 +107,9 @@ let h = l.createContext({
         return (0, a.jsxs)("div", {
             className: m.kO,
             children: [
-                (0, a.jsx)(i.hKd, { size: 16 }),
+                (0, a.jsx)(i.hKd, {
+                    size: 16,
+                }),
                 (0, a.jsxs)("div", {
                     className: m.wR,
                     children: [
@@ -154,7 +157,9 @@ let h = l.createContext({
             : (0, a.jsxs)("div", {
                   className: m.kO,
                   children: [
-                      (0, a.jsx)(i.hKd, { size: 16 }),
+                      (0, a.jsx)(i.hKd, {
+                          size: 16,
+                      }),
                       (0, a.jsx)(i.l6P, {
                           label: "Preview Avatar Decorations",
                           selectionMode: "single",
@@ -186,7 +191,9 @@ let h = l.createContext({
             ? null
             : (0, a.jsxs)(a.Fragment, {
                   children: [
-                      (0, a.jsx)(i.hKd, { size: 16 }),
+                      (0, a.jsx)(i.hKd, {
+                          size: 16,
+                      }),
                       (0, a.jsxs)("div", {
                           className: m.wR,
                           children: [
@@ -235,7 +242,9 @@ let h = l.createContext({
             ? null
             : (0, a.jsxs)(a.Fragment, {
                   children: [
-                      (0, a.jsx)(i.hKd, { size: 16 }),
+                      (0, a.jsx)(i.hKd, {
+                          size: 16,
+                      }),
                       (0, a.jsxs)("div", {
                           className: m.wR,
                           children: [
@@ -314,7 +323,9 @@ let h = l.createContext({
                               variant: "text-md/normal",
                               children: "Drop asset folder to validate.",
                           }),
-                    (0, a.jsx)(i.hKd, { size: 16 }),
+                    (0, a.jsx)(i.hKd, {
+                        size: 16,
+                    }),
                     d &&
                         (0, a.jsxs)(a.Fragment, {
                             children: [
@@ -322,7 +333,9 @@ let h = l.createContext({
                                     variant: "heading-lg/bold",
                                     children: "Errors",
                                 }),
-                                (0, a.jsx)(i.hKd, { size: 8 }),
+                                (0, a.jsx)(i.hKd, {
+                                    size: 8,
+                                }),
                                 (0, a.jsx)("ul", {
                                     className: m.ck,
                                     children: o.map((e, t) => {
@@ -368,7 +381,9 @@ let h = l.createContext({
                                     variant: "heading-lg/bold",
                                     children: "Warnings",
                                 }),
-                                (0, a.jsx)(i.hKd, { size: 8 }),
+                                (0, a.jsx)(i.hKd, {
+                                    size: 8,
+                                }),
                                 (0, a.jsx)("ul", {
                                     className: m.ck,
                                     children: Object.entries(r).map((e, t) => {
@@ -480,17 +495,26 @@ let h = l.createContext({
                     className: m.Vj,
                     optionClassName: m.UK,
                 }),
-                (0, a.jsx)(i.hKd, { size: 8 }),
+                (0, a.jsx)(i.hKd, {
+                    size: 8,
+                }),
                 "preview" === e && (0, a.jsx)(S, {}),
                 "validate" === e && (0, a.jsx)(C, {}),
-                (0, a.jsx)(i.hKd, { size: 16 }),
+                (0, a.jsx)(i.hKd, {
+                    size: 16,
+                }),
             ],
         });
     },
     E = (e) => {
         let { children: t } = e,
             [n, i] = l.useState(() => () => {}),
-            r = l.useMemo(() => ({ setDropHandler: (e) => i(() => e) }), []);
+            r = l.useMemo(
+                () => ({
+                    setDropHandler: (e) => i(() => e),
+                }),
+                [],
+            );
         return (0, a.jsx)(h.Provider, {
             value: r,
             children: (0, a.jsx)(c.i, {

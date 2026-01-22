@@ -1,4 +1,6 @@
-t.d(i, { default: () => f });
+t.d(i, {
+    default: () => f,
+});
 var n = t(627968),
     s = t(64700),
     l = t(397927),
@@ -10,6 +12,7 @@ var n = t(627968),
     u = t(652215),
     m = t(985018),
     p = t(431389);
+
 function h(e) {
     let {
             giftRecipient: i,
@@ -83,6 +86,7 @@ function h(e) {
         ],
     });
 }
+
 function f(e) {
     let {
         giftRecipient: i,

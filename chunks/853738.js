@@ -1,10 +1,13 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(64700),
     l = n(412703),
     o = n(536968),
     i = n(579473),
     s = n(717415),
     a = n(654487);
+
 function c(e) {
     let { videoAssetUrl: t, videoRef: n, hlsRef: c, videoAssetType: u } = e,
         { questConfig: d } = r.useContext(s.VideoQuestConfigContext),
@@ -15,7 +18,9 @@ function c(e) {
             null == t ||
             null == n.current ||
             (u === i.fY.VIDEO_PLAYER_VIDEO_HLS && null == c.current) ||
-            !(0, o._o)({ location: a.rE.VIDEO_MODAL }).externalAnalyticsEnabled
+            !(0, o._o)({
+                location: a.rE.VIDEO_MODAL,
+            }).externalAnalyticsEnabled
         )
             return;
         let s = {

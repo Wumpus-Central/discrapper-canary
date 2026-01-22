@@ -1,4 +1,7 @@
-n.d(t, { A: () => R }), n(896048);
+n.d(t, {
+    A: () => R,
+}),
+    n(896048);
 var i = n(627968),
     r = n(503698),
     l = n.n(r),
@@ -27,6 +30,7 @@ var i = n(627968),
     w = n(652215),
     T = n(985018),
     C = n(676667);
+
 function _(e) {
     let { user: t, application: n, runningGame: r } = e;
     return null != n || null != r
@@ -62,6 +66,7 @@ function _(e) {
               size: a._3J.SIZE_40,
           });
 }
+
 function P(e) {
     let { user: t, application: n, runningGame: r, username: o, onWatchClick: s, buttonColor: c } = e;
     return (0, i.jsxs)("div", {
@@ -81,7 +86,9 @@ function P(e) {
                     variant: "text-sm/medium",
                     color: "interactive-text-default",
                     className: C.G3,
-                    children: T.intl.format(T.t.vTPX23, { username: o }),
+                    children: T.intl.format(T.t.vTPX23, {
+                        username: o,
+                    }),
                 }),
             }),
             (0, i.jsx)("div", {
@@ -100,6 +107,7 @@ function P(e) {
         ],
     });
 }
+
 function D(e) {
     let { user: t, application: n, runningGame: r, username: o, onWatchClick: s, iconColor: c } = e;
     return (0, i.jsxs)("div", {
@@ -119,10 +127,14 @@ function D(e) {
                     variant: "text-sm/medium",
                     color: "interactive-text-default",
                     className: C.G3,
-                    children: T.intl.format(T.t.NmEczg, { username: o }),
+                    children: T.intl.format(T.t.NmEczg, {
+                        username: o,
+                    }),
                 }),
             }),
-            (0, i.jsx)("div", { className: C.U4 }),
+            (0, i.jsx)("div", {
+                className: C.U4,
+            }),
             (0, i.jsx)("div", {
                 className: C.Xm,
                 children: (0, i.jsx)(a.DUT, {
@@ -137,6 +149,7 @@ function D(e) {
         ],
     });
 }
+
 function R(e, t, n) {
     var r, l;
     if (x.A.isNotificationDisabled(N.KS.StreamWatchNudge)) return null;
@@ -203,7 +216,9 @@ function R(e, t, n) {
                         forceMultiple: !0,
                         noFocus: !0,
                     }),
-                    (0, o.v0)(n.id, { forcedPinnedState: !0 }),
+                    (0, o.v0)(n.id, {
+                        forcedPinnedState: !0,
+                    }),
                     (0, o.dH)(n.id),
                     (0, v.YX)(w.uss.GO_LIVE, {
                         type: v.Z5.GO_LIVE,

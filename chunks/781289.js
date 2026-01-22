@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968);
 n(64700);
 var i = n(417597),
@@ -9,11 +11,16 @@ var i = n(417597),
     o = n(599941),
     d = n(311750),
     u = n(985018);
+
 function f(e) {
     let { guildId: t, allPeriods: f } = e,
         g = (0, i.bG)([c.A], () => c.A.getGuild(t)),
-        b = (0, o.uP)(t, { includeSoftDeleted: !0 }),
-        m = (0, a.fZ)(t, { publishedOnly: !1 }),
+        b = (0, o.uP)(t, {
+            includeSoftDeleted: !0,
+        }),
+        m = (0, a.fZ)(t, {
+            publishedOnly: !1,
+        }),
         { allowSelfRemoveMonetization: p } = (0, s.nq)(t),
         x = f.filter((e) => {
             var t;
@@ -32,9 +39,13 @@ function f(e) {
               children: [
                   (0, r.jsx)(l.Text, {
                       variant: "text-sm/normal",
-                      children: u.intl.format(u.t.fvOn6J, { guildName: g.name }),
+                      children: u.intl.format(u.t.fvOn6J, {
+                          guildName: g.name,
+                      }),
                   }),
-                  (0, r.jsx)(l.hKd, { size: 16 }),
+                  (0, r.jsx)(l.hKd, {
+                      size: 16,
+                  }),
                   (0, r.jsx)(l.Button, {
                       variant: "critical-primary",
                       text: u.intl.string(u.t.FrOFSo),
@@ -71,7 +82,10 @@ function f(e) {
                                           }
                                           return e;
                                       })({}, t)),
-                                      (i = i = { guild: g }),
+                                      (i = i =
+                                          {
+                                              guild: g,
+                                          }),
                                       Object.getOwnPropertyDescriptors
                                           ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
                                           : (function (e, t) {

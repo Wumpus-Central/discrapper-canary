@@ -13,6 +13,7 @@ var r,
     l = n(453903),
     c = n(44808),
     u = n(836474);
+
 function d(e, t, n) {
     return (
         t in e
@@ -26,6 +27,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,6 +44,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -54,6 +57,7 @@ function p(e, t) {
     }
     return n;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -65,6 +69,7 @@ function _(e, t) {
         e
     );
 }
+
 function h(e, t) {
     if (null == e) return {};
     var n,
@@ -81,6 +86,7 @@ function h(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function m(e, t) {
     if (null == e) return {};
     var n,
@@ -99,6 +105,7 @@ let E = Object.freeze({
     3: c.m.Types.SCALE,
     4: c.m.Types.FADE,
 });
+
 function b(e) {
     switch (e) {
         case "top":
@@ -187,11 +194,13 @@ class y extends (r = a.Component) {
             });
     }
 }
+
 function O(e) {
     let { renderPopout: t } = e,
         n = h(e, ["renderPopout"]),
         r = a.useRef(null),
         [l, c] = a.useState(0);
+
     function d() {
         return m(), (0, i.jsx)(i.Fragment, {});
     }
@@ -221,6 +230,7 @@ function O(e) {
             b(() => n), c((e) => e + 1), clearTimeout(e);
         }
     }
+
     function g() {
         var e, t, n, a;
         let o =
@@ -233,7 +243,9 @@ function O(e) {
             l = Math.max(100, null == o ? 100 : o.offsetWidth - 20);
         return (0, i.jsx)("div", {
             className: u.w,
-            style: { width: l },
+            style: {
+                width: l,
+            },
             children: (0, i.jsx)(s.y$y, {}),
         });
     }
@@ -250,7 +262,20 @@ function O(e) {
                   })
                 : b(() => O.current);
         }, [t]),
-        (0, i.jsx)(y, _(f({ ref: r }, n), { renderPopout: E }))
+        (0, i.jsx)(
+            y,
+            _(
+                f(
+                    {
+                        ref: r,
+                    },
+                    n,
+                ),
+                {
+                    renderPopout: E,
+                },
+            ),
+        )
     );
 }
 d(y, "Animation", g), (O.Animation = g);

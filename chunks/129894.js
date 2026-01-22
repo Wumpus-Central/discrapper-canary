@@ -1,4 +1,7 @@
-n.d(t, { A: () => f }), n(896048);
+n.d(t, {
+    A: () => f,
+}),
+    n(896048);
 var r = n(573648),
     i = n(541806),
     a = n(90644),
@@ -8,6 +11,7 @@ var r = n(573648),
     c = n(61330),
     u = n(652215);
 let d = new Set([u.fg2.LEAGUE_OF_LEGENDS, u.fg2.ROBLOX, u.fg2.TWITCH, u.fg2.YOUTUBE]);
+
 function f(e) {
     if ((0, a.A)(e)) return r.A.get(u.fg2.SPOTIFY);
     if ((0, i.A)(e)) return r.A.get(u.fg2.CRUNCHYROLL);

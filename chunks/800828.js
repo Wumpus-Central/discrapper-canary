@@ -1,10 +1,15 @@
-n.d(t, { A: () => N }), n(321073), n(896048);
+n.d(t, {
+    A: () => N,
+}),
+    n(321073),
+    n(896048);
 var r,
     i = n(311907),
     a = n(713402),
     s = n(73153),
     o = n(994500),
     l = n(652215);
+
 function c(e, t, n) {
     return (
         t in e
@@ -18,6 +23,7 @@ function c(e, t, n) {
         e
     );
 }
+
 function u(e) {
     return {
         id: e.id,
@@ -31,6 +37,7 @@ let d = (e, t) => "".concat(t, "-").concat(e),
     f = (e) => "application-id-".concat(e),
     p = (e) => "user-id-".concat(e),
     _ = (e) => "relationship-type-".concat(e);
+
 function h(e) {
     let t = [];
     return t.push(f(e.applicationId)), t.push(p(e.id)), t.push(_(e.type)), t;
@@ -39,6 +46,7 @@ let m = new a.J(h, (e) => "".concat(e.since)),
     g = 0,
     E = 0,
     b = 0;
+
 function y() {
     let e = 0,
         t = 0,
@@ -56,12 +64,15 @@ function y() {
         (E = t),
         (b = n);
 }
+
 function O(e) {
     m.set(d(e.id, e.applicationId), e);
 }
+
 function A(e, t) {
     m.delete(d(e, t));
 }
+
 function v(e) {
     let { unknownApplicationIds: t } = e;
     if (null != t) {
@@ -71,6 +82,7 @@ function v(e) {
         y();
     }
 }
+
 function S(e) {
     m.clear(),
         e.gameRelationships.forEach((e) => {
@@ -78,9 +90,11 @@ function S(e) {
         }),
         y();
 }
+
 function I(e) {
     O(e.gameRelationship), y();
 }
+
 function T(e) {
     A(e.userId, e.applicationId), y();
 }

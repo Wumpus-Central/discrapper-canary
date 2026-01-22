@@ -23,6 +23,7 @@ var r,
     E = n(728458),
     b = n(292036),
     y = n(652215);
+
 function O(e, t, n) {
     return (
         t in e
@@ -36,6 +37,7 @@ function O(e, t, n) {
         e
     );
 }
+
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -52,6 +54,7 @@ function A(e) {
     }
     return e;
 }
+
 function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -64,6 +67,7 @@ function v(e, t) {
     }
     return n;
 }
+
 function S(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -156,12 +160,24 @@ class C extends (r = a.Component) {
         return (0, i.jsxs)(a.Fragment, {
             children: [
                 e(
-                    S(A({ onMouseDown: this.handlePreload }, t ? { onMouseEnter: this.handleMouseEnter } : {}), {
-                        onKeyDown: this.handleKeyboardPreload,
-                        onClick: this.handleClick,
-                        "aria-controls": n ? this.popoutId : void 0,
-                        "aria-expanded": n,
-                    }),
+                    S(
+                        A(
+                            {
+                                onMouseDown: this.handlePreload,
+                            },
+                            t
+                                ? {
+                                      onMouseEnter: this.handleMouseEnter,
+                                  }
+                                : {},
+                        ),
+                        {
+                            onKeyDown: this.handleKeyboardPreload,
+                            onClick: this.handleClick,
+                            "aria-controls": n ? this.popoutId : void 0,
+                            "aria-expanded": n,
+                        },
+                    ),
                     {
                         isShown: n,
                         position: this.state.renderedPosition,
@@ -218,7 +234,10 @@ class C extends (r = a.Component) {
               });
     }
     toggleShow(e) {
-        this.state.shouldShowPopout !== e && this.setState({ shouldShowPopout: e });
+        this.state.shouldShowPopout !== e &&
+            this.setState({
+                shouldShowPopout: e,
+            });
     }
     constructor(...e) {
         super(...e),
@@ -252,7 +271,9 @@ class C extends (r = a.Component) {
                     null == (t = this.resizeObserver) || t.disconnect(),
                     (this.resizeObserver = new n.ResizeObserver(() => {
                         u.flushSync(() => {
-                            this.setState({ resizeKey: this.state.resizeKey + 1 });
+                            this.setState({
+                                resizeKey: this.state.resizeKey + 1,
+                            });
                         });
                     })),
                     this.resizeObserver.observe(e));
@@ -283,22 +304,38 @@ class C extends (r = a.Component) {
                     a ||
                         this.setState((e) => {
                             let { shouldShowPopout: t } = e;
-                            return { shouldShowPopout: !t };
+                            return {
+                                shouldShowPopout: !t,
+                            };
                         });
             }),
             O(this, "handleMouseEnter", () => {
                 let { onRequestOpen: e } = this.props;
-                null == e || e(), this.setState({ shouldShowPopout: !0 });
+                null == e || e(),
+                    this.setState({
+                        shouldShowPopout: !0,
+                    });
             }),
             O(this, "handlePreload", async () => {
                 let { preload: e } = this.props;
                 if (null != e) {
-                    this.setState({ isLoading: !0 }),
-                        this.loadingTimeout.start(250, () => this.setState({ shouldShowLoadingState: !0 }), !1);
+                    this.setState({
+                        isLoading: !0,
+                    }),
+                        this.loadingTimeout.start(
+                            250,
+                            () =>
+                                this.setState({
+                                    shouldShowLoadingState: !0,
+                                }),
+                            !1,
+                        );
                     try {
                         await e();
                     } finally {
-                        this.setState({ isLoading: !1 });
+                        this.setState({
+                            isLoading: !1,
+                        });
                     }
                 }
             }),
@@ -319,7 +356,9 @@ class C extends (r = a.Component) {
                 this.isValidClickStart && ((this.isValidClickStart = !1), this.close(e, "system:click_outside"));
             }),
             O(this, "handlePopoutPositionChange", (e) => {
-                this.setState({ renderedPosition: e });
+                this.setState({
+                    renderedPosition: e,
+                });
             }),
             O(this, "handleScroll", (e) => {
                 let t = e.target;
@@ -340,7 +379,7 @@ class C extends (r = a.Component) {
                                 null == (t = this.layerRef.current) || t.updatePosition();
                         }
                     });
-                }, 1000 / 60),
+                }, 1e3 / 60),
             );
     }
 }

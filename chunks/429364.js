@@ -19,6 +19,7 @@ var n = l(627968),
     o = l(372684),
     u = l(399925),
     c = l(956050);
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var l = null != arguments[t] ? arguments[t] : {},
@@ -44,6 +45,7 @@ function d(e) {
     }
     return e;
 }
+
 function m(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -63,6 +65,7 @@ function m(e, t) {
     );
 }
 let h = a.createContext(null);
+
 function p(e) {
     var t, p, v, f, b, g, j, x, y, C, k, N, E, S;
     let w,
@@ -79,7 +82,7 @@ function p(e) {
             initialCropStart: z,
             initialCropEnd: G,
             initialCurrentTime: B,
-        } = ((w = P.length / 1000),
+        } = ((w = P.length / 1e3),
         (O = null != (x = null == (C = P.editMetadata) ? void 0 : C.start) ? x : 0),
         (A = null != (y = null == (k = P.editMetadata) ? void 0 : k.end) ? y : 0),
         (I = 0 !== O || (0 !== A && A !== w)),
@@ -162,19 +165,40 @@ function p(e) {
                     }
                     (e.onmessage = (e) => {
                         let { videoBuffer: t, audioTracks: l, audioBuffer: n } = e.data,
-                            a = URL.createObjectURL(new Blob([t], { type: "video/mp4" })),
+                            a = URL.createObjectURL(
+                                new Blob([t], {
+                                    type: "video/mp4",
+                                }),
+                            ),
                             r = [];
                         for (let e of l) {
-                            let t = URL.createObjectURL(new Blob([e.buffer], { type: "audio/mp4" }));
+                            let t = URL.createObjectURL(
+                                new Blob([e.buffer], {
+                                    type: "audio/mp4",
+                                }),
+                            );
                             r.push({
                                 arrayBuffer: e.buffer,
                                 url: t,
                                 trackName: e.trackName,
                             });
                         }
-                        ej(a, r, URL.createObjectURL(new Blob([n], { type: "audio/mp4" })));
+                        ej(
+                            a,
+                            r,
+                            URL.createObjectURL(
+                                new Blob([n], {
+                                    type: "audio/mp4",
+                                }),
+                            ),
+                        );
                     }),
-                        e.postMessage({ videoBuffer: t.data.buffer }, [t.data.buffer]);
+                        e.postMessage(
+                            {
+                                videoBuffer: t.data.buffer,
+                            },
+                            [t.data.buffer],
+                        );
                 })(),
                 () => {
                     e.terminate();
@@ -215,7 +239,11 @@ function p(e) {
             async function e() {
                 let e = {},
                     t = T.current;
-                U || null == _ || (e = { thumbnail: await (0, c.m)(_, t.editMetadata.start) }),
+                U ||
+                    null == _ ||
+                    (e = {
+                        thumbnail: await (0, c.m)(_, t.editMetadata.start),
+                    }),
                     (0, u.Yy)(E, d({}, t, e));
             }
             return () => {
@@ -240,7 +268,12 @@ function p(e) {
             (e) => {
                 var t;
                 let l = (0, r.clamp)(e, 0, J - 1);
-                V((e) => m(d({}, e), { cropStart: l })), null == Q || null == (t = Q.current) || t.seek(l);
+                V((e) =>
+                    m(d({}, e), {
+                        cropStart: l,
+                    }),
+                ),
+                    null == Q || null == (t = Q.current) || t.seek(l);
             },
             [J, V, Q],
         )),
@@ -250,7 +283,12 @@ function p(e) {
                 (e) => {
                     var t;
                     let l = (0, r.clamp)(e, H + 1, Z);
-                    V((e) => m(d({}, e), { cropEnd: l })), null == Q || null == (t = Q.current) || t.seek(l);
+                    V((e) =>
+                        m(d({}, e), {
+                            cropEnd: l,
+                        }),
+                    ),
+                        null == Q || null == (t = Q.current) || t.seek(l);
                 },
                 [H, Z, V, Q],
             ),
@@ -350,19 +388,39 @@ function p(e) {
             );
         }, [es, B, Q, er, el, ea, ee, ei]);
     let eA = a.useCallback((e) => {
-            V((t) => m(d({}, t), { clipName: e }));
+            V((t) =>
+                m(d({}, t), {
+                    clipName: e,
+                }),
+            );
         }, []),
         eI = a.useCallback((e) => {
-            V((t) => m(d({}, t), { isTemporary: e }));
+            V((t) =>
+                m(d({}, t), {
+                    isTemporary: e,
+                }),
+            );
         }, []),
         eT = a.useCallback((e) => {
-            V((t) => m(d({}, t), { applicationAudioEnabled: e }));
+            V((t) =>
+                m(d({}, t), {
+                    applicationAudioEnabled: e,
+                }),
+            );
         }, []),
         eL = a.useCallback((e) => {
-            V((t) => m(d({}, t), { voiceAudioEnabled: e }));
+            V((t) =>
+                m(d({}, t), {
+                    voiceAudioEnabled: e,
+                }),
+            );
         }, []),
         eR = a.useCallback((e) => {
-            V((t) => m(d({}, t), { soundboardAudioEnabled: e }));
+            V((t) =>
+                m(d({}, t), {
+                    soundboardAudioEnabled: e,
+                }),
+            );
         }, []),
         eM = a.useMemo(
             () =>
@@ -459,6 +517,7 @@ function p(e) {
         children: M,
     });
 }
+
 function v() {
     let e = a.useContext(h);
     if (null == e) throw Error("useClipContext must be used within a ClipContextProvider");

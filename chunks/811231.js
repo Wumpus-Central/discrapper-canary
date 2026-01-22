@@ -1,4 +1,6 @@
-i.d(e, { Y: () => o });
+i.d(e, {
+    Y: () => o,
+});
 var n = i(419117),
     l = i(419954),
     s = i(780964),
@@ -98,9 +100,16 @@ let a = [
         collapseAfter: 4,
         useCollapsibleTitle: (t, e) =>
             t
-                ? u.intl.formatToPlainString(u.t["0JYT98"], { count: e })
-                : u.intl.formatToPlainString(u.t.ji1uNt, { count: e }),
-        useCollapsedSubtitle: () => (0, n.A)(s.X.VOICE_AND_VIDEO_SOUNDS_LIST, { limit: 3 }),
+                ? u.intl.formatToPlainString(u.t["0JYT98"], {
+                      count: e,
+                  })
+                : u.intl.formatToPlainString(u.t.ji1uNt, {
+                      count: e,
+                  }),
+        useCollapsedSubtitle: () =>
+            (0, n.A)(s.X.VOICE_AND_VIDEO_SOUNDS_LIST, {
+                limit: 3,
+            }),
         initialize: function () {
             return () => {
                 (0, r.vd)();

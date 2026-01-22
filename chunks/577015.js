@@ -11,6 +11,7 @@ n(320028);
 var i = (function (e) {
     return (e.CANCEL = "cancel"), (e.ERROR = "error"), (e.EXPIRED = "expired"), e;
 })({});
+
 function a(e) {
     var t;
     return {
@@ -25,8 +26,9 @@ function a(e) {
         },
     };
 }
+
 function s(e) {
-    (0, r.N6)() && setTimeout(() => (0, r.il)(), 30000), (0, r.di)(e);
+    (0, r.N6)() && setTimeout(() => (0, r.il)(), 3e4), (0, r.di)(e);
 }
 class o extends Error {
     constructor() {

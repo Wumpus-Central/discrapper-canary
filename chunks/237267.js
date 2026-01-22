@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -11,6 +13,7 @@ var i = n(397927),
     d = n(788868),
     f = n(985018),
     p = n(689507);
+
 function _(e) {
     let {
         hasAppliedGuildBoosts: t,
@@ -21,21 +24,31 @@ function _(e) {
     if (i)
         return {
             flavor: f.intl.format(f.t.doslJu, {
-                onClick: () => (0, c.openUserSettings)(l.X.SUBSCRIPTIONS_PANEL, { section: u.nc_.SUBSCRIPTIONS }),
+                onClick: () =>
+                    (0, c.openUserSettings)(l.X.SUBSCRIPTIONS_PANEL, {
+                        section: u.nc_.SUBSCRIPTIONS,
+                    }),
             }),
         };
-    if (!r) return { subtitle: f.intl.string(f.t.oiWYAc) };
+    if (!r)
+        return {
+            subtitle: f.intl.string(f.t.oiWYAc),
+        };
     if (t)
         return {
             subtitle: f.intl.string(f.t.W5rDjW),
-            flavor: f.intl.format(f.t.cUHcaQ, { helpdeskArticle: a.A.getArticleURL(u.MVz.GUILD_SUBSCRIPTIONS) }),
+            flavor: f.intl.format(f.t.cUHcaQ, {
+                helpdeskArticle: a.A.getArticleURL(u.MVz.GUILD_SUBSCRIPTIONS),
+            }),
         };
     let p = d.hd[d.gD.PREMIUM_MONTH_GUILD],
         _ = s.Ay.getDefaultPrice(p.id, n),
         h = (0, o.CE)((0, o.$g)(_.amount, _.currency), p.interval, p.intervalCount);
     return {
         subtitle: n ? f.intl.string(f.t.bhPzXR) : f.intl.string(f.t.Zs9h9Z),
-        flavor: f.intl.formatToPlainString(f.t.PGgTdA, { monthlyGuildBoostPrice: h }),
+        flavor: f.intl.formatToPlainString(f.t.PGgTdA, {
+            monthlyGuildBoostPrice: h,
+        }),
     };
 }
 let h = function (e) {

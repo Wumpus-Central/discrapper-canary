@@ -1,10 +1,13 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968);
 n(64700);
 var i = n(442433),
     a = n(593284),
     s = n(288539),
     o = n(734057);
+
 function l(e, t, n) {
     return (
         t in e
@@ -18,6 +21,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,6 +38,7 @@ function c(e) {
     }
     return e;
 }
+
 function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -46,6 +51,7 @@ function u(e, t) {
     }
     return n;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -84,7 +90,21 @@ let f = {
     react(e, t, n) {
         let { userId: i, channelId: o, parsedUserId: l, roleId: u, roleName: f, viewingChannelId: p } = e;
         return null == i && (null != u || "@everyone" === f || "@here" === f)
-            ? (0, r.jsx)(a.A, d(c({ inlinePreview: n.formatInline }, e), { children: t(e.content, n) }), n.key)
+            ? (0, r.jsx)(
+                  a.A,
+                  d(
+                      c(
+                          {
+                              inlinePreview: n.formatInline,
+                          },
+                          e,
+                      ),
+                      {
+                          children: t(e.content, n),
+                      },
+                  ),
+                  n.key,
+              )
             : (0, r.jsx)(
                   s.A,
                   {

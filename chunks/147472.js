@@ -1,4 +1,7 @@
-n.d(t, { lG: () => C }), n(638769);
+n.d(t, {
+    lG: () => C,
+}),
+    n(638769);
 var r = n(91871),
     i = n.n(r),
     a = n(111956),
@@ -20,6 +23,7 @@ let f = 100,
     O = 350,
     A = s()(S, O),
     v = s()(I, O);
+
 function S(e, t) {
     c.default.track(d.HAw.SEARCH_STARTED, {
         channel_id: t,
@@ -27,6 +31,7 @@ function S(e, t) {
         location_stack: e,
     });
 }
+
 function I(e, t, n, r) {
     c.default.track(d.HAw.SEARCH_RESULT_VIEWED, {
         search_type: d.I4_.SOUNDBOARD,
@@ -36,6 +41,7 @@ function I(e, t, n, r) {
         location_stack: t,
     });
 }
+
 function T(e, t, n, r) {
     var a;
     let s = 0,
@@ -57,6 +63,7 @@ function T(e, t, n, r) {
         s
     );
 }
+
 function C(e, t, n, r, i) {
     let a = t.reduce(
             (t, a) => (A(i, null == r ? void 0 : r.id), (t[a.soundId] = T(e.toLocaleLowerCase(), a, n, r)), t),

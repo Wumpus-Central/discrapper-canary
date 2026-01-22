@@ -1,4 +1,10 @@
-n.d(t, { A: () => en }), n(896048), n(321073), n(733351), n(667532);
+n.d(t, {
+    A: () => en,
+}),
+    n(896048),
+    n(321073),
+    n(733351),
+    n(667532);
 var r,
     i = n(33851),
     a = n.n(i),
@@ -18,6 +24,7 @@ var r,
     b = n(771650),
     y = n(652215),
     O = n(926140);
+
 function A(e, t, n) {
     return (
         t in e
@@ -36,6 +43,7 @@ let v = null,
     I = new Map(),
     T = 10,
     C = 3;
+
 function N(e) {
     let t = (0, E.Wg)(e);
     return new Map([
@@ -50,6 +58,7 @@ function N(e) {
         [y.LWr.FILTER_AUTHOR_TYPE, !0],
     ]);
 }
+
 function R(e) {
     let t = [y.LWr.FILTER_HAS];
     return (
@@ -58,6 +67,7 @@ function R(e) {
         t
     );
 }
+
 function w(e) {
     var t;
     let n = (0, E.bS)(e),
@@ -70,6 +80,7 @@ function w(e) {
                   };
     return I.set(n, r), r;
 }
+
 function P(e) {
     return {
         searchContext: e,
@@ -84,6 +95,7 @@ function P(e) {
         autocompletes: [],
     };
 }
+
 function D(e) {
     let { searchContext: t, query: n, mode: r, tokens: i, cursorScope: a, autocompletes: s } = e;
     return (
@@ -98,18 +110,22 @@ function D(e) {
         }
     );
 }
+
 function x(e) {
     let { id: t } = e,
         n = I.get(t);
     null != n && (n.context.destroy(), (n.results = []), I.delete(t)), S.delete(t), (v = null);
 }
+
 function L(e) {
     return null != e && (e === y.LWr.FILTER_FROM || e === y.LWr.FILTER_MENTIONS);
 }
+
 function j(e) {
     let t = L(e.filter);
     return e.type === y.o$q.FILTER_ALL || (e.type === y.o$q.FILTER && t);
 }
+
 function M(e, t) {
     let { results: n } = t,
         r = (0, E.bS)(e),
@@ -129,6 +145,7 @@ function M(e, t) {
         });
     S.set(r, d), et.emitChange();
 }
+
 function k(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : T,
         n = [];
@@ -145,13 +162,16 @@ function k(e) {
     }
     return n;
 }
+
 function U(e) {
     a()(v, e) || ((v = e), (0, E.Pe)());
 }
+
 function G(e) {
     let { searchContext: t } = e;
     U(t), Q(t);
 }
+
 function V(e) {
     let t,
         { searchContext: n, tokens: r, cursorScope: i } = e;
@@ -172,7 +192,9 @@ function V(e) {
             null != r && m.A.requestMembers(r, a, T),
                 e.context.setQuery({
                     query: a,
-                    filters: { guild: null != r ? r : void 0 },
+                    filters: {
+                        guild: null != r ? r : void 0,
+                    },
                     boosters: (0, h.X3)(O.rD.USER),
                 }),
                 (t = null != (d = null == l ? void 0 : l.autocompletes) ? d : []),
@@ -192,6 +214,7 @@ function V(e) {
     });
     return S.set(o, f), c;
 }
+
 function F(e) {
     var t, n, r;
     let { filter: i, currentToken: a, searchContext: s, maxResults: o = T, tokens: l } = e;
@@ -230,6 +253,7 @@ function F(e) {
               results: c,
           };
 }
+
 function B(e, t) {
     let n = (null != e ? e.getFullMatch() : "").trim(),
         r = N(t),
@@ -239,6 +263,7 @@ function B(e, t) {
         results: i,
     };
 }
+
 function H(e, t, n) {
     var r;
     let i = e.token,
@@ -261,6 +286,7 @@ function H(e, t, n) {
     }
     return 5 > (0, E.rI)(s) && s.push(B(i, t)), s;
 }
+
 function Y(e, t) {
     var n, r, i, a, s, o, l, c, u;
     let d = (null != e ? e.getFullMatch() : "").trim();
@@ -309,6 +335,7 @@ function Y(e, t) {
         }
     );
 }
+
 function W(e) {
     if (p.A.hidePersonalInformation) return null;
     {
@@ -322,7 +349,12 @@ function W(e) {
         return (
             i.forEach((t) => {
                 let n = e.type === y.I4_.CHANNEL ? (0, E.EH)(t) : t;
-                "" === n || s.has(n) || (s.add(n), a.push({ text: n }));
+                "" === n ||
+                    s.has(n) ||
+                    (s.add(n),
+                    a.push({
+                        text: n,
+                    }));
             }),
             {
                 group: y.x2k.HISTORY,
@@ -331,6 +363,7 @@ function W(e) {
         );
     }
 }
+
 function K(e, t, n) {
     switch (t.type) {
         case y.o$q.FILTER:
@@ -354,9 +387,11 @@ function K(e, t, n) {
             return i;
     }
 }
+
 function z() {
     (0, E.Pe)();
 }
+
 function q(e) {
     let t = S.get(e);
     if (null == t) return;
@@ -375,13 +410,16 @@ function q(e) {
     });
     S.set(e, c);
 }
+
 function X(e) {
     let { autocompleteStateId: t } = e;
     q(t);
 }
+
 function Z() {
     for (let e of S.keys()) q(e);
 }
+
 function Q(e) {
     let t = (0, E.bS)(e),
         n = S.get(t);
@@ -397,9 +435,11 @@ function Q(e) {
         });
     S.set(t, o);
 }
+
 function $() {
     return null != v && Q(v);
 }
+
 function J() {
     return null != v && Q(v);
 }

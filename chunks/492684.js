@@ -1,8 +1,11 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968),
     i = n(64700),
     a = n(451988),
     s = n(985018);
+
 function o(e, t, n) {
     return (
         t in e
@@ -16,6 +19,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -32,6 +36,7 @@ function l(e) {
     }
     return e;
 }
+
 function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -44,6 +49,7 @@ function c(e, t) {
     }
     return n;
 }
+
 function u(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -55,6 +61,7 @@ function u(e, t) {
         e
     );
 }
+
 function d(e, t) {
     if (null == e) return {};
     var n,
@@ -71,6 +78,7 @@ function d(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function f(e, t) {
     if (null == e) return {};
     var n,
@@ -82,13 +90,15 @@ function f(e, t) {
     return i;
 }
 let p = 13;
+
 function _(e) {
-    return "".concat(e).length < p ? 1000 * e : e;
+    return "".concat(e).length < p ? 1e3 * e : e;
 }
+
 function h(e) {
     return class extends i.PureComponent {
         componentDidMount() {
-            this._interval.start(1000, () => this.setState(this.getUpdatedTime()));
+            this._interval.start(1e3, () => this.setState(this.getUpdatedTime()));
         }
         componentWillUnmount() {
             this._interval.stop();
@@ -99,11 +109,11 @@ function h(e) {
         }
         getUpdatedTime() {
             let { timestamps: e } = this.props,
-                t = Date.now() / 1000;
+                t = Date.now() / 1e3;
             return null != e.end
-                ? this.getDiff(t, _(e.end) / 1000)
+                ? this.getDiff(t, _(e.end) / 1e3)
                 : null != e.start
-                  ? this.getDiff(_(e.start) / 1000, t)
+                  ? this.getDiff(_(e.start) / 1e3, t)
                   : {
                         hours: 0,
                         minutes: 0,
@@ -133,9 +143,23 @@ function h(e) {
                 c = this.renderTime(this.state.seconds),
                 f = -1 === a ? "".concat(o, ":").concat(c) : "".concat(a, ":").concat(o, ":").concat(c);
             return null != n.end
-                ? (0, r.jsx)(e, u(l({}, i), { message: s.intl.formatToPlainString(s.t["I/J7vI"], { duration: f }) }))
+                ? (0, r.jsx)(
+                      e,
+                      u(l({}, i), {
+                          message: s.intl.formatToPlainString(s.t["I/J7vI"], {
+                              duration: f,
+                          }),
+                      }),
+                  )
                 : null != n.start
-                  ? (0, r.jsx)(e, u(l({}, i), { message: s.intl.formatToPlainString(s.t.M9Fexd, { duration: f }) }))
+                  ? (0, r.jsx)(
+                        e,
+                        u(l({}, i), {
+                            message: s.intl.formatToPlainString(s.t.M9Fexd, {
+                                duration: f,
+                            }),
+                        }),
+                    )
                   : null;
         }
         constructor(e) {

@@ -27,6 +27,7 @@ var r = n(627968),
     y = n(818348),
     I = n(985018),
     v = n(794053);
+
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -52,6 +53,7 @@ function S(e) {
     }
     return e;
 }
+
 function C(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -70,13 +72,16 @@ function C(e, t) {
         e
     );
 }
+
 function N(e) {
     let { asset: t } = e;
     if ("image" === t.assetType)
         return (0, r.jsxs)("div", {
             className: v.km,
             children: [
-                (0, r.jsx)("div", { className: v.Np }),
+                (0, r.jsx)("div", {
+                    className: v.Np,
+                }),
                 (0, r.jsx)("div", {
                     className: v.c8,
                     children: (0, r.jsx)("img", {
@@ -104,17 +109,22 @@ function N(e) {
             ],
         });
 }
+
 function T(e) {
     let { config: t, onQuestCtaClick: n } = e,
         l = (0, s.zy)(),
         T = (0, s.W6)(),
-        { enabled: j } = (0, h.Z)({ location: E.rE.QUEST_HOME_DESKTOP }),
+        { enabled: j } = (0, h.Z)({
+            location: E.rE.QUEST_HOME_DESKTOP,
+        }),
         x = (0, p.Ay)(),
         [P, w] = i.useState("display-lg"),
         L = i.useCallback((e) => {
             e.contentRect.width < 500 ? w("display-md") : w("display-lg");
         }, []),
-        R = (0, d.w)(L, [], { fireOnMount: !0 }),
+        R = (0, d.w)(L, [], {
+            fireOnMount: !0,
+        }),
         D = (0, c.bG)([m.A], () => m.A.quests);
     return (
         i.useEffect(() => {
@@ -207,7 +217,11 @@ function T(e) {
                                                           u.Button,
                                                           {
                                                               onClick: () => {
-                                                                  T.replace(C(S({}, l), { hash: void 0 })),
+                                                                  T.replace(
+                                                                      C(S({}, l), {
+                                                                          hash: void 0,
+                                                                      }),
+                                                                  ),
                                                                       null == n || n(),
                                                                       window.requestIdleCallback(() => {
                                                                           (0, _.navigateToQuestHome)({
@@ -241,12 +255,15 @@ function T(e) {
                             }),
                         ],
                     }),
-                    (0, r.jsx)(N, { asset: t.assetHeroImage }),
+                    (0, r.jsx)(N, {
+                        asset: t.assetHeroImage,
+                    }),
                 ],
             }),
         })
     );
 }
+
 function j() {
     return (0, r.jsx)("div", {
         className: a()(v.iE, v.FG, v.B3),

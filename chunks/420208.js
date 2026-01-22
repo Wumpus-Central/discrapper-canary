@@ -1,4 +1,10 @@
-n.d(t, { Q: () => y }), n(896048), n(864466), n(443073), n(638769);
+n.d(t, {
+    Q: () => y,
+}),
+    n(896048),
+    n(864466),
+    n(443073),
+    n(638769);
 var r = n(843472),
     i = n(508675),
     a = n(451909),
@@ -15,6 +21,7 @@ var r = n(843472),
     m = n(381941);
 let g = 5,
     E = 10;
+
 function b(e) {
     let t = u.A.getGuild(e);
     return null != t && (t.nsfwLevel === _.ftr.DEFAULT || t.nsfwLevel === _.ftr.SAFE);

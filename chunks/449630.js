@@ -1,4 +1,7 @@
-n.d(t, { A: () => ei }), n(896048);
+n.d(t, {
+    A: () => ei,
+}),
+    n(896048);
 var a = n(627968),
     l = n(64700),
     i = n(607399),
@@ -54,6 +57,7 @@ var a = n(627968),
     et = n(985018),
     en = n(423648),
     ea = n(183959);
+
 function el(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -79,6 +83,7 @@ function el(e) {
     }
     return e;
 }
+
 function ei(e) {
     let {
             currentUser: t,
@@ -102,7 +107,18 @@ function ei(e) {
     l.useEffect(() => {
         null == ei || ei(eh.current);
     }, [eh, ei]),
-        l.useEffect(() => (H.A.setState({ isOpen: !0 }), () => H.A.setState({ isOpen: !1 })), []);
+        l.useEffect(
+            () => (
+                H.A.setState({
+                    isOpen: !0,
+                }),
+                () =>
+                    H.A.setState({
+                        isOpen: !1,
+                    })
+            ),
+            [],
+        );
     let eg = (0, s.bG)([U.A], () => U.A.getStatus(t.id)),
         ev = L.CY.useSetting(),
         ej = (0, J.Q)(ev),
@@ -111,9 +127,13 @@ function ei(e) {
         eA = L.Q_.useSetting(),
         eC = (0, J.T)(eg),
         eS = (0, K.j)(n),
-        eO = (0, j.A)({ analyticsLocations: em }),
+        eO = (0, j.A)({
+            analyticsLocations: em,
+        }),
         eE = (0, V.TW)(t),
-        eN = (0, f.h)({ location: "UserProfileAccountPopout" }),
+        eN = (0, f.h)({
+            location: "UserProfileAccountPopout",
+        }),
         eT = l.useRef(null),
         eI = l.useRef(null),
         ew = l.useRef((0, H.A)((e) => e.shouldRenderTenureLevelUp)),
@@ -149,8 +169,12 @@ function ei(e) {
         }, [eO, eF, ec, eo]),
         eH = ec && null != eo,
         eW = (0, W.g)(eo, em, eG, n, eF),
-        eK = (0, p.JY)({ location: "UserProfileAccountPopout" }),
-        ez = (0, p.on)({ location: "UserProfileAccountPopout" });
+        eK = (0, p.JY)({
+            location: "UserProfileAccountPopout",
+        }),
+        ez = (0, p.on)({
+            location: "UserProfileAccountPopout",
+        });
     return (0, a.jsx)(m.f5, {
         value: em,
         children: (0, a.jsx)(_.of, {
@@ -201,9 +225,13 @@ function ei(e) {
                             }),
                             (0, a.jsxs)(c.HOs, {
                                 className: en.rf,
-                                style: { pointerEvents: eP ? "none" : void 0 },
+                                style: {
+                                    pointerEvents: eP ? "none" : void 0,
+                                },
                                 children: [
-                                    (0, a.jsx)(T.A, { userId: t.id }),
+                                    (0, a.jsx)(T.A, {
+                                        userId: t.id,
+                                    }),
                                     (0, a.jsx)(P.A, {
                                         user: t,
                                         className: en.Xh,
@@ -287,7 +315,9 @@ function ei(e) {
                                                                 }),
                                                             trailing:
                                                                 (e_ || eg === $.clD.DND) &&
-                                                                (0, a.jsx)(c.a_I, { size: "xxs" }),
+                                                                (0, a.jsx)(c.a_I, {
+                                                                    size: "xxs",
+                                                                }),
                                                             renderSubmenu: i.Fr
                                                                 ? void 0
                                                                 : (e) => {
@@ -420,7 +450,9 @@ function ei(e) {
                                                                                           return (0, a.jsx)(
                                                                                               r.dWK,
                                                                                               ((t = el(
-                                                                                                  { onClose: l },
+                                                                                                  {
+                                                                                                      onClose: l,
+                                                                                                  },
                                                                                                   i,
                                                                                               )),
                                                                                               (n = n =

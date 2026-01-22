@@ -1,4 +1,6 @@
-n.d(t, { L: () => x });
+n.d(t, {
+    L: () => x,
+});
 var r = n(627968),
     i = n(64700),
     s = n(397927),
@@ -11,7 +13,11 @@ var r = n(627968),
     h = n(652215),
     f = n(985018),
     p = n(190359);
-let g = () => (0, r.jsx)("div", { className: p.m });
+let g = () =>
+    (0, r.jsx)("div", {
+        className: p.m,
+    });
+
 function m(e) {
     let { label: t, children: n } = e;
     return (0, r.jsxs)(s.BJc, {
@@ -27,6 +33,7 @@ function m(e) {
         ],
     });
 }
+
 function A(e) {
     let { label: t, checked: n, onChange: i } = e;
     return (0, r.jsxs)(s.BJc, {
@@ -68,7 +75,9 @@ let x = () => {
             });
         }, [b, v]);
     return (0, r.jsxs)(a.A, {
-        icon: (0, r.jsx)(s.Zes, { size: "refresh_sm" }),
+        icon: (0, r.jsx)(s.Zes, {
+            size: "refresh_sm",
+        }),
         title: f.intl.string(f.t["A5wHQ/"]),
         subtitle: f.intl.string(f.t.UKCSEd),
         onOpen: y,

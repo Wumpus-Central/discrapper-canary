@@ -19,27 +19,48 @@ var r = n(250105),
 let a = (0, r.Ay)({
     name: "2025-10-soundboard-xp-3",
     kind: "user",
-    defaultConfig: { sortingStrategy: "oldest_creation_date" },
+    defaultConfig: {
+        sortingStrategy: "oldest_creation_date",
+    },
     variations: {
-        0: { sortingStrategy: "oldest_creation_date" },
-        1: { sortingStrategy: "top_sounds" },
-        2: { sortingStrategy: "newest_creation_date" },
-        3: { sortingStrategy: "recently_used_by_user" },
-        4: { sortingStrategy: "metrics_capture" },
+        0: {
+            sortingStrategy: "oldest_creation_date",
+        },
+        1: {
+            sortingStrategy: "top_sounds",
+        },
+        2: {
+            sortingStrategy: "newest_creation_date",
+        },
+        3: {
+            sortingStrategy: "recently_used_by_user",
+        },
+        4: {
+            sortingStrategy: "metrics_capture",
+        },
     },
 });
+
 function s(e) {
-    return a.getConfig({ location: e });
+    return a.getConfig({
+        location: e,
+    });
 }
+
 function o(e) {
-    return a.useConfig({ location: e });
+    return a.useConfig({
+        location: e,
+    });
 }
+
 function l(e) {
     return "top_sounds" === s(e).sortingStrategy;
 }
+
 function c(e) {
     return "metrics_capture" === s(e).sortingStrategy;
 }
+
 function u(e) {
     return "recently_used_by_user" === s(e).sortingStrategy;
 }

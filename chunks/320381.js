@@ -10,6 +10,7 @@ var i = n(397927),
     a = n(888675),
     s = n(985018),
     o = n(930037);
+
 function l(e) {
     let { message: t, compact: i, onClick: l } = e;
     return (0, r.jsx)(a.A, {
@@ -17,9 +18,12 @@ function l(e) {
         timestamp: t.timestamp,
         compact: i,
         contentClassName: o.B,
-        children: s.intl.format(s.t.bYdG3f, { onClick: l }),
+        children: s.intl.format(s.t.bYdG3f, {
+            onClick: l,
+        }),
     });
 }
+
 function c(e) {
     let { message: t, compact: i } = e;
     return (0, r.jsx)(a.A, {
@@ -30,6 +34,7 @@ function c(e) {
         children: s.intl.string(s.t.tu6tOR),
     });
 }
+
 function u(e) {
     let { message: t, compact: n } = e;
     return (0, r.jsx)(a.A, {
@@ -46,6 +51,7 @@ function u(e) {
         children: s.intl.string(s.t.vzfXql),
     });
 }
+
 function d(e) {
     let { message: t, compact: n } = e;
     return (0, r.jsx)(a.A, {

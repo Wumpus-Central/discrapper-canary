@@ -1,7 +1,9 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968),
     i = n(64700),
-    l = n(432022),
+    l = n(108531),
     a = n(311907),
     s = n(397927),
     o = n(775602),
@@ -18,16 +20,26 @@ let u = {
             h = i.useMemo(
                 () =>
                     !1 === t || f
-                        ? { opacity: 1 }
+                        ? {
+                              opacity: 1,
+                          }
                         : n === s.wLy.ENTERED || n === s.wLy.MOUNTED
                           ? {
-                                from: { opacity: 0 },
-                                to: { opacity: 1 },
+                                from: {
+                                    opacity: 0,
+                                },
+                                to: {
+                                    opacity: 1,
+                                },
                                 config: u,
                             }
                           : {
-                                from: { opacity: 1 },
-                                to: { opacity: 0 },
+                                from: {
+                                    opacity: 1,
+                                },
+                                to: {
+                                    opacity: 0,
+                                },
                                 config: u,
                                 onRest: () => {
                                     d();

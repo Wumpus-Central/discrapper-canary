@@ -16,6 +16,7 @@ var r = n(627968),
     p = n(652215),
     h = n(985018),
     b = n(495401);
+
 function g(e, t, n, r) {
     let l = "compact" === r ? 8 : 12;
     if (e === u.PU) return l;
@@ -30,6 +31,7 @@ function g(e, t, n, r) {
     }
     return "compact" === r ? 32 : 40;
 }
+
 function m(e, t) {
     switch (e) {
         case u.PU:
@@ -70,12 +72,22 @@ let A = l.memo(function (e) {
         x = "compact" === v ? 8 : 12;
     switch (t) {
         case u.PU:
-            return (0, r.jsx)("div", { style: { height: x } });
+            return (0, r.jsx)("div", {
+                style: {
+                    height: x,
+                },
+            });
         case u.bK:
             if (n.features.has(p.GuildFeatures.HUB)) return null;
-            return (0, r.jsx)("div", { style: { height: x } });
+            return (0, r.jsx)("div", {
+                style: {
+                    height: x,
+                },
+            });
         case u.HP:
-            return (0, r.jsx)(d.P4, { name: O ? h.intl.string(h.t.mlPMCy) : h.intl.string(h.t.k8fFjp) });
+            return (0, r.jsx)(d.P4, {
+                name: O ? h.intl.string(h.t.mlPMCy) : h.intl.string(h.t.k8fFjp),
+            });
         case g.recentsSectionNumber:
             return (0, r.jsx)(d.P4, {
                 name: h.intl.string(h.t.gKcrqM),
@@ -88,7 +100,9 @@ let A = l.memo(function (e) {
             let n = null == (E = g.getChannelFromSectionRow(t, 0)) ? void 0 : E.channel;
             return (0, r.jsxs)(l.Fragment, {
                 children: [
-                    (0, r.jsx)("div", { className: b.ts }),
+                    (0, r.jsx)("div", {
+                        className: b.ts,
+                    }),
                     (0, r.jsx)(d.kD, {
                         category: e,
                         channel: n,

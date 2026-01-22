@@ -1,4 +1,6 @@
-n.d(t, { g: () => A });
+n.d(t, {
+    g: () => A,
+});
 var r = n(627968),
     i = n(64700),
     a = n(934551),
@@ -16,6 +18,7 @@ var r = n(627968),
     g = n(316163),
     E = n(7410),
     b = n(936037);
+
 function y(e, t, n) {
     return (
         t in e
@@ -29,6 +32,7 @@ function y(e, t, n) {
         e
     );
 }
+
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -45,6 +49,7 @@ function O(e) {
     }
     return e;
 }
+
 function A() {
     return (0, p.A)()
         ? (0, r.jsx)("div", {
@@ -99,13 +104,23 @@ function A() {
               ],
           });
 }
+
 function v() {
     let e = (0, f.Dd)(h.PremiumTypes.TIER_2),
         t = i.useCallback(
             () =>
                 (0, l.mMO)(async () => {
                     let { default: e } = await n.e("22540").then(n.bind(n, 530951));
-                    return (t) => (0, r.jsx)(e, O({ source: c.A.FOR_LATER_POPOUT }, t));
+                    return (t) =>
+                        (0, r.jsx)(
+                            e,
+                            O(
+                                {
+                                    source: c.A.FOR_LATER_POPOUT,
+                                },
+                                t,
+                            ),
+                        );
                 }),
             [],
         ),
@@ -131,7 +146,9 @@ function v() {
                 size: o.lO.TINY,
                 shinyButtonClassName: g.Oy,
                 subscriptionTier: h.pe.TIER_2,
-                premiumModalAnalyticsLocation: { section: _.JJy.FOR_LATER_POPOUT_UPSELL },
+                premiumModalAnalyticsLocation: {
+                    section: _.JJy.FOR_LATER_POPOUT_UPSELL,
+                },
             }),
         ],
     });

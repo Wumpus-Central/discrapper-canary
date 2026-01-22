@@ -40,6 +40,7 @@ var r = n(627968),
     x = n(768349),
     L = n(985018),
     j = n(22658);
+
 function M(e) {
     var t;
     let { app: n, linkType: a, activityCustomId: s, activityReferrerId: l, message: m, onView: g } = e,
@@ -57,7 +58,9 @@ function M(e) {
         { currentChannelId: V, instanceId: F, isCurrentlyInInstance: B, canLaunchInChannel: H } = (0, T.w)(n.id),
         Y = (0, u.A)(),
         W = (0, h.Vr)({
-            context: { type: "contextless" },
+            context: {
+                type: "contextless",
+            },
             applicationId: n.id,
             botUserId: null == O ? void 0 : O.id,
         }),
@@ -110,7 +113,13 @@ function M(e) {
                 e
             );
         }, [z, K, F, B, V, n.id, Y, s, M, G, v, X, A]),
-        Q = v ? (0, r.jsx)(U, { app: n }) : (0, r.jsx)(k, { app: n });
+        Q = v
+            ? (0, r.jsx)(U, {
+                  app: n,
+              })
+            : (0, r.jsx)(k, {
+                  app: n,
+              });
     return (0, r.jsx)(C.h, {
         title: E,
         staticBannerSrc: N,
@@ -133,6 +142,7 @@ function M(e) {
         },
     });
 }
+
 function k(e) {
     var t, n, s;
     let { app: c } = e,
@@ -153,7 +163,11 @@ function k(e) {
                     compactDisplay: "short",
                 }),
                 r = null != (e = null == (t = c.directoryEntry) ? void 0 : t.guild_count) ? e : 0;
-            return 0 === r ? null : L.intl.format(L.t["6IW6Wi"], { guildCount: n.format(r) });
+            return 0 === r
+                ? null
+                : L.intl.format(L.t["6IW6Wi"], {
+                      guildCount: n.format(r),
+                  });
         }, [null == (t = c.directoryEntry) ? void 0 : t.guild_count, u, d]),
         p = null == (s = c.categories) || null == (n = s.at(0)) ? void 0 : n.name;
     return (0, r.jsxs)(r.Fragment, {
@@ -182,6 +196,7 @@ function k(e) {
         ],
     });
 }
+
 function U(e) {
     let { app: t } = e,
         { tags: n, maxParticipants: a = 0 } = t,
@@ -205,7 +220,9 @@ function U(e) {
                 return (0, r.jsx)(N.$, {
                     activityUsers: d,
                     guildId: c,
-                    activityText: L.intl.formatToPlainString(L.t["IJa+46"], { count: d.length }),
+                    activityText: L.intl.formatToPlainString(L.t["IJa+46"], {
+                        count: d.length,
+                    }),
                 });
             if (u.some((e) => (0, m.CZ)(e) === s.m.GLOBAL))
                 return (0, r.jsxs)(r.Fragment, {
@@ -217,7 +234,12 @@ function U(e) {
                         L.intl.string(L.t.TsWCdW),
                     ],
                 });
-            let e = a > 0 ? L.intl.format(L.t.z8EAJW, { count: a }) : L.intl.string(L.t.RjceQU);
+            let e =
+                a > 0
+                    ? L.intl.format(L.t.z8EAJW, {
+                          count: a,
+                      })
+                    : L.intl.string(L.t.RjceQU);
             return (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(l.nys, {

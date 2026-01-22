@@ -1,4 +1,7 @@
-n.d(t, { A: () => f }), n(65821);
+n.d(t, {
+    A: () => f,
+}),
+    n(65821);
 var r = n(717125),
     i = n(262763),
     a = n(721592),
@@ -6,7 +9,7 @@ var r = n(717125),
     o = n(576705),
     l = n(309010),
     c = n(977997);
-let u = 10000;
+let u = 1e4;
 class d extends Error {}
 async function f(e) {
     let { channelId: t, timeoutMs: n = u, bypassChangeModal: f = !1 } = e,

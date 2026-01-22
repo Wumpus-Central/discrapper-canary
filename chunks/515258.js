@@ -1,4 +1,6 @@
-n.d(t, { default: () => _ });
+n.d(t, {
+    default: () => _,
+});
 var r = n(627968),
     i = n(64700),
     a = n(110259),
@@ -8,6 +10,7 @@ var r = n(627968),
     c = n(457570),
     u = n(985018),
     d = n(603344);
+
 function f(e, t, n) {
     return (
         t in e
@@ -43,7 +46,9 @@ class p extends i.PureComponent {
                       label: u.intl.string(u.t.Xclkxp),
                       hideLabel: !0,
                       errorMessage: null != f ? f : void 0,
-                      children: (0, r.jsx)(l.A, { onSubmit: this.handleVerifyPhone }),
+                      children: (0, r.jsx)(l.A, {
+                          onSubmit: this.handleVerifyPhone,
+                      }),
                   })),
                   (E = [
                       {
@@ -76,7 +81,11 @@ class p extends i.PureComponent {
                 subtitle: e,
                 actions: E,
                 onClose: this.props.onClose,
-                trackingProps: { impression: { impressionName: a.ImpressionNames.USER_VERIFY_PHONE } },
+                trackingProps: {
+                    impression: {
+                        impressionName: a.ImpressionNames.USER_VERIFY_PHONE,
+                    },
+                },
                 transitionState: _,
                 children: (0, r.jsxs)(o.BJc, {
                     gap: 8,
@@ -88,7 +97,9 @@ class p extends i.PureComponent {
     constructor(e) {
         super(e),
             f(this, "handlePhoneChange", (e) => {
-                this.setState({ phone: e });
+                this.setState({
+                    phone: e,
+                });
             }),
             f(this, "handleAddPhone", () => {
                 let { phone: e } = this.state,
@@ -103,7 +114,9 @@ class p extends i.PureComponent {
                 let { onAddPhone: e } = this.props;
                 null == e || e(this.state.phone);
             }),
-            (this.state = { phone: "" });
+            (this.state = {
+                phone: "",
+            });
     }
 }
 let _ = p;

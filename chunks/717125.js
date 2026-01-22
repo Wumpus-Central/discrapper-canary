@@ -1,4 +1,7 @@
-n.d(t, { A: () => L }), n(896048);
+n.d(t, {
+    A: () => L,
+}),
+    n(896048);
 var r,
     i = n(311907),
     a = n(73153),
@@ -14,6 +17,7 @@ var r,
     h = n(71393),
     m = n(287809),
     g = n(652215);
+
 function E(e, t, n) {
     return (
         t in e
@@ -29,6 +33,7 @@ function E(e, t, n) {
 }
 let b = {},
     y = new Set();
+
 function O(e, t) {
     if (null == e) return !1;
     let n = m.default.getCurrentUser();
@@ -36,10 +41,12 @@ function O(e, t) {
     let r = p.Ay.getMember(t, n.id);
     return null != r && r.roles.includes(e.id);
 }
+
 function A(e) {
     let { guildId: t, role: n, isPreviewingRoles: r } = e;
     return !!(0, o.U)(n) && !!(r || (0, o.X)(null != n ? n : void 0) || O(n, t));
 }
+
 function v(e, t) {
     if (
         !t.features.has(g.GuildFeatures.CREATOR_MONETIZABLE) &&
@@ -77,6 +84,7 @@ function v(e, t) {
     }
     return !1;
 }
+
 function S(e) {
     let t = h.A.getGuild(e);
     if (null == t) return;
@@ -88,6 +96,7 @@ function S(e) {
         v(i, t) && n.add(i.id);
     }
 }
+
 function I(e, t) {
     let n = b[e];
     if (null == n) return !1;
@@ -99,31 +108,38 @@ function I(e, t) {
         s = v(r, i);
     return a !== s && (s ? n.add(t) : n.delete(t), !0);
 }
+
 function T() {
     (b = {}), y.clear();
 }
+
 function C(e) {
     let { guild: t } = e;
     delete b[t.id];
 }
+
 function N(e) {
     let { guildId: t } = e;
     delete b[t];
 }
+
 function R(e) {
     let { channel: t } = e;
     return null != t.guild_id && I(t.guild_id, t.id);
 }
+
 function w(e) {
     let { channels: t } = e,
         n = !1;
     for (let e of t) null != e.guild_id && I(e.guild_id, e.id) && (n = !0);
     return n;
 }
+
 function P(e) {
     let { guildId: t, restrictions: n } = e;
     (0, s.Y5)(n) ? y.add(t) : y.delete(t);
 }
+
 function D(e) {
     let { guildId: t } = e;
     y.add(t);

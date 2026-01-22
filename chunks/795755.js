@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968);
 n(64700);
 var l = n(540185),
@@ -14,6 +16,7 @@ var l = n(540185),
     b = n(557964),
     g = n(987140),
     m = n(281743);
+
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -39,6 +42,7 @@ function y(e) {
     }
     return e;
 }
+
 function O(e, t) {
     if (null == e) return {};
     var n,
@@ -67,22 +71,56 @@ function O(e, t) {
             (r = n[l]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
     return i;
 }
+
 function j(e) {
     let { widget: t } = e,
         n = O(e, ["widget"]);
     switch (t.type) {
         case l.x.FAVORITE_GAMES:
-            return (0, r.jsx)(f.A, y({ widget: t }, n));
+            return (0, r.jsx)(
+                f.A,
+                y(
+                    {
+                        widget: t,
+                    },
+                    n,
+                ),
+            );
         case l.x.CURRENT_GAMES:
-            return (0, r.jsx)(d.A, y({ widget: t }, n));
+            return (0, r.jsx)(
+                d.A,
+                y(
+                    {
+                        widget: t,
+                    },
+                    n,
+                ),
+            );
         case l.x.WANT_TO_PLAY_GAMES:
-            return (0, r.jsx)(b.A, y({ widget: t }, n));
+            return (0, r.jsx)(
+                b.A,
+                y(
+                    {
+                        widget: t,
+                    },
+                    n,
+                ),
+            );
         case l.x.PLAYED_GAMES:
-            return (0, r.jsx)(p.A, y({ widget: t }, n));
+            return (0, r.jsx)(
+                p.A,
+                y(
+                    {
+                        widget: t,
+                    },
+                    n,
+                ),
+            );
         default:
             return null;
     }
 }
+
 function x(e) {
     let { widget: t, user: n, disableInteraction: l } = e,
         d = O(e, ["widget", "user", "disableInteraction"]),
@@ -91,7 +129,9 @@ function x(e) {
         x = (0, i.bG)([a.default], () => a.default.getId() === n.id),
         h = x && !l && p,
         v = (0, s.L)(t),
-        A = (0, s.FM)(t, { isCurrentUser: x }),
+        A = (0, s.FM)(t, {
+            isCurrentUser: x,
+        }),
         w = (0, s.uA)(t),
         I = 1 === (0, s.cv)(t.type);
     return (0, r.jsx)(
@@ -131,11 +171,20 @@ function x(e) {
         ),
     );
 }
+
 function h(e) {
     let { widget: t } = e,
         n = O(e, ["widget"]);
     return (0, r.jsx)(u.M, {
         widgetType: t.type,
-        children: (0, r.jsx)(x, y({ widget: t }, n)),
+        children: (0, r.jsx)(
+            x,
+            y(
+                {
+                    widget: t,
+                },
+                n,
+            ),
+        ),
     });
 }

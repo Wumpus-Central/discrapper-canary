@@ -12,11 +12,13 @@ var l = n(440745),
     a = n(654107),
     s = n(287809),
     o = n(134753);
+
 function c(e) {
     let t = e.current,
         n = null == t ? void 0 : t.getContext("2d");
     null != t && null != n && n.clearRect(0, 0, t.width, t.height);
 }
+
 function u(e, t) {
     let { width: n, height: l, left: r, top: i } = e.getBoundingClientRect();
     return {
@@ -24,9 +26,11 @@ function u(e, t) {
         y: (t.clientY - i) / l,
     };
 }
+
 function d(e, t) {
     return Math.round(e * t * window.devicePixelRatio);
 }
+
 function f(e, t, n) {
     return {
         x: d(e.x, t),
@@ -34,9 +38,11 @@ function f(e, t, n) {
         deltaTime: e.deltaTime,
     };
 }
+
 function p(e) {
     return e.type === o.Z.LINE;
 }
+
 function b(e, t, n, l) {
     var o;
     let c = s.default.getUser(e),

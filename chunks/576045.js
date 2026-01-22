@@ -1,10 +1,14 @@
-n.d(t, { N: () => c }), n(228524);
+n.d(t, {
+    N: () => c,
+}),
+    n(228524);
 var r = n(627968),
     l = n(64700),
     i = n(731738),
     a = n(831062),
     s = n(476592),
     o = n(665909);
+
 function c(e) {
     let {
         channelId: t,
@@ -17,7 +21,9 @@ function c(e) {
         buttons: h,
     } = e;
     l.useEffect(() => {
-        a.A.increment({ name: i.K.SAFETY_WARNING_VIEW });
+        a.A.increment({
+            name: i.K.SAFETY_WARNING_VIEW,
+        });
     }, []);
     let b = l.useCallback(() => {
         null == p || p(),

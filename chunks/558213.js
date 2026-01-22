@@ -22,6 +22,7 @@ n.r(t),
         MAX_USES_OPTIONS: () => N,
     });
 var I = n(985018);
+
 function i(e, t) {
     return {
         value: e,
@@ -30,23 +31,91 @@ function i(e, t) {
         },
     };
 }
-let l = i(0, () => I.intl.formatToPlainString(I.t["r/IcuP"], { maxUses: 0 })),
-    r = i(1, () => I.intl.formatToPlainString(I.t["r/IcuP"], { maxUses: 1 })),
-    _ = i(5, () => I.intl.formatToPlainString(I.t["r/IcuP"], { maxUses: 5 })),
-    u = i(10, () => I.intl.formatToPlainString(I.t["r/IcuP"], { maxUses: 10 })),
-    O = i(25, () => I.intl.formatToPlainString(I.t["r/IcuP"], { maxUses: 25 })),
-    T = i(50, () => I.intl.formatToPlainString(I.t["r/IcuP"], { maxUses: 50 })),
-    a = i(100, () => I.intl.formatToPlainString(I.t["r/IcuP"], { maxUses: 100 })),
+let l = i(0, () =>
+        I.intl.formatToPlainString(I.t["r/IcuP"], {
+            maxUses: 0,
+        }),
+    ),
+    r = i(1, () =>
+        I.intl.formatToPlainString(I.t["r/IcuP"], {
+            maxUses: 1,
+        }),
+    ),
+    _ = i(5, () =>
+        I.intl.formatToPlainString(I.t["r/IcuP"], {
+            maxUses: 5,
+        }),
+    ),
+    u = i(10, () =>
+        I.intl.formatToPlainString(I.t["r/IcuP"], {
+            maxUses: 10,
+        }),
+    ),
+    O = i(25, () =>
+        I.intl.formatToPlainString(I.t["r/IcuP"], {
+            maxUses: 25,
+        }),
+    ),
+    T = i(50, () =>
+        I.intl.formatToPlainString(I.t["r/IcuP"], {
+            maxUses: 50,
+        }),
+    ),
+    a = i(100, () =>
+        I.intl.formatToPlainString(I.t["r/IcuP"], {
+            maxUses: 100,
+        }),
+    ),
     N = [l, r, _, u, O, T, a],
-    s = i(1800, () => I.intl.formatToPlainString(I.t.iXLF9W, { minutes: 30 })),
-    S = i(3600, () => I.intl.formatToPlainString(I.t.xCjYxK, { hours: 1 })),
-    o = i(21600, () => I.intl.formatToPlainString(I.t.xCjYxK, { hours: 6 })),
-    E = i(28800, () => I.intl.formatToPlainString(I.t.xCjYxK, { hours: 8 })),
-    P = i(43200, () => I.intl.formatToPlainString(I.t.xCjYxK, { hours: 12 })),
-    f = i(86400, () => I.intl.formatToPlainString(I.t["k2UNz+"], { days: 1 })),
-    d = i(604800, () => I.intl.formatToPlainString(I.t["k2UNz+"], { days: 7 })),
-    m = i(1209600, () => I.intl.formatToPlainString(I.t["k2UNz+"], { days: 14 })),
-    g = i(2592000, () => I.intl.formatToPlainString(I.t["k2UNz+"], { days: 30 })),
-    c = i(5184000, () => I.intl.formatToPlainString(I.t["k2UNz+"], { days: 60 })),
+    s = i(1800, () =>
+        I.intl.formatToPlainString(I.t.iXLF9W, {
+            minutes: 30,
+        }),
+    ),
+    S = i(3600, () =>
+        I.intl.formatToPlainString(I.t.xCjYxK, {
+            hours: 1,
+        }),
+    ),
+    o = i(21600, () =>
+        I.intl.formatToPlainString(I.t.xCjYxK, {
+            hours: 6,
+        }),
+    ),
+    E = i(28800, () =>
+        I.intl.formatToPlainString(I.t.xCjYxK, {
+            hours: 8,
+        }),
+    ),
+    P = i(43200, () =>
+        I.intl.formatToPlainString(I.t.xCjYxK, {
+            hours: 12,
+        }),
+    ),
+    f = i(86400, () =>
+        I.intl.formatToPlainString(I.t["k2UNz+"], {
+            days: 1,
+        }),
+    ),
+    d = i(604800, () =>
+        I.intl.formatToPlainString(I.t["k2UNz+"], {
+            days: 7,
+        }),
+    ),
+    m = i(1209600, () =>
+        I.intl.formatToPlainString(I.t["k2UNz+"], {
+            days: 14,
+        }),
+    ),
+    g = i(2592e3, () =>
+        I.intl.formatToPlainString(I.t["k2UNz+"], {
+            days: 30,
+        }),
+    ),
+    c = i(5184e3, () =>
+        I.intl.formatToPlainString(I.t["k2UNz+"], {
+            days: 60,
+        }),
+    ),
     p = i(0, () => I.intl.string(I.t.PqEzn8)),
     V = [s, S, o, P, f, d, m, g, c, p];

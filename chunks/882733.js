@@ -1,5 +1,8 @@
-n.d(t, { k: () => i });
+n.d(t, {
+    k: () => i,
+});
 var r = n(961350);
+
 function i(e) {
     var t, n;
     let i = r.default.getId();

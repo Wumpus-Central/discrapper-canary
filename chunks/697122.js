@@ -1,4 +1,6 @@
-n.d(t, { Q: () => d });
+n.d(t, {
+    Q: () => d,
+});
 var r = n(627968),
     l = n(503698),
     i = n.n(l),
@@ -7,6 +9,7 @@ var r = n(627968),
     o = n(396787),
     c = n(985018),
     u = n(876872);
+
 function d(e) {
     let { channel: t, children: n, className: l, editable: d, location: f } = e;
     return d

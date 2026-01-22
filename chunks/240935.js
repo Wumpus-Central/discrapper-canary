@@ -1,10 +1,14 @@
-n.d(t, { A: () => g }), n(896048);
+n.d(t, {
+    A: () => g,
+}),
+    n(896048);
 var r,
     i = n(311907),
     a = n(73153),
     s = n(734057),
     o = n(309010),
     l = n(543465);
+
 function c(e, t, n) {
     return (
         t in e
@@ -22,6 +26,7 @@ let u = 50,
     d = {},
     f = {},
     p = {};
+
 function _() {
     let e = o.A.getChannelId();
     if (null == e) return;
@@ -41,6 +46,7 @@ function _() {
           ? (d[n].add(e), !0)
           : void 0;
 }
+
 function h(e) {
     let { guildId: t, channelId: n } = e;
     return null == f[t] && (f[t] = new Set()), f[t].add(n), d[t].delete(n), !0;
@@ -66,4 +72,6 @@ class m extends (r = i.Ay.PersistedStore) {
     }
 }
 c(m, "displayName", "FavoritesSuggestionStore"), c(m, "persistKey", "FavoritesSuggestionStore");
-let g = new m(a.h, { DISMISS_FAVORITE_SUGGESTION: h });
+let g = new m(a.h, {
+    DISMISS_FAVORITE_SUGGESTION: h,
+});

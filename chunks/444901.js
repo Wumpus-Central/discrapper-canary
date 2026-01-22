@@ -1,4 +1,8 @@
-n.d(t, { A: () => I }), n(321073), n(228524);
+n.d(t, {
+    A: () => I,
+}),
+    n(321073),
+    n(228524);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -20,6 +24,7 @@ var r = n(627968),
     O = n(985018),
     A = n(609653),
     v = n(103467);
+
 function S(e) {
     let { message: t, applicationName: n, iconSrc: i, channel: a, currentUserId: o, viewAction: c } = e,
         u = (0, p.Ay)(t),
@@ -56,6 +61,7 @@ function S(e) {
         }),
     });
 }
+
 function I(e) {
     let {
             message: t,
@@ -113,7 +119,9 @@ function I(e) {
                             label: O.intl.string(O.t.lw71Nf),
                             trackingArea: d.kY.CONNECT_ACCOUNT,
                             onClick: () => {
-                                D({ analyticsLocations: w });
+                                D({
+                                    analyticsLocations: w,
+                                });
                             },
                             icon: l.A5T,
                             iconButton: !0,

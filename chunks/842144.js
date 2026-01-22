@@ -1,9 +1,12 @@
-n.d(t, { A: () => E });
+n.d(t, {
+    A: () => E,
+});
 var r,
     i = n(311907),
     a = n(873298),
     s = n(73153),
     o = n(761821);
+
 function l(e, t, n) {
     return (
         t in e
@@ -20,22 +23,27 @@ function l(e, t, n) {
 let c = !1,
     u = {},
     d = {};
+
 function f() {
     c = !0;
 }
+
 function p(e) {
     let { userId: t, settings: n, consents: r } = e;
     null != n && (u[t] = (0, o.Gd)(n)), null != r && (d[t] = r), (c = !1);
 }
+
 function _(e) {
     let { userId: t, consents: n } = e;
     d[t] = n;
 }
+
 function h(e) {
     let { userId: t, settings: n } = e,
         r = (0, o.Gd)(n);
     u[t] = (0, o.RK)(a.nT, u[t], r);
 }
+
 function m() {
     (u = {}), (d = {}), (c = !1);
 }

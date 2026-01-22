@@ -83,6 +83,7 @@ var r = n(627968),
 n(827669);
 var ef = n(698279),
     ep = n(111314);
+
 function e_(e, t, n) {
     return (
         t in e
@@ -96,6 +97,7 @@ function e_(e, t, n) {
         e
     );
 }
+
 function eh(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -112,6 +114,7 @@ function eh(e) {
     }
     return e;
 }
+
 function em(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -124,6 +127,7 @@ function em(e, t) {
     }
     return n;
 }
+
 function eg(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -137,13 +141,16 @@ function eg(e, t) {
 }
 let eE = 450,
     eb = 250;
+
 function ey(e) {
     return e !== H.A.getChannelId();
 }
+
 function eO(e, t) {
     var n, r;
     return null != (n = e && (null == (r = t.submit) ? void 0 : r.clearOnSubmit)) && n;
 }
+
 function eA(e, t, a, s, o) {
     let [l, c] = i.useState(!1),
         u = i.useCallback(
@@ -211,6 +218,7 @@ function eA(e, t, a, s, o) {
         ),
     };
 }
+
 function ev(e, t, n) {
     return i.useCallback(
         (r) => {
@@ -224,6 +232,7 @@ function ev(e, t, n) {
         [n, e, t],
     );
 }
+
 function eS(e) {
     return i.useCallback(
         (t) => {
@@ -240,6 +249,7 @@ function eS(e) {
         [e],
     );
 }
+
 function eI(e) {
     let { editorRef: t, disabled: n, textValue: r, channelId: a, chatInputType: s, submit: o } = e,
         { analyticsLocations: l } = (0, b.Ay)();
@@ -267,6 +277,7 @@ function eI(e) {
         [n, r, a, t, l, o, s],
     );
 }
+
 function eT(e, t) {
     return i.useCallback(
         (n, r, i) => {
@@ -287,6 +298,7 @@ function eT(e, t) {
         [e, t.id, t.guild_id],
     );
 }
+
 function eC(e, t, n) {
     let r = i.useCallback(() => {
             t || (0, R.r$)(ef.kx.EMOJI, e, n);
@@ -312,6 +324,7 @@ function eC(e, t, n) {
             handler: s,
         });
 }
+
 function eN(e, t, n) {
     let [r] = i.useState(() => new o.EventEmitter());
     i.useEffect(() => {
@@ -325,6 +338,7 @@ function eN(e, t, n) {
         handleEditorSelectionChanged: a,
     };
 }
+
 function eR() {
     let e = i.useRef(null),
         t = i.useCallback(() => {
@@ -341,11 +355,13 @@ function eR() {
         handleHideAutocomplete: n,
     };
 }
+
 function ew(e) {
     let t = i.useRef(null);
     if (null != e && "function" == typeof e) throw Error("Only Ref objects are supported");
     return null == e ? t : e;
 }
+
 function eP(e) {
     let [t, n] = i.useState(0);
     return {
@@ -358,6 +374,7 @@ function eP(e) {
         ),
     };
 }
+
 function eD(e, t, n, r) {
     let i = e.getGuildId(),
         a = (0, p.bG)([D.A], () => null != i && D.A.isLurking(i), [i]),
@@ -400,6 +417,7 @@ function eD(e, t, n, r) {
         o,
     );
 }
+
 function ex(e, t, n) {
     let [r, a, s] = (0, R.RQ)((e) => [e.activeView, e.activeViewType, e.activeChannelId], u.x),
         o = (0, p.bG)([O.A], () => O.A.shouldShowPopup() && O.A.activeViewType() === e && O.A.activeChannelId() === n);
@@ -420,6 +438,7 @@ function ex(e, t, n) {
         handleOuterClick: l,
     };
 }
+
 function eL(e, t, n) {
     let r = i.useCallback(() => {
         var r, i;
@@ -452,6 +471,7 @@ function eL(e, t, n) {
         ),
     };
 }
+
 function ej(e, t) {
     let [n, r] = i.useState({
             selectedAutocompleteInputType: null,
@@ -483,7 +503,9 @@ function ej(e, t) {
     );
 }
 let eM = (e) => {
-        let { enabled: t, onlyExactMatch: n } = (0, x.us)("ChannelTextAreaContainer", { autoTrackExposure: !1 }),
+        let { enabled: t, onlyExactMatch: n } = (0, x.us)("ChannelTextAreaContainer", {
+                autoTrackExposure: !1,
+            }),
             [r, a] = i.useState(!0),
             s = i.useRef(null);
         return (
@@ -500,7 +522,9 @@ let eM = (e) => {
         );
     },
     ek = (e, t) => {
-        let { enabled: n } = (0, x.us)("ChannelTextAreaContainer", { autoTrackExposure: !1 }),
+        let { enabled: n } = (0, x.us)("ChannelTextAreaContainer", {
+                autoTrackExposure: !1,
+            }),
             [r, a] = i.useState(null);
         return {
             currentAutocompleteType: r,
@@ -512,6 +536,7 @@ let eM = (e) => {
             ),
         };
     };
+
 function eU(e, t) {
     var n, a, o, l, u;
     let {
@@ -594,7 +619,9 @@ function eU(e, t) {
         ta = !V.D_.useSetting() && !(0, Z.isAndroidWeb)() && null != window.ResizeObserver,
         ts = !ta || !(null == (n = G.commands) ? void 0 : n.enabled) || !F || "/" !== f,
         to = (0, L.A)(),
-        { fontSize: tl } = (0, p.cf)([g.A], () => ({ fontSize: g.A.fontSize })),
+        { fontSize: tl } = (0, p.cf)([g.A], () => ({
+            fontSize: g.A.fontSize,
+        })),
         tc = (0, p.bG)([Y.A], () => Y.A.isEnabled());
     eC(G, te, U.id);
     let { eventEmitter: tu, handleEditorSelectionChanged: td } = eN(e0, f, h),
@@ -634,7 +661,9 @@ function eU(e, t) {
         { selectedAutocompleteInputType: tx, selectedAutocompleteInputError: tL } = ej(tu, e0),
         tj = eM(f),
         { currentAutocompleteType: tM, handleAutocompleteVisibilityChange: tk } = ek(G, U.id),
-        { moveAppsEntrypointToOverflow: tU } = $.C.useConfig({ location: "ChannelAppLauncher" }),
+        { moveAppsEntrypointToOverflow: tU } = $.C.useConfig({
+            location: "ChannelAppLauncher",
+        }),
         tG = (0, I.A)({
             type: G,
             channelId: U.id,
@@ -723,7 +752,11 @@ function eU(e, t) {
                         [ep.z3]: null != B,
                     }),
                     children: [
-                        tq || tX ? null : (0, r.jsx)(er.A, { bars: tK }),
+                        tq || tX
+                            ? null
+                            : (0, r.jsx)(er.A, {
+                                  bars: tK,
+                              }),
                         (0, r.jsxs)("div", {
                             ref: e1,
                             onScroll: tS,
@@ -862,7 +895,9 @@ function eU(e, t) {
                         eY,
                     ],
                 }),
-                (0, r.jsx)(_.dzK, { error: B }),
+                (0, r.jsx)(_.dzK, {
+                    error: B,
+                }),
                 tP
                     ? null
                     : (0, r.jsx)(w.A, {

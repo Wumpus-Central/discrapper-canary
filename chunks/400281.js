@@ -18,16 +18,34 @@ var r = n(627968),
     p = n(720281),
     x = n(853922),
     h = n(980197);
+
 function j(e) {
     let { onboardingMarketing: t, onboardingMarketingError: n } = e,
         i = (e) => {
             let { children: t } = e;
             return (0, r.jsxs)(r.Fragment, {
-                children: [(0, r.jsx)(s.cGx, { className: h.ts }), t],
+                children: [
+                    (0, r.jsx)(s.cGx, {
+                        className: h.ts,
+                    }),
+                    t,
+                ],
             });
         },
-        l = (0, r.jsx)(i, { children: (0, r.jsx)(m.A, {}) }, x.u.HOW_IT_WORKS),
-        a = (0, r.jsx)(i, { children: (0, r.jsx)(g.A, {}) }, x.u.BENEFITS);
+        l = (0, r.jsx)(
+            i,
+            {
+                children: (0, r.jsx)(m.A, {}),
+            },
+            x.u.HOW_IT_WORKS,
+        ),
+        a = (0, r.jsx)(
+            i,
+            {
+                children: (0, r.jsx)(g.A, {}),
+            },
+            x.u.BENEFITS,
+        );
     return null != n || (null == t ? void 0 : t.sections) == null
         ? (0, r.jsxs)(r.Fragment, {
               children: [l, a],
@@ -42,13 +60,18 @@ function j(e) {
                       case x.u.OTHER_CREATORS:
                           return (0, r.jsx)(
                               i,
-                              { children: (0, r.jsx)(b.A, { highlightedCreators: e.creators }) },
+                              {
+                                  children: (0, r.jsx)(b.A, {
+                                      highlightedCreators: e.creators,
+                                  }),
+                              },
                               x.u.OTHER_CREATORS,
                           );
                   }
               }),
           });
 }
+
 function O(e) {
     let { guild: t } = e,
         n = (0, u.A)(t),
@@ -69,12 +92,16 @@ function O(e) {
                 ineligible_reasons: x,
             },
         },
-        { disableTrack: null == t.id || null == m },
+        {
+            disableTrack: null == t.id || null == m,
+        },
     ),
     g || null == m || O)
         ? (0, r.jsx)(s.y$y, {})
         : m.actionRequired
-          ? (0, r.jsx)(p.A, { guild: t })
+          ? (0, r.jsx)(p.A, {
+                guild: t,
+            })
           : null != b
             ? (0, r.jsx)(s.wx6, {
                   type: "critical",

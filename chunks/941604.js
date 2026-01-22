@@ -1,10 +1,13 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(627968);
 n(64700);
 var l = n(397927),
     i = n(606256),
     a = n(985018);
 let s = "DOWNLOAD_APPS";
+
 function o() {
     let e = (0, l.red)((e) => (0, l.fDT)(e, s));
     return (0, r.jsx)(i.A, {
@@ -40,10 +43,17 @@ function o() {
                                         });
                                 }
                                 return e;
-                            })({ source: "Guilds" }, t),
+                            })(
+                                {
+                                    source: "Guilds",
+                                },
+                                t,
+                            ),
                         );
                 },
-                { modalKey: s },
+                {
+                    modalKey: s,
+                },
             );
         },
         selected: e,

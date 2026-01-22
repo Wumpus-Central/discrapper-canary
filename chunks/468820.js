@@ -1,4 +1,6 @@
-n.d(e, { A: () => _ });
+n.d(e, {
+    A: () => _,
+});
 var i = n(627968),
     a = n(64700),
     l = n(503698),
@@ -10,6 +12,7 @@ var i = n(627968),
     m = n(570465),
     p = n(985018),
     C = n(651614);
+
 function g(t) {
     let { guildTemplate: e, onClick: n, autoFocus: l } = t,
         r = a.useCallback(() => {
@@ -22,6 +25,7 @@ function g(t) {
         autoFocus: l,
     });
 }
+
 function _(t) {
     let { className: e, isNewUser: n, onClose: a, onChooseTemplate: l, onJoin: c } = t,
         o = (0, m.p)();

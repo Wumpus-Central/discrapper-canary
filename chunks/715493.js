@@ -12,7 +12,10 @@ let i = 0,
     s = 4,
     c = 4,
     o = "absolute",
-    d = new (a())({ max: 100 });
+    d = new (a())({
+        max: 100,
+    });
+
 function u(e) {
     let { numAttachments: t, containerWidth: n, containerHeight: r } = e;
     return l.useMemo(
@@ -126,6 +129,7 @@ function u(e) {
         [t, n, r],
     );
 }
+
 function m(e) {
     return e.map((t, n) => ({
         minWidth: 2 * e[n].width,
@@ -134,6 +138,7 @@ function m(e) {
         maxHeight: 2 * e[n].height,
     }));
 }
+
 function h(e) {
     let { imageContainerStyles: t, containerWidth: n, containerHeight: r } = e,
         a = l.useRef(m(t)),

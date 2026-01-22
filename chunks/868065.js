@@ -23,12 +23,14 @@ var i = n(503698),
     h = n(576757),
     m = n(985018),
     g = n(332225);
+
 function E() {
     return (0, r.jsx)("div", {
         className: g.kL,
         "aria-hidden": !0,
     });
 }
+
 function b(e) {
     let { children: t, selected: n, className: i, usesCardRows: s = !1 } = e;
     return (0, r.jsx)("div", {
@@ -44,6 +46,7 @@ function b(e) {
         children: t,
     });
 }
+
 function y(e) {
     let { children: t } = e;
     return (0, r.jsx)("div", {
@@ -51,6 +54,7 @@ function y(e) {
         children: t,
     });
 }
+
 function O(e) {
     let { users: t, guildId: n, "aria-hidden": i } = e;
     return (0, r.jsx)("div", {
@@ -85,6 +89,7 @@ function O(e) {
         }),
     });
 }
+
 function A(e) {
     var t;
     let { guildId: n, channelId: i, entry: a, maxAvatars: l = 3 } = e,
@@ -92,7 +97,9 @@ function A(e) {
         b = (0, s.bG)([p.default], () => p.default.getUser(E)),
         { displayParticipants: y, participant1: A, participant2: v, numOtherParticipants: S } = (0, h.A)(a, l),
         I = (0, s.bG)([d.Ay], () => d.Ay.getMember(n, E)),
-        T = (0, c.a)({ displayNameStyles: null == b ? void 0 : b.displayNameStyles }),
+        T = (0, c.a)({
+            displayNameStyles: null == b ? void 0 : b.displayNameStyles,
+        }),
         C = (0, s.bG)([f.A], () => {
             var e;
             return (null == I ? void 0 : I.colorRoleId) != null
@@ -139,14 +146,36 @@ function A(e) {
                     user0: _.Ay.getName(n, i, A),
                     user1: _.Ay.getName(n, i, v),
                     countOthers: S,
-                    name0Hook: (e, t) => (0, r.jsx)("span", { children: e }, t),
-                    name1Hook: (e, t) => (0, r.jsx)("span", { children: e }, t),
-                    countOthersHook: (e, t) => (0, r.jsx)("span", { children: e }, t),
+                    name0Hook: (e, t) =>
+                        (0, r.jsx)(
+                            "span",
+                            {
+                                children: e,
+                            },
+                            t,
+                        ),
+                    name1Hook: (e, t) =>
+                        (0, r.jsx)(
+                            "span",
+                            {
+                                children: e,
+                            },
+                            t,
+                        ),
+                    countOthersHook: (e, t) =>
+                        (0, r.jsx)(
+                            "span",
+                            {
+                                children: e,
+                            },
+                            t,
+                        ),
                 }),
             }),
         ],
     });
 }
+
 function v(e) {
     let { children: t } = e;
     return (0, r.jsx)(o.Heading, {
@@ -157,6 +186,7 @@ function v(e) {
         children: t,
     });
 }
+
 function S(e) {
     let { children: t, className: n, ref: i } = e;
     return (0, r.jsx)("div", {
@@ -165,6 +195,9 @@ function S(e) {
         children: t,
     });
 }
+
 function I() {
-    return (0, r.jsx)("div", { className: g.yF });
+    return (0, r.jsx)("div", {
+        className: g.yF,
+    });
 }

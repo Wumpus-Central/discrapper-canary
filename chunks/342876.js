@@ -1,8 +1,11 @@
-n.d(t, { b: () => o });
+n.d(t, {
+    b: () => o,
+});
 var r = n(371926),
     i = n(36310),
     a = n(74733),
     s = n(64700);
+
 function o(e) {
     let { collection: t, focusMode: n } = e,
         o = e.UNSAFE_selectionState || (0, i.R)(e),

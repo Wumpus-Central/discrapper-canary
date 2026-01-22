@@ -1,11 +1,15 @@
 let r;
-n.d(t, { A: () => T }), n(896048);
+n.d(t, {
+    A: () => T,
+}),
+    n(896048);
 var i,
     a = n(311907),
     s = n(73153),
     o = n(927813),
     l = n(661191),
     c = n(605510);
+
 function u(e, t, n) {
     return (
         t in e
@@ -19,6 +23,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,6 +40,7 @@ function d(e) {
     }
     return e;
 }
+
 function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -47,6 +53,7 @@ function f(e, t) {
     }
     return n;
 }
+
 function p(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -64,6 +71,7 @@ let _ = 3,
     g = Object.freeze([]),
     E = {},
     b = {};
+
 function y(e) {
     var t;
     let { messageId: n, channelId: r, attachments: i } = e,
@@ -76,20 +84,32 @@ function y(e) {
         s = null != (t = b[r]) ? t : g;
     (b[r] = [...s, a]), (E[n] = a);
 }
+
 function O(e) {
     let { messageId: t, channelId: n } = e,
         r = b[n];
     null != r &&
-        ((b[n] = r.map((e) => (e.messageId === t ? p(d({}, e), { reportSubmit: !0 }) : e))),
-        (E[t] = p(d({}, E[t]), { reportSubmit: !0 })));
+        ((b[n] = r.map((e) =>
+            e.messageId === t
+                ? p(d({}, e), {
+                      reportSubmit: !0,
+                  })
+                : e,
+        )),
+        (E[t] = p(d({}, E[t]), {
+            reportSubmit: !0,
+        })));
 }
+
 function A() {
     S();
 }
+
 function v(e) {
     let { explicitContentScanVersion: t } = e;
     (r = t), S();
 }
+
 function S() {
     (E = {}), (b = {});
 }

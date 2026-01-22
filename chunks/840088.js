@@ -1,4 +1,6 @@
-n.d(t, { A: () => y });
+n.d(t, {
+    A: () => y,
+});
 var r = n(627968),
     l = n(311907),
     i = n(397927),
@@ -13,6 +15,7 @@ var r = n(627968),
     p = n(652215),
     b = n(307731),
     m = n(985018);
+
 function y(e, t) {
     let n = (0, s.Id)(t),
         y = (0, l.bG)([u.A], () => (t.isPrivate() || u.A.can(p.xBc.ADD_REACTIONS, t)) && n, [t, n]),
@@ -53,7 +56,9 @@ function y(e, t) {
         id: "add-reaction",
         label: m.intl.string(m.t.lfIHs4),
         action: () => {
-            f._.dispatchKeyed(p.zOV.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
+            f._.dispatchKeyed(p.zOV.TOGGLE_REACTION_POPOUT, e.id, {
+                emojiPicker: !0,
+            });
         },
         color: "default",
         children: (0, r.jsxs)(r.Fragment, {
@@ -66,7 +71,9 @@ function y(e, t) {
                     label: m.intl.string(m.t["OBCR+p"]),
                     icon: i.nm2,
                     action: () => {
-                        f._.dispatchKeyed(p.zOV.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
+                        f._.dispatchKeyed(p.zOV.TOGGLE_REACTION_POPOUT, e.id, {
+                            emojiPicker: !0,
+                        });
                     },
                 }),
             ],

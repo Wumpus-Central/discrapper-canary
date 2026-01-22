@@ -1,4 +1,7 @@
-n.d(t, { A: () => A }), n(65821);
+n.d(t, {
+    A: () => A,
+}),
+    n(65821);
 var r,
     i = n(627968),
     a = n(64700),
@@ -8,6 +11,7 @@ var r,
     c = n(360560),
     u = n(985018),
     d = n(609946);
+
 function f(e, t, n) {
     return (
         t in e
@@ -84,7 +88,17 @@ let _ = (e) => {
         let { sku: t, className: n } = e;
         return (0, i.jsxs)("div", {
             className: o()(d.nM, n),
-            children: [(0, i.jsx)(m, { sku: t }), (0, i.jsx)(g, { sku: t }), (0, i.jsx)(E, { sku: t })],
+            children: [
+                (0, i.jsx)(m, {
+                    sku: t,
+                }),
+                (0, i.jsx)(g, {
+                    sku: t,
+                }),
+                (0, i.jsx)(E, {
+                    sku: t,
+                }),
+            ],
         });
     },
     y = (e) => {
@@ -109,9 +123,13 @@ class O extends (r = a.PureComponent) {
         let { className: n, sku: r } = this.props;
         switch (e) {
             case 5:
-                return (0, i.jsx)(y, { className: o()(t, n) });
+                return (0, i.jsx)(y, {
+                    className: o()(t, n),
+                });
             case 1:
-                return (0, i.jsx)(_, { className: o()(t, n) });
+                return (0, i.jsx)(_, {
+                    className: o()(t, n),
+                });
             case 3:
                 return (0, i.jsx)(h, {
                     sku: r,
@@ -133,7 +151,9 @@ class O extends (r = a.PureComponent) {
         let { className: t, sku: n } = this.props;
         switch (e) {
             case 5:
-                return (0, i.jsx)(y, { className: t });
+                return (0, i.jsx)(y, {
+                    className: t,
+                });
             case 3:
                 return (0, i.jsx)(h, {
                     sku: n,
@@ -163,14 +183,25 @@ class O extends (r = a.PureComponent) {
                     children: [
                         (0, i.jsxs)("div", {
                             className: d.nM,
-                            children: [(0, i.jsx)(E, { sku: r }), (0, i.jsx)(m, { sku: r })],
+                            children: [
+                                (0, i.jsx)(E, {
+                                    sku: r,
+                                }),
+                                (0, i.jsx)(m, {
+                                    sku: r,
+                                }),
+                            ],
                         }),
-                        (0, i.jsx)(g, { sku: r }),
+                        (0, i.jsx)(g, {
+                            sku: r,
+                        }),
                     ],
                 });
                 break;
             default:
-                t = (0, i.jsx)(E, { sku: r });
+                t = (0, i.jsx)(E, {
+                    sku: r,
+                });
         }
         return (0, i.jsx)("div", {
             className: o()(d.IH, n),

@@ -1,4 +1,7 @@
-n.d(t, { A: () => d }), n(896048);
+n.d(t, {
+    A: () => d,
+}),
+    n(896048);
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -8,6 +11,7 @@ var i = n(311907),
     l = n(899343),
     c = n(796012),
     u = n(752472);
+
 function d(e) {
     let { purchaseState: t, currentStep: n, onClose: d } = e,
         [f, p] = (0, l.f)({
@@ -32,7 +36,9 @@ function d(e) {
                 pauseWhileUnfocused: !1,
                 pause: _,
             }),
-            (0, r.jsx)("div", { className: u.qd }),
+            (0, r.jsx)("div", {
+                className: u.qd,
+            }),
             (0, r.jsx)(a.s_y, {
                 "data-migration-pending": !0,
                 onClick: d,

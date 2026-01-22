@@ -1,4 +1,8 @@
-n.d(t, { A: () => S }), n(896048), n(733351);
+n.d(t, {
+    A: () => S,
+}),
+    n(896048),
+    n(733351);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -142,7 +146,7 @@ let C = (e) => {
                 let e = Date.now();
                 b(
                     O.A.getMessages(t.id)
-                        ._array.filter((t) => t.timestamp.getTime() > e - 1200000)
+                        ._array.filter((t) => t.timestamp.getTime() > e - 12e5)
                         .slice(-50),
                 );
             }, [t]);
@@ -159,7 +163,7 @@ let C = (e) => {
                 let e = h[h.length - 1];
                 if (null == e) return !0;
                 if (m + 100 > Date.now()) return !1;
-                let t = Date.now() > e.timestamp.getTime() + 5000;
+                let t = Date.now() > e.timestamp.getTime() + 5e3;
                 if (!t) {
                     let e = setTimeout(() => {
                         A(Date.now()), p.current.delete(e);
@@ -190,7 +194,9 @@ let C = (e) => {
                 return o.h.subscribe("MESSAGE_CREATE", e), () => o.h.unsubscribe("MESSAGE_CREATE", e);
             }, []),
             (0, r.jsxs)("div", {
-                className: a()(_.X2, { [_.R]: !i }),
+                className: a()(_.X2, {
+                    [_.R]: !i,
+                }),
                 onMouseEnter: () => (E.current = !0),
                 onMouseLeave: () => (E.current = !1),
                 onWheel: (e) => {
@@ -202,9 +208,13 @@ let C = (e) => {
                 children: [
                     (0, r.jsx)(y.A, {
                         children: (0, r.jsx)("div", {
-                            className: a()(_.TE, { [_.N7]: n }),
+                            className: a()(_.TE, {
+                                [_.N7]: n,
+                            }),
                             children: (0, r.jsx)(s.HOs, {
-                                className: a()(_.b6, { [_.N7]: D && n }),
+                                className: a()(_.b6, {
+                                    [_.N7]: D && n,
+                                }),
                                 ref: v,
                                 children: h.map((e) =>
                                     (0, r.jsx)(
@@ -221,7 +231,9 @@ let C = (e) => {
                         }),
                     }),
                     (0, r.jsx)(f.Ay, {
-                        className: a()(_.CQ, { [_.N7]: n && 0 === N.length }),
+                        className: a()(_.CQ, {
+                            [_.N7]: n && 0 === N.length,
+                        }),
                         innerClassName: _.hF,
                         type: u.oU.HAVEN,
                         channel: t,
@@ -247,7 +259,9 @@ let C = (e) => {
                             let l = g.Ay.parse(t, r);
                             try {
                                 return (
-                                    await c.A.sendMessage(t.id, l, !0, { location: "Haven" }),
+                                    await c.A.sendMessage(t.id, l, !0, {
+                                        location: "Haven",
+                                    }),
                                     T(""),
                                     w((0, d.x7)("")),
                                     {

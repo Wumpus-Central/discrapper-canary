@@ -11,25 +11,36 @@ var r = n(73153),
     i = n(77729),
     a = n(698723),
     s = n(412780);
+
 function o(e) {
     r.h.dispatch({
         type: "RTC_DEBUG_MODAL_OPEN",
         section: e,
     }),
-        r.h.dispatch({ type: "RTC_DEBUG_POPOUT_WINDOW_OPEN" });
+        r.h.dispatch({
+            type: "RTC_DEBUG_POPOUT_WINDOW_OPEN",
+        });
 }
+
 function l() {
-    r.h.dispatch({ type: "RTC_DEBUG_MODAL_CLOSE" });
+    r.h.dispatch({
+        type: "RTC_DEBUG_MODAL_CLOSE",
+    });
 }
+
 function c() {
-    r.h.dispatch({ type: "RTC_DEBUG_MODAL_OPEN_REPLAY" });
+    r.h.dispatch({
+        type: "RTC_DEBUG_MODAL_OPEN_REPLAY",
+    });
 }
+
 function u(e) {
     r.h.dispatch({
         type: "RTC_DEBUG_MODAL_SET_SECTION",
         section: e,
     });
 }
+
 function d(e) {
     (0, a.A)("connection_replay_log_enabled", e, s.Ay.shouldRecordNextConnection()),
         r.h.dispatch({
@@ -37,6 +48,7 @@ function d(e) {
             value: e,
         });
 }
+
 function f(e, t, n) {
     r.h.dispatch({
         type: "RTC_DEBUG_SET_SIMULCAST_OVERRIDE",
@@ -45,6 +57,7 @@ function f(e, t, n) {
         quality: n,
     });
 }
+
 function p() {
     i.A.fileManager
         .showOpenDialog({

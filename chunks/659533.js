@@ -1,4 +1,6 @@
-n.d(t, { A: () => L });
+n.d(t, {
+    A: () => L,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -22,6 +24,7 @@ var r = n(627968),
     v = n(985018),
     S = n(509117),
     I = n(6336);
+
 function T(e, t, n) {
     return (
         t in e
@@ -35,6 +38,7 @@ function T(e, t, n) {
         e
     );
 }
+
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -51,6 +55,7 @@ function C(e) {
     }
     return e;
 }
+
 function N(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -63,6 +68,7 @@ function N(e, t) {
     }
     return n;
 }
+
 function R(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -113,7 +119,9 @@ let w = (e) => {
         return (0, r.jsxs)("div", {
             className: S.Ip,
             children: [
-                (0, r.jsx)("div", { className: S.Ej }),
+                (0, r.jsx)("div", {
+                    className: S.Ej,
+                }),
                 (0, r.jsx)("div", {
                     className: s()({
                         [S.ch]: t > n,
@@ -157,10 +165,18 @@ let w = (e) => {
     },
     x = (e) => {
         let { analyticsLocations: t } = e;
-        h.default.track(A.HAw.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: t }),
+        h.default.track(A.HAw.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, {
+            location_stack: t,
+        }),
             (0, u.mMO)(async () => {
                 let { default: e } = await n.e("26489").then(n.bind(n, 477088));
-                return (n) => (0, r.jsx)(e, R(C({}, n), { sourceAnalyticsLocations: t }));
+                return (n) =>
+                    (0, r.jsx)(
+                        e,
+                        R(C({}, n), {
+                            sourceAnalyticsLocations: t,
+                        }),
+                    );
             });
     },
     L = (e) => {
@@ -198,9 +214,13 @@ let w = (e) => {
                             (0, r.jsx)(u.Heading, {
                                 variant: t ? "heading-xl/extrabold" : "heading-xxl/extrabold",
                                 className: S.R0,
-                                children: (0, O.X8)({ hasSentAll: h }),
+                                children: (0, O.X8)({
+                                    hasSentAll: h,
+                                }),
                             }),
-                            (0, r.jsx)(D, { userRecords: l }),
+                            (0, r.jsx)(D, {
+                                userRecords: l,
+                            }),
                             (0, r.jsx)(u.Text, {
                                 variant: t ? "text-sm/normal" : "text-lg/medium",
                                 children: (0, O.dB)({
@@ -209,12 +229,17 @@ let w = (e) => {
                                 }),
                             }),
                             (0, r.jsx)("div", {
-                                className: s()(S.Fb, { [S.jv]: !t }),
+                                className: s()(S.Fb, {
+                                    [S.jv]: !t,
+                                }),
                                 children: (0, r.jsx)(u.wLn, {
                                     "data-migration-pending": !0,
                                     className: S.r$,
                                     color: c.XD.CUSTOM,
-                                    onClick: () => x({ analyticsLocations: C }),
+                                    onClick: () =>
+                                        x({
+                                            analyticsLocations: C,
+                                        }),
                                     onlyShineOnHover: !0,
                                     children: (0, r.jsxs)("div", {
                                         className: S.Zn,

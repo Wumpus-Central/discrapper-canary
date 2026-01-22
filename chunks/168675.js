@@ -1,4 +1,8 @@
-n.d(t, { A: () => q }), n(733351), n(896048);
+n.d(t, {
+    A: () => q,
+}),
+    n(733351),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -42,6 +46,7 @@ var r = n(627968),
     B = n(985018),
     K = n(770587),
     W = n(790687);
+
 function z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -68,6 +73,7 @@ function z(e) {
     return e;
 }
 let Y = m.oU.THREAD_CREATION;
+
 function q(e) {
     let { parentChannelId: t, parentMessageId: n, location: l } = e,
         i = (0, s.bG)([I.A], () => I.A.getChannel(t)),
@@ -85,7 +91,9 @@ function q(e) {
                               channel: i,
                               draftType: N.C.FirstThreadMessage,
                           }),
-                          (0, r.jsx)(X, { parentChannelId: t }),
+                          (0, r.jsx)(X, {
+                              parentChannelId: t,
+                          }),
                           (0, r.jsx)(J, {
                               parentChannel: i,
                               parentMessageId: n,
@@ -96,6 +104,7 @@ function q(e) {
               }),
           });
 }
+
 function X(e) {
     let { parentChannelId: t } = e,
         n = l.useCallback(() => {
@@ -129,10 +138,13 @@ function X(e) {
                 disabled: !0,
                 "aria-label": B.intl.string(B.t["7Xm5QI"]),
             }),
-            (0, r.jsx)(x.Ay.Title, { children: B.intl.string(B.t["4WNcpu"]) }),
+            (0, r.jsx)(x.Ay.Title, {
+                children: B.intl.string(B.t["4WNcpu"]),
+            }),
         ],
     });
 }
+
 function J(e) {
     let t,
         { parentChannel: n, parentMessageId: i, location: u } = e,
@@ -159,7 +171,10 @@ function J(e) {
                             c.A.changeThreadSettings(
                                 e.id,
                                 ((r = z({}, n)),
-                                (l = l = { parentMessageId: t }),
+                                (l = l =
+                                    {
+                                        parentMessageId: t,
+                                    }),
                                 Object.getOwnPropertyDescriptors
                                     ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(l))
                                     : (function (e, t) {
@@ -351,7 +366,9 @@ function J(e) {
                                     children: [
                                         (0, r.jsx)("div", {
                                             className: a()(W.P0, K.P0),
-                                            children: (0, r.jsx)(k, { className: W.Kk }),
+                                            children: (0, r.jsx)(k, {
+                                                className: W.Kk,
+                                            }),
                                         }),
                                         (0, r.jsxs)(o.nVY, {
                                             children: [
@@ -408,13 +425,17 @@ function J(e) {
         }),
     });
 }
+
 function Q(e) {
     let { startedFromMessage: t, threadSettings: n, updateThreadSettings: l, privateThreadMode: i } = e,
         a = (0, G.Iy)(n, i),
         s = (0, r.jsx)(o.Checkbox, {
             disabled: i === G.jk.PrivateOnly,
             checked: a,
-            onChange: (e) => l({ isPrivate: e }),
+            onChange: (e) =>
+                l({
+                    isPrivate: e,
+                }),
             label: B.intl.string(B.t.TRPp3g),
         });
     return t || i === G.jk.Disabled
@@ -425,6 +446,7 @@ function Q(e) {
               children: s,
           });
 }
+
 function Z(e) {
     var t;
     let {
@@ -439,7 +461,9 @@ function Z(e) {
             getThreadNameInputAccessory: p,
         } = e,
         h = null != (t = i.name) ? t : "",
-        b = (0, L.vr)(s, { content: h }),
+        b = (0, L.vr)(s, {
+            content: h,
+        }),
         g = (0, G.l1)(n, l),
         m = null != l && !f,
         A = (0, j.GV)(),
@@ -452,16 +476,23 @@ function Z(e) {
         placeholder: y,
         maxLength: H.Ign,
         onChange: (e) => {
-            a({ name: (0, k.A)(e, !1) }), "" !== e ? u.A.startTyping(n.id) : u.A.stopTyping(n.id);
+            a({
+                name: (0, k.A)(e, !1),
+            }),
+                "" !== e ? u.A.startTyping(n.id) : u.A.stopTyping(n.id);
         },
         onBlur: () => {
             let e = (0, k.A)(h, !0);
-            e !== h && a({ name: e });
+            e !== h &&
+                a({
+                    name: e,
+                });
         },
         error: b,
         disabled: c || d,
     });
 }
+
 function $(e) {
     let { parentChannel: t, textAreaState: n, setTextAreaState: i, submit: d, error: f } = e,
         [p, h] = l.useState(!0),
@@ -498,7 +529,9 @@ function $(e) {
             handler: g,
         });
     let j = (0, s.bG)([P.A], () => P.A.can(H.xBc.ATTACH_FILES, t)),
-        v = (0, L.vr)(f, { content: n.textValue });
+        v = (0, L.vr)(f, {
+            content: n.textValue,
+        });
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(O.A, {
@@ -508,7 +541,9 @@ function $(e) {
             }),
             (0, r.jsx)("div", {
                 className: K.xN,
-                children: (0, r.jsx)(o.dzK, { error: v }),
+                children: (0, r.jsx)(o.dzK, {
+                    error: v,
+                }),
             }),
             (0, r.jsx)(y.Ay, {
                 type: Y,
@@ -518,7 +553,9 @@ function $(e) {
                 richValue: n.richValue,
                 focused: p,
                 className: a()(K.gM, K.Yy),
-                innerClassName: a()(K.SL, { [K.cr]: null != v }),
+                innerClassName: a()(K.SL, {
+                    [K.cr]: null != v,
+                }),
                 onFocus: b,
                 onBlur: g,
                 onChange: m,
@@ -528,6 +565,7 @@ function $(e) {
         ],
     });
 }
+
 function ee(e) {
     let { parentChannel: t, parentMessageId: n } = e,
         l = (0, s.bG)([T.A], () => (null == n ? null : T.A.getMessage(t.id, n))),

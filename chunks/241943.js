@@ -11,7 +11,10 @@ function r(e, t, n) {
         e
     );
 }
-n.d(t, { A: () => a }), n(321073);
+n.d(t, {
+    A: () => a,
+}),
+    n(321073);
 class i {
     enqueue(e) {
         this.queue.push(e);

@@ -1,4 +1,6 @@
-r.d(t, { A: () => a });
+r.d(t, {
+    A: () => a,
+});
 var n = r(868487),
     o = Object.prototype.hasOwnProperty;
 let a = function (e, t, r, a, i, l) {

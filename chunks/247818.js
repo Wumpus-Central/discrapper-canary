@@ -17,6 +17,7 @@ var r = n(627968),
     _ = n(814890),
     h = n(57856),
     m = n(979811);
+
 function g(e, t, n) {
     return (
         t in e
@@ -30,6 +31,7 @@ function g(e, t, n) {
         e
     );
 }
+
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -46,6 +48,7 @@ function E(e) {
     }
     return e;
 }
+
 function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -58,6 +61,7 @@ function b(e, t) {
     }
     return n;
 }
+
 function y(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -69,6 +73,7 @@ function y(e, t) {
         e
     );
 }
+
 function O(e) {
     let { icon: t, iconSize: n } = e;
     return (0, r.jsx)("div", {
@@ -83,6 +88,7 @@ function O(e) {
 var A = (function (e) {
     return (e[(e.PILL_ICON_SIZE = 16)] = "PILL_ICON_SIZE"), (e[(e.ROW_ICON_SIZE = 24)] = "ROW_ICON_SIZE"), e;
 })({});
+
 function v(e) {
     let { selectActionComponent: t, queryOptions: n, renderIcon: a, renderOptionLabel: o, defaultValues: g } = e,
         { type: b, maxValues: A, disabled: v } = t,
@@ -163,7 +169,9 @@ function v(e) {
         $ = {
             isProcessing: W,
             isDisabled: v || V === p.BB.DISABLED || F,
-            wrapperClassName: s()(h.Lt, { [h.zE]: H }),
+            wrapperClassName: s()(h.Lt, {
+                [h.zE]: H,
+            }),
             options: X,
             placeholder: Q ? S : void 0,
             onClose: () => T(!1),
@@ -186,12 +194,16 @@ function v(e) {
                                       value: Array.from(R.values()),
                                       onChange: z,
                                       multi: !0,
-                                      inputClassNames: s()({ [h.R]: !Q }),
+                                      inputClassNames: s()({
+                                          [h.R]: !Q,
+                                      }),
                                       closeOnSelect: !1,
                                   },
                                   $,
                               ),
-                              { "data-migration-pending": !0 },
+                              {
+                                  "data-migration-pending": !0,
+                              },
                           ),
                           j,
                       )
@@ -206,12 +218,21 @@ function v(e) {
                                   },
                                   $,
                               ),
-                              { "data-migration-pending": !0 },
+                              {
+                                  "data-migration-pending": !0,
+                              },
                           ),
                           j,
                       ),
             }),
-            null == B || H ? null : (0, r.jsx)(d.S0, y(E({}, (0, d.PS)(B)), { className: m.z3 })),
+            null == B || H
+                ? null
+                : (0, r.jsx)(
+                      d.S0,
+                      y(E({}, (0, d.PS)(B)), {
+                          className: m.z3,
+                      }),
+                  ),
         ],
     });
 }

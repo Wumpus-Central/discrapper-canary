@@ -19,6 +19,7 @@ var i = n(503698),
     b = n(539916),
     m = n(985018),
     p = n(313109);
+
 function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -44,6 +45,7 @@ function x(e) {
     }
     return e;
 }
+
 function h(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -62,6 +64,7 @@ function h(e, t) {
         e
     );
 }
+
 function j(e) {
     var t, i, s, o;
     let {
@@ -115,10 +118,14 @@ function j(e) {
                                 option: A,
                                 index: v,
                                 onSave: (e) => {
-                                    (0, g.NF)(j, O.id, { options: O.options.map((t) => (t.id === A.id ? e : t)) });
+                                    (0, g.NF)(j, O.id, {
+                                        options: O.options.map((t) => (t.id === A.id ? e : t)),
+                                    });
                                 },
                                 onDelete: () => {
-                                    (0, g.NF)(j, O.id, { options: O.options.filter((e) => e.id !== A.id) });
+                                    (0, g.NF)(j, O.id, {
+                                        options: O.options.filter((e) => e.id !== A.id),
+                                    });
                                 },
                             }),
                         );
@@ -178,6 +185,7 @@ function j(e) {
         })
     );
 }
+
 function O(e) {
     let { guild: t, prompt: i, promptIndex: s, singleColumn: a } = e,
         d = () => {
@@ -208,7 +216,9 @@ function O(e) {
             i.options.length + 1 === b.Bu
                 ? o.A.show({
                       title: m.intl.string(m.t.TggC7k),
-                      body: m.intl.formatToPlainString(m.t.kPQKai, { thresholdCount: b.Bu }),
+                      body: m.intl.formatToPlainString(m.t.kPQKai, {
+                          thresholdCount: b.Bu,
+                      }),
                       confirmText: m.intl.string(m.t.BddRzS),
                       cancelText: m.intl.string(m.t["ETE/oC"]),
                       onConfirm: d,

@@ -46,7 +46,8 @@ var r = n(311907),
     E = n(357186),
     b = n(49999),
     y = n(652215);
-let O = 2592000000;
+let O = 2592e6;
+
 function A(e) {
     var t, n;
     let r = null == (n = o.A.settings.userContent) ? void 0 : n.recurringDismissibleContentStates[e];
@@ -57,6 +58,7 @@ function A(e) {
         numTimesDismissed: null != (t = null == r ? void 0 : r.numTimesDismissed) ? t : 0,
     };
 }
+
 function v(e, t, n) {
     return (0, s.$w)(e, {
         lastDismissedVersion: t,
@@ -65,6 +67,7 @@ function v(e, t, n) {
         numTimesDismissed: n,
     });
 }
+
 function S(e, t) {
     return (0, s.$w)(e, {
         lastDismissedVersion: 0,
@@ -73,6 +76,7 @@ function S(e, t) {
         numTimesDismissed: t,
     });
 }
+
 function I(e, t, n) {
     return (0, s.$w)(e, {
         lastDismissedVersion: 0,
@@ -81,6 +85,7 @@ function I(e, t, n) {
         numTimesDismissed: n,
     });
 }
+
 function T(e, t, n) {
     return (0, s.xs)(e, t, {
         dismissed: !0,
@@ -90,6 +95,7 @@ function T(e, t, n) {
         numTimesDismissed: n,
     });
 }
+
 function C(e, t, n) {
     return (0, s.xs)(e, t, {
         dismissed: !1,
@@ -99,6 +105,7 @@ function C(e, t, n) {
         numTimesDismissed: n,
     });
 }
+
 function N(e, t, n) {
     return (0, s.xs)(e, t, {
         dismissed: !1,
@@ -108,6 +115,7 @@ function N(e, t, n) {
         numTimesDismissed: n,
     });
 }
+
 function R(e, t, n) {
     return (0, s.xs)(e, t, {
         dismissed: !1,
@@ -117,6 +125,7 @@ function R(e, t, n) {
         numTimesDismissed: n,
     });
 }
+
 function w(e, t, n, r) {
     return (0, s.xs)(e, n, {
         dismissed: !1,
@@ -126,6 +135,7 @@ function w(e, t, n, r) {
         numTimesDismissed: r,
     });
 }
+
 function P(e, t, n) {
     return (0, s.xs)(e, t, {
         dismissed: !1,
@@ -135,6 +145,7 @@ function P(e, t, n) {
         numTimesDismissed: n,
     });
 }
+
 function D(e, t) {
     var n, r;
     if ((0, g.P3)(e))
@@ -152,6 +163,7 @@ function D(e, t) {
         lastDismissedVersion: i,
     };
 }
+
 function x(e, t) {
     var n, r;
     if ((0, g.P3)(e))
@@ -181,6 +193,7 @@ function x(e, t) {
         lastDismissedAtMs: a,
     };
 }
+
 function L(e, t, n) {
     var r, i, a, s;
     if ((0, g.P3)(e)) return !0;
@@ -203,28 +216,38 @@ function L(e, t, n) {
     let p = null != l && 1 !== c.default.compare(t, l);
     return f && p;
 }
+
 function j(e, t) {
     if ((0, g.P3)(e)) return !0;
     let n = o.A.getGuildDismissedContentState(t);
     return null != n && null != n[e] && !0 === n[e].dismissed;
 }
+
 function M(e, t) {
     return (0, r.bG)([o.A], () => j(e, t));
 }
+
 function k(e, t) {
     if ((0, g.P3)(e)) return !0;
     let n = o.A.getGuildDismissedContentState(t);
     return null != n && null != n[e] && null != n[e].lastDismissedAtMs && "0" !== n[e].lastDismissedAtMs;
 }
+
 function U(e, t) {
     if ((0, g.P3)(e)) return !0;
     let n = o.A.getGuildDismissedContentState(t);
     return null != n && null != n[e] && null != n[e].lastDismissedObjectId && "0" !== n[e].lastDismissedObjectId;
 }
 let G = new Set([i.M.ACCOUNT_LINK_INVITE_FRIENDS, i.M.POST_ACCOUNT_CONNECTION_RTC_POPOVER, i.M.ACCOUNT_LINK_PROMPT]);
+
 function V(e, t, n, r) {
     if ((0, h.dD)(e) || _.A.hasUserHitDCCap(e, null == t ? void 0 : t.guildId)) return;
-    let s = d.A.getConfig({ location: "requestMarkDismissibleContentAsShown" }).enabled && null == r && G.has(e);
+    let s =
+        d.A.getConfig({
+            location: "requestMarkDismissibleContentAsShown",
+        }).enabled &&
+        null == r &&
+        G.has(e);
     (!n || s) &&
         (a.h.dispatch({
             type: "DCF_EVENT_LOGGED",
@@ -251,9 +274,11 @@ function V(e, t, n, r) {
             },
         }));
 }
+
 function F(e, t) {
     ((0, h.dD)(e) || t.forceTrack) && X(e, t), (0, p.Xw)(e);
 }
+
 function B(e, t) {
     let n = !_.A.hasUserHitDCCap();
     (0, h.pd)(
@@ -268,11 +293,13 @@ async function H(e, t) {
     let n = (0, E.c)(e);
     await K(e, n, t);
 }
+
 function Y(e, t) {
     var n, r;
     let i = null == (r = o.A.getGuildDismissedContentState(t)) ? void 0 : r[e];
     return (null != (n = null == i ? void 0 : i.numTimesDismissed) ? n : 0) + 1;
 }
+
 function W(e, t) {
     var n, r;
     if (null != t.numTimesDismissed) return t.numTimesDismissed;
@@ -291,6 +318,7 @@ async function q(e, t) {
     let n = W(e, t);
     F(e, t), await S(e, n), B(e, t);
 }
+
 function X(e, t) {
     var n;
     let [r] = (0, h.oF)(),

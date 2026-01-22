@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var i = n(544420),
     r = n(684013),
     s = n(742984),
@@ -6,6 +8,7 @@ var i = n(544420),
     o = n(684748),
     a = n(672396),
     c = n(985018);
+
 function d(e, t, n, d, u) {
     if (null == t.activity) return null;
     let h = t.activity.type,

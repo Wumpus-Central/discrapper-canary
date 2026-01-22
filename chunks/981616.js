@@ -18,9 +18,11 @@ var r = n(729937),
     u = n(272984),
     d = n(652215);
 let f = 30 * s.A.Millis.SECOND;
+
 function p(e) {
     return null != e.getActiveSocketAndDevice() || l.A.isProtocolRegistered();
 }
+
 function _() {
     let e = c.A.getActiveSocketAndDevice();
     if (null != e) return Promise.resolve(e);
@@ -56,12 +58,14 @@ function _() {
         c.A.addChangeListener(i), window.open("".concat(u.gY, ":"));
     });
 }
+
 function h() {
     let e = c.A.getActiveSocketAndDevice();
     if (null == e) return null;
     let { socket: t } = e;
     return t.isPremium;
 }
+
 function m() {
     let e = c.A.getActiveSocketAndDevice();
     if (null == e) return Promise.reject(Error("no active profile"));
@@ -72,6 +76,7 @@ function m() {
               if (!t.isPremium) return Promise.reject(Error("spotify account is not premium"));
           });
 }
+
 function g(e) {
     if ("string" == typeof e) return e;
     throw Error("value is not a string");

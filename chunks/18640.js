@@ -1,4 +1,8 @@
-i.d(e, { X: () => E }), i(65821), i(457529);
+i.d(e, {
+    X: () => E,
+}),
+    i(65821),
+    i(457529);
 var n = i(627968),
     l = i(64700),
     s = i(397927),
@@ -15,15 +19,25 @@ let E = () => {
         _ = (0, l.useCallback)(
             () =>
                 d
-                    ? (e(T.l7.DISCONNECTED), (0, r.u)(S.HAw.NITRO_WARP_TOGGLED, { is_connecting: !1 }), E())
-                    : ((0, r.u)(S.HAw.NITRO_WARP_TOGGLED, { is_connecting: !0 }),
+                    ? (e(T.l7.DISCONNECTED),
+                      (0, r.u)(S.HAw.NITRO_WARP_TOGGLED, {
+                          is_connecting: !1,
+                      }),
+                      E())
+                    : ((0, r.u)(S.HAw.NITRO_WARP_TOGGLED, {
+                          is_connecting: !0,
+                      }),
                       e(T.l7.INITIALIZING),
                       i()
                           .then((t) => {
                               t || e(T.l7.DISCONNECTED);
                           })
                           .catch((t) => {
-                              a.A.captureException(t, { tags: { source: o.q.PRIVATE_BROWSING_PERK_CONNECT } }),
+                              a.A.captureException(t, {
+                                  tags: {
+                                      source: o.q.PRIVATE_BROWSING_PERK_CONNECT,
+                                  },
+                              }),
                                   u.default.track(S.HAw.PREMIUM_FEATURE_ERROR, {
                                       error_message: t instanceof Error ? t.message : JSON.stringify(t),
                                       error_source: o.q.PRIVATE_BROWSING_PERK_CONNECT,

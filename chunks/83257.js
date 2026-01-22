@@ -25,6 +25,7 @@ var r = n(627968),
     g = n(652215),
     E = n(985018),
     b = n(39965);
+
 function y(e, t, n) {
     return (
         t in e
@@ -38,6 +39,7 @@ function y(e, t, n) {
         e
     );
 }
+
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -54,6 +56,7 @@ function O(e) {
     }
     return e;
 }
+
 function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -66,6 +69,7 @@ function A(e, t) {
     }
     return n;
 }
+
 function v(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -85,6 +89,7 @@ let S = Object.freeze({
     I = 1.4,
     T = 15,
     C = 2;
+
 function N(e) {
     var t, n;
     let { section: i, setPreventNavigation: s, scrollerRef: o } = e;
@@ -171,7 +176,13 @@ class R extends i.PureComponent {
                             if (null != e.tabPredicate && !e.tabPredicate()) return null;
                             switch (e.section) {
                                 case m.Fq.HEADER:
-                                    return (0, r.jsx)(o.VQ0.Header, { children: e.label }, t);
+                                    return (0, r.jsx)(
+                                        o.VQ0.Header,
+                                        {
+                                            children: e.label,
+                                        },
+                                        t,
+                                    );
                                 case m.Fq.DIVIDER:
                                     return (0, r.jsx)(o.VQ0.Separator, {}, t);
                                 case m.Fq.CUSTOM:
@@ -191,7 +202,11 @@ class R extends i.PureComponent {
         let { theme: t } = this.props;
         if (null == e || null == e.notice) return null;
         let { stores: n, element: i } = e.notice;
-        return null == n || n.some((e) => e.showNotice()) ? (0, r.jsx)(i, { theme: t }) : null;
+        return null == n || n.some((e) => e.showNotice())
+            ? (0, r.jsx)(i, {
+                  theme: t,
+              })
+            : null;
     }
     render() {
         var e;
@@ -218,7 +233,10 @@ class R extends i.PureComponent {
                     }),
                     mobileSidebarOpen: this.state.sidebarOpen,
                     hideSidebar: s,
-                    toggleSidebar: () => this.setState({ sidebarOpen: !0 }),
+                    toggleSidebar: () =>
+                        this.setState({
+                            sidebarOpen: !0,
+                        }),
                     contentType: l.type,
                     notice: this.renderNotice(l),
                     closeAction: null != a ? this.handleClose : void 0,
@@ -260,7 +278,11 @@ class R extends i.PureComponent {
                                 this._subscribedStores.includes(e) ||
                                     (e.addChangeListener(this.handleNoticeStoreUpdate), this._subscribedStores.push(e));
                             }),
-                            this.setState(v(O({}, S), { sidebarOpen: !1 }));
+                            this.setState(
+                                v(O({}, S), {
+                                    sidebarOpen: !1,
+                                }),
+                            );
                     };
                 this.validNavigation() &&
                     !r &&
@@ -308,10 +330,19 @@ class R extends i.PureComponent {
                             children: e.decoration,
                         }))
                       : null != n && (null == h ? void 0 : h.includes(n)) && !t
-                        ? (y = null != _ ? _ : (0, r.jsx)(o.LpS, { text: E.intl.string(E.t.y2b7CA) }))
+                        ? (y =
+                              null != _
+                                  ? _
+                                  : (0, r.jsx)(o.LpS, {
+                                        text: E.intl.string(E.t.y2b7CA),
+                                    }))
                         : null != f
                           ? (y = f)
-                          : null != m && m > 0 && (y = (0, r.jsx)(o.hVq, { count: m }));
+                          : null != m &&
+                            m > 0 &&
+                            (y = (0, r.jsx)(o.hVq, {
+                                count: m,
+                            }));
                 let O =
                     i === g.nc_.PREMIUM
                         ? (0, r.jsx)(d.A, {

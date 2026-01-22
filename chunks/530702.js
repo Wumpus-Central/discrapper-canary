@@ -1,4 +1,6 @@
-n.d(t, { G: () => i });
+n.d(t, {
+    G: () => i,
+});
 var r = n(64700);
 class i {
     build(e, t) {
@@ -20,7 +22,9 @@ class i {
                         value: r,
                         index: e,
                     },
-                    { renderer: t },
+                    {
+                        renderer: t,
+                    },
                 ),
                     e++;
         } else {
@@ -53,7 +57,9 @@ class i {
         return r ? `${r}.${t.index}` : `$.${t.index}`;
     }
     getChildState(e, t) {
-        return { renderer: t.renderer || e.renderer };
+        return {
+            renderer: t.renderer || e.renderer,
+        };
     }
     *getFullNode(e, t, n, i) {
         var l, c, u, d, f, p, _, h;
@@ -165,6 +171,7 @@ class i {
         this.cache = new WeakMap();
     }
 }
+
 function a(e) {
     let t = [],
         n = null;
@@ -175,9 +182,11 @@ function a(e) {
         },
     };
 }
+
 function s(e, t) {
     return e && t ? (n) => e(t(n)) : e || t || void 0;
 }
+
 function o(e) {
     return e[0].toUpperCase() + e.slice(1);
 }

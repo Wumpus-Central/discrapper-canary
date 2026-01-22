@@ -1,4 +1,6 @@
-n.d(e, { A: () => d });
+n.d(e, {
+    A: () => d,
+});
 var l = n(627968);
 n(64700);
 var r = n(311907),
@@ -8,6 +10,7 @@ var r = n(311907),
     a = n(508654),
     c = n(652215),
     s = n(985018);
+
 function d(t, e, d) {
     var g;
     let { canManageGuildEvent: y } = (0, u.nr)(null != d ? d : e),
@@ -53,7 +56,10 @@ function d(t, e, d) {
                                       }
                                       return t;
                                   })({}, e)),
-                                  (r = r = { event: f }),
+                                  (r = r =
+                                      {
+                                          event: f,
+                                      }),
                                   Object.getOwnPropertyDescriptors
                                       ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
                                       : (function (t, e) {

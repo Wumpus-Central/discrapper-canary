@@ -1,4 +1,8 @@
-n.d(t, { default: () => k }), n(747238), n(896048);
+n.d(t, {
+    default: () => k,
+}),
+    n(747238),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(284009),
@@ -14,6 +18,7 @@ var r = n(627968),
     f = n(73510),
     h = n(985018),
     y = n(650659);
+
 function k(e) {
     let {
             editPermissions: t,

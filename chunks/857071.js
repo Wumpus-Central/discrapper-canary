@@ -1,4 +1,7 @@
-n.d(t, { A: () => C }), n(896048);
+n.d(t, {
+    A: () => C,
+}),
+    n(896048);
 var r,
     i = n(311907),
     a = n(73153),
@@ -7,6 +10,7 @@ var r,
     l = n(71393),
     c = n(287809),
     u = n(652215);
+
 function d(e, t, n) {
     return (
         t in e
@@ -23,10 +27,12 @@ function d(e, t, n) {
 let f = [],
     p = {},
     _ = null;
+
 function h(e) {
     let t = new Set([...(null != e ? e : [])]);
     return [...f].reduce((e, n) => (t.has(n) ? e : m(n) || e), !1);
 }
+
 function m(e) {
     let t = f.indexOf(e);
     if (t > -1) {
@@ -35,18 +41,23 @@ function m(e) {
     }
     return !1;
 }
+
 function g(e) {
     return !(e === u.ME || f.includes(e)) && ((f = [...f, e]), !0);
 }
+
 function E(e, t) {
     null != t && (p[e] = t);
 }
+
 function b(e) {
     let { guildId: t, lurker: n, source: r, directoryChannelId: i, loadId: a } = e;
     if (n) {
         switch ((g(t), E(t, a), r)) {
             case u.Q4z.MOBILE_GUILD_DISCOVERY:
-                _ = { type: u.Q4z.MOBILE_GUILD_DISCOVERY };
+                _ = {
+                    type: u.Q4z.MOBILE_GUILD_DISCOVERY,
+                };
                 break;
             case u.Q4z.DIRECTORY_ENTRY:
                 _ = {
@@ -61,10 +72,12 @@ function b(e) {
     }
     return !1;
 }
+
 function y(e) {
     let { guild: t } = e;
     return !!(null != t.joined_at && f.includes(t.id)) && (m(t.id), (_ = null), !0);
 }
+
 function O(e) {
     var t;
     let { guildId: n, joinedAt: r, user: i } = e,
@@ -72,19 +85,23 @@ function O(e) {
         s = null == r;
     return !!a && !s && !!f.includes(n) && (m(n), (_ = null), !0);
 }
+
 function A(e) {
     let { guild: t } = e;
     return !!f.includes(t.id) && (m(t.id), (_ = null), !0);
 }
+
 function v(e) {
     let { ignoredGuildIds: t } = e,
         n = h(t);
     return n && (_ = null), n;
 }
+
 function S(e) {
     let { lurkingGuildId: t, lurkingSource: n } = e;
     return g(t), (_ = n), !0;
 }
+
 function I() {
     f = l.A.getGuildsArray()
         .filter((e) => (0, s.DG)(e))

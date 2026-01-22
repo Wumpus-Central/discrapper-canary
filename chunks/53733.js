@@ -1,5 +1,8 @@
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 var r = n(158390);
+
 function i(e, t) {
     let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new r.A();
     return n

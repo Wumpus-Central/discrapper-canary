@@ -1,7 +1,10 @@
-n.d(t, { A: () => E });
+n.d(t, {
+    A: () => E,
+});
 var r,
     i = n(311907),
     a = n(73153);
+
 function s(e, t, n) {
     return (
         t in e
@@ -15,6 +18,7 @@ function s(e, t, n) {
         e
     );
 }
+
 function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -33,6 +37,7 @@ function o(e) {
 }
 let l = {},
     c = {};
+
 function u(e) {
     let { guilds: t } = e;
     (l = {}),
@@ -40,29 +45,35 @@ function u(e) {
             l[e.id] = e.member_count;
         });
 }
+
 function d(e) {
     l = o({}, e.guildMemberCounts);
 }
+
 function f(e) {
     let { guild: t } = e;
     l[t.id] = t.member_count;
 }
+
 function p(e) {
     let { guild: t } = e;
     if (null == l[t.id] && null == c[t.id]) return !1;
     delete l[t.id], delete c[t.id];
 }
+
 function _(e) {
     let { guildId: t, memberCount: n, onlineCount: r } = e,
         i = !1;
     return l[t] !== n && ((l[t] = n), (i = !0)), c[t] !== r && ((c[t] = r), (i = !0)), i;
 }
+
 function h(e) {
     let { invite: t } = e,
         { guild: n, approximate_presence_count: r } = t;
     if ((null == n ? void 0 : n.id) == null || null == r) return !1;
     c[n.id] = r;
 }
+
 function m(e) {
     let { guildId: t, count: n } = e;
     if (null == t || null == n) return !1;

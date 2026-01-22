@@ -14,6 +14,7 @@ function r(e) {
     }
     return e;
 }
+
 function i(e, t, n) {
     return (
         t in e
@@ -45,7 +46,11 @@ var a = n(279998),
     c = function (e) {
         Array.isArray(e.children) &&
             (e.children = e.children.map(function (t) {
-                return t.type === e.type ? r({}, t, { depth: (e.depth || 0) + 1 }) : t;
+                return t.type === e.type
+                    ? r({}, t, {
+                          depth: (e.depth || 0) + 1,
+                      })
+                    : t;
             }));
     };
 e.exports = {
@@ -59,7 +64,9 @@ e.exports = {
                       (delete t.children, n.push(t));
               }),
               (e.blocks = n),
-              r({}, e, { blocks: n }))
+              r({}, e, {
+                  blocks: n,
+              }))
             : e;
     },
     fromRawStateToRawTreeState: function (e) {
@@ -69,7 +76,9 @@ e.exports = {
             e.blocks.forEach(function (e) {
                 var i = l(e),
                     s = e.depth || 0,
-                    o = r({}, e, { children: [] });
+                    o = r({}, e, {
+                        children: [],
+                    });
                 if (!i) return void t.push(o);
                 var c = n[0];
                 if (null == c && 0 === s) t.push(o);
@@ -90,7 +99,9 @@ e.exports = {
                     s > 0 ? c.children.push(o) : t.push(o);
                 }
             }),
-            r({}, e, { blocks: t })
+            r({}, e, {
+                blocks: t,
+            })
         );
     },
 };

@@ -1,4 +1,7 @@
-n.d(t, { A: () => b }), n(938796);
+n.d(t, {
+    A: () => b,
+}),
+    n(938796);
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -16,6 +19,7 @@ var i = n(311907),
     m = n(652215),
     g = n(985018),
     E = n(551934);
+
 function b(e) {
     var t;
     let {
@@ -75,7 +79,7 @@ function b(e) {
                                             children: [
                                                 (0, r.jsx)(s.Text, {
                                                     variant: "text-md/normal",
-                                                    children: "\u2022",
+                                                    children: "•",
                                                 }),
                                                 (0, r.jsxs)("span", {
                                                     className: E.vP,
@@ -147,7 +151,9 @@ function b(e) {
                                     (0, r.jsx)(s.Text, {
                                         variant: "text-sm/semibold",
                                         color: "text-subtle",
-                                        children: g.intl.format(g.t["OQk+jr"], { endDate: w }),
+                                        children: g.intl.format(g.t["OQk+jr"], {
+                                            endDate: w,
+                                        }),
                                     }),
                             ],
                         }),
@@ -161,7 +167,9 @@ function b(e) {
                                       cta: (0, r.jsx)(s.Text, {
                                           variant: "text-sm/semibold",
                                           color: "text-subtle",
-                                          children: g.intl.format(g.t.nn88hB, { startDate: w }),
+                                          children: g.intl.format(g.t.nn88hB, {
+                                              startDate: w,
+                                          }),
                                       }),
                                   },
                                   e.id,
@@ -181,6 +189,7 @@ function b(e) {
         ],
     });
 }
+
 function y(e) {
     let { storeListing: t, guildId: n, navigateToHome: i } = e,
         { openModal: s } = (0, _.A)({

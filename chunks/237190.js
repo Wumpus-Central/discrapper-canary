@@ -1,4 +1,6 @@
-r.d(t, { J: () => a });
+r.d(t, {
+    J: () => a,
+});
 var n = {},
     o = function (e, t, r, n) {
         if ("u" < typeof document && !n) return null;

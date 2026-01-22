@@ -1,8 +1,11 @@
-n.d(t, { g: () => s });
+n.d(t, {
+    g: () => s,
+});
 var r = n(927813),
     l = n(427262),
     i = n(985018);
 let a = +r.A.Millis.DAY;
+
 function s(e) {
     var t, n, r;
     if ((0, l.mv)(e.user)) return i.intl.string(i.t.VaCdhQ);

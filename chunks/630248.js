@@ -1,4 +1,7 @@
-n.d(t, { A: () => C }), n(321073);
+n.d(t, {
+    A: () => C,
+}),
+    n(321073);
 var r,
     i = n(735438),
     a = n.n(i),
@@ -10,6 +13,7 @@ var r,
     d = n(617617),
     f = n(705751),
     p = n(355097);
+
 function _(e, t, n) {
     return (
         t in e
@@ -23,6 +27,7 @@ function _(e, t, n) {
         e
     );
 }
+
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -39,6 +44,7 @@ function h(e) {
     }
     return e;
 }
+
 function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -51,6 +57,7 @@ function m(e, t) {
     }
     return n;
 }
+
 function g(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -63,13 +70,16 @@ function g(e, t) {
     );
 }
 let E = [l.kc.CHAT, l.kc.PRIMARY_ENTRY_POINT],
-    b = { pendingUsages: [] },
+    b = {
+        pendingUsages: [],
+    },
     y = new c.A({
         computeBonus: () => 100,
         lookupKey: (e) => e,
         afterCompute: () => {},
         numFrequentlyItems: f.h2,
     });
+
 function O(e) {
     let {
         settings: { type: t },
@@ -78,16 +88,19 @@ function O(e) {
     if (t !== p.oD.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
     b.pendingUsages = [];
 }
+
 function A(e) {
     var t;
     let { command: n } = e;
     if (!E.includes(n.type) || (null == (t = u.Ay.getLaunchState(n.applicationId)) ? void 0 : t.isLaunching)) return !1;
     S(n.applicationId);
 }
+
 function v(e) {
     let { applicationId: t } = e;
     S(t);
 }
+
 function S(e) {
     b.pendingUsages.push({
         key: e,
@@ -96,6 +109,7 @@ function S(e) {
         y.track(e),
         y.compute();
 }
+
 function I() {
     var e, t;
     let n =
@@ -103,7 +117,11 @@ function I() {
             ? e
             : {};
     y.overwriteHistory(
-        a().mapValues(n, (e) => g(h({}, e), { recentUses: e.recentUses.map(Number).filter((e) => e > 0) })),
+        a().mapValues(n, (e) =>
+            g(h({}, e), {
+                recentUses: e.recentUses.map(Number).filter((e) => e > 0),
+            }),
+        ),
         b.pendingUsages,
     );
 }

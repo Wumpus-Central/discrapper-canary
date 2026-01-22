@@ -1,4 +1,6 @@
-a.d(n, { default: () => f });
+a.d(n, {
+    default: () => f,
+});
 var e = a(627968),
     i = a(64700),
     l = a(158954),
@@ -26,7 +28,9 @@ let f = function (t) {
     return (0, e.jsxs)(l.Modal, {
         transitionState: k,
         onClose: f,
-        title: x.intl.formatToPlainString(x.t.chV4Jb, { count: a }),
+        title: x.intl.formatToPlainString(x.t.chV4Jb, {
+            count: a,
+        }),
         actions: [
             {
                 text: x.intl.string(x.t["ETE/oC"]),

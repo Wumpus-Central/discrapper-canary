@@ -17,7 +17,14 @@ e.exports = function (e) {
             },
             {
                 className: "string",
-                variants: [{ begin: '`"[^\r\n]*?"\'' }, { begin: '"[^\r\n"]*"' }],
+                variants: [
+                    {
+                        begin: '`"[^\r\n]*?"\'',
+                    },
+                    {
+                        begin: '"[^\r\n"]*"',
+                    },
+                ],
             },
             {
                 className: "built_in",
@@ -27,7 +34,7 @@ e.exports = function (e) {
                     },
                 ],
             },
-            e.COMMENT("^[ \t]*\\*.*$", !1),
+            e.COMMENT("^[ 	]*\\*.*$", !1),
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
         ],

@@ -1,4 +1,8 @@
-n.d(t, { A: () => D }), n(896048), n(938796);
+n.d(t, {
+    A: () => D,
+}),
+    n(896048),
+    n(938796);
 var r,
     l = n(665260),
     i = n(311907),
@@ -14,6 +18,7 @@ var r,
     b = n(652215),
     g = n(790782),
     m = n(355097);
+
 function A(e, t, n) {
     return (
         t in e
@@ -51,11 +56,14 @@ let y = [
     ],
     O = 5 * y[y.length - 1].viewTime,
     j = f.A.Millis.WEEK,
-    v = { channels: {} },
+    v = {
+        channels: {},
+    },
     x = new Set(),
     E = null,
     _ = 0,
     C = 0;
+
 function S() {
     if (null == E || !T(E)) return !1;
     let e = N(E);
@@ -63,6 +71,7 @@ function S() {
     let t = Date.now();
     (e.lastActionTime = t), (e.viewDuration += t - _), (_ = t);
 }
+
 function I() {
     return (
         0 !== C && (clearInterval(C), (C = 0)),
@@ -73,6 +82,7 @@ function I() {
         !1
     );
 }
+
 function N(e) {
     return (
         e in v.channels ||
@@ -84,6 +94,7 @@ function N(e) {
         v.channels[e]
     );
 }
+
 function T(e) {
     if (!d.Ay.useNewNotifications || x.has(e)) return !1;
     let t = o.A.getBasicChannel(e);
@@ -98,6 +109,7 @@ function T(e) {
     let n = d.Ay.resolveUnreadSetting(t);
     return d.Ay.getChannelUnreadSetting(t.guild_id, t.id) === g.e.UNSET && n !== g.e.ALL_MESSAGES;
 }
+
 function P(e, t) {
     if (null == t) return !1;
     let n = d.Ay.getChannelOverrides(e)[t];

@@ -18,11 +18,13 @@ var r = n(627968),
     _ = n(837921),
     h = n(985018),
     m = n(450295);
-let g = 1000;
+let g = 1e3;
+
 function E(e) {
     let { isPopoutWindow: t } = e;
     return t ? "refresh-title-bar-small" : void 0;
 }
+
 function b(e) {
     let { isPopoutWindow: t } = e;
     return t ? 16 : 24;
@@ -30,9 +32,11 @@ function b(e) {
 let y = (e) => _.Ay.close(e),
     O = (e) => _.Ay.minimize(e),
     A = (e) => _.Ay.maximize(e);
+
 function v(e) {
     e.stopPropagation();
 }
+
 function S(e) {
     let { windowKey: t, showDivider: n } = e,
         i = (0, r.jsx)(o.DUT, {
@@ -57,10 +61,13 @@ function S(e) {
             children: (0, r.jsx)(f.A, {}),
         });
     return (0, r.jsxs)("div", {
-        className: s()(m.kU, { [m.Fx]: n }),
+        className: s()(m.kU, {
+            [m.Fx]: n,
+        }),
         children: [l, a, i],
     });
 }
+
 function I(e) {
     let { leading: t, title: n, trailing: a, windowKey: o, className: l } = e,
         c = (0, p.getPlatform)(),
@@ -94,6 +101,7 @@ function I(e) {
         ],
     });
 }
+
 function T(e) {
     let { fixed: t = !1, show: n, windowKey: a } = e,
         o = (0, p.getPlatform)(),
@@ -119,7 +127,9 @@ function T(e) {
             (0, r.jsx)("div", {
                 className: m.ZY,
                 onDoubleClick: v,
-                children: (0, r.jsx)(S, { windowKey: a }),
+                children: (0, r.jsx)(S, {
+                    windowKey: a,
+                }),
             }),
     });
 }

@@ -22,6 +22,7 @@ async function s() {
         t
     );
 }
+
 function o() {
     i.h.dispatch({
         type: "FETCH_AUTH_SESSIONS_SUCCESS",
@@ -34,7 +35,9 @@ async function l(e) {
     } else e = [e];
     let t = await r.Bo.post({
         url: a.Rsh.AUTH_SESSIONS_LOGOUT,
-        body: { session_id_hashes: e },
+        body: {
+            session_id_hashes: e,
+        },
         rejectWithError: !1,
     });
     return (

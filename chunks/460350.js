@@ -1,4 +1,8 @@
-n.d(t, { i: () => h }), n(896048), n(64700);
+n.d(t, {
+    i: () => h,
+}),
+    n(896048),
+    n(64700);
 var r = n(73153),
     i = n(157559),
     a = n(884384),
@@ -9,6 +13,7 @@ var r = n(73153),
     u = n(927578),
     d = n(652215),
     f = n(985018);
+
 function p(e, t) {
     i.A.show({
         title: f.intl.string(f.t.l8rYLt),
@@ -23,6 +28,7 @@ function p(e, t) {
             message_content_length: e,
         });
 }
+
 function _(e) {
     var t;
     let {
@@ -81,7 +87,10 @@ function _(e) {
                                 valid: !1,
                                 failureReason: d.X8x.SHOUTING_CANCELLED,
                             }),
-                        onConfirm: () => b({ valid: !0 }),
+                        onConfirm: () =>
+                            b({
+                                valid: !0,
+                            }),
                         popoutText: i,
                         animation: r,
                     });
@@ -99,8 +108,11 @@ function _(e) {
             });
         return;
     }
-    b({ valid: !0 });
+    b({
+        valid: !0,
+    });
 }
+
 function h(e) {
     let {
             openWarningPopout: t,

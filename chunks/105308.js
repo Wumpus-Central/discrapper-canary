@@ -1,4 +1,6 @@
-a.d(e, { A: () => r });
+a.d(e, {
+    A: () => r,
+});
 var t = {
     lastWeek: "'Praėjusį' eeee p",
     yesterday: "'Vakar' p",

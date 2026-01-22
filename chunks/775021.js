@@ -1,4 +1,7 @@
-n.r(t), n.d(t, { default: () => I });
+n.r(t),
+    n.d(t, {
+        default: () => I,
+    });
 var r = n(728898),
     i = n(128170),
     a = n(29583),
@@ -11,6 +14,7 @@ var r = n(728898),
     f = n(330935),
     p = n(802233),
     _ = n(98430);
+
 function h(e) {
     return (h =
         "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
@@ -23,6 +27,7 @@ function h(e) {
                       : typeof e;
               })(e);
 }
+
 function m(e, t) {
     if ("u" < typeof Symbol || null == e[Symbol.iterator]) {
         if (Array.isArray(e) || (i = g(e)) || (t && e && "number" == typeof e.length)) {
@@ -33,7 +38,9 @@ function m(e, t) {
                 s: r,
                 n: function () {
                     return n >= e.length
-                        ? { done: !0 }
+                        ? {
+                              done: !0,
+                          }
                         : {
                               done: !1,
                               value: e[n++],
@@ -73,6 +80,7 @@ function m(e, t) {
         },
     };
 }
+
 function g(e, t) {
     if (e) {
         if ("string" == typeof e) return E(e, t);
@@ -82,6 +90,7 @@ function g(e, t) {
         if ("Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return E(e, t);
     }
 }
+
 function E(e, t) {
     (null == t || t > e.length) && (t = e.length);
     for (var n = 0, r = Array(t); n < t; n++) r[n] = e[n];
@@ -93,6 +102,7 @@ var b = /[yYQqMLwIdDecihHKkms]o|(\w)\1*|''|'(''|[^'])+('|$)|./g,
     A = /''/g,
     v = /\S/,
     S = /[a-zA-Z]/;
+
 function I(e, t, n, g) {
     (0, d.A)(3, arguments);
     var E = String(e),
@@ -209,12 +219,18 @@ function I(e, t, n, g) {
                     fullToken: t,
                 });
                 var s = r.run(E, t, I.match, q);
-                if (!s) return { v: new Date(NaN) };
+                if (!s)
+                    return {
+                        v: new Date(NaN),
+                    };
                 X.push(s.setter), (E = s.rest);
             } else {
                 if (n.match(S))
                     throw RangeError("Format string contains an unescaped latin alphabet character `" + n + "`");
-                if (("''" === t ? (t = "'") : "'" === n && (t = T(t)), 0 !== E.indexOf(t))) return { v: new Date(NaN) };
+                if (("''" === t ? (t = "'") : "'" === n && (t = T(t)), 0 !== E.indexOf(t)))
+                    return {
+                        v: new Date(NaN),
+                    };
                 E = E.slice(t.length);
             }
         };
@@ -267,6 +283,7 @@ function I(e, t, n, g) {
     }
     return ei;
 }
+
 function T(e) {
     return e.match(O)[1].replace(A, "'");
 }

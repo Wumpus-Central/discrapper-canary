@@ -1,4 +1,7 @@
-s.d(t, { default: () => B }), s(896048);
+s.d(t, {
+    default: () => B,
+}),
+    s(896048);
 var r = s(627968),
     n = s(64700),
     i = s(503698),
@@ -28,6 +31,7 @@ var r = s(627968),
     I = s(693737),
     _ = s(506823),
     P = s(473169);
+
 function D(e, t, s) {
     return (
         t in e
@@ -41,6 +45,7 @@ function D(e, t, s) {
         e
     );
 }
+
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var s = null != arguments[t] ? arguments[t] : {},
@@ -57,6 +62,7 @@ function S(e) {
     }
     return e;
 }
+
 function R(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -197,9 +203,15 @@ class T extends n.PureComponent {
             children: [
                 (0, r.jsxs)(u.A0N, {
                     children: [
-                        (0, r.jsx)(u.VeA, { children: k.intl.string(k.t.EgHyKy) }),
-                        (0, r.jsx)(u.VeA, { children: k.intl.string(k.t.LBlFEN) }),
-                        (0, r.jsx)(u.VeA, { children: k.intl.string(k.t["1aM27d"]) }),
+                        (0, r.jsx)(u.VeA, {
+                            children: k.intl.string(k.t.EgHyKy),
+                        }),
+                        (0, r.jsx)(u.VeA, {
+                            children: k.intl.string(k.t.LBlFEN),
+                        }),
+                        (0, r.jsx)(u.VeA, {
+                            children: k.intl.string(k.t["1aM27d"]),
+                        }),
                     ],
                 }),
                 (0, r.jsx)(u.BFY, {
@@ -270,7 +282,9 @@ class T extends n.PureComponent {
                     lightSrc: s(151803),
                     width: 256,
                     height: 130,
-                    style: { marginBottom: 0 },
+                    style: {
+                        marginBottom: 0,
+                    },
                 }),
                 (0, r.jsx)(u.SGT, {
                     className: P.QX,
@@ -323,7 +337,10 @@ class T extends n.PureComponent {
                 invites: null,
             }),
             D(this, "handleRevoke", (e) => {
-                p.Ay.revokeInvite(e), this.setState({ invites: this.state.invites.filter((t) => t !== e) });
+                p.Ay.revokeInvite(e),
+                    this.setState({
+                        invites: this.state.invites.filter((t) => t !== e),
+                    });
             }),
             D(this, "handleClose", () => {
                 let { onClose: e } = this.props;

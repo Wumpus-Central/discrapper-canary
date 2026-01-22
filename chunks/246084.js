@@ -1,6 +1,9 @@
-n.d(t, { Ay: () => i });
+n.d(t, {
+    Ay: () => i,
+});
 var r = n(405018),
     l = n(652215);
+
 function i(e) {
     let { channel: t, locked: n, video: i, selected: a } = e;
     return (

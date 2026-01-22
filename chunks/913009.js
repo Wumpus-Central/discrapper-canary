@@ -1,4 +1,6 @@
-r.d(t, { A: () => c });
+r.d(t, {
+    A: () => c,
+});
 var n = r(64700),
     o = r(205662),
     a = r(41592),
@@ -26,6 +28,7 @@ var n = r(64700),
             return r && e(t.prototype, r), n && e(t, n), t;
         };
     })();
+
 function u(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return t && ("object" == typeof t || "function" == typeof t) ? t : e;
@@ -33,6 +36,7 @@ function u(e, t) {
 let c = (function (e) {
     if ("function" != typeof e && null !== e)
         throw TypeError("Super expression must either be null or a function, not " + typeof e);
+
     function t() {
         if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
         for (var e, r, n, o = arguments.length, i = Array(o), l = 0; l < o; l++) i[l] = arguments[l];
@@ -160,13 +164,21 @@ let c = (function (e) {
                         );
                     return n.createElement(
                         "div",
-                        { style: r.alpha },
+                        {
+                            style: r.alpha,
+                        },
                         n.createElement(
                             "div",
-                            { style: r.checkboard },
-                            n.createElement(i.A, { renderers: this.props.renderers }),
+                            {
+                                style: r.checkboard,
+                            },
+                            n.createElement(i.A, {
+                                renderers: this.props.renderers,
+                            }),
                         ),
-                        n.createElement("div", { style: r.gradient }),
+                        n.createElement("div", {
+                            style: r.gradient,
+                        }),
                         n.createElement(
                             "div",
                             {
@@ -180,10 +192,14 @@ let c = (function (e) {
                             },
                             n.createElement(
                                 "div",
-                                { style: r.pointer },
+                                {
+                                    style: r.pointer,
+                                },
                                 this.props.pointer
                                     ? n.createElement(this.props.pointer, this.props)
-                                    : n.createElement("div", { style: r.slider }),
+                                    : n.createElement("div", {
+                                          style: r.slider,
+                                      }),
                             ),
                         ),
                     );

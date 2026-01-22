@@ -1,4 +1,6 @@
-n.d(t, { default: () => d });
+n.d(t, {
+    default: () => d,
+});
 var r = n(627968);
 n(64700);
 var o = n(31717),
@@ -11,6 +13,7 @@ var o = n(31717),
     p = n(652215),
     f = n(985018),
     b = n(736975);
+
 function d(e) {
     let { channel: t, onClose: n, content: d } = e,
         y = (function (e, t) {
@@ -44,6 +47,7 @@ function d(e) {
                         !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
             return l;
         })(e, ["channel", "onClose", "content"]);
+
     function g() {
         n(), (0, a.Z)();
     }
@@ -82,8 +86,12 @@ function d(e) {
                     maxLength: p.uvi,
                     onLearnMore: g,
                 }),
-                context: f.intl.formatToPlainString(f.t.Fc1uVe, { maxLength: p.uvi }),
-                glowUp: f.intl.format(f.t.Mi8kt1, { onLearnMore: g }),
+                context: f.intl.formatToPlainString(f.t.Fc1uVe, {
+                    maxLength: p.uvi,
+                }),
+                glowUp: f.intl.format(f.t.Mi8kt1, {
+                    onLearnMore: g,
+                }),
                 analyticsSource: {
                     page:
                         (null == t ? void 0 : t.getGuildId()) != null
@@ -100,7 +108,9 @@ function d(e) {
                 secondaryCTA: f.intl.string(f.t.Fnsb1t),
                 onSecondaryClick: function () {
                     n();
-                    let e = new Blob([d], { type: "text/plain" });
+                    let e = new Blob([d], {
+                        type: "text/plain",
+                    });
                     (0, c.R)([(0, i.VE)(e, "message.txt", "text/plain")], t, o.C.ChannelMessage, {
                         requireConfirm: !0,
                     }),

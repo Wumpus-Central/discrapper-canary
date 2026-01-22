@@ -1,4 +1,6 @@
-n.d(t, { A: () => E });
+n.d(t, {
+    A: () => E,
+});
 var r = n(873298),
     i = n(97469),
     a = n(544028),
@@ -13,6 +15,7 @@ let d = u.O.NONE,
     _ = window.matchMedia("(inverted-colors: inverted)"),
     h = window.matchMedia("(prefers-contrast: more)"),
     m = window.matchMedia("(forced-colors: active)");
+
 function g(e, t) {
     t ? (d |= e) : (d &= ~e);
 }

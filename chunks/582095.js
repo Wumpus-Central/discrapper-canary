@@ -1,4 +1,7 @@
-n.d(t, { A: () => j }), n(896048);
+n.d(t, {
+    A: () => j,
+}),
+    n(896048);
 var r = n(311907),
     i = n(73153),
     l = n(663278),
@@ -24,6 +27,7 @@ var r = n(311907),
     S = n(360469),
     C = n(165610),
     N = n(731854);
+
 function T(e, t, n) {
     return (
         t in e
@@ -146,7 +150,9 @@ class j {
                     case "MESSAGE_DELETE":
                         (t = v.ZE4.MESSAGE_DELETE),
                             (n = e.channelId),
-                            (r = { id: e.id }),
+                            (r = {
+                                id: e.id,
+                            }),
                             (i = "".concat(t).concat(e.id));
                         break;
                     default:
@@ -155,7 +161,9 @@ class j {
                 null != n &&
                     this.rpcServer.dispatchToSubscriptions(
                         t,
-                        { channel_id: n },
+                        {
+                            channel_id: n,
+                        },
                         {
                             channel_id: n,
                             message: (0, O.Yj)(r),
@@ -175,7 +183,9 @@ class j {
                         if (null == i) return;
                         this.rpcServer.dispatchToSubscriptions(
                             t,
-                            { channel_id: i.channelId },
+                            {
+                                channel_id: i.channelId,
+                            },
                             {
                                 channel_id: i.channelId,
                                 user_id: e.userId,
@@ -214,7 +224,9 @@ class j {
             T(this, "handleActivityJoin", (e) => {
                 let { applicationId: t, secret: n, intent: r, embedded: i } = e;
                 if (0 === this.rpcServer.subscriptions.length) return;
-                let l = { secret: n };
+                let l = {
+                    secret: n,
+                };
                 i && (l.intent = r),
                     this.rpcServer.dispatchToSubscriptions(
                         v.ZE4.ACTIVITY_JOIN,
@@ -230,9 +242,13 @@ class j {
                 this.rpcServer.dispatchToSubscriptions(
                     v.ZE4.ACTIVITY_PIP_MODE_UPDATE,
                     (e) => e.socket.application.id === t,
-                    { is_pip_mode: r },
+                    {
+                        is_pip_mode: r,
+                    },
                 );
-                let i = { layout_mode: n };
+                let i = {
+                    layout_mode: n,
+                };
                 this.rpcServer.dispatchToSubscriptions(
                     v.ZE4.ACTIVITY_LAYOUT_MODE_UPDATE,
                     (e) => e.socket.application.id === t,
@@ -252,9 +268,13 @@ class j {
                 this.rpcServer.dispatchToSubscriptions(
                     v.ZE4.ACTIVITY_PIP_MODE_UPDATE,
                     (e) => e.socket.application.id === t,
-                    { is_pip_mode: i },
+                    {
+                        is_pip_mode: i,
+                    },
                 );
-                let l = { layout_mode: r };
+                let l = {
+                    layout_mode: r,
+                };
                 this.rpcServer.dispatchToSubscriptions(
                     v.ZE4.ACTIVITY_LAYOUT_MODE_UPDATE,
                     (e) => e.socket.application.id === t,
@@ -269,7 +289,9 @@ class j {
             T(this, "handleThermalStateChange", (e) => {
                 let { applicationId: t } = e;
                 if (0 === this.rpcServer.subscriptions.length || null == t) return;
-                let n = { thermal_state: (0, l.zw)() };
+                let n = {
+                    thermal_state: (0, l.zw)(),
+                };
                 this.rpcServer.dispatchToSubscriptions(
                     v.ZE4.THERMAL_STATE_UPDATE,
                     (e) => e.socket.application.id === t,
@@ -279,7 +301,13 @@ class j {
             T(this, "handleScreenOrientationUpdate", (e) => {
                 let { screenOrientation: t } = e;
                 0 === this.rpcServer.subscriptions.length ||
-                    this.rpcServer.dispatchToSubscriptions(v.ZE4.ORIENTATION_UPDATE, {}, { screen_orientation: t });
+                    this.rpcServer.dispatchToSubscriptions(
+                        v.ZE4.ORIENTATION_UPDATE,
+                        {},
+                        {
+                            screen_orientation: t,
+                        },
+                    );
             }),
             T(this, "handleEmbeddedActivityUpdate", () => {
                 if (0 === this.rpcServer.subscriptions.length) return;
@@ -457,7 +485,9 @@ class j {
                     this.rpcServer.dispatchToSubscriptions(
                         v.ZE4.ENTITLEMENT_CREATE,
                         (e) => e.socket.application.id === t.application_id,
-                        { entitlement: t },
+                        {
+                            entitlement: t,
+                        },
                     );
             }),
             T(this, "handleEntitlementDelete", (e) => {
@@ -466,7 +496,9 @@ class j {
                     this.rpcServer.dispatchToSubscriptions(
                         v.ZE4.ENTITLEMENT_DELETE,
                         (e) => e.socket.application.id === t.application_id,
-                        { entitlement: t },
+                        {
+                            entitlement: t,
+                        },
                     );
             }),
             T(this, "handleQuestEnrollSuccess", (e) => {

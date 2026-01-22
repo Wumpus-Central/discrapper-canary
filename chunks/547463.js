@@ -51,6 +51,7 @@ var i = n(627968),
     K = n(381941),
     Z = n(985018),
     W = n(72007);
+
 function B(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -76,6 +77,7 @@ function B(e) {
     }
     return e;
 }
+
 function X(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -94,6 +96,7 @@ function X(e, t) {
         e
     );
 }
+
 function Q(e) {
     let t,
         { entry: n, currentUserActivity: l, idx: o, variant: s } = e,
@@ -102,7 +105,7 @@ function Q(e) {
         [A, O] = r.useState(!1);
     r.useEffect(() => {
         if ("sent" === u) {
-            let e = setTimeout(() => O(!0), 2000);
+            let e = setTimeout(() => O(!0), 2e3);
             return () => clearTimeout(e);
         }
     }, [u]);
@@ -128,7 +131,9 @@ function Q(e) {
                             !0 === n.extra.fake_inventory_item
                                 ? await (0, x.J)({
                                       channel: i,
-                                      content: Z.intl.formatToPlainString(Z.t.UVBA9g, { gameName: n.extra.game_name }),
+                                      content: Z.intl.formatToPlainString(Z.t.UVBA9g, {
+                                          gameName: n.extra.game_name,
+                                      }),
                                       whenReady: !0,
                                       doNotNotifyOnError: !1,
                                       location: K.Hx.OVERLAY,
@@ -189,6 +194,7 @@ function Q(e) {
         })
     );
 }
+
 function J(e) {
     var t;
     let { entry: n, currentUserActivity: l, variant: a } = e,
@@ -233,6 +239,7 @@ function J(e) {
         }),
     });
 }
+
 function q(e) {
     let { entry: t, currentUserActivity: n, idx: r, variant: l } = e,
         a = (0, d.bG)([M.default], () => M.default.getUser(t.author_id)),
@@ -274,14 +281,23 @@ function q(e) {
                                       color: "text-strong",
                                       children: z.Ay.getName(void 0, void 0, a),
                                   }),
-                                  null != o && (0, i.jsx)(b.Ay, { className: W.Ok }),
+                                  null != o &&
+                                      (0, i.jsx)(b.Ay, {
+                                          className: W.Ok,
+                                      }),
                               ],
                           }),
                           (0, i.jsx)(S.mG, {
                               location: S.N5.OVERLAY,
                               className: W.cV,
                               children: [S.iq, S.tR, S.K7, S.sp, S.MK].map((e, n) =>
-                                  (0, i.jsx)(e, { entry: t }, "entry-".concat(n)),
+                                  (0, i.jsx)(
+                                      e,
+                                      {
+                                          entry: t,
+                                      },
+                                      "entry-".concat(n),
+                                  ),
                               ),
                           }),
                       ],
@@ -306,9 +322,11 @@ function q(e) {
               ],
           });
 }
+
 function $(e) {
     return new Set(e.map((e) => e.author_id));
 }
+
 function ee(e) {
     let { entries: t, currentUserActivity: n, className: l, hideHeader: a = !1, variant: o = "default" } = e,
         s = (0, H.Dk)(() => $(t), [t]),
@@ -370,6 +388,7 @@ function ee(e) {
               ],
           });
 }
+
 function et(e) {
     let { gamingId: t, maxUserShowCount: n, userAffinityThresholdV2: i = 0.0029 } = e,
         l = (0, j.A)(t);
@@ -380,7 +399,9 @@ function et(e) {
         u = (0, d.yK)([V.A, k.A, C.A], () => {
             if (null == t) return [];
             let e = V.A.nowPlayingCards,
-                n = { v2: i };
+                n = {
+                    v2: i,
+                };
             return e
                 .reduce((e, n) => {
                     if (n.type !== F.ZzC.USER) return e;
@@ -461,6 +482,7 @@ function et(e) {
         }
     );
 }
+
 function en(e) {
     let t = et(e);
     return (0, i.jsx)(
@@ -471,6 +493,7 @@ function en(e) {
         }),
     );
 }
+
 function ei(e) {
     let { activity: t, currentUser: n, showInviteButton: r = !0 } = e,
         l = null != t && (0, E.A)(t, F.jUm.JOIN),
@@ -507,6 +530,7 @@ function ei(e) {
               ],
           });
 }
+
 function er(e) {
     let { locked: t } = e,
         n = (0, Y.b4)(),

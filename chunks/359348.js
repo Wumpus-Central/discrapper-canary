@@ -1,4 +1,7 @@
-n.d(t, { A: () => E }), n(896048);
+n.d(t, {
+    A: () => E,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(417597),
@@ -18,6 +21,7 @@ var r = n(627968),
     y = n(985018),
     O = n(345314),
     j = n(145394);
+
 function v(e) {
     (0, o.L3)(e, async () => {
         let { default: e } = await n.e("44751").then(n.bind(n, 575538));
@@ -79,7 +83,9 @@ let x = (e) => {
                 type: "image",
                 src: j,
             },
-            caretConfig: { align: "center" },
+            caretConfig: {
+                align: "center",
+            },
             onRequestClose: c,
         });
     },

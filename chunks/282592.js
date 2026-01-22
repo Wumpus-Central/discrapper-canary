@@ -1,4 +1,6 @@
-n.d(e, { A: () => d });
+n.d(e, {
+    A: () => d,
+});
 var r = n(627968);
 n(64700);
 var i = n(665260),
@@ -7,6 +9,7 @@ var i = n(665260),
     c = n(954571),
     o = n(652215),
     u = n(985018);
+
 function d(t) {
     return null == t
         ? null
@@ -43,7 +46,12 @@ function d(t) {
                                       });
                               }
                               return t;
-                          })({ overlay_disabled: (0, i.Lt)(e, o.hM6.OVERLAY_DISABLED) }, t.getAnalyticsData()),
+                          })(
+                              {
+                                  overlay_disabled: (0, i.Lt)(e, o.hM6.OVERLAY_DISABLED),
+                              },
+                              t.getAnalyticsData(),
+                          ),
                       );
               },
               checked: t.hasFlag(o.hM6.OVERLAY_DISABLED),

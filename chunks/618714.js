@@ -33,6 +33,7 @@
         E = b(function () {
             (d = 22), (p = 66), (f = 0);
         });
+
     function b(e) {
         var t,
             n,
@@ -45,18 +46,23 @@
             (n = Date.now()), t || (t = setTimeout(i, r));
         };
     }
+
     function y() {
         u && (i && o(i), r && clearTimeout(r), (u = !1));
     }
+
     function O() {
         125 != p && ((d = 7), (p = 125), (f = 35), u && (y(), S())), E();
     }
+
     function A() {
         (i = null), (r = setTimeout(I, 0));
     }
+
     function v() {
         (r = null), s(A);
     }
+
     function S() {
         u ||
             ((t = p - (Date.now() - h)),
@@ -65,6 +71,7 @@
             f && t < f && (t = f),
             t > 9 ? (r = setTimeout(v, t)) : ((t = 0), v()));
     }
+
     function I() {
         var n,
             i,
@@ -74,16 +81,20 @@
             for (i = 0, a = l.length; i < a && g.timeRemaining() > s; i++) (n = l.shift()), m++, n && n(g);
         l.length ? S() : (c = 0);
     }
+
     function T(e) {
         return _++, l.push(e), S(), _;
     }
+
     function C(e) {
         var t = e - 1 - m;
         l[t] && (l[t] = null);
     }
     if (a.requestIdleCallback && a.cancelIdleCallback)
         try {
-            a.requestIdleCallback(function () {}, { timeout: 0 });
+            a.requestIdleCallback(function () {}, {
+                timeout: 0,
+            });
         } catch (e) {
             !(function (e) {
                 var t, n;

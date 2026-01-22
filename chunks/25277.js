@@ -1,6 +1,10 @@
-n.d(t, { A: () => o }), n(896048);
+n.d(t, {
+    A: () => o,
+}),
+    n(896048);
 var r = n(64700),
     i = n(650583);
+
 function a(e, t, n) {
     return (
         t in e
@@ -14,6 +18,7 @@ function a(e, t, n) {
         e
     );
 }
+
 function s(e) {
     switch (e) {
         case i.dh.ARROW_DOWN:

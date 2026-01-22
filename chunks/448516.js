@@ -13,8 +13,12 @@ e.exports = function (e) {
         i = {
             className: "code",
             variants: [
-                { begin: "(`{3,})[^`](.|\\n)*?\\1`*[ ]*" },
-                { begin: "(~{3,})[^~](.|\\n)*?\\1~*[ ]*" },
+                {
+                    begin: "(`{3,})[^`](.|\\n)*?\\1`*[ ]*",
+                },
+                {
+                    begin: "(~{3,})[^~](.|\\n)*?\\1~*[ ]*",
+                },
                 {
                     begin: "```",
                     end: "```+[ ]*$",
@@ -23,7 +27,9 @@ e.exports = function (e) {
                     begin: "~~~",
                     end: "~~~+[ ]*$",
                 },
-                { begin: "`.+?`" },
+                {
+                    begin: "`.+?`",
+                },
                 {
                     begin: "(?=^( {4}|\\t))",
                     contains: [
@@ -38,7 +44,7 @@ e.exports = function (e) {
         },
         a = {
             className: "bullet",
-            begin: "^[ \t]*([*+-]|(\\d+\\.))(?=\\s+)",
+            begin: "^[ 	]*([*+-]|(\\d+\\.))(?=\\s+)",
             end: "\\s+",
             excludeEnd: !0,
         },
@@ -87,7 +93,9 @@ e.exports = function (e) {
             ],
             returnBegin: !0,
             contains: [
-                { match: /\[(?=\])/ },
+                {
+                    match: /\[(?=\])/,
+                },
                 {
                     className: "string",
                     relevance: 0,
@@ -143,8 +151,12 @@ e.exports = function (e) {
                 },
             ],
         },
-        d = e.inherit(c, { contains: [] }),
-        f = e.inherit(u, { contains: [] });
+        d = e.inherit(c, {
+            contains: [],
+        }),
+        f = e.inherit(u, {
+            contains: [],
+        });
     c.contains.push(f), u.contains.push(d);
     let p = [n, l];
     return (
@@ -166,7 +178,9 @@ e.exports = function (e) {
                         {
                             begin: "(?=^.+?\\n[=-]{2,}$)",
                             contains: [
-                                { begin: "^[=-]*$" },
+                                {
+                                    begin: "^[=-]*$",
+                                },
                                 {
                                     begin: "^",
                                     end: "\\n",

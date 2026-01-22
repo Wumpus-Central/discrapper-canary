@@ -1,4 +1,8 @@
-l.r(t), l.d(t, { default: () => H }), l(896048);
+l.r(t),
+    l.d(t, {
+        default: () => H,
+    }),
+    l(896048);
 var n = l(627968),
     r = l(64700),
     s = l(503698),
@@ -59,7 +63,9 @@ let M = (e) => {
             { currentTab: H, hasFilters: G } = (0, y.v)(),
             F = r.useMemo(() => (t === R.G2.HOME && H && G() ? H : t), [t, H, G]),
             { categories: U, refreshCategories: z } = (0, S.Ay)(
-                { logPerf: !0 },
+                {
+                    logPerf: !0,
+                },
                 {
                     sessionId: l,
                     tab: F,
@@ -107,7 +113,9 @@ let M = (e) => {
                         onClose: D,
                         shouldAddEventListener: !1,
                         children: (0, n.jsxs)("div", {
-                            className: a()(w.bx, { [B.T3]: c }),
+                            className: a()(w.bx, {
+                                [B.T3]: c,
+                            }),
                             ref: el,
                             tabIndex: -1,
                             children: [

@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -10,6 +12,7 @@ var i = n(503698),
     u = n(397927),
     d = n(263063),
     f = n(232358);
+
 function p() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : d.A.Sizes.SMALLER;
     switch (e) {
@@ -22,6 +25,7 @@ function p() {
             return f.q1;
     }
 }
+
 function _() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : d.A.Sizes.SMALLER;
     switch (e) {
@@ -33,6 +37,7 @@ function _() {
             return "text-xs/medium";
     }
 }
+
 function h(e) {
     let {
             className: t,
@@ -45,6 +50,7 @@ function h(e) {
             disableGuildNameTooltip: E = !1,
         } = e,
         b = p(m);
+
     function y() {
         let e = i.length - n,
             t = e + 1,

@@ -7,11 +7,13 @@ var r = t(627968),
     n = t(64700),
     l = t(158363);
 let a = n.createContext(void 0);
+
 function i() {
     let e = n.useContext(a);
     if (null == e) throw Error("No GuildProductAttachmentManagerContextProvider found");
     return e;
 }
+
 function s(e) {
     let { children: A, guildId: t } = e,
         n = (function (e, A) {

@@ -10,6 +10,7 @@ var l = n(989349),
     i = n(728458),
     s = n(661191),
     o = n(652215);
+
 function c(e, t, n) {
     return (
         t in e
@@ -23,6 +24,7 @@ function c(e, t, n) {
         e
     );
 }
+
 function u(e) {
     if (e === o.F_X.ALL) return o.GaG.ALL;
     if (e <= o.F_X.GUILD_UPDATE) return o.GaG.GUILD;
@@ -59,6 +61,7 @@ function u(e) {
     else if (e <= o.F_X.GUILD_MIGRATE_BYPASS_SLOWMODE_PERMISSION) return o.GaG.GUILD;
     return i.A.captureMessage("Unknown target type for: ".concat(e)), o.GaG.UNKNOWN;
 }
+
 function E(e) {
     switch (e) {
         case o.F_X.CHANNEL_CREATE:

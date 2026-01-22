@@ -7,6 +7,7 @@ var r = n(58149),
     i = n(842086),
     a = n(954571),
     s = n(652215);
+
 function o(e, t, n) {
     return (
         t in e
@@ -20,6 +21,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +38,7 @@ function l(e) {
     }
     return e;
 }
+
 function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -48,6 +51,7 @@ function c(e, t) {
     }
     return n;
 }
+
 function u(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -59,6 +63,7 @@ function u(e, t) {
         e
     );
 }
+
 function d(e, t, n, i) {
     var o, c, d;
     a.default.track(
@@ -72,6 +77,7 @@ function d(e, t, n, i) {
         }),
     );
 }
+
 function f(e, t, n, i) {
     var o, c, d, f, p;
     a.default.track(
@@ -90,6 +96,7 @@ function f(e, t, n, i) {
         }),
     );
 }
+
 function p(e) {
     switch (e) {
         case i.D6.AUTOCOMPLETE:
@@ -102,6 +109,7 @@ function p(e) {
             return null;
     }
 }
+
 function _(e) {
     let { sticker: t, stickerSelectLocation: n, isReplacement: r, analyticsLocations: i } = e;
     a.default.track(s.HAw.STICKER_ATTACHED, {

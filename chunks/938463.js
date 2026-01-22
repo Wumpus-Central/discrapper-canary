@@ -1,10 +1,15 @@
-n.d(t, { A: () => c }), n(896048), n(747238);
+n.d(t, {
+    A: () => c,
+}),
+    n(896048),
+    n(747238);
 var r = n(735438),
     i = n.n(r),
     a = n(961350),
     s = n(986238),
     o = n(652215),
     l = n(985018);
+
 function c(e, t, n) {
     if (null == e || null == t)
         return {
@@ -29,7 +34,9 @@ function c(e, t, n) {
         let e = r === o.BIo.PTB ? r.toUpperCase() : "".concat(r.charAt(0).toUpperCase()).concat(r.slice(1));
         return {
             valid: !1,
-            reason: l.intl.formatToPlainString(l.t.GOEF0C, { releaseChannel: e }),
+            reason: l.intl.formatToPlainString(l.t.GOEF0C, {
+                releaseChannel: e,
+            }),
         };
     }
     if (null != d) {
@@ -49,7 +56,9 @@ function c(e, t, n) {
         if (!e)
             return {
                 valid: !1,
-                reason: l.intl.formatToPlainString(l.t.GOEF0C, { releaseChannel: d.join(", ") }),
+                reason: l.intl.formatToPlainString(l.t.GOEF0C, {
+                    releaseChannel: d.join(", "),
+                }),
             };
     }
     let _ = null != c ? new Date(c).getTime() : null;
@@ -63,5 +72,7 @@ function c(e, t, n) {
                 valid: !1,
                 reason: l.intl.string(l.t.qZgV0a),
             }
-          : { valid: !0 };
+          : {
+                valid: !0,
+            };
 }

@@ -1,4 +1,7 @@
-n.d(t, { A: () => f }), n(896048);
+n.d(t, {
+    A: () => f,
+}),
+    n(896048);
 var r = n(627968),
     i = n(554146),
     a = n(397927),
@@ -8,8 +11,11 @@ var r = n(627968),
     c = n(652215),
     u = n(49999),
     d = n(985018);
+
 function f() {
-    let [e, t] = (0, s.Wl)(i.M.NAGBAR_NOTICE_IGNORE_USER_FEEDBACK, { cooldownDurationMs: l.aH });
+    let [e, t] = (0, s.Wl)(i.M.NAGBAR_NOTICE_IGNORE_USER_FEEDBACK, {
+        cooldownDurationMs: l.aH,
+    });
     return e !== i.M.NAGBAR_NOTICE_IGNORE_USER_FEEDBACK
         ? null
         : (0, r.jsxs)(a.$Td, {

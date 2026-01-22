@@ -1,9 +1,12 @@
-n.d(t, { A: () => U }), n(896048);
+n.d(t, {
+    A: () => U,
+}),
+    n(896048);
 var l = n(627968),
     r = n(64700),
     i = n(503698),
     a = n.n(i),
-    s = n(432022),
+    s = n(108531),
     o = n(23339),
     c = n(311907),
     u = n(827734),
@@ -23,6 +26,7 @@ var l = n(627968),
     x = n(788868),
     S = n(985018),
     N = n(176273);
+
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -48,6 +52,7 @@ function C(e) {
     }
     return e;
 }
+
 function j(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -75,10 +80,18 @@ let T = (0, o.xI)(f.A.LIVE_INDICATOR_BORDER_RADIUS),
         opacity: 1,
         transform: "translate3d(0%, 0, 0)",
     },
-    R = { opacity: 0 },
-    P = { opacity: 1 },
-    D = { borderRadius: "".concat(T, "px ").concat(T, "px ").concat(T, "px ").concat(T, "px") },
-    k = { borderRadius: "0px ".concat(T, "px ").concat(T, "px 0px") },
+    R = {
+        opacity: 0,
+    },
+    P = {
+        opacity: 1,
+    },
+    D = {
+        borderRadius: "".concat(T, "px ").concat(T, "px ").concat(T, "px ").concat(T, "px"),
+    },
+    k = {
+        borderRadius: "0px ".concat(T, "px ").concat(T, "px 0px"),
+    },
     L = {
         mass: 1,
         tension: 500,
@@ -120,7 +133,13 @@ let T = (0, o.xI)(f.A.LIVE_INDICATOR_BORDER_RADIUS),
                     L &&
                     (0, p.mMO)(async () => {
                         let { default: e } = await n.e("18630").then(n.bind(n, 826789));
-                        return (t) => (0, l.jsx)(e, j(C({}, t), { analyticsSource: M }));
+                        return (t) =>
+                            (0, l.jsx)(
+                                e,
+                                j(C({}, t), {
+                                    analyticsSource: M,
+                                }),
+                            );
                     });
             }, [V, L, M]);
         if (
@@ -143,7 +162,9 @@ let T = (0, o.xI)(f.A.LIVE_INDICATOR_BORDER_RADIUS),
             position: "bottom",
             children: (0, l.jsxs)(p.DUT, {
                 onClick: F,
-                className: a()(N.t5, h, m.u1[f], k ? N.Y5 : N.Lc, { [N.vk]: V && L }),
+                className: a()(N.t5, h, m.u1[f], k ? N.Y5 : N.Lc, {
+                    [N.vk]: V && L,
+                }),
                 children: [
                     L
                         ? (0, l.jsx)(p.tvc, {
@@ -156,13 +177,17 @@ let T = (0, o.xI)(f.A.LIVE_INDICATOR_BORDER_RADIUS),
                         className: N.UD,
                         children: (0, E.ME)(P.maxResolution),
                     }),
-                    (0, l.jsx)("span", { children: (0, E.Bs)(P.maxFrameRate) }),
+                    (0, l.jsx)("span", {
+                        children: (0, E.Bs)(P.maxFrameRate),
+                    }),
                 ],
             }),
         });
         return (0, l.jsx)(p.LpS, {
             text: G,
-            className: a()(w, N.AA, { [N.Dc]: L && R }),
+            className: a()(w, N.AA, {
+                [N.Dc]: L && R,
+            }),
             color: u.A.unsafe_rawColors.PRIMARY_500.css,
             shape: m.u1[f],
         });
@@ -174,7 +199,9 @@ let T = (0, o.xI)(f.A.LIVE_INDICATOR_BORDER_RADIUS),
             { reducedMotion: g } = r.useContext(p.CZY),
             A = n && null != b;
         r.useEffect(() => {
-            (0, h.A)(t.stream.ownerId, t.user.getAvatarURL(t.stream.guildId, 80), { dispatchWait: !0 });
+            (0, h.A)(t.stream.ownerId, t.user.getAvatarURL(t.stream.guildId, 80), {
+                dispatchWait: !0,
+            });
         }, [t]);
         let y = (0, p.pnh)(
                 A,
@@ -199,37 +226,47 @@ let T = (0, o.xI)(f.A.LIVE_INDICATOR_BORDER_RADIUS),
             let { className: n, popoutProps: r } = e;
             return (0, l.jsxs)(
                 "div",
-                j(C({ className: a()(N.dr, n) }, r), {
-                    children: [
-                        y((e, n) =>
-                            n
-                                ? (0, l.jsx)(s.animated.div, {
-                                      style: e,
-                                      children: (0, l.jsx)(M, {
-                                          className: N.LZ,
-                                          participant: t,
-                                          size: o,
-                                          shape: p.EGs.ROUND_LEFT,
-                                          isUpsellEnabled: i,
-                                          didTrackUpsellViewed: d,
-                                          setDidTrackUpsellViewed: f,
-                                          premiumIndicator: u,
-                                          quality: b,
-                                      }),
-                                  })
-                                : null,
-                        ),
-                        (0, l.jsx)(s.animated.div, {
-                            style: _,
-                            className: N.Ok,
-                            children: (0, l.jsx)(m.Ay, {
-                                look: m.gv.RED,
-                                size: o,
-                                shape: A ? p.EGs.ROUND_RIGHT : p.EGs.ROUND,
+                j(
+                    C(
+                        {
+                            className: a()(N.dr, n),
+                        },
+                        r,
+                    ),
+                    {
+                        children: [
+                            y((e, n) =>
+                                n
+                                    ? (0, l.jsx)(s.animated.div, {
+                                          style: e,
+                                          children: (0, l.jsx)(M, {
+                                              className: N.LZ,
+                                              participant: t,
+                                              size: o,
+                                              shape: p.EGs.ROUND_LEFT,
+                                              isUpsellEnabled: i,
+                                              didTrackUpsellViewed: d,
+                                              setDidTrackUpsellViewed: f,
+                                              premiumIndicator: u,
+                                              quality: b,
+                                          }),
+                                      })
+                                    : null,
+                            ),
+                            (0, l.jsx)(s.animated.div, {
+                                style: _,
+                                className: N.Ok,
+                                children: (0, l.jsx)(m.Ay, {
+                                    look: m.gv.RED,
+                                    size: o,
+                                    shape: A ? p.EGs.ROUND_RIGHT : p.EGs.ROUND,
+                                }),
                             }),
-                        }),
-                    ],
-                }),
+                        ],
+                    },
+                ),
             );
-        })({ className: c });
+        })({
+            className: c,
+        });
     };

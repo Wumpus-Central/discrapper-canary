@@ -1,16 +1,23 @@
-n.d(t, { A: () => o }), n(896048), n(321073);
+n.d(t, {
+    A: () => o,
+}),
+    n(896048),
+    n(321073);
 var r = n(64700),
     i = n(85109),
     a = n(470654);
+
 function s() {
     return i.A.getSavedMessages().map((e) => e.saveData);
 }
+
 function o() {
     let [e, t] = r.useState(s),
         n = r.useRef(i.A.getIsStale());
     return (
         r.useEffect(() => {
             let e = i.A.getLastChanged();
+
             function r() {
                 let r = i.A.getLastChanged();
                 if (e !== r) {

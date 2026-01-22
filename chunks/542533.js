@@ -1,4 +1,7 @@
-t.d(l, { a: () => x }), t(896048);
+t.d(l, {
+    a: () => x,
+}),
+    t(896048);
 var n = t(627968),
     a = t(64700),
     s = t(158954),
@@ -13,6 +16,7 @@ var n = t(627968),
     p = t(65356),
     I = t(652215),
     _ = t(131841);
+
 function x(e) {
     var l, t;
     let { applicationId: x, guildId: h, page: A } = e,

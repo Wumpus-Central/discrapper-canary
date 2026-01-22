@@ -1,4 +1,7 @@
-n.d(t, { A: () => k }), n(896048);
+n.d(t, {
+    A: () => k,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -48,7 +51,9 @@ let k = function (e) {
         [W, K] = i.useState(!0),
         z = i.useRef(0),
         q = (0, T.YE)(V, L.PremiumTypes.TIER_2),
-        X = (0, R.A)({ location: "PremiumMarketingPage" }),
+        X = (0, R.A)({
+            location: "PremiumMarketingPage",
+        }),
         Z = (0, o.bG)([C.A], () => C.A.hasFetched);
     i.useEffect(() => {
         Z || u.xG();
@@ -80,7 +85,9 @@ let k = function (e) {
               : $ && q
                 ? (0, r.jsx)(h.f5, {
                       value: k,
-                      children: (0, r.jsx)(x.A, { userId: F }),
+                      children: (0, r.jsx)(x.A, {
+                          userId: F,
+                      }),
                   })
                 : U && Y && G
                   ? null
@@ -94,6 +101,11 @@ let k = function (e) {
           })
         : (0, r.jsxs)(h.f5, {
               value: k,
-              children: [$ && !X && (0, r.jsx)(p.A, {}), (0, r.jsx)(D.A, { entrypoint: t })],
+              children: [
+                  $ && !X && (0, r.jsx)(p.A, {}),
+                  (0, r.jsx)(D.A, {
+                      entrypoint: t,
+                  }),
+              ],
           });
 };

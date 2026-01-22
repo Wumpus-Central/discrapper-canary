@@ -1,7 +1,10 @@
-n.d(t, { a: () => a });
+n.d(t, {
+    a: () => a,
+});
 var r = n(627968);
 n(64700);
 var i = n(894524);
+
 function a() {
     return (0, r.jsxs)("svg", {
         width: "16",
@@ -17,7 +20,9 @@ function a() {
             }),
             (0, r.jsx)("mask", {
                 id: "mask0_tooltip_caret",
-                style: { maskType: "alpha" },
+                style: {
+                    maskType: "alpha",
+                },
                 maskUnits: "userSpaceOnUse",
                 x: "0",
                 y: "-1",

@@ -14,4 +14,6 @@ function r(e, t) {
     }
     return t.score - e.score;
 }
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});

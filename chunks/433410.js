@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -7,6 +9,7 @@ var i = n(397927),
     o = n(789622),
     l = n(985018),
     c = n(139674);
+
 function u() {
     return (0, r.jsx)(i.wx6, {
         type: "warning",

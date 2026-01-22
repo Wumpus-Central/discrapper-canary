@@ -9,6 +9,7 @@ var l,
     r = n(64700),
     i = (((l = {})[(l.Trick = 0)] = "Trick"), (l[(l.Treat = 1)] = "Treat"), l);
 let s = 2;
+
 function a(e, t, n) {
     let l = r.useRef(Math.random());
     return r.useMemo(() => {
@@ -77,7 +78,9 @@ function a(e, t, n) {
                                         }
                                         return e;
                                     })({}, s),
-                                    { name: n.name },
+                                    {
+                                        name: n.name,
+                                    },
                                 ),
                             )));
                 }

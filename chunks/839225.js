@@ -1,4 +1,6 @@
-s.d(t, { default: () => v });
+s.d(t, {
+    default: () => v,
+});
 var r = s(627968),
     n = s(64700),
     i = s(503698),
@@ -17,17 +19,27 @@ var r = s(627968),
     p = s(992241),
     g = s(642785),
     O = s(78834);
+
 function v(e) {
     n.useEffect(() => {
-        b.default.track(x.HAw.OPEN_MODAL, { type: "Social Layer Storefront Announcement Modal" }),
-            (0, o.d6)(a.M.GAME_SHOP_ANNOUNCEMENT_MODAL, { dismissAction: f.i.AUTO_DISMISS });
+        b.default.track(x.HAw.OPEN_MODAL, {
+            type: "Social Layer Storefront Announcement Modal",
+        }),
+            (0, o.d6)(a.M.GAME_SHOP_ANNOUNCEMENT_MODAL, {
+                dismissAction: f.i.AUTO_DISMISS,
+            });
     }, []);
     let t = n.useCallback(() => {
-            (0, j.X)({ guildId: (0, m.zf)() });
+            (0, j.X)({
+                guildId: (0, m.zf)(),
+            });
         }, []),
         { onClose: s } = e,
         i = n.useCallback(() => {
-            (0, j.default)({ guildId: (0, m.zf)() }), s();
+            (0, j.default)({
+                guildId: (0, m.zf)(),
+            }),
+                s();
         }, [s]);
     return (0, r.jsx)(l.NPJ, {
         theme: u.NJ.DARK,
@@ -68,9 +80,13 @@ function v(e) {
                             children: [
                                 (0, r.jsx)("div", {
                                     className: p.b,
-                                    children: (0, r.jsx)(l.JnF, { onClick: s }),
+                                    children: (0, r.jsx)(l.JnF, {
+                                        onClick: s,
+                                    }),
                                 }),
-                                (0, r.jsx)("div", { className: p.xX }),
+                                (0, r.jsx)("div", {
+                                    className: p.xX,
+                                }),
                                 (0, r.jsxs)("div", {
                                     className: p.gn,
                                     children: [

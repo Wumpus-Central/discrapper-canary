@@ -1,4 +1,7 @@
-n.d(t, { K: () => r }), n(896048);
+n.d(t, {
+    K: () => r,
+}),
+    n(896048);
 var r = (function (e) {
     return (
         (e.APP_CRASHED = "app_crashed"),

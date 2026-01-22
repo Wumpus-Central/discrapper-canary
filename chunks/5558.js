@@ -1,4 +1,6 @@
-n.d(t, { N: () => f });
+n.d(t, {
+    N: () => f,
+});
 var r = n(627968);
 n(64700);
 var i = n(660496),
@@ -12,7 +14,14 @@ var i = n(660496),
 let f = (e) => {
     let t = [
         {
-            renderComponent: () => (0, r.jsx)(o.A, { guild: e }, "verification-level"),
+            renderComponent: () =>
+                (0, r.jsx)(
+                    o.A,
+                    {
+                        guild: e,
+                    },
+                    "verification-level",
+                ),
             enabled: !0,
         },
         {
@@ -40,38 +49,86 @@ let f = (e) => {
             enabled: !0,
         },
         {
-            renderComponent: () => (0, r.jsx)(c.A, { title: u.intl.string(u.t.EkSAHZ) }, "outbound-links-warn"),
+            renderComponent: () =>
+                (0, r.jsx)(
+                    c.A,
+                    {
+                        title: u.intl.string(u.t.EkSAHZ),
+                    },
+                    "outbound-links-warn",
+                ),
             enabled: !0,
         },
         {
-            renderComponent: () => (0, r.jsx)(c.A, { title: u.intl.string(u.t["7cAQmj"]) }, "delete-spam"),
+            renderComponent: () =>
+                (0, r.jsx)(
+                    c.A,
+                    {
+                        title: u.intl.string(u.t["7cAQmj"]),
+                    },
+                    "delete-spam",
+                ),
             enabled: !0,
         },
     ].filter((e) => null != e);
     return {
         [i.C.CAPTCHA_AND_RAID_PROTECTION]: [
             {
-                renderComponent: () => (0, r.jsx)(a.A, { guild: e }, "raid-alerts"),
+                renderComponent: () =>
+                    (0, r.jsx)(
+                        a.A,
+                        {
+                            guild: e,
+                        },
+                        "raid-alerts",
+                    ),
                 enabled: !e.features.has(d.GuildFeatures.RAID_ALERTS_DISABLED),
             },
             {
                 renderComponent: () =>
-                    (0, r.jsx)(c.A, { title: u.intl.string(u.t.gOkFfI) }, "captcha-suspicious-joins"),
+                    (0, r.jsx)(
+                        c.A,
+                        {
+                            title: u.intl.string(u.t.gOkFfI),
+                        },
+                        "captcha-suspicious-joins",
+                    ),
                 enabled: !0,
             },
             {
-                renderComponent: () => (0, r.jsx)(c.A, { title: u.intl.string(u.t.r3esyC) }, "captcha-raid-joins"),
+                renderComponent: () =>
+                    (0, r.jsx)(
+                        c.A,
+                        {
+                            title: u.intl.string(u.t.r3esyC),
+                        },
+                        "captcha-raid-joins",
+                    ),
                 enabled: !0,
             },
         ],
         [i.C.DM_AND_SPAM_PROTECTION]: t,
         [i.C.PERMISSIONS]: [
             {
-                renderComponent: () => (0, r.jsx)(l.A, { guild: e }, "guild-mfa"),
+                renderComponent: () =>
+                    (0, r.jsx)(
+                        l.A,
+                        {
+                            guild: e,
+                        },
+                        "guild-mfa",
+                    ),
                 enabled: e.mfaLevel === d.EkJ.ELEVATED,
             },
             {
-                renderComponent: () => (0, r.jsx)(s.A, { guild: e }, "disable-risky-perms"),
+                renderComponent: () =>
+                    (0, r.jsx)(
+                        s.A,
+                        {
+                            guild: e,
+                        },
+                        "disable-risky-perms",
+                    ),
                 enabled: 0 === (0, s.W)(e).length,
             },
         ],

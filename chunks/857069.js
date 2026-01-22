@@ -8,6 +8,7 @@ var r = n(405269),
     a = n(143413),
     s = n(652215);
 let o = 7 * l.A.Millis.MINUTE;
+
 function c(e, t, n) {
     return (
         null == t ||
@@ -16,6 +17,7 @@ function c(e, t, n) {
         u(e, t.content, n)
     );
 }
+
 function u(e, t, n) {
     return (
         !!(n.hasFlag(s.pr7.HAS_THREAD) || n.isCommandType()) ||

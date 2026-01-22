@@ -26,13 +26,19 @@ var n = r(64700),
     b = (function (e) {
         if ("function" != typeof e && null !== e)
             throw TypeError("Super expression must either be null or a function, not " + typeof e);
+
         function t(e) {
             if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
             var r = (function (e, t) {
                 if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
                 return t && ("object" == typeof t || "function" == typeof t) ? t : e;
             })(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-            return (r.state = { currentColor: e.hex }), r;
+            return (
+                (r.state = {
+                    currentColor: e.hex,
+                }),
+                r
+            );
         }
         return (
             (t.prototype = Object.create(e && e.prototype, {
@@ -98,8 +104,12 @@ var n = r(64700),
                                                 width: "180px",
                                                 marginLeft: "10px",
                                             },
-                                            top: { display: "flex" },
-                                            previews: { width: "60px" },
+                                            top: {
+                                                display: "flex",
+                                            },
+                                            previews: {
+                                                width: "60px",
+                                            },
                                             actions: {
                                                 flex: "1",
                                                 marginLeft: "20px",
@@ -115,7 +125,13 @@ var n = r(64700),
                                 style: o.picker,
                                 className: "photoshop-picker " + (void 0 === r ? "" : r),
                             },
-                            n.createElement("div", { style: o.head }, this.props.header),
+                            n.createElement(
+                                "div",
+                                {
+                                    style: o.head,
+                                },
+                                this.props.header,
+                            ),
                             n.createElement(
                                 "div",
                                 {
@@ -124,7 +140,9 @@ var n = r(64700),
                                 },
                                 n.createElement(
                                     "div",
-                                    { style: o.saturation },
+                                    {
+                                        style: o.saturation,
+                                    },
                                     n.createElement(s.VI, {
                                         hsl: this.props.hsl,
                                         hsv: this.props.hsv,
@@ -134,7 +152,9 @@ var n = r(64700),
                                 ),
                                 n.createElement(
                                     "div",
-                                    { style: o.hue },
+                                    {
+                                        style: o.hue,
+                                    },
                                     n.createElement(s.RG, {
                                         direction: "vertical",
                                         hsl: this.props.hsl,
@@ -144,7 +164,9 @@ var n = r(64700),
                                 ),
                                 n.createElement(
                                     "div",
-                                    { style: o.controls },
+                                    {
+                                        style: o.controls,
+                                    },
                                     n.createElement(
                                         "div",
                                         {
@@ -153,7 +175,9 @@ var n = r(64700),
                                         },
                                         n.createElement(
                                             "div",
-                                            { style: o.previews },
+                                            {
+                                                style: o.previews,
+                                            },
                                             n.createElement(f.A, {
                                                 rgb: this.props.rgb,
                                                 currentColor: this.state.currentColor,
@@ -161,7 +185,9 @@ var n = r(64700),
                                         ),
                                         n.createElement(
                                             "div",
-                                            { style: o.actions },
+                                            {
+                                                style: o.actions,
+                                            },
                                             n.createElement(d.A, {
                                                 label: "OK",
                                                 onClick: this.props.onAccept,

@@ -1,4 +1,7 @@
-n.d(t, { A: () => I }), n(896048);
+n.d(t, {
+    A: () => I,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(665260),
@@ -15,6 +18,7 @@ var r = n(627968),
     g = n(652215),
     m = n(985018),
     b = n(231566);
+
 function _(e, t, n) {
     return (
         t in e
@@ -28,6 +32,7 @@ function _(e, t, n) {
         e
     );
 }
+
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -44,6 +49,7 @@ function E(e) {
     }
     return e;
 }
+
 function O(e) {
     let { applicationViewItems: t, restoreApplication: n } = e;
     if (0 === t.length) return null;
@@ -104,7 +110,15 @@ class y extends i.PureComponent {
         u.Pf.updateSetting(e);
     }
     trackRestoreApplication(e, t) {
-        p.default.track(g.HAw.APPLICATION_SETTINGS_UPDATED, E({ hidden_enabled: t }, e.getAnalyticsData()));
+        p.default.track(
+            g.HAw.APPLICATION_SETTINGS_UPDATED,
+            E(
+                {
+                    hidden_enabled: t,
+                },
+                e.getAnalyticsData(),
+            ),
+        );
     }
     renderBody() {
         let {
@@ -147,7 +161,9 @@ class y extends i.PureComponent {
     render() {
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(h.A, { currentRoute: g.BVt.APPLICATION_LIBRARY_SETTINGS }),
+                (0, r.jsx)(h.A, {
+                    currentRoute: g.BVt.APPLICATION_LIBRARY_SETTINGS,
+                }),
                 (0, r.jsx)(s.ArX, {
                     className: b.XG,
                     children: this.renderBody(),
@@ -163,6 +179,7 @@ class y extends i.PureComponent {
             });
     }
 }
+
 function I() {
     let e = {
         installShortcutDesktop: u.uB.useSetting(),

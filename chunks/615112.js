@@ -1,4 +1,8 @@
-n.d(t, { A: () => d }), n(896048), n(638769);
+n.d(t, {
+    A: () => d,
+}),
+    n(896048),
+    n(638769);
 var a = n(627968);
 n(64700);
 var l = n(311907),
@@ -6,6 +10,7 @@ var l = n(311907),
     r = n(450510),
     s = n(298922),
     o = n(661251);
+
 function c(e) {
     let { hotspotLocation: t } = e,
         [n, s] = (0, l.yK)([r.HP], () => [r.HP.hasHotspot(t, !0), r.HP.getHotspotOverride(t)]);
@@ -36,6 +41,7 @@ function c(e) {
         fullWidth: !0,
     });
 }
+
 function d() {
     return (0, a.jsx)(i.IpV, {
         className: o.nd,
@@ -48,7 +54,15 @@ function d() {
                 gap: 20,
                 children: Object.keys(r._2)
                     .sort((e, t) => e.localeCompare(t))
-                    .map((e) => (0, a.jsx)(c, { hotspotLocation: e }, e)),
+                    .map((e) =>
+                        (0, a.jsx)(
+                            c,
+                            {
+                                hotspotLocation: e,
+                            },
+                            e,
+                        ),
+                    ),
             }),
         }),
     });

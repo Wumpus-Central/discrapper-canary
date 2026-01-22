@@ -1,4 +1,6 @@
-r.d(t, { Z: () => n });
+r.d(t, {
+    Z: () => n,
+});
 var n = function (e, t, r) {
     var n = r.getBoundingClientRect(),
         o = n.width,

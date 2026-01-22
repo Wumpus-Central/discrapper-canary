@@ -14,14 +14,18 @@ var r = n(562465),
     c = n(239093),
     u = n(652215);
 async function d() {
-    i.h.dispatch({ type: "SAFETY_HUB_FETCH_START" });
+    i.h.dispatch({
+        type: "SAFETY_HUB_FETCH_START",
+    });
     let e = s.default.getSuspendedUserToken(),
         t = null != e ? u.Rsh.SAFETY_HUB_SUSPENDED : u.Rsh.SAFETY_HUB,
         n =
             null != e
                 ? r.Bo.post({
                       url: t,
-                      body: { token: e },
+                      body: {
+                          token: e,
+                      },
                       rejectWithError: !1,
                   })
                 : r.Bo.get({
@@ -70,7 +74,9 @@ async function f(e) {
             null != t
                 ? r.Bo.post({
                       url: n,
-                      body: { token: t },
+                      body: {
+                          token: t,
+                      },
                       rejectWithError: !1,
                   })
                 : r.Bo.get({
@@ -107,6 +113,7 @@ async function f(e) {
             });
         });
 }
+
 function p(e) {
     if (null != e.flagged_content && e.flagged_content.length > 0) {
         let t = e.flagged_content[0];
@@ -139,7 +146,9 @@ async function _(e, t, n) {
                       },
                       rejectWithError: !1,
                   });
-    i.h.dispatch({ type: "SAFETY_HUB_REQUEST_REVIEW_START" }),
+    i.h.dispatch({
+        type: "SAFETY_HUB_REQUEST_REVIEW_START",
+    }),
         await l
             .then(() => {
                 i.h.dispatch({
@@ -160,7 +169,9 @@ async function _(e, t, n) {
             });
 }
 async function h(e) {
-    i.h.dispatch({ type: "SAFETY_HUB_REQUEST_AUTOMATED_UNDERAGE_APPEAL_START" });
+    i.h.dispatch({
+        type: "SAFETY_HUB_REQUEST_AUTOMATED_UNDERAGE_APPEAL_START",
+    });
     let t = s.default.getSuspendedUserToken(),
         n = u.Rsh.SAFETY_HUB_REQUEST_SUSPENDED_AGE_VERIFICATION,
         a = r.Bo.post({
@@ -190,13 +201,17 @@ async function h(e) {
         });
 }
 async function m() {
-    i.h.dispatch({ type: "SAFETY_HUB_CHECK_AUTOMATED_UNDERAGE_APPEAL_START" });
+    i.h.dispatch({
+        type: "SAFETY_HUB_CHECK_AUTOMATED_UNDERAGE_APPEAL_START",
+    });
     let e = s.default.getSuspendedUserToken(),
         t = o.A.getAgeCheckAttempts(),
         n = u.Rsh.SAFETY_HUB_CHECK_SUSPENDED_AGE_VERIFICATION,
         a = r.Bo.post({
             url: n,
-            body: { token: e },
+            body: {
+                token: e,
+            },
             rejectWithError: !1,
         });
     await a

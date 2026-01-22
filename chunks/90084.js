@@ -1,8 +1,11 @@
-n.d(t, { u: () => o });
+n.d(t, {
+    u: () => o,
+});
 var r = n(64700),
     i = n(311907),
     a = n(250527),
     s = n(837011);
+
 function o(e) {
     let t = (0, i.bG)([s.A], () => s.A.getProfile(e)),
         n = (0, i.bG)([s.A], () => s.A.getFetchStatus(e));

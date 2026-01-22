@@ -8,7 +8,7 @@ var r = n(627968),
     a = n(503698),
     s = n.n(a),
     o = n(735438),
-    l = n(432022),
+    l = n(108531),
     c = n(435371),
     u = n(397927),
     d = n(565645),
@@ -25,6 +25,7 @@ n(806931);
 var O = n(307731),
     A = n(650583),
     v = n(845762);
+
 function S(e, t, n) {
     return (
         t in e
@@ -38,6 +39,7 @@ function S(e, t, n) {
         e
     );
 }
+
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -54,6 +56,7 @@ function I(e) {
     }
     return e;
 }
+
 function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -66,6 +69,7 @@ function T(e, t) {
     }
     return n;
 }
+
 function C(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -86,6 +90,7 @@ let N = O.b_.CHAT,
         g.Ay.getByName("fork_and_knife"),
         g.Ay.getByName("yum"),
     ].filter(y.Vq);
+
 function w(e) {
     let { emoji: t, isDisabled: n = !1, onClick: a, className: o } = e,
         c = i.useRef(null),
@@ -94,11 +99,17 @@ function w(e) {
         ref: c,
         children: (0, r.jsx)(u.DUT, {
             onClick: a,
-            focusProps: { enabled: !n },
+            focusProps: {
+                enabled: !n,
+            },
             children: (0, r.jsx)(u.c7X, {
                 config: h.B,
-                from: { value: 0 },
-                to: { value: +!!f },
+                from: {
+                    value: 0,
+                },
+                to: {
+                    value: +!!f,
+                },
                 children: (e) => {
                     let { value: i } = e;
                     return (0, r.jsx)(l.animated.div, {
@@ -106,7 +117,9 @@ function w(e) {
                             transform: i.to([0, 1], [1, 1.14]).to((e) => "scale(".concat(e, ")")),
                         },
                         children: (0, r.jsx)(d.A, {
-                            className: s()(v.Zg, o, { [v.c4]: n }),
+                            className: s()(v.Zg, o, {
+                                [v.c4]: n,
+                            }),
                             emojiId: t.id,
                             emojiName: null == t ? void 0 : t.surrogates,
                             animated: t.animated,
@@ -117,6 +130,7 @@ function w(e) {
         }),
     });
 }
+
 function P(e) {
     let { otherAccessories: t, isEmojiPickerExpanded: n, onSetExpanded: i, onFocus: a } = e;
     return (0, r.jsxs)(r.Fragment, {
@@ -130,12 +144,15 @@ function P(e) {
                 children: (0, r.jsx)(u.abt, {
                     size: "md",
                     color: "currentColor",
-                    className: s()(v.Gu, { [v.Y9]: n }),
+                    className: s()(v.Gu, {
+                        [v.Y9]: n,
+                    }),
                 }),
             }),
         ],
     });
 }
+
 function D(e) {
     let {
             channel: t,
@@ -193,8 +210,12 @@ function D(e) {
                     (0, r.jsx)(m.A, {
                         analyticsOverride: S,
                         channel: t,
-                        className: s()(v.Mk, { [v.DZ]: x }),
-                        headerClassName: s()(v.AW, { [v.v6]: x }),
+                        className: s()(v.Mk, {
+                            [v.DZ]: x,
+                        }),
+                        headerClassName: s()(v.AW, {
+                            [v.v6]: x,
+                        }),
                         closePopout: a,
                         onSelectEmoji: x ? U : () => {},
                         shouldHidePickerActions: !x,

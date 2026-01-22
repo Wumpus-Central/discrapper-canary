@@ -1,4 +1,10 @@
-l.d(n, { default: () => w }), l(321073), l(896048), l(864466), l(443073);
+l.d(n, {
+    default: () => w,
+}),
+    l(321073),
+    l(896048),
+    l(864466),
+    l(443073);
 var t = l(627968),
     i = l(64700),
     a = l(158954),
@@ -23,6 +29,7 @@ var t = l(627968),
     N = l(307731),
     S = l(985018),
     T = l(43079);
+
 function M(e) {
     for (var n = 1; n < arguments.length; n++) {
         var l = null != arguments[n] ? arguments[n] : {},
@@ -48,6 +55,7 @@ function M(e) {
     }
     return e;
 }
+
 function O(e, n) {
     return (
         (n = null != n ? n : {}),
@@ -66,6 +74,7 @@ function O(e, n) {
         e
     );
 }
+
 function k(e, n) {
     switch (e) {
         case m.NewMemberActionTypes.VIEW:
@@ -78,6 +87,7 @@ function k(e, n) {
             return !1;
     }
 }
+
 function E() {
     return {
         channelId: [],
@@ -88,12 +98,17 @@ function E() {
         icon: [],
     };
 }
+
 function I(e) {
     let n = E(),
         l = g.A.getChannel(e.channelId);
     return (
         (null == e.title || e.title.length < m.oc) &&
-            n.title.push(S.intl.formatToPlainString(S.t.iu6AGk, { minLength: m.oc })),
+            n.title.push(
+                S.intl.formatToPlainString(S.t.iu6AGk, {
+                    minLength: m.oc,
+                }),
+            ),
         null == e.actionType ||
             null == l ||
             k(e.actionType, l) ||
@@ -112,6 +127,7 @@ function I(e) {
         n
     );
 }
+
 function w(e) {
     var n, l, v, b, w, D;
     let { transitionState: P, onClose: R, guildId: _, action: H, onSave: G, onDelete: L } = e,
@@ -366,7 +382,9 @@ function w(e) {
                     }),
                 ],
             }),
-            (0, t.jsx)("div", { className: T.me }),
+            (0, t.jsx)("div", {
+                className: T.me,
+            }),
             (0, t.jsxs)("div", {
                 className: T.eH,
                 children: [
@@ -388,7 +406,9 @@ function w(e) {
                     }),
                 ],
             }),
-            (0, t.jsx)("div", { className: T.me }),
+            (0, t.jsx)("div", {
+                className: T.me,
+            }),
             (0, t.jsxs)("div", {
                 className: T.kE,
                 children: [
@@ -525,7 +545,9 @@ function w(e) {
                     }),
                 ],
             }),
-            (0, t.jsx)("div", { className: T.me }),
+            (0, t.jsx)("div", {
+                className: T.me,
+            }),
             (0, t.jsxs)("div", {
                 className: T.eH,
                 children: [
@@ -537,7 +559,14 @@ function w(e) {
                     (0, t.jsx)(o.z6M, {
                         value: $,
                         onChange: ep,
-                        options: null == B ? z : z.map((e) => O(M({}, e), { disabled: !k(e.value, B) })),
+                        options:
+                            null == B
+                                ? z
+                                : z.map((e) =>
+                                      O(M({}, e), {
+                                          disabled: !k(e.value, B),
+                                      }),
+                                  ),
                     }),
                     null != $ && K.actionType.length > 0
                         ? K.actionType.map((e) =>

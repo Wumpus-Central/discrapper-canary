@@ -8,6 +8,7 @@ var r = n(64700),
     i = n(715828),
     a = n(484702),
     s = n(403431);
+
 function o(e, t, n) {
     return (
         t in e
@@ -21,6 +22,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,6 +39,7 @@ function l(e) {
     }
     return e;
 }
+
 function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -49,6 +52,7 @@ function c(e, t) {
     }
     return n;
 }
+
 function u(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -66,6 +70,7 @@ let d = Object.freeze({
     items: [],
     isSidebarVisible: !1,
 });
+
 function f(e) {
     let {
             sections: t,
@@ -141,6 +146,7 @@ function f(e) {
         })
     );
 }
+
 function p(e) {
     let { scrollerRef: t, anchor: n, getScrollerState: i, listComputer: a, getAnchorId: s, totalHeight: o } = e;
     (0, r.useLayoutEffect)(() => {

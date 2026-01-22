@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968),
     i = n(64700),
     l = n(311907),
@@ -13,6 +15,7 @@ var r = n(627968),
     b = n(539916),
     m = n(985018),
     p = n(902973);
+
 function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -38,6 +41,7 @@ function x(e) {
     }
     return e;
 }
+
 function h(e) {
     let { guildId: t } = e,
         h = (0, l.bG)([d.A], () => d.A.getEditedConnections()),
@@ -54,7 +58,10 @@ function h(e) {
                     var t, n;
                     return (
                         (t = x({}, e)),
-                        (n = n = { id: (0, b.Sq)(e) }),
+                        (n = n =
+                            {
+                                id: (0, b.Sq)(e),
+                            }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                             : (function (e, t) {
@@ -121,7 +128,9 @@ function h(e) {
                 guildId: t,
                 location: "guild_settings",
             },
-            { autoTrackExposure: !0 },
+            {
+                autoTrackExposure: !0,
+            },
         );
     if (!S) return null;
     let T = h.length < b.pA;
@@ -146,7 +155,9 @@ function h(e) {
                         (0, r.jsx)(s.Text, {
                             variant: "text-sm/normal",
                             color: "text-muted",
-                            children: m.intl.format(m.t.Nc7guW, { max: b.pA }),
+                            children: m.intl.format(m.t.Nc7guW, {
+                                max: b.pA,
+                            }),
                         }),
                 ],
             }),

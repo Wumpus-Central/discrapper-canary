@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968);
 n(64700);
 var l = n(397927),
@@ -9,6 +11,7 @@ var l = n(397927),
     c = n(985018),
     u = n(721983),
     d = n(630907);
+
 function f(e) {
     let { guildId: t } = e;
     return (0, r.jsx)("div", {

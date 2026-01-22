@@ -1,4 +1,7 @@
-n.d(t, { A: () => g }), n(896048);
+n.d(t, {
+    A: () => g,
+}),
+    n(896048);
 var r = n(735438),
     i = n.n(r),
     a = n(314116),
@@ -12,6 +15,7 @@ var r = n(735438),
     p = n(73510),
     _ = n(652215),
     h = n(985018);
+
 function m(e) {
     switch (e) {
         case _.Z86.GIF.title:
@@ -94,8 +98,12 @@ let g = [
             let { channel: i } = t;
             if (null == i) return;
             let l = (0, c.m1)(i, d.default, u.A),
-                f = h.intl.formatToPlainString(h.t.hJ5Ap4, { name: l }),
-                p = h.intl.format(h.t.SSIVOu, { name: l }),
+                f = h.intl.formatToPlainString(h.t.hJ5Ap4, {
+                    name: l,
+                }),
+                p = h.intl.format(h.t.SSIVOu, {
+                    name: l,
+                }),
                 _ = null != (n = null == (r = e.find((e) => "silent" === e.name)) ? void 0 : r.value) && n;
             async function m() {
                 if (null != i)
@@ -106,8 +114,12 @@ let g = [
                     }
             }
             i.isManaged() &&
-                ((f = h.intl.formatToPlainString(h.t.hVGjEW, { name: l })),
-                (p = h.intl.format(h.t.IK1Qvs, { name: l }))),
+                ((f = h.intl.formatToPlainString(h.t.hVGjEW, {
+                    name: l,
+                })),
+                (p = h.intl.format(h.t.IK1Qvs, {
+                    name: l,
+                }))),
                 (0, a.A)({
                     title: f,
                     subtitle: p,

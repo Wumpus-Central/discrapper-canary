@@ -1,4 +1,6 @@
-n.d(t, { A: () => v });
+n.d(t, {
+    A: () => v,
+});
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -13,6 +15,7 @@ var r = n(627968),
     m = n(985018),
     b = n(55886),
     g = n(191761);
+
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -38,6 +41,7 @@ function y(e) {
     }
     return e;
 }
+
 function x(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -56,6 +60,7 @@ function x(e, t) {
         e
     );
 }
+
 function h(e, t) {
     if (null == e) return {};
     var n,
@@ -90,10 +95,20 @@ let j = () => 80,
             i = h(e, ["children", "className", "isSelected"]);
         return (0, r.jsx)(
             c.DUT,
-            x(y({ className: s()(b.BP, n, { [b.wH]: l }) }, i), {
-                onClick: i.onSelect,
-                children: t,
-            }),
+            x(
+                y(
+                    {
+                        className: s()(b.BP, n, {
+                            [b.wH]: l,
+                        }),
+                    },
+                    i,
+                ),
+                {
+                    onClick: i.onSelect,
+                    children: t,
+                },
+            ),
         );
     },
     A = (e) => {

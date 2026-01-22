@@ -59,7 +59,9 @@ let O = (0, y.createContext)(null),
                 },
                 defaultClassName: "react-aria-RadioGroup",
             }),
-            N = (0, h.$)(e, { global: !0 });
+            N = (0, h.$)(e, {
+                global: !0,
+            });
         return y.createElement(
             "div",
             {
@@ -141,7 +143,9 @@ let O = (0, y.createContext)(null),
                     isRequired: a.isRequired,
                 },
             }),
-            P = (0, h.$)(e, { global: !0 });
+            P = (0, h.$)(e, {
+                global: !0,
+            });
         return (
             delete P.id,
             delete P.onClick,
@@ -162,13 +166,23 @@ let O = (0, y.createContext)(null),
                 },
                 y.createElement(
                     _.s,
-                    { elementType: "span" },
+                    {
+                        elementType: "span",
+                    },
                     y.createElement("input", {
                         ...(0, m.v)(c, T),
                         ref: s,
                     }),
                 ),
-                y.createElement(o.r.Provider, { value: { isSelected: u } }, w.children),
+                y.createElement(
+                    o.r.Provider,
+                    {
+                        value: {
+                            isSelected: u,
+                        },
+                    },
+                    w.children,
+                ),
             )
         );
     });

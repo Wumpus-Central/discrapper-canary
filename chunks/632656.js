@@ -1,4 +1,6 @@
-n.d(t, { m: () => _ });
+n.d(t, {
+    m: () => _,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -10,6 +12,7 @@ var r = n(627968),
     d = n(652215),
     f = n(985018),
     p = n(724870);
+
 function _(e) {
     let t = i.useRef(null),
         n = e.media;
@@ -20,7 +23,9 @@ function _(e) {
             align: "center",
             targetElementRef: t,
             children: (0, r.jsx)("div", {
-                className: s()(e.className, p.FN, { [p.gS]: e.hiddenSpoilers }),
+                className: s()(e.className, p.FN, {
+                    [p.gS]: e.hiddenSpoilers,
+                }),
                 style: {
                     width: e.placeholderWidth,
                     height: e.placeholderHeight,
@@ -34,7 +39,9 @@ function _(e) {
         });
     let a = n.loadingState === c.TD.LOADING ? d.Rv1.LOADING : d.Rv1.ERROR;
     return (0, r.jsx)(o._, {
-        className: s()(e.className, { [p.gS]: e.hiddenSpoilers }),
+        className: s()(e.className, {
+            [p.gS]: e.hiddenSpoilers,
+        }),
         readyState: a,
         src: "",
         width: e.placeholderWidth,

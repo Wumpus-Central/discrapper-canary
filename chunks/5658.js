@@ -1,7 +1,10 @@
-n.d(t, { A: () => x }), n(896048);
+n.d(t, {
+    A: () => x,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
-    i = n(432022),
+    i = n(108531),
     a = n(311283),
     s = n(311907),
     o = n(435371),
@@ -18,6 +21,7 @@ var r = n(627968),
     y = n(652215),
     O = n(985018),
     j = n(391900);
+
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -132,7 +136,12 @@ let x = l.memo(function (e) {
                     children: (0, r.jsxs)(c.ButtonGroup, {
                         size: "sm",
                         className: j.GC,
-                        children: [(0, r.jsx)(b.A, { channel: o }), (0, r.jsx)(_, v({}, e))],
+                        children: [
+                            (0, r.jsx)(b.A, {
+                                channel: o,
+                            }),
+                            (0, r.jsx)(_, v({}, e)),
+                        ],
                     }),
                 }),
                 children: t.collapsed
@@ -153,6 +162,7 @@ let x = l.memo(function (e) {
             }),
         });
     });
+
 function _(e) {
     let { channel: t, markChannelRead: n, markGuildRead: l, getNumUnreadChannels: i } = e,
         s = (0, a.A)() && null != t.guildId;

@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968),
     i = n(64700),
     l = n(397927),
@@ -7,13 +9,23 @@ var r = n(627968),
     c = n(287809),
     s = n(47167),
     u = n(985018);
+
 function d(e, t) {
     let d = i.useCallback(() => {
         let i = (0, s.m1)(e, c.default, o.A),
-            d = u.intl.formatToPlainString(u.t.hJ5Ap4, { name: i }),
-            b = u.intl.format(u.t.SSIVOu, { name: i });
+            d = u.intl.formatToPlainString(u.t.hJ5Ap4, {
+                name: i,
+            }),
+            b = u.intl.format(u.t.SSIVOu, {
+                name: i,
+            });
         e.isManaged() &&
-            ((d = u.intl.formatToPlainString(u.t.hVGjEW, { name: i })), (b = u.intl.format(u.t.IK1Qvs, { name: i })));
+            ((d = u.intl.formatToPlainString(u.t.hVGjEW, {
+                name: i,
+            })),
+            (b = u.intl.format(u.t.IK1Qvs, {
+                name: i,
+            })));
         let f = function (n) {
             let r = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
             a.A.closePrivateChannel(e.id, t, r);

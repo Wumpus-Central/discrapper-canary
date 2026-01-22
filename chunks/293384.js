@@ -9,19 +9,19 @@ var i,
             },
             debug: function (t, e) {
                 void 0 === console.debug && (console.debug = console.log),
-                    1 >= s && console.debug("[" + r.getDurationString(new Date() - i, 1000) + "]", "[" + t + "]", e);
+                    1 >= s && console.debug("[" + r.getDurationString(new Date() - i, 1e3) + "]", "[" + t + "]", e);
             },
             log: function (t, e) {
                 this.debug(t.msg);
             },
             info: function (t, e) {
-                2 >= s && console.info("[" + r.getDurationString(new Date() - i, 1000) + "]", "[" + t + "]", e);
+                2 >= s && console.info("[" + r.getDurationString(new Date() - i, 1e3) + "]", "[" + t + "]", e);
             },
             warn: function (t, e) {
-                3 >= s && console.warn("[" + r.getDurationString(new Date() - i, 1000) + "]", "[" + t + "]", e);
+                3 >= s && console.warn("[" + r.getDurationString(new Date() - i, 1e3) + "]", "[" + t + "]", e);
             },
             error: function (t, e) {
-                4 >= s && console.error("[" + r.getDurationString(new Date() - i, 1000) + "]", "[" + t + "]", e);
+                4 >= s && console.error("[" + r.getDurationString(new Date() - i, 1e3) + "]", "[" + t + "]", e);
             },
         });
 (r.getDurationString = function (t, e) {
@@ -34,9 +34,9 @@ var i,
         r = t / (e || 1),
         n = Math.floor(r / 3600),
         a = Math.floor((r -= 3600 * n) / 60),
-        o = 1000 * (r -= 60 * a);
+        o = 1e3 * (r -= 60 * a);
     return (
-        (o -= 1000 * (r = Math.floor(r))),
+        (o -= 1e3 * (r = Math.floor(r))),
         (o = Math.floor(o)),
         (s ? "-" : "") + n + ":" + i(a, 2) + ":" + i(r, 2) + "." + i(o, 3)
     );
@@ -400,13 +400,13 @@ var a = function (t, e, i) {
         return null != t ? (this.position += s - r) : r != e && (this.position += 1), n;
     }),
     (a.prototype.readInt64 = function () {
-        return 4294967296 * this.readInt32() + this.readUint32();
+        return 0x100000000 * this.readInt32() + this.readUint32();
     }),
     (a.prototype.readUint64 = function () {
-        return 4294967296 * this.readUint32() + this.readUint32();
+        return 0x100000000 * this.readUint32() + this.readUint32();
     }),
     (a.prototype.readInt64 = function () {
-        return 4294967296 * this.readUint32() + this.readUint32();
+        return 0x100000000 * this.readUint32() + this.readUint32();
     }),
     (a.prototype.readUint24 = function () {
         return (this.readUint8() << 16) + (this.readUint8() << 8) + this.readUint8();
@@ -674,11 +674,11 @@ var a = function (t, e, i) {
         null != r && ((this.position = o), this._realloc(r), (this.position = o + r));
     }),
     (a.prototype.writeUint64 = function (t) {
-        var e = Math.floor(t / 4294967296);
+        var e = Math.floor(t / 0x100000000);
         this.writeUint32(e), this.writeUint32(0 | t);
     }),
     (a.prototype.writeUint24 = function (t) {
-        this.writeUint8((16711680 & t) >> 16), this.writeUint8((65280 & t) >> 8), this.writeUint8(255 & t);
+        this.writeUint8((0xff0000 & t) >> 16), this.writeUint8((65280 & t) >> 8), this.writeUint8(255 & t);
     }),
     (a.prototype.adjustUint32 = function (t, e) {
         var i = this.position;
@@ -1237,12 +1237,16 @@ d.initialize(),
         if (t.getEndPosition() - o < 8)
             return (
                 r.debug("BoxParser", "Not enough data in stream to parse the type and size of the box"),
-                { code: d.ERR_NOT_ENOUGH_DATA }
+                {
+                    code: d.ERR_NOT_ENOUGH_DATA,
+                }
             );
         if (i && i < 8)
             return (
                 r.debug("BoxParser", "Not enough bytes left in the parent box to parse a new box"),
-                { code: d.ERR_NOT_ENOUGH_DATA }
+                {
+                    code: d.ERR_NOT_ENOUGH_DATA,
+                }
             );
         var p = t.readUint32(),
             l = t.readString(4),
@@ -1256,7 +1260,9 @@ d.initialize(),
                 return (
                     t.seek(o),
                     r.debug("BoxParser", "Not enough bytes left in the parent box to parse a UUID box"),
-                    { code: d.ERR_NOT_ENOUGH_DATA }
+                    {
+                        code: d.ERR_NOT_ENOUGH_DATA,
+                    }
                 );
             (a = d.parseUUID(t)), (h += 16), (f = a);
         }
@@ -1265,7 +1271,9 @@ d.initialize(),
                 return (
                     t.seek(o),
                     r.warn("BoxParser", 'Not enough data in stream to parse the extended size of the "' + l + '" box'),
-                    { code: d.ERR_NOT_ENOUGH_DATA }
+                    {
+                        code: d.ERR_NOT_ENOUGH_DATA,
+                    }
                 );
             (p = t.readUint64()), (h += 8);
         } else if (0 === p) {
@@ -2374,11 +2382,11 @@ d.initialize(),
             this.references.push(s);
             var r = t.readUint32();
             (s.reference_type = (r >> 31) & 1),
-                (s.referenced_size = 2147483647 & r),
+                (s.referenced_size = 0x7fffffff & r),
                 (s.subsegment_duration = t.readUint32()),
                 (s.starts_with_SAP = ((r = t.readUint32()) >> 31) & 1),
                 (s.SAP_type = (r >> 28) & 7),
-                (s.SAP_delta_time = 268435455 & r);
+                (s.SAP_delta_time = 0xfffffff & r);
         }
     }),
     (d.SingleItemTypeReferenceBox = function (t, e, i, s) {
@@ -3108,18 +3116,18 @@ d.initialize(),
     }),
     (d.Box.prototype.writeHeader = function (t, e) {
         (this.size += 8),
-            this.size > 4294967296 && (this.size += 8),
+            this.size > 0x100000000 && (this.size += 8),
             "uuid" === this.type && (this.size += 16),
             r.debug(
                 "BoxWriter",
                 "Writing box " + this.type + " of size: " + this.size + " at position " + t.getPosition() + (e || ""),
             ),
-            this.size > 4294967296
+            this.size > 0x100000000
                 ? t.writeUint32(1)
                 : ((this.sizePosition = t.getPosition()), t.writeUint32(this.size)),
             t.writeString(this.type, null, 4),
             "uuid" === this.type && t.writeUint8Array(this.uuid),
-            this.size > 4294967296 && t.writeUint64(this.size);
+            this.size > 0x100000000 && t.writeUint64(this.size);
     }),
     (d.FullBox.prototype.writeHeader = function (t) {
         (this.size += 4),
@@ -3538,7 +3546,7 @@ d.initialize(),
             t.writeUint32(this.sample_counts[e]), t.writeUint32(this.sample_deltas[e]);
     }),
     (d.tfdtBox.prototype.write = function (t) {
-        (this.version = +(this.baseMediaDecodeTime > 4294967295)),
+        (this.version = +(this.baseMediaDecodeTime > 0xffffffff)),
             (this.flags = 0),
             (this.size = 4),
             1 === this.version && (this.size += 4),
@@ -3742,16 +3750,17 @@ var p = function () {};
         function s(t, e, i) {
             return (i = i || "0"), (t += "").length >= e ? t : Array(e - t.length + 1).join(i) + t;
         }
+
         function r(t) {
             var e = Math.floor(t / 3600),
                 i = Math.floor((t - 3600 * e) / 60),
                 r = Math.floor(t - 3600 * e - 60 * i),
-                n = Math.floor((t - 3600 * e - 60 * i - r) * 1000);
+                n = Math.floor((t - 3600 * e - 60 * i - r) * 1e3);
             return "" + s(e, 2) + ":" + s(i, 2) + ":" + s(r, 2) + "." + s(n, 3);
         }
         for (var n = this.parseSample(i), a = "", o = 0; o < n.length; o++) {
             var h = n[o];
-            (a += r(t) + " --> " + r(e) + "\r\n"), (a += h.payl.text);
+            (a += r(t) + " --\x3e " + r(e) + "\r\n"), (a += h.payl.text);
         }
         return a;
     });
@@ -3813,7 +3822,7 @@ var u = function (t) {
             (r.trak = s),
             (s.nextSample = 0),
             (r.segmentStream = null),
-            (r.nb_samples = 1000),
+            (r.nb_samples = 1e3),
             (r.rapAlignement = !0),
             i && (i.nbSamples && (r.nb_samples = i.nbSamples), i.rapAlignement && (r.rapAlignement = i.rapAlignement));
     }
@@ -3831,7 +3840,7 @@ var u = function (t) {
                 (r.user = e),
                 (r.trak = s),
                 (s.nextSample = 0),
-                (r.nb_samples = 1000),
+                (r.nb_samples = 1e3),
                 (r.samples = []),
                 i && i.nbSamples && (r.nb_samples = i.nbSamples);
         }
@@ -3945,8 +3954,8 @@ var u = function (t) {
                     a.brands = [],
                     a.brands.push(this.ftyp.major_brand),
                     a.brands = a.brands.concat(this.ftyp.compatible_brands),
-                    a.created = new Date(o + 1000 * this.moov.mvhd.creation_time),
-                    a.modified = new Date(o + 1000 * this.moov.mvhd.modification_time),
+                    a.created = new Date(o + 1e3 * this.moov.mvhd.creation_time),
+                    a.modified = new Date(o + 1e3 * this.moov.mvhd.modification_time),
                     a.tracks = [],
                     a.audioTracks = [],
                     a.videoTracks = [],
@@ -3973,8 +3982,8 @@ var u = function (t) {
                             (r.type = i.tref.boxes[e].type),
                             (r.track_ids = i.tref.boxes[e].track_ids);
                 i.edts && (s.edits = i.edts.elst.entries),
-                    (s.created = new Date(o + 1000 * i.tkhd.creation_time)),
-                    (s.modified = new Date(o + 1000 * i.tkhd.modification_time)),
+                    (s.created = new Date(o + 1e3 * i.tkhd.creation_time)),
+                    (s.modified = new Date(o + 1e3 * i.tkhd.modification_time)),
                     (s.movie_duration = i.tkhd.duration),
                     (s.movie_timescale = a.timescale),
                     (s.layer = i.tkhd.layer),
@@ -4317,7 +4326,7 @@ var u = function (t) {
                 .set("modification_time", 0)
                 .set("duration", e.duration || 0)
                 .set("volume", 256 * !e.width)
-                .set("matrix", [65536, 0, 0, 0, 65536, 0, 0, 0, 1073741824])
+                .set("matrix", [65536, 0, 0, 0, 65536, 0, 0, 0, 0x40000000])
                 .set("next_track_id", 1),
             i.add("mvex"),
             this
@@ -4479,7 +4488,7 @@ var u = function (t) {
     }),
     (u.prototype.createSingleSampleMoof = function (t) {
         var e = 0;
-        e = t.is_sync ? 33554432 : 65536;
+        e = t.is_sync ? 0x2000000 : 65536;
         var i = new d.moofBox();
         i.add("mfhd").set("sequence_number", this.nextMoofNumber), this.nextMoofNumber++;
         var s = i.add("traf"),
@@ -4537,6 +4546,7 @@ var u = function (t) {
     }),
     (u.initSampleGroups = function (t, e, i, s, r) {
         var n, a, o, h;
+
         function d(t, e, i) {
             (this.grouping_type = t),
                 (this.grouping_type_parameter = e),
@@ -5225,7 +5235,7 @@ var u = function (t) {
     }),
     (d.Box.prototype.printHeader = function (t) {
         (this.size += 8),
-            this.size > 4294967296 && (this.size += 8),
+            this.size > 0x100000000 && (this.size += 8),
             "uuid" === this.type && (this.size += 16),
             t.log(t.indent + "size:" + this.size),
             t.log(t.indent + "type:" + this.type);

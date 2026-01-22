@@ -46,8 +46,12 @@ e.exports = function (e) {
         c = t.either(i, a, s, o),
         u = t.concat(t.optional(/\.|\.\/|\//), c, t.anyNumberOfTimes(t.concat(l, c))),
         d = t.concat("(", s, "|", o, ")(?==)"),
-        f = { begin: u },
-        p = e.inherit(f, { keywords: r }),
+        f = {
+            begin: u,
+        },
+        p = e.inherit(f, {
+            keywords: r,
+        }),
         _ = {
             begin: /\(/,
             end: /\)/,
@@ -66,9 +70,15 @@ e.exports = function (e) {
         },
         m = {
             begin: /as\s+\|/,
-            keywords: { keyword: "as" },
+            keywords: {
+                keyword: "as",
+            },
             end: /\|/,
-            contains: [{ begin: /\w+/ }],
+            contains: [
+                {
+                    begin: /\w+/,
+                },
+            ],
         },
         g = {
             contains: [e.NUMBER_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, m, h, p, _],
@@ -78,13 +88,17 @@ e.exports = function (e) {
         e.inherit(f, {
             className: "name",
             keywords: n,
-            starts: e.inherit(g, { end: /\)/ }),
+            starts: e.inherit(g, {
+                end: /\)/,
+            }),
         }),
     ];
     let E = e.inherit(f, {
             keywords: n,
             className: "name",
-            starts: e.inherit(g, { end: /\}\}/ }),
+            starts: e.inherit(g, {
+                end: /\}\}/,
+            }),
         }),
         b = e.inherit(f, {
             keywords: n,
@@ -93,7 +107,9 @@ e.exports = function (e) {
         y = e.inherit(f, {
             className: "name",
             keywords: n,
-            starts: e.inherit(g, { end: /\}\}/ }),
+            starts: e.inherit(g, {
+                end: /\}\}/,
+            }),
         });
     return {
         name: "Handlebars",

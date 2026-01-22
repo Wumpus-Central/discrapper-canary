@@ -1,8 +1,11 @@
-n.d(t, { f: () => s });
+n.d(t, {
+    f: () => s,
+});
 var r = n(64700),
     i = n(965660),
     l = n(601193),
     a = n(324580);
+
 function s() {
     let e = l.A.useField("selectedTab"),
         t = r.useMemo(
@@ -16,7 +19,9 @@ function s() {
             [],
         ),
         n = r.useCallback((e) => {
-            l.A.setState({ selectedTab: e });
+            l.A.setState({
+                selectedTab: e,
+            });
         }, []);
     return (
         r.useEffect(() => {

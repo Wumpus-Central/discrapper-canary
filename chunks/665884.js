@@ -20,8 +20,12 @@ e.exports = function (e) {
             begin: /\(/,
             end: /\)/,
         }),
-        o = e.inherit(e.APOS_STRING_MODE, { className: "string" }),
-        l = e.inherit(e.QUOTE_STRING_MODE, { className: "string" }),
+        o = e.inherit(e.APOS_STRING_MODE, {
+            className: "string",
+        }),
+        l = e.inherit(e.QUOTE_STRING_MODE, {
+            className: "string",
+        }),
         c = {
             endsWithParent: !0,
             illegal: /</,
@@ -50,7 +54,9 @@ e.exports = function (e) {
                                     end: /'/,
                                     contains: [i],
                                 },
-                                { begin: /[^\s"'=<>`]+/ },
+                                {
+                                    begin: /[^\s"'=<>`]+/,
+                                },
                             ],
                         },
                     ],
@@ -87,7 +93,9 @@ e.exports = function (e) {
                     },
                 ],
             },
-            e.COMMENT(/<!--/, /-->/, { relevance: 10 }),
+            e.COMMENT(/<!--/, /-->/, {
+                relevance: 10,
+            }),
             {
                 begin: /<!\[CDATA\[/,
                 end: /\]\]>/,
@@ -103,14 +111,18 @@ e.exports = function (e) {
                         relevance: 10,
                         contains: [l],
                     },
-                    { begin: /<\?[a-z][a-z0-9]+/ },
+                    {
+                        begin: /<\?[a-z][a-z0-9]+/,
+                    },
                 ],
             },
             {
                 className: "tag",
                 begin: /<style(?=\s|>)/,
                 end: />/,
-                keywords: { name: "style" },
+                keywords: {
+                    name: "style",
+                },
                 contains: [c],
                 starts: {
                     end: /<\/style>/,
@@ -122,7 +134,9 @@ e.exports = function (e) {
                 className: "tag",
                 begin: /<script(?=\s|>)/,
                 end: />/,
-                keywords: { name: "script" },
+                keywords: {
+                    name: "script",
+                },
                 contains: [c],
                 starts: {
                     end: /<\/script>/,

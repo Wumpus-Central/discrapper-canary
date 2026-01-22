@@ -1,7 +1,10 @@
-n.d(t, { A: () => G }), n(896048);
+n.d(t, {
+    A: () => G,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
-    l = n(432022),
+    l = n(108531),
     s = n(311907),
     a = n(827734),
     c = n(73939),
@@ -29,6 +32,7 @@ var r = n(627968),
     C = n(652215),
     P = n(985018),
     w = n(484729);
+
 function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -54,6 +58,7 @@ function R(e) {
     }
     return e;
 }
+
 function D(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -72,10 +77,16 @@ function D(e, t) {
         e
     );
 }
+
 function G() {
     let e = (0, s.bG)([m.A], () => m.A.getGuild());
-    return null == e ? null : (0, r.jsx)(L, { guild: e });
+    return null == e
+        ? null
+        : (0, r.jsx)(L, {
+              guild: e,
+          });
 }
+
 function L(e) {
     let { guild: t } = e,
         m = t.id,
@@ -96,7 +107,12 @@ function L(e) {
         }),
         B = (0, u.Ay)(),
         H = i.useRef(null),
-        [{ spring: V }, K] = (0, d.zhh)(() => ({ spring: 0 }), "animate-always");
+        [{ spring: V }, K] = (0, d.zhh)(
+            () => ({
+                spring: 0,
+            }),
+            "animate-always",
+        );
     i.useEffect(() => {
         function e() {
             K({
@@ -106,7 +122,7 @@ function L(e) {
                 K({
                     spring: 0,
                     config: l.config.gentle,
-                    delay: 1000,
+                    delay: 1e3,
                 });
         }
         return (
@@ -137,9 +153,16 @@ function L(e) {
                 try {
                     if (G === A.Hy.DEFAULT_CHANNELS)
                         await (0, p.jr)(t).then(() =>
-                            e ? (0, O.dm)(t, { ignoreDefaultPrompt: !0 }) : Promise.resolve(),
+                            e
+                                ? (0, O.dm)(t, {
+                                      ignoreDefaultPrompt: !0,
+                                  })
+                                : Promise.resolve(),
                         );
-                    else if (G === A.Hy.CUSTOMIZATION_QUESTIONS) await (0, O.dm)(t, { ignoreDefaultPrompt: !0 });
+                    else if (G === A.Hy.CUSTOMIZATION_QUESTIONS)
+                        await (0, O.dm)(t, {
+                            ignoreDefaultPrompt: !0,
+                        });
                     else if (G === A.Hy.HOME_SETTINGS) {
                         let e = j.A.getSettings();
                         await (0, h.W5)(t.id, e);
@@ -208,7 +231,9 @@ function L(e) {
             className: w.hE,
             children: (0, r.jsx)(l.animated.div, {
                 className: w.kL,
-                style: { backgroundColor: X },
+                style: {
+                    backgroundColor: X,
+                },
                 children: (0, r.jsxs)("div", {
                     className: w.nP,
                     ref: H,
@@ -224,7 +249,12 @@ function L(e) {
                                       }),
                                       (0, r.jsxs)("div", {
                                           className: w.C0,
-                                          children: [$, (0, r.jsx)("div", { className: w.JM })],
+                                          children: [
+                                              $,
+                                              (0, r.jsx)("div", {
+                                                  className: w.JM,
+                                              }),
+                                          ],
                                       }),
                                   ],
                               })

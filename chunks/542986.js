@@ -1,13 +1,17 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(311907),
     i = n(73153),
     l = n(686956);
 let a = {},
     s = 0;
+
 function o(e) {
     var t, n;
     return null != (t = null == (n = a[e]) ? void 0 : n.fetchState) ? t : 0;
 }
+
 function c() {
     a = {};
 }

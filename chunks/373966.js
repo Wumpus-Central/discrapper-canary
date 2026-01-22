@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var r = n(627968),
     i = n(64700),
     a = n(540185),
@@ -12,6 +14,7 @@ var r = n(627968),
     p = n(760751),
     _ = n(518477),
     h = n(985018);
+
 function m(e) {
     let { applicationId: t, onAction: n, onClose: m } = e,
         g = (0, s.bG)([f.default], () => f.default.getId()),
@@ -38,10 +41,15 @@ function m(e) {
         O = i.useCallback(
             (e) => {
                 e.stopPropagation(),
-                    null == n || n({ action: "PRESS_ADD_TO_CURRENT_GAMES_WIDGET" }),
+                    null == n ||
+                        n({
+                            action: "PRESS_ADD_TO_CURRENT_GAMES_WIDGET",
+                        }),
                     (0, l.ew)({
                         widgetType: a.x.CURRENT_GAMES,
-                        game: { applicationId: t },
+                        game: {
+                            applicationId: t,
+                        },
                         ignoreMaxGames: !0,
                     }),
                     (0, u.openUserProfileModal)({

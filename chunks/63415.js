@@ -1,4 +1,9 @@
-n.d(t, { p: () => _ }), n(896048), n(457529), n(65821);
+n.d(t, {
+    p: () => _,
+}),
+    n(896048),
+    n(457529),
+    n(65821);
 var a = n(627968),
     l = n(64700),
     i = n(353640),
@@ -41,7 +46,9 @@ let j = l.forwardRef((e, t) => {
             }
         }, []);
     return (
-        l.useImperativeHandle(t, () => ({ refresh: m })),
+        l.useImperativeHandle(t, () => ({
+            refresh: m,
+        })),
         (0, a.jsxs)("div", {
             style: {
                 display: "flex",
@@ -99,7 +106,7 @@ let y = (e) => {
             if (r > 0) {
                 let e = setTimeout(() => {
                     c(r - 1), 1 === r && t();
-                }, 1000);
+                }, 1e3);
                 return () => clearTimeout(e);
             }
         }, [r, t]);
@@ -158,7 +165,7 @@ let y = (e) => {
         let [e, t] = l.useState(-1),
             [n, s] = l.useState(-1),
             [_, A] = l.useState(!1),
-            [C, S] = l.useState(5000),
+            [C, S] = l.useState(5e3),
             [O, E] = l.useState(!1),
             N = l.useRef(null),
             T = (0, r.bG)([g.default], () => g.default.getCurrentUser()),
@@ -191,7 +198,7 @@ let y = (e) => {
                     t(
                         setTimeout(() => {
                             D(m.l7.CONNECTED);
-                        }, 1000),
+                        }, 1e3),
                     ),
                     !0
                 ),
@@ -235,13 +242,17 @@ let y = (e) => {
             l.useEffect(() => {
                 if (k !== m.Lk.INSTALLED && R !== m.l7.INITIALIZING) return void D(m.l7.INITIALIZING);
             }, [k, R, D]);
-        let { enabled: J } = p.S.useConfig({ location: "private_browsing_perk_settings_page" });
+        let { enabled: J } = p.S.useConfig({
+            location: "private_browsing_perk_settings_page",
+        });
         return J
             ? (0, a.jsxs)("div", {
                   children: [
                       (0, a.jsx)(o.DZT, {
                           variant: "heading-xl/semibold",
-                          style: { marginTop: "16px" },
+                          style: {
+                              marginTop: "16px",
+                          },
                           children: "Private Browsing Perk Components",
                       }),
                       (0, a.jsxs)(x.wn, {
@@ -259,7 +270,9 @@ let y = (e) => {
                                                   children: "Is Nitro",
                                               }),
                                               (0, a.jsx)("div", {
-                                                  style: { width: "45px" },
+                                                  style: {
+                                                      width: "45px",
+                                                  },
                                                   children: (0, a.jsx)(o.dOG, {
                                                       onChange: () => {
                                                           W ? (0, u.O)(null, T) : (0, u.O)(v.$I, T);
@@ -276,7 +289,9 @@ let y = (e) => {
                                                   children: "Is Web",
                                               }),
                                               (0, a.jsx)("div", {
-                                                  style: { width: "45px" },
+                                                  style: {
+                                                      width: "45px",
+                                                  },
                                                   children: (0, a.jsx)(o.dOG, {
                                                       onChange: () => B(!F),
                                                       checked: F,
@@ -291,7 +306,9 @@ let y = (e) => {
                                                   children: "Is Supported Platform",
                                               }),
                                               (0, a.jsx)("div", {
-                                                  style: { width: "45px" },
+                                                  style: {
+                                                      width: "45px",
+                                                  },
                                                   children: (0, a.jsx)(o.dOG, {
                                                       onChange: () => G(!V),
                                                       checked: V,
@@ -400,7 +417,9 @@ let y = (e) => {
                                                       children: "Install with error",
                                                   }),
                                                   (0, a.jsx)("div", {
-                                                      style: { width: "45px" },
+                                                      style: {
+                                                          width: "45px",
+                                                      },
                                                       children: (0, a.jsx)(o.dOG, {
                                                           onChange: () => A(!_),
                                                           checked: _,
@@ -417,32 +436,32 @@ let y = (e) => {
                                                       {
                                                           id: "1second",
                                                           label: "1 second",
-                                                          value: 1000,
+                                                          value: 1e3,
                                                       },
                                                       {
                                                           id: "5seconds",
                                                           label: "5 seconds",
-                                                          value: 5000,
+                                                          value: 5e3,
                                                       },
                                                       {
                                                           id: "10seconds",
                                                           label: "10 seconds",
-                                                          value: 10000,
+                                                          value: 1e4,
                                                       },
                                                       {
                                                           id: "1minute",
                                                           label: "1 minute",
-                                                          value: 60000,
+                                                          value: 6e4,
                                                       },
                                                       {
                                                           id: "5minutes",
                                                           label: "5 minutes",
-                                                          value: 300000,
+                                                          value: 3e5,
                                                       },
                                                       {
                                                           id: "10minutes",
                                                           label: "10 minutes",
-                                                          value: 600000,
+                                                          value: 6e5,
                                                       },
                                                   ],
                                                   selectionMode: "single",
@@ -511,7 +530,9 @@ let y = (e) => {
                                           variant: "heading-lg/medium",
                                           children: "Private Browsing Perk WARP License Info",
                                       }),
-                                      (0, a.jsx)(j, { ref: N }),
+                                      (0, a.jsx)(j, {
+                                          ref: N,
+                                      }),
                                   ],
                               }),
                           ],
@@ -521,7 +542,9 @@ let y = (e) => {
             : (0, a.jsx)("div", {
                   children: (0, a.jsx)(o.DZT, {
                       variant: "heading-xl/semibold",
-                      style: { marginTop: "16px" },
+                      style: {
+                          marginTop: "16px",
+                      },
                       children: "Private Browsing Perk Experiment Not Enabled",
                   }),
               });

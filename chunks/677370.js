@@ -1,4 +1,6 @@
-n.d(t, { z: () => r });
+n.d(t, {
+    z: () => r,
+});
 let r = {
     Spacing: {
         PX_4: 4,

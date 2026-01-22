@@ -12,6 +12,9 @@ let l = (e, t) => {
         });
     });
 };
+
 function i() {
-    r.h.dispatch({ type: "APPLIED_GUILD_BOOST_COUNT_RESET" });
+    r.h.dispatch({
+        type: "APPLIED_GUILD_BOOST_COUNT_RESET",
+    });
 }

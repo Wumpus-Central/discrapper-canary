@@ -1,4 +1,6 @@
-i.d(n, { A: () => A });
+i.d(n, {
+    A: () => A,
+});
 var e = i(627968);
 i(64700);
 var r = i(311907),
@@ -10,6 +12,7 @@ var r = i(311907),
     u = i(734057),
     c = i(746080),
     h = i(985018);
+
 function A(t) {
     let n = (0, r.bG)([u.A], () => u.A.getChannel(t.parent_id)),
         i = (0, o.H_)(t),

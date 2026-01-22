@@ -1,4 +1,6 @@
-r.d(t, { A: () => s });
+r.d(t, {
+    A: () => s,
+});
 var n = r(842922),
     o = r(121177),
     a = r(522565),
@@ -16,16 +18,19 @@ let s = function (e, t, r) {
         v = !1,
         g = !0;
     if ("function" != typeof e) throw TypeError("Expected a function");
+
     function x(t) {
         var r = s,
             n = u;
         return (s = u = void 0), (h = t), (p = e.apply(n, r));
     }
+
     function y(e) {
         var r = e - f,
             n = e - h;
         return void 0 === f || r >= t || r < 0 || (v && n >= c);
     }
+
     function m() {
         var e,
             r,
@@ -34,9 +39,11 @@ let s = function (e, t, r) {
         if (y(a)) return w(a);
         d = setTimeout(m, ((e = a - f), (r = a - h), (n = t - e), v ? l(n, c - r) : n));
     }
+
     function w(e) {
         return ((d = void 0), g && s) ? x(e) : ((s = u = void 0), p);
     }
+
     function A() {
         var e,
             r = (0, o.A)(),

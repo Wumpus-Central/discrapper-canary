@@ -1,6 +1,7 @@
 var r = n(948055),
     i = n(724039),
     a = n(389293);
+
 function s(e) {
     switch (e.arrayFormat) {
         case "index":
@@ -17,6 +18,7 @@ function s(e) {
             };
     }
 }
+
 function o(e) {
     var t;
     switch (e.arrayFormat) {
@@ -51,9 +53,11 @@ function o(e) {
             };
     }
 }
+
 function l(e, t) {
     return t.encode ? (t.strict ? r(e) : encodeURIComponent(e)) : e;
 }
+
 function c(e) {
     return Array.isArray(e)
         ? e.sort()
@@ -71,7 +75,14 @@ function c(e) {
     return e.split("?")[1] || "";
 }),
     (t.parse = function (e, t) {
-        var n = o((t = i({ arrayFormat: "none" }, t))),
+        var n = o(
+                (t = i(
+                    {
+                        arrayFormat: "none",
+                    },
+                    t,
+                )),
+            ),
             r = Object.create(null);
         return "string" == typeof e && (e = e.trim().replace(/^(\?|#|&)/, ""))
             ? (e.split("&").forEach(function (e) {

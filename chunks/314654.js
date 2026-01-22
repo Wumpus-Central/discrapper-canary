@@ -1,1 +1,3 @@
-e.exports = { o: "_63bb1994d7f77f87" };
+e.exports = {
+    o: "_63bb1994d7f77f87",
+};

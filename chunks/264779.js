@@ -32,7 +32,8 @@ var r = n(665260),
     b = n(652215),
     y = n(360469);
 let O = "{code}",
-    A = 259200000;
+    A = 2592e5;
+
 function v(e, t) {
     let n = (0, s.Mw)(t) ? "logo-dark" : "logo-light",
         r = window.GLOBAL_ENV.CDN_HOST,
@@ -46,6 +47,7 @@ function v(e, t) {
               .concat(n)
               .concat(i);
 }
+
 function S(e) {
     return {
         code: e.code,
@@ -58,7 +60,9 @@ async function I() {
     return (
         await i.Bo.get({
             url: b.Rsh.CLAIMED_OUTBOUND_PROMOTION_CODES,
-            query: { locale: l.default.locale },
+            query: {
+                locale: l.default.locale,
+            },
             oldFormErrors: !0,
             rejectWithError: !1,
         })
@@ -82,6 +86,7 @@ async function T(e) {
         S(s)
     );
 }
+
 function C(e, t) {
     var n;
     return null != t.outboundRedemptionUrlFormat && "" !== t.outboundRedemptionUrlFormat
@@ -90,6 +95,7 @@ function C(e, t) {
           ? n
           : "";
 }
+
 function N() {
     var e, t;
     let n = m.A.outboundPromotions,
@@ -116,16 +122,25 @@ function N() {
         g = p || _ ? l.filter((e) => e.isRedeemableByTrialUsers()) : l;
     return 0 === g.length ? null : g.sort((e, t) => (new Date(e.startDate) < new Date(t.startDate) ? -1 : 1))[0].id;
 }
+
 function R() {
     let e = N();
-    return null != e && !(0, o.j6)(a.M.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR, e, { cooldownDurationMs: A });
+    return (
+        null != e &&
+        !(0, o.j6)(a.M.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR, e, {
+            cooldownDurationMs: A,
+        })
+    );
 }
+
 function w(e) {
     return !(0, _.isIOS)() || !e.hasFlag(E.$3.IS_BLOCKED_IOS);
 }
+
 function P(e, t) {
     return null != t[e.id] || e.isRedeemableByTrialUsers();
 }
+
 function D(e) {
     let { promotionPartner: t, promotionType: n } = e;
     return n === g.pt.THIRD_PARTY_OUTBOUND_RECURRING || g.SW.has(t.toLocaleLowerCase());

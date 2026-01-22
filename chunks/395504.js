@@ -9,6 +9,7 @@ var r = n(311907),
     s = n(543465),
     o = n(287809),
     l = n(652215);
+
 function c(e) {
     return (0, r.bG)([s.Ay, i.A, o.default], () => {
         var t, n, r, a;
@@ -18,6 +19,7 @@ function c(e) {
         return c && (u || d);
     });
 }
+
 function u(e) {
     let t = i.A.getGuild(e),
         n = o.default.getCurrentUser();
@@ -29,6 +31,7 @@ function u(e) {
         s.Ay.isOptInEnabled(e)
     );
 }
+
 function d(e) {
     return (0, r.bG)([i.A, a.A], () => {
         var t;

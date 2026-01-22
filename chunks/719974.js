@@ -1,10 +1,13 @@
-n.d(t, { x: () => h });
+n.d(t, {
+    x: () => h,
+});
 var r = n(627968),
     i = n(64700),
     a = n(284009),
     s = n.n(a),
     o = n(735438),
     l = n.n(o);
+
 function c(e, t, n) {
     return (
         t in e
@@ -18,6 +21,7 @@ function c(e, t, n) {
         e
     );
 }
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,6 +38,7 @@ function u(e) {
     }
     return e;
 }
+
 function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -46,6 +51,7 @@ function d(e, t) {
     }
     return n;
 }
+
 function f(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -57,6 +63,7 @@ function f(e, t) {
         e
     );
 }
+
 function p(e, t) {
     if (null == e) return {};
     var n,
@@ -73,6 +80,7 @@ function p(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function _(e, t) {
     if (null == e) return {};
     var n,
@@ -99,13 +107,27 @@ class h extends i.Component {
     }
     shake(e, t) {
         (this.animProps = this.getDefaultAnimProps(e, t)),
-            this.state.shaking || this.setState({ shaking: !0 }, this._animate);
+            this.state.shaking ||
+                this.setState(
+                    {
+                        shaking: !0,
+                    },
+                    this._animate,
+                );
     }
     stop() {
-        this.state.shaking && this.setState({ shaking: !1 });
+        this.state.shaking &&
+            this.setState({
+                shaking: !1,
+            });
     }
     _animationComplete() {
-        this.setState({ shaking: !1 }, this._animationCleanup);
+        this.setState(
+            {
+                shaking: !1,
+            },
+            this._animationCleanup,
+        );
     }
     render() {
         let e = this.props,
@@ -132,7 +154,7 @@ class h extends i.Component {
                 if (((e.progress += t - e.last), (e.last = t), e.frameCount % 2 != 0)) {
                     let t = e.lastDirection * e.intensity,
                         n = l().random(-e.intensity, e.intensity, !0),
-                        r = Math.max(0, Math.cbrt(e.duration - e.progress / 1000));
+                        r = Math.max(0, Math.cbrt(e.duration - e.progress / 1e3));
                     (e.intensity *= Math.min(1, r)),
                         (e.lastDirection *= -1),
                         s()(null != this.ref.current, "Shakeable style set when not mounted"),
@@ -144,6 +166,8 @@ class h extends i.Component {
                 null != this.ref.current && (this.ref.current.style.transform = ""),
                     cancelAnimationFrame(this._animationFrame);
             }),
-            (this.state = { shaking: !1 });
+            (this.state = {
+                shaking: !1,
+            });
     }
 }

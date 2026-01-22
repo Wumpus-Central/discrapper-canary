@@ -1,4 +1,6 @@
-n.d(t, { K: () => h });
+n.d(t, {
+    K: () => h,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -29,6 +31,7 @@ let p = "BoostedGuildPerksModalConnected",
             }),
         });
     };
+
 function h(e) {
     let { guildId: t, location: n, scrollToPowerupCards: i } = e;
     (0, o.B8)(
@@ -41,6 +44,8 @@ function h(e) {
                 scrollToPowerupCards: i,
             });
         },
-        { layerKey: p },
+        {
+            layerKey: p,
+        },
     );
 }

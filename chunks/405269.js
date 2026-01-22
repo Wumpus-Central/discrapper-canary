@@ -20,32 +20,41 @@ var r = n(989349),
     l = n(253932),
     c = n(985018);
 let u = new s.A("DateUtils"),
-    d = 60000,
-    f = 86400000,
+    d = 6e4,
+    f = 864e5,
     p = Object.create(null);
+
 function _(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         n = e;
     "string" == typeof e ||
         "number" == typeof e ||
         e instanceof Date ||
-        (u.error("Invalid date given to startOfDay", { d: e }), (n = new Date()));
+        (u.error("Invalid date given to startOfDay", {
+            d: e,
+        }),
+        (n = new Date()));
     let r = new Date(n),
         i = r.getTime();
     return t || (i -= r.getTimezoneOffset() * d), Math.floor(i / f) * f;
 }
+
 function h(e, t) {
     return Math.floor((_(e, !1) - _(t, !1)) / f);
 }
+
 function m(e, t) {
     return (e.getTime() - t.getTime()) / f;
 }
+
 function g(e, t) {
     return Math.abs(e - t) <= f && e.getDate() === t.getDate();
 }
+
 function E(e, t, n) {
     return Math.abs(e.valueOf() - t.valueOf()) < n;
 }
+
 function b(e, t) {
     let n = v(e).locale(),
         r = l.PZ.getSetting(),
@@ -53,6 +62,7 @@ function b(e, t) {
         s = p[i];
     return null == s && (s = p[i] = (0, a.A)(t)), s(S(e));
 }
+
 function y(e) {
     let t,
         n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
@@ -67,22 +77,27 @@ function y(e) {
     } else t = s < 2 ? "nextDay" : "sameElse";
     return b(e, r.calendar(t, v(e), a));
 }
+
 function O(e) {
     let t = i().localeData(),
         n = i()(),
         r = h(S(e), n.toDate());
     return 0 === r ? b(e, "LT") : -1 === r ? b(e, t.calendar("lastDay", v(e), n)) : r > -7 ? b(e, "dddd") : b(e, "L");
 }
+
 function A(e) {
     if (e.length >= 200) throw Error("Date string exceeds maximum length");
     return i()(e);
 }
+
 function v(e) {
     return i().isMoment(e) ? e : i()(e);
 }
+
 function S(e) {
     return i().isMoment(e) ? e.toDate() : e;
 }
+
 function I(e) {
     let t,
         n = i().localeData(),
@@ -99,21 +114,22 @@ o.default.addChangeListener(() => {
 let T = [
     {
         key: "days",
-        millisecondsInUnit: 86400000,
+        millisecondsInUnit: 864e5,
     },
     {
         key: "hours",
-        millisecondsInUnit: 3600000,
+        millisecondsInUnit: 36e5,
     },
     {
         key: "minutes",
-        millisecondsInUnit: 60000,
+        millisecondsInUnit: 6e4,
     },
     {
         key: "seconds",
-        millisecondsInUnit: 1000,
+        millisecondsInUnit: 1e3,
     },
 ];
+
 function C(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = {
@@ -132,6 +148,7 @@ function C(e, t) {
         r
     );
 }
+
 function N(e, t) {
     return e.days > 0
         ? c.intl.formatToPlainString(t.days, {
@@ -143,8 +160,11 @@ function N(e, t) {
                 hours: e.hours,
                 minutes: e.minutes,
             })
-          : c.intl.formatToPlainString(t.minutes, { minutes: Math.max(1, e.minutes) });
+          : c.intl.formatToPlainString(t.minutes, {
+                minutes: Math.max(1, e.minutes),
+            });
 }
+
 function R(e) {
     return null == e ? "" : A(e).format("YYYY-MM-DDTHH:mm");
 }

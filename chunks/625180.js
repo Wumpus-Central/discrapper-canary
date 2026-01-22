@@ -1,10 +1,13 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(523527),
     i = n(267102),
     a = n(87001),
     s = n(574172),
     o = n(21515),
     l = n(652215);
+
 function c(e, t, n) {
     return (
         t in e
@@ -18,6 +21,7 @@ function c(e, t, n) {
         e
     );
 }
+
 function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -63,5 +67,7 @@ let f = (function (e, t) {
         }
         return e;
     })({}, o),
-    { launchFrame: d },
+    {
+        launchFrame: d,
+    },
 );

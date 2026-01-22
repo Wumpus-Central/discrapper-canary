@@ -1,4 +1,6 @@
-n.d(t, { default: () => B });
+n.d(t, {
+    default: () => B,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -71,17 +73,27 @@ let B = (0, o.A)(
                     channelId: n.id,
                     context: J,
                 }),
-                $ = (0, D.A)({ user: t }),
+                $ = (0, D.A)({
+                    user: t,
+                }),
                 ee = (0, X.A)(t.id),
                 et = (0, M.A)(n.id, a),
-                en = (0, N.A)({ user: t }),
+                en = (0, N.A)({
+                    user: t,
+                }),
                 er = (0, d.A)(null, t),
                 ei = (0, k.A)(t.id),
                 el = (0, L.g)(n.id, "DMUserContextMenu"),
                 ea = (0, L.A)(t, el),
-                eo = (0, x.A)({ user: t }),
-                es = (0, E.A)({ user: t }),
-                ed = (0, V.A)({ user: t }),
+                eo = (0, x.A)({
+                    user: t,
+                }),
+                es = (0, E.A)({
+                    user: t,
+                }),
+                ed = (0, V.A)({
+                    user: t,
+                }),
                 ec = (0, R.A)(t.id),
                 eu = (0, g.u)({
                     userId: t.id,
@@ -123,7 +135,9 @@ let B = (0, o.A)(
                 eE = (0, y.y)(n),
                 eP = (0, v.A)(n),
                 eI = (0, m.A)(n),
-                eC = (0, T.A)({ channel: n }),
+                eC = (0, T.A)({
+                    channel: n,
+                }),
                 eS = n.isManaged(),
                 eM = t.isNonUserBot();
             return (0, r.jsxs)(i.W1t, {
@@ -133,11 +147,15 @@ let B = (0, o.A)(
                 onSelect: K,
                 onInteraction: q,
                 children: [
-                    (0, r.jsx)(i.rXV, { children: !(eM && !(0, p.A)(n.id)) && ej }),
+                    (0, r.jsx)(i.rXV, {
+                        children: !(eM && !(0, p.A)(n.id)) && ej,
+                    }),
                     (0, r.jsxs)(i.rXV, {
                         children: [eD, eP, eI],
                     }),
-                    (0, r.jsx)(i.rXV, { children: !eM && ev }),
+                    (0, r.jsx)(i.rXV, {
+                        children: !eM && ev,
+                    }),
                     (0, r.jsxs)(i.rXV, {
                         children: [
                             !eM &&
@@ -151,8 +169,12 @@ let B = (0, o.A)(
                     !eM &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
-                                (0, r.jsx)(i.rXV, { children: c && ei }),
-                                (0, r.jsx)(i.rXV, { children: B && er }),
+                                (0, r.jsx)(i.rXV, {
+                                    children: c && ei,
+                                }),
+                                (0, r.jsx)(i.rXV, {
+                                    children: B && er,
+                                }),
                                 (0, r.jsxs)(i.rXV, {
                                     children: [
                                         c && ec,
@@ -168,23 +190,34 @@ let B = (0, o.A)(
                                         c && em,
                                     ],
                                 }),
-                                (0, r.jsx)(i.rXV, { children: o && eg }),
+                                (0, r.jsx)(i.rXV, {
+                                    children: o && eg,
+                                }),
                                 F &&
                                     (0, r.jsxs)(i.rXV, {
                                         children: [e_, ey, eO],
                                     }),
                             ],
                         }),
-                    (0, p.A)(n.id) && (0, r.jsx)(i.rXV, { children: o && eg }),
-                    (0, r.jsx)(i.rXV, { children: eE }),
-                    (0, r.jsx)(i.rXV, { children: eC }),
+                    (0, p.A)(n.id) &&
+                        (0, r.jsx)(i.rXV, {
+                            children: o && eg,
+                        }),
+                    (0, r.jsx)(i.rXV, {
+                        children: eE,
+                    }),
+                    (0, r.jsx)(i.rXV, {
+                        children: eC,
+                    }),
                     (0, r.jsxs)(i.rXV, {
                         children: [ep, !W && eh],
                     }),
                 ],
             });
         },
-        { object: F.ZSU.CONTEXT_MENU },
+        {
+            object: F.ZSU.CONTEXT_MENU,
+        },
     ),
     [c.A.CONTEXT_MENU, c.A.DM_USER_MENU],
 );

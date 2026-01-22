@@ -1,4 +1,8 @@
-l.d(t, { A: () => b }), l(896048), l(321073);
+l.d(t, {
+    A: () => b,
+}),
+    l(896048),
+    l(321073);
 var n = l(627968),
     a = l(64700),
     r = l(735438),
@@ -11,6 +15,7 @@ var n = l(627968),
     m = l(696016),
     h = l(327742),
     p = l(866090);
+
 function v(e, t) {
     let { applicationAudioEnabled: l, voiceAudioEnabled: n, soundboardAudioEnabled: a, isVoiceClip: r } = t;
     if (!r && l && n && a)
@@ -18,6 +23,7 @@ function v(e, t) {
         else return !0;
     return e.includes(m.gC.APPLICATION) ? !l : e.includes(m.gC.VOICE) ? !n : !e.includes(m.gC.SOUNDBOARD) || !a;
 }
+
 function f(e) {
     let { setRef: t, audioTrackLabel: l, src: r, muted: i } = e,
         s = a.useCallback(
@@ -121,7 +127,9 @@ let b = a.forwardRef(function (e, t) {
                               muted: !0,
                               preload: "auto",
                           }),
-                          (0, n.jsx)(u.A, { className: h.Ap }),
+                          (0, n.jsx)(u.A, {
+                              className: h.Ap,
+                          }),
                       ],
                   })
                 : (0, n.jsx)(s.A, {

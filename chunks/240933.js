@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var i = n(544420),
     r = n(684013),
     l = n(742984),
@@ -6,6 +8,7 @@ var i = n(544420),
     o = n(581730),
     s = n(672396),
     c = n(985018);
+
 function u(e, t, n, u, d) {
     if (a.A.isNotificationDisabled(s.KS.ActivityInvite) || null == t.activity || null == u.id) return null;
     let p = t.activity.type,

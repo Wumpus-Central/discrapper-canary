@@ -1,4 +1,7 @@
-n.d(t, { u: () => j }), n(228524);
+n.d(t, {
+    u: () => j,
+}),
+    n(228524);
 var r = n(627968),
     i = n(64700),
     l = n(311907),
@@ -15,6 +18,7 @@ var r = n(627968),
     p = n(652215),
     x = n(985018),
     h = n(182452);
+
 function j(e) {
     let { guild: t } = e,
         n = i.useRef(null),
@@ -49,7 +53,12 @@ function j(e) {
                         variant: "heading-md/medium",
                         color: "text-strong",
                         className: h.D,
-                        children: [x.intl.string(x.t["5XZKy/"]), (0, r.jsx)(b.rV, { guild: t })],
+                        children: [
+                            x.intl.string(x.t["5XZKy/"]),
+                            (0, r.jsx)(b.rV, {
+                                guild: t,
+                            }),
+                        ],
                     }),
                     (0, r.jsx)(s.Text, {
                         variant: "text-sm/medium",

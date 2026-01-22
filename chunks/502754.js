@@ -1,4 +1,7 @@
-n.d(t, { A: () => C }), n(321073);
+n.d(t, {
+    A: () => C,
+}),
+    n(321073);
 var r = n(627968),
     l = n(64700),
     i = n(989349),
@@ -24,6 +27,7 @@ let x = {
         right: -12,
     },
     E = [O.lAJ.THREAD_CREATED];
+
 function _(e) {
     var t, n, i;
     let { channel: a, message: c, compact: u, isGroupStart: d, treatSpam: f, gotoChannel: h } = e,
@@ -111,10 +115,18 @@ function _(e) {
         ),
     });
 }
+
 function C(e) {
     var t, n;
     let { channel: l, channelRecord: i, gotoChannel: s } = e,
-        { enabled: p } = c.A.useExperiment({ location: "20e3b0_1" }, { autoTrackExposure: !1 }),
+        { enabled: p } = c.A.useExperiment(
+            {
+                location: "20e3b0_1",
+            },
+            {
+                autoTrackExposure: !1,
+            },
+        ),
         A = h.hH.useSetting(),
         x = (0, d.iJ)(i),
         E = !1,
@@ -166,7 +178,7 @@ function C(e) {
                             className: v.Gr,
                             children: (0, r.jsx)(o.QWc, {
                                 variant: "primary",
-                                text: "".concat(j.intl.string(j.t["9OB9hq"]), " \u203A"),
+                                text: "".concat(j.intl.string(j.t["9OB9hq"]), " ›"),
                                 onClick: (e) => s(e, n[n.length - 1].id),
                             }),
                         },
@@ -176,7 +188,11 @@ function C(e) {
             0 === I.length && (I = [(0, r.jsx)(o.y$y, {}, "spinner")]);
     }
     return (
-        E && x && c.A.trackExposure({ location: "20e3b0_2" }),
+        E &&
+            x &&
+            c.A.trackExposure({
+                location: "20e3b0_2",
+            }),
         (0, r.jsx)("div", {
             className: v.DZ,
             children: I,

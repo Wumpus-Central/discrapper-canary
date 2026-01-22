@@ -12,13 +12,17 @@ var r = n(954571),
 let o = /^\d+$/,
     l = /^(.+?@.+?\..+?|.+?#\d{4})$/,
     c = /^[a-zA-Z0-9_\\.]+$/;
+
 function u(e) {
     return c.test(e) || (e.includes("#") && l.test(e)) ? null : (f(e), s.intl.string(s.t.paDJBM));
 }
+
 function d(e, t) {
     switch (e) {
         case a.t02.RELATIONSHIP_INCOMING_DISABLED:
-            return s.intl.format(s.t.Oxe6Ur, { discordTag: t });
+            return s.intl.format(s.t.Oxe6Ur, {
+                discordTag: t,
+            });
         case a.t02.TOO_MANY_FRIENDS:
             return s.intl.string(s.t.tnBalD);
         case a.t02.RELATIONSHIP_ALREADY_FRIENDS:
@@ -38,6 +42,7 @@ function d(e, t) {
             return s.intl.string(s.t.paDJBM);
     }
 }
+
 function f(e) {
     let [t, n] = e.split("#");
     r.default.track(a.HAw.FRIEND_REQUEST_FAILED, {

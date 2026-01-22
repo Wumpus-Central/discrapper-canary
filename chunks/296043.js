@@ -23,6 +23,7 @@ var r = n(562465),
     h = n(616716),
     m = n(652215),
     g = n(985018);
+
 function E(e, t, n) {
     return (
         t in e
@@ -36,6 +37,7 @@ function E(e, t, n) {
         e
     );
 }
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -52,11 +54,13 @@ function b(e) {
     }
     return e;
 }
+
 function y(e) {
-    return null == e || "" === e || Number.isNaN(e) ? Date.now() : d.default.extractTimestamp(e) + 900000;
+    return null == e || "" === e || Number.isNaN(e) ? Date.now() : d.default.extractTimestamp(e) + 9e5;
 }
+
 function O(e) {
-    return null == e || "" === e || Number.isNaN(e) ? Date.now() : d.default.extractTimestamp(e) + 3000;
+    return null == e || "" === e || Number.isNaN(e) ? Date.now() : d.default.extractTimestamp(e) + 3e3;
 }
 let A = async (e) => {
     let {
@@ -105,7 +109,7 @@ let A = async (e) => {
         {
             url: m.Rsh.INTERACTIONS,
             body: y,
-            timeout: 3000,
+            timeout: 3e3,
             rejectWithError: !1,
         },
         (e) => {
@@ -113,6 +117,7 @@ let A = async (e) => {
         },
     );
 };
+
 function v(e) {
     if (null == e) return null;
     switch (e.type) {
@@ -199,6 +204,7 @@ let C = (e, t) => {
     if (o && e.state === m.cmJ.SEND_FAILED) return 2;
     else if (null != e.interaction && e.hasFlag(m.pr7.EPHEMERAL)) return 4;
 };
+
 function N(e) {
     let t = e.options;
     for (
@@ -210,11 +216,15 @@ function N(e) {
     for (let e of null != t ? t : []) if (e.type === s.n4.ATTACHMENT) return !1;
     return !0;
 }
+
 function R(e, t) {
     switch (e) {
         case l.A.ReasonCodes.TIMEOUT:
             let n = o.A.getApplication(t);
-            if (null != n) return g.intl.formatToPlainString(g.t.u2D2Uj, { applicationName: n.name });
+            if (null != n)
+                return g.intl.formatToPlainString(g.t.u2D2Uj, {
+                    applicationName: n.name,
+                });
             return g.intl.string(g.t["vGU8+r"]);
         case l.A.ReasonCodes.ACTIVITY_LAUNCH_NOT_IN_EXPERIMENT:
             return g.intl.string(g.t.GyzcrS);

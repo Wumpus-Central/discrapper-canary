@@ -1,11 +1,15 @@
-n.d(t, { P: () => s });
+n.d(t, {
+    P: () => s,
+});
 var r = n(311907),
     i = n(287809),
     l = n(349435),
     a = n(617641),
     o = n(452082);
 let s = (e) => {
-    let t = (0, a.Lc)({ location: "context-menu-item" }),
+    let t = (0, a.Lc)({
+            location: "context-menu-item",
+        }),
         n = (0, r.bG)([i.default], () => i.default.getCurrentUser()),
         s = (0, o.j)(e.id, "context-menu-item");
     return (null == n ? void 0 : n.isStaff()) === !0 && t && e.isDM()

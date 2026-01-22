@@ -43,6 +43,7 @@ let f = [
         },
     ],
     x = "forever";
+
 function b(e) {
     let { status: t, currentStatus: n, description: i } = e,
         r = t !== m.clD.ONLINE,
@@ -104,20 +105,27 @@ function b(e) {
         children: r ? s : void 0,
     });
 }
+
 function g(e) {
     if (null == e || "0" === e) return;
     let { kind: t, dateString: n, timeString: a } = (0, d._)(e);
     return "today" === t
-        ? p.intl.formatToPlainString(p.t.ZxxHIO, { timeString: a })
+        ? p.intl.formatToPlainString(p.t.ZxxHIO, {
+              timeString: a,
+          })
         : p.intl.formatToPlainString(p.t["9OFjSe"], {
               dateString: n,
               timeString: a,
           });
 }
+
 function v(e) {
     let t = s.CY.useSetting(),
         n = (0, i.kB)(),
-        o = r.P.useExperiment({ location: "UserProfileAccountPopout" }).allowQuietMode || n,
+        o =
+            r.P.useExperiment({
+                location: "UserProfileAccountPopout",
+            }).allowQuietMode || n,
         c = s.Jr.useSetting(),
         d = e === m.clD.DND,
         u = (n) => {

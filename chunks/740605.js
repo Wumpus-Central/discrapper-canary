@@ -1,14 +1,30 @@
 e.exports = function (e) {
     let t = {
             className: "variable",
-            variants: [{ begin: "\\b([gtps][A-Z]{1}[a-zA-Z0-9]*)(\\[.+\\])?(?:\\s*?)" }, { begin: "\\$_[A-Z]+" }],
+            variants: [
+                {
+                    begin: "\\b([gtps][A-Z]{1}[a-zA-Z0-9]*)(\\[.+\\])?(?:\\s*?)",
+                },
+                {
+                    begin: "\\$_[A-Z]+",
+                },
+            ],
             relevance: 0,
         },
         n = [e.C_BLOCK_COMMENT_MODE, e.HASH_COMMENT_MODE, e.COMMENT("--", "$"), e.COMMENT("[^:]//", "$")],
         r = e.inherit(e.TITLE_MODE, {
-            variants: [{ begin: "\\b_*rig[A-Z][A-Za-z0-9_\\-]*" }, { begin: "\\b_[a-z0-9\\-]+" }],
+            variants: [
+                {
+                    begin: "\\b_*rig[A-Z][A-Za-z0-9_\\-]*",
+                },
+                {
+                    begin: "\\b_[a-z0-9\\-]+",
+                },
+            ],
         }),
-        i = e.inherit(e.TITLE_MODE, { begin: "\\b([A-Za-z0-9_\\-]+)\\b" });
+        i = e.inherit(e.TITLE_MODE, {
+            begin: "\\b([A-Za-z0-9_\\-]+)\\b",
+        });
     return {
         name: "LiveCode",
         case_insensitive: !1,
@@ -52,8 +68,12 @@ e.exports = function (e) {
                         begin: "<\\?(rev|lc|livecode)",
                         relevance: 10,
                     },
-                    { begin: "<\\?" },
-                    { begin: "\\?>" },
+                    {
+                        begin: "<\\?",
+                    },
+                    {
+                        begin: "\\?>",
+                    },
                 ],
             },
             e.APOS_STRING_MODE,

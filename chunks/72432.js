@@ -1,4 +1,7 @@
-n.d(t, { A: () => N }), n(896048);
+n.d(t, {
+    A: () => N,
+}),
+    n(896048);
 var r = n(141931),
     i = n(401843),
     a = n(15285),
@@ -18,6 +21,7 @@ var r = n(141931),
     b = n(310689),
     y = n(753070),
     O = n(765682);
+
 function A(e, t, n) {
     return (
         t in e
@@ -31,6 +35,7 @@ function A(e, t, n) {
         e
     );
 }
+
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -47,6 +52,7 @@ function v(e) {
     }
     return e;
 }
+
 function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -59,6 +65,7 @@ function S(e, t) {
     }
     return n;
 }
+
 function I(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -70,12 +77,17 @@ function I(e, t) {
         e
     );
 }
+
 function T(e) {
     return e.hasOwnProperty("pid");
 }
+
 function C(e) {
     var t;
-    if (T(e)) return { pid: e.pid };
+    if (T(e))
+        return {
+            pid: e.pid,
+        };
     let n = (0, b.A)(void 0, e, a.Ay.getRunningGames()),
         i = !(0, _.isWindows)() || null == n || (null == e ? void 0 : e.id.startsWith(r.fS.CAMERA)),
         s = null != n ? n.pid : null;
@@ -89,7 +101,9 @@ function C(e) {
               sourceIcon: e.icon,
               sourcePid: s,
           })
-        : { pid: s };
+        : {
+              pid: s,
+          };
 }
 async function N(e, t) {
     var n, _, E, b, A, S, T, N;
@@ -103,12 +117,16 @@ async function N(e, t) {
     if (null == (L = "number" == typeof e ? a.Ay.getGameForPID(e) : e)) return [!1, "no source"];
     if (
         !d.A.getUseSystemScreensharePicker() &&
-        !(await s.A.hasPermission(O.iL.SCREEN_RECORDING, { showAuthorizationError: !1 }))
+        !(await s.A.hasPermission(O.iL.SCREEN_RECORDING, {
+            showAuthorizationError: !1,
+        }))
     )
         return [!1, "no permission"];
     let { preset: j, resolution: M, fps: k, soundshareEnabled: U } = l.A.getState(),
         G = null != (n = null == t ? void 0 : t.preset) ? n : j,
-        { allowAutoQuality: V } = (0, h.eO)({ location: "startStreamWithSource" });
+        { allowAutoQuality: V } = (0, h.eO)({
+            location: "startStreamWithSource",
+        });
     G !== y.jQ.PRESET_AUTO || V || (G = y.jQ.PRESET_VIDEO);
     let F = G === y.jQ.PRESET_AUTO ? y.jQ.PRESET_VIDEO : G,
         [B, H] = null != (_ = (0, g.A)(F, R, x)) ? _ : [],

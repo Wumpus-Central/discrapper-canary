@@ -1,4 +1,8 @@
-t.r(l), t.d(l, { default: () => c }), t(896048);
+t.r(l),
+    t.d(l, {
+        default: () => c,
+    }),
+    t(896048);
 var n = t(627968);
 t(64700);
 var i = t(215530),
@@ -6,6 +10,7 @@ var i = t(215530),
     s = t(916217),
     a = t(417021),
     o = t(239606);
+
 function d(e) {
     for (var l = 1; l < arguments.length; l++) {
         var t = null != arguments[l] ? arguments[l] : {},
@@ -31,6 +36,7 @@ function d(e) {
     }
     return e;
 }
+
 function c(e) {
     let { hideRestrictedProfile: l } = e,
         t = (function (e, l) {
@@ -67,7 +73,15 @@ function c(e) {
         { user: c } = t,
         [u, f] = (0, i.A)(c.id);
     return u && !l
-        ? (0, n.jsx)(a.A, d({ onHide: f }, t))
+        ? (0, n.jsx)(
+              a.A,
+              d(
+                  {
+                      onHide: f,
+                  },
+                  t,
+              ),
+          )
         : c.isNonUserBot()
           ? (0, n.jsx)(s.A, d({}, t))
           : c.bot

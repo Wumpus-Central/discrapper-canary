@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var r = n(627968);
 n(64700);
 var i = n(192308),
@@ -7,6 +9,7 @@ var i = n(192308),
     o = n(890620),
     l = n(260197),
     c = n(652215);
+
 function u(e, t, n) {
     return (
         t in e
@@ -20,6 +23,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +40,7 @@ function d(e) {
     }
     return e;
 }
+
 function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -48,6 +53,7 @@ function f(e, t) {
     }
     return n;
 }
+
 function p(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -60,7 +66,9 @@ function p(e, t) {
     );
 }
 let _ = () => {
-        a.default.track(c.HAw.MODAL_DISMISSED, { type: l.mk });
+        a.default.track(c.HAw.MODAL_DISMISSED, {
+            type: l.mk,
+        });
     },
     h = (e) => {
         a.default.track(c.HAw.OPEN_MODAL, {

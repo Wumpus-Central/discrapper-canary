@@ -1,8 +1,11 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(110259),
     i = n(139286),
     a = n(989837),
     s = n(520117);
+
 function o(e) {
     let { sectionName: t, numItems: n, numVisibleItems: o } = e,
         l = () => {

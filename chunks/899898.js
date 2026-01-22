@@ -13,6 +13,7 @@
         return;
     }
     var n = [];
+
     function r(e) {
         (this.time = e.time),
             (this.target = e.target),
@@ -26,6 +27,7 @@
             i = r.width * r.height;
         n ? (this.intersectionRatio = i / n) : (this.intersectionRatio = +!!this.isIntersecting);
     }
+
     function i(e, t) {
         var n = t || {};
         if ("function" != typeof e) throw Error("callback must be a function");
@@ -43,9 +45,11 @@
                 })
                 .join(" "));
     }
+
     function a() {
         return e.performance && performance.now && performance.now();
     }
+
     function s(e, t) {
         var n = null;
         return function () {
@@ -55,16 +59,19 @@
                 }, t));
         };
     }
+
     function o(e, t, n, r) {
         "function" == typeof e.addEventListener
             ? e.addEventListener(t, n, r || !1)
             : "function" == typeof e.attachEvent && e.attachEvent("on" + t, n);
     }
+
     function l(e, t, n, r) {
         "function" == typeof e.removeEventListener
             ? e.removeEventListener(t, n, r || !1)
             : "function" == typeof e.detatchEvent && e.detatchEvent("on" + t, n);
     }
+
     function c(e, t) {
         var n = Math.max(e.top, t.top),
             r = Math.min(e.bottom, t.bottom),
@@ -84,6 +91,7 @@
             }
         );
     }
+
     function u(e) {
         var t;
         try {
@@ -102,6 +110,7 @@
               t)
             : d();
     }
+
     function d() {
         return {
             top: 0,
@@ -112,6 +121,7 @@
             height: 0,
         };
     }
+
     function f(e, t) {
         for (var n = t; n; ) {
             if (n == e) return !0;
@@ -119,6 +129,7 @@
         }
         return !1;
     }
+
     function p(e) {
         var t = e.parentNode;
         return t && 11 == t.nodeType && t.host ? t.host : t;

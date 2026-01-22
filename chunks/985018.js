@@ -19,6 +19,7 @@ var r = n(627968),
     l = n(356422),
     c = n(226536),
     u = n(526617);
+
 function d(e, t, n) {
     return (
         t in e
@@ -32,6 +33,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -48,6 +50,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -60,6 +63,7 @@ function p(e, t) {
     }
     return n;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -71,6 +75,7 @@ function _(e, t) {
         e
     );
 }
+
 function h(e) {
     return [
         Array.isArray(navigator.languages) ? navigator.languages[0] : null,
@@ -87,11 +92,46 @@ let m = h("en-US"),
         defaultLocale: "en-US",
     }).withFormatters({
         format: (0, a.makeReactFormatter)({
-            $i: (e, t) => (0, r.jsx)("em", { children: e }, t),
-            $b: (e, t) => (0, r.jsx)("strong", { children: e }, t),
-            $del: (e, t) => (0, r.jsx)("del", { children: e }, t),
-            $p: (e, t) => (0, r.jsx)("p", { children: e }, t),
-            $code: (e, t) => (0, r.jsx)("code", { children: e }, t),
+            $i: (e, t) =>
+                (0, r.jsx)(
+                    "em",
+                    {
+                        children: e,
+                    },
+                    t,
+                ),
+            $b: (e, t) =>
+                (0, r.jsx)(
+                    "strong",
+                    {
+                        children: e,
+                    },
+                    t,
+                ),
+            $del: (e, t) =>
+                (0, r.jsx)(
+                    "del",
+                    {
+                        children: e,
+                    },
+                    t,
+                ),
+            $p: (e, t) =>
+                (0, r.jsx)(
+                    "p",
+                    {
+                        children: e,
+                    },
+                    t,
+                ),
+            $code: (e, t) =>
+                (0, r.jsx)(
+                    "code",
+                    {
+                        children: e,
+                    },
+                    t,
+                ),
             $link: (e, t, r) => {
                 let [a] = r,
                     { Anchor: s } = n(349288),
@@ -109,7 +149,13 @@ let m = h("en-US"),
                         if (null == a) break;
                         (l.onClick = null != (c = a.onClick) ? c : a), (l.onContextMenu = a.onContextMenu);
                 }
-                return (0, i.createElement)(s, _(f({}, l), { key: t }), e);
+                return (0, i.createElement)(
+                    s,
+                    _(f({}, l), {
+                        key: t,
+                    }),
+                    e,
+                );
             },
         }),
         formatToPlainString: a.stringFormatter,

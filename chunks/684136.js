@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -10,6 +12,7 @@ var i = n(503698),
     u = (function (e) {
         return (e.DEFAULT = ""), (e.BOLD = "Bold"), (e.SOLID = "Solid"), e;
     })(u || {});
+
 function d(e) {
     let { closeAction: t, variant: n = "", keybind: i, className: u } = e;
     return (0, r.jsxs)("div", {

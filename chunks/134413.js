@@ -44,26 +44,31 @@ let d = function (e) {
             n = d(e, t);
         return null != n && s.A.can(u.xBc.MANAGE_GUILD, n.guild) && s.A.can(u.xBc.BAN_MEMBERS, n.guild);
     };
+
 function _(e) {
     return (0, i.bG)([a.A, o.default], () => f(e, [a.A, o.default]), [e]);
 }
+
 function h(e) {
     let t = _(e),
         n = (0, i.bG)([a.A, o.default], () => p(e, [a.A, o.default]), [e]);
     return t && n;
 }
+
 function m(e) {
     return (0, i.bG)([a.A, s.A], () => {
         let t = a.A.getGuild(e);
         return null != t && s.A.can(u.xBc.MANAGE_GUILD, t);
     }, [e]);
 }
+
 function g(e, t, n) {
     return (0, i.bG)([s.A, a.A], () => {
         let r = a.A.getGuild(e);
         return null != r && t && s.A.canManageUser(u.xBc.BAN_MEMBERS, n, r);
     }, [t, e, n]);
 }
+
 function E(e, t, n) {
     let r = a.A.getGuild(e);
     return null != r && t && s.A.canManageUser(u.xBc.BAN_MEMBERS, n, r);

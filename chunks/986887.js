@@ -1,19 +1,24 @@
 function t(e) {
     return RegExp(e.replace(/[-/\\^$*+?.()|[\]{}]/g, "\\$&"), "m");
 }
+
 function n(e) {
     return e ? ("string" == typeof e ? e : e.source) : null;
 }
+
 function r(e) {
     return i("(?=", e, ")");
 }
+
 function i(...e) {
     return e.map((e) => n(e)).join("");
 }
+
 function a(e) {
     let t = e[e.length - 1];
     return "object" == typeof t && t.constructor === Object ? (e.splice(e.length - 1, 1), t) : {};
 }
+
 function s(...e) {
     return "(" + (a(e).capture ? "" : "?:") + e.map((e) => n(e)).join("|") + ")";
 }
@@ -165,7 +170,12 @@ e.exports = function (e) {
             "variable.constant": ["__LINE__", "__SOURCE_DIRECTORY__", "__SOURCE_FILE__"],
         },
         c = {
-            variants: [e.COMMENT(/\(\*(?!\))/, /\*\)/, { contains: ["self"] }), e.C_LINE_COMMENT_MODE],
+            variants: [
+                e.COMMENT(/\(\*(?!\))/, /\*\)/, {
+                    contains: ["self"],
+                }),
+                e.C_LINE_COMMENT_MODE,
+            ],
         },
         u = /[a-zA-Z_](\w|')*/,
         d = {
@@ -176,7 +186,14 @@ e.exports = function (e) {
         f = /\B('|\^)/,
         p = {
             scope: "symbol",
-            variants: [{ match: i(f, /``.*?``/) }, { match: i(f, e.UNDERSCORE_IDENT_RE) }],
+            variants: [
+                {
+                    match: i(f, /``.*?``/),
+                },
+                {
+                    match: i(f, e.UNDERSCORE_IDENT_RE),
+                },
+            ],
             relevance: 0,
         },
         _ = function ({ includeEqual: e }) {
@@ -191,16 +208,29 @@ e.exports = function (e) {
                 relevance: 0,
             };
         },
-        h = _({ includeEqual: !0 }),
-        m = _({ includeEqual: !1 }),
+        h = _({
+            includeEqual: !0,
+        }),
+        m = _({
+            includeEqual: !1,
+        }),
         g = function (t, n) {
             return {
                 begin: i(t, r(i(/\s*/, s(/\w/, /'/, /\^/, /#/, /``/, /\(/, /{\|/)))),
                 beginScope: n,
                 end: r(s(/\n/, /=/)),
                 relevance: 0,
-                keywords: e.inherit(l, { type: o }),
-                contains: [c, p, e.inherit(d, { scope: null }), m],
+                keywords: e.inherit(l, {
+                    type: o,
+                }),
+                contains: [
+                    c,
+                    p,
+                    e.inherit(d, {
+                        scope: null,
+                    }),
+                    m,
+                ],
             };
         },
         E = g(/:/, "operator"),
@@ -215,7 +245,9 @@ e.exports = function (e) {
             keywords: l,
             contains: [
                 c,
-                e.inherit(d, { scope: null }),
+                e.inherit(d, {
+                    scope: null,
+                }),
                 p,
                 {
                     scope: "operator",
@@ -230,7 +262,9 @@ e.exports = function (e) {
         },
         A = {
             begin: [/^\s*/, i(/#/, s(...a)), /\b/],
-            beginScope: { 2: "meta" },
+            beginScope: {
+                2: "meta",
+            },
             end: r(/\s|$/),
         },
         v = {
@@ -246,7 +280,12 @@ e.exports = function (e) {
             scope: "string",
             begin: /@"/,
             end: /"/,
-            contains: [{ match: /""/ }, e.BACKSLASH_ESCAPE],
+            contains: [
+                {
+                    match: /""/,
+                },
+                e.BACKSLASH_ESCAPE,
+            ],
         },
         T = {
             scope: "string",
@@ -264,19 +303,48 @@ e.exports = function (e) {
             scope: "string",
             begin: /\$"/,
             end: /"/,
-            contains: [{ match: /\{\{/ }, { match: /\}\}/ }, e.BACKSLASH_ESCAPE, C],
+            contains: [
+                {
+                    match: /\{\{/,
+                },
+                {
+                    match: /\}\}/,
+                },
+                e.BACKSLASH_ESCAPE,
+                C,
+            ],
         },
         R = {
             scope: "string",
             begin: /(\$@|@\$)"/,
             end: /"/,
-            contains: [{ match: /\{\{/ }, { match: /\}\}/ }, { match: /""/ }, e.BACKSLASH_ESCAPE, C],
+            contains: [
+                {
+                    match: /\{\{/,
+                },
+                {
+                    match: /\}\}/,
+                },
+                {
+                    match: /""/,
+                },
+                e.BACKSLASH_ESCAPE,
+                C,
+            ],
         },
         w = {
             scope: "string",
             begin: /\$"""/,
             end: /"""/,
-            contains: [{ match: /\{\{/ }, { match: /\}\}/ }, C],
+            contains: [
+                {
+                    match: /\{\{/,
+                },
+                {
+                    match: /\}\}/,
+                },
+                C,
+            ],
             relevance: 2,
         },
         P = {
@@ -290,7 +358,9 @@ e.exports = function (e) {
             aliases: ["fs", "f#"],
             keywords: l,
             illegal: /\/\*/,
-            classNameAliases: { "computation-expression": "keyword" },
+            classNameAliases: {
+                "computation-expression": "keyword",
+            },
             contains: [
                 n,
                 {

@@ -1,4 +1,6 @@
-a.d(t, { default: () => u });
+a.d(t, {
+    default: () => u,
+});
 var n = a(627968),
     i = a(64700),
     l = a(397927),
@@ -23,12 +25,22 @@ let c = [
         postBold: "lievable!",
     },
 ];
+
 function b(e) {
     let { punConfig: t } = e;
     return (0, n.jsxs)(n.Fragment, {
-        children: [t.preBold, (0, n.jsx)("b", { children: (0, n.jsx)("i", { children: t.bold }) }), t.postBold],
+        children: [
+            t.preBold,
+            (0, n.jsx)("b", {
+                children: (0, n.jsx)("i", {
+                    children: t.bold,
+                }),
+            }),
+            t.postBold,
+        ],
     });
 }
+
 function u(e) {
     let { transitionState: t, onClose: a, asanaTask: u } = e;
     i.useEffect(() => {
@@ -68,7 +80,9 @@ function u(e) {
                         }),
                         "!",
                         (0, n.jsx)("br", {}),
-                        (0, n.jsx)(b, { punConfig: h }),
+                        (0, n.jsx)(b, {
+                            punConfig: h,
+                        }),
                     ],
                 }),
             ],

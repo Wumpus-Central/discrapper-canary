@@ -1,4 +1,6 @@
-i.d(t, { A: () => p });
+i.d(t, {
+    A: () => p,
+});
 var n,
     s = i(627968);
 i(64700);
@@ -8,6 +10,7 @@ var r = i(503698),
     l = i(397927),
     u = i(573729),
     c = (((n = c || {})[(n.ACCEPT = 0)] = "ACCEPT"), (n[(n.DENY = 1)] = "DENY"), (n[(n.DEFAULT = 2)] = "DEFAULT"), n);
+
 function h(e) {
     let { icon: t, tooltip: i, onClick: n, actionType: r = 2, shouldHighlight: c } = e;
     return (0, s.jsx)(o.m, {

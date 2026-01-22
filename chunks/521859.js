@@ -8,7 +8,9 @@ e.exports = function (e) {
                 begin: "^!!!( (5|1\\.1|Strict|Frameset|Basic|Mobile|RDFa|XML\\b.*))?$",
                 relevance: 10,
             },
-            e.COMMENT("^\\s*(!=#|=#|-#|/).*$", null, { relevance: 0 }),
+            e.COMMENT("^\\s*(!=#|=#|-#|/).*$", null, {
+                relevance: 0,
+            }),
             {
                 begin: "^\\s*(-|=|!=)(?!#)",
                 end: /$/,
@@ -84,7 +86,9 @@ e.exports = function (e) {
                     },
                 ],
             },
-            { begin: "^\\s*[=~]\\s*" },
+            {
+                begin: "^\\s*[=~]\\s*",
+            },
             {
                 begin: /#\{/,
                 end: /\}/,

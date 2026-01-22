@@ -1,10 +1,14 @@
-n.d(t, { A: () => s }), n(896048);
+n.d(t, {
+    A: () => s,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(732955),
     o = n(817281),
     a = n(951829),
     c = n(985018);
+
 function s(e) {
     let { type: t, onConfirm: n, onClose: s } = e,
         d = (function (e, t) {
@@ -40,7 +44,12 @@ function s(e) {
         })(e, ["type", "onConfirm", "onClose"]),
         [u, p] = l.useState(!1),
         b = l.useCallback(() => {
-            u && o.Ay.updatedUnsyncedSettings({ disableHideSelfStreamAndVideoConfirmationAlert: !0 }), n(), s();
+            u &&
+                o.Ay.updatedUnsyncedSettings({
+                    disableHideSelfStreamAndVideoConfirmationAlert: !0,
+                }),
+                n(),
+                s();
         }, [n, u, s]),
         f = t === a.f.STREAM ? c.intl.string(c.t["/lFMWr"]) : c.intl.string(c.t.xzxhZS),
         m = t === a.f.STREAM ? c.intl.string(c.t.xaOX7d) : c.intl.string(c.t.oU1p9O);

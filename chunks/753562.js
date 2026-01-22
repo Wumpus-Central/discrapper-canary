@@ -1,4 +1,6 @@
-n.d(a, { A: () => r });
+n.d(a, {
+    A: () => r,
+});
 var t = n(303527);
 let r = {
     ordinalNumber: (0, n(722023).A)({
@@ -76,7 +78,9 @@ let r = {
         defaultParseWidth: "any",
     }),
     dayPeriod: (0, t.A)({
-        matchPatterns: { any: /^(am|pm|middernacht|het middaguur|'s (ochtends|middags|avonds|nachts))/i },
+        matchPatterns: {
+            any: /^(am|pm|middernacht|het middaguur|'s (ochtends|middags|avonds|nachts))/i,
+        },
         defaultMatchWidth: "any",
         parsePatterns: {
             any: {

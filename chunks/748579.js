@@ -1,4 +1,8 @@
-t.r(a), t.d(a, { default: () => g }), t(896048);
+t.r(a),
+    t.d(a, {
+        default: () => g,
+    }),
+    t(896048);
 var n = t(627968),
     s = t(64700),
     r = t(503698),
@@ -16,6 +20,7 @@ var n = t(627968),
     p = t(652215),
     E = t(985018),
     x = t(962131);
+
 function g(e) {
     var a;
     let { levelUpData: t } = e,
@@ -40,9 +45,13 @@ function g(e) {
             {
                 type: d.ImpressionTypes.POPOUT,
                 name: d.ImpressionNames.TIERED_TENURE_BADGE_LEVEL_UP,
-                properties: { new_badge_id: R.id },
+                properties: {
+                    new_badge_id: R.id,
+                },
             },
-            { trackOnInitialLoad: !0 },
+            {
+                trackOnInitialLoad: !0,
+            },
         ),
         s.useEffect(() => {
             null != A.current && A.current.load();
@@ -54,7 +63,9 @@ function g(e) {
                 (j.current.style.display = "none"),
                 j.current.offsetWidth,
                 (j.current.style.display = ""),
-                _.default.track(p.HAw.TIERED_TENURE_BADGE_LEVEL_UP_REPLAY_CLICKED, { new_badge_id: R.id });
+                _.default.track(p.HAw.TIERED_TENURE_BADGE_LEVEL_UP_REPLAY_CLICKED, {
+                    new_badge_id: R.id,
+                });
         }, [R.id, D]),
         L = {
             "--custom-old-badge-color": "linear-gradient(to right, ".concat(

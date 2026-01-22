@@ -1,4 +1,6 @@
-n.d(t, { A: () => x });
+n.d(t, {
+    A: () => x,
+});
 var r = n(627968),
     i = n(64700),
     a = n(284009),
@@ -42,7 +44,9 @@ let D = "MMM DD, YYYY",
             F = (0, c.bG)([y.A], () => (null != U ? y.A.get(U) : null)),
             { activeSubscription: B, activeSubscriptionPlanFromStore: H } = (0, I.A)(n),
             Y = null == B || null != H,
-            W = (0, v.cY)(n, { includeSoftDeleted: !0 }).map((e) => e.subscription_plans[0].id),
+            W = (0, v.cY)(n, {
+                includeSoftDeleted: !0,
+            }).map((e) => e.subscription_plans[0].id),
             K = (0, S.l)(B),
             z = null != K,
             q = !!(null == B ? void 0 : B.hasActiveTrial),

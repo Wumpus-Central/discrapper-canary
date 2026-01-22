@@ -1,4 +1,7 @@
-n.r(t), n.d(t, { default: () => F });
+n.r(t),
+    n.d(t, {
+        default: () => F,
+    });
 var r = n(627968),
     a = n(503698),
     i = n.n(a),
@@ -22,6 +25,7 @@ var r = n(627968),
     x = n(540462),
     D = n(678035);
 let R = [u.L, m.T, p.w, y.z];
+
 function F(e) {
     let { windowKey: t, channelId: n } = e,
         a = (0, o.bG)([b.A], () => b.A.getChannel(n));

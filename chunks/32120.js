@@ -1,4 +1,7 @@
-n.d(t, { A: () => h }), n(747238);
+n.d(t, {
+    A: () => h,
+}),
+    n(747238);
 var r = n(110259),
     i = n(562465),
     s = n(73153),
@@ -10,15 +13,25 @@ var r = n(110259),
 n(574454);
 var d = n(985018);
 let h = {
-    resetSuggestions: () => s.h.dispatch({ type: "POMELO_SUGGESTIONS_RESET" }),
+    resetSuggestions: () =>
+        s.h.dispatch({
+            type: "POMELO_SUGGESTIONS_RESET",
+        }),
     async fetchSuggestionsRegistration(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1500;
-        s.h.dispatch({ type: "POMELO_SUGGESTIONS_RESET" });
+        s.h.dispatch({
+            type: "POMELO_SUGGESTIONS_RESET",
+        });
         try {
             var n;
             let r = await i.Bo.get({
                 url: u.Rsh.POMELO_SUGGESTIONS_UNAUTHED,
-                query: null == e ? void 0 : { global_name: e },
+                query:
+                    null == e
+                        ? void 0
+                        : {
+                              global_name: e,
+                          },
                 timeout: t,
                 rejectWithError: !0,
                 failImmediatelyWhenRateLimited: !0,
@@ -88,10 +101,14 @@ let h = {
         try {
             let t = await o.A.post({
                 url: i ? u.Rsh.POMELO_ATTEMPT_UNAUTHED : u.Rsh.POMELO_ATTEMPT,
-                body: { username: e },
+                body: {
+                    username: e,
+                },
                 trackedActionData: {
                     event: r.NetworkActionNames.POMELO_ATTEMPT,
-                    properties: { requested_username: e },
+                    properties: {
+                        requested_username: e,
+                    },
                 },
                 rejectWithError: !1,
             });
@@ -132,7 +149,9 @@ let h = {
                 url: u.Rsh.POMELO_CREATE,
                 trackedActionData: {
                     event: r.NetworkActionNames.POMELO_CREATE,
-                    properties: { one_click_flow: t },
+                    properties: {
+                        one_click_flow: t,
+                    },
                 },
                 rejectWithError: !1,
             });

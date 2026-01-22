@@ -13,6 +13,7 @@ var r = n(627968),
     u = n(871123),
     d = n(492075);
 let f = "#000000";
+
 function p(e) {
     let {
             cardImage: t,
@@ -30,21 +31,41 @@ function p(e) {
             return "linear-gradient(135deg, ".concat(e, ", ").concat(t, ")");
         }, [h, m]);
     return (0, r.jsxs)("div", {
-        className: l()(d.Ui, { [d.Ew]: "square" === _ }, o),
+        className: l()(
+            d.Ui,
+            {
+                [d.Ew]: "square" === _,
+            },
+            o,
+        ),
         children: [
             (0, r.jsx)("div", {
                 className: l()(d.GC, u),
-                style: null != n ? { backgroundImage: "url(".concat(n.toString(), ")") } : { backgroundImage: g },
+                style:
+                    null != n
+                        ? {
+                              backgroundImage: "url(".concat(n.toString(), ")"),
+                          }
+                        : {
+                              backgroundImage: g,
+                          },
             }),
             (0, r.jsx)("img", {
                 src: t.toString(),
                 alt: a,
                 draggable: !1,
-                className: l()(d.LC, { [d.Ew]: "square" === _ }, p),
+                className: l()(
+                    d.LC,
+                    {
+                        [d.Ew]: "square" === _,
+                    },
+                    p,
+                ),
             }),
         ],
     });
 }
+
 function _(e) {
     let { sku: t, containerClassName: n, backgroundImageClassName: i, foregroundImageClassName: a, shape: s } = e,
         o = (0, u.fq)(t),

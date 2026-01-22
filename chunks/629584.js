@@ -1,4 +1,6 @@
-n.d(t, { I: () => h });
+n.d(t, {
+    I: () => h,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -6,6 +8,7 @@ var r = n(627968),
     o = n(990078),
     l = n(397927),
     c = n(802514);
+
 function u(e) {
     switch (e) {
         case "tab":
@@ -15,6 +18,7 @@ function u(e) {
             return c.V_;
     }
 }
+
 function d(e) {
     switch (e) {
         case "tab":
@@ -24,6 +28,7 @@ function d(e) {
             return c.RW;
     }
 }
+
 function f(e) {
     switch (e) {
         case "tab":
@@ -33,9 +38,11 @@ function f(e) {
             return c.EN;
     }
 }
+
 function p(e) {
     return "pill" === e ? c.up : void 0;
 }
+
 function _(e) {
     let {
             option: t,
@@ -61,7 +68,14 @@ function _(e) {
                     className: s()(c.JU, p(u)),
                     variant: "text-sm/medium",
                     color: "none",
-                    children: [null != t.icon ? (0, r.jsx)(t.icon, { className: c.Kk }) : null, t.name],
+                    children: [
+                        null != t.icon
+                            ? (0, r.jsx)(t.icon, {
+                                  className: c.Kk,
+                              })
+                            : null,
+                        t.name,
+                    ],
                 }),
             });
     return null == m
@@ -72,6 +86,7 @@ function _(e) {
               children: b(),
           });
 }
+
 function h(e) {
     let { options: t, value: n, onChange: a, look: o = "tab", className: l, optionClassName: d, disabled: f = !1 } = e,
         p = i.useCallback(
@@ -96,7 +111,9 @@ function h(e) {
             [n, o, a, d, f],
         );
     return (0, r.jsx)("div", {
-        className: s()(u(o), l, { [c.ii]: f }),
+        className: s()(u(o), l, {
+            [c.ii]: f,
+        }),
         children: t.map(p),
     });
 }

@@ -157,7 +157,14 @@ let ea = [et.lp.ACTIVITY],
             e$ = es.type === et.lp.STREAM && eH === eV,
             e0 = (0, s.bG)([w.A], () => (es.type === et.lp.USER && null != eH ? w.A.getEffectForUserId(eH) : null)),
             e1 = (0, s.bG)([V.A], () => V.A.getVoicePlatformForChannel(eA.id, null != eH ? eH : ee.dJq)),
-            { showGameIcon: e2 } = v.Ay.useExperiment({ location: "voice_users" }, { autoTrackExposure: !1 }),
+            { showGameIcon: e2 } = v.Ay.useExperiment(
+                {
+                    location: "voice_users",
+                },
+                {
+                    autoTrackExposure: !1,
+                },
+            ),
             e9 = (0, s.bG)(
                 [k.A],
                 () =>
@@ -235,7 +242,9 @@ let ea = [et.lp.ACTIVITY],
                         idle: eR,
                         premiumIndicator: !1,
                     })),
-                    (ti = el.intl.formatToPlainString(el.t.gHPz3Q, { streamerName: es.user.username }));
+                    (ti = el.intl.formatToPlainString(el.t.gHPz3Q, {
+                        streamerName: es.user.username,
+                    }));
                 break;
             case et.lp.USER:
                 (tr = (0, r.jsx)(Q.A, {
@@ -257,7 +266,9 @@ let ea = [et.lp.ACTIVITY],
                         participant: es,
                         channelId: eA.id,
                     })),
-                    (ti = el.intl.formatToPlainString(el.t["iC/x/Q"], { username: es.user.username }));
+                    (ti = el.intl.formatToPlainString(el.t["iC/x/Q"], {
+                        username: es.user.username,
+                    }));
                 break;
             case et.lp.ACTIVITY:
                 (tr = (0, r.jsx)(q.Ay, {
@@ -267,7 +278,9 @@ let ea = [et.lp.ACTIVITY],
                     channel: eA,
                     width: ey,
                 })),
-                    (ti = el.intl.formatToPlainString(el.t.YCvOsO, { activityName: null == eB ? void 0 : eB.name }));
+                    (ti = el.intl.formatToPlainString(el.t.YCvOsO, {
+                        activityName: null == eB ? void 0 : eB.name,
+                    }));
                 break;
             case et.lp.HIDDEN_STREAM:
                 tr = (0, r.jsx)(J.A, {
@@ -294,7 +307,13 @@ let ea = [et.lp.ACTIVITY],
         return (0, r.jsx)(f.A, {
             section: ee.JJy.VOICE_CHANNEL_TILE,
             children: (0, r.jsx)("div", {
-                className: a()(ei.iE, { [ei.DF]: eX }, eb),
+                className: a()(
+                    ei.iE,
+                    {
+                        [ei.DF]: eX,
+                    },
+                    eb,
+                ),
                 style: em,
                 onMouseEnter: () => {
                     eU(!0);
@@ -325,7 +344,9 @@ let ea = [et.lp.ACTIVITY],
                                 onClick: te,
                                 onMouseDown: ep,
                                 onKeyDown: eh,
-                                focusProps: { offset: 1 },
+                                focusProps: {
+                                    offset: 1,
+                                },
                                 children: [
                                     null != e0 && null != eH
                                         ? (0, r.jsx)(R.A, {
@@ -484,11 +505,14 @@ let ea = [et.lp.ACTIVITY],
             }),
         });
     });
+
 function eo(e) {
     let { participantType: t, platform: n, className: l } = e;
     if (t === et.lp.STREAM)
         return n === et.J7.XBOX
-            ? (0, r.jsx)(B.A, { className: l })
+            ? (0, r.jsx)(B.A, {
+                  className: l,
+              })
             : (0, r.jsx)(u.kN9, {
                   size: "md",
                   color: "currentColor",
@@ -502,19 +526,26 @@ function eo(e) {
                 className: l,
             });
         case et.J7.XBOX:
-            return (0, r.jsx)(B.A, { className: l });
+            return (0, r.jsx)(B.A, {
+                className: l,
+            });
         case et.J7.PLAYSTATION:
-            return (0, r.jsx)(H.A, { className: l });
+            return (0, r.jsx)(H.A, {
+                className: l,
+            });
         default:
             return null;
     }
 }
+
 function ec(e) {
     let { icon: t, tooltipText: n, hideWhenInactive: l, onClick: i } = e;
     return (0, r.jsx)(c.m, {
         text: n,
         children: (0, r.jsx)("div", {
-            className: a()(ei.V7, { [ei.kl]: l }),
+            className: a()(ei.V7, {
+                [ei.kl]: l,
+            }),
             children: (0, r.jsx)(u.K0, {
                 size: "sm",
                 variant: "overlay-secondary",
@@ -527,6 +558,7 @@ function ec(e) {
         }),
     });
 }
+
 function eu(e) {
     let { channelId: t, participantId: n, hideWhenInactive: i } = e,
         a = l.useMemo(() => (0, y.A)(t, n), [t, n]),
@@ -575,7 +607,9 @@ let ed = l.memo((e) => {
             userId: y,
             guildId: v.getGuildId(),
         }),
-        k = (0, j.a)({ displayNameStyles: L }),
+        k = (0, j.a)({
+            displayNameStyles: L,
+        }),
         U = (0, Z.Y)(i),
         V = (0, Z.V)(i),
         [H, B] = l.useState(!1);
@@ -646,7 +680,9 @@ let ed = l.memo((e) => {
             }),
             children: [
                 (0, r.jsx)("div", {
-                    className: a()(ei.Ik, { [ei.EX]: i < 195 }),
+                    className: a()(ei.Ik, {
+                        [ei.EX]: i < 195,
+                    }),
                     children:
                         M || f === ee.bb8.AUTO_PROBING
                             ? t
@@ -678,7 +714,9 @@ let ed = l.memo((e) => {
                 }),
                 !U &&
                     (0, r.jsxs)("div", {
-                        className: a()(ei.Qp, { [ei.EX]: i < 195 }),
+                        className: a()(ei.Qp, {
+                            [ei.EX]: i < 195,
+                        }),
                         children: [
                             (0, r.jsxs)(u.Text, {
                                 className: ei.ac,
@@ -688,7 +726,9 @@ let ed = l.memo((e) => {
                                     null != W &&
                                         A === et.lp.USER &&
                                         (0, r.jsx)(W, {
-                                            className: a()(ei.fh, { [ei.oE]: V }),
+                                            className: a()(ei.fh, {
+                                                [ei.oE]: V,
+                                            }),
                                             size: "xs",
                                             color: "currentColor",
                                         }),
@@ -716,7 +756,9 @@ let ed = l.memo((e) => {
                                         : (0, r.jsx)(eo, {
                                               participantType: A,
                                               platform: x,
-                                              className: a()(ei.fh, { [ei.oE]: V }),
+                                              className: a()(ei.fh, {
+                                                  [ei.oE]: V,
+                                              }),
                                           }),
                                     null == n || "" === n || t
                                         ? null

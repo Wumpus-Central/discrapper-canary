@@ -11,7 +11,14 @@ e.exports = function (e) {
                         subLanguage: "python",
                     },
                 },
-                variants: [{ begin: /^>>>(?=[ ]|$)/ }, { begin: /^\.\.\.(?=[ ]|$)/ }],
+                variants: [
+                    {
+                        begin: /^>>>(?=[ ]|$)/,
+                    },
+                    {
+                        begin: /^\.\.\.(?=[ ]|$)/,
+                    },
+                ],
             },
         ],
     };

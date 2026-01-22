@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968);
 n(64700);
 var l = n(158954),
@@ -7,6 +9,7 @@ var l = n(158954),
     s = n(272355),
     o = n(652215),
     c = n(985018);
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,7 +37,9 @@ function u(e) {
 }
 let d = "ActivityInviteManager",
     f = () => {
-        a.h.dispatch({ type: "ACTIVITY_INVITE_MODAL_CLOSE" });
+        a.h.dispatch({
+            type: "ACTIVITY_INVITE_MODAL_CLOSE",
+        });
     };
 class p extends s.A {
     _initialize() {
@@ -56,7 +61,9 @@ class p extends s.A {
                           l.Modal,
                           ((n = u(
                               {
-                                  title: c.intl.formatToPlainString(c.t["2tN7ih"], { name: t.name }),
+                                  title: c.intl.formatToPlainString(c.t["2tN7ih"], {
+                                      name: t.name,
+                                  }),
                                   actions: [
                                       {
                                           variant: "primary",

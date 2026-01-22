@@ -8,7 +8,12 @@ e.exports = function (e) {
         o = "[(),;\\[\\]`|{}]",
         l = `(${a}|(?!(${o}|[_:"']))${s})`,
         c = {
-            variants: [e.COMMENT("--+", "$"), e.COMMENT(/\{-/, /-\}/, { contains: ["self"] })],
+            variants: [
+                e.COMMENT("--+", "$"),
+                e.COMMENT(/\{-/, /-\}/, {
+                    contains: ["self"],
+                }),
+            ],
         },
         u = {
             className: "meta",
@@ -36,7 +41,9 @@ e.exports = function (e) {
                     className: "type",
                     begin: "\\b[A-Z][\\w]*(\\((\\.\\.|,|\\w+)\\))?",
                 },
-                e.inherit(e.TITLE_MODE, { begin: "[_a-z][\\w']*" }),
+                e.inherit(e.TITLE_MODE, {
+                    begin: "[_a-z][\\w']*",
+                }),
                 c,
             ],
         },
@@ -49,10 +56,18 @@ e.exports = function (e) {
             className: "number",
             relevance: 0,
             variants: [
-                { match: `\\b(${t})(\\.(${t}))?([eE][+-]?(${t}))?\\b` },
-                { match: `\\b0[xX]_*(${n})(\\.(${n}))?([pP][+-]?(${t}))?\\b` },
-                { match: `\\b0[oO](${i})\\b` },
-                { match: `\\b0[bB](${r})\\b` },
+                {
+                    match: `\\b(${t})(\\.(${t}))?([eE][+-]?(${t}))?\\b`,
+                },
+                {
+                    match: `\\b0[xX]_*(${n})(\\.(${n}))?([pP][+-]?(${t}))?\\b`,
+                },
+                {
+                    match: `\\b0[oO](${i})\\b`,
+                },
+                {
+                    match: `\\b0[bB](${r})\\b`,
+                },
             ],
         };
     return {
@@ -127,10 +142,16 @@ e.exports = function (e) {
             e.QUOTE_STRING_MODE,
             h,
             f,
-            e.inherit(e.TITLE_MODE, { begin: "^[_a-z][\\w']*" }),
-            { begin: `(?!-)${l}--+|--+(?!-)${l}` },
+            e.inherit(e.TITLE_MODE, {
+                begin: "^[_a-z][\\w']*",
+            }),
+            {
+                begin: `(?!-)${l}--+|--+(?!-)${l}`,
+            },
             c,
-            { begin: "->|<-" },
+            {
+                begin: "->|<-",
+            },
         ],
     };
 };

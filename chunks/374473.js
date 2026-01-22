@@ -1,4 +1,7 @@
-n.d(t, { q: () => D }), n(896048);
+n.d(t, {
+    q: () => D,
+}),
+    n(896048);
 var r = n(735438),
     i = n.n(r),
     a = n(166929),
@@ -20,11 +23,13 @@ var r = n(735438),
     O = n(487329),
     A = n(652215),
     v = n(731854);
+
 function S(e) {
     var t;
     let n = c.A.getConnectionStats(e);
     return null == n ? null : null != (t = n.stats.rtp.outbound.find((e) => "video" === e.type)) ? t : null;
 }
+
 function I(e, t) {
     var n;
     if (null == t) return null;
@@ -33,21 +38,25 @@ function I(e, t) {
     let i = r.stats.rtp.inbound[t];
     return null == i ? null : null != (n = i.find((e) => "video" === e.type)) ? n : null;
 }
+
 function T(e, t, n) {
     return e ? S(t) : I(t, n);
 }
+
 function C(e) {
     var t, n;
     return null != (t = null == (n = c.A.getConnectionStats(e)) ? void 0 : n.stats.transport.outboundBitrateEstimate)
         ? t
         : null;
 }
+
 function N(e) {
     var t, n;
     return null != (t = null == (n = c.A.getConnectionStats(e)) ? void 0 : n.stats.transport.inboundBitrateEstimate)
         ? t
         : null;
 }
+
 function R(e) {
     let t = c.A.getConnectionStats(e),
         n = c.A.getLastConnectionStats(e);
@@ -74,11 +83,13 @@ function R(e) {
     for (let [e, t] of Object.entries(r)) t > l && ((l = t), (u = e));
     return l > 0 ? u : null;
 }
+
 function w(e) {
     var t, n;
     let r = h.A.getVoiceChannelId();
     return null != (t = null != (n = "channelId" in e ? e.channelId : void 0) ? n : r) ? t : null;
 }
+
 function P(e, t, n) {
     var r, i, a, s;
     return e
@@ -89,6 +100,7 @@ function P(e, t, n) {
           ? a
           : null;
 }
+
 function D(e, t) {
     var n, r, c, h, D;
     let x,

@@ -1,4 +1,6 @@
-n.d(t, { g: () => o });
+n.d(t, {
+    g: () => o,
+});
 var r = n(64700),
     i = n(688807),
     a = n(73289);
@@ -31,5 +33,7 @@ let s = (e) => {
                   monitor: t.monitor,
                   ref: e,
               }
-            : { display: !1 };
+            : {
+                  display: !1,
+              };
     };

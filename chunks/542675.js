@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(15285),
     i = n(734057),
     a = n(383501),
@@ -7,9 +9,11 @@ var r = n(15285),
     l = n(980504),
     c = n(652215),
     u = n(788868);
+
 function d(e, t) {
     return e.guildId === l.mV ? "default" : t ? "custom-external" : "custom";
 }
+
 function f(e, t, n, f, p) {
     var _;
     let h = i.A.getChannel(s.A.getVoiceChannelId()),

@@ -1,4 +1,6 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var r = n(627968),
     l = n(64700),
     i = n(607399),
@@ -11,6 +13,7 @@ var r = n(627968),
     f = n(652215),
     p = n(985018),
     h = n(70461);
+
 function b(e) {
     let t,
         { channelId: b } = e;
@@ -26,7 +29,9 @@ function b(e) {
                   children: p.intl.string(p.t.xVTAdb),
               })
             : null != b
-              ? (0, r.jsx)(s.y$y, { type: s.y$y.Type.SPINNING_CIRCLE })
+              ? (0, r.jsx)(s.y$y, {
+                    type: s.y$y.Type.SPINNING_CIRCLE,
+                })
               : (0, r.jsx)(s.SGT, {
                     note: p.intl.string(p.t["LTr+x9"]),
                     children: p.intl.string(p.t.ai6Lbr),
@@ -34,7 +39,10 @@ function b(e) {
         (0, r.jsxs)("div", {
             className: h.j,
             children: [
-                i.Fr && (0, r.jsx)(o.Ay, { children: null }),
+                i.Fr &&
+                    (0, r.jsx)(o.Ay, {
+                        children: null,
+                    }),
                 (0, r.jsxs)(s.ppr, {
                     theme: m,
                     children: [

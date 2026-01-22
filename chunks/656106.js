@@ -15,22 +15,36 @@ var l = n(976860),
     r = n(310419),
     i = n(652215);
 let s = () => {
-        let e = { previousView: (0, r.R4)() };
-        (0, l.pX)(i.BVt.GLOBAL_DISCOVERY_APPS, { state: e });
+        let e = {
+            previousView: (0, r.R4)(),
+        };
+        (0, l.pX)(i.BVt.GLOBAL_DISCOVERY_APPS, {
+            state: e,
+        });
     },
     c = (e) => {
         let { categoryId: t } = e,
-            n = { previousView: (0, r.R4)() };
-        (0, l.pX)(i.BVt.GLOBAL_DISCOVERY_APPS_CATEGORY(t), { state: n });
+            n = {
+                previousView: (0, r.R4)(),
+            };
+        (0, l.pX)(i.BVt.GLOBAL_DISCOVERY_APPS_CATEGORY(t), {
+            state: n,
+        });
     },
     o = (e) => {
         let { applicationId: t } = e,
-            n = { previousView: (0, r.R4)() };
-        (0, l.pX)(i.BVt.GLOBAL_DISCOVERY_APPS_PROFILE(t), { state: n });
+            n = {
+                previousView: (0, r.R4)(),
+            };
+        (0, l.pX)(i.BVt.GLOBAL_DISCOVERY_APPS_PROFILE(t), {
+            state: n,
+        });
     },
     d = function () {
         let { query: e, categoryId: t, page: n } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-            s = { previousView: (0, r.R4)() },
+            s = {
+                previousView: (0, r.R4)(),
+            },
             c = new URLSearchParams();
         null != e && "" !== e && c.set("q", e),
             null != t && t !== a.lj && c.set("category_id", t.toString()),

@@ -1,10 +1,13 @@
-a.d(t, { default: () => l });
+a.d(t, {
+    default: () => l,
+});
 var i = a(627968);
 a(64700);
 var d = a(397927),
     e = a(442433),
     c = a(444977),
     r = a(985018);
+
 function l(n) {
     let { libraryApplication: t, onPlay: a, onSelect: l } = n,
         u = (0, c.A)(t, a);

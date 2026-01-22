@@ -1,4 +1,7 @@
-n.d(t, { A: () => R }), n(896048);
+n.d(t, {
+    A: () => R,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -26,6 +29,7 @@ let I = {
     cozy: 74,
     default: 64,
 };
+
 function T(e) {
     let { action: t } = e,
         n = (0, l.bG)([_.A], () => _.A.getChannel(t.channelId)),
@@ -34,14 +38,19 @@ function T(e) {
         ? (0, r.jsx)(c.Text, {
               variant: "text-xxs/normal",
               color: "text-default",
-              children: v.intl.format(v.t.MkzlDL, { channelName: v.intl.string(v.t.J90oLW) }),
+              children: v.intl.format(v.t.MkzlDL, {
+                  channelName: v.intl.string(v.t.J90oLW),
+              }),
           })
         : (0, r.jsx)(c.Text, {
               variant: "text-xxs/normal",
               color: "text-default",
-              children: v.intl.format(v.t.MkzlDL, { channelName: i }),
+              children: v.intl.format(v.t.MkzlDL, {
+                  channelName: i,
+              }),
           });
 }
+
 function C(e) {
     var t;
     let { channelId: n, emojiId: i, emojiName: a } = e,
@@ -52,9 +61,12 @@ function C(e) {
         emojiId: i,
         emojiName: a,
         size: O.g.MEDIUM,
-        defaultComponent: (0, r.jsx)(o, { className: S.p }),
+        defaultComponent: (0, r.jsx)(o, {
+            className: S.p,
+        }),
     });
 }
+
 function N(e) {
     var t, n, a, d;
     let { guildId: f, channel: _, className: h } = e,
@@ -109,7 +121,9 @@ function N(e) {
                                 }),
                             },
                             children: (0, r.jsxs)(c.DUT, {
-                                className: s()(S.vK, S.vk, { [S.pJ]: _.isForumChannel() }),
+                                className: s()(S.vK, S.vk, {
+                                    [S.pJ]: _.isForumChannel(),
+                                }),
                                 onClick: j,
                                 children: [
                                     (0, r.jsx)(C, {
@@ -123,9 +137,13 @@ function N(e) {
                                             (0, r.jsx)(c.Text, {
                                                 variant: "text-md/semibold",
                                                 color: "text-strong",
-                                                children: v.intl.format(v.t["/beONw"], { step: O.title }),
+                                                children: v.intl.format(v.t["/beONw"], {
+                                                    step: O.title,
+                                                }),
                                             }),
-                                            (0, r.jsx)(T, { action: O }),
+                                            (0, r.jsx)(T, {
+                                                action: O,
+                                            }),
                                         ],
                                     }),
                                     (0, r.jsx)("div", {
@@ -140,7 +158,9 @@ function N(e) {
                             }),
                         })
                       : (0, r.jsxs)(o.A.div, {
-                            className: s()(S.vK, { [S.pJ]: _.isForumChannel() }),
+                            className: s()(S.vK, {
+                                [S.pJ]: _.isForumChannel(),
+                            }),
                             style: {
                                 marginBottom: x.interpolate({
                                     inputRange: [0, 1],
@@ -182,6 +202,7 @@ function N(e) {
                         }),
           });
 }
+
 function R(e) {
     let { guildId: t, channel: n, className: i } = e,
         a = (0, y.d)(t),

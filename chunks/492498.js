@@ -1,4 +1,6 @@
-n.d(t, { A: () => T });
+n.d(t, {
+    A: () => T,
+});
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -30,6 +32,7 @@ let I = {
         right: -12,
     },
 };
+
 function N(e, t, n) {
     let r = t ? j.Ay.guildFilter : null,
         l = t ? j.Ay.roleFilter : null,
@@ -44,6 +47,7 @@ function N(e, t, n) {
             everyone: i,
         });
 }
+
 function T(e) {
     let { onJump: t } = e,
         n = (0, s.bG)([A.A, O.A], () => A.A.getChannel(O.A.getChannelId())),
@@ -62,7 +66,9 @@ function T(e) {
             roleFilter: j.Ay.roleFilter,
             everyoneFilter: j.Ay.everyoneFilter,
         })),
-        v = (0, g.Sc)({ location: "RecentMentions" }),
+        v = (0, g.Sc)({
+            location: "RecentMentions",
+        }),
         x = (0, d.A)(h),
         E = (0, d.A)(m),
         I = (0, d.A)(y);
@@ -82,7 +88,9 @@ function T(e) {
         );
     let T = l.useCallback(() => null, []);
     return (0, r.jsx)(b.Ay, {
-        className: a()(S.sH, { [S.qC]: v }),
+        className: a()(S.sH, {
+            [S.qC]: v,
+        }),
         scrollerClassName: S.XG,
         onFetch: () => null,
         onJump: t,
@@ -105,6 +113,7 @@ function T(e) {
         listName: "recents",
     });
 }
+
 function P(e, t) {
     return [
         (0, r.jsx)(
@@ -118,6 +127,7 @@ function P(e, t) {
         ),
     ];
 }
+
 function w(e) {
     let { message: t, gotoMessage: n, dismissible: l } = e;
     if (null == t) return null;
@@ -165,6 +175,7 @@ function w(e) {
         ],
     });
 }
+
 function R() {
     return (0, r.jsx)(E.A, {
         Icon: o.XxR,

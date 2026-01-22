@@ -1,6 +1,10 @@
-n.d(t, { A: () => a }), n(896048);
+n.d(t, {
+    A: () => a,
+}),
+    n(896048);
 var r = n(64700),
     i = n(267102);
+
 function a(e) {
     let { renderWindow: t } = (0, r.useContext)(i.Ay),
         [n, a] = (0, r.useState)(() => {

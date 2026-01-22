@@ -1,4 +1,8 @@
-r.d(t, { A: () => O }), r(896048), r(228524);
+r.d(t, {
+    A: () => O,
+}),
+    r(896048),
+    r(228524);
 var n = r(627968),
     o = r(64700),
     s = r(503698),
@@ -14,6 +18,7 @@ var n = r(627968),
     f = r(867060),
     j = r(985018),
     m = r(235545);
+
 function O(e) {
     let { canUseBoosts: t, guildId: r, powerup: s } = e,
         [O, y] = o.useState(!1),
@@ -28,7 +33,9 @@ function O(e) {
         N = (0, n.jsxs)(n.Fragment, {
             children: [
                 (0, n.jsx)("div", {
-                    className: c()(m._W, { [m.vu]: h }),
+                    className: c()(m._W, {
+                        [m.vu]: h,
+                    }),
                     children: (0, n.jsx)(p.l, {
                         powerup: s,
                         isHovering: !_ && O,
@@ -50,11 +57,17 @@ function O(e) {
                                 (0, n.jsxs)("div", {
                                     children: [
                                         (null == g ? void 0 : g.type) === "expiring" &&
-                                            (0, n.jsx)(u.P5, { dateString: g.expiringAt }),
+                                            (0, n.jsx)(u.P5, {
+                                                dateString: g.expiringAt,
+                                            }),
                                         (null == g ? void 0 : g.type) === "removing" &&
-                                            (0, n.jsx)(u.Yq, { removingAt: g.removingAt }),
+                                            (0, n.jsx)(u.Yq, {
+                                                removingAt: g.removingAt,
+                                            }),
                                         (null == g ? void 0 : g.type) === "active" &&
-                                            (0, n.jsx)(u.TG, { text: g.statusText }),
+                                            (0, n.jsx)(u.TG, {
+                                                text: g.statusText,
+                                            }),
                                         null == g &&
                                             (0, n.jsxs)("div", {
                                                 className: m.II,
@@ -91,18 +104,27 @@ function O(e) {
         });
     return h
         ? (0, n.jsx)("div", {
-              className: c()(m.nK, m.RO, { [m.r9]: _ }),
+              className: c()(m.nK, m.RO, {
+                  [m.r9]: _,
+              }),
               onMouseEnter: () => y(!0),
               onMouseLeave: () => y(!1),
               children: N,
           })
         : (0, n.jsx)(i.DUT, {
-              className: c()(m.nK, { [m.r9]: _ }),
+              className: c()(m.nK, {
+                  [m.r9]: _,
+              }),
               onMouseEnter: () => y(!0),
               onMouseLeave: () => y(!1),
               "aria-disabled": _,
               onClick: (e) => {
-                  e.stopPropagation(), _ || null == P || P({ shouldCloseAllModals: !1 });
+                  e.stopPropagation(),
+                      _ ||
+                          null == P ||
+                          P({
+                              shouldCloseAllModals: !1,
+                          });
               },
               children: N,
           });

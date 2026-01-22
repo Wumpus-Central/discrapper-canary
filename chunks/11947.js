@@ -29,6 +29,7 @@ let r = {
         五: 5,
         六: 6,
     };
+
 function a(e) {
     let t = 0;
     for (let n = 0; n < e.length; n++) {
@@ -37,6 +38,7 @@ function a(e) {
     }
     return t;
 }
+
 function s(e) {
     let t = "";
     for (let n = 0; n < e.length; n++) t += r[e[n]];

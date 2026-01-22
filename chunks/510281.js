@@ -1,7 +1,10 @@
-n.d(t, { $: () => s });
+n.d(t, {
+    $: () => s,
+});
 var r = n(13163),
     i = n(3388),
     a = n(64700);
+
 function s(e, t) {
     let n = null == t ? void 0 : t.isDisabled,
         [s, o] = (0, a.useState)(!1);
@@ -9,7 +12,12 @@ function s(e, t) {
         (0, i.N)(() => {
             if ((null == e ? void 0 : e.current) && !n) {
                 let t = () => {
-                    e.current && o(!!(0, r.N$)(e.current, { tabbable: !0 }).nextNode());
+                    e.current &&
+                        o(
+                            !!(0, r.N$)(e.current, {
+                                tabbable: !0,
+                            }).nextNode(),
+                        );
                 };
                 t();
                 let n = new MutationObserver(t);

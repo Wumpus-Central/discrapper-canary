@@ -1,5 +1,10 @@
-n.d(t, { o: () => l }), n(896048), n(446912);
+n.d(t, {
+    o: () => l,
+}),
+    n(896048),
+    n(446912);
 var r = n(64700);
+
 function i(e, t, n) {
     return (
         t in e
@@ -13,6 +18,7 @@ function i(e, t, n) {
         e
     );
 }
+
 function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -29,6 +35,7 @@ function a(e) {
     }
     return e;
 }
+
 function s(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -41,6 +48,7 @@ function s(e, t) {
     }
     return n;
 }
+
 function o(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -53,7 +61,12 @@ function o(e, t) {
     );
 }
 let l = function (e) {
-    let { scrollOffset: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { scrollOffset: 60 },
+    let { scrollOffset: t } =
+            arguments.length > 1 && void 0 !== arguments[1]
+                ? arguments[1]
+                : {
+                      scrollOffset: 60,
+                  },
         n = (0, r.useCallback)(
             (e) => {
                 let n = u.current[e];
@@ -77,7 +90,11 @@ let l = function (e) {
         (0, r.useEffect)(() => {
             let e = new IntersectionObserver((e) => {
                 e.forEach((e) => {
-                    s((t) => o(a({}, t), { [e.target.id]: e.isIntersecting }));
+                    s((t) =>
+                        o(a({}, t), {
+                            [e.target.id]: e.isIntersecting,
+                        }),
+                    );
                 });
             });
             return (

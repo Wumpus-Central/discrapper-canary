@@ -1,4 +1,8 @@
-n.d(t, { A: () => w }), n(747238), n(896048);
+n.d(t, {
+    A: () => w,
+}),
+    n(747238),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -20,6 +24,7 @@ var r = n(627968),
     O = n(650583),
     A = n(985018),
     v = n(418981);
+
 function S(e, t, n) {
     return (
         t in e
@@ -33,6 +38,7 @@ function S(e, t, n) {
         e
     );
 }
+
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -49,6 +55,7 @@ function I(e) {
     }
     return e;
 }
+
 function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -61,6 +68,7 @@ function T(e, t) {
     }
     return n;
 }
+
 function C(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -91,8 +99,13 @@ class R extends i.PureComponent {
     search(e, t, n) {
         u.$P(e, t, n),
             "" === e
-                ? this.setState({ resultType: null })
-                : this.state.resultType !== b.dD.SEARCH && this.setState({ resultType: b.dD.SEARCH });
+                ? this.setState({
+                      resultType: null,
+                  })
+                : this.state.resultType !== b.dD.SEARCH &&
+                  this.setState({
+                      resultType: b.dD.SEARCH,
+                  });
     }
     renderHeaderContent() {
         let { query: e, headingColor: t } = this.props,
@@ -205,7 +218,9 @@ class R extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            S(this, "state", { resultType: null }),
+            S(this, "state", {
+                resultType: null,
+            }),
             S(this, "backToFrontPage", (e) => {
                 let { resultType: t } = this.state;
                 e.key !== O.dh.ESCAPE ||
@@ -219,7 +234,12 @@ class R extends i.PureComponent {
             }),
             S(this, "handleClearQuery", () => {
                 let { current: e } = this.props.searchBarRef;
-                (0, f.Ri)(""), u.Se(), this.setState({ resultType: null }), null != e && e.focus();
+                (0, f.Ri)(""),
+                    u.Se(),
+                    this.setState({
+                        resultType: null,
+                    }),
+                    null != e && e.focus();
             }),
             S(this, "handleSelectGIF", (e) => {
                 let { onSelectGIF: t } = this.props;
@@ -234,7 +254,9 @@ class R extends i.PureComponent {
                     case b.dD.TRENDING_GIFS:
                         u.Z4();
                 }
-                this.setState({ resultType: e });
+                this.setState({
+                    resultType: e,
+                });
             });
     }
 }

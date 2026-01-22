@@ -1,4 +1,7 @@
-n.d(t, { A: () => O }), n(896048);
+n.d(t, {
+    A: () => O,
+}),
+    n(896048);
 var i = n(627968),
     r = n(64700),
     l = n(843472),
@@ -15,10 +18,13 @@ var i = n(627968),
     g = n(652215),
     y = n(381941),
     A = n(433788);
+
 function O(e) {
     let { id: t, replyToMessageId: n, channel: O, onSend: E } = e,
         v = (0, f.A)(),
-        { placeholder: b, accessibilityLabel: S } = (0, c.A)({ channel: O }),
+        { placeholder: b, accessibilityLabel: S } = (0, c.A)({
+            channel: O,
+        }),
         [x, j] = r.useState(() => (0, d.N3)()),
         { textValue: I, richValue: N } = x,
         [w, T] = r.useState(!1),
@@ -52,7 +58,9 @@ function O(e) {
         R = r.useCallback(
             () => (
                 I.length > v ||
-                    (l.A.sendMessage(O.id, h.Ay.parse(O, I), !1, { location: y.Hx.OVERLAY }),
+                    (l.A.sendMessage(O.id, h.Ay.parse(O, I), !1, {
+                        location: y.Hx.OVERLAY,
+                    }),
                     a.A.setInputLocked(!0, m.A.getTargetPID()),
                     a.A.updateNotificationStatus(t, g.yFH.DISMISSED),
                     null == E || E(I)),

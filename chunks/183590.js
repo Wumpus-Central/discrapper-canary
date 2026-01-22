@@ -1,5 +1,8 @@
-n.d(t, { p: () => i });
+n.d(t, {
+    p: () => i,
+});
 var r = n(64700);
+
 function i(e) {
     let { children: t, items: n, idScope: i, addIdAndValue: a, dependencies: s = [] } = e,
         o = (0, r.useMemo)(() => new WeakMap(), s);
@@ -21,7 +24,9 @@ function i(e) {
                                       id: l,
                                       value: c,
                                   }
-                                : { key: l },
+                                : {
+                                      key: l,
+                                  },
                         )),
                         o.set(c, n);
                 }

@@ -1,6 +1,11 @@
 e.exports = function (e) {
     let t = {
-            variants: [e.COMMENT("--", "$"), e.COMMENT(/\{-/, /-\}/, { contains: ["self"] })],
+            variants: [
+                e.COMMENT("--", "$"),
+                e.COMMENT(/\{-/, /-\}/, {
+                    contains: ["self"],
+                }),
+            ],
         },
         n = {
             className: "type",
@@ -91,9 +96,13 @@ e.exports = function (e) {
             e.QUOTE_STRING_MODE,
             e.C_NUMBER_MODE,
             n,
-            e.inherit(e.TITLE_MODE, { begin: "^[_a-z][\\w']*" }),
+            e.inherit(e.TITLE_MODE, {
+                begin: "^[_a-z][\\w']*",
+            }),
             t,
-            { begin: "->|<-" },
+            {
+                begin: "->|<-",
+            },
         ],
         illegal: /;/,
     };

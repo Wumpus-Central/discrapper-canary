@@ -1,7 +1,10 @@
-n.d(t, { D: () => s });
+n.d(t, {
+    D: () => s,
+});
 var r = n(110259),
     i = n(861638),
     a = n(183636);
+
 function s() {
     let e = (0, i.Vc)(),
         t = (0, r.getSuperProperties)(),

@@ -1,17 +1,21 @@
-r.d(t, { A: () => O }), r(896048);
+r.d(t, {
+    A: () => O,
+}),
+    r(896048);
 var n = r(627968),
     l = r(64700),
     o = r(503698),
     a = r.n(o),
     c = r(284009),
     i = r.n(c),
-    s = r(432022),
+    s = r(108531),
     u = r(837381),
     f = r(397927),
     b = r(964486),
     y = r(894858),
     d = r(890690),
     p = r(637577);
+
 function g(e) {
     let { category: t, onClick: r, active: l } = e,
         { useTitle: o, useSubnavLabel: c, key: s } = t,
@@ -53,11 +57,16 @@ function g(e) {
                     })(
                         {
                             onClick: r,
-                            className: a()(p.AS, { [p.vu]: l }),
+                            className: a()(p.AS, {
+                                [p.vu]: l,
+                            }),
                         },
                         e,
                     )),
-                    (o = o = { children: d }),
+                    (o = o =
+                        {
+                            children: d,
+                        }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(o))
                         : (function (e, t) {
@@ -77,11 +86,15 @@ function g(e) {
         })
     );
 }
+
 function O(e) {
     let { categories: t } = e,
         r = y.A.useField("currentCategoryKey");
     (0, b.Ay)(() => {
-        t.some((e) => e.key === r) || y.A.setState({ currentCategoryKey: t[0].key });
+        t.some((e) => e.key === r) ||
+            y.A.setState({
+                currentCategoryKey: t[0].key,
+            });
     });
     let o = l.useMemo(
             () =>

@@ -42,6 +42,7 @@ var u = n(976860),
     A = n(18572);
 n(758836);
 var v = n(652215);
+
 function S(e, t, n) {
     return (
         t in e
@@ -55,6 +56,7 @@ function S(e, t, n) {
         e
     );
 }
+
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -71,6 +73,7 @@ function I(e) {
     }
     return e;
 }
+
 function T(e, t) {
     if (null == e) return {};
     var n,
@@ -87,6 +90,7 @@ function T(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function C(e, t) {
     if (null == e) return {};
     var n,
@@ -107,7 +111,14 @@ let N = (e) => {
         }
     },
     R = (e) => {
-        o.h.dispatch(I({ type: "COLLECTIBLES_SHOP_OPEN" }, e));
+        o.h.dispatch(
+            I(
+                {
+                    type: "COLLECTIBLES_SHOP_OPEN",
+                },
+                e,
+            ),
+        );
     },
     w = (e) => {
         o.h.dispatch({
@@ -173,7 +184,9 @@ let N = (e) => {
     },
     L = async (e) => {
         if (_.A.isFetching) return;
-        o.h.dispatch({ type: "COLLECTIBLES_PURCHASES_FETCH" });
+        o.h.dispatch({
+            type: "COLLECTIBLES_PURCHASES_FETCH",
+        });
         let t = c.Ay.get("shop_show_debug_overlay");
         t && (0, p.l)("fetchCollectiblesPurchases started, options: ".concat(JSON.stringify(e, null, 2)));
         try {
@@ -182,7 +195,9 @@ let N = (e) => {
                 rejectWithError: !0,
             };
             (null == e ? void 0 : e.variantsReturnStyle) === a.g.VARIANTS_GROUP &&
-                (n.query = { variants_return_style: a.g.VARIANTS_GROUP }),
+                (n.query = {
+                    variants_return_style: a.g.VARIANTS_GROUP,
+                }),
                 t && (0, p.l)("fetchCollectiblesPurchases request: ".concat(JSON.stringify(n, null, 2)));
             let r = await s.Bo.get(n);
             t && (0, p.l)("fetchCollectiblesPurchases completed with ".concat(r.body.length, " purchases")),
@@ -209,7 +224,9 @@ let N = (e) => {
             skuId: e,
         });
         try {
-            let n = { locale: d.default.locale };
+            let n = {
+                locale: d.default.locale,
+            };
             (null == t ? void 0 : t.countryCode) !== null && (n.country_code = null == t ? void 0 : t.countryCode),
                 (null == t ? void 0 : t.paymentGateway) !== null &&
                     (n.payment_gateway = null == t ? void 0 : t.paymentGateway),
@@ -247,7 +264,9 @@ let N = (e) => {
             var t;
             let n = await s.Bo.put({
                 url: v.Rsh.COLLECTIBLES_CLAIM,
-                body: { sku_id: e },
+                body: {
+                    sku_id: e,
+                },
                 rejectWithError: !0,
             });
             o.h.dispatch({
@@ -301,8 +320,12 @@ let N = (e) => {
     },
     V = async (e) => {
         let { release: t = i.P.PROD } = e;
-        o.h.dispatch({ type: "COLLECTIBLES_MARKETING_FETCH" });
-        let n = { platform: r.b.DESKTOP };
+        o.h.dispatch({
+            type: "COLLECTIBLES_MARKETING_FETCH",
+        });
+        let n = {
+            platform: r.b.DESKTOP,
+        };
         t !== i.P.PROD && (n.release = t);
         try {
             let e = await s.Bo.get({
@@ -315,7 +338,10 @@ let N = (e) => {
                 marketings: m.M.fromServer(e.body),
             });
         } catch (e) {
-            (0, A.o)(new l.LG(e)), o.h.dispatch({ type: "COLLECTIBLES_MARKETING_FETCH_FAILURE" });
+            (0, A.o)(new l.LG(e)),
+                o.h.dispatch({
+                    type: "COLLECTIBLES_MARKETING_FETCH_FAILURE",
+                });
         }
     },
     F = async (e, t, n) => {
@@ -383,7 +409,9 @@ let N = (e) => {
             var n;
             let r = await s.Bo.put({
                 url: v.Rsh.COLLECTIBLES_CLAIM_CATEGORY_REWARD,
-                body: { category_id: e },
+                body: {
+                    category_id: e,
+                },
                 rejectWithError: !0,
             });
             o.h.dispatch({

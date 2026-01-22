@@ -1,4 +1,6 @@
-l.d(t, { A: () => j });
+l.d(t, {
+    A: () => j,
+});
 var n = l(627968),
     r = l(64700),
     i = l(311907),
@@ -10,6 +12,7 @@ var n = l(627968),
     u = l(71393),
     x = l(652215),
     m = l(947256);
+
 function j(e) {
     let { guildId: t } = e,
         l = (0, i.bG)([u.A], () => u.A.getGuild(t)),
@@ -24,7 +27,9 @@ function j(e) {
               value: j,
               children: (0, n.jsx)("div", {
                   className: m.__invalid_sidebarContainer,
-                  style: { width: x.da6 },
+                  style: {
+                      width: x.da6,
+                  },
                   children: (0, n.jsx)(c.A, {
                       userId: b.details.userId,
                       guildId: b.details.guildId,

@@ -1,4 +1,6 @@
-Object.defineProperty(t, "__esModule", { value: !0 }),
+Object.defineProperty(t, "__esModule", {
+    value: !0,
+}),
     (t.default = function (e, t) {
         var r = {},
             n = function (e) {

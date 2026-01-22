@@ -6,6 +6,7 @@ n.d(t, {
     n(896048);
 var r = n(315069),
     i = n(788868);
+
 function a(e, t, n) {
     return (
         t in e
@@ -116,6 +117,7 @@ class s extends r.A {
             (this.prices = e.prices);
     }
 }
+
 function o(e, t) {
     return {
         amount: e.amount,
@@ -124,6 +126,7 @@ function o(e, t) {
         taxInclusive: t,
     };
 }
+
 function l(e) {
     return [i.gD.NONE_MONTH, i.gD.NONE_3_MONTH, i.gD.NONE_6_MONTH, i.gD.NONE_YEAR].includes(e);
 }

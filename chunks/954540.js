@@ -1,4 +1,7 @@
-n.d(t, { Ay: () => ec }), n(896048);
+n.d(t, {
+    Ay: () => ec,
+}),
+    n(896048);
 var l = n(627968),
     r = n(64700),
     a = n(503698),
@@ -104,7 +107,9 @@ let ec = r.memo(function (e) {
                               firstMedia: c,
                               firstMediaIsEmbed: o,
                           };
-                })({ firstMessage: i }),
+                })({
+                    firstMessage: i,
+                }),
                 o = null == s ? void 0 : s.content,
                 d = null == s ? void 0 : s.firstMedia,
                 { messageCountText: u } = (0, N.k6)(l);
@@ -194,7 +199,9 @@ let ec = r.memo(function (e) {
         "data-item-id": t,
         onClick: E,
         onContextMenu: R,
-        className: i()(ei.kL, ea.kL, o, { [ei.nT]: f }),
+        className: i()(ei.kL, ea.kL, o, {
+            [ei.nT]: f,
+        }),
         children: [
             (0, l.jsx)(
                 g.DUT,
@@ -225,7 +232,9 @@ let ec = r.memo(function (e) {
                 })(
                     {
                         onClick: E,
-                        focusProps: { ringTarget: A },
+                        focusProps: {
+                            ringTarget: A,
+                        },
                         onContextMenu: R,
                         "aria-label": er.intl.formatToPlainString(er.t.pgYN6c, {
                             title: d.name,
@@ -274,13 +283,16 @@ let ec = r.memo(function (e) {
         ],
     });
 });
+
 function eo(e) {
     let { channel: t, firstMessage: n, content: r, hasMediaAttachment: a, originalAuthor: s } = e,
         { hasUnreads: c } = (0, N.X5)(t);
     return (0, l.jsxs)("div", {
         className: i()(ea.rf, ei.rf),
         children: [
-            (0, l.jsx)(R.Ay, { channel: t }),
+            (0, l.jsx)(R.Ay, {
+                channel: t,
+            }),
             (0, l.jsx)("div", {
                 className: (ei.iU, ea.iU),
                 children: (0, l.jsx)(ed, {
@@ -356,6 +368,7 @@ let ed = r.memo(function (e) {
         ],
     });
 });
+
 function eu(e) {
     let { channel: t, facepileRef: n, firstMessage: r } = e,
         { isNew: a } = (0, N.X5)(t),
@@ -400,7 +413,7 @@ function eu(e) {
                     }),
                     (0, l.jsx)("span", {
                         className: ei.xE,
-                        children: "\u2022",
+                        children: "•",
                     }),
                     i.length > 0
                         ? (0, l.jsxs)("div", {
@@ -425,17 +438,22 @@ function eu(e) {
                                   }),
                               ],
                           })
-                        : (0, l.jsx)(ef, { channel: t }),
+                        : (0, l.jsx)(ef, {
+                              channel: t,
+                          }),
                 ],
             }),
         ],
     });
 }
+
 function em(e) {
     let { channel: t, iconSize: n, showReadState: r = !1 } = e,
         { messageCountText: a, unreadCount: s } = (0, N.k6)(t);
     return (0, l.jsxs)("div", {
-        className: i()(ei.Mv, { [ei.hT]: r && null == s }),
+        className: i()(ei.Mv, {
+            [ei.hT]: r && null == s,
+        }),
         children: [
             (0, l.jsx)("span", {
                 className: ei.SZ,
@@ -462,11 +480,18 @@ function em(e) {
                       className: ei.bU,
                       variant: "text-sm/semibold",
                       color: "text-brand",
-                      children: ["(", er.intl.format(er.t.z3PEth, { count: s }), ")"],
+                      children: [
+                          "(",
+                          er.intl.format(er.t.z3PEth, {
+                              count: s,
+                          }),
+                          ")",
+                      ],
                   }),
         ],
     });
 }
+
 function eh(e) {
     let { firstMessage: t, channel: n } = e,
         r = (0, h.bG)([q.A], () => q.A.getChannel(n.parent_id)),
@@ -492,13 +517,19 @@ function eh(e) {
               emojiSizeTooltip: "reaction",
           });
 }
+
 function ef(e) {
     var t;
     let { channel: n } = e,
         { sortOrder: r } = (0, O.R)(n.parent_id),
         a = (0, N.Mw)(n, r),
         i = null == (t = n.threadMetadata) ? void 0 : t.createTimestamp,
-        s = null == i ? null : er.intl.formatToPlainString(er.t["13euCd"], { timestamp: (0, $.i$)(d()(i), "LLLL") });
+        s =
+            null == i
+                ? null
+                : er.intl.formatToPlainString(er.t["13euCd"], {
+                      timestamp: (0, $.i$)(d()(i), "LLLL"),
+                  });
     return (0, l.jsx)(f.m, {
         text: s,
         children: (0, l.jsx)(g.Text, {
@@ -509,6 +540,7 @@ function ef(e) {
         }),
     });
 }
+
 function eg(e) {
     let { channel: t, userIds: n, facepileRef: r } = e,
         a = (0, N.$I)(t, n);
@@ -526,6 +558,7 @@ function eg(e) {
         }),
     });
 }
+
 function ex(e) {
     let t,
         n,
@@ -573,10 +606,13 @@ function ex(e) {
               animated: d && !a && o,
               srcIsAnimated: r.srcIsAnimated,
               containerClassName: ei.iT,
-              imageClassName: i()({ [ei.cd]: a }),
+              imageClassName: i()({
+                  [ei.cd]: a,
+              }),
               analyticsSource: "ForumPostMediaPreview",
           });
 }
+
 function eb(e) {
     let { channel: t, firstMedia: n } = e,
         [r, a] = (0, D.eJ)({
@@ -593,7 +629,9 @@ function eb(e) {
                     s &&
                         (e.preventDefault(),
                         e.nativeEvent.stopImmediatePropagation(),
-                        j.A.showAgeVerificationGetStartedModal({ entryPoint: v.q1.FORUM_POST_MEDIA_PREVIEW }));
+                        j.A.showAgeVerificationGetStartedModal({
+                            entryPoint: v.q1.FORUM_POST_MEDIA_PREVIEW,
+                        }));
             },
             children: [
                 (0, l.jsx)(ex, {

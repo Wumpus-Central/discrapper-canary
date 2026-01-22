@@ -1,11 +1,21 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var i = n(627968);
 n(64700);
 var r = n(397927),
     l = n(494713),
     a = n(985018);
+
 function o(e) {
-    let { guildFriendsEnabled: t } = l.A.useExperiment({ location: "useFriendsItem" }, { autoTrackExposure: !1 });
+    let { guildFriendsEnabled: t } = l.A.useExperiment(
+        {
+            location: "useFriendsItem",
+        },
+        {
+            autoTrackExposure: !1,
+        },
+    );
     return t
         ? (0, i.jsx)(r.Drp, {
               id: "friends",
@@ -41,7 +51,12 @@ function o(e) {
                                           });
                                   }
                                   return e;
-                              })({ guild: e }, n),
+                              })(
+                                  {
+                                      guild: e,
+                                  },
+                                  n,
+                              ),
                           );
                   });
               },

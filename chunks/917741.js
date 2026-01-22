@@ -1,4 +1,6 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 var r = n(322811),
     i = n(355418);
 class a extends i.c {
@@ -9,7 +11,7 @@ class a extends i.c {
         let n = t[2].toLowerCase(),
             i = e.createParsingComponents();
         switch (n) {
-            case "après-midi":
+            case "apr\xe8s-midi":
             case "aprem":
                 i.imply("hour", 14), i.imply("minute", 0), i.imply("meridiem", r.FF.PM);
                 break;
@@ -22,7 +24,7 @@ class a extends i.c {
             case "a midi":
                 i.imply("hour", 12), i.imply("minute", 0), i.imply("meridiem", r.FF.AM);
                 break;
-            case "à minuit":
+            case "\xe0 minuit":
                 i.imply("hour", 0), i.imply("meridiem", r.FF.AM);
         }
         return i;

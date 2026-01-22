@@ -1,4 +1,6 @@
-t.d(e, { s: () => d });
+t.d(e, {
+    s: () => d,
+});
 var n = t(627968);
 t(64700);
 var r = t(397927),
@@ -7,6 +9,7 @@ var r = t(397927),
     l = t(985018),
     c = t(689588),
     o = t(332633);
+
 function d(a) {
     let { onContinue: e, onClose: t, title: d, body: x } = a;
     return (0, n.jsxs)(i.A, {

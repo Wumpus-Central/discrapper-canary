@@ -15,6 +15,7 @@ var r = n(73153),
     f = n(261811),
     p = n(500496),
     _ = n(469177);
+
 function h(e, t, n) {
     return (
         t in e
@@ -28,6 +29,7 @@ function h(e, t, n) {
         e
     );
 }
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -44,6 +46,7 @@ function m(e) {
     }
     return e;
 }
+
 function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -56,6 +59,7 @@ function g(e, t) {
     }
     return n;
 }
+
 function E(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -73,7 +77,13 @@ let b = new s.A("ConnectionStore"),
     A = new p.A(y);
 (y.handleIdentify = () => {
     let e = o.default.getToken();
-    if ((b.verbose("handleIdentify called", { hasToken: null != e }), null == e)) return null;
+    if (
+        (b.verbose("handleIdentify called", {
+            hasToken: null != e,
+        }),
+        null == e)
+    )
+        return null;
     let t = a.A.getState(),
         n = o.default.getInstallationForTracking();
     return {
@@ -84,20 +94,24 @@ let b = new s.A("ConnectionStore"),
                 is_fast_connect: !1,
                 gateway_connect_reasons: _.L7(),
             }),
-            null != n ? { installation_id: n } : {},
+            null != n
+                ? {
+                      installation_id: n,
+                  }
+                : {},
         ),
         presence: O.getInitialState(),
     };
 }),
     (0, u.isDesktop)() &&
         i.A.remotePowerMonitor.on("resume", () => {
-            y.expeditedHeartbeat(5000, "power monitor resumed");
+            y.expeditedHeartbeat(5e3, "power monitor resumed");
         }),
     c.A.addOfflineCallback(() => {
-        y.networkStateChange(15000, "network detected offline.", !1);
+        y.networkStateChange(15e3, "network detected offline.", !1);
     }),
     c.A.addOnlineCallback(() => {
-        y.networkStateChange(5000, "network detected online.");
+        y.networkStateChange(5e3, "network detected online.");
     }),
     y.on("disconnect", (e) => {
         let { code: t, reason: n } = e;

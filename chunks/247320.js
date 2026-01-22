@@ -1,4 +1,6 @@
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 var r = {
     lastWeek: "'last' eeee 'at' p",
     yesterday: "'yesterday at' p",

@@ -1,4 +1,6 @@
-n.d(t, { A: () => j });
+n.d(t, {
+    A: () => j,
+});
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -17,6 +19,7 @@ var r = n(627968),
     A = n(853742),
     y = n(985018),
     O = n(388552);
+
 function j(e) {
     let { channelId: t } = e,
         j = (0, i.bG)([b.A], () => b.A.getChannel(t)),
@@ -31,7 +34,9 @@ function j(e) {
         null == j || null == x)
     )
         return null;
-    let C = (0, r.jsx)(h.A, { channel: j });
+    let C = (0, r.jsx)(h.A, {
+        channel: j,
+    });
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(s.A, {
@@ -79,7 +84,10 @@ function j(e) {
                                         }
                                         return e;
                                     })({}, t)),
-                                    (l = l = { channel: j }),
+                                    (l = l =
+                                        {
+                                            channel: j,
+                                        }),
                                     Object.getOwnPropertyDescriptors
                                         ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
                                         : (function (e, t) {

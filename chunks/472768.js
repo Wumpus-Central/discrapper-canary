@@ -9,5 +9,7 @@ n(
             return !t;
         }),
     },
-    { isDisjointFrom: o },
+    {
+        isDisjointFrom: o,
+    },
 );

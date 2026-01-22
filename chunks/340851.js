@@ -38,6 +38,7 @@ var r = n(627968),
     D = n(502075),
     M = n(985018),
     L = n(861379);
+
 function G(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -63,6 +64,7 @@ function G(e) {
     }
     return e;
 }
+
 function k(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -81,6 +83,7 @@ function k(e, t) {
         e
     );
 }
+
 function U(e) {
     let { numUsers: t } = e;
     return (0, r.jsx)("div", {
@@ -92,11 +95,18 @@ function U(e) {
         }),
     });
 }
+
 function V(e) {
     let { numAudience: t, collapsed: n } = e,
-        l = n ? t : M.intl.formatToPlainString(M.t["+v2pN2"], { count: t });
+        l = n
+            ? t
+            : M.intl.formatToPlainString(M.t["+v2pN2"], {
+                  count: t,
+              });
     return (0, r.jsxs)("div", {
-        className: a()(L.yJ, { [L.Nr]: n }),
+        className: a()(L.yJ, {
+            [L.Nr]: n,
+        }),
         children: [
             (0, r.jsx)("div", {
                 className: L.$L,
@@ -304,7 +314,9 @@ let F = (0, p.J)(function (e) {
                                 otherClientSessionType: eu,
                                 voicePlatform: ed,
                                 embeddedApplication: W,
-                                avatarContainerClass: a()({ [L.dj]: !0 }),
+                                avatarContainerClass: a()({
+                                    [L.dj]: !0,
+                                }),
                                 disabled: ef && !t,
                                 selected: ej,
                                 onClick: t ? void 0 : eM,
@@ -321,7 +333,15 @@ let F = (0, p.J)(function (e) {
                             var l;
                             return (0, r.jsx)(s.m, {
                                 text: null != (l = (0, A.A)(eu)) ? l : M.intl.string(M.t.IyYqqY),
-                                children: (0, r.jsx)(S.Ay, G({ ref: eO }, n)),
+                                children: (0, r.jsx)(
+                                    S.Ay,
+                                    G(
+                                        {
+                                            ref: eO,
+                                        },
+                                        n,
+                                    ),
+                                ),
                             });
                         }
                         let c = () => null;

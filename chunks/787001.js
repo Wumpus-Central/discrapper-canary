@@ -1,4 +1,7 @@
-n.d(t, { A: () => v }), n(896048);
+n.d(t, {
+    A: () => v,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -51,6 +54,7 @@ let v = function (e) {
             }),
             R(!1);
     }
+
     function x() {
         (0, f.A)({
             initialPlanId: null,
@@ -65,6 +69,7 @@ let v = function (e) {
             onClose: (e) => e && t(),
         });
     }
+
     function L() {
         (0, f.A)({
             initialPlanId: null,
@@ -107,12 +112,16 @@ let v = function (e) {
                                     (0, r.jsx)(c._Jp, {
                                         color:
                                             P > 0 ? c.LU0.unsafe_rawColors.GUILD_BOOSTING_PINK_REFRESH : "currentColor",
-                                        className: s()(A.Me, { [A.S3]: P > 0 }),
+                                        className: s()(A.Me, {
+                                            [A.S3]: P > 0,
+                                        }),
                                     }),
                                     (0, r.jsx)(c.Text, {
                                         className: A.n,
                                         variant: "text-md/semibold",
-                                        children: O.intl.format(O.t["pob/cL"], { subscriptions: P }),
+                                        children: O.intl.format(O.t["pob/cL"], {
+                                            subscriptions: P,
+                                        }),
                                     }),
                                 ],
                             }),
@@ -120,7 +129,9 @@ let v = function (e) {
                                 ? (0, r.jsx)(c.Text, {
                                       className: A.EV,
                                       variant: "text-sm/normal",
-                                      children: O.intl.format(O.t.Jeto2u, { numSubscriptions: w }),
+                                      children: O.intl.format(O.t.Jeto2u, {
+                                          numSubscriptions: w,
+                                      }),
                                   })
                                 : null,
                         ],
@@ -134,7 +145,11 @@ let v = function (e) {
                         className: A.R_,
                         children: O.intl.string(O.t.N4sqzL),
                     }),
-                    T ? (0, r.jsx)(_.A, { alwaysWhite: !0 }) : null,
+                    T
+                        ? (0, r.jsx)(_.A, {
+                              alwaysWhite: !0,
+                          })
+                        : null,
                     (0, r.jsxs)("div", {
                         className: A.Sq,
                         children: [

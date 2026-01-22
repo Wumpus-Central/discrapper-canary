@@ -1,4 +1,8 @@
-n.d(t, { A: () => U }), n(321073), n(896048);
+n.d(t, {
+    A: () => U,
+}),
+    n(321073),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -64,7 +68,9 @@ let U = (e) => {
         { analyticsLocations: $ } = (0, f.Ay)(d.A.PREMIUM_SUBSCRIBER_NITRO_HOME),
         [J, ee] = i.useState(!1),
         et = (0, o.bG)([E.A], () => (null != t ? E.A.getUserProfile(t) : null)),
-        en = (0, A.A)({ location: "SubscriberNitroHome" });
+        en = (0, A.A)({
+            location: "SubscriberNitroHome",
+        });
     return null != et && (G || null != V)
         ? (0, r.jsxs)(r.Fragment, {
               children: [
@@ -74,7 +80,9 @@ let U = (e) => {
                       children: [
                           (0, r.jsx)(c.hLv, {
                               color: "nitro-pink",
-                              className: s()(M.kL, M.Gd, { [M.fv]: !en }),
+                              className: s()(M.kL, M.Gd, {
+                                  [M.fv]: !en,
+                              }),
                               children: (0, r.jsxs)(f.f5, {
                                   value: $,
                                   children: [
@@ -109,7 +117,9 @@ let U = (e) => {
                                       }),
                                       null != V &&
                                           m.A.isInProperTreatments() &&
-                                          (0, r.jsx)(R.A, { location: d.A.PREMIUM_MARKETING_NITRO_HOME_ORBS_SECTION }),
+                                          (0, r.jsx)(R.A, {
+                                              location: d.A.PREMIUM_MARKETING_NITRO_HOME_ORBS_SECTION,
+                                          }),
                                       (0, r.jsx)(C.A, {
                                           className: M.Zy,
                                           location: d.A.PREMIUM_MARKETING_GIFT_SECTION,
@@ -118,7 +128,9 @@ let U = (e) => {
                                               section: L.JJy.GIFT_BANNER,
                                           },
                                       }),
-                                      (0, r.jsx)("div", { className: M.hz }),
+                                      (0, r.jsx)("div", {
+                                          className: M.hz,
+                                      }),
                                       (0, r.jsx)(l.L, {
                                           innerRef: a,
                                           onChange: (e) => {

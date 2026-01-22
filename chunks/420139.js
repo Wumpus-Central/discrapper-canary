@@ -1,4 +1,8 @@
-n.d(t, { A: () => x }), n(896048), n(65821);
+n.d(t, {
+    A: () => x,
+}),
+    n(896048),
+    n(65821);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -25,6 +29,7 @@ var r = n(627968),
     T = n(985018),
     C = n(752375),
     N = n(20976);
+
 function R(e, t, n) {
     return (
         t in e
@@ -38,6 +43,7 @@ function R(e, t, n) {
         e
     );
 }
+
 function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -54,6 +60,7 @@ function w(e) {
     }
     return e;
 }
+
 function P(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -66,6 +73,7 @@ function P(e, t) {
     }
     return n;
 }
+
 function D(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -77,6 +85,7 @@ function D(e, t) {
         e
     );
 }
+
 function x(e) {
     let {
             subscription: t,

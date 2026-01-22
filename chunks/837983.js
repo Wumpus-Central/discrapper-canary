@@ -26,6 +26,7 @@ var r = n(64700),
     b = n(500049),
     y = n(735991),
     O = n(73510);
+
 function A(e) {
     let {
             context: t,
@@ -72,6 +73,7 @@ function A(e) {
         }
     );
 }
+
 function v(e) {
     var t, n;
     let { context: i, includeBuiltIn: a = !0, allowFetch: s = !0 } = e,
@@ -107,6 +109,7 @@ function v(e) {
         null == (n = l.result) ? void 0 : n.sections,
     ]);
 }
+
 function S(e) {
     let t = (0, p.Bh)("channel" === e.type ? e.channel : void 0, [c.kc.CHAT, c.kc.PRIMARY_ENTRY_POINT]);
     return (n) => {
@@ -136,15 +139,19 @@ function S(e) {
         );
     };
 }
+
 function I(e) {
     return [T(e), C(e), N(e), R(e)];
 }
+
 function T(e) {
     return (t) => (0, y.lq)(t).toLocaleLowerCase().startsWith(e.toLocaleLowerCase());
 }
+
 function C(e) {
     return (t) => (0, y.lq)(t).toLocaleLowerCase().includes(e.toLocaleLowerCase());
 }
+
 function N(e) {
     return (t) => {
         var n, r;
@@ -152,6 +159,7 @@ function N(e) {
         return null != (n = null == i ? void 0 : i.startsWith(e.toLocaleLowerCase())) && n;
     };
 }
+
 function R(e) {
     return (t) => {
         var n, r;
@@ -159,15 +167,18 @@ function R(e) {
         return null != (n = null == i ? void 0 : i.includes(e.toLocaleLowerCase())) && n;
     };
 }
+
 function w(e, t) {
     let n = h.A.getScoreWithoutLoadingLatest(e.id);
     return h.A.getScoreWithoutLoadingLatest(t.id) - n;
 }
+
 function P(e, t) {
     let n = (0, y.lq)(e),
         r = (0, y.lq)(t);
     return (0, f.RF)(n, r);
 }
+
 function D(e) {
     let t = (0, p.Bh)("channel" === e.type ? e.channel : void 0, [c.kc.CHAT]),
         n = {};
@@ -209,9 +220,11 @@ function D(e) {
         );
     };
 }
+
 function x(e) {
     return [L(e), j(e), M(e), k(e), U(e)];
 }
+
 function L(e) {
     return (t) => {
         let n = t.untranslatedName,
@@ -219,6 +232,7 @@ function L(e) {
         return n.startsWith(e) || r.startsWith(e);
     };
 }
+
 function j(e) {
     let t = null == e ? void 0 : e.split(" "),
         n = t[0],
@@ -234,6 +248,7 @@ function j(e) {
         );
     };
 }
+
 function M(e) {
     return (t) => {
         let n = t.untranslatedName,
@@ -241,6 +256,7 @@ function M(e) {
         return n.includes(e) || r.includes(e);
     };
 }
+
 function k(e) {
     return (t) => {
         var n;
@@ -258,6 +274,7 @@ function k(e) {
         return !1;
     };
 }
+
 function U(e) {
     return (t) => {
         var n;
@@ -266,18 +283,22 @@ function U(e) {
         return !1;
     };
 }
+
 function G(e) {
     return [V(e), F];
 }
+
 function V(e) {
     return (t, n) => {
         let r = d.Ay.getScoreWithoutLoadingLatest(e, t);
         return d.Ay.getScoreWithoutLoadingLatest(e, n) - r;
     };
 }
+
 function F(e, t) {
     return (0, f.RF)(e.displayName, t.displayName);
 }
+
 function B(e) {
     let {
         context: t,
@@ -304,7 +325,9 @@ function B(e) {
             includeEmbeddedApps: c,
             includeNonEmbeddedApps: l,
         }),
-        h = (0, u.A)({ guildId: "channel" === t.type ? t.channel.guild_id : null }),
+        h = (0, u.A)({
+            guildId: "channel" === t.type ? t.channel.guild_id : null,
+        }),
         m = r.useMemo(
             () =>
                 o
@@ -312,7 +335,9 @@ function B(e) {
                           limit: i,
                           filterPredicates: [D(t)],
                           bucketPredicates: x(n),
-                          sortComparers: G({ channel: "channel" === t.type ? t.channel : void 0 }),
+                          sortComparers: G({
+                              channel: "channel" === t.type ? t.channel : void 0,
+                          }),
                       })
                     : [],
             [o, d, i, t, n],
@@ -377,6 +402,7 @@ function B(e) {
         loading: p && o,
     };
 }
+
 function H(e) {
     let { context: t, query: n, fetches: i = !0, pageLimit: a = 1 / 0, entrypoint: c } = e;
     n.startsWith("".concat("/")) && (n = n.substring(1));
@@ -422,27 +448,32 @@ function H(e) {
         }, [n, d, f, u]),
         y = r.useMemo(
             () =>
-                Array.from({ length: h === g.e.FETCHED || h === g.e.ERROR ? f : f - 1 }, (e, t) => {
-                    var r, i;
-                    return null !=
-                        (r =
-                            null ==
-                            (i = g.A.getSearchResults({
-                                query: n,
-                                guildId: d,
-                                page: t + 1,
-                                integrationType: s.b.USER_INSTALL,
-                                minUserInstallCommandCount: 1,
-                                excludeAppsWithCustomInstallUrl: !0,
-                                excludeNonEmbeddedApps: u,
-                                excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: !0,
-                                source: o.V.APP_LAUNCHER,
-                            }))
-                                ? void 0
-                                : i.results)
-                        ? r
-                        : [];
-                }),
+                Array.from(
+                    {
+                        length: h === g.e.FETCHED || h === g.e.ERROR ? f : f - 1,
+                    },
+                    (e, t) => {
+                        var r, i;
+                        return null !=
+                            (r =
+                                null ==
+                                (i = g.A.getSearchResults({
+                                    query: n,
+                                    guildId: d,
+                                    page: t + 1,
+                                    integrationType: s.b.USER_INSTALL,
+                                    minUserInstallCommandCount: 1,
+                                    excludeAppsWithCustomInstallUrl: !0,
+                                    excludeNonEmbeddedApps: u,
+                                    excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: !0,
+                                    source: o.V.APP_LAUNCHER,
+                                }))
+                                    ? void 0
+                                    : i.results)
+                            ? r
+                            : [];
+                    },
+                ),
             [h, d, n, f, u],
         ),
         O = r.useCallback(() => {

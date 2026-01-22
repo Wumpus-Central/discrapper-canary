@@ -7,7 +7,9 @@ e.exports = function (e) {
         r = {
             className: "subst",
             variants: [
-                { begin: "\\$[A-Za-z0-9_]+" },
+                {
+                    begin: "\\$[A-Za-z0-9_]+",
+                },
                 {
                     begin: /\$\{/,
                     end: /\}/,
@@ -92,7 +94,9 @@ e.exports = function (e) {
         },
         c = {
             begin: [/^\s*/, "extension", /\s+(?=[[(])/],
-            beginScope: { 2: "keyword" },
+            beginScope: {
+                2: "keyword",
+            },
         },
         u = {
             begin: [/^\s*/, /end/, /\s+/, /(extension\b)?/],
@@ -102,7 +106,9 @@ e.exports = function (e) {
             },
         },
         d = [
-            { match: /\.inline\b/ },
+            {
+                match: /\.inline\b/,
+            },
             {
                 begin: /\binline(?=\s)/,
                 keywords: "inline",
@@ -110,7 +116,9 @@ e.exports = function (e) {
         ],
         f = {
             begin: [/\(\s*/, /using/, /\s+(?!\))/],
-            beginScope: { 2: "keyword" },
+            beginScope: {
+                2: "keyword",
+            },
         };
     return {
         name: "Scala",

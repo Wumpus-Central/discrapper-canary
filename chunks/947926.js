@@ -6,7 +6,7 @@ var a = n(627968),
     l = n(64700),
     i = n(503698),
     r = n.n(i),
-    s = n(432022),
+    s = n(108531),
     o = n(311907),
     c = n(475743),
     d = n(676594),
@@ -35,6 +35,7 @@ var a = n(627968),
     P = n(20732),
     R = n(654487),
     D = n(419548);
+
 function M(e) {
     let { isExpanded: t, questId: n } = e;
     return (
@@ -47,6 +48,7 @@ function M(e) {
         null
     );
 }
+
 function L() {
     return (
         l.useEffect(() => {
@@ -55,6 +57,7 @@ function L() {
         null
     );
 }
+
 function U(e) {
     var t, n;
     let { quest: i } = e,
@@ -62,7 +65,9 @@ function U(e) {
             quest: i,
             location: R.rE.QUESTS_BAR,
         }),
-        h = (0, f.H)({ location: R.rE.QUESTS_BAR }),
+        h = (0, f.H)({
+            location: R.rE.QUESTS_BAR,
+        }),
         U = (0, o.bG)([m.A], () => null != m.A.questEnrollmentBlockedUntil),
         { isQuestBarVisible: B, reason: G } = (0, y.TQ)({
             quest: i,
@@ -230,7 +235,9 @@ let B =
     21552 == n.j
         ? function () {
               let e = (0, y.dN)(),
-                  { enabled: t, variant: n } = h.qd.getConfig({ location: R.rE.QUESTS_BAR });
+                  { enabled: t, variant: n } = h.qd.getConfig({
+                      location: R.rE.QUESTS_BAR,
+                  });
               return null == e
                   ? null
                   : (0, a.jsx)(
@@ -240,7 +247,9 @@ let B =
                             questId: e.id,
                             listenForSourceError: t,
                             retrySourceLoadOnError: n === h.LO.LISTEN_AND_RETRY_LOADING,
-                            children: (0, a.jsx)(U, { quest: e }),
+                            children: (0, a.jsx)(U, {
+                                quest: e,
+                            }),
                         },
                         e.id,
                     );

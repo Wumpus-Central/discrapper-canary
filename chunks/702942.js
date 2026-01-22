@@ -1,9 +1,13 @@
-n.d(t, { A: () => u }), n(896048);
+n.d(t, {
+    A: () => u,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(397927),
     s = n(411335),
     a = n(985018);
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -29,6 +33,7 @@ function c(e) {
     }
     return e;
 }
+
 function o(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -47,6 +52,7 @@ function o(e, t) {
         e
     );
 }
+
 function d(e) {
     let t = "",
         n = "";
@@ -68,13 +74,20 @@ function d(e) {
         subtitleText: n,
     };
 }
+
 function u(e) {
     var t;
     let { rule: n, onChangeRule: a } = e,
         [u, f] = i.useState(new Set(null == n || null == (t = n.triggerMetadata) ? void 0 : t.presets)),
         g = i.useMemo(
             () => (e) => {
-                a(o(c({}, n), { triggerMetadata: o(c({}, n.triggerMetadata), { presets: e }) }));
+                a(
+                    o(c({}, n), {
+                        triggerMetadata: o(c({}, n.triggerMetadata), {
+                            presets: e,
+                        }),
+                    }),
+                );
             },
             [a, n],
         ),

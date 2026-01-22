@@ -1,4 +1,7 @@
-i.d(e, { default: () => b }), i(896048);
+i.d(e, {
+    default: () => b,
+}),
+    i(896048);
 var n = i(627968),
     s = i(64700),
     l = i(158954),
@@ -15,6 +18,7 @@ var n = i(627968),
     h = i(652215),
     A = i(985018),
     I = i(86617);
+
 function b(t) {
     let { user: e, entry: i, transitionState: b, onAction: m, onClose: p, onOpenGameSettings: L } = t,
         [O, R] = (0, r.yK)([d.A], () => [d.A.isDeletingEntryHistory, d.A.deleteOutboxEntryError]);
@@ -32,7 +36,10 @@ function b(t) {
                         a.MzZ,
                         {
                             onClick: () => {
-                                null == m || m({ action: "PRESS_CLEAR_HISTORY_DISCLAIMER" }),
+                                null == m ||
+                                    m({
+                                        action: "PRESS_CLEAR_HISTORY_DISCLAIMER",
+                                    }),
                                     null != s
                                         ? s()
                                         : (0, C.openUserSettings)(u.X.PROFILE_PANEL, {
@@ -57,7 +64,11 @@ function b(t) {
                 {
                     text: null != R ? A.intl.string(A.t["5911Lb"]) : A.intl.string(A.t.VkKicb),
                     onClick: () => {
-                        null == m || m({ action: "PRESS_CLEAR_HISTORY_BUTTON" }), (0, c.FO)(i, e.id, p);
+                        null == m ||
+                            m({
+                                action: "PRESS_CLEAR_HISTORY_BUTTON",
+                            }),
+                            (0, c.FO)(i, e.id, p);
                     },
                     disabled: O,
                     variant: "critical-primary",
@@ -71,7 +82,9 @@ function b(t) {
                     ? (0, n.jsxs)("div", {
                           className: I.z3,
                           children: [
-                              (0, n.jsx)(a.aXh, { color: a.LU0.colors.ICON_FEEDBACK_CRITICAL }),
+                              (0, n.jsx)(a.aXh, {
+                                  color: a.LU0.colors.ICON_FEEDBACK_CRITICAL,
+                              }),
                               (0, n.jsx)(a.Text, {
                                   variant: "text-sm/medium",
                                   children: A.intl.string(A.t.FMbL3s),

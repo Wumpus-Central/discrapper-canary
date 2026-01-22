@@ -48,12 +48,14 @@ let D = (e) => {
         t
     );
 };
+
 function x(e) {
     var t;
     let n = (0, T.jc)(),
         r = null == n || null == (t = n.modal) ? void 0 : t.components[0];
     return (null == r ? void 0 : r.type) === u.I5.ACTION_ROW && r.components[0].id === e;
 }
+
 function L(e) {
     return r.useMemo(() => {
         let t = y.A.getGuildId(),
@@ -72,6 +74,7 @@ function L(e) {
         };
     }, [e.id, e.icon, e.name, e.bot]);
 }
+
 function j(e, t) {
     let { application: n, customId: i, components: a } = e,
         o = (0, f.A)(),
@@ -113,6 +116,7 @@ function j(e, t) {
         onSubmit: O,
     };
 }
+
 function M(e) {
     let { application: t, customId: n } = e,
         { applicationIconURL: r, applicationName: i, applicationBaseUrl: s } = L(t),
@@ -185,7 +189,9 @@ let k = (e, t, n) =>
                 };
             }
             case u.I5.TEXT_DISPLAY:
-                return { type: t.type };
+                return {
+                    type: t.type,
+                };
             case u.I5.LABEL:
                 return {
                     type: t.type,
@@ -219,6 +225,7 @@ let k = (e, t, n) =>
                 a()(!1, "unreachable");
         }
     });
+
 function U(e, t) {
     return O.A.getUploads(e, E.C.InteractionModal).filter((e) => {
         var n;
@@ -240,7 +247,9 @@ async function G(e, t, n) {
     }),
         await l;
     let c = s.map((e, t) => (0, I.OW)(e, t)),
-        d = k(e.customId, e.components, { uploads: s }),
+        d = k(e.customId, e.components, {
+            uploads: s,
+        }),
         f = () => {
             (null != t && t.aborted) ||
                 o.Bo.post({

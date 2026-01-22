@@ -1,4 +1,6 @@
-n.d(t, { A: () => R });
+n.d(t, {
+    A: () => R,
+});
 var r,
     i = n(311907),
     a = n(205693),
@@ -8,6 +10,7 @@ var r,
     c = n(309010),
     u = n(287809),
     d = n(965162);
+
 function f(e, t, n) {
     return (
         t in e
@@ -21,6 +24,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,6 +41,7 @@ function p(e) {
     }
     return e;
 }
+
 function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -49,6 +54,7 @@ function _(e, t) {
     }
     return n;
 }
+
 function h(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -64,19 +70,25 @@ let m = !1,
     g = null,
     E = !1,
     b = {};
+
 function y(e) {
     let { assets: t } = e,
         n = {};
     t.forEach((e) => (n[e.id] = e)), (b = n);
 }
+
 function O(e) {
     let { videoFilterAsset: t } = e;
-    b = h(p({}, b), { [t.id]: t });
+    b = h(p({}, b), {
+        [t.id]: t,
+    });
 }
+
 function A(e) {
     let { videoFilterAsset: t } = e;
     (b = p({}, b)), delete b[t.id];
 }
+
 function v(e) {
     var t;
     let n = u.default.getCurrentUser();
@@ -87,17 +99,21 @@ function v(e) {
             : (0, d.Hk)(null == (t = o.A.settings.voiceAndVideo) ? void 0 : t.videoBackgroundFilterDesktop, n.id);
     return null != c.A.getVoiceChannelId() && l.A.isVideoEnabled() && null != r;
 }
+
 function S(e) {
     let { backgroundOption: t } = e;
     v(t) && (E = !0);
 }
+
 function I(e) {
     let { settings: t } = e;
     a.Tr.CAMERA_BACKGROUND_LIVE in t && (m = !0);
 }
+
 function T() {
     g !== c.A.getVoiceChannelId() && (E = !1), v() && (E = !0), (g = c.A.getVoiceChannelId());
 }
+
 function C() {
     (m = !1), (E = !1), (g = null), (b = {});
 }

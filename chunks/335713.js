@@ -11,6 +11,7 @@ function r(e, t, n) {
         e
     );
 }
+
 function i(e, t) {
     if ("string" == typeof e)
         return {
@@ -38,9 +39,14 @@ function i(e, t) {
                 status: e.status,
             };
         }
-    return { status: e.status };
+    return {
+        status: e.status,
+    };
 }
-n.d(t, { L: () => a }), n(65821);
+n.d(t, {
+    L: () => a,
+}),
+    n(65821);
 class a {
     getFieldMessage(e) {
         return null != this.fields[e] ? this.fields[e][0] : null;

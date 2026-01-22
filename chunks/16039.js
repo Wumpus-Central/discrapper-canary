@@ -1,4 +1,7 @@
-e.d(n, { default: () => o }), e(896048);
+e.d(n, {
+    default: () => o,
+}),
+    e(896048);
 var l = e(627968),
     r = e(64700),
     i = e(158954),
@@ -23,6 +26,7 @@ let c = (t) => {
         selectionMode: "single",
     });
 };
+
 function o(t) {
     let { action: n, triggerType: e, isEdit: a, onUpdateDuration: o, onClose: E, transitionState: d } = t,
         [S, _] = r.useState(() =>

@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(562465),
     i = n(73153),
     a = n(58149),
@@ -135,7 +137,9 @@ let f = {
         return (
             await r.Bo.post({
                 url: u.Rsh.USER_ACTIVITY_SUBSCRIBE,
-                body: { subscriptions: t },
+                body: {
+                    subscriptions: t,
+                },
                 retries: 1,
                 rejectWithError: !1,
             })

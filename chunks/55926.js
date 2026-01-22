@@ -39,6 +39,7 @@ var r = t(627968),
     D = t(652215),
     M = t(985018),
     _ = t(807128);
+
 function L(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
@@ -64,6 +65,7 @@ function L(e) {
     }
     return e;
 }
+
 function U(e, n) {
     return (
         (n = null != n ? n : {}),
@@ -86,6 +88,7 @@ let F = new Intl.DateTimeFormat(M.intl.currentLocale, {
     month: "short",
     day: "numeric",
 });
+
 function G(e) {
     let { app: n, guildId: t, subscriptions: s, otps: o } = e,
         a = l.useMemo(() => (0, E.A)(n, 100), [n]),
@@ -144,6 +147,7 @@ function G(e) {
         })
     );
 }
+
 function B(e) {
     let { appId: n, subscriptions: t, otps: l, guildId: i } = e;
     return (0, r.jsxs)("div", {
@@ -152,7 +156,9 @@ function B(e) {
             t.length > 0 &&
                 (0, r.jsxs)("div", {
                     children: [
-                        (0, r.jsx)(R.A, { subscriptions: t }),
+                        (0, r.jsx)(R.A, {
+                            subscriptions: t,
+                        }),
                         (0, r.jsx)("div", {
                             className: _.dD,
                             children: t.map((e) =>
@@ -195,6 +201,7 @@ function B(e) {
         ],
     });
 }
+
 function C(e) {
     var n, i;
     let { appId: s, guildId: c, listing: d, subscriptionType: p, onDetails: g } = e,
@@ -251,8 +258,14 @@ function C(e) {
         Z = l.useMemo(() => {
             if (G && (null == E ? void 0 : E.currentPeriodEnd) != null) {
                 let e = F.format(null == E ? void 0 : E.currentPeriodEnd);
-                if (C) return M.intl.formatToPlainString(M.t.EV2lZz, { date: e });
-                if (B) return M.intl.formatToPlainString(M.t["2w6+NN"], { date: e });
+                if (C)
+                    return M.intl.formatToPlainString(M.t.EV2lZz, {
+                        date: e,
+                    });
+                if (B)
+                    return M.intl.formatToPlainString(M.t["2w6+NN"], {
+                        date: e,
+                    });
             }
             if (K)
                 return (0, r.jsxs)(r.Fragment, {
@@ -321,6 +334,7 @@ function C(e) {
                   : void 0,
     });
 }
+
 function z(e) {
     var n, l, i, o;
     let { skuId: c, appId: m, onDetails: b } = e,

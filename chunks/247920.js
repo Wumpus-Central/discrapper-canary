@@ -1,7 +1,9 @@
-t.d(a, { default: () => x });
+t.d(a, {
+    default: () => x,
+});
 var s = t(627968);
 t(64700);
-var i = t(432022),
+var i = t(108531),
     r = t(827734),
     n = t(397927),
     l = t(915089),
@@ -10,8 +12,15 @@ var i = t(432022),
 let o = (e) => {
         let { currentNumber: a, thresholdNumber: t, currentLabel: l, isPercent: o = !1 } = e,
             x = null != t ? Math.floor((a / t) * 100) : 0,
-            m = d.intl.formatToPlainString(d.t.YMor7k, { count: a }),
-            h = null != t ? d.intl.formatToPlainString(d.t.YMor7k, { count: t }) : "--",
+            m = d.intl.formatToPlainString(d.t.YMor7k, {
+                count: a,
+            }),
+            h =
+                null != t
+                    ? d.intl.formatToPlainString(d.t.YMor7k, {
+                          count: t,
+                      })
+                    : "--",
             b = (0, n.rdh)(r.A.unsafe_rawColors.RED_400).hex(),
             u = (0, n.rdh)(r.A.unsafe_rawColors.YELLOW_300).hex();
         return (0, s.jsxs)(s.Fragment, {
@@ -19,10 +28,16 @@ let o = (e) => {
                 (0, s.jsxs)("div", {
                     className: c.Tr,
                     children: [
-                        (0, s.jsx)("div", { className: c.yZ }),
+                        (0, s.jsx)("div", {
+                            className: c.yZ,
+                        }),
                         (0, s.jsx)(n.c7X, {
-                            from: { width: 0 },
-                            to: { width: x },
+                            from: {
+                                width: 0,
+                            },
+                            to: {
+                                width: x,
+                            },
                             config: {
                                 tension: 200,
                                 friction: 20,
@@ -186,11 +201,15 @@ let o = (e) => {
                             variant: "text-sm/normal",
                             children: d.intl.string(d.t.QOs3XA),
                         }),
-                        (0, s.jsx)("div", { className: c.me }),
+                        (0, s.jsx)("div", {
+                            className: c.me,
+                        }),
                         t,
                         i,
                         a,
-                        (0, s.jsx)("div", { className: c.me }),
+                        (0, s.jsx)("div", {
+                            className: c.me,
+                        }),
                         (0, s.jsxs)(n.Text, {
                             className: c.xd,
                             color: "text-default",

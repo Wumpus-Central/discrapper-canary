@@ -1,4 +1,7 @@
-n.d(t, { A: () => E }), n(896048);
+n.d(t, {
+    A: () => E,
+}),
+    n(896048);
 var r = n(73153),
     i = n(439372),
     a = n(961350),
@@ -7,6 +10,7 @@ var r = n(73153),
     l = n(309010),
     c = n(117549),
     u = n(652215);
+
 function d(e, t, n) {
     return (
         t in e
@@ -20,6 +24,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f() {
     let e = l.A.getVoiceChannelId(),
         t = s.A.bitrate;
@@ -32,6 +37,7 @@ function f() {
                 bitrate: n.bitrate,
             }));
 }
+
 function p() {
     var e;
     let t = l.A.getVoiceChannelId(),
@@ -46,13 +52,16 @@ function p() {
             mode: a,
         });
 }
+
 function _() {
     f(), p();
 }
+
 function h(e) {
     let { channels: t } = e;
     for (let e of t) l.A.getVoiceChannelId() === e.id && _();
 }
+
 function m(e) {
     let { voiceStates: t } = e;
     t.forEach((e) => {

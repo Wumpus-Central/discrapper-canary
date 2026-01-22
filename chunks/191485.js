@@ -1,7 +1,11 @@
-l.d(t, { L: () => r }), l(896048);
+l.d(t, {
+    L: () => r,
+}),
+    l(896048);
 var n = l(64700),
     a = l(930932),
     i = l(472715);
+
 function r(e) {
     let { getOptions: t } = e,
         l = n.useMemo(() => {

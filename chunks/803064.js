@@ -1,4 +1,6 @@
-n.d(t, { A: () => j });
+n.d(t, {
+    A: () => j,
+});
 var r = n(627968),
     i = n(64700),
     l = n(397927),
@@ -21,7 +23,9 @@ let j = function (e) {
         O = i.useCallback(
             (e, i) => {
                 null == e || void 0 === i
-                    ? f.A.saveGuild(t.id, { homeHeader: null })
+                    ? f.A.saveGuild(t.id, {
+                          homeHeader: null,
+                      })
                     : (0, l.mMO)(async () => {
                           let { default: l } = await Promise.all([
                               n.e("35929"),
@@ -62,7 +66,9 @@ let j = function (e) {
                                           file: i,
                                           onCrop: (e) => {
                                               let { imageUri: n } = e;
-                                              return f.A.saveGuild(t.id, { homeHeader: n });
+                                              return f.A.saveGuild(t.id, {
+                                                  homeHeader: n,
+                                              });
                                           },
                                           uploadType: m.HL.HOME_HEADER,
                                       },
@@ -155,7 +161,9 @@ let j = function (e) {
                                   }),
                               ],
                           }),
-                          (0, r.jsx)("div", { children: v }),
+                          (0, r.jsx)("div", {
+                              children: v,
+                          }),
                       ],
                   }),
               ],

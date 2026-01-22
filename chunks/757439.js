@@ -1,4 +1,6 @@
 function r() {
     return !1;
 }
-n.d(t, { I: () => r });
+n.d(t, {
+    I: () => r,
+});

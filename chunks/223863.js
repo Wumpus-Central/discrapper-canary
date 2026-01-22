@@ -20,6 +20,7 @@ var r = n(735438),
     p = n(652215);
 n(985018);
 let _ = 15;
+
 function h(e) {
     let t = l.A.getChannel(e);
     return (null == t ? void 0 : t.type) === p.rbe.DM
@@ -32,9 +33,11 @@ function h(e) {
               id: e,
           };
 }
+
 function m(e) {
     return "".concat(e.type, "-").concat(e.id);
 }
+
 function g(e) {
     if ("channel" === e.type) return e.id;
     let t = l.A.getDMFromUserId(e.id);
@@ -50,6 +53,7 @@ async function E(e) {
             return;
         }
 }
+
 function b(e) {
     if ("user" !== e.type) return (0, s.A)(e.id);
     {
@@ -63,9 +67,11 @@ function b(e) {
             : null;
     }
 }
+
 function y(e) {
     return e.type === AutocompleterResultTypes.USER || PermissionStore.can(Permissions.VIEW_CHANNEL, e.record);
 }
+
 function O(e, t) {
     return e.type === a.rD.USER
         ? t || null != l.A.getDMChannelFromUserId(e.record.id)
@@ -75,6 +81,7 @@ function O(e, t) {
                   c.A.can(p.xBc.VIEW_CHANNEL, e.record) &&
                   c.A.can(p.xBc.SEND_MESSAGES, e.record));
 }
+
 function A(e, t) {
     let n,
         r = new Set();
@@ -89,9 +96,11 @@ function A(e, t) {
         }
     return i;
 }
+
 function v(e, t) {
     return e.filter((e) => (0, d.Vq)(e) && (e.type === a.rD.HEADER || ((0, f.N)(e) && O(e, t))));
 }
+
 function S(e) {
     let {
         results: t,

@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var r = n(284009),
     i = n.n(r),
     s = n(481613),
@@ -12,6 +14,7 @@ var r = n(284009),
     f = n(954571),
     p = n(877062),
     g = n(652215);
+
 function m(e) {
     let t = (function (e) {
             var t;

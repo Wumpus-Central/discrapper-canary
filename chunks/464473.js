@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968),
     i = n(311907),
     a = n(397927),
@@ -7,9 +9,11 @@ var r = n(627968),
     l = n(942405),
     c = n(652215),
     u = n(985018);
+
 function d() {
     (0, l.sL)("nagbar");
 }
+
 function f() {
     return null == (0, i.bG)([s.Ay], () => s.Ay.getVisibleGame())
         ? null

@@ -1,4 +1,8 @@
-n.d(t, { A: () => G }), n(321073), n(733351);
+n.d(t, {
+    A: () => G,
+}),
+    n(321073),
+    n(733351);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -27,6 +31,7 @@ n(851883);
 var C = n(652215),
     N = n(985018),
     R = n(123511);
+
 function w(e, t, n) {
     return (
         t in e
@@ -40,6 +45,7 @@ function w(e, t, n) {
         e
     );
 }
+
 function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -56,6 +62,7 @@ function P(e) {
     }
     return e;
 }
+
 function D(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -68,6 +75,7 @@ function D(e, t) {
     }
     return n;
 }
+
 function x(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -79,10 +87,12 @@ function x(e, t) {
         e
     );
 }
+
 function L(e) {
     let t = (null == e ? void 0 : e.name) === "" ? null : null == e ? void 0 : e.name;
     return null != t ? t : N.intl.string(N.t.eXan7B);
 }
+
 function j(e, t) {
     return (
         (e.isDM() || e.isGroupDM()
@@ -92,11 +102,16 @@ function j(e, t) {
               : N.intl.string(N.t.msxteM)) + (null != t ? " (".concat(t, ")") : "")
     );
 }
+
 function M(e) {
     let { streamActivity: t, otherActivities: n, voiceActivityChannel: r } = e,
         i = [],
-        { descriptiveTextEnabled: a } = (0, y.n)({ location: "StackedActivityStatus" }),
-        { enableTopNavButton: s } = (0, _.tR)({ location: "StackedActivityStatus" }),
+        { descriptiveTextEnabled: a } = (0, y.n)({
+            location: "StackedActivityStatus",
+        }),
+        { enableTopNavButton: s } = (0, _.tR)({
+            location: "StackedActivityStatus",
+        }),
         o = (0, p.Ay)(r),
         l = a || s;
     return (
@@ -109,6 +124,7 @@ function M(e) {
         i.length > 0 ? i.join(", ") : ""
     );
 }
+
 function k(e) {
     let { textVariant: t, className: n, hasCustomStatusText: i, totalActivityCount: a } = e,
         o = a - 1;
@@ -119,14 +135,16 @@ function k(e) {
         children: ["+", o],
     });
 }
+
 function U(e) {
     let { textVariant: t, className: n } = e;
     return (0, r.jsx)(l.EYj, {
         variant: t,
         className: s()(R.Om, n),
-        children: "\u2022",
+        children: "•",
     });
 }
+
 function G(e) {
     let {
         user: t,
@@ -263,15 +281,45 @@ function G(e) {
                                     },
                                     t,
                                 ),
-                                { showChannelName: !0 },
+                                {
+                                    showChannelName: !0,
+                                },
                             ),
                             "stream",
                         ),
                     ),
                 H.forEach((n, i) => {
-                    e.push((0, r.jsx)(I.A, P({ activity: n }, t), "activity-".concat(i)));
+                    e.push(
+                        (0, r.jsx)(
+                            I.A,
+                            P(
+                                {
+                                    activity: n,
+                                },
+                                t,
+                            ),
+                            "activity-".concat(i),
+                        ),
+                    );
                 }),
-                X && e.push((0, r.jsx)(T.A, x(P({ channel: l }, t), { showChannelName: !0 }), "voice")),
+                X &&
+                    e.push(
+                        (0, r.jsx)(
+                            T.A,
+                            x(
+                                P(
+                                    {
+                                        channel: l,
+                                    },
+                                    t,
+                                ),
+                                {
+                                    showChannelName: !0,
+                                },
+                            ),
+                            "voice",
+                        ),
+                    ),
                 e
             );
         },

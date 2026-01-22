@@ -1,4 +1,7 @@
-n.d(t, { A: () => Y }), n(896048);
+n.d(t, {
+    A: () => Y,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(158954),
@@ -36,6 +39,7 @@ var r = n(627968),
     k = n(652215),
     U = n(381941),
     G = n(618231);
+
 function V(e) {
     let { message: t, snapshot: n, index: u } = e,
         f = i.useMemo(() => new d.j(t, n, u), [t, n, u]),
@@ -87,7 +91,7 @@ function V(e) {
                       className: G.PJ,
                       variant: "text-sm/medium",
                       color: "none",
-                      children: "".concat(_.originLabel, "  \u2022  ").concat(_.timestampLabel),
+                      children: "".concat(_.originLabel, "  •  ").concat(_.timestampLabel),
                   }),
                   (0, r.jsx)(c._BQ, {
                       size: "xxs",
@@ -96,6 +100,7 @@ function V(e) {
               ],
           });
 }
+
 function F(e, t) {
     let { popouts: n, setPopout: r } = (0, O.A)(e.id, U.Fd),
         { usernameProfile: a, avatarProfile: s } = n,
@@ -116,6 +121,7 @@ function F(e, t) {
         showAvatarPopout: s,
     };
 }
+
 function B(e) {
     let { mergedMessageRecord: t, content: n, channel: i, reportingUserId: a, reportedTimestamp: s } = e,
         o = (0, h.m2)(t.author, i),
@@ -161,6 +167,7 @@ function B(e) {
         author: o,
     });
 }
+
 function H(e) {
     var t, n, a;
     let { message: o, snapshot: l, index: c } = e,
@@ -242,6 +249,7 @@ function H(e) {
               c,
           );
 }
+
 function Y(e) {
     let { message: t } = e;
     return (0, r.jsx)(r.Fragment, {

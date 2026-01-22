@@ -16,6 +16,7 @@ var r = n(627968),
     h = n(849077);
 n(445368);
 var b = n(626600);
+
 function g() {
     let { setSelectedFilter: e } = (0, d.A)(),
         t = (0, p.S)((e) => e.setInboxReadState);
@@ -23,6 +24,7 @@ function g() {
         e(h.Io.ALL), t(!1);
     };
 }
+
 function m(e) {
     let t,
         n,
@@ -53,7 +55,9 @@ function m(e) {
                         return (0, r.jsx)(o.hVq, {
                             count: n,
                             renderBadgeCount: t,
-                            style: { width: l },
+                            style: {
+                                width: l,
+                            },
                             className: b.xF,
                         });
                     })(t, n),
@@ -70,7 +74,9 @@ function m(e) {
                 }),
                 [i, t.width],
             )),
-        { entrypoint: m } = (0, u.X8)({ location: "useInboxBadgeInfo" });
+        { entrypoint: m } = (0, u.X8)({
+            location: "useInboxBadgeInfo",
+        });
     return l.useMemo(() => {
         if (p > 0) return g;
         let e = h.length;
@@ -94,7 +100,9 @@ function m(e) {
                             minHeight: 13,
                             minWidth: 13,
                         },
-                        className: a()(b.xF, b.pw, { [b.wH]: d }),
+                        className: a()(b.xF, b.pw, {
+                            [b.wH]: d,
+                        }),
                     })),
                 badgeType: "unread",
                 dimensions: {

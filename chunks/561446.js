@@ -1,4 +1,6 @@
-n.d(t, { A: () => y });
+n.d(t, {
+    A: () => y,
+});
 var r = n(627968);
 n(64700);
 var l = n(311907),
@@ -16,6 +18,7 @@ var l = n(311907),
     g = n(652215),
     m = n(985018),
     A = n(116228);
+
 function y(e) {
     let { channelId: t, showProfile: n = !1, showTrailingDivider: y = !1 } = e,
         O = f.default.cast(t),

@@ -1,4 +1,6 @@
-n.d(t, { A: () => O });
+n.d(t, {
+    A: () => O,
+});
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -16,6 +18,7 @@ var r = n(627968),
     m = n(723702),
     A = n(475815),
     y = n(652215);
+
 function O(e) {
     let { channel: t, appContext: n, popoutOpen: O, popoutWindow: j, currentWindow: v } = e,
         { parentAnalyticsLocation: x } = (0, c.Ay)(),
@@ -125,7 +128,12 @@ function O(e) {
                             });
                     }
                     return e;
-                })({ video_layout: E ? "popout" : C }, (0, o.QS)(e.id)),
+                })(
+                    {
+                        video_layout: E ? "popout" : C,
+                    },
+                    (0, o.QS)(e.id),
+                ),
             ),
             () => {
                 (E && (0, m.isMac)()) || t(C);

@@ -12,7 +12,9 @@ var a = {},
                             e +
                                 ';addEventListener("error",function(e){e=e.error;postMessage({$e$:[e.message,e.code,e.stack]})})',
                         ],
-                        { type: "text/javascript" },
+                        {
+                            type: "text/javascript",
+                        },
                     ),
                 )),
         );
@@ -343,14 +345,24 @@ var k = A(w, 9, 1),
         return (e[t] | (e[t + 1] << 8) | (e[t + 2] << 16) | (e[t + 3] << 24)) >>> 0;
     },
     G = function (e, t) {
-        return W(e, t) + 4294967296 * W(e, t + 4);
+        return W(e, t) + 0x100000000 * W(e, t + 4);
     };
+
 function V(e, t) {
-    return D(e, { i: 2 }, t && t.out, t && t.dictionary);
+    return D(
+        e,
+        {
+            i: 2,
+        },
+        t && t.out,
+        t && t.dictionary,
+    );
 }
 var K = "u" > typeof TextDecoder && new TextDecoder();
 try {
-    K.decode(P, { stream: !0 });
+    K.decode(P, {
+        stream: !0,
+    });
 } catch (e) {}
 var Z = function (e) {
     for (var t = "", r = 0; ; ) {
@@ -377,6 +389,7 @@ var Z = function (e) {
             : (t += String.fromCharCode(a));
     }
 };
+
 function J(e, t) {
     if (t) {
         for (var r = "", a = 0; a < e.length; a += 16384)
@@ -394,7 +407,7 @@ var H = function (e, t, r) {
             n = J(e.subarray(t + 46, t + 46 + a), !(2048 & $(e, t + 8))),
             s = t + 46 + a,
             o = W(e, t + 20),
-            i = r && 4294967295 == o ? X(e, s) : [o, W(e, t + 24), W(e, t + 42)],
+            i = r && 0xffffffff == o ? X(e, s) : [o, W(e, t + 24), W(e, t + 42)],
             c = i[0],
             l = i[1],
             u = i[2];
@@ -412,6 +425,7 @@ var H = function (e, t, r) {
               : function (e) {
                     e();
                 };
+
 function Q(e, t, r) {
     r || ((r = t), (t = {})), "function" != typeof r && S(7);
     var a = [],
@@ -427,16 +441,16 @@ function Q(e, t, r) {
     Y(function () {
         i = r;
     });
-    for (var c = e.length - 22; 101010256 != W(e, c); --c)
+    for (var c = e.length - 22; 0x6054b50 != W(e, c); --c)
         if (!c || e.length - c > 65558) return i(S(13, 0, 1), null), n;
     var l = $(e, c + 8);
     if (l) {
         var u = l,
             b = W(e, c + 16),
-            f = 4294967295 == b || 65535 == u;
+            f = 0xffffffff == b || 65535 == u;
         if (f) {
             var d = W(e, c - 12);
-            (f = 101075792 == W(e, d)) && ((u = l = W(e, d + 32)), (b = W(e, d + 48)));
+            (f = 0x6064b50 == W(e, d)) && ((u = l = W(e, d + 32)), (b = W(e, d + 48)));
         }
         for (var h = t && t.filter, p = 0; p < u; ++p)
             !(function (t) {
@@ -466,15 +480,22 @@ function Q(e, t, r) {
                             var A,
                                 w,
                                 O = e.subarray(v, v + u);
-                            if (u < 320000)
+                            if (u < 32e4)
                                 try {
-                                    m(null, V(O, { out: new s(d) }));
+                                    m(
+                                        null,
+                                        V(O, {
+                                            out: new s(d),
+                                        }),
+                                    );
                                 } catch (e) {
                                     m(e, null);
                                 }
                             else
                                 a.push(
-                                    ((A = { size: d }),
+                                    ((A = {
+                                        size: d,
+                                    }),
                                     (w = m) || ((w = A), (A = {})),
                                     "function" != typeof w && S(7),
                                     z(

@@ -1,20 +1,27 @@
-n.d(t, { u: () => c });
+n.d(t, {
+    u: () => c,
+});
 var r = n(562465),
     i = n(73153),
     a = n(153488),
     s = n(318295),
     o = n(21119),
     l = n(652215);
+
 function c() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     return o.A.shouldFetch() && a.A.hasConsented(l.YAq.PERSONALIZATION)
-        ? (i.h.dispatch({ type: "LOAD_USER_AFFINITIES_V2" }),
+        ? (i.h.dispatch({
+              type: "LOAD_USER_AFFINITIES_V2",
+          }),
           r.Bo.get({
               url: l.Rsh.USER_AFFINITIES_V2,
               retries: 3 * !!e,
               oldFormErrors: !0,
               rejectWithError: !1,
-              query: { user_flags: s.b.RECENTLY_RETURNED },
+              query: {
+                  user_flags: s.b.RECENTLY_RETURNED,
+              },
           }).then(
               (e) => {
                   var t;
@@ -42,7 +49,9 @@ function c() {
                   });
               },
               () => {
-                  i.h.dispatch({ type: "LOAD_USER_AFFINITIES_V2_FAILURE" });
+                  i.h.dispatch({
+                      type: "LOAD_USER_AFFINITIES_V2_FAILURE",
+                  });
               },
           ))
         : Promise.resolve();

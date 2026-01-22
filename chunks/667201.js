@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -12,6 +14,7 @@ var i = n(311907),
     f = n(962173),
     p = n(652215),
     _ = n(985018);
+
 function h(e) {
     let { activity: t, entry: n, display: h, onAction: m, onClose: g } = e,
         E = (0, i.bG)([f.A], () => null != f.A.getAccount(null, p.fg2.CRUNCHYROLL));
@@ -19,10 +22,17 @@ function h(e) {
     if (!E)
         return (0, r.jsx)(a.Drp, {
             id: "connect-crunchyroll",
-            label: _.intl.formatToPlainString(_.t.XWSHTb, { platform: s.A.get(p.fg2.CRUNCHYROLL).name }),
+            label: _.intl.formatToPlainString(_.t.XWSHTb, {
+                platform: s.A.get(p.fg2.CRUNCHYROLL).name,
+            }),
             action: () => {
-                null == m || m({ action: "PRESS_CONNECT_CRUNCHYROLL_MENU_ITEM" }),
-                    (0, d.openUserSettings)(u.X.CONNECTIONS_PANEL, { section: p.nc_.CONNECTIONS }),
+                null == m ||
+                    m({
+                        action: "PRESS_CONNECT_CRUNCHYROLL_MENU_ITEM",
+                    }),
+                    (0, d.openUserSettings)(u.X.CONNECTIONS_PANEL, {
+                        section: p.nc_.CONNECTIONS,
+                    }),
                     null == g || g();
             },
         });
@@ -34,7 +44,11 @@ function h(e) {
               id: "watch-on-crunchyroll",
               label: _.intl.string(_.t.OpxQVH),
               action: () => {
-                  null == m || m({ action: "PRESS_WATCH_ON_CRUNCHYROLL_MENU_ITEM" }), (0, l.C)(b);
+                  null == m ||
+                      m({
+                          action: "PRESS_WATCH_ON_CRUNCHYROLL_MENU_ITEM",
+                      }),
+                      (0, l.C)(b);
               },
           });
 }

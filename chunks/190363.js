@@ -1,2 +1,4 @@
-n.d(t, { k: () => r });
+n.d(t, {
+    k: () => r,
+});
 let r = "CONNECTED_GAMES";

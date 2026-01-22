@@ -1,16 +1,18 @@
 !(function (e, t) {
     t(n(989349));
 })(0, function (e) {
-    var t = "leden_únor_březen_duben_květen_červen_červenec_srpen_září_říjen_listopad_prosinec".split("_"),
-        n = "led_úno_bře_dub_kvě_čvn_čvc_srp_zář_říj_lis_pro".split("_");
+    var t = "leden_\xfanor_březen_duben_květen_červen_červenec_srpen_z\xe1ř\xed_ř\xedjen_listopad_prosinec".split("_"),
+        n = "led_\xfano_bře_dub_kvě_čvn_čvc_srp_z\xe1ř_ř\xedj_lis_pro".split("_");
+
     function r(e) {
         return e > 1 && e < 5 && 1 != ~~(e / 10);
     }
+
     function i(e, t, n, i) {
         var a = e + " ";
         switch (n) {
             case "s":
-                return t || i ? "pár sekund" : "pár sekundami";
+                return t || i ? "p\xe1r sekund" : "p\xe1r sekundami";
             case "ss":
                 if (t || i) return a + (r(e) ? "sekundy" : "sekund");
                 return a + "sekundami";
@@ -27,13 +29,13 @@
             case "d":
                 return t || i ? "den" : "dnem";
             case "dd":
-                if (t || i) return a + (r(e) ? "dny" : "dní");
+                if (t || i) return a + (r(e) ? "dny" : "dn\xed");
                 return a + "dny";
             case "M":
-                return t || i ? "měsíc" : "měsícem";
+                return t || i ? "měs\xedc" : "měs\xedcem";
             case "MM":
-                if (t || i) return a + (r(e) ? "měsíce" : "měsíců");
-                return a + "měsíci";
+                if (t || i) return a + (r(e) ? "měs\xedce" : "měs\xedců");
+                return a + "měs\xedci";
             case "y":
                 return t || i ? "rok" : "rokem";
             case "yy":
@@ -62,9 +64,9 @@
             for (t = 0; t < 12; t++) n[t] = RegExp("^" + e[t] + "$", "i");
             return n;
         })(t),
-        weekdays: "neděle_pondělí_úterý_středa_čtvrtek_pátek_sobota".split("_"),
-        weekdaysShort: "ne_po_út_st_čt_pá_so".split("_"),
-        weekdaysMin: "ne_po_út_st_čt_pá_so".split("_"),
+        weekdays: "neděle_ponděl\xed_\xfater\xfd_středa_čtvrtek_p\xe1tek_sobota".split("_"),
+        weekdaysShort: "ne_po_\xfat_st_čt_p\xe1_so".split("_"),
+        weekdaysMin: "ne_po_\xfat_st_čt_p\xe1_so".split("_"),
         longDateFormat: {
             LT: "H:mm",
             LTS: "H:mm:ss",
@@ -76,7 +78,7 @@
         },
         calendar: {
             sameDay: "[dnes v] LT",
-            nextDay: "[zítra v] LT",
+            nextDay: "[z\xedtra v] LT",
             nextWeek: function () {
                 switch (this.day()) {
                     case 0:
@@ -89,7 +91,7 @@
                     case 4:
                         return "[ve čtvrtek v] LT";
                     case 5:
-                        return "[v pátek v] LT";
+                        return "[v p\xe1tek v] LT";
                     case 6:
                         return "[v sobotu v] LT";
                 }
@@ -101,12 +103,12 @@
                         return "[minulou neděli v] LT";
                     case 1:
                     case 2:
-                        return "[minulé] dddd [v] LT";
+                        return "[minul\xe9] dddd [v] LT";
                     case 3:
                         return "[minulou středu v] LT";
                     case 4:
                     case 5:
-                        return "[minulý] dddd [v] LT";
+                        return "[minul\xfd] dddd [v] LT";
                     case 6:
                         return "[minulou sobotu v] LT";
                 }

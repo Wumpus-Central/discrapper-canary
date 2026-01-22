@@ -1,4 +1,6 @@
-n.d(t, { v: () => h });
+n.d(t, {
+    v: () => h,
+});
 var r = n(627968),
     i = n(64700),
     l = n(397927),
@@ -10,6 +12,7 @@ var r = n(627968),
     d = n(629199),
     p = n(985018),
     f = n(173801);
+
 function h(e) {
     let { active: t, user: n, channel: h } = e,
         A = (0, c.k)(),

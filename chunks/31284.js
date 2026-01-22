@@ -1,4 +1,7 @@
-n.d(t, { A: () => R }), n(896048);
+n.d(t, {
+    A: () => R,
+}),
+    n(896048);
 var i = n(627968),
     r = n(64700),
     s = n(503698),
@@ -26,6 +29,7 @@ var i = n(627968),
     I = n(985018),
     C = n(737398),
     w = n(255259);
+
 function N(e, t, n) {
     return (
         t in e
@@ -39,6 +43,7 @@ function N(e, t, n) {
         e
     );
 }
+
 function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -55,6 +60,7 @@ function P(e) {
     }
     return e;
 }
+
 function D(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -110,7 +116,9 @@ class T extends r.PureComponent {
         return null == s
             ? null
             : (0, i.jsx)(j.Ay.Bar, {
-                  className: l()(e, C.ne, { [C.CW]: !n }),
+                  className: l()(e, C.ne, {
+                      [C.CW]: !n,
+                  }),
                   children: (0, i.jsxs)(j.Ay.Content, {
                       className: l()(t, C.Qs),
                       dynamicSize: !0,
@@ -192,6 +200,7 @@ class T extends r.PureComponent {
             });
     }
 }
+
 function R(e) {
     let { context: t, lobbyId: n, channel: r } = e,
         s = (function (e, t) {

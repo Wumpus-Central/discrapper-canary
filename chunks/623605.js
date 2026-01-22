@@ -1,10 +1,13 @@
-n.d(t, { B: () => u });
+n.d(t, {
+    B: () => u,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
     a = n(954571),
     s = n(646363),
     o = n(652215);
+
 function l(e, t, n) {
     return (
         t in e
@@ -18,6 +21,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,11 +38,23 @@ function c(e) {
     }
     return e;
 }
+
 function u(e) {
     let { onConfirm: t } = e;
-    a.default.track(o.HAw.OPEN_MODAL, { type: s.C }),
+    a.default.track(o.HAw.OPEN_MODAL, {
+        type: s.C,
+    }),
         (0, i.mMO)(async () => {
             let { default: e } = await n.e("52049").then(n.bind(n, 691464));
-            return (n) => (0, r.jsx)(e, c({ onConfirm: t }, n));
+            return (n) =>
+                (0, r.jsx)(
+                    e,
+                    c(
+                        {
+                            onConfirm: t,
+                        },
+                        n,
+                    ),
+                );
         });
 }

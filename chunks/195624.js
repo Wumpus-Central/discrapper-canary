@@ -1,4 +1,7 @@
-i.r(a), i.d(a, { default: () => o });
+i.r(a),
+    i.d(a, {
+        default: () => o,
+    });
 var o = {
     payButton: "Plačilo",
     "payButton.redirecting": "Preusmerjanje...",
@@ -23,7 +26,7 @@ var o = {
     "creditCard.cvcField.placeholder.3digits": "3 števke",
     "creditCard.taxNumber.placeholder": "LLMMDD / 0123456789",
     installments: "Število obrokov",
-    installmentOption: "%{times} \xD7 %{partialValue}",
+    installmentOption: "%{times} \xd7 %{partialValue}",
     installmentOptionMonths: "Št. mesecev: %{times}",
     "installments.oneTime": "Enkratno plačilo",
     "installments.installments": "Obročno plačilo",
@@ -41,7 +44,7 @@ var o = {
     "idealIssuer.selectField.title": "Banka",
     "idealIssuer.selectField.placeholder": "Izberite svojo banko",
     "creditCard.success": "Plačilo je bilo uspešno",
-    loading: "Nalaganje\u2026",
+    loading: "Nalaganje…",
     continue: "Nadaljuj",
     continueTo: "Nadaljujte na",
     "wechatpay.timetopay": "Plačati morate %@",

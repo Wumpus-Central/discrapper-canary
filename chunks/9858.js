@@ -1,4 +1,9 @@
-n.d(t, { J: () => A }), n(747238), n(812715), n(896048);
+n.d(t, {
+    J: () => A,
+}),
+    n(747238),
+    n(812715),
+    n(896048);
 var r = n(87955),
     i = n(735438),
     a = n.n(i),
@@ -9,6 +14,7 @@ var r = n(87955),
     u = n(403362),
     d = n(626457),
     f = n(565314);
+
 function p(e, t, n) {
     return (
         t in e
@@ -25,6 +31,7 @@ function p(e, t, n) {
 let _ = 250,
     h = new l.A("Spellchecker"),
     m = null === o.A || void 0 === o.A ? void 0 : o.A.spellCheck;
+
 function g(e) {
     var t;
     e = null != (t = f.A[e]) ? t : e;
@@ -104,9 +111,11 @@ let b = a().debounce((e, t) => {
     let n = O(t);
     null != n && e.detectLanguage(n);
 }, _);
+
 function y(e) {
     null != document.body && document.body.addEventListener("beforeinput", (t) => b(e, t.target), !0);
 }
+
 function O(e) {
     return null == e
         ? null

@@ -38,6 +38,7 @@ let c = 10,
     p = 3,
     _ = 10,
     h = 500;
+
 function m(e) {
     if (null != e.choices) return i.intl.string(i.t.xi5aah);
     switch (e.type) {

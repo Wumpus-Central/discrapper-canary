@@ -1,4 +1,8 @@
-l.d(n, { Ay: () => L }), l(896048), l(228524);
+l.d(n, {
+    Ay: () => L,
+}),
+    l(896048),
+    l(228524);
 var t = l(627968),
     a = l(64700),
     r = l(503698),
@@ -29,6 +33,7 @@ var t = l(627968),
     G = l(446964),
     M = l(206314),
     S = l(296997);
+
 function D(e) {
     let n,
         l,
@@ -58,7 +63,9 @@ function D(e) {
                     autoPlay: p,
                     animated: g && !d && x,
                     containerClassName: G.iT,
-                    imageClassName: i()({ [G.cd]: d }),
+                    imageClassName: i()({
+                        [G.cd]: d,
+                    }),
                     analyticsSource: "ResourceChannelMedia",
                 }),
                 d &&
@@ -70,6 +77,7 @@ function D(e) {
         })
     );
 }
+
 function P(e) {
     let { resource: n } = e,
         l = (0, s.bG)([A.A], () => A.A.getChannel(n.channelId)),
@@ -165,6 +173,7 @@ function P(e) {
         ],
     });
 }
+
 function L(e) {
     let { guild: n, isNewMember: l } = e,
         a = (0, _.A)(n.id);
@@ -207,7 +216,15 @@ function L(e) {
                       color: "text-strong",
                       children: E.intl.string(E.t.xwY4La),
                   }),
-                  a.map((e) => (0, t.jsx)(P, { resource: e }, e.channelId)),
+                  a.map((e) =>
+                      (0, t.jsx)(
+                          P,
+                          {
+                              resource: e,
+                          },
+                          e.channelId,
+                      ),
+                  ),
               ],
           });
 }

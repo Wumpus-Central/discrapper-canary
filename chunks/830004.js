@@ -1,4 +1,6 @@
-n.d(t, { i: () => i });
+n.d(t, {
+    i: () => i,
+});
 var r = n(723702);
 let i = {
     binds: ["mod+alt+i"],

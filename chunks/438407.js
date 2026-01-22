@@ -29,6 +29,7 @@ var l = n(627968),
     p = n(652215),
     b = n(985018),
     G = n(159529);
+
 function R(e, t) {
     let n = S.Yj[e.targetType];
     return null != n && !0 === n[t.key];
@@ -38,6 +39,7 @@ let D = {
     [p.RWi.UPDATE]: G.typeUpdate,
     [p.RWi.DELETE]: G.typeDelete,
 };
+
 function L(e) {
     let { applicationId: t } = e,
         n = (0, g.h)(t);
@@ -48,12 +50,15 @@ function L(e) {
               children: n.name,
           });
 }
+
 function x(e, t) {
     return (0, l.jsx)(
         "div",
         {
             className: G.colorHook,
-            style: { backgroundColor: t },
+            style: {
+                backgroundColor: t,
+            },
         },
         e,
     );
@@ -101,9 +106,12 @@ class C extends r.PureComponent {
                         }[t],
                 a,
             );
-        return (0, l.jsx)("div", { className: s });
+        return (0, l.jsx)("div", {
+            className: s,
+        });
     }
 }
+
 function M(e) {
     let { log: t, guild: n, onContentClick: a, className: s } = e,
         c = r.useCallback(
@@ -122,9 +130,17 @@ function M(e) {
                                             var e, n;
                                             return {
                                                 oldValue:
-                                                    null != (e = a.oldValue) ? e : (0, I.Jg)({ type: a.oldValue }),
+                                                    null != (e = a.oldValue)
+                                                        ? e
+                                                        : (0, I.Jg)({
+                                                              type: a.oldValue,
+                                                          }),
                                                 newValue:
-                                                    null != (n = a.newValue) ? n : (0, I.Jg)({ type: a.newValue }),
+                                                    null != (n = a.newValue)
+                                                        ? n
+                                                        : (0, I.Jg)({
+                                                              type: a.newValue,
+                                                          }),
                                             };
                                         }
                                         if (
@@ -139,8 +155,12 @@ function M(e) {
                                         }
                                         return t.action === p.F_X.GUILD_UPDATE && a.key === p.gGk.OWNER_ID
                                             ? {
-                                                  oldValue: m.Ay.getUserTag(a.oldValue, { mode: "username" }),
-                                                  newValue: m.Ay.getUserTag(a.newValue, { mode: "username" }),
+                                                  oldValue: m.Ay.getUserTag(a.oldValue, {
+                                                      mode: "username",
+                                                  }),
+                                                  newValue: m.Ay.getUserTag(a.newValue, {
+                                                      mode: "username",
+                                                  }),
                                               }
                                             : a;
                                     })(),
@@ -280,7 +300,9 @@ function M(e) {
                                                                                         variant: "text-md/normal",
                                                                                         children: b.intl.format(
                                                                                             b.t.CZ1tyo,
-                                                                                            { title: a },
+                                                                                            {
+                                                                                                title: a,
+                                                                                            },
                                                                                         ),
                                                                                     }),
                                                                                 ],
@@ -294,7 +316,9 @@ function M(e) {
                                                                                             variant: "text-md/normal",
                                                                                             children: b.intl.format(
                                                                                                 b.t["gt/5z1"],
-                                                                                                { roles: c.join(", ") },
+                                                                                                {
+                                                                                                    roles: c.join(", "),
+                                                                                                },
                                                                                             ),
                                                                                         }),
                                                                                     u.length > 0 &&
@@ -331,7 +355,9 @@ function M(e) {
                                                                                     variant: "text-md/normal",
                                                                                     children: b.intl.format(
                                                                                         b.t["m3dt+K"],
-                                                                                        { title: e.title },
+                                                                                        {
+                                                                                            title: e.title,
+                                                                                        },
                                                                                     ),
                                                                                 }),
                                                                             ],
@@ -383,7 +409,9 @@ function M(e) {
                                                                                                   children:
                                                                                                       b.intl.format(
                                                                                                           b.t["WZO+ia"],
-                                                                                                          { title: r },
+                                                                                                          {
+                                                                                                              title: r,
+                                                                                                          },
                                                                                                       ),
                                                                                               }),
                                                                                           ],
@@ -606,7 +634,9 @@ function M(e) {
                                                                                             variant: "text-md/normal",
                                                                                             children: b.intl.format(
                                                                                                 b.t.oFSu66,
-                                                                                                { name: e.title },
+                                                                                                {
+                                                                                                    name: e.title,
+                                                                                                },
                                                                                             ),
                                                                                         }),
                                                                                     ],
@@ -632,7 +662,9 @@ function M(e) {
                                                                                             variant: "text-md/normal",
                                                                                             children: b.intl.format(
                                                                                                 b.t.GssWar,
-                                                                                                { name: e.title },
+                                                                                                {
+                                                                                                    name: e.title,
+                                                                                                },
                                                                                             ),
                                                                                         }),
                                                                                     ],
@@ -672,7 +704,9 @@ function M(e) {
                                                                                             variant: "text-md/normal",
                                                                                             children: b.intl.format(
                                                                                                 b.t.HlGndE,
-                                                                                                { name: e.title },
+                                                                                                {
+                                                                                                    name: e.title,
+                                                                                                },
                                                                                             ),
                                                                                         }),
                                                                                     ],
@@ -698,7 +732,9 @@ function M(e) {
                                                                                             variant: "text-md/normal",
                                                                                             children: b.intl.format(
                                                                                                 b.t["7pysg6"],
-                                                                                                { name: e.title },
+                                                                                                {
+                                                                                                    name: e.title,
+                                                                                                },
                                                                                             ),
                                                                                         }),
                                                                                     ],
@@ -781,8 +817,22 @@ function M(e) {
                                                 },
                                                 t,
                                             ),
-                                        oldEmojiHook: (e, t) => (0, l.jsx)(_.A, { emojiId: c }, t),
-                                        newEmojiHook: (e, t) => (0, l.jsx)(_.A, { emojiId: u }, t),
+                                        oldEmojiHook: (e, t) =>
+                                            (0, l.jsx)(
+                                                _.A,
+                                                {
+                                                    emojiId: c,
+                                                },
+                                                t,
+                                            ),
+                                        newEmojiHook: (e, t) =>
+                                            (0, l.jsx)(
+                                                _.A,
+                                                {
+                                                    emojiId: u,
+                                                },
+                                                t,
+                                            ),
                                         applicationHook: (e, t) => {
                                             var n;
                                             return (0, l.jsx)(
@@ -827,7 +877,7 @@ function M(e) {
                                                               s < 10 ? "0".concat(s) : s,
                                                               (0, l.jsx)("span", {
                                                                   className: G.dash,
-                                                                  children: "\u2014",
+                                                                  children: "—",
                                                               }),
                                                           ],
                                                       }),
@@ -838,7 +888,11 @@ function M(e) {
                                                                   className: G.changeStr,
                                                                   children: T,
                                                               }),
-                                                              null != i ? (0, l.jsx)("div", { children: i }) : null,
+                                                              null != i
+                                                                  ? (0, l.jsx)("div", {
+                                                                        children: i,
+                                                                    })
+                                                                  : null,
                                                           ],
                                                       }),
                                                   ],

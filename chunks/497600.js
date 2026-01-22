@@ -1,4 +1,6 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var l = n(627968);
 n(64700);
 var i = n(397927),
@@ -10,6 +12,7 @@ var i = n(397927),
     u = n(652215),
     c = n(518477),
     A = n(985018);
+
 function b(e) {
     let { user: t, guildId: n, channelId: b, context: g } = e,
         { id: f } = t,

@@ -1,4 +1,6 @@
-e.d(n, { default: () => f });
+e.d(n, {
+    default: () => f,
+});
 var o = e(627968);
 e(64700);
 var i = e(397927),
@@ -10,6 +12,7 @@ var i = e(397927),
     l = e(711905),
     b = e(25765),
     p = e(689588);
+
 function f(t) {
     let { transitionState: n, onClose: e, analyticsLocation: f, platformType: A } = t,
         {
@@ -82,7 +85,9 @@ function f(t) {
                 }),
                 (0, o.jsx)(i.q7S, {
                     id: b.N.SUCCESS,
-                    children: (0, o.jsx)(l.c, { onClose: e }),
+                    children: (0, o.jsx)(l.c, {
+                        onClose: e,
+                    }),
                 }),
             ],
         }),

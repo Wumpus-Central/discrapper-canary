@@ -1,9 +1,12 @@
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});
 var l = n(627968);
 n(64700);
 var i = n(397927),
     s = n(932104),
     a = n(906471);
+
 function r(e) {
     let { icon: t, message: n, onClick: r, autoFocus: c } = e;
     return (0, l.jsx)(i.vN3, {

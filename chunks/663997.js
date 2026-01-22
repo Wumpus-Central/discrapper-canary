@@ -11,6 +11,7 @@ var r = n(64700),
     o = n(624458),
     c = n(513461);
 let u = 100;
+
 function d(e) {
     let { guildId: t, guildJoinRequests: n } = e,
         l = r.useRef(!1),
@@ -28,15 +29,25 @@ function d(e) {
                 let m = (function (e, t, n, r) {
                     let l = n === c.B5.SUBMITTED;
                     if (t === c._e.TIMESTAMP_DESC)
-                        if (r) return { before: s.default.fromTimestamp(new Date().getTime()) };
+                        if (r)
+                            return {
+                                before: s.default.fromTimestamp(new Date().getTime()),
+                            };
                         else {
                             let t = e[e.length - 1];
-                            return { before: l ? t.joinRequestId : t.actionedAt };
+                            return {
+                                before: l ? t.joinRequestId : t.actionedAt,
+                            };
                         }
-                    if (r) return { after: s.default.fromTimestamp(i()().subtract(180, "days").valueOf()) };
+                    if (r)
+                        return {
+                            after: s.default.fromTimestamp(i()().subtract(180, "days").valueOf()),
+                        };
                     {
                         let t = e[e.length - 1];
-                        return { after: l ? t.joinRequestId : t.actionedAt };
+                        return {
+                            after: l ? t.joinRequestId : t.actionedAt,
+                        };
                     }
                 })(n, e, r, g);
                 try {

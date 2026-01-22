@@ -1,8 +1,12 @@
-n.d(t, { A: () => G }), n(65821), n(896048);
+n.d(t, {
+    A: () => G,
+}),
+    n(65821),
+    n(896048);
 var r,
     l = n(627968),
     i = n(64700),
-    a = n(432022),
+    a = n(108531),
     s = n(837381),
     o = n(311907),
     c = n(397927),
@@ -27,6 +31,7 @@ var r,
     I = n(652215),
     N = n(985018),
     T = n(308294);
+
 function P(e, t, n) {
     return (
         t in e
@@ -40,6 +45,7 @@ function P(e, t, n) {
         e
     );
 }
+
 function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -56,6 +62,7 @@ function w(e) {
     }
     return e;
 }
+
 function R(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -78,11 +85,17 @@ let D = {
     friction: 28,
     tension: 600,
 };
+
 function M(e) {
     switch (e) {
         case "height":
         case "opacity":
-            return w({ duration: 150 }, D);
+            return w(
+                {
+                    duration: 150,
+                },
+                D,
+            );
         case "scale":
             return w({}, D);
         default:
@@ -102,7 +115,11 @@ class L extends (r = i.PureComponent) {
                     config: M,
                 })
                 .start()
-                .then(() => this.setState({ animating: !1 }));
+                .then(() =>
+                    this.setState({
+                        animating: !1,
+                    }),
+                );
     }
     componentWillAppear(e) {
         let { controller: t } = this.state;
@@ -118,17 +135,21 @@ class L extends (r = i.PureComponent) {
     }
     componentWillLeave(e) {
         let { controller: t } = this.state;
-        this.setState({ animating: !0 }, () =>
-            t
-                .update({
-                    immediate: !j.A.isFocused(),
-                    height: 0,
-                    opacity: 0,
-                    scale: 0,
-                    config: M,
-                })
-                .start()
-                .then(e),
+        this.setState(
+            {
+                animating: !0,
+            },
+            () =>
+                t
+                    .update({
+                        immediate: !j.A.isFocused(),
+                        height: 0,
+                        opacity: 0,
+                        scale: 0,
+                        config: M,
+                    })
+                    .start()
+                    .then(e),
         );
     }
     componentWillUnmount() {
@@ -171,8 +192,14 @@ class L extends (r = i.PureComponent) {
                     w(
                         {
                             to: I.BVt.CHANNEL(I.ME, e.id),
-                            onMouseEnter: () => this.setState({ hovered: !0 }),
-                            onMouseLeave: () => this.setState({ hovered: !1 }),
+                            onMouseEnter: () =>
+                                this.setState({
+                                    hovered: !0,
+                                }),
+                            onMouseLeave: () =>
+                                this.setState({
+                                    hovered: !1,
+                                }),
                             selected: n || b,
                             ariaLabel:
                                 null != t
@@ -206,7 +233,9 @@ class L extends (r = i.PureComponent) {
                     screenshare: o,
                     isCurrentUserConnected: u,
                 }),
-                lowerBadgeSize: { width: (0, c.o6S)(r) },
+                lowerBadgeSize: {
+                    width: (0, c.o6S)(r),
+                },
                 children: A(),
             }),
             O = p
@@ -296,7 +325,9 @@ let G = i.forwardRef(function (e, t) {
         h = (0, o.bG)([O.Ay], () => O.Ay.getVoiceStatesForChannel(e.channel).length > 0, [e.channel]),
         y = (0, o.bG)([A.A], () => A.A.getChannelId(), []),
         j = (0, o.bG)([m.Ay], () => m.Ay.getMentionCount(n), [n]),
-        { enabled: x } = (0, v.r)({ location: "DirectMessage" }),
+        { enabled: x } = (0, v.r)({
+            location: "DirectMessage",
+        }),
         E = a === n,
         _ = !1,
         C = !1;

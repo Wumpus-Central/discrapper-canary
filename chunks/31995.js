@@ -1,4 +1,6 @@
-n.d(t, { A: () => I });
+n.d(t, {
+    A: () => I,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -17,6 +19,7 @@ var r = n(627968),
     E = n(936755),
     b = n(985018),
     y = n(670567);
+
 function O(e, t, n) {
     return (
         t in e
@@ -30,6 +33,7 @@ function O(e, t, n) {
         e
     );
 }
+
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -46,6 +50,7 @@ function A(e) {
     }
     return e;
 }
+
 function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -58,6 +63,7 @@ function v(e, t) {
     }
     return n;
 }
+
 function S(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -147,7 +153,9 @@ let I = function (e) {
                                 } else w();
                             },
                             children: [
-                                (0, r.jsx)(E.A, { children: N }),
+                                (0, r.jsx)(E.A, {
+                                    children: N,
+                                }),
                                 (0, r.jsx)("span", {
                                     className: y.UU,
                                     children:

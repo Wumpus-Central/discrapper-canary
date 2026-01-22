@@ -56,6 +56,7 @@ var r,
     j = n(639621),
     x = n(613057),
     P = n(652215);
+
 function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -81,6 +82,7 @@ function w(e) {
     }
     return e;
 }
+
 function L(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -112,6 +114,7 @@ let R = null != (r = null == (i = N.A.toURLSafe(window.GLOBAL_ENV.API_ENDPOINT))
     ),
     k = +v.A.Millis.MINUTE,
     U = {};
+
 function G(e) {
     return (
         "customEmoji" === e.type && (e.type = "emoji"),
@@ -120,6 +123,7 @@ function G(e) {
         e
     );
 }
+
 function V(e) {
     return /^http/.test(e)
         ? e
@@ -129,10 +133,12 @@ function V(e) {
               .concat("/" === e.charAt(0) ? "" : "/")
               .concat(e);
 }
+
 function B(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
     return t.indexOf(e) > -1;
 }
+
 function H(e, t) {
     let n = [],
         r = e.getGuildId();
@@ -169,8 +175,11 @@ function H(e, t) {
         })
     );
 }
+
 function F(e) {
-    let t = p.A.parseToAST(e.content, !0, { channelId: e.channel_id }).map(G),
+    let t = p.A.parseToAST(e.content, !0, {
+            channelId: e.channel_id,
+        }).map(G),
         n = m.A.getChannel(e.channel_id),
         r = null != e.author ? new g.A(e.author) : void 0,
         i = null != e.author ? (0, f.FT)(r, n) : void 0;
@@ -195,6 +204,7 @@ function F(e) {
         type: e.type,
     };
 }
+
 function Y(e, t, n) {
     let { mute: r, deaf: i, selfMute: l, selfDeaf: a, suppress: s, userId: o } = n,
         c = y.default.getUser(o);
@@ -214,6 +224,7 @@ function Y(e, t, n) {
         user: (0, j.A)(c),
     };
 }
+
 function K(e, t) {
     return {
         type: e,
@@ -224,6 +235,7 @@ function K(e, t) {
         },
     };
 }
+
 function z(e, t) {
     var n;
     return null == t
@@ -234,6 +246,7 @@ function z(e, t) {
               }),
           });
 }
+
 function W(e) {
     let t;
     if (null == e) return !1;
@@ -249,10 +262,12 @@ function W(e) {
         (null == e.match("staging") && !!(M.test(e) && M.test(n)))
     );
 }
+
 function q(e, t, n) {
     let r = b.A.getGuild(e.getGuildId());
     return (null != r ? r.application_id : e.getApplicationId()) === t || n.indexOf(a.F.MESSAGES_READ) > -1;
 }
+
 function Q(e) {
     switch (e) {
         case P.S7L.RTC_CONNECTED:
@@ -263,9 +278,11 @@ function Q(e) {
             return e;
     }
 }
+
 function X(e, t, n) {
     return e === P.xL.JOIN && null != t && null != t.id && null != n.join;
 }
+
 function Z(e) {
     return s.Bo.get({
         url: P.Rsh.APPLICATION_RPC(e),
@@ -278,7 +295,12 @@ function Z(e) {
             return t;
         },
         () => {
-            throw new T.A({ closeCode: P.YI$.INVALID_CLIENTID }, "Invalid Client ID");
+            throw new T.A(
+                {
+                    closeCode: P.YI$.INVALID_CLIENTID,
+                },
+                "Invalid Client ID",
+            );
         },
     );
 }
@@ -287,11 +309,22 @@ async function J(e, t, n) {
     if ("string" == typeof n)
         if (e.transport === x.z4.POST_MESSAGE) {
             let e = (0, u.Ay)(t);
-            if (null == e || !B(n, [e])) throw new T.A({ closeCode: P.YI$.INVALID_ORIGIN }, "Invalid Origin");
+            if (null == e || !B(n, [e]))
+                throw new T.A(
+                    {
+                        closeCode: P.YI$.INVALID_ORIGIN,
+                    },
+                    "Invalid Origin",
+                );
         } else {
             let e = await Z(t);
             if (((r = h.Ay.createFromServer(e)), !B(n, e.rpc_origins)))
-                throw new T.A({ closeCode: P.YI$.INVALID_ORIGIN }, "Invalid Origin");
+                throw new T.A(
+                    {
+                        closeCode: P.YI$.INVALID_ORIGIN,
+                    },
+                    "Invalid Origin",
+                );
         }
     null == r && (r = h.Ay.createFromServer(await Z(t)));
     let { id: i, name: l, icon: a, coverImage: s, flags: o } = r;
@@ -307,9 +340,11 @@ async function $(e, t) {
     let n = U[e];
     null == n && ((n = new o.A(t ? 2 : 60, k)), (U[e] = n)), await n.process();
 }
+
 function ee(e, t) {
     null == t && (e.authorization.scopes = [x.hj]);
 }
+
 function et(e) {
     let t = _.A.getSettings(),
         n = (e) =>
@@ -347,6 +382,7 @@ function et(e) {
         mute: t.mute,
     };
 }
+
 function en(e, t) {
     let n = _.A.getSettings(e),
         r = t(n);
@@ -361,11 +397,24 @@ function en(e, t) {
         self_deaf: n.deaf,
     };
 }
+
 function er(e) {
     if (e !== x.z4.POST_MESSAGE)
-        throw new T.A({ errorCode: P.Lw6.INVALID_COMMAND }, 'command not available from "'.concat(e, " transport"));
+        throw new T.A(
+            {
+                errorCode: P.Lw6.INVALID_COMMAND,
+            },
+            'command not available from "'.concat(e, " transport"),
+        );
 }
+
 function ei(e) {
-    if (null == e.id) throw new T.A({ errorCode: P.Lw6.INVALID_COMMAND }, "Invalid application");
+    if (null == e.id)
+        throw new T.A(
+            {
+                errorCode: P.Lw6.INVALID_COMMAND,
+            },
+            "Invalid application",
+        );
     return e.id;
 }

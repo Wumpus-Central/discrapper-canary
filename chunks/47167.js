@@ -18,6 +18,7 @@ var r = n(311907),
     l = n(427262),
     c = n(652215),
     u = n(985018);
+
 function d(e, t, n) {
     let r = e
         .map(t.getUser)
@@ -28,14 +29,19 @@ function d(e, t, n) {
         });
     return r.length > 0
         ? r.join(", ")
-        : u.intl.formatToPlainString(u.t["9Uk8PF"], { name: l.Ay.getName(t.getCurrentUser()) });
+        : u.intl.formatToPlainString(u.t["9Uk8PF"], {
+              name: l.Ay.getName(t.getCurrentUser()),
+          });
 }
+
 function f(e, t, n) {
     return d(e.recipients, t, n);
 }
+
 function p(e) {
     return (0, r.bG)([s.default, a.A], () => (null != e && e.isMultiUserDM() ? f(e, s.default, a.A) : null));
 }
+
 function _(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         i = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
@@ -71,12 +77,15 @@ function _(e, t, n) {
             return e.name;
     }
 }
+
 function h(e) {
     return e.replace(/\\/g, "\\\\").replace(/"/g, '\\"');
 }
+
 function m(e) {
     return e.replace(/\\"/g, '"').replace(/\\\\/g, "\\");
 }
+
 function g(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return (0, r.bG)([s.default, i.A, a.A], () => (null == e ? null : _(e, s.default, a.A, t)));

@@ -1,4 +1,7 @@
-n.d(t, { A: () => v }), n(896048);
+n.d(t, {
+    A: () => v,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(735438),
@@ -9,6 +12,7 @@ var r = n(627968),
     u = n(927813),
     d = n(652215),
     f = n(985018);
+
 function p(e, t, n) {
     return (
         t in e
@@ -22,6 +26,7 @@ function p(e, t, n) {
         e
     );
 }
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -38,6 +43,7 @@ function _(e) {
     }
     return e;
 }
+
 function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -50,6 +56,7 @@ function h(e, t) {
     }
     return n;
 }
+
 function m(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -61,6 +68,7 @@ function m(e, t) {
         e
     );
 }
+
 function g(e, t) {
     if (null == e) return {};
     var n,
@@ -77,6 +85,7 @@ function g(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function E(e, t) {
     if (null == e) return {};
     var n,
@@ -103,6 +112,7 @@ let b = u.A.Millis.SECOND,
         () => f.intl.string(f.t.bLXdcY),
         () => f.intl.string(f.t.gPg9fS),
     ];
+
 function v(e) {
     let { text: t, copyValue: n, children: u, onCopy: f, "aria-label": p, delay: h = O, dataMeticulousIgnore: E } = e,
         [v, S] = i.useState(0),
@@ -119,7 +129,9 @@ function v(e) {
         ),
         !c.p5)
     )
-        return (0, r.jsx)(r.Fragment, { children: u({}) });
+        return (0, r.jsx)(r.Fragment, {
+            children: u({}),
+        });
     let P = v >= A.length - 1,
         D = P ? o.oMw.RED : o.oMw.GREEN,
         x = I ? D : o.oMw.PRIMARY,

@@ -1,9 +1,12 @@
-n.d(t, { F: () => l });
+n.d(t, {
+    F: () => l,
+});
 var r = n(90727),
     i = n(391898),
     a = n(734481),
     s = n(222367),
     o = n(551253);
+
 function l(e) {
     for (var t = [], n = "", o = Object.keys(e), l = Object.keys(r.lp), u = 0; u < o.length; u++)
         if ("tzid" !== o[u] && (0, i.mK)(l, o[u])) {
@@ -58,6 +61,7 @@ function l(e) {
             .join("\n")
     );
 }
+
 function c(e, t) {
     return e ? "DTSTART" + new o.x(new Date(e), t).toString() : "";
 }

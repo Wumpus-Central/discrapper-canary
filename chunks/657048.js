@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -22,8 +24,12 @@ let d = i.forwardRef(function (e, t) {
     let m = () => {
         let e = (0, r.jsx)("img", {
             ref: t,
-            alt: c.intl.formatToPlainString(c.t["9+YWrE"], { name: d }),
-            className: s()(u.U, n, { [u.v]: null != h }),
+            alt: c.intl.formatToPlainString(c.t["9+YWrE"], {
+                name: d,
+            }),
+            className: s()(u.U, n, {
+                [u.v]: null != h,
+            }),
             height: _ ? f : void 0,
             src: i,
             width: f,
@@ -32,20 +38,28 @@ let d = i.forwardRef(function (e, t) {
             (e = (0, r.jsx)("img", {
                 ref: t,
                 alt: a.allNamesString,
-                className: s()(u.U, n, { [u.v]: null != h }),
+                className: s()(u.U, n, {
+                    [u.v]: null != h,
+                }),
                 height: _ ? f : void 0,
                 src: a.url,
                 width: f,
             })),
         null == h)
             ? (0, r.jsx)(l.vN3, {
-                  offset: { left: 5 },
+                  offset: {
+                      left: 5,
+                  },
                   children: e,
               })
             : (0, r.jsx)(l.DUT, {
                   onClick: h,
                   tag: "span",
-                  focusProps: { offset: { left: 5 } },
+                  focusProps: {
+                      offset: {
+                          left: 5,
+                      },
+                  },
                   children: e,
               });
     };

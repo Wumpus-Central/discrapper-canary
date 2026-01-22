@@ -1,4 +1,6 @@
-n.d(t, { B: () => m });
+n.d(t, {
+    B: () => m,
+});
 var r = n(627968),
     l = n(397927),
     a = n(501664),
@@ -7,6 +9,7 @@ var r = n(627968),
     c = n(818348),
     o = n(985018),
     d = n(969061);
+
 function u(e) {
     let { orbPrice: t, isProductDisabled: n, hasSufficientOrbs: a } = e,
         i = n ? o.intl.string(o.t.wu4gyV) : o.intl.string(o.t.eFNRzU),
@@ -29,6 +32,7 @@ function u(e) {
         ],
     });
 }
+
 function m(e) {
     let {
             prices: t,
@@ -63,7 +67,11 @@ function m(e) {
                                 nitroIconSize: "xs",
                                 discountOfferAmount: b,
                             }),
-                            n || p ? null : (0, r.jsx)(i.A, { product: o }),
+                            n || p
+                                ? null
+                                : (0, r.jsx)(i.A, {
+                                      product: o,
+                                  }),
                         ],
                     }),
                     t.length > 1 &&

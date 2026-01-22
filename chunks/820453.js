@@ -1,4 +1,7 @@
-n.d(t, { A: () => C }), n(896048);
+n.d(t, {
+    A: () => C,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     a = n(503698),
@@ -17,6 +20,7 @@ var r = n(627968),
     j = n(698279),
     y = n(985018),
     h = n(270465);
+
 function v(e, t) {
     if (null == e) return {};
     var n,
@@ -45,6 +49,7 @@ function v(e, t) {
             (r = n[l]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function w(e) {
     let {
         hasUpload: t,
@@ -70,6 +75,7 @@ function w(e) {
             })
           : c;
 }
+
 function P(e) {
     let { onSelect: t, onEditMedia: n, onDeleteMedia: l, closePopout: a } = e;
     return (0, r.jsx)("div", {
@@ -97,6 +103,7 @@ function P(e) {
         }),
     });
 }
+
 function A(e) {
     let {
             channelId: t,
@@ -138,7 +145,9 @@ function A(e) {
                             emojiName: E.name,
                             answerNumber: b + 1,
                         })
-                      : y.intl.formatToPlainString(y.t.emdpNo, { answerNumber: b + 1 }),
+                      : y.intl.formatToPlainString(y.t.emdpNo, {
+                            answerNumber: b + 1,
+                        }),
             [S, E, b, N],
         ),
         U = l.useCallback(
@@ -173,7 +182,9 @@ function A(e) {
             [_, A],
         ),
         K = x
-            ? (0, r.jsx)(c.y$y, { className: h.EC })
+            ? (0, r.jsx)(c.y$y, {
+                  className: h.EC,
+              })
             : (0, r.jsx)(w, {
                   hasUpload: S,
                   mediaUrl: D,
@@ -187,7 +198,9 @@ function A(e) {
                       className: h.vr,
                   }),
               }),
-        Y = i()(j.VQ, h.GB, { [h.ZV]: I });
+        Y = i()(j.VQ, h.GB, {
+            [h.ZV]: I,
+        });
     return (0, r.jsx)(c.YNO, {
         targetElementRef: C,
         renderPopout: U,
@@ -235,7 +248,12 @@ function A(e) {
                                         });
                                 }
                                 return e;
-                            })({ innerRef: R }, u)),
+                            })(
+                                {
+                                    innerRef: R,
+                                },
+                                u,
+                            )),
                             (a = a =
                                 {
                                     className: Y,
@@ -274,6 +292,7 @@ function A(e) {
         },
     });
 }
+
 function C(e) {
     let {
             channelId: t,
@@ -347,13 +366,17 @@ function C(e) {
             },
             trailing: f
                 ? {
-                      "aria-label": y.intl.formatToPlainString(y.t["22fjEc"], { answerNumber: a + 1 }),
+                      "aria-label": y.intl.formatToPlainString(y.t["22fjEc"], {
+                          answerNumber: a + 1,
+                      }),
                       icon: c.ucK,
                       onClick: () => d(a),
                       buttonRef: P,
                   }
                 : void 0,
-            "aria-label": y.intl.formatToPlainString(y.t["3+V8G9"], { answerNumber: a + 1 }),
+            "aria-label": y.intl.formatToPlainString(y.t["3+V8G9"], {
+                answerNumber: a + 1,
+            }),
             placeholder: y.intl.string(y.t.NNHVlv),
             value: n.text,
             onChange: (e) =>

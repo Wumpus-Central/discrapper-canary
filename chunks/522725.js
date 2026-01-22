@@ -1,4 +1,6 @@
-n.d(t, { n: () => i });
+n.d(t, {
+    n: () => i,
+});
 var r = n(916784),
     i = function (e) {
         if ((0, r.dK)(e)) return 1 / 0;

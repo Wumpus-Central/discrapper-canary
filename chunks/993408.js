@@ -48,6 +48,7 @@ var r = n(735438),
     p = n(758836),
     _ = n(652215),
     h = n(818348);
+
 function m(e, t, n) {
     return (
         t in e
@@ -61,6 +62,7 @@ function m(e, t, n) {
         e
     );
 }
+
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -77,6 +79,7 @@ function g(e) {
     }
     return e;
 }
+
 function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -89,6 +92,7 @@ function E(e, t) {
     }
     return n;
 }
+
 function b(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -230,7 +234,7 @@ let y = (e) => (null == e ? void 0 : e.premiumType) != null,
     W = (e) => e.applicationId === _.FYj,
     K = 3.8,
     z = (e) => K * e,
-    q = 86400000,
+    q = 864e5,
     X = (e) => {
         let t = new Date(),
             n = Date.UTC(t.getFullYear(), t.getMonth(), t.getDate());

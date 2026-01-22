@@ -167,7 +167,9 @@ e.exports = function (e) {
         },
         l = {
             beginKeywords: n.join(" "),
-            keywords: { name: n },
+            keywords: {
+                name: n,
+            },
             relevance: 0,
             contains: [o],
         },
@@ -195,8 +197,12 @@ e.exports = function (e) {
             contains: [c, l, a, s],
         }),
         d = /[a-z_]+/,
-        f = u(i, { relevance: 2 }),
-        p = u([d], { relevance: 1 });
+        f = u(i, {
+            relevance: 2,
+        }),
+        p = u([d], {
+            relevance: 1,
+        });
     return {
         name: "Twig",
         aliases: ["craftcms"],

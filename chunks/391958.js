@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -7,6 +9,7 @@ var r = n(627968),
     c = n(727904),
     o = n(985018),
     d = n(973184);
+
 function u(e) {
     let { onChangeText: t, maxWordCount: n, className: l, textAreaClassName: u, subtitleText: f, initialValue: g } = e,
         b = i.useMemo(() => (null != g ? g : []), [g]),

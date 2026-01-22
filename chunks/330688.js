@@ -18,6 +18,7 @@ var r = n(627968),
     h = n(825468),
     m = n(652215),
     g = n(985018);
+
 function E(e, t, n) {
     return (
         t in e
@@ -31,6 +32,7 @@ function E(e, t, n) {
         e
     );
 }
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -48,26 +50,35 @@ function b(e) {
     return e;
 }
 let y = !d.isPlatformEmbedded;
+
 function O(e) {
-    return e >= 1000 ? ((e /= 1000), "".concat(e.toFixed(2), "s")) : "".concat(e.toFixed(0), "\xA0ms");
+    return e >= 1e3 ? ((e /= 1e3), "".concat(e.toFixed(2), "s")) : "".concat(e.toFixed(0), "\xa0ms");
 }
+
 function A(e) {
     let t,
         { inputMode: n } = e,
         { shortcut: i, delay: c, pttLatchingEnabled: E } = (0, a.cf)([u.A], () => u.A.getModeOptions()),
-        { enableLatching: b } = (0, f.y)({ location: "PTTTools" });
+        { enableLatching: b } = (0, f.y)({
+            location: "PTTTools",
+        });
     return (
         (t =
             d.isPlatformEmbedded || n !== m.TBI.PUSH_TO_TALK
                 ? (0, r.jsx)(s.po8, {
                       messageType: s.YCn.INFO,
                       children: g.intl.format(g.t.HVvn5T, {
-                          onClick: () => (0, _.openUserSettings)(p.X.KEYBINDS_PANEL, { section: m.nc_.KEYBINDS }),
+                          onClick: () =>
+                              (0, _.openUserSettings)(p.X.KEYBINDS_PANEL, {
+                                  section: m.nc_.KEYBINDS,
+                              }),
                       }),
                   })
                 : (0, r.jsx)(s.po8, {
                       messageType: s.YCn.WARNING,
-                      children: g.intl.format(g.t.zvMPOc, { onDownloadClick: () => (0, h._)("Help Text PTT") }),
+                      children: g.intl.format(g.t.zvMPOc, {
+                          onDownloadClick: () => (0, h._)("Help Text PTT"),
+                      }),
                   })),
         (0, r.jsxs)(s.BJc, {
             gap: 20,
@@ -80,13 +91,19 @@ function A(e) {
                             label: g.intl.string(g.t.YkDjVM),
                             children: (0, r.jsx)(l.A, {
                                 defaultValue: i,
-                                onChange: (e) => o.A.setMode(n, { shortcut: e }),
+                                onChange: (e) =>
+                                    o.A.setMode(n, {
+                                        shortcut: e,
+                                    }),
                             }),
                         }),
                         (0, r.jsx)(s.Apm, {
                             label: g.intl.string(g.t.y0ShVt),
                             initialValue: c,
-                            onValueChange: (e) => o.A.setMode(n, { delay: e }),
+                            onValueChange: (e) =>
+                                o.A.setMode(n, {
+                                    delay: e,
+                                }),
                             onValueRender: O,
                             maxValue: m.IjB,
                         }),
@@ -97,13 +114,17 @@ function A(e) {
                         label: g.intl.string(g.t.EGn1eN),
                         description: g.intl.string(g.t.iT257i),
                         checked: null != E && E,
-                        onChange: (e) => o.A.setMode(n, { pttLatchingEnabled: e }),
+                        onChange: (e) =>
+                            o.A.setMode(n, {
+                                pttLatchingEnabled: e,
+                            }),
                     }),
                 t,
             ],
         })
     );
 }
+
 function v(e, t) {
     e === m.TBI.PUSH_TO_TALK &&
         y &&
@@ -124,8 +145,11 @@ function v(e, t) {
                     ),
                 );
         }),
-        o.A.setMode(e, void 0, void 0, { analyticsLocations: t });
+        o.A.setMode(e, void 0, void 0, {
+            analyticsLocations: t,
+        });
 }
+
 function S() {
     let { analyticsLocations: e } = (0, c.Ay)(),
         t = (0, a.bG)([u.A], () => u.A.getMode()),
@@ -151,11 +175,17 @@ function S() {
         children: [
             (0, r.jsx)(s.z6M, {
                 label: g.intl.string(g.t["pS+K2L"]),
-                onChange: (e) => o({ value: e }),
+                onChange: (e) =>
+                    o({
+                        value: e,
+                    }),
                 options: n,
                 value: t,
             }),
-            t === m.TBI.PUSH_TO_TALK && (0, r.jsx)(A, { inputMode: t }),
+            t === m.TBI.PUSH_TO_TALK &&
+                (0, r.jsx)(A, {
+                    inputMode: t,
+                }),
         ],
     });
 }

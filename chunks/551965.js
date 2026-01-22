@@ -11,6 +11,7 @@ function r(e, t, n) {
         e
     );
 }
+
 function i(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -27,9 +28,13 @@ function i(e) {
     }
     return e;
 }
+
 function a(e) {
     let t = {};
     for (let n of e) for (let e in n) e in t ? (t[e] = i({}, t[e], n[e])) : (t[e] = i({}, n[e]));
     return t;
 }
-n.d(t, { A: () => a }), n(896048);
+n.d(t, {
+    A: () => a,
+}),
+    n(896048);

@@ -1,9 +1,12 @@
-n.d(t, { A: () => E });
+n.d(t, {
+    A: () => E,
+});
 var r,
     i = n(311907),
     a = n(73153),
     s = n(572009),
     o = n(788868);
+
 function l(e, t, n) {
     return (
         t in e
@@ -17,6 +20,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -33,6 +37,7 @@ function c(e) {
     }
     return e;
 }
+
 function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -45,6 +50,7 @@ function u(e, t) {
     }
     return n;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -62,14 +68,17 @@ let f = "OverridePremiumTypeStore",
         premiumTypeActual: o.$I,
         createdAtOverride: o.lk,
     };
+
 function _(e) {
     let { premiumType: t } = e;
     p.premiumTypeOverride = t;
 }
+
 function h(e) {
     let { createdAt: t } = e;
     p.createdAtOverride = t;
 }
+
 function m(e) {
     let { user: t } = e;
     p.premiumTypeActual = (0, s.nq)(t.premium_type);
@@ -106,7 +115,10 @@ l(g, "displayName", f),
     l(g, "persistKey", f),
     l(g, "migrations", [
         (e) => {
-            if ((null == e ? void 0 : e.createdAtOverride) == null) return d(c({}, e), { createdAtOverride: o.lk });
+            if ((null == e ? void 0 : e.createdAtOverride) == null)
+                return d(c({}, e), {
+                    createdAtOverride: o.lk,
+                });
         },
     ]);
 let E = new g(a.h, {

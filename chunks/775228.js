@@ -1,5 +1,10 @@
 let r;
-n.d(t, { A: () => R }), n(896048), n(747238), n(812715);
+n.d(t, {
+    A: () => R,
+}),
+    n(896048),
+    n(747238),
+    n(812715);
 var i,
     a = n(311907),
     s = n(73153),
@@ -7,6 +12,7 @@ var i,
     l = n(723702),
     c = n(194871),
     u = n(985018);
+
 function d(e, t, n) {
     return (
         t in e
@@ -20,6 +26,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +43,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -48,6 +56,7 @@ function p(e, t) {
     }
     return n;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -65,30 +74,42 @@ let h = {},
         : (0, l.isMac)()
           ? "/Applications/DiscordGames"
           : "/tmp";
+
 function g(e, t) {
     var n;
-    h = _(f({}, h), { [e]: f({}, null != (n = h[e]) ? n : {}, t) });
+    h = _(f({}, h), {
+        [e]: f({}, null != (n = h[e]) ? n : {}, t),
+    });
 }
+
 function E(e) {
     (h = f({}, h)), delete h[e];
 }
+
 function b(e, t) {
-    r.pathLabels = _(f({}, r.pathLabels), { [e]: t });
+    r.pathLabels = _(f({}, r.pathLabels), {
+        [e]: t,
+    });
 }
+
 function y(e) {
     if (null == r.pathLabels[e]) return !1;
     (r.pathLabels = f({}, r.pathLabels)), delete r.pathLabels[e];
 }
+
 function O(e) {
     let { applicationId: t, branchId: n, installationPath: i } = e;
     null == r.installations[t] && (r.installations[t] = {}),
-        (r.installations[t][n] = { installationPath: i }),
+        (r.installations[t][n] = {
+            installationPath: i,
+        }),
         r.installationPaths.has(i) ||
             S({
                 path: i,
                 metadata: {},
             });
 }
+
 function A(e) {
     let { applicationId: t, branchId: n } = e,
         r = c.A.getState(t, n);
@@ -100,29 +121,34 @@ function A(e) {
             branchId: n,
         });
 }
+
 function v(e) {
     let { applicationId: t, branchId: n } = e;
     if (null == r.installations[t]) return !1;
     delete r.installations[t][n], 0 === Object.keys(r.installations[t]).length && delete r.installations[t];
 }
+
 function S(e) {
     if (r.installationPaths.has(e.path)) return !1;
     g(e.path, e.metadata);
     let t = new Set(r.installationPaths);
     t.add(e.path), (r.installationPaths = t);
 }
+
 function I(e) {
     let { path: t } = e;
     if (!r.installationPaths.has(t) || r.defaultInstallationPath === t) return !1;
     let n = new Set(r.installationPaths);
     n.delete(t), (r.installationPaths = n), E(t), y(t);
 }
+
 function T(e) {
     let { path: t, label: n, isDefault: i } = e;
     if (!r.installationPaths.has(t)) return !1;
     null != n && "" !== n && r.pathLabels[t] !== n && b(t, n),
         i && r.defaultInstallationPath !== t && (r.defaultInstallationPath = t);
 }
+
 function C(e) {
     let { metadataPayload: t } = e;
     for (let e in t) g(e, t[e]);

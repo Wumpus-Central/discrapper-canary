@@ -1,4 +1,7 @@
-n.d(t, { C: () => c }), n(64700);
+n.d(t, {
+    C: () => c,
+}),
+    n(64700);
 var r = n(311907);
 n(63995), n(113783), n(69407);
 var i = n(446600),
@@ -9,6 +12,7 @@ n(576705), n(607567);
 var s = n(473019);
 n(539446);
 var o = n(508654);
+
 function c(e) {
     var t;
     let n = (0, l.Ay)(e),
@@ -18,8 +22,12 @@ function c(e) {
         { isStageNoticeHidden: p, isEventNoticeHidden: f } = (0, r.cf)(
             [s.A],
             () => ({
-                isStageNoticeHidden: s.A.isLiveChannelNoticeHidden({ stageId: null == u ? void 0 : u.id }),
-                isEventNoticeHidden: s.A.isLiveChannelNoticeHidden({ eventId: null == d ? void 0 : d.id }),
+                isStageNoticeHidden: s.A.isLiveChannelNoticeHidden({
+                    stageId: null == u ? void 0 : u.id,
+                }),
+                isEventNoticeHidden: s.A.isLiveChannelNoticeHidden({
+                    eventId: null == d ? void 0 : d.id,
+                }),
             }),
             [u, d],
         );

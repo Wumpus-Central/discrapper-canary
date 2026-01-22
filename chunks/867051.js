@@ -14,6 +14,7 @@ var r = n(284009),
     a = n(357758),
     s = n(810531),
     o = n(52133);
+
 function l(e, t, n) {
     return (
         t in e
@@ -27,6 +28,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -43,6 +45,7 @@ function c(e) {
     }
     return e;
 }
+
 function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -55,6 +58,7 @@ function u(e, t) {
     }
     return n;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -66,30 +70,46 @@ function d(e, t) {
         e
     );
 }
+
 function f(e, t, n) {
-    return g(e[t], n) ? e : d(c({}, e), { [t]: n });
+    return g(e[t], n)
+        ? e
+        : d(c({}, e), {
+              [t]: n,
+          });
 }
+
 function p(e, t) {
     let n = null;
     for (let r in t) {
         let i = e[r],
             a = t[r];
-        void 0 === a || g(i, a) || (null == n ? (n = d(c({}, e), { [r]: a })) : (n[r] = a));
+        void 0 === a ||
+            g(i, a) ||
+            (null == n
+                ? (n = d(c({}, e), {
+                      [r]: a,
+                  }))
+                : (n[r] = a));
     }
     return null != n ? n : e;
 }
+
 function _(e, t, n) {
     return (i()(null == t || t[s.L] === e, "Existing record type does not match the expected type"),
     null != t && E(t, n))
         ? t
         : m(e, n);
 }
+
 function h(e, t) {
     return "object" == typeof t && null != t && (s.L in t && t[s.L]) === e;
 }
+
 function m(e, t) {
     return (t[s.L] = e), t;
 }
+
 function g(e, t) {
     return null == e || null == t
         ? e === t
@@ -102,6 +122,7 @@ function g(e, t) {
                       ? (0, o.v)(e, t)
                       : "object" == typeof e && "object" == typeof t && (0, o.A)(e, t));
 }
+
 function E(e, t) {
     if (e === t) return !0;
     for (let n of Object.keys(e)) {

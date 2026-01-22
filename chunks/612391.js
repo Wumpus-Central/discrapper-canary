@@ -43,7 +43,9 @@ class A extends (a = o.PureComponent) {
               });
     }
 }
-(l = { messageStyle: "LONG" }),
+(l = {
+    messageStyle: "LONG",
+}),
     (i = "defaultProps") in A
         ? Object.defineProperty(A, i, {
               value: l,
@@ -52,4 +54,6 @@ class A extends (a = o.PureComponent) {
               writable: !0,
           })
         : (A[i] = l);
-let g = c.Ay.connectStores([p.A], () => ({ purchaseError: p.A.error }))(A);
+let g = c.Ay.connectStores([p.A], () => ({
+    purchaseError: p.A.error,
+}))(A);

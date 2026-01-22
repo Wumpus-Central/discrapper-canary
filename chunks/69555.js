@@ -18,6 +18,7 @@ var r = n(73153),
     u = n(60821),
     d = n(708455),
     f = n(652215);
+
 function p(e, t, n) {
     return (
         t in e
@@ -31,6 +32,7 @@ function p(e, t, n) {
         e
     );
 }
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -47,10 +49,12 @@ function _(e) {
     }
     return e;
 }
+
 function h() {
     var e;
     return (0, c.A)(null != (e = s.A.getVoiceChannelId()) ? e : void 0);
 }
+
 function m(e, t) {
     var n;
     let i = null == (n = a.A.getChannel(s.A.getVoiceChannelId())) ? void 0 : n.guild_id;
@@ -73,6 +77,7 @@ function m(e, t) {
               ),
           ));
 }
+
 function g(e, t, n) {
     "" === e || null == t
         ? b(!1, n)
@@ -96,6 +101,7 @@ function g(e, t, n) {
               ),
           ));
 }
+
 function E(e, t) {
     null == e
         ? b(!1, t)
@@ -115,13 +121,23 @@ function E(e, t) {
               ),
           ));
 }
+
 function b(e, t) {
     r.h.dispatch({
         type: "CLEAR_HANG_STATUS",
         saveAsDefault: t,
     }),
-        o.default.track(f.HAw.CLEAR_HANG_STATUS, _({ manual_update: !!e }, h()));
+        o.default.track(
+            f.HAw.CLEAR_HANG_STATUS,
+            _(
+                {
+                    manual_update: !!e,
+                },
+                h(),
+            ),
+        );
 }
+
 function y() {
     let e = [l.A.getCustomHangStatus(), ...l.A.getRecentStatuses(), ...l.A.getFavoritedStatuses()].filter((e) => {
         var t;
@@ -138,6 +154,7 @@ function y() {
             statuses: e,
         });
 }
+
 function O(e, t) {
     r.h.dispatch({
         type: "UPDATE_FAVORITE_HANG_STATUS",
@@ -145,6 +162,9 @@ function O(e, t) {
         emoji: t,
     });
 }
+
 function A() {
-    r.h.dispatch({ type: "RESET_HANG_STATUS_STATE" });
+    r.h.dispatch({
+        type: "RESET_HANG_STATUS_STATE",
+    });
 }

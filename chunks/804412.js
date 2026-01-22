@@ -49,4 +49,7 @@ let a = (0, r.Ay)({
             },
         },
     }),
-    s = (e) => a.useConfig({ location: e });
+    s = (e) =>
+        a.useConfig({
+            location: e,
+        });

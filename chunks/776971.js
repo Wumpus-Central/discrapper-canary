@@ -1,4 +1,7 @@
-n.d(e, { default: () => k }), n(896048);
+n.d(e, {
+    default: () => k,
+}),
+    n(896048);
 var l = n(627968),
     r = n(64700),
     a = n(284009),
@@ -24,6 +27,7 @@ var l = n(627968),
     O = n(652215),
     R = n(985018),
     w = n(700129);
+
 function C(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
@@ -49,6 +53,7 @@ function C(t) {
     }
     return t;
 }
+
 function k(t) {
     var e, n;
     let a,
@@ -68,6 +73,7 @@ function k(t) {
         Z = (0, T.vL)(x),
         q = T.Bc.has(N),
         Q = null != M ? s()().diff(M, "years") : null;
+
     function X() {
         if (N === v.w_.NSFW_SERVER_INVITE_EMBED) return (0, h.IO)(N), Promise.resolve();
         let t = null == x ? void 0 : x.getGuildId();
@@ -117,7 +123,9 @@ function k(t) {
             null == (t = W.current) || t.focus();
         }, [W]),
         tr = r.useCallback(() => {
-            p.A.showAgeVerificationGetStartedModal({ entryPoint: f.q1.NSFW_AGE_GATE });
+            p.A.showAgeVerificationGetStartedModal({
+                entryPoint: f.q1.NSFW_AGE_GATE,
+            });
         }, []),
         ta = {
             transitionState: k,
@@ -147,7 +155,9 @@ function k(t) {
                           },
                       ],
                       trackingProps: {
-                          impression: { impressionName: c.ImpressionNames.USER_AGE_GATE_VERIFY },
+                          impression: {
+                              impressionName: c.ImpressionNames.USER_AGE_GATE_VERIFY,
+                          },
                           impressionType: c.ImpressionTypes.MODAL,
                       },
                   },
@@ -171,7 +181,9 @@ function k(t) {
                             },
                         ],
                         trackingProps: {
-                            impression: { impressionName: c.ImpressionNames.USER_AGE_GATE_VERIFY },
+                            impression: {
+                                impressionName: c.ImpressionNames.USER_AGE_GATE_VERIFY,
+                            },
                             impressionType: c.ImpressionTypes.MODAL,
                         },
                     },
@@ -196,9 +208,13 @@ function k(t) {
                       case v.w_.FAMILY_CENTER:
                           return R.intl.string(R.t.mhUrKS);
                       case v.w_.DEEP_LINK_PROMPT:
-                          return R.intl.format(R.t.iyhg2s, { helpURL: b.A.getArticleURL(O.MVz.AGE_GATE) });
+                          return R.intl.format(R.t.iyhg2s, {
+                              helpURL: b.A.getArticleURL(O.MVz.AGE_GATE),
+                          });
                       default:
-                          return R.intl.format(R.t.n3QjDE, { helpURL: b.A.getArticleURL(O.MVz.AGE_GATE) });
+                          return R.intl.format(R.t.n3QjDE, {
+                              helpURL: b.A.getArticleURL(O.MVz.AGE_GATE),
+                          });
                   }
               })()),
               (0, l.jsx)("form", {
@@ -256,8 +272,12 @@ function k(t) {
             : (0, l.jsx)(u.Modal, {
                   transitionState: k,
                   onClose: X,
-                  title: R.intl.formatToPlainString(R.t.wumolR, { age: null != Q ? Q : "" }),
-                  subtitle: R.intl.formatToPlainString(R.t.n3QjDE, { helpURL: b.A.getArticleURL(O.MVz.AGE_GATE) }),
+                  title: R.intl.formatToPlainString(R.t.wumolR, {
+                      age: null != Q ? Q : "",
+                  }),
+                  subtitle: R.intl.formatToPlainString(R.t.n3QjDE, {
+                      helpURL: b.A.getArticleURL(O.MVz.AGE_GATE),
+                  }),
                   actions: [
                       {
                           text: R.intl.string(R.t.cfYCrb),

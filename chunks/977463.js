@@ -1,4 +1,7 @@
-n.d(t, { A: () => N }), n(896048);
+n.d(t, {
+    A: () => N,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -19,6 +22,7 @@ var r = n(627968),
     y = n(652215),
     O = n(670455),
     A = n(995255);
+
 function v(e, t, n) {
     return (
         t in e
@@ -32,6 +36,7 @@ function v(e, t, n) {
         e
     );
 }
+
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -48,6 +53,7 @@ function S(e) {
     }
     return e;
 }
+
 function I(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -60,6 +66,7 @@ function I(e, t) {
     }
     return n;
 }
+
 function T(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -71,6 +78,7 @@ function T(e, t) {
         e
     );
 }
+
 function C(e) {
     let { summary: t, channel: f, members: b, guildId: v, unread: I, onClick: C } = e,
         [N, R] = i.useState(!1),
@@ -89,7 +97,13 @@ function C(e) {
             x &&
                 (0, o.L3)(e, async () => {
                     let { default: e } = await n.e("43921").then(n.bind(n, 304232));
-                    return (n) => (0, r.jsx)(e, T(S({}, n), { summary: t }));
+                    return (n) =>
+                        (0, r.jsx)(
+                            e,
+                            T(S({}, n), {
+                                summary: t,
+                            }),
+                        );
                 });
         };
     return (0, r.jsxs)(s.DUT, {
@@ -193,6 +207,7 @@ function C(e) {
         ],
     });
 }
+
 function N(e) {
     let { summaries: t, summariesMembers: n, channel: s, selectTopic: o, setOpen: l } = e,
         c = (0, a.bG)([f.Ay], () => f.Ay.getOldestUnreadMessageId(s.id)),

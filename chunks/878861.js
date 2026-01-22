@@ -1,17 +1,22 @@
 var r = n(744784);
+
 function i(e) {
     (this.data = e), (this.left = null), (this.right = null), (this.red = !0);
 }
+
 function a(e) {
     (this._root = null), (this._comparator = e), (this.size = 0);
 }
+
 function s(e) {
     return null !== e && e.red;
 }
+
 function o(e, t) {
     var n = e.get_child(!t);
     return e.set_child(!t, n.get_child(t)), n.set_child(t, e), (e.red = !0), (n.red = !1), n;
 }
+
 function l(e, t) {
     return e.set_child(!t, o(e.get_child(!t), !t)), o(e, t);
 }

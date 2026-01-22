@@ -1,4 +1,6 @@
-r.d(t, { A: () => y });
+r.d(t, {
+    A: () => y,
+});
 var n = r(627968),
     l = r(64700),
     a = r(503698),
@@ -12,6 +14,7 @@ var n = r(627968),
     p = r(339984),
     g = r(985018),
     b = r(719154);
+
 function y(e) {
     let { uploadType: t, analyticsSource: r, className: a } = e,
         y = (function (e, t) {
@@ -56,9 +59,13 @@ function y(e) {
         j = l.useMemo(() => {
             switch (t) {
                 case p.HL.AVATAR:
-                    return g.intl.format(g.t["pvw/HH"], { onClick: A });
+                    return g.intl.format(g.t["pvw/HH"], {
+                        onClick: A,
+                    });
                 case p.HL.BANNER:
-                    return g.intl.format(g.t.aCrz1e, { onClick: A });
+                    return g.intl.format(g.t.aCrz1e, {
+                        onClick: A,
+                    });
                 default:
                     return "";
             }
@@ -95,7 +102,9 @@ function y(e) {
                   {
                       text: j,
                       button: g.intl.string(g.t.BmJkbd),
-                      buttonAnalyticsObject: { section: d.JJy.USER_PROFILE },
+                      buttonAnalyticsObject: {
+                          section: d.JJy.USER_PROFILE,
+                      },
                       className: i()(b.k, a),
                   },
                   y,

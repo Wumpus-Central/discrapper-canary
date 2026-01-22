@@ -1,9 +1,12 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(627968);
 n(64700);
 var i = n(763754),
     a = n(888675),
     s = n(985018);
+
 function o(e) {
     let t,
         { message: o, usernameHook: l, otherUser: c, otherUsernameHook: u, compact: d, channel: f } = e,

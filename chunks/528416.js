@@ -9,7 +9,9 @@
                     var c = Error("Cannot find module '" + s + "'");
                     throw ((c.code = "MODULE_NOT_FOUND"), c);
                 }
-                var u = (n[s] = { exports: {} });
+                var u = (n[s] = {
+                    exports: {},
+                });
                 t[s][0].call(
                     u.exports,
                     function (e) {
@@ -37,23 +39,30 @@
                     window: "u" < typeof window ? void 0 : window,
                 });
             },
-            { "./adapter_factory.js": 2 },
+            {
+                "./adapter_factory.js": 2,
+            },
         ],
         2: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }), (n.adapterFactory = u);
+                Object.defineProperty(n, "__esModule", {
+                    value: !0,
+                }),
+                    (n.adapterFactory = u);
                 var r = c(e("./utils")),
                     i = c(e("./chrome/chrome_shim")),
                     a = c(e("./edge/edge_shim")),
                     s = c(e("./firefox/firefox_shim")),
                     o = c(e("./safari/safari_shim")),
                     l = c(e("./common_shim"));
+
                 function c(e) {
                     if (e && e.__esModule) return e;
                     var t = {};
                     if (null != e) for (var n in e) Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
                     return (t.default = e), t;
                 }
+
                 function u() {
                     var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
                         t = e.window,
@@ -179,7 +188,9 @@
         ],
         3: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }),
+                Object.defineProperty(n, "__esModule", {
+                    value: !0,
+                }),
                     (n.shimGetDisplayMedia = n.shimGetUserMedia = void 0);
                 var r =
                         "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
@@ -218,12 +229,14 @@
                     (n.shimPeerConnection = m),
                     (n.fixNegotiationNeeded = g);
                 var s = o(e("../utils.js"));
+
                 function o(e) {
                     if (e && e.__esModule) return e;
                     var t = {};
                     if (null != e) for (var n in e) Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
                     return (t.default = e), t;
                 }
+
                 function l(e, t, n) {
                     return (
                         t in e
@@ -237,9 +250,11 @@
                         e
                     );
                 }
+
                 function c(e) {
                     e.MediaStream = e.MediaStream || e.webkitMediaStream;
                 }
+
                 function u(e) {
                     if (
                         (void 0 === e ? "undefined" : r(e)) !== "object" ||
@@ -249,7 +264,11 @@
                         s.wrapPeerConnectionEvent(e, "track", function (e) {
                             return (
                                 e.transceiver ||
-                                    Object.defineProperty(e, "transceiver", { value: { receiver: e.receiver } }),
+                                    Object.defineProperty(e, "transceiver", {
+                                        value: {
+                                            receiver: e.receiver,
+                                        },
+                                    }),
                                 e
                             );
                         });
@@ -277,11 +296,15 @@
                                                 ? n.getReceivers().find(function (e) {
                                                       return e.track && e.track.id === r.track.id;
                                                   })
-                                                : { track: r.track };
+                                                : {
+                                                      track: r.track,
+                                                  };
                                             var a = new Event("track");
                                             (a.track = r.track),
                                                 (a.receiver = i),
-                                                (a.transceiver = { receiver: i }),
+                                                (a.transceiver = {
+                                                    receiver: i,
+                                                }),
                                                 (a.streams = [t.stream]),
                                                 n.dispatchEvent(a);
                                         }),
@@ -291,11 +314,15 @@
                                                     ? n.getReceivers().find(function (e) {
                                                           return e.track && e.track.id === r.id;
                                                       })
-                                                    : { track: r };
+                                                    : {
+                                                          track: r,
+                                                      };
                                                 var a = new Event("track");
                                                 (a.track = r),
                                                     (a.receiver = i),
-                                                    (a.transceiver = { receiver: i }),
+                                                    (a.transceiver = {
+                                                        receiver: i,
+                                                    }),
                                                     (a.streams = [t.stream]),
                                                     n.dispatchEvent(a);
                                             });
@@ -306,6 +333,7 @@
                         };
                     }
                 }
+
                 function d(e) {
                     if (
                         (void 0 === e ? "undefined" : r(e)) === "object" &&
@@ -397,6 +425,7 @@
                             });
                     }
                 }
+
                 function f(e) {
                     if (e.RTCPeerConnection) {
                         var t = e.RTCPeerConnection.prototype.getStats;
@@ -454,6 +483,7 @@
                         };
                     }
                 }
+
                 function p(e) {
                     if (
                         (void 0 === e ? "undefined" : r(e)) === "object" &&
@@ -547,6 +577,7 @@
                         }
                     }
                 }
+
                 function _(e) {
                     e.RTCPeerConnection.prototype.getLocalStreams = function () {
                         var e = this;
@@ -612,6 +643,7 @@
                         );
                     };
                 }
+
                 function h(e, t) {
                     if (e.RTCPeerConnection) {
                         if (e.RTCPeerConnection.prototype.addTrack && t.version >= 65) return _(e);
@@ -763,6 +795,7 @@
                                         this.dispatchEvent(new Event("negotiationneeded")));
                             });
                     }
+
                     function o(e, t) {
                         var n = t.sdp;
                         return (
@@ -777,6 +810,7 @@
                             })
                         );
                     }
+
                     function c(e, t) {
                         var n = t.sdp;
                         return (
@@ -792,6 +826,7 @@
                         );
                     }
                 }
+
                 function m(e, t) {
                     !e.RTCPeerConnection &&
                         e.webkitRTCPeerConnection &&
@@ -811,6 +846,7 @@
                                 e.RTCPeerConnection.prototype[t] = r[t];
                             });
                 }
+
                 function g(e, t) {
                     s.wrapPeerConnectionEvent(e, "negotiationneeded", function (e) {
                         var n = e.target;
@@ -859,13 +895,18 @@
                         };
                     }
                 }
-                Object.defineProperty(n, "__esModule", { value: !0 }), (n.shimGetDisplayMedia = r);
+                Object.defineProperty(n, "__esModule", {
+                    value: !0,
+                }),
+                    (n.shimGetDisplayMedia = r);
             },
             {},
         ],
         5: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 });
+                Object.defineProperty(n, "__esModule", {
+                    value: !0,
+                });
                 var r =
                     "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
                         ? function (e) {
@@ -886,6 +927,7 @@
                     if (null != e) for (var n in e) Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
                     return (t.default = e), t;
                 })(e("../utils.js")).log;
+
                 function a(e, t) {
                     var n = e && e.navigator;
                     if (n.mediaDevices) {
@@ -896,7 +938,12 @@
                                 return (
                                     Object.keys(e).forEach(function (n) {
                                         if ("require" !== n && "advanced" !== n && "mediaSource" !== n) {
-                                            var i = "object" === r(e[n]) ? e[n] : { ideal: e[n] };
+                                            var i =
+                                                "object" === r(e[n])
+                                                    ? e[n]
+                                                    : {
+                                                          ideal: e[n],
+                                                      };
                                             void 0 !== i.exact &&
                                                 "number" == typeof i.exact &&
                                                 (i.min = i.max = i.exact);
@@ -946,7 +993,13 @@
                                 }
                                 if (e && "object" === r(e.video)) {
                                     var l = e.video.facingMode;
-                                    l = l && ((void 0 === l ? "undefined" : r(l)) === "object" ? l : { ideal: l });
+                                    l =
+                                        l &&
+                                        ((void 0 === l ? "undefined" : r(l)) === "object"
+                                            ? l
+                                            : {
+                                                  ideal: l,
+                                              });
                                     var c = t.version < 66;
                                     if (
                                         l &&
@@ -980,8 +1033,12 @@
                                                     !n && t.length && u.includes("back") && (n = t[t.length - 1]),
                                                     n &&
                                                         (e.video.deviceId = l.exact
-                                                            ? { exact: n.deviceId }
-                                                            : { ideal: n.deviceId }),
+                                                            ? {
+                                                                  exact: n.deviceId,
+                                                              }
+                                                            : {
+                                                                  ideal: n.deviceId,
+                                                              }),
                                                     (e.video = a(e.video)),
                                                     i("chrome: " + JSON.stringify(e)),
                                                     s(e)
@@ -1052,11 +1109,15 @@
                     }
                 }
             },
-            { "../utils.js": 11 },
+            {
+                "../utils.js": 11,
+            },
         ],
         6: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 });
+                Object.defineProperty(n, "__esModule", {
+                    value: !0,
+                });
                 var r =
                     "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
                         ? function (e) {
@@ -1078,15 +1139,22 @@
                     (n.shimAddIceCandidateNullOrEmpty = p);
                 var i = o(e("sdp")),
                     a = s(e("./utils"));
+
                 function s(e) {
                     if (e && e.__esModule) return e;
                     var t = {};
                     if (null != e) for (var n in e) Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
                     return (t.default = e), t;
                 }
+
                 function o(e) {
-                    return e && e.__esModule ? e : { default: e };
+                    return e && e.__esModule
+                        ? e
+                        : {
+                              default: e,
+                          };
                 }
+
                 function l(e) {
                     if (e.RTCIceCandidate && (!e.RTCIceCandidate || !("foundation" in e.RTCIceCandidate.prototype))) {
                         var t = e.RTCIceCandidate;
@@ -1126,6 +1194,7 @@
                             });
                     }
                 }
+
                 function c(e, t) {
                     if (e.RTCPeerConnection) {
                         "sctp" in e.RTCPeerConnection.prototype ||
@@ -1159,12 +1228,12 @@
                                             t.version < 57
                                                 ? -1 === e
                                                     ? 16384
-                                                    : 2147483637
+                                                    : 0x7ffffff5
                                                 : t.version < 60
                                                   ? 57 === t.version
                                                       ? 65535
                                                       : 65536
-                                                  : 2147483637),
+                                                  : 0x7ffffff5),
                                     n
                                 );
                             },
@@ -1175,7 +1244,7 @@
                                 return (
                                     a.length > 0
                                         ? (r = parseInt(a[0].substr(19), 10))
-                                        : "firefox" === t.browser && -1 !== n && (r = 2147483637),
+                                        : "firefox" === t.browser && -1 !== n && (r = 0x7ffffff5),
                                     r
                                 );
                             },
@@ -1212,6 +1281,7 @@
                         };
                     }
                 }
+
                 function u(e) {
                     if (e.RTCPeerConnection && "createDataChannel" in e.RTCPeerConnection.prototype) {
                         var t = e.RTCPeerConnection.prototype.createDataChannel;
@@ -1223,6 +1293,7 @@
                                 return n(e.channel, e.target), e;
                             });
                     }
+
                     function n(e, t) {
                         var n = e.send;
                         e.send = function () {
@@ -1236,6 +1307,7 @@
                         };
                     }
                 }
+
                 function d(e) {
                     if (e.RTCPeerConnection && !("connectionState" in e.RTCPeerConnection.prototype)) {
                         var t = e.RTCPeerConnection.prototype;
@@ -1295,6 +1367,7 @@
                             });
                     }
                 }
+
                 function f(e, t) {
                     if (
                         e.RTCPeerConnection &&
@@ -1321,6 +1394,7 @@
                         };
                     }
                 }
+
                 function p(e, t) {
                     if (e.RTCPeerConnection && e.RTCPeerConnection.prototype) {
                         var n = e.RTCPeerConnection.prototype.addIceCandidate;
@@ -1347,7 +1421,9 @@
         ],
         7: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }),
+                Object.defineProperty(n, "__esModule", {
+                    value: !0,
+                }),
                     (n.shimGetDisplayMedia = n.shimGetUserMedia = void 0);
                 var r =
                         "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
@@ -1387,12 +1463,14 @@
                     (n.shimCreateOffer = g),
                     (n.shimCreateAnswer = E);
                 var s = o(e("../utils"));
+
                 function o(e) {
                     if (e && e.__esModule) return e;
                     var t = {};
                     if (null != e) for (var n in e) Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
                     return (t.default = e), t;
                 }
+
                 function l(e, t, n) {
                     return (
                         t in e
@@ -1406,6 +1484,7 @@
                         e
                     );
                 }
+
                 function c(e) {
                     (void 0 === e ? "undefined" : r(e)) === "object" &&
                         e.RTCTrackEvent &&
@@ -1413,10 +1492,13 @@
                         !("transceiver" in e.RTCTrackEvent.prototype) &&
                         Object.defineProperty(e.RTCTrackEvent.prototype, "transceiver", {
                             get: function () {
-                                return { receiver: this.receiver };
+                                return {
+                                    receiver: this.receiver,
+                                };
                             },
                         });
                 }
+
                 function u(e, t) {
                     if (
                         (void 0 === e ? "undefined" : r(e)) === "object" &&
@@ -1466,7 +1548,12 @@
                                         } catch (t) {
                                             if ("TypeError" !== t.name) throw t;
                                             e.forEach(function (t, r) {
-                                                e.set(r, Object.assign({}, t, { type: n[t.type] || t.type }));
+                                                e.set(
+                                                    r,
+                                                    Object.assign({}, t, {
+                                                        type: n[t.type] || t.type,
+                                                    }),
+                                                );
                                             });
                                         }
                                     return e;
@@ -1475,6 +1562,7 @@
                         };
                     }
                 }
+
                 function d(e) {
                     if (
                         (void 0 === e ? "undefined" : r(e)) === "object" &&
@@ -1505,6 +1593,7 @@
                             });
                     }
                 }
+
                 function f(e) {
                     if (
                         (void 0 === e ? "undefined" : r(e)) === "object" &&
@@ -1532,6 +1621,7 @@
                             });
                     }
                 }
+
                 function p(e) {
                     !e.RTCPeerConnection ||
                         "removeStream" in e.RTCPeerConnection.prototype ||
@@ -1543,9 +1633,11 @@
                                 });
                         });
                 }
+
                 function _(e) {
                     e.DataChannel && !e.RTCDataChannel && (e.RTCDataChannel = e.DataChannel);
                 }
+
                 function h(e) {
                     if ((void 0 === e ? "undefined" : r(e)) === "object" && e.RTCPeerConnection) {
                         var t = e.RTCPeerConnection.prototype.addTransceiver;
@@ -1586,6 +1678,7 @@
                             });
                     }
                 }
+
                 function m(e) {
                     if ((void 0 === e ? "undefined" : r(e)) === "object" && e.RTCRtpSender) {
                         var t = e.RTCRtpSender.prototype.getParameters;
@@ -1596,6 +1689,7 @@
                             });
                     }
                 }
+
                 function g(e) {
                     if ((void 0 === e ? "undefined" : r(e)) === "object" && e.RTCPeerConnection) {
                         var t = e.RTCPeerConnection.prototype.createOffer;
@@ -1614,6 +1708,7 @@
                         };
                     }
                 }
+
                 function E(e) {
                     if ((void 0 === e ? "undefined" : r(e)) === "object" && e.RTCPeerConnection) {
                         var t = e.RTCPeerConnection.prototype.createAnswer;
@@ -1650,18 +1745,27 @@
                                     return (r.name = "NotFoundError"), (r.code = 8), Promise.reject(r);
                                 }
                                 return (
-                                    !0 === n.video ? (n.video = { mediaSource: t }) : (n.video.mediaSource = t),
+                                    !0 === n.video
+                                        ? (n.video = {
+                                              mediaSource: t,
+                                          })
+                                        : (n.video.mediaSource = t),
                                     e.navigator.mediaDevices.getUserMedia(n)
                                 );
                             }));
                 }
-                Object.defineProperty(n, "__esModule", { value: !0 }), (n.shimGetDisplayMedia = r);
+                Object.defineProperty(n, "__esModule", {
+                    value: !0,
+                }),
+                    (n.shimGetDisplayMedia = r);
             },
             {},
         ],
         9: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 });
+                Object.defineProperty(n, "__esModule", {
+                    value: !0,
+                });
                 var r =
                     "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
                         ? function (e) {
@@ -1677,12 +1781,14 @@
                           };
                 n.shimGetUserMedia = s;
                 var i = a(e("../utils"));
+
                 function a(e) {
                     if (e && e.__esModule) return e;
                     var t = {};
                     if (null != e) for (var n in e) Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
                     return (t.default = e), t;
                 }
+
                 function s(e, t) {
                     var n = e && e.navigator,
                         a = e && e.MediaStreamTrack;
@@ -1742,11 +1848,15 @@
                     }
                 }
             },
-            { "../utils": 11 },
+            {
+                "../utils": 11,
+            },
         ],
         10: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 });
+                Object.defineProperty(n, "__esModule", {
+                    value: !0,
+                });
                 var r =
                     "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
                         ? function (e) {
@@ -1770,12 +1880,14 @@
                     (n.shimCreateOfferLegacy = p),
                     (n.shimAudioContext = _);
                 var i = a(e("../utils"));
+
                 function a(e) {
                     if (e && e.__esModule) return e;
                     var t = {};
                     if (null != e) for (var n in e) Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
                     return (t.default = e), t;
                 }
+
                 function s(e) {
                     if ((void 0 === e ? "undefined" : r(e)) === "object" && e.RTCPeerConnection) {
                         if (
@@ -1830,6 +1942,7 @@
                             });
                     }
                 }
+
                 function o(e) {
                     if (
                         (void 0 === e ? "undefined" : r(e)) === "object" &&
@@ -1892,6 +2005,7 @@
                         };
                     }
                 }
+
                 function l(e) {
                     if ((void 0 === e ? "undefined" : r(e)) === "object" && e.RTCPeerConnection) {
                         var t = e.RTCPeerConnection.prototype,
@@ -1927,6 +2041,7 @@
                             (t.addIceCandidate = l);
                     }
                 }
+
                 function c(e) {
                     var t = e && e.navigator;
                     if (t.mediaDevices && t.mediaDevices.getUserMedia) {
@@ -1943,9 +2058,15 @@
                             t.mediaDevices.getUserMedia(e).then(n, r);
                         }.bind(t));
                 }
+
                 function u(e) {
-                    return e && void 0 !== e.video ? Object.assign({}, e, { video: i.compactObject(e.video) }) : e;
+                    return e && void 0 !== e.video
+                        ? Object.assign({}, e, {
+                              video: i.compactObject(e.video),
+                          })
+                        : e;
                 }
+
                 function d(e) {
                     if (e.RTCPeerConnection) {
                         var t = e.RTCPeerConnection;
@@ -1973,6 +2094,7 @@
                                 });
                     }
                 }
+
                 function f(e) {
                     (void 0 === e ? "undefined" : r(e)) === "object" &&
                         e.RTCTrackEvent &&
@@ -1980,10 +2102,13 @@
                         !("transceiver" in e.RTCTrackEvent.prototype) &&
                         Object.defineProperty(e.RTCTrackEvent.prototype, "transceiver", {
                             get: function () {
-                                return { receiver: this.receiver };
+                                return {
+                                    receiver: this.receiver,
+                                };
                             },
                         });
                 }
+
                 function p(e) {
                     var t = e.RTCPeerConnection.prototype.createOffer;
                     e.RTCPeerConnection.prototype.createOffer = function (e) {
@@ -2016,17 +2141,22 @@
                         return t.apply(this, arguments);
                     };
                 }
+
                 function _(e) {
                     (void 0 === e ? "undefined" : r(e)) !== "object" ||
                         e.AudioContext ||
                         (e.AudioContext = e.webkitAudioContext);
                 }
             },
-            { "../utils": 11 },
+            {
+                "../utils": 11,
+            },
         ],
         11: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 });
+                Object.defineProperty(n, "__esModule", {
+                    value: !0,
+                });
                 var r =
                     "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
                         ? function (e) {
@@ -2040,6 +2170,7 @@
                                   ? "symbol"
                                   : typeof e;
                           };
+
                 function i(e, t, n) {
                     return (
                         t in e
@@ -2065,10 +2196,12 @@
                     (n.filterStats = g);
                 var a = !0,
                     s = !0;
+
                 function o(e, t, n) {
                     var r = e.match(t);
                     return r && r.length >= n && parseInt(r[n], 10);
                 }
+
                 function l(e, t, n) {
                     if (e.RTCPeerConnection) {
                         var r = e.RTCPeerConnection.prototype,
@@ -2112,16 +2245,19 @@
                             });
                     }
                 }
+
                 function c(e) {
                     return "boolean" != typeof e
                         ? Error("Argument type: " + (void 0 === e ? "undefined" : r(e)) + ". Please use a boolean.")
                         : ((a = e), e ? "adapter.js logging disabled" : "adapter.js logging enabled");
                 }
+
                 function u(e) {
                     return "boolean" != typeof e
                         ? Error("Argument type: " + (void 0 === e ? "undefined" : r(e)) + ". Please use a boolean.")
                         : ((s = !e), "adapter.js deprecation warnings " + (e ? "disabled" : "enabled"));
                 }
+
                 function d() {
                     ("u" < typeof window ? "undefined" : r(window)) === "object" &&
                         !a &&
@@ -2129,9 +2265,11 @@
                         "function" == typeof console.log &&
                         console.log.apply(console, arguments);
                 }
+
                 function f(e, t) {
                     s && console.warn(e + " is deprecated, please use " + t + " instead.");
                 }
+
                 function p(e) {
                     var t = {
                         browser: null,
@@ -2156,9 +2294,11 @@
                         t
                     );
                 }
+
                 function _(e) {
                     return "[object Object]" === Object.prototype.toString.call(e);
                 }
+
                 function h(e) {
                     return _(e)
                         ? Object.keys(e).reduce(function (t, n) {
@@ -2169,6 +2309,7 @@
                           }, {})
                         : e;
                 }
+
                 function m(e, t, n) {
                     !t ||
                         n.has(t.id) ||
@@ -2182,6 +2323,7 @@
                                   });
                         }));
                 }
+
                 function g(e, t, n) {
                     var r = n ? "outbound-rtp" : "inbound-rtp",
                         i = new Map();
@@ -2300,7 +2442,9 @@
                     }),
                     (r.parseRtpMap = function (e) {
                         var t = e.substr(9).split(" "),
-                            n = { payloadType: parseInt(t.shift(), 10) };
+                            n = {
+                                payloadType: parseInt(t.shift(), 10),
+                            };
                         return (
                             (n.name = (t = t[0].split("/"))[0]),
                             (n.clockRate = parseInt(t[1], 10)),
@@ -2381,7 +2525,9 @@
                     }),
                     (r.parseSsrcMedia = function (e) {
                         var t = e.indexOf(" "),
-                            n = { ssrc: parseInt(e.substr(7, t - 7), 10) },
+                            n = {
+                                ssrc: parseInt(e.substr(7, t - 7), 10),
+                            },
                             r = e.indexOf(":", t);
                         return (
                             r > -1
@@ -2581,7 +2727,11 @@
                                         ssrc: l,
                                         codecPayloadType: parseInt(e.parameters.apt, 10),
                                     };
-                                    l && t && (r.rtx = { ssrc: t }),
+                                    l &&
+                                        t &&
+                                        (r.rtx = {
+                                            ssrc: t,
+                                        }),
                                         n.push(r),
                                         a &&
                                             (((r = JSON.parse(JSON.stringify(r))).fec = {
@@ -2591,7 +2741,11 @@
                                             n.push(r));
                                 }
                             }),
-                            0 === n.length && l && n.push({ ssrc: l });
+                            0 === n.length &&
+                                l &&
+                                n.push({
+                                    ssrc: l,
+                                });
                         var u = r.matchPrefix(e, "b=");
                         return (
                             u.length &&
@@ -2599,7 +2753,7 @@
                                     0 === u[0].indexOf("b=TIAS:")
                                         ? parseInt(u[0].substr(7), 10)
                                         : 0 === u[0].indexOf("b=AS:")
-                                          ? 1000 * parseInt(u[0].substr(5), 10) * 0.95 - 16000
+                                          ? 1e3 * parseInt(u[0].substr(5), 10) * 0.95 - 16e3
                                           : void 0),
                                 n.forEach(function (e) {
                                     e.maxBitrate = u;

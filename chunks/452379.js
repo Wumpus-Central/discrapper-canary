@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(735438),
     i = n.n(r),
     l = n(73153),
@@ -18,6 +20,7 @@ let p = {
             l.h.subscribe("APP_STATE_UPDATE", g);
     },
 };
+
 function f() {
     let e = u.A.getFullState(),
         t = e[d.oD.PRELOADED_USER_SETTINGS];
@@ -29,6 +32,7 @@ function f() {
                 t.scheduleSaveFromOfflineEdit();
         });
 }
+
 function h(e) {
     let {
         settings: { proto: t, type: n },
@@ -40,10 +44,12 @@ function h(e) {
         jitter: i,
     });
 }
+
 function A(e) {
     let { settingsType: t } = e;
     c.Df[t].loadIfNecessary();
 }
+
 function g(e) {
     let { state: t } = e;
     ("inactive" === t || "background" === t) &&

@@ -5,6 +5,7 @@ n.d(t, {
 var i = n(311907),
     r = n(576705),
     l = n(652215);
+
 function a(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r.A;
     return (
@@ -15,6 +16,7 @@ function a(e) {
         t.can(l.xBc.SEND_MESSAGES, e)
     );
 }
+
 function s(e) {
     return (0, i.bG)([r.A], () => a(e, r.A));
 }

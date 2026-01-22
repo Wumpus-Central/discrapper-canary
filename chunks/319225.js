@@ -1,9 +1,12 @@
-n.d(t, { E: () => u });
+n.d(t, {
+    E: () => u,
+});
 var r = n(627968);
 n(64700);
 var i = n(158954),
     a = n(397927),
     s = n(985018);
+
 function o(e, t, n) {
     return (
         t in e
@@ -17,6 +20,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -33,6 +37,7 @@ function l(e) {
     }
     return e;
 }
+
 function c(e) {
     let { transitionState: t, title: n, body: a, onClose: o } = e;
     return (0, r.jsx)(i.Modal, {
@@ -48,6 +53,7 @@ function c(e) {
         subtitle: a,
     });
 }
+
 function u(e) {
     (0, a.qfG)((t) => (0, r.jsx)(c, l({}, t, e)));
 }

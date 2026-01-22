@@ -1,4 +1,9 @@
-n.d(t, { I: () => _ }), n(896048), n(321073), n(638769);
+n.d(t, {
+    I: () => _,
+}),
+    n(896048),
+    n(321073),
+    n(638769);
 var r = n(64700),
     i = n(311907),
     a = n(168186),
@@ -6,6 +11,7 @@ var r = n(64700),
     o = n(661191),
     l = n(630248),
     c = n(355097);
+
 function u(e, t, n) {
     return (
         t in e
@@ -19,6 +25,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,6 +42,7 @@ function d(e) {
     }
     return e;
 }
+
 function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -47,6 +55,7 @@ function f(e, t) {
     }
     return n;
 }
+
 function p(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -58,6 +67,7 @@ function p(e, t) {
         e
     );
 }
+
 function _(e, t) {
     r.useEffect(() => {
         s.bW.loadIfUncached(c.oD.FRECENCY_AND_FAVORITES_SETTINGS);
@@ -82,7 +92,10 @@ function _(e, t) {
             null == f ||
                 f.forEach((e) => {
                     let t = o.default.extractTimestamp(e.id);
-                    null == n.getEntry(e.application.id) && n.track(e.application.id, { timestamp: t });
+                    null == n.getEntry(e.application.id) &&
+                        n.track(e.application.id, {
+                            timestamp: t,
+                        });
                 }),
                 n.compute();
             let t = null != (e = null == f ? void 0 : f.map((e) => (0, a.bq)(e.application, !0))) ? e : [],

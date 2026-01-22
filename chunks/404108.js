@@ -1,4 +1,6 @@
-n.d(t, { p: () => _ });
+n.d(t, {
+    p: () => _,
+});
 var r = n(869795),
     i = n(132716),
     a = n(723906),
@@ -10,6 +12,7 @@ var r = n(869795),
     d = n(854499),
     f = n(862836),
     p = n(64700);
+
 function _(e) {
     let {
             id: t,
@@ -89,11 +92,17 @@ function _(e) {
                 var t;
                 A(),
                     null == (t = g.current) ||
-                        t.dispatchEvent(new CustomEvent("react-aria-item-action", { bubbles: !0 }));
+                        t.dispatchEvent(
+                            new CustomEvent("react-aria-item-action", {
+                                bubbles: !0,
+                            }),
+                        );
             }
             w && g.current && I.open(g.current, e, V.href, V.routerOptions);
         },
-        B = { ref: g };
+        B = {
+            ref: g,
+        };
     if (
         (E
             ? ((B.onPressStart = (e) => {
@@ -177,7 +186,11 @@ function _(e) {
                 onClick: q,
                 id: t,
             },
-            b ? { onMouseDown: (e) => e.preventDefault() } : void 0,
+            b
+                ? {
+                      onMouseDown: (e) => e.preventDefault(),
+                  }
+                : void 0,
         ),
         isPressed: Y,
         isSelected: n.isSelected(_),
@@ -187,10 +200,12 @@ function _(e) {
         hasAction: j,
     };
 }
+
 function h() {
     let e = window.event;
     return (null == e ? void 0 : e.key) === "Enter";
 }
+
 function m() {
     let e = window.event;
     return (null == e ? void 0 : e.key) === " " || (null == e ? void 0 : e.code) === "Space";

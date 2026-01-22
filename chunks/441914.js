@@ -1,4 +1,6 @@
-a.d(i, { A: () => n });
+a.d(i, {
+    A: () => n,
+});
 var t = a(385987);
 let n = {
     date: (0, t.A)({
@@ -21,8 +23,8 @@ let n = {
     }),
     dateTime: (0, t.A)({
         formats: {
-            full: "{{date}} 'à' {{time}}",
-            long: "{{date}} 'à' {{time}}",
+            full: "{{date}} '\xe0' {{time}}",
+            long: "{{date}} '\xe0' {{time}}",
             medium: "{{date}}, {{time}}",
             short: "{{date}}, {{time}}",
         },

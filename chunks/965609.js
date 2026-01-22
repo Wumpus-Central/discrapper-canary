@@ -26,6 +26,7 @@ n.d(t, {
 let i = (e) => "__section__".concat(e),
     a = (e) => "__section_header__".concat(e),
     s = (e) => parseInt(e.replace(/^__section__/, ""), 10);
+
 function o(e) {
     return e.reduce((e, t, n) => (t < e[0] ? [t, n] : e), [e[0], 0]);
 }
@@ -275,6 +276,7 @@ class c {
             r(this, "getSectionHeight", l);
     }
 }
+
 function u(e, t, n) {
     let r = {},
         i = {};

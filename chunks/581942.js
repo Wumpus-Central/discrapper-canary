@@ -1,9 +1,12 @@
-n.d(t, { f: () => _ });
+n.d(t, {
+    f: () => _,
+});
 var r = n(269605),
     i = n(796598),
     a = n(198420),
     s = n(41010),
     o = n(461927);
+
 function l(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -16,6 +19,7 @@ function l(e, t) {
     }
     return n;
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {};
@@ -31,9 +35,11 @@ function c(e) {
     }
     return e;
 }
+
 function u(e, t) {
     if (!(e instanceof t)) throw TypeError("Cannot call a class as a function");
 }
+
 function d(e, t) {
     for (var n = 0; n < t.length; n++) {
         var r = t[n];
@@ -43,9 +49,11 @@ function d(e, t) {
             Object.defineProperty(e, r.key, r);
     }
 }
+
 function f(e, t, n) {
     return t && d(e.prototype, t), n && d(e, n), e;
 }
+
 function p(e, t, n) {
     return (
         t in e
@@ -176,7 +184,11 @@ var _ = (function () {
             p(this, "handleTopDragEnter", function (e) {
                 var t = l.dragEnterTargetIds;
                 if (((l.dragEnterTargetIds = []), l.monitor.isDragging())) {
-                    (l.altKeyPressed = e.altKey), t.length > 0 && l.actions.hover(t, { clientOffset: (0, i.b$)(e) });
+                    (l.altKeyPressed = e.altKey),
+                        t.length > 0 &&
+                            l.actions.hover(t, {
+                                clientOffset: (0, i.b$)(e),
+                            });
                     var n = t.some(function (e) {
                         return l.monitor.canDropOnTarget(e);
                     });
@@ -193,7 +205,9 @@ var _ = (function () {
                     return;
                 }
                 (l.altKeyPressed = e.altKey),
-                    l.actions.hover(t || [], { clientOffset: (0, i.b$)(e) }),
+                    l.actions.hover(t || [], {
+                        clientOffset: (0, i.b$)(e),
+                    }),
                     (t || []).some(function (e) {
                         return l.monitor.canDropOnTarget(e);
                     })
@@ -220,8 +234,12 @@ var _ = (function () {
             p(this, "handleTopDrop", function (e) {
                 var t = l.dropTargetIds;
                 (l.dropTargetIds = []),
-                    l.actions.hover(t, { clientOffset: (0, i.b$)(e) }),
-                    l.actions.drop({ dropEffect: l.getCurrentDropEffect() }),
+                    l.actions.hover(t, {
+                        clientOffset: (0, i.b$)(e),
+                    }),
+                    l.actions.drop({
+                        dropEffect: l.getCurrentDropEffect(),
+                    }),
                     l.isDraggingNativeItem() ? l.endDragNativeItem() : l.monitor.isDragging() && l.actions.endDrag();
             }),
             p(this, "handleSelectStart", function (e) {
@@ -398,7 +416,12 @@ var _ = (function () {
                 value: function () {
                     var e = this.monitor.getSourceId(),
                         t = this.sourceNodeOptions.get(e);
-                    return c({ dropEffect: this.altKeyPressed ? "copy" : "move" }, t || {});
+                    return c(
+                        {
+                            dropEffect: this.altKeyPressed ? "copy" : "move",
+                        },
+                        t || {},
+                    );
                 },
             },
             {
@@ -444,7 +467,7 @@ var _ = (function () {
                 value: function (e) {
                     var t = this;
                     this.clearCurrentDragSourceNode(), (this.currentDragSourceNode = e);
-                    var n = 1000;
+                    var n = 1e3;
                     this.mouseMoveTimeoutTimer = setTimeout(function () {
                         var e;
                         return null == (e = t.rootElement)

@@ -1,4 +1,7 @@
-n.d(t, { u: () => b }), n(896048);
+n.d(t, {
+    u: () => b,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -11,6 +14,7 @@ var r = n(627968),
     f = n(985018),
     p = n(519501),
     h = n(658122);
+
 function b(e) {
     let { label: t, icon: n, setStatus: i, isFavorited: b, onFavoriteClick: g } = e,
         [m, A] = l.useState(!1),
@@ -33,7 +37,9 @@ function b(e) {
         },
         className: a()(h.item, h.labelContainer, p.kL),
         children: [
-            (0, r.jsx)("div", { children: n }),
+            (0, r.jsx)("div", {
+                children: n,
+            }),
             (0, r.jsx)(u.Text, {
                 variant: "text-md/normal",
                 className: p.rv,

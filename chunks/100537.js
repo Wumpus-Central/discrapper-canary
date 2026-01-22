@@ -1,4 +1,7 @@
-n.d(t, { A: () => L }), n(896048);
+n.d(t, {
+    A: () => L,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -32,6 +35,7 @@ let w = {
     [j.E8.NO_CHAT]: P.Oo,
     [j.E8.RESIZABLE]: P.Ig,
 };
+
 function L(e) {
     let { frame: t } = e,
         n = (0, m.h)(t.applicationId),
@@ -56,7 +60,9 @@ function L(e) {
             });
         }, [t.applicationId]),
         F = i.useCallback(() => {
-            v.A.stopFrame({ applicationId: t.applicationId });
+            v.A.stopFrame({
+                applicationId: t.applicationId,
+            });
         }, [t.applicationId]);
     i.useLayoutEffect(() => {
         if (null == G.current) return;
@@ -109,12 +115,16 @@ function L(e) {
             (0, r.jsxs)("div", {
                 className: a()(P.iE, w[q], e),
                 ref: U,
-                style: { right: D && !Number.isNaN(X) ? X : 0 },
+                style: {
+                    right: D && !Number.isNaN(X) ? X : 0,
+                },
                 children: [
                     (0, r.jsx)("div", {
                         className: P.lq,
                         children: (0, r.jsx)("div", {
-                            className: a()(P.ht, { [P.kK]: W }),
+                            className: a()(P.ht, {
+                                [P.kK]: W,
+                            }),
                             style: {
                                 paddingLeft: K,
                                 paddingRight: K,
@@ -172,7 +182,9 @@ function L(e) {
                                               (0, h.A)({
                                                   onConfirm: async () => {
                                                       (null == n ? void 0 : n.id) != null &&
-                                                          (await v.A.refreshProxyTicket({ applicationId: n.id })),
+                                                          (await v.A.refreshProxyTicket({
+                                                              applicationId: n.id,
+                                                          })),
                                                           (0, p.jp)();
                                                   },
                                               });

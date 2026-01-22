@@ -1,6 +1,9 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 var r = n(776231),
     i = n(652215);
+
 function a(e, t) {
     let n;
     if (null == e.image) return null;

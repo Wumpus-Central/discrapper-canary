@@ -1,11 +1,15 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(530560),
     i = n(374372),
     a = n(360345),
     s = n(632434);
+
 function o(e) {
     return null != e.text.match(/\s+(before|from)$/i);
 }
+
 function l(e) {
     return null != e.text.match(/\s+(after|since)$/i);
 }

@@ -1,4 +1,6 @@
-n.d(t, { y: () => A });
+n.d(t, {
+    y: () => A,
+});
 var r = n(869795),
     i = n(292841),
     a = n(132716),
@@ -18,6 +20,7 @@ var r = n(869795),
     b = n(885714),
     y = n(805447),
     O = n(853590);
+
 function A(e) {
     let t,
         {
@@ -186,7 +189,9 @@ function A(e) {
                         else {
                             let e,
                                 t,
-                                n = (0, h.N$)(v.current, { tabbable: !0 });
+                                n = (0, h.N$)(v.current, {
+                                    tabbable: !0,
+                                });
                             do (t = n.lastChild()) && (e = t);
                             while (t);
                             e && !e.contains(document.activeElement) && (0, o.e)(e);
@@ -231,7 +236,10 @@ function A(e) {
                     let e = (0, r.au)(v, n.focusedKey);
                     e instanceof HTMLElement &&
                         (e.contains(document.activeElement) || P || (0, o.e)(e),
-                        "keyboard" === (0, b.ME)() && (0, c.o)(e, { containingElement: v.current }));
+                        "keyboard" === (0, b.ME)() &&
+                            (0, c.o)(e, {
+                                containingElement: v.current,
+                            }));
                 }
             }
         },
@@ -319,7 +327,11 @@ function A(e) {
                 (q.current && cancelAnimationFrame(q.current),
                 (q.current = requestAnimationFrame(() => {
                     L.current &&
-                        ((0, c.R)(L.current, t), "virtual" !== e && (0, c.o)(t, { containingElement: v.current }));
+                        ((0, c.R)(L.current, t),
+                        "virtual" !== e &&
+                            (0, c.o)(t, {
+                                containingElement: v.current,
+                            }));
                 })));
         }
         !P && n.isFocused && null == n.focusedKey && null != z.current && v.current && (0, y.l)(v.current),

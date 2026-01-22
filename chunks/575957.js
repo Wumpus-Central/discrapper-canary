@@ -1,4 +1,6 @@
-t.d(e, { A: () => c });
+t.d(e, {
+    A: () => c,
+});
 var i = t(627968);
 t(64700);
 var o = t(55187),
@@ -7,6 +9,7 @@ var o = t(55187),
     a = t(985018),
     d = t(523659),
     l = t(289595);
+
 function c(n) {
     let {
             isWaitingForConnection: e,

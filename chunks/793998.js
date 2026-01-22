@@ -45,6 +45,7 @@ let x = {
         [N.u9.CONTENT_AND_SOCIAL]: A.A,
         [N.u9.DATA_AND_PRIVACY]: v.A,
     };
+
 function j() {
     return (0, r.jsx)(c.BJc, {
         justify: "center",
@@ -53,6 +54,7 @@ function j() {
         children: (0, r.jsx)(c.y$y, {}),
     });
 }
+
 function M(e) {
     let { section: t, handleItemSelect: n } = e,
         i = (0, O.VT)(),
@@ -96,6 +98,7 @@ function M(e) {
               ],
           });
 }
+
 function k(e) {
     let { theme: t, section: n, handleItemSelect: i } = e,
         a = (0, _.GV)(),
@@ -150,6 +153,7 @@ function k(e) {
             }),
     });
 }
+
 function U() {
     let e = (0, _.GV)(),
         {
@@ -172,7 +176,9 @@ function U() {
         className: D.kL,
         "aria-label": P.intl.string(w.default.RZqaJn),
         children: [
-            (0, r.jsx)(p.HI, { location: P.intl.string(w.default.RZqaJn) }),
+            (0, r.jsx)(p.HI, {
+                location: P.intl.string(w.default.RZqaJn),
+            }),
             (0, r.jsx)(M, {
                 section: n,
                 handleItemSelect: s,
@@ -186,6 +192,7 @@ function U() {
         ],
     });
 }
+
 function G() {
     let { analyticsLocations: e } = (0, f.Ay)(d.A.FAMILY_CENTER),
         t = (0, y.A)(),
@@ -219,7 +226,9 @@ function G() {
             className: s()(D.kL, D.ei),
             "aria-label": P.intl.string(w.default.RZqaJn),
             children: [
-                (0, r.jsx)(p.HI, { location: P.intl.string(w.default.RZqaJn) }),
+                (0, r.jsx)(p.HI, {
+                    location: P.intl.string(w.default.RZqaJn),
+                }),
                 (0, r.jsx)(k, {
                     theme: a,
                     section: I,

@@ -1,4 +1,7 @@
-n.d(t, { A: () => _ }), n(896048);
+n.d(t, {
+    A: () => _,
+}),
+    n(896048);
 var r = n(627968);
 n(64700);
 var i = n(284009),
@@ -17,6 +20,7 @@ var i = n(284009),
 n(595);
 var m = n(652215),
     b = n(985018);
+
 function _(e) {
     var t, i;
     let { party: _, onUserContextMenu: E } = e,
@@ -57,7 +61,9 @@ function _(e) {
                 _ = d[0],
                 E = null == _ ? void 0 : _.activity,
                 O = null == _ ? void 0 : _.startedPlayingTime,
-                y = { name: null != (t = null == E ? void 0 : E.name) ? t : "" };
+                y = {
+                    name: null != (t = null == E ? void 0 : E.name) ? t : "",
+                };
             if ((0, a.A)(E) && null != E)
                 return {
                     subtitle: (0, r.jsx)(f.Ay, {
@@ -81,7 +87,9 @@ function _(e) {
                         if ((0, o.A)(E))
                             return {
                                 subtitle: b.intl.string(b.t.tO8wOx),
-                                icon: (0, r.jsx)(g.A.Header.Icon, { src: g.A.Header.Icon.Src.XBOX }),
+                                icon: (0, r.jsx)(g.A.Header.Icon, {
+                                    src: g.A.Header.Icon.Src.XBOX,
+                                }),
                             };
                         return {
                             subtitle: (0, r.jsx)(f.Ay, {
@@ -101,28 +109,42 @@ function _(e) {
                             subtitle: b.intl.string(b.t.HyGHj7),
                             icon:
                                 null != e && null != e.getIconURL(64)
-                                    ? (0, r.jsx)(g.A.Header.Icon, { src: e.getIconURL(64) })
+                                    ? (0, r.jsx)(g.A.Header.Icon, {
+                                          src: e.getIconURL(64),
+                                      })
                                     : null,
                         };
                     case m.$pd.LISTENING:
                         let i;
                         return (
                             (i = (0, s.A)(E)
-                                ? (0, r.jsx)(g.A.Header.Icon, { src: g.A.Header.Icon.Src.SPOTIFY })
+                                ? (0, r.jsx)(g.A.Header.Icon, {
+                                      src: g.A.Header.Icon.Src.SPOTIFY,
+                                  })
                                 : null != e.getIconURL(64)
-                                  ? (0, r.jsx)(g.A.Header.Icon, { src: e.getIconURL(64) })
-                                  : (0, r.jsx)(g.A.Header.Icon, { src: n(960648) })),
+                                  ? (0, r.jsx)(g.A.Header.Icon, {
+                                        src: e.getIconURL(64),
+                                    })
+                                  : (0, r.jsx)(g.A.Header.Icon, {
+                                        src: n(960648),
+                                    })),
                             {
-                                subtitle: b.intl.formatToPlainString(b.t.NF5xop, { name: E.name }),
+                                subtitle: b.intl.formatToPlainString(b.t.NF5xop, {
+                                    name: E.name,
+                                }),
                                 icon: i,
                             }
                         );
                     case m.$pd.WATCHING:
                         return {
-                            subtitle: b.intl.formatToPlainString(b.t.pW3Ip3, { name: E.name }),
+                            subtitle: b.intl.formatToPlainString(b.t.pW3Ip3, {
+                                name: E.name,
+                            }),
                             icon:
                                 null != e && null != e.getIconURL(64)
-                                    ? (0, r.jsx)(g.A.Header.Icon, { src: e.getIconURL(64) })
+                                    ? (0, r.jsx)(g.A.Header.Icon, {
+                                          src: e.getIconURL(64),
+                                      })
                                     : null,
                         };
                     default:
@@ -148,7 +170,9 @@ function _(e) {
                     if (null != t && t.type === m.$pd.LISTENING)
                         return {
                             subtitle: b.intl.string(b.t.rmnkz4),
-                            icon: (0, r.jsx)(g.A.Header.Icon, { src: g.A.Header.Icon.Src.SPOTIFY }),
+                            icon: (0, r.jsx)(g.A.Header.Icon, {
+                                src: g.A.Header.Icon.Src.SPOTIFY,
+                            }),
                         };
                 }
             } else if (1 === d.length) {
@@ -169,14 +193,18 @@ function _(e) {
                         }),
                         icon:
                             null != n && null != n.getIconURL(64)
-                                ? (0, r.jsx)(g.A.Header.Icon, { src: n.getIconURL(64) })
+                                ? (0, r.jsx)(g.A.Header.Icon, {
+                                      src: n.getIconURL(64),
+                                  })
                                 : null,
                     }
                 );
             }
             return {
                 subtitle: b.intl.string(b.t.sau5tt),
-                icon: (0, r.jsx)(g.A.Header.Icon, { src: g.A.Header.Icon.Src.MULTIPLE }),
+                icon: (0, r.jsx)(g.A.Header.Icon, {
+                    src: g.A.Header.Icon.Src.MULTIPLE,
+                }),
             };
         })(_),
         T = (0, p.A)({
@@ -188,7 +216,9 @@ function _(e) {
             userId: v.user.id,
             guildId: null == I ? void 0 : I.id,
         }),
-        x = (0, u.a)({ displayNameStyles: j });
+        x = (0, u.a)({
+            displayNameStyles: j,
+        });
     return (0, r.jsx)(g.A.Header, {
         priorityUser: v,
         guildId: null == I ? void 0 : I.id,

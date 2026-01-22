@@ -1,7 +1,11 @@
-n.d(t, { A: () => f }), n(321073);
+n.d(t, {
+    A: () => f,
+}),
+    n(321073);
 var r = n(652215);
 let i = [],
     a = !1;
+
 function s() {
     let e = window.navigator.connection;
     return null == e
@@ -14,23 +18,28 @@ function s() {
               effectiveSpeed: e.effectiveType,
           };
 }
+
 function o() {
     if (!0 === a) return;
     let e = window.navigator.connection;
     null != e && ((a = !0), e.addEventListener("change", c));
 }
+
 function l() {
     if (!1 === a) return;
     let e = window.navigator.connection;
     null != e && 0 === i.length && null != e && (e.removeEventListener("change", c), (a = !1));
 }
+
 function c() {
     let e = s();
     i.forEach((t) => t(e));
 }
+
 function u(e) {
     i.push(e), o();
 }
+
 function d(e) {
     let t = i.indexOf(e);
     -1 !== t && (i.splice(t, 1), l());

@@ -1,4 +1,8 @@
-n.d(t, { A: () => m }), n(896048), n(65821);
+n.d(t, {
+    A: () => m,
+}),
+    n(896048),
+    n(65821);
 var r = n(627968),
     i = n(64700),
     a = n(342393),
@@ -33,7 +37,9 @@ let m = function (e) {
                     fontSize: t.getPropertyValue("font-size"),
                     backgroundColor: E,
                     padding: "12px",
-                    "::placeholder": { color: r.getPropertyValue("color") },
+                    "::placeholder": {
+                        color: r.getPropertyValue("color"),
+                    },
                     borderRadius: o.LU0.radii.xs,
                 },
             });

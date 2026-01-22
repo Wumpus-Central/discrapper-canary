@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -10,6 +12,7 @@ var i = n(311907),
     u = n(985018),
     d = n(687563),
     f = n(563111);
+
 function p(e, t, n) {
     return (
         t in e
@@ -23,6 +26,7 @@ function p(e, t, n) {
         e
     );
 }
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -39,6 +43,7 @@ function _(e) {
     }
     return e;
 }
+
 function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -51,6 +56,7 @@ function h(e, t) {
     }
     return n;
 }
+
 function m(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -62,6 +68,7 @@ function m(e, t) {
         e
     );
 }
+
 function g(e) {
     var t;
     let { code: p } = e,
@@ -69,17 +76,25 @@ function g(e) {
     if (null == h || h.state === c.QB.RESOLVING)
         return (0, r.jsxs)(s.A, {
             children: [
-                (0, r.jsx)(s.A.Header, { text: u.intl.string(u.t.Xj87Yf) }),
-                (0, r.jsx)(s.A.Body, { resolving: !0 }),
+                (0, r.jsx)(s.A.Header, {
+                    text: u.intl.string(u.t.Xj87Yf),
+                }),
+                (0, r.jsx)(s.A.Body, {
+                    resolving: !0,
+                }),
             ],
         });
     if (h.state === c.QB.EXPIRED)
         return (0, r.jsxs)(s.A, {
             children: [
-                (0, r.jsx)(s.A.Header, { text: u.intl.string(u.t.C7ZRNw) }),
+                (0, r.jsx)(s.A.Header, {
+                    text: u.intl.string(u.t.C7ZRNw),
+                }),
                 (0, r.jsxs)(s.A.Body, {
                     children: [
-                        (0, r.jsx)(s.A.Icon, { expired: !0 }),
+                        (0, r.jsx)(s.A.Icon, {
+                            expired: !0,
+                        }),
                         (0, r.jsx)(s.A.Info, {
                             expired: !0,
                             title: u.intl.string(u.t.A6MwXE),
@@ -91,7 +106,13 @@ function g(e) {
     let g = () => {
             (0, a.mMO)(async () => {
                 let { default: e } = await Promise.all([n.e("7726"), n.e("4042")]).then(n.bind(n, 72715));
-                return (t) => (0, r.jsx)(e, m(_({}, t), { guildTemplate: h }));
+                return (t) =>
+                    (0, r.jsx)(
+                        e,
+                        m(_({}, t), {
+                            guildTemplate: h,
+                        }),
+                    );
             });
         },
         E = __OVERLAY__
@@ -108,13 +129,17 @@ function g(e) {
               });
     return (0, r.jsxs)(s.A, {
         children: [
-            (0, r.jsx)(s.A.Header, { text: u.intl.string(u.t.kAvFkO) }),
+            (0, r.jsx)(s.A.Header, {
+                text: u.intl.string(u.t.kAvFkO),
+            }),
             (0, r.jsxs)(s.A.Body, {
                 children: [
                     (0, r.jsxs)("div", {
                         className: f.iH,
                         children: [
-                            (0, r.jsx)(o.A, { className: d.K }),
+                            (0, r.jsx)(o.A, {
+                                className: d.K,
+                            }),
                             (0, r.jsx)(s.A.Info, {
                                 title: h.name,
                                 children: u.intl.format(u.t.cGXXHL, {

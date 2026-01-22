@@ -15,9 +15,11 @@ var r = n(684013),
     u = n(613057),
     d = n(652215);
 let p = ["207646673902501888"];
+
 function f(e) {
     return null != e && !!i.default.isOverlayOOPEnabledForPid(e) && l.A.isReady(e);
 }
+
 function h(e) {
     return null == e
         ? {
@@ -44,7 +46,14 @@ let A = async (e, t, n) => {
         if (((0, c.sq)(e, t), (null == n || "" === n) && (0, c.IR)(t)))
             return (e.authorization.scopes = [u.LQ, u.kw]), Promise.resolve();
         if (null == n || "" === n)
-            return Promise.reject(new o.A({ closeCode: d.YI$.INVALID_CLIENTID }, "No Client ID Specified"));
+            return Promise.reject(
+                new o.A(
+                    {
+                        closeCode: d.YI$.INVALID_CLIENTID,
+                    },
+                    "No Client ID Specified",
+                ),
+            );
         let r = a.Ay.releaseChannel !== d.BIo.CANARY && !p.includes(n) && e.transport !== u.z4.POST_MESSAGE;
         return await (0, c.e2)(n, r), (0, c.uM)(e, n, t);
     },

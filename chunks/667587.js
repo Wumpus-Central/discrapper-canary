@@ -1,4 +1,7 @@
-n.r(t), n.d(t, { default: () => B });
+n.r(t),
+    n.d(t, {
+        default: () => B,
+    });
 var l = n(627968),
     i = n(64700),
     r = n(311907),
@@ -33,6 +36,7 @@ var l = n(627968),
     P = n(652215),
     _ = n(985018),
     D = n(175107);
+
 function k(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         n = arguments.length > 2 ? arguments[2] : void 0;
@@ -177,7 +181,9 @@ class G extends i.PureComponent {
                               },
                               predicate: () => !((!d && !h) || t.isModeratorReportChannel()) && A.oH.has(t.type),
                           },
-                          { section: u.Fq.DIVIDER },
+                          {
+                              section: u.Fq.DIVIDER,
+                          },
                           {
                               section: P.p_A.DELETE,
                               onClick() {
@@ -210,6 +216,7 @@ class G extends i.PureComponent {
               });
     }
 }
+
 function B() {
     let { channel: e, analyticsLocation: t } = (0, r.cf)([O.A], () => O.A.getProps()),
         n = (0, r.bG)([O.A], () => O.A.getFormState()),

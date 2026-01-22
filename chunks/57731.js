@@ -1,4 +1,7 @@
-n.d(t, { A: () => b }), n(896048);
+n.d(t, {
+    A: () => b,
+}),
+    n(896048);
 var r = n(627968),
     i = n(397927),
     l = n(11351),
@@ -10,11 +13,13 @@ var r = n(627968),
     u = n(136230),
     f = n(985018),
     g = n(436151);
+
 function b() {
     let { editStateId: e, guildId: t } = (0, s.O)(),
         [, b] = a.$7(e, t),
         [m, p] = a.xR(e, t),
         x = a.It(e, t);
+
     function h() {
         (0, i.mMO)(async () => {
             let { default: e } = await n.e("64939").then(n.bind(n, 836774));

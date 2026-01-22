@@ -1,4 +1,7 @@
-n.d(t, { I: () => h }), n(896048);
+n.d(t, {
+    I: () => h,
+}),
+    n(896048);
 var r = n(735438),
     l = n.n(r),
     i = n(311907),
@@ -10,6 +13,7 @@ var r = n(735438),
     d = n(652215);
 let f = new Set(),
     p = null;
+
 function h(e) {
     var t;
     let { id: n } = e,
@@ -53,7 +57,9 @@ async function g() {
     try {
         let t = await a.Bo.get({
             url: d.Rsh.MESSAGE_REQUESTS_SUPPLEMENTAL_DATA,
-            query: { channel_ids: e },
+            query: {
+                channel_ids: e,
+            },
             rejectWithError: !0,
         });
         s.h.dispatch({

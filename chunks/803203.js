@@ -1,4 +1,7 @@
-n.d(t, { A: () => g }), n(896048);
+n.d(t, {
+    A: () => g,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -12,6 +15,7 @@ var r = n(627968),
     p = n(60317),
     _ = n(859751),
     h = n(113520);
+
 function m(e) {
     let { channelId: t, messageId: n, emoji: m, useChatFontScaling: g, color: E, count: b, emojiSize: y } = e,
         O = (0, a.bG)([u.A], () => u.A.getEffectForEmojiId(t, n, m)),
@@ -50,7 +54,7 @@ function m(e) {
         };
         if (S || (T && !C) || !C) return;
         e();
-        let r = setInterval(e, 5000);
+        let r = setInterval(e, 5e3);
         return () => {
             clearInterval(r);
         };

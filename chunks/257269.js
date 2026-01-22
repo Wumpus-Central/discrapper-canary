@@ -31,15 +31,26 @@ async function o(e, t) {
 }
 async function l(e, t, n) {
     let r = null != n ? n : void 0;
-    if (null == t || null != r) return { customId: r };
+    if (null == t || null != r)
+        return {
+            customId: r,
+        };
     try {
         let n = await o(e, t);
-        if (null == n) return { customId: r };
-        return { customId: null != r ? r : n.custom_id };
+        if (null == n)
+            return {
+                customId: r,
+            };
+        return {
+            customId: null != r ? r : n.custom_id,
+        };
     } catch (e) {
-        return { customId: r };
+        return {
+            customId: r,
+        };
     }
 }
+
 function c(e) {
     if (null != e)
         return ""

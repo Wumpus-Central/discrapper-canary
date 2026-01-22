@@ -1,4 +1,8 @@
-n.d(t, { r: () => m }), n(896048), n(321073);
+n.d(t, {
+    r: () => m,
+}),
+    n(896048),
+    n(321073);
 var r = n(627968),
     i = n(64700),
     a = n(158954),
@@ -107,21 +111,27 @@ let m = () => {
                                   date: n.currentPeriodEnd,
                                   helpdeskArticle: o.A.getArticleURL(p.MVz.BLOCKED_PAYMENTS),
                               })
-                            : h.intl.format(h.t.Y6Wfaw, { date: n.currentPeriodEnd });
+                            : h.intl.format(h.t.Y6Wfaw, {
+                                  date: n.currentPeriodEnd,
+                              });
                     case d.PremiumTypes.TIER_1:
                         return e
                             ? h.intl.format(h.t.QN7eIt, {
                                   date: n.currentPeriodEnd,
                                   helpdeskArticle: o.A.getArticleURL(p.MVz.BLOCKED_PAYMENTS),
                               })
-                            : h.intl.format(h.t.X7i9D8, { date: n.currentPeriodEnd });
+                            : h.intl.format(h.t.X7i9D8, {
+                                  date: n.currentPeriodEnd,
+                              });
                     default:
                         return e
                             ? h.intl.format(h.t.vuSNhj, {
                                   date: n.currentPeriodEnd,
                                   helpdeskArticle: o.A.getArticleURL(p.MVz.BLOCKED_PAYMENTS),
                               })
-                            : h.intl.format(h.t.fCdmNs, { date: n.currentPeriodEnd });
+                            : h.intl.format(h.t.fCdmNs, {
+                                  date: n.currentPeriodEnd,
+                              });
                 }
         }
     };

@@ -1,4 +1,6 @@
-r.d(t, { default: () => O });
+r.d(t, {
+    default: () => O,
+});
 var n = r(627968);
 r(64700);
 var o = r(284009),
@@ -11,12 +13,15 @@ var o = r(284009),
     u = r(94733),
     p = r(985018),
     b = r(14036);
+
 function f(e) {
     let { attachment: t, guildId: r, productId: o } = e;
     return (0, n.jsxs)("li", {
         className: b.k,
         children: [
-            (0, n.jsx)(d.A, { attachment: t }),
+            (0, n.jsx)(d.A, {
+                attachment: t,
+            }),
             (0, n.jsx)(u.A, {
                 className: b.i,
                 icon: i.s3U,
@@ -28,6 +33,7 @@ function f(e) {
         ],
     });
 }
+
 function O(e) {
     var t;
     let { guildId: r, productId: o, onClose: i, transitionState: d } = e,
@@ -39,7 +45,9 @@ function O(e) {
         transitionState: d,
         "aria-label": p.intl.string(p.t["3jaCac"]),
         title: u.name,
-        subtitle: p.intl.format(p.t["6dOuaP"], { count: u.attachments_count }),
+        subtitle: p.intl.format(p.t["6dOuaP"], {
+            count: u.attachments_count,
+        }),
         actions: [],
         onClose: i,
         children: (0, n.jsx)("ul", {

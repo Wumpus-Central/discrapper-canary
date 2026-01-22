@@ -1,4 +1,6 @@
-r.d(t, { default: () => m });
+r.d(t, {
+    default: () => m,
+});
 var n = r(627968);
 r(64700);
 var l = r(503698),
@@ -15,6 +17,7 @@ var l = r(503698),
     g = r(985018),
     y = r(583970),
     j = r(581298);
+
 function m(e) {
     var t, r, l, m;
     let { guildId: O } = e,

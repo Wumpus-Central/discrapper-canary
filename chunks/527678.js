@@ -27,12 +27,14 @@ var l = n(73153),
     S = n(746080),
     E = n(539916),
     A = n(985018);
+
 function x(e) {
     l.h.dispatch({
         type: "GUILD_SETTINGS_ONBOARDING_STEP",
         step: e,
     });
 }
+
 function _(e) {
     null != e &&
         l.h.dispatch({
@@ -50,7 +52,9 @@ async function j(e, t) {
             body: A.intl.string(A.t.JOT74c),
         });
     try {
-        await (0, p.YN)(e, { mode: t });
+        await (0, p.YN)(e, {
+            mode: t,
+        });
     } catch (n) {
         var d;
         let { fieldName: e, error: t } = null != (d = new i.A(n).getAnyErrorMessageAndField()) ? d : {};
@@ -65,10 +69,12 @@ async function j(e, t) {
         mode: t,
     });
 }
+
 function T(e, t) {
     let n = O.kd.findIndex((e) => e === t);
     -1 !== n && n !== O.kd.length - 1 && x(O.kd[n + 1]);
 }
+
 function b(e, t) {
     let n = O.kd.findIndex((e) => e === t);
     -1 !== n && 0 !== n && x(O.kd[n - 1]);

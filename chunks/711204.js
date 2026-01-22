@@ -1,8 +1,11 @@
-i.d(t, { r: () => m });
+i.d(t, {
+    r: () => m,
+});
 var r = i(927813),
     n = i(723702),
     s = i(290805),
     a = i(622397);
+
 function o(e, t, i) {
     return (
         t in e
@@ -60,8 +63,8 @@ class m {
                 branch_name: this.mode.branchName,
                 commit_date: this.mode.commitDate,
                 timestamp: new Date().toISOString(),
-                build_number: "488133",
-                built_at: "1769101111997",
+                build_number: "488230",
+                built_at: "1769110173981",
                 release_channel: null !== s.y && void 0 !== s.y ? s.y : "unknown",
                 tags: i,
                 metrics: {

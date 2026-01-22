@@ -22,6 +22,7 @@ var r = n(989349),
     h = n(469881),
     m = n(37411),
     g = n(652215);
+
 function E(e, t, n) {
     return (
         t in e
@@ -35,6 +36,7 @@ function E(e, t, n) {
         e
     );
 }
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -51,6 +53,7 @@ function b(e) {
     }
     return e;
 }
+
 function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -63,6 +66,7 @@ function y(e, t) {
     }
     return n;
 }
+
 function O(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -74,6 +78,7 @@ function O(e, t) {
         e
     );
 }
+
 function A(e, t) {
     if (null == e) return {};
     var n,
@@ -90,6 +95,7 @@ function A(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function v(e, t) {
     if (null == e) return {};
     var n,
@@ -101,9 +107,11 @@ function v(e, t) {
     return i;
 }
 n(985018);
+
 function S() {
     (0, o.zV)(g.HAw.THREAD_BROWSER_TAB_CHANGED);
 }
+
 function I() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "Modal";
     (0, o.zV)(g.HAw.OPEN_MODAL, {
@@ -111,9 +119,13 @@ function I() {
         location_section: e,
     });
 }
+
 function T() {
-    d.default.track(g.HAw.OPEN_POPOUT, { type: "Active Threads Popout" });
+    d.default.track(g.HAw.OPEN_POPOUT, {
+        type: "Active Threads Popout",
+    });
 }
+
 function C(e, t) {
     var n, r;
     let i = (0, l.C)(e);

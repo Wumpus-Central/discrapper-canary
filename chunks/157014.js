@@ -1,9 +1,17 @@
-Object.defineProperty(t, "__esModule", { value: !0 }), (t.makeDataFormatters = a);
+Object.defineProperty(t, "__esModule", {
+    value: !0,
+}),
+    (t.makeDataFormatters = a);
 let r = n(964558),
     i = n(112600);
+
 function a(e, t, n = !1) {
     function s(e) {
-        return n ? Object.assign(Object.assign({}, e), { localeMatcher: "lookup" }) : e;
+        return n
+            ? Object.assign(Object.assign({}, e), {
+                  localeMatcher: "lookup",
+              })
+            : e;
     }
     return {
         formatDate(n, a) {

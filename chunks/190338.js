@@ -1,4 +1,7 @@
-n.d(t, { m: () => g }), n(896048);
+n.d(t, {
+    m: () => g,
+}),
+    n(896048);
 var l = n(627968),
     r = n(64700),
     a = n(465532),
@@ -11,6 +14,7 @@ var l = n(627968),
     h = n(294454),
     m = n(985018),
     f = n(967789);
+
 function g(e) {
     let { message: t, canSend: n, selectedDestinations: g, onSend: p, inputValue: b, setInputValue: x } = e,
         y = (0, o.A)(),

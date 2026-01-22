@@ -1,8 +1,12 @@
-n.d(t, { r: () => s }), n(896048);
+n.d(t, {
+    r: () => s,
+}),
+    n(896048);
 var r = n(311907),
     i = n(997590),
     l = n(324580),
     a = n(985018);
+
 function s(e) {
     let { categoryId: t } = e;
     return (0, r.bG)([i.A], () =>

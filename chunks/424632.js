@@ -59,7 +59,9 @@ async function o(e) {
                 let { data: l } = a;
                 if (l.type === i.lA.CROP_ANIMATED_IMAGE_COMPLETE)
                     e(
-                        ((n = new Blob([l.result], { type: t.type })),
+                        ((n = new Blob([l.result], {
+                            type: t.type,
+                        })),
                         new Promise((e) => {
                             let t = new FileReader();
                             (t.onload = (t) => {
@@ -98,12 +100,14 @@ async function o(e) {
         }
     );
 }
+
 function l(e, t, r) {
     return {
         x: (0, a.clamp)(e, r.left, r.right),
         y: (0, a.clamp)(t, r.bottom, r.top),
     };
 }
+
 function c(e, t, r, a) {
     let n = r,
         o = a,
@@ -118,6 +122,7 @@ function c(e, t, r, a) {
               height: t,
           };
 }
+
 function s(e, t, r) {
     switch (e) {
         case i.HL.AVATAR:
@@ -143,6 +148,7 @@ function s(e, t, r) {
             return c(i.ny, i.eJ, t, r);
     }
 }
+
 function u(e, t, r) {
     let a = {
             top: 0,
@@ -158,6 +164,7 @@ function u(e, t, r) {
         a
     );
 }
+
 function f(e, t, r, a) {
     switch (e) {
         case i.HL.AVATAR:

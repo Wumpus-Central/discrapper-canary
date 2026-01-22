@@ -1,4 +1,6 @@
-n.d(t, { C: () => d });
+n.d(t, {
+    C: () => d,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -8,9 +10,11 @@ var i = n(503698),
     l = n(151282),
     c = n(985018),
     u = n(745315);
+
 function d(e) {
     let { pendingScheduledMessage: t } = e,
         { channelId: n, scheduledTimestamp: i } = t;
+
     function d(e) {
         e.stopPropagation(), (0, l.Ps)(n);
     }
@@ -25,11 +29,15 @@ function d(e) {
                         color: "text-default",
                         className: a()(u.Qq, u.a3),
                         variant: "text-sm/normal",
-                        children: c.intl.formatToPlainString(c.t["MQcRX/"], { timestamp: new Date(i).valueOf() }),
+                        children: c.intl.formatToPlainString(c.t["MQcRX/"], {
+                            timestamp: new Date(i).valueOf(),
+                        }),
                     }),
                     (0, r.jsx)("div", {
                         className: u.o1,
-                        children: (0, r.jsx)(o.x, { onClick: d }),
+                        children: (0, r.jsx)(o.x, {
+                            onClick: d,
+                        }),
                     }),
                 ],
             }),

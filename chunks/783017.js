@@ -2,7 +2,17 @@ e.exports = function (e) {
     let t = e.regex,
         n = {
             className: "variable",
-            variants: [{ begin: /\$\d+/ }, { begin: /\$\{\w+\}/ }, { begin: t.concat(/[$@]/, e.UNDERSCORE_IDENT_RE) }],
+            variants: [
+                {
+                    begin: /\$\d+/,
+                },
+                {
+                    begin: /\$\{\w+\}/,
+                },
+                {
+                    begin: t.concat(/[$@]/, e.UNDERSCORE_IDENT_RE),
+                },
+            ],
         },
         r = {
             endsWithParent: !0,
@@ -74,8 +84,12 @@ e.exports = function (e) {
                             end: "\\s|\\{|;",
                             returnEnd: !0,
                         },
-                        { begin: "\\*(\\.[a-z\\-]+)+" },
-                        { begin: "([a-z\\-]+\\.)+\\*" },
+                        {
+                            begin: "\\*(\\.[a-z\\-]+)+",
+                        },
+                        {
+                            begin: "([a-z\\-]+\\.)+\\*",
+                        },
                     ],
                 },
                 {
@@ -99,7 +113,9 @@ e.exports = function (e) {
                 beginKeywords: "upstream location",
                 end: /;|\{/,
                 contains: r.contains,
-                keywords: { section: "upstream location" },
+                keywords: {
+                    section: "upstream location",
+                },
             },
             {
                 className: "section",

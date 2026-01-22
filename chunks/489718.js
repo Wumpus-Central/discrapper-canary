@@ -1,9 +1,13 @@
-n.d(t, { I: () => P }), n(896048), n(264879);
+n.d(t, {
+    I: () => P,
+}),
+    n(896048),
+    n(264879);
 var r = n(627968),
     i = n(64700),
     a = n(977418),
     s = n(967158),
-    o = n(432022),
+    o = n(108531),
     l = n(823807),
     c = n(827734),
     u = n(717421),
@@ -12,6 +16,7 @@ var r = n(627968),
     p = n(426333),
     _ = n(140735),
     h = n(443504);
+
 function m(e, t, n) {
     return (
         t in e
@@ -25,6 +30,7 @@ function m(e, t, n) {
         e
     );
 }
+
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -41,6 +47,7 @@ function g(e) {
     }
     return e;
 }
+
 function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -53,6 +60,7 @@ function E(e, t) {
     }
     return n;
 }
+
 function b(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -74,6 +82,7 @@ let y = "M4.10585 5.3837L5.37864 4.11091L11.884 10.61632L10.6112 11.88912L4.1058
     C = [0, 0.1, 0.9, 1],
     N = [0, 0.1, 0.2, 0.5, 0.7, 1],
     R = [0, 0.3, 0.5, 0.8, 0.9, 1];
+
 function w(e, t, n) {
     let i = e.to({
         range: C,
@@ -106,6 +115,7 @@ function w(e, t, n) {
         }),
     });
 }
+
 function P(e) {
     let {
             checked: t,
@@ -141,7 +151,9 @@ function P(e) {
             L,
             x,
         ),
-        { hoverProps: U, isHovered: G } = (0, s.M)({ isDisabled: n }),
+        { hoverProps: U, isHovered: G } = (0, s.M)({
+            isDisabled: n,
+        }),
         V = (0, d.r)(c.A.colors.SWITCH_BACKGROUND_DEFAULT).spring(),
         F = (0, d.r)(c.A.colors.SWITCH_BACKGROUND_DEFAULT).spring(),
         B = (0, d.r)(c.A.colors.SWITCH_BACKGROUND_SELECTED_DEFAULT).spring(),
@@ -158,7 +170,9 @@ function P(e) {
         J = (0, d.r)(c.A.colors.SWITCH_THUMB_BACKGROUND_SELECTED_DEFAULT).spring(),
         { state: ee, opacity: et } = (0, u.z)(
             {
-                config: { duration: I.enabled ? 200 : 300 },
+                config: {
+                    duration: I.enabled ? 200 : 300,
+                },
                 opacity: n ? 0.5 : 1,
                 state: k ? (t ? R[R.length - 2] : N[1]) : +!!t,
             },
@@ -245,7 +259,14 @@ function P(e) {
                                 }),
                             }),
                         ),
-                        (0, r.jsx)(_.A, { children: (0, r.jsx)("input", b(g({}, j), { ref: x })) }),
+                        (0, r.jsx)(_.A, {
+                            children: (0, r.jsx)(
+                                "input",
+                                b(g({}, j), {
+                                    ref: x,
+                                }),
+                            ),
+                        }),
                     ],
                 }),
             ),

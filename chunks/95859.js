@@ -1,4 +1,6 @@
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -12,7 +14,9 @@ var i = n(503698),
     f = n(706627);
 let p = (e, t) =>
         (null == e ? void 0 : e.status) === c.Wo.EARNED
-            ? d.intl.format(d.t.Hu4jfi, { date: null != t ? t : new Date() })
+            ? d.intl.format(d.t.Hu4jfi, {
+                  date: null != t ? t : new Date(),
+              })
             : (null == e ? void 0 : e.status) === c.Wo.UPCOMING
               ? d.intl.format(d.t.E85fll, {
                     date: null != t ? t : new Date(),
@@ -28,7 +32,9 @@ let p = (e, t) =>
         let { id: _, nameUnformatted: h, tenureReqNumMonths: m, hasWideArt: g } = t,
             E = d.intl.string(h),
             b = (0, l.T)(_, m),
-            y = { "--custom-badge-glow-color": (0, o.KU)(t.glowColor, 0.5) };
+            y = {
+                "--custom-badge-glow-color": (0, o.KU)(t.glowColor, 0.5),
+            };
         return (0, r.jsxs)("div", {
             className: f.kL,
             style: y,

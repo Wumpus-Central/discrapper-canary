@@ -1,10 +1,13 @@
-r.d(t, { A: () => l });
+r.d(t, {
+    A: () => l,
+});
 var n = r(627968);
 r(64700);
 var i = r(397927),
     s = r(840065),
     a = r(985018),
     o = r(299043);
+
 function l(e) {
     let { onClose: t } = e;
     return (0, n.jsxs)("div", {

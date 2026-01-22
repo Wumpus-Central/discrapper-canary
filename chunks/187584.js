@@ -1,4 +1,7 @@
-n.d(t, { i: () => y }), n(896048);
+n.d(t, {
+    i: () => y,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(106778),
@@ -7,6 +10,7 @@ var r = n(627968),
     l = n(267102),
     c = n(129185),
     u = n(652215);
+
 function d(e, t, n) {
     return (
         t in e
@@ -20,6 +24,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +41,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -48,6 +54,7 @@ function p(e, t) {
     }
     return n;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -59,7 +66,7 @@ function _(e, t) {
         e
     );
 }
-let h = 1000 / 60,
+let h = 1e3 / 60,
     m = 24,
     g = {
         velocity: {
@@ -114,6 +121,7 @@ let h = 1000 / 60,
     },
     E = ["#FFFFFF"],
     b = [n(426560), ...(0, o.A)(["snowflake"])];
+
 function y(e) {
     let { children: t } = e,
         [n, o] = i.useState(!1),

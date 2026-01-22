@@ -7,6 +7,7 @@ n.d(t, {
     n(896048);
 var r = n(73153),
     i = n(962052);
+
 function l(e) {
     i.A.queryDirectory(e, (t, n) => {
         null == t &&
@@ -18,12 +19,14 @@ function l(e) {
             });
     });
 }
+
 function a(e) {
     r.h.dispatch({
         type: "INSTALLATION_LOCATION_REMOVE",
         path: e,
     });
 }
+
 function s(e, t) {
     let { label: n, isDefault: i } = t;
     r.h.dispatch({
@@ -33,6 +36,7 @@ function s(e, t) {
         isDefault: i,
     });
 }
+
 function o(e) {
     let t = {},
         n = 0;

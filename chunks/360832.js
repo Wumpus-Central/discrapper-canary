@@ -1,4 +1,12 @@
-n.d(t, { A: () => N }), n(896048), n(680155), n(323874), n(14289), n(35956), n(747238);
+n.d(t, {
+    A: () => N,
+}),
+    n(896048),
+    n(680155),
+    n(323874),
+    n(14289),
+    n(35956),
+    n(747238);
 var l = n(627968),
     a = n(64700),
     r = n(960488),
@@ -26,6 +34,7 @@ var l = n(627968),
     E = n(435220),
     I = n(652215),
     P = n(563962);
+
 function N(e) {
     var t;
     let { onSelectApplication: n, onScroll: N } = e,
@@ -66,12 +75,17 @@ function N(e) {
         );
     a.useEffect(() => {
         var e;
-        null == (e = T.current) || e.scrollTo({ to: 0 }),
+        null == (e = T.current) ||
+            e.scrollTo({
+                to: 0,
+            }),
             w !== D.current &&
                 ((D.current = w),
                 m.$P({
                     query: w,
-                    options: { source: s.V.APP_DIRECTORY },
+                    options: {
+                        source: s.V.APP_DIRECTORY,
+                    },
                 })),
             m.$P({
                 query: w,
@@ -130,7 +144,12 @@ function N(e) {
                               });
                       }
                       return e;
-                  })({ [v.lj]: e.totalCount }, e.countsByCategory)
+                  })(
+                      {
+                          [v.lj]: e.totalCount,
+                      },
+                      e.countsByCategory,
+                  )
                 : {};
         }),
         Y = (0, d.A)(F),
@@ -182,7 +201,11 @@ function N(e) {
                 children: (0, l.jsxs)("div", {
                     className: P.WH,
                     children: [
-                        R ? null : (0, l.jsx)("div", { className: P.AW }),
+                        R
+                            ? null
+                            : (0, l.jsx)("div", {
+                                  className: P.AW,
+                              }),
                         (0, l.jsx)(u.A, {
                             children: (0, l.jsxs)("div", {
                                 className: P.hQ,

@@ -1,4 +1,7 @@
-t.d(n, { default: () => _ }), t(896048);
+t.d(n, {
+    default: () => _,
+}),
+    t(896048);
 var i = t(627968),
     a = t(64700),
     r = t(478437),
@@ -15,6 +18,7 @@ var i = t(627968),
     h = t(231150),
     C = t(985018),
     E = t(233492);
+
 function _(e) {
     let { transitionState: n, onClose: t, parentId: r } = e,
         s = (0, d.bG)([f.Ay], () => f.Ay.getFlattenedGuildIds()[0]),
@@ -43,6 +47,7 @@ function _(e) {
         }),
     });
 }
+
 function I(e) {
     let { guildId: n, hideMutedChannels: t, parentId: l } = e,
         o = (0, d.bG)([c.A], () => c.A.getCategories(n)),
@@ -51,13 +56,23 @@ function I(e) {
     return (
         a.useEffect(() => {
             var e;
-            null == u || null == (e = u.current) || e.scroll({ top: 0 });
+            null == u ||
+                null == (e = u.current) ||
+                e.scroll({
+                    top: 0,
+                });
         }, [n]),
         (0, i.jsx)("div", {
             ref: u,
             children: s.map((e) =>
                 e.type === r.r.GUILD_CATEGORY
-                    ? (0, i.jsx)(m, { name: e.name }, e.id)
+                    ? (0, i.jsx)(
+                          m,
+                          {
+                              name: e.name,
+                          },
+                          e.id,
+                      )
                     : (0, i.jsx)(
                           x,
                           {
@@ -71,6 +86,7 @@ function I(e) {
         })
     );
 }
+
 function m(e) {
     let { name: n } = e;
     return (0, i.jsx)(o.Text, {
@@ -80,6 +96,7 @@ function m(e) {
         children: n,
     });
 }
+
 function x(e) {
     let { channel: n, hideMutedChannels: t, parentId: a } = e,
         r = (0, p.Af)(n.id);
@@ -112,7 +129,9 @@ function x(e) {
                     ],
                 }),
                 null != r
-                    ? (0, i.jsx)(b, { channelId: n.id })
+                    ? (0, i.jsx)(b, {
+                          channelId: n.id,
+                      })
                     : (0, i.jsx)(N, {
                           channelId: n.id,
                           parentId: a,
@@ -122,6 +141,7 @@ function x(e) {
         n.id,
     );
 }
+
 function N(e) {
     let { channelId: n, parentId: t } = e;
     return (0, i.jsx)(o.Button, {
@@ -133,6 +153,7 @@ function N(e) {
         },
     });
 }
+
 function b(e) {
     let { channelId: n } = e;
     return (0, i.jsx)(o.Button, {

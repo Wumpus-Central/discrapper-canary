@@ -1,4 +1,6 @@
-n.d(t, { A: () => x });
+n.d(t, {
+    A: () => x,
+});
 var l = n(627968);
 n(64700);
 var r = n(989349),
@@ -8,6 +10,7 @@ var r = n(989349),
     o = n(280871),
     c = n(985018),
     u = n(659621);
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -33,6 +36,7 @@ function d(e) {
     }
     return e;
 }
+
 function g(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -51,6 +55,7 @@ function g(e, t) {
         e
     );
 }
+
 function x(e) {
     let {
         className: t,
@@ -72,7 +77,11 @@ function x(e) {
         N = i()().add(a.Xy, "days");
     null != j && (A.add(a.Ze, "years"), N.add(a.Ze, "years"));
     let E = (e) => {
-        n(g(d({}, h), { endDate: e }));
+        n(
+            g(d({}, h), {
+                endDate: e,
+            }),
+        );
     };
     return (
         v &&
@@ -110,7 +119,9 @@ function x(e) {
                                                 text: c.intl.string(c.t.petdfk),
                                                 size: "sm",
                                             }),
-                                            (0, l.jsx)(s.hKd, { size: 24 }),
+                                            (0, l.jsx)(s.hKd, {
+                                                size: 24,
+                                            }),
                                         ],
                                     }),
                           ],
@@ -124,7 +135,9 @@ function x(e) {
                                   text: c.intl.string(c.t.ncdPcn),
                                   size: "sm",
                               }),
-                              (0, l.jsx)(s.hKd, { size: 24 }),
+                              (0, l.jsx)(s.hKd, {
+                                  size: 24,
+                              }),
                           ],
                       })),
         (0, l.jsxs)("div", {
@@ -138,7 +151,11 @@ function x(e) {
                             required: !0,
                             value: h.startDate,
                             onSelect: (e) => {
-                                n(g(d({}, h), { startDate: e }));
+                                n(
+                                    g(d({}, h), {
+                                        startDate: e,
+                                    }),
+                                );
                             },
                             minDate: O,
                             maxDate: A,
@@ -149,7 +166,13 @@ function x(e) {
                             required: !0,
                             value: h.startDate,
                             onChange: (e) => {
-                                e.isValid() && (null == x || x(!0), n(g(d({}, h), { startDate: e })));
+                                e.isValid() &&
+                                    (null == x || x(!0),
+                                    n(
+                                        g(d({}, h), {
+                                            startDate: e,
+                                        }),
+                                    ));
                             },
                             hideValue: !m,
                             disabled: f,

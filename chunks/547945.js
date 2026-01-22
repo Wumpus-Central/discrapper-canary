@@ -1,4 +1,8 @@
-n.d(t, { w: () => P }), n(638769), n(896048);
+n.d(t, {
+    w: () => P,
+}),
+    n(638769),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -32,6 +36,7 @@ let T = {
         right: -12,
     },
 };
+
 function P() {
     return (
         l.useEffect(() => {
@@ -40,6 +45,7 @@ function P() {
         (0, r.jsx)(w, {})
     );
 }
+
 function w() {
     let e = (0, d.bG)([m.A], () => m.A.getScheduledMessagesForInbox(), []),
         t = l.useMemo(
@@ -50,7 +56,9 @@ function w() {
         i = l.useRef(null),
         a = (0, p.A)("scheduled-messages", i);
     return n
-        ? (0, r.jsx)(f.y$y, { className: N.k$ })
+        ? (0, r.jsx)(f.y$y, {
+              className: N.k$,
+          })
         : 0 === t.length
           ? (0, r.jsx)(C.A, {
                 Icon: f.O4,
@@ -137,7 +145,12 @@ function w() {
                                 },
                                 s,
                             )),
-                            (l = l = { children: (0, r.jsx)(R, { scheduledMessages: t }) }),
+                            (l = l =
+                                {
+                                    children: (0, r.jsx)(R, {
+                                        scheduledMessages: t,
+                                    }),
+                                }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
                                 : (function (e, t) {
@@ -156,6 +169,7 @@ function w() {
                 }),
             });
 }
+
 function R(e) {
     let { scheduledMessages: t } = e,
         n = l.useMemo(
@@ -265,7 +279,9 @@ let D = l.memo(function (e) {
                 });
         }, [t.scheduledMessageId]),
         b = l.useCallback(() => {
-            (0, y.CI)({ scheduledMessage: t });
+            (0, y.CI)({
+                scheduledMessage: t,
+            });
         }, [t]);
     return (0, r.jsx)(
         "div",
@@ -275,7 +291,9 @@ let D = l.memo(function (e) {
                 [N.j3]: !c,
             }),
             children: i
-                ? (0, r.jsx)(f.y$y, { className: N.$5 })
+                ? (0, r.jsx)(f.y$y, {
+                      className: N.$5,
+                  })
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(f.Text, {

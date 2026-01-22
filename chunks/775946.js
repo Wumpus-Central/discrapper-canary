@@ -1,9 +1,12 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(627968);
 n(64700);
 var l = n(827734),
     i = n(397927),
     a = n(461140);
+
 function s(e) {
     let { mentionsCount: t, isMentionLowImportance: n } = e;
     return (0, r.jsx)("div", {

@@ -1,6 +1,10 @@
-a.d(t, { A: () => l }), a(321073);
+a.d(t, {
+    A: () => l,
+}),
+    a(321073);
 var i = a(360469),
     n = a(985018);
+
 function l(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         a = [

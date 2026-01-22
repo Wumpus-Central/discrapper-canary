@@ -1,4 +1,7 @@
-n.d(t, { A: () => g }), n(228524);
+n.d(t, {
+    A: () => g,
+}),
+    n(228524);
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -61,7 +64,9 @@ let g = (e) => {
                     look: s.$n.Looks.BLANK,
                     color: s.$n.Colors.CUSTOM,
                     subscriptionTier: _.pe.TIER_2,
-                    textOptions: { textOverride: N },
+                    textOptions: {
+                        textOverride: N,
+                    },
                     showGradient: !0,
                 }),
             0 !== y.length &&

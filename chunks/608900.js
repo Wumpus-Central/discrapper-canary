@@ -1,4 +1,7 @@
-n.d(t, { A: () => h }), n(896048);
+n.d(t, {
+    A: () => h,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -8,6 +11,7 @@ var r = n(627968),
     c = n(709562),
     u = n(985018),
     d = n(529414);
+
 function f(e) {
     let { width: t = 24, height: n = 24, isBadged: i = !1 } = e,
         [a] = l.useState(() => (0, s.A)());
@@ -42,13 +46,16 @@ function f(e) {
         ],
     });
 }
+
 function p(e) {
     let { className: t, numRequestToSpeak: n } = e,
         l = n > 0;
     return (0, r.jsxs)("div", {
         className: a()(d.v, t),
         children: [
-            (0, r.jsx)(f, { isBadged: l }),
+            (0, r.jsx)(f, {
+                isBadged: l,
+            }),
             l
                 ? (0, r.jsx)(o.Text, {
                       className: d.F,
@@ -59,6 +66,7 @@ function p(e) {
         ],
     });
 }
+
 function h(e) {
     let {
             toggleRequestToSpeakSidebar: t,

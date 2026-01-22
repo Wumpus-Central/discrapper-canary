@@ -1,4 +1,6 @@
-n.d(t, { z: () => i });
+n.d(t, {
+    z: () => i,
+});
 let { Themes: r } = n(680049).zv,
     i = {
         SemanticColors: {
@@ -1101,7 +1103,9 @@ let { Themes: r } = n(680049).zv,
                     opacity: 1,
                 },
                 gradient: {
-                    light: { color: "gradient.start" },
+                    light: {
+                        color: "gradient.start",
+                    },
                     dark: {
                         color: "gradient.start",
                         opacity: 1,

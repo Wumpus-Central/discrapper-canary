@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -7,6 +9,7 @@ var i = n(397927),
     s = n(49999),
     o = n(985018),
     c = n(360567);
+
 function u(e) {
     let { guild: t, markAsDismissed: u } = e;
     return (0, r.jsx)(l.A, {

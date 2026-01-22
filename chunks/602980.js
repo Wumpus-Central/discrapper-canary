@@ -8,6 +8,7 @@ var r = n(627968);
 n(64700);
 var i = n(899343),
     a = n(796012);
+
 function s(e) {
     let { currentStep: t, purchaseState: n, className: s, pause: o } = e,
         [l, c] = (0, i.f)({
@@ -26,6 +27,7 @@ function s(e) {
         pause: o,
     });
 }
+
 function o(e) {
     let { currentStep: t, purchaseState: n, className: s, pause: o } = e,
         [l, c] = (0, i.f)({
@@ -44,6 +46,7 @@ function o(e) {
         pause: o,
     });
 }
+
 function l(e) {
     let { currentStep: t, purchaseState: n, className: s, pause: o } = e,
         [l, c] = (0, i.f)({

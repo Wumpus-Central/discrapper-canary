@@ -1,4 +1,6 @@
-n.d(t, { Q: () => o });
+n.d(t, {
+    Q: () => o,
+});
 var r = n(627968),
     l = n(64700),
     i = n(435371),
@@ -31,7 +33,9 @@ let o = l.memo(function (e) {
               align: "center",
               text: s.intl.string(s.t["4tSWQg"]),
               "aria-label": t,
-              children: (0, r.jsx)("div", { children: n }),
+              children: (0, r.jsx)("div", {
+                  children: n,
+              }),
           })
         : n;
 });

@@ -1,7 +1,10 @@
-n.d(t, { A: () => G }), n(896048);
+n.d(t, {
+    A: () => G,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
-    a = n(432022),
+    a = n(108531),
     s = n(837381),
     o = n(311907),
     l = n(732955),
@@ -29,6 +32,7 @@ var r = n(627968),
     w = n(818348),
     P = n(985018),
     D = n(784569);
+
 function x(e, t, n) {
     return (
         t in e
@@ -42,6 +46,7 @@ function x(e, t, n) {
         e
     );
 }
+
 function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -61,6 +66,7 @@ function L(e) {
 let j = "8px",
     M = "11px",
     k = 222;
+
 function U(e) {
     var t, S, x, U, G;
     let {
@@ -117,7 +123,9 @@ function U(e) {
             );
         }, [F, eo, W]);
     let el = (0, u.zhh)({
-            from: { height: 0 },
+            from: {
+                height: 0,
+            },
             height: null != er ? er : 0,
             config: {
                 tension: 450,
@@ -204,7 +212,9 @@ function U(e) {
                   }))
                 : ep();
         },
-        em = (0, y.NA)({ quest: V }),
+        em = (0, y.NA)({
+            quest: V,
+        }),
         eg = (() => {
             if ($ && !Z)
                 return {
@@ -255,7 +265,9 @@ function U(e) {
                 en.current = e;
             },
             className: D.kL,
-            style: { borderRadius: ed },
+            style: {
+                borderRadius: ed,
+            },
             children: [
                 (0, r.jsxs)("div", {
                     className: D.Mn,
@@ -340,12 +352,22 @@ function U(e) {
         }),
     });
 }
+
 function G(e) {
     return (0, r.jsx)(S.R, {
         questOrQuests: e.quest,
         questContent: b.uF.MEMBERS_LIST,
         trackGuildAndChannelMetadata: !0,
         sourceQuestContent: b.uF.MEMBERS_LIST,
-        children: (t) => (0, r.jsx)(U, L({ impressionRef: t }, e)),
+        children: (t) =>
+            (0, r.jsx)(
+                U,
+                L(
+                    {
+                        impressionRef: t,
+                    },
+                    e,
+                ),
+            ),
     });
 }

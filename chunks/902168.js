@@ -1,4 +1,6 @@
-n.d(i, { A: () => p });
+n.d(i, {
+    A: () => p,
+});
 var o = n(204801),
     t = {
         masculine: "ostatni",
@@ -21,6 +23,7 @@ var o = n(204801),
         5: "masculine",
         6: "feminine",
     };
+
 function d(e, i, n, d) {
     if ((0, o.A)(i, n, d)) s = a;
     else if ("lastWeek" === e) s = t;

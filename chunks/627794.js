@@ -27,6 +27,7 @@ let E = (e) => (null == e ? void 0 : e.triggerType) === s.uh.KEYWORD,
     g = (e) => (null == e ? void 0 : e.triggerType) === s.uh.DEFAULT_KEYWORD_LIST,
     S = (e) => (null == e ? void 0 : e.triggerType) === s.uh.MENTION_SPAM,
     f = (e) => (null == e ? void 0 : e.triggerType) === s.uh.USER_PROFILE;
+
 function O(e, t) {
     let n = o.i$[t],
         r = (0, o.kT)(t, e),
@@ -48,8 +49,14 @@ function O(e, t) {
     let s = (0, u.p3)(e, t);
     return s > 0 && (a.name += " ".concat(s + 1)), a;
 }
+
 function d(e, t) {
-    if (e.length > t) throw Error(c.intl.formatToPlainString(c.t.mee4qd, { limit: t }));
+    if (e.length > t)
+        throw Error(
+            c.intl.formatToPlainString(c.t.mee4qd, {
+                limit: t,
+            }),
+        );
     e.forEach((e) => {
         if (e.length > s.kS || e.length < s.Ku)
             throw new a.lH(
@@ -61,13 +68,19 @@ function d(e, t) {
             );
     });
 }
+
 function p(e) {
     if (E(e)) {
         var t, n;
         let r = null != (t = e.triggerMetadata.keywordFilter) ? t : [],
             l = null != (n = e.triggerMetadata.regexPatterns) ? n : [];
         if (0 === r.length && 0 === l.length) throw Error(c.intl.string(c.t.kz2Av3));
-        if ((d(r, s.bV), l.length > s.qm)) throw Error(c.intl.formatToPlainString(c.t.tDjhF1, { limit: s.qm }));
+        if ((d(r, s.bV), l.length > s.qm))
+            throw Error(
+                c.intl.formatToPlainString(c.t.tDjhF1, {
+                    limit: s.qm,
+                }),
+            );
         l.forEach((e) => {
             if (e.length > s.$5 || e.length < s.zs)
                 throw new a.Nr(
@@ -81,10 +94,12 @@ function p(e) {
     }
     if (0 === e.actions.length) throw Error(c.intl.string(c.t["t+gj5V"]));
 }
+
 function h(e) {
     var t;
     return (0, r.hT)(null != (t = null == e ? void 0 : e.id) ? t : "INVALID_SNOWFLAKE");
 }
+
 function _(e) {
     switch (e) {
         case s.Mc.MESSAGE_SEND:
@@ -95,6 +110,7 @@ function _(e) {
             return c.intl.string(c.t.SP9BBx);
     }
 }
+
 function R(e) {
     switch (e) {
         case s.AH.BLOCK_MESSAGE:
@@ -109,6 +125,7 @@ function R(e) {
             return c.intl.string(c.t.SP9BBx);
     }
 }
+
 function y(e) {
     switch (e) {
         case s.uh.KEYWORD:

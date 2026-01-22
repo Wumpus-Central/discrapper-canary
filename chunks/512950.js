@@ -19,6 +19,7 @@ var r = n(627968),
             e
         );
     })({});
+
 function d(e, t) {
     if (null != t) return t;
     switch (e) {
@@ -34,6 +35,7 @@ function d(e, t) {
             return o.ScienceIcon;
     }
 }
+
 function f(e) {
     switch (e) {
         case "warn":
@@ -55,6 +57,7 @@ let p = (e) => {
         color: "currentColor",
     });
 };
+
 function _(e) {
     let {
             children: t,
@@ -68,7 +71,9 @@ function _(e) {
         } = e,
         h = f(n);
     return (0, r.jsx)("div", {
-        className: s()(c.kL, h, a, { [c.R]: _ }),
+        className: s()(c.kL, h, a, {
+            [c.R]: _,
+        }),
         children: (0, r.jsxs)("div", {
             className: c.WH,
             children: [

@@ -30,6 +30,7 @@ var r = n(627968),
     I = n(731854),
     T = n(985018),
     C = n(473169);
+
 function N(e, t, n) {
     return (
         t in e
@@ -43,6 +44,7 @@ function N(e, t, n) {
         e
     );
 }
+
 function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -59,6 +61,7 @@ function R(e) {
     }
     return e;
 }
+
 function w(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -71,6 +74,7 @@ function w(e, t) {
     }
     return n;
 }
+
 function P(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -86,6 +90,7 @@ async function D() {
     let e = await p.A.fileManager.getLogPath();
     p.A.fileManager.showItemInFolder(e);
 }
+
 function x() {
     let e = T.intl.string(T.t["fKBB8+"]),
         t = T.intl.string(T.t.BvyxE7);
@@ -94,12 +99,15 @@ function x() {
         subtitle: t,
     });
 }
+
 function L(e) {
     var t;
     let n = T.intl.string(T.t.QZg0J7),
         i = null != e ? e : T.intl.string(T.t.VzHcSm),
         a = null == (t = (0, m.B1)(m.iy.DEBUG_LOG_UPLOAD_FAILED)) ? void 0 : t.errorCode,
-        s = T.intl.formatToPlainString(T.t.ejOT95, { errorCode: a });
+        s = T.intl.formatToPlainString(T.t.ejOT95, {
+            errorCode: a,
+        });
     (0, c.qfG)((e) =>
         (0, r.jsx)(
             c.VoidConfirmModal,
@@ -127,7 +135,9 @@ function L(e) {
                             (0, r.jsx)(c.Text, {
                                 variant: "text-sm/semibold",
                                 selectable: !0,
-                                style: { marginTop: "auto" },
+                                style: {
+                                    marginTop: "auto",
+                                },
                                 children: s,
                             }),
                         ],
@@ -137,6 +147,7 @@ function L(e) {
         ),
     );
 }
+
 function j(e) {
     (0, o.A)({
         title: T.intl.string(T.t["7UXEF2"]),
@@ -150,7 +161,11 @@ async function M(e) {
     null == t || t();
     try {
         await b.A.getMediaEngine().writeAudioDebugState(),
-            await O.A.submitLiveCrashReport({ message: { message: "User Live Dump" } }),
+            await O.A.submitLiveCrashReport({
+                message: {
+                    message: "User Live Dump",
+                },
+            }),
             await (0, h.a)(S.Umv.RTC),
             x();
     } catch (e) {
@@ -159,6 +174,7 @@ async function M(e) {
         null == n || n();
     }
 }
+
 function k() {
     let [e, t] = i.useState(!1),
         { debugLogging: n, aecDumpEnabled: s } = (0, a.cf)([b.A], () => ({
@@ -170,7 +186,9 @@ function k() {
         o = (0, a.bG)([E.default], () => E.default.isStreamInfoOverlayEnabled),
         l = (0, a.bG)([y.Ay], () => y.Ay.shouldRecordNextConnection()),
         p = i.useCallback(async () => {
-            await M({ onUploadStart: () => t(!0) });
+            await M({
+                onUploadStart: () => t(!0),
+            });
         }, []);
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -181,7 +199,10 @@ function k() {
                     description: T.intl.string(T.t["kBXuW+"]),
                     checked: o,
                     onChange: (e) => {
-                        (0, A.A)("stream_info_overlay_enabled", e, o), (0, d.x)({ isStreamInfoOverlayEnabled: e });
+                        (0, A.A)("stream_info_overlay_enabled", e, o),
+                            (0, d.x)({
+                                isStreamInfoOverlayEnabled: e,
+                            });
                     },
                 }),
             }),

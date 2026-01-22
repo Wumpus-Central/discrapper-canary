@@ -1,4 +1,6 @@
-i.d(e, { L: () => E });
+i.d(e, {
+    L: () => E,
+});
 var n = i(311907),
     l = i(290595),
     s = i(171316),
@@ -12,7 +14,9 @@ var n = i(311907),
 let E = (0, r.zD)(o.X.DATA_USAGE_STATISTICS_SETTING, {
     useTitle: () => S.intl.string(S.t.XuADY2),
     useSubtitle: () =>
-        S.intl.format(S.t["igTSG/"], { helpdeskArticle: a.A.getArticleURL(A.MVz.DATA_PRIVACY_CONTROLS) }),
+        S.intl.format(S.t["igTSG/"], {
+            helpdeskArticle: a.A.getArticleURL(A.MVz.DATA_PRIVACY_CONTROLS),
+        }),
     useValue: function () {
         return (0, n.bG)([u.A], () => u.A.hasConsented(A.YAq.USAGE_STATISTICS));
     },

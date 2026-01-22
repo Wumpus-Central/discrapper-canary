@@ -1,4 +1,7 @@
-n.d(t, { M: () => S }), n(896048);
+n.d(t, {
+    M: () => S,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -17,6 +20,7 @@ var r = n(627968),
     E = n(559868),
     b = n(49999),
     y = n(818348);
+
 function O(e, t, n) {
     return (
         t in e
@@ -30,6 +34,7 @@ function O(e, t, n) {
         e
     );
 }
+
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -46,7 +51,8 @@ function A(e) {
     }
     return e;
 }
-let v = 1000;
+let v = 1e3;
+
 function S() {
     let [e, t] = i.useState(!1),
         O = (0, l.Ry6)(E.lb),
@@ -63,7 +69,10 @@ function S() {
             _.A.theme !== y.NJ.DARK ||
             null != d.A.gradientPreset ||
             t ||
-            (o.w.set(e, "true"), (0, u.u_)({ theme: y.NJ.DARKER }));
+            (o.w.set(e, "true"),
+            (0, u.u_)({
+                theme: y.NJ.DARKER,
+            }));
     }, [C, N]),
         i.useLayoutEffect(() => {
             function e() {

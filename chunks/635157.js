@@ -1,4 +1,7 @@
-n.d(t, { A: () => v }), n(896048);
+n.d(t, {
+    A: () => v,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -18,6 +21,7 @@ var r = n(627968),
     y = n(314307),
     O = n(985018),
     j = n(82842);
+
 function v(e) {
     var t;
     let n,
@@ -75,7 +79,9 @@ function v(e) {
                       })
                     : C,
             }),
-            (0, r.jsx)(y.j1, { children: x }),
+            (0, r.jsx)(y.j1, {
+                children: x,
+            }),
             v.isMultiUserDM() &&
                 (0, r.jsxs)(a.e2v, {
                     className: j.U,

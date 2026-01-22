@@ -1,10 +1,16 @@
-n.d(t, { A: () => f }), n(747238), n(812715), n(896048);
+n.d(t, {
+    A: () => f,
+}),
+    n(747238),
+    n(812715),
+    n(896048);
 var r = n(627968);
 n(64700);
 var i = n(397927),
     a = n(379418),
     s = n(900090),
     o = n(194845);
+
 function l(e, t, n) {
     return (
         t in e
@@ -18,6 +24,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,6 +41,7 @@ function c(e) {
     }
     return e;
 }
+
 function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -46,6 +54,7 @@ function u(e, t) {
     }
     return n;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -57,21 +66,35 @@ function d(e, t) {
         e
     );
 }
+
 function f(e, t) {
     return "type" in e
         ? "timestamp" !== e.type
             ? null
-            : s.A.getCurrentConfig({ location: "renderElement" }, { autoTrackExposure: !1 }).enabled
-              ? (0, r.jsx)(p, d(c({}, t), { timestamp: e.parsed }))
+            : s.A.getCurrentConfig(
+                    {
+                        location: "renderElement",
+                    },
+                    {
+                        autoTrackExposure: !1,
+                    },
+                ).enabled
+              ? (0, r.jsx)(
+                    p,
+                    d(c({}, t), {
+                        timestamp: e.parsed,
+                    }),
+                )
               : null
         : null;
 }
+
 function p(e) {
     var t;
     let { timestamp: n, replace: s } = e,
         l = (e) => {
             let { timestamp: t, format: r } = e,
-                i = null != t ? Math.floor(t.getTime() / 1000) : n.timestamp,
+                i = null != t ? Math.floor(t.getTime() / 1e3) : n.timestamp,
                 o = null != r ? r : n.format;
             s((0, a.tf)(i, o));
         };
@@ -81,13 +104,17 @@ function p(e) {
             (0, r.jsx)(i.J3s, {
                 value: n.parsed,
                 onSelect: (e) => {
-                    l({ timestamp: e.toDate() });
+                    l({
+                        timestamp: e.toDate(),
+                    });
                 },
             }),
             (0, r.jsx)(i.czz, {
                 value: n.parsed,
                 onChange: (e) => {
-                    l({ timestamp: e.toDate() });
+                    l({
+                        timestamp: e.toDate(),
+                    });
                 },
             }),
             (0, r.jsx)(i.z6M, {
@@ -100,7 +127,9 @@ function p(e) {
                 }),
                 value: null != (t = n.format) ? t : a.$z,
                 onChange: (e) => {
-                    l({ format: e });
+                    l({
+                        format: e,
+                    });
                 },
             }),
         ],

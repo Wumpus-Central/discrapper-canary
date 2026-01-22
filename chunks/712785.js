@@ -1,4 +1,6 @@
-n.d(t, { A: () => X });
+n.d(t, {
+    A: () => X,
+});
 var r = n(627968),
     i = n(503698),
     a = n.n(i),
@@ -41,6 +43,7 @@ var r = n(627968),
     B = n(996988),
     H = n(985018),
     Y = n(380297);
+
 function W(e, t, n) {
     return (
         t in e
@@ -54,6 +57,7 @@ function W(e, t, n) {
         e
     );
 }
+
 function K(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -70,6 +74,7 @@ function K(e) {
     }
     return e;
 }
+
 function z(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -82,6 +87,7 @@ function z(e, t) {
     }
     return n;
 }
+
 function q(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -93,6 +99,7 @@ function q(e, t) {
         e
     );
 }
+
 function X(e) {
     let {
             user: t,
@@ -141,7 +148,9 @@ function X(e) {
                 ? null
                 : (0, r.jsx)(o.m, {
                       text: H.intl.string(H.t.QSOBaq),
-                      children: (0, r.jsx)(l.mir, { size: "xxs" }),
+                      children: (0, r.jsx)(l.mir, {
+                          size: "xxs",
+                      }),
                   }),
         ef = () => {
             let e = (0, c.A)(i) ? "crunchyroll" : "default",
@@ -151,7 +160,9 @@ function X(e) {
                       userId: t.id,
                       size: en !== B.d.MODAL_V2 ? 60 : 100,
                       hangStatusActivity: i,
-                      className: a()(Y.W9, Y.Sl, { [Y.EX]: en !== B.d.MODAL_V2 }),
+                      className: a()(Y.W9, Y.Sl, {
+                          [Y.EX]: en !== B.d.MODAL_V2,
+                      }),
                   })
                 : null == eu
                   ? (0, r.jsx)(g.d, {
@@ -168,7 +179,10 @@ function X(e) {
                         className: Y.mM,
                         aspectRatio: e,
                         onClick: (e) => {
-                            ei({ action: "PRESS_IMAGE" }), eu(e);
+                            ei({
+                                action: "PRESS_IMAGE",
+                            }),
+                                eu(e);
                         },
                     });
         },
@@ -220,9 +234,15 @@ function X(e) {
             if ((0, f.A)(i) && null != z)
                 return (0, r.jsx)(j.A, {
                     variant: "text-xs/normal",
-                    text: H.intl.formatToPlainString(H.t["hq/Qze"], { guildName: z.name }),
+                    text: H.intl.formatToPlainString(H.t["hq/Qze"], {
+                        guildName: z.name,
+                    }),
                     onClick: () => {
-                        (0, v.u)(z.id), ei({ action: "OPEN_VOICE_GUILD" }), null == Q || Q();
+                        (0, v.u)(z.id),
+                            ei({
+                                action: "OPEN_VOICE_GUILD",
+                            }),
+                            null == Q || Q();
                     },
                 });
             if ((0, d.A)(i))
@@ -316,7 +336,9 @@ function X(e) {
                                 variant: "text-xs/normal",
                                 text:
                                     0 === i.party.size[1]
-                                        ? H.intl.formatToPlainString(H.t.IM4J4e, { count: i.party.size[0] })
+                                        ? H.intl.formatToPlainString(H.t.IM4J4e, {
+                                              count: i.party.size[0],
+                                          })
                                         : H.intl.formatToPlainString(H.t["u//9By"], {
                                               count: i.party.size[0],
                                               max: i.party.size[1],
@@ -350,7 +372,10 @@ function X(e) {
                 : (0, r.jsxs)(l.DUT, {
                       className: Y.sd,
                       onClick: (e) => {
-                          ei({ action: "PRESS_TEXT" }), eu(e);
+                          ei({
+                              action: "PRESS_TEXT",
+                          }),
+                              eu(e);
                       },
                       children: [ep(), e_(), eh()],
                   }),

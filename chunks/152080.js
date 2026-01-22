@@ -1,4 +1,6 @@
-r.d(t, { l: () => l });
+r.d(t, {
+    l: () => l,
+});
 var n = r(64700),
     o =
         Object.assign ||
@@ -23,6 +25,7 @@ var n = r(64700),
             return r && e(t.prototype, r), n && e(t, n), t;
         };
     })();
+
 function i(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return t && ("object" == typeof t || "function" == typeof t) ? t : e;
@@ -32,17 +35,24 @@ var l = function (e) {
         r = n.Component;
     if ("function" != typeof r && null !== r)
         throw TypeError("Super expression must either be null or a function, not " + typeof r);
+
     function l() {
         if (!(this instanceof l)) throw TypeError("Cannot call a class as a function");
         for (var e, t, r, n = arguments.length, o = Array(n), a = 0; a < n; a++) o[a] = arguments[a];
         return (
             (t = r = i(this, (e = l.__proto__ || Object.getPrototypeOf(l)).call.apply(e, [this].concat(o)))),
-            (r.state = { focus: !1 }),
+            (r.state = {
+                focus: !1,
+            }),
             (r.handleFocus = function () {
-                return r.setState({ focus: !0 });
+                return r.setState({
+                    focus: !0,
+                });
             }),
             (r.handleBlur = function () {
-                return r.setState({ focus: !1 });
+                return r.setState({
+                    focus: !1,
+                });
             }),
             i(r, t)
         );

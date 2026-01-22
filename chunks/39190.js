@@ -1,9 +1,13 @@
-n.d(t, { A: () => _ }), n(896048);
+n.d(t, {
+    A: () => _,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(397927),
     s = n(985018),
     o = n(69940);
+
 function l(e, t, n) {
     return (
         t in e
@@ -17,6 +21,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -33,6 +38,7 @@ function c(e) {
     }
     return e;
 }
+
 function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -45,6 +51,7 @@ function u(e, t) {
     }
     return n;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -56,6 +63,7 @@ function d(e, t) {
         e
     );
 }
+
 function f(e, t) {
     if (null == e) return {};
     var n,
@@ -72,6 +80,7 @@ function f(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function p(e, t) {
     if (null == e) return {};
     var n,
@@ -94,39 +103,49 @@ let _ = i.forwardRef(function (e, t) {
                   currentPage: l + 1,
                   numPages: u,
               })
-            : s.intl.format(s.t.bKI77c, { currentPage: l + 1 });
+            : s.intl.format(s.t.bKI77c, {
+                  currentPage: l + 1,
+              });
     return (0, r.jsxs)(
         "div",
-        d(c({ ref: g }, m), {
-            children: [
-                _,
-                (0, r.jsx)("div", {
-                    className: o.v,
-                    children: (0, r.jsxs)("div", {
-                        className: o.U,
-                        children: [
-                            (0, r.jsx)(a.K0, {
-                                variant: "icon-only",
-                                icon: a.n2b,
-                                disabled: E,
-                                onClick: () => p(l - 1),
-                                "aria-label": s.intl.string(s.t.vgfxaA),
-                            }),
-                            (0, r.jsx)(a.Text, {
-                                variant: "text-sm/medium",
-                                children: y,
-                            }),
-                            (0, r.jsx)(a.K0, {
-                                variant: "icon-only",
-                                icon: a._BQ,
-                                disabled: b,
-                                onClick: () => p(l + 1),
-                                "aria-label": s.intl.string(s.t.XiOHRX),
-                            }),
-                        ],
+        d(
+            c(
+                {
+                    ref: g,
+                },
+                m,
+            ),
+            {
+                children: [
+                    _,
+                    (0, r.jsx)("div", {
+                        className: o.v,
+                        children: (0, r.jsxs)("div", {
+                            className: o.U,
+                            children: [
+                                (0, r.jsx)(a.K0, {
+                                    variant: "icon-only",
+                                    icon: a.n2b,
+                                    disabled: E,
+                                    onClick: () => p(l - 1),
+                                    "aria-label": s.intl.string(s.t.vgfxaA),
+                                }),
+                                (0, r.jsx)(a.Text, {
+                                    variant: "text-sm/medium",
+                                    children: y,
+                                }),
+                                (0, r.jsx)(a.K0, {
+                                    variant: "icon-only",
+                                    icon: a._BQ,
+                                    disabled: b,
+                                    onClick: () => p(l + 1),
+                                    "aria-label": s.intl.string(s.t.XiOHRX),
+                                }),
+                            ],
+                        }),
                     }),
-                }),
-            ],
-        }),
+                ],
+            },
+        ),
     );
 });

@@ -1,4 +1,6 @@
-i.d(e, { z: () => c });
+i.d(e, {
+    z: () => c,
+});
 var n = i(934551),
     l = i(554146),
     s = i(419954),
@@ -10,8 +12,12 @@ var n = i(934551),
     A = i(927631),
     S = i(531525),
     E = i(985018);
-let d = (0, s.zZ)(u.X.CONNECTIONS_ADD_CONNECTIONS_CATEGORY, { buildLayout: () => [T.l] }),
-    _ = (0, s.zZ)(u.X.CONNECTIONS_CONNECTED_ACCOUNTS_CATEGORY, { buildLayout: () => [A.W] }),
+let d = (0, s.zZ)(u.X.CONNECTIONS_ADD_CONNECTIONS_CATEGORY, {
+        buildLayout: () => [T.l],
+    }),
+    _ = (0, s.zZ)(u.X.CONNECTIONS_CONNECTED_ACCOUNTS_CATEGORY, {
+        buildLayout: () => [A.W],
+    }),
     I = (0, s.t_)(u.X.CONNECTIONS_PANEL, {
         usePredicate: () => !(0, a.dk)("LegacyConnectionsPanel"),
         useTitle: () => E.intl.string(E.t["3fe7U5"]),

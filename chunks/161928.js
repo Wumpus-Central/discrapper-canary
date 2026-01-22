@@ -1,4 +1,6 @@
-n.d(t, { A: () => y });
+n.d(t, {
+    A: () => y,
+});
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -32,7 +34,12 @@ let y = a.Ay.connectStores([m.A, c.A, g.A, p.default], (e) => {
     };
 })((e) => {
     let { error: t, giftCode: n, gifter: s, sku: a, application: c, subscriptionPlan: p } = e,
-        g = null == s ? E.intl.string(E.t.lTGZAl) : E.intl.formatToPlainString(E.t.TjWdPc, { username: s.username }),
+        g =
+            null == s
+                ? E.intl.string(E.t.lTGZAl)
+                : E.intl.formatToPlainString(E.t.TjWdPc, {
+                      username: s.username,
+                  }),
         m = a.name;
     return (
         null != p &&
@@ -56,13 +63,19 @@ let y = a.Ay.connectStores([m.A, c.A, g.A, p.default], (e) => {
                 null != t
                     ? (0, r.jsxs)(i.Fragment, {
                           children: [
-                              (0, r.jsx)(u.tK, { children: E.intl.string(E.t.mDFGFj) }),
-                              (0, r.jsx)(u.hE, { children: t }),
+                              (0, r.jsx)(u.tK, {
+                                  children: E.intl.string(E.t.mDFGFj),
+                              }),
+                              (0, r.jsx)(u.hE, {
+                                  children: t,
+                              }),
                           ],
                       })
                     : (0, r.jsxs)(i.Fragment, {
                           children: [
-                              (0, r.jsx)(u.tK, { children: g }),
+                              (0, r.jsx)(u.tK, {
+                                  children: g,
+                              }),
                               (0, r.jsxs)(u.hE, {
                                   className: l()(j.Ot, v.tR),
                                   children: [

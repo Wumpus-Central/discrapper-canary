@@ -1,4 +1,7 @@
-n.d(t, { A: () => p }), n(896048);
+n.d(t, {
+    A: () => p,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -15,7 +18,7 @@ var r = n(627968),
 let p = (e) => {
     let { className: t, isDisabled: l, sticker: p, canManageSticker: x } = e,
         [h, j] = i.useState(!1),
-        [O, y] = (0, d.A)(null, 4000),
+        [O, y] = (0, d.A)(null, 4e3),
         v = async () => {
             y(null), j(!0);
             try {
@@ -30,10 +33,14 @@ let p = (e) => {
         text: O,
         asContainer: !0,
         children: (0, r.jsxs)("div", {
-            className: s()(m.iE, t, { [m.Ce]: l }),
+            className: s()(m.iE, t, {
+                [m.Ce]: l,
+            }),
             children: [
                 (0, r.jsxs)("div", {
-                    className: s()(m.Qs, { [m.d4]: h }),
+                    className: s()(m.Qs, {
+                        [m.d4]: h,
+                    }),
                     children: [
                         (0, r.jsx)(g.A, {
                             className: m.yI,
@@ -142,7 +149,10 @@ let p = (e) => {
                             : null,
                     ],
                 }),
-                h && (0, r.jsx)(c.y$y, { className: m.u1 }),
+                h &&
+                    (0, r.jsx)(c.y$y, {
+                        className: m.u1,
+                    }),
             ],
         }),
     });

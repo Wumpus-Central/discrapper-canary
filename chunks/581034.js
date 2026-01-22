@@ -1,4 +1,6 @@
-n.d(t, { l: () => E });
+n.d(t, {
+    l: () => E,
+});
 var r = n(627968);
 n(64700);
 var i = n(989349),
@@ -10,6 +12,7 @@ var i = n(989349),
     u = n(985018),
     d = n(617184);
 let f = (e) => a()().diff(a().unix(e), "days");
+
 function p(e) {
     let { classificationId: t } = e,
         i = () => {
@@ -30,6 +33,7 @@ function p(e) {
         children: u.intl.string(u.t.QsqdXC),
     });
 }
+
 function _(e) {
     let { learnMoreLink: t } = e;
     return (0, r.jsx)(o.MzZ, {
@@ -38,19 +42,25 @@ function _(e) {
         children: u.intl.string(u.t["8/GdRB"]),
     });
 }
+
 function h(e) {
     let { ctaType: t, classificationId: n, learnMoreLink: i } = e;
     switch (t) {
         case c.xw.POLICY_VIOLATION_DETAIL:
             if (null == n) return null;
-            return (0, r.jsx)(p, { classificationId: n });
+            return (0, r.jsx)(p, {
+                classificationId: n,
+            });
         case c.xw.LEARN_MORE_LINK:
             if (null == i) return null;
-            return (0, r.jsx)(_, { learnMoreLink: i });
+            return (0, r.jsx)(_, {
+                learnMoreLink: i,
+            });
         default:
             return null;
     }
 }
+
 function m(e) {
     let { iconType: t } = e,
         n = {
@@ -58,7 +68,9 @@ function m(e) {
                 size: "xs",
                 color: s.A.colors.TEXT_LINK.css,
             }),
-            danger: (0, r.jsx)(o.id, { color: s.A.colors.ICON_FEEDBACK_CRITICAL }),
+            danger: (0, r.jsx)(o.id, {
+                color: s.A.colors.ICON_FEEDBACK_CRITICAL,
+            }),
         };
     return null != t && t in n
         ? (0, r.jsx)("div", {
@@ -67,6 +79,7 @@ function m(e) {
           })
         : null;
 }
+
 function g(e) {
     let { children: t, theme: n } = e,
         i = {
@@ -78,6 +91,7 @@ function g(e) {
         children: t,
     });
 }
+
 function E(e) {
     var t, n;
     if (null == e.embed || null == e.embed.fields) return null;
@@ -93,7 +107,9 @@ function E(e) {
                           (0, r.jsxs)("div", {
                               className: d.U1,
                               children: [
-                                  (0, r.jsx)(m, { iconType: i.icon }),
+                                  (0, r.jsx)(m, {
+                                      iconType: i.icon,
+                                  }),
                                   (0, r.jsx)(o.Text, {
                                       variant: "text-md/semibold",
                                       children: i.header,

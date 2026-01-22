@@ -1,10 +1,13 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(627968),
     l = n(397927),
     i = n(367513),
     a = n(715989),
     s = n(985018),
     o = n(852887);
+
 function c(e) {
     let { channelId: t, allPoppedOut: n = !1 } = e;
     return (0, r.jsxs)("div", {

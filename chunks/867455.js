@@ -1,4 +1,7 @@
-n.d(t, { A: () => I }), n(938796);
+n.d(t, {
+    A: () => I,
+}),
+    n(938796);
 var r = n(392421),
     i = n(562465),
     a = n(73153),
@@ -19,6 +22,7 @@ var r = n(392421),
     y = n(652215),
     O = n(746080),
     A = n(985018);
+
 function v(e, t) {
     return i.Bo.patch({
         url: y.Rsh.CHANNEL(e.id),
@@ -40,6 +44,7 @@ function v(e, t) {
         ),
     );
 }
+
 function S(e, t) {
     a.h.dispatch({
         type: "THREAD_MEMBER_LOCAL_UPDATE",
@@ -51,7 +56,9 @@ function S(e, t) {
 }
 let I = {
     archiveThread(e, t) {
-        let n = { archived: !0 };
+        let n = {
+            archived: !0,
+        };
         return t && (n.locked = !0), v(e, n);
     },
     async lockThread(e) {
@@ -75,7 +82,9 @@ let I = {
         );
     },
     async unarchiveThread(e, t) {
-        let n = { archived: !1 },
+        let n = {
+                archived: !1,
+            },
             r = e.isForumPost();
         t && (n.locked = !1);
         try {
@@ -115,13 +124,18 @@ let I = {
             (r || (null == (t = n.threadMetadata) ? void 0 : t.locked) !== !0) &&
             (await this.unarchiveThread(n, !1));
     },
-    setInvitable: (e, t) => v(e, { invitable: t }),
+    setInvitable: (e, t) =>
+        v(e, {
+            invitable: t,
+        }),
     async joinThread(e, t) {
         e.isForumPost() && S(e, !0);
         try {
             return await i.Bo.post({
                 url: y.Rsh.THREAD_MEMBER(e.id),
-                query: { location: t },
+                query: {
+                    location: t,
+                },
                 rejectWithError: !1,
             });
         } catch (t) {
@@ -144,7 +158,9 @@ let I = {
         try {
             return await i.Bo.post({
                 url: y.Rsh.THREAD_MEMBER(e.id, t),
-                query: { location: n },
+                query: {
+                    location: n,
+                },
                 rejectWithError: !1,
             });
         } catch (t) {
@@ -166,20 +182,26 @@ let I = {
         e.isForumPost() && S(e, !1),
         i.Bo.del({
             url: y.Rsh.THREAD_MEMBER(e.id),
-            query: { location: t },
+            query: {
+                location: t,
+            },
             rejectWithError: !1,
         })
     ),
     removeMember: (e, t, n) =>
         i.Bo.del({
             url: y.Rsh.THREAD_MEMBER(e, t),
-            query: { location: n },
+            query: {
+                location: n,
+            },
             rejectWithError: !1,
         }),
     setAutoArchiveDuration: (e, t) =>
         i.Bo.patch({
             url: y.Rsh.CHANNEL(e.id),
-            body: { auto_archive_duration: t },
+            body: {
+                auto_archive_duration: t,
+            },
             rejectWithError: !1,
         }),
     pin(e) {
@@ -194,9 +216,13 @@ let I = {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         a.h.dispatch({
             type: "THREAD_UPDATE",
-            channel: e.merge({ flags: t }),
+            channel: e.merge({
+                flags: t,
+            }),
         });
-        let r = { flags: t };
+        let r = {
+            flags: t,
+        };
         n && (r.archived = !1);
         try {
             await i.Bo.patch({
@@ -212,8 +238,12 @@ let I = {
         }
     },
     async replacePin(e, t) {
-        let n = e.merge({ flags: e.flags & ~O.lx.PINNED }),
-            r = t.merge({ flags: t.flags | O.lx.PINNED });
+        let n = e.merge({
+                flags: e.flags & ~O.lx.PINNED,
+            }),
+            r = t.merge({
+                flags: t.flags | O.lx.PINNED,
+            });
         a.h.dispatch({
             type: "THREAD_UPDATE",
             channel: n,
@@ -227,7 +257,9 @@ let I = {
         try {
             await i.Bo.patch({
                 url: y.Rsh.CHANNEL(e.id),
-                body: { flags: e.flags & ~O.lx.PINNED },
+                body: {
+                    flags: e.flags & ~O.lx.PINNED,
+                },
                 rejectWithError: !0,
             });
         } catch (n) {
@@ -244,7 +276,9 @@ let I = {
         try {
             await i.Bo.patch({
                 url: y.Rsh.CHANNEL(t.id),
-                body: { flags: t.flags | O.lx.PINNED },
+                body: {
+                    flags: t.flags | O.lx.PINNED,
+                },
                 rejectWithError: !0,
             });
         } catch (e) {
@@ -375,10 +409,14 @@ let I = {
     summarizeThread(e, t) {
         if (!(!e.isThread() || g.A.isInProgress()))
             return (
-                a.h.dispatch({ type: "SUMMARIZE_THREAD_START" }),
+                a.h.dispatch({
+                    type: "SUMMARIZE_THREAD_START",
+                }),
                 i.Bo.post({
                     url: y.Rsh.AI_SUMMARIZE_THREAD(e.id),
-                    body: { ephemeral: null == t || t },
+                    body: {
+                        ephemeral: null == t || t,
+                    },
                     rejectWithError: !1,
                 })
                     .then(() => {

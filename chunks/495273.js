@@ -38,9 +38,11 @@ var r = n(136722),
     A = n(737045),
     N = n(652215),
     p = n(985018);
+
 function m(e) {
     return (0, a._m)(e, N.xBc.ADMINISTRATOR);
 }
+
 function I(e) {
     var t;
     let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
@@ -55,11 +57,13 @@ function I(e) {
         tags: e.tags,
     };
 }
+
 function O(e, t) {
     let n = +!m(e),
         r = +!m(t);
     return n !== r ? n - r : (0, E.AT)(e, t);
 }
+
 function h() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : p.intl.string(p.t["gnsna/"]);
     return [
@@ -72,6 +76,7 @@ function h() {
         },
     ];
 }
+
 function y(e, t, n, i) {
     let l = c.default.getCurrentUser();
     if (null == l) return !1;
@@ -79,9 +84,11 @@ function y(e, t, n, i) {
     let u = e.permissionOverwrites[t];
     return (null == i ? void 0 : i[t]) != null && (u = i[t]), null == u || !r.zy(u.allow, n);
 }
+
 function _(e, t) {
     return S.default.castGuildIdAsEveryoneGuildRoleId(e) === t;
 }
+
 function v(e, t, n, r) {
     let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => !0;
     return t
@@ -89,6 +96,7 @@ function v(e, t, n, r) {
         .sort(O)
         .map((e) => I(e));
 }
+
 function w(e, t, n, r) {
     let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => !0;
     return t
@@ -96,6 +104,7 @@ function w(e, t, n, r) {
         .sort(O)
         .map((e) => I(e, (0, a._m)(e, r)));
 }
+
 function M(e, t, n, r, i) {
     let l = [];
     return 0 ===
@@ -106,6 +115,7 @@ function M(e, t, n, r, i) {
         ? h(p.intl.string(p.t.nZfHsf))
         : l;
 }
+
 function R(e, t, n, i, l) {
     let u = [];
     return 0 ===
@@ -123,10 +133,12 @@ function R(e, t, n, i, l) {
         ? h(p.intl.string(p.t.nZfHsf))
         : u;
 }
+
 function b(e, t) {
     var n;
     return null != (n = s.Ay.getNick(t.id, e.id)) ? n : g.Ay.getName(e);
 }
+
 function C(e, t) {
     var n;
     let r = (0, o.bM)(t, e) ? A.T6.OWNER : A.T6.MEMBER;
@@ -143,11 +155,13 @@ function C(e, t) {
         key: "".concat(r, ":").concat(e.id),
     };
 }
+
 function G(e, t) {
     return e.rowType !== t.rowType
         ? e.rowType - t.rowType
         : e.name.toLocaleLowerCase().localeCompare(t.name.toLocaleLowerCase());
 }
+
 function D(e, t, n, r) {
     let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => !0;
     return e
@@ -157,6 +171,7 @@ function D(e, t, n, r) {
         .map((e) => C(e, n))
         .sort(G);
 }
+
 function L(e, t, n, r, i) {
     return e
         .map(c.default.getUser)
@@ -165,6 +180,7 @@ function L(e, t, n, r, i) {
         .map((e) => C(e, n))
         .sort(G);
 }
+
 function P(e, t) {
     switch (e) {
         case A.T6.ROLE:
@@ -183,6 +199,7 @@ function P(e, t) {
             return null;
     }
 }
+
 function B(e) {
     switch (e) {
         case A.T6.ROLE:
@@ -198,6 +215,7 @@ function B(e) {
             return null;
     }
 }
+
 function U(e, t, n) {
     let i = e.permissionOverwrites[e.guild_id];
     null == i && (i = T.xT(e.guild_id));
@@ -228,10 +246,12 @@ function U(e, t, n) {
     })({}, i);
     return (l.deny = r.TF(l.deny, t)), (l.allow = r.TF(l.allow, t)), n || (l.deny = r.WQ(l.deny, t)), l;
 }
+
 function V(e, t, n) {
     let r = U(e, t, n);
     (0, i.LA)(e, r.id, r.allow, r.deny);
 }
+
 function k(e, t) {
     let n = c.default.getCurrentUser();
     if (null == n) return;
@@ -250,6 +270,7 @@ function k(e, t) {
         return (n = r.WQ(n, t)), (0, i.LA)(e, u.id, n, l);
     }
 }
+
 function x(e, t) {
     if (null == e) return !1;
     let n = e.permissionOverwrites[e.guild_id];
@@ -258,11 +279,13 @@ function x(e, t) {
         null != n && r.zy(n.deny, e.accessPermissions)
     );
 }
+
 function z(e, t, n) {
     return e === N.rbe.GUILD_TEXT || e === N.rbe.GUILD_ANNOUNCEMENT
         ? t
         : (!(0, u.ay)(e) && e !== N.rbe.GUILD_CATEGORY) || (t && n);
 }
+
 function H(e) {
     switch (e) {
         case N.rbe.GUILD_TEXT:
@@ -276,6 +299,7 @@ function H(e) {
             return null;
     }
 }
+
 function W(e, t) {
     let n = [];
     return (

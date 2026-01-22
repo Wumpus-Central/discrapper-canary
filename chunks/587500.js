@@ -1,9 +1,12 @@
-n.d(t, { A: () => el }), n(896048);
+n.d(t, {
+    A: () => el,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
-    o = n(432022),
+    o = n(108531),
     l = n(311907),
     c = n(397927),
     u = n(387755),
@@ -47,6 +50,7 @@ var r = n(627968),
     q = n(503434),
     X = n(424658),
     Z = n(976092);
+
 function Q(e, t, n) {
     return (
         t in e
@@ -60,6 +64,7 @@ function Q(e, t, n) {
         e
     );
 }
+
 function $(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -76,6 +81,7 @@ function $(e) {
     }
     return e;
 }
+
 function J(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -88,6 +94,7 @@ function J(e, t) {
     }
     return n;
 }
+
 function ee(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -110,6 +117,7 @@ let et = {
     er = 475,
     ei = 267,
     ea = 128;
+
 function es(e) {
     let { header: t } = e,
         n = x.A.getCameraComponent(),
@@ -120,7 +128,9 @@ function es(e) {
             let e = L.default.getCurrentUser();
             if (s && null != e) {
                 let t = (0, O.i)(e);
-                (0, A.S1)(t, a, { track: !1 }).catch(Y.tEg);
+                (0, A.S1)(t, a, {
+                    track: !1,
+                }).catch(Y.tEg);
             }
         }, [s, a]),
         (0, r.jsxs)("div", {
@@ -144,6 +154,7 @@ function es(e) {
         })
     );
 }
+
 function eo(e) {
     let { canVideo: t, channel: n, numVideoDevices: a } = e,
         { parentAnalyticsLocation: o } = (0, m.Ay)(),
@@ -180,7 +191,9 @@ function eo(e) {
                         let { closePopout: t } = e;
                         return (0, r.jsx)(V.A, {
                             onClose: t,
-                            onInteraction: (0, B.s)("VideoDeviceMenu", o, { entrypoint: H.GK.CARET }),
+                            onInteraction: (0, B.s)("VideoDeviceMenu", o, {
+                                entrypoint: H.GK.CARET,
+                            }),
                         });
                     },
                     position: "top",
@@ -193,7 +206,9 @@ function eo(e) {
                             buttonRef: _,
                             join: !0,
                             enabled: d,
-                            className: s()(X.hP, { [X.$j]: g }),
+                            className: s()(X.hP, {
+                                [X.$j]: g,
+                            }),
                             color: "green",
                             centerButton: !0,
                             hasPermission: p,
@@ -241,6 +256,7 @@ function eo(e) {
         ],
     });
 }
+
 function el(e) {
     var t;
     let { animatedStyle: n, y: a, x: f, channel: h } = e,
@@ -267,7 +283,9 @@ function el(e) {
         F = (0, c.zhh)(
             {
                 value: +!!O,
-                config: ee($({}, o.config.stiff), { clamp: !0 }),
+                config: ee($({}, o.config.stiff), {
+                    clamp: !0,
+                }),
             },
             "animate-always",
         );
@@ -350,7 +368,14 @@ function el(e) {
                 theme: O ? Y.NJ8.DARK : void 0,
                 children: (e) =>
                     (0, r.jsxs)(o.animated.div, {
-                        className: s()(X.zr, Z.a8, { [X.mY]: O }, e),
+                        className: s()(
+                            X.zr,
+                            Z.a8,
+                            {
+                                [X.mY]: O,
+                            },
+                            e,
+                        ),
                         style: ee($({}, n), {
                             minWidth: F.value.interpolate([0, 1], [el.width, er]),
                             minHeight: F.value.interpolate([0, 1], [el.height, ei]),
@@ -358,7 +383,9 @@ function el(e) {
                         }),
                         children: [
                             O
-                                ? (0, r.jsx)(es, { header: J })
+                                ? (0, r.jsx)(es, {
+                                      header: J,
+                                  })
                                 : (0, r.jsx)("div", {
                                       className: X.Rh,
                                       children: J,

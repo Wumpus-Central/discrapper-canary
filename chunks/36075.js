@@ -17,6 +17,7 @@ var r = n(627968),
     c = n(652215),
     u = n(191017);
 let d = RegExp("\\p{Extended_Pictographic}", "gu");
+
 function f(e) {
     var t, n, r;
     let { colorStrings: i, useReducedMotion: a, roleStyle: o, includeConvenienceGlow: l, animateGradient: d } = e,
@@ -46,6 +47,7 @@ function f(e) {
         }),
     };
 }
+
 function p(e) {
     let { colorStrings: t, roleStyle: n, includeConvenienceGlow: r, animateGradient: a } = e,
         s = (0, o.bG)([l.A], () => l.A.useReducedMotion);
@@ -61,6 +63,7 @@ function p(e) {
         [t, n, r, s, a],
     );
 }
+
 function _(e, t, n) {
     return i.useMemo(() => {
         let i = [e, t, n].filter((e) => null != e),
@@ -71,7 +74,9 @@ function _(e, t, n) {
                     "stop",
                     {
                         offset: "".concat(t * s, "%"),
-                        style: { stopColor: e },
+                        style: {
+                            stopColor: e,
+                        },
                     },
                     t,
                 ),
@@ -85,6 +90,7 @@ function _(e, t, n) {
         };
     }, [e, t, n]);
 }
+
 function h(e, t) {
     return i.useMemo(() => {
         let n;

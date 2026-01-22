@@ -1,7 +1,10 @@
-n.d(t, { A: () => l });
+n.d(t, {
+    A: () => l,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927);
+
 function l(e) {
     let { upsellType: t } = e;
     (0, i.mMO)(async () => {

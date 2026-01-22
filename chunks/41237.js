@@ -1,10 +1,17 @@
-n.d(t, { A: () => g }), n(228524), n(896048), n(733351), n(321073);
+n.d(t, {
+    A: () => g,
+}),
+    n(228524),
+    n(896048),
+    n(733351),
+    n(321073);
 var r = n(810531),
     i = n(7584),
     a = n(548965),
     s = n(952526),
     o = n(71393),
     l = n(842086);
+
 function c(e, t, n) {
     return (
         t in e
@@ -18,6 +25,7 @@ function c(e, t, n) {
         e
     );
 }
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,6 +42,7 @@ function u(e) {
     }
     return e;
 }
+
 function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -46,6 +55,7 @@ function d(e, t) {
     }
     return n;
 }
+
 function f(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -57,6 +67,7 @@ function f(e, t) {
         e
     );
 }
+
 function p(e) {
     return {
         id: e.id,
@@ -72,11 +83,13 @@ function p(e) {
         [r.L]: "GuildSticker",
     };
 }
+
 function _(e) {
     let t = {};
     for (let n of e) t[n.id] = p(n);
     return t;
 }
+
 function h(e, t) {
     let n = [],
         { tags: r } = t,
@@ -177,7 +190,12 @@ let g = new m(
                 for (let e in r) {
                     let t = r[e],
                         i = n[e];
-                    null != i && null == t.user_id && null != i.user_id && (r[e] = f(u({}, t), { user_id: i.user_id }));
+                    null != i &&
+                        null == t.user_id &&
+                        null != i.user_id &&
+                        (r[e] = f(u({}, t), {
+                            user_id: i.user_id,
+                        }));
                 }
             t.setPartition(e.guildId, r);
         },

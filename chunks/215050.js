@@ -1,4 +1,6 @@
-n.d(t, { A: () => A });
+n.d(t, {
+    A: () => A,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -14,9 +16,11 @@ var r = n(627968),
     h = n(985018),
     m = n(142724);
 let g = 40;
+
 function E(e) {
     return "media-view-scroll-thumbnail-".concat(e);
 }
+
 function b(e) {
     return "IMAGE" === e.type
         ? (0, f.E)({
@@ -27,6 +31,7 @@ function b(e) {
           ? (0, p.VZ)(e.proxyUrl)
           : null;
 }
+
 function y(e) {
     var t, n;
     let { item: i, enabledContentHarmTypeFlags: a = 0 } = e,
@@ -68,6 +73,7 @@ function y(e) {
             });
 }
 let O = i.memo(y);
+
 function A(e) {
     let { items: t, currentIndex: n, onGalleryItemClick: a, className: c, enabledContentHarmTypeFlags: u } = e,
         d = i.useRef(null);

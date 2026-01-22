@@ -1,4 +1,7 @@
-e.d(n, { _: () => i }), e(896048);
+e.d(n, {
+    _: () => i,
+}),
+    e(896048);
 var o,
     i =
         (((o = {}).PLAYSTATION = "https://discord.com/connections/playstation/link"),

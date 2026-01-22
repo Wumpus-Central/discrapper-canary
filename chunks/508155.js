@@ -1,4 +1,6 @@
-n.d(t, { t: () => o });
+n.d(t, {
+    t: () => o,
+});
 var r = n(473145),
     i = n(652215),
     a = n(788868),
@@ -10,7 +12,9 @@ let o = [
             {
                 perkIcon: r.TP.EMOJI,
                 getCopy: () =>
-                    s.intl.formatToPlainString(s.t.Tlz0x1, { numEmojiSlots: a.TG[i.TVA.TIER_1].limits.emoji }),
+                    s.intl.formatToPlainString(s.t.Tlz0x1, {
+                        numEmojiSlots: a.TG[i.TVA.TIER_1].limits.emoji,
+                    }),
             },
             {
                 perkIcon: r.TP.SOUNDBOARD,
@@ -39,7 +43,10 @@ let o = [
             },
             {
                 perkIcon: r.TP.UPLOAD,
-                getCopy: () => s.intl.formatToPlainString(s.t.aFRl53, { uploadSizeLimit: s.intl.string(s.t.M6qV8j) }),
+                getCopy: () =>
+                    s.intl.formatToPlainString(s.t.aFRl53, {
+                        uploadSizeLimit: s.intl.string(s.t.M6qV8j),
+                    }),
             },
             {
                 perkIcon: r.TP.CUSTOM_ROLE_ICON,
@@ -60,7 +67,10 @@ let o = [
             },
             {
                 perkIcon: r.TP.UPLOAD,
-                getCopy: () => s.intl.formatToPlainString(s.t.aFRl53, { uploadSizeLimit: s.intl.string(s.t.yMOW8D) }),
+                getCopy: () =>
+                    s.intl.formatToPlainString(s.t.aFRl53, {
+                        uploadSizeLimit: s.intl.string(s.t.yMOW8D),
+                    }),
             },
             {
                 perkIcon: r.TP.AUDIO,
@@ -72,7 +82,10 @@ let o = [
             },
             {
                 perkIcon: r.TP.STAGE_VIDEO,
-                getCopy: () => s.intl.formatToPlainString(s.t.hsZ88d, { numStageSeats: i.uaN }),
+                getCopy: () =>
+                    s.intl.formatToPlainString(s.t.hsZ88d, {
+                        numStageSeats: i.uaN,
+                    }),
             },
         ],
     },

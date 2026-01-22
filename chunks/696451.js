@@ -30,6 +30,7 @@ var r,
     v = n(317525),
     S = n(71393),
     I = n(340837);
+
 function T(e, t, n) {
     return (
         t in e
@@ -43,6 +44,7 @@ function T(e, t, n) {
         e
     );
 }
+
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -59,6 +61,7 @@ function C(e) {
     }
     return e;
 }
+
 function N(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -71,6 +74,7 @@ function N(e, t) {
     }
     return n;
 }
+
 function R(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -97,11 +101,13 @@ let w = new p.A("GuildMemberStore"),
         added: [],
         removed: [],
     };
+
 function B(e, t) {
     if (null == t.communicationDisabledUntil || !(0, h.Z)(t)) return H(e, t.userId);
     let n = K(e, t.userId);
     j[n] !== t.communicationDisabledUntil && (0, h.Z)(t) && ((j[n] = t.communicationDisabledUntil), Y(n));
 }
+
 function H(e, t) {
     if (null != t) {
         let n = K(e, t);
@@ -112,22 +118,28 @@ function H(e, t) {
             q(n) === e && (Y(t), W(n));
         }
 }
+
 function Y(e) {
     (k += 1), (G[e] = k);
 }
+
 function W(e) {
     z(e) === O.default.getId() && (0, m.G)(q(e)), delete j[e];
 }
+
 function K(e, t) {
     let n = [];
     return (n[0] = e), (n[1] = t), n.join("-");
 }
+
 function z(e) {
     return e.split("-")[1];
 }
+
 function q(e) {
     return e.split("-")[0];
 }
+
 function X(e, t) {
     var n, r;
     let i, a, s, o;
@@ -157,6 +169,7 @@ function X(e, t) {
         highestRoleId: null == o ? void 0 : o.id,
     };
 }
+
 function Z(e) {
     var t, n;
     let {
@@ -210,13 +223,17 @@ function Z(e) {
     if (r === O.default.getId())
         if (g.A.isViewingRoles(a) || g.A.isFullServerPreview(a)) {
             let e = g.A.getViewingRoles(a);
-            x[a] = R(C({}, L, g.A.getMemberOptions(a)), { roles: null != e ? y.default.keys(e) : [] });
+            x[a] = R(C({}, L, g.A.getMemberOptions(a)), {
+                roles: null != e ? y.default.keys(e) : [],
+            });
         } else null != x[a] && delete x[a];
     return L;
 }
+
 function Q(e) {
     M ? (M = !1) : ((P = {}), (D = {})), (j = {}), J(e);
 }
+
 function $(e) {
     e.guilds.forEach((e) => {
         var t;
@@ -231,35 +248,47 @@ function $(e) {
                 });
     });
 }
+
 function J(e) {
     e.guilds.forEach((e) => {
         ev(e);
     });
 }
+
 function ee(e) {
     let { guildMembers: t } = e;
     (P = C({}, t)), (D = {});
 }
+
 function et(e) {
     let { guildMembers: t, guilds: n } = e;
     (M = !0), (P = C({}, t)), (D = {}), (L = {}), er(n);
 }
+
 function en(e) {
     let { guilds: t } = e;
     er(t);
 }
+
 function er(e) {
     for (let t of e)
         if (
             null != t.member &&
-            (null == L[t.id] ? (L[t.id] = t.member) : (L[t.id] = R(C({}, t.member), { roles: t.member.roles })),
+            (null == L[t.id]
+                ? (L[t.id] = t.member)
+                : (L[t.id] = R(C({}, t.member), {
+                      roles: t.member.roles,
+                  })),
             null != P[t.id])
         ) {
             let e = P[t.id];
             null != e[t.member.userId] &&
-                (e[t.member.userId] = R(C({}, e[t.member.userId]), { roles: t.member.roles }));
+                (e[t.member.userId] = R(C({}, e[t.member.userId]), {
+                    roles: t.member.roles,
+                }));
         }
 }
+
 function ei(e) {
     var t, n;
     if (null == e.guildId || null == S.A.getGuild(e.guildId)) return !1;
@@ -269,6 +298,7 @@ function ei(e) {
         null == P[e.guildId][t.userId] && ((r = !0), (P[e.guildId][t.userId] = t));
     return r;
 }
+
 function ea(e) {
     var t;
     let {
@@ -311,6 +341,7 @@ function ea(e) {
     })),
         B(n, g[r.id]);
 }
+
 function es(e) {
     let { guildId: t, userId: n, roleId: r } = e,
         i = P[t];
@@ -323,6 +354,7 @@ function es(e) {
     let o = X(v.A.getUnsafeMutableRoles(a.id), s.roles);
     return (i[n] = C({}, s, o)), !0;
 }
+
 function eo(e) {
     let { guildId: t, userId: n, roleId: r } = e,
         i = P[t];
@@ -335,6 +367,7 @@ function eo(e) {
     let o = X(v.A.getUnsafeMutableRoles(a.id), s.roles);
     return (i[n] = C({}, s, o)), !0;
 }
+
 function el(e) {
     let { guildMember: t, guildId: n } = e,
         r = P[n];
@@ -361,22 +394,27 @@ function el(e) {
     })),
         B(n, r[t.user.id]);
 }
+
 function ec(e) {
     let t = !1;
     for (let n of e.chunks) t = eh(n.guildId, n.members) || t;
     return t;
 }
+
 function eu(e) {
     return e.members.length > 0 && eh(e.guildId, e.members);
 }
+
 function ed(e) {
     let { guildId: t, members: n } = e;
     return eh(t, n.map((e) => e.member).filter(E.Vq));
 }
+
 function ef(e) {
     let { guildId: t, owners: n } = e;
     return eh(t, n);
 }
+
 function ep(e) {
     let { guildId: t, threads: n } = e;
     return eh(
@@ -397,10 +435,12 @@ function ep(e) {
         }, []),
     );
 }
+
 function e_(e) {
     let { guildId: t, addedMembers: n } = e;
     return null != n && eh(t, n.map((e) => e.member).filter(E.Vq));
 }
+
 function eh(e, t) {
     let n = P[e];
     if (null == n) return !1;
@@ -434,9 +474,11 @@ function eh(e, t) {
           U++,
           !0);
 }
+
 function em(e) {
     return (0, d.Xq)(e.avatar_decoration_data);
 }
+
 function eg(e) {
     let { guildId: t, members: n } = e;
     return eh(
@@ -447,29 +489,35 @@ function eg(e) {
         }),
     );
 }
+
 function eE(e) {
     let { guildId: t, user: n } = e;
     ey(t, n.id);
 }
+
 function eb(e) {
     let { guildId: t, userId: n } = e;
     ey(t, n);
 }
+
 function ey(e, t) {
     let n = P[e];
     if (null == n || null == n[t]) return !1;
     delete n[t], H(e, t), U++;
 }
+
 function eO(e) {
     let { guild: t } = e;
     return ev(t);
 }
+
 function eA(e, t) {
     return ev({
         id: e,
         members: t.filter(c.A).map((e) => e.member),
     });
 }
+
 function ev(e) {
     let t = e.id;
     t in P || (P[e.id] = {});
@@ -503,10 +551,12 @@ function ev(e) {
     }
     return !0;
 }
+
 function eS(e) {
     let { guild: t } = e;
     delete P[t.id], delete D[t.id], H(t.id);
 }
+
 function eI(e) {
     let t = P[e.guildId];
     if (null == t) return !1;
@@ -537,6 +587,7 @@ function eI(e) {
         }
     }
 }
+
 function eT(e) {
     var t, n, r;
     let { guildId: i, roles: s, addedRoleIds: o, removedRoleIds: l, flags: c } = e,
@@ -568,11 +619,13 @@ function eT(e) {
             displayNameStyles: f.displayNameStyles,
         }));
 }
+
 function eC(e) {
     let { guildId: t } = e;
     if (null == t) return !1;
     delete V[t];
 }
+
 function eN(e) {
     let { guildId: t } = e,
         n = P[t];
@@ -599,6 +652,7 @@ function eN(e) {
         displayNameStyles: a.displayNameStyles,
     });
 }
+
 function eR(e, t) {
     if ((null == e ? void 0 : e.members) == null || null == t) return !1;
     ev({
@@ -608,11 +662,15 @@ function eR(e, t) {
                 var n;
                 let [r, i] = t,
                     a = null == e || null == (n = e.users) ? void 0 : n[r];
-                if (null != a) return R(C({}, i), { user: a });
+                if (null != a)
+                    return R(C({}, i), {
+                        user: a,
+                    });
             })
             .filter((e) => null != e),
     });
 }
+
 function ew(e, t) {
     var n;
     let r = !1;
@@ -628,18 +686,22 @@ function ew(e, t) {
         eR(e.resolved, t) || r
     );
 }
+
 function eP(e) {
     let { message: t, guildId: n } = e;
     return ew(t, n);
 }
+
 function eD(e) {
     let t = A.A.getChannel(e.channel_id);
     ew(e, null == t ? void 0 : t.guild_id);
 }
+
 function ex(e) {
     let { messages: t } = e;
     t.forEach((e) => eD(e));
 }
+
 function eL(e) {
     let { pins: t } = e;
     t.forEach((e) => {
@@ -647,6 +709,7 @@ function eL(e) {
         return eD(t);
     });
 }
+
 function ej(e) {
     let { data: t } = e,
         n = [];
@@ -658,13 +721,17 @@ function ej(e) {
             });
         });
     }),
-        ex({ messages: n });
+        ex({
+            messages: n,
+        });
 }
+
 function eM(e) {
     let { location: t, participants: n } = e,
         r = (0, u.D)(t);
     return null != r && eA(r, n);
 }
+
 function ek(e) {
     let t = A.A.getChannel(e.channelId);
     return eR(e.resolved, null == t ? void 0 : t.guild_id);

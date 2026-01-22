@@ -1,4 +1,6 @@
-l.d(t, { A: () => T });
+l.d(t, {
+    A: () => T,
+});
 var n = l(627968),
     a = l(64700),
     r = l(311907),
@@ -25,6 +27,7 @@ var n = l(627968),
     S = l(696016),
     w = l(985018),
     O = l(919753);
+
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var l = null != arguments[t] ? arguments[t] : {},
@@ -50,6 +53,7 @@ function A(e) {
     }
     return e;
 }
+
 function I(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -68,6 +72,7 @@ function I(e, t) {
         e
     );
 }
+
 function T(e) {
     var t;
     let { clip: T, channelId: L, onClose: R } = e,
@@ -129,9 +134,17 @@ function T(e) {
                                         (0, s.mMO)(
                                             async () => {
                                                 let { default: e } = await l.e("10000").then(l.bind(l, 224883));
-                                                return (t) => (0, n.jsx)(e, I(A({}, t), { clip: T }));
+                                                return (t) =>
+                                                    (0, n.jsx)(
+                                                        e,
+                                                        I(A({}, t), {
+                                                            clip: T,
+                                                        }),
+                                                    );
                                             },
-                                            { stackingBehavior: "stack" },
+                                            {
+                                                stackingBehavior: "stack",
+                                            },
                                         );
                                     },
                                     icon: s.Q5O,
@@ -270,7 +283,7 @@ function T(e) {
                                 children: (0, n.jsx)(s.Text, {
                                     variant: "text-sm/normal",
                                     color: "text-subtle",
-                                    children: [T.activity.state, T.activity.details].filter(Boolean).join(" \u203A "),
+                                    children: [T.activity.state, T.activity.details].filter(Boolean).join(" › "),
                                 }),
                             }),
                     ],
@@ -288,7 +301,10 @@ function T(e) {
                             variant: "primary",
                             icon: s.liv,
                             iconPosition: "start",
-                            onClick: () => $({ clips: [P()] }),
+                            onClick: () =>
+                                $({
+                                    clips: [P()],
+                                }),
                             text: w.intl.string(w.t.RDE0Sc),
                         }),
                         (0, n.jsx)(s.K0, {

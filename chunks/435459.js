@@ -1,4 +1,6 @@
-n.d(t, { A: () => d }),
+n.d(t, {
+    A: () => d,
+}),
     n(927092),
     n(212978),
     n(201528),
@@ -308,6 +310,7 @@ let o = {
     "discord_common/js/shared/animations/app/xbox/xbox_connecting.lottiejson": () =>
         n.e("76121").then(n.t.bind(n, 709376, 19)),
 };
+
 function c(e) {
     let { default: t } = e;
     return fetch(t)
@@ -346,7 +349,10 @@ function c(e) {
                                         }
                                         return e;
                                     })({}, e)),
-                                    (l = l = { [t]: JSON.parse(i.he(a[t])) }),
+                                    (l = l =
+                                        {
+                                            [t]: JSON.parse(i.he(a[t])),
+                                        }),
                                     Object.getOwnPropertyDescriptors
                                         ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
                                         : (function (e, t) {
@@ -368,12 +374,15 @@ function c(e) {
                 }),
         );
 }
+
 function d() {
     let [e, t] = l.useState(void 0),
         [n, i] = l.useState(400),
         [d, u] = l.useState(400);
     return (0, a.jsx)("div", {
-        style: { margin: 24 },
+        style: {
+            margin: 24,
+        },
         children: (0, a.jsxs)(r.BJc, {
             gap: 24,
             children: [

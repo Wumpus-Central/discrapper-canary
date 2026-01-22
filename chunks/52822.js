@@ -1,4 +1,6 @@
-n.d(t, { d: () => _ });
+n.d(t, {
+    d: () => _,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -6,6 +8,7 @@ var r = n(627968),
     o = n(563014),
     l = n(885621),
     c = n(658122);
+
 function u(e, t, n) {
     return (
         t in e
@@ -19,6 +22,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,6 +39,7 @@ function d(e) {
     }
     return e;
 }
+
 function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -47,6 +52,7 @@ function f(e, t) {
     }
     return n;
 }
+
 function p(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -58,6 +64,7 @@ function p(e, t) {
         e
     );
 }
+
 function _(e) {
     let {
             color: t = "default",
@@ -92,7 +99,9 @@ function _(e) {
                     },
                     f,
                 ),
-                { children: _ },
+                {
+                    children: _,
+                },
             ),
         )
     );

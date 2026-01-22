@@ -1,4 +1,8 @@
-n.d(t, { A: () => T }), n(896048), n(65821);
+n.d(t, {
+    A: () => T,
+}),
+    n(896048),
+    n(65821);
 var r,
     i = n(627968),
     a = n(64700),
@@ -17,6 +21,7 @@ var r,
     E = n(652215),
     b = n(985018),
     y = n(168785);
+
 function O(e, t, n) {
     return (
         t in e
@@ -30,6 +35,7 @@ function O(e, t, n) {
         e
     );
 }
+
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -46,6 +52,7 @@ function A(e) {
     }
     return e;
 }
+
 function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -58,6 +65,7 @@ function v(e, t) {
     }
     return n;
 }
+
 function S(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -71,7 +79,9 @@ function S(e, t) {
 }
 class I extends (r = a.PureComponent) {
     get analyticsLocation() {
-        return S(A({}, this.props.analyticsContext.location), { object: E.ZSU.BUTTON_CTA });
+        return S(A({}, this.props.analyticsContext.location), {
+            object: E.ZSU.BUTTON_CTA,
+        });
     }
     hasMultipleLaunchOptions() {
         let { dispatchState: e } = this.props;
@@ -92,7 +102,9 @@ class I extends (r = a.PureComponent) {
                 (0, i.jsx)(l.m, {
                     text: t,
                     position: o,
-                    children: (0, i.jsx)("div", { className: y.p5 }),
+                    children: (0, i.jsx)("div", {
+                        className: y.p5,
+                    }),
                 }),
             ],
         });
@@ -157,7 +169,9 @@ class I extends (r = a.PureComponent) {
                                 }),
                             );
                     },
-                    { onClose: a },
+                    {
+                        onClose: a,
+                    },
                 );
             }),
             O(this, "handleClick", () => {
@@ -177,6 +191,7 @@ class I extends (r = a.PureComponent) {
             });
     }
 }
+
 function T(e) {
     let { applicationId: t, libraryApplication: n } = e,
         r = (0, d.p)(),

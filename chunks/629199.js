@@ -1,4 +1,6 @@
-n.d(t, { A: () => v });
+n.d(t, {
+    A: () => v,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -42,12 +44,15 @@ let y = (e) => {
                           className: O.tE,
                           variant: "text-sm/normal",
                           color: "text-muted",
-                          children: E.intl.format(E.t.eE3oep, { count: n.length }),
+                          children: E.intl.format(E.t.eE3oep, {
+                              count: n.length,
+                          }),
                       }),
                   ],
               });
     },
     I = g.Ay.getEnableHardwareAcceleration() ? a.JsQ : a.euF;
+
 function v(e) {
     var t;
     let { channel: n, otherUser: l, active: u } = e,
@@ -92,9 +97,13 @@ function v(e) {
                         ],
                     }),
                     (0, r.jsx)(c.A, {
-                        hoverText: (0, r.jsx)(_.A, { channel: n }),
+                        hoverText: (0, r.jsx)(_.A, {
+                            channel: n,
+                        }),
                         forceHover: u,
-                        children: (0, r.jsx)(y, { userId: l.id }),
+                        children: (0, r.jsx)(y, {
+                            userId: l.id,
+                        }),
                     }),
                 ],
             }),

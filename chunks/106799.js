@@ -14,9 +14,16 @@ let c = n(243884),
         let { customSize: t, shouldUseThemeColor: n = !1, loading: i, className: d } = e,
             f = (0, o.Ay)(),
             p = n && (0, s.qB)(f) ? u : c,
-            _ = void 0 !== t ? { height: t } : void 0;
+            _ =
+                void 0 !== t
+                    ? {
+                          height: t,
+                      }
+                    : void 0;
         return (0, r.jsx)("img", {
-            className: a()(l.H8, d, { [l.Lq]: i }),
+            className: a()(l.H8, d, {
+                [l.Lq]: i,
+            }),
             src: p,
             alt: "",
             style: _,

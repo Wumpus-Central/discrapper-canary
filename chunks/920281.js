@@ -1,4 +1,6 @@
-r.d(t, { d: () => d }),
+r.d(t, {
+    d: () => d,
+}),
     r(747238),
     r(896048),
     r(927092),
@@ -57,7 +59,9 @@ async function d(e) {
                     "Entire screen" === n
                         ? (n = c.intl.string(c.t.R4wpLN))
                         : /^Screen \d+$/.test(n) &&
-                          (n = c.intl.formatToPlainString(c.t["y/R7n4"], { index: parseInt(n.split(" ")[1]) })),
+                          (n = c.intl.formatToPlainString(c.t["y/R7n4"], {
+                              index: parseInt(n.split(" ")[1]),
+                          })),
                     (t = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var r = null != arguments[t] ? arguments[t] : {},
@@ -83,7 +87,10 @@ async function d(e) {
                         }
                         return e;
                     })({}, e)),
-                    (r = r = { name: n }),
+                    (r = r =
+                        {
+                            name: n,
+                        }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
                         : (function (e, t) {

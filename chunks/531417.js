@@ -1,4 +1,9 @@
-n.d(t, { A: () => v }), n(747238), n(896048), n(65821);
+n.d(t, {
+    A: () => v,
+}),
+    n(747238),
+    n(896048),
+    n(65821);
 var r = n(214958),
     i = n.n(r),
     a = n(972347),
@@ -13,6 +18,7 @@ var r = n(214958),
     _ = n(731854),
     h = n(713754),
     m = n(264572).Buffer;
+
 function g(e, t, n) {
     return (
         t in e
@@ -26,6 +32,7 @@ function g(e, t, n) {
         e
     );
 }
+
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,6 +49,7 @@ function E(e) {
     }
     return e;
 }
+
 function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -54,6 +62,7 @@ function b(e, t) {
     }
     return n;
 }
+
 function y(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -65,9 +74,11 @@ function y(e, t) {
         e
     );
 }
+
 function O(e) {
     return (null != e ? e : h.Hz) / h.Hz;
 }
+
 function A(e, t, n) {
     return t + ((n - t) * e) / 100;
 }
@@ -220,7 +231,9 @@ class v extends a.A {
         return Promise.resolve();
     }
     setAudioInputBypassSystemProcessing(e) {
-        (0, d.lE)().setTransportOptions({ bypassSystemProcessing: e });
+        (0, d.lE)().setTransportOptions({
+            bypassSystemProcessing: e,
+        });
     }
     setInputVolume(e) {
         (0, d.lE)().setInputVolume(O(e));
@@ -383,7 +396,13 @@ class v extends a.A {
         return new Promise((n) => {
             null != (0, d.lE)().getScreenPreviews
                 ? (0, d.lE)().getScreenPreviews(e, t, (e) => {
-                      n(e.map((e, t) => y(E({}, e), { name: "Screen " + (t + 1) })));
+                      n(
+                          e.map((e, t) =>
+                              y(E({}, e), {
+                                  name: "Screen " + (t + 1),
+                              }),
+                          ),
+                      );
                   })
                 : n([]);
         });
@@ -842,6 +861,7 @@ class v extends a.A {
             S(this);
     }
 }
+
 function S(e) {
     let t = !1;
     e.on(o.bg.Destroy, () => (t = !0));

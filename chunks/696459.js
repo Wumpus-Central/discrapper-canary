@@ -1,4 +1,6 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(562465),
     i = n(73153),
     a = n(29599),
@@ -13,7 +15,9 @@ let o = {
             }),
             r.Bo.get({
                 url: s.Rsh.INTEGRATION_SEARCH("tenor"),
-                query: { q: t },
+                query: {
+                    q: t,
+                },
                 oldFormErrors: !0,
                 rejectWithError: !0,
             }).then(

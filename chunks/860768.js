@@ -1,4 +1,7 @@
-n.d(t, { A: () => A }), n(896048);
+n.d(t, {
+    A: () => A,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(397927),
@@ -9,6 +12,7 @@ var r = n(627968),
     u = n(49999),
     d = n(985018),
     p = n(988726);
+
 function f(e, t, n) {
     return (
         t in e
@@ -87,7 +91,9 @@ class h extends i.PureComponent {
             }),
             f(this, "handleClose", () => {
                 let e = s.A.getChannelId(),
-                    t = d.intl.formatToPlainString(d.t.DEn7nu, { invitePeople: d.intl.string(d.t.Sd8Ixw) });
+                    t = d.intl.formatToPlainString(d.t.DEn7nu, {
+                        invitePeople: d.intl.string(d.t.Sd8Ixw),
+                    });
                 this.props.markAsDismissed(u.i.UNKNOWN), null != e && a.A.sendBotMessage(e, t);
             });
     }

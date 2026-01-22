@@ -28,6 +28,7 @@ var r = n(627968),
     y = n(481484),
     O = n(985018),
     A = n(859804);
+
 function v(e) {
     let { children: t } = e;
     return (0, r.jsx)("div", {
@@ -39,7 +40,8 @@ function v(e) {
         }),
     });
 }
-let S = 7000;
+let S = 7e3;
+
 function I(e, t) {
     return C(
         (0, o.bG)([_.A], () => _.A.getWidget(e), [e]),
@@ -47,6 +49,7 @@ function I(e, t) {
     );
 }
 let T = (e, t) => Date.now() - e < t;
+
 function C(e, t) {
     let n = i.useRef(null == e ? void 0 : e.showExtrasHintTimestamp),
         [r, a] = i.useState(!1),
@@ -79,7 +82,8 @@ function C(e, t) {
         r && s
     );
 }
-let N = 8000;
+let N = 8e3;
+
 function R(e) {
     let { children: t, widgetId: n } = e,
         i = (0, o.bG)([_.A], () => _.A.getWidget(n), [n]),
@@ -112,7 +116,9 @@ function R(e) {
                           }),
                       }),
                   }),
-                  (0, r.jsx)("div", { className: A.Xk }),
+                  (0, r.jsx)("div", {
+                      className: A.Xk,
+                  }),
               ],
           })
         : (0, r.jsx)("div", {
@@ -124,6 +130,7 @@ function R(e) {
               }),
           });
 }
+
 function w(e) {
     let { onClick: t } = e;
     if ((0, y.A)()) return null;
@@ -141,11 +148,14 @@ function w(e) {
         }),
     });
 }
+
 function P(e) {
     let { widgetId: t, showAllStreams: n } = e,
         i = n ? O.intl.string(O.t.q2B3rh) : O.intl.string(O.t.JKGi6o),
         a = () => {
-            (0, d.cC)(t, { showAllStreams: !n });
+            (0, d.cC)(t, {
+                showAllStreams: !n,
+            });
         };
     return (0, y.A)()
         ? null
@@ -162,6 +172,7 @@ function P(e) {
               }),
           });
 }
+
 function D(e) {
     let { id: t, pinned: n } = e,
         i = n ? O.intl.string(O.t.cSu80j) : O.intl.string(O.t.cM8Vnm),

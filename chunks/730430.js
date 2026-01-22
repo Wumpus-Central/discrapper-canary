@@ -1,4 +1,6 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -10,6 +12,7 @@ var i = n(311907),
     u = n(954571),
     d = n(652215),
     f = n(985018);
+
 function p(e, t, n) {
     return (
         t in e
@@ -23,6 +26,7 @@ function p(e, t, n) {
         e
     );
 }
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -39,6 +43,7 @@ function _(e) {
     }
     return e;
 }
+
 function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -51,6 +56,7 @@ function h(e, t) {
     }
     return n;
 }
+
 function m(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -62,6 +68,7 @@ function m(e, t) {
         e
     );
 }
+
 function g(e, t) {
     if (null == e) return {};
     var n,
@@ -78,6 +85,7 @@ function g(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function E(e, t) {
     if (null == e) return {};
     var n,
@@ -88,6 +96,7 @@ function E(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function b(e) {
     let { variant: t = "active", size: n = "sm", hangStatusChannel: p, onAction: h, userId: E } = e,
         b = g(e, ["variant", "size", "hangStatusChannel", "onAction", "userId"]),
@@ -98,10 +107,18 @@ function b(e) {
                 (0, l.iN)(p.id),
                 u.default.track(
                     d.HAw.HANG_STATUS_CTA_CLICKED,
-                    m(_({ source: "UserProfilePopout" }, (0, o.A)(p.id)), {
-                        other_user_id: E,
-                        cta_type: y ? "open" : "join",
-                    }),
+                    m(
+                        _(
+                            {
+                                source: "UserProfilePopout",
+                            },
+                            (0, o.A)(p.id),
+                        ),
+                        {
+                            other_user_id: E,
+                            cta_type: y ? "open" : "join",
+                        },
+                    ),
                 );
         };
     return (0, r.jsx)(

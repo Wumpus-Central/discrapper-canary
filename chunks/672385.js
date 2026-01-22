@@ -28,6 +28,7 @@ var r = n(58149),
     m = n(518477),
     g = n(652215),
     E = n(818348);
+
 function b(e, t, n) {
     return (
         t in e
@@ -41,6 +42,7 @@ function b(e, t, n) {
         e
     );
 }
+
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -57,6 +59,7 @@ function y(e) {
     }
     return e;
 }
+
 function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -69,6 +72,7 @@ function O(e, t) {
     }
     return n;
 }
+
 function A(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -198,7 +202,12 @@ let v = (e) => {
         );
     },
     w = (e) => {
-        if (!(0, _.i)({ location: "UserProfileAnalyticsUtils" })) return;
+        if (
+            !(0, _.i)({
+                location: "UserProfileAnalyticsUtils",
+            })
+        )
+            return;
         let {
             guildId: t,
             channelId: n,
@@ -327,7 +336,11 @@ let v = (e) => {
             numCharacters: c,
             applicationId: u,
         } = e;
-        R(A(y({}, e), { action: a })),
+        R(
+            A(y({}, e), {
+                action: a,
+            }),
+        ),
             d.default.track(
                 g.HAw.USER_PROFILE_EDIT_ACTION,
                 A(y({}, (0, r.H$)(t), (0, r.Ou)(n), T(e), N(u)), {
@@ -352,7 +365,11 @@ let v = (e) => {
             numCharactersCommentary: l,
             isWidgetRemoved: c,
         } = e;
-        R(A(y({}, e), { action: "EDIT_SAVED" })),
+        R(
+            A(y({}, e), {
+                action: "EDIT_SAVED",
+            }),
+        ),
             d.default.track(
                 g.HAw.USER_PROFILE_EDIT_SAVED,
                 A(y({}, (0, r.H$)(t), (0, r.Ou)(n), T(e)), {
@@ -375,7 +392,11 @@ let v = (e) => {
             skuId: o,
             productLines: l,
         } = e;
-        R(A(y({}, e), { action: a })),
+        R(
+            A(y({}, e), {
+                action: a,
+            }),
+        ),
             d.default.track(
                 g.HAw.USER_PROFILE_WISHLIST_ACTION,
                 A(y({}, (0, r.H$)(t), (0, r.Ou)(n), T(e)), {

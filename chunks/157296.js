@@ -1,4 +1,7 @@
-n.d(t, { A: () => d }), n(896048);
+n.d(t, {
+    A: () => d,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(435371),
@@ -7,6 +10,7 @@ var r = n(627968),
     o = n(954571),
     c = n(652215),
     u = n(985018);
+
 function d(e) {
     let { onClick: t } = e,
         [n, a] = l.useState(!1),
@@ -40,6 +44,7 @@ function d(e) {
         ],
     });
 }
+
 function f(e) {
     let { cancel: t, confirm: n } = e;
     return (0, r.jsx)(s.MJ3, {

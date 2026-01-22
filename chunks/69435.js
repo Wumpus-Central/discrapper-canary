@@ -22,6 +22,7 @@ var r = n(627968),
     E = n(531525),
     b = n(652215),
     y = n(985018);
+
 function O(e, t, n) {
     return (
         t in e
@@ -35,6 +36,7 @@ function O(e, t, n) {
         e
     );
 }
+
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -52,6 +54,7 @@ function A(e) {
     return e;
 }
 let v = "AppHardwareAcceleration";
+
 function S() {
     if ((0, u.W)("DesktopNativeUtils")) {
         let e = s.w.get(v);
@@ -59,11 +62,13 @@ function S() {
     }
     return p.Ay.getEnableHardwareAcceleration();
 }
+
 function I(e) {
     (0, u.W)("DesktopNativeUtils")
         ? (s.w.set(v, e), p.Ay.setEnableHardwareAcceleration(!0))
         : p.Ay.setEnableHardwareAcceleration(e);
 }
+
 function T() {
     let [e] = i.useState(() => S()),
         t = i.useCallback((e) => {
@@ -91,6 +96,7 @@ function T() {
         ],
     });
 }
+
 function C() {
     let e = _.l_.useSetting(),
         t = _.Q_.useSetting(),
@@ -111,7 +117,9 @@ function C() {
                     children: [
                         (0, r.jsx)(l.dOG, {
                             label: y.intl.string(y.t.ObIb1Q),
-                            description: y.intl.format(y.t["CY6q/Q"], { apiDocsUrl: b.X7G.API_DOCS }),
+                            description: y.intl.format(y.t["CY6q/Q"], {
+                                apiDocsUrl: b.X7G.API_DOCS,
+                            }),
                             checked: t,
                             onChange: _.Q_.updateSetting,
                         }),

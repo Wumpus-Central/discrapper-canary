@@ -1,4 +1,7 @@
-n.d(t, { A: () => _ }), n(896048);
+n.d(t, {
+    A: () => _,
+}),
+    n(896048);
 var i = n(627968),
     r = n(64700),
     l = n(735438),
@@ -24,6 +27,7 @@ var i = n(627968),
     E = n(73510),
     T = n(985018),
     w = n(183395);
+
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -49,6 +53,7 @@ function C(e) {
     }
     return e;
 }
+
 function S(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -67,6 +72,7 @@ function S(e, t) {
         e
     );
 }
+
 function _(e) {
     let {
             applicationId: t,
@@ -222,7 +228,13 @@ function _(e) {
                         t = M.defaultMemberPermissions;
                     return (
                         s.aI(t, u.Cq) && (t = N.xBc.ADMINISTRATOR),
-                        (n) => (0, i.jsx)(e, S(C({}, n), { defaultMemberPermissions: t }))
+                        (n) =>
+                            (0, i.jsx)(
+                                e,
+                                S(C({}, n), {
+                                    defaultMemberPermissions: t,
+                                }),
+                            )
                     );
                 }),
             [M],
@@ -250,7 +262,9 @@ function _(e) {
             q > 0
                 ? (0, i.jsx)(c.po8, {
                       messageType: c.YCn.WARNING,
-                      children: T.intl.format(T.t["B/dFBH"], { removeCount: q }),
+                      children: T.intl.format(T.t["B/dFBH"], {
+                          removeCount: q,
+                      }),
                   })
                 : null,
             D
@@ -321,15 +335,33 @@ function _(e) {
         ],
     });
 }
+
 function I(e) {
     let t = (0, j.Q)(e);
-    return S(C({}, t), { results: t.results.map((e) => S(C({}, e), { type: d.RA.CHANNEL })) });
+    return S(C({}, t), {
+        results: t.results.map((e) =>
+            S(C({}, e), {
+                type: d.RA.CHANNEL,
+            }),
+        ),
+    });
 }
+
 function P(e) {
     let t = (0, O.t)(e);
     return S(C({}, t), {
         results: t.results.roles
-            .map((e) => S(C({}, e), { type: d.RA.ROLE }))
-            .concat(t.results.members.map((e) => S(C({}, e), { type: d.RA.USER }))),
+            .map((e) =>
+                S(C({}, e), {
+                    type: d.RA.ROLE,
+                }),
+            )
+            .concat(
+                t.results.members.map((e) =>
+                    S(C({}, e), {
+                        type: d.RA.USER,
+                    }),
+                ),
+            ),
     });
 }

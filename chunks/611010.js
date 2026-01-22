@@ -13,6 +13,7 @@ var r = n(101359),
     s = n(431209),
     o = n(427157),
     l = n(360469);
+
 function c(e, t, n) {
     return (
         t in e
@@ -26,6 +27,7 @@ function c(e, t, n) {
         e
     );
 }
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,6 +44,7 @@ function u(e) {
     }
     return e;
 }
+
 function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -54,6 +57,7 @@ function d(e, t) {
     }
     return n;
 }
+
 function f(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -69,6 +73,7 @@ let p = {
     [l.I4]: 7,
     [l.qA]: 12,
 };
+
 function _(e) {
     let t = {
         os: e.os,
@@ -199,7 +204,12 @@ class m extends h {
                         ? Object.fromEntries(
                               Object.entries(e.integration_types_config).map((e) => {
                                   let [t, n] = e;
-                                  return [t, { oauth2InstallParams: (null != n ? n : {}).oauth2_install_params }];
+                                  return [
+                                      t,
+                                      {
+                                          oauth2InstallParams: (null != n ? n : {}).oauth2_install_params,
+                                      },
+                                  ];
                               }),
                           )
                         : void 0,

@@ -5,6 +5,7 @@ n.d(t, {
     qf: () => l,
 });
 var r = n(73153);
+
 function l(e, t, n) {
     return new Promise((l) => {
         setTimeout(() => {
@@ -18,18 +19,21 @@ function l(e, t, n) {
         }, 0);
     });
 }
+
 function i(e) {
     r.h.dispatch({
         type: "ACTIVITY_INVITE_MODAL_QUERY",
         query: e,
     });
 }
+
 function a(e) {
     r.h.dispatch({
         type: "ACTIVITY_INVITE_MODAL_SEND",
         channelId: e,
     });
 }
+
 function s(e) {
     r.h.dispatch({
         type: "ACTIVITY_INVITE_MODAL_SEND",

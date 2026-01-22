@@ -6,7 +6,7 @@
         (s.global === s || s.window === s || s.self === s) && (r = s);
         var o,
             l,
-            c = 2147483647,
+            c = 0x7fffffff,
             u = 36,
             d = 1,
             f = 26,
@@ -26,13 +26,16 @@
             A = 35,
             v = Math.floor,
             S = String.fromCharCode;
+
         function I(e) {
             throw RangeError(O[e]);
         }
+
         function T(e, t) {
             for (var n = e.length, r = []; n--; ) r[n] = t(e[n]);
             return r;
         }
+
         function C(e, t) {
             var n = e.split("@"),
                 r = "";
@@ -40,6 +43,7 @@
                 n.length > 1 && ((r = n[0] + "@"), (e = n[1])), r + T((e = e.replace(y, ".")).split("."), t).join(".")
             );
         }
+
         function N(e) {
             for (var t, n, r = [], i = 0, a = e.length; i < a; )
                 (t = e.charCodeAt(i++)) >= 55296 && t <= 56319 && i < a
@@ -49,6 +53,7 @@
                     : r.push(t);
             return r;
         }
+
         function R(e) {
             return T(e, function (e) {
                 var t = "";
@@ -58,17 +63,21 @@
                 );
             }).join("");
         }
+
         function w(e) {
             return e - 48 < 10 ? e - 22 : e - 65 < 26 ? e - 65 : e - 97 < 26 ? e - 97 : u;
         }
+
         function P(e, t) {
             return e + 22 + 75 * (e < 26) - ((0 != t) << 5);
         }
+
         function D(e, t, n) {
             var r = 0;
             for (e = n ? v(e / _) : e >> 1, e += v(e / t); e > (A * f) >> 1; r += u) e = v(e / A);
             return v(r + ((A + 1) * e) / (e + p));
         }
+
         function x(e) {
             var t,
                 n,
@@ -105,6 +114,7 @@
             }
             return R(E);
         }
+
         function L(e) {
             var t,
                 n,
@@ -135,11 +145,13 @@
             }
             return T.join("");
         }
+
         function j(e) {
             return C(e, function (e) {
                 return E.test(e) ? x(e.slice(4).toLowerCase()) : e;
             });
         }
+
         function M(e) {
             return C(e, function (e) {
                 return b.test(e) ? "xn--" + L(e) : e;

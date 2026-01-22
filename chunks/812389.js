@@ -124,7 +124,9 @@ var r,
                 var r = W(t);
                 r
                     ? k(function () {
-                          var n = { done: !1 };
+                          var n = {
+                              done: !1,
+                          };
                           try {
                               d(r, t, X(et, n, e), X(ee, n, e));
                           } catch (t) {
@@ -133,7 +135,13 @@ var r,
                       })
                     : ((e.value = t), (e.state = 1), $(e, !1));
             } catch (t) {
-                ee({ done: !1 }, t, e);
+                ee(
+                    {
+                        done: !1,
+                    },
+                    t,
+                    e,
+                );
             }
         }
     };
@@ -197,7 +205,9 @@ if (
                         d(i, n, e, t);
                     }).then(e, t);
                 },
-                { unsafe: !0 },
+                {
+                    unsafe: !0,
+                },
             );
     try {
         delete B.constructor;
@@ -211,7 +221,9 @@ s(
         wrap: !0,
         forced: O,
     },
-    { Promise: D },
+    {
+        Promise: D,
+    },
 ),
     f(D, F, !1, !0),
     m(F);

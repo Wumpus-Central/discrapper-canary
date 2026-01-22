@@ -1,4 +1,6 @@
-n.d(t, { c: () => r });
+n.d(t, {
+    c: () => r,
+});
 let r = (0, n(600975).C)({
     kind: "guild",
     id: "2023-08_deadchat_simple_prompt_guild",

@@ -1,4 +1,6 @@
-n.d(t, { A: () => w });
+n.d(t, {
+    A: () => w,
+});
 var r = n(627968),
     i = n(64700),
     a = n(621466),
@@ -18,6 +20,7 @@ var r = n(627968),
     b = n(732139),
     y = n(985018),
     O = n(775269);
+
 function A(e, t, n) {
     return (
         t in e
@@ -31,6 +34,7 @@ function A(e, t, n) {
         e
     );
 }
+
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -47,6 +51,7 @@ function v(e) {
     }
     return e;
 }
+
 function S(e, t) {
     if (null == e) return {};
     var n,
@@ -63,6 +68,7 @@ function S(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function I(e, t) {
     if (null == e) return {};
     var n,
@@ -73,7 +79,10 @@ function I(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
-let T = { height: g.$V };
+let T = {
+    height: g.$V,
+};
+
 function C(e) {
     let { positionTargetRef: t, align: n } = e,
         i = S(e, ["positionTargetRef", "align"]);
@@ -101,9 +110,11 @@ function C(e) {
         }),
     });
 }
+
 function N() {
     p.k(_.Se.DISMISSED);
 }
+
 function R(e) {
     let { channel: t, closeOnModalOuterClick: n = !1, parentModalKey: c } = e,
         p = i.useRef(null),

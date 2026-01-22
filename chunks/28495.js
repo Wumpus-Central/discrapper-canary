@@ -1,4 +1,7 @@
-n.d(t, { Ay: () => ee }), n(896048);
+n.d(t, {
+    Ay: () => ee,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -47,6 +50,7 @@ let Y = (0, h.Fe)({
         webpackId: 48736,
     }),
     W = c().debounce((e, t) => (0, T.nK)(e, t), 200);
+
 function X(e) {
     let { role: t, disabled: n } = e,
         [l, s] = i.useState(t.name);
@@ -67,6 +71,7 @@ function X(e) {
         })
     );
 }
+
 function J(e) {
     let { role: t, guildId: n, selectedStyle: i, disabled: l, shouldShowUpsell: a } = e,
         c = (0, C.$)(F.intl.string(F.t.Mi9Kbe)),
@@ -82,6 +87,7 @@ function J(e) {
                 name: t.name,
             },
         };
+
     function A() {
         (0, E.A)(n, x.A.GUILD_POWERUPS_GUILD_SETTINGS_ROLE_EDIT), (0, b.jH)();
     }
@@ -149,7 +155,9 @@ function J(e) {
                                         (0, r.jsx)(g.Text, {
                                             variant: "text-sm/semibold",
                                             color: "button-outline-primary-text",
-                                            children: F.intl.format(B.default.VpEDJc, { magical: (0, r.jsx)(Z, {}) }),
+                                            children: F.intl.format(B.default.VpEDJc, {
+                                                magical: (0, r.jsx)(Z, {}),
+                                            }),
                                         }),
                                         (0, r.jsx)(g.Text, {
                                             variant: "text-xs/medium",
@@ -171,6 +179,7 @@ function J(e) {
         },
     });
 }
+
 function Z() {
     let e = (0, d.bG)([p.A], () => p.A.useReducedMotion),
         { gradientStyle: t, gradientClassname: n } = (0, g.WqX)({
@@ -211,6 +220,7 @@ function Z() {
         children: F.intl.string(B.default["+/IHLl"]),
     });
 }
+
 function Q(e) {
     var t, n;
     let { role: i, disabled: l, currentStyle: s, hasEnhancedRoleColors: a } = e;
@@ -259,6 +269,7 @@ function Q(e) {
         }),
     });
 }
+
 function q(e) {
     let { role: t, guildId: n, selectedStyle: i, disableInteraction: l } = e,
         a = (0, C.$)(F.intl.string(F.t.Mi9Kbe)),
@@ -282,7 +293,9 @@ function q(e) {
         b = [M.NJ8.DARK, M.NJ8.DARKER, M.NJ8.MIDNIGHT, M.NJ8.LIGHT];
     return (0, r.jsx)(g.M1G, {
         children: (0, r.jsx)("div", {
-            className: s()(H.i1, { [H.XN]: l }),
+            className: s()(H.i1, {
+                [H.XN]: l,
+            }),
             "aria-hidden": !0,
             children: b.map((e) =>
                 (0, r.jsx)(
@@ -321,6 +334,7 @@ function q(e) {
         }),
     });
 }
+
 function $(e) {
     let { role: t, disabled: n } = e;
     return (0, r.jsxs)(r.Fragment, {
@@ -331,7 +345,9 @@ function $(e) {
                 onChange: (e) => (0, T.E9)(t.id, e, t.mentionable),
                 disabled: n,
             }),
-            (0, r.jsx)(g.cGx, { className: H.yF }),
+            (0, r.jsx)(g.cGx, {
+                className: H.yF,
+            }),
             (0, r.jsx)(g.dOG, {
                 label: F.intl.formatToPlainString(F.t.DTXoJQ, {}),
                 description: F.intl.string(F.t.kRg5W5),
@@ -342,6 +358,7 @@ function $(e) {
         ],
     });
 }
+
 function ee(e) {
     let { guild: t, role: n, locked: i, setSelectedSection: l } = e,
         a = (0, A.jV)(t.id, n),
@@ -355,13 +372,17 @@ function ee(e) {
         { scrolledToTop: h, handleScroll: j } = (0, R.u)();
     return (0, r.jsx)(g.GtU, {
         className: H.XG,
-        style: { scrollPaddingTop: p },
+        style: {
+            scrollPaddingTop: p,
+        },
         onScroll: j,
         children: (0, r.jsxs)("div", {
             className: V.Q,
             children: [
                 (0, r.jsx)("div", {
-                    className: s()(V.wx, V.ln, { [V.l6]: !h }),
+                    className: s()(V.wx, V.ln, {
+                        [V.l6]: !h,
+                    }),
                     ref: x,
                     children: (0, r.jsx)(R.A, {
                         guild: t,
@@ -376,9 +397,13 @@ function ee(e) {
                 }),
                 (0, r.jsx)("div", {
                     className: H.U9,
-                    children: (0, r.jsx)(G.A, { role: n }),
+                    children: (0, r.jsx)(G.A, {
+                        role: n,
+                    }),
                 }),
-                (0, r.jsx)(g.cGx, { className: H.yF }),
+                (0, r.jsx)(g.cGx, {
+                    className: H.yF,
+                }),
                 (a || o) &&
                     null != u &&
                     (0, r.jsx)(J, {
@@ -415,7 +440,9 @@ function ee(e) {
                     selectedStyle: u,
                     disableInteraction: !a,
                 }),
-                (0, r.jsx)(g.cGx, { className: H.yF }),
+                (0, r.jsx)(g.cGx, {
+                    className: H.yF,
+                }),
                 (0, r.jsx)($, {
                     role: n,
                     disabled: b,
@@ -423,7 +450,9 @@ function ee(e) {
                 m
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(g.cGx, { className: H.yF }),
+                              (0, r.jsx)(g.cGx, {
+                                  className: H.yF,
+                              }),
                               (0, r.jsx)(D.G, {
                                   guildId: t.id,
                                   role: n,

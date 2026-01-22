@@ -1,4 +1,7 @@
-n.d(t, { A: () => j }), n(896048);
+n.d(t, {
+    A: () => j,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(397927),
@@ -10,6 +13,7 @@ var r = n(627968),
     u = n(307731),
     f = n(985018),
     g = n(200967);
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,7 +39,10 @@ function b(e) {
     }
     return e;
 }
-let m = { label: "" };
+let m = {
+    label: "",
+};
+
 function p(e) {
     let { emoji: t, disabled: n, handleSelectEmoji: d } = e,
         f = i.useRef(null),
@@ -101,6 +108,7 @@ function p(e) {
               },
           });
 }
+
 function x(e) {
     let { guildId: t, trait: n, index: s, onTraitUpdate: a, disabled: c } = e,
         o = i.useCallback(() => {
@@ -112,13 +120,18 @@ function x(e) {
         d = i.useCallback(
             (e) => (n) => {
                 let { emoji: r, willClose: i } = n;
-                a(t, s, { emoji: null != r ? r : void 0 }), i && e();
+                a(t, s, {
+                    emoji: null != r ? r : void 0,
+                }),
+                    i && e();
             },
             [t, s, a],
         ),
         u = i.useCallback(
             (e) => {
-                a(t, s, { label: e });
+                a(t, s, {
+                    label: e,
+                });
             },
             [t, s, a],
         ),
@@ -139,19 +152,25 @@ function x(e) {
                     handleSelectEmoji: d,
                 }),
             },
-            clearable: { show: b },
+            clearable: {
+                show: b,
+            },
             onClear: o,
         }),
     });
 }
 let h = [0, 1, 2, 3, 4];
+
 function j(e) {
     let { profile: t, canManageGuild: n } = e,
         s = i.useMemo(() => t.traits, [t]),
         a = i.useCallback(
             (e, t, n) => {
                 let r = [...s];
-                (r[t] = b({}, s[t], n)), d.A.updateGuildProfile(e, { traits: r });
+                (r[t] = b({}, s[t], n)),
+                    d.A.updateGuildProfile(e, {
+                        traits: r,
+                    });
             },
             [s],
         );

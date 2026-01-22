@@ -12,7 +12,7 @@ var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
-    o = n(432022),
+    o = n(108531),
     l = n(110259),
     c = n(615300),
     u = n(789645),
@@ -26,6 +26,7 @@ var r = n(627968),
     E = n(818348),
     b = n(985018),
     y = n(997168);
+
 function O(e, t, n) {
     return (
         t in e
@@ -39,6 +40,7 @@ function O(e, t, n) {
         e
     );
 }
+
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -55,6 +57,7 @@ function A(e) {
     }
     return e;
 }
+
 function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -67,6 +70,7 @@ function v(e, t) {
     }
     return n;
 }
+
 function S(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -78,6 +82,7 @@ function S(e, t) {
         e
     );
 }
+
 function I(e, t) {
     if (null == e) return {};
     var n,
@@ -94,6 +99,7 @@ function I(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function T(e, t) {
     if (null == e) return {};
     var n,
@@ -116,6 +122,7 @@ let N = Object.freeze({
 var R = (function (e) {
     return (e.DEFAULT = "default"), (e.SUBTLE = "subtle"), e;
 })({});
+
 function w(e) {
     var t;
     let {
@@ -148,7 +155,9 @@ function w(e) {
     i.useContext(h.A)({
         type: l.ImpressionTypes.PAGE,
         name: l.ImpressionNames.MODAL_ROOT_LEGACY,
-        properties: { variant: C },
+        properties: {
+            variant: C,
+        },
     });
     let { reducedMotion: P } = i.useContext(d.CZY),
         D = (0, d.zhh)(
@@ -209,6 +218,7 @@ function w(e) {
         ),
     });
 }
+
 function P(e) {
     var t, n, a, o, l;
     let { headerId: c, headerIdIsManaged: u } = i.useContext(g.CP);
@@ -219,11 +229,14 @@ function P(e) {
         justify: null != (n = e.justify) ? n : m.A.Justify.START,
         align: null != (a = e.align) ? a : m.A.Align.CENTER,
         wrap: null != (o = e.wrap) ? o : m.A.Wrap.NO_WRAP,
-        className: s()(y.wx, e.className, { [y.me]: null == (l = e.separator) || l }),
+        className: s()(y.wx, e.className, {
+            [y.me]: null == (l = e.separator) || l,
+        }),
         id: u ? void 0 : c,
         children: e.children,
     });
 }
+
 function D(e) {
     switch (null != e ? e : "thin") {
         case "auto":
@@ -234,6 +247,7 @@ function D(e) {
             return d.ChK;
     }
 }
+
 function x(e) {
     let { className: t, children: n, scrollerRef: i, scrollbarType: a } = e,
         o = I(e, ["className", "children", "scrollerRef", "scrollbarType"]),
@@ -249,10 +263,15 @@ function x(e) {
                 },
                 o,
             ),
-            { children: (0, r.jsx)(_.Fmo, { children: n }) },
+            {
+                children: (0, r.jsx)(_.Fmo, {
+                    children: n,
+                }),
+            },
         ),
     );
 }
+
 function L(e) {
     var t, n, i, a, o;
     return (0, r.jsx)(m.A, {
@@ -262,10 +281,15 @@ function L(e) {
         justify: null != (n = e.justify) ? n : m.A.Justify.START,
         align: null != (i = e.align) ? i : m.A.Align.STRETCH,
         wrap: null != (a = e.wrap) ? a : m.A.Wrap.NO_WRAP,
-        className: s()(y.qr, e.className, { [y.h0]: null == (o = e.separator) || o }),
-        children: (0, r.jsx)(_.Fmo, { children: e.children }),
+        className: s()(y.qr, e.className, {
+            [y.h0]: null == (o = e.separator) || o,
+        }),
+        children: (0, r.jsx)(_.Fmo, {
+            children: e.children,
+        }),
     });
 }
+
 function j(e) {
     return (0, r.jsx)(f.$n, {
         "data-migration-pending": !0,
@@ -274,7 +298,9 @@ function j(e) {
         look: f.$n.Looks.BLANK,
         size: f.$n.Sizes.NONE,
         onClick: e.onClick,
-        innerClassName: s()(e.innerClassName, { [y.Xk]: e.withCircleBackground }),
+        innerClassName: s()(e.innerClassName, {
+            [y.Xk]: e.withCircleBackground,
+        }),
         className: s()(e.className, {
             [y.zB]: e.hideOnFullscreen,
             [y.VN]: !e.withCircleBackground,
@@ -286,6 +312,7 @@ function j(e) {
         }),
     });
 }
+
 function M(e) {
     let { className: t, scrollerRef: n } = e,
         i = I(e, ["className", "scrollerRef"]);

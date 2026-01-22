@@ -1,4 +1,7 @@
-n.d(t, { A: () => L }), n(896048);
+n.d(t, {
+    A: () => L,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(735438),
@@ -26,6 +29,7 @@ var r = n(627968),
     N = n(731854),
     T = n(985018),
     j = n(847295);
+
 function x(e, t, n) {
     return (
         t in e
@@ -39,6 +43,7 @@ function x(e, t, n) {
         e
     );
 }
+
 function P(e) {
     let { user: t, applicationId: n, isGameRelationship: l, onSelect: a } = e,
         p = i.useCallback(() => {
@@ -64,8 +69,12 @@ function P(e) {
         A = i.useCallback(() => {
             let e = l ? T.intl.string(T.t.RLcE6x) : T.intl.string(T.t.cvSt1J);
             c.A.show({
-                title: T.intl.formatToPlainString(T.t.fPLvZd, { name: _.Ay.getName(t) }),
-                body: T.intl.formatToPlainString(T.t.l5FFq6, { name: _.Ay.getName(t) }),
+                title: T.intl.formatToPlainString(T.t.fPLvZd, {
+                    name: _.Ay.getName(t),
+                }),
+                body: T.intl.formatToPlainString(T.t.l5FFq6, {
+                    name: _.Ay.getName(t),
+                }),
                 confirmText: e,
                 confirmVariant: "critical-primary",
                 cancelText: T.intl.string(T.t["ETE/oC"]),
@@ -189,7 +198,9 @@ class w extends i.PureComponent {
     constructor(...e) {
         super(...e),
             x(this, "peopleListItemRef", i.createRef()),
-            x(this, "state", { isActiveRow: !1 }),
+            x(this, "state", {
+                isActiveRow: !1,
+            }),
             x(this, "handleOpenPrivateChannel", (e) => {
                 let { user: t } = this.props;
                 e.stopPropagation();
@@ -197,7 +208,11 @@ class w extends i.PureComponent {
                     g.A.getMutablePrivateChannels(),
                     (e) => e.type === S.rbe.DM && e.getRecipientId() === t.id,
                 );
-                null != n ? (0, A.pX)(S.BVt.CHANNEL(S.ME, n.id)) : u.A.openPrivateChannel({ recipientIds: t.id });
+                null != n
+                    ? (0, A.pX)(S.BVt.CHANNEL(S.ME, n.id))
+                    : u.A.openPrivateChannel({
+                          recipientIds: t.id,
+                      });
             }),
             x(this, "handleOpenActionsMenu", (e) => {
                 let { user: t, isGameRelationship: n, applicationId: i } = this.props;
@@ -246,11 +261,15 @@ class w extends i.PureComponent {
                     },
                     {
                         onClose: () => {
-                            this.setState({ isActiveRow: !1 });
+                            this.setState({
+                                isActiveRow: !1,
+                            });
                         },
                     },
                 ),
-                    this.setState({ isActiveRow: !0 });
+                    this.setState({
+                        isActiveRow: !0,
+                    });
             });
     }
 }

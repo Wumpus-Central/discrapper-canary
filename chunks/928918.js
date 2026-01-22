@@ -1,4 +1,5 @@
 var t = Object.prototype.hasOwnProperty;
+
 function n(e) {
     if (!(this instanceof n)) throw TypeError("Constructor PseudoMap requires 'new'");
     if ((this.clear(), e))
@@ -12,15 +13,19 @@ function n(e) {
             }, this);
         else throw TypeError("invalid argument");
 }
+
 function r(e, t) {
     return e === t || (e != e && t != t);
 }
+
 function i(e, t, n) {
     (this.key = e), (this.value = t), (this._index = n);
 }
+
 function a(e, n) {
     for (var i = 0, a = "_" + n, s = a; t.call(e, s); s = a + i++) if (r(e[s].key, n)) return e[s];
 }
+
 function s(e, n, a) {
     for (var s = 0, o = "_" + n, l = o; t.call(e, l); l = o + s++)
         if (r(e[l].key, n)) {

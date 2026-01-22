@@ -1,4 +1,9 @@
-n.d(t, { A: () => $ }), n(446912), n(896048), n(747238);
+n.d(t, {
+    A: () => $,
+}),
+    n(446912),
+    n(896048),
+    n(747238);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -32,6 +37,7 @@ var r = n(627968),
     R = n(466853),
     C = n(985018),
     k = n(442716);
+
 function G(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -57,6 +63,7 @@ function G(e) {
     }
     return e;
 }
+
 function L(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -300,6 +307,7 @@ let U = /{{(.*?)}}/g,
             },
         ],
     };
+
 function F(e) {
     let { component: t } = e;
     if (Array.isArray(t)) return W(t);
@@ -343,9 +351,16 @@ function F(e) {
                                     (i[r] = e[r]);
                     return i;
                 })(t, ["body"]);
-            return (0, r.jsx)(B, L(G({}, l), { body: W(n) }));
+            return (0, r.jsx)(
+                B,
+                L(G({}, l), {
+                    body: W(n),
+                }),
+            );
         case "GRID":
-            return (0, r.jsx)(H, { children: W(t.children) });
+            return (0, r.jsx)(H, {
+                children: W(t.children),
+            });
         case "FIELD":
             return (0, r.jsx)(K, {
                 value: X(t.value),
@@ -359,12 +374,21 @@ function F(e) {
             return (0, r.jsx)(Y, G({}, t));
     }
 }
+
 function X(e, t) {
-    return (0, r.jsx)(F, { component: e }, t);
+    return (0, r.jsx)(
+        F,
+        {
+            component: e,
+        },
+        t,
+    );
 }
+
 function W(e) {
     return e.map((e, t) => X(e, t));
 }
+
 function B(e) {
     let { title: t, body: n, image: l, imagePlaceholder: i } = e;
     return (0, r.jsxs)("div", {
@@ -376,7 +400,12 @@ function B(e) {
                     (0, r.jsx)(u.Text, {
                         variant: "text-lg/medium",
                         className: k.ZY,
-                        children: null != t ? t : (0, r.jsx)("div", { className: k.jC }),
+                        children:
+                            null != t
+                                ? t
+                                : (0, r.jsx)("div", {
+                                      className: k.jC,
+                                  }),
                     }),
                     (0, r.jsx)(v.x, {
                         color: "muted",
@@ -405,10 +434,13 @@ function B(e) {
                             className: k.c8,
                         }),
                     })
-                  : (0, r.jsx)("div", { className: k.Hi }),
+                  : (0, r.jsx)("div", {
+                        className: k.Hi,
+                    }),
         ],
     });
 }
+
 function H(e) {
     let { children: t } = e;
     return (0, r.jsx)("div", {
@@ -416,12 +448,14 @@ function H(e) {
         children: t,
     });
 }
+
 function K(e) {
     let { name: t, value: n } = e;
     return (0, r.jsxs)("div", {
         children: [n, t],
     });
 }
+
 function z(e) {
     let { content: t } = e,
         n = l.useId(),
@@ -433,8 +467,11 @@ function z(e) {
               content: t,
               className: k.Qq,
           })
-        : (0, r.jsx)("div", { className: a()(k.jC, i.className) });
+        : (0, r.jsx)("div", {
+              className: a()(k.jC, i.className),
+          });
 }
+
 function V(e) {
     let { content: t, image: n, imagePosition: l } = e,
         i = (0, v.X)(),
@@ -451,7 +488,9 @@ function V(e) {
                   }),
               })
             : null == t
-              ? (0, r.jsx)("div", { className: a()(k.bc, i.className) })
+              ? (0, r.jsx)("div", {
+                    className: a()(k.bc, i.className),
+                })
               : null;
     return (0, r.jsxs)("div", {
         className: k.rQ,
@@ -461,7 +500,9 @@ function V(e) {
                       children: [s, " "],
                   })
                 : null,
-            (0, r.jsx)(z, { content: t }),
+            (0, r.jsx)(z, {
+                content: t,
+            }),
             null != s && "right" === l
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [" ", s],
@@ -470,6 +511,7 @@ function V(e) {
         ],
     });
 }
+
 function Y(e) {
     let { size: t = "small", divider: n = !1 } = e,
         i = l.useId();
@@ -480,6 +522,7 @@ function Y(e) {
         spacing: "large" === t ? d.C8.LARGE : d.C8.SMALL,
     });
 }
+
 function q(e, t) {
     if (null == e) return null;
     let n = e.split(U);
@@ -494,7 +537,7 @@ function q(e, t) {
         }
         let i = t.variables[l];
         null == i
-            ? (r += "\u2013\u2013")
+            ? (r += "––")
             : "unfurled_media" === i.type
               ? (r += i.media.url)
               : "number" === i.type
@@ -503,6 +546,7 @@ function q(e, t) {
     }
     return r;
 }
+
 function J(e, t) {
     var n, r;
     if (null == e || "skeleton" === t.mode) return null;
@@ -511,6 +555,7 @@ function J(e, t) {
     let i = t.variables[l];
     return null == i || "unfurled_media" !== i.type ? null : i.media;
 }
+
 function Q(e) {
     let { children: t, widget: n } = e;
     return (0, r.jsx)(h.O7.Root, {
@@ -528,6 +573,7 @@ function Q(e) {
         }),
     });
 }
+
 function Z(e) {
     return (0, r.jsxs)(u.BJc, {
         direction: "horizontal",
@@ -597,7 +643,9 @@ let $ = Object.assign(
                         action: "PRESS_APPLICATION_WIDGET_UNLINKED_CONNECT",
                         applicationId: A.applicationId,
                     }),
-                    Y({ analyticsLocations: $ }));
+                    Y({
+                        analyticsLocations: $,
+                    }));
             }, [V, Y, h, A.applicationId, $]),
             et = null == w && K && !z && V,
             en = (0, r.jsxs)(r.Fragment, {
@@ -610,11 +658,17 @@ let $ = Object.assign(
                               height: 16,
                               alt: "",
                           })
-                        : (0, r.jsx)("span", { className: k.qP }),
+                        : (0, r.jsx)("span", {
+                              className: k.qP,
+                          }),
                     (0, r.jsx)(u.Text, {
                         variant: "text-sm/medium",
                         children:
-                            (null == X ? void 0 : X.name) != null ? X.name : (0, r.jsx)("div", { className: k.jC }),
+                            (null == X ? void 0 : X.name) != null
+                                ? X.name
+                                : (0, r.jsx)("div", {
+                                      className: k.jC,
+                                  }),
                     }),
                 ],
             }),
@@ -691,7 +745,9 @@ let $ = Object.assign(
                                       : []),
                                   ...Object.entries(
                                       G(
-                                          { username: null == (c = e.profile) ? void 0 : c.username },
+                                          {
+                                              username: null == (c = e.profile) ? void 0 : c.username,
+                                          },
                                           null == (f = e.profile) || null == (u = f.data) ? void 0 : u.primary,
                                       ),
                                   )
@@ -796,7 +852,9 @@ let $ = Object.assign(
                       children: [
                           (0, r.jsx)(Q, {
                               widget: A,
-                              children: (0, r.jsx)(F, { component: ea }),
+                              children: (0, r.jsx)(F, {
+                                  component: ea,
+                              }),
                           }),
                           U &&
                               (0, r.jsxs)("div", {
@@ -807,7 +865,9 @@ let $ = Object.assign(
                                           : (0, r.jsxs)("div", {
                                                 className: k.o8,
                                                 children: [
-                                                    (0, r.jsx)(u.Qfk, { size: "xxs" }),
+                                                    (0, r.jsx)(u.Qfk, {
+                                                        size: "xxs",
+                                                    }),
                                                     (0, r.jsx)(u.Text, {
                                                         variant: "text-sm/medium",
                                                         color: "text-subtle",
@@ -831,5 +891,7 @@ let $ = Object.assign(
                   }),
               );
     },
-    { Cta: Z },
+    {
+        Cta: Z,
+    },
 );

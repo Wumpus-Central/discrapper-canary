@@ -1,4 +1,6 @@
-n.d(t, { p: () => d });
+n.d(t, {
+    p: () => d,
+});
 var r = n(627968);
 n(64700);
 var i = n(342494),
@@ -12,7 +14,9 @@ let d = (e) => {
     let { targetElementRef: t, dismissPopover: d, children: p } = e,
         f = (0, r.jsx)(i.AM, {
             targetElementRef: t,
-            title: c.intl.format(o.default["c+NBSl"], { premiumGroupProductName: (0, a.DP)() }),
+            title: c.intl.format(o.default["c+NBSl"], {
+                premiumGroupProductName: (0, a.DP)(),
+            }),
             body: c.intl.format(o.default.MuUV5u, {
                 premiumGroupProductName: (0, a.DP)(),
                 totalSeats: a.aw,
@@ -28,7 +32,9 @@ let d = (e) => {
             size: "md",
             align: "top",
             position: "right",
-            caretConfig: { align: "start" },
+            caretConfig: {
+                align: "start",
+            },
             actions: [
                 {
                     text: c.intl.string(o.default["IO+nlU"]),
@@ -72,6 +78,11 @@ let d = (e) => {
             onRequestClose: () => d(s.i.USER_DISMISS),
         });
     return (0, r.jsxs)(r.Fragment, {
-        children: [(0, r.jsx)("div", { children: p }), f],
+        children: [
+            (0, r.jsx)("div", {
+                children: p,
+            }),
+            f,
+        ],
     });
 };

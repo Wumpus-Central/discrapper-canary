@@ -1,4 +1,6 @@
-e.d(n, { g: () => b });
+e.d(n, {
+    g: () => b,
+});
 var o = e(627968),
     i = e(64700),
     a = e(397927),
@@ -7,6 +9,7 @@ var o = e(627968),
     r = e(652215),
     c = e(985018),
     l = e(547166);
+
 function b(t) {
     let { platformType: n, onContinue: e, onClose: b } = t,
         p = i.useMemo(
@@ -24,7 +27,9 @@ function b(t) {
             [],
         ),
         f = s.A.getArticleURL(r.MVz.PS_CONNECTION),
-        A = c.intl.format(c.t.kqZQNe, { helpdeskArticleUrl: f });
+        A = c.intl.format(c.t.kqZQNe, {
+            helpdeskArticleUrl: f,
+        });
     return (0, o.jsx)(d.B, {
         platformType: n,
         headerConnect: c.intl.string(c.t.xAWHOy),

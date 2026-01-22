@@ -1,5 +1,10 @@
 let r;
-n.d(t, { Ay: () => Y }), n(896048), n(65821), n(321073);
+n.d(t, {
+    Ay: () => Y,
+}),
+    n(896048),
+    n(65821),
+    n(321073);
 var i = n(812729),
     a = n.n(i),
     s = n(284009),
@@ -17,6 +22,7 @@ var i = n(812729),
     E = n(536802),
     b = n(543465),
     y = n(287809);
+
 function O(e, t, n) {
     return (
         t in e
@@ -30,6 +36,7 @@ function O(e, t, n) {
         e
     );
 }
+
 function A(e, t) {
     if (null == e) return {};
     var n,
@@ -46,6 +53,7 @@ function A(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function v(e, t) {
     if (null == e) return {};
     var n,
@@ -57,9 +65,11 @@ function v(e, t) {
     return i;
 }
 let S = new c.zF();
+
 function I(e, t) {
     for (let n of g.A.getGuildIds()) !e(n) || u.A.isLurking(n) || m.Ay.isCurrentUserGuest(n) || t(n);
 }
+
 function T(e) {
     switch (e.type) {
         case c.PJ.FOLDER:
@@ -79,6 +89,7 @@ function T(e) {
             throw Error("[SortedGuildStore] Unexpected guilds tree node type.");
     }
 }
+
 function C(e, t) {
     let n = S;
     if (((S = new c.zF()), 0 === e.length && t.length > 0)) for (let e of t) S.addNode((0, c.EL)(e));
@@ -105,6 +116,7 @@ function C(e, t) {
     let r = a()(n, S);
     return r ? (S = n) : (S.version = n.version + 1), !r;
 }
+
 function N() {
     var e, t, n;
     return C(
@@ -112,6 +124,7 @@ function N() {
         null != (t = null == (n = d.A.settings.guildFolders) ? void 0 : n.guildPositions) ? t : [],
     );
 }
+
 function R() {
     var e, t;
     let n = d.A.getGuildFolders();
@@ -123,6 +136,7 @@ function R() {
         )
     );
 }
+
 function w(e) {
     let { sourceId: t, targetId: n, moveToBelow: r, combine: i } = e,
         a = S.getNode(t),
@@ -147,6 +161,7 @@ function w(e) {
         S.moveInto(a, e, r);
     } else S.moveNextTo(a, s, r);
 }
+
 function P(e) {
     let { sourceIds: t, name: n } = e,
         r = t.shift();
@@ -160,6 +175,7 @@ function P(e) {
             null != t && S.moveInto(t, a, !0);
         });
 }
+
 function D(e) {
     let { targetId: t, sourceIds: n } = e,
         r = A(e, ["targetId", "sourceIds"]),
@@ -189,6 +205,7 @@ function D(e) {
             null != t && S.moveNextTo(t, s, !0);
         });
 }
+
 function x(e) {
     let { targetId: t } = e,
         n = S.getNode(t);
@@ -201,6 +218,7 @@ function x(e) {
             null != t && S.moveNextTo(t, n, !0);
         });
 }
+
 function L(e) {
     let { guildId: t, joinedAt: n, user: r } = e,
         i = y.default.getCurrentUser(),
@@ -209,6 +227,7 @@ function L(e) {
     let s = "string" == typeof n ? new Date(n) : n;
     return s !== a.joinedAt && null != s && N();
 }
+
 function j(e) {
     let { folderId: t } = e,
         n = S.getNode(t),
@@ -216,15 +235,18 @@ function j(e) {
     if (null == n || n.type !== c.PJ.FOLDER || n.expanded === r) return !1;
     U(n, r);
 }
+
 function M(e) {
     let { folderId: t, expanded: n } = e,
         r = S.getNode(t);
     if (null == r || r.type !== c.PJ.FOLDER || r.expanded === n) return !1;
     U(r, n);
 }
+
 function k() {
     for (let e of S.allNodes()) e.type === c.PJ.FOLDER && e.expanded && U(e, !1);
 }
+
 function U(e, t) {
     let n = S.cloneNode(e);
     o()(n.id === e.id, "[SORTED GUILDS] setNodeExpanded: Replacement folder node must have same id."),
@@ -235,6 +257,7 @@ let G = (0, f.L_)((e, t) => e.sortedGuildNodes().map((e) => e.id)),
     V = (0, f.L_)((e, t) => e.getRoots().map(T)),
     F = (0, f.L_)((e, t) => {
         let n = [];
+
         function r(e) {
             switch (e.type) {
                 case c.PJ.FOLDER:
@@ -274,7 +297,9 @@ class H extends E.A {
     takeSnapshot() {
         return {
             version: H.LATEST_SNAPSHOT_VERSION,
-            data: { tree: S.getSnapshot() },
+            data: {
+                tree: S.getSnapshot(),
+            },
         };
     }
     constructor() {

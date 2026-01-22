@@ -1,4 +1,7 @@
-n.d(t, { A: () => F }), n(896048);
+n.d(t, {
+    A: () => F,
+}),
+    n(896048);
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -38,6 +41,7 @@ var i = n(503698),
     U = n(402697),
     G = n(399162),
     V = n(181147);
+
 function F(e) {
     let { user: t, currentUser: n, stream: i, className: F, onClose: B } = e,
         { themeType: H, theme: Y } = (0, C.E)(),
@@ -79,7 +83,9 @@ function F(e) {
             let e = (e) => {
                 e.stopPropagation(),
                     ee &&
-                        (Z({ action: "PRESS_IMAGE" }),
+                        (Z({
+                            action: "PRESS_IMAGE",
+                        }),
                         c.default.selectVoiceChannel(i.channelId),
                         (0, u.Nl)(i),
                         null == B || B());
@@ -169,7 +175,10 @@ function F(e) {
                               size: l._3J.SIZE_16,
                               onClickOverflow: (e) => {
                                   null == e || e.stopPropagation(),
-                                      null == Z || Z({ action: "PRESS_VOICE_CHANNEL_AVATARS" });
+                                      null == Z ||
+                                          Z({
+                                              action: "PRESS_VOICE_CHANNEL_AVATARS",
+                                          });
                               },
                               onUserClick: (e) => e.stopPropagation(),
                               disableUserPopout: (e) => e === t.id,
@@ -200,7 +209,12 @@ function F(e) {
                           onClose: B,
                       }),
                   }),
-        eu = null != q ? M.intl.formatToPlainString(M.t["4CQq9Q"], { name: q.name }) : M.intl.string(M.t["Jpkr/q"]);
+        eu =
+            null != q
+                ? M.intl.formatToPlainString(M.t["4CQq9Q"], {
+                      name: q.name,
+                  })
+                : M.intl.string(M.t["Jpkr/q"]);
     return (0, r.jsx)(m.f5, {
         value: X,
         children: (0, r.jsxs)(N.A, {
@@ -212,7 +226,9 @@ function F(e) {
             children: [
                 (0, r.jsx)(R.A, {
                     text: eu,
-                    tags: (0, r.jsx)(g.Ay, { size: g.ed.SMALL }),
+                    tags: (0, r.jsx)(g.Ay, {
+                        size: g.ed.SMALL,
+                    }),
                     contextMenu: (0, r.jsx)(x.A, {
                         display: "live",
                         user: t,

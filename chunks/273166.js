@@ -1,9 +1,12 @@
-n.d(t, { q: () => l });
+n.d(t, {
+    q: () => l,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
     o = n(252052);
+
 function l(e) {
     let { className: t, header: n, headerClassName: a, children: l } = e,
         c = i.useMemo(() => {

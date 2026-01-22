@@ -17,6 +17,7 @@ let a = r.createContext({
     isSlideReady: !1,
     setSlideReady: () => {},
 });
+
 function s() {
     return r.useContext(a);
 }

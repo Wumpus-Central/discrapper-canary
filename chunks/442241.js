@@ -1,4 +1,8 @@
-r.d(t, { default: () => p }), r(896048), r(228524);
+r.d(t, {
+    default: () => p,
+}),
+    r(896048),
+    r(228524);
 var n = r(627968),
     o = r(64700),
     a = r(158954),
@@ -6,6 +10,7 @@ var n = r(627968),
     l = r(49999),
     i = r(985018),
     s = r(216705);
+
 function p(e) {
     var t, r;
     let { modalConfig: p, markAsDismissed: f } = e,

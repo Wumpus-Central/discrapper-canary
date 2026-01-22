@@ -1,7 +1,11 @@
-n.d(t, { e: () => s }), n(896048);
+n.d(t, {
+    e: () => s,
+}),
+    n(896048);
 var r = n(64700),
     l = n(927813),
     i = n(995273);
+
 function s(e) {
     let { timestamp: t, abbreviated: n = !0 } = e,
         [s, a] = r.useState(() => (0, i.jb)(t, n));

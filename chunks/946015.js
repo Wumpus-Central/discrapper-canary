@@ -1,4 +1,6 @@
-n.d(t, { s: () => v });
+n.d(t, {
+    s: () => v,
+});
 var r,
     i,
     a = n(627968),
@@ -7,6 +9,7 @@ var r,
     l = n.n(o),
     c = n(112303),
     u = n(50567);
+
 function d(e, t, n) {
     return (
         t in e
@@ -20,6 +23,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +40,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -48,6 +53,7 @@ function p(e, t) {
     }
     return n;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -59,6 +65,7 @@ function _(e, t) {
         e
     );
 }
+
 function h(e, t) {
     if (null == e) return {};
     var n,
@@ -75,6 +82,7 @@ function h(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function m(e, t) {
     if (null == e) return {};
     var n,
@@ -139,7 +147,12 @@ class A extends (r = s.PureComponent) {
                 s.cloneElement(e, m)
             );
         }
-        return (0, a.jsx)("div", _(f({}, m), { children: t }));
+        return (0, a.jsx)(
+            "div",
+            _(f({}, m), {
+                children: t,
+            }),
+        );
     }
 }
 d(A, "defaultProps", {
@@ -194,7 +207,9 @@ class v extends (i = s.PureComponent) {
                     },
                     E,
                 ),
-                { children: t },
+                {
+                    children: t,
+                },
             ),
         );
     }

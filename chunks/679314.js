@@ -13,6 +13,7 @@ function r() {
     }
     throw Error("invalid varint");
 }
+
 function i(e, t, n) {
     for (let r = 0; r < 28; r += 7) {
         let i = e >>> r,
@@ -40,38 +41,43 @@ n.d(t, {
     ls: () => r,
     oJ: () => o,
 });
-let a = 4294967296;
+let a = 0x100000000;
+
 function s(e) {
     let t = "-" == e[0];
     t && (e = e.slice(1));
-    let n = 1000000,
+    let n = 1e6,
         r = 0,
         i = 0;
+
     function s(t, s) {
         let o = Number(e.slice(t, s));
         (i *= n), (r = r * n + o) >= a && ((i += (r / a) | 0), (r %= a));
     }
     return s(-24, -18), s(-18, -12), s(-12, -6), s(-6), [t, r, i];
 }
+
 function o(e, t) {
     if (t <= 2097151) return "" + (a * t + (e >>> 0));
-    let n = 16777215 & e,
-        r = (((e >>> 24) | (t << 8)) >>> 0) & 16777215,
+    let n = 0xffffff & e,
+        r = (((e >>> 24) | (t << 8)) >>> 0) & 0xffffff,
         i = (t >> 16) & 65535,
         s = n + 6777216 * r + 6710656 * i,
         o = r + 8147497 * i,
         l = 2 * i,
-        c = 10000000;
+        c = 1e7;
+
     function u(e, t) {
         let n = e ? String(e) : "";
         return t ? "0000000".slice(n.length) + n : n;
     }
     return (
-        s >= 10000000 && ((o += Math.floor(s / c)), (s %= c)),
+        s >= 1e7 && ((o += Math.floor(s / c)), (s %= c)),
         o >= c && ((l += Math.floor(o / c)), (o %= c)),
         u(l, 0) + u(o, l) + u(s, 1)
     );
 }
+
 function l(e, t) {
     if (e >= 0) {
         for (; e > 127; ) t.push((127 & e) | 128), (e >>>= 7);
@@ -81,6 +87,7 @@ function l(e, t) {
         t.push(1);
     }
 }
+
 function c() {
     let e = this.buf[this.pos++],
         t = 127 & e;

@@ -15,6 +15,7 @@ var l,
     o = n(961350),
     c = n(954571),
     u = n(652215);
+
 function E(e, t, n) {
     var l;
     let r = (function (e) {
@@ -44,6 +45,7 @@ function E(e, t, n) {
     })({}, t, (0, s.H$)(null != (l = t.guild_id) ? l : n));
     c.default.track(e, r);
 }
+
 function d(e) {
     return a.useCallback(
         (t) => {
@@ -57,6 +59,7 @@ function d(e) {
         [e],
     );
 }
+
 function _(e) {
     return a.useCallback(
         (t) => {
@@ -77,6 +80,7 @@ var g =
     (l.UNUSUAL_ACCOUNT_ACTIVITY = "unusual_account_activity"),
     (l.USERNAME_QUARANTINED = "username_quarantined"),
     l);
+
 function A(e) {
     return a.useCallback(
         (t) => {
@@ -101,6 +105,7 @@ var T =
     (r.COPY_ID = "copy_id"),
     (r.CHANGE_NICKNAME = "change_nickname"),
     r);
+
 function f(e, t) {
     let { location: n, targetUserId: l, targets: r, locations: i } = t;
     return a.useCallback(
@@ -119,6 +124,7 @@ function f(e, t) {
         [e, n, l, r, i],
     );
 }
+
 function h(e, t) {
     E(u.HAw.MOD_DASH_MEMBERS_TABLE_VIEWED, {
         guild_id: e,

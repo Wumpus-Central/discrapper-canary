@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var r = n(627968);
 n(64700);
 var i = n(735438),
@@ -152,6 +154,7 @@ let f = 4,
             },
         ],
     ];
+
 function g(e) {
     let { users: t, channel: n } = e,
         { themeType: g } = (0, c.E)(),
@@ -177,7 +180,9 @@ function g(e) {
                                         children: (0, r.jsx)(o.Text, {
                                             variant: "text-xxs/semibold",
                                             lineClamp: 1,
-                                            children: (0, r.jsx)(a.A, { children: y > 99 ? ">99" : "+".concat(y) }),
+                                            children: (0, r.jsx)(a.A, {
+                                                children: y > 99 ? ">99" : "+".concat(y),
+                                            }),
                                         }),
                                     })
                                   : (0, r.jsx)(s.m, {

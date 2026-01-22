@@ -1,4 +1,6 @@
-n.d(t, { x: () => v });
+n.d(t, {
+    x: () => v,
+});
 var r = n(627968);
 n(64700);
 var l = n(503698),
@@ -71,16 +73,31 @@ let v = (e) => {
                       })
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(o.AC4, { children: d.intl.format(d.t["6C36MF"], { price: g }) }),
+                              (0, r.jsx)(o.AC4, {
+                                  children: d.intl.format(d.t["6C36MF"], {
+                                      price: g,
+                                  }),
+                              }),
                               (0, r.jsx)("span", {
                                   "aria-hidden": !0,
-                                  className: a()({ [p.rN]: f }, v),
+                                  className: a()(
+                                      {
+                                          [p.rN]: f,
+                                      },
+                                      v,
+                                  ),
                                   children: g,
                               }),
                           ],
                       });
         return (0, r.jsxs)("div", {
-            className: a()({ [p.nn]: f }, p.kL, v),
+            className: a()(
+                {
+                    [p.nn]: f,
+                },
+                p.kL,
+                v,
+            ),
             children: [
                 "tooltip" === l
                     ? (0, r.jsx)(i.m, {
@@ -111,10 +128,16 @@ let v = (e) => {
                         className: p.NM,
                         lineClamp: 1,
                         children: [
-                            (0, r.jsx)(o.AC4, { children: d.intl.format(d.t.rItDbx, { discountOfferAmount: b }) }),
+                            (0, r.jsx)(o.AC4, {
+                                children: d.intl.format(d.t.rItDbx, {
+                                    discountOfferAmount: b,
+                                }),
+                            }),
                             (0, r.jsx)("span", {
                                 "aria-hidden": !0,
-                                children: d.intl.formatToPlainString(d.t.AYcXGW, { discountOfferAmount: b }),
+                                children: d.intl.formatToPlainString(d.t.AYcXGW, {
+                                    discountOfferAmount: b,
+                                }),
                             }),
                         ],
                     }),
@@ -136,7 +159,11 @@ let v = (e) => {
                     color: "currentColor",
                     lineClamp: 1,
                     children: [
-                        (0, r.jsx)(o.AC4, { children: d.intl.format(d.t["a/Y8PK"], { orbAmount: t }) }),
+                        (0, r.jsx)(o.AC4, {
+                            children: d.intl.format(d.t["a/Y8PK"], {
+                                orbAmount: t,
+                            }),
+                        }),
                         (0, r.jsx)("span", {
                             "aria-hidden": !0,
                             children: t,

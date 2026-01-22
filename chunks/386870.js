@@ -1,5 +1,7 @@
 var r = n(436701);
+
 function i() {}
+
 function s() {}
 (s.resetWarningCache = i),
     (e.exports = function () {
@@ -11,6 +13,7 @@ function s() {}
                 throw ((a.name = "Invariant Violation"), a);
             }
         }
+
         function t() {
             return e;
         }

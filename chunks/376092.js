@@ -61,6 +61,7 @@ let s = [
     i.xBc.USE_EXTERNAL_SOUNDS,
     i.xBc.SET_VOICE_CHANNEL_STATUS,
 ];
+
 function o(e) {
     return Object.values(i.xBc).some((t) => r.zy(e, t) && !s.includes(t));
 }
@@ -118,6 +119,7 @@ let l = {
     [i.xBc.PIN_MESSAGES.toString()]: () => a.intl.string(a.t.Y5BI39),
     [i.xBc.BYPASS_SLOWMODE.toString()]: () => a.intl.string(a.t.kqcjeV),
 };
+
 function c(e) {
     let t = l[e.toString()];
     if (null == t) throw Error("Unknown permission. Did you provide a _single_ bit flag? Perm: ".concat(e));

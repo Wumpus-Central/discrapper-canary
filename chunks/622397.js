@@ -3,6 +3,7 @@ i.d(t, {
     a: () => s,
 });
 var r = i(927813);
+
 function n(e) {
     let t = e / r.A.Millis.MINUTE;
     return t < 5
@@ -21,6 +22,7 @@ function n(e) {
                     ? "2-3hr"
                     : "3hr+";
 }
+
 function s() {
     var e;
     let t = window.Meticulous;

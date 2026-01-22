@@ -1,4 +1,8 @@
-n.d(t, { A: () => g }), n(896048), n(492834);
+n.d(t, {
+    A: () => g,
+}),
+    n(896048),
+    n(492834);
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -12,6 +16,7 @@ var r = n(627968),
     p = n(102817),
     h = n(641131),
     b = n(985018);
+
 function g(e) {
     let { channel: t, user: g, guild: m } = e,
         A = (0, i.bG)([f.A], () => null != g && f.A.isUserBanned(g.id)),

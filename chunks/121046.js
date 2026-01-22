@@ -1,10 +1,13 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(311907),
     l = n(827343),
     i = n(961350),
     o = n(430452),
     a = n(652215),
     c = n(731854);
+
 function s(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.x.DEFAULT,
         n = (0, r.bG)([i.default], () => i.default.getId()),

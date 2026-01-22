@@ -5,10 +5,10 @@
         var i = {
             s: ["viensas secunds", "'iensas secunds"],
             ss: [e + " secunds", "" + e + " secunds"],
-            m: ["'n míut", "'iens míut"],
-            mm: [e + " míuts", "" + e + " míuts"],
-            h: ["'n þora", "'iensa þora"],
-            hh: [e + " þoras", "" + e + " þoras"],
+            m: ["'n m\xedut", "'iens m\xedut"],
+            mm: [e + " m\xeduts", "" + e + " m\xeduts"],
+            h: ["'n \xfeora", "'iensa \xfeora"],
+            hh: [e + " \xfeoras", "" + e + " \xfeoras"],
             d: ["'n ziua", "'iensa ziua"],
             dd: [e + " ziuas", "" + e + " ziuas"],
             M: ["'n mes", "'iens mes"],
@@ -19,11 +19,13 @@
         return r || t ? i[n][0] : i[n][1];
     }
     return e.defineLocale("tzl", {
-        months: "Januar_Fevraglh_Març_Avrïu_Mai_Gün_Julia_Guscht_Setemvar_Listopäts_Noemvar_Zecemvar".split("_"),
-        monthsShort: "Jan_Fev_Mar_Avr_Mai_Gün_Jul_Gus_Set_Lis_Noe_Zec".split("_"),
-        weekdays: "Súladi_Lúneçi_Maitzi_Márcuri_Xhúadi_Viénerçi_Sáturi".split("_"),
-        weekdaysShort: "Súl_Lún_Mai_Már_Xhú_Vié_Sát".split("_"),
-        weekdaysMin: "Sú_Lú_Ma_Má_Xh_Vi_Sá".split("_"),
+        months: "Januar_Fevraglh_Mar\xe7_Avr\xefu_Mai_G\xfcn_Julia_Guscht_Setemvar_Listop\xe4ts_Noemvar_Zecemvar".split(
+            "_",
+        ),
+        monthsShort: "Jan_Fev_Mar_Avr_Mai_G\xfcn_Jul_Gus_Set_Lis_Noe_Zec".split("_"),
+        weekdays: "S\xfaladi_L\xfane\xe7i_Maitzi_M\xe1rcuri_Xh\xfaadi_Vi\xe9ner\xe7i_S\xe1turi".split("_"),
+        weekdaysShort: "S\xfal_L\xfan_Mai_M\xe1r_Xh\xfa_Vi\xe9_S\xe1t".split("_"),
+        weekdaysMin: "S\xfa_L\xfa_Ma_M\xe1_Xh_Vi_S\xe1".split("_"),
         longDateFormat: {
             LT: "HH.mm",
             LTS: "HH.mm.ss",
@@ -40,11 +42,11 @@
             return e > 11 ? (n ? "d'o" : "D'O") : n ? "d'a" : "D'A";
         },
         calendar: {
-            sameDay: "[oxhi à] LT",
-            nextDay: "[demà à] LT",
-            nextWeek: "dddd [à] LT",
-            lastDay: "[ieiri à] LT",
-            lastWeek: "[sür el] dddd [lasteu à] LT",
+            sameDay: "[oxhi \xe0] LT",
+            nextDay: "[dem\xe0 \xe0] LT",
+            nextWeek: "dddd [\xe0] LT",
+            lastDay: "[ieiri \xe0] LT",
+            lastWeek: "[s\xfcr el] dddd [lasteu \xe0] LT",
             sameElse: "L",
         },
         relativeTime: {

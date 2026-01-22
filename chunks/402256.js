@@ -1,4 +1,6 @@
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 var r = n(723727);
 let i = {
     iptc: {
@@ -262,7 +264,7 @@ let i = {
                     else if (24 === t) return "Portable Document File (*.PDF) Adobe";
                     else if (25 === t) return "News Industry Text Format (NITF)";
                     else if (26 === t) return "Tape Archive (*.TAR)";
-                    else if (27 === t) return "Tidningarnas Telegrambyrå NITF version (TTNITF DTD)";
+                    else if (27 === t) return "Tidningarnas Telegrambyr\xe5 NITF version (TTNITF DTD)";
                     else if (28 === t) return "Ritzaus Bureau NITF version (RBNITF DTD)";
                     else if (29 === t) return "Corel Draw [*.CDR]";
                     return `Unknown format ${t}`;
@@ -274,29 +276,43 @@ let i = {
             name: "ObjectData Preview File Format Version",
             description: (e, t) => {
                 let n = {
-                        "00": { "00": "1" },
+                        "00": {
+                            "00": "1",
+                        },
                         "01": {
                             "01": "1",
                             "02": "2",
                             "03": "3",
                             "04": "4",
                         },
-                        "02": { "04": "4" },
+                        "02": {
+                            "04": "4",
+                        },
                         "03": {
                             "01": "5.0",
                             "02": "6.0",
                         },
-                        "04": { "01": "1.40" },
-                        "05": { "01": "2" },
-                        "06": { "01": "1" },
-                        11: { "01": "1.02" },
+                        "04": {
+                            "01": "1.40",
+                        },
+                        "05": {
+                            "01": "2",
+                        },
+                        "06": {
+                            "01": "1",
+                        },
+                        11: {
+                            "01": "1.02",
+                        },
                         20: {
                             "01": "3.1",
                             "02": "4.0",
                             "03": "5.0",
                             "04": "5.5",
                         },
-                        21: { "02": "2.0" },
+                        21: {
+                            "02": "2.0",
+                        },
                     },
                     i = (0, r.Jn)(e);
                 if (t["ObjectData Preview File Format"]) {
@@ -337,10 +353,12 @@ let i = {
         },
     },
 };
+
 function a(e) {
     let t = (0, r.Jn)(e);
     return t.length >= 8 ? t.substr(0, 4) + "-" + t.substr(4, 2) + "-" + t.substr(6, 2) : t;
 }
+
 function s(e) {
     let t = (0, r.Jn)(e),
         n = t;
@@ -351,20 +369,21 @@ function s(e) {
         n
     );
 }
+
 function o(e) {
     let t = (0, r.Jn)(e);
-    if ("\x1B%G" === t) return "UTF-8";
-    if ("\x1B%5" === t) return "Windows-1252";
-    if ("\x1B%/G" === t) return "UTF-8 Level 1";
-    if ("\x1B%/H" === t) return "UTF-8 Level 2";
-    if ("\x1B%/I" === t) return "UTF-8 Level 3";
-    else if ("\x1B/A" === t) return "ISO-8859-1";
-    else if ("\x1B/B" === t) return "ISO-8859-2";
-    else if ("\x1B/C" === t) return "ISO-8859-3";
-    else if ("\x1B/D" === t) return "ISO-8859-4";
-    else if ("\x1B/@" === t) return "ISO-8859-5";
-    else if ("\x1B/G" === t) return "ISO-8859-6";
-    else if ("\x1B/F" === t) return "ISO-8859-7";
-    else if ("\x1B/H" === t) return "ISO-8859-8";
+    if ("\x1b%G" === t) return "UTF-8";
+    if ("\x1b%5" === t) return "Windows-1252";
+    if ("\x1b%/G" === t) return "UTF-8 Level 1";
+    if ("\x1b%/H" === t) return "UTF-8 Level 2";
+    if ("\x1b%/I" === t) return "UTF-8 Level 3";
+    else if ("\x1b/A" === t) return "ISO-8859-1";
+    else if ("\x1b/B" === t) return "ISO-8859-2";
+    else if ("\x1b/C" === t) return "ISO-8859-3";
+    else if ("\x1b/D" === t) return "ISO-8859-4";
+    else if ("\x1b/@" === t) return "ISO-8859-5";
+    else if ("\x1b/G" === t) return "ISO-8859-6";
+    else if ("\x1b/F" === t) return "ISO-8859-7";
+    else if ("\x1b/H" === t) return "ISO-8859-8";
     return "Unknown";
 }

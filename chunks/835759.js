@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -6,6 +8,7 @@ var r = n(627968),
     o = n(620141),
     l = n(966598),
     c = n(224964);
+
 function u(e, t, n) {
     return (
         t in e
@@ -19,6 +22,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,6 +39,7 @@ function d(e) {
     }
     return e;
 }
+
 function f(e) {
     let { confettiSpawnRef: t, shouldFire: n } = e,
         r = (0, a.bG)([s.A], () => s.A.isFocused()),
@@ -47,6 +52,7 @@ function f(e) {
         null
     );
 }
+
 function p(e) {
     return (0, r.jsx)(o.A, {
         confettiLocation: e.confettiLocation,

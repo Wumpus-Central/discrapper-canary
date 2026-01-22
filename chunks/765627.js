@@ -1,4 +1,6 @@
-n.d(t, { A: () => A });
+n.d(t, {
+    A: () => A,
+});
 var r = n(627968);
 n(64700);
 var l = n(417597),
@@ -15,10 +17,15 @@ var l = n(417597),
     b = n(412484),
     g = n(985018),
     m = n(655967);
+
 function A(e) {
     let { tab: t, setTab: n, badgeState: f, closePopout: h } = e,
-        { enabled: b, inInbox: A } = c.A.useExperiment({ location: "RecentsPopout" }),
-        O = (0, d.Sc)({ location: "RecentsHeader" }),
+        { enabled: b, inInbox: A } = c.A.useExperiment({
+            location: "RecentsPopout",
+        }),
+        O = (0, d.Sc)({
+            location: "RecentsHeader",
+        }),
         j = (0, l.bG)([u.A], () => u.A.getOverdueMessageReminderCount());
     return (0, r.jsxs)(o.Y9, {
         className: m.wx,
@@ -40,9 +47,18 @@ function A(e) {
                     (0, r.jsxs)(s.sqX, {
                         className: m.ne,
                         onClick: (e) => e.stopPropagation(),
-                        focusProps: { enabled: !1 },
+                        focusProps: {
+                            enabled: !1,
+                        },
                         "aria-label": g.intl.string(g.t["8k+6QY"]),
-                        children: [(0, r.jsx)(y, { tab: t }), (0, r.jsx)(p.A, { closePopout: h })],
+                        children: [
+                            (0, r.jsx)(y, {
+                                tab: t,
+                            }),
+                            (0, r.jsx)(p.A, {
+                                closePopout: h,
+                            }),
+                        ],
                     }),
                 ],
             }),
@@ -88,7 +104,9 @@ function A(e) {
                                   children:
                                       0 === j
                                           ? g.intl.string(g.t["2pAkDA"])
-                                          : g.intl.formatToPlainString(g.t.I4fryG, { count: j }),
+                                          : g.intl.formatToPlainString(g.t.I4fryG, {
+                                                count: j,
+                                            }),
                               })
                             : null,
                         O
@@ -105,6 +123,7 @@ function A(e) {
         ],
     });
 }
+
 function y(e) {
     let { tab: t } = e;
     return t === i.Y2.FOR_YOU

@@ -1,8 +1,11 @@
-n.d(t, { k: () => o });
+n.d(t, {
+    k: () => o,
+});
 var r = n(579872),
     i = n(453771),
     a = n(652215),
     s = n(985018);
+
 function o(e) {
     let { guildId: t, code: n } = e;
     if (n === a.t02.ENTITY_TOO_LARGE) {
@@ -10,7 +13,9 @@ function o(e) {
         return (
             r.A.show({
                 title: s.intl.string(s.t["/tGlcj"]),
-                body: s.intl.formatToPlainString(s.t.fxEKdS, { maxSize: (0, i.Hb)(e) }),
+                body: s.intl.formatToPlainString(s.t.fxEKdS, {
+                    maxSize: (0, i.Hb)(e),
+                }),
             }),
             !0
         );
@@ -18,7 +23,9 @@ function o(e) {
     return n === a.t02.TOO_MANY_ATTACHMENTS
         ? (r.A.show({
               title: s.intl.string(s.t.wOr6hB),
-              body: s.intl.formatToPlainString(s.t["qqyp/e"], { limit: a.XgB }),
+              body: s.intl.formatToPlainString(s.t["qqyp/e"], {
+                  limit: a.XgB,
+              }),
           }),
           !0)
         : n === a.t02.ENTITY_EMPTY

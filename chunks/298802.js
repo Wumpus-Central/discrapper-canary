@@ -1,4 +1,6 @@
-i.d(e, { G: () => A });
+i.d(e, {
+    G: () => A,
+});
 var n = i(775121),
     l = i(955572),
     s = i(775602),
@@ -20,5 +22,8 @@ let A = (0, r.sN)(a.X.APPEARANCE_ZOOM, {
     onValueRender: (t) => "".concat(t.toFixed(0), "%"),
     asValueChanges: (t) => (0, l.Qp)(t),
     useSearchTerms: () => [T.intl.string(T.t.ip0uSf)],
-    useHintText: () => T.intl.format(T.t.OMkSUo, { modKey: n.A.modKey }),
+    useHintText: () =>
+        T.intl.format(T.t.OMkSUo, {
+            modKey: n.A.modKey,
+        }),
 });

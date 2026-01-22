@@ -1,4 +1,7 @@
-n.d(t, { F: () => m }), n(896048);
+n.d(t, {
+    F: () => m,
+}),
+    n(896048);
 var r,
     i = n(627968),
     a = n(64700),
@@ -7,6 +10,7 @@ var r,
     l = n(615300),
     c = n(397927),
     u = n(796032);
+
 function d(e, t, n) {
     return (
         t in e
@@ -20,6 +24,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +41,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -48,6 +54,7 @@ function p(e, t) {
     }
     return n;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -75,7 +82,12 @@ class m extends (r = a.Component) {
         t.enabled ? this.animateTo(0).start(e) : l.A.stagger(250, [this.animateTo(1.3), this.animateTo(0)]).start(e);
     }
     animateTo(e) {
-        return l.A.spring(this.animation, _(f({}, h), { toValue: e }));
+        return l.A.spring(
+            this.animation,
+            _(f({}, h), {
+                toValue: e,
+            }),
+        );
     }
     getAnimatedStyle() {
         let { reducedMotion: e } = this.context;

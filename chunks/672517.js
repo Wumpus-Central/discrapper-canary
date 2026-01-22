@@ -1,4 +1,6 @@
-t.d(e, { A: () => C });
+t.d(e, {
+    A: () => C,
+});
 var i = t(627968),
     o = t(64700),
     r = t(397927),
@@ -7,6 +9,7 @@ var i = t(627968),
     d = t(652215),
     l = t(985018),
     c = t(630552);
+
 function C(n) {
     let { onContinue: e, onClose: t } = n,
         C = s.A.getArticleURL(d.MVz.CRUNCHYROLL_CONNECTION),

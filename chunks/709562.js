@@ -17,6 +17,7 @@ var r = n(627968),
     h = n(722776),
     m = n(985018),
     g = n(35204);
+
 function E(e, t, n) {
     return (
         t in e
@@ -30,6 +31,7 @@ function E(e, t, n) {
         e
     );
 }
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -46,6 +48,7 @@ function b(e) {
     }
     return e;
 }
+
 function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -58,6 +61,7 @@ function y(e, t) {
     }
     return n;
 }
+
 function O(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -69,6 +73,7 @@ function O(e, t) {
         e
     );
 }
+
 function A(e, t) {
     if (null == e) return {};
     var n,
@@ -85,6 +90,7 @@ function A(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function v(e, t) {
     if (null == e) return {};
     var n,
@@ -95,6 +101,7 @@ function v(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function S(e) {
     let {
         label: t,
@@ -149,8 +156,15 @@ function S(e) {
                 },
                 onBlur: u,
                 disabled: y,
-                innerClassName: s()(g.NL, { [g.eq]: null != R }),
-                className: s()({ [g.vu]: O }, f),
+                innerClassName: s()(g.NL, {
+                    [g.eq]: null != R,
+                }),
+                className: s()(
+                    {
+                        [g.vu]: O,
+                    },
+                    f,
+                ),
                 wrapperClassName: p,
                 buttonRef: I,
                 grow: T,
@@ -195,6 +209,7 @@ let I = {
         activeLight: g.H3,
         premiumGradient: g.ck,
     };
+
 function C(e) {
     var t;
     let {
@@ -257,7 +272,9 @@ function C(e) {
                                 "aria-label": m.intl.string(m.t.PdRCRg),
                                 onClick: C ? void 0 : y,
                                 className: s()(g.cd, N && g.Ml, T[D], v && [g.q6, g.vu], C && g.r9),
-                                children: (0, r.jsx)(f.A, { className: s()(g.gG, v && g.ho, C && g.r9) }),
+                                children: (0, r.jsx)(f.A, {
+                                    className: s()(g.gG, v && g.ho, C && g.r9),
+                                }),
                             }),
                         })
                       : null,

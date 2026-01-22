@@ -1,9 +1,13 @@
-n.d(t, { A: () => d }), n(896048);
+n.d(t, {
+    A: () => d,
+}),
+    n(896048);
 var r = n(735438),
     i = n(439372),
     a = n(706341),
     s = n(320697),
     o = n(849077);
+
 function l(e, t, n) {
     return (
         t in e
@@ -17,7 +21,7 @@ function l(e, t, n) {
         e
     );
 }
-let c = 5000;
+let c = 5e3;
 class u extends i.A {
     preloadInbox() {
         a.A.loadMoreInbox({
@@ -35,7 +39,11 @@ class u extends i.A {
                 this,
                 "stores",
                 new Map().set(s.A, () => {
-                    s.A.hasPreloaded || (s.A.canLoadMore({ preload: !0 }) && this.throttledPreloadInbox());
+                    s.A.hasPreloaded ||
+                        (s.A.canLoadMore({
+                            preload: !0,
+                        }) &&
+                            this.throttledPreloadInbox());
                 }),
             ),
             (this.throttledPreloadInbox = (0, r.throttle)(this.preloadInbox, c));

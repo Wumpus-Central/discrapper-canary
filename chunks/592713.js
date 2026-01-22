@@ -1,9 +1,13 @@
-n.d(t, { A: () => g }), n(896048);
+n.d(t, {
+    A: () => g,
+}),
+    n(896048);
 var r = n(73153),
     i = n(439372),
     a = n(696451),
     s = n(287809),
     o = n(316031);
+
 function l(e, t, n) {
     return (
         t in e
@@ -17,6 +21,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -33,6 +38,7 @@ function c(e) {
     }
     return e;
 }
+
 function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -45,6 +51,7 @@ function u(e, t) {
     }
     return n;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -56,7 +63,7 @@ function d(e, t) {
         e
     );
 }
-let f = 10000,
+let f = 1e4,
     p = null,
     _ = () => {
         let e = a.Ay.getCommunicationDisabledUserMap();
@@ -86,7 +93,14 @@ let f = 10000,
             }),
             communicationDisabledUntil: null,
         });
-        r.h.dispatch(c({ type: "GUILD_MEMBER_UPDATE" }, m));
+        r.h.dispatch(
+            c(
+                {
+                    type: "GUILD_MEMBER_UPDATE",
+                },
+                m,
+            ),
+        );
     };
 class m extends i.A {
     _initialize() {

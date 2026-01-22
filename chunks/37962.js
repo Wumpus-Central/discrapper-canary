@@ -14,6 +14,7 @@ var r = n(735438),
     d = n(881520),
     f = n(368854),
     p = n(670455);
+
 function _(e, t, n) {
     return (
         t in e
@@ -27,6 +28,7 @@ function _(e, t, n) {
         e
     );
 }
+
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -43,6 +45,7 @@ function h(e) {
     }
     return e;
 }
+
 function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -55,6 +58,7 @@ function m(e, t) {
     }
     return n;
 }
+
 function g(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -69,7 +73,7 @@ function g(e, t) {
 let E = 200,
     b = {
         chance: 0.2,
-        cooldown: 86400000,
+        cooldown: 864e5,
     },
     y = {
         [p.MW.VOICE]: g(h({}, b), {
@@ -100,7 +104,7 @@ let E = 200,
             feedbackType: p.MW.ACTIVITY,
         },
         [p.MW.IN_APP_REPORTS]: {
-            cooldown: 172800000,
+            cooldown: 1728e5,
             chance: 0.5,
             group: p.h0.SAFETY,
             hotspot: s._2.IN_APP_REPORTS_FEEDBACK,
@@ -138,16 +142,20 @@ let E = 200,
             feedbackType: p.MW.AGE_VERIFICATION,
         },
     };
+
 function O(e) {
     var t, n;
     if (__OVERLAY__) return !1;
-    let { overrideEligibility: r } = (0, f.P)({ location: "FeedbackManager" });
+    let { overrideEligibility: r } = (0, f.P)({
+        location: "FeedbackManager",
+    });
     if (r) return !0;
     let i = null != (t = d.A.getFeedbackConfig(e)) ? t : y[e],
         a = [v, A, I],
         s = null != (n = i.eligibilityChecks) ? n : [];
     return a.every((e) => e(i)) && s.every((e) => e(i));
 }
+
 function A(e) {
     var t;
     let n = null == (t = c.Yt.getSetting()[e.feedbackType]) ? void 0 : t.optOutExpiryTime,
@@ -157,14 +165,20 @@ function A(e) {
         i &&
             !r &&
             c.Yt.updateSetting((t) =>
-                g(h({}, t), { [e.feedbackType]: g(h({}, t[e.feedbackType]), { optOutExpiryTime: p.fs }) }),
+                g(h({}, t), {
+                    [e.feedbackType]: g(h({}, t[e.feedbackType]), {
+                        optOutExpiryTime: p.fs,
+                    }),
+                }),
             ),
         !r && !i
     );
 }
+
 function v(e) {
     return Math.random() < e.chance;
 }
+
 function S(e, t) {
     var n, a, s;
     let o,
@@ -175,11 +189,16 @@ function S(e, t) {
             (null == (o = null != (s = i.w.get(t.storageKey)) ? s : void 0) ||
                 Number.isNaN(o) ||
                 c.Yt.updateSetting((e) =>
-                    g(h({}, e), { [t.feedbackType]: g(h({}, e[t.feedbackType]), { lastImpressionTime: o }) }),
+                    g(h({}, e), {
+                        [t.feedbackType]: g(h({}, e[t.feedbackType]), {
+                            lastImpressionTime: o,
+                        }),
+                    }),
                 )),
         (null != (n = (0, r.max)([l, o])) ? n : 0) + e.cooldown < Date.now()
     );
 }
+
 function I(e) {
     for (let t of Object.values(y).filter((t) => {
         let { group: n } = t;
@@ -188,14 +207,25 @@ function I(e) {
         if (!S(e, t)) return !1;
     return !0;
 }
+
 function T(e) {
     return !u.A.getWasEverRtcConnected() || u.A.getWasEverMultiParticipant();
 }
+
 function C(e) {
-    return !!(0, l.s)({ location: "FeedbackManager" });
+    return !!(0, l.s)({
+        location: "FeedbackManager",
+    });
 }
+
 function N(e) {
-    c.Yt.updateSetting((t) => g(h({}, t), { [e]: g(h({}, t[e]), { lastImpressionTime: Date.now() }) }));
+    c.Yt.updateSetting((t) =>
+        g(h({}, t), {
+            [e]: g(h({}, t[e]), {
+                lastImpressionTime: Date.now(),
+            }),
+        }),
+    );
 }
 class R extends a.A {
     possiblyShowFeedbackModal(e, t, n) {

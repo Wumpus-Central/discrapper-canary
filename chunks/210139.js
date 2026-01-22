@@ -1,4 +1,6 @@
-t.d(e, { B: () => u });
+t.d(e, {
+    B: () => u,
+});
 var n = t(627968),
     r = t(64700),
     s = t(311907),
@@ -9,6 +11,7 @@ var n = t(627968),
     d = t(370834),
     x = t(985018),
     m = t(689588);
+
 function u(a) {
     let {
             platformType: e,
@@ -75,7 +78,10 @@ function u(a) {
                                             },
                                             t,
                                         ),
-                                        e !== g.length - 1 && (0, n.jsx)("div", { className: m.Cs }),
+                                        e !== g.length - 1 &&
+                                            (0, n.jsx)("div", {
+                                                className: m.Cs,
+                                            }),
                                     ],
                                 },
                                 t,
@@ -87,7 +93,9 @@ function u(a) {
                               tag: "p",
                               variant: "text-sm/normal",
                               color: "text-default",
-                              children: x.intl.format(x.t["/l3n+1"], { helpCenterLink: C }),
+                              children: x.intl.format(x.t["/l3n+1"], {
+                                  helpCenterLink: C,
+                              }),
                           })
                         : null,
                 ],

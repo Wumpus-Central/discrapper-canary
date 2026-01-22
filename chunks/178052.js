@@ -1,13 +1,17 @@
-n.d(t, { A: () => p }), n(896048);
+n.d(t, {
+    A: () => p,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(33851),
     o = n.n(i),
-    a = n(432022),
+    a = n(108531),
     s = n(615300),
     c = n(827734),
     d = n(397927),
     u = n(475743);
+
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -33,6 +37,7 @@ function C(e) {
     }
     return e;
 }
+
 function f(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -57,10 +62,11 @@ let b = {
         clamp: !0,
     },
     m = {
-        duration: 2000,
+        duration: 2e3,
         easing: s.A.Easing.quad,
         clamp: !0,
     };
+
 function p(e) {
     let { value: t, children: n, equalityFn: i = o(), style: s } = e,
         p = (function (e, t) {
@@ -95,7 +101,12 @@ function p(e) {
             return i;
         })(e, ["value", "children", "equalityFn", "style"]),
         j = (0, u.A)(t),
-        [{ spring: g }, h] = (0, d.zhh)(() => ({ spring: 0 }), "animate-always"),
+        [{ spring: g }, h] = (0, d.zhh)(
+            () => ({
+                spring: 0,
+            }),
+            "animate-always",
+        ),
         x = (0, d.rdh)(c.A.colors.BACKGROUND_BASE_LOW).hex(),
         y = (0, d.rdh)(c.A.colors.CONTROL_BRAND_FOREGROUND).hex(),
         O = l.useCallback(() => {
@@ -119,7 +130,14 @@ function p(e) {
                       range: [0, 1],
                       output: ["".concat(x, "00"), "".concat(y, "27")],
                   }),
-        H = null != s ? f(C({}, s), { backgroundColor: v }) : { backgroundColor: v };
+        H =
+            null != s
+                ? f(C({}, s), {
+                      backgroundColor: v,
+                  })
+                : {
+                      backgroundColor: v,
+                  };
     return (0, r.jsx)(
         a.animated.tr,
         f(C({}, p), {

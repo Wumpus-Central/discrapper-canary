@@ -1,7 +1,13 @@
-n.d(t, { I: () => u }), n(321073), n(457529), n(65821);
+n.d(t, {
+    I: () => u,
+}),
+    n(321073),
+    n(457529),
+    n(65821);
 var r = n(627968);
 n(64700);
 var i = n(397927);
+
 function a(e, t, n) {
     return (
         t in e
@@ -15,6 +21,7 @@ function a(e, t, n) {
         e
     );
 }
+
 function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -31,6 +38,7 @@ function s(e) {
     }
     return e;
 }
+
 function o(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -43,6 +51,7 @@ function o(e, t) {
     }
     return n;
 }
+
 function l(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -70,18 +79,37 @@ let c = new (n(626584).A)("MFAPlayground"),
                             challenge: JSON.stringify({
                                 publicKey: {
                                     challenge: "bW9jay1jaGFsbGVuZ2U=",
-                                    timeout: 60000,
+                                    timeout: 6e4,
                                     rpId: "discord.com",
                                     allowCredentials: [],
                                     userVerification: "preferred",
                                 },
                             }),
                         }),
-                        a && p.push({ type: "totp" }),
-                        o && p.push({ type: "sms" }),
-                        d && p.push({ type: "backup" }),
-                        t && p.push({ type: "password" });
-                    let _ = p.length > 0 ? p : [{ type: "password" }];
+                        a &&
+                            p.push({
+                                type: "totp",
+                            }),
+                        o &&
+                            p.push({
+                                type: "sms",
+                            }),
+                        d &&
+                            p.push({
+                                type: "backup",
+                            }),
+                        t &&
+                            p.push({
+                                type: "password",
+                            });
+                    let _ =
+                        p.length > 0
+                            ? p
+                            : [
+                                  {
+                                      type: "password",
+                                  },
+                              ];
                     return (0, r.jsxs)(i.BJc, {
                         align: "center",
                         children: [
@@ -122,7 +150,9 @@ let c = new (n(626584).A)("MFAPlayground"),
                                                     }),
                                                 );
                                         },
-                                        { onCloseCallback: () => c.info("Modal closed") },
+                                        {
+                                            onCloseCallback: () => c.info("Modal closed"),
+                                        },
                                     );
                                 },
                             }),

@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968);
 n(64700);
 var i = n(942381),
@@ -12,6 +14,7 @@ var i = n(942381),
     f = n(287809),
     p = n(486020),
     _ = n(375812);
+
 function h() {
     let { guildId: e, channelId: t } = (0, c.A)((e) => {
             let { guildId: t, channelId: n } = e;
@@ -35,7 +38,9 @@ function h() {
     return (
         (y =
             null != n
-                ? (0, r.jsx)(l.A, { guild: n })
+                ? (0, r.jsx)(l.A, {
+                      guild: n,
+                  })
                 : null != g
                   ? (0, r.jsx)(s.euF, {
                         "aria-hidden": !0,

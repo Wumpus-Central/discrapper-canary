@@ -10,6 +10,7 @@ var r,
     o = n(713402),
     l = n(73153),
     c = n(867164);
+
 function u(e, t, n) {
     return (
         t in e
@@ -31,15 +32,19 @@ var d = (function (e) {
         e
     );
 })({});
+
 function f(e) {
     return "guild:".concat(e);
 }
+
 function p(e) {
     return "subscription_listing:".concat(e);
 }
+
 function _(e) {
     return "application:".concat(e);
 }
+
 function h(e) {
     return "plan:".concat(e);
 }
@@ -58,81 +63,101 @@ let m = new o.J(
     A = {},
     v = {},
     S = new Map();
+
 function I(e) {
     return m.values(f(e));
 }
+
 function T(e) {
     var t;
     for (let n of (m.set(e.id, e), S.set(e.guild_id, e.application_id), null != (t = e.subscription_listings) ? t : []))
         C(n);
 }
+
 function C(e) {
     g.set(e.id, e);
 }
+
 function N() {
     m.clear(), g.clear(), (E = {}), b.clear(), (y = {}), (O = {}), (A = {}), (v = {}), S.clear();
 }
+
 function R(e) {
     let { settings: t } = e;
     y[t.guild_id] = t;
 }
+
 function w(e) {
     let { guildId: t } = e;
     for (let e of ((E[t] = 1), I(t))) for (let t of (m.delete(e.id), e.subscription_listings_ids)) g.delete(t);
 }
+
 function P(e) {
     let { guildId: t, groupListings: n, settings: r, subscriptionTrials: i } = e;
     for (let e of ((E[t] = 2), n)) T(e);
     for (let e of ((y[t] = r), i)) O[e.id] = e;
 }
+
 function D(e) {
     let { guildId: t } = e;
     E[t] = 2;
 }
+
 function x(e) {
     let { listing: t } = e;
     T(t);
 }
+
 function L(e) {
     let { groupListingId: t } = e;
     m.delete(t);
 }
+
 function j(e) {
     let { planId: t } = e;
     b.add(t);
 }
+
 function M(e) {
     let { groupListing: t } = e;
     T(t);
 }
+
 function k(e) {
     let { listing: t, groupListing: n } = e;
     C(t), T(n);
 }
+
 function U(e) {
     let { listing: t } = e;
     C(t);
 }
+
 function G(e) {
     let { listingId: t } = e;
     return g.delete(t);
 }
+
 function V(e) {
     let { subscriptionTrial: t } = e;
     O[t.id] = t;
 }
+
 function F(e) {
     let { guildId: t } = e;
     v[t] = 1;
 }
+
 function B(e) {
     let { guildId: t, restrictions: n } = e;
     (A[t] = n), (v[t] = 2);
 }
+
 function H(e) {
     let { guildId: t } = e;
     (v[t] = 2), (A[t] = c.o);
 }
+
 function Y(e) {
     let { guildId: t } = e;
     v[t] = 0;

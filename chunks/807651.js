@@ -1,4 +1,6 @@
-t.d(l, { A: () => m });
+t.d(l, {
+    A: () => m,
+});
 var n = t(627968);
 t(64700);
 var i = t(630054),
@@ -11,6 +13,7 @@ var i = t(630054),
     u = t(697250),
     f = t(102951),
     p = t(652215);
+
 function m(e) {
     let { user: l, currentUser: t, guildId: m, channelId: x, displayProfile: A, relationshipType: j, onClose: h } = e,
         { newestAnalyticsLocation: g } = (0, r.Ay)(),
@@ -25,7 +28,9 @@ function m(e) {
             gameFriends: b,
             hasOutgoingPendingGameFriends: I,
             hasIncomingPendingGameFriends: y,
-        } = (0, f.J)({ userId: l.id }),
+        } = (0, f.J)({
+            userId: l.id,
+        }),
         O = b.length > 0 || I || y;
     return j === p.eA$.BLOCKED
         ? null
@@ -37,7 +42,9 @@ function m(e) {
                         guildId: m,
                         onClose: h,
                     }),
-                    (0, n.jsx)(c.A, { onClose: h }),
+                    (0, n.jsx)(c.A, {
+                        onClose: h,
+                    }),
                     (0, n.jsx)(d.Zt, {
                         user: l,
                         guildId: m,

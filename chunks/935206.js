@@ -1,11 +1,19 @@
-n.d(t, { A: () => l }), n(896048);
+n.d(t, {
+    A: () => l,
+}),
+    n(896048);
 var r = n(131346),
     i = n(744818);
+
 function l(e, t, n, l) {
     let [{ isDragging: s }, a, c] = (0, r.i)({
             type: t,
-            item: () => ({ index: n }),
-            collect: (e) => ({ isDragging: e.isDragging() }),
+            item: () => ({
+                index: n,
+            }),
+            collect: (e) => ({
+                isDragging: e.isDragging(),
+            }),
         }),
         [, o] = (0, i.H)({
             accept: t,

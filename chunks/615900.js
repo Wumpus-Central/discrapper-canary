@@ -1,7 +1,10 @@
-n.d(t, { h: () => l });
+n.d(t, {
+    h: () => l,
+});
 var r = n(627968);
 n(64700);
 var i = n(192308);
+
 function l(e) {
     let { demonetized: t = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
     (0, i.openModalLazy)(

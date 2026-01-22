@@ -1,4 +1,8 @@
-n.d(t, { A: () => E }), n(65821), n(896048);
+n.d(t, {
+    A: () => E,
+}),
+    n(65821),
+    n(896048);
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -18,7 +22,14 @@ let g = (e, t, n, r) => {
         if (null == e || null == t || null == n) {
             let e = Error("Missing base rate for legal fine print"),
                 t = r || "none";
-            return (0, o.pM)(e, { tags: { planId: t } }), null;
+            return (
+                (0, o.pM)(e, {
+                    tags: {
+                        planId: t,
+                    },
+                }),
+                null
+            );
         }
         return (0, u.CE)((0, u.$g)(e.amount, e.currency), t, n);
     },
@@ -96,14 +107,18 @@ let g = (e, t, n, r) => {
                 Array.isArray(F) ? (F = [...F, " ".concat(e)]) : (F += " ".concat(e));
         } else if (S)
             if (null != o && (null == I ? void 0 : I.subscriptionPeriodEnd) != null)
-                F = h.intl.format(h.t["2VPTay"], { subtotalRate: E });
+                F = h.intl.format(h.t["2VPTay"], {
+                    subtotalRate: E,
+                });
             else
                 switch (t) {
                     case _.WT.MONTH:
                         F =
                             1 === n
                                 ? h.intl.format(h.t["+ywPmZ"], {})
-                                : h.intl.format(h.t.oBwZfh, { intervalCount: n });
+                                : h.intl.format(h.t.oBwZfh, {
+                                      intervalCount: n,
+                                  });
                         break;
                     case _.WT.YEAR:
                         F = h.intl.format(h.t.y9gsX5, {});
@@ -119,18 +134,29 @@ let g = (e, t, n, r) => {
                 case f.EZt.COLLECTIBLES:
                     (B = G),
                         (F = y
-                            ? h.intl.format(h.t.Amdf8X, { paidURL: f.X7G.PAID_TERMS })
-                            : h.intl.format(h.t["40vM4o"], { paidURL: f.X7G.PAID_TERMS }));
+                            ? h.intl.format(h.t.Amdf8X, {
+                                  paidURL: f.X7G.PAID_TERMS,
+                              })
+                            : h.intl.format(h.t["40vM4o"], {
+                                  paidURL: f.X7G.PAID_TERMS,
+                              }));
                     break;
                 case f.EZt.GUILD_PRODUCT:
-                    (B = G), (F = h.intl.format(h.t["GEAQ+u"], { paidURL: f.X7G.PAID_TERMS }));
+                    (B = G),
+                        (F = h.intl.format(h.t["GEAQ+u"], {
+                            paidURL: f.X7G.PAID_TERMS,
+                        }));
                     break;
                 case f.EZt.SOCIAL_LAYER_GAME_ITEM:
                     (B = G),
                         (F =
                             y || !0 === j
-                                ? h.intl.format(h.t.VCR6hI, { applicationName: null != L ? L : "game's" })
-                                : h.intl.format(h.t.CVITgq, { applicationName: null != L ? L : "game's" }));
+                                ? h.intl.format(h.t.VCR6hI, {
+                                      applicationName: null != L ? L : "game's",
+                                  })
+                                : h.intl.format(h.t.CVITgq, {
+                                      applicationName: null != L ? L : "game's",
+                                  }));
                     break;
                 default:
                     (B = V), (F = h.intl.string(h.t["9/siSQ"]));
@@ -143,7 +169,9 @@ let g = (e, t, n, r) => {
                             ? h.intl.string(h.t.IjNapk)
                             : 1 === n
                               ? h.intl.string(h.t["/sGXPr"])
-                              : h.intl.formatToPlainString(h.t.Fqjihk, { intervalCount: n }));
+                              : h.intl.formatToPlainString(h.t.Fqjihk, {
+                                    intervalCount: n,
+                                }));
                     break;
                 case _.WT.YEAR:
                     F = y ? h.intl.string(h.t.vAfbG8) : h.intl.string(h.t.IGzFc5);
@@ -217,10 +245,22 @@ let g = (e, t, n, r) => {
         return (0, r.jsxs)("div", {
             className: m.F,
             children: [
-                "" !== B && (0, r.jsx)("div", { children: B }),
-                "" !== F && (0, r.jsx)("div", { children: F }),
-                T === f.hes.PAYSAFE_CARD && (0, r.jsx)("div", { children: h.intl.string(h.t.kj9VLI) }),
-                T === f.hes.SOFORT && (0, r.jsx)("div", { children: h.intl.string(h.t["UYy1/h"]) }),
+                "" !== B &&
+                    (0, r.jsx)("div", {
+                        children: B,
+                    }),
+                "" !== F &&
+                    (0, r.jsx)("div", {
+                        children: F,
+                    }),
+                T === f.hes.PAYSAFE_CARD &&
+                    (0, r.jsx)("div", {
+                        children: h.intl.string(h.t.kj9VLI),
+                    }),
+                T === f.hes.SOFORT &&
+                    (0, r.jsx)("div", {
+                        children: h.intl.string(h.t["UYy1/h"]),
+                    }),
             ],
         });
     };

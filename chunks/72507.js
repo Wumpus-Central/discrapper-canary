@@ -1,4 +1,6 @@
-n.d(t, { l: () => x });
+n.d(t, {
+    l: () => x,
+});
 var r = n(627968),
     i = n(64700),
     l = n(732955),
@@ -13,6 +15,7 @@ var r = n(627968),
     b = n(478644),
     m = n(985018),
     p = n(822679);
+
 function x(e) {
     let { guild: t, canManageGuild: n, buttonClassName: x } = e,
         { analyticsLocations: h } = (0, s.Ay)(),
@@ -20,7 +23,9 @@ function x(e) {
         O = n && j,
         y = i.useRef(null),
         v = i.useCallback((e) => {
-            o.A.updateGuild({ splash: e });
+            o.A.updateGuild({
+                splash: e,
+            });
         }, []),
         A = i.useCallback(
             (e) => {
@@ -66,6 +71,8 @@ function x(e) {
           })
         : (0, r.jsx)("div", {
               className: x,
-              children: (0, r.jsx)(d.u, { onClick: A }),
+              children: (0, r.jsx)(d.u, {
+                  onClick: A,
+              }),
           });
 }

@@ -16,6 +16,7 @@ var i = n(295405),
     u = n(623020),
     d = n(881677),
     f = n(985018);
+
 function p(e, t, n) {
     return (
         t in e
@@ -29,6 +30,7 @@ function p(e, t, n) {
         e
     );
 }
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -45,6 +47,7 @@ function _(e) {
     }
     return e;
 }
+
 function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -57,6 +60,7 @@ function h(e, t) {
     }
     return n;
 }
+
 function m(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -82,11 +86,15 @@ let g = {
                     onReturn: () => {
                         0 === Object.keys(i.A.paymentSources).length
                             ? e.handleClose()
-                            : e.handleStepChange(a.pn.REVIEW, { trackedFromStep: a.pn.ADD_PAYMENT_STEPS });
+                            : e.handleStepChange(a.pn.REVIEW, {
+                                  trackedFromStep: a.pn.ADD_PAYMENT_STEPS,
+                              });
                     },
                 }),
             ),
-        options: { renderHeader: !0 },
+        options: {
+            renderHeader: !0,
+        },
     },
     b = {
         key: a.pn.AWAITING_PURCHASE_TOKEN_AUTH,
@@ -95,12 +103,16 @@ let g = {
     y = {
         key: a.pn.AWAITING_AUTHENTICATION,
         renderStep: () => (0, r.jsx)(o.A, {}),
-        options: { renderHeader: !0 },
+        options: {
+            renderHeader: !0,
+        },
     },
     O = {
         key: a.pn.REVIEW,
         renderStep: (e) => (0, r.jsx)(u._M, _({}, e)),
-        options: { useBreadcrumbLabel: () => f.intl.string(f.t.QBnNHq) },
+        options: {
+            useBreadcrumbLabel: () => f.intl.string(f.t.QBnNHq),
+        },
     },
     A = {
         key: a.pn.CONFIRM,

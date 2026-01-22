@@ -1,4 +1,7 @@
-n.d(t, { A: () => S }), n(896048);
+n.d(t, {
+    A: () => S,
+}),
+    n(896048);
 var r = n(812729),
     i = n.n(r),
     a = n(735438),
@@ -18,6 +21,7 @@ var r = n(812729),
     b = n(837921),
     y = n(652215),
     O = n(985018);
+
 function A(e, t, n) {
     return (
         t in e
@@ -76,8 +80,14 @@ class v extends u.A {
                 [b.dv.VIDEO]: () => {
                     m.A.isVideoEnabled() ? l.A.setVideoEnabled(!1) : (0, _.A)(() => l.A.setVideoEnabled(!0), y.BRT.APP);
                 },
-                [b.dv.MUTE]: () => l.A.toggleSelfMute({ location: "Thumbar" }),
-                [b.dv.DEAFEN]: () => l.A.toggleSelfDeaf({ location: "Thumbar" }),
+                [b.dv.MUTE]: () =>
+                    l.A.toggleSelfMute({
+                        location: "Thumbar",
+                    }),
+                [b.dv.DEAFEN]: () =>
+                    l.A.toggleSelfDeaf({
+                        location: "Thumbar",
+                    }),
                 [b.dv.DISCONNECT]: () => c.default.disconnect(),
             }),
             A(this, "isSupported", (0, E.isMac)() || (0, E.isWindows)()),

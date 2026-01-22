@@ -1,8 +1,11 @@
-n.d(t, { A: () => l });
+n.d(t, {
+    A: () => l,
+});
 var r = n(65412),
     i = n(638504),
     a = n(287683),
     s = n(315069);
+
 function o(e, t, n) {
     return (
         t in e
@@ -18,7 +21,9 @@ function o(e, t, n) {
 }
 class l extends s.A {
     static createFromServer(e) {
-        let t = new TextDecoder("utf-8", { ignoreBOM: !0 });
+        let t = new TextDecoder("utf-8", {
+            ignoreBOM: !0,
+        });
         return new l({
             id: e.id,
             componentType: e.component_type,

@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(627968);
 n(64700);
 var i = n(877624),
@@ -7,6 +9,7 @@ var i = n(877624),
     s = n(549996),
     o = n(807098),
     c = n(542780);
+
 function u(e) {
     let { children: t } = e,
         n = (0, s.c)(i.C.PREMIUM_TAB_TOOLTIP),
@@ -47,6 +50,8 @@ function u(e) {
         position: "right",
         "aria-label": u.header,
         asContainer: !0,
-        children: (0, r.jsx)("div", { children: t }),
+        children: (0, r.jsx)("div", {
+            children: t,
+        }),
     });
 }

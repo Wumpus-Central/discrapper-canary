@@ -1,4 +1,6 @@
-n.d(d, { default: () => o });
+n.d(d, {
+    default: () => o,
+});
 var i = n(627968);
 n(64700);
 var t = n(397927),
@@ -8,6 +10,7 @@ var t = n(397927),
     r = n(863922),
     c = n(652215),
     u = n(985018);
+
 function o(e) {
     let { summary: d, onSelect: n } = e;
     return (0, i.jsx)(t.W1t, {

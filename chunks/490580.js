@@ -1,6 +1,9 @@
-r.d(t, { i: () => c });
+r.d(t, {
+    i: () => c,
+});
 var n = r(321733),
     o = r(201672);
+
 function i(e, t, r) {
     return (
         t in e
@@ -17,6 +20,7 @@ function i(e, t, r) {
 var a = ["canDrop", "hover", "drop"],
     s = (function () {
         var e;
+
         function t(e, r, n) {
             if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
             i(this, "props", null),
@@ -72,6 +76,7 @@ var a = ["canDrop", "hover", "drop"],
             t
         );
     })();
+
 function c(e) {
     return (
         Object.keys(e).forEach(function (t) {

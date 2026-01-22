@@ -8,6 +8,7 @@ var r = n(141468),
     i = (function (e) {
         return (e.ALL = "ALL"), (e.REMINDER = "REMINDER"), (e.BOOKMARK = "BOOKMARK"), e;
     })({});
+
 function a(e) {
     return {
         channelId: e.channel_id,
@@ -22,12 +23,14 @@ function a(e) {
         dueAt: null != e.due_at ? new Date(e.due_at) : void 0,
     };
 }
+
 function s(e) {
     return {
         message: null != e.message ? (0, r.rh)(e.message) : null,
         saveData: a(e.save_data),
     };
 }
+
 function o(e) {
     return {
         channelId: e.channel_id,

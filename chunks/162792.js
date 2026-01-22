@@ -1,4 +1,6 @@
-n.d(t, { A: () => C });
+n.d(t, {
+    A: () => C,
+});
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -19,6 +21,7 @@ var r = n(627968),
     O = n(112758),
     j = n(652215),
     v = n(985018);
+
 function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -44,6 +47,7 @@ function x(e) {
     }
     return e;
 }
+
 function E(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -77,7 +81,9 @@ let _ = l.memo(function (e) {
         } = e,
         R = _.state === p.a.LOADED ? _.message : void 0,
         D = (0, m.X4)(R),
-        M = o.m.useExperiment({ location: "repliedMessage" }).enabled,
+        M = o.m.useExperiment({
+            location: "repliedMessage",
+        }).enabled,
         L = (0, u.S)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
         G = l.useMemo(() => {
             if (null == R) return null;
@@ -183,6 +189,7 @@ let _ = l.memo(function (e) {
         showReplySpine: w,
     });
 });
+
 function C(e) {
     let {
         message: t,

@@ -6,7 +6,7 @@ var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
-    o = n(432022),
+    o = n(108531),
     l = n(110259),
     c = n(113325),
     u = n(426333),
@@ -15,6 +15,7 @@ var r = n(627968),
     p = n(150591),
     _ = n(815390),
     h = n(22789);
+
 function m(e, t, n) {
     return (
         t in e
@@ -28,6 +29,7 @@ function m(e, t, n) {
         e
     );
 }
+
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -44,6 +46,7 @@ function g(e) {
     }
     return e;
 }
+
 function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -56,6 +59,7 @@ function E(e, t) {
     }
     return n;
 }
+
 function b(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -67,6 +71,7 @@ function b(e, t) {
         e
     );
 }
+
 function y(e) {
     var t;
     let {
@@ -113,7 +118,9 @@ function y(e) {
                     forceLevel: 1,
                     children: (0, r.jsxs)("div", {
                         ref: P,
-                        className: s()(h.outerContainer, { [h.fullScreenOnMobile]: E }),
+                        className: s()(h.outerContainer, {
+                            [h.fullScreenOnMobile]: E,
+                        }),
                         children: [
                             I,
                             (0, r.jsx)(o.animated.div, {

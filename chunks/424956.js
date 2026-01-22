@@ -1,6 +1,9 @@
-n.d(t, { p: () => l });
+n.d(t, {
+    p: () => l,
+});
 var r = n(64700),
     i = n(965660);
+
 function l(e) {
     let { guildDiscoveryCardSeenManager: t, loadId: n } = e,
         l = r.useCallback(

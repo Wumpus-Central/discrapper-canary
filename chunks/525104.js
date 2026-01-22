@@ -1,9 +1,14 @@
-n.d(t, { A: () => c }), n(321073), n(896048);
+n.d(t, {
+    A: () => c,
+}),
+    n(321073),
+    n(896048);
 var r = n(64700),
     i = n(311907),
     l = n(555337),
     s = n(645619),
     a = n(743981);
+
 function c() {
     let e = (0, i.bG)([l.A], () => l.A.getGuild()),
         t = (0, i.bG)([s.A], () => {
@@ -11,7 +16,9 @@ function c() {
             return null == (t = s.A.getStateForGuild(null == e ? void 0 : e.id)) ? void 0 : t.allPowerups;
         });
     return (0, r.useMemo)(() => {
-        let n = a.hc.map((e) => ({ kind: e })),
+        let n = a.hc.map((e) => ({
+                kind: e,
+            })),
             r = [];
         return (
             (null == e ? void 0 : e.features) == null ||

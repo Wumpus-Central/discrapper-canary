@@ -1,6 +1,10 @@
-n.d(t, { A: () => a }), n(896048);
+n.d(t, {
+    A: () => a,
+}),
+    n(896048);
 var r = n(64700),
     i = n(249522);
+
 function a(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "vertical",
         [n] = (0, r.useState)(

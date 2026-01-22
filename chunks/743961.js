@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968),
     i = n(64700),
     a = n(397927),
@@ -6,6 +8,7 @@ var r = n(627968),
     o = n(112715),
     l = n(577806),
     c = n(279423);
+
 function u(e) {
     let { node: t } = e,
         {
@@ -35,13 +38,26 @@ function u(e) {
                 (0, r.jsx)("div", {
                     "data-settings-category-key": b ? t.key : void 0,
                     "aria-hidden": !0,
-                    style: { height: 1 },
+                    style: {
+                        height: 1,
+                    },
                 }),
                 (0, r.jsxs)(a.BJc, {
                     gap: 16,
                     children: [
-                        null != E && (0, r.jsx)(c.A, { notice: E }),
-                        f.map((e) => (0, r.jsx)(s.A, { node: e }, e.key)),
+                        null != E &&
+                            (0, r.jsx)(c.A, {
+                                notice: E,
+                            }),
+                        f.map((e) =>
+                            (0, r.jsx)(
+                                s.A,
+                                {
+                                    node: e,
+                                },
+                                e.key,
+                            ),
+                        ),
                     ],
                 }),
             ],

@@ -1,4 +1,7 @@
-n.d(t, { _: () => p }), n(228524);
+n.d(t, {
+    _: () => p,
+}),
+    n(228524);
 var r = n(627968);
 n(64700);
 var i = n(554146),
@@ -45,7 +48,9 @@ let p = (e) => {
                                     initialPlanId: null,
                                     analyticsLocations: p,
                                     analyticsLocation: null == e ? void 0 : e.analyticsLocation,
-                                    analyticsObject: { page: null == e ? void 0 : e.analyticsPage },
+                                    analyticsObject: {
+                                        page: null == e ? void 0 : e.analyticsPage,
+                                    },
                                 });
                             },
                             noticeType: n,

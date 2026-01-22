@@ -1,4 +1,6 @@
-n.d(t, { A: () => A });
+n.d(t, {
+    A: () => A,
+});
 var r = n(627968),
     l = n(64700),
     i = n(688807),
@@ -17,6 +19,7 @@ var r = n(627968),
     O = n(18983),
     j = n(985018),
     x = n(935915);
+
 function h(e) {
     let { item: t, index: n, wishlistId: l, onReorder: i, children: a } = e,
         { manageFocusOnReorder: s } = (0, y.r)();
@@ -25,8 +28,12 @@ function h(e) {
         itemId: String(t.skuId),
         listType: String(l),
         itemType: "WISHLIST_ITEM",
-        itemPreviewProps: { item: t },
-        "aria-label": j.intl.formatToPlainString(j.t["7SnyMA"], { positionNumber: n + 1 }),
+        itemPreviewProps: {
+            item: t,
+        },
+        "aria-label": j.intl.formatToPlainString(j.t["7SnyMA"], {
+            positionNumber: n + 1,
+        }),
         onReorder: i,
         onEnd: () => s(String(t.skuId)),
         className: x.C,
@@ -99,14 +106,21 @@ let v = l.memo(function (e) {
                   children: j,
               }),
           })
-        : (0, r.jsx)("li", { children: j });
+        : (0, r.jsx)("li", {
+              children: j,
+          });
 });
+
 function A(e) {
     let { items: t, profileOwner: n, isOwner: s } = e,
         o = b.default.getCurrentUser(),
-        { defaultWishlistId: f } = (0, a.cf)([g.A], () => ({ defaultWishlistId: g.A.getFirstWishlistId(n.id) })),
+        { defaultWishlistId: f } = (0, a.cf)([g.A], () => ({
+            defaultWishlistId: g.A.getFirstWishlistId(n.id),
+        })),
         m = (0, p.u)(t, s),
-        { isDragging: O } = (0, i.V)((e) => ({ isDragging: e.isDragging() })),
+        { isDragging: O } = (0, i.V)((e) => ({
+            isDragging: e.isDragging(),
+        })),
         j = l.useCallback(
             (e, n) => {
                 if (e === n || null == f || 0 === t.length || e < 0 || e >= t.length || n < 0 || n >= t.length) return;

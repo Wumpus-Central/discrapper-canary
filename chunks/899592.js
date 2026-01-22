@@ -1,9 +1,12 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var a = n(627968),
     l = n(64700),
-    i = n(432022),
+    i = n(108531),
     r = n(568329),
     s = n(963713);
+
 function o() {
     let {
             expansionSpring: e,

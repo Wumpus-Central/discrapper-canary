@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -11,6 +13,7 @@ var r = n(627968),
     f = n(506164),
     p = n(985018),
     h = n(635510);
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +39,7 @@ function b(e) {
     }
     return e;
 }
+
 function g(e) {
     var t, n;
     let { guild: i, channelId: a } = e,
@@ -79,7 +83,9 @@ function g(e) {
             null != i && o.A.nsfwAgree(i.id);
         }, [i]),
         y = l.useCallback(() => {
-            c.A.showAgeVerificationGetStartedModal({ entryPoint: u.q1.NSFW_GUILD });
+            c.A.showAgeVerificationGetStartedModal({
+                entryPoint: u.q1.NSFW_GUILD,
+            });
         }, []),
         O =
             ((t = b({}, g)),

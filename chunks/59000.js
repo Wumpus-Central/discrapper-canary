@@ -1,4 +1,6 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var r = n(627968),
     l = n(64700),
     i = n(582754),
@@ -27,7 +29,9 @@ let b = () => {
                         icon: a.N$i,
                         "aria-hidden": !0,
                     }),
-                    (0, r.jsx)(c.A.Title, { children: d.intl.string(d.t["8LKchl"]) }),
+                    (0, r.jsx)(c.A.Title, {
+                        children: d.intl.string(d.t["8LKchl"]),
+                    }),
                 ],
             }),
             (0, r.jsxs)("div", {

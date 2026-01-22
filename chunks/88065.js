@@ -1,4 +1,8 @@
-n.d(t, { A: () => L }), n(896048), n(938796);
+n.d(t, {
+    A: () => L,
+}),
+    n(896048),
+    n(938796);
 var r = n(735438),
     i = n.n(r),
     l = n(179771),
@@ -25,7 +29,11 @@ var r = n(735438),
     C = n(639621),
     N = n(613057),
     T = n(652215);
-let j = (e) => (0, I.A)(e).required().keys({ channel_id: e.string().required() });
+let j = (e) =>
+    (0, I.A)(e).required().keys({
+        channel_id: e.string().required(),
+    });
+
 function x(e) {
     let {
             args: { channel_id: t },
@@ -33,27 +41,55 @@ function x(e) {
         } = e,
         r = f.A.getChannel(t);
     if (null == r || !(0, O.B_)(r, n.application.id, n.authorization.scopes))
-        throw new E.A({ errorCode: T.Lw6.INVALID_CHANNEL }, "Invalid channel id: ".concat(t));
-    if ((0, o.$v)(r)) throw new E.A({ errorCode: T.Lw6.INVALID_CHANNEL }, "Invalid nsfw channel id: ".concat(r.id));
+        throw new E.A(
+            {
+                errorCode: T.Lw6.INVALID_CHANNEL,
+            },
+            "Invalid channel id: ".concat(t),
+        );
+    if ((0, o.$v)(r))
+        throw new E.A(
+            {
+                errorCode: T.Lw6.INVALID_CHANNEL,
+            },
+            "Invalid nsfw channel id: ".concat(r.id),
+        );
 }
-let P = (e) => (0, I.A)(e).keys({ channel_id: e.string().allow(null) });
+let P = (e) =>
+    (0, I.A)(e).keys({
+        channel_id: e.string().allow(null),
+    });
+
 function w(e) {
     let {
         args: { channel_id: t },
     } = e;
     if (null != t && null == f.A.getChannel(t))
-        throw new E.A({ errorCode: T.Lw6.INVALID_CHANNEL }, "Invalid channel id: ".concat(t));
+        throw new E.A(
+            {
+                errorCode: T.Lw6.INVALID_CHANNEL,
+            },
+            "Invalid channel id: ".concat(t),
+        );
 }
 let L = {
     [T.ZE4.GUILD_STATUS]: {
         scope: l.F.RPC,
-        validation: (e) => (0, I.A)(e).required().keys({ guild_id: e.string().required() }),
+        validation: (e) =>
+            (0, I.A)(e).required().keys({
+                guild_id: e.string().required(),
+            }),
         handler(e) {
             let {
                 args: { guild_id: t },
             } = e;
             if (null == A.A.getGuild(t))
-                throw new E.A({ errorCode: T.Lw6.INVALID_GUILD }, "Invalid guild id: ".concat(t));
+                throw new E.A(
+                    {
+                        errorCode: T.Lw6.INVALID_GUILD,
+                    },
+                    "Invalid guild id: ".concat(t),
+                );
             return (e) => {
                 var n;
                 let { prevState: r, dispatch: l } = e,
@@ -75,13 +111,21 @@ let L = {
         scope: {
             [N.sm.ANY]: [l.F.RPC, l.F.RPC_VOICE_READ],
         },
-        validation: (e) => (0, I.A)(e).required().keys({ channel_id: e.string().required() }),
+        validation: (e) =>
+            (0, I.A)(e).required().keys({
+                channel_id: e.string().required(),
+            }),
         handler(e) {
             let {
                 args: { channel_id: t },
             } = e;
             if (null == f.A.getChannel(t))
-                throw new E.A({ errorCode: T.Lw6.INVALID_CHANNEL }, "Invalid channel id: ".concat(t));
+                throw new E.A(
+                    {
+                        errorCode: T.Lw6.INVALID_CHANNEL,
+                    },
+                    "Invalid channel id: ".concat(t),
+                );
             return (e) => {
                 let { prevState: n, dispatch: r } = e,
                     l = f.A.getChannel(t);
@@ -105,13 +149,21 @@ let L = {
         scope: {
             [N.sm.ANY]: [l.F.RPC, l.F.RPC_VOICE_READ],
         },
-        validation: (e) => (0, I.A)(e).required().keys({ channel_id: e.string().required() }),
+        validation: (e) =>
+            (0, I.A)(e).required().keys({
+                channel_id: e.string().required(),
+            }),
         handler(e) {
             let {
                 args: { channel_id: t },
             } = e;
             if (null == f.A.getChannel(t))
-                throw new E.A({ errorCode: T.Lw6.INVALID_CHANNEL }, "Invalid channel id: ".concat(t));
+                throw new E.A(
+                    {
+                        errorCode: T.Lw6.INVALID_CHANNEL,
+                    },
+                    "Invalid channel id: ".concat(t),
+                );
             return (e) => {
                 let { prevState: n, dispatch: r } = e,
                     l = f.A.getChannel(t);
@@ -134,13 +186,21 @@ let L = {
         scope: {
             [N.sm.ANY]: [l.F.RPC, l.F.RPC_VOICE_READ],
         },
-        validation: (e) => (0, I.A)(e).required().keys({ channel_id: e.string().required() }),
+        validation: (e) =>
+            (0, I.A)(e).required().keys({
+                channel_id: e.string().required(),
+            }),
         handler(e) {
             let {
                 args: { channel_id: t },
             } = e;
             if (null == f.A.getChannel(t))
-                throw new E.A({ errorCode: T.Lw6.INVALID_CHANNEL }, "Invalid channel id: ".concat(t));
+                throw new E.A(
+                    {
+                        errorCode: T.Lw6.INVALID_CHANNEL,
+                    },
+                    "Invalid channel id: ".concat(t),
+                );
             return (e) => {
                 let { prevState: n, dispatch: r } = e,
                     l = f.A.getChannel(t);
@@ -259,11 +319,15 @@ let L = {
     },
     [T.ZE4.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE]: y.t$,
     [T.ZE4.THERMAL_STATE_UPDATE]: {
-        scope: { [N.sm.ANY]: [N.VH] },
+        scope: {
+            [N.sm.ANY]: [N.VH],
+        },
         handler() {},
     },
     [T.ZE4.ORIENTATION_UPDATE]: {
-        scope: { [N.sm.ANY]: [N.VH] },
+        scope: {
+            [N.sm.ANY]: [N.VH],
+        },
         handler() {},
     },
     [T.ZE4.VOICE_CHANNEL_SELECT]: {
@@ -282,7 +346,12 @@ let L = {
             var t;
             let { socket: n } = e;
             if (a.zy(a.iu(null != (t = n.application.flags) ? t : 0), a.iu(T.gfo.DISABLE_RELATIONSHIPS_ACCESS)))
-                throw new E.A({ errorCode: T.Lw6.INVALID_PERMISSIONS }, "Missing Permissions");
+                throw new E.A(
+                    {
+                        errorCode: T.Lw6.INVALID_PERMISSIONS,
+                    },
+                    "Missing Permissions",
+                );
         },
     },
     [T.ZE4.CURRENT_USER_UPDATE]: {
@@ -291,7 +360,9 @@ let L = {
         },
         handler: () => (e) => {
             let { prevState: t, dispatch: n } = e,
-                r = { currentUser: b.default.getCurrentUser() };
+                r = {
+                    currentUser: b.default.getCurrentUser(),
+                };
             return null == r.currentUser || (null != t && (0, s.A)(r, t)) || n((0, C.A)(r.currentUser)), r;
         },
     },
@@ -305,7 +376,9 @@ let L = {
             } = e;
             return (e) => {
                 let { prevState: n, dispatch: r } = e,
-                    i = { currentGuildMember: h.Ay.getSelfMember(t) };
+                    i = {
+                        currentGuildMember: h.Ay.getSelfMember(t),
+                    };
                 return (
                     null == i.currentGuildMember || (null != n && (0, s.A)(i, n)) || r((0, S.A)(i.currentGuildMember)),
                     i
@@ -340,7 +413,12 @@ let L = {
                 f = {
                     active: null != l,
                     pid: null != (t = null == l ? void 0 : l.pid) ? t : null,
-                    application: null != o ? { name: d } : null,
+                    application:
+                        null != o
+                            ? {
+                                  name: d,
+                              }
+                            : null,
                 };
             return i().isEqual(f, n) || r(f), f;
         },
@@ -351,7 +429,9 @@ let L = {
         },
         handler: () => (e) => {
             let { prevState: t, dispatch: n } = e,
-                r = { active: g.A.isVideoEnabled() };
+                r = {
+                    active: g.A.isVideoEnabled(),
+                };
             return i().isEqual(r, t) || n(r), r;
         },
     },

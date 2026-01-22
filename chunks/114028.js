@@ -1,4 +1,6 @@
-n.d(t, { A: () => j });
+n.d(t, {
+    A: () => j,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -21,6 +23,7 @@ var r = n(627968),
     A = n(788868),
     v = n(985018),
     S = n(198606);
+
 function I(e, t, n) {
     return (
         t in e
@@ -34,6 +37,7 @@ function I(e, t, n) {
         e
     );
 }
+
 function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -50,6 +54,7 @@ function T(e) {
     }
     return e;
 }
+
 function C(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -62,6 +67,7 @@ function C(e, t) {
     }
     return n;
 }
+
 function N(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -75,13 +81,16 @@ function N(e, t) {
 }
 let R = [8, 8, 8, 8],
     w = 40;
+
 function P(e) {
     let { icon: t, isSelected: n, onClick: i, listItemProps: a } = e;
     return (0, r.jsx)(
         u.DUT,
         N(T({}, a), {
             onClick: i,
-            className: s()(S.Yl, { [S.wH]: n }),
+            className: s()(S.Yl, {
+                [S.wH]: n,
+            }),
             children: (0, r.jsx)(t, {
                 className: S.xi,
                 color: "currentColor",
@@ -89,6 +98,7 @@ function P(e) {
         }),
     );
 }
+
 function D(e, t, n, i, a) {
     switch (e.categoryInfo.type) {
         case E.Cx.FAVORITES:
@@ -153,6 +163,7 @@ function D(e, t, n, i, a) {
             return null;
     }
 }
+
 function x(e) {
     switch (e.categoryInfo.type) {
         case E.Cx.FAVORITES:
@@ -167,6 +178,7 @@ function x(e) {
             return v.intl.string(v.t.Rtvk9X);
     }
 }
+
 function L(e) {
     let { category: t, categoryIndex: n, onClick: i, isSelected: a, isNitroLocked: s } = e,
         l = (0, o.rm)("soundboard_guild_".concat(n));
@@ -182,6 +194,7 @@ function L(e) {
               children: D(t, i, a, l, s),
           });
 }
+
 function j(e) {
     let {
             soundboardListRef: t,
@@ -208,7 +221,9 @@ function j(e) {
                 let s = a && (0, b.B)(e.categoryInfo, I, o),
                     l = () => {
                         m.default.track(y.HAw.EXPRESSION_PICKER_CATEGORY_SELECTED, {
-                            location: { page: y.liQ.SOUNDBOARD_POPOUT },
+                            location: {
+                                page: y.liQ.SOUNDBOARD_POPOUT,
+                            },
                             guild_id: null != o ? o : null,
                             num_expressions: e.items.length,
                             tab: O.kx.SOUNDBOARD,

@@ -1,7 +1,10 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(496431);
-let i = 60000,
-    a = 1200000;
+let i = 6e4,
+    a = 12e5;
+
 function s(e) {
     return e.minutes > 0 || e.seconds > 0
         ? 23 === e.hours
@@ -19,6 +22,7 @@ function s(e) {
               }
         : e;
 }
+
 function o(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = e.clone();

@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var l = n(64700),
     r = n(735438),
     i = n.n(r),
@@ -6,6 +8,7 @@ var l = n(64700),
     s = n(451988),
     o = n(318937),
     c = n(134753);
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -31,6 +34,7 @@ function u(e) {
     }
     return e;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -50,7 +54,10 @@ function d(e, t) {
     );
 }
 n(824217);
-let f = i().debounce(o.W9, 500, { maxWait: 500 });
+let f = i().debounce(o.W9, 500, {
+    maxWait: 500,
+});
+
 function p(e, t, n) {
     let r = l.useRef((0, a.A)()),
         i = l.useRef(new s.IX()),
@@ -71,7 +78,7 @@ function p(e, t, n) {
                     state: c.B.START,
                     lastUpdatedAt: Date.now(),
                 });
-                (0, o.W9)(t, n, b), (0, o.Rl)(b, e, n), i.current.start(5000, () => p(b));
+                (0, o.W9)(t, n, b), (0, o.Rl)(b, e, n), i.current.start(5e3, () => p(b));
             },
             [e, t, n, p],
         ),
@@ -85,7 +92,7 @@ function p(e, t, n) {
                     state: c.B.START,
                     lastUpdatedAt: Date.now(),
                 });
-                f(t, n, b), (0, o.Rl)(b, e, n), i.current.start(5000, () => p(b));
+                f(t, n, b), (0, o.Rl)(b, e, n), i.current.start(5e3, () => p(b));
             },
             [e, t, n, p],
         ),

@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var l = n(627968),
     r = n(64700),
     i = n(311907),
@@ -12,6 +14,7 @@ var l = n(627968),
 n(603266);
 var p = n(985018),
     b = n(922401);
+
 function g(e) {
     let { channelId: t } = e,
         n = (0, i.bG)([s.A], () => {
@@ -24,7 +27,9 @@ function g(e) {
             desiredLength: 30,
         }),
         m = r.useCallback(() => {
-            (0, o.k0)({ channelId: t });
+            (0, o.k0)({
+                channelId: t,
+            });
         }, [t]);
     return (0, l.jsxs)("div", {
         className: b.kL,
@@ -72,7 +77,9 @@ function g(e) {
             (0, l.jsx)(a.Text, {
                 variant: "text-xs/normal",
                 color: "text-subtle",
-                children: p.intl.format(p.t.wKxADe, { helpArticle: (0, c.aW)() }),
+                children: p.intl.format(p.t.wKxADe, {
+                    helpArticle: (0, c.aW)(),
+                }),
             }),
         ],
     });

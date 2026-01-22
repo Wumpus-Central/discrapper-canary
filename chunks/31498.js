@@ -12,6 +12,7 @@ var r = n(143236),
     l = n(253932),
     c = n(374803),
     u = n(56436);
+
 function d(e, t, n) {
     return (
         t in e
@@ -25,6 +26,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -41,6 +43,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -53,6 +56,7 @@ function p(e, t) {
     }
     return n;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -65,6 +69,7 @@ function _(e, t) {
     );
 }
 let h = ["gameMentionInput", "timestampMentionInput"];
+
 function m() {
     return {
         query: null,
@@ -92,14 +97,21 @@ class g extends r.EventEmitter {
             i = this.props.isEditorIdle !== e.isEditorIdle;
         if (((this.props = e), n || r || i))
             this.updateResultsDebounced(r, n),
-                this.state.didInitialQuery || (this.state = _(f({}, this.state), { didInitialQuery: !0 }));
+                this.state.didInitialQuery ||
+                    (this.state = _(f({}, this.state), {
+                        didInitialQuery: !0,
+                    }));
         else if (t) {
             let e = this.state.query;
-            this.setState({ isVisible: null != e && this.shouldShow(e.resultCount, e.isLoading, e.typeInfo) });
+            this.setState({
+                isVisible: null != e && this.shouldShow(e.resultCount, e.isLoading, e.typeInfo),
+            });
         }
     }
     setSelectedIndex(e) {
-        this.setState({ selectedIndex: e });
+        this.setState({
+            selectedIndex: e,
+        });
     }
     onTabOrEnter(e) {
         var t, n;
@@ -130,7 +142,10 @@ class g extends r.EventEmitter {
         this.emit("update");
     }
     onHideAutocomplete() {
-        null != this.state.query && this.setState({ isVisible: !1 });
+        null != this.state.query &&
+            this.setState({
+                isVisible: !1,
+            });
     }
     onResultHover(e) {
         this.props.navigator.setFocus(null), this.setSelectedIndex(null);
@@ -219,7 +234,9 @@ class g extends r.EventEmitter {
                     guildId: this.props.guild.id,
                     location: "mention autocomplete",
                 },
-                { autoTrackExposure: !0 },
+                {
+                    autoTrackExposure: !0,
+                },
             ).enabled;
         N && !this.state.isVisible && (0, a.uA)(E, this.props.channel, I, w),
             this.setState({

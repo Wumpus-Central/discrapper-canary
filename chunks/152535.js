@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968),
     l = n(64700),
     i = n(533781),
@@ -10,6 +12,7 @@ var r = n(627968),
     d = n(709562),
     f = n(376086),
     p = n(985018);
+
 function h(e) {
     let { channel: t, themeable: n, whichPopoutIsOpen: h, setWhichPopoutIsOpen: b } = e,
         { parentAnalyticsLocation: g } = (0, s.Ay)(),

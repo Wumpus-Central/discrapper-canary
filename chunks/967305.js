@@ -15,10 +15,12 @@ var r = n(284009),
     f = n(652215),
     p = n(746080);
 let _ = {};
+
 function h(e) {
     var t;
     null == (t = _[e]) || t.call(_), (_[e] = null);
 }
+
 function m(e) {
     _[e] = null;
 }
@@ -35,6 +37,7 @@ async function g(e) {
         u.Ay.shouldShowOnboarding(t) && (await E(t), null != n && (0, o.pX)(f.BVt.CHANNEL(t, n)));
     }
 }
+
 function E(e) {
     return new Promise((t) => {
         (_[e] = t),
@@ -44,6 +47,7 @@ function E(e) {
             (0, o.pX)(f.BVt.CHANNEL(e, p.VV.GUILD_ONBOARDING));
     });
 }
+
 function b(e) {
     return null != _[e];
 }

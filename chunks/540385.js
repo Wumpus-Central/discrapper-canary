@@ -12,6 +12,7 @@ var r = n(627968),
     s = n(114212),
     o = n(652215),
     c = n(525853);
+
 function u(e) {
     let { compact: t, messageGroups: n, groupRange: r, attachments: l, fontSize: i, groupSpacing: c } = e;
     if (l > n)
@@ -42,6 +43,7 @@ function u(e) {
         groupSpacing: c,
     };
 }
+
 function d(e) {
     let { compact: t, messages: n, attachmentSpecs: i, totalHeight: a, groupSpacing: o } = e;
     return l.useMemo(() => {
@@ -49,7 +51,9 @@ function d(e) {
         for (let [t, n] of i) e[t] = n;
         return (0, r.jsx)("div", {
             className: c.i,
-            style: { height: a },
+            style: {
+                height: a,
+            },
             children: n.map((n, l) =>
                 (0, r.jsx)(
                     s.Ay,

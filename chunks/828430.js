@@ -1,4 +1,6 @@
-n.d(t, { A: () => E });
+n.d(t, {
+    A: () => E,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -15,6 +17,7 @@ var i = n(397927),
     A = n(204925),
     g = n(652215),
     m = n(835002);
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -73,7 +76,16 @@ class _ extends a.A {
         (0, i.mMO)(
             async () => {
                 let { default: e } = await Promise.all([n.e("10136"), n.e("40709")]).then(n.bind(n, 776971));
-                return (n) => (0, r.jsx)(e, b({ source: t }, n));
+                return (n) =>
+                    (0, r.jsx)(
+                        e,
+                        b(
+                            {
+                                source: t,
+                            },
+                            n,
+                        ),
+                    );
             },
             {
                 modalKey: A.Uy,
@@ -87,7 +99,17 @@ class _ extends a.A {
     }
     handleAgeGateFailure(e) {
         let { underageMessage: t } = e;
-        (0, i.zbz)(A.Uy, (e) => (0, r.jsx)(h.default, b({ underageMessage: t }, e)));
+        (0, i.zbz)(A.Uy, (e) =>
+            (0, r.jsx)(
+                h.default,
+                b(
+                    {
+                        underageMessage: t,
+                    },
+                    e,
+                ),
+            ),
+        );
     }
     handleAgeGateModalClose() {
         (0, i.OoC)(A.Uy);

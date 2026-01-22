@@ -12,6 +12,7 @@ var i = n(735438),
     o = n(645745),
     d = n(468287),
     u = n(985018);
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,6 +38,7 @@ function f(e) {
     }
     return e;
 }
+
 function g(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -55,6 +57,7 @@ function g(e, t) {
         e
     );
 }
+
 function b(e) {
     let {
             dropHoveredIndex: t,
@@ -122,15 +125,40 @@ function b(e) {
                 ),
             );
         case s.rX.PARAGRAPH:
-            return (0, r.jsx)(c.A, f({ formField: b }, P));
+            return (0, r.jsx)(
+                c.A,
+                f(
+                    {
+                        formField: b,
+                    },
+                    P,
+                ),
+            );
         case s.rX.TEXT_INPUT:
-            return (0, r.jsx)(d.A, f({ formField: b }, P));
+            return (0, r.jsx)(
+                d.A,
+                f(
+                    {
+                        formField: b,
+                    },
+                    P,
+                ),
+            );
         case s.rX.MULTIPLE_CHOICE:
-            return (0, r.jsx)(a.A, f({ formField: b }, P));
+            return (0, r.jsx)(
+                a.A,
+                f(
+                    {
+                        formField: b,
+                    },
+                    P,
+                ),
+            );
         default:
             return null;
     }
 }
+
 function m(e, t, i) {
     switch (e) {
         case s.rX.TERMS:
@@ -184,6 +212,7 @@ function m(e, t, i) {
             });
     }
 }
+
 function p(e, t, i) {
     switch (e.field_type) {
         case s.rX.TERMS:

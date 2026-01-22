@@ -36,6 +36,7 @@ var r = n(284009),
     R = n(951727),
     w = n(652215),
     P = n(985018);
+
 function D(e, t, n) {
     return (
         t in e
@@ -49,6 +50,7 @@ function D(e, t, n) {
         e
     );
 }
+
 function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -65,6 +67,7 @@ function x(e) {
     }
     return e;
 }
+
 function L(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -77,6 +80,7 @@ function L(e, t) {
     }
     return n;
 }
+
 function j(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -88,6 +92,7 @@ function j(e, t) {
         e
     );
 }
+
 function M(e, t) {
     if (null == e) return {};
     var n,
@@ -104,6 +109,7 @@ function M(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function k(e, t) {
     if (null == e) return {};
     var n,
@@ -114,6 +120,7 @@ function k(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function U(e) {
     let { channelId: t, messageId: n } = e,
         r = S.A.getMessage(t, n);
@@ -132,6 +139,7 @@ function U(e) {
         };
     throw (i()(null != r, "Tapped on a non-existent poll message"), Error());
 }
+
 function G(e, t) {
     let n = [...t],
         r = 0,
@@ -147,6 +155,7 @@ function G(e, t) {
         selectedEmojiAnswersCount: i,
     };
 }
+
 function V(e) {
     let { guildId: t, title: n, body: r } = e;
     d.A.show({
@@ -155,10 +164,13 @@ function V(e) {
         confirmText: P.intl.string(P.t["9VLmlZ"]),
         cancelText: P.intl.string(P.t["2m+Sqk"]),
         onConfirm: () => {
-            f.A.joinGuild(t, { source: w.Q4z.POLL_ALERT });
+            f.A.joinGuild(t, {
+                source: w.Q4z.POLL_ALERT,
+            });
         },
     });
 }
+
 function F(e) {
     let { channelId: t, messageId: n, answerId: r } = e,
         i = O.A.getChannel(t);
@@ -177,6 +189,7 @@ function F(e) {
         initialAnswerId: s,
     });
 }
+
 function B(e) {
     let { channelId: t, messageId: n, isEditing: r } = e;
     (0, N.A2)(t, n, (e) => {
@@ -190,6 +203,7 @@ function B(e) {
         };
     });
 }
+
 function H(e) {
     let { channelId: t, messageId: n } = e,
         r = S.A.getMessage(t, n);
@@ -327,6 +341,7 @@ async function K(e) {
                   messageId: n,
               }));
 }
+
 function z(e) {
     let { channelId: t, messageId: n } = e;
     (0, N.A2)(t, n, (e) => {
@@ -467,7 +482,9 @@ let X = {
             u = r.map((e) => {
                 var t, n;
                 let r = null == c ? void 0 : c.findIndex((t) => t.id === e.localCreationAnswerId),
-                    i = { attachment_ids: -1 !== r ? ["".concat(r)] : void 0 };
+                    i = {
+                        attachment_ids: -1 !== r ? ["".concat(r)] : void 0,
+                    };
                 s === o.Z.DEFAULT && (i.text = null == (n = e.text) ? void 0 : n.trim());
                 let a = null == (t = e.image) ? void 0 : t.emoji;
                 return (
@@ -477,12 +494,19 @@ let X = {
                                   id: a.id,
                                   name: "",
                               })
-                            : null != a.optionallyDiverseSequence && (i.emoji = { name: a.optionallyDiverseSequence })),
-                    { poll_media: i }
+                            : null != a.optionallyDiverseSequence &&
+                              (i.emoji = {
+                                  name: a.optionallyDiverseSequence,
+                              })),
+                    {
+                        poll_media: i,
+                    }
                 );
             }),
             d = {
-                question: { text: n.trim() },
+                question: {
+                    text: n.trim(),
+                },
                 answers: u,
                 allow_multiselect: i,
                 duration: a,
@@ -504,7 +528,9 @@ let X = {
                 null == l || l();
         } catch (e) {
             if ("poll" === (e instanceof _.LG ? e : new _.LG(e)).getAnyErrorMessage() && null != e.text)
-                throw j(x({}, e), { body: JSON.parse(e.text) });
+                throw j(x({}, e), {
+                    body: JSON.parse(e.text),
+                });
             throw e;
         }
     },

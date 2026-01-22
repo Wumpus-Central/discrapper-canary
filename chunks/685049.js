@@ -10,6 +10,7 @@ var r = n(627968),
     o = n(617086),
     c = n(985018),
     u = n(418061);
+
 function d(e) {
     let { applicationId: t } = e,
         n = (function (e, t) {
@@ -73,7 +74,9 @@ function d(e) {
                   return e;
               })(
                   {
-                      label: c.intl.formatToPlainString(c.t.ujhJdG, { numFriends: l.length }),
+                      label: c.intl.formatToPlainString(c.t.ujhJdG, {
+                          numFriends: l.length,
+                      }),
                       users: l,
                       maxUsers: 4,
                   },
@@ -82,6 +85,7 @@ function d(e) {
           )
         : null;
 }
+
 function f(e) {
     var t, n, d;
     let f,
@@ -94,7 +98,9 @@ function f(e) {
             (d = m),
             (f = t.slice(0, 3).map((e) => a.Ay.getName(n, d, e))),
             1 === t.length
-                ? c.intl.formatToPlainString(c.t.FURqTU, { name: f[0] })
+                ? c.intl.formatToPlainString(c.t.FURqTU, {
+                      name: f[0],
+                  })
                 : 2 === t.length
                   ? c.intl.formatToPlainString(c.t["08Usu/"], {
                         name1: f[0],

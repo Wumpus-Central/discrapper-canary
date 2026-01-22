@@ -1,4 +1,8 @@
-r.d(t, { A: () => G }), r(896048), r(264879);
+r.d(t, {
+    A: () => G,
+}),
+    r(896048),
+    r(264879);
 var s = r(627968),
     l = r(64700),
     n = r(503698),
@@ -26,6 +30,7 @@ var s = r(627968),
     Z = r(652215),
     _ = r(985018),
     M = r(79048);
+
 function G(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         [r, n] = l.useState(""),
@@ -41,13 +46,22 @@ function G(e) {
                 } catch (e) {
                     C.A.verifySSOToken("accept_guild_template", null);
                 }
-            null != e && n(_.intl.formatToPlainString(u.defaultName, { username: e.username }));
+            null != e &&
+                n(
+                    _.intl.formatToPlainString(u.defaultName, {
+                        username: e.username,
+                    }),
+                );
         })();
     }, [u.defaultName]),
         (0, I.A)(e);
     let x = (0, s.jsxs)(s.Fragment, {
             children: [
-                t ? (0, s.jsx)(b.A, { guildTemplate: e }) : null,
+                t
+                    ? (0, s.jsx)(b.A, {
+                          guildTemplate: e,
+                      })
+                    : null,
                 (0, s.jsx)("div", {
                     className: M.Kk,
                     children: (0, s.jsx)(h.A, {
@@ -57,7 +71,9 @@ function G(e) {
                 }),
                 (0, s.jsx)(o.ksK, {
                     label: u.nameLabel,
-                    helperText: _.intl.format(u.terms, { guidelinesURL: Z.X7G.GUIDELINES }),
+                    helperText: _.intl.format(u.terms, {
+                        guidelinesURL: Z.X7G.GUIDELINES,
+                    }),
                     type: "text",
                     value: r,
                     maxLength: 100,
@@ -75,7 +91,9 @@ function G(e) {
                 (0, s.jsx)(o.D0$, {
                     label: _.intl.string(_.t.Zxk1OF),
                     helperText: _.intl.string(_.t.de7DpI),
-                    children: (0, s.jsx)(S, { channels: e.serializedSourceGuild.channels }),
+                    children: (0, s.jsx)(S, {
+                        channels: e.serializedSourceGuild.channels,
+                    }),
                 }),
                 g.length > 0
                     ? (0, s.jsx)(o.D0$, {
@@ -97,19 +115,26 @@ function G(e) {
         },
     };
 }
+
 function S(e) {
     let { channels: t } = e,
         r = d()(t)
-            .sortBy((e) => (null == e.parent_id ? 10000 * Number(e.id) : 10000 * Number(e.parent_id) + e.id))
+            .sortBy((e) => (null == e.parent_id ? 1e4 * Number(e.id) : 1e4 * Number(e.parent_id) + e.id))
             .map((e) => {
                 var t;
                 let r = (t = e).type === Z.rbe.GUILD_CATEGORY ? j.A : (0, x.gU)((0, p.UE)(t));
                 return (0, s.jsxs)(
                     "div",
                     {
-                        className: i()(M.Ix, { [M.L1]: e.type === Z.rbe.GUILD_CATEGORY }),
+                        className: i()(M.Ix, {
+                            [M.L1]: e.type === Z.rbe.GUILD_CATEGORY,
+                        }),
                         children: [
-                            null != r ? (0, s.jsx)(r, { className: M.p }) : null,
+                            null != r
+                                ? (0, s.jsx)(r, {
+                                      className: M.p,
+                                  })
+                                : null,
                             (0, s.jsx)(o.Text, {
                                 className: M.be,
                                 variant: "text-sm/normal",
@@ -126,6 +151,7 @@ function S(e) {
         children: r,
     });
 }
+
 function T(e) {
     let { guildId: t, roles: r } = e,
         l = r
@@ -146,6 +172,7 @@ function T(e) {
         children: l,
     });
 }
+
 function H(e) {
     var t, r;
     let { guildId: l, role: n } = e,

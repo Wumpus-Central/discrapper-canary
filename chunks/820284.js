@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r,
     i = n(627968),
     a = n(64700),
@@ -6,6 +8,7 @@ var r,
     o = n(954571),
     l = n(583613),
     c = n(652215);
+
 function u(e, t, n) {
     return (
         t in e
@@ -19,6 +22,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -54,7 +58,9 @@ class f extends (r = a.Component) {
         let { context: e } = this.props;
         return null != e
             ? this.renderProvider(e)
-            : (0, i.jsx)(o.AnalyticsContext.Consumer, { children: (e) => this.renderProvider(e) });
+            : (0, i.jsx)(o.AnalyticsContext.Consumer, {
+                  children: (e) => this.renderProvider(e),
+              });
     }
     constructor(e) {
         super(e),
@@ -95,4 +101,6 @@ u(f, "Pages", c.liQ),
     u(f, "Sections", c.JJy),
     u(f, "Objects", c.ZSU),
     u(f, "ObjectTypes", c.AnalyticsObjectTypes),
-    u(f, "defaultProps", { root: !1 });
+    u(f, "defaultProps", {
+        root: !1,
+    });

@@ -1,4 +1,7 @@
-n.d(t, { A: () => O }), n(896048);
+n.d(t, {
+    A: () => O,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -17,6 +20,7 @@ var r = n(627968),
     b = n(622865),
     _ = n(985018),
     E = n(415449);
+
 function O(e) {
     let { className: t } = e,
         [n, l] = (0, d.kn)([c.M.CHECKPOINT_2025_DESKTOP_UPSELL]),
@@ -52,7 +56,10 @@ function O(e) {
                         },
                     ],
                 }),
-            I && (0, r.jsx)(g.A, { markAsDismissed: l }),
+            I &&
+                (0, r.jsx)(g.A, {
+                    markAsDismissed: l,
+                }),
         ],
     });
 }

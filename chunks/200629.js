@@ -1,10 +1,14 @@
-r.d(e, { default: () => o }), r(896048);
+r.d(e, {
+    default: () => o,
+}),
+    r(896048);
 var n = r(627968);
 r(64700);
 var i = r(158954),
     l = r(366098),
     s = r(918192),
     a = r(985018);
+
 function o(t) {
     let { channel: e, onAccept: r, transitionState: o, onClose: c } = t,
         d = (0, l.mT)(e.id),
@@ -29,10 +33,16 @@ function o(t) {
         title: (function (t) {
             let { blockedUsersCount: e, ignoredUsersCount: r } = t;
             return e > 0 && r > 0
-                ? a.intl.formatToPlainString(a.t.Uzdyho, { number: e + r })
+                ? a.intl.formatToPlainString(a.t.Uzdyho, {
+                      number: e + r,
+                  })
                 : r > 0
-                  ? a.intl.formatToPlainString(a.t.wvygk8, { number: r })
-                  : a.intl.formatToPlainString(a.t.HviVA9, { number: e });
+                  ? a.intl.formatToPlainString(a.t.wvygk8, {
+                        number: r,
+                    })
+                  : a.intl.formatToPlainString(a.t.HviVA9, {
+                        number: e,
+                    });
         })({
             blockedUsersCount: d.length,
             ignoredUsersCount: u.length,
@@ -42,8 +52,12 @@ function o(t) {
             return e > 0 && r > 0
                 ? a.intl.string(a.t["P/KFXz"])
                 : r > 0
-                  ? a.intl.format(a.t.Ri3o33, { number: r })
-                  : a.intl.format(a.t["28qZMU"], { number: e });
+                  ? a.intl.format(a.t.Ri3o33, {
+                        number: r,
+                    })
+                  : a.intl.format(a.t["28qZMU"], {
+                        number: e,
+                    });
         })({
             blockedUsersCount: d.length,
             ignoredUsersCount: u.length,

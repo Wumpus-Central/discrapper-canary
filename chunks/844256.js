@@ -1,10 +1,13 @@
-n.d(t, { X: () => f });
+n.d(t, {
+    X: () => f,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
     a = n(206845),
     s = n(698776),
     o = n(985018);
+
 function l(e, t, n) {
     return (
         t in e
@@ -18,6 +21,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,6 +38,7 @@ function c(e) {
     }
     return e;
 }
+
 function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -46,6 +51,7 @@ function u(e, t) {
     }
     return n;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -67,7 +73,9 @@ let f = {
                 let { skuId: t } = e;
                 return (0, r.jsxs)("div", {
                     children: [
-                        (0, r.jsx)(s.A, { skuId: t }),
+                        (0, r.jsx)(s.A, {
+                            skuId: t,
+                        }),
                         (0, r.jsx)("hr", {}),
                         (0, r.jsx)(i.Text, {
                             variant: "text-md/bold",
@@ -89,7 +97,9 @@ let f = {
                                         (0, r.jsx)(
                                             i.DUT,
                                             d(c({}, e), {
-                                                style: { cursor: "pointer" },
+                                                style: {
+                                                    cursor: "pointer",
+                                                },
                                                 children: (0, r.jsx)(i.Text, {
                                                     variant: "text-sm/normal",
                                                     children: "1458472704192811088",
@@ -115,7 +125,9 @@ let f = {
                                         (0, r.jsx)(
                                             i.DUT,
                                             d(c({}, e), {
-                                                style: { cursor: "pointer" },
+                                                style: {
+                                                    cursor: "pointer",
+                                                },
                                                 children: (0, r.jsx)(i.Text, {
                                                     variant: "text-sm/normal",
                                                     children: "1458479739110166560",
@@ -141,7 +153,9 @@ let f = {
                                         (0, r.jsx)(
                                             i.DUT,
                                             d(c({}, e), {
-                                                style: { cursor: "pointer" },
+                                                style: {
+                                                    cursor: "pointer",
+                                                },
                                                 children: (0, r.jsx)(i.Text, {
                                                     variant: "text-sm/normal",
                                                     children: "1458472704524156959",

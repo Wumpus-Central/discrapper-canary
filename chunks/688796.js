@@ -17,6 +17,7 @@ var a = n(397927),
     b = n(339984),
     u = n(985018),
     L = n(698290);
+
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,6 +43,7 @@ function g(e) {
     }
     return e;
 }
+
 function y(e) {
     let { uploadType: t, imageSrc: d, analyticsSource: s } = e,
         o = r.default.getCurrentUser();
@@ -71,6 +73,7 @@ function y(e) {
         !0)
     );
 }
+
 function E(e) {
     let {
             user: t,

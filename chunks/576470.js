@@ -1,4 +1,7 @@
-n.d(i, { A: () => g }), n(896048);
+n.d(i, {
+    A: () => g,
+}),
+    n(896048);
 var e,
     r = n(627968),
     E = n(64700),
@@ -6,6 +9,7 @@ var e,
     l = n.n(s),
     S = n(405269),
     o = n(985018);
+
 function a(t, i, n) {
     return (
         i in t
@@ -68,7 +72,7 @@ class A extends (e = E.PureComponent) {
             return (0, r.jsx)("span", {
                 className: n,
                 "aria-label": o.intl.string(o.t.PqEzn8),
-                children: "\u221E",
+                children: "∞",
             });
         let E = (0, S.Tf)(Date.now(), t, e);
         return null != i ? i(E, this.defaultRender.bind(this, E)) : this.defaultRender(E);
@@ -81,6 +85,6 @@ a(A, "defaultProps", {
     showDays: !0,
     showUnits: !1,
     stopAtOneSec: !1,
-    intervalDuration: 1000,
+    intervalDuration: 1e3,
 });
 let g = A;

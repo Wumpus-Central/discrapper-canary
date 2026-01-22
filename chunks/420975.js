@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var r = n(627968);
 n(64700);
 var l = n(311907),
@@ -10,6 +12,7 @@ var l = n(311907),
     d = n(576705),
     u = n(652215),
     f = n(985018);
+
 function g(e, t) {
     let n = (0, s.Id)(t);
     return !(0, l.bG)([d.A], () => d.A.can(u.xBc.MANAGE_MESSAGES, t) && n, [t, n]) ||

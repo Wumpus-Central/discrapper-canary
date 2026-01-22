@@ -55,6 +55,7 @@ var r = n(627968),
     Q = n(49999),
     $ = n(307731),
     J = n(836553);
+
 function ee(e, t, n) {
     return (
         t in e
@@ -68,6 +69,7 @@ function ee(e, t, n) {
         e
     );
 }
+
 function et(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -84,6 +86,7 @@ function et(e) {
     }
     return e;
 }
+
 function en(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -96,6 +99,7 @@ function en(e, t) {
     }
     return n;
 }
+
 function er(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -142,7 +146,9 @@ let ec = (e, t) => {
                                 ? (0, _.Sw)(e.emoji)
                                 : ((0, k.C5)({
                                       emoji: e.emoji,
-                                      location: er(et({}, t), { object: Z.ZSU.EMOJI }),
+                                      location: er(et({}, t), {
+                                          object: Z.ZSU.EMOJI,
+                                      }),
                                   }),
                                   (0, _.V4)(e.emoji)));
                         let i = {
@@ -286,12 +292,22 @@ let ec = (e, t) => {
             [eH, eY] = i.useState(!1),
             eW = x.default.getCurrentUser(),
             eK = (0, j.ki)(eW);
-        i.useImperativeHandle(t, () => ({ onPickerOpen: tr }));
+        i.useImperativeHandle(t, () => ({
+            onPickerOpen: tr,
+        }));
         let { location: ez } = (0, m.p)(),
             { page: eq, section: eX, object: eZ, openPopoutType: eQ, popoutLocation: e$ } = ey,
-            eJ = i.useMemo(() => er(et({}, ez), { section: null != eX ? eX : Z.JJy.EMOJI_PICKER_POPOUT }), [ez, eX]),
+            eJ = i.useMemo(
+                () =>
+                    er(et({}, ez), {
+                        section: null != eX ? eX : Z.JJy.EMOJI_PICKER_POPOUT,
+                    }),
+                [ez, eX],
+            ),
             { analyticsLocations: e0 } = (0, b.Ay)(g.A.EMOJI_PICKER),
-            { diversitySurrogate: e1 } = (0, u.cf)([O.Ay], () => ({ diversitySurrogate: O.Ay.diversitySurrogate })),
+            { diversitySurrogate: e1 } = (0, u.cf)([O.Ay], () => ({
+                diversitySurrogate: O.Ay.diversitySurrogate,
+            })),
             e2 = (0, k.sL)(eU, c, l, eR),
             e3 = null == e2 ? 0 : e2.locked.length + e2.unlocked.length,
             e6 = P.iM.useSetting(),
@@ -348,15 +364,21 @@ let ec = (e, t) => {
                     "" !== eU
                         ? (0, k.Wf)({
                               emoji: e.emoji,
-                              location: er(et({}, eJ), { object: Z.ZSU.EMOJI }),
+                              location: er(et({}, eJ), {
+                                  object: Z.ZSU.EMOJI,
+                              }),
                               searchQuery: eU,
                               intention: l,
                           })
                         : (0, k._7)({
                               emoji: e.emoji,
                               location: et(
-                                  er(et({}, eJ), { object: null != eZ ? eZ : Z.ZSU.EMOJI }),
-                                  null != eq && { page: eq },
+                                  er(et({}, eJ), {
+                                      object: null != eZ ? eZ : Z.ZSU.EMOJI,
+                                  }),
+                                  null != eq && {
+                                      page: eq,
+                                  },
                               ),
                               pickerIntention: l,
                               category: e.category,
@@ -370,7 +392,9 @@ let ec = (e, t) => {
                 trackEmojiFavorited: (e) => {
                     (0, k.C5)({
                         emoji: e.emoji,
-                        location: er(et({}, eJ), { object: Z.ZSU.EMOJI }),
+                        location: er(et({}, eJ), {
+                            object: Z.ZSU.EMOJI,
+                        }),
                     });
                 },
             }),
@@ -450,9 +474,18 @@ let ec = (e, t) => {
                       guildId: ej.guildId,
                       emojiId: ej.emojiId,
                   }))
-                : eH && !eK && (o = (0, r.jsx)(V.A, { onDismiss: () => eY(!1) }));
+                : eH &&
+                  !eK &&
+                  (o = (0, r.jsx)(V.A, {
+                      onDismiss: () => eY(!1),
+                  }));
         let tp = (e, t) => {
-                ti(e, er(et({}, t), { isBurst: eH }));
+                ti(
+                    e,
+                    er(et({}, t), {
+                        isBurst: eH,
+                    }),
+                );
             },
             t_ = () => {
                 var e;
@@ -509,7 +542,9 @@ let ec = (e, t) => {
                                             children: (e) => {
                                                 let { visibleContent: t, markAsDismissed: n } = e;
                                                 if (t === d.M.EMOJI_PICKER_FAVORITE_EMOJIS_TIP)
-                                                    return (0, r.jsx)(B.A, { markAsDismissed: () => n(Q.i.UNKNOWN) });
+                                                    return (0, r.jsx)(B.A, {
+                                                        markAsDismissed: () => n(Q.i.UNKNOWN),
+                                                    });
                                             },
                                         }),
                                         ev

@@ -1,4 +1,8 @@
-n.d(t, { A: () => C }), n(321073), n(896048);
+n.d(t, {
+    A: () => C,
+}),
+    n(321073),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(735438),
@@ -17,6 +21,7 @@ var r = n(627968),
     h = n(411335),
     j = n(985018),
     O = n(985681);
+
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,6 +47,7 @@ function y(e) {
     }
     return e;
 }
+
 function v(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -60,6 +66,7 @@ function v(e, t) {
         e
     );
 }
+
 function A(e) {
     let { rule: t, triggerType: n } = e,
         l = i.useMemo(
@@ -156,14 +163,22 @@ let E = (e) => {
                     },
                     i,
                 ),
-                { children: n },
+                {
+                    children: n,
+                },
             ),
         );
     };
+
 function _(e) {
     var t;
     let { rule: n, onChangeRule: i, onContextMenu: l } = e,
-        c = () => i(v(y({}, n), { enabled: !n.enabled }));
+        c = () =>
+            i(
+                v(y({}, n), {
+                    enabled: !n.enabled,
+                }),
+            );
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)("div", {
@@ -201,13 +216,19 @@ function _(e) {
         ],
     });
 }
+
 function S(e) {
     return (0, g.ub)(e, g.H2.ALPHA)
-        ? (0, r.jsx)(o.A, { className: O.n0 })
+        ? (0, r.jsx)(o.A, {
+              className: O.n0,
+          })
         : (0, g.ub)(e, g.H2.BETA)
-          ? (0, r.jsx)(d.A, { className: O.n0 })
+          ? (0, r.jsx)(d.A, {
+                className: O.n0,
+            })
           : null;
 }
+
 function T(e) {
     let { rule: t, isDefaultRule: n, onContextMenu: c } = e,
         o = (0, m.l)(t.triggerType, t),
@@ -216,7 +237,9 @@ function T(e) {
         [x, h] = i.useState(t.enabled),
         _ = (0, l.throttle)(async () => {
             if (!d) {
-                let e = v(y({}, t), { enabled: !x });
+                let e = v(y({}, t), {
+                    enabled: !x,
+                });
                 h(!x);
                 let n = await g(e, []);
                 null != n && (p(n), h(n.enabled));
@@ -295,6 +318,7 @@ function T(e) {
         ],
     });
 }
+
 function I(e) {
     let { triggerType: t, onSetupRule: n } = e,
         l = i.useMemo(() => (0, m.l)(t), [t]);
@@ -327,7 +351,9 @@ function I(e) {
                         variant: "text-sm/normal",
                         children: c,
                     }),
-                    (0, r.jsx)(A, { triggerType: t }),
+                    (0, r.jsx)(A, {
+                        triggerType: t,
+                    }),
                 ],
             }),
             (0, r.jsx)(N, {
@@ -342,6 +368,7 @@ function I(e) {
         ],
     });
 }
+
 function C(e) {
     let {
             rule: t,
@@ -358,7 +385,16 @@ function C(e) {
                 e.stopPropagation(),
                 (0, c.L3)(e, async () => {
                     let { default: e } = await n.e("52106").then(n.bind(n, 345585));
-                    return (n) => (0, r.jsx)(e, y({ rule: t }, n));
+                    return (n) =>
+                        (0, r.jsx)(
+                            e,
+                            y(
+                                {
+                                    rule: t,
+                                },
+                                n,
+                            ),
+                        );
                 }));
         },
         g = (0, r.jsx)(I, {

@@ -1,4 +1,6 @@
-r.d(t, { default: () => O }),
+r.d(t, {
+    default: () => O,
+}),
     r(801460),
     r(508300),
     r(650828),
@@ -33,6 +35,7 @@ var n = r(627968),
     s = r(256006),
     p = r(652215),
     y = r(985018);
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
@@ -58,6 +61,7 @@ function f(e) {
     }
     return e;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -103,7 +107,9 @@ async function b(e, t, r) {
             let r = atob(t.replace(/\s/g, "")),
                 n = new Uint8Array(new ArrayBuffer(r.length));
             for (let e = 0; e < r.length; e++) n[e] = r.charCodeAt(e);
-            let o = new Blob([n], { type: "application/pdf" }),
+            let o = new Blob([n], {
+                    type: "application/pdf",
+                }),
                 l = URL.createObjectURL(o),
                 a = document.createElement("a");
             (a.href = l),
@@ -116,6 +122,7 @@ async function b(e, t, r) {
         !0
     );
 }
+
 function O(e) {
     let { payment: t, paymentSource: r } = e,
         a = (function (e, t) {
@@ -171,7 +178,12 @@ function O(e) {
             var e;
             let t = JSON.parse(await r.body.text());
             C(
-                null != (e = new u.A(d(f({}, r), { body: t })).getAnyErrorMessage())
+                null !=
+                    (e = new u.A(
+                        d(f({}, r), {
+                            body: t,
+                        }),
+                    ).getAnyErrorMessage())
                     ? e
                     : y.intl.formatToPlainString(y.t["4eT6rr"], {}),
             );

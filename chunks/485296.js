@@ -1,4 +1,8 @@
-n.d(t, { A: () => P }), n(896048), n(938796);
+n.d(t, {
+    A: () => P,
+}),
+    n(896048),
+    n(938796);
 var r,
     i = n(311907),
     a = n(73153),
@@ -10,6 +14,7 @@ var r,
     d = n(309010),
     f = n(652215),
     p = n(731854);
+
 function _(e, t, n) {
     return (
         t in e
@@ -29,23 +34,27 @@ let h = new Map(),
     E = null,
     b = !1,
     y = !1;
+
 function O() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : p.x.DEFAULT,
         t = h.get(e);
     return null == t && ((t = new Map()), h.set(e, t)), t;
 }
+
 function A(e, t) {
     let n = h.get(e);
     if (null == n) return !1;
     let r = n.delete(t);
     return 0 === n.size && h.delete(e), r;
 }
+
 function v(e, t, n) {
     var r, i, a;
     return (
         ((null != (r = null == (a = h.get(e)) || null == (i = a.get(t)) ? void 0 : i.flags) ? r : p.ME.NONE) & n) === n
     );
 }
+
 function S(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = h.get(e);
@@ -53,6 +62,7 @@ function S(e, t) {
     for (let [e, { flags: i }] of r) if ((!n || e !== m) && (i & t) === t) return !0;
     return !1;
 }
+
 function I(e, t, n) {
     var r, i;
     let a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : -1 / 0,
@@ -74,10 +84,12 @@ function I(e, t, n) {
     }
     return !0;
 }
+
 function T(e) {
     let { user: t, sessionId: n } = e;
     (m = t.id), (g = n), (E = null);
 }
+
 function C(e) {
     let { context: t, userId: n, speakingFlags: r, voiceDb: i } = e;
     if ((r & p.ME.PRIORITY) === p.ME.PRIORITY) {
@@ -93,6 +105,7 @@ function C(e) {
     }
     return (r & p.ME.HIDDEN) === p.ME.HIDDEN && (r = 0), I(t, n, r, i);
 }
+
 function N(e) {
     let { voiceStates: t } = e;
     return t.reduce((e, t) => {
@@ -111,6 +124,7 @@ function N(e) {
         );
     }, !1);
 }
+
 function R(e) {
     let { isActive: t, isLatched: n } = e;
     (b = n), (y = t);
@@ -174,8 +188,9 @@ class w extends (r = i.Ay.Store) {
     getVoiceVolume(e) {
         var t, n, r;
         let i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : p.x.DEFAULT;
-        return (0, s.r)({ location: "SpeakingStore" }).enabled &&
-            null != (t = null == (r = h.get(i)) || null == (n = r.get(e)) ? void 0 : n.voiceDb)
+        return (0, s.r)({
+            location: "SpeakingStore",
+        }).enabled && null != (t = null == (r = h.get(i)) || null == (n = r.get(e)) ? void 0 : n.voiceDb)
             ? t
             : -1 / 0;
     }

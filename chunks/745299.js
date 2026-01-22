@@ -1,4 +1,7 @@
-n.d(t, { A: () => A }), n(65821);
+n.d(t, {
+    A: () => A,
+}),
+    n(65821);
 var r = n(627968);
 n(64700);
 var i = n(110259),
@@ -16,6 +19,7 @@ var i = n(110259),
     m = n(652215),
     g = n(985018),
     E = n(237082);
+
 function b(e) {
     switch (e) {
         case h.pe.TIER_0:
@@ -26,6 +30,7 @@ function b(e) {
             throw Error("Unsupported subscription tier: ".concat(e));
     }
 }
+
 function y(e) {
     switch (e) {
         case h.pe.TIER_0:
@@ -36,6 +41,7 @@ function y(e) {
             throw Error("Unsupported subscription tier: ".concat(e));
     }
 }
+
 function O(e) {
     switch (e) {
         case h.pe.TIER_0:
@@ -64,9 +70,13 @@ let A = function (e) {
             {
                 type: i.ImpressionTypes.VIEW,
                 name: i.ImpressionNames.TRIAL_NOTICE,
-                properties: { trial_id: null == A ? void 0 : A.trial_id },
+                properties: {
+                    trial_id: null == A ? void 0 : A.trial_id,
+                },
             },
-            { disableTrack: T },
+            {
+                disableTrack: T,
+            },
         ),
         T)
     )
@@ -87,7 +97,9 @@ let A = function (e) {
         ? (0, r.jsxs)(p.T0, {
               onClick: n,
               children: [
-                  (0, r.jsx)(p.In, { children: (0, _.GZ)(o, v) }),
+                  (0, r.jsx)(p.In, {
+                      children: (0, _.GZ)(o, v),
+                  }),
                   (0, r.jsx)(p.fY, {
                       onClick: C,
                       text: O(o),

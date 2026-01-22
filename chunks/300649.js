@@ -1,10 +1,14 @@
-n.d(t, { y: () => d }), n(65821);
+n.d(t, {
+    y: () => d,
+}),
+    n(65821);
 var r = n(562465),
     i = n(73153),
     a = n(198982),
     s = n(927813),
     o = n(405473),
     l = n(652215);
+
 function c(e) {
     return {
         guild_id: e.guild_id,

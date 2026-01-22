@@ -7,9 +7,11 @@ n.d(t, {
     n(896048),
     n(65821);
 var r = n(502075);
+
 function i(e) {
     return null != e && (e.startsWith(r.U4.GUILD) || e.startsWith(r.U4.CALL));
 }
+
 function a(e) {
     let t = e.split(":"),
         n = t[0];
@@ -35,6 +37,7 @@ function a(e) {
             throw Error("Unknown stream type ".concat(n));
     }
 }
+
 function s(e) {
     let { streamType: t, guildId: n, channelId: i, ownerId: a } = e;
     switch (t) {

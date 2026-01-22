@@ -1,4 +1,6 @@
-n.d(t, { A: () => I });
+n.d(t, {
+    A: () => I,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -16,6 +18,7 @@ var r = n(627968),
     g = n(17307),
     E = n(180022),
     b = n(128906);
+
 function y(e, t, n) {
     return (
         t in e
@@ -29,6 +32,7 @@ function y(e, t, n) {
         e
     );
 }
+
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -45,6 +49,7 @@ function O(e) {
     }
     return e;
 }
+
 function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -57,6 +62,7 @@ function A(e, t) {
     }
     return n;
 }
+
 function v(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -119,7 +125,9 @@ let S = (e) => {
             D = (0, g.LQ)(),
             { fractionalState: x } = (0, c.A)(),
             L = (0, d.d)(),
-            j = f.A.useExperiment({ location: "PremiumPerks" }).enabled,
+            j = f.A.useExperiment({
+                location: "PremiumPerks",
+            }).enabled,
             M = (0, p.O9)(),
             k = (0, g.vx)({
                 perksCards: P,
@@ -172,7 +180,13 @@ let S = (e) => {
                 (0, r.jsx)("div", {
                     className: b.Ui,
                     children: k.map((e, t) =>
-                        (0, r.jsx)(E.A, v(O({}, e), { forceShadow: a }), "".concat(e.name, "_").concat(t)),
+                        (0, r.jsx)(
+                            E.A,
+                            v(O({}, e), {
+                                forceShadow: a,
+                            }),
+                            "".concat(e.name, "_").concat(t),
+                        ),
                     ),
                 }),
             ],

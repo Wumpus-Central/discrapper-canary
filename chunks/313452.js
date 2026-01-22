@@ -1,4 +1,10 @@
-n.d(t, { A: () => D }), n(321073), n(264879), n(896048), n(638769);
+n.d(t, {
+    A: () => D,
+}),
+    n(321073),
+    n(264879),
+    n(896048),
+    n(638769);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -26,15 +32,19 @@ var r = n(627968),
     S = n(228160),
     I = n(985018),
     N = n(128354);
+
 function T(e) {
     e.stopPropagation();
 }
+
 function P(e) {
     let { group: t, isOpen: n, toggleOpenedState: l } = e;
     return (0, r.jsx)(d.DUT, {
         "aria-expanded": n,
         onClick: l,
-        className: a()(N.TP, { [N.yZ]: !n }),
+        className: a()(N.TP, {
+            [N.yZ]: !n,
+        }),
         children: (0, r.jsxs)(d.BJc, {
             gap: 4,
             direction: "horizontal",
@@ -55,6 +65,7 @@ function P(e) {
     });
 }
 let w = [_.Ur.UNREAD, _.Ur.TODAY, _.Ur.YESTERDAY, _.Ur.OLDER];
+
 function R() {
     let { analyticsLocations: e } = (0, h.Ay)(p.A.NOTIFICATIONS_INBOX);
     return (0, r.jsx)("div", {
@@ -76,7 +87,9 @@ function R() {
                         (0, r.jsx)(d.Text, {
                             variant: "text-sm/medium",
                             color: "text-muted",
-                            style: { textAlign: "center" },
+                            style: {
+                                textAlign: "center",
+                            },
                             children: I.intl.string(S.default["O+racd"]),
                         }),
                     ],
@@ -90,6 +103,7 @@ function R() {
         }),
     });
 }
+
 function D(e) {
     let t,
         {
@@ -106,7 +120,9 @@ function D(e) {
         L = (0, y.op)(),
         G = l.useRef(null),
         k = (0, f.A)(D, G),
-        { entrypoint: U, notificationCenterVariant: V } = (0, A.X8)({ location: "NotificationsInboxSidebarList" }),
+        { entrypoint: U, notificationCenterVariant: V } = (0, A.X8)({
+            location: "NotificationsInboxSidebarList",
+        }),
         {
             isLoading: F,
             isLoadingComplete: H,
@@ -135,11 +151,18 @@ function D(e) {
     l.useEffect(() => {
         function e() {
             var e;
-            null == (e = G.current) || e.scrollPageUp({ animate: !0 });
+            null == (e = G.current) ||
+                e.scrollPageUp({
+                    animate: !0,
+                });
         }
+
         function t() {
             var e;
-            null == (e = G.current) || e.scrollPageDown({ animate: !0 });
+            null == (e = G.current) ||
+                e.scrollPageDown({
+                    animate: !0,
+                });
         }
         return (
             g._.subscribe(C.jej.SCROLL_PAGE_DOWN, t),

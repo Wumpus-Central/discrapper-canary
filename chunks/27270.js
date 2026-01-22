@@ -1,4 +1,6 @@
-n.d(t, { O: () => h });
+n.d(t, {
+    O: () => h,
+});
 var r = n(567359),
     i = n(301982),
     a = n(723906),
@@ -10,15 +12,27 @@ var r = n(567359),
     d = n(946020),
     f = n(795122),
     p = n(47276);
+
 function _(e) {
     return e && e.__esModule ? e.default : e;
 }
+
 function h(e, t, n) {
     let { item: h } = e,
         m = (0, p.o)(_(i.A), "@react-aria/tag"),
         g = (0, a.Bi)(),
         { onRemove: E } = r.O.get(t) || {},
-        { rowProps: b, gridCellProps: y, ...O } = (0, f.n)({ node: h }, t, n),
+        {
+            rowProps: b,
+            gridCellProps: y,
+            ...O
+        } = (0, f.n)(
+            {
+                node: h,
+            },
+            t,
+            n,
+        ),
         { descriptionProps: A, ...v } = O,
         S = t.disabledKeys.has(h.key) || h.props.isDisabled,
         I = (e) => {
@@ -39,7 +53,12 @@ function h(e, t, n) {
     S || (!R && w) || (P = 0);
     let D = (0, o.$)(h.props),
         x = (0, l.HI)(h.props),
-        { focusableProps: L } = (0, d.Wc)({ isDisabled: S }, n);
+        { focusableProps: L } = (0, d.Wc)(
+            {
+                isDisabled: S,
+            },
+            n,
+        );
     return {
         removeButtonProps: {
             "aria-label": m.format("removeButtonLabel"),

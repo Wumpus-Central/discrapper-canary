@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var l = n(627968);
 n(64700);
 var a = n(503698),
@@ -9,6 +11,7 @@ var a = n(503698),
     d = n(349112),
     u = n(985018),
     o = n(150837);
+
 function f(e) {
     let {
             guildId: t,
@@ -29,7 +32,9 @@ function f(e) {
                 children: u.intl.string(u.t["D/jjoa"]),
             }),
             (0, l.jsxs)(v, {
-                className: i()(o.XG, { [o.cq]: !b }),
+                className: i()(o.XG, {
+                    [o.cq]: !b,
+                }),
                 children: [
                     _.map((e) => {
                         let t = r.default.fromTimestamp(e.getTime());

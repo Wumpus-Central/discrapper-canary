@@ -1,6 +1,9 @@
-n.d(t, { W4: () => s });
+n.d(t, {
+    W4: () => s,
+});
 var r = n(142809),
     i = n(550505);
+
 function a(e, t, n) {
     try {
         Object.defineProperty(e, t, {
@@ -12,6 +15,7 @@ function a(e, t, n) {
         DEBUG_BUILD && logger.log(`Failed to add non-enumerable property "${t}" to object`, e);
     }
 }
+
 function s(e) {
     if ((0, i.bJ)(e))
         return {
@@ -31,6 +35,7 @@ function s(e) {
         return "u" > typeof CustomEvent && (0, i.tH)(e, CustomEvent) && (t.detail = e.detail), t;
     }
 }
+
 function o(e) {
     try {
         return (0, i.vq)(e) ? (0, r.Hd)(e) : Object.prototype.toString.call(e);
@@ -38,6 +43,7 @@ function o(e) {
         return "<unknown>";
     }
 }
+
 function l(e) {
     if ("object" != typeof e || null === e) return {};
     {
@@ -46,6 +52,7 @@ function l(e) {
         return t;
     }
 }
+
 function c(e) {
     if (!isPlainObject(e)) return !1;
     try {

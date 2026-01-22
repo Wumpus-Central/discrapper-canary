@@ -1,5 +1,9 @@
-n.d(t, { A: () => l }), n(896048);
+n.d(t, {
+    A: () => l,
+}),
+    n(896048);
 var r = n(584648);
+
 function i(e, t, n) {
     return (
         t in e
@@ -13,6 +17,7 @@ function i(e, t, n) {
         e
     );
 }
+
 function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -29,6 +34,7 @@ function a(e) {
     }
     return e;
 }
+
 function s(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -41,6 +47,7 @@ function s(e, t) {
     }
     return n;
 }
+
 function o(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -52,6 +59,7 @@ function o(e, t) {
         e
     );
 }
+
 function l(e, t, n, i) {
     let s = (0, r.A)(e, t, i),
         l = (e, t) => n.computeScrollPosition(e, t);

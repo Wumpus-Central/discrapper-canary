@@ -23,5 +23,8 @@ if (
     !a && l(i))
 ) {
     var d = s("Promise").prototype.catch;
-    u.catch !== d && c(u, "catch", d, { unsafe: !0 });
+    u.catch !== d &&
+        c(u, "catch", d, {
+            unsafe: !0,
+        });
 }

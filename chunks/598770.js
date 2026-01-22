@@ -1,10 +1,13 @@
-n.d(t, { A: () => A });
+n.d(t, {
+    A: () => A,
+});
 var r,
     i = n(989349),
     a = n.n(i),
     s = n(311907),
     o = n(73153),
     l = n(661191);
+
 function c(e, t, n) {
     return (
         t in e
@@ -18,6 +21,7 @@ function c(e, t, n) {
         e
     );
 }
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,6 +38,7 @@ function u(e) {
     }
     return e;
 }
+
 function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -46,6 +51,7 @@ function d(e, t) {
     }
     return n;
 }
+
 function f(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -57,12 +63,16 @@ function f(e, t) {
         e
     );
 }
-let p = { lastSeenNewlyAddedEmojiIds: {} },
+let p = {
+        lastSeenNewlyAddedEmojiIds: {},
+    },
     _ = p,
     h = {};
+
 function m() {
     (_ = p), (h = {});
 }
+
 function g(e) {
     var t;
     let { guildId: n, emojiId: r } = e,
@@ -73,8 +83,11 @@ function g(e) {
               lastSeen: Date.now(),
               acknowledged: !0,
           })
-        : (h[n] = f(u({}, i), { acknowledged: !0 }));
+        : (h[n] = f(u({}, i), {
+              acknowledged: !0,
+          }));
 }
+
 function E(e) {
     var t;
     let { guildId: n, emojiId: r } = e,
@@ -86,9 +99,11 @@ function E(e) {
             acknowledged: !1,
         });
 }
+
 function b() {
     for (let e in h) _.lastSeenNewlyAddedEmojiIds[e] = h[e];
 }
+
 function y() {
     (_ = p), b();
 }
@@ -126,7 +141,9 @@ c(O, "displayName", "NewlyAddedEmojiStore"),
                     acknowledged: !1,
                 };
             }
-            return { lastSeenNewlyAddedEmojiIds: n };
+            return {
+                lastSeenNewlyAddedEmojiIds: n,
+            };
         },
     ]);
 let A = new O(o.h, {

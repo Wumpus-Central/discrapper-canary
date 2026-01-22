@@ -1,4 +1,6 @@
-n.d(t, { A: () => O });
+n.d(t, {
+    A: () => O,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -147,7 +149,9 @@ let O = function (e) {
                               color: "always-white",
                               variant: "text-xs/normal",
                               className: y.n_,
-                              style: { fontSize: v },
+                              style: {
+                                  fontSize: v,
+                              },
                               children: b.intl.format(b.t.DYAleT, {}),
                           }),
                       "icon" === A &&

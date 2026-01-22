@@ -1,8 +1,10 @@
-n.d(t, { m: () => b });
+n.d(t, {
+    m: () => b,
+});
 var l = n(627968),
     r = n(64700),
     i = n(735438),
-    a = n(432022),
+    a = n(108531),
     s = n(311907),
     o = n(397927),
     c = n(971778),
@@ -10,6 +12,7 @@ var l = n(627968),
     d = n(342887),
     f = n(985018),
     p = n(938663);
+
 function b() {
     let e,
         t,
@@ -74,7 +77,9 @@ function b() {
                                   (0, l.jsx)(o.Text, {
                                       variant: "text-sm/semibold",
                                       color: "text-strong",
-                                      children: f.intl.format(f.t["r+uZYZ"], { progress: A }),
+                                      children: f.intl.format(f.t["r+uZYZ"], {
+                                          progress: A,
+                                      }),
                                   }),
                                   (0, l.jsx)(o.QWc, {
                                       text: f.intl.string(f.t["ETE/oC"]),

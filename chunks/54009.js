@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var r = n(627968);
 n(64700);
 var i = n(417597),
@@ -40,7 +42,9 @@ let m = (e) => {
                     autoPlay: !0,
                     playsInline: !0,
                     loop: !0,
-                    children: (0, r.jsx)("source", { src: t }),
+                    children: (0, r.jsx)("source", {
+                        src: t,
+                    }),
                 },
                 t,
             ),

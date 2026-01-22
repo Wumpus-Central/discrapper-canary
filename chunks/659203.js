@@ -1,4 +1,6 @@
-n.d(t, { A: () => G });
+n.d(t, {
+    A: () => G,
+});
 var r = n(627968),
     i = n(64700),
     a = n(989349),
@@ -28,6 +30,7 @@ var r = n(627968),
     R = n(985018),
     w = n(26875),
     P = n(954457);
+
 function D(e, t, n) {
     return (
         t in e
@@ -41,6 +44,7 @@ function D(e, t, n) {
         e
     );
 }
+
 function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -57,6 +61,7 @@ function x(e) {
     }
     return e;
 }
+
 function L(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -69,6 +74,7 @@ function L(e, t) {
     }
     return n;
 }
+
 function j(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -83,16 +89,27 @@ function j(e, t) {
 let M = "???",
     k = (e) => {
         let { analyticsLocations: t, startingScreen: i } = e;
-        g.default.track(N.HAw.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: t }),
+        g.default.track(N.HAw.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, {
+            location_stack: t,
+        }),
             (0, c.mMO)(async () => {
                 let { default: e } = await Promise.resolve().then(n.bind(n, 303682));
-                return (t) => (0, r.jsx)(e, j(x({}, t), { startingScreen: i }));
+                return (t) =>
+                    (0, r.jsx)(
+                        e,
+                        j(x({}, t), {
+                            startingScreen: i,
+                        }),
+                    );
             });
     };
 class U extends i.Component {
     getSystemMessageHeader() {
         let e = h.default.getUser(this.trialOffer.user_id);
-        if (this.isSender) return R.intl.format(R.t["4/EMxl"], { receiver: null == e ? void 0 : e.username });
+        if (this.isSender)
+            return R.intl.format(R.t["4/EMxl"], {
+                receiver: null == e ? void 0 : e.username,
+            });
         let t = h.default.getUser(this.trialOffer.referrer_id),
             n = (null == t ? void 0 : t.username) !== void 0 ? t.username : "";
         return R.intl.format(R.t.yisueA, {
@@ -106,11 +123,15 @@ class U extends i.Component {
             n = h.default.getUser(this.trialOffer.referrer_id),
             r = null != n ? n.username : M;
         return this.recipientHasNitro && void 0 === this.trialOffer.redeemed_at
-            ? R.intl.formatToPlainString(R.t["Mptau/"], { username: t })
+            ? R.intl.formatToPlainString(R.t["Mptau/"], {
+                  username: t,
+              })
             : this.offerExpired
               ? this.isSender
                   ? R.intl.string(R.t["9SNdf4"])
-                  : R.intl.formatToPlainString(R.t["H0+MxK"], { userName: r })
+                  : R.intl.formatToPlainString(R.t["H0+MxK"], {
+                        userName: r,
+                    })
               : R.intl.formatToPlainString(R.t.IiWKwg, {
                     senderUserName: r,
                     recipientUserName: t,
@@ -118,7 +139,9 @@ class U extends i.Component {
     }
     getBodyText() {
         return this.recipientHasNitro && !this.isSender && void 0 === this.trialOffer.redeemed_at
-            ? R.intl.format(R.t.LwCwT9, { helpdeskArticle: b.A.getArticleURL(N.MVz.REFERRAL_PROGRAM) })
+            ? R.intl.format(R.t.LwCwT9, {
+                  helpdeskArticle: b.A.getArticleURL(N.MVz.REFERRAL_PROGRAM),
+              })
             : this.offerExpired
               ? null
               : R.intl.string(R.t.lQLlOb);
@@ -160,15 +183,21 @@ class U extends i.Component {
     renderExpirationDate() {
         let { trialOffer: e, trialEndsAt: t } = this.props;
         if (void 0 !== e.redeemed_at && !this.isSender && null !== t)
-            return R.intl.formatToPlainString(R.t.nP0ivR, { date: (0, E.i$)(s()(t), "LL") });
+            return R.intl.formatToPlainString(R.t.nP0ivR, {
+                date: (0, E.i$)(s()(t), "LL"),
+            });
         if (this.recipientHasNitro || void 0 === e.expires_at) return null;
         let n = s()(e.expires_at);
         return this.offerExpired
-            ? R.intl.formatToPlainString(R.t.PuSHfU, { date: (0, E.i$)(s()(n), "LL") })
+            ? R.intl.formatToPlainString(R.t.PuSHfU, {
+                  date: (0, E.i$)(s()(n), "LL"),
+              })
             : (0, A.GQ)(n.valueOf());
     }
     renderMedia() {
-        return (0, r.jsx)("div", { className: w.Qj });
+        return (0, r.jsx)("div", {
+            className: w.Qj,
+        });
     }
     render() {
         let e = () => {
@@ -179,7 +208,9 @@ class U extends i.Component {
                 if (this.isSender)
                     if (this.recipientHasNitro && void 0 === this.trialOffer.redeemed_at)
                         return {
-                            headerText: R.intl.formatToPlainString(R.t.qABVhL, { recipient: t }),
+                            headerText: R.intl.formatToPlainString(R.t.qABVhL, {
+                                recipient: t,
+                            }),
                             bodyText: R.intl.formatToPlainString(R.t.u7hyDx, {
                                 helpdeskArticle: b.A.getArticleURL(N.MVz.REFERRAL_PROGRAM),
                             }),
@@ -187,16 +218,22 @@ class U extends i.Component {
                     else
                         return {
                             headerText: R.intl.string(R.t.LAGZfq),
-                            bodyText: R.intl.formatToPlainString(R.t["0gnFLC"], { recipient: t }),
+                            bodyText: R.intl.formatToPlainString(R.t["0gnFLC"], {
+                                recipient: t,
+                            }),
                         };
                 return this.offerExpired
                     ? {
                           headerText: R.intl.string(R.t.nYvpUl),
-                          bodyText: R.intl.formatToPlainString(R.t.wJdBEZ, { sender: r }),
+                          bodyText: R.intl.formatToPlainString(R.t.wJdBEZ, {
+                              sender: r,
+                          }),
                       }
                     : {
                           headerText: R.intl.string(R.t.HtTvXA),
-                          bodyText: R.intl.formatToPlainString(R.t.wOQByA, { sender: r }),
+                          bodyText: R.intl.formatToPlainString(R.t.wOQByA, {
+                              sender: r,
+                          }),
                       };
             },
             t = (0, r.jsxs)(r.Fragment, {
@@ -305,6 +342,7 @@ class U extends i.Component {
             (this.isSender = this.currentUser.id === this.trialOffer.referrer_id);
     }
 }
+
 function G(e) {
     let { userTrialOfferId: t, canRenderReferralEmbed: n, compact: i } = e,
         {
@@ -331,7 +369,9 @@ function G(e) {
         }),
         { analyticsLocations: E } = (0, f.Ay)(d.A.SHARE_NITRO_EMBED);
     return s
-        ? (0, r.jsx)(u.Wb, { isHorizontal: !o.Fr })
+        ? (0, r.jsx)(u.Wb, {
+              isHorizontal: !o.Fr,
+          })
         : n && null != a && void 0 !== p
           ? (0, r.jsx)(U, {
                 trialOffer: a,
@@ -344,6 +384,8 @@ function G(e) {
             })
           : (0, r.jsx)("div", {
                 className: w.TU,
-                children: (0, r.jsx)("div", { className: w.Gq }),
+                children: (0, r.jsx)("div", {
+                    className: w.Gq,
+                }),
             });
 }

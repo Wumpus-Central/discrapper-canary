@@ -1,4 +1,6 @@
-a.d(e, { A: () => p });
+a.d(e, {
+    A: () => p,
+});
 var t = {
         xseconds_other: "sekundė_sekundžių_sekundes",
         xminutes_one: "minutė_minutės_minutę",
@@ -34,9 +36,11 @@ var t = {
                   : r + (o(i) ? d(a)[1] : d(a)[2])
               : r + (o(i) ? d(a)[1] : d(a)[0]);
     };
+
 function o(i) {
     return i % 10 == 0 || (i > 10 && i < 20);
 }
+
 function d(i) {
     return t[i].split("_");
 }

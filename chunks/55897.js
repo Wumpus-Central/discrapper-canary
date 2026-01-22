@@ -1,4 +1,6 @@
-r.d(t, { A: () => l });
+r.d(t, {
+    A: () => l,
+});
 var n = r(64700),
     o = r(205662),
     a = r(717519),
@@ -28,12 +30,24 @@ let l = function (e) {
                         opacity: "0",
                     },
                 },
-                active: { dot: { opacity: "1" } },
-                "color-#FFFFFF": {
-                    color: { boxShadow: "inset 0 0 0 1px #ddd" },
-                    dot: { background: "#000" },
+                active: {
+                    dot: {
+                        opacity: "1",
+                    },
                 },
-                transparent: { dot: { background: "#000" } },
+                "color-#FFFFFF": {
+                    color: {
+                        boxShadow: "inset 0 0 0 1px #ddd",
+                    },
+                    dot: {
+                        background: "#000",
+                    },
+                },
+                transparent: {
+                    dot: {
+                        background: "#000",
+                    },
+                },
             },
             {
                 active: s,
@@ -48,8 +62,12 @@ let l = function (e) {
             color: t,
             onClick: void 0 === r ? function () {} : r,
             onHover: l,
-            focusStyle: { boxShadow: "0 0 4px " + t },
+            focusStyle: {
+                boxShadow: "0 0 4px " + t,
+            },
         },
-        n.createElement("div", { style: u.dot }),
+        n.createElement("div", {
+            style: u.dot,
+        }),
     );
 };

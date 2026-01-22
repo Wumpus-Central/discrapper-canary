@@ -1,4 +1,6 @@
-Object.defineProperty(t, "__esModule", { value: !0 });
+Object.defineProperty(t, "__esModule", {
+    value: !0,
+});
 var r = n(278420);
 Object.keys(r).forEach(function (e) {
     "default" !== e &&

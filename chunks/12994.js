@@ -1,4 +1,6 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var i = n(627968),
     r = n(64700),
     l = n(397927),
@@ -8,6 +10,7 @@ var i = n(627968),
     c = n(447066),
     d = n(780765),
     u = n(835084);
+
 function b(e) {
     let {
             integrations: t,
@@ -52,7 +55,9 @@ function b(e) {
                 description: m,
                 isHeader: !0,
             }),
-            (0, i.jsx)(l.cGx, { className: u.zN }),
+            (0, i.jsx)(l.cGx, {
+                className: u.zN,
+            }),
             "message" in h &&
                 (0, i.jsx)(l.Text, {
                     className: u.kc,

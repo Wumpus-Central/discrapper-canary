@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var i = n(387755),
     r = n(684013),
     l = n(956793),
@@ -11,6 +13,7 @@ var i = n(387755),
     p = n(672396),
     h = n(652215),
     f = n(985018);
+
 function m(e) {
     let t = (0, o.m1)(e, c.default, s.A),
         n = f.intl.string(f.t.ssrVzG),

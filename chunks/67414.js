@@ -1,4 +1,6 @@
-n.d(t, { A: () => w });
+n.d(t, {
+    A: () => w,
+});
 var r = n(627968),
     i = n(64700),
     a = n(110259),
@@ -22,6 +24,7 @@ var r = n(627968),
     v = n(778712),
     S = n(985018),
     I = n(989712);
+
 function T(e, t, n) {
     return (
         t in e
@@ -35,6 +38,7 @@ function T(e, t, n) {
         e
     );
 }
+
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -51,6 +55,7 @@ function C(e) {
     }
     return e;
 }
+
 function N(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -63,6 +68,7 @@ function N(e, t) {
     }
     return n;
 }
+
 function R(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -74,6 +80,7 @@ function R(e, t) {
         e
     );
 }
+
 function w(e) {
     let { giftIntentType: t, recipientUser: T, analyticsPage: N, analyticsSection: w, innerRef: P } = e,
         D = (0, s.bG)([h.default], () => h.default.getCurrentUser()),
@@ -96,7 +103,11 @@ function w(e) {
     }, [t]);
     let M = () => (t === O.np.FRIEND_ANNIVERSARY ? S.intl.string(S.t.CeQIwZ) : (0, g.yE)(t)),
         k = () =>
-            t === O.np.FRIEND_ANNIVERSARY ? S.intl.formatToPlainString(S.t.PpG27s, { numberOfYears: L }) : (0, g.yE)(t),
+            t === O.np.FRIEND_ANNIVERSARY
+                ? S.intl.formatToPlainString(S.t.PpG27s, {
+                      numberOfYears: L,
+                  })
+                : (0, g.yE)(t),
         U = () => (t === O.np.FRIEND_ANNIVERSARY ? S.intl.string(S.t.ilhtIa) : (0, g.yE)(t)),
         G = (e) => {
             e.stopPropagation();
@@ -172,7 +183,9 @@ function w(e) {
                                 (0, r.jsxs)("div", {
                                     className: I.jA,
                                     children: [
-                                        (0, r.jsx)(o.$yI, { size: "xs" }),
+                                        (0, r.jsx)(o.$yI, {
+                                            size: "xs",
+                                        }),
                                         (0, r.jsx)(o.Text, {
                                             className: I.Tm,
                                             variant: "text-md/normal",

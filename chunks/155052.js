@@ -1,4 +1,8 @@
-n.d(t, { A: () => O }), n(321073), n(896048);
+n.d(t, {
+    A: () => O,
+}),
+    n(321073),
+    n(896048);
 var i = n(627968),
     r = n(64700),
     l = n(311907),
@@ -11,6 +15,7 @@ var i = n(627968),
     p = n(295102),
     h = n(545807),
     f = n(644434);
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,9 +41,11 @@ function m(e) {
     }
     return e;
 }
+
 function g(e) {
     return e.widget.id;
 }
+
 function y(e, t, n, r) {
     var l, o;
     return n === a.wLy.YEETED
@@ -82,7 +89,16 @@ let A = [],
                         let e = o.A.getWidget(n);
                         if (null == e) continue;
                         let i = p.A[e.type];
-                        null != i && (null == i.predicate || i.predicate()) && t.push(m({ widget: e }, i));
+                        null != i &&
+                            (null == i.predicate || i.predicate()) &&
+                            t.push(
+                                m(
+                                    {
+                                        widget: e,
+                                    },
+                                    i,
+                                ),
+                            );
                     }
                     return t;
                 },

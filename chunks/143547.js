@@ -1,4 +1,6 @@
-n.d(e, { default: () => E });
+n.d(e, {
+    default: () => E,
+});
 var r = n(627968),
     i = n(64700),
     o = n(110259),
@@ -15,6 +17,7 @@ var r = n(627968),
     g = n(652215),
     j = n(985018),
     x = n(107724);
+
 function b(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
@@ -40,6 +43,7 @@ function b(t) {
     }
     return t;
 }
+
 function y(t, e) {
     return (
         (e = null != e ? e : {}),
@@ -58,6 +62,7 @@ function y(t, e) {
         t
     );
 }
+
 function I() {
     return (0, r.jsxs)(a.q, {
         children: [
@@ -79,6 +84,7 @@ function I() {
         ],
     });
 }
+
 function E(t) {
     let { user: e, guildId: n, channelId: a, onIgnore: E, onBlock: h, location: N = "ContextMenu" } = t,
         v = (function (t, e) {
@@ -140,7 +146,9 @@ function E(t) {
                                 location: N,
                             });
                         },
-                        impression: { impressionName: o.ImpressionNames.IGNORE_USER_CONFIRMATION },
+                        impression: {
+                            impressionName: o.ImpressionNames.IGNORE_USER_CONFIRMATION,
+                        },
                         confirmButtonColor: l.$n.Colors.BRAND,
                     },
                     v,

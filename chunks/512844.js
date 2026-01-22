@@ -2,7 +2,12 @@ e.exports = function (e) {
     let t = {
             className: "number",
             relevance: 0,
-            variants: [{ begin: "[$][a-fA-F0-9]+" }, e.NUMBER_MODE],
+            variants: [
+                {
+                    begin: "[$][a-fA-F0-9]+",
+                },
+                e.NUMBER_MODE,
+            ],
         },
         n = {
             variants: [
@@ -122,7 +127,9 @@ e.exports = function (e) {
         illegal: /\/\*/,
         contains: [
             e.COMMENT("#rem", "#end"),
-            e.COMMENT("'", "$", { relevance: 0 }),
+            e.COMMENT("'", "$", {
+                relevance: 0,
+            }),
             n,
             r,
             {
@@ -133,11 +140,15 @@ e.exports = function (e) {
                 className: "meta",
                 begin: /\s*#/,
                 end: "$",
-                keywords: { keyword: "if else elseif endif end then" },
+                keywords: {
+                    keyword: "if else elseif endif end then",
+                },
             },
             {
                 match: [/^\s*/, /strict\b/],
-                scope: { 2: "meta" },
+                scope: {
+                    2: "meta",
+                },
             },
             {
                 beginKeywords: "alias",

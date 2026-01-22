@@ -10,7 +10,10 @@ function a(e) {
                       : typeof e;
               })(e);
 }
-t.d(r, { A: () => i });
+t.d(r, {
+    A: () => i,
+});
+
 function l(e) {
     var r = (function (e, r) {
         if ("object" != a(e) || !e) return e;
@@ -99,6 +102,8 @@ var o,
                     Object.defineProperty(e, l(a.key), a);
             }
         })(o.prototype, s),
-        Object.defineProperty(o, "prototype", { writable: !1 }),
+        Object.defineProperty(o, "prototype", {
+            writable: !1,
+        }),
         o);
 let i = "u" < typeof Set ? Set : n;

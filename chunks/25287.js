@@ -1,4 +1,6 @@
-n.d(t, { A: () => A });
+n.d(t, {
+    A: () => A,
+});
 var r = n(627968),
     l = n(64700),
     i = n(485845),
@@ -15,6 +17,7 @@ var r = n(627968),
     m = n(287809),
     y = n(985018),
     O = n(79924);
+
 function A(e) {
     var t, n, A, v;
     let { analyticsLocations: j } = (0, s.Ay)(),
@@ -47,7 +50,9 @@ function A(e) {
                       }),
                   id: "integration-owner",
                   label: D.name,
-                  subtext: y.intl.formatToPlainString(y.t.ShLXXB, { application: e.author.username }),
+                  subtext: y.intl.formatToPlainString(y.t.ShLXXB, {
+                      application: e.author.username,
+                  }),
               }))
             : null != _ &&
               (w = (0, r.jsx)(a.Drp, {
@@ -65,7 +70,9 @@ function A(e) {
                   },
                   id: "integration-owner",
                   label: _.username,
-                  subtext: y.intl.formatToPlainString(y.t.ShLXXB, { application: e.author.username }),
+                  subtext: y.intl.formatToPlainString(y.t.ShLXXB, {
+                      application: e.author.username,
+                  }),
               })),
         (0, r.jsxs)(a.Drp, {
             id: "view-interaction-info",

@@ -1,4 +1,7 @@
-r.d(t, { default: () => _ }), r(228524);
+r.d(t, {
+    default: () => _,
+}),
+    r(228524);
 var n = r(627968),
     s = r(64700),
     o = r(397927),
@@ -14,6 +17,7 @@ var n = r(627968),
     j = r(985018),
     m = r(942609),
     y = r(473169);
+
 function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
@@ -40,6 +44,7 @@ function x(e) {
     return e;
 }
 let g = "premium-guild-subscription-upsell-modal-header";
+
 function O(e) {
     let { title: t, subtitle: r, image: s } = e;
     return (0, n.jsxs)("div", {
@@ -146,6 +151,7 @@ let h = (e) => {
             ],
         });
     };
+
 function _(e) {
     var t, r;
     let {

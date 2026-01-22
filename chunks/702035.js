@@ -1,4 +1,7 @@
-l.r(n), l.d(n, { default: () => b });
+l.r(n),
+    l.d(n, {
+        default: () => b,
+    });
 var t = l(627968),
     a = l(64700),
     r = l(311907),
@@ -19,6 +22,10 @@ let h = (0, s.A)(u.A),
             if (s && !u) return void i.A.escapeToDefaultChannel(n);
         }, [n, s, u]),
         null != l && u)
-            ? (0, t.jsx)(h, { guild: l })
-            : (0, t.jsx)(c.A, { channelId: void 0 });
+            ? (0, t.jsx)(h, {
+                  guild: l,
+              })
+            : (0, t.jsx)(c.A, {
+                  channelId: void 0,
+              });
     };

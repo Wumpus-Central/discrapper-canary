@@ -1,4 +1,7 @@
-n.d(t, { A: () => S }), n(896048);
+n.d(t, {
+    A: () => S,
+}),
+    n(896048);
 var r,
     i = n(311907),
     a = n(73153),
@@ -7,6 +10,7 @@ var r,
     l = n(919638),
     c = n(808728),
     u = n(652215);
+
 function d(e, t, n) {
     return (
         t in e
@@ -22,27 +26,33 @@ function d(e, t, n) {
 }
 let f = {},
     p = 0;
+
 function _() {
     p += 1;
 }
+
 function h(e) {
     if (null == f[e]) return !1;
     delete f[e];
 }
+
 function m(e) {
     let { id: t } = e;
     if (f[t]) return !1;
     f[t] = !0;
 }
+
 function g(e) {
     let { id: t } = e;
     return h(t);
 }
+
 function E(e) {
     for (let t of (e.userGuildSettings.partial || (f = {}), e.userGuildSettings.entries))
         if (null != t.channel_overrides)
             for (let e of t.channel_overrides) e.collapsed ? (f[e.channel_id] = !0) : delete f[e.channel_id];
 }
+
 function b(e) {
     let { userGuildSettings: t } = e,
         n = new Set(t.map((e) => e.guild_id).filter(s.Vq));
@@ -52,12 +62,14 @@ function b(e) {
     }
     for (let e of t) for (let t of e.channel_overrides) t.collapsed && (f[t.channel_id] = !0);
 }
+
 function y(e) {
     let {
         channel: { id: t },
     } = e;
     return h(t);
 }
+
 function O(e) {
     let { guildId: t } = e;
     c.Ay.getChannels(t)[u.rbe.GUILD_CATEGORY].forEach((e) => {
@@ -65,6 +77,7 @@ function O(e) {
         "null" !== t.id && (f[t.id] = !0);
     });
 }
+
 function A(e) {
     let { guildId: t } = e;
     c.Ay.getChannels(t)[u.rbe.GUILD_CATEGORY].forEach((e) => {

@@ -51,13 +51,16 @@ let b = [
     g = i.forwardRef(function (e, t) {
         let { id: n, selected: a, onClick: i, children: r } = e;
         return (0, l.jsx)(c.DUT, {
-            className: s()(f.V3, { [f.wH]: a }),
+            className: s()(f.V3, {
+                [f.wH]: a,
+            }),
             "data-tab-id": n,
             innerRef: t,
             onClick: i,
             children: r,
         });
     });
+
 function v(e) {
     let { tabs: t, selectedTabId: n, onSelectTab: a } = e,
         r = i.useRef(new Map()),
@@ -212,6 +215,7 @@ function v(e) {
         ],
     });
 }
+
 function j(e, t) {
     var n, a, r;
     let { tabs: s, initialSelectedTabId: o, onChangeTab: c } = e,

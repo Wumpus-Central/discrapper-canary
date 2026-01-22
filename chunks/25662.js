@@ -1,4 +1,6 @@
-n.d(t, { i: () => r });
+n.d(t, {
+    i: () => r,
+});
 let r = {
     __proto__: null,
     bg: {
@@ -42,7 +44,7 @@ let r = {
         decimal: ",",
     },
     fr: {
-        group: "\u202F",
+        group: " ",
         decimal: ",",
     },
     hi: {

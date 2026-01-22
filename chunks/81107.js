@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -7,7 +9,12 @@ var i = n(397927),
     o = n(443935),
     l = n(652215),
     c = n(513167);
-let u = { offset: { top: -8 } };
+let u = {
+    offset: {
+        top: -8,
+    },
+};
+
 function d() {
     return (0, r.jsxs)("div", {
         className: c.lj,

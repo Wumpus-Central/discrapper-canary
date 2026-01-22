@@ -1,9 +1,12 @@
-n.d(t, { e: () => l });
+n.d(t, {
+    e: () => l,
+});
 var r = n(803082),
     i = n(290424),
     a = n(702992),
     s = n(8321),
     o = n(946020);
+
 function l(e, t, n) {
     let {
             isDisabled: l = !1,
@@ -49,11 +52,15 @@ function l(e, t, n) {
         }),
         { focusableProps: R } = (0, o.Wc)(e, n),
         w = (0, r.v)(I, R),
-        P = (0, i.$)(e, { labelable: !0 });
+        P = (0, i.$)(e, {
+            labelable: !0,
+        });
     return (
         (0, a.F)(n, t.defaultSelected, t.setSelected),
         {
-            labelProps: (0, r.v)(C, { onClick: (e) => e.preventDefault() }),
+            labelProps: (0, r.v)(C, {
+                onClick: (e) => e.preventDefault(),
+            }),
             inputProps: (0, r.v)(P, {
                 "aria-invalid": g || "invalid" === m || void 0,
                 "aria-errormessage": e["aria-errormessage"],
@@ -61,7 +68,11 @@ function l(e, t, n) {
                 "aria-readonly": c || void 0,
                 onChange: S,
                 disabled: l,
-                ...(null == u ? {} : { value: u }),
+                ...(null == u
+                    ? {}
+                    : {
+                          value: u,
+                      }),
                 name: d,
                 form: f,
                 type: "checkbox",

@@ -1,4 +1,6 @@
-i.d(e, { z: () => A });
+i.d(e, {
+    z: () => A,
+});
 var n = i(311907),
     l = i(926919),
     s = i(419954),
@@ -15,7 +17,10 @@ let A = (0, s.zD)(a.X.VOICE_AND_VIDEO_STREAM_INFO_OVERLAY, {
     },
     setValue: function (t) {
         let e = r.default.isStreamInfoOverlayEnabled;
-        (0, o.A)("stream_info_overlay_enabled", t, e), (0, l.x)({ isStreamInfoOverlayEnabled: t });
+        (0, o.A)("stream_info_overlay_enabled", t, e),
+            (0, l.x)({
+                isStreamInfoOverlayEnabled: t,
+            });
     },
     usePredicate: function () {
         return u.Q_.useSetting();

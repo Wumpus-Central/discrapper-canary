@@ -1,4 +1,7 @@
-n.d(t, { A: () => C }), n(896048);
+n.d(t, {
+    A: () => C,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(311907),
@@ -21,6 +24,7 @@ var r = n(627968),
     y = n(852431),
     I = n(985018),
     v = n(532956);
+
 function S(e) {
     let { guild: t, width: n, height: l } = e,
         a = i.useMemo(
@@ -35,7 +39,9 @@ function S(e) {
         ),
         s = (0, c.S)(a);
     return null == a
-        ? (0, r.jsx)("div", { className: v.Eq })
+        ? (0, r.jsx)("div", {
+              className: v.Eq,
+          })
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(o.A, {
@@ -54,7 +60,9 @@ function S(e) {
                                   .concat((0, f.cb)(s, 1), " 100%)"),
                           },
                       }),
-                  (0, r.jsx)("div", { className: v.qj }),
+                  (0, r.jsx)("div", {
+                      className: v.qj,
+                  }),
               ],
           });
 }
@@ -90,9 +98,21 @@ let C = (e) => {
             await h.A.resetGuildJoinRequest(t), (0, A.Ze)(t);
         },
         L = (e) => {
-            e ? P(I.intl.format(I.t["9ZezpN"], { name: null == j ? void 0 : j.name }), x)() : x();
+            e
+                ? P(
+                      I.intl.format(I.t["9ZezpN"], {
+                          name: null == j ? void 0 : j.name,
+                      }),
+                      x,
+                  )()
+                : x();
         },
-        R = P(I.intl.format(I.t.fJwWVt, { name: null == j ? void 0 : j.name }), x);
+        R = P(
+            I.intl.format(I.t.fJwWVt, {
+                name: null == j ? void 0 : j.name,
+            }),
+            x,
+        );
     return (0, r.jsxs)("div", {
         className: v.MY,
         ref: n,
@@ -130,7 +150,9 @@ let C = (e) => {
                     }
                 })(),
             }),
-            (0, r.jsx)("div", { className: v.T_ }),
+            (0, r.jsx)("div", {
+                className: v.T_,
+            }),
         ],
     });
 };

@@ -131,7 +131,7 @@ let a = {
         åttio: 80,
         nittio: 90,
         hundra: 100,
-        tusen: 1000,
+        tusen: 1e3,
     },
     c = {
         sek: "second",
@@ -170,6 +170,7 @@ let a = {
         år: "year",
         kvartal: "quarter",
     };
+
 function d(e) {
     let t = {},
         n = e,
@@ -177,6 +178,7 @@ function d(e) {
     for (; r; ) f(t, r), (n = n.substring(r[0].length)), (r = h.exec(n));
     return t;
 }
+
 function f(e, t) {
     let n = b(t[1]);
     e[c[t[2].toLowerCase()]] = n;
@@ -188,10 +190,12 @@ let _ = `(${p})\\s{0,5}(${(0, r.uJ)(c)})\\s{0,5}`,
     m = `(${p})\\s{0,5}(${(0, r.uJ)(u)})\\s{0,5}`,
     g = (0, r.mb)("", _),
     E = (0, r.mb)("", m);
+
 function b(e) {
     let t = e.toLowerCase();
     return void 0 !== l[t] ? l[t] : parseInt(t);
 }
+
 function y(e) {
     if (/\d+/.test(e)) {
         let t = parseInt(e);

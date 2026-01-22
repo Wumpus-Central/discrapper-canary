@@ -11,6 +11,7 @@ var r = n(735438),
     i = n(73153),
     a = n(475815),
     s = n(365971);
+
 function o(e, t) {
     i.h.dispatch({
         type: "WINDOW_FOCUS",
@@ -18,6 +19,7 @@ function o(e, t) {
         focused: t,
     });
 }
+
 function l(e) {
     i.h.dispatch({
         type: "WINDOW_HIDDEN",
@@ -34,9 +36,11 @@ let c = (0, r.memoize)((e) =>
         });
     }, 100),
 );
+
 function u(e) {
     c((0, s.Q2)(e))(e.innerWidth, e.innerHeight);
 }
+
 function d(e) {
     let t = (0, s.Q2)(e);
     i.h.dispatch({
@@ -45,6 +49,7 @@ function d(e) {
         isElementFullscreen: (0, a._U)(null, e.document),
     });
 }
+
 function f(e) {
     let t = (0, s.Q2)(e);
     i.h.dispatch({
@@ -53,6 +58,7 @@ function f(e) {
         visible: "visible" === e.document.visibilityState,
     });
 }
+
 function p(e) {
     let t = (0, s.Q2)(e),
         n = e.document;
@@ -66,6 +72,7 @@ function p(e) {
         visible: "visible" === n.visibilityState,
     });
 }
+
 function _(e) {
     i.h.dispatch({
         type: "WINDOW_UNLOAD",

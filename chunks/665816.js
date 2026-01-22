@@ -1,4 +1,6 @@
-n.d(t, { i: () => b });
+n.d(t, {
+    i: () => b,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -13,6 +15,7 @@ var i = n(503698),
     p = n(985018),
     _ = n(933674),
     h = n(956324);
+
 function m(e, t, n) {
     return (
         t in e
@@ -26,6 +29,7 @@ function m(e, t, n) {
         e
     );
 }
+
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,10 +46,13 @@ function g(e) {
     }
     return e;
 }
+
 function E(e) {
     let { questId: t, questContent: n, fullWidth: i } = e,
         a = () => {
-            (0, u.navigateToQuestHome)({ fromContent: n }),
+            (0, u.navigateToQuestHome)({
+                fromContent: n,
+            }),
                 l.default.track(
                     f.HAw.QUEST_CONTENT_CLICKED,
                     g(
@@ -69,6 +76,7 @@ function E(e) {
         }),
     });
 }
+
 function b(e) {
     let { questId: t, fallbackReason: n, bodyText: i, questContent: s } = e,
         { containerRef: l, size: u } = (0, d.L)();

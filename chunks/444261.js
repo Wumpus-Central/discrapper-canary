@@ -1,10 +1,14 @@
-n.d(t, { A: () => d }), n(896048);
+n.d(t, {
+    A: () => d,
+}),
+    n(896048);
 var r = n(311907),
     i = n(73153),
     a = n(439372),
     s = n(919577),
     o = n(961350),
     l = n(734057);
+
 function c(e, t, n) {
     return (
         t in e
@@ -43,7 +47,7 @@ class u extends a.A {
         )
             return;
         let u = new Date(null != (t = null == (r = c.threadMetadata) ? void 0 : r.archiveTimestamp) ? t : 0).getTime();
-        Date.now() - u < 5000 && s.A.resort(c.parent_id);
+        Date.now() - u < 5e3 && s.A.resort(c.parent_id);
     }
     handleGuildDelete(e) {
         let { guild: t } = e;

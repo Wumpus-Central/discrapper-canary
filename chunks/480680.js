@@ -1,9 +1,14 @@
-n.d(t, { A: () => U }), n(114821), n(339614), n(896048);
+n.d(t, {
+    A: () => U,
+}),
+    n(114821),
+    n(339614),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
     a = n.n(i),
-    s = n(432022),
+    s = n(108531),
     o = n(311907),
     c = n(827734);
 n(990078);
@@ -33,6 +38,7 @@ var h = n(952790),
     w = n(652215),
     R = n(985018),
     D = n(760362);
+
 function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -72,6 +78,7 @@ let L = [],
         hasGuildSubheader: !1,
         disableBannerAnimation: !0,
     };
+
 function k(e) {
     let { includePanelSpacing: t } = e,
         n = (0, x.op)(),
@@ -169,8 +176,12 @@ function k(e) {
         z = V(I, i, null);
     (0, p.Ay)(() => {
         var e;
-        d.h.dispatch({ type: "NOTIFICATIONS_INBOX_OPEN" });
-        let t = (0, j.GE)({ location: "NotificationsInboxSidebar" }).notificationCenterVariant,
+        d.h.dispatch({
+            type: "NOTIFICATIONS_INBOX_OPEN",
+        });
+        let t = (0, j.GE)({
+                location: "NotificationsInboxSidebar",
+            }).notificationCenterVariant,
             r = null == (e = _.A.getDevOverrides().navOnClick) || e;
         if (t !== j.U5.SIDEBAR || !1 === r) return;
         let { message: l, isUnread: i } = (function (e, t) {
@@ -207,7 +218,9 @@ function k(e) {
         null != l &&
             v.A.inboxItemClick({
                 message: l,
-                channel: { id: l.channel_id },
+                channel: {
+                    id: l.channel_id,
+                },
                 isUnread: i,
                 isSidebar: !0,
                 track: !1,
@@ -215,13 +228,19 @@ function k(e) {
             });
     }),
         (0, p.l0)(() => {
-            d.h.dispatch({ type: "NOTIFICATIONS_INBOX_CLOSE" });
+            d.h.dispatch({
+                type: "NOTIFICATIONS_INBOX_CLOSE",
+            });
         });
-    let { filterStyle: Y } = (0, j.X8)({ location: "NotificationsInboxSidebar" }),
+    let { filterStyle: Y } = (0, j.X8)({
+            location: "NotificationsInboxSidebar",
+        }),
         q = Y === j.yF.DROPDOWN && i !== P.Io.ALL,
         X = (0, P.Yw)(i);
     return (0, r.jsx)("nav", {
-        className: a()(D.kL, { [D.Yu]: t }),
+        className: a()(D.kL, {
+            [D.Yu]: t,
+        }),
         children: (0, r.jsxs)(u.Fmo, {
             forceLevel: 1,
             component: (0, r.jsx)(
@@ -235,8 +254,14 @@ function k(e) {
                 ),
             ),
             children: [
-                i === P.Io.ALL && (0, r.jsx)(B, { hideBanner: !R || i !== P.Io.ALL }),
-                q && (0, r.jsx)(u.hKd, { size: 8 }),
+                i === P.Io.ALL &&
+                    (0, r.jsx)(B, {
+                        hideBanner: !R || i !== P.Io.ALL,
+                    }),
+                q &&
+                    (0, r.jsx)(u.hKd, {
+                        size: 8,
+                    }),
                 (0, r.jsx)(T.A, {
                     className: D.cl,
                     renderMessageGroup: H,
@@ -251,9 +276,13 @@ function k(e) {
         }),
     });
 }
+
 function U(e) {
-    return (0, r.jsx)(x.GM, { children: (0, r.jsx)(k, M({}, e)) });
+    return (0, r.jsx)(x.GM, {
+        children: (0, r.jsx)(k, M({}, e)),
+    });
 }
+
 function V(e, t, n) {
     return l.useMemo(
         () =>
@@ -268,9 +297,11 @@ function V(e, t, n) {
         [e, t, n],
     );
 }
+
 function F() {
     return (0, r.jsx)(I.A, {});
 }
+
 function H(e, t) {
     return (0, r.jsx)(
         N.A,
@@ -282,11 +313,14 @@ function H(e, t) {
         e[0].id,
     );
 }
+
 function B(e) {
     let { hideBanner: t } = e,
         n = (0, S.S)((e) => e.shouldHide());
     return (0, r.jsx)("div", {
-        className: a()(D.dl, { [D.jD]: n || t }),
+        className: a()(D.dl, {
+            [D.jD]: n || t,
+        }),
         children: (0, r.jsxs)("div", {
             className: D.XD,
             children: [

@@ -1,4 +1,6 @@
-n.d(t, { f: () => L });
+n.d(t, {
+    f: () => L,
+});
 var a = n(627968),
     l = n(64700),
     i = n(732955),
@@ -24,6 +26,7 @@ var a = n(627968),
     S = n(758836),
     O = n(985018),
     E = n(703653);
+
 function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -49,6 +52,7 @@ function N(e) {
     }
     return e;
 }
+
 function T(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -67,6 +71,7 @@ function T(e, t) {
         e
     );
 }
+
 function I(e) {
     let { quest: t, sourceQuestContent: n, taskDetails: l } = e;
     return (0, a.jsx)(i.$nd, {
@@ -111,7 +116,9 @@ let w = (e) => {
             fullWidth: !0,
             onClick: () =>
                 (0, x.se)(
-                    { quest: n },
+                    {
+                        quest: n,
+                    },
                     {
                         content: m.uF.QUEST_BAR_V2,
                         ctaContent: d.Cy.CONNECT_CONSOLE,
@@ -125,7 +132,9 @@ let w = (e) => {
     },
     P = (e) => {
         let { quest: t } = e,
-            n = (0, p.NA)({ quest: t }),
+            n = (0, p.NA)({
+                quest: t,
+            }),
             { launchInGameActivity: l } = (0, h.zW)(t);
         return (0, v.vA)(t)
             ? (0, a.jsx)(i.$nd, {
@@ -236,7 +245,9 @@ let w = (e) => {
                     },
                     h,
                 ),
-                { size: h.size === r.$n.Sizes.MEDIUM ? "md" : "sm" },
+                {
+                    size: h.size === r.$n.Sizes.MEDIUM ? "md" : "sm",
+                },
             ),
         );
     },
@@ -268,7 +279,9 @@ let w = (e) => {
                         taskDetails: h,
                     }))
                   : (0, v.vA)(d)
-                    ? (j = (0, a.jsx)(P, { quest: d }))
+                    ? (j = (0, a.jsx)(P, {
+                          quest: d,
+                      }))
                     : o === m.X0.CONSOLE && i
                       ? (j = (0, a.jsx)(k, {
                             quest: d,
@@ -296,6 +309,7 @@ let w = (e) => {
                   })
         );
     };
+
 function L(e) {
     let t = l.useRef(null);
     return (0, a.jsxs)("div", {
@@ -310,7 +324,12 @@ function L(e) {
                     icon: s.n2b,
                     variant: "secondary",
                 }),
-            (0, a.jsx)(M, T(N({}, e), { popoutTargetElementRef: t })),
+            (0, a.jsx)(
+                M,
+                T(N({}, e), {
+                    popoutTargetElementRef: t,
+                }),
+            ),
         ],
     });
 }

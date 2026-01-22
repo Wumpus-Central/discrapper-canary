@@ -1,10 +1,14 @@
-n.d(t, { A: () => c }), n(896048);
+n.d(t, {
+    A: () => c,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(342494),
     s = n(807098),
     o = n(49999),
     l = n(985018);
+
 function c(e) {
     var t, n;
     let { onComplete: c, onCheckItOutClick: u, markAsDismissed: d, coachmarkConfig: f, children: p } = e,

@@ -12,6 +12,7 @@ var r = n(64700),
     l = n.n(i),
     s = n(340287),
     a = n(530552);
+
 function c(e) {
     let [t, n] = r.useState([e]),
         [i, s] = r.useState(0),
@@ -46,6 +47,7 @@ function c(e) {
         ),
     };
 }
+
 function o(e, t) {
     let { scrollerRef: n, mainInputRef: i, mainContainerRef: l } = t,
         {
@@ -85,7 +87,10 @@ function o(e, t) {
                                 }
                                 return e;
                             })({}, t)),
-                            (r = r = { isSelecting: e }),
+                            (r = r =
+                                {
+                                    isSelecting: e,
+                                }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
                                 : (function (e, t) {

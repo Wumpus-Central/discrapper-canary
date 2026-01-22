@@ -13,6 +13,7 @@ var r,
     u = n(235986),
     d = n(713517),
     f = n(767997);
+
 function p(e, t, n) {
     return (
         t in e
@@ -26,6 +27,7 @@ function p(e, t, n) {
         e
     );
 }
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,6 +44,7 @@ function _(e) {
     }
     return e;
 }
+
 function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -54,6 +57,7 @@ function h(e, t) {
     }
     return n;
 }
+
 function m(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -65,6 +69,7 @@ function m(e, t) {
         e
     );
 }
+
 function g(e, t) {
     if (null == e) return {};
     var n,
@@ -81,6 +86,7 @@ function g(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function E(e, t) {
     if (null == e) return {};
     var n,
@@ -110,18 +116,24 @@ class A extends (r = a.PureComponent) {
         return (0, i.jsx)(
             l.A.div,
             m(_({}, a), {
-                className: o()(f.dj, t, { [f.EM]: r }),
+                className: o()(f.dj, t, {
+                    [f.EM]: r,
+                }),
                 children: (0, i.jsx)(u.A, {
                     align: u.A.Align.CENTER,
                     justify: u.A.Justify.CENTER,
                     className: y[n],
-                    children: (0, i.jsx)("div", { className: O[n] }),
+                    children: (0, i.jsx)("div", {
+                        className: O[n],
+                    }),
                 }),
             }),
         );
     }
 }
-p(A, "defaultProps", { shineSize: "default" });
+p(A, "defaultProps", {
+    shineSize: "default",
+});
 let v = (e) => {
     let {
             children: t,

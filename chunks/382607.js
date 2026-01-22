@@ -1,4 +1,7 @@
-n.d(t, { A: () => d }), n(896048);
+n.d(t, {
+    A: () => d,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(397927),
@@ -7,6 +10,7 @@ var r = n(627968),
     l = n(522305),
     c = n(652215),
     u = n(985018);
+
 function d(e) {
     let { botUserId: t, applicationId: n, analyticsLocations: d } = e,
         [f, p] = i.useState(!1),

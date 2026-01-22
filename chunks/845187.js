@@ -14,6 +14,7 @@ var r = n(627968),
     d = n(652215),
     p = n(985018);
 let f = "Activity Encourages Hardware Acceleration";
+
 function h(e) {
     var t;
     let { applicationId: n, transitionState: h, onClose: A } = e,
@@ -21,11 +22,17 @@ function h(e) {
         [b] = (0, o.A)([n]),
         _ = null != (t = null == b ? void 0 : b.name) ? t : "This Activity";
     i.useEffect(() => {
-        c.default.track(d.HAw.OPEN_MODAL, { type: f });
+        c.default.track(d.HAw.OPEN_MODAL, {
+            type: f,
+        });
     }, []);
     let E = async () => {
             let e = "temporary";
-            g && ((e = "permanent"), s.Ay.updatedUnsyncedSettings({ disableActivityHardwareAccelerationPrompt: !0 })),
+            g &&
+                ((e = "permanent"),
+                s.Ay.updatedUnsyncedSettings({
+                    disableActivityHardwareAccelerationPrompt: !0,
+                })),
                 c.default.track(d.HAw.MODAL_DISMISSED, {
                     type: f,
                     dismiss_type: e,
@@ -33,7 +40,9 @@ function h(e) {
                 await A();
         },
         O = async () => {
-            c.default.track(d.HAw.ACTIVITY_ENABLE_HARDWARE_ACCELERATION, { application_id: n }),
+            c.default.track(d.HAw.ACTIVITY_ENABLE_HARDWARE_ACCELERATION, {
+                application_id: n,
+            }),
                 u.Ay.setEnableHardwareAcceleration(!0),
                 await E();
         };
@@ -63,7 +72,9 @@ function h(e) {
         ],
         children: (0, r.jsx)(a.Text, {
             variant: "text-md/normal",
-            children: p.intl.format(p.t.B9eiaK, { applicationName: _ }),
+            children: p.intl.format(p.t.B9eiaK, {
+                applicationName: _,
+            }),
         }),
     });
 }

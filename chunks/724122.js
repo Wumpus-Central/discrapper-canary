@@ -1,4 +1,6 @@
-n.d(t, { W: () => i });
+n.d(t, {
+    W: () => i,
+});
 let r = (0, n(250105).Ay)({
     kind: "user",
     name: "2025-08-negative-hardware-acceleration",
@@ -21,6 +23,9 @@ let r = (0, n(250105).Ay)({
         },
     },
 });
+
 function i(e) {
-    return r.getConfig({ location: e }).forceEnableAppHardwareAcceleration;
+    return r.getConfig({
+        location: e,
+    }).forceEnableAppHardwareAcceleration;
 }

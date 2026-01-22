@@ -1,4 +1,8 @@
-l.d(t, { A: () => _ }), l(896048), l(747238);
+l.d(t, {
+    A: () => _,
+}),
+    l(896048),
+    l(747238);
 var n = l(627968),
     r = l(64700),
     s = l(503698),
@@ -54,7 +58,9 @@ let _ = (e) => {
             if ((R(!0), _.isDismissible)) {
                 var e;
                 let t = null != (e = _.dismissibleContentVersion) ? e : 0;
-                (0, u.$l)(i.M.COLLECTIBLES_SHOP_WIDE_BANNER, t, { dismissAction: x.i.USER_DISMISS });
+                (0, u.$l)(i.M.COLLECTIBLES_SHOP_WIDE_BANNER, t, {
+                    dismissAction: x.i.USER_DISMISS,
+                });
             }
         }, [_.isDismissible, _.dismissibleContentVersion]),
         z = r.useCallback(
@@ -111,29 +117,46 @@ let _ = (e) => {
                         }),
                     }),
                 (0, n.jsx)("div", {
-                    className: a()(O.zK, { [O._1]: M }),
-                    style: null != I ? { height: "".concat(I, "px") } : void 0,
+                    className: a()(O.zK, {
+                        [O._1]: M,
+                    }),
+                    style:
+                        null != I
+                            ? {
+                                  height: "".concat(I, "px"),
+                              }
+                            : void 0,
                     children: (0, n.jsx)("img", {
                         ref: T,
                         src: B,
                         alt: _.title,
-                        className: a()(O.LN, { [O.d5]: M }),
+                        className: a()(O.LN, {
+                            [O.d5]: M,
+                        }),
                     }),
                 }),
                 (0, n.jsx)("div", {
-                    className: a()(O.Ep, { [O.Qq]: G }),
-                    style: { maxHeight: null != I ? "".concat(I, "px") : "auto" },
+                    className: a()(O.Ep, {
+                        [O.Qq]: G,
+                    }),
+                    style: {
+                        maxHeight: null != I ? "".concat(I, "px") : "auto",
+                    },
                     children: (0, n.jsxs)("div", {
                         className: O.E8,
                         children: [
                             (0, n.jsx)(c.Heading, {
-                                style: { color: null != (l = _.bannerTextColor) ? l : "var(--text-strong)" },
+                                style: {
+                                    color: null != (l = _.bannerTextColor) ? l : "var(--text-strong)",
+                                },
                                 className: M ? O.O2 : void 0,
                                 variant: "heading-xl/bold",
                                 children: _.title,
                             }),
                             (0, n.jsx)(c.Text, {
-                                style: { color: "var(--text-muted)" },
+                                style: {
+                                    color: "var(--text-muted)",
+                                },
                                 lineClamp: 2,
                                 variant: M ? "text-md/medium" : "text-sm/medium",
                                 children: M

@@ -25,6 +25,7 @@ let d = {
         [o.EGs.ROUND_RIGHT]: c.q5,
         [o.EGs.SQUARE]: "",
     };
+
 function p(e) {
     let { className: t, style: n, shape: i = o.EGs.ROUND, look: u = "RED", size: p = d.LARGE } = e;
     return "RED" === u

@@ -1,4 +1,8 @@
-n.d(t, { S: () => R }), n(321073), n(896048);
+n.d(t, {
+    S: () => R,
+}),
+    n(321073),
+    n(896048);
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -17,6 +21,7 @@ var i = n(503698),
     g = n(985018),
     E = n(146449),
     b = n(544879);
+
 function y(e, t, n) {
     return (
         t in e
@@ -30,6 +35,7 @@ function y(e, t, n) {
         e
     );
 }
+
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -46,6 +52,7 @@ function O(e) {
     }
     return e;
 }
+
 function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -58,6 +65,7 @@ function A(e, t) {
     }
     return n;
 }
+
 function v(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -71,10 +79,18 @@ function v(e, t) {
 }
 let S = (e) => {
         let { startingScreen: t, analyticsLocations: i } = e;
-        c.default.track(m.HAw.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: i }),
+        c.default.track(m.HAw.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, {
+            location_stack: i,
+        }),
             (0, o.mMO)(async () => {
                 let { default: e } = await Promise.resolve().then(n.bind(n, 303682));
-                return (n) => (0, r.jsx)(e, v(O({}, n), { startingScreen: t }));
+                return (n) =>
+                    (0, r.jsx)(
+                        e,
+                        v(O({}, n), {
+                            startingScreen: t,
+                        }),
+                    );
             });
     },
     I = (e) => {
@@ -110,10 +126,22 @@ let S = (e) => {
                 let e = [];
                 for (let n = 0; n < _.Z; n++)
                     if ((null == t ? void 0 : t[n]) !== void 0) {
-                        let i = (0, r.jsx)(I, { user: t[n] }, t[n].id);
+                        let i = (0, r.jsx)(
+                            I,
+                            {
+                                user: t[n],
+                            },
+                            t[n].id,
+                        );
                         e.push(i);
                     } else {
-                        let t = (0, r.jsx)(T, { slotIndex: n + 1 }, n);
+                        let t = (0, r.jsx)(
+                            T,
+                            {
+                                slotIndex: n + 1,
+                            },
+                            n,
+                        );
                         e.push(t);
                     }
                 return e;
@@ -150,23 +178,35 @@ let S = (e) => {
             d = i.size === _.Z,
             b = () =>
                 !1 === l
-                    ? g.intl.format(g.t["zWhX/Q"], { helpdeskArticle: u.A.getArticleURL(m.MVz.REFERRAL_PROGRAM) })
+                    ? g.intl.format(g.t["zWhX/Q"], {
+                          helpdeskArticle: u.A.getArticleURL(m.MVz.REFERRAL_PROGRAM),
+                      })
                     : n.length === _.Z
                       ? !0 === c
-                          ? g.intl.format(g.t["1aEjsH"], { helpdeskArticle: u.A.getArticleURL(m.MVz.REFERRAL_PROGRAM) })
-                          : g.intl.format(g.t["+u3AOO"], { helpdeskArticle: u.A.getArticleURL(m.MVz.REFERRAL_PROGRAM) })
-                      : g.intl.format(g.t["omMr+V"], { helpdeskArticle: u.A.getArticleURL(m.MVz.REFERRAL_PROGRAM) });
+                          ? g.intl.format(g.t["1aEjsH"], {
+                                helpdeskArticle: u.A.getArticleURL(m.MVz.REFERRAL_PROGRAM),
+                            })
+                          : g.intl.format(g.t["+u3AOO"], {
+                                helpdeskArticle: u.A.getArticleURL(m.MVz.REFERRAL_PROGRAM),
+                            })
+                      : g.intl.format(g.t["omMr+V"], {
+                            helpdeskArticle: u.A.getArticleURL(m.MVz.REFERRAL_PROGRAM),
+                        });
         return (0, r.jsxs)("div", {
             className: a()(E.kL, t),
             children: [
                 (0, r.jsx)("div", {
                     className: E.G3,
-                    children: (0, r.jsx)(N, { nReferralsSent: i.size }),
+                    children: (0, r.jsx)(N, {
+                        nReferralsSent: i.size,
+                    }),
                 }),
                 (0, r.jsxs)("div", {
                     className: E.IH,
                     children: [
-                        (0, r.jsx)(C, { referralSentUsers: n }),
+                        (0, r.jsx)(C, {
+                            referralSentUsers: n,
+                        }),
                         (0, r.jsxs)("div", {
                             className: E.n4,
                             children: [

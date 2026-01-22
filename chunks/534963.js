@@ -1,4 +1,6 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 var r = n(562465),
     l = n(73153),
     i = n(652215);
@@ -27,7 +29,9 @@ let a = {
     changeCallRegion(e, t) {
         r.Bo.patch({
             url: i.Rsh.CALL(e),
-            body: { region: t },
+            body: {
+                region: t,
+            },
             oldFormErrors: !0,
             rejectWithError: !0,
         });

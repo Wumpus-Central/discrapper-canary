@@ -1,7 +1,13 @@
-n.d(t, { v: () => u }), n(321073), n(896048), n(65821);
+n.d(t, {
+    v: () => u,
+}),
+    n(321073),
+    n(896048),
+    n(65821);
 var r = n(118356),
     i = n(689234),
     a = n(72290);
+
 function s(e, t, n) {
     return (
         t in e
@@ -15,7 +21,7 @@ function s(e, t, n) {
         e
     );
 }
-let o = 1000000,
+let o = 1e6,
     l = "1" === a.env.KV_STORAGE_LOGGING,
     c = new r.Vy("Runtime");
 class u {

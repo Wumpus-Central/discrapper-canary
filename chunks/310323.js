@@ -1,4 +1,7 @@
-n.d(t, { A: () => U }), n(896048);
+n.d(t, {
+    A: () => U,
+}),
+    n(896048);
 var r = n(735438),
     i = n(451988),
     a = n(73153),
@@ -20,6 +23,7 @@ var r = n(735438),
     O = n(652896),
     A = n(502075),
     v = n(652215);
+
 function S(e, t, n) {
     return (
         t in e
@@ -33,6 +37,7 @@ function S(e, t, n) {
         e
     );
 }
+
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -49,21 +54,24 @@ function I(e) {
     }
     return e;
 }
-let T = (0, r.debounce)(s.a8, 1000),
+let T = (0, r.debounce)(s.a8, 1e3),
     C = {},
     N = {},
     R = 3 * b.A.Millis.MINUTE,
     w = 5 * b.A.Millis.SECOND,
     P = 12 * b.A.Millis.SECOND,
     D = null;
+
 function x(e) {
     var t;
     null == (t = C[e]) || t.stop(), delete C[e];
 }
+
 function L(e) {
     var t;
     null == (t = N[e]) || t.stop(), delete N[e];
 }
+
 function j(e, t) {
     if (m.A.getVoiceChannelId() !== e) return !1;
     let n = p.A.getChannel(e);
@@ -72,12 +80,21 @@ function j(e, t) {
     let r = d.A.getStreamForUser(t, n.getGuildId());
     if (null == r) return !1;
     let i = (0, O._z)(r);
-    return i !== D && ((D = i), (0, s.A9)(r, { noFocus: !0 }), !0);
+    return (
+        i !== D &&
+        ((D = i),
+        (0, s.A9)(r, {
+            noFocus: !0,
+        }),
+        !0)
+    );
 }
+
 function M(e, t) {
     let n = null != t ? t : h.A.getPreferredRegion();
     null != n && n !== h.A.getRegion(g.A.getHostname(e)) && (0, s.dA)(e, n);
 }
+
 function k(e, t) {
     var n;
     if (g.A.getAllActiveStreamKeys().includes(e)) return;
@@ -145,7 +162,14 @@ class U extends o.A {
                 let { reason: t, streamKey: n } = e;
                 L(n),
                     t === v.H2B.STREAM_FULL &&
-                        ((0, l.QW)(I({ type: l.iy.STREAM_FULL }, (0, c.id)(n))),
+                        ((0, l.QW)(
+                            I(
+                                {
+                                    type: l.iy.STREAM_FULL,
+                                },
+                                (0, c.id)(n),
+                            ),
+                        ),
                         (0, s.Xi)(n, !1),
                         this.platformShowStreamFull());
             }),

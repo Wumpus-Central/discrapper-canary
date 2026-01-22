@@ -1,4 +1,9 @@
-a.d(t, { default: () => S }), a(321073), a(896048), a(733351);
+a.d(t, {
+    default: () => S,
+}),
+    a(321073),
+    a(896048),
+    a(733351);
 var n = a(627968),
     r = a(64700),
     l = a(503698),
@@ -28,6 +33,7 @@ var n = a(627968),
     C = a(381941),
     A = a(985018),
     I = a(312396);
+
 function R(e) {
     var t;
     let { clips: a } = e,
@@ -84,7 +90,9 @@ function R(e) {
                                         ? null != (t = r.name)
                                             ? t
                                             : A.intl.string(A.t.Cyxddp)
-                                        : A.intl.formatToPlainString(A.t.SJ6pPX, { count: a.length }),
+                                        : A.intl.formatToPlainString(A.t.SJ6pPX, {
+                                              count: a.length,
+                                          }),
                             }),
                         ],
                     }),
@@ -94,6 +102,7 @@ function R(e) {
         })
     );
 }
+
 function S(e) {
     var t, a;
     let { clips: l, analyticsLocations: c, onClose: d } = e,
@@ -142,10 +151,22 @@ function S(e) {
                             r = (0, v.A)(n);
                         if (e.type === _.nQ.CLIP || e.type === _.nQ.VOICE_CLIP) {
                             let n = "".concat("" !== r ? r : "clip", ".mp4");
-                            t.push(new File([a], n, { type: "video/mp4" })), h.push({ clip: e });
+                            t.push(
+                                new File([a], n, {
+                                    type: "video/mp4",
+                                }),
+                            ),
+                                h.push({
+                                    clip: e,
+                                });
                         } else if (e.type === _.nQ.SCREENSHOT) {
                             let e = "".concat("" !== r ? r : "screenshot", ".jpeg");
-                            t.push(new File([a], e, { type: "image/jpeg" })), h.push({});
+                            t.push(
+                                new File([a], e, {
+                                    type: "image/jpeg",
+                                }),
+                            ),
+                                h.push({});
                         }
                     }
                     let I = (await Promise.all(e.map(y.pk))).filter(j.Vq).filter((e) => (0, T.t)(e));
@@ -172,10 +193,17 @@ function S(e) {
                                 });
                             null != n &&
                                 "" !== n.trim() &&
-                                (await o.A.sendMessage(a.id, u.Ay.parse(a, n), !1, { location: C.Hx.FORWARDING }));
+                                (await o.A.sendMessage(a.id, u.Ay.parse(a, n), !1, {
+                                    location: C.Hx.FORWARDING,
+                                }));
                         }
                     }
-                    r && 1 === I.length && ((0, b.iN)(I[0], { openTextInVoiceIfVoiceChannel: !0 }), i.closeAllModals());
+                    r &&
+                        1 === I.length &&
+                        ((0, b.iN)(I[0], {
+                            openTextInVoiceIfVoiceChannel: !0,
+                        }),
+                        i.closeAllModals());
                 } catch (e) {
                     (0, s.showToast)((0, s.createToast)(A.intl.string(A.t.iufib1), s.ToastType.FAILURE));
                 } finally {
@@ -185,7 +213,10 @@ function S(e) {
             [l, c, d],
         ),
         S = r.useCallback((e) => {
-            if (e instanceof h.YB && !(0, T.t)(e.id)) return { label: A.intl.string(A.t.iufib1) };
+            if (e instanceof h.YB && !(0, T.t)(e.id))
+                return {
+                    label: A.intl.string(A.t.iufib1),
+                };
         }, []);
     return (0, n.jsx)(
         f.ForwardModal,
@@ -219,7 +250,9 @@ function S(e) {
                 onClose: d,
                 customTitle: A.intl.string(A.t.I8lglT),
                 customSubtitle: A.intl.string(A.t.Ey7mOU),
-                customPreview: (0, n.jsx)(R, { clips: l }),
+                customPreview: (0, n.jsx)(R, {
+                    clips: l,
+                }),
                 customSendHandler: I,
                 customValidateDestination: S,
             }),

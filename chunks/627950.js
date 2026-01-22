@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(686956),
     i = n(22007),
     a = n(734057),
@@ -16,7 +18,15 @@ async function u(e) {
         p = !1;
     if (null == f && null != n && null == s.A.getGuild(n))
         try {
-            await (0, l.Z2)(n, { object: c.ZSU.FORWARD_BREADCRUMB }, { shouldNavigate: !1 }),
+            await (0, l.Z2)(
+                n,
+                {
+                    object: c.ZSU.FORWARD_BREADCRUMB,
+                },
+                {
+                    shouldNavigate: !1,
+                },
+            ),
                 (p = !0),
                 await (0, r.k)(n),
                 (f = a.A.getChannel(u));
@@ -31,5 +41,7 @@ async function u(e) {
         did_lurk: p,
     });
     let _ = p ? u : void 0;
-    (0, i.A)(c.BVt.CHANNEL(n, u, d), { welcomeModalChannelId: _ });
+    (0, i.A)(c.BVt.CHANNEL(n, u, d), {
+        welcomeModalChannelId: _,
+    });
 }

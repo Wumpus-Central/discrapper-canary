@@ -1,4 +1,9 @@
-n.d(t, { A: () => x }), n(896048), n(747238), n(492834);
+n.d(t, {
+    A: () => x,
+}),
+    n(896048),
+    n(747238),
+    n(492834);
 var r = n(627968),
     i = n(64700),
     s = n(492462),
@@ -14,6 +19,7 @@ var r = n(627968),
     g = n(129851),
     m = n(652215),
     A = n(746080);
+
 function x(e) {
     var t, n;
     let x = i.useCallback(
@@ -21,8 +27,10 @@ function x(e) {
                 var n, r;
                 let i;
                 +(
-                    (null == (i = (0, l.B6)(t, { path: m.BVt.CHANNEL(h.pv.guildId(), h.pv.channelId()) })) ||
-                    null == (n = i.params)
+                    (null ==
+                        (i = (0, l.B6)(t, {
+                            path: m.BVt.CHANNEL(h.pv.guildId(), h.pv.channelId()),
+                        })) || null == (n = i.params)
                         ? void 0
                         : n.channelId) !== A.VV.ROLE_SUBSCRIPTIONS
                 )
@@ -37,6 +45,7 @@ function x(e) {
         })),
         { location: b, redirectTo: v } = e,
         [j, y] = i.useState(_);
+
     function S(e) {
         let { handoffKey: t, handoffToken: n, handoffSource: r } = e;
         (0, c.Qh)({
@@ -96,7 +105,10 @@ function x(e) {
                   }
                   return e;
               })({}, e)),
-              (n = n = { transitionTo: x }),
+              (n = n =
+                  {
+                      transitionTo: x,
+                  }),
               Object.getOwnPropertyDescriptors
                   ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                   : (function (e, t) {

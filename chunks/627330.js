@@ -1,4 +1,6 @@
-n.d(t, { D: () => f });
+n.d(t, {
+    D: () => f,
+});
 var r = n(627968),
     i = n(503698),
     a = n.n(i),
@@ -6,6 +8,7 @@ var r = n(627968),
     o = n(349288),
     l = n(397927),
     c = n(248789);
+
 function u(e, t, n) {
     return (
         t in e
@@ -19,6 +22,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,6 +39,7 @@ function d(e) {
     }
     return e;
 }
+
 function f(e) {
     var t;
     let { title: n, body: i, badge: s, className: u, textLink: d } = e,
@@ -44,7 +49,9 @@ function f(e) {
         children: [
             (0, r.jsxs)("div", {
                 children: [
-                    (0, r.jsx)(p, { badge: s }),
+                    (0, r.jsx)(p, {
+                        badge: s,
+                    }),
                     (0, r.jsx)(l.Heading, {
                         variant: "heading-md/semibold",
                         className: c.title,
@@ -52,7 +59,9 @@ function f(e) {
                     }),
                 ],
             }),
-            (0, r.jsx)(_, { body: i }),
+            (0, r.jsx)(_, {
+                body: i,
+            }),
             null != d &&
                 (0, r.jsx)(o.Anchor, {
                     onClick: d.onClick,
@@ -68,6 +77,7 @@ function f(e) {
         ],
     });
 }
+
 function p(e) {
     let { badge: t } = e;
     if (null == t) return null;
@@ -77,6 +87,7 @@ function p(e) {
         children: (0, r.jsx)(s.E, d({}, n)),
     });
 }
+
 function _(e) {
     let { body: t } = e;
     if (null == t) return null;

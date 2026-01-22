@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -8,10 +10,13 @@ var r = n(627968),
     c = n(461797),
     u = n(985018),
     d = n(428208);
+
 function f(e) {
     let { preset: t, onShuffle: n } = e,
         f = (0, a.bG)([o.A], () => o.A.useReducedMotion),
-        p = (0, l.Xf)({ useReducedMotion: f }),
+        p = (0, l.Xf)({
+            useReducedMotion: f,
+        }),
         { name: _, header: h } = i.useMemo(() => {
             let e = (0, c.Wt)(t);
             return {

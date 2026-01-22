@@ -6,6 +6,7 @@ n.d(t, {
 var r = n(889137),
     i = n(966974),
     a = n(48693);
+
 function s(e, t) {
     let n = (0, r.YW)(t)
         .with(i.Z.IMAGE_ONLY_ANSWERS, () => a.EK)
@@ -23,6 +24,7 @@ function s(e, t) {
         },
     };
 }
+
 function o(e, t) {
     return e.getAvatarURL(t, 20, !1);
 }

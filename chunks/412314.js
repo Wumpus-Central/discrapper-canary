@@ -1,4 +1,7 @@
-n.d(t, { M: () => E }), n(896048);
+n.d(t, {
+    M: () => E,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(158954),
@@ -69,7 +72,11 @@ let E = () => {
         title:
             E.status === p.Dmq.CANCELED
                 ? _.intl.string(_.t["2Otzti"])
-                : "".concat(_.intl.format(_.t.q9Vxu4, { percent: O.discount.amount })),
+                : "".concat(
+                      _.intl.format(_.t.q9Vxu4, {
+                          percent: O.discount.amount,
+                      }),
+                  ),
         actions: w,
         onClose: async () => t(),
         children: [

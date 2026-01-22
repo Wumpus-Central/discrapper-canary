@@ -29,6 +29,7 @@ n.d(t, {
 var r = n(284009),
     i = n.n(r),
     s = n(427157);
+
 function l() {
     return window.crypto.subtle.generateKey(
         {
@@ -53,18 +54,28 @@ async function o(e) {
         d(await window.crypto.subtle.exportKey("spki", e.publicKey))
     );
 }
+
 function c(e) {
     return btoa(String.fromCharCode(...new Uint8Array(e)))
         .replace(/\//g, "_")
         .replace(/\+/g, "-")
         .replace(/={1,2}$/, "");
 }
+
 function u(e) {
     return Uint8Array.from(atob(e), (e) => e.charCodeAt(0));
 }
 async function d(e) {
-    return c(await window.crypto.subtle.digest({ name: "SHA-256" }, e));
+    return c(
+        await window.crypto.subtle.digest(
+            {
+                name: "SHA-256",
+            },
+            e,
+        ),
+    );
 }
+
 function h(e, t) {
     return (
         i()(null != e.privateKey, "private key cannot be null"),

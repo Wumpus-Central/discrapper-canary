@@ -1,10 +1,13 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(562465),
     i = n(73153),
     a = n(883600),
     s = n(253932),
     o = n(652215),
     l = n(559868);
+
 function c() {
     let e = new Date().getMinutes();
     return "x=".concat(Math.floor(e / 5));
@@ -40,7 +43,9 @@ let u = {
     sendChangelogMessage(e) {
         r.Bo.post({
             url: o.Rsh.CHANGELOG_MESSAGES,
-            body: { changelog_id: e },
+            body: {
+                changelog_id: e,
+            },
             rejectWithError: !0,
         });
     },

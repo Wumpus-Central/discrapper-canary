@@ -1,17 +1,22 @@
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var r = n(64700),
     i = n(238710),
     a = n(655972),
     s = n.n(a),
-    o = 1073741823,
+    o = 0x3fffffff,
     l = "u" > typeof globalThis ? globalThis : "u" > typeof window ? window : void 0 !== n.g ? n.g : {};
+
 function c() {
     var e = "__global_unique_id__";
     return (l[e] = (l[e] || 0) + 1);
 }
+
 function u(e, t) {
     return e === t ? 0 !== e || 1 / e == 1 / t : e != e && t != t;
 }
+
 function d(e) {
     var t = [];
     return {
@@ -34,9 +39,11 @@ function d(e) {
         },
     };
 }
+
 function f(e) {
     return Array.isArray(e) ? e[0] : e;
 }
+
 function p(e, t) {
     var n,
         a,
@@ -75,9 +82,14 @@ function p(e, t) {
             var e;
             return (
                 (e = t.apply(this, arguments) || this),
-                (e.state = { value: e.getValue() }),
+                (e.state = {
+                    value: e.getValue(),
+                }),
                 (e.onUpdate = function (t, n) {
-                    (e.observedBits & n) != 0 && e.setState({ value: e.getValue() });
+                    (e.observedBits & n) != 0 &&
+                        e.setState({
+                            value: e.getValue(),
+                        });
                 }),
                 e
             );

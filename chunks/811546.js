@@ -1,4 +1,6 @@
-r.d(t, { openGuildProductLink: () => o });
+r.d(t, {
+    openGuildProductLink: () => o,
+});
 var n = r(627968);
 r(64700);
 var u = r(397927),
@@ -6,6 +8,7 @@ var u = r(397927),
     l = r(71393),
     a = r(871109),
     c = r(652215);
+
 function o(e, t) {
     var o;
     let d = l.A.getGuild(e);

@@ -1,9 +1,12 @@
-n.d(t, { A: () => O }), n(228524);
+n.d(t, {
+    A: () => O,
+}),
+    n(228524);
 var a = n(627968),
     l = n(64700),
     i = n(503698),
     r = n.n(i),
-    s = n(432022),
+    s = n(108531),
     o = n(311907),
     c = n(397927),
     d = n(765671),
@@ -22,6 +25,7 @@ var a = n(627968),
     A = n(985018),
     C = n(196240);
 let S = async () => await n.e("40119").then(n.t.bind(n, 718698, 19));
+
 function O(e) {
     var t, n, i, O, N;
     let {
@@ -69,7 +73,10 @@ function O(e) {
                     }
                     return e;
                 })({}, _.N)),
-                (N = N = { clamp: !0 }),
+                (N = N =
+                    {
+                        clamp: !0,
+                    }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(O, Object.getOwnPropertyDescriptors(N))
                     : (function (e, t) {
@@ -175,7 +182,11 @@ function O(e) {
                         children: (0, a.jsxs)("div", {
                             className: C.c6,
                             children: [
-                                !q && z && (0, a.jsx)("div", { className: C.Nz }),
+                                !q &&
+                                    z &&
+                                    (0, a.jsx)("div", {
+                                        className: C.Nz,
+                                    }),
                                 G
                                     ? (0, a.jsxs)("div", {
                                           className: C.Tr,
@@ -222,13 +233,17 @@ function O(e) {
                     }),
                     (0, a.jsxs)("div", {
                         ref: F,
-                        className: r()(C.FS, { [C.wq]: !H }),
+                        className: r()(C.FS, {
+                            [C.wq]: !H,
+                        }),
                         children: [
                             (0, a.jsx)(c.Heading, {
                                 variant: "eyebrow",
                                 color: "text-brand",
                                 className: C.G$,
-                                children: A.intl.format(A.t.EAYZAr, { questName: T.config.messages.questName }),
+                                children: A.intl.format(A.t.EAYZAr, {
+                                    questName: T.config.messages.questName,
+                                }),
                             }),
                             (0, a.jsx)(c.Text, {
                                 variant: "text-md/semibold",

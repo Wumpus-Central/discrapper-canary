@@ -1,4 +1,6 @@
-t.d(n, { default: () => _ });
+t.d(n, {
+    default: () => _,
+});
 var r = t(627968);
 t(64700);
 var i = t(397927),
@@ -48,7 +50,13 @@ let _ = (0, l.A)(
                         },
                         "mark-as-read-or-favorite",
                     ),
-                    (0, r.jsx)(i.rXV, { children: l }, "channel-actions"),
+                    (0, r.jsx)(
+                        i.rXV,
+                        {
+                            children: l,
+                        },
+                        "channel-actions",
+                    ),
                     (0, r.jsxs)(
                         i.rXV,
                         {
@@ -56,13 +64,25 @@ let _ = (0, l.A)(
                         },
                         "notifications",
                     ),
-                    (0, r.jsx)(i.rXV, { children: E }),
-                    (0, r.jsx)(i.rXV, { children: y }),
-                    (0, r.jsx)(i.rXV, { children: v }, "developer-actions"),
+                    (0, r.jsx)(i.rXV, {
+                        children: E,
+                    }),
+                    (0, r.jsx)(i.rXV, {
+                        children: y,
+                    }),
+                    (0, r.jsx)(
+                        i.rXV,
+                        {
+                            children: v,
+                        },
+                        "developer-actions",
+                    ),
                 ],
             });
         },
-        { object: y.ZSU.CONTEXT_MENU },
+        {
+            object: y.ZSU.CONTEXT_MENU,
+        },
     ),
     [o.A.CONTEXT_MENU, o.A.REPORT_TO_MOD_CHANNEL_CONTEXT_MENU],
 );

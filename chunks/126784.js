@@ -1,4 +1,6 @@
-r.d(t, { default: () => O });
+r.d(t, {
+    default: () => O,
+});
 var n = r(627968),
     o = r(64700),
     c = r(311907),

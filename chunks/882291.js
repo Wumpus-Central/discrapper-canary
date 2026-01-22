@@ -1,4 +1,7 @@
-n.d(t, { A: () => E }), n(896048);
+n.d(t, {
+    A: () => E,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     o = n(503698),
@@ -10,12 +13,15 @@ var r = n(627968),
     d = n(457775),
     f = n(650583),
     m = n(790191);
+
 function p(e, t, n) {
     return n * (Math.max(e - t.left, 0) / t.width);
 }
+
 function v(e, t, n) {
     return n.left + (e / t) * n.width;
 }
+
 function E(e) {
     let {
             isFullyVisible: t,
@@ -77,7 +83,9 @@ function E(e) {
         ref: k,
         children: [
             (0, r.jsxs)(s.DUT, {
-                className: i()(m.KF, { [m.uc]: E }),
+                className: i()(m.KF, {
+                    [m.uc]: E,
+                }),
                 ignoreKeyPress: !0,
                 onClick: (e) => {
                     E && null != S && S(p(e.clientX, e.currentTarget.getBoundingClientRect(), y));
@@ -106,7 +114,9 @@ function E(e) {
                               (0, r.jsx)(
                                   "div",
                                   {
-                                      className: i()(m.r, m.Wf, { [m.yz]: N }),
+                                      className: i()(m.r, m.Wf, {
+                                          [m.yz]: N,
+                                      }),
                                       style: {
                                           width: "".concat(100 * e.size, "%"),
                                           left: "".concat(100 * e.start, "%"),
@@ -150,14 +160,18 @@ function E(e) {
                         null != F &&
                         (0, r.jsx)("div", {
                             className: m.Ub,
-                            style: { right: "".concat(F - 6, "px") },
+                            style: {
+                                right: "".concat(F - 6, "px"),
+                            },
                         }),
                 ],
             }),
             h !== u.Q6.ENDED &&
                 (0, r.jsx)("div", {
                     className: m.pN,
-                    style: { width: "".concat(n, "%") },
+                    style: {
+                        width: "".concat(n, "%"),
+                    },
                 }),
         ],
     });

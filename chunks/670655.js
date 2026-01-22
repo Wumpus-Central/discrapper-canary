@@ -1,4 +1,6 @@
-n.d(t, { A: () => T });
+n.d(t, {
+    A: () => T,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -16,6 +18,7 @@ var r = n(627968),
     g = n(60809),
     E = n(985018),
     b = n(816695);
+
 function y(e, t, n) {
     return (
         t in e
@@ -29,6 +32,7 @@ function y(e, t, n) {
         e
     );
 }
+
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -45,6 +49,7 @@ function O(e) {
     }
     return e;
 }
+
 function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -57,6 +62,7 @@ function A(e, t) {
     }
     return n;
 }
+
 function v(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -70,7 +76,9 @@ function v(e, t) {
 }
 let S = i.forwardRef(function (e, t) {
     let { type: n, channelId: a } = e,
-        { tooltipsWithKeybinds: y } = h.C.useConfig({ location: "ChannelAppLauncherButton" }),
+        { tooltipsWithKeybinds: y } = h.C.useConfig({
+            location: "ChannelAppLauncherButton",
+        }),
         A = (0, l.bG)([p.A], () => p.A.shouldShowPopup() && p.A.activeViewType() === n && p.A.activeChannelId() === a),
         { Component: S, events: I, play: T } = (0, c.c)(),
         C = i.useContext(m.Ay);
@@ -104,7 +112,9 @@ let S = i.forwardRef(function (e, t) {
                     O(
                         {
                             tabIndex: 0,
-                            className: s()(b.x6, { [b.rK]: A }),
+                            className: s()(b.x6, {
+                                [b.rK]: A,
+                            }),
                             onClick: N,
                             "aria-label": E.intl.string(E.t.erHFxI),
                             "aria-expanded": A,
@@ -120,12 +130,15 @@ let S = i.forwardRef(function (e, t) {
                         },
                         I,
                     ),
-                    { children: R },
+                    {
+                        children: R,
+                    },
                 ),
             ),
         }),
     });
 });
+
 function I(e) {
     let { type: t, channelId: n } = e;
     return (0, r.jsx)(S, {

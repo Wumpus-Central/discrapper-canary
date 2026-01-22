@@ -27,6 +27,7 @@ var r = n(284009),
     u = n(927813),
     d = n(723702),
     f = n(731854);
+
 function p(e, t, n) {
     return (
         t in e
@@ -40,6 +41,7 @@ function p(e, t, n) {
         e
     );
 }
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -56,6 +58,7 @@ function _(e) {
     }
     return e;
 }
+
 function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -68,6 +71,7 @@ function h(e, t) {
     }
     return n;
 }
+
 function m(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -81,6 +85,7 @@ function m(e, t) {
 }
 let g = 3,
     E = 9;
+
 function b() {}
 let y = 20 * u.A.Millis.SECOND,
     O = 3,
@@ -90,17 +95,19 @@ let y = 20 * u.A.Millis.SECOND,
     I = 5 * u.A.Millis.SECOND,
     T = 2,
     C = 8;
+
 function N(e) {
     return e.map((e) => ({
         name: e.name,
         type: e.type,
-        priority: 1000 * e.priority,
+        priority: 1e3 * e.priority,
         payload_type: e.payloadType,
         rtx_payload_type: e.rtxPayloadType,
         encode: e.encode,
         decode: e.decode,
     }));
 }
+
 function R(e) {
     return null == e
         ? void 0
@@ -123,9 +130,11 @@ function R(e) {
                       : void 0,
           }));
 }
+
 function w(e) {
     return "audio" === e ? f.mI.AUDIO : "test" === e ? f.mI.TEST : "screen" === e ? f.mI.SCREEN : f.mI.VIDEO;
 }
+
 function P(e) {
     var t;
     return null !=
@@ -194,7 +203,7 @@ class x extends s.A {
         this.logger.info("[CONNECT] ".concat(this.url)),
             null !== this.webSocket &&
                 (this.logger.error("Connect called with already existing websocket"),
-                this.cleanupWebSocket((e) => e.close(4000))),
+                this.cleanupWebSocket((e) => e.close(4e3))),
             (this.connectionStartTime = (0, o.tB)()),
             (this.helloTimeout = setTimeout(() => {
                 let e = (0, o.tB)() - this.connectionStartTime;
@@ -428,7 +437,7 @@ class x extends s.A {
                     .concat(e.toString(), ", code: ")
                     .concat(t, ", reason: ")
                     .concat(n, ") retrying in ")
-                    .concat((r / 1000).toFixed(2), " seconds."),
+                    .concat((r / 1e3).toFixed(2), " seconds."),
             );
         }
     }
@@ -441,7 +450,7 @@ class x extends s.A {
     }
     reconnect(e, t, n) {
         this.logger.info("[RECONNECT] wasClean=".concat(e.toString(), " code=").concat(t, " reason=").concat(n)),
-            this.cleanupWebSocket((e) => e.close(4000)),
+            this.cleanupWebSocket((e) => e.close(4e3)),
             (this.connectionState = 5),
             this.createWebSocket();
     }
@@ -491,9 +500,9 @@ class x extends s.A {
                 this.logger.info("Expedited heartbeat succeeded"));
     }
     handleHeartbeatTimeout() {
-        this.cleanupWebSocket((e) => e.close(4000));
+        this.cleanupWebSocket((e) => e.close(4e3));
         let e = this.backoff.fail(() => this.reconnect(!1, 4800, "Heartbeat timeout."));
-        this.logger.warn("[HEARTBEAT ACK TIMEOUT] reconnecting in ".concat((e / 1000).toFixed(2), " seconds."));
+        this.logger.warn("[HEARTBEAT ACK TIMEOUT] reconnecting in ".concat((e / 1e3).toFixed(2), " seconds."));
     }
     startHeartbeater() {
         i()(null != this.heartbeatInterval, "RTCControlSocket: Heartbeat interval should never null here."),
@@ -587,10 +596,10 @@ class x extends s.A {
     }
     close() {
         this.logger.info("CLOSE"),
-            this.cleanupWebSocket((e) => e.close(4000)),
+            this.cleanupWebSocket((e) => e.close(4e3)),
             this.cleanupState(),
             (this.connectionState = 0),
-            this.emit("disconnect", !0, 1000, "Force Close");
+            this.emit("disconnect", !0, 1e3, "Force Close");
     }
     destroy() {
         this.close();
@@ -634,7 +643,9 @@ class x extends s.A {
             );
     }
     updateSession(e) {
-        this.send(14, { codecs: N(e.codecs) });
+        this.send(14, {
+            codecs: N(e.codecs),
+        });
     }
     speaking(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
@@ -657,7 +668,9 @@ class x extends s.A {
         this.serverVersion >= 5 && this.send(15, e);
     }
     secureFramesReadyForTransition(e) {
-        this.send(23, { transition_id: e });
+        this.send(23, {
+            transition_id: e,
+        });
     }
     sendMLSKeyPackage(e) {
         this.logger.info("Sending MLS key package"), this.sendBinary(26, new Uint8Array(e));
@@ -666,7 +679,9 @@ class x extends s.A {
         this.logger.info("Sending MLS commit + welcome message"), this.sendBinary(28, new Uint8Array(e));
     }
     flagMLSInvalidCommitWelcome(e) {
-        this.send(31, { transition_id: e });
+        this.send(31, {
+            transition_id: e,
+        });
     }
     noRoute() {
         this.send(32, {});
@@ -678,7 +693,7 @@ class x extends s.A {
         super(),
             p(this, "url", void 0),
             p(this, "logger", void 0),
-            p(this, "backoff", new a.A(1000, 5000)),
+            p(this, "backoff", new a.A(1e3, 5e3)),
             p(this, "webSocket", void 0),
             p(this, "connectionState", void 0),
             p(this, "heartbeatInterval", void 0),

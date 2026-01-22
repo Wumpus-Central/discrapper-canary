@@ -1,4 +1,7 @@
-n.d(t, { L: () => O }), n(228524);
+n.d(t, {
+    L: () => O,
+}),
+    n(228524);
 var r = n(627968),
     l = n(64700),
     i = n(731738),
@@ -16,6 +19,7 @@ var r = n(627968),
     m = n(56462),
     A = n(652215),
     y = n(985018);
+
 function O(e) {
     let { channelId: t, warningId: O, senderId: j } = e,
         v = (0, m.CW)(),
@@ -23,7 +27,14 @@ function O(e) {
             (0, f.xi)(t, [O]);
         }, [t, O]),
         E = (e) => {
-            s.A.updateChannelOverrideSettings(null, t, { muted: !0 }, g.fd.Muted),
+            s.A.updateChannelOverrideSettings(
+                null,
+                t,
+                {
+                    muted: !0,
+                },
+                g.fd.Muted,
+            ),
                 c.A.showMuteSuccessToast(j, t),
                 (0, h._$)({
                     channelId: t,
@@ -42,7 +53,9 @@ function O(e) {
                 senderId: j,
                 warningType: p._j.LIKELY_ATO,
             }),
-                o.A.increment({ name: i.K.SAFETY_WARNING_VIEW });
+                o.A.increment({
+                    name: i.K.SAFETY_WARNING_VIEW,
+                });
         }, [t, O, j]),
         (0, r.jsx)(b.N, {
             channelId: t,
@@ -106,7 +119,9 @@ function O(e) {
                                         children: (0, r.jsx)(a.Heading, {
                                             variant: "heading-sm/medium",
                                             color: "text-link",
-                                            children: y.intl.format(y.t.UkH122, { learnMoreLink: m.u6 }),
+                                            children: y.intl.format(y.t.UkH122, {
+                                                learnMoreLink: m.u6,
+                                            }),
                                         }),
                                     }),
                                 });

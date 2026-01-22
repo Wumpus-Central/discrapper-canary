@@ -98,7 +98,10 @@ let m = async (e) => {
                 server_guide_channel_type: "resource",
                 channel_action_type: -1,
             }),
-            n && (0, l.iN)(t, { navigationReplace: !1 }),
+            n &&
+                (0, l.iN)(t, {
+                    navigationReplace: !1,
+                }),
             a.A.jumpToMessage({
                 channelId: t,
                 messageId: d.default.castChannelIdAsMessageId(t),

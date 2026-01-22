@@ -1,5 +1,8 @@
-n.d(t, { A: () => l });
+n.d(t, {
+    A: () => l,
+});
 var r = n(621466);
+
 function l(e, t) {
     let n = e.offsetTop,
         l = e.offsetParent;

@@ -1,4 +1,7 @@
-n.d(t, { A: () => p }), n(896048);
+n.d(t, {
+    A: () => p,
+}),
+    n(896048);
 var l = n(627968),
     r = n(64700),
     a = n(884362),
@@ -13,9 +16,11 @@ var l = n(627968),
     f = n(652215),
     g = n(985018),
     x = n(553017);
+
 function b() {
     return Promise.resolve();
 }
+
 function p(e) {
     let { channel: t, closePopout: n, setPopoutRef: p } = e,
         j = (0, u.OT)(t),
@@ -201,7 +206,9 @@ function p(e) {
                         },
                     }),
                 }),
-                (0, l.jsx)("div", { className: x.me }),
+                (0, l.jsx)("div", {
+                    className: x.me,
+                }),
                 (0, l.jsx)(c.QWc, {
                     "aria-label": g.intl.string(g.t["98EPQP"]),
                     onClick: O,

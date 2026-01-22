@@ -1,4 +1,6 @@
-n.d(t, { J: () => f });
+n.d(t, {
+    J: () => f,
+});
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -13,7 +15,9 @@ let d = (e) => {
             ? null
             : (0, r.jsx)("div", {
                   className: u.tK,
-                  style: { backgroundColor: t.color.css },
+                  style: {
+                      backgroundColor: t.color.css,
+                  },
                   children: (0, r.jsx)("img", {
                       className: u.QR,
                       alt: "",
@@ -66,11 +70,17 @@ let d = (e) => {
                     className: u.dK,
                     children: (0, r.jsx)("div", {
                         className: u.ZS,
-                        style: p ? void 0 : { backgroundColor: (0, c.Pm)(l) },
+                        style: p
+                            ? void 0
+                            : {
+                                  backgroundColor: (0, c.Pm)(l),
+                              },
                         children: f,
                     }),
                 }),
-                (0, r.jsx)(d, { mask: b }),
+                (0, r.jsx)(d, {
+                    mask: b,
+                }),
             ],
         });
     });

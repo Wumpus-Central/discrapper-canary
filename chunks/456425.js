@@ -1,4 +1,7 @@
-n.d(t, { $: () => V }), n(747238);
+n.d(t, {
+    $: () => V,
+}),
+    n(747238);
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -31,6 +34,7 @@ var r = n(627968),
     w = n(993169),
     R = n(213398),
     D = n(537997);
+
 function M(e) {
     var t, n, l, i, s;
     let { item: c } = e,
@@ -57,6 +61,7 @@ function M(e) {
         ],
     });
 }
+
 function L(e) {
     let {
         item: { callout: t },
@@ -72,6 +77,7 @@ function L(e) {
         }),
     });
 }
+
 function G(e) {
     let { item: t } = e,
         n = D,
@@ -96,10 +102,19 @@ function G(e) {
         })
     );
 }
+
 function k(e) {
     let { applicationId: t } = e,
         n = (0, i.bG)([u.A], () => u.A.getApplication(t));
-    return null == n ? (0, r.jsx)("div", {}) : (0, r.jsx)(p.A, { application: n }, n.id);
+    return null == n
+        ? (0, r.jsx)("div", {})
+        : (0, r.jsx)(
+              p.A,
+              {
+                  application: n,
+              },
+              n.id,
+          );
 }
 let U = l.memo(function (e) {
         var t;
@@ -137,7 +152,12 @@ let U = l.memo(function (e) {
                                             });
                                     }
                                     return e;
-                                })({ source: "Notification Center" }, t),
+                                })(
+                                    {
+                                        source: "Notification Center",
+                                    },
+                                    t,
+                                ),
                             );
                     });
                 if (null != i.deeplink) {
@@ -167,7 +187,9 @@ let U = l.memo(function (e) {
             }, [i, p, u]),
             g = null;
         i.type === v.Uo.INCOMING_FRIEND_REQUESTS && null != i.other_user
-            ? (g = (0, r.jsx)(I.A, { userId: i.other_user.id }))
+            ? (g = (0, r.jsx)(I.A, {
+                  userId: i.other_user.id,
+              }))
             : i.type === v.Uo.INCOMING_GAME_FRIEND_REQUESTS &&
               null != i.other_user &&
               (g = (0, r.jsx)(I.A, {
@@ -177,7 +199,10 @@ let U = l.memo(function (e) {
         let m = null != i.local_id,
             _ = (0, E.A)({
                 item: i,
-                renderApplication: (e) => (0, r.jsx)(k, { applicationId: e }),
+                renderApplication: (e) =>
+                    (0, r.jsx)(k, {
+                        applicationId: e,
+                    }),
             }),
             { emoji_id: P, emoji_name: R } = i,
             D =
@@ -193,25 +218,43 @@ let U = l.memo(function (e) {
             children: [
                 (0, r.jsxs)(a.sqX, {
                     className: w.u4,
-                    focusProps: { offset: 4 },
+                    focusProps: {
+                        offset: 4,
+                    },
                     "aria-label": _,
                     onClick: b,
                     children: [
-                        p ? null : (0, r.jsx)("div", { className: w.gy }),
-                        (0, r.jsx)(S.J, { item: i }),
+                        p
+                            ? null
+                            : (0, r.jsx)("div", {
+                                  className: w.gy,
+                              }),
+                        (0, r.jsx)(S.J, {
+                            item: i,
+                        }),
                         (0, r.jsxs)("div", {
                             className: w.rf,
                             children: [
-                                "lifecycle_item" === i.type && null != i.item_enum && (0, r.jsx)(G, { item: i }),
+                                "lifecycle_item" === i.type &&
+                                    null != i.item_enum &&
+                                    (0, r.jsx)(G, {
+                                        item: i,
+                                    }),
                                 (0, r.jsxs)(a.Text, {
                                     variant: "text-md/normal",
                                     color: p ? "text-muted" : "text-default",
                                     children: ["string" != typeof _ ? _ : f.A.parse(_), D],
                                 }),
                                 (null == (t = i.message) ? void 0 : t.content) != null
-                                    ? (0, r.jsx)(M, { item: i })
+                                    ? (0, r.jsx)(M, {
+                                          item: i,
+                                      })
                                     : null,
-                                null != i.callout ? (0, r.jsx)(L, { item: i }) : null,
+                                null != i.callout
+                                    ? (0, r.jsx)(L, {
+                                          item: i,
+                                      })
+                                    : null,
                                 (0, r.jsx)(a.Text, {
                                     variant: "text-xs/medium",
                                     color: p ? "text-muted" : "text-default",
@@ -222,7 +265,11 @@ let U = l.memo(function (e) {
                         }),
                     ],
                 }),
-                m ? null : (0, r.jsx)(N.e, { item: i }),
+                m
+                    ? null
+                    : (0, r.jsx)(N.e, {
+                          item: i,
+                      }),
             ],
         });
     }),

@@ -1,7 +1,10 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r,
     i = n(311907),
     a = n(73153);
+
 function s(e, t, n) {
     return (
         t in e
@@ -24,6 +27,7 @@ class l extends (r = i.Ay.Store) {
         return o;
     }
 }
+
 function c(e) {
     o = e.requiredAction;
 }

@@ -1,4 +1,8 @@
-i.d(e, { default: () => m }), i(228524), i(896048);
+i.d(e, {
+    default: () => m,
+}),
+    i(228524),
+    i(896048);
 var s = i(627968),
     n = i(64700),
     a = i(158954),
@@ -10,6 +14,7 @@ var s = i(627968),
     u = i(652215),
     p = i(985018),
     d = i(847392);
+
 function g(t, e, i) {
     return (
         e in t
@@ -25,10 +30,14 @@ function g(t, e, i) {
 }
 class A extends n.Component {
     componentDidMount() {
-        c.default.track(u.HAw.OPEN_MODAL, { type: u.JJy.PAYMENT_AUTHENTICATION_MODAL });
+        c.default.track(u.HAw.OPEN_MODAL, {
+            type: u.JJy.PAYMENT_AUTHENTICATION_MODAL,
+        });
     }
     componentWillUnmount() {
-        c.default.track(u.HAw.MODAL_DISMISSED, { type: u.JJy.PAYMENT_AUTHENTICATION_MODAL });
+        c.default.track(u.HAw.MODAL_DISMISSED, {
+            type: u.JJy.PAYMENT_AUTHENTICATION_MODAL,
+        });
     }
     getTitle() {
         let { step: t } = this.state;
@@ -66,7 +75,9 @@ class A extends n.Component {
             case 2:
                 return p.intl.string(p.t.PZskfs);
             case 3:
-                return p.intl.format(p.t["j0tI/b"], { item: e.description });
+                return p.intl.format(p.t["j0tI/b"], {
+                    item: e.description,
+                });
             default:
                 return p.intl.string(p.t.BAr3rB);
         }
@@ -104,7 +115,9 @@ class A extends n.Component {
             onClose: this.close,
             actions: this.renderButtons(),
             children: [
-                (0, s.jsx)("div", { className: this.getImageStyle() }),
+                (0, s.jsx)("div", {
+                    className: this.getImageStyle(),
+                }),
                 (0, s.jsx)(r.Text, {
                     variant: "text-md/normal",
                     children: this.getMessage(),
@@ -128,16 +141,33 @@ class A extends n.Component {
                 try {
                     await (0, l.N)(t.id);
                 } catch (t) {
-                    throw (this.setState({ step: 3 }), t);
+                    throw (
+                        (this.setState({
+                            step: 3,
+                        }),
+                        t)
+                    );
                 }
-                this.setState({ step: 3 });
+                this.setState({
+                    step: 3,
+                });
             }),
             g(this, "handleAuthenticate", async () => {
                 let { pendingPayment: t } = this.props;
-                this.setState({ isAwaitingAuthentication: !0 });
+                this.setState({
+                    isAwaitingAuthentication: !0,
+                });
                 let { error: e } = await (0, h.ap)(t.id);
-                this.setState({ isAwaitingAuthentication: !1 }),
-                    null != e ? this.setState({ step: 1 }) : this.setState({ step: 2 });
+                this.setState({
+                    isAwaitingAuthentication: !1,
+                }),
+                    null != e
+                        ? this.setState({
+                              step: 1,
+                          })
+                        : this.setState({
+                              step: 2,
+                          });
             });
     }
 }

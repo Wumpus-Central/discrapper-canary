@@ -1,4 +1,6 @@
-n.d(t, { x: () => A });
+n.d(t, {
+    x: () => A,
+});
 var r = n(397927),
     l = n(47167),
     i = n(734057),
@@ -27,6 +29,7 @@ let E = function (e) {
             return c.intl.string(c.t["/7nL5R"]);
     }
 };
+
 function A(e, t, n) {
     var A, g, S, f;
     return ((e) => {
@@ -72,7 +75,9 @@ function A(e, t, n) {
                               let r = i.A.getChannel(e);
                               if (null == r) return null;
                               let o = (0, l.m1)(r, u.default, a.A);
-                              return c.intl.format(c.t.xQXnkK, { channelName: o });
+                              return c.intl.format(c.t.xQXnkK, {
+                                  channelName: o,
+                              });
                           }
                           case o.AH.USER_COMMUNICATION_DISABLED: {
                               let e =
@@ -81,7 +86,9 @@ function A(e, t, n) {
                                           : 0,
                                   n = (0, s.getFriendlyDurationString)(e);
                               if (null == n) return null;
-                              return c.intl.format(c.t.AFmbfS, { duration: n });
+                              return c.intl.format(c.t.AFmbfS, {
+                                  duration: n,
+                              });
                           }
                       }
                   })(e, t))

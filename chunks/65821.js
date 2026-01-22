@@ -4,7 +4,11 @@ var r = n(557939),
     s = n(43902),
     o = "WebAssembly",
     l = i[o],
-    c = 7 !== Error("e", { cause: 7 }).cause,
+    c =
+        7 !==
+        Error("e", {
+            cause: 7,
+        }).cause,
     u = function (e, t) {
         var n = {};
         (n[e] = s(e, t, c)),

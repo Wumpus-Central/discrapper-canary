@@ -1,5 +1,8 @@
-n.d(t, { A: () => l });
+n.d(t, {
+    A: () => l,
+});
 var r = n(985018);
+
 function i(e, t, n) {
     return (
         t in e
@@ -15,6 +18,7 @@ function i(e, t, n) {
 }
 let a = ["a", "b", "c", "d"],
     s = (e) => e;
+
 function o(e, t) {
     let n = {},
         r = Math.min(e.length, a.length);

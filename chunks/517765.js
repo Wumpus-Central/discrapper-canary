@@ -1,4 +1,8 @@
-n.d(t, { A: () => y }), n(321073), n(896048);
+n.d(t, {
+    A: () => y,
+}),
+    n(321073),
+    n(896048);
 var i = n(627968),
     r = n(64700),
     l = n(503698),
@@ -17,6 +21,7 @@ var i = n(627968),
     x = n(652215),
     j = n(985018),
     O = n(979773);
+
 function y(e) {
     var t, n, l;
     let {
@@ -134,7 +139,9 @@ function y(e) {
                       },
                       position: "bottom",
                       align: "center",
-                      caretConfig: { align: "center" },
+                      caretConfig: {
+                          align: "center",
+                      },
                   })
                 : null,
         z = (0, o.yK)([f.A], () => {
@@ -182,7 +189,9 @@ function y(e) {
                             c.length > 0 &&
                                 l.push({
                                     id: "webhooks",
-                                    label: j.intl.formatToPlainString(j.t["6HqDfT"], { count: c.length }),
+                                    label: j.intl.formatToPlainString(j.t["6HqDfT"], {
+                                        count: c.length,
+                                    }),
                                     icon: d.XC7,
                                 }),
                             (null == o || null == (r = o.scopes) ? void 0 : r.includes(s.F.APPLICATIONS_COMMANDS)) ===

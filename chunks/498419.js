@@ -97,6 +97,7 @@
                     t
                 );
             };
+
         function C(t) {
             if (t.paused || t.ended || y) return !1;
             try {
@@ -137,7 +138,7 @@
                 (a.fillStyle = "rgba(" + e.textColor.r + "," + e.textColor.g + "," + e.textColor.b + "," + t.o + ")"),
                 "number" == typeof t.n && t.n > 999
                     ? a.fillText(
-                          (t.n > 9999 ? 9 : Math.floor(t.n / 1000)) + "k+",
+                          (t.n > 9999 ? 9 : Math.floor(t.n / 1e3)) + "k+",
                           Math.floor(t.x + t.w / 2),
                           Math.floor(t.y + t.h - 0.2 * t.h),
                       )
@@ -160,7 +161,7 @@
                         "rgba(" + e.textColor.r + "," + e.textColor.g + "," + e.textColor.b + "," + t.o + ")"),
                     "number" == typeof t.n && t.n > 999
                         ? a.fillText(
-                              (t.n > 9999 ? 9 : Math.floor(t.n / 1000)) + "k+",
+                              (t.n > 9999 ? 9 : Math.floor(t.n / 1e3)) + "k+",
                               Math.floor(t.x + t.w / 2),
                               Math.floor(t.y + t.h - 0.2 * t.h),
                           )
@@ -168,6 +169,7 @@
                     a.closePath();
             });
         var E = {};
+
         function M(t) {
             t = t.replace(/^#?([a-f\d])([a-f\d])([a-f\d])$/i, function (t, e, o, n) {
                 return e + e + o + o + n + n;
@@ -181,6 +183,7 @@
                 }
             );
         }
+
         function A(t, e) {
             var o,
                 n = {};
@@ -537,13 +540,20 @@
                   s.setAttribute("src", "")),
             {
                 badge: function (t, e) {
-                    (e = ("string" == typeof e ? { animation: e } : e) || {}),
+                    (e =
+                        ("string" == typeof e
+                            ? {
+                                  animation: e,
+                              }
+                            : e) || {}),
                         (f = function () {
                             try {
                                 if ("number" == typeof t ? t > 0 : "" !== t) {
                                     var o = {
                                         type: "badge",
-                                        options: { n: t },
+                                        options: {
+                                            n: t,
+                                        },
                                     };
                                     if (
                                         ("animation" in e &&
@@ -650,7 +660,9 @@
                     }
                 },
                 reset: m.reset,
-                browser: { supported: u.supported },
+                browser: {
+                    supported: u.supported,
+                },
             }
         );
     };

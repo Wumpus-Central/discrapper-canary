@@ -1,9 +1,12 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(731738),
     i = n(183636),
     a = n(831062),
     s = n(954571),
     o = n(652215);
+
 function l(e, t, n) {
     return (
         t in e
@@ -17,7 +20,7 @@ function l(e, t, n) {
         e
     );
 }
-let c = 30000,
+let c = 3e4,
     u = 0.1;
 class d {
     clearTimeoutTimer() {

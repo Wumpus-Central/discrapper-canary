@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -14,6 +16,7 @@ var i = n(503698),
     _ = n(128450),
     h = n(985018),
     m = n(223772);
+
 function g(e) {
     let { user: t, guild: n, className: i, sectionTitle: f, forcedDivider: g = !1, withTutorial: E = !1 } = e,
         { analyticsLocations: y } = (0, l.Ay)(),
@@ -47,7 +50,9 @@ function g(e) {
                     (0, r.jsx)(N, {
                         size: s.$n.Sizes.SMALL,
                         onClick: T,
-                        className: a()({ [m.yj]: E }),
+                        className: a()({
+                            [m.yj]: E,
+                        }),
                         children: h.intl.string(h.t.BVcYCx),
                     }),
                     I &&
@@ -63,7 +68,11 @@ function g(e) {
                         }),
                 ],
             }),
-            t.isStaff() && O && (0, r.jsx)(b, { user: t }),
+            t.isStaff() &&
+                O &&
+                (0, r.jsx)(b, {
+                    user: t,
+                }),
         ],
     });
 }

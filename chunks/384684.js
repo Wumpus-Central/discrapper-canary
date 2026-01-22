@@ -1,4 +1,7 @@
-n.d(t, { A: () => R }), n(896048);
+n.d(t, {
+    A: () => R,
+}),
+    n(896048);
 var r,
     i = n(311907),
     a = n(73153),
@@ -10,6 +13,7 @@ var r,
     d = n(287809),
     f = n(98318),
     p = n(652215);
+
 function _(e, t, n) {
     return (
         t in e
@@ -29,6 +33,7 @@ let h = new Set(),
     E = new Map(),
     b = new Map(),
     y = null;
+
 function O(e) {
     let t = d.default.getCurrentUser(),
         n = u.A.getGuild(e);
@@ -46,15 +51,18 @@ function O(e) {
     }
     return m.set(e, r), E.set(e, a), g.set(e, i), !0;
 }
+
 function A() {
     let e = u.A.getGuildsArray(),
         t = new Set();
     for (let n of e) n.features.has(p.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE) && t.add(n.id);
     return (y = t), t;
 }
+
 function v() {
     m.clear(), E.clear(), g.clear(), b.clear(), (y = null);
 }
+
 function S(e) {
     let {
         guild: { id: t },
@@ -63,6 +71,7 @@ function S(e) {
     let n = new Set(y);
     n.delete(t), (y = n);
 }
+
 function I(e) {
     let {
         guild: { id: t },
@@ -81,10 +90,12 @@ function I(e) {
     }
     return !1;
 }
+
 function T(e) {
     let { guildId: t } = e;
     return !!m.has(t) && O(t);
 }
+
 function C(e) {
     let { guildId: t, user: n } = e,
         r = d.default.getCurrentUser();

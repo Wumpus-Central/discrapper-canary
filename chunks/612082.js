@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -9,6 +11,7 @@ var r = n(627968),
     u = n(854987),
     d = n(181380),
     f = n(420156);
+
 function p(e) {
     let {
             onClick: t,
@@ -31,11 +34,15 @@ function p(e) {
             [f.vu]: _,
             [f.r9]: m,
         }),
-        style: { backgroundColor: E },
+        style: {
+            backgroundColor: E,
+        },
         onClick: O,
         children: (0, r.jsx)("div", {
             className: s()(p, f.LG),
-            style: { borderColor: b },
+            style: {
+                borderColor: b,
+            },
             children: n,
         }),
     });

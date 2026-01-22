@@ -1,4 +1,6 @@
-l.d(t, { A: () => b });
+l.d(t, {
+    A: () => b,
+});
 var r = l(627968);
 l(64700);
 var n = l(158954),
@@ -16,6 +18,7 @@ var n = l(158954),
     A = l(333354),
     g = l(985018),
     x = l(958920);
+
 function b(e) {
     let { guildId: t } = e,
         l = (0, i.bG)([u.A], () => u.A.getGuild(t)),
@@ -73,7 +76,9 @@ function b(e) {
                         color: o.LU0.unsafe_rawColors.GUILD_BOOSTING_PINK,
                     }),
                 }),
-                (0, r.jsx)(f.A, { guildId: t }),
+                (0, r.jsx)(f.A, {
+                    guildId: t,
+                }),
             ],
         });
 }

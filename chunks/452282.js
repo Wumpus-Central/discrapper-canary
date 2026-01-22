@@ -12,6 +12,7 @@ var r,
     l = n(615300),
     c = n(456412),
     u = n(884096);
+
 function d(e, t, n) {
     return (
         t in e
@@ -25,6 +26,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -41,6 +43,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -53,6 +56,7 @@ function p(e, t) {
     }
     return n;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -72,6 +76,7 @@ let h = {
     m = 100,
     g = "center",
     E = "right";
+
 function b(e, t) {
     return ((e % t) + t) % t;
 }
@@ -90,7 +95,9 @@ class y extends (r = a.Component) {
                   (t !== e.align || s !== o) &&
                   l.A.spring(
                       this.animatedAlignmentOffset,
-                      _(f({}, h), { toValue: this.getAlignmentOffset(t) }),
+                      _(f({}, h), {
+                          toValue: this.getAlignmentOffset(t),
+                      }),
                   ).start();
     }
     getAlignmentOffset(e) {
@@ -109,7 +116,12 @@ class y extends (r = a.Component) {
             (0 === e && t === r.length - 1
                 ? n.setValue(-1)
                 : 0 === t && e === r.length - 1 && r.length > 2 && n.setValue(r.length)),
-            l.A.spring(n, _(f({}, h), { toValue: e })).start();
+            l.A.spring(
+                n,
+                _(f({}, h), {
+                    toValue: e,
+                }),
+            ).start();
     }
     updateAnimatedIndex(e, t) {
         let { animatedIndex: n, animatedOpacity: r } = this,
@@ -182,7 +194,12 @@ class y extends (r = a.Component) {
         return 1 === e.length
             ? this.renderSingleItem()
             : (0, i.jsx)("div", {
-                  className: o()({ [u.R9]: n }, t),
+                  className: o()(
+                      {
+                          [u.R9]: n,
+                      },
+                      t,
+                  ),
                   children: this.renderCarouselItems(),
               });
     }

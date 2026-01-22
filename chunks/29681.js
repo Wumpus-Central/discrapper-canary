@@ -1,4 +1,7 @@
-n.d(t, { default: () => g }), n(896048);
+n.d(t, {
+    default: () => g,
+}),
+    n(896048);
 var r = n(627968),
     a = n(64700),
     i = n(158954),
@@ -13,6 +16,7 @@ var r = n(627968),
     O = n(652215),
     f = n(985018),
     y = n(316173);
+
 function g(e) {
     var t;
     let { transitionState: n, onClose: g } = e,
@@ -55,7 +59,10 @@ function g(e) {
                         }
                         return e;
                     })({}, h)),
-                    (t = t = { shortcut: j }),
+                    (t = t =
+                        {
+                            shortcut: j,
+                        }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
                         : (function (e, t) {

@@ -3,4 +3,7 @@ function r(e, t) {
         [, r] = t;
     return n === r;
 }
-n.d(t, { D: () => r }), n(896048);
+n.d(t, {
+    D: () => r,
+}),
+    n(896048);

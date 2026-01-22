@@ -1,4 +1,7 @@
-n.d(t, { A: () => b }), n(896048);
+n.d(t, {
+    A: () => b,
+}),
+    n(896048);
 var r = n(73153),
     i = n(827343),
     l = n(272355),
@@ -8,6 +11,7 @@ var r = n(73153),
     c = n(531685),
     u = n(652215),
     d = n(731854);
+
 function p(e, t, n) {
     return (
         t in e
@@ -24,6 +28,7 @@ function p(e, t, n) {
 let f = new Set(),
     h = new Set(),
     A = null;
+
 function g() {
     for (let e of f) i.A.setDisableLocalVideo(e, u.bb8.MANUAL_ENABLED, d.x.DEFAULT, !1);
     h.clear(), f.clear();

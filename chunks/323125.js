@@ -11,11 +11,13 @@ function r(e, t, n) {
         e
     );
 }
+
 function i(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
     return a("login", e, t, n);
 }
+
 function a(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
@@ -46,6 +48,7 @@ class s {
         r(this, "value", void 0), (this.value = e);
     }
 }
+
 function o(e, t) {
     return e.map((e) =>
         null == e
@@ -60,6 +63,7 @@ function o(e, t) {
                       .join(""),
     );
 }
+
 function l(e, t) {
     let n = {};
     for (let r of Object.keys(e)) {

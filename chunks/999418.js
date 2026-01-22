@@ -1,4 +1,6 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 var r = n(723727),
     i = n(116657);
 let a = {
@@ -153,7 +155,7 @@ let a = {
     37724: "ImageSourceData",
     37888: {
         name: "AmbientTemperature",
-        description: (e) => e[0] / e[1] + " \xB0C",
+        description: (e) => e[0] / e[1] + " \xb0C",
     },
     37889: {
         name: "Humidity",
@@ -173,7 +175,7 @@ let a = {
     },
     37893: {
         name: "CameraElevationAngle",
-        description: (e) => e[0] / e[1] + " \xB0",
+        description: (e) => e[0] / e[1] + " \xb0",
     },
     40960: {
         name: "FlashpixVersion",
@@ -314,7 +316,7 @@ let a = {
     42240: "Gamma",
     59932: "Padding",
     59933: "OffsetSchema",
-    65000: "OwnerName",
+    65e3: "OwnerName",
     65001: "SerialNumber",
     65002: "Lens",
     65100: "RawFile",

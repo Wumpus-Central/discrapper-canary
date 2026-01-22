@@ -1,9 +1,12 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(627968);
 n(64700);
 var i = n(985410),
     a = n(379326),
     s = n(269385);
+
 function o() {
     return (0, r.jsx)("div", {
         className: i.k,

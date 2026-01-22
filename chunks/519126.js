@@ -1,4 +1,6 @@
-n.d(t, { r: () => s });
+n.d(t, {
+    r: () => s,
+});
 var r,
     i = [],
     a = function () {
@@ -10,7 +12,9 @@ var r,
         if (!r) {
             var t = 0,
                 n = document.createTextNode(""),
-                s = { characterData: !0 };
+                s = {
+                    characterData: !0,
+                };
             new MutationObserver(function () {
                 return a();
             }).observe(n, s),

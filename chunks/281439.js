@@ -1,4 +1,8 @@
-n.d(e, { PremiumBrandRefreshSubscriptionCancellationModal: () => M }), n(896048), n(65821);
+n.d(e, {
+    PremiumBrandRefreshSubscriptionCancellationModal: () => M,
+}),
+    n(896048),
+    n(65821);
 var a = n(627968),
     r = n(64700),
     i = n(106778),
@@ -31,6 +35,7 @@ var a = n(627968),
     L = n(788868),
     j = n(652215),
     U = n(247027);
+
 function k(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
@@ -142,7 +147,9 @@ let x = [j.Dmq.PAST_DUE, j.Dmq.PAUSED, j.Dmq.BILLING_RETRY],
                         a = (0, p.ee)(n);
                     await (0, c.nV)(
                         q,
-                        { items: a },
+                        {
+                            items: a,
+                        },
                         {
                             amount: 0,
                             currency: q.currency,
@@ -160,7 +167,9 @@ let x = [j.Dmq.PAST_DUE, j.Dmq.PAUSED, j.Dmq.BILLING_RETRY],
                     ? await (0, c._D)(q, te)
                     : await o.Bo.post({
                           url: j.Rsh.USER_OFFER_REDEEM,
-                          body: { user_discount_offer_id: te.id },
+                          body: {
+                              user_discount_offer_id: te.id,
+                          },
                           rejectWithError: !0,
                       });
             };

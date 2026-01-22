@@ -1,8 +1,11 @@
-n.d(t, { G: () => c });
+n.d(t, {
+    G: () => c,
+});
 var r = n(141711),
     l = n(118356),
     o = n(740644),
     i = n(497329);
+
 function s(e, t, n) {
     return (
         t in e

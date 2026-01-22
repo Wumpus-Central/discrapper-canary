@@ -1,4 +1,7 @@
-n.d(t, { A: () => m }), n(896048);
+n.d(t, {
+    A: () => m,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -112,7 +115,9 @@ let m = function (e) {
                         children: () =>
                             (0, r.jsx)("div", {
                                 ref: m,
-                                className: a()(g.Tn, { [g.wH]: n }),
+                                className: a()(g.Tn, {
+                                    [g.wH]: n,
+                                }),
                                 children: (0, r.jsx)(o.DUT, {
                                     onClick: () => l(!n),
                                     tabIndex: 0,

@@ -1,4 +1,7 @@
-a.d(t, { default: () => _ }), a(896048);
+a.d(t, {
+    default: () => _,
+}),
+    a(896048);
 var n = a(627968),
     s = a(64700),
     i = a(110259),
@@ -14,6 +17,7 @@ a(573879);
 var x = a(652215),
     A = a(985018),
     b = a(202501);
+
 function _(e) {
     let { transitionState: t, onClose: a } = e,
         { currentUser: _, multiAccountUsers: g } = (0, r.cf)([o.default, u.A], () => ({
@@ -30,7 +34,9 @@ function _(e) {
                     (0, n.jsx)(c.po8, {
                         messageType: c.YCn.ERROR,
                         className: b.u,
-                        children: A.intl.format(A.t.HAuRSM, { maxNumAccounts: 5 }),
+                        children: A.intl.format(A.t.HAuRSM, {
+                            maxNumAccounts: 5,
+                        }),
                     }),
                 ),
                     p(x.dJq);
@@ -41,7 +47,9 @@ function _(e) {
                         (0, n.jsx)(c.po8, {
                             messageType: c.YCn.POSITIVE,
                             className: b.u,
-                            children: A.intl.format(A.t["09qide"], { username: e.username }),
+                            children: A.intl.format(A.t["09qide"], {
+                                username: e.username,
+                            }),
                         }),
                     ),
                     C(!1);

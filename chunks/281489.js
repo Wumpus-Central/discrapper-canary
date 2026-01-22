@@ -1,4 +1,7 @@
-n.d(t, { A: () => h }), n(321073);
+n.d(t, {
+    A: () => h,
+}),
+    n(321073);
 var r = n(627968),
     i = n(64700),
     l = n(735438),
@@ -13,11 +16,15 @@ let f = (e) => {
         let { member: t, empty: n, guildId: l } = e,
             a = i.useRef(null);
         return n
-            ? (0, r.jsx)("div", { className: p._b })
+            ? (0, r.jsx)("div", {
+                  className: p._b,
+              })
             : null == t
               ? (0, r.jsx)("div", {
                     className: p.j7,
-                    children: (0, r.jsx)(u.A, { className: p.s$ }),
+                    children: (0, r.jsx)(u.A, {
+                        className: p.s$,
+                    }),
                 })
               : (0, r.jsx)("div", {
                     className: p.sR,
@@ -101,7 +108,16 @@ let f = (e) => {
                 ),
             )
             .value();
-        for (let e = 0; e < o && h.length < l; e++) h.push((0, r.jsx)(f, { guildId: s }, "unknown-member-".concat(e)));
+        for (let e = 0; e < o && h.length < l; e++)
+            h.push(
+                (0, r.jsx)(
+                    f,
+                    {
+                        guildId: s,
+                    },
+                    "unknown-member-".concat(e),
+                ),
+            );
         let A = c - u - o;
         for (let e = 0; e < A && h.length < l; e++)
             h.push(

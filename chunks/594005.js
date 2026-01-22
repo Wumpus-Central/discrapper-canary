@@ -1,4 +1,6 @@
-i.d(s, { default: () => x });
+i.d(s, {
+    default: () => x,
+});
 var n = i(627968),
     t = i(397927),
     a = i(442433),
@@ -10,6 +12,7 @@ var n = i(627968),
     l = i(769591),
     p = i(95701),
     u = i(985018);
+
 function x(e) {
     let { channel: s, onSelect: i } = e,
         x = (0, o.b)(s),
@@ -18,12 +21,25 @@ function x(e) {
         j = (0, r.Ay)(s),
         k = (0, d.A)(s),
         A = (0, l.os)("NotificationsInboxMessageContextMenu") && p.B4.has(s.type),
-        C = s.isThread() ? (0, n.jsx)(t.rXV, { children: f }) : A ? b : (0, n.jsx)(t.rXV, { children: x });
+        C = s.isThread()
+            ? (0, n.jsx)(t.rXV, {
+                  children: f,
+              })
+            : A
+              ? b
+              : (0, n.jsx)(t.rXV, {
+                    children: x,
+                });
     return (0, n.jsxs)(t.W1t, {
         navId: "notifications-inbox-message-context",
         onClose: a.Z_,
         "aria-label": u.intl.string(u.t.Xm41aV),
         onSelect: i,
-        children: [(0, n.jsx)(t.rXV, { children: s.isThread() ? k : j }), C],
+        children: [
+            (0, n.jsx)(t.rXV, {
+                children: s.isThread() ? k : j,
+            }),
+            C,
+        ],
     });
 }

@@ -1,4 +1,6 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 var r = n(73153);
 class i {
     static setPermission(e, t) {

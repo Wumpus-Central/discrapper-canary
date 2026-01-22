@@ -1,10 +1,13 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(627968);
 n(64700);
 var l = n(397927),
     i = n(303727),
     a = n(985018),
     s = n(610688);
+
 function o(e) {
     let { Icon: t, header: n, tip: o, disableStars: c } = e;
     return (0, r.jsxs)("div", {
@@ -20,7 +23,11 @@ function o(e) {
                         width: 36,
                         height: 36,
                     }),
-                    c ? null : (0, r.jsx)(i.A, { className: s.uf }),
+                    c
+                        ? null
+                        : (0, r.jsx)(i.A, {
+                              className: s.uf,
+                          }),
                 ],
             }),
             (0, r.jsx)(l.Heading, {

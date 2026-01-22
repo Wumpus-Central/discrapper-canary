@@ -1,10 +1,14 @@
-n.d(t, { z: () => f }), n(896048);
+n.d(t, {
+    z: () => f,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
     o = n(814656),
     l = n(94576);
+
 function c(e, t, n) {
     return (
         t in e
@@ -18,6 +22,7 @@ function c(e, t, n) {
         e
     );
 }
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,6 +39,7 @@ function u(e) {
     }
     return e;
 }
+
 function d(e) {
     let t = e.controls,
         n = {};
@@ -46,6 +52,7 @@ function d(e) {
         n
     );
 }
+
 function f(e) {
     let { story: t, controlsLayout: n } = e,
         a = i.useMemo(() => d(t), [t]),

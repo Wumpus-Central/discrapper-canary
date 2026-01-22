@@ -1,4 +1,7 @@
-n.r(t), n.d(t, { default: () => u });
+n.r(t),
+    n.d(t, {
+        default: () => u,
+    });
 var r = n(627968);
 n(64700);
 var l = n(397927),
@@ -8,6 +11,7 @@ var l = n(397927),
     c = n(788322),
     s = n(961997),
     d = n(985018);
+
 function u(e) {
     let { channelId: t, messageId: n, mediaItemUrl: u, embedId: f, transitionState: g, onClose: p } = e,
         b = (0, c.L)(t, n, u),

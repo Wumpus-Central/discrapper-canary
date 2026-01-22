@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -9,6 +11,7 @@ var r = n(627968),
     u = n(967054),
     d = n(226540),
     f = n(267987);
+
 function p(e) {
     let { nameplate: t, hovered: n, selected: a, content: o, placement: c } = e,
         p = (0, u._)(o, t, n, a, c),
@@ -24,7 +27,9 @@ function p(e) {
                   [f.qG]: m.current,
                   [f.WB]: c === d.u.ACCOUNT,
               }),
-              style: { background: p.background },
+              style: {
+                  background: p.background,
+              },
               "aria-hidden": !0,
               children: (0, r.jsx)(_, {
                   nameplate: t,
@@ -36,12 +41,15 @@ function p(e) {
                       [f.Hh]: c === d.u.MINI_PREVIEW,
                       [f.Ix]: c === d.u.CHANNEL,
                   }),
-                  style: { maskImage: p.maskImage },
+                  style: {
+                      maskImage: p.maskImage,
+                  },
                   animate: h,
                   loop: !0 === h && !0 === n,
               }),
           });
 }
+
 function _(e) {
     let { nameplate: t, className: n, style: i, animate: a, loop: s } = e,
         { staticAsset: o, animatedAsset: l } = (0, c.r)(t),
@@ -63,6 +71,7 @@ function _(e) {
                 className: n,
             });
 }
+
 function h(e) {
     let { staticAsset: t, animatedAsset: n, animate: a, loop: s, className: l, style: c } = e,
         u = i.useRef(null);
@@ -86,6 +95,7 @@ function h(e) {
         })
     );
 }
+
 function m(e) {
     let { asset: t, className: n, style: i } = e;
     return (0, r.jsx)("img", {

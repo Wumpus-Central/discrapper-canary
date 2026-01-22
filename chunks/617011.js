@@ -1,4 +1,7 @@
-n.d(t, { A: () => p }), n(896048);
+n.d(t, {
+    A: () => p,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     a = n(503698),
@@ -17,6 +20,7 @@ var r = n(627968),
     v = n(652215),
     b = n(985018),
     A = n(204199);
+
 function p(e) {
     let { channel: t, className: n, onClose: a, context: p } = e,
         w = (0, o.bG)([u.A], () => u.A.can(v.xBc.READ_MESSAGE_HISTORY, t)),
@@ -80,7 +84,9 @@ function p(e) {
                         w
                             ? (0, r.jsxs)(r.Fragment, {
                                   children: [
-                                      (0, r.jsx)("div", { className: A.yF }),
+                                      (0, r.jsx)("div", {
+                                          className: A.yF,
+                                      }),
                                       (0, r.jsx)(
                                           y,
                                           (function (e) {
@@ -112,7 +118,9 @@ function p(e) {
                                   ],
                               })
                             : null,
-                        (0, r.jsx)("div", { className: A.jH }),
+                        (0, r.jsx)("div", {
+                            className: A.jH,
+                        }),
                         O
                             ? (0, r.jsx)("div", {
                                   className: A.Tf,
@@ -152,6 +160,7 @@ function p(e) {
         })
     );
 }
+
 function y(e) {
     let { query: t, setQuery: n, submit: l } = e;
     return (0, r.jsx)(c.IWV, {

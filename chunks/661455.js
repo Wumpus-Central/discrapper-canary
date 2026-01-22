@@ -24,6 +24,7 @@ var i = n(397927),
     v = n(972432),
     h = n(652215),
     y = n(985018);
+
 function x(e) {
     let { isOwnSettings: t, userId: n, channelId: l, guildId: o, context: s } = e,
         a = (0, m.A)({
@@ -31,7 +32,9 @@ function x(e) {
             guildId: o,
             channelId: l,
             showGuildProfile: !0,
-            icon: (0, r.jsx)(i.nys, { size: "sm" }),
+            icon: (0, r.jsx)(i.nys, {
+                size: "sm",
+            }),
             label: y.intl.string(y.t.iXAna6),
         }),
         d = (0, p.A)(n, s, i.oyn),
@@ -49,6 +52,7 @@ function x(e) {
         }),
     ];
 }
+
 function D(e, t, n) {
     let l = (0, d.u)({
             userId: e.id,
@@ -120,12 +124,17 @@ let E = (0, s.A)(
                                         children: A,
                                     }),
                                 }),
-                            d && (0, r.jsx)(i.rXV, { children: j }),
+                            d &&
+                                (0, r.jsx)(i.rXV, {
+                                    children: j,
+                                }),
                         ],
                     }),
             });
         },
-        { object: h.ZSU.CONTEXT_MENU },
+        {
+            object: h.ZSU.CONTEXT_MENU,
+        },
     ),
     [a.A.VOICE_USER],
 );

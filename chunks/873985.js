@@ -1,10 +1,14 @@
-n.d(t, { A: () => h }), n(747238);
+n.d(t, {
+    A: () => h,
+}),
+    n(747238);
 var r,
     i = n(735438),
     a = n.n(i),
     s = n(311907),
     o = n(73153),
     l = n(927813);
+
 function c(e, t, n) {
     return (
         t in e
@@ -25,6 +29,7 @@ let u = {
     },
     d = u,
     f = +l.A.Millis.HOUR;
+
 function p(e) {
     e.latencyRankedRegions.length > 0 &&
         ((d.lastGeoRankedOrder = e.geoRankedRegions), (d.preferredRegions = e.latencyRankedRegions)),
@@ -68,4 +73,6 @@ c(_, "displayName", "RTCRegionStore"),
             e
         ),
     ]);
-let h = new _(o.h, { RTC_LATENCY_TEST_COMPLETE: p });
+let h = new _(o.h, {
+    RTC_LATENCY_TEST_COMPLETE: p,
+});

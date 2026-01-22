@@ -1,4 +1,7 @@
-n.d(t, { A: () => x }), n(747238);
+n.d(t, {
+    A: () => x,
+}),
+    n(747238);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -25,6 +28,7 @@ var r = n(627968),
     T = n(8738),
     C = n(996988),
     N = n(380297);
+
 function R(e, t, n) {
     return (
         t in e
@@ -38,6 +42,7 @@ function R(e, t, n) {
         e
     );
 }
+
 function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -54,6 +59,7 @@ function w(e) {
     }
     return e;
 }
+
 function P(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -66,6 +72,7 @@ function P(e, t) {
     }
     return n;
 }
+
 function D(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -77,6 +84,7 @@ function D(e, t) {
         e
     );
 }
+
 function x(e) {
     let { user: t, currentUser: n, activity: a, className: R, onClose: P } = e,
         x = (0, _.GV)(),
@@ -123,7 +131,9 @@ function x(e) {
                                             className: s()(N.sd, N.mG),
                                             onClick: (e) => {
                                                 e.stopPropagation(),
-                                                    F({ action: "OPEN_SPOTIFY_ARTIST" }),
+                                                    F({
+                                                        action: "OPEN_SPOTIFY_ARTIST",
+                                                    }),
                                                     (0, h.mN)(a, t.id, n);
                                             },
                                             children: e,
@@ -169,15 +179,23 @@ function x(e) {
             children: [
                 (0, r.jsx)(
                     A.A,
-                    D(w({ textId: L }, k), {
-                        contextMenu: (0, r.jsx)(T.A, {
-                            display: "live",
-                            user: t,
-                            activity: a,
-                            entry: M,
-                            onClose: P,
-                        }),
-                    }),
+                    D(
+                        w(
+                            {
+                                textId: L,
+                            },
+                            k,
+                        ),
+                        {
+                            contextMenu: (0, r.jsx)(T.A, {
+                                display: "live",
+                                user: t,
+                                activity: a,
+                                entry: M,
+                                onClose: P,
+                            }),
+                        },
+                    ),
                 ),
                 (0, r.jsx)("div", {
                     className: N.rf,
@@ -189,7 +207,11 @@ function x(e) {
                                 size: j === C.d.MODAL_V2 ? f.w.SIZE_100 : f.w.SIZE_60,
                                 className: N.mM,
                                 onClick: (e) => {
-                                    e.stopPropagation(), F({ action: "OPEN_SPOTIFY_ALBUM" }), (0, h.QX)(a, t.id);
+                                    e.stopPropagation(),
+                                        F({
+                                            action: "OPEN_SPOTIFY_ALBUM",
+                                        }),
+                                        (0, h.QX)(a, t.id);
                                 },
                             }),
                             (0, r.jsxs)("div", {
@@ -201,7 +223,10 @@ function x(e) {
                                                 variant: "heading-sm/semibold",
                                                 text: a.details,
                                                 onClick: () => {
-                                                    F({ action: "OPEN_SPOTIFY_TRACK" }), (0, h.Mp)(a);
+                                                    F({
+                                                        action: "OPEN_SPOTIFY_TRACK",
+                                                    }),
+                                                        (0, h.Mp)(a);
                                                 },
                                                 id: x,
                                             }),

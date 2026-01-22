@@ -1,4 +1,6 @@
-a.d(t, { A: () => r });
+a.d(t, {
+    A: () => r,
+});
 var n = a(981737);
 let r = {
     ordinalNumber: function (e, t) {
@@ -8,7 +10,7 @@ let r = {
         values: {
             narrow: ["fvt", "vt"],
             abbreviated: ["f.v.t.", "v.t."],
-            wide: ["før vesterlandsk tidsregning", "vesterlandsk tidsregning"],
+            wide: ["f\xf8r vesterlandsk tidsregning", "vesterlandsk tidsregning"],
         },
         defaultWidth: "wide",
     }),
@@ -60,9 +62,9 @@ let r = {
     day: (0, n.A)({
         values: {
             narrow: ["S", "M", "T", "O", "T", "F", "L"],
-            short: ["sø", "ma", "ti", "on", "to", "fr", "lø"],
-            abbreviated: ["søn.", "man.", "tir.", "ons.", "tor.", "fre.", "lør."],
-            wide: ["søndag", "mandag", "tirsdag", "onsdag", "torsdag", "fredag", "lørdag"],
+            short: ["s\xf8", "ma", "ti", "on", "to", "fr", "l\xf8"],
+            abbreviated: ["s\xf8n.", "man.", "tir.", "ons.", "tor.", "fre.", "l\xf8r."],
+            wide: ["s\xf8ndag", "mandag", "tirsdag", "onsdag", "torsdag", "fredag", "l\xf8rdag"],
         },
         defaultWidth: "wide",
     }),

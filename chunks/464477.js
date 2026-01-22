@@ -26,6 +26,7 @@ var r,
     a,
     s = n(704101),
     o = n(728458);
+
 function l(e, t, n) {
     return (
         t in e
@@ -39,6 +40,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -55,6 +57,7 @@ function c(e) {
     }
     return e;
 }
+
 function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -67,6 +70,7 @@ function u(e, t) {
     }
     return n;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -83,9 +87,11 @@ let f = null != (r = null == (i = window) ? void 0 : i.crypto) ? r : null == (a 
     _ = null != f && "getRandomValues" in f && p,
     h = "PublicKeyCredential" in window && p,
     m = 20;
+
 function g(e) {
     return f.getRandomValues(new Uint8Array(e));
 }
+
 function E(e) {
     return s
         .encode(e)
@@ -95,12 +101,15 @@ function E(e) {
         .replace(/(\w{4})/g, "$1 ")
         .trim();
 }
+
 function b() {
     return E(g(m));
 }
+
 function y(e) {
     return e.replace(/[\s._-]+/g, "").toUpperCase();
 }
+
 function O(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "Discord";
     return "otpauth://totp/"
@@ -109,6 +118,14 @@ function O(e, t) {
         .concat(y(t), "&issuer=")
         .concat(encodeURIComponent(n));
 }
+
 function A(e, t) {
-    o.A.captureException(e, d(c({}, t), { tags: d(c({}, null == t ? void 0 : t.tags), { app_context: "webauthn" }) }));
+    o.A.captureException(
+        e,
+        d(c({}, t), {
+            tags: d(c({}, null == t ? void 0 : t.tags), {
+                app_context: "webauthn",
+            }),
+        }),
+    );
 }

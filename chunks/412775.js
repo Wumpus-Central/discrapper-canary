@@ -1,4 +1,6 @@
-t.d(l, { A: () => O });
+t.d(l, {
+    A: () => O,
+});
 var n = t(627968);
 t(64700);
 var i = t(311907),
@@ -21,11 +23,14 @@ var i = t(311907),
     b = t(518477),
     I = t(985018),
     y = t(195723);
+
 function O(e) {
     let { user: l, displayProfile: t, onClose: O } = e,
         { trackUserProfileAction: N } = (0, u.NJ)(),
         E = (0, i.bG)([d.A], () => d.A.getGuildId()),
-        _ = (0, s.q)({ userId: l.id }),
+        _ = (0, s.q)({
+            userId: l.id,
+        }),
         T = (0, i.bG)([c.A], () => c.A.hidePersonalInformation),
         P = (0, i.bG)([o.default], () => o.default.locale),
         S = (0, p.A)(l.id),
@@ -54,12 +59,16 @@ function O(e) {
                         color: r.LU0.colors.TEXT_STRONG,
                     }),
                     headingColor: "text-default",
-                    children: (0, n.jsx)(a.T, { userId: l.id }),
+                    children: (0, n.jsx)(a.T, {
+                        userId: l.id,
+                    }),
                 }),
             _.length > 0 &&
                 (0, n.jsx)(h.A, {
                     heading: I.intl.string(I.t["Uv/eTx"]),
-                    children: (0, n.jsx)(A.A, { applicationIds: _ }),
+                    children: (0, n.jsx)(A.A, {
+                        applicationIds: _,
+                    }),
                 }),
             (0, n.jsx)(h.A, {
                 heading: I.intl.string(I.t.a6XYD9),
@@ -91,7 +100,10 @@ function O(e) {
                                 applicationRoleConnection: e,
                                 locale: P,
                                 onApplicationClicked: () => {
-                                    N({ action: "PRESS_APP_CONNECTION" }), O();
+                                    N({
+                                        action: "PRESS_APP_CONNECTION",
+                                    }),
+                                        O();
                                 },
                                 selectedGuildId: null != E ? E : void 0,
                             },
@@ -99,7 +111,9 @@ function O(e) {
                         ),
                     ),
                 }),
-            (0, n.jsx)(v.A, { userId: l.id }),
+            (0, n.jsx)(v.A, {
+                userId: l.id,
+            }),
         ],
     });
 }

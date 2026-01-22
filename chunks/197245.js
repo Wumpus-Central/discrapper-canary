@@ -10,6 +10,7 @@ var r = n(879378),
     a = n(61090),
     s = n(506774),
     o = n(22468);
+
 function l(e, t, n) {
     return (
         t in e
@@ -23,6 +24,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e, t) {
     if (null == e) return {};
     var n,
@@ -39,6 +41,7 @@ function c(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function u(e, t) {
     if (null == e) return {};
     var n,
@@ -77,7 +80,9 @@ class p extends o.i {
                                 (p._clearAllPromise = null),
                                 t();
                         },
-                        { timeout: 500 },
+                        {
+                            timeout: 500,
+                        },
                     );
                 })),
             p._clearAllPromise
@@ -128,7 +133,9 @@ class p extends o.i {
     static destroy() {
         (f = null),
             o.i.destroy(),
-            p.clearPersistQueue({ type: "all" }),
+            p.clearPersistQueue({
+                type: "all",
+            }),
             p.allPersistKeys.clear(),
             p.userAgnosticPersistKeys.clear();
     }
@@ -186,7 +193,12 @@ class p extends o.i {
             null != r ||
                 ((r = new Promise((t) => {
                     let r = n > 0 ? () => this.throttledCallback(t) : () => this.callback(t);
-                    p._writeResolvers.set(e, [t, requestIdleCallback(r, { timeout: 500 })]);
+                    p._writeResolvers.set(e, [
+                        t,
+                        requestIdleCallback(r, {
+                            timeout: 500,
+                        }),
+                    ]);
                 })),
                 p._writePromises.set(e, r)),
             r
@@ -216,7 +228,9 @@ class p extends o.i {
             l(
                 this,
                 "throttledCallback",
-                i()((e) => this.callback(e), this.getClass().throttleDelay, { leading: !1 }),
+                i()((e) => this.callback(e), this.getClass().throttleDelay, {
+                    leading: !1,
+                }),
             ),
             "string" != typeof this.getClass().persistKey)
         )

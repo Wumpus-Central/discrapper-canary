@@ -1,4 +1,6 @@
-r.d(t, { A: () => l });
+r.d(t, {
+    A: () => l,
+});
 var n = r(64700),
     o = r(205662),
     a = r(708005),
@@ -28,8 +30,16 @@ var n = r(64700),
                             transition: "100ms box-shadow ease",
                         },
                     },
-                    hover: { swatch: { transform: "scale(1.2)" } },
-                    active: { Swatch: { boxShadow: "inset 0 0 0 3px " + t } },
+                    hover: {
+                        swatch: {
+                            transform: "scale(1.2)",
+                        },
+                    },
+                    active: {
+                        Swatch: {
+                            boxShadow: "inset 0 0 0 3px " + t,
+                        },
+                    },
                 },
                 {
                     hover: l,
@@ -38,13 +48,17 @@ var n = r(64700),
             );
         return n.createElement(
             "div",
-            { style: p.swatch },
+            {
+                style: p.swatch,
+            },
             n.createElement(a.rp, {
                 style: p.Swatch,
                 color: t,
                 onClick: r,
                 onHover: i,
-                focusStyle: { boxShadow: p.Swatch.boxShadow + ", 0 0 5px " + t },
+                focusStyle: {
+                    boxShadow: p.Swatch.boxShadow + ", 0 0 5px " + t,
+                },
             }),
         );
     };

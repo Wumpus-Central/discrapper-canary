@@ -1,11 +1,15 @@
-n.d(t, { A: () => u }), n(896048);
+n.d(t, {
+    A: () => u,
+}),
+    n(896048);
 var r,
     i = n(627968),
     s = n(64700),
     l = n(218681),
-    a = n(432022),
+    a = n(108531),
     o = n(397927);
 let c = null != (r = window.ResizeObserver) ? r : l.t;
+
 function u(e) {
     let { show: t, children: n, top: r = 0, bottom: l = 0 } = e,
         { ref: u, height: d } = (() => {
@@ -44,8 +48,12 @@ function u(e) {
             },
         }),
         f = (0, o.zhh)({
-            from: { opacity: 0 },
-            to: { opacity: +!!t },
+            from: {
+                opacity: 0,
+            },
+            to: {
+                opacity: +!!t,
+            },
             config: {
                 duration: 200,
                 easing: t ? (e) => e ** 4 : (e) => e * (2 - e),
@@ -59,7 +67,9 @@ function u(e) {
             marginTop: h.marginTop,
         },
         children: (0, i.jsx)(a.animated.div, {
-            style: { opacity: f.opacity },
+            style: {
+                opacity: f.opacity,
+            },
             ref: u,
             children: n,
         }),

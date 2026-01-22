@@ -21,6 +21,7 @@ var i,
     g = n(309010),
     E = n(661191),
     b = n(767581);
+
 function y(e, t, n) {
     return (
         t in e
@@ -48,14 +49,17 @@ let O = [],
     D = s().chain(O),
     x = new Set(),
     L = new Set();
+
 function j(e) {
     var t;
     return null != (t = m.Ay.lastMessageId(e)) ? t : e;
 }
+
 function M(e) {
     let t = p.A.getCount(e);
     return null === t || 0 === t;
 }
+
 function k(e) {
     return function (t, n) {
         return (0, b.yr)(t)
@@ -67,6 +71,7 @@ function k(e) {
                 : E.default.compare(n, t);
     };
 }
+
 function U(e, t) {
     return function (n) {
         var r;
@@ -77,6 +82,7 @@ function U(e, t) {
         return !0;
     };
 }
+
 function G() {
     (N = []),
         (r = null),
@@ -91,12 +97,16 @@ function G() {
         L.clear(),
         x.clear();
 }
+
 function V() {
     var e;
     let t = g.A.getChannelId();
     if (null == t || !(null == (e = h.A.getChannel(t)) ? void 0 : e.isForumLikeChannel())) return G(), !1;
-    B({ refreshThreadIds: !0 });
+    B({
+        refreshThreadIds: !0,
+    });
 }
+
 function F(e) {
     let t = h.A.getChannel(e);
     return null == t
@@ -108,6 +118,7 @@ function F(e) {
               })
               .sort(k(I));
 }
+
 function B(e) {
     let t = h.A.getChannel(v);
     if (null == t) return;
@@ -126,43 +137,64 @@ function B(e) {
         i = (N = 0 === S.size ? n : n.filter(U(S, T))).find((e) => M(e));
     r = null == i ? null : i;
 }
+
 function H(e) {
     var t;
     let { guildId: n } = e;
     if (null == v || n !== (null == (t = h.A.getChannel(v)) ? void 0 : t.guild_id)) return !1;
-    B({ refreshThreadIds: !0 });
+    B({
+        refreshThreadIds: !0,
+    });
 }
+
 function Y(e) {
     let { channel: t } = e;
     if (null == t.parent_id || t.parent_id !== v) return !1;
     let n = (0, b.yr)(t.id),
         r = L.has(t.id);
-    if (n && !r) L.add(t.id), B({ sortThreadIds: !0 });
+    if (n && !r)
+        L.add(t.id),
+            B({
+                sortThreadIds: !0,
+            });
     else {
         if (n || !r) return !1;
-        L.delete(t.id), B({ sortThreadIds: !0 });
+        L.delete(t.id),
+            B({
+                sortThreadIds: !0,
+            });
     }
 }
+
 function W(e) {
     let { channel: t, isNewlyCreated: n } = e;
     if (null == t.parent_id || t.parent_id !== v || !n) return !1;
     t.ownerId !== _.default.getId() ? C++ : (A = t.id);
 }
+
 function K(e) {
     let { channel: t } = e;
     if (null == t.parent_id || t.parent_id !== v) return !1;
-    x.add(t.id), B({ sortThreadIds: !0 });
+    x.add(t.id),
+        B({
+            sortThreadIds: !0,
+        });
 }
+
 function z(e) {
     let { channel: t } = e;
     if (null == t.parent_id || t.parent_id !== v) return !1;
     G();
 }
+
 function q(e) {
     let { channelId: t } = e;
     if (null == t || t !== v) return !1;
-    B({ refreshThreadIds: !0 });
+    B({
+        refreshThreadIds: !0,
+    });
 }
+
 function X(e) {
     let { channelId: t } = e;
     if (null == t || t !== v) return !1;
@@ -188,7 +220,15 @@ class Z extends (i = u.Ay.Store) {
             (S = n),
             (I = t),
             (T = r),
-            i ? B({ refreshThreadIds: !0 }) : s ? B({ sortThreadIds: !0 }) : (a || o) && B(),
+            i
+                ? B({
+                      refreshThreadIds: !0,
+                  })
+                : s
+                  ? B({
+                        sortThreadIds: !0,
+                    })
+                  : (a || o) && B(),
             N
         );
     }

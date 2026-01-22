@@ -22,10 +22,12 @@ var r,
     i = n(84157),
     a = n(64700),
     s = n(111975);
+
 function o() {
     let e = navigator.userAgentData;
     return null != e && e.platform ? e.platform : navigator.platform;
 }
+
 function l() {
     let e = navigator.userAgentData;
     return e && Array.isArray(e.brands)
@@ -37,10 +39,12 @@ function l() {
               .join(" ")
         : navigator.userAgent;
 }
+
 function c() {
     return /apple/i.test(navigator.vendor);
 }
 let u = null;
+
 function d(e) {
     let t = e.activeElement;
     for (; (null == (n = t) || null == (n = n.shadowRoot) ? void 0 : n.activeElement) != null; ) {
@@ -49,6 +53,7 @@ function d(e) {
     }
     return t;
 }
+
 function f(e, t) {
     if (!e || !t) return !1;
     let n = null == t.getRootNode ? void 0 : t.getRootNode();
@@ -62,21 +67,26 @@ function f(e, t) {
     }
     return !1;
 }
+
 function p(e) {
     return "composedPath" in e ? e.composedPath()[0] : e.target;
 }
+
 function _(e, t) {
     if (null == t) return !1;
     if ("composedPath" in e) return e.composedPath().includes(t);
     let n = e;
     return null != n.target && t.contains(n.target);
 }
+
 function h(e) {
     return e.matches("html,body");
 }
+
 function m(e) {
     return (null == e ? void 0 : e.ownerDocument) || document;
 }
+
 function g(e, t, n) {
     return (
         void 0 === n && (n = !0),
@@ -88,15 +98,18 @@ function g(e, t, n) {
             .flatMap((t) => [t, ...g(e, t.id, n)])
     );
 }
+
 function E(e) {
     return "nativeEvent" in e;
 }
+
 function b(e, t) {
     let n = ["mouse", "pen"];
     return t || n.push("", void 0), n.includes(e);
 }
 var y = function () {},
     O = "u" > typeof document ? a.useLayoutEffect : y;
+
 function A(e) {
     let t = a.useRef(e);
     return (
@@ -106,7 +119,11 @@ function A(e) {
         t
     );
 }
-let v = { ...(r || (r = n.t(a, 2))) }.useInsertionEffect || ((e) => e());
+let v =
+    {
+        ...(r || (r = n.t(a, 2))),
+    }.useInsertionEffect || ((e) => e());
+
 function S(e) {
     let t = a.useRef(() => {});
     return (
@@ -119,6 +136,7 @@ function S(e) {
         }, [])
     );
 }
+
 function I(e, t, n) {
     if ("function" == typeof n) return n(t);
     if (n) return n.includes(t);
@@ -130,6 +148,7 @@ let T = () => ({
     displayCheck:
         "function" == typeof ResizeObserver && ResizeObserver.toString().includes("[native code]") ? "full" : "none",
 });
+
 function C(e, t) {
     let n = (0, s.Kr)(e, T()),
         r = n.length;
@@ -138,22 +157,27 @@ function C(e, t) {
         a = n.indexOf(i);
     return n[-1 === a ? (1 === t ? 0 : r - 1) : a + t];
 }
+
 function N(e) {
     return C(m(e).body, 1) || e;
 }
+
 function R(e) {
     return C(m(e).body, -1) || e;
 }
+
 function w(e, t) {
     let n = t || e.currentTarget,
         r = e.relatedTarget;
     return !r || !f(n, r);
 }
+
 function P(e) {
     (0, s.Kr)(e, T()).forEach((e) => {
         (e.dataset.tabindex = e.getAttribute("tabindex") || ""), e.setAttribute("tabindex", "-1");
     });
 }
+
 function D(e) {
     e.querySelectorAll("[data-tabindex]").forEach((e) => {
         let t = e.dataset.tabindex;

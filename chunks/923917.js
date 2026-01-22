@@ -45,6 +45,7 @@ var r,
     B = n(652215),
     H = n(392164),
     Y = n(32069);
+
 function W(e, t, n) {
     return (
         t in e
@@ -58,6 +59,7 @@ function W(e, t, n) {
         e
     );
 }
+
 function K(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -74,6 +76,7 @@ function K(e) {
     }
     return e;
 }
+
 function z(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -86,6 +89,7 @@ function z(e, t) {
     }
     return n;
 }
+
 function q(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -97,6 +101,7 @@ function q(e, t) {
         e
     );
 }
+
 function X(e) {
     let { withTitleBar: t, isFullScreen: n } = e;
     return t && k.isPlatformEmbedded && !n;
@@ -128,7 +133,13 @@ class Z extends (r = a.Component) {
             k.isPlatformEmbedded
                 ? t.removeEventListener("contextmenu", U.contextMenuCallbackNative)
                 : t.removeEventListener("contextmenu", U.contextMenuCallbackWeb),
-            (0, d.r)(() => h.red.setState((e) => q(K({}, e), { [h.KX8]: [] }))),
+            (0, d.r)(() =>
+                h.red.setState((e) =>
+                    q(K({}, e), {
+                        [h.KX8]: [],
+                    }),
+                ),
+            ),
             e.removeEventListener("beforeunload", this.beforeUnload);
     }
     updateTitle() {
@@ -267,7 +278,9 @@ class Z extends (r = a.Component) {
             });
     }
 }
-W(Z, "defaultProps", { withTitleBar: !0 });
+W(Z, "defaultProps", {
+    withTitleBar: !0,
+});
 let Q = a.forwardRef(function (e, t) {
         let { guestWindow: n, className: r, children: s } = e,
             { lang: l, style: u, className: d } = (0, M.xb)();
@@ -311,15 +324,23 @@ let Q = a.forwardRef(function (e, t) {
                       value: l,
                       children: (0, i.jsx)(
                           Z,
-                          q(K({ ref: t }, e), {
-                              titleBarTheme: p,
-                              guestWindow: r,
-                              isFullScreen: a,
-                              forcedColors: s,
-                              connectedEmbeddedActivity: o,
-                              clientThemesClassName: u,
-                              clientThemesCSS: d,
-                          }),
+                          q(
+                              K(
+                                  {
+                                      ref: t,
+                                  },
+                                  e,
+                              ),
+                              {
+                                  titleBarTheme: p,
+                                  guestWindow: r,
+                                  isFullScreen: a,
+                                  forcedColors: s,
+                                  connectedEmbeddedActivity: o,
+                                  clientThemesClassName: u,
+                                  clientThemesCSS: d,
+                              },
+                          ),
                       ),
                   }),
               });

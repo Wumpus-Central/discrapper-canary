@@ -1,4 +1,6 @@
-t(697509)(r, "__esModule", { value: !0 }),
+t(697509)(r, "__esModule", {
+    value: !0,
+}),
     (r.default = void 0),
     (r.default = {
         abstract: !1,
@@ -15,7 +17,9 @@ t(697509)(r, "__esModule", { value: !0 }),
         },
         relatedConcepts: [
             {
-                concept: { name: "pagebreak [EPUB-SSV]" },
+                concept: {
+                    name: "pagebreak [EPUB-SSV]",
+                },
                 module: "EPUB",
             },
         ],

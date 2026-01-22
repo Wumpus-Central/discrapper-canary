@@ -1,4 +1,6 @@
-a.d(t, { default: () => v });
+a.d(t, {
+    default: () => v,
+});
 var i = a(627968),
     n = a(64700),
     l = a(397927),
@@ -12,6 +14,7 @@ var i = a(627968),
     s = a(670455),
     _ = a(985018);
 let p = [b.CS.OTHER, b.CS.ADS, b.CS.NOT_FUN];
+
 function v(e) {
     var t;
     let {
@@ -34,7 +37,9 @@ function v(e) {
     let A = (null == (t = m.embeddedActivityConfig) ? void 0 : t.displays_advertisements) === !0;
     return (0, i.jsx)(c.A, {
         modalType: "activity",
-        header: _.intl.formatToPlainString(_.t.QXYwoD, { applicationName: m.name }),
+        header: _.intl.formatToPlainString(_.t.QXYwoD, {
+            applicationName: m.name,
+        }),
         body: _.intl.string(_.t["9hk2KF"]),
         problemTitle: _.intl.string(_.t.g1q5fr),
         problems: (0, o.A)(!0, A),
@@ -92,7 +97,12 @@ function v(e) {
                                                 });
                                         }
                                         return e;
-                                    })({ body: _.intl.string(_.t["zuHR+y"]) }, t),
+                                    })(
+                                        {
+                                            body: _.intl.string(_.t["zuHR+y"]),
+                                        },
+                                        t,
+                                    ),
                                 );
                         }));
         },

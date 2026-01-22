@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r,
     l = n(627968);
 n(64700);
@@ -8,6 +10,7 @@ var i = n(503698),
     o = n(709562),
     c = n(639939),
     u = (((r = u || {})[(r.UP = 0)] = "UP"), (r[(r.DOWN = 1)] = "DOWN"), r);
+
 function d(e) {
     let { direction: t, className: n, themeable: r } = e,
         i = (function (e, t) {
@@ -69,7 +72,9 @@ function d(e) {
             return e;
         })(
             {
-                className: a()(n, c.U, { [c.up]: 0 === t }),
+                className: a()(n, c.U, {
+                    [c.up]: 0 === t,
+                }),
                 iconComponent: s.abt,
                 themeable: r,
             },

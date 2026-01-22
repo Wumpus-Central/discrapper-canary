@@ -10,9 +10,9 @@ var r = n(818348),
     i = n(985018);
 let a = 128,
     s = Object.freeze({
-        MINUTES_30: 1800000,
-        HOURS_1: 3600000,
-        HOURS_4: 14400000,
+        MINUTES_30: 18e5,
+        HOURS_1: 36e5,
+        HOURS_4: 144e5,
         TODAY: "TODAY",
         DONT_CLEAR: "DONT_CLEAR",
     });

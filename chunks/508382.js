@@ -16,6 +16,7 @@ var r = n(627968),
     u = n(426333),
     d = n(337836),
     f = n(11212);
+
 function p(e, t, n) {
     return (
         t in e
@@ -29,6 +30,7 @@ function p(e, t, n) {
         e
     );
 }
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -45,6 +47,7 @@ function _(e) {
     }
     return e;
 }
+
 function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -57,6 +60,7 @@ function h(e, t) {
     }
     return n;
 }
+
 function m(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -71,6 +75,7 @@ function m(e, t) {
 let g = 8,
     E = 100,
     b = "data-popover-layer";
+
 function y(e) {
     var t;
     let n,
@@ -117,7 +122,11 @@ function y(e) {
                             boundary: l.body,
                         }),
                     ),
-                e.push((0, a.jD)({ strategy: "referenceHidden" })),
+                e.push(
+                    (0, a.jD)({
+                        strategy: "referenceHidden",
+                    }),
+                ),
                 null != j &&
                     e.push(
                         (0, a.Ej)({
@@ -133,7 +142,16 @@ function y(e) {
                 e
             );
         }, [I, T, N, L, C, l, j]);
-    null != v ? (n = { reference: { getBoundingClientRect: () => v } }) : null != A && (n = { reference: A });
+    null != v
+        ? (n = {
+              reference: {
+                  getBoundingClientRect: () => v,
+              },
+          })
+        : null != A &&
+          (n = {
+              reference: A,
+          });
     let {
             refs: V,
             floatingStyles: F,
@@ -158,7 +176,9 @@ function y(e) {
                 close: 0,
             },
             enabled: "hover" === M,
-            handleClose: (0, s.iB)({ blockPointerEvents: !0 }),
+            handleClose: (0, s.iB)({
+                blockPointerEvents: !0,
+            }),
         }),
         { getReferenceProps: q, getFloatingProps: X } = (0, s.bv)([K, z]),
         Z = (null == (t = H.hide) ? void 0 : t.referenceHidden) ? "hidden" : "visible",
@@ -182,7 +202,9 @@ function y(e) {
                                         id: y,
                                         className: c()(O, f.q),
                                         [b]: !0,
-                                        style: m(_({}, F), { visibility: Z }),
+                                        style: m(_({}, F), {
+                                            visibility: Z,
+                                        }),
                                         ref: V.setFloating,
                                     },
                                     X(),
@@ -205,6 +227,7 @@ function y(e) {
         ],
     });
 }
+
 function O(e, t) {
     switch (e) {
         case "center":
@@ -223,6 +246,7 @@ function O(e, t) {
             return e;
     }
 }
+
 function A(e) {
     let t = e.split("-")[0];
     switch (t) {

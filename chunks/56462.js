@@ -4,6 +4,7 @@ n.d(t, {
 });
 var r = n(985018);
 let l = "https://discord.com/safety/understanding-and-avoiding-common-scams";
+
 function i() {
     return [
         {

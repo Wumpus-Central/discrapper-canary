@@ -1,4 +1,8 @@
-n.d(t, { A: () => u }), n(896048), n(638769);
+n.d(t, {
+    A: () => u,
+}),
+    n(896048),
+    n(638769);
 var r = n(627968),
     i = n(64700),
     a = n(397927),
@@ -6,6 +10,7 @@ var r = n(627968),
     o = n(985018),
     l = n(80739);
 let c = 5;
+
 function u(e) {
     var t;
     let { selectedGuildId: n, selectedChannelId: u, onChannelChange: d, error: f } = e,

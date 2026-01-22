@@ -1,4 +1,6 @@
-a.d(t, { A: () => n });
+a.d(t, {
+    A: () => n,
+});
 var i = {
     lastWeek: function (e) {
         return 6 === e.getUTCDay() ? "'το προηγούμενο' eeee 'στις' p" : "'την προηγούμενη' eeee 'στις' p";

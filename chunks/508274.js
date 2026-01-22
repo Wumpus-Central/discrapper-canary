@@ -20,6 +20,7 @@ var r = n(627968),
     h = n(652215),
     m = n(985018),
     g = n(710032);
+
 function E(e, t, n) {
     return (
         t in e
@@ -33,6 +34,7 @@ function E(e, t, n) {
         e
     );
 }
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -49,6 +51,7 @@ function b(e) {
     }
     return e;
 }
+
 function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -61,6 +64,7 @@ function y(e, t) {
     }
     return n;
 }
+
 function O(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -72,6 +76,7 @@ function O(e, t) {
         e
     );
 }
+
 function A(e, t) {
     if (null == e) return {};
     var n,
@@ -88,6 +93,7 @@ function A(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function v(e, t) {
     if (null == e) return {};
     var n,
@@ -101,9 +107,11 @@ function v(e, t) {
 let S = i.lazy(() => Promise.all([n.e("47950"), n.e("87680")]).then(n.bind(n, 370640))),
     I = 7,
     T = () => Promise.resolve();
+
 function C(e) {
     return null == e ? null : "string" == typeof e ? ((0, c.qt)(e) ? (0, c.LX)(e) : null) : e;
 }
+
 function N(e) {
     let {
             color: t,
@@ -124,10 +132,16 @@ function N(e) {
     if (m && null != y && null != A) {
         let e = (0, c.Hl)(y),
             t = (0, c.Hl)(A);
-        I = { background: "linear-gradient(".concat(v, "deg, ").concat(e, ", ").concat(t, ")") };
-    } else I = { backgroundColor: null != t ? (0, c.Hl)(t) : f.backgroundColor };
+        I = {
+            background: "linear-gradient(".concat(v, "deg, ").concat(e, ", ").concat(t, ")"),
+        };
+    } else
+        I = {
+            backgroundColor: null != t ? (0, c.Hl)(t) : f.backgroundColor,
+        };
     let T = m ? y : t,
         C = !1;
+
     function N() {
         let e = 16,
             t = 16;
@@ -216,6 +230,7 @@ class w extends i.PureComponent {
         });
     }
 }
+
 function P(e) {
     let {
             value: t,
@@ -258,7 +273,12 @@ function P(e) {
         i.useEffect(() => o, [o]);
     let x = (e) => {
             let t = "#" === e[0] ? e : "#".concat(e);
-            if (!(0, c.qt)(t)) return void D((e) => O(b({}, e), { input: t }));
+            if (!(0, c.qt)(t))
+                return void D((e) =>
+                    O(b({}, e), {
+                        input: t,
+                    }),
+                );
             let n = (0, c.LX)(t),
                 r = (0, c.tf)(n);
             D({
@@ -330,7 +350,9 @@ function P(e) {
                                 u.DUT,
                                 {
                                     "aria-label": "",
-                                    style: { backgroundColor: e },
+                                    style: {
+                                        backgroundColor: e,
+                                    },
                                     className: g.db,
                                     onClick: () => x(e),
                                 },
@@ -349,6 +371,7 @@ function P(e) {
     });
 }
 let D = i.memo(P);
+
 function x(e) {
     let {
             className: t,
@@ -421,7 +444,9 @@ function x(e) {
                     O(
                         b(
                             {
-                                className: s()(g.kL, t, { [g.D7]: m }),
+                                className: s()(g.kL, t, {
+                                    [g.D7]: m,
+                                }),
                                 ref: o,
                             },
                             l,

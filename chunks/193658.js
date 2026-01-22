@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(64700),
     i = n(311907),
     a = n(252452),
@@ -6,6 +8,7 @@ var r = n(64700),
     o = n(628965),
     l = n(355097),
     c = n(652215);
+
 function u(e, t, n) {
     return (
         t in e
@@ -19,6 +22,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -56,7 +60,15 @@ let f = Object.freeze({
                 t === u &&
                 setTimeout(() => {
                     let e = requestAnimationFrame(() => {
-                        r.scrollIntoView(d({ behavior: c ? "auto" : "smooth" }, n)), a.A.clearScrollPosition(f[t]);
+                        r.scrollIntoView(
+                            d(
+                                {
+                                    behavior: c ? "auto" : "smooth",
+                                },
+                                n,
+                            ),
+                        ),
+                            a.A.clearScrollPosition(f[t]);
                     });
                     return () => cancelAnimationFrame(e);
                 }, l);

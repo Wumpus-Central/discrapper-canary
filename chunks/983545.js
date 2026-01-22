@@ -1,4 +1,8 @@
-l.d(t, { o: () => f }), l(896048), l(321073);
+l.d(t, {
+    o: () => f,
+}),
+    l(896048),
+    l(321073);
 var n = l(64700),
     r = l(960488),
     s = l(641150),
@@ -14,7 +18,9 @@ let d = {
         [c.G2.BUNDLES]: s.q.BUNDLE,
     },
     f = (e) => {
-        let { enabled: t } = (0, a.Z)({ location: "useShopViewTransition" }),
+        let { enabled: t } = (0, a.Z)({
+                location: "useShopViewTransition",
+            }),
             { setItemTypeFilter: l, reset: s, setCurrentTab: f } = (0, i.v)(),
             b = n.useMemo(() => (e !== c.G2.ORBS || t ? ((0, c.dF)(e) ? c.G2.CATALOG : e) : c.G2.HOME), [e, t]),
             [g, p] = n.useState(b),
@@ -45,7 +51,9 @@ let d = {
                         }
                         p([c.G2.HOME, c.G2.ORBS].includes(e) ? e : c.G2.CATALOG),
                             t && h(c.Pf.IN),
-                            v.push(u.BVt.COLLECTIBLES_SHOP_WITH_TAB(e), { shallow: !0 }),
+                            v.push(u.BVt.COLLECTIBLES_SHOP_WITH_TAB(e), {
+                                shallow: !0,
+                            }),
                             h(c.Pf.VISIBLE);
                     }
                 },

@@ -34,6 +34,7 @@ var r = n(812729),
     a = n(240248),
     s = n(652215),
     o = n(985018);
+
 function l(e, t) {
     if (null == e) return {};
     var n,
@@ -50,6 +51,7 @@ function l(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function c(e, t) {
     if (null == e) return {};
     var n,
@@ -90,6 +92,7 @@ var y = (function (e) {
             e
         );
     })({});
+
 function S(e) {
     if (e.options.length > 0) return !1;
     let t = I(),
@@ -99,6 +102,7 @@ function S(e) {
         s = l(e, ["id"]);
     return i()(r, s);
 }
+
 function I() {
     return {
         id: String(Date.now()),
@@ -110,6 +114,7 @@ function I() {
         type: 0,
     };
 }
+
 function T(e) {
     return {
         id: String(Date.now()),
@@ -121,6 +126,7 @@ function T(e) {
         type: 0,
     };
 }
+
 function C(e) {
     return {
         id: e.id,
@@ -146,6 +152,7 @@ function C(e) {
         type: e.type,
     };
 }
+
 function N(e) {
     return {
         id: e.id,
@@ -168,6 +175,7 @@ function N(e) {
         type: e.type,
     };
 }
+
 function R(e) {
     var t, n, r, i;
     return {
@@ -182,6 +190,7 @@ function R(e) {
         connections: null != (i = e.connections) ? i : [],
     };
 }
+
 function w(e) {
     return null == e || (null == e.id && null == e.name);
 }
@@ -196,9 +205,11 @@ let P = new Set([
         s.fg2.SKYPE,
     ]),
     D = Object.values(s.fg2).filter((e) => !P.has(e));
+
 function x(e) {
     return 0 === e.connection_type ? "app:".concat(e.application_id) : "provider:".concat(e.provider_id);
 }
+
 function L(e) {
     let [t, n] = e.split(":");
     return "app" === t && void 0 !== n && "" !== n
@@ -213,6 +224,7 @@ function L(e) {
             }
           : null;
 }
+
 function j(e) {
     let t = [];
     return (
@@ -232,6 +244,7 @@ function j(e) {
         t
     );
 }
+
 function M(e) {
     let t = [],
         n = new Set();

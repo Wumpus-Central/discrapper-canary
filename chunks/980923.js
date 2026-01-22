@@ -1,5 +1,8 @@
-r.d(t, { A: () => o });
+r.d(t, {
+    A: () => o,
+});
 var n = r(985018);
+
 function o(e, t, r, o) {
     return o
         ? n.intl.string(n.t["2Ne/Y1"])

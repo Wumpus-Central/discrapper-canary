@@ -15,10 +15,13 @@ var r = n(554146),
     u = n(49999),
     h = n(985018),
     p = n(199563);
+
 function f() {
     let e = (0, c.A)({
             location: "Overlay",
-            options: { autoTrackExposure: !1 },
+            options: {
+                autoTrackExposure: !1,
+            },
         }),
         [t, n] = (0, a.DP)(e ? [r.M.OVERLAY_KEYBIND_NOTIFICATION] : []);
     return {
@@ -26,6 +29,7 @@ function f() {
         dismissKeybindNotification: n,
     };
 }
+
 function b(e) {
     let { markAsDismissed: t } = e,
         { trackView: n, trackClick: r } = (0, o.Y)(d.KS.KeybindIndicatorsNotification, {

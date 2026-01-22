@@ -1,13 +1,17 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(627968),
     i = n(397927),
     a = n(975571),
     s = n(942405),
     o = n(652215),
     l = n(985018);
+
 function c() {
     (0, s.sL)("overlay-settings");
 }
+
 function u(e) {
     let { className: t, game: n } = e;
     return (0, s.NP)() && null != n && n.elevated
@@ -21,7 +25,9 @@ function u(e) {
                       text: l.intl.string(l.t["1iI46O"]),
                       onClick: c,
                   }),
-                  children: l.intl.format(l.t["LJzl+0"], { helpCenterLink: a.A.getArticleURL(o.MVz.SYSTEM_SERVICE) }),
+                  children: l.intl.format(l.t["LJzl+0"], {
+                      helpCenterLink: a.A.getArticleURL(o.MVz.SYSTEM_SERVICE),
+                  }),
               }),
           })
         : null;

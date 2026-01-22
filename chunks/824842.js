@@ -1,4 +1,7 @@
-n.d(t, { A: () => _ }), n(896048);
+n.d(t, {
+    A: () => _,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -9,6 +12,7 @@ var r = n(627968),
     u = n(148355),
     d = n(985018),
     f = n(115424);
+
 function p(e) {
     var t;
     let { channelId: n, chatInputType: p } = e,
@@ -29,7 +33,9 @@ function p(e) {
                                           onFocus: () => h(e.id),
                                           onBlur: () => h(null),
                                           className: f.b,
-                                          "aria-label": d.intl.formatToPlainString(d.t.BGAQRd, { name: e.name }),
+                                          "aria-label": d.intl.formatToPlainString(d.t.BGAQRd, {
+                                              name: e.name,
+                                          }),
                                           onClick: () => (0, c.x5)(n, p.drafts.type),
                                           children: (0, r.jsx)("div", {
                                               className: f.Nk,
@@ -52,7 +58,9 @@ function p(e) {
                           ),
                       ),
                   }),
-                  (0, r.jsx)(o.A, { className: f.R }),
+                  (0, r.jsx)(o.A, {
+                      className: f.R,
+                  }),
               ],
           })
         : null;

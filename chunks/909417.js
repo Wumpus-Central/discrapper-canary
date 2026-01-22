@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var l = n(64700),
     r = n(417597),
     i = n(533117),
@@ -7,6 +9,7 @@ var l = n(64700),
     o = n(245704),
     c = n(254970),
     u = n(975501);
+
 function d(e) {
     let { user: t, channelId: n, streamerId: d, stream: f, focused: p, canvas: b } = e,
         g = l.useRef(!1),

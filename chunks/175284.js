@@ -1,4 +1,8 @@
-n.d(t, { A: () => T }), n(228524), n(896048);
+n.d(t, {
+    A: () => T,
+}),
+    n(228524),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -24,6 +28,7 @@ var r = n(627968),
     N = n(818348),
     _ = n(985018),
     S = n(107550);
+
 function T(e) {
     let {
             guild: t,
@@ -60,7 +65,9 @@ function T(e) {
                 variant: "text-sm/normal",
                 children: _.intl.string(_.t["1ydhVp"]),
             }),
-            (0, r.jsx)(m, { guild: t }),
+            (0, r.jsx)(m, {
+                guild: t,
+            }),
             (0, r.jsx)(C, {
                 guild: t,
                 everyoneRole: n,
@@ -72,6 +79,7 @@ function T(e) {
         ],
     });
 }
+
 function I(e) {
     let { guild: t } = e;
     i.useEffect(() => {
@@ -85,7 +93,9 @@ function I(e) {
         l = t.features.has(A.GuildFeatures.PIN_PERMISSION_MIGRATION_COMPLETE)
             ? (0, r.jsx)(d.Text, {
                   variant: "text-sm/normal",
-                  children: _.intl.format(_.t.Vg2oTN, { breakingChangeDate: n }),
+                  children: _.intl.format(_.t.Vg2oTN, {
+                      breakingChangeDate: n,
+                  }),
               })
             : p.A.can(N.xB.ADMINISTRATOR, t)
               ? (0, r.jsx)(d.Text, {
@@ -94,7 +104,9 @@ function I(e) {
                         onClickMigrate: () => {
                             u.A.show({
                                 title: _.intl.string(_.t.nFE8dD),
-                                body: _.intl.format(_.t["1PAzQ6"], { guildName: t.name }),
+                                body: _.intl.format(_.t["1PAzQ6"], {
+                                    guildName: t.name,
+                                }),
                                 cancelText: _.intl.string(_.t["ETE/oC"]),
                                 confirmText: _.intl.string(_.t["cY+Oob"]),
                                 onConfirm: () => {
@@ -107,7 +119,9 @@ function I(e) {
                 })
               : (0, r.jsx)(d.Text, {
                     variant: "text-sm/normal",
-                    children: _.intl.format(_.t.cAuU1S, { breakingChangeDate: n }),
+                    children: _.intl.format(_.t.cAuU1S, {
+                        breakingChangeDate: n,
+                    }),
                 });
     return (0, r.jsx)(m.A, {
         look: m.k.WARNING,
@@ -115,6 +129,7 @@ function I(e) {
         children: l,
     });
 }
+
 function C(e) {
     let { guild: t, everyoneRole: n, filteredRoles: i, query: l, setQuery: a, onEveryoneRoleClick: c } = e;
     return (0, r.jsxs)(r.Fragment, {
@@ -132,31 +147,40 @@ function C(e) {
                 className: S.BK,
                 color: "text-default",
                 variant: "text-sm/normal",
-                children: _.intl.format(_.t.xkC3Yf, { articleURL: h.A.getArticleURL(A.MVz.PERMISSIONS_TUTORIAL) }),
+                children: _.intl.format(_.t.xkC3Yf, {
+                    articleURL: h.A.getArticleURL(A.MVz.PERMISSIONS_TUTORIAL),
+                }),
             }),
             (0, r.jsx)("div", {
                 className: S.kA,
                 children: (0, r.jsxs)("div", {
                     className: S.qd,
                     children: [
-                        (0, r.jsx)("div", { className: S._M }),
+                        (0, r.jsx)("div", {
+                            className: S._M,
+                        }),
                         (0, r.jsx)(d.Text, {
                             className: s()(S.jA, S.N5),
                             variant: "text-sm/normal",
-                            children: _.intl.format(_.t["38N3Vz"], { numRoles: String(i.length) }),
+                            children: _.intl.format(_.t["38N3Vz"], {
+                                numRoles: String(i.length),
+                            }),
                         }),
                         (0, r.jsx)(d.Text, {
                             className: s()(S.jA, S.Hp),
                             variant: "text-sm/normal",
                             children: _.intl.string(_.t["9Oq93m"]),
                         }),
-                        (0, r.jsx)("div", { className: S.DE }),
+                        (0, r.jsx)("div", {
+                            className: S.DE,
+                        }),
                     ],
                 }),
             }),
         ],
     });
 }
+
 function P(e) {
     let { guild: t, query: n, setQuery: l } = e,
         [s, a] = i.useState(!1),

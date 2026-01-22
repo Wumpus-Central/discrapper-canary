@@ -1,4 +1,8 @@
-n.d(t, { A: () => x }), n(896048), n(733351);
+n.d(t, {
+    A: () => x,
+}),
+    n(896048),
+    n(733351);
 var a = n(627968),
     l = n(64700),
     i = n(417597),
@@ -153,7 +157,9 @@ let f = (e) => {
                                     ? (0, a.jsxs)("div", {
                                           className: h.i1,
                                           children: [
-                                              (0, a.jsx)(f, { skuId: A.skuId }),
+                                              (0, a.jsx)(f, {
+                                                  skuId: A.skuId,
+                                              }),
                                               (0, a.jsx)(r.Button, {
                                                   variant: "primary",
                                                   onClick: () => {

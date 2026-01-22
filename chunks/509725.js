@@ -1,4 +1,6 @@
-i.d(e, { Z: () => T });
+i.d(e, {
+    Z: () => T,
+});
 var n = i(311907),
     l = i(734066),
     s = i(274372),
@@ -13,8 +15,12 @@ let T = (0, u.zD)(a.X.CLIPS_ENABLE_REMINDERS, {
     setValue: (t) => r.Mt(t),
     usePredicate: () => {
         let { showClipsHeaderEntrypoint: t } = l.L_.useExperiment(
-            { location: "clips_recording_settings" },
-            { autoTrackExposure: !1 },
+            {
+                location: "clips_recording_settings",
+            },
+            {
+                autoTrackExposure: !1,
+            },
         );
         return t;
     },

@@ -16,6 +16,7 @@ var i = n(503698),
     c = n(652215),
     u = n(985018),
     d = n(1624);
+
 function f(e, t, n) {
     return (
         t in e
@@ -29,6 +30,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -45,6 +47,7 @@ function p(e) {
     }
     return e;
 }
+
 function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -57,6 +60,7 @@ function _(e, t) {
     }
     return n;
 }
+
 function h(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -68,6 +72,7 @@ function h(e, t) {
         e
     );
 }
+
 function m(e, t) {
     if (null == e) return {};
     var n,
@@ -84,6 +89,7 @@ function m(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function g(e, t) {
     if (null == e) return {};
     var n,
@@ -109,25 +115,51 @@ let E = Object.freeze({
     PREMIUM_TIER_1: d.G_,
     PREMIUM_TIER_2: d.NS,
 });
+
 function b(e) {
     let { children: t, className: n, minor: i = !1 } = e,
         s = m(e, ["children", "className", "minor"]);
     return (0, r.jsx)(o.vN3, {
-        children: (0, r.jsx)("button", h(p({ className: a()(d.x6, n, { [d.oy]: i }) }, s), { children: t })),
+        children: (0, r.jsx)(
+            "button",
+            h(
+                p(
+                    {
+                        className: a()(d.x6, n, {
+                            [d.oy]: i,
+                        }),
+                    },
+                    s,
+                ),
+                {
+                    children: t,
+                },
+            ),
+        ),
     });
 }
+
 function y(e) {
-    null != e && l.default.track(c.HAw.APP_NOTICE_PRIMARY_CTA_OPENED, { notice_type: e });
+    null != e &&
+        l.default.track(c.HAw.APP_NOTICE_PRIMARY_CTA_OPENED, {
+            notice_type: e,
+        });
 }
+
 function O(e) {
-    null != e && l.default.track(c.HAw.APP_NOTICE_CLOSED, { notice_type: e });
+    null != e &&
+        l.default.track(c.HAw.APP_NOTICE_CLOSED, {
+            notice_type: e,
+        });
 }
+
 function A(e, t) {
     l.default.track(c.HAw.APP_NOTICE_ANCHOR_CLICKED, {
         notice_type: e,
         href: t,
     });
 }
+
 function v(e) {
     let { children: t, noticeType: n } = e,
         i = m(e, ["children", "noticeType"]);
@@ -141,6 +173,7 @@ function v(e) {
         }),
     );
 }
+
 function S(e) {
     let { children: t, href: n, noticeType: i } = e,
         a = m(e, ["children", "href", "noticeType"]);
@@ -157,10 +190,13 @@ function S(e) {
         }),
     );
 }
+
 function I(e) {
     let { onClick: t, noticeType: n, className: i } = e;
     return (0, r.jsx)(o.DUT, {
-        focusProps: { offset: 6 },
+        focusProps: {
+            offset: 6,
+        },
         className: a()(d.b, i),
         onClick: () => {
             t(), O(n);
@@ -173,11 +209,19 @@ function I(e) {
         }),
     });
 }
+
 function T(e) {
     let { color: t = E.DEFAULT, className: n, style: i, ref: o, children: l } = e;
     return (0, r.jsx)("div", {
         ref: o,
-        className: a()(d.lm, { [d.Fr]: s.Fr }, n, t),
+        className: a()(
+            d.lm,
+            {
+                [d.Fr]: s.Fr,
+            },
+            n,
+            t,
+        ),
         style: null != i ? i : void 0,
         children: l,
     });

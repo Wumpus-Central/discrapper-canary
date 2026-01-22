@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -7,12 +9,15 @@ var i = n(503698),
     o = n(985018),
     l = n(973738),
     c = n(93364);
+
 function u(e) {
     let { className: t, icon: n, children: i } = e;
     return (0, r.jsxs)("li", {
         className: a()(l.Nr, t),
         children: [
-            (0, r.jsx)(n, { className: l.Kk }),
+            (0, r.jsx)(n, {
+                className: l.Kk,
+            }),
             (0, r.jsx)(s.Text, {
                 className: l.__invalid_description,
                 variant: "text-sm/medium",
@@ -67,7 +72,9 @@ let d = function (e) {
                     }),
                 ],
             }),
-            (0, r.jsx)("div", { className: l.JP }),
+            (0, r.jsx)("div", {
+                className: l.JP,
+            }),
         ],
     });
 };

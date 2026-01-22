@@ -1,4 +1,7 @@
-n.d(t, { A: () => p }), n(896048);
+n.d(t, {
+    A: () => p,
+}),
+    n(896048);
 var a = n(627968),
     l = n(64700),
     i = n(503698),
@@ -9,6 +12,7 @@ var a = n(627968),
     d = n(236899),
     u = n(661251),
     m = n(665646);
+
 function p() {
     let [e, t] = l.useState(""),
         n = (0, s.bG)(
@@ -37,7 +41,9 @@ function p() {
             [n, e],
         ),
         p = l.useCallback(() => {
-            c.h.dispatch({ type: "DEV_TOOLS_WORD_FREQUENCY_RESET" });
+            c.h.dispatch({
+                type: "DEV_TOOLS_WORD_FREQUENCY_RESET",
+            });
         }, []);
     return (0, a.jsxs)("div", {
         className: r()(u.nd, m.nd),

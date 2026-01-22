@@ -1,10 +1,14 @@
-n.d(t, { A: () => f }), n(896048);
+n.d(t, {
+    A: () => f,
+}),
+    n(896048);
 var r,
     i = n(311907),
     l = n(73153),
     a = n(927813),
     s = n(596720),
     o = n(859524);
+
 function c(e, t, n) {
     return (
         t in e
@@ -19,13 +23,19 @@ function c(e, t, n) {
     );
 }
 let u = 7 * a.A.Millis.DAY,
-    d = { readIdToTimestampMap: {} };
+    d = {
+        readIdToTimestampMap: {},
+    };
 class p extends (r = i.Ay.DeviceSettingsStore) {
     initialize(e) {
         d =
             null != e && null != e.readIdToTimestampMap
-                ? { readIdToTimestampMap: e.readIdToTimestampMap }
-                : { readIdToTimestampMap: {} };
+                ? {
+                      readIdToTimestampMap: e.readIdToTimestampMap,
+                  }
+                : {
+                      readIdToTimestampMap: {},
+                  };
         let t = Date.now() - u;
         for (let e of Object.keys(d.readIdToTimestampMap).filter((e) => d.readIdToTimestampMap[e] < t))
             delete d.readIdToTimestampMap[e];

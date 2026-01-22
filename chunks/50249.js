@@ -1,10 +1,14 @@
-n.d(t, { A: () => c }), n(228524);
+n.d(t, {
+    A: () => c,
+}),
+    n(228524);
 var r = n(627968);
 n(64700);
 var i = n(397927),
     l = n(147925),
     s = n(985018),
     a = n(97145);
+
 function c(e) {
     let { role: t, onClick: n } = e;
     return (0, r.jsxs)(i.DUT, {
@@ -32,7 +36,7 @@ function c(e) {
                     (0, r.jsxs)(i.Text, {
                         color: "none",
                         variant: "text-xs/normal",
-                        children: [t.name, " \u2022 ", s.intl.string(s.t.JwYI3O)],
+                        children: [t.name, " • ", s.intl.string(s.t.JwYI3O)],
                     }),
                 ],
             }),

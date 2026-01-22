@@ -1,6 +1,10 @@
-n.d(t, { A: () => a }), n(896048);
+n.d(t, {
+    A: () => a,
+}),
+    n(896048);
 var r = n(64700),
     i = n(172218);
+
 function a(e) {
     let { wishlistId: t, onAction: n, productLines: a } = e,
         [s, o] = (0, r.useState)(!1),

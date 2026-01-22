@@ -1,6 +1,10 @@
-t.d(l, { A: () => r }), t(938796);
+t.d(l, {
+    A: () => r,
+}),
+    t(938796);
 var n = t(311907),
     i = t(622543);
+
 function r(e) {
     var l;
     let t = (0, n.bG)([i.A], () => i.A.getUserProfile(e.id));

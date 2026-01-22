@@ -37,15 +37,19 @@ var i = n(503698),
     D = n(985018),
     x = n(31545),
     L = n(319567);
+
 function j(e) {
     let { onClick: t, isExpanded: n } = e;
     return (0, r.jsx)(y.A, {
-        iconClassName: a()(x.D6, { [x.S7]: n }),
+        iconClassName: a()(x.D6, {
+            [x.S7]: n,
+        }),
         onClick: t,
         iconComponent: o.abt,
         label: n ? D.intl.string(D.t["2TiKgS"]) : D.intl.string(D.t.oN8bqe),
     });
 }
+
 function M(e) {
     var t, n, i;
     let {
@@ -155,6 +159,7 @@ function M(e) {
         ],
     });
 }
+
 function k(e) {
     var t, n;
     let {
@@ -209,6 +214,7 @@ function k(e) {
         ],
     });
 }
+
 function U(e) {
     let { channelId: t, participantsOpen: n, showToggleParticipants: i } = e;
     return i
@@ -219,6 +225,7 @@ function U(e) {
           })
         : null;
 }
+
 function G(e) {
     var t, n;
     let {
@@ -241,7 +248,9 @@ function G(e) {
         onMouseDown: i,
         onMouseLeave: l,
         children: (0, r.jsxs)("div", {
-            className: a()(L.K1, x.eA, { [x.eo]: c }),
+            className: a()(L.K1, x.eA, {
+                [x.eo]: c,
+            }),
             children: [
                 !c &&
                     (0, r.jsx)(o.jNK, {

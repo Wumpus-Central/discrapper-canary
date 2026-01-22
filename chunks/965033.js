@@ -29,6 +29,7 @@ var r = n(627968),
     N = n(652215),
     _ = n(985018),
     S = n(841541);
+
 function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -54,6 +55,7 @@ function T(e) {
     }
     return e;
 }
+
 function I(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -72,6 +74,7 @@ function I(e, t) {
         e
     );
 }
+
 function C(e) {
     let { guild: t } = e,
         n = (0, c.bG)([m.A], () => null != t && m.A.can(N.xBc.MANAGE_GUILD, t), [t]),
@@ -79,7 +82,12 @@ function C(e) {
             async (e) => {
                 let { value: n } = e;
                 try {
-                    await O.A.saveGuild(t.id, { verificationLevel: n }), O.A.updateGuild({ verificationLevel: n });
+                    await O.A.saveGuild(t.id, {
+                        verificationLevel: n,
+                    }),
+                        O.A.updateGuild({
+                            verificationLevel: n,
+                        });
                 } catch (e) {
                     (0, o.showToast)((0, o.createToast)(_.intl.string(_.t["46Rs3v"]), o.ToastType.FAILURE));
                 }
@@ -88,7 +96,9 @@ function C(e) {
         ),
         s = i.useMemo(() => {
             let e = (0, j.vd)(null == t ? void 0 : t.features.has(N.GuildFeatures.COMMUNITY)).map((e) =>
-                I(T({}, e), { tooltipPosition: "left" }),
+                I(T({}, e), {
+                    tooltipPosition: "left",
+                }),
             );
             return (0, j.w3)(e);
         }, [t]),
@@ -121,6 +131,7 @@ function C(e) {
         ],
     });
 }
+
 function P(e) {
     let { guild: t, className: n, withDivider: l = !0 } = e,
         a = (0, c.bG)([m.A], () => null != t && m.A.can(N.xBc.MANAGE_GUILD, t), [t]),
@@ -128,8 +139,12 @@ function P(e) {
             async (e) => {
                 let { value: n } = e;
                 try {
-                    await O.A.saveGuild(t.id, { explicitContentFilter: n }),
-                        O.A.updateGuild({ explicitContentFilter: n });
+                    await O.A.saveGuild(t.id, {
+                        explicitContentFilter: n,
+                    }),
+                        O.A.updateGuild({
+                            explicitContentFilter: n,
+                        });
                 } catch (e) {
                     (0, o.showToast)((0, o.createToast)(_.intl.string(_.t["46Rs3v"]), o.ToastType.FAILURE));
                 }
@@ -138,14 +153,19 @@ function P(e) {
         ),
         u = i.useMemo(() => {
             let e = (0, j.QL)(null == t ? void 0 : t.features.has(N.GuildFeatures.COMMUNITY)).map((e) =>
-                I(T({}, e), { tooltipPosition: "left" }),
+                I(T({}, e), {
+                    tooltipPosition: "left",
+                }),
             );
             return (0, j.w3)(e);
         }, [t]),
         f = i.useMemo(() => u.find((e) => e.value === (null == t ? void 0 : t.explicitContentFilter)), [t, u]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            l && (0, r.jsx)(o.cGx, { className: S.yF }),
+            l &&
+                (0, r.jsx)(o.cGx, {
+                    className: S.yF,
+                }),
             (0, r.jsxs)("div", {
                 className: s()(S.hu, n),
                 children: [
@@ -185,9 +205,12 @@ async function w(e, t) {
         t
             ? n.add(N.GuildFeatures.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)
             : n.delete(N.GuildFeatures.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY),
-        await O.A.saveGuild(e.id, { features: n })
+        await O.A.saveGuild(e.id, {
+            features: n,
+        })
     );
 }
+
 function R(e) {
     let { guild: t } = e,
         n = (0, c.bG)([m.A], () => null != t && m.A.can(N.xBc.MANAGE_GUILD, t), [t]),
@@ -222,10 +245,13 @@ function R(e) {
                           }),
                       ],
                   }),
-                  (0, r.jsx)(o.cGx, { className: S.yF }),
+                  (0, r.jsx)(o.cGx, {
+                      className: S.yF,
+                  }),
               ],
           });
 }
+
 function D(e) {
     let { guild: t, mfaLevel: n } = e,
         l = (0, c.bG)([m.A], () => null != t && m.A.can(N.xBc.MANAGE_GUILD, t), [t]),
@@ -251,11 +277,13 @@ function D(e) {
                     guildId: t.id,
                     level: e ? N.EkJ.ELEVATED : N.EkJ.NONE,
                 }));
-        }, 1000);
+        }, 1e3);
     return l
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(o.cGx, { className: S.yF }),
+                  (0, r.jsx)(o.cGx, {
+                      className: S.yF,
+                  }),
                   (0, r.jsxs)("div", {
                       className: S.hu,
                       children: [
@@ -272,7 +300,9 @@ function D(e) {
                                   textVariant: "text-xs/normal",
                                   children: _.intl.format(_.t.Xz1O0W, {
                                       onClick: function () {
-                                          (0, g.openUserSettings)(f.X.ACCOUNT_PANEL, { section: N.nc_.ACCOUNT });
+                                          (0, g.openUserSettings)(f.X.ACCOUNT_PANEL, {
+                                              section: N.nc_.ACCOUNT,
+                                          });
                                       },
                                   }),
                               }),
@@ -282,6 +312,7 @@ function D(e) {
           })
         : null;
 }
+
 function G() {
     let { guild: e, mfaLevel: t } = (0, c.cf)([y.A], () => y.A.getProps(), []),
         n = (0, c.bG)([p.A], () => p.A.enabled, []);
@@ -296,18 +327,30 @@ function G() {
                         variant: "heading-lg/semibold",
                         children: _.intl.string(_.t["suhY+Y"]),
                     }),
-                    (0, r.jsx)(v.p, { guild: e }),
-                    (0, r.jsx)(R, { guild: e }),
-                    (0, r.jsx)(C, { guild: e }),
+                    (0, r.jsx)(v.p, {
+                        guild: e,
+                    }),
+                    (0, r.jsx)(R, {
+                        guild: e,
+                    }),
+                    (0, r.jsx)(C, {
+                        guild: e,
+                    }),
                     (0, r.jsx)(D, {
                         guild: e,
                         mfaLevel: t,
                     }),
-                    (0, r.jsx)(P, { guild: e }),
-                    (0, r.jsx)(o.cGx, { className: S.yF }),
+                    (0, r.jsx)(P, {
+                        guild: e,
+                    }),
+                    (0, r.jsx)(o.cGx, {
+                        className: S.yF,
+                    }),
                     (0, r.jsx)("div", {
                         className: S.hu,
-                        children: (0, r.jsx)(E.b, { guild: e }),
+                        children: (0, r.jsx)(E.b, {
+                            guild: e,
+                        }),
                     }),
                 ],
             });

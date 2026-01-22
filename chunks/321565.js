@@ -1,4 +1,7 @@
-n.d(t, { default: () => h }), n(896048);
+n.d(t, {
+    default: () => h,
+}),
+    n(896048);
 var l = n(627968),
     i = n(64700),
     r = n(503698),
@@ -16,10 +19,12 @@ var l = n(627968),
     y = n(652215),
     E = n(985018),
     g = n(285953);
+
 function S(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     !0 === n || d.A.useReducedMotion ? e.set(t) : e.start(t);
 }
+
 function h(e) {
     let {
             onClose: t,
@@ -188,7 +193,9 @@ function h(e) {
                                     onClose: t,
                                 }),
                                 (0, l.jsx)("div", {
-                                    style: { display: "none" },
+                                    style: {
+                                        display: "none",
+                                    },
                                     ref: D,
                                 }),
                                 (0, l.jsx)(O.Ay, {

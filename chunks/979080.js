@@ -16,6 +16,7 @@ var i = n(65412),
     f = n(728458),
     h = n(716600),
     A = n(848295);
+
 function g(e) {
     let { promotionId: t, content: n, isPreview: r } = e,
         s = a.m.fromBinary((0, i.A)(n));
@@ -25,6 +26,7 @@ function g(e) {
         return !r && e ? null : (r && (s.properties.announcementModalVariant1.dismissKey = ""), s);
     }
 }
+
 function m(e) {
     let { componentId: t, promotionId: n, renderModalProps: i, properties: l } = e,
         { location: a } = (0, o.p)(),

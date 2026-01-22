@@ -1,4 +1,6 @@
-n.d(t, { g: () => r });
+n.d(t, {
+    g: () => r,
+});
 var r = (function (e) {
     return (
         (e[(e.HERO = 0)] = "HERO"),

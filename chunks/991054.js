@@ -1,4 +1,8 @@
-n.d(t, { A: () => b }), n(228524), n(896048);
+n.d(t, {
+    A: () => b,
+}),
+    n(228524),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(485845),
@@ -12,6 +16,7 @@ var r = n(627968),
     p = n(358412),
     _ = n(206314),
     h = n(291071);
+
 function m(e, t, n) {
     return (
         t in e
@@ -25,6 +30,7 @@ function m(e, t, n) {
         e
     );
 }
+
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,6 +48,7 @@ function g(e) {
     return e;
 }
 let E = 84;
+
 function b(e) {
     let { application: t, onSelect: n } = e,
         c = (0, d.i)(),
@@ -92,8 +99,12 @@ function b(e) {
                         className: p.Z2,
                         rendersPlaceholder: !0,
                     }),
-                    (0, r.jsx)(O, { application: t }),
-                    (0, r.jsx)(y, { application: t }),
+                    (0, r.jsx)(O, {
+                        application: t,
+                    }),
+                    (0, r.jsx)(y, {
+                        application: t,
+                    }),
                 ],
             }),
             (0, r.jsx)("ul", {
@@ -146,6 +157,7 @@ function b(e) {
         ],
     });
 }
+
 function y(e) {
     let { application: t } = e,
         n = t.description;
@@ -155,10 +167,16 @@ function y(e) {
               className: p.wt,
               children: (0, r.jsx)("div", {
                   className: p.bH,
-                  children: null != n && n.length > 0 ? (0, r.jsx)(v, { description: n }) : null,
+                  children:
+                      null != n && n.length > 0
+                          ? (0, r.jsx)(v, {
+                                description: n,
+                            })
+                          : null,
               }),
           });
 }
+
 function O(e) {
     let { application: t } = e,
         n = t.name,
@@ -185,6 +203,7 @@ function O(e) {
     });
 }
 let A = 3;
+
 function v(e) {
     let { description: t } = e,
         [a, o] = i.useState(!0);
@@ -195,7 +214,10 @@ function v(e) {
         }, [t]),
         { ref: u, lineHeight: d, lineCount: h } = S(),
         m = i.useMemo(() => {
-            if (null == d || null == h) return { key: 0 };
+            if (null == d || null == h)
+                return {
+                    key: 0,
+                };
             let e = d * h;
             return {
                 key: 1,
@@ -203,7 +225,18 @@ function v(e) {
                 maxHeightOverride: e,
             };
         }, [h, d]),
-        { ref: E, isTransitioning: b, onTransitionEnd: y } = (0, c.A)(g({ isExpanded: a }, m)),
+        {
+            ref: E,
+            isTransitioning: b,
+            onTransitionEnd: y,
+        } = (0, c.A)(
+            g(
+                {
+                    isExpanded: a,
+                },
+                m,
+            ),
+        ),
         O = a || b;
     return (0, r.jsxs)("div", {
         className: p.iQ,
@@ -217,7 +250,9 @@ function v(e) {
                     className: _.PT,
                     variant: "text-sm/medium",
                     lineClamp: O ? void 0 : A,
-                    style: { maxHeight: O ? void 0 : m.minHeightOverride },
+                    style: {
+                        maxHeight: O ? void 0 : m.minHeightOverride,
+                    },
                     children: l,
                 }),
             }),
@@ -246,6 +281,7 @@ function v(e) {
         ],
     });
 }
+
 function S() {
     let e = i.useRef(null),
         [t, n] = i.useState(null),

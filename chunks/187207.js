@@ -1,7 +1,10 @@
-n.d(t, { n: () => c });
+n.d(t, {
+    n: () => c,
+});
 var r = n(824120),
     i = n.n(r),
     a = n(264572);
+
 function s(e, t, n) {
     return (
         t in e
@@ -15,9 +18,11 @@ function s(e, t, n) {
         e
     );
 }
+
 function o(e) {
-    return 0 | e.mod(4294967296).toJSNumber();
+    return 0 | e.mod(0x100000000).toJSNumber();
 }
+
 function l(e) {
     return 0 | e.shiftRight(32).toJSNumber();
 }
@@ -37,7 +42,7 @@ class c {
         );
     }
     constructor() {
-        s(this, "_randomPrefix", 0 | Math.floor(4294967296 * Math.random())),
+        s(this, "_randomPrefix", 0 | Math.floor(0x100000000 * Math.random())),
             s(this, "_creationTime", i()(Date.now())),
             s(this, "_sequenceNumber", 0);
     }

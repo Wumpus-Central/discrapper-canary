@@ -16,6 +16,7 @@ var r = n(627968),
     _ = n(985018),
     h = n(733557),
     m = n(101616);
+
 function g(e, t, n) {
     (0, c.A)({
         skuId: e.skuId,
@@ -26,6 +27,7 @@ function g(e, t, n) {
         variantsReturnStyle: a.g.VARIANTS_GROUP,
     });
 }
+
 function E(e) {
     switch (e.collectiblesItem.type) {
         case i.R.AVATAR_DECORATION:
@@ -38,6 +40,7 @@ function E(e) {
             return "";
     }
 }
+
 function b(e, t) {
     let {
             moreCount: n,
@@ -66,7 +69,9 @@ function b(e, t) {
         },
         N = () => {
             if (O) {
-                let t = { items: e.bundleItems };
+                let t = {
+                    items: e.bundleItems,
+                };
                 return (0, r.jsx)("div", {
                     className: h.hT,
                     children: (0, r.jsx)(l.X, {
@@ -101,6 +106,7 @@ function b(e, t) {
         e.skuId,
     );
 }
+
 function y(e, t) {
     let { profileOwner: n, analyticsLocations: i, wishlistId: a, onViewWishlist: o } = t,
         l = null != e.bundleItems && e.bundleItems.length > 0,

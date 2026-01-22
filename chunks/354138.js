@@ -26,11 +26,11 @@ var u = n(773669),
     g = n(82293),
     E = n(680646),
     b = n(652215);
-let y = 1000,
-    O = 5000,
+let y = 1e3,
+    O = 5e3,
     A = 10,
-    v = 86400000,
-    S = 600000,
+    v = 864e5,
+    S = 6e5,
     I = new Map();
 async function T(e) {
     var t;
@@ -112,7 +112,9 @@ async function N() {
     if (null != t && t + S > e) return;
     let n = await l.Bo.get({
         url: b.Rsh.APPLICATION_DIRECTORY_CATEGORIES,
-        query: { locale: u.default.locale },
+        query: {
+            locale: u.default.locale,
+        },
         rejectWithError: !1,
     });
     c.h.dispatch({
@@ -283,6 +285,7 @@ async function w(e) {
         }
     }
 }
+
 function P() {
     return (0, f.isAndroid)() ? a.T.ANDROID : (0, f.isIOS)() ? a.T.IOS : a.T.WEB;
 }
@@ -340,7 +343,9 @@ async function x() {
         n = E.A.getLastFetchTimeMs(),
         r = E.A.getNextFetchRetryTimeMs();
     if (t !== E.e.FETCHING && (null == n || !(n + v > e)) && (null == r || !(e < r))) {
-        c.h.dispatch({ type: "FETCH_INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS" });
+        c.h.dispatch({
+            type: "FETCH_INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS",
+        });
         try {
             let e = await l.Bo.get({
                 url: b.Rsh.INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS,

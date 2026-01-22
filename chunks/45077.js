@@ -1,9 +1,12 @@
-n.d(t, { b: () => l });
+n.d(t, {
+    b: () => l,
+});
 var r = n(725428),
     i = n(109489),
     a = n(961565),
     s = n(988633),
     o = n(577249);
+
 function l(e) {
     var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
@@ -14,6 +17,7 @@ function l(e) {
         d = e(u, t, n);
     return u.receiveBackend(d), u;
 }
+
 function c(e) {
     var t = "u" > typeof window && window.__REDUX_DEVTOOLS_EXTENSION__;
     return (0, i.y$)(

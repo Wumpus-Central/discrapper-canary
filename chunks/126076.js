@@ -1,4 +1,7 @@
-l.r(t), l.d(t, { default: () => p });
+l.r(t),
+    l.d(t, {
+        default: () => p,
+    });
 var r = l(627968);
 l(64700);
 var n = l(110259),
@@ -10,6 +13,7 @@ var n = l(110259),
     d = l(71393),
     c = l(363487),
     f = l(484612);
+
 function p(e) {
     let { guildId: t, powerupListingId: l } = e,
         p = (0, i.bG)([d.A], () => d.A.getGuild(t)),
@@ -22,9 +26,13 @@ function p(e) {
         {
             type: n.ImpressionTypes.VIEW,
             name: n.ImpressionNames.BOOST_SHOP_OPENED,
-            properties: { location_stack: x.analyticsLocations },
+            properties: {
+                location_stack: x.analyticsLocations,
+            },
         },
-        { disableTrack: g },
+        {
+            disableTrack: g,
+        },
     ),
     g)
         ? null

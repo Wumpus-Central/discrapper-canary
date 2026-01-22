@@ -1,4 +1,6 @@
-n.d(t, { y: () => r });
+n.d(t, {
+    y: () => r,
+});
 var r = (function (e) {
     return (
         (e.Destroy = "destroy"),

@@ -21,15 +21,19 @@ var l = n(627968),
     j = n(294726),
     x = n(985018),
     E = n(453729);
+
 function h() {
     return (0, l.jsx)(d.A, {
         className: E.Bq,
         children: (0, l.jsx)(u.Text, {
             variant: "text-sm/medium",
-            children: x.intl.formatToPlainString(j.default.xta2U9, { maxInstances: _.ZI }),
+            children: x.intl.formatToPlainString(j.default.xta2U9, {
+                maxInstances: _.ZI,
+            }),
         }),
     });
 }
+
 function y() {
     let {
         guildId: e,
@@ -59,7 +63,9 @@ function y() {
     return 0 === Object.values(t).length
         ? (0, l.jsx)("div", {
               className: E.g4,
-              children: (0, l.jsx)(u.y$y, { type: u.tVU.SPINNING_CIRCLE }),
+              children: (0, l.jsx)(u.y$y, {
+                  type: u.tVU.SPINNING_CIRCLE,
+              }),
           })
         : (0, l.jsxs)(l.Fragment, {
               children: [
@@ -89,7 +95,9 @@ function y() {
                           ],
                       }),
                   (0, l.jsxs)("div", {
-                      className: r()(E.yn, { [E.r9]: k }),
+                      className: r()(E.yn, {
+                          [E.r9]: k,
+                      }),
                       children: [
                           I &&
                               (0, l.jsx)(u.Heading, {
@@ -104,7 +112,9 @@ function y() {
                                       {
                                           asContainer: !0,
                                           text: t.disabled
-                                              ? x.intl.formatToPlainString(j.default.uVpJYf, { gameName: t.name })
+                                              ? x.intl.formatToPlainString(j.default.uVpJYf, {
+                                                    gameName: t.name,
+                                                })
                                               : null,
                                           position: "top",
                                           children: (0, l.jsx)(f.A, {
@@ -128,7 +138,9 @@ function y() {
                           (0, l.jsxs)("div", {
                               className: E.UW,
                               children: [
-                                  (0, l.jsx)(u.mir, { size: "sm" }),
+                                  (0, l.jsx)(u.mir, {
+                                      size: "sm",
+                                  }),
                                   (0, l.jsx)(u.Text, {
                                       variant: "text-sm/medium",
                                       children: x.intl.string(j.default["5DjxXm"]),

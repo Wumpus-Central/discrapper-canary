@@ -1,4 +1,7 @@
-n.d(t, { A: () => e2 }), n(896048);
+n.d(t, {
+    A: () => e2,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -97,6 +100,7 @@ var r = n(627968),
     eY = n(509381),
     eK = n(985018),
     ez = n(255259);
+
 function eW(e, t, n) {
     return (
         t in e
@@ -110,6 +114,7 @@ function eW(e, t, n) {
         e
     );
 }
+
 function eq(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -126,6 +131,7 @@ function eq(e) {
     }
     return e;
 }
+
 function eQ(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -144,6 +150,7 @@ function eQ(e, t) {
         e
     );
 }
+
 function eX(e, t) {
     if (null == e) return {};
     var n,
@@ -180,25 +187,33 @@ let eZ = {
         bottom: 1,
     },
 };
+
 function eJ(e) {
     let t = e.currentTarget;
     eL.default.track(eV.HAw.NOISE_CANCELLATION_LINK_CLICKED, {
         text: t.text,
         href: t.href,
-        location: { section: eV.JJy.NOISE_CANCELLATION_POPOUT },
+        location: {
+            section: eV.JJy.NOISE_CANCELLATION_POPOUT,
+        },
     });
 }
+
 function e$() {
     let e = i.useRef(null);
     (0, _.tjt)(e),
         i.useEffect(() => {
-            eL.default.track(eV.HAw.OPEN_POPOUT, { type: eV.JJy.NOISE_CANCELLATION_POPOUT });
+            eL.default.track(eV.HAw.OPEN_POPOUT, {
+                type: eV.JJy.NOISE_CANCELLATION_POPOUT,
+            });
         }, []);
     let { noiseCancellationActive: t, systemMicrophoneMode: n } = (0, u.cf)([eC.A], () => ({
             noiseCancellationActive: eC.A.getNoiseCancellation(),
             systemMicrophoneMode: eC.A.getSystemMicrophoneMode(),
         })),
-        l = !(0, X.A)(!0, n, { location: "NoiseCancellationPopout" }),
+        l = !(0, X.A)(!0, n, {
+            location: "NoiseCancellationPopout",
+        }),
         a = (0, u.bG)([eC.A], () => eC.A.getActiveInputProfile()),
         s = null != a && a !== eY.my.CUSTOM,
         o = eK.intl.string(eK.t.uKdWn6),
@@ -229,7 +244,10 @@ function e$() {
                             label: eK.intl.string(eK.t["WGWHv/"]),
                             checked: t && !l,
                             disabled: s || l,
-                            onChange: () => E.A.setNoiseCancellation(!t, { section: eV.JJy.NOISE_CANCELLATION_POPOUT }),
+                            onChange: () =>
+                                E.A.setNoiseCancellation(!t, {
+                                    section: eV.JJy.NOISE_CANCELLATION_POPOUT,
+                                }),
                         }),
                     }),
                 }),
@@ -242,7 +260,9 @@ function e$() {
                     notchBackground: R.V.BLACK,
                     buttonTest: eK.intl.string(eK.t["sG+MGg"]),
                     buttonStop: eK.intl.string(eK.t.Yp3SbJ),
-                    location: { section: eV.JJy.NOISE_CANCELLATION_POPOUT },
+                    location: {
+                        section: eV.JJy.NOISE_CANCELLATION_POPOUT,
+                    },
                 }),
                 (0, r.jsx)(_.D0$, {
                     label: eK.intl.string(eK.t.k6h1F4),
@@ -253,7 +273,9 @@ function e$() {
                             (0, r.jsx)(_.MzZ, {
                                 href: eV.X7G.KRISP,
                                 onClick: (e) => eJ(e),
-                                children: (0, r.jsx)("div", { className: ez.zQ }),
+                                children: (0, r.jsx)("div", {
+                                    className: ez.zQ,
+                                }),
                             }),
                             (0, r.jsx)(_.MzZ, {
                                 href: eR.A.getArticleURL(eV.MVz.NOISE_SUPPRESSION),
@@ -268,6 +290,7 @@ function e$() {
         })
     );
 }
+
 function e0() {
     let { parentAnalyticsLocation: e } = (0, w.Ay)(),
         t = (0, u.bG)([ec.A], () => ec.A.isMuted()),
@@ -280,6 +303,7 @@ function e0() {
         },
     });
 }
+
 function e1(e) {
     let { channel: t, enableActivities: n, disabled: l } = e,
         s = i.useRef(null),
@@ -332,7 +356,9 @@ function e1(e) {
                             u = eX(e, ["unavailable", "isActive", "label", "iconComponent", "iconColor"]),
                             d = (0, r.jsx)(C, {
                                 size: "md",
-                                className: a()(ez.iA, { [ez.ij]: !v }),
+                                className: a()(ez.iA, {
+                                    [ez.ij]: !v,
+                                }),
                                 color: "currentColor",
                             });
                         return (0, r.jsx)(_.YNO, {
@@ -408,6 +434,7 @@ function e1(e) {
         )
     );
 }
+
 function e6(e) {
     let { channel: t, enableActivities: n } = e,
         i = (0, Q.Us)(),
@@ -453,7 +480,9 @@ function e6(e) {
                                                             type: "channel",
                                                             channel: t,
                                                         }
-                                                      : { type: "contextless" },
+                                                      : {
+                                                            type: "contextless",
+                                                        },
                                               openInPopout: o,
                                               analyticsLocation: s,
                                           }),
@@ -494,6 +523,7 @@ function e6(e) {
           })
         : null;
 }
+
 function e9(e) {
     let { channel: t } = e,
         n = i.useRef(null),
@@ -577,6 +607,7 @@ function e9(e) {
             }),
     });
 }
+
 function e7(e) {
     let t,
         { channel: n, canGoLive: l, enableActivities: s, disabled: o } = e,
@@ -603,7 +634,9 @@ function e7(e) {
     let D = (0, r.jsx)(P, {
         size: "md",
         color: "currentColor",
-        className: a()(ez.iA, { [ez.ij]: !j }),
+        className: a()(ez.iA, {
+            [ez.ij]: !j,
+        }),
     });
     return (0, r.jsx)(_.YNO, {
         targetElementRef: c,
@@ -615,7 +648,9 @@ function e7(e) {
                 activeStreams: A,
                 onClose: t,
                 handleGoLive: l ? I : em.A,
-                onInteraction: (0, k.s)("ManageStreamsMenu", d, { entrypoint: eB.GK.OTHER_BUTTON }),
+                onInteraction: (0, k.s)("ManageStreamsMenu", d, {
+                    entrypoint: eB.GK.OTHER_BUTTON,
+                }),
             });
         },
         position: "top",
@@ -810,7 +845,11 @@ class e8 extends i.PureComponent {
                           enableActivities: i,
                       })
                     : null,
-                o ? (0, r.jsx)(e9, { channel: e }) : null,
+                o
+                    ? (0, r.jsx)(e9, {
+                          channel: e,
+                      })
+                    : null,
                 (0, en.A)(e)
                     ? (0, r.jsx)(er.A, {
                           channel: e,
@@ -850,7 +889,9 @@ class e8 extends i.PureComponent {
                                           className: ez.nL,
                                           children: [
                                               t ? this.renderNoiseCancellation() : null,
-                                              (0, r.jsx)(eU.A, { channel: e }),
+                                              (0, r.jsx)(eU.A, {
+                                                  channel: e,
+                                              }),
                                           ],
                                       }),
                                   ],
@@ -918,6 +959,7 @@ class e8 extends i.PureComponent {
             );
     }
 }
+
 function e5(e) {
     let { popoutProps: t, isShown: n, noiseCancellationActive: l, ref: a } = e,
         { parentAnalyticsLocation: s } = (0, w.Ay)(),
@@ -939,7 +981,9 @@ function e5(e) {
                     u.onMouseLeave();
                 },
                 tooltipText: n ? null : eK.intl.string(eK.t.vFiCSx),
-                icon: (0, r.jsx)(c, { size: "refresh_sm" }),
+                icon: (0, r.jsx)(c, {
+                    size: "refresh_sm",
+                }),
             }),
         )
     );
@@ -1026,7 +1070,9 @@ let e2 = (0, I.A)(function (e) {
     let { analyticsLocations: x } = (0, w.Ay)(P.A.RTC_PANEL),
         L = (0, C.A)(null != d ? d : eV.dJq, null == c ? void 0 : c.id),
         R = (0, j.A)(null == c ? void 0 : c.id),
-        D = (0, $.T)({ location: "RTCConnection" }),
+        D = (0, $.T)({
+            location: "RTCConnection",
+        }),
         M = (0, ee.A)({
             channelId: null == c ? void 0 : c.id,
             location: "RTCConnection",

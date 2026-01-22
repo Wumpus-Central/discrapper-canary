@@ -1,9 +1,12 @@
-n.d(t, { Z: () => l });
+n.d(t, {
+    Z: () => l,
+});
 var r = n(339241),
     i = n(492313),
     a = n(64700);
-let s = Math.round(10000000000 * Math.random()),
+let s = Math.round(1e10 * Math.random()),
     o = 0;
+
 function l(e) {
     var t, n;
     let l = (0, a.useMemo)(() => e.name || `radio-group-${s}-${++o}`, [e.name]),

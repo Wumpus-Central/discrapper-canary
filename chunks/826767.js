@@ -1,12 +1,16 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(222823),
     i = n(927813),
     a = n(661191);
+
 function s(e) {
     if (null == e.threadMetadata) return 0;
     let t = e.threadMetadata.autoArchiveDuration * i.A.Millis.MINUTE;
     return o(e) + t;
 }
+
 function o(e) {
     var t;
     if (null == e.threadMetadata) return 0;

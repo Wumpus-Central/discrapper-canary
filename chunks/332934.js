@@ -1,5 +1,8 @@
-n.d(t, { _: () => c });
+n.d(t, {
+    _: () => c,
+});
 var r = n(136722);
+
 function i(e, t, n) {
     return (
         t in e
@@ -13,6 +16,7 @@ function i(e, t, n) {
         e
     );
 }
+
 function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -29,6 +33,7 @@ function a(e) {
     }
     return e;
 }
+
 function s(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -41,6 +46,7 @@ function s(e, t) {
     }
     return n;
 }
+
 function o(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -52,9 +58,19 @@ function o(e, t) {
         e
     );
 }
+
 function l(e) {
-    return e.map((e) => o(a({}, e), { permissions: r.iu(e.permissions) }));
+    return e.map((e) =>
+        o(a({}, e), {
+            permissions: r.iu(e.permissions),
+        }),
+    );
 }
+
 function c(e) {
-    return null == e.guilds ? e : o(a({}, e), { guilds: l(e.guilds) });
+    return null == e.guilds
+        ? e
+        : o(a({}, e), {
+              guilds: l(e.guilds),
+          });
 }

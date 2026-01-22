@@ -1,4 +1,6 @@
-n.d(t, { A: () => E });
+n.d(t, {
+    A: () => E,
+});
 var r = n(627968),
     i = n(503698),
     a = n.n(i),
@@ -19,6 +21,7 @@ let g = {
     left: -4,
     right: -4,
 };
+
 function E(e) {
     let { channel: t, children: n } = e;
     return (0, r.jsx)(o.vN3, {
@@ -27,14 +30,23 @@ function E(e) {
             className: m.ZO,
             "data-recents-channel": t.id,
             children: [
-                (0, r.jsx)(b, { channel: t }),
-                t.isPrivate() ? null : (0, r.jsx)(s.ChevronSmallRightIcon, { size: "xxs" }),
-                (0, r.jsx)(y, { channel: t }),
+                (0, r.jsx)(b, {
+                    channel: t,
+                }),
+                t.isPrivate()
+                    ? null
+                    : (0, r.jsx)(s.ChevronSmallRightIcon, {
+                          size: "xxs",
+                      }),
+                (0, r.jsx)(y, {
+                    channel: t,
+                }),
                 n,
             ],
         }),
     });
 }
+
 function b(e) {
     let { channel: t } = e,
         n = (0, l.bG)([_.A], () => _.A.getGuild(t.guild_id));
@@ -52,16 +64,23 @@ function b(e) {
             })
           : (0, r.jsx)("div", {
                 className: a()(m.Kk, m.ro),
-                children: (0, r.jsx)(s.ChatIcon, { size: "xxs" }),
+                children: (0, r.jsx)(s.ChatIcon, {
+                    size: "xxs",
+                }),
             });
 }
+
 function y(e) {
     let { channel: t } = e,
         n = (0, l.bG)([_.A], () => _.A.getGuild(t.guild_id)),
         i = (0, u.Ay)(t, !1),
         a = (0, d.gU)(t, n),
         s = t.isPrivate() || null == a,
-        o = t.isDM() ? h.intl.formatToPlainString(h.t.smD7XV, { username: i }) : i;
+        o = t.isDM()
+            ? h.intl.formatToPlainString(h.t.smD7XV, {
+                  username: i,
+              })
+            : i;
     return (0, r.jsxs)("div", {
         className: m.yP,
         children: [

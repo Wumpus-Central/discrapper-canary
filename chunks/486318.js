@@ -4,6 +4,7 @@ n.d(t, {
 });
 var r = n(397927),
     i = n(871123);
+
 function a(e) {
     let { imageUrl: t, backgroundImageUrl: n, altText: i, customClassNames: a } = e;
     return {
@@ -18,6 +19,7 @@ function a(e) {
         },
     };
 }
+
 function s(e) {
     return a({
         imageUrl: (0, i.fq)(e),

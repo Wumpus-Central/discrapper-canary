@@ -1,5 +1,9 @@
-n.d(t, { A: () => i }), n(938796);
+n.d(t, {
+    A: () => i,
+}),
+    n(938796);
 var r = n(427930);
+
 function i(e, t) {
     return null == (t = null != t ? t : (0, r.A)(e) ? e.messageSnapshots[0] : void 0)
         ? e

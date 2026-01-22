@@ -25,6 +25,7 @@ var r = n(627968),
     v = n(539916),
     A = n(985018),
     E = n(42483);
+
 function N(e) {
     let { guildId: t, prompts: n } = e,
         s = (0, l.bG)([f.A], () => f.A.editedDefaultChannelIds),
@@ -55,7 +56,9 @@ function N(e) {
                                 className: E.XG,
                                 variant: "text-xs/medium",
                                 color: "text-muted",
-                                children: A.intl.format(A.t.nMVKCX, { numChannelsMissing: b - g }),
+                                children: A.intl.format(A.t.nMVKCX, {
+                                    numChannelsMissing: b - g,
+                                }),
                             }),
                         ],
                     }),
@@ -124,7 +127,9 @@ function N(e) {
                                                 (0, r.jsx)(a.Text, {
                                                     variant: "text-xs/normal",
                                                     color: "text-muted",
-                                                    children: A.intl.format(A.t.sX8890, { numChannels: p }),
+                                                    children: A.intl.format(A.t.sX8890, {
+                                                        numChannels: p,
+                                                    }),
                                                 }),
                                             ],
                                         })
@@ -140,6 +145,7 @@ function N(e) {
         ],
     });
 }
+
 function _(e) {
     let { saveOnClose: t } = e,
         n = (0, l.bG)([u.A], () => u.A.getGuild());
@@ -150,6 +156,7 @@ function _(e) {
               saveOnClose: t,
           });
 }
+
 function S(e) {
     let { guild: t, saveOnClose: n } = e,
         s = (0, l.bG)([o.A], () => o.A.isLoading()),
@@ -169,7 +176,9 @@ function S(e) {
                 return () => {
                     let e = f.current;
                     null != e &&
-                        (0, p.dm)(e, { ignoreDefaultPrompt: !0 })
+                        (0, p.dm)(e, {
+                            ignoreDefaultPrompt: !0,
+                        })
                             .then(() => (0, b.fH)(e.id))
                             .catch(() => {});
                 };
@@ -206,7 +215,9 @@ function S(e) {
                             children: A.intl.string(A.t.Ok55Kh),
                         }),
                     }),
-                    (0, r.jsx)("div", { className: E.Om }),
+                    (0, r.jsx)("div", {
+                        className: E.Om,
+                    }),
                     (0, r.jsx)(a.MzZ, {
                         onClick: m,
                         children: (0, r.jsx)(a.Text, {
@@ -215,15 +226,22 @@ function S(e) {
                             children: A.intl.string(A.t["6gsjdM"]),
                         }),
                     }),
-                    (0, r.jsx)("div", { className: E.Om }),
-                    (0, r.jsx)(h.mU, { guildId: t.id }),
+                    (0, r.jsx)("div", {
+                        className: E.Om,
+                    }),
+                    (0, r.jsx)(h.mU, {
+                        guildId: t.id,
+                    }),
                 ],
             }),
             (0, r.jsx)(N, {
                 guildId: t.id,
                 prompts: c,
             }),
-            n && (0, r.jsx)(j.A, { guildId: t.id }),
+            n &&
+                (0, r.jsx)(j.A, {
+                    guildId: t.id,
+                }),
             (0, r.jsx)("div", {
                 className: E.E3,
                 children: s
@@ -236,6 +254,7 @@ function S(e) {
         ],
     });
 }
+
 function T() {
     let e = (0, l.bG)([u.A], () => u.A.getGuild()),
         t = (0, l.bG)([x.A], () => x.A.submitting),

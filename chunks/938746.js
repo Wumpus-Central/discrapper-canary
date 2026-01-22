@@ -1,4 +1,8 @@
-n.d(e, { A: () => y }), n(896048), n(733351);
+n.d(e, {
+    A: () => y,
+}),
+    n(896048),
+    n(733351);
 var l = n(627968),
     r = n(64700),
     a = n(253018),
@@ -13,6 +17,7 @@ var l = n(627968),
     g = n(652215),
     f = n(985018),
     h = n(623116);
+
 function y(t) {
     let e = (0, c.b)(),
         { selection: y } = t,
@@ -41,7 +46,9 @@ function y(t) {
                         try {
                             let n = await s.Bo.post({
                                 url: g.Rsh.AI_FIX_GRAMMAR,
-                                body: { content: t },
+                                body: {
+                                    content: t,
+                                },
                                 rejectWithError: !1,
                             });
                             n.ok &&
@@ -72,7 +79,9 @@ function y(t) {
                         let i = null != l ? l : r;
                         (0, o.showToast)(
                             (0, o.createToast)(
-                                f.intl.formatToPlainString(f.t.Znl8Z8, { targetLanguage: i }),
+                                f.intl.formatToPlainString(f.t.Znl8Z8, {
+                                    targetLanguage: i,
+                                }),
                                 o.ToastType.AI,
                             ),
                         );
@@ -90,7 +99,9 @@ function y(t) {
                                 (e(n.body.content),
                                 (0, o.showToast)(
                                     (0, o.createToast)(
-                                        f.intl.formatToPlainString(f.t.FtVUqm, { targetLanguage: i }),
+                                        f.intl.formatToPlainString(f.t.FtVUqm, {
+                                            targetLanguage: i,
+                                        }),
                                         o.ToastType.SUCCESS,
                                     ),
                                 ));

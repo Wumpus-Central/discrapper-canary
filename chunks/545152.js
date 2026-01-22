@@ -46,6 +46,7 @@ var r = n(284009),
     j = n(652215),
     M = n(381941),
     k = n(985018);
+
 function U(e, t, n) {
     return (
         t in e
@@ -59,6 +60,7 @@ function U(e, t, n) {
         e
     );
 }
+
 function G(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -75,6 +77,7 @@ function G(e) {
     }
     return e;
 }
+
 function V(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -87,6 +90,7 @@ function V(e, t) {
     }
     return n;
 }
+
 function F(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -422,6 +426,7 @@ let H = (e) => {
                   })
                 : K(E, o);
     };
+
 function K(e, t) {
     u.Ay.enqueue(
         {
@@ -514,6 +519,7 @@ async function z(e, t, n) {
         }
     );
 }
+
 function q(e) {
     switch (e) {
         case x.iw.APPLICATION_LAUNCHER:
@@ -555,14 +561,26 @@ async function Z(e, t, n, r) {
     let i = (0, I.o2)(n),
         a = (e) => {
             null == r || r(i, e),
-                m.C1(t, j.t02.ENTITY_TOO_LARGE, k.intl.formatToPlainString(k.t.fxEKdS, { maxSize: (0, I.Hb)(i) }));
+                m.C1(
+                    t,
+                    j.t02.ENTITY_TOO_LARGE,
+                    k.intl.formatToPlainString(k.t.fxEKdS, {
+                        maxSize: (0, I.Hb)(i),
+                    }),
+                );
         },
         { totalSize: s, largestUploadedFileSize: o } = await X(e, !1);
     if (o > Math.max(i, M.VP) || s > C.eM) return a(o), !1;
     try {
         await (0, d.A)(e);
     } catch (n) {
-        m.C1(t, void 0, k.intl.formatToPlainString(k.t["9h1/1p"], { count: e.length }));
+        m.C1(
+            t,
+            void 0,
+            k.intl.formatToPlainString(k.t["9h1/1p"], {
+                count: e.length,
+            }),
+        );
     }
     return (
         ({ totalSize: s, largestUploadedFileSize: o } = await X(e, !0)),

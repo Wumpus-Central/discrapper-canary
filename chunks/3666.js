@@ -13,6 +13,7 @@ var r = n(627968),
     l = n(765671),
     c = n(985018),
     u = n(862320);
+
 function d(e) {
     let { items: t, maxLines: n, itemWidths: r, itemGapPx: i, containerWidth: a, overflowWidth: s } = e,
         o = 0,
@@ -31,6 +32,7 @@ function d(e) {
     }
     return c;
 }
+
 function f(e) {
     let { itemGapPx: t, items: n, maxLines: r, containerWidth: a } = e,
         [s, o] = i.useState(0),
@@ -68,6 +70,7 @@ function f(e) {
         )
     );
 }
+
 function p(e) {
     let { items: t, renderItem: n } = e;
     return (0, r.jsx)(o.m, {
@@ -76,9 +79,16 @@ function p(e) {
             children: t.map(n),
         }),
         "aria-label": "overflow",
-        children: (0, r.jsx)("div", { children: n(c.intl.formatToPlainString(c.t.vGclWm, { count: t.length })) }),
+        children: (0, r.jsx)("div", {
+            children: n(
+                c.intl.formatToPlainString(c.t.vGclWm, {
+                    count: t.length,
+                }),
+            ),
+        }),
     });
 }
+
 function _(e) {
     let { onItemLayout: t, index: n, children: a } = e,
         s = i.useRef(null);
@@ -92,9 +102,11 @@ function _(e) {
         })
     );
 }
+
 function h(e) {
     return "string" == typeof e ? e : e.key;
 }
+
 function m(e) {
     let { className: t, items: n, renderItem: a, itemGapPx: o = 0, maxLines: d, renderOverflow: m } = e,
         { ref: g, width: E = 0 } = (0, l.Ay)(),
@@ -144,7 +156,11 @@ function m(e) {
                     (0, r.jsx)("div", {
                         className: u.zd,
                         ref: O,
-                        children: a(c.intl.formatToPlainString(c.t.vGclWm, { count: Number("1".concat(n.length)) })),
+                        children: a(
+                            c.intl.formatToPlainString(c.t.vGclWm, {
+                                count: Number("1".concat(n.length)),
+                            }),
+                        ),
                     }),
                 ],
             }),

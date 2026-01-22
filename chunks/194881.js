@@ -2,12 +2,12 @@
     t(n(989349));
 })(0, function (e) {
     return e.defineLocale("gl", {
-        months: "xaneiro_febreiro_marzo_abril_maio_xuño_xullo_agosto_setembro_outubro_novembro_decembro".split("_"),
-        monthsShort: "xan._feb._mar._abr._mai._xuñ._xul._ago._set._out._nov._dec.".split("_"),
+        months: "xaneiro_febreiro_marzo_abril_maio_xu\xf1o_xullo_agosto_setembro_outubro_novembro_decembro".split("_"),
+        monthsShort: "xan._feb._mar._abr._mai._xu\xf1._xul._ago._set._out._nov._dec.".split("_"),
         monthsParseExact: !0,
-        weekdays: "domingo_luns_martes_mércores_xoves_venres_sábado".split("_"),
-        weekdaysShort: "dom._lun._mar._mér._xov._ven._sáb.".split("_"),
-        weekdaysMin: "do_lu_ma_mé_xo_ve_sá".split("_"),
+        weekdays: "domingo_luns_martes_m\xe9rcores_xoves_venres_s\xe1bado".split("_"),
+        weekdaysShort: "dom._lun._mar._m\xe9r._xov._ven._s\xe1b.".split("_"),
+        weekdaysMin: "do_lu_ma_m\xe9_xo_ve_s\xe1".split("_"),
         weekdaysParseExact: !0,
         longDateFormat: {
             LT: "H:mm",
@@ -19,19 +19,19 @@
         },
         calendar: {
             sameDay: function () {
-                return "[hoxe " + (1 !== this.hours() ? "ás" : "á") + "] LT";
+                return "[hoxe " + (1 !== this.hours() ? "\xe1s" : "\xe1") + "] LT";
             },
             nextDay: function () {
-                return "[mañá " + (1 !== this.hours() ? "ás" : "á") + "] LT";
+                return "[ma\xf1\xe1 " + (1 !== this.hours() ? "\xe1s" : "\xe1") + "] LT";
             },
             nextWeek: function () {
-                return "dddd [" + (1 !== this.hours() ? "ás" : "a") + "] LT";
+                return "dddd [" + (1 !== this.hours() ? "\xe1s" : "a") + "] LT";
             },
             lastDay: function () {
-                return "[onte " + (1 !== this.hours() ? "á" : "a") + "] LT";
+                return "[onte " + (1 !== this.hours() ? "\xe1" : "a") + "] LT";
             },
             lastWeek: function () {
-                return "[o] dddd [pasado " + (1 !== this.hours() ? "ás" : "a") + "] LT";
+                return "[o] dddd [pasado " + (1 !== this.hours() ? "\xe1s" : "a") + "] LT";
             },
             sameElse: "L",
         },
@@ -46,15 +46,15 @@
             mm: "%d minutos",
             h: "unha hora",
             hh: "%d horas",
-            d: "un día",
-            dd: "%d días",
+            d: "un d\xeda",
+            dd: "%d d\xedas",
             M: "un mes",
             MM: "%d meses",
             y: "un ano",
             yy: "%d anos",
         },
         dayOfMonthOrdinalParse: /\d{1,2}º/,
-        ordinal: "%dº",
+        ordinal: "%d\xba",
         week: {
             dow: 1,
             doy: 4,

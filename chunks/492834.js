@@ -51,5 +51,8 @@ if (
     !i && l(a))
 ) {
     var p = o("Promise").prototype.finally;
-    f.finally !== p && d(f, "finally", p, { unsafe: !0 });
+    f.finally !== p &&
+        d(f, "finally", p, {
+            unsafe: !0,
+        });
 }

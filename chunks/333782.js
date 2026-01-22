@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -9,6 +11,7 @@ var i = n(311907),
     c = n(763754),
     u = n(888675),
     d = n(985018);
+
 function f(e) {
     let { message: t, usernameHook: n, compact: f, isForumPost: p } = e,
         _ = (0, c.Ay)(t),

@@ -1,4 +1,6 @@
-n.d(t, { A: () => S });
+n.d(t, {
+    A: () => S,
+});
 var r,
     i = n(311907),
     a = n(73153),
@@ -10,6 +12,7 @@ var r,
     d = n(383501),
     f = n(977997),
     p = n(652215);
+
 function _(e, t, n) {
     return (
         t in e
@@ -26,9 +29,11 @@ function _(e, t, n) {
 let h = !0,
     m = !0,
     g = !0;
+
 function E(e) {
     return null == e || !!e.suppress || null != e.requestToSpeakTimestamp;
 }
+
 function b() {
     let e,
         t = d.A.getChannelId(),
@@ -57,6 +62,7 @@ function b() {
             hasLatchPermission: m,
         });
 }
+
 function y(e) {
     let { voiceStates: t } = e;
     return t.some((e) => {
@@ -64,9 +70,11 @@ function y(e) {
         return t === o.default.getId() && b();
     });
 }
+
 function O() {
     g = !0;
 }
+
 function A() {
     g = h;
 }

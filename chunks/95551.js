@@ -11,6 +11,7 @@ var a = n(627968),
     s = n(993401),
     o = n(985018),
     c = n(423648);
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +37,7 @@ function d(e) {
     }
     return e;
 }
+
 function u(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -54,6 +56,7 @@ function u(e, t) {
         e
     );
 }
+
 function m(e) {
     return (0, a.jsx)("div", {
         className: c.wE,
@@ -70,6 +73,7 @@ function m(e) {
         ),
     });
 }
+
 function p(e) {
     let { action: t, onClick: n, icon: m, label: p, sublabel: h, trailing: f, renderSubmenu: x, ref: b } = e,
         g = null != n,
@@ -138,7 +142,11 @@ function p(e) {
                               (0, a.jsx)(r.DUT, {
                                   className: c.ef,
                                   onClick: v,
-                                  focusProps: { offset: u(d({}, O.offset), { right: 0 }) },
+                                  focusProps: {
+                                      offset: u(d({}, O.offset), {
+                                          right: 0,
+                                      }),
+                                  },
                                   children: T(),
                               }),
                               (0, a.jsx)(
@@ -166,20 +174,28 @@ function p(e) {
                     : C
                       ? (0, a.jsxs)(
                             r.DUT,
-                            u(d({ className: c.ef }, e), {
-                                onClick: E,
-                                focusProps: O,
-                                children: [
-                                    T(),
-                                    (0, a.jsx)("div", {
-                                        className: c.ap,
-                                        children: (0, a.jsx)(i.ChevronSmallRightIcon, {
-                                            size: "xs",
-                                            color: "currentColor",
+                            u(
+                                d(
+                                    {
+                                        className: c.ef,
+                                    },
+                                    e,
+                                ),
+                                {
+                                    onClick: E,
+                                    focusProps: O,
+                                    children: [
+                                        T(),
+                                        (0, a.jsx)("div", {
+                                            className: c.ap,
+                                            children: (0, a.jsx)(i.ChevronSmallRightIcon, {
+                                                size: "xs",
+                                                color: "currentColor",
+                                            }),
                                         }),
-                                    }),
-                                ],
-                            }),
+                                    ],
+                                },
+                            ),
                         )
                       : (0, a.jsx)(r.DUT, {
                             className: c.ef,
@@ -213,6 +229,7 @@ function p(e) {
               children: I(),
           });
 }
+
 function h(e) {
     let { children: t, "aria-label": n } = e;
     return (0, a.jsx)("ul", {

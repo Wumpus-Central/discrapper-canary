@@ -53,6 +53,7 @@ var l,
     Z = n(988794),
     J = n(672396),
     q = n(985018);
+
 function Q(e, t, n) {
     return (
         t in e
@@ -66,6 +67,7 @@ function Q(e, t, n) {
         e
     );
 }
+
 function $(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -105,7 +107,15 @@ let ee = "message1",
                 let e = l.shift();
                 (null == e || null == (r = e.notification) ? void 0 : r.close) != null &&
                     (e.notification.close(),
-                    B.default.track(X.HAw.NOTIFICATION_ACTION, $({ action: "REMOVE" }, e.trackingProps)));
+                    B.default.track(
+                        X.HAw.NOTIFICATION_ACTION,
+                        $(
+                            {
+                                action: "REMOVE",
+                            },
+                            e.trackingProps,
+                        ),
+                    ));
             }
         }
         clearChannel(e) {
@@ -114,16 +124,27 @@ let ee = "message1",
                 (delete this._channels[e],
                 t.forEach((e) => {
                     let { notification: t, trackingProps: n } = e;
-                    t.close(), B.default.track(X.HAw.NOTIFICATION_ACTION, $({ action: "ACK" }, n));
+                    t.close(),
+                        B.default.track(
+                            X.HAw.NOTIFICATION_ACTION,
+                            $(
+                                {
+                                    action: "ACK",
+                                },
+                                n,
+                            ),
+                        );
                 }));
         }
         constructor() {
             Q(this, "_channels", {});
         }
     })();
+
 function ec() {
     return !!(D.A.getDesktopType() === X.nRU.NEVER || V.A.getStatus() === X.clD.DND || T.NO.getSetting());
 }
+
 function eu(e) {
     return null != H.A.getVoiceStateForChannel(e);
 }
@@ -146,7 +167,9 @@ Q(ed, "displayName", "NotificationStore"),
                               n(705194),
                               q.intl.string(q.t.VSgOVg),
                               q.intl.string(q.t["1UJvqc"]),
-                              { notif_type: "NOTIFICATIONS_SET_PERMISSION_STATE" },
+                              {
+                                  notif_type: "NOTIFICATIONS_SET_PERMISSION_STATE",
+                              },
                               {
                                   sound: ee,
                                   volume: et,
@@ -282,7 +305,9 @@ Q(ed, "displayName", "NotificationStore"),
                                       playSoundIfDisabled: !1,
                                       volume: 0.4,
                                       onClick() {
-                                          o.A.openPrivateChannel({ recipientIds: t });
+                                          o.A.openPrivateChannel({
+                                              recipientIds: t,
+                                          });
                                       },
                                       isUserAvatar: !0,
                                   },
@@ -313,8 +338,12 @@ Q(ed, "displayName", "NotificationStore"),
                                   channelName: (0, g.m1)(c, G.default, M.A),
                                   channelTopic: null == u ? void 0 : u.topic,
                               }),
-                              { notif_type: "Stage Speak Invite" },
-                              { isUserAvatar: !1 },
+                              {
+                                  notif_type: "Stage Speak Invite",
+                              },
+                              {
+                                  isUserAvatar: !1,
+                              },
                           );
                   },
                   STAGE_INSTANCE_UPDATE: function (e) {
@@ -337,7 +366,9 @@ Q(ed, "displayName", "NotificationStore"),
                       ea.add(t.id),
                           K.A.showNotification(
                               (0, I.Iv)(l, 128),
-                              q.intl.formatToPlainString(q.t.bZ4Okd, { guildName: l.name }),
+                              q.intl.formatToPlainString(q.t.bZ4Okd, {
+                                  guildName: l.name,
+                              }),
                               q.intl.formatToPlainString(q.t.qTelnO, {
                                   username: Y.Ay.getName(l.id, i.id, a),
                                   topic: t.topic,
@@ -379,7 +410,9 @@ Q(ed, "displayName", "NotificationStore"),
                                         k.A.can(r.kg(X.xBc.CONNECT, X.xBc.VIEW_CHANNEL), i) &&
                                         K.A.showNotification(
                                             (0, I.Iv)(l, 128),
-                                            q.intl.formatToPlainString(q.t.bOu6Wn, { guildName: l.name }),
+                                            q.intl.formatToPlainString(q.t.bOu6Wn, {
+                                                guildName: l.name,
+                                            }),
                                             q.intl.formatToPlainString(q.t.GV9L8u, {
                                                 topic: e.name,
                                                 username: Y.Ay.getName(l.id, i.id, a),
@@ -408,15 +441,22 @@ Q(ed, "displayName", "NotificationStore"),
                                         null == n ||
                                         K.A.showNotification(
                                             (0, I.Iv)(n, 128),
-                                            q.intl.formatToPlainString(q.t.bOu6Wn, { guildName: n.name }),
-                                            q.intl.formatToPlainString(q.t.mYyaRB, { topic: e.name }),
+                                            q.intl.formatToPlainString(q.t.bOu6Wn, {
+                                                guildName: n.name,
+                                            }),
+                                            q.intl.formatToPlainString(q.t.mYyaRB, {
+                                                topic: e.name,
+                                            }),
                                             {
                                                 notif_type: "GUILD_SCHEDULED_EVENT_UPDATE",
                                                 guild_id: n.id,
                                             },
                                             {
                                                 onClick() {
-                                                    u.A.transitionToGuildSync(e.guild_id), (0, h.uR)({ eventId: e.id });
+                                                    u.A.transitionToGuildSync(e.guild_id),
+                                                        (0, h.uR)({
+                                                            eventId: e.id,
+                                                        });
                                                 },
                                                 isUserAvatar: !1,
                                             },
@@ -474,7 +514,9 @@ Q(ed, "displayName", "NotificationStore"),
                           n,
                           l,
                           r,
-                          { notif_type: a },
+                          {
+                              notif_type: a,
+                          },
                           {
                               onClick() {
                                   null != i && ((0, A.A)(i), d.default.clickedNotification());
@@ -495,7 +537,9 @@ Q(ed, "displayName", "NotificationStore"),
                           t,
                           n,
                           l,
-                          { notif_type: i },
+                          {
+                              notif_type: i,
+                          },
                           {
                               onClick() {
                                   null != r && ((0, A.A)(r), d.default.clickedNotification());
@@ -518,7 +562,9 @@ Q(ed, "displayName", "NotificationStore"),
                                   n(608598),
                                   q.intl.string(q.t.VSgOVg),
                                   q.intl.string(q.t["+J/F66"]),
-                                  { notif_type: "WINDOW_HIDDEN" },
+                                  {
+                                      notif_type: "WINDOW_HIDDEN",
+                                  },
                                   {
                                       overrideStreamerMode: !0,
                                       onClick: () => {
@@ -552,7 +598,9 @@ Q(ed, "displayName", "NotificationStore"),
                           r,
                           q.intl.string(q.t.IjZJB5),
                           i,
-                          { notif_type: "MESSAGE_REMINDER_DUE" },
+                          {
+                              notif_type: "MESSAGE_REMINDER_DUE",
+                          },
                           {
                               onClick() {
                                   (0, A.A)(X.BVt.CHANNEL(null == l ? void 0 : l.getGuildId(), l.id, n.id));

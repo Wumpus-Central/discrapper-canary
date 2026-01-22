@@ -1,4 +1,6 @@
-l.d(t, { A: () => b });
+l.d(t, {
+    A: () => b,
+});
 var n = l(627968),
     r = l(64700),
     s = l(641150),
@@ -36,6 +38,7 @@ let d = [
         [s.q.NAMEPLATE]: o.G2.NAMEPLATES,
         [s.q.BUNDLE]: o.G2.BUNDLES,
     };
+
 function b(e) {
     let { tabs: t, selectedTab: l, onTabSelect: s, onClose: b, showOrbRentalNewBadge: g } = e,
         { itemTypeFilters: p } = (0, i.v)(),

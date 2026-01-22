@@ -1,4 +1,7 @@
-n.d(t, { A: () => f }), n(896048);
+n.d(t, {
+    A: () => f,
+}),
+    n(896048);
 var r = n(627968);
 n(64700);
 var i = n(317097),
@@ -9,6 +12,7 @@ var i = n(317097),
     c = n(775602),
     u = n(496885),
     d = n(985018);
+
 function f(e) {
     let t,
         { color: n, size: f, forcedIconColor: p, className: _, iconClassName: h, tooltipText: m } = e,

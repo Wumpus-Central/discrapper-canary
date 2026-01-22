@@ -1,9 +1,12 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 var r = n(627968);
 n(64700);
 var i = n(827734),
     l = n(397927),
     s = n(985018);
+
 function a(e) {
     var t, n;
     let { className: a, color: c = i.A.unsafe_rawColors.BRAND_500.css } = e,

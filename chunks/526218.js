@@ -7,6 +7,7 @@ n.d(t, {
 var r = (function (e) {
     return (e[(e.MANAGED = 0)] = "MANAGED"), (e[(e.QUICK = 1)] = "QUICK"), e;
 })({});
+
 function i(e) {
     switch (e) {
         case "0":
@@ -17,6 +18,7 @@ function i(e) {
             return null;
     }
 }
+
 function a(e) {
     if (null == e) return null;
     let [t, n] = e.split("-"),

@@ -42,6 +42,7 @@ var r = n(627968),
     M = n(783419),
     k = n(985018),
     U = n(612028);
+
 function G(e, t, n) {
     return (
         t in e
@@ -55,6 +56,7 @@ function G(e, t, n) {
         e
     );
 }
+
 function V(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -71,6 +73,7 @@ function V(e) {
     }
     return e;
 }
+
 function F(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -83,6 +86,7 @@ function F(e, t) {
     }
     return n;
 }
+
 function B(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -112,6 +116,7 @@ let H = (e) => {
             }),
             [a.id],
         );
+
     function u() {
         _.A.joinServer(a.id, () => {});
     }
@@ -170,6 +175,7 @@ let H = (e) => {
         })
     );
 };
+
 function Y(e) {
     let { onDisconnect: t, account: n, theme: a, locale: s } = e,
         [l, p] = i.useState(n.friendSync),
@@ -190,6 +196,7 @@ function Y(e) {
             inProgressMetadataVisibility: D,
         },
         Z = i.useRef(X);
+
     function Q(e) {
         var t;
         let n = g.A.get(e.type),
@@ -263,6 +270,7 @@ function Y(e) {
             })
         );
     }
+
     function $(e) {
         return e.twoWayLink
             ? null
@@ -272,6 +280,7 @@ function Y(e) {
                 ? (0, r.jsx)(x.j, {})
                 : null;
     }
+
     function J(e) {
         var t;
         let n = null != (t = e.metadata) ? t : {},
@@ -308,7 +317,9 @@ function Y(e) {
                             variant: "text-xs/normal",
                             color: "text-subtle",
                             className: U.M4,
-                            children: k.intl.format(k.t["9rfonh"], { date: a }),
+                            children: k.intl.format(k.t["9rfonh"], {
+                                date: a,
+                            }),
                         },
                         "member-since",
                     ),
@@ -361,7 +372,7 @@ function Y(e) {
                                           _.A.refresh(e.type, e.id).finally(() => {
                                               setTimeout(() => {
                                                   W.push(e.id), K(W), Y(!1);
-                                              }, 2000);
+                                              }, 2e3);
                                           });
                                   },
                         }),
@@ -375,6 +386,7 @@ function Y(e) {
             })
         );
     }
+
     function ee(e) {
         var t;
         let i, a, s;
@@ -387,7 +399,9 @@ function Y(e) {
                 })),
             j.ewM.has(n.type) &&
                 (a = (0, r.jsx)(f.dOG, {
-                    label: k.intl.format(k.t["6u6J0q"], { platform: e.name }),
+                    label: k.intl.format(k.t["6u6J0q"], {
+                        platform: e.name,
+                    }),
                     checked: I,
                     onChange: el,
                 })),
@@ -413,28 +427,42 @@ function Y(e) {
             })
         );
     }
+
     function et() {
         return n.revoked
             ? (0, r.jsx)(o.po8, {
                   messageType: o.YCn.INFO,
-                  children: k.intl.format(k.t["6C4lgA"], { onReconnect: er }),
+                  children: k.intl.format(k.t["6C4lgA"], {
+                      onReconnect: er,
+                  }),
               })
             : n.integrations.length > 0
               ? (0, r.jsx)(f.D0$, {
                     label: k.intl.string(k.t.fOe3fZ),
-                    children: n.integrations.map((e) => (0, r.jsx)(H, { integration: e }, e.id)),
+                    children: n.integrations.map((e) =>
+                        (0, r.jsx)(
+                            H,
+                            {
+                                integration: e,
+                            },
+                            e.id,
+                        ),
+                    ),
                 })
               : void 0;
     }
+
     function en() {
         if (n.revoked || n.integrations.length > 0) return (0, r.jsx)(f.cGx, {});
     }
+
     function er() {
         (0, y.A)({
             platformType: n.type,
             location: "User Settings",
         });
     }
+
     function ei() {
         let e = g.A.get(n.type);
         (0, f.qfG)((i) =>
@@ -443,8 +471,12 @@ function Y(e) {
                 B(
                     V(
                         {
-                            title: k.intl.formatToPlainString(k.t.U5x12f, { name: e.name }),
-                            subtitle: k.intl.format(k.t.VgqIPj, { provider: e.name }),
+                            title: k.intl.formatToPlainString(k.t.U5x12f, {
+                                name: e.name,
+                            }),
+                            subtitle: k.intl.format(k.t.VgqIPj, {
+                                provider: e.name,
+                            }),
                             actions: [
                                 {
                                     text: k.intl.string(k.t["ETE/oC"]),
@@ -465,12 +497,17 @@ function Y(e) {
                     {
                         children:
                             (0, w.A)(n) &&
-                            (0, r.jsx)(P.A, { children: k.intl.format(k.t.COW3Xn, { platformName: e.name }) }),
+                            (0, r.jsx)(P.A, {
+                                children: k.intl.format(k.t.COW3Xn, {
+                                    platformName: e.name,
+                                }),
+                            }),
                     },
                 ),
             ),
         );
     }
+
     function ea(e) {
         let { verified: t } = n,
             r = +!!e;
@@ -484,6 +521,7 @@ function Y(e) {
         }
         m(r), _.A.setVisibility(n.type, n.id, r);
     }
+
     function es(e) {
         let { verified: t } = n,
             r = +!!e;
@@ -497,9 +535,11 @@ function Y(e) {
         }
         S(r), _.A.setMetadataVisibility(n.type, n.id, r);
     }
+
     function eo(e) {
         p(e), _.A.setFriendSync(n.type, n.id, e);
     }
+
     function el(e) {
         T(e), _.A.setShowActivity(n.type, n.id, e);
     }
@@ -519,22 +559,29 @@ function Y(e) {
         })
     );
 }
+
 function W() {
     return (0, r.jsx)(f.D0$, {
         label: k.intl.string(k.t.ZeDrUf),
-        description: k.intl.format(k.t["oYc+Gz"], { privacyPolicyUrl: j.X7G.PRIVACY }),
+        description: k.intl.format(k.t["oYc+Gz"], {
+            privacyPolicyUrl: j.X7G.PRIVACY,
+        }),
         children: (0, r.jsx)(z, {}),
     });
 }
+
 function K(e) {
     let t = g.A.get(e);
-    (0, y.A)({ platformType: t.type }),
+    (0, y.A)({
+        platformType: t.type,
+    }),
         C.default.track(j.HAw.ACCOUNT_LINK_STEP, {
             previous_step: "desktop connections",
             current_step: "desktop oauth",
             platform_type: t.type,
         });
 }
+
 function z() {
     function e() {
         p.h.dispatch({
@@ -579,16 +626,20 @@ function z() {
         ],
     });
 }
+
 function q(e) {
     let t,
         { fetching: n, accounts: i, theme: a, locale: s } = e;
+
     function o(e) {
         let { type: t, id: n } = e;
         _.A.disconnect(t, n);
     }
     return (
         (t = n
-            ? (0, r.jsx)(f.y$y, { type: f.y$y.Type.SPINNING_CIRCLE })
+            ? (0, r.jsx)(f.y$y, {
+                  type: f.y$y.Type.SPINNING_CIRCLE,
+              })
             : 0 === i.length
               ? (0, r.jsx)(f.ppr, {
                     theme: a,
@@ -617,6 +668,7 @@ function q(e) {
         })
     );
 }
+
 function X() {
     let e = (0, l.bG)([T.A], () => T.A.hidePersonalInformation),
         t = (0, l.bG)([S.A], () => S.A.isFetching()),
@@ -645,7 +697,9 @@ let Z = () => {
             title: k.intl.string(k.t["3fe7U5"]),
             children: [
                 (0, r.jsx)(W, {}),
-                (0, r.jsx)(f.cGx, { gap: 24 }),
+                (0, r.jsx)(f.cGx, {
+                    gap: 24,
+                }),
                 (0, r.jsx)(q, {
                     fetching: e,
                     accounts: t,

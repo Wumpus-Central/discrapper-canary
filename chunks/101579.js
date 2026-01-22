@@ -1,4 +1,6 @@
-n.d(t, { y: () => o });
+n.d(t, {
+    y: () => o,
+});
 var l = n(335871),
     r = n(73153),
     a = n(594061),
@@ -15,5 +17,7 @@ async function o(e, t) {
             guildId: e,
             channelIds: t,
         }),
-        i.default.track(s.HAw.CHANNEL_LIST_UPDATED, { action_type: "recents_dismissed" });
+        i.default.track(s.HAw.CHANNEL_LIST_UPDATED, {
+            action_type: "recents_dismissed",
+        });
 }

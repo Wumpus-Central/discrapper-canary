@@ -1,4 +1,6 @@
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});
 class r {
     acquire(e) {
         return navigator.mediaDevices.getUserMedia(e);

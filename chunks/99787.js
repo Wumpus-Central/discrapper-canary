@@ -1,10 +1,14 @@
-n.d(t, { A: () => o }), n(896048);
+n.d(t, {
+    A: () => o,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(372598),
     s = n(53594),
     a = n(449585),
     c = n(864557);
+
 function o(e) {
     let { rule: t, onChangeRule: n } = e,
         o = i.useMemo(() => (0, s.J6)(t.triggerType), [t.triggerType]),
@@ -45,7 +49,10 @@ function o(e) {
                     }
                     return e;
                 })({}, t)),
-                (l = l = { actions: a }),
+                (l = l =
+                    {
+                        actions: a,
+                    }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
                     : (function (e, t) {

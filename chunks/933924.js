@@ -1,4 +1,7 @@
-r.d(t, { a: () => u }), r(457529);
+r.d(t, {
+    a: () => u,
+}),
+    r(457529);
 var n = r(430370),
     s = r(73153),
     i = r(830215),
@@ -19,7 +22,9 @@ async function u(e) {
                 d = (0, n.d5)(JSON.parse(e));
             d.signal = t.signal;
             let h = await (0, n.Jt)(d);
-            s.h.dispatch({ type: "PASSWORDLESS_START" }),
+            s.h.dispatch({
+                type: "PASSWORDLESS_START",
+            }),
                 l.default.track(c.HAw.LOGIN_ATTEMPTED, {
                     source: c.mdB.PASSWORDLESS_CONDITIONAL_UI,
                     login_method: "passwordless",

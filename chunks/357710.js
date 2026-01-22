@@ -8,9 +8,16 @@ var r = n(825913),
     s = n(3388),
     o = n(533715);
 let l = (0, a.createContext)(null);
+
 function c(e) {
     let t = (0, a.useRef)({});
-    return a.createElement(l.Provider, { value: t }, e.children);
+    return a.createElement(
+        l.Provider,
+        {
+            value: t,
+        },
+        e.children,
+    );
 }
 let u = (0, a.forwardRef)(function (e, t) {
     let { name: n, isVisible: c = !0, children: u, className: d, style: f, ...p } = e,

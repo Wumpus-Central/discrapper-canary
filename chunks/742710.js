@@ -1,4 +1,8 @@
-n.d(t, { A: () => k }), n(733351), n(896048);
+n.d(t, {
+    A: () => k,
+}),
+    n(733351),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -23,6 +27,7 @@ var r = n(627968),
     w = n(985018),
     I = n(461349),
     P = n(8208);
+
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -48,6 +53,7 @@ function E(e) {
     }
     return e;
 }
+
 function S(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -66,6 +72,7 @@ function S(e, t) {
         e
     );
 }
+
 function T(e) {
     let { index: t, widgetType: n, game: l, children: i } = e,
         { manageFocusOnReorder: a } = (0, y.r)();
@@ -78,7 +85,9 @@ function T(e) {
             game: l,
             widgetType: n,
         },
-        "aria-label": w.intl.formatToPlainString(w.t["0dR3gw"], { positionNumber: t + 1 }),
+        "aria-label": w.intl.formatToPlainString(w.t["0dR3gw"], {
+            positionNumber: t + 1,
+        }),
         onReorder: (e, t) => (0, g.Un)(n, e, t),
         onEnd: () => a(l.applicationId),
         className: P.vF,
@@ -88,6 +97,7 @@ function T(e) {
         children: i,
     });
 }
+
 function _(e) {
     let { applicationId: t, userId: n, gameName: l } = e,
         i = (function (e, t) {
@@ -129,7 +139,12 @@ function _(e) {
             trackEntryPointImpression: !0,
         });
     return null == a
-        ? (0, r.jsx)(o.Heading, S(E({}, i), { children: l }))
+        ? (0, r.jsx)(
+              o.Heading,
+              S(E({}, i), {
+                  children: l,
+              }),
+          )
         : (0, r.jsx)(
               o.Heading,
               S(E({}, i), {
@@ -141,13 +156,17 @@ function _(e) {
               }),
           );
 }
+
 function N(e) {
     let { user: t, guildId: n, channelId: l, id: i } = e;
     return (0, r.jsx)(o.AC4, {
         id: i,
-        children: w.intl.format(w.t.TM0XDY, { name: p.Ay.getName(n, l, t) }),
+        children: w.intl.format(w.t.TM0XDY, {
+            name: p.Ay.getName(n, l, t),
+        }),
     });
 }
+
 function D(e) {
     let { text: t, className: n } = e;
     return (0, r.jsx)(o.Text, {
@@ -157,6 +176,7 @@ function D(e) {
         children: t,
     });
 }
+
 function R(e) {
     let { text: t, user: n, guildId: l, channelId: i } = e,
         a = (0, c.GV)();
@@ -177,10 +197,13 @@ function R(e) {
                       channelId: i,
                       id: a,
                   }),
-                  (0, r.jsx)(D, { text: t }),
+                  (0, r.jsx)(D, {
+                      text: t,
+                  }),
               ],
           });
 }
+
 function C(e) {
     let { text: t, user: n, guildId: i, channelId: u, widgetType: d, applicationId: f } = e,
         p = (0, c.GV)(),
@@ -276,12 +299,15 @@ function C(e) {
                           onClick: (e) => {
                               e.stopPropagation(), S();
                           },
-                          focusProps: { ringTarget: A },
+                          focusProps: {
+                              ringTarget: A,
+                          },
                       }),
                   ],
               })
     );
 }
+
 function k(e) {
     let {
             user: t,
@@ -340,7 +366,12 @@ function k(e) {
                         className: P.zH,
                         children: [
                             c
-                                ? (0, r.jsx)(o.Heading, S(E({}, U), { children: G }))
+                                ? (0, r.jsx)(
+                                      o.Heading,
+                                      S(E({}, U), {
+                                          children: G,
+                                      }),
+                                  )
                                 : (0, r.jsx)(
                                       _,
                                       E(

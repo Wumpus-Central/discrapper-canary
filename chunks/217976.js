@@ -9,6 +9,7 @@ var r = n(311907),
     s = n(317525),
     o = n(71393),
     l = n(652215);
+
 function c(e, t) {
     let n =
             arguments.length > 2 && void 0 !== arguments[2]
@@ -26,6 +27,7 @@ function c(e, t) {
     }
     return !1;
 }
+
 function u(e) {
     let t = (0, r.bG)([i.default, a.Ay], () => (null == e ? null : a.Ay.getMember(e, i.default.getId())));
     return (0, r.bG)([o.A, s.A], () => c(e, null != e ? s.A.getRolesSnapshot(e) : void 0, t, [o.A]), [e, t]);

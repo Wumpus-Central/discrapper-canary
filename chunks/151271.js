@@ -30,7 +30,9 @@ let c = Object.freeze({
     u = (0, s.h)()(
         (0, a.Zr)((e, t) => c, {
             name: "expression-picker-last-active-view",
-            partialize: (e) => ({ lastActiveView: e.lastActiveView }),
+            partialize: (e) => ({
+                lastActiveView: e.lastActiveView,
+            }),
         }),
     ),
     d = (e, t, n) => {

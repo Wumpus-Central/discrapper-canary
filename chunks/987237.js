@@ -21,23 +21,32 @@ var r = n(627968),
     b = n(985018);
 let y = 1,
     O = 15;
+
 function A() {
     let e = I();
-    return 1 === e ? b.intl.string(b.t.NBae0i) : b.intl.format(b.t.GSynLW, { time: e });
+    return 1 === e
+        ? b.intl.string(b.t.NBae0i)
+        : b.intl.format(b.t.GSynLW, {
+              time: e,
+          });
 }
+
 function v() {
     let e = (0, a.bG)([u.A], () => u.A.getPremiumSubscription());
     return null != e && e.status === g.Dmq.CANCELED ? e : null;
 }
+
 function S() {
     let e = v(),
         t = I();
     return null != e && t >= y && t <= O;
 }
+
 function I() {
     let e = v();
     return null != e ? (0, f.x6)(e) : 0;
 }
+
 function T(e, t) {
     let n = (0, _.Lh)(),
         r = S(),
@@ -52,7 +61,9 @@ let C = (e) => {
         T = I(),
         C = null != (t = (0, _.Lh)()) ? t : m.Ac.PREMIUM_TENURE_1_MONTH,
         N = (0, i.useCallback)(() => {
-            d.default.track(g.HAw.TOOLTIP_VIEWED, { type: "tiered_tenure_badge_churn_reminder" });
+            d.default.track(g.HAw.TOOLTIP_VIEWED, {
+                type: "tiered_tenure_badge_churn_reminder",
+            });
         }, []),
         R = (0, i.useCallback)(() => {
             null == n || n(E.i.TAKE_ACTION),

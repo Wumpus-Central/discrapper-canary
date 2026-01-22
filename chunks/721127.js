@@ -1,4 +1,6 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var a = n(627968);
 n(64700);
 var r = n(503698),
@@ -6,6 +8,7 @@ var r = n(503698),
     c = n(397927),
     l = n(404374),
     s = n(468099);
+
 function o(e) {
     let { text: t, className: n, button: r, reducedRightPadding: o = !1 } = e;
     return (0, a.jsxs)("div", {

@@ -10,6 +10,7 @@ var r,
         (((r = {}).ROLE_SUBSCRIPTION = "role_subscription"),
         (r.ROLE_SUBSCRIPTION_SETTING = "role_subscription_setting"),
         r);
+
 function o(e) {
     let t = decodeURIComponent(e),
         n = (0, i.vu)(t);

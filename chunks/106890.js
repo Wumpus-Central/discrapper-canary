@@ -1,4 +1,7 @@
-n.d(t, { A: () => m }), n(896048);
+n.d(t, {
+    A: () => m,
+}),
+    n(896048);
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -13,6 +16,7 @@ var i = n(311907),
     p = n(652215),
     _ = n(272984),
     h = n(985018);
+
 function m(e) {
     var t;
     let { user: n, entry: m, display: g, onAction: E, onClose: b } = e,
@@ -25,10 +29,17 @@ function m(e) {
     if (!O)
         return (0, r.jsx)(a.Drp, {
             id: "connect-spotify",
-            label: h.intl.formatToPlainString(h.t.XWSHTb, { platform: _.HD }),
+            label: h.intl.formatToPlainString(h.t.XWSHTb, {
+                platform: _.HD,
+            }),
             action: () => {
-                null == E || E({ action: "PRESS_CONNECT_SPOTIFY_MENU_ITEM" }),
-                    (0, d.openUserSettings)(u.X.CONNECTIONS_PANEL, { section: p.nc_.CONNECTIONS }),
+                null == E ||
+                    E({
+                        action: "PRESS_CONNECT_SPOTIFY_MENU_ITEM",
+                    }),
+                    (0, d.openUserSettings)(u.X.CONNECTIONS_PANEL, {
+                        section: p.nc_.CONNECTIONS,
+                    }),
                     null == b || b();
             },
         });
@@ -40,7 +51,11 @@ function m(e) {
               id: "play-on-spotify",
               label: h.intl.string(h.t.rRffNz),
               action: () => {
-                  null == E || E({ action: "PRESS_PLAY_ON_SPOTIFY_MENU_ITEM" }), (0, o.n)(_.M0.TRACK, A.external_id);
+                  null == E ||
+                      E({
+                          action: "PRESS_PLAY_ON_SPOTIFY_MENU_ITEM",
+                      }),
+                      (0, o.n)(_.M0.TRACK, A.external_id);
               },
           });
 }

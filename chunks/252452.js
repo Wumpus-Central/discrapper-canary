@@ -1,4 +1,7 @@
-n.d(t, { A: () => f }), n(65821);
+n.d(t, {
+    A: () => f,
+}),
+    n(65821);
 var r = n(562465),
     i = n(506774),
     a = n(73153),
@@ -6,6 +9,7 @@ var r = n(562465),
     o = n(398590),
     l = n(652215),
     c = n(516780);
+
 function u(e, t, n) {
     return (
         t in e
@@ -19,6 +23,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -39,7 +44,12 @@ let f = {
     open() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
             t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-            n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : { openWithoutBackstack: !1 };
+            n =
+                arguments.length > 2 && void 0 !== arguments[2]
+                    ? arguments[2]
+                    : {
+                          openWithoutBackstack: !1,
+                      };
         a.h.dispatch(
             d(
                 {
@@ -53,7 +63,9 @@ let f = {
             (0, o.id)(l.zgK.USER_SETTINGS);
     },
     close() {
-        a.h.dispatch({ type: "USER_SETTINGS_MODAL_CLOSE" });
+        a.h.dispatch({
+            type: "USER_SETTINGS_MODAL_CLOSE",
+        });
     },
     setSection(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
@@ -88,13 +100,19 @@ let f = {
         });
     },
     submitComplete() {
-        a.h.dispatch({ type: "USER_SETTINGS_MODAL_SUBMIT_COMPLETE" });
+        a.h.dispatch({
+            type: "USER_SETTINGS_MODAL_SUBMIT_COMPLETE",
+        });
     },
     reset() {
-        a.h.dispatch({ type: "USER_SETTINGS_MODAL_RESET" });
+        a.h.dispatch({
+            type: "USER_SETTINGS_MODAL_RESET",
+        });
     },
     saveAccountChanges(e, t) {
-        a.h.dispatch({ type: "USER_SETTINGS_MODAL_SUBMIT" });
+        a.h.dispatch({
+            type: "USER_SETTINGS_MODAL_SUBMIT",
+        });
         let { username: n, email: o, emailToken: u, password: d, avatar: f, newPassword: p, discriminator: _ } = e,
             { close: h } = t,
             m = {
@@ -132,7 +150,10 @@ let f = {
                             type: "CURRENT_USER_UPDATE",
                             user: t,
                         }),
-                        void 0 !== f && (0, s.t)({ avatarHash: t.avatar }),
+                        void 0 !== f &&
+                            (0, s.t)({
+                                avatarHash: t.avatar,
+                            }),
                         null != p &&
                             a.h.dispatch({
                                 type: "USER_PASSWORD_UPDATE",

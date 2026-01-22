@@ -27,6 +27,7 @@ var a = n(64700),
     y = n(381941);
 let _ = [v.NJ8.DARK, v.NJ8.LIGHT, v.NJ8.DARKER, v.NJ8.MIDNIGHT],
     A = [l.NS.COMPACT, l.NS.COZY, l.NS.DEFAULT];
+
 function C(e) {
     return e[Math.floor(Math.random() * e.length)];
 }
@@ -88,6 +89,7 @@ async function O() {
             await (0, i.yu)(r).finally(i.pZ);
         } catch (e) {}
 }
+
 function E() {
     try {
         let e = C(v.hH7.FONT_SIZES);
@@ -98,6 +100,7 @@ function E() {
         h.Xi.updateSetting(n);
     } catch (e) {}
 }
+
 function N() {
     a.useEffect(() => {
         var e, t, n, a, l;

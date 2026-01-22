@@ -7,9 +7,11 @@ function n(e, t) {
         else break;
     }
 }
+
 function r(e) {
     return 0 === e.length ? null : e[0];
 }
+
 function i(e) {
     if (0 === e.length) return null;
     var t = e[0],
@@ -29,6 +31,7 @@ function i(e) {
     }
     return t;
 }
+
 function a(e, t) {
     var n = e.sortIndex - t.sortIndex;
     return 0 !== n ? n : e.id - t.id;
@@ -58,6 +61,7 @@ var u = [],
     b = "function" == typeof setTimeout ? setTimeout : null,
     y = "function" == typeof clearTimeout ? clearTimeout : null,
     O = "u" > typeof setImmediate ? setImmediate : null;
+
 function A(e) {
     for (var t = r(d); null !== t; ) {
         if (null === t.callback) i(d);
@@ -66,6 +70,7 @@ function A(e) {
         t = r(d);
     }
 }
+
 function v(e) {
     if (((g = !1), A(e), !m))
         if (null !== r(u)) (m = !0), S || ((S = !0), s());
@@ -78,9 +83,11 @@ var S = !1,
     I = -1,
     T = 5,
     C = -1;
+
 function N() {
     return !!E || !(t.unstable_now() - C < T);
 }
+
 function R() {
     if (((E = !1), S)) {
         var e = t.unstable_now();
@@ -136,6 +143,7 @@ else if ("u" > typeof MessageChannel) {
     s = function () {
         b(R, 0);
     };
+
 function D(e, n) {
     I = b(function () {
         e(t.unstable_now());
@@ -155,7 +163,7 @@ function D(e, n) {
             ? console.error(
                   "forceFrameRate takes a positive int between 0 and 125, forcing frame rates higher than 125 fps is not supported",
               )
-            : (T = 0 < e ? Math.floor(1000 / e) : 5);
+            : (T = 0 < e ? Math.floor(1e3 / e) : 5);
     }),
     (t.unstable_getCurrentPriorityLevel = function () {
         return _;
@@ -212,13 +220,13 @@ function D(e, n) {
                 l = 250;
                 break;
             case 5:
-                l = 1073741823;
+                l = 0x3fffffff;
                 break;
             case 4:
-                l = 10000;
+                l = 1e4;
                 break;
             default:
-                l = 5000;
+                l = 5e3;
         }
         return (
             (l = a + l),

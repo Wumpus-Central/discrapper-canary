@@ -11,7 +11,7 @@ let r = {
         "segunda-feira": 1,
         seg: 1,
         terça: 2,
-        "terça-feira": 2,
+        "ter\xe7a-feira": 2,
         ter: 2,
         quarta: 3,
         "quarta-feira": 3,
@@ -65,10 +65,11 @@ let r = {
         "dez.": 12,
     },
     a = "[0-9]{1,4}(?![^\\s]\\d)(?:\\s*[a|d]\\.?\\s*c\\.?|\\s*a\\.?\\s*d\\.?)?";
+
 function s(e) {
     if (e.match(/^[0-9]{1,4}$/)) {
         let t = parseInt(e);
-        return t < 100 && (t > 50 ? (t += 1900) : (t += 2000)), t;
+        return t < 100 && (t > 50 ? (t += 1900) : (t += 2e3)), t;
     }
     return e.match(/a\.?\s*c\.?/i) ? -parseInt((e = e.replace(/a\.?\s*c\.?/i, ""))) : parseInt(e);
 }

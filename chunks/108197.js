@@ -1,4 +1,6 @@
-n.d(t, { A: () => w });
+n.d(t, {
+    A: () => w,
+});
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -25,6 +27,7 @@ var r = n(627968),
     C = n(728444),
     S = n(811094),
     I = n(316945);
+
 function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -50,6 +53,7 @@ function N(e) {
     }
     return e;
 }
+
 function T(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -68,10 +72,19 @@ function T(e, t) {
         e
     );
 }
+
 function P(e) {
     let { style: t, withGuildIcon: n, inverted: l } = e,
         i = {
-            className: a()(I.GI, { [I.a7]: n }, { [I.BJ]: l }),
+            className: a()(
+                I.GI,
+                {
+                    [I.a7]: n,
+                },
+                {
+                    [I.BJ]: l,
+                },
+            ),
             style: t,
         },
         { density: s } = (0, u.wRf)();
@@ -170,7 +183,13 @@ let w = l.memo(function (e) {
                 null != l &&
                     (0, f.L3)(e, async () => {
                         let { default: e } = await n.e("33").then(n.bind(n, 44536));
-                        return (t) => (0, r.jsx)(e, T(N({}, t), { channel: l }));
+                        return (t) =>
+                            (0, r.jsx)(
+                                e,
+                                T(N({}, t), {
+                                    channel: l,
+                                }),
+                            );
                     });
             },
             [t.id],
@@ -217,19 +236,29 @@ let w = l.memo(function (e) {
                       mentionCount: G,
                   })
                 : L
-                  ? _.intl.formatToPlainString(_.t.YlVvmc, { channelName: t.name })
-                  : _.intl.formatToPlainString(_.t["0nZpiF"], { channelName: t.name });
+                  ? _.intl.formatToPlainString(_.t.YlVvmc, {
+                        channelName: t.name,
+                    })
+                  : _.intl.formatToPlainString(_.t["0nZpiF"], {
+                        channelName: t.name,
+                    });
     return (0, r.jsxs)("li", {
         role: W,
-        className: a()(C.fx, { [C.wH]: i }),
+        className: a()(C.fx, {
+            [C.wH]: i,
+        }),
         children: [
-            (0, r.jsx)(P, { withGuildIcon: R }),
+            (0, r.jsx)(P, {
+                withGuildIcon: R,
+            }),
             w
                 ? null
                 : (0, r.jsx)(P, {
                       withGuildIcon: R,
                       inverted: !0,
-                      style: { transform: "rotateX(180deg) translateY(-9px)" },
+                      style: {
+                          transform: "rotateX(180deg) translateY(-9px)",
+                      },
                   }),
             (0, r.jsx)(u.vN3, {
                 focusTarget: Y,
@@ -249,7 +278,11 @@ let w = l.memo(function (e) {
                     onMouseDown: F,
                     onContextMenu: H,
                     children: [
-                        !L || U || i ? null : (0, r.jsx)("div", { className: a()(S.gy, S.WS) }),
+                        !L || U || i
+                            ? null
+                            : (0, r.jsx)("div", {
+                                  className: a()(S.gy, S.WS),
+                              }),
                         (0, r.jsx)(
                             u.DUT,
                             T(N({}, z), {
@@ -257,7 +290,9 @@ let w = l.memo(function (e) {
                                 className: S.nf,
                                 onClick: V,
                                 "aria-label": q,
-                                focusProps: { enabled: !1 },
+                                focusProps: {
+                                    enabled: !1,
+                                },
                                 children: (0, r.jsxs)("div", {
                                     className: a()(S.Y5, S.__invalid_threadMainContent),
                                     children: [

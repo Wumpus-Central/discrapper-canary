@@ -1,4 +1,7 @@
-n.d(t, { A: () => p }), n(896048);
+n.d(t, {
+    A: () => p,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -16,7 +19,9 @@ let f = [
         {
             getQuestion: () => u.intl.string(u.t.ai4ym2),
             getAnswer: () =>
-                u.intl.format(u.t["8zlqlD"], { helpCenterUrl: l.A.getArticleURL(c.MVz.GUILD_BOOSTING_FAQ) }),
+                u.intl.format(u.t["8zlqlD"], {
+                    helpCenterUrl: l.A.getArticleURL(c.MVz.GUILD_BOOSTING_FAQ),
+                }),
         },
         {
             getQuestion: () => u.intl.string(u.t.kMVGsC),
@@ -68,7 +73,9 @@ let f = [
                                 className: d.Aw,
                                 children: [
                                     (0, r.jsxs)(o.DUT, {
-                                        className: s()(d.k7, { [d.lo]: i }),
+                                        className: s()(d.k7, {
+                                            [d.lo]: i,
+                                        }),
                                         onClick: () => a((e) => (e === t ? null : t)),
                                         tag: "li",
                                         children: [

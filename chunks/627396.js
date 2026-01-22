@@ -1,4 +1,8 @@
-n.d(e, { A: () => _ }), n(896048), n(228524);
+n.d(e, {
+    A: () => _,
+}),
+    n(896048),
+    n(228524);
 var a = n(627968),
     r = n(64700),
     i = n(311907),
@@ -9,6 +13,7 @@ var a = n(627968),
     u = n(985018),
     E = n(297002),
     A = n(222872);
+
 function _(t) {
     let { onNext: e, onClose: n, transitionState: _ } = t,
         [C, d] = r.useState(!1),
@@ -48,7 +53,9 @@ function _(t) {
         children: (0, a.jsx)(l.Text, {
             className: E.h_,
             variant: "text-md/normal",
-            children: u.intl.format(u.t.oMFSgi, { oldEmail: null == g ? void 0 : g.email }),
+            children: u.intl.format(u.t.oMFSgi, {
+                oldEmail: null == g ? void 0 : g.email,
+            }),
         }),
     });
 }

@@ -9,6 +9,7 @@ n.d(t, {
 var r = n(488428),
     i = n(372250);
 let a = "event";
+
 function s(e, t) {
     return null == t
         ? e
@@ -17,6 +18,7 @@ function s(e, t) {
               guildScheduledEventId: o(t),
           });
 }
+
 function o(e) {
     let t = "?" === e.charAt(0) ? e.substring(1) : e;
     try {
@@ -26,19 +28,25 @@ function o(e) {
         return;
     }
 }
+
 function l(e) {
     let { baseCode: t, guildScheduledEventId: n } = e;
     return null == n ? t : "".concat(t, "?").concat(a, "=").concat(n);
 }
+
 function c(e) {
     let [t, n] = e.split("?");
-    if (null == n) return { baseCode: t };
+    if (null == n)
+        return {
+            baseCode: t,
+        };
     let s = r.parse(n);
     return {
         baseCode: t,
         guildScheduledEventId: (0, i.p)(s[a]),
     };
 }
+
 function u(e) {
     let [t] = e.split("?");
     return t;

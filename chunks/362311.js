@@ -17,6 +17,7 @@ var i = n(627968),
     g = n(71393),
     _ = n(985018),
     L = n(435631);
+
 function u(t) {
     let { createdGuildId: e, hasFooter: n = !0, onClose: u, onChannelPromptCompleted: x, isSlideReady: T } = t,
         [E, G] = a.useState(""),
@@ -35,7 +36,9 @@ function u(t) {
                 h(!0), b(null);
                 let e = C.Ay.getDefaultChannel(U.id);
                 try {
-                    let t = _.intl.formatToPlainString(_.t.V4lepJ, { topic: E });
+                    let t = _.intl.formatToPlainString(_.t.V4lepJ, {
+                        topic: E,
+                    });
                     await d.A.createTextChannel(U.id, E, null == e ? void 0 : e.parent_id, t), x();
                 } catch (t) {
                     b(new c.Wl(t));
@@ -72,7 +75,10 @@ function u(t) {
                     direction: o.A.Direction.VERTICAL,
                     separator: !1,
                     children: [
-                        null != U && (0, i.jsx)(p.A, { guild: U }),
+                        null != U &&
+                            (0, i.jsx)(p.A, {
+                                guild: U,
+                            }),
                         (0, i.jsx)(s.Text, {
                             className: L.J5,
                             color: "text-strong",
@@ -134,6 +140,7 @@ function u(t) {
         footer: N,
     };
 }
+
 function x(t) {
     let { content: e } = u(t);
     return e;

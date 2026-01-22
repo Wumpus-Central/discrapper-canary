@@ -1,4 +1,7 @@
-n.d(t, { A: () => o }), n(896048);
+n.d(t, {
+    A: () => o,
+}),
+    n(896048);
 var l = n(627968),
     r = n(64700),
     a = n(397927),
@@ -49,5 +52,7 @@ let s = (e) => {
                     i,
                 );
             });
-        return (0, l.jsx)("div", { children: a });
+        return (0, l.jsx)("div", {
+            children: a,
+        });
     };

@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -13,6 +15,7 @@ var i = n(503698),
     p = n(705751),
     _ = n(985018),
     h = n(234054);
+
 function m(e) {
     let { message: t, compact: n, usernameHook: i } = e,
         m = (0, l.Ay)(t),
@@ -35,17 +38,27 @@ function m(e) {
         onMouseEnter: b,
         onMouseLeave: y,
         children: (0, r.jsx)(d.A, {
-            className: a()(h.rs, { [h.oE]: n }),
-            iconNode: n ? null : (0, r.jsx)(u.l, { src: E }),
+            className: a()(h.rs, {
+                [h.oE]: n,
+            }),
+            iconNode: n
+                ? null
+                : (0, r.jsx)(u.l, {
+                      src: E,
+                  }),
             iconContainerClassName: h.zc,
             compact: n,
             children: (0, r.jsxs)("div", {
-                className: a()(h.Qs, { [h.oE]: n }),
+                className: a()(h.Qs, {
+                    [h.oE]: n,
+                }),
                 children: [
                     (0, r.jsx)(c.ix, {
                         message: t,
                         messageClassname: h.he,
-                        className: a()(h.QV, h.he, { [h.oE]: n }),
+                        className: a()(h.QV, h.he, {
+                            [h.oE]: n,
+                        }),
                         username: (0, r.jsxs)("div", {
                             className: h.he,
                             children: [
@@ -66,7 +79,9 @@ function m(e) {
                         showTimestamp: !0,
                     }),
                     (0, r.jsx)("div", {
-                        className: a()(h.__invalid_messageContent, { [h.oE]: n }),
+                        className: a()(h.__invalid_messageContent, {
+                            [h.oE]: n,
+                        }),
                         children:
                             t.type === f.lAJ.GUILD_INCIDENT_ALERT_MODE_ENABLED
                                 ? _.intl.format(_.t["+m8eD7"], {

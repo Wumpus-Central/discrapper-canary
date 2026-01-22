@@ -1,4 +1,6 @@
-i.d(e, { n: () => A });
+i.d(e, {
+    n: () => A,
+});
 var n = i(311907),
     l = i(827343),
     s = i(793574),
@@ -15,7 +17,9 @@ let A = (0, r.zD)(a.X.STREAMING_STREAM_ATTENUATION, {
     },
     setValue: function (t) {
         let e = [s.A.USER_SETTINGS_VOICE_AND_VIDEO];
-        l.A.setSidechainCompression(t, { analyticsLocations: e });
+        l.A.setSidechainCompression(t, {
+            analyticsLocations: e,
+        });
     },
     usePredicate: function () {
         return u.A.supports(o.O5.SIDECHAIN_COMPRESSION);

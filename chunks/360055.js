@@ -1,4 +1,6 @@
-i.d(e, { a: () => d });
+i.d(e, {
+    a: () => d,
+});
 var n = i(64700),
     l = i(935649),
     s = i(847599),
@@ -23,7 +25,9 @@ let d = (0, a.zD)(A.X.CONTENT_AND_SOCIAL_AGE_RESTRICTED_IOS_SETTING, {
     },
     setValue: (t) => {
         (0, u.p5)() && t
-            ? l.A.showAgeVerificationGetStartedModal({ entryPoint: s.q1.AGE_RESTRICTED_SERVERS_ACCESS_SETTINGS })
+            ? l.A.showAgeVerificationGetStartedModal({
+                  entryPoint: s.q1.AGE_RESTRICTED_SERVERS_ACCESS_SETTINGS,
+              })
             : T.Kg.updateSetting(t);
     },
 });

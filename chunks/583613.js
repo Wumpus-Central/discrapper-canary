@@ -5,6 +5,7 @@ function r(e, t) {
     for (let r = 0; r < n; r++) if (e[r] !== t[r]) return !1;
     return !0;
 }
+
 function i(e) {
     let t = null,
         n = null;
@@ -13,9 +14,11 @@ function i(e) {
         return r(t, a) || (n = e(...a)), (t = a), n;
     };
 }
+
 function a(e) {
     for (var t in e) e.hasOwnProperty(t) && delete e[t];
 }
+
 function s(e) {
     for (let t in e) return !1;
     return !0;

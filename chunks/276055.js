@@ -16,16 +16,21 @@ var r = n(627968),
     _ = n(985018),
     h = n(792039),
     m = n(701939);
+
 function g(e) {
     return (null == e ? void 0 : e.id) === f.C;
 }
+
 function E(e) {
     let { title: t, onToggleExpand: f, expanded: g, expandedCount: E } = e,
         b = (0, a.bG)([u.A], () => u.A.hidden),
         y = i.useCallback((e) => {
             (0, o.L3)(e, async () => {
                 let { MemberListContentSettingsMenu: e } = await Promise.resolve().then(n.bind(n, 38055));
-                return () => (0, r.jsx)(e, { closePopout: o.Z_ });
+                return () =>
+                    (0, r.jsx)(e, {
+                        closePopout: o.Z_,
+                    });
             });
         }, []),
         O = () => {
@@ -33,10 +38,16 @@ function E(e) {
             return E <= 3 && !b
                 ? null
                 : ((e = b
-                      ? (0, r.jsx)(s.tN5, { className: h.wT })
+                      ? (0, r.jsx)(s.tN5, {
+                            className: h.wT,
+                        })
                       : g
-                        ? (0, r.jsx)(s.abt, { className: h.wT })
-                        : (0, r.jsx)(s._BQ, { className: h.wT })),
+                        ? (0, r.jsx)(s.abt, {
+                              className: h.wT,
+                          })
+                        : (0, r.jsx)(s._BQ, {
+                              className: h.wT,
+                          })),
                   (0, r.jsx)(s.vN3, {
                       children: (0, r.jsx)("div", {
                           tabIndex: 0,
@@ -68,7 +79,7 @@ function E(e) {
                         className: h.wx,
                         children: [
                             (0, r.jsxs)("span", {
-                                children: [t, " \u2014 ", E],
+                                children: [t, " — ", E],
                             }),
                             (0, r.jsx)(d.A, {}),
                         ],

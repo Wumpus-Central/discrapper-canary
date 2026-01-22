@@ -1,4 +1,7 @@
-n.d(t, { A: () => y }), n(896048);
+n.d(t, {
+    A: () => y,
+}),
+    n(896048);
 var r = n(64700),
     i = n(498419),
     l = n.n(i),
@@ -20,13 +23,16 @@ let E = new Set(["Blink", "Gecko", "WebKit"]),
     O = b.tEg;
 if (A.isPlatformEmbedded) O = (e) => g.Ay.setBadge(e);
 else if (E.has(s().layout)) {
-    let e = new (l())({ animation: "none" });
+    let e = new (l())({
+        animation: "none",
+    });
     O = (t) => {
         try {
-            (0, m.sF)(t), e.badge(-1 === t ? "\u2022" : t);
+            (0, m.sF)(t), e.badge(-1 === t ? "•" : t);
         } catch (e) {}
     };
 }
+
 function y() {
     let e = (0, o.bG)([h.A], () => h.A.hasIncomingCalls()),
         t = (0, o.bG)([d.default, f.A, p.A, c.A], () => {

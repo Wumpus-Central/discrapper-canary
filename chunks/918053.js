@@ -1,4 +1,6 @@
-i.d(e, { $: () => E });
+i.d(e, {
+    $: () => E,
+});
 var n = i(391973),
     l = i(395011),
     s = i(897720),
@@ -9,6 +11,7 @@ var n = i(391973),
     T = i(652215);
 i(392164);
 var A = i(985018);
+
 function S() {
     let t = l.A.getWidgetByType(T.uss.VOICE_V3);
     if (null == t) return null;
@@ -34,7 +37,11 @@ let E = (0, r.sN)(a.X.OVERLAY_VOICE_WIDGET_MAX_USERS, {
         let e = S();
         null != e &&
             (t < o.G6
-                ? (0, n.cC)(e.id, { voiceStatesMaxShown: -1 })
-                : (0, n.cC)(e.id, { voiceStatesMaxShown: Math.floor(t) }));
+                ? (0, n.cC)(e.id, {
+                      voiceStatesMaxShown: -1,
+                  })
+                : (0, n.cC)(e.id, {
+                      voiceStatesMaxShown: Math.floor(t),
+                  }));
     },
 });

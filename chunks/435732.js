@@ -1,4 +1,6 @@
-n.d(t, { A: () => x });
+n.d(t, {
+    A: () => x,
+});
 var r = n(627968),
     i = n(64700),
     l = n(417597),
@@ -10,6 +12,7 @@ var r = n(627968),
     u = n(520761),
     f = n(985018),
     g = n(659233);
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,6 +38,7 @@ function b(e) {
     }
     return e;
 }
+
 function m(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -60,7 +64,15 @@ let p = [],
                 var e;
                 return null != (e = d.A.getSettings().resourceChannels) ? e : p;
             }),
-            h = i.useMemo(() => x.map((e) => m(b({}, e), { id: e.channelId })), [x]),
+            h = i.useMemo(
+                () =>
+                    x.map((e) =>
+                        m(b({}, e), {
+                            id: e.channelId,
+                        }),
+                    ),
+                [x],
+            ),
             { handleDragStart: j, handleDragReset: O, handleDragComplete: y } = (0, a.A)(h, o.WA),
             v = i.useCallback(
                 (e, n) => {

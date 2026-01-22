@@ -1,7 +1,10 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(627968);
 n(64700);
 var i = n(280230);
+
 function a(e, t, n) {
     return (
         t in e
@@ -15,6 +18,7 @@ function a(e, t, n) {
         e
     );
 }
+
 function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -31,6 +35,7 @@ function s(e) {
     }
     return e;
 }
+
 function o(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -43,6 +48,7 @@ function o(e, t) {
     }
     return n;
 }
+
 function l(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -54,6 +60,7 @@ function l(e, t) {
         e
     );
 }
+
 function c(e) {
     return (
         (e.heading = i.defaultRules.heading),
@@ -61,7 +68,13 @@ function c(e) {
         (e.list = i.defaultRules.list),
         (e.paragraph = l(s({}, e.paragraph), {
             react: function (e, t, n) {
-                return (0, r.jsx)("p", { children: t(e.content, n) }, n.key);
+                return (0, r.jsx)(
+                    "p",
+                    {
+                        children: t(e.content, n),
+                    },
+                    n.key,
+                );
             },
         })),
         (e.link = l(s({}, e.link), {
@@ -77,10 +90,18 @@ function c(e) {
                 }
                 return (0, r.jsx)(
                     "a",
-                    l(s({ title: e.title }, a), {
-                        rel: "noreferrer",
-                        children: t(e.content, n),
-                    }),
+                    l(
+                        s(
+                            {
+                                title: e.title,
+                            },
+                            a,
+                        ),
+                        {
+                            rel: "noreferrer",
+                            children: t(e.content, n),
+                        },
+                    ),
                     n.key,
                 );
             },

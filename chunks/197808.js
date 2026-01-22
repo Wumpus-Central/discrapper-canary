@@ -1,4 +1,7 @@
-n.d(t, { A: () => G }), n(896048);
+n.d(t, {
+    A: () => G,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -30,6 +33,7 @@ var r = n(627968),
     P = n(806931),
     D = n(165610),
     x = n(315253);
+
 function L(e, t, n) {
     return (
         t in e
@@ -96,7 +100,9 @@ class U extends i.PureComponent {
                     resizeConfig: M,
                     getDockedRectPositionY: u,
                 }),
-                (0, r.jsx)(E.Md, { className: A ? x.ah : void 0 }),
+                (0, r.jsx)(E.Md, {
+                    className: A ? x.ah : void 0,
+                }),
             ],
         });
     }
@@ -143,7 +149,10 @@ let G = a.Ay.connectStores([y.A, o.Ay, C.A, O.A, S.A, T.A, I.A, f.A, A.Ay, _.A],
                 withTitleBar: E,
                 isFullScreen: W,
             })
-                ? e - (0, p.LI)({ isPopoutWindow: H })
+                ? e -
+                  (0, p.LI)({
+                      isPopoutWindow: H,
+                  })
                 : e;
     m =
         (null != L && x) || (H && M) || (H && null != F)

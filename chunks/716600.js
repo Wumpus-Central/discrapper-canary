@@ -1,4 +1,6 @@
-n.d(t, { t: () => A });
+n.d(t, {
+    t: () => A,
+});
 var r = n(627968);
 n(64700);
 var i = n(934551),
@@ -12,6 +14,7 @@ var i = n(934551),
     p = n(652215),
     f = n(985018),
     h = n(787076);
+
 function A(e) {
     var t, n, A, g;
     let {
@@ -41,7 +44,7 @@ function A(e) {
                 ? () =>
                       (0, r.jsxs)(r.Fragment, {
                           children: [
-                              "\xA0",
+                              "\xa0",
                               (0, r.jsx)(s.MzZ, {
                                   className: h.$T,
                                   href: c.A.getArticleURL(_.helpArticleId),
@@ -99,7 +102,7 @@ function A(e) {
                     o.default.track(p.HAw.CHANGE_LOG_CTA_CLICKED, {
                         change_log_id: v,
                         cta_type: N,
-                        seconds_open: Math.round((Date.now() - e) / 1000),
+                        seconds_open: Math.round((Date.now() - e) / 1e3),
                         target: v,
                     }),
                         T();

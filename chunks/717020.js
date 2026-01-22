@@ -1,4 +1,6 @@
-i.d(n, { default: () => _ });
+i.d(n, {
+    default: () => _,
+});
 var e = i(627968);
 i(64700);
 var a = i(158954),
@@ -12,8 +14,10 @@ var a = i(158954),
     d = i(355097),
     u = i(985018),
     E = i(575621);
+
 function _(t) {
     let { onClose: n, transitionState: i } = t;
+
     function _() {
         n();
         let t = (0, r.WJ)("LegacyChatInputExplanationModal");

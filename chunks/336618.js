@@ -1,4 +1,7 @@
-n.d(t, { A: () => W }), n(896048);
+n.d(t, {
+    A: () => W,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -33,6 +36,7 @@ var r = n(627968),
     L = n(985018),
     j = n(455424),
     M = n(111314);
+
 function k(e, t, n) {
     return (
         t in e
@@ -46,6 +50,7 @@ function k(e, t, n) {
         e
     );
 }
+
 function U(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -62,6 +67,7 @@ function U(e) {
     }
     return e;
 }
+
 function G(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -74,6 +80,7 @@ function G(e, t) {
     }
     return n;
 }
+
 function V(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -85,9 +92,18 @@ function V(e, t) {
         e
     );
 }
+
 function F(e) {
-    let { tooltipsWithKeybinds: t } = R.C.useConfig({ location: "GiftBoxAnimationButton" }),
-        n = i.useCallback(() => Promise.resolve({ default: e.boxAnimationUrl }), [e.boxAnimationUrl]);
+    let { tooltipsWithKeybinds: t } = R.C.useConfig({
+            location: "GiftBoxAnimationButton",
+        }),
+        n = i.useCallback(
+            () =>
+                Promise.resolve({
+                    default: e.boxAnimationUrl,
+                }),
+            [e.boxAnimationUrl],
+        );
     return (0, r.jsx)(d.m_, {
         shouldShow: t,
         text: L.intl.string(L.t.Ve9Ge6),
@@ -109,11 +125,26 @@ function F(e) {
         }),
     });
 }
+
 function B(e) {
     let { Component: t, events: n, play: a } = (0, u.T)(),
-        { tooltipsWithKeybinds: s } = R.C.useConfig({ location: "TrinketsAnimationButton" }),
-        o = i.useCallback(() => Promise.resolve({ default: e.trinketAnimationUrl }), [e.trinketAnimationUrl]),
-        l = i.useCallback(() => Promise.resolve({ default: e.trinketGlowAnimationUrl }), [e.trinketGlowAnimationUrl]),
+        { tooltipsWithKeybinds: s } = R.C.useConfig({
+            location: "TrinketsAnimationButton",
+        }),
+        o = i.useCallback(
+            () =>
+                Promise.resolve({
+                    default: e.trinketAnimationUrl,
+                }),
+            [e.trinketAnimationUrl],
+        ),
+        l = i.useCallback(
+            () =>
+                Promise.resolve({
+                    default: e.trinketGlowAnimationUrl,
+                }),
+            [e.trinketGlowAnimationUrl],
+        ),
         c = () => {
             var t;
             a(), null == (t = e.onClick) || t.call(e);
@@ -165,6 +196,7 @@ function B(e) {
     });
 }
 let H = I.A.Millis.DAYS_30;
+
 function Y(e) {
     var t, n;
     let { disabled: a, channel: u } = e,
@@ -193,9 +225,14 @@ function Y(e) {
                     gradient: e.colors,
                     angle: e.angle,
                 },
-                { defaultAngle: 180 },
+                {
+                    defaultAngle: 180,
+                },
             );
-            if ((null == t ? void 0 : t.background) != null) return { "--custom-promotion-gradient": t.background };
+            if ((null == t ? void 0 : t.background) != null)
+                return {
+                    "--custom-promotion-gradient": t.background,
+                };
         }, [null == M ? void 0 : M.gradient]),
         G = !(0, C.uJ)(null == M ? void 0 : M.boxAnimationUrl),
         V =
@@ -265,7 +302,9 @@ function Y(e) {
                         channel: u,
                     });
     return (0, r.jsx)("div", {
-        className: s()(j.kL, { [j.DM]: q }),
+        className: s()(j.kL, {
+            [j.DM]: q,
+        }),
         style: U,
         onMouseEnter: () => {
             f || I(!0);

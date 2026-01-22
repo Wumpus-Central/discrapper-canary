@@ -9,6 +9,7 @@ let a = !1,
     o = null,
     l = null,
     c = null;
+
 function u() {
     return a ? o : (0, i.isAndroid)() ? s : l;
 }

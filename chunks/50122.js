@@ -1,9 +1,12 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(812729),
     l = n.n(r),
     i = n(311907),
     a = n(242919),
     s = n(60821);
+
 function o() {
     let {
             recentStatuses: e,

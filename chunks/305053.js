@@ -1,4 +1,7 @@
-n.d(t, { A: () => E }), n(896048);
+n.d(t, {
+    A: () => E,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(989349),
@@ -20,6 +23,7 @@ var r = n(627968),
     y = n(49999),
     v = n(985018),
     A = n(918609);
+
 function E(e) {
     let { guild: t } = e;
     i.useEffect(() => {
@@ -50,13 +54,17 @@ function E(e) {
                               slot: "trigger",
                               className: A.wx,
                               children: [
-                                  (0, r.jsx)(d.EpV, { color: "currentColor" }),
+                                  (0, r.jsx)(d.EpV, {
+                                      color: "currentColor",
+                                  }),
                                   (0, r.jsx)(d.EYj, {
                                       variant: "heading-lg/semibold",
                                       tag: "span",
                                       children: v.intl.string(v.t["k60MO+"]),
                                   }),
-                                  (0, r.jsx)(d.g8p, { className: A.X1 }),
+                                  (0, r.jsx)(d.g8p, {
+                                      className: A.X1,
+                                  }),
                               ],
                           }),
                       }),
@@ -72,13 +80,21 @@ function E(e) {
                                       (0, r.jsxs)("ul", {
                                           className: A.Dj,
                                           children: [
-                                              (0, r.jsx)("li", { children: v.intl.format(v.t.tUarT8, {}) }),
-                                              (0, r.jsx)("li", { children: v.intl.format(v.t.r807RN, {}) }),
+                                              (0, r.jsx)("li", {
+                                                  children: v.intl.format(v.t.tUarT8, {}),
+                                              }),
+                                              (0, r.jsx)("li", {
+                                                  children: v.intl.format(v.t.r807RN, {}),
+                                              }),
                                           ],
                                       }),
                                   ],
                               }),
-                              (0, r.jsx)("p", { children: v.intl.format(v.t.vgAb6w, { breakingChangeDate: u }) }),
+                              (0, r.jsx)("p", {
+                                  children: v.intl.format(v.t.vgAb6w, {
+                                      breakingChangeDate: u,
+                                  }),
+                              }),
                           ],
                       }),
                   }),
@@ -95,13 +111,17 @@ function E(e) {
                               slot: "trigger",
                               className: A.wx,
                               children: [
-                                  (0, r.jsx)(d.EpV, { color: "currentColor" }),
+                                  (0, r.jsx)(d.EpV, {
+                                      color: "currentColor",
+                                  }),
                                   (0, r.jsx)(d.EYj, {
                                       variant: "heading-lg/semibold",
                                       tag: "span",
                                       children: v.intl.string(v.t["F+YaVP"]),
                                   }),
-                                  (0, r.jsx)(d.g8p, { className: A.X1 }),
+                                  (0, r.jsx)(d.g8p, {
+                                      className: A.X1,
+                                  }),
                               ],
                           }),
                       }),
@@ -117,8 +137,12 @@ function E(e) {
                                       (0, r.jsxs)("ul", {
                                           className: A.Dj,
                                           children: [
-                                              (0, r.jsx)("li", { children: v.intl.format(v.t.tUarT8, {}) }),
-                                              (0, r.jsx)("li", { children: v.intl.format(v.t.r807RN, {}) }),
+                                              (0, r.jsx)("li", {
+                                                  children: v.intl.format(v.t.tUarT8, {}),
+                                              }),
+                                              (0, r.jsx)("li", {
+                                                  children: v.intl.format(v.t.r807RN, {}),
+                                              }),
                                           ],
                                       }),
                                   ],
@@ -130,16 +154,29 @@ function E(e) {
                                       children: v.intl.string(v.t.bLwbyU),
                                   }),
                               }),
-                              (0, r.jsx)("p", { children: v.intl.format(v.t.eo5E6e, { breakingChangeDate: u }) }),
-                              (0, r.jsx)("p", { children: v.intl.format(v.t.iLwQzv, { breakingChangeDate: u }) }),
-                              (0, r.jsx)("div", { className: A.yF }),
-                              (0, r.jsx)(N, { guild: t }),
+                              (0, r.jsx)("p", {
+                                  children: v.intl.format(v.t.eo5E6e, {
+                                      breakingChangeDate: u,
+                                  }),
+                              }),
+                              (0, r.jsx)("p", {
+                                  children: v.intl.format(v.t.iLwQzv, {
+                                      breakingChangeDate: u,
+                                  }),
+                              }),
+                              (0, r.jsx)("div", {
+                                  className: A.yF,
+                              }),
+                              (0, r.jsx)(N, {
+                                  guild: t,
+                              }),
                           ],
                       }),
                   }),
               ],
           });
 }
+
 function N(e) {
     let { guild: t } = e,
         n = (0, u.bG)([x.A], () => x.A.can(O.xBc.ADMINISTRATOR, t)),
@@ -153,7 +190,9 @@ function N(e) {
               children: [
                   (0, r.jsxs)("fieldset", {
                       children: [
-                          (0, r.jsx)("legend", { children: v.intl.string(v.t["/SSzPD"]) }),
+                          (0, r.jsx)("legend", {
+                              children: v.intl.string(v.t["/SSzPD"]),
+                          }),
                           (0, r.jsx)(_, {
                               label: v.intl.string(v.t.KMbKTt),
                               migratedLabel: v.intl.string(v.t.IJKefK),
@@ -183,7 +222,9 @@ function N(e) {
                               }),
                               void g.A.show({
                                   title: v.intl.string(v.t.fM5aQ2),
-                                  body: v.intl.format(v.t.rLbJs6, { guildName: e.name }),
+                                  body: v.intl.format(v.t.rLbJs6, {
+                                      guildName: e.name,
+                                  }),
                                   cancelText: v.intl.string(v.t["ETE/oC"]),
                                   confirmText: v.intl.string(v.t["cY+Oob"]),
                                   onConfirm: () => {
@@ -195,8 +236,11 @@ function N(e) {
                   }),
               ],
           })
-        : (0, r.jsx)("p", { children: v.intl.string(v.t.hvFwHy) });
+        : (0, r.jsx)("p", {
+              children: v.intl.string(v.t.hvFwHy),
+          });
 }
+
 function _(e) {
     let { label: t, migratedLabel: n, migrated: i, enabled: l, onChange: s } = e;
     return (0, r.jsx)(d.Sc0, {

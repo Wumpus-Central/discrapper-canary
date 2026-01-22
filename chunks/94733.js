@@ -1,8 +1,11 @@
-r.d(t, { A: () => c });
+r.d(t, {
+    A: () => c,
+});
 var n = r(627968);
 r(64700);
 var o = r(732955),
     a = r(666171);
+
 function c(e) {
     var t, r;
     let { guildId: c, productId: l, attachmentId: i } = e,

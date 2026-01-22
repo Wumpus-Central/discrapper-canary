@@ -1,5 +1,8 @@
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 var r = n(697831);
+
 function i(e) {
     let { currentActivities: t, isSpotifyActivity: n } = e,
         i = t[0],

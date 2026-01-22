@@ -4,14 +4,17 @@ n.r(t),
         clearAnnouncer: () => s,
         destroyAnnouncer: () => o,
     });
-let r = 7000,
+let r = 7e3,
     i = null;
+
 function a(e, t = "assertive", n = r) {
     i || (i = new l()), i.announce(e, t, n);
 }
+
 function s(e) {
     i && i.clear(e);
 }
+
 function o() {
     i && (i.destroy(), (i = null));
 }

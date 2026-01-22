@@ -1,4 +1,8 @@
-n.d(t, { A: () => y }), n(896048), n(638769);
+n.d(t, {
+    A: () => y,
+}),
+    n(896048),
+    n(638769);
 var a = n(627968),
     l = n(64700),
     i = n(503698),
@@ -12,9 +16,11 @@ var a = n(627968),
     p = n(231643),
     h = n(661251),
     f = n(166812);
+
 function x(e, t) {
     return e.store.getName().localeCompare(t.store.getName());
 }
+
 function b(e) {
     let { store: t, dataGetter: n } = e,
         [i, r] = l.useState(n(t));
@@ -31,7 +37,9 @@ function b(e) {
         }, [t, n]),
         (0, a.jsx)(o.IpV, {
             className: f.Dx,
-            children: (0, a.jsx)(d.A, { data: i }),
+            children: (0, a.jsx)(d.A, {
+                data: i,
+            }),
         })
     );
 }
@@ -57,7 +65,9 @@ let g = [
                           className: f.Dx,
                           children: [
                               "Store is missing ",
-                              (0, a.jsx)("code", { children: "__getLocalVars" }),
+                              (0, a.jsx)("code", {
+                                  children: "__getLocalVars",
+                              }),
                               " method.",
                           ],
                       })
@@ -80,9 +90,15 @@ let g = [
             },
         },
     ];
+
 function j(e) {
     let { store: t, initialHeight: n } = e,
-        { TabBar: l, renderSelectedTab: i } = (0, p.Ay)({ tabs: v }, []);
+        { TabBar: l, renderSelectedTab: i } = (0, p.Ay)(
+            {
+                tabs: v,
+            },
+            [],
+        );
     return (0, a.jsxs)(u.A, {
         className: f.rf,
         minHeight: 100,
@@ -96,13 +112,18 @@ function j(e) {
                         icon: o.gqV,
                         tooltip: t.getName(),
                     }),
-                    (0, a.jsx)(c.Ay.Title, { children: t.getName() }),
+                    (0, a.jsx)(c.Ay.Title, {
+                        children: t.getName(),
+                    }),
                 ],
             }),
-            i({ store: t }),
+            i({
+                store: t,
+            }),
         ],
     });
 }
+
 function y() {
     let e = l.useRef(null),
         [t, n] = l.useState(""),

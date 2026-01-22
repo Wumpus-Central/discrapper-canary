@@ -1,4 +1,6 @@
-r.d(t, { default: () => s });
+r.d(t, {
+    default: () => s,
+});
 var n = r(627968),
     o = r(64700),
     a = r(397927),
@@ -6,6 +8,7 @@ var n = r(627968),
     c = r(871648),
     l = r(915908),
     u = r(985018);
+
 function s(e) {
     let { widget: t, onSelect: r, onClose: s } = e,
         p = (0, c.A)(t),

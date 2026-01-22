@@ -1,13 +1,19 @@
-n.d(t, { T: () => l }), n(938796);
+n.d(t, {
+    T: () => l,
+}),
+    n(938796);
 var r = n(562465),
     i = n(73153),
     a = n(529942),
     s = n(164956),
     o = n(652215);
+
 function l(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     return s.A.isFullServerPreview(e)
-        ? void (0, a.Z$)(e, { memberOptions: t })
+        ? void (0, a.Z$)(e, {
+              memberOptions: t,
+          })
         : (i.h.dispatch({
               type: "GUILD_MEMBER_UPDATE_LOCAL",
               guildId: e,

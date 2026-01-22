@@ -1,4 +1,7 @@
-n.d(t, { A: () => h }), n(896048);
+n.d(t, {
+    A: () => h,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(835245),
@@ -11,6 +14,7 @@ var r = n(627968),
     f = n(652215),
     p = n(6694);
 let _ = 50;
+
 function h(e) {
     let { channelId: t, guildId: n, userId: h, containerDimensions: m } = e,
         g = (0, s.bG)([l.A], () => l.A.useReducedMotion),
@@ -57,7 +61,9 @@ function h(e) {
         ? null
         : (0, r.jsx)("div", {
               className: p.Y,
-              style: { width: m.width },
+              style: {
+                  width: m.width,
+              },
               children: (0, r.jsx)("div", {
                   className: p.z,
                   children: E.map((e) =>

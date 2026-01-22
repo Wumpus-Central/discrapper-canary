@@ -12,6 +12,7 @@ var r = n(439372),
 n(741812);
 var c = n(522419),
     u = n(227724);
+
 function d(e, t, n) {
     return (
         t in e
@@ -29,6 +30,7 @@ n(100544);
 let f = 3 * o.A.Millis.DAY,
     p = 2 * o.A.Millis.DAY,
     _ = +o.A.Millis.HOUR;
+
 function h(e) {
     let { channelId: t } = e;
     if (null == t) return;
@@ -46,21 +48,26 @@ function h(e) {
             });
     }
 }
+
 function m(e) {
     let { state: t } = e;
 }
+
 function g() {
     var e;
     return (null != (e = (0, l.Iz)()) ? e : 0) > Date.now() - _;
 }
+
 function E(e) {
     return g() || Array.from(e).every((e) => b(e, !0));
 }
+
 function b(e) {
     var t;
     let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return !!(!n && g()) || (null != (t = (0, l.kP)(e)) ? t : 0) > Date.now() - p;
 }
+
 function y(e) {
     var t;
     return (null != (t = (0, l.Oz)(e)) ? t : 0) > Date.now() - f;

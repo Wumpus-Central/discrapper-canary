@@ -31,6 +31,7 @@ var i = n(627968),
     T = n(652215),
     w = n(985018),
     N = n(612986);
+
 function P(e, t, n) {
     return (
         t in e
@@ -44,6 +45,7 @@ function P(e, t, n) {
         e
     );
 }
+
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -64,7 +66,11 @@ let I = [];
 class _ extends s.PureComponent {
     componentDidMount() {
         this.timeout = setTimeout(() => {
-            this.setState({ fadeIn: !0 }), (this.timeout = null), this.logShownEventIfNeeded();
+            this.setState({
+                fadeIn: !0,
+            }),
+                (this.timeout = null),
+                this.logShownEventIfNeeded();
         }, 100);
     }
     componentDidUpdate() {
@@ -86,9 +92,13 @@ class _ extends s.PureComponent {
     render() {
         let { activity: e } = this.props;
         return (0, i.jsxs)("div", {
-            className: l()(N.F4, { [N.gV]: this.state.fadeIn }),
+            className: l()(N.F4, {
+                [N.gV]: this.state.fadeIn,
+            }),
             children: [
-                (0, i.jsx)("div", { className: N.GZ }),
+                (0, i.jsx)("div", {
+                    className: N.GZ,
+                }),
                 (0, i.jsx)("span", {
                     children: w.intl.format(w.t["i/MoCt"], {
                         game: e.name,
@@ -100,7 +110,9 @@ class _ extends s.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            P(this, "state", { fadeIn: !1 }),
+            P(this, "state", {
+                fadeIn: !1,
+            }),
             P(this, "timeout", null),
             P(this, "handleDismissInviteEducation", () => {
                 let { activity: e } = this.props;
@@ -108,6 +120,7 @@ class _ extends s.PureComponent {
             });
     }
 }
+
 function F(e) {
     let {
             activityInviteEducationActivity: t,
@@ -128,7 +141,15 @@ function F(e) {
             let e = p.current.getBoundingClientRect();
             v.current.scrollWidth + 48 > e.width ? A(!0) : A(!1);
         }, []);
-    if (((0, g.g)(p, O, [], { enabled: h }), (0, g.g)(v, O, [], { enabled: h }), 0 === r.length && !(m > 0)))
+    if (
+        ((0, g.g)(p, O, [], {
+            enabled: h,
+        }),
+        (0, g.g)(v, O, [], {
+            enabled: h,
+        }),
+        0 === r.length && !(m > 0))
+    )
         return null != t
             ? (0, i.jsx)(_, {
                   activity: t,
@@ -138,7 +159,9 @@ function F(e) {
     let [x, y, j] = r,
         S = "";
     1 === r.length
-        ? (S = w.intl.format(w.t.lJ9sZX, { a: x }))
+        ? (S = w.intl.format(w.t.lJ9sZX, {
+              a: x,
+          }))
         : 2 === r.length
           ? (S = w.intl.format(w.t.rB0CUa, {
                 a: x,
@@ -198,6 +221,7 @@ function F(e) {
         ],
     });
 }
+
 function k(e) {
     let t = (0, c.bG)([O.A], () => O.A.getTypingUsers(e.id)),
         n = (0, c.bG)([x.default], () => x.default.getCurrentUser());
@@ -210,10 +234,12 @@ function k(e) {
         .map((t) => C.Ay.getName(e.guild_id, e.id, t))
         .value();
 }
+
 function M(e) {
     let t = (0, c.bG)([A.A], () => A.A.findActivity((e) => null != e.application_id));
     return (0, c.bG)([v.A, p.A, b.A], () => (0, m.A)(e, t, v.A, p.A, b.A)) ? t : null;
 }
+
 function R(e) {
     var t, n;
     let { channel: s, isThreadCreation: r = !1 } = e,

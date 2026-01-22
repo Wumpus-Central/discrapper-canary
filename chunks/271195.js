@@ -18,6 +18,7 @@ var i = n(503698),
     h = n(598565),
     m = n(985018),
     g = n(319567);
+
 function E(e, t, n) {
     return (
         t in e
@@ -31,6 +32,7 @@ function E(e, t, n) {
         e
     );
 }
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -47,6 +49,7 @@ function b(e) {
     }
     return e;
 }
+
 function y(e, t) {
     if (null == e) return {};
     var n,
@@ -63,6 +66,7 @@ function y(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function O(e, t) {
     if (null == e) return {};
     var n,
@@ -73,6 +77,7 @@ function O(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function A(e) {
     let { title: t, onJumpToChannel: n, onHide: i, idle: a, preventIdleComponent: o } = e,
         c = (0, s.bG)([f.A], () => f.A.getChannelId()),
@@ -83,7 +88,9 @@ function A(e) {
                       idle: a,
                   })
                 : null,
-        { enabled: _ } = u.A.useExperiment({ location: "PictureInPicturePlayer" });
+        { enabled: _ } = u.A.useExperiment({
+            location: "PictureInPicturePlayer",
+        });
     return (0, r.jsxs)(o, {
         className: g.Nc,
         children: [
@@ -117,6 +124,7 @@ function A(e) {
         ],
     });
 }
+
 function v(e) {
     let {
             children: t,
@@ -154,7 +162,13 @@ function v(e) {
         onMouseMove: u,
         onMouseDown: u,
         onMouseLeave: f,
-        className: a()(g.Hu, { [g.N7]: n }, O),
+        className: a()(
+            g.Hu,
+            {
+                [g.N7]: n,
+            },
+            O,
+        ),
         onDoubleClick: i,
         children: [
             (0, r.jsx)(o.F, {
@@ -167,7 +181,17 @@ function v(e) {
                     l,
                 ),
             }),
-            null != m ? (0, r.jsx)(_.A, b({ size: "small" }, m)) : null,
+            null != m
+                ? (0, r.jsx)(
+                      _.A,
+                      b(
+                          {
+                              size: "small",
+                          },
+                          m,
+                      ),
+                  )
+                : null,
             !E &&
                 (0, r.jsxs)("div", {
                     className: a()(g._v, S, "theme-dark"),

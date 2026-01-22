@@ -1,10 +1,13 @@
-i.d(e, { default: () => c });
+i.d(e, {
+    default: () => c,
+});
 var n = i(627968);
 i(64700);
 var r = i(397927),
     l = i(651178),
     s = i(985018),
     a = i(31008);
+
 function c(t) {
     let { transitionState: e, onClose: i } = t;
     return (0, n.jsx)(r.kpP, {

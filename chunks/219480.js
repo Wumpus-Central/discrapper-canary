@@ -1,4 +1,9 @@
-l.d(t, { A: () => x }), l(896048), l(321073), l(228524);
+l.d(t, {
+    A: () => x,
+}),
+    l(896048),
+    l(321073),
+    l(228524);
 var n = l(627968),
     r = l(64700),
     i = l(110259),
@@ -17,9 +22,11 @@ var n = l(627968),
 let j = 16 / 9,
     h = [0, 16, 0, 16],
     g = h[1] + h[3];
+
 function O(e, t) {
     return Math.ceil(t / e);
 }
+
 function x(e) {
     let { channelId: t, filteredClips: x, totalClipCount: C, onClipClick: w } = e,
         [P, A] = r.useState(!0),
@@ -34,9 +41,13 @@ function x(e) {
         {
             type: i.ImpressionTypes.MODAL,
             name: i.ImpressionNames.CLIP_GALLERY_VIEWED,
-            properties: { number_of_clips_loaded: x.length },
+            properties: {
+                number_of_clips_loaded: x.length,
+            },
         },
-        { disableTrack: P },
+        {
+            disableTrack: P,
+        },
         [x.length, P],
     ),
         r.useEffect(
@@ -199,7 +210,9 @@ function x(e) {
                             (0, n.jsx)(
                                 "div",
                                 {
-                                    style: { width: L },
+                                    style: {
+                                        width: L,
+                                    },
                                     children: (0, n.jsx)(m.A, {
                                         actionsDisabled: N,
                                         isNew: S.includes(e.id),
@@ -268,5 +281,7 @@ function x(e) {
                   sectionHeaderHeight: K,
                   onResize: E,
               })
-        : (0, n.jsx)(f.A, { isEmptyBecauseQuery: C > 0 });
+        : (0, n.jsx)(f.A, {
+              isEmptyBecauseQuery: C > 0,
+          });
 }

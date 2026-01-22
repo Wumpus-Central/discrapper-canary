@@ -17,6 +17,7 @@ var r = n(954055),
     b = n(631735),
     y = a.isOptionKeyCommand,
     O = l.isBrowser("Chrome");
+
 function A(e, t, n) {
     switch (e) {
         case "redo":
@@ -50,6 +51,7 @@ function A(e, t, n) {
 e.exports = function (e, t) {
     var n = t.which,
         a = e._latestEditorState;
+
     function o(n) {
         var r = e.props[n];
         return !!r && (r(t), !0);
@@ -82,7 +84,7 @@ e.exports = function (e, t) {
     var l = e.props.keyBindingFn(t);
     if (null == l || "" === l) {
         if (n === s.SPACE && O && y(t)) {
-            var u = r.replaceText(a.getCurrentContent(), a.getSelection(), "\xA0");
+            var u = r.replaceText(a.getCurrentContent(), a.getSelection(), "\xa0");
             e.update(i.push(a, u, "insert-characters"));
         }
         return;

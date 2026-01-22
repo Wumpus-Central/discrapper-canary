@@ -1,4 +1,10 @@
-n.d(t, { A: () => v }), n(896048), n(864466), n(443073), n(228524);
+n.d(t, {
+    A: () => v,
+}),
+    n(896048),
+    n(864466),
+    n(443073),
+    n(228524);
 var r = n(627968),
     i = n(64700),
     l = n(311907),
@@ -18,6 +24,7 @@ var r = n(627968),
     j = n(652215),
     O = n(985018),
     y = n(64638);
+
 function v(e) {
     var t, n;
     let { guildId: v, setPreventNavigation: A = () => {} } = e,
@@ -161,7 +168,10 @@ function v(e) {
                 guildId: T,
                 existingRules: R,
             }),
-            I && (0, r.jsx)("div", { className: y.OL }),
+            I &&
+                (0, r.jsx)("div", {
+                    className: y.OL,
+                }),
         ],
     });
 }

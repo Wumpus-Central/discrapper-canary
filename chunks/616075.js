@@ -55,5 +55,13 @@ let r = (0, n(600975).C)({
             },
         ],
     }),
-    i = (e) => r.useExperiment({ location: e }, { autoTrackExposure: !0 }),
+    i = (e) =>
+        r.useExperiment(
+            {
+                location: e,
+            },
+            {
+                autoTrackExposure: !0,
+            },
+        ),
     a = r;

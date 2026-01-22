@@ -31,6 +31,7 @@ n(500208);
 var N = n(2242),
     R = n(985018),
     w = n(840199);
+
 function P(e) {
     let { className: t, onClick: n, children: i, buttonRef: a } = e;
     return (0, r.jsx)(u.$n, {
@@ -44,6 +45,7 @@ function P(e) {
         children: i,
     });
 }
+
 function D(e) {
     let { onClick: t } = e;
     return (0, r.jsx)(P, {
@@ -51,6 +53,7 @@ function D(e) {
         children: R.intl.string(R.t.R9GHya),
     });
 }
+
 function x(e) {
     switch (e) {
         case T.BEX.INTEGRATIONS:
@@ -63,9 +66,11 @@ function x(e) {
             return R.intl.string(R.t.MTIXhi);
     }
 }
+
 function L(e) {
     return e === T.BEX.ROLE_SUBSCRIPTIONS ? R.intl.string(R.t.hZUCzd) : R.intl.string(R.t["/djIh7"]);
 }
+
 function j() {
     let e = i.useRef(null),
         t = (0, o.bG)([b.A], () => b.A.getGuildId()),
@@ -99,7 +104,10 @@ function j() {
         className: w.lm,
         children: [
             (0, r.jsxs)(P, {
-                onClick: () => U({ backToSettings: !0 }),
+                onClick: () =>
+                    U({
+                        backToSettings: !0,
+                    }),
                 className: w.Gv,
                 children: [
                     (0, r.jsx)(y.A, {
@@ -125,13 +133,20 @@ function j() {
                           (0, r.jsx)("div", {
                               className: w.ut,
                               children: u
-                                  ? R.intl.formatToPlainString(R.t["0PHahI"], { numRoles: Object.keys(a).length })
-                                  : R.intl.formatToPlainString(R.t.vMlK8t, { numRoles: Object.keys(a).length }),
+                                  ? R.intl.formatToPlainString(R.t["0PHahI"], {
+                                        numRoles: Object.keys(a).length,
+                                    })
+                                  : R.intl.formatToPlainString(R.t.vMlK8t, {
+                                        numRoles: Object.keys(a).length,
+                                    }),
                           }),
                           (0, r.jsx)(d.YNO, {
                               targetElementRef: e,
                               position: "bottom",
-                              renderPopout: () => (0, r.jsx)(I.A, { guildId: t }),
+                              renderPopout: () =>
+                                  (0, r.jsx)(I.A, {
+                                      guildId: t,
+                                  }),
                               children: (t) => {
                                   let { onClick: n } = t;
                                   return (0, r.jsxs)(P, {
@@ -172,10 +187,18 @@ function j() {
                               }),
                       ],
                   }),
-            u || s === T.BEX.ROLE_SUBSCRIPTIONS ? null : (0, r.jsx)(D, { onClick: () => U({ backToSettings: !1 }) }),
+            u || s === T.BEX.ROLE_SUBSCRIPTIONS
+                ? null
+                : (0, r.jsx)(D, {
+                      onClick: () =>
+                          U({
+                              backToSettings: !1,
+                          }),
+                  }),
         ],
     });
 }
+
 function M(e) {
     let { guildId: t } = e;
     return (0, o.bG)([S.A], () => S.A.isViewingRoles(t))

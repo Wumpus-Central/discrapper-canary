@@ -1,5 +1,11 @@
 let r, i;
-n.d(t, { A: () => q }), n(321073), n(896048), n(638769), n(65821);
+n.d(t, {
+    A: () => q,
+}),
+    n(321073),
+    n(896048),
+    n(638769),
+    n(65821);
 var a,
     s = n(735438),
     o = n.n(s),
@@ -12,6 +18,7 @@ var a,
     _ = n(5463),
     h = n(881957),
     m = n(652215);
+
 function g(e, t, n) {
     return (
         t in e
@@ -25,6 +32,7 @@ function g(e, t, n) {
         e
     );
 }
+
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -41,6 +49,7 @@ function E(e) {
     }
     return e;
 }
+
 function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -53,6 +62,7 @@ function b(e, t) {
     }
     return n;
 }
+
 function y(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -385,19 +395,24 @@ let O = "migrated",
             version: 3,
         },
     };
+
 function I(e) {
     let { layoutId: t, widgets: n, version: a, defaultResolution: s } = e;
     if (null != r[t] && r[t].version === a) return !1;
     let o = [];
     n.forEach((e, t) => {
         let n = T(e.type),
-            r = y(E({}, e), { zIndex: t });
+            r = y(E({}, e), {
+                zIndex: t,
+            });
         "" === r.id && (r.id = (0, l.A)()),
             null != n &&
                 ((r.pinned = n.pinned),
                 -1 !== n.anchor.left && (r.anchor = (0, _.NO)(n.anchor, s)),
                 -1 !== n.size.width && (r.size = (0, _.R9)(n.size, s))),
-            (i = y(E({}, i), { [r.id]: new p.A(r) })),
+            (i = y(E({}, i), {
+                [r.id]: new p.A(r),
+            })),
             o.push(r.id);
     }),
         (r = y(E({}, r), {
@@ -408,6 +423,7 @@ function I(e) {
             }),
         }));
 }
+
 function T(e) {
     let t = r[O];
     if (null != t)
@@ -417,12 +433,14 @@ function T(e) {
         }
     return null;
 }
+
 function C(e, t) {
     let n = i[e];
     if (null == n) return !1;
     let a = r[n.layoutId];
     return null != a && t(n, a);
 }
+
 function N(e) {
     let { widgetId: t, anchor: n, size: r, opacity: i, minSize: a, defaultSize: s } = e;
     return C(t, (e, t) =>
@@ -436,10 +454,12 @@ function N(e) {
         }),
     );
 }
+
 function R(e) {
     let { widgetId: t } = e;
     return C(t, (e, t) => w(t, e.id));
 }
+
 function w(e, t) {
     let n = H(e);
     n.sort((e, t) => e.zIndex - t.zIndex);
@@ -449,22 +469,30 @@ function w(e, t) {
     for (let e = 0; e < n.length; e++) F(n[e], e);
     return !0;
 }
+
 function P(e) {
     let { widgetId: t, meta: n } = e;
     return C(t, (e, t) => {
         D(e, n);
     });
 }
+
 function D(e, t) {
     var n;
-    i = y(E({}, i), { [e.id]: e.merge({ meta: E({}, null != (n = e.meta) ? n : {}, t) }) });
+    i = y(E({}, i), {
+        [e.id]: e.merge({
+            meta: E({}, null != (n = e.meta) ? n : {}, t),
+        }),
+    });
 }
+
 function x(e) {
     let { widgetId: t, pinned: n } = e;
     return C(t, (e, t) => {
         B(e, n);
     });
 }
+
 function L(e) {
     let { widget: t, anchor: n, size: r, opacity: a, minSize: s, defaultSize: o } = e;
     if (
@@ -479,18 +507,31 @@ function L(e) {
         null != o)
     ) {
         let e = S[t.type];
-        null != e && (e.defaultSettings.size = E({ fixed: e.defaultSettings.size.fixed }, o));
+        null != e &&
+            (e.defaultSettings.size = E(
+                {
+                    fixed: e.defaultSettings.size.fixed,
+                },
+                o,
+            ));
     }
 }
+
 function j(e) {
-    i = y(E({}, i), { [e.id]: e.merge({ showExtrasHintTimestamp: Date.now() }) });
+    i = y(E({}, i), {
+        [e.id]: e.merge({
+            showExtrasHintTimestamp: Date.now(),
+        }),
+    });
 }
+
 function M(e) {
     let { widgetId: t } = e;
     return C(t, (e, t) => {
         j(e);
     });
 }
+
 function k(e) {
     let { widgetId: t } = e;
     (i = E({}, i)),
@@ -500,10 +541,14 @@ function k(e) {
             let i = e.widgets.indexOf(t);
             if (i >= 0) {
                 let t = [...e.widgets];
-                t.splice(i, 1), (r = y(E({}, r), { [n]: e.set("widgets", t) }));
+                t.splice(i, 1),
+                    (r = y(E({}, r), {
+                        [n]: e.set("widgets", t),
+                    }));
             }
         });
 }
+
 function U(e) {
     let { layoutId: t } = e,
         n = r[t];
@@ -511,29 +556,45 @@ function U(e) {
     n.widgets.forEach((e) => {
         (i = E({}, i)), delete i[e];
     }),
-        (r = y(E({}, r), { [n.id]: n.set("widgets", []) }));
+        (r = y(E({}, r), {
+            [n.id]: n.set("widgets", []),
+        }));
 }
+
 function G(e) {
     let { widgetConfigs: t } = e;
     t.forEach((e) => {
         let t = new p.A(e),
             n = r[t.layoutId];
         if (null == n) throw Error("LayoutStore - handleAddWidget: Invalid layoutId");
-        (t = t.set("zIndex", n.widgets.length)), (i = y(E({}, i), { [t.id]: t }));
+        (t = t.set("zIndex", n.widgets.length)),
+            (i = y(E({}, i), {
+                [t.id]: t,
+            }));
         let a = [...n.widgets, t.id];
-        r = y(E({}, r), { [n.id]: n.set("widgets", a) });
+        r = y(E({}, r), {
+            [n.id]: n.set("widgets", a),
+        });
     });
 }
+
 function V(e) {
     let { widgetType: t, defaultConfig: n } = e;
     S[t] = E({}, S[t], n);
 }
+
 function F(e, t) {
-    i = y(E({}, i), { [e.id]: e.set("zIndex", t) });
+    i = y(E({}, i), {
+        [e.id]: e.set("zIndex", t),
+    });
 }
+
 function B(e, t) {
-    i = y(E({}, i), { [e.id]: e.set("pinned", null != t ? t : !e.pinned) });
+    i = y(E({}, i), {
+        [e.id]: e.set("pinned", null != t ? t : !e.pinned),
+    });
 }
+
 function H(e) {
     let t = [];
     return (
@@ -544,6 +605,7 @@ function H(e) {
         t
     );
 }
+
 function Y(e) {
     let t = {};
     return (
@@ -553,6 +615,7 @@ function Y(e) {
         t
     );
 }
+
 function W(e) {
     let t = {};
     return (
@@ -562,6 +625,7 @@ function W(e) {
         t
     );
 }
+
 function K(e) {
     let t = S[e];
     if (null != t) return t.defaultSettings;
@@ -595,7 +659,9 @@ class z extends (a = c.Ay.PersistedStore) {
                         }),
                     )),
                         s.push(n),
-                        (i = y(E({}, i), { [c]: n }));
+                        (i = y(E({}, i), {
+                            [c]: n,
+                        }));
                 }
                 o &&
                     ((e = e.set(
@@ -605,7 +671,9 @@ class z extends (a = c.Ay.PersistedStore) {
                             return t;
                         }),
                     )),
-                    (r = y(E({}, r), { [a]: e })));
+                    (r = y(E({}, r), {
+                        [a]: e,
+                    })));
             }),
             o().forEach(i, (e, n) => {
                 let a = r[e.layoutId];
@@ -814,7 +882,9 @@ g(z, "displayName", "LayoutStore"),
                 r = {};
             for (let e in t) {
                 let n = t[e];
-                r[e] = y(E({}, n), { version: 0 });
+                r[e] = y(E({}, n), {
+                    version: 0,
+                });
             }
             return {
                 layouts: r,

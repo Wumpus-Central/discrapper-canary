@@ -1,9 +1,14 @@
-n.d(t, { A: () => c }), n(733351), n(896048);
+n.d(t, {
+    A: () => c,
+}),
+    n(733351),
+    n(896048);
 var r = n(440594),
     i = n(765379),
     l = n(960076),
     a = n(652215),
     s = n(985018);
+
 function o(e, t) {
     if (null != e && e.type === a.$pd.CUSTOM_STATUS) return null != e.state ? e.state.trim() : null;
     if (null != t) return null == e || e.type !== a.$pd.PLAYING ? s.intl.string(s.t.eXan7B) : e.name;
@@ -26,6 +31,7 @@ function o(e, t) {
             return o;
     }
 }
+
 function c(e, t) {
     if (Array.isArray(e)) {
         let n = e;

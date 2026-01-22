@@ -5,6 +5,7 @@ n.d(t, {
 var r = n(64700),
     i = n(580630),
     a = n(985018);
+
 function s(e) {
     return r.useMemo(() => {
         if (null == e) return;
@@ -19,6 +20,7 @@ function s(e) {
                 : void 0;
     }, [e]);
 }
+
 function o(e) {
     return r.useMemo(() => {
         if ((null == e ? void 0 : e.price) == null) return;

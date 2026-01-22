@@ -1,8 +1,11 @@
-n.d(t, { e: () => o });
+n.d(t, {
+    e: () => o,
+});
 var r = n(627968),
     i = n(64700),
     a = n(331322),
     s = n(977067);
+
 function o(e) {
     let {
             size: t = "md",

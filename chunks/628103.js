@@ -1,4 +1,7 @@
-r.d(t, { n: () => p }), r(65821);
+r.d(t, {
+    n: () => p,
+}),
+    r(65821);
 var a = r(64700),
     n = r(284009),
     s = r.n(n),
@@ -49,6 +52,7 @@ async function f(e, t, r) {
         await (0, o.zf)(e, t, r);
     } catch (e) {}
 }
+
 function p(e, t, r) {
     return a.useCallback(
         async (a, n) => {

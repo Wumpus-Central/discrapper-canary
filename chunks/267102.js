@@ -26,6 +26,7 @@ let u = new s.H(),
         windowId: (0, o.Xg)(),
     }),
     f = new Map();
+
 function p(e, t) {
     let [n, r] = i.useState((0, o.Q2)(t)),
         a = i.useMemo(() => new s.H(), []),
@@ -57,6 +58,7 @@ function p(e, t) {
         l
     );
 }
+
 function _(e) {
     var t;
     let n = e.ownerDocument.defaultView;
@@ -64,22 +66,27 @@ function _(e) {
     let r = (0, o.Q2)(n);
     return null == (t = f.get(r)) ? void 0 : t.windowDispatch;
 }
+
 function h(e) {
     var t;
     return (0, a.vq)(null == e ? void 0 : e.target) && null != (t = _(e.target)) ? t : null;
 }
+
 function m() {
     var e;
     let t = (0, l.Sf)();
     return null == t ? null : null != (e = f.get(t)) ? e : null;
 }
+
 function g(e) {
     return f.get(e);
 }
+
 function E() {
     let e = m();
     return null != e ? e.appContext : null;
 }
+
 function b(e) {
     let { appContext: t, renderWindow: n, children: i } = e,
         a = p(t, n);
@@ -88,9 +95,11 @@ function b(e) {
         children: i,
     });
 }
+
 function y() {
     return i.useContext(d).appContext;
 }
+
 function O() {
     return i.useContext(d).windowDispatch;
 }

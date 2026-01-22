@@ -27,6 +27,7 @@ var r = n(627968),
     O = n(287809),
     v = n(985018),
     H = n(457325);
+
 function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -52,6 +53,7 @@ function w(e) {
     }
     return e;
 }
+
 function A(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -70,18 +72,22 @@ function A(e, t) {
         e
     );
 }
+
 function D(e) {
     return e && "u" > typeof Symbol && e.constructor === Symbol ? "symbol" : typeof e;
 }
 let S = (0, b.Ld)(),
     _ = (0, b.Ld)(),
     N = "text-sm/medium";
+
 function P(e) {
     return 1 === e.type;
 }
+
 function V(e) {
     return 0 === e.type;
 }
+
 function L(e) {
     let t = "".concat(!e.name.includes(g.QP) ? "@" : "").concat(e.name);
     return {
@@ -97,6 +103,7 @@ function L(e) {
         },
     };
 }
+
 function E(e) {
     let t = (0, C.m1)(e, O.default, y.A);
     return {
@@ -136,7 +143,22 @@ let M = l.memo(function (e) {
                 background: !1,
                 tooltip: !1,
             }),
-            null != u ? (0, r.jsx)(j.A, A(w({ className: H.YS }, u), { enableTooltip: !1 })) : f,
+            null != u
+                ? (0, r.jsx)(
+                      j.A,
+                      A(
+                          w(
+                              {
+                                  className: H.YS,
+                              },
+                              u,
+                          ),
+                          {
+                              enableTooltip: !1,
+                          },
+                      ),
+                  )
+                : f,
             (0, r.jsx)(d.Text, {
                 variant: N,
                 className: H.pP,
@@ -145,12 +167,20 @@ let M = l.memo(function (e) {
         ],
     });
 });
+
 function R(e) {
     let { channel: t, row: n, className: l } = e,
         i = null != t.parent_id,
         a = (0, f.gU)(t);
     return (0, r.jsxs)("div", {
-        className: o()(H.xZ, H.sM, { [H.p7]: i }, l),
+        className: o()(
+            H.xZ,
+            H.sM,
+            {
+                [H.p7]: i,
+            },
+            l,
+        ),
         children: [
             null != a &&
                 (0, r.jsx)(a, {
@@ -165,6 +195,7 @@ function R(e) {
         ],
     });
 }
+
 function I(e, t, n) {
     return P(e)
         ? (0, r.jsx)(
@@ -188,6 +219,7 @@ function I(e, t, n) {
             )
           : null;
 }
+
 function T(e) {
     let {
             guildId: t,
@@ -319,7 +351,12 @@ function T(e) {
             () =>
                 y.map((e) => {
                     var n;
-                    return (n = g[e]), A(w({}, n.tag), { label: I(n.row, t, H.yS) });
+                    return (
+                        (n = g[e]),
+                        A(w({}, n.tag), {
+                            label: I(n.row, t, H.yS),
+                        })
+                    );
                 }),
             [g, y, t],
         );

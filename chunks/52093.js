@@ -9,10 +9,19 @@ var l = n(503698),
     r = n(397927);
 n(714510), n(92246), n(985018);
 var s = n(718493);
+
 function o(e) {
     let { children: t, isComplete: n, hasNextStep: l } = e;
     return (0, a.jsxs)("li", {
-        className: i()(s.gY, { [s.HP]: n }, { [s.h4]: l }),
+        className: i()(
+            s.gY,
+            {
+                [s.HP]: n,
+            },
+            {
+                [s.h4]: l,
+            },
+        ),
         children: [
             (0, a.jsxs)("div", {
                 className: s.cJ,
@@ -26,7 +35,10 @@ function o(e) {
                                 color: r.LU0.colors.WHITE,
                             }),
                     }),
-                    l && (0, a.jsx)("div", { className: s.UK }),
+                    l &&
+                        (0, a.jsx)("div", {
+                            className: s.UK,
+                        }),
                 ],
             }),
             (0, a.jsx)("div", {
@@ -36,6 +48,7 @@ function o(e) {
         ],
     });
 }
+
 function c(e) {
     let { children: t } = e;
     return (0, a.jsx)(r.Text, {

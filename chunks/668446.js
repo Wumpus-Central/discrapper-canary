@@ -19,6 +19,7 @@ var r = n(64700),
     g = n(576705),
     m = n(661191),
     A = n(652215);
+
 function y(e, t) {
     return (0, a.cf)(
         [g.A],
@@ -31,6 +32,7 @@ function y(e, t) {
         [t, e],
     );
 }
+
 function O(e) {
     var t;
     let n, l, s, g, y, O;
@@ -61,6 +63,7 @@ function O(e) {
         guildChannelCreated: (0, a.bG)([d.Ay], () => {
             let t = d.Ay.getChannels(null == e ? void 0 : e.id),
                 n = t[d.vM];
+
             function r(t) {
                 return null != e && m.default.extractTimestamp(t.channel.id) - m.default.extractTimestamp(e.id) > 500;
             }

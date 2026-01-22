@@ -1,4 +1,7 @@
-r.d(t, { A: () => u }), r(321073);
+r.d(t, {
+    A: () => u,
+}),
+    r(321073);
 var n,
     c = r(627968),
     i = r(64700),
@@ -103,7 +106,9 @@ let s = {
                 {
                     actions: d,
                     children: [
-                        (0, c.jsx)("div", { className: a[s[o]] }),
+                        (0, c.jsx)("div", {
+                            className: a[s[o]],
+                        }),
                         (0, c.jsx)("div", {
                             className: a.message,
                             children: n,

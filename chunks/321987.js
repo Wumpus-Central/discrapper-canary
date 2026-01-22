@@ -14,6 +14,7 @@ var i = n(503698),
     d = n(652215),
     f = n(985018),
     p = n(105199);
+
 function _(e, t, n) {
     return (
         t in e
@@ -27,6 +28,7 @@ function _(e, t, n) {
         e
     );
 }
+
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -43,6 +45,7 @@ function h(e) {
     }
     return e;
 }
+
 function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -55,6 +58,7 @@ function m(e, t) {
     }
     return n;
 }
+
 function g(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -66,6 +70,7 @@ function g(e, t) {
         e
     );
 }
+
 function E(e, t) {
     if (null == e) return {};
     var n,
@@ -82,6 +87,7 @@ function E(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function b(e, t) {
     if (null == e) return {};
     var n,
@@ -92,16 +98,21 @@ function b(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function y(e) {
     let { children: t, removeChildWrapper: n, wrapperClassName: i } = e;
-    (0, c.HU)({ location: f.intl.string(f.t["3S2494"]) });
+    (0, c.HU)({
+        location: f.intl.string(f.t["3S2494"]),
+    });
     let s = (0, o.bG)([u.A], () => u.A.isDeveloper) ? "92px" : void 0;
     return (0, r.jsx)(l.NPJ, {
         theme: d.NJ8.DARK,
         children: (e) =>
             (0, r.jsx)("div", {
                 className: a()(e, p.Y, i),
-                style: { marginBottom: s },
+                style: {
+                    marginBottom: s,
+                },
                 children:
                     !0 === n
                         ? t
@@ -112,6 +123,7 @@ function y(e) {
             }),
     });
 }
+
 function O(e) {
     var t, n;
     let { hideHeader: i } = e,
@@ -134,7 +146,9 @@ function O(e) {
                     controls: a.input,
                     children: a.children,
                 }),
-                (0, r.jsx)(s.jlY, { children: a.preview }),
+                (0, r.jsx)(s.jlY, {
+                    children: a.preview,
+                }),
                 (0, r.jsx)(s.H7u, {
                     leading: a.actionBarInput,
                     actions: null != (n = a.actions) ? n : [],

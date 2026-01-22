@@ -1,4 +1,7 @@
-a.d(t, { default: () => P }), a(896048);
+a.d(t, {
+    default: () => P,
+}),
+    a(896048);
 var r = a(627968),
     n = a(64700),
     o = a(397927),
@@ -20,6 +23,7 @@ var r = a(627968),
     j = a(381941),
     x = a(985018),
     h = a(588187);
+
 function v(e) {
     let { sku: t, guildId: a } = e,
         c = (0, i.h)(t.applicationId),
@@ -69,6 +73,7 @@ function v(e) {
         ],
     });
 }
+
 function P(e) {
     var t, a;
     let { sku: s, guildId: i, source: _, onClose: h, analyticsLocations: P, analyticsContext: k } = e,

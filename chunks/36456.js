@@ -1,4 +1,6 @@
-t.d(l, { default: () => c });
+t.d(l, {
+    default: () => c,
+});
 var n = t(627968),
     i = t(311907),
     s = t(397927),

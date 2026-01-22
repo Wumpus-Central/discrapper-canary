@@ -1,4 +1,6 @@
-n.d(t, { A: () => S });
+n.d(t, {
+    A: () => S,
+});
 var r = n(627968),
     i = n(64700),
     a = n(421380),
@@ -20,6 +22,7 @@ n(820575);
 var y = n(652215),
     O = n(985018),
     A = n(842130);
+
 function v(e) {
     let { ingress: t, guildId: n } = e,
         E = (0, p.q9)(),
@@ -40,6 +43,7 @@ function v(e) {
             },
             [n, t],
         );
+
     function N(e, t) {
         l.default.track(y.HAw.GUILD_DEFAULT_DMS_UPDATED, {
             default_guilds_restricted: e,
@@ -87,6 +91,7 @@ function v(e) {
                   }),
     });
 }
+
 function S(e) {
     let { ingress: t = E.bf.USER_SETTINGS_PRIVACY_SAFETY, guildId: n } = e,
         i = (0, p.Tx)();

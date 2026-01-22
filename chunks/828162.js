@@ -1,9 +1,12 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(492462),
     i = n(976860),
     a = n(568065),
     s = n(652215),
     o = n(746080);
+
 function l(e, t, n) {
     return (
         t in e
@@ -17,6 +20,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -33,6 +37,7 @@ function c(e) {
     }
     return e;
 }
+
 function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -45,6 +50,7 @@ function u(e, t) {
     }
     return n;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -56,7 +62,20 @@ function d(e, t) {
         e
     );
 }
+
 function f(e, t, n) {
-    let l = null != n ? { search: (0, r.stringify)({ [a.G0]: n }) } : void 0;
-    (0, i.pX)(s.BVt.CHANNEL(e, o.VV.GUILD_BOOSTS), d(c({}, l), { source: t }));
+    let l =
+        null != n
+            ? {
+                  search: (0, r.stringify)({
+                      [a.G0]: n,
+                  }),
+              }
+            : void 0;
+    (0, i.pX)(
+        s.BVt.CHANNEL(e, o.VV.GUILD_BOOSTS),
+        d(c({}, l), {
+            source: t,
+        }),
+    );
 }

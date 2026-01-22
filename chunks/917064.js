@@ -1,4 +1,7 @@
-n.d(t, { A: () => f }), n(228524);
+n.d(t, {
+    A: () => f,
+}),
+    n(228524);
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -7,6 +10,7 @@ var i = n(503698),
     o = n(985018),
     l = n(463006),
     c = n(93364);
+
 function u(e) {
     let { className: t } = e;
     return (0, r.jsx)("img", {
@@ -17,7 +21,7 @@ function u(e) {
 }
 let d = [
     {
-        icon: s.vRF,
+        icon: s._Jp,
         getText: () => o.intl.string(o.t.TZigSO),
     },
     {
@@ -33,6 +37,7 @@ let d = [
         getText: () => o.intl.string(o.t.bJoZKV),
     },
 ];
+
 function f(e) {
     let { className: t } = e;
     return (0, r.jsxs)("div", {
@@ -52,7 +57,9 @@ function f(e) {
                         {
                             className: l.Nr,
                             children: [
-                                (0, r.jsx)(n, { className: l.Kk }),
+                                (0, r.jsx)(n, {
+                                    className: l.Kk,
+                                }),
                                 (0, r.jsx)(s.Text, {
                                     className: l.h_,
                                     color: "text-muted",

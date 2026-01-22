@@ -8,6 +8,7 @@ var r = n(743595),
     u = n(882270),
     d = n(4323),
     f = n(670200);
+
 function p(e, t) {
     var n = null,
         r = null,
@@ -23,6 +24,7 @@ function p(e, t) {
     var l = f(s(n));
     return c(t, l, r, l, r);
 }
+
 function _(e) {
     e._internalDrag = !1;
     var t = e.editorContainer;
@@ -35,10 +37,12 @@ function _(e) {
         t.dispatchEvent(n);
     }
 }
+
 function h(e, t) {
     var n = i.moveText(e.getCurrentContent(), e.getSelection(), t);
     return a.push(e, n, "insert-fragment");
 }
+
 function m(e, t, n) {
     var r = i.insertText(e.getCurrentContent(), t, n, e.getCurrentInlineStyle());
     return a.push(e, r, "insert-fragment");

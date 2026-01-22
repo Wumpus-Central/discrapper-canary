@@ -41,7 +41,7 @@ let a = ">=22.0.0",
     d = ">=10.0.26100",
     f = 26100,
     p = ">=10.0.22000",
-    _ = 22000;
+    _ = 22e3;
 var h = (function (e) {
     return (e.GUILD = "guild"), (e.CALL = "call"), e;
 })({});

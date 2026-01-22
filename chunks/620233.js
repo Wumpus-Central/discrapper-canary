@@ -9,6 +9,7 @@ var r = n(311907),
     o = n(217222),
     l = n(375441),
     c = n(652215);
+
 function u(e, t) {
     if (null == e) return {};
     var n,
@@ -25,6 +26,7 @@ function u(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function d(e, t) {
     if (null == e) return {};
     var n,
@@ -40,7 +42,9 @@ async function f(e) {
         let t = (
             await i.Bo.get({
                 url: c.Rsh.APEX_EXPERIMENTS_METADATA,
-                query: { surface: e },
+                query: {
+                    surface: e,
+                },
                 rejectWithError: !0,
             })
         ).body.experiments.map((e) => ({
@@ -60,7 +64,10 @@ async function f(e) {
             experiments: t,
         });
     } catch (e) {
-        s.h.dispatch({ type: "APEX_EXPERIMENTS_METADATA_FETCH_FAILURE" }), console.log(e);
+        s.h.dispatch({
+            type: "APEX_EXPERIMENTS_METADATA_FETCH_FAILURE",
+        }),
+            console.log(e);
     }
 }
 async function p(e) {
@@ -72,7 +79,9 @@ async function p(e) {
         try {
             let e = await i.Bo.get({
                 url: c.Rsh.APEX_EXPERIMENTS,
-                query: { surface: a.Um.APP },
+                query: {
+                    surface: a.Um.APP,
+                },
                 rejectWithError: !1,
             });
             if ((null == e ? void 0 : e.body) != null) {

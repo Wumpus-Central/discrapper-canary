@@ -10,6 +10,7 @@ var r,
     s = n(817363),
     o = n(693591),
     l = n(985018);
+
 function c(e, t, n) {
     return (
         t in e
@@ -23,6 +24,7 @@ function c(e, t, n) {
         e
     );
 }
+
 function u() {
     return [
         {
@@ -31,6 +33,7 @@ function u() {
         },
     ];
 }
+
 function d(e, t) {
     if (null != e) {
         let n = new FileReader();
@@ -41,6 +44,7 @@ function d(e, t) {
             n.readAsDataURL(e);
     }
 }
+
 function f(e, t, n) {
     d(e, (r) => {
         if (e.type === o.a.MP4) return t(r, e);

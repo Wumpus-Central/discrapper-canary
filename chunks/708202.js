@@ -1,4 +1,6 @@
-n.d(t, { default: () => L });
+n.d(t, {
+    default: () => L,
+});
 var r = n(627968);
 n(64700);
 var l = n(311907),
@@ -69,7 +71,9 @@ let L = (0, s.A)(
                     channelId: k,
                     context: s,
                 }),
-                $ = (0, h.A)({ user: t }),
+                $ = (0, h.A)({
+                    user: t,
+                }),
                 { analyticsLocations: z } = (0, A.Ay)(d.A.THREAD_USER_MENU),
                 ee = (0, g.A)({
                     guildId: n,
@@ -87,9 +91,15 @@ let L = (0, s.A)(
                     guildId: n,
                 }),
                 en = (0, c.A)(null, t),
-                er = (0, j.A)({ user: t }),
-                el = (0, y.A)({ user: t }),
-                ei = (0, G.A)({ user: t }),
+                er = (0, j.A)({
+                    user: t,
+                }),
+                el = (0, y.A)({
+                    user: t,
+                }),
+                ei = (0, G.A)({
+                    user: t,
+                }),
                 ea = (0, P.A)({
                     user: t,
                     guildId: n,
@@ -127,25 +137,35 @@ let L = (0, s.A)(
                     !eg &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
-                                (0, r.jsx)(i.rXV, { children: eA }),
+                                (0, r.jsx)(i.rXV, {
+                                    children: eA,
+                                }),
                                 (0, r.jsxs)(i.rXV, {
                                     children: [X, H, W, K, q, Q, $, F],
                                 }),
-                                (0, r.jsx)(i.rXV, { children: en }),
+                                (0, r.jsx)(i.rXV, {
+                                    children: en,
+                                }),
                                 (0, r.jsxs)(i.rXV, {
                                     children: [ee, eb, et, er, el, ei, eo, ea],
                                 }),
-                                (0, r.jsx)(i.rXV, { children: es }),
+                                (0, r.jsx)(i.rXV, {
+                                    children: es,
+                                }),
                                 (0, r.jsxs)(i.rXV, {
                                     children: [eu, ec],
                                 }),
                             ],
                         }),
-                    (0, r.jsx)(i.rXV, { children: ed }),
+                    (0, r.jsx)(i.rXV, {
+                        children: ed,
+                    }),
                 ],
             });
         },
-        { object: D.ZSU.CONTEXT_MENU },
+        {
+            object: D.ZSU.CONTEXT_MENU,
+        },
     ),
     [d.A.CONTEXT_MENU, d.A.THREAD_USER_MENU],
 );

@@ -1,4 +1,6 @@
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var a = n(627968),
     l = n(64700),
     i = n(417597),
@@ -60,7 +62,9 @@ let y = (e) => {
                 variant: "text-md/medium",
                 color: "text-muted",
                 lineClamp: 1,
-                children: v.intl.format(v.t.Io7ozn, { days: e.days.toString() }),
+                children: v.intl.format(v.t.Io7ozn, {
+                    days: e.days.toString(),
+                }),
             });
         }
         return A && !R

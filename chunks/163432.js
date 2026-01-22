@@ -18,11 +18,13 @@ var l = n(627968),
 let p = 112,
     b = (16 / 9) * 112 + 8,
     g = 10 * o.A.Millis.SECOND;
+
 function m(e) {
     var t;
     let n = s.default.getId();
     return e.type === d.lp.USER && e.user.id === n && (null == (t = e.voiceState) ? void 0 : t.selfVideo);
 }
+
 function h(e, t) {
     let n =
             arguments.length > 2 && void 0 !== arguments[2]
@@ -70,8 +72,8 @@ function h(e, t) {
                                         .concat(i)
                                         .concat(
                                             ((l = e.lastSpoke),
-                                            (r = String(8640000000000000).length),
-                                            String(8640000000000000 - l).padStart(r, "0")),
+                                            (r = String(864e13).length),
+                                            String(864e13 - l).padStart(r, "0")),
                                         )
                                         .concat((0, a.A)(e.userNick, e.user))
                                 );
@@ -118,6 +120,7 @@ function h(e, t) {
         participantTileWidth: E,
     };
 }
+
 function A(e) {
     let {
         participants: t,
@@ -140,7 +143,11 @@ function A(e) {
                 "div",
                 {
                     className: f.eP,
-                    style: t ? { flexShrink: 0 } : void 0,
+                    style: t
+                        ? {
+                              flexShrink: 0,
+                          }
+                        : void 0,
                     children: (0, l.jsx)(u.Ay, {
                         participant: e,
                         selected: r === e.id,

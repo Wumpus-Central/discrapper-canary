@@ -1,4 +1,7 @@
-n.d(t, { A: () => b }), n(896048);
+n.d(t, {
+    A: () => b,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(397927),
@@ -18,6 +21,7 @@ let m = (0, c.Ld)(),
         type: p.rbe.DM,
     }),
     E = (0, c.Ld)();
+
 function b(e) {
     let {
             sectionTitle: t,
@@ -32,9 +36,11 @@ function b(e) {
         [S, I] = i.useState((0, o.x7)(A)),
         T = i.useRef(y),
         C = i.useRef(!1);
+
     function N(e, t, n) {
         t !== A && (v(t), I(n), c(t));
     }
+
     function R() {
         return new Promise((e) => {
             e({
@@ -83,7 +89,9 @@ function b(e) {
                 }),
                 (0, r.jsx)(a.AC4, {
                     id: E,
-                    children: _.intl.format(_.t["+DFxLc"], { maxLength: p.NA2 }),
+                    children: _.intl.format(_.t["+DFxLc"], {
+                        maxLength: p.NA2,
+                    }),
                 }),
             ],
         })

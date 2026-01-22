@@ -6,6 +6,7 @@ var r = n(417597),
     i = n(508675),
     a = n(307731);
 let s = [];
+
 function o(e) {
     let { emojiStoreInstance: t = i.Ay, guildId: n, pickerIntention: r } = e;
     return {
@@ -13,6 +14,7 @@ function o(e) {
         newlyAddedEmojis: r !== a.b_.REACTION ? t.getNewlyAddedEmoji(n) : s,
     };
 }
+
 function l(e, t) {
     return (0, r.cf)(
         [i.Ay],

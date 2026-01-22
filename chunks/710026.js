@@ -1,5 +1,8 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 let r = new (n(762490).A)(i);
+
 function i(e) {
     {
         let t = n(14206).S[e];

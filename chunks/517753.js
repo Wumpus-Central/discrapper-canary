@@ -1,4 +1,6 @@
-r.d(t, { A: () => b });
+r.d(t, {
+    A: () => b,
+});
 var n = r(627968);
 r(64700);
 var l = r(421380),
@@ -16,6 +18,7 @@ var l = r(421380),
     j = r(191850),
     m = r(985018),
     g = r(827025);
+
 function b(e) {
     var t, r, b;
     let { onClose: v } = e,
@@ -33,7 +36,10 @@ function b(e) {
                       intervalType: null == S || null == (r = S.subscription_trial) ? void 0 : r.interval,
                       intervalCount: null == S || null == (b = S.subscription_trial) ? void 0 : b.interval_count,
                   }))
-                : null != A && (O = m.intl.formatToPlainString(m.t.bkQ4bH, { percent: A.discount.amount }))),
+                : null != A &&
+                  (O = m.intl.formatToPlainString(m.t.bkQ4bH, {
+                      percent: A.discount.amount,
+                  }))),
         (0, n.jsxs)("div", {
             className: g.zr,
             children: [

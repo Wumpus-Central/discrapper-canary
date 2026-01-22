@@ -15,9 +15,14 @@ var i = n(311907),
     d = n(427262),
     f = n(652215),
     p = n(985018);
+
 function _(e, t) {
     let { id: n } = e,
-        r = "@".concat(d.Ay.getUserTag(e, { decoration: "never" })),
+        r = "@".concat(
+            d.Ay.getUserTag(e, {
+                decoration: "never",
+            }),
+        ),
         i = "<@".concat(n, ">");
     u._.dispatchToLastSubscribed(f.jej.INSERT_TEXT, {
         plainText: r,
@@ -25,6 +30,7 @@ function _(e, t) {
     }),
         null != t && s.A.startTyping(t);
 }
+
 function h(e, t, n) {
     let [s, u] = (0, i.yK)([c.A, o.A, l.A], () => {
             let e = c.A.getChannelId(t),
@@ -33,6 +39,7 @@ function h(e, t, n) {
         }, [t]),
         d = n === f.BRT.POPOUT;
     if (!u || d) return null;
+
     function h() {
         _(e, s);
     }

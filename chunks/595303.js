@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968);
 n(64700);
 var i = n(417597),
@@ -9,6 +11,7 @@ var i = n(417597),
     o = n(287809),
     d = n(11351),
     u = n(985018);
+
 function f(e) {
     let { guildId: t, application: f } = e,
         g = (0, i.bG)([c.A], () => c.A.getGuild(t)),
@@ -21,9 +24,16 @@ function f(e) {
             (0, r.jsx)(s.Text, {
                 variant: "text-sm/normal",
                 color: m ? "text-muted" : "text-default",
-                children: null != p ? u.intl.format(u.t.erxwWA, { teamName: p.name }) : u.intl.string(u.t.FGzLkK),
+                children:
+                    null != p
+                        ? u.intl.format(u.t.erxwWA, {
+                              teamName: p.name,
+                          })
+                        : u.intl.string(u.t.FGzLkK),
             }),
-            (0, r.jsx)(s.hKd, { size: 16 }),
+            (0, r.jsx)(s.hKd, {
+                size: 16,
+            }),
             (0, r.jsx)(l.$nd, {
                 text: null != p ? u.intl.string(u.t["/Fjq5P"]) : u.intl.string(u.t["6ih+b4"]),
                 variant: null != p ? "secondary" : "primary",
@@ -59,7 +69,10 @@ function f(e) {
                                     }
                                     return e;
                                 })({}, t)),
-                                (i = i = { application: f }),
+                                (i = i =
+                                    {
+                                        application: f,
+                                    }),
                                 Object.getOwnPropertyDescriptors
                                     ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
                                     : (function (e, t) {

@@ -1,4 +1,6 @@
-r.d(t, { A: () => a });
+r.d(t, {
+    A: () => a,
+});
 var n = r(64700),
     o = r(205662);
 let a = function (e) {
@@ -15,9 +17,17 @@ let a = function (e) {
                         boxShadow: "0 1px 4px 0 rgba(0, 0, 0, 0.37)",
                     },
                 },
-                vertical: { picker: { transform: "translate(-3px, -9px)" } },
+                vertical: {
+                    picker: {
+                        transform: "translate(-3px, -9px)",
+                    },
+                },
             },
-            { vertical: "vertical" === t },
+            {
+                vertical: "vertical" === t,
+            },
         );
-    return n.createElement("div", { style: r.picker });
+    return n.createElement("div", {
+        style: r.picker,
+    });
 };

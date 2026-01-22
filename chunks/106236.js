@@ -1,4 +1,9 @@
-n.d(t, { A: () => v }), n(638769), n(65821), n(896048);
+n.d(t, {
+    A: () => v,
+}),
+    n(638769),
+    n(65821),
+    n(896048);
 var r,
     i = n(627968),
     a = n(64700),
@@ -6,12 +11,13 @@ var r,
     o = n.n(s),
     l = n(735438),
     c = n.n(l),
-    u = n(432022),
+    u = n(108531),
     d = n(621466),
     f = n(158954),
     p = n(990078),
     _ = n(775602),
     h = n(785294);
+
 function m(e, t, n) {
     return (
         t in e
@@ -25,6 +31,7 @@ function m(e, t, n) {
         e
     );
 }
+
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -41,6 +48,7 @@ function g(e) {
     }
     return e;
 }
+
 function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -53,6 +61,7 @@ function E(e, t) {
     }
     return n;
 }
+
 function b(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -64,6 +73,7 @@ function b(e, t) {
         e
     );
 }
+
 function y(e, t) {
     let n = 0;
     for (let r = 0; r < t.length; r++) {
@@ -77,6 +87,7 @@ function y(e, t) {
     }
     return null;
 }
+
 function O(e) {
     let { markers: t, initialValue: n, minValue: r, maxValue: i, equidistant: a } = e,
         s = [],
@@ -109,6 +120,7 @@ function O(e) {
         closestMarkerIndex: l,
     };
 }
+
 function A(e, t) {
     let n = Math.min(Math.max(e.initialValue, e.minValue), e.maxValue);
     return g(
@@ -123,9 +135,13 @@ function A(e, t) {
 class v extends (r = a.PureComponent) {
     static getDerivedStateFromProps(e, t) {
         return null != e.value && e.value !== t.value
-            ? b(g({}, A(e, e.value)), { active: t.active })
+            ? b(g({}, A(e, e.value)), {
+                  active: t.active,
+              })
             : e.initialValue !== t.initialValueProp
-              ? b(g({}, A(e, t.value)), { active: t.active })
+              ? b(g({}, A(e, t.value)), {
+                    active: t.active,
+                })
               : null;
     }
     componentWillUnmount() {
@@ -190,7 +206,9 @@ class v extends (r = a.PureComponent) {
                                       [h.markAbove]: 0 === M,
                                       [h.markBelow]: 1 === M,
                                   }),
-                                  style: { left: "".concat(e, "%") },
+                                  style: {
+                                      left: "".concat(e, "%"),
+                                  },
                                   children:
                                       null != P
                                           ? P(n)
@@ -267,7 +285,9 @@ class v extends (r = a.PureComponent) {
                                             style: v,
                                             children: (0, i.jsx)("div", {
                                                 className: h.barFill,
-                                                style: b(g({}, I), { width: H }),
+                                                style: b(g({}, I), {
+                                                    width: H,
+                                                }),
                                             }),
                                         }),
                                         A,
@@ -278,7 +298,9 @@ class v extends (r = a.PureComponent) {
                                                 forceOpen: n || (r && _.A.keyboardModeEnabled),
                                                 children: (0, i.jsx)("div", {
                                                     className: o()(h.grabber, L),
-                                                    style: b(g({}, j), { left: H }),
+                                                    style: b(g({}, j), {
+                                                        left: H,
+                                                    }),
                                                     onMouseDown: this.handleMouseDown,
                                                     ref: this.grabberRef,
                                                 }),
@@ -326,7 +348,9 @@ class v extends (r = a.PureComponent) {
             d = (e.clientX - r) / u,
             f = a[i] + 100 * d;
         null != (t = this.props.equidistant ? y(f, a) : y(this.unscaleValue(f), s)) && (null == o || o(s[t])),
-            this.setState({ newClosestIndex: t });
+            this.setState({
+                newClosestIndex: t,
+            });
     }
     constructor(e) {
         super(e),
@@ -379,7 +403,10 @@ class v extends (r = a.PureComponent) {
                         },
                     );
                     if (-1 === e) return;
-                    this.setState({ closestMarkerIndex: e }), (t = l[e]);
+                    this.setState({
+                        closestMarkerIndex: e,
+                    }),
+                        (t = l[e]);
                 } else {
                     let n = r - i;
                     (t = i + n * h),
@@ -452,10 +479,14 @@ class v extends (r = a.PureComponent) {
                 e.preventDefault(), this.props.stickToMarkers ? this.moveStaggered(e) : this.moveSmoothly(e);
             }),
             m(this, "onFocus", () => {
-                this.setState({ focused: !0 });
+                this.setState({
+                    focused: !0,
+                });
             }),
             m(this, "onBlur", () => {
-                this.setState({ focused: !1 });
+                this.setState({
+                    focused: !1,
+                });
             }),
             m(this, "moveSmoothly", (e) => {
                 let { minValue: t, maxValue: n, asValueChanges: r } = this.props,
@@ -465,7 +496,10 @@ class v extends (r = a.PureComponent) {
                     o = n - t,
                     l = s - a,
                     c = Math.min(Math.max(t + ((e.clientX - a) / l) * o, t), n);
-                null == r || r(c), this.setState({ value: c });
+                null == r || r(c),
+                    this.setState({
+                        value: c,
+                    });
             }),
             (this.state = g(
                 {
@@ -477,6 +511,7 @@ class v extends (r = a.PureComponent) {
             ));
     }
 }
+
 function S(e) {
     let { active: t, keyboardFocused: n, children: r } = e,
         [i, s] = a.useState(!1);
@@ -484,7 +519,9 @@ function S(e) {
         sliderStyles: (0, f.zhh)({
             "--grabber-size": n || t || i ? "20px" : "16px",
             "--bar-size": n || t || i ? "6px" : "4px",
-            config: b(g({}, u.config.stiff), { duration: 100 }),
+            config: b(g({}, u.config.stiff), {
+                duration: 100,
+            }),
         }),
         setHovered: s,
     });

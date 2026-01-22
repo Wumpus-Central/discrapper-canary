@@ -1,4 +1,6 @@
-l.d(t, { A: () => h });
+l.d(t, {
+    A: () => h,
+});
 var n = l(627968),
     r = l(64700),
     s = l(503698),
@@ -13,6 +15,7 @@ var n = l(627968),
     g = l(212407),
     p = l(985018),
     m = l(68763);
+
 function h(e) {
     let { category: t } = e,
         l = (0, i.bG)([c.A], () => c.A.useReducedMotion),
@@ -22,7 +25,9 @@ function h(e) {
         A = null != E;
     return (0, n.jsxs)("div", {
         ref: v,
-        className: a()(m.sW, { [m.by]: A }),
+        className: a()(m.sW, {
+            [m.by]: A,
+        }),
         children: [
             A
                 ? (0, n.jsx)(o._, {

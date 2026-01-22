@@ -1,8 +1,11 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var r,
     i = n(311907),
     a = n(73153),
     s = n(160745);
+
 function o(e, t, n) {
     return (
         t in e
@@ -19,20 +22,25 @@ function o(e, t, n) {
 let l = null,
     c = !1,
     u = null;
+
 function d(e) {
     let { connected: t } = e;
     c = t;
 }
+
 function f() {
     c = !1;
 }
+
 function p() {
     c = !1;
 }
+
 function _(e) {
     let { products: t, storeFront: n } = e;
     (l = t), (u = n);
 }
+
 function h(e) {
     let { storeFront: t } = e;
     u = t;

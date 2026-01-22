@@ -1,7 +1,11 @@
-n.d(t, { A: () => A }), n(896048);
+n.d(t, {
+    A: () => A,
+}),
+    n(896048);
 var r = n(518977),
     i = n(734057),
     a = n(536802);
+
 function s(e, t, n) {
     return (
         t in e
@@ -19,9 +23,11 @@ let o = new Set(),
     l = new Set(),
     c = !1,
     u = null;
+
 function d(e) {
     return e.isMessageRequest && !e.isSpam;
 }
+
 function f(e) {
     let t = !1;
     return (
@@ -31,10 +37,12 @@ function f(e) {
         t
     );
 }
+
 function p(e) {
     var t;
     null != e && (u = null != (t = (0, r.XF)(e)) ? t : (0, r.rE)());
 }
+
 function _(e) {
     "CONNECTION_OPEN" === e.type && p(e.countryCode),
         o.clear(),
@@ -44,26 +52,32 @@ function _(e) {
         }),
         (c = !0);
 }
+
 function h(e) {
     let { channelId: t } = e;
     l.add(t);
 }
+
 function m(e) {
     let { channel: t } = e;
     return f(t);
 }
+
 function g(e) {
     let { channels: t } = e;
     for (let e of t) f(e);
 }
+
 function E(e) {
     let { channel: t } = e;
     return !!o.has(t.id) && (o.delete(t.id), !0);
 }
+
 function b(e) {
     let { messageRequestChannelIds: t } = e;
     t.forEach((e) => o.add(e));
 }
+
 function y(e) {
     let { countryCode: t } = e;
     p(t);

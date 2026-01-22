@@ -16,6 +16,7 @@ var r = n(64700),
     _ = n(954571),
     h = n(58149),
     m = n(686757);
+
 function g(e, t, n) {
     return (
         t in e
@@ -29,6 +30,7 @@ function g(e, t, n) {
         e
     );
 }
+
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -45,6 +47,7 @@ function E(e) {
     }
     return e;
 }
+
 function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -57,6 +60,7 @@ function b(e, t) {
     }
     return n;
 }
+
 function y(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -73,6 +77,7 @@ let O = (0, l.trackMaker)({
     dispatcher: c.h,
     TRACK_ACTION_NAME: "TRACK",
 });
+
 function A(e) {
     var t, n;
     let r = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
@@ -102,6 +107,7 @@ function A(e) {
         );
     r ? (0, m.eE)(null, null) : (null != i && null != a && ((0, _.debugLogEvent)(i, u), O(i, u)), (0, m.eE)(i, u));
 }
+
 function v(e) {
     let t =
             arguments.length > 1 && void 0 !== arguments[1]
@@ -118,7 +124,9 @@ function v(e) {
             r && (i.current = e);
             let l = !a()(s.current, n);
             if ((l && (s.current = n), !r && !l)) return;
-            let c = y(E({}, e), { sequenceId: o()("impression_") });
+            let c = y(E({}, e), {
+                sequenceId: o()("impression_"),
+            });
             return (
                 A(c, t.disableTrack),
                 () => {

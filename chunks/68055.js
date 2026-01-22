@@ -24,9 +24,11 @@ var i = n(387739),
             n = e.text;
         return n && !t && (e.characterList = o(d(i.EMPTY, n.length))), e;
     };
+
 function h(e, t) {
     return e.getStyle() === t.getStyle();
 }
+
 function m(e, t) {
     return e.getEntity() === t.getEntity();
 }

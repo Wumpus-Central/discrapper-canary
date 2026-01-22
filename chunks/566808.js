@@ -1,4 +1,6 @@
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});
 var r = {};
 r = {
     calendar: "Kalender",
@@ -8,7 +10,7 @@ r = {
     era: "tidsalder",
     hour: "time",
     minute: "minutt",
-    month: "måned",
+    month: "m\xe5ned",
     second: "sekund",
     selectedDateDescription: (e) => `Valgt dato: ${e.date}`,
     selectedRangeDescription: (e) => `Valgt omr\xe5de: ${e.startDate} til ${e.endDate}`,
@@ -16,5 +18,5 @@ r = {
     startDate: "Startdato",
     timeZoneName: "tidssone",
     weekday: "ukedag",
-    year: "år",
+    year: "\xe5r",
 };

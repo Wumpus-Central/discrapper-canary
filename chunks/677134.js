@@ -6,6 +6,7 @@ n.d(t, {
 var r = n(627968);
 n(64700);
 var i = n(442433);
+
 function a(e, t, n) {
     return (
         t in e
@@ -19,6 +20,7 @@ function a(e, t, n) {
         e
     );
 }
+
 function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,6 +37,7 @@ function s(e) {
     }
     return e;
 }
+
 function o(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -47,6 +50,7 @@ function o(e, t) {
     }
     return n;
 }
+
 function l(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -58,6 +62,7 @@ function l(e, t) {
         e
     );
 }
+
 function c() {
     let e;
     if (null != window.getSelection) {
@@ -69,6 +74,7 @@ function c() {
             (e = document.selection.createRange().text);
     return null != e ? e : "";
 }
+
 function u(e) {
     let t = c(),
         a = e.target;
@@ -78,9 +84,17 @@ function u(e) {
                 e,
                 async () => {
                     let { default: e } = await n.e("42312").then(n.bind(n, 216603));
-                    return (n) => (0, r.jsx)(e, l(s({}, n), { text: t }));
+                    return (n) =>
+                        (0, r.jsx)(
+                            e,
+                            l(s({}, n), {
+                                text: t,
+                            }),
+                        );
                 },
-                { enableSpellCheck: !0 },
+                {
+                    enableSpellCheck: !0,
+                },
             );
     } else {
         if ("none" === window.getComputedStyle(a).getPropertyValue("-webkit-user-select"))
@@ -96,7 +110,13 @@ function u(e) {
         if (null != c)
             return (0, i.L3)(e, async () => {
                 let { default: e } = await n.e("47260").then(n.bind(n, 177079));
-                return (t) => (0, r.jsx)(e, l(s({}, t), { src: null != c ? c : "" }));
+                return (t) =>
+                    (0, r.jsx)(
+                        e,
+                        l(s({}, t), {
+                            src: null != c ? c : "",
+                        }),
+                    );
             });
         if (null != o)
             return (0, i.L3)(e, async () => {
@@ -113,11 +133,18 @@ function u(e) {
         if (null != t && "" !== t)
             return (0, i.L3)(e, async () => {
                 let { default: e } = await n.e("84264").then(n.bind(n, 898811));
-                return (n) => (0, r.jsx)(e, l(s({}, n), { text: t }));
+                return (n) =>
+                    (0, r.jsx)(
+                        e,
+                        l(s({}, n), {
+                            text: t,
+                        }),
+                    );
             });
     }
     return e.preventDefault(), null;
 }
+
 function d(e) {
     let t = !1,
         n = e.target;

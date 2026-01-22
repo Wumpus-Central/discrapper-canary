@@ -1,7 +1,9 @@
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 var r = n(620749);
 class i extends r.A {
     patternBetween() {
-        return RegExp("^\\s*(T|at|after|before|on|of|,|-|\\.|\u2219|:)?\\s*$");
+        return RegExp("^\\s*(T|at|after|before|on|of|,|-|\\.|∙|:)?\\s*$");
     }
 }

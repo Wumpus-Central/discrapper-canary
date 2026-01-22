@@ -1,4 +1,7 @@
-r.d(t, { m: () => S }), r(896048);
+r.d(t, {
+    m: () => S,
+}),
+    r(896048);
 var a = r(627968),
     n = r(64700),
     c = r(158954),
@@ -123,8 +126,17 @@ let S = (e) => {
         children: [
             (0, a.jsxs)(o.Text, {
                 variant: "text-md/normal",
-                style: { textAlign: "center" },
-                children: [(0, a.jsx)("p", { children: L }), (0, a.jsx)("p", { children: x.intl.string(x.t.UQolSy) })],
+                style: {
+                    textAlign: "center",
+                },
+                children: [
+                    (0, a.jsx)("p", {
+                        children: L,
+                    }),
+                    (0, a.jsx)("p", {
+                        children: x.intl.string(x.t.UQolSy),
+                    }),
+                ],
             }),
             k
                 ? (0, a.jsx)(c.wx6, {

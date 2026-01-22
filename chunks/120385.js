@@ -1,4 +1,7 @@
-n.d(t, { A: () => p }), n(896048);
+n.d(t, {
+    A: () => p,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(562465),
@@ -13,7 +16,9 @@ async function f(e) {
         return (
             await a.Bo.get({
                 url: l.Rsh.BILLING_INVOICE_BREAKDOWN,
-                query: { payment_id: e },
+                query: {
+                    payment_id: e,
+                },
                 oldFormErrors: !0,
                 rejectWithError: !1,
             })
@@ -22,6 +27,7 @@ async function f(e) {
         throw e;
     }
 }
+
 function p(e) {
     let { payment: t } = e,
         [n, a] = i.useState(null),
@@ -37,6 +43,7 @@ function p(e) {
                 p(null == (n = e.body) ? void 0 : n.message);
             }
         };
+
     function h(e, t) {
         o.A.open(e, t);
     }

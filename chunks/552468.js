@@ -1,9 +1,12 @@
-n.d(t, { A: () => l });
+n.d(t, {
+    A: () => l,
+});
 var r = n(627968),
     i = n(397927),
     a = n(20805),
     s = n(695311),
     o = n(985018);
+
 function l(e) {
     let { display: t, entry: n, onAction: l, onClose: c } = e,
         u = (0, a.yl)(n),
@@ -16,7 +19,11 @@ function l(e) {
               id: "view-activity",
               label: o.intl.string(o.t.GDWYR8),
               action: () => {
-                  null == l || l({ action: "PRESS_VIEW_ACTIVITY_MENU_ITEM" }), d();
+                  null == l ||
+                      l({
+                          action: "PRESS_VIEW_ACTIVITY_MENU_ITEM",
+                      }),
+                      d();
               },
           })
         : null;

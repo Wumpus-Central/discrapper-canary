@@ -1,4 +1,6 @@
-n.d(t, { H: () => d });
+n.d(t, {
+    H: () => d,
+});
 var r = n(64700),
     i = n(310784),
     a = n.n(i),
@@ -7,6 +9,7 @@ var r = n(64700),
     l = n(775602),
     c = n(998304),
     u = n(898985);
+
 function d(e) {
     var t;
     let { displayNameStyles: n, backgroundColor: i } = e,

@@ -11,6 +11,7 @@ function r(e, t, n) {
         e
     );
 }
+
 function i(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -27,6 +28,7 @@ function i(e) {
     }
     return e;
 }
+
 function a(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -39,6 +41,7 @@ function a(e, t) {
     }
     return n;
 }
+
 function s(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -50,12 +53,21 @@ function s(e, t) {
         e
     );
 }
-n.d(t, { i: () => o }), n(896048);
+n.d(t, {
+    i: () => o,
+}),
+    n(896048);
 let o = (0, n(353640).v)((e, t) => ({
     responses: {},
     displayedQuestions: {},
     setResponse: (t, n, r) => {
-        e((e) => ({ responses: s(i({}, e.responses), { [t]: s(i({}, e.responses[t]), { [n]: r }) }) }));
+        e((e) => ({
+            responses: s(i({}, e.responses), {
+                [t]: s(i({}, e.responses[t]), {
+                    [n]: r,
+                }),
+            }),
+        }));
     },
     getSurveyResponses: (e) => {
         var n;
@@ -79,7 +91,14 @@ let o = (0, n(353640).v)((e, t) => ({
         e((e) => {
             var r;
             let a = new Set(null != (r = e.displayedQuestions[t]) ? r : new Set());
-            return n.forEach((e) => a.add(e)), { displayedQuestions: s(i({}, e.displayedQuestions), { [t]: a }) };
+            return (
+                n.forEach((e) => a.add(e)),
+                {
+                    displayedQuestions: s(i({}, e.displayedQuestions), {
+                        [t]: a,
+                    }),
+                }
+            );
         });
     },
     getDisplayedQuestions: (e) => {

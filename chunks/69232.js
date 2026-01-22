@@ -1,4 +1,6 @@
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});
 var r = {};
 r = {
     ascending: "vzestupně",
@@ -6,8 +8,8 @@ r = {
     columnSize: (e) => `${e.value} pixel\u{16F}`,
     descending: "sestupně",
     descendingSort: (e) => `\u{159}azeno sestupn\u{11B} podle sloupce ${e.columnName}`,
-    resizerDescription: "Stisknutím klávesy Enter začnete měnit velikost",
+    resizerDescription: "Stisknut\xedm kl\xe1vesy Enter začnete měnit velikost",
     select: "Vybrat",
     selectAll: "Vybrat vše",
-    sortable: "sloupec s možností řazení",
+    sortable: "sloupec s možnost\xed řazen\xed",
 };

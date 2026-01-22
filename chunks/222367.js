@@ -26,7 +26,7 @@ var r = n(391898),
         );
     },
     a = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
-    s = 86400000,
+    s = 864e5,
     o = 9999,
     l = i(1970, 1, 1),
     c = [6, 0, 1, 2, 3, 4, 5],
@@ -40,7 +40,7 @@ var r = n(391898),
         return d(e) && !isNaN(e.getTime());
     },
     p = function (e) {
-        return 60 * e.getTimezoneOffset() * 1000;
+        return 60 * e.getTimezoneOffset() * 1e3;
     },
     _ = function (e, t) {
         return Math.round((e.getTime() - p(e) - (t.getTime() - p(t))) / s);
@@ -120,7 +120,13 @@ var r = n(391898),
         );
     },
     T = function (e, t) {
-        return e.toLocaleString("sv-SE", { timeZone: t }).replace(" ", "T") + "Z";
+        return (
+            e
+                .toLocaleString("sv-SE", {
+                    timeZone: t,
+                })
+                .replace(" ", "T") + "Z"
+        );
     },
     C = function (e, t) {
         var n = new Date(T(e, Intl.DateTimeFormat().resolvedOptions().timeZone)),

@@ -1,4 +1,6 @@
-n.d(t, { A: () => A });
+n.d(t, {
+    A: () => A,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -46,6 +48,7 @@ let O = (e) => {
               ],
           });
 };
+
 function A(e) {
     let { step: t, onClose: n, isOrbCheckout: a } = e,
         l = (0, u.A)(m.T),
@@ -54,8 +57,18 @@ function A(e) {
         b = null != d ? d.offsetWidth : void 0,
         y = i.useMemo(() => (f && null != b && (t === h.pn.ADD_PAYMENT_STEPS || a) ? b : void 0), [f, b, t, a]);
     if (t === h.pn.BENEFITS || t === h.pn.CONFIRM) return null;
-    let A = null != y ? { width: y + 2 } : void 0,
-        v = null != y ? { width: y + 3 } : void 0;
+    let A =
+            null != y
+                ? {
+                      width: y + 2,
+                  }
+                : void 0,
+        v =
+            null != y
+                ? {
+                      width: y + 3,
+                  }
+                : void 0;
     return (0, r.jsxs)("div", {
         className: g.N1,
         style: A,
@@ -67,7 +80,9 @@ function A(e) {
                     "data-accessibility": "desaturate",
                     style: v,
                     children: a
-                        ? (0, r.jsx)(O, { className: s()(g.F0, g.WL) })
+                        ? (0, r.jsx)(O, {
+                              className: s()(g.F0, g.WL),
+                          })
                         : (0, r.jsx)("img", {
                               src: E,
                               alt: "",

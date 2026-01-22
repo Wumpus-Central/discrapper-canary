@@ -1,4 +1,7 @@
-n.d(t, { A: () => a }), n(896048);
+n.d(t, {
+    A: () => a,
+}),
+    n(896048);
 var r = n(64700),
     i = n(735438),
     l = n.n(i),
@@ -11,7 +14,9 @@ let a = (e, t) => {
             if ((d([]), null == e)) return void c(!1);
             try {
                 c(!0);
-                let t = await s.b(e, { grouping_type: n });
+                let t = await s.b(e, {
+                    grouping_type: n,
+                });
                 d(t);
             } catch (e) {
             } finally {

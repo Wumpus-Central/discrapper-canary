@@ -28,6 +28,7 @@ let o = (0, r.v)(() => ({
     activePanel: null,
     metadata: null,
 }));
+
 function l(e, t) {
     (0, i.r)(() => {
         o.setState({
@@ -36,6 +37,7 @@ function l(e, t) {
         });
     });
 }
+
 function c() {
     (0, i.r)(() => {
         o.setState({

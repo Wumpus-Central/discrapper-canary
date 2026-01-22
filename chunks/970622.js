@@ -1,8 +1,13 @@
-n.d(t, { A: () => m }), n(896048), n(747238);
+n.d(t, {
+    A: () => m,
+}),
+    n(896048),
+    n(747238);
 var r = n(64700),
     i = n(669170),
     a = n(741918),
     s = n(602034);
+
 function o(e, t, n) {
     return (
         t in e
@@ -16,6 +21,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -32,6 +38,7 @@ function l(e) {
     }
     return e;
 }
+
 function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -44,6 +51,7 @@ function c(e, t) {
     }
     return n;
 }
+
 function u(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -56,6 +64,7 @@ function u(e, t) {
     );
 }
 let d = "--";
+
 function f(e) {
     switch (e.key) {
         case a.D$.ENTER:
@@ -71,15 +80,19 @@ function f(e) {
             return a.X2.NAVIGATE_OUT;
     }
 }
+
 function p(e, t) {
     return null != t ? "".concat((0, s.M4)(e, t.join(d))) : e;
 }
+
 function _(e, t) {
     return e.getElementById(t);
 }
+
 function h(e) {
     return e.tabIndex >= 0;
 }
+
 function m(e) {
     let {
             navId: t,
@@ -135,12 +148,25 @@ function m(e) {
                     case a.X2.NAVIGATE_DOWN:
                     case a.X2.NAVIGATE_IN:
                     case a.X2.NAVIGATE_OUT:
-                        e.preventDefault(), e.stopPropagation(), C(!0), A({ type: n });
+                        e.preventDefault(),
+                            e.stopPropagation(),
+                            C(!0),
+                            A({
+                                type: n,
+                            });
                         return;
                     case a.X2.SELECT_FOCUSED_ITEM:
                         var r;
                         if (e.repeat || h(e.target)) return;
-                        if ((e.preventDefault(), e.stopPropagation(), C(!1), A({ type: n }), null != c))
+                        if (
+                            (e.preventDefault(),
+                            e.stopPropagation(),
+                            C(!1),
+                            A({
+                                type: n,
+                            }),
+                            null != c)
+                        )
                             return void c(v);
                         let i = _(null != (r = e.target.ownerDocument) ? r : document, p(t, v));
                         null == i || i.click();

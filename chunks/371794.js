@@ -33,6 +33,7 @@ var r = n(735438),
 n(723702);
 var y = n(661191),
     O = n(652215);
+
 function A(e, t, n) {
     return (
         t in e
@@ -46,6 +47,7 @@ function A(e, t, n) {
         e
     );
 }
+
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -65,6 +67,7 @@ function v(e) {
 n(985018), l().shim();
 let S = !c.Fr && !c.v1 && -1 !== (0, E.Z5)(),
     I = 3;
+
 function T(e, t) {
     let { analyticsSource: n, analyticsProperties: r, storeListingId: i, slug: a, channelId: s, guildId: o } = t,
         l = {
@@ -75,10 +78,13 @@ function T(e, t) {
             search: null != i ? "?store_listing_id=".concat(i) : "",
         };
     return v(
-        { pathname: null != s && null != o ? O.BVt.CHANNEL(o, s, e) : O.BVt.APPLICATION_STORE_LISTING_SKU(e, a) },
+        {
+            pathname: null != s && null != o ? O.BVt.CHANNEL(o, s, e) : O.BVt.APPLICATION_STORE_LISTING_SKU(e, a),
+        },
         l,
     );
 }
+
 function C(e, t, n, r) {
     var i;
     let a,
@@ -110,6 +116,7 @@ function C(e, t, n, r) {
         a
     );
 }
+
 function N() {
     return new Promise(async (e) => {
         if (g.A.hasFetchedSubscriptions()) e();
@@ -130,7 +137,7 @@ async function R(e) {
         m.A.hasFetchedPaymentSources || e.push(null != (r = h.A.paymentSourcesFetchRequest) ? r : (0, f.$o)()),
             h.A.ipCountryCodeLoaded || e.push((0, f.xe)()),
             e.push(N()),
-            await Promise.race([Promise.allSettled(e), new Promise((e) => setTimeout(e, 10000))]);
+            await Promise.race([Promise.allSettled(e), new Promise((e) => setTimeout(e, 1e4))]);
     }
     let o = m.A.getDefaultBillingCountryCode(),
         l = null != (t = null == (n = m.A.defaultPaymentSource) ? void 0 : n.id) ? t : null,
@@ -153,10 +160,12 @@ async function R(e) {
     }
     return d.Bo.get(e);
 }
+
 function w(e, t, n) {
     let r = t.getApplication(e);
     return null == r || null == r.primarySkuId ? null : n.get(r.primarySkuId);
 }
+
 function P(e, t, n) {
     var r;
     let i = null != (r = n.getNowPlaying(e)) ? r : {},
@@ -180,6 +189,7 @@ function P(e, t, n) {
               userInfo: a,
           };
 }
+
 function D(e, t, n) {
     let r = n.getStatisticsForApplication(e);
     if (null == r) return null;
@@ -203,6 +213,7 @@ function D(e, t, n) {
           };
 }
 let x = [];
+
 function L(e, t, n, r, a) {
     let s = t.get(e);
     if (null == s) return x;
@@ -227,12 +238,16 @@ function L(e, t, n, r, a) {
     return l;
 }
 let j = [];
+
 function M(e, t, n) {
     let r = t.get(e),
         i = n.getForSKU(e);
     if (null == r || null == i) return j;
     let a = [];
-    (0, u.Lt)(r.flags, O.d68.HAS_FREE_PREMIUM_CONTENT) && a.push({ type: O.g_B.HAS_FREE_PREMIUM_CONTENT });
+    (0, u.Lt)(r.flags, O.d68.HAS_FREE_PREMIUM_CONTENT) &&
+        a.push({
+            type: O.g_B.HAS_FREE_PREMIUM_CONTENT,
+        });
     let o = r.releaseDate;
     return (
         null != o &&

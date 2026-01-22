@@ -1,4 +1,6 @@
-n.d(t, { b: () => r });
+n.d(t, {
+    b: () => r,
+});
 let r = {
     HARASSMENT: "1000",
     SPAM: "1001",

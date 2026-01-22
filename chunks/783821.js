@@ -1,1 +1,3 @@
-e.exports = { J: "dd8900ffde932405" };
+e.exports = {
+    J: "dd8900ffde932405",
+};

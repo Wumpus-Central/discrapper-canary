@@ -1,4 +1,6 @@
-n.d(t, { E: () => h });
+n.d(t, {
+    E: () => h,
+});
 var r = n(403992),
     i = n(966209),
     a = n(227510),
@@ -11,6 +13,7 @@ var r = n(403992),
     f = n(853590),
     p = n(510281),
     _ = n(564949);
+
 function h(e, t, n) {
     let {
             isVirtualized: h,
@@ -70,7 +73,9 @@ function h(e, t, n) {
             selectionManager: I,
             hasItemActions: !!(O || A),
         }),
-        x = (0, l.$)(e, { labelable: !0 }),
+        x = (0, l.$)(e, {
+            labelable: !0,
+        }),
         L = (0, u.useCallback)(
             (e) => {
                 if (I.isFocused) {
@@ -88,7 +93,9 @@ function h(e, t, n) {
             }),
             [L, w.onBlur],
         ),
-        M = (0, p.$)(n, { isDisabled: 0 !== t.collection.size }),
+        M = (0, p.$)(n, {
+            isDisabled: 0 !== t.collection.size,
+        }),
         k = (0, c.v)(
             x,
             {
@@ -97,12 +104,22 @@ function h(e, t, n) {
                 "aria-multiselectable": "multiple" === I.selectionMode ? "true" : void 0,
             },
             t.isKeyboardNavigationDisabled ? j : w,
-            (0 === t.collection.size && { tabIndex: M ? -1 : 0 }) || void 0,
+            (0 === t.collection.size && {
+                tabIndex: M ? -1 : 0,
+            }) ||
+                void 0,
             D,
         );
     return (
         h && ((k["aria-rowcount"] = t.collection.size), (k["aria-colcount"] = t.collection.columnCount)),
-        (0, a.H)({ getRowText: y }, t),
-        { gridProps: k }
+        (0, a.H)(
+            {
+                getRowText: y,
+            },
+            t,
+        ),
+        {
+            gridProps: k,
+        }
     );
 }

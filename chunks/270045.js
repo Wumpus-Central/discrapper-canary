@@ -1,4 +1,6 @@
-n.d(t, { C: () => U });
+n.d(t, {
+    C: () => U,
+});
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -27,6 +29,7 @@ var r = n(627968),
     N = n(652215),
     R = n(818348),
     w = n(985018);
+
 function P(e, t, n) {
     return (
         t in e
@@ -40,6 +43,7 @@ function P(e, t, n) {
         e
     );
 }
+
 function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -56,6 +60,7 @@ function D(e) {
     }
     return e;
 }
+
 function x(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -68,6 +73,7 @@ function x(e, t) {
     }
     return n;
 }
+
 function L(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -79,6 +85,7 @@ function L(e, t) {
         e
     );
 }
+
 function j(e, t) {
     if (null == e) return {};
     var n,
@@ -95,6 +102,7 @@ function j(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function M(e, t) {
     if (null == e) return {};
     var n,
@@ -105,6 +113,7 @@ function M(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function k(e) {
     var t;
     let n = (0, a.bG)([m.A], () => m.A.questDeliveryOverride, []),
@@ -316,7 +325,9 @@ function k(e) {
                                     (0, d.C)(e.quest.id);
                                 },
                             }),
-                            (0, E.U)({ location: C.rE.QUEST_PREVIEW_TOOL_2 }) &&
+                            (0, E.U)({
+                                location: C.rE.QUEST_PREVIEW_TOOL_2,
+                            }) &&
                                 (0, r.jsx)(s.Drp, {
                                     id: "preview",
                                     label: w.intl.string(w.t.tx5Ax5),
@@ -329,6 +340,7 @@ function k(e) {
         ],
     });
 }
+
 function U(e) {
     let {
             children: t,

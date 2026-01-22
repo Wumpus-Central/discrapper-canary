@@ -1,4 +1,6 @@
-n.d(t, { l: () => b });
+n.d(t, {
+    l: () => b,
+});
 var r = n(627968),
     i = n(64700),
     l = n(665260),
@@ -10,6 +12,7 @@ var r = n(627968),
     u = n(652215),
     f = n(985018);
 let g = "NO_SYSTEM_CHANNEL";
+
 function b(e) {
     var t;
     let { guild: n, canManageGuild: b } = e,
@@ -36,7 +39,9 @@ function b(e) {
         x = i.useCallback(
             (e, t) => {
                 let r = (0, l.lA)(n.systemChannelFlags, e, t);
-                d.A.updateGuild({ systemChannelFlags: r });
+                d.A.updateGuild({
+                    systemChannelFlags: r,
+                });
             },
             [n.systemChannelFlags],
         ),

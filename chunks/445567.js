@@ -1,4 +1,6 @@
-n.d(t, { B: () => p });
+n.d(t, {
+    B: () => p,
+});
 var r = n(627968),
     i = n(64700),
     l = n(397927),
@@ -12,6 +14,7 @@ var r = n(627968),
     g = n(478644),
     b = n(985018),
     m = n(664991);
+
 function p(e) {
     let { guild: t, canManageGuild: n } = e,
         p = t.features.has(d.GuildFeatures.BANNER),

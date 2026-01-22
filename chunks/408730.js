@@ -1,7 +1,12 @@
-n.d(t, { A: () => u }), n(321073), n(896048);
+n.d(t, {
+    A: () => u,
+}),
+    n(321073),
+    n(896048);
 var r = n(822382),
     i = n(145331),
     a = n(554931);
+
 function s(e, t, n) {
     return (
         t in e
@@ -15,6 +20,7 @@ function s(e, t, n) {
         e
     );
 }
+
 function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -31,6 +37,7 @@ function o(e) {
     }
     return e;
 }
+
 function l() {
     return {
         isFocused: !1,
@@ -79,17 +86,36 @@ class c extends a.A {
         let t = this.getViewState(e),
             n = t.isFocused || t.isSidebarOpen || t.isFiltersModalOpen;
         n && !t.didTrackOpen
-            ? (this.setViewState(e, { didTrackOpen: !0 }), (0, i.pY)({ searchContext: e }), this.flushPendingEvents(e))
-            : !n && t.didTrackOpen && (0, i.gp)({ searchContext: e });
+            ? (this.setViewState(e, {
+                  didTrackOpen: !0,
+              }),
+              (0, i.pY)({
+                  searchContext: e,
+              }),
+              this.flushPendingEvents(e))
+            : !n &&
+              t.didTrackOpen &&
+              (0, i.gp)({
+                  searchContext: e,
+              });
     }
     setFocused(e, t) {
-        this.setViewState(e, { isFocused: t }), this.schedule(e);
+        this.setViewState(e, {
+            isFocused: t,
+        }),
+            this.schedule(e);
     }
     setSidebarOpen(e, t) {
-        this.setViewState(e, { isSidebarOpen: t }), this.schedule(e);
+        this.setViewState(e, {
+            isSidebarOpen: t,
+        }),
+            this.schedule(e);
     }
     setFiltersModalOpen(e, t) {
-        this.setViewState(e, { isFiltersModalOpen: t }), this.schedule(e);
+        this.setViewState(e, {
+            isFiltersModalOpen: t,
+        }),
+            this.schedule(e);
     }
     enqueueEvent(e, t) {
         var n;

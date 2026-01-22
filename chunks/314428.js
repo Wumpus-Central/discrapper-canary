@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968);
 n(64700);
 var l = n(397927),
@@ -6,6 +8,7 @@ var l = n(397927),
     s = n(611248),
     a = n(985018),
     o = n(288661);
+
 function d(e) {
     let { mfaChallenge: t, setSlide: n, onClose: d, headerAlignStart: c } = e;
     return (0, r.jsxs)(r.Fragment, {

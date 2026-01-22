@@ -1,4 +1,7 @@
-l.d(t, { A: () => g }), l(896048);
+l.d(t, {
+    A: () => g,
+}),
+    l(896048);
 var n = l(627968);
 l(64700);
 var r = l(503698),
@@ -83,11 +86,15 @@ let f = (e) => {
                   children: [
                       (0, n.jsx)("div", {
                           className: s()(d.Jn, d.oT),
-                          children: (0, n.jsx)("div", { className: d.uy }),
+                          children: (0, n.jsx)("div", {
+                              className: d.uy,
+                          }),
                       }),
                       (0, n.jsx)("div", {
                           className: s()(d.Jn, d.oT),
-                          children: (0, n.jsx)("div", { className: d.uy }),
+                          children: (0, n.jsx)("div", {
+                              className: d.uy,
+                          }),
                       }),
                   ],
               })

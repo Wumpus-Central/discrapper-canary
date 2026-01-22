@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var r = n(627968),
     i = n(311907),
     l = n(988506),
@@ -38,13 +40,17 @@ let m = (e) => {
         alignmentStrategy: "edge",
         align: "top",
         position: "right",
-        caretConfig: { align: "start" },
+        caretConfig: {
+            align: "start",
+        },
         actions: [
             {
                 text: A.intl.string(A.t["CDdYB/"]),
                 onClick: () => {
                     (0, o.A)(h.BVt.NITRO_HOME),
-                        (0, d.uE)({ analyticsLocations: [s.A.HOME_PAGE_PREMIUM_TAB] }),
+                        (0, d.uE)({
+                            analyticsLocations: [s.A.HOME_PAGE_PREMIUM_TAB],
+                        }),
                         (0, p.Es)();
                 },
             },

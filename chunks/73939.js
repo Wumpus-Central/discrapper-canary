@@ -1,7 +1,12 @@
-n.d(t, { F: () => p }), n(321073), n(896048);
+n.d(t, {
+    F: () => p,
+}),
+    n(321073),
+    n(896048);
 var r,
     i = n(64700),
     a = n(480960);
+
 function s(e, t, n) {
     return (
         t in e
@@ -15,6 +20,7 @@ function s(e, t, n) {
         e
     );
 }
+
 function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -31,6 +37,7 @@ function o(e) {
     }
     return e;
 }
+
 function l(e, t) {
     if (null == e) return {};
     var n,
@@ -47,6 +54,7 @@ function l(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function c(e, t) {
     if (null == e) return {};
     var n,
@@ -57,6 +65,7 @@ function c(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function u(e, t) {
     if ("object" !== f(e) || null === e) return e;
     var n = e[Symbol.toPrimitive];
@@ -67,10 +76,12 @@ function u(e, t) {
     }
     return ("string" === t ? String : Number)(e);
 }
+
 function d(e) {
     var t = u(e, "string");
     return "symbol" === f(t) ? t : String(t);
 }
+
 function f(e) {
     return e && "u" > typeof Symbol && e.constructor === Symbol ? "symbol" : typeof e;
 }
@@ -111,7 +122,10 @@ class p extends (r = i.Component) {
                 this._enqueueTransitions(n, e, t);
                 let r = (0, a.a)(n, e);
                 for (let e = 0, n = t.length; e < n; e++) delete r[t[e]];
-                this._isMounted && this.setState({ children: r }),
+                this._isMounted &&
+                    this.setState({
+                        children: r,
+                    }),
                     this._keysToLeave.length > 0 && (this._keysToLeave = []);
             }
         }
@@ -148,7 +162,9 @@ class p extends (r = i.Component) {
                 : this.setState((t) => {
                       let { children: n } = t,
                           { [e]: r } = n;
-                      return { children: l(n, [d(e)]) };
+                      return {
+                          children: l(n, [d(e)]),
+                      };
                   })
             : (null != i && i.hasOwnProperty(e)) || this.performLeave(e);
     }

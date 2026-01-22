@@ -1,4 +1,7 @@
-n.d(t, { A: () => D }), n(896048);
+n.d(t, {
+    A: () => D,
+}),
+    n(896048);
 var r = n(385244),
     i = n(718564),
     a = n(436857),
@@ -52,11 +55,13 @@ let O = {
         y.t["b/1SBX"],
         y.t.LhebZF,
     ];
+
 function S(e) {
     let t = v(),
         n = E.default.extractTimestamp(e) % t.length;
     return t[n];
 }
+
 function I(e) {
     var t;
     let n = _.A.getChannel(e.channel_id),
@@ -68,6 +73,7 @@ function I(e) {
         }),
     );
 }
+
 function T(e) {
     return (0, a.$)(
         y.intl.formatToParts(y.t.ihxM9x, {
@@ -76,6 +82,7 @@ function T(e) {
         }),
     );
 }
+
 function C(e, t) {
     let n = _.A.getChannel(t);
     return null == n || null == h.A.getGuild(n.getGuildId())
@@ -87,6 +94,7 @@ function C(e, t) {
               }),
           );
 }
+
 function N(e, t, n) {
     let r = _.A.getChannel(t);
     if (null == r) return null;
@@ -107,6 +115,7 @@ function N(e, t, n) {
               }),
           );
 }
+
 function R(e, t) {
     let n = _.A.getChannel(t);
     if (null == n) return null;
@@ -120,6 +129,7 @@ function R(e, t) {
               }),
           );
 }
+
 function w(e, t) {
     let n = _.A.getChannel(e);
     if (null == n) return null;
@@ -127,13 +137,26 @@ function w(e, t) {
     if (null == r) return null;
     switch (t) {
         case i.W.ACTIVITY_ALERTS_ENABLED:
-            return (0, a.$)(y.intl.formatToParts(y.t.wt3ZUM, { guildName: r.name }));
+            return (0, a.$)(
+                y.intl.formatToParts(y.t.wt3ZUM, {
+                    guildName: r.name,
+                }),
+            );
         case i.W.INTERACTION_BLOCKED:
-            return (0, a.$)(y.intl.formatToParts(y.t.AkqI0g, { guildName: r.name }));
+            return (0, a.$)(
+                y.intl.formatToParts(y.t.AkqI0g, {
+                    guildName: r.name,
+                }),
+            );
         default:
-            return (0, a.$)(y.intl.formatToParts(y.t["a+lJKl"], { guildName: r.name }));
+            return (0, a.$)(
+                y.intl.formatToParts(y.t["a+lJKl"], {
+                    guildName: r.name,
+                }),
+            );
     }
 }
+
 function P(e) {
     var t, n, r;
     let [i] = null != (t = e.mentions) ? t : [];
@@ -319,6 +342,12 @@ let D = {
     },
     getSystemMessageUserJoinMobile: S,
     getSystemMessageBotJoin: function (e) {
-        return null == O[e] ? null : y.intl.format(y.t.xw1Ij0, { learnOnClick: { onClick: () => window.open(O[e]) } });
+        return null == O[e]
+            ? null
+            : y.intl.format(y.t.xw1Ij0, {
+                  learnOnClick: {
+                      onClick: () => window.open(O[e]),
+                  },
+              });
     },
 };

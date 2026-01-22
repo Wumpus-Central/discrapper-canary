@@ -14,6 +14,7 @@ var r,
     u = n(734057),
     d = n(320501),
     f = n(652215);
+
 function p(e, t, n) {
     return (
         t in e
@@ -30,7 +31,9 @@ function p(e, t, n) {
 var _ = (function (e) {
     return (e[(e.LOADED = 0)] = "LOADED"), (e[(e.NOT_LOADED = 1)] = "NOT_LOADED"), (e[(e.DELETED = 2)] = "DELETED"), e;
 })({});
-let h = Object.freeze({ state: 1 }),
+let h = Object.freeze({
+        state: 1,
+    }),
     m = new Set();
 class g {
     handleCacheDisposed(e, t) {
@@ -109,6 +112,7 @@ class E {
     }
 }
 let b = new E();
+
 function y(e) {
     let t = !1;
     if ((b.updateExistingMessageIfCached(e) && (t = !0), f.sl8.has(e.type))) {
@@ -124,7 +128,9 @@ function y(e) {
                       message: (0, c.rh)(t),
                   }),
                   e.type === f.lAJ.THREAD_STARTER_MESSAGE && y(t))
-                : b.set(e.channel_id, r, { state: 2 });
+                : b.set(e.channel_id, r, {
+                      state: 2,
+                  });
         } else {
             let e = d.A.getMessage(n.channel_id, r);
             null != e
@@ -138,19 +144,23 @@ function y(e) {
     }
     return t;
 }
+
 function O(e, t) {
     let n = !1;
     for (let r of e) n = !1 !== t(r) || n;
     return n;
 }
+
 function A(e) {
     let { messages: t } = e;
     return O(t, (e) => y(e));
 }
+
 function v(e) {
     let { messages: t } = e;
     return O(Object.values(t), (e) => O(Object.values(e), (e) => y(e)));
 }
+
 function S(e) {
     let { data: t } = e;
     return O(t, (e) => {
@@ -158,10 +168,12 @@ function S(e) {
         return O(t, (e) => O(e, (e) => y(e)));
     });
 }
+
 function I(e) {
     let { message: t } = e;
     return !!d.A.getMessages(t.channel_id).ready && y(t);
 }
+
 function T(e) {
     let { messageId: t, channelId: n } = e;
     if (!b.has(n, t)) return !1;
@@ -172,6 +184,7 @@ function T(e) {
         message: (0, l.Td)(r.message),
     });
 }
+
 function C(e) {
     let { message: t } = e,
         n = t.id,
@@ -184,24 +197,32 @@ function C(e) {
         message: (0, c.IU)(i.message, t),
     });
 }
+
 function N(e) {
     return b.deleteChannelCache(e.channel.id);
 }
+
 function R() {
     if (0 === b.retainWhere((e) => null != u.A.getChannel(e))) return !1;
 }
+
 function w(e, t) {
     if (!b.has(e, t)) return !1;
-    b.set(e, t, { state: 2 });
+    b.set(e, t, {
+        state: 2,
+    });
 }
+
 function P(e) {
     let { id: t, channelId: n } = e;
     return w(n, t);
 }
+
 function D(e) {
     let { ids: t, channelId: n } = e;
     return O(t, (e) => w(n, e));
 }
+
 function x(e) {
     let { message: t } = e;
     b.set(t.channel_id, t.id, {
@@ -209,13 +230,16 @@ function x(e) {
         message: t,
     });
 }
+
 function L() {
     b.clear();
 }
+
 function j(e) {
     let { firstMessages: t } = e;
     return null != t && O(t, (e) => y(e));
 }
+
 function M(e) {
     let { threads: t } = e;
     return O(Object.values(t), (e) => {

@@ -122,8 +122,11 @@ let r = (0, n(945810).mj)({
         },
     },
 });
+
 function i(e) {
     let t = e.binds[0],
-        { tooltipsWithKeybinds: n } = r.useConfig({ location: "useKeybindIfInIaExperiment-".concat(t) });
+        { tooltipsWithKeybinds: n } = r.useConfig({
+            location: "useKeybindIfInIaExperiment-".concat(t),
+        });
     return n ? t : void 0;
 }

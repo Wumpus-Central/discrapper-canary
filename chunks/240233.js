@@ -1,5 +1,7 @@
 let r, i;
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var a = n(247775),
     s = n(73153),
     o = n(439372),
@@ -7,6 +9,7 @@ var a = n(247775),
     c = n(954571),
     u = n(274303),
     d = n(652215);
+
 function f(e, t, n) {
     return (
         t in e
@@ -34,7 +37,9 @@ class _ extends o.A {
             f(this, "onSwitchSuccess", void 0),
             f(this, "onSwitchError", void 0),
             f(this, "onTokenSet", void 0),
-            f(this, "actions", { LOGOUT: (e) => this.handleLogout(e) }),
+            f(this, "actions", {
+                LOGOUT: (e) => this.handleLogout(e),
+            }),
             f(this, "handleConnectionOpen", () => {
                 var e, t, n, s, o, f;
                 let _ = l.default.getCurrentUser();

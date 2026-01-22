@@ -1,4 +1,6 @@
-n.d(t, { A: () => O });
+n.d(t, {
+    A: () => O,
+});
 var l = n(627968);
 n(64700);
 var r = n(311907),
@@ -18,6 +20,7 @@ var r = n(311907),
     p = n(985018),
     f = n(671353);
 let { INVITE_OPTIONS_7_DAYS: b, INVITE_OPTIONS_UNLIMITED: y } = h.Ay;
+
 function O(e) {
     var t, n, O;
     let { onClose: A, event: N } = e,

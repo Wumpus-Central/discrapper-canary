@@ -57,6 +57,7 @@ let W = 80,
 var X = (function (e) {
     return (e[(e.SMALL = 0)] = "SMALL"), (e[(e.MEDIUM = 1)] = "MEDIUM"), (e[(e.EMBEDDED = 2)] = "EMBEDDED"), e;
 })({});
+
 function Z(e) {
     let {
             guildId: t,
@@ -86,7 +87,13 @@ function Z(e) {
         p = i.useCallback(() => {
             s(V.bB.WISHLIST_BUTTON);
         }, [s]),
-        _ = i.useMemo(() => l()(Y.o, { [Y.H5]: a }), [a]);
+        _ = i.useMemo(
+            () =>
+                l()(Y.o, {
+                    [Y.H5]: a,
+                }),
+            [a],
+        );
     return (0, r.jsxs)("div", {
         className: Y.zu,
         children: [
@@ -109,6 +116,7 @@ function Z(e) {
         ],
     });
 }
+
 function Q(e) {
     var t, n, a, o, c, b, O, D, x, X;
     let {
@@ -195,7 +203,11 @@ function Q(e) {
                 return null;
             let n = u()(),
                 r = Math.max(u()(es.tenantMetadata.socialLayer.expiresAt).diff(n, "days"), 1);
-            return r <= q ? H.intl.format(H.t.PWw4Vp, { days: r }) : null;
+            return r <= q
+                ? H.intl.format(H.t.PWw4Vp, {
+                      days: r,
+                  })
+                : null;
         }, [null == es || null == (b = es.tenantMetadata) || null == (c = b.socialLayer) ? void 0 : c.expiresAt]),
         eT = (0, T.xf)(es),
         [eC, eN] = (0, E.rh)(null == eT ? void 0 : eT.toString(), "#000000"),
@@ -212,7 +224,9 @@ function Q(e) {
                 : "none";
         }, [eC, ee, eh]),
         ew = i.useCallback(() => {
-            (0, P.X)({ guildId: et });
+            (0, P.X)({
+                guildId: et,
+            });
         }, [et]),
         eP = i.useCallback(
             (e) => {
@@ -295,7 +309,9 @@ function Q(e) {
                               children: [
                                   (0, r.jsx)("div", {
                                       className: Y.iZ,
-                                      style: { background: eR },
+                                      style: {
+                                          background: eR,
+                                      },
                                   }),
                                   (0, r.jsxs)("div", {
                                       className: Y.zH,
@@ -359,7 +375,9 @@ function Q(e) {
                                                           eO(V.bB.BUY_BUTTON),
                                                           (0, L.a)(
                                                               es,
-                                                              { isGift: !1 },
+                                                              {
+                                                                  isGift: !1,
+                                                              },
                                                               {
                                                                   analyticsLocations: [
                                                                       m.A.SLAYER_STOREFRONT_CARD_PURCHASE_BUTTON,
@@ -385,7 +403,9 @@ function Q(e) {
                                                           eO(V.bB.GIFT_BUTTON),
                                                           (0, L.a)(
                                                               es,
-                                                              { isGift: !0 },
+                                                              {
+                                                                  isGift: !0,
+                                                              },
                                                               {
                                                                   analyticsLocations: [
                                                                       m.A.SLAYER_STOREFRONT_CARD_GIFT_BUTTON,

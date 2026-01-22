@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(64700),
     i = n(311907),
     l = n(554375),
@@ -6,6 +8,7 @@ var r = n(64700),
     a = n(885617),
     c = n(492494);
 let o = [];
+
 function d(e) {
     let { revision: t, emojis: n } = (0, i.cf)([a.A], () => ({
             revision: a.A.getEmojiRevision(e),

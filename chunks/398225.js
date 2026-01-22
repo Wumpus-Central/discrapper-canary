@@ -8,8 +8,9 @@ n.d(t, {
     n(142703);
 var r = n(627968),
     i = n(64700),
-    a = n(432022),
+    a = n(108531),
     s = n(397927);
+
 function o(e, t, n) {
     return (
         t in e
@@ -23,6 +24,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -39,17 +41,19 @@ function l(e) {
     }
     return e;
 }
-let c = -n(182417).pt.duration / 1000 / 2,
+let c = -n(182417).pt.duration / 1e3 / 2,
     u = 4,
     d = 0.2,
     f = (0, i.createContext)({
         addSpringRef: () => {},
         removeSpringRef: () => {},
     });
+
 function p(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
     return 1 - Math.pow(1 - e, t);
 }
+
 function _() {
     let e = (0, i.useRef)(null),
         t = (0, s.zhh)({
@@ -63,7 +67,7 @@ function _() {
                 opacity: 1,
             },
             config: {
-                duration: 1000 * d,
+                duration: 1e3 * d,
                 easing: (e) => e * e,
             },
         }),
@@ -81,6 +85,7 @@ function _() {
         t
     );
 }
+
 function h(e) {
     let { children: t, spring: n, className: i, style: s } = e;
     return (0, r.jsx)(a.animated.div, {
@@ -89,6 +94,7 @@ function h(e) {
         children: t,
     });
 }
+
 function m() {
     let e = (0, i.useRef)(new Set()),
         [t, n] = (0, i.useState)([]),

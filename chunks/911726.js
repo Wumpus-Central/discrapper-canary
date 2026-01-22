@@ -1,4 +1,7 @@
-n.d(t, { Ay: () => en }), n(896048);
+n.d(t, {
+    Ay: () => en,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -20,6 +23,7 @@ var r = n(627968),
     O = n(652215),
     A = n(985018),
     v = n(811336);
+
 function S(e, t, n) {
     return (
         t in e
@@ -33,6 +37,7 @@ function S(e, t, n) {
         e
     );
 }
+
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -49,6 +54,7 @@ function I(e) {
     }
     return e;
 }
+
 function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -61,6 +67,7 @@ function T(e, t) {
     }
     return n;
 }
+
 function C(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -174,6 +181,7 @@ let P = ["TOP_LEFT", "TOP_RIGHT"],
         }),
     }),
     H = "falling-leaf";
+
 function Y(e) {
     switch (e.type) {
         case O.lAJ.GUILD_BOOST_TIER_1:
@@ -185,6 +193,7 @@ function Y(e) {
     }
     return null;
 }
+
 function W() {
     switch (Math.floor(Math.random() * Object.keys(w).length)) {
         case 0:
@@ -202,6 +211,7 @@ let K = 45,
     q = n(80705),
     X = n(232460),
     Z = [q, X];
+
 function Q() {
     return n
         .e("98150")
@@ -211,6 +221,7 @@ function Q() {
             return t;
         });
 }
+
 function $(e, t) {
     if (null == e) return "enter";
     switch (e) {
@@ -227,6 +238,7 @@ function $(e, t) {
             return "enter";
     }
 }
+
 function J(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : D,
         r = null == e ? void 0 : e.getBoundingClientRect();
@@ -241,6 +253,7 @@ function J(e, t) {
         y: r.top + i.y,
     };
 }
+
 function ee(e, t) {
     let n = null == e ? void 0 : e.getBoundingClientRect();
     if (null == n)
@@ -254,6 +267,7 @@ function ee(e, t) {
         y: n.top + r.leafPosition.y,
     };
 }
+
 function et(e) {
     let { onAnimationComplete: t, onClick: n, position: a, size: c } = e,
         u = i.useRef(null),
@@ -332,7 +346,9 @@ function et(e) {
                             },
                         },
                     },
-                    { sprite: "TOP_LEFT" === h ? q : X },
+                    {
+                        sprite: "TOP_LEFT" === h ? q : X,
+                    },
                 );
             }
         }, [A, y, h, p]),
@@ -355,7 +371,9 @@ function et(e) {
                     }),
                     children: (0, r.jsx)(d.tvC, {
                         animationRef: C,
-                        className: s()(v.oQ, { [v.EG]: S }),
+                        className: s()(v.oQ, {
+                            [v.EG]: S,
+                        }),
                         nextScene: O,
                         sceneSegments: R,
                         onScenePlay: I,
@@ -368,6 +386,7 @@ function et(e) {
         })
     );
 }
+
 function en(e) {
     let t,
         { message: n, compact: a, guild: s, usernameHook: o, onClickMessage: l } = e,
@@ -419,8 +438,12 @@ function en(e) {
             C(!1);
         }, []),
         M = i.useCallback(() => {
-            (0, _.O9)({ settingsVisible: !0 }),
-                (0, g.openUserSettings)(m.X.POGGERMODE_PANEL, { section: O.nc_.POGGERMODE }),
+            (0, _.O9)({
+                settingsVisible: !0,
+            }),
+                (0, g.openUserSettings)(m.X.POGGERMODE_PANEL, {
+                    section: O.nc_.POGGERMODE,
+                }),
                 C(!1);
         }, []),
         k = i.useCallback(

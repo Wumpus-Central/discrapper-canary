@@ -6,6 +6,7 @@ var r = n(311907),
     i = n(933958),
     a = n(782091),
     s = n(309010);
+
 function o(e) {
     let t = (0, r.bG)([s.A], () => s.A.getChannelId()),
         n = (0, r.bG)([i.Ay], () => {
@@ -25,6 +26,7 @@ function o(e) {
         canLaunchInChannel: u,
     };
 }
+
 function l(e, t) {
     let n = null != t ? t : s.A.getChannelId();
     if (null == n)

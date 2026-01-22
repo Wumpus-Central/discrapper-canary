@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -7,11 +9,14 @@ var r = n(627968),
     l = n(545428),
     c = n(985018),
     u = n(27551);
+
 function d(e) {
     let { onClick: t, disabled: n = !1 } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)("div", { className: u.me }),
+            (0, r.jsx)("div", {
+                className: u.me,
+            }),
             (0, r.jsx)("div", {
                 className: u.kL,
                 children: (0, r.jsx)("div", {

@@ -66,6 +66,7 @@ var ei = n(652215),
     ea = n(746080),
     es = n(985018),
     eo = n(495401);
+
 function ec(e, t, n) {
     return (
         t in e
@@ -79,6 +80,7 @@ function ec(e, t, n) {
         e
     );
 }
+
 function eu(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -95,6 +97,7 @@ function eu(e) {
     }
     return e;
 }
+
 function ed(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -113,16 +116,25 @@ function ed(e, t) {
         e
     );
 }
+
 function ef(e) {
     return (
-        d.LU0.modules.channels.NAME_LINE_HEIGHT.resolve({ density: e }) +
-        2 * d.LU0.space.SPACE_XXS.resolve({ density: e }) +
+        d.LU0.modules.channels.NAME_LINE_HEIGHT.resolve({
+            density: e,
+        }) +
+        2 *
+            d.LU0.space.SPACE_XXS.resolve({
+                density: e,
+            }) +
         2
     );
 }
 class ep extends (r = i.PureComponent) {
     componentDidMount() {
-        this.setState({ initialized: !0 }), (0, k.Ei)(this.getVisibleChannels);
+        this.setState({
+            initialized: !0,
+        }),
+            (0, k.Ei)(this.getVisibleChannels);
     }
     componentWillUnmount() {
         this.updateChannelListScroll.cancel();
@@ -440,7 +452,12 @@ class ep extends (r = i.PureComponent) {
                 var e, t;
                 let { showNewUnreadsBar: n } = this.props,
                     r = null != (e = null == (t = this._list) ? void 0 : t.getScrollerState()) ? e : null;
-                if ((this.setState({ isUnreadVisible: this.isUnreadVisible() }), n && null != r)) {
+                if (
+                    (this.setState({
+                        isUnreadVisible: this.isUnreadVisible(),
+                    }),
+                    n && null != r)
+                ) {
                     let { scrollTop: e } = r;
                     this.updateChannelListScroll(e);
                 }
@@ -527,8 +544,12 @@ class ep extends (r = i.PureComponent) {
                 let { channel: u, category: f } = c;
                 if (u.record.type === ei.rbe.GUILD_CATEGORY) return 40;
                 let { isFavoritesPerk: p } = y.A.getCurrentConfig(
-                    { location: "channel_list" },
-                    { autoTrackExposure: !0 },
+                    {
+                        location: "channel_list",
+                    },
+                    {
+                        autoTrackExposure: !0,
+                    },
                 );
                 for (let e of (!p ||
                     a !== ei.YYv ||
@@ -547,7 +568,11 @@ class ep extends (r = i.PureComponent) {
                     if (null != e && e.length > 0) {
                         let t = 32 * e.length;
                         (u.isCollapsed || f.isCollapsed) && (t = 32),
-                            (o += t + d.LU0.space.SPACE_XS.resolve({ density: s }));
+                            (o +=
+                                t +
+                                d.LU0.space.SPACE_XS.resolve({
+                                    density: s,
+                                }));
                     }
                     u.id === this.props.rtcConnectedChannelId && (o += 32 * this.props.rtcDesyncedVoiceStatesCount);
                 }
@@ -677,7 +702,9 @@ class ep extends (r = i.PureComponent) {
                                 el.n.GUILD_GAME_SHOP,
                             );
                         case el.n.GUILD_NEW_MEMBER_ACTIONS_PROGRESS_BAR:
-                            return (0, l.jsx)(Y.j, { guild: r });
+                            return (0, l.jsx)(Y.j, {
+                                guild: r,
+                            });
                         case el.n.CHANNELS_AND_ROLES:
                             return (0, l.jsx)(
                                 W.G,
@@ -823,7 +850,13 @@ class ep extends (r = i.PureComponent) {
                         );
                     case ei.rbe.GUILD_CATEGORY:
                         if (t !== u.voiceChannelsSectionNumber) return null;
-                        return (0, l.jsx)(V.sM, { channel: v }, "readonly-".concat(v.id));
+                        return (0, l.jsx)(
+                            V.sM,
+                            {
+                                channel: v,
+                            },
+                            "readonly-".concat(v.id),
+                        );
                     case ei.rbe.PUBLIC_THREAD:
                     case ei.rbe.PRIVATE_THREAD:
                     case ei.rbe.ANNOUNCEMENT_THREAD:
@@ -907,7 +940,10 @@ class ep extends (r = i.PureComponent) {
             });
     }
 }
-ec(ep, "contextType", o.nC), ec(ep, "defaultProps", { density: "default" });
+ec(ep, "contextType", o.nC),
+    ec(ep, "defaultProps", {
+        density: "default",
+    });
 let eh = (e) => {
     let { guildId: t, selectedChannelId: n, selectedVoiceChannelId: r } = e,
         a = (0, u.bG)([b.A], () => b.A.keyboardModeEnabled),
@@ -985,6 +1021,7 @@ let eh = (e) => {
         }),
     });
 };
+
 function eb(e) {
     let t = (0, G.x)(),
         { isFavoritesPerk: n } = (0, y.l)("favorites-channel-list"),
@@ -999,9 +1036,19 @@ function eb(e) {
         }),
     );
 }
+
 function eg(e) {
     let t = (0, U.A)(e.guild),
-        n = (0, u.cf)([L.A], () => L.A.getGuild(e.guildId, { guildActionRows: t })),
+        n = (0, u.cf)([L.A], () =>
+            L.A.getGuild(e.guildId, {
+                guildActionRows: t,
+            }),
+        ),
         { density: r } = (0, d.wRf)();
-    return (0, l.jsx)(eh, ed(eu({}, e, n), { density: r }));
+    return (0, l.jsx)(
+        eh,
+        ed(eu({}, e, n), {
+            density: r,
+        }),
+    );
 }

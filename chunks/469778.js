@@ -1,4 +1,8 @@
-n.d(t, { A: () => B }), n(896048), n(321073);
+n.d(t, {
+    A: () => B,
+}),
+    n(896048),
+    n(321073);
 var r,
     i = n(735438),
     a = n.n(i),
@@ -11,6 +15,7 @@ var r,
     f = n(67480),
     p = n(652215),
     _ = n(788868);
+
 function h(e, t, n) {
     return (
         t in e
@@ -34,9 +39,11 @@ let m = {},
     v = new Set(),
     S = new Set(),
     I = {};
+
 function T() {
     (m = {}), (E = {}), (b = {}), (y = !1), (O = !1), (A = !1), (v = new Set()), (S = new Set());
 }
+
 function C(e) {
     (m[e.id] = c.A.createFromServer(e)),
         null == E[e.sku_id] && (E[e.sku_id] = new Set()),
@@ -46,9 +53,11 @@ function C(e) {
         b[e.application_id].add(e.id),
         E[e.sku_id].add(e.id);
 }
+
 function N(e) {
     g[e.id] = c.A.createFromServer(e);
 }
+
 function R(e) {
     delete m[e.id];
     let t = b[e.application_id];
@@ -59,40 +68,51 @@ function R(e) {
         null != t && t.delete(e.id);
     }
 }
+
 function w(e) {
     let { applicationId: t } = e;
     v.add(t);
 }
+
 function P(e) {
     let { applicationId: t, entitlements: n } = e;
     for (let e of (v.delete(t), S.add(t), n)) !0 !== e.consumed && C(e);
 }
+
 function D(e) {
     let { entitlements: t } = e;
     (g = {}), t.forEach(N);
 }
+
 function x() {}
+
 function L() {
     y = !0;
 }
+
 function j(e) {
     let { entitlements: t, excludeEnded: n } = e;
     for (let e of ((O = !0), (y = !1), (A = !n), t)) C(e);
 }
+
 function M() {
     (O = !1), (y = !1), (A = !1);
 }
+
 function k(e) {
     let { entitlements: t } = e;
     for (let e of t) C(e);
 }
+
 function U(e) {
     let { libraryApplications: t } = e;
     for (let e of t) if (null != e.entitlements) for (let t of e.entitlements) C(t);
 }
+
 function G(e) {
     return C(e.entitlement);
 }
+
 function V(e) {
     return R(e.entitlement);
 }

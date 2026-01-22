@@ -1,8 +1,11 @@
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var r,
     i = n(311907),
     a = n(73153),
     s = n(652215);
+
 function o(e, t, n) {
     return (
         t in e
@@ -21,6 +24,7 @@ let l = {},
         integration: "",
         query: "",
     };
+
 function u(e) {
     var t;
     let { integration: n, query: r } = e;
@@ -30,6 +34,7 @@ function u(e) {
             results: [],
         });
 }
+
 function d(e) {
     let { integration: t, query: n, results: r } = e;
     (l[t][n] = {
@@ -44,6 +49,7 @@ function d(e) {
             integration: t,
         });
 }
+
 function f(e) {
     let { integration: t, query: n } = e;
     delete l[t][n];

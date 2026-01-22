@@ -9,6 +9,7 @@ var r = n(311907),
     o = n(961350),
     u = n(994500),
     c = n(652215);
+
 function d(e, t) {
     if (null == e) return {};
     var n,
@@ -64,6 +65,7 @@ let s = (0, i.C)({
         },
     ],
 });
+
 function a(e) {
     if (null == e) return !1;
     let t = e.features;
@@ -75,6 +77,7 @@ let f = {
     showFriendsInServer: !1,
     showInviter: !1,
 };
+
 function O(e) {
     var t, n;
     let { guild: i } = e,
@@ -110,7 +113,10 @@ function O(e) {
                 }
                 return e;
             })({}, c)),
-            (n = n = { disable: !p }),
+            (n = n =
+                {
+                    disable: !p,
+                }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                 : (function (e, t) {
@@ -127,6 +133,7 @@ function O(e) {
         );
     return p ? y : f;
 }
+
 function b(e) {
     let { guild: t } = e,
         n = d(e, ["guild"]),

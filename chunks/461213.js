@@ -1,4 +1,10 @@
-n.d(t, { A: () => z }), n(321073), n(896048), n(638769), n(938796);
+n.d(t, {
+    A: () => z,
+}),
+    n(321073),
+    n(896048),
+    n(638769),
+    n(938796);
 var r,
     i = n(812729),
     a = n.n(i),
@@ -19,6 +25,7 @@ var r,
     y = n(290863),
     O = n(528767),
     A = n(652215);
+
 function v(e, t, n) {
     return (
         t in e
@@ -44,6 +51,7 @@ let S = !1,
     x = Object.freeze([]),
     L = [],
     j = [];
+
 function M(e) {
     if (0 === e.length) return e;
     let t = [],
@@ -51,13 +59,16 @@ function M(e) {
     for (let r of e) r.type === A.$pd.PLAYING ? n.push(r) : t.push(r);
     return 0 === n.length || 1 === n.length ? e : [...t, [...n].sort(y.m)[0]].sort(y.m);
 }
+
 function k(e) {
     return (0, h.kv)(e, E.A);
 }
+
 function U(e) {
     let t = m.A.getGameByName(e);
     return null != t ? k(t.id) : p.tz.getSetting();
 }
+
 function G(e) {
     var t;
     if ((0, l.Lt)(null != (t = e.flags) ? t : 0, A.jUm.CONTEXTLESS)) return !0;
@@ -74,9 +85,11 @@ function G(e) {
             return null == e.application_id || k(e.application_id);
     }
 }
+
 function V() {
     (P = !0), (T = I), F();
 }
+
 function F() {
     var e;
     if (((C = null != (e = g.A.getIdleSince()) ? e : 0), (w = g.A.isAFK()), P)) I = T;
@@ -100,15 +113,19 @@ function F() {
                     .value()),
             ));
 }
+
 function B(e) {
     return (S = e.invisible), F();
 }
+
 function H() {
     return (S = !1), F();
 }
+
 function Y() {
     (P = !1), (T = A.clD.UNKNOWN), F(), y.A.setCurrentUserOnConnectionOpen(I, L);
 }
+
 function W() {
     Y();
 }

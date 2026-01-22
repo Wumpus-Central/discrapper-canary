@@ -1,4 +1,9 @@
-n.d(t, { A: () => eo }), n(896048), n(733351), n(667532);
+n.d(t, {
+    A: () => eo,
+}),
+    n(896048),
+    n(733351),
+    n(667532);
 var l = n(627968),
     r = n(64700),
     a = n(503698),
@@ -57,6 +62,7 @@ var en = n(652215),
     el = n(746080),
     er = n(985018),
     ea = n(641243);
+
 function ei(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -82,6 +88,7 @@ function ei(e) {
     }
     return e;
 }
+
 function es(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -101,6 +108,7 @@ function es(e, t) {
     );
 }
 let ec = v.oU.CREATE_FORUM_POST;
+
 function eo(e) {
     var t, n;
     let a,
@@ -156,10 +164,14 @@ function eo(e) {
         z = (function (e) {
             let { formOpen: t } = (0, Z.kU)((e) => {
                     let { formOpen: t } = e;
-                    return { formOpen: t };
+                    return {
+                        formOpen: t,
+                    };
                 }, o.x),
                 n = (0, Z.ST)(),
-                l = (0, M.N)({ parentChannel: e });
+                l = (0, M.N)({
+                    parentChannel: e,
+                });
             r.useEffect(() => {
                 let { setNameError: e, setMessageError: t } = n.getState();
                 e(null), t(null);
@@ -281,7 +293,9 @@ function eo(e) {
         (0, l.jsx)(l.Fragment, {
             children: (0, l.jsx)("div", {
                 "aria-label": b ? er.intl.string(er.t.dq7mAa) : er.intl.string(er.t["5h0QOP"]),
-                className: i()(ea.kL, { [ea.yZ]: !j }),
+                className: i()(ea.kL, {
+                    [ea.yZ]: !j,
+                }),
                 onClick: !j && b ? F : void 0,
                 children: (0, l.jsxs)("form", {
                     onMouseDown: O,
@@ -320,13 +334,24 @@ function eo(e) {
                                         v && (0, l.jsx)(eg, {}),
                                     ],
                                 }),
-                                P && (D ? (0, l.jsx)(S.f, { parentChannel: c }) : (0, l.jsx)(Y.h, { channelId: c.id })),
+                                P &&
+                                    (D
+                                        ? (0, l.jsx)(S.f, {
+                                              parentChannel: c,
+                                          })
+                                        : (0, l.jsx)(Y.h, {
+                                              channelId: c.id,
+                                          })),
                             ],
                         }),
                         (0, l.jsxs)("div", {
                             className: ea.Zd,
                             children: [
-                                P && D && (0, l.jsx)(N.A, { parentChannel: c }),
+                                P &&
+                                    D &&
+                                    (0, l.jsx)(N.A, {
+                                        parentChannel: c,
+                                    }),
                                 j &&
                                     (0, l.jsx)(ej, {
                                         className: ea.CN,
@@ -463,12 +488,16 @@ let ed = r.memo(function (e) {
                     null != n &&
                         n.type.startsWith("image/") &&
                         (e.preventDefault(),
-                        await (0, B.R)([n], t, L.C.FirstThreadMessage, { origin: "clipboard" }),
+                        await (0, B.R)([n], t, L.C.FirstThreadMessage, {
+                            origin: "clipboard",
+                        }),
                         j.getState().setFormOpenFromUserAction());
                 },
                 [t, j],
             ),
-            N = (0, K.vr)(m, { content: h });
+            N = (0, K.vr)(m, {
+                content: h,
+            });
         return (0, l.jsxs)("div", {
             className: ea.gn,
             onPaste: O,
@@ -555,7 +584,11 @@ let ed = r.memo(function (e) {
                                   className: ea.DD,
                                   ref: n,
                               }),
-                              null != N ? (0, l.jsx)(b.dzK, { error: N }) : null,
+                              null != N
+                                  ? (0, l.jsx)(b.dzK, {
+                                        error: N,
+                                    })
+                                  : null,
                           ],
                       }),
                 u
@@ -566,7 +599,9 @@ let ed = r.memo(function (e) {
                           justify: "end",
                           fullWidth: !1,
                           children: [
-                              (0, l.jsx)(em, { parentChannel: t }),
+                              (0, l.jsx)(em, {
+                                  parentChannel: t,
+                              }),
                               (0, l.jsx)(ev, {
                                   parentChannel: t,
                                   canCreatePost: a,
@@ -576,11 +611,14 @@ let ed = r.memo(function (e) {
             ],
         });
     });
+
 function em(e) {
     let { parentChannel: t } = e,
         { guidelinesOpen: n } = (0, Z.kU)((e) => {
             let { guidelinesOpen: t } = e;
-            return { guidelinesOpen: t };
+            return {
+                guidelinesOpen: t,
+            };
         }, o.x),
         r = (0, Z.ST)();
     return null != t.topic && 0 !== t.topic.length
@@ -687,7 +725,9 @@ let eh = r.memo(function (e) {
                 event: en.jej.TEXTAREA_BLUR,
                 handler: y,
             });
-        let N = (0, K.vr)(m, { content: g.textValue });
+        let N = (0, K.vr)(m, {
+            content: g.textValue,
+        });
         return (0, l.jsx)("div", {
             className: ea.IP,
             children: (0, l.jsxs)("div", {
@@ -709,7 +749,9 @@ let eh = r.memo(function (e) {
                                   richValue: g.richValue,
                                   focused: x,
                                   className: ea.gM,
-                                  innerClassName: i()(ea.SL, { [ea.cr]: null != N }),
+                                  innerClassName: i()(ea.SL, {
+                                      [ea.cr]: null != N,
+                                  }),
                                   onChange: C,
                                   onSubmit: O,
                                   promptToUpload: B.R,
@@ -728,11 +770,14 @@ let eh = r.memo(function (e) {
                                   autoCompletePosition: "bottom",
                               }),
                           }),
-                    (0, l.jsx)(b.dzK, { error: N }),
+                    (0, l.jsx)(b.dzK, {
+                        error: N,
+                    }),
                 ],
             }),
         });
     });
+
 function eg() {
     return (0, l.jsx)("div", {
         className: ea.fv,
@@ -743,14 +788,18 @@ function eg() {
         }),
     });
 }
+
 function ex(e) {
     let { textAreaState: t } = (0, Z.kU)((e) => {
             let { textAreaState: t } = e;
-            return { textAreaState: t };
+            return {
+                textAreaState: t,
+            };
         }, o.x),
         n = (0, f.yK)([G.A], () => G.A.getUploads(e.id, L.C.FirstThreadMessage));
     return r.useMemo(() => t.textValue.trim().length > 0 || n.length > 0, [t.textValue, n]);
 }
+
 function eb(e) {
     let t = ex(e),
         { appliedTags: n, name: l } = (0, Z.kU)((e) => {
@@ -762,10 +811,13 @@ function eb(e) {
         }, o.x);
     return r.useMemo(() => e.hasFlag(el.lx.REQUIRE_TAG) && 0 === n.size && l.length > 0 && t, [n, l, e, t]);
 }
+
 function ep() {
     let { previewing: e } = (0, Z.kU)((e) => {
             let { previewing: t } = e;
-            return { previewing: t };
+            return {
+                previewing: t,
+            };
         }, o.x),
         t = (0, Z.ST)(),
         n = r.useCallback(() => {
@@ -809,8 +861,12 @@ let ej = r.memo(function (e) {
         (0, l.jsxs)("div", {
             className: a,
             children: [
-                (0, l.jsx)(eA, { parentChannel: t }),
-                (0, l.jsx)("div", { className: ea.XJ }),
+                (0, l.jsx)(eA, {
+                    parentChannel: t,
+                }),
+                (0, l.jsx)("div", {
+                    className: ea.XJ,
+                }),
                 (0, l.jsxs)("div", {
                     className: ea.gO,
                     children: [
@@ -834,7 +890,9 @@ let ej = r.memo(function (e) {
                                             }),
                                     ],
                                 }),
-                                (0, l.jsx)(em, { parentChannel: t }),
+                                (0, l.jsx)(em, {
+                                    parentChannel: t,
+                                }),
                                 p && (0, l.jsx)(ep, {}),
                                 (0, l.jsx)(ev, {
                                     parentChannel: t,
@@ -867,6 +925,7 @@ let ej = r.memo(function (e) {
         })
     );
 });
+
 function ev(e) {
     let { parentChannel: t, canCreatePost: n, disabled: r, disableIfInvalid: a = !1 } = e,
         i = (0, w.V)(t),
@@ -896,9 +955,11 @@ function ev(e) {
               text: d ? er.intl.string(er.t.pIuQI6) : er.intl.string(er.t.TyAuoT),
           });
 }
+
 function ey() {
     return Promise.resolve();
 }
+
 function eA(e) {
     let { parentChannel: t } = e,
         {
@@ -1055,7 +1116,9 @@ function eA(e) {
                               (0, l.jsx)("div", {
                                   ref: p,
                                   className: ea.Wk,
-                                  style: { left: A },
+                                  style: {
+                                      left: A,
+                                  },
                                   children: (0, l.jsx)(
                                       b.Button,
                                       es(ei({}, e), {

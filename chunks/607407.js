@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -11,6 +13,7 @@ var r = n(627968),
     f = n(652215),
     p = n(985018),
     _ = n(571283);
+
 function h(e) {
     let { isLoading: t, noText: n, noImage: i, previewText: a, className: o } = e;
     return (0, r.jsx)("div", {
@@ -19,7 +22,11 @@ function h(e) {
             ? (0, r.jsx)(l.y$y, {})
             : (0, r.jsxs)(r.Fragment, {
                   children: [
-                      (0, r.jsx)("div", { className: s()(_.js, { [_.$0]: i }) }),
+                      (0, r.jsx)("div", {
+                          className: s()(_.js, {
+                              [_.$0]: i,
+                          }),
+                      }),
                       n
                           ? null
                           : (0, r.jsx)(l.Text, {
@@ -32,6 +39,7 @@ function h(e) {
               }),
     });
 }
+
 function m(e) {
     let { stream: t, className: n, noText: a = !1, noImage: s = !1 } = e,
         l = (0, o.bG)([c.A], () => c.A.getBasicChannel(t.channelId)),

@@ -12,6 +12,7 @@ function n(e) {
         })
         .join("&");
 }
+
 function a(e) {
     var t = (e && e.ownerDocument) || document,
         r = t.defaultView || t.parentWindow || window;
@@ -20,6 +21,7 @@ function a(e) {
         window: r,
     };
 }
+
 function i(e) {
     return e || document.head;
 }

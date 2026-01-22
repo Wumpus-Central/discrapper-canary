@@ -10,11 +10,21 @@ n(
         arity: 1,
         forced:
             e(486816)(function () {
-                return 4294967297 !== [].push.call({ length: 4294967296 }, 1);
+                return (
+                    0x100000001 !==
+                    [].push.call(
+                        {
+                            length: 0x100000000,
+                        },
+                        1,
+                    )
+                );
             }) ||
             !(function () {
                 try {
-                    Object.defineProperty([], "length", { writable: !1 }).push();
+                    Object.defineProperty([], "length", {
+                        writable: !1,
+                    }).push();
                 } catch (t) {
                     return t instanceof TypeError;
                 }

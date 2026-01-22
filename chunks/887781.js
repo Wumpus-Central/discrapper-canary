@@ -1,4 +1,8 @@
-s.d(t, { DesktopRefreshOnboardingModal: () => k }), s(896048), s(321073);
+s.d(t, {
+    DesktopRefreshOnboardingModal: () => k,
+}),
+    s(896048),
+    s(321073);
 var a = s(627968),
     i = s(64700),
     l = s(503698),
@@ -18,6 +22,7 @@ var a = s(627968),
     j = s(818348),
     f = s(985018),
     D = s(96877);
+
 function A(e) {
     let { options: t, selected: s, onSelect: i, showLabels: l, renderOptionContainer: r } = e;
     return (0, a.jsx)(o.BJc, {
@@ -99,6 +104,7 @@ let C = [
             label: f.intl.string(f.t["4cuYHx"]),
         },
     ];
+
 function k(e) {
     let { transitionState: t, onClose: s } = e,
         [l] = i.useState(() => g.A.gradientPreset),
@@ -120,7 +126,9 @@ function k(e) {
                     id: "gradient",
                     label: c,
                     className: n()((0, o.Mwr)(a) ? D.Xu : D.VO, D.Du),
-                    style: { background: "var(--background-gradient), ".concat(r) },
+                    style: {
+                        background: "var(--background-gradient), ".concat(r),
+                    },
                 });
             }
             return (
@@ -141,7 +149,9 @@ function k(e) {
         "data-modal-align": "top",
         parentComponent: "DesktopRefreshOnboardingModal",
         children: [
-            (0, a.jsx)("div", { className: D.D7 }),
+            (0, a.jsx)("div", {
+                className: D.D7,
+            }),
             (0, a.jsx)(o.rQ0, {
                 className: D.wx,
                 children: (0, a.jsxs)(o.BJc, {
@@ -150,7 +160,9 @@ function k(e) {
                         (0, a.jsxs)(o.BJc, {
                             gap: _ ? 8 : 16,
                             children: [
-                                (0, a.jsx)("div", { className: D.F0 }),
+                                (0, a.jsx)("div", {
+                                    className: D.F0,
+                                }),
                                 (0, a.jsx)(o.Heading, {
                                     variant: _ ? "heading-lg/semibold" : "heading-xl/semibold",
                                     color: "text-strong",
@@ -190,7 +202,9 @@ function k(e) {
                                                       backgroundGradientPresetId: l.id,
                                                       theme: l.theme,
                                                   })
-                                                : (0, m.u_)({ theme: e });
+                                                : (0, m.u_)({
+                                                      theme: e,
+                                                  });
                                     },
                                     renderOptionContainer: (e, t) =>
                                         "gradient" === e.id

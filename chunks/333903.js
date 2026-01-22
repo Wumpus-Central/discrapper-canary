@@ -1,4 +1,6 @@
-n.d(t, { I: () => d });
+n.d(t, {
+    I: () => d,
+});
 var r = n(625557),
     i = n(723906),
     a = n(290424),
@@ -7,6 +9,7 @@ var r = n(625557),
     l = n(227510),
     c = n(510281),
     u = n(869125);
+
 function d(e, t, n) {
     let {
         isVirtualized: d,
@@ -49,8 +52,12 @@ function d(e, t, n) {
             selectionManager: t.selectionManager,
             hasItemActions: !!_,
         }),
-        v = (0, c.$)(n, { isDisabled: 0 !== t.collection.size }),
-        S = (0, a.$)(e, { labelable: !0 }),
+        v = (0, c.$)(n, {
+            isDisabled: 0 !== t.collection.size,
+        }),
+        S = (0, a.$)(e, {
+            labelable: !0,
+        }),
         I = (0, s.v)(
             S,
             {
@@ -58,8 +65,18 @@ function d(e, t, n) {
                 id: O,
                 "aria-multiselectable": "multiple" === t.selectionManager.selectionMode ? "true" : void 0,
             },
-            0 === t.collection.size ? { tabIndex: v ? -1 : 0 } : y,
+            0 === t.collection.size
+                ? {
+                      tabIndex: v ? -1 : 0,
+                  }
+                : y,
             A,
         );
-    return d && ((I["aria-rowcount"] = t.collection.size), (I["aria-colcount"] = 1)), (0, l.H)({}, t), { gridProps: I };
+    return (
+        d && ((I["aria-rowcount"] = t.collection.size), (I["aria-colcount"] = 1)),
+        (0, l.H)({}, t),
+        {
+            gridProps: I,
+        }
+    );
 }

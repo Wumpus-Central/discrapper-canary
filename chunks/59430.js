@@ -1,4 +1,7 @@
-r.d(e, { default: () => c }), r(896048);
+r.d(e, {
+    default: () => c,
+}),
+    r(896048);
 var n = r(627968),
     l = r(64700),
     i = r(158954),
@@ -6,6 +9,7 @@ var n = r(627968),
     a = r(554113),
     s = r(141524),
     o = r(985018);
+
 function c(t) {
     let { guildId: e, transitionState: r, onClose: c } = t,
         [d, S] = l.useState([]),
@@ -29,7 +33,9 @@ function c(t) {
     return (0, n.jsx)(i.Modal, {
         transitionState: r,
         title: o.intl.string(o.t.uYPGsS),
-        subtitle: o.intl.format(o.t.Hg8Ee7, { onClick: p }),
+        subtitle: o.intl.format(o.t.Hg8Ee7, {
+            onClick: p,
+        }),
         actions: [
             {
                 text: o.intl.string(o.t["ETE/oC"]),

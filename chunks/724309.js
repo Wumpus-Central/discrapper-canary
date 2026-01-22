@@ -16,20 +16,38 @@ e.exports = function (e) {
             scope: "number",
             relevance: 0,
             variants: [
-                { match: /[-+]?0[xX][0-9a-fA-F]+N?/ },
-                { match: /[-+]?0[0-7]+N?/ },
-                { match: /[-+]?[1-9][0-9]?[rR][0-9a-zA-Z]+N?/ },
-                { match: /[-+]?[0-9]+\/[0-9]+N?/ },
-                { match: /[-+]?[0-9]+((\.[0-9]*([eE][+-]?[0-9]+)?M?)|([eE][+-]?[0-9]+M?|M))/ },
-                { match: /[-+]?([1-9][0-9]*|0)N?/ },
+                {
+                    match: /[-+]?0[xX][0-9a-fA-F]+N?/,
+                },
+                {
+                    match: /[-+]?0[0-7]+N?/,
+                },
+                {
+                    match: /[-+]?[1-9][0-9]?[rR][0-9a-zA-Z]+N?/,
+                },
+                {
+                    match: /[-+]?[0-9]+\/[0-9]+N?/,
+                },
+                {
+                    match: /[-+]?[0-9]+((\.[0-9]*([eE][+-]?[0-9]+)?M?)|([eE][+-]?[0-9]+M?|M))/,
+                },
+                {
+                    match: /[-+]?([1-9][0-9]*|0)N?/,
+                },
             ],
         },
         o = {
             scope: "character",
             variants: [
-                { match: /\\o[0-3]?[0-7]{1,2}/ },
-                { match: /\\u[0-9a-fA-F]{4}/ },
-                { match: /\\(newline|space|tab|formfeed|backspace|return)/ },
+                {
+                    match: /\\o[0-3]?[0-7]{1,2}/,
+                },
+                {
+                    match: /\\u[0-9a-fA-F]{4}/,
+                },
+                {
+                    match: /\\(newline|space|tab|formfeed|backspace|return)/,
+                },
                 {
                     match: /\\\S/,
                     relevance: 0,
@@ -42,13 +60,17 @@ e.exports = function (e) {
             end: /"/,
             contains: [e.BACKSLASH_ESCAPE],
         },
-        c = e.inherit(e.QUOTE_STRING_MODE, { illegal: null }),
+        c = e.inherit(e.QUOTE_STRING_MODE, {
+            illegal: null,
+        }),
         u = {
             scope: "punctuation",
             match: /,/,
             relevance: 0,
         },
-        d = e.COMMENT(";", "$", { relevance: 0 }),
+        d = e.COMMENT(";", "$", {
+            relevance: 0,
+        }),
         f = {
             className: "literal",
             begin: /\b(true|false|nil)\b/,

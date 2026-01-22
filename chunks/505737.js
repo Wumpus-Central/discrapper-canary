@@ -41,6 +41,7 @@ var t = {
     strokeOpacity: !0,
     strokeWidth: !0,
 };
+
 function n(e, t) {
     return e + t.charAt(0).toUpperCase() + t.substring(1);
 }
@@ -112,6 +113,7 @@ var i = t,
         isInWorker: !s,
     },
     l = i;
+
 function c(e, t, n) {
     return null == t || "boolean" == typeof t || "" === t
         ? ""
@@ -119,6 +121,7 @@ function c(e, t, n) {
           ? ("" + t).trim()
           : t + "px";
 }
+
 function u(e) {
     return function () {
         return e;

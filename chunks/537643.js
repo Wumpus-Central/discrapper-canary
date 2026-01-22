@@ -1,4 +1,6 @@
-n.d(t, { I: () => u });
+n.d(t, {
+    I: () => u,
+});
 var r = n(64700),
     i = n(311907),
     a = n(139675),
@@ -8,7 +10,9 @@ var r = n(64700),
 let c = (e) => {
         var t, n, r, i;
         let { messageId: o, presenceActivity: c, application: u } = e,
-            d = l.A.getCoverImageURL({ messageId: o });
+            d = l.A.getCoverImageURL({
+                messageId: o,
+            });
         if (null === d)
             return {
                 cachedImageURL: null,

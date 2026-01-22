@@ -19,6 +19,7 @@ var e = n(403362),
     r = n(937161),
     E = n(818348),
     s = n(985018);
+
 function l(t) {
     let i = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return (
@@ -30,9 +31,11 @@ function l(t) {
         t
     );
 }
+
 function S(t, i) {
     return t.map((t) => i[t.toString()]);
 }
+
 function o(t) {
     var i, n;
     return {
@@ -299,6 +302,7 @@ function o(t) {
         },
     };
 }
+
 function a(t) {
     let i,
         n,
@@ -414,8 +418,14 @@ function a(t) {
         g
     );
 }
+
 function A(t, i) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : { showManageWebhooks: !0 };
+    let n =
+        arguments.length > 2 && void 0 !== arguments[2]
+            ? arguments[2]
+            : {
+                  showManageWebhooks: !0,
+              };
     return {
         title: i,
         permissions: S(
@@ -426,12 +436,14 @@ function A(t, i) {
         ),
     };
 }
+
 function g(t, i) {
     return {
         title: i,
         permissions: S([E.xB.CREATE_INSTANT_INVITE], t),
     };
 }
+
 function _(t, i, n) {
     let e = [
         E.xB.SEND_MESSAGES,
@@ -466,6 +478,7 @@ function _(t, i, n) {
         }
     );
 }
+
 function B(t, i) {
     return {
         title: i,
@@ -487,6 +500,7 @@ function B(t, i) {
         ),
     };
 }
+
 function N(t, i, n) {
     let e = [
         E.xB.SEND_MESSAGES,
@@ -514,8 +528,14 @@ function N(t, i, n) {
         }
     );
 }
+
 function x(t, i) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : { showActivities: !0 };
+    let n =
+        arguments.length > 2 && void 0 !== arguments[2]
+            ? arguments[2]
+            : {
+                  showActivities: !0,
+              };
     return {
         title: i,
         permissions: S(
@@ -528,6 +548,7 @@ function x(t, i) {
         ),
     };
 }
+
 function T(t, i, n) {
     return {
         title: i,
@@ -539,21 +560,25 @@ function T(t, i, n) {
         ),
     };
 }
+
 function d(t, i) {
     return {
         title: i,
         permissions: S([E.xB.REQUEST_TO_SPEAK, E.xB.MENTION_EVERYONE], t),
     };
 }
+
 function p(t, i) {
     return {
         title: i,
         permissions: S([E.xB.CREATE_EVENTS, E.xB.MANAGE_EVENTS], t),
     };
 }
+
 function c(t) {
     return null == t ? t : "string" == typeof t ? t.trim() : "function" == typeof t ? s.intl.format(t, {}) : t;
 }
+
 function M(t, i, n) {
     if (
         r.A.getCurrentConfig({

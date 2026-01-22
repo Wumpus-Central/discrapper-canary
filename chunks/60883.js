@@ -1,4 +1,9 @@
-r.r(t), r.d(t, { default: () => E }), r(896048), r(747238);
+r.r(t),
+    r.d(t, {
+        default: () => E,
+    }),
+    r(896048),
+    r(747238);
 var a = r(627968),
     n = r(64700),
     s = r(492462),
@@ -20,6 +25,7 @@ var a = r(627968),
     j = r(652215),
     w = r(136267);
 let N = r(843020);
+
 function _() {
     let e,
         t = (0, i.zy)(),
@@ -43,7 +49,9 @@ function _() {
         (0, o.A)(),
         (0, x.K)(r);
     let C = n.useCallback(() => {
-            d({ type: "user-code-input" });
+            d({
+                type: "user-code-input",
+            });
         }, [d]),
         E = n.useCallback(
             (e) => {
@@ -75,7 +83,10 @@ function _() {
         I = !0;
     switch (r.type) {
         case "handoff":
-            (e = (0, a.jsx)(g.e, { code: r.code })), (I = !1);
+            (e = (0, a.jsx)(g.e, {
+                code: r.code,
+            })),
+                (I = !1);
             break;
         case "user-code-input":
             e = (0, a.jsx)(v.H, {
@@ -99,7 +110,9 @@ function _() {
             });
             break;
         case "error":
-            e = (0, a.jsx)(m.S, { onTryAgain: C });
+            e = (0, a.jsx)(m.S, {
+                onTryAgain: C,
+            });
             break;
         default:
             e = null;

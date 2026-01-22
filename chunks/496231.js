@@ -1,7 +1,10 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 var r = n(311907),
     l = n(622543),
     i = n(652215);
+
 function a(e) {
     let t = (0, r.bG)([l.A], () => {
         var t;

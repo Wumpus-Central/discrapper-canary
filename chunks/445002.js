@@ -1,4 +1,9 @@
-l.d(t, { default: () => T }), l(896048), l(228524), l(747238);
+l.d(t, {
+    default: () => T,
+}),
+    l(896048),
+    l(228524),
+    l(747238);
 var n = l(627968),
     i = l(64700),
     a = l(835245),
@@ -30,6 +35,7 @@ let N = new Set(["application/json", "image/png", "image/apng", "image/gif", "im
             extensions: ["json", "png", "apng", "gif", "jpeg", "jpg"],
         },
     ];
+
 function C(e, t) {
     p.default.track(S.HAw.STICKER_UPLOAD_COMPLETED, {
         successful: e,
@@ -73,6 +79,7 @@ async function I(e) {
     let n = (0, r.h_)(l, 320, 320);
     return (0, b.bX)(n, e.name, "image/png");
 }
+
 function T(e) {
     var t, l, r, T, _, R, z, P;
     let { transitionState: L, onClose: B, guildId: U, sticker: F } = e,
@@ -126,7 +133,11 @@ function T(e) {
             }
             if (n.size > K) {
                 ei({
-                    message: O.intl.formatToPlainString(O.t["3eK7Ru"], { maxSize: (0, j.up)(K, { useKibibytes: !0 }) }),
+                    message: O.intl.formatToPlainString(O.t["3eK7Ru"], {
+                        maxSize: (0, j.up)(K, {
+                            useKibibytes: !0,
+                        }),
+                    }),
                     isBlocking: null == V.file,
                 }),
                     p.default.track(S.HAw.STICKER_UPLOAD_FILE_SIZE_LIMIT_EXCEEDED, {
@@ -139,7 +150,9 @@ function T(e) {
             if (i === h.TG.LOTTIE) {
                 if (!er)
                     return void ei({
-                        message: O.intl.format(O.t.RNNjy6, { articleURL: v.A.getArticleURL(S.MVz.STICKERS_UPLOAD) }),
+                        message: O.intl.format(O.t.RNNjy6, {
+                            articleURL: v.A.getArticleURL(S.MVz.STICKERS_UPLOAD),
+                        }),
                         isBlocking: !0,
                     });
                 let e = new FileReader();
@@ -184,7 +197,9 @@ function T(e) {
                         e.append("description", $),
                         (null == V ? void 0 : V.file) != null && e.append("file", V.file),
                         (r = null != (i = null == (a = V.file) ? void 0 : a.type) ? i : ""),
-                        p.default.track(S.HAw.STICKER_UPLOAD_STARTED, { filetype: r }),
+                        p.default.track(S.HAw.STICKER_UPLOAD_STARTED, {
+                            filetype: r,
+                        }),
                         await (0, x.p9)({
                             guildId: U,
                             body: e,
@@ -248,7 +263,11 @@ function T(e) {
             transitionState: L,
             onClose: B,
             title: O.intl.string(O.t.yxVsBJ),
-            subtitle: O.intl.format(ef, { fileSize: (0, j.up)(524288, { useKibibytes: !0 }) }),
+            subtitle: O.intl.format(ef, {
+                fileSize: (0, j.up)(524288, {
+                    useKibibytes: !0,
+                }),
+            }),
             actions: [
                 {
                     variant: "secondary",
@@ -267,7 +286,9 @@ function T(e) {
                 children: [
                     (0, n.jsx)(s.D0$, {
                         label: O.intl.string(O.t.gjdiKE),
-                        children: (0, n.jsx)(D, { stickerPreview: eg }),
+                        children: (0, n.jsx)(D, {
+                            stickerPreview: eg,
+                        }),
                     }),
                     es
                         ? (0, n.jsx)(u.ksK, {

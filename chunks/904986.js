@@ -12,6 +12,7 @@ var r = n(415955),
     l = n(935172),
     c = n(466376),
     u = n(731854);
+
 function d(e, t, n) {
     return (
         t in e
@@ -25,6 +26,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -219,8 +221,12 @@ class _ extends o.A {
             d(this, "localSpeakingFlags", {}),
             d(this, "videoReady", !1),
             d(this, "videoStreamParameters", []),
-            d(this, "remoteVideoSinkWants", { any: 100 }),
-            d(this, "localVideoSinkWants", { any: 100 }),
+            d(this, "remoteVideoSinkWants", {
+                any: 100,
+            }),
+            d(this, "localVideoSinkWants", {
+                any: 100,
+            }),
             d(this, "connectionState", u.$I.CONNECTING),
             d(this, "stats", void 0),
             d(this, "onDesktopEncodingOptionsSet", (e, t, n) => {}),

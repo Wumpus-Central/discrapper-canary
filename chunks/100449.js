@@ -1,4 +1,7 @@
-n.d(t, { A: () => m }), n(896048);
+n.d(t, {
+    A: () => m,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -31,7 +34,9 @@ let g = l.memo(function (e) {
         m = o.vCh[g].size,
         A = i.getAvatarURL(t.guild_id, m);
     return (0, r.jsxs)("div", {
-        className: a()(b.vB, { [b.zY]: p }),
+        className: a()(b.vB, {
+            [b.zY]: p,
+        }),
         children: [
             (0, r.jsx)(o.euF, {
                 className: b.my,
@@ -50,6 +55,7 @@ let g = l.memo(function (e) {
         ],
     });
 });
+
 function m(e) {
     let { channel: t, participants: n } = e,
         i = (0, f.A)(t.id),

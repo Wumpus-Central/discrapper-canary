@@ -1,4 +1,6 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -105,7 +107,9 @@ let p = (e) => {
             className: s()(f.kL, o),
             children: [
                 E
-                    ? (0, r.jsx)(m, { subscriptionPlanId: n })
+                    ? (0, r.jsx)(m, {
+                          subscriptionPlanId: n,
+                      })
                     : (0, r.jsx)(g, {
                           displayName: _,
                           product: null != p ? p : null,
@@ -114,7 +118,7 @@ let p = (e) => {
                     children: [
                         (0, r.jsx)(l.Text, {
                             variant: "text-md/semibold",
-                            children: null != h ? "".concat(_, " \u2022 ").concat(h) : _,
+                            children: null != h ? "".concat(_, " • ").concat(h) : _,
                         }),
                         (0, r.jsx)(l.Text, {
                             variant: "text-sm/medium",

@@ -1,9 +1,12 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 var r = n(627968);
 n(64700);
 var l = n(585510),
     i = n(903093),
     o = n(976715);
+
 function a(e) {
     let { guild: t } = e,
         { shouldShowIncidentActions: n, incidentData: a, isUnderLockdown: s } = (0, l.Li)(t.id),

@@ -1,4 +1,6 @@
-n.d(t, { X: () => o });
+n.d(t, {
+    X: () => o,
+});
 var r = n(65412),
     i = n(82180),
     a = n(124651),
@@ -21,7 +23,9 @@ class o {
             if (i.oneofKind !== e.localName) continue;
             let a =
                     "scalar" == e.kind || "enum" == e.kind
-                        ? Object.assign(Object.assign({}, t), { emitDefaultValues: !0 })
+                        ? Object.assign(Object.assign({}, t), {
+                              emitDefaultValues: !0,
+                          })
                         : t,
                 o = this.field(e, i[e.localName], a);
             (0, s.vA)(void 0 !== o), (n[t.useProtoFieldName ? e.name : e.jsonName] = o);

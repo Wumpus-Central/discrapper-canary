@@ -1,4 +1,6 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var i = n(627968);
 n(64700);
 var r = n(311907),
@@ -7,6 +9,7 @@ var r = n(311907),
     o = n(734057),
     a = n(287809),
     d = n(985018);
+
 function c(e, t) {
     var n;
     let c = (0, r.bG)([a.default], () => a.default.getCurrentUser(), []),

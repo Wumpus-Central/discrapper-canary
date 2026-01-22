@@ -1,4 +1,6 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var r = n(627968),
     i = n(64700),
     a = n(397927),
@@ -15,6 +17,7 @@ var r = n(627968),
     m = n(531525),
     g = n(652215),
     E = n(985018);
+
 function b() {
     let e = _.ML.useSetting(),
         t = _.eK.useSetting(),
@@ -33,7 +36,11 @@ function b() {
         { analyticsLocations: w } = (0, o.Ay)(s.A.TEXT_AND_IMAGES),
         P = i.useCallback((e) => {
             let t = 1 === e;
-            t ? u.A.cleanUpPrivateChannelSearchState() : u.A.cleanUpSearchState({ type: g.I4_.DMS }),
+            t
+                ? u.A.cleanUpPrivateChannelSearchState()
+                : u.A.cleanUpSearchState({
+                      type: g.I4_.DMS,
+                  }),
                 (0, d._k)({
                     prevIsCrossDMSettingEnabled: _.Hu.getSetting(),
                     isCrossDMSettingEnabled: t,
@@ -85,7 +92,9 @@ function b() {
                                 setting: m.H.CHAT_INLINE_MEDIA_UPLOADS,
                                 children: (0, r.jsx)(a.dOG, {
                                     checked: v,
-                                    description: E.intl.formatToPlainString(E.t.qjjvqO, { maxSize: 10 }),
+                                    description: E.intl.formatToPlainString(E.t.qjjvqO, {
+                                        maxSize: 10,
+                                    }),
                                     onChange: _.X6.updateSetting,
                                     label: E.intl.string(E.t.VP11No),
                                 }),
@@ -161,7 +170,9 @@ function b() {
                                     onChange: (e) => {
                                         p.default.track(g.HAw.STICKERS_IN_AUTOCOMPLETE_TOGGLED, {
                                             enabled: e,
-                                            location: { section: g.JJy.SETTINGS_TEXT_AND_IMAGES },
+                                            location: {
+                                                section: g.JJy.SETTINGS_TEXT_AND_IMAGES,
+                                            },
                                             location_stack: w,
                                         }),
                                             _.ML.updateSetting(e);
@@ -186,7 +197,9 @@ function b() {
                                     onChange: (e) => {
                                         p.default.track(g.HAw.SOUNDMOJI_IN_AUTOCOMPLETE_TOGGLED, {
                                             checked: e,
-                                            location: { section: g.JJy.SETTINGS_TEXT_AND_IMAGES },
+                                            location: {
+                                                section: g.JJy.SETTINGS_TEXT_AND_IMAGES,
+                                            },
                                         }),
                                             _.eK.updateSetting(e);
                                     },
@@ -210,7 +223,9 @@ function b() {
                                         onChange: (e) => {
                                             p.default.track(g.HAw.PREVIEW_MARKDOWN_TOGGLED, {
                                                 enabled: e,
-                                                location: { section: g.JJy.SETTINGS_TEXT_AND_IMAGES },
+                                                location: {
+                                                    section: g.JJy.SETTINGS_TEXT_AND_IMAGES,
+                                                },
                                             }),
                                                 _.SI.updateSetting(e);
                                         },

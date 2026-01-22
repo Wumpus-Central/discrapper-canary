@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(627968);
 n(64700);
 var l = n(397927),
@@ -7,6 +9,7 @@ var l = n(397927),
     s = n(652215),
     o = n(746080),
     c = n(985018);
+
 function u(e) {
     let { guild: t, selected: n } = e;
     return (0, r.jsx)(a.G, {

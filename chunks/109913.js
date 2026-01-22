@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -6,12 +8,15 @@ var i = n(503698),
     s = n(397927),
     o = n(147925),
     l = n(665273);
+
 function c(e) {
     let { breadcrumb: t, isActiveBreadcrumb: n, isFinalBreadcrumb: i, separatorClassName: c } = e;
     return (0, r.jsxs)(
         "div",
         {
-            className: a()(l.hj, { [l.jQ]: i }),
+            className: a()(l.hj, {
+                [l.jQ]: i,
+            }),
             children: [
                 (0, r.jsx)(s.Text, {
                     variant: "text-sm/medium",

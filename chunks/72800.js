@@ -1,4 +1,7 @@
-n.d(t, { A: () => h }), n(896048);
+n.d(t, {
+    A: () => h,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -27,6 +30,7 @@ let f = i.memo(function (e) {
               children: c,
           });
 });
+
 function h() {
     let e = (0, s.bG)([c.A], () => c.A.getGuildId()),
         t = (0, u.RX)(e),

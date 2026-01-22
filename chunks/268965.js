@@ -1,4 +1,7 @@
-n.d(t, { A: () => A }), n(896048);
+n.d(t, {
+    A: () => A,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -29,7 +32,9 @@ let m = (e) => {
                 (0, r.jsx)("div", {
                     className: h.AZ,
                     children: (0, r.jsxs)("div", {
-                        className: a()(h.VW, { [h.eO]: p }),
+                        className: a()(h.VW, {
+                            [h.eO]: p,
+                        }),
                         children: [
                             (0, r.jsx)(s.Heading, {
                                 variant: "heading-xl/semibold",
@@ -126,7 +131,9 @@ let m = (e) => {
                         }),
                     }),
                     j && null == n
-                        ? (0, r.jsx)(s.y$y, { className: p.u1 })
+                        ? (0, r.jsx)(s.y$y, {
+                              className: p.u1,
+                          })
                         : null == n
                           ? void 0
                           : n.map((e, t) =>
@@ -144,9 +151,19 @@ let m = (e) => {
                                             (0, r.jsxs)("div", {
                                                 className: p.vY,
                                                 children: [
-                                                    e.entries.map((e) => (0, r.jsx)(c.A, { entry: e }, e.guildId)),
+                                                    e.entries.map((e) =>
+                                                        (0, r.jsx)(
+                                                            c.A,
+                                                            {
+                                                                entry: e,
+                                                            },
+                                                            e.guildId,
+                                                        ),
+                                                    ),
                                                     e.appendEndCard && null != i
-                                                        ? (0, r.jsx)(c.s, { onClick: i })
+                                                        ? (0, r.jsx)(c.s, {
+                                                              onClick: i,
+                                                          })
                                                         : null,
                                                 ],
                                             }),

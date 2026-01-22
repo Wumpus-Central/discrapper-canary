@@ -1,4 +1,6 @@
-e.d(s, { default: () => c });
+e.d(s, {
+    default: () => c,
+});
 var a = e(627968),
     i = e(64700),
     n = e(732955),
@@ -24,7 +26,15 @@ let c = (t) => {
         actions: o,
         children: (0, a.jsx)("div", {
             className: l.s,
-            children: e.map((t) => (0, a.jsx)(r.A, { error: t }, t.filename)),
+            children: e.map((t) =>
+                (0, a.jsx)(
+                    r.A,
+                    {
+                        error: t,
+                    },
+                    t.filename,
+                ),
+            ),
         }),
     });
 };

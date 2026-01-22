@@ -1,4 +1,6 @@
-n.d(t, { L: () => l });
+n.d(t, {
+    L: () => l,
+});
 var r = n(311907),
     i = n(617617),
     a = n(287809),
@@ -17,6 +19,8 @@ let l = () => {
             );
         }),
         n = (0, s.Z)(),
-        l = (0, o.Rv)({ location: "useSafetyAlertsSettingOrDefault" });
+        l = (0, o.Rv)({
+            location: "useSafetyAlertsSettingOrDefault",
+        });
     return (!!n && !!l) || ((n || (null == e ? void 0 : e.isStaff()) === !0) && t);
 };

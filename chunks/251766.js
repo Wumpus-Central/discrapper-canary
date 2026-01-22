@@ -1,4 +1,6 @@
-n.d(t, { e: () => f });
+n.d(t, {
+    e: () => f,
+});
 var r = n(311907),
     l = n(164956),
     i = n(34457),
@@ -8,6 +10,7 @@ var r = n(311907),
     c = n(599941),
     u = n(855918),
     d = n(652215);
+
 function f(e) {
     let { guildId: t, channelId: n } = e,
         f = (0, c.uP)(t);
@@ -28,7 +31,9 @@ function f(e) {
                           c = (0, u.AN)(n, n.permissionOverwrites[t.id]),
                           f = s.A.getRole(t.id, e.role_id);
                       return o && !c && null != f && (0, u.iR)(f) && !(0, u.AN)(n, l);
-                  })(t, r, e, { isPreviewingRoles: c }),
+                  })(t, r, e, {
+                      isPreviewingRoles: c,
+                  }),
               )
             : [];
     }, [t, n, f]);

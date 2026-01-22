@@ -1,7 +1,10 @@
-n.d(t, { A: () => p }), n(896048);
+n.d(t, {
+    A: () => p,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
-    l = n(432022),
+    l = n(108531),
     s = n(827734),
     a = n(397927),
     c = n(627794),
@@ -10,6 +13,7 @@ var r = n(627968),
     u = n(690420),
     f = n(985018),
     g = n(522743);
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,6 +39,7 @@ function b(e) {
     }
     return e;
 }
+
 function m(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -53,6 +58,7 @@ function m(e, t) {
         e
     );
 }
+
 function p(e) {
     let { guildId: t, triggerType: n } = e,
         p = i.useMemo(() => () => (0, c._I)(t, n), [t, n]),
@@ -65,12 +71,16 @@ function p(e) {
         _ = (0, a.zhh)({
             opacity: +!A,
             pointerEvents: A ? "none" : "all",
-            config: m(b({}, l.config.stiff), { clamp: !0 }),
+            config: m(b({}, l.config.stiff), {
+                clamp: !0,
+            }),
         }),
         S = (0, a.zhh)({
             opacity: +!!A,
             pointerEvents: A ? "all" : "none",
-            config: m(b({}, l.config.stiff), { clamp: !0 }),
+            config: m(b({}, l.config.stiff), {
+                clamp: !0,
+            }),
             onStart: () => {
                 N(A ? O : x);
             },
@@ -81,7 +91,9 @@ function p(e) {
     return null == O || A
         ? (0, r.jsxs)("div", {
               className: g.$F,
-              style: { height: A ? "auto" : "60px" },
+              style: {
+                  height: A ? "auto" : "60px",
+              },
               children: [
                   (0, r.jsx)(l.animated.div, {
                       className: g.pT,
@@ -110,7 +122,9 @@ function p(e) {
                               (0, r.jsx)(a.Text, {
                                   variant: "text-md/semibold",
                                   color: "text-link",
-                                  children: f.intl.format(f.t.dNjRAf, { ruleName: v() }),
+                                  children: f.intl.format(f.t.dNjRAf, {
+                                      ruleName: v(),
+                                  }),
                               }),
                           ],
                       }),

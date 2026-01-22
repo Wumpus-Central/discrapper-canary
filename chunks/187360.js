@@ -1,4 +1,7 @@
-n.d(t, { A: () => m }), n(896048);
+n.d(t, {
+    A: () => m,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -11,6 +14,7 @@ var r = n(627968),
     f = n(461678),
     p = n(652215),
     h = n(985018);
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +40,7 @@ function b(e) {
     }
     return e;
 }
+
 function g(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -54,6 +59,7 @@ function g(e, t) {
         e
     );
 }
+
 function m(e) {
     let { channel: t } = e,
         n = l.useRef(null),
@@ -74,7 +80,14 @@ function m(e) {
     }, []);
     let j = (e) => {
             e.shiftKey
-                ? s.A.updateChannelOverrideSettings(t.guild_id, t.id, { muted: !m }, u.G_.muted(!m))
+                ? s.A.updateChannelOverrideSettings(
+                      t.guild_id,
+                      t.id,
+                      {
+                          muted: !m,
+                      },
+                      u.G_.muted(!m),
+                  )
                 : O((e) => !e);
         },
         v = h.intl.string(h.t.h850Ss);

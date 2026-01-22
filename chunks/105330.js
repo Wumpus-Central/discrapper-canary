@@ -1,8 +1,12 @@
-n.d(t, { l: () => o }), n(896048);
+n.d(t, {
+    l: () => o,
+}),
+    n(896048);
 var r = n(64700),
     i = n(267102),
     a = n(374803),
     s = n(562650);
+
 function o(e) {
     let { editorHeight: t, type: n, state: o } = e,
         [l, c] = r.useState(void 0),

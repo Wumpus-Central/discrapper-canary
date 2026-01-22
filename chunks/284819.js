@@ -14,6 +14,7 @@ function r(e) {
     }
     return e;
 }
+
 function i(e, t, n) {
     return (
         t in e
@@ -55,7 +56,11 @@ e.exports = {
                 };
             if (h && 0 !== a) {
                 var c = a - 1;
-                o = r({}, o, { prevSibling: (e[c] = e[c].merge({ nextSibling: s })).getKey() });
+                o = r({}, o, {
+                    prevSibling: (e[c] = e[c].merge({
+                        nextSibling: s,
+                    })).getKey(),
+                });
             }
             return e.push(new m(o)), e;
         }, []);

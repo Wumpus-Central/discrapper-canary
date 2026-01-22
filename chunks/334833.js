@@ -130,8 +130,12 @@ e.exports = function (e) {
         ],
         n = [
             e.C_LINE_COMMENT_MODE,
-            e.COMMENT(/\{/, /\}/, { relevance: 0 }),
-            e.COMMENT(/\(\*/, /\*\)/, { relevance: 10 }),
+            e.COMMENT(/\{/, /\}/, {
+                relevance: 0,
+            }),
+            e.COMMENT(/\(\*/, /\*\)/, {
+                relevance: 10,
+            }),
         ],
         r = {
             className: "meta",
@@ -150,20 +154,32 @@ e.exports = function (e) {
             className: "string",
             begin: /'/,
             end: /'/,
-            contains: [{ begin: /''/ }],
+            contains: [
+                {
+                    begin: /''/,
+                },
+            ],
         },
         a = {
             className: "number",
             relevance: 0,
             variants: [
-                { match: /\b\d[\d_]*(\.\d[\d_]*)?/ },
-                { match: /\$[\dA-Fa-f_]+/ },
+                {
+                    match: /\b\d[\d_]*(\.\d[\d_]*)?/,
+                },
+                {
+                    match: /\$[\dA-Fa-f_]+/,
+                },
                 {
                     match: /\$/,
                     relevance: 0,
                 },
-                { match: /&[0-7][0-7_]*/ },
-                { match: /%[01_]+/ },
+                {
+                    match: /&[0-7][0-7_]*/,
+                },
+                {
+                    match: /%[01_]+/,
+                },
                 {
                     match: /%/,
                     relevance: 0,
@@ -173,10 +189,18 @@ e.exports = function (e) {
         s = {
             className: "string",
             variants: [
-                { match: /#\d[\d_]*/ },
-                { match: /#\$[\dA-Fa-f][\dA-Fa-f_]*/ },
-                { match: /#&[0-7][0-7_]*/ },
-                { match: /#%[01][01_]*/ },
+                {
+                    match: /#\d[\d_]*/,
+                },
+                {
+                    match: /#\$[\dA-Fa-f][\dA-Fa-f_]*/,
+                },
+                {
+                    match: /#&[0-7][0-7_]*/,
+                },
+                {
+                    match: /#%[01][01_]*/,
+                },
             ],
         },
         o = {

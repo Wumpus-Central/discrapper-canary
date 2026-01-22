@@ -1,4 +1,6 @@
-n.d(t, { x: () => i });
+n.d(t, {
+    x: () => i,
+});
 var r = n(975571);
 let i = {
     binds: ["mod+shift+h", "f1"],

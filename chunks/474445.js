@@ -1,4 +1,8 @@
-n.d(t, { A: () => p }), n(896048), n(733351);
+n.d(t, {
+    A: () => p,
+}),
+    n(896048),
+    n(733351);
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -10,6 +14,7 @@ var r = n(627968),
     u = n(652215),
     f = n(985018);
 let g = new Map();
+
 function p(e, t) {
     let p,
         {
@@ -40,7 +45,9 @@ function p(e, t) {
                         g.has(e.id) || g.set(e.id, e.content),
                             (0, a.showToast)(
                                 (0, a.createToast)(
-                                    f.intl.formatToPlainString(f.t.Znl8Z8, { targetLanguage: b }),
+                                    f.intl.formatToPlainString(f.t.Znl8Z8, {
+                                        targetLanguage: b,
+                                    }),
                                     a.ToastType.AI,
                                 ),
                             );
@@ -65,7 +72,9 @@ function p(e, t) {
                                 }),
                                 (0, a.showToast)(
                                     (0, a.createToast)(
-                                        f.intl.formatToPlainString(f.t.FtVUqm, { targetLanguage: b }),
+                                        f.intl.formatToPlainString(f.t.FtVUqm, {
+                                            targetLanguage: b,
+                                        }),
                                         a.ToastType.SUCCESS,
                                     ),
                                 ));

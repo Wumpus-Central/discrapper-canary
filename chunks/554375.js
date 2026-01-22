@@ -27,6 +27,7 @@ var r = n(735438),
     E = n(652215),
     b = n(355097),
     y = n(985018);
+
 function O(e) {
     _.wc.updateAsync(
         "textAndImages",
@@ -36,6 +37,7 @@ function O(e) {
         b.Sb.FREQUENT_USER_ACTION,
     );
 }
+
 function A(e) {
     l.h.dispatch({
         type: "EMOJI_FETCH",
@@ -59,6 +61,7 @@ function A(e) {
                 }),
         );
 }
+
 function v(e) {
     let { guildId: t, image: n, name: r, roles: i, analyticsLocation: s } = e;
     return (
@@ -73,7 +76,9 @@ function v(e) {
                 name: r,
                 roles: i,
             },
-            context: { client_event_source: null == s ? void 0 : s.page },
+            context: {
+                client_event_source: null == s ? void 0 : s.page,
+            },
             oldFormErrors: !0,
             rejectWithError: !1,
         }).then(
@@ -94,6 +99,7 @@ function v(e) {
         )
     );
 }
+
 function S(e, t, n) {
     return (
         l.h.dispatch({
@@ -103,7 +109,12 @@ function S(e, t, n) {
         }),
         a.Bo.del({
             url: E.Rsh.GUILD_EMOJI(e, t),
-            body: null != n ? { replaced_by: n } : void 0,
+            body:
+                null != n
+                    ? {
+                          replaced_by: n,
+                      }
+                    : void 0,
             oldFormErrors: !0,
             rejectWithError: !1,
         }).then(() => {
@@ -127,6 +138,7 @@ async function I(e) {
         throw new c.A(e);
     }
 }
+
 function T(e) {
     if (h.A.totalUnavailableGuilds > 0 || !p.A.isConnected()) return e;
     let t = e
@@ -137,6 +149,7 @@ function T(e) {
         .filter(m.Vq);
     return [...(0, f.A)(t).keys()];
 }
+
 function C(e) {
     var t, n, r;
     return null == e
@@ -146,6 +159,7 @@ function C(e) {
           ? t
           : e.name;
 }
+
 function N(e) {
     let t = C(e);
     null != t &&
@@ -155,13 +169,16 @@ function N(e) {
                 ((e.emojis = T(e.emojis)), i().size(e.emojis) >= 250)
                     ? (g.A.show({
                           title: y.intl.string(y.t["+XYXtZ"]),
-                          body: y.intl.formatToPlainString(y.t.JaIyFi, { count: 250 }),
+                          body: y.intl.formatToPlainString(y.t.JaIyFi, {
+                              count: 250,
+                          }),
                       }),
                       !1)
                     : !e.emojis.includes(t) && void e.emojis.push(t),
             b.Sb.INFREQUENT_USER_ACTION,
         );
 }
+
 function R(e) {
     let t = C(e);
     null != t &&

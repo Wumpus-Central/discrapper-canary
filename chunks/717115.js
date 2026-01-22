@@ -1,4 +1,7 @@
-n.d(t, { O: () => A }), n(896048);
+n.d(t, {
+    O: () => A,
+}),
+    n(896048);
 var i = n(627968),
     l = n(64700),
     s = n(397927),
@@ -15,6 +18,7 @@ var i = n(627968),
     j = n(652215),
     p = n(985018),
     b = n(453235);
+
 function N(e, t, n) {
     return (
         t in e
@@ -30,14 +34,24 @@ function N(e, t, n) {
 }
 class A extends l.PureComponent {
     highlight() {
-        this.setState({ highlight: !0 }, () => {
-            null != this._timeout && clearTimeout(this._timeout), (this._timeout = setTimeout(this.unhighlight, 1000));
-        });
+        this.setState(
+            {
+                highlight: !0,
+            },
+            () => {
+                null != this._timeout && clearTimeout(this._timeout),
+                    (this._timeout = setTimeout(this.unhighlight, 1e3));
+            },
+        );
     }
     componentDidMount() {
         if (this.props.autoFocus) {
             var e;
-            null == (e = this.contentDomRef.current) || e.scrollIntoView({ behavior: "smooth" }), this.highlight();
+            null == (e = this.contentDomRef.current) ||
+                e.scrollIntoView({
+                    behavior: "smooth",
+                }),
+                this.highlight();
         }
     }
     componentWillUnmount() {
@@ -81,17 +95,25 @@ class A extends l.PureComponent {
         let l = (0, o.gU)(n);
         if (n.type === j.rbe.GUILD_CATEGORY && null != n.guild_id && "" !== n.guild_id) {
             let e = g.A.getCategories(n.guild_id);
-            t = p.intl.formatToPlainString(p.t["2KzH89"], { num: null != e[n.id] ? e[n.id].length : 0 });
+            t = p.intl.formatToPlainString(p.t["2KzH89"], {
+                num: null != e[n.id] ? e[n.id].length : 0,
+            });
         } else
             t =
                 null != e
-                    ? p.intl.formatToPlainString(p.t.L1zJgb, { categoryName: (0, d.m1)(e, m.default, h.A) })
+                    ? p.intl.formatToPlainString(p.t.L1zJgb, {
+                          categoryName: (0, d.m1)(e, m.default, h.A),
+                      })
                     : p.intl.string(p.t.uIzfCE);
         return (0, i.jsxs)(c.A, {
             grow: 1,
             className: b.VW,
             children: [
-                null != l ? (0, i.jsx)(l, { className: b.Kk }) : null,
+                null != l
+                    ? (0, i.jsx)(l, {
+                          className: b.Kk,
+                      })
+                    : null,
                 (0, i.jsxs)("div", {
                     className: b.aT,
                     children: [
@@ -175,9 +197,13 @@ class A extends l.PureComponent {
         super(...e),
             N(this, "_timeout", void 0),
             N(this, "contentDomRef", l.createRef()),
-            N(this, "state", { highlight: !1 }),
+            N(this, "state", {
+                highlight: !1,
+            }),
             N(this, "unhighlight", () => {
-                this.setState({ highlight: !1 });
+                this.setState({
+                    highlight: !1,
+                });
             }),
             N(this, "handleMute", (e) => {
                 let { messageNotifications: t } = this.props;

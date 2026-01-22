@@ -24,6 +24,7 @@ var i,
     E = n(661191),
     b = n(652215),
     y = n(705751);
+
 function O(e, t, n) {
     return (
         t in e
@@ -37,6 +38,7 @@ function O(e, t, n) {
         e
     );
 }
+
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -53,6 +55,7 @@ function A(e) {
     }
     return e;
 }
+
 function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -65,6 +68,7 @@ function v(e, t) {
     }
     return n;
 }
+
 function S(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -77,7 +81,7 @@ function S(e, t) {
     );
 }
 let I = "GameStoreReportedGames",
-    T = 2147483648,
+    T = 0x80000000,
     C = m.A.Millis.DAY,
     N = new u.A(),
     R = {},
@@ -93,6 +97,7 @@ let I = "GameStoreReportedGames",
     G = [],
     V = new Map(),
     F = m.A.Millis.HOUR;
+
 function B(e) {
     var t, n, r, i, a, s, o, l, c, u;
     return {
@@ -111,6 +116,7 @@ function B(e) {
         cover_image_hash: null != (u = e.cover_image_hash) ? u : void 0,
     };
 }
+
 function H(e) {
     var t, n, r;
     return {
@@ -129,32 +135,40 @@ function H(e) {
         cover_image_hash: null != (r = e.cover_image_hash) ? r : void 0,
     };
 }
+
 function Y(e) {
     let t = e instanceof f.Ay ? H(e) : e;
     for (let n of (N.set(e.id, t), (R[e.name.toLowerCase()] = t), e.aliases)) R[n.toLowerCase()] = t;
     if ((0, g.isDesktop)()) for (let n of e.executables) w[n.name] = t;
 }
+
 function W(e) {
     let { detectableApplications: t } = e;
     for (let e of (N.clear(), (R = {}), (w = {}), t)) Y(e);
 }
+
 function K() {
     r = !0;
 }
+
 function z() {
     (r = !1), (L = !0);
 }
+
 function q(e) {
     let { games: t, etag: n } = e;
     for (let e of (null != n && D !== n && (N.clear(), (R = {}), (w = {}), (D = n)), t)) Y(B(e));
     (r = void 0), (x = Date.now()), (L = !0);
 }
+
 function X() {
     M = !0;
 }
+
 function Z() {
     M = !1;
 }
+
 function Q(e) {
     let { executables: t, patterns: n, etag: r } = e;
     null != r && k !== r && ((k = r), (U = t.map((e) => e.toLowerCase())), (G = n.map((e) => RegExp(e, "i")))),
@@ -246,7 +260,11 @@ class $ extends (a = s.Ay.PersistedStore) {
     }
     canFetchExecutableBlocklist() {
         return (
-            !!d.n.getConfig({ location: "GameStore.shouldBlock" }).enabled && !M && (null == j || Date.now() >= j + C)
+            !!d.n.getConfig({
+                location: "GameStore.shouldBlock",
+            }).enabled &&
+            !M &&
+            (null == j || Date.now() >= j + C)
         );
     }
     getGameByExecutable(e) {
@@ -267,7 +285,13 @@ class $ extends (a = s.Ay.PersistedStore) {
         return null != (t = null != (n = this.getGameByExecutable(i)) ? n : this.getGameByExecutable(a)) ? t : r;
     }
     shouldBlock(e) {
-        if (!d.n.getConfig({ location: "GameStore.shouldBlock" }).enabled || null == e.exePath || "" === e.exePath)
+        if (
+            !d.n.getConfig({
+                location: "GameStore.shouldBlock",
+            }).enabled ||
+            null == e.exePath ||
+            "" === e.exePath
+        )
             return !1;
         let t = e.exePath.toLowerCase(),
             n = U.find((e) => t.includes(e));

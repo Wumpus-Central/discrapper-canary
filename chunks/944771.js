@@ -12,7 +12,10 @@ var i = n(318678),
     o = n(890908),
     l = n(3258);
 let c = [i.U, o.UO, s.e, a.m];
+
 function u() {
-    return (0, r.jsx)(l.Playground, { configs: c });
+    return (0, r.jsx)(l.Playground, {
+        configs: c,
+    });
 }
 let d = u;

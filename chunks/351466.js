@@ -1,4 +1,6 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var r = n(627968),
     i = n(64700),
     l = n(960488),
@@ -24,7 +26,9 @@ let b = function () {
                 case g.GlobalDiscoveryTab.APPS:
                     return (0, r.jsx)(c.default, {});
                 case g.GlobalDiscoveryTab.QUESTS:
-                    return (0, r.jsx)(d.A, { topLevelRoute: !1 });
+                    return (0, r.jsx)(d.A, {
+                        topLevelRoute: !1,
+                    });
                 default:
                     (0, p.xb)(e);
             }
@@ -34,14 +38,28 @@ let b = function () {
         i.useEffect(() => {
             let e = b.pathname,
                 t = (0, A.j)(e);
-            t !== h.A.getField("selectedTab") && h.A.setState({ selectedTab: t });
+            t !== h.A.getField("selectedTab") &&
+                h.A.setState({
+                    selectedTab: t,
+                });
         }, [b.pathname]),
         i.useEffect(() => {
-            e && (0, f.tx)({ selectedTab: t });
+            e &&
+                (0, f.tx)({
+                    selectedTab: t,
+                });
         }, [t, e]),
         (0, r.jsxs)("section", {
             className: m.k,
-            children: [(0, r.jsx)(s.HI, { location: (0, A.t)(t) }), (0, r.jsx)("div", { className: m.T }), n],
+            children: [
+                (0, r.jsx)(s.HI, {
+                    location: (0, A.t)(t),
+                }),
+                (0, r.jsx)("div", {
+                    className: m.T,
+                }),
+                n,
+            ],
         })
     );
 };

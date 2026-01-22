@@ -8,8 +8,13 @@ Object.defineProperty(t, "Hue", {
 }),
     r(601428);
 var o = r(402075);
+
 function a(e) {
-    return e && e.__esModule ? e : { default: e };
+    return e && e.__esModule
+        ? e
+        : {
+              default: e,
+          };
 }
 Object.defineProperty(t, "Saturation", {
     enumerable: !0,

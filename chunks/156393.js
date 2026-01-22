@@ -1,4 +1,6 @@
-n.d(t, { d: () => f });
+n.d(t, {
+    d: () => f,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -10,6 +12,7 @@ var i = n(503698),
     u = n(622037),
     d = n(985018),
     p = n(904257);
+
 function f(e) {
     let { expiresAt: t } = e,
         n = (0, o.Ay)(t, o.yE.SHORT_TIME),

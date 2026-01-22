@@ -1,4 +1,8 @@
-n.d(t, { A: () => ew }), n(896048), n(321073);
+n.d(t, {
+    A: () => ew,
+}),
+    n(896048),
+    n(321073);
 var r,
     i = n(735438),
     a = n.n(i),
@@ -35,6 +39,7 @@ var r,
     M = n(977997),
     k = n(403362),
     U = n(652215);
+
 function G(e, t, n) {
     return (
         t in e
@@ -48,6 +53,7 @@ function G(e, t, n) {
         e
     );
 }
+
 function V(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -64,6 +70,7 @@ function V(e) {
     }
     return e;
 }
+
 function F(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -76,6 +83,7 @@ function F(e, t) {
     }
     return n;
 }
+
 function B(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -90,7 +98,7 @@ function B(e, t) {
 let H = "party-",
     Y = "channel-",
     W = "user-",
-    K = 1000,
+    K = 1e3,
     z = !1,
     q = !1,
     X = [],
@@ -99,6 +107,7 @@ let H = "party-",
     $ = {},
     J = new Set(),
     ee = new Set();
+
 function et() {
     let e = L.A.getFriendIDs();
     return new Set(
@@ -112,18 +121,39 @@ function et() {
             : e,
     );
 }
+
 function en(e) {
     return x.A.findActivity(e, (e) => e.type !== U.$pd.CUSTOM_STATUS);
 }
+
 function er(e) {
-    return null == Q[e] && (Q = B(V({}, Q), { [e]: new T.A({ name: e }) })), Q[e];
+    return (
+        null == Q[e] &&
+            (Q = B(V({}, Q), {
+                [e]: new T.A({
+                    name: e,
+                }),
+            })),
+        Q[e]
+    );
 }
+
 function ei(e) {
-    return null == $[e] && ($ = B(V({}, $), { [e]: new I.A({ url: e }) })), $[e];
+    return (
+        null == $[e] &&
+            ($ = B(V({}, $), {
+                [e]: new I.A({
+                    url: e,
+                }),
+            })),
+        $[e]
+    );
 }
+
 function ea(e) {
     ee.has(e) || J.add(e);
 }
+
 function es(e) {
     if ((0, d.A)(e)) return S.HT;
     if ((0, f.A)(e)) return er(e.name);
@@ -134,6 +164,7 @@ function es(e) {
           ? ei(e.url)
           : (null != e.application_id && ea(e.application_id), t);
 }
+
 function eo(e) {
     let t = m.A.getApplication(e);
     return null != t
@@ -141,7 +172,11 @@ function eo(e) {
         : "string" != typeof e
           ? (new g.A("NowPlayingViewStore").error(
                 "Unknown type for applicationId: ".concat(typeof e, ", value: ").concat(e),
-                { tags: { source: "ACTIVITIES" } },
+                {
+                    tags: {
+                        source: "ACTIVITIES",
+                    },
+                },
             ),
             null)
           : e === S.WY
@@ -152,13 +187,17 @@ function eo(e) {
                 ? ei(e.slice(I.K.length))
                 : (ea(e), null);
 }
+
 function el(e) {
     let t = M.A.getVoiceStateForUser(e);
     return (null == t ? void 0 : t.channelId) != null &&
-        D.A.canWithPartialContext(U.xBc.VIEW_CHANNEL, { channelId: t.channelId })
+        D.A.canWithPartialContext(U.xBc.VIEW_CHANNEL, {
+            channelId: t.channelId,
+        })
         ? t.channelId
         : null;
 }
+
 function ec(e) {
     return a()(e).groupBy((e) => {
         var t;
@@ -171,13 +210,16 @@ function ec(e) {
               : "".concat(W).concat(e.id);
     });
 }
+
 function eu(e, t) {
     let n = (e) => e.game.name;
     return a()(e).orderBy([t, n], ["desc", "asc"]);
 }
+
 function ed(e) {
     return L.A.isFriend(e.id);
 }
+
 function ef(e, t, n) {
     let r,
         i = j.default.getCurrentUser(),
@@ -323,11 +365,13 @@ function ef(e, t, n) {
         applicationStreams: E,
     };
 }
+
 function ep(e) {
     let t = et(),
         n = ef.bind(null, t);
     return a()(e).mapValues(n);
 }
+
 function e_(e) {
     let t = (e) => e.priorityMembers.map((e) => e.user.username.toLowerCase()).join(" "),
         n = (e) => e.currentActivities.length > 0,
@@ -337,6 +381,7 @@ function e_(e) {
         s = (e) => e.isSpotifyActivity;
     return e.values().orderBy([eh, a, i, r, n, s, t], ["asc", "desc", "desc", "desc", "desc", "asc", "asc"]).value();
 }
+
 function eh(e) {
     return (
         0 !== e.voiceChannels.length &&
@@ -347,6 +392,7 @@ function eh(e) {
         })
     );
 }
+
 function em(e) {
     return (
         0 !== e.voiceChannels.length &&
@@ -357,9 +403,11 @@ function em(e) {
         })
     );
 }
+
 function eg(e) {
     return e.partiedMembers.some((e) => L.A.isBlockedOrIgnored(e.id));
 }
+
 function eE(e) {
     return e.filter((e) => {
         let t = eg(e),
@@ -371,21 +419,25 @@ function eE(e) {
         );
     });
 }
+
 function eb(e) {
     return e.map((e) => ({
         type: U.ZzC.USER,
         party: e,
     }));
 }
+
 function ey() {
     if (J.size > 0) {
         let e = Array.from(J);
         h.Ay.fetchApplications(e), e.forEach((e) => ee.add(e)), J.clear();
     }
 }
+
 function eO() {
     return z && E.A.isConnected();
 }
+
 function eA() {
     if (!eO()) return !1;
     J.clear(),
@@ -409,15 +461,19 @@ function eA() {
 let ev = a().throttle(() => {
     eA(), eR.emitChange();
 }, K);
+
 function eS() {
     return !!eO() && (ev(), !1);
 }
+
 function eI() {
     (z = !1), (X = []), (Z = []), J.clear();
 }
+
 function eT() {
     (z = !0), ev();
 }
+
 function eC() {
     z = !1;
 }

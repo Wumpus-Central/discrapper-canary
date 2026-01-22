@@ -22,6 +22,7 @@ var i = n(421380),
     m = n(652215),
     g = n(765682),
     E = n(985018);
+
 function b(e, t, n) {
     return (
         t in e
@@ -35,6 +36,7 @@ function b(e, t, n) {
         e
     );
 }
+
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -51,6 +53,7 @@ function y(e) {
     }
     return e;
 }
+
 function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -63,6 +66,7 @@ function O(e, t) {
     }
     return n;
 }
+
 function A(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -75,12 +79,23 @@ function A(e, t) {
     );
 }
 let v = new o.A("AudioActionCreators");
+
 function S() {
     (0, a.mMO)(async () => {
         let { default: e } = await Promise.all([n.e("56423"), n.e("25280")]).then(n.bind(n, 987482));
-        return (t) => (0, r.jsx)(e, y({ source: "Unsupported Browser" }, t));
+        return (t) =>
+            (0, r.jsx)(
+                e,
+                y(
+                    {
+                        source: "Unsupported Browser",
+                    },
+                    t,
+                ),
+            );
     });
 }
+
 function I() {
     return (
         !c.A.isSupported() &&
@@ -110,17 +125,21 @@ function I() {
         !0)
     );
 }
+
 function T(e) {
     p.default.track(m.HAw.PERMISSIONS_ACKED, {
         type: "audio",
         action: e,
     });
 }
+
 function C() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     return I()
         ? Promise.resolve(!1)
-        : (p.default.track(m.HAw.PERMISSIONS_REQUESTED, { type: "audio" }),
+        : (p.default.track(m.HAw.PERMISSIONS_REQUESTED, {
+              type: "audio",
+          }),
           c.A.getMediaEngine()
               .enable()
               .then(
@@ -150,6 +169,7 @@ function C() {
               )
               .then(() => !0));
 }
+
 function N(e) {
     let { usedKeybind: t = !1, location: n } = e,
         r = d.Ay.getKeybindForAction(m.hCu.TOGGLE_MUTE, !1, !0),
@@ -165,6 +185,7 @@ function N(e) {
         location: n,
     });
 }
+
 function R(e) {
     let { usedKeybind: t = !1, location: n } = e,
         r = d.Ay.getKeybindForAction(m.hCu.TOGGLE_DEAFEN, !1, !0),

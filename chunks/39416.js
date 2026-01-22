@@ -35,6 +35,7 @@ let C = {
         errors: I.A,
     },
     N = I.A;
+
 function R(e, t = {}) {
     return w(e)
         ? ((t.async = !0), P(e, t).then((e) => V(e, t)))
@@ -42,9 +43,11 @@ function R(e, t = {}) {
           ? ((t.async = !0), G(e).then((e) => V(e, t)))
           : V(e, t);
 }
+
 function w(e) {
     return "string" == typeof e;
 }
+
 function P(e, t) {
     return /^\w+:\/\//.test(e)
         ? "u" > typeof fetch
@@ -54,17 +57,29 @@ function P(e, t) {
           ? Promise.resolve((0, r.C5)(e))
           : M(e, t);
 }
+
 function D(e, { length: t } = {}) {
-    let n = { method: "GET" };
+    let n = {
+        method: "GET",
+    };
     return (
-        Number.isInteger(t) && t >= 0 && (n.headers = { range: `bytes=0-${t - 1}` }),
+        Number.isInteger(t) &&
+            t >= 0 &&
+            (n.headers = {
+                range: `bytes=0-${t - 1}`,
+            }),
         fetch(e, n).then((e) => e.arrayBuffer())
     );
 }
+
 function x(e, { length: t } = {}) {
     return new Promise((n, r) => {
         let i = {};
-        Number.isInteger(t) && t >= 0 && (i.headers = { range: `bytes=0-${t - 1}` }),
+        Number.isInteger(t) &&
+            t >= 0 &&
+            (i.headers = {
+                range: `bytes=0-${t - 1}`,
+            }),
             L(e)(e, i, (e) => {
                 if (e.statusCode >= 200 && e.statusCode <= 299) {
                     let t = [];
@@ -75,12 +90,15 @@ function x(e, { length: t } = {}) {
             }).on("error", (e) => r(e));
     });
 }
+
 function L(e) {
     return /^https:\/\//.test(e) ? require("https").get : require("http").get;
 }
+
 function j(e) {
     return /^data:[^;,]*(;base64)?,/.test(e);
 }
+
 function M(e, { length: t } = {}) {
     return new Promise((n, r) => {
         let i = k();
@@ -108,6 +126,7 @@ function M(e, { length: t } = {}) {
         });
     });
 }
+
 function k() {
     try {
         return require("fs");
@@ -115,18 +134,22 @@ function k() {
         return;
     }
 }
+
 function U(e) {
     return "u" > typeof File && e instanceof File;
 }
+
 function G(e) {
     return new Promise((t, n) => {
         let r = new FileReader();
         (r.onload = (e) => t(e.target.result)), (r.onerror = () => n(r.error)), r.readAsArrayBuffer(e);
     });
 }
+
 function V(e, t) {
     return F(e) && (e = new Uint8Array(e).buffer), H(B(e), t);
 }
+
 function F(e) {
     try {
         return T.isBuffer(e);
@@ -134,6 +157,7 @@ function F(e) {
         return !1;
     }
 }
+
 function B(e) {
     try {
         return new DataView(e);
@@ -141,6 +165,7 @@ function B(e) {
         return new i.A(e);
     }
 }
+
 function H(
     e,
     { expanded: t = !1, async: n = !1, includeUnknown: i = !1, domParser: s } = {
@@ -275,9 +300,11 @@ function H(
         throw new I.A.MetadataMissingError();
     if (n) return Promise.all(N).then(() => C);
     return C;
+
     function es(e) {
         t ? (C.icc = e) : (C = (0, r.dP)({}, C, e));
     }
+
     function eo(e) {
         if (t) {
             for (let t of ["exif", "iptc"]) {
@@ -291,15 +318,19 @@ function H(
                 delete C.__iptc;
     }
 }
+
 function Y(e) {
     return void 0 !== e;
 }
+
 function W(e) {
     return void 0 !== e;
 }
+
 function K(e) {
     return void 0 !== e;
 }
+
 function z(e) {
     if (e.exif) {
         if (e.exif.GPSLatitude && e.exif.GPSLatitudeRef)
@@ -322,15 +353,19 @@ function z(e) {
             } catch (e) {}
     }
 }
+
 function q(e) {
     return void 0 !== e;
 }
+
 function X(e) {
     return Array.isArray(e) && e.length > 0;
 }
+
 function Z(e) {
     return Array.isArray(e) && e.length > 0;
 }
+
 function Q(e) {
     return (
         e.Make &&
@@ -341,6 +376,7 @@ function Q(e) {
         e.MakerNote.__offset
     );
 }
+
 function $(e) {
     let t = "PENTAX ";
     return (
@@ -349,21 +385,27 @@ function $(e) {
         e.MakerNote.__offset
     );
 }
+
 function J(e) {
     return void 0 !== e;
 }
+
 function ee(e) {
     return void 0 !== e;
 }
+
 function et(e) {
     return void 0 !== e;
 }
+
 function en(e) {
     return void 0 !== e;
 }
+
 function er(e) {
     return void 0 !== e;
 }
+
 function ei(e) {
     return void 0 !== e;
 }

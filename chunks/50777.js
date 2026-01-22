@@ -1,4 +1,6 @@
-n.d(t, { A: () => S });
+n.d(t, {
+    A: () => S,
+});
 var r = n(627968),
     i = n(64700),
     a = n(158954),
@@ -20,6 +22,7 @@ var r = n(627968),
     O = n(818348),
     A = n(985018),
     v = n(928625);
+
 function S(e) {
     var t, n, S, I, T, C, N, R;
     let { guildId: w, skuId: P, channel: D } = e,
@@ -54,8 +57,12 @@ function S(e) {
             null != L &&
                 (0, E.a)(
                     L,
-                    { isGift: !1 },
-                    { analyticsLocations: [l.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED_PURCHASE_BUTTON] },
+                    {
+                        isGift: !1,
+                    },
+                    {
+                        analyticsLocations: [l.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED_PURCHASE_BUTTON],
+                    },
                 );
         }, [L]),
         B = i.useCallback(() => {
@@ -66,13 +73,17 @@ function S(e) {
                         isGift: !0,
                         giftRecipient: null != k ? k : void 0,
                     },
-                    { analyticsLocations: [l.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED_GIFT_BUTTON] },
+                    {
+                        analyticsLocations: [l.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED_GIFT_BUTTON],
+                    },
                 );
         }, [L, k]);
     return x && null == L
         ? (0, r.jsx)("div", {
               className: v.kL,
-              children: (0, r.jsx)(o.y$y, { className: v.u1 }),
+              children: (0, r.jsx)(o.y$y, {
+                  className: v.u1,
+              }),
           })
         : null == L
           ? null
@@ -145,7 +156,9 @@ function S(e) {
                                         }),
                                         fullWidth: !0,
                                     }),
-                                    (0, r.jsx)(b.A, { onGift: B }),
+                                    (0, r.jsx)(b.A, {
+                                        onGift: B,
+                                    }),
                                 ],
                             }),
                         ],

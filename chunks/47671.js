@@ -1,5 +1,8 @@
 let r, i;
-n.d(t, { A: () => M }), n(896048);
+n.d(t, {
+    A: () => M,
+}),
+    n(896048);
 var a,
     s = n(311907),
     o = n(554146),
@@ -19,6 +22,7 @@ var a,
     O = n(644235),
     A = n(385803),
     v = n(185928);
+
 function S(e, t, n) {
     return (
         t in e
@@ -60,6 +64,7 @@ let I = !0,
         let i = g.A.getChannel(t);
         null != i && (0, m.ke)(i.type) && (T = !0);
     };
+
 function P() {
     I && (r = void 0), (T = !1);
 }
@@ -99,7 +104,11 @@ class j extends (a = s.Ay.PersistedStore) {
             this.syncWith([u.A], x);
     }
     getState() {
-        return I ? {} : { gradientPresetId: null == r ? void 0 : r.id };
+        return I
+            ? {}
+            : {
+                  gradientPresetId: null == r ? void 0 : r.id,
+              };
     }
     get gradientPreset() {
         return r;
@@ -121,7 +130,9 @@ class j extends (a = s.Ay.PersistedStore) {
             S(this, "migrations", [
                 (e) => {
                     var t;
-                    return { gradientPresetId: null == e || null == (t = e.gradientPreset) ? void 0 : t.id };
+                    return {
+                        gradientPresetId: null == e || null == (t = e.gradientPreset) ? void 0 : t.id,
+                    };
                 },
             ]);
     }

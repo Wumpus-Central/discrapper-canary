@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -7,6 +9,7 @@ var i = n(503698),
     o = n(788868),
     l = n(985018),
     c = n(709246);
+
 function u(e) {
     let {
             price: t,
@@ -20,9 +23,13 @@ function u(e) {
         _ = null;
     return (
         i === o.WT.YEAR
-            ? (_ = l.intl.format(l.t["3U719t"], { price: p }))
+            ? (_ = l.intl.format(l.t["3U719t"], {
+                  price: p,
+              }))
             : i === o.WT.MONTH && 1 === d
-              ? (_ = l.intl.format(l.t.NkR7BU, { price: p }))
+              ? (_ = l.intl.format(l.t.NkR7BU, {
+                    price: p,
+                }))
               : i === o.WT.MONTH &&
                 d > 1 &&
                 (_ = l.intl.format(l.t.CNAGg4, {
@@ -32,7 +39,12 @@ function u(e) {
         (0, r.jsx)("div", {
             className: a()(c.S, u),
             "data-testid": "PricePerInterval-".concat(n),
-            children: null == i || f ? (0, r.jsx)("strong", { children: p }) : _,
+            children:
+                null == i || f
+                    ? (0, r.jsx)("strong", {
+                          children: p,
+                      })
+                    : _,
         })
     );
 }

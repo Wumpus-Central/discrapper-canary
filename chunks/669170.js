@@ -6,6 +6,7 @@ n.d(t, {
     n(896048),
     n(65821);
 var r = n(741918);
+
 function i(e, t, n) {
     return (
         t in e
@@ -19,6 +20,7 @@ function i(e, t, n) {
         e
     );
 }
+
 function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,6 +37,7 @@ function a(e) {
     }
     return e;
 }
+
 function s(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -47,6 +50,7 @@ function s(e, t) {
     }
     return n;
 }
+
 function o(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -61,12 +65,15 @@ function o(e, t) {
 var l = (function (e) {
     return (e.UPDATE_ITEMS = "UPDATE_ITEMS"), (e.SET_FOCUS_PATH = "SET_FOCUS_PATH"), e;
 })({});
+
 function c(e, t) {
     return e.findIndex((e) => t === e.key);
 }
+
 function u(e) {
     return e.focusPath[e.focusPath.length - 1];
 }
+
 function d(e) {
     let t = e.items;
     for (let n = 0; n < e.focusPath.length - 1; n++) {
@@ -76,6 +83,7 @@ function d(e) {
     }
     return t;
 }
+
 function f(e, t) {
     let n = e,
         r = [];
@@ -91,19 +99,28 @@ function f(e, t) {
     }
     return r;
 }
+
 function p(e, t) {
     let { items: n } = t,
         r = o(a({}, e), {
             items: n,
             focusPath: f(n, e.focusPath),
         });
-    return o(a({}, r), { focusIndex: b(r) });
+    return o(a({}, r), {
+        focusIndex: b(r),
+    });
 }
+
 function _(e, t) {
     let { path: n } = t,
-        r = o(a({}, e), { focusPath: f(e.items, n) });
-    return o(a({}, r), { focusIndex: b(r) });
+        r = o(a({}, e), {
+            focusPath: f(e.items, n),
+        });
+    return o(a({}, r), {
+        focusIndex: b(r),
+    });
 }
+
 function h(e, t) {
     let n = u(e),
         r = d(e);
@@ -113,8 +130,11 @@ function h(e, t) {
     let s = o(a({}, e), {
         focusPath: [...e.focusPath.slice(0, -1), r[i].key],
     });
-    return o(a({}, s), { focusIndex: b(s) });
+    return o(a({}, s), {
+        focusIndex: b(s),
+    });
 }
+
 function m(e, t) {
     let n = u(e),
         r = d(e);
@@ -124,8 +144,11 @@ function m(e, t) {
     let s = o(a({}, e), {
         focusPath: [...e.focusPath.slice(0, -1), r[i].key],
     });
-    return o(a({}, s), { focusIndex: b(s) });
+    return o(a({}, s), {
+        focusIndex: b(s),
+    });
 }
+
 function g(e, t) {
     var n;
     let r = u(e),
@@ -137,18 +160,27 @@ function g(e, t) {
     let f = o(a({}, e), {
         focusPath: [...e.focusPath, l.key],
     });
-    return o(a({}, f), { focusIndex: b(f) });
+    return o(a({}, f), {
+        focusIndex: b(f),
+    });
 }
+
 function E(e, t) {
     if (e.focusPath.length <= 1) return e;
-    let n = o(a({}, e), { focusPath: e.focusPath.slice(0, -1) });
-    return o(a({}, n), { focusIndex: b(n) });
+    let n = o(a({}, e), {
+        focusPath: e.focusPath.slice(0, -1),
+    });
+    return o(a({}, n), {
+        focusIndex: b(n),
+    });
 }
+
 function b(e) {
     let t = u(e),
         n = d(e);
     return null == n ? -1 : c(n, t);
 }
+
 function y(e, t) {
     switch (t.type) {
         case r.X2.NAVIGATE_UP:

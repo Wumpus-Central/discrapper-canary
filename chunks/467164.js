@@ -1,4 +1,7 @@
-n.d(t, { default: () => E }), n(896048);
+n.d(t, {
+    default: () => E,
+}),
+    n(896048);
 var l = n(627968),
     r = n(64700),
     i = n(989349),
@@ -27,6 +30,7 @@ var l = n(627968),
     C = n(985018),
     _ = n(737782),
     k = n(973324);
+
 function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -52,6 +56,7 @@ function N(e) {
     }
     return e;
 }
+
 function T(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -70,6 +75,7 @@ function T(e, t) {
         e
     );
 }
+
 function E(e) {
     let { channel: t, onClose: n, transitionState: i } = e,
         a = (0, c.bG)([g.A], () => g.A.getGuild(t.guild_id));
@@ -85,6 +91,7 @@ function E(e) {
               onClose: n,
           });
 }
+
 function G(e) {
     let { stageChannelsInGuild: t, channel: n, onSelectChannel: r } = e;
     return null == r
@@ -113,6 +120,7 @@ function G(e) {
               }),
           });
 }
+
 function R(e) {
     var t, n;
     let { channel: i, guild: c, onClose: g, onSelectChannel: h, transitionState: m, isEvent: E = !1 } = e,
@@ -121,7 +129,9 @@ function R(e) {
         [U, B] = r.useState(null != (t = null == M ? void 0 : M.topic) ? t : ""),
         [L, F] = r.useState(""),
         [Z] = r.useState(E),
-        [q, K] = r.useState({ startDate: (0, f.jd)() }),
+        [q, K] = r.useState({
+            startDate: (0, f.jd)(),
+        }),
         [Q, X] = r.useState(!1),
         V = (0, p.Z)(i),
         J = (0, p.K)(i),
@@ -165,7 +175,12 @@ function R(e) {
             children: [
                 (0, l.jsx)("div", {
                     className: _.GU,
-                    children: null == M && (el > 0 || er > 0) && (0, l.jsx)(O.Bw, { channelId: i.id }),
+                    children:
+                        null == M &&
+                        (el > 0 || er > 0) &&
+                        (0, l.jsx)(O.Bw, {
+                            channelId: i.id,
+                        }),
                 }),
                 (0, l.jsxs)("form", {
                     onSubmit: ed,
@@ -245,7 +260,9 @@ function R(e) {
                                   }),
                               })
                             : null,
-                        (0, l.jsx)(A.A, { className: _.XI }),
+                        (0, l.jsx)(A.A, {
+                            className: _.XI,
+                        }),
                     ],
                 }),
             ],
@@ -278,7 +295,9 @@ function R(e) {
                       onClick: () => H(!Y),
                       className: _.Qy,
                       children: [
-                          (0, l.jsx)(o.P7L, { checked: Y }),
+                          (0, l.jsx)(o.P7L, {
+                              checked: Y,
+                          }),
                           (0, l.jsx)(o.Text, {
                               color: "text-default",
                               variant: "text-sm/normal",
@@ -301,8 +320,15 @@ function R(e) {
                       },
                       eg,
                   ),
-                  { children: ej },
+                  {
+                      children: ej,
+                  },
               ),
           )
-        : (0, l.jsx)(s.Modal, T(N({}, eg), { children: ej }));
+        : (0, l.jsx)(
+              s.Modal,
+              T(N({}, eg), {
+                  children: ej,
+              }),
+          );
 }

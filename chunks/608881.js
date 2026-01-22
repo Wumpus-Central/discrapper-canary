@@ -1,4 +1,6 @@
-n.d(t, { A: () => E });
+n.d(t, {
+    A: () => E,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -17,6 +19,7 @@ var i = n(503698),
     m = n(652215),
     b = n(985018),
     _ = n(181485);
+
 function E() {
     let { analyticsLocations: e } = (0, d.Ay)(u.A.ACTIVE_NOW_COLUMN),
         t = (0, a.bG)([A.A], () => A.A.hasConsented(m.YAq.PERSONALIZATION)) ? [] : [s.M.NOW_PLAYING_CONSENT_CARD],

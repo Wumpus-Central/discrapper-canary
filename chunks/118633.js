@@ -1,4 +1,7 @@
-n.d(t, { A: () => g }), n(228524);
+n.d(t, {
+    A: () => g,
+}),
+    n(228524);
 var l = n(627968),
     r = n(64700),
     i = n(311907),
@@ -12,6 +15,7 @@ var l = n(627968),
     p = n(184952),
     h = n(652215),
     f = n(985018);
+
 function g(e) {
     var t;
     let { connection: n, guildId: g, location: v } = e,
@@ -81,7 +85,9 @@ function g(e) {
                       }),
                 t),
             ),
-                C({ analyticsLocations: j });
+                C({
+                    analyticsLocations: j,
+                });
         }, [C, g, n.application_id, v, j]);
     return (0, l.jsx)(p.A, {
         displayName: x,

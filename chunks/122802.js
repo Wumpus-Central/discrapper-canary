@@ -1,4 +1,7 @@
-n.d(t, { A: () => M }), n(896048);
+n.d(t, {
+    A: () => M,
+}),
+    n(896048);
 var i = n(627968),
     l = n(64700),
     s = n(503698),
@@ -54,7 +57,10 @@ let M = l.forwardRef(function (e, t) {
                             },
                             e.id,
                         ),
-                        t < o.length - 1 && (0, i.jsx)("div", { className: C.me }),
+                        t < o.length - 1 &&
+                            (0, i.jsx)("div", {
+                                className: C.me,
+                            }),
                     ],
                 },
                 e.id,
@@ -134,6 +140,7 @@ let M = l.forwardRef(function (e, t) {
         ],
     });
 });
+
 function L(e) {
     let { channel: t, categories: n, autoFocus: s } = e,
         c = (0, a.bG)([x.A], () => x.A.getChannel(null == t ? void 0 : t.parent_id)),
@@ -145,7 +152,10 @@ function L(e) {
         (l.useEffect(() => {
             if (s) {
                 var e;
-                null == (e = b.current) || e.scrollIntoView({ behavior: "smooth" });
+                null == (e = b.current) ||
+                    e.scrollIntoView({
+                        behavior: "smooth",
+                    });
             }
         }, []),
         null == t)
@@ -154,8 +164,13 @@ function L(e) {
     let O = G.intl.string(G.t.uIzfCE),
         E = (0, m.gU)(t);
     t.type === y.rbe.GUILD_CATEGORY && null != t.guild_id && "" !== t.guild_id
-        ? (O = G.intl.formatToPlainString(G.t["2KzH89"], { num: null != n[t.id] ? n[t.id].length : 0 }))
-        : null != c && (O = G.intl.formatToPlainString(G.t.L1zJgb, { categoryName: (0, g.m1)(c, N.default, p.A) }));
+        ? (O = G.intl.formatToPlainString(G.t["2KzH89"], {
+              num: null != n[t.id] ? n[t.id].length : 0,
+          }))
+        : null != c &&
+          (O = G.intl.formatToPlainString(G.t.L1zJgb, {
+              categoryName: (0, g.m1)(c, N.default, p.A),
+          }));
     let M = v ? _.N9.CUSTOM : j.preset;
     return (0, i.jsx)("div", {
         ref: b,
@@ -231,7 +246,9 @@ function L(e) {
                     children: (0, i.jsx)("div", {
                         children: (0, i.jsx)("span", {
                             ref: A,
-                            style: { display: "inline-flex" },
+                            style: {
+                                display: "inline-flex",
+                            },
                             children: (0, i.jsx)(d.Checkbox, {
                                 checked: M === _.N9.CUSTOM,
                                 label: "",

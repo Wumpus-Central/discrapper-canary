@@ -1,7 +1,11 @@
-n.d(t, { A: () => d }), n(896048);
+n.d(t, {
+    A: () => d,
+}),
+    n(896048);
 var r,
     i = n(311907),
     a = n(73153);
+
 function s(e, t, n) {
     return (
         t in e
@@ -24,12 +28,15 @@ let o = {
         channel_list_scrim: "Dim the channel list when chat appears",
     },
     l = {};
+
 function c(e) {
     l[e.toggle] = e.value;
 }
 class u extends (r = i.Ay.DeviceSettingsStore) {
     getUserAgnosticState() {
-        return { toggleStates: l };
+        return {
+            toggleStates: l,
+        };
     }
     initialize(e) {
         for (var t in o) {
@@ -56,4 +63,6 @@ class u extends (r = i.Ay.DeviceSettingsStore) {
     }
 }
 s(u, "displayName", "DevToolsDesignTogglesStore"), s(u, "persistKey", "DevToolsDesignTogglesStore");
-let d = new u(a.h, { DEV_TOOLS_DESIGN_TOGGLE_SET: c });
+let d = new u(a.h, {
+    DEV_TOOLS_DESIGN_TOGGLE_SET: c,
+});

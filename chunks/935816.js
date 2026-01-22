@@ -1,5 +1,8 @@
-n.d(t, { m: () => i });
+n.d(t, {
+    m: () => i,
+});
 var r = n(832946);
+
 function i(e) {
     return null == e
         ? {}

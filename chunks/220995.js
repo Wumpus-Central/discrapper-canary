@@ -1,9 +1,12 @@
-n.d(t, { p: () => C }), n(896048);
+n.d(t, {
+    p: () => C,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
     a = n.n(i),
-    s = n(432022),
+    s = n(108531),
     o = n(110259),
     c = n(311907),
     u = n(435371),
@@ -20,6 +23,7 @@ var r = n(627968),
     j = n(985018),
     v = n(430023),
     x = n(77615);
+
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -46,6 +50,7 @@ function E(e) {
     return e;
 }
 let _ = (e) => 1 - Math.pow(1 - e, 4);
+
 function C(e) {
     let { channel: t, onClose: n } = e,
         i = l.useRef(null),
@@ -85,8 +90,12 @@ function C(e) {
             [t, n, w],
         ),
         K = (0, d.zhh)({
-            from: { height: "0px" },
-            to: { height: "".concat(32, "px") },
+            from: {
+                height: "0px",
+            },
+            to: {
+                height: "".concat(32, "px"),
+            },
             reverse: D,
             config: {
                 duration: 200,
@@ -104,7 +113,7 @@ function C(e) {
         z = l.useCallback(
             () => (
                 null != I.current && clearTimeout(I.current),
-                (I.current = setTimeout(() => W("timeout"), 10000)),
+                (I.current = setTimeout(() => W("timeout"), 1e4)),
                 P((e) => e + 1),
                 () => {
                     null != I.current && clearTimeout(I.current);
@@ -169,7 +178,14 @@ function C(e) {
                           ((t = E(
                               {
                                   innerRef: i,
-                                  className: a()({ [v.vk]: !D }, x.q7, x.L9, x.vk),
+                                  className: a()(
+                                      {
+                                          [v.vk]: !D,
+                                      },
+                                      x.q7,
+                                      x.L9,
+                                      x.vk,
+                                  ),
                                   "aria-disabled": D,
                                   "aria-label": j.intl.string(j.t.F3qiJr),
                               },
@@ -182,19 +198,27 @@ function C(e) {
                                       children: [
                                           (0, r.jsxs)("div", {
                                               className: v.R4,
-                                              style: { "--custom-voice-invite-suggestions-timer-size": 24 },
+                                              style: {
+                                                  "--custom-voice-invite-suggestions-timer-size": 24,
+                                              },
                                               children: [
                                                   (0, r.jsxs)(
                                                       "svg",
                                                       {
-                                                          className: a()(v.O1, { [v.Ft]: H }),
+                                                          className: a()(v.O1, {
+                                                              [v.Ft]: H,
+                                                          }),
                                                           viewBox: "0 0 ".concat(24, " ").concat(24),
                                                           style: {
-                                                              "--custom-voice-invite-suggestions-timer-duration": 10000,
+                                                              "--custom-voice-invite-suggestions-timer-duration": 1e4,
                                                           },
                                                           children: [
-                                                              (0, r.jsx)("circle", { className: v.qB }),
-                                                              (0, r.jsx)("circle", { className: v.hN }),
+                                                              (0, r.jsx)("circle", {
+                                                                  className: v.qB,
+                                                              }),
+                                                              (0, r.jsx)("circle", {
+                                                                  className: v.hN,
+                                                              }),
                                                           ],
                                                       },
                                                       "voice-invite-suggestions-timer-".concat(T),

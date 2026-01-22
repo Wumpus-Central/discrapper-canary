@@ -1,4 +1,7 @@
-n.d(t, { A: () => b }), n(896048);
+n.d(t, {
+    A: () => b,
+}),
+    n(896048);
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -10,6 +13,7 @@ var i = n(397927),
     u = n(715314),
     d = n(652215),
     f = n(818348);
+
 function p(e, t, n) {
     return (
         t in e
@@ -23,6 +27,7 @@ function p(e, t, n) {
         e
     );
 }
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -39,6 +44,7 @@ function _(e) {
     }
     return e;
 }
+
 function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -51,6 +57,7 @@ function h(e, t) {
     }
     return n;
 }
+
 function m(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -98,7 +105,10 @@ class E extends s.A {
             : t && a.A.logout("login_required_account_manager", d.BVt.LOGIN);
     }
     constructor(...e) {
-        super(...e), p(this, "actions", { POST_CONNECTION_OPEN: this.handleConnectionOpen });
+        super(...e),
+            p(this, "actions", {
+                POST_CONNECTION_OPEN: this.handleConnectionOpen,
+            });
     }
 }
 let b = new E();

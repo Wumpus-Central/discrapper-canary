@@ -15,6 +15,7 @@ var r = n(627968),
     f = n(36075),
     p = n(545442),
     _ = n(224896);
+
 function h(e, t, n) {
     return (
         t in e
@@ -28,6 +29,7 @@ function h(e, t, n) {
         e
     );
 }
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -44,6 +46,7 @@ function m(e) {
     }
     return e;
 }
+
 function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -56,6 +59,7 @@ function g(e, t) {
     }
     return n;
 }
+
 function E(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -67,6 +71,7 @@ function E(e, t) {
         e
     );
 }
+
 function b(e, t) {
     if (null == e) return {};
     var n,
@@ -83,6 +88,7 @@ function b(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function y(e, t) {
     if (null == e) return {};
     var n,
@@ -93,6 +99,7 @@ function y(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function O(e) {
     let {
             roleStyle: t,
@@ -157,7 +164,12 @@ function O(e) {
             "left" === d && M,
             (0, r.jsxs)("span", {
                 className: _.VW,
-                style: m({ color: T && !N && null != a ? a : void 0 }, R ? w : {}),
+                style: m(
+                    {
+                        color: T && !N && null != a ? a : void 0,
+                    },
+                    R ? w : {},
+                ),
                 children: [
                     null != b
                         ? (0, r.jsx)(
@@ -186,13 +198,22 @@ function O(e) {
                                       j,
                                   ),
                               )
-                            : (0, r.jsx)("span", m({ "aria-hidden": !0 }, j))),
+                            : (0, r.jsx)(
+                                  "span",
+                                  m(
+                                      {
+                                          "aria-hidden": !0,
+                                      },
+                                      j,
+                                  ),
+                              )),
                 ],
             }),
             "right" === d && M,
         ],
     });
 }
+
 function A(e) {
     let {
             name: t,
@@ -226,7 +247,12 @@ function A(e) {
             colorStrings: o,
             animateRoleGradient: u,
         }),
-        y = h && null != n ? { color: n } : void 0;
+        y =
+            h && null != n
+                ? {
+                      color: n,
+                  }
+                : void 0;
     return (0, r.jsx)(
         c.Anchor,
         E(m({}, p), {
@@ -236,7 +262,13 @@ function A(e) {
         }),
     );
 }
+
 function v(e) {
     let t = (0, l.bG)([d.A], () => d.A.roleStyle);
-    return (0, r.jsx)(O, E(m({}, e), { roleStyle: t }));
+    return (0, r.jsx)(
+        O,
+        E(m({}, e), {
+            roleStyle: t,
+        }),
+    );
 }

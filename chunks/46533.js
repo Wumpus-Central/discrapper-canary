@@ -1,7 +1,11 @@
-n.d(t, { A: () => ep }), n(896048), n(321073);
+n.d(t, {
+    A: () => ep,
+}),
+    n(896048),
+    n(321073);
 var r = n(627968),
     i = n(64700),
-    l = n(432022),
+    l = n(108531),
     a = n(942381),
     s = n(311907),
     o = n(554146),
@@ -55,6 +59,7 @@ var r = n(627968),
     en = n(349828),
     er = n(985018),
     ei = n(484241);
+
 function el(e, t, n) {
     return (
         t in e
@@ -68,6 +73,7 @@ function el(e, t, n) {
         e
     );
 }
+
 function ea(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -84,6 +90,7 @@ function ea(e) {
     }
     return e;
 }
+
 function es(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -102,6 +109,7 @@ function es(e, t) {
         e
     );
 }
+
 function eo(e, t) {
     if (null == e) return {};
     var n,
@@ -160,7 +168,11 @@ class ed extends i.PureComponent {
             (this.historyUnlisten = L.A.addRouteChangeListener(this.handleHistoryChange));
         let { location: t } = L.A.getHistory();
         (null == (e = t.state) ? void 0 : e.shouldShowSubscribeTooltip) &&
-            this.showTimeout.start(1000, () => this.setState({ shouldShowSubscribeTooltip: !0 }));
+            this.showTimeout.start(1e3, () =>
+                this.setState({
+                    shouldShowSubscribeTooltip: !0,
+                }),
+            );
     }
     componentWillUnmount() {
         this.showTimeout.stop(),
@@ -197,7 +209,9 @@ class ed extends i.PureComponent {
                                 body: er.intl.string(er.t.sFSrFH),
                                 onRequestClose: this.handleCloseTemplateDirtyTooltip,
                                 position: "bottom",
-                                caretConfig: { align: "center" },
+                                caretConfig: {
+                                    align: "center",
+                                },
                             }),
                     ],
                 })
@@ -213,7 +227,9 @@ class ed extends i.PureComponent {
                                 body: er.intl.string(er.t.UyHD4O),
                                 onRequestClose: this.handleCloseSubscribeTooltip,
                                 position: "bottom",
-                                caretConfig: { align: "center" },
+                                caretConfig: {
+                                    align: "center",
+                                },
                             }),
                         ],
                     })
@@ -274,7 +290,9 @@ class ed extends i.PureComponent {
                                       },
                                       a,
                                   ),
-                                  { children: this.renderGuildHeaderNotices(n) },
+                                  {
+                                      children: this.renderGuildHeaderNotices(n),
+                                  },
                               ),
                           );
                       },
@@ -290,7 +308,10 @@ class ed extends i.PureComponent {
     setAnimatedValueForGuildInfo(e) {
         let { communityInfoVisible: t, controller: n } = this.state;
         ((e >= 20 && t) || (e < 20 && !t)) && (t = !t),
-            t !== this.state.communityInfoVisible && this.setState({ communityInfoVisible: t }),
+            t !== this.state.communityInfoVisible &&
+                this.setState({
+                    communityInfoVisible: t,
+                }),
             n
                 .update({
                     value: Math.min(1, Math.max(0, 1 - e / 20)),
@@ -303,7 +324,9 @@ class ed extends i.PureComponent {
             { isUnavailable: t, guild: n, selectedChannel: i, enableStudyGroup: l } = e,
             a = eo(e, ["isUnavailable", "guild", "selectedChannel", "enableStudyGroup"]);
         if (t || null == n)
-            return (0, r.jsx)(J.A, { withBannerPadding: null != n && null != this.getGuildBannerHash() });
+            return (0, r.jsx)(J.A, {
+                withBannerPadding: null != n && null != this.getGuildBannerHash(),
+            });
         {
             if (n.features.has($.GuildFeatures.HUB) && !l)
                 return (0, r.jsx)("div", {
@@ -316,14 +339,22 @@ class ed extends i.PureComponent {
             let e = n.id === en.V ? q.T : q.B;
             return (0, r.jsx)(
                 e,
-                es(ea({ guild: n }, a), {
-                    guildBanner: this.getGuildBannerHash(),
-                    hasGuildSubheader: this.state.hasGuildSubheader,
-                    onScroll:
-                        null != n && (null != this.getGuildBannerHash() || (0, W.A)(n))
-                            ? this.pinBannerOrGuildInfo
-                            : null,
-                }),
+                es(
+                    ea(
+                        {
+                            guild: n,
+                        },
+                        a,
+                    ),
+                    {
+                        guildBanner: this.getGuildBannerHash(),
+                        hasGuildSubheader: this.state.hasGuildSubheader,
+                        onScroll:
+                            null != n && (null != this.getGuildBannerHash() || (0, W.A)(n))
+                                ? this.pinBannerOrGuildInfo
+                                : null,
+                    },
+                ),
             );
         }
     }
@@ -341,7 +372,10 @@ class ed extends i.PureComponent {
                 null != t &&
                     (0, r.jsx)(Z.A, {
                         guild: t,
-                        setHasSubheader: (e) => this.setState({ hasGuildSubheader: e }),
+                        setHasSubheader: (e) =>
+                            this.setState({
+                                hasGuildSubheader: e,
+                            }),
                     }),
                 this.renderChannelList(),
             ],
@@ -368,7 +402,11 @@ class ed extends i.PureComponent {
             el(this, "handleHistoryChange", (e) => {
                 null != e.state &&
                     e.state.shouldShowSubscribeTooltip &&
-                    this.showTimeout.start(1000, () => this.setState({ shouldShowSubscribeTooltip: !0 }));
+                    this.showTimeout.start(1e3, () =>
+                        this.setState({
+                            shouldShowSubscribeTooltip: !0,
+                        }),
+                    );
             }),
             el(this, "handleHeaderMenuToggle", (e) => {
                 let { isHeaderPopoutOpen: t } = this.props;
@@ -379,7 +417,13 @@ class ed extends i.PureComponent {
                 null != t &&
                     (0, f.L3)(e, async () => {
                         let { default: e } = await n.e("10758").then(n.bind(n, 455557));
-                        return (n) => (0, r.jsx)(e, es(ea({}, n), { guild: t }));
+                        return (n) =>
+                            (0, r.jsx)(
+                                e,
+                                es(ea({}, n), {
+                                    guild: t,
+                                }),
+                            );
                     });
             }),
             el(this, "handleHeaderContextMenu", (e) => {
@@ -403,7 +447,13 @@ class ed extends i.PureComponent {
                             n.e("54469"),
                             n.e("71675"),
                         ]).then(n.bind(n, 544676));
-                        return (n) => (0, r.jsx)(e, es(ea({}, n), { guild: t }));
+                        return (n) =>
+                            (0, r.jsx)(
+                                e,
+                                es(ea({}, n), {
+                                    guild: t,
+                                }),
+                            );
                     });
             }),
             el(this, "closeAllHeaderNotices", () => {
@@ -415,11 +465,18 @@ class ed extends i.PureComponent {
                 var e;
                 let t = (0, E.k8)(o.M.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP),
                     n = null == (e = this.props.guild) ? void 0 : e.features.has($.GuildFeatures.HUB);
-                !t && n && (0, E.Dr)(o.M.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP, { dismissAction: et.i.AUTO });
+                !t &&
+                    n &&
+                    (0, E.Dr)(o.M.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP, {
+                        dismissAction: et.i.AUTO,
+                    });
             }),
             el(this, "handleCloseSubscribeTooltip", () => {
                 this.showTimeout.stop(),
-                    this.state.shouldShowSubscribeTooltip && this.setState({ shouldShowSubscribeTooltip: !1 });
+                    this.state.shouldShowSubscribeTooltip &&
+                        this.setState({
+                            shouldShowSubscribeTooltip: !1,
+                        });
             }),
             el(this, "handleCloseTemplateDirtyTooltip", () => {
                 let { guild: e, showGuildTemplateDirtyTooltip: t } = this.props;
@@ -512,6 +569,7 @@ class ed extends i.PureComponent {
             });
     }
 }
+
 function ep(e) {
     var t;
     let { guildId: n, hideSelectedChannel: l, selectedChannelId: c } = e,

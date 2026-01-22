@@ -7,6 +7,7 @@ var r = n(64700),
     i = n(587895),
     a = n(223273),
     s = n(705751);
+
 function o(e) {
     var t;
     if (null == e) return null;
@@ -17,6 +18,7 @@ function o(e) {
     }
     return null;
 }
+
 function l(e) {
     return r.useMemo(() => o(e), [e]);
 }

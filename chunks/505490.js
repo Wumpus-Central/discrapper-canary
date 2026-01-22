@@ -1,4 +1,6 @@
-Object.defineProperty(e, "__esModule", { value: !0 });
+Object.defineProperty(e, "__esModule", {
+    value: !0,
+});
 var o =
         Object.assign ||
         function (t) {
@@ -11,8 +13,13 @@ var o =
     n = u(r(223108)),
     i = r(64700),
     a = u(i);
+
 function u(t) {
-    return t && t.__esModule ? t : { default: t };
+    return t && t.__esModule
+        ? t
+        : {
+              default: t,
+          };
 }
 var s = {
         bgColor: n.default.oneOfType([n.default.object, n.default.string]).isRequired,

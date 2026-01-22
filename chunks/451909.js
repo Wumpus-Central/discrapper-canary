@@ -1,4 +1,11 @@
-n.d(t, { Ay: () => el }), n(747238), n(896048), n(321073), n(114821), n(339614);
+n.d(t, {
+    Ay: () => el,
+}),
+    n(747238),
+    n(896048),
+    n(321073),
+    n(114821),
+    n(339614);
 var r = n(735438),
     i = n.n(r),
     a = n(280230),
@@ -31,6 +38,7 @@ var r = n(735438),
     D = n(652215),
     x = n(307731),
     L = n(985018);
+
 function j(e, t, n) {
     return (
         t in e
@@ -44,6 +52,7 @@ function j(e, t, n) {
         e
     );
 }
+
 function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -60,6 +69,7 @@ function M(e) {
     }
     return e;
 }
+
 function k(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -72,6 +82,7 @@ function k(e, t) {
     }
     return n;
 }
+
 function U(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -83,6 +94,7 @@ function U(e, t) {
         e
     );
 }
+
 function G(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
     if (t[0] !== e) return null;
@@ -106,6 +118,7 @@ function G(e, t, n) {
         })
         .first();
 }
+
 function V(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
     if (t[0] !== e) return null;
@@ -135,6 +148,7 @@ function V(e, t, n) {
         })
         .first();
 }
+
 function F(e) {
     return {
         order: e.order,
@@ -145,6 +159,7 @@ function F(e) {
         }),
     };
 }
+
 function B(e) {
     return {
         match: s().anyScopeRegex(e),
@@ -183,7 +198,11 @@ let H = f.A.RULES,
                     !(i = G(
                         "@",
                         e,
-                        t.users.map((e) => U(M({}, e), { text: e.text.split("#")[0] })),
+                        t.users.map((e) =>
+                            U(M({}, e), {
+                                text: e.text.split("#")[0],
+                            }),
+                        ),
                         "mention",
                     ))
                 )
@@ -294,15 +313,25 @@ let H = f.A.RULES,
             parse(e, t, n) {
                 let { isNotification: r, guild: a, channelId: s } = n,
                     o = C.default.getUser(e[1]);
-                if (null == o) return { content: e[0] };
-                let l = P.Ay.getUserTag(o, { identifiable: r && T.A.enabled ? "never" : "always" });
+                if (null == o)
+                    return {
+                        content: e[0],
+                    };
+                let l = P.Ay.getUserTag(o, {
+                    identifiable: r && T.A.enabled ? "never" : "always",
+                });
                 if (r) {
                     var c;
                     let e = null != (c = w.Ay.getNickname(null == a ? void 0 : a.id, s, o)) ? c : P.Ay.getGlobalName(o);
-                    return { content: null != e ? "@".concat(e) : "@".concat(l) };
+                    return {
+                        content: null != e ? "@".concat(e) : "@".concat(l),
+                    };
                 }
                 {
-                    if (o.bot) return { content: "@".concat(l) };
+                    if (o.bot)
+                        return {
+                            content: "@".concat(l),
+                        };
                     let e = "";
                     if ((null == a ? void 0 : a.id) != null) {
                         let t = l.toLowerCase();
@@ -310,7 +339,9 @@ let H = f.A.RULES,
                             ? "#".concat("".concat(o.discriminator).padStart(4, "0"))
                             : "";
                     }
-                    return { content: "@".concat(l).concat(e) };
+                    return {
+                        content: "@".concat(l).concat(e),
+                    };
                 }
             },
         },
@@ -320,9 +351,14 @@ let H = f.A.RULES,
                 let { guild: r } = n;
                 if (null != r) {
                     let t = A.A.getRole(r.id, e[1]);
-                    if (null != t) return { content: "@".concat(t.name) };
+                    if (null != t)
+                        return {
+                            content: "@".concat(t.name),
+                        };
                 }
-                return { content: e[0] };
+                return {
+                    content: e[0],
+                };
             },
         },
         gameMention: {
@@ -336,22 +372,32 @@ let H = f.A.RULES,
                             guildId: r.id,
                             location: "Message Unparser",
                         },
-                        { autoTrackExposure: !0 },
+                        {
+                            autoTrackExposure: !0,
+                        },
                     ).enabled
                 ) {
                     let t = b.A.getDetectableGame(e[1]);
                     return null != t
-                        ? { content: "@".concat(t.name) }
-                        : { content: "@".concat(L.intl.string(L.t["11pdXZ"])) };
+                        ? {
+                              content: "@".concat(t.name),
+                          }
+                        : {
+                              content: "@".concat(L.intl.string(L.t["11pdXZ"])),
+                          };
                 }
-                return { content: e[0] };
+                return {
+                    content: e[0],
+                };
             },
         },
         channel: {
             match: s().anyScopeRegex(q),
             parse(e) {
                 let t = E.A.getChannel(e[1]);
-                return { content: null == t ? e[0] : (0, l.m1)(t, C.default, I.A, !0, !0) };
+                return {
+                    content: null == t ? e[0] : (0, l.m1)(t, C.default, I.A, !0, !0),
+                };
             },
         },
         emoji: {
@@ -371,22 +417,34 @@ let H = f.A.RULES,
             match: s().anyScopeRegex(_.ds),
             parse(e) {
                 let [t, n, r] = e;
-                return { content: "<sound:".concat(n, ":").concat(r, ">") };
+                return {
+                    content: "<sound:".concat(n, ":").concat(r, ">"),
+                };
             },
         },
         spoiler: {
             match: s().anyScopeRegex(D.VFs),
-            parse: () => ({ content: "<".concat(L.intl.string(L.t["F+x38C"]).toLowerCase(), ">") }),
+            parse: () => ({
+                content: "<".concat(L.intl.string(L.t["F+x38C"]).toLowerCase(), ">"),
+            }),
         },
         staticRouteLink: {
             match: s().anyScopeRegex(D.P0V),
-            parse: (e) => ({ content: "<id:".concat(e[1], ">") }),
+            parse: (e) => ({
+                content: "<id:".concat(e[1], ">"),
+            }),
         },
         timestamp: U(M({}, H.timestamp), {
             parse() {
                 for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
                 let r = H.timestamp.parse(...t);
-                return "text" === r.type ? { content: r.content } : { content: r.formatted };
+                return "text" === r.type
+                    ? {
+                          content: r.content,
+                      }
+                    : {
+                          content: r.formatted,
+                      };
             },
         }),
         text: M({}, Y),
@@ -398,6 +456,7 @@ let H = f.A.RULES,
 });
 let ee = s().parserFor($),
     et = /(?:<a?:\w+:(\d+)>)|:(?:([^\s:]+?)(?:::skin-tone-\d)?:)/g;
+
 function en(e, t, n) {
     if (null != n && ("customEmoticon" === t.type && n(t.emoji, !1), "emoticon" === t.type || "text" === t.type)) {
         let r,
@@ -411,6 +470,7 @@ function en(e, t, n) {
         }
     }
 }
+
 function er(e, t, n, r) {
     let i = "",
         a = [];
@@ -453,9 +513,11 @@ function er(e, t, n, r) {
         }
     );
 }
+
 function ei(e, t, n) {
     return er(ee(e, t), t, u.Ay.translateInlineEmojiToSurrogates, n).content;
 }
+
 function ea(e) {
     let t,
         n = null == e ? void 0 : e.getGuildId(),
@@ -542,9 +604,11 @@ function ea(e) {
         isNotification: !1,
     };
 }
+
 function es(e) {
     return e;
 }
+
 function eo(e, t, n) {
     let r = E.A.getChannel(t),
         a = null != r ? r.getGuildId() : null,

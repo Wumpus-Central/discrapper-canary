@@ -1,4 +1,7 @@
-n.d(t, { F: () => r }), n(896048);
+n.d(t, {
+    F: () => r,
+}),
+    n(896048);
 var r = (function (e) {
     return (
         (e.IDENTIFY = "identify"),

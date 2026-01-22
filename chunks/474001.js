@@ -1,4 +1,7 @@
-n.d(t, { A: () => h }), n(896048);
+n.d(t, {
+    A: () => h,
+}),
+    n(896048);
 var r,
     i,
     l = n(627968),
@@ -9,6 +12,7 @@ var r,
     d = n.n(o),
     u = n(593100),
     f = n(6697);
+
 function g(e, t, n) {
     return (
         t in e
@@ -50,7 +54,7 @@ let m = Object.freeze({
     },
     FLYING: {
         DURATION: 500,
-        Y_VALUE: -1000,
+        Y_VALUE: -1e3,
         Y_EASING: u.A.Easing.bezier(0.46, 0.01, 1, -0.3),
         X_VALUE: 200,
         X_EASING: u.A.Easing.bezier(0.65, 0.05, 1, 0.25),
@@ -61,6 +65,7 @@ let m = Object.freeze({
         OPACITY_DURATION_DIVIDEND: 2,
     },
 });
+
 function p(e, t, n, r) {
     return u.A.sequence(
         d().times(t, (i) =>
@@ -191,7 +196,13 @@ class x extends (r = s.Component) {
         };
     }
     getFireStyle() {
-        return { transform: [{ scale: this.fireScale }] };
+        return {
+            transform: [
+                {
+                    scale: this.fireScale,
+                },
+            ],
+        };
     }
     render() {
         let { className: e, style: t } = this.props;
@@ -228,7 +239,9 @@ class x extends (r = s.Component) {
                         style: this.getFireStyle(),
                     }),
                 }),
-                (0, l.jsx)("div", { className: f.kX }),
+                (0, l.jsx)("div", {
+                    className: f.kX,
+                }),
             ],
         });
     }

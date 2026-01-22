@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(627968);
 n(64700);
 var i = n(417597),
@@ -7,6 +9,7 @@ var i = n(417597),
     a = n(287809),
     o = n(985018),
     c = n(36522);
+
 function u(e) {
     let { friendMemberIds: t } = e,
         n = (0, i.yK)([a.default], () =>
@@ -33,7 +36,9 @@ function u(e) {
                         "div",
                         {
                             className: c.R3,
-                            style: { zIndex: n.length - t },
+                            style: {
+                                zIndex: n.length - t,
+                            },
                             children: (0, r.jsx)(l.A, {
                                 user: e,
                                 size: s._3J.SIZE_16,

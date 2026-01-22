@@ -1,4 +1,6 @@
-i.d(t, { default: () => c });
+i.d(t, {
+    default: () => c,
+});
 var r = i(627968);
 i(64700);
 var s = i(397927),
@@ -6,6 +8,7 @@ var s = i(397927),
     l = i(894069),
     a = i(964853),
     o = i(985018);
+
 function c(n) {
     let { guild: t, onSelect: i } = n,
         c = (0, a.A)(t),

@@ -1,4 +1,8 @@
-n.d(t, { A: () => y }), n(896048), n(938796);
+n.d(t, {
+    A: () => y,
+}),
+    n(896048),
+    n(938796);
 var r = n(665260),
     i = n(439372),
     a = n(976860),
@@ -12,6 +16,7 @@ var r = n(665260),
     p = n(652215),
     _ = n(746080),
     h = n(340837);
+
 function m(e, t, n) {
     return (
         t in e
@@ -66,7 +71,10 @@ class b extends i.A {
                 let c = s.Ay.getSelfMember(e);
                 !(null == c || (0, r.Lt)(null != (n = c.flags) ? n : 0, h.D.COMPLETED_ONBOARDING)) &&
                     (0, r.Lt)(null != (i = c.flags) ? i : 0, h.D.STARTED_ONBOARDING) &&
-                    (await (0, f.default)({ guildId: e }), (0, a.pX)(p.BVt.CHANNEL(e, t)));
+                    (await (0, f.default)({
+                        guildId: e,
+                    }),
+                    (0, a.pX)(p.BVt.CHANNEL(e, t)));
             });
     }
 }

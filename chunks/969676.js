@@ -5,5 +5,7 @@ r(
         global: !0,
         forced: a.globalThis !== a,
     },
-    { globalThis: a },
+    {
+        globalThis: a,
+    },
 );

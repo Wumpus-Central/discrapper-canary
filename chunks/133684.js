@@ -1,4 +1,10 @@
-n.d(t, { A: () => v }), n(733351), n(747238), n(896048), n(812715);
+n.d(t, {
+    A: () => v,
+}),
+    n(733351),
+    n(747238),
+    n(896048),
+    n(812715);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -12,6 +18,7 @@ var r = n(627968),
     p = n(677134),
     _ = n(408018),
     h = n(652215);
+
 function m(e, t, n) {
     return (
         t in e
@@ -25,6 +32,7 @@ function m(e, t, n) {
         e
     );
 }
+
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -41,6 +49,7 @@ function g(e) {
     }
     return e;
 }
+
 function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -53,6 +62,7 @@ function E(e, t) {
     }
     return n;
 }
+
 function b(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -151,9 +161,14 @@ class A extends i.PureComponent {
             { onChange: a } = this.props;
         null == a || a(null, i, (0, _.x7)(i));
         let s = t.length + e.length;
-        this.setState({ nextSelection: s }, () => {
-            this.props.maybeShowAutocomplete();
-        });
+        this.setState(
+            {
+                nextSelection: s,
+            },
+            () => {
+                this.props.maybeShowAutocomplete();
+            },
+        );
     }
     hasOpenCodeBlock() {
         let e = this._ref;
@@ -222,7 +237,7 @@ class A extends i.PureComponent {
               ? (e.preventDefault(), e.stopPropagation(), this.props.hideAutocomplete())
               : e.which === h.Ks6.TAB &&
                 this.hasOpenCodeBlock() &&
-                (e.preventDefault(), e.stopPropagation(), this.insertText("\t", void 0, !1));
+                (e.preventDefault(), e.stopPropagation(), this.insertText("	", void 0, !1));
     }
     insertEmoji(e) {
         let { emoji: t, addSpace: n = !1 } = e;
@@ -234,7 +249,9 @@ class A extends i.PureComponent {
     constructor(...e) {
         super(...e),
             m(this, "_ref", void 0),
-            m(this, "state", { nextSelection: -1 }),
+            m(this, "state", {
+                nextSelection: -1,
+            }),
             m(this, "focus", () => {
                 let { _ref: e } = this;
                 null != e && e.focus();
@@ -300,7 +317,13 @@ class A extends i.PureComponent {
                         e,
                         async () => {
                             let { default: e } = await n.e("42312").then(n.bind(n, 216603));
-                            return (t) => (0, r.jsx)(e, b(g({}, t), { text: (0, p.u)() }));
+                            return (t) =>
+                                (0, r.jsx)(
+                                    e,
+                                    b(g({}, t), {
+                                        text: (0, p.u)(),
+                                    }),
+                                );
                         },
                         {
                             align: "bottom",

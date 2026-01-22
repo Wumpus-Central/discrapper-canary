@@ -1,6 +1,9 @@
-n.d(t, { W: () => a });
+n.d(t, {
+    W: () => a,
+});
 var r = n(90727),
     i = n(391898);
+
 function a(e, t, n, a, s, o) {
     var l = {
             lastyear: e,

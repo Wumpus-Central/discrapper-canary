@@ -13,9 +13,12 @@ var r = n(64700),
     l = n(916023),
     c = n(501838),
     u = n(188275);
+
 function d(e) {
     let { displayProfile: t, location: n } = e,
-        s = (0, l.kt)({ location: n }),
+        s = (0, l.kt)({
+            location: n,
+        }),
         d = r.useMemo(() => ((null == t ? void 0 : t.userId) != null ? [t.userId] : []), [t]),
         f = (0, c.gT)({
             gameIds: u.sQ,
@@ -50,6 +53,7 @@ function d(e) {
         }, [null == t ? void 0 : t.widgets]);
     return (null == t ? void 0 : t.application) == null && s && (f || p || _ || h);
 }
+
 function f(e) {
     let { userId: t, location: n } = e;
     return d({

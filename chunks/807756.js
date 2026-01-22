@@ -31,7 +31,9 @@ var n = r(64700),
                                 boxSizing: "initial",
                                 width: "240px",
                             },
-                            clear: { clear: "both" },
+                            clear: {
+                                clear: "both",
+                            },
                         },
                     },
                     b,
@@ -73,7 +75,9 @@ var n = r(64700),
                             onSwatchHover: r,
                         });
                     }),
-                    n.createElement("div", { style: g.clear }),
+                    n.createElement("div", {
+                        style: g.clear,
+                    }),
                 ),
                 n.createElement(d.A, {
                     hex: a,

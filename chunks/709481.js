@@ -10,9 +10,15 @@ e.exports = function (e) {
         a = {
             className: "number",
             variants: [
-                { begin: t.concat(/\b\d+/, /\.(\d*)/, i, r) },
-                { begin: t.concat(/\b\d+/, i, r) },
-                { begin: t.concat(/\.\d+/, i, r) },
+                {
+                    begin: t.concat(/\b\d+/, /\.(\d*)/, i, r),
+                },
+                {
+                    begin: t.concat(/\b\d+/, i, r),
+                },
+                {
+                    begin: t.concat(/\.\d+/, i, r),
+                },
             ],
             relevance: 0,
         };
@@ -42,8 +48,12 @@ e.exports = function (e) {
                 illegal: "[${=\\n]",
                 contains: [e.UNDERSCORE_TITLE_MODE, n],
             },
-            e.COMMENT("!", "$", { relevance: 0 }),
-            e.COMMENT("begin_doc", "end_doc", { relevance: 10 }),
+            e.COMMENT("!", "$", {
+                relevance: 0,
+            }),
+            e.COMMENT("begin_doc", "end_doc", {
+                relevance: 10,
+            }),
             a,
         ],
     };

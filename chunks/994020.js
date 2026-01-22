@@ -28,6 +28,7 @@ var r = n(64700),
     S = n(349828),
     I = n(818348);
 let T = [o.Ay, l.A, u.Ay, d.A, f.A, _.A, h.A, g.A, E.A, b.Ay, y.A, O.Ay];
+
 function C() {
     let [e, t] = r.useState(() => N());
     return (
@@ -38,6 +39,7 @@ function C() {
         e
     );
 }
+
 function N() {
     let e = l.A.getFavoriteChannels(),
         t = O.Ay.isGuildCollapsed(S.V),
@@ -57,6 +59,7 @@ function N() {
         }
         n.parentId in u || (u[n.parentId] = []), u[n.parentId].push(i);
     }
+
     function f(n, s) {
         let { isCollapsed: o, isMuted: l } = s;
         return a()(n)
@@ -98,7 +101,7 @@ function N() {
             .filter(A.Vq)
             .sortBy((e) => {
                 let { record: t } = e;
-                return t.isGuildVocal() ? t.position + 10000 : t.position;
+                return t.isGuildVocal() ? t.position + 1e4 : t.position;
             })
             .value();
     }

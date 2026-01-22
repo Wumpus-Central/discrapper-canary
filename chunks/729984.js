@@ -31,6 +31,7 @@ var r = n(627968),
     T = n(985018),
     I = n(894958),
     C = n(206314);
+
 function P(e) {
     let { guild: t } = e,
         s = (0, l.bG)([d.A], () => d.A.getEnabled(t.id)),
@@ -231,15 +232,22 @@ function P(e) {
                                                 }),
                                       ],
                                   }),
-                                  i < h.length - 1 ? (0, r.jsx)("div", { className: I.me }) : null,
+                                  i < h.length - 1
+                                      ? (0, r.jsx)("div", {
+                                            className: I.me,
+                                        })
+                                      : null,
                               ],
                           }),
                       ),
                   }),
-                  (0, r.jsx)("div", { className: I.FZ }),
+                  (0, r.jsx)("div", {
+                      className: I.FZ,
+                  }),
               ],
           });
 }
+
 function w(e) {
     let { saveOnClose: t = !1 } = e,
         n = (0, l.bG)([h.A], () => h.A.getGuild()),
@@ -260,7 +268,10 @@ function w(e) {
                 null != e &&
                     (0, j.jr)(e)
                         .then(() => {
-                            u && (0, y.dm)(e, { ignoreDefaultPrompt: !0 }).catch(() => {});
+                            u &&
+                                (0, y.dm)(e, {
+                                    ignoreDefaultPrompt: !0,
+                                }).catch(() => {});
                         })
                         .catch(() => {});
             };
@@ -303,7 +314,9 @@ function w(e) {
                                 ? null
                                 : (0, r.jsxs)(r.Fragment, {
                                       children: [
-                                          (0, r.jsx)(P, { guild: n }),
+                                          (0, r.jsx)(P, {
+                                              guild: n,
+                                          }),
                                           (0, r.jsx)(N.A, {
                                               className: I.bE,
                                               guild: n,
@@ -316,7 +329,9 @@ function w(e) {
                             u &&
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
-                                        (0, r.jsx)("div", { className: I.FZ }),
+                                        (0, r.jsx)("div", {
+                                            className: I.FZ,
+                                        }),
                                         (0, r.jsx)(c.Heading, {
                                             className: I.RH,
                                             variant: "heading-lg/extrabold",
@@ -345,12 +360,16 @@ function w(e) {
                     (0, r.jsx)(_.A, {
                         guild: n,
                         scrollToQuestions: () => {
-                            null != f.current && f.current.scrollIntoView({ behavior: "smooth" });
+                            null != f.current &&
+                                f.current.scrollIntoView({
+                                    behavior: "smooth",
+                                });
                         },
                     }),
                 ],
             });
 }
+
 function R() {
     let e = (0, l.bG)([h.A], () => h.A.getProps().guild),
         t = (0, l.bG)([O.A], () => O.A.submitting),
@@ -361,7 +380,10 @@ function R() {
               onSave: () => {
                   (0, j.jr)(e)
                       .then(() => {
-                          n && (0, y.dm)(e, { ignoreDefaultPrompt: !0 }).catch(() => {});
+                          n &&
+                              (0, y.dm)(e, {
+                                  ignoreDefaultPrompt: !0,
+                              }).catch(() => {});
                       })
                       .catch(() => {});
               },

@@ -1,4 +1,6 @@
-n.d(t, { w: () => y });
+n.d(t, {
+    w: () => y,
+});
 var r = n(627968),
     i = n(64700),
     a = n(284009),
@@ -12,6 +14,7 @@ var r = n(627968),
     p = n(842130),
     _ = n(985018),
     h = n(487693);
+
 function m(e, t, n) {
     return (
         t in e
@@ -25,6 +28,7 @@ function m(e, t, n) {
         e
     );
 }
+
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -41,6 +45,7 @@ function g(e) {
     }
     return e;
 }
+
 function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -53,6 +58,7 @@ function E(e, t) {
     }
     return n;
 }
+
 function b(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -64,6 +70,7 @@ function b(e, t) {
         e
     );
 }
+
 function y(e) {
     let { user: t } = e,
         a = (0, o.bG)([c.default], () => c.default.getCurrentUser()),

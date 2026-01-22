@@ -5,4 +5,6 @@ function r(e) {
         return e.formats[n] || e.formats[e.defaultWidth];
     };
 }
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});

@@ -42,6 +42,7 @@ __OVERLAY__ &&
                 return s;
             })(a, ["authorizations", "permissions"]),
             h = "OAuth2Authorize_".concat(t, "_").concat(u.guildId, "_").concat(u.channelId);
+
         function p(e) {
             let { location: n } = e;
             l.h.dispatch({

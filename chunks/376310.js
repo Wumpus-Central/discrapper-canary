@@ -20,6 +20,7 @@ var l,
     f = n(957565),
     h = n(985018),
     I = n(576140);
+
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -45,6 +46,7 @@ function O(e) {
     }
     return e;
 }
+
 function N(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -64,6 +66,7 @@ function N(e, t) {
     );
 }
 var m = (((l = m || {})[(l.SMALL = 0)] = "SMALL"), (l[(l.MEDIUM = 1)] = "MEDIUM"), l);
+
 function S(e) {
     let { tag: t, size: l = 1, disabled: i, className: u, onClick: m, onRemove: S, selected: p, ariaLabel: b } = e,
         { name: G, emojiId: R, emojiName: D } = t,
@@ -79,7 +82,9 @@ function S(e) {
             children: [
                 j
                     ? (0, r.jsx)(_.A, {
-                          className: s()(I.emoji, { [I.small]: U }),
+                          className: s()(I.emoji, {
+                              [I.small]: U,
+                          }),
                           emojiId: R,
                           emojiName: D,
                           animated: !!(null == M ? void 0 : M.animated),
@@ -129,7 +134,13 @@ function S(e) {
                         l &&
                         (0, d.L3)(e, async () => {
                             let { default: e } = await n.e("32612").then(n.bind(n, 960015));
-                            return (n) => (0, r.jsx)(e, N(O({}, n), { tag: t }));
+                            return (n) =>
+                                (0, r.jsx)(
+                                    e,
+                                    N(O({}, n), {
+                                        tag: t,
+                                    }),
+                                );
                         })
                     )
                 );
@@ -145,18 +156,33 @@ function S(e) {
                   O(
                       N(O({}, w), {
                           innerRef: y,
-                          focusProps: { ringTarget: y },
-                          "aria-label": null != b ? b : h.intl.formatToPlainString(h.t.iyRTLm, { tagName: G }),
+                          focusProps: {
+                              ringTarget: y,
+                          },
+                          "aria-label":
+                              null != b
+                                  ? b
+                                  : h.intl.formatToPlainString(h.t.iyRTLm, {
+                                        tagName: G,
+                                    }),
                           role: "button",
                           "aria-pressed": p,
                       }),
                       F,
                   ),
-                  { children: k },
+                  {
+                      children: k,
+                  },
               ),
           )
-        : (0, r.jsx)("div", N(O({}, F), { children: k }));
+        : (0, r.jsx)(
+              "div",
+              N(O({}, F), {
+                  children: k,
+              }),
+          );
 }
+
 function p(e) {
     let { tags: t, count: n, size: l = 1 } = e,
         a = 0 === l;
@@ -176,7 +202,9 @@ function p(e) {
             ),
         }),
         children: (0, r.jsx)("div", {
-            className: s()(I.pill, { [I.small]: a }),
+            className: s()(I.pill, {
+                [I.small]: a,
+            }),
             children: (0, r.jsxs)(E.Text, {
                 variant: a ? "text-xs/semibold" : "text-sm/semibold",
                 children: ["+", n],

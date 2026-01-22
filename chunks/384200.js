@@ -1,4 +1,7 @@
-n.d(t, { A: () => v }), n(896048);
+n.d(t, {
+    A: () => v,
+}),
+    n(896048);
 var r,
     i = n(735438),
     a = n.n(i),
@@ -6,6 +9,7 @@ var r,
     o = n(73153),
     l = n(652896),
     c = n(502075);
+
 function u(e, t, n) {
     return (
         t in e
@@ -19,15 +23,17 @@ function u(e, t, n) {
         e
     );
 }
-let d = 120000,
-    f = 10000,
+let d = 12e4,
+    f = 1e4,
     p = 5,
     _ = {},
     h = {},
     m = new Set();
+
 function g() {
     (_ = {}), (h = {});
 }
+
 function E(e) {
     let { streamKey: t, previewURL: n } = e;
     (_[t] = {
@@ -37,6 +43,7 @@ function E(e) {
         (h[t] = 0),
         m.delete(t);
 }
+
 function b(e) {
     let { streamKey: t, retryAfter: n } = e;
     (_[t] = {
@@ -45,11 +52,13 @@ function b(e) {
     }),
         m.delete(t);
 }
+
 function y(e) {
     var t;
     let { streamKey: n } = e;
     (h[n] = (null != (t = h[n]) ? t : 0) + 1), m.add(n);
 }
+
 function O(e) {
     let { voiceStates: t } = e;
     return (

@@ -1,4 +1,8 @@
-n.d(t, { A: () => T }), n(896048), n(938796);
+n.d(t, {
+    A: () => T,
+}),
+    n(896048),
+    n(938796);
 var r,
     i = n(665260),
     a = n(311907),
@@ -10,6 +14,7 @@ var r,
     d = n(209700),
     f = n(652215),
     p = n(355097);
+
 function _(e, t, n) {
     return (
         t in e
@@ -23,6 +28,7 @@ function _(e, t, n) {
         e
     );
 }
+
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -39,6 +45,7 @@ function h(e) {
     }
     return e;
 }
+
 function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -51,6 +58,7 @@ function m(e, t) {
     }
     return n;
 }
+
 function g(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -63,20 +71,27 @@ function g(e, t) {
     );
 }
 let E = {};
+
 function b(e) {
     let { guildId: t, data: n } = e;
-    delete n.roles[u.default.castGuildIdAsEveryoneGuildRoleId(t)], (E[t] = g(h({}, n), { timestamp: Date.now() }));
+    delete n.roles[u.default.castGuildIdAsEveryoneGuildRoleId(t)],
+        (E[t] = g(h({}, n), {
+            timestamp: Date.now(),
+        }));
 }
+
 function y(e) {
     let { guildId: t } = e;
     if (null == E[t]) return !1;
     delete E[t];
 }
+
 function O(e) {
     let { guildId: t, roleId: n } = e;
     if (null == E[t]) return !1;
     delete E[t].roles[n];
 }
+
 function A(e) {
     var t;
     let { guildId: n, overrides: r } = e;
@@ -94,6 +109,7 @@ function A(e) {
         !0
     );
 }
+
 function v(e) {
     var t;
     let { guildId: n, optionId: r, selected: i, removedOptionIds: a } = e;
@@ -108,6 +124,7 @@ function v(e) {
         !0
     );
 }
+
 function S(e) {
     let { guildId: t, roles: n, flags: r } = e;
     if (null == t) return !1;

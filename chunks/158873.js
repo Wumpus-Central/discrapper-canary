@@ -1,6 +1,7 @@
 e.exports = function (e) {
     let t = e.regex,
         n = /\b/;
+
     function r(e, t) {
         if (0 === e.index) return;
         let n = e.input[e.index - 1];
@@ -70,12 +71,16 @@ e.exports = function (e) {
             {
                 scope: "title.function",
                 variants: [
-                    { match: t.concat(n, a) },
+                    {
+                        match: t.concat(n, a),
+                    },
                     {
                         begin: a,
                         "on:begin": r,
                     },
-                    { match: t.concat(n, s) },
+                    {
+                        match: t.concat(n, s),
+                    },
                     {
                         begin: s,
                         "on:begin": r,
@@ -85,17 +90,23 @@ e.exports = function (e) {
             {
                 scope: "symbol",
                 variants: [
-                    { match: t.concat(n, o) },
+                    {
+                        match: t.concat(n, o),
+                    },
                     {
                         begin: o,
                         "on:begin": r,
                     },
-                    { match: t.concat(n, l) },
+                    {
+                        match: t.concat(n, l),
+                    },
                     {
                         begin: l,
                         "on:begin": r,
                     },
-                    { match: /\*\s*\d+\s*$/ },
+                    {
+                        match: /\*\s*\d+\s*$/,
+                    },
                 ],
             },
             {
@@ -109,7 +120,9 @@ e.exports = function (e) {
             {
                 scope: "property",
                 variants: [
-                    { match: t.concat(n, c, i) },
+                    {
+                        match: t.concat(n, c, i),
+                    },
                     {
                         begin: t.concat(c, i),
                         "on:begin": r,
@@ -119,7 +132,9 @@ e.exports = function (e) {
             {
                 scope: "params",
                 variants: [
-                    { match: t.concat(n, u, i) },
+                    {
+                        match: t.concat(n, u, i),
+                    },
                     {
                         begin: t.concat(u, i),
                         "on:begin": r,

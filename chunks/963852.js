@@ -12,6 +12,7 @@ var r = n(284009),
     o = n(287809),
     l = n(195880),
     c = n(652215);
+
 function u(e) {
     let { id: t, username: n, avatar: r, discriminator: i, bot: a, globalName: s } = e;
     return {
@@ -23,6 +24,7 @@ function u(e) {
         global_name: s,
     };
 }
+
 function d(e) {
     let {
             channelId: t,
@@ -76,6 +78,7 @@ function d(e) {
         }
     );
 }
+
 function f(e) {
     let { messageId: t, channelId: n, content: r, embeds: i, loggingName: a } = e;
     return {

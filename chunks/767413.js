@@ -1,6 +1,9 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(860407),
     i = n(180944);
+
 function a(e, t, n) {
     return (
         t in e
@@ -117,6 +120,7 @@ class o {
         a(this, "transaction", void 0), (this.transaction = e);
     }
 }
+
 function l(e, t, n) {
     let r = c(n.id);
     return {
@@ -125,6 +129,7 @@ function l(e, t, n) {
         generation: r,
     };
 }
+
 function c(e) {
     let t = 19;
     return e.padStart(t, "0");

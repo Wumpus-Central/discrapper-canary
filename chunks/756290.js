@@ -178,10 +178,20 @@ e.exports = function (e) {
             {
                 begin: t.concat(t.either(...n), "\\s*\\("),
                 relevance: 0,
-                keywords: { built_in: n },
+                keywords: {
+                    built_in: n,
+                },
             },
-            e.inherit(e.QUOTE_STRING_MODE, { contains: [{ begin: '""' }] }),
-            e.COMMENT(/'/, /$/, { relevance: 0 }),
+            e.inherit(e.QUOTE_STRING_MODE, {
+                contains: [
+                    {
+                        begin: '""',
+                    },
+                ],
+            }),
+            e.COMMENT(/'/, /$/, {
+                relevance: 0,
+            }),
             e.C_NUMBER_MODE,
         ],
     };

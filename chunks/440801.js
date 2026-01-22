@@ -1,4 +1,7 @@
-t.d(n, { N: () => m }), t(896048);
+t.d(n, {
+    N: () => m,
+}),
+    t(896048);
 var r = t(627968),
     l = t(64700),
     c = t(503698),
@@ -8,6 +11,7 @@ var r = t(627968),
     o = t(957565),
     u = t(206314),
     d = t(829681);
+
 function h(e) {
     let { text: n } = e,
         [t, c] = l.useState(!1);
@@ -30,6 +34,7 @@ function h(e) {
               }),
     });
 }
+
 function m(e) {
     let { language: n, content: l } = e,
         c = () =>
@@ -44,7 +49,9 @@ function m(e) {
                 o.p5
                     ? (0, r.jsx)("div", {
                           className: u.lB,
-                          children: (0, r.jsx)(h, { text: l }),
+                          children: (0, r.jsx)(h, {
+                              text: l,
+                          }),
                       })
                     : null,
                 (0, r.jsx)(s.c2, {
@@ -59,7 +66,9 @@ function m(e) {
                                 ? c()
                                 : (0, r.jsx)("code", {
                                       className: a()(d.kw, "hljs", t.language),
-                                      dangerouslySetInnerHTML: { __html: t.value },
+                                      dangerouslySetInnerHTML: {
+                                          __html: t.value,
+                                      },
                                   });
                         }
                     },

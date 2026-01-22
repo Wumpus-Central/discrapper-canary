@@ -1,10 +1,14 @@
-r.d(t, { default: () => a }), r(228524);
+r.d(t, {
+    default: () => a,
+}),
+    r(228524);
 var n = r(627968),
     o = r(158954),
     s = r(397927),
     c = r(363487),
     i = r(539085),
     l = r(154);
+
 function a(e) {
     var t, r;
     let { guildId: a, title: d, description: u, powerups: p, footerInfoText: b, footerAction: x } = e,

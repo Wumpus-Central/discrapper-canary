@@ -55,6 +55,7 @@ let N = () => [
             },
         };
     };
+
 function h(t, e) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
         [r, l] = (0, a.yK)([c.Ay], () => [
@@ -63,9 +64,17 @@ function h(t, e) {
         ]),
         S = (0, u.M)(l),
         h = (0, _.Ay)(t, !0);
+
     function b(e) {
         e && t.type === A.rbe.GUILD_CATEGORY && (0, o.Gv)(t.id),
-            d.A.updateChannelOverrideSettings(t.guild_id, t.id, { muted: e }, g.G_.muted(e));
+            d.A.updateChannelOverrideSettings(
+                t.guild_id,
+                t.id,
+                {
+                    muted: e,
+                },
+                g.G_.muted(e),
+            );
     }
     let v = f.intl.string(f.t.tbeRRJ),
         p = f.intl.string(f.t.OYefme);
@@ -77,8 +86,16 @@ function h(t, e) {
             (v = f.intl.string(f.t.LO3kaK)), (p = f.intl.string(f.t["s5/5fm"]));
             break;
         case A.rbe.DM:
-            (v = n ? f.intl.format(f.t.byjuJm, { name: h }) : f.intl.string(f.t.LO3kaK)),
-                (p = n ? f.intl.format(f.t["eC+9rj"], { name: h }) : f.intl.string(f.t["s5/5fm"]));
+            (v = n
+                ? f.intl.format(f.t.byjuJm, {
+                      name: h,
+                  })
+                : f.intl.string(f.t.LO3kaK)),
+                (p = n
+                    ? f.intl.format(f.t["eC+9rj"], {
+                          name: h,
+                      })
+                    : f.intl.string(f.t["s5/5fm"]));
             break;
         default:
             (v = f.intl.string(f.t.tbeRRJ)), (p = f.intl.string(f.t.OYefme));

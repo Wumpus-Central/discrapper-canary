@@ -14,6 +14,7 @@ var r = n(503698),
     u = n(571338),
     p = n(403299),
     h = (((l = {}).DEFAULT = "DEFAULT"), (l.SEARCH = "SEARCH"), l);
+
 function m(e) {
     let {
             selectedTabId: t,
@@ -25,7 +26,9 @@ function m(e) {
             children: b,
         } = e,
         f = (0, c.Ay)(),
-        { enabled: g } = (0, d.Z)({ location: "global_discovery_header_bar" });
+        { enabled: g } = (0, d.Z)({
+            location: "global_discovery_header_bar",
+        });
     return (0, a.jsx)(s.NPJ, {
         theme: f,
         children: (e) =>
@@ -49,7 +52,9 @@ function m(e) {
                             ],
                         }),
                     (0, a.jsx)("div", {
-                        className: i()(p.w4, { [p.cS]: "SEARCH" === r }),
+                        className: i()(p.w4, {
+                            [p.cS]: "SEARCH" === r,
+                        }),
                         children: b,
                     }),
                 ],

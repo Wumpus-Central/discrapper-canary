@@ -39,5 +39,7 @@ e.exports = l(
 var h = (a.Arguments = a.Array);
 if ((i("keys"), i("values"), i("entries"), !u && d && "values" !== h.name))
     try {
-        o(h, "name", { value: "values" });
+        o(h, "name", {
+            value: "values",
+        });
     } catch (e) {}

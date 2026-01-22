@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var r = n(627968);
 n(64700);
 var i = n(284009),
@@ -9,6 +11,7 @@ var i = n(284009),
     c = n(207963),
     u = n(681168),
     d = n(158611);
+
 function f(e, t, n) {
     return (
         t in e
@@ -22,6 +25,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -38,6 +42,7 @@ function p(e) {
     }
     return e;
 }
+
 function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -50,6 +55,7 @@ function _(e, t) {
     }
     return n;
 }
+
 function h(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -61,6 +67,7 @@ function h(e, t) {
         e
     );
 }
+
 function m(e) {
     let { contentInventoryEntry: t, channel: n } = e,
         { parsedEntry: i } = (0, o.v)();
@@ -72,6 +79,7 @@ function m(e) {
         }),
     );
 }
+
 function g(e) {
     let t = (0, c.jc)();
     a()(
@@ -87,7 +95,12 @@ function g(e) {
             entry: e.contentInventoryEntry,
             channel: i,
             errorFallback: null,
-            children: (0, r.jsx)(m, h(p({}, e), { channel: i })),
+            children: (0, r.jsx)(
+                m,
+                h(p({}, e), {
+                    channel: i,
+                }),
+            ),
         })
     );
 }

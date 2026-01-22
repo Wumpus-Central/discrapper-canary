@@ -1,4 +1,6 @@
-n.d(a, { default: () => f });
+n.d(a, {
+    default: () => f,
+});
 var s = n(627968),
     t = n(64700),
     i = n(503698),

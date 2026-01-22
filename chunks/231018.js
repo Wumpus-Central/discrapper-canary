@@ -1,4 +1,7 @@
-n.d(t, { A: () => d }), n(801541);
+n.d(t, {
+    A: () => d,
+}),
+    n(801541);
 var r = n(627968);
 n(64700);
 var i = n(889137),
@@ -8,11 +11,16 @@ var i = n(889137),
     l = n(788868),
     c = n(985018),
     u = n(54196);
+
 function d(e) {
     let { step: t, onClose: n, giftingOrigin: d } = e,
         { enabled: f } = s.P.useExperiment(
-            { location: "CollectiblesGiftPaymentModalHeader" },
-            { autoTrackExposure: !1 },
+            {
+                location: "CollectiblesGiftPaymentModalHeader",
+            },
+            {
+                autoTrackExposure: !1,
+            },
         ),
         p = (0, i.YW)(t)
             .with(o.pn.REVIEW, () => c.intl.string(c.t.JbRd5s))

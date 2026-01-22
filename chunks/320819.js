@@ -1,4 +1,6 @@
-n.d(t, { A: () => x });
+n.d(t, {
+    A: () => x,
+});
 var r = n(627968),
     i = n(311907),
     a = n(397927),
@@ -29,6 +31,7 @@ var r = n(627968),
     w = n(996988),
     P = n(985018),
     D = n(183959);
+
 function x(e) {
     let {
             user: t,
@@ -47,7 +50,9 @@ function x(e) {
         })),
         B = (0, s.fi)(t.id),
         H = (0, i.bG)([c.A], () => c.A.hidePersonalInformation),
-        { enabled: Y } = (0, f.u)({ location: "UserProfilePopoutBody" }),
+        { enabled: Y } = (0, f.u)({
+            location: "UserProfilePopoutBody",
+        }),
         W = t.id === n.id,
         K = (null == x ? void 0 : x.widgets) != null && x.widgets.length > 0,
         z = (0, d.TW)(n);
@@ -55,7 +60,9 @@ function x(e) {
         fade: !0,
         className: D.rf,
         children: [
-            (0, r.jsx)(h.A, { userId: t.id }),
+            (0, r.jsx)(h.A, {
+                userId: t.id,
+            }),
             (0, r.jsx)(A.A, {
                 user: t,
                 guildId: null == L ? void 0 : L.id,
@@ -105,11 +112,18 @@ function x(e) {
                     e.applicationId,
                 ),
             ),
-            (0, r.jsx)(g.A, { user: t }),
+            (0, r.jsx)(g.A, {
+                user: t,
+            }),
             !W &&
                 (0, r.jsx)(C.A, {
                     user: t,
-                    onOpenProfile: (e) => (null == M ? void 0 : M({ tabSection: e })),
+                    onOpenProfile: (e) =>
+                        null == M
+                            ? void 0
+                            : M({
+                                  tabSection: e,
+                              }),
                 }),
             t.isProvisional
                 ? (0, r.jsx)(O.A.Overlay, {
@@ -121,7 +135,9 @@ function x(e) {
                               color: a.LU0.colors.TEXT_STRONG,
                           }),
                           headingColor: "text-strong",
-                          children: (0, r.jsx)(o.T, { userId: t.id }),
+                          children: (0, r.jsx)(o.T, {
+                              userId: t.id,
+                          }),
                       }),
                   })
                 : (0, r.jsx)(S.A, {

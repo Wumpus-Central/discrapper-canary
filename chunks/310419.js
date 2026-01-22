@@ -45,12 +45,14 @@ let p = (0, i.D)(() => ({
     entrypoint: null,
     trackedOpenedFromExternalEntrypoint: !1,
 }));
+
 function _() {
     let {
         location: { state: e },
     } = (0, a.JK)();
     return null == e ? void 0 : e.previousView;
 }
+
 function h() {
     var e, t, n;
     let {
@@ -63,7 +65,9 @@ function h() {
             exact: !0,
         })
     )
-        return { type: "home" };
+        return {
+            type: "home",
+        };
     if (
         null !=
         (0, r.B6)(i, {
@@ -72,7 +76,9 @@ function h() {
         })
     ) {
         let e = new URLSearchParams(u),
-            t = { type: "search" },
+            t = {
+                type: "search",
+            },
             n = e.get("q");
         null != n && "" !== n && (t.query = n);
         let r = Number(e.get("category_id"));

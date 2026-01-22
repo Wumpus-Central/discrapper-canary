@@ -23,6 +23,7 @@ var r = n(627968),
     E = n(97352),
     b = n(67480),
     y = n(582658);
+
 function O(e, t, n) {
     return (
         t in e
@@ -36,6 +37,7 @@ function O(e, t, n) {
         e
     );
 }
+
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -52,6 +54,7 @@ function A(e) {
     }
     return e;
 }
+
 function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -64,6 +67,7 @@ function v(e, t) {
     }
     return n;
 }
+
 function S(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -114,17 +118,21 @@ let I = (e) => {
     },
     C = (e) =>
         (0, r.jsxs)("div", {
-            style: { padding: 20 },
+            style: {
+                padding: 20,
+            },
             children: [
                 (0, r.jsx)(l.Text, {
                     variant: "text-md/normal",
                     children: e.text,
                 }),
                 (0, r.jsx)("div", {
-                    style: { marginTop: 16 },
+                    style: {
+                        marginTop: 16,
+                    },
                     children: (0, r.jsx)(l.MzZ, {
                         onClick: () => e.handleStepChange(e.originStep),
-                        children: "\u2190 Go Back",
+                        children: "← Go Back",
                     }),
                 }),
             ],

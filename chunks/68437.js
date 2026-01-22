@@ -1,4 +1,6 @@
-n.d(t, { A: () => I });
+n.d(t, {
+    A: () => I,
+});
 var r = n(627968);
 n(64700);
 var l = n(311907),
@@ -25,6 +27,7 @@ var l = n(311907),
     _ = n(652215),
     C = n(790782),
     S = n(985018);
+
 function I(e) {
     var t;
     let {
@@ -68,7 +71,10 @@ function I(e) {
             mentionsCount: k,
             isMentionLowImportance: U,
         });
-    if ((0, d.v)(R)) return (0, r.jsx)(d.A, { locked: D });
+    if ((0, d.v)(R))
+        return (0, r.jsx)(d.A, {
+            locked: D,
+        });
     if (M)
         return (0, r.jsx)(a.LpS, {
             text: S.intl.string(S.t.y2b7CA),
@@ -78,7 +84,9 @@ function I(e) {
         return (0, r.jsx)(a.Text, {
             variant: "text-xs/semibold",
             color: "text-brand",
-            children: S.intl.format(S.t.GkAbqY, { count: (0, a.Gub)(z) }),
+            children: S.intl.format(S.t.GkAbqY, {
+                count: (0, a.Gub)(z),
+            }),
         });
     if (!L && n.isForumLikeChannel() && null != Y && Y > 0)
         return (0, r.jsx)(a.Text, {
@@ -101,7 +109,9 @@ function I(e) {
           : null != H
             ? (0, r.jsx)(c.z, {
                   textColor: "text-feedback-positive",
-                  entry: { start: H },
+                  entry: {
+                      start: H,
+                  },
               })
             : null != w && w && (0, y.X)(V)
               ? (0, r.jsx)(v.A, {

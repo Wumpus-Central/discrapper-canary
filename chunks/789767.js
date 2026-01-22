@@ -1,4 +1,6 @@
-r.d(t, { A: () => a });
+r.d(t, {
+    A: () => a,
+});
 var n = r(64700),
     o = r(205662);
 let a = function () {
@@ -41,8 +43,26 @@ let a = function () {
     });
     return n.createElement(
         "div",
-        { style: e.pointer },
-        n.createElement("div", { style: e.left }, n.createElement("div", { style: e.leftInside })),
-        n.createElement("div", { style: e.right }, n.createElement("div", { style: e.rightInside })),
+        {
+            style: e.pointer,
+        },
+        n.createElement(
+            "div",
+            {
+                style: e.left,
+            },
+            n.createElement("div", {
+                style: e.leftInside,
+            }),
+        ),
+        n.createElement(
+            "div",
+            {
+                style: e.right,
+            },
+            n.createElement("div", {
+                style: e.rightInside,
+            }),
+        ),
     );
 };

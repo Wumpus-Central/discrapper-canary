@@ -1,4 +1,6 @@
-n.d(t, { A: () => y });
+n.d(t, {
+    A: () => y,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -29,9 +31,15 @@ let b = [l.x.CHERRY_BOMB, l.x.CHICLE],
                 boldFontOpacity: S = 1,
                 shouldUnderlineOnHover: I = !1,
             } = e,
-            T = (0, g.a)({ displayNameStyles: i }),
-            { useReducedMotion: C } = (0, c.cf)([f.A], () => ({ useReducedMotion: f.A.useReducedMotion })),
-            N = (0, _.W)({ location: "UserNameWithEffects" }),
+            T = (0, g.a)({
+                displayNameStyles: i,
+            }),
+            { useReducedMotion: C } = (0, c.cf)([f.A], () => ({
+                useReducedMotion: f.A.useReducedMotion,
+            })),
+            N = (0, _.W)({
+                location: "UserNameWithEffects",
+            }),
             R = (0, d.rdh)(d.LU0.colors.BACKGROUND_BASE_LOW).hex(),
             w = null != (t = null == i ? void 0 : i.effectId) ? t : o.z.SOLID,
             P = (0, d.Oer)(n),
@@ -57,7 +65,9 @@ let b = [l.x.CHERRY_BOMB, l.x.CHICLE],
             children: [
                 (0, r.jsx)("span", {
                     "data-username-with-effects": P,
-                    className: s()(E.WH, null == j ? void 0 : j.effectClassName, { [E._W]: I }),
+                    className: s()(E.WH, null == j ? void 0 : j.effectClassName, {
+                        [E._W]: I,
+                    }),
                     children: D,
                 }),
                 (null == j ? void 0 : j.glowClassName) != null &&
@@ -69,22 +79,31 @@ let b = [l.x.CHERRY_BOMB, l.x.CHICLE],
             ],
         });
     });
+
 function O(e) {
     switch (e) {
         case o.z.GRADIENT:
         case o.z.GLOW:
-            return { effectClassName: E.D7 };
+            return {
+                effectClassName: E.D7,
+            };
         case o.z.NEON:
             return {
                 effectClassName: E.lw,
                 glowClassName: E._4,
             };
         case o.z.TOON:
-            return { effectClassName: E.lQ };
+            return {
+                effectClassName: E.lQ,
+            };
         case o.z.POP:
-            return { effectClassName: E.uY };
+            return {
+                effectClassName: E.uY,
+            };
         case o.z.SOLID:
         default:
-            return { effectClassName: E.QJ };
+            return {
+                effectClassName: E.QJ,
+            };
     }
 }

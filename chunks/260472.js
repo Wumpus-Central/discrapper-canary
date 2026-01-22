@@ -1,4 +1,9 @@
-n.d(t, { m: () => E }), n(896048), n(321073), n(65821);
+n.d(t, {
+    m: () => E,
+}),
+    n(896048),
+    n(321073),
+    n(65821);
 var r = n(840320),
     i = n(284009),
     a = n.n(i),
@@ -9,6 +14,7 @@ var o = n(406335),
     c = n(390225),
     u = n(39304),
     d = n(294997);
+
 function f(e, t, n) {
     return (
         t in e
@@ -84,7 +90,9 @@ class E {
                             null == (e = this._sentryUtils) ||
                                 e.addBreadcrumb({
                                     message: "Dispatcher: Dispatch loop detected",
-                                    data: { lastFewActions: t },
+                                    data: {
+                                        lastFewActions: t,
+                                    },
                                 }),
                             Error("Dispatch loop detected, aborting"))
                         );
@@ -270,6 +278,9 @@ class b {
             f(this, "_dependencyGraph", new r.DepGraph());
     }
 }
+
 function y(e, t) {
-    Object.defineProperty(e, "name", { value: t });
+    Object.defineProperty(e, "name", {
+        value: t,
+    });
 }

@@ -1,9 +1,13 @@
-n.d(t, { A: () => h }), n(896048);
+n.d(t, {
+    A: () => h,
+}),
+    n(896048);
 var r = n(735438),
     i = n.n(r),
     a = n(626584),
     s = n(543465),
     o = n(723176);
+
 function l(e, t, n) {
     return (
         t in e
@@ -17,6 +21,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -33,6 +38,7 @@ function c(e) {
     }
     return e;
 }
+
 function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -45,6 +51,7 @@ function u(e, t) {
     }
     return n;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -83,7 +90,9 @@ class _ {
         let r = o.A.userGuildSettingsTransaction(n);
         for (let t of e) {
             var i;
-            let e = d(c({}, (0, s.wn)(t.guild_id), t), { channel_overrides: (0, s.b5)(t.channel_overrides) });
+            let e = d(c({}, (0, s.wn)(t.guild_id), t), {
+                channel_overrides: (0, s.b5)(t.channel_overrides),
+            });
             r.put(null != (i = t.guild_id) ? i : p, e);
         }
         o.A.nonGuildVersionsTransaction(n).put({

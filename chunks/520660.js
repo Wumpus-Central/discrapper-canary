@@ -1,4 +1,10 @@
-l.d(t, { default: () => j }), l(896048), l(747238), l(812715), l(733351);
+l.d(t, {
+    default: () => j,
+}),
+    l(896048),
+    l(747238),
+    l(812715),
+    l(733351);
 var n = l(627968),
     r = l(64700),
     i = l(503698),
@@ -58,7 +64,9 @@ let x = "MULTIPLE_CHOICE",
             ),
             (0, n.jsxs)("div", {
                 ref: h,
-                className: c()(m.XQ, { [m.cB]: b }),
+                className: c()(m.XQ, {
+                    [m.cB]: b,
+                }),
                 "data-dnd-name": t,
                 children: [
                     (0, n.jsx)("div", {
@@ -75,7 +83,9 @@ let x = "MULTIPLE_CHOICE",
                             (0, n.jsx)(u.ksK, {
                                 autoFocus: !0,
                                 onChange: (e) => i(e),
-                                placeholder: g.intl.formatToPlainString(g.t["Ep/pbH"], { index: l + 1 }),
+                                placeholder: g.intl.formatToPlainString(g.t["Ep/pbH"], {
+                                    index: l + 1,
+                                }),
                                 value: t,
                             }),
                             (0, n.jsx)("div", {
@@ -184,7 +194,9 @@ let x = "MULTIPLE_CHOICE",
                                 value: x,
                             }),
                         }),
-                        (0, n.jsx)("div", { className: m.yF }),
+                        (0, n.jsx)("div", {
+                            className: m.yF,
+                        }),
                         v.map((e, t) =>
                             (0, n.jsx)(
                                 y,

@@ -1,4 +1,8 @@
-i.d(t, { default: () => C }), i(228524), i(896048);
+i.d(t, {
+    default: () => C,
+}),
+    i(228524),
+    i(896048);
 var n = i(627968),
     l = i(64700),
     r = i(284009),
@@ -15,9 +19,12 @@ var n = i(627968),
     S = i(720619),
     A = i(985018),
     h = i(857161);
+
 function m(e) {
     let { className: t, guildId: i, onChange: l, isGuildIncluded: r } = e,
-        { options: a } = (0, S.A)({ isGuildIncluded: r });
+        { options: a } = (0, S.A)({
+            isGuildIncluded: r,
+        });
     return (0, n.jsx)("div", {
         className: t,
         children: (0, n.jsx)(d.ZiE, {
@@ -29,6 +36,7 @@ function m(e) {
         }),
     });
 }
+
 function C(e) {
     let { transitionState: t, onClose: i, feature: r, section: S, subsection: A } = e,
         C = (0, o.GV)(),
@@ -46,7 +54,9 @@ function C(e) {
         w = async () => {
             N(!0);
             let e = await new Promise((e) => {
-                u.A.openCreateGuildModal({ onSuccess: e });
+                u.A.openCreateGuildModal({
+                    onSuccess: e,
+                });
             });
             await new Promise((t) => {
                 G.A.addChangeListener(function i() {
@@ -70,7 +80,9 @@ function C(e) {
                         variant: "heading-lg/medium",
                         children: x,
                     }),
-                    (0, n.jsx)(d.s_y, { onClick: i }),
+                    (0, n.jsx)(d.s_y, {
+                        onClick: i,
+                    }),
                 ],
             }),
             (0, n.jsxs)(d.$mQ, {

@@ -24,11 +24,13 @@ var r = n(64700),
     x = n(867455),
     v = n(707539),
     b = n(818348);
+
 function A() {
     r.useEffect(() => {
         (0, v.ju)();
     }, []);
 }
+
 function p(e) {
     let t,
         n =
@@ -61,6 +63,7 @@ function p(e) {
         unjoinedThreadIds: o,
     };
 }
+
 function y(e) {
     let t = (0, s.yK)(
         [u.A, m.A, c.A],
@@ -88,6 +91,7 @@ function y(e) {
         [t],
     );
 }
+
 function w(e, t, n, l) {
     let d = e.isModeratorReportChannel(),
         { showResolvedFlags: h } = (0, i.T)(e.id),

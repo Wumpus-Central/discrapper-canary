@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968),
     l = n(64700),
     i = n(934551),
@@ -7,6 +9,7 @@ var r = n(627968),
     o = n(670455),
     c = n(985018),
     u = n(508134);
+
 function d(e) {
     let { rating: t, onClick: n } = e,
         s = t === o.P0.BAD ? i.ThumbsDownIcon : i.ThumbsUpIcon,
@@ -26,7 +29,9 @@ function d(e) {
 let f = function (e) {
     let { searchContext: t, dismissFeedbackEntrypoint: i } = e;
     l.useEffect(() => {
-        (0, s.J$)({ searchContext: t });
+        (0, s.J$)({
+            searchContext: t,
+        });
     }, [t]);
     let f = l.useCallback(
         (e) => {

@@ -16,6 +16,7 @@ var i = n(64700),
     p = n(916494),
     h = n(897720),
     f = n(545807);
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -41,6 +42,7 @@ function m(e) {
     }
     return e;
 }
+
 function g(e, t) {
     if (null == e) return {};
     var n,
@@ -79,6 +81,7 @@ let y = 256,
             height: n,
         };
     };
+
 function E(e, t, n, i) {
     let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : y,
         l = {
@@ -98,14 +101,17 @@ function E(e, t, n, i) {
               height: l.height + s,
           };
 }
+
 function v(e, t, n, i) {
     let r = A(e, t);
     return i ? n.width - r : (0, p.Um)(n.height - r);
 }
+
 function b(e) {
     return e.height > e.width;
 }
 let S = 180 / 1080;
+
 function x(e) {
     let { layout: t, tileCount: n, borderWidth: i, padding: r, previousContainerSize: l, widgetMinMaxSizes: a } = e,
         o = t === h.IV.VERTICAL,
@@ -125,6 +131,7 @@ function x(e) {
         },
     );
 }
+
 function j(e) {
     let { widgetId: t, size: n, borderWidth: i, padding: r, minSize: a, containerSpecs: o, defaultSize: s } = e,
         c = g(e, ["widgetId", "size", "borderWidth", "padding", "minSize", "containerSpecs", "defaultSize"]),
@@ -144,7 +151,12 @@ function j(e) {
             ),
         p = {
             widgetId: t,
-            size: m({ fixed: n.fixed }, u(n)),
+            size: m(
+                {
+                    fixed: n.fixed,
+                },
+                u(n),
+            ),
             minSize: m({}, u(a)),
         };
     null != s && (p.defaultSize = m({}, u(s))), (0, l.Ju)(m({}, p));
@@ -218,6 +230,7 @@ let I = (e) => {
         },
     );
 };
+
 function N(e) {
     let { tileCount: t, padding: n, borderWidth: i, isVertical: l, widgetSize: o } = e,
         { width: s, height: d } = {
@@ -280,6 +293,7 @@ function N(e) {
         containerMinMaxSizes: j,
     };
 }
+
 function w(e) {
     let { streamParticipants: t, layout: n, widgetLayoutSpecs: r } = e,
         l = i.useRef(r);

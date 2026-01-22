@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var a = n(627968);
 n(64700);
 var l = n(503698),
@@ -10,6 +12,7 @@ var l = n(503698),
     d = n(183555),
     u = n(985018),
     m = n(609141);
+
 function p(e) {
     let { user: t, isVisible: n } = e,
         { trackUserProfileAction: l } = (0, d.NJ)();
@@ -22,7 +25,10 @@ function p(e) {
                   decoration: "never",
                   identifiable: "always",
               }),
-              onCopy: () => l({ action: "COPY_USERNAME" }),
+              onCopy: () =>
+                  l({
+                      action: "COPY_USERNAME",
+                  }),
               children: (e) => {
                   var t, l;
                   return (0, a.jsx)(
@@ -54,7 +60,9 @@ function p(e) {
                       })({}, e)),
                       (l = l =
                           {
-                              className: i()(m.c, { [m.R]: n }),
+                              className: i()(m.c, {
+                                  [m.R]: n,
+                              }),
                               "aria-label": u.intl.string(u.t.y5MwJy),
                               children: (0, a.jsx)(r.TdU, {
                                   size: "xs",

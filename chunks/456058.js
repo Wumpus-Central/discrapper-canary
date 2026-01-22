@@ -1,10 +1,13 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(64700),
     i = n(105917),
     l = n(969379),
     s = n(300233),
     a = n(22491),
     c = n(311750);
+
 function o(e, t) {
     let n = null == t ? void 0 : t.team,
         { payoutsByPeriod: o, loading: d } = (0, l.A)(null == t ? void 0 : t.id, {

@@ -1,4 +1,7 @@
-n.d(t, { A: () => C }), n(896048);
+n.d(t, {
+    A: () => C,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -17,6 +20,7 @@ var r = n(627968),
     A = n(427262),
     y = n(6676);
 let O = f.DN.SIZE_24;
+
 function j(e) {
     var t, n;
     let { activity: l, user: i, embeddedApp: a, onOpenSpotifyAlbum: s } = e,
@@ -70,6 +74,7 @@ function j(e) {
           }))
         : A;
 }
+
 function v(e) {
     let { activity: t, embeddedApp: n, onOpenSpotifyTrack: l } = e,
         i = null == t ? void 0 : t.details,
@@ -94,6 +99,7 @@ function v(e) {
         children: s,
     });
 }
+
 function x(e) {
     let { activity: t, user: n, onOpenSpotifyArtist: l } = e,
         i = null == t ? void 0 : t.details,
@@ -123,6 +129,7 @@ function x(e) {
               children: o,
           });
 }
+
 function E(e) {
     let { activity: t } = e,
         n = null == t ? void 0 : t.state;
@@ -133,6 +140,7 @@ function E(e) {
               children: n,
           });
 }
+
 function _(e) {
     let { activity: t } = e;
     if (null == t || !(0, u.A)(t)) return null;
@@ -147,6 +155,7 @@ function _(e) {
         singleLine: !0,
     });
 }
+
 function C(e) {
     let {
             activity: t,
@@ -202,7 +211,9 @@ function C(e) {
                                       user: i,
                                       onOpenSpotifyArtist: p,
                                   }),
-                                  (0, r.jsx)(E, { activity: t }),
+                                  (0, r.jsx)(E, {
+                                      activity: t,
+                                  }),
                                   g.length > 0 &&
                                       (0, r.jsx)(f.Ay, {
                                           className: y.TN,
@@ -239,7 +250,9 @@ function C(e) {
                           }),
                       ],
                   }),
-                  (0, r.jsx)(_, { activity: t }),
+                  (0, r.jsx)(_, {
+                      activity: t,
+                  }),
               ],
           })
         : null;

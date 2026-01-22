@@ -7,6 +7,7 @@ t.exports = (function () {
             (this.cacheStepSize_ = 0),
             (this.cacheValues_ = []);
     }
+
     function i(t, i) {
         (this.time = t), (this.value = i);
     }
@@ -23,10 +24,10 @@ t.exports = (function () {
             },
             addPoint: function (t, e) {
                 var s = new Date(t);
-                this.dataPoints_.push(new i(s, e)), this.dataPoints_.length > 1000 && this.dataPoints_.shift();
+                this.dataPoints_.push(new i(s, e)), this.dataPoints_.length > 1e3 && this.dataPoints_.shift();
             },
             setPoints: function (t) {
-                let i = Math.max(0, t.length - 1000);
+                let i = Math.max(0, t.length - 1e3);
                 this.dataPoints_ = t.slice(i);
             },
             isVisible: function () {

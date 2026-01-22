@@ -34,7 +34,13 @@ let g = (0, m.createContext)(null),
               });
     }),
     O = (0, m.forwardRef)((e, t) => {
-        let [n, l] = (0, r.JT)({ slot: e.slot }, t, g),
+        let [n, l] = (0, r.JT)(
+                {
+                    slot: e.slot,
+                },
+                t,
+                g,
+            ),
             { locale: c } = (0, s.Y)(),
             u = (0, p.F)({
                 ...n,
@@ -95,7 +101,11 @@ let g = (0, m.createContext)(null),
                     isInvalid: l.isInvalid,
                     isDisabled: l.isDisabled,
                 },
-                l.segments.map((e, t) => (0, m.cloneElement)(r(e), { key: t })),
+                l.segments.map((e, t) =>
+                    (0, m.cloneElement)(r(e), {
+                        key: t,
+                    }),
+                ),
             ),
             m.createElement(a.p, null),
         );
@@ -126,7 +136,14 @@ let g = (0, m.createContext)(null),
                 defaultClassName: "react-aria-DateSegment",
             });
         return m.createElement("span", {
-            ...(0, d.v)((0, h.$)(t, { global: !0 }), f, p, O),
+            ...(0, d.v)(
+                (0, h.$)(t, {
+                    global: !0,
+                }),
+                f,
+                p,
+                O,
+            ),
             ...v,
             style: f.style,
             ref: o,

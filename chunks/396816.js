@@ -24,6 +24,7 @@ var s,
     v = n(555337),
     A = n(652215),
     E = n(178758);
+
 function N(e, t, n) {
     return (
         t in e
@@ -37,6 +38,7 @@ function N(e, t, n) {
         e
     );
 }
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -65,6 +67,7 @@ let T = new Set(),
     L = new Map(),
     k = new Map(),
     M = new Map();
+
 function U() {
     return null == r || null == w
         ? []
@@ -76,11 +79,13 @@ function U() {
               ascending: !1,
           });
 }
+
 function F(e) {
     let { section: t } = e;
     if (null != r || t !== A.BEX.ROLES) return !1;
     B();
 }
+
 function B() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     (r = v.A.getProps().guild),
@@ -99,6 +104,7 @@ function B() {
                 k.set(t, [...e]);
             }));
 }
+
 function H(e, t) {
     t.forEach((t) => {
         let n = "solid",
@@ -157,6 +163,7 @@ let V = o().debounce(() => {
         D && o().isEqual(L, k) && ((e = !0), (D = !1)),
         e && X.emitChange();
 }, 500);
+
 function K(e, t) {
     let n = w.indexOf(e);
     if (n < 0) return !1;
@@ -164,12 +171,14 @@ function K(e, t) {
         i = [...w];
     (i[n] = r), (w = i), (C = !0), T.add(r.id), V();
 }
+
 function z(e) {
     return w.find((t) => {
         let { id: n } = t;
         return n === e;
     });
 }
+
 function Y(e) {
     let { guildId: t } = e;
     if (null == (r = v.A.getProps().guild) || t !== r.id || I === A.XlH.SUBMITTING) return !1;
@@ -268,27 +277,49 @@ let X = new W(
                           i = z(t);
                       if (null == i) return !1;
                       let { permissions: l } = i;
-                      return K(i, { permissions: (l = r ? d.WQ(l, n) : d.TF(l, n)) });
+                      return K(i, {
+                          permissions: (l = r ? d.WQ(l, n) : d.TF(l, n)),
+                      });
                   },
                   GUILD_SETTINGS_ROLES_UPDATE_PERMISSION_SET: function (e) {
                       let { id: t, permissions: n } = e,
                           r = z(t);
-                      return null != r && K(r, { permissions: n });
+                      return (
+                          null != r &&
+                          K(r, {
+                              permissions: n,
+                          })
+                      );
                   },
                   GUILD_SETTINGS_ROLES_CLEAR_PERMISSIONS: function (e) {
                       let { id: t } = e,
                           n = z(t);
-                      return null != n && K(n, { permissions: y.x3 });
+                      return (
+                          null != n &&
+                          K(n, {
+                              permissions: y.x3,
+                          })
+                      );
                   },
                   GUILD_SETTINGS_ROLES_UPDATE_NAME: function (e) {
                       let { id: t, name: n } = e,
                           r = z(t);
-                      return null != r && K(r, { name: n });
+                      return (
+                          null != r &&
+                          K(r, {
+                              name: n,
+                          })
+                      );
                   },
                   GUILD_SETTINGS_ROLES_UPDATE_DESCRIPTION: function (e) {
                       let { id: t, description: n } = e,
                           r = z(t);
-                      return null != r && K(r, { description: n });
+                      return (
+                          null != r &&
+                          K(r, {
+                              description: n,
+                          })
+                      );
                   },
                   GUILD_SETTINGS_ROLES_UPDATE_COLOR: function (e) {
                       let { id: t, color: n } = e,

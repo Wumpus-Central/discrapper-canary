@@ -16,6 +16,7 @@ var r =
                     a(e);
                 }
             }
+
             function o(e) {
                 try {
                     l(r.throw(e));
@@ -23,13 +24,16 @@ var r =
                     a(e);
                 }
             }
+
             function l(e) {
                 e.done ? n(e.value) : i(e.value).then(s, o);
             }
             l((r = r.apply(e, t || [])).next());
         });
     };
-Object.defineProperty(t, "__esModule", { value: !0 }),
+Object.defineProperty(t, "__esModule", {
+    value: !0,
+}),
     (t.MessageLoader = void 0),
     (t.loadAllMessagesInLocale = o),
     (t.waitForAllDefaultIntlMessagesLoaded = l),
@@ -149,16 +153,19 @@ class a {
 }
 t.MessageLoader = a;
 let s = [];
+
 function o(e) {
     return r(this, void 0, void 0, function* () {
         yield Promise.all(s.map((t) => t._loadLocale(e)));
     });
 }
+
 function l() {
     return r(this, void 0, void 0, function* () {
         yield Promise.all(s.map((e) => e.waitForDefaultLocale()));
     });
 }
+
 function c(e, t) {
     let n = new a(e, t);
     return s.push(n), n;

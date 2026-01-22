@@ -1,4 +1,6 @@
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});
 var r = {};
 r = {
     calendar: "Calendar",
@@ -13,8 +15,8 @@ r = {
     selectedDateDescription: (e) => `Dat\u{103} selectat\u{103}: ${e.date}`,
     selectedRangeDescription: (e) => `Interval selectat: de la ${e.startDate} p\xe2n\u{103} la ${e.endDate}`,
     selectedTimeDescription: (e) => `Ora selectat\u{103}: ${e.time}`,
-    startDate: "Dată început",
+    startDate: "Dată \xeenceput",
     timeZoneName: "fus orar",
-    weekday: "ziua din săptămână",
+    weekday: "ziua din săptăm\xe2nă",
     year: "an",
 };

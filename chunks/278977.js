@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -26,7 +28,12 @@ let u = (e) => {
                         children: (0, r.jsxs)(s.DUT, {
                             onClick: n,
                             className: l.Gv,
-                            children: [(0, r.jsx)(s.n2b, { color: "currentColor" }), o.intl.string(o.t["13/7kX"])],
+                            children: [
+                                (0, r.jsx)(s.n2b, {
+                                    color: "currentColor",
+                                }),
+                                o.intl.string(o.t["13/7kX"]),
+                            ],
                         }),
                     }),
                     (0, r.jsx)("div", {

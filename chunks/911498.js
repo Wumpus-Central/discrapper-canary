@@ -1,8 +1,12 @@
-n.d(t, { s: () => u }), n(896048);
+n.d(t, {
+    s: () => u,
+}),
+    n(896048);
 var r = n(735438),
     l = n(353640),
     i = n(540185),
     a = n(282435);
+
 function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -28,6 +32,7 @@ function s(e) {
     }
     return e;
 }
+
 function o(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -97,12 +102,26 @@ let c = (0, r.sampleSize)(a.cG, a.cG.length),
             t()._setStack(n, r), t()._setPeekedGameIds(n, t().peekNext(7, n));
         },
         _setGameIds: (t, n) => {
-            e((e) => ({ gameIds: o(s({}, e.gameIds), { [t]: n }) }));
+            e((e) => ({
+                gameIds: o(s({}, e.gameIds), {
+                    [t]: n,
+                }),
+            }));
         },
         _setStack: (t, n) => {
-            t === i.x.WANT_TO_PLAY_GAMES ? e({ wishlistStack: n }) : e({ stack: n });
+            t === i.x.WANT_TO_PLAY_GAMES
+                ? e({
+                      wishlistStack: n,
+                  })
+                : e({
+                      stack: n,
+                  });
         },
         _setPeekedGameIds: (t, n) => {
-            e((e) => ({ peekedGameIds: o(s({}, e.peekedGameIds), { [t]: n }) }));
+            e((e) => ({
+                peekedGameIds: o(s({}, e.peekedGameIds), {
+                    [t]: n,
+                }),
+            }));
         },
     }));

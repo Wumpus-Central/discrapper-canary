@@ -1,11 +1,15 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(643479),
     i = n(177487),
     a = n(234291),
     s = n(664741),
     o = n(525012),
     l = n(761799);
-let c = { read: E },
+let c = {
+        read: E,
+    },
     u = "STATE_KEYWORD",
     d = "STATE_COMPRESSION",
     f = "STATE_LANG",
@@ -14,6 +18,7 @@ let c = { read: E },
     h = 1,
     m = 1,
     g = 6;
+
 function E(e, t, n, r) {
     let i = {},
         a = [];
@@ -24,8 +29,14 @@ function E(e, t, n, r) {
             a.push(
                 p.then(({ name: e, value: t, description: n }) => {
                     try {
-                        if (l.A.USE_EXIF && C(e, t)) return { __exif: s.A.read(R(t), g, r).tags };
-                        if (l.A.USE_IPTC && N(e, t)) return { __iptc: o.A.read(R(t), 0, r) };
+                        if (l.A.USE_EXIF && C(e, t))
+                            return {
+                                __exif: s.A.read(R(t), g, r).tags,
+                            };
+                        if (l.A.USE_IPTC && N(e, t))
+                            return {
+                                __iptc: o.A.read(R(t), 0, r),
+                            };
                         if (e && !C(e, t) && !N(e, t))
                             return {
                                 [e]: {
@@ -51,6 +62,7 @@ function E(e, t, n, r) {
         readTagsPromise: a.length > 0 ? Promise.all(a) : void 0,
     };
 }
+
 function b(e, t, n, i, s) {
     let o,
         l = [],
@@ -82,18 +94,22 @@ function b(e, t, n, i, s) {
         ? b.then((e) => v(e, i, c, l)).catch(() => v("<text using unknown compression>".split(""), i, c, l))
         : v(b, i, c, l);
 }
+
 function y({ type: e, dataView: t, offset: n }) {
     if (e === a.Xo) {
         if (t.getUint8(n) === m) return t.getUint8(n + 1);
     } else if (e === a.aA) return t.getUint8(n);
     return r.Gl;
 }
+
 function O(e, t) {
     return t === u && [a.Xo, a.aA].includes(e) ? d : t === d ? (e === a.Xo ? f : _) : t === f ? p : _;
 }
+
 function A(e) {
     return e === a.HL || e === a.aA ? "latin1" : "utf-8";
 }
+
 function v(e, t, n, r) {
     let i = I(e);
     return {
@@ -102,27 +118,34 @@ function v(e, t, n, r) {
         description: t === a.Xo ? T(e) : i,
     };
 }
+
 function S(e, t, n) {
     let i = (0, r.YF)(n);
     if (e === a.HL || 0 === t.length) return i;
     let s = (0, r.YF)(t);
     return `${i} (${s})`;
 }
+
 function I(e) {
     return e instanceof DataView ? (0, r.hT)(e, 0, e.byteLength) : e;
 }
+
 function T(e) {
     return i.A.decode("UTF-8", e);
 }
+
 function C(e, t) {
     return "raw profile type exif" === e.toLowerCase() && "exif" === t.substring(1, 5);
 }
+
 function N(e, t) {
     return "raw profile type iptc" === e.toLowerCase() && "iptc" === t.substring(1, 5);
 }
+
 function R(e) {
     return w(e.match(/\n(exif|iptc)\n\s*\d+\n([\s\S]*)$/)[2].replace(/\n/g, ""));
 }
+
 function w(e) {
     let t = new DataView(new ArrayBuffer(e.length / 2));
     for (let n = 0; n < e.length; n += 2) t.setUint8(n / 2, parseInt(e.substring(n, n + 2), 16));

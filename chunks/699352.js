@@ -6,6 +6,7 @@ var r = n(627968);
 n(64700);
 var i = n(21878),
     a = n(756369);
+
 function s(e) {
     let {
         channelMessageProps: { message: t, channel: n, compact: s = !1 },
@@ -44,6 +45,7 @@ function s(e) {
               }),
           });
 }
+
 function o(e, t, n) {
     let {
         message: i,

@@ -1,4 +1,8 @@
-n.d(t, { A: () => f }), n(896048), n(321073);
+n.d(t, {
+    A: () => f,
+}),
+    n(896048),
+    n(321073);
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -9,6 +13,7 @@ var i = n(311907),
     c = n(287809),
     u = n(818348),
     d = n(987101);
+
 function f() {
     var e;
     let t = (0, i.bG)([o.default], () => o.default.isIdleStatusIndicatorEnabled),

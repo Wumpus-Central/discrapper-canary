@@ -1,4 +1,6 @@
-n.d(t, { $: () => u });
+n.d(t, {
+    $: () => u,
+});
 var r = n(734057),
     i = n(287809),
     a = n(562153),
@@ -6,6 +8,7 @@ var r = n(734057),
     o = n(835002),
     l = n(985018),
     c = n(641131);
+
 function u(e, t, n) {
     var u;
     let d = i.default.getUser(t),
@@ -16,19 +19,33 @@ function u(e, t, n) {
                 : s.Ay.getGlobalName(d);
     switch (e) {
         case o.OB.IGNORE_SUCCESS:
-            return l.intl.formatToPlainString(l.t["+joqrP"], { username: p });
+            return l.intl.formatToPlainString(l.t["+joqrP"], {
+                username: p,
+            });
         case o.OB.UNIGNORE_SUCCESS:
-            return l.intl.formatToPlainString(l.t.THExKa, { username: p });
+            return l.intl.formatToPlainString(l.t.THExKa, {
+                username: p,
+            });
         case o.OB.BLOCK_SUCCESS:
-            return l.intl.formatToPlainString(l.t.XXPrIs, { username: p });
+            return l.intl.formatToPlainString(l.t.XXPrIs, {
+                username: p,
+            });
         case o.OB.UNBLOCK_SUCCESS:
-            return l.intl.formatToPlainString(l.t.uExcGX, { username: p });
+            return l.intl.formatToPlainString(l.t.uExcGX, {
+                username: p,
+            });
         case o.OB.MUTE_SUCCESS:
-            return l.intl.formatToPlainString(l.t.X4NtYb, { username: p });
+            return l.intl.formatToPlainString(l.t.X4NtYb, {
+                username: p,
+            });
         case o.OB.UNMUTE_SUCCESS:
-            return l.intl.formatToPlainString(l.t.tRaBfY, { username: p });
+            return l.intl.formatToPlainString(l.t.tRaBfY, {
+                username: p,
+            });
         case o.OB.REPORT_SUCCESS:
-            return l.intl.formatToPlainString(l.t.FOptFU, { username: p });
+            return l.intl.formatToPlainString(l.t.FOptFU, {
+                username: p,
+            });
         case o.OB.TIGGER_PAWTECT_ERROR:
             return l.intl.string(l.t.c6kn6F);
         case o.OB.TIGGER_PAWTECT_VERIFIED:

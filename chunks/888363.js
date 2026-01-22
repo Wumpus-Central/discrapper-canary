@@ -1,4 +1,7 @@
-n.d(e, { default: () => y }), n(896048);
+n.d(e, {
+    default: () => y,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     o = n(397927),
@@ -12,6 +15,7 @@ var r = n(627968),
     f = n(315290),
     m = n(985018),
     g = n(978147);
+
 function _(t) {
     let { email: e, setEmail: n, claimRequired: u, onSuccess: d, onClose: p } = t,
         [_, b] = l.useState(),
@@ -42,7 +46,9 @@ function _(t) {
                 direction: c.A.Direction.VERTICAL,
                 separator: !1,
                 children: [
-                    (0, r.jsx)("div", { className: g.gD }),
+                    (0, r.jsx)("div", {
+                        className: g.gD,
+                    }),
                     (0, r.jsx)(o.Heading, {
                         className: g.Hc,
                         variant: "heading-xl/semibold",
@@ -106,6 +112,7 @@ function _(t) {
         ],
     });
 }
+
 function b(t) {
     let { email: e, claimRequired: n, onClose: i } = t,
         a = n ? m.t.D7trIB : m.t.JNWX7G;
@@ -121,11 +128,15 @@ function b(t) {
                                 className: g.b,
                                 onClick: i,
                             }),
-                        (0, r.jsx)("div", { className: g.hW }),
+                        (0, r.jsx)("div", {
+                            className: g.hW,
+                        }),
                         (0, r.jsx)(o.Text, {
                             className: g.QK,
                             variant: "text-lg/semibold",
-                            children: m.intl.format(a, { email: e }),
+                            children: m.intl.format(a, {
+                                email: e,
+                            }),
                         }),
                         (0, r.jsx)(o.Text, {
                             className: g.pQ,
@@ -167,6 +178,7 @@ function b(t) {
         })
     );
 }
+
 function y(t) {
     let { onClose: e, transitionState: n, claimRequired: i = !1 } = t,
         [a, c] = l.useState(""),

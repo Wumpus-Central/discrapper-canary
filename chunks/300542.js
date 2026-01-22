@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -7,6 +9,7 @@ var r = n(627968),
     l = n(560138),
     c = n(985018),
     u = n(521512);
+
 function d(e, t, n) {
     return (
         t in e
@@ -20,6 +23,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +40,7 @@ function f(e) {
     }
     return e;
 }
+
 function p() {
     let e = (0, a.bG)([l.A], () => l.A.affinities.slice(0, 3)),
         t = e[0],
@@ -48,9 +53,13 @@ function p() {
         _ = i.useMemo(
             () =>
                 e.length >= 2
-                    ? c.intl.formatToPlainString(c.t.c7ETJH, { username: p(e[0]) })
+                    ? c.intl.formatToPlainString(c.t.c7ETJH, {
+                          username: p(e[0]),
+                      })
                     : 1 === e.length
-                      ? c.intl.formatToPlainString(c.t.dpjXPL, { username: p(e[0]) })
+                      ? c.intl.formatToPlainString(c.t.dpjXPL, {
+                            username: p(e[0]),
+                        })
                       : "",
             [e],
         );

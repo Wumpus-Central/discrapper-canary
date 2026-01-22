@@ -1,4 +1,7 @@
-l.d(t, { A: () => G }), l(638769);
+l.d(t, {
+    A: () => G,
+}),
+    l(638769);
 var r = l(627968),
     n = l(64700),
     s = l(503698),
@@ -26,6 +29,7 @@ var r = l(627968),
     A = l(294726),
     T = l(985018),
     w = l(513246);
+
 function P(e) {
     let { plan: t, selected: l, className: n } = e;
     return null == t
@@ -35,7 +39,9 @@ function P(e) {
                   (0, r.jsxs)("div", {
                       className: i()(w.NV, n),
                       children: [
-                          (0, r.jsx)("span", { children: t.name }),
+                          (0, r.jsx)("span", {
+                              children: t.name,
+                          }),
                           (0, r.jsxs)("div", {
                               className: w._A,
                               children: [
@@ -45,16 +51,22 @@ function P(e) {
                                   }),
                                   (0, r.jsx)(o.Text, {
                                       variant: "text-xs/medium",
-                                      children: T.intl.format(A.default.kOMlHs, { boostCount: t.cost }),
+                                      children: T.intl.format(A.default.kOMlHs, {
+                                          boostCount: t.cost,
+                                      }),
                                   }),
                               ],
                           }),
                       ],
                   }),
-                  !l && (0, r.jsx)("div", { className: w.S6 }),
+                  !l &&
+                      (0, r.jsx)("div", {
+                          className: w.S6,
+                      }),
               ],
           });
 }
+
 function R(e) {
     let { region: t, selected: l, disabled: n, className: s } = e,
         { pingText: a, pingCircleStyle: d } = (0, N.b)(t.pingUrl);
@@ -63,17 +75,29 @@ function R(e) {
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsxs)("div", {
-                      className: i()(w.NV, { [w.r9]: n }, s),
+                      className: i()(
+                          w.NV,
+                          {
+                              [w.r9]: n,
+                          },
+                          s,
+                      ),
                       children: [
-                          (0, r.jsx)("span", { children: t.name }),
+                          (0, r.jsx)("span", {
+                              children: t.name,
+                          }),
                           (0, r.jsx)("div", {
                               className: w._A,
                               children: n
-                                  ? (0, r.jsx)("span", { children: T.intl.string(A.default.aCyHe2) })
+                                  ? (0, r.jsx)("span", {
+                                        children: T.intl.string(A.default.aCyHe2),
+                                    })
                                   : "" !== t.pingUrl
                                     ? (0, r.jsxs)(r.Fragment, {
                                           children: [
-                                              (0, r.jsx)("div", { className: i()(w.Jg, d) }),
+                                              (0, r.jsx)("div", {
+                                                  className: i()(w.Jg, d),
+                                              }),
                                               (0, r.jsx)(o.Text, {
                                                   variant: "text-xs/medium",
                                                   children: a,
@@ -84,10 +108,14 @@ function R(e) {
                           }),
                       ],
                   }),
-                  !l && (0, r.jsx)("div", { className: w.S6 }),
+                  !l &&
+                      (0, r.jsx)("div", {
+                          className: w.S6,
+                      }),
               ],
           });
 }
+
 function G() {
     let {
         guildId: e,
@@ -144,7 +172,9 @@ function G() {
     return null == t
         ? (0, r.jsx)("div", {
               className: w.dc,
-              children: (0, r.jsx)(o.y$y, { type: o.tVU.SPINNING_CIRCLE }),
+              children: (0, r.jsx)(o.y$y, {
+                  type: o.tVU.SPINNING_CIRCLE,
+              }),
           })
         : (0, r.jsxs)("div", {
               className: w.kL,
@@ -220,7 +250,9 @@ function G() {
                                                               children: (0, r.jsx)(o.DUT, {
                                                                   className: w.GI,
                                                                   onClick: () => (0, m.KH)(),
-                                                                  children: (0, r.jsx)(o.fNY, { size: "xs" }),
+                                                                  children: (0, r.jsx)(o.fNY, {
+                                                                      size: "xs",
+                                                                  }),
                                                               }),
                                                           }),
                                                       }),
@@ -329,8 +361,12 @@ function G() {
                               variant: "text-xs/medium",
                               children:
                                   M < 0
-                                      ? T.intl.format(A.default.SorKas, { boostCount: Math.abs(M) })
-                                      : T.intl.format(A.default.n2wpym, { boostCount: M }),
+                                      ? T.intl.format(A.default.SorKas, {
+                                            boostCount: Math.abs(M),
+                                        })
+                                      : T.intl.format(A.default.n2wpym, {
+                                            boostCount: M,
+                                        }),
                           }),
                       }),
                   !B &&
@@ -349,7 +385,9 @@ function G() {
                           look: u.k.INFO,
                           children: (0, r.jsx)(o.Text, {
                               variant: "text-xs/medium",
-                              children: T.intl.format(A.default.TnoBGX, { gameName: t.name }),
+                              children: T.intl.format(A.default.TnoBGX, {
+                                  gameName: t.name,
+                              }),
                           }),
                       }),
                   (0, r.jsx)(o.Text, {
@@ -359,7 +397,10 @@ function G() {
                           null != C &&
                           T.intl.format(Y ? A.default.num0a6 : A.default.p5KZDr, {
                               provider: Z,
-                              termsOfServiceUrl: () => (0, b.h)({ href: q }),
+                              termsOfServiceUrl: () =>
+                                  (0, b.h)({
+                                      href: q,
+                                  }),
                               helpCenterUrl: f.A.getArticleURL(y.MVz.GAME_SERVER_HOSTING),
                           }),
                   }),
@@ -372,7 +413,12 @@ function G() {
                   (0, r.jsxs)(p.N4, {
                       step: E.HS.SERVER_SETTINGS,
                       className: w.xQ,
-                      children: [(0, r.jsx)(p.AI, {}), (0, r.jsx)(p.cp, { disabled: !z || !W })],
+                      children: [
+                          (0, r.jsx)(p.AI, {}),
+                          (0, r.jsx)(p.cp, {
+                              disabled: !z || !W,
+                          }),
+                      ],
                   }),
               ],
           });

@@ -8,6 +8,7 @@ var l = n(397927),
     i = n(954571),
     a = n(687599),
     s = n(652215);
+
 function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -33,6 +34,7 @@ function o(e) {
     }
     return e;
 }
+
 function c(e) {
     let { channelId: t, onConfirm: c, onCancel: u } = e;
     i.default.track(s.HAw.OPEN_MODAL, {
@@ -54,6 +56,7 @@ function c(e) {
                 );
         });
 }
+
 function u(e) {
     let { onConfirm: t, onCancel: i } = e;
     (0, l.mMO)(async () => {

@@ -1,4 +1,7 @@
-n.d(t, { A: () => D }), n(228524);
+n.d(t, {
+    A: () => D,
+}),
+    n(228524);
 var l = n(627968),
     r = n(64700),
     s = n(503698),
@@ -27,6 +30,7 @@ var l = n(627968),
     S = n(167630),
     C = n(985018),
     E = n(888804);
+
 function w(e) {
     var t, n;
     let { creator: r, guildId: s, channelId: i } = e,
@@ -80,6 +84,7 @@ function w(e) {
         ],
     });
 }
+
 function P(e) {
     let { guild: t, onClick: n, onClose: s } = e,
         a = r.useCallback(
@@ -124,6 +129,7 @@ function P(e) {
                 : d,
     });
 }
+
 function T(e) {
     let { userCount: t, onClick: n } = e;
     return (0, l.jsxs)("div", {
@@ -142,12 +148,15 @@ function T(e) {
                 children: (0, l.jsx)(c.Text, {
                     color: "text-default",
                     variant: "text-sm/normal",
-                    children: C.intl.format(C.t["+DLsD8"], { count: t }),
+                    children: C.intl.format(C.t["+DLsD8"], {
+                        count: t,
+                    }),
                 }),
             }),
         ],
     });
 }
+
 function D(e) {
     let {
             guildEvent: t,
@@ -241,7 +250,10 @@ function D(e) {
                         }),
                 ],
             }),
-            null != G && (0, l.jsx)("hr", { className: E.yF }),
+            null != G &&
+                (0, l.jsx)("hr", {
+                    className: E.yF,
+                }),
             null != G &&
                 (0, l.jsx)(k.A, {
                     guildId: n.id,

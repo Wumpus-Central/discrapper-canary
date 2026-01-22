@@ -1,4 +1,7 @@
-n.d(t, { A: () => q }), n(896048);
+n.d(t, {
+    A: () => q,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -67,7 +70,9 @@ let q = () => {
         ep = (0, O.cg)(),
         e_ = null != ep && ep,
         { analyticsLocations: eh } = (0, _.Ay)(p.A.PREMIUM_MARKETING),
-        em = (0, v.A)({ location: "PremiumMarketing" }),
+        em = (0, v.A)({
+            location: "PremiumMarketing",
+        }),
         eg = !J && !er && (em || !et);
     i.useEffect(() => {
         el(!0);
@@ -98,7 +103,9 @@ let q = () => {
                     (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsx)(w.A, {
-                                className: s()(W.topOfPageGradient, { [W.topOfPageGradientWithCountdown]: ex }),
+                                className: s()(W.topOfPageGradient, {
+                                    [W.topOfPageGradientWithCountdown]: ex,
+                                }),
                             }),
                             (0, r.jsx)(F.A, {
                                 navBarSections: eb,
@@ -109,7 +116,9 @@ let q = () => {
                 !em &&
                     (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, r.jsx)("div", { className: K.heroHeaderSideGradient }),
+                            (0, r.jsx)("div", {
+                                className: K.heroHeaderSideGradient,
+                            }),
                             (0, r.jsx)("img", {
                                 src: z,
                                 className: K.heroHeaderBackgroundStars,
@@ -147,7 +156,9 @@ let q = () => {
                         ep &&
                             (0, r.jsx)("div", {
                                 className: eT.promoBannerContainer,
-                                children: (0, r.jsx)(T.A, { variant: T.c.APPLICATION_NITRO_HOME }),
+                                children: (0, r.jsx)(T.A, {
+                                    variant: T.c.APPLICATION_NITRO_HOME,
+                                }),
                             }),
                         (0, r.jsx)("div", {
                             className: eT.whatsNewSectionContainer,
@@ -176,7 +187,9 @@ let q = () => {
                                 threshold: 0.1,
                                 active: !0,
                                 children: em
-                                    ? (0, r.jsx)(C.hy, { innerRef: n })
+                                    ? (0, r.jsx)(C.hy, {
+                                          innerRef: n,
+                                      })
                                     : (0, r.jsx)(N.jP, {
                                           innerRef: n,
                                           hasActiveTier2PremiumPromotion: e_,
@@ -202,7 +215,9 @@ let q = () => {
                     onChange: (e) => {
                         e &&
                             !ea &&
-                            (b.default.track(H.HAw.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: eh }),
+                            (b.default.track(H.HAw.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+                                location_stack: eh,
+                            }),
                             es(!0));
                     },
                     children: (0, r.jsx)("div", {
@@ -216,7 +231,9 @@ let q = () => {
                         en(e);
                     },
                     children: em
-                        ? (0, r.jsx)(x.A, { ref: X })
+                        ? (0, r.jsx)(x.A, {
+                              ref: X,
+                          })
                         : (0, r.jsx)(k.A, {
                               ref: X,
                               isFooterVisible: et,
@@ -233,7 +250,9 @@ let q = () => {
                                 subscriptionTier: ef,
                                 isEligibleForBogoPromotion: ep,
                             }),
-                            (0, r.jsx)(w.A, { className: W.bottomOfPageGradient }),
+                            (0, r.jsx)(w.A, {
+                                className: W.bottomOfPageGradient,
+                            }),
                         ],
                     }),
             ],

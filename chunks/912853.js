@@ -1,4 +1,6 @@
-r.d(t, { A: () => s });
+r.d(t, {
+    A: () => s,
+});
 var n = r(819069),
     o = r(687669),
     a = Object.prototype,

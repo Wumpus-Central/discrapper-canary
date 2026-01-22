@@ -1,4 +1,6 @@
-n.d(t, { default: () => p });
+n.d(t, {
+    default: () => p,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -14,7 +16,9 @@ var i = n(397927),
 let p = (0, c.A)(
     function (e) {
         let { user: t, analyticsContext: n, onSelect: c } = e,
-            s = (0, d.A)({ userId: t.id }),
+            s = (0, d.A)({
+                userId: t.id,
+            }),
             p = (0, o.A)({
                 id: t.id,
                 label: f.intl.string(f.t["/AXYnE"]),
@@ -33,7 +37,9 @@ let p = (0, c.A)(
                     (0, r.jsxs)(i.rXV, {
                         children: [!j && s, !j && O],
                     }),
-                    (0, r.jsx)(i.rXV, { children: p }),
+                    (0, r.jsx)(i.rXV, {
+                        children: p,
+                    }),
                 ],
             }),
         });

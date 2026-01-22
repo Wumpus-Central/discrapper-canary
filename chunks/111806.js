@@ -1,4 +1,7 @@
-n.r(t), n.d(t, { createStringInterpolator: () => p });
+n.r(t),
+    n.d(t, {
+        createStringInterpolator: () => p,
+    });
 var r,
     i = n(55334),
     a = n(85402),
@@ -27,7 +30,11 @@ var r,
                     });
                 })
                 .map(function (t) {
-                    return (0, s.k)((0, i.Cl)((0, i.Cl)({}, e), { output: t }));
+                    return (0, s.k)(
+                        (0, i.Cl)((0, i.Cl)({}, e), {
+                            output: t,
+                        }),
+                    );
                 });
         return function (e) {
             var n = 0;

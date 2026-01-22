@@ -7,6 +7,7 @@ n.d(t, {
     n(896048);
 var a = n(64700),
     l = n(155078);
+
 function i(e) {
     let { protocol: t, hostname: n } = a.useMemo(
             () => ({
@@ -24,6 +25,7 @@ function i(e) {
         theRestOfTheUrl: e.replace(r, ""),
     };
 }
+
 function r(e) {
     let { url: t, trustUrl: n, onConfirm: l, onCancel: r, onClose: s } = e,
         [o, c] = a.useState(!1),

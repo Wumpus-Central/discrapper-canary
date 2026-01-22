@@ -1,4 +1,8 @@
-i.d(e, { u: () => T }), i(65821), i(457529);
+i.d(e, {
+    u: () => T,
+}),
+    i(65821),
+    i(457529);
 var n = i(64700),
     l = i(156186),
     s = i(602450),
@@ -20,7 +24,11 @@ let T = () => {
                 A(s.Lk.INSTALLING),
                 e().catch((t) => {
                     A(s.Lk.ERROR),
-                        a.A.captureException(t, { tags: { source: l.q.WARP_INSTALL_HELPER } }),
+                        a.A.captureException(t, {
+                            tags: {
+                                source: l.q.WARP_INSTALL_HELPER,
+                            },
+                        }),
                         u.default.track(o.HAw.PREMIUM_FEATURE_ERROR, {
                             error_message: t instanceof Error ? t.message : JSON.stringify(t),
                             error_source: l.q.WARP_INSTALL_HELPER,

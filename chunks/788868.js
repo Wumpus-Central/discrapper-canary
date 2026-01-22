@@ -408,9 +408,9 @@ let w = Object.freeze({
     H = 30,
     Y = "775514091874680832",
     W = "845031178288889946",
-    K = 432000000,
-    z = 345600000,
-    q = 280800000,
+    K = 432e6,
+    z = 3456e5,
+    q = 2808e5,
     X = 14,
     Z = "520373071933079552",
     Q = "902329034132684800",
@@ -604,11 +604,11 @@ let eR = Object.freeze({
         "521847234246082599": 2,
         "590663762298667008": 4,
     }),
-    ew = 52428800,
-    eP = 52428800,
-    eD = 524288000,
-    ex = 52428800,
-    eL = 104857600,
+    ew = 0x3200000,
+    eP = 0x3200000,
+    eD = 524288e3,
+    ex = 0x3200000,
+    eL = 0x6400000,
     ej = 5,
     eM = {
         [i.TVA.NONE]: ej,
@@ -646,7 +646,7 @@ let eR = Object.freeze({
             features: [i.GuildFeatures.INVITE_SPLASH, i.GuildFeatures.ANIMATED_ICON],
             limits: {
                 emoji: 100,
-                bitrate: 128000,
+                bitrate: 128e3,
                 fileSize: i.TbF,
                 screenShareQualityFramerate: 60,
                 screenShareQualityResolution: "720p",
@@ -664,7 +664,7 @@ let eR = Object.freeze({
             ],
             limits: {
                 emoji: 150,
-                bitrate: 256000,
+                bitrate: 256e3,
                 fileSize: ex,
                 screenShareQualityFramerate: 60,
                 screenShareQualityResolution: "1080p",
@@ -684,7 +684,7 @@ let eR = Object.freeze({
             ],
             limits: {
                 emoji: 250,
-                bitrate: 384000,
+                bitrate: 384e3,
                 fileSize: eL,
                 screenShareQualityFramerate: 60,
                 screenShareQualityResolution: "1080p",
@@ -768,9 +768,15 @@ let eX = Object.freeze({
         SUPPRESS_NOTIFICATION: 128,
     }),
     eZ = Object.freeze({
-        3: { fileSize: ew },
-        1: { fileSize: eP },
-        2: { fileSize: eD },
+        3: {
+            fileSize: ew,
+        },
+        1: {
+            fileSize: eP,
+        },
+        2: {
+            fileSize: eD,
+        },
     });
 var eQ = (function (e) {
     return (e.BOOST = "boost"), (e.DISMISS = "dismiss"), e;

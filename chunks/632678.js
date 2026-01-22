@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968),
     i = n(64700),
     a = n(621466),
@@ -7,10 +9,15 @@ var r = n(627968),
     l = n(628965),
     c = n(152056),
     u = n(985018);
+
 function d() {
     let e = c.A.useField("query"),
         t = i.useCallback((e, t) => {
-            t.stopPropagation(), t.preventDefault(), c.A.setState({ isActive: e });
+            t.stopPropagation(),
+                t.preventDefault(),
+                c.A.setState({
+                    isActive: e,
+                });
         }, []),
         n = i.useCallback(() => {
             c.A.setState({
@@ -29,10 +36,14 @@ function d() {
         return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e);
     }, [f]);
     let p = i.useCallback((e) => {
-        c.A.setState({ query: e });
+        c.A.setState({
+            query: e,
+        });
     }, []);
     return (0, r.jsx)("div", {
-        style: { marginBottom: "8px" },
+        style: {
+            marginBottom: "8px",
+        },
         children: (0, r.jsx)(o.IWV, {
             ref: d,
             query: e,

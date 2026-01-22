@@ -11,6 +11,7 @@ var r = n(503698),
     i = n(397927),
     s = n(100411);
 let o = 16;
+
 function c(e) {
     let { description: t, name: n, icon: r, onNavigate: c, className: u, missingNavIcon: E } = e;
     return (0, l.jsxs)(i.DUT, {
@@ -49,6 +50,7 @@ function c(e) {
         ],
     });
 }
+
 function u(e) {
     let { children: t } = e;
     return (0, l.jsx)("div", {

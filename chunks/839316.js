@@ -1,4 +1,6 @@
-n.d(t, { g: () => u });
+n.d(t, {
+    g: () => u,
+});
 var r = n(457312),
     i = n(352404),
     a = n(64700),
@@ -6,6 +8,7 @@ var r = n(457312),
     o = n(803082),
     l = n(853590),
     c = n(849352);
+
 function u(e, t) {
     let { startDate: n = t.visibleRange.start, endDate: u = t.visibleRange.end, firstDayOfWeek: d } = e,
         { direction: f } = (0, l.Y)(),
@@ -57,7 +60,11 @@ function u(e, t) {
         y = (0, a.useMemo)(() => {
             let e = (0, i.kq)((0, i.Ec)(t.timeZone), b, d);
             return [...Array(7).keys()].map((n) => {
-                let r = e.add({ days: n }).toDate(t.timeZone);
+                let r = e
+                    .add({
+                        days: n,
+                    })
+                    .toDate(t.timeZone);
                 return E.format(r);
             });
         }, [b, t.timeZone, E, d]),
@@ -72,7 +79,9 @@ function u(e, t) {
             onFocus: () => t.setFocused(!0),
             onBlur: () => t.setFocused(!1),
         }),
-        headerProps: { "aria-hidden": !0 },
+        headerProps: {
+            "aria-hidden": !0,
+        },
         weekDays: y,
         weeksInMonth: O,
     };

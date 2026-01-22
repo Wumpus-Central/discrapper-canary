@@ -1,4 +1,7 @@
-r.d(t, { A: () => f }), r(801541);
+r.d(t, {
+    A: () => f,
+}),
+    r(801541);
 var n = r(627968);
 r(64700);
 var i = r(503698),
@@ -28,6 +31,7 @@ let d = () =>
             height: 13,
             color: o.A.colors.TEXT_FEEDBACK_WARNING.css,
         });
+
 function f(e) {
     let t = (0, a.YW)(e.type)
         .with("info", () => (0, n.jsx)(g, {}))

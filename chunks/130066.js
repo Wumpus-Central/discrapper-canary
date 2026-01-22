@@ -1,4 +1,6 @@
-n.d(t, { A: () => D });
+n.d(t, {
+    A: () => D,
+});
 var r = n(627968),
     i = n(311907),
     a = n(195043),
@@ -61,6 +63,7 @@ let N = () =>
         (0, r.jsxs)(r.Fragment, {
             children: [(0, r.jsx)(N, {}), (0, r.jsx)(R, {}), (0, r.jsx)(w, {})],
         });
+
 function D() {
     let e = (0, i.bG)([s.A], () => s.A.getSubsection()),
         t = [
@@ -77,7 +80,9 @@ function D() {
         ];
     return (0, r.jsx)(o.R, {
         header: C.intl.string(C.t["+o1pDZ"]),
-        notice: (0, r.jsx)(v.A, { page: v.R.CONTENT_AND_SOCIAL }),
+        notice: (0, r.jsx)(v.A, {
+            page: v.R.CONTENT_AND_SOCIAL,
+        }),
         children: (0, r.jsx)(l.A, {
             parentSetting: S.H.CONTENT_SOCIAL,
             settingsSection: T.nc_.CONTENT_AND_SOCIAL,

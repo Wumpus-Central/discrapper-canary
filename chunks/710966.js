@@ -20,6 +20,7 @@ var r = n(735438),
     h = n(808180),
     m = n(652215),
     g = n(731854);
+
 function E(e, t, n) {
     return (
         t in e
@@ -35,7 +36,9 @@ function E(e, t, n) {
 }
 let b = 100,
     y = 0,
-    O = { any: 100 },
+    O = {
+        any: 100,
+    },
     A = 100,
     v = 3,
     S = 30 * f.A.Millis.SECOND,
@@ -291,7 +294,9 @@ class N extends a.A {
                 var e, t;
                 let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
                     r = a.getWantsLevel(),
-                    s = { any: r };
+                    s = {
+                        any: r,
+                    };
                 a.updateOffscreenUsers();
                 let o = (0, p.isDesktop)() && a.isOneToOneCall() && !a.isStageChannel;
                 for (let [t, i] of _.default.entries(a.videoSsrcs)) {

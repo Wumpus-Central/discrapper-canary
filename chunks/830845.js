@@ -10,21 +10,27 @@ var r = n(1139),
     i = n(861193),
     a = n(987701),
     s = n(258635);
+
 function o(e) {
     return "/" === e.charAt(0) ? e : "/" + e;
 }
+
 function l(e) {
     return "/" === e.charAt(0) ? e.substr(1) : e;
 }
+
 function c(e, t) {
     return 0 === e.toLowerCase().indexOf(t.toLowerCase()) && -1 !== "/?#".indexOf(e.charAt(t.length));
 }
+
 function u(e, t) {
     return c(e, t) ? e.substr(t.length) : e;
 }
+
 function d(e) {
     return "/" === e.charAt(e.length - 1) ? e.slice(0, -1) : e;
 }
+
 function f(e) {
     var t = e || "/",
         n = "",
@@ -41,6 +47,7 @@ function f(e) {
         }
     );
 }
+
 function p(e) {
     var t = e.pathname,
         n = e.search,
@@ -52,6 +59,7 @@ function p(e) {
         i
     );
 }
+
 function _(e, t, n, a) {
     var s;
     "string" == typeof e
@@ -81,6 +89,7 @@ function _(e, t, n, a) {
         s
     );
 }
+
 function h(e, t) {
     return (
         e.pathname === t.pathname &&
@@ -90,6 +99,7 @@ function h(e, t) {
         (0, a.A)(e.state, t.state)
     );
 }
+
 function m() {
     var e = null,
         t = [];
@@ -110,6 +120,7 @@ function m() {
         },
         appendListener: function (e) {
             var n = !0;
+
             function r() {
                 n && e.apply(void 0, arguments);
             }
@@ -132,9 +143,11 @@ function m() {
     };
 }
 var g = !!("u" > typeof window && window.document && window.document.createElement);
+
 function E(e, t) {
     t(window.confirm(e));
 }
+
 function b() {
     var e = window.navigator.userAgent;
     return (
@@ -146,17 +159,21 @@ function b() {
         "pushState" in window.history
     );
 }
+
 function y() {
     return -1 === window.navigator.userAgent.indexOf("Trident");
 }
+
 function O() {
     return -1 === window.navigator.userAgent.indexOf("Firefox");
 }
+
 function A(e) {
     return void 0 === e.state && -1 === navigator.userAgent.indexOf("CriOS");
 }
 var v = "popstate",
     S = "hashchange";
+
 function I() {
     try {
         return window.history.state || {};
@@ -164,6 +181,7 @@ function I() {
         return {};
     }
 }
+
 function T(e) {
     void 0 === e && (e = {}), g || (0, s.A)(!1);
     var t = window.history,
@@ -177,6 +195,7 @@ function T(e) {
         O = a.keyLength,
         T = void 0 === O ? 6 : O,
         C = e.basename ? d(o(e.basename)) : "";
+
     function N(e) {
         var t = e || {},
             n = t.key,
@@ -185,20 +204,25 @@ function T(e) {
             a = i.pathname + i.search + i.hash;
         return C && (a = u(a, C)), _(a, r, n);
     }
+
     function R() {
         return Math.random().toString(36).substr(2, T);
     }
     var w = m();
+
     function P(e) {
         (0, r.A)(Z, e), (Z.length = t.length), w.notifyListeners(Z.location, Z.action);
     }
+
     function D(e) {
         A(e) || j(N(e.state));
     }
+
     function x() {
         j(N(I()));
     }
     var L = !1;
+
     function j(e) {
         if (L) (L = !1), P();
         else {
@@ -213,6 +237,7 @@ function T(e) {
             });
         }
     }
+
     function M(e) {
         var t = Z.location,
             n = U.indexOf(t.key);
@@ -224,9 +249,11 @@ function T(e) {
     }
     var k = N(I()),
         U = [k.key];
+
     function G(e) {
         return C + p(e);
     }
+
     function V(e, r) {
         var i = "PUSH",
             a = _(e, r, R(), Z.location);
@@ -262,6 +289,7 @@ function T(e) {
             }
         });
     }
+
     function F(e, r) {
         var i = "REPLACE",
             a = _(e, r, R(), Z.location);
@@ -295,22 +323,27 @@ function T(e) {
             }
         });
     }
+
     function B(e) {
         t.go(e);
     }
+
     function H() {
         B(-1);
     }
+
     function Y() {
         B(1);
     }
     var W = 0;
+
     function K(e) {
         1 === (W += e) && 1 === e
             ? (window.addEventListener(v, D), i && window.addEventListener(S, x))
             : 0 === W && (window.removeEventListener(v, D), i && window.removeEventListener(S, x));
     }
     var z = !1;
+
     function q(e) {
         void 0 === e && (e = !1);
         var t = w.setPrompt(e);
@@ -321,6 +354,7 @@ function T(e) {
             }
         );
     }
+
     function X(e) {
         var t = w.appendListener(e);
         return (
@@ -364,21 +398,26 @@ var C = "hashchange",
             decodePath: o,
         },
     };
+
 function R(e) {
     var t = e.indexOf("#");
     return -1 === t ? e : e.slice(0, t);
 }
+
 function w() {
     var e = window.location.href,
         t = e.indexOf("#");
     return -1 === t ? "" : e.substring(t + 1);
 }
+
 function P(e) {
     window.location.hash = e;
 }
+
 function D(e) {
     window.location.replace(R(window.location.href) + "#" + e);
 }
+
 function x(e) {
     void 0 === e && (e = {}), g || (0, s.A)(!1);
     var t = window.history;
@@ -392,19 +431,23 @@ function x(e) {
         h = N[c],
         b = h.encodePath,
         y = h.decodePath;
+
     function A() {
         var e = y(w());
         return f && (e = u(e, f)), _(e);
     }
     var v = m();
+
     function S(e) {
         (0, r.A)($, e), ($.length = t.length), v.notifyListeners($.location, $.action);
     }
     var I = !1,
         T = null;
+
     function x(e, t) {
         return e.pathname === t.pathname && e.search === t.search && e.hash === t.hash;
     }
+
     function L() {
         var e = w(),
             t = b(e);
@@ -416,6 +459,7 @@ function x(e) {
             (T = null), j(n);
         }
     }
+
     function j(e) {
         if (I) (I = !1), S();
         else {
@@ -430,6 +474,7 @@ function x(e) {
             });
         }
     }
+
     function M(e) {
         var t = $.location,
             n = V.lastIndexOf(p(t));
@@ -444,11 +489,13 @@ function x(e) {
     k !== U && D(U);
     var G = A(),
         V = [p(G)];
+
     function F(e) {
         var t = document.querySelector("base"),
             n = "";
         return t && t.getAttribute("href") && (n = R(window.location.href)), n + "#" + b(f + p(e));
     }
+
     function B(e, t) {
         var n = "PUSH",
             r = _(e, void 0, void 0, $.location);
@@ -471,6 +518,7 @@ function x(e) {
             }
         });
     }
+
     function H(e, t) {
         var n = "REPLACE",
             r = _(e, void 0, void 0, $.location);
@@ -489,20 +537,25 @@ function x(e) {
             }
         });
     }
+
     function Y(e) {
         t.go(e);
     }
+
     function W() {
         Y(-1);
     }
+
     function K() {
         Y(1);
     }
     var z = 0;
+
     function q(e) {
         1 === (z += e) && 1 === e ? window.addEventListener(C, L) : 0 === z && window.removeEventListener(C, L);
     }
     var X = !1;
+
     function Z(e) {
         void 0 === e && (e = !1);
         var t = v.setPrompt(e);
@@ -513,6 +566,7 @@ function x(e) {
             }
         );
     }
+
     function Q(e) {
         var t = v.appendListener(e);
         return (
@@ -537,9 +591,11 @@ function x(e) {
     };
     return $;
 }
+
 function L(e, t, n) {
     return Math.min(Math.max(e, t), n);
 }
+
 function j(e) {
     void 0 === e && (e = {});
     var t = e,
@@ -551,9 +607,11 @@ function j(e) {
         l = t.keyLength,
         c = void 0 === l ? 6 : l,
         u = m();
+
     function d(e) {
         (0, r.A)(C, e), (C.length = C.entries.length), u.notifyListeners(C.location, C.action);
     }
+
     function f() {
         return Math.random().toString(36).substr(2, c);
     }
@@ -562,6 +620,7 @@ function j(e) {
             return "string" == typeof e ? _(e, void 0, f()) : _(e, void 0, e.key || f());
         }),
         E = p;
+
     function b(e, t) {
         var r = "PUSH",
             i = _(e, t, f(), C.location);
@@ -580,6 +639,7 @@ function j(e) {
             }
         });
     }
+
     function y(e, t) {
         var r = "REPLACE",
             i = _(e, t, f(), C.location);
@@ -592,6 +652,7 @@ function j(e) {
                 }));
         });
     }
+
     function O(e) {
         var t = L(C.index + e, 0, C.entries.length - 1),
             r = "POP",
@@ -606,19 +667,24 @@ function j(e) {
                 : d();
         });
     }
+
     function A() {
         O(-1);
     }
+
     function v() {
         O(1);
     }
+
     function S(e) {
         var t = C.index + e;
         return t >= 0 && t < C.entries.length;
     }
+
     function I(e) {
         return void 0 === e && (e = !1), u.setPrompt(e);
     }
+
     function T(e) {
         return u.appendListener(e);
     }

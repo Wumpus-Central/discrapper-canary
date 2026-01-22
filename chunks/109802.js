@@ -14,6 +14,7 @@ var r,
     d = n(821589),
     f = n(985018),
     p = n(705848);
+
 function _(e, t, n) {
     return (
         t in e
@@ -42,7 +43,9 @@ class m extends (r = a.PureComponent) {
         let { value: n, mode: r, autoFocus: a, spellCheck: s, inputClassName: l, placeholder: c } = this.props,
             u = null == (t = this.context) ? void 0 : t.titleId;
         return (0, i.jsx)("input", {
-            className: o()((0, d.t)(p, "input", r), l, { [p.inputHidden]: e }),
+            className: o()((0, d.t)(p, "input", r), l, {
+                [p.inputHidden]: e,
+            }),
             ref: this.inputRef,
             type: "text",
             value: n,
@@ -101,7 +104,9 @@ class m extends (r = a.PureComponent) {
                             ? (0, i.jsx)(u.A, {
                                   shrink: 1,
                                   grow: 0,
-                                  style: { margin: 0 },
+                                  style: {
+                                      margin: 0,
+                                  },
                                   children: (0, i.jsx)(l.$n, {
                                       "data-migration-pending": !0,
                                       className: p.button,

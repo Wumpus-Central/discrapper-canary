@@ -1,4 +1,6 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -6,5 +8,7 @@ var r = n(627968),
     s = n(330640);
 let o = i.memo(function (e) {
     let { className: t } = e;
-    return (0, r.jsx)("div", { className: a()(t, s.En) });
+    return (0, r.jsx)("div", {
+        className: a()(t, s.En),
+    });
 });

@@ -1,4 +1,12 @@
-n.d(t, { A: () => y }), n(896048), n(228524), n(747238), n(801460), n(508300), n(650828);
+n.d(t, {
+    A: () => y,
+}),
+    n(896048),
+    n(228524),
+    n(747238),
+    n(801460),
+    n(508300),
+    n(650828);
 var a = n(627968),
     l = n(64700),
     i = n(503698),
@@ -54,6 +62,7 @@ let v = "Make sure you're only uploading text files!",
             ],
         });
     };
+
 function y() {
     let { profileEffects: e, upsertConfig: t, clearAll: n } = (0, f.wu)(),
         [i, y] = l.useState(),
@@ -165,7 +174,9 @@ function y() {
                                         t({
                                             skuId: (0, s.A)(),
                                             name: "New Profile Effect",
-                                            config: { effects: [] },
+                                            config: {
+                                                effects: [],
+                                            },
                                         });
                                     },
                                 }),
@@ -252,7 +263,10 @@ function y() {
                         }),
                     ],
                 }),
-            null != i && (0, a.jsx)(b.A, { effect: i }),
+            null != i &&
+                (0, a.jsx)(b.A, {
+                    effect: i,
+                }),
         ],
     });
 }

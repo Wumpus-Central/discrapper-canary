@@ -1,4 +1,8 @@
-n.d(t, { A: () => k }), n(896048), n(638769);
+n.d(t, {
+    A: () => k,
+}),
+    n(896048),
+    n(638769);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -33,6 +37,7 @@ var r = n(627968),
     L = n(985018),
     j = n(381907);
 let M = 1500;
+
 function k(e) {
     let {
             giftCode: t,
@@ -153,7 +158,9 @@ function k(e) {
                             giftCode: t,
                             onClose: u,
                         }),
-                    (0, r.jsx)("div", { className: j.yF }),
+                    (0, r.jsx)("div", {
+                        className: j.yF,
+                    }),
                     X(),
                 ],
             }),
@@ -200,11 +207,15 @@ function k(e) {
                             skuId: W(),
                         })
                       : null,
-                  (0, r.jsx)(f.y$y, { type: f.tVU.PULSING_ELLIPSIS }),
+                  (0, r.jsx)(f.y$y, {
+                      type: f.tVU.PULSING_ELLIPSIS,
+                  }),
               ],
           })
         : (0, r.jsxs)("div", {
-              className: s()(j.EL, { [j.L1]: Y }),
+              className: s()(j.EL, {
+                  [j.L1]: Y,
+              }),
               children: [
                   null != n
                       ? (0, r.jsx)(g.A, {

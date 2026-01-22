@@ -1,4 +1,7 @@
-n.d(t, { A: () => h }), n(896048);
+n.d(t, {
+    A: () => h,
+}),
+    n(896048);
 var r = n(627968);
 n(64700);
 var i = n(735438),
@@ -10,6 +13,7 @@ var i = n(735438),
     u = n(731854);
 let d = new Set(["DisplayPort"]),
     p = "connected-device-modal";
+
 function f() {
     let e;
     if ((0, a.kBI)(p)) return;
@@ -52,7 +56,9 @@ function f() {
                     });
                 };
             },
-            { modalKey: p },
+            {
+                modalKey: p,
+            },
         ));
 }
 let h = {

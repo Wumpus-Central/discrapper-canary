@@ -1,4 +1,8 @@
-n.d(t, { A: () => g }), n(321073), n(896048);
+n.d(t, {
+    A: () => g,
+}),
+    n(321073),
+    n(896048);
 var r = n(179771),
     i = n(793574),
     l = n(796774),
@@ -42,11 +46,29 @@ let g = {
                 s = a.A.getSound(t, n),
                 p = (0, f.A)(),
                 h = null != s && null != r && (0, o.Ir)(r, s, p);
-            if (null == p) throw new d.A({ errorCode: A.Lw.INVALID_CHANNEL }, "Invalid Channel.");
+            if (null == p)
+                throw new d.A(
+                    {
+                        errorCode: A.Lw.INVALID_CHANNEL,
+                    },
+                    "Invalid Channel.",
+                );
             if (h)
                 if ((0, c.A)(p)) null != s && (0, o.Ak)(s, p.id, [i.A.RPC]);
-                else throw new d.A({ errorCode: A.Lw.INVALID_PERMISSIONS }, "Invalid Permissions.");
-            else throw new d.A({ errorCode: A.Lw.INVALID_SOUND }, "Invalid Sound.");
+                else
+                    throw new d.A(
+                        {
+                            errorCode: A.Lw.INVALID_PERMISSIONS,
+                        },
+                        "Invalid Permissions.",
+                    );
+            else
+                throw new d.A(
+                    {
+                        errorCode: A.Lw.INVALID_SOUND,
+                    },
+                    "Invalid Sound.",
+                );
         },
     },
 };

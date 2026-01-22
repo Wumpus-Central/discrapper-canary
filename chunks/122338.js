@@ -1,4 +1,8 @@
-n.d(t, { A: () => f }), n(321073), n(896048);
+n.d(t, {
+    A: () => f,
+}),
+    n(321073),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(397927),
@@ -76,6 +80,7 @@ let d = l.memo(function (e) {
         }),
     });
 });
+
 function f(e) {
     let { tags: t, widgetType: n, applicationId: f, ref: p } = e,
         b = (0, l.useRef)(null),

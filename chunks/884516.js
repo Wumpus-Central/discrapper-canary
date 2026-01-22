@@ -88,7 +88,9 @@ e.exports = function (e) {
                 relevance: 0,
             },
             e.C_LINE_COMMENT_MODE,
-            e.COMMENT(/\/\*/, /\*\//, { illegal: /^(#,\/\/)/ }),
+            e.COMMENT(/\/\*/, /\*\//, {
+                illegal: /^(#,\/\/)/,
+            }),
             {
                 scope: "symbol",
                 match: /\'[A-Za-z_](?!\')[\w\']*/,
@@ -115,14 +117,24 @@ e.exports = function (e) {
                 scope: "string",
                 relevance: 0,
             }),
-            e.inherit(e.QUOTE_STRING_MODE, { illegal: null }),
+            e.inherit(e.QUOTE_STRING_MODE, {
+                illegal: null,
+            }),
             {
                 scope: "number",
                 variants: [
-                    { match: /\b0[xX][a-fA-F0-9_]+[Lln]?/ },
-                    { match: /\b0[oO][0-7_]+[Lln]?/ },
-                    { match: /\b0[bB][01_]+[Lln]?/ },
-                    { match: /\b[0-9][0-9_]*([Lln]|(\.[0-9_]*)?([eE][-+]?[0-9_]+)?)/ },
+                    {
+                        match: /\b0[xX][a-fA-F0-9_]+[Lln]?/,
+                    },
+                    {
+                        match: /\b0[oO][0-7_]+[Lln]?/,
+                    },
+                    {
+                        match: /\b0[bB][01_]+[Lln]?/,
+                    },
+                    {
+                        match: /\b[0-9][0-9_]*([Lln]|(\.[0-9_]*)?([eE][-+]?[0-9_]+)?)/,
+                    },
                 ],
                 relevance: 0,
             },

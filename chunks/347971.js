@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var a = n(627968),
     l = n(64700),
     i = n(158954),
@@ -10,14 +12,20 @@ let d = (0, s.D)(() => ({
     urlString: "",
     error: null,
 }));
+
 function u() {
     let e = d.useField("error"),
         t = l.useCallback(() => {
             let e = d.getField("urlString");
-            if (null == e || "" === e) return void d.setState({ error: "URL is required" });
+            if (null == e || "" === e)
+                return void d.setState({
+                    error: "URL is required",
+                });
             let t = (0, o.default)(e);
             null == t
-                ? d.setState({ error: "String did not match expected format" })
+                ? d.setState({
+                      error: "String did not match expected format",
+                  })
                 : (0, c.openUserSettingsFromParsedUrl)({
                       match: t,
                       urlOrigin: "devtools",

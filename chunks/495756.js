@@ -1,9 +1,12 @@
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var r,
     i = n(311907),
     a = n(73153),
     s = n(352505),
     o = n(894010);
+
 function l(e, t, n) {
     return (
         t in e
@@ -18,13 +21,18 @@ function l(e, t, n) {
     );
 }
 let c = {};
+
 function u(e) {
     let { settings: t } = e;
     c = t;
 }
+
 function d() {
-    s.m.getCurrentConfig({ location: "GameMentionSettingsStore" }).enabled && (0, o.G)();
+    s.m.getCurrentConfig({
+        location: "GameMentionSettingsStore",
+    }).enabled && (0, o.G)();
 }
+
 function f() {
     c = {};
 }

@@ -1,4 +1,6 @@
-n.d(t, { default: () => p });
+n.d(t, {
+    default: () => p,
+});
 var a = n(627968),
     i = n(64700),
     r = n(311907),
@@ -9,6 +11,7 @@ var a = n(627968),
     c = n(355190),
     u = n(985018),
     E = n(592738);
+
 function p(e) {
     var t;
     let { eulaId: n, transitionState: p, onClose: g } = e,
@@ -23,7 +26,9 @@ function p(e) {
                       children: h.content,
                       className: E.w,
                   })
-                : (0, a.jsx)(s.y$y, { className: E.u });
+                : (0, a.jsx)(s.y$y, {
+                      className: E.u,
+                  });
     return (0, a.jsxs)(s.EOs, {
         "data-migration-pending": !0,
         transitionState: p,

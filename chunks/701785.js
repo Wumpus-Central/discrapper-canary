@@ -6,6 +6,7 @@ n.d(t, {
 var r,
     i = n(311907),
     a = n(73153);
+
 function s(e, t, n) {
     return (
         t in e
@@ -19,6 +20,7 @@ function s(e, t, n) {
         e
     );
 }
+
 function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,39 +37,48 @@ function o(e) {
     }
     return e;
 }
-let l = { enabled: !1 },
+let l = {
+        enabled: !1,
+    },
     c = [],
     u = {},
     d = new Set(),
     f = {};
+
 function p(e) {
     var t;
     let n = null == (t = u[e]) ? void 0 : t.newMemberActions;
     return null == n ? null : ((f[e] = n), f[e]);
 }
+
 function _(e) {
     let { homeSettings: t, guildId: n } = e;
     null != n && (null == t && (u[n] = l), (u[n] = t), p(n), d.delete(n));
 }
+
 function h(e) {
     let { guildId: t } = e;
     d.add(t);
 }
+
 function m(e) {
     let { guildId: t } = e;
     d.delete(t);
 }
+
 function g(e) {
     let { guildId: t, enabled: n } = e,
         r = u[t];
     if (null == r) return !1;
     r.enabled = n;
 }
+
 function E(e) {
     let { guild: t } = e;
     if (null == u[t.id]) return !1;
     delete u[t.id], delete f[t.id];
 }
+
 function b(e) {
     var t;
     let { guildId: n, resourceChannel: r } = e,
@@ -77,6 +88,7 @@ function b(e) {
     let a = i.resourceChannels.findIndex((e) => e.channelId === r.channelId);
     return -1 !== a && ((i.resourceChannels[a] = o({}, r)), !0);
 }
+
 function y(e) {
     var t;
     let { guildId: n, action: r } = e,

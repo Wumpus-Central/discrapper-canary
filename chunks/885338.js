@@ -1,4 +1,7 @@
-l.r(n), l.d(n, { default: () => v });
+l.r(n),
+    l.d(n, {
+        default: () => v,
+    });
 var s = l(627968),
     t = l(64700),
     a = l(503698),
@@ -15,6 +18,7 @@ var s = l(627968),
     p = l(201736);
 let j = "https://dis.gd/Amazon-Music-Connection",
     x = null != window.opener;
+
 function v() {
     let { type: e } = (0, i.g)(),
         n = (0, f.mw)(e),
@@ -63,7 +67,9 @@ function v() {
         children: [
             (0, s.jsx)("div", {
                 className: r()(p.iU, p.z3),
-                children: b.intl.format(b.t.E62dXo, { name: N.name }),
+                children: b.intl.format(b.t.E62dXo, {
+                    name: N.name,
+                }),
             }),
             (0, s.jsx)("div", {
                 className: r()(p.iU, p.zH),
@@ -80,7 +86,9 @@ function v() {
             null != l
                 ? (0, s.jsx)("div", {
                       className: r()(p.iU, p.nf),
-                      children: b.intl.format(b.t.LElyIL, { errorCode: l }),
+                      children: b.intl.format(b.t.LElyIL, {
+                          errorCode: l,
+                      }),
                   })
                 : null,
         ],

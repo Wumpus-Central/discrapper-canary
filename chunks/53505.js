@@ -19,6 +19,7 @@ let l = "Ubuntu",
     h = "win",
     m = "osx",
     g = "linux";
+
 function E(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = arguments.length > 2 ? arguments[2] : void 0,
@@ -26,6 +27,7 @@ function E(e) {
         i = null != n ? "&format=".concat(n) : "";
     return "".concat(o.AMi.DESKTOP).concat(r, "?platform=").concat(e).concat(i);
 }
+
 function b() {
     let e =
         arguments.length > 0 && void 0 !== arguments[0]
@@ -47,6 +49,7 @@ function b() {
             ? m
             : h;
 }
+
 function y(e) {
     return {
         [h]: "Windows",
@@ -54,11 +57,13 @@ function y(e) {
         [g]: "Linux",
     }[b(e)];
 }
+
 function O() {
     let e = b(),
         t = e === g ? "tar.gz" : null;
     return E(e, !1, t);
 }
+
 function A(e, t, n) {
     let r = null != n ? n.toString() : null;
     switch (t) {

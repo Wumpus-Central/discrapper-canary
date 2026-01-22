@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var r = n(627968),
     i = n(64700),
     l = n(397927),
@@ -9,11 +11,14 @@ var r = n(627968),
     d = n(610042),
     u = n(583970),
     f = n(985018);
+
 function g(e) {
     let { className: t, guildId: n, selectedBadge: g } = e,
         b = i.useCallback(
             (e) => {
-                o.A.updateGuildProfile(n, { badge: e });
+                o.A.updateGuildProfile(n, {
+                    badge: e,
+                });
             },
             [n],
         ),

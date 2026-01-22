@@ -20,6 +20,7 @@ var l = n(323125),
     c = n(954571),
     o = n(310419),
     d = n(652215);
+
 function u(e, t) {
     var n, l, a;
     let r = o.h.getField("sessionId"),
@@ -74,9 +75,11 @@ function u(e, t) {
             l);
     return c.default.track(e, p);
 }
+
 function p() {
     return (0, a.bG)([i.default], () => i.default.isAuthenticated());
 }
+
 function h() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         t = new URL(location.href);
@@ -88,6 +91,7 @@ function h() {
         a = (0, l.T2)(n, !1);
     (0, r.pX)(a);
 }
+
 function m() {
     let e = new URL(location.href),
         t = "?redirect_to=".concat(encodeURIComponent(e.pathname + e.search));

@@ -1,4 +1,6 @@
-n.d(t, { $: () => c });
+n.d(t, {
+    $: () => c,
+});
 let r = new Set(["id"]),
     i = new Set(["aria-label", "aria-labelledby", "aria-describedby", "aria-details"]),
     a = new Set(["href", "hrefLang", "target", "rel", "download", "ping", "referrerPolicy"]),
@@ -40,6 +42,7 @@ let r = new Set(["id"]),
         "onTransitionStart",
     ]),
     l = /^(data-.*)$/;
+
 function c(e, t = {}) {
     let { labelable: n, isLink: u, global: d, events: f = d, propNames: p } = t,
         _ = {};

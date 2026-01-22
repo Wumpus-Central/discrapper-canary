@@ -14,20 +14,29 @@ var r = n(627968),
     u = n(374803);
 n(827669);
 var d = n(985018);
+
 function f(e, t, n) {
     return o.Ay.hasSameRoleAsUsername(t, e)
         ? "".concat("@").concat(e.tag)
-        : "".concat("@").concat(l.Ay.getUserTag(e, { identifiable: n ? "never" : "always" }));
+        : "".concat("@").concat(
+              l.Ay.getUserTag(e, {
+                  identifiable: n ? "never" : "always",
+              }),
+          );
 }
+
 function p(e) {
     return "<@".concat(e.id, ">");
 }
+
 function _(e) {
     return e.text;
 }
+
 function h(e) {
     return "".concat("@").concat(e.name);
 }
+
 function m(e) {
     return "<@&".concat(e.id, ">");
 }
@@ -165,7 +174,9 @@ let g = {
                         (d = "timestampMentionInput" === l.inlineAutocompleteType ? u.kc.TIMESTAMP : u.kc.GAME_MENTION))
                       : a.insertText(_(l))
                   : null != c && a.insertText(h(c), m(c)),
-            { type: d }
+            {
+                type: d,
+            }
         );
     },
 };

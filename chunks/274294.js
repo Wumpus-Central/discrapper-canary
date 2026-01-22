@@ -1,10 +1,13 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(562465),
     i = n(582754),
     a = n(157559),
     s = n(198982),
     o = n(652215),
     l = n(985018);
+
 function c(e) {
     let t = new s.LG(e).getAnyErrorMessage();
     a.A.show({
@@ -12,11 +15,14 @@ function c(e) {
         body: null != t ? t : l.intl.string(l.t.fEptJP),
     });
 }
+
 function u(e) {
     let { userId: t, applicationId: n, onSuccess: i, type: a } = e;
     return r.Bo.put({
         url: o.Rsh.USER_GAME_RELATIONSHIP(t, n),
-        body: { type: a },
+        body: {
+            type: a,
+        },
         oldFormErrors: !0,
         rejectWithError: !1,
     })

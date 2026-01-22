@@ -19,6 +19,7 @@ var r = n(627968),
     b = n(661191),
     g = n(652215),
     m = n(985018);
+
 function A() {
     let { initialized: e, items: t, loading: n, loadMore: l } = (0, d.LF)(),
         a = y(
@@ -32,9 +33,11 @@ function A() {
         loadMore: l,
     });
 }
+
 function y(e, t) {
     return l.useMemo(() => [...[...e, ...t].sort((e, t) => -1 * b.default.compare(e.id, t.id))], [e, t]);
 }
+
 function O() {
     let { items: e } = (0, d.LF)(),
         t = e.length > 0 ? e[0] : null,
@@ -61,7 +64,9 @@ function O() {
                   onClick: () => {
                       null != t &&
                           (p.ns.updateSetting(t.id),
-                          h.default.track(g.HAw.NOTIFICATION_CENTER_ACTION, { action_type: c.e1.MARK_ALL_READ }));
+                          h.default.track(g.HAw.NOTIFICATION_CENTER_ACTION, {
+                              action_type: c.e1.MARK_ALL_READ,
+                          }));
                   },
               }),
           })

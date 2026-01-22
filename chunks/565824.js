@@ -14,6 +14,7 @@ var i = n(311907),
     d = n(723702),
     f = n(531525),
     p = n(985018);
+
 function _(e) {
     (0, d.isMac)() && e
         ? (0, a.A)({
@@ -27,6 +28,7 @@ function _(e) {
           })
         : o.A.setUseSystemScreensharePicker(e);
 }
+
 function h() {
     let {
         videoHook: e,

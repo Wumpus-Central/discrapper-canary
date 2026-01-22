@@ -34,6 +34,7 @@ n.d(t, {
     n(65162);
 var r = n(115943),
     i = n.n(r);
+
 function a(e, t, n) {
     return (
         t in e
@@ -47,6 +48,7 @@ function a(e, t, n) {
         e
     );
 }
+
 function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -118,7 +120,9 @@ let f = (e, t) => ({
                                 z_index: e.zIndex,
                             },
                             null != e.randomizedSources
-                                ? { randomized_paths: e.randomizedSources.map((e) => e.src) }
+                                ? {
+                                      randomized_paths: e.randomizedSources.map((e) => e.src),
+                                  }
                                 : {},
                         ),
                         null,
@@ -160,7 +164,9 @@ let f = (e, t) => ({
             i = t.split(";")[0],
             a = new Uint8Array(r.length);
         for (let e = 0; e < r.length; e++) a[e] = r.charCodeAt(e);
-        return new Blob([a], { type: i });
+        return new Blob([a], {
+            type: i,
+        });
     },
     b = (e) => {
         let t = E(e);

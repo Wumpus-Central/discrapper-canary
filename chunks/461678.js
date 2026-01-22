@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(627968);
 n(64700);
 var l = n(311907),
@@ -10,6 +12,7 @@ var l = n(311907),
     u = n(769591),
     d = n(95701),
     f = n(71393);
+
 function p(e) {
     let { channel: t, closePopout: n, onSelect: p, navId: h, label: b, location: g, includeGuildMute: m } = e,
         A = (0, s.b)(t),
@@ -23,9 +26,19 @@ function p(e) {
         "aria-label": b,
         onSelect: p,
         children: [
-            (0, r.jsx)(i.rXV, { children: (0, a.Ay)(t, g) }),
-            m ? (0, r.jsx)(i.rXV, { children: j }) : null,
-            v ? y : (0, r.jsx)(i.rXV, { children: A }),
+            (0, r.jsx)(i.rXV, {
+                children: (0, a.Ay)(t, g),
+            }),
+            m
+                ? (0, r.jsx)(i.rXV, {
+                      children: j,
+                  })
+                : null,
+            v
+                ? y
+                : (0, r.jsx)(i.rXV, {
+                      children: A,
+                  }),
         ],
     });
 }

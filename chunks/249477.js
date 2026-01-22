@@ -1,4 +1,9 @@
-n.d(t, { A: () => ei }), n(264879), n(938796), n(896048);
+n.d(t, {
+    A: () => ei,
+}),
+    n(264879),
+    n(938796),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(735438),
@@ -50,6 +55,7 @@ var r = n(627968),
     Z = n(403362),
     J = n(652215),
     $ = n(705751);
+
 function ee(e, t, n) {
     return (
         t in e
@@ -63,6 +69,7 @@ function ee(e, t, n) {
         e
     );
 }
+
 function et(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -187,7 +194,9 @@ class er extends i.PureComponent {
                 n = L.A.getStageInstanceByChannel(g),
                 r = S.Ay.getActiveEventByChannel(g);
             (0, f.zV)(J.HAw.CHANNEL_OPENED, et({}, (0, f.qL)(g))),
-                (0, A.k)(J.HAw.CHANNEL_OPENED_CLICKSTREAM, { channelId: g });
+                (0, A.k)(J.HAw.CHANNEL_OPENED_CLICKSTREAM, {
+                    channelId: g,
+                });
             let i = null,
                 l = Q.default.getFocusedPID();
             null != l &&
@@ -256,7 +265,7 @@ class er extends i.PureComponent {
                         voiceChannelBitrate: C,
                         voiceChannelGuildId: I,
                     });
-                }, 10000),
+                }, 1e4),
                 null != P.name && null != w && M.A.shouldReport(P))
             ) {
                 let e = P.name;
@@ -354,9 +363,10 @@ class er extends i.PureComponent {
     constructor(...e) {
         super(...e),
             ee(this, "isMessageRequestsInitialized", !1),
-            ee(this, "debouncedRobloxAnalytics", a().debounce(en, 5000));
+            ee(this, "debouncedRobloxAnalytics", a().debounce(en, 5e3));
     }
 }
+
 function ei() {
     let [e, t] = (0, o.yK)([H.A], () => [H.A.getVoiceChannelId(), H.A.getChannelId()], []),
         n = (0, o.bG)([D.A], () => D.A.getChannel(t), [t]),
@@ -434,13 +444,22 @@ function ei() {
                 if (n && null != s) {
                     let e = (0, h.C)(D.A.getChannel(s), !0);
                     (0, f.zV)(J.HAw.CHANNEL_OPENED, et({}, e, (0, f.qL)(s))),
-                        (0, A.k)(J.HAw.CHANNEL_OPENED_CLICKSTREAM, { channelId: s }),
+                        (0, A.k)(J.HAw.CHANNEL_OPENED_CLICKSTREAM, {
+                            channelId: s,
+                        }),
                         t.current.isTextInVoice &&
-                            (0, f.zV)(J.HAw.TEXT_IN_VOICE_OPENED, { channel_is_nsfw: t.current.isNSFWChannel });
+                            (0, f.zV)(J.HAw.TEXT_IN_VOICE_OPENED, {
+                                channel_is_nsfw: t.current.isNSFWChannel,
+                            });
                 }
             }, [n, s]),
                 i.useEffect(() => {
-                    n && null == o && l === J.BVt.FRIENDS && (0, g.A)({ tab_opened: r });
+                    n &&
+                        null == o &&
+                        l === J.BVt.FRIENDS &&
+                        (0, g.A)({
+                            tab_opened: r,
+                        });
                 }, [n, r, l, o]),
                 i.useEffect(() => {
                     if (n && null != o) {
@@ -480,7 +499,10 @@ function ei() {
                                       Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
                                   }),
                             i);
-                        (0, f.zV)(J.HAw.GUILD_VIEWED, n), (0, A.k)(J.HAw.GUILD_VIEWED_CLICKSTREAM, { guildId: o });
+                        (0, f.zV)(J.HAw.GUILD_VIEWED, n),
+                            (0, A.k)(J.HAw.GUILD_VIEWED_CLICKSTREAM, {
+                                guildId: o,
+                            });
                     }
                 }, [n, o, a]);
             let c = i.useRef(!1);

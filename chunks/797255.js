@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -6,6 +8,7 @@ var i = n(397927),
     s = n(778712),
     o = n(985018),
     l = n(431543);
+
 function c(e, t, n) {
     return (
         t in e
@@ -19,6 +22,7 @@ function c(e, t, n) {
         e
     );
 }
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +40,7 @@ function u(e) {
     return e;
 }
 let d = (e) => (null != e.globalName ? e.globalName : e.username);
+
 function f(e) {
     let { referrer: t, enablePremiumBrandRefresh: n } = e,
         { avatarSrc: c, eventHandlers: f } = (0, a.A)({
@@ -67,7 +72,9 @@ function f(e) {
                     variant: "heading-sm/normal",
                     className: l.Mn,
                     color: "text-strong",
-                    children: o.intl.format(o.t.IqxblS, { username: d(t) }),
+                    children: o.intl.format(o.t.IqxblS, {
+                        username: d(t),
+                    }),
                 }),
             ],
         }),

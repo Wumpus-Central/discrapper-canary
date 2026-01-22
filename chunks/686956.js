@@ -33,6 +33,7 @@ var r = n(110259),
     N = n(652215),
     R = n(204925),
     w = n(985018);
+
 function P(e, t, n) {
     return (
         t in e
@@ -46,6 +47,7 @@ function P(e, t, n) {
         e
     );
 }
+
 function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -62,6 +64,7 @@ function D(e) {
     }
     return e;
 }
+
 function x(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -74,6 +77,7 @@ function x(e, t) {
     }
     return n;
 }
+
 function L(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -85,6 +89,7 @@ function L(e, t) {
         e
     );
 }
+
 function j(e, t) {
     if (null == e) return {};
     var n,
@@ -101,6 +106,7 @@ function j(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function M(e, t) {
     if (null == e) return {};
     var n,
@@ -114,13 +120,17 @@ function M(e, t) {
 let k = (e) => {
         C.A.show({
             title: w.intl.string(w.t.cTaRxF),
-            body: w.intl.formatToPlainString(w.t["VSd+Aj"], { quantity: e }),
+            body: w.intl.formatToPlainString(w.t["VSd+Aj"], {
+                quantity: e,
+            }),
         });
     },
     U = (e) => {
         s.h.dispatch({
             type: "GUILD_DELETE",
-            guild: { id: e },
+            guild: {
+                id: e,
+            },
         });
     },
     G = () => {
@@ -129,6 +139,7 @@ let k = (e) => {
             body: w.intl.string(w.t.ZUEGFn),
         });
     };
+
 function V(e) {
     return new Promise((t) =>
         b.A.addConditionalChangeListener(() => {
@@ -137,6 +148,7 @@ function V(e) {
         }),
     );
 }
+
 function F(e, t) {
     return null != t ? t : (0, _.W)(e);
 }
@@ -169,7 +181,9 @@ let B = {
                         recommendation_load_id: _,
                         location: E && null != g ? g : null,
                     },
-                    context: { source: f },
+                    context: {
+                        source: f,
+                    },
                     oldFormErrors: !0,
                     body: {},
                     rejectWithError: !1,
@@ -228,7 +242,9 @@ let B = {
             a = t;
         (null == t ? void 0 : t.hasOwnProperty("welcomeModalChannelId")) &&
             null == t.welcomeModalChannelId &&
-            (a = L(D({}, t), { welcomeModalChannelId: null != i ? i : void 0 })),
+            (a = L(D({}, t), {
+                welcomeModalChannelId: null != i ? i : void 0,
+            })),
             (0, d.A)(N.BVt.CHANNEL(e, i, r), a),
             await new Promise(setImmediate);
     },
@@ -245,21 +261,27 @@ let B = {
     setServerMute: (e, t, n) =>
         a.Bo.patch({
             url: N.Rsh.GUILD_MEMBER(e, t),
-            body: { mute: n },
+            body: {
+                mute: n,
+            },
             oldFormErrors: !0,
             rejectWithError: !1,
         }),
     setServerDeaf: (e, t, n) =>
         a.Bo.patch({
             url: N.Rsh.GUILD_MEMBER(e, t),
-            body: { deaf: n },
+            body: {
+                deaf: n,
+            },
             oldFormErrors: !0,
             rejectWithError: !1,
         }),
     setChannel(e, t, n) {
         a.Bo.patch({
             url: N.Rsh.GUILD_MEMBER(e, t),
-            body: { channel_id: n },
+            body: {
+                channel_id: n,
+            },
             oldFormErrors: !0,
             rejectWithError: !0,
         });
@@ -267,7 +289,9 @@ let B = {
     setMemberFlags(e, t, n) {
         a.Bo.patch({
             url: N.Rsh.GUILD_MEMBER(e, t),
-            body: { flags: n },
+            body: {
+                flags: n,
+            },
             oldFormErrors: !0,
             rejectWithError: !0,
         });
@@ -402,7 +426,9 @@ let B = {
     updateRolePermissions: (e, t, n) =>
         a.Bo.patch({
             url: N.Rsh.GUILD_ROLE(e, t),
-            body: { permissions: n },
+            body: {
+                permissions: n,
+            },
             oldFormErrors: !0,
             rejectWithError: !1,
         }),
@@ -526,7 +552,9 @@ let B = {
         });
     },
     collapseAllFolders() {
-        s.h.dispatch({ type: "GUILD_FOLDER_COLLAPSE" });
+        s.h.dispatch({
+            type: "GUILD_FOLDER_COLLAPSE",
+        });
     },
     nsfwAgree(e) {
         s.h.dispatch({
@@ -558,7 +586,10 @@ let B = {
             oldFormErrors: !0,
             rejectWithError: !1,
         };
-        null != t && (n.query = { channel_id: t });
+        null != t &&
+            (n.query = {
+                channel_id: t,
+            });
         let r = (await a.Bo.get(n)).body;
         s.h.dispatch({
             type: "GUILD_APPLICATIONS_FETCH_SUCCESS",
@@ -567,9 +598,11 @@ let B = {
         });
     },
     async fetchGuildBansBatch(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1000,
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1e3,
             n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-            r = { limit: t };
+            r = {
+                limit: t,
+            };
         null != n && (r.after = n),
             await a.Bo.get({
                 url: N.Rsh.GUILD_BANS(e),
@@ -586,7 +619,9 @@ let B = {
     },
     async searchGuildBans(e, t, n) {
         let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 10,
-            i = { limit: r };
+            i = {
+                limit: r,
+            };
         null != n && n.length > 0 && (i.user_ids = n),
             null != t && t.trim().length > 0 && (i.query = t),
             await a.Bo.get({

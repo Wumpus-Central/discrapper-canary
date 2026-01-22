@@ -11,7 +11,9 @@ function r(e, t, n) {
         e
     );
 }
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 var i = (function (e) {
     return (
         (e[(e.PRIMARY_APP_COMMAND_NOT_FOUND = 0)] = "PRIMARY_APP_COMMAND_NOT_FOUND"),

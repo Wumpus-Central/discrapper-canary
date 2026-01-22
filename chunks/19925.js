@@ -13,6 +13,7 @@ var r = n(64700),
     u = n(460760),
     d = n(601193),
     p = n(324580);
+
 function f(e) {
     let { loadId: t } = e,
         n = c.A.useField("fetchedQuery"),
@@ -64,6 +65,7 @@ function f(e) {
         [d, A, f, h, g, l],
     );
 }
+
 function h(e) {
     let { loadId: t } = e,
         n = d.A.useField("isSearchVisible"),
@@ -72,7 +74,9 @@ function h(e) {
         (0, u.Mu)();
     }, []);
     let o = r.useCallback((e) => {
-        c.A.setState({ query: e });
+        c.A.setState({
+            query: e,
+        });
     }, []);
     return {
         searchQuery: i,
@@ -89,7 +93,9 @@ function h(e) {
                     resultsInitialCategoryId: null,
                     scrollPosition: null,
                 }),
-                d.A.setState({ isSearchVisible: !1 });
+                d.A.setState({
+                    isSearchVisible: !1,
+                });
         }, [t]),
         onSearchSubmit: r.useCallback(() => {
             let e = c.A.getField("query"),
@@ -98,8 +104,12 @@ function h(e) {
             a.A.clearSearchResults();
             let r = c.A.getField("languageCode"),
                 i = c.A.getField("categoryId");
-            c.A.setState({ resultsInitialCategoryId: i }),
-                d.A.setState({ isSearchVisible: !0 }),
+            c.A.setState({
+                resultsInitialCategoryId: i,
+            }),
+                d.A.setState({
+                    isSearchVisible: !0,
+                }),
                 s.A.loadCategoryResultsAndCounts({
                     loadId: t,
                     categoryId: i,

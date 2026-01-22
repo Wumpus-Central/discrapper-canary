@@ -115,6 +115,7 @@ let t = "[A-Za-z$_][0-9A-Za-z$_]*",
         "global",
     ],
     l = [].concat(s, i, a);
+
 function c(e) {
     let c = e.regex,
         u = (e, { after: t }) => {
@@ -132,7 +133,11 @@ function c(e) {
                 r = e[0].length + e.index,
                 i = e.input[r];
             if ("<" === i || "," === i) return void t.ignoreMatch();
-            ">" !== i || u(e, { after: r }) || t.ignoreMatch();
+            ">" !== i ||
+                u(e, {
+                    after: r,
+                }) ||
+                t.ignoreMatch();
             let a = e.input.substring(r);
             if ((n = a.match(/^\s*=/)) || ((n = a.match(/^\s+extends\s+/)) && 0 === n.index))
                 return void t.ignoreMatch();
@@ -150,13 +155,27 @@ function c(e) {
         A = {
             className: "number",
             variants: [
-                { begin: `(\\b(${O})((${y})|\\.)?|(${y}))[eE][+-]?(${b})\\b` },
-                { begin: `\\b(${O})\\b((${y})\\b|\\.)?|(${y})\\b` },
-                { begin: "\\b(0|[1-9](_?[0-9])*)n\\b" },
-                { begin: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b" },
-                { begin: "\\b0[bB][0-1](_?[0-1])*n?\\b" },
-                { begin: "\\b0[oO][0-7](_?[0-7])*n?\\b" },
-                { begin: "\\b0[0-7]+n?\\b" },
+                {
+                    begin: `(\\b(${O})((${y})|\\.)?|(${y}))[eE][+-]?(${b})\\b`,
+                },
+                {
+                    begin: `\\b(${O})\\b((${y})\\b|\\.)?|(${y})\\b`,
+                },
+                {
+                    begin: "\\b(0|[1-9](_?[0-9])*)n\\b",
+                },
+                {
+                    begin: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b",
+                },
+                {
+                    begin: "\\b0[bB][0-1](_?[0-1])*n?\\b",
+                },
+                {
+                    begin: "\\b0[oO][0-7](_?[0-7])*n?\\b",
+                },
+                {
+                    begin: "\\b0[0-7]+n?\\b",
+                },
             ],
             relevance: 0,
         },
@@ -243,7 +262,18 @@ function c(e) {
                 e.C_LINE_COMMENT_MODE,
             ],
         },
-        R = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, S, I, T, C, { match: /\$\d+/ }, A];
+        R = [
+            e.APOS_STRING_MODE,
+            e.QUOTE_STRING_MODE,
+            S,
+            I,
+            T,
+            C,
+            {
+                match: /\$\d+/,
+            },
+            A,
+        ];
     v.contains = R.concat({
         begin: /\{/,
         end: /\}/,
@@ -329,6 +359,7 @@ function c(e) {
             match: /\b[A-Z][A-Z_0-9]+\b/,
             className: "variable.constant",
         };
+
     function U(e) {
         return c.concat("(?!", e.join("|"), ")");
     }
@@ -351,7 +382,12 @@ function c(e) {
                 1: "keyword",
                 3: "title.function",
             },
-            contains: [{ begin: /\(\)/ }, D],
+            contains: [
+                {
+                    begin: /\(\)/,
+                },
+                D,
+            ],
         },
         B = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + e.UNDERSCORE_IDENT_RE + ")\\s*=>",
         H = {
@@ -386,7 +422,9 @@ function c(e) {
             T,
             C,
             N,
-            { match: /\$\d+/ },
+            {
+                match: /\$\d+/,
+            },
             A,
             L,
             {
@@ -446,7 +484,9 @@ function c(e) {
                                 begin: f,
                                 end: p,
                             },
-                            { match: _ },
+                            {
+                                match: _,
+                            },
                             {
                                 begin: h,
                                 "on:begin": g,
@@ -466,7 +506,9 @@ function c(e) {
                 ],
             },
             M,
-            { beginKeywords: "while if switch catch for" },
+            {
+                beginKeywords: "while if switch catch for",
+            },
             {
                 begin:
                     "\\b(?!function)" +
@@ -493,14 +535,18 @@ function c(e) {
             },
             {
                 match: [/\bconstructor(?=\s*\()/],
-                className: { 1: "title.function" },
+                className: {
+                    1: "title.function",
+                },
                 contains: [D],
             },
             G,
             k,
             x,
             F,
-            { match: /\$[(.]/ },
+            {
+                match: /\$[(.]/,
+            },
         ],
     };
 }
@@ -562,7 +608,9 @@ e.exports = function (e) {
         };
     Object.assign(a.keywords, h), a.exports.PARAMS_CONTAINS.push(m);
     let E = a.contains.find((e) => "attr" === e.scope),
-        b = Object.assign({}, E, { match: i.concat(s, i.lookahead(/\s*\?:/)) });
+        b = Object.assign({}, E, {
+            match: i.concat(s, i.lookahead(/\s*\?:/)),
+        });
     return (
         a.exports.PARAMS_CONTAINS.push([a.exports.CLASS_REFERENCE, E, b]),
         (a.contains = a.contains.concat([m, d, f, b])),

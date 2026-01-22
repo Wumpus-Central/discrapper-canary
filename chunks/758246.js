@@ -86,7 +86,9 @@ let T = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
         i.useEffect(() => {
             I || null == s || ((0, f.Mu)(), (0, f.mo)(s.id), (0, f.ax)(s.id), C(!0));
         }, [s, I]);
-        let { canManageGuild: P } = (0, l.cf)([p.A], () => ({ canManageGuild: p.A.can(N.xBc.MANAGE_GUILD, s) })),
+        let { canManageGuild: P } = (0, l.cf)([p.A], () => ({
+                canManageGuild: p.A.can(N.xBc.MANAGE_GUILD, s),
+            })),
             w = (0, l.bG)([O.A], () => O.A.isGuildMetadataLoaded()),
             R = (0, l.bG)([O.A], () => (null != s ? O.A.getMetadata() : null)),
             D = (0, l.bG)([O.A], () => (null != s && (null == R ? void 0 : R.isPublished) ? O.A.getSlug() : null)),
@@ -129,7 +131,9 @@ let T = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
         let V = (0, l.bG)([O.A], () => (null != s ? O.A.getErrors() : null));
         if (null == s || null == R) return null;
         let K = (e) => {
-                j.A.updateGuild({ discoverySplash: e });
+                j.A.updateGuild({
+                    discoverySplash: e,
+                });
             },
             z = (e) => {
                 let t = () => {
@@ -236,7 +240,9 @@ let T = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                 variant: "heading-lg/semibold",
                                                 children: [
                                                     _.intl.string(_.t.kGlQGF),
-                                                    (0, r.jsx)(d.A, { className: S.TN }),
+                                                    (0, r.jsx)(d.A, {
+                                                        className: S.TN,
+                                                    }),
                                                 ],
                                             }),
                                             (0, r.jsxs)(c.Text, {
@@ -263,7 +269,9 @@ let T = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                             children: [
                                                                 (0, r.jsx)(c.D0$, {
                                                                     label: _.intl.string(_.t.safBZ9),
-                                                                    children: (0, r.jsx)(o.A, { value: e }),
+                                                                    children: (0, r.jsx)(o.A, {
+                                                                        value: e,
+                                                                    }),
                                                                 }),
                                                                 (0, r.jsx)(c.Button, {
                                                                     variant: "primary",

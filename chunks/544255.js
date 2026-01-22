@@ -1,4 +1,7 @@
-n.d(e, { A: () => g }), n(896048);
+n.d(e, {
+    A: () => g,
+}),
+    n(896048);
 var l = n(627968);
 n(64700);
 var r = n(311907),
@@ -9,6 +12,7 @@ var r = n(311907),
     c = n(722260),
     s = n(563312),
     d = n(985018);
+
 function g(t) {
     let { guildEventId: e, recurrenceId: n, guild: g, channel: y } = t,
         f = null != n,

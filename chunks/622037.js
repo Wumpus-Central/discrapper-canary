@@ -1,4 +1,6 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -6,6 +8,7 @@ var i = n(503698),
     a = n(397927),
     s = n(441490),
     o = n(736453);
+
 function c(e) {
     let { copy: t, showStars: n = !0, className: i } = e;
     return (0, r.jsxs)("div", {

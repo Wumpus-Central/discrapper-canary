@@ -1,9 +1,11 @@
 function r(e, t) {
     return "function" == typeof t.getChildren ? t.getChildren(e.key) : e.childNodes;
 }
+
 function i(e) {
     return a(e, 0);
 }
+
 function a(e, t) {
     if (t < 0) return;
     let n = 0;
@@ -12,11 +14,13 @@ function a(e, t) {
         n++;
     }
 }
+
 function s(e) {
     let t;
     for (let n of e) t = n;
     return t;
 }
+
 function o(e, t, n) {
     if (t.parentKey === n.parentKey) return t.index - n.index;
     let r = [...l(e, t), t],
@@ -28,6 +32,7 @@ function o(e, t, n) {
           ? 1
           : (i.findIndex((e) => e === t), -1);
 }
+
 function l(e, t) {
     let n = [],
         r = t;

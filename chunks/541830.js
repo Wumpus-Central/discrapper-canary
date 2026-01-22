@@ -12,6 +12,7 @@ var r = n(989349),
 n(723702), n(371794);
 var s = n(652215),
     o = n(985018);
+
 function l(e, t, n) {
     return (
         t in e
@@ -43,12 +44,21 @@ let c = {},
                     });
             }
             return e;
-        })({ ALL: -1 }, s.Kf),
+        })(
+            {
+                ALL: -1,
+            },
+            s.Kf,
+        ),
     );
+
 function f(e) {
-    let t = (0, a.B6)(e, { path: s.BVt.APPLICATION_STORE_LISTING_SKU(":skuId", ":slug") });
+    let t = (0, a.B6)(e, {
+        path: s.BVt.APPLICATION_STORE_LISTING_SKU(":skuId", ":slug"),
+    });
     return null != t ? t.params.skuId : null;
 }
+
 function p(e) {
     switch (e) {
         case s.Kf.ACTION:
@@ -205,6 +215,7 @@ let _ = [
     ["MM", "MMMM"],
     ["YYYY", "Y"],
 ];
+
 function h(e) {
     let { preorderReleaseAt: t, preorderApproximateReleaseDate: n } = e;
     if (null != t) return t.format("MMMM DD");

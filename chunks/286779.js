@@ -1,1 +1,1 @@
-p.exports = JSON.parse('{"eoXh7B":["Sipariş Özeti"]}');
+p.exports = JSON.parse('{"eoXh7B":["Sipariş \xd6zeti"]}');

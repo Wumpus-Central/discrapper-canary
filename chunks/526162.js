@@ -1,4 +1,6 @@
-n.d(t, { A: () => S });
+n.d(t, {
+    A: () => S,
+});
 var r,
     i = n(311907),
     a = n(73153),
@@ -10,6 +12,7 @@ var r,
     d = n(652215),
     f = n(49999),
     p = n(788868);
+
 function _(e, t, n) {
     return (
         t in e
@@ -44,10 +47,12 @@ let h = 2,
             });
         }
     };
+
 function y(e) {
     let { id: t } = e;
     null != t && b(t);
 }
+
 function O() {
     g &&
         (m.client = {
@@ -55,6 +60,7 @@ function O() {
             coachmarkImpressions: h,
         });
 }
+
 function A(e) {
     let { markAsDismissed: t } = e;
     (m.client.coachmarkImpressions += 1),

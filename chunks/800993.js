@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(559751),
     i = n(726402),
     a = n(865645),
@@ -10,7 +12,14 @@ var r = n(559751),
     d = n(140851),
     f = function (e, t) {
         return (
-            (e = "function" == typeof e ? e(Object.assign({}, t.rects, { placement: t.placement })) : e),
+            (e =
+                "function" == typeof e
+                    ? e(
+                          Object.assign({}, t.rects, {
+                              placement: t.placement,
+                          }),
+                      )
+                    : e),
             (0, c.A)("number" != typeof e ? e : (0, u.A)(e, d.OM))
         );
     };

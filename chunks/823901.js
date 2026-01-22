@@ -21,6 +21,7 @@ var i = n(627968),
     A = n(652215),
     O = n(753070),
     E = n(985018);
+
 function v(e) {
     let {
             pid: t,
@@ -93,10 +94,14 @@ async function S(e) {
         if (p && null !== r) {
             let e = d.A.getState().preset;
             if (e === O.jQ.PRESET_DOCUMENTS) {
-                let { allowAutoQuality: t } = (0, o.eO)({ location: "overlay _goLive" });
+                let { allowAutoQuality: t } = (0, o.eO)({
+                    location: "overlay _goLive",
+                });
                 e = t ? O.jQ.PRESET_AUTO : O.jQ.PRESET_VIDEO;
             }
-            let [n] = await (0, u.A)(t, { preset: e });
+            let [n] = await (0, u.A)(t, {
+                preset: e,
+            });
             if (n) {
                 null == f || f();
                 return;
@@ -104,7 +109,9 @@ async function S(e) {
         }
         if (null == l)
             return void (0, a.showToast)(
-                (0, a.createToast)(E.intl.string(E.t.OKnWyb), a.ToastType.FAILURE, { appContext: A.BRT.OVERLAY }),
+                (0, a.createToast)(E.intl.string(E.t.OKnWyb), a.ToastType.FAILURE, {
+                    appContext: A.BRT.OVERLAY,
+                }),
             );
         null == h || h(),
             (0, a.mMO)(
@@ -160,7 +167,9 @@ async function S(e) {
                         );
                     };
                 },
-                { contextKey: null != m ? (0, a.TId)(m) : void 0 },
+                {
+                    contextKey: null != m ? (0, a.TId)(m) : void 0,
+                },
             );
     }
 }

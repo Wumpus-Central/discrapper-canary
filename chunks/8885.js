@@ -1,9 +1,13 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 var r = n(140851);
+
 function i(e) {
     var t = new Map(),
         n = new Set(),
         r = [];
+
     function i(e) {
         n.add(e.name),
             [].concat(e.requires || [], e.requiresIfExists || []).forEach(function (e) {
@@ -24,6 +28,7 @@ function i(e) {
         r
     );
 }
+
 function a(e) {
     var t = i(e);
     return r.GM.reduce(function (e, n) {

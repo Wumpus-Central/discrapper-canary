@@ -1,4 +1,7 @@
-n.d(t, { A: () => f }), n(896048);
+n.d(t, {
+    A: () => f,
+}),
+    n(896048);
 var r = n(64700),
     i = n(735438),
     a = n.n(i),
@@ -8,6 +11,7 @@ var r = n(64700),
     c = n(842209),
     u = n(768879),
     d = n(73510);
+
 function f(e) {
     var t;
     let { context: n } = e,
@@ -53,7 +57,9 @@ function f(e) {
                             return t;
                         }),
                     )
-                    .map((e) => ({ application: e })),
+                    .map((e) => ({
+                        application: e,
+                    })),
             [g],
         ),
         isLoading: f.fetchState.fetching || _,

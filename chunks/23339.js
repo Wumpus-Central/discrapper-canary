@@ -13,11 +13,12 @@ n.d(t, {
 var r = n(621466);
 let i = /[\u0300-\u036f]/g,
     a = /[\uD800-\uDBFF][\uDC00-\uDFFF]/;
+
 function s(e) {
     return null == e ? "" : "".concat(e.charAt(0).toUpperCase()).concat(e.slice(1));
 }
 let o = function (e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\u2026";
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "…";
     if (null == e || null == t) return "";
     if (e.length > t) {
         let r = a.test(e) ? [...e].slice(0, t - n.length).join("") : e.substring(0, t - n.length);
@@ -25,6 +26,7 @@ let o = function (e, t) {
     }
     return e;
 };
+
 function l(e) {
     return null != e
         ? e
@@ -34,6 +36,7 @@ function l(e) {
         : "";
 }
 let c = null == String.prototype.normalize ? (e) => e : (e) => e.normalize("NFD").replace(i, "").normalize("NFC");
+
 function u(e) {
     let t = n(209034),
         r = "";
@@ -45,6 +48,7 @@ function u(e) {
         r.normalize("NFD").toLocaleLowerCase()
     );
 }
+
 function d(e) {
     var t;
     if (void 0 === (null == (t = Intl) ? void 0 : t.Segmenter)) return e.length;

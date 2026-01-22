@@ -15,6 +15,7 @@ var r = n(627968),
     p = n(652215),
     _ = n(985018),
     h = n(726097);
+
 function m(e) {
     let { game: t, application: n } = e;
     return null == t || null == n
@@ -43,6 +44,7 @@ function m(e) {
               ],
           });
 }
+
 function g(e, t) {
     return "voice" === e
         ? _.intl.string(_.t.vxfv7v)
@@ -50,6 +52,7 @@ function g(e, t) {
           ? _.intl.string(_.t.fAYU2G)
           : _.intl.string(_.t["9V4X/c"]);
 }
+
 function E(e) {
     let t = (0, s.bG)([u.A], () => u.A.getMode()),
         { runningGame: n, runningGameApplication: r } = (0, l.A)();
@@ -62,10 +65,12 @@ function E(e) {
         runningGameApplication: r,
     };
 }
+
 function b(e) {
     let { className: t, sourcePage: n } = e,
         { canPrompt: i, runningGame: s, runningGameApplication: l } = E(n);
     if (!i) return null;
+
     function c() {
         (0, f.sL)(n + (null != s ? "-with-game" : "-no-game"));
     }

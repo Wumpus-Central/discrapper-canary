@@ -1,4 +1,7 @@
-n.d(t, { A: () => ed }), n(896048);
+n.d(t, {
+    A: () => ed,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -85,7 +88,9 @@ let q = 0,
             eo = (0, h.p)(),
             el = i.useRef(H.An1),
             ec = i.useMemo(() => ("" !== n ? d.A.convert.toCodePoint(n) : ""), [n]),
-            eu = (0, C.A)({ location: "PremiumBrandRefreshCategorySection" }),
+            eu = (0, C.A)({
+                location: "PremiumBrandRefreshCategorySection",
+            }),
             ed = i.useCallback(
                 (e) => {
                     let t = m[e],
@@ -117,7 +122,9 @@ let q = 0,
                                 guild_id: n.id,
                             }),
                         e === B.R2.SOUNDMOJI &&
-                            D.default.track(H.HAw.SOUNDMOJI_EMOJI_PICKER_SECTION_TOGGLED, { collapsed: !i }),
+                            D.default.track(H.HAw.SOUNDMOJI_EMOJI_PICKER_SECTION_TOGGLED, {
+                                collapsed: !i,
+                            }),
                         g(r);
                 },
                 [eo, t, g],
@@ -140,7 +147,10 @@ let q = 0,
                             i = m[t.sectionIndex],
                             s = () => {
                                 var e;
-                                null == (e = es.current) || e.scrollToSectionTop(t.sectionIndex, { animate: !0 });
+                                null == (e = es.current) ||
+                                    e.scrollToSectionTop(t.sectionIndex, {
+                                        animate: !0,
+                                    });
                             };
                         return (0, r.jsx)(
                             F.A,
@@ -271,7 +281,11 @@ let q = 0,
                                   enableBrandRefresh: eu,
                               })
                         : ed(e)
-                          ? (0, r.jsx)("div", { className: s()(z.pQ, { [z.N4]: eu }) })
+                          ? (0, r.jsx)("div", {
+                                className: s()(z.pQ, {
+                                    [z.N4]: eu,
+                                }),
+                            })
                           : null,
                 [er, ef, ed, eE, eu],
             ),
@@ -401,6 +415,7 @@ let q = 0,
                 [eg, eE, a, f, B, en],
             ),
             ey = f.length > 0;
+
         function eO() {
             let e = (0, j.Dd)(W.PremiumTypes.TIER_2);
             return K.intl.format(K.t.gMVjeS, {
@@ -413,6 +428,7 @@ let q = 0,
                 },
             });
         }
+
         function eA() {
             var e;
             let t = (0, T.qD)();
@@ -462,7 +478,9 @@ let q = 0,
                               showUpsell: et,
                               text: eO(),
                               button: eA(),
-                              buttonAnalyticsObject: { section: H.JJy.EMOJI_PICKER_FLOATING_UPSELL },
+                              buttonAnalyticsObject: {
+                                  section: H.JJy.EMOJI_PICKER_FLOATING_UPSELL,
+                              },
                           }),
                 ],
             })
@@ -472,6 +490,7 @@ let q = 0,
         leading: !1,
         trailing: !0,
     });
+
 function eu(e) {
     let { emojiListRef: t, sectionDescriptors: n, scrollTop: r, searchQuery: i, setShowUpsell: a } = e;
     a(

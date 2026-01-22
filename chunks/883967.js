@@ -1,4 +1,6 @@
-i.d(e, { J: () => _ });
+i.d(e, {
+    J: () => _,
+});
 var n = i(934551),
     l = i(824552),
     s = i(419954),
@@ -13,7 +15,9 @@ let S = (0, s.zZ)(r.X.AUTHORIZED_APPS_CATEGORY, {
         initialize: () => (
             l.A.fetch(),
             () => {
-                a.iU.setState({ searchQuery: "" });
+                a.iU.setState({
+                    searchQuery: "",
+                });
             }
         ),
     }),

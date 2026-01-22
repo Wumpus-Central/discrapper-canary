@@ -1,4 +1,6 @@
-n.d(t, { I: () => o });
+n.d(t, {
+    I: () => o,
+});
 var r = n(627968);
 n(64700);
 var l = n(397927),
@@ -16,7 +18,9 @@ let o = () => {
                 alt: "",
                 className: s.ym,
             }),
-            (0, r.jsx)(a.A, { color: "white" }),
+            (0, r.jsx)(a.A, {
+                color: "white",
+            }),
             (0, r.jsx)("div", {
                 className: s.PX,
                 children: e.map((e, t) =>
@@ -25,7 +29,9 @@ let o = () => {
                         {
                             className: s.UJ,
                             children: [
-                                (0, r.jsx)(l.Uzd, { color: l.LU0.colors.WHITE }),
+                                (0, r.jsx)(l.Uzd, {
+                                    color: l.LU0.colors.WHITE,
+                                }),
                                 (0, r.jsx)(l.Text, {
                                     variant: "text-sm/medium",
                                     color: "always-white",

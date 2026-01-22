@@ -1,4 +1,6 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var r = n(627968),
     l = n(64700),
     o = n(503698),
@@ -15,6 +17,7 @@ var r = n(627968),
     E = n(583235),
     g = n(985018),
     h = n(438655);
+
 function b() {
     let { quest: e, sourceQuestContent: t, isPortrait: n, onClose: o } = l.useContext(v.VideoQuestModalContext),
         b = (0, f.go)(),
@@ -35,7 +38,9 @@ function b() {
             onClick: () => _(m.uF.VIDEO_MODAL, d.Cy.OPEN_GAME_LINK),
             className: h._S,
             children: (0, r.jsxs)("div", {
-                className: i()(h.hA, h.t8, { [h.Mc]: y }),
+                className: i()(h.hA, h.t8, {
+                    [h.Mc]: y,
+                }),
                 ref: O,
                 children: [
                     (0, r.jsx)("div", {
@@ -43,13 +48,19 @@ function b() {
                         children: (0, r.jsx)(a.Heading, {
                             variant: "heading-md/medium",
                             color: "text-strong",
-                            className: i()(h.xw, { [h._L]: n }),
+                            className: i()(h.xw, {
+                                [h._L]: n,
+                            }),
                             lineClamp: n ? void 0 : 1,
-                            children: g.intl.format(g.t.EQa7os, { questName: e.config.messages.questName }),
+                            children: g.intl.format(g.t.EQa7os, {
+                                questName: e.config.messages.questName,
+                            }),
                         }),
                     }),
                     (0, r.jsxs)("div", {
-                        className: i()(h.sB, { [h.fi]: n }),
+                        className: i()(h.sB, {
+                            [h.fi]: n,
+                        }),
                         children: [
                             (0, r.jsx)("div", {
                                 className: i()(h.PV, {
@@ -76,10 +87,14 @@ function b() {
                                       children: [
                                           (0, r.jsx)("div", {
                                               "aria-hidden": "true",
-                                              className: i()(h.SC, { [h.b2]: n }),
+                                              className: i()(h.SC, {
+                                                  [h.b2]: n,
+                                              }),
                                           }),
                                           (0, r.jsx)(a.Heading, {
-                                              className: i()(h.xw, { [h._L]: n }),
+                                              className: i()(h.xw, {
+                                                  [h._L]: n,
+                                              }),
                                               variant: "heading-sm/medium",
                                               lineClamp: n ? void 0 : 1,
                                               color: S ? "text-strong" : "text-subtle",

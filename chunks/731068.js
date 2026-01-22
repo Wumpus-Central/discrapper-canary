@@ -15,6 +15,7 @@ var r = n(665260),
     a = n(77350),
     s = n(998218),
     o = n(652215);
+
 function l(e, t, n) {
     return (
         t in e
@@ -28,6 +29,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -44,6 +46,7 @@ function c(e) {
     }
     return e;
 }
+
 function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -56,6 +59,7 @@ function u(e, t) {
     }
     return n;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -70,6 +74,7 @@ function d(e, t) {
 var f = (function (e) {
     return (e[(e.EXPLICIT = 1)] = "EXPLICIT"), (e[(e.GORE = 2)] = "GORE"), (e[(e.SELF_HARM = 4)] = "SELF_HARM"), e;
 })({});
+
 function p(e) {
     return {
         version: e.version,
@@ -79,6 +84,7 @@ function p(e) {
 var _ = (function (e) {
     return (e[(e.IS_ANIMATED = 1)] = "IS_ANIMATED"), e;
 })({});
+
 function h(e) {
     var t;
     return {
@@ -95,6 +101,7 @@ function h(e) {
         flags: null != (t = e.flags) ? t : 0,
     };
 }
+
 function m(e) {
     var t, n;
     let a = 0;
@@ -123,6 +130,7 @@ function m(e) {
         }
     );
 }
+
 function g(e) {
     return (0, a.tT)(e.contentType)
         ? "IMAGE"
@@ -130,9 +138,11 @@ function g(e) {
           ? "VIDEO"
           : "INVALID";
 }
+
 function E(e) {
     return (0, a.u)(e.filename) ? "IMAGE" : (0, a.AE)(e.filename) ? "VIDEO" : "INVALID";
 }
+
 function b(e, t) {
     return d(c({}, m(e)), {
         type: E(e),
@@ -149,6 +159,7 @@ function b(e, t) {
         },
     });
 }
+
 function y(e, t, n) {
     return {
         type: n,
@@ -162,6 +173,7 @@ function y(e, t, n) {
         contentType: e.contentType,
     };
 }
+
 function O(e) {
     return null != e.width && e.width > 0 && null != e.height && e.height > 0;
 }

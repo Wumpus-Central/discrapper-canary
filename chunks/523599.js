@@ -1,4 +1,10 @@
-n.d(t, { A: () => w }), n(264879), n(321073), n(896048), n(667532);
+n.d(t, {
+    A: () => w,
+}),
+    n(264879),
+    n(321073),
+    n(896048),
+    n(667532);
 var l,
     r,
     a = n(735438),
@@ -47,6 +53,7 @@ let f = s.kg(
     j = null,
     U = {},
     y = 0;
+
 function P(e) {
     let t = [],
         n = 0;
@@ -129,7 +136,9 @@ function P(e) {
                     (0, E.tr)(d.oldValue) &&
                     (e = "#".concat(e)),
                     null == U[_.targetType]
-                        ? (U[_.targetType] = { [_.targetId]: e })
+                        ? (U[_.targetType] = {
+                              [_.targetId]: e,
+                          })
                         : (U[_.targetType][_.targetId] = e);
             }
             (n = 0), t.unshift(_);
@@ -137,6 +146,7 @@ function P(e) {
         t
     );
 }
+
 function k(e) {
     let { section: t } = e;
     if (t !== T.BEX.AUDIT_LOG) return !1;
@@ -293,7 +303,13 @@ let w = new F(c.h, {
     GUILD_SETTINGS_SET_SECTION: k,
     GUILD_SETTINGS_INIT: function (e) {
         let { guildId: t, section: n } = e;
-        return (h = t), (j = null), k({ section: n });
+        return (
+            (h = t),
+            (j = null),
+            k({
+                section: n,
+            })
+        );
     },
     GUILD_SETTINGS_CLOSE: function () {
         (I = []),

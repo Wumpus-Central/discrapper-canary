@@ -8,7 +8,7 @@ var r = n(627968),
     i = n(503698),
     a = n.n(i),
     s = n(735438),
-    o = n(432022),
+    o = n(108531),
     c = n(311907),
     u = n(397927),
     d = n(73153),
@@ -29,6 +29,7 @@ var r = n(627968),
     C = n(838541),
     S = n(279633);
 let I = 10 * x.A.Millis.SECOND;
+
 function N(e) {
     var t;
     let { message: n } = e,
@@ -55,7 +56,12 @@ function N(e) {
             },
             [n.channel_id, n.id],
         ),
-        _ = null != n.content && "" !== n.content ? (0, b.Ay)(n, { isInteracting: O }).content : null,
+        _ =
+            null != n.content && "" !== n.content
+                ? (0, b.Ay)(n, {
+                      isInteracting: O,
+                  }).content
+                : null,
         {
             contentPlaceholder: I,
             renderedContent: N,
@@ -93,10 +99,16 @@ function N(e) {
         onClick: E,
         children: [
             (0, r.jsxs)("div", {
-                className: a()(S.kn, { [S.mK]: n.mentioned }),
+                className: a()(S.kn, {
+                    [S.mK]: n.mentioned,
+                }),
                 children: [
                     null != R ? null : P,
-                    null != (t = null != N ? N : R) ? t : (0, r.jsx)("span", { children: I }),
+                    null != (t = null != N ? N : R)
+                        ? t
+                        : (0, r.jsx)("span", {
+                              children: I,
+                          }),
                     null != R ? null : T,
                 ],
             }),
@@ -115,6 +127,7 @@ function N(e) {
         ],
     });
 }
+
 function T(e) {
     let { channelId: t, className: n } = e,
         [i, f] = l.useState(!1),
@@ -198,7 +211,9 @@ function T(e) {
         })),
         v = (0, u.pnh)(j, {
             keys: (e) => e.message.id,
-            from: () => ({ opacity: 0 }),
+            from: () => ({
+                opacity: 0,
+            }),
             enter: (e) => {
                 let { y: t } = e;
                 return {
@@ -208,7 +223,9 @@ function T(e) {
             },
             update: (e) => {
                 let { y: t } = e;
-                return { translateY: t };
+                return {
+                    translateY: t,
+                };
             },
             leave: (e) => {
                 let { height: t, y: n } = e;
@@ -235,7 +252,9 @@ function T(e) {
                         ref: (e) => A(t.message.id, null != e ? e.offsetHeight : null),
                         className: S.T_,
                         style: e,
-                        children: (0, r.jsx)(N, { message: t.message }),
+                        children: (0, r.jsx)(N, {
+                            message: t.message,
+                        }),
                     }),
                 ),
             }),

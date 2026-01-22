@@ -1,4 +1,6 @@
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});
 var r = {};
 r = {
     ascending: "stigande",
@@ -6,7 +8,7 @@ r = {
     columnSize: (e) => `${e.value} pixlar`,
     descending: "fallande",
     descendingSort: (e) => `sorterat p\xe5 kolumn ${e.columnName} i fallande ordning`,
-    resizerDescription: "Tryck på Retur för att börja ändra storlek",
+    resizerDescription: "Tryck p\xe5 Retur f\xf6r att b\xf6rja \xe4ndra storlek",
     select: "Markera",
     selectAll: "Markera allt",
     sortable: "sorterbar kolumn",

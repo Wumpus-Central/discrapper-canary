@@ -5,9 +5,12 @@ function r(e) {
         (null != e.components && e.components.length > 0)
     );
 }
+
 function i(e) {
     if (null == e) return !1;
     let t = "messageSnapshots" in e ? e.messageSnapshots : e.message_snapshots;
     return r(e) || (null != t && (null == t ? void 0 : t.some((e) => r(e.message))));
 }
-n.d(t, { b: () => i });
+n.d(t, {
+    b: () => i,
+});

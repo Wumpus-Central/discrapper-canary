@@ -23,6 +23,7 @@ var r = n(627968),
     b = n(519412),
     y = n(985018),
     O = n(546991);
+
 function A(e, t, n) {
     return (
         t in e
@@ -36,6 +37,7 @@ function A(e, t, n) {
         e
     );
 }
+
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -52,6 +54,7 @@ function v(e) {
     }
     return e;
 }
+
 function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -64,6 +67,7 @@ function S(e, t) {
     }
     return n;
 }
+
 function I(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -140,7 +144,9 @@ let T = () =>
                     case E.Dmq.CANCELED:
                         return {
                             title: y.intl.string(b.default.mCwdPj),
-                            description: y.intl.format(b.default.wH9NYG, { endDate: f }),
+                            description: y.intl.format(b.default.wH9NYG, {
+                                endDate: f,
+                            }),
                         };
                     case E.Dmq.PAUSED:
                         return {
@@ -321,7 +327,9 @@ let T = () =>
                         e.id,
                     ),
                 ),
-                Array.from({ length: d }).map((e, t) =>
+                Array.from({
+                    length: d,
+                }).map((e, t) =>
                     (0, r.jsx)(
                         m.XN,
                         {
@@ -384,10 +392,18 @@ let T = () =>
                     });
             },
             j = () => {
-                l.default.track(E.HAw.PREMIUM_GROUP_SUBSCRIPTION_CARD_INVITE_CLICKED, { subscription_id: t.id }),
+                l.default.track(E.HAw.PREMIUM_GROUP_SUBSCRIPTION_CARD_INVITE_CLICKED, {
+                    subscription_id: t.id,
+                }),
                     (0, s.mMO)(async () => {
                         let { default: e } = await n.e("73987").then(n.bind(n, 773486));
-                        return (n) => (0, r.jsx)(e, I(v({}, n), { subscription: t }));
+                        return (n) =>
+                            (0, r.jsx)(
+                                e,
+                                I(v({}, n), {
+                                    subscription: t,
+                                }),
+                            );
                     });
             },
             M = (e) => {
@@ -423,7 +439,9 @@ let T = () =>
                     case E.Dmq.PAUSED:
                         return {
                             title: y.intl.string(b.default["4flKoC"]),
-                            description: y.intl.format(b.default["Q++BmO"], { premiumGroupProductName: (0, g.DP)() }),
+                            description: y.intl.format(b.default["Q++BmO"], {
+                                premiumGroupProductName: (0, g.DP)(),
+                            }),
                         };
                     case E.Dmq.PAST_DUE:
                     case E.Dmq.ACCOUNT_HOLD:

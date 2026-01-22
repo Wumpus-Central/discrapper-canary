@@ -1,10 +1,13 @@
-n.d(t, { A: () => T }), n(896048);
+n.d(t, {
+    A: () => T,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
     a = n.n(i),
     s = n(131346),
-    o = n(432022),
+    o = n(108531),
     c = n(837381),
     u = n(317097),
     d = n(319060),
@@ -73,7 +76,9 @@ let I = (0, g.xI)(d.A.FOLDER_ITEM_ANIMATION_DURATION),
                 end() {
                     null == V || V(), (0, p.um)(b.Ay.getCompatibleGuildFolders());
                 },
-                collect: (e) => ({ dragging: e.isDragging() }),
+                collect: (e) => ({
+                    dragging: e.isDragging(),
+                }),
             }),
             ei = l.useCallback((e) => {
                 ee(e);
@@ -96,10 +101,18 @@ let I = (0, g.xI)(d.A.FOLDER_ITEM_ANIMATION_DURATION),
                     (o - (n - i) / 2) +
                     (0, f.rdh)(f.LU0.space.SPACE_4)),
             ed = (0, f.pnh)(!er && P, {
-                from: { height: 0 },
-                enter: { height: 1 },
-                leave: { height: 0 },
-                config: { duration: I },
+                from: {
+                    height: 0,
+                },
+                enter: {
+                    height: 1,
+                },
+                leave: {
+                    height: 0,
+                },
+                config: {
+                    duration: I,
+                },
             }),
             ef = l.useCallback((e) => (null == g ? void 0 : g(q, e)), [g, q]),
             ep = (0, r.jsxs)(v.c, {
@@ -128,7 +141,9 @@ let I = (0, g.xI)(d.A.FOLDER_ITEM_ANIMATION_DURATION),
                             }),
                             "data-dnd-name": es,
                             children: er
-                                ? (0, r.jsx)(j.A, { isFolder: !0 })
+                                ? (0, r.jsx)(j.A, {
+                                      isFolder: !0,
+                                  })
                                 : (0, r.jsx)(y.A, {
                                       folderNode: d,
                                       expanded: P,
@@ -166,10 +181,16 @@ let I = (0, g.xI)(d.A.FOLDER_ITEM_ANIMATION_DURATION),
                 [C.Av]: P,
                 [C.Lg]: et,
             }),
-            style: { "--custom-folder-color": null != eb ? eb : "" },
+            style: {
+                "--custom-folder-color": null != eb ? eb : "",
+            },
             "data-drop-hovering": $,
             children: [
-                !er && P && (0, r.jsx)("span", { className: C.GO }),
+                !er &&
+                    P &&
+                    (0, r.jsx)("span", {
+                        className: C.GO,
+                    }),
                 ep,
                 ed((e, t, n) => {
                     let { key: l } = n;
@@ -183,7 +204,9 @@ let I = (0, g.xI)(d.A.FOLDER_ITEM_ANIMATION_DURATION),
                                 as: "ul",
                                 gap: "xs",
                                 className: C.TN,
-                                style: { height: e.height.to((e) => e * eu) },
+                                style: {
+                                    height: e.height.to((e) => e * eu),
+                                },
                                 "aria-label": d.name,
                                 children: J.map((t, n) => B(t, n, J.length, e.height)),
                             },

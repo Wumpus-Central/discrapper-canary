@@ -1,4 +1,7 @@
-n.d(t, { A: () => g }), n(896048);
+n.d(t, {
+    A: () => g,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -9,6 +12,7 @@ var r = n(627968),
     u = n(78837);
 n(465133);
 var d = n(821443);
+
 function f(e, t, n) {
     return (
         t in e
@@ -22,6 +26,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -38,6 +43,7 @@ function p(e) {
     }
     return e;
 }
+
 function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -50,6 +56,7 @@ function _(e, t) {
     }
     return n;
 }
+
 function h(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -61,6 +68,7 @@ function h(e, t) {
         e
     );
 }
+
 function m(e) {
     let { node: t } = e,
         { useTitle: n, layout: a, useCollapsedSubtitle: f } = t,
@@ -77,7 +85,14 @@ function m(e) {
                     if (null == e) return;
                     let n = (null == e ? void 0 : e.targetAccordionKey) === t.key;
                     n && !_ && (m(!0), E(!1)),
-                        n && _ && (l.A.setState({ navTransition: h(p({}, e), { targetAccordionKey: void 0 }) }), E(!0));
+                        n &&
+                            _ &&
+                            (l.A.setState({
+                                navTransition: h(p({}, e), {
+                                    targetAccordionKey: void 0,
+                                }),
+                            }),
+                            E(!0));
                 },
                 {
                     equalityFn: o.x,
@@ -107,7 +122,9 @@ function m(e) {
             "--custom-base-setting-wrapper-horizontal-padding": "".concat(12, "px"),
             "--custom-base-setting-wrapper-vertical-padding": "".concat(8, "px"),
         },
-        className: s()({ [d.h]: _ }),
+        className: s()({
+            [d.h]: _,
+        }),
         children: (0, r.jsx)(u.f, {
             title: b,
             collapsedSubtitle: y,
@@ -115,7 +132,15 @@ function m(e) {
             onExpandedChange: m,
             onExpandedChangeComplete: O,
             animate: g,
-            children: a.map((e) => (0, r.jsx)(c.A, { node: e }, e.key)),
+            children: a.map((e) =>
+                (0, r.jsx)(
+                    c.A,
+                    {
+                        node: e,
+                    },
+                    e.key,
+                ),
+            ),
         }),
     });
 }

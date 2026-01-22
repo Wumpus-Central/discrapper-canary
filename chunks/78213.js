@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var l = n(627968),
     i = n(64700),
     a = n(311907),
@@ -13,6 +15,7 @@ var l = n(627968),
     g = n(307731),
     h = n(985018),
     v = n(22009);
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -38,6 +41,7 @@ function b(e) {
     }
     return e;
 }
+
 function x(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -56,6 +60,7 @@ function x(e, t) {
         e
     );
 }
+
 function p(e) {
     let {
             className: t,
@@ -149,7 +154,14 @@ function p(e) {
                                     color: D ? "text-default" : "text-muted",
                                     children: D ? ":".concat(C, ":") : h.intl.string(h.t.QTK0TJ),
                                 }),
-                                D && E && (0, l.jsx)(u.A, x(b({}, e), { onClick: k })),
+                                D &&
+                                    E &&
+                                    (0, l.jsx)(
+                                        u.A,
+                                        x(b({}, e), {
+                                            onClick: k,
+                                        }),
+                                    ),
                             ],
                         }),
                     );

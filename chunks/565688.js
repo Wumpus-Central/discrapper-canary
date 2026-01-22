@@ -30,15 +30,25 @@ let a = (0, r.mj)({
         },
     },
 });
+
 function s(e) {
     let { location: t } = e,
-        n = (0, i.kt)({ location: t }),
-        r = a.useConfig({ location: t }).voiceChannelActivitiesEnabled;
+        n = (0, i.kt)({
+            location: t,
+        }),
+        r = a.useConfig({
+            location: t,
+        }).voiceChannelActivitiesEnabled;
     return n && r;
 }
+
 function o(e) {
     let { location: t } = e,
-        n = (0, i.kt)({ location: t }),
-        r = a.useConfig({ location: t }).guildActivitiesEnabled;
+        n = (0, i.kt)({
+            location: t,
+        }),
+        r = a.useConfig({
+            location: t,
+        }).guildActivitiesEnabled;
     return n && r;
 }

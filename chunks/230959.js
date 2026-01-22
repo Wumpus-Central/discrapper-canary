@@ -1,6 +1,9 @@
-n.d(t, { R: () => a });
+n.d(t, {
+    R: () => a,
+});
 var r = n(157347),
     i = n(70738);
+
 function a(e, t) {
     let n = (0, r.vn)(e.joinedAt);
     switch (t) {

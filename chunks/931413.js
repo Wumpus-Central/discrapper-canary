@@ -1,4 +1,6 @@
-n.d(t, { A: () => x });
+n.d(t, {
+    A: () => x,
+});
 var i = n(627968),
     l = n(989349),
     s = n.n(l),
@@ -11,6 +13,7 @@ var i = n(627968),
     g = n(769591),
     h = n(815968),
     m = n(985018);
+
 function x(e) {
     var t, n;
     let { guildId: l } = e,
@@ -22,11 +25,19 @@ function x(e) {
         : (0, i.jsxs)(a.nVY, {
               children: [
                   (0, i.jsx)(a.dOG, {
-                      label: m.intl.format(m.t["J+7D9E"], { name: x.name }),
+                      label: m.intl.format(m.t["J+7D9E"], {
+                          name: x.name,
+                      }),
                       description: m.intl.string(m.t.IngcUv),
                       checked: j,
                       onChange: (e) => {
-                          d.A.updateGuildNotificationSettings(l, { muted: e }, u.G_.muted(e));
+                          d.A.updateGuildNotificationSettings(
+                              l,
+                              {
+                                  muted: e,
+                              },
+                              u.G_.muted(e),
+                          );
                       },
                   }),
                   j &&

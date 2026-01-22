@@ -1,4 +1,6 @@
-n.d(t, { A: () => x });
+n.d(t, {
+    A: () => x,
+});
 var l = n(627968);
 n(64700);
 var r = n(503698),
@@ -13,11 +15,15 @@ var r = n(503698),
     h = n(526174),
     f = n(558997),
     g = n(827469);
+
 function x(e) {
     let { onDismiss: t } = e;
     return (0, l.jsxs)(i.DUT, {
         onClick: () => {
-            open(o.X_), (0, s.Md)({ readGuideCta: !0 });
+            open(o.X_),
+                (0, s.Md)({
+                    readGuideCta: !0,
+                });
         },
         className: a()(f.kL, h.kL, m.mainCard),
         children: [
@@ -58,7 +64,11 @@ function x(e) {
                     }),
                     (0, l.jsx)(i.DUT, {
                         onClick: (e) => {
-                            e.stopPropagation(), t(d.i.DISMISS), (0, s.Md)({ readGuideCta: !1 });
+                            e.stopPropagation(),
+                                t(d.i.DISMISS),
+                                (0, s.Md)({
+                                    readGuideCta: !1,
+                                });
                         },
                         children: (0, l.jsx)(i.PGe, {
                             size: "xs",
@@ -68,7 +78,9 @@ function x(e) {
                     }),
                 ],
             }),
-            (0, l.jsx)("hr", { className: h.me }),
+            (0, l.jsx)("hr", {
+                className: h.me,
+            }),
             (0, l.jsxs)("div", {
                 className: h.mG,
                 children: [

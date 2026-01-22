@@ -1,5 +1,11 @@
-n.d(t, { c: () => s }), n(896048), n(638769), n(321073);
+n.d(t, {
+    c: () => s,
+}),
+    n(896048),
+    n(638769),
+    n(321073);
 var r = n(52724);
+
 function i(e, t, n) {
     return (
         t in e
@@ -13,6 +19,7 @@ function i(e, t, n) {
         e
     );
 }
+
 function a(e) {
     if (null == e)
         return {
@@ -33,7 +40,9 @@ function a(e) {
 }
 class s {
     disconnect() {
-        window.removeEventListener("keydown", this.handleDraggedElementKeyDown, { capture: !0 });
+        window.removeEventListener("keydown", this.handleDraggedElementKeyDown, {
+            capture: !0,
+        });
     }
     hoverNode(e) {
         var t;
@@ -46,7 +55,9 @@ class s {
                 ? void 0
                 : t[0];
         null != n &&
-            (this.actions.hover([n], { clientOffset: a(e) }),
+            (this.actions.hover([n], {
+                clientOffset: a(e),
+            }),
             (this.currentHoveredNode = e),
             this.previewer.render(this.monitor),
             this.announcer.announceHover(e, n),
@@ -115,6 +126,8 @@ class s {
             })),
             (this.actions = n.getActions()),
             (this.monitor = n.getMonitor()),
-            window.addEventListener("keydown", this.handleDraggedElementKeyDown, { capture: !0 });
+            window.addEventListener("keydown", this.handleDraggedElementKeyDown, {
+                capture: !0,
+            });
     }
 }

@@ -1,4 +1,9 @@
-n.d(t, { A: () => A }), n(321073), n(896048), n(733351);
+n.d(t, {
+    A: () => A,
+}),
+    n(321073),
+    n(896048),
+    n(733351);
 var r = n(627968),
     i = n(64700),
     a = n(397927),
@@ -18,6 +23,7 @@ var r = n(627968),
     b = n(652215),
     y = n(985018),
     O = n(935606);
+
 function A(e) {
     let { resultsState: t, searchContext: n, selectedChannel: A, setSearchQuery: v } = e,
         { autocompletes: S, mode: I } = t,
@@ -82,7 +88,9 @@ function A(e) {
                         height: 20,
                         className: O.Fx,
                     }),
-                    label: (0, r.jsx)(d.bg, { label: i }),
+                    label: (0, r.jsx)(d.bg, {
+                        label: i,
+                    }),
                     sublabel: t
                         ? (0, r.jsx)(a.Text, {
                               variant: "text-sm/medium",
@@ -126,7 +134,9 @@ function A(e) {
                                 className: O.Fx,
                             }),
                             label: (0, r.jsx)(d.bg, {
-                                label: y.intl.format(y.t["VGEH/0"], { channelName: t }),
+                                label: y.intl.format(y.t["VGEH/0"], {
+                                    channelName: t,
+                                }),
                                 className: O.YL,
                             }),
                             onSelect: (e) => {
@@ -139,7 +149,12 @@ function A(e) {
                         });
                     e.push(s);
                 }
-                let t = [...C, w({ hasOtherSearchFiltersVisible: !0 })];
+                let t = [
+                    ...C,
+                    w({
+                        hasOtherSearchFiltersVisible: !0,
+                    }),
+                ];
                 e.push(
                     (0, p.wE)(f.$.GROUP, {
                         rows: t,
@@ -181,7 +196,9 @@ function A(e) {
                             return (0, p.wE)(f.$.ROW, {
                                 icon: c,
                                 label: u,
-                                ariaLabel: y.intl.formatToPlainString(y.t.WoiGrV, { suggestion: _ }),
+                                ariaLabel: y.intl.formatToPlainString(y.t.WoiGrV, {
+                                    suggestion: _,
+                                }),
                                 resultText: l,
                                 onSelect: m,
                             });
@@ -189,7 +206,12 @@ function A(e) {
                         getAutocompleteGroupItem: (e) => {
                             let { group: t, rows: i } = e,
                                 a = (0, p.JU)(t),
-                                s = t === b.x2k.HISTORY ? (0, r.jsx)(d.k8, { searchContext: n }) : null;
+                                s =
+                                    t === b.x2k.HISTORY
+                                        ? (0, r.jsx)(d.k8, {
+                                              searchContext: n,
+                                          })
+                                        : null;
                             return (0, p.wE)(f.$.GROUP, {
                                 rows: i,
                                 title: a,
@@ -197,7 +219,12 @@ function A(e) {
                             });
                         },
                     });
-                return s > 0 && e.push(...o), { items: e };
+                return (
+                    s > 0 && e.push(...o),
+                    {
+                        items: e,
+                    }
+                );
             },
             [b.o$q.FILTER_ALL]: () => {
                 let e = [];
@@ -215,13 +242,22 @@ function A(e) {
                             }),
                             label:
                                 n.type === b.I4_.FAVORITES && (0, l.Eq)()
-                                    ? (0, r.jsx)(d.bg, { label: y.intl.string(y.t["6RVtLA"]) })
+                                    ? (0, r.jsx)(d.bg, {
+                                          label: y.intl.string(y.t["6RVtLA"]),
+                                      })
                                     : (0, r.jsx)(d.bg, {
-                                          label: y.intl.format(y.t.rCnaoo, { value: i }),
+                                          label: y.intl.format(y.t.rCnaoo, {
+                                              value: i,
+                                          }),
                                           className: O.YL,
                                       }),
-                            ariaLabel: y.intl.formatToPlainString(y.t.rCnaoo, { value: t.query }),
-                            onSelect: () => N({ searchEverywhere: !1 }),
+                            ariaLabel: y.intl.formatToPlainString(y.t.rCnaoo, {
+                                value: t.query,
+                            }),
+                            onSelect: () =>
+                                N({
+                                    searchEverywhere: !1,
+                                }),
                         });
                     if ((e.push(s), n.type === b.I4_.FAVORITES && (0, l.Eq)())) {
                         let t = (0, p.wE)(f.$.ROW, {
@@ -230,8 +266,13 @@ function A(e) {
                                 color: "currentColor",
                                 className: O.Fx,
                             }),
-                            label: (0, r.jsx)(d.bg, { label: y.intl.string(y.t.FtSUxc) }),
-                            onSelect: () => N({ searchEverywhere: !0 }),
+                            label: (0, r.jsx)(d.bg, {
+                                label: y.intl.string(y.t.FtSUxc),
+                            }),
+                            onSelect: () =>
+                                N({
+                                    searchEverywhere: !0,
+                                }),
                         });
                         e.push(t);
                     }
@@ -296,7 +337,12 @@ function A(e) {
                     },
                 });
                 if (0 === i) {
-                    let t = [...C, w({ hasOtherSearchFiltersVisible: !0 })];
+                    let t = [
+                        ...C,
+                        w({
+                            hasOtherSearchFiltersVisible: !0,
+                        }),
+                    ];
                     e.push(
                         (0, p.wE)(f.$.GROUP, {
                             rows: t,
@@ -304,10 +350,17 @@ function A(e) {
                         }),
                     );
                 } else {
-                    let t = w({ hasOtherSearchFiltersVisible: !1 });
+                    let t = w({
+                        hasOtherSearchFiltersVisible: !1,
+                    });
                     e.push(t);
                 }
-                return i > 0 && e.push(...s), { items: e };
+                return (
+                    i > 0 && e.push(...s),
+                    {
+                        items: e,
+                    }
+                );
             },
             [b.o$q.FILTER]: () => {
                 let { autocompleteCount: e, autocompleteGroups: t } = T({
@@ -356,7 +409,9 @@ function A(e) {
                         });
                     },
                 });
-                return { items: [...t] };
+                return {
+                    items: [...t],
+                };
             },
         }[I.type])(),
         D = i.useMemo(() => {

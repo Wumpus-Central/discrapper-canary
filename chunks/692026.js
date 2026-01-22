@@ -1,4 +1,8 @@
-n.d(t, { A: () => p }), n(228524), n(747238);
+n.d(t, {
+    A: () => p,
+}),
+    n(228524),
+    n(747238);
 var l = n(627968),
     r = n(64700),
     i = n(311907),
@@ -14,6 +18,7 @@ var l = n(627968),
     h = n(895202),
     j = n(985018),
     v = n(330156);
+
 function p(e) {
     var t, n;
     let { guildId: p, guildEvent: f, guildEventId: b, error: y } = e,

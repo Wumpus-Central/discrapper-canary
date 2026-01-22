@@ -1,4 +1,6 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(627968);
 n(64700);
 var l = n(397927),
@@ -19,7 +21,9 @@ let s = (e) => {
                 children: [
                     (0, r.jsx)(l.Heading, {
                         variant: "heading-md/semibold",
-                        children: i.intl.format(i.t.THgVCC, { guild: t.name }),
+                        children: i.intl.format(i.t.THgVCC, {
+                            guild: t.name,
+                        }),
                     }),
                     (0, r.jsx)(l.Text, {
                         color: "text-default",

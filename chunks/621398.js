@@ -1,9 +1,12 @@
-n.d(t, { m: () => _ });
+n.d(t, {
+    m: () => _,
+});
 var r = n(627968);
 n(64700);
 var i = n(13181),
     a = n(786558),
     s = n(799226);
+
 function o(e, t, n) {
     return (
         t in e
@@ -17,6 +20,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -33,6 +37,7 @@ function l(e) {
     }
     return e;
 }
+
 function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -45,6 +50,7 @@ function c(e, t) {
     }
     return n;
 }
+
 function u(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -56,6 +62,7 @@ function u(e, t) {
         e
     );
 }
+
 function d(e, t) {
     if (null == e) return {};
     var n,
@@ -72,6 +79,7 @@ function d(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function f(e, t) {
     if (null == e) return {};
     var n,
@@ -225,6 +233,7 @@ let p = {
         ConnectorColor: "color",
     },
 };
+
 function _(e) {
     let { artboard: t = "MAIN" } = e,
         n = d(e, ["artboard"]),
@@ -235,11 +244,21 @@ function _(e) {
         : (0, r.jsx)(
               a.w,
               l(
-                  u(l({}, f ? { key: "override" } : {}), {
-                      buffer: c,
-                      artboard: t,
-                      artboardProperties: p,
-                  }),
+                  u(
+                      l(
+                          {},
+                          f
+                              ? {
+                                    key: "override",
+                                }
+                              : {},
+                      ),
+                      {
+                          buffer: c,
+                          artboard: t,
+                          artboardProperties: p,
+                      },
+                  ),
                   n,
               ),
           );

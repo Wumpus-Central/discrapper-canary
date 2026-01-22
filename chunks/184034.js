@@ -1,4 +1,12 @@
-n.d(t, { q: () => V }), n(896048), n(65821), n(747238), n(812715), n(321073), n(457529);
+n.d(t, {
+    q: () => V,
+}),
+    n(896048),
+    n(65821),
+    n(747238),
+    n(812715),
+    n(321073),
+    n(457529);
 var r = n(284009),
     i = n.n(r),
     a = n(635377),
@@ -15,6 +23,7 @@ var r = n(284009),
     m = n(857157),
     g = n(900090),
     E = n(144667);
+
 function b(e, t, n) {
     return (
         t in e
@@ -28,6 +37,7 @@ function b(e, t, n) {
         e
     );
 }
+
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -44,6 +54,7 @@ function y(e) {
     }
     return e;
 }
+
 function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -56,6 +67,7 @@ function O(e, t) {
     }
     return n;
 }
+
 function A(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -69,32 +81,74 @@ function A(e, t) {
 }
 let v = new c.A("MarkdownToSlate"),
     S = {
-        link: { type: "skip" },
-        highlight: { type: "skip" },
-        blockQuote: { type: "skip" },
-        codeBlock: { type: "skip" },
-        list: { type: "skip" },
-        heading: { type: "skip" },
-        channelOrMessageUrl: { type: "skip" },
-        mediaPostLink: { type: "skip" },
-        attachmentLink: { type: "skip" },
-        newline: { type: "verbatim" },
-        br: { type: "verbatim" },
-        paragraph: { type: "verbatim" },
-        text: { type: "verbatim" },
-        emoticon: { type: "verbatim" },
-        mention: { type: "inlineObject" },
-        roleMention: { type: "inlineObject" },
-        commandMention: { type: "inlineObject" },
-        channelMention: { type: "inlineObject" },
-        gameMention: { type: "inlineObject" },
+        link: {
+            type: "skip",
+        },
+        highlight: {
+            type: "skip",
+        },
+        blockQuote: {
+            type: "skip",
+        },
+        codeBlock: {
+            type: "skip",
+        },
+        list: {
+            type: "skip",
+        },
+        heading: {
+            type: "skip",
+        },
+        channelOrMessageUrl: {
+            type: "skip",
+        },
+        mediaPostLink: {
+            type: "skip",
+        },
+        attachmentLink: {
+            type: "skip",
+        },
+        newline: {
+            type: "verbatim",
+        },
+        br: {
+            type: "verbatim",
+        },
+        paragraph: {
+            type: "verbatim",
+        },
+        text: {
+            type: "verbatim",
+        },
+        emoticon: {
+            type: "verbatim",
+        },
+        mention: {
+            type: "inlineObject",
+        },
+        roleMention: {
+            type: "inlineObject",
+        },
+        commandMention: {
+            type: "inlineObject",
+        },
+        channelMention: {
+            type: "inlineObject",
+        },
+        gameMention: {
+            type: "inlineObject",
+        },
         silentPrefix: {
             type: "inlineStyle",
             before: "@silent",
             after: " ",
         },
-        emoji: { type: "inlineObject" },
-        customEmoji: { type: "inlineObject" },
+        emoji: {
+            type: "inlineObject",
+        },
+        customEmoji: {
+            type: "inlineObject",
+        },
         looseEm: {
             type: "inlineStyle",
             before: "*",
@@ -170,8 +224,12 @@ let v = new c.A("MarkdownToSlate"),
             before: "",
             after: "",
         },
-        timestamp: { type: "inlineObject" },
-        timestampMentionInput: { type: "inlineObject" },
+        timestamp: {
+            type: "inlineObject",
+        },
+        timestampMentionInput: {
+            type: "inlineObject",
+        },
         em: {
             type: "inlineStyle",
             before: "*",
@@ -201,6 +259,7 @@ for (let e in d.A.RULES) {
     "skip" !== t.type && (T[e] = N(d.A.RULES[e])),
         "skip" !== t.type && "inlineObject" !== t.type && (C[e] = N("text" === e ? f.Ay : d.A.RULES[e]));
 }
+
 function N(e) {
     i()(null != e.parse, "Slate: rule must have a parse function");
     let t = e.parse;
@@ -211,6 +270,7 @@ function N(e) {
         },
     });
 }
+
 function R(e) {
     return {
         type: "autolink",
@@ -243,8 +303,12 @@ let w = {
                       }
                     : R(e),
         },
-        mailto: { parse: R },
-        tel: { parse: R },
+        mailto: {
+            parse: R,
+        },
+        tel: {
+            parse: R,
+        },
         codeBlockSyntax: {
             order: o.defaultRules.inlineCode.order - 0.1,
             match: (e) => /^(```)([a-z0-9_+\-.#]+$)?/.exec(e),
@@ -281,6 +345,7 @@ let w = {
     },
     k = new (s())(M),
     U = new (s())(M);
+
 function G(e, t, n) {
     let r = [],
         i = {
@@ -312,6 +377,7 @@ function G(e, t, n) {
     let u = F(r);
     return s.set(e, u), u;
 }
+
 function V(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
@@ -334,13 +400,18 @@ function V(e, t) {
             let l = e.substring(a, n);
             "" !== l &&
                 G(l, t, r).forEach((e) => {
-                    o.push(A(y({}, e), { start: e.start + a }));
+                    o.push(
+                        A(y({}, e), {
+                            start: e.start + a,
+                        }),
+                    );
                 });
         }
         (s = !s), (a = n);
     }
     return o;
 }
+
 function F(e) {
     if (0 === (e = e.filter((e) => e.text.length > 0)).length) return e;
     let t = [e[0]];
@@ -354,6 +425,7 @@ function F(e) {
     }
     return t;
 }
+
 function B(e, t, n, r, a) {
     let { content: s, type: o, originalMatch: l } = n;
     switch ((i()(null != l, "Slate: originalMatch must be set " + JSON.stringify(n, void 0, 2)), o)) {
@@ -405,7 +477,9 @@ function B(e, t, n, r, a) {
                         text: a,
                         originalStart: r,
                         attributes: ["textMention"],
-                        data: { text: a },
+                        data: {
+                            text: a,
+                        },
                     })
                 );
             return K({
@@ -414,7 +488,9 @@ function B(e, t, n, r, a) {
                 text: l[0],
                 originalStart: r,
                 attributes: [o],
-                data: { id: s },
+                data: {
+                    id: s,
+                },
             });
         }
         case "gameMention": {
@@ -425,7 +501,9 @@ function B(e, t, n, r, a) {
                 text: l[0],
                 originalStart: r,
                 attributes: [o],
-                data: { id: i },
+                data: {
+                    id: i,
+                },
             });
         }
         case "staticRouteLink":
@@ -442,8 +520,20 @@ function B(e, t, n, r, a) {
                 },
             });
         case "timestamp":
-            let d = m.A.getConfig({ location: "flattenMarkdown" }).enabled;
-            if (g.A.getCurrentConfig({ location: "c70cbb_1" }, { autoTrackExposure: !1 }).enabled || d)
+            let d = m.A.getConfig({
+                location: "flattenMarkdown",
+            }).enabled;
+            if (
+                g.A.getCurrentConfig(
+                    {
+                        location: "c70cbb_1",
+                    },
+                    {
+                        autoTrackExposure: !1,
+                    },
+                ).enabled ||
+                d
+            )
                 return K({
                     result: e,
                     sourceText: t,
@@ -454,7 +544,11 @@ function B(e, t, n, r, a) {
                 });
             return Y(e, t, l[0], r, a);
         case "timestampMentionInput":
-            if (m.A.getConfig({ location: "flattenMarkdown-input" }).enabled)
+            if (
+                m.A.getConfig({
+                    location: "flattenMarkdown-input",
+                }).enabled
+            )
                 return K({
                     result: e,
                     sourceText: t,
@@ -494,6 +588,7 @@ function B(e, t, n, r, a) {
             throw Error("Slate: Unknown rule type: ".concat(o));
     }
 }
+
 function H(e, t, n, r) {
     if ("inlineCode" === t)
         return {
@@ -514,6 +609,7 @@ function H(e, t, n, r) {
     if ("inlineStyle" === i.type) return i;
     throw Error("Slate: rule must be an inlineStyle");
 }
+
 function Y(e, t, n, r, i) {
     return (
         "string" == typeof n
@@ -532,6 +628,7 @@ function Y(e, t, n, r, i) {
         z(t, r)
     );
 }
+
 function W(e, t, n, r, i) {
     if (n.length > 0) {
         let a = t.indexOf(n, r);
@@ -547,6 +644,7 @@ function W(e, t, n, r, i) {
     }
     return r;
 }
+
 function K(e) {
     let { result: t, sourceText: n, text: r, originalStart: i, attributes: a, data: s } = e,
         o = z(n, i);
@@ -572,14 +670,17 @@ function K(e) {
         c
     );
 }
+
 function z(e, t) {
     for (; "\n" === e.charAt(t) || " " === e.charAt(t); ) t++;
     return t;
 }
+
 function q(e, t, n) {
     if (t.split("").some((e) => I.has(e))) return v.error(e), n;
     throw Error(e);
 }
+
 function X(e, t, n, r) {
     for (; n < r; )
         if (I.has(t[n])) (n = W(e, t, t[n], n, "syntaxBefore")), (n = z(t, n));

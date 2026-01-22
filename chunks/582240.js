@@ -1,4 +1,6 @@
-n.d(t, { A: () => x });
+n.d(t, {
+    A: () => x,
+});
 var i = n(627968),
     r = n(64700),
     l = n(503698),
@@ -18,6 +20,7 @@ var i = n(627968),
     O = n(545807),
     E = n(652215),
     v = n(121834);
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -43,6 +46,7 @@ function b(e) {
     }
     return e;
 }
+
 function S(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -140,7 +144,13 @@ let x = r.memo(function (e) {
         ),
         Q = (0, o.bG)([g.A], () => g.A.hasRenderDebugMode(f.x7.WidgetAreas)),
         J = r.useMemo(() => {
-            if (null != j) return (e) => j(S(b({}, e), { widget: t }));
+            if (null != j)
+                return (e) =>
+                    j(
+                        S(b({}, e), {
+                            widget: t,
+                        }),
+                    );
         }, [j, t]);
     return (0, i.jsx)(m.A, {
         className: a()(
@@ -166,7 +176,9 @@ let x = r.memo(function (e) {
         locked: C,
         resizeX: null != Y && Y,
         resizeY: null != F && F,
-        style: { zIndex: M },
+        style: {
+            zIndex: M,
+        },
         dragAnywhere: null != K && K,
         active: !C,
         onUpdate: D,

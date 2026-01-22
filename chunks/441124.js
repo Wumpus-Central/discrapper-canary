@@ -1,4 +1,6 @@
-e.d(n, { V: () => c });
+e.d(n, {
+    V: () => c,
+});
 var o = e(627968);
 e(64700);
 var i = e(518614),
@@ -6,6 +8,7 @@ var i = e(518614),
     s = e(59198),
     d = e(652215),
     r = e(544105);
+
 function c(t) {
     let { platformType: n, authToken: e, onContinue: c, onError: l, onClose: b } = t,
         p = n === d.fg2.PLAYSTATION_STAGING ? a.i.PLAYSTATION_STAGING_APPLICATION_ID : a.i.PLAYSTATION_APPLICATION_ID,

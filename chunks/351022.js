@@ -1,9 +1,14 @@
-n.d(t, { A: () => I }), n(896048), n(321073);
+n.d(t, {
+    A: () => I,
+}),
+    n(896048),
+    n(321073);
 var r,
     i = n(311907),
     a = n(73153),
     s = n(198982),
     o = n(324580);
+
 function l(e, t, n) {
     return (
         t in e
@@ -17,6 +22,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -33,6 +39,7 @@ function c(e) {
     }
     return e;
 }
+
 function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -45,6 +52,7 @@ function u(e, t) {
     }
     return n;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -58,6 +66,7 @@ function d(e, t) {
 }
 let f = new Map(),
     p = new Map();
+
 function _(e) {
     return [o.I9, e.query, o.OR, e.categoryId, o.O3, e.languageCode].join("-");
 }
@@ -90,20 +99,29 @@ class h {
             (this.query = e);
     }
 }
+
 function m(e) {
     var t;
     let n = _(e),
-        r = null != (t = f.get(n)) ? t : new h({ query: e.query });
+        r =
+            null != (t = f.get(n))
+                ? t
+                : new h({
+                      query: e.query,
+                  });
     return f.set(n, r), r;
 }
+
 function g(e, t) {
     let n = _(e),
         r = f.get(n);
     return null != r ? t(r) : null;
 }
+
 function E() {
     f.clear(), p.clear();
 }
+
 function b(e) {
     let { query: t, categoryId: n, languageCode: r, reset: i } = e,
         a = _({
@@ -118,6 +136,7 @@ function b(e) {
             languageCode: r,
         }).handleSearchStart();
 }
+
 function y(e) {
     let { query: t, categoryId: n, languageCode: r, total: i, guilds: a } = e;
     m({
@@ -132,6 +151,7 @@ function y(e) {
             p.set(e.id, e);
         });
 }
+
 function O(e) {
     let { query: t, categoryId: n, languageCode: r, error: i } = e;
     m({
@@ -140,6 +160,7 @@ function O(e) {
         languageCode: r,
     }).handleSearchFailure(i);
 }
+
 function A(e) {
     let { ignoreQueries: t } = e,
         n = new Set(t);
@@ -147,6 +168,7 @@ function A(e) {
         null == e.query || n.has(e.query) || f.delete(t);
     });
 }
+
 function v(e) {
     var t, n;
     let { guildId: r, profile: i } = e,

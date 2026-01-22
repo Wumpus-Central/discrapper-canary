@@ -1,4 +1,8 @@
-n.d(t, { r: () => b }), n(457529), n(896048);
+n.d(t, {
+    r: () => b,
+}),
+    n(457529),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(342393),
@@ -57,6 +61,7 @@ let f = {
     },
     m = (e) => (void 0 !== e ? JSON.stringify(e, null, 2) : "undefined"),
     g = "``";
+
 function E() {
     let [e, t] = i.useState(m(_)),
         [n, c] = i.useState(_),
@@ -125,7 +130,9 @@ function E() {
                 variant: "text-md/normal",
                 className: d.cW,
                 children: [
-                    (0, r.jsx)("b", { children: "elements.options:" }),
+                    (0, r.jsx)("b", {
+                        children: "elements.options:",
+                    }),
                     (0, r.jsx)("br", {}),
                     (0, r.jsx)(u.Tu, {
                         href: "https://github.com/stripe/stripe-js/blob/master/types/stripe-js/elements-group.d.ts#L632",
@@ -146,7 +153,9 @@ function E() {
                 variant: "text-md/normal",
                 className: d.cW,
                 children: [
-                    (0, r.jsx)("b", { children: "expressCheckoutElement.options:" }),
+                    (0, r.jsx)("b", {
+                        children: "expressCheckoutElement.options:",
+                    }),
                     (0, r.jsx)("br", {}),
                     (0, r.jsx)(u.Tu, {
                         href: "https://github.com/stripe/stripe-js/blob/master/types/stripe-js/elements/express-checkout.d.ts#L314",

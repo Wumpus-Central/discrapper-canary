@@ -6,6 +6,7 @@ var r = n(562465),
     i = n(615405),
     a = n(550238),
     s = n(652215);
+
 function o(e, t, n) {
     return (
         t in e
@@ -19,6 +20,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -61,7 +63,12 @@ let u = async function () {
                       ipCountryCode: null != (e = i.A.ipCountryCode) ? e : "ALL",
                       location: "create_setup_intent_for_payment_elements",
                   }).countryPaymentMethods,
-        c = o.length > 0 ? { regional_payment_source_types: o } : {};
+        c =
+            o.length > 0
+                ? {
+                      regional_payment_source_types: o,
+                  }
+                : {};
     return (
         await r.Bo.post(
             l(

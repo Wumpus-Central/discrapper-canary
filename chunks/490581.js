@@ -1,7 +1,10 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r,
     i = n(311907),
     a = n(73153);
+
 function s(e, t, n) {
     return (
         t in e
@@ -17,13 +20,16 @@ function s(e, t, n) {
 }
 let o = null,
     l = null;
+
 function c(e) {
     let { client: t } = e;
     o = t;
 }
+
 function u() {
     o = null;
 }
+
 function d(e) {
     let { component: t } = e;
     l = t;

@@ -1,4 +1,7 @@
-n.d(t, { A: () => O }), n(896048);
+n.d(t, {
+    A: () => O,
+}),
+    n(896048);
 var r = n(439372),
     i = n(674966),
     a = n(312006),
@@ -11,6 +14,7 @@ var r = n(439372),
     f = n(202232),
     p = n(652215),
     _ = n(765682);
+
 function h(e, t, n) {
     return (
         t in e
@@ -25,16 +29,19 @@ function h(e, t, n) {
     );
 }
 let m = null;
+
 function g() {
     i.A.requestPermission(_.iL.AUDIO).then((e) => {
         e && (0, f.A)(!0);
     }),
         u.A.getMode() === p.TBI.PUSH_TO_TALK && i.A.requestPermission(_.iL.INPUT_MONITORING);
 }
+
 function E(e, t) {
     var n;
     return null == (n = c.A.getChannel(t)) || !n.isListenModeCapable() || a.Ay.isSpeaker(e, t);
 }
+
 function b(e) {
     return (0, s.eY)(e) === s.zF.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
 }

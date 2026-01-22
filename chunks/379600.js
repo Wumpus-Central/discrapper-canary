@@ -1,4 +1,6 @@
-n.d(t, { A: () => v });
+n.d(t, {
+    A: () => v,
+});
 var r = n(627968);
 n(64700);
 var l = n(503698),
@@ -19,6 +21,7 @@ var l = n(503698),
     y = n(806931),
     O = n(985018),
     j = n(287278);
+
 function v(e) {
     let { recipientUser: t, voiceChannel: n } = e,
         l = (0, A.Ay)(n),
@@ -45,7 +48,9 @@ function v(e) {
                 voice_guild_id: null == n ? void 0 : n.guild_id,
             },
         },
-        { disableTrack: _ },
+        {
+            disableTrack: _,
+        },
         [t.id],
     ),
     _)
@@ -103,6 +108,7 @@ function v(e) {
               ],
           });
 }
+
 function x(e) {
     let { channelId: t, recipientUserId: n, isUserRinging: l } = e,
         i = l ? O.intl.string(O.t.ygslb0) : O.intl.string(O.t["3Hv9qQ"]),

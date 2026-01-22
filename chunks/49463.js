@@ -23,6 +23,7 @@ var r = n(735438),
     _ = n(98801),
     h = n(688151),
     m = n(652215);
+
 function g(e, t, n) {
     return (
         t in e
@@ -36,6 +37,7 @@ function g(e, t, n) {
         e
     );
 }
+
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -52,6 +54,7 @@ function E(e) {
     }
     return e;
 }
+
 function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -64,6 +67,7 @@ function b(e, t) {
     }
     return n;
 }
+
 function y(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -97,6 +101,7 @@ let O = "scientist:triggered",
     k = null,
     U = "staging" === window.GLOBAL_ENV.RELEASE_CHANNEL || (0, c.kK)(),
     G = {};
+
 function V(e) {
     let t = G[e];
     if (void 0 !== t) return t;
@@ -106,14 +111,17 @@ function V(e) {
     }
 }
 let F = h.NM.map((e) => V(e)),
-    B = 604800000;
+    B = 6048e5;
+
 function H(e, t) {
     return e || F.includes(t);
 }
+
 function Y(e) {
     var t;
     return ((null != (t = e.flags) ? t : 0) & m.nhx.STAFF) === m.nhx.STAFF || null != e.personal_connection_id;
 }
+
 function W(e, t, n, r) {
     let i = "".concat(t.type, "|").concat(e),
         a = t.triggerDebuggingEnabled && void 0 !== n && n.length > 0;
@@ -122,6 +130,7 @@ function W(e, t, n, r) {
         return (i += "|".concat(t.guildId)), a && ((i += "|".concat(n)), r && (i += "|triggerDebugging")), i;
     throw Error();
 }
+
 function K(e) {
     if (e.type === h.Vh.USER) return V("".concat(e.bucket, "|").concat(e.revision));
     if (e.type === h.Vh.GUILD) return V("".concat(e.bucket, "|").concat(e.revision, "|").concat(e.guildId));
@@ -129,13 +138,16 @@ function K(e) {
 }
 let z = Date.now(),
     q = !1;
+
 function X(e, t) {
     let n = N[e];
     return !(null == n || (q ? n.time < z : Date.now() - n.time > B)) && n.hash === t;
 }
+
 function Z(e, t) {
     return R.get(e) === t;
 }
+
 function Q(e) {
     let {
             experimentId: t,
@@ -245,16 +257,19 @@ function Q(e) {
           }),
           eh(N));
 }
+
 function $(e) {
     let [t, n] = e;
     return null != _.k[t] ? _.k[t](n) : null;
 }
+
 function J(e) {
     let t = {};
     if (null == e) return t;
     for (let { b: n, k: r } of e) for (let e of r) t[e] = n;
     return t;
 }
+
 function ee(e) {
     let [t, n] = e;
     return {
@@ -275,6 +290,7 @@ function ee(e) {
         rawFilterData: n,
     };
 }
+
 function et(e) {
     var t;
     !U && "CONNECTION_OPEN" === e.type && Y(e.user) && (U = !0),
@@ -308,6 +324,7 @@ function et(e) {
         ),
         (C = !0);
 }
+
 function en(e) {
     let { rawUserExperiments: t, rawGuildExperiments: n, source: r, sessionId: i, fingerprint: a } = e,
         s = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
@@ -358,6 +375,7 @@ function en(e) {
                 };
             });
 }
+
 function er(e, t, n) {
     let r = null;
     for (let { buckets: a, filters: s } of t) {
@@ -382,7 +400,8 @@ function er(e, t, n) {
     }
     return null;
 }
-let ei = 10000;
+let ei = 1e4;
+
 function ea(e, t) {
     var n, r;
     let i = V(t),
@@ -448,6 +467,7 @@ function ea(e, t) {
               holdoutBucket: null == f ? void 0 : f.bucket,
           };
 }
+
 function es(e) {
     let t = {};
     for (let r in e) {
@@ -459,6 +479,7 @@ function es(e) {
     }
     return t;
 }
+
 function eo(e) {
     let { serializedExperimentStore: t, user: n } = e;
     if (
@@ -481,21 +502,27 @@ function eo(e) {
         (k = null != (r = t.cookieOverrides) ? r : null), ef();
     }
 }
+
 function el() {
     C = !0;
 }
+
 function ec(e) {
     let { isSwitchingAccount: t } = e;
     o.w.remove(O),
         t || (o.w.remove(A), o.w.remove(v), o.w.remove(S), (j = {}), (M = {})),
         (D = {}),
-        (P = y(E({}, P), { rawUserExperiments: [] })),
+        (P = y(E({}, P), {
+            rawUserExperiments: [],
+        })),
         (N = {}),
         (C = !1);
 }
+
 function eu() {
     (C = !1), (N = {}), (x = {}), o.w.remove(O);
 }
+
 function ed() {
     let e = o.w.get(O);
     if (null == e || e.v !== I) return {};
@@ -505,6 +532,7 @@ function ed() {
     for (let e in t) n - t[e].time > B && (delete t[e], (r = !0));
     return r && eh(t), t;
 }
+
 function ef() {
     let e = !1,
         t = __OVERLAY__ ? k : (0, c.DI)();
@@ -529,6 +557,7 @@ function ef() {
             (e = !0);
     return e;
 }
+
 function ep() {
     var e, t, n;
     let r = [null != (e = o.w.get(A)) ? e : {}, null != (t = o.w.get(v)) ? t : {}, null != (n = o.w.get(S)) ? n : {}];
@@ -549,6 +578,7 @@ function ep() {
         }
     (a = ef() || a) && e_();
 }
+
 function e_() {
     try {
         o.w.set(v, j);
@@ -569,6 +599,7 @@ function e_() {
             });
     }
 }
+
 function eh(e) {
     try {
         o.w.set(O, {
@@ -583,6 +614,7 @@ function eh(e) {
             });
     }
 }
+
 function em(e) {
     let { experimentId: t, experimentType: n, title: r, description: i, buckets: a, commonTriggerPoint: s } = e;
     w[t] = {
@@ -593,6 +625,7 @@ function em(e) {
         commonTriggerPoint: s,
     };
 }
+
 function eg(e) {
     var t;
     let { experimentId: n, experimentBucket: r, experimentType: i, skipCleanup: a } = e,
@@ -624,6 +657,7 @@ function eg(e) {
         for (let e of [j, M]) for (let t in e) null == w[t] && delete j[t];
     e_();
 }
+
 function eE(e) {
     let { guild: t } = e;
     for (let e in L) {

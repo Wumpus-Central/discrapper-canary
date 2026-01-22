@@ -9,5 +9,7 @@ n(
             return t;
         }),
     },
-    { isSubsetOf: o },
+    {
+        isSubsetOf: o,
+    },
 );

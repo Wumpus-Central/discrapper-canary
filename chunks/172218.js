@@ -7,6 +7,7 @@ var r = n(64700),
     i = n(66455),
     a = n(206692);
 let s = {};
+
 function o(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
         o = (0, r.useRef)(null),
@@ -32,11 +33,27 @@ function o(e, t) {
         o
     );
 }
-let l = new Map([[1, { threshold: 1 }]]);
+let l = new Map([
+    [
+        1,
+        {
+            threshold: 1,
+        },
+    ],
+]);
+
 function c(e) {
     let t = l.get(e);
-    return null != t || ((t = { threshold: e }), l.set(e, t)), t;
+    return (
+        null != t ||
+            ((t = {
+                threshold: e,
+            }),
+            l.set(e, t)),
+        t
+    );
 }
+
 function u(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
         n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],

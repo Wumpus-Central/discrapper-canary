@@ -1,9 +1,13 @@
-n.d(t, { A: () => d }), n(896048);
+n.d(t, {
+    A: () => d,
+}),
+    n(896048);
 var r = n(311907),
     i = n(35033),
     a = n(73153),
     s = n(961350),
     o = n(989950);
+
 function l(e, t, n) {
     return (
         t in e
@@ -141,6 +145,7 @@ class c extends r.Ay.Store {
             l(this, "userSearchItemsTransaction", (e) => this.userSearchItems(e.database).upgradeTransaction(e));
     }
 }
+
 function u(e) {
     return function (t) {
         let n = null != t ? t : o.A.database(s.default.getId());

@@ -1,4 +1,7 @@
-l.d(t, { default: () => c }), l(896048);
+l.d(t, {
+    default: () => c,
+}),
+    l(896048);
 var a = l(627968),
     i = l(64700),
     n = l(732955),
@@ -68,7 +71,10 @@ let c = function (e) {
                     onChange: (e) => d(e),
                     label: "Should serve invisible?",
                 }),
-            "" !== h && (0, a.jsx)(o.dzK, { error: h }),
+            "" !== h &&
+                (0, a.jsx)(o.dzK, {
+                    error: h,
+                }),
         ],
     });
 };

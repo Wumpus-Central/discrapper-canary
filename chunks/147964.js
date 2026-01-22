@@ -1,5 +1,9 @@
 let r, i, a;
-n.d(t, { A: () => T }), n(896048), n(142703);
+n.d(t, {
+    A: () => T,
+}),
+    n(896048),
+    n(142703);
 var s,
     o = n(311907),
     l = n(73153),
@@ -7,6 +11,7 @@ var s,
     u = n(253932),
     d = n(617617),
     f = n(189081);
+
 function p(e, t, n) {
     return (
         t in e
@@ -20,6 +25,7 @@ function p(e, t, n) {
         e
     );
 }
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -43,24 +49,30 @@ let h = {
     m = h,
     g = new Set(),
     E = !1;
+
 function b() {
     a = null;
 }
+
 function y() {
     (r = null), (i = null), (g = new Set()), (m.applicationId = null), (m.originURL = null), b();
 }
+
 function O(e) {
     let { applicationId: t } = e;
     g.add(t), (a = null);
 }
+
 function A(e) {
     let { applicationId: t, originURL: n } = e;
     (r = t), (i = n), g.delete(t), (a = null), (m.applicationId = t), (m.originURL = n);
 }
+
 function v(e) {
     let { applicationId: t, error: n } = e;
     g.delete(t), (a = n);
 }
+
 function S(e) {
     let { testModeApplicationId: t } = e;
     r = t;

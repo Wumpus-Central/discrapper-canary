@@ -1,4 +1,7 @@
-n.d(t, { A: () => P }), n(801541);
+n.d(t, {
+    A: () => P,
+}),
+    n(801541);
 var r = n(627968);
 n(64700);
 var i = n(889137),
@@ -19,6 +22,7 @@ var i = n(889137),
     b = n(985018),
     y = n(421514),
     O = n(306499);
+
 function A(e, t, n) {
     return (
         t in e
@@ -32,6 +36,7 @@ function A(e, t, n) {
         e
     );
 }
+
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -48,6 +53,7 @@ function v(e) {
     }
     return e;
 }
+
 function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -60,6 +66,7 @@ function S(e, t) {
     }
     return n;
 }
+
 function I(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -72,6 +79,7 @@ function I(e, t) {
     );
 }
 let T = m.Ay.getEnableHardwareAcceleration() ? s.JsQ : s.euF;
+
 function C(e) {
     let { avatarDecoration: t } = e,
         {
@@ -96,6 +104,7 @@ function C(e) {
         ),
     });
 }
+
 function N(e) {
     var t;
     let { skuId: n } = e,
@@ -108,10 +117,13 @@ function N(e) {
                 alt: null == i ? void 0 : i.accessibilityLabel,
                 className: y.Zp,
             }),
-            (0, r.jsx)(h.A, { skuId: n }),
+            (0, r.jsx)(h.A, {
+                skuId: n,
+            }),
         ],
     });
 }
+
 function R(e) {
     let { nameplate: t } = e;
     return (0, r.jsx)("div", {
@@ -139,9 +151,33 @@ let w = (e) => {
             }),
         });
     let l = (0, i.YW)(o)
-        .with({ type: a.R.AVATAR_DECORATION }, (e) => (0, r.jsx)(C, { avatarDecoration: e }))
-        .with({ type: a.R.PROFILE_EFFECT }, (e) => (0, r.jsx)(N, { skuId: e.skuId }))
-        .with({ type: a.R.NAMEPLATE }, (e) => (0, r.jsx)(R, { nameplate: e }))
+        .with(
+            {
+                type: a.R.AVATAR_DECORATION,
+            },
+            (e) =>
+                (0, r.jsx)(C, {
+                    avatarDecoration: e,
+                }),
+        )
+        .with(
+            {
+                type: a.R.PROFILE_EFFECT,
+            },
+            (e) =>
+                (0, r.jsx)(N, {
+                    skuId: e.skuId,
+                }),
+        )
+        .with(
+            {
+                type: a.R.NAMEPLATE,
+            },
+            (e) =>
+                (0, r.jsx)(R, {
+                    nameplate: e,
+                }),
+        )
         .otherwise(() => null);
     return null != n && null == l
         ? (0, r.jsx)("div", {
@@ -155,7 +191,12 @@ let w = (e) => {
           })
         : l;
 };
+
 function P(e) {
     let { sku: t } = e;
-    return t.productLine === E.EZt.COLLECTIBLES ? (0, r.jsx)(w, { sku: t }) : null;
+    return t.productLine === E.EZt.COLLECTIBLES
+        ? (0, r.jsx)(w, {
+              sku: t,
+          })
+        : null;
 }

@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -8,6 +10,7 @@ var i = n(397927),
     c = n(437242),
     o = n(411335),
     d = n(86181);
+
 function u(e) {
     let { action: t, triggerType: n, toggled: s, onToggleAction: a } = e,
         c = (0, l.x)(t.type, t, n);
@@ -50,6 +53,7 @@ function u(e) {
         ],
     });
 }
+
 function f(e) {
     let { action: t, guildId: n, triggerType: i, toggled: l, onToggleAction: d } = e;
     switch (t.type) {

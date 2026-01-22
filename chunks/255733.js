@@ -5,7 +5,9 @@ e.exports = function () {
     return (
         r(
             Array.prototype,
-            { map: e },
+            {
+                map: e,
+            },
             {
                 map: function () {
                     return Array.prototype.map !== e;

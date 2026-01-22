@@ -1,10 +1,15 @@
-n.d(t, { A: () => g }), n(896048), n(667532);
+n.d(t, {
+    A: () => g,
+}),
+    n(896048),
+    n(667532);
 var r,
     i = n(311907),
     l = n(73153),
     s = n(734057),
     o = n(696451),
     a = n(71393);
+
 function u(e, t, n) {
     return (
         t in e
@@ -27,7 +32,9 @@ class p extends (r = i.Ay.PersistedStore) {
             (d = new Set([...(c = null != (t = null == e ? void 0 : e.channelHistory) ? t : [])]));
     }
     getState() {
-        return { channelHistory: c };
+        return {
+            channelHistory: c,
+        };
     }
     getChannelHistory() {
         return c;

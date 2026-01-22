@@ -14,6 +14,7 @@ var r = n(33851),
     c = n(70738),
     u = n(166233),
     d = n(230959);
+
 function f(e, t, n) {
     return (
         t in e
@@ -27,6 +28,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -43,6 +45,7 @@ function p(e) {
     }
     return e;
 }
+
 function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -55,6 +58,7 @@ function _(e, t) {
     }
     return n;
 }
+
 function h(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -75,16 +79,20 @@ var g = (function (e) {
         e
     );
 })({});
+
 function E(e) {
     let t = [e.isCurrentGuildMemberByTimestamp ? "CURRENT_GUILD_MEMBER" : "NEW_GUILD_MEMBER"];
     return e.isIncludedInSearchResults && t.push("INCLUDED_IN_SEARCH_RESULTS"), t;
 }
+
 function b(e) {
     return e.sort;
 }
+
 function y() {
     return new a.J(E, b);
 }
+
 function O(e) {
     return null != e && new Date(e).getTime() >= m - c.tX;
 }

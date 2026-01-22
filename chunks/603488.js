@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -9,6 +11,7 @@ var i = n(503698),
     c = n(985018),
     u = n(985858);
 let d = 14;
+
 function f() {
     return (0, l.k8)(s.M.BOGO_2025_NITRO_TAB_BADGE)
         ? (0, r.jsxs)("div", {

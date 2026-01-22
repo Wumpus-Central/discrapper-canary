@@ -6,8 +6,11 @@ n.d(t, {
 var r = n(73153),
     i = n(954571),
     a = n(652215);
+
 function s(e) {
-    i.default.track(a.HAw.HOTSPOT_HIDDEN, { hotspot_location: e }),
+    i.default.track(a.HAw.HOTSPOT_HIDDEN, {
+        hotspot_location: e,
+    }),
         r.h.wait(() => {
             r.h.dispatch({
                 type: "HOTSPOT_HIDE",
@@ -15,6 +18,7 @@ function s(e) {
             });
         });
 }
+
 function o(e, t) {
     r.h.dispatch({
         type: "HOTSPOT_OVERRIDE_SET",
@@ -22,6 +26,7 @@ function o(e, t) {
         enabled: t,
     });
 }
+
 function l(e) {
     r.h.dispatch({
         type: "HOTSPOT_OVERRIDE_CLEAR",

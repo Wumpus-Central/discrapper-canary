@@ -1,9 +1,12 @@
-n.d(t, { j: () => o });
+n.d(t, {
+    j: () => o,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
     a = n.n(i),
     s = n(22789);
+
 function o(e) {
     let { children: t } = e;
     return null == t

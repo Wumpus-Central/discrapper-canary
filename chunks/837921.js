@@ -27,6 +27,7 @@ var r,
     m = n(998218),
     g = n(652215),
     E = n(264572).Buffer;
+
 function b(e, t, n) {
     return (
         t in e
@@ -40,6 +41,7 @@ function b(e, t, n) {
         e
     );
 }
+
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -56,6 +58,7 @@ function y(e) {
     }
     return e;
 }
+
 function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -68,6 +71,7 @@ function O(e, t) {
     }
     return n;
 }
+
 function A(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -113,6 +117,7 @@ let D = new Set([
 var V = (function (e) {
     return (e.SAVED = "saved"), (e.CANCELED = "canceled"), (e.ERRORED = "errored"), e;
 })({});
+
 function F(e) {
     try {
         let t = decodeURIComponent(e);
@@ -134,6 +139,7 @@ async function B(e) {
     let r = await n.arrayBuffer();
     return l()(null != r, "Data is null"), r;
 }
+
 function H(e) {
     return B(e);
 }
@@ -150,6 +156,7 @@ var Y = (function (e) {
     W = (function (e) {
         return (e.VIDEO = "VIDEO"), (e.MUTE = "MUTE"), (e.DEAFEN = "DEAFEN"), (e.DISCONNECT = "DISCONNECT"), e;
     })({});
+
 function K(e) {
     var t, n, r, i, a, s, o, l, c;
     return {
@@ -175,6 +182,7 @@ function K(e) {
         isLauncher: null != (c = e.isLauncher) && c,
     };
 }
+
 function z(e, t) {
     var n, r, i, a;
     if (null != t && T(t)) {
@@ -187,6 +195,7 @@ function z(e, t) {
     let o = null == (i = s.pathname) || null == (r = i.split(".")) || null == (n = r.pop()) ? void 0 : n.toLowerCase();
     return null != o && o.length <= C ? o : void 0;
 }
+
 function q(e) {
     if ((0, h.isDesktop)())
         try {
@@ -347,7 +356,7 @@ let X = {
         setBadge(e) {
             if ("darwin" === (0, h.getPlatformName)()) {
                 let t = "";
-                -1 === e ? (t = "\u2022") : e > 0 && (t = "".concat(e)), v.remoteApp.dock.setBadge(t);
+                -1 === e ? (t = "•") : e > 0 && (t = "".concat(e)), v.remoteApp.dock.setBadge(t);
             } else
                 "win32" === (0, h.getPlatformName)()
                     ? this.send("APP_BADGE_SET", e)
@@ -536,7 +545,7 @@ let X = {
             }
         },
         async waitForIPCReady() {
-            let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 5000,
+            let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 5e3,
                 t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : window,
                 n = Date.now();
             for (; Date.now() - n < e; ) {
@@ -724,7 +733,10 @@ let X = {
             let { getPerfAttributedMemoryStats: e } = this.getDiscordUtils();
             return null == e ? void 0 : e();
         },
-        showOpenDialog: (e) => v.fileManager.showOpenDialog({ properties: e }),
+        showOpenDialog: (e) =>
+            v.fileManager.showOpenDialog({
+                properties: e,
+            }),
         flushStorageData: () =>
             h.isPlatformEmbedded
                 ? new Promise((e, t) => {
@@ -770,7 +782,7 @@ let X = {
                     contentType: l,
                 } = y(
                     {
-                        maxBps: 8000,
+                        maxBps: 8e3,
                         chunkInterval: 50,
                         contentType: "application/json",
                     },
@@ -778,7 +790,7 @@ let X = {
                 ),
                 c = t;
             "application/json" === l && (c = JSON.stringify(t));
-            let d = (o / 1000) * a,
+            let d = (o / 1e3) * a,
                 f = Math.ceil(c.length / d),
                 p = Array(f);
             for (let e = 0; e < f; e++) {
@@ -850,7 +862,11 @@ let X = {
         },
         GetWindowFullscreenTypeExtraByPid(e, t) {
             let { getWindowFullscreenTypeExtraByPid: n } = this.getDiscordUtils();
-            return null == n || null == t ? { quns: p.YL.QUNS_UNKNOWN } : n(e, t);
+            return null == n || null == t
+                ? {
+                      quns: p.YL.QUNS_UNKNOWN,
+                  }
+                : n(e, t);
         },
         SetGPUBoostEnabledByPid(e, t) {
             let { setGPUBoostEnabledByPid: n } = this.getDiscordUtils();

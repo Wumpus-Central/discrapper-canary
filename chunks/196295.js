@@ -1,4 +1,8 @@
-n.d(t, { A: () => b }), n(321073), n(896048);
+n.d(t, {
+    A: () => b,
+}),
+    n(321073),
+    n(896048);
 var i = n(627968),
     r = n(64700),
     l = n(311907),
@@ -15,9 +19,11 @@ var i = n(627968),
     g = n(985018),
     y = n(288507);
 let A = [];
+
 function O(e) {
     return e.notification.id;
 }
+
 function E(e, t, n, r) {
     let { index: l, notification: a, locked: o, pinned: s } = t;
     return (0, i.jsx)(
@@ -33,6 +39,7 @@ function E(e, t, n, r) {
         e,
     );
 }
+
 function v(e) {
     return (0, i.jsx)("div", {
         className: y.k,

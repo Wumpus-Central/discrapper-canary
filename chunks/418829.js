@@ -1,4 +1,7 @@
-r.d(t, { A: () => p }), r(896048);
+r.d(t, {
+    A: () => p,
+}),
+    r(896048);
 var n = r(627968),
     l = r(64700),
     o = r(942381),
@@ -10,6 +13,7 @@ var n = r(627968),
     f = r(669550),
     b = r(894858),
     y = r(500425);
+
 function d(e) {
     var t;
     let {
@@ -70,7 +74,10 @@ function d(e) {
                             return;
                         }
                         let l = n.parentPanelKey;
-                        if (null == l) return void b.A.setState({ requestedTargetKey: void 0 });
+                        if (null == l)
+                            return void b.A.setState({
+                                requestedTargetKey: void 0,
+                            });
                         let o = b.A.getField("currentTabKeys"),
                             a = null != n.parentTabKey ? new Map(o).set(l, n.parentTabKey) : o,
                             c = n.parentPanelKey === r && (null == n.parentTabKey || n.parentTabKey === o.get(l)),
@@ -94,7 +101,9 @@ function d(e) {
                               })
                             : i();
                     },
-                    { equalityFn: o.x },
+                    {
+                        equalityFn: o.x,
+                    },
                 ),
             [P, E, j, v],
         );
@@ -128,6 +137,7 @@ function d(e) {
         }),
     });
 }
+
 function p(e) {
     return (0, n.jsx)(s.ms, {
         children: (0, n.jsx)(

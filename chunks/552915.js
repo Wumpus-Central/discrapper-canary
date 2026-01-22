@@ -1,4 +1,6 @@
-r.d(t, { A: () => v });
+r.d(t, {
+    A: () => v,
+});
 var n = r(627968);
 r(64700);
 var i = r(575593),
@@ -122,15 +124,26 @@ let g = s._3J.SIZE_152,
                 className: b.dc,
                 children: (0, n.jsx)(s.y$y, {}),
             });
-        if (r.type === i.R.BUNDLE) return 0 === r.items.length ? null : (0, n.jsx)(x, { product: r });
+        if (r.type === i.R.BUNDLE)
+            return 0 === r.items.length
+                ? null
+                : (0, n.jsx)(x, {
+                      product: r,
+                  });
         let a = null == r ? void 0 : r.items[0];
         switch (null == a ? void 0 : a.type) {
             case i.R.AVATAR_DECORATION:
-                return (0, n.jsx)(O, { item: a });
+                return (0, n.jsx)(O, {
+                    item: a,
+                });
             case i.R.PROFILE_EFFECT:
-                return (0, n.jsx)(j, { item: a });
+                return (0, n.jsx)(j, {
+                    item: a,
+                });
             case i.R.NAMEPLATE:
-                return (0, n.jsx)(A, { item: a });
+                return (0, n.jsx)(A, {
+                    item: a,
+                });
             default:
                 return null != t.giftStyle
                     ? (0, n.jsx)(d.A, {

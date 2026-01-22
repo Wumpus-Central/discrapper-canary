@@ -10,6 +10,7 @@ var r = n(64700),
     l = n(403362),
     c = n(627363),
     u = n(587895);
+
 function d(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         n = r.useRef([]);
@@ -22,6 +23,7 @@ function d(e) {
         (0, s.yK)([u.A], () => e.map((e) => (null != e ? u.A.getApplication(e) : void 0)))
     );
 }
+
 function f(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     return d(null != e ? [e] : [], t)[0];

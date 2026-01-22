@@ -11,7 +11,9 @@ function r(e, t, n) {
         e
     );
 }
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 class i {
     setParams(e) {
         this.param !== e && ((this.param = e), (this.loading = !1), (this.loaded = !1));

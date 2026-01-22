@@ -1,5 +1,7 @@
 e.exports = function (e) {
-    let t = { begin: "`[\\s\\S]" };
+    let t = {
+        begin: "`[\\s\\S]",
+    };
     return {
         name: "AutoHotkey",
         case_insensitive: !0,
@@ -12,8 +14,12 @@ e.exports = function (e) {
         },
         contains: [
             t,
-            e.inherit(e.QUOTE_STRING_MODE, { contains: [t] }),
-            e.COMMENT(";", "$", { relevance: 0 }),
+            e.inherit(e.QUOTE_STRING_MODE, {
+                contains: [t],
+            }),
+            e.COMMENT(";", "$", {
+                relevance: 0,
+            }),
             e.C_BLOCK_COMMENT_MODE,
             {
                 className: "number",
@@ -31,7 +37,9 @@ e.exports = function (e) {
             {
                 className: "title",
                 variants: [
-                    { begin: '^[^\\n";]+::(?!=)' },
+                    {
+                        begin: '^[^\\n";]+::(?!=)',
+                    },
                     {
                         begin: '^[^\\n";]+:(?!=)',
                         relevance: 0,
@@ -48,7 +56,9 @@ e.exports = function (e) {
                 className: "built_in",
                 begin: "A_[a-zA-Z0-9]+",
             },
-            { begin: ",\\s*," },
+            {
+                begin: ",\\s*,",
+            },
         ],
     };
 };

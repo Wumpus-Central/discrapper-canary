@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var r = n(627968),
     a = n(158954),
     l = n(311907),
@@ -10,6 +12,7 @@ var r = n(627968),
     u = n(294726),
     f = n(985018),
     b = n(710882);
+
 function m(e) {
     let { guildId: t } = e,
         n = (0, l.bG)([s.default], () => s.default.getCurrentUser());
@@ -22,7 +25,10 @@ function m(e) {
             text: f.intl.string(u.default.f0xbih),
             icon: a.I9m,
             iconPosition: "end",
-            onClick: () => (0, c.h)({ href: m }),
+            onClick: () =>
+                (0, c.h)({
+                    href: m,
+                }),
         }),
         children: (0, r.jsxs)("div", {
             className: b.Q,

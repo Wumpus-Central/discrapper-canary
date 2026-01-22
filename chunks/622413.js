@@ -1,4 +1,7 @@
-n.d(t, { A: () => l }), n(228524);
+n.d(t, {
+    A: () => l,
+}),
+    n(228524);
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -8,10 +11,18 @@ var i = n(503698),
 let l = (e) => {
     let { renderTitle: t, renderTagline: n, renderActions: i, renderMedia: l, className: c, isHorizontal: u = !1 } = e;
     return (0, r.jsxs)("div", {
-        className: a()(o.Vs, { [o.ZQ]: u }, c),
+        className: a()(
+            o.Vs,
+            {
+                [o.ZQ]: u,
+            },
+            c,
+        ),
         children: [
             (0, r.jsx)("div", {
-                className: a()(o.$_, { [o.rO]: u }),
+                className: a()(o.$_, {
+                    [o.rO]: u,
+                }),
                 children: null == l ? void 0 : l(),
             }),
             (0, r.jsxs)("div", {

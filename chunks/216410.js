@@ -1,4 +1,7 @@
-t.d(n, { A: () => c }), t(228524);
+t.d(n, {
+    A: () => c,
+}),
+    t(228524);
 var r = t(627968);
 t(64700);
 var l = t(503698),
@@ -7,6 +10,7 @@ var l = t(503698),
     o = t(158954),
     u = t(581444),
     a = t(671816);
+
 function c(e) {
     let {
         title: n,
@@ -32,7 +36,11 @@ function c(e) {
                 (0, r.jsx)("div", {
                     className: u.Td,
                     style:
-                        null != l ? { backgroundImage: null != l ? "url(".concat(l.toString(), ")") : void 0 } : void 0,
+                        null != l
+                            ? {
+                                  backgroundImage: null != l ? "url(".concat(l.toString(), ")") : void 0,
+                              }
+                            : void 0,
                     children:
                         null == l &&
                         (0, r.jsx)(o.qyI, {

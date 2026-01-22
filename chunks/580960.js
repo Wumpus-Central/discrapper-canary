@@ -1,4 +1,8 @@
-n.d(t, { A: () => j }), n(65821), n(896048);
+n.d(t, {
+    A: () => j,
+}),
+    n(65821),
+    n(896048);
 var r = n(627968);
 n(64700);
 var l = n(397927),
@@ -14,6 +18,7 @@ var l = n(397927),
     h = n(869968),
     b = n(694080),
     g = n(70730);
+
 function m(e, t, n) {
     return (
         t in e
@@ -27,6 +32,7 @@ function m(e, t, n) {
         e
     );
 }
+
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -43,6 +49,7 @@ function A(e) {
     }
     return e;
 }
+
 function y(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -134,14 +141,18 @@ class O extends a.A {
                     let t = (d.A.canFractionalPremiumUserUseOffer() || !(0, f.TW)(e)) && !d.A.isFetchingOffer();
                     await (0, b._D)("PremiumManager", t);
                 }
-                i.h.dispatch({ type: "PREMIUM_MARKETING_DATA_READY" });
+                i.h.dispatch({
+                    type: "PREMIUM_MARKETING_DATA_READY",
+                });
             }),
             m(this, "_maybeFetchCheckoutRecovery", async () => {
                 let e = u.default.getCurrentUser();
                 null != e && e.verified && !(0, f.TW)(e) && h.A.shouldFetchCheckoutRecovery() && (await (0, p.c)());
             }),
             m(this, "_maybeFetchUserAffinities", () => {
-                let { enabled: e } = g.u.getConfig({ location: "PremiumManager" });
+                let { enabled: e } = g.u.getConfig({
+                    location: "PremiumManager",
+                });
                 e && (0, c.u)();
             }),
             m(this, "_handlePremiumPaymentModalOpen", (e) => {

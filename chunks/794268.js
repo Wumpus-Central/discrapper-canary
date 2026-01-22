@@ -1,4 +1,7 @@
-Object.defineProperty(t, "__esModule", { value: !0 }), (t.detectFile = void 0);
+Object.defineProperty(t, "__esModule", {
+    value: !0,
+}),
+    (t.detectFile = void 0);
 let r = n(835986),
     i = n(817762);
 t.detectFile = function (e, t) {
@@ -24,7 +27,9 @@ t.detectFile = function (e, t) {
                     extension: t.extension,
                     mimeType: t.mimeType,
                     description: t.description,
-                    signature: Object.assign(Object.assign({}, n), { sequence: n.sequence.map((e) => e.toString(16)) }),
+                    signature: Object.assign(Object.assign({}, n), {
+                        sequence: n.sequence.map((e) => e.toString(16)),
+                    }),
                 };
                 s.push(i);
             }

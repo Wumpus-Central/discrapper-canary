@@ -1,4 +1,7 @@
-l.d(t, { A: () => y }), l(896048);
+l.d(t, {
+    A: () => y,
+}),
+    l(896048);
 var n = l(627968),
     r = l(64700),
     s = l(397927),
@@ -17,6 +20,7 @@ var n = l(627968),
     E = l(940622),
     v = l(758836),
     A = l(201073);
+
 function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var l = null != arguments[t] ? arguments[t] : {},
@@ -71,7 +75,10 @@ let S = (e) => {
             children: (0, n.jsx)(
                 _,
                 ((t = x({}, e)),
-                (l = l = { totalCards: c }),
+                (l = l =
+                    {
+                        totalCards: c,
+                    }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(l))
                     : (function (e, t) {
@@ -151,7 +158,9 @@ let S = (e) => {
                 (l = r.useMemo(() => (d ? [] : t(i.rankedSkuIds)), [d, t, i.rankedSkuIds])),
                 (s = (0, f.p)()(l)),
                 (a = (0, g.X)(s)),
-                { products: (0, E.od)(a) }),
+                {
+                    products: (0, E.od)(a),
+                }),
             m = r.useMemo(
                 () =>
                     !d &&

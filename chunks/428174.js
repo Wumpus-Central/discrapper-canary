@@ -1,4 +1,6 @@
-n.d(t, { d: () => f });
+n.d(t, {
+    d: () => f,
+});
 var r = n(765325),
     i = n(787709),
     a = n(142922),
@@ -8,6 +10,7 @@ var r = n(765325),
     c = n(260043),
     u = n(236230),
     d = n(287998);
+
 function f(e) {
     switch (e) {
         case "buddhist":

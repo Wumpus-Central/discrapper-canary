@@ -1,4 +1,6 @@
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -10,14 +12,19 @@ var r = n(627968),
     d = n(509381),
     f = n(985018),
     p = n(473169);
+
 function _() {
     let { analyticsLocations: e } = (0, l.Ay)(),
         t = (0, a.bG)([c.A], () => c.A.getActiveInputProfile()),
-        { enabledInputProfiles: n } = (0, u.d)({ location: "UserSettingsInputProfile" }),
+        { enabledInputProfiles: n } = (0, u.d)({
+            location: "UserSettingsInputProfile",
+        }),
         _ = i.useCallback(
             (t) => {
                 let { value: n } = t;
-                o.A.setActiveInputProfile(n, { analyticsLocations: e });
+                o.A.setActiveInputProfile(n, {
+                    analyticsLocations: e,
+                });
             },
             [e],
         ),
@@ -45,7 +52,10 @@ function _() {
         className: p.SX,
         children: (0, r.jsx)(s.z6M, {
             label: f.intl.string(f.t.LM3U3k),
-            onChange: (e) => _({ value: e }),
+            onChange: (e) =>
+                _({
+                    value: e,
+                }),
             options: h,
             value: null != t ? t : d.my.CUSTOM,
         }),

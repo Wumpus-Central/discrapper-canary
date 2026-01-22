@@ -37,6 +37,7 @@ var r = n(627968),
     R = n(49999),
     D = n(985018),
     M = n(638990);
+
 function L(e) {
     var t;
     let { channel: n, children: l } = e,
@@ -100,7 +101,7 @@ function L(e) {
                         variant: "text-sm/medium",
                         color: "text-strong",
                         children: [
-                            "\u2022",
+                            "•",
                             (0, r.jsx)("img", {
                                 alt: "",
                                 src: f,
@@ -115,6 +116,7 @@ function L(e) {
         a,
     );
 }
+
 function G(e) {
     let {
             channel: t,
@@ -194,8 +196,16 @@ function G(e) {
             if (t.isManaged()) return O;
             return (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, r.jsx)(u.AC4, { children: D.intl.string(D.t["e5y+gm"]) }),
-                    (0, r.jsx)(I.n, { channel: t }, "channel-".concat(t.id)),
+                    (0, r.jsx)(u.AC4, {
+                        children: D.intl.string(D.t["e5y+gm"]),
+                    }),
+                    (0, r.jsx)(
+                        I.n,
+                        {
+                            channel: t,
+                        },
+                        "channel-".concat(t.id),
+                    ),
                 ],
             });
         case w.rbe.GUILD_ANNOUNCEMENT:
@@ -301,7 +311,9 @@ function G(e) {
             });
         case w.rbe.GUILD_DIRECTORY:
             let _ = (null == s ? void 0 : s.features.has(w.GuildFeatures.HUB))
-                ? D.intl.formatToPlainString(D.t.Dy2aht, { guildName: n })
+                ? D.intl.formatToPlainString(D.t.Dy2aht, {
+                      guildName: n,
+                  })
                 : n;
             return (0, r.jsxs)(l.Fragment, {
                 children: [
@@ -351,17 +363,33 @@ let k = (e) => {
     }, [o, c]),
     a.isDM() && (null == o ? void 0 : o.isStaff()) && null != c)
         ? c.isStaff()
-            ? (0, r.jsx)(f.A, { type: f.A.Types.STAFF_ONLY_DM })
+            ? (0, r.jsx)(f.A, {
+                  type: f.A.Types.STAFF_ONLY_DM,
+              })
             : u && p && !(null != (n = null == (i = d.badges) ? void 0 : i.some((e) => e.id.startsWith("staff"))) && n)
-              ? (0, r.jsx)(f.A, { type: f.A.Types.NOT_STAFF_WARNING })
+              ? (0, r.jsx)(f.A, {
+                    type: f.A.Types.NOT_STAFF_WARNING,
+                })
               : null
         : null;
 };
+
 function U(e, t) {
     switch (e.type) {
         case w.rbe.DM:
             return (0, r.jsxs)(r.Fragment, {
-                children: [(0, r.jsx)(k, { channel: e }), (0, r.jsx)(S.A, { channel: e }, e.id)],
+                children: [
+                    (0, r.jsx)(k, {
+                        channel: e,
+                    }),
+                    (0, r.jsx)(
+                        S.A,
+                        {
+                            channel: e,
+                        },
+                        e.id,
+                    ),
+                ],
             });
         case w.rbe.GUILD_ANNOUNCEMENT:
         case w.rbe.GUILD_TEXT:
@@ -382,6 +410,7 @@ function U(e, t) {
             return null;
     }
 }
+
 function V(e, t) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -390,10 +419,13 @@ function V(e, t) {
                     icon: e,
                     "aria-hidden": !0,
                 }),
-            (0, r.jsx)(u.AC4, { children: t }),
+            (0, r.jsx)(u.AC4, {
+                children: t,
+            }),
         ],
     });
 }
+
 function F(e) {
     let { guild: t, channel: n, caretPosition: i = "left" } = e,
         a = (0, s.bG)([v.A], () => v.A.getGuildId()),
@@ -411,7 +443,10 @@ function F(e) {
                   },
                   className: M.ED,
                   children: [
-                      "left" === i && (0, r.jsx)(T.A.Caret, { direction: "left" }),
+                      "left" === i &&
+                          (0, r.jsx)(T.A.Caret, {
+                              direction: "left",
+                          }),
                       (0, r.jsx)("div", {
                           ref: d,
                           children: (0, r.jsx)(g.A, {
@@ -421,7 +456,10 @@ function F(e) {
                               active: !0,
                           }),
                       }),
-                      "right" === i && (0, r.jsx)(T.A.Caret, { direction: "right" }),
+                      "right" === i &&
+                          (0, r.jsx)(T.A.Caret, {
+                              direction: "right",
+                          }),
                   ],
               }),
           })

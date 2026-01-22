@@ -1,4 +1,6 @@
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var r = n(627968),
     i = n(503698),
     a = n.n(i),
@@ -15,9 +17,13 @@ let _ = (e) => {
         n = (0, c.DP)(),
         i = (0, o.qB)(n);
     return (0, r.jsx)(s.m, {
-        text: f.intl.formatToPlainString(d.default["5xN/C1"], { premiumGroupProductName: (0, u.DP)() }),
+        text: f.intl.formatToPlainString(d.default["5xN/C1"], {
+            premiumGroupProductName: (0, u.DP)(),
+        }),
         children: (0, r.jsx)("div", {
-            className: a()(p.bE, { [p._k]: !t && i }),
+            className: a()(p.bE, {
+                [p._k]: !t && i,
+            }),
             children: (0, r.jsx)(l.Text, {
                 variant: "eyebrow",
                 color: t ? "always-white" : void 0,

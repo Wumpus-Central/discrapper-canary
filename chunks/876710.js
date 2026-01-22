@@ -7,5 +7,7 @@ r(
         bind: !0,
         forced: a.setInterval !== o,
     },
-    { setInterval: o },
+    {
+        setInterval: o,
+    },
 );

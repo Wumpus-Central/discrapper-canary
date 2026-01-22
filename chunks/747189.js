@@ -12,6 +12,7 @@ var r = n(397927),
     c = n(652215),
     d = n(672396),
     u = n(985018);
+
 function h() {
     let { trackView: e, trackClick: t } = (0, s.Y)(d.KS.ClipsReminderNotification, {
             notif_type: d.KS.ClipsReminderNotification,
@@ -25,8 +26,12 @@ function h() {
             keybind: p,
             keybindHook: () =>
                 (0, i.jsx)("span", {
-                    style: { display: "inline-block" },
-                    children: (0, i.jsx)(r.e7I, { shortcut: p }),
+                    style: {
+                        display: "inline-block",
+                    },
+                    children: (0, i.jsx)(r.e7I, {
+                        shortcut: p,
+                    }),
                 }),
         }),
         icon: (0, i.jsx)(r.xgA, {
@@ -41,8 +46,11 @@ function h() {
         },
     };
 }
+
 function p(e) {
-    let { trackView: t, trackClick: n } = (0, s.Y)(d.KS.ClipsNotification, { notif_type: d.KS.ClipsNotification });
+    let { trackView: t, trackClick: n } = (0, s.Y)(d.KS.ClipsNotification, {
+        notif_type: d.KS.ClipsNotification,
+    });
     return {
         title: e,
         icon: (0, i.jsx)(r.xgA, {

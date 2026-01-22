@@ -1,4 +1,7 @@
-n.d(e, { default: () => f }), n(747238);
+n.d(e, {
+    default: () => f,
+}),
+    n(747238);
 var l = n(627968),
     r = n(64700),
     i = n(477782),
@@ -12,6 +15,7 @@ var l = n(627968),
     p = n(690521),
     d = n(60587),
     y = n(985018);
+
 function f(t) {
     let { target: e, onSelect: n } = t,
         f = e.getAttribute("data-type"),

@@ -1,6 +1,9 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 var r = n(64700),
     i = n(73153);
+
 function a(e) {
     let t = (0, r.useRef)(e);
     (0, r.useEffect)(() => {

@@ -1,4 +1,9 @@
-n.d(t, { A: () => T }), n(747238), n(321073), n(264879);
+n.d(t, {
+    A: () => T,
+}),
+    n(747238),
+    n(321073),
+    n(264879);
 var r = n(685908),
     i = n(497387),
     a = n.n(i),
@@ -6,6 +11,7 @@ var r = n(685908),
     o = n.n(s),
     l = n(505737),
     c = n.n(l);
+
 function u(e, t, n) {
     return (
         t in e
@@ -19,6 +25,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,6 +42,7 @@ function d(e) {
     }
     return e;
 }
+
 function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -47,6 +55,7 @@ function f(e, t) {
     }
     return n;
 }
+
 function p(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -58,6 +67,7 @@ function p(e, t) {
         e
     );
 }
+
 function _(e, t) {
     if (null == e) return {};
     var n,
@@ -74,6 +84,7 @@ function _(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function h(e, t) {
     if (null == e) return {};
     var n,
@@ -84,11 +95,13 @@ function h(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function m(e) {
     let t = Object.keys(e)[0];
     return "".concat(t, "(").concat(e[t], ")");
 }
 let g = /rgba\(([\d.]+), ([\d.]+), ([\d.]+), ([\d.]+)\)/;
+
 function E(e) {
     let t = e.match(g);
     return (
@@ -101,6 +114,7 @@ function E(e) {
         e
     );
 }
+
 function b(e) {
     return (
         e &&
@@ -110,6 +124,7 @@ function b(e) {
         e
     );
 }
+
 function y(e, t, n) {
     if (e.setNativeProps) e.setNativeProps(t);
     else {
@@ -117,12 +132,21 @@ function y(e, t, n) {
         c().setValueForStyles(e, b(t.style), n._reactInternalInstance);
     }
 }
+
 function O(e) {
-    return (e.transform = e.transform || []), e.transform.push({ translateZ: 0 }), e;
+    return (
+        (e.transform = e.transform || []),
+        e.transform.push({
+            translateZ: 0,
+        }),
+        e
+    );
 }
+
 function A(e, t, n) {
     return void 0 !== t && void 0 != n ? o()(t, n) : e;
 }
+
 function v(e, t) {
     let n,
         {
@@ -185,6 +209,7 @@ function v(e, t) {
           })
         : T.start(f);
 }
+
 function S(e) {
     for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
     return e.interpolate({
@@ -193,7 +218,9 @@ function S(e) {
     });
 }
 r.inject.ApplyAnimatedValues(y, (e) => e);
-let I = { CLAMP: "clamp" },
+let I = {
+        CLAMP: "clamp",
+    },
     T = p(d({}, r), {
         Easing: a(),
         accelerate: O,

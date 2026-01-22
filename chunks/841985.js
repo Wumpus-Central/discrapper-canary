@@ -1,4 +1,7 @@
-n.d(t, { A: () => _ }), n(896048);
+n.d(t, {
+    A: () => _,
+}),
+    n(896048);
 var l = n(627968),
     a = n(64700),
     r = n(503698),
@@ -14,6 +17,7 @@ var l = n(627968),
     b = n(590354);
 let f = 16 / 9,
     g = 325 / 72;
+
 function x(e) {
     let { application: t, isHovered: n, botBannerUrl: r, botBannerUrlAnimated: s, iconURL: c } = e,
         h = (0, d.A)({
@@ -30,7 +34,9 @@ function x(e) {
         { imageUrl: f, imageUrlAnimated: g } = a.useMemo(
             () =>
                 "fetched" === h.state && null != h.url
-                    ? { imageUrl: h.url }
+                    ? {
+                          imageUrl: h.url,
+                      }
                     : {
                           imageUrl: r,
                           imageUrlAnimated: s,
@@ -68,8 +74,11 @@ function x(e) {
                   url: f,
                   animatedUrl: g,
               })
-            : (0, l.jsx)(A, { iconURL: c });
+            : (0, l.jsx)(A, {
+                  iconURL: c,
+              });
 }
+
 function v(e) {
     let { isHovered: t, url: n, animatedUrl: r } = e,
         [s, c] = a.useState(!1);
@@ -78,7 +87,9 @@ function v(e) {
             (0, l.jsx)("img", {
                 src: n,
                 alt: "",
-                className: i()(b._e, b.IH, { [b.Kc]: s }),
+                className: i()(b._e, b.IH, {
+                    [b.Kc]: s,
+                }),
                 onLoad: () => c(!0),
             }),
             null != r
@@ -91,6 +102,7 @@ function v(e) {
         ],
     });
 }
+
 function j(e) {
     let { isHovered: t, url: n, isVideo: r } = e,
         [s, c] = a.useState(!1),
@@ -123,12 +135,17 @@ function j(e) {
           })
         : null;
 }
+
 function A(e) {
     let { iconURL: t } = e,
         { backgroundGradient: n, hasFetchedColors: a } = (0, m.d)(t);
     return (0, l.jsx)("div", {
-        className: i()(b.IH, b.nY, { [b.Kc]: a }),
-        style: { backgroundImage: n },
+        className: i()(b.IH, b.nY, {
+            [b.Kc]: a,
+        }),
+        style: {
+            backgroundImage: n,
+        },
     });
 }
 let _ = function (e) {
@@ -165,7 +182,9 @@ let _ = function (e) {
         );
     return (0, l.jsx)("div", {
         className: b.cI,
-        style: { aspectRatio: "card" === n ? f : g },
+        style: {
+            aspectRatio: "card" === n ? f : g,
+        },
         onMouseEnter: p,
         onFocus: p,
         onMouseLeave: m,
@@ -184,6 +203,8 @@ let _ = function (e) {
                         url: y,
                         animatedUrl: O,
                     })
-                  : (0, l.jsx)(A, { iconURL: r }),
+                  : (0, l.jsx)(A, {
+                        iconURL: r,
+                    }),
     });
 };

@@ -5,17 +5,18 @@ n.d(t, {
 var r = n(761799),
     i = n(643479),
     a = n(298003);
-let s = 1718909296,
-    o = 1768977008,
-    l = 1835365473,
-    c = 1768714083,
-    u = 1768517222,
-    d = 1768842853,
-    f = 1768973167,
-    p = 1668246642,
-    _ = 1165519206,
-    h = 1835625829,
-    m = 1970432288;
+let s = 0x66747970,
+    o = 0x69707270,
+    l = 0x6d657461,
+    c = 0x696c6f63,
+    u = 0x69696e66,
+    d = 0x696e6665,
+    f = 0x6970636f,
+    p = 0x636f6c72,
+    _ = 0x45786966,
+    h = 0x6d696d65,
+    m = 0x75726920;
+
 function g(e, t) {
     let n = 4,
         r = 8,
@@ -41,6 +42,7 @@ function g(e, t) {
                     length: _,
                 };
 }
+
 function E(e, t) {
     let n = 4,
         r = 4,
@@ -62,16 +64,20 @@ function E(e, t) {
                 contentOffset: t + n + r,
             };
 }
+
 function b(e) {
     return 0 === e;
 }
+
 function y(e) {
     return 1 === e;
 }
+
 function O(e, t) {
     let n = 8;
     return 0 === e.getUint32(t + n);
 }
+
 function A(e) {
     if (r.A.USE_EXIF || r.A.USE_XMP || r.A.USE_ICC) {
         let t = {},
@@ -82,10 +88,13 @@ function A(e) {
               r.A.USE_ICC && (t.iccChunks = w(n)),
               (t.hasAppMarkers = void 0 !== t.tiffHeaderOffset || void 0 !== t.xmpChunks || void 0 !== t.iccChunks),
               t)
-            : { hasAppMarkers: !1 };
+            : {
+                  hasAppMarkers: !1,
+              };
     }
     return {};
 }
+
 function v(e) {
     let t = 4,
         n = 4,
@@ -97,6 +106,7 @@ function v(e) {
         r += t.length;
     }
 }
+
 function S(e, t) {
     try {
         let n = I(t).itemId,
@@ -107,15 +117,19 @@ function S(e, t) {
         return;
     }
 }
+
 function I(e) {
     return e.subBoxes.find((e) => "iinf" === e.type).itemInfos.find((e) => e.itemType === _);
 }
+
 function T(e, t) {
     return e.subBoxes.find((e) => "iloc" === e.type).items.find((e) => e.itemId === t);
 }
+
 function C(e, t) {
     return t + 4 + e.getUint32(t);
 }
+
 function N(e) {
     try {
         let t = R(e).itemId,
@@ -131,11 +145,13 @@ function N(e) {
         return;
     }
 }
+
 function R(e) {
     return e.subBoxes
         .find((e) => "iinf" === e.type)
         .itemInfos.find((e) => e.itemType === h && "application/rdf+xml" === e.contentType);
 }
+
 function w(e) {
     try {
         let t = e.subBoxes
@@ -145,6 +161,7 @@ function w(e) {
         if (t) return [t];
     } catch (e) {}
 }
+
 function P(e, t, n) {
     let r = 4;
     return {
@@ -153,6 +170,7 @@ function P(e, t, n) {
         length: n,
     };
 }
+
 function D(e, t, n, r) {
     return {
         type: "iprp",
@@ -160,6 +178,7 @@ function D(e, t, n, r) {
         length: r,
     };
 }
+
 function x(e, t, n, r) {
     return {
         type: "ipco",
@@ -167,6 +186,7 @@ function x(e, t, n, r) {
         length: r,
     };
 }
+
 function L(e, t, n) {
     return {
         type: "colr",
@@ -174,6 +194,7 @@ function L(e, t, n) {
         length: n,
     };
 }
+
 function j(e, t) {
     let n = 4,
         r = (0, i.hT)(e, t, n);
@@ -185,6 +206,7 @@ function j(e, t) {
             chunksTotal: 1,
         };
 }
+
 function M(e, t, n, r) {
     return {
         type: "meta",
@@ -192,6 +214,7 @@ function M(e, t, n, r) {
         length: r,
     };
 }
+
 function k(e, t, n) {
     let r = [_, h],
         i = [],
@@ -203,6 +226,7 @@ function k(e, t, n) {
     }
     return i;
 }
+
 function U(e, t, n, r, i) {
     let { offsets: a } = G(n, r);
     return {
@@ -211,13 +235,21 @@ function U(e, t, n, r, i) {
         length: i,
     };
 }
+
 function G(e, t) {
-    let n = { entryCount: t + 3 },
+    let n = {
+            entryCount: t + 3,
+        },
         r = {};
     return (
-        0 === e ? (r.entryCount = 2) : (r.entryCount = 4), (n.itemInfos = n.entryCount + r.entryCount), { offsets: n }
+        0 === e ? (r.entryCount = 2) : (r.entryCount = 4),
+        (n.itemInfos = n.entryCount + r.entryCount),
+        {
+            offsets: n,
+        }
     );
 }
+
 function V(e, t, n, r, a) {
     r += 3;
     let s = {

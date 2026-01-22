@@ -4,7 +4,12 @@ if (!Object.keys) {
         a = Object.prototype.toString,
         s = n(560332),
         o = Object.prototype.propertyIsEnumerable,
-        l = !o.call({ toString: null }, "toString"),
+        l = !o.call(
+            {
+                toString: null,
+            },
+            "toString",
+        ),
         c = o.call(function () {}, "prototype"),
         u = [
             "toString",

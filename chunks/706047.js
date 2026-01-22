@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(627968);
 n(64700);
 var i = n(284009),
@@ -10,6 +12,7 @@ var i = n(284009),
     u = n(552122),
     d = n(235079),
     f = n(985018);
+
 function p() {
     let e = (0, s.bG)([c.A], () => c.A.getSoundpack()),
         t = u.A.useHolidaySoundpack();

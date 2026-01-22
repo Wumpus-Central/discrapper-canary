@@ -1,70 +1,76 @@
-r.d(t, { A: () => p }), r(896048);
-var a,
-    n = r(627968),
-    s = r(64700),
-    i = r(503698),
-    l = r.n(i),
-    c = r(615300),
-    o = r(397927),
-    d = r(652215),
-    u = r(505802);
-function f(e, t, r) {
+i.d(e, {
+    A: () => p,
+}),
+    i(896048);
+var s,
+    n = i(627968),
+    r = i(64700),
+    a = i(503698),
+    h = i.n(a),
+    l = i(615300),
+    o = i(397927),
+    c = i(652215),
+    d = i(505802);
+
+function u(t, e, i) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: r,
+        e in t
+            ? Object.defineProperty(t, e, {
+                  value: i,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0,
               })
-            : (e[t] = r),
-        e
+            : (t[e] = i),
+        t
     );
 }
-class p extends (a = s.Component) {
+class p extends (s = r.Component) {
     componentDidMount() {
         this.props.show && this.animate(1);
     }
-    componentDidUpdate(e) {
-        e.show !== this.props.show && this.animate(+!!this.props.show);
+    componentDidUpdate(t) {
+        t.show !== this.props.show && this.animate(+!!this.props.show);
     }
     getAnimatedStyle() {
-        let { anim: e } = this,
-            { reducedMotion: t } = this.context;
+        let { anim: t } = this,
+            { reducedMotion: e } = this.context;
         return {
-            opacity: e,
-            transform: t.enabled
+            opacity: t,
+            transform: e.enabled
                 ? void 0
                 : [
                       {
-                          translateY: e.interpolate({
+                          translateY: t.interpolate({
                               inputRange: [0, 1],
                               outputRange: ["-100px", "0px"],
                           }),
                       },
-                      { translateZ: 0 },
+                      {
+                          translateZ: 0,
+                      },
                   ],
         };
     }
     render() {
-        return (0, n.jsx)(c.A.a, {
-            href: d.BVt.INDEX,
+        return (0, n.jsx)(l.A.a, {
+            href: c.BVt.INDEX,
             target: "_blank",
             rel: "noopener",
-            className: l()(u.w, this.props.className),
+            className: h()(d.w, this.props.className),
             style: this.getAnimatedStyle(),
         });
     }
-    constructor(...e) {
-        super(...e),
-            f(this, "anim", new c.A.Value(0)),
-            f(this, "animate", (e) => {
-                c.A.spring(this.anim, {
-                    toValue: e,
+    constructor(...t) {
+        super(...t),
+            u(this, "anim", new l.A.Value(0)),
+            u(this, "animate", (t) => {
+                l.A.spring(this.anim, {
+                    toValue: t,
                     friction: 10,
                     tension: 100,
                 }).start();
             });
     }
 }
-f(p, "contextType", o.CZY);
+u(p, "contextType", o.CZY);

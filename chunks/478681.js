@@ -7,6 +7,7 @@ var r = n(919015),
 let a = "Sentry Logger ",
     s = ["debug", "info", "warn", "error", "log", "assert", "trace"],
     o = {};
+
 function l(e) {
     if (!("console" in i.O)) return e();
     let t = i.O.console,
@@ -24,6 +25,7 @@ function l(e) {
         });
     }
 }
+
 function c() {
     let e = !1,
         t = {

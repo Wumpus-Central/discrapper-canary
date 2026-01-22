@@ -1,4 +1,7 @@
-n.d(t, { A: () => A }), n(896048);
+n.d(t, {
+    A: () => A,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(353640),
@@ -18,7 +21,10 @@ var r = n(627968),
     b = n(529071);
 let y = (0, a.v)((e) => ({
         activeEntryId: null,
-        setActiveEntryId: (t) => e({ activeEntryId: t }),
+        setActiveEntryId: (t) =>
+            e({
+                activeEntryId: t,
+            }),
     })),
     O = (e) => {
         let { entry: t, isFirstApplicationOccurrence: n, targetElementRef: a } = e,
@@ -55,9 +61,13 @@ let y = (0, a.v)((e) => ({
                 {
                     name: s.ImpressionNames.CLOUD_PLAY_CTA,
                     type: s.ImpressionTypes.VIEW,
-                    properties: { location_stack: A },
+                    properties: {
+                        location_stack: A,
+                    },
                 },
-                { disableTrack: !L },
+                {
+                    disableTrack: !L,
+                },
                 [L],
             );
         let M = () => {
@@ -69,7 +79,9 @@ let y = (0, a.v)((e) => ({
             targetElementRef: a,
             shouldShow: D,
             position: "left",
-            caretConfig: { align: "center" },
+            caretConfig: {
+                align: "center",
+            },
             gradientColor: "pink",
             graphic: {
                 type: "image",

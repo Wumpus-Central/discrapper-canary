@@ -10,12 +10,14 @@ var r = n(805447),
     l = n(803082),
     c = n(64700);
 let u = c.createContext(null);
+
 function d(e) {
     let t = (0, c.useContext)(u) || {};
     (0, s.w)(t, e);
     let { ref: n, ...r } = t;
     return r;
 }
+
 function f(e, t) {
     let { focusProps: n } = (0, i.i)(e),
         { keyboardProps: s } = (0, a.d)(e),
@@ -47,5 +49,11 @@ c.forwardRef(function (e, t) {
             ...r,
             ref: i,
         };
-    return c.createElement(u.Provider, { value: a }, n);
+    return c.createElement(
+        u.Provider,
+        {
+            value: a,
+        },
+        n,
+    );
 });

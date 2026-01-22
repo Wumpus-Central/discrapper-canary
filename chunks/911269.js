@@ -1,4 +1,7 @@
-n.d(t, { ForwardModal: () => M }), n(896048);
+n.d(t, {
+    ForwardModal: () => M,
+}),
+    n(896048);
 var l = n(627968),
     r = n(64700),
     a = n(735438),
@@ -27,6 +30,7 @@ var l = n(627968),
 n(577616);
 var P = n(985018),
     k = n(967789);
+
 function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -52,6 +56,7 @@ function R(e) {
     }
     return e;
 }
+
 function D(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -70,6 +75,7 @@ function D(e, t) {
         e
     );
 }
+
 function E() {
     return (0, l.jsx)("div", {
         className: k.wV,
@@ -80,6 +86,7 @@ function E() {
         }),
     });
 }
+
 function M(e) {
     let {
             message: t,
@@ -211,7 +218,7 @@ function M(e) {
                     () => {
                         (0, o.showToast)((0, o.createToast)(P.intl.string(P.t.kwmYkt), o.ToastType.FORWARD));
                     },
-                    3000,
+                    3e3,
                     {
                         leading: !0,
                         trailing: !1,
@@ -279,9 +286,19 @@ function M(e) {
                 s && (0, A.Be)(),
                     null == _ || _(),
                     i &&
-                        (await d.A.fetchMessages({ channelId: c[0] }),
-                        (0, m.iN)(c[0], { openTextInVoiceIfVoiceChannel: !0 }));
-                let h = await v.A.sendForwards(u, c, D(R({}, N), { withMessage: a })),
+                        (await d.A.fetchMessages({
+                            channelId: c[0],
+                        }),
+                        (0, m.iN)(c[0], {
+                            openTextInVoiceIfVoiceChannel: !0,
+                        }));
+                let h = await v.A.sendForwards(
+                        u,
+                        c,
+                        D(R({}, N), {
+                            withMessage: a,
+                        }),
+                    ),
                     g = c.some((e) => {
                         let t = p.A.getChannel(e);
                         return null != t && t.rateLimitPerUser > 0;
@@ -358,7 +375,12 @@ function M(e) {
                       },
             [ef, eS],
         ),
-        eP = er <= 1 ? P.intl.string(P.t.TXNS7S) : P.intl.formatToPlainString(P.t.jWtYUm, { count: er });
+        eP =
+            er <= 1
+                ? P.intl.string(P.t.TXNS7S)
+                : P.intl.formatToPlainString(P.t.jWtYUm, {
+                      count: er,
+                  });
     return (0, l.jsx)(
         i.Modal,
         D(R({}, W), {
@@ -368,7 +390,9 @@ function M(e) {
                 null != V
                     ? V
                     : ea
-                      ? P.intl.formatToPlainString(P.t["3Fbkir"], { count: 5 })
+                      ? P.intl.formatToPlainString(P.t["3Fbkir"], {
+                            count: 5,
+                        })
                       : P.intl.string(P.t["VA+btJ"]),
             input: (0, l.jsx)(o.IWV, {
                 ref: ev,

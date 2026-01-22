@@ -16,6 +16,7 @@ var i = n(735438),
     A = n(616075),
     f = n(652215),
     b = n(985018);
+
 function g(e, t) {
     return e.type === f.rbe.GROUP_DM
         ? t
@@ -29,12 +30,14 @@ function g(e, t) {
             ? b.intl.string(b.t.Bou7lT)
             : b.intl.string(b.t["4wcdE/"]);
 }
+
 function p(e) {
     let t = (0, a.bG)([s.Ay], () => s.Ay.getChannels(f.YYv))[f.rbe.GUILD_CATEGORY],
         { isFavoritesPerk: n } = (0, A.l)("58e21a_1"),
         { notifyFavoriteAdded: i } = (0, u.CJ)();
     if (!(0, u.pe)(e)) return null;
     let [[d], b] = l().partition(t, (e) => "null" === e.channel.id);
+
     function p(t) {
         i(), (0, c.Jz)(e.id, t);
     }
@@ -77,6 +80,7 @@ function p(e) {
               ],
           });
 }
+
 function h(e) {
     let t = (0, a.bG)([d.A], () => d.A.isFavorite(e.id));
     return __OVERLAY__ || !t

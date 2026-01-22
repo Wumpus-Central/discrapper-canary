@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var l = n(627968);
 n(64700);
 var a = n(503698),
@@ -11,6 +13,7 @@ var a = n(503698),
     u = n(412461),
     p = n(985018),
     h = n(125257);
+
 function m(e) {
     var t, n;
     let { application: a, className: i, innerClassName: c } = e,
@@ -57,6 +60,7 @@ function m(e) {
           })
         : null;
 }
+
 function b(e) {
     var t, n;
     let { url: a, children: r } = e,
@@ -76,6 +80,7 @@ function b(e) {
         children: r,
     });
 }
+
 function f(e) {
     let { icon: t, imageSrc: n, iconColor: a, url: i, children: o } = e,
         d = (0, u.DB)(),

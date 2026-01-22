@@ -15,6 +15,7 @@ var r = n(627968),
     p = n(818348),
     _ = n(985018),
     h = n(304203);
+
 function m(e, t, n) {
     return (
         t in e
@@ -28,6 +29,7 @@ function m(e, t, n) {
         e
     );
 }
+
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -44,6 +46,7 @@ function g(e) {
     }
     return e;
 }
+
 function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -56,6 +59,7 @@ function E(e, t) {
     }
     return n;
 }
+
 function b(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -68,6 +72,7 @@ function b(e, t) {
     );
 }
 let y = 600;
+
 function O(e) {
     let {
         showEditProduct: t,
@@ -148,6 +153,7 @@ function O(e) {
         }),
     });
 }
+
 function A(e) {
     let {
             product: t,
@@ -203,7 +209,9 @@ function A(e) {
                     o.DUT,
                     b(g({}, e), {
                         innerRef: v,
-                        "aria-label": _.intl.formatToPlainString(_.t.RtqjeB, { productName: t.name }),
+                        "aria-label": _.intl.formatToPlainString(_.t.RtqjeB, {
+                            productName: t.name,
+                        }),
                         "aria-haspopup": "listbox",
                         "aria-expanded": i,
                         className: h.hC,
@@ -219,6 +227,7 @@ function A(e) {
         }),
     });
 }
+
 function v(e) {
     let {
             product: t,
@@ -233,6 +242,7 @@ function v(e) {
         I = (0, c.R)(t, y),
         T = null !== t.price_tier ? (0, u.$g)(t.price_tier, p.Yr.USD) : void 0,
         C = (0, d.z)(t);
+
     function N(e) {
         (0, l.L3)(e, () =>
             Promise.resolve((e) =>
@@ -261,10 +271,14 @@ function v(e) {
     }
     return (0, r.jsxs)(o.sqX, {
         tag: "article",
-        className: s()(h.gc, h.Um, { [h.r9]: S }),
+        className: s()(h.gc, h.Um, {
+            [h.r9]: S,
+        }),
         onClick: S ? void 0 : i,
         onContextMenu: N,
-        "aria-label": _.intl.formatToPlainString(_.t["X/yAKs"], { productName: t.name }),
+        "aria-label": _.intl.formatToPlainString(_.t["X/yAKs"], {
+            productName: t.name,
+        }),
         children: [
             (0, r.jsx)("img", {
                 alt: "",
@@ -283,7 +297,9 @@ function v(e) {
                                 className: h.tZ,
                                 children: t.name,
                             }),
-                            (0, r.jsx)(o.hKd, { size: 8 }),
+                            (0, r.jsx)(o.hKd, {
+                                size: 8,
+                            }),
                             (0, r.jsxs)("div", {
                                 className: h.MS,
                                 children: [
@@ -295,7 +311,9 @@ function v(e) {
                                     null != C
                                         ? (0, r.jsxs)(r.Fragment, {
                                               children: [
-                                                  (0, r.jsx)("div", { className: h.zk }),
+                                                  (0, r.jsx)("div", {
+                                                      className: h.zk,
+                                                  }),
                                                   (0, r.jsx)(o.Text, {
                                                       variant: "text-md/normal",
                                                       color: "text-default",
@@ -306,7 +324,9 @@ function v(e) {
                                         : null,
                                 ],
                             }),
-                            (0, r.jsx)(o.hKd, { size: 16 }),
+                            (0, r.jsx)(o.hKd, {
+                                size: 16,
+                            }),
                             t.published ? (0, r.jsx)(f.S, {}) : (0, r.jsx)(f.$, {}),
                         ],
                     }),

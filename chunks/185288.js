@@ -1,9 +1,12 @@
-n.d(t, { P: () => l });
+n.d(t, {
+    P: () => l,
+});
 var r = n(13163),
     i = n(803082),
     a = n(853590),
     s = n(64700),
     o = n(8321);
+
 function l(e, t, n) {
     let { direction: l } = (0, a.Y)(),
         u = (0, s.useMemo)(() => (0, r.C7)(t), [t]),
@@ -40,7 +43,9 @@ function l(e, t, n) {
             var e;
             if (!t.current) return;
             let n = null == (e = window.event) ? void 0 : e.target,
-                i = (0, r.N$)(t.current, { tabbable: !0 });
+                i = (0, r.N$)(t.current, {
+                    tabbable: !0,
+                });
             if ((n && ((i.currentNode = n), (n = i.previousNode())), !n)) {
                 let e;
                 do (e = i.lastChild()) && (n = e);
@@ -63,10 +68,15 @@ function l(e, t, n) {
                 ("touch" === e.pointerType || "pen" === e.pointerType) && f();
             },
         });
-    return (0, i.v)(p, { onKeyDown: d });
+    return (0, i.v)(p, {
+        onKeyDown: d,
+    });
 }
+
 function c(e, t, n) {
-    let i = (0, r.N$)(e, { tabbable: !0 }),
+    let i = (0, r.N$)(e, {
+            tabbable: !0,
+        }),
         a = i.nextNode(),
         s = null,
         o = 1 / 0;

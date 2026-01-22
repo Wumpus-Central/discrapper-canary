@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var r = n(584682),
     i = n(376708),
     a = n(976860),
@@ -8,6 +10,7 @@ var r = n(584682),
     c = n(150129),
     u = n(9588),
     d = n(652215);
+
 function f(e, t, n) {
     return (
         t in e
@@ -21,6 +24,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,6 +41,7 @@ function p(e) {
     }
     return e;
 }
+
 function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -49,6 +54,7 @@ function _(e, t) {
     }
     return n;
 }
+
 function h(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -60,16 +66,22 @@ function h(e, t) {
         e
     );
 }
+
 function m(e) {
     if (null == e.channelId) return e;
     let t = o.A.getChannel(e.channelId);
     if (null == t) return e;
     let n = (0, r.j)(t);
-    return h(p({}, e), { guildId: null != n ? n : d.ME });
+    return h(p({}, e), {
+        guildId: null != n ? n : d.ME,
+    });
 }
 async function g(e, t) {
     let n = (0, l.vu)(e);
-    if (null != n && !(await (0, c.A)(n))) return void (0, u.K)({ kind: "channel" });
+    if (null != n && !(await (0, c.A)(n)))
+        return void (0, u.K)({
+            kind: "channel",
+        });
     if (null == n) return void (0, a.pX)(e, t);
     let r = m(n);
     null == r.channelId

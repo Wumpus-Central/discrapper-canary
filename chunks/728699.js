@@ -1,4 +1,6 @@
-i.d(e, { T: () => N });
+i.d(e, {
+    T: () => N,
+});
 var n = i(627968),
     l = i(934551),
     s = i(554146),
@@ -34,9 +36,13 @@ let g = (0, o.t_)(A.X.FAMILY_CENTER_PANEL, {
             useCustomDecoration: function (t) {
                 let e = (0, u.VT)();
                 return t === s.M.FAMILY_CENTER_NEW_BADGE
-                    ? (0, n.jsx)(r.LpS, { text: _.intl.string(_.t.y2b7CA) })
+                    ? (0, n.jsx)(r.LpS, {
+                          text: _.intl.string(_.t.y2b7CA),
+                      })
                     : e > 0
-                      ? (0, n.jsx)(r.hVq, { count: e })
+                      ? (0, n.jsx)(r.hVq, {
+                            count: e,
+                        })
                       : null;
             },
         },

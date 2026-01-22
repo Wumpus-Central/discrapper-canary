@@ -1,7 +1,10 @@
-n.d(t, { h: () => E });
+n.d(t, {
+    h: () => E,
+});
 var r = n(12543),
     i = n(438767),
     a = n(384623);
+
 function s(e) {
     return (s =
         "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
@@ -14,9 +17,11 @@ function s(e) {
                       : typeof e;
               })(e);
 }
+
 function o(e, t) {
     if (!(e instanceof t)) throw TypeError("Cannot call a class as a function");
 }
+
 function l(e, t) {
     for (var n = 0; n < t.length; n++) {
         var r = t[n];
@@ -26,9 +31,11 @@ function l(e, t) {
             Object.defineProperty(e, r.key, r);
     }
 }
+
 function c(e, t, n) {
     return t && l(e.prototype, t), n && l(e, n), e;
 }
+
 function u(e, t) {
     if ("function" != typeof t && null !== t) throw TypeError("Super expression must either be null or a function");
     (e.prototype = Object.create(t && t.prototype, {
@@ -40,6 +47,7 @@ function u(e, t) {
     })),
         t && d(e, t);
 }
+
 function d(e, t) {
     return (d =
         Object.setPrototypeOf ||
@@ -47,6 +55,7 @@ function d(e, t) {
             return (e.__proto__ = t), e;
         })(e, t);
 }
+
 function f(e) {
     var t = h();
     return function () {
@@ -55,13 +64,16 @@ function f(e) {
         return (n = t ? Reflect.construct(r, arguments, m(this).constructor) : r.apply(this, arguments)), p(this, n);
     };
 }
+
 function p(e, t) {
     return t && ("object" === s(t) || "function" == typeof t) ? t : _(e);
 }
+
 function _(e) {
     if (void 0 === e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return e;
 }
+
 function h() {
     if ("u" < typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
     if ("function" == typeof Proxy) return !0;
@@ -71,6 +83,7 @@ function h() {
         return !1;
     }
 }
+
 function m(e) {
     return (m = Object.setPrototypeOf
         ? Object.getPrototypeOf
@@ -78,6 +91,7 @@ function m(e) {
               return e.__proto__ || Object.getPrototypeOf(e);
           })(e);
 }
+
 function g(e, t, n) {
     return (
         t in e
@@ -94,6 +108,7 @@ function g(e, t, n) {
 var E = (function (e) {
     u(n, e);
     var t = f(n);
+
     function n() {
         var e;
         o(this, n);
@@ -113,7 +128,9 @@ var E = (function (e) {
                         case "K":
                             return (0, a.P2)(i.h.hour11h, e);
                         case "Ko":
-                            return n.ordinalNumber(e, { unit: "hour" });
+                            return n.ordinalNumber(e, {
+                                unit: "hour",
+                            });
                         default:
                             return (0, a.ym)(t.length, e);
                     }

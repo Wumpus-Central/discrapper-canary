@@ -1,4 +1,6 @@
-n.d(t, { p: () => r });
+n.d(t, {
+    p: () => r,
+});
 let r = {
     authorIds: [],
     message: "",

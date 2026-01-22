@@ -1,9 +1,12 @@
-n.d(t, { k: () => l });
+n.d(t, {
+    k: () => l,
+});
 var r = n(64700),
     i = n(417597),
     a = n(374994),
     s = n(827734),
     o = n(775602);
+
 function l(e) {
     let t = (0, i.bG)([o.A], () => o.A.saturation);
     return (0, r.useMemo)(() => {

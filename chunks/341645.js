@@ -1,4 +1,7 @@
-n.d(t, { A: () => B }), n(896048);
+n.d(t, {
+    A: () => B,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -36,6 +39,7 @@ var r = n(627968),
     k = n(768349),
     U = n(985018),
     G = n(356053);
+
 function V(e) {
     var t, n, a;
     let l,
@@ -189,7 +193,9 @@ function V(e) {
                                                   (0, r.jsx)(c.Text, {
                                                       variant: "text-xs/medium",
                                                       color: "none",
-                                                      children: (0, r.jsx)(F, { start: eu }),
+                                                      children: (0, r.jsx)(F, {
+                                                          start: eu,
+                                                      }),
                                                   }),
                                               ],
                                           }),

@@ -1,9 +1,13 @@
-n.d(t, { A: () => D }), n(134528), n(947204);
+n.d(t, {
+    A: () => D,
+}),
+    n(134528),
+    n(947204);
 var a = n(627968),
     l = n(64700),
     i = n(503698),
     r = n.n(i),
-    s = n(432022),
+    s = n(108531),
     o = n(417597),
     c = n(990078),
     d = n(582754),
@@ -29,6 +33,7 @@ var a = n(627968),
     I = n(652215),
     w = n(985018),
     k = n(627669);
+
 function P(e) {
     let { children: t, variant: n = "default" } = e;
     return (0, a.jsx)("div", {
@@ -44,6 +49,7 @@ function P(e) {
         }),
     });
 }
+
 function R(e) {
     var t;
     let { quest: n, errorHints: i, warningHints: r, isDarkTheme: o, sourceQuestContent: c } = e,
@@ -118,6 +124,7 @@ function R(e) {
         }),
     });
 }
+
 function D(e) {
     var t, n, i, s, m;
     let {
@@ -197,7 +204,9 @@ function D(e) {
                                             children: [
                                                 ee &&
                                                     !(0, v.Ic)(_) &&
-                                                    (0, a.jsx)(P, { children: w.intl.string(w.t.Jt6u7B) }),
+                                                    (0, a.jsx)(P, {
+                                                        children: w.intl.string(w.t.Jt6u7B),
+                                                    }),
                                                 _.preview &&
                                                     (0, a.jsx)(P, {
                                                         variant: "brand",
@@ -351,7 +360,9 @@ function D(e) {
                                         : (0, a.jsx)(u.Text, {
                                               variant: "text-sm/medium",
                                               color: X,
-                                              children: w.intl.format(w.t["7D8r4F"], { expiryDate: q }),
+                                              children: w.intl.format(w.t["7D8r4F"], {
+                                                  expiryDate: q,
+                                              }),
                                           }),
                                 ],
                             }),

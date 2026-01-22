@@ -15,10 +15,12 @@ let s = l.createContext(null),
         manageFocusOnReorder: a.tE,
         manageFocusOnDelete: a.tE,
     };
+
 function c() {
     let e = l.useContext(s);
     return null != e ? e : o;
 }
+
 function u(e) {
     let { children: t, emptyListFallbackRef: n } = e,
         a = l.useRef(new Map()),

@@ -14,27 +14,36 @@ let o = "hide_icymi_tab",
         id: "2024-07_icymi",
         label: "In-case-you-missed-it tab",
         commonTriggerPoint: s.$G.CONNECTION_OPEN_MOBILE,
-        defaultConfig: { enabled: !1 },
+        defaultConfig: {
+            enabled: !1,
+        },
         treatments: [
             {
                 id: 1,
                 label: "enables the new icymi tab",
-                config: { enabled: !0 },
+                config: {
+                    enabled: !0,
+                },
             },
         ],
     });
+
 function c(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         n = (0, a.A)(o),
         r = l.useExperiment(
-            { location: e },
+            {
+                location: e,
+            },
             {
                 autoTrackExposure: t,
                 disable: n,
             },
         ),
         i = _.useExperiment(
-            { location: e },
+            {
+                location: e,
+            },
             {
                 autoTrackExposure: !1,
                 disable: !r.enabled,
@@ -42,11 +51,14 @@ function c(e) {
         );
     return r.enabled && i.icymiDesktopEnabled;
 }
+
 function u(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         n = i.A.get(o),
         r = l.getCurrentConfig(
-            { location: e },
+            {
+                location: e,
+            },
             {
                 autoTrackExposure: t,
                 disable: n,
@@ -54,7 +66,9 @@ function u(e) {
         );
     {
         let t = _.getCurrentConfig(
-            { location: e },
+            {
+                location: e,
+            },
             {
                 autoTrackExposure: !1,
                 disable: !r.enabled,
@@ -67,12 +81,16 @@ let d = (0, r.C)({
         kind: "user",
         id: "2024-07_icymi_negative_items",
         label: "icymi negative content (debugging only)",
-        defaultConfig: { enabled: !1 },
+        defaultConfig: {
+            enabled: !1,
+        },
         treatments: [
             {
                 id: 1,
                 label: "allow negative items only",
-                config: { enabled: !0 },
+                config: {
+                    enabled: !0,
+                },
             },
         ],
     }),
@@ -80,20 +98,27 @@ let d = (0, r.C)({
         kind: "user",
         id: "2025-05_icymi_new_conversation_summaries",
         label: "New conversation summary in ICYMI",
-        defaultConfig: { contentGenerationEnabled: !1 },
+        defaultConfig: {
+            contentGenerationEnabled: !1,
+        },
         treatments: [
             {
                 id: 1,
                 label: "New conversation summary types in ICYMI",
-                config: { contentGenerationEnabled: !0 },
+                config: {
+                    contentGenerationEnabled: !0,
+                },
             },
         ],
     });
+
 function p(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = u(e, !1);
     return f.getCurrentConfig(
-        { location: e },
+        {
+            location: e,
+        },
         {
             autoTrackExposure: t,
             disable: !n,
@@ -104,12 +129,16 @@ let _ = (0, r.C)({
     kind: "user",
     id: "2025-10_icymi_desktop_client",
     label: "ICYMI desktop client",
-    defaultConfig: { icymiDesktopEnabled: !1 },
+    defaultConfig: {
+        icymiDesktopEnabled: !1,
+    },
     treatments: [
         {
             id: 1,
             label: "Enable ICYMI desktop client",
-            config: { icymiDesktopEnabled: !0 },
+            config: {
+                icymiDesktopEnabled: !0,
+            },
         },
     ],
 });

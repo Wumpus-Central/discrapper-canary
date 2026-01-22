@@ -1,4 +1,6 @@
-s.d(e, { default: () => j });
+s.d(e, {
+    default: () => j,
+});
 var i = s(627968),
     n = s(64700),
     a = s(503698),
@@ -18,6 +20,7 @@ var i = s(627968),
     _ = s(294726),
     N = s(985018),
     g = s(889801);
+
 function j(t) {
     let { guildId: e, instance: s, onClose: a, transitionState: j } = t,
         v = (0, c.bG)([f.A], () => {
@@ -55,7 +58,9 @@ function j(t) {
                 graphic: {
                     type: "dynamic",
                     component: u.DynamicGraphicComponent.GAME_SERVER_GAME_INSTRUCTIONS_ASSET,
-                    props: { instance: s },
+                    props: {
+                        instance: s,
+                    },
                 },
                 alignCenter: !0,
                 title: s.name,
@@ -92,7 +97,9 @@ function j(t) {
                                               (0, i.jsx)(o.Text, {
                                                   variant: "text-sm/normal",
                                                   color: "text-subtle",
-                                                  children: p.A.parse(t, !1, { allowLinks: !0 }),
+                                                  children: p.A.parse(t, !1, {
+                                                      allowLinks: !0,
+                                                  }),
                                               }),
                                           ],
                                       },

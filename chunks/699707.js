@@ -1,9 +1,12 @@
-n.d(t, { A: () => I }), n(896048);
+n.d(t, {
+    A: () => I,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
     a = n.n(i),
-    s = n(432022),
+    s = n(108531),
     o = n(397927),
     c = n(475743),
     u = n(216418),
@@ -20,6 +23,7 @@ var r = n(627968),
     j = n(806931),
     v = n(403264),
     x = n(542411);
+
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -45,6 +49,7 @@ function E(e) {
     }
     return e;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -65,6 +70,7 @@ function _(e, t) {
 }
 let C = 16 / 9,
     S = 8 + y.Vp;
+
 function I(e) {
     var t;
     let n,
@@ -127,7 +133,9 @@ function I(e) {
             {
                 value: +!!et,
                 delay: ef || !et ? 0 : 100,
-                config: _(E({}, s.config.stiff), { clamp: !0 }),
+                config: _(E({}, s.config.stiff), {
+                    clamp: !0,
+                }),
                 onStart: () => J(!0),
                 onChange: () => h._.dispatch(O.jej.REMEASURE_TARGET),
                 onRest: () => {
@@ -139,21 +147,27 @@ function I(e) {
         em = (0, o.zhh)(
             {
                 value: +!!et,
-                config: _(E({}, s.config.stiff), { clamp: !0 }),
+                config: _(E({}, s.config.stiff), {
+                    clamp: !0,
+                }),
             },
             eb,
         ),
         eA = (0, o.zhh)(
             {
                 value: eu,
-                config: _(E({}, s.config.stiff), { clamp: !0 }),
+                config: _(E({}, s.config.stiff), {
+                    clamp: !0,
+                }),
             },
             (en === et && em.value.idle && !ei) || ea || eh ? "animate-never" : "animate-always",
         ),
         ey = (0, o.zhh)(
             {
                 value: n,
-                config: _(E({}, s.config.stiff), { clamp: !0 }),
+                config: _(E({}, s.config.stiff), {
+                    clamp: !0,
+                }),
             },
             eb,
         ),
@@ -161,11 +175,19 @@ function I(e) {
             M,
             {
                 keys: (e) => (null == e ? void 0 : e.id),
-                config: _(E({}, s.config.stiff), { clamp: !0 }),
+                config: _(E({}, s.config.stiff), {
+                    clamp: !0,
+                }),
                 initial: null,
-                from: { opacity: 0 },
-                enter: { opacity: 1 },
-                leave: { opacity: 0 },
+                from: {
+                    opacity: 0,
+                },
+                enter: {
+                    opacity: 1,
+                },
+                leave: {
+                    opacity: 0,
+                },
             },
             eb,
         ),
@@ -179,18 +201,26 @@ function I(e) {
         children: [
             (0, r.jsxs)("div", {
                 className: x.QX,
-                style: { opacity: $ && Y ? 0 : 1 },
+                style: {
+                    opacity: $ && Y ? 0 : 1,
+                },
                 children: [
                     (0, r.jsxs)(s.animated.div, {
                         className: x.pc,
-                        style: { top: em.value.to((e) => (-e * S) / 2) },
+                        style: {
+                            top: em.value.to((e) => (-e * S) / 2),
+                        },
                         children: [
                             (0, r.jsx)(s.animated.div, {
-                                style: { width: eA.value },
+                                style: {
+                                    width: eA.value,
+                                },
                                 className: x.tN,
                                 children: (0, r.jsx)("div", {
                                     className: v.xS,
-                                    style: { aspectRatio: eo },
+                                    style: {
+                                        aspectRatio: eo,
+                                    },
                                     children: eO((e, t, n) => {
                                         let { key: l } = n;
                                         return null != t
@@ -224,8 +254,12 @@ function I(e) {
                             }),
                             el
                                 ? (0, r.jsx)(s.animated.div, {
-                                      className: a()(x.$l, { [x.N7]: F }),
-                                      style: { bottom: ey.value },
+                                      className: a()(x.$l, {
+                                          [x.N7]: F,
+                                      }),
+                                      style: {
+                                          bottom: ey.value,
+                                      },
                                       children: (0, r.jsx)(d.A, {
                                           channelId: D.id,
                                           isParticipantsOpen: L,

@@ -1,4 +1,8 @@
-n.d(t, { A: () => x }), n(864466), n(443073);
+n.d(t, {
+    A: () => x,
+}),
+    n(864466),
+    n(443073);
 var r = n(627968),
     i = n(64700),
     l = n(397927),
@@ -12,6 +16,7 @@ var r = n(627968),
     g = n(5558),
     b = n(985018),
     m = n(840701);
+
 function p(e) {
     let { title: t, subtitle: n, icon: i, page: s } = e;
     return (0, r.jsxs)("div", {
@@ -50,6 +55,7 @@ function p(e) {
         ],
     });
 }
+
 function x(e) {
     let { guild: t } = e;
     (0, s.qv)(t.id);
@@ -90,7 +96,9 @@ function x(e) {
                 className: m.wx,
                 children: b.intl.string(b.t["0A+VSA"]),
             }),
-            (0, r.jsx)(f.p, { guild: t }),
+            (0, r.jsx)(f.p, {
+                guild: t,
+            }),
             (0, r.jsxs)("div", {
                 className: m.Xf,
                 children: [
@@ -103,7 +111,9 @@ function x(e) {
                         }),
                         page: u.C.CAPTCHA_AND_RAID_PROTECTION,
                     }),
-                    (0, r.jsx)("div", { className: m.yF }),
+                    (0, r.jsx)("div", {
+                        className: m.yF,
+                    }),
                     (0, r.jsx)(p, {
                         icon: n(134635),
                         title: b.intl.string(b.t.O0SfFy),
@@ -113,7 +123,9 @@ function x(e) {
                         }),
                         page: u.C.DM_AND_SPAM_PROTECTION,
                     }),
-                    (0, r.jsx)("div", { className: m.yF }),
+                    (0, r.jsx)("div", {
+                        className: m.yF,
+                    }),
                     E &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
@@ -126,7 +138,9 @@ function x(e) {
                                     }),
                                     page: u.C.AUTOMOD,
                                 }),
-                                (0, r.jsx)("div", { className: m.yF }),
+                                (0, r.jsx)("div", {
+                                    className: m.yF,
+                                }),
                             ],
                         }),
                     (0, r.jsx)(p, {

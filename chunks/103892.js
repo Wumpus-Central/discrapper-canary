@@ -1,4 +1,6 @@
-e.d(a, { A: () => t });
+e.d(a, {
+    A: () => t,
+});
 var n = {
     lessThanXSeconds: {
         one: "mai puțin de o secundă",
@@ -30,12 +32,12 @@ var n = {
         other: "{{count}} zile",
     },
     aboutXWeeks: {
-        one: "circa o săptămână",
-        other: "circa {{count}} săptămâni",
+        one: "circa o săptăm\xe2nă",
+        other: "circa {{count}} săptăm\xe2ni",
     },
     xWeeks: {
-        one: "1 săptămână",
-        other: "{{count}} săptămâni",
+        one: "1 săptăm\xe2nă",
+        other: "{{count}} săptăm\xe2ni",
     },
     aboutXMonths: {
         one: "circa 1 lună",
@@ -69,7 +71,7 @@ let t = function (i, a, e) {
         ((t = "string" == typeof r ? r : 1 === a ? r.one : r.other.replace("{{count}}", String(a))),
         null != e && e.addSuffix)
     )
-        if (e.comparison && e.comparison > 0) return "în " + t;
-        else return t + " în urmă";
+        if (e.comparison && e.comparison > 0) return "\xeen " + t;
+        else return t + " \xeen urmă";
     return t;
 };

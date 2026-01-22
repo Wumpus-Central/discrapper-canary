@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968);
 n(64700);
 var l = n(311907),
@@ -11,6 +13,7 @@ var l = n(311907),
     d = n(58736),
     f = n(652215),
     p = n(985018);
+
 function h(e) {
     let { channel: t, showCallOrActivityPanel: n } = e,
         h = (0, l.bG)([u.Ay], () => u.Ay.getSection(t.id, null == t ? void 0 : t.isDM())),

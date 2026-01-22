@@ -9,6 +9,7 @@ var r = n(846293),
     s = n(449054),
     o = n(733391),
     l = n(652215);
+
 function c(e) {
     let { guildId: t, invite: n, forceFetch: r } = e;
     if (null != n) {
@@ -32,11 +33,19 @@ async function u(e) {
     let _ = a.A.getGuild(t);
     (null == _ ? void 0 : _.joinedAt) == null &&
         (null == d || d.has(l.GuildFeatures.PREVIEW_ENABLED)
-            ? await (0, s.Z2)(t, {}, { shouldNavigate: !1 })
+            ? await (0, s.Z2)(
+                  t,
+                  {},
+                  {
+                      shouldNavigate: !1,
+                  },
+              )
             : null != n &&
               (await r.Ay.acceptInvite({
                   inviteKey: n.code,
-                  context: { location: "game_shop" },
+                  context: {
+                      location: "game_shop",
+                  },
                   skipOnboarding: !0,
               }))),
         (0, i.pX)(l.BVt.CHANNELS_GAME_SHOP(t, o, c, u));

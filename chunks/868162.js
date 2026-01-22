@@ -14,6 +14,7 @@ var r,
     d = n(723702),
     p = n(792205),
     f = n(731854);
+
 function h(e, t, n) {
     return (
         t in e
@@ -27,7 +28,9 @@ function h(e, t, n) {
         e
     );
 }
-let A = { ignoredDevices: {} },
+let A = {
+        ignoredDevices: {},
+    },
     g = A,
     m = !1,
     b = {},
@@ -42,6 +45,7 @@ let A = { ignoredDevices: {} },
         justChanged: !1,
     },
     I = /\(([^)]+)\)/;
+
 function v(e) {
     if ((0, d.getPlatform)() === d.PlatformTypes.WINDOWS) {
         let t = e.name.match(I);
@@ -49,6 +53,7 @@ function v(e) {
     }
     return e.name;
 }
+
 function S(e, t, n) {
     return null == e || e.displayName !== t
         ? {
@@ -111,7 +116,10 @@ h(C, "displayName", "ConnectedDeviceStore"),
                         }
                         return e;
                     })({}, e)),
-                    (n = n = { ignoredDevices: {} }),
+                    (n = n =
+                        {
+                            ignoredDevices: {},
+                        }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                         : (function (e, t) {
@@ -183,11 +191,20 @@ let N = new C(s.h, {
         let { displayName: t, connectedDevicePreference: n, location: r } = e;
         if (n === p.f.INPUT || n === p.f.INPUT_AND_OUTPUT) {
             let e = b[t];
-            null != e && s.h.wait(() => o.A.setInputDevice(e, { location: r }));
+            null != e &&
+                s.h.wait(() =>
+                    o.A.setInputDevice(e, {
+                        location: r,
+                    }),
+                );
         }
         if (n === p.f.OUTPUT || n === p.f.INPUT_AND_OUTPUT) {
             let e = _[t];
-            s.h.wait(() => o.A.setOutputDevice(e, { location: r }));
+            s.h.wait(() =>
+                o.A.setOutputDevice(e, {
+                    location: r,
+                }),
+            );
         }
         delete E[t];
     },

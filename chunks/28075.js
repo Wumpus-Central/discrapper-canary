@@ -1,8 +1,11 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r,
     i = n(311907),
     a = n(73153),
     s = n(736666);
+
 function o(e, t, n) {
     return (
         t in e
@@ -16,7 +19,9 @@ function o(e, t, n) {
         e
     );
 }
-let l = { lastInitAttemptMayHaveCrashed: !1 };
+let l = {
+    lastInitAttemptMayHaveCrashed: !1,
+};
 class c extends (r = i.Ay.PersistedStore) {
     initialize(e) {
         null != e && (l = e);
@@ -28,6 +33,7 @@ class c extends (r = i.Ay.PersistedStore) {
         return l.lastInitAttemptMayHaveCrashed;
     }
 }
+
 function u(e) {
     let { state: t } = e;
     switch (t) {
@@ -41,4 +47,6 @@ function u(e) {
     }
 }
 o(c, "displayName", "VoiceFilterPersistedStore"), o(c, "persistKey", "VoiceFilterPersistedStore");
-let d = new c(a.h, { VOICE_FILTER_NATIVE_MODULE_STATE_CHANGE: u });
+let d = new c(a.h, {
+    VOICE_FILTER_NATIVE_MODULE_STATE_CHANGE: u,
+});

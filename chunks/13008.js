@@ -1,4 +1,8 @@
-n.d(t, { A: () => _ }), n(896048), n(321073);
+n.d(t, {
+    A: () => _,
+}),
+    n(896048),
+    n(321073);
 var r,
     i,
     a = n(627968),
@@ -7,6 +11,7 @@ var r,
     l = n.n(o),
     c = n(235986),
     u = n(267950);
+
 function d(e, t, n) {
     return (
         t in e
@@ -60,14 +65,25 @@ class f extends (r = s.PureComponent) {
             });
     }
 }
-d(f, "defaultProps", { autoFocus: !1 });
+d(f, "defaultProps", {
+    autoFocus: !1,
+});
 class p extends (i = s.PureComponent) {
     render() {
         let { className: e, inputClassName: t } = this.props,
             { codes: n } = this.state,
             r = [];
         for (let e = 0; e < n.length; e++)
-            e === n.length / 2 && r.push((0, a.jsx)("div", { className: u.j }, "spacer")),
+            e === n.length / 2 &&
+                r.push(
+                    (0, a.jsx)(
+                        "div",
+                        {
+                            className: u.j,
+                        },
+                        "spacer",
+                    ),
+                ),
                 r.push(
                     (0, a.jsx)(
                         f,
@@ -124,8 +140,14 @@ class p extends (i = s.PureComponent) {
         null == t || t(e);
     }
     constructor(e) {
-        super(e), d(this, "_codeBlockRefs", Array(this.props.count)), (this.state = { codes: Array(e.count) });
+        super(e),
+            d(this, "_codeBlockRefs", Array(this.props.count)),
+            (this.state = {
+                codes: Array(e.count),
+            });
     }
 }
-d(p, "defaultProps", { count: 6 });
+d(p, "defaultProps", {
+    count: 6,
+});
 let _ = p;

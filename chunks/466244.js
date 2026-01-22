@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(627968);
 n(64700);
 var l = n(158954),
@@ -63,7 +65,9 @@ let c = () =>
                                         variant: "heading-lg/semibold",
                                         className: o.wx,
                                         id: u,
-                                        children: s.intl.format(s.t.z9qozJ, { guildName: e.guildName }),
+                                        children: s.intl.format(s.t.z9qozJ, {
+                                            guildName: e.guildName,
+                                        }),
                                     }),
                                     (0, r.jsx)(i.Text, {
                                         variant: "text-sm/medium",

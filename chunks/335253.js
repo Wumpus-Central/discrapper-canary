@@ -1,4 +1,7 @@
-n.d(t, { default: () => O }), n(896048);
+n.d(t, {
+    default: () => O,
+}),
+    n(896048);
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -59,15 +62,26 @@ let O = (0, a.A)(
                                     children: (0, r.jsxs)(i.Drp, {
                                         id: "more-options",
                                         label: g.intl.string(g.t.PdRCRg),
-                                        children: [h, (0, r.jsx)(i.rXV, { children: I }), C],
+                                        children: [
+                                            h,
+                                            (0, r.jsx)(i.rXV, {
+                                                children: I,
+                                            }),
+                                            C,
+                                        ],
                                     }),
                                 }),
-                            p && (0, r.jsx)(i.rXV, { children: x }),
+                            p &&
+                                (0, r.jsx)(i.rXV, {
+                                    children: x,
+                                }),
                         ],
                     }),
             });
         },
-        { object: E.ZSU.CONTEXT_MENU },
+        {
+            object: E.ZSU.CONTEXT_MENU,
+        },
     ),
     [u.A.VOICE_USER],
 );

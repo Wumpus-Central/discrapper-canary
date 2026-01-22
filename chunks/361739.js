@@ -10,7 +10,7 @@ var r,
     a = n(64700),
     s = n(503698),
     o = n.n(s),
-    l = n(432022),
+    l = n(108531),
     c = n(359459),
     u = n(607399),
     d = n(73939),
@@ -19,6 +19,7 @@ var r,
     _ = n(723702),
     h = n(684136),
     m = n(63135);
+
 function g(e, t, n) {
     return (
         t in e
@@ -32,6 +33,7 @@ function g(e, t, n) {
         e
     );
 }
+
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -48,6 +50,7 @@ function E(e) {
     }
     return e;
 }
+
 function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -60,6 +63,7 @@ function b(e, t) {
     }
     return n;
 }
+
 function y(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -71,6 +75,7 @@ function y(e, t) {
         e
     );
 }
+
 function O(e, t) {
     if (null == e) return {};
     var n,
@@ -87,6 +92,7 @@ function O(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function A(e, t) {
     if (null == e) return {};
     var n,
@@ -126,6 +132,7 @@ class I extends (r = a.PureComponent) {
         });
     }
 }
+
 function T(e) {
     let { children: t } = e;
     return (0, i.jsx)("div", {
@@ -160,6 +167,7 @@ let N = Object.freeze({
     wide: "contentColumnWide",
     scrollableCustom: "contentColumnCustom",
 });
+
 function R(e) {
     let { isMobile: t, mobileSidebarOpen: n, closeAction: r } = e,
         s = a.useRef(null);
@@ -178,7 +186,9 @@ function R(e) {
                   children: (0, i.jsx)("div", {
                       className: m.tools,
                       children: (0, i.jsx)(h.A, {
-                          className: o()({ [m.mobileToolsCloseIcon]: t }),
+                          className: o()({
+                              [m.mobileToolsCloseIcon]: t,
+                          }),
                           closeAction: r,
                           keybind: "ESC",
                       }),
@@ -210,7 +220,9 @@ let w = function (e) {
                     position: "absolute",
                     opacity: 0,
                 },
-                enter: { opacity: 1 },
+                enter: {
+                    opacity: 1,
+                },
                 reverse: O,
                 config: l.config.stiff,
             },
@@ -223,32 +235,48 @@ let w = function (e) {
             [E],
         );
     a.useLayoutEffect(() => {
-        null != A.current && I !== s && A.current.scrollTo({ to: 0 });
+        null != A.current &&
+            I !== s &&
+            A.current.scrollTo({
+                to: 0,
+            });
     }, [s, I, A]);
     let w = (0, i.jsx)(R, {
         isMobile: u.Fr,
         mobileSidebarOpen: b,
         closeAction: _,
     });
+
     function P() {
         return null == r
             ? null
             : (0, i.jsx)(
                   f.FQk,
                   {
-                      className: o()(m.noticeRegion, { [m.noticeRegionHiddenSidebar]: O }),
+                      className: o()(m.noticeRegion, {
+                          [m.noticeRegionHiddenSidebar]: O,
+                      }),
                       children: r,
                   },
                   s,
               );
     }
+
     function D() {
         let e = null != y && null != _ && b,
             t =
                 u.Fr &&
                 (0, i.jsxs)("div", {
-                    className: o()(m.mobileContentHeader, { [m.hideHamburger]: !e }),
-                    children: [e && (0, i.jsx)(c._, { onClick: y }), w],
+                    className: o()(m.mobileContentHeader, {
+                        [m.hideHamburger]: !e,
+                    }),
+                    children: [
+                        e &&
+                            (0, i.jsx)(c._, {
+                                onClick: y,
+                            }),
+                        w,
+                    ],
                 });
         if ("custom" === g)
             return (0, i.jsxs)(d.F, {
@@ -289,7 +317,9 @@ let w = function (e) {
         let r = N[null != g ? g : "default"];
         return (0, i.jsxs)(d.F, {
             component: "div",
-            className: o()(m.contentRegion, { [m.hidden]: u.Fr && !0 === b }),
+            className: o()(m.contentRegion, {
+                [m.hidden]: u.Fr && !0 === b,
+            }),
             children: [
                 (0, i.jsxs)("div", {
                     className: m.contentTransitionWrap,
@@ -306,9 +336,15 @@ let w = function (e) {
                                     value: A.current,
                                     children: (0, i.jsx)(f.VQ0.Panel, {
                                         id: s,
-                                        className: o()(m.contentColumn, m[r], { [m.mobileContent]: u.Fr }),
+                                        className: o()(m.contentColumn, m[r], {
+                                            [m.mobileContent]: u.Fr,
+                                        }),
                                         ref: v,
-                                        style: u.Fr ? { maxWidth: window.innerWidth } : void 0,
+                                        style: u.Fr
+                                            ? {
+                                                  maxWidth: window.innerWidth,
+                                              }
+                                            : void 0,
                                         children: O
                                             ? n
                                             : (0, i.jsx)(f.xpW, {
@@ -326,6 +362,7 @@ let w = function (e) {
             ],
         });
     }
+
     function x() {
         return null == t
             ? null
@@ -341,7 +378,9 @@ let w = function (e) {
                               className: m.sidebarRegionScroller,
                               fade: !0,
                               children: (0, i.jsxs)("nav", {
-                                  className: o()(m.sidebar, { [m.mobileSidebar]: u.Fr }),
+                                  className: o()(m.sidebar, {
+                                      [m.mobileSidebar]: u.Fr,
+                                  }),
                                   children: [
                                       u.Fr &&
                                           (0, i.jsx)("div", {

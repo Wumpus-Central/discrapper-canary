@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var r = n(627968),
     i = n(64700),
     a = n(932433),
@@ -11,6 +13,7 @@ var r = n(627968),
     f = n(652215),
     p = n(650583),
     _ = n(985018);
+
 function h(e) {
     var t;
     if (e.ctrlKey || e.altKey || e.metaKey || e.key !== p.dh.TAB || null == e.target) return;
@@ -23,6 +26,7 @@ function h(e) {
             location_object: n.tagName,
         });
 }
+
 function m(e) {
     let { children: t } = e,
         n = (0, o.cf)([u.A], () => ({

@@ -46,7 +46,7 @@
             yy: "%d tau",
         },
         dayOfMonthOrdinalParse: /\d{1,2}º/,
-        ordinal: "%dº",
+        ordinal: "%d\xba",
         week: {
             dow: 1,
             doy: 4,

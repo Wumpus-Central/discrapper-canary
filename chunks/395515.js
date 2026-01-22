@@ -1,9 +1,12 @@
-n.d(t, { T: () => R }), n(896048);
+n.d(t, {
+    T: () => R,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
-    o = n(432022),
+    o = n(108531),
     l = n(827734),
     c = n(717421),
     u = n(603392),
@@ -11,6 +14,7 @@ var r = n(627968),
     f = n(426333),
     p = n(452027),
     _ = n(992495);
+
 function h(e, t, n) {
     return (
         t in e
@@ -24,6 +28,7 @@ function h(e, t, n) {
         e
     );
 }
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -40,6 +45,7 @@ function m(e) {
     }
     return e;
 }
+
 function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -52,6 +58,7 @@ function g(e, t) {
     }
     return n;
 }
+
 function E(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -63,6 +70,7 @@ function E(e, t) {
         e
     );
 }
+
 function b(e, t) {
     if (null == e) return {};
     var n,
@@ -79,6 +87,7 @@ function b(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function y(e, t) {
     if (null == e) return {};
     var n,
@@ -99,6 +108,7 @@ let O = {
     I = "M13.5582 8.96683L13.5582 11.0013L6.56192 11.0013L6.56192 8.96683L13.5582 8.96683Z",
     T = "M7.89561 14.8538L6.30462 13.2629L14.3099 5.25755L15.9009 6.84854L7.89561 14.8538Z",
     C = "M4.08643 11.0903L5.67742 9.49929L9.4485 13.2704L7.85751 14.8614L4.08643 11.0903Z";
+
 function N(e, t, n, i) {
     let a = e.to({
             output: [t, n],
@@ -126,6 +136,7 @@ function N(e, t, n, i) {
         ],
     });
 }
+
 function R(e) {
     let { onChange: t, checked: n, disabled: a, focusProps: h, innerRef: g } = e,
         y = b(e, ["onChange", "checked", "disabled", "focusProps", "innerRef"]),
@@ -141,12 +152,15 @@ function R(e) {
             },
             "animate-always",
         );
+
     function w(e) {
         I(!1), e.stopPropagation(), null == t || t(e.currentTarget.checked);
     }
+
     function P(e) {
         a || e.repeat || ((" " === e.key || "Enter" === e.key) && I(!0));
     }
+
     function D(e) {
         var t;
         a || !S || e.repeat || (I(!1), "Enter" === e.key && (null == (t = v.current) || t.click()));
@@ -156,7 +170,9 @@ function R(e) {
         E(m({}, y), {
             disabled: a,
             layout: "horizontal",
-            layoutConfig: { horizontalControlColumnWidth: "auto" },
+            layoutConfig: {
+                horizontalControlColumnWidth: "auto",
+            },
             auxiliaryContentPosition: "under-label",
             children: (e) =>
                 (0, r.jsx)(

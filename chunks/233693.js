@@ -9,6 +9,7 @@ n.d(t, {
     n(896048);
 var r = n(696451),
     i = n(70738);
+
 function a(e, t, n) {
     return (
         t in e
@@ -22,6 +23,7 @@ function a(e, t, n) {
         e
     );
 }
+
 function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -38,6 +40,7 @@ function s(e) {
     }
     return e;
 }
+
 function o(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -50,6 +53,7 @@ function o(e, t) {
     }
     return n;
 }
+
 function l(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -65,6 +69,7 @@ let c = [12, 25, 50, 100],
     u = 7,
     d = 5,
     f = 250;
+
 function p() {
     return {
         pageSize: c[0],
@@ -74,6 +79,7 @@ function p() {
         elasticSearchCursor: null,
     };
 }
+
 function _(e) {
     return Math.max(e.pageSize * d, f);
 }
@@ -115,7 +121,10 @@ class h {
     updatePaginationToken(e) {
         return (
             e !== this._paginationState.continuationToken &&
-            ((this._paginationState = l(s({}, this._paginationState), { continuationToken: e })), !0)
+            ((this._paginationState = l(s({}, this._paginationState), {
+                continuationToken: e,
+            })),
+            !0)
         );
     }
     _calculateNewPageFromPageSizeChange(e, t) {

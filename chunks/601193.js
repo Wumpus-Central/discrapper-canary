@@ -1,4 +1,6 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 var r = n(839214);
 let i = Object.freeze({
         selectedTab: null,

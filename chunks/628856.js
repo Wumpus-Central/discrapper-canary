@@ -3,11 +3,15 @@ n.d(t, {
     t: () => i,
 });
 var r = n(369496);
+
 function i(e) {
     return "object" == typeof e && null != e && "nameplate" in e && "object" == typeof e.nameplate
-        ? { nameplate: a(e.nameplate) }
+        ? {
+              nameplate: a(e.nameplate),
+          }
         : null;
 }
+
 function a(e) {
     if (
         "object" != typeof e ||
@@ -33,6 +37,7 @@ function a(e) {
         t
     );
 }
+
 function s(e) {
     return {
         src: e.asset,

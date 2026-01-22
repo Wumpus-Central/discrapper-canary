@@ -1,4 +1,6 @@
-n.d(t, { i: () => i });
+n.d(t, {
+    i: () => i,
+});
 var r,
     i =
         (((r = {}).AGE_GATE = "age-gate"),

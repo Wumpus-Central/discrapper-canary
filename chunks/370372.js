@@ -1,4 +1,6 @@
-r.d(n, { default: () => G });
+r.d(n, {
+    default: () => G,
+});
 var t = r(627968);
 r(64700);
 var i = r(397927),
@@ -27,6 +29,7 @@ var i = r(397927),
     T = r(969128),
     E = r(652215),
     F = r(985018);
+
 function N(e) {
     for (var n = 1; n < arguments.length; n++) {
         var r = null != arguments[n] ? arguments[n] : {},
@@ -52,6 +55,7 @@ function N(e) {
     }
     return e;
 }
+
 function O(e) {
     let { channel: n, onSelect: r } = e,
         a = (0, p.A)(n),
@@ -77,21 +81,34 @@ function O(e) {
         "aria-label": F.intl.string(F.t.Xm41aV),
         onSelect: r,
         children: [
-            (0, t.jsx)(i.rXV, { children: a }),
+            (0, t.jsx)(i.rXV, {
+                children: a,
+            }),
             (0, t.jsxs)(i.rXV, {
                 children: [b, C, x, c],
             }),
             (0, t.jsxs)(i.rXV, {
                 children: [X, G ? k : T],
             }),
-            (0, t.jsx)(i.rXV, { children: E }),
-            (0, t.jsx)(i.rXV, { children: O }),
-            (0, t.jsx)(i.rXV, { children: u }),
-            (0, t.jsx)(i.rXV, { children: d }),
-            (0, t.jsx)(i.rXV, { children: N }),
+            (0, t.jsx)(i.rXV, {
+                children: E,
+            }),
+            (0, t.jsx)(i.rXV, {
+                children: O,
+            }),
+            (0, t.jsx)(i.rXV, {
+                children: u,
+            }),
+            (0, t.jsx)(i.rXV, {
+                children: d,
+            }),
+            (0, t.jsx)(i.rXV, {
+                children: N,
+            }),
         ],
     });
 }
+
 function k(e) {
     let { channel: n, guild: r, onSelect: a } = e,
         d = (0, p.A)(n),
@@ -147,9 +164,19 @@ function k(e) {
                 },
                 "admin-actions",
             ),
-            (0, t.jsx)(i.rXV, { children: M }),
-            (0, t.jsx)(i.rXV, { children: h }),
-            (0, t.jsx)(i.rXV, { children: I }, "developer-actions"),
+            (0, t.jsx)(i.rXV, {
+                children: M,
+            }),
+            (0, t.jsx)(i.rXV, {
+                children: h,
+            }),
+            (0, t.jsx)(
+                i.rXV,
+                {
+                    children: I,
+                },
+                "developer-actions",
+            ),
         ],
     });
 }
@@ -158,7 +185,9 @@ let G = (0, d.A)(
         function (e) {
             return (0, u.A)() ? (0, t.jsx)(O, N({}, e)) : (0, t.jsx)(k, N({}, e));
         },
-        { object: E.ZSU.CONTEXT_MENU },
+        {
+            object: E.ZSU.CONTEXT_MENU,
+        },
     ),
     [c.A.CONTEXT_MENU, c.A.CHANNEL_LIST_TEXT_CHANNEL_MENU],
 );

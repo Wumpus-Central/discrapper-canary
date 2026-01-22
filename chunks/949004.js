@@ -1,4 +1,6 @@
-t.d(a, { default: () => g });
+t.d(a, {
+    default: () => g,
+});
 var d = t(627968),
     f = t(64700),
     n = t(397927),
@@ -11,13 +13,16 @@ var d = t(627968),
     u = t(652215),
     s = t(294589),
     p = t(985018);
+
 function g(e) {
     let { onClose: a, transitionState: g, dismissibleContent: O } = e;
     (0, l.kn)([O]);
     let _ = (0, r.A)((0, o.ay)(O)),
         k = f.useMemo(() => _.map((e) => e.value), [_]);
     f.useEffect(() => {
-        b.default.track(u.HAw.OPEN_MODAL, { type: "Age Verification User Feedback" });
+        b.default.track(u.HAw.OPEN_MODAL, {
+            type: "Age Verification User Feedback",
+        });
     }, []);
     let m = f.useCallback(
         (e) => {
@@ -56,7 +61,12 @@ function g(e) {
                                             });
                                     }
                                     return e;
-                                })({ body: p.intl.string(s.default["4djgO/"]) }, a),
+                                })(
+                                    {
+                                        body: p.intl.string(s.default["4djgO/"]),
+                                    },
+                                    a,
+                                ),
                             );
                     });
         },

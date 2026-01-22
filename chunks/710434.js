@@ -1,4 +1,7 @@
-n.d(t, { A: () => O }), n(896048);
+n.d(t, {
+    A: () => O,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(417597),
@@ -11,6 +14,7 @@ var r = n(627968),
     f = n(652215),
     p = n(985018),
     b = n(22941);
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +40,7 @@ function m(e) {
     }
     return e;
 }
+
 function g(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -54,6 +59,7 @@ function g(e, t) {
         e
     );
 }
+
 function O(e) {
     var t;
     let {
@@ -77,12 +83,19 @@ function O(e) {
                 try {
                     await a.Ay.submitVerificationForm(
                         n.id,
-                        g(m({}, D), { formFields: [g(m({}, _), { response: A })] }),
+                        g(m({}, D), {
+                            formFields: [
+                                g(m({}, _), {
+                                    response: A,
+                                }),
+                            ],
+                        }),
                     );
                 } catch (e) {}
                 x();
             }
         }, [n.id, D, _, A, x]);
+
     function I(e) {
         let [t] = e;
         t.isIntersecting && N(!0);
@@ -151,7 +164,9 @@ function O(e) {
                               }),
                           ],
                       }),
-                      (0, r.jsx)("div", { className: b.Lw }),
+                      (0, r.jsx)("div", {
+                          className: b.Lw,
+                      }),
                       (0, r.jsxs)("div", {
                           className: b.N3,
                           children: [

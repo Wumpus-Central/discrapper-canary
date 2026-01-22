@@ -1,4 +1,7 @@
-n.d(t, { A: () => O }), n(896048);
+n.d(t, {
+    A: () => O,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -69,25 +72,42 @@ let _ = 1048576,
             getPerkPreviewLightTheme: () => n(913997),
             getPerkPreviewDarkTheme: () => n(95781),
             getTier0Value: () =>
-                f.intl.formatToPlainString(f.t.w1gmLt, { bitrate: d.TG[u.TVA.NONE].limits.bitrate / 1000 }),
+                f.intl.formatToPlainString(f.t.w1gmLt, {
+                    bitrate: d.TG[u.TVA.NONE].limits.bitrate / 1e3,
+                }),
             getTier1Value: () =>
-                f.intl.formatToPlainString(f.t.w1gmLt, { bitrate: d.TG[u.TVA.TIER_1].limits.bitrate / 1000 }),
+                f.intl.formatToPlainString(f.t.w1gmLt, {
+                    bitrate: d.TG[u.TVA.TIER_1].limits.bitrate / 1e3,
+                }),
             getTier2Value: () =>
-                f.intl.formatToPlainString(f.t.w1gmLt, { bitrate: d.TG[u.TVA.TIER_2].limits.bitrate / 1000 }),
+                f.intl.formatToPlainString(f.t.w1gmLt, {
+                    bitrate: d.TG[u.TVA.TIER_2].limits.bitrate / 1e3,
+                }),
             getTier3Value: () =>
-                f.intl.formatToPlainString(f.t.w1gmLt, { bitrate: d.TG[u.TVA.TIER_3].limits.bitrate / 1000 }),
+                f.intl.formatToPlainString(f.t.w1gmLt, {
+                    bitrate: d.TG[u.TVA.TIER_3].limits.bitrate / 1e3,
+                }),
         },
         {
             getPerkHeading: () => f.intl.string(f.t.R1U2xC),
             getPerkPreviewLightTheme: () => n(389833),
             getPerkPreviewDarkTheme: () => n(754561),
-            getTier0Value: () => f.intl.formatToPlainString(f.t.pIn7Af, { size: d.TG[u.TVA.NONE].limits.fileSize / _ }),
+            getTier0Value: () =>
+                f.intl.formatToPlainString(f.t.pIn7Af, {
+                    size: d.TG[u.TVA.NONE].limits.fileSize / _,
+                }),
             getTier1Value: () =>
-                f.intl.formatToPlainString(f.t.pIn7Af, { size: d.TG[u.TVA.TIER_1].limits.fileSize / _ }),
+                f.intl.formatToPlainString(f.t.pIn7Af, {
+                    size: d.TG[u.TVA.TIER_1].limits.fileSize / _,
+                }),
             getTier2Value: () =>
-                f.intl.formatToPlainString(f.t.pIn7Af, { size: d.TG[u.TVA.TIER_2].limits.fileSize / _ }),
+                f.intl.formatToPlainString(f.t.pIn7Af, {
+                    size: d.TG[u.TVA.TIER_2].limits.fileSize / _,
+                }),
             getTier3Value: () =>
-                f.intl.formatToPlainString(f.t.pIn7Af, { size: d.TG[u.TVA.TIER_3].limits.fileSize / _ }),
+                f.intl.formatToPlainString(f.t.pIn7Af, {
+                    size: d.TG[u.TVA.TIER_3].limits.fileSize / _,
+                }),
         },
         {
             getPerkHeading: () => f.intl.string(f.t.f6vfso),
@@ -144,6 +164,7 @@ let _ = 1048576,
             getTier3Value: () => !0,
         },
     ];
+
 function m(e) {
     let { children: t, className: n, tier: i } = e,
         a = i === u.TVA.NONE ? "text-muted" : "text-strong",
@@ -161,16 +182,21 @@ function m(e) {
                 (0, r.jsx)(l.Text, {
                     color: a,
                     variant: "text-md/normal",
-                    children: f.intl.format(f.t["pob/cL"], { subscriptions: u.M2T[i] }),
+                    children: f.intl.format(f.t["pob/cL"], {
+                        subscriptions: u.M2T[i],
+                    }),
                 }),
         ],
     });
 }
+
 function g(e) {
     let t,
         { className: n, textVariant: i = "text-md/bold", value: a } = e;
     if ("boolean" == typeof a) {
-        let e = s()(p.Jk, { [p.I$]: a });
+        let e = s()(p.Jk, {
+            [p.I$]: a,
+        });
         t = a
             ? (0, r.jsx)(l.A9s, {
                   size: "md",
@@ -193,6 +219,7 @@ function g(e) {
         children: t,
     });
 }
+
 function E(e) {
     switch (e) {
         case u.TVA.NONE:
@@ -205,6 +232,7 @@ function E(e) {
             return null;
     }
 }
+
 function b(e) {
     let { currentTier: t } = e,
         n = E(t);
@@ -223,6 +251,7 @@ function b(e) {
               }),
           });
 }
+
 function y(e) {
     let { isFocused: t, handleFocus: n, handleRowBlur: a, theme: c, row: u, hideTier0: d } = e,
         f = i.useRef(null);
@@ -266,9 +295,15 @@ function y(e) {
                     textVariant: "text-md/normal",
                     value: u.getTier0Value(),
                 }),
-            (0, r.jsx)(g, { value: u.getTier1Value() }),
-            (0, r.jsx)(g, { value: u.getTier2Value() }),
-            (0, r.jsx)(g, { value: u.getTier3Value() }),
+            (0, r.jsx)(g, {
+                value: u.getTier1Value(),
+            }),
+            (0, r.jsx)(g, {
+                value: u.getTier2Value(),
+            }),
+            (0, r.jsx)(g, {
+                value: u.getTier3Value(),
+            }),
         ],
     });
 }
@@ -276,9 +311,11 @@ let O = function (e) {
     let t = (0, c.Ay)(),
         [n, a] = i.useState(null),
         { className: s, guild: o, hideHeading: d, hideTier0: _ } = e;
+
     function g(e) {
         a(e);
     }
+
     function E() {
         a(null);
     }
@@ -294,7 +331,10 @@ let O = function (e) {
             (0, r.jsxs)("div", {
                 className: p.wY,
                 children: [
-                    null != o && (0, r.jsx)(b, { currentTier: o.premiumTier }),
+                    null != o &&
+                        (0, r.jsx)(b, {
+                            currentTier: o.premiumTier,
+                        }),
                     (0, r.jsxs)("table", {
                         className: p.tp,
                         cellPadding: 0,
@@ -332,6 +372,7 @@ let O = function (e) {
                                 className: p.__invalid_tableBody,
                                 children: h.map((e, i) => {
                                     let a = n === i;
+
                                     function s() {
                                         g(i);
                                     }

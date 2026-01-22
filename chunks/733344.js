@@ -12,6 +12,7 @@ var r = n(683402),
     _ = -1,
     h = 0,
     m = 8;
+
 function g(e) {
     if (!(this instanceof g)) return new g(e);
     this.options = i.assign(
@@ -53,14 +54,17 @@ function g(e) {
         this._dict_set = !0;
     }
 }
+
 function E(e, t) {
     var n = new g(t);
     if ((n.push(e, !0), n.err)) throw n.msg || s[n.err];
     return n.result;
 }
+
 function b(e, t) {
     return ((t = t || {}).raw = !0), E(e, t);
 }
+
 function y(e, t) {
     return ((t = t || {}).gzip = !0), E(e, t);
 }

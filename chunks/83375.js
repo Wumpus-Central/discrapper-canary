@@ -1,7 +1,10 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r,
     i = n(311907),
     a = n(73153);
+
 function s(e, t, n) {
     return (
         t in e
@@ -16,6 +19,7 @@ function s(e, t, n) {
     );
 }
 let o = !1;
+
 function l(e) {
     o = !0;
 }
@@ -25,4 +29,6 @@ class c extends (r = i.Ay.Store) {
     }
 }
 s(c, "displayName", "ProxyBlockStore");
-let u = new c(a.h, { PROXY_BLOCKED_REQUEST: l });
+let u = new c(a.h, {
+    PROXY_BLOCKED_REQUEST: l,
+});

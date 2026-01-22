@@ -1,4 +1,7 @@
-a.d(t, { default: () => m }), a(896048);
+a.d(t, {
+    default: () => m,
+}),
+    a(896048);
 var n = a(627968),
     i = a(64700),
     r = a(158954),
@@ -19,6 +22,7 @@ var n = a(627968),
     k = a(652215),
     y = a(985018),
     E = a(682225);
+
 function m(e) {
     let { transitionState: t, videoEnabled: a, onEnable: m, onClose: v } = e,
         O = f.A.getCameraComponent(),
@@ -27,7 +31,9 @@ function m(e) {
         x = (0, s.p)(),
         { analyticsLocations: P } = (0, u.Ay)(d.A.CAMERA_PREVIEW);
     i.useEffect(() => {
-        C.default.track(k.HAw.OPEN_MODAL, { type: "Camera Preview Modal" });
+        C.default.track(k.HAw.OPEN_MODAL, {
+            type: "Camera Preview Modal",
+        });
     }, []);
     let M = i.useCallback(async () => {
             try {
@@ -56,7 +62,12 @@ function m(e) {
                                 });
                         }
                         return e;
-                    })({ page: k.liQ.PREVIEW_CAMERA_MODAL }, x.location),
+                    })(
+                        {
+                            page: k.liQ.PREVIEW_CAMERA_MODAL,
+                        },
+                        x.location,
+                    ),
                 });
             } catch (e) {}
             await v(), (0, g._C)(j);
@@ -87,7 +98,9 @@ function m(e) {
                     checked: _,
                     onChange: () => {
                         p.bm.updateSetting(!_),
-                            C.default.track(k.HAw.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: !_ });
+                            C.default.track(k.HAw.UPDATE_USER_SETTINGS_LOCAL, {
+                                always_preview_video: !_,
+                            });
                     },
                 }),
                 actions: I,

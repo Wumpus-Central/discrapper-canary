@@ -15,6 +15,7 @@ var l = n(627968),
     p = n(767599),
     h = n(985018),
     m = n(897833);
+
 function b(e) {
     let { category: t, count: n, onSelectCategory: r, selected: s } = e,
         o = a.useCallback(() => {
@@ -23,7 +24,9 @@ function b(e) {
         u = n.toLocaleString(d.default.locale);
     return (0, l.jsxs)(c.DUT, {
         onClick: o,
-        className: i()(m.L1, { [m.wH]: s }),
+        className: i()(m.L1, {
+            [m.wH]: s,
+        }),
         children: [
             (0, l.jsx)(c.Text, {
                 className: m.UU,
@@ -40,6 +43,7 @@ function b(e) {
         ],
     });
 }
+
 function f(e) {
     let { countsByCategory: t, onSelectCategory: n, selectedCategoryId: r } = e,
         i = (0, s.bG)([u.A], () => u.A.getCategories()),
@@ -74,6 +78,7 @@ function f(e) {
               }),
           });
 }
+
 function g(e) {
     var t;
     let { countsByCategory: n, onSelectCategory: r, selectedCategoryId: i } = e,

@@ -1,4 +1,7 @@
-n.d(t, { A: () => M }), n(228524);
+n.d(t, {
+    A: () => M,
+}),
+    n(228524);
 var r = n(627968),
     i = n(311907),
     l = n(990078),
@@ -32,6 +35,7 @@ var r = n(627968),
     R = n(269927),
     D = n(985018),
     G = n(782356);
+
 function L(e) {
     let { application: t, guild: n } = e,
         l = (0, O.Tq)(n.id),
@@ -89,11 +93,16 @@ function L(e) {
                 ],
             },
         ];
-    return (0, r.jsx)(S.A, { children: u });
+    return (0, r.jsx)(S.A, {
+        children: u,
+    });
 }
+
 function k(e) {
     let { application: t } = e,
-        { teams: n } = (0, b.A)({ refreshOnDepChange: !1 }),
+        { teams: n } = (0, b.A)({
+            refreshOnDepChange: !1,
+        }),
         i = n.find((e) => {
             var n;
             return e.id === (null == t || null == (n = t.team) ? void 0 : n.id);
@@ -103,16 +112,23 @@ function k(e) {
         l.includes(null == i ? void 0 : i.payout_account_status)
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(s.hKd, { size: 16 }),
+                  (0, r.jsx)(s.hKd, {
+                      size: 16,
+                  }),
                   (0, r.jsx)(s.wx6, {
                       type: "warning",
-                      children: D.intl.format(D.t.Yo0ZB2, { url: P.X7G.DEVELOPER_PORTAL_PAYOUT_SETTINGS(i.id) }),
+                      children: D.intl.format(D.t.Yo0ZB2, {
+                          url: P.X7G.DEVELOPER_PORTAL_PAYOUT_SETTINGS(i.id),
+                      }),
                   }),
-                  (0, r.jsx)(s.hKd, { size: 16 }),
+                  (0, r.jsx)(s.hKd, {
+                      size: 16,
+                  }),
               ],
           })
         : null;
 }
+
 function M(e) {
     let t,
         { guild: n, application: l } = e,
@@ -137,6 +153,7 @@ function M(e) {
         })
     );
 }
+
 function U(e) {
     let t,
         { guild: n, application: c } = e,
@@ -149,16 +166,24 @@ function U(e) {
     if (!y) return (0, r.jsx)(s.y$y, {});
     switch (b) {
         case I.Oi.BASIC_INFO:
-            t = (0, r.jsx)(_.A, { guild: n });
+            t = (0, r.jsx)(_.A, {
+                guild: n,
+            });
             break;
         case I.Oi.TIERS:
-            t = (0, r.jsx)(T.A, { guildId: n.id });
+            t = (0, r.jsx)(T.A, {
+                guildId: n.id,
+            });
             break;
         case I.Oi.PAYMENT:
-            t = (0, r.jsx)(N.A, { guild: n });
+            t = (0, r.jsx)(N.A, {
+                guild: n,
+            });
             break;
         case I.Oi.EMOJIS:
-            t = (0, r.jsx)(C.A, { guild: n });
+            t = (0, r.jsx)(C.A, {
+                guild: n,
+            });
             break;
         default:
             (0, h.xb)(b);
@@ -182,8 +207,13 @@ function U(e) {
                             }),
                         ],
                     }),
-                    (0, r.jsx)(E.A, { guild: n }),
-                    d && (0, r.jsx)(k, { application: c }),
+                    (0, r.jsx)(E.A, {
+                        guild: n,
+                    }),
+                    d &&
+                        (0, r.jsx)(k, {
+                            application: c,
+                        }),
                     (0, r.jsxs)("div", {
                         className: G.Mv,
                         children: [
@@ -232,7 +262,9 @@ function U(e) {
                                             onClick: () => {
                                                 let e = p.A.getEveryoneRole(n);
                                                 o.A.close();
-                                                let t = { [e.id]: e };
+                                                let t = {
+                                                    [e.id]: e,
+                                                };
                                                 (0, u.Tk)(n.id, {
                                                     type: f._.SERVER_SHOP,
                                                     roles: t,

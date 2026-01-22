@@ -1,4 +1,6 @@
-n.d(t, { A: () => S });
+n.d(t, {
+    A: () => S,
+});
 var r = n(627968);
 n(64700);
 var i = n(417597),
@@ -19,6 +21,7 @@ var i = n(417597),
     b = n(652215),
     y = n(985018),
     O = n(735141);
+
 function A(e, t, n) {
     return (
         t in e
@@ -32,6 +35,7 @@ function A(e, t, n) {
         e
     );
 }
+
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -48,6 +52,7 @@ function v(e) {
     }
     return e;
 }
+
 function S(e) {
     let { soundboardSound: t, closePicker: A } = e,
         S = (0, d.RQ)((e) => e.searchQuery),

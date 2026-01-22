@@ -1,4 +1,5 @@
 var r = n(724039);
+
 function i() {
     return (i =
         r ||
@@ -10,13 +11,16 @@ function i() {
             return e;
         }).apply(this, arguments);
 }
+
 function a(e) {
     if (void 0 === e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return e;
 }
+
 function s(e, t) {
     (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
 }
+
 function o(e, t, n) {
     return (
         t in e
@@ -139,7 +143,13 @@ e.exports = (function (e) {
                             entityKey: T,
                             offsetKey: A,
                         };
-                    return u.createElement(b, i({}, y, N, { key: A }), m);
+                    return u.createElement(
+                        b,
+                        i({}, y, N, {
+                            key: A,
+                        }),
+                        m,
+                    );
                 })
                 .toArray();
         }),

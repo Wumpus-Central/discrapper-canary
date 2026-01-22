@@ -33,6 +33,7 @@ var r = n(627968),
     T = n(49999),
     P = n(985018),
     w = n(275540);
+
 function R(e, t, n) {
     if (null == e) return !1;
     if (null != n) return n.applicationId === e.id;
@@ -100,7 +101,10 @@ let D = l.memo(function (e) {
             ),
             Z = l.useCallback(
                 (e) => () => {
-                    (0, m.X)(z, m.O.LEAVE_ACTIVITY), O.A.stopFrame({ applicationId: e });
+                    (0, m.X)(z, m.O.LEAVE_ACTIVITY),
+                        O.A.stopFrame({
+                            applicationId: e,
+                        });
                 },
                 [z],
             ),
@@ -200,7 +204,9 @@ let D = l.memo(function (e) {
                             (n = u.Fzq),
                             (l =
                                 null != E
-                                    ? P.intl.formatToPlainString(P.t.AB5gTy, { game: E.name })
+                                    ? P.intl.formatToPlainString(P.t.AB5gTy, {
+                                          game: E.name,
+                                      })
                                     : P.intl.string(P.t.FeUKeA)))
                           : ((e = !0),
                             (t = null),
@@ -249,12 +255,14 @@ let D = l.memo(function (e) {
                     : (0, r.jsx)(M, {
                           runningGame: E,
                           startAuthorization: () => {
-                              H({ analyticsLocations: Y }) === g._M.RPC &&
+                              H({
+                                  analyticsLocations: Y,
+                              }) === g._M.RPC &&
                                   (er(!0),
                                   null != et.current && clearTimeout(et.current),
                                   (et.current = setTimeout(() => {
                                       er(!1);
-                                  }, 90000)));
+                                  }, 9e4)));
                           },
                           connectionApp: W,
                           ref: F,
@@ -268,7 +276,9 @@ let D = l.memo(function (e) {
                           targetElementRef: F,
                           position: "top",
                           align: "center",
-                          caretConfig: { align: "center" },
+                          caretConfig: {
+                              align: "center",
+                          },
                           shouldShow: en,
                           onRequestClose: () => {
                               er(!1), null != et.current && (clearTimeout(et.current), (et.current = null));
@@ -303,21 +313,32 @@ let D = l.memo(function (e) {
             tooltipText: P.intl.string(P.t.sbdnpw),
         });
     });
+
 function L(e) {
     let { applicationId: t, guildId: n } = e,
         i = l.useRef(null);
     l.useEffect(() => {
-        S.default.track(N.HAw.RTC_GAME_SHOP_BUTTON_VIEWED, { application_id: t });
+        S.default.track(N.HAw.RTC_GAME_SHOP_BUTTON_VIEWED, {
+            application_id: t,
+        });
     }, [t]);
     let [a, s] = (0, y.kn)([o.M.GAME_SHOP_RTC_POPOVER], T.m.ACCOUNT_NAME_ZONE, !0),
         c = l.useCallback(() => {
-            (0, x.X)({ guildId: n });
+            (0, x.X)({
+                guildId: n,
+            });
         }, [n]),
         d = l.useCallback(() => {
-            (0, x.default)({ guildId: n }), s(T.i.USER_DISMISS);
+            (0, x.default)({
+                guildId: n,
+            }),
+                s(T.i.USER_DISMISS);
         }, [n, s]),
         f = l.useCallback(() => {
-            S.default.track(N.HAw.RTC_GAME_SHOP_BUTTON_CLICKED, { application_id: t }), d();
+            S.default.track(N.HAw.RTC_GAME_SHOP_BUTTON_CLICKED, {
+                application_id: t,
+            }),
+                d();
         }, [t, d]),
         p = l.useCallback(() => {
             s(T.i.USER_DISMISS);
@@ -338,7 +359,9 @@ function L(e) {
                       targetElementRef: i,
                       position: "top",
                       align: "center",
-                      caretConfig: { align: "center" },
+                      caretConfig: {
+                          align: "center",
+                      },
                   })
                 : null,
         ],

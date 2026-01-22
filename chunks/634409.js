@@ -1,4 +1,7 @@
-n.d(t, { A: () => D }), n(896048);
+n.d(t, {
+    A: () => D,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(397927),
@@ -26,6 +29,7 @@ var r = n(627968),
     C = n(996988),
     N = n(985018),
     R = n(183959);
+
 function w(e, t, n) {
     return (
         t in e
@@ -39,6 +43,7 @@ function w(e, t, n) {
         e
     );
 }
+
 function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -55,6 +60,7 @@ function P(e) {
     }
     return e;
 }
+
 function D(e) {
     var t;
     let {
@@ -139,7 +145,9 @@ function D(e) {
                     (0, r.jsx)(a.AC4, {
                         children: (0, r.jsx)(a.H, {
                             id: $,
-                            children: N.intl.format(N.t.KRe1Fk, { name: J }),
+                            children: N.intl.format(N.t.KRe1Fk, {
+                                name: J,
+                            }),
                         }),
                     }),
                     (0, r.jsxs)(A.A, {
@@ -195,7 +203,9 @@ function D(e) {
                                     }),
                                 ],
                             }),
-                            (0, r.jsx)("div", { className: R.qr }),
+                            (0, r.jsx)("div", {
+                                className: R.qr,
+                            }),
                         ],
                     }),
                     (null == B ? void 0 : B.profileEffect) != null &&

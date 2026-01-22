@@ -1,4 +1,6 @@
-n.d(t, { A: () => w });
+n.d(t, {
+    A: () => w,
+});
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -24,6 +26,7 @@ var r = n(627968),
     N = n(652215),
     _ = n(985018),
     S = n(159529);
+
 function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -49,6 +52,7 @@ function T(e) {
     }
     return e;
 }
+
 function I(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -76,7 +80,9 @@ class C extends i.PureComponent {
             children: [
                 (0, r.jsx)(d.Text, {
                     variant: "text-md/normal",
-                    children: y.Ay.getUserTag(e, { mode: "username" }),
+                    children: y.Ay.getUserTag(e, {
+                        mode: "username",
+                    }),
                 }),
                 "0" !== e.discriminator &&
                     (0, r.jsxs)(d.Text, {
@@ -129,7 +135,7 @@ let P = i.forwardRef((e, t) => {
             : (0, r.jsxs)(d.Text, {
                   className: S.timestamp,
                   variant: "text-sm/normal",
-                  children: [B, "\u2014", H],
+                  children: [B, "—", H],
               });
     let V = U ? D : N.tEg;
     return (0, r.jsx)(a.tG, {
@@ -300,7 +306,11 @@ let P = i.forwardRef((e, t) => {
                             },
                         ),
                     ),
-                    m ? (0, r.jsx)("div", { className: S.divider }) : null,
+                    m
+                        ? (0, r.jsx)("div", {
+                              className: S.divider,
+                          })
+                        : null,
                     m && null != P
                         ? (0, r.jsx)(E.ri, {
                               log: l,
@@ -313,4 +323,12 @@ let P = i.forwardRef((e, t) => {
     });
 });
 P.displayName = "GuildSettingsAuditLogEntry";
-let w = c.Ay.connectStores([m.A], () => ({ theme: m.A.theme }), { forwardRef: !0 })(P);
+let w = c.Ay.connectStores(
+    [m.A],
+    () => ({
+        theme: m.A.theme,
+    }),
+    {
+        forwardRef: !0,
+    },
+)(P);

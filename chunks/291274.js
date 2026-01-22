@@ -6,6 +6,7 @@ var r,
     s = n(461213),
     o = n(927813),
     c = n(652215);
+
 function u(e, t, n) {
     return (
         t in e
@@ -21,6 +22,7 @@ function u(e, t, n) {
 }
 let d = [],
     p = !1;
+
 function f() {
     return d.length >= 4 && d.some((e) => e < Date.now() - 3 * o.A.Millis.DAY);
 }
@@ -32,10 +34,14 @@ class h extends (r = i.Ay.PersistedStore) {
         return p;
     }
     getState() {
-        return { sessionStartsWithDND: d };
+        return {
+            sessionStartsWithDND: d,
+        };
     }
     getTemp() {
-        return { x: a.CY.getSetting() };
+        return {
+            x: a.CY.getSetting(),
+        };
     }
 }
 u(h, "displayName", "HabitualDNDStore"),
@@ -47,7 +53,9 @@ u(h, "displayName", "HabitualDNDStore"),
                   (d = d.filter((e) => e > Date.now() - 5 * o.A.Millis.DAY)),
                   f() &&
                       setTimeout(() => {
-                          l.h.dispatch({ type: "HABITUAL_DND_CLEAR" });
+                          l.h.dispatch({
+                              type: "HABITUAL_DND_CLEAR",
+                          });
                       }, 15 * o.A.Millis.SECOND))
                 : (d = []);
         },

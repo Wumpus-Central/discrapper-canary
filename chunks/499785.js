@@ -1,6 +1,9 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(562465),
     i = n(954571);
+
 function a(e, t, n) {
     return (
         t in e
@@ -14,6 +17,7 @@ function a(e, t, n) {
         e
     );
 }
+
 function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -30,6 +34,7 @@ function s(e) {
     }
     return e;
 }
+
 function o(e, t) {
     if (null == e) return {};
     var n,
@@ -46,6 +51,7 @@ function o(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function l(e, t) {
     if (null == e) return {};
     var n,
@@ -56,6 +62,7 @@ function l(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function c(e, t, n) {
     let { trackedActionData: r } = t,
         a = o(t, ["trackedActionData"]),
@@ -68,7 +75,16 @@ function c(e, t, n) {
             .then((e) => {
                 let n = r.properties;
                 "function" == typeof r.properties && (n = r.properties(e)),
-                    (0, i.trackNetworkAction)(r.event, s({ status_code: e.status }, l, n)),
+                    (0, i.trackNetworkAction)(
+                        r.event,
+                        s(
+                            {
+                                status_code: e.status,
+                            },
+                            l,
+                            n,
+                        ),
+                    ),
                     t(e);
             })
             .catch((e) => {

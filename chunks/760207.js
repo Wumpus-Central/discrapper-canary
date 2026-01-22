@@ -21,6 +21,7 @@ var l = n(627968),
     x = n(746080),
     A = n(985018),
     j = n(896743);
+
 function O(e) {
     let { channelId: t } = e;
     return (0, l.jsx)(s.A, {
@@ -32,6 +33,7 @@ function O(e) {
         }),
     });
 }
+
 function C(e) {
     let { guildId: t } = e,
         [s, c] = r.useState(""),
@@ -39,7 +41,11 @@ function C(e) {
         C = (0, i.bG)([u.Ay], () => u.Ay.getChannels(t)),
         y = (0, i.bG)([o.A], () => o.A.getCategories(t)),
         v = (0, p.vh)(t, y, C, s),
-        _ = (0, i.bG)([b.A], () => b.A.canWithPartialContext(m.xBc.MANAGE_CHANNELS, { guildId: t })),
+        _ = (0, i.bG)([b.A], () =>
+            b.A.canWithPartialContext(m.xBc.MANAGE_CHANNELS, {
+                guildId: t,
+            }),
+        ),
         N = (0, i.bG)([d.Ay], () => null != d.Ay.getCurrentSidebarChannelId(x.VV.CHANNEL_BROWSER)),
         w = r.useCallback(() => c(""), [c]),
         E = r.useCallback(() => {
@@ -109,7 +115,9 @@ function C(e) {
                               onChange: (e) => {
                                   "" === s &&
                                       "" !== e &&
-                                      h.default.track(m.HAw.SEARCH_STARTED, { search_type: "channel browser" }),
+                                      h.default.track(m.HAw.SEARCH_STARTED, {
+                                          search_type: "channel browser",
+                                      }),
                                       c(e.toLowerCase());
                               },
                               onClear: w,

@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968);
 n(64700);
 var i = n(735438),
@@ -15,6 +17,7 @@ var i = n(735438),
     m = n(652215),
     p = n(985018),
     x = n(690450);
+
 function h(e) {
     let t,
         { guild: n } = e,
@@ -31,12 +34,15 @@ function h(e) {
                     guildId: n.id,
                     level: e ? m.EkJ.ELEVATED : m.EkJ.NONE,
                 }));
-        }, 1000);
+        }, 1e3);
     if (!j) return null;
     E ||
         (t = y
             ? p.intl.format(p.t.nFwNyR, {
-                  settingsHook: () => (0, o.openUserSettings)(c.X.ACCOUNT_PANEL, { section: m.nc_.ACCOUNT }),
+                  settingsHook: () =>
+                      (0, o.openUserSettings)(c.X.ACCOUNT_PANEL, {
+                          section: m.nc_.ACCOUNT,
+                      }),
               })
             : p.intl.string(p.t["9Ghu40"]));
     let _ = n.features.has(m.GuildFeatures.DISCOVERABLE);

@@ -1,8 +1,12 @@
-i.d(t, { init: () => d }), i(457529);
+i.d(t, {
+    init: () => d,
+}),
+    i(457529);
 var r = i(626584),
     n = i(313320),
     s = i(711204),
     a = i(622397);
+
 function o(e, t, i) {
     return (
         t in e
@@ -155,6 +159,7 @@ let l = new r.A("MeticulousPerformanceReporter"),
                 o(this, "heapSampler", new s.r());
         }
     })();
+
 function d() {
     return m.init();
 }

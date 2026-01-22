@@ -1,4 +1,6 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(562465),
     i = n(73153),
     a = n(652215);
@@ -34,7 +36,9 @@ let s = {
             });
     },
     suppressAll() {
-        i.h.dispatch({ type: "TUTORIAL_INDICATOR_SUPPRESS_ALL" }),
+        i.h.dispatch({
+            type: "TUTORIAL_INDICATOR_SUPPRESS_ALL",
+        }),
             r.Bo.post({
                 url: a.Rsh.TUTORIAL_INDICATORS_SUPPRESS,
                 oldFormErrors: !0,

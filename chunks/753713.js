@@ -1,9 +1,12 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
     a = n(853390),
     s = n(246453);
+
 function o(e) {
     let { start: t, end: n } = e,
         {
@@ -27,7 +30,9 @@ function o(e) {
                 className: s.M0,
                 children: (0, r.jsx)("div", {
                     className: s.qB,
-                    style: { width: "".concat(100 * c, "%") },
+                    style: {
+                        width: "".concat(100 * c, "%"),
+                    },
                 }),
             }),
             (0, r.jsx)(i.Text, {

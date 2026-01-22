@@ -1,10 +1,13 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(64700),
     i = n(367513),
     a = n(951001),
     s = n(398590),
     o = n(976860),
     l = n(652215);
+
 function c(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { selectParticipantId: n } = t;

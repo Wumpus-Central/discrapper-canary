@@ -78,6 +78,7 @@ let x = 100,
                   })
                 : null;
     };
+
 function O(e) {
     var t;
     let { invite: n, textClassName: i, className: s } = e,
@@ -92,6 +93,7 @@ function O(e) {
               flat: !0,
           });
 }
+
 function I(e) {
     let { invite: t, showBigUserIcon: n } = e,
         s = i.useMemo(
@@ -111,16 +113,22 @@ function I(e) {
         l =
             (null == (c = t.channel) ? void 0 : c.name) != null &&
             (null == (u = t.inviter) ? void 0 : u.username) != null
-                ? m.intl.format(m.t.Lu4h18, { username: t.inviter.username })
+                ? m.intl.format(m.t.Lu4h18, {
+                      username: t.inviter.username,
+                  })
                 : m.intl.string(m.t.OsdY8B);
     } else
         E(t) && null != t.target_user
-            ? (l = m.intl.formatToPlainString(m.t.x2L32Q, { username: t.target_user.username }))
+            ? (l = m.intl.formatToPlainString(m.t.x2L32Q, {
+                  username: t.target_user.username,
+              }))
             : j(t)
               ? (l = m.intl.string(m.t["FDsl+J"]))
               : S(t) &&
                 null != t.inviter &&
-                (l = m.intl.format(m.t.spU2mI, { username: h.Ay.getFormattedName(t.inviter) }));
+                (l = m.intl.format(m.t.spU2mI, {
+                    username: h.Ay.getFormattedName(t.inviter),
+                }));
     return (0, r.jsxs)("div", {
         className: A.JB,
         children: [
@@ -139,6 +147,7 @@ function I(e) {
         ],
     });
 }
+
 function T(e) {
     let t,
         n,
@@ -190,10 +199,14 @@ function T(e) {
             : (n = e);
     } else if (null != s) {
         let e = h.Ay.getFormattedName(s);
-        (n = m.intl.formatToPlainString(m.t["4aF92R"], { username: e })),
+        (n = m.intl.formatToPlainString(m.t["4aF92R"], {
+            username: e,
+        })),
             (i = (0, r.jsx)(o.tK, {
                 className: A.b$,
-                children: m.intl.format(m.t.Quj7HX, { username: e }),
+                children: m.intl.format(m.t.Quj7HX, {
+                    username: e,
+                }),
             }));
     }
     return (0, r.jsxs)(r.Fragment, {

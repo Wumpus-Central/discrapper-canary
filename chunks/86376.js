@@ -1,4 +1,6 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -14,6 +16,7 @@ var r = n(627968),
     h = n(107123),
     m = n(985018),
     g = n(101702);
+
 function E(e) {
     let { profile: t, disableGuildNameClick: n } = e,
         l = t.id,
@@ -53,6 +56,7 @@ function E(e) {
               }),
           });
 }
+
 function b(e) {
     let { profile: t, disableGuildNameClick: n } = e,
         s = (0, a.bG)([u.default], () => u.default.locale),
@@ -83,22 +87,30 @@ function b(e) {
                     (0, r.jsxs)("div", {
                         className: g.Kl,
                         children: [
-                            (0, r.jsx)("div", { className: g.JX }),
+                            (0, r.jsx)("div", {
+                                className: g.JX,
+                            }),
                             (0, r.jsx)(o.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-subtle",
-                                children: m.intl.format(m.t["LC+S+m"], { membersOnline: t.onlineCount }),
+                                children: m.intl.format(m.t["LC+S+m"], {
+                                    membersOnline: t.onlineCount,
+                                }),
                             }),
                         ],
                     }),
                     (0, r.jsxs)("div", {
                         className: g.Kl,
                         children: [
-                            (0, r.jsx)("div", { className: g.Om }),
+                            (0, r.jsx)("div", {
+                                className: g.Om,
+                            }),
                             (0, r.jsx)(o.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-subtle",
-                                children: m.intl.format(m.t.zRl6XR, { count: t.memberCount }),
+                                children: m.intl.format(m.t.zRl6XR, {
+                                    count: t.memberCount,
+                                }),
                             }),
                         ],
                     }),
@@ -109,7 +121,9 @@ function b(e) {
                 children: (0, r.jsx)(o.Text, {
                     variant: "text-sm/normal",
                     color: "text-subtle",
-                    children: m.intl.format(m.t.zb2Q56, { createdAtDate: c }),
+                    children: m.intl.format(m.t.zb2Q56, {
+                        createdAtDate: c,
+                    }),
                 }),
             }),
         ],

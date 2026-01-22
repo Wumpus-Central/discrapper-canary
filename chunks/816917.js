@@ -1,1 +1,3 @@
-e.exports = { T3: "bad388d83331e790" };
+e.exports = {
+    T3: "bad388d83331e790",
+};

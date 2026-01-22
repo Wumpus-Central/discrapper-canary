@@ -1,4 +1,6 @@
-n.d(t, { g: () => g });
+n.d(t, {
+    g: () => g,
+});
 var r = n(627968),
     l = n(503698),
     i = n.n(l),
@@ -12,6 +14,7 @@ var r = n(627968),
     p = n(849077),
     h = n(985018),
     b = n(576539);
+
 function g(e) {
     let { className: t } = e,
         n = (0, c.op)(),
@@ -24,7 +27,9 @@ function g(e) {
         position: "bottom",
         text: y,
         children: (0, r.jsx)(o.DUT, {
-            className: i()(t, b.a, { [b.S]: g === p.Io.BOOKMARKS }),
+            className: i()(t, b.a, {
+                [b.S]: g === p.Io.BOOKMARKS,
+            }),
             "aria-label": y,
             onClick: () => {
                 let e = g === p.Io.ALL ? p.Io.BOOKMARKS : p.Io.ALL;

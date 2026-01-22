@@ -143,13 +143,21 @@ e.exports = function (e) {
             built_in: t,
             literal: r,
         },
-        a = e.inherit(e.TITLE_MODE, { begin: "[a-zA-Z](\\.?\\w)*" }),
+        a = e.inherit(e.TITLE_MODE, {
+            begin: "[a-zA-Z](\\.?\\w)*",
+        }),
         s = {
             className: "number",
             variants: [
-                { begin: "\\b(0b[01']+)" },
-                { begin: "(-?)\\b([\\d']+(\\.[\\d']*)?|\\.[\\d']+)(u|U|l|L|ul|UL|f|F|b|B)" },
-                { begin: "(-?)(\\b0[xX][a-fA-F0-9']+|(\\b[\\d']+(\\.[\\d']*)?|\\.[\\d']+)([eE][-+]?[\\d']+)?)" },
+                {
+                    begin: "\\b(0b[01']+)",
+                },
+                {
+                    begin: "(-?)\\b([\\d']+(\\.[\\d']*)?|\\.[\\d']+)(u|U|l|L|ul|UL|f|F|b|B)",
+                },
+                {
+                    begin: "(-?)(\\b0[xX][a-fA-F0-9']+|(\\b[\\d']+(\\.[\\d']*)?|\\.[\\d']+)([eE][-+]?[\\d']+)?)",
+                },
             ],
             relevance: 0,
         },
@@ -162,32 +170,71 @@ e.exports = function (e) {
             className: "string",
             begin: '@"',
             end: '"',
-            contains: [{ begin: '""' }],
+            contains: [
+                {
+                    begin: '""',
+                },
+            ],
         },
-        c = e.inherit(l, { illegal: /\n/ }),
+        c = e.inherit(l, {
+            illegal: /\n/,
+        }),
         u = {
             className: "subst",
             begin: /\{/,
             end: /\}/,
             keywords: i,
         },
-        d = e.inherit(u, { illegal: /\n/ }),
+        d = e.inherit(u, {
+            illegal: /\n/,
+        }),
         f = {
             className: "string",
             begin: /\$"/,
             end: '"',
             illegal: /\n/,
-            contains: [{ begin: /\{\{/ }, { begin: /\}\}/ }, e.BACKSLASH_ESCAPE, d],
+            contains: [
+                {
+                    begin: /\{\{/,
+                },
+                {
+                    begin: /\}\}/,
+                },
+                e.BACKSLASH_ESCAPE,
+                d,
+            ],
         },
         p = {
             className: "string",
             begin: /\$@"/,
             end: '"',
-            contains: [{ begin: /\{\{/ }, { begin: /\}\}/ }, { begin: '""' }, u],
+            contains: [
+                {
+                    begin: /\{\{/,
+                },
+                {
+                    begin: /\}\}/,
+                },
+                {
+                    begin: '""',
+                },
+                u,
+            ],
         },
         _ = e.inherit(p, {
             illegal: /\n/,
-            contains: [{ begin: /\{\{/ }, { begin: /\}\}/ }, { begin: '""' }, d],
+            contains: [
+                {
+                    begin: /\{\{/,
+                },
+                {
+                    begin: /\}\}/,
+                },
+                {
+                    begin: '""',
+                },
+                d,
+            ],
         });
     (u.contains = [p, f, l, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, s, e.C_BLOCK_COMMENT_MODE]),
         (d.contains = [
@@ -197,7 +244,9 @@ e.exports = function (e) {
             e.APOS_STRING_MODE,
             e.QUOTE_STRING_MODE,
             s,
-            e.inherit(e.C_BLOCK_COMMENT_MODE, { illegal: /\n/ }),
+            e.inherit(e.C_BLOCK_COMMENT_MODE, {
+                illegal: /\n/,
+            }),
         ]);
     let h = {
             variants: [o, p, f, l, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE],
@@ -205,7 +254,12 @@ e.exports = function (e) {
         m = {
             begin: "<",
             end: ">",
-            contains: [{ beginKeywords: "in out" }, a],
+            contains: [
+                {
+                    beginKeywords: "in out",
+                },
+                a,
+            ],
         },
         g = e.IDENT_RE + "(<" + e.IDENT_RE + "(\\s*,\\s*" + e.IDENT_RE + ")*>)?(\\[\\])?",
         E = {
@@ -228,7 +282,9 @@ e.exports = function (e) {
                                 begin: "///",
                                 relevance: 0,
                             },
-                            { begin: "<!--|-->" },
+                            {
+                                begin: "\x3c!--|--\x3e",
+                            },
                             {
                                 begin: "</?",
                                 end: ">",
@@ -254,7 +310,15 @@ e.exports = function (e) {
                 relevance: 0,
                 end: /[{;=]/,
                 illegal: /[^\s:,]/,
-                contains: [{ beginKeywords: "where class" }, a, m, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE],
+                contains: [
+                    {
+                        beginKeywords: "where class",
+                    },
+                    a,
+                    m,
+                    e.C_LINE_COMMENT_MODE,
+                    e.C_BLOCK_COMMENT_MODE,
+                ],
             },
             {
                 beginKeywords: "namespace",
@@ -306,7 +370,9 @@ e.exports = function (e) {
                         contains: [e.TITLE_MODE, m],
                         relevance: 0,
                     },
-                    { match: /\(\)/ },
+                    {
+                        match: /\(\)/,
+                    },
                     {
                         className: "params",
                         begin: /\(/,

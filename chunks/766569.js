@@ -1,4 +1,6 @@
-n.d(t, { A: () => V });
+n.d(t, {
+    A: () => V,
+});
 var r = n(627968),
     i = n(64700),
     a = n(284009),
@@ -29,6 +31,7 @@ var r = n(627968),
     w = n(652215),
     P = n(985018),
     D = n(764121);
+
 function x(e, t, n) {
     return (
         t in e
@@ -42,6 +45,7 @@ function x(e, t, n) {
         e
     );
 }
+
 function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -58,6 +62,7 @@ function L(e) {
     }
     return e;
 }
+
 function j(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -70,6 +75,7 @@ function j(e, t) {
     }
     return n;
 }
+
 function M(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -81,6 +87,7 @@ function M(e, t) {
         e
     );
 }
+
 function k(e, t) {
     if (null == e) return {};
     var n,
@@ -97,6 +104,7 @@ function k(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function U(e, t) {
     if (null == e) return {};
     var n,
@@ -107,12 +115,25 @@ function U(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function G(e) {
     (0, l.mMO)(async () => {
         let { default: t } = await n.e("65281").then(n.bind(n, 547352));
-        return (n) => (0, r.jsx)(t, L({ source: M(L({}, e), { page: w.liQ.GUILD_MEMBER_PROFILE_SETTINGS }) }, n));
+        return (n) =>
+            (0, r.jsx)(
+                t,
+                L(
+                    {
+                        source: M(L({}, e), {
+                            page: w.liQ.GUILD_MEMBER_PROFILE_SETTINGS,
+                        }),
+                    },
+                    n,
+                ),
+            );
     });
 }
+
 function V(e) {
     var t, n;
     let { selectedGuild: a } = e,
@@ -124,7 +145,11 @@ function V(e) {
         U = (0, o.bG)([y.Ay], () => (null != a ? y.Ay.getMember(a.id, j.id) : null)),
         V = (0, o.bG)([b.A], () => !b.A.isFetchingProfile(j.id, null == a ? void 0 : a.id)),
         F = (0, o.bG)([O.A], () => O.A.hidePersonalInformation),
-        B = (0, o.cf)([T.A], () => M(L({}, T.A.getAllPending()), { source: T.A.getSource() })),
+        B = (0, o.cf)([T.A], () =>
+            M(L({}, T.A.getAllPending()), {
+                source: T.A.getSource(),
+            }),
+        ),
         { source: H, pendingAvatar: Y, pendingNameplate: W } = B,
         K = k(B, ["source", "pendingAvatar", "pendingNameplate"]),
         z = (0, E.V7)({

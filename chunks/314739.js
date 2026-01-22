@@ -1,8 +1,11 @@
-n.d(t, { D: () => d });
+n.d(t, {
+    D: () => d,
+});
 var r = n(909144),
     i = n(64700),
     a = n(341221);
 let s = Symbol.for("react-aria.i18n.locale");
+
 function o() {
     let e =
         ("u" > typeof window && window[s]) ||
@@ -20,9 +23,11 @@ function o() {
 }
 let l = o(),
     c = new Set();
+
 function u() {
     for (let e of ((l = o()), c)) e(l);
 }
+
 function d() {
     let e = (0, a.wR)(),
         [t, n] = (0, i.useState)(l);

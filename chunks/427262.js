@@ -16,6 +16,7 @@ var r = n(311907),
     a = n(287809),
     s = n(652215),
     o = n(985018);
+
 function l(e, t, n) {
     return (
         t in e
@@ -29,6 +30,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -45,9 +47,9 @@ function c(e) {
     }
     return e;
 }
-let u = 86400000,
+let u = 864e5,
     d = "???",
-    f = (e) => "".concat(e[0], "\u2026"),
+    f = (e) => "".concat(e[0], "…"),
     p = (e) => "@".concat(e),
     _ = {
         mode: "full",
@@ -55,12 +57,15 @@ let u = 86400000,
         identifiable: "auto",
         forcePomelo: !1,
     };
+
 function h(e) {
     return !!(null != e && e.length > 0);
 }
+
 function m(e) {
     return h(e.global_name) ? e.global_name : h(e.globalName) ? e.globalName : h(e.username) ? e.username : d;
 }
+
 function g(e) {
     var t;
     if (null == e) return;
@@ -74,6 +79,7 @@ function g(e) {
         r
     );
 }
+
 function E(e) {
     var t;
     let n = (0, r.bG)([i.A], () => i.A.hidePersonalInformation);
@@ -87,12 +93,14 @@ function E(e) {
         a
     );
 }
+
 function b(e) {
     if (null != e)
         if (h(e.globalName)) return e.globalName;
         else if (h(e.global_name)) return e.global_name;
         else return;
 }
+
 function y(e) {
     var t;
     let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
@@ -101,6 +109,7 @@ function y(e) {
         i = n ? T(e) : null != (t = e.username) ? t : d;
     return r === i ? r : null != r ? "".concat(r, " (").concat(i, ")") : i;
 }
+
 function O(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     switch (e) {
@@ -121,6 +130,7 @@ function O(e) {
             return null;
     }
 }
+
 function A(e, t) {
     let { maxDaysOld: n, minDaysOld: r = 0 } = t;
     if (null == e) return !1;
@@ -129,18 +139,21 @@ function A(e, t) {
         s = i >= u * r;
     return !!a && !!s;
 }
+
 function v(e) {
     return !A(e, {
         minDaysOld: 0,
         maxDaysOld: 30,
     });
 }
+
 function S(e) {
     return A(e, {
         minDaysOld: 0,
         maxDaysOld: 7,
     });
 }
+
 function I(e, t, n) {
     if (null == e) return o.intl.string(o.t.sKdZ6U);
     if (!h(e.username)) return d;
@@ -153,16 +166,19 @@ function I(e, t, n) {
     let i = r ? f(e.username) : e.username;
     return "never" !== t.decoration ? p(i) : i;
 }
+
 function T(e, t) {
     let n = c({}, _, t),
         r = "auto" !== n.identifiable || i.A.hidePersonalInformation;
     return I(e, n, r);
 }
+
 function C(e) {
     return (0, r.bG)([a.default], () => {
         if (null != e) return e.isPrivate() && e.isDM() ? a.default.getUser(e.getRecipientId()) : null;
     });
 }
+
 function N() {
     let e = a.default.getCurrentUser();
     return null != e && e.isStaff();
@@ -170,7 +186,7 @@ function N() {
 let R = {
     getName: g,
     useName: E,
-    isNameConcealed: (e) => 2 === e.length && e.endsWith("\u2026"),
+    isNameConcealed: (e) => 2 === e.length && e.endsWith("…"),
     getUserTag: T,
     useUserTag: function (e, t) {
         return I(

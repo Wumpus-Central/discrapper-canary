@@ -1,9 +1,11 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
     a = n.n(i),
-    s = n(432022),
+    s = n(108531),
     o = n(311907),
     l = n(397927),
     c = n(308528),
@@ -37,9 +39,13 @@ let g = (e) => {
                             variant: "text-sm/semibold",
                             children: _.intl.format(_.t.QEW8Mq, {
                                 onClick: () => {
-                                    s({ action: "PRESS_REACT_REPLY_TOAST" }),
+                                    s({
+                                        action: "PRESS_REACT_REPLY_TOAST",
+                                    }),
                                         null == i || i(),
-                                        c.A.openPrivateChannel({ recipientIds: n });
+                                        c.A.openPrivateChannel({
+                                            recipientIds: n,
+                                        });
                                 },
                             }),
                         }),
@@ -118,7 +124,9 @@ let g = (e) => {
                                       message: "",
                                       type: l.ToastType.CUSTOM,
                                       id: "react_reply_loading_toast",
-                                      options: { component: (0, r.jsx)(E, {}) },
+                                      options: {
+                                          component: (0, r.jsx)(E, {}),
+                                      },
                                   }),
                     }),
             ),

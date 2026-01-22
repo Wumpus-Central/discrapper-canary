@@ -1,4 +1,6 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(627968),
     i = n(64700),
     l = n(397927),
@@ -30,7 +32,9 @@ let c = function (e) {
                             color: "text-strong",
                             children:
                                 (null == n ? void 0 : n.name) != null
-                                    ? s.intl.formatToPlainString(s.t["0Qlu/6"], { guildName: n.name })
+                                    ? s.intl.formatToPlainString(s.t["0Qlu/6"], {
+                                          guildName: n.name,
+                                      })
                                     : s.intl.string(s.t["5iLvSx"]),
                         }),
                         (0, r.jsx)(l.Text, {

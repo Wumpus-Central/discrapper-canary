@@ -1,4 +1,7 @@
-n.d(t, { A: () => c }), n(896048);
+n.d(t, {
+    A: () => c,
+}),
+    n(896048);
 var l = n(627968);
 n(64700);
 var r = n(735438),
@@ -34,7 +37,9 @@ let c = (e) => {
                           {
                               className: o.P,
                               children: [
-                                  (0, l.jsx)("div", { className: o.RL }),
+                                  (0, l.jsx)("div", {
+                                      className: o.RL,
+                                  }),
                                   (0, l.jsx)(a.Text, {
                                       variant: "text-md/normal",
                                       className: o.b,

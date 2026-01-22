@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(627968),
     l = n(64700),
     i = n(183555),
@@ -6,6 +8,7 @@ var r = n(627968),
     s = n(958338),
     o = n(253798),
     c = n(224360);
+
 function u(e) {
     let { widgetType: t } = e,
         n = (function (e, t) {
@@ -48,7 +51,9 @@ function u(e) {
                     f(!0),
                     (0, a.ew)({
                         widgetType: t,
-                        game: { applicationId: e },
+                        game: {
+                            applicationId: e,
+                        },
                     }),
                     p({
                         action: "GAME_ADDED",

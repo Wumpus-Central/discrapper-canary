@@ -1,4 +1,6 @@
-n.d(t, { Z: () => c });
+n.d(t, {
+    Z: () => c,
+});
 var a = n(627968);
 n(64700);
 var l = n(158954),
@@ -19,8 +21,12 @@ let c = (e) => {
                 className: o.R_,
                 children: d,
             }),
-            (0, a.jsx)(l.cwr, { children: t }),
-            (0, a.jsx)("div", { className: o.Ic }),
+            (0, a.jsx)(l.cwr, {
+                children: t,
+            }),
+            (0, a.jsx)("div", {
+                className: o.Ic,
+            }),
             (0, a.jsx)(r.v, {
                 actions: n,
                 footerInput: c,

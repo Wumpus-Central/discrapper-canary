@@ -1,4 +1,6 @@
-r.d(t, { default: () => g });
+r.d(t, {
+    default: () => g,
+});
 var n = r(627968),
     i = r(64700),
     a = r(319060),
@@ -17,6 +19,7 @@ let m = (0, f.xI)(a.A.INTERACTION_IFRAME_MODAL_MODAL_MIN_WIDTH),
     A = (0, f.xI)(a.A.INTERACTION_IFRAME_MODAL_MODAL_MAX_WIDTH),
     j = (0, f.xI)(a.A.INTERACTION_IFRAME_MODAL_MODAL_MARGIN),
     v = (0, f.xI)(a.A.INTERACTION_IFRAME_MODAL_MODAL_HEADER_HEIGHT);
+
 function g(e) {
     var t, r, a;
     let { title: f, onClose: g } = e,
@@ -60,7 +63,9 @@ function g(e) {
                 parentComponent: "InteractionIframeModal",
                 "data-migration-pending": !0,
                 children: (0, n.jsxs)("div", {
-                    style: { width: M },
+                    style: {
+                        width: M,
+                    },
                     children: [
                         (0, n.jsxs)(o.rQ0, {
                             separator: !1,

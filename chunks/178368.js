@@ -1,8 +1,12 @@
-n.d(t, { A: () => y }), n(896048);
+n.d(t, {
+    A: () => y,
+}),
+    n(896048);
 var r,
     i = n(311907),
     a = n(73153),
     s = n(166403);
+
 function o(e, t, n) {
     return (
         t in e
@@ -16,6 +20,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -32,6 +37,7 @@ function l(e) {
     }
     return e;
 }
+
 function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -44,6 +50,7 @@ function c(e, t) {
     }
     return n;
 }
+
 function u(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -58,9 +65,11 @@ function u(e, t) {
 let d = !1,
     f = !1,
     p = {};
+
 function _() {
     f = !0;
 }
+
 function h(e) {
     let { guildBoostSlots: t } = e;
     (p = {}),
@@ -70,13 +79,18 @@ function h(e) {
         (f = !1),
         (d = !0);
 }
+
 function m(e) {
     let { guildBoostSlot: t } = e;
-    p = u(l({}, p), { [t.id]: t });
+    p = u(l({}, p), {
+        [t.id]: t,
+    });
 }
+
 function g() {
     (p = {}), (d = !1), (f = !1);
 }
+
 function E() {
     let e = {};
     for (let t of Object.values(p)) (e[t.id] = t), (t.subscription = s.A.getSubscriptionById(t.subscriptionId));

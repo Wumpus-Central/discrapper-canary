@@ -1,4 +1,7 @@
-n.d(t, { default: () => O }), n(896048);
+n.d(t, {
+    default: () => O,
+}),
+    n(896048);
 var i = n(627968),
     r = n(64700),
     l = n(158954),
@@ -16,6 +19,7 @@ var i = n(627968),
     h = n(652215),
     x = n(985018),
     j = n(651846);
+
 function O(e) {
     let { guildId: t, transitionState: n, onClose: O, analyticsData: y } = e,
         A = (0, a.bG)([c.A], () => c.A.getGuild(t), [t]),
@@ -78,7 +82,10 @@ function O(e) {
                                                 }
                                                 return e;
                                             })({}, e)),
-                                            (r = r = { guildId: t }),
+                                            (r = r =
+                                                {
+                                                    guildId: t,
+                                                }),
                                             Object.getOwnPropertyDescriptors
                                                 ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
                                                 : (function (e, t) {

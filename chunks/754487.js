@@ -11,6 +11,7 @@ var l = n(397927),
     c = n(819638),
     s = n(652215),
     u = n(315290);
+
 function d(e, t, n, l) {
     return (0, r.jsx)(
         i.A,
@@ -83,7 +84,9 @@ function d(e, t, n, l) {
 }
 let p = (e) => {
         let { initialSlide: t, location: n, onSuccess: r } = e;
-        (0, l.qfG)((e) => d(e, t, n, r), { modalKey: c.fc });
+        (0, l.qfG)((e) => d(e, t, n, r), {
+            modalKey: c.fc,
+        });
     },
     f = (e) => {
         let { slide: t, location: n } = e;

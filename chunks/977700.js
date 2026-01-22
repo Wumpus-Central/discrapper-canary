@@ -1,4 +1,6 @@
-n.d(t, { A: () => j });
+n.d(t, {
+    A: () => j,
+});
 var a = n(627968);
 n(64700);
 var l = n(397927),
@@ -16,15 +18,23 @@ var l = n(397927),
     x = n(49999),
     b = n(985018),
     g = n(653246);
+
 function v(e) {
     let { dismissibleContent: t, backgroundColor: n, specialTextColor: m } = e,
         v = p.A.useIsEligible(),
         j = (0, s.JZ)(t),
         y = null != n,
-        _ = null != m ? { color: m } : void 0,
+        _ =
+            null != m
+                ? {
+                      color: m,
+                  }
+                : void 0,
         { analyticsLocations: A } = (0, r.Ay)(i.A.HOLIDAY_COACHMARK),
         C = (e) => {
-            (0, s.Dr)(t, { dismissAction: e });
+            (0, s.Dr)(t, {
+                dismissAction: e,
+            });
         },
         S = () => {
             let e = (0, d.E7)("HolidayCoachmark");
@@ -38,7 +48,9 @@ function v(e) {
         ? (0, a.jsx)(o.Ay, {
               children: (0, a.jsxs)("div", {
                   className: g.iE,
-                  style: { backgroundColor: y ? n : void 0 },
+                  style: {
+                      backgroundColor: y ? n : void 0,
+                  },
                   children: [
                       !y &&
                           (0, a.jsxs)("div", {
@@ -48,10 +60,14 @@ function v(e) {
                                       className: g.iL,
                                       pageMultiplier: 5,
                                   }),
-                                  (0, a.jsx)("div", { className: g.Np }),
+                                  (0, a.jsx)("div", {
+                                      className: g.Np,
+                                  }),
                               ],
                           }),
-                      (0, a.jsx)("div", { className: g.c8 }),
+                      (0, a.jsx)("div", {
+                          className: g.c8,
+                      }),
                       (0, a.jsxs)("div", {
                           className: g.Qs,
                           children: [
@@ -98,6 +114,7 @@ function v(e) {
           })
         : null;
 }
+
 function j() {
     return null == m.A.coachmarkDismissibleContent
         ? null

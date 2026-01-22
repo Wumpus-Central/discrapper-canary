@@ -1,4 +1,7 @@
-n.d(t, { A: () => E }), n(896048);
+n.d(t, {
+    A: () => E,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(735438),
@@ -10,6 +13,7 @@ var r = n(627968),
     d = n(854987),
     f = n(40333),
     p = n(745174);
+
 function _(e, t, n) {
     return (
         t in e
@@ -23,6 +27,7 @@ function _(e, t, n) {
         e
     );
 }
+
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -41,6 +46,7 @@ function h(e) {
 }
 let m = 500,
     g = 32;
+
 function E(e) {
     let { start: t = 0, end: n, alignment: a = "left" } = e,
         _ = (0, i.useRef)(Date.now()),

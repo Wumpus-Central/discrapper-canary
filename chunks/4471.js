@@ -1,4 +1,6 @@
-s.d(t, { A: () => m });
+s.d(t, {
+    A: () => m,
+});
 var l = s(627968),
     n = s(284009),
     i = s.n(n),
@@ -58,7 +60,9 @@ let m = (e) => {
                               autoPlay: !0,
                               loop: !0,
                               className: g.d9,
-                              children: (0, l.jsx)("source", { src: x }),
+                              children: (0, l.jsx)("source", {
+                                  src: x,
+                              }),
                           }),
                     (0, l.jsx)(L.A, {
                         user: _,

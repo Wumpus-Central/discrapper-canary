@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -7,6 +9,7 @@ var i = n(397927),
     o = n(888675),
     l = n(345981),
     c = n(657678);
+
 function u(e) {
     let { message: t, channel: n, compact: u } = e,
         d = (0, a.Ay)(t),

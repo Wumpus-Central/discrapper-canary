@@ -1,4 +1,7 @@
-n.d(t, { default: () => q }), n(896048);
+n.d(t, {
+    default: () => q,
+}),
+    n(896048);
 var i = n(627968),
     l = n(64700),
     a = n(503698),
@@ -41,6 +44,7 @@ var i = n(627968),
     K = n(381941),
     H = n(985018),
     B = n(865904);
+
 function q(e) {
     var t, n;
     let { applicationId: a, mediaUrl: r, onClose: u, transitionState: h } = e,
@@ -126,7 +130,7 @@ function q(e) {
                 X &&
                     (e = setTimeout(() => {
                         $(!1);
-                    }, 1000)),
+                    }, 1e3)),
                 () => {
                     null != e && clearTimeout(e);
                 }
@@ -166,7 +170,9 @@ function q(e) {
                 }
                 let r = b.A.getChannel(l);
                 if (null != J) {
-                    let e = new File([J], J.name, { type: J.type });
+                    let e = new File([J], J.name, {
+                        type: J.type,
+                    });
                     y.A.addFile({
                         file: {
                             file: e,
@@ -183,7 +189,9 @@ function q(e) {
                     null != j
                         ? E.Ay.parse(
                               r,
-                              H.intl.formatToPlainString(H.t.jQULqL, { applicationName: "**".concat(j.name, "**") }),
+                              H.intl.formatToPlainString(H.t.jQULqL, {
+                                  applicationName: "**".concat(j.name, "**"),
+                              }),
                           )
                         : {
                               content: "",
@@ -225,7 +233,9 @@ function q(e) {
                     null != j &&
                         (0, d.showToast)(
                             (0, d.createToast)(
-                                H.intl.formatToPlainString(H.t.jQULqL, { applicationName: j.name }),
+                                H.intl.formatToPlainString(H.t.jQULqL, {
+                                    applicationName: j.name,
+                                }),
                                 d.ToastType.SUCCESS,
                             ),
                         );
@@ -288,7 +298,9 @@ function q(e) {
                               q.length >= 10
                                   ? (0, i.jsx)(d.Text, {
                                         variant: "text-xs/normal",
-                                        children: H.intl.format(H.t.mdE9iE, { maxShares: 10 }),
+                                        children: H.intl.format(H.t.mdE9iE, {
+                                            maxShares: 10,
+                                        }),
                                     })
                                   : null,
                           ],
@@ -321,7 +333,11 @@ function q(e) {
                               l.Fragment,
                               {
                                   children: [
-                                      0 === t ? null : (0, i.jsx)("div", { className: B.ek }),
+                                      0 === t
+                                          ? null
+                                          : (0, i.jsx)("div", {
+                                                className: B.ek,
+                                            }),
                                       (0, i.jsx)(z, {
                                           row: e,
                                           onClick: () =>
@@ -364,6 +380,7 @@ function q(e) {
               t),
           );
 }
+
 function z(e) {
     let { row: t, onClick: n, checked: l, disabled: a } = e,
         s = null,
@@ -421,7 +438,9 @@ function z(e) {
     }
     return (0, i.jsxs)(d.DUT, {
         onClick: n,
-        className: r()(B.qd, { [B.r9]: a }),
+        className: r()(B.qd, {
+            [B.r9]: a,
+        }),
         children: [
             (0, i.jsxs)("div", {
                 className: B.M4,
@@ -435,12 +454,16 @@ function z(e) {
                         children: [
                             (0, i.jsx)(d.Text, {
                                 variant: "text-md/semibold",
-                                className: r()(B._k, { [B.r9]: a }),
+                                className: r()(B._k, {
+                                    [B.r9]: a,
+                                }),
                                 children: o,
                             }),
                             (0, i.jsx)(d.Text, {
                                 variant: "text-xs/medium",
-                                className: r()(B.kF, { [B.r9]: a }),
+                                className: r()(B.kF, {
+                                    [B.r9]: a,
+                                }),
                                 children: c,
                             }),
                         ],

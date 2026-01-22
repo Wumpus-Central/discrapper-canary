@@ -1,4 +1,10 @@
-n.d(t, { A: () => j }), n(747238), n(812715), n(866193), n(321073);
+n.d(t, {
+    A: () => j,
+}),
+    n(747238),
+    n(812715),
+    n(866193),
+    n(321073);
 var r = n(627968),
     i = n(64700),
     a = n(205327),
@@ -28,6 +34,7 @@ var r = n(627968),
     R = n(985018),
     w = n(388277),
     P = n(187866);
+
 function D(e, t) {
     return R.intl.formatToPlainString(R.t.h2yWWX, {
         username: t.username,
@@ -46,6 +53,7 @@ let x = (e, t, n) => {
         })
         .replaceAll("*", "");
 };
+
 function L(e) {
     let { activity: t } = e,
         n = t.timestamps,
@@ -58,8 +66,15 @@ function L(e) {
                 s = r - n,
                 o = Math.floor((Math.max(i - n, 0) / s) * 100);
             return {
-                seekBarStyles: { width: "".concat(o, "%") },
-                durationTimestamp: (0, E.W6)({ start: 0 }, s),
+                seekBarStyles: {
+                    width: "".concat(o, "%"),
+                },
+                durationTimestamp: (0, E.W6)(
+                    {
+                        start: 0,
+                    },
+                    s,
+                ),
             };
         }, [t, a]);
     return null == o
@@ -67,7 +82,9 @@ function L(e) {
         : (0, r.jsxs)("div", {
               className: w.lu,
               children: [
-                  (0, r.jsx)(S.z, { entry: n }),
+                  (0, r.jsx)(S.z, {
+                      entry: n,
+                  }),
                   (0, r.jsx)("div", {
                       className: w.Lt,
                       children: (0, r.jsx)("div", {
@@ -85,13 +102,16 @@ function L(e) {
               ],
           });
 }
+
 function j(e) {
     var t;
     let n,
         m,
         S,
         { channel: T, entry: w, closePopout: j, onReaction: M, onVoiceChannelPreview: k } = e,
-        { largeImage: U } = (0, g.nO)({ entry: w }),
+        { largeImage: U } = (0, g.nO)({
+            entry: w,
+        }),
         { activity: G, currentEntry: V, artist: F, title: B, user: H } = (0, A.u7)(w),
         { primaryColor: Y, secondaryColor: W } = (0, O.A)(null == U ? void 0 : U.src),
         K = (0, y.A)(C.fg2.SPOTIFY),
@@ -108,7 +128,14 @@ function j(e) {
             var e;
             if (null == T || null == H) return;
             let t = null == (e = G.timestamps) ? void 0 : e.start,
-                n = (0, E.W6)(null != t ? { start: t } : w, Date.now());
+                n = (0, E.W6)(
+                    null != t
+                        ? {
+                              start: t,
+                          }
+                        : w,
+                    Date.now(),
+                );
             return (0, b.Lu)({
                 user: H,
                 channel: T,
@@ -123,7 +150,9 @@ function j(e) {
                     H,
                 ),
                 colors: [Y, W],
-                badges: (0, b.N)({ timestamp: n }),
+                badges: (0, b.N)({
+                    timestamp: n,
+                }),
             });
         }, [G, F, T, w, null == U ? void 0 : U.src, Y, W, B, H]);
     if (null == G || null == V) return null;
@@ -188,7 +217,11 @@ function j(e) {
         onClickTitle: m,
         subtitle: X,
         badges: null,
-        children: (null == (t = G.timestamps) ? void 0 : t.start) != null && (0, r.jsx)(L, { activity: G }),
+        children:
+            (null == (t = G.timestamps) ? void 0 : t.start) != null &&
+            (0, r.jsx)(L, {
+                activity: G,
+            }),
     });
     return (0, r.jsxs)(v.YN, {
         children: [

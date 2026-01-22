@@ -1,4 +1,6 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -14,14 +16,18 @@ var i = n(503698),
     _ = n(418208),
     h = n(985018),
     m = n(496447);
+
 function g(e) {
     if (!e && (0, _.Cf)())
-        return void o.A.showAgeVerificationGetStartedModal({ entryPoint: l.q1.STAGE_CHANNEL_RAISE_HAND });
+        return void o.A.showAgeVerificationGetStartedModal({
+            entryPoint: l.q1.STAGE_CHANNEL_RAISE_HAND,
+        });
     let t = u.A.getVoiceChannelId();
     if (null == t) return;
     let n = c.A.getChannel(t);
     null != n && (0, d.e7)(n, e);
 }
+
 function E(e) {
     var t, n;
     let { channelId: i } = e,
@@ -53,6 +59,7 @@ function E(e) {
               })
             : null;
 }
+
 function b() {
     let e = (0, f.A)();
     return null == e
@@ -62,7 +69,9 @@ function b() {
               color: s.Hv$.DEFAULT,
               children: [
                   h.intl.string(h.t.Ul1RJQ),
-                  (0, r.jsx)(E, { channelId: e.id }),
+                  (0, r.jsx)(E, {
+                      channelId: e.id,
+                  }),
                   (0, r.jsxs)(s.ButtonGroup, {
                       size: "sm",
                       className: m.GC,

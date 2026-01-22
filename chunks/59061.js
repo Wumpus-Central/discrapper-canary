@@ -1,6 +1,7 @@
 var r = n(387739),
     i = n(265930),
     a = n(797686);
+
 function s(e, t, n) {
     var r;
     return (
@@ -25,6 +26,7 @@ function s(e, t, n) {
         r
     );
 }
+
 function o(e, t, n) {
     var i = t.getCharacterList(),
         a = n > 0 ? i.get(n - 1) : void 0,

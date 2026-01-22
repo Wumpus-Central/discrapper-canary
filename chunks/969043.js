@@ -1,4 +1,7 @@
-n.d(t, { A: () => R }), n(896048);
+n.d(t, {
+    A: () => R,
+}),
+    n(896048);
 var r,
     i = n(311907),
     a = n(73153),
@@ -6,6 +9,7 @@ var r,
     o = n(82057),
     l = n(287809),
     c = n(661191);
+
 function u(e, t, n) {
     return (
         t in e
@@ -19,6 +23,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,6 +40,7 @@ function d(e) {
     }
     return e;
 }
+
 function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -47,6 +53,7 @@ function f(e, t) {
     }
     return n;
 }
+
 function p(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -59,13 +66,16 @@ function p(e, t) {
     );
 }
 let _ = {};
+
 function h() {
     _ = {};
 }
+
 function m(e) {
     let { threads: t } = e;
     for (let e in t) b(e, t[e].first_message);
 }
+
 function g(e) {
     let { threads: t, firstMessages: n } = e;
     if (null == n) return !1;
@@ -76,10 +86,12 @@ function g(e) {
         };
     for (let e of n) b(e.channel_id, e);
 }
+
 function E(e) {
     if (e.isPushNotification || e.message.id !== c.default.castChannelIdAsMessageId(e.message.channel_id)) return !1;
     b(e.message.channel_id, e.message);
 }
+
 function b(e, t) {
     let n = null == t ? null : (0, s.rh)(t);
     _[e] = {
@@ -87,6 +99,7 @@ function b(e, t) {
         firstMessage: n,
     };
 }
+
 function y(e) {
     if (e.message.id !== e.message.channel_id) return !1;
     let t = _[c.default.castMessageIdAsChannelId(e.message.id)];
@@ -95,6 +108,7 @@ function y(e) {
         firstMessage: (0, s.IU)(t.firstMessage, e.message),
     });
 }
+
 function O(e) {
     if (e.id !== c.default.castChannelIdAsMessageId(e.channelId)) return !1;
     _[e.channelId] = {
@@ -102,6 +116,7 @@ function O(e) {
         firstMessage: null,
     };
 }
+
 function A(e) {
     if (null != _[e.channel.id] || !o.A.isSubscribedToThreads(e.channel.guild_id)) return !1;
     _[e.channel.id] = {
@@ -109,6 +124,7 @@ function A(e) {
         firstMessage: null,
     };
 }
+
 function v(e) {
     let { type: t, channelId: n, messageId: r, userId: i, emoji: a, optimistic: s, reactionType: o } = e,
         c = _[n];
@@ -121,26 +137,36 @@ function v(e) {
             ? (_[n].firstMessage = c.firstMessage.addReaction(a, f, e.colors, o))
             : (_[n].firstMessage = c.firstMessage.removeReaction(a, f, o));
 }
+
 function S(e) {
     let { channelId: t, messageId: n, reactions: r } = e,
         i = _[t];
     if (null == i || null == i.firstMessage || n !== i.firstMessage.id) return !1;
     let a = l.default.getCurrentUser(),
         s = i.firstMessage.addReactionBatch(r, null == a ? void 0 : a.id);
-    _[t] = p(d({}, i), { firstMessage: s });
+    _[t] = p(d({}, i), {
+        firstMessage: s,
+    });
 }
+
 function I(e) {
     let { channelId: t, messageId: n } = e,
         r = _[t];
     if (null == r || null == r.firstMessage || n !== r.firstMessage.id) return !1;
-    _[t] = p(d({}, r), { firstMessage: r.firstMessage.set("reactions", []) });
+    _[t] = p(d({}, r), {
+        firstMessage: r.firstMessage.set("reactions", []),
+    });
 }
+
 function T(e) {
     let { channelId: t, messageId: n, emoji: r } = e,
         i = _[t];
     if (null == i || null == i.firstMessage || n !== i.firstMessage.id) return !1;
-    _[t] = p(d({}, i), { firstMessage: i.firstMessage.removeReactionsForEmoji(r) });
+    _[t] = p(d({}, i), {
+        firstMessage: i.firstMessage.removeReactionsForEmoji(r),
+    });
 }
+
 function C(e) {
     let { channelId: t, messages: n } = e,
         r = n[n.length - 1];

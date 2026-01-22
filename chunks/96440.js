@@ -1,4 +1,8 @@
-n.d(t, { W: () => A }), n(321073), n(228524);
+n.d(t, {
+    W: () => A,
+}),
+    n(321073),
+    n(228524);
 var r = n(627968),
     i = n(311907),
     a = n(793574),
@@ -18,12 +22,15 @@ var r = n(627968),
     b = n(574152),
     y = n(782091),
     O = n(985018);
+
 function A(e) {
     var t, n, A;
     let { application: v, customId: S, customLink: I, referrerId: T, message: C } = e,
         N = null == v || null == (t = v.bot) ? void 0 : t.id,
         R = (0, c.Vr)({
-            context: { type: "contextless" },
+            context: {
+                type: "contextless",
+            },
             applicationId: v.id,
             botUserId: null == v || null == (n = v.bot) ? void 0 : n.id,
         }),
@@ -85,7 +92,9 @@ function A(e) {
             icon: v.icon,
             bot: v.bot,
         }),
-        info: (0, r.jsx)("div", { children: I.description }),
+        info: (0, r.jsx)("div", {
+            children: I.description,
+        }),
         staticBannerSrc: I.getAssetURL(),
         title: I.title,
         trackingConfig: {

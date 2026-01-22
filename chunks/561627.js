@@ -1,6 +1,7 @@
 var r = n(473479),
     i = n(762710),
     a = n(797686);
+
 function s(e, t, n, s, o, l, c) {
     var u = n.getStartOffset(),
         d = n.getEndOffset(),

@@ -52,6 +52,7 @@ var r = n(627968),
     q = n(788868),
     X = n(985018),
     Z = n(426889);
+
 function Q(e, t, n) {
     return (
         t in e
@@ -65,6 +66,7 @@ function Q(e, t, n) {
         e
     );
 }
+
 function $(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -81,6 +83,7 @@ function $(e) {
     }
     return e;
 }
+
 function J(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -93,6 +96,7 @@ function J(e, t) {
     }
     return n;
 }
+
 function ee(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -119,9 +123,11 @@ let et = 16,
         [j.Cx.RECENTLY_HEARD]: p.A.SOUNDBOARD_RECENTLY_HEARD_SECTION,
         [j.Cx.FREQUENTLY_USED]: p.A.SOUNDBOARD_FREQUENTLY_USED_SECTION,
     };
+
 function ec(e, t, n) {
     return (null == n && e.type === j.Cx.GUILD && !t) || (e.type === j.Cx.GUILD && e.guild.id !== n && !t);
 }
+
 function eu(e) {
     let {
         categoryInfo: t,
@@ -131,6 +137,7 @@ function eu(e) {
         showNitroDivider: o,
         enablePickerUpsellPremiumBrandRefresh: l,
     } = e;
+
     function u() {
         switch (t.type) {
             case j.Cx.FAVORITES:
@@ -148,7 +155,9 @@ function eu(e) {
                     className: Z.nr,
                 });
             case j.Cx.FREQUENTLY_USED:
-                return (0, r.jsx)(c.Uy2, { className: Z.nr });
+                return (0, r.jsx)(c.Uy2, {
+                    className: Z.nr,
+                });
             case j.Cx.GUILD:
                 return (0, r.jsx)(g.A, {
                     guild: t.guild,
@@ -171,6 +180,7 @@ function eu(e) {
                 });
         }
     }
+
     function d() {
         switch (t.type) {
             case j.Cx.FAVORITES:
@@ -227,9 +237,13 @@ function eu(e) {
         ],
     });
 }
+
 function ed() {
-    return (0, r.jsx)(d.A, { message: X.intl.string(X.t.bgDdNK) });
+    return (0, r.jsx)(d.A, {
+        message: X.intl.string(X.t.bgDdNK),
+    });
 }
+
 function ef(e) {
     let {
             guildId: t,
@@ -253,7 +267,13 @@ function ef(e) {
         { analyticsLocations: eb } = (0, _.Ay)(),
         { analyticsLocations: ey } = (0, _.Ay)(p.A.PREMIUM_UPSELL),
         { location: eO } = (0, f.p)(),
-        eA = i.useMemo(() => ee($({}, eO), { section: K.JJy.SOUNDBOARD_SOUND_PICKER }), [eO]),
+        eA = i.useMemo(
+            () =>
+                ee($({}, eO), {
+                    section: K.JJy.SOUNDBOARD_SOUND_PICKER,
+                }),
+            [eO],
+        ),
         [ev, eS] = i.useState(null),
         eI = (0, l.bG)([R.default], () => R.default.getCurrentUser()),
         eT = (0, x.TW)(eI, q.PremiumTypes.TIER_2),
@@ -268,12 +288,20 @@ function ef(e) {
         eR = (0, b.RQ)((e) => e.searchQuery),
         ew = null != eR && "" !== eR,
         eP = (0, m.GV)(),
-        eD = M.r.useConfig({ location: "SoundboardSoundGrid" }),
+        eD = M.r.useConfig({
+            location: "SoundboardSoundGrid",
+        }),
         {
             categories: ex,
             availableSounds: eL,
             soundCounts: ej,
-        } = (0, F.Ay)(a, { moveDefaultsToBottom: eD.enabled }, e_),
+        } = (0, F.Ay)(
+            a,
+            {
+                moveDefaultsToBottom: eD.enabled,
+            },
+            e_,
+        ),
         [eM, ek] = i.useState([]),
         eU = (0, F.Ip)(ex, eM, eR),
         eG = (0, b.RQ)((e) => e.isNitroLockedSectionVisible),
@@ -408,7 +436,17 @@ function ef(e) {
             },
             [eV.length, eB, eF],
         ),
-        e3 = i.useCallback((e, t) => (0, r.jsx)("div", { children: t }, e), []),
+        e3 = i.useCallback(
+            (e, t) =>
+                (0, r.jsx)(
+                    "div",
+                    {
+                        children: t,
+                    },
+                    e,
+                ),
+            [],
+        ),
         e6 = i.useCallback(
             (e, n) => {
                 let i = "".concat(e.key),
@@ -417,7 +455,9 @@ function ef(e) {
                     o = eW.has(i),
                     l = () => {
                         D.default.track(K.HAw.EXPRESSION_PICKER_CATEGORY_COLLAPSE_TOGGLED, {
-                            location: { page: K.liQ.SOUNDBOARD_POPOUT },
+                            location: {
+                                page: K.liQ.SOUNDBOARD_POPOUT,
+                            },
                             tab: z.kx.SOUNDBOARD,
                             guild_id: null != t ? t : null,
                             collapsed: !o,
@@ -468,7 +508,16 @@ function ef(e) {
             (e) => {
                 (0, u.L3)(e, async () => {
                     let { default: e } = await n.e("51111").then(n.bind(n, 323002));
-                    return (t) => (0, r.jsx)(e, $({ sourceAnalyticsLocations: eb }, t));
+                    return (t) =>
+                        (0, r.jsx)(
+                            e,
+                            $(
+                                {
+                                    sourceAnalyticsLocations: eb,
+                                },
+                                t,
+                            ),
+                        );
                 });
             },
             [eb],
@@ -529,7 +578,9 @@ function ef(e) {
                         showUpsell: e,
                         text: e0(),
                         button: te(),
-                        buttonAnalyticsObject: { section: K.JJy.SOUND_PICKER_FLOATING_UPSELL },
+                        buttonAnalyticsObject: {
+                            section: K.JJy.SOUND_PICKER_FLOATING_UPSELL,
+                        },
                     })
                 );
             }
@@ -589,7 +640,9 @@ function ef(e) {
                           upsellViewedTrackingData: {
                               type: q.e.SOUND_PICKER_SOUND_CLICKED,
                               is_external: !0,
-                              location: ee($({}, eA), { object: K.ZSU.SOUNDBOARD_SOUND }),
+                              location: ee($({}, eA), {
+                                  object: K.ZSU.SOUNDBOARD_SOUND,
+                              }),
                               location_stack: ey,
                               sku_id: x.Ay.getSkuIdForPremiumType(q.PremiumTypes.TIER_2),
                           },

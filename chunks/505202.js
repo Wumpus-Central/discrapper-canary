@@ -1,4 +1,6 @@
-n.d(t, { D: () => S });
+n.d(t, {
+    D: () => S,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -12,6 +14,7 @@ var r = n(627968),
     p = n(112378),
     _ = n(885621),
     h = n(658122);
+
 function m(e, t, n) {
     return (
         t in e
@@ -25,6 +28,7 @@ function m(e, t, n) {
         e
     );
 }
+
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -41,6 +45,7 @@ function g(e) {
     }
     return e;
 }
+
 function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -53,6 +58,7 @@ function E(e, t) {
     }
     return n;
 }
+
 function b(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -64,6 +70,7 @@ function b(e, t) {
         e
     );
 }
+
 function y(e, t) {
     if (null == e) return {};
     var n,
@@ -80,6 +87,7 @@ function y(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function O(e, t) {
     if (null == e) return {};
     var n,
@@ -90,6 +98,7 @@ function O(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function A(e, t, n) {
     let { emojiId: r, src: i, animated: a = !1 } = e;
     return null != r
@@ -100,6 +109,7 @@ function A(e, t, n) {
           })
         : i;
 }
+
 function v(e, t, n) {
     switch (e.type) {
         case "icon": {
@@ -117,7 +127,9 @@ function v(e, t, n) {
                             },
                             o,
                         ),
-                        { className: s()(h.icon, a) },
+                        {
+                            className: s()(h.icon, a),
+                        },
                     ),
                 ),
             });
@@ -150,6 +162,7 @@ function v(e, t, n) {
             });
     }
 }
+
 function S(e) {
     let {
             color: t = "default",
@@ -179,7 +192,14 @@ function S(e) {
         G = i.useCallback(
             (e) => {
                 var t;
-                if ((null == M || M({ type: c.Q.DEFAULT }), null == C)) return !1;
+                if (
+                    (null == M ||
+                        M({
+                            type: c.Q.DEFAULT,
+                        }),
+                    null == C)
+                )
+                    return !1;
                 (e.shiftKey && D) || x || N(),
                     e.persist(),
                     null == j || j(),
@@ -215,20 +235,32 @@ function S(e) {
                                 className: h.iconContainerLeft,
                                 children: (0, r.jsx)(
                                     f,
-                                    b(g({ color: "currentColor" }, L), {
-                                        className: s()(h.icon, null == L ? void 0 : L.className),
-                                    }),
+                                    b(
+                                        g(
+                                            {
+                                                color: "currentColor",
+                                            },
+                                            L,
+                                        ),
+                                        {
+                                            className: s()(h.icon, null == L ? void 0 : L.className),
+                                        },
+                                    ),
                                 ),
                             }),
                         null != m && v(m, I, k.enabled),
                         (0, r.jsxs)("div", {
                             className: h.label,
                             children: [
-                                (0, r.jsx)(p.V, { children: (0, l.J)(n, e) }),
+                                (0, r.jsx)(p.V, {
+                                    children: (0, l.J)(n, e),
+                                }),
                                 null != y &&
                                     (0, r.jsx)(o.EYj, {
                                         variant: "text-xs/normal",
-                                        className: s()(h.subtext, { [h.subtextLineClamp]: null != O }),
+                                        className: s()(h.subtext, {
+                                            [h.subtextLineClamp]: null != O,
+                                        }),
                                         lineClamp: O,
                                         children: y,
                                     }),
@@ -246,9 +278,17 @@ function S(e) {
                                   className: h.iconContainer,
                                   children: (0, r.jsx)(
                                       a,
-                                      b(g({ color: "currentColor" }, L), {
-                                          className: s()(h.icon, null == L ? void 0 : L.className),
-                                      }),
+                                      b(
+                                          g(
+                                              {
+                                                  color: "currentColor",
+                                              },
+                                              L,
+                                          ),
+                                          {
+                                              className: s()(h.icon, null == L ? void 0 : L.className),
+                                          },
+                                      ),
                                   ),
                               }),
                         A &&

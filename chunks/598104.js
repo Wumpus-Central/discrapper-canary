@@ -1,9 +1,12 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968),
     i = n(64700),
     a = n(397927),
     s = n(571694),
     o = n(954376);
+
 function l(e, t) {
     if (null == e) return {};
     var n,
@@ -20,6 +23,7 @@ function l(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function c(e, t) {
     if (null == e) return {};
     var n,
@@ -30,6 +34,7 @@ function c(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function u(e) {
     let { channel: t, size: n, facepileSizeOverride: i, isTyping: c, status: u, className: d, animated: f = !1 } = e,
         p = l(e, ["channel", "size", "facepileSizeOverride", "isTyping", "status", "className", "animated"]);

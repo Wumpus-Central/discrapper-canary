@@ -10,12 +10,13 @@ var r,
             : function () {}),
     (t.SEMVER_SPEC_VERSION = "2.0.0");
 var a = 256,
-    s = Number.MAX_SAFE_INTEGER || 9007199254740991,
+    s = Number.MAX_SAFE_INTEGER || 0x1fffffffffffff,
     o = 16,
     l = (t.re = []),
     c = (t.src = []),
     u = (t.tokens = {}),
     d = 0;
+
 function f(e) {
     u[e] = d++;
 }
@@ -133,6 +134,7 @@ f("HYPHENRANGE"),
     f("STAR"),
     (c[u.STAR] = "(<|>)?=?\\s*\\*");
 for (var m = 0; m < d; m++) r(m, c[m]), l[m] || (l[m] = new RegExp(c[m]));
+
 function g(e, t) {
     if (
         ((t && "object" == typeof t) ||
@@ -150,14 +152,17 @@ function g(e, t) {
         return null;
     }
 }
+
 function E(e, t) {
     var n = g(e, t);
     return n ? n.version : null;
 }
+
 function b(e, t) {
     var n = g(e.trim().replace(/^[=v]+/, ""), t);
     return n ? n.version : null;
 }
+
 function y(e, t) {
     if (
         ((t && "object" == typeof t) ||
@@ -197,6 +202,7 @@ function y(e, t) {
         (this.build = n[5] ? n[5].split(".") : []),
         this.format();
 }
+
 function O(e, t, n, r) {
     "string" == typeof n && ((r = n), (n = void 0));
     try {
@@ -205,6 +211,7 @@ function O(e, t, n, r) {
         return null;
     }
 }
+
 function A(e, t) {
     if (k(e, t)) return null;
     var n = g(e),
@@ -321,65 +328,83 @@ function A(e, t) {
     (t.diff = A),
     (t.compareIdentifiers = S);
 var v = /^[0-9]+$/;
+
 function S(e, t) {
     var n = v.test(e),
         r = v.test(t);
     return n && r && ((e *= 1), (t *= 1)), e === t ? 0 : n && !r ? -1 : r && !n ? 1 : e < t ? -1 : 1;
 }
+
 function I(e, t) {
     return S(t, e);
 }
+
 function T(e, t) {
     return new y(e, t).major;
 }
+
 function C(e, t) {
     return new y(e, t).minor;
 }
+
 function N(e, t) {
     return new y(e, t).patch;
 }
+
 function R(e, t, n) {
     return new y(e, n).compare(new y(t, n));
 }
+
 function w(e, t) {
     return R(e, t, !0);
 }
+
 function P(e, t, n) {
     var r = new y(e, n),
         i = new y(t, n);
     return r.compare(i) || r.compareBuild(i);
 }
+
 function D(e, t, n) {
     return R(t, e, n);
 }
+
 function x(e, n) {
     return e.sort(function (e, r) {
         return t.compareBuild(e, r, n);
     });
 }
+
 function L(e, n) {
     return e.sort(function (e, r) {
         return t.compareBuild(r, e, n);
     });
 }
+
 function j(e, t, n) {
     return R(e, t, n) > 0;
 }
+
 function M(e, t, n) {
     return 0 > R(e, t, n);
 }
+
 function k(e, t, n) {
     return 0 === R(e, t, n);
 }
+
 function U(e, t, n) {
     return 0 !== R(e, t, n);
 }
+
 function G(e, t, n) {
     return R(e, t, n) >= 0;
 }
+
 function V(e, t, n) {
     return 0 >= R(e, t, n);
 }
+
 function F(e, t, n, r) {
     switch (t) {
         case "===":
@@ -404,6 +429,7 @@ function F(e, t, n, r) {
             throw TypeError("Invalid operator: " + t);
     }
 }
+
 function B(e, t) {
     if (
         ((t && "object" == typeof t) ||
@@ -442,6 +468,7 @@ function B(e, t) {
     (t.cmp = F),
     (t.Comparator = B);
 var H = {};
+
 function Y(e, t) {
     if (
         ((t && "object" == typeof t) ||
@@ -473,6 +500,7 @@ function Y(e, t) {
         throw TypeError("Invalid SemVer Range: " + e);
     this.format();
 }
+
 function W(e, t) {
     for (var n = !0, r = e.slice(), i = r.pop(); n && r.length; )
         (n = r.every(function (e) {
@@ -481,6 +509,7 @@ function W(e, t) {
             (i = r.pop());
     return n;
 }
+
 function K(e, t) {
     return new Y(e, t).set.map(function (e) {
         return e
@@ -492,6 +521,7 @@ function K(e, t) {
             .split(" ");
     });
 }
+
 function z(e, t) {
     return (
         r("comp", e, t),
@@ -502,9 +532,11 @@ function z(e, t) {
         e
     );
 }
+
 function q(e) {
     return !e || "x" === e.toLowerCase() || "*" === e;
 }
+
 function X(e, t) {
     return e
         .trim()
@@ -514,6 +546,7 @@ function X(e, t) {
         })
         .join(" ");
 }
+
 function Z(e, t) {
     var n = t.loose ? l[u.TILDELOOSE] : l[u.TILDE];
     return e.replace(n, function (t, n, i, a, s) {
@@ -535,6 +568,7 @@ function Z(e, t) {
         );
     });
 }
+
 function Q(e, t) {
     return e
         .trim()
@@ -544,6 +578,7 @@ function Q(e, t) {
         })
         .join(" ");
 }
+
 function $(e, t) {
     r("caret", e, t);
     var n = t.loose ? l[u.CARETLOOSE] : l[u.CARET];
@@ -580,6 +615,7 @@ function $(e, t) {
         );
     });
 }
+
 function J(e, t) {
     return (
         r("replaceXRanges", e, t),
@@ -591,6 +627,7 @@ function J(e, t) {
             .join(" ")
     );
 }
+
 function ee(e, t) {
     e = e.trim();
     var n = t.loose ? l[u.XRANGELOOSE] : l[u.XRANGE];
@@ -620,9 +657,11 @@ function ee(e, t) {
         );
     });
 }
+
 function et(e, t) {
     return r("replaceStars", e, t), e.trim().replace(l[u.STAR], "");
 }
+
 function en(e, t, n, r, i, a, s, o, l, c, u, d, f) {
     return (
         (t = q(n) ? "" : q(r) ? ">=" + n + ".0.0" : q(i) ? ">=" + n + "." + r + ".0" : ">=" + t) +
@@ -638,6 +677,7 @@ function en(e, t, n, r, i, a, s, o, l, c, u, d, f) {
                   : "<=" + o)
     ).trim();
 }
+
 function er(e, t, n) {
     for (var i = 0; i < e.length; i++) if (!e[i].test(t)) return !1;
     if (t.prerelease.length && !n.includePrerelease) {
@@ -650,6 +690,7 @@ function er(e, t, n) {
     }
     return !0;
 }
+
 function ei(e, t, n) {
     try {
         t = new Y(t, n);
@@ -658,6 +699,7 @@ function ei(e, t, n) {
     }
     return t.test(e);
 }
+
 function ea(e, t, n) {
     var r = null,
         i = null;
@@ -673,6 +715,7 @@ function ea(e, t, n) {
         r
     );
 }
+
 function es(e, t, n) {
     var r = null,
         i = null;
@@ -688,6 +731,7 @@ function es(e, t, n) {
         r
     );
 }
+
 function eo(e, t) {
     e = new Y(e, t);
     var n = new y("0.0.0");
@@ -712,6 +756,7 @@ function eo(e, t) {
         });
     return n && e.test(n) ? n : null;
 }
+
 function el(e, t) {
     try {
         return new Y(e, t).range || "*";
@@ -719,12 +764,15 @@ function el(e, t) {
         return null;
     }
 }
+
 function ec(e, t, n) {
     return ed(e, t, "<", n);
 }
+
 function eu(e, t, n) {
     return ed(e, t, ">", n);
 }
+
 function ed(e, t, n, r) {
     switch (((e = new y(e, r)), (t = new Y(t, r)), n)) {
         case ">":
@@ -757,13 +805,16 @@ function ed(e, t, n, r) {
     }
     return !0;
 }
+
 function ef(e, t) {
     var n = g(e, t);
     return n && n.prerelease.length ? n.prerelease : null;
 }
+
 function ep(e, t, n) {
     return (e = new Y(e, n)), (t = new Y(t, n)), e.intersects(t);
 }
+
 function e_(e, t) {
     if (e instanceof y) return e;
     if (("number" == typeof e && (e = String(e)), "string" != typeof e)) return null;

@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(627968),
     i = n(311907),
     a = n(565645),
@@ -6,6 +8,7 @@ var r = n(627968),
     o = n(71393),
     l = n(980504),
     c = n(985018);
+
 function u(e) {
     let { sound: t } = e,
         n = (0, i.bG)([o.A], () => {
@@ -25,8 +28,15 @@ function u(e) {
                         emojiName: t.emojiName,
                     }),
                 }),
-            (0, r.jsx)(s.oC, { children: (0, r.jsx)(s.dB, { children: t.name }) }),
-            null != n && (0, r.jsx)(s.Aq, { children: n }),
+            (0, r.jsx)(s.oC, {
+                children: (0, r.jsx)(s.dB, {
+                    children: t.name,
+                }),
+            }),
+            null != n &&
+                (0, r.jsx)(s.Aq, {
+                    children: n,
+                }),
         ],
     });
 }

@@ -14,7 +14,9 @@ var r = n(855104),
 let d = (e) => {
         var t;
         let { product: n, isPremiumUser: r } = e,
-            { enabled: a } = (0, i.m)({ location: "getShopBasePricingData" }),
+            { enabled: a } = (0, i.m)({
+                location: "getShopBasePricingData",
+            }),
             s = a
                 ? (0, o.CW)({
                       product: n,
@@ -87,6 +89,7 @@ let d = (e) => {
             });
         return p;
     };
+
 function h(e) {
     let { product: t, isPremiumUser: n, prioritizedCurrency: i, hasDiscountOffer: a = !1, isRental: s = !1 } = e,
         {

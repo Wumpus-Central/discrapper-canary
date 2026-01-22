@@ -1,4 +1,6 @@
-n.d(t, { A: () => E });
+n.d(t, {
+    A: () => E,
+});
 var r,
     i = n(735438),
     a = n.n(i),
@@ -6,6 +8,7 @@ var r,
     o = n(506774),
     l = n(73153),
     c = n(652215);
+
 function u(e, t, n) {
     return (
         t in e
@@ -19,6 +22,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,6 +39,7 @@ function d(e) {
     }
     return e;
 }
+
 function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -47,6 +52,7 @@ function f(e, t) {
     }
     return n;
 }
+
 function p(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -59,6 +65,7 @@ function p(e, t) {
     );
 }
 let _ = {};
+
 function h(e) {
     let { changes: t } = e;
     for (let e in t) {
@@ -80,6 +87,7 @@ function h(e) {
             for (let e in a) _[r].settings[e] = a[e];
     }
 }
+
 function m() {
     _ = {};
 }
@@ -140,7 +148,9 @@ u(g, "displayName", "SelectivelySyncedUserSettingsStore"),
             if ((null == e || null == (n = e.appearance) || null == (t = n.settings) ? void 0 : t.theme) === "amoled")
                 return p(d({}, e), {
                     appearance: p(d({}, e.appearance), {
-                        settings: p(d({}, e.appearance.settings), { theme: "midnight" }),
+                        settings: p(d({}, e.appearance.settings), {
+                            theme: "midnight",
+                        }),
                     }),
                 });
         },

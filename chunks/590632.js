@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(64700),
     i = n(311907),
     a = n(384904),
@@ -6,6 +8,7 @@ var r = n(64700),
     o = n(244287),
     l = n(2242);
 let c = [];
+
 function u(e) {
     var t;
     let { ensureFresh: n, hasFetched: r, hasRoleSubscriptions: i } = e,
@@ -16,6 +19,7 @@ function u(e) {
         (!r && !s.A.hasFetchedSubscriptions())
     );
 }
+
 function d() {
     let { ensureFresh: e = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         t = (0, o.A)() === l.M_.SUBSCRIBED,

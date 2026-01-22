@@ -43,7 +43,9 @@ e.exports = function (e) {
             "TXT",
         ],
         contains: [
-            e.COMMENT(";", "$", { relevance: 0 }),
+            e.COMMENT(";", "$", {
+                relevance: 0,
+            }),
             {
                 className: "meta",
                 begin: /^\$(TTL|GENERATE|INCLUDE|ORIGIN)\b/,
@@ -56,7 +58,9 @@ e.exports = function (e) {
                 className: "number",
                 begin: "((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]).){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\b",
             },
-            e.inherit(e.NUMBER_MODE, { begin: /\b\d+[dhwm]?/ }),
+            e.inherit(e.NUMBER_MODE, {
+                begin: /\b\d+[dhwm]?/,
+            }),
         ],
     };
 };

@@ -1,9 +1,14 @@
-i.r(t), i.d(t, { default: () => c }), i(228524);
+i.r(t),
+    i.d(t, {
+        default: () => c,
+    }),
+    i(228524);
 var n = i(626584),
     s = i(824082),
     a = i(723702),
     r = i(372684);
 let l = new n.A("SteamSignalHandler");
+
 function c(e) {
     let t = !1,
         i = (i) => {

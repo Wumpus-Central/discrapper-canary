@@ -1,7 +1,11 @@
-n.d(t, { A: () => f }), n(896048);
+n.d(t, {
+    A: () => f,
+}),
+    n(896048);
 var r,
     i,
     l = n(615300);
+
 function s(e, t, n) {
     return (
         t in e
@@ -15,6 +19,7 @@ function s(e, t, n) {
         e
     );
 }
+
 function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -74,6 +79,7 @@ class d {
         s(this, "animations", void 0), s(this, "stopped", !1), (this.animations = e);
     }
 }
+
 function u(e, t, n) {
     return new c(n(e, a({}, t)));
 }

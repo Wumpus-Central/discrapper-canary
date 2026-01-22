@@ -46,9 +46,11 @@ let g = Object.keys(d.xBc),
         return t;
     }),
     T = new Set(d.nfo);
+
 function f(e, t) {
     return e === t;
 }
+
 function h(e, t, n) {
     let _ = (0, r.bG)([c.A], () => c.A.getGuild(t), [t]);
     return (0, r.bG)([s.Ay, u.default, o.A], () => {

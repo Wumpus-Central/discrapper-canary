@@ -1,9 +1,12 @@
-n.d(t, { s: () => l });
+n.d(t, {
+    s: () => l,
+});
 var r = n(723906),
     i = n(290424),
     a = n(805447),
     s = n(64700),
     o = n(925573);
+
 function l(e, t) {
     let { role: n = "dialog" } = e,
         l = (0, r.X1)();
@@ -25,7 +28,9 @@ function l(e, t) {
         (0, o.Se)(),
         {
             dialogProps: {
-                ...(0, i.$)(e, { labelable: !0 }),
+                ...(0, i.$)(e, {
+                    labelable: !0,
+                }),
                 role: n,
                 tabIndex: -1,
                 "aria-labelledby": e["aria-labelledby"] || l,
@@ -33,7 +38,9 @@ function l(e, t) {
                     c.current && e.stopPropagation();
                 },
             },
-            titleProps: { id: l },
+            titleProps: {
+                id: l,
+            },
         }
     );
 }

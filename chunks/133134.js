@@ -1,4 +1,6 @@
-n.d(t, { A: () => x });
+n.d(t, {
+    A: () => x,
+});
 var l = n(627968),
     r = n(64700),
     a = n(311907),
@@ -21,12 +23,16 @@ let x = (e) => {
                 other_user_id: t.id,
                 report_id: x,
             }),
-                i.A.blockUser(t.id, { location: "ReportMenuBlockUser-iOS" }).then(() => {
+                i.A.blockUser(t.id, {
+                    location: "ReportMenuBlockUser-iOS",
+                }).then(() => {
                     o.A.showBlockSuccessToast(t.id, n);
                 });
         }, [t, x, n]);
     return (0, l.jsx)(c.PQ, {
-        title: p.intl.formatToPlainString(p.t["Q1o/f3"], { username: h }),
+        title: p.intl.formatToPlainString(p.t["Q1o/f3"], {
+            username: h,
+        }),
         description: p.intl.string(p.t.G08MKu),
         buttonText: f ? p.intl.string(p.t.ot2tSp) : p.intl.string(p.t["l+7PZY"]),
         buttonDisabled: f,

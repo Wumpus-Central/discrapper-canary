@@ -2,7 +2,10 @@ var g = {
         656: (A) => {},
         3: (A) => {},
         75: (A, I, g) => {
-            Object.defineProperty(I, "__esModule", { value: !0 }), (I.AudioFilterNode = void 0);
+            Object.defineProperty(I, "__esModule", {
+                value: !0,
+            }),
+                (I.AudioFilterNode = void 0);
             let C = g(376),
                 Q = g(406),
                 B = g(761),
@@ -19,10 +22,14 @@ var g = {
                             modelName: a,
                             modelPath: (0, E.sanitizeModelPath)(I.models[a]),
                             sharedBuffers: I.useSharedArrayBuffer
-                                ? (0, Q.createSharedBuffers)({ sampleRate: o })
+                                ? (0, Q.createSharedBuffers)({
+                                      sampleRate: o,
+                                  })
                                 : void 0,
                         };
-                    super(A, B.WORKLET_PROCESSOR_NAME, { processorOptions: h }),
+                    super(A, B.WORKLET_PROCESSOR_NAME, {
+                        processorOptions: h,
+                    }),
                         (this.params = I),
                         (this.isReady = !1),
                         (this.enabled = !1),
@@ -35,7 +42,9 @@ var g = {
                             i && this.addEventListener("dispose", i),
                             this.debugLogs &&
                                 x.Logger.info("AudioFilterNode:constructor", "creating web worker (type: module)"),
-                            (this.worker = new C.KWebWorker(D.WORKER_URL, { type: "module" })),
+                            (this.worker = new C.KWebWorker(D.WORKER_URL, {
+                                type: "module",
+                            })),
                             this.debugLogs &&
                                 x.Logger.info("AudioFilterNode:constructor", "adding event listener for worker"),
                             this.worker.addEventListener("message", this._onWasmWorkerMessage.bind(this)),
@@ -86,7 +95,11 @@ var g = {
                                     "Buffer overflown:",
                                     JSON.stringify(g),
                                 ),
-                                this.dispatchEvent(new MessageEvent("buffer_overflow", { data: g }));
+                                this.dispatchEvent(
+                                    new MessageEvent("buffer_overflow", {
+                                        data: g,
+                                    }),
+                                );
                     }
                 }
                 postMessage(A, I) {
@@ -96,7 +109,12 @@ var g = {
                 checkReadiness(A) {
                     if (
                         (this.debugLogs &&
-                            x.Logger.info("AudioFilterNode:checkReadiness", JSON.stringify({ isReady: this.isReady })),
+                            x.Logger.info(
+                                "AudioFilterNode:checkReadiness",
+                                JSON.stringify({
+                                    isReady: this.isReady,
+                                }),
+                            ),
                         !A)
                     )
                         throw Error("WASM_OR_WORKER_NOT_READY");
@@ -104,7 +122,12 @@ var g = {
                 isEnabled() {
                     return (
                         this.debugLogs &&
-                            x.Logger.info("AudioFilterNode:isEnabled", JSON.stringify({ isEnabled: this.enabled })),
+                            x.Logger.info(
+                                "AudioFilterNode:isEnabled",
+                                JSON.stringify({
+                                    isEnabled: this.enabled,
+                                }),
+                            ),
                         this.enabled
                     );
                 }
@@ -163,13 +186,16 @@ var g = {
                                     outputLatency: A.outputLatency,
                                 }),
                             );
-                    }, 1000);
+                    }, 1e3);
                 }
             }
             I.AudioFilterNode = i;
         },
         67: (A, I, g) => {
-            Object.defineProperty(I, "__esModule", { value: !0 }), (I.DebugRecorder = void 0);
+            Object.defineProperty(I, "__esModule", {
+                value: !0,
+            }),
+                (I.DebugRecorder = void 0);
             let C = g(687);
             I.DebugRecorder = class {
                 constructor(A) {
@@ -190,7 +216,10 @@ var g = {
             };
         },
         376: (A, I) => {
-            Object.defineProperty(I, "__esModule", { value: !0 }), (I.KWebWorker = void 0);
+            Object.defineProperty(I, "__esModule", {
+                value: !0,
+            }),
+                (I.KWebWorker = void 0);
             class g extends Worker {
                 constructor(A, I) {
                     super(A, I);
@@ -202,7 +231,10 @@ var g = {
             I.KWebWorker = g;
         },
         24: (A, I, g) => {
-            Object.defineProperty(I, "__esModule", { value: !0 }), (I.createDebugWidget = void 0);
+            Object.defineProperty(I, "__esModule", {
+                value: !0,
+            }),
+                (I.createDebugWidget = void 0);
             let C = g(967),
                 Q = "krisp-debug-widget";
             (I.createDebugWidget = function () {
@@ -218,7 +250,9 @@ var g = {
                             const A = document.createElement("template");
                             (A.innerHTML =
                                 '\n      <style>\n      * {\n        color: #131032;\n      }\n\n      .krisp-widget {\n        display: block;\n        width: 200px;\n        border: 1px solid #aaa;\n        border-radius: 5px;\n        background-color: #e4e7ea;\n      }\n\n      .krisp-widget .krisp-header {\n        border-bottom: 1px solid #aaa;\n        padding: 10px;\n        cursor: move;\n      }\n\n      .krisp-widget .krisp-content {\n        padding: 10px;\n      }\n\n      button {\n        height: 32px;\n        font-size: 14px;\n        line-height: 28px;\n        padding: 0 18px;\n        border-radius: 4px;\n        border: 1px solid #614efa;\n        color: #614efa;\n\n      }\n\n      button:hover {\n        background-color: #5544dc;\n        border-color: #5544dc;\n        cursor: pointer;\n        color: #fff;\n      }\n\n      </style>\n      <div class="krisp-widget">\n        <div class="krisp-header">\n          <b>Krisp</b> is in debug mode\n        </div>\n        <div class="krisp-content">\n          <button>Download Log Report</button>\n        </div>\n      </div>\n    '),
-                                this.attachShadow({ mode: "open" }),
+                                this.attachShadow({
+                                    mode: "open",
+                                }),
                                 this.shadowRoot?.appendChild(A.content.cloneNode(!0));
                         }
                         connectedCallback() {
@@ -253,7 +287,10 @@ var g = {
                 );
         },
         967: (A, I, g) => {
-            Object.defineProperty(I, "__esModule", { value: !0 }), (I.Logger = void 0);
+            Object.defineProperty(I, "__esModule", {
+                value: !0,
+            }),
+                (I.Logger = void 0);
             let C = g(687),
                 Q = g(67);
             I.Logger = new (class {
@@ -272,16 +309,16 @@ var g = {
                     this.logPort = A;
                 }
                 info(...A) {
-                    this.debugLogs && (this.postLog("I", A.join("\t")), console.info("KrispSDK -", ...A));
+                    this.debugLogs && (this.postLog("I", A.join("	")), console.info("KrispSDK -", ...A));
                 }
                 warn(...A) {
-                    this.debugLogs && (this.postLog("W", A.join("\t")), console.info("KrispSDK -", ...A));
+                    this.debugLogs && (this.postLog("W", A.join("	")), console.info("KrispSDK -", ...A));
                 }
                 error(...A) {
-                    this.debugLogs && (this.postLog("E", A.join("\t")), console.error("KrispSDK -", ...A));
+                    this.debugLogs && (this.postLog("E", A.join("	")), console.error("KrispSDK -", ...A));
                 }
                 log(...A) {
-                    this.debugLogs && (this.postLog("I", A.join("\t")), console.log("KrispSDK -", ...A));
+                    this.debugLogs && (this.postLog("I", A.join("	")), console.log("KrispSDK -", ...A));
                 }
                 logAudioInputSamples(A) {
                     this.logAudio("LOG_INPUT_AUDIO", A);
@@ -342,7 +379,9 @@ var g = {
                         return (
                             (0, C.downloadBlob)(
                                 `report-${new Date().toISOString()}.html`,
-                                new Blob([I], { type: "text/html" }),
+                                new Blob([I], {
+                                    type: "text/html",
+                                }),
                             ),
                             !0
                         );
@@ -372,7 +411,10 @@ var g = {
             })();
         },
         785: (A, I, g) => {
-            Object.defineProperty(I, "__esModule", { value: !0 }), (I.SharedRingBuffer = void 0);
+            Object.defineProperty(I, "__esModule", {
+                value: !0,
+            }),
+                (I.SharedRingBuffer = void 0);
             let C = g(967),
                 Q = {
                     READ_INDEX: 0,
@@ -462,30 +504,42 @@ var g = {
             I.SharedRingBuffer = B;
         },
         333: (A, I) => {
-            Object.defineProperty(I, "__esModule", { value: !0 }),
+            Object.defineProperty(I, "__esModule", {
+                value: !0,
+            }),
                 (I.sampleModelMap = void 0),
                 (I.sampleModelMap = {
-                    8000: "model8",
-                    16000: "model16",
-                    24000: "model32",
-                    32000: "model32",
+                    8e3: "model8",
+                    16e3: "model16",
+                    24e3: "model32",
+                    32e3: "model32",
                     44100: "model32",
-                    48000: "model32",
+                    48e3: "model32",
                     88200: "model32",
-                    96000: "model32",
+                    96e3: "model32",
                 });
         },
         862: (A, I, g) => {
-            Object.defineProperty(I, "__esModule", { value: !0 }), (I.WORKER_URL = I.WORKLET_URL = void 0);
+            Object.defineProperty(I, "__esModule", {
+                value: !0,
+            }),
+                (I.WORKER_URL = I.WORKLET_URL = void 0);
             let C = g(3),
                 Q = g(656);
+
             function B(A) {
-                return window.URL.createObjectURL(new Blob([A], { type: "application/javascript" }));
+                return window.URL.createObjectURL(
+                    new Blob([A], {
+                        type: "application/javascript",
+                    }),
+                );
             }
             (I.WORKLET_URL = B(C)), (I.WORKER_URL = B(Q));
         },
         687: (A, I) => {
-            Object.defineProperty(I, "__esModule", { value: !0 }),
+            Object.defineProperty(I, "__esModule", {
+                value: !0,
+            }),
                 (I.createWAVBlob = I.downloadBlob = I.blobToBase64 = void 0),
                 (I.blobToBase64 = async function (A) {
                     return new Promise((I, g) => {
@@ -501,7 +555,10 @@ var g = {
                 (I.createWAVBlob = function (A, I) {
                     var g, C;
                     let Q, B, E;
-                    if (!A.length) return new Blob([], { type: "audio/wav; codecs=wav" });
+                    if (!A.length)
+                        return new Blob([], {
+                            type: "audio/wav; codecs=wav",
+                        });
                     let D = A[0].length,
                         x = new Float32Array(D * A.length);
                     return (
@@ -529,13 +586,16 @@ var g = {
                                         x = new ArrayBuffer(44),
                                         i = new DataView(x),
                                         o = 0;
+
                                     function a(A) {
                                         for (let I = 0; I < A.length; I++) i.setUint8(o + I, A.charCodeAt(I));
                                         o += A.length;
                                     }
+
                                     function h(A) {
                                         i.setUint32(o, A, !0), (o += 4);
                                     }
+
                                     function G(A) {
                                         i.setUint16(o, A, !0), (o += 2);
                                     }
@@ -555,18 +615,26 @@ var g = {
                                         h(D),
                                         new Uint8Array(x)
                                     );
-                                })(Object.assign({}, C, { numFrames: g.byteLength / Q.BYTES_PER_ELEMENT }))),
+                                })(
+                                    Object.assign({}, C, {
+                                        numFrames: g.byteLength / Q.BYTES_PER_ELEMENT,
+                                    }),
+                                )),
                                 (E = new Uint8Array(B.length + g.byteLength)).set(B, 0),
                                 E.set(new Uint8Array(g), B.length),
                                 E),
                             ],
-                            { type: "audio/wav;codecs=wav" },
+                            {
+                                type: "audio/wav;codecs=wav",
+                            },
                         )
                     );
                 });
         },
         479: (A, I) => {
-            Object.defineProperty(I, "__esModule", { value: !0 }),
+            Object.defineProperty(I, "__esModule", {
+                value: !0,
+            }),
                 (I.isMobile = I.isSafari = void 0),
                 (I.isSafari = function () {
                     return (
@@ -593,12 +661,17 @@ var g = {
                 });
         },
         406: (A, I, g) => {
-            Object.defineProperty(I, "__esModule", { value: !0 }), (I.createSharedBuffers = I.STATE = void 0);
+            Object.defineProperty(I, "__esModule", {
+                value: !0,
+            }),
+                (I.createSharedBuffers = I.STATE = void 0);
             let C = g(785),
                 Q = g(761);
-            (I.STATE = { REQUEST_NOISE_CANCELLATION: 0 }),
+            (I.STATE = {
+                REQUEST_NOISE_CANCELLATION: 0,
+            }),
                 (I.createSharedBuffers = function (A) {
-                    let g = ((Q.SDK_FRAME_DURATION_10MS * A.sampleRate) / 1000) * Q.WEB_AUDIO_CHUNK_SIZE;
+                    let g = ((Q.SDK_FRAME_DURATION_10MS * A.sampleRate) / 1e3) * Q.WEB_AUDIO_CHUNK_SIZE;
                     return {
                         inputRingBuffer: new C.SharedRingBuffer(g, A.channelCount || 1),
                         outputRingBuffer: new C.SharedRingBuffer(g, A.channelCount || 1),
@@ -609,7 +682,9 @@ var g = {
                 });
         },
         761: (A, I) => {
-            Object.defineProperty(I, "__esModule", { value: !0 }),
+            Object.defineProperty(I, "__esModule", {
+                value: !0,
+            }),
                 (I.SUPPORTED_SAMPLE_RATES =
                     I.SDK_FRAME_DURATION_10MS =
                     I.BUFFER_OVERFLOW_MS =
@@ -624,12 +699,15 @@ var g = {
                 (I.BUFFER_DROP_KEEP_MS = 40),
                 (I.BUFFER_OVERFLOW_MS = 200),
                 (I.SDK_FRAME_DURATION_10MS = 10),
-                (I.SUPPORTED_SAMPLE_RATES = [8000, 16000, 24000, 32000, 44100, 48000, 88200, 96000]);
+                (I.SUPPORTED_SAMPLE_RATES = [8e3, 16e3, 24e3, 32e3, 44100, 48e3, 88200, 96e3]);
         },
         608: (A, I, g) => {
-            Object.defineProperty(I, "__esModule", { value: !0 }),
+            Object.defineProperty(I, "__esModule", {
+                value: !0,
+            }),
                 (I.sanitizeModelPath = I.hasInvalidModelPath = I.getModelName = void 0);
             let C = g(333);
+
             function Q(A) {
                 return /^https?\:\/\//i.test(A)
                     ? new URL(A).toString()
@@ -649,15 +727,20 @@ var g = {
         },
     },
     C = {};
+
 function Q(A) {
     var I = C[A];
     if (void 0 !== I) return I.exports;
-    var B = (C[A] = { exports: {} });
+    var B = (C[A] = {
+        exports: {},
+    });
     return g[A](B, B.exports, Q), B.exports;
 }
 var B = {};
 for (var E in ((() => {
-    Object.defineProperty(B, "__esModule", { value: !0 });
+    Object.defineProperty(B, "__esModule", {
+        value: !0,
+    });
     let A = Q(75),
         I = Q(24),
         g = Q(862),
@@ -762,4 +845,7 @@ for (var E in ((() => {
 })(),
 B))
     I[E] = B[E];
-B.__esModule && Object.defineProperty(I, "__esModule", { value: !0 });
+B.__esModule &&
+    Object.defineProperty(I, "__esModule", {
+        value: !0,
+    });

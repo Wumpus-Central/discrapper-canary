@@ -29,6 +29,7 @@ var r = n(904986),
             e
         );
     })({});
+
 function c(e) {
     switch (e) {
         case a.Ku.NATIVE:
@@ -40,10 +41,12 @@ function c(e) {
             return n(432351).A;
     }
 }
+
 function u() {
     var e;
     return null != (e = [a.Ku.NATIVE, a.Ku.WEBRTC].find((e) => c(e).supported())) ? e : a.Ku.DUMMY;
 }
+
 function d(e) {
     return new (c(e))();
 }

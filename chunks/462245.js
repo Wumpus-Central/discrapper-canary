@@ -1,4 +1,7 @@
-n.d(t, { A: () => y }), n(896048);
+n.d(t, {
+    A: () => y,
+}),
+    n(896048);
 var r = n(735438),
     i = n.n(r),
     l = n(179771),
@@ -29,11 +32,22 @@ let y = {
                     socket: n,
                 } = e,
                 r = u.A.getChannel(t);
-            if (null == r) throw new g.A({ errorCode: O.Lw6.INVALID_CHANNEL }, "Invalid channel id: ".concat(t));
+            if (null == r)
+                throw new g.A(
+                    {
+                        errorCode: O.Lw6.INVALID_CHANNEL,
+                    },
+                    "Invalid channel id: ".concat(t),
+                );
             if (r.isPrivate()) {
                 let e = n.authorization.scopes;
                 if (!e.includes(l.F.RPC) && !e.includes(l.F.DM_CHANNELS_READ))
-                    throw new g.A({ errorCode: O.Lw6.INVALID_PERMISSIONS }, "Invalid scope");
+                    throw new g.A(
+                        {
+                            errorCode: O.Lw6.INVALID_PERMISSIONS,
+                        },
+                        "Invalid scope",
+                    );
             }
             return (0, m.SN)(r, (0, m.B_)(r, n.application.id, n.authorization.scopes));
         },
@@ -47,7 +61,13 @@ let y = {
                 n = i().values(u.A.loadAllGuildAndPrivateChannelsFromDisk());
             if (t) {
                 let e = d.A.getGuild(t);
-                if (null == e) throw new g.A({ errorCode: O.Lw6.INVALID_GUILD }, "Invalid guild id: ".concat(t));
+                if (null == e)
+                    throw new g.A(
+                        {
+                            errorCode: O.Lw6.INVALID_GUILD,
+                        },
+                        "Invalid guild id: ".concat(t),
+                    );
                 n = n.filter((t) => {
                     let { guild_id: n } = t;
                     return n === e.id;
@@ -73,8 +93,16 @@ let y = {
         },
         handler(e) {
             let t = (0, _.A)();
-            if (null == t) throw new g.A({ errorCode: O.Lw6.INVALID_CHANNEL }, "Invalid channel");
-            return { permissions: p.A.computePermissions(t) };
+            if (null == t)
+                throw new g.A(
+                    {
+                        errorCode: O.Lw6.INVALID_CHANNEL,
+                    },
+                    "Invalid channel",
+                );
+            return {
+                permissions: p.A.computePermissions(t),
+            };
         },
     },
     [O.e$_.SELECT_VOICE_CHANNEL]: {
@@ -98,22 +126,36 @@ let y = {
             let b = f.A.getVoiceChannelId();
             if (null != b && b !== r && !1 === l)
                 throw new g.A(
-                    { errorCode: O.Lw6.SELECT_VOICE_FORCE_REQUIRED },
+                    {
+                        errorCode: O.Lw6.SELECT_VOICE_FORCE_REQUIRED,
+                    },
                     "User is already joined to a voice channel.",
                 );
             return t
                 .storeWait(n, () => u.A.getChannel(r), i)
                 .catch(() => {
                     throw new g.A(
-                        { errorCode: O.Lw6.SELECT_CHANNEL_TIMED_OUT },
+                        {
+                            errorCode: O.Lw6.SELECT_CHANNEL_TIMED_OUT,
+                        },
                         "Request to select voice channel timed out.",
                     );
                 })
                 .then((e) => {
                     if (null == e)
-                        throw new g.A({ errorCode: O.Lw6.INVALID_CHANNEL }, "Invalid channel id: ".concat(r));
+                        throw new g.A(
+                            {
+                                errorCode: O.Lw6.INVALID_CHANNEL,
+                            },
+                            "Invalid channel id: ".concat(r),
+                        );
                     if (!(0, c.gV)(e.type))
-                        throw new g.A({ errorCode: O.Lw6.INVALID_CHANNEL }, "Channel is not a voice channel");
+                        throw new g.A(
+                            {
+                                errorCode: O.Lw6.INVALID_CHANNEL,
+                            },
+                            "Channel is not a voice channel",
+                        );
                     return Promise.all([
                         Promise.resolve(e),
                         (0, m.SN)(e, (0, m.B_)(e, n.application.id, n.authorization.scopes)),
@@ -123,10 +165,17 @@ let y = {
                     let [t, n] = e;
                     if (n.guild_id) {
                         if ((0, A.Pd)(t, h.A, d.A))
-                            throw new g.A({ errorCode: O.Lw6.INVALID_CHANNEL }, "Channel is full");
+                            throw new g.A(
+                                {
+                                    errorCode: O.Lw6.INVALID_CHANNEL,
+                                },
+                                "Channel is full",
+                            );
                         if (!p.A.can(O.xBc.CONNECT, t))
                             throw new g.A(
-                                { errorCode: O.Lw6.INVALID_PERMISSIONS },
+                                {
+                                    errorCode: O.Lw6.INVALID_PERMISSIONS,
+                                },
                                 "Connect permission required to join channel",
                             );
                     }
@@ -165,15 +214,27 @@ let y = {
                       .storeWait(n, () => u.A.getChannel(r), i)
                       .catch(() => {
                           throw new g.A(
-                              { errorCode: O.Lw6.SELECT_CHANNEL_TIMED_OUT },
+                              {
+                                  errorCode: O.Lw6.SELECT_CHANNEL_TIMED_OUT,
+                              },
                               "Request to select text channel timed out.",
                           );
                       })
                       .then((e) => {
                           if (null == e)
-                              throw new g.A({ errorCode: O.Lw6.INVALID_CHANNEL }, "Invalid channel id: ".concat(r));
+                              throw new g.A(
+                                  {
+                                      errorCode: O.Lw6.INVALID_CHANNEL,
+                                  },
+                                  "Invalid channel id: ".concat(r),
+                              );
                           if (!(0, c.pQ)(e.type))
-                              throw new g.A({ errorCode: O.Lw6.INVALID_CHANNEL }, "Channel is not a text channel");
+                              throw new g.A(
+                                  {
+                                      errorCode: O.Lw6.INVALID_CHANNEL,
+                                  },
+                                  "Channel is not a text channel",
+                              );
                           return Promise.all([
                               Promise.resolve(e),
                               (0, m.SN)(e, (0, m.B_)(e, n.application.id, n.authorization.scopes)),
@@ -182,7 +243,12 @@ let y = {
                       .then((e) => {
                           let [t, n] = e;
                           if (n.guild_id && !p.A.can(O.xBc.VIEW_CHANNEL, t))
-                              throw new g.A({ errorCode: O.Lw6.INVALID_CHANNEL }, "No permission to see channel");
+                              throw new g.A(
+                                  {
+                                      errorCode: O.Lw6.INVALID_CHANNEL,
+                                  },
+                                  "No permission to see channel",
+                              );
                           return (
                               n.guild_id
                                   ? (0, o.bG)(O.BVt.CHANNEL(n.guild_id, t.id))
@@ -237,7 +303,9 @@ let y = {
                 })(t, ["channel_id"]);
             return a.Ay.createInvite(n, r, "RPC").catch(() => {
                 throw new g.A(
-                    { errorCode: O.Lw6.INVALID_PERMISSIONS },
+                    {
+                        errorCode: O.Lw6.INVALID_PERMISSIONS,
+                    },
                     "Unable to generate an invite for ".concat(n, ". Does this user have permissions?"),
                 );
             });

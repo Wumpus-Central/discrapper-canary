@@ -11,6 +11,7 @@ function r(e, t, n) {
         e
     );
 }
+
 function i(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -27,6 +28,7 @@ function i(e) {
     }
     return e;
 }
+
 function a(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -39,6 +41,7 @@ function a(e, t) {
     }
     return n;
 }
+
 function s(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -50,7 +53,9 @@ function s(e, t) {
         e
     );
 }
-n.d(t, { ik: () => l });
+n.d(t, {
+    ik: () => l,
+});
 let o = (0, n(945810).mj)({
         name: "2025-12-unified-checkout",
         kind: "user",
@@ -67,6 +72,10 @@ let o = (0, n(945810).mj)({
     }),
     l = (e) => {
         let { location: t } = e,
-            n = o.getConfig({ location: t });
-        return s(i({}, n), { isNoopTreatment: 1 === n.variation });
+            n = o.getConfig({
+                location: t,
+            });
+        return s(i({}, n), {
+            isNoopTreatment: 1 === n.variation,
+        });
     };

@@ -1,4 +1,7 @@
-n.d(t, { A: () => O }), n(896048);
+n.d(t, {
+    A: () => O,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -11,6 +14,7 @@ var r = n(627968),
     f = n(133296),
     p = n(607470),
     _ = n(112266);
+
 function h(e, t, n) {
     return (
         t in e
@@ -24,7 +28,7 @@ function h(e, t, n) {
         e
     );
 }
-let m = 2000,
+let m = 2e3,
     g = 400,
     E = 0.3;
 class b extends i.Component {
@@ -32,7 +36,12 @@ class b extends i.Component {
         let { src: e, className: t, title: n } = this.props,
             { imageLoading: i } = this.state;
         return (0, r.jsx)(o.A.img, {
-            className: s()({ [_.YC]: i }, t),
+            className: s()(
+                {
+                    [_.YC]: i,
+                },
+                t,
+            ),
             src: e,
             alt: n,
             style: this.getImageStyle(),
@@ -85,7 +94,9 @@ class b extends i.Component {
                     duration: g,
                 }).start(e);
             }),
-            h(this, "getImageStyle", () => ({ opacity: this._animatedValue })),
+            h(this, "getImageStyle", () => ({
+                opacity: this._animatedValue,
+            })),
             h(this, "handleImageError", () => {
                 this.setState({
                     imageLoadError: !0,
@@ -93,7 +104,9 @@ class b extends i.Component {
                 });
             }),
             h(this, "handleImageLoaded", () => {
-                this.setState({ imageLoading: !1 });
+                this.setState({
+                    imageLoading: !1,
+                });
             });
     }
 }
@@ -138,14 +151,18 @@ class y extends i.Component {
                   interval: m,
                   className: _.mZ,
                   disable: !e,
-                  children: (0, r.jsx)(u.F, { children: this.renderSlideItem(t) }),
+                  children: (0, r.jsx)(u.F, {
+                      children: this.renderSlideItem(t),
+                  }),
               });
     }
     render() {
         let { video: e, className: t, placeholder: n, renderMediaOverlay: i, playing: a } = this.props,
             { videoLoadError: o, videoLoaded: l } = this.state;
         return n
-            ? (0, r.jsx)("div", { className: t })
+            ? (0, r.jsx)("div", {
+                  className: t,
+              })
             : (0, r.jsxs)("figure", {
                   className: s()(_.__invalid_tileMedia, t),
                   children: [null == e || o ? this.renderTypeImage() : this.renderTypeVideo(), null != i && i(a && l)],
@@ -167,10 +184,14 @@ class y extends i.Component {
                 null == t || t(e);
             }),
             h(this, "handleVideoError", () => {
-                this.setState({ videoLoadError: !0 });
+                this.setState({
+                    videoLoadError: !0,
+                });
             }),
             h(this, "handleVideoLoaded", () => {
-                this.setState({ videoLoaded: !0 });
+                this.setState({
+                    videoLoaded: !0,
+                });
             }),
             h(this, "renderTypeVideo", () => {
                 let { videoLoaded: e } = this.state,
@@ -222,14 +243,22 @@ class y extends i.Component {
                                 [_.Hy]: null != m,
                             }),
                             onClick: this.handleToggleMute,
-                            children: o && e ? (0, r.jsx)(g, { className: _.i2 }) : null,
+                            children:
+                                o && e
+                                    ? (0, r.jsx)(g, {
+                                          className: _.i2,
+                                      })
+                                    : null,
                         }),
                     ],
                 });
             }),
             h(this, "nextItem", () => {
                 let { slideImages: e } = this.props;
-                null != e && this.setState({ currentIndex: (this.state.currentIndex + 1) % e.length });
+                null != e &&
+                    this.setState({
+                        currentIndex: (this.state.currentIndex + 1) % e.length,
+                    });
             }),
             h(this, "renderSlideItem", (e) => {
                 let { image: t, title: n, playing: i, splashClassName: a } = this.props,

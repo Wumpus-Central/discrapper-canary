@@ -16,6 +16,7 @@ var r = n(64700),
     c = n(927578),
     u = n(371794),
     d = n(652215);
+
 function f(e, t, n) {
     return (
         t in e
@@ -29,6 +30,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -45,6 +47,7 @@ function p(e) {
     }
     return e;
 }
+
 function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -57,6 +60,7 @@ function _(e, t) {
     }
     return n;
 }
+
 function h(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -68,6 +72,7 @@ function h(e, t) {
         e
     );
 }
+
 function m(e, t) {
     if (null == e) return {};
     var n,
@@ -84,6 +89,7 @@ function m(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function g(e, t) {
     if (null == e) return {};
     var n,
@@ -108,7 +114,9 @@ async function E(e) {
         g = {
             items: (t = (0, c.qn)(t)).map((e) => {
                 let { planId: t } = e;
-                return h(p({}, m(e, ["planId"])), { plan_id: t });
+                return h(p({}, m(e, ["planId"])), {
+                    plan_id: t,
+                });
             }),
             payment_source_id: n,
             trial_id: r,
@@ -149,7 +157,9 @@ async function b(e) {
                 ? void 0
                 : n.map((e) => {
                       let { planId: t } = e;
-                      return h(p({}, m(e, ["planId"])), { plan_id: t });
+                      return h(p({}, m(e, ["planId"])), {
+                          plan_id: t,
+                      });
                   }),
         payment_source_id: r,
         renewal: i,
@@ -205,6 +215,7 @@ async function O(e) {
     });
     return l.A.createInvoiceFromServer(r.body);
 }
+
 function A(e, t) {
     let { preventFetch: n = !1 } = e,
         [i, a] = (0, r.useState)(null),
@@ -231,6 +242,7 @@ function A(e, t) {
         [i, s]
     );
 }
+
 function v(e) {
     let t = (0, r.useRef)(e);
     (0, r.useEffect)(() => {
@@ -242,6 +254,7 @@ function v(e) {
         (0, r.useCallback)(() => y(t.current), [n]),
     );
 }
+
 function S(e) {
     if ("subscriptionId" in e && null == e.subscriptionId) {
         let { subscriptionId: t } = e;
@@ -258,6 +271,7 @@ function S(e) {
         }, [n]);
     return A(e, i);
 }
+
 function I(e) {
     let t = (0, r.useRef)(e);
     (0, r.useEffect)(() => {
@@ -269,6 +283,7 @@ function I(e) {
         (0, r.useCallback)(() => O(t.current), [n]),
     );
 }
+
 function T(e) {
     let t = e.subscriptionPlanPrice;
     return (

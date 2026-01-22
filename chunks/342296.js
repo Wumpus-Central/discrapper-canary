@@ -11,6 +11,7 @@ var r = n(627968),
     c = n(589022),
     u = n(518477),
     d = n(818348);
+
 function f(e, t, n) {
     return (
         t in e
@@ -24,6 +25,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -40,6 +42,7 @@ function p(e) {
     }
     return e;
 }
+
 function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -52,6 +55,7 @@ function _(e, t) {
     }
     return n;
 }
+
 function h(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -63,6 +67,7 @@ function h(e, t) {
         e
     );
 }
+
 function m(e, t) {
     if (null == e) return {};
     var n,
@@ -79,6 +84,7 @@ function m(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function g(e, t) {
     if (null == e) return {};
     var n,
@@ -101,6 +107,7 @@ let E = (0, s.FT9)(s._3J.SIZE_80),
         isShown: !1,
         position: void 0,
     };
+
 function O(e) {
     let {
             children: t,
@@ -194,10 +201,13 @@ function O(e) {
                 },
                 R,
             ),
-            { children: t },
+            {
+                children: t,
+            },
         ),
     );
 }
+
 function A(e) {
     let { children: t, userId: n, user: i } = e,
         s = m(e, ["children", "userId", "user"]),

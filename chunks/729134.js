@@ -1,4 +1,6 @@
-i.d(e, { C: () => o });
+i.d(e, {
+    C: () => o,
+});
 var n = i(311907),
     l = i(274372),
     s = i(399925),
@@ -38,7 +40,10 @@ let o = (0, r.zD)(u.X.CLIPS_ENABLE_PHRASE_SIGNALS, {
                 }
                 return t;
             })({}, n)),
-            (i = i = { enablePhraseSignals: t }),
+            (i = i =
+                {
+                    enablePhraseSignals: t,
+                }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(i))
                 : (function (t, e) {

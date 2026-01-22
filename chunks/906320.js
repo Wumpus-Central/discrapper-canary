@@ -1,4 +1,9 @@
-n.d(t, { A: () => ee }), n(65821), n(896048), n(321073);
+n.d(t, {
+    A: () => ee,
+}),
+    n(65821),
+    n(896048),
+    n(321073);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -34,6 +39,7 @@ var r = n(627968),
     D = n(652215),
     M = n(985018),
     k = n(59790);
+
 function U(e, t, n) {
     return (
         t in e
@@ -67,10 +73,13 @@ let G = (e) => {
                 color: f.$n.Colors.PRIMARY,
                 onClick: n,
                 size: f.$n.Sizes.ICON,
-                children: (0, r.jsx)(i, { className: k.gE }),
+                children: (0, r.jsx)(i, {
+                    className: k.gE,
+                }),
             }),
         });
     };
+
 function H(e, t) {
     switch (t) {
         case D.OQC.POST_INSTALL_SCRIPTS:
@@ -79,7 +88,9 @@ function H(e, t) {
         case D.OQC.ALLOCATING_DISK:
             return "".concat(e);
         default:
-            return (0, P.Xq)(e, { useKibibytes: !0 });
+            return (0, P.Xq)(e, {
+                useKibibytes: !0,
+            });
     }
 }
 let F = {
@@ -171,6 +182,7 @@ let F = {
             }),
     },
 };
+
 function Y(e, t, n, r, i) {
     let l = F[t],
         a = null != l ? Object.keys(l) : [],
@@ -181,6 +193,7 @@ function Y(e, t, n, r, i) {
     }
     return null;
 }
+
 function K(e) {
     let { type: t, stage: n, percent: r, progress: i, total: l, secondsRemaining: a } = e,
         s = H(l, n),
@@ -194,13 +207,19 @@ function K(e) {
                 total: s,
             });
         case D.OQC.PLANNING:
-            return M.intl.formatToPlainString(M.t.sfuCUb, { percent: r });
+            return M.intl.formatToPlainString(M.t.sfuCUb, {
+                percent: r,
+            });
         case D.OQC.ALLOCATING_DISK:
-            return M.intl.formatToPlainString(M.t.XigoJ9, { percent: r });
+            return M.intl.formatToPlainString(M.t.XigoJ9, {
+                percent: r,
+            });
         case D.OQC.PATCHING:
             return Y(a, t, r, o, s);
         case D.OQC.FINALIZING:
-            return M.intl.formatToPlainString(M.t["6PHDUN"], { percent: r });
+            return M.intl.formatToPlainString(M.t["6PHDUN"], {
+                percent: r,
+            });
         case D.OQC.PAUSING:
             return M.intl.formatToPlainString(M.t.vjxhWo, {
                 percent: r,
@@ -274,7 +293,9 @@ class z extends i.PureComponent {
     renderFinished() {
         let { item: e } = this.props;
         return this.renderBody({
-            message: M.intl.format(M.t.z1oxGO, { remove: () => m.Vt(e.applicationId, e.branchId) }),
+            message: M.intl.format(M.t.z1oxGO, {
+                remove: () => m.Vt(e.applicationId, e.branchId),
+            }),
             foregroundColor: (0, p.qB)(e.theme)
                 ? u.A.unsafe_rawColors.PRIMARY_300.css
                 : u.A.unsafe_rawColors.PRIMARY_500.css,
@@ -344,7 +365,7 @@ class z extends i.PureComponent {
     renderProgressPatching() {
         return (0, r.jsx)(L.A, {
             getHistoricalTotalBytes: T.A.getHistoricalTotalBytesWritten,
-            updateInterval: 5000,
+            updateInterval: 5e3,
             children: this.renderProgressPatchingBody,
         });
     }
@@ -400,7 +421,7 @@ class z extends i.PureComponent {
                 if (null == i || null == l || null == r) return null;
                 let o = w.uA(i, l),
                     c = w.uA(null != s ? s : 0, l),
-                    u = (e[e.length - 1] / t) * 1000,
+                    u = (e[e.length - 1] / t) * 1e3,
                     d = l - i,
                     p = K({
                         type: a,
@@ -495,12 +516,20 @@ let W = () =>
                           ? e.state.type !== D.WTw.UP_TO_DATE &&
                             ((n =
                                 e.index > 0
-                                    ? (0, r.jsx)(Q, { item: e })
+                                    ? (0, r.jsx)(Q, {
+                                          item: e,
+                                      })
                                     : null != t && t.paused
                                       ? (0, r.jsx)(W, {})
-                                      : (0, r.jsx)(q, { item: e })),
-                            (i = (0, r.jsx)(X, { item: e })))
-                          : (i = (0, r.jsx)(X, { item: e })),
+                                      : (0, r.jsx)(q, {
+                                            item: e,
+                                        })),
+                            (i = (0, r.jsx)(X, {
+                                item: e,
+                            })))
+                          : (i = (0, r.jsx)(X, {
+                                item: e,
+                            })),
                     (0, r.jsxs)(y.A, {
                         justify: y.A.Justify.END,
                         children: [n, i],
@@ -541,14 +570,18 @@ class J extends i.PureComponent {
                                   className: a()(k.e4, k.Eg),
                                   title: M.intl.string(M.t.ytoXKr),
                                   getHistoricalTotalBytes: T.A.getHistoricalTotalBytesDownloaded,
-                                  color: u.A.unsafe_rawColors.GREEN_360.resolve({ saturation: 1 }).hex(),
+                                  color: u.A.unsafe_rawColors.GREEN_360.resolve({
+                                      saturation: 1,
+                                  }).hex(),
                                   animate: i,
                               }),
                               (0, r.jsx)(R.A, {
                                   className: a()(k.e4, k.pn),
                                   title: M.intl.string(M.t.SjohhI),
                                   getHistoricalTotalBytes: T.A.getHistoricalTotalBytesWritten,
-                                  color: u.A.unsafe_rawColors.BLUE_345.resolve({ saturation: 1 }).hex(),
+                                  color: u.A.unsafe_rawColors.BLUE_345.resolve({
+                                      saturation: 1,
+                                  }).hex(),
                                   animate: i,
                               }),
                           ],
@@ -635,10 +668,11 @@ class J extends i.PureComponent {
                     let { height: e, onHeightTallerThanHalfViewportChange: t } = this.props,
                         n = e > window.innerHeight / 2;
                     this.isTallerThanHalfViewport !== n && ((this.isTallerThanHalfViewport = n), t(n));
-                }, 1000),
+                }, 1e3),
             );
     }
 }
+
 function $(e, t, n, r) {
     return e.reduce((e, i, l) => {
         let { applicationId: a, branchId: s } = i,

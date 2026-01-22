@@ -1,4 +1,6 @@
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});
 let r = {
     HANDSHAKE: 0,
     FRAME: 1,

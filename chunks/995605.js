@@ -1,10 +1,13 @@
-e.d(n, { o: () => r });
+e.d(n, {
+    o: () => r,
+});
 var o = e(627968);
 e(64700);
 var i = e(55187),
     a = e(985018),
     s = e(370655),
     d = e(474264);
+
 function r(t) {
     let {
             platformType: n,

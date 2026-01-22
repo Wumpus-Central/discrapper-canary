@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var i = n(627968);
 n(64700);
 var r = n(503698),
@@ -7,6 +9,7 @@ var r = n(503698),
     o = n(407195),
     a = n(855790),
     c = n(594479);
+
 function d(e) {
     let { dragStart: t, dragging: n, pinned: r, locked: d, className: u } = e;
     return (0, i.jsxs)(a.Ay, {

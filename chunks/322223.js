@@ -1,4 +1,6 @@
-n.d(t, { A: () => I });
+n.d(t, {
+    A: () => I,
+});
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -17,6 +19,7 @@ var r = n(627968),
     E = n(746080),
     b = n(985018),
     y = n(858411);
+
 function O(e, t, n) {
     return (
         t in e
@@ -30,6 +33,7 @@ function O(e, t, n) {
         e
     );
 }
+
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -46,6 +50,7 @@ function A(e) {
     }
     return e;
 }
+
 function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -58,6 +63,7 @@ function v(e, t) {
     }
     return n;
 }
+
 function S(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -69,6 +75,7 @@ function S(e, t) {
         e
     );
 }
+
 function I(e) {
     var t, O;
     let { onDismiss: v } = e,
@@ -129,17 +136,25 @@ function I(e) {
                                 size: "xs",
                                 color: "currentColor",
                             }),
-                            (0, r.jsx)("span", { children: b.intl.string(b.t["c+7oa7"]) }),
+                            (0, r.jsx)("span", {
+                                children: b.intl.string(b.t["c+7oa7"]),
+                            }),
                         ],
                     }),
                 }),
             ],
         });
     let k = (0, m.P$)(w)
-            ? b.intl.formatToPlainString(b.t.tZTx2E, { guildName: N.name })
+            ? b.intl.formatToPlainString(b.t.tZTx2E, {
+                  guildName: N.name,
+              })
             : (0, m.Qm)(w)
-              ? b.intl.formatToPlainString(b.t["1bSmxr"], { guildName: N.name })
-              : b.intl.formatToPlainString(b.t.W87xDE, { guildName: N.name }),
+              ? b.intl.formatToPlainString(b.t["1bSmxr"], {
+                    guildName: N.name,
+                })
+              : b.intl.formatToPlainString(b.t.W87xDE, {
+                    guildName: N.name,
+                }),
         U = D && T === E.VV.MEMBER_SAFETY;
     return (0, r.jsxs)(s.$Td, {
         className: y.lm,
@@ -157,7 +172,9 @@ function I(e) {
                     onClick: () => L(!0),
                     children: (0, r.jsx)("div", {
                         className: y.rx,
-                        children: (0, r.jsx)("span", { children: b.intl.string(b.t.zDJDhr) }),
+                        children: (0, r.jsx)("span", {
+                            children: b.intl.string(b.t.zDJDhr),
+                        }),
                     }),
                 }),
         ],

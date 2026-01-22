@@ -1,4 +1,7 @@
-n.d(t, { A: () => w }), n(896048);
+n.d(t, {
+    A: () => w,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -27,6 +30,7 @@ var r = n(627968),
     T = n(985018),
     I = n(971525);
 let C = "DRAGGABLE_ROLE";
+
 function P(e) {
     var t, i;
     let l,
@@ -68,10 +72,16 @@ function P(e) {
             collect: (e) => {
                 let t = e.getItem();
                 return null != t && e.isOver() && e.canDrop()
-                    ? { dragSourcePosition: t.position }
-                    : { dragSourcePosition: null };
+                    ? {
+                          dragSourcePosition: t.position,
+                      }
+                    : {
+                          dragSourcePosition: null,
+                      };
             },
-            drop: () => ({ roleId: d.id }),
+            drop: () => ({
+                roleId: d.id,
+            }),
         }),
         L = null != (t = d.colorString) ? t : S.TpD;
     return (
@@ -178,6 +188,7 @@ function P(e) {
         })
     );
 }
+
 function w(e) {
     let { guild: t, currentRoleId: n, setCurrentRoleId: l, setSelectedSection: a } = e,
         c = (0, o.bG)([v.A], () => v.A.roles),
@@ -193,7 +204,9 @@ function w(e) {
                 let r = c.findIndex((t) => t.id === e);
                 null == (n = D.current) ||
                     null == (t = n.getScrollerNode()) ||
-                    t.scrollTo({ top: Math.max((r - 2) * 34, 0) });
+                    t.scrollTo({
+                        top: Math.max((r - 2) * 34, 0),
+                    });
             },
             [c],
         );
@@ -210,13 +223,17 @@ function w(e) {
                 className: I.kL,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: s()(I.gn, { [I.P6]: !A }),
+                        className: s()(I.gn, {
+                            [I.P6]: !A,
+                        }),
                         children: [
                             (0, r.jsxs)(u.DUT, {
                                 className: I.DD,
                                 onClick: () => l(null),
                                 children: [
-                                    (0, r.jsx)(y.A, { direction: y.A.Directions.LEFT }),
+                                    (0, r.jsx)(y.A, {
+                                        direction: y.A.Directions.LEFT,
+                                    }),
                                     (0, r.jsx)(u.Text, {
                                         className: I.Qw,
                                         variant: "text-md/semibold",

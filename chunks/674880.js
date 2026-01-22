@@ -64,14 +64,18 @@ var n = r(64700),
                                 height: "52px",
                                 paddingTop: "22px",
                             },
-                            color: { width: "32px" },
+                            color: {
+                                width: "32px",
+                            },
                             hue: {
                                 height: "8px",
                                 position: "relative",
                                 margin: "0px 16px 0px 16px",
                                 width: "100%",
                             },
-                            Hue: { radius: "2px" },
+                            Hue: {
+                                radius: "2px",
+                            },
                         },
                     },
                     void 0 === b ? {} : b,
@@ -83,11 +87,21 @@ var n = r(64700),
                 style: g.picker,
                 className: "google-picker " + (void 0 === v ? "" : v),
             },
-            n.createElement("div", { style: g.head }, h),
-            n.createElement("div", { style: g.swatch }),
             n.createElement(
                 "div",
-                { style: g.saturation },
+                {
+                    style: g.head,
+                },
+                h,
+            ),
+            n.createElement("div", {
+                style: g.swatch,
+            }),
+            n.createElement(
+                "div",
+                {
+                    style: g.saturation,
+                },
                 n.createElement(s.VI, {
                     hsl: a,
                     hsv: d,
@@ -97,7 +111,9 @@ var n = r(64700),
             ),
             n.createElement(
                 "div",
-                { style: g.body },
+                {
+                    style: g.body,
+                },
                 n.createElement(
                     "div",
                     {
@@ -106,7 +122,9 @@ var n = r(64700),
                     },
                     n.createElement(
                         "div",
-                        { style: g.hue },
+                        {
+                            style: g.hue,
+                        },
                         n.createElement(s.RG, {
                             style: g.Hue,
                             hsl: a,

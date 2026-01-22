@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var r = n(627968),
     a = n(64700),
     i = n(735438),
@@ -10,7 +12,10 @@ var r = n(627968),
 class u extends a.PureComponent {
     render() {
         let { screenshare: e } = this.props;
-        if (null == e) return (0, r.jsx)(s.y$y, { type: s.y$y.Type.SPINNING_CIRCLE });
+        if (null == e)
+            return (0, r.jsx)(s.y$y, {
+                type: s.y$y.Type.SPINNING_CIRCLE,
+            });
         let t = l().map(e, (e, t) => {
             if (!(d.R[t] || void 0 === e))
                 return (0, r.jsx)(

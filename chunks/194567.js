@@ -11,19 +11,23 @@ var r = n(64700),
     s = n(163956),
     o = n(209932),
     l = n(766864);
+
 function c(e) {
     return [...e].sort((e, t) => (e.available && !t.available ? -1 : !e.available && t.available ? 1 : 0));
 }
+
 function u(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         n = [...e].sort((e, t) => a.default.compare(e.soundId, t.soundId));
     return t ? c(n) : n;
 }
+
 function d(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         n = [...e].sort((e, t) => a.default.compare(t.soundId, e.soundId));
     return t ? c(n) : n;
 }
+
 function f(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
         r = new Map(e.map((e) => [e.soundId, e])),
@@ -35,6 +39,7 @@ function f(e, t) {
     let a = [...i, ...u(Array.from(r.values()), n)];
     return n ? c(a) : a;
 }
+
 function p() {
     let { sortingStrategy: e } = (0, l.zZ)("useSoundOrganizer"),
         t = (0, i.bG)([o.A], () => o.A.getAllTopSoundsForGuilds()),

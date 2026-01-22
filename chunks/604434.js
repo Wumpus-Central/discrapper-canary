@@ -1,4 +1,6 @@
-i.d(e, { m: () => o });
+i.d(e, {
+    m: () => o,
+});
 var n = i(419954),
     l = i(954571),
     s = i(253932),
@@ -11,7 +13,9 @@ let o = (0, n.zD)(r.X.CHAT_TEXT_BOX_PREVIEWS, {
     setValue: (t) => {
         l.default.track(u.HAw.PREVIEW_MARKDOWN_TOGGLED, {
             enabled: t,
-            location: { section: u.JJy.SETTINGS_TEXT_AND_IMAGES },
+            location: {
+                section: u.JJy.SETTINGS_TEXT_AND_IMAGES,
+            },
         }),
             s.SI.updateSetting(t);
     },

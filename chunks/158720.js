@@ -1,4 +1,8 @@
-n.d(t, { A: () => w }), n(896048), n(228524);
+n.d(t, {
+    A: () => w,
+}),
+    n(896048),
+    n(228524);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -15,6 +19,7 @@ var r = n(627968),
     p = n(783419),
     x = n(985018),
     h = n(493466);
+
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -40,6 +45,7 @@ function j(e) {
     }
     return e;
 }
+
 function O(e) {
     var t, n;
     let i,
@@ -56,7 +62,9 @@ function O(e) {
         i = (0, r.jsx)("img", {
             className: h.w$,
             src: e,
-            alt: x.intl.formatToPlainString(x.t.rtm15P, { name: a.name }),
+            alt: x.intl.formatToPlainString(x.t.rtm15P, {
+                name: a.name,
+            }),
         });
     }
     return (0, r.jsxs)("div", {
@@ -98,6 +106,7 @@ function O(e) {
         ],
     });
 }
+
 function y(e) {
     let {
             titleText: t,
@@ -167,6 +176,7 @@ function y(e) {
         l,
     );
 }
+
 function v(e) {
     var t, n, l;
     let s,
@@ -293,6 +303,7 @@ function v(e) {
         f,
     );
 }
+
 function A(e) {
     let { children: t } = e;
     return (0, r.jsxs)("table", {
@@ -301,26 +312,37 @@ function A(e) {
             (0, r.jsx)("thead", {
                 children: (0, r.jsxs)("tr", {
                     children: [
-                        (0, r.jsx)("th", { scope: "col" }),
                         (0, r.jsx)("th", {
                             scope: "col",
-                            children: (0, r.jsx)(u.AC4, { children: x.intl.string(x.t.TwDLVr) }),
                         }),
                         (0, r.jsx)("th", {
                             scope: "col",
-                            children: (0, r.jsx)(u.AC4, { children: x.intl.string(x.t.qDWJwX) }),
+                            children: (0, r.jsx)(u.AC4, {
+                                children: x.intl.string(x.t.TwDLVr),
+                            }),
                         }),
                         (0, r.jsx)("th", {
                             scope: "col",
-                            children: (0, r.jsx)(u.AC4, { children: x.intl.string(x.t["5IF76e"]) }),
+                            children: (0, r.jsx)(u.AC4, {
+                                children: x.intl.string(x.t.qDWJwX),
+                            }),
+                        }),
+                        (0, r.jsx)("th", {
+                            scope: "col",
+                            children: (0, r.jsx)(u.AC4, {
+                                children: x.intl.string(x.t["5IF76e"]),
+                            }),
                         }),
                     ],
                 }),
             }),
-            (0, r.jsx)("tbody", { children: t }),
+            (0, r.jsx)("tbody", {
+                children: t,
+            }),
         ],
     });
 }
+
 function E(e) {
     let { configMetadataMap: t, onConfigurationChange: n, locked: i } = e,
         l = b.A.get(m.fg2.BLUESKY);
@@ -356,6 +378,7 @@ function E(e) {
         ],
     });
 }
+
 function N(e) {
     let { configMetadataMap: t, onConfigurationChange: n, locked: i } = e,
         l = b.A.get(m.fg2.STEAM);
@@ -380,7 +403,9 @@ function N(e) {
                 locked: i,
             }),
             (0, r.jsx)(v, {
-                titleText: x.intl.formatToPlainString(x.t.j1Gf2n, { gameName: x.intl.string(x.t.HKUEZo) }),
+                titleText: x.intl.formatToPlainString(x.t.j1Gf2n, {
+                    gameName: x.intl.string(x.t.HKUEZo),
+                }),
                 fieldTextHook: x.t.OGUX78,
                 metadataField: p.pK.STEAM_ITEM_COUNT_DOTA2,
                 existingPendingConfiguration: t.get(p.pK.STEAM_ITEM_COUNT_DOTA2),
@@ -389,7 +414,9 @@ function N(e) {
                 locked: i,
             }),
             (0, r.jsx)(v, {
-                titleText: x.intl.formatToPlainString(x.t.j1Gf2n, { gameName: x.intl.string(x.t.C8p1Sh) }),
+                titleText: x.intl.formatToPlainString(x.t.j1Gf2n, {
+                    gameName: x.intl.string(x.t.C8p1Sh),
+                }),
                 fieldTextHook: x.t.Eq7h8E,
                 metadataField: p.pK.STEAM_ITEM_COUNT_TF2,
                 existingPendingConfiguration: t.get(p.pK.STEAM_ITEM_COUNT_TF2),
@@ -400,6 +427,7 @@ function N(e) {
         ],
     });
 }
+
 function _(e) {
     let { configMetadataMap: t, onConfigurationChange: n, locked: i } = e,
         l = b.A.get(m.fg2.TWITTER);
@@ -444,6 +472,7 @@ function _(e) {
         ],
     });
 }
+
 function S(e) {
     let { configMetadataMap: t, onConfigurationChange: n, locked: i } = e,
         l = b.A.get(m.fg2.REDDIT);
@@ -488,6 +517,7 @@ function S(e) {
         ],
     });
 }
+
 function T(e) {
     let { configMetadataMap: t, onConfigurationChange: n, locked: i } = e,
         l = b.A.get(m.fg2.PAYPAL);
@@ -514,6 +544,7 @@ function T(e) {
         ],
     });
 }
+
 function I(e) {
     let { configMetadataMap: t, onConfigurationChange: n, locked: i } = e,
         l = b.A.get(m.fg2.EBAY);
@@ -568,6 +599,7 @@ function I(e) {
         ],
     });
 }
+
 function C(e) {
     let { configMetadataMap: t, onConfigurationChange: n, locked: i } = e,
         l = b.A.get(m.fg2.TIKTOK);
@@ -612,6 +644,7 @@ function C(e) {
         ],
     });
 }
+
 function P(e) {
     let { configMetadataMap: t, onConfigurationChange: n, locked: i, integration: l } = e;
     return null == l || null == l.role_connections_metadata
@@ -681,6 +714,7 @@ function P(e) {
               }
           });
 }
+
 function w(e) {
     let t,
         { configurationItems: n, onConfigurationChange: i, locked: l, integrations: s } = e,
@@ -743,7 +777,10 @@ function w(e) {
             p = (0, r.jsx)(
                 P,
                 ((x = j({}, f)),
-                (y = y = { integration: o }),
+                (y = y =
+                    {
+                        integration: o,
+                    }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(x, Object.getOwnPropertyDescriptors(y))
                     : (function (e, t) {

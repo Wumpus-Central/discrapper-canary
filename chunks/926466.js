@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -65,7 +67,15 @@ let A = (0, s.debounce)(u.Ay.trackWithMetadata, 500),
               (j = (0, r.jsx)(c.Text, {
                   variant: "text-md/medium",
                   color: "text-strong",
-                  className: a()(h.DD, { [h.vG]: null == s }, { [h.gX]: C }),
+                  className: a()(
+                      h.DD,
+                      {
+                          [h.vG]: null == s,
+                      },
+                      {
+                          [h.gX]: C,
+                      },
+                  ),
                   children: n,
               }));
         let x = null;
@@ -73,7 +83,9 @@ let A = (0, s.debounce)(u.Ay.trackWithMetadata, 500),
             ? (x = l())
             : null != l &&
               (x = (0, r.jsx)(c.Text, {
-                  className: a()({ [h.gX]: C }),
+                  className: a()({
+                      [h.gX]: C,
+                  }),
                   variant: "text-sm/normal",
                   color: "text-muted",
                   children: l,
@@ -86,7 +98,10 @@ let A = (0, s.debounce)(u.Ay.trackWithMetadata, 500),
                     ? null
                     : (0, r.jsx)(c.DUT, {
                           onClick: () => {
-                              u.Ay.trackWithMetadata(p.HAw.CHANNEL_NOTICE_CLOSED, { notice_type: g }), null == y || y();
+                              u.Ay.trackWithMetadata(p.HAw.CHANNEL_NOTICE_CLOSED, {
+                                  notice_type: g,
+                              }),
+                                  null == y || y();
                           },
                           className: h.VN,
                           "aria-label": f.intl.string(f.t.WAI6xu),

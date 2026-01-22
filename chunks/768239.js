@@ -1,17 +1,22 @@
-n.d(t, { Q: () => E });
+n.d(t, {
+    Q: () => E,
+});
 var r = n(627968),
     i = n(64700),
     a = n(45077),
     s = n(75375),
     o = ["children"];
+
 function l(e, t) {
     return p(e) || f(e, t) || u(e, t) || c();
 }
+
 function c() {
     throw TypeError(
         "Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
     );
 }
+
 function u(e, t) {
     if (e) {
         if ("string" == typeof e) return d(e, t);
@@ -21,11 +26,13 @@ function u(e, t) {
         if ("Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return d(e, t);
     }
 }
+
 function d(e, t) {
     (null == t || t > e.length) && (t = e.length);
     for (var n = 0, r = Array(t); n < t; n++) r[n] = e[n];
     return r;
 }
+
 function f(e, t) {
     var n,
         r,
@@ -48,9 +55,11 @@ function f(e, t) {
         return a;
     }
 }
+
 function p(e) {
     if (Array.isArray(e)) return e;
 }
+
 function _(e, t) {
     if (null == e) return {};
     var n,
@@ -63,6 +72,7 @@ function _(e, t) {
     }
     return i;
 }
+
 function h(e, t) {
     if (null == e) return {};
     var n,
@@ -91,21 +101,46 @@ var m = 0,
                     );
                 }
             }, []),
-            (0, r.jsx)(s.M.Provider, Object.assign({ value: a }, { children: t }), void 0)
+            (0, r.jsx)(
+                s.M.Provider,
+                Object.assign(
+                    {
+                        value: a,
+                    },
+                    {
+                        children: t,
+                    },
+                ),
+                void 0,
+            )
         );
     });
+
 function b(e) {
     return "manager" in e
-        ? [{ dragDropManager: e.manager }, !1]
+        ? [
+              {
+                  dragDropManager: e.manager,
+              },
+              !1,
+          ]
         : [y(e.backend, e.context, e.options, e.debugMode), !e.context];
 }
+
 function y(e) {
     var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : O(),
         n = arguments.length > 2 ? arguments[2] : void 0,
         r = arguments.length > 3 ? arguments[3] : void 0,
         i = t;
-    return i[g] || (i[g] = { dragDropManager: (0, a.b)(e, t, n, r) }), i[g];
+    return (
+        i[g] ||
+            (i[g] = {
+                dragDropManager: (0, a.b)(e, t, n, r),
+            }),
+        i[g]
+    );
 }
+
 function O() {
     return void 0 !== n.g ? n.g : window;
 }

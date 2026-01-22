@@ -1,4 +1,6 @@
-n.d(t, { x: () => r });
+n.d(t, {
+    x: () => r,
+});
 var r = (function (e) {
     return (
         (e.CURRENT_GAMES = "current_games"),

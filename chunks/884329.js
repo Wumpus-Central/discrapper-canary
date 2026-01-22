@@ -26,7 +26,7 @@
         },
         calendar: {
             sameDay: "[Vandag om] LT",
-            nextDay: "[Môre om] LT",
+            nextDay: "[M\xf4re om] LT",
             nextWeek: "dddd [om] LT",
             lastDay: "[Gister om] LT",
             lastWeek: "[Laas] dddd [om] LT",

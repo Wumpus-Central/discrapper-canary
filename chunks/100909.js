@@ -1,4 +1,7 @@
-r.d(t, { default: () => y }), r(896048);
+r.d(t, {
+    default: () => y,
+}),
+    r(896048);
 var n = r(627968),
     o = r(64700),
     l = r(284009),
@@ -12,6 +15,7 @@ var n = r(627968),
     b = r(652215),
     f = r(985018),
     O = r(468277);
+
 function g(e) {
     let { guildProductListing: t, guildId: r } = e,
         o = (0, c.bG)([u.A], () => {
@@ -40,11 +44,14 @@ function g(e) {
                   }),
                   (0, n.jsx)(a.Text, {
                       variant: "text-md/normal",
-                      children: f.intl.format(f.t["4kglOW"], { roleName: o.name }),
+                      children: f.intl.format(f.t["4kglOW"], {
+                          roleName: o.name,
+                      }),
                   }),
               ],
           });
 }
+
 function y(e) {
     var t, r;
     let { guildId: l, productId: c } = e,
@@ -132,7 +139,9 @@ function y(e) {
                 children: [
                     (0, n.jsx)(a.Text, {
                         variant: "text-md/normal",
-                        children: f.intl.format(f.t.CPQsjo, { productName: b.name }),
+                        children: f.intl.format(f.t.CPQsjo, {
+                            productName: b.name,
+                        }),
                     }),
                     (0, n.jsx)(g, {
                         guildProductListing: b,

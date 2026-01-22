@@ -1,4 +1,7 @@
-n.d(t, { A: () => x }), n(896048);
+n.d(t, {
+    A: () => x,
+}),
+    n(896048);
 var r = n(439372),
     i = n(626584),
     a = n(87001),
@@ -10,6 +13,7 @@ var r = n(439372),
     d = n(833551),
     f = n(395011),
     p = n(392164);
+
 function _(e, t, n) {
     return (
         t in e
@@ -27,6 +31,7 @@ let h = new i.A("OverlayWindowRAFManager"),
     m = window.requestAnimationFrame.bind(window),
     g = new Set([c.Ue.OutOfProcess, c.Ue.OutOfProcessLimitedInteraction]),
     E = new Set([c.AR.OVERLAY_CRASHED, c.AR.OVERLAY_CRASHED_DISABLED]);
+
 function b(e) {
     for (let t of Object.values(d.default.getTrackedGames()))
         if (!(!g.has(t.overlayMethod) || E.has(t.state)) && (!e || t.state === c.AR.OVERLAY_RENDERING)) return !0;
@@ -74,9 +79,11 @@ let y = null,
         }
         return (y = "None"), m(e);
     };
+
 function R() {
     return !s.A.isFocused() || !s.A.isVisible();
 }
+
 function w() {
     let e = a.A.getWindow(p.f),
         t = null != e && "function" == typeof e.cancelAnimationFrame;
@@ -86,6 +93,7 @@ function w() {
     }),
         T();
 }
+
 function P(e) {
     if (e === A) return;
     let t = !e && A;

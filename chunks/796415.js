@@ -1,4 +1,6 @@
-r.d(t, { default: () => y });
+r.d(t, {
+    default: () => y,
+});
 var n = r(627968),
     o = r(397927),
     l = r(976860),
@@ -11,6 +13,7 @@ var n = r(627968),
     f = r(985018),
     b = r(413526),
     d = r(429040);
+
 function y(e) {
     let { gameServerGame: t, guildId: r, status: y } = e,
         O = (function (e, t) {
@@ -74,7 +77,9 @@ function y(e) {
         })(
             {
                 title: f.intl.string("created" === y ? p.default["4lLdBM"] : p.default.VPDgHa),
-                description: f.intl.formatToPlainString(p.default.yL6BiH, { provider: (0, c.A)(t.provider) }),
+                description: f.intl.formatToPlainString(p.default.yL6BiH, {
+                    provider: (0, c.A)(t.provider),
+                }),
                 image: (0, n.jsx)("div", {
                     className: d.Z,
                     children: (0, n.jsx)("img", {

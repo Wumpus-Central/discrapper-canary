@@ -20,6 +20,7 @@ n(790168);
 var m = n(652215),
     g = n(985018),
     E = n(498386);
+
 function b(e, t, n) {
     return (
         t in e
@@ -33,6 +34,7 @@ function b(e, t, n) {
         e
     );
 }
+
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -49,6 +51,7 @@ function y(e) {
     }
     return e;
 }
+
 function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -61,6 +64,7 @@ function O(e, t) {
     }
     return n;
 }
+
 function A(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -76,6 +80,7 @@ let v = (0, h.createChannelRecord)({
     id: "1",
     type: m.rbe.DM,
 });
+
 function S(e) {
     let {
             placeholder: t,
@@ -113,7 +118,13 @@ function S(e) {
         onChange: (e, t, n) => {
             g(t), O(n);
         },
-        type: o ? A(y({}, I), { emojis: { button: !0 } }) : I,
+        type: o
+            ? A(y({}, I), {
+                  emojis: {
+                      button: !0,
+                  },
+              })
+            : I,
         textValue: m,
         richValue: b,
         onSubmit: (e) => {

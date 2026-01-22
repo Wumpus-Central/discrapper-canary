@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -29,7 +31,9 @@ let d = (e) => {
                             (s.current = t);
                     })));
             }, [t, n, r]),
-            { categoryListRef: n }
+            {
+                categoryListRef: n,
+            }
         );
     },
     f = function (e) {

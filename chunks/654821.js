@@ -7,6 +7,7 @@ n.r(t),
     n(65821),
     n(896048);
 var r = n(253018);
+
 function i(e) {
     return f(e)
         ? {
@@ -65,6 +66,7 @@ let a = !1;
     }),
         (a = !0);
 }
+
 function s(e, t) {
     if (null == t) return !1;
     for (; null != e; ) {
@@ -73,9 +75,11 @@ function s(e, t) {
     }
     return !1;
 }
+
 function o(e, t, n, r) {
     return e === n && t === r;
 }
+
 function l(e, t) {
     let n,
         [r, i] = e;
@@ -94,6 +98,7 @@ function l(e, t) {
     let a = "backward" === t && null != r.textContent ? r.textContent.length : 0;
     return [r, a];
 }
+
 function c(e, t, n) {
     let { childNodes: r } = e,
         i = r[t],
@@ -117,20 +122,25 @@ function c(e, t, n) {
     }
     return [i, t];
 }
+
 function u(e) {
     return p(e) && 8 === e.nodeType;
 }
+
 function d(e) {
     return p(e) && 1 === e.nodeType;
 }
+
 function f(e) {
     let t = e && e.anchorNode && _(e.anchorNode);
     return null != t && e instanceof t.Selection;
 }
+
 function p(e) {
     let t = _(e);
     return null != t && e instanceof t.Node;
 }
+
 function _(e) {
     return (e && e.ownerDocument && e.ownerDocument.defaultView) || null;
 }

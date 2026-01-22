@@ -1,4 +1,6 @@
-Object.defineProperty(t, "__esModule", { value: !0 });
+Object.defineProperty(t, "__esModule", {
+    value: !0,
+});
 let r = n(152772);
 class i {
     constructor() {
@@ -6,7 +8,12 @@ class i {
     }
     enqueue(e, t) {
         let n = {
-            priority: (t = Object.assign({ priority: 0 }, t)).priority,
+            priority: (t = Object.assign(
+                {
+                    priority: 0,
+                },
+                t,
+            )).priority,
             run: e,
         };
         if (this.size && this._queue[this.size - 1].priority >= t.priority) return void this._queue.push(n);

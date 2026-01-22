@@ -1,4 +1,7 @@
-n.d(t, { L: () => S }), n(896048);
+n.d(t, {
+    L: () => S,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -15,14 +18,21 @@ var r = n(627968),
     m = n(985018),
     g = n(719247);
 let E = 20;
+
 function b(e, t) {
     let n = t.toDate(),
-        r = n.toLocaleString(m.intl.currentLocale, { weekday: "long" });
+        r = n.toLocaleString(m.intl.currentLocale, {
+            weekday: "long",
+        });
     switch (e) {
         case _.z.WEEKLY:
-            return m.intl.formatToPlainString(m.t.xQM9X0, { weekday: r });
+            return m.intl.formatToPlainString(m.t.xQM9X0, {
+                weekday: r,
+            });
         case _.z.BIWEEKLY:
-            return m.intl.formatToPlainString(m.t.RYscac, { weekday: r });
+            return m.intl.formatToPlainString(m.t.RYscac, {
+                weekday: r,
+            });
         case _.z.MONTHLY:
             let i = Math.ceil(n.getDate() / 7);
             return m.intl.formatToPlainString(m.t["4ZN9Ap"], {
@@ -44,10 +54,15 @@ function b(e, t) {
             return null;
     }
 }
+
 function y(e, t, n, i, a) {
     switch (e) {
         case 1:
-            return a > 0 ? m.intl.formatToPlainString(m.t.PQlCWk, { minutes: a }) : m.intl.string(m.t.WINqKV);
+            return a > 0
+                ? m.intl.formatToPlainString(m.t.PQlCWk, {
+                      minutes: a,
+                  })
+                : m.intl.string(m.t.WINqKV);
         case 2:
             return m.intl.string(m.t.WINqKV);
         case 3:
@@ -70,6 +85,7 @@ function y(e, t, n, i, a) {
             return t;
     }
 }
+
 function O(e) {
     let t,
         {
@@ -104,6 +120,7 @@ function O(e) {
         tooltipText: t,
     };
 }
+
 function A() {
     return (0, r.jsx)(d.LpS, {
         className: g.Ad,
@@ -115,6 +132,7 @@ function A() {
         }),
     });
 }
+
 function v(e) {
     let { children: t, className: n, tooltipText: i } = e;
     return (0, r.jsx)("div", {
@@ -130,6 +148,7 @@ function v(e) {
         }),
     });
 }
+
 function S(e) {
     let {
             startTime: t,
@@ -153,7 +172,7 @@ function S(e) {
             i.useState((0, p.CC)(t, u));
     i.useEffect(() => {
         U((0, p.CC)(t, u));
-        let e = setInterval(() => U((0, p.CC)(t, u)), 1000);
+        let e = setInterval(() => U((0, p.CC)(t, u)), 1e3);
         return () => {
             clearInterval(e);
         };
@@ -199,12 +218,16 @@ function S(e) {
         K = null;
     if (null != T) {
         let e = (0, p.X7)(T);
-        K = m.intl.formatToPlainString(m.t.HmKEqW, { recurrenceRule: e.toText() });
+        K = m.intl.formatToPlainString(m.t.HmKEqW, {
+            recurrenceRule: e.toText(),
+        });
         let n = l()(t);
         K = b((0, p.z7)(n, T), n);
     }
     return (0, r.jsxs)(v, {
-        className: s()(o, { [g.AD]: null != K }),
+        className: s()(o, {
+            [g.AD]: null != K,
+        }),
         tooltipText: W,
         children: [
             I && n === h.XG.SCHEDULED

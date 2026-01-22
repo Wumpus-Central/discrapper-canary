@@ -1,8 +1,15 @@
-n.d(t, { A: () => o }), n(747238), n(812715), n(321073), n(896048);
+n.d(t, {
+    A: () => o,
+}),
+    n(747238),
+    n(812715),
+    n(321073),
+    n(896048);
 var r = n(735438),
     i = n.n(r),
     a = n(61090),
     s = n(707539);
+
 function o(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
@@ -29,10 +36,11 @@ function o(e) {
         })
         .join("\n\n");
 }
+
 function l(e, t) {
     var n, r;
     let a = c(e).map((e) => ({
-            totalTime: null == e.timestamp ? "" : ((e.timestamp - t) / 1000).toFixed(3),
+            totalTime: null == e.timestamp ? "" : ((e.timestamp - t) / 1e3).toFixed(3),
             deltaTime: null == e.delta ? "" : String(Math.round(e.delta)),
             log: ""
                 .concat(e.emoji.length > 0 ? "".concat(e.emoji, " ") : "")
@@ -48,6 +56,7 @@ function l(e, t) {
         })
         .join("");
 }
+
 function c(e) {
     let t = [];
     for (let n = 0; n < e.length; n++) {
@@ -59,6 +68,7 @@ function c(e) {
     }
     return t;
 }
+
 function u(e, t, n, r) {
     e = e.slice();
     let i = new Set(t.map(f)),
@@ -76,7 +86,7 @@ function u(e, t, n, r) {
                 ((o = t.timestamp - e.timestamp), (l = l || (o > 5 && !d(r))), (e.shouldKeep = e.shouldKeep || l));
         }
         let u = {
-            emoji: "\u2615",
+            emoji: "☕",
             timestamp: t.timestamp,
             delta: o > 0 ? o : void 0,
             prefix: a,
@@ -87,12 +97,14 @@ function u(e, t, n, r) {
     });
     let o = !1;
     return e.filter(
-        (e) => !(o && e.log.includes("\u21AA")) && !(o = (!r && "\uD83C\uDFA8" === e.emoji) || !1 === e.shouldKeep),
+        (e) => !(o && e.log.includes("↪")) && !(o = (!r && "\uD83C\uDFA8" === e.emoji) || !1 === e.shouldKeep),
     );
 }
+
 function d(e) {
     return ["GET_CONSTANTS", "CONVERT_CONSTANTS"].some((t) => e.includes(t));
 }
+
 function f(e) {
     let t = null == e.tag ? e.label : "".concat(e.label, " ").concat(e.tag);
     return (
@@ -101,6 +113,7 @@ function f(e) {
         t
     );
 }
+
 function p(e, t) {
     let n = 0;
     for (; n < e.length; n++) {

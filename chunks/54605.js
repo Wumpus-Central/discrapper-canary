@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(627968),
     i = n(136722),
     a = n(397927),
@@ -6,6 +8,7 @@ var r = n(627968),
     o = n(985018),
     l = n(80739);
 let c = 5;
+
 function u(e) {
     let { error: t, selectedGuildId: n, onGuildChange: u, guilds: d, disabled: f = !1 } = e,
         p = d

@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -9,6 +11,7 @@ var i = n(311907),
     c = n(652215),
     u = n(985018),
     d = n(533110);
+
 function f(e, t, n) {
     return (
         t in e
@@ -22,6 +25,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -38,6 +42,7 @@ function p(e) {
     }
     return e;
 }
+
 function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -50,6 +55,7 @@ function _(e, t) {
     }
     return n;
 }
+
 function h(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -61,6 +67,7 @@ function h(e, t) {
         e
     );
 }
+
 function m(e) {
     let {
             user: t,
@@ -120,7 +127,9 @@ function m(e) {
                                         }),
                                     );
                             },
-                            { contextKey: (0, a.TId)(y) },
+                            {
+                                contextKey: (0, a.TId)(y),
+                            },
                         );
                     },
           });

@@ -27,7 +27,9 @@ var l = e(725664),
         function n(n) {
             var e;
             return (
-                ((e = t.call(this, n) || this).state = { location: n.history.location }),
+                ((e = t.call(this, n) || this).state = {
+                    location: n.history.location,
+                }),
                 (e._isMounted = !1),
                 (e._pendingLocation = null),
                 n.staticContext ||
@@ -54,9 +56,15 @@ var l = e(725664),
                     this.unlisten && this.unlisten(),
                     this.props.staticContext ||
                         (this.unlisten = this.props.history.listen(function (n) {
-                            t._isMounted && t.setState({ location: n });
+                            t._isMounted &&
+                                t.setState({
+                                    location: n,
+                                });
                         })),
-                    this._pendingLocation && this.setState({ location: this._pendingLocation });
+                    this._pendingLocation &&
+                        this.setState({
+                            location: this._pendingLocation,
+                        });
             }),
             (e.componentWillUnmount = function () {
                 this.unlisten && (this.unlisten(), (this._isMounted = !1), (this._pendingLocation = null));
@@ -84,8 +92,13 @@ var l = e(725664),
 i.Component, i.Component;
 var y = {},
     C = 0;
+
 function A(t, n) {
-    void 0 === n && (n = {}), ("string" == typeof n || Array.isArray(n)) && (n = { path: n });
+    void 0 === n && (n = {}),
+        ("string" == typeof n || Array.isArray(n)) &&
+            (n = {
+                path: n,
+            });
     var e = n,
         r = e.path,
         i = e.exact,
@@ -106,7 +119,7 @@ function A(t, n) {
                         regexp: s()(t, i, n),
                         keys: i,
                     };
-                return C < 10000 && ((r[t] = o), C++), o;
+                return C < 1e4 && ((r[t] = o), C++), o;
             })(e, {
                 end: o,
                 strict: c,
@@ -132,19 +145,29 @@ function A(t, n) {
     }, null);
 }
 i.Component;
+
 function g(t) {
     var n = "withRouter(" + (t.displayName || t.name) + ")",
         e = function (n) {
             var e = n.wrappedComponentRef,
                 r = (0, l.A)(n, ["wrappedComponentRef"]);
             return i.createElement(d.Consumer, null, function (n) {
-                return n || (0, a.A)(!1), i.createElement(t, (0, c.A)({}, r, n, { ref: e }));
+                return (
+                    n || (0, a.A)(!1),
+                    i.createElement(
+                        t,
+                        (0, c.A)({}, r, n, {
+                            ref: e,
+                        }),
+                    )
+                );
             });
         };
     return (e.displayName = n), (e.WrappedComponent = t), f()(e, t);
 }
 i.Component, i.Component;
 var x = i.useContext;
+
 function R() {
     return x(h);
 }

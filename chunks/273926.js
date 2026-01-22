@@ -14,6 +14,7 @@ var l = n(503698),
     s = n(31457),
     c = n(985018),
     d = n(712104);
+
 function u(e) {
     let { terms: t, channelId: n, className: l } = e;
     return (0, r.jsx)("div", {
@@ -32,7 +33,9 @@ function u(e) {
                         (0, r.jsx)(o.Text, {
                             variant: "text-md/normal",
                             className: d.RQ,
-                            children: a.A.parseGuildVerificationFormRule(e, !0, { channelId: n }),
+                            children: a.A.parseGuildVerificationFormRule(e, !0, {
+                                channelId: n,
+                            }),
                         }),
                     ],
                 },
@@ -41,6 +44,7 @@ function u(e) {
         ),
     });
 }
+
 function C(e) {
     let { onChange: t, checked: n, disabled: l } = e;
     return (0, r.jsx)("div", {
@@ -53,6 +57,7 @@ function C(e) {
         }),
     });
 }
+
 function f(e) {
     let { formField: t } = e;
     return (0, r.jsx)(s.fu, {

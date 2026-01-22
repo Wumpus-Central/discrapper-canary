@@ -1,10 +1,13 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var l = n(627968),
     r = n(64700),
     s = n(397927),
     i = n(988794),
     a = n(985018),
     c = n(45750);
+
 function d(e) {
     let { selectedTab: t, onTabSelected: n, userCount: d } = e,
         u = r.useRef(null);
@@ -30,7 +33,9 @@ function d(e) {
                     (0, l.jsx)(s.VQ0.Item, {
                         className: c.YU,
                         id: i.al.RSVP_LIST,
-                        children: a.intl.formatToPlainString(a.t["ZrTT/N"], { userCount: d }),
+                        children: a.intl.formatToPlainString(a.t["ZrTT/N"], {
+                            userCount: d,
+                        }),
                     }),
                 ],
             }),

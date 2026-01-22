@@ -17,17 +17,20 @@ n(652896), n(87001), n(616356), n(961350), n(555528);
 var u = n(375492);
 n(309010), n(242286);
 var d = n(395011);
+
 function f() {
     let [e = PopoutWindowStore] = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [PopoutWindowStore];
     return e.getWindowVisible(OVERLAY_V3_KEY);
 }
 n(897720), n(644434), n(392164);
+
 function p(e, t) {
     if (e === t) return !0;
     if (e.length !== t.length) return !1;
     for (let n = 0; n < e.length; n++) if (e[n].widget !== t[n].widget) return !1;
     return !0;
 }
+
 function _(e, t) {
     if (e === t) return !0;
     if (e.length !== t.length) return !1;
@@ -36,6 +39,7 @@ function _(e, t) {
             return !1;
     return !0;
 }
+
 function h() {
     var e, t;
     let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c.Ay,
@@ -64,6 +68,7 @@ function h() {
               name: null != (t = null == E ? void 0 : E.name) ? t : null == b ? void 0 : b.name,
           };
 }
+
 function m() {
     let e = (0, o.V)();
     return (0, r.bG)([c.Ay, u.A, a.Ay, l.A, d.A], () => h(c.Ay, u.A, a.Ay, l.A, d.A, e), [e], i.A);

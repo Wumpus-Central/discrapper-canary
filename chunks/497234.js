@@ -1,9 +1,13 @@
-n.d(t, { A: () => u }), n(896048);
+n.d(t, {
+    A: () => u,
+}),
+    n(896048);
 var r = n(439372),
     i = n(723702),
     a = n(837921),
     s = n(724122),
     o = n(69435);
+
 function l(e, t, n) {
     return (
         t in e
@@ -29,7 +33,9 @@ class c extends r.A {
                         a.Ay.setSetting("enableHardwareAcceleration", e);
                     }
             }),
-            l(this, "actions", { POST_CONNECTION_OPEN: this.handlePostConnectionOpen });
+            l(this, "actions", {
+                POST_CONNECTION_OPEN: this.handlePostConnectionOpen,
+            });
     }
 }
 let u = new c();

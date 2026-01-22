@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -30,9 +32,13 @@ let d = function (e) {
                                 (0, r.jsx)("div", {
                                     className: u.TS,
                                     children:
-                                        (f = (e[e.length - 1] / o) * 1000) > 1000
-                                            ? c.intl.formatToPlainString(c.t["WU+gTX"], { size: Math.round(f / 1000) })
-                                            : c.intl.formatToPlainString(c.t.wnF6TH, { size: Math.round(f) }),
+                                        (f = (e[e.length - 1] / o) * 1e3) > 1e3
+                                            ? c.intl.formatToPlainString(c.t["WU+gTX"], {
+                                                  size: Math.round(f / 1e3),
+                                              })
+                                            : c.intl.formatToPlainString(c.t.wnF6TH, {
+                                                  size: Math.round(f),
+                                              }),
                                 }),
                             ],
                         }),
@@ -40,7 +46,7 @@ let d = function (e) {
                             className: u.MQ,
                             children: (0, r.jsx)(s.A, {
                                 data: e,
-                                maxValue: Math.max(Math.max.apply(null, e), 1000),
+                                maxValue: Math.max(Math.max.apply(null, e), 1e3),
                                 className: u.CD,
                                 updateInterval: o,
                                 color: i,

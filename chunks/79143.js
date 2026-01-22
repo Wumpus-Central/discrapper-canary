@@ -18,6 +18,7 @@ var r = n(627968),
     m = n(935206),
     p = n(985018),
     x = n(221611);
+
 function h(e) {
     let {
             guildId: t,
@@ -102,21 +103,30 @@ function h(e) {
         })
     );
 }
+
 function j(e) {
     let { benefits: t, onEdit: n, onMove: l, guildId: c } = e,
         f = (0, o.GV)(),
-        { isDragging: m } = (0, a.V)((e) => ({ isDragging: e.getItemType() === f })),
+        { isDragging: m } = (0, a.V)((e) => ({
+            isDragging: e.getItemType() === f,
+        })),
         p = (0, u.gN)();
     return 0 === t.length
         ? null
         : (0, r.jsx)("div", {
-              className: s()(x.kL, { [x.Id]: m }),
+              className: s()(x.kL, {
+                  [x.Id]: m,
+              }),
               children: t.map((e, t) =>
                   (0, r.jsxs)(
                       i.Fragment,
                       {
                           children: [
-                              t > 0 ? (0, r.jsx)("div", { className: x.yF }) : null,
+                              t > 0
+                                  ? (0, r.jsx)("div", {
+                                        className: x.yF,
+                                    })
+                                  : null,
                               (0, r.jsx)(h, {
                                   guildId: c,
                                   emojiId: e.emoji_id,
@@ -137,6 +147,7 @@ function j(e) {
               ),
           });
 }
+
 function O(e) {
     let { onClick: t, children: n, disabled: i = !1 } = e;
     return (0, r.jsx)(c.DUT, {
@@ -144,7 +155,9 @@ function O(e) {
         onClick: i ? void 0 : t,
         "aria-disabled": i,
         children: (0, r.jsxs)("div", {
-            className: s()(x.Nr, x.xB, { [x.r9]: i }),
+            className: s()(x.Nr, x.xB, {
+                [x.r9]: i,
+            }),
             children: [
                 (0, r.jsx)("div", {
                     className: x.kV,

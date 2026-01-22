@@ -3,6 +3,7 @@ n.d(t, {
     T: () => l,
 });
 var r = n(73153);
+
 function l(e) {
     r.h.dispatch({
         type: "VOICE_CATEGORY_EXPAND",
@@ -10,6 +11,7 @@ function l(e) {
         expand: !0,
     });
 }
+
 function i(e) {
     r.h.dispatch({
         type: "VOICE_CATEGORY_COLLAPSE",

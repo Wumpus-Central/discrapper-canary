@@ -7307,6 +7307,19 @@ e.exports = function (e) {
             "builtin-symbol": "built_in",
             "message-name": "string",
         },
-        contains: [e.COMMENT(/\(\*/, /\*\)/, { contains: ["self"] }), g, E, y, _, h, e.QUOTE_STRING_MODE, d, m, b],
+        contains: [
+            e.COMMENT(/\(\*/, /\*\)/, {
+                contains: ["self"],
+            }),
+            g,
+            E,
+            y,
+            _,
+            h,
+            e.QUOTE_STRING_MODE,
+            d,
+            m,
+            b,
+        ],
     };
 };

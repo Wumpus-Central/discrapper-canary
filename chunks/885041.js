@@ -1,4 +1,9 @@
-n.r(t), n.d(t, { default: () => tb }), n(747238), n(896048);
+n.r(t),
+    n.d(t, {
+        default: () => tb,
+    }),
+    n(747238),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(492462),
@@ -118,6 +123,7 @@ var r = n(627968),
     tt = n(746080),
     tn = n(771016),
     tr = n(613057);
+
 function ti(e, t, n) {
     return (
         t in e
@@ -131,6 +137,7 @@ function ti(e, t, n) {
         e
     );
 }
+
 function tl(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -213,7 +220,9 @@ let ts = (0, g.z)((e) => {
                         search: n,
                     };
                 },
-                children: (0, r.jsx)(a.rd, { to: eX.A.defaultRoute }),
+                children: (0, r.jsx)(a.rd, {
+                    to: eX.A.defaultRoute,
+                }),
             })
         );
     }),
@@ -223,7 +232,9 @@ let ts = (0, g.z)((e) => {
         return (
             (0, X.B)(() => {
                 let { openPlaygroundFromParsedUrl: e } = n(965042);
-                e({ match: i });
+                e({
+                    match: i,
+                });
             }),
             (0, r.jsx)(A.A, {
                 deepLinkType: tr.XK.PLAYGROUND,
@@ -237,7 +248,9 @@ let ts = (0, g.z)((e) => {
                         fingerprint: t,
                     };
                 },
-                children: (0, r.jsx)(a.rd, { to: eX.A.defaultRoute }),
+                children: (0, r.jsx)(a.rd, {
+                    to: eX.A.defaultRoute,
+                }),
             })
         );
     }),
@@ -250,29 +263,47 @@ let ts = (0, g.z)((e) => {
         class extends i.Component {
             componentDidMount() {
                 let { match: e } = this.props;
-                null != e && null != e.params.inviteCode && (0, J.q)({ code: e.params.inviteCode });
+                null != e &&
+                    null != e.params.inviteCode &&
+                    (0, J.q)({
+                        code: e.params.inviteCode,
+                    });
             }
             render() {
                 let { isConnected: e, defaultRoute: t, token: n, defaultRouteFallback: i } = this.props;
-                if (null == n) return (0, r.jsx)(a.rd, { to: te.BVt.DEFAULT_LOGGED_OUT });
+                if (null == n)
+                    return (0, r.jsx)(a.rd, {
+                        to: te.BVt.DEFAULT_LOGGED_OUT,
+                    });
                 if (e) {
                     let e = tA(t);
                     return null == e ||
                         ((e.params.guildId === te.ME || null != eZ.A.getGuild(e.params.guildId)) &&
                             null != eQ.A.getChannel(e.params.channelId))
-                        ? (0, r.jsx)(a.rd, { to: t })
-                        : (0, r.jsx)(a.rd, { to: i });
+                        ? (0, r.jsx)(a.rd, {
+                              to: t,
+                          })
+                        : (0, r.jsx)(a.rd, {
+                              to: i,
+                          });
                 }
                 return null;
             }
         },
     ),
-    tu = (0, g.z)((0, T.C)(x.A, null, { passProps: !1 })),
-    td = (0, T.C)(Z.default, null, { passProps: !1 }),
+    tu = (0, g.z)(
+        (0, T.C)(x.A, null, {
+            passProps: !1,
+        }),
+    ),
+    td = (0, T.C)(Z.default, null, {
+        passProps: !1,
+    }),
     tp = [
         te.BVt.GUILD_BOOSTING_MARKETING(eS.pv.guildId()),
         ...Array.from(tt.qW).map((e) => te.BVt.CHANNEL(eS.pv.guildId(), e)),
     ];
+
 function tf(e) {
     let { guildId: t, channelId: n = null, messageId: r = null, threadId: i = null } = e.params;
     return {
@@ -290,14 +321,18 @@ let th = [
                 eW.default.getLoginStatus() === te.aUe.LOGGING_IN ||
                 !eW.default.allowLogoutRedirect()
                 ? tu(e)
-                : (0, r.jsx)(I.A, { applicationId: e.match.params.applicationId });
+                : (0, r.jsx)(I.A, {
+                      applicationId: e.match.params.applicationId,
+                  });
         },
     },
     {
         path: [te.BVt.APP_WITH_INVITE_AND_GUILD_ONBOARDING(":inviteCode")],
         render(e) {
             let { match: t } = e;
-            return (0, r.jsx)(tc, { match: t });
+            return (0, r.jsx)(tc, {
+                match: t,
+            });
         },
     },
     {
@@ -309,10 +344,15 @@ let th = [
                 (0, X.B)(() => {
                     (0, d.G)(n, !0, !0).then((e) => {
                         let { giftCode: t } = e;
-                        null != t && (0, eE.h)({ processedCode: t.code });
+                        null != t &&
+                            (0, eE.h)({
+                                processedCode: t.code,
+                            });
                     });
                 }),
-                (0, r.jsx)(a.rd, { to: eX.A.defaultRoute })
+                (0, r.jsx)(a.rd, {
+                    to: eX.A.defaultRoute,
+                })
             );
         },
     },
@@ -332,7 +372,9 @@ let th = [
                         sourceAnalyticsLocations: [N.A.URI_SCHEME],
                     }),
                 ),
-                (0, r.jsx)(a.rd, { to: eX.A.defaultRoute })
+                (0, r.jsx)(a.rd, {
+                    to: eX.A.defaultRoute,
+                })
             );
         },
     },
@@ -369,7 +411,9 @@ let th = [
                         }
                     });
                 }),
-                (0, r.jsx)(a.rd, { to: te.BVt.APPLICATION_LIBRARY })
+                (0, r.jsx)(a.rd, {
+                    to: te.BVt.APPLICATION_LIBRARY,
+                })
             );
         },
     },
@@ -377,8 +421,14 @@ let th = [
         path: [te.BVt.GUILD_CREATE],
         render: function () {
             return (
-                (0, X.B)(() => M.A.openCreateGuildModal({ location: "External link" })),
-                (0, r.jsx)(a.rd, { to: eX.A.defaultRoute })
+                (0, X.B)(() =>
+                    M.A.openCreateGuildModal({
+                        location: "External link",
+                    }),
+                ),
+                (0, r.jsx)(a.rd, {
+                    to: eX.A.defaultRoute,
+                })
             );
         },
     },
@@ -396,7 +446,9 @@ let th = [
                         feature: s,
                     }),
                 ),
-                (0, r.jsx)(a.rd, { to: eX.A.defaultRoute })
+                (0, r.jsx)(a.rd, {
+                    to: eX.A.defaultRoute,
+                })
             );
         },
     },
@@ -422,7 +474,10 @@ let th = [
                             return (0, r.jsx)(
                                 e,
                                 ((n = tl({}, t)),
-                                (l = l = { guildId: i }),
+                                (l = l =
+                                    {
+                                        guildId: i,
+                                    }),
                                 Object.getOwnPropertyDescriptors
                                     ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
                                     : (function (e, t) {
@@ -440,7 +495,9 @@ let th = [
                         };
                     });
                 }),
-                (0, r.jsx)(a.rd, { to: te.BVt.CHANNEL(i) })
+                (0, r.jsx)(a.rd, {
+                    to: te.BVt.CHANNEL(i),
+                })
             );
         },
     },
@@ -448,31 +505,59 @@ let th = [
         path: [te.BVt.APPLICATION_LIBRARY_INVENTORY],
         render: function () {
             return (
-                (0, X.B)(() => (0, eY.openUserSettings)(eB.X.GIFT_PANEL, { section: te.nc_.INVENTORY })),
-                (0, r.jsx)(a.rd, { to: eX.A.defaultRoute })
+                (0, X.B)(() =>
+                    (0, eY.openUserSettings)(eB.X.GIFT_PANEL, {
+                        section: te.nc_.INVENTORY,
+                    }),
+                ),
+                (0, r.jsx)(a.rd, {
+                    to: eX.A.defaultRoute,
+                })
             );
         },
     },
     {
-        path: [te.BVt.WELCOME(eS.pv.guildId({ optional: !0 }), eS.pv.channelId({ optional: !0 }))],
+        path: [
+            te.BVt.WELCOME(
+                eS.pv.guildId({
+                    optional: !0,
+                }),
+                eS.pv.channelId({
+                    optional: !0,
+                }),
+            ),
+        ],
         render: function (e) {
             let { match: t } = e,
                 { guildId: n, channelId: i } = t.params;
             (0, ed.C)(tn.zY.MARKETING_UNCLAIMED);
             let l = te.BVt.CHANNEL(n, i);
-            return (0, r.jsx)(a.rd, { to: l });
+            return (0, r.jsx)(a.rd, {
+                to: l,
+            });
         },
     },
     {
-        path: [te.BVt.GUILD_EVENT_DETAILS(eS.pv.guildId({ optional: !0 }), ":guildEventId")],
+        path: [
+            te.BVt.GUILD_EVENT_DETAILS(
+                eS.pv.guildId({
+                    optional: !0,
+                }),
+                ":guildEventId",
+            ),
+        ],
         render: function (e) {
             let { match: t } = e,
                 { guildId: n, guildEventId: i } = t.params;
             return (
                 (0, X.B)(() => {
-                    (0, $.uR)({ eventId: i });
+                    (0, $.uR)({
+                        eventId: i,
+                    });
                 }),
-                (0, r.jsx)(a.rd, { to: te.BVt.CHANNEL(n) })
+                (0, r.jsx)(a.rd, {
+                    to: te.BVt.CHANNEL(n),
+                })
             );
         },
     },
@@ -485,7 +570,9 @@ let th = [
                 (0, X.B)(() => {
                     ee.A.open(n, (0, et.A)(te.BEX, i), void 0, (0, et.A)(te.nd0, l));
                 }),
-                (0, r.jsx)(a.rd, { to: te.BVt.CHANNEL(n) })
+                (0, r.jsx)(a.rd, {
+                    to: te.BVt.CHANNEL(n),
+                })
             );
         },
         isChatRoute: !0,
@@ -493,7 +580,13 @@ let th = [
     {
         path: [
             te.BVt.CHANNEL_THREAD_VIEW(eS.pv.guildId(), eS.pv.channelId(), ":threadId", ":messageId?"),
-            te.BVt.CHANNEL(eS.pv.guildId(), eS.pv.channelId({ optional: !0 }), ":messageId?"),
+            te.BVt.CHANNEL(
+                eS.pv.guildId(),
+                eS.pv.channelId({
+                    optional: !0,
+                }),
+                ":messageId?",
+            ),
             te.BVt.ACTIVITY,
             te.BVt.ACTIVITIES,
             te.BVt.ACTIVITIES_HAPPENING_NOW,
@@ -526,18 +619,24 @@ let th = [
         render: function (e) {
             let { match: t } = e,
                 { guildId: n, shopSkuId: i, shopSlug: l } = t.params;
-            return (0, r.jsx)(a.rd, { to: te.BVt.CHANNELS_GAME_SHOP(n, 0, i, l) });
+            return (0, r.jsx)(a.rd, {
+                to: te.BVt.CHANNELS_GAME_SHOP(n, 0, i, l),
+            });
         },
     },
 ];
+
 function tA(e) {
     for (let { path: t, isChatRoute: n } of th) {
         if (!n) continue;
-        let r = (0, a.B6)(e, { path: t });
+        let r = (0, a.B6)(e, {
+            path: t,
+        });
         if (null != r) return r;
     }
     return null;
 }
+
 function tg(e) {
     let { channelId: t, guildId: n, pathname: r } = e;
     if (!Q.A.isConnected()) return;
@@ -686,7 +785,9 @@ class tm extends i.PureComponent {
                         if (null != i && null != o && t)
                             if (c) (0, eC.bG)(te.BVt.CHANNEL(r, o, s));
                             else {
-                                let e = { type: eP.LU.THREAD };
+                                let e = {
+                                    type: eP.LU.THREAD,
+                                };
                                 null != s && (e.initialMessageId = s),
                                     ex.A.openThreadAsSidebar({
                                         guildId: r,
@@ -778,7 +879,9 @@ class tm extends i.PureComponent {
                                 t[0],
                             );
                         }),
-                        (0, r.jsx)(a.rd, { to: "/" }),
+                        (0, r.jsx)(a.rd, {
+                            to: "/",
+                        }),
                     ],
                 }),
                 (0, r.jsx)(D.A, {}),

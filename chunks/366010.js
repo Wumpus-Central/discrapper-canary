@@ -3,9 +3,11 @@ n.d(t, {
     q: () => i,
 });
 var r = n(680049);
+
 function i(e) {
     return e === r.NJ.LIGHT;
 }
+
 function a(e) {
     switch (e) {
         case r.NJ.DARK:

@@ -20,6 +20,7 @@ var r = n(627968),
     h = n(954571),
     m = n(652215),
     g = n(559868);
+
 function E(e, t, n) {
     return (
         t in e
@@ -33,6 +34,7 @@ function E(e, t, n) {
         e
     );
 }
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -49,6 +51,7 @@ function b(e) {
     }
     return e;
 }
+
 function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -61,6 +64,7 @@ function y(e, t) {
     }
     return n;
 }
+
 function O(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -73,10 +77,16 @@ function O(e, t) {
     );
 }
 let A = l().defaultRules.link,
-    v = { section: m.JJy.SETTINGS_CHANGELOG };
+    v = {
+        section: m.JJy.SETTINGS_CHANGELOG,
+    };
+
 function S() {
-    h.default.track(m.HAw.PREMIUM_PROMOTION_OPENED, { location: v });
+    h.default.track(m.HAw.PREMIUM_PROMOTION_OPENED, {
+        location: v,
+    });
 }
+
 function I(e, t) {
     return null == t ? [] : t.split(" ").map((t) => e[t]);
 }
@@ -85,7 +95,13 @@ let T = (e) => {
             o = (0, c.$Il)(),
             l = parseInt(t, 10),
             u = o + (isNaN(l) ? 1 : l) - 1;
-        return i.createElement("h".concat(u), { className: s()(...I(a, r)) }, n);
+        return i.createElement(
+            "h".concat(u),
+            {
+                className: s()(...I(a, r)),
+            },
+            n,
+        );
     },
     C = null != d.A ? d.A.defaultRules : null,
     N = {
@@ -99,8 +115,12 @@ let T = (e) => {
                     (r = a
                         ? (e) => {
                               S(),
-                                  (0, _.openUserSettings)(p.X.NITRO_PANEL, { section: m.nc_.PREMIUM }),
-                                  n.changeLog.track(m.HAw.CHANGE_LOG_CTA_CLICKED, { cta_type: "nitro" }),
+                                  (0, _.openUserSettings)(p.X.NITRO_PANEL, {
+                                      section: m.nc_.PREMIUM,
+                                  }),
+                                  n.changeLog.track(m.HAw.CHANGE_LOG_CTA_CLICKED, {
+                                      cta_type: "nitro",
+                                  }),
                                   (0, c.OoC)(g.lb),
                                   e.preventDefault();
                           }
@@ -128,7 +148,9 @@ let T = (e) => {
                                         ),
                                     );
                             }),
-                    O(b({}, A.parse(e, t, n)), { callToAction: r })
+                    O(b({}, A.parse(e, t, n)), {
+                        callToAction: r,
+                    })
                 );
             },
             react: (e, t, n) =>
@@ -182,6 +204,17 @@ let T = (e) => {
                 );
             },
         },
-        blockQuote: { react: null == C ? void 0 : C.blockQuote.react },
-        paragraph: { react: (e, t, n) => (0, r.jsx)("p", { children: t(e.content, n) }, n.key) },
+        blockQuote: {
+            react: null == C ? void 0 : C.blockQuote.react,
+        },
+        paragraph: {
+            react: (e, t, n) =>
+                (0, r.jsx)(
+                    "p",
+                    {
+                        children: t(e.content, n),
+                    },
+                    n.key,
+                ),
+        },
     };

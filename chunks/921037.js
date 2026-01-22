@@ -10,6 +10,7 @@ var r = n(362474),
     o = n(961350),
     l = n(723702),
     c = n(652215);
+
 function u(e, t, n) {
     return (
         t in e
@@ -27,7 +28,9 @@ let d = "guestInviteToAccept";
 class f extends s.A {
     constructor(...e) {
         super(...e),
-            u(this, "actions", { POST_CONNECTION_OPEN: () => this.handleConnectionOpen() }),
+            u(this, "actions", {
+                POST_CONNECTION_OPEN: () => this.handleConnectionOpen(),
+            }),
             u(this, "handleConnectionOpen", async () => {
                 if ((0, l.isWeb)()) {
                     let e = r.u.get(d);

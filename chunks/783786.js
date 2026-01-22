@@ -1,6 +1,9 @@
-n.d(t, { M: () => a });
+n.d(t, {
+    M: () => a,
+});
 var r = n(723906),
     i = n(48284);
+
 function a(e) {
     let { id: t, label: n, "aria-labelledby": a, "aria-label": s, labelElementType: o = "label" } = e;
     t = (0, r.Bi)(t);

@@ -1,4 +1,7 @@
-n.d(t, { A: () => _ }), n(896048);
+n.d(t, {
+    A: () => _,
+}),
+    n(896048);
 var r = n(478437),
     l = n(311907),
     i = n(811024),
@@ -20,10 +23,12 @@ var r = n(478437),
     j = n(977997),
     v = n(661191),
     x = n(652215);
+
 function E(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : m.A;
     return null != e && e.type !== r.r.GUILD_STAGE_VOICE && t !== e.id && n.canBasicChannel(x.hVb.VIEW_CHANNEL, e);
 }
+
 function _(e) {
     var t;
     let n = (0, l.bG)([O.Ay], () => O.Ay.isMuted(e)),

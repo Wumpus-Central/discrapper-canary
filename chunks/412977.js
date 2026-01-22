@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -9,6 +11,7 @@ var r = n(627968),
     d = n(652215),
     u = n(985018),
     f = n(690450);
+
 function g(e) {
     let { guild: t } = e,
         l = t.verificationLevel,

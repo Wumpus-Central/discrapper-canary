@@ -1,10 +1,13 @@
-n.d(t, { C: () => d });
+n.d(t, {
+    C: () => d,
+});
 var r = n(652896),
     i = n(616356),
     a = n(877717),
     s = n(487329),
     o = n(601900),
     l = n(652215);
+
 function c(e, t, n) {
     return (
         t in e
@@ -18,6 +21,7 @@ function c(e, t, n) {
         e
     );
 }
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -38,7 +42,14 @@ let d = {
     getActiveErrors: () => {
         let e = i.A.getCurrentUserActiveStream();
         return null != e && null != a.A.getHookError(l.LU7.SOUND)
-            ? [u({ type: s.iy.STREAM_SOUNDSHARE_FAILED }, (0, o.id)((0, r._z)(e)))]
+            ? [
+                  u(
+                      {
+                          type: s.iy.STREAM_SOUNDSHARE_FAILED,
+                      },
+                      (0, o.id)((0, r._z)(e)),
+                  ),
+              ]
             : void 0;
     },
     makeErrorContextKey: (e) => "".concat(e.streamKey, ":").concat(e.mediaSessionId),

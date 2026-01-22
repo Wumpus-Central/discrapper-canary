@@ -35,6 +35,7 @@ var r = n(735438),
     P = n(6542),
     D = n(652215),
     x = n(731854);
+
 function L(e, t, n) {
     return (
         t in e
@@ -48,6 +49,7 @@ function L(e, t, n) {
         e
     );
 }
+
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -64,6 +66,7 @@ function j(e) {
     }
     return e;
 }
+
 function M(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -76,6 +79,7 @@ function M(e, t) {
     }
     return n;
 }
+
 function k(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -88,8 +92,8 @@ function k(e, t) {
     );
 }
 let U = 10,
-    G = 1500000,
-    V = 1500000,
+    G = 15e5,
+    V = 15e5,
     F = 5 * C.A.Millis.SECOND;
 class B {
     setActionContext(e) {
@@ -237,7 +241,7 @@ class H extends c.A {
         if (null != E && h) {
             let e = E.transport.inboundBitrateEstimate;
             null != e &&
-                e < 100000000 &&
+                e < 1e8 &&
                 (this.bandwidthSamples.push(e),
                 this.bandwidthSamples.length > U && this.bandwidthSamples.shift(),
                 this.bandwidthSamples.length === U &&
@@ -278,7 +282,9 @@ class H extends c.A {
                             t,
                             n,
                         ),
-                        { streamKey: this.streamKey },
+                        {
+                            streamKey: this.streamKey,
+                        },
                     ),
                 ),
                 e === D.S7L.RTC_CONNECTED)
@@ -381,7 +387,9 @@ class H extends c.A {
                                     ),
                                 ),
                                 null != b.A.getHookError(D.LU7.SOUND) &&
-                                    l.h.dispatch({ type: "MEDIA_ENGINE_SOUNDSHARE_TRANSMITTING" }));
+                                    l.h.dispatch({
+                                        type: "MEDIA_ENGINE_SOUNDSHARE_TRANSMITTING",
+                                    }));
                         }),
                     null == (u = this._connection) ||
                         u.on(a.yq.SoundshareTrace, (e) => {
@@ -419,7 +427,9 @@ class H extends c.A {
                                 case "soundshare_state_transition":
                                     4 === e.newState &&
                                         (this.errorTimer.stop(),
-                                        l.h.dispatch({ type: "MEDIA_ENGINE_SOUNDSHARE_TRANSMITTING" }));
+                                        l.h.dispatch({
+                                            type: "MEDIA_ENGINE_SOUNDSHARE_TRANSMITTING",
+                                        }));
                             }
                         }),
                     null == (d = this._connection) ||
@@ -541,7 +551,9 @@ class H extends c.A {
                     });
             }),
             this.on(u.q.SecureFramesUpdate, () => {
-                l.h.dispatch({ type: "RTC_CONNECTION_SECURE_FRAMES_UPDATE" });
+                l.h.dispatch({
+                    type: "RTC_CONNECTION_SECURE_FRAMES_UPDATE",
+                });
             }),
             this.on(u.q.RosterMapUpdate, (e) => {
                 l.h.dispatch({
@@ -636,7 +648,11 @@ class H extends c.A {
                       clips_buffer_length: l.clipsLength,
                   }
                 : {},
-            u = this.isOwner ? { bandwidth_estimation_experiment: this.getBandwidthEstimationExperiment() } : {};
+            u = this.isOwner
+                ? {
+                      bandwidth_estimation_experiment: this.getBandwidthEstimationExperiment(),
+                  }
+                : {};
         s.getOutboundStats().forEach((t) => {
             var r;
             (null != (r = t.num_frames) ? r : 0) > 0 &&
@@ -702,7 +718,9 @@ class H extends c.A {
             });
     }
     getExtraConnectionOptions() {
-        return { streamUserId: (0, R.Iy)(this.streamKey).ownerId };
+        return {
+            streamUserId: (0, R.Iy)(this.streamKey).ownerId,
+        };
     }
     constructor({
         sessionId: e,

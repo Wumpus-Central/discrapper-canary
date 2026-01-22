@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var l = n(627968),
     i = n(311907),
     r = n(397927),
@@ -12,13 +14,16 @@ var l = n(627968),
     b = n(652215),
     g = n(426127),
     f = n(985018);
+
 function m(e, t) {
     let { enableRequestToStream: n } = d.m.useExperiment(
             {
                 guildId: t.guild_id,
                 location: "useRequestToStreamItem",
             },
-            { autoTrackExposure: !1 },
+            {
+                autoTrackExposure: !1,
+            },
         ),
         m = (0, i.bG)([s.default], () => s.default.getId()),
         p = (0, A.A)(e, t.guild_id)[0],
@@ -30,7 +35,9 @@ function m(e, t) {
               r.Drp,
               {
                   id: "request-to-stream",
-                  label: f.intl.format(g.default["8qq+H7"], { applicationName: E.name }),
+                  label: f.intl.format(g.default["8qq+H7"], {
+                      applicationName: E.name,
+                  }),
                   action: function () {
                       a.A.sendActivityInvite({
                           type: b.xL.STREAM_REQUEST,

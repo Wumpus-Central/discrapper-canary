@@ -1,6 +1,7 @@
 function a(e) {
     return 1 === e.nodeType;
 }
+
 function l(e) {
     let r = e.ownerDocument.defaultView;
     if (!r) throw Error("cannot check visibility of non attached element");
@@ -32,6 +33,7 @@ function l(e) {
                     })(l))
         )
             return !1;
+
         function n(e) {
             let t = e.getBoundingClientRect();
             return (
@@ -54,6 +56,7 @@ function l(e) {
                                     s = o.documentElement,
                                     n = o.body,
                                     i = r.getComputedStyle(s).overflow;
+
                                 function u(e) {
                                     let t = r.getComputedStyle(e).position;
                                     if ("fixed" == t) return (a = !0), e == s ? null : s;
@@ -73,6 +76,7 @@ function l(e) {
                                         return a;
                                     }
                                 }
+
                                 function d(e) {
                                     var r, t;
                                     return 9 === e.nodeType
@@ -143,4 +147,6 @@ function l(e) {
         );
     })(e);
 }
-t.d(r, { z: () => l });
+t.d(r, {
+    z: () => l,
+});

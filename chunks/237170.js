@@ -14,6 +14,7 @@ var r,
     u = n(196645),
     x = n(985018),
     m = n(705656);
+
 function A(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
@@ -39,6 +40,7 @@ function A(t) {
     }
     return t;
 }
+
 function f(t, e) {
     return (
         (e = null != e ? e : {}),
@@ -76,15 +78,24 @@ let g = (t) => {
             [g, r, e, n],
         );
     a.useEffect(() => {
-        (0, c.QF)(f(A({}, _), { viewName: c.gN.SAFETY_TAKEOVER_MODAL }));
+        (0, c.QF)(
+            f(A({}, _), {
+                viewName: c.gN.SAFETY_TAKEOVER_MODAL,
+            }),
+        );
     }, [_]);
     let p = a.useCallback(
             (t) => {
-                (0, c._$)(f(A({}, _), { cta: t }));
+                (0, c._$)(
+                    f(A({}, _), {
+                        cta: t,
+                    }),
+                );
             },
             [_],
         ),
         [v, b] = a.useState(!1);
+
     function E(t) {
         j(t);
     }

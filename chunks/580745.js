@@ -1,4 +1,6 @@
-n.d(t, { A: () => O });
+n.d(t, {
+    A: () => O,
+});
 var r,
     i = n(311907),
     a = n(73153),
@@ -6,6 +8,7 @@ var r,
     o = n(451909),
     l = n(253932),
     c = n(320501);
+
 function u(e, t, n) {
     return (
         t in e
@@ -19,6 +22,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,6 +39,7 @@ function d(e) {
     }
     return e;
 }
+
 function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -47,6 +52,7 @@ function f(e, t) {
     }
     return n;
 }
+
 function p(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -60,6 +66,7 @@ function p(e, t) {
 }
 let _ = {},
     h = {};
+
 function m(e) {
     let { channelId: t, messageId: n, content: r, source: i } = e,
         a = l.D_.getSetting(),
@@ -72,6 +79,7 @@ function m(e) {
     }),
         (h[t] = i);
 }
+
 function g(e) {
     let { channelId: t, textValue: n, richValue: r } = e,
         i = _[t];
@@ -81,11 +89,13 @@ function g(e) {
         richValue: r,
     });
 }
+
 function E(e) {
     let { channelId: t } = e;
     if (null == t || null == _[t]) return !1;
     delete _[t], delete h[t];
 }
+
 function b(e) {
     var t;
     let { channelId: n, id: r } = e;

@@ -1,4 +1,7 @@
-n.d(t, { A: () => A }), n(896048);
+n.d(t, {
+    A: () => A,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -18,7 +21,10 @@ var r = n(627968),
     j = n(539916),
     O = n(985018),
     y = n(977612);
-let v = { optionErrors: [] };
+let v = {
+    optionErrors: [],
+};
+
 function A(e) {
     var t;
     let {
@@ -99,7 +105,9 @@ function A(e) {
                       (0, r.jsx)(o.Text, {
                           variant: "text-xs/semibold",
                           color: "text-muted",
-                          children: O.intl.format(O.t.yjS3zs, { index: h + 1 }),
+                          children: O.intl.format(O.t.yjS3zs, {
+                              index: h + 1,
+                          }),
                       }),
                       (0, r.jsx)(o.Text, {
                           variant: "text-lg/semibold",
@@ -160,10 +168,15 @@ function A(e) {
                           gap: 16,
                           children: [
                               (0, r.jsx)(o.ksK, {
-                                  label: O.intl.formatToPlainString(O.t.yjS3zs, { index: h + 1 }),
+                                  label: O.intl.formatToPlainString(O.t.yjS3zs, {
+                                      index: h + 1,
+                                  }),
                                   inputRef: z,
                                   value: l.title,
-                                  onChange: (e) => (0, p.NF)(n, l.id, { title: e }),
+                                  onChange: (e) =>
+                                      (0, p.NF)(n, l.id, {
+                                          title: e,
+                                      }),
                                   placeholder: O.intl.string(O.t.QMCuCo),
                                   maxLength: j.kq,
                                   error: L.title,
@@ -201,16 +214,24 @@ function A(e) {
                                   children: [
                                       (0, r.jsx)(o.Checkbox, {
                                           checked: !l.singleSelect,
-                                          onChange: (e) => (0, p.NF)(n, l.id, { singleSelect: !e }),
+                                          onChange: (e) =>
+                                              (0, p.NF)(n, l.id, {
+                                                  singleSelect: !e,
+                                              }),
                                           label: O.intl.string(O.t.uCebZa),
                                       }),
                                       l.inOnboarding
                                           ? (0, r.jsx)(o.Checkbox, {
                                                 checked: !!(l.inOnboarding && l.required),
-                                                onChange: (e) => (0, p.NF)(n, l.id, { required: e }),
+                                                onChange: (e) =>
+                                                    (0, p.NF)(n, l.id, {
+                                                        required: e,
+                                                    }),
                                                 disabled: !l.inOnboarding,
                                                 label: _
-                                                    ? O.intl.formatToPlainString(O.t["0re8T6"], { count: K })
+                                                    ? O.intl.formatToPlainString(O.t["0re8T6"], {
+                                                          count: K,
+                                                      })
                                                     : O.intl.string(O.t.Ur8Vrt),
                                             })
                                           : null,
@@ -241,11 +262,16 @@ function A(e) {
                               }),
                           ],
                       }),
-                      null != H ? (0, r.jsx)(o.dzK, { error: H }) : null,
+                      null != H
+                          ? (0, r.jsx)(o.dzK, {
+                                error: H,
+                            })
+                          : null,
                   ],
               }),
           });
 }
+
 function E(e) {
     let { prompt: t, guild: n } = e,
         [l, s] = i.useState(!1);
@@ -256,10 +282,14 @@ function E(e) {
         l)
     )
         return null;
+
     function a(e) {
         return (0, r.jsx)(o.DUT, {
             className: y.Fw,
-            onClick: () => (0, p.NF)(n, t.id, { title: e }),
+            onClick: () =>
+                (0, p.NF)(n, t.id, {
+                    title: e,
+                }),
             children: (0, r.jsx)(o.Text, {
                 variant: "text-xs/normal",
                 children: e,
@@ -286,13 +316,18 @@ function E(e) {
         ],
     });
 }
+
 function N(e) {
     let { guild: t, prompt: n, promptIndex: i, singleColumn: l, errors: s } = e,
         {
             handleDragStart: a,
             handleDragReset: c,
             handleDragComplete: o,
-        } = (0, u.A)(n.options, (e) => (0, p.NF)(t, n.id, { options: e }));
+        } = (0, u.A)(n.options, (e) =>
+            (0, p.NF)(t, n.id, {
+                options: e,
+            }),
+        );
     return (0, r.jsxs)("div", {
         className: y.fF,
         children: [

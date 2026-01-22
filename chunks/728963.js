@@ -1,4 +1,8 @@
-n.d(t, { A: () => P }), n(446912), n(896048);
+n.d(t, {
+    A: () => P,
+}),
+    n(446912),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -19,6 +23,7 @@ var r = n(627968),
 n(827669);
 var y = n(985018),
     O = n(998815);
+
 function A(e, t, n) {
     return (
         t in e
@@ -32,6 +37,7 @@ function A(e, t, n) {
         e
     );
 }
+
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -48,6 +54,7 @@ function v(e) {
     }
     return e;
 }
+
 function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -60,6 +67,7 @@ function S(e, t) {
     }
     return n;
 }
+
 function I(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -76,7 +84,10 @@ let T = {
         variant: "text-md/normal",
         color: "text-default",
     },
-    C = { className: s()("mention", O.lE) };
+    C = {
+        className: s()("mention", O.lE),
+    };
+
 function N(e) {
     return (0, r.jsx)(
         l.Text,
@@ -86,6 +97,7 @@ function N(e) {
         }),
     );
 }
+
 function R(e) {
     var t, n, a, s, o, u, d;
     let f,
@@ -241,6 +253,7 @@ function R(e) {
         ]
     );
 }
+
 function w(e) {
     var t, n, a, s, p, _;
     let h,
@@ -307,7 +320,9 @@ function w(e) {
                 ref: S,
                 children: h,
             }),
-            (0, r.jsx)("div", { className: O.xQ }),
+            (0, r.jsx)("div", {
+                className: O.xQ,
+            }),
         ],
     });
 }

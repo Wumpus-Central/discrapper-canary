@@ -1,4 +1,6 @@
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});
 let r = {
     USE_FILE: !0,
     USE_JFIF: !0,

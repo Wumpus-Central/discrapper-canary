@@ -1,4 +1,7 @@
-l.d(t, { A: () => _ }), l(896048);
+l.d(t, {
+    A: () => _,
+}),
+    l(896048);
 var n = l(627968),
     r = l(64700),
     i = l(503698),
@@ -33,7 +36,9 @@ let v = (e) => {
         }, [null == t ? void 0 : t.expiresAt]);
         let C = null == t || _;
         return (0, n.jsxs)("div", {
-            className: s()(y.ip, { [y.w6]: C }),
+            className: s()(y.ip, {
+                [y.w6]: C,
+            }),
             children: [
                 (0, n.jsx)(o.Text, {
                     color: "text-strong",
@@ -58,7 +63,9 @@ let v = (e) => {
                                   (0, n.jsx)(o.Text, {
                                       variant: "text-xxs/normal",
                                       color: "text-muted",
-                                      children: j.intl.format(j.t.Io7ozn, { days: O.days.toString() }),
+                                      children: j.intl.format(j.t.Io7ozn, {
+                                          days: O.days.toString(),
+                                      }),
                                   }),
                               (0, n.jsxs)(o.Text, {
                                   variant: "text-xxs/normal",
@@ -107,7 +114,9 @@ let v = (e) => {
             _ = (0, u.gA)(x),
             O = null == x || (!b && _);
         return (0, n.jsxs)("div", {
-            className: s()(y.i1, { [y.Zj]: null != a && O }),
+            className: s()(y.i1, {
+                [y.Zj]: null != a && O,
+            }),
             children: [
                 (0, n.jsx)("div", {
                     className: y.u_,

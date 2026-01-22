@@ -36,6 +36,7 @@ var r = n(627968),
     C = n(758836),
     N = n(818348),
     R = n(186319);
+
 function w(e, t, n) {
     return (
         t in e
@@ -49,6 +50,7 @@ function w(e, t, n) {
         e
     );
 }
+
 function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -68,7 +70,9 @@ function P(e) {
 let D = (e) => {
         let { analyticsLocations: t } = e,
             { analyticsLocations: n } = (0, d.Ay)([...t, u.A.COLLECTIBLES_PAYMENT_MODAL]);
-        return { analyticsLocations: n };
+        return {
+            analyticsLocations: n,
+        };
     },
     x = {
         bodyClassName: R.As,
@@ -136,7 +140,9 @@ let D = (e) => {
                 }),
                 (0, r.jsx)(p.K, {
                     options: i,
-                    className: s()(R.Oh, { [R.R]: !a }),
+                    className: s()(R.Oh, {
+                        [R.R]: !a,
+                    }),
                 }),
             ],
         });
@@ -154,6 +160,7 @@ let D = (e) => {
                   onClose: () => n(!1),
               });
     };
+
 function G(e) {
     let {
             onClose: t,
@@ -169,7 +176,9 @@ function G(e) {
             analyticsLocations: y,
             returnRef: S,
         } = e,
-        { analyticsLocations: T } = D({ analyticsLocations: y }),
+        { analyticsLocations: T } = D({
+            analyticsLocations: y,
+        }),
         {
             confettiCanvas: C,
             environment: R,
@@ -178,8 +187,12 @@ function G(e) {
             setCustomConfettiVisible: V,
             customConfettiDisplayOptions: F,
             hideConfirmStepConfetti: B,
-        } = L({ skuId: l }),
-        H = j({ skuId: l }),
+        } = L({
+            skuId: l,
+        }),
+        H = j({
+            skuId: l,
+        }),
         {
             paymentModalSkuId: Y,
             paymentModalOnClose: W,

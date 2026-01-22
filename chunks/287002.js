@@ -1,4 +1,7 @@
-n.r(t), n.d(t, { default: () => p });
+n.r(t),
+    n.d(t, {
+        default: () => p,
+    });
 var r = n(627968);
 n(64700);
 var i = n(417597),
@@ -10,6 +13,7 @@ var i = n(417597),
     u = n(279547),
     d = n(961997),
     f = n(985018);
+
 function p(e) {
     let { channelId: t, messageId: n, transitionState: p, onClose: _ } = e,
         h = (0, i.bG)([c.A], () => c.A.getFpMessageInfo(n)),

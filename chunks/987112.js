@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var r = n(627968),
     i = n(64700),
     a = n(155718),
@@ -11,6 +13,7 @@ var r = n(627968),
     f = n(652215),
     p = n(985018),
     _ = n(624082);
+
 function h(e, t, n) {
     return (
         t in e
@@ -24,6 +27,7 @@ function h(e, t, n) {
         e
     );
 }
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -40,6 +44,7 @@ function m(e) {
     }
     return e;
 }
+
 function g(e) {
     let { applicationId: t, commandIds: n, guildId: h, channel: g, onClick: E } = e,
         { trackUserProfileAction: b } = (0, u.NJ)(),
@@ -72,7 +77,9 @@ function g(e) {
     if (null == A || 0 === A.length) return null;
     let v = (e) => {
         null == E || E(),
-            b({ action: "PRESS_APP_COMMAND" }),
+            b({
+                action: "PRESS_APP_COMMAND",
+            }),
             c.default.track(
                 f.HAw.POPULAR_APPLICATION_COMMAND_CLICKED,
                 m(

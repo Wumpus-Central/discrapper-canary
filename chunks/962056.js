@@ -1,4 +1,8 @@
-n.d(t, { T: () => l }), n(896048), n(457529);
+n.d(t, {
+    T: () => l,
+}),
+    n(896048),
+    n(457529);
 var r = n(627968),
     i = n(64700),
     a = n(397927),
@@ -56,7 +60,9 @@ let o = {
                     let [e, t] = i.useState(JSON.stringify(o));
                     return (0, r.jsxs)("div", {
                         children: [
-                            (0, r.jsx)(s.A, { template: JSON.parse(e) }),
+                            (0, r.jsx)(s.A, {
+                                template: JSON.parse(e),
+                            }),
                             (0, r.jsx)("hr", {}),
                             (0, r.jsx)(a.fs1, {
                                 value: e,

@@ -1,4 +1,8 @@
-l.d(t, { A: () => a }), l(896048), l(321073);
+l.d(t, {
+    A: () => a,
+}),
+    l(896048),
+    l(321073);
 var n = l(627968),
     r = l(64700),
     s = l(397927);
@@ -56,6 +60,7 @@ let i = [
         alpha: 1,
     },
 ];
+
 function a(e) {
     let { className: t, children: l, containerRef: a, faderSize: o, faderEdgeThreshold: c } = e,
         d = r.useRef(null),
@@ -100,7 +105,9 @@ function a(e) {
                 e.push("hsla(0, 0%, 0%, ".concat(l + s * (1 - l), ") ").concat(a, "px"));
             }
         }
-        return { maskImage: "linear-gradient(".concat(e.join(","), ")") };
+        return {
+            maskImage: "linear-gradient(".concat(e.join(","), ")"),
+        };
     }, [m, u, c, o, b]);
     return (0, n.jsx)(s.zCo, {
         ref: d,

@@ -6,4 +6,6 @@ function r(e) {
         bottom: e.y + e.height,
     });
 }
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});

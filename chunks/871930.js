@@ -13,6 +13,7 @@ var i = n(503698),
     c = n(446541),
     u = n(480357),
     d = n(606360);
+
 function f(e, t, n) {
     return (
         t in e
@@ -26,6 +27,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,6 +44,7 @@ function p(e) {
     }
     return e;
 }
+
 function _(e) {
     let { header: t, description: n, relatedId: i, disabled: o } = e;
     return (0, r.jsxs)("div", {
@@ -52,19 +55,24 @@ function _(e) {
                 color: "text-strong",
                 children: (0, r.jsx)("label", {
                     htmlFor: i,
-                    className: a()(d.DD, { [d.r9]: o }),
+                    className: a()(d.DD, {
+                        [d.r9]: o,
+                    }),
                     children: t,
                 }),
             }),
             (0, r.jsx)(s.Text, {
                 variant: "text-sm/normal",
                 color: "text-default",
-                className: a()(d.h_, { [d.r9]: o }),
+                className: a()(d.h_, {
+                    [d.r9]: o,
+                }),
                 children: n,
             }),
         ],
     });
 }
+
 function h(e) {
     let { className: t, children: n } = e;
     return (0, r.jsx)("div", {
@@ -72,6 +80,7 @@ function h(e) {
         children: n,
     });
 }
+
 function m(e) {
     let { setting: t, className: n, children: i } = e;
     return (0, r.jsx)(o.x, {
@@ -82,13 +91,16 @@ function m(e) {
         }),
     });
 }
+
 function g(e) {
     let { setting: t, className: n, children: i, scrollPosition: s, scrollHighlightDelay: f } = e,
         p = (0, l.s)(s);
     return (0, r.jsx)(o.x, {
         setting: t,
         children: (0, r.jsxs)("div", {
-            className: a()(d.kL, n, { [u.m]: null != s }),
+            className: a()(d.kL, n, {
+                [u.m]: null != s,
+            }),
             ref: p,
             children: [
                 i,
@@ -102,6 +114,7 @@ function g(e) {
         }),
     });
 }
+
 function E(e) {
     return null != e.scrollPosition
         ? (0, r.jsx)(g, p({}, e))

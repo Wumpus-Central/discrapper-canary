@@ -1,7 +1,10 @@
-n.d(t, { A: () => l });
+n.d(t, {
+    A: () => l,
+});
 var r = n(800828),
     i = n(994500),
     a = n(660387);
+
 function s(e, t, n) {
     return (
         t in e
@@ -15,6 +18,7 @@ function s(e, t, n) {
         e
     );
 }
+
 function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -31,6 +35,7 @@ function o(e) {
     }
     return e;
 }
+
 function l() {
     return o(
         {

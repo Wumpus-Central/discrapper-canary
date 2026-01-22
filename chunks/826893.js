@@ -54,7 +54,7 @@ e.exports = function (e) {
             },
         };
     return {
-        name: "Cap\u2019n Proto",
+        name: "Cap’n Proto",
         aliases: ["capnp"],
         keywords: {
             keyword: t,

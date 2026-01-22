@@ -14,6 +14,7 @@ var r = n(311907),
             e
         );
     })({});
+
 function s(e) {
     return null == e
         ? 0
@@ -23,6 +24,7 @@ function s(e) {
             ? 3 * (!e.suppress && null == e.requestToSpeakTimestamp)
             : 2;
 }
+
 function o(e, t) {
     return (0, r.bG)([i.A], () => (null == e || null == t ? 0 : s(i.A.getVoiceStateForChannel(t, e))), [e, t]);
 }

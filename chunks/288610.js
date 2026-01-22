@@ -1,12 +1,21 @@
-n.d(t, { p: () => s }), n(896048);
+n.d(t, {
+    p: () => s,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700);
 n(442715), n(284009);
 let a = i.createContext(void 0);
+
 function s(e) {
     let { children: t } = e,
         [n, s] = i.useState(null),
-        o = i.useMemo(() => ({ setComponentToSnapshot: s }), [s]);
+        o = i.useMemo(
+            () => ({
+                setComponentToSnapshot: s,
+            }),
+            [s],
+        );
     return (0, r.jsxs)(a.Provider, {
         value: o,
         children: [

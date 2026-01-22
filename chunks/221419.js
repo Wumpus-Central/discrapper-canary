@@ -1,10 +1,14 @@
-n.d(t, { A: () => f }), n(896048);
+n.d(t, {
+    A: () => f,
+}),
+    n(896048);
 var r = n(835245),
     i = n(439372),
     a = n(815706),
     s = n(41984),
     o = n(291869),
     l = n(652215);
+
 function c(e, t, n) {
     return (
         t in e
@@ -21,7 +25,9 @@ function c(e, t, n) {
 let u = new Map();
 class d extends i.A {
     handleTrackStateChanged(e) {
-        o.A.getConfig({ location: "tracking-manager" }).enabled &&
+        o.A.getConfig({
+            location: "tracking-manager",
+        }).enabled &&
             (e.newState === s.AR.INITIALIZING && u.set(e.pid, (0, r.A)()),
             (0, a.z)(l.HAw.OVERLAY_STATE_CHANGED, {
                 new_state: e.newState,

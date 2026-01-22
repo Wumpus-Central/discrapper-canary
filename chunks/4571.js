@@ -1,4 +1,6 @@
-n.d(i, { default: () => s });
+n.d(i, {
+    default: () => s,
+});
 var e = n(627968);
 n(64700);
 var l = n(397927),
@@ -6,6 +8,7 @@ var l = n(397927),
     o = n(272613),
     d = n(819638),
     r = n(985018);
+
 function s(t) {
     let { onSelect: i } = t;
     return (0, e.jsxs)(l.W1t, {
@@ -26,7 +29,10 @@ function s(t) {
             (0, e.jsx)(l.Drp, {
                 id: "create",
                 label: r.intl.string(r.t.B44MTm),
-                action: () => o.A.openCreateGuildModal({ location: "Guild List - ContextMenu" }),
+                action: () =>
+                    o.A.openCreateGuildModal({
+                        location: "Guild List - ContextMenu",
+                    }),
             }),
         ],
     });

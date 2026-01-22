@@ -1,4 +1,7 @@
-n.d(t, { A: () => G }), n(896048);
+n.d(t, {
+    A: () => G,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(735438),
@@ -27,6 +30,7 @@ n(60809);
 var C = n(652215),
     N = n(985018),
     R = n(515636);
+
 function w(e, t, n) {
     return (
         t in e
@@ -40,6 +44,7 @@ function w(e, t, n) {
         e
     );
 }
+
 function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -56,6 +61,7 @@ function P(e) {
     }
     return e;
 }
+
 function D(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -68,6 +74,7 @@ function D(e, t) {
     }
     return n;
 }
+
 function x(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -86,9 +93,11 @@ let L = Array(6)
     M = [, , , ,].fill(0).map((e, t) => t),
     k = 4,
     U = 5;
+
 function G(e) {
     return (0, r.jsx)(V, P({}, e));
 }
+
 function V(e) {
     let { context: t, query: n, entrypoint: a, isScrollCloseToBottom: l } = e,
         c = a === g.s4.TEXT,
@@ -175,6 +184,7 @@ function V(e) {
                 ],
             });
 }
+
 function F(e) {
     var t, n;
     let { context: a, commandResults: s, query: o } = e,
@@ -249,7 +259,9 @@ function F(e) {
                                             searchResultsPosition: t,
                                             source: e,
                                         }),
-                                        _._.dispatch(C.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: a.channel.id }));
+                                        _._.dispatch(C.jej.FOCUS_CHANNEL_TEXT_AREA, {
+                                            channelId: a.channel.id,
+                                        }));
                             },
                         },
                         n.id,
@@ -259,6 +271,7 @@ function F(e) {
         ],
     });
 }
+
 function B(e) {
     let { trackSearchResultsItemImpressionRef: t } = (0, A.A)({
         applicationId: e.application.id,
@@ -279,12 +292,15 @@ function B(e) {
         ),
     });
 }
+
 function H(e) {
     let { context: t, applicationResults: n, includePlaceholder: i, query: a, searchesBots: s } = e;
     return s
         ? (0, r.jsxs)("div", {
               children: [
-                  (0, r.jsx)(S.A, { title: N.intl.string(N.t.PHjkRE) }),
+                  (0, r.jsx)(S.A, {
+                      title: N.intl.string(N.t.PHjkRE),
+                  }),
                   (0, r.jsxs)("div", {
                       className: R._,
                       children: [
@@ -311,7 +327,9 @@ function H(e) {
           })
         : (0, r.jsxs)("div", {
               children: [
-                  (0, r.jsx)(S.A, { title: N.intl.string(N.t.shUONg) }),
+                  (0, r.jsx)(S.A, {
+                      title: N.intl.string(N.t.shUONg),
+                  }),
                   (0, r.jsxs)("div", {
                       className: R.H$,
                       children: [
@@ -332,12 +350,22 @@ function H(e) {
                                   i.id,
                               );
                           }),
-                          i && M.map((e) => (0, r.jsx)(y.A, { look: b.r0.LARGE_BANNER }, e)),
+                          i &&
+                              M.map((e) =>
+                                  (0, r.jsx)(
+                                      y.A,
+                                      {
+                                          look: b.r0.LARGE_BANNER,
+                                      },
+                                      e,
+                                  ),
+                              ),
                       ],
                   }),
               ],
           });
 }
+
 function Y(e) {
     let { onClickAppCard: t } = (0, b.Ps)(e);
     return (0, r.jsx)(I.A, {
@@ -347,15 +375,20 @@ function Y(e) {
         searchResultsPosition: e.resultsPosition,
     });
 }
+
 function W() {
     return (0, r.jsxs)("div", {
         children: [
-            (0, r.jsx)(S.A, { title: N.intl.string(N.t["0hKkS+"]) }),
+            (0, r.jsx)(S.A, {
+                title: N.intl.string(N.t["0hKkS+"]),
+            }),
             (0, r.jsx)("div", {
                 className: R._,
                 children: L.map((e) => (0, r.jsx)(T.A, {}, e)),
             }),
-            (0, r.jsx)(S.A, { title: N.intl.string(N.t.PHjkRE) }),
+            (0, r.jsx)(S.A, {
+                title: N.intl.string(N.t.PHjkRE),
+            }),
             (0, r.jsx)("div", {
                 className: R._,
                 children: j.map((e) => (0, r.jsx)(T.A, {}, e)),

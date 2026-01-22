@@ -32,6 +32,7 @@ var r = n(64700),
     I = n(732139),
     T = n(307731),
     C = n(985018);
+
 function N(e, t, n) {
     return (
         t in e
@@ -45,6 +46,7 @@ function N(e, t, n) {
         e
     );
 }
+
 function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -61,6 +63,7 @@ function R(e) {
     }
     return e;
 }
+
 function w(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -73,6 +76,7 @@ function w(e, t) {
     }
     return n;
 }
+
 function P(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -126,7 +130,9 @@ let x = [T.Am.DISALLOW_EXTERNAL, T.Am.DISALLOW_CUSTOM],
                 if (e.type === u.i.GUILD) return e.guildId;
             },
             J = r.useMemo(() => a().groupBy(Q, $), [Q]),
-            ee = (0, h.Ym)({ location: "useEmojiGrid" });
+            ee = (0, h.Ym)({
+                location: "useEmojiGrid",
+            });
         return r.useMemo(() => {
             let e = [],
                 t = [],
@@ -198,7 +204,9 @@ let x = [T.Am.DISALLOW_EXTERNAL, T.Am.DISALLOW_CUSTOM],
                             c++;
                         }
                         let N = h ? 0 : S,
-                            w = P(R({}, d), { count: s.length });
+                            w = P(R({}, d), {
+                                count: s.length,
+                            });
                         t.push(w), e.push(N);
                     };
                 if (null != p)

@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -8,6 +10,7 @@ var i = n(397927),
     l = n(985018),
     c = n(25187),
     u = n(148514);
+
 function d() {
     let e = () => {
         (0, a.pX)(o.BVt.GUILD_DISCOVERY), (0, s.default)();

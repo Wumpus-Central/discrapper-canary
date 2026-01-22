@@ -14,6 +14,7 @@ var r = n(735438),
     d = n(723702),
     f = n(728458),
     p = n(731854);
+
 function _(e, t, n) {
     return (
         t in e
@@ -35,6 +36,7 @@ var E = (function (e) {
         (e.RequestedSSRCsUpdate = "requested-ssrcs-update"), (e.RequestedStreamsUpdate = "requested-streams-update"), e
     );
 })({});
+
 function b(e, t) {
     e || f.A.captureMessage("Assert failed in GoLiveQualityManager: " + t);
 }
@@ -315,7 +317,7 @@ class y extends a.A {
             setTimeout(() => {
                 2 === this.switchState &&
                     (this.logger.warn("Seamless transition timeout, forcing switch"), this.reset(), this.update());
-            }, 2000);
+            }, 2e3);
     }
     requestHQ() {
         b(2 === this.videoStreams.length, "requestHQ should only be called when there are two video streams"),

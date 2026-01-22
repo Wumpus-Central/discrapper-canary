@@ -8,4 +8,6 @@ function r(e) {
         mimeType: e.mime_type,
     };
 }
-n.d(t, { L: () => r });
+n.d(t, {
+    L: () => r,
+});

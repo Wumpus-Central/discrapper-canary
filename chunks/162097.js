@@ -1,4 +1,6 @@
-n.d(t, { b: () => O });
+n.d(t, {
+    b: () => O,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -78,7 +80,7 @@ let y = () => {
                             (0, r.jsxs)(c.Text, {
                                 variant: "text-xs/normal",
                                 className: m.D5,
-                                children: [o, "\xA0"],
+                                children: [o, "\xa0"],
                             }),
                         (0, r.jsx)(c.MzZ, {
                             target: "_blank",

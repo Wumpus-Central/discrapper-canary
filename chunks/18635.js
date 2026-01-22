@@ -1,4 +1,13 @@
-n.d(t, { A: () => x }), n(896048), n(680155), n(323874), n(14289), n(35956), n(747238), n(812715);
+n.d(t, {
+    A: () => x,
+}),
+    n(896048),
+    n(680155),
+    n(323874),
+    n(14289),
+    n(35956),
+    n(747238),
+    n(812715);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -25,10 +34,13 @@ var r = n(627968),
     C = n(204925),
     N = n(985018),
     T = n(790367);
+
 function j() {
     return (0, r.jsx)("div", {
         className: T.N3,
-        children: (0, r.jsx)(m.A, { tooltip: N.intl.string(N.t["HfOgA/"]) }),
+        children: (0, r.jsx)(m.A, {
+            tooltip: N.intl.string(N.t["HfOgA/"]),
+        }),
     });
 }
 let x = function (e) {
@@ -63,7 +75,9 @@ let x = function (e) {
                 p.A.transitionToSection(S.m3P.ADD_FRIEND);
     }, [t, R]);
     let D = (e) => {
-            p.A.transitionToSection(e, { explicit: !0 });
+            p.A.transitionToSection(e, {
+                explicit: !0,
+            });
         },
         M = (0, h.GV)(),
         k = (0, h.GV)(),
@@ -93,7 +107,9 @@ let x = function (e) {
                             }),
                     ],
                 }),
-                ariaLabel: N.intl.formatToPlainString(N.t.OAC0Z4, { count: x.toString() }),
+                ariaLabel: N.intl.formatToPlainString(N.t.OAC0Z4, {
+                    count: x.toString(),
+                }),
                 className: T.AS,
             },
             {
@@ -108,13 +124,17 @@ let x = function (e) {
                         }),
                     ],
                 }),
-                ariaLabel: N.intl.formatToPlainString(N.t.AbMQp7, { count: L.toString() }),
+                ariaLabel: N.intl.formatToPlainString(N.t.AbMQp7, {
+                    count: L.toString(),
+                }),
                 className: T.AS,
             },
             {
                 id: S.m3P.ADD_FRIEND,
                 show: !0,
-                content: (0, r.jsx)("span", { children: N.intl.string(N.t.j0wbE5) }),
+                content: (0, r.jsx)("span", {
+                    children: N.intl.string(N.t.j0wbE5),
+                }),
                 ariaLabel: N.intl.string(N.t.j0wbE5),
                 className: a()(T.AS, T.GU),
             },
@@ -125,12 +145,19 @@ let x = function (e) {
             children: (0, r.jsx)(b.A, {}),
         });
     return (
-        (G = P === S.m3P.ADD_FRIEND ? (0, r.jsx)(I.A, {}) : (0, r.jsx)(v.A, { titleId: k })),
+        (G =
+            P === S.m3P.ADD_FRIEND
+                ? (0, r.jsx)(I.A, {})
+                : (0, r.jsx)(v.A, {
+                      titleId: k,
+                  })),
         (0, r.jsxs)("main", {
             className: T.kL,
             "aria-label": N.intl.string(N.t.TdEu5X),
             children: [
-                (0, r.jsx)(f.HI, { location: N.intl.string(N.t.TdEu5X) }),
+                (0, r.jsx)(f.HI, {
+                    location: N.intl.string(N.t.TdEu5X),
+                }),
                 (0, r.jsx)(c.NPJ, {
                     theme: m,
                     children: (e) =>

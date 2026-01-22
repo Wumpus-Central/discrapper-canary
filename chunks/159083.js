@@ -1,10 +1,14 @@
-n.d(t, { A: () => d }), n(896048);
+n.d(t, {
+    A: () => d,
+}),
+    n(896048);
 var l = n(627968),
     r = n(64700),
     a = n(481613),
     i = n.n(a),
     s = n(615300),
     o = n(876575);
+
 function c(e, t, n) {
     return (
         t in e
@@ -18,6 +22,7 @@ function c(e, t, n) {
         e
     );
 }
+
 function u(e) {
     let t = (e) =>
         e.interpolate({
@@ -25,7 +30,14 @@ function u(e) {
             outputRange: ["0px", "1px"],
         });
     return {
-        transform: [{ translateX: t(e.x) }, { translateY: t(e.y) }],
+        transform: [
+            {
+                translateX: t(e.x),
+            },
+            {
+                translateY: t(e.y),
+            },
+        ],
     };
 }
 class E extends r.Component {
@@ -59,7 +71,9 @@ class E extends r.Component {
         return (0, l.jsxs)("div", {
             className: o.dJ,
             children: [
-                (0, l.jsx)("div", { className: o.LU }),
+                (0, l.jsx)("div", {
+                    className: o.LU,
+                }),
                 (0, l.jsxs)("svg", {
                     className: o.GR,
                     width: "320",
@@ -453,7 +467,9 @@ class E extends r.Component {
                                             strokeLinecap: "round",
                                             strokeLinejoin: "round",
                                         }),
-                                        (0, l.jsx)("path", { d: "M84 66h130v130H84z" }),
+                                        (0, l.jsx)("path", {
+                                            d: "M84 66h130v130H84z",
+                                        }),
                                     ],
                                 }),
                             ],

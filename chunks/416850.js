@@ -1,4 +1,6 @@
-n.d(t, { A: () => A });
+n.d(t, {
+    A: () => A,
+});
 var i = n(627968),
     l = n(735438),
     s = n.n(l),
@@ -21,6 +23,7 @@ let N = (e) => {
     } = e;
     return (0, g.tr)(t) || t === p.rbe.GUILD_CATEGORY;
 };
+
 function A(e) {
     let { guildId: t, onSelected: n } = e,
         { channels: l, categories: g } = (0, r.cf)([m.A], () => {

@@ -1,4 +1,6 @@
-l.d(t, { A: () => A });
+l.d(t, {
+    A: () => A,
+});
 var n = l(627968),
     r = l(64700),
     i = l(503698),
@@ -29,7 +31,11 @@ let b = (e) => {
                     showPlaceholderUser: !0,
                     isHighlighted: f,
                 }),
-                (0, n.jsx)("div", { className: s()(g.t1, { [g.wH]: b }) }),
+                (0, n.jsx)("div", {
+                    className: s()(g.t1, {
+                        [g.wH]: b,
+                    }),
+                }),
                 (0, n.jsx)(o.A, {
                     isPurchaseSection: c === m.wn.PURCHASE,
                     isPremiumSection: c === m.wn.PREMIUM_PURCHASE,
@@ -60,7 +66,9 @@ let b = (e) => {
                                     className: g.VQ,
                                     children: [
                                         (0, n.jsxs)(a.DUT, {
-                                            className: s()(g.H5, { [g.wH]: null == l }),
+                                            className: s()(g.H5, {
+                                                [g.wH]: null == l,
+                                            }),
                                             onClick: () => i(null),
                                             children: [
                                                 (0, n.jsx)(a.KTN, {

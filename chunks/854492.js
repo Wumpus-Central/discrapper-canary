@@ -22,7 +22,9 @@ async function c(e) {
                 try {
                     await r.Bo.del({
                         url: l.Rsh.GUILD_LEAVE(e),
-                        body: { lurking: !0 },
+                        body: {
+                            lurking: !0,
+                        },
                         oldFormErrors: !0,
                         rejectWithError: !0,
                     });

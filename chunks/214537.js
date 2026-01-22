@@ -1,6 +1,7 @@
 function n(e) {
     return "IntlMessagesProxy" === e[Symbol.toStringTag];
 }
+
 function r(e, t) {
     let r = n(e),
         i = n(t),
@@ -16,6 +17,7 @@ function r(e, t) {
         a
     );
 }
+
 function i(e) {
     function t(t) {
         return (n) => e.get(t, n);
@@ -47,4 +49,8 @@ function i(e) {
         r
     );
 }
-Object.defineProperty(t, "__esModule", { value: !0 }), (t.chainMessagesObjects = r), (t.makeMessagesProxy = i);
+Object.defineProperty(t, "__esModule", {
+    value: !0,
+}),
+    (t.chainMessagesObjects = r),
+    (t.makeMessagesProxy = i);

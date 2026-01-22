@@ -11,17 +11,21 @@ function r(e, t, n) {
         e
     );
 }
+
 function i(e) {
     return null == e || null == e.end_time || new Date(e.end_time) >= new Date();
 }
+
 function a(e) {
     let { muted: t, mute_config: n } = e;
     return !!t && i(n);
 }
+
 function s(e) {
     let { muted: t, mute_config: n } = e;
     return !!t && null != n && null != n.end_time && new Date(n.end_time) >= new Date();
 }
+
 function o(e) {
     return null == e.end_time ? null : new Date(e.end_time).getTime() - Date.now();
 }

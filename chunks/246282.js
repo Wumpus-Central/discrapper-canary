@@ -10,6 +10,7 @@ var i = n(397927),
     l = n(527678),
     s = n(985018),
     a = n(837649);
+
 function c() {
     return (0, r.jsxs)("div", {
         className: a.kL,
@@ -18,7 +19,9 @@ function c() {
                 variant: "text-xs/semibold",
                 color: "text-default",
                 className: a.u1,
-                children: s.intl.format(s.t.tCQ3H8, { number: 1 }),
+                children: s.intl.format(s.t.tCQ3H8, {
+                    number: 1,
+                }),
             }),
             (0, r.jsx)(i.Heading, {
                 variant: "heading-lg/semibold",
@@ -43,6 +46,7 @@ function c() {
         ],
     });
 }
+
 function o() {
     return (0, r.jsxs)("div", {
         className: a.kL,
@@ -51,7 +55,9 @@ function o() {
                 variant: "text-xs/semibold",
                 color: "text-default",
                 className: a.u1,
-                children: s.intl.format(s.t.tCQ3H8, { number: 2 }),
+                children: s.intl.format(s.t.tCQ3H8, {
+                    number: 2,
+                }),
             }),
             (0, r.jsx)(i.Heading, {
                 variant: "heading-lg/semibold",
@@ -76,6 +82,7 @@ function o() {
         ],
     });
 }
+
 function d() {
     return (0, r.jsxs)("div", {
         className: a.kL,
@@ -84,7 +91,9 @@ function d() {
                 variant: "text-xs/semibold",
                 color: "text-default",
                 className: a.u1,
-                children: s.intl.format(s.t.tCQ3H8, { number: 3 }),
+                children: s.intl.format(s.t.tCQ3H8, {
+                    number: 3,
+                }),
             }),
             (0, r.jsx)(i.Heading, {
                 variant: "heading-lg/semibold",
@@ -109,6 +118,7 @@ function d() {
         ],
     });
 }
+
 function u() {
     return (0, r.jsxs)("div", {
         className: a.kL,
@@ -117,7 +127,9 @@ function u() {
                 variant: "text-xs/semibold",
                 color: "text-default",
                 className: a.u1,
-                children: s.intl.format(s.t.tCQ3H8, { number: 4 }),
+                children: s.intl.format(s.t.tCQ3H8, {
+                    number: 4,
+                }),
             }),
             (0, r.jsx)(i.Heading, {
                 variant: "heading-lg/semibold",

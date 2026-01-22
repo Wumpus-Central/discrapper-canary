@@ -1,11 +1,15 @@
-r.d(t, { F: () => a });
+r.d(t, {
+    F: () => a,
+});
 var n = r(218436),
     i = r(87515);
+
 function o(e, t) {
     (null == t || t > e.length) && (t = e.length);
     for (var r = 0, n = Array(t); r < t; r++) n[r] = e[r];
     return n;
 }
+
 function a(e, t, r) {
     var a,
         u =
@@ -54,7 +58,10 @@ function a(e, t, r) {
         (0, n.E)(
             function () {
                 var t = e.getHandlerId();
-                if (null != t) return e.subscribeToStateChange(s, { handlerIds: [t] });
+                if (null != t)
+                    return e.subscribeToStateChange(s, {
+                        handlerIds: [t],
+                    });
             },
             [e, s],
         ),

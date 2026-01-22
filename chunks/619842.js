@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(627968);
 n(64700);
 var i = n(421380),
@@ -8,6 +10,7 @@ var i = n(421380),
     c = n(788868),
     o = n(985018),
     d = n(914016);
+
 function u(e) {
     let { guild: t, numSounds: n, isOutOfSlots: u } = e,
         f = t.premiumTier,

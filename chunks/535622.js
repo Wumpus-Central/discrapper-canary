@@ -1,8 +1,11 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968),
     i = n(64700),
     a = n(397927),
     s = n(732139);
+
 function o(e, t, n) {
     return (
         t in e
@@ -16,6 +19,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -32,6 +36,7 @@ function l(e) {
     }
     return e;
 }
+
 function c(e, t) {
     if (null == e) return {};
     var n,
@@ -48,6 +53,7 @@ function c(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function u(e, t) {
     if (null == e) return {};
     var n,
@@ -94,5 +100,15 @@ let d = (e) => {
         let { categoryId: t } = e,
             n = c(e, ["categoryId"]),
             i = d(t);
-        return null == i ? null : (0, r.jsx)(i, l({ color: "currentColor" }, n));
+        return null == i
+            ? null
+            : (0, r.jsx)(
+                  i,
+                  l(
+                      {
+                          color: "currentColor",
+                      },
+                      n,
+                  ),
+              );
     });

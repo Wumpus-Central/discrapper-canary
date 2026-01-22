@@ -1,4 +1,7 @@
-n.d(t, { A: () => D }), n(896048);
+n.d(t, {
+    A: () => D,
+}),
+    n(896048);
 var r,
     i = n(311907),
     a = n(205693),
@@ -14,6 +17,7 @@ var r,
     h = n(607567),
     m = n(652215),
     g = n(806931);
+
 function E(e, t, n) {
     return (
         t in e
@@ -30,6 +34,7 @@ function E(e, t, n) {
 let b = new o.A(),
     y = new o.A(),
     O = new Set();
+
 function A(e, t, n) {
     let r = new c.A({
             userId: e.id,
@@ -56,12 +61,14 @@ function A(e, t, n) {
     };
     y.set(e.id, a);
 }
+
 function v(e) {
     let t = b.delete(e),
         n = y.delete(e),
         r = O.delete(e);
     return t || n || r;
 }
+
 function S() {
     var e;
     let t = f.A.getChannelId();
@@ -77,17 +84,21 @@ function S() {
         r
     );
 }
+
 function I() {
     b.clear(), y.clear(), O.clear();
 }
+
 function T() {
     I();
 }
+
 function C(e) {
     let { state: t, context: n } = e;
     if (n !== a.x.DEFAULT || t !== m.S7L.DISCONNECTED) return !1;
     I();
 }
+
 function N(e) {
     let { voiceStates: t } = e,
         n = f.A.getChannelId();
@@ -99,6 +110,7 @@ function N(e) {
         }, !1)
     );
 }
+
 function R(e) {
     let { userIds: t, guildId: n, channelId: r, context: i } = e;
     return (
@@ -110,6 +122,7 @@ function R(e) {
         }, !1)
     );
 }
+
 function w(e) {
     let { userId: t, context: n } = e;
     return n === a.x.DEFAULT && v(t);

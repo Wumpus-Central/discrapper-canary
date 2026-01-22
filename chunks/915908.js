@@ -1,19 +1,25 @@
-r.d(t, { A: () => l });
+r.d(t, {
+    A: () => c,
+});
 var n = r(627968);
 r(64700);
 var o = r(397927),
-    a = r(442433),
-    i = r(391973),
-    c = r(985018);
-function l(e, t) {
+    i = r(442433),
+    l = r(391973),
+    a = r(985018);
+
+function c(e, t) {
     return (0, n.jsx)(
         o.sLh,
         {
-            label: c.intl.string(c.t.XQQQFE),
+            label: a.intl.string(a.t.XQQQFE),
             checked: t,
             id: "widget-layout-type",
             action: () => {
-                (0, i.cC)(e, { horizontal: !t }), (0, a.Z_)();
+                (0, l.cC)(e, {
+                    horizontal: !t,
+                }),
+                    (0, i.Z_)();
             },
         },
         "widget-layout-type",

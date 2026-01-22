@@ -25,6 +25,7 @@ var r = n(64700),
     l = n(43708),
     c = n(14752),
     u = n(559474);
+
 function d(e, t, n) {
     return (
         t in e
@@ -38,6 +39,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -54,6 +56,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -66,6 +69,7 @@ function p(e, t) {
     }
     return n;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -77,6 +81,7 @@ function _(e, t) {
         e
     );
 }
+
 function h(e, t) {
     if (null == e) return {};
     var n,
@@ -93,6 +98,7 @@ function h(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function m(e, t) {
     if (null == e) return {};
     var n,
@@ -103,6 +109,7 @@ function m(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function g(e, t) {
     if ("object" !== b(e) || null === e) return e;
     var n = e[Symbol.toPrimitive];
@@ -113,10 +120,12 @@ function g(e, t) {
     }
     return ("string" === t ? String : Number)(e);
 }
+
 function E(e) {
     var t = g(e, "string");
     return "symbol" === b(t) ? t : String(t);
 }
+
 function b(e) {
     return e && "u" > typeof Symbol && e.constructor === Symbol ? "symbol" : typeof e;
 }
@@ -126,7 +135,10 @@ let y = (0, a.v)((e) => ({
         avatarDecorationAssets: {},
         previewProfileEffectSkuId: null,
         previewAvatarDecorationSkuId: null,
-        setPreviewEnabled: (t) => e({ previewEnabled: t }),
+        setPreviewEnabled: (t) =>
+            e({
+                previewEnabled: t,
+            }),
         upsertCollectionAsset: (t, n) =>
             (0, o.r)(() => {
                 e((e) => {
@@ -272,7 +284,10 @@ let y = (0, a.v)((e) => ({
             return a;
         }, [s, e]);
     },
-    S = (e, t) => _(f({}, e), { asset: t.src }),
+    S = (e, t) =>
+        _(f({}, e), {
+            asset: t.src,
+        }),
     I = (e, t) => {
         if (e.type !== s.R.AVATAR_DECORATION) return e;
         let n = (0, i.cloneDeep)(e);

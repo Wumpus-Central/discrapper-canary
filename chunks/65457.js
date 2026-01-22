@@ -1,5 +1,8 @@
 let r;
-n.d(t, { A: () => p }), n(896048);
+n.d(t, {
+    A: () => p,
+}),
+    n(896048);
 var i = n(205693),
     a = n(827343),
     s = n(439372),
@@ -7,6 +10,7 @@ var i = n(205693),
     l = n(723702),
     c = n(855454),
     u = n(652215);
+
 function d(e, t, n) {
     return (
         t in e
@@ -26,11 +30,16 @@ class f extends s.A {
             d(this, "handlePostConnectionOpen", () => {
                 null == r || r(),
                     (0, l.isWeb)() ||
-                        (r = c.C.subscribe({ location: "KrispExperimentManager handlePostConnectionOpen" }, (e) => {
-                            var t;
-                            let { enableStats: n } = e;
-                            null == (t = a.A.setNoiseCancellationEnableStats) || t.call(a.A, n);
-                        }));
+                        (r = c.C.subscribe(
+                            {
+                                location: "KrispExperimentManager handlePostConnectionOpen",
+                            },
+                            (e) => {
+                                var t;
+                                let { enableStats: n } = e;
+                                null == (t = a.A.setNoiseCancellationEnableStats) || t.call(a.A, n);
+                            },
+                        ));
             }),
             d(this, "handleRtcConnectionState", (e) => {
                 let { state: t, context: n } = e;

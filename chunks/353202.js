@@ -1,4 +1,6 @@
-n.d(t, { A: () => E });
+n.d(t, {
+    A: () => E,
+});
 var r = n(960488),
     i = n(562465),
     a = n(73153),
@@ -12,6 +14,7 @@ var r = n(960488),
     p = n(746080);
 let _ = {},
     h = !1;
+
 function m() {
     h ||
         ((h = !0),
@@ -22,6 +25,7 @@ function m() {
             null != e && null == t && g(e);
         }));
 }
+
 function g(e) {
     if (null == e || e === s.E || (0, p.jq)(e) || null != u.A.getChannel(e) || (m(), !o.A.isConnected()))
         return Promise.resolve();
@@ -39,7 +43,12 @@ function g(e) {
         })
             .then((t) => {
                 let { body: r } = t;
-                if (((_[e] = { type: "LOADED" }), c.Le.has(r.type))) {
+                if (
+                    ((_[e] = {
+                        type: "LOADED",
+                    }),
+                    c.Le.has(r.type))
+                ) {
                     var i;
                     a.h.dispatch({
                         type: "THREAD_CREATE",
@@ -50,7 +59,9 @@ function g(e) {
             })
             .catch(() => {
                 var t;
-                (_[e] = { type: "NOT_FOUND" }),
+                (_[e] = {
+                    type: "NOT_FOUND",
+                }),
                     a.h.dispatch({
                         type: "CHANNEL_DELETE",
                         channel: {
@@ -68,4 +79,6 @@ function g(e) {
         d
     );
 }
-let E = { loadThread: g };
+let E = {
+    loadThread: g,
+};

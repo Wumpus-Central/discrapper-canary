@@ -1,10 +1,15 @@
-n.d(t, { A: () => N }), n(896048), n(446912);
+n.d(t, {
+    A: () => N,
+}),
+    n(896048),
+    n(446912);
 var r,
     i = n(311907),
     a = n(73153),
     s = n(71393),
     o = n(568065),
     l = n(652215);
+
 function c(e, t, n) {
     return (
         t in e
@@ -18,6 +23,7 @@ function c(e, t, n) {
         e
     );
 }
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,6 +40,7 @@ function u(e) {
     }
     return e;
 }
+
 function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -46,6 +53,7 @@ function d(e, t) {
     }
     return n;
 }
+
 function f(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -57,9 +65,10 @@ function f(e, t) {
         e
     );
 }
-let p = 86400000,
-    _ = 3600000,
+let p = 864e5,
+    _ = 36e5,
     h = {};
+
 function m() {
     return {
         allPowerups: {},
@@ -67,16 +76,23 @@ function m() {
         unlockedPowerups: {},
     };
 }
+
 function g(e) {
     let {
         guild: { id: t },
     } = e;
-    h[t] = f(u({}, y(t)), { appliedBoosts: b(t) });
+    h[t] = f(u({}, y(t)), {
+        appliedBoosts: b(t),
+    });
 }
+
 function E(e) {
     let { guildId: t } = e;
-    h[t] = f(u({}, y(t)), { appliedBoosts: b(t) });
+    h[t] = f(u({}, y(t)), {
+        appliedBoosts: b(t),
+    });
 }
+
 function b(e) {
     var t, n, r, i;
     let a = s.A.getGuild(e),
@@ -93,13 +109,17 @@ function b(e) {
     }
     return c;
 }
+
 function y(e) {
     if (null == h[e]) {
         let t = b(e);
-        h[e] = f(u({}, m()), { appliedBoosts: t });
+        h[e] = f(u({}, m()), {
+            appliedBoosts: t,
+        });
     }
     return h[e];
 }
+
 function O(e) {
     let { guildId: t, allPowerups: n, powerupCatalog: r } = e,
         i = y(t);
@@ -112,6 +132,7 @@ function O(e) {
         }),
     });
 }
+
 function A(e) {
     let { guildId: t, unlockedPowerups: n } = e,
         r = y(t),
@@ -125,20 +146,28 @@ function A(e) {
         }),
     });
 }
+
 function v(e, t) {
     let { guildId: n, entitlements: r } = e,
         i = y(n);
     r.forEach((e) => {
         t ? (i.unlockedPowerups[e.sku_id] = e) : delete i.unlockedPowerups[e.sku_id];
     }),
-        (h = f(u({}, h), { [n]: f(u({}, i), { appliedBoosts: b(n) }) }));
+        (h = f(u({}, h), {
+            [n]: f(u({}, i), {
+                appliedBoosts: b(n),
+            }),
+        }));
 }
+
 function S(e) {
     v(e, !0);
 }
+
 function I(e) {
     v(e, !1);
 }
+
 function T() {
     h = {};
 }

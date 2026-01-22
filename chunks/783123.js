@@ -1,7 +1,10 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(627968),
     i = n(993401),
     a = n(985018);
+
 function s(e) {
     let { isBlocked: t, onClick: n, size: s = "sm" } = e;
     return (0, r.jsx)(i.FD, {

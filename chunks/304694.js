@@ -1,10 +1,13 @@
-e.d(t, { A: () => c });
+e.d(t, {
+    A: () => c,
+});
 var i = e(627968);
 e(64700);
 var l = e(397927),
     r = e(928658),
     a = e(446600),
     s = e(985018);
+
 function c(n) {
     let t = a.A.isLive(n.id);
     return n.isGuildStageVoice() && t

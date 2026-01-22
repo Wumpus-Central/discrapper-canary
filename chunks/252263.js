@@ -1,5 +1,8 @@
-n.d(t, { B: () => i });
+n.d(t, {
+    B: () => i,
+});
 var r = n(73153);
+
 function i(e) {
     let { channelId: t, enabled: n } = e;
     r.h.dispatch({

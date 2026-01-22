@@ -29,6 +29,7 @@ var i = e(503698),
     h = e(49999),
     N = e(985018),
     I = e(951808);
+
 function C(n, t) {
     let e = (0, o.bG)([O.A], () => O.A.getVoiceChannelId()),
         l = (0, o.bG)([y.A], () => {
@@ -41,6 +42,7 @@ function C(n, t) {
         });
     return i ? e : n;
 }
+
 function E(n, t) {
     let [e, i] = (0, o.yK)(
             [p.A],
@@ -53,7 +55,9 @@ function E(n, t) {
             guildId: null == s ? void 0 : s.guild_id,
             location: "useRingHangupItem",
         }),
-        { copyVariant: C } = b.o.useConfig({ location: "useRingHangupItem" }),
+        { copyVariant: C } = b.o.useConfig({
+            location: "useRingHangupItem",
+        }),
         E = !m || (null == e ? void 0 : e.length) === 0 || null == t,
         T = O && (null == s ? void 0 : s.guild_id) != null,
         k = null == i,
@@ -73,7 +77,9 @@ function E(n, t) {
                 location_stack: V,
             },
         },
-        { disableTrack: E || !T },
+        {
+            disableTrack: E || !T,
+        },
         [n.id],
     ),
     E)
@@ -89,7 +95,12 @@ function E(n, t) {
                     : "add" === C
                       ? N.intl.string(N.t.xlwRY6)
                       : N.intl.string(N.t.bHa9kN),
-                subtext: T || "control" !== C ? (0, l.jsx)(P, { channel: s }) : null,
+                subtext:
+                    T || "control" !== C
+                        ? (0, l.jsx)(P, {
+                              channel: s,
+                          })
+                        : null,
                 action: () => {
                     w && U(h.i.TAKE_ACTION), c.A.ring(t, [n.id], "user_context_menu"), T && null != t && (0, _.iN)(t);
                 },
@@ -106,7 +117,11 @@ function E(n, t) {
                       ? (0, l.jsx)(d.Text, {
                             variant: "text-xs/medium",
                             className: r()(I.W$, I.DF),
-                            children: N.intl.format(N.t.dwfzZi, { channelName: (0, l.jsx)(P, { channel: s }) }),
+                            children: N.intl.format(N.t.dwfzZi, {
+                                channelName: (0, l.jsx)(P, {
+                                    channel: s,
+                                }),
+                            }),
                         })
                       : null,
                   action: () => {
@@ -122,7 +137,9 @@ let P = (n) => {
         return (0, l.jsxs)("div", {
             className: I.W$,
             children: [
-                (0, l.jsx)(d.HKD, { size: "xs" }),
+                (0, l.jsx)(d.HKD, {
+                    size: "xs",
+                }),
                 (0, l.jsx)(d.Text, {
                     variant: "text-xs/medium",
                     className: I.HA,

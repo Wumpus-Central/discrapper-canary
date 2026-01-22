@@ -1,4 +1,6 @@
-n.d(t, { z: () => l });
+n.d(t, {
+    z: () => l,
+});
 let l = (0, n(945810).mj)({
     name: "2025-12-game-profiles-v2",
     kind: "user",

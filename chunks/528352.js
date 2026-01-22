@@ -160,6 +160,7 @@ let a = {
         jaren: "year",
     },
     u = `(?:${(0, r.uJ)(o)}|[0-9]+|[0-9]+[\\.,][0-9]+|halve?|half|paar)`;
+
 function d(e) {
     let t = e.toLowerCase();
     return void 0 !== o[t]
@@ -171,11 +172,13 @@ function d(e) {
             : parseFloat(t.replace(",", "."));
 }
 let f = `(?:${(0, r.uJ)(l)}|[0-9]{1,2}(?:ste|de)?)`;
+
 function p(e) {
     let t = e.toLowerCase();
     return void 0 !== l[t] ? l[t] : parseInt((t = t.replace(/(?:ste|de)$/i, "")));
 }
 let _ = "(?:[1-9][0-9]{0,3}\\s*(?:voor Christus|na Christus)|[1-2][0-9]{3}|[5-9][0-9])";
+
 function h(e) {
     if (/voor Christus/i.test(e)) return -parseInt((e = e.replace(/voor Christus/i, "")));
     if (/na Christus/i.test(e)) return parseInt((e = e.replace(/na Christus/i, "")));
@@ -185,6 +188,7 @@ function h(e) {
 let m = `(${u})\\s{0,5}(${(0, r.uJ)(c)})\\s{0,5}`,
     g = RegExp(m, "i"),
     E = (0, r.mb)("(?:(?:binnen|in)\\s*)?", m);
+
 function b(e) {
     let t = {},
         n = e,
@@ -192,6 +196,7 @@ function b(e) {
     for (; r; ) y(t, r), (n = n.substring(r[0].length)), (r = g.exec(n));
     return t;
 }
+
 function y(e, t) {
     let n = d(t[1]);
     e[c[t[2].toLowerCase()]] = n;

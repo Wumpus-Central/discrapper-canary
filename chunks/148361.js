@@ -1,4 +1,6 @@
-n.d(t, { A: () => S });
+n.d(t, {
+    A: () => S,
+});
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -16,6 +18,7 @@ var r = n(627968),
     g = n(307731),
     E = n(788868),
     b = n(985018);
+
 function y(e, t, n) {
     return (
         t in e
@@ -29,6 +32,7 @@ function y(e, t, n) {
         e
     );
 }
+
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -45,6 +49,7 @@ function O(e) {
     }
     return e;
 }
+
 function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -57,6 +62,7 @@ function A(e, t) {
     }
     return n;
 }
+
 function v(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -116,7 +122,9 @@ let S = (e) => {
             upsellViewedTrackingData: {
                 type: t,
                 is_external: x,
-                location: v(O({}, I), { object: L }),
+                location: v(O({}, I), {
+                    object: L,
+                }),
                 location_stack: w,
                 sku_id: (0, _.mH)(_.Ay.getSkuIdForPremiumType(E.PremiumTypes.TIER_2)),
                 has_search_query: null != R && "" !== R,

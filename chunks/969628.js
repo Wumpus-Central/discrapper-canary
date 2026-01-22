@@ -1,4 +1,6 @@
-n.d(t, { t: () => s });
+n.d(t, {
+    t: () => s,
+});
 var r = n(627968);
 n(64700);
 var i = n(158954);
@@ -17,7 +19,12 @@ let a = {
                 id: "badge",
                 component: function (e) {
                     let { type: t, customText: n, variant: s, iconName: o } = e,
-                        l = "custom" === t && null != n && "" !== n ? { text: n } : t,
+                        l =
+                            "custom" === t && null != n && "" !== n
+                                ? {
+                                      text: n,
+                                  }
+                                : t,
                         c = null != o && "" !== o && "none" !== o ? a[o] : void 0;
                     return (0, r.jsx)(i.Exy, {
                         type: l,

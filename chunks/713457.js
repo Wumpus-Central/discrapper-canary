@@ -1,4 +1,7 @@
-n.d(t, { A: () => I }), n(896048);
+n.d(t, {
+    A: () => I,
+}),
+    n(896048);
 var a = n(627968),
     l = n(64700),
     i = n(311907),
@@ -37,6 +40,7 @@ let E = [
         },
     },
 ];
+
 function N(e) {
     let t,
         n,
@@ -56,6 +60,7 @@ function N(e) {
         children: [n, t],
     });
 }
+
 function T(e) {
     if (0 === e.length) return null;
     switch (e[0].value) {
@@ -73,6 +78,7 @@ function T(e) {
             return (0, u.xb)(e[0].value);
     }
 }
+
 function I(e) {
     var t, n, I, w;
     let {
@@ -84,9 +90,13 @@ function I(e) {
             sourceQuestContent: L,
         } = e,
         U = (0, i.bG)([d.A], () => d.A.useReducedMotion),
-        B = (0, y.Xf)({ useReducedMotion: U }),
+        B = (0, y.Xf)({
+            useReducedMotion: U,
+        }),
         G = (0, m.Ut)(),
-        F = (0, b.RR)({ quest: k }),
+        F = (0, b.RR)({
+            quest: k,
+        }),
         V = (0, b.Vn)(k),
         H = (0, b.S5)(k.config.expiresAt, {
             month: "numeric",
@@ -115,7 +125,9 @@ function I(e) {
         er = X && $ === b.F3.ACCEPTED,
         es = er && ea === h.X0.SELECT,
         eo = er && !es && el.length > 1,
-        ec = f.t$.useConfig({ location: C.rE.QUEST_HOME_DESKTOP }).enabled,
+        ec = f.t$.useConfig({
+            location: C.rE.QUEST_HOME_DESKTOP,
+        }).enabled,
         ed = l.useCallback(
             (e) => {
                 ei(e), e === C.fO.DESKTOP && R([]);
@@ -375,7 +387,9 @@ function I(e) {
                   children: (0, a.jsx)(s.$nd, {
                       variant: "secondary",
                       disabled: !0,
-                      text: S.intl.format(S.t["14o6QY"], { expiryDate: H }),
+                      text: S.intl.format(S.t["14o6QY"], {
+                          expiryDate: H,
+                      }),
                       fullWidth: !0,
                   }),
               })),

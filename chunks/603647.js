@@ -1,5 +1,9 @@
 let s;
-i.d(e, { A: () => P }), i(896048), i(747238);
+i.d(e, {
+    A: () => P,
+}),
+    i(896048),
+    i(747238);
 var n = i(627968),
     r = i(64700),
     a = i(960488),
@@ -45,11 +49,13 @@ let b = i(843020),
         v.BVt.REPORT_SECOND_LOOK,
         v.BVt.ACCOUNT_REVERT(""),
     ];
+
 function E(t) {
     return x.some((e) => t.startsWith(e));
 }
 let O = (t) => ((s = t), t),
     j = [v.BVt.VERIFY, v.BVt.VERIFY_HUB_EMAIL];
+
 function I(t) {
     let { children: e } = t,
         i = (function () {
@@ -136,7 +142,9 @@ class A extends r.Component {
                                   }),
                               ],
                           })
-                        : (0, n.jsx)(I, { children: e }),
+                        : (0, n.jsx)(I, {
+                              children: e,
+                          }),
             }),
         });
     }
@@ -168,9 +176,13 @@ class A extends r.Component {
                       })
                     : (t[e] = i);
             })(this, "handleResize", () => {
-                this.setState({ isMobileWidth: window.innerWidth <= 485 });
+                this.setState({
+                    isMobileWidth: window.innerWidth <= 485,
+                });
             }),
-            (this.state = { isMobileWidth: window.innerWidth <= 485 });
+            (this.state = {
+                isMobileWidth: window.innerWidth <= 485,
+            });
     }
 }
 let P = A;

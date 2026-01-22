@@ -1,4 +1,6 @@
-n.d(t, { T: () => o });
+n.d(t, {
+    T: () => o,
+});
 var r = n(353640),
     l = n(499867),
     a = n(121894);
@@ -37,7 +39,10 @@ let s = (0, r.v)(
                                         }
                                         return e;
                                     })({}, e.channelShowResolvedFlags)),
-                                    (l = l = { [t]: n }),
+                                    (l = l =
+                                        {
+                                            [t]: n,
+                                        }),
                                     Object.getOwnPropertyDescriptors
                                         ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(l))
                                         : (function (e, t) {

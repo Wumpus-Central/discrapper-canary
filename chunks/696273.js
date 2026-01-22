@@ -16,7 +16,7 @@ var n = e(675879),
     g = n(a.getUTCSeconds);
 t.exports =
     o(function () {
-        return "0385-07-25T07:06:39.999Z" !== f.call(new Date(-50000000000000 - 1));
+        return "0385-07-25T07:06:39.999Z" !== f.call(new Date(-5e13 - 1));
     }) ||
     !o(function () {
         f.call(new Date(NaN));

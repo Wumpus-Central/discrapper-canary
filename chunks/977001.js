@@ -14,6 +14,7 @@ var r = n(627968),
     d = n(332225);
 let f = [c.Xr],
     p = [a.j.WEEK];
+
 function _(e) {
     let t = p;
     return null != e && t.includes(e);
@@ -36,10 +37,20 @@ let h = (e) => {
                                   channelId: n.id,
                                   guildId: n.guild_id,
                               }),
-                              (0, r.jsx)(u.ZB, { children: t.extra.game_name }),
+                              (0, r.jsx)(u.ZB, {
+                                  children: t.extra.game_name,
+                              }),
                               (0, r.jsx)(c.mG, {
                                   location: c.N5.CARD,
-                                  children: f.map((e, n) => (0, r.jsx)(e, { entry: t }, n)),
+                                  children: f.map((e, n) =>
+                                      (0, r.jsx)(
+                                          e,
+                                          {
+                                              entry: t,
+                                          },
+                                          n,
+                                      ),
+                                  ),
                               }),
                           ],
                       }),

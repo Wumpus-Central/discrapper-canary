@@ -1,7 +1,10 @@
-n.d(t, { _: () => o });
+n.d(t, {
+    _: () => o,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927);
+
 function a(e, t, n) {
     return (
         t in e
@@ -15,6 +18,7 @@ function a(e, t, n) {
         e
     );
 }
+
 function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -31,9 +35,19 @@ function s(e) {
     }
     return e;
 }
+
 function o(e) {
     (0, i.mMO)(async () => {
         let { default: t } = await Promise.all([n.e("56423"), n.e("25280")]).then(n.bind(n, 987482));
-        return (n) => (0, r.jsx)(t, s({ source: e }, n));
+        return (n) =>
+            (0, r.jsx)(
+                t,
+                s(
+                    {
+                        source: e,
+                    },
+                    n,
+                ),
+            );
     });
 }

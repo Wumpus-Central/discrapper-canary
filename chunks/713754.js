@@ -27,7 +27,7 @@ n.d(t, {
     zt: () => r.zt,
 });
 var r = n(731854);
-let i = 30000,
+let i = 3e4,
     a = {
         [r.TB.VOICE_ACTIVITY]: 1,
         [r.TB.PUSH_TO_TALK]: 2,

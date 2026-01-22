@@ -7,9 +7,11 @@ var c = (e.exports = {
     to: {},
     get: {},
 });
+
 function l(e, t, r) {
     return Math.min(Math.max(t, e), r);
 }
+
 function u(e) {
     var t = Math.round(e).toString(16).toUpperCase();
     return t.length < 2 ? "0" + t : t;

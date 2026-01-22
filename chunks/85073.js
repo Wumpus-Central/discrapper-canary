@@ -1,7 +1,10 @@
-n.d(t, { t: () => o });
+n.d(t, {
+    t: () => o,
+});
 var r = n(424918),
     i = n(651162),
     a = n(624711);
+
 function s(e, t, n) {
     return (
         t in e

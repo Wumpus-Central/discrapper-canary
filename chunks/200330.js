@@ -72,6 +72,7 @@ var r = n(627968),
     J = n(613057),
     ee = n(985018),
     et = n(283872);
+
 function en(e, t, n) {
     return (
         t in e
@@ -85,6 +86,7 @@ function en(e, t, n) {
         e
     );
 }
+
 function er(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -101,6 +103,7 @@ function er(e) {
     }
     return e;
 }
+
 function ei(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -113,6 +116,7 @@ function ei(e, t) {
     }
     return n;
 }
+
 function ea(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -124,6 +128,7 @@ function ea(e, t) {
         e
     );
 }
+
 function es() {
     let e = (0, o.zy)(),
         t = i.useMemo(() => (0, M._)(e.search), [e.search]);
@@ -150,7 +155,9 @@ function es() {
                             if (a)
                                 n.request($.e$_.DEEP_LINK, {
                                     type: J.XK.OAUTH2,
-                                    params: { search: e.search },
+                                    params: {
+                                        search: e.search,
+                                    },
                                 })
                                     .then((e) => {
                                         f(null != e && e);
@@ -193,7 +200,9 @@ function es() {
                 !0 === d
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(T.hE, { children: ee.intl.string(ee.t.csrAMJ) }),
+                              (0, r.jsx)(T.hE, {
+                                  children: ee.intl.string(ee.t.csrAMJ),
+                              }),
                               (0, r.jsx)(T.tK, {
                                   children: a ? ee.intl.string(ee.t["m1+IBn"]) : ee.intl.string(ee.t.kRzrSO),
                               }),
@@ -206,7 +215,9 @@ function es() {
                       })
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(T.hE, { children: ee.intl.string(ee.t["Z+hCVU"]) }),
+                              (0, r.jsx)(T.hE, {
+                                  children: ee.intl.string(ee.t["Z+hCVU"]),
+                              }),
                               (0, r.jsx)(E.y$y, {}),
                           ],
                       })),
@@ -223,14 +234,23 @@ function es() {
         removeChildWrapper: !0,
         children: (0, r.jsx)(
             eo,
-            ea(er({ transitionState: _.ip4.ENTERED }, t), {
-                showLogout: !0,
-                isExternalStandaloneOAuthPage: !0,
-                hideHeader: !0,
-            }),
+            ea(
+                er(
+                    {
+                        transitionState: _.ip4.ENTERED,
+                    },
+                    t,
+                ),
+                {
+                    showLogout: !0,
+                    isExternalStandaloneOAuthPage: !0,
+                    hideHeader: !0,
+                },
+            ),
         ),
     });
 }
+
 function eo(e) {
     let {
             label: t,
@@ -245,7 +265,9 @@ function eo(e) {
             noPadding: f,
             modalSize: p,
         } = ec(er({}, e)),
-        _ = A.v.useExperiment({ location: "oauth2_authorize" }),
+        _ = A.v.useExperiment({
+            location: "oauth2_authorize",
+        }),
         h =
             null != a || null != o || null != u
                 ? (0, r.jsxs)("div", {
@@ -286,12 +308,16 @@ function eo(e) {
         }),
     );
 }
+
 function el() {
     return (0, r.jsx)("div", {
         className: et.g4,
-        children: (0, r.jsx)(E.y$y, { className: et.u1 }),
+        children: (0, r.jsx)(E.y$y, {
+            className: et.u1,
+        }),
     });
 }
+
 function ec(e) {
     var t, n, a, s, c, _, m, g;
     let O,
@@ -367,7 +393,9 @@ function ec(e) {
                   ? void 0
                   : e.oauth2InstallParams;
         }, [null == e1 ? void 0 : e1.integrationTypesConfig, e$]),
-        e6 = A.v.useExperiment({ location: "oauth2_authorize" }),
+        e6 = A.v.useExperiment({
+            location: "oauth2_authorize",
+        }),
         { requestedScopes: e4, accountScopes: e5 } = i.useMemo(() => {
             let e = e0 ? (null == e3 ? void 0 : e3.scopes) : ed,
                 t = (0, M.e)(null != e ? e : []),
@@ -441,7 +469,9 @@ function ec(e) {
                         permissions: f.TF(e7, eW),
                         guildId: e$ === u.b.GUILD_INSTALL && null != eF ? eF : void 0,
                         channelId: e$ === u.b.GUILD_INSTALL && null != eH ? eH : void 0,
-                        dmSettings: { allowMobilePush: ez },
+                        dmSettings: {
+                            allowMobilePush: ez,
+                        },
                     });
                     if ((e && (await (0, S.Yx)(J, e9)), null != eO))
                         eO({
@@ -590,7 +620,11 @@ function ec(e) {
         tc = (0, l.K)(tl);
     if (eL instanceof Error)
         return eI
-            ? { body: (0, r.jsx)(Z.gz, { message: eL.message }) }
+            ? {
+                  body: (0, r.jsx)(Z.gz, {
+                      message: eL.message,
+                  }),
+              }
             : eT
               ? {
                     label: ee.intl.string(ee.t.j2d6Km),
@@ -827,6 +861,7 @@ function ec(e) {
         }
     );
 }
+
 function eu(e, t) {
     var n, i;
     if (null == t.location || (null != e.callback && e.callback(t))) return;
@@ -873,9 +908,21 @@ function eu(e, t) {
             })
           : null == (i = window.open(t.location, "_blank")) || i.focus();
 }
+
 function ed(e, t) {
-    (0, R._9)() ? C.A.openCreateGuildModal({ onSuccess: (n) => ef(ea(er({}, e), { guildId: n }), t) }) : ef(e, t);
+    (0, R._9)()
+        ? C.A.openCreateGuildModal({
+              onSuccess: (n) =>
+                  ef(
+                      ea(er({}, e), {
+                          guildId: n,
+                      }),
+                      t,
+                  ),
+          })
+        : ef(e, t);
 }
+
 function ef(e, t) {
     (0, m.openModal)(
         (t) =>
@@ -886,9 +933,12 @@ function ef(e, t) {
                     callback: eu.bind(null, e),
                 }),
             ),
-        { onCloseCallback: t },
+        {
+            onCloseCallback: t,
+        },
     );
 }
+
 function ep(e) {
     var t;
     let { hostname: n = "", host: r, pathname: i, search: a } = null != (t = j.A.toURLSafe(e)) ? t : {};

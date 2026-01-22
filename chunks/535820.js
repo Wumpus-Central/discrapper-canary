@@ -1,5 +1,9 @@
 let l, i, s, r, a, o;
-n.d(t, { A: () => M }), n(896048), n(638769);
+n.d(t, {
+    A: () => M,
+}),
+    n(896048),
+    n(638769);
 var u,
     d,
     c = n(311907),
@@ -22,6 +26,7 @@ let f = new Set(),
         numGroupDms: 0,
         numChannels: 0,
     };
+
 function C(e) {
     let t = new Set(),
         n = (null == r ? void 0 : r.type) === x.rbe.GUILD_VOICE,
@@ -51,11 +56,14 @@ function C(e) {
         })
     );
 }
+
 function T(e) {
     (E = e),
         (_ = new Map()),
         e.forEach((e, t) => {
-            _.set(e, { index: t });
+            _.set(e, {
+                index: t,
+            });
         });
 }
 class N extends (u = c.Ay.Store) {

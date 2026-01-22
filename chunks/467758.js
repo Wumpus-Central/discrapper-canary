@@ -1,4 +1,6 @@
-i.d(e, { W: () => A });
+i.d(e, {
+    W: () => A,
+});
 var n = i(734066),
     l = i(419954),
     s = i(780964),
@@ -11,8 +13,12 @@ let A = (0, l.zZ)(s.X.CLIPS_AUTOMATIC_CLIPPING_CATEGORY, {
     useTitle: () => T.intl.string(T.t.sA0WKL),
     usePredicate: () => {
         let { enableAdvancedSignals: t } = n.L_.useExperiment(
-            { location: "ClipsAutomaticClippingCategory" },
-            { autoTrackExposure: !1 },
+            {
+                location: "ClipsAutomaticClippingCategory",
+            },
+            {
+                autoTrackExposure: !1,
+            },
         );
         return t;
     },

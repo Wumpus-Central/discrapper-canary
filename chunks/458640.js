@@ -1,4 +1,6 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 var r = n(235079);
 let i = {
     [r.i.CLASSIC]: {
@@ -27,12 +29,24 @@ let i = {
         camera_off: "camera_off",
         camera_on: "camera_on",
     },
-    [r.i.RETRO]: { message1: "bit_message1" },
-    [r.i.BUBBLE]: { message1: "bop_message1" },
-    [r.i.DUCKY]: { message1: "ducky_message1" },
-    [r.i.LOFI]: { message1: "lofi_message1" },
-    [r.i.ASMR]: { message1: "asmr_message1" },
-    [r.i.DISCODO]: { message1: "discodo" },
+    [r.i.RETRO]: {
+        message1: "bit_message1",
+    },
+    [r.i.BUBBLE]: {
+        message1: "bop_message1",
+    },
+    [r.i.DUCKY]: {
+        message1: "ducky_message1",
+    },
+    [r.i.LOFI]: {
+        message1: "lofi_message1",
+    },
+    [r.i.ASMR]: {
+        message1: "asmr_message1",
+    },
+    [r.i.DISCODO]: {
+        message1: "discodo",
+    },
     [r.i.HALLOWEEN]: {
         call_calling: "halloween_call_calling",
         call_ringing: "halloween_call_ringing",
@@ -57,6 +71,7 @@ let i = {
         user_leave: "winter_user_leave",
     },
 };
+
 function a(e) {
     return i[e];
 }

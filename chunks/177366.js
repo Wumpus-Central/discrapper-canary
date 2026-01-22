@@ -57,7 +57,9 @@ let h = "".concat("#").concat("itemSkuId", "="),
                             a = c.A.getCategoryForProduct(t);
                         if (null != s && null != a) {
                             let e = s,
-                                o = (0, p.Ak)({ product: s }),
+                                o = (0, p.Ak)({
+                                    product: s,
+                                }),
                                 u = document.getElementById("shop-item-".concat(e.skuId));
                             if (
                                 (u !== document.activeElement && (null == u || u.focus()),

@@ -1,4 +1,7 @@
-n.d(t, { A: () => f }), n(896048);
+n.d(t, {
+    A: () => f,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -8,6 +11,7 @@ var r = n(627968),
     c = n(953756),
     u = n(647901),
     d = n(612089);
+
 function f(e) {
     let { components: t, accentColor: n, spoiler: a, renderComponents: f } = e,
         [p, _] = i.useState(a),
@@ -22,7 +26,9 @@ function f(e) {
                         [d.dK]: e,
                         [d._7]: null != n,
                     }),
-                    style: { "--__accent-color": n },
+                    style: {
+                        "--__accent-color": n,
+                    },
                     children: (0, r.jsx)(u.x, {
                         size: "reduced",
                         children: f(t),

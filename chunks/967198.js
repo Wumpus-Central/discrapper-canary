@@ -1,4 +1,6 @@
-n.d(t, { A: () => N });
+n.d(t, {
+    A: () => N,
+});
 var r,
     i = n(960488),
     a = n(311907),
@@ -10,6 +12,7 @@ var r,
     d = n(650048),
     f = n(71393),
     p = n(652215);
+
 function _(e, t, n) {
     return (
         t in e
@@ -27,22 +30,27 @@ let h = -1,
     m = null,
     g = null,
     E = {};
+
 function b() {
     null != m && null == f.A.getGuild(m) && null == o.A.getRequest(m) && (m = null),
         null != g && null == f.A.getGuild(g) && null == o.A.getRequest(g) && (g = null),
         O(m);
 }
+
 function y(e) {
     (m = e.selectedGuildId), (g = void 0), b();
 }
+
 function O(e) {
     null != e && (E[e] = Date.now());
 }
+
 function A(e) {
     let { guildId: t } = e;
     if (m === t) return !1;
     O(m), O(t), null != t && (g = t), (m = t);
 }
+
 function v(e) {
     let t = !1;
     return (
@@ -52,16 +60,19 @@ function v(e) {
         t
     );
 }
+
 function S(e) {
     let {
         guild: { id: t, unavailable: n },
     } = e;
     return !0 !== n && v(t);
 }
+
 function I(e) {
     let { guildId: t, user: n } = e;
     return n.id === u.default.getId() && v(t);
 }
+
 function T() {
     (m = null), (g = null);
 }
@@ -74,7 +85,9 @@ class C extends (r = a.Ay.PersistedStore) {
             (m = null != (n = null == e ? void 0 : e.selectedGuildId) ? n : null),
             (g = null != (r = null == e ? void 0 : e.lastSelectedGuildId) ? r : null);
         let s = d.A.lastNonVoiceRoute,
-            c = (0, i.B6)(s, { path: p.BVt.CHANNEL(l.pv.guildId()) });
+            c = (0, i.B6)(s, {
+                path: p.BVt.CHANNEL(l.pv.guildId()),
+            });
         null == c || null == (a = c.params) || a.guildId;
     }
     getState() {

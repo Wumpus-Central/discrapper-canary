@@ -1,4 +1,8 @@
-n.d(t, { A: () => v }), n(896048), n(457529);
+n.d(t, {
+    A: () => v,
+}),
+    n(896048),
+    n(457529);
 var l = n(627968),
     r = n(64700),
     i = n(503698),
@@ -47,7 +51,9 @@ let E = () => {
     },
     v = function (e) {
         (0, r.useEffect)(() => {
-            p.default.track(h.HAw.OPEN_POPOUT, { type: "RTC Connection" });
+            p.default.track(h.HAw.OPEN_POPOUT, {
+                type: "RTC Connection",
+            });
         }, []);
         let t = (0, r.useCallback)(() => {
                 let { closePopout: t } = e;
@@ -71,30 +77,42 @@ let E = () => {
                                     }),
                                     (0, l.jsx)("div", {
                                         className: _.xB,
-                                        children: (0, l.jsx)("strong", { children: m.A.getShortHostname(t) }),
+                                        children: (0, l.jsx)("strong", {
+                                            children: m.A.getShortHostname(t),
+                                        }),
                                     }),
                                 ],
                             }),
                         (0, l.jsx)("div", {
                             className: _.xB,
-                            children: y.intl.format(y.t["X58/lN"], { averagePing: n.toFixed(0) }),
+                            children: y.intl.format(y.t["X58/lN"], {
+                                averagePing: n.toFixed(0),
+                            }),
                         }),
                         null != i
                             ? (0, l.jsx)("div", {
                                   className: _.xB,
-                                  children: y.intl.format(y.t["6iv2TF"], { lastPing: i.toFixed(0) }),
+                                  children: y.intl.format(y.t["6iv2TF"], {
+                                      lastPing: i.toFixed(0),
+                                  }),
                               })
                             : null,
                         null != s
                             ? (0, l.jsx)("div", {
                                   className: _.xB,
-                                  children: y.intl.format(y.t["VIBJM+"], { outboundLossRate: s.toFixed(1) }),
+                                  children: y.intl.format(y.t["VIBJM+"], {
+                                      outboundLossRate: s.toFixed(1),
+                                  }),
                               })
                             : null,
                         (0, l.jsxs)("div", {
                             className: a()(_.xB, _.xJ),
                             children: [
-                                null == s ? y.intl.formatToPlainString(y.t.vggaMt, { badPing: 250 }) : null,
+                                null == s
+                                    ? y.intl.formatToPlainString(y.t.vggaMt, {
+                                          badPing: 250,
+                                      })
+                                    : null,
                                 null != s
                                     ? y.intl.formatToPlainString(y.t["3pFz1P"], {
                                           badPing: 250,
@@ -109,7 +127,9 @@ let E = () => {
             { connectionState: i, connectionTypeText: s } = e,
             b = d.Q_.getSetting(),
             v = {
-                [h.S7L.AWAITING_ENDPOINT]: y.intl.format(y.t.Eu2vUR, { url: h.qF7.STATUS }),
+                [h.S7L.AWAITING_ENDPOINT]: y.intl.format(y.t.Eu2vUR, {
+                    url: h.qF7.STATUS,
+                }),
                 [h.S7L.CONNECTING]: y.intl.string(y.t["y+E8aD"]),
                 [h.S7L.AUTHENTICATING]: y.intl.string(y.t["5lGIZH"]),
                 [h.S7L.DISCONNECTED]: y.intl.string(y.t.fOX25I),
@@ -134,7 +154,9 @@ let E = () => {
                           className: a()(_.xB, _.xJ),
                           children: v,
                       }),
-                (0, l.jsx)("hr", { className: _.me }),
+                (0, l.jsx)("hr", {
+                    className: _.me,
+                }),
                 (0, l.jsxs)("div", {
                     className: _.Vf,
                     children: [

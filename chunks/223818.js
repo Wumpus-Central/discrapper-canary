@@ -1,4 +1,7 @@
-r.d(t, { default: () => s }), r(896048);
+r.d(t, {
+    default: () => s,
+}),
+    r(896048);
 var n = r(627968),
     o = r(64700),
     l = r(158954),
@@ -6,6 +9,7 @@ var n = r(627968),
     a = r(399925),
     c = r(652215),
     p = r(985018);
+
 function s(e) {
     var t, r;
     let { onClose: s, onBeforeDelete: f, onAfterDelete: u, clips: b } = e,
@@ -86,8 +90,12 @@ function s(e) {
         (r = r =
             {
                 onClose: s,
-                title: p.intl.formatToPlainString(p.t.lprb7n, { count: j }),
-                subtitle: p.intl.formatToPlainString(p.t.NInqer, { count: j }),
+                title: p.intl.formatToPlainString(p.t.lprb7n, {
+                    count: j,
+                }),
+                subtitle: p.intl.formatToPlainString(p.t.NInqer, {
+                    count: j,
+                }),
                 actions: [
                     {
                         variant: "secondary",

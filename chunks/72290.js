@@ -2,12 +2,15 @@ var t,
     n,
     r,
     i = (e.exports = {});
+
 function a() {
     throw Error("setTimeout has not been defined");
 }
+
 function s() {
     throw Error("clearTimeout has not been defined");
 }
+
 function o(e) {
     if (t === setTimeout) return setTimeout(e, 0);
     if ((t === a || !t) && setTimeout) return (t = setTimeout), setTimeout(e, 0);
@@ -21,6 +24,7 @@ function o(e) {
         }
     }
 }
+
 function l(e) {
     if (n === clearTimeout) return clearTimeout(e);
     if ((n === s || !n) && clearTimeout) return (n = clearTimeout), clearTimeout(e);
@@ -49,9 +53,11 @@ function l(e) {
 var c = [],
     u = !1,
     d = -1;
+
 function f() {
     u && r && ((u = !1), r.length ? (c = r.concat(c)) : (d = -1), c.length && p());
 }
+
 function p() {
     if (!u) {
         var e = o(f);
@@ -63,9 +69,11 @@ function p() {
         (r = null), (u = !1), l(e);
     }
 }
+
 function _(e, t) {
     (this.fun = e), (this.array = t);
 }
+
 function h() {}
 (i.nextTick = function (e) {
     var t = Array(arguments.length - 1);

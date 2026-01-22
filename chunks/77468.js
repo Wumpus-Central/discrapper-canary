@@ -1,4 +1,11 @@
-n.d(t, { A: () => E }), n(896048), n(680155), n(323874), n(14289), n(35956);
+n.d(t, {
+    A: () => E,
+}),
+    n(896048),
+    n(680155),
+    n(323874),
+    n(14289),
+    n(35956);
 var r = n(110259),
     i = n(562465),
     a = n(73153),
@@ -8,6 +15,7 @@ var r = n(110259),
     c = n(954571),
     u = n(499785),
     d = n(652215);
+
 function f(e, t, n) {
     return (
         t in e
@@ -21,6 +29,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,6 +46,7 @@ function p(e) {
     }
     return e;
 }
+
 function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -49,6 +59,7 @@ function _(e, t) {
     }
     return n;
 }
+
 function h(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -61,6 +72,7 @@ function h(e, t) {
     );
 }
 let m = new o.A("ConnectedAccounts");
+
 function g(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     return i.Bo.post({
@@ -133,7 +145,9 @@ let E = {
                 name: n,
                 friend_sync: null != (s = null == a ? void 0 : a.friend_sync) ? s : d.txh.has(e),
             },
-            context: { location: i },
+            context: {
+                location: i,
+            },
             oldFormErrors: !0,
             trackedActionData: {
                 event: r.NetworkActionNames.USER_CONNECTIONS_UPDATE,
@@ -158,16 +172,24 @@ let E = {
             rejectWithError: !1,
         }),
     setVisibility(e, t, n) {
-        return this.update(e, t, { visibility: 1 === n });
+        return this.update(e, t, {
+            visibility: 1 === n,
+        });
     },
     setMetadataVisibility(e, t, n) {
-        return this.update(e, t, { metadata_visibility: 1 === n });
+        return this.update(e, t, {
+            metadata_visibility: 1 === n,
+        });
     },
     setFriendSync(e, t, n) {
-        return this.update(e, t, { friend_sync: n });
+        return this.update(e, t, {
+            friend_sync: n,
+        });
     },
     setShowActivity(e, t, n) {
-        return this.update(e, t, { show_activity: n });
+        return this.update(e, t, {
+            show_activity: n,
+        });
     },
     update: (e, t, n) =>
         u.A.patch({
@@ -280,7 +302,9 @@ let E = {
         let r = "".concat(d.Rsh.CONNECTIONS_SESSION_HANDOFF(e), "?").concat(n.toString());
         return i.Bo.get({
             url: r,
-            body: { state: t },
+            body: {
+                state: t,
+            },
             rejectWithError: !0,
         });
     },

@@ -1,9 +1,14 @@
-n.d(t, { A: () => D }), n(896048), n(938796);
+n.d(t, {
+    A: () => D,
+}),
+    n(896048),
+    n(938796);
 var r,
     i = n(311907),
     a = n(73153),
     s = n(21599),
     o = n(652215);
+
 function l(e, t, n) {
     return (
         t in e
@@ -17,6 +22,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -33,6 +39,7 @@ function c(e) {
     }
     return e;
 }
+
 function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -45,6 +52,7 @@ function u(e, t) {
     }
     return n;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -60,6 +68,7 @@ let f = new Map(),
     p = new Map(),
     _ = {},
     h = new Map();
+
 function m(e, t) {
     var n;
     e = null != e ? e : "";
@@ -67,15 +76,24 @@ function m(e, t) {
         i = f.get(e),
         a =
             null != i
-                ? c({ state: o.elq.RESOLVING }, i)
+                ? c(
+                      {
+                          state: o.elq.RESOLVING,
+                      },
+                      i,
+                  )
                 : {
                       state: o.elq.RESOLVING,
                       code: r.baseCode,
                   };
     t(a),
         (f = new Map(f)).set(e, a),
-        (null == (n = a.guild) ? void 0 : n.id) != null && (_ = d(c({}, _), { [a.guild.id]: e }));
+        (null == (n = a.guild) ? void 0 : n.id) != null &&
+            (_ = d(c({}, _), {
+                [a.guild.id]: e,
+            }));
 }
+
 function g(e) {
     let { code: t } = e,
         n = (0, s.y$)(t);
@@ -84,6 +102,7 @@ function g(e) {
         state: o.elq.RESOLVING,
     });
 }
+
 function E(e) {
     return m(e.code, (t) => {
         var n, r;
@@ -107,6 +126,7 @@ function E(e) {
             (t.roles = e.invite.roles);
     });
 }
+
 function b(e) {
     return m(e.invite.code, (t) => {
         var n, r;
@@ -126,11 +146,13 @@ function b(e) {
             (t.roles = e.invite.roles);
     });
 }
+
 function y(e) {
     return m(e.invite.code, (t) => {
         (t.state = o.elq.RESOLVED), (t.inviter = e.invite.inviter);
     });
 }
+
 function O(e) {
     e.invites.forEach((e) =>
         m(e.code, (e) => {
@@ -138,16 +160,19 @@ function O(e) {
         }),
     );
 }
+
 function A(e) {
     return m(e.code, (t) => {
         t.state = "banned" in e && e.banned ? o.elq.BANNED : o.elq.EXPIRED;
     });
 }
+
 function v(e) {
     return m(e.code, (e) => {
         e.state = o.elq.ACCEPTING;
     });
 }
+
 function S(e) {
     return m(e.code, (t) => {
         (t.state = o.elq.ACCEPTED),
@@ -156,6 +181,7 @@ function S(e) {
             (t.channel = c({}, t.channel, e.invite.channel));
     });
 }
+
 function I(e) {
     return (
         p.set(e.code, e.error),
@@ -164,24 +190,29 @@ function I(e) {
         })
     );
 }
+
 function T(e) {
     return m(e.code, (e) => {
         e.state = o.elq.APP_OPENING;
     });
 }
+
 function C(e) {
     return m(e.code, (e) => {
         e.state = o.elq.APP_OPENED;
     });
 }
+
 function N(e) {
     return m(e.code, (e) => {
         e.state = o.elq.APP_NOT_OPENED;
     });
 }
+
 function R(e) {
     (h = new Map(h)).set(e.code, e.friendMemberIds);
 }
+
 function w(e) {
     if (!h.has(e.code)) return !1;
     (h = new Map(h)).delete(e.code);

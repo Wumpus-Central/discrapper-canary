@@ -1,4 +1,7 @@
-s.d(t, { A: () => h }), s(228524);
+s.d(t, {
+    A: () => h,
+}),
+    s(228524);
 var r = s(627968);
 s(64700);
 var a = s(317097),
@@ -9,6 +12,7 @@ var a = s(317097),
     d = s(652215),
     o = s(985018),
     m = s(558304);
+
 function x(e) {
     let { listing: t } = e,
         { name: s, image: n, description: c } = t,
@@ -48,7 +52,9 @@ function x(e) {
                 className: m.FE,
                 children: [
                     (0, r.jsx)("div", {
-                        style: { backgroundColor: (0, a.Hl)(t.role_color) },
+                        style: {
+                            backgroundColor: (0, a.Hl)(t.role_color),
+                        },
                         className: m.yY,
                     }),
                     (0, r.jsx)("img", {
@@ -70,6 +76,7 @@ function x(e) {
         ],
     });
 }
+
 function u(e) {
     let { channel: t } = e,
         s = (function (e) {
@@ -119,6 +126,7 @@ function u(e) {
         ],
     });
 }
+
 function j(e) {
     let { benefit: t } = e;
     return void 0 === t
@@ -126,7 +134,9 @@ function j(e) {
         : (0, r.jsxs)("div", {
               className: m.Rr,
               children: [
-                  (0, r.jsx)("div", { className: m.KI }),
+                  (0, r.jsx)("div", {
+                      className: m.KI,
+                  }),
                   (0, r.jsx)(l.Text, {
                       variant: "text-sm/normal",
                       children: t,
@@ -134,6 +144,7 @@ function j(e) {
               ],
           });
 }
+
 function f(e) {
     let { listing: t } = e;
     return (0, r.jsxs)("div", {
@@ -148,16 +159,33 @@ function f(e) {
                 className: m.hM,
                 children: o.intl.string(o.t.rI43Wx),
             }),
-            t.channels.map((e) => (0, r.jsx)(u, { channel: e }, e.id)),
+            t.channels.map((e) =>
+                (0, r.jsx)(
+                    u,
+                    {
+                        channel: e,
+                    },
+                    e.id,
+                ),
+            ),
             (0, r.jsx)(l.Text, {
                 variant: "text-xs/semibold",
                 className: m.hM,
                 children: o.intl.string(o.t.XqWRLj),
             }),
-            t.additional_perks.map((e, t) => (0, r.jsx)(j, { benefit: e.name }, t)),
+            t.additional_perks.map((e, t) =>
+                (0, r.jsx)(
+                    j,
+                    {
+                        benefit: e.name,
+                    },
+                    t,
+                ),
+            ),
         ],
     });
 }
+
 function h(e) {
     let { selectedTemplate: t, handleSelectTemplate: s } = e;
     if (void 0 === t) return null;
@@ -168,9 +196,15 @@ function h(e) {
             (0, r.jsxs)(l.IpV, {
                 className: m.Qs,
                 children: [
-                    (0, r.jsx)(x, { listing: a }),
-                    (0, r.jsx)("div", { className: m.yF }),
-                    (0, r.jsx)(f, { listing: a }),
+                    (0, r.jsx)(x, {
+                        listing: a,
+                    }),
+                    (0, r.jsx)("div", {
+                        className: m.yF,
+                    }),
+                    (0, r.jsx)(f, {
+                        listing: a,
+                    }),
                 ],
             }),
             (0, r.jsx)(l.Button, {

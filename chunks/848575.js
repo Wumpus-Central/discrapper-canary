@@ -1,7 +1,10 @@
-r.d(t, { P: () => u });
+r.d(t, {
+    P: () => u,
+});
 var n = r(816885),
     i = r(611886),
     o = r(251874);
+
 function a(e, t, r) {
     return (
         t in e
@@ -17,6 +20,7 @@ function a(e, t, r) {
 }
 var u = (function () {
     var e;
+
     function t(e) {
         var r = this;
         if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");

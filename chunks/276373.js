@@ -69,6 +69,7 @@ var l = n(824120),
     v = n(411335),
     j = n(988794),
     U = n(985018);
+
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -94,6 +95,7 @@ function y(e) {
     }
     return e;
 }
+
 function P(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -114,7 +116,9 @@ function P(e, t) {
 }
 let k = new A.A("AuditLogUtils"),
     F = [d.pJ.DAYS, d.pJ.HOURS, d.pJ.MINUTES, d.pJ.SECONDS],
-    w = () => ({ [C.gGk.REASON]: () => U.t["2IW3C5"] }),
+    w = () => ({
+        [C.gGk.REASON]: () => U.t["2IW3C5"],
+    }),
     X = () =>
         y(
             {
@@ -208,7 +212,12 @@ let k = new A.A("AuditLogUtils"),
                 [C.gGk.DESCRIPTION]: eR(U.t.XeYKWJ, U.t.PSfeIj),
                 [C.gGk.PERMISSIONS_GRANTED]: () => U.t["9i/DvE"],
                 [C.gGk.PERMISSIONS_DENIED]: () => U.t.pa1ZVh,
-                [C.gGk.COLOR]: eM({ "#000000": U.t.TK6E1H }, U.t["2FQFiw"]),
+                [C.gGk.COLOR]: eM(
+                    {
+                        "#000000": U.t.TK6E1H,
+                    },
+                    U.t["2FQFiw"],
+                ),
                 [C.gGk.COLORS]: (e) => (null == e.newValue.secondary_color ? U.t.U44ttm : U.t["WnSwL/"]),
                 [C.gGk.HOIST]: ex(U.t.gWfe24, U.t["+tb8kN"]),
                 [C.gGk.MENTIONABLE]: ex(U.t.LL8VFF, U.t.Z7xzmC),
@@ -243,10 +252,22 @@ let k = new A.A("AuditLogUtils"),
             {
                 [C.gGk.CODE]: () => U.t.rrRHgb,
                 [C.gGk.CHANNEL_ID]: () => U.t.Q1vd5q,
-                [C.gGk.MAX_USES]: eM({ 0: U.t.Yx8LNm }, U.t["3ygnwU"]),
-                [C.gGk.MAX_AGE]: eM({ [U.intl.string(U.t.PqEzn8)]: U.t.uWrLvw }, U.t["Q+5kcO"]),
+                [C.gGk.MAX_USES]: eM(
+                    {
+                        0: U.t.Yx8LNm,
+                    },
+                    U.t["3ygnwU"],
+                ),
+                [C.gGk.MAX_AGE]: eM(
+                    {
+                        [U.intl.string(U.t.PqEzn8)]: U.t.uWrLvw,
+                    },
+                    U.t["Q+5kcO"],
+                ),
                 [C.gGk.TEMPORARY]: ex(U.t.MWp6H7, U.t.omiqTH),
-                [C.gGk.FLAGS]: eC({ [o.Q.IS_GUEST_INVITE]: U.t.XYZMbL }),
+                [C.gGk.FLAGS]: eC({
+                    [o.Q.IS_GUEST_INVITE]: U.t.XYZMbL,
+                }),
             },
             w(),
         ),
@@ -256,7 +277,13 @@ let k = new A.A("AuditLogUtils"),
         [C.gGk.AVATAR_HASH]: () => U.t.KB52Uj,
         [C.gGk.REASON]: () => U.t["2IW3C5"],
     }),
-    Q = () => y({ [C.gGk.NAME]: eR(U.t.ahU1o5, U.t["wxs+vZ"]) }, w()),
+    Q = () =>
+        y(
+            {
+                [C.gGk.NAME]: eR(U.t.ahU1o5, U.t["wxs+vZ"]),
+            },
+            w(),
+        ),
     Z = () =>
         y(
             {
@@ -398,7 +425,13 @@ let k = new A.A("AuditLogUtils"),
             },
             w(),
         ),
-    es = () => y({ [C.gGk.STATUS]: () => U.t.HyCSnI }, w()),
+    es = () =>
+        y(
+            {
+                [C.gGk.STATUS]: () => U.t.HyCSnI,
+            },
+            w(),
+        ),
     eo = () => ({
         [C.gGk.DESCRIPTION]: () => U.t.nsUZKY,
         [C.gGk.BRAND_COLOR_PRIMARY]: () => U.t.qe9mgN,
@@ -426,7 +459,9 @@ let k = new A.A("AuditLogUtils"),
             [C.gGk.TYPE]: !0,
             [C.gGk.APPLICATION_ID]: !0,
         },
-        [C.GaG.INTEGRATION]: { [C.gGk.TYPE]: !0 },
+        [C.GaG.INTEGRATION]: {
+            [C.gGk.TYPE]: !0,
+        },
         [C.GaG.THREAD]: {
             [C.gGk.ID]: !0,
             [C.gGk.TYPE]: !0,
@@ -439,8 +474,12 @@ let k = new A.A("AuditLogUtils"),
             [C.gGk.AVAILABLE]: !0,
             [C.gGk.GUILD_ID]: !0,
         },
-        [C.GaG.GUILD_HOME]: { [C.gGk.ENTITY_TYPE]: !0 },
-        [C.GaG.GUILD_ONBOARDING]: { [C.gGk.PROMPTS]: !0 },
+        [C.GaG.GUILD_HOME]: {
+            [C.gGk.ENTITY_TYPE]: !0,
+        },
+        [C.GaG.GUILD_ONBOARDING]: {
+            [C.gGk.PROMPTS]: !0,
+        },
         [C.GaG.GUILD_SOUNDBOARD]: {
             [C.gGk.ID]: !0,
             [C.gGk.SOUND_ID]: !0,
@@ -717,12 +756,15 @@ let k = new A.A("AuditLogUtils"),
             label: U.intl.string(U.t.V9PEQ4),
         },
     ];
+
 function eE(e, t) {
     return null != t.changes ? t.changes.find((t) => t.key === e) : null;
 }
+
 function ed(e, t) {
     return null != t.changes ? t.changes.filter((t) => t.key === e) : [];
 }
+
 function e_(e) {
     var t;
     let n = eu().find((t) => t.value === e.action);
@@ -733,11 +775,24 @@ function e_(e) {
           : null;
 }
 let eg = {
-    [d.pJ.SECONDS]: (e) => U.intl.formatToPlainString(U.t.geSp4K, { seconds: e }),
-    [d.pJ.MINUTES]: (e) => U.intl.formatToPlainString(U.t.iXLF9W, { minutes: e }),
-    [d.pJ.HOURS]: (e) => U.intl.formatToPlainString(U.t.xCjYxK, { hours: e }),
-    [d.pJ.DAYS]: (e) => U.intl.formatToPlainString(U.t["k2UNz+"], { days: e }),
+    [d.pJ.SECONDS]: (e) =>
+        U.intl.formatToPlainString(U.t.geSp4K, {
+            seconds: e,
+        }),
+    [d.pJ.MINUTES]: (e) =>
+        U.intl.formatToPlainString(U.t.iXLF9W, {
+            minutes: e,
+        }),
+    [d.pJ.HOURS]: (e) =>
+        U.intl.formatToPlainString(U.t.xCjYxK, {
+            hours: e,
+        }),
+    [d.pJ.DAYS]: (e) =>
+        U.intl.formatToPlainString(U.t["k2UNz+"], {
+            days: e,
+        }),
 };
+
 function eA(e) {
     let t = eE(C.gGk.COMMUNICATION_DISABLED_UNTIL, e),
         n = ed(C.gGk.ROLES_ADD, e).length > 0,
@@ -745,12 +800,12 @@ function eA(e) {
     if (null != t) {
         if ((null == t ? void 0 : t.newValue) != null) {
             let n = new Date(null == t ? void 0 : t.newValue).getTime() - L.default.extractTimestamp(e.id),
-                l = Math.round(n / 1000 / 60),
+                l = Math.round(n / 1e3 / 60),
                 r = (0, d.$l)(l, F);
             if (null == r.unit || null == r.time) return null;
             if (r.unit in eg) {
                 let e = r.unit,
-                    t = r.unit === d.pJ.SECONDS ? Math.round(n / 1000) : r.time;
+                    t = r.unit === d.pJ.SECONDS ? Math.round(n / 1e3) : r.time;
                 return eg[e](t);
             }
         } else if ((null == t ? void 0 : t.oldValue) != null) return U.intl.string(U.t.MA1ltr);
@@ -759,6 +814,7 @@ function eA(e) {
     else if (l) return U.intl.string(U.t["8mQ6x0"]);
     return null;
 }
+
 function eT(e) {
     let t = ed(C.gGk.ROLES_ADD, e),
         n = ed(C.gGk.ROLES_REMOVE, e),
@@ -800,11 +856,16 @@ function eT(e) {
               roleNamesRemoved: r,
           })
         : t.length > 0
-          ? U.intl.formatToPlainString(U.t["/mTqt5"], { roleNames: l })
+          ? U.intl.formatToPlainString(U.t["/mTqt5"], {
+                roleNames: l,
+            })
           : n.length > 0
-            ? U.intl.formatToPlainString(U.t.Wk4pAJ, { roleNames: r })
+            ? U.intl.formatToPlainString(U.t.Wk4pAJ, {
+                  roleNames: r,
+              })
             : null;
 }
+
 function ef(e) {
     switch (e.action) {
         case C.F_X.GUILD_UPDATE:
@@ -1002,6 +1063,7 @@ function ef(e) {
             return null;
     }
 }
+
 function eh(e) {
     switch (e) {
         case M.lx.GUILD_FEED_REMOVED:
@@ -1013,6 +1075,7 @@ function eh(e) {
     }
     return null;
 }
+
 function eI(e) {
     switch (e) {
         case M.lx.GUILD_FEED_REMOVED:
@@ -1024,6 +1087,7 @@ function eI(e) {
     }
     return null;
 }
+
 function eO(e, t) {
     switch (e) {
         case C.xBc.CREATE_INSTANT_INVITE:
@@ -1131,6 +1195,7 @@ function eO(e, t) {
     }
     return null;
 }
+
 function eN(e, t) {
     let n = [];
     return (
@@ -1247,7 +1312,7 @@ function eN(e, t) {
                                 (e) => {
                                     let t =
                                         null != e.name_localized && "" !== e.name_localized ? e.name_localized : e.name;
-                                    return e.type === _.kc.CHAT ? "/\u2060".concat(t) : t;
+                                    return e.type === _.kc.CHAT ? "/⁠".concat(t) : t;
                                 },
                             );
                         case C.GaG.AUTO_MODERATION_RULE:
@@ -1391,7 +1456,7 @@ function eN(e, t) {
                                 case C.gGk.AFK_TIMEOUT:
                                     return ep(e, (e) => e / 60);
                                 case C.gGk.BITRATE:
-                                    return ep(e, (e) => e / 1000);
+                                    return ep(e, (e) => e / 1e3);
                                 case C.gGk.COLOR:
                                     return ep(e, (e) => (0, u.Hl)(e).toUpperCase());
                                 case C.gGk.THEME_COLORS:
@@ -1613,6 +1678,7 @@ function eN(e, t) {
         n
     );
 }
+
 function em(e, t) {
     let n = c.iu("string" == typeof e ? e : 0),
         l = c.iu("string" == typeof t ? t : 0),
@@ -1629,6 +1695,7 @@ function em(e, t) {
         removed: s,
     };
 }
+
 function eS(e) {
     return null == e
         ? null
@@ -1640,6 +1707,7 @@ function eS(e) {
               moderated: e.moderated,
           };
 }
+
 function ep(e, t, n) {
     let l = e.newValue,
         r = e.oldValue;
@@ -1649,6 +1717,7 @@ function ep(e, t, n) {
         new m.QO(e.key, r || e.oldValue, l || e.newValue)
     );
 }
+
 function eb(e, t, n, l, r) {
     let a = null,
         i = n((r = null != r ? r : e.targetId));
@@ -1662,26 +1731,33 @@ function eb(e, t, n, l, r) {
     }
     return null != a ? a : r;
 }
+
 function eG(e, t, n) {
     let l = e,
         r = t(e);
     return null != r && null != n && (l = n(r)), l;
 }
+
 function eR(e, t) {
     return (n) => (null == n.oldValue ? e : t);
 }
+
 function eD(e, t) {
     return (n) => (null == n.newValue ? e : t);
 }
+
 function eL(e, t, n, l) {
     return (r) => (null != r.newValue && null != r.oldValue ? e : null != r.newValue ? t : null != r.oldValue ? n : l);
 }
+
 function ex(e, t) {
     return (n) => (n.newValue ? e : t);
 }
+
 function eC(e) {
     return (t) => e[t.newValue];
 }
+
 function eM(e, t) {
     return (n) => {
         var l;

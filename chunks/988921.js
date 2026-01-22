@@ -1,4 +1,6 @@
-n.d(t, { l: () => f });
+n.d(t, {
+    l: () => f,
+});
 var r = n(627968),
     i = n(397927),
     l = n(975571),
@@ -8,6 +10,7 @@ var r = n(627968),
     o = n(652215),
     d = n(985018),
     u = n(815873);
+
 function f(e) {
     let { guild: t, canManageGuild: n } = e;
     return (0, r.jsxs)("div", {
@@ -20,7 +23,12 @@ function f(e) {
                         variant: "heading-md/medium",
                         color: "text-strong",
                         className: u.DD,
-                        children: [d.intl.string(d.t["0r0AzF"]), (0, r.jsx)(c.B6, { guild: t })],
+                        children: [
+                            d.intl.string(d.t["0r0AzF"]),
+                            (0, r.jsx)(c.B6, {
+                                guild: t,
+                            }),
+                        ],
                     }),
                     (0, r.jsx)(i.Text, {
                         variant: "text-sm/medium",

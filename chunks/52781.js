@@ -105,7 +105,9 @@ e.exports = function (e) {
             illegal: "\\$[^01]|#[^0-9a-fA-F]",
             contains: [
                 e.C_LINE_COMMENT_MODE,
-                e.COMMENT("/\\*", "\\*/", { contains: ["self"] }),
+                e.COMMENT("/\\*", "\\*/", {
+                    contains: ["self"],
+                }),
                 {
                     className: "meta",
                     begin: '@[a-z]\\w*(?::"[^"]*")?',

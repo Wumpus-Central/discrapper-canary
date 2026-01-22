@@ -25,6 +25,7 @@ var r = n(638504),
     c = n(813827),
     u = n(355097),
     d = n(652215);
+
 function f(e, t, n) {
     return (
         t in e
@@ -38,6 +39,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -54,14 +56,18 @@ function p(e) {
     }
     return e;
 }
-let _ = { readerFactory: (e) => new r.V(e, new TextDecoder("utf-8")) },
+let _ = {
+        readerFactory: (e) => new r.V(e, new TextDecoder("utf-8")),
+    },
     h = {
         [u.oD.PRELOADED_USER_SETTINGS]: l.nT,
         [u.oD.FRECENCY_AND_FAVORITES_SETTINGS]: o.aw,
     };
+
 function m(e, t) {
     return null != t && e in h ? g(h[e], t) : null;
 }
+
 function g(e, t) {
     if (null == t) return null;
     let n = (0, i.A)(t);
@@ -71,31 +77,40 @@ function g(e, t) {
         throw Error("Settings proto failed to deserialize (potentially corrupt): ".concat(e));
     }
 }
+
 function E(e) {
     return g(l.nT, e);
 }
+
 function b(e, t) {
     return y(h[e], t);
 }
+
 function y(e, t) {
     return (0, i.C)(e.toBinary(t));
 }
+
 function O(e, t, n) {
     for (let e in ((t = p({}, t)), n)) delete t[e];
     return e.mergePartial(t, n), t;
 }
+
 function A(e, t, n) {
     return null == e.guilds && (e.guilds = l.KJ.create()), v(e.guilds, t, n);
 }
+
 function v(e, t, n) {
     return (null == t || "null" === t) && (t = d.D0I), t in e.guilds || (e.guilds[t] = l.nx.create()), n(e.guilds[t]);
 }
+
 function S(e, t, n, r) {
     return A(e, t, (e) => I(e, n, r));
 }
+
 function I(e, t, n) {
     return t in e.channels || (e.channels[t] = l.Ju.create()), n(e.channels[t]);
 }
+
 function T(e, t) {
     null == e.versions && (e.versions = c.u.create());
     let n = 0;
@@ -125,6 +140,7 @@ function T(e, t) {
         cleanupFuncs: a,
     };
 }
+
 function C(e, t) {
     let n = Object.entries(e);
     if (n.length > t)

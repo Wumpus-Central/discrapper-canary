@@ -1,10 +1,13 @@
-n.d(t, { A: () => y });
+n.d(t, {
+    A: () => y,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
     o = n(538640),
     l = n(20976);
+
 function c(e, t, n) {
     return (
         t in e
@@ -18,6 +21,7 @@ function c(e, t, n) {
         e
     );
 }
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,6 +38,7 @@ function u(e) {
     }
     return e;
 }
+
 function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -46,6 +51,7 @@ function d(e, t) {
     }
     return n;
 }
+
 function f(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -57,6 +63,7 @@ function f(e, t) {
         e
     );
 }
+
 function p(e, t) {
     if (null == e) return {};
     var n,
@@ -73,6 +80,7 @@ function p(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function _(e, t) {
     if (null == e) return {};
     var n,
@@ -149,7 +157,9 @@ let h = {
                     },
                     O,
                 ),
-                { children: t },
+                {
+                    children: t,
+                },
             ),
         );
     };
@@ -176,7 +186,12 @@ let h = {
             (m.style = u({}, m.style, e.props.style)), (m.className = s()(e.props.className, n)), i.cloneElement(e, m)
         );
     }
-    return (0, r.jsx)("div", f(u({}, m), { children: t }));
+    return (0, r.jsx)(
+        "div",
+        f(u({}, m), {
+            children: t,
+        }),
+    );
 }),
     (b.Direction = h),
     (b.Align = g),

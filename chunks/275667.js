@@ -1,4 +1,6 @@
-n.d(t, { G: () => d });
+n.d(t, {
+    G: () => d,
+});
 var r = n(627968),
     l = n(311907),
     i = n(397927),
@@ -6,6 +8,7 @@ var r = n(627968),
     s = n(461213),
     o = n(985018),
     c = n(73187);
+
 function u(e) {
     let { onClick: t } = e;
     return (0, r.jsx)(i.DUT, {
@@ -19,9 +22,14 @@ function u(e) {
         }),
     });
 }
+
 function d(e) {
     let { onClick: t } = e,
         n = a.tz.useSetting(),
         o = (0, l.bG)([s.A], () => s.A.getStatus());
-    return __OVERLAY__ || (n && o !== i.clD.INVISIBLE) ? null : (0, r.jsx)(u, { onClick: t });
+    return __OVERLAY__ || (n && o !== i.clD.INVISIBLE)
+        ? null
+        : (0, r.jsx)(u, {
+              onClick: t,
+          });
 }

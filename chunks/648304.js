@@ -1,10 +1,13 @@
-n.d(t, { a: () => l });
+n.d(t, {
+    a: () => l,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
     a = n(769015),
     s = n(985018),
     o = n(365282);
+
 function l(e) {
     let { applications: t } = e;
     return (0, r.jsxs)(r.Fragment, {

@@ -1,9 +1,12 @@
-n.d(i, { default: () => e });
+n.d(i, {
+    default: () => e,
+});
 var a = n(627968);
 n(64700);
 var r = n(158954),
     s = n(397927),
     l = n(985018);
+
 function e(t) {
     let { onClose: i, onConfirmDelete: n, transitionState: e } = t;
     return (0, a.jsx)(r.Modal, {

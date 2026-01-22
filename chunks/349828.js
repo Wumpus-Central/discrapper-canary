@@ -9,5 +9,5 @@ let i = "373",
         name: "Favorites",
         description: "The place for all your favorite channels!",
         joinedAt: new Date(),
-        maxMembers: 500000,
+        maxMembers: 5e5,
     });

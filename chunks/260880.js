@@ -1,10 +1,14 @@
-n.d(t, { A: () => d }), n(896048);
+n.d(t, {
+    A: () => d,
+}),
+    n(896048);
 var a = n(627968),
     l = n(64700),
     i = n(503698),
     r = n.n(i),
     s = n(761929),
     o = n(124070);
+
 function c(e) {
     let { resizableNode: t, minHeight: n, onResize: l } = e,
         i = (0, s.A)({
@@ -19,6 +23,7 @@ function c(e) {
         className: o.Di,
     });
 }
+
 function d(e) {
     let { children: t, className: n, initialHeight: i, minHeight: s } = e,
         d = l.useRef(null),

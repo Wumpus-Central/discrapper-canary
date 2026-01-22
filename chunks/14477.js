@@ -1,4 +1,8 @@
-n.d(t, { A: () => y }), n(321073), n(896048);
+n.d(t, {
+    A: () => y,
+}),
+    n(321073),
+    n(896048);
 var r = n(205693),
     i = n(827343),
     a = n(439372),
@@ -8,6 +12,7 @@ var r = n(205693),
     c = n(723702),
     u = n(842772),
     d = n(652215);
+
 function f(e, t, n) {
     return (
         t in e
@@ -32,6 +37,7 @@ let p = "c6_BVC",
 for (let e of ((0, c.isMac)() ? (g = n(361494)) : (0, c.isWindows)() && (g = n(699248)), g.block_list))
     "name" in e && m.push(e.name.toLowerCase());
 for (let e of g.allow_list) "name" in e && h.push(e.name.toLowerCase());
+
 function E() {
     var e;
     if ((!(0, c.isMac)() && !(0, c.isWindows)()) || !o.A.getKrispModels().includes(p)) return;
@@ -40,8 +46,15 @@ function E() {
         r = null != l.A.getChannelId();
     if (null == n) return;
     let a = null == (e = l.A.getRTCConnection()) ? void 0 : e.getInputDeviceSampleRate(),
-        s = u._.getCurrentConfig({ location: "KrispBVCDeviceManager" }, { autoTrackExposure: !1 }).allowBVC;
-    if (null != a && a < 16000) {
+        s = u._.getCurrentConfig(
+            {
+                location: "KrispBVCDeviceManager",
+            },
+            {
+                autoTrackExposure: !1,
+            },
+        ).allowBVC;
+    if (null != a && a < 16e3) {
         o.A.getKrispModelOverride() &&
             (_.info("BVC model doesn't support <16kHz sample rate, disabling BVC."), i.A.setKrispModelOverride(""));
         return;
@@ -53,7 +66,11 @@ function E() {
         return;
     }
     h.some((e) => d.includes(e))
-        ? (r && u._.trackExposure({ location: "KrispBVCDeviceManager" }), s)
+        ? (r &&
+              u._.trackExposure({
+                  location: "KrispBVCDeviceManager",
+              }),
+          s)
             ? o.A.getKrispModelOverride() !== p &&
               (_.info("BVC compatible with device, enabling BVC."), i.A.setKrispModelOverride(p))
             : i.A.setKrispModelOverride("")

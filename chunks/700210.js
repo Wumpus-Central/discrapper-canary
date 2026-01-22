@@ -1,4 +1,7 @@
-n.d(t, { A: () => E }), n(321073);
+n.d(t, {
+    A: () => E,
+}),
+    n(321073);
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -14,6 +17,7 @@ var r = n(627968),
     h = n(576705),
     m = n(652215),
     g = n(985018);
+
 function E(e) {
     var t;
     let { user: E, application: b, guildId: y, context: O, onItemClick: A } = e,
@@ -53,10 +57,15 @@ function E(e) {
                 (c.A.open(S.id, m.BEX.INTEGRATIONS), o.A.setSection(m.wLn.APPLICATION, v), null == A || A());
         }, [v, null == S ? void 0 : S.id, A]),
         L = i.useCallback(() => {
-            (0, f.openUserSettings)(u.X.AUTHORIZED_APPS_PANEL, { section: m.nc_.AUTHORIZED_APPS });
+            (0, f.openUserSettings)(u.X.AUTHORIZED_APPS_PANEL, {
+                section: m.nc_.AUTHORIZED_APPS,
+            });
             let e = "";
             null != b ? (e = b.name) : null != E && (e = E.username),
-                "" !== e && d.iU.setState({ searchQuery: e }),
+                "" !== e &&
+                    d.iU.setState({
+                        searchQuery: e,
+                    }),
                 null == A || A();
         }, [b, A, E]);
     if (O === m.BRT.POPOUT) return null;

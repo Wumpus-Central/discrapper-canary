@@ -1,4 +1,11 @@
-n.d(t, { default: () => H }), n(65821), n(896048), n(321073), n(638769), n(457529);
+n.d(t, {
+    default: () => H,
+}),
+    n(65821),
+    n(896048),
+    n(321073),
+    n(638769),
+    n(457529);
 var l = n(627968),
     r = n(64700),
     a = n(812729),
@@ -32,6 +39,7 @@ var l = n(627968),
     D = n(652215),
     T = n(985018),
     M = n(345860);
+
 function R(e, t) {
     return i()(e, t);
 }
@@ -45,11 +53,13 @@ let C = new x.SnowflakeSequence(),
         m.aI.MINIMIZED,
         m.aI.UNKNOWN,
     ]);
+
 function F(e) {
     for (let t of Object.values(G.default.getClosedTrackedGamesHistory()))
         if (t.applicationId === e.id || t.gameName === e.name) return t;
     return null;
 }
+
 function U(e) {
     var t, n, l;
     let r = F(e);
@@ -63,6 +73,7 @@ function U(e) {
         runningGame: null != e.name && null != (l = y.Ay.getGameForName(e.name)) ? l : void 0,
     };
 }
+
 function B(e) {
     var t, n;
     let [l] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [b.A];
@@ -115,6 +126,7 @@ function B(e) {
         linkedApplications: void 0,
     };
 }
+
 function K(e) {
     let { selectedGame: t, setSelectedGame: n } = e,
         r = (0, o.yK)([b.A, y.Ay], () => {
@@ -178,6 +190,7 @@ let q = {
         }
     },
 };
+
 function H(e) {
     var t, a;
     let { onClose: i, transitionState: p, location: b, appContext: x } = e,
@@ -319,10 +332,7 @@ function H(e) {
                     return !0;
                 }),
                 P = O.A.getRecentActions(10),
-                T = N.A.getRecentExperimentBuckets(
-                    v.A.getAllExperimentAssignments(),
-                    new Date(Date.now() - 7776000000),
-                ),
+                T = N.A.getRecentExperimentBuckets(v.A.getAllExperimentAssignments(), new Date(Date.now() - 7776e6)),
                 M =
                     (null == c ? void 0 : c.fullscreenHistory) == null
                         ? null
@@ -366,7 +376,7 @@ function H(e) {
                     location: b,
                 };
             await I.default.track(D.HAw.OVERLAY_BUG_REPORT, R),
-                await (0, s.yy)(1000),
+                await (0, s.yy)(1e3),
                 et(!1),
                 null == i || i(),
                 (0, d.mMO)(
@@ -402,7 +412,9 @@ function H(e) {
                                 })({}, t),
                             );
                     },
-                    { contextKey: (0, d.TId)(x) },
+                    {
+                        contextKey: (0, d.TId)(x),
+                    },
                 );
         };
     return (
@@ -476,7 +488,7 @@ function H(e) {
                             (0, l.jsx)(d.fs1, {
                                 autosize: !0,
                                 value: z,
-                                maxLength: 1000,
+                                maxLength: 1e3,
                                 showCharacterCount: !1,
                                 placeholder: T.intl.string(T.t["68mJXW"]),
                                 onChange: J,
@@ -488,7 +500,9 @@ function H(e) {
                             }),
                         ],
                     }),
-                    (0, l.jsx)("div", { className: M.hr }),
+                    (0, l.jsx)("div", {
+                        className: M.hr,
+                    }),
                     (0, l.jsxs)("div", {
                         className: M.DB,
                         children: [

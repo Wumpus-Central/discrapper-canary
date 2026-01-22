@@ -1,4 +1,7 @@
-s.d(t, { A: () => h }), s(896048);
+s.d(t, {
+    A: () => h,
+}),
+    s(896048);
 var r = s(627968),
     a = s(64700),
     n = s(503698),
@@ -9,6 +12,7 @@ var r = s(627968),
     o = s(652215),
     m = s(985018),
     x = s(230378);
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var s = null != arguments[t] ? arguments[t] : {},
@@ -34,6 +38,7 @@ function u(e) {
     }
     return e;
 }
+
 function j(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -52,10 +57,13 @@ function j(e, t) {
         e
     );
 }
+
 function f(e) {
     let { price: t, selected: s, onClick: a } = e;
     return (0, r.jsxs)(c.DUT, {
-        className: l()(x.y3, { [x.wH]: s }),
+        className: l()(x.y3, {
+            [x.wH]: s,
+        }),
         onClick: a,
         children: [
             s
@@ -94,6 +102,7 @@ function f(e) {
         ],
     });
 }
+
 function h(e) {
     let { selectedTemplate: t, handleSelectTemplate: s, newPricesToPick: n } = e,
         [l, i] = a.useState(0);
@@ -105,7 +114,9 @@ function h(e) {
                 children: [
                     (0, r.jsx)(c.Heading, {
                         variant: "heading-md/semibold",
-                        children: m.intl.format(m.t["5WZ9Ct"], { tierName: t.listings[0].name }),
+                        children: m.intl.format(m.t["5WZ9Ct"], {
+                            tierName: t.listings[0].name,
+                        }),
                     }),
                     (0, r.jsx)(c.Text, {
                         variant: "text-sm/normal",
@@ -131,7 +142,15 @@ function h(e) {
                 variant: "primary",
                 text: m.intl.string(m.t["1W7mCt"]),
                 onClick: () => {
-                    s(j(u({}, t), { listings: [j(u({}, t.listings[0]), { price_tier: n[l] })] }));
+                    s(
+                        j(u({}, t), {
+                            listings: [
+                                j(u({}, t.listings[0]), {
+                                    price_tier: n[l],
+                                }),
+                            ],
+                        }),
+                    );
                 },
             }),
         ],

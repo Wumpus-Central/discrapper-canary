@@ -51,7 +51,7 @@ e.exports = function (e, t, n, _, h, m, g, E) {
     for (R = 0; R <= i; R++) F[R] = 0;
     for (w = 0; w < _; w++) F[t[n + w]]++;
     for (x = N, D = i; D >= 1 && 0 === F[D]; D--);
-    if ((x > D && (x = D), 0 === D)) return (h[m++] = 20971520), (h[m++] = 20971520), (E.bits = 1), 0;
+    if ((x > D && (x = D), 0 === D)) return (h[m++] = 0x1400000), (h[m++] = 0x1400000), (E.bits = 1), 0;
     for (P = 1; P < D && 0 === F[P]; P++);
     for (x < P && (x = P), M = 1, R = 1; R <= i; R++) if (((M <<= 1), (M -= F[R]) < 0)) return -1;
     if (M > 0 && (e === o || 1 !== D)) return -1;

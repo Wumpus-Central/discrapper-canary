@@ -1,4 +1,6 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(627968),
     i = n(64700),
     l = n(481859),
@@ -12,7 +14,9 @@ class o extends i.PureComponent {
             : (0, r.jsxs)("div", {
                   className: e,
                   children: [
-                      (0, r.jsx)(l.A, { children: a.intl.string(a.t.m8OiMv) }),
+                      (0, r.jsx)(l.A, {
+                          children: a.intl.string(a.t.m8OiMv),
+                      }),
                       (0, r.jsx)("div", {
                           className: s.Q,
                           children: t.legalNotice,

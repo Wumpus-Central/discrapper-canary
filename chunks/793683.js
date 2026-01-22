@@ -1,10 +1,13 @@
-n.d(t, { v: () => c });
+n.d(t, {
+    v: () => c,
+});
 var r = n(64700),
     l = n(793574),
     o = n(979286),
     i = n(92246),
     s = n(201805),
     a = n(758836);
+
 function c(e) {
     var t;
     let { quest: n, questContent: c, sourceQuestContent: u, onCloseModal: d, shouldShowShopIfAlreadyClaimed: f } = e,

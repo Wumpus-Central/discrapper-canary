@@ -1,4 +1,10 @@
-n.d(t, { A: () => p }), n(591487), n(727858), n(747238), n(896048);
+n.d(t, {
+    A: () => p,
+}),
+    n(591487),
+    n(727858),
+    n(747238),
+    n(896048);
 var r = n(284009),
     i = n.n(r),
     a = n(451909),
@@ -7,6 +13,7 @@ var r = n(284009),
     l = n(652215);
 let c = new RegExp(/@(:?everyone|here)/),
     u = 30;
+
 function d(e, t) {
     let n = 0;
     if (t.isThread()) {
@@ -20,6 +27,7 @@ function d(e, t) {
         n
     );
 }
+
 function f(e) {
     if ("string" == typeof e.content) {
         var t;

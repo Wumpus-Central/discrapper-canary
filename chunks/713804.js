@@ -24,17 +24,30 @@ let p = (0, f.A)([
             mustConfirmExternalLink: !0,
         }),
     ]),
-    _ = new (s())({ max: 2000 }),
+    _ = new (s())({
+        max: 2e3,
+    }),
     h = c.aV(p),
     m;
+
 function g(e) {
     let t = _.get(e);
     return null != t || ((t = m(e, !0)), _.set(e, t)), t;
 }
+
 function E(e) {
     if (0 === e.trim().length) return null;
     let t = g(e);
     return l().reactFor(l().ruleOutput(p, "react"))(t);
 }
 let b = ["link", "url", "autolink", "customEmoji", "emoji", "commandMention"],
-    y = c.aV((0, f.A)([i().omit(p, b), { emoji: { react: () => null } }]));
+    y = c.aV(
+        (0, f.A)([
+            i().omit(p, b),
+            {
+                emoji: {
+                    react: () => null,
+                },
+            },
+        ]),
+    );

@@ -6,6 +6,7 @@ n.d(t, {
     zU: () => l,
 });
 var r = n(73153);
+
 function i(e, t, n, i, a) {
     r.h.dispatch({
         type: "SPEAK_TEXT",
@@ -16,6 +17,7 @@ function i(e, t, n, i, a) {
         onEnd: a,
     });
 }
+
 function a(e, t) {
     r.h.dispatch({
         type: "SPEAK_MESSAGE",
@@ -23,6 +25,7 @@ function a(e, t) {
         message: t,
     });
 }
+
 function s(e, t) {
     r.h.dispatch({
         type: "SPEAKING_MESSAGE",
@@ -30,9 +33,13 @@ function s(e, t) {
         messageId: t,
     });
 }
+
 function o() {
-    r.h.dispatch({ type: "STOP_SPEAKING" });
+    r.h.dispatch({
+        type: "STOP_SPEAKING",
+    });
 }
+
 function l(e) {
     r.h.dispatch({
         type: "SET_TTS_SPEECH_RATE",

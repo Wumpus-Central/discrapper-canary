@@ -1,4 +1,8 @@
-n.d(t, { A: () => O }), n(228524), n(896048);
+n.d(t, {
+    A: () => O,
+}),
+    n(228524),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -13,6 +17,7 @@ var r = n(627968),
     h = n(652215),
     A = n(985018),
     g = n(239997);
+
 function m(e, t, n) {
     return (
         t in e
@@ -26,6 +31,7 @@ function m(e, t, n) {
         e
     );
 }
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -56,7 +62,10 @@ let _ = {
                 user2: t.username,
                 user2Hook: () => n(t),
             }),
-        other: (e) => A.intl.format(A.t["8fMgRU"], { count: e }),
+        other: (e) =>
+            A.intl.format(A.t["8fMgRU"], {
+                count: e,
+            }),
     },
     [h.g_B.RECENTLY_PLAYED]: {
         single: (e, t) =>
@@ -71,7 +80,10 @@ let _ = {
                 user2: t.username,
                 user2Hook: () => n(t),
             }),
-        other: (e) => A.intl.format(A.t.yNuaTU, { count: e }),
+        other: (e) =>
+            A.intl.format(A.t.yNuaTU, {
+                count: e,
+            }),
     },
     [h.g_B.EVER_PLAYED]: {
         single: (e, t) =>
@@ -86,7 +98,10 @@ let _ = {
                 user2: t.username,
                 user2Hook: () => n(t),
             }),
-        other: (e) => A.intl.format(A.t.Yx1rjU, { count: e }),
+        other: (e) =>
+            A.intl.format(A.t.Yx1rjU, {
+                count: e,
+            }),
     },
 };
 class E extends i.PureComponent {
@@ -117,7 +132,10 @@ class E extends i.PureComponent {
                             },
                             t,
                         )),
-                        (i = i = { children: e.username }),
+                        (i = i =
+                            {
+                                children: e.username,
+                            }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
                             : (function (e, t) {
@@ -170,7 +188,9 @@ class E extends i.PureComponent {
                 (0, r.jsxs)("div", {
                     className: g.YL,
                     children: [
-                        (0, r.jsx)("div", { children: f.Ay.getUserTag(e) }),
+                        (0, r.jsx)("div", {
+                            children: f.Ay.getUserTag(e),
+                        }),
                         (0, r.jsx)(u.Ay, {
                             className: g.ER,
                             start: t,
@@ -195,13 +215,17 @@ class E extends i.PureComponent {
                               children: (t) =>
                                   (0, r.jsx)(s.m, {
                                       __unsupportedReactNodeAsText: this.renderUserTooltip(e, l.startTime, l.endTime),
-                                      "aria-label": (0, f.QV)(e, { decoration: "never" }),
+                                      "aria-label": (0, f.QV)(e, {
+                                          decoration: "never",
+                                      }),
                                       children: (0, r.jsx)(
                                           o.euF,
                                           b(
                                               {
                                                   ref: this.playerAvatarRef,
-                                                  className: a()(g.jd, { [g.hC]: !i }),
+                                                  className: a()(g.jd, {
+                                                      [g.hC]: !i,
+                                                  }),
                                                   src: e.getAvatarURL(void 0, 32),
                                                   "aria-label": e.username,
                                                   size: o._3J.SIZE_32,

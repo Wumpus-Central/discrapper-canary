@@ -1,4 +1,6 @@
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 let r = (0, n(353640).v)((e) => ({
         utmSourceCurrent: void 0,
         utmMediumCurrent: void 0,

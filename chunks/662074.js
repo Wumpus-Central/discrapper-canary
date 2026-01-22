@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(627968),
     i = n(64700),
     l = n(397927),
@@ -7,6 +9,7 @@ var r = n(627968),
     o = n(120006),
     c = n(985018),
     u = n(97276);
+
 function d() {
     return (0, r.jsxs)("header", {
         className: u.wx,

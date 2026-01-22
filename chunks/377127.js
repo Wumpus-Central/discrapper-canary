@@ -1,4 +1,6 @@
-e.d(a, { A: () => t });
+e.d(a, {
+    A: () => t,
+});
 var n = e(981737);
 let t = {
     ordinalNumber: function (i, a) {
@@ -6,9 +8,9 @@ let t = {
     },
     era: (0, n.A)({
         values: {
-            narrow: ["Î", "D"],
-            abbreviated: ["Î.d.C.", "D.C."],
-            wide: ["Înainte de Cristos", "După Cristos"],
+            narrow: ["\xce", "D"],
+            abbreviated: ["\xce.d.C.", "D.C."],
+            wide: ["\xcenainte de Cristos", "După Cristos"],
         },
         defaultWidth: "wide",
     }),
@@ -47,9 +49,9 @@ let t = {
     day: (0, n.A)({
         values: {
             narrow: ["d", "l", "m", "m", "j", "v", "s"],
-            short: ["du", "lu", "ma", "mi", "jo", "vi", "sâ"],
-            abbreviated: ["dum", "lun", "mar", "mie", "joi", "vin", "sâm"],
-            wide: ["duminică", "luni", "marți", "miercuri", "joi", "vineri", "sâmbătă"],
+            short: ["du", "lu", "ma", "mi", "jo", "vi", "s\xe2"],
+            abbreviated: ["dum", "lun", "mar", "mie", "joi", "vin", "s\xe2m"],
+            wide: ["duminică", "luni", "marți", "miercuri", "joi", "vineri", "s\xe2mbătă"],
         },
         defaultWidth: "wide",
     }),

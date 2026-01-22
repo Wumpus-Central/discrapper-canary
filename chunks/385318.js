@@ -1,4 +1,6 @@
-n.d(t, { default: () => S });
+n.d(t, {
+    default: () => S,
+});
 var l = n(627968);
 n(64700);
 var r = n(110259),
@@ -22,6 +24,7 @@ var r = n(110259),
     v = n(731854),
     O = n(985018),
     x = n(220636);
+
 function S(e) {
     let {
             onClose: t,
@@ -41,7 +44,9 @@ function S(e) {
     (0, d.A)({
         type: r.ImpressionTypes.MENU,
         name: r.ImpressionNames.AUDIO_DEVICE_MENU,
-        properties: { location_stack: k },
+        properties: {
+            location_stack: k,
+        },
     });
     let L = (0, y.A)(P),
         M = (0, f.H)({
@@ -109,7 +114,10 @@ function S(e) {
                                   checked: z === _.TBI.PUSH_TO_TALK,
                                   id: "input-mode",
                                   label: O.intl.string(O.t.Q8gkVL),
-                                  action: () => o.A.setMode(K, void 0, void 0, { analyticsLocations: k }),
+                                  action: () =>
+                                      o.A.setMode(K, void 0, void 0, {
+                                          analyticsLocations: k,
+                                      }),
                                   disabled: V === E.my.STUDIO,
                               })
                             : null,

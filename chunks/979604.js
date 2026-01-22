@@ -1,4 +1,8 @@
-n.d(t, { A: () => k }), n(65821), n(896048);
+n.d(t, {
+    A: () => k,
+}),
+    n(65821),
+    n(896048);
 var r,
     i = n(627968),
     a = n(64700),
@@ -24,6 +28,7 @@ var r,
     I = n(652215),
     T = n(985018),
     C = n(643966);
+
 function N(e, t, n) {
     return (
         t in e
@@ -37,6 +42,7 @@ function N(e, t, n) {
         e
     );
 }
+
 function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -53,6 +59,7 @@ function R(e) {
     }
     return e;
 }
+
 function w(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -65,6 +72,7 @@ function w(e, t) {
     }
     return n;
 }
+
 function P(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -113,13 +121,20 @@ let x = Object.freeze({
         T.intl.string(T.t["YyY51/"]),
         T.intl.string(T.t.PbHJb3),
     ];
+
 function j(e) {
     let t = A.zJ(e.sku);
-    return null != t ? T.intl.formatToPlainString(T.t.Aqe2ZC, { date: t }) : null;
+    return null != t
+        ? T.intl.formatToPlainString(T.t.Aqe2ZC, {
+              date: t,
+          })
+        : null;
 }
 class M extends (r = a.Component) {
     get analyticsLocation() {
-        return P(R({}, this.props.analyticsContext.location), { object: I.ZSU.BUTTON_CTA });
+        return P(R({}, this.props.analyticsContext.location), {
+            object: I.ZSU.BUTTON_CTA,
+        });
     }
     getText(e) {
         switch (("uninstalling" !== e && (this._uninstallStringIndex = null), e)) {
@@ -208,7 +223,9 @@ class M extends (r = a.Component) {
                         (0, i.jsx)(c.m, {
                             text: t,
                             position: o,
-                            children: (0, i.jsx)("div", { className: C.p5 }),
+                            children: (0, i.jsx)("div", {
+                                className: C.p5,
+                            }),
                         }),
                     ],
                 }),
@@ -256,7 +273,9 @@ class M extends (r = a.Component) {
         if ("unsupported_os" === n)
             return this.renderDisabledButton(
                 n,
-                T.intl.formatToPlainString(T.t.LBm0A4, { operatingSystem: T.intl.string(T.t["0/xHFO"]) }),
+                T.intl.formatToPlainString(T.t.LBm0A4, {
+                    operatingSystem: T.intl.string(T.t["0/xHFO"]),
+                }),
             );
         if ("install" === n && e) return this.renderDisabledButton(n, T.intl.string(T.t.QUSQIA));
         let r = this.onClickHandlers[n];
@@ -292,6 +311,7 @@ class M extends (r = a.Component) {
             });
     }
 }
+
 function k(e) {
     let { libraryApplication: t } = e,
         n = (0, f.p)(),

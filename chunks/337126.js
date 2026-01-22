@@ -6,11 +6,13 @@ n.r(t),
         useMemoOne: () => a,
     });
 var r = n(64700);
+
 function i(e, t) {
     if (e.length !== t.length) return !1;
     for (var n = 0; n < e.length; n++) if (e[n] !== t[n]) return !1;
     return !0;
 }
+
 function a(e, t) {
     var n = (0, r.useState)(function () {
             return {
@@ -37,6 +39,7 @@ function a(e, t) {
         o.result
     );
 }
+
 function s(e, t) {
     return a(function () {
         return e;

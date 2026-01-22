@@ -9,6 +9,7 @@ var i = n(812729),
     r = n.n(i),
     l = n(839214),
     a = n(652896);
+
 function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,6 +35,7 @@ function o(e) {
     }
     return e;
 }
+
 function s(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -52,15 +54,20 @@ function s(e, t) {
         e
     );
 }
-let c = (0, l.D)(() => ({ streams: {} }));
+let c = (0, l.D)(() => ({
+    streams: {},
+}));
+
 function u(e) {
     var t, n;
     let i = (0, a._z)(e);
     return null != (t = null == (n = c.useState((e) => e.streams, r())[i]) ? void 0 : n.zoom) ? t : 100;
 }
+
 function d(e) {
     return u(e) / 100;
 }
+
 function p(e, t) {
     let n = (0, a._z)(e);
     c.setState((e) => {
@@ -75,6 +82,7 @@ function p(e, t) {
         });
     }, !0);
 }
+
 function h(e, t) {
     let n = (0, a._z)(e);
     c.setState((e) => {
@@ -89,6 +97,7 @@ function h(e, t) {
         });
     });
 }
+
 function f(e) {
     var t;
     let n = (0, a._z)(e);

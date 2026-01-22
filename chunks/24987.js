@@ -1,4 +1,6 @@
-t.d(e, { default: () => h });
+t.d(e, {
+    default: () => h,
+});
 var i = t(627968);
 t(64700);
 var o = t(397927),
@@ -11,6 +13,7 @@ var o = t(397927),
     C = t(25765),
     b = t(652215),
     g = t(689588);
+
 function h(n) {
     let { transitionState: e, onClose: t, analyticsLocation: h } = n,
         {
@@ -77,7 +80,9 @@ function h(n) {
                 }),
                 (0, i.jsx)(o.q7S, {
                     id: C.N.SUCCESS,
-                    children: (0, i.jsx)(c.A, { onClose: t }),
+                    children: (0, i.jsx)(c.A, {
+                        onClose: t,
+                    }),
                 }),
             ],
         }),

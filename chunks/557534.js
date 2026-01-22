@@ -28,6 +28,7 @@ var r,
     x = n(652215),
     E = n(985018),
     _ = n(728444);
+
 function C(e, t, n) {
     return (
         t in e
@@ -41,6 +42,7 @@ function C(e, t, n) {
         e
     );
 }
+
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -57,12 +59,15 @@ function S(e) {
     }
     return e;
 }
+
 function I(e, t, n) {
     return null != t && !!t && !(0, v.ws)(n, e.type);
 }
+
 function N(e, t) {
     return null == t ? _.fx : e > t ? _.mU : _.TR;
 }
+
 function T(e) {
     let { channel: t, disableManageChannels: n, tabIndex: r, forceShowButtons: i, hasChannelInfo: a = !1 } = e;
     return (0, o.bG)(
@@ -97,6 +102,7 @@ function T(e) {
               }),
           });
 }
+
 function P(e) {
     let {
             channel: t,
@@ -186,6 +192,7 @@ function P(e) {
         })
     );
 }
+
 function w(e) {
     let { channel: t } = e;
     return (0, l.jsx)(c.m, {
@@ -205,6 +212,7 @@ function w(e) {
         }),
     });
 }
+
 function R(e) {
     let { channel: t } = e;
     return (0, l.jsx)(c.m, {
@@ -213,7 +221,9 @@ function R(e) {
         children: (0, l.jsx)(u.DUT, {
             className: _.Xs,
             onClick: () => {
-                (0, h.jA)(t.guild_id, t.id, !0, { section: x.JJy.CHANNEL_LIST });
+                (0, h.jA)(t.guild_id, t.id, !0, {
+                    section: x.JJy.CHANNEL_LIST,
+                });
             },
             "aria-label": E.intl.string(E.t["N2c/Un"]),
             children: (0, l.jsx)(u.A9s, {
@@ -246,4 +256,6 @@ class D extends (r = i.PureComponent) {
         return I(e, t, n);
     }
 }
-C(D, "defaultProps", { isDefaultChannel: !1 });
+C(D, "defaultProps", {
+    isDefaultChannel: !1,
+});

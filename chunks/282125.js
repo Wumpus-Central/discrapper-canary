@@ -1,7 +1,10 @@
-n.d(e, { A: () => a });
+n.d(e, {
+    A: () => a,
+});
 var r = n(627968);
 n(64700);
 var l = n(192308);
+
 function a(t) {
     (0, l.openModalLazy)(async () => {
         let { default: e } = await n.e("3250").then(n.bind(n, 737865));

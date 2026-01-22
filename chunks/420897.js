@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(668459),
     i = n(643479);
 let a = 0,
@@ -12,7 +14,7 @@ let a = 0,
     p = 8,
     _ = 24,
     h = {
-        2000: {
+        2e3: {
             name: "PathInformation",
             description: m,
         },
@@ -24,6 +26,7 @@ let a = 0,
             },
         },
     };
+
 function m(e) {
     let t = 2,
         n = {},
@@ -80,23 +83,27 @@ let g = {
         path: y,
     },
 };
+
 function E(e, t) {
     let n = 8,
         r = [];
     for (let i = 0; i < _; i += n) r.push(b(e, t + i));
     return r;
 }
+
 function b(e, t) {
     let n = O(e, t, 8);
     return [O(e, t + 4, 8), n];
 }
+
 function y(e, t) {
     return [[O(e, t, 8), O(e, t + 4, 8), O(e, t + 8, 8), O(e, t + 12, 8)], O(e, t + 16, 8)];
 }
+
 function O(e, t, n) {
     let a = r.A.getLongAt(e, t),
         s = a >>> 31 == 0 ? 1 : -1,
-        o = (2130706432 & a) >>> (32 - n),
+        o = (0x7f000000 & a) >>> (32 - n),
         l = a & parseInt((0, i.tp)("1", 32 - n), 2);
     return s * (0, i.Aj)(o.toString(2) + "." + (0, i.CF)(l.toString(2), 32 - n, "0"), 2);
 }

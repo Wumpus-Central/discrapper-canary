@@ -11,7 +11,10 @@ function r(e, t, n) {
         e
     );
 }
-n.d(t, { A: () => i }), n(65821);
+n.d(t, {
+    A: () => i,
+}),
+    n(65821);
 class i {
     get fails() {
         return this._fails;

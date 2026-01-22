@@ -1,10 +1,15 @@
-n.d(t, { A: () => c }), n(321073), n(896048);
+n.d(t, {
+    A: () => c,
+}),
+    n(321073),
+    n(896048);
 var r = n(284009),
     i = n.n(r),
     a = n(656470),
     s = n.n(a),
     o = n(731854);
 let l = [o.fS.WINDOW, o.fS.SCREEN];
+
 function c(e, t, n) {
     var r;
     let a = window.DiscordNative;

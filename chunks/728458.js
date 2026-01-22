@@ -1,8 +1,13 @@
-n.d(t, { A: () => f }), n(896048), n(65821);
+n.d(t, {
+    A: () => f,
+}),
+    n(896048),
+    n(65821);
 var r = n(668279),
     i = n(761296),
     a = n(723702),
     s = n(837921);
+
 function o(e, t, n) {
     return (
         t in e
@@ -16,6 +21,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -32,6 +38,7 @@ function l(e) {
     }
     return e;
 }
+
 function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -44,6 +51,7 @@ function c(e, t) {
     }
     return n;
 }
+
 function u(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -55,6 +63,7 @@ function u(e, t) {
         e
     );
 }
+
 function d() {
     var e, t, n, r, i, o;
     let l = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
@@ -120,7 +129,13 @@ let f = {
                         t.addEventProcessor((e) => {
                             var t, n;
                             let r = null == (n = e.exception) || null == (t = n.values) ? void 0 : t[0];
-                            return null != r && (r.mechanism = u(l({}, r.mechanism), { handled: !1 })), e;
+                            return (
+                                null != r &&
+                                    (r.mechanism = u(l({}, r.mechanism), {
+                                        handled: !1,
+                                    })),
+                                e
+                            );
                         }),
                         (r = null == (n = window.DiscordSentry) ? void 0 : n.captureException(e));
                 }),

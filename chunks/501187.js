@@ -1,4 +1,6 @@
-n.d(t, { W: () => A });
+n.d(t, {
+    W: () => A,
+});
 var r = n(627968);
 n(64700);
 var i = n(607399),
@@ -14,6 +16,7 @@ var i = n(607399),
     p = n(985018),
     g = n(886083),
     m = n(604880);
+
 function A(e) {
     let { token: t, hasError: n, errorReason: A } = e;
     return n
@@ -30,7 +33,9 @@ function A(e) {
                   (0, r.jsxs)("div", {
                       className: g.Qs,
                       children: [
-                          (0, r.jsx)(a.DeQ, { alt: "" }),
+                          (0, r.jsx)(a.DeQ, {
+                              alt: "",
+                          }),
                           (0, r.jsx)(o.Heading, {
                               variant: "heading-lg/semibold",
                               className: g.ky,
@@ -46,7 +51,9 @@ function A(e) {
                               text: p.intl.string(p.t.j3cG2p),
                               fullWidth: !0,
                               onClick: () => {
-                                  d.default.track(f.HAw.ONE_TIME_LOGIN_BACK_TO_LOGIN_CLICKED, { error_reason: A }),
+                                  d.default.track(f.HAw.ONE_TIME_LOGIN_BACK_TO_LOGIN_CLICKED, {
+                                      error_reason: A,
+                                  }),
                                       (0, c.pX)(f.BVt.LOGIN);
                               },
                           }),
@@ -67,7 +74,9 @@ function A(e) {
                   (0, r.jsxs)("div", {
                       className: g.Qs,
                       children: [
-                          (0, r.jsx)(a.DeQ, { alt: "" }),
+                          (0, r.jsx)(a.DeQ, {
+                              alt: "",
+                          }),
                           (0, r.jsx)(o.Heading, {
                               variant: "heading-lg/semibold",
                               className: g.ky,
@@ -116,7 +125,10 @@ function A(e) {
                                               source: r.utmSource,
                                           }),
                                       h.A.launch(n, (e) => {
-                                          e || (0, c.bG)({ pathname: f.BVt.LOGIN });
+                                          e ||
+                                              (0, c.bG)({
+                                                  pathname: f.BVt.LOGIN,
+                                              });
                                       });
                               },
                           }),

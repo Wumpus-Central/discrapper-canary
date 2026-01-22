@@ -1,5 +1,8 @@
-n.d(t, { m: () => i });
+n.d(t, {
+    m: () => i,
+});
 var r = n(7864);
+
 function i(e, t) {
     var n, i;
     let a = (null == (n = e.tags) ? void 0 : n.guild_connections) !== void 0,

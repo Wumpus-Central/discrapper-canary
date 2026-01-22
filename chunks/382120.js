@@ -1,4 +1,8 @@
-t.d(l, { A: () => f }), t(228524), t(938796);
+t.d(l, {
+    A: () => f,
+}),
+    t(228524),
+    t(938796);
 var n = t(627968);
 t(64700);
 var i = t(158954),
@@ -8,6 +12,7 @@ var i = t(158954),
     o = t(622543),
     d = t(985018),
     c = t(437102);
+
 function u(e) {
     let { icon: l, title: t, description: i } = e;
     return (0, n.jsxs)("div", {
@@ -38,6 +43,7 @@ function u(e) {
         ],
     });
 }
+
 function f(e) {
     let { user: l } = e,
         t = (0, r.bG)([o.A], () => {
@@ -48,7 +54,9 @@ function f(e) {
             hasMessageContent: f,
             hasGuildPresences: p,
             hasGuildMembers: m,
-        } = (0, a.Z)({ flags: null == t ? void 0 : t.flags });
+        } = (0, a.Z)({
+            flags: null == t ? void 0 : t.flags,
+        });
     return (0, n.jsxs)(i.IpV, {
         fade: !0,
         className: c.XG,

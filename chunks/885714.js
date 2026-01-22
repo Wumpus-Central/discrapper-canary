@@ -20,9 +20,11 @@ let c = null,
         Tab: !0,
         Escape: !0,
     };
+
 function h(e, t) {
     for (let n of u) n(e, t);
 }
+
 function m(e) {
     return !(
         e.metaKey ||
@@ -33,15 +35,19 @@ function m(e) {
         "Meta" === e.key
     );
 }
+
 function g(e) {
     (f = !0), m(e) && ((c = "keyboard"), h("keyboard", e));
 }
+
 function E(e) {
     (c = "pointer"), ("mousedown" === e.type || "pointerdown" === e.type) && ((f = !0), h("pointer", e));
 }
+
 function b(e) {
     (0, a.Y)(e) && ((f = !0), (c = "virtual"));
 }
+
 function y(e) {
     e.target !== window &&
         e.target !== document &&
@@ -49,9 +55,11 @@ function y(e) {
         e.isTrusted &&
         (f || p || ((c = "virtual"), h("virtual", e)), (f = !1), (p = !1));
 }
+
 function O() {
     r.lR || ((f = !1), (p = !0));
 }
+
 function A(e) {
     if ("u" < typeof window || "u" < typeof document || d.get((0, s.mD)(e))) return;
     let t = (0, s.mD)(e),
@@ -74,9 +82,13 @@ function A(e) {
             () => {
                 v(e);
             },
-            { once: !0 },
+            {
+                once: !0,
+            },
         ),
-        d.set(t, { focus: r });
+        d.set(t, {
+            focus: r,
+        });
 }
 let v = (e, t) => {
     let n = (0, s.mD)(e),
@@ -95,6 +107,7 @@ let v = (e, t) => {
                 r.removeEventListener("pointerup", E, !0)),
             d.delete(n));
 };
+
 function S(e) {
     let t,
         n = (0, s.TW)(e);
@@ -108,15 +121,19 @@ function S(e) {
         () => v(e, t)
     );
 }
+
 function I() {
     return "pointer" !== c;
 }
+
 function T() {
     return c;
 }
+
 function C(e) {
     (c = e), h(e, null);
 }
+
 function N() {
     A();
     let [e, t] = (0, o.useState)(c);
@@ -137,6 +154,7 @@ function N() {
 }
 "u" > typeof document && S();
 let R = new Set(["checkbox", "radio", "range", "color", "file", "image", "button", "submit", "reset"]);
+
 function w(e, t, n) {
     let r = (0, s.TW)(null == n ? void 0 : n.target),
         i = "u" > typeof window ? (0, s.mD)(null == n ? void 0 : n.target).HTMLInputElement : HTMLInputElement,
@@ -154,6 +172,7 @@ function w(e, t, n) {
         !_[n.key]
     );
 }
+
 function P(e, t, n) {
     A(),
         (0, o.useEffect)(() => {

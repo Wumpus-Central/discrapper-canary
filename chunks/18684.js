@@ -13,7 +13,10 @@ r(
             var t = o(
                 a(this),
                 function (t, n) {
-                    if (t === e) return { key: n };
+                    if (t === e)
+                        return {
+                            key: n,
+                        };
                 },
                 !0,
             );

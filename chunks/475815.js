@@ -7,10 +7,12 @@ n.d(t, {
     tl: () => s,
 });
 var r = n(626584);
+
 function i() {
     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
     return t.find((e) => null != e && a(e));
 }
+
 function a(e) {
     return (
         null != e.requestFullscreen ||
@@ -20,6 +22,7 @@ function a(e) {
         null != e.msRequestFullscreen
     );
 }
+
 function s(e) {
     "function" == typeof e.requestFullscreen
         ? e.requestFullscreen()
@@ -33,6 +36,7 @@ function s(e) {
                 ? e.msRequestFullscreen()
                 : new r.A("FullScreenUtils").warn("Fullscreen API is not supported.");
 }
+
 function o(e, t) {
     let n = null != t ? t : document;
     l(null, n) &&
@@ -48,6 +52,7 @@ function o(e, t) {
                     ? n.msExitFullscreen()
                     : new r.A("FullScreenUtils").warn("Fullscreen API is not supported."));
 }
+
 function l(e, t) {
     let n = null != t ? t : document;
     return !!(
@@ -69,6 +74,7 @@ let c = (() => {
     } else console.warn("FullScreenUtils has been imported in a non-web environment");
     return "fullscreenchange";
 })();
+
 function u(e, t) {
     return (
         e.addEventListener(c, t),

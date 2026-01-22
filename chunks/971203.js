@@ -1,4 +1,6 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var r = n(627968),
     i = n(64700),
     l = n(311907),
@@ -12,6 +14,7 @@ var r = n(627968),
     f = n(954571),
     h = n(652215),
     A = n(985018);
+
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,6 +40,7 @@ function g(e) {
     }
     return e;
 }
+
 function m(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -55,6 +59,7 @@ function m(e, t) {
         e
     );
 }
+
 function b(e) {
     let t = i.useContext(f.AnalyticsContext),
         n = e.voiceChannels[0],
@@ -73,7 +78,9 @@ function b(e) {
                                   h.HAw.ACTIVITY_FEED_VOICE_CHANNEL_VISITED,
                                   g(
                                       {
-                                          source: m(g({}, t.location), { object: h.ZSU.LIST_ITEM }),
+                                          source: m(g({}, t.location), {
+                                              object: h.ZSU.LIST_ITEM,
+                                          }),
                                           guild_id: n.guild.id,
                                           channel_id: n.channel.id,
                                       },
@@ -96,7 +103,9 @@ function b(e) {
                                   h.HAw.ACTIVITY_FEED_GUILD_VISITED,
                                   g(
                                       {
-                                          source: m(g({}, t.location), { object: h.ZSU.LIST_ITEM }),
+                                          source: m(g({}, t.location), {
+                                              object: h.ZSU.LIST_ITEM,
+                                          }),
                                           guild_id: n.guild.id,
                                           af_recently_played: !1,
                                       },

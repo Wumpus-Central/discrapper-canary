@@ -63,7 +63,10 @@ let s = (e) => {
         return r.useMemo(() => {
             var r, l, a, p, f;
             let h = [t, n, s, o, c, u, d].some((e) => null != e);
-            if ((null == e ? void 0 : e.type) === i.G.COACHMARK) return { hasPreviewAssets: !1 };
+            if ((null == e ? void 0 : e.type) === i.G.COACHMARK)
+                return {
+                    hasPreviewAssets: !1,
+                };
             let A = null == e || null == (f = e.refTargetBackground) ? void 0 : f.asset,
                 g = null == A ? void 0 : A.resting,
                 m = null == A ? void 0 : A.hovered;

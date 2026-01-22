@@ -14,6 +14,7 @@ var l = n(627968),
     o = n(590858),
     d = n(652215),
     u = n(985018);
+
 function p(e, t, n) {
     return (
         t in e
@@ -27,6 +28,7 @@ function p(e, t, n) {
         e
     );
 }
+
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -43,6 +45,7 @@ function h(e) {
     }
     return e;
 }
+
 function m(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -61,6 +64,7 @@ function m(e, t) {
         e
     );
 }
+
 function b(e, t) {
     if (null == e) return {};
     var n,
@@ -89,6 +93,7 @@ function b(e, t) {
             (l = n[a]), !(t.indexOf(l) >= 0) && Object.prototype.propertyIsEnumerable.call(e, l) && (r[l] = e[l]);
     return r;
 }
+
 function f(e) {
     return "".concat(e.split("?")[0], "?size=").concat(2048);
 }
@@ -122,7 +127,12 @@ class x extends a.Component {
             { pageSize: t } = e,
             n = b(e, ["pageSize"]),
             a = t === o.q.SMALL ? c.A : i.A;
-        return (0, l.jsx)(a, m(h({}, n), { onCurrentItemClick: this.handleCurrentItemClick }));
+        return (0, l.jsx)(
+            a,
+            m(h({}, n), {
+                onCurrentItemClick: this.handleCurrentItemClick,
+            }),
+        );
     }
     constructor(...e) {
         super(...e),

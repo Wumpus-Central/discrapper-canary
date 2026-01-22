@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968),
     l = n(64700),
     i = n(397927),
@@ -8,10 +10,18 @@ var r = n(627968),
     s = n(957565),
     d = n(723702),
     u = n(985018);
+
 function f(e) {
     let { messageId: t, itemId: n, type: f, imageSrc: g } = e,
         p = c.Q_.useSetting(),
-        { tidaWebformEnabled: b } = a.A.useExperiment({ location: "useMessageDetailsItem" }, { autoTrackExposure: !1 }),
+        { tidaWebformEnabled: b } = a.A.useExperiment(
+            {
+                location: "useMessageDetailsItem",
+            },
+            {
+                autoTrackExposure: !1,
+            },
+        ),
         m = l.useCallback(() => {
             (0, s.C)(t);
         }, [t]),

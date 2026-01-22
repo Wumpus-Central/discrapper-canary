@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(299146),
     i = n(1139),
     a = n(527758),
@@ -26,7 +28,9 @@ var o = n(64700),
                 i = r.handleExited.bind((0, a.A)(r));
             return (
                 (r.state = {
-                    contextValue: { isMounting: !0 },
+                    contextValue: {
+                        isMounting: !0,
+                    },
                     handleExited: i,
                     firstRender: !0,
                 }),
@@ -37,7 +41,12 @@ var o = n(64700),
         var n = t.prototype;
         return (
             (n.componentDidMount = function () {
-                (this.mounted = !0), this.setState({ contextValue: { isMounting: !1 } });
+                (this.mounted = !0),
+                    this.setState({
+                        contextValue: {
+                            isMounting: !1,
+                        },
+                    });
             }),
             (n.componentWillUnmount = function () {
                 this.mounted = !1;
@@ -57,7 +66,12 @@ var o = n(64700),
                     this.mounted &&
                         this.setState(function (t) {
                             var n = (0, i.A)({}, t.children);
-                            return delete n[e.key], { children: n };
+                            return (
+                                delete n[e.key],
+                                {
+                                    children: n,
+                                }
+                            );
                         }));
             }),
             (n.render = function () {
@@ -68,8 +82,20 @@ var o = n(64700),
                     a = this.state.contextValue,
                     s = u(this.state.children).map(n);
                 return (delete i.appear, delete i.enter, delete i.exit, null === t)
-                    ? o.createElement(l.A.Provider, { value: a }, s)
-                    : o.createElement(l.A.Provider, { value: a }, o.createElement(t, i, s));
+                    ? o.createElement(
+                          l.A.Provider,
+                          {
+                              value: a,
+                          },
+                          s,
+                      )
+                    : o.createElement(
+                          l.A.Provider,
+                          {
+                              value: a,
+                          },
+                          o.createElement(t, i, s),
+                      );
             }),
             t
         );

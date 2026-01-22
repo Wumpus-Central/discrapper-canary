@@ -1,4 +1,6 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var r = n(627968),
     i = n(64700),
     a = n(397927),
@@ -11,6 +13,7 @@ var r = n(627968),
     f = n(179690),
     p = n(531525),
     _ = n(985018);
+
 function h(e, t, n) {
     return (
         t in e
@@ -24,6 +27,7 @@ function h(e, t, n) {
         e
     );
 }
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -40,6 +44,7 @@ function m(e) {
     }
     return e;
 }
+
 function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -52,6 +57,7 @@ function g(e, t) {
     }
     return n;
 }
+
 function E(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -63,10 +69,22 @@ function E(e, t) {
         e
     );
 }
+
 function b(e) {
     let { backupCodes: t, hasTOTPEnabled: n, currentUser: h } = e,
         g = i.useCallback((e) => {
-            (0, a.qfG)((t) => (0, r.jsx)(c.A, E(m({}, t), { password: e })), { stackingBehavior: "stack" });
+            (0, a.qfG)(
+                (t) =>
+                    (0, r.jsx)(
+                        c.A,
+                        E(m({}, t), {
+                            password: e,
+                        }),
+                    ),
+                {
+                    stackingBehavior: "stack",
+                },
+            );
         }, []),
         b = i.useCallback(() => {
             (0, a.qfG)((e) =>
@@ -93,7 +111,9 @@ function b(e) {
                             .concat(t ? "(used)" : "");
                     })
                     .join("\r\n"),
-                n = _.intl.formatToPlainString(_.t["uYWwh/"], { email: h.email });
+                n = _.intl.formatToPlainString(_.t["uYWwh/"], {
+                    email: h.email,
+                });
             return "".concat(n, "\r\n\r\n").concat(e);
         }, [t, h.email]),
         O = i.useMemo(

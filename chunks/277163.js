@@ -1,4 +1,6 @@
-r.d(t, { A: () => p });
+r.d(t, {
+    A: () => p,
+});
 var n = r(64700),
     o = r(205662),
     a = r(717519),
@@ -22,6 +24,7 @@ var n = r(64700),
     c = (function (e) {
         if ("function" != typeof e && null !== e)
             throw TypeError("Super expression must either be null or a function, not " + typeof e);
+
         function t(e) {
             if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
             var r = (function (e, t) {
@@ -31,11 +34,21 @@ var n = r(64700),
             return (
                 (r.toggleViews = function () {
                     "hex" === r.state.view
-                        ? r.setState({ view: "rgb" })
+                        ? r.setState({
+                              view: "rgb",
+                          })
                         : "rgb" === r.state.view
-                          ? r.setState({ view: "hsl" })
+                          ? r.setState({
+                                view: "hsl",
+                            })
                           : "hsl" === r.state.view &&
-                            (1 === r.props.hsl.a ? r.setState({ view: "hex" }) : r.setState({ view: "rgb" }));
+                            (1 === r.props.hsl.a
+                                ? r.setState({
+                                      view: "hex",
+                                  })
+                                : r.setState({
+                                      view: "rgb",
+                                  }));
                 }),
                 (r.handleChange = function (e, t) {
                     e.hex
@@ -89,7 +102,13 @@ var n = r(64700),
                 (r.hideHighlight = function (e) {
                     e.currentTarget.style.background = "transparent";
                 }),
-                1 !== e.hsl.a && "hex" === e.view ? (r.state = { view: "rgb" }) : (r.state = { view: e.view }),
+                1 !== e.hsl.a && "hex" === e.view
+                    ? (r.state = {
+                          view: "rgb",
+                      })
+                    : (r.state = {
+                          view: e.view,
+                      }),
                 r
             );
         }
@@ -178,7 +197,11 @@ var n = r(64700),
                                                 borderRadius: "5px",
                                             },
                                         },
-                                        disableAlpha: { alpha: { display: "none" } },
+                                        disableAlpha: {
+                                            alpha: {
+                                                display: "none",
+                                            },
+                                        },
                                     },
                                     this.props,
                                     this.state,
@@ -194,7 +217,9 @@ var n = r(64700),
                                           },
                                           n.createElement(
                                               "div",
-                                              { style: t.field },
+                                              {
+                                                  style: t.field,
+                                              },
                                               n.createElement(l.jc, {
                                                   style: {
                                                       input: t.input,
@@ -215,7 +240,9 @@ var n = r(64700),
                                             },
                                             n.createElement(
                                                 "div",
-                                                { style: t.field },
+                                                {
+                                                    style: t.field,
+                                                },
                                                 n.createElement(l.jc, {
                                                     style: {
                                                         input: t.input,
@@ -228,7 +255,9 @@ var n = r(64700),
                                             ),
                                             n.createElement(
                                                 "div",
-                                                { style: t.field },
+                                                {
+                                                    style: t.field,
+                                                },
                                                 n.createElement(l.jc, {
                                                     style: {
                                                         input: t.input,
@@ -241,7 +270,9 @@ var n = r(64700),
                                             ),
                                             n.createElement(
                                                 "div",
-                                                { style: t.field },
+                                                {
+                                                    style: t.field,
+                                                },
                                                 n.createElement(l.jc, {
                                                     style: {
                                                         input: t.input,
@@ -254,7 +285,9 @@ var n = r(64700),
                                             ),
                                             n.createElement(
                                                 "div",
-                                                { style: t.alpha },
+                                                {
+                                                    style: t.alpha,
+                                                },
                                                 n.createElement(l.jc, {
                                                     style: {
                                                         input: t.input,
@@ -276,7 +309,9 @@ var n = r(64700),
                                             },
                                             n.createElement(
                                                 "div",
-                                                { style: t.field },
+                                                {
+                                                    style: t.field,
+                                                },
                                                 n.createElement(l.jc, {
                                                     style: {
                                                         input: t.input,
@@ -289,7 +324,9 @@ var n = r(64700),
                                             ),
                                             n.createElement(
                                                 "div",
-                                                { style: t.field },
+                                                {
+                                                    style: t.field,
+                                                },
                                                 n.createElement(l.jc, {
                                                     style: {
                                                         input: t.input,
@@ -302,7 +339,9 @@ var n = r(64700),
                                             ),
                                             n.createElement(
                                                 "div",
-                                                { style: t.field },
+                                                {
+                                                    style: t.field,
+                                                },
                                                 n.createElement(l.jc, {
                                                     style: {
                                                         input: t.input,
@@ -315,7 +354,9 @@ var n = r(64700),
                                             ),
                                             n.createElement(
                                                 "div",
-                                                { style: t.alpha },
+                                                {
+                                                    style: t.alpha,
+                                                },
                                                 n.createElement(l.jc, {
                                                     style: {
                                                         input: t.input,
@@ -337,7 +378,9 @@ var n = r(64700),
                                     r,
                                     n.createElement(
                                         "div",
-                                        { style: t.toggle },
+                                        {
+                                            style: t.toggle,
+                                        },
                                         n.createElement(
                                             "div",
                                             {
@@ -364,7 +407,11 @@ var n = r(64700),
                     {
                         key: "getDerivedStateFromProps",
                         value: function (e, t) {
-                            return 1 !== e.hsl.a && "hex" === t.view ? { view: "rgb" } : null;
+                            return 1 !== e.hsl.a && "hex" === t.view
+                                ? {
+                                      view: "rgb",
+                                  }
+                                : null;
                         },
                     },
                 ],
@@ -372,5 +419,7 @@ var n = r(64700),
             t
         );
     })(n.Component);
-c.defaultProps = { view: "hex" };
+c.defaultProps = {
+    view: "hex",
+};
 let p = c;

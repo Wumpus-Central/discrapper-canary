@@ -1,4 +1,6 @@
-n.d(t, { A: () => S });
+n.d(t, {
+    A: () => S,
+});
 var r = n(627968),
     i = n(64700),
     a = n(533781),
@@ -15,6 +17,7 @@ var r = n(627968),
     m = n(652215),
     g = n(985018),
     E = n(111314);
+
 function b(e, t, n) {
     return (
         t in e
@@ -28,6 +31,7 @@ function b(e, t, n) {
         e
     );
 }
+
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -44,6 +48,7 @@ function y(e) {
     }
     return e;
 }
+
 function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -56,6 +61,7 @@ function O(e, t) {
     }
     return n;
 }
+
 function A(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -67,12 +73,20 @@ function A(e, t) {
         e
     );
 }
+
 function v(e) {
     let { disabled: t, channel: i } = e,
         { analyticsLocations: b } = (0, c.Ay)(l.A.GIFT_BUTTON),
         O = (0, _.R1)(i),
         { Component: v, events: S, play: I } = (0, a.T)(),
-        { enabled: T } = d.P.useExperiment({ location: "gift-button" }, { autoTrackExposure: !1 }),
+        { enabled: T } = d.P.useExperiment(
+            {
+                location: "gift-button",
+            },
+            {
+                autoTrackExposure: !1,
+            },
+        ),
         C = i.type === m.rbe.DM,
         N = (0, p.tA)({
             location: "gift-button",

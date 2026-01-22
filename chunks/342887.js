@@ -26,6 +26,7 @@ var r = n(735438),
     E = n(797169),
     b = n(805026),
     y = n(652215);
+
 function O(e, t, n) {
     return (
         t in e
@@ -39,6 +40,7 @@ function O(e, t, n) {
         e
     );
 }
+
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -55,6 +57,7 @@ function A(e) {
     }
     return e;
 }
+
 function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -67,6 +70,7 @@ function v(e, t) {
     }
     return n;
 }
+
 function S(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -79,16 +83,21 @@ function S(e, t) {
     );
 }
 let I = new l.A("VoiceFilterActionCreators"),
-    T = 1000,
+    T = 1e3,
     C = (0, r.debounce)(
         () => {
-            o.h.dispatch({ type: "VOICE_FILTER_LAGGING" });
+            o.h.dispatch({
+                type: "VOICE_FILTER_LAGGING",
+            });
         },
         T,
-        { leading: !0 },
+        {
+            leading: !0,
+        },
     ),
     N = !1,
     R = new Map();
+
 function w(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         { url: n, modelId: r, fileName: i } = e,
@@ -98,14 +107,29 @@ function w(e) {
     if ((null == a ? void 0 : a.status) === g.u.DOWNLOADED) return Promise.resolve();
     if ((null == a ? void 0 : a.status) === g.u.DOWNLOADING)
         return Promise.reject(Error("Voice filter model is downloading but not in active downloads map"));
-    o.h.dispatch(A({ type: "VOICE_FILTER_DOWNLOAD_STARTED" }, e));
+    o.h.dispatch(
+        A(
+            {
+                type: "VOICE_FILTER_DOWNLOAD_STARTED",
+            },
+            e,
+        ),
+    );
     let l = _.Ay.downloadVoiceFilterFile(n, i, (t) => {
         let { downloadedBytes: n, totalBytes: r } = t;
         o.h.dispatch(
-            S(A({ type: "VOICE_FILTER_DOWNLOAD_PROGRESS" }, e), {
-                downloadedBytes: n,
-                totalBytes: r,
-            }),
+            S(
+                A(
+                    {
+                        type: "VOICE_FILTER_DOWNLOAD_PROGRESS",
+                    },
+                    e,
+                ),
+                {
+                    downloadedBytes: n,
+                    totalBytes: r,
+                },
+            ),
         );
     })
         .then((n) => {
@@ -119,24 +143,65 @@ function w(e) {
                     reason: null != (a = null == t ? void 0 : t.reason) ? a : null,
                 });
             }
-            o.h.dispatch(S(A({ type: "VOICE_FILTER_FILE_READY" }, e), { analyticsContext: t }));
+            o.h.dispatch(
+                S(
+                    A(
+                        {
+                            type: "VOICE_FILTER_FILE_READY",
+                        },
+                        e,
+                    ),
+                    {
+                        analyticsContext: t,
+                    },
+                ),
+            );
         })
         .catch((t) => {
             if (null == t ? void 0 : t.USER_CANCELED_DOWNLOAD)
                 I.info("User canceled the download for Voice Filter dependency", e);
             else {
                 let n = "Failed to download voice filter dependency";
-                I.error(n, A({ reason: t }, e)),
+                I.error(
+                    n,
+                    A(
+                        {
+                            reason: t,
+                        },
+                        e,
+                    ),
+                ),
                     u.default.track(y.HAw.VOICE_FILTER_ERROR, {
                         error_message: n,
                         cause: (0, d.P)(Error(t)),
                     }),
-                    p.A.captureException(Error(n, { cause: t }), {
-                        tags: { modelId: r },
-                        extra: { reason: t },
-                    });
+                    p.A.captureException(
+                        Error(n, {
+                            cause: t,
+                        }),
+                        {
+                            tags: {
+                                modelId: r,
+                            },
+                            extra: {
+                                reason: t,
+                            },
+                        },
+                    );
             }
-            o.h.dispatch(S(A({ type: "VOICE_FILTER_DOWNLOAD_FAILED" }, e), { error: t }));
+            o.h.dispatch(
+                S(
+                    A(
+                        {
+                            type: "VOICE_FILTER_DOWNLOAD_FAILED",
+                        },
+                        e,
+                    ),
+                    {
+                        error: t,
+                    },
+                ),
+            );
         })
         .finally(() => {
             R.delete(r);
@@ -150,7 +215,9 @@ async function P(e) {
     try {
         let r = _.Ay.getVoiceFilters();
         I.info("Setting voice filter in native module:", e),
-            await r.setVoiceFilter({ name: e }),
+            await r.setVoiceFilter({
+                name: e,
+            }),
             o.h.dispatch({
                 type: "VOICE_FILTER_APPLIED",
                 voiceFilterId: e,
@@ -199,7 +266,10 @@ async function x(e) {
         })),
         n = await _.Ay.checkVoiceFilterFilesExist(t),
         r = {};
-    for (let { id: e, exists: t } of n) r[e] = { status: t ? g.u.DOWNLOADED : g.u.MISSING };
+    for (let { id: e, exists: t } of n)
+        r[e] = {
+            status: t ? g.u.DOWNLOADED : g.u.MISSING,
+        };
     let i = t.map((e) => e.fileName);
     return (0, s.YV)(i) && (await (0, E.a)(i)), r;
 }
@@ -223,13 +293,18 @@ async function L() {
                     cause: (0, d.P)(e),
                 }),
                 p.A.captureException(e),
-                await o.h.dispatch({ type: "VOICE_FILTER_CATALOG_FETCH_FAILED" });
+                await o.h.dispatch({
+                    type: "VOICE_FILTER_CATALOG_FETCH_FAILED",
+                });
         } finally {
             N = !1;
         }
 }
+
 function j() {
-    o.h.dispatch({ type: "VOICE_FILTER_DOWNLOAD_CANCELED" });
+    o.h.dispatch({
+        type: "VOICE_FILTER_DOWNLOAD_CANCELED",
+    });
 }
 async function M() {
     if (!(m.A.isNativeModuleLoaded() || m.A.isNativeModuleLoading()) && !__OVERLAY__) {
@@ -270,7 +345,11 @@ async function M() {
                         error_message: "Voice Filters failed in process",
                         cause: (0, d.P)(Error(e)),
                     }),
-                    p.A.captureException(Error("Voice Filters failed in process", { cause: e }));
+                    p.A.captureException(
+                        Error("Voice Filters failed in process", {
+                            cause: e,
+                        }),
+                    );
             });
         } catch (e) {
             I.warn("Failed to load Voice Filters module: ".concat(e.message)),

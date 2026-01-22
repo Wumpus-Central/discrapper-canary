@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var i = n(627968),
     r = n(64700),
     l = n(990078),
@@ -7,6 +9,7 @@ var i = n(627968),
     o = n(950072),
     c = n(985018),
     d = n(560927);
+
 function u(e) {
     var t;
     let { roles: u, guildId: b } = e,
@@ -18,7 +21,10 @@ function u(e) {
                 e.stopPropagation(),
                     (0, s.L3)(e, async () => {
                         let { default: e } = await n.e("54526").then(n.bind(n, 551309));
-                        return () => (0, i.jsx)(e, { roles: u });
+                        return () =>
+                            (0, i.jsx)(e, {
+                                roles: u,
+                            });
                     });
             },
             [u],

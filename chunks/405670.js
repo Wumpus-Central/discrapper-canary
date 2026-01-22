@@ -8,6 +8,7 @@ var r = n(499867),
     i = n(265690),
     a = n(121894),
     s = n(506774);
+
 function o(e, t, n) {
     return (
         t in e
@@ -21,6 +22,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,6 +39,7 @@ function l(e) {
     }
     return e;
 }
+
 function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -49,6 +52,7 @@ function c(e, t) {
     }
     return n;
 }
+
 function u(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -60,6 +64,7 @@ function u(e, t) {
         e
     );
 }
+
 function d(e, t) {
     if (null == e) return {};
     var n,
@@ -76,6 +81,7 @@ function d(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function f(e, t) {
     if (null == e) return {};
     var n,
@@ -86,6 +92,7 @@ function f(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function p(e, t) {
     if ("object" !== h(e) || null === e) return e;
     var n = e[Symbol.toPrimitive];
@@ -96,10 +103,12 @@ function p(e, t) {
     }
     return ("string" === t ? String : Number)(e);
 }
+
 function _(e) {
     var t = p(e, "string");
     return "symbol" === h(t) ? t : String(t);
 }
+
 function h(e) {
     return e && "u" > typeof Symbol && e.constructor === Symbol ? "symbol" : typeof e;
 }
@@ -127,10 +136,18 @@ let b = (0, i.h)()(
                 videoProgress: {},
                 transcript: null,
                 setVolume: (t) => {
-                    (0, a.r)(() => e({ volume: t }));
+                    (0, a.r)(() =>
+                        e({
+                            volume: t,
+                        }),
+                    );
                 },
                 setMuted: (t) => {
-                    (0, a.r)(() => e({ muted: t }));
+                    (0, a.r)(() =>
+                        e({
+                            muted: t,
+                        }),
+                    );
                 },
                 setVideoProgress: (n, r, i) => {
                     var s, o;
@@ -151,13 +168,25 @@ let b = (0, i.h)()(
                     );
                 },
                 setTranscriptEnabled: (t) => {
-                    (0, a.r)(() => e({ transcriptEnabled: t }));
+                    (0, a.r)(() =>
+                        e({
+                            transcriptEnabled: t,
+                        }),
+                    );
                 },
                 setCaptionEnabled: (t) => {
-                    (0, a.r)(() => e({ captionEnabled: t }));
+                    (0, a.r)(() =>
+                        e({
+                            captionEnabled: t,
+                        }),
+                    );
                 },
                 setFullScreenEnabled: (t) => {
-                    (0, a.r)(() => e({ fullScreenEnabled: t }));
+                    (0, a.r)(() =>
+                        e({
+                            fullScreenEnabled: t,
+                        }),
+                    );
                 },
                 getVideoProgress: (e) => t().videoProgress[e],
                 getVideoProgressState: (e) => {
@@ -174,12 +203,16 @@ let b = (0, i.h)()(
                     (0, a.r)(() => {
                         let r = t().videoProgress,
                             { [n]: i } = r;
-                        e({ videoProgress: d(r, [_(n)]) });
+                        e({
+                            videoProgress: d(r, [_(n)]),
+                        });
                     });
                 },
                 setTranscriptAsset: (t) => {
                     (0, a.r)(() => {
-                        e({ transcript: t });
+                        e({
+                            transcript: t,
+                        });
                     });
                 },
             }),

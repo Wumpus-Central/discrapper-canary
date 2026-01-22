@@ -1,9 +1,13 @@
-n.d(t, { A: () => A }), n(896048);
+n.d(t, {
+    A: () => A,
+}),
+    n(896048);
 var r = n(311907),
     i = n(73153),
     a = n(652896),
     s = n(383501),
     o = n(652215);
+
 function l(e, t, n) {
     return (
         t in e
@@ -17,6 +21,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -33,6 +38,7 @@ function c(e) {
     }
     return e;
 }
+
 function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -45,6 +51,7 @@ function u(e, t) {
     }
     return n;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -59,18 +66,22 @@ function d(e, t) {
 let f = {},
     p = {},
     _ = null;
+
 function h() {
     (p = {}), (f = {});
 }
+
 function m(e) {
     let { channelId: t, currentVoiceChannelId: n } = e;
     if (t === n) return !1;
     h();
 }
+
 function g(e) {
     let { id: t } = e;
     for (let [e, n] of (delete f[t], Object.entries(p))) t === n && delete p[e];
 }
+
 function E(e) {
     var t, n;
     let { channelId: r, sendMessageOptions: i, message: a, optimistic: l } = e;
@@ -82,14 +93,19 @@ function E(e) {
     if (null == a.nonce || (null == (t = a.activity) ? void 0 : t.type) !== o.xL.STREAM_REQUEST) return !1;
     let u = f[a.nonce];
     if (null == u) return !1;
-    delete f[a.nonce], (p = d(c({}, p), { [u]: a.id }));
+    delete f[a.nonce],
+        (p = d(c({}, p), {
+            [u]: a.id,
+        }));
 }
+
 function b(e) {
     let { streamKey: t } = e,
         { ownerId: n } = a.Iy(t);
     if (null == p[n]) return !1;
     delete p[n];
 }
+
 function y() {
     if (s.A.getWasMoved()) {
         if (s.A.getChannelId() === _) return !1;

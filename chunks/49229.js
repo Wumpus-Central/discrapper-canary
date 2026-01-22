@@ -1,4 +1,8 @@
-n.d(t, { A: () => I }), n(896048), n(747238);
+n.d(t, {
+    A: () => I,
+}),
+    n(896048),
+    n(747238);
 var r = n(562465),
     i = n(582754),
     a = n(73153),
@@ -15,6 +19,7 @@ var r = n(562465),
     m = n(652215),
     g = n(235627),
     E = n(985018);
+
 function b(e, t, n) {
     return (
         t in e
@@ -28,6 +33,7 @@ function b(e, t, n) {
         e
     );
 }
+
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -44,12 +50,15 @@ function y(e) {
     }
     return e;
 }
+
 function O(e) {
     (0, h.Z_)(), _.A.show(e);
 }
+
 function A() {
     (0, h.Z_)(), (0, l.default)();
 }
+
 function v(e, t, n) {
     let { status: r, body: i } = e,
         a = i && i.code;
@@ -192,7 +201,9 @@ let S = {
         updateRelationship: (e, t) =>
             r.Bo.patch({
                 url: m.Rsh.USER_RELATIONSHIP(e),
-                body: { nickname: t },
+                body: {
+                    nickname: t,
+                },
                 rejectWithError: !1,
             }),
         fetchRelationships() {
@@ -206,7 +217,10 @@ let S = {
                         type: "LOAD_RELATIONSHIPS_SUCCESS",
                         relationships: e.body,
                     }),
-                () => a.h.dispatch({ type: "LOAD_RELATIONSHIPS_FAILURE" }),
+                () =>
+                    a.h.dispatch({
+                        type: "LOAD_RELATIONSHIPS_FAILURE",
+                    }),
             );
         },
         confirmClearPendingRelationships(e) {
@@ -215,11 +229,15 @@ let S = {
         clearPendingRelationships: () =>
             r.Bo.del({
                 url: m.Rsh.USER_RELATIONSHIPS(),
-                query: { relationship_type: m.eA$.PENDING_INCOMING },
+                query: {
+                    relationship_type: m.eA$.PENDING_INCOMING,
+                },
                 rejectWithError: !1,
             })
                 .then(() => {
-                    a.h.dispatch({ type: "RELATIONSHIP_PENDING_INCOMING_REMOVED" });
+                    a.h.dispatch({
+                        type: "RELATIONSHIP_PENDING_INCOMING_REMOVED",
+                    });
                 })
                 .catch(() => {
                     i.OR.announce(E.intl.string(E.t.n6Jo3E));
@@ -227,14 +245,18 @@ let S = {
         clearPendingSpamAndIgnored: () =>
             r.Bo.del({
                 url: m.Rsh.USER_RELATIONSHIPS(),
-                query: { relationship_type: m.eA$.PENDING_INCOMING },
+                query: {
+                    relationship_type: m.eA$.PENDING_INCOMING,
+                },
                 body: {
                     filters: [g.w.SPAM, g.w.IGNORED],
                 },
                 rejectWithError: !1,
             })
                 .then(() => {
-                    a.h.dispatch({ type: "RELATIONSHIP_PENDING_INCOMING_REMOVED" });
+                    a.h.dispatch({
+                        type: "RELATIONSHIP_PENDING_INCOMING_REMOVED",
+                    });
                 })
                 .catch(() => {
                     i.OR.announce(E.intl.string(E.t.n6Jo3E));
@@ -242,7 +264,9 @@ let S = {
         ignoreUser: (e, t, n) =>
             r.Bo.put({
                 url: m.Rsh.IGNORE_USER(e),
-                context: { location: t },
+                context: {
+                    location: t,
+                },
                 rejectWithError: !1,
             })
                 .then(() => {
@@ -260,7 +284,9 @@ let S = {
         unignoreUser: (e, t, n) =>
             r.Bo.del({
                 url: m.Rsh.IGNORE_USER(e),
-                context: { location: t },
+                context: {
+                    location: t,
+                },
                 rejectWithError: !1,
             })
                 .then(() => {

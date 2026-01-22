@@ -51,7 +51,9 @@ e.exports = function (e) {
                 className: "meta",
                 begin: "#",
                 end: "$",
-                keywords: { keyword: "if else elseif end error" },
+                keywords: {
+                    keyword: "if else elseif end error",
+                },
             },
             {
                 className: "type",
@@ -109,7 +111,9 @@ e.exports = function (e) {
                     },
                     e.TITLE_MODE,
                 ],
-                keywords: { keyword: "abstract from to" },
+                keywords: {
+                    keyword: "abstract from to",
+                },
             },
             {
                 className: "title.class",

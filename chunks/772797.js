@@ -1,4 +1,6 @@
-i.d(e, { A: () => S });
+i.d(e, {
+    A: () => S,
+});
 var n = i(311907),
     l = i(827343),
     s = i(419954),
@@ -19,11 +21,15 @@ let S = (0, s.zD)(a.X.VOICE_PUSH_TO_TALK_LATCHING_SETTING, {
         });
     },
     setValue: function (t) {
-        l.A.setMode(T.TB.PUSH_TO_TALK, { pttLatchingEnabled: t });
+        l.A.setMode(T.TB.PUSH_TO_TALK, {
+            pttLatchingEnabled: t,
+        });
     },
     usePredicate: function () {
         let t = (0, o.P)(),
-            { enableLatching: e } = (0, u.y)({ location: "PushToTalkLatchingSetting" });
+            { enableLatching: e } = (0, u.y)({
+                location: "PushToTalkLatchingSetting",
+            });
         return t && e;
     },
 });

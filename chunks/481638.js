@@ -1,4 +1,6 @@
-n.d(t, { f: () => _ });
+n.d(t, {
+    f: () => _,
+});
 var r = n(224507),
     i = n(825733),
     a = n(408713),
@@ -9,9 +11,11 @@ var r = n(224507),
     u = n(946020),
     d = n(788951),
     f = n(47276);
+
 function p(e) {
     return e && e.__esModule ? e.default : e;
 }
+
 function _(e, t, n) {
     var _, h;
     let m,
@@ -48,7 +52,17 @@ function _(e, t, n) {
         }, [N, t.selectionManager, E.key]),
         {
             columnHeaderProps: {
-                ...(0, o.v)(v, y, A, C, N ? { tabIndex: -1 } : null),
+                ...(0, o.v)(
+                    v,
+                    y,
+                    A,
+                    C,
+                    N
+                        ? {
+                              tabIndex: -1,
+                          }
+                        : null,
+                ),
                 role: "columnheader",
                 id: (0, r.zD)(t, E.key),
                 "aria-colspan": E.colSpan && E.colSpan > 1 ? E.colSpan : void 0,

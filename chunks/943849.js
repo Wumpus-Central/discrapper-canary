@@ -1,4 +1,6 @@
-n.d(t, { L: () => l });
+n.d(t, {
+    L: () => l,
+});
 var r = n(626584),
     i = n(600975),
     a = n(818348);
@@ -6,21 +8,36 @@ let s = (0, i.C)({
         id: "2024-04_quests_logging",
         kind: "user",
         label: "Quests Logging",
-        defaultConfig: { enabled: !1 },
+        defaultConfig: {
+            enabled: !1,
+        },
         treatments: [
             {
                 id: 0,
                 label: "Control",
-                config: { enabled: !1 },
+                config: {
+                    enabled: !1,
+                },
             },
             {
                 id: 1,
                 label: "Quest logging enabled",
-                config: { enabled: !0 },
+                config: {
+                    enabled: !0,
+                },
             },
         ],
     }),
-    o = () => s.getCurrentConfig({ location: "quests_logging" }, { autoTrackExposure: !1 }).enabled;
+    o = () =>
+        s.getCurrentConfig(
+            {
+                location: "quests_logging",
+            },
+            {
+                autoTrackExposure: !1,
+            },
+        ).enabled;
+
 function l() {
     let { quest: e, location: t } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         n = o(),

@@ -10,6 +10,7 @@ var r = n(627968),
     o = n(568065),
     c = n(291305),
     u = n(107836);
+
 function d(e) {
     let { className: t } = e;
     return (0, r.jsx)("img", {
@@ -18,6 +19,7 @@ function d(e) {
         src: u,
     });
 }
+
 function f(e) {
     let { className: t, powerup: n, isHovering: l } = e,
         u = (0, s.A)(n, l);
@@ -28,7 +30,13 @@ function f(e) {
             return (0, r.jsx)("img", {
                 alt: "",
                 src: u,
-                className: i()(c.T, { [c.W]: n.skuId === a.aN }, t),
+                className: i()(
+                    c.T,
+                    {
+                        [c.W]: n.skuId === a.aN,
+                    },
+                    t,
+                ),
             });
     }
 }

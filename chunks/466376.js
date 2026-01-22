@@ -6,6 +6,7 @@ n.d(t, {
     n(65821);
 var r = n(4511),
     i = n(731854);
+
 function a(e, t, n) {
     return (
         t in e
@@ -19,6 +20,7 @@ function a(e, t, n) {
         e
     );
 }
+
 function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,6 +37,7 @@ function s(e) {
     }
     return e;
 }
+
 function o(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -47,6 +50,7 @@ function o(e, t) {
     }
     return n;
 }
+
 function l(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -200,7 +204,9 @@ class f {
             r = this.options.videoBitrate.max * t.budgetPortion,
             i = this.isMuted ? t.mutedFramerate : t.framerate;
         return new u({
-            encode: l(s({}, t), { framerate: i }),
+            encode: l(s({}, t), {
+                framerate: i,
+            }),
             capture: {
                 width: this.options.videoCapture.width,
                 height: this.options.videoCapture.height,

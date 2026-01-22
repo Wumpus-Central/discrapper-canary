@@ -1,4 +1,6 @@
-n.d(t, { A: () => x });
+n.d(t, {
+    A: () => x,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -34,6 +36,7 @@ let R = (e, t, n) =>
           : "sm" === t
             ? "text-sm/medium"
             : "text-xs/medium";
+
 function w(e) {
     let { containerSize: t, onClick: n, text: i, tabIndex: a } = e;
     return "xs" === t
@@ -56,6 +59,7 @@ function w(e) {
               text: i,
           });
 }
+
 function P(e) {
     var t, n, r, i, a;
     let {
@@ -67,7 +71,9 @@ function P(e) {
         } = e,
         p = (null == (t = s.userStatus) ? void 0 : t.completedAt) != null,
         _ = p && (null == (n = s.userStatus) ? void 0 : n.claimedAt) != null,
-        h = (0, E.kr)({ quest: s }),
+        h = (0, E.kr)({
+            quest: s,
+        }),
         m = (0, E.mH)(s.config);
     if (_) {
         let e = h
@@ -89,7 +95,9 @@ function P(e) {
     }
     if (p)
         return h
-            ? C.intl.formatToPlainString(C.t["l1jCM/"], { date: u })
+            ? C.intl.formatToPlainString(C.t["l1jCM/"], {
+                  date: u,
+              })
             : C.intl.formatToPlainString(C.t.zNoqRe, {
                   reward: m,
                   date: u,
@@ -112,6 +120,7 @@ function P(e) {
             })
           : c;
 }
+
 function D(e) {
     var t;
     let { quest: n, progressState: i, questContent: a, questContentPosition: s, sourceQuestContent: u } = e,
@@ -177,7 +186,9 @@ let x = (e) => {
             sourceQuestContent: x,
         }),
         H = (0, o.bG)([_.A], () => null != _.A.questEnrollmentBlockedUntil, []),
-        Y = h.t$.useConfig({ location: I.rE.QUEST_HOME_DESKTOP }).enabled,
+        Y = h.t$.useConfig({
+            location: I.rE.QUEST_HOME_DESKTOP,
+        }).enabled,
         W = () => {
             (0, v.navigateToQuestHome)({
                 fromContent: i,
@@ -201,7 +212,9 @@ let x = (e) => {
                 [N.dF]: "sm" === d,
                 [N.e5]: "xs" === d,
             }),
-            style: { visibility: U ? "inherit" : "hidden" },
+            style: {
+                visibility: U ? "inherit" : "hidden",
+            },
             "aria-hidden": !U,
             children: [
                 (0, r.jsx)(l.m_, {
@@ -213,7 +226,9 @@ let x = (e) => {
                             E &&
                                 (0, r.jsx)("div", {
                                     className: N.FL,
-                                    children: (0, r.jsx)(c.EpV, { color: c.LU0.colors.WHITE }),
+                                    children: (0, r.jsx)(c.EpV, {
+                                        color: c.LU0.colors.WHITE,
+                                    }),
                                 }),
                             (0, r.jsx)(A.A, {
                                 autoplay: f,

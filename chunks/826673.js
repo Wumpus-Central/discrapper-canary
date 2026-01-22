@@ -16,6 +16,7 @@ var r = n(311907),
     u = n(256787),
     d = n(367727),
     f = n(757792);
+
 function p(e) {
     let {
         bypassNewUserCheck: t = !1,
@@ -27,7 +28,10 @@ function p(e) {
     {
         var i;
         if ((0, u.IL)(e)) return m(e, l.default.fromTimestamp(Date.now())).isDismissed;
-        if ((0, u.ki)(e)) return (0, d.FZ)(e, { cooldownDurationMs: n }).isDismissed;
+        if ((0, u.ki)(e))
+            return (0, d.FZ)(e, {
+                cooldownDurationMs: n,
+            }).isDismissed;
         if ((0, u.ef)(e)) return (0, d.iC)(e, r);
         if ((0, u.XQ)(e)) return (0, d.D8)(e, r);
         if ((0, u.PN)(e)) return (0, d.D4)(e, r);
@@ -35,14 +39,18 @@ function p(e) {
         return null != t && (0, c.c0)(t, e);
     }
 }
+
 function _(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
     return (0, r.bG)([a.A, s.A], () => p(e, t));
 }
 async function h(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    p(e, { bypassNewUserCheck: !0 }) || ((0, d.YV)(e, t), await (0, i.o_)(e), (0, d.X0)(e, t));
+    p(e, {
+        bypassNewUserCheck: !0,
+    }) || ((0, d.YV)(e, t), await (0, i.o_)(e), (0, d.X0)(e, t));
 }
+
 function m(e, t) {
     var n, r;
     if ((0, f.P3)(e))

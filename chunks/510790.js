@@ -1,4 +1,7 @@
-n.d(t, { f: () => T }), n(747238);
+n.d(t, {
+    f: () => T,
+}),
+    n(747238);
 var r = n(627968),
     i = n(64700),
     a = n(735438),
@@ -31,14 +34,18 @@ let I = (e) => e.map((e) => "#".concat(e)),
             : (0, r.jsxs)("div", {
                   className: S.kL,
                   children: [
-                      (0, r.jsx)(N, { message: t }),
+                      (0, r.jsx)(N, {
+                          message: t,
+                      }),
                       (0, r.jsx)(u.$nd, {
                           text: v.intl.string(v.t.SKNnqq),
                           fullWidth: !0,
                           variant: "primary",
                           onClick: () => {
                               g.default.track(O.HAw.CUSTOM_THEME_SHARE_PREVIEWED, {}),
-                                  (0, _.nf)(_.HP.CUSTOM_THEME, { from: _.xv.SHARE_MESSAGE }),
+                                  (0, _.nf)(_.HP.CUSTOM_THEME, {
+                                      from: _.xv.SHARE_MESSAGE,
+                                  }),
                                   i({
                                       colors: I(n.colors),
                                       chassisMixAmount: n.base_mix,
@@ -112,7 +119,9 @@ let I = (e) => e.map((e) => "#".concat(e)),
                   children: [
                       (0, r.jsx)("div", {
                           className: S.sl,
-                          style: { background: "".concat(m) },
+                          style: {
+                              background: "".concat(m),
+                          },
                       }),
                       (0, r.jsxs)("div", {
                           className: S.Ix,
@@ -127,7 +136,11 @@ let I = (e) => e.map((e) => "#".concat(e)),
                                   color: "text-subtle",
                                   className: S.Tb,
                                   children: C(
-                                      "".concat(v.intl.format(A.default.fQPSEf, { username: "__USERNAME__" })),
+                                      "".concat(
+                                          v.intl.format(A.default.fQPSEf, {
+                                              username: "__USERNAME__",
+                                          }),
+                                      ),
                                       t.author,
                                       c.nick,
                                   ),

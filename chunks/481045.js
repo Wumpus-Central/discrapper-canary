@@ -16,8 +16,11 @@ var r = n(627968),
     h = n(985018),
     b = n(259533);
 let g = () => {
-    (0, o.openUserSettings)(s.X.ACTIVITY_PRIVACY_PANEL, { section: f.nc_.ACTIVITY_PRIVACY });
+    (0, o.openUserSettings)(s.X.ACTIVITY_PRIVACY_PANEL, {
+        section: f.nc_.ACTIVITY_PRIVACY,
+    });
 };
+
 function m(e) {
     let { children: t, onClick: n } = e;
     return (0, r.jsxs)(i.DUT, {
@@ -35,6 +38,7 @@ function m(e) {
         ],
     });
 }
+
 function A(e) {
     let { onClosePopout: t } = e,
         n = a.tz.useSetting(),
@@ -52,7 +56,9 @@ function A(e) {
                       variant: "text-sm/semibold",
                       children: h.intl.string(n ? p.default["3GrhnF"] : p.default["54ycKJ"]),
                   }),
-                  (0, r.jsx)(d.l, { guildIds: f }),
+                  (0, r.jsx)(d.l, {
+                      guildIds: f,
+                  }),
               ],
           });
 }

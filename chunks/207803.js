@@ -29,6 +29,7 @@ var r = n(311907),
     p = n(814390),
     _ = n(652215),
     h = n(788868);
+
 function m(e, t, n) {
     return (
         t in e
@@ -42,6 +43,7 @@ function m(e, t, n) {
         e
     );
 }
+
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -58,6 +60,7 @@ function g(e) {
     }
     return e;
 }
+
 function E(e) {
     c.default.track(_.HAw.PREMIUM_FEATURE_TRY_OUT, {
         feature_name: e,
@@ -111,6 +114,7 @@ async function b(e, t) {
         );
     }
 }
+
 function y(e, t) {
     var n;
     let r = null == (n = l.default.getCurrentUser()) ? void 0 : n.id;
@@ -122,9 +126,13 @@ function y(e, t) {
             userId: r,
         });
 }
+
 function O() {
-    a.h.dispatch({ type: "USER_SETTINGS_RESET_PENDING_PROFILE_CHANGES" });
+    a.h.dispatch({
+        type: "USER_SETTINGS_RESET_PENDING_PROFILE_CHANGES",
+    });
 }
+
 function A(e) {
     (null == e ? void 0 : e.startsWith("https:")) === !0
         ? fetch(e)
@@ -133,36 +141,42 @@ function A(e) {
               .then((e) => v(e))
         : null != e && v(e);
 }
+
 function v(e) {
     a.h.dispatch({
         type: "USER_SETTINGS_ACCOUNT_SET_PENDING_BANNER",
         banner: e,
     });
 }
+
 function S(e) {
     a.h.dispatch({
         type: "USER_SETTINGS_ACCOUNT_SET_PENDING_BIO",
         bio: e,
     });
 }
+
 function I(e) {
     a.h.dispatch({
         type: "USER_SETTINGS_ACCOUNT_SET_PENDING_PRONOUNS",
         pronouns: e,
     });
 }
+
 function T(e) {
     a.h.dispatch({
         type: "USER_SETTINGS_ACCOUNT_SET_PENDING_ACCENT_COLOR",
         color: e,
     });
 }
+
 function C(e) {
     a.h.dispatch({
         type: "USER_SETTINGS_ACCOUNT_SET_PENDING_THEME_COLORS",
         themeColors: e,
     });
 }
+
 function N(e) {
     a.h.dispatch({
         type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR",
@@ -170,6 +184,7 @@ function N(e) {
     }),
         E(h.Ae.ANIMATED_AVATAR);
 }
+
 function R(e) {
     a.h.dispatch({
         type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR_DECORATION",
@@ -177,6 +192,7 @@ function R(e) {
     }),
         E(h.Ae.AVATAR_DECORATION);
 }
+
 function w(e) {
     a.h.dispatch({
         type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_BANNER",
@@ -184,6 +200,7 @@ function w(e) {
     }),
         E(h.Ae.PROFILE_BANNER);
 }
+
 function P(e) {
     a.h.dispatch({
         type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_THEME_COLORS",
@@ -191,6 +208,7 @@ function P(e) {
     }),
         E(h.Ae.PROFILE_THEME_COLOR);
 }
+
 function D(e) {
     a.h.dispatch({
         type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_DISPLAY_NAME_STYLES",
@@ -198,12 +216,23 @@ function D(e) {
     }),
         E(h.Ae.DISPLAY_NAME_STYLES);
 }
+
 function x(e) {
-    a.h.dispatch(g({ type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PRESET" }, e)), E(h.Ae.PRESET);
+    a.h.dispatch(
+        g(
+            {
+                type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PRESET",
+            },
+            e,
+        ),
+    ),
+        E(h.Ae.PRESET);
 }
 async function L() {
     if (null == f.A.applicationWidgetConfigs || !(f.A.applicationWidgetConfigs.length > 0)) {
-        a.h.dispatch({ type: "USER_PROFILE_APPLICATION_WIDGET_CONFIGS_FETCH_START" });
+        a.h.dispatch({
+            type: "USER_PROFILE_APPLICATION_WIDGET_CONFIGS_FETCH_START",
+        });
         try {
             let e = await i.Bo.get({
                 url: _.Rsh.USER_PROFILE_APPLICATION_WIDGET_APPLICATION_IDS,
@@ -215,7 +244,9 @@ async function L() {
             });
         } catch (e) {
             throw (
-                (a.h.dispatch({ type: "USER_PROFILE_APPLICATION_WIDGET_CONFIGS_FETCH_FAILURE" }),
+                (a.h.dispatch({
+                    type: "USER_PROFILE_APPLICATION_WIDGET_CONFIGS_FETCH_FAILURE",
+                }),
                 d.A.captureException(e),
                 e)
             );

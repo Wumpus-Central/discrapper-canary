@@ -54,7 +54,9 @@ let d = 60,
             ? a.today
             : r < _
               ? a.yesterday
-              : u.intl.formatToPlainString(a.days, { days: Math.min(Math.floor(r / p), null != n ? n : 999) });
+              : u.intl.formatToPlainString(a.days, {
+                    days: Math.min(Math.floor(r / p), null != n ? n : 999),
+                });
     },
     b = (e, t) => {
         let n = i()().diff(i()(e), "s"),
@@ -63,14 +65,22 @@ let d = 60,
         return n < d
             ? r.seconds
             : n < f
-              ? u.intl.formatToPlainString(r.minutes, { count: Math.floor(n / d) })
+              ? u.intl.formatToPlainString(r.minutes, {
+                    count: Math.floor(n / d),
+                })
               : n < p
-                ? u.intl.formatToPlainString(r.hours, { count: Math.floor(n / f) })
+                ? u.intl.formatToPlainString(r.hours, {
+                      count: Math.floor(n / f),
+                  })
                 : n < _
                   ? r.yesterday
                   : n < h
-                    ? u.intl.formatToPlainString(r.days, { count: Math.floor(n / p) })
-                    : u.intl.formatToPlainString(r.date, { date: a });
+                    ? u.intl.formatToPlainString(r.days, {
+                          count: Math.floor(n / p),
+                      })
+                    : u.intl.formatToPlainString(r.date, {
+                          date: a,
+                      });
     },
     y = (e) =>
         e.display_type === l.NV.USER_ADD ||
@@ -103,9 +113,13 @@ let d = 60,
     },
     w = (e, t) =>
         t > 0 && 0 === e
-            ? u.intl.formatToPlainString(c.default["L/Cj7S"], { callCount: t })
+            ? u.intl.formatToPlainString(c.default["L/Cj7S"], {
+                  callCount: t,
+              })
             : e > 0 && 0 === t
-              ? u.intl.formatToPlainString(c.default["6X1F0i"], { messageCount: e })
+              ? u.intl.formatToPlainString(c.default["6X1F0i"], {
+                    messageCount: e,
+                })
               : u.intl.formatToPlainString(c.default.IYqGMG, {
                     messageCount: e,
                     callCount: t,

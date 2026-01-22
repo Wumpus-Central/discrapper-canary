@@ -1,4 +1,7 @@
-r.d(t, { default: () => u }), r(896048);
+r.d(t, {
+    default: () => u,
+}),
+    r(896048);
 var a = r(627968),
     n = r(64700),
     c = r(397927),
@@ -8,6 +11,7 @@ var a = r(627968),
     s = r(242273),
     b = r(652215),
     f = r(985018);
+
 function u(e) {
     var t, r;
     let { guild: u, onClose: d, hideColors: p } = e,
@@ -18,7 +22,13 @@ function u(e) {
         w = n.useCallback(async () => {
             null != j && v(null);
             try {
-                await o.A.saveGuild(u.id, { verificationLevel: y }), o.A.updateGuild({ verificationLevel: y }), d();
+                await o.A.saveGuild(u.id, {
+                    verificationLevel: y,
+                }),
+                    o.A.updateGuild({
+                        verificationLevel: y,
+                    }),
+                    d();
             } catch (e) {
                 v(new i.LG(e).getAnyErrorMessage());
             }

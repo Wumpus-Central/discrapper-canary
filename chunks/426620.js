@@ -1,7 +1,10 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r,
     i = n(311907),
     a = n(73153);
+
 function s(e, t, n) {
     return (
         t in e
@@ -16,9 +19,11 @@ function s(e, t, n) {
     );
 }
 let o = null;
+
 function l() {
     (o = null), d.persist();
 }
+
 function c(e) {
     let { newUserType: t } = e;
     (o = t), d.persist();
@@ -32,7 +37,9 @@ class u extends (r = i.Ay.PersistedStore) {
         return o;
     }
     getState() {
-        return { type: o };
+        return {
+            type: o,
+        };
     }
 }
 s(u, "displayName", "NewUserStore"), s(u, "persistKey", "nuf");

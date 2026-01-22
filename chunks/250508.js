@@ -34,12 +34,16 @@ e.exports = function (e) {
         o = {
             className: "variable",
             variants: [
-                { begin: /\$\B/ },
+                {
+                    begin: /\$\B/,
+                },
                 {
                     className: "keyword",
                     begin: /\$this/,
                 },
-                { begin: /\$[\w\d][\w\d_:]*/ },
+                {
+                    begin: /\$[\w\d][\w\d_:]*/,
+                },
             ],
         },
         l = {
@@ -84,7 +88,9 @@ e.exports = function (e) {
         d = {
             className: "doctag",
             variants: [
-                { begin: /\.(synopsis|description|example|inputs|outputs|notes|link|component|role|functionality)/ },
+                {
+                    begin: /\.(synopsis|description|example|inputs|outputs|notes|link|component|role|functionality)/,
+                },
                 {
                     begin: /\.(parameter|forwardhelptargetname|forwardhelpcategory|remotehelprunspace|externalhelp)\s+\S+/,
                 },
@@ -105,7 +111,11 @@ e.exports = function (e) {
         }),
         p = {
             className: "built_in",
-            variants: [{ begin: "(".concat(n, ")+(-)[\\w\\d]+") }],
+            variants: [
+                {
+                    begin: "(".concat(n, ")+(-)[\\w\\d]+"),
+                },
+            ],
         },
         _ = {
             className: "class",
@@ -186,7 +196,9 @@ e.exports = function (e) {
                     endsParent: !0,
                     relevance: 0,
                 },
-                e.inherit(e.TITLE_MODE, { endsParent: !0 }),
+                e.inherit(e.TITLE_MODE, {
+                    endsParent: !0,
+                }),
             ],
         },
         y = [b, f, s, e.NUMBER_MODE, c, u, p, o, l, E],

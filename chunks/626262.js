@@ -1,4 +1,7 @@
-n.d(t, { $: () => h }), n(896048);
+n.d(t, {
+    $: () => h,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(554146),
@@ -15,12 +18,18 @@ let _ = (e) =>
             switch (e) {
                 case f.kqX.PREMIUM_TIER_2_TRIAL_ENDING:
                     let t = l.A.getAlmostExpiringTrialOffers([p.pe.TIER_2]);
-                    return { cooldownDurationMs: (0, c.e1)(t[0]) };
+                    return {
+                        cooldownDurationMs: (0, c.e1)(t[0]),
+                    };
                 case f.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING:
                     let n = l.A.getAlmostExpiringDiscountOffers([p.pe.TIER_2]);
-                    return { cooldownDurationMs: (0, c.e1)(n[0]) };
+                    return {
+                        cooldownDurationMs: (0, c.e1)(n[0]),
+                    };
                 default:
-                    return { cooldownDurationMs: 1 / 0 };
+                    return {
+                        cooldownDurationMs: 1 / 0,
+                    };
             }
         }, [e]),
     h = (e) => {

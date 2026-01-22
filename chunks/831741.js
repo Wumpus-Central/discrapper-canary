@@ -1,4 +1,7 @@
-n.d(t, { R: () => y }), n(457529);
+n.d(t, {
+    R: () => y,
+}),
+    n(457529);
 var r,
     l,
     i = n(627968),
@@ -12,6 +15,7 @@ var r,
     p = n(455902),
     h = n(423993),
     b = n(851007);
+
 function g(e) {
     let t = (0, d.bG)([f.A], () => f.A.useReducedMotion),
         n = a.useRef(null);
@@ -35,6 +39,7 @@ function g(e) {
         n
     );
 }
+
 function m(e) {
     let { className: t } = e;
     return (0, i.jsx)("div", {
@@ -42,6 +47,7 @@ function m(e) {
         className: o()(b.ys, t),
     });
 }
+
 function A(e) {
     let { className: t } = e;
     return (0, i.jsx)("div", {
@@ -58,13 +64,19 @@ let y = (e) => {
         (0, i.jsxs)("div", {
             className: n,
             children: [
-                (0, i.jsx)(m, { className: r }),
-                (0, i.jsx)("div", { className: b.cw }),
+                (0, i.jsx)(m, {
+                    className: r,
+                }),
+                (0, i.jsx)("div", {
+                    className: b.cw,
+                }),
                 (0, i.jsx)("div", {
                     className: b.h$,
                     children: t,
                 }),
-                (0, i.jsx)(A, { className: l }),
+                (0, i.jsx)(A, {
+                    className: l,
+                }),
             ],
         })
     );

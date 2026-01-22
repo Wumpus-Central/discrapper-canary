@@ -1,4 +1,6 @@
-n.d(t, { A: () => D });
+n.d(t, {
+    A: () => D,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -26,6 +28,7 @@ var r = n(627968),
     C = n(996988),
     N = n(985018),
     R = n(981656);
+
 function w(e) {
     let { onClose: t } = e;
     return (0, r.jsx)(u.DUT, {
@@ -39,6 +42,7 @@ function w(e) {
         }),
     });
 }
+
 function P(e) {
     let { tiny: t, isPremiumUser: n, onInteraction: i } = e,
         { analyticsLocations: a, newestAnalyticsLocation: s } = (0, d.Ay)(),
@@ -62,11 +66,18 @@ function P(e) {
                       })
                     : (0, r.jsx)(g.A, {
                           onClick: () => {
-                              o({ action: v.pt.GET_PREMIUM }), null == i || i();
+                              o({
+                                  action: v.pt.GET_PREMIUM,
+                              }),
+                                  null == i || i();
                           },
-                          textOptions: { textOverride: N.intl.string(N.t.x6rkDp) },
+                          textOptions: {
+                              textOverride: N.intl.string(N.t.x6rkDp),
+                          },
                           subscriptionTier: T.pe.TIER_2,
-                          premiumModalAnalyticsLocation: { section: S.JJy.USER_PROFILE },
+                          premiumModalAnalyticsLocation: {
+                              section: S.JJy.USER_PROFILE,
+                          },
                           className: R.Js,
                           size: t ? c.$n.Sizes.TINY : c.$n.Sizes.SMALL,
                           look: c.$n.Looks.FILLED,
@@ -96,6 +107,7 @@ function P(e) {
         ],
     });
 }
+
 function D(e) {
     let { isPremiumUser: t, onInteraction: n, className: a } = e,
         c = (0, p.GV)(),
@@ -109,7 +121,12 @@ function D(e) {
                 return (
                     (0, m.Vh)(l.M.USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS),
                     () => {
-                        (0, _.pd)({ content: l.M.USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS }, !1);
+                        (0, _.pd)(
+                            {
+                                content: l.M.USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS,
+                            },
+                            !1,
+                        );
                     }
                 );
         }, [g]),
@@ -145,7 +162,14 @@ function D(e) {
                       y,
                       (0, r.jsxs)("div", {
                           className: R.A_,
-                          children: [(0, r.jsx)("div", { children: v }), (0, r.jsx)("div", { children: A })],
+                          children: [
+                              (0, r.jsx)("div", {
+                                  children: v,
+                              }),
+                              (0, r.jsx)("div", {
+                                  children: A,
+                              }),
+                          ],
                       }),
                   ],
               }),
@@ -158,7 +182,12 @@ function D(e) {
                   children: [
                       (0, r.jsxs)("div", {
                           className: R.$P,
-                          children: [y, (0, r.jsx)("div", { children: A })],
+                          children: [
+                              y,
+                              (0, r.jsx)("div", {
+                                  children: A,
+                              }),
+                          ],
                       }),
                       v,
                   ],

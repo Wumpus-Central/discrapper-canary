@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var l = n(627968);
 n(64700);
 var i = n(311907),
@@ -8,6 +10,7 @@ var i = n(311907),
     o = n(576705),
     c = n(351906),
     d = n(652215);
+
 function u() {
     let e = (0, i.bG)([c.A], () => c.A.hideInstantInvites),
         { channel: t, guild: n } = (0, i.cf)([s.A, a.A], () => {

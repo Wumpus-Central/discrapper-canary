@@ -1,4 +1,8 @@
-n.d(t, { A: () => p }), n(747238), n(896048);
+n.d(t, {
+    A: () => p,
+}),
+    n(747238),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -9,6 +13,7 @@ var r = n(627968),
     u = n(302031),
     d = n(985018),
     f = n(71433);
+
 function p(e) {
     let { file: t, name: n, size: a, spoiler: p } = e,
         _ = i.useMemo(
@@ -33,7 +38,9 @@ function p(e) {
         ),
         y = (e) =>
             (0, r.jsx)(o.A, {
-                className: s()({ [f.V]: e }),
+                className: s()({
+                    [f.V]: e,
+                }),
                 url: t.url,
                 fileName: null != n ? n : d.intl.string(d.t.GnuJ5u),
                 fileSize: null != a ? a : 0,

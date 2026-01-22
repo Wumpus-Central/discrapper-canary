@@ -1,4 +1,7 @@
-n.d(t, { D: () => _ }), n(896048);
+n.d(t, {
+    D: () => _,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -6,6 +9,7 @@ var r = n(627968),
     o = n(834730),
     l = n(707554),
     c = n(163964);
+
 function u(e, t, n) {
     return (
         t in e
@@ -19,6 +23,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,6 +40,7 @@ function d(e) {
     }
     return e;
 }
+
 function f(e, t) {
     if (null == e) return {};
     var n,
@@ -51,6 +57,7 @@ function f(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function p(e, t) {
     if (null == e) return {};
     var n,
@@ -77,7 +84,11 @@ let _ = i.forwardRef(function (e, t) {
                 tag: m,
                 className: s()(c.f, u),
             },
-            h > 6 ? { "data-excessive-heading-level": h } : {},
+            h > 6
+                ? {
+                      "data-excessive-heading-level": h,
+                  }
+                : {},
             p,
         ),
     );

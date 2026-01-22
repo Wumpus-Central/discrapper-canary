@@ -1,4 +1,11 @@
-n.d(t, { A: () => k }), n(896048), n(747238), n(65821), n(321073), n(848778);
+n.d(t, {
+    A: () => k,
+}),
+    n(896048),
+    n(747238),
+    n(65821),
+    n(321073),
+    n(848778);
 var r,
     i = n(812729),
     a = n.n(i),
@@ -12,6 +19,7 @@ var r,
     p = n(962173),
     _ = n(351906),
     h = n(652215);
+
 function m(e, t, n) {
     return (
         t in e
@@ -37,10 +45,12 @@ let g = "33kozedd0zs6fbauka98psnc7zwom2s",
     T = null,
     C = new Set(),
     N = {};
+
 function R(e) {
     var t;
     return null == (t = A.exec(e)) ? void 0 : t[1];
 }
+
 function w(e, t, n) {
     return o.Bo.get({
         url: "".concat(O).concat(e),
@@ -58,7 +68,13 @@ async function P(e, t) {
     if (null != r) return r;
     let {
             body: { data: i },
-        } = await w("/games", { id: e }, t),
+        } = await w(
+            "/games",
+            {
+                id: e,
+            },
+            t,
+        ),
         a = null == (n = i[0]) ? void 0 : n.name;
     return (N[e] = a), a;
 }
@@ -94,7 +110,9 @@ class D {
                 s = a[0];
             if (null == s || "live" !== s.type) throw Error("no stream");
             let { thumbnail_url: o, game_id: l, title: c } = s,
-                f = { large_image: null != o && null != (n = (0, d.Di)(h.fg2.TWITCH, o)) ? n : void 0 },
+                f = {
+                    large_image: null != o && null != (n = (0, d.Di)(h.fg2.TWITCH, o)) ? n : void 0,
+                },
                 p = await P(l, t),
                 _ = u.A.get(h.fg2.TWITCH),
                 m = null != (r = R(o)) ? r : e.name,
@@ -135,7 +153,9 @@ class D {
                     broadcastStatus: "active",
                     broadcastType: "all",
                 },
-                headers: { Authorization: "Bearer ".concat(null != t ? t : e.accessToken) },
+                headers: {
+                    Authorization: "Bearer ".concat(null != t ? t : e.accessToken),
+                },
                 oldFormErrors: !0,
                 rejectWithError: !1,
             });
@@ -144,7 +164,9 @@ class D {
                     id: i,
                     snippet: { title: a, thumbnails: s },
                 } = r[0],
-                l = { large_image: null != (n = (0, d.Di)(h.fg2.YOUTUBE, s.high.url)) ? n : void 0 },
+                l = {
+                    large_image: null != (n = (0, d.Di)(h.fg2.YOUTUBE, s.high.url)) ? n : void 0,
+                },
                 c = null != a && "" !== a ? a.slice(0, v) : void 0;
             return (T = {
                 url: b(i),
@@ -193,9 +215,11 @@ class D {
     }
 }
 let x = new D();
+
 function L() {
     _.A.enabled ? x.start() : x.stop();
 }
+
 function j(e) {
     var t;
     if (a()(e.stream, S)) return !1;

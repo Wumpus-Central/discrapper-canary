@@ -29,6 +29,7 @@ var r = n(812729),
     f = n(798566);
 let p = {},
     _ = {};
+
 function h(e) {
     return null != p[e] && p[e] > Date.now();
 }

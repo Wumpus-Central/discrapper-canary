@@ -1,7 +1,11 @@
-n.d(t, { A: () => s }), n(896048);
+n.d(t, {
+    A: () => s,
+}),
+    n(896048);
 var r = n(64700),
     i = n(139675);
 let a = ["embedded_cover", "embedded_background"];
+
 function s(e) {
     let { applicationId: t, size: n, names: s = a, format: o = "png" } = e,
         [l, c] = r.useState(null),

@@ -28,6 +28,7 @@ var r = n(627968),
     S = n(652215),
     I = n(985018),
     T = n(720308);
+
 function C(e) {
     let { src: t, width: n, height: r, hasMultiple: i = !1, options: a } = e,
         { width: s, height: o } = (0, b.z)(i, {
@@ -45,9 +46,11 @@ function C(e) {
         options: a,
     });
 }
+
 function N(e, t) {
     return ((e % t) + t) % t;
 }
+
 function R(e) {
     let { children: t, isObscured: n, src: a } = e,
         [o, l] = i.useState(!1),
@@ -67,15 +70,20 @@ function R(e) {
                       onToggleObscurity: u,
                       children: (e) =>
                           (0, r.jsx)("div", {
-                              className: s()(T.JT, { [T.Qr]: e }),
+                              className: s()(T.JT, {
+                                  [T.Qr]: e,
+                              }),
                               children: t(e),
                           }),
                   },
                   a,
               ),
           })
-        : (0, r.jsx)(r.Fragment, { children: t(!1) });
+        : (0, r.jsx)(r.Fragment, {
+              children: t(!1),
+          });
 }
+
 function w(e, t) {
     "IMAGE" !== e.type ||
         ((0, m.eJ)(e)
@@ -91,6 +99,7 @@ function w(e, t) {
               })
             : (0, d.yt)(e.url));
 }
+
 function P(e) {
     let {
             items: t,

@@ -1,4 +1,7 @@
-n.d(t, { A: () => u }), n(896048);
+n.d(t, {
+    A: () => u,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(830382),
@@ -6,6 +9,7 @@ var r = n(627968),
     o = n(69494),
     l = n(482132),
     c = n(988912);
+
 function u() {
     let [e, t] = i.useState(!1),
         n = async () => {
@@ -21,7 +25,9 @@ function u() {
                     resendEmail: n,
                 }),
             }),
-            (0, r.jsx)(l.UX, { children: (0, r.jsx)(s.A, {}) }),
+            (0, r.jsx)(l.UX, {
+                children: (0, r.jsx)(s.A, {}),
+            }),
         ],
     });
 }

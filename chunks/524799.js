@@ -1,8 +1,12 @@
-n.d(t, { A: () => g }), n(896048);
+n.d(t, {
+    A: () => g,
+}),
+    n(896048);
 var r,
     i = n(311907),
     a = n(73153),
     s = n(998218);
+
 function o(e, t, n) {
     return (
         t in e
@@ -20,15 +24,18 @@ let l = new Map(),
     c = new Set(),
     u = new Set(),
     d = new Set();
+
 function f() {
     (l = new Map()), (c = new Set()), (u = new Set()), (d = new Set());
 }
+
 function p(e) {
     let { applicationIds: t } = e;
     t.forEach((e) => {
         c.add(e), u.delete(e);
     });
 }
+
 function _(e) {
     let { applicationIds: t, supplementalGameData: n } = e,
         r = new Set(t);
@@ -76,6 +83,7 @@ function _(e) {
             l.has(e) || d.add(e);
         });
 }
+
 function h(e) {
     let { applicationIds: t } = e;
     t.forEach((e) => {

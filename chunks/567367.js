@@ -1,4 +1,7 @@
-n.d(t, { A: () => y }), n(896048);
+n.d(t, {
+    A: () => y,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(990078),
@@ -16,6 +19,7 @@ var r = n(627968),
     g = n(297486),
     E = n(652215),
     b = n(985018);
+
 function y(e) {
     let { context: t, application: n, sectionName: y, primaryEntryPointCommand: O } = e,
         A = i.useId(),

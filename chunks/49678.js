@@ -10,6 +10,7 @@ var r = n(627968),
     a = n(164684),
     c = n(181504),
     s = n(985018);
+
 function d(e) {
     let { createReminder: t } = e,
         o = l.useCallback(() => {
@@ -44,7 +45,10 @@ function d(e) {
                             }
                             return e;
                         })({}, n)),
-                        (i = i = { createReminder: t }),
+                        (i = i =
+                            {
+                                createReminder: t,
+                            }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(i))
                             : (function (e, t) {
@@ -91,6 +95,7 @@ function d(e) {
         );
     }, [t, o]);
 }
+
 function u(e) {
     let { message: t, label: n } = e,
         l = d({

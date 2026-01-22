@@ -1,4 +1,6 @@
-n.d(t, { Z: () => m });
+n.d(t, {
+    Z: () => m,
+});
 var a = n(64700),
     l = n(311907),
     i = n(954571),
@@ -8,6 +10,7 @@ var a = n(64700),
     c = n(993408),
     d = n(331884),
     u = n(652215);
+
 function m(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "product",
         m = (0, s.uM)(),
@@ -49,7 +52,7 @@ function m(e, t) {
                     ? null === x.current &&
                       (x.current = setTimeout(() => {
                           b(), (x.current = null);
-                      }, 1000))
+                      }, 1e3))
                     : null !== x.current && (clearTimeout(x.current), (x.current = null));
             },
             [b],
@@ -61,6 +64,8 @@ function m(e, t) {
             },
             [],
         ),
-        { handleCardVisibilityChange: g }
+        {
+            handleCardVisibilityChange: g,
+        }
     );
 }

@@ -1,4 +1,7 @@
-n.d(t, { A: () => f }), n(896048);
+n.d(t, {
+    A: () => f,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(311907),
@@ -23,9 +26,13 @@ let f = () => {
         t)
     ) {
         case 0:
-            return (0, r.jsx)(s.y$y, { type: s.y$y.Type.SPINNING_CIRCLE });
+            return (0, r.jsx)(s.y$y, {
+                type: s.y$y.Type.SPINNING_CIRCLE,
+            });
         case 1:
-            return (0, r.jsx)(u.A, { guild: e });
+            return (0, r.jsx)(u.A, {
+                guild: e,
+            });
         default:
             return (0, o.xb)(t);
     }

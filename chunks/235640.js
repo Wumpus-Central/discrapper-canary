@@ -1,4 +1,6 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var l = n(627968);
 n(64700);
 var i = n(311907),
@@ -6,6 +8,7 @@ var i = n(311907),
     s = n(565645),
     a = n(508675),
     o = n(824510);
+
 function c(e) {
     let { reactionEmoji: t } = e,
         n = (0, i.bG)([a.Ay], () =>
@@ -38,7 +41,9 @@ function c(e) {
                             }),
                         ],
                     }),
-                    (0, l.jsx)("div", { className: o.oW }),
+                    (0, l.jsx)("div", {
+                        className: o.oW,
+                    }),
                 ],
             }),
             (0, l.jsxs)("div", {
@@ -70,7 +75,9 @@ function c(e) {
                         width: "24px",
                         marginBottom: 0,
                     }),
-                    (0, l.jsx)("div", { className: o.Om }),
+                    (0, l.jsx)("div", {
+                        className: o.Om,
+                    }),
                     (0, l.jsx)(d, {
                         width: "24px",
                         marginBottom: 0,
@@ -80,6 +87,7 @@ function c(e) {
         ],
     });
 }
+
 function d(e) {
     let { width: t, marginBottom: n } = e;
     return (0, l.jsx)("div", {

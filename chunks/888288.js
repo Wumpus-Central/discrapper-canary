@@ -1,4 +1,8 @@
-n.d(t, { A: () => es }), n(896048), n(321073);
+n.d(t, {
+    A: () => es,
+}),
+    n(896048),
+    n(321073);
 var i,
     r = n(284009),
     s = n.n(r),
@@ -39,6 +43,7 @@ var i,
     U = n(652215),
     z = n(672396),
     K = n(985018);
+
 function H(e, t, n) {
     return (
         t in e
@@ -52,6 +57,7 @@ function H(e, t, n) {
         e
     );
 }
+
 function W(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -68,6 +74,7 @@ function W(e) {
     }
     return e;
 }
+
 function B(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -101,22 +108,32 @@ let Y = new a.Vy("LegacyOverlayNotificationsStore"),
         let i = t ? U.yFH.TIMED_OUT : U.yFH.DISMISSED;
         return setTimeout(() => d.A.updateNotificationStatus(e, i), null != n ? n : F);
     };
+
 function $(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : U.yFH.DISMISSED;
     if (null == e) return !1;
     let n = Q.findIndex((t) => t.id === e);
     if (-1 === n) return !1;
     let i = Q[n];
-    clearTimeout(i.timerId), (Q = [...Q]), t === U.yFH.DISMISSED ? Q.splice(n, 1) : (Q[n] = B(W({}, i), { status: t }));
+    clearTimeout(i.timerId),
+        (Q = [...Q]),
+        t === U.yFH.DISMISSED
+            ? Q.splice(n, 1)
+            : (Q[n] = B(W({}, i), {
+                  status: t,
+              }));
 }
+
 function ee(e) {
     let t = Q.length;
     return (Q = Q.filter((t) => 1 !== t.type || t.channelId !== e)).length !== t;
 }
+
 function et(e) {
     let t = Q.find((t) => 2 === t.type && t.channelId === e);
     return null != t ? t.id : null;
 }
+
 function en(e, t) {
     let n = W({}, X, t);
     if (2 !== n.priority && !L.default.isInstanceFocused()) return null;
@@ -133,6 +150,7 @@ function en(e, t) {
         s = (Q = [...Q]).findIndex((e) => e.priority <= n.priority);
     return -1 === s ? Q.push(r) : Q.splice(s, 0, r), Q.length > 10 && clearTimeout(Q.pop().timerId), i;
 }
+
 function ei(e) {
     let { channelId: t, ringing: n } = e,
         i = et(t);
@@ -197,7 +215,9 @@ let es = new er(
                   var t;
                   let { nudges: n } = e;
                   if (E.default.hasChangedRenderMode(null != (t = k.default.getFocusedPID()) ? t : (0, G.getPID)()))
-                      return void Y.info("Overlay mounted, but render modes have changed", { nudges: n });
+                      return void Y.info("Overlay mounted, but render modes have changed", {
+                          nudges: n,
+                      });
                   let i = n[0];
                   if (
                       (Y.info("Overlay mounted", {
@@ -230,7 +250,10 @@ let es = new er(
                   if (t) return !1;
                   Q = Q.map((e) =>
                       e.status === U.yFH.ACTIVE
-                          ? (clearTimeout(e.timerId), B(W({}, e), { timerId: q(e.id, e.expirationExternallyManaged) }))
+                          ? (clearTimeout(e.timerId),
+                            B(W({}, e), {
+                                timerId: q(e.id, e.expirationExternallyManaged),
+                            }))
                           : e,
                   );
               },

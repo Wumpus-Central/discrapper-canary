@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var a = n(627968),
     l = n(64700),
     i = n(397927),
@@ -15,6 +17,7 @@ let p = (0, s.D)(() => ({
     isSuccess: !1,
     errorMessage: null,
 }));
+
 function h() {
     let e = p.useField("isRecording"),
         t = p.useField("isUploading"),
@@ -46,9 +49,13 @@ function h() {
                     });
             } catch (t) {
                 let e = new r.LG(t);
-                p.setState({ errorMessage: e.getAnyErrorMessage() });
+                p.setState({
+                    errorMessage: e.getAnyErrorMessage(),
+                });
             } finally {
-                p.setState({ isUploading: !1 });
+                p.setState({
+                    isUploading: !1,
+                });
             }
     }, []);
     return (0, a.jsxs)(i.nVY, {
@@ -64,7 +71,10 @@ function h() {
                 children: [
                     (0, a.jsx)(i.Button, {
                         variant: e ? "critical-primary" : "primary",
-                        onClick: () => p.setState({ isRecording: !e }),
+                        onClick: () =>
+                            p.setState({
+                                isRecording: !e,
+                            }),
                         text: e ? "Stop Recording" : "Start Recording",
                     }),
                     (0, a.jsx)(u.q, {

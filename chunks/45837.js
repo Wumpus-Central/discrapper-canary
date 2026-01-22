@@ -1,8 +1,12 @@
-n.d(t, { A: () => o }), n(896048);
+n.d(t, {
+    A: () => o,
+}),
+    n(896048);
 var r = n(64700),
     i = n(311907),
     a = n(775602),
     s = n(531685);
+
 function o() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         [t, n] = r.useState(!1),

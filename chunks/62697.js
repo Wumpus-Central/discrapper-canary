@@ -1,4 +1,6 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var l = n(627968);
 n(64700);
 var r = n(397927),
@@ -6,6 +8,7 @@ var r = n(397927),
     i = n(985018),
     s = n(848161),
     o = n(438536);
+
 function c(e) {
     let { onNavigate: t, backPanel: n = a.g.INFO } = e;
     return (0, l.jsxs)("div", {

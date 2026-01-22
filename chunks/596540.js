@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -13,6 +15,7 @@ var r = n(627968),
     h = n(652215),
     b = n(985018),
     g = n(782462);
+
 function m(e) {
     let { children: t, popoutPosition: n, popoutAlign: i, targetElementRef: p, spacing: m = 0 } = e,
         { isOpen: y, setIsOpen: O } = (0, f.A)(),
@@ -32,7 +35,9 @@ function m(e) {
             () => (u._.subscribe(h.jej.TOGGLE_INBOX, v), () => void u._.unsubscribe(h.jej.TOGGLE_INBOX, v)),
             [v],
         );
-    let { entrypoint: x } = (0, d.X8)({ location: "NotificationsInboxPopout" });
+    let { entrypoint: x } = (0, d.X8)({
+        location: "NotificationsInboxPopout",
+    });
     return (0, r.jsx)(s.YNO, {
         targetElementRef: p,
         shouldShow: y,
@@ -57,13 +62,16 @@ function m(e) {
         },
     });
 }
+
 function A() {
     return (0, r.jsxs)("div", {
         className: g.kL,
         children: [
             (0, r.jsx)("div", {
                 className: g._Q,
-                children: (0, r.jsx)("span", { className: g.Tp }),
+                children: (0, r.jsx)("span", {
+                    className: g.Tp,
+                }),
             }),
             (0, r.jsx)(p.A, {}),
         ],

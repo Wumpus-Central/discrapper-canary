@@ -39,11 +39,17 @@ let s = (e) => {
         let t = o(e);
         switch ((0, i.YW)(e)) {
             case r.R.AVATAR_DECORATION:
-                return a.intl.formatToPlainString(a.t.lvBzLi, { product: t });
+                return a.intl.formatToPlainString(a.t.lvBzLi, {
+                    product: t,
+                });
             case r.R.PROFILE_EFFECT:
-                return a.intl.formatToPlainString(a.t.eR7moP, { product: t });
+                return a.intl.formatToPlainString(a.t.eR7moP, {
+                    product: t,
+                });
             case r.R.NAMEPLATE:
-                return a.intl.formatToPlainString(a.t.YFOwHj, { product: t });
+                return a.intl.formatToPlainString(a.t.YFOwHj, {
+                    product: t,
+                });
             default:
                 return t;
         }

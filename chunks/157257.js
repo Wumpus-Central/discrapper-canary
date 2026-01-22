@@ -1,10 +1,13 @@
 let r;
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var i,
     a = n(311907),
     s = n(73153),
     o = n(15285),
     l = n(760751);
+
 function c(e, t, n) {
     return (
         t in e
@@ -18,9 +21,11 @@ function c(e, t, n) {
         e
     );
 }
+
 function u(e) {
     r = e.currentGame;
 }
+
 function d(e) {
     r = e.associatedGame;
 }

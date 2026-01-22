@@ -1,4 +1,10 @@
-n.d(t, { Ay: () => w }), n(65821), n(896048), n(867070), n(228524);
+n.d(t, {
+    Ay: () => w,
+}),
+    n(65821),
+    n(896048),
+    n(867070),
+    n(228524);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -24,6 +30,7 @@ var r = n(627968),
     N = n(985018),
     _ = n(276317),
     S = n(261223);
+
 function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -49,6 +56,7 @@ function T(e) {
     }
     return e;
 }
+
 function I(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -67,6 +75,7 @@ function I(e, t) {
         e
     );
 }
+
 function C(e) {
     let { guild: t, role: n, locked: l } = e,
         s = (0, c.bG)([b.default], () => b.default.getCurrentUser()),
@@ -78,7 +87,14 @@ function C(e) {
                 }),
             [s, t],
         ),
-        f = i.useMemo(() => ({ [n.id]: I(T({}, n), { permissions: x.x3 }) }), [n]),
+        f = i.useMemo(
+            () => ({
+                [n.id]: I(T({}, n), {
+                    permissions: x.x3,
+                }),
+            }),
+            [n],
+        ),
         g = i.useMemo(
             () =>
                 x.cc({
@@ -104,6 +120,7 @@ function C(e) {
         }),
     });
 }
+
 function P(e) {
     let { guild: t, role: n, specs: i, locked: l } = e,
         { enabled: s } = u.A.useExperiment({
@@ -114,17 +131,23 @@ function P(e) {
         return (0, r.jsxs)("div", {
             className: _.pb,
             children: [
-                (0, r.jsx)(j.A, { className: _.wV }),
+                (0, r.jsx)(j.A, {
+                    className: _.wV,
+                }),
                 (0, r.jsx)(d.Text, {
                     variant: "text-sm/normal",
                     children: N.intl.string(N.t.DEBGqA),
                 }),
             ],
         });
+
     function c(e) {
         return g.A.can(e, t)
-            ? !g.A.can(e, t, null, { [n.id]: I(T({}, n), { permissions: a.TF(n.permissions, e) }) }) &&
-                  N.intl.string(N.t["K+D+GF"])
+            ? !g.A.can(e, t, null, {
+                  [n.id]: I(T({}, n), {
+                      permissions: a.TF(n.permissions, e),
+                  }),
+              }) && N.intl.string(N.t["K+D+GF"])
             : N.intl.string(N.t.nOtPMM);
     }
     return (0, r.jsxs)("div", {
@@ -157,6 +180,7 @@ function P(e) {
         ],
     });
 }
+
 function w(e) {
     let { guild: t, role: n, locked: l, setSelectedSection: a, initialSearchQuery: c } = e,
         [o, u] = i.useState(null != c ? c : ""),
@@ -181,17 +205,24 @@ function w(e) {
         i.useEffect(() => {
             j.current ||
                 "" === o.trimStart() ||
-                (m.default.track(E.HAw.SEARCH_STARTED, { search_type: "Permissions" }), (j.current = !0));
+                (m.default.track(E.HAw.SEARCH_STARTED, {
+                    search_type: "Permissions",
+                }),
+                (j.current = !0));
         }, [o]),
         (0, r.jsx)(d.GtU, {
             className: _.XG,
-            style: { scrollPaddingTop: g },
+            style: {
+                scrollPaddingTop: g,
+            },
             onScroll: h,
             children: (0, r.jsxs)("div", {
                 className: S.Q,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: s()(S.wx, S.ln, { [S.l6]: !x }),
+                        className: s()(S.wx, S.ln, {
+                            [S.l6]: !x,
+                        }),
                         ref: b,
                         children: [
                             (0, r.jsx)(y.A, {
@@ -202,7 +233,9 @@ function w(e) {
                             }),
                             (0, r.jsx)("div", {
                                 className: _.U9,
-                                children: (0, r.jsx)(v.A, { role: n }),
+                                children: (0, r.jsx)(v.A, {
+                                    role: n,
+                                }),
                             }),
                             (0, r.jsx)("div", {
                                 className: _.MT,

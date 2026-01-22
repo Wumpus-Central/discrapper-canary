@@ -10,6 +10,7 @@ n.d(t, {
 });
 var r = n(353640),
     i = n(499867);
+
 function a(e, t, n) {
     return (
         t in e
@@ -23,6 +24,7 @@ function a(e, t, n) {
         e
     );
 }
+
 function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -39,6 +41,7 @@ function s(e) {
     }
     return e;
 }
+
 function o(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -51,6 +54,7 @@ function o(e, t) {
     }
     return n;
 }
+
 function l(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -76,30 +80,46 @@ let c = (0, r.v)(
         },
     ),
 );
+
 function u(e) {
     return c.getState().channelDismissTimestamps[e];
 }
+
 function d(e) {
     return c.getState().userDismissTimestamps[e];
 }
+
 function f() {
     return c.getState().globalDismissTimestamp;
 }
+
 function p() {
     return c.getState().queuedWarning;
 }
+
 function _() {
-    c.setState({ queuedWarning: !1 });
+    c.setState({
+        queuedWarning: !1,
+    });
 }
+
 function h(e) {
-    c.setState((t) => ({ channelDismissTimestamps: l(s({}, t.channelDismissTimestamps), { [e]: Date.now() }) }));
+    c.setState((t) => ({
+        channelDismissTimestamps: l(s({}, t.channelDismissTimestamps), {
+            [e]: Date.now(),
+        }),
+    }));
 }
+
 function m(e) {
     c.setState((t) => ({
-        userDismissTimestamps: l(s({}, t.userDismissTimestamps), { [e]: Date.now() }),
+        userDismissTimestamps: l(s({}, t.userDismissTimestamps), {
+            [e]: Date.now(),
+        }),
         globalDismissTimestamp: Date.now(),
     }));
 }
+
 function g(e) {
     let t = Array.from(e).reduce((e, t) => ((e[t] = Date.now()), e), {});
     c.setState((e) => ({

@@ -1,4 +1,8 @@
-n.d(t, { A: () => T }), n(114821), n(339614);
+n.d(t, {
+    A: () => T,
+}),
+    n(114821),
+    n(339614);
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -20,6 +24,7 @@ var i = n(503698),
     y = n(243002),
     O = n(303930),
     A = n(241988);
+
 function v(e) {
     let { isOneStepCheckout: t, headerText: n, step: i, filteredBreadcrumbs: a } = e;
     if (t)
@@ -46,6 +51,7 @@ function v(e) {
         ],
     });
 }
+
 function S(e) {
     let { isTier2: t } = e,
         n = t ? b : g,
@@ -136,9 +142,13 @@ let I = (e, t) => (t ? (0, _.DP)() : e ? h.intl.string(h.t.lG6a5x) : h.intl.stri
                   children: [
                       (0, r.jsxs)(s.hLv, {
                           color: F,
-                          className: a()(m.N1, { [m.s1]: !G }),
+                          className: a()(m.N1, {
+                              [m.s1]: !G,
+                          }),
                           children: [
-                              (0, r.jsx)(S, { isTier2: C }),
+                              (0, r.jsx)(S, {
+                                  isTier2: C,
+                              }),
                               !u &&
                                   (0, r.jsx)(s.s_y, {
                                       "data-migration-pending": !0,
@@ -172,7 +182,10 @@ let I = (e, t) => (t ? (0, _.DP)() : e ? h.intl.string(h.t.lG6a5x) : h.intl.stri
                               }),
                           ],
                       }),
-                      (b || y) && (0, r.jsx)(f.A, { discountAmount: w }),
+                      (b || y) &&
+                          (0, r.jsx)(f.A, {
+                              discountAmount: w,
+                          }),
                       G &&
                           (0, r.jsx)(v, {
                               isOneStepCheckout: N,
@@ -183,7 +196,9 @@ let I = (e, t) => (t ? (0, _.DP)() : e ? h.intl.string(h.t.lG6a5x) : h.intl.stri
                       V &&
                           (0, r.jsx)("div", {
                               className: m.uo,
-                              children: (0, r.jsx)("div", { className: m.dQ }),
+                              children: (0, r.jsx)("div", {
+                                  className: m.dQ,
+                              }),
                           }),
                   ],
               });

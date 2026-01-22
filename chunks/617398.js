@@ -31,6 +31,7 @@ class n {
         this.isMatchIgnored = !0;
     }
 }
+
 function r(e) {
     return e
         .replace(/&/g, "&amp;")
@@ -39,6 +40,7 @@ function r(e) {
         .replace(/"/g, "&quot;")
         .replace(/'/g, "&#x27;");
 }
+
 function i(e, ...t) {
     let n = Object.create(null);
     for (let t in e) n[t] = e[t];
@@ -68,7 +70,9 @@ class l {
     }
     openNode(e) {
         if (!s(e)) return;
-        let t = o(e.scope, { prefix: this.classPrefix });
+        let t = o(e.scope, {
+            prefix: this.classPrefix,
+        });
         this.span(t);
     }
     closeNode(e) {
@@ -82,7 +86,9 @@ class l {
     }
 }
 let c = (e = {}) => {
-    let t = { children: [] };
+    let t = {
+        children: [],
+    };
     return Object.assign(t, e), t;
 };
 class u {
@@ -99,7 +105,9 @@ class u {
         this.top.children.push(e);
     }
     openNode(e) {
-        let t = c({ scope: e });
+        let t = c({
+            scope: e,
+        });
         this.add(t), this.stack.push(t);
     }
     closeNode() {
@@ -156,36 +164,46 @@ class d extends u {
         return this.closeAllNodes(), !0;
     }
 }
+
 function f(e) {
     return e ? ("string" == typeof e ? e : e.source) : null;
 }
+
 function p(e) {
     return m("(?=", e, ")");
 }
+
 function _(e) {
     return m("(?:", e, ")*");
 }
+
 function h(e) {
     return m("(?:", e, ")?");
 }
+
 function m(...e) {
     return e.map((e) => f(e)).join("");
 }
+
 function g(e) {
     let t = e[e.length - 1];
     return "object" == typeof t && t.constructor === Object ? (e.splice(e.length - 1, 1), t) : {};
 }
+
 function E(...e) {
     return "(" + (g(e).capture ? "" : "?:") + e.map((e) => f(e)).join("|") + ")";
 }
+
 function b(e) {
     return RegExp(e.toString() + "|").exec("").length - 1;
 }
+
 function y(e, t) {
     let n = e && e.exec(t);
     return n && 0 === n.index;
 }
 let O = /\[(?:[^\\\]]|\\.)*\]|\(\??|\\([1-9][0-9]*)|\\./;
+
 function A(e, { joinWith: t }) {
     let n = 0;
     return e
@@ -290,7 +308,12 @@ let v = /\b\B/,
             /[A-Za-z]+[-][a-z]+/,
             /[A-Za-z][a-z]{2,}/,
         );
-        return r.contains.push({ begin: m(/[ ]+/, "(", a, /[.]?[:]?([.][ ]|[ ])/, "){3}") }), r;
+        return (
+            r.contains.push({
+                begin: m(/[ ]+/, "(", a, /[.]?[:]?([.][ ]|[ ])/, "){3}"),
+            }),
+            r
+        );
     },
     M = j("//", "$"),
     k = j("/\\*", "\\*/"),
@@ -370,12 +393,15 @@ var B = Object.freeze({
     UNDERSCORE_IDENT_RE: I,
     UNDERSCORE_TITLE_MODE: F,
 });
+
 function H(e, t) {
     "." === e.input[e.index - 1] && t.ignoreMatch();
 }
+
 function Y(e, t) {
     void 0 !== e.className && ((e.scope = e.className), delete e.className);
 }
+
 function W(e, t) {
     !t ||
         (e.beginKeywords &&
@@ -385,15 +411,18 @@ function W(e, t) {
             delete e.beginKeywords,
             void 0 === e.relevance && (e.relevance = 0)));
 }
+
 function K(e, t) {
     Array.isArray(e.illegal) && (e.illegal = E(...e.illegal));
 }
+
 function z(e, t) {
     if (e.match) {
         if (e.begin || e.end) throw Error("begin & end are not supported with match");
         (e.begin = e.match), delete e.match;
     }
 }
+
 function q(e, t) {
     void 0 === e.relevance && (e.relevance = 1);
 }
@@ -408,13 +437,18 @@ let X = (e, t) => {
             (e.begin = m(n.beforeMatch, p(n.begin))),
             (e.starts = {
                 relevance: 0,
-                contains: [Object.assign(n, { endsParent: !0 })],
+                contains: [
+                    Object.assign(n, {
+                        endsParent: !0,
+                    }),
+                ],
             }),
             (e.relevance = 0),
             delete n.beforeMatch;
     },
     Z = ["of", "and", "for", "in", "not", "or", "if", "then", "parent", "list", "value"],
     Q = "keyword";
+
 function $(e, t, n = Q) {
     let r = Object.create(null);
     return (
@@ -427,6 +461,7 @@ function $(e, t, n = Q) {
                 }),
         r
     );
+
     function i(e, n) {
         t && (n = n.map((e) => e.toLowerCase())),
             n.forEach(function (t) {
@@ -435,9 +470,11 @@ function $(e, t, n = Q) {
             });
     }
 }
+
 function J(e, t) {
     return t ? Number(t) : +!ee(e);
 }
+
 function ee(e) {
     return Z.includes(e.toLowerCase());
 }
@@ -452,6 +489,7 @@ let et = {},
         et[`${e}/${t}`] || (console.log(`Deprecated as of ${e}. ${t}`), (et[`${e}/${t}`] = !0));
     },
     ea = Error();
+
 function es(e, t, { key: n }) {
     let r = 0,
         i = e[n],
@@ -460,32 +498,53 @@ function es(e, t, { key: n }) {
     for (let e = 1; e <= t.length; e++) (s[e + r] = i[e]), (a[e + r] = !0), (r += b(t[e - 1]));
     (e[n] = s), (e[n]._emit = a), (e[n]._multi = !0);
 }
+
 function eo(e) {
     if (Array.isArray(e.begin)) {
         if (e.skip || e.excludeBegin || e.returnBegin)
             throw (en("skip, excludeBegin, returnBegin not compatible with beginScope: {}"), ea);
         if ("object" != typeof e.beginScope || null === e.beginScope) throw (en("beginScope must be object"), ea);
-        es(e, e.begin, { key: "beginScope" }), (e.begin = A(e.begin, { joinWith: "" }));
+        es(e, e.begin, {
+            key: "beginScope",
+        }),
+            (e.begin = A(e.begin, {
+                joinWith: "",
+            }));
     }
 }
+
 function el(e) {
     if (Array.isArray(e.end)) {
         if (e.skip || e.excludeEnd || e.returnEnd)
             throw (en("skip, excludeEnd, returnEnd not compatible with endScope: {}"), ea);
         if ("object" != typeof e.endScope || null === e.endScope) throw (en("endScope must be object"), ea);
-        es(e, e.end, { key: "endScope" }), (e.end = A(e.end, { joinWith: "" }));
+        es(e, e.end, {
+            key: "endScope",
+        }),
+            (e.end = A(e.end, {
+                joinWith: "",
+            }));
     }
 }
+
 function ec(e) {
     e.scope && "object" == typeof e.scope && null !== e.scope && ((e.beginScope = e.scope), delete e.scope);
 }
+
 function eu(e) {
     ec(e),
-        "string" == typeof e.beginScope && (e.beginScope = { _wrap: e.beginScope }),
-        "string" == typeof e.endScope && (e.endScope = { _wrap: e.endScope }),
+        "string" == typeof e.beginScope &&
+            (e.beginScope = {
+                _wrap: e.beginScope,
+            }),
+        "string" == typeof e.endScope &&
+            (e.endScope = {
+                _wrap: e.endScope,
+            }),
         eo(e),
         el(e);
 }
+
 function ed(e) {
     function t(t, n) {
         return RegExp(f(t), "m" + (e.case_insensitive ? "i" : "") + (e.unicodeRegex ? "u" : "") + (n ? "g" : ""));
@@ -503,7 +562,13 @@ function ed(e) {
         compile() {
             0 === this.regexes.length && (this.exec = () => null);
             let e = this.regexes.map((e) => e[1]);
-            (this.matcherRe = t(A(e, { joinWith: "|" }), !0)), (this.lastIndex = 0);
+            (this.matcherRe = t(
+                A(e, {
+                    joinWith: "|",
+                }),
+                !0,
+            )),
+                (this.lastIndex = 0);
         }
         exec(e) {
             this.matcherRe.lastIndex = this.lastIndex;
@@ -545,6 +610,7 @@ function ed(e) {
             return n && ((this.regexIndex += n.position + 1), this.regexIndex === this.count && this.considerAll()), n;
         }
     }
+
     function a(e) {
         let t = new r();
         return (
@@ -554,11 +620,18 @@ function ed(e) {
                     type: "begin",
                 }),
             ),
-            e.terminatorEnd && t.addRule(e.terminatorEnd, { type: "end" }),
-            e.illegal && t.addRule(e.illegal, { type: "illegal" }),
+            e.terminatorEnd &&
+                t.addRule(e.terminatorEnd, {
+                    type: "end",
+                }),
+            e.illegal &&
+                t.addRule(e.illegal, {
+                    type: "illegal",
+                }),
             t
         );
     }
+
     function s(n, r) {
         let i = n;
         if (n.isCompiled) return i;
@@ -601,19 +674,29 @@ function ed(e) {
         throw Error("ERR: contains `self` is not supported at the top-level of a language.  See documentation.");
     return (e.classNameAliases = i(e.classNameAliases || {})), s(e);
 }
+
 function ef(e) {
     return !!e && (e.endsWithParent || ef(e.starts));
 }
+
 function ep(e) {
     return (e.variants &&
         !e.cachedVariants &&
         (e.cachedVariants = e.variants.map(function (t) {
-            return i(e, { variants: null }, t);
+            return i(
+                e,
+                {
+                    variants: null,
+                },
+                t,
+            );
         })),
     e.cachedVariants)
         ? e.cachedVariants
         : ef(e)
-          ? i(e, { starts: e.starts ? i(e.starts) : null })
+          ? i(e, {
+                starts: e.starts ? i(e.starts) : null,
+            })
           : Object.isFrozen(e)
             ? i(e)
             : e;
@@ -649,9 +732,11 @@ let em = r,
                 languages: null,
                 __emitter: d,
             };
+
         function u(e) {
             return c.noHighlightRe.test(e);
         }
+
         function f(e) {
             let t = e.className + " ";
             t += e.parentNode ? e.parentNode.className : "";
@@ -665,6 +750,7 @@ let em = r,
             }
             return t.split(/\s+/).find((e) => u(e) || w(e));
         }
+
         function g(e, t, n) {
             let r = "",
                 i = "";
@@ -686,11 +772,14 @@ let em = r,
             let s = a.result ? a.result : b(a.language, a.code, n);
             return (s.code = a.code), L("after:highlight", s), s;
         }
+
         function b(e, t, i, a) {
             let l = Object.create(null);
+
             function u(e, t) {
                 return e.keywords[t];
             }
+
             function d() {
                 if (!P.keywords) return void x.addText(L);
                 let e = 0;
@@ -720,6 +809,7 @@ let em = r,
                 }
                 (n += L.substring(e)), x.addText(n);
             }
+
             function f() {
                 if ("" === L) return;
                 let e = null;
@@ -729,12 +819,15 @@ let em = r,
                 } else e = A(L, P.subLanguage.length ? P.subLanguage : null);
                 P.relevance > 0 && (j += e.relevance), x.__addSublanguage(e._emitter, e.language);
             }
+
             function p() {
                 null != P.subLanguage ? f() : d(), (L = "");
             }
+
             function _(e, t) {
                 "" !== e && (x.startScope(t), x.addText(e), x.endScope());
             }
+
             function h(e, t) {
                 let n = 1,
                     r = t.length - 1;
@@ -748,6 +841,7 @@ let em = r,
                     r ? _(i, r) : ((L = i), d(), (L = "")), n++;
                 }
             }
+
             function m(e, t) {
                 return (
                     e.scope && "string" == typeof e.scope && x.openNode(C.classNameAliases[e.scope] || e.scope),
@@ -755,9 +849,14 @@ let em = r,
                         (e.beginScope._wrap
                             ? (_(L, C.classNameAliases[e.beginScope._wrap] || e.beginScope._wrap), (L = ""))
                             : e.beginScope._multi && (h(e.beginScope, t), (L = ""))),
-                    (P = Object.create(e, { parent: { value: P } }))
+                    (P = Object.create(e, {
+                        parent: {
+                            value: P,
+                        },
+                    }))
                 );
             }
+
             function g(e, t, r) {
                 let i = y(e.endRe, r);
                 if (i) {
@@ -772,9 +871,11 @@ let em = r,
                 }
                 if (e.endsWithParent) return g(e.parent, t, r);
             }
+
             function E(e) {
                 return 0 === P.matcher.regexIndex ? ((L += e[0]), 1) : ((U = !0), 0);
             }
+
             function O(e) {
                 let t = e[0],
                     r = e.rule,
@@ -786,6 +887,7 @@ let em = r,
                     r.returnBegin ? 0 : t.length
                 );
             }
+
             function v(e) {
                 let n = e[0],
                     r = t.substring(e.index),
@@ -803,12 +905,14 @@ let em = r,
                 while (P !== i.parent);
                 return i.starts && m(i.starts, e), a.returnEnd ? 0 : n.length;
             }
+
             function S() {
                 let e = [];
                 for (let t = P; t !== C; t = t.parent) t.scope && e.unshift(t.scope);
                 e.forEach((e) => x.openNode(e));
             }
             let I = {};
+
             function T(n, r) {
                 let a = r && r[0];
                 if (((L += n), null == a)) return p(), 0;
@@ -830,7 +934,7 @@ let em = r,
                     throw ((e.mode = P), e);
                 }
                 if ("illegal" === r.type && "" === a) return (L += "\n"), 1;
-                if (k > 100000 && k > 3 * r.index)
+                if (k > 1e5 && k > 3 * r.index)
                     throw Error("potential infinite loop, way more iterations than matches");
                 return (L += a), a.length;
             }
@@ -901,6 +1005,7 @@ let em = r,
                 throw n;
             }
         }
+
         function O(e) {
             let t = {
                 value: em(e),
@@ -911,6 +1016,7 @@ let em = r,
             };
             return t._emitter.addText(e), t;
         }
+
         function A(e, t) {
             t = t || c.languages || Object.keys(r);
             let n = O(e),
@@ -930,10 +1036,12 @@ let em = r,
                 o = a;
             return (o.secondBest = s), o;
         }
+
         function v(e, t, n) {
             let r = (t && i[t]) || n;
             e.classList.add("hljs"), e.classList.add(`language-${r}`);
         }
+
         function S(e) {
             let t = null,
                 n = f(e);
@@ -990,10 +1098,12 @@ let em = r,
         let I = () => {
             N(), ei("10.6.0", "initHighlighting() deprecated.  Use highlightAll() now.");
         };
+
         function T() {
             N(), ei("10.6.0", "initHighlightingOnLoad() deprecated.  Use highlightAll() now.");
         }
         let C = !1;
+
         function N() {
             function e() {
                 N();
@@ -1004,6 +1114,7 @@ let em = r,
             }
             document.querySelectorAll(c.cssSelector).forEach(S);
         }
+
         function R(t, n) {
             let i = null;
             try {
@@ -1016,39 +1127,62 @@ let em = r,
             i.name || (i.name = t),
                 (r[t] = i),
                 (i.rawDefinition = n.bind(null, e)),
-                i.aliases && P(i.aliases, { languageName: t });
+                i.aliases &&
+                    P(i.aliases, {
+                        languageName: t,
+                    });
         }
+
         function w(e) {
             return r[(e = (e || "").toLowerCase())] || r[i[e]];
         }
+
         function P(e, { languageName: t }) {
             "string" == typeof e && (e = [e]),
                 e.forEach((e) => {
                     i[e.toLowerCase()] = t;
                 });
         }
+
         function D(e) {
             let t = w(e);
             return t && !t.disableAutodetect;
         }
+
         function x(e) {
             e["before:highlightBlock"] &&
                 !e["before:highlightElement"] &&
                 (e["before:highlightElement"] = (t) => {
-                    e["before:highlightBlock"](Object.assign({ block: t.el }, t));
+                    e["before:highlightBlock"](
+                        Object.assign(
+                            {
+                                block: t.el,
+                            },
+                            t,
+                        ),
+                    );
                 }),
                 e["after:highlightBlock"] &&
                     !e["after:highlightElement"] &&
                     (e["after:highlightElement"] = (t) => {
-                        e["after:highlightBlock"](Object.assign({ block: t.el }, t));
+                        e["after:highlightBlock"](
+                            Object.assign(
+                                {
+                                    block: t.el,
+                                },
+                                t,
+                            ),
+                        );
                     });
         }
+
         function L(e, t) {
             let n = e;
             a.forEach(function (e) {
                 e[n] && e[n](t);
             });
         }
+
         function j(e) {
             return (
                 ei("10.7.0", "highlightBlock will be removed entirely in v12.0"),

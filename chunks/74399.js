@@ -1,9 +1,12 @@
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var r,
     i = n(311907),
     a = n(73153),
     s = n(95701),
     o = n(734057);
+
 function l(e, t, n) {
     return (
         t in e
@@ -19,10 +22,12 @@ function l(e, t, n) {
 }
 let c = {},
     u = {};
+
 function d(e) {
     let { templates: t, guildId: n } = e;
     c[n] = t;
 }
+
 function f(e) {
     let { selectedTemplate: t, guildId: n } = e,
         r = Object.values(o.A.getMutableGuildChannelsForGuild(n));

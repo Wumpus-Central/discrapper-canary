@@ -1,4 +1,6 @@
-n.d(t, { L: () => p });
+n.d(t, {
+    L: () => p,
+});
 var r = n(627968),
     l = n(311907),
     i = n(732955),
@@ -13,6 +15,7 @@ let p = (e) => {
     let { channel: t, user: n, application: p, oauth2Token: h } = e,
         b = (0, l.bG)([o.Ay], () => o.Ay.getSelfEmbeddedActivities());
     if (!n.bot || null == p) return null;
+
     function g() {
         s.A.delete(h.id);
         let e = b.get(p.id);
@@ -57,7 +60,9 @@ let p = (e) => {
                     })(
                         {
                             title: f.intl.string(f.t["DT39A+"]),
-                            subtitle: f.intl.formatToPlainString(f.t.QWGvxA, { applicationName: p.name }),
+                            subtitle: f.intl.formatToPlainString(f.t.QWGvxA, {
+                                applicationName: p.name,
+                            }),
                             actions: [
                                 {
                                     text: f.intl.string(f.t["ETE/oC"]),

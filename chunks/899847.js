@@ -16,6 +16,7 @@ var r = n(562465),
     u = n(842144),
     d = n(191627),
     f = n(652215);
+
 function p(e, t, n) {
     return (
         t in e
@@ -29,6 +30,7 @@ function p(e, t, n) {
         e
     );
 }
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -77,7 +79,9 @@ async function m(e, t) {
 async function g(e) {
     await r.Bo.del({
         url: f.Rsh.FAMILY_CENTER_LINKED_USERS,
-        body: { linked_user_id: e },
+        body: {
+            linked_user_id: e,
+        },
         rejectWithError: !1,
     }).then((t) => {
         let { body: n } = t;
@@ -116,7 +120,9 @@ async function b() {
 let y = {
     async initialPageLoad() {
         var e, t, n, i, s, o, l, c, u, d, p;
-        a.h.dispatch({ type: "FAMILY_CENTER_FETCH_START" });
+        a.h.dispatch({
+            type: "FAMILY_CENTER_FETCH_START",
+        });
         let { body: _ } = await r.Bo.get({
                 url: f.Rsh.FAMILY_CENTER_TEEN_ACTIVITY_ME,
                 rejectWithError: !1,
@@ -156,7 +162,17 @@ let y = {
                 linkedUsers: e.linked_users,
                 users: e.users,
             };
-        return a.h.dispatch(_({ type: "FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS" }, t)), t;
+        return (
+            a.h.dispatch(
+                _(
+                    {
+                        type: "FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS",
+                    },
+                    t,
+                ),
+            ),
+            t
+        );
     },
     async requestLink(e, t) {
         let { body: n } = await r.Bo.post({
@@ -171,11 +187,23 @@ let y = {
                 linkedUsers: n.linked_users,
                 users: n.users,
             };
-        return a.h.dispatch(_({ type: "FAMILY_CENTER_REQUEST_LINK_SUCCESS" }, i)), i;
+        return (
+            a.h.dispatch(
+                _(
+                    {
+                        type: "FAMILY_CENTER_REQUEST_LINK_SUCCESS",
+                    },
+                    i,
+                ),
+            ),
+            i
+        );
     },
     async fetchTeenActivity(e) {
         var t, n, i, s, o, l, c;
-        a.h.dispatch({ type: "FAMILY_CENTER_FETCH_START" });
+        a.h.dispatch({
+            type: "FAMILY_CENTER_FETCH_START",
+        });
         let u = f.Rsh.FAMILY_CENTER_TEEN_ACTIVITY(e),
             { body: d } = await r.Bo.get({
                 url: u,
@@ -266,7 +294,9 @@ let y = {
         if (null == p) return;
         let { body: _ } = await r.Bo.patch({
                 url: f.Rsh.FAMILY_CENTER_TEEN_SETTINGS(e),
-                body: { settings: (0, l.ob)(i.nT, p) },
+                body: {
+                    settings: (0, l.ob)(i.nT, p),
+                },
                 rejectWithError: !1,
             }),
             { settings: h } = _;

@@ -1,4 +1,7 @@
-t.d(A, { A: () => C }), t(896048);
+t.d(A, {
+    A: () => C,
+}),
+    t(896048);
 var r = t(627968),
     n = t(64700),
     l = t(503698),
@@ -18,6 +21,7 @@ let b = (0, i.A)(),
         id: "1",
         type: g.rbe.DM,
     });
+
 function q() {
     return new Promise((e) => {
         e({
@@ -26,15 +30,19 @@ function q() {
         });
     });
 }
+
 function h(e) {
     var A;
     let { hasError: t, maxLength: n, text: l } = e;
     return (0, r.jsxs)("div", {
-        className: a()(m.Ru, { [m.hz]: t }),
+        className: a()(m.Ru, {
+            [m.hz]: t,
+        }),
         "aria-hidden": "true",
         children: [null != (A = null == l ? void 0 : l.length) ? A : 0, " ", null != n && "/ ".concat(n)],
     });
 }
+
 function C(e) {
     var A;
     let {
@@ -59,6 +67,7 @@ function C(e) {
         I = n.useRef(!0 === c),
         X = null != t ? t : null == N ? void 0 : N.titleId,
         W = null != (A = null == N ? void 0 : N.errorId) ? A : b;
+
     function Q(e, A, t) {
         m(A), F(t);
     }
@@ -70,9 +79,15 @@ function C(e) {
                 small: !0,
             },
             disableAutoFocus: !0 !== c,
-            drafts: { type: u.C.ChannelMessage },
-            emojis: { button: !0 },
-            permissions: { requireSendMessages: !1 },
+            drafts: {
+                type: u.C.ChannelMessage,
+            },
+            emojis: {
+                button: !0,
+            },
+            permissions: {
+                requireSendMessages: !1,
+            },
             submit: {
                 useDisabledStylesOnSubmit: !0,
                 disableEnterToSubmit: !0,
@@ -124,7 +139,9 @@ function C(e) {
                     null != g &&
                         (0, r.jsx)(s.AC4, {
                             id: b,
-                            children: f.intl.format(f.t["+DFxLc"], { maxLength: g }),
+                            children: f.intl.format(f.t["+DFxLc"], {
+                                maxLength: g,
+                            }),
                         }),
                 ],
             });

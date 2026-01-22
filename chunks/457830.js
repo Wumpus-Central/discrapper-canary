@@ -18,7 +18,9 @@ let p = (e) => {
         (0, s.A)({
             type: l.ImpressionTypes.PAGE,
             name: l.ImpressionNames.ROLE_SUBSCRIPTION_LISTING_UPSELL_ERROR_PAGE,
-            properties: { error_page_type: t },
+            properties: {
+                error_page_type: t,
+            },
         }),
         (0, i.jsx)("div", {
             className: c.Xd,

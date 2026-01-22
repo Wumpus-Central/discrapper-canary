@@ -1,4 +1,8 @@
-n.d(t, { A: () => S }), n(938796), n(896048);
+n.d(t, {
+    A: () => S,
+}),
+    n(938796),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(821418),
@@ -18,6 +22,7 @@ var r = n(627968),
     b = n(652215),
     y = n(985018),
     O = n(563111);
+
 function A(e, t, n) {
     return (
         t in e
@@ -31,6 +36,7 @@ function A(e, t, n) {
         e
     );
 }
+
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -47,6 +53,7 @@ function v(e) {
     }
     return e;
 }
+
 function S(e) {
     var t, A, S, I;
     let T,
@@ -140,11 +147,15 @@ function S(e) {
                 }),
             })),
         W
-            ? ((C = (0, r.jsx)(_.A.Channel, { channel: V })),
+            ? ((C = (0, r.jsx)(_.A.Channel, {
+                  channel: V,
+              })),
               (T = (0, r.jsxs)("span", {
                   className: O.FA,
                   children: [
-                      y.intl.format(y.t["2wimj5"], { guildName: P.name }),
+                      y.intl.format(y.t["2wimj5"], {
+                          guildName: P.name,
+                      }),
                       (0, r.jsx)("span", {
                           className: O.E3,
                           children: (0, r.jsx)(p.A, {
@@ -166,7 +177,9 @@ function S(e) {
                 })),
         (0, r.jsxs)(_.A, {
             children: [
-                (0, r.jsx)(_.A.GuildSplash, { guild: P }),
+                (0, r.jsx)(_.A.GuildSplash, {
+                    guild: P,
+                }),
                 (0, r.jsx)(_.A.Header, {
                     text: et,
                     extra: N,
@@ -176,7 +189,9 @@ function S(e) {
                         (0, r.jsxs)("div", {
                             className: O.iH,
                             children: [
-                                (0, r.jsx)(_.A.Icon, { guild: P }),
+                                (0, r.jsx)(_.A.Icon, {
+                                    guild: P,
+                                }),
                                 (0, r.jsx)(_.A.Info, {
                                     title: C,
                                     onClick: J,
@@ -205,7 +220,9 @@ function S(e) {
                 P.features.has(b.GuildFeatures.HUB) &&
                     (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, r.jsx)("div", { className: O.me }),
+                            (0, r.jsx)("div", {
+                                className: O.me,
+                            }),
                             (0, r.jsx)(l.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-default",

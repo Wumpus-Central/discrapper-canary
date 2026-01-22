@@ -1,4 +1,8 @@
-n.d(e, { default: () => m }), n(896048), n(228524);
+n.d(e, {
+    default: () => m,
+}),
+    n(896048),
+    n(228524);
 var a = n(627968),
     l = n(64700),
     i = n(311907),
@@ -10,12 +14,14 @@ var a = n(627968),
     d = n(422258),
     x = n(985018),
     h = n(129115);
+
 function m(t) {
     let { channelId: e, onClose: n, transitionState: m, heading: p, formTitle: f, allowReset: k = !1 } = t,
         v = (0, i.bG)([o.A], () => o.A.getChannel(e)),
         C = (0, c.Ay)(v),
         b = u.A.getNickname(e),
         [g, j] = l.useState(null != b ? b : "");
+
     function y(t) {
         t.preventDefault(), (0, d.w6)(e, g), n();
     }

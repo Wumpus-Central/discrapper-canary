@@ -1,4 +1,6 @@
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 var r = (function (e) {
     return (
         (e.QUICK_SWITCHER = "quick switcher"),

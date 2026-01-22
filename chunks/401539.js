@@ -1,4 +1,8 @@
-n.d(t, { default: () => X }), n(896048), n(321073);
+n.d(t, {
+    default: () => X,
+}),
+    n(896048),
+    n(321073);
 var i = n(627968),
     l = n(64700),
     s = n(735438),
@@ -38,6 +42,7 @@ var i = n(627968),
     U = n(815968),
     H = n(985018),
     Y = n(453235);
+
 function V() {
     return (V =
         Object.assign ||
@@ -49,6 +54,7 @@ function V() {
             return e;
         }).apply(this, arguments);
 }
+
 function W(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -74,6 +80,7 @@ function W(e) {
     }
     return e;
 }
+
 function J(e) {
     let { label: t, channelId: n } = e,
         [l, s] = (0, c.yK)([_.A], () => {
@@ -88,6 +95,7 @@ function J(e) {
               subtitle: null == s ? void 0 : s.name,
           });
 }
+
 function z(e) {
     var t;
     let { muteConfig: n, muted: l, guild: s, handleCheckboxChange: r } = e,
@@ -101,7 +109,9 @@ function z(e) {
                       gap: 20,
                       children: [
                           (0, i.jsx)(x.dOG, {
-                              label: H.intl.formatToPlainString(H.t["J+7D9E"], { name: s.name }),
+                              label: H.intl.formatToPlainString(H.t["J+7D9E"], {
+                                  name: s.name,
+                              }),
                               description: H.intl.string(H.t["8wbTQ6"]),
                               checked: l,
                               onChange: (e) => r("muted", e, I.G_.muted(e)),
@@ -131,10 +141,13 @@ function z(e) {
                               : null,
                       ],
                   }),
-                  (0, i.jsx)(x.cGx, { gap: 20 }),
+                  (0, i.jsx)(x.cGx, {
+                      gap: 20,
+                  }),
               ],
           });
 }
+
 function B(e) {
     let { muted: t, messageNotifications: n, memberCount: l, handleRadioChange: s } = e;
     return (0, i.jsxs)("div", {
@@ -168,6 +181,7 @@ function B(e) {
         ],
     });
 }
+
 function F(e) {
     let { guildId: t } = e,
         n = (0, v._g)(t),
@@ -215,6 +229,7 @@ function F(e) {
             ],
         });
 }
+
 function Z(e) {
     let {
         suppressEveryone: t,
@@ -250,7 +265,9 @@ function Z(e) {
                         onChange: (e) => {
                             j.A.updateGuildNotificationSettings(
                                 o,
-                                { notify_highlights: e ? D.guM.DISABLED : D.guM.ENABLED },
+                                {
+                                    notify_highlights: e ? D.guM.DISABLED : D.guM.ENABLED,
+                                },
                                 I.G_.highlights(!e),
                             );
                         },
@@ -284,6 +301,7 @@ function Z(e) {
         ],
     });
 }
+
 function Q(e) {
     let { setNewChannelOverrides: t, newChannelOverrides: n, setLatestOverrideId: l, channels: s, categories: a } = e,
         d = r()(s)
@@ -321,6 +339,7 @@ function Q(e) {
         }),
     });
 }
+
 function q(e) {
     let {
             newChannelOverrides: t,
@@ -406,7 +425,9 @@ function q(e) {
                             children: (0, i.jsx)(m.m, {
                                 text: H.intl.string(H.t["8wbTQ6"]),
                                 position: "bottom",
-                                children: (0, i.jsx)("span", { children: H.intl.string(H.t.sWmtI6) }),
+                                children: (0, i.jsx)("span", {
+                                    children: H.intl.string(H.t.sWmtI6),
+                                }),
                             }),
                         }),
                     ],
@@ -416,6 +437,7 @@ function q(e) {
         })
     );
 }
+
 function K(e) {
     let { guildId: t, onClose: n, transitionState: s } = e,
         r = (0, c.bG)([E.A], () => E.A.getCategories(t)),
@@ -455,7 +477,13 @@ function K(e) {
             [r],
         ),
         T = (e, n, i) => {
-            j.A.updateGuildNotificationSettings(t, { [e]: n }, i);
+            j.A.updateGuildNotificationSettings(
+                t,
+                {
+                    [e]: n,
+                },
+                i,
+            );
         };
     return (0, i.jsxs)(o.Modal, {
         title: H.intl.string(H.t.h850Ss),
@@ -479,10 +507,18 @@ function K(e) {
                 messageNotifications: N,
                 memberCount: d,
                 handleRadioChange: (e, n, i) => {
-                    j.A.updateGuildNotificationSettings(t, { [e]: n }, i);
+                    j.A.updateGuildNotificationSettings(
+                        t,
+                        {
+                            [e]: n,
+                        },
+                        i,
+                    );
                 },
             }),
-            (0, i.jsx)(F, { guildId: t }),
+            (0, i.jsx)(F, {
+                guildId: t,
+            }),
             (0, i.jsx)(Z, {
                 suppressEveryone: u,
                 suppressRoles: g,
@@ -513,6 +549,7 @@ function K(e) {
         ],
     });
 }
+
 function X(e) {
     let {} = e,
         t = V({}, e);

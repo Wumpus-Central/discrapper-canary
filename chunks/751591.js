@@ -11,6 +11,7 @@ function r(e, t, n) {
         e
     );
 }
+
 function i(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -27,7 +28,9 @@ function i(e) {
     }
     return e;
 }
-n.d(t, { Ay: () => u });
+n.d(t, {
+    Ay: () => u,
+});
 let a = Object.freeze({
         overflowY: "scroll",
         overflowX: "hidden",
@@ -44,7 +47,10 @@ let a = Object.freeze({
         overflowX: "auto",
         overflowY: "hidden",
     }),
-    c = Object.freeze({ overflow: "auto" });
+    c = Object.freeze({
+        overflow: "auto",
+    });
+
 function u(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "vertical",
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "scroll",

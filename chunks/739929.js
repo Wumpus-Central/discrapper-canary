@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(64700),
     i = n(417597),
     l = n(465932),
@@ -12,6 +14,7 @@ var r = n(64700),
     g = n(980406),
     b = n(652215),
     m = n(985018);
+
 function p(e) {
     let t,
         n = (0, o.ME)(e),
@@ -30,12 +33,18 @@ function p(e) {
         { isMonetizationReapplicationDisabled: C } = (0, l.YG)(null == e ? void 0 : e.id),
         P = v || (null == _ ? void 0 : _.isApplicationPending) === !0,
         w = (null == _ ? void 0 : _.canApply) === !0,
-        R = m.intl.format(m.t.aJUdOi, { faqUrl: c.A.getArticleURL(b.MVz.CREATOR_FAQ) });
+        R = m.intl.format(m.t.aJUdOi, {
+            faqUrl: c.A.getArticleURL(b.MVz.CREATOR_FAQ),
+        });
     S && C
         ? (t =
               !0 === p
-                  ? m.intl.format(m.t["0o1Q+t"], { communityGuidelineUrl: b.X7G.GUIDELINES })
-                  : m.intl.format(m.t.b6h59n, { communityGuidelineUrl: b.X7G.GUIDELINES }))
+                  ? m.intl.format(m.t["0o1Q+t"], {
+                        communityGuidelineUrl: b.X7G.GUIDELINES,
+                    })
+                  : m.intl.format(m.t.b6h59n, {
+                        communityGuidelineUrl: b.X7G.GUIDELINES,
+                    }))
         : S &&
           null != T &&
           (t = m.intl.format(m.t.TvX207, {

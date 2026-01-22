@@ -1,4 +1,6 @@
-r.d(t, { A: () => l });
+r.d(t, {
+    A: () => l,
+});
 var n = r(64700),
     o = r(205662),
     a = r(717519),
@@ -16,8 +18,12 @@ let l = function (e) {
                     width: "80px",
                     position: "relative",
                 },
-                divider: { height: "5px" },
-                RGBwrap: { position: "relative" },
+                divider: {
+                    height: "5px",
+                },
+                RGBwrap: {
+                    position: "relative",
+                },
                 RGBinput: {
                     marginLeft: "40%",
                     width: "40%",
@@ -39,7 +45,9 @@ let l = function (e) {
                     lineHeight: "22px",
                     position: "absolute",
                 },
-                HEXwrap: { position: "relative" },
+                HEXwrap: {
+                    position: "relative",
+                },
                 HEXinput: {
                     marginLeft: "20%",
                     width: "80%",
@@ -106,7 +114,9 @@ let l = function (e) {
         };
     return n.createElement(
         "div",
-        { style: u.fields },
+        {
+            style: u.fields,
+        },
         n.createElement(i.jc, {
             style: {
                 wrap: u.RGBwrap,
@@ -137,7 +147,9 @@ let l = function (e) {
             value: Math.round(100 * l.v),
             onChange: c,
         }),
-        n.createElement("div", { style: u.divider }),
+        n.createElement("div", {
+            style: u.divider,
+        }),
         n.createElement(i.jc, {
             style: {
                 wrap: u.RGBwrap,
@@ -168,7 +180,9 @@ let l = function (e) {
             value: r.b,
             onChange: c,
         }),
-        n.createElement("div", { style: u.divider }),
+        n.createElement("div", {
+            style: u.divider,
+        }),
         n.createElement(i.jc, {
             style: {
                 wrap: u.HEXwrap,
@@ -181,10 +195,30 @@ let l = function (e) {
         }),
         n.createElement(
             "div",
-            { style: u.fieldSymbols },
-            n.createElement("div", { style: u.symbol }, "\xB0"),
-            n.createElement("div", { style: u.symbol }, "%"),
-            n.createElement("div", { style: u.symbol }, "%"),
+            {
+                style: u.fieldSymbols,
+            },
+            n.createElement(
+                "div",
+                {
+                    style: u.symbol,
+                },
+                "\xb0",
+            ),
+            n.createElement(
+                "div",
+                {
+                    style: u.symbol,
+                },
+                "%",
+            ),
+            n.createElement(
+                "div",
+                {
+                    style: u.symbol,
+                },
+                "%",
+            ),
         ),
     );
 };

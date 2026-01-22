@@ -1,4 +1,7 @@
-n.d(t, { A: () => y }), n(896048);
+n.d(t, {
+    A: () => y,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -17,6 +20,7 @@ var r = n(627968),
     b = n(652215),
     _ = n(613057),
     E = n(384435);
+
 function O(e, t, n) {
     return (
         t in e
@@ -82,9 +86,13 @@ class y extends i.PureComponent {
             O(this, "_scrollerRef", i.createRef()),
             O(this, "_scrollToOnMount", void 0),
             O(this, "_scrollToPadding", 0),
-            O(this, "state", { includeUpdatesInScroller: !1 }),
+            O(this, "state", {
+                includeUpdatesInScroller: !1,
+            }),
             O(this, "handleHeightTallerThanHalfViewportChange", (e) => {
-                this.setState({ includeUpdatesInScroller: e });
+                this.setState({
+                    includeUpdatesInScroller: e,
+                });
             }),
             O(this, "scrollToRow", (e, t) => {
                 let n = this._scrollerRef.current;

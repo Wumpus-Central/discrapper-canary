@@ -1,10 +1,16 @@
-i.d(t, { d: () => p }), i(896048), i(65821), i(321073);
+i.d(t, {
+    d: () => p,
+}),
+    i(896048),
+    i(65821),
+    i(321073);
 var r = i(73153),
     n = i(626584),
     s = i(723702),
     a = i(290805),
     o = i(381505),
     l = i(622397);
+
 function m(e, t, i) {
     return (
         t in e
@@ -92,8 +98,8 @@ class p {
             branch_name: this.mode.branchName,
             commit_date: this.mode.commitDate,
             timestamp: new Date().toISOString(),
-            build_number: "488133",
-            built_at: "1769101111997",
+            build_number: "488230",
+            built_at: "1769110173981",
             release_channel: null !== a.y && void 0 !== a.y ? a.y : "unknown",
             tags: this.getTags(),
             metrics: {
@@ -102,14 +108,16 @@ class p {
                 delta_from_baseline:
                     null != i && (null == t ? void 0 : t.usedJSHeapSize) != null ? t.usedJSHeapSize - i : void 0,
                 baseline_memory: i,
-                timing: { collected_at: this.mode.performanceNow() },
+                timing: {
+                    collected_at: this.mode.performanceNow(),
+                },
             },
         };
     }
     startFlushInterval() {
         this.flushIntervalId = window.setInterval(() => {
             this.flush();
-        }, 10000);
+        }, 1e4);
     }
     setupDispatcherSubscription() {
         null != this.mode &&
@@ -122,7 +130,11 @@ class p {
                             n = null != (t = this.pendingDispatches.get(e.type)) ? t : [];
                         n.push(i),
                             this.pendingDispatches.set(e.type, n),
-                            this.mode.mark("".concat(h, "-").concat(e.type, "-").concat(i), { detail: { memory: r } });
+                            this.mode.mark("".concat(h, "-").concat(e.type, "-").concat(i), {
+                                detail: {
+                                    memory: r,
+                                },
+                            });
                     }
                     return !1;
                 }),

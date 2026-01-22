@@ -1,4 +1,12 @@
-n.d(t, { transitionToGlobalDiscovery: () => h }), n(896048), n(680155), n(323874), n(14289), n(35956), n(65821);
+n.d(t, {
+    transitionToGlobalDiscovery: () => h,
+}),
+    n(896048),
+    n(680155),
+    n(323874),
+    n(14289),
+    n(35956),
+    n(65821);
 var r = n(310419),
     i = n(965660),
     a = n(601193),
@@ -11,10 +19,16 @@ var r = n(310419),
     f = n(652215),
     p = n(435220),
     _ = n(324580);
+
 function h(e) {
     var t, n, g;
     let E = e.tab;
-    switch ((u.A.setState({ selectedTab: E }), E)) {
+    switch (
+        (u.A.setState({
+            selectedTab: E,
+        }),
+        E)
+    ) {
         case d.GlobalDiscoveryTab.SERVERS:
             let b = e.selectedServersTab;
             return (
@@ -23,7 +37,9 @@ function h(e) {
                           selectedTab: b,
                           entrypoint: null != (t = e.entrypoint) ? t : _.J8.UNKNOWN,
                       })
-                    : a.A.setState({ entrypoint: null != (n = e.entrypoint) ? n : _.J8.UNKNOWN }),
+                    : a.A.setState({
+                          entrypoint: null != (n = e.entrypoint) ? n : _.J8.UNKNOWN,
+                      }),
                 (0, o.pX)(f.BVt.GLOBAL_DISCOVERY_SERVERS, e.extra)
             );
         case d.GlobalDiscoveryTab.APPS:
@@ -66,7 +82,9 @@ function h(e) {
                     "" !== e.query && t.set("q", e.query),
                     null != e.categoryId && t.set("category_id", e.categoryId.toString()),
                     null != e.page && t.set("page", e.page.toString()),
-                    (0, o.pX)(f.BVt.GLOBAL_DISCOVERY_APPS_SEARCH, { search: t.toString() })
+                    (0, o.pX)(f.BVt.GLOBAL_DISCOVERY_APPS_SEARCH, {
+                        search: t.toString(),
+                    })
                 );
             }
             if (null != e.categoryId) return (0, o.pX)(f.BVt.GLOBAL_DISCOVERY_APPS_CATEGORY(e.categoryId.toString()));
@@ -81,6 +99,7 @@ function h(e) {
             throw Error("[transitionToGlobalDiscovery] Unhandled tab type: ".concat(E));
     }
 }
+
 function m() {
     let { lastItem: e } = r.tS.getState();
     if (null != e)
@@ -105,5 +124,7 @@ function m() {
                     categoryId: null != e.categoryId ? Number(e.categoryId) : void 0,
                 };
         }
-    return { tab: d.GlobalDiscoveryTab.APPS };
+    return {
+        tab: d.GlobalDiscoveryTab.APPS,
+    };
 }

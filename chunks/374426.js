@@ -1,4 +1,6 @@
-r.d(t, { A: () => b });
+r.d(t, {
+    A: () => b,
+});
 var n = r(627968);
 r(64700);
 var o = r(311907),
@@ -8,6 +10,7 @@ var o = r(311907),
     a = r(71393),
     u = r(652215),
     s = r(985018);
+
 function b(e, t) {
     let r = (0, o.bG)([a.A], () => (null != e ? a.A.getGuild(e) : null)),
         { canCreateExpressions: b, canManageAllExpressions: p } = (0, c.nr)(r);

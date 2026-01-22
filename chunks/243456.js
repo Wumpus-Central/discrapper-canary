@@ -11,7 +11,11 @@ function n(t, e, i) {
         t
     );
 }
-i.d(e, { A: () => r }), i(896048), i(65821);
+i.d(e, {
+    A: () => r,
+}),
+    i(896048),
+    i(65821);
 class r {
     drawInto(t, e, i, n) {
         (e %= this.frameCount), this.requireFrame(e);
@@ -74,6 +78,7 @@ class r {
             throw Error("couldn't create 2d canvas context.");
     }
 }
+
 function a(t, e, i, n) {
     return [Math.floor(t / n) * e, (t % n) * i, e, i];
 }

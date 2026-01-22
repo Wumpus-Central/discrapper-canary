@@ -1,4 +1,6 @@
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -19,11 +21,14 @@ var r = n(627968),
     O = n(505543),
     j = n(985018),
     v = n(529471);
+
 function x(e) {
     let { onClick: t, className: n } = e,
         l = c.cNw;
     return (0, r.jsx)(d.A, {
-        iconContainerClassName: a()({ [v.q8]: !1 }),
+        iconContainerClassName: a()({
+            [v.q8]: !1,
+        }),
         icon: (0, r.jsx)(l, {
             size: "custom",
             color: "currentColor",
@@ -38,6 +43,7 @@ function x(e) {
         className: n,
     });
 }
+
 function E(e) {
     let { channel: t } = e,
         { participants: n, usersInSummary: l } = (0, y.A)(t.id);
@@ -55,7 +61,10 @@ function E(e) {
                 color: "text-default",
                 children: (function (e) {
                     if (0 === e.length) return "";
-                    if (1 === e.length) return j.intl.formatToPlainString(j.t["5ULgaQ"], { first: e[0].userNick });
+                    if (1 === e.length)
+                        return j.intl.formatToPlainString(j.t["5ULgaQ"], {
+                            first: e[0].userNick,
+                        });
                     if (2 === e.length)
                         return j.intl.formatToPlainString(j.t.BHK0Op, {
                             first: e[0].userNick,
@@ -72,6 +81,7 @@ function E(e) {
         ],
     });
 }
+
 function _(e) {
     let { channel: t, onContinueClick: n } = e,
         i = (0, s.bG)([m.A], () => m.A.can(A.QY, t), [t]),
@@ -83,7 +93,9 @@ function _(e) {
         className: v.kL,
         ref: y,
         children: [
-            (0, r.jsx)(g.A, { eventTargetRef: y }),
+            (0, r.jsx)(g.A, {
+                eventTargetRef: y,
+            }),
             (0, r.jsxs)("div", {
                 className: v.Qs,
                 children: [
@@ -123,11 +135,15 @@ function _(e) {
                         : null,
                     i
                         ? (0, r.jsx)(x, {
-                              className: a()({ [v.fN]: !0 }),
+                              className: a()({
+                                  [v.fN]: !0,
+                              }),
                               onClick: n,
                           })
                         : null,
-                    (0, r.jsx)(E, { channel: t }),
+                    (0, r.jsx)(E, {
+                        channel: t,
+                    }),
                 ],
             }),
         ],

@@ -1,4 +1,6 @@
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var r = n(627968);
 n(64700);
 var i = n(934551),
@@ -28,6 +30,7 @@ let p = function (e) {
                   ? i.GameControllerIcon
                   : null;
 };
+
 function _(e) {
     let {
             activity: t,
@@ -39,8 +42,12 @@ function _(e) {
             hideTooltip: _ = !1,
             canTruncate: h = !0,
         } = e,
-        { descriptiveTextEnabled: m } = (0, l.n)({ location: "PresenceActivityStatusWithCombinedTooltip" }),
-        { enableTopNavButton: g } = (0, s.tR)({ location: "PresenceActivityStatusWithCombinedTooltip" }),
+        { descriptiveTextEnabled: m } = (0, l.n)({
+            location: "PresenceActivityStatusWithCombinedTooltip",
+        }),
+        { enableTopNavButton: g } = (0, s.tR)({
+            location: "PresenceActivityStatusWithCombinedTooltip",
+        }),
         { text: E, tooltip: b } = (0, c.A)(t, m || g),
         y = p(t),
         O = null != y && !o;

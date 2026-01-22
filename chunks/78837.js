@@ -1,4 +1,7 @@
-n.d(t, { f: () => m }), n(896048);
+n.d(t, {
+    f: () => m,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -12,6 +15,7 @@ var r = n(627968),
     p = n(770178),
     _ = n(590089),
     h = n(747625);
+
 function m(e) {
     let {
             title: t,
@@ -36,7 +40,9 @@ function m(e) {
             [a, g],
         ),
         T = i.useMemo(() => (0, o.debounce)(I, 50), [I]),
-        C = (0, p.w)(T, [], { enabled: null != g }),
+        C = (0, p.w)(T, [], {
+            enabled: null != g,
+        }),
         N = a && null != O;
     return (
         i.useLayoutEffect(() => {
@@ -49,7 +55,12 @@ function m(e) {
             children: [
                 (0, r.jsx)(_.U, {
                     ref: y,
-                    style: null != O ? { minHeight: O } : void 0,
+                    style:
+                        null != O
+                            ? {
+                                  minHeight: O,
+                              }
+                            : void 0,
                     title: t,
                     description: N ? void 0 : n,
                     secondaryTrailingElement: (0, r.jsx)(f.vN3, {
@@ -57,7 +68,9 @@ function m(e) {
                             slot: "trigger",
                             className: h.bW,
                             children: (0, r.jsx)(u.ChevronLargeUpIcon, {
-                                className: s()(h.Kk, { [h.kX]: !a }),
+                                className: s()(h.Kk, {
+                                    [h.kX]: !a,
+                                }),
                                 color: d.A.colors.ICON_LINK,
                             }),
                         }),
@@ -66,10 +79,14 @@ function m(e) {
                     headingColor: "text-link",
                 }),
                 (0, r.jsx)(l.kS, {
-                    className: s()(h.nd, { [h.t5]: !b }),
+                    className: s()(h.nd, {
+                        [h.t5]: !b,
+                    }),
                     children: (0, r.jsx)(f.BJc, {
                         gap: 16,
-                        padding: { top: 16 },
+                        padding: {
+                            top: 16,
+                        },
                         children: E,
                     }),
                 }),

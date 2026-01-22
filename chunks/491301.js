@@ -10,4 +10,6 @@ function r(e) {
                       : typeof e;
               })(e);
 }
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});

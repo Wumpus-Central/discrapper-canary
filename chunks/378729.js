@@ -4,6 +4,7 @@ n.d(t, {
 });
 var r = n(600975),
     i = n(428835);
+
 function a(e, t, n) {
     return (
         t in e
@@ -17,6 +18,7 @@ function a(e, t, n) {
         e
     );
 }
+
 function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -33,6 +35,7 @@ function s(e) {
     }
     return e;
 }
+
 function o(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -45,6 +48,7 @@ function o(e, t) {
     }
     return n;
 }
+
 function l(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -60,14 +64,30 @@ let c = (0, r.C)({
         id: "2025-11_game_update_notification",
         kind: "user",
         label: "Game Update Notification",
-        defaultConfig: { showToggle: !1 },
+        defaultConfig: {
+            showToggle: !1,
+        },
         treatments: [
             {
                 id: 1,
                 label: "User can receive game update notifications. Show settings toggle.",
-                config: { showToggle: !0 },
+                config: {
+                    showToggle: !0,
+                },
             },
         ],
     }),
-    u = (e) => (0, i.u5)(c, l(s({}, e), { autoTrackExposure: !1 })),
-    d = (e) => (0, i.P2)(c, l(s({}, e), { autoTrackExposure: !1 })).showToggle;
+    u = (e) =>
+        (0, i.u5)(
+            c,
+            l(s({}, e), {
+                autoTrackExposure: !1,
+            }),
+        ),
+    d = (e) =>
+        (0, i.P2)(
+            c,
+            l(s({}, e), {
+                autoTrackExposure: !1,
+            }),
+        ).showToggle;

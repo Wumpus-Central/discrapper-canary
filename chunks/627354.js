@@ -1,2 +1,4 @@
-n.d(t, { O: () => r });
+n.d(t, {
+    O: () => r,
+});
 let r = globalThis;

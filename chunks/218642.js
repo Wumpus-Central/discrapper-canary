@@ -1,4 +1,6 @@
-s.d(i, { default: () => r });
+s.d(i, {
+    default: () => r,
+});
 var n = s(627968);
 s(64700);
 var e = s(732955),

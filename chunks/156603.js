@@ -1,4 +1,6 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var r = n(627968),
     i = n(397927),
     a = n(790381),
@@ -7,6 +9,7 @@ var r = n(627968),
     l = n(18282),
     c = n(424994),
     u = n(985018);
+
 function d(e, t, n) {
     return (
         t in e
@@ -20,6 +23,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +40,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -48,6 +53,7 @@ function p(e, t) {
     }
     return n;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -59,6 +65,7 @@ function _(e, t) {
         e
     );
 }
+
 function h(e, t) {
     if (null == e) return {};
     var n,
@@ -75,6 +82,7 @@ function h(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function m(e, t) {
     if (null == e) return {};
     var n,
@@ -97,6 +105,7 @@ let g = {
         [c.a4.XBOX]: () => u.intl.string(u.t.Nfvo72),
         [c.a4.PLAYSTATION]: () => u.intl.string(u.t.fFl4jo),
     };
+
 function b(e) {
     var t;
     let { type: n, "aria-label": i } = e,
@@ -104,5 +113,18 @@ function b(e) {
         s = g[n];
     if (null == s) return null;
     let o = null != i ? i : null == (t = E[n]) ? void 0 : t.call(E);
-    return (0, r.jsx)(l.A, _(f({ Icon: s }, a), { "aria-label": o }));
+    return (0, r.jsx)(
+        l.A,
+        _(
+            f(
+                {
+                    Icon: s,
+                },
+                a,
+            ),
+            {
+                "aria-label": o,
+            },
+        ),
+    );
 }

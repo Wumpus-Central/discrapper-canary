@@ -1,7 +1,10 @@
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 var a = n(627968);
 n(64700);
 var l = n(397927);
+
 function i(e) {
     (0, l.mMO)(
         async () => {
@@ -36,6 +39,8 @@ function i(e) {
                     })({}, t),
                 );
         },
-        { onCloseCallback: e },
+        {
+            onCloseCallback: e,
+        },
     );
 }

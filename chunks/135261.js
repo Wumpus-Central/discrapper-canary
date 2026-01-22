@@ -18,6 +18,7 @@ var r = n(627968),
     h = n(711371),
     m = n(408269),
     g = n(574377);
+
 function E(e) {
     var t;
     let { editorRef: n, options: i, iconClassName: a, dividerClassName: o } = e,
@@ -54,7 +55,9 @@ function E(e) {
                           className: s()(g.Kk, a),
                       }),
                   }),
-                  (0, r.jsx)("div", { className: s()(g.yF, o) }),
+                  (0, r.jsx)("div", {
+                      className: s()(g.yF, o),
+                  }),
                   !(null == i ? void 0 : i.disableBlockQuotes) &&
                       (0, r.jsx)(O, {
                           slateEditor: l,
@@ -127,7 +130,13 @@ let b = i.forwardRef(function (e, t) {
             },
             [b, s, y],
         );
-    i.useImperativeHandle(t, () => ({ hide: y }), [y]),
+    i.useImperativeHandle(
+        t,
+        () => ({
+            hide: y,
+        }),
+        [y],
+    ),
         i.useEffect(() => {
             let e = b.renderWindow;
             return (
@@ -212,7 +221,9 @@ let b = i.forwardRef(function (e, t) {
                       e.stopPropagation();
                   },
                   children: [
-                      (0, r.jsx)(A, { slateEditor: w }),
+                      (0, r.jsx)(A, {
+                          slateEditor: w,
+                      }),
                       (0, r.jsx)(E, {
                           editorRef: a,
                           options: c,
@@ -221,6 +232,7 @@ let b = i.forwardRef(function (e, t) {
               }),
           });
 });
+
 function y(e) {
     let { slateEditor: t, markdownSyntax: n, children: i } = e,
         a = () => {
@@ -238,6 +250,7 @@ function y(e) {
         children: i,
     });
 }
+
 function O(e) {
     let { blockType: t, slateEditor: n, children: i } = e,
         a = () => {
@@ -252,6 +265,7 @@ function O(e) {
         children: i,
     });
 }
+
 function A(e) {
     var t;
     let { slateEditor: n } = e,
@@ -266,5 +280,9 @@ function A(e) {
             },
             [n, a],
         );
-    return null == r ? null : (0, m.A)(r, { replace: s });
+    return null == r
+        ? null
+        : (0, m.A)(r, {
+              replace: s,
+          });
 }

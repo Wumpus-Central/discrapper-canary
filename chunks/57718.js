@@ -7,7 +7,7 @@ var r = n(627968);
 n(64700);
 var i = n(503698),
     a = n.n(i),
-    s = n(432022),
+    s = n(108531),
     o = n(827734),
     l = n(582754),
     c = n(397927),
@@ -22,6 +22,7 @@ var i = n(503698),
     m = (function (e) {
         return (e[(e.SMALL = 2)] = "SMALL"), (e[(e.MEDIUM = 8)] = "MEDIUM"), e;
     })({});
+
 function g(e) {
     switch (e) {
         case 24:
@@ -71,7 +72,9 @@ let E = function (e) {
                 children: (e) =>
                     (0, r.jsx)(s.animated.img, {
                         ref: e,
-                        className: a()(_.lW, n, { [_.TO]: I }),
+                        className: a()(_.lW, n, {
+                            [_.TO]: I,
+                        }),
                         style: O,
                         alt: h.config.messages.gameTitle,
                         src: (0, d.tW)(h, d.fY.LOGO_TYPE, v).url,
@@ -83,7 +86,9 @@ let E = function (e) {
                     children: [
                         (0, r.jsx)("div", {
                             className: _.ub,
-                            style: { margin: "0 ".concat(m, "px") },
+                            style: {
+                                margin: "0 ".concat(m, "px"),
+                            },
                             children: (0, r.jsx)(c.aoi, {
                                 className: _.JB,
                                 color: o.A.colors.WHITE,

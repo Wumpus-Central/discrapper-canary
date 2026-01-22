@@ -1,4 +1,13 @@
-n.d(t, { A: () => y }), n(896048), n(693327), n(554719), n(680155), n(323874), n(14289), n(35956);
+n.d(t, {
+    A: () => y,
+}),
+    n(896048),
+    n(693327),
+    n(554719),
+    n(680155),
+    n(323874),
+    n(14289),
+    n(35956);
 var a = n(627968),
     l = n(64700),
     i = n(311907),
@@ -15,6 +24,7 @@ var a = n(627968),
     x = n(259059),
     b = n(698638),
     g = n(465692);
+
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -40,6 +50,7 @@ function v(e) {
     }
     return e;
 }
+
 function j(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -58,6 +69,7 @@ function j(e, t) {
         e
     );
 }
+
 function y() {
     var e, t;
     let [n, i] = (0, l.useState)(!1),
@@ -150,7 +162,13 @@ function y() {
             (0, a.jsxs)("div", {
                 className: g.iW,
                 children: [
-                    (0, a.jsx)(_, { nameplate: h }, null == h || null == (t = h.palette) ? void 0 : t.name),
+                    (0, a.jsx)(
+                        _,
+                        {
+                            nameplate: h,
+                        },
+                        null == h || null == (t = h.palette) ? void 0 : t.name,
+                    ),
                     (0, a.jsxs)("div", {
                         className: g.Uo,
                         children: [
@@ -204,6 +222,7 @@ function y() {
         ],
     });
 }
+
 function _(e) {
     let { nameplate: t } = e,
         [n, i] = (0, l.useState)(320),
@@ -247,23 +266,31 @@ function _(e) {
             children: (0, a.jsxs)("div", {
                 ref: s,
                 className: g.ey,
-                style: { width: "".concat(n, "px") },
+                style: {
+                    width: "".concat(n, "px"),
+                },
                 children: [
                     (0, a.jsx)(r.Text, {
                         variant: "text-sm/semibold",
                         children: "Memberlist",
                     }),
-                    (0, a.jsx)(O, { nameplate: t }),
+                    (0, a.jsx)(O, {
+                        nameplate: t,
+                    }),
                     (0, a.jsx)(r.Text, {
                         variant: "text-sm/semibold",
                         children: "DMs",
                     }),
-                    (0, a.jsx)(E, { nameplate: t }),
+                    (0, a.jsx)(E, {
+                        nameplate: t,
+                    }),
                     (0, a.jsx)(r.Text, {
                         variant: "text-sm/semibold",
                         children: "RTC",
                     }),
-                    (0, a.jsx)(N, { nameplate: t }),
+                    (0, a.jsx)(N, {
+                        nameplate: t,
+                    }),
                     (0, a.jsx)("div", {
                         className: g.Di,
                         onMouseDown: m,
@@ -273,6 +300,7 @@ function _(e) {
         })
     );
 }
+
 function A(e) {
     let { src: t, onSetStatic: n, removeAsset: l } = e;
     return (0, a.jsxs)("div", {
@@ -305,6 +333,7 @@ function A(e) {
         ],
     });
 }
+
 function C(e) {
     let { label: t, onClick: n } = e;
     return (0, a.jsxs)("div", {
@@ -324,6 +353,7 @@ function C(e) {
         ],
     });
 }
+
 function S(e) {
     let { label: t, onChange: n } = e;
     return (0, a.jsxs)("div", {
@@ -343,6 +373,7 @@ function S(e) {
         ],
     });
 }
+
 function O(e) {
     let { nameplate: t } = e,
         n = (0, i.bG)([d.default], () => d.default.getCurrentUser());
@@ -385,6 +416,7 @@ function O(e) {
         }),
     });
 }
+
 function E(e) {
     let { nameplate: t } = e;
     return (0, a.jsx)("div", {
@@ -397,7 +429,9 @@ function E(e) {
                     variant: "text-sm/semibold",
                     children: "DEFAULT",
                 }),
-                (0, a.jsx)(x.A, { nameplate: t }),
+                (0, a.jsx)(x.A, {
+                    nameplate: t,
+                }),
                 (0, a.jsx)(r.Text, {
                     className: g.Pf,
                     variant: "text-sm/semibold",
@@ -409,20 +443,25 @@ function E(e) {
                             selected: !0,
                             nameplate: t,
                         }),
-                        (0, a.jsx)(x.A, { selected: !0 }),
+                        (0, a.jsx)(x.A, {
+                            selected: !0,
+                        }),
                     ],
                 }),
             ],
         }),
     });
 }
+
 function N(e) {
     let { nameplate: t } = e;
     return (0, a.jsx)("div", {
         className: g.VH,
         children: (0, a.jsx)("div", {
             className: g.X2,
-            children: (0, a.jsx)(h.A, { nameplate: t }),
+            children: (0, a.jsx)(h.A, {
+                nameplate: t,
+            }),
         }),
     });
 }

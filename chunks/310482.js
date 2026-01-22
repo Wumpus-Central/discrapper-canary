@@ -1,10 +1,14 @@
-n.d(e, { default: () => u }), n(896048);
+n.d(e, {
+    default: () => u,
+}),
+    n(896048);
 var a = n(627968),
     i = n(64700),
     l = n(732955),
     r = n(397927),
     s = n(985018),
     o = n(945280);
+
 function u(t) {
     let { onConfirm: e, onClose: n, guildName: u, transitionState: c } = t,
         [d, m] = i.useState(""),
@@ -31,8 +35,12 @@ function u(t) {
                 : (null == e || e(), n());
         },
         children: (0, a.jsxs)(l.aFV, {
-            title: s.intl.formatToPlainString(s.t.us7mC1, { name: u }),
-            subtitle: s.intl.format(s.t["Zuo+Vd"], { name: u }),
+            title: s.intl.formatToPlainString(s.t.us7mC1, {
+                name: u,
+            }),
+            subtitle: s.intl.format(s.t["Zuo+Vd"], {
+                name: u,
+            }),
             actions: f,
             onClose: n,
             transitionState: c,

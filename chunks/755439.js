@@ -1,8 +1,11 @@
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var r,
     i = n(311907),
     a = n(73153),
     s = n(613057);
+
 function o(e, t, n) {
     return (
         t in e
@@ -19,10 +22,12 @@ function o(e, t, n) {
 let l = null,
     c = [s.Hi.REDISTRIBUTABLE_INSTALL_FAILED, s.Hi.POST_INSTALL_FAILED, s.Hi.POST_INSTALL_CANCELLED],
     u = [s.Hi.APPLICATION_NOT_FOUND, s.Hi.APPLICATION_LOAD_FAILED, s.Hi.INTERRUPTED, s.Hi.DESERIALIZATION_FAILED];
+
 function d(e) {
     let { error: t } = e;
     l = null != t.code && u.includes(t.code) ? null : t;
 }
+
 function f() {
     null != l && null != l.code && c.includes(l.code) && (l = null);
 }

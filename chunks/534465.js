@@ -13,6 +13,7 @@ var i = n(397927),
     c = n(67518),
     u = n(652215),
     d = n(985018);
+
 function f(e, t, n) {
     return (
         t in e
@@ -26,6 +27,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,6 +44,7 @@ function p(e) {
     }
     return e;
 }
+
 function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -54,6 +57,7 @@ function _(e, t) {
     }
     return n;
 }
+
 function h(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -65,6 +69,7 @@ function h(e, t) {
         e
     );
 }
+
 function m(e) {
     let { user: t, activity: n, entry: r } = e;
     return null != r
@@ -82,6 +87,7 @@ function m(e) {
                 sourceUserId: void 0,
             };
 }
+
 function g(e) {
     let { user: t, activity: o, entry: l } = e,
         { applicationId: u } = m({
@@ -135,6 +141,7 @@ function g(e) {
     }
     return f;
 }
+
 function E(e) {
     let { user: t, activity: n, entry: a, onAction: s, isMenuOpen: c, appContext: u } = e,
         { applicationId: f, sourceUserId: p } = m({
@@ -156,7 +163,11 @@ function E(e) {
               id: "game-profile",
               label: d.intl.string(d.t.ajHoOr),
               action: (e) => {
-                  null == s || s({ action: "PRESS_VIEW_GAME_PROFILE_MENU_ITEM" }), _(e);
+                  null == s ||
+                      s({
+                          action: "PRESS_VIEW_GAME_PROFILE_MENU_ITEM",
+                      }),
+                      _(e);
               },
           });
 }

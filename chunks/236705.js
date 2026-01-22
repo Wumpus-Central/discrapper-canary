@@ -1,4 +1,6 @@
-n.d(t, { $: () => u });
+n.d(t, {
+    $: () => u,
+});
 var r = n(143236);
 let i = 160,
     a = 500;
@@ -9,6 +11,7 @@ let o = {
     open: !1,
     orientation: null,
 };
+
 function l() {
     try {
         return window.outerWidth - window.innerWidth;
@@ -16,6 +19,7 @@ function l() {
         return 0;
     }
 }
+
 function c() {
     try {
         return window.outerHeight - window.innerHeight;

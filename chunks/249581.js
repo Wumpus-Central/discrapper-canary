@@ -1,4 +1,7 @@
-n.d(t, { A: () => _ }), n(228524);
+n.d(t, {
+    A: () => _,
+}),
+    n(228524);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -65,6 +68,7 @@ let f = (e) => {
         });
     },
     p = 50;
+
 function _(e) {
     let { achievement: t, unlocked: n } = e,
         { name: a, description: _, rarity: h, hideDescriptionUntilUnlock: m, onAction: g } = t,
@@ -111,7 +115,9 @@ function _(e) {
             }),
             (0, r.jsx)("div", {
                 className: d.Db,
-                children: (0, r.jsx)(f, { color: E }),
+                children: (0, r.jsx)(f, {
+                    color: E,
+                }),
             }),
         ],
     });

@@ -18,7 +18,9 @@ var r = n(311907),
     m = n(545058);
 let h = (e) => {
         let { channelId: t } = e;
-        return (0, l.jsx)(j, { channelId: t });
+        return (0, l.jsx)(j, {
+            channelId: t,
+        });
     },
     j = (e) => {
         let { channelId: t } = e,
@@ -57,7 +59,10 @@ let h = (e) => {
                             }
                             return e;
                         })({}, e)),
-                        (r = r = { channelId: t }),
+                        (r = r =
+                            {
+                                channelId: t,
+                            }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
                             : (function (e, t) {
@@ -103,11 +108,15 @@ let h = (e) => {
               ? (0, l.jsxs)("div", {
                     className: m.jC,
                     children: [
-                        (0, l.jsx)(s.G3N, { size: "lg" }),
+                        (0, l.jsx)(s.G3N, {
+                            size: "lg",
+                        }),
                         (0, l.jsx)(s.Text, {
                             variant: "text-xs/normal",
                             color: "text-default",
-                            children: x.intl.format(x.t.Ri3o33, { number: r }),
+                            children: x.intl.format(x.t.Ri3o33, {
+                                number: r,
+                            }),
                         }),
                         (0, l.jsx)(s.DUT, {
                             className: m.R5,
@@ -126,7 +135,9 @@ let h = (e) => {
                         (0, l.jsx)(s.Text, {
                             variant: "text-xs/normal",
                             color: "text-default",
-                            children: x.intl.format(x.t["6Tcdt7"], { number: n }),
+                            children: x.intl.format(x.t["6Tcdt7"], {
+                                number: n,
+                            }),
                         }),
                         (0, l.jsx)(s.DUT, {
                             className: m.R5,

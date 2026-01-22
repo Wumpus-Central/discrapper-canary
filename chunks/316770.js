@@ -1,4 +1,6 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var r = n(627968),
     i = n(503698),
     a = n.n(i),
@@ -15,6 +17,7 @@ var r = n(627968),
     m = n(818348),
     g = n(985018),
     E = n(380297);
+
 function b(e) {
     let { channel: t, guild: n, onAction: i, onClose: b } = e,
         y = (0, c.Ay)(t),
@@ -24,7 +27,10 @@ function b(e) {
             let e = (e) => {
                 e.stopPropagation(),
                     t.isGuildStageVoice() ? (0, f.av)(t) : (l.default.selectVoiceChannel(t.id), (0, u.iN)(t.id)),
-                    null == i || i({ action: "OPEN_VOICE_CHANNEL" }),
+                    null == i ||
+                        i({
+                            action: "OPEN_VOICE_CHANNEL",
+                        }),
                     null == b || b();
             };
             return (0, r.jsx)(o.DUT, {
@@ -36,11 +42,19 @@ function b(e) {
         v = () => {
             if (null == n) return null;
             let e = (e) => {
-                e.stopPropagation(), (0, d.u)(n.id), null == i || i({ action: "OPEN_VOICE_GUILD" }), null == b || b();
+                e.stopPropagation(),
+                    (0, d.u)(n.id),
+                    null == i ||
+                        i({
+                            action: "OPEN_VOICE_GUILD",
+                        }),
+                    null == b || b();
             };
             return (0, r.jsx)(_.A, {
                 variant: "text-xs/normal",
-                text: g.intl.formatToPlainString(g.t["hq/Qze"], { guildName: n.name }),
+                text: g.intl.formatToPlainString(g.t["hq/Qze"], {
+                    guildName: n.name,
+                }),
                 onClick: e,
             });
         };

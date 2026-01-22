@@ -1,4 +1,7 @@
-n.d(t, { y: () => p }), n(896048);
+n.d(t, {
+    y: () => p,
+}),
+    n(896048);
 var r = n(64700),
     i = n(635358),
     l = n(311907),
@@ -8,6 +11,7 @@ var r = n(64700),
     c = n(295811),
     u = n(233525),
     d = n(766201);
+
 function p(e, t, n) {
     let p = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         f = (0, l.bG)([a.A], () => a.A.hasLoadedExperiments);
@@ -79,11 +83,11 @@ function p(e, t, n) {
         }, [t, I, A, h]),
         S = (0, r.useMemo)(() => !(0, s.gn)(_, v), [_, v]),
         C = (0, d.n)(g, null != O && O, p),
-        N = (0, r.useMemo)(() => !C && Date.now() - m < 600000, [m, C]);
+        N = (0, r.useMemo)(() => !C && Date.now() - m < 6e5, [m, C]);
     return (
         (0, r.useEffect)(() => {
             if (!f || O) return;
-            let t = Date.now() - b < 600000;
+            let t = Date.now() - b < 6e5;
             (null != E && t) || ((S || !N || y) && (0, s.h$)(e, v, n));
         }, [f, O, E, b, N, y, S, v, e, n]),
         {

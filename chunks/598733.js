@@ -1,4 +1,7 @@
-n.d(t, { A: () => b }), n(896048);
+n.d(t, {
+    A: () => b,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -26,7 +29,10 @@ let b = () => {
         y = async () => {
             a(!0);
             try {
-                _.cf(t.id), await u.A.joinGuild(t.id, { source: h.Q4z.NOTICE_BAR });
+                _.cf(t.id),
+                    await u.A.joinGuild(t.id, {
+                        source: h.Q4z.NOTICE_BAR,
+                    });
             } catch (e) {
                 a(!1);
             }
@@ -62,7 +68,9 @@ let b = () => {
                 size: l.$n.Sizes.NONE,
                 submitting: n,
                 onClick: y,
-                children: m.intl.format(m.t.uHN7ny, { guild: t.name }),
+                children: m.intl.format(m.t.uHN7ny, {
+                    guild: t.name,
+                }),
             }),
         ],
     });

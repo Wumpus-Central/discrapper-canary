@@ -1,4 +1,5 @@
 var r = n(724039);
+
 function i() {
     return (i =
         r ||
@@ -10,6 +11,7 @@ function i() {
             return e;
         }).apply(this, arguments);
 }
+
 function a(e, t) {
     (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
 }

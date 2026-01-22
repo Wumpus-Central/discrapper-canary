@@ -1,6 +1,9 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(735438),
     i = n(842901);
+
 function a(e) {
     let { theme: t, layoutType: n } = e;
     return (0, i.E)(t, n);

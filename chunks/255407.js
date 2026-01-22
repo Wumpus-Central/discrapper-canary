@@ -15,6 +15,8 @@ t.exports = function () {
             function (t) {
                 return n(e, this);
             },
-            { arity: 1 },
+            {
+                arity: 1,
+            },
         );
 };

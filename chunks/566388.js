@@ -58,6 +58,7 @@ var r = n(627968),
     et = n(806931),
     en = n(985018),
     er = n(105626);
+
 function el(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -87,6 +88,7 @@ let ei = "HasBeenInStageChannel",
     ea = (e) => {
         (0, v.X)(h.A.VOICE_CONTROL_TRAY, v.O.STAY_ON_TOP, e), E.setAlwaysOnTop(ee.MLl.CHANNEL_CALL_POPOUT, e);
     };
+
 function es(e) {
     let {
             channel: t,
@@ -152,6 +154,7 @@ function es(e) {
         ],
     });
 }
+
 function eo(e) {
     let { channel: t } = e,
         n = (0, x.Us)(),
@@ -168,6 +171,7 @@ function eo(e) {
           })
         : null;
 }
+
 function ec(e) {
     var t, n;
     let i,
@@ -197,8 +201,10 @@ function ec(e) {
                         let { scrollTop: t } = e.target;
                         R(t);
                     },
-                    1000,
-                    { leading: !0 },
+                    1e3,
+                    {
+                        leading: !0,
+                    },
                 ),
             [],
         ),
@@ -270,15 +276,24 @@ function ec(e) {
                             ? null
                             : (0, r.jsx)(A.Ay, {
                                   children: (0, r.jsx)(N.A, {
-                                      className: a()(er.T6, { [er.c3]: d }),
+                                      className: a()(er.T6, {
+                                          [er.c3]: d,
+                                      }),
                                       channelId: c.id,
                                   }),
                               }),
-                    screenMessage: P ? { mainText: en.intl.string(en.t.J5bXZU) } : null,
+                    screenMessage: P
+                        ? {
+                              mainText: en.intl.string(en.t.J5bXZU),
+                          }
+                        : null,
                 },
                 j,
             )),
-            (n = n = { children: !P && i }),
+            (n = n =
+                {
+                    children: !P && i,
+                }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                 : (function (e, t) {
@@ -295,6 +310,7 @@ function ec(e) {
         )
     );
 }
+
 function eu(e) {
     let { channel: t, popoutType: i } = e,
         [s, d] = l.useState(!1),
@@ -317,7 +333,9 @@ function eu(e) {
             [t.id],
         ),
         w = (0, o.bG)([L.A], () => L.A.getGuild(t.guild_id), [t.guild_id]),
-        { hasParticipantsPanel: R } = (0, j.A)({ location: "StageChannelCall" });
+        { hasParticipantsPanel: R } = (0, j.A)({
+            location: "StageChannelCall",
+        });
     (0, p.Ay)(() => {
         null == c.w.get(ei) &&
             ((0, u.mMO)(async () => {
@@ -346,7 +364,7 @@ function eu(e) {
                                         [er.gy]: s || T || P,
                                     }),
                                     children: (0, r.jsx)(I.Ay, {
-                                        timeout: 2000,
+                                        timeout: 2e3,
                                         children: (e) =>
                                             (0, r.jsx)(ec, {
                                                 channel: t,

@@ -1,8 +1,11 @@
-n.d(t, { A: () => v });
+n.d(t, {
+    A: () => v,
+});
 var r,
     i = n(311907),
     a = n(73153),
     s = n(734057);
+
 function o(e, t, n) {
     return (
         t in e
@@ -16,6 +19,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -32,6 +36,7 @@ function l(e) {
     }
     return e;
 }
+
 function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -44,6 +49,7 @@ function c(e, t) {
     }
     return n;
 }
+
 function u(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -56,10 +62,12 @@ function u(e, t) {
     );
 }
 let d = {};
+
 function f(e) {
     let t = s.A.getChannel(e);
     return null != t && !!t.isForumLikeChannel();
 }
+
 function p(e) {
     var t;
     let n =
@@ -72,18 +80,25 @@ function p(e) {
               };
     return (d[e] = n), n;
 }
+
 function _(e) {
     let { channelId: t, query: n } = e;
     if (!f(t)) return !1;
     let r = p(t);
-    d[t] = u(l({}, r), { query: n });
+    d[t] = u(l({}, r), {
+        query: n,
+    });
 }
+
 function h(e) {
     let { channelId: t } = e;
     if (!f(t)) return !1;
     let n = p(t);
-    d[t] = u(l({}, n), { loading: !0 });
+    d[t] = u(l({}, n), {
+        loading: !0,
+    });
 }
+
 function m(e) {
     let { channelId: t, threadIds: n } = e;
     if (!f(t)) return !1;
@@ -93,6 +108,7 @@ function m(e) {
         results: n,
     });
 }
+
 function g(e) {
     let { channelId: t } = e;
     if (!f(t)) return !1;
@@ -102,10 +118,12 @@ function g(e) {
         results: [],
     });
 }
+
 function E(e) {
     let { channelId: t } = e;
     return !!f(t) && delete d[t];
 }
+
 function b(e) {
     var t;
     let { channel: n } = e,
@@ -113,12 +131,16 @@ function b(e) {
     if (null == r) return !1;
     let i = d[r];
     if (null == i) return !1;
-    d[r] = u(l({}, i), { results: null == (t = i.results) ? void 0 : t.filter((e) => n.id !== e) });
+    d[r] = u(l({}, i), {
+        results: null == (t = i.results) ? void 0 : t.filter((e) => n.id !== e),
+    });
 }
+
 function y(e) {
     let { channel: t } = e;
     return delete d[t.id];
 }
+
 function O() {
     d = {};
 }

@@ -31,7 +31,12 @@ var i = n(64700),
     _ = n(652215),
     P = n(22104),
     S = n(985018);
-let T = (t) => (null != t ? S.intl.format(S.t["4kp0AB"], { itemName: t }) : null),
+let T = (t) =>
+        null != t
+            ? S.intl.format(S.t["4kp0AB"], {
+                  itemName: t,
+              })
+            : null,
     k = (t) => {
         let {
             product: e,
@@ -54,7 +59,10 @@ let T = (t) => (null != t ? S.intl.format(S.t["4kp0AB"], { itemName: t }) : null
             if (a) return S.intl.string(S.t.t0xkSB);
             else return S.intl.string(S.t.g5W1g8);
         if (i && !r) return S.intl.string(S.t.IMffmm);
-        else return S.intl.formatToPlainString(S.t.YNaxMp, { itemName: l });
+        else
+            return S.intl.formatToPlainString(S.t.YNaxMp, {
+                itemName: l,
+            });
     },
     v = (t) => {
         let {
@@ -76,7 +84,9 @@ let T = (t) => (null != t ? S.intl.format(S.t["4kp0AB"], { itemName: t }) : null
             });
         if (m.Dp.ORB_PROFILE_BADGE === e.skuId) return S.intl.string(P.default.UnPGii);
         if (m.Dp.FRACTIONAL_PREMIUM === e.skuId) {
-            let t = S.intl.formatToPlainString(S.t.Cz1G97, { days: 3 });
+            let t = S.intl.formatToPlainString(S.t.Cz1G97, {
+                days: 3,
+            });
             return a
                 ? S.intl.format(S.t.bhLChO, {
                       helpCenterLink: R.A.getArticleURL(_.MVz.FRACTIONAL_PREMIUM_ABOUT),
@@ -160,7 +170,10 @@ let T = (t) => (null != t ? S.intl.format(S.t["4kp0AB"], { itemName: t }) : null
                           text: S.intl.string(S.t["Jr6N+s"]),
                           variant: "primary",
                           onClick: () => {
-                              (0, f.openUserSettings)(h.X.SUBSCRIPTIONS_PANEL, { section: _.nc_.SUBSCRIPTIONS }), n();
+                              (0, f.openUserSettings)(h.X.SUBSCRIPTIONS_PANEL, {
+                                  section: _.nc_.SUBSCRIPTIONS,
+                              }),
+                                  n();
                           },
                       },
                   );
@@ -219,7 +232,9 @@ let T = (t) => (null != t ? S.intl.format(S.t["4kp0AB"], { itemName: t }) : null
                     product_type: n,
                 });
             }, [e, t.skuId, t.items, n]),
-            { productType: n }
+            {
+                productType: n,
+            }
         );
     },
     M = (t, e) => {

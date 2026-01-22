@@ -1,4 +1,7 @@
-n.d(t, { A: () => N }), n(896048);
+n.d(t, {
+    A: () => N,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -90,7 +93,10 @@ let N = l.memo(function (e) {
                                     }
                                     return e;
                                 })({}, t)),
-                                (l = l = { guild: i }),
+                                (l = l =
+                                    {
+                                        guild: i,
+                                    }),
                                 Object.getOwnPropertyDescriptors
                                     ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
                                     : (function (e, t) {
@@ -184,7 +190,9 @@ let N = l.memo(function (e) {
                       targetElementRef: P,
                       skuImageDetails: K,
                       title: S.intl.string(S.t["7PvvS9"]),
-                      body: S.intl.formatToPlainString(S.t["9J4h1a"], { applicationName: D.applicationName }),
+                      body: S.intl.formatToPlainString(S.t["9J4h1a"], {
+                          applicationName: D.applicationName,
+                      }),
                   }),
         ],
     });

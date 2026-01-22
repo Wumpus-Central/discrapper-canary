@@ -1,4 +1,8 @@
-n.d(t, { A: () => j }), n(321073), n(896048);
+n.d(t, {
+    A: () => j,
+}),
+    n(321073),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(311907),
@@ -22,6 +26,7 @@ var r = n(627968),
     I = n(715671),
     v = n(652215),
     S = n(985018);
+
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -47,6 +52,7 @@ function C(e) {
     }
     return e;
 }
+
 function N(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -66,6 +72,7 @@ function N(e, t) {
     );
 }
 let T = c.A.get(v.fg2.XBOX).name;
+
 function j(e) {
     let { currentActivities: t } = e,
         n = t.length > 1,
@@ -80,8 +87,13 @@ function j(e) {
                 ? null
                 : (0, r.jsx)(a.Drp, {
                       id: "xbox-connect",
-                      action: () => (0, g.openUserSettings)(A.X.CONNECTIONS_PANEL, { section: v.nc_.CONNECTIONS }),
-                      label: S.intl.formatToPlainString(S.t.XWSHTb, { platform: T }),
+                      action: () =>
+                          (0, g.openUserSettings)(A.X.CONNECTIONS_PANEL, {
+                              section: v.nc_.CONNECTIONS,
+                          }),
+                      label: S.intl.formatToPlainString(S.t.XWSHTb, {
+                          platform: T,
+                      }),
                   });
         })(e),
         x = (function (e) {
@@ -136,7 +148,9 @@ function j(e) {
                     return (0, r.jsx)(a.Drp, {
                         id: "join-".concat(i.session_id),
                         label: t
-                            ? S.intl.formatToPlainString(S.t.wFAvxM, { name: l.toString() })
+                            ? S.intl.formatToPlainString(S.t.wFAvxM, {
+                                  name: l.toString(),
+                              })
                             : S.intl.string(S.t.OKsSCR),
                         action: c,
                     });
@@ -153,18 +167,30 @@ function j(e) {
                     } = e;
                     if (!o || null == n) return null;
                     let d = c
-                        ? S.intl.formatToPlainString(S.t["gBme/4"], { name: i.name })
+                        ? S.intl.formatToPlainString(S.t["gBme/4"], {
+                              name: i.name,
+                          })
                         : u
-                          ? S.intl.formatToPlainString(S.t.WtSQwG, { name: i.name })
+                          ? S.intl.formatToPlainString(S.t.WtSQwG, {
+                                name: i.name,
+                            })
                           : void 0;
                     return (0, r.jsx)(a.Drp, {
                         id: "play-".concat(n.session_id),
                         action: function () {
                             (0, I.playApplication)(i.id, l, {
-                                analyticsParams: { location: N(C({}, s), { object: v.ZSU.LIST_ITEM }) },
+                                analyticsParams: {
+                                    location: N(C({}, s), {
+                                        object: v.ZSU.LIST_ITEM,
+                                    }),
+                                },
                             });
                         },
-                        label: t ? S.intl.formatToPlainString(S.t.ZDZEJN, { name: i.name }) : S.intl.string(S.t.XKUw8m),
+                        label: t
+                            ? S.intl.formatToPlainString(S.t.ZDZEJN, {
+                                  name: i.name,
+                              })
+                            : S.intl.string(S.t.XKUw8m),
                         subtext: d,
                     });
                 })(e, n),

@@ -1,4 +1,6 @@
-n.d(t, { A: () => O });
+n.d(t, {
+    A: () => O,
+});
 var r = n(627968);
 n(64700);
 var l = n(503698),
@@ -14,13 +16,18 @@ var l = n(503698),
     b = n(985018),
     g = n(461349),
     m = n(105778);
+
 function y(e) {
     let { applicationId: t, userId: n, onClick: l } = e,
         { coverImageUrl: i, gameName: c, isLoading: f } = (0, p.A)(t),
         y = (0, a.bG)([u.A], () => u.A.suggestedFetchIsLoading),
-        O = b.intl.formatToPlainString(b.t["3mb1s5"], { game: c });
+        O = b.intl.formatToPlainString(b.t["3mb1s5"], {
+            game: c,
+        });
     return f || y
-        ? (0, r.jsx)("div", { className: g.mD })
+        ? (0, r.jsx)("div", {
+              className: g.mD,
+          })
         : (0, r.jsx)(s.m, {
               text: O,
               ariaHidden: !0,
@@ -46,6 +53,7 @@ function y(e) {
               }),
           });
 }
+
 function O(e) {
     let { userId: t, games: n, onDismiss: l, onClick: a, className: s } = e,
         u = (0, c.GV)();

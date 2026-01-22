@@ -1,9 +1,13 @@
-n.d(t, { A: () => g }), n(896048);
+n.d(t, {
+    A: () => g,
+}),
+    n(896048);
 var r,
     i = n(311907),
     a = n(73153),
     s = n(626584),
     o = n(71393);
+
 function l(e, t, n) {
     return (
         t in e
@@ -19,6 +23,7 @@ function l(e, t, n) {
 }
 let c = new s.A("GuildAvailabilityStore"),
     u = new Set();
+
 function d(e) {
     (u = new Set(e.unavailableGuilds)),
         e.unavailableGuilds.length > 0 &&
@@ -28,10 +33,12 @@ function d(e) {
                     .concat(e.unavailableGuilds),
             );
 }
+
 function f(e) {
     if (!u.has(e.guildId)) return !1;
     u.delete(e.guildId);
 }
+
 function p(e) {
     if (u.has(e.guildId)) return !1;
     let t = o.A.getGuild(e.guildId),
@@ -40,10 +47,12 @@ function p(e) {
         c.warn("Guild has gone unavailable: ".concat(e.guildId, " (").concat(n, ")")),
         u.add(e.guildId);
 }
+
 function _(e) {
     if (!u.has(e.guild.id)) return !1;
     u.delete(e.guild.id), c.info("Guild has become available: ".concat(e.guild.id));
 }
+
 function h(e) {
     !0 !== e.guild.unavailable && u.delete(e.guild.id);
 }

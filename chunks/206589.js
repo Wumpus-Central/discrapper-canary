@@ -6,4 +6,6 @@ function r(e, t) {
         e.party.id === t.party.id
     );
 }
-n.d(t, { w: () => r });
+n.d(t, {
+    w: () => r,
+});

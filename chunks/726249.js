@@ -10,6 +10,7 @@ var r = n(64700),
     i = n(942381),
     a = n(265690),
     s = n(121894);
+
 function o(e, t, n) {
     return (
         t in e
@@ -23,6 +24,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -39,6 +41,7 @@ function l(e) {
     }
     return e;
 }
+
 function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -51,6 +54,7 @@ function c(e, t) {
     }
     return n;
 }
+
 function u(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -62,18 +66,21 @@ function u(e, t) {
         e
     );
 }
-let d = { base: n(723702).isPlatformEmbedded ? void 0 : "Discord" },
+let d = {
+        base: n(723702).isPlatformEmbedded ? void 0 : "Discord",
+    },
     f = 0,
     p = {
         count: 3,
         onlyWhenBlurred: !1,
-        interval: 1000,
+        interval: 1e3,
     },
     _ = (0, a.h)(() => ({
         titles: [d],
         notificationCount: void 0,
         flashQueue: [],
     }));
+
 function h(e) {
     let t, n, r;
     for (let i of e.titles) {
@@ -82,13 +89,20 @@ function h(e) {
     }
     return [t, r, n];
 }
+
 function m(e) {
     let { notificationCount: t } = e;
-    return null == t || 0 === t ? "" : t < 0 ? "\u2022 " : "(".concat(t, ") ");
+    return null == t || 0 === t ? "" : t < 0 ? "• " : "(".concat(t, ") ");
 }
+
 function g(e) {
-    (0, s.r)(() => _.setState({ notificationCount: e }));
+    (0, s.r)(() =>
+        _.setState({
+            notificationCount: e,
+        }),
+    );
 }
+
 function E(e) {
     return (
         (0, s.r)(() =>
@@ -97,12 +111,19 @@ function E(e) {
             })),
         ),
         () => {
-            (0, s.r)(() => _.setState((t) => ({ titles: t.titles.filter((t) => t !== e) })));
+            (0, s.r)(() =>
+                _.setState((t) => ({
+                    titles: t.titles.filter((t) => t !== e),
+                })),
+            );
         }
     );
 }
+
 function b(e) {
-    let t = u(l({}, p, e), { id: f++ });
+    let t = u(l({}, p, e), {
+        id: f++,
+    });
     return (
         (t.count = Math.max(t.count, t.messages.length)),
         _.setState((e) => ({
@@ -111,18 +132,27 @@ function b(e) {
         () => y(t.id)
     );
 }
+
 function y(e) {
-    _.setState((t) => ({ flashQueue: t.flashQueue.filter((t) => t.id !== e) }));
+    _.setState((t) => ({
+        flashQueue: t.flashQueue.filter((t) => t.id !== e),
+    }));
 }
+
 function O() {
-    _.setState({ flashQueue: [] });
+    _.setState({
+        flashQueue: [],
+    });
 }
+
 function A(e) {
     r.useEffect(() => E(e), [...Object.values(e)]);
 }
+
 function v(e) {
     return A(e), null;
 }
+
 function S() {
     let [e, t] = _((e) => {
             let { flashQueue: t } = e,
@@ -157,17 +187,24 @@ function S() {
         n ? o : e
     );
 }
+
 function I() {
     r.useEffect(() => {
         function e() {
             O();
         }
         return (
-            document.addEventListener("focusin", e, { capture: !0 }),
-            () => document.removeEventListener("focusin", e, { capture: !0 })
+            document.addEventListener("focusin", e, {
+                capture: !0,
+            }),
+            () =>
+                document.removeEventListener("focusin", e, {
+                    capture: !0,
+                })
         );
     }, []);
 }
+
 function T() {
     let { skipsSettingDefaultPageTitle: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     I();

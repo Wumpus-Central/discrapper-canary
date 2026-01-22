@@ -39,7 +39,11 @@ let g = (e) => {
                   : null == (i = a.image)
                     ? void 0
                     : i.url;
-        return null == s ? null : (0, r.jsx)(b, { url: s });
+        return null == s
+            ? null
+            : (0, r.jsx)(b, {
+                  url: s,
+              });
     },
     b = (e) => {
         let { url: t, description: n } = e,
@@ -59,6 +63,7 @@ let g = (e) => {
                   }),
         });
     };
+
 function y(e) {
     c.A.pop(),
         (0, f.r)({
@@ -67,6 +72,7 @@ function y(e) {
         }),
         e();
 }
+
 function O(e) {
     let {
             channelId: t,
@@ -125,7 +131,16 @@ function O(e) {
                     disabled: a,
                 },
             ],
-            children: [null != o && (0, r.jsx)(g, { attachment: o }), null != c && (0, r.jsx)(E, { embed: c })],
+            children: [
+                null != o &&
+                    (0, r.jsx)(g, {
+                        attachment: o,
+                    }),
+                null != c &&
+                    (0, r.jsx)(E, {
+                        embed: c,
+                    }),
+            ],
         })
     );
 }

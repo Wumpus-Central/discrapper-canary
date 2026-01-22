@@ -21,14 +21,23 @@ async function f() {
 }
 async function p() {
     try {
-        let { enabledPaymentTypes: e } = s.Ay.getCurrentConfig({ location: "40c266_2" }, { autoTrackExposure: !1 });
+        let { enabledPaymentTypes: e } = s.Ay.getCurrentConfig(
+            {
+                location: "40c266_2",
+            },
+            {
+                autoTrackExposure: !1,
+            },
+        );
         if (!e.includes(u.hes.CASH_APP)) return;
         let t = await f(),
             { default: r } = await Promise.all([n.e("94678"), n.e("35511")]).then(n.bind(n, 847722)),
             a = await r({
                 environment: u.Gg3.ADYEN.KEY.startsWith("live_") ? "live" : "test",
                 clientKey: u.Gg3.ADYEN.KEY,
-                analytics: { enabled: !1 },
+                analytics: {
+                    enabled: !1,
+                },
                 paymentMethodsResponse: t.body,
             });
         i.h.dispatch({
@@ -37,9 +46,13 @@ async function p() {
         }),
             _(a);
     } catch (e) {
-        (0, l.pM)(e), i.h.dispatch({ type: "ADYEN_CREATE_CLIENT_FAIL" });
+        (0, l.pM)(e),
+            i.h.dispatch({
+                type: "ADYEN_CREATE_CLIENT_FAIL",
+            });
     }
 }
+
 function _(e) {
     if (null != c.A.cashAppPayComponent) {
         m(), h();
@@ -81,15 +94,18 @@ function _(e) {
         component: t,
     });
 }
+
 function h() {
     var e;
     if (null == c.A.cashAppPayComponent) throw Error("Adyen CashAppPay component must be created before mounting.");
     null == (e = c.A.cashAppPayComponent) || e.mount("#".concat(o.h));
 }
+
 function m() {
     var e;
     null == (e = c.A.cashAppPayComponent) || e.unmount();
 }
+
 function g() {
     let e = c.A.cashAppPayComponent;
     if (null == e) throw Error("Adyen CashAppPay component must be created before submitting.");

@@ -42,6 +42,7 @@ let s = (e) => ({
     sharePolicy: e.share_policy,
     ctaConfig: (0, r.W)(e.cta_config),
 });
+
 function o(e) {
     if (null != e)
         return {

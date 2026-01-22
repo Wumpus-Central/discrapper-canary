@@ -24,6 +24,7 @@ var r = n(627968),
     O = n(73510);
 n(827669);
 var A = n(985018);
+
 function v(e, t, n, r, i) {
     if (null == e) return;
     let a = () => {
@@ -39,7 +40,9 @@ function v(e, t, n, r, i) {
         );
         if (null != s && s.untranslatedName === t) {
             var l, f;
-            b._.dispatch(y.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: e });
+            b._.dispatch(y.jej.FOCUS_CHANNEL_TEXT_AREA, {
+                channelId: e,
+            });
             let t =
                 null != o
                     ? {
@@ -70,11 +73,14 @@ function v(e, t, n, r, i) {
               confirmText: A.intl.string(A.t.VkKicb),
               onConfirm: () => a(),
               onCloseCallback: () => {
-                  b._.dispatch(y.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: e });
+                  b._.dispatch(y.jej.FOCUS_CHANNEL_TEXT_AREA, {
+                      channelId: e,
+                  });
               },
           })
         : a();
 }
+
 function S(e) {
     var t;
     let { node: n, stateKey: s, children: o } = e,
@@ -92,7 +98,9 @@ function S(e) {
                       type: "channel",
                       channel: l,
                   }
-                : { type: "contextless" },
+                : {
+                      type: "contextless",
+                  },
         { command: A } = u.D3(b, null != (t = n.commandKey) ? t : ""),
         S = _.D_.useSetting(),
         I = i.useMemo(() => {
@@ -126,6 +134,7 @@ function S(e) {
               children: ["/", o],
           });
 }
+
 function I(e) {
     let { commandId: t, commandName: n, commandDescription: i, applicationId: s, onClick: c } = e,
         u = (0, a.bG)([E.A], () => E.A.getChannelId()),
@@ -143,6 +152,7 @@ function I(e) {
         }),
     });
 }
+
 function T(e) {
     return {
         react: (e, t, n) =>

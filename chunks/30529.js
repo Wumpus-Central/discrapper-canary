@@ -1,6 +1,9 @@
-n.d(t, { X: () => a });
+n.d(t, {
+    X: () => a,
+});
 var r = n(544105),
     i = n(652215);
+
 function a(e) {
     switch (e) {
         case i.fg2.XBOX:

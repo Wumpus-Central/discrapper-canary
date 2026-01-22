@@ -3,6 +3,7 @@ r.d(t, {
     D: () => l,
 });
 var n = r(73153);
+
 function o(e) {
     n.h.wait(() =>
         n.h.dispatch({
@@ -11,6 +12,11 @@ function o(e) {
         }),
     );
 }
+
 function l() {
-    n.h.wait(() => n.h.dispatch({ type: "NUF_COMPLETE" }));
+    n.h.wait(() =>
+        n.h.dispatch({
+            type: "NUF_COMPLETE",
+        }),
+    );
 }

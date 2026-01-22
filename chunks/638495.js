@@ -23,6 +23,7 @@ var r = n(627968),
     g = n(231723),
     E = n(652215),
     b = n(727423);
+
 function y(e, t, n) {
     return (
         t in e
@@ -36,6 +37,7 @@ function y(e, t, n) {
         e
     );
 }
+
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -52,6 +54,7 @@ function O(e) {
     }
     return e;
 }
+
 function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -64,6 +67,7 @@ function A(e, t) {
     }
     return n;
 }
+
 function v(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -93,26 +97,38 @@ class I extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            y(this, "state", { transitionState: null }),
+            y(this, "state", {
+                transitionState: null,
+            }),
             y(this, "componentWillAppear", (e) => {
                 this.componentWillEnter(e);
             }),
             y(this, "componentWillEnter", (e) => {
                 let { instant: t } = this.props;
-                this.setState({ transitionState: g.ip.ENTERING }),
+                this.setState({
+                    transitionState: g.ip.ENTERING,
+                }),
                     setTimeout(
                         () => {
-                            this.setState({ transitionState: g.ip.ENTERED }), null == e || e();
+                            this.setState({
+                                transitionState: g.ip.ENTERED,
+                            }),
+                                null == e || e();
                         },
                         t ? 0 : g.xt,
                     );
             }),
             y(this, "componentWillLeave", (e) => {
                 let { instant: t } = this.props;
-                this.setState({ transitionState: g.ip.EXITING }),
+                this.setState({
+                    transitionState: g.ip.EXITING,
+                }),
                     setTimeout(
                         () => {
-                            this.setState({ transitionState: g.ip.EXITED }), e();
+                            this.setState({
+                                transitionState: g.ip.EXITED,
+                            }),
+                                e();
                         },
                         t ? 0 : g.xt,
                     );
@@ -123,7 +139,9 @@ class I extends i.PureComponent {
                     e === g.ip.HIDDEN && this.props.isVisible && this.componentWillEnter(),
                         this.props.isVisible ||
                             (e !== g.ip.ENTERING && e !== g.ip.ENTERED) ||
-                            this.setState({ transitionState: g.ip.HIDDEN });
+                            this.setState({
+                                transitionState: g.ip.HIDDEN,
+                            });
                 }
             }),
             y(
@@ -136,9 +154,11 @@ class I extends i.PureComponent {
             );
     }
 }
+
 function T() {
     return (0, m.modalContextFromAppContext)((0, _.Us)());
 }
+
 function C(e) {
     let t = [],
         n = !1;
@@ -147,11 +167,17 @@ function C(e) {
         let a = e[i],
             s = null == (r = e[i + 1]) ? void 0 : r.stackingBehavior,
             o = n || "replace" === s;
-        t.unshift(v(O({}, a), { isVisible: !o })), "replaceAll" === a.stackingBehavior && (n = !0);
+        t.unshift(
+            v(O({}, a), {
+                isVisible: !o,
+            }),
+        ),
+            "replaceAll" === a.stackingBehavior && (n = !0);
     }
     return t;
 }
 let N = [];
+
 function R() {
     let e = T(),
         t = (0, m.useModalsStore)((t) => (void 0 !== t[e] ? t[e] : N)),

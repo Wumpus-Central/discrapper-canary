@@ -1,4 +1,7 @@
-n.d(t, { i: () => h }), n(896048);
+n.d(t, {
+    i: () => h,
+}),
+    n(896048);
 var a = n(627968),
     l = n(64700),
     i = n(503698),
@@ -48,7 +51,9 @@ let m = () => {
                         ),
                     );
             },
-            { modalKey: c.D },
+            {
+                modalKey: c.D,
+            },
         );
     },
     p = (e) => {
@@ -97,7 +102,9 @@ let m = () => {
                         children: (0, a.jsxs)("div", {
                             className: u.vW,
                             children: [
-                                (0, a.jsx)(o.A, { icons: d.ir }),
+                                (0, a.jsx)(o.A, {
+                                    icons: d.ir,
+                                }),
                                 (0, a.jsx)(s.Heading, {
                                     variant: "heading-lg/bold",
                                     children: "Upload Shop Assets",

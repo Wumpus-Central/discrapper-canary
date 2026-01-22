@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(627968),
     l = n(64700),
     i = n(989349),
@@ -12,6 +14,7 @@ var r = n(627968),
     f = n(985018),
     b = n(918372),
     m = n(27786);
+
 function p(e) {
     let { guild: t, onSubmit: i } = e,
         p = (0, a.bG)([u.A], () => u.A.getMembersCountByGuildId(t.id, c.Tu.NEW_GUILD_MEMBER), [t.id]),
@@ -57,7 +60,10 @@ function p(e) {
                                   }
                                   return e;
                               })({}, t)),
-                              (l = l = { onConfirm: h }),
+                              (l = l =
+                                  {
+                                      onConfirm: h,
+                                  }),
                               Object.getOwnPropertyDescriptors
                                   ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
                                   : (function (e, t) {
@@ -96,7 +102,9 @@ function p(e) {
                           }),
                       }),
                   }),
-                  (0, r.jsx)("td", { colSpan: H }),
+                  (0, r.jsx)("td", {
+                      colSpan: H,
+                  }),
                   (0, r.jsx)("td", {
                       colSpan: 2,
                       children: (0, r.jsx)("div", {
@@ -109,7 +117,9 @@ function p(e) {
                                   color: "always-white",
                                   className: m.Lb,
                                   children: [
-                                      (0, r.jsx)("div", { children: f.intl.string(f.t.rkyOzK) }),
+                                      (0, r.jsx)("div", {
+                                          children: f.intl.string(f.t.rkyOzK),
+                                      }),
                                       (0, r.jsx)(s.nys, {
                                           size: "custom",
                                           color: "currentColor",

@@ -1,4 +1,8 @@
-n.d(t, { A: () => d }), n(638769), n(896048);
+n.d(t, {
+    A: () => d,
+}),
+    n(638769),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -7,6 +11,7 @@ var r = n(627968),
     l = n(510898),
     c = n(985018),
     u = n(104579);
+
 function d(e) {
     let { onGoBack: t } = e,
         n = (0, a.yK)([o.A], () => {
@@ -58,6 +63,7 @@ function d(e) {
         ],
     });
 }
+
 function f(e) {
     let { onBack: t, title: n } = e;
     return (0, r.jsxs)("div", {
@@ -65,7 +71,10 @@ function f(e) {
         children: [
             (0, r.jsx)(s.K0, {
                 "aria-label": c.intl.string(c.t["13/7kX"]),
-                icon: () => (0, r.jsx)(s.Zge, { size: "sm" }),
+                icon: () =>
+                    (0, r.jsx)(s.Zge, {
+                        size: "sm",
+                    }),
                 onClick: t,
                 variant: "icon-only",
             }),

@@ -1,4 +1,6 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -25,11 +27,17 @@ let b = l.memo(function (e) {
         className: h.kL,
         children: (0, r.jsxs)("ul", {
             role: "group",
-            "aria-label": p.intl.formatToPlainString(p.t.EiyIi6, { channelName: t.name }),
+            "aria-label": p.intl.formatToPlainString(p.t.EiyIi6, {
+                channelName: t.name,
+            }),
             children: [
                 (0, r.jsx)("div", {
-                    className: a()(h.eh, { [h.ET]: b }),
-                    style: { bottom: ("cozy" === g ? 28 : 24) + A },
+                    className: a()(h.eh, {
+                        [h.ET]: b,
+                    }),
+                    style: {
+                        bottom: ("cozy" === g ? 28 : 24) + A,
+                    },
                 }),
                 m.map((e, t) =>
                     (0, r.jsx)(

@@ -42,21 +42,26 @@ let u = 2,
     _ = -2,
     h = -1,
     m = !1;
+
 function g() {
     var e;
     if (void 0 !== r && r !== h) return r;
     let t = parseInt(null != (e = new URLSearchParams(window.location.search).get("pid")) ? e : "", 10);
     return isNaN(t) && (t = h), (r = t);
 }
+
 function E(e) {
     r = e;
 }
+
 function b(e) {
     return null != e && 0 !== e && e !== h;
 }
+
 function y() {
     return new URLSearchParams(window.location.search).get("rpc_auth_token");
 }
+
 function O(e) {
     (0, a.tN)({
         type: l.kGV.LOG_MESSAGES,
@@ -65,15 +70,19 @@ function O(e) {
         payload: e,
     });
 }
+
 function A(e) {
     return !s.isPlatformEmbedded || (e.width >= f.width && e.height >= f.height);
 }
+
 function v(e) {
     m = e;
 }
+
 function S() {
     return m;
 }
+
 function I() {
     let e = (0, s.isWindows)() && "arm64" === o.Ay.architecture;
     return c.OX && !e && !(0, i.Zi)();

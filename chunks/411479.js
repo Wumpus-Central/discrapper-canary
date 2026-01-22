@@ -45,7 +45,9 @@ e.exports = function (e) {
                 e.APOS_STRING_MODE,
                 e.QUOTE_STRING_MODE,
             ],
-            { className: "string" },
+            {
+                className: "string",
+            },
         ),
         l = {
             match: [/(class|interface|trait|enum|record|extends|implements)/, /\s+/, e.UNDERSCORE_IDENT_RE],
@@ -119,7 +121,7 @@ e.exports = function (e) {
             },
             {
                 className: "attr",
-                begin: r + "[ \t]*:",
+                begin: r + "[ 	]*:",
                 relevance: 0,
             },
             {
@@ -130,7 +132,7 @@ e.exports = function (e) {
             },
             {
                 className: "symbol",
-                begin: "^[ \t]*" + n.lookahead(r + ":"),
+                begin: "^[ 	]*" + n.lookahead(r + ":"),
                 excludeBegin: !0,
                 end: r + ":",
                 relevance: 0,

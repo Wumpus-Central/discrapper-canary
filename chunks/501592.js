@@ -1,8 +1,11 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
     l = n(113394);
+
 function s(e) {
     let { children: t } = e;
     return (0, r.jsx)("div", {

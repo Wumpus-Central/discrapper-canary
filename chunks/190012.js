@@ -1,4 +1,6 @@
-n.d(t, { BC: () => g });
+n.d(t, {
+    BC: () => g,
+});
 var r = n(735438),
     l = n(448761),
     i = n(311907),
@@ -12,6 +14,7 @@ var r = n(735438),
     m = n(638075),
     f = n(652215),
     y = n(985018);
+
 function g(e, t) {
     let { isBlocked: n, isIgnored: g } = (0, i.cf)(
             [d.A],
@@ -78,24 +81,32 @@ function g(e, t) {
                     return t
                         ? {
                               type: "text",
-                              text: y.intl.formatToPlainString(y.t.h4pFfU, { count: e.attachments.length }),
+                              text: y.intl.formatToPlainString(y.t.h4pFfU, {
+                                  count: e.attachments.length,
+                              }),
                               trailingIcon: "image",
                           }
                         : n
                           ? {
                                 type: "text",
-                                text: y.intl.formatToPlainString(y.t.SJ6pPX, { count: e.attachments.length }),
+                                text: y.intl.formatToPlainString(y.t.SJ6pPX, {
+                                    count: e.attachments.length,
+                                }),
                                 trailingIcon: "video",
                             }
                           : r
                             ? {
                                   type: "text",
-                                  text: y.intl.formatToPlainString(y.t.fnO3hK, { count: e.attachments.length }),
+                                  text: y.intl.formatToPlainString(y.t.fnO3hK, {
+                                      count: e.attachments.length,
+                                  }),
                                   trailingIcon: "audio",
                               }
                             : {
                                   type: "text",
-                                  text: y.intl.formatToPlainString(y.t["89ihS8"], { count: e.attachments.length }),
+                                  text: y.intl.formatToPlainString(y.t["89ihS8"], {
+                                      count: e.attachments.length,
+                                  }),
                                   trailingIcon: "attachment",
                               };
                 }
@@ -106,19 +117,25 @@ function g(e, t) {
                     if (t)
                         return {
                             type: "text",
-                            text: y.intl.formatToPlainString(y.t.h4pFfU, { count: e.embeds.length }),
+                            text: y.intl.formatToPlainString(y.t.h4pFfU, {
+                                count: e.embeds.length,
+                            }),
                             trailingIcon: "image",
                         };
                     if (n)
                         return {
                             type: "text",
-                            text: y.intl.formatToPlainString(y.t.SJ6pPX, { count: e.embeds.length }),
+                            text: y.intl.formatToPlainString(y.t.SJ6pPX, {
+                                count: e.embeds.length,
+                            }),
                             trailingIcon: "video",
                         };
                     if (r)
                         return {
                             type: "text",
-                            text: y.intl.formatToPlainString(y.t.fnO3hK, { count: e.embeds.length }),
+                            text: y.intl.formatToPlainString(y.t.fnO3hK, {
+                                count: e.embeds.length,
+                            }),
                             trailingIcon: "audio",
                         };
                     else if (e.embeds.length > 0 && null != e.embeds[0].rawTitle)
@@ -134,7 +151,9 @@ function g(e, t) {
                     else
                         return {
                             type: "text",
-                            text: y.intl.formatToPlainString(y.t["9XuYjs"], { count: e.embeds.length }),
+                            text: y.intl.formatToPlainString(y.t["9XuYjs"], {
+                                count: e.embeds.length,
+                            }),
                             trailingIcon: "link",
                         };
                 }
@@ -187,7 +206,10 @@ function g(e, t) {
                         }
                         return e;
                     })({}, t)),
-                    (c = c = { authorLabel: s }),
+                    (c = c =
+                        {
+                            authorLabel: s,
+                        }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(u, Object.getOwnPropertyDescriptors(c))
                         : (function (e, t) {
@@ -289,7 +311,9 @@ function g(e, t) {
                               : e.type === l.l.PREMIUM_REFERRAL
                                 ? {
                                       type: "text",
-                                      text: y.intl.formatToPlainString(y.t.lieTqU, { username: i }),
+                                      text: y.intl.formatToPlainString(y.t.lieTqU, {
+                                          username: i,
+                                      }),
                                   }
                                 : void 0;
         })(e, t);

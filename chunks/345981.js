@@ -1,6 +1,9 @@
-n.d(t, { X: () => a });
+n.d(t, {
+    X: () => a,
+});
 var r = n(652215),
     i = n(985018);
+
 function a(e) {
     let { application: t, username: n, usernameHook: a = r.tEg } = e;
     return null != t

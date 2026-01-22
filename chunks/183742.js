@@ -1,4 +1,6 @@
-r.d(t, { default: () => d });
+r.d(t, {
+    default: () => d,
+});
 var n = r(627968),
     c = r(64700),
     i = r(284009),
@@ -32,5 +34,10 @@ class b extends c.Component {
 }
 let d = a.Ay.connectStores([s.default], () => {
     let e = s.default.getCurrentUser();
-    return l()(null != e, "PremiumRequiredModal: user cannot be null"), { user: e };
+    return (
+        l()(null != e, "PremiumRequiredModal: user cannot be null"),
+        {
+            user: e,
+        }
+    );
 })(b);

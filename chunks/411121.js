@@ -1,4 +1,8 @@
-n.d(t, { A: () => U }), n(896048), n(65821);
+n.d(t, {
+    A: () => U,
+}),
+    n(896048),
+    n(65821);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -29,6 +33,7 @@ var r = n(627968),
     w = n(788868),
     P = n(985018),
     D = n(539785);
+
 function x(e, t, n) {
     return (
         t in e
@@ -43,7 +48,7 @@ function x(e, t, n) {
     );
 }
 let L = 512,
-    j = 1000;
+    j = 1e3;
 class M extends i.PureComponent {
     componentWillUnmount() {
         this._copyModeTimeout.stop();
@@ -85,8 +90,10 @@ class M extends i.PureComponent {
                         null != t.expiresAt
                             ? (0, r.jsxs)(i.Fragment, {
                                   children: [
-                                      P.intl.format(P.t.ltVZcJ, { hours: t.expiresAt.diff(l()(), "h") }),
-                                      " \u2014\xA0",
+                                      P.intl.format(P.t.ltVZcJ, {
+                                          hours: t.expiresAt.diff(l()(), "h"),
+                                      }),
+                                      " —\xa0",
                                   ],
                               })
                             : null,
@@ -103,17 +110,27 @@ class M extends i.PureComponent {
     constructor(...e) {
         super(...e),
             x(this, "_copyModeTimeout", new u.Ep()),
-            x(this, "state", { copyMode: f.qCr.DEFAULT }),
+            x(this, "state", {
+                copyMode: f.qCr.DEFAULT,
+            }),
             x(this, "handleCopy", (e) => {
                 let { giftCode: t, sku: n } = this.props;
                 (0, N.AK)(t, n),
                     (0, C.C)(
                         e,
-                        () => this.setState({ copyMode: f.qCr.SUCCESS }),
-                        () => this.setState({ copyMode: f.qCr.ERROR }),
+                        () =>
+                            this.setState({
+                                copyMode: f.qCr.SUCCESS,
+                            }),
+                        () =>
+                            this.setState({
+                                copyMode: f.qCr.ERROR,
+                            }),
                     ),
                     this._copyModeTimeout.start(j, () => {
-                        this.setState({ copyMode: f.qCr.DEFAULT });
+                        this.setState({
+                            copyMode: f.qCr.DEFAULT,
+                        });
                     });
             });
     }
@@ -162,7 +179,9 @@ class k extends i.PureComponent {
               })
             : (0, r.jsx)("div", {
                   className: D.Oc,
-                  children: P.intl.format(P.t.zMcvcA, { copies: t.length }),
+                  children: P.intl.format(P.t.zMcvcA, {
+                      copies: t.length,
+                  }),
               });
     }
     renderTitle() {
@@ -210,7 +229,9 @@ class k extends i.PureComponent {
         });
     }
     setIsHovered(e) {
-        this.setState({ isHovered: e });
+        this.setState({
+            isHovered: e,
+        });
     }
     render() {
         let {
@@ -257,7 +278,9 @@ class k extends i.PureComponent {
                 c
                     ? (0, r.jsx)(_.A.Body, {
                           children: o
-                              ? (0, r.jsx)(f.y$y, { className: D.u1 })
+                              ? (0, r.jsx)(f.y$y, {
+                                    className: D.u1,
+                                })
                               : (0, r.jsxs)(i.Fragment, {
                                     children: [
                                         n.length < e.length ? this.renderGenerateGiftCodeRow() : null,
@@ -290,7 +313,9 @@ class k extends i.PureComponent {
             x(this, "handleGenerateGiftCode", async (e) => {
                 e.stopPropagation();
                 let { skuId: t, subscriptionPlanId: n, giftStyle: r } = this.props;
-                this.setState({ isCreating: !0 }),
+                this.setState({
+                    isCreating: !0,
+                }),
                     await p.A.createGiftCode(t, n, r),
                     this.setState({
                         isCreating: !1,
@@ -301,7 +326,9 @@ class k extends i.PureComponent {
                 let { skuId: e, subscriptionPlanId: t, loadedAt: n } = this.props,
                     r = !this.state.isOpen;
                 (null == n || null == this._loadedAt || n < this._loadedAt) && r && p.A.fetchUserGiftCodesForSKU(e, t),
-                    this.setState({ isOpen: !this.state.isOpen });
+                    this.setState({
+                        isOpen: !this.state.isOpen,
+                    });
             });
     }
 }

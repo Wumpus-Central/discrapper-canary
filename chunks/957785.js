@@ -1,4 +1,7 @@
-n.d(t, { A: () => p }), n(896048);
+n.d(t, {
+    A: () => p,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -38,7 +41,9 @@ let p = i.forwardRef(function (e, t) {
                         productLines: new Set([S]),
                     });
             },
-            className: s()(C, { [f.ax]: O === d.Y.SMALL }),
+            className: s()(C, {
+                [f.ax]: O === d.Y.SMALL,
+            }),
             "aria-label": null != (n = _.title) ? n : "",
             innerRef: t,
             children: [
@@ -59,7 +64,9 @@ let p = i.forwardRef(function (e, t) {
         }),
         w = !N && null != A;
     return (0, r.jsxs)("div", {
-        className: s()({ [f.r4]: w }),
+        className: s()({
+            [f.r4]: w,
+        }),
         children: [
             w &&
                 (0, r.jsx)("div", {

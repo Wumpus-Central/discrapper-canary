@@ -17,6 +17,7 @@ var i = n(503698),
     b = n(124759),
     m = n(985018),
     p = n(690450);
+
 function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,9 +43,11 @@ function x(e) {
     }
     return e;
 }
+
 function h(e) {
     return b.dR.filter((t) => (null == e ? void 0 : e.id) !== g.V && f.Ib(t, e));
 }
+
 function j(e) {
     let { guild: t } = e,
         i = (0, a.bG)([d.A], () => d.A.getEveryoneRole(t)),
@@ -55,7 +58,10 @@ function j(e) {
             return !u.A.can(e, t, null, {
                 [i.id]:
                     ((n = x({}, i)),
-                    (r = r = { permissions: s.TF(i.permissions, e) }),
+                    (r = r =
+                        {
+                            permissions: s.TF(i.permissions, e),
+                        }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
                         : (function (e, t) {
@@ -84,7 +90,9 @@ function j(e) {
                         (0, r.jsx)(o.Text, {
                             variant: "text-sm/medium",
                             color: "text-default",
-                            children: m.intl.format(m.t.RXAtdO, { numPerms: f.length }),
+                            children: m.intl.format(m.t.RXAtdO, {
+                                numPerms: f.length,
+                            }),
                         }),
                     ],
                 }),
@@ -120,7 +128,16 @@ function j(e) {
                   onClick: () => {
                       (0, o.mMO)(async () => {
                           let { default: e } = await n.e("94286").then(n.bind(n, 868952));
-                          return (n) => (0, r.jsx)(e, x({ guild: t }, n));
+                          return (n) =>
+                              (0, r.jsx)(
+                                  e,
+                                  x(
+                                      {
+                                          guild: t,
+                                      },
+                                      n,
+                                  ),
+                              );
                       });
                   },
                   className: l()(p.ph, p.vk),

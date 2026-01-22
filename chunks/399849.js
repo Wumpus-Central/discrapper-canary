@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var l = n(627968);
 n(64700);
 var r = n(503698),
@@ -8,6 +10,7 @@ var r = n(503698),
     o = n(607407),
     c = n(985018),
     u = n(707511);
+
 function d(e) {
     let { stream: t, isSmall: n, selected: r, isSelfStream: d } = e;
     return (0, l.jsxs)(l.Fragment, {
@@ -19,7 +22,9 @@ function d(e) {
             }),
             !r &&
                 (0, l.jsxs)("div", {
-                    className: i()(u.Qs, u.JK, { [u.EX]: n }),
+                    className: i()(u.Qs, u.JK, {
+                        [u.EX]: n,
+                    }),
                     children: [
                         (0, l.jsx)(s.Text, {
                             className: u.gS,

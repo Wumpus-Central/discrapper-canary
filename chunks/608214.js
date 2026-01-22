@@ -18,6 +18,7 @@ var r = n(627968),
     _ = n(454290),
     h = n(504149),
     m = n(112576);
+
 function g(e, t, n) {
     return (
         t in e
@@ -31,6 +32,7 @@ function g(e, t, n) {
         e
     );
 }
+
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -47,6 +49,7 @@ function E(e) {
     }
     return e;
 }
+
 function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -59,6 +62,7 @@ function b(e, t) {
     }
     return n;
 }
+
 function y(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -70,6 +74,7 @@ function y(e, t) {
         e
     );
 }
+
 function O(e, t) {
     if (null == e) return {};
     var n,
@@ -86,6 +91,7 @@ function O(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function A(e, t) {
     if (null == e) return {};
     var n,
@@ -96,18 +102,23 @@ function A(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function v(e, t) {
     return y(E({}, e), {
         type: (0, s.FE)(e),
         original: e.url,
         srcIsAnimated: (0, a.Lt)(e.flags, s.e5.IS_ANIMATED),
-        sourceMetadata: { message: t },
+        sourceMetadata: {
+            message: t,
+        },
     });
 }
+
 function S(e) {
     let t = p.A.toURLSafe(e);
     return null == t ? null : (t.searchParams.append("format", "webp"), t.toString());
 }
+
 function I(e) {
     let t,
         { media: n, obscured: i = !1, maxWidth: a, maxHeight: s, onContextMenu: c } = e,
@@ -174,10 +185,15 @@ function I(e) {
                           maxHeight: s,
                       },
                   })),
-        null != t ? (0, r.jsx)(h.A, { children: t }) : null
+        null != t
+            ? (0, r.jsx)(h.A, {
+                  children: t,
+              })
+            : null
     );
 }
 let T = i.memo(I);
+
 function C(e, t, n, r, i) {
     return e && p.A.isDiscordAssetUrl(t, r, i)
         ? (0, c.XW)(t, r, i)

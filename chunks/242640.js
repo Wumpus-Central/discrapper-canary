@@ -30,6 +30,7 @@ var r = n(627968),
             e
         );
     })({});
+
 function O(e) {
     let {
             item: t,
@@ -78,7 +79,9 @@ function O(e) {
         H = (0, r.jsx)("div", {
             className: b.Lw,
             children: (0, r.jsx)(l.Button, {
-                focusProps: { ringTarget: j },
+                focusProps: {
+                    ringTarget: j,
+                },
                 variant: "primary",
                 size: "sm",
                 text: T,
@@ -123,7 +126,11 @@ function O(e) {
                     }),
                     onClick: Y,
                     children: [
-                        (0, r.jsx)(l.AC4, { children: (0, r.jsx)(l.H, { children: S }) }),
+                        (0, r.jsx)(l.AC4, {
+                            children: (0, r.jsx)(l.H, {
+                                children: S,
+                            }),
+                        }),
                         (0, r.jsx)("div", {
                             className: b.ho,
                             children: v(),
@@ -133,7 +140,9 @@ function O(e) {
                             ? H
                             : (0, r.jsx)(l.DUT, {
                                   "aria-label": T,
-                                  focusProps: { ringTarget: j },
+                                  focusProps: {
+                                      ringTarget: j,
+                                  },
                                   onClick: (e) => {
                                       e.stopPropagation(), Y();
                                   },
@@ -155,7 +164,9 @@ function O(e) {
     return V
         ? (0, r.jsx)(o.un, {
               asContainer: !0,
-              title: E.intl.formatToPlainString(E.t.TL4ktE, { username: G }),
+              title: E.intl.formatToPlainString(E.t.TL4ktE, {
+                  username: G,
+              }),
               body: t.skuName,
               asset: F,
               children: W,

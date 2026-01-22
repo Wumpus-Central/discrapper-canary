@@ -1,4 +1,7 @@
-n.d(t, { default: () => j }), n(896048);
+n.d(t, {
+    default: () => j,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     a = n(91871),
@@ -14,6 +17,7 @@ var r = n(627968),
     m = n(721228),
     x = n(985018),
     h = n(43079);
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -39,6 +43,7 @@ function p(e) {
     }
     return e;
 }
+
 function v(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -57,6 +62,7 @@ function v(e, t) {
         e
     );
 }
+
 function j(e) {
     var t;
     let { transitionState: n, onClose: a, guildId: j, welcomeMessage: y, onSave: O } = e,
@@ -102,13 +108,21 @@ function j(e) {
         ),
         I = l.useCallback(
             (e) => {
-                C((t) => v(p({}, t), { authorIds: null != e ? [e] : [] }));
+                C((t) =>
+                    v(p({}, t), {
+                        authorIds: null != e ? [e] : [],
+                    }),
+                );
             },
             [C],
         ),
         S = l.useCallback(
             (e) => {
-                C((t) => v(p({}, t), { message: null != e ? e : "" }));
+                C((t) =>
+                    v(p({}, t), {
+                        message: null != e ? e : "",
+                    }),
+                );
             },
             [C],
         ),
@@ -122,9 +136,16 @@ function j(e) {
         E = (function (e) {
             if (null == e.message || 0 === e.message.length) return null;
             if (null == e.authorIds || 0 === e.authorIds.length)
-                if (e.message.length < u.Fi) return x.intl.formatToPlainString(x.t.Lj831L, { minLength: u.Fi });
+                if (e.message.length < u.Fi)
+                    return x.intl.formatToPlainString(x.t.Lj831L, {
+                        minLength: u.Fi,
+                    });
                 else return x.intl.string(x.t["4m7gtn"]);
-            return e.message.length < u.Fi ? x.intl.formatToPlainString(x.t.TJGHXt, { minLength: u.Fi }) : null;
+            return e.message.length < u.Fi
+                ? x.intl.formatToPlainString(x.t.TJGHXt, {
+                      minLength: u.Fi,
+                  })
+                : null;
         })(k),
         T = l.useMemo(
             () => [
@@ -174,7 +195,9 @@ function j(e) {
                     }),
                 ],
             }),
-            (0, r.jsx)("div", { className: h.me }),
+            (0, r.jsx)("div", {
+                className: h.me,
+            }),
             (0, r.jsxs)("div", {
                 className: h.eH,
                 children: [

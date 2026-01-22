@@ -1,8 +1,11 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968),
     i = n(64700),
     a = n(663675),
     s = n(621466);
+
 function o(e, t, n) {
     return (
         t in e
@@ -16,6 +19,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -32,6 +36,7 @@ function l(e) {
     }
     return e;
 }
+
 function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -44,6 +49,7 @@ function c(e, t) {
     }
     return n;
 }
+
 function u(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -55,6 +61,7 @@ function u(e, t) {
         e
     );
 }
+
 function d(e, t) {
     if (null == e) return {};
     var n,
@@ -71,6 +78,7 @@ function d(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function f(e, t) {
     if (null == e) return {};
     var n,
@@ -81,6 +89,7 @@ function f(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function p(e) {
     e.removeAttribute("src"),
         Array.from(e.children).forEach((e) => {
@@ -114,6 +123,7 @@ let _ = (e) => {
             ]),
             m = !_ && !o && s,
             g = i.useRef(null);
+
         function E() {
             var e, t;
             o &&
@@ -125,10 +135,12 @@ let _ = (e) => {
                         else throw e;
                     }));
         }
+
         function b() {
             var e;
             o && (null == g || null == (e = g.current) || e.pause());
         }
+
         function y() {
             return f === a.d.MOSAIC
                 ? {
@@ -141,6 +153,7 @@ let _ = (e) => {
                   ? O()
                   : {};
         }
+
         function O() {
             return {
                 maxWidth: h.width,
@@ -184,4 +197,11 @@ let _ = (e) => {
             )
         );
     },
-    h = i.forwardRef((e, t) => (0, r.jsx)(_, u(l({}, e), { externalRef: t })));
+    h = i.forwardRef((e, t) =>
+        (0, r.jsx)(
+            _,
+            u(l({}, e), {
+                externalRef: t,
+            }),
+        ),
+    );

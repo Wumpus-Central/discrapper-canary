@@ -1,4 +1,8 @@
-n.d(t, { A: () => h }), n(896048), n(228524);
+n.d(t, {
+    A: () => h,
+}),
+    n(896048),
+    n(228524);
 var l = n(627968),
     a = n(64700),
     r = n(230109),
@@ -66,7 +70,9 @@ let h = function (e) {
                             }),
                             (0, l.jsx)("div", {
                                 className: p.H,
-                                style: { height: 28 },
+                                style: {
+                                    height: 28,
+                                },
                                 children: v
                                     ? (0, l.jsx)("img", {
                                           src: O,
@@ -114,7 +120,7 @@ let h = function (e) {
                                               ? (0, l.jsx)(i.Text, {
                                                     variant: "text-xs/medium",
                                                     color: "text-subtle",
-                                                    children: "\u2022",
+                                                    children: "•",
                                                 })
                                               : null,
                                           _

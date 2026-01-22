@@ -1,1 +1,3 @@
-e.exports = { x: "d30d935fd40fbd44" };
+e.exports = {
+    x: "d30d935fd40fbd44",
+};

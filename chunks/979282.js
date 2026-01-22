@@ -1,8 +1,11 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 var r = n(627968);
 n(64700);
 var i = n(518620),
     l = n(901319);
+
 function a(e) {
     let {
         rows: t,

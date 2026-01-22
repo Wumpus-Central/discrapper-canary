@@ -1,4 +1,6 @@
-r.d(t, { default: () => u });
+r.d(t, {
+    default: () => u,
+});
 var n = r(627968);
 r(64700);
 var l = r(311907),
@@ -10,6 +12,7 @@ var l = r(311907),
     d = r(567035),
     b = r(652215),
     p = r(985018);
+
 function u(e) {
     let { folderId: t, folderName: u, folderColor: f, unread: y, onSelect: O } = e,
         j = (0, l.bG)([a.Ay], () => a.Ay.getGuildFolderById(t), [t]),

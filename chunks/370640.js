@@ -1,9 +1,13 @@
-t.r(r), t.d(r, { default: () => p });
+t.r(r),
+    t.d(r, {
+        default: () => p,
+    });
 var c = t(627968),
     n = t(64700),
     o = t(868062),
     i = t(247366),
     s = t(132091);
+
 function a(e) {
     for (var r = 1; r < arguments.length; r++) {
         var t = null != arguments[r] ? arguments[r] : {},
@@ -43,7 +47,10 @@ let b = (0, o.kl)((e) => {
                     children: (0, c.jsx)(
                         i.Hue,
                         ((r = a({}, e)),
-                        (t = t = { direction: "horizontal" }),
+                        (t = t =
+                            {
+                                direction: "horizontal",
+                            }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(t))
                             : (function (e, r) {

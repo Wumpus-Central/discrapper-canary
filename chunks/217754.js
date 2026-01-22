@@ -1,4 +1,6 @@
-e.d(t, { A: () => u });
+e.d(t, {
+    A: () => u,
+});
 var i = e(627968);
 e(64700);
 var l = e(311907),
@@ -8,6 +10,7 @@ var l = e(311907),
     c = e(233993),
     o = e(576705),
     d = e(985018);
+
 function u(n, t) {
     let e = (0, l.bG)([o.A], () => o.A.can(c.QY, n), [n]);
     return null != t && e

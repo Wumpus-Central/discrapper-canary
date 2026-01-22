@@ -1,9 +1,13 @@
-n.d(t, { A: () => m }), n(321073);
+n.d(t, {
+    A: () => m,
+}),
+    n(321073);
 var r,
     i = n(311907),
     a = n(73153),
     s = n(213012),
     o = n(71393);
+
 function l(e, t, n) {
     return (
         t in e
@@ -17,7 +21,7 @@ function l(e, t, n) {
         e
     );
 }
-let c = 86400000,
+let c = 864e5,
     u = {},
     d = () => {
         u = {
@@ -26,6 +30,7 @@ let c = 86400000,
             lastFetched: 0,
         };
     };
+
 function f(e) {
     let { guildAffinities: t } = e;
     (u.guildAffinities = []),
@@ -41,9 +46,11 @@ function f(e) {
             (u.guildAffinitiesByGuildId[r] = i), u.guildAffinities.push(i);
         });
 }
+
 function p() {
     return Date.now() - u.lastFetched > c && (0, s.I)(), !1;
 }
+
 function _() {
     d();
 }

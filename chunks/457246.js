@@ -1,4 +1,6 @@
-n.d(t, { f: () => d });
+n.d(t, {
+    f: () => d,
+});
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -7,6 +9,7 @@ var r = n(627968),
     o = n(470710),
     c = n(717518),
     u = n(985018);
+
 function d(e) {
     let t = (0, i.bG)([o.A], () => o.A.getCall(e), [e]),
         n = (0, i.bG)([c.A], () => c.A.getRegions(null));

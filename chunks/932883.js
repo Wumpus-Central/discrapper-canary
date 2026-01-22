@@ -29,6 +29,7 @@ let _ = i.createContext(""),
         });
     },
     m = () => i.useContext(_);
+
 function g(e) {
     let { variant: t, viewId: n, entrypoint: r } = e;
     c.default.track(p.HAw.NOTIFICATIONS_INBOX_OPENED, {
@@ -37,6 +38,7 @@ function g(e) {
         view_id: n,
     });
 }
+
 function E(e) {
     let {
         timeToLoad: t,
@@ -69,6 +71,7 @@ var b = (function (e) {
         e
     );
 })({});
+
 function y(e) {
     var t, n;
     let { message: r, interactionType: i, viewId: a } = e;
@@ -82,6 +85,7 @@ function y(e) {
         mentioned_game_ids: null != (t = null == (n = r.mentionGames) ? void 0 : n.map((e) => e.id)) ? t : [],
     });
 }
+
 function O(e) {
     let { section: t, enabled: n, viewId: r } = e;
     c.default.track(p.HAw.NOTIFICATIONS_INBOX_SECTION_INTERACTED, {
@@ -90,6 +94,7 @@ function O(e) {
         view_id: r,
     });
 }
+
 function A(e) {
     let { unreadsCount: t, totalMessagesCount: n, unreadItemsCount: r, totalItemsCount: i, viewId: a } = e;
     c.default.track(p.HAw.NOTIFICATIONS_INBOX_UNMOUNTED, {
@@ -100,6 +105,7 @@ function A(e) {
         view_id: a,
     });
 }
+
 function v(e) {
     let {
         timeToLoad: t,
@@ -120,6 +126,7 @@ function v(e) {
         view_id: o,
     });
 }
+
 function S(e) {
     let {
             notificationCenterVariant: t,

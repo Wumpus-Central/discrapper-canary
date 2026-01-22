@@ -17,6 +17,7 @@ var c = a(627968),
     _ = a(780376),
     m = a(652215),
     x = a(405429);
+
 function A(e) {
     let { activity: t, renderHeader: a, renderActivityIFrameWithLoadedData: b, isLoading: u = !1 } = e,
         p = n.useRef(null),
@@ -28,7 +29,7 @@ function A(e) {
               null == t &&
               (p.current = window.setTimeout(() => {
                   (0, f.close)(m.MLl.ACTIVITY_POPOUT);
-              }, 5000));
+              }, 5e3));
     }, [_, t]);
     let A = (0, l.bG)([o.A], () => {
             let e = null == t ? void 0 : t.applicationId;
@@ -39,7 +40,9 @@ function A(e) {
         className: x.kL,
         children:
             null == t || null == A || u
-                ? (0, c.jsx)(d.y$y, { className: x.pU })
+                ? (0, c.jsx)(d.y$y, {
+                      className: x.pU,
+                  })
                 : (0, c.jsx)("div", {
                       className: x.U$,
                       children: (0, c.jsxs)("div", {
@@ -47,18 +50,27 @@ function A(e) {
                           children: [
                               (0, c.jsx)("div", {
                                   className: x.N1,
-                                  children: a({ application: A }),
+                                  children: a({
+                                      application: A,
+                                  }),
                               }),
                               (0, c.jsx)("div", {
                                   className: x.Wc,
-                                  children: b({ application: A }),
+                                  children: b({
+                                      application: A,
+                                  }),
                               }),
-                              v ? (0, c.jsx)(i.A, { isEmbeddedActivity: !0 }) : null,
+                              v
+                                  ? (0, c.jsx)(i.A, {
+                                        isEmbeddedActivity: !0,
+                                    })
+                                  : null,
                           ],
                       }),
                   }),
     });
 }
+
 function v() {
     let {
             embeddedActivity: e,

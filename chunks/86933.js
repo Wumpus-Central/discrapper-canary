@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968);
 n(64700);
 var i = n(73939),
@@ -9,6 +11,7 @@ var i = n(73939),
     o = n(268749),
     d = n(985018),
     u = n(181765);
+
 function f(e) {
     let { guildId: t, existingRules: n } = e,
         {
@@ -38,7 +41,12 @@ function f(e) {
             }
         },
         A = d.intl.string(d.t["ETE/oC"]),
-        E = !b && j ? d.intl.formatToPlainString(d.t.nula34, { ruleName: null == m ? void 0 : m.name }) : void 0;
+        E =
+            !b && j
+                ? d.intl.formatToPlainString(d.t.nula34, {
+                      ruleName: null == m ? void 0 : m.name,
+                  })
+                : void 0;
     return (
         null != p &&
             (E = (0, r.jsx)(s.Text, {

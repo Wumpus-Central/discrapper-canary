@@ -11,6 +11,7 @@ function r(e, t, n) {
         e
     );
 }
+
 function i(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -27,6 +28,7 @@ function i(e) {
     }
     return e;
 }
+
 function a(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -39,6 +41,7 @@ function a(e, t) {
     }
     return n;
 }
+
 function s(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -50,6 +53,7 @@ function s(e, t) {
         e
     );
 }
+
 function o(e, t) {
     if (null == e) return {};
     var n,
@@ -66,6 +70,7 @@ function o(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function l(e, t) {
     if (null == e) return {};
     var n,
@@ -76,6 +81,7 @@ function l(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function c(e) {
     let { sound_id: t, rank: n } = e;
     return {
@@ -114,6 +120,7 @@ var u = (function (e) {
     p = (function (e) {
         return (e.DEFAULT = "default"), (e.CUSTOM = "custom"), e;
     })({});
+
 function _(e, t) {
     let [n, ...r] = [e, t],
         { sound_id: a, emoji_id: l, emoji_name: c, user_id: u, available: d } = n,
@@ -128,6 +135,7 @@ function _(e, t) {
         available: null == d || d,
     });
 }
+
 function h(e) {
     let { soundId: t, guildId: n, emojiId: r, emojiName: a, userId: l } = e;
     return s(i({}, o(e, ["soundId", "guildId", "emojiId", "emojiName", "userId"])), {

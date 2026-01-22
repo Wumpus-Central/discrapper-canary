@@ -1,4 +1,6 @@
-t.d(a, { A: () => n });
+t.d(a, {
+    A: () => n,
+});
 var i = {
     lessThanXSeconds: {
         one: "menos de um segundo",
@@ -38,11 +40,11 @@ var i = {
         other: "{{count}} semanas",
     },
     aboutXMonths: {
-        one: "cerca de 1 mês",
+        one: "cerca de 1 m\xeas",
         other: "cerca de {{count}} meses",
     },
     xMonths: {
-        one: "1 mês",
+        one: "1 m\xeas",
         other: "{{count}} meses",
     },
     aboutXYears: {
@@ -70,6 +72,6 @@ let n = function (e, a, t) {
         null != t && t.addSuffix)
     )
         if (t.comparison && t.comparison > 0) return "em " + n;
-        else return "há " + n;
+        else return "h\xe1 " + n;
     return n;
 };

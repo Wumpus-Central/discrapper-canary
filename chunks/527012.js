@@ -1,10 +1,13 @@
-n.d(t, { y: () => l });
+n.d(t, {
+    y: () => l,
+});
 var r = n(627968);
 n(64700);
 var i = n(732955),
     a = n(397927),
     s = n(652215),
     o = n(321018);
+
 function l(e) {
     let { buttonText: t, onGoBack: n, onDismiss: l, showCloseButton: c } = e;
     return (0, r.jsxs)(a.$Td, {

@@ -1,4 +1,6 @@
-l.d(t, { A: () => b });
+l.d(t, {
+    A: () => b,
+});
 var r = l(64700),
     n = l(512750),
     i = l(311907),
@@ -15,6 +17,7 @@ var r = l(64700),
     A = l(652215),
     g = l(333354),
     x = l(985018);
+
 function b(e, t) {
     var l, b, h, j;
     let _ = (0, i.bG)([s.A], () => s.A.getGuild(e)),
@@ -46,8 +49,12 @@ function b(e, t) {
                 t = _.premiumTier === A.TVA.TIER_2 ? x.intl.string(g.default["0uo/LD"]) : void 0;
             return {
                 firstHeader: w.title,
-                secondHeader: x.intl.formatToPlainString(g.default["8imxAq"], { dateString: e }),
-                firstBody: x.intl.formatToPlainString(g.default["/bW9tW"], { serverName: _.name }),
+                secondHeader: x.intl.formatToPlainString(g.default["8imxAq"], {
+                    dateString: e,
+                }),
+                firstBody: x.intl.formatToPlainString(g.default["/bW9tW"], {
+                    serverName: _.name,
+                }),
                 secondBody: x.intl.formatToPlainString(g.default.D09fdi, {
                     dateString: e,
                     boostCount: w.cost,

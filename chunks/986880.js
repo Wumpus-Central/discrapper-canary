@@ -1,5 +1,7 @@
 let r;
-n.d(t, { Ay: () => I });
+n.d(t, {
+    Ay: () => I,
+});
 var i = n(73153),
     l = n(31728),
     a = n(272355),
@@ -13,9 +15,11 @@ var i = n(73153),
     h = n(977997),
     A = n(998740),
     g = n(652215);
+
 function m(e) {
     return "haven:".concat(e);
 }
+
 function b() {
     let e = r;
     if (null == e) return !1;
@@ -25,9 +29,11 @@ function b() {
     if (null == n || n.id !== t) return (r = null), !1;
     i.h.wait(() => l.VN(t)), (r = null);
 }
+
 function _() {
     return c.A.hasLayers();
 }
+
 function E() {
     let e,
         t,
@@ -49,7 +55,10 @@ function E() {
             }
             return (
                 i.h.wait(() => {
-                    l.ho(e, g.o1q.HAVEN, { channel: a }), _() && l.jD(e);
+                    l.ho(e, g.o1q.HAVEN, {
+                        channel: a,
+                    }),
+                        _() && l.jD(e);
                 }),
                 (r = a.id),
                 !0
@@ -59,6 +68,7 @@ function E() {
     }
     return b();
 }
+
 function O() {
     if (_()) {
         let e = r;

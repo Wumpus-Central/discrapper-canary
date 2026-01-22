@@ -1,8 +1,10 @@
-t.d(e, { A: () => n });
+t.d(e, {
+    A: () => n,
+});
 var i = {
-    lastWeek: "'geçen hafta' eeee 'saat' p",
-    yesterday: "'dün saat' p",
-    today: "'bugün saat' p",
+    lastWeek: "'ge\xe7en hafta' eeee 'saat' p",
+    yesterday: "'d\xfcn saat' p",
+    today: "'bug\xfcn saat' p",
     tomorrow: "'yarın saat' p",
     nextWeek: "eeee 'saat' p",
     other: "P",

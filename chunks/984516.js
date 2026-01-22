@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(627968),
     i = n(64700),
     a = n(397927),
@@ -9,6 +11,7 @@ var r = n(627968),
     u = n(652215),
     d = n(985018),
     f = n(615074);
+
 function p(e) {
     let { padding: t = !1 } = e,
         n = i.useCallback(() => {

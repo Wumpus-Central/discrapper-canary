@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -8,6 +10,7 @@ var r = n(627968),
     c = n(263715),
     u = n(131494),
     d = n(330465);
+
 function f(e) {
     let { guildId: t } = e,
         n = l.useMemo(() => (0, c.EL)(t), [t]),

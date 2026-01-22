@@ -1,4 +1,8 @@
-n.d(t, { A: () => I }), n(321073), n(896048);
+n.d(t, {
+    A: () => I,
+}),
+    n(321073),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -16,6 +20,7 @@ var r = n(627968),
     g = n(806931),
     E = n(985018),
     b = n(319567);
+
 function y(e, t, n) {
     return (
         t in e
@@ -29,6 +34,7 @@ function y(e, t, n) {
         e
     );
 }
+
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -45,6 +51,7 @@ function O(e) {
     }
     return e;
 }
+
 function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -57,6 +64,7 @@ function A(e, t) {
     }
     return n;
 }
+
 function v(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -68,6 +76,7 @@ function v(e, t) {
         e
     );
 }
+
 function S(e) {
     let { closePopout: t, idle: n, pipWindows: i, voiceChannelId: s, onSelect: h } = e;
     n && t();
@@ -75,23 +84,30 @@ function S(e) {
         y = (0, a.bG)([_.A], () => _.A.pipWindow),
         O = (0, a.bG)([f.A], () => f.A.getSelectedParticipant(s)),
         A = (0, a.bG)([f.A], () => f.A.getStreamParticipants(s));
+
     function v(e) {
         (null == y ? void 0 : y.id) !== e.pipWindow.id && (0, c.mf)(e.pipWindow.id);
         let t = e.participant;
         null != t && t.type !== g.lp.ACTIVITY && l.A.selectParticipant(s, t.id);
     }
+
     function S(e) {
         if (e.pipWindow.component === m.o1q.ACTIVITY && null != b) {
             var t;
             let e = null == (t = d.A.getApplication(b.applicationId)) ? void 0 : t.name;
             return null == e
                 ? E.intl.string(E.t["8raC1P"])
-                : E.intl.formatToPlainString(E.t["a9+V+V"], { activityName: e });
+                : E.intl.formatToPlainString(E.t["a9+V+V"], {
+                      activityName: e,
+                  });
         }
         return null == e.participant || e.participant.type !== g.lp.STREAM
             ? E.intl.string(E.t["ng/Kwl"])
-            : E.intl.formatToPlainString(E.t.sqmFRg, { username: e.participant.userNick });
+            : E.intl.formatToPlainString(E.t.sqmFRg, {
+                  username: e.participant.userNick,
+              });
     }
+
     function I() {
         let e = [],
             t = i.find((e) => e.component === m.o1q.VIDEO);
@@ -111,6 +127,7 @@ function S(e) {
             e
         );
     }
+
     function T(e) {
         var t;
         let n = e.pipWindow.id,
@@ -165,13 +182,21 @@ let I = function (e) {
               children: (e) =>
                   (0, r.jsx)(
                       o.DUT,
-                      v(O({ className: b.ro }, e), {
-                          innerRef: l,
-                          children: (0, r.jsx)(o.FHP, {
-                              size: "md",
-                              color: s.A.unsafe_rawColors.WHITE.css,
-                          }),
-                      }),
+                      v(
+                          O(
+                              {
+                                  className: b.ro,
+                              },
+                              e,
+                          ),
+                          {
+                              innerRef: l,
+                              children: (0, r.jsx)(o.FHP, {
+                                  size: "md",
+                                  color: s.A.unsafe_rawColors.WHITE.css,
+                              }),
+                          },
+                      ),
                   ),
           });
 };

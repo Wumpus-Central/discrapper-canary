@@ -1,19 +1,26 @@
-n.d(t, { Ay: () => E }), n(896048);
+n.d(t, {
+    Ay: () => E,
+}),
+    n(896048);
 var l = n(64700),
     r = n(785825),
     a = n(741918),
     i = n(602034);
 let s = [a.D$.TAB, a.D$.UP, a.D$.DOWN];
+
 function o(e, t, n) {
     return null != n ? "#".concat(e(t, n)) : "#".concat(t);
 }
+
 function c(e) {
     return document.querySelector(e);
 }
+
 function u(e) {
     var t;
     null == (t = document.getElementById(e)) || t.focus();
 }
+
 function E(e) {
     let {
             navId: t,
@@ -139,12 +146,23 @@ function E(e) {
                             case a.X2.NAVIGATE_DOWN:
                             case a.X2.NAVIGATE_START:
                             case a.X2.NAVIGATE_END:
-                                e.preventDefault(), e.stopPropagation(), A({ type: n });
+                                e.preventDefault(),
+                                    e.stopPropagation(),
+                                    A({
+                                        type: n,
+                                    });
                                 return;
                             case a.X2.SELECT_FOCUSED_ITEM:
                                 let l = c(o(O, t, E));
                                 if ((null == l ? void 0 : l.ownerDocument.activeElement) !== l || e.repeat) return;
-                                if ((e.preventDefault(), e.stopPropagation(), A({ type: n }), null != d))
+                                if (
+                                    (e.preventDefault(),
+                                    e.stopPropagation(),
+                                    A({
+                                        type: n,
+                                    }),
+                                    null != d)
+                                )
                                     return void d(E);
                                 null == l || l.click();
                         }

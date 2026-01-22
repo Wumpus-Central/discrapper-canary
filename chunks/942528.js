@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var l = n(627968),
     r = n(64700),
     i = n(503698),
@@ -90,7 +92,12 @@ let h = (e) => {
                                   });
                           }
                           return e;
-                      })({ innerRef: I }, e)),
+                      })(
+                          {
+                              innerRef: I,
+                          },
+                          e,
+                      )),
                       (r = r =
                           {
                               className: g.GA,
@@ -106,7 +113,9 @@ let h = (e) => {
                                           (0, l.jsx)("img", {
                                               className: g.my,
                                               src: E,
-                                              alt: p.intl.formatToPlainString(p.t.IzVXxY, { userName: S }),
+                                              alt: p.intl.formatToPlainString(p.t.IzVXxY, {
+                                                  userName: S,
+                                              }),
                                           }),
                                           (0, l.jsx)("div", {
                                               className: g.Su,
@@ -121,7 +130,15 @@ let h = (e) => {
                                                       }),
                                                       (0, l.jsx)(b.mG, {
                                                           location: b.N5.APP_LAUNCHER,
-                                                          children: x.n.map((e, n) => (0, l.jsx)(e, { entry: t }, n)),
+                                                          children: x.n.map((e, n) =>
+                                                              (0, l.jsx)(
+                                                                  e,
+                                                                  {
+                                                                      entry: t,
+                                                                  },
+                                                                  n,
+                                                              ),
+                                                          ),
                                                       }),
                                                   ],
                                               }),
@@ -130,7 +147,9 @@ let h = (e) => {
                                               ? y
                                               : (0, l.jsx)("div", {
                                                     className: g.Br,
-                                                    children: (0, l.jsx)(o.W4J, { size: "sm" }),
+                                                    children: (0, l.jsx)(o.W4J, {
+                                                        size: "sm",
+                                                    }),
                                                 }),
                                       ],
                                   }),

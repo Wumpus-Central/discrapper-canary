@@ -12,6 +12,7 @@ var a = n(311907),
     d = n(685073),
     u = n(334165),
     m = n(652215);
+
 function p(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { shouldShow: n = !0 } = t,
@@ -33,6 +34,7 @@ function p(e) {
         }, [e]);
     return (0, i.ww)(p && n && !u ? [l.M.GUILD_TAG_AVAILABLE_COACHMARK_V2] : [], null != e ? e : m.eGj);
 }
+
 function h(e) {
     var t;
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
@@ -47,5 +49,7 @@ function h(e) {
         p = null != m && (null == s ? void 0 : s.identityGuildId) === c && (null == s ? void 0 : s.tag) === null,
         h = null != c && (null == d ? void 0 : d.tag) === m,
         f = null !== c && p && !h;
-    return (0, i.Wl)(f && r ? l.M.GUILD_TAG_UPDATED_COACHMARK : null, { cooldownDurationMs: 86400000 });
+    return (0, i.Wl)(f && r ? l.M.GUILD_TAG_UPDATED_COACHMARK : null, {
+        cooldownDurationMs: 864e5,
+    });
 }

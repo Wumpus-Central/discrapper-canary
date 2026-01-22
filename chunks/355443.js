@@ -1,17 +1,27 @@
-n.d(t, { H: () => l }), n(896048), n(228524);
+n.d(t, {
+    H: () => l,
+}),
+    n(896048),
+    n(228524);
 var r = n(179771),
     i = n(672162);
 let l = {
         [i.vd.INITIATE_IMAGE_UPLOAD]: {
             request: void 0,
-            response: (e) => ({ image_url: e.string().required() }),
+            response: (e) => ({
+                image_url: e.string().required(),
+            }),
         },
         [i.vd.OPEN_SHARE_MOMENT_DIALOG]: {
             response: void 0,
-            request: (e) => ({ mediaUrl: e.string().required().max(1024) }),
+            request: (e) => ({
+                mediaUrl: e.string().required().max(1024),
+            }),
         },
         [i.vd.AUTHENTICATE]: {
-            request: (e) => ({ access_token: e.string().allow(null).optional() }),
+            request: (e) => ({
+                access_token: e.string().allow(null).optional(),
+            }),
             response: (e) => ({
                 access_token: e.string().required(),
                 user: e
@@ -47,7 +57,9 @@ let l = {
                     .array()
                     .items(
                         s(e)
-                            .keys({ nickname: e.string().description("Server nickname. Not unique.") })
+                            .keys({
+                                nickname: e.string().description("Server nickname. Not unique."),
+                            })
                             .required(),
                     )
                     .required(),
@@ -62,7 +74,7 @@ let l = {
                         value: e.string().required(),
                     }),
                 ),
-                content: e.string().max(2000),
+                content: e.string().max(2e3),
                 require_launch_channel: e.boolean(),
                 preview_image: e.object({
                     height: e.number().required(),
@@ -72,12 +84,14 @@ let l = {
                 components: e.array().items(o(e)),
                 pid: e.number(),
             }),
-            response: (e) => ({ success: e.boolean().required() }),
+            response: (e) => ({
+                success: e.boolean().required(),
+            }),
         },
         [i.vd.SHARE_LINK]: {
             request: (e) => ({
                 custom_id: e.string().max(64),
-                message: e.string().max(1000).required(),
+                message: e.string().max(1e3).required(),
                 link_id: e.string().max(64),
             }),
             response: (e) => ({
@@ -112,11 +126,15 @@ let l = {
             response: void 0,
         },
         [i.vd.GET_USER]: {
-            request: (e) => ({ id: e.string().max(64).required() }),
+            request: (e) => ({
+                id: e.string().max(64).required(),
+            }),
             response: (e) => s(e).allow(null),
         },
         [i.vd.GET_QUEST_ENROLLMENT_STATUS]: {
-            request: (e) => ({ quest_id: e.string().required() }),
+            request: (e) => ({
+                quest_id: e.string().required(),
+            }),
             response: (e) => ({
                 quest_id: e.string().required(),
                 is_enrolled: e.boolean().required(),
@@ -124,8 +142,12 @@ let l = {
             }),
         },
         [i.vd.QUEST_START_TIMER]: {
-            request: (e) => ({ quest_id: e.string().required() }),
-            response: (e) => ({ success: e.boolean().required() }),
+            request: (e) => ({
+                quest_id: e.string().required(),
+            }),
+            response: (e) => ({
+                success: e.boolean().required(),
+            }),
         },
     },
     a = (e) =>

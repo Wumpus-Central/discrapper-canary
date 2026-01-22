@@ -1,8 +1,12 @@
-n.d(t, { Ys: () => o }), n(747238);
+n.d(t, {
+    Ys: () => o,
+}),
+    n(747238);
 var r = n(64700),
     i = n(311907),
     a = n(508675);
 let s = /^<(a?):(\w+):(\d+)>/;
+
 function o(e) {
     let t = r.useMemo(() => {
         var t;

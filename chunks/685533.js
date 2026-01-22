@@ -1,4 +1,8 @@
-l.d(t, { A: () => _ }), l(896048), l(747238);
+l.d(t, {
+    A: () => _,
+}),
+    l(896048),
+    l(747238);
 var n = l(627968),
     r = l(64700),
     s = l(503698),
@@ -20,7 +24,10 @@ var n = l(627968),
     x = l(438166),
     S = l(652215),
     C = l(695865);
-let O = { flattenProductVariants: !0 };
+let O = {
+    flattenProductVariants: !0,
+};
+
 function _(e) {
     var t;
     let { isFetchingCategories: l, scrollerRef: s, tab: _ } = e,
@@ -32,7 +39,11 @@ function _(e) {
         D = (0, i.yK)([f.A], () => f.A.getProductsBySkus(N)),
         w = r.useCallback(() => {
             var e;
-            null == s || null == (e = s.current) || e.scrollToTop({ animate: !0 });
+            null == s ||
+                null == (e = s.current) ||
+                e.scrollToTop({
+                    animate: !0,
+                });
         }, [s]),
         B = null == N ? void 0 : N.join("");
     r.useEffect(() => {
@@ -83,11 +94,15 @@ function _(e) {
         value: O,
         children: [
             (0, n.jsxs)("div", {
-                className: a()({ [C.oE]: Y }),
+                className: a()({
+                    [C.oE]: Y,
+                }),
                 children: [
                     Y && (0, n.jsx)(x.A, {}),
                     (0, n.jsxs)("div", {
-                        className: a()(C.ZE, { [C.Kp]: V }),
+                        className: a()(C.ZE, {
+                            [C.Kp]: V,
+                        }),
                         ref: G,
                         children: [
                             W && [...Array(z)].map((e, t) => (0, n.jsx)(v.A, {}, t)),
@@ -98,7 +113,9 @@ function _(e) {
                                         : (0, n.jsx)(
                                               d.R9,
                                               {
-                                                  newValue: { tilePosition: t },
+                                                  newValue: {
+                                                      tilePosition: t,
+                                                  },
                                                   children: (0, n.jsx)(
                                                       h.A,
                                                       {

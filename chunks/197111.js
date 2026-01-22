@@ -1,5 +1,8 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(73153);
+
 function i(e, t, n) {
     return (
         t in e
@@ -13,6 +16,7 @@ function i(e, t, n) {
         e
     );
 }
+
 function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -41,7 +45,15 @@ let s = {
                 .then(n.bind(n, 129014))
                 .then((n) => {
                     let { default: r } = n;
-                    r.request(t, a({ code: e }, i))
+                    r.request(
+                        t,
+                        a(
+                            {
+                                code: e,
+                            },
+                            i,
+                        ),
+                    )
                         .then((t) => {
                             var n;
                             this.nativeModalOpened(null != (n = null == t ? void 0 : t.code) ? n : e);

@@ -1,11 +1,14 @@
 function r(e) {
     return "/" === e.charAt(0);
 }
+
 function i(e, t) {
     for (var n = t, r = n + 1, i = e.length; r < i; n += 1, r += 1) e[n] = e[r];
     e.pop();
 }
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 let a = function (e, t) {
     void 0 === t && (t = "");
     var n,

@@ -1,5 +1,9 @@
-n.d(t, { A: () => o }), n(65821);
+n.d(t, {
+    A: () => o,
+}),
+    n(65821);
 var r = n(837921);
+
 function i(e, t, n) {
     return (
         t in e
@@ -14,6 +18,7 @@ function i(e, t, n) {
     );
 }
 let a = 256;
+
 function s(e, t) {
     return r.Ay.ensureModule("discord_spellcheck").then(() => {
         let { cld: n } = r.Ay.requireModule("discord_spellcheck");

@@ -66,6 +66,7 @@ var i = n(627968),
     ei = n(985018),
     es = n(558997),
     er = n(206314);
+
 function el(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -115,7 +116,9 @@ let ea = 72,
                 o()(null != i, "the thread should not be null here, a store must have missed an update");
                 let s = (0, g.bG)([L.Ay], () => L.Ay.getCurrentSidebarChannelId(i.parent_id) === i.id),
                     { firstMessage: r } = (0, z.OA)(i),
-                    { content: l, firstMedia: a } = (0, V.gk)({ firstMessage: r }),
+                    { content: l, firstMedia: a } = (0, V.gk)({
+                        firstMessage: r,
+                    }),
                     { messageCountText: c } = (0, V.k6)(i);
                 return {
                     channel: i,
@@ -184,14 +187,18 @@ let ea = 72,
             "data-item-id": t,
             onClick: T,
             onContextMenu: w,
-            className: l()(es.kL, c, { [es.nT]: p }),
+            className: l()(es.kL, c, {
+                [es.nT]: p,
+            }),
             children: [
                 (0, i.jsx)(
                     f.DUT,
                     el(
                         {
                             onClick: T,
-                            focusProps: { ringTarget: y },
+                            focusProps: {
+                                ringTarget: y,
+                            },
                             onContextMenu: w,
                             "aria-label": ei.intl.formatToPlainString(ei.t.pgYN6c, {
                                 title: m.name,
@@ -235,6 +242,7 @@ let ea = 72,
             ],
         });
     });
+
 function ed(e) {
     let { channel: t, firstMessage: n, content: s, hasMediaAttachment: r, containerWidth: a } = e,
         { isNew: o, hasUnreads: c } = (0, V.X5)(t),
@@ -243,9 +251,13 @@ function ed(e) {
     return (0, i.jsxs)("div", {
         className: es.rf,
         children: [
-            (0, i.jsx)($.Ay, { channel: t }),
+            (0, i.jsx)($.Ay, {
+                channel: t,
+            }),
             (0, i.jsx)("div", {
-                className: l()(es.wx, { [es.qN]: h }),
+                className: l()(es.wx, {
+                    [es.qN]: h,
+                }),
                 children: (0, i.jsxs)("div", {
                     className: es.TK,
                     children: [
@@ -293,6 +305,7 @@ function ed(e) {
         ],
     });
 }
+
 function eu(e) {
     let t = (0, g.bG)([K.A], () => K.A.getHasSearchResults(e.parent_id)),
         n = (0, g.bG)([K.A], () => K.A.getSearchQuery(e.parent_id)),
@@ -304,7 +317,9 @@ function eu(e) {
                     content: e.name,
                     embeds: [],
                 },
-                { postProcessor: i },
+                {
+                    postProcessor: i,
+                },
             ).content,
         [e.name, i],
     );
@@ -379,6 +394,7 @@ let eh = s.memo(function (e) {
         ],
     });
 });
+
 function eg(e) {
     let { channel: t, facepileRef: n, firstMessage: s } = e,
         r = (0, S.m)(t.id),
@@ -404,7 +420,7 @@ function eg(e) {
             }),
             (0, i.jsx)("span", {
                 className: es.xE,
-                children: "\u2022",
+                children: "•",
             }),
             r.length > 0
                 ? (0, i.jsxs)("div", {
@@ -429,15 +445,20 @@ function eg(e) {
                           }),
                       ],
                   })
-                : (0, i.jsx)(ev, { channel: t }),
+                : (0, i.jsx)(ev, {
+                      channel: t,
+                  }),
         ],
     });
 }
+
 function em(e) {
     let { channel: t, iconSize: n, showReadState: s = !1 } = e,
         { messageCountText: r, unreadCount: a } = (0, V.k6)(t);
     return (0, i.jsxs)("div", {
-        className: l()(es.Mv, { [es.hT]: s && null == a }),
+        className: l()(es.Mv, {
+            [es.hT]: s && null == a,
+        }),
         children: [
             (0, i.jsx)("span", {
                 className: es.SZ,
@@ -464,11 +485,18 @@ function em(e) {
                       className: es.bU,
                       variant: "text-sm/semibold",
                       color: "text-brand",
-                      children: ["(", ei.intl.format(ei.t.z3PEth, { count: a }), ")"],
+                      children: [
+                          "(",
+                          ei.intl.format(ei.t.z3PEth, {
+                              count: a,
+                          }),
+                          ")",
+                      ],
                   }),
         ],
     });
 }
+
 function ep(e) {
     let { firstMessage: t, channel: n } = e,
         s = (0, g.bG)([D.A], () => D.A.getChannel(n.parent_id)),
@@ -494,6 +522,7 @@ function ep(e) {
               emojiSizeTooltip: "reaction",
           });
 }
+
 function ef(e) {
     var t;
     let { firstMessage: n, channel: s } = e,
@@ -520,13 +549,19 @@ function ef(e) {
               "".concat(null != (t = r.emoji.id) ? t : 0, ":").concat(r.emoji.name),
           );
 }
+
 function ev(e) {
     var t;
     let { channel: n } = e,
         { sortOrder: s } = (0, W.R)(n.parent_id),
         r = (0, V.Mw)(n, s),
         l = null == (t = n.threadMetadata) ? void 0 : t.createTimestamp,
-        a = null == l ? null : ei.intl.formatToPlainString(ei.t["13euCd"], { timestamp: (0, B.i$)(d()(l), "LLLL") });
+        a =
+            null == l
+                ? null
+                : ei.intl.formatToPlainString(ei.t["13euCd"], {
+                      timestamp: (0, B.i$)(d()(l), "LLLL"),
+                  });
     return (0, i.jsx)(p.m, {
         text: a,
         children: (0, i.jsx)(f.Text, {
@@ -537,6 +572,7 @@ function ev(e) {
         }),
     });
 }
+
 function eb(e) {
     let { channel: t, userIds: n, facepileRef: s } = e,
         r = (0, V.$I)(t, n);
@@ -554,6 +590,7 @@ function eb(e) {
         }),
     });
 }
+
 function eA(e) {
     let { firstMedia: t, shouldObscure: n, obscureReason: s, shouldShowAgeVerification: r } = e,
         a = (0, g.bG)([H.A], () => H.A.isFocused()),
@@ -583,7 +620,9 @@ function eA(e) {
               minHeight: ea,
               alt: null != p && n ? d : p,
               className: es.iT,
-              imageClassName: l()(es.LW, { [es.cd]: n }),
+              imageClassName: l()(es.LW, {
+                  [es.cd]: n,
+              }),
           })
         : (0, _.LL)({
               src: u,
@@ -596,10 +635,13 @@ function eA(e) {
               animated: o && !n && a,
               srcIsAnimated: t.srcIsAnimated,
               containerClassName: es.iT,
-              imageClassName: l()(es.LW, { [es.cd]: n }),
+              imageClassName: l()(es.LW, {
+                  [es.cd]: n,
+              }),
               analyticsSource: "ForumPostMediaPreview",
           });
 }
+
 function eO(e) {
     let { channel: t, firstMedia: n } = e,
         [s, r] = (0, w.eJ)({
@@ -616,7 +658,9 @@ function eO(e) {
                     l &&
                         (e.preventDefault(),
                         e.nativeEvent.stopImmediatePropagation(),
-                        x.A.showAgeVerificationGetStartedModal({ entryPoint: y.q1.FORUM_POST_MEDIA_PREVIEW }));
+                        x.A.showAgeVerificationGetStartedModal({
+                            entryPoint: y.q1.FORUM_POST_MEDIA_PREVIEW,
+                        }));
             },
             children: [
                 (0, i.jsx)(eA, {

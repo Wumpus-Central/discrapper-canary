@@ -1,4 +1,6 @@
-n.d(t, { A: () => A });
+n.d(t, {
+    A: () => A,
+});
 var i = n(627968),
     r = n(397927),
     l = n(966327),
@@ -14,6 +16,7 @@ var i = n(627968),
     m = n(672396),
     g = n(985018),
     y = n(976723);
+
 function A(e, t, n) {
     var A;
     if (h.A.isNotificationDisabled(m.KS.NowPlayingNotification)) return null;

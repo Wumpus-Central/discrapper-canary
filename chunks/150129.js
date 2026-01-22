@@ -1,4 +1,6 @@
-n.d(t, { A: () => A });
+n.d(t, {
+    A: () => A,
+});
 var r = n(717125),
     i = n(41200),
     a = n(496767),
@@ -31,7 +33,13 @@ async function A(e) {
             case O.VV.SERVER_MONETIZATION_ONBOARDING:
                 return null != A && (0, u.t)(A);
             case O.VV.GAME_SHOP:
-                return (0, p.jz)(null != A ? A : { id: t });
+                return (0, p.jz)(
+                    null != A
+                        ? A
+                        : {
+                              id: t,
+                          },
+                );
             case O.VV.GUILD_SHOP:
                 return (0, i.K)(A, v);
             case O.VV.MEMBER_APPLICATIONS:

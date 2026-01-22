@@ -1,4 +1,6 @@
-n.d(t, { v: () => T });
+n.d(t, {
+    v: () => T,
+});
 var r = n(627968),
     i = n(64700),
     a = n(284009),
@@ -19,6 +21,7 @@ var r = n(627968),
     y = n(758836),
     O = n(788868),
     A = n(985018);
+
 function v(e, t, n) {
     return (
         t in e
@@ -32,6 +35,7 @@ function v(e, t, n) {
         e
     );
 }
+
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -48,6 +52,7 @@ function S(e) {
     }
     return e;
 }
+
 function I(e) {
     let { handleClose: t, analyticsLocations: n } = e,
         {
@@ -67,7 +72,9 @@ function I(e) {
     let S = null != d || null != f || null != p,
         I =
             h.length > 0
-                ? A.intl.formatToPlainString(A.t.VuV3Td, { discountOfferAmount: h[0].discount.amount })
+                ? A.intl.formatToPlainString(A.t.VuV3Td, {
+                      discountOfferAmount: h[0].discount.amount,
+                  })
                 : void 0;
     return (i.useEffect(() => {
         null == g ||
@@ -83,9 +90,12 @@ function I(e) {
             }));
     }, [g, n, t, S, I]),
     S)
-        ? (0, r.jsx)(E.dZ, { children: (0, r.jsx)(b.A, {}) })
+        ? (0, r.jsx)(E.dZ, {
+              children: (0, r.jsx)(b.A, {}),
+          })
         : null;
 }
+
 function T(e) {
     let {
             isGift: t,

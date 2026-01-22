@@ -1,4 +1,7 @@
-n.d(t, { A: () => g }), n(896048);
+n.d(t, {
+    A: () => g,
+}),
+    n(896048);
 var l = n(627968),
     i = n(64700),
     a = n(503698),
@@ -108,7 +111,9 @@ let g = i.memo(function (e) {
                 O &&
                     (0, l.jsx)("div", {
                         className: m.Lq,
-                        children: (0, l.jsx)(o.y$y, { type: o.tVU.SPINNING_CIRCLE }),
+                        children: (0, l.jsx)(o.y$y, {
+                            type: o.tVU.SPINNING_CIRCLE,
+                        }),
                     }),
             ],
         })

@@ -36,6 +36,7 @@ var r = n(627968),
     w = n(976092),
     P = n(20976),
     D = n(473169);
+
 function x(e, t, n) {
     return (
         t in e
@@ -49,6 +50,7 @@ function x(e, t, n) {
         e
     );
 }
+
 function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -65,6 +67,7 @@ function L(e) {
     }
     return e;
 }
+
 function j(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -77,6 +80,7 @@ function j(e, t) {
     }
     return n;
 }
+
 function M(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -88,17 +92,22 @@ function M(e, t) {
         e
     );
 }
-let k = o.Ay.connectStores([S.A], () => ({ theme: S.A.theme }))(u.ppr),
+let k = o.Ay.connectStores([S.A], () => ({
+        theme: S.A.theme,
+    }))(u.ppr),
     U = (0, v.isWindows)(),
     G = 18,
     V = "https://www.igdb.com/about";
+
 function F(e) {
     let { onClose: t } = e,
         n = (0, o.bG)([_.Ay], () => _.Ay.getCandidateGames()),
         [a, l] = i.useState(null);
+
     function c(e) {
         l(e);
     }
+
     function f() {
         null != a && (d.A.addGame(a.pid, a.name), t());
     }
@@ -118,7 +127,9 @@ function F(e) {
                 options: p,
                 onSelectionChange: c,
             }),
-            (0, r.jsx)(u.cGx, { className: s()(D.Ot, D.QB) }),
+            (0, r.jsx)(u.cGx, {
+                className: s()(D.Ot, D.QB),
+            }),
             (0, r.jsxs)("div", {
                 className: s()(R.o1, P.xM),
                 children: [
@@ -138,6 +149,7 @@ function F(e) {
         ],
     });
 }
+
 function B(e) {
     let { rawGame: t, nowPlaying: a = !1, isOverride: h, subgames: g, isSubgame: A = !1, parentGame: v } = e,
         S = (0, o.cf)([_.Ay, b.A, y.A], () => (0, _.xU)(t, _.Ay, b.A, y.A)),
@@ -152,7 +164,9 @@ function B(e) {
                 (0, E.n1)(S)
                     ? A
                         ? S.gameName
-                        : N.intl.formatToPlainString(N.t.G6BGdx, { subgameName: S.gameName })
+                        : N.intl.formatToPlainString(N.t.G6BGdx, {
+                              subgameName: S.gameName,
+                          })
                     : S.name,
             [S, A],
         ),
@@ -164,6 +178,7 @@ function B(e) {
             [R.xL]: A,
             [R.fG]: null != g && g.length > 0,
         });
+
     function Y() {
         d.A.deleteEntry(S),
             null == g ||
@@ -171,15 +186,19 @@ function B(e) {
                     d.A.deleteEntry(e);
                 });
     }
+
     function W() {
         S.name !== V && d.A.editName(S, V);
     }
+
     function K(e) {
         e.key === C.dh.ENTER && (e.currentTarget.blur(), e.preventDefault());
     }
+
     function z(e) {
         d.A.toggleOverlay(S, e, e);
     }
+
     function q() {
         null != g && g.length > 0 && w
             ? (0, u.mMO)(async () => {
@@ -188,8 +207,12 @@ function B(e) {
                       (0, r.jsx)(
                           e,
                           M(L({}, t), {
-                              title: N.intl.formatToPlainString(N.t.PZ4fKc, { platform: k }),
-                              subtitle: N.intl.formatToPlainString(N.t.ZIQbfb, { platform: k }),
+                              title: N.intl.formatToPlainString(N.t.PZ4fKc, {
+                                  platform: k,
+                              }),
+                              subtitle: N.intl.formatToPlainString(N.t.ZIQbfb, {
+                                  platform: k,
+                              }),
                               actions: [
                                   {
                                       text: N.intl.string(N.t["ETE/oC"]),
@@ -209,6 +232,7 @@ function B(e) {
               })
             : d.A.toggleDetection(S);
     }
+
     function X() {
         if (x) return;
         let e = null != S.id ? b.A.getDetectableGame(S.id) : null;
@@ -236,6 +260,7 @@ function B(e) {
                 };
             });
     }
+
     function Z() {
         return S.verified && !h
             ? (0, r.jsxs)("div", {
@@ -271,13 +296,18 @@ function B(e) {
                   onChange: (e) => F(e.target.value),
               });
     }
+
     function Q() {
         let e,
             { played: t, exePath: n } = S;
         return (
             a || en
                 ? (e = N.intl.string(N.t.VbV5dv))
-                : null != t && "" !== t && (e = N.intl.format(N.t["gGeOE+"], { when: t })),
+                : null != t &&
+                  "" !== t &&
+                  (e = N.intl.format(N.t["gGeOE+"], {
+                      when: t,
+                  })),
             (0, r.jsx)("div", {
                 className: R.GN,
                 children: (0, r.jsx)(p.A, {
@@ -287,6 +317,7 @@ function B(e) {
             })
         );
     }
+
     function $() {
         if (!U || null != v) return null;
         let { overlay: e, overlayWarn: t } = S,
@@ -306,7 +337,9 @@ function B(e) {
             i = t
                 ? (0, r.jsx)(c.m_, {
                       text: N.intl.string(N.t.Vfw2L5),
-                      children: (0, r.jsx)("i", { className: R.kb }),
+                      children: (0, r.jsx)("i", {
+                          className: R.kb,
+                      }),
                   })
                 : null;
         return (0, r.jsxs)("div", {
@@ -325,6 +358,7 @@ function B(e) {
             ],
         });
     }
+
     function J() {
         let { detectable: e } = S,
             t =
@@ -356,6 +390,7 @@ function B(e) {
             }),
         });
     }
+
     function ee() {
         return x
             ? null
@@ -377,6 +412,7 @@ function B(e) {
                   }),
               });
     }
+
     function et() {
         return (0, r.jsx)(f.A, {
             className: R.LS,
@@ -419,7 +455,10 @@ function B(e) {
                                         isSubgame: !0,
                                         parentGame: S,
                                     }),
-                                    t !== g.length - 1 && (0, r.jsx)("div", { className: R.PQ }),
+                                    t !== g.length - 1 &&
+                                        (0, r.jsx)("div", {
+                                            className: R.PQ,
+                                        }),
                                 ],
                             },
                             (0, _.Es)(e),
@@ -429,6 +468,7 @@ function B(e) {
         ],
     });
 }
+
 function H() {
     return (0, r.jsx)("div", {
         className: s()(P.tR, R.eS, R.Rw),
@@ -447,6 +487,7 @@ function H() {
         }),
     });
 }
+
 function Y(e) {
     let { children: t } = e;
     return (0, r.jsxs)(k, {
@@ -492,12 +533,16 @@ let W = (0, A.L_)(function () {
         return (0, r.jsxs)("div", {
             className: s()(R.ax, D.Gf),
             children: [
-                (0, r.jsx)("span", { children: N.intl.string(N.t.xwhoqM) }),
+                (0, r.jsx)("span", {
+                    children: N.intl.string(N.t.xwhoqM),
+                }),
                 (0, r.jsx)(u.YNO, {
                     targetElementRef: e,
                     renderPopout: (e) => {
                         let { closePopout: t } = e;
-                        return (0, r.jsx)(F, { onClose: t });
+                        return (0, r.jsx)(F, {
+                            onClose: t,
+                        });
                     },
                     align: "center",
                     position: "bottom",
@@ -529,10 +574,18 @@ let W = (0, A.L_)(function () {
             [n],
         );
         return 0 === s.length
-            ? (0, r.jsx)(Y, { children: (0, r.jsx)(u.SGT, { children: N.intl.string(N.t["1yiJwn"]) }) })
+            ? (0, r.jsx)(Y, {
+                  children: (0, r.jsx)(u.SGT, {
+                      children: N.intl.string(N.t["1yiJwn"]),
+                  }),
+              })
             : (0, r.jsx)(u.nVY, {
                   label: t ? void 0 : N.intl.string(N.t.jCOdvx),
-                  description: t ? void 0 : N.intl.format(N.t.KPA3m9, { igdbLink: V }),
+                  description: t
+                      ? void 0
+                      : N.intl.format(N.t.KPA3m9, {
+                            igdbLink: V,
+                        }),
                   children: (0, r.jsx)("div", {
                       children: s.map((e) =>
                           (0, r.jsx)(
@@ -553,6 +606,13 @@ let W = (0, A.L_)(function () {
         return (0, r.jsxs)(I.A, {
             title: n ? N.intl.string(N.t.AVDyEj) : null,
             className: t,
-            children: [(0, r.jsx)(K, {}), (0, r.jsx)(z, {}), (0, r.jsx)(u.cGx, { gap: 20 }), (0, r.jsx)(q, {})],
+            children: [
+                (0, r.jsx)(K, {}),
+                (0, r.jsx)(z, {}),
+                (0, r.jsx)(u.cGx, {
+                    gap: 20,
+                }),
+                (0, r.jsx)(q, {}),
+            ],
         });
     };

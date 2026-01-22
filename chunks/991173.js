@@ -1,4 +1,7 @@
-n.d(t, { A: () => u }), n(896048);
+n.d(t, {
+    A: () => u,
+}),
+    n(896048);
 var r = n(179771),
     i = n(10584),
     l = n(636401),
@@ -44,7 +47,13 @@ let u = {
                 socket: t,
                 args: { devices: n },
             } = e;
-            if (null == t.application.id) throw new l.A({ errorCode: o.Lw6.INVALID_COMMAND }, "No application.");
+            if (null == t.application.id)
+                throw new l.A(
+                    {
+                        errorCode: o.Lw6.INVALID_COMMAND,
+                    },
+                    "No application.",
+                );
             (0, i.z)(
                 t.application.id,
                 n.map((e) => ({

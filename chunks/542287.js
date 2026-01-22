@@ -1,4 +1,7 @@
-n.d(t, { A: () => u }), n(228524);
+n.d(t, {
+    A: () => u,
+}),
+    n(228524);
 var r = n(627968);
 n(64700);
 var i = n(990078),
@@ -26,7 +29,9 @@ let u = () =>
                 children: [
                     (0, r.jsx)(i.m, {
                         text: l.intl.string(l.t.oMx98L),
-                        children: (0, r.jsx)("div", { className: c.io }),
+                        children: (0, r.jsx)("div", {
+                            className: c.io,
+                        }),
                     }),
                     (0, r.jsx)(a.Heading, {
                         className: c.wx,

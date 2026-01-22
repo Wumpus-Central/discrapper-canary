@@ -1,4 +1,6 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(627968);
 n(64700);
 var l = n(503698),
@@ -6,6 +8,7 @@ var l = n(503698),
     a = n(397927),
     s = n(769015),
     o = n(129353);
+
 function c(e) {
     let { className: t, embeddedApps: n, muted: l } = e;
     if (n.length <= 0) return null;

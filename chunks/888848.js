@@ -34,6 +34,7 @@ var r = n(627968),
     w = n(652215),
     P = n(985018),
     D = n(486526);
+
 function x(e, t, n) {
     return (
         t in e
@@ -47,6 +48,7 @@ function x(e, t, n) {
         e
     );
 }
+
 function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -63,6 +65,7 @@ function L(e) {
     }
     return e;
 }
+
 function j(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -75,6 +78,7 @@ function j(e, t) {
     }
     return n;
 }
+
 function M(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -90,6 +94,7 @@ let k = "https://support.discord.com/hc/en-us";
 var U = (function (e) {
     return (e[(e.LOADING = 0)] = "LOADING"), (e[(e.DONE = 1)] = "DONE"), (e[(e.ERROR = 2)] = "ERROR"), e;
 })({});
+
 function G(e) {
     var t, n, s, l, u;
     let { subscription: _, navigateToSwitchPlan: h, loadingState: b } = e,
@@ -204,19 +209,27 @@ function G(e) {
                           }),
                       ],
                   })
-                : (0, r.jsx)(c.y$y, { type: c.tVU.PULSING_ELLIPSIS }),
+                : (0, r.jsx)(c.y$y, {
+                      type: c.tVU.PULSING_ELLIPSIS,
+                  }),
         children: [
             U &&
                 (0, r.jsx)(H, {
                     type: "warning",
                     title: Z
-                        ? P.intl.formatToPlainString(P.t.QOnM1y, { subscriptionPeriodEnd: en })
-                        : P.intl.formatToPlainString(P.t.HOaZu8, { subscriptionPeriodEnd: en }),
+                        ? P.intl.formatToPlainString(P.t.QOnM1y, {
+                              subscriptionPeriodEnd: en,
+                          })
+                        : P.intl.formatToPlainString(P.t.HOaZu8, {
+                              subscriptionPeriodEnd: en,
+                          }),
                 }),
             et &&
                 (0, r.jsx)(H, {
                     type: "warning",
-                    title: P.intl.formatToPlainString(P.t.HOaZu8, { subscriptionPeriodEnd: en }),
+                    title: P.intl.formatToPlainString(P.t.HOaZu8, {
+                        subscriptionPeriodEnd: en,
+                    }),
                 }),
             Q &&
                 (0, r.jsx)(H, {
@@ -233,7 +246,12 @@ function G(e) {
                                   children: [
                                       (0, r.jsxs)("span", {
                                           className: D.yW,
-                                          children: [(0, r.jsx)(c.RR9, { size: "xs" }), P.intl.string(P.t.QjL3vn)],
+                                          children: [
+                                              (0, r.jsx)(c.RR9, {
+                                                  size: "xs",
+                                              }),
+                                              P.intl.string(P.t.QjL3vn),
+                                          ],
                                       }),
                                       null != M &&
                                           (0, r.jsxs)("span", {
@@ -242,7 +260,9 @@ function G(e) {
                                                   (0, r.jsx)(c.Text, {
                                                       variant: "text-sm/normal",
                                                       color: "text-muted",
-                                                      children: P.intl.format(P.t["7ZD8p1"], { guildName: M.name }),
+                                                      children: P.intl.format(P.t["7ZD8p1"], {
+                                                          guildName: M.name,
+                                                      }),
                                                   }),
                                                   (0, r.jsx)(g.A, {
                                                       guild: M,
@@ -254,7 +274,12 @@ function G(e) {
                               })
                             : (0, r.jsxs)("span", {
                                   className: D.yW,
-                                  children: [(0, r.jsx)(c.nys, { size: "xs" }), P.intl.string(P.t["6anEVv"])],
+                                  children: [
+                                      (0, r.jsx)(c.nys, {
+                                          size: "xs",
+                                      }),
+                                      P.intl.string(P.t["6anEVv"]),
+                                  ],
                               }),
                     }),
                     (0, r.jsx)(V, {
@@ -289,6 +314,7 @@ function G(e) {
         ],
     });
 }
+
 function V(e) {
     let { subscriptionPlan: t, invoicePreview: n } = e;
     if (null == t)
@@ -314,18 +340,23 @@ function V(e) {
                 }),
                 s !== i &&
                     (0, r.jsx)(l.m_, {
-                        text: P.intl.format(P.t["6DoE57"], { listPrice: i }),
+                        text: P.intl.format(P.t["6DoE57"], {
+                            listPrice: i,
+                        }),
                         position: "bottom",
                         children: (0, r.jsx)(c.Text, {
                             variant: "text-xs/medium",
                             color: "text-muted",
-                            children: (0, r.jsx)("s", { children: i }),
+                            children: (0, r.jsx)("s", {
+                                children: i,
+                            }),
                         }),
                     }),
             ],
         }),
     });
 }
+
 function F(e) {
     let { isCancelled: t, subscriptionPeriodEnd: n, renewalPlan: i } = e;
     if (null != i) {
@@ -354,6 +385,7 @@ function F(e) {
         content: n,
     });
 }
+
 function B(e) {
     let { title: t, content: n } = e;
     return (0, r.jsxs)("div", {
@@ -371,6 +403,7 @@ function B(e) {
         ],
     });
 }
+
 function H(e) {
     let { type: t, title: n } = e,
         i = "warning" === t;
@@ -383,6 +416,7 @@ function H(e) {
         }),
     });
 }
+
 function Y(e) {
     let {
             app: t,
@@ -476,6 +510,7 @@ function Y(e) {
         ],
     });
 }
+
 function W(e) {
     let { appId: t, listingBenefits: n } = e;
     return (0, r.jsx)(h.A, {
@@ -515,6 +550,7 @@ function W(e) {
             }),
     });
 }
+
 function K(e) {
     let { subscription: t, currentInvoicePreview: n, loadingState: i, isDeleted: a, isCancelled: s } = e;
     return null == n
@@ -524,7 +560,9 @@ function K(e) {
                 className: D.Ji,
                 children: (0, r.jsx)(c.D0$, {
                     label: P.intl.string(P.t.azZaZa),
-                    children: (0, r.jsx)(c.y$y, { type: c.tVU.PULSING_ELLIPSIS }),
+                    children: (0, r.jsx)(c.y$y, {
+                        type: c.tVU.PULSING_ELLIPSIS,
+                    }),
                 }),
             })
           : 2 === i
@@ -532,11 +570,17 @@ function K(e) {
                   className: D.Ji,
                   children: (0, r.jsxs)(c.$Td, {
                       color: c.Hv$.DANGER,
-                      style: { borderRadius: 0 },
+                      style: {
+                          borderRadius: 0,
+                      },
                       children: [
-                          P.intl.format(P.t.IIHUUF, { subscriptionId: t.id }),
+                          P.intl.format(P.t.IIHUUF, {
+                              subscriptionId: t.id,
+                          }),
                           (0, r.jsx)("br", {}),
-                          P.intl.format(P.t.fh65ES, { helpLink: k }),
+                          P.intl.format(P.t.fh65ES, {
+                              helpLink: k,
+                          }),
                       ],
                   }),
               })

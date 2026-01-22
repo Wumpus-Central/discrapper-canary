@@ -1,5 +1,9 @@
 let r, i, a, s, o, l;
-n.d(t, { A: () => ee }), n(938796), n(896048);
+n.d(t, {
+    A: () => ee,
+}),
+    n(938796),
+    n(896048);
 var c,
     u = n(735438),
     d = n.n(u),
@@ -14,6 +18,7 @@ var c,
     y = n(860689),
     O = n(734057),
     A = n(652215);
+
 function v(e, t, n) {
     return (
         t in e
@@ -27,6 +32,7 @@ function v(e, t, n) {
         e
     );
 }
+
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -43,6 +49,7 @@ function S(e) {
     }
     return e;
 }
+
 function I(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -55,6 +62,7 @@ function I(e, t) {
     }
     return n;
 }
+
 function T(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -96,6 +104,7 @@ let C = A.XlH.CLOSED,
         "iconEmoji",
         "themeColor",
     ];
+
 function L(e) {
     if (null == a || a.id !== e) return !1;
     if (a === s) {
@@ -111,6 +120,7 @@ function L(e) {
     }
     return !0;
 }
+
 function j(e) {
     let t = O.A.getChannel(e.channelId);
     if (null == t) return k();
@@ -132,6 +142,7 @@ function j(e) {
         !0
     );
 }
+
 function M(e) {
     (r = e.section),
         (i = e.subsection),
@@ -153,15 +164,19 @@ function M(e) {
                 () => (w = !1),
             ));
 }
+
 function k() {
     (P = !1), (C = A.XlH.CLOSED), (r = null), (s = a = null), (o = null), (R = {});
 }
+
 function U() {
     (C = A.XlH.SUBMITTING), (N = {});
 }
+
 function G() {
     (a = s), (C = A.XlH.OPEN);
 }
+
 function V(e) {
     var t;
     (C = A.XlH.OPEN),
@@ -176,6 +191,7 @@ let F = d().debounce(() => {
         t = a.toJS();
     x.every((n) => e[n] === t[n]) && s !== a && ((s = a), J.emitChange());
 }, 500);
+
 function B(e) {
     let {
         name: t,
@@ -211,9 +227,27 @@ function B(e) {
         null != l && (s = s.set("flags", l)),
         null != c && (s = s.set("rateLimitPerUser", c)),
         null != u && (s = s.set("defaultThreadRateLimitPerUser", u)),
-        null != d && (s = s.set("threadMetadata", T(S({}, s.threadMetadata), { autoArchiveDuration: d }))),
-        null != f && (s = s.set("threadMetadata", T(S({}, s.threadMetadata), { locked: f }))),
-        null != p && (s = s.set("threadMetadata", T(S({}, s.threadMetadata), { invitable: p }))),
+        null != d &&
+            (s = s.set(
+                "threadMetadata",
+                T(S({}, s.threadMetadata), {
+                    autoArchiveDuration: d,
+                }),
+            )),
+        null != f &&
+            (s = s.set(
+                "threadMetadata",
+                T(S({}, s.threadMetadata), {
+                    locked: f,
+                }),
+            )),
+        null != p &&
+            (s = s.set(
+                "threadMetadata",
+                T(S({}, s.threadMetadata), {
+                    invitable: p,
+                }),
+            )),
         null != _ && (s = s.set("defaultAutoArchiveDuration", _)),
         null != h && (s = s.set("template", h)),
         null != n && (s = s.set("type", n)),
@@ -228,6 +262,7 @@ function B(e) {
         null != I && (s = s.set("themeColor", I)),
         F();
 }
+
 function H(e) {
     return new E.A({
         code: e.code,
@@ -243,21 +278,28 @@ function H(e) {
         type: e.type,
     });
 }
+
 function Y(e) {
     (R = {}),
         e.invites.forEach((e) => {
             R[e.code] = H(e);
         });
 }
+
 function W(e) {
     (R = S({}, R)), delete R[e.code];
 }
+
 function K(e) {
-    R = T(S({}, R), { [e.invite.code]: H(e.invite) });
+    R = T(S({}, R), {
+        [e.invite.code]: H(e.invite),
+    });
 }
+
 function z(e) {
     return !!L(e) && null != s && (null != l && null == s.permissionOverwrites[l] && (l = s.getGuildId()), !0);
 }
+
 function q(e) {
     let { channels: t } = e;
     if (null == s) return !1;
@@ -265,10 +307,12 @@ function q(e) {
     for (let e of t) n = z(e.id) || n;
     return n;
 }
+
 function X(e) {
     let { channelId: t } = e;
     return z(t);
 }
+
 function Z(e) {
     let {
         channel: { id: t },
@@ -276,6 +320,7 @@ function Z(e) {
     if (null == s || s.id !== t) return !1;
     C = A.XlH.CLOSED;
 }
+
 function Q(e) {
     let { overwriteId: t } = e;
     l = t;

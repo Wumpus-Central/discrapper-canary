@@ -51,6 +51,7 @@ var r = n(627968),
     K = n(652215),
     z = n(788868),
     q = n(898772);
+
 function X(e, t, n) {
     return (
         t in e
@@ -64,6 +65,7 @@ function X(e, t, n) {
         e
     );
 }
+
 function Z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -80,6 +82,7 @@ function Z(e) {
     }
     return e;
 }
+
 function Q(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -92,6 +95,7 @@ function Q(e, t) {
     }
     return n;
 }
+
 function $(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -104,6 +108,7 @@ function $(e, t) {
     );
 }
 let [J, ee, et] = (0, N.A)();
+
 function en(e) {
     var t, n, s, N;
     let {
@@ -173,7 +178,9 @@ function en(e) {
         eK = (0, d.A)(() => {
             let e = null != X ? X : (0, l.A)();
             return (
-                w.A.addBreadcrumb({ message: "Checkout session ID: ".concat(e) }),
+                w.A.addBreadcrumb({
+                    message: "Checkout session ID: ".concat(e),
+                }),
                 {
                     loadId: e,
                     startTime: Date.now(),
@@ -259,13 +266,20 @@ function en(e) {
         tP = (0, u.bG)([C.A], () => (null != ez ? C.A.getForSKU(ez) : null), [ez]),
         [tD, tx] = i.useState(null),
         tL = null != (s = null == Q ? void 0 : Q.inReverseTrial) && s && !er,
-        tj = (0, y.A)({ location: "PaymentModal" }) && td,
+        tj =
+            (0, y.A)({
+                location: "PaymentModal",
+            }) && td,
         { isDisplayingWowMomentConfirmation: tM } = (0, u.cf)([b.A], () => ({
             isDisplayingWowMomentConfirmation: b.A.isDisplayingWowMomentConfirmation,
         })),
         tk = tj ? q.Ot : void 0,
-        { enabled: tU } = (0, E.Y)({ location: "PaymentContext" }),
-        tG = (0, D.uR)({ location: "PaymentModal" }),
+        { enabled: tU } = (0, E.Y)({
+            location: "PaymentContext",
+        }),
+        tG = (0, D.uR)({
+            location: "PaymentModal",
+        }),
         tV = i.useMemo(() => {
             if (tG) return W.uH.APPLE_PAYMENT_LINK;
         }, [tG]),

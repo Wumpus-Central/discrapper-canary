@@ -1,4 +1,6 @@
-n.d(t, { A: () => y });
+n.d(t, {
+    A: () => y,
+});
 var r = n(627968),
     i = n(64700),
     l = n(311907),
@@ -16,6 +18,7 @@ var r = n(627968),
     O = n(652215),
     x = n(985018),
     h = n(225305);
+
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -41,6 +44,7 @@ function j(e) {
     }
     return e;
 }
+
 function v(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -59,6 +63,7 @@ function v(e, t) {
         e
     );
 }
+
 function y(e) {
     let { guildId: t, onComplete: n, isLastStep: y, isSubmitting: _ = !1, disableTracking: A } = e,
         N = i.useRef(!1),

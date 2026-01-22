@@ -132,7 +132,11 @@ e.exports = function (e) {
                 r = e[0].length + e.index,
                 i = e.input[r];
             if ("<" === i || "," === i) return void t.ignoreMatch();
-            ">" !== i || u(e, { after: r }) || t.ignoreMatch();
+            ">" !== i ||
+                u(e, {
+                    after: r,
+                }) ||
+                t.ignoreMatch();
             let a = e.input.substring(r);
             if ((n = a.match(/^\s*=/)) || ((n = a.match(/^\s+extends\s+/)) && 0 === n.index))
                 return void t.ignoreMatch();
@@ -150,13 +154,27 @@ e.exports = function (e) {
         A = {
             className: "number",
             variants: [
-                { begin: `(\\b(${O})((${y})|\\.)?|(${y}))[eE][+-]?(${b})\\b` },
-                { begin: `\\b(${O})\\b((${y})\\b|\\.)?|(${y})\\b` },
-                { begin: "\\b(0|[1-9](_?[0-9])*)n\\b" },
-                { begin: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b" },
-                { begin: "\\b0[bB][0-1](_?[0-1])*n?\\b" },
-                { begin: "\\b0[oO][0-7](_?[0-7])*n?\\b" },
-                { begin: "\\b0[0-7]+n?\\b" },
+                {
+                    begin: `(\\b(${O})((${y})|\\.)?|(${y}))[eE][+-]?(${b})\\b`,
+                },
+                {
+                    begin: `\\b(${O})\\b((${y})\\b|\\.)?|(${y})\\b`,
+                },
+                {
+                    begin: "\\b(0|[1-9](_?[0-9])*)n\\b",
+                },
+                {
+                    begin: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b",
+                },
+                {
+                    begin: "\\b0[bB][0-1](_?[0-1])*n?\\b",
+                },
+                {
+                    begin: "\\b0[oO][0-7](_?[0-7])*n?\\b",
+                },
+                {
+                    begin: "\\b0[0-7]+n?\\b",
+                },
             ],
             relevance: 0,
         },
@@ -243,7 +261,18 @@ e.exports = function (e) {
                 e.C_LINE_COMMENT_MODE,
             ],
         },
-        R = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, S, I, T, C, { match: /\$\d+/ }, A];
+        R = [
+            e.APOS_STRING_MODE,
+            e.QUOTE_STRING_MODE,
+            S,
+            I,
+            T,
+            C,
+            {
+                match: /\$\d+/,
+            },
+            A,
+        ];
     v.contains = R.concat({
         begin: /\{/,
         end: /\}/,
@@ -329,6 +358,7 @@ e.exports = function (e) {
             match: /\b[A-Z][A-Z_0-9]+\b/,
             className: "variable.constant",
         };
+
     function U(e) {
         return c.concat("(?!", e.join("|"), ")");
     }
@@ -351,7 +381,12 @@ e.exports = function (e) {
                 1: "keyword",
                 3: "title.function",
             },
-            contains: [{ begin: /\(\)/ }, D],
+            contains: [
+                {
+                    begin: /\(\)/,
+                },
+                D,
+            ],
         },
         B = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + e.UNDERSCORE_IDENT_RE + ")\\s*=>",
         H = {
@@ -386,7 +421,9 @@ e.exports = function (e) {
             T,
             C,
             N,
-            { match: /\$\d+/ },
+            {
+                match: /\$\d+/,
+            },
             A,
             L,
             {
@@ -446,7 +483,9 @@ e.exports = function (e) {
                                 begin: f,
                                 end: p,
                             },
-                            { match: _ },
+                            {
+                                match: _,
+                            },
                             {
                                 begin: h,
                                 "on:begin": g,
@@ -466,7 +505,9 @@ e.exports = function (e) {
                 ],
             },
             M,
-            { beginKeywords: "while if switch catch for" },
+            {
+                beginKeywords: "while if switch catch for",
+            },
             {
                 begin:
                     "\\b(?!function)" +
@@ -493,14 +534,18 @@ e.exports = function (e) {
             },
             {
                 match: [/\bconstructor(?=\s*\()/],
-                className: { 1: "title.function" },
+                className: {
+                    1: "title.function",
+                },
                 contains: [D],
             },
             G,
             k,
             x,
             F,
-            { match: /\$[(.]/ },
+            {
+                match: /\$[(.]/,
+            },
         ],
     };
 };

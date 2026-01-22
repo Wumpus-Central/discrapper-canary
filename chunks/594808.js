@@ -16,6 +16,7 @@ var r = n(627968),
     p = n(652215),
     _ = n(985018),
     h = n(133898);
+
 function m(e) {
     return {
         text: e,
@@ -26,6 +27,7 @@ function m(e) {
         }),
     };
 }
+
 function g(e) {
     return {
         text: null != e ? e : _.intl.string(_.t.VCsUJu),
@@ -37,18 +39,24 @@ function g(e) {
         }),
     };
 }
+
 function E(e, t) {
     switch ((0, f.fK)(t, e)) {
         case f.h0.SENDING:
             return m(_.intl.string(_.t.RiLfBY));
         case f.h0.CREATED:
-            return m(_.intl.formatToPlainString(_.t["7ePV4t"], { applicationName: t.author.username }));
+            return m(
+                _.intl.formatToPlainString(_.t["7ePV4t"], {
+                    applicationName: t.author.username,
+                }),
+            );
         case f.h0.TIMED_OUT:
             return g(_.intl.string(_.t.h8hzPd));
         case f.h0.FAILED:
             return g(t.interactionError);
     }
 }
+
 function b(e) {
     let { className: t, icon: n, text: i, color: a } = e;
     return (0, r.jsxs)("div", {
@@ -64,6 +72,7 @@ function b(e) {
         ],
     });
 }
+
 function y(e) {
     let { message: t, className: n, component: a } = e,
         s = (0, o.A)(),
@@ -72,7 +81,7 @@ function y(e) {
         let e = null;
         if (t.hasFlag(p.pr7.LOADING) && null != c) {
             let n = (0, f.I5)(t.id) - Date.now();
-            n > 0 && (e = setTimeout(() => s(), 1000 + n));
+            n > 0 && (e = setTimeout(() => s(), 1e3 + n));
         }
         return () => {
             clearTimeout(e);

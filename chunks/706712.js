@@ -20,11 +20,12 @@ var n = r(627968),
     d = r(142120),
     f = r(132262),
     m = r(661251);
-let x = 1000 / 60,
-    h = 1000 / 30,
-    b = 5000,
-    g = (1000 / 60) * 3,
-    p = Math.ceil(3000 / (1000 / 60));
+let x = 1e3 / 60,
+    h = 1e3 / 30,
+    b = 5e3,
+    g = (1e3 / 60) * 3,
+    p = Math.ceil(3e3 / (1e3 / 60));
+
 function v(e, t) {
     let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : window,
         n = a.useRef(null),
@@ -54,6 +55,7 @@ function v(e, t) {
         s,
     ];
 }
+
 function j(e) {
     let t = a.useRef(Array(p).fill(0)),
         r = a.useRef(performance.now()),
@@ -91,6 +93,7 @@ function j(e) {
         ]
     );
 }
+
 function k(e, t) {
     let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         n = a.useRef(Array(p).fill(0)),
@@ -137,7 +140,7 @@ function k(e, t) {
     return {
         currentFPS: 0 === h ? 0 : (x / h) * 60,
         averageFrameTime: h,
-        timeSinceLastDrop: (performance.now() - d.current) / 1000,
+        timeSinceLastDrop: (performance.now() - d.current) / 1e3,
         droppedFramesRef: l,
         bufferFramecountRef: i,
         renderedFrameCount: s,
@@ -145,6 +148,7 @@ function k(e, t) {
         onResetFrameData: f,
     };
 }
+
 function w(e) {
     let t = e.dispatcher.getIsSchedulerBackgrounded(),
         r = a.useRef(t);
@@ -157,6 +161,7 @@ function w(e) {
         [r, n]
     );
 }
+
 function y(e) {
     let { socket: t, isAverageFrameTime: r } = e,
         [c, l] = w(t),
@@ -308,6 +313,7 @@ function y(e) {
         ],
     });
 }
+
 function T(e) {
     let { socket: t, isAverageFrameTime: r, onToggleAverageFrameTime: c } = e,
         [l, u] = a.useState(t.dispatcher.getIsRequestIdleCallbackEnabled()),
@@ -349,6 +355,7 @@ function T(e) {
         })
     );
 }
+
 function R(e) {
     let { socket: t } = e,
         r = t.dispatcher.getDispatchTimings(),
@@ -415,6 +422,7 @@ function R(e) {
         ],
     });
 }
+
 function C(e) {
     let { socket: t } = e,
         r = t.dispatcher.getSchedulerTelemetry(),
@@ -498,6 +506,7 @@ function C(e) {
         ],
     });
 }
+
 function S() {
     let [, e] = a.useState({});
     a.useEffect(() => {
@@ -509,6 +518,7 @@ function S() {
         };
     }, []);
 }
+
 function O() {
     let e = (0, u.bG)([d.A], () => d.A.getSocket()),
         [t, r] = a.useState(!1);
@@ -528,8 +538,12 @@ function O() {
                         isAverageFrameTime: t,
                         onToggleAverageFrameTime: r,
                     }),
-                    (0, n.jsx)(R, { socket: e }),
-                    (0, n.jsx)(C, { socket: e }),
+                    (0, n.jsx)(R, {
+                        socket: e,
+                    }),
+                    (0, n.jsx)(C, {
+                        socket: e,
+                    }),
                 ],
             }),
         })

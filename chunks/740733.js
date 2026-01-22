@@ -13,17 +13,27 @@ e.exports = function (e) {
                     begin: r,
                     relevance: 0,
                 },
-                { begin: "#(b|B)[0-1]+(/[0-1]+)?" },
-                { begin: "#(o|O)[0-7]+(/[0-7]+)?" },
-                { begin: "#(x|X)[0-9a-fA-F]+(/[0-9a-fA-F]+)?" },
+                {
+                    begin: "#(b|B)[0-1]+(/[0-1]+)?",
+                },
+                {
+                    begin: "#(o|O)[0-7]+(/[0-7]+)?",
+                },
+                {
+                    begin: "#(x|X)[0-9a-fA-F]+(/[0-9a-fA-F]+)?",
+                },
                 {
                     begin: "#(c|C)\\(" + r + " +" + r,
                     end: "\\)",
                 },
             ],
         },
-        s = e.inherit(e.QUOTE_STRING_MODE, { illegal: null }),
-        o = e.COMMENT(";", "$", { relevance: 0 }),
+        s = e.inherit(e.QUOTE_STRING_MODE, {
+            illegal: null,
+        }),
+        o = e.COMMENT(";", "$", {
+            relevance: 0,
+        }),
         l = {
             begin: "\\*",
             end: "\\*",
@@ -36,7 +46,9 @@ e.exports = function (e) {
             begin: t,
             relevance: 0,
         },
-        d = { begin: n },
+        d = {
+            begin: n,
+        },
         f = {
             begin: "\\(",
             end: "\\)",
@@ -52,13 +64,24 @@ e.exports = function (e) {
                 {
                     begin: "\\(quote ",
                     end: "\\)",
-                    keywords: { name: "quote" },
+                    keywords: {
+                        name: "quote",
+                    },
                 },
-                { begin: "'" + n },
+                {
+                    begin: "'" + n,
+                },
             ],
         },
         _ = {
-            variants: [{ begin: "'" + t }, { begin: "#'" + t + "(::" + t + ")*" }],
+            variants: [
+                {
+                    begin: "'" + t,
+                },
+                {
+                    begin: "#'" + t + "(::" + t + ")*",
+                },
+            ],
         },
         h = {
             begin: "\\(\\s*",
@@ -77,7 +100,9 @@ e.exports = function (e) {
                         begin: t,
                         relevance: 0,
                     },
-                    { begin: n },
+                    {
+                        begin: n,
+                    },
                 ],
             },
             m,

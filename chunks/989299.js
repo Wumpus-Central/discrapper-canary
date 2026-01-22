@@ -12,7 +12,9 @@ var n = r(562465),
     u = r(985018);
 async function f() {
     if (o.A.shouldFetch) {
-        a.h.dispatch({ type: "RECENT_AVATARS_FETCH_START" });
+        a.h.dispatch({
+            type: "RECENT_AVATARS_FETCH_START",
+        });
         try {
             let e = await n.Bo.get({
                 url: c.Rsh.RECENT_AVATARS,
@@ -86,7 +88,9 @@ async function f() {
                             }
                             return e;
                         })({}, l)),
-                        (r = { storageHash: n }),
+                        (r = {
+                            storageHash: n,
+                        }),
                         (r = null != r ? r : {}),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))

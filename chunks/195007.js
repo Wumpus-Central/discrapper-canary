@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968);
 n(64700);
 var l = n(311907),
@@ -8,6 +10,7 @@ var l = n(311907),
     o = n(652215),
     c = n(985018),
     u = n(911855);
+
 function d(e) {
     let { channel: t } = e,
         n = (0, l.bG)([s.Ay], () => s.Ay.getVoiceStatesForChannel(t));
@@ -17,7 +20,9 @@ function d(e) {
             (0, r.jsx)(i.Text, {
                 variant: "text-xs/bold",
                 className: u.wx,
-                children: c.intl.format(c.t.e95u3C, { count: n.length }),
+                children: c.intl.format(c.t.e95u3C, {
+                    count: n.length,
+                }),
             }),
             (0, r.jsx)(i.HOs, {
                 className: u.XG,

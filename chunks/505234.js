@@ -1,4 +1,6 @@
-n.d(t, { A: () => l });
+n.d(t, {
+    A: () => l,
+});
 var i = n(627968);
 n(64700);
 var s = n(621466),
@@ -42,7 +44,10 @@ let l = (e) => {
                             }
                             return e;
                         })({}, t)),
-                        (s = s = { channel: a }),
+                        (s = s =
+                            {
+                                channel: a,
+                            }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(s))
                             : (function (e, t) {

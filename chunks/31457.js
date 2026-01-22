@@ -11,6 +11,7 @@ var l = n(503698),
     o = n(827734),
     a = n(397927),
     s = n(230397);
+
 function c(e) {
     let { title: t, children: n } = e;
     return (0, r.jsxs)("div", {
@@ -26,6 +27,7 @@ function c(e) {
         ],
     });
 }
+
 function d(e) {
     let { title: t, children: n } = e;
     return (0, r.jsxs)("div", {
@@ -41,6 +43,7 @@ function d(e) {
         ],
     });
 }
+
 function u(e) {
     let { icon: t, text: n, meetsRequirement: l } = e;
     return (0, r.jsxs)("div", {
@@ -74,6 +77,7 @@ function u(e) {
         ],
     });
 }
+
 function C(e) {
     let { icon: t, text: n, footnote: l, meetsRequirement: c, children: d, className: u } = e;
     return (0, r.jsxs)(r.Fragment, {

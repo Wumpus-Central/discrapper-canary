@@ -6,7 +6,7 @@
             "_",
         ),
         monthsShort: "gen_feb_mar_apr_mag_giu_lug_ago_set_ott_nov_dic".split("_"),
-        weekdays: "domenica_lunedì_martedì_mercoledì_giovedì_venerdì_sabato".split("_"),
+        weekdays: "domenica_luned\xec_marted\xec_mercoled\xec_gioved\xec_venerd\xec_sabato".split("_"),
         weekdaysShort: "dom_lun_mar_mer_gio_ven_sab".split("_"),
         weekdaysMin: "do_lu_ma_me_gi_ve_sa".split("_"),
         longDateFormat: {
@@ -46,7 +46,7 @@
             yy: "%d anni",
         },
         dayOfMonthOrdinalParse: /\d{1,2}º/,
-        ordinal: "%dº",
+        ordinal: "%d\xba",
         week: {
             dow: 1,
             doy: 4,

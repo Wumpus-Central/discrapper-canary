@@ -1,4 +1,8 @@
-a.d(t, { default: () => M }), a(896048), a(733351);
+a.d(t, {
+    default: () => M,
+}),
+    a(896048),
+    a(733351);
 var r = a(627968),
     n = a(64700),
     i = a(158954),
@@ -17,6 +21,7 @@ var r = a(627968),
     x = a(737045),
     A = a(985018),
     v = a(489715);
+
 function M(e) {
     let { transitionState: t, onClose: a, roleId: M, guildId: R } = e,
         h = (0, s.bG)([p.A], () => p.A.getRole(M), [M]),
@@ -61,7 +66,9 @@ function M(e) {
                 }),
             [G],
         ),
-        L = c.A.useSections({ members: q }),
+        L = c.A.useSections({
+            members: q,
+        }),
         N = n.useCallback(
             (e) =>
                 e.rowType === x.T6.MEMBER || e.rowType === x.T6.OWNER
@@ -93,10 +100,14 @@ function M(e) {
                           numMembers: k.$S,
                           roleName: h.name,
                       })
-                    : A.intl.format(A.t["3OxP4q"], { numMembers: k.$S }),
+                    : A.intl.format(A.t["3OxP4q"], {
+                          numMembers: k.$S,
+                      }),
             input: (0, r.jsxs)("div", {
                 children: [
-                    (0, r.jsx)(c.A.SearchBox, { placeholderText: A.intl.string(A.t.vMiCaQ) }),
+                    (0, r.jsx)(c.A.SearchBox, {
+                        placeholderText: A.intl.string(A.t.vMiCaQ),
+                    }),
                     null != _
                         ? (0, r.jsx)(l.Text, {
                               className: v.k,

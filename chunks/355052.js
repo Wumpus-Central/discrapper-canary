@@ -1,4 +1,8 @@
-n.d(t, { A: () => M }), n(896048), n(142703);
+n.d(t, {
+    A: () => M,
+}),
+    n(896048),
+    n(142703);
 var i = n(627968),
     r = n(64700),
     s = n(503698),
@@ -26,6 +30,7 @@ var i = n(627968),
     I = n(652215),
     C = n(985018),
     w = n(748498);
+
 function N(e, t, n) {
     return (
         t in e
@@ -41,6 +46,7 @@ function N(e, t, n) {
 }
 let P = 10 * O.A.Millis.SECOND,
     D = new h.Vy("LegacyOverlayErrorBoundary");
+
 function T() {
     let e = (0, v.getPID)(),
         t = (0, v.getRPCAuthToken)();
@@ -60,7 +66,9 @@ function T() {
 class R extends r.PureComponent {
     componentDidMount() {
         (this.notificationTimer = setTimeout(this.hideNotification, P)),
-            f.A.track(I.HAw.NOTIFICATION_VIEWED, { notif_type: _.KS.OverlayCrashed });
+            f.A.track(I.HAw.NOTIFICATION_VIEWED, {
+                notif_type: _.KS.OverlayCrashed,
+            });
     }
     componentWillUnmount() {
         let { notificationTimer: e } = this;
@@ -101,12 +109,16 @@ class R extends r.PureComponent {
                                       ? (0, i.jsxs)(j.Ay, {
                                             className: w.a2,
                                             children: [
-                                                (0, i.jsx)(j.Ay.Bar, { children: "Error Details" }),
+                                                (0, i.jsx)(j.Ay.Bar, {
+                                                    children: "Error Details",
+                                                }),
                                                 (0, i.jsx)(j.Ay.Content, {
                                                     className: w.Xh,
                                                     children: (0, i.jsx)("code", {
                                                         className: w.aY,
-                                                        children: (0, i.jsx)("pre", { children: t.stack }),
+                                                        children: (0, i.jsx)("pre", {
+                                                            children: t.stack,
+                                                        }),
                                                     }),
                                                 }),
                                             ],
@@ -131,7 +143,9 @@ class R extends r.PureComponent {
                 null != e && clearTimeout(e), (this.notificationTimer = null);
             }),
             N(this, "handleReload", (e) => {
-                this.setState({ busy: !0 }),
+                this.setState({
+                    busy: !0,
+                }),
                     T(),
                     f.A.track(
                         I.HAw.NOTIFICATION_CLICKED,
@@ -147,7 +161,11 @@ class R extends r.PureComponent {
             N(this, "handleNotificationClick", (e) => {
                 e.stopPropagation();
                 let { notificationTimer: t } = this;
-                null != t && clearTimeout(t), e.shiftKey && this.setState({ showTrace: !0 });
+                null != t && clearTimeout(t),
+                    e.shiftKey &&
+                        this.setState({
+                            showTrace: !0,
+                        });
             });
     }
 }
@@ -162,7 +180,9 @@ let k = a().throttle(
         );
     },
     100,
-    { trailing: !1 },
+    {
+        trailing: !1,
+    },
 );
 class L extends r.PureComponent {
     componentDidCatch(e, t) {
@@ -195,7 +215,9 @@ class L extends r.PureComponent {
             ],
         }),
             setImmediate(() => window.addEventListener("click", T));
-        let s = (0, E.St)(e, x.Ue.Hook, { extra: t });
+        let s = (0, E.St)(e, x.Ue.Hook, {
+            extra: t,
+        });
         f.A.track(I.HAw.APP_CRASHED, {
             path: n.pathname,
             extra: t,

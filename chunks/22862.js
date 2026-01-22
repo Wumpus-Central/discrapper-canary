@@ -1,4 +1,7 @@
-n.d(t, { A: () => h }), n(896048);
+n.d(t, {
+    A: () => h,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(397927),
@@ -9,19 +12,25 @@ var r = n(627968),
     u = n(44440),
     d = n(985018),
     p = n(430556);
+
 function f(e) {
     let { count: t, categoryId: n } = e,
-        i = (0, o.r)({ categoryId: n });
+        i = (0, o.r)({
+            categoryId: n,
+        });
     return (0, r.jsx)(a.kR, {
         count: t,
         name: i,
     });
 }
+
 function h(e) {
     let { loadId: t } = e,
         n = s.A.useField("categoryId"),
         h = (0, c.L)(),
-        A = (0, o.r)({ categoryId: n }),
+        A = (0, o.r)({
+            categoryId: n,
+        }),
         g = i.useCallback(
             (e) => {
                 (0, u.j)({

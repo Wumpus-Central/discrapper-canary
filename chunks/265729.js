@@ -1,4 +1,7 @@
-n.d(t, { A: () => V }), n(896048);
+n.d(t, {
+    A: () => V,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -31,6 +34,7 @@ var r = n(627968),
     D = n(788868),
     x = n(985018),
     L = n(492489);
+
 function j(e, t, n) {
     return (
         t in e
@@ -44,6 +48,7 @@ function j(e, t, n) {
         e
     );
 }
+
 function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -60,6 +65,7 @@ function M(e) {
     }
     return e;
 }
+
 function k(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -72,6 +78,7 @@ function k(e, t) {
     }
     return n;
 }
+
 function U(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -83,6 +90,7 @@ function U(e, t) {
         e
     );
 }
+
 function G(e) {
     let t,
         { outboundPromotion: n, code: a, addClaimedOutboundPromotionCode: o, disabled: l } = e,
@@ -166,7 +174,9 @@ function G(e) {
                             className: L.GL,
                             variant: "text-xs/normal",
                             color: "text-default",
-                            children: _.A.parse(C, !1, { allowLinks: !0 }),
+                            children: _.A.parse(C, !1, {
+                                allowLinks: !0,
+                            }),
                         }),
                 ],
             }),
@@ -212,15 +222,21 @@ let V = function (e) {
         V = j.length + M.length > 0,
         F =
             h.m.useExperiment(
-                { location: "EntitlementGifts" },
+                {
+                    location: "EntitlementGifts",
+                },
                 {
                     autoTrackExposure: !1,
                     disable: p,
                 },
             ).enabled && V;
+
     function B() {
-        (0, w.openUserSettings)(C.X.NITRO_PANEL, { section: P.nc_.PREMIUM });
+        (0, w.openUserSettings)(C.X.NITRO_PANEL, {
+            section: P.nc_.PREMIUM,
+        });
     }
+
     function H() {
         var e;
         let n = o.find((e) => e.giftCodeBatchId === D.FB && !e.consumed),
@@ -255,7 +271,9 @@ let V = function (e) {
                               showGradient: !0,
                               className: L.aA,
                               subscriptionTier: D.pe.TIER_2,
-                              textOptions: { textOverride: x.intl.string(x.t.mr4K7D) },
+                              textOptions: {
+                                  textOverride: x.intl.string(x.t.mr4K7D),
+                              },
                           }),
                       ],
                   })
@@ -264,14 +282,20 @@ let V = function (e) {
             className: t ? L.sW : void 0,
             children: [
                 d,
-                V ? (0, r.jsx)(u.cGx, { className: L.yF }) : null,
+                V
+                    ? (0, r.jsx)(u.cGx, {
+                          className: L.yF,
+                      })
+                    : null,
                 (0, r.jsx)(O.A, {
                     className: L.Yj,
                     isShown: F,
                     type: O.i.PREMIUM,
                     hasBackground: !0,
                     children: (0, r.jsxs)("div", {
-                        className: s()({ [L.sW]: !F }),
+                        className: s()({
+                            [L.sW]: !F,
+                        }),
                         children: [
                             f,
                             M.map((e) => {
@@ -344,18 +368,23 @@ let V = function (e) {
             ],
         });
     }
+
     function Y() {
         return (0, r.jsxs)("div", {
             className: L.p$,
             children: [
-                (0, r.jsx)("div", { className: L.QT }),
+                (0, r.jsx)("div", {
+                    className: L.QT,
+                }),
                 (0, r.jsx)(u.H, {
                     className: L.ks,
                     children: x.intl.string(x.t.B1qgZn),
                 }),
                 (0, r.jsx)("p", {
                     className: L.WO,
-                    children: x.intl.format(x.t.HezvJ8, { onClick: B }),
+                    children: x.intl.format(x.t.HezvJ8, {
+                        onClick: B,
+                    }),
                 }),
             ],
         });
@@ -372,7 +401,9 @@ let V = function (e) {
                               children: x.intl.string(x.t["9KeUbY"]),
                           }),
                           children: [
-                              (0, r.jsx)(u.cGx, { className: L.yF }),
+                              (0, r.jsx)(u.cGx, {
+                                  className: L.yF,
+                              }),
                               0 === Object.keys(_).length
                                   ? Y()
                                   : l()
@@ -396,5 +427,7 @@ let V = function (e) {
                   }),
               ],
           })
-        : (0, r.jsx)(u.y$y, { className: L.Lq });
+        : (0, r.jsx)(u.y$y, {
+              className: L.Lq,
+          });
 };

@@ -1,7 +1,10 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r,
     i = n(311907),
     a = n(73153);
+
 function s(e, t, n) {
     return (
         t in e
@@ -16,6 +19,7 @@ function s(e, t, n) {
     );
 }
 let o = {};
+
 function l(e) {
     let { guildId: t, expand: n } = e;
     n ? (o[t] = !0) : delete o[t];

@@ -1,5 +1,8 @@
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 let r = 5;
+
 function i(e, t, n) {
     let { onChange: i } = e,
         a = !1,

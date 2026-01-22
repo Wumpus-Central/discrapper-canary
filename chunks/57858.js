@@ -1,9 +1,13 @@
-n.r(t), n.d(t, { default: () => T }), n(896048);
+n.r(t),
+    n.d(t, {
+        default: () => T,
+    }),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
     s = n.n(l),
-    c = n(432022),
+    c = n(108531),
     a = n(311907),
     o = n(397927),
     d = n(442433),
@@ -30,6 +34,7 @@ var r = n(627968),
     C = n(652215),
     I = n(985018),
     k = n(22004);
+
 function T(e) {
     let { guildId: t } = e,
         { ref: l, width: T, height: R } = (0, f.Ay)(),
@@ -94,7 +99,10 @@ function T(e) {
                                     }
                                     return e;
                                 })({}, t)),
-                                (i = i = { splashUrl: q }),
+                                (i = i =
+                                    {
+                                        splashUrl: q,
+                                    }),
                                 Object.getOwnPropertyDescriptors
                                     ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
                                     : (function (e, t) {
@@ -154,13 +162,15 @@ function T(e) {
         if (!ei || el) {
             let e = setTimeout(() => {
                 (0, x.pX)(C.BVt.CHANNEL(t));
-            }, 1000);
+            }, 1e3);
             return () => clearTimeout(e);
         }
     }, [ei, el, t]),
     N.Ay.shouldShowOnboarding(t) && null != B)
         ? (0, r.jsxs)("div", {
-              className: s()(k.iW, { [k.Me]: null == q }),
+              className: s()(k.iW, {
+                  [k.Me]: null == q,
+              }),
               ref: l,
               onContextMenu: $,
               children: [
@@ -182,7 +192,11 @@ function T(e) {
                                   .concat((0, y.cb)(U, 1), " 100%)"),
                           },
                       }),
-                  null == q ? null : (0, r.jsx)("div", { className: k.D7 }),
+                  null == q
+                      ? null
+                      : (0, r.jsx)("div", {
+                            className: k.D7,
+                        }),
                   (0, r.jsxs)("div", {
                       ref: K,
                       children: [
@@ -253,7 +267,9 @@ function T(e) {
                                   children: (0, r.jsx)(o.Heading, {
                                       variant: "heading-sm/normal",
                                       color: "text-default",
-                                      children: I.intl.format(I.t.kI6UoD, { privacyLink: C.X7G.PRIVACY }),
+                                      children: I.intl.format(I.t.kI6UoD, {
+                                          privacyLink: C.X7G.PRIVACY,
+                                      }),
                                   }),
                               }),
                       ],

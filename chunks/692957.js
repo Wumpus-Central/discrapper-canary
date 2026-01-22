@@ -1,5 +1,8 @@
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 var r = n(587895);
+
 function i(e) {
     var t;
     let { applicationId: n, activityConfigs: i, applications: a } = e,

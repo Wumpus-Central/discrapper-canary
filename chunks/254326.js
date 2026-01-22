@@ -1,4 +1,6 @@
-n.d(t, { OU: () => R });
+n.d(t, {
+    OU: () => R,
+});
 var r = n(627968),
     i = n(64700),
     a = n(688810),
@@ -11,6 +13,7 @@ var r = n(627968),
     f = n(503516),
     p = n(652215),
     _ = n(818348);
+
 function h(e, t, n) {
     return (
         t in e
@@ -24,6 +27,7 @@ function h(e, t, n) {
         e
     );
 }
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -40,6 +44,7 @@ function m(e) {
     }
     return e;
 }
+
 function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -52,6 +57,7 @@ function g(e, t) {
     }
     return n;
 }
+
 function E(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -63,6 +69,7 @@ function E(e, t) {
         e
     );
 }
+
 function b(e, t) {
     if (null == e) return {};
     var n,
@@ -79,6 +86,7 @@ function b(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function y(e, t) {
     if (null == e) return {};
     var n,
@@ -126,9 +134,15 @@ let O = (0, i.createContext)({
                 setCustomConfettiVisible: h,
                 customConfettiDisplayOptions: g,
                 hideConfirmStepConfetti: y,
-            } = (0, u.Ub)({ skuId: t }),
-            { analyticsLocations: A } = (0, u.NW)({ analyticsLocations: null != n ? n : [] }),
-            v = (0, u.v1)({ skuId: t }),
+            } = (0, u.Ub)({
+                skuId: t,
+            }),
+            { analyticsLocations: A } = (0, u.NW)({
+                analyticsLocations: null != n ? n : [],
+            }),
+            v = (0, u.v1)({
+                skuId: t,
+            }),
             S = (0, i.useMemo)(
                 () => ({
                     analyticsLocations: A,
@@ -265,8 +279,12 @@ let O = (0, i.createContext)({
         },
         UnifiedCheckoutCustomHeader: T,
         UnifiedCheckoutStepDefinitions: {
-            [c.pn.GIFT_CUSTOMIZATION]: { StepController: N },
-            [c.pn.REVIEW]: { legacyStepConfig: !0 },
+            [c.pn.GIFT_CUSTOMIZATION]: {
+                StepController: N,
+            },
+            [c.pn.REVIEW]: {
+                legacyStepConfig: !0,
+            },
         },
         CUSTOM_CONFIRM_STEP_CONFIG: S,
     };

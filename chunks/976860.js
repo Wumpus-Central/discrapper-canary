@@ -30,6 +30,7 @@ var s = n(830845),
     l = n(203982),
     c = n(824865),
     u = n(652215);
+
 function d(e, t, n) {
     return (
         t in e
@@ -43,6 +44,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -66,6 +68,7 @@ let h = !1,
     m = r.listen((e, t) => {
         "REPLACE" !== t && ((h = !0), m());
     });
+
 function g() {
     if (l._.hasSubscribers(u.jej.MODAL_CLOSE)) {
         let { doesTopModalAllowNavigation: e } = n(192308);
@@ -73,6 +76,7 @@ function g() {
     }
     return n(712687).A.close(), !0;
 }
+
 function E(e, t) {
     return (
         !!("string" == typeof e && _.some((t) => e.startsWith(t))) &&
@@ -82,6 +86,7 @@ function E(e, t) {
         !0)
     );
 }
+
 function b(e, t) {
     if (E(e, "assign")) return;
     p.log("transitionTo - Transitioning to ".concat(e));
@@ -104,6 +109,7 @@ function b(e, t) {
     }
     (i = n), (a = s);
 }
+
 function y(e, t, n, r) {
     p.log(
         "transitionToGuild - Transitioning to ".concat(
@@ -116,22 +122,28 @@ function y(e, t, n, r) {
     ),
         b(u.BVt.CHANNEL(e, t, n), r);
 }
+
 function O() {
     return null != i && c.n.has(i);
 }
+
 function A(e, t, n) {
     E(e, "replace") ||
         (p.log("Replacing route with ".concat(e)), "string" == typeof e ? r.replace(e, t) : r.replace(e), (i = n));
 }
+
 function v() {
     return r;
 }
+
 function S() {
     return i;
 }
+
 function I() {
     return a;
 }
+
 function T(e) {
     if (null == e) {
         var t;
@@ -139,6 +151,7 @@ function T(e) {
     }
     return !e.startsWith(u.BVt.HANDOFF);
 }
+
 function C(e) {
     if (null == e) {
         var t;
@@ -161,12 +174,15 @@ function C(e) {
     else if (e.startsWith(u.BVt.ACCOUNT_REVERT(""))) return u.S3d.ACCOUNT_REVERT;
     return e;
 }
+
 function N() {
     return h;
 }
+
 function R() {
     g() && ((i = null), r.goBack());
 }
+
 function w() {
     g() && ((i = null), r.goForward());
 }

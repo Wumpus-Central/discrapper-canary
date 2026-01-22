@@ -1,9 +1,14 @@
-n.d(t, { A: () => b }), n(65821), n(896048);
+n.d(t, {
+    A: () => b,
+}),
+    n(65821),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(499979),
     s = n(451988),
     o = n(985018);
+
 function l(e, t, n) {
     return (
         t in e
@@ -17,6 +22,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -33,6 +39,7 @@ function c(e) {
     }
     return e;
 }
+
 function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -45,6 +52,7 @@ function u(e, t) {
     }
     return n;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -56,6 +64,7 @@ function d(e, t) {
         e
     );
 }
+
 function f(e, t) {
     if (null == e) return {};
     var n,
@@ -72,6 +81,7 @@ function f(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function p(e, t) {
     if (null == e) return {};
     var n,
@@ -95,23 +105,61 @@ var _ = (function (e) {
     h = (function (e) {
         return (e.START = "START"), (e.END = "END"), (e.TIME = "TIME"), e;
     })(h || {});
-let m = (e) => (t, n) => (null == n ? "" : o.intl.format(e(), c({ time: t }, n))),
+let m = (e) => (t, n) =>
+        null == n
+            ? ""
+            : o.intl.format(
+                  e(),
+                  c(
+                      {
+                          time: t,
+                      },
+                      n,
+                  ),
+              ),
     g = {
         ACTIVITY_FEED: {
             START: {
                 [a.pJ.SECONDS]: () => o.intl.string(o.t["ahzZr+"]),
-                [a.pJ.MINUTES]: (e) => o.intl.formatToPlainString(o.t["03mIHW"], { time: e }),
-                [a.pJ.HOURS]: (e) => o.intl.formatToPlainString(o.t.eNoooU, { time: e }),
-                [a.pJ.DAYS]: (e) => o.intl.formatToPlainString(o.t["2rUo/p"], { time: e }),
+                [a.pJ.MINUTES]: (e) =>
+                    o.intl.formatToPlainString(o.t["03mIHW"], {
+                        time: e,
+                    }),
+                [a.pJ.HOURS]: (e) =>
+                    o.intl.formatToPlainString(o.t.eNoooU, {
+                        time: e,
+                    }),
+                [a.pJ.DAYS]: (e) =>
+                    o.intl.formatToPlainString(o.t["2rUo/p"], {
+                        time: e,
+                    }),
             },
             END: {
                 [a.pJ.SECONDS]: () => o.intl.string(o.t.EluAd9),
-                [a.pJ.MINUTES]: (e) => o.intl.formatToPlainString(o.t.BZxG8Z, { time: e }),
-                [a.pJ.HOURS]: (e) => o.intl.formatToPlainString(o.t.cRMUpw, { time: e }),
-                [a.pJ.DAYS]: (e) => o.intl.formatToPlainString(o.t.yP1T84, { time: e }),
-                [a.pJ.WEEKS]: (e) => o.intl.formatToPlainString(o.t.AWkdqe, { time: e }),
-                [a.pJ.MONTHS]: (e) => o.intl.formatToPlainString(o.t.upamA7, { time: e }),
-                [a.pJ.YEARS]: (e) => o.intl.formatToPlainString(o.t.vfMC2h, { time: e }),
+                [a.pJ.MINUTES]: (e) =>
+                    o.intl.formatToPlainString(o.t.BZxG8Z, {
+                        time: e,
+                    }),
+                [a.pJ.HOURS]: (e) =>
+                    o.intl.formatToPlainString(o.t.cRMUpw, {
+                        time: e,
+                    }),
+                [a.pJ.DAYS]: (e) =>
+                    o.intl.formatToPlainString(o.t.yP1T84, {
+                        time: e,
+                    }),
+                [a.pJ.WEEKS]: (e) =>
+                    o.intl.formatToPlainString(o.t.AWkdqe, {
+                        time: e,
+                    }),
+                [a.pJ.MONTHS]: (e) =>
+                    o.intl.formatToPlainString(o.t.upamA7, {
+                        time: e,
+                    }),
+                [a.pJ.YEARS]: (e) =>
+                    o.intl.formatToPlainString(o.t.vfMC2h, {
+                        time: e,
+                    }),
             },
         },
         ACTIVITY_FEED_NEW: {
@@ -122,10 +170,22 @@ let m = (e) => (t, n) => (null == n ? "" : o.intl.format(e(), c({ time: t }, n))
                 [a.pJ.DAYS]: m(() => o.t.hbUpBN),
             },
             END: {
-                [a.pJ.SECONDS]: (e) => o.intl.formatToPlainString(o.t.C3MTOD, { seconds: e }),
-                [a.pJ.MINUTES]: (e) => o.intl.formatToPlainString(o.t["GqQ/Y9"], { minutes: e }),
-                [a.pJ.HOURS]: (e) => o.intl.formatToPlainString(o.t.c5zfWZ, { hours: e }),
-                [a.pJ.DAYS]: (e) => o.intl.formatToPlainString(o.t.amjnaI, { days: e }),
+                [a.pJ.SECONDS]: (e) =>
+                    o.intl.formatToPlainString(o.t.C3MTOD, {
+                        seconds: e,
+                    }),
+                [a.pJ.MINUTES]: (e) =>
+                    o.intl.formatToPlainString(o.t["GqQ/Y9"], {
+                        minutes: e,
+                    }),
+                [a.pJ.HOURS]: (e) =>
+                    o.intl.formatToPlainString(o.t.c5zfWZ, {
+                        hours: e,
+                    }),
+                [a.pJ.DAYS]: (e) =>
+                    o.intl.formatToPlainString(o.t.amjnaI, {
+                        days: e,
+                    }),
             },
         },
         USER_ACTIVITY: {
@@ -134,44 +194,84 @@ let m = (e) => (t, n) => (null == n ? "" : o.intl.format(e(), c({ time: t }, n))
                 [a.pJ.MINUTES]: function (e, t) {
                     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
                     return n
-                        ? o.intl.formatToPlainString(o.t["03mIHW"], { time: e })
-                        : o.intl.formatToPlainString(o.t["vQml+P"], { time: e });
+                        ? o.intl.formatToPlainString(o.t["03mIHW"], {
+                              time: e,
+                          })
+                        : o.intl.formatToPlainString(o.t["vQml+P"], {
+                              time: e,
+                          });
                 },
                 [a.pJ.HOURS]: function (e, t) {
                     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
                     return n
-                        ? o.intl.formatToPlainString(o.t.eNoooU, { time: e })
-                        : o.intl.formatToPlainString(o.t["4Wq+6x"], { time: e });
+                        ? o.intl.formatToPlainString(o.t.eNoooU, {
+                              time: e,
+                          })
+                        : o.intl.formatToPlainString(o.t["4Wq+6x"], {
+                              time: e,
+                          });
                 },
                 [a.pJ.DAYS]: function (e, t) {
                     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
                     return n
-                        ? o.intl.formatToPlainString(o.t["2rUo/p"], { time: e })
-                        : o.intl.formatToPlainString(o.t["jN3/fR"], { time: e });
+                        ? o.intl.formatToPlainString(o.t["2rUo/p"], {
+                              time: e,
+                          })
+                        : o.intl.formatToPlainString(o.t["jN3/fR"], {
+                              time: e,
+                          });
                 },
             },
         },
         GAME_LIBRARY_TIME_PLAYED: {
             TIME: {
                 [a.pJ.NONE]: () => o.intl.string(o.t.LqDiCt),
-                [a.pJ.SECONDS]: (e) => o.intl.formatToPlainString(o.t.xDIDBL, { time: e }),
-                [a.pJ.MINUTES]: (e) => o.intl.formatToPlainString(o.t.KGqJce, { time: e }),
-                [a.pJ.HOURS]: (e) => o.intl.formatToPlainString(o.t.OLchUE, { time: e }),
+                [a.pJ.SECONDS]: (e) =>
+                    o.intl.formatToPlainString(o.t.xDIDBL, {
+                        time: e,
+                    }),
+                [a.pJ.MINUTES]: (e) =>
+                    o.intl.formatToPlainString(o.t.KGqJce, {
+                        time: e,
+                    }),
+                [a.pJ.HOURS]: (e) =>
+                    o.intl.formatToPlainString(o.t.OLchUE, {
+                        time: e,
+                    }),
             },
         },
         GAME_LIBRARY_LAST_PLAYED: {
             END: {
                 [a.pJ.NONE]: () => o.intl.string(o.t.EoWLru),
                 [a.pJ.SECONDS]: () => o.intl.string(o.t.QTHa8b),
-                [a.pJ.MINUTES]: (e) => o.intl.formatToPlainString(o.t.SVEfcd, { time: e }),
-                [a.pJ.HOURS]: (e) => o.intl.formatToPlainString(o.t["0Gbusd"], { time: e }),
-                [a.pJ.DAYS]: (e) => o.intl.formatToPlainString(o.t.hnPZZ7, { time: e }),
-                [a.pJ.WEEKS]: (e) => o.intl.formatToPlainString(o.t.L3fTpL, { time: e }),
-                [a.pJ.MONTHS]: (e) => o.intl.formatToPlainString(o.t.xAFWQV, { time: e }),
-                [a.pJ.YEARS]: (e) => o.intl.formatToPlainString(o.t["9Yr3NW"], { time: e }),
+                [a.pJ.MINUTES]: (e) =>
+                    o.intl.formatToPlainString(o.t.SVEfcd, {
+                        time: e,
+                    }),
+                [a.pJ.HOURS]: (e) =>
+                    o.intl.formatToPlainString(o.t["0Gbusd"], {
+                        time: e,
+                    }),
+                [a.pJ.DAYS]: (e) =>
+                    o.intl.formatToPlainString(o.t.hnPZZ7, {
+                        time: e,
+                    }),
+                [a.pJ.WEEKS]: (e) =>
+                    o.intl.formatToPlainString(o.t.L3fTpL, {
+                        time: e,
+                    }),
+                [a.pJ.MONTHS]: (e) =>
+                    o.intl.formatToPlainString(o.t.xAFWQV, {
+                        time: e,
+                    }),
+                [a.pJ.YEARS]: (e) =>
+                    o.intl.formatToPlainString(o.t["9Yr3NW"], {
+                        time: e,
+                    }),
             },
         },
     };
+
 function E(e, t, n) {
     let r = g[n];
     if (null != r) {
@@ -180,12 +280,13 @@ function E(e, t, n) {
     }
     return !1;
 }
+
 function b(e) {
     var t, n;
     return (
         (n = class extends (t = i.PureComponent) {
             componentDidMount() {
-                this.timer.start(10000, this.update);
+                this.timer.start(1e4, this.update);
             }
             componentDidUpdate(e) {
                 let { start: t, end: n, time: r } = this.props;
@@ -196,10 +297,10 @@ function b(e) {
             }
             getDiff() {
                 let { start: e, end: t, time: n } = this.props;
-                if (null != n) return n / 1000 / 60;
+                if (null != n) return n / 1e3 / 60;
                 let r = Date.now(),
                     i = 0;
-                return null != e ? (i = r - e) : null != t && (i = r - t), Math.abs(i) / 1000 / 60;
+                return null != e ? (i = r - e) : null != t && (i = r - t), Math.abs(i) / 1e3 / 60;
             }
             getTimeUnit(e, t, n) {
                 let r = (0, a.Ul)(e, (e) => E(e, n, t));
@@ -228,14 +329,23 @@ function b(e) {
                 if (null == _) return null;
                 let h = _[p],
                     m = Math.floor((0, a.eZ)(l, p));
-                return (0, r.jsx)(e, d(c({}, o), { children: null == h ? void 0 : h(m, i, s) }));
+                return (0, r.jsx)(
+                    e,
+                    d(c({}, o), {
+                        children: null == h ? void 0 : h(m, i, s),
+                    }),
+                );
             }
             constructor(...e) {
                 super(...e),
                     l(this, "timer", new s.IX()),
-                    l(this, "state", { time: this.getDiff() }),
+                    l(this, "state", {
+                        time: this.getDiff(),
+                    }),
                     l(this, "update", () => {
-                        this.setState({ time: this.getDiff() });
+                        this.setState({
+                            time: this.getDiff(),
+                        });
                     });
             }
         }),

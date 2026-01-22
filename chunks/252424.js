@@ -5,6 +5,7 @@ n.d(t, {
     tg: () => c,
 });
 var r = n(985018);
+
 function i(e, t, n) {
     return (
         t in e
@@ -18,6 +19,7 @@ function i(e, t, n) {
         e
     );
 }
+
 function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,26 +36,45 @@ function a(e) {
     }
     return e;
 }
-let s = 1000000,
-    o = 1000;
+let s = 1e6,
+    o = 1e3;
+
 function l(e) {
-    if (e < s) return r.intl.formatToPlainString(r.t.OiHat3, { value: e });
+    if (e < s)
+        return r.intl.formatToPlainString(r.t.OiHat3, {
+            value: e,
+        });
     let t = (e / s).toFixed(1);
-    return r.intl.formatToPlainString(r.t.Iku48I, { value: t });
+    return r.intl.formatToPlainString(r.t.Iku48I, {
+        value: t,
+    });
 }
+
 function c(e, t) {
-    if (e < o) return r.intl.formatToPlainString(r.t.OiHat3, { value: Math.floor(e) });
-    if (e < s) return r.intl.formatToPlainString(r.t["84R4Tc"], { value: Math.floor(e / o) });
+    if (e < o)
+        return r.intl.formatToPlainString(r.t.OiHat3, {
+            value: Math.floor(e),
+        });
+    if (e < s)
+        return r.intl.formatToPlainString(r.t["84R4Tc"], {
+            value: Math.floor(e / o),
+        });
     let n = Math.floor((10 * e) / s) / 10,
-        i = new Intl.NumberFormat(t, { maximumFractionDigits: 1 }).format(n);
-    return r.intl.formatToPlainString(r.t.Iku48I, { value: i });
+        i = new Intl.NumberFormat(t, {
+            maximumFractionDigits: 1,
+        }).format(n);
+    return r.intl.formatToPlainString(r.t.Iku48I, {
+        value: i,
+    });
 }
+
 function u(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : NaN;
     if (null == e) return t;
     let n = parseInt(e);
     return Number.isNaN(n) ? t : n;
 }
+
 function d(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
     return Intl.NumberFormat(

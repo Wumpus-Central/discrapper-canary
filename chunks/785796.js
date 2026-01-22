@@ -1,4 +1,7 @@
-n.d(t, { A: () => l }), n(896048);
+n.d(t, {
+    A: () => l,
+}),
+    n(896048);
 var r = n(562465),
     i = n(73153),
     a = n(652215);
@@ -35,6 +38,8 @@ let s = "".concat(a.Joy, "/api/v2/scheduled-maintenances"),
             });
         },
         ackScheduledMaintenance() {
-            i.h.dispatch({ type: "STATUS_PAGE_SCHEDULED_MAINTENANCE_ACK" });
+            i.h.dispatch({
+                type: "STATUS_PAGE_SCHEDULED_MAINTENANCE_ACK",
+            });
         },
     };

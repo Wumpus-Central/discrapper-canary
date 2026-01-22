@@ -1,5 +1,8 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(315069);
+
 function i(e, t, n) {
     return (
         t in e
@@ -13,6 +16,7 @@ function i(e, t, n) {
         e
     );
 }
+
 function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -29,6 +33,7 @@ function a(e) {
     }
     return e;
 }
+
 function s(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -41,6 +46,7 @@ function s(e, t) {
     }
     return n;
 }
+
 function o(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -52,6 +58,7 @@ function o(e, t) {
         e
     );
 }
+
 function l(e, t) {
     if (null == e) return {};
     var n,
@@ -68,6 +75,7 @@ function l(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function c(e, t) {
     if (null == e) return {};
     var n,
@@ -81,7 +89,11 @@ function c(e, t) {
 class u extends r.A {
     static fromServer(e) {
         let { sku_id: t } = e;
-        return new u(o(a({}, l(e, ["sku_id"])), { skuId: t }));
+        return new u(
+            o(a({}, l(e, ["sku_id"])), {
+                skuId: t,
+            }),
+        );
     }
     constructor(e) {
         super(), i(this, "skuId", void 0), (this.skuId = e.skuId);

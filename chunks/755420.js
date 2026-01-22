@@ -28,6 +28,7 @@ i.yTV.DESKTOP,
     i.yTV.EMBEDDED,
     i.yTV.META_QUEST;
 let s = [];
+
 function o(e) {
     let { platforms: t, currentPlatform: n } = e,
         r = new Set(t),
@@ -45,6 +46,7 @@ function o(e) {
           r.has(i.yTV.META_QUEST) && a.push("vr"),
           a);
 }
+
 function l(e) {
     let { platforms: t, currentPlatform: n } = e;
     return r.useMemo(

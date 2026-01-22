@@ -1,4 +1,9 @@
-n.d(t, { J: () => C }), n(321073), n(457529), n(896048);
+n.d(t, {
+    J: () => C,
+}),
+    n(321073),
+    n(457529),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(435371),
@@ -6,12 +11,15 @@ var r = n(627968),
     o = n(957565),
     l = n(265486),
     c = n(640192);
+
 function u(e) {
     return isFinite(e) ? e.toFixed(1) + "s" : "Live";
 }
+
 function d(e) {
     return null === e ? "N/A" : "".concat(e, " fps");
 }
+
 function f(e, t) {
     let n = [];
     return (!0 === e && n.push("Progressive"), !0 === t && n.push("Fragmented"), 0 === n.length)
@@ -31,6 +39,7 @@ let p = "Stats for Nerds",
     v = "Format",
     S = "Buffer Health",
     I = "Error";
+
 function T(e) {
     var t, n, r, i, a, s, o, l, c, u, d, f, p, _, h;
     return JSON.stringify(
@@ -90,6 +99,7 @@ function T(e) {
         2,
     );
 }
+
 function C(e) {
     var t, n, C, N, R, w, P, D, x, L, j, M;
     let { stats: k, onClose: U } = e,
@@ -110,7 +120,7 @@ function C(e) {
                     null != F.current && clearTimeout(F.current),
                     (F.current = window.setTimeout(() => {
                         V(!1), (F.current = null);
-                    }, 2000));
+                    }, 2e3));
             },
             () => {},
         );
@@ -134,7 +144,9 @@ function C(e) {
                                     className: c.cL,
                                     onClick: B,
                                     "aria-label": G ? m : h,
-                                    focusProps: { offset: 2 },
+                                    focusProps: {
+                                        offset: 2,
+                                    },
                                     children: (0, r.jsx)(s.TdU, {
                                         size: "md",
                                         color: "currentColor",
@@ -147,7 +159,9 @@ function C(e) {
                                     className: c.b,
                                     onClick: U,
                                     "aria-label": _,
-                                    focusProps: { offset: 2 },
+                                    focusProps: {
+                                        offset: 2,
+                                    },
                                     children: (0, r.jsx)(s.PGe, {
                                         size: "md",
                                         color: "currentColor",

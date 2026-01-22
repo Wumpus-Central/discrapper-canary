@@ -33,6 +33,7 @@ var r = n(627968),
     v = n(943849),
     S = n(710969),
     I = n(652215);
+
 function T(e, t, n) {
     return (
         t in e
@@ -46,6 +47,7 @@ function T(e, t, n) {
         e
     );
 }
+
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -62,6 +64,7 @@ function C(e) {
     }
     return e;
 }
+
 function N(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -74,6 +77,7 @@ function N(e, t) {
     }
     return n;
 }
+
 function R(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -90,6 +94,7 @@ let w = 100,
     D = 1,
     x = 0.5,
     L = new Set();
+
 function j(e, t) {
     return "".concat(e, "_").concat(t);
 }
@@ -173,7 +178,9 @@ class M {
             null !== u && (c.selected_guild_banner_url = u),
             c.guilds.length > w && ((c.guilds = c.guilds.slice(0, w)), (c.truncated = !0)),
             c.channels.length > w && ((c.channels = c.channels.slice(0, w)), (c.truncated = !0)),
-            { brand_safety_context: JSON.stringify(c) }
+            {
+                brand_safety_context: JSON.stringify(c),
+            }
         );
     }
     constructor(e) {
@@ -236,7 +243,9 @@ class M {
                                 )
                                 .concat(this.minViewTimeSeconds, "s at ")
                                 .concat((0, y.jO)(this.questContent)),
-                            { impressionId: this.id },
+                            {
+                                impressionId: this.id,
+                            },
                         ),
                             (0, y.av)(
                                 R(C({}, r), {
@@ -262,7 +271,9 @@ class M {
                                 .concat(e, " ad content viewed for at least ")
                                 .concat(this.minViewTimeSeconds, "s at ")
                                 .concat((0, y.jO)(this.questContent)),
-                            { impressionId: this.id },
+                            {
+                                impressionId: this.id,
+                            },
                         ),
                             (0, y.Qg)(
                                 R(C({}, r), {
@@ -302,7 +313,9 @@ class M {
                                     )
                                     .concat(e ? "terminal " : "", "heartbeat: ")
                                     .concat(n, "ms since last heartbeat"),
-                                { impressionId: t.id },
+                                {
+                                    impressionId: t.id,
+                                },
                             ),
                                 (0, y.av)(
                                     R(C({}, r), {
@@ -318,7 +331,9 @@ class M {
                                     .concat(a, " ad content impression ")
                                     .concat(e ? "terminal " : "", "heartbeat: ")
                                     .concat(n, "ms since last heartbeat"),
-                                { impressionId: t.id },
+                                {
+                                    impressionId: t.id,
+                                },
                             ),
                                 (0, y.Qg)(
                                     R(C({}, r), {
@@ -366,10 +381,10 @@ class M {
             T(this, "start", () => {
                 this.stop(!1),
                     (this.lastBeatTime = Date.now()),
-                    (this.heartbeatTimeoutId = window.setInterval(() => this.beat(), 1000 * P)),
+                    (this.heartbeatTimeoutId = window.setInterval(() => this.beat(), 1e3 * P)),
                     (this.minViewTimeReachedTimeoutId = window.setTimeout(
                         this.onMinViewTimeReached,
-                        1000 * this.minViewTimeSeconds,
+                        1e3 * this.minViewTimeSeconds,
                     ));
                 let e = (0, S.Li)(this.questContent),
                     t = (0, S.L4)(this.questContent),
@@ -394,7 +409,9 @@ class M {
                                     " Quest became visible at ",
                                 )
                                 .concat((0, y.jO)(this.questContent)),
-                            { impressionId: this.id },
+                            {
+                                impressionId: this.id,
+                            },
                         ),
                             (0, y.av)(
                                 R(C({}, n), {
@@ -416,7 +433,9 @@ class M {
                         let e = this.entity.adContentIds[t];
                         (0, v.L)().info(
                             "".concat(e, " ad content became visible at ").concat((0, y.jO)(this.questContent)),
-                            { impressionId: this.id },
+                            {
+                                impressionId: this.id,
+                            },
                         ),
                             (0, y.Qg)(
                                 R(C({}, n), {
@@ -472,16 +491,19 @@ class M {
             });
     }
 }
+
 function k(e) {
     let { adContentIds: t, questContent: n } = e;
     return "".concat([...t].sort().join("_"), "_").concat(n);
 }
+
 function U(e, t) {
     return i.useMemo(
         () => (null != t ? [t] : null != e ? (Array.isArray(e) ? e.map((e) => e.id) : [e.id]) : []),
         [e, t],
     );
 }
+
 function G(e) {
     let t = U("questOrQuests" in e ? e.questOrQuests : void 0, "adContentId" in e ? e.adContentId : void 0),
         n = "questOrQuests" in e ? s.p.QUEST : e.adCreativeType;
@@ -500,6 +522,7 @@ function G(e) {
         );
     }, [t, e.questContent, n]);
 }
+
 function V(e) {
     let { adContentIds: t, adCreativeType: n } = e,
         r = (0, l.bG)([O.A], () => (n !== s.p.QUEST || 1 !== t.length ? null : O.A.getQuest(t[0])), [t, n]),
@@ -508,14 +531,17 @@ function V(e) {
     return a !== o;
 }
 let F = i.createContext(void 0);
+
 function B() {
     let e = i.useContext(F);
     return null == e ? void 0 : e.current;
 }
+
 function H() {
     var e;
     return null == (e = B()) ? void 0 : e.getId();
 }
+
 function Y(e) {
     let { visible: t, visibleChanged: n, focused: a, reference: o, focusedChanged: u, sourceQuestContent: d } = e,
         f = V(e),

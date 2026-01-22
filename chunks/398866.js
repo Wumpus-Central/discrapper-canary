@@ -1,4 +1,11 @@
-n.d(t, { o: () => v }), n(896048), n(680155), n(323874), n(14289), n(35956);
+n.d(t, {
+    o: () => v,
+}),
+    n(896048),
+    n(680155),
+    n(323874),
+    n(14289),
+    n(35956);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -14,6 +21,7 @@ var r = n(627968),
     h = n(360469),
     m = n(652215),
     g = n(272412);
+
 function E(e, t, n) {
     return (
         t in e
@@ -27,6 +35,7 @@ function E(e, t, n) {
         e
     );
 }
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -43,6 +52,7 @@ function b(e) {
     }
     return e;
 }
+
 function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -55,6 +65,7 @@ function y(e, t) {
     }
     return n;
 }
+
 function O(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -66,6 +77,7 @@ function O(e, t) {
         e
     );
 }
+
 function A(e) {
     let {
             url: t,
@@ -88,6 +100,7 @@ function A(e) {
         [N, R] = i.useState(!1),
         w = u.A.theme,
         P = b({}, a);
+
     function D(e) {
         var n;
         null == s || s(e.target),
@@ -99,9 +112,13 @@ function A(e) {
         w === m.NJ8.LIGHT ? (P.colorScheme = "light") : (P.colorScheme = "dark"),
         i.useEffect(
             () => (
-                d._.dispatch(m.jej.IFRAME_MOUNT, { id: S }),
+                d._.dispatch(m.jej.IFRAME_MOUNT, {
+                    id: S,
+                }),
                 () => {
-                    d._.dispatch(m.jej.IFRAME_UNMOUNT, { id: S });
+                    d._.dispatch(m.jej.IFRAME_UNMOUNT, {
+                        id: S,
+                    });
                 }
             ),
             [S],
@@ -125,13 +142,16 @@ function A(e) {
                   allow: "autoplay; encrypted-media",
                   referrerPolicy: A,
                   onLoad: D,
-                  sandbox: (0, _.A)({ allowPopups: y }),
+                  sandbox: (0, _.A)({
+                      allowPopups: y,
+                  }),
                   className: n,
                   src: "".concat(t, "?").concat(new URLSearchParams(C)),
               })
             : null
     );
 }
+
 function v(e) {
     let { onLoad: t } = e,
         [n, a] = i.useState(!1),
@@ -144,10 +164,18 @@ function v(e) {
     return (0, r.jsxs)("div", {
         className: g.Qf,
         children: [
-            !n && (0, r.jsx)("div", { className: s()(g.Qf, g.SL) }),
+            !n &&
+                (0, r.jsx)("div", {
+                    className: s()(g.Qf, g.SL),
+                }),
             (0, r.jsx)("div", {
                 className: s()(g.Qf, n ? void 0 : g.Ar),
-                children: (0, r.jsx)(A, O(b({}, e), { onLoad: o })),
+                children: (0, r.jsx)(
+                    A,
+                    O(b({}, e), {
+                        onLoad: o,
+                    }),
+                ),
             }),
         ],
     });

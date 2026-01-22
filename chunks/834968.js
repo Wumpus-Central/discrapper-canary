@@ -1,4 +1,6 @@
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -6,6 +8,7 @@ var i = n(503698),
     s = n(397927),
     o = n(73510),
     l = n(60090);
+
 function c(e, t, n) {
     return (
         t in e
@@ -19,6 +22,7 @@ function c(e, t, n) {
         e
     );
 }
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,6 +39,7 @@ function u(e) {
     }
     return e;
 }
+
 function d(e, t) {
     if (null == e) return {};
     var n,
@@ -51,6 +56,7 @@ function d(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function f(e, t) {
     if (null == e) return {};
     var n,
@@ -71,6 +77,7 @@ let p = (e) => {
             return;
     }
 };
+
 function _(e) {
     let { section: t, className: n, width: i, height: s, padding: o, isSelected: c, selectable: f = !1 } = e,
         _ = d(e, ["section", "className", "width", "height", "padding", "isSelected", "selectable"]),

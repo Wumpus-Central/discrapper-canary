@@ -1,9 +1,11 @@
-n.d(t, { A: () => w });
+n.d(t, {
+    A: () => w,
+});
 var l = n(627968),
     r = n(64700),
     a = n(503698),
     i = n.n(a),
-    s = n(432022),
+    s = n(108531),
     c = n(311907),
     o = n(582754),
     d = n(397927),
@@ -24,6 +26,7 @@ var l = n(627968),
     N = n(488047),
     S = n(336127),
     T = n(964570);
+
 function _(e) {
     let { handleHide: t } = e;
     return (0, l.jsx)(d.DUT, {
@@ -37,6 +40,7 @@ function _(e) {
         }),
     });
 }
+
 function E(e) {
     let { username: t, title: n, videoSrc: r, messageCount: a, reaction: s, reactionCount: c, classname: o } = e;
     return (0, l.jsxs)("div", {
@@ -69,7 +73,9 @@ function E(e) {
                 "aria-hidden": !0,
                 children: n,
             }),
-            (0, l.jsx)(d.hKd, { size: 10 }),
+            (0, l.jsx)(d.hKd, {
+                size: 10,
+            }),
             (0, l.jsx)(m.A, {
                 className: C.Ki,
                 src: r,
@@ -77,7 +83,9 @@ function E(e) {
                 loop: !0,
                 muted: !0,
             }),
-            (0, l.jsx)(d.hKd, { size: 10 }),
+            (0, l.jsx)(d.hKd, {
+                size: 10,
+            }),
             (0, l.jsx)("div", {
                 className: C.qr,
                 children: (0, l.jsxs)("div", {
@@ -195,7 +203,9 @@ let w = (e) => {
                                           A.intl.string(A.t.znhX2R),
                                       ],
                                   }),
-                                  (0, l.jsx)(_, { handleHide: D }),
+                                  (0, l.jsx)(_, {
+                                      handleHide: D,
+                                  }),
                               ],
                           }),
                           (0, l.jsxs)("div", {
@@ -215,7 +225,7 @@ let w = (e) => {
                                                               "https://cdn.discordapp.com/assets/media_channel/admin_edu_discord_birthday.mp4",
                                                           title: A.intl.string(A.t.yO6Fxu),
                                                           messageCount: "34",
-                                                          reaction: "\u26A1️",
+                                                          reaction: "⚡️",
                                                           reactionCount: "724",
                                                           classname: C.q6,
                                                       }),
@@ -235,7 +245,7 @@ let w = (e) => {
                                                               "https://cdn.discordapp.com/assets/media_channel/admin_edu_scientist_wumpus.mp4",
                                                           title: A.intl.string(A.t.pt88Vb),
                                                           messageCount: "7,103",
-                                                          reaction: "\u26A1️",
+                                                          reaction: "⚡️",
                                                           reactionCount: "724",
                                                           classname: C.Ob,
                                                       }),
@@ -250,13 +260,17 @@ let w = (e) => {
                                                       color: "text-strong",
                                                       children: H,
                                                   }),
-                                                  (0, l.jsx)(d.hKd, { size: 8 }),
+                                                  (0, l.jsx)(d.hKd, {
+                                                      size: 8,
+                                                  }),
                                                   (0, l.jsx)(d.Text, {
                                                       variant: "text-md/normal",
                                                       color: "text-muted",
                                                       children: V,
                                                   }),
-                                                  (0, l.jsx)(d.hKd, { size: 16 }),
+                                                  (0, l.jsx)(d.hKd, {
+                                                      size: 16,
+                                                  }),
                                                   (0, l.jsxs)(d.DUT, {
                                                       onClick: () =>
                                                           open(j.A.getCreatorSupportArticleURL(y.MVz.MEDIA_CHANNEL)),
@@ -274,7 +288,9 @@ let w = (e) => {
                                                           }),
                                                       ],
                                                   }),
-                                                  (0, l.jsx)(d.hKd, { size: 16 }),
+                                                  (0, l.jsx)(d.hKd, {
+                                                      size: 16,
+                                                  }),
                                                   (0, l.jsx)("div", {
                                                       className: C.Qq,
                                                       children: L.map((e) =>
@@ -332,19 +348,25 @@ let w = (e) => {
                                                               }),
                                                           ],
                                                       }),
-                                                      (0, l.jsx)(d.hKd, { size: 10 }),
+                                                      (0, l.jsx)(d.hKd, {
+                                                          size: 10,
+                                                      }),
                                                       (0, l.jsx)(d.Heading, {
                                                           variant: "heading-lg/semibold",
                                                           color: "text-strong",
                                                           children: A.intl.string(A.t["N/TRrT"]),
                                                       }),
-                                                      (0, l.jsx)(d.hKd, { size: 8 }),
+                                                      (0, l.jsx)(d.hKd, {
+                                                          size: 8,
+                                                      }),
                                                       (0, l.jsx)(d.Text, {
                                                           variant: "text-md/normal",
                                                           color: "text-muted",
                                                           children: A.intl.string(A.t.t3yWxG),
                                                       }),
-                                                      (0, l.jsx)(d.hKd, { size: 16 }),
+                                                      (0, l.jsx)(d.hKd, {
+                                                          size: 16,
+                                                      }),
                                                       (0, l.jsx)("div", {
                                                           className: C.Qq,
                                                           children: U.map((e) =>
@@ -360,7 +382,9 @@ let w = (e) => {
                                                               ),
                                                           ),
                                                       }),
-                                                      (0, l.jsx)(d.hKd, { size: 16 }),
+                                                      (0, l.jsx)(d.hKd, {
+                                                          size: 16,
+                                                      }),
                                                       0 === P.length &&
                                                           (0, l.jsx)(d.Button, {
                                                               variant: "primary",

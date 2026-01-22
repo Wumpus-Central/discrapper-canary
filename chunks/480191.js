@@ -1,4 +1,7 @@
-n.d(t, { A: () => G }), n(896048);
+n.d(t, {
+    A: () => G,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -31,6 +34,7 @@ var r = n(627968),
     D = n(985018),
     x = n(780247),
     L = n(278664);
+
 function j(e, t, n) {
     return (
         t in e
@@ -44,6 +48,7 @@ function j(e, t, n) {
         e
     );
 }
+
 function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -60,6 +65,7 @@ function M(e) {
     }
     return e;
 }
+
 function k(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -72,6 +78,7 @@ function k(e, t) {
     }
     return n;
 }
+
 function U(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -83,6 +90,7 @@ function U(e, t) {
         e
     );
 }
+
 function G(e) {
     var t, n, a, j;
     let { embedUrl: k, message: G, channel: V } = e,
@@ -143,7 +151,13 @@ function G(e) {
                     ? (0, m.A)(w.BVt.CHANNEL(H.guildId, H.threadId, H.messageId))
                     : $
                       ? (0, m.A)(w.BVt.CHANNEL(H.guildId, H.parentChannelId))
-                      : await T.Z2(H.guildId, {}, { channelId: H.parentChannelId }));
+                      : await T.Z2(
+                            H.guildId,
+                            {},
+                            {
+                                channelId: H.parentChannelId,
+                            },
+                        ));
         }, [H, V, $]);
     if (null == H) return null;
     let ed = (0, I.F_)({
@@ -204,7 +218,9 @@ function G(e) {
                             ? (0, r.jsx)("img", {
                                   src: L,
                                   alt: D.intl.string(D.t.rIbh8H),
-                                  className: s()(x.xn, { [x.p6]: H.shouldSpoiler }),
+                                  className: s()(x.xn, {
+                                      [x.p6]: H.shouldSpoiler,
+                                  }),
                                   onContextMenu: W,
                                   onError: () => Q(!0),
                               })
@@ -213,7 +229,9 @@ function G(e) {
                                   backgroundSrc: "".concat(eh, "?format=png"),
                                   alt: D.intl.string(D.t.rIbh8H),
                                   aspectRatio: 16 / 9,
-                                  className: s()(x.xn, { [x.p6]: H.shouldSpoiler }),
+                                  className: s()(x.xn, {
+                                      [x.p6]: H.shouldSpoiler,
+                                  }),
                                   imageChildClassName: x.q_,
                                   onContextMenu: W,
                                   onError: () => Q(!0),
@@ -226,7 +244,9 @@ function G(e) {
                                 children: (0, r.jsxs)("div", {
                                     className: x.BS,
                                     children: [
-                                        (0, r.jsx)(N.A, { color: c.A.colors.WHITE.css }),
+                                        (0, r.jsx)(N.A, {
+                                            color: c.A.colors.WHITE.css,
+                                        }),
                                         (0, r.jsx)(u.Text, {
                                             variant: "text-sm/semibold",
                                             color: "always-white",

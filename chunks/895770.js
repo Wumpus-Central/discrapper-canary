@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var l = n(627968);
 n(64700);
 var i = n(503698),
@@ -9,6 +11,7 @@ var i = n(503698),
     o = n(294726),
     d = n(985018),
     c = n(667760);
+
 function m(e) {
     let {
             className: t,
@@ -23,7 +26,13 @@ function m(e) {
         p = (0, u.A)(i.gameId, "cover");
     return (0, l.jsxs)(r.DUT, {
         "aria-disabled": g,
-        className: a()(c.LO, { [c.r9]: g }, t),
+        className: a()(
+            c.LO,
+            {
+                [c.r9]: g,
+            },
+            t,
+        ),
         onClick: g
             ? void 0
             : () => {
@@ -38,8 +47,12 @@ function m(e) {
                         alt: "",
                         src: null != p ? p : "",
                     }),
-                    (0, l.jsx)("div", { className: c.Gj }),
-                    (0, l.jsx)("div", { className: c.Uf }),
+                    (0, l.jsx)("div", {
+                        className: c.Gj,
+                    }),
+                    (0, l.jsx)("div", {
+                        className: c.Uf,
+                    }),
                 ],
             }),
             (0, l.jsxs)("div", {
@@ -62,7 +75,9 @@ function m(e) {
                                 variant: "text-sm/medium",
                                 children: d.intl.formatToPlainString(
                                     i.plans.length > 1 ? o.default["G/aTXi"] : o.default.r9pa9K,
-                                    { boostCount: i.baseCost },
+                                    {
+                                        boostCount: i.baseCost,
+                                    },
                                 ),
                             }),
                         ],

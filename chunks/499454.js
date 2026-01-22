@@ -1,4 +1,6 @@
-n.d(t, { h: () => _ });
+n.d(t, {
+    h: () => _,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -9,6 +11,7 @@ var i = n(397927),
     c = n(598653),
     u = n(788868),
     d = n(652215);
+
 function f(e, t, n) {
     return (
         t in e
@@ -22,6 +25,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -38,6 +42,7 @@ function p(e) {
     }
     return e;
 }
+
 function _(e) {
     let { processedCode: t, channelContext: f, customGiftMessage: _, giftInfo: h } = e,
         m = !1,

@@ -24,6 +24,7 @@ var r = n(627968),
     m = n(138101),
     g = n(985018),
     E = n(511630);
+
 function b(e, t, n) {
     return (
         t in e
@@ -37,6 +38,7 @@ function b(e, t, n) {
         e
     );
 }
+
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -53,6 +55,7 @@ function y(e) {
     }
     return e;
 }
+
 function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -65,6 +68,7 @@ function O(e, t) {
     }
     return n;
 }
+
 function A(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -76,6 +80,7 @@ function A(e, t) {
         e
     );
 }
+
 function v(e, t) {
     if (null == e) return {};
     var n,
@@ -92,6 +97,7 @@ function v(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function S(e, t) {
     if (null == e) return {};
     var n,
@@ -102,6 +108,7 @@ function S(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function I(e) {
     let { value: t, onChange: n, serialize: r = (e) => String(e) } = e;
     return {
@@ -111,6 +118,7 @@ function I(e) {
         serialize: r,
     };
 }
+
 function T(e) {
     let { value: t, onChange: n, onSelectInteraction: r, serialize: i = (e) => String(e) } = e;
     return {
@@ -126,6 +134,7 @@ function T(e) {
         serialize: i,
     };
 }
+
 function C(e, t) {
     let n = new Set(t);
     return (
@@ -136,6 +145,7 @@ function C(e, t) {
         }
     );
 }
+
 function N(e, t) {
     return t.has(e)
         ? {
@@ -147,6 +157,7 @@ function N(e, t) {
               updated: !0,
           };
 }
+
 function R(e, t) {
     return t.has(e)
         ? {
@@ -158,12 +169,15 @@ function R(e, t) {
               updated: !0,
           };
 }
+
 function w(e) {
     return null == e ? void 0 : e.label;
 }
+
 function P(e) {
     return e.map((e) => w(e)).join(", ");
 }
+
 function D(e) {
     let {
             options: t,
@@ -380,6 +394,7 @@ function D(e) {
         })
     );
 }
+
 function x(e) {
     let {
             className: t,
@@ -466,7 +481,9 @@ function x(e) {
                             A(
                                 y(
                                     {
-                                        className: s()(E.SW, t, { [E.O3]: "top" === I }),
+                                        className: s()(E.SW, t, {
+                                            [E.O3]: "top" === I,
+                                        }),
                                         style: {
                                             width: p,
                                             maxHeight: T,
@@ -497,6 +514,7 @@ function x(e) {
         }),
     });
 }
+
 function L(e) {
     let {
             className: t,
@@ -514,8 +532,12 @@ function L(e) {
         A(
             y(
                 {
-                    focusProps: { enabled: !1 },
-                    className: s()(E.uK, t, { [E.IZ]: c }),
+                    focusProps: {
+                        enabled: !1,
+                    },
+                    className: s()(E.uK, t, {
+                        [E.IZ]: c,
+                    }),
                     onClick: () => !c && a(n, u),
                 },
                 f,
@@ -540,6 +562,7 @@ function L(e) {
         ),
     );
 }
+
 function j(e) {
     let { renderLeading: t, renderTrailing: n, value: i, onChange: a } = e,
         s = v(e, ["renderLeading", "renderTrailing", "value", "onChange"]),
@@ -609,6 +632,7 @@ function j(e) {
             ),
         );
     }
+
     function x() {
         if (null != t || null != n)
             return (e) =>
@@ -617,8 +641,14 @@ function j(e) {
                     children: [null == t ? void 0 : t(e), e.label, null == n ? void 0 : n(e)],
                 });
     }
-    return (0, r.jsx)(D, A(y({}, s, l), { renderOptionLabel: null != R ? R : x() }));
+    return (0, r.jsx)(
+        D,
+        A(y({}, s, l), {
+            renderOptionLabel: null != R ? R : x(),
+        }),
+    );
 }
+
 function M(e) {
     let { renderLeading: t, renderTrailing: n } = e,
         i = v(e, ["renderLeading", "renderTrailing"]),
@@ -695,6 +725,7 @@ function M(e) {
             ),
         );
     }
+
     function L() {
         if (null != t || null != n)
             return (e) =>
@@ -703,5 +734,10 @@ function M(e) {
                     children: [null == t ? void 0 : t(e), e.label, null == n ? void 0 : n(e)],
                 });
     }
-    return (0, r.jsx)(D, A(y({}, i), { renderOptionLabel: null != N ? N : L() }));
+    return (0, r.jsx)(
+        D,
+        A(y({}, i), {
+            renderOptionLabel: null != N ? N : L(),
+        }),
+    );
 }

@@ -1,10 +1,13 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var l = n(627968),
     r = n(64700),
     a = n(397927),
     i = n(46054),
     s = n(861662),
     o = n(232409);
+
 function c(e) {
     let {
             element: {
@@ -39,7 +42,10 @@ function c(e) {
                     }
                     return e;
                 })({}, i.A.defaultRules)),
-                (t = t = { link: s.B }),
+                (t = t =
+                    {
+                        link: s.B,
+                    }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
                     : (function (e, t) {

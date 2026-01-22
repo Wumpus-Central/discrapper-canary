@@ -1,5 +1,10 @@
-n.d(t, { N: () => i }), n(896048), n(638769);
+n.d(t, {
+    N: () => i,
+}),
+    n(896048),
+    n(638769);
 var r = n(64700);
+
 function i(e, t, n) {
     let i = r.useRef(null),
         l = r.useRef(new Map()),
@@ -39,7 +44,9 @@ function i(e, t, n) {
                                     })
                                     .filter((e) => null !== e)
                                     .sort((e, t) => e.index - t.index);
-                            s.current({ viewableItems: t });
+                            s.current({
+                                viewableItems: t,
+                            });
                         }
                     },
                     {

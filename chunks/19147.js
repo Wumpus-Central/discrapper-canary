@@ -1,4 +1,8 @@
-n.d(t, { S: () => b }), n(896048), n(228524);
+n.d(t, {
+    S: () => b,
+}),
+    n(896048),
+    n(228524);
 var r = n(627968),
     i = n(64700),
     a = n(540637),
@@ -7,6 +11,7 @@ var r = n(627968),
     l = n(783878),
     c = n(74818),
     u = n(379649);
+
 function d(e, t, n) {
     return (
         t in e
@@ -20,6 +25,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +42,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -48,6 +55,7 @@ function p(e, t) {
     }
     return n;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -59,6 +67,7 @@ function _(e, t) {
         e
     );
 }
+
 function h(e, t) {
     if (null == e) return {};
     var n,
@@ -75,6 +84,7 @@ function h(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function m(e, t) {
     if (null == e) return {};
     var n,
@@ -657,6 +667,7 @@ let g = [
             },
         ],
     };
+
 function y(e, t) {
     let n = i.useRef(null);
     return i.useMemo(() => {
@@ -664,7 +675,7 @@ function y(e, t) {
         return t
             ? (e) =>
                   new Promise(
-                      null != n.current ? (e) => e(n.current) : (e) => setTimeout(() => ((n.current = r), e(r)), 1000),
+                      null != n.current ? (e) => e(n.current) : (e) => setTimeout(() => ((n.current = r), e(r)), 1e3),
                   )
             : r;
     }, [e, t]);

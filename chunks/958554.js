@@ -12,13 +12,16 @@ var r = (function () {
         return n && e(t.prototype, n), r && e(t, r), t;
     };
 })();
+
 function i(e, t) {
     if (!(e instanceof t)) throw TypeError("Cannot call a class as a function");
 }
+
 function a(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return t && ("object" == typeof t || "function" == typeof t) ? t : e;
 }
+
 function s(e, t) {
     if ("function" != typeof t && null !== t)
         throw TypeError("Super expression must either be null or a function, not " + typeof t);
@@ -39,8 +42,10 @@ var o = n(698380),
 n(336258);
 var d = n(972535),
     f = n.g.Set || n(576655);
+
 function p(e) {
     var t = new f();
+
     function n(e) {
         "function" == typeof e.update ? t.add(e) : e.__getChildren().forEach(n);
     }
@@ -159,7 +164,9 @@ e.exports = (function (e) {
                 key: "_updateValue",
                 value: function (e) {
                     for (var t in ((this._value = e), p(this), this._listeners))
-                        this._listeners[t]({ value: this.__getValue() });
+                        this._listeners[t]({
+                            value: this.__getValue(),
+                        });
                 },
             },
         ]),

@@ -1,5 +1,6 @@
 var r = n(573750),
     i = n(797686);
+
 function a(e) {
     for (var t = e.cloneRange(), n = [], r = e.endContainer; null != r; r = r.parentNode) {
         var a,

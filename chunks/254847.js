@@ -16,6 +16,7 @@ var r = n(627968),
     _ = n(985018),
     h = n(957415);
 let m = [18, 18, 16, 16, 14, 12, 10];
+
 function g(e) {
     var t;
     return null != (t = m[e.length - 1]) ? t : m[m.length - 1];
@@ -29,7 +30,9 @@ let E = i.memo((e) => {
     return (0, r.jsxs)("div", {
         className: s()(h.kL, n),
         children: [
-            (0, r.jsx)(d.A, { guildId: t }),
+            (0, r.jsx)(d.A, {
+                guildId: t,
+            }),
             (0, r.jsxs)("div", {
                 className: h.$z,
                 children: [
@@ -57,7 +60,9 @@ let E = i.memo((e) => {
                             null != i
                                 ? i
                                 : void 0 !== a.approximateMemberCount
-                                  ? _.intl.format(p.default["5JmNgg"], { members: a.approximateMemberCount })
+                                  ? _.intl.format(p.default["5JmNgg"], {
+                                        members: a.approximateMemberCount,
+                                    })
                                   : null,
                     }),
                 ],

@@ -1,4 +1,6 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(627968);
 n(64700);
 var l = n(311907),
@@ -7,6 +9,7 @@ var l = n(311907),
     o = n(71393),
     u = n(287809),
     c = n(985018);
+
 function s(e, t) {
     let s = (0, l.bG)([u.default], () => u.default.getCurrentUser()),
         d = (0, l.bG)([o.A], () => o.A.getGuild(t));

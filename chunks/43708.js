@@ -19,6 +19,7 @@ var r,
     l = n(506774),
     c = n(397927),
     u = n(14752);
+
 function d(e, t, n) {
     return (
         t in e
@@ -32,6 +33,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -48,6 +50,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -60,6 +63,7 @@ function p(e, t) {
     }
     return n;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -72,7 +76,9 @@ function _(e, t) {
     );
 }
 let h = "__DEBUG_PROFILE_EFFECTS_STORE",
-    m = { profileEffects: null != (r = l.w.get(h)) ? r : {} },
+    m = {
+        profileEffects: null != (r = l.w.get(h)) ? r : {},
+    },
     g = (e) => {
         try {
             l.w.set(h, e.profileEffects);
@@ -104,7 +110,14 @@ let h = "__DEBUG_PROFILE_EFFECTS_STORE",
                 }),
             clearAll: () =>
                 (0, o.r)(() => {
-                    e(() => (l.w.remove(h), { profileEffects: {} }));
+                    e(
+                        () => (
+                            l.w.remove(h),
+                            {
+                                profileEffects: {},
+                            }
+                        ),
+                    );
                 }),
         }),
     ),
@@ -136,9 +149,16 @@ let h = "__DEBUG_PROFILE_EFFECTS_STORE",
                     i = null != r ? f({}, r) : {};
                 for (let t in i) {
                     let n = i[t];
-                    null != n && (i[t] = _(f({}, n), { src: e(n.base64) }));
+                    null != n &&
+                        (i[t] = _(f({}, n), {
+                            src: e(n.base64),
+                        }));
                 }
-                return _(f({}, t), { config: _(f({}, t.config), { stillFrames: i }) });
+                return _(f({}, t), {
+                    config: _(f({}, t.config), {
+                        stillFrames: i,
+                    }),
+                });
             }, [t])
         );
     };

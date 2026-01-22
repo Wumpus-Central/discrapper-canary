@@ -1,4 +1,7 @@
-l.d(t, { A: () => u }), l(228524);
+l.d(t, {
+    A: () => u,
+}),
+    l(228524);
 var r = l(627968),
     n = l(64700),
     s = l(158954),
@@ -7,6 +10,7 @@ var r = l(627968),
     d = l(27023),
     c = l(225180),
     o = l(794567);
+
 function u() {
     let { currentGame: e, planId: t } = (0, d.bv)(),
         l = (0, c.A)(null == e ? void 0 : e.gameId, "cover");
@@ -69,7 +73,10 @@ function u() {
                                             }),
                                             t !==
                                                 (null != (l = null == u ? void 0 : u.specifications.length) ? l : 0) -
-                                                    1 && (0, r.jsx)("div", { className: o.yF }),
+                                                    1 &&
+                                                (0, r.jsx)("div", {
+                                                    className: o.yF,
+                                                }),
                                         ],
                                     },
                                     t,
@@ -84,7 +91,9 @@ function u() {
             }),
             (0, r.jsx)("div", {
                 className: o.uV,
-                children: (0, r.jsx)(i.T, { imageUrl: null != l ? l : "" }),
+                children: (0, r.jsx)(i.T, {
+                    imageUrl: null != l ? l : "",
+                }),
             }),
         ],
     });

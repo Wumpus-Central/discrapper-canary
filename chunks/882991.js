@@ -1,4 +1,7 @@
-n.d(t, { A: () => A }), n(896048);
+n.d(t, {
+    A: () => A,
+}),
+    n(896048);
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -9,6 +12,7 @@ var i = n(397927),
     c = n(528767),
     u = n(105530),
     d = n(652215);
+
 function p(e, t, n) {
     return (
         t in e
@@ -72,7 +76,10 @@ class h extends a.A {
                                         }
                                         return e;
                                     })({}, t)),
-                                    (i = i = { channel: m }),
+                                    (i = i =
+                                        {
+                                            channel: m,
+                                        }),
                                     Object.getOwnPropertyDescriptors
                                         ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
                                         : (function (e, t) {

@@ -7,18 +7,22 @@ var r = n(99478);
 let i = 1723856,
     a = 1824665,
     s = 5500;
+
 function o(e, t, n, r) {
     return e + 365 * t + Math.floor(t / 4) + 30 * (n - 1) + r - 1;
 }
+
 function l(e, t) {
     let n = Math.floor((4 * (t - e)) / 1461),
         r = 1 + Math.floor((t - o(e, n, 1, 1)) / 30),
         i = t + 1 - o(e, n, r, 1);
     return [n, r, i];
 }
+
 function c(e) {
     return Math.floor((e % 4) / 3);
 }
+
 function u(e, t) {
     return t % 13 != 0 ? 30 : c(e) + 5;
 }

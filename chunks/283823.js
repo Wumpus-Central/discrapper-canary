@@ -1,4 +1,6 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -15,6 +17,7 @@ var r = n(627968),
     m = n(576055),
     g = n(363551);
 let E = 50001;
+
 function b(e) {
     let { guildId: t, name: n, setPopoutRef: a, onClose: b } = e,
         { analyticsLocations: y } = (0, u.Ay)(c.A.GUILD_PROFILE),

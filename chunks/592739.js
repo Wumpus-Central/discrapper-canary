@@ -1,7 +1,10 @@
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});
 var l = n(627968);
 n(64700);
 var i = n(953727);
+
 function r(e) {
     var t, n;
     let { color: r = "currentColor", foreground: s, backgroundColor: a = "none" } = e,

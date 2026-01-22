@@ -1,4 +1,5 @@
 var r = n(797686);
+
 function i(e) {
     var t = e.length;
     if (
@@ -14,6 +15,7 @@ function i(e) {
     for (var n = Array(t), i = 0; i < t; i++) n[i] = e[i];
     return n;
 }
+
 function a(e) {
     return (
         !!e &&

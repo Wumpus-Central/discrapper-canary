@@ -1,4 +1,7 @@
-s.r(a), s.d(a, { default: () => m });
+s.r(a),
+    s.d(a, {
+        default: () => m,
+    });
 var n = s(627968),
     l = s(503698),
     t = s.n(l),
@@ -7,6 +10,7 @@ var n = s(627968),
     r = s(950198),
     d = s(985018),
     u = s(53046);
+
 function m() {
     let { type: e } = (0, c.g)(),
         a = (0, r.mw)(e);
@@ -17,7 +21,9 @@ function m() {
         children: [
             (0, n.jsx)("div", {
                 className: u.i,
-                children: d.intl.format(d.t.RzEB5v, { name: s.name }),
+                children: d.intl.format(d.t.RzEB5v, {
+                    name: s.name,
+                }),
             }),
             (0, n.jsx)("div", {
                 className: t()(u.i, u.z),

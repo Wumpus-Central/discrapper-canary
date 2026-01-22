@@ -1,4 +1,6 @@
-n.d(e, { default: () => D });
+n.d(e, {
+    default: () => D,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -18,6 +20,7 @@ var i = n(311907),
     y = n(399289),
     h = n(652215),
     j = n(985018);
+
 function v(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
@@ -43,6 +46,7 @@ function v(t) {
     }
     return t;
 }
+
 function I(t, e) {
     return (
         (e = null != e ? e : {}),
@@ -61,9 +65,12 @@ function I(t, e) {
         t
     );
 }
+
 function P(t) {
     let { application: e, libraryApplication: n, analyticsContext: i, onSelect: c } = t,
-        o = I(v({}, null != i ? i.location : null), { object: h.ZSU.CONTEXT_MENU }),
+        o = I(v({}, null != i ? i.location : null), {
+            object: h.ZSU.CONTEXT_MENU,
+        }),
         u = (0, p.A)(n, o),
         P = (0, A.A)(n),
         D = (0, O.A)(n),
@@ -78,9 +85,24 @@ function P(t) {
         onClose: a.Z_,
         "aria-label": j.intl.string(j.t.tKobzb),
         onSelect: c,
-        children: [u, P, D, m, T, S, E, (0, r.jsx)(l.rXV, { children: w }), (0, r.jsx)(l.rXV, { children: L })],
+        children: [
+            u,
+            P,
+            D,
+            m,
+            T,
+            S,
+            E,
+            (0, r.jsx)(l.rXV, {
+                children: w,
+            }),
+            (0, r.jsx)(l.rXV, {
+                children: L,
+            }),
+        ],
     });
 }
+
 function D(t) {
     let { applicationId: e, branchId: n } = t,
         l = (0, i.bG)([c.A], () => c.A.getApplication(e), [e]),

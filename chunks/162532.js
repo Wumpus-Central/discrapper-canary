@@ -1,9 +1,14 @@
-n.d(t, { Y: () => g }), n(747238), n(321073);
+n.d(t, {
+    Y: () => g,
+}),
+    n(747238),
+    n(321073);
 var r = n(627968),
     i = n(64700),
     a = n(113144),
     s = n.n(a),
     o = n(776231);
+
 function l(e, t, n) {
     return (
         t in e
@@ -17,6 +22,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -33,6 +39,7 @@ function c(e) {
     }
     return e;
 }
+
 function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -45,6 +52,7 @@ function u(e, t) {
     }
     return n;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -56,6 +64,7 @@ function d(e, t) {
         e
     );
 }
+
 function f(e, t) {
     if (null == e) return {};
     var n,
@@ -72,6 +81,7 @@ function f(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function p(e, t) {
     if (null == e) return {};
     var n,
@@ -88,9 +98,11 @@ let _ = /url\(['"](.*)['"]\)/,
         let t = e.match(_);
         return null != t ? t[1] : e;
     };
+
 function m(e) {
     return null == e || "" === e || "none" === e ? "none" : "url(".concat(e, ")");
 }
+
 function g(e) {
     class t extends i.Component {
         componentDidUpdate(e, t) {
@@ -103,7 +115,15 @@ function g(e) {
                       loaded: !0,
                       cached: a,
                   })
-                : null != a && a !== n && !0 === r && this.setState({ loaded: !1 }, () => this.preloadURL(a));
+                : null != a &&
+                  a !== n &&
+                  !0 === r &&
+                  this.setState(
+                      {
+                          loaded: !1,
+                      },
+                      () => this.preloadURL(a),
+                  );
         }
         preloadURL(e) {
             var t, n;
@@ -127,7 +147,22 @@ function g(e) {
                 { style: n } = t,
                 i = f(t, ["style"]),
                 { loaded: a, cached: s } = this.state;
-            return a || null == n || (n = d(c({}, n), { backgroundImage: m(s) })), (0, r.jsx)(e, c({ style: n }, i));
+            return (
+                a ||
+                    null == n ||
+                    (n = d(c({}, n), {
+                        backgroundImage: m(s),
+                    })),
+                (0, r.jsx)(
+                    e,
+                    c(
+                        {
+                            style: n,
+                        },
+                        i,
+                    ),
+                )
+            );
         }
         constructor(e) {
             super(e), l(this, "cachedURLs", []), l(this, "canceller", null);

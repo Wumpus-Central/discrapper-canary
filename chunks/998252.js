@@ -1,4 +1,6 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -6,6 +8,7 @@ var i = n(397927),
     s = n(452357),
     o = n(985018),
     l = n(139674);
+
 function c(e) {
     let { currentUser: t } = e;
     return t.isClaimed()

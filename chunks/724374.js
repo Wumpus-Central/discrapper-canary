@@ -1,7 +1,10 @@
-r.d(t, { A: () => c });
+r.d(t, {
+    A: () => c,
+});
 var a = r(416886),
     n = r(190873),
     s = r(206423);
+
 function o(e, t) {
     var r = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -14,6 +17,7 @@ function o(e, t) {
     }
     return r;
 }
+
 function i(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {};
@@ -83,7 +87,9 @@ let c = (0, n.NE)(
                 display: "inline-block",
                 color: t.LABEL_COLOR,
             },
-            valueLabel: { margin: "0 0.5em 0 0" },
+            valueLabel: {
+                margin: "0 0.5em 0 0",
+            },
             valueText: function (e, r) {
                 return {
                     style: i(
@@ -150,7 +156,9 @@ let c = (0, n.NE)(
                     ),
                 };
             },
-            arrowSign: { color: t.ARROW_COLOR },
+            arrowSign: {
+                color: t.ARROW_COLOR,
+            },
             arrowSignInner: {
                 position: "absolute",
                 top: 0,
@@ -227,5 +235,7 @@ let c = (0, n.NE)(
             },
         };
     },
-    { defaultBase16: s.A },
+    {
+        defaultBase16: s.A,
+    },
 );

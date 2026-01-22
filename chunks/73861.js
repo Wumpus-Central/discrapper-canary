@@ -1,4 +1,6 @@
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -7,6 +9,7 @@ var i = n(311907),
     o = n(674378),
     l = n(598429),
     c = n(979604);
+
 function u(e, t, n) {
     return (
         t in e
@@ -20,6 +23,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +40,7 @@ function d(e) {
     }
     return e;
 }
+
 function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -48,6 +53,7 @@ function f(e, t) {
     }
     return n;
 }
+
 function p(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -59,6 +65,7 @@ function p(e, t) {
         e
     );
 }
+
 function _(e) {
     let {
             application: t,
@@ -98,7 +105,9 @@ function _(e) {
               }),
           )
         : T
-          ? (0, r.jsx)("div", { children: "deprecated!" })
+          ? (0, r.jsx)("div", {
+                children: "deprecated!",
+            })
           : (0, r.jsx)(
                 l.A,
                 p(d({}, A), {

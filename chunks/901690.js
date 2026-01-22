@@ -1,10 +1,13 @@
-n.d(t, { A: () => I }), n(896048);
+n.d(t, {
+    A: () => I,
+}),
+    n(896048);
 var l = n(627968),
     r = n(64700),
     i = n(503698),
     a = n.n(i),
     s = n(735438),
-    o = n(432022),
+    o = n(108531),
     c = n(451988),
     u = n(435371),
     d = n(397927),
@@ -21,6 +24,7 @@ var l = n(627968),
     v = n(985018),
     O = n(463689),
     x = n(139208);
+
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -46,6 +50,7 @@ function S(e) {
     }
     return e;
 }
+
 function N(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -84,7 +89,8 @@ let C = {
             share_application_name: l,
             share_application_id: r,
         });
-    }, 2000);
+    }, 2e3);
+
 function T(e, t, n) {
     return Math.min(Math.max(t, e), n);
 }
@@ -147,7 +153,9 @@ let I = r.memo(function (e) {
         eA = (0, d.zhh)(
             {
                 value: s,
-                config: N(S({}, o.config.stiff), { clamp: !0 }),
+                config: N(S({}, o.config.stiff), {
+                    clamp: !0,
+                }),
             },
             "animate-always",
         ),
@@ -198,7 +206,7 @@ let I = r.memo(function (e) {
                 ),
                     ee(r),
                     j(r, l, A),
-                    eb.current.start(2000, () => {
+                    eb.current.start(2e3, () => {
                         eu(!1);
                     });
             },
@@ -448,10 +456,16 @@ let I = r.memo(function (e) {
             t &&
                 null != h &&
                 (0, l.jsx)(o.animated.div, {
-                    className: a()(x.Vp, { [x.N7]: b }),
-                    style: { bottom: eA.value },
+                    className: a()(x.Vp, {
+                        [x.N7]: b,
+                    }),
+                    style: {
+                        bottom: eA.value,
+                    },
                     children: (0, l.jsxs)("div", {
-                        className: a()(x.mu, { [x.He]: ec || ey }),
+                        className: a()(x.mu, {
+                            [x.He]: ec || ey,
+                        }),
                         onMouseEnter: eP,
                         onMouseLeave: eD,
                         onClick: ek,
@@ -470,7 +484,9 @@ let I = r.memo(function (e) {
                                         onMouseUp: eV,
                                         children: [
                                             (0, l.jsx)(w, {
-                                                className: a()(x.BZ, { [O.mirror]: R }),
+                                                className: a()(x.BZ, {
+                                                    [O.mirror]: R,
+                                                }),
                                                 streamId: h,
                                                 paused: P,
                                                 reportContainerResized: !1,

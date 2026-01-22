@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968),
     i = n(64700),
     a = n(990078),
@@ -7,6 +9,7 @@ var r = n(627968),
     l = n(226884),
     c = n(985018),
     u = n(58855);
+
 function d(e) {
     let { guild: t, message: n } = e,
         d = i.useRef(null);

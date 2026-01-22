@@ -1,4 +1,9 @@
-a.d(l, { default: () => G }), a(896048), a(321073), a(65821);
+a.d(l, {
+    default: () => G,
+}),
+    a(896048),
+    a(321073),
+    a(65821);
 var t = a(627968),
     s = a(64700),
     n = a(503698),
@@ -27,6 +32,7 @@ var t = a(627968),
     I = a(974841),
     M = a(965914);
 let k = x.v.VOTE;
+
 function V() {
     let e = (0, h.Ay)();
     return (0, t.jsxs)(c.ppr, {
@@ -37,7 +43,9 @@ function V() {
                 lightSrc: M,
                 width: 106,
                 height: 100,
-                style: { marginBottom: 10 },
+                style: {
+                    marginBottom: 10,
+                },
             }),
             (0, t.jsx)(c.SGT, {
                 note: y.intl.string(y.t.bwytdh),
@@ -48,6 +56,7 @@ function V() {
         ],
     });
 }
+
 function U(e) {
     var l;
     let { emoji: a, emojiSize: s, imageClassNames: n, textClassNames: i } = e,
@@ -70,6 +79,7 @@ function U(e) {
               children: a.name,
           });
 }
+
 function E(e) {
     let { poll: l, reactionVoteCounts: a, selectedAnswerId: s, onSelectAnswer: n } = e;
     return (0, t.jsx)(c.VQ0, {
@@ -132,6 +142,7 @@ function E(e) {
         }),
     });
 }
+
 function T(e) {
     let { user: l, channel: a } = e,
         s = (0, o.bG)([j.default], () => j.default.getUser(l.id), [l]),
@@ -173,6 +184,7 @@ function T(e) {
         ],
     });
 }
+
 function R(e) {
     let { message: l, reaction: a, channel: n } = e,
         { reactors: i, hasMore: o } = (0, A.A)({
@@ -215,10 +227,22 @@ function R(e) {
                     s = i[a];
                 return 1 === l
                     ? 0 === a
-                        ? (0, t.jsx)(c.y$y, { className: I.u1 }, "hasMore")
+                        ? (0, t.jsx)(
+                              c.y$y,
+                              {
+                                  className: I.u1,
+                              },
+                              "hasMore",
+                          )
                         : null
                     : 0 === i.length && m
-                      ? (0, t.jsx)(c.y$y, { className: I.u1 }, "loadingMore")
+                      ? (0, t.jsx)(
+                            c.y$y,
+                            {
+                                className: I.u1,
+                            },
+                            "loadingMore",
+                        )
                       : null != s &&
                         (0, t.jsx)(
                             T,
@@ -246,6 +270,7 @@ function R(e) {
         onScroll: o ? b : void 0,
     });
 }
+
 function G(e) {
     var l;
     let { message: a, initialAnswerId: n, onClose: i, transitionState: d } = e,
@@ -297,9 +322,13 @@ function G(e) {
         children: [
             (0, t.jsx)(r.rQ0, {
                 title: a.poll.question.text,
-                subtitle: y.intl.format(y.t.XRkuof, { count: x }),
+                subtitle: y.intl.format(y.t.XRkuof, {
+                    count: x,
+                }),
             }),
-            (0, t.jsx)("div", { className: I.jH }),
+            (0, t.jsx)("div", {
+                className: I.jH,
+            }),
             (0, t.jsxs)("div", {
                 className: I.rf,
                 children: [

@@ -34,6 +34,7 @@ let _ = (e, t) => {
         guildNameClick: h,
     };
 };
+
 function h(e) {
     var t;
     let { message: i, channel: a, compact: s } = e,
@@ -55,6 +56,7 @@ function h(e) {
                 : p.intl.string(p.t["2VLV0d"]),
     });
 }
+
 function m(e) {
     var t;
     let { message: i, channel: a, compact: s } = e,
@@ -76,6 +78,7 @@ function m(e) {
                 : p.intl.string(p.t.FVF6qU),
     });
 }
+
 function g(e) {
     var t;
     let { message: i, channel: a, compact: s } = e,

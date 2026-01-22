@@ -1,9 +1,12 @@
-n.d(t, { A: () => A }), n(896048);
+n.d(t, {
+    A: () => A,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
-    o = n(432022),
+    o = n(108531),
     l = n(311907),
     c = n(397927),
     u = n(796104),
@@ -12,6 +15,7 @@ var r = n(627968),
     p = n(101492),
     _ = n(532294),
     h = n(420627);
+
 function m(e, t, n) {
     return (
         t in e
@@ -25,6 +29,7 @@ function m(e, t, n) {
         e
     );
 }
+
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -56,12 +61,17 @@ let E = {
         [_.P7.QUESTS]: c.r2v,
         [_.P7.END]: c.MZT,
     };
+
 function y(e) {
     let { isSelected: t, icon: n, color: a, onClick: s } = e,
         [l, u] = i.useState(!1),
         d = (0, c.zhh)({
-            from: { scale: 0 },
-            to: { scale: 1 },
+            from: {
+                scale: 0,
+            },
+            to: {
+                scale: 1,
+            },
             config: E,
         }),
         f = n;
@@ -75,11 +85,14 @@ function y(e) {
             children: (0, r.jsx)(f, {
                 colorClass: h.gM,
                 color: a,
-                style: { opacity: t || l ? 1 : 0.5 },
+                style: {
+                    opacity: t || l ? 1 : 0.5,
+                },
             }),
         }),
     });
 }
+
 function O() {
     let e = (0, p.A)();
     return (0, f.A)(e).map((e) => ({
@@ -87,6 +100,7 @@ function O() {
         icon: b[e],
     }));
 }
+
 function A(e) {
     let { activeSlide: t, setActiveSlide: n, color: a, className: o } = e,
         c = Number.parseInt(t.toString(), 10),

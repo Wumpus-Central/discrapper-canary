@@ -67,6 +67,7 @@ let eo = "to_subscriptions_button",
     eu = "premium home page",
     ed = "gifting_button",
     ef = "payment modal";
+
 function ep(e) {
     let { premiumSubscription: t, isDiscountApplied: n, activeDiscountInfo: i, theme: a } = e,
         s = t.hasActiveTrial,
@@ -75,7 +76,9 @@ function ep(e) {
         u = null != t.trialEndsAt ? l()(t.trialEndsAt).diff(l()(), "d") : 0,
         d = ee.hd[t.planIdFromItems],
         p = U.Ay.formatPriceString(U.Ay.getDefaultPrice(d.id), d.interval),
-        { enabled: h } = F.K.getCurrentConfig({ location: "SubscriptionUserHeroSubheader" }),
+        { enabled: h } = F.K.getCurrentConfig({
+            location: "SubscriptionUserHeroSubheader",
+        }),
         m = () => {
             var e, t, n;
             return h
@@ -107,7 +110,10 @@ function ep(e) {
                               ? X.at.PREMIUM_TIER_2_WHITE_FILL
                               : X.at.PREMIUM_TIER_2_OLD_GRADIENT_FILL,
                       }),
-                  (s || !o) && (0, r.jsx)("div", { className: ei.on }),
+                  (s || !o) &&
+                      (0, r.jsx)("div", {
+                          className: ei.on,
+                      }),
                   (0, r.jsx)(_.Heading, {
                       variant: "heading-md/normal",
                       color: "always-white",
@@ -117,13 +123,18 @@ function ep(e) {
               ],
           })
         : h
-          ? (0, r.jsx)("div", { style: { marginBottom: "18px" } })
+          ? (0, r.jsx)("div", {
+                style: {
+                    marginBottom: "18px",
+                },
+            })
           : (0, r.jsx)(Q.A, {
                 variant: void 0,
                 subscriptionTier: ee.pe.TIER_2,
                 interval: d.interval,
             });
 }
+
 function e_() {
     let e = (0, G.k5)(),
         t = (0, G.nf)(),
@@ -154,10 +165,16 @@ function e_() {
                       className: ei._K,
                       children: (0, et.DP)(),
                   })
-                : (0, r.jsx)(j.A, { className: ei.TJ }),
+                : (0, r.jsx)(j.A, {
+                      className: ei.TJ,
+                  }),
         O = () =>
             o
-                ? (0, r.jsx)("div", { style: { marginBottom: "18px" } })
+                ? (0, r.jsx)("div", {
+                      style: {
+                          marginBottom: "18px",
+                      },
+                  })
                 : h && !u
                   ? (0, r.jsxs)(r.Fragment, {
                         children: [
@@ -197,7 +214,9 @@ function e_() {
                                     variant: "heading-md/normal",
                                     color: "always-white",
                                     className: ei.KB,
-                                    children: er.intl.format(er.t["/SfHwl"], { weeks: 1 }),
+                                    children: er.intl.format(er.t["/SfHwl"], {
+                                        weeks: 1,
+                                    }),
                                 }),
                             ],
                         })
@@ -263,11 +282,20 @@ function e_() {
                       ],
                   });
     return (0, r.jsxs)("div", {
-        className: s()(ei.$Y, { [ei.J5]: g }),
+        className: s()(ei.$Y, {
+            [ei.J5]: g,
+        }),
         children: [
             (0, r.jsxs)("div", {
                 className: ei.jp,
-                children: [y(), O(), (0, r.jsx)(Z.ZP, { featureSet: E() }), A()],
+                children: [
+                    y(),
+                    O(),
+                    (0, r.jsx)(Z.ZP, {
+                        featureSet: E(),
+                    }),
+                    A(),
+                ],
             }),
             (0, r.jsx)("div", {
                 className: ei.ah,
@@ -280,6 +308,7 @@ function e_() {
         ],
     });
 }
+
 function eh(e) {
     var t, n;
     let { className: i, config: a } = e,
@@ -289,7 +318,9 @@ function eh(e) {
         d = (0, H.gc)(u),
         f = (0, H.K5)(a.gradientConfig),
         p = (0, H.x)(d, f),
-        h = { color: null != (t = a.textColor) ? t : "var(--always-white)" };
+        h = {
+            color: null != (t = a.textColor) ? t : "var(--always-white)",
+        };
     return (0, r.jsxs)("div", {
         className: s()(ei.WR, i),
         style: p,
@@ -337,6 +368,7 @@ function eh(e) {
         ],
     });
 }
+
 function em() {
     return (0, r.jsxs)("div", {
         className: ei.T1,
@@ -387,7 +419,9 @@ let eg = function () {
         o = (0, c.bG)([L.A], () => L.A.hasFetchedSubscriptions()),
         l = (0, I.Y)(ee.T7),
         [d, f] = i.useState(!0),
-        p = (0, S.A)({ forceFetch: !0 }),
+        p = (0, S.A)({
+            forceFetch: !0,
+        }),
         b = null == (e = (0, B.A)()) ? void 0 : e.billingSettingsMarketingBanner,
         y = (0, c.bG)([D.A], () => D.A.enabled),
         N = i.useRef(null);
@@ -417,9 +451,15 @@ let eg = function () {
             children: [
                 (0, r.jsxs)("div", {
                     children: [
-                        null != b && (0, r.jsx)(eh, { config: b }),
+                        null != b &&
+                            (0, r.jsx)(eh, {
+                                config: b,
+                            }),
                         (0, r.jsx)(e_, {}),
-                        R && (0, r.jsx)(J.A, { isInSettings: !0 }),
+                        R &&
+                            (0, r.jsx)(J.A, {
+                                isInSettings: !0,
+                            }),
                         null == b && (0, r.jsx)(em, {}),
                         (0, r.jsx)($.A, {
                             hideCTAs: !0,
@@ -435,7 +475,9 @@ let eg = function () {
                     onChange: (e) => {
                         e &&
                             !w &&
-                            (M.default.track(en.HAw.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: n }),
+                            (M.default.track(en.HAw.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+                                location_stack: n,
+                            }),
                             P(!0));
                     },
                     children: (0, r.jsx)("div", {

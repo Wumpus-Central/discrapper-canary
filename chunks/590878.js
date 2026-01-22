@@ -3,6 +3,7 @@ n.d(t, {
     p: () => a,
 });
 var r = n(369543);
+
 function i(e, t, n) {
     return (
         t in e
@@ -22,7 +23,12 @@ var a = (function (e) {
 class s {
     onStreamBegin(e, t, n) {
         let i = (0, r.M)(e, t);
-        (this.sound = n), null == i || null == i.windowHandle ? this.callback({ type: "stop" }) : this._stream(i);
+        (this.sound = n),
+            null == i || null == i.windowHandle
+                ? this.callback({
+                      type: "stop",
+                  })
+                : this._stream(i);
     }
     onStreamKilled() {
         this._kill();
@@ -64,10 +70,18 @@ class s {
         (this.active = !1), (this.application = null);
     }
     _stop() {
-        this.active && (this._kill(), this.callback({ type: "stop" }));
+        this.active &&
+            (this._kill(),
+            this.callback({
+                type: "stop",
+            }));
     }
     _pause() {
-        this.active && ((this.application.windowHandle = null), this.callback({ type: "pause" }));
+        this.active &&
+            ((this.application.windowHandle = null),
+            this.callback({
+                type: "pause",
+            }));
     }
     constructor(e) {
         i(this, "callback", void 0),

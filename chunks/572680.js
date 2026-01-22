@@ -1,8 +1,11 @@
-n.d(t, { A: () => S }), n(896048);
+n.d(t, {
+    A: () => S,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(106778),
-    s = n(432022),
+    s = n(108531),
     o = n(615300),
     l = n(397927),
     c = n(565645),
@@ -13,6 +16,7 @@ var r = n(627968),
     _ = n(690521),
     h = n(851110),
     m = n(624085);
+
 function g(e, t, n) {
     return (
         t in e
@@ -26,6 +30,7 @@ function g(e, t, n) {
         e
     );
 }
+
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,6 +47,7 @@ function E(e) {
     }
     return e;
 }
+
 function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -54,6 +60,7 @@ function b(e, t) {
     }
     return n;
 }
+
 function y(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -68,6 +75,7 @@ function y(e, t) {
 let O = 450,
     A = 0.5,
     v = [];
+
 function S(e) {
     let { messageId: t, emoji: n, startPosition: g, targetPosition: b } = e,
         [S, I] = i.useState(0),
@@ -94,8 +102,12 @@ function S(e) {
         x = b.x - (b.width / 2) * A,
         L = b.y - (b.height / 2) * A,
         j = (0, l.zhh)({
-            from: { y: g.y },
-            to: { y: L },
+            from: {
+                y: g.y,
+            },
+            to: {
+                y: L,
+            },
             config: {
                 duration: O,
                 easing: o.A.Easing.in(o.A.Easing.exp),
@@ -158,7 +170,9 @@ function S(e) {
                         style: E({}, j),
                         className: m.qq,
                         children: (0, r.jsx)(s.animated.div, {
-                            style: y(E({}, M), { opacity: M.opacity }),
+                            style: y(E({}, M), {
+                                opacity: M.opacity,
+                            }),
                             children: (0, r.jsx)(c.A, {
                                 className: m.Zg,
                                 emojiId: n.id,

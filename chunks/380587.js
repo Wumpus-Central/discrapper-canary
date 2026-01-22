@@ -19,6 +19,7 @@ var r = n(627968),
     h = n(64313),
     m = n(835002),
     g = n(985018);
+
 function E() {
     let e = (0, l.WX)(),
         t = () => {
@@ -30,9 +31,12 @@ function E() {
         noticeType: m.YA.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE,
     });
 }
+
 function b() {
     let e = () => {
-        s.A.showAgeVerificationGetStartedModal({ entryPoint: o.q1.CONTENT_AND_SOCIAL_NOTICE });
+        s.A.showAgeVerificationGetStartedModal({
+            entryPoint: o.q1.CONTENT_AND_SOCIAL_NOTICE,
+        });
     };
     return (0, r.jsx)(d.e, {
         label: g.t.OX4ybh,
@@ -40,6 +44,7 @@ function b() {
         noticeType: m.YA.SENSITIVE_CONTENT_FILTER_AGE_VERIFICATION_NOTICE,
     });
 }
+
 function y() {
     let e = (0, f.Z)(),
         t = (0, l.WX)(),
@@ -71,12 +76,15 @@ function y() {
             };
     }, [n, e, s]);
 }
+
 function O() {
     let e = (0, c.SJ)(),
         t = (0, h.j)("useContentAndSocialAgeVerificationInlineNotice"),
         n = e || t,
         l = i.useCallback(() => {
-            s.A.showAgeVerificationGetStartedModal({ entryPoint: o.q1.CONTENT_AND_SOCIAL_NOTICE }),
+            s.A.showAgeVerificationGetStartedModal({
+                entryPoint: o.q1.CONTENT_AND_SOCIAL_NOTICE,
+            }),
                 (0, u.N)(m.YA.SENSITIVE_CONTENT_FILTER_AGE_VERIFICATION_NOTICE, m.YX.LEARN_MORE);
         }, []),
         d = i.useCallback(() => {

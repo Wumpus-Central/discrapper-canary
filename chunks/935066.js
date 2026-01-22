@@ -1,4 +1,6 @@
-i.d(e, { Y: () => T });
+i.d(e, {
+    Y: () => T,
+});
 var n = i(311907),
     l = i(817281),
     s = i(419954),
@@ -11,6 +13,8 @@ let T = (0, s.zD)(a.X.APPEARANCE_DISPLAY_COMPACT_AVATARS, {
     usePredicate: () => u.hH.useSetting(),
     useValue: () => !(0, n.bG)([r.Ay], () => r.Ay.displayCompactAvatars),
     setValue: (t) => {
-        l.Ay.updatedUnsyncedSettings({ displayCompactAvatars: !t });
+        l.Ay.updatedUnsyncedSettings({
+            displayCompactAvatars: !t,
+        });
     },
 });

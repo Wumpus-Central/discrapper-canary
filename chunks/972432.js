@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -10,6 +12,7 @@ var i = n(311907),
     c = n(723702),
     u = n(731854),
     A = n(985018);
+
 function f(e) {
     var t;
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u.x.DEFAULT,

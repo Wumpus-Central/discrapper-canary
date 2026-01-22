@@ -1,4 +1,10 @@
-n.d(t, { A: () => f }), n(321073), n(896048), n(114821), n(339614);
+n.d(t, {
+    A: () => f,
+}),
+    n(321073),
+    n(896048),
+    n(114821),
+    n(339614);
 var r = n(627968),
     i = n(64700),
     l = n(397927),
@@ -6,6 +12,7 @@ var r = n(627968),
     s = n(657331),
     o = n(129831),
     c = n(985018);
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -31,6 +38,7 @@ function u(e) {
     }
     return e;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -49,6 +57,7 @@ function d(e, t) {
         e
     );
 }
+
 function p(e) {
     let {
             priorityMembers: t,
@@ -111,13 +120,18 @@ function p(e) {
                     render: (e) =>
                         (0, r.jsx)(
                             o.x,
-                            d(u({}, e), { label: c.intl.formatToPlainString(c.t["6Kqn9M"], { count: A }) }),
+                            d(u({}, e), {
+                                label: c.intl.formatToPlainString(c.t["6Kqn9M"], {
+                                    count: A,
+                                }),
+                            }),
                         ),
                 }),
             ),
         h
     );
 }
+
 function f(e) {
     let { priorityMembers: t, partiedMembers: n, currentActivities: s, guildContext: o } = e,
         u = new Set(
@@ -140,7 +154,12 @@ function f(e) {
     if (s.length <= 1 && 0 === h.length) {
         var A, g;
         return (0, r.jsx)(l.rXV, {
-            label: n.length > 1 ? c.intl.formatToPlainString(c.t.C4WXvc, { memberCount: n.length }) : void 0,
+            label:
+                n.length > 1
+                    ? c.intl.formatToPlainString(c.t.C4WXvc, {
+                          memberCount: n.length,
+                      })
+                    : void 0,
             children: p({
                 priorityMembers: t,
                 otherMembers: d,

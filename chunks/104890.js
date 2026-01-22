@@ -1,8 +1,11 @@
-n.d(e, { A: () => s });
+n.d(e, {
+    A: () => s,
+});
 var i = n(64700),
     l = n(726249),
     r = n(723702),
     a = n(985018);
+
 function s() {
     return (
         i.useEffect(() => {

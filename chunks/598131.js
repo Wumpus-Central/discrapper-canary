@@ -1,4 +1,8 @@
-n.d(t, { A: () => et }), n(896048), n(492834);
+n.d(t, {
+    A: () => et,
+}),
+    n(896048),
+    n(492834);
 var l = n(627968),
     r = n(64700),
     a = n(2110),
@@ -47,6 +51,7 @@ var l = n(627968),
     Y = n(985018),
     $ = n(641131),
     q = n(212335);
+
 function J(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -73,6 +78,7 @@ function J(e) {
     return e;
 }
 let Z = ["user_urf", "message_urf", "guild_urf", "media_takedown"];
+
 function X(e, t) {
     let { elements: n } = e;
     return n.find((e) => {
@@ -80,6 +86,7 @@ function X(e, t) {
         return n === t;
     });
 }
+
 function ee(e, t) {
     let { elements: n } = e;
     return n.filter((e) => {
@@ -206,7 +213,9 @@ let et = (e) => {
                                               }),
                                         e
                                     );
-                                })(J({}, e), { [t]: n }),
+                                })(J({}, e), {
+                                    [t]: n,
+                                }),
                             );
             }
         }, [ec]);
@@ -275,32 +284,52 @@ let et = (e) => {
                 direction: s.A.Direction.VERTICAL,
                 className: q.wx,
                 children: [
-                    (0, l.jsx)(H.A, { element: X(t, "success") }),
+                    (0, l.jsx)(H.A, {
+                        element: X(t, "success"),
+                    }),
                     (0, l.jsx)(k.A, {
                         node: t,
                         isModeratorReport: eg,
                         isTidaReport: eV,
                     }),
-                    (0, l.jsx)(C.A, { node: t }),
+                    (0, l.jsx)(C.A, {
+                        node: t,
+                    }),
                 ],
             }),
             (0, l.jsxs)(i.$mQ, {
                 "data-migration-pending": !0,
                 className: q.rf,
                 children: [
-                    null != ed && (0, l.jsx)(F.A, { element: ed }),
-                    null != ep && (0, l.jsx)(V.A, { element: ep }),
+                    null != ed &&
+                        (0, l.jsx)(F.A, {
+                            element: ed,
+                        }),
+                    null != ep &&
+                        (0, l.jsx)(V.A, {
+                            element: ep,
+                        }),
                     null != X(t, "message_preview") &&
                         ("message" === n.name || "first_dm" === n.name || "report_to_mod_message" === n.name) &&
-                        (0, l.jsx)(I.A, { message: n.record }),
-                    null != X(t, "user_preview") && "user" === n.name ? (0, l.jsx)(W.A, { user: n.record }) : null,
+                        (0, l.jsx)(I.A, {
+                            message: n.record,
+                        }),
+                    null != X(t, "user_preview") && "user" === n.name
+                        ? (0, l.jsx)(W.A, {
+                              user: n.record,
+                          })
+                        : null,
                     null != X(t, "widget_preview") && "widget" === n.name
                         ? (0, l.jsx)(z.A, {
                               widget: n.widget,
                               userId: n.user_id,
                           })
                         : null,
-                    null != X(t, "guild_preview") && "guild" === n.name ? (0, l.jsx)(N.A, { guild: n.record }) : null,
+                    null != X(t, "guild_preview") && "guild" === n.name
+                        ? (0, l.jsx)(N.A, {
+                              guild: n.record,
+                          })
+                        : null,
                     null != X(t, "breadcrumbs") &&
                         (0, l.jsx)(g.A, {
                             isModeratorReport: eg,
@@ -321,7 +350,10 @@ let et = (e) => {
                                         channelId: eN,
                                         reportId: es,
                                     }),
-                                eH && (0, l.jsx)(U.A, { parents: eB }),
+                                eH &&
+                                    (0, l.jsx)(U.A, {
+                                        parents: eB,
+                                    }),
                                 null != X(t, "block_users") &&
                                     ("message" === n.name ||
                                         "first_dm" === n.name ||
@@ -389,17 +421,29 @@ let et = (e) => {
                         }),
                     null != X(t, "channel_preview") &&
                         "stage_channel" === n.name &&
-                        (0, l.jsx)(B.A, { stageInstance: n.record }),
+                        (0, l.jsx)(B.A, {
+                            stageInstance: n.record,
+                        }),
                     null != X(t, "guild_scheduled_event_preview") &&
                         "guild_scheduled_event" === n.name &&
-                        (0, l.jsx)(w.A, { event: n.record }),
+                        (0, l.jsx)(w.A, {
+                            event: n.record,
+                        }),
                     null != X(t, "guild_directory_entry_preview") &&
                         "guild_directory_entry" === n.name &&
-                        (0, l.jsx)(S.A, { entry: n.record }),
+                        (0, l.jsx)(S.A, {
+                            entry: n.record,
+                        }),
                     null != X(t, "guild_discovery_preview") &&
                         "guild_discovery" === n.name &&
-                        (0, l.jsx)(T.A, { entry: n.record }),
-                    null != X(t, "app_preview") && "application" === n.name && (0, l.jsx)(p.A, { entry: n.record }),
+                        (0, l.jsx)(T.A, {
+                            entry: n.record,
+                        }),
+                    null != X(t, "app_preview") &&
+                        "application" === n.name &&
+                        (0, l.jsx)(p.A, {
+                            entry: n.record,
+                        }),
                     null != ec &&
                         (0, l.jsx)(D.A, {
                             element: ec,
@@ -438,7 +482,11 @@ let et = (e) => {
                                     onSelectChild: eE,
                                     nodeMap: e.nodeMap,
                                 }),
-                                null != eu && eu.length > 0 ? (0, l.jsx)(y.A, { elements: eu }) : null,
+                                null != eu && eu.length > 0
+                                    ? (0, l.jsx)(y.A, {
+                                          elements: eu,
+                                      })
+                                    : null,
                             ],
                         }),
                     (0, l.jsx)(A.A, {

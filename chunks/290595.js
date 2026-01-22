@@ -7,6 +7,7 @@ var r = n(562465),
     i = n(73153),
     a = n(652215),
     s = n(985018);
+
 function o(e, t, n) {
     return (
         t in e
@@ -20,6 +21,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +38,7 @@ function l(e) {
     }
     return e;
 }
+
 function c(e) {
     return (
         null != e &&
@@ -47,6 +50,7 @@ function c(e) {
         e.body
     );
 }
+
 function u(e) {
     let t;
     throw Error(
@@ -58,6 +62,7 @@ function u(e) {
                   : s.intl.string(s.t.cvJdtg)),
     );
 }
+
 function d() {
     return r.Bo.get({
         url: a.Rsh.SETTINGS_CONSENT,
@@ -65,6 +70,7 @@ function d() {
         rejectWithError: !1,
     }).then(c, (e) => Promise.reject(Error(e.body.message)));
 }
+
 function f(e, t) {
     return r.Bo.post({
         url: a.Rsh.SETTINGS_CONSENT,

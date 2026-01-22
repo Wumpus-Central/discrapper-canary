@@ -1,4 +1,6 @@
-n.d(t, { A: () => l });
+n.d(t, {
+    A: () => l,
+});
 var r = n(355418),
     i = n(11947);
 let a = 1,
@@ -11,7 +13,7 @@ class l extends r.c {
                 Object.keys(i.uk).join("") +
                 "]{4}|[" +
                 Object.keys(i.uk).join("") +
-                "]{2})?(?:\\s*)(?:年)?(?:[\\s|,|\uFF0C]*)(\\d{1,2}|[" +
+                "]{2})?(?:\\s*)(?:年)?(?:[\\s|,|，]*)(\\d{1,2}|[" +
                 Object.keys(i.uk).join("") +
                 "]{1,3})(?:\\s*)(?:月)(?:\\s*)(\\d{1,2}|[" +
                 Object.keys(i.uk).join("") +

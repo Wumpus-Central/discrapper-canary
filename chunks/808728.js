@@ -26,6 +26,7 @@ var r,
     y = n(994500),
     O = n(287809),
     A = n(652215);
+
 function v(e, t, n) {
     return (
         t in e
@@ -58,6 +59,7 @@ let S = "SELECTABLE",
     x = M(A.eGj),
     L = [],
     j = {};
+
 function M(e) {
     return {
         id: e,
@@ -67,21 +69,26 @@ function M(e) {
         count: 0,
     };
 }
+
 function k(e) {
     let t = C[e];
     return null == t && (t = W(e)), t;
 }
+
 function U(e, t) {
     let { comparator: n } = e,
         { comparator: r } = t;
     return n - r;
 }
+
 function G(e) {
     e[S].sort(U), e[I].sort(U), e[A.rbe.GUILD_CATEGORY].sort(U);
 }
+
 function V(e) {
     return (0, p.tr)(e) ? S : (0, p.ay)(e) ? I : e;
 }
+
 function F() {
     let e = {},
         t = d.A.getFavoriteChannels();
@@ -97,6 +104,7 @@ function F() {
     }
     return e;
 }
+
 function B(e) {
     if (e === A.YYv) return F();
     let t = {},
@@ -108,6 +116,7 @@ function B(e) {
         };
     return t;
 }
+
 function H(e) {
     let { id: t } = e,
         n = B(t);
@@ -129,13 +138,16 @@ function H(e) {
         e
     );
 }
+
 function Y() {
     (C = {}), (P = {}), (N = {}), (R = {}), null != T && W(T);
 }
+
 function W(e) {
     let t = M(e);
     return (C[e] = t), (P[e] = []), H(t), G(t), K(t), en(e), t;
 }
+
 function K(e) {
     let t = (N[e.id] = {}),
         n = {};
@@ -150,6 +162,7 @@ function K(e) {
             });
     });
 }
+
 function z(e) {
     let {
         guild: { id: t },
@@ -157,21 +170,25 @@ function z(e) {
     if (null == t) return !1;
     (C[t] = void 0), T === t && W(t);
 }
+
 function q(e) {
     let {
         guild: { id: t },
     } = e;
     return delete C[t], delete N[t], delete R[t], delete P[t], !0;
 }
+
 function X(e) {
     let { guildId: t, user: n } = e;
     if (h.default.getId() !== n.id) return !1;
     (C[t] = void 0), t === T && W(t);
 }
+
 function Z(e) {
     let t = m.A.getBasicChannel(e.id);
     null != t && null != t.guild_id && W(t.guild_id);
 }
+
 function Q(e) {
     let {
         channel: { guild_id: t },
@@ -179,6 +196,7 @@ function Q(e) {
     if (null == t) return !1;
     (C[t] = void 0), t === T && W(t);
 }
+
 function $(e) {
     let { channels: t } = e,
         n = !1;
@@ -188,10 +206,12 @@ function $(e) {
     }
     return n;
 }
+
 function J(e) {
     let { guildId: t } = e;
     (C[t] = void 0), t === T && W(t);
 }
+
 function ee(e, t) {
     return s.X8(
         _.cc({
@@ -202,6 +222,7 @@ function ee(e, t) {
         A.Lti,
     );
 }
+
 function et(e, t) {
     let n = E.A.getGuild(t);
     if (null != n && ee(e, n)) return !0;
@@ -212,9 +233,11 @@ function et(e, t) {
     for (let { channel: t } of a) if (ee(e, t)) return !0;
     return !1;
 }
+
 function en(e) {
     et(O.default.getCurrentUser(), e) ? (R[e] = !0) : delete R[e];
 }
+
 function er(e, t) {
     var n;
     w = t;
@@ -222,10 +245,12 @@ function er(e, t) {
     if (null == r) return !1;
     (C[r] = void 0), r === T && W(r);
 }
+
 function ei(e) {
     let { channelId: t } = e;
     return null == t && null != w ? er(m.A.getChannel(w), null) : er(m.A.getChannel(t), t);
 }
+
 function ea(e) {
     let { voiceStates: t } = e;
     return t.reduce((e, t) => {
@@ -233,11 +258,13 @@ function ea(e) {
         return h.default.getSessionId() !== r ? e : er(m.A.getChannel(n), n) || e;
     }, !1);
 }
+
 function es(e) {
     let { guildId: t } = e;
     if (((T = null != t ? t : null), null == t || null != C[t])) return !1;
     W(t);
 }
+
 function eo() {
     W(A.YYv);
 }

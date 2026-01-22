@@ -7,6 +7,7 @@ var a = n(64700),
     l = n(66455),
     i = n(206692);
 let r = {};
+
 function s(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
         s = (0, a.useRef)(null),
@@ -33,6 +34,7 @@ function s(e, t) {
         s
     );
 }
+
 function o() {
     let [e, t] = (0, a.useState)(!1);
     return {

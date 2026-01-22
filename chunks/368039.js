@@ -1,6 +1,14 @@
-Object.defineProperty(t, "__esModule", { value: !0 }), (t.autoprefix = void 0);
+Object.defineProperty(t, "__esModule", {
+    value: !0,
+}),
+    (t.autoprefix = void 0);
 var n,
-    o = (n = r(471171)) && n.__esModule ? n : { default: n },
+    o =
+        (n = r(471171)) && n.__esModule
+            ? n
+            : {
+                  default: n,
+              },
     a =
         Object.assign ||
         function (e) {
@@ -90,7 +98,11 @@ var n,
         },
         extend: function (e, t) {
             var r = t[e];
-            return r || { extend: e };
+            return (
+                r || {
+                    extend: e,
+                }
+            );
         },
     },
     l = (t.autoprefix = function (e) {

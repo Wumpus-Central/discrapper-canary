@@ -8,9 +8,11 @@ var r = n(311907),
     a = n(309010),
     s = n(485296),
     o = n(977997);
+
 function l(e, t, n) {
     return e || t || n;
 }
+
 function c(e) {
     let { userId: t, checkSoundSharing: n = !1, checkSoundboardSounds: c = !0, checkIsMuted: u = !1, context: d } = e,
         f = (0, r.bG)([o.A, a.A], () => {
@@ -26,6 +28,7 @@ function c(e) {
         h,
     );
 }
+
 function u(e) {
     let { userId: t, checkSoundSharing: n = !1, checkSoundboardSounds: r = !0, checkIsMuted: c = !1, context: u } = e,
         [d, f, p, _] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [o.A, a.A, s.A, i.A],

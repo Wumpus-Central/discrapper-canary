@@ -1,4 +1,6 @@
-r.d(t, { h: () => O });
+r.d(t, {
+    h: () => O,
+});
 var n = r(627968),
     i = r(64700),
     o = r(503698),
@@ -13,6 +15,7 @@ var n = r(627968),
     b = r(284683),
     C = r(985018),
     j = r(77142);
+
 function O(e) {
     let { guildId: t, productId: r } = e,
         { listingsLoaded: o } = (0, u.bb)(t),
@@ -55,7 +58,9 @@ function O(e) {
                           children: (0, n.jsx)(
                               "div",
                               {
-                                  className: l()(j.Ux, { [j.Oj]: e.id === r }),
+                                  className: l()(j.Ux, {
+                                      [j.Oj]: e.id === r,
+                                  }),
                                   ref: e.id === r ? O : void 0,
                                   onLoad: () => {
                                       let t = O.current;
@@ -67,7 +72,7 @@ function O(e) {
                                           }),
                                           setTimeout(() => {
                                               t.classList.remove(j.Oj);
-                                          }, 2000));
+                                          }, 2e3));
                                   },
                                   children: (0, n.jsx)(
                                       p.i,

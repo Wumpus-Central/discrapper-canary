@@ -7,6 +7,7 @@ var r = n(924905),
         "text/rtf": 1,
         "text/html": 1,
     };
+
 function c(e) {
     if ("file" == e.kind) return e.getAsFile();
 }

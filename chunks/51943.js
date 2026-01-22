@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var r = n(627968);
 n(64700);
 var l = n(827734),
@@ -13,6 +15,7 @@ var l = n(827734),
     p = n(996988),
     h = n(7319);
 let b = (0, s.FT9)(s._3J.SIZE_16);
+
 function g(e) {
     let { user: t, guild: g, nick: m, onSelect: A } = e,
         { theme: y, themeType: O } = (0, d.E)(),
@@ -27,7 +30,11 @@ function g(e) {
                           left: 4,
                       },
                   }
-                : { offset: { right: 8 } },
+                : {
+                      offset: {
+                          right: 8,
+                      },
+                  },
         className: h.nM,
         onClick: A,
         onContextMenu: (e) => {
@@ -87,7 +94,10 @@ function g(e) {
                             }
                             return e;
                         })({}, t)),
-                        (l = l = { guild: g }),
+                        (l = l =
+                            {
+                                guild: g,
+                            }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
                             : (function (e, t) {

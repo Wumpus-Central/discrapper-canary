@@ -11,6 +11,7 @@ var i = n(156828),
     l = n(555528),
     c = n(644434),
     u = n(392164);
+
 function d(e, t, n) {
     return (
         t in e
@@ -24,6 +25,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -40,6 +42,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -52,6 +55,7 @@ function p(e, t) {
     }
     return n;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -96,6 +100,7 @@ async function h() {
         e,
     );
 }
+
 function m(e, t) {
     let i = (0, a.TId)(t);
     (0, a.mMO)(
@@ -110,6 +115,10 @@ function m(e, t) {
                     }),
                 );
         },
-        null != i ? { contextKey: i } : void 0,
+        null != i
+            ? {
+                  contextKey: i,
+              }
+            : void 0,
     );
 }

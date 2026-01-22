@@ -11,6 +11,7 @@ var r = n(627968),
     c = n(473145),
     o = n(997509),
     d = n(652215);
+
 function u(e) {
     let {
         uploadType: t,
@@ -63,6 +64,7 @@ function u(e) {
             );
     });
 }
+
 function f(e) {
     let {
         guild: t,
@@ -92,6 +94,7 @@ function f(e) {
             perks: s,
         });
 }
+
 function g(e, t, n, r) {
     let i = null == r ? void 0 : r.type,
         l = {
@@ -123,5 +126,7 @@ function g(e, t, n, r) {
                 });
             return;
         }
-    o.A.updateGuild({ banner: n });
+    o.A.updateGuild({
+        banner: n,
+    });
 }

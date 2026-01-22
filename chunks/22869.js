@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -7,6 +9,7 @@ var r = n(627968),
     l = n(73392),
     c = n(291594),
     u = n(959);
+
 function d(e, t, n) {
     return (
         t in e
@@ -20,6 +23,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +40,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -48,6 +53,7 @@ function p(e, t) {
     }
     return n;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -59,11 +65,14 @@ function _(e, t) {
         e
     );
 }
+
 function h(e) {
     let { user: t, text: n, channel: a, textClassName: d, onPopoutClosed: p, enableDisplayNameStyles: h = !1 } = e,
         m = i.useMemo(() => [t], [t]),
         g = i.useRef(null),
-        E = (0, l.a)({ displayNameStyles: null == t ? void 0 : t.displayNameStyles });
+        E = (0, l.a)({
+            displayNameStyles: null == t ? void 0 : t.displayNameStyles,
+        });
     return (0, r.jsx)(u.A, {
         targetElementRef: g,
         participants: m,

@@ -1,4 +1,8 @@
-n.d(t, { default: () => v }), n(896048), n(65821);
+n.d(t, {
+    default: () => v,
+}),
+    n(896048),
+    n(65821);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -23,6 +27,7 @@ var r = n(627968),
     T = n(577718),
     b = n(985018),
     w = n(18644);
+
 function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -48,6 +53,7 @@ function x(e) {
     }
     return e;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -70,6 +76,7 @@ let I = {
     x: 0,
     y: 0,
 };
+
 function L(e) {
     switch (e) {
         case y.HL.BANNER:
@@ -105,6 +112,7 @@ function L(e) {
             return (0, D.xb)(e);
     }
 }
+
 function N(e) {
     let { zoomRatio: t, imageRotation: n, imageTransformCoordinates: r } = e;
     return 1 !== t || 0 !== n || 0 !== r.x || 0 !== r.y;
@@ -131,6 +139,7 @@ let S = {
     isDragging: !1,
     hasImageEdits: !1,
 };
+
 function j(e, t) {
     var n, r, i, a, s, o;
     switch (t.type) {
@@ -191,6 +200,7 @@ function j(e, t) {
             return (0, D.xb)(t);
     }
 }
+
 function v(e) {
     let {
             file: t,
@@ -228,7 +238,9 @@ function v(e) {
             v &&
             A.default.track(O.HAw.OPEN_MODAL, {
                 type: O.JJy.CROP_GIF_MODAL,
-                location: { page: G },
+                location: {
+                    page: G,
+                },
                 location_stack: et,
                 upload_type: N,
             });
@@ -613,7 +625,9 @@ function v(e) {
                                     text: b.intl.string(b.t.E36Wd4),
                                     ariaHidden: !0,
                                     children: (0, r.jsx)(d.DUT, {
-                                        className: s()(w.On, { [w.r9]: es }),
+                                        className: s()(w.On, {
+                                            [w.r9]: es,
+                                        }),
                                         onClick: es ? void 0 : eh,
                                         "aria-label": b.intl.string(b.t.LzFiKG),
                                         "aria-disabled": es,

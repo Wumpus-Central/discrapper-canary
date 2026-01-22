@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968),
     i = n(64700),
     a = n(735438),
@@ -8,6 +10,7 @@ var r = n(627968),
     c = n(966598),
     u = n(224964),
     d = n(31408);
+
 function f(e, t, n) {
     return (
         t in e
@@ -21,6 +24,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,6 +41,7 @@ function p(e) {
     }
     return e;
 }
+
 function _(e) {
     let { reactionRef: t, count: n } = e,
         r = i.useRef(n),
@@ -47,13 +52,16 @@ function _(e) {
         i.useEffect(() => {
             if (n > r.current && null != f) {
                 let e = (0, a.clamp)(n, l.confettiCount / 2, 2 * l.confettiCount);
-                d.fire(f.x, f.y, { count: e });
+                d.fire(f.x, f.y, {
+                    count: e,
+                });
             }
             r.current = n;
         }, [n, f, d, l.confettiCount]),
         null
     );
 }
+
 function h(e) {
     return (0, r.jsx)(l.A, {
         confettiLocation: d.k.REACTION,

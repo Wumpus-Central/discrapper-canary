@@ -1,4 +1,8 @@
-r.d(t, { e: () => b }), r(747238), r(896048);
+r.d(t, {
+    e: () => b,
+}),
+    r(747238),
+    r(896048);
 var a = r(627968),
     n = r(64700),
     s = r(397927),
@@ -11,6 +15,7 @@ let u = r(196390),
     f = r(906118),
     p = "".concat(window.GLOBAL_ENV.WEBAPP_ENDPOINT.split("//")[1]).concat(c.BVt.ACTIVATE),
     h = "".concat(location.protocol, "//").concat(p);
+
 function x(e) {
     let { text: t = "" } = e,
         [r, l] = n.useState(!1);
@@ -37,7 +42,9 @@ function x(e) {
               })
             : (0, a.jsx)("div", {
                   className: d.Yp,
-                  children: (0, a.jsx)(s.y$y, { type: s.y$y.Type.WANDERING_CUBES }),
+                  children: (0, a.jsx)(s.y$y, {
+                      type: s.y$y.Type.WANDERING_CUBES,
+                  }),
               })
     );
 }
@@ -49,11 +56,15 @@ let b = (e) => {
         ? null
         : (0, a.jsxs)("div", {
               className: d.nd,
-              style: { zoom: Math.min(n / 1460, i / 1080, 1) },
+              style: {
+                  zoom: Math.min(n / 1460, i / 1080, 1),
+              },
               children: [
                   (0, a.jsx)("div", {
                       className: d.Iv,
-                      children: (0, a.jsx)("div", { className: d.wm }),
+                      children: (0, a.jsx)("div", {
+                          className: d.wm,
+                      }),
                   }),
                   (0, a.jsxs)("div", {
                       className: d.SV,
@@ -88,14 +99,18 @@ let b = (e) => {
                           (0, a.jsxs)("div", {
                               className: d.$G,
                               children: [
-                                  (0, a.jsx)("div", { className: d.yF }),
+                                  (0, a.jsx)("div", {
+                                      className: d.yF,
+                                  }),
                                   (0, a.jsx)(s.Heading, {
                                       variant: "heading-lg/semibold",
                                       color: "text-strong",
                                       className: d.Bw,
                                       children: o.intl.string(o.t.arEHn4),
                                   }),
-                                  (0, a.jsx)("div", { className: d.yF }),
+                                  (0, a.jsx)("div", {
+                                      className: d.yF,
+                                  }),
                               ],
                           }),
                           (0, a.jsxs)("div", {

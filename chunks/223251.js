@@ -1,4 +1,6 @@
-n.d(t, { A: () => S });
+n.d(t, {
+    A: () => S,
+});
 var i = n(64700),
     r = n(136722),
     l = n(311907),
@@ -17,6 +19,7 @@ var i = n(64700),
     A = n(256415),
     O = n(9302),
     E = n(652215);
+
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -65,7 +68,10 @@ class b extends i.Component {
                           }
                         : {},
                 )),
-                (p = p = { postable_channels: l }),
+                (p = p =
+                    {
+                        postable_channels: l,
+                    }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(d, Object.getOwnPropertyDescriptors(p))
                     : (function (e, t) {
@@ -80,12 +86,16 @@ class b extends i.Component {
                       }),
                 d),
             ),
-                (0, s.k)(E.HAw.GUILD_VIEWED_CLICKSTREAM, { guildId: t });
+                (0, s.k)(E.HAw.GUILD_VIEWED_CLICKSTREAM, {
+                    guildId: t,
+                });
         }
         if (null != n && n !== e.selectedChannel) {
             let e = (0, o.C)(u.A.getChannel(n), !0);
             (0, c.z)(E.HAw.CHANNEL_OPENED, v({}, e, (0, a.qL)(n))),
-                (0, s.k)(E.HAw.CHANNEL_OPENED_CLICKSTREAM, { channelId: n });
+                (0, s.k)(E.HAw.CHANNEL_OPENED_CLICKSTREAM, {
+                    channelId: n,
+                });
         }
     }
     render() {

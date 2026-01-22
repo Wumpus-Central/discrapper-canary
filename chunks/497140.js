@@ -1,4 +1,7 @@
-n.d(t, { A: () => p }), n(896048);
+n.d(t, {
+    A: () => p,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(837381),
@@ -8,6 +11,7 @@ var r = n(627968),
     c = n(900848),
     u = n(550591),
     d = n(794398);
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -33,6 +37,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e) {
     let [t, p] = l.useState(!1),
         h = (0, i.Vd)("guild-".concat(e.id));

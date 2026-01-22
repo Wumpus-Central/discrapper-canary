@@ -1,4 +1,7 @@
-n.d(t, { A: () => C }), n(896048);
+n.d(t, {
+    A: () => C,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(311907),
@@ -24,6 +27,7 @@ var r = n(627968),
     N = n(269927),
     _ = n(985018),
     S = n(486984);
+
 function T(e) {
     let { onCreateTeamClick: t, isGuildOwner: n } = e;
     return (0, r.jsx)("div", {
@@ -36,6 +40,7 @@ function T(e) {
         }),
     });
 }
+
 function I(e) {
     let { guild: t, eligibleTeams: n, isGuildOwner: l } = e,
         [c, o] = i.useState(),
@@ -97,7 +102,9 @@ let C = (e) => {
         s = (0, m.bM)(t, n),
         d = (0, o.ME)(t),
         j = (0, l.bG)([x.A], () => x.A.isFocused()),
-        { teams: O, loading: y } = (0, b.A)({ refreshOnDepChange: j }),
+        { teams: O, loading: y } = (0, b.A)({
+            refreshOnDepChange: j,
+        }),
         E = i.useMemo(
             () =>
                 O.filter((e) => {
@@ -146,7 +153,9 @@ let C = (e) => {
                   (0, r.jsx)(a.D0$, {
                       label: _.intl.string(_.t["sYLCY/"]),
                       disabled: !s,
-                      description: _.intl.format(_.t["5mfqpW"], { onCreateTeamHook: w }),
+                      description: _.intl.format(_.t["5mfqpW"], {
+                          onCreateTeamHook: w,
+                      }),
                       children: C
                           ? (0, r.jsx)(I, {
                                 guild: t,

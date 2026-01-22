@@ -1,4 +1,6 @@
-r.d(t, { default: () => d });
+r.d(t, {
+    default: () => d,
+});
 var n = r(627968);
 r(64700);
 var l = r(397927),
@@ -9,6 +11,7 @@ var l = r(397927),
     s = r(531335),
     u = r(652215),
     p = r(985018);
+
 function d(e) {
     let { guild: t, onSelect: r } = e,
         d = c.Ay.getDefaultChannel(t.id, !0, u.xBc.CREATE_INSTANT_INVITE),
@@ -25,7 +28,9 @@ function d(e) {
         onClose: i.Z_,
         onSelect: r,
         children: [
-            (0, n.jsx)(l.rXV, { children: b }),
+            (0, n.jsx)(l.rXV, {
+                children: b,
+            }),
             (0, n.jsxs)(l.rXV, {
                 children: [O, y],
             }),

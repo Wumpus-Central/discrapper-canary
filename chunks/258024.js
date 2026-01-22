@@ -1,4 +1,9 @@
-n.d(t, { Ay: () => _ }), n(896048), n(638769), n(321073);
+n.d(t, {
+    Ay: () => _,
+}),
+    n(896048),
+    n(638769),
+    n(321073);
 var r = n(64700),
     l = n(735438),
     i = n.n(l),
@@ -17,6 +22,7 @@ var r = n(64700),
     A = n(420819),
     y = n(381941),
     O = n(652215);
+
 function j(e, t, n) {
     return (
         t in e
@@ -30,6 +36,7 @@ function j(e, t, n) {
         e
     );
 }
+
 function v(e) {
     var t, n;
     if (null == e.jumpTargetId || !e.ready) return null;
@@ -478,12 +485,18 @@ class E {
     scrollPageUp() {
         var e;
         let t = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        null == (e = this.ref.current) || e.scrollPageUp({ animate: t });
+        null == (e = this.ref.current) ||
+            e.scrollPageUp({
+                animate: t,
+            });
     }
     scrollPageDown() {
         var e;
         let t = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        null == (e = this.ref.current) || e.scrollPageDown({ animate: t });
+        null == (e = this.ref.current) ||
+            e.scrollPageDown({
+                animate: t,
+            });
     }
     scrollToMessage(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
@@ -500,7 +513,11 @@ class E {
             (this.jumping = !0);
         let l = () => {
             (this.jumping = !1),
-                (0, a.vq)(r) && ((r.tabIndex = -1), r.focus({ preventScroll: !0 })),
+                (0, a.vq)(r) &&
+                    ((r.tabIndex = -1),
+                    r.focus({
+                        preventScroll: !0,
+                    })),
                 (this.scrollCounter = 0),
                 this.handleScroll(),
                 this._scrollCompleteCallbacks.forEach((e) => e());
@@ -691,6 +708,7 @@ class E {
         }
     }
 }
+
 function _(e) {
     let {
             messages: t,

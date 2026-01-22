@@ -1,4 +1,6 @@
-n.d(t, { A: () => er });
+n.d(t, {
+    A: () => er,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -59,7 +61,9 @@ n(939857),
                 ? window.addEventListener("contextmenu", e.contextMenuCallbackNative, !1)
                 : window.addEventListener("contextmenu", e.contextMenuCallbackWeb, !1);
         }),
-    (0, f.h)({ getDefaultLinkInterceptor: g.default }),
+    (0, f.h)({
+        getDefaultLinkInterceptor: g.default,
+    }),
     (0, z.Fe)({
         createPromise: () => Promise.all([n.e("94678"), n.e("896"), n.e("4787"), n.e("8188")]).then(n.bind(n, 441588)),
         webpackId: 441588,
@@ -90,7 +94,9 @@ let et = (0, z.Fe)({
             W = "".concat(g);
         (0, N.M)(), (0, L.i)("AppSkeleton");
         let z = (0, D._D)("AppSkeleton"),
-            $ = P.wX.useConfig({ location: "AppSkeleton" }).enableFastConnectEarlyIdentify,
+            $ = P.wX.useConfig({
+                location: "AppSkeleton",
+            }).enableFastConnectEarlyIdentify,
             er = (0, x.sK)("AppSkeleton");
         return (
             i.useEffect(() => {
@@ -107,7 +113,9 @@ let et = (0, z.Fe)({
                 {
                     children: (0, r.jsxs)(b.A, {
                         children: [
-                            (0, r.jsx)(q.A, { skipsSettingDefaultPageTitle: n }),
+                            (0, r.jsx)(q.A, {
+                                skipsSettingDefaultPageTitle: n,
+                            }),
                             (0, r.jsx)(m.N, {
                                 children: (0, r.jsx)(w.A, {
                                     children: (0, r.jsxs)(p.xpW, {
@@ -166,8 +174,12 @@ let et = (0, z.Fe)({
                                                                     }),
                                                                 }),
                                                                 (0, r.jsx)(S.A, {}),
-                                                                (0, r.jsx)(X.A, { mobile: f }),
-                                                                (0, r.jsx)(R.A, { mobile: f }),
+                                                                (0, r.jsx)(X.A, {
+                                                                    mobile: f,
+                                                                }),
+                                                                (0, r.jsx)(R.A, {
+                                                                    mobile: f,
+                                                                }),
                                                             ],
                                                         }),
                                                         !1,

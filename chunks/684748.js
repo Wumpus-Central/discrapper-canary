@@ -9,6 +9,7 @@ var i = n(684013),
     l = n(350535),
     o = n(652215),
     a = n(672396);
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,6 +35,7 @@ function c(e) {
     }
     return e;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -52,11 +54,18 @@ function d(e, t) {
         e
     );
 }
+
 function u(e, t) {
     return {
         trackView() {
             let n = s.default.isInstanceLocked() ? o.ThZ.LOCKED_OVERLAY : o.ThZ.UNLOCKED_OVERLAY;
-            i.A.track(o.HAw.NOTIFICATION_VIEWED, d(c({}, t), { location: n })), i.A.notificationEvent(e, a.uj.Viewed);
+            i.A.track(
+                o.HAw.NOTIFICATION_VIEWED,
+                d(c({}, t), {
+                    location: n,
+                }),
+            ),
+                i.A.notificationEvent(e, a.uj.Viewed);
         },
         trackClick(n) {
             let r = s.default.isInstanceLocked() ? o.ThZ.LOCKED_OVERLAY : o.ThZ.UNLOCKED_OVERLAY;
@@ -71,6 +80,7 @@ function u(e, t) {
         },
     };
 }
+
 function h() {
     let e = r.Ay.getOverlayKeybind();
     return null != e ? (0, l.dI)(e.shortcut, !0).split(" + ") : ["???"];

@@ -1,4 +1,7 @@
-n.d(t, { A: () => I }), n(896048);
+n.d(t, {
+    A: () => I,
+}),
+    n(896048);
 var r = n(627968);
 n(64700);
 var i = n(735438),
@@ -14,6 +17,7 @@ var i = n(735438),
     _ = n(265422),
     h = n(652215),
     m = n(790782);
+
 function g(e, t, n) {
     return (
         t in e
@@ -27,6 +31,7 @@ function g(e, t, n) {
         e
     );
 }
+
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -43,6 +48,7 @@ function E(e) {
     }
     return e;
 }
+
 function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -55,6 +61,7 @@ function b(e, t) {
     }
     return n;
 }
+
 function y(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -66,11 +73,13 @@ function y(e, t) {
         e
     );
 }
+
 function O(e, t) {
     let n = [h.ME, ...d.Ay.getFlattenedGuildIds()],
         r = n.indexOf(e);
     return t > 0 ? n.slice(r).concat(n.slice(0, r), e) : (n.splice(r, 0, e), n.slice(r + 1).concat(n.slice(0, r + 1)));
 }
+
 function A(e, t) {
     return e === h.ME
         ? f.A.getPrivateChannelIds()
@@ -79,6 +88,7 @@ function A(e, t) {
               withCurrentVoiceChannel: !0,
           }).map((e) => e.id);
 }
+
 function v(e, t) {
     return [
         {
@@ -88,6 +98,7 @@ function v(e, t) {
         ...A(e, t),
     ];
 }
+
 function S(e, t) {
     var i, a;
     let o,
@@ -116,7 +127,13 @@ function S(e, t) {
                             let { default: e } = await Promise.all([n.e("26589"), n.e("7453"), n.e("27728")]).then(
                                 n.bind(n, 926956),
                             );
-                            return (t) => (0, r.jsx)(e, y(E({}, t), { guildId: A }));
+                            return (t) =>
+                                (0, r.jsx)(
+                                    e,
+                                    y(E({}, t), {
+                                        guildId: A,
+                                    }),
+                                );
                         })
                     );
                 (N += e), (o = C[N]);

@@ -23,6 +23,7 @@ var r = n(627968),
     y = n(731854),
     O = n(985018),
     A = n(602785);
+
 function v() {
     let [e, t] = i.useState(!1),
         n = (0, a.bG)([h.A], () => h.A.isMediaFilterSettingLoading());
@@ -44,6 +45,7 @@ function v() {
           })
         : null;
 }
+
 function S(e) {
     let {
             hideDeviceSelector: t = !1,
@@ -70,7 +72,9 @@ function S(e) {
                       className: A.u5,
                       color: "interactive-text-default",
                       variant: "text-sm/normal",
-                      children: O.intl.format(O.t.stagfJ, { onEnableClick: () => l.A.enable(!0) }),
+                      children: O.intl.format(O.t.stagfJ, {
+                          onEnableClick: () => l.A.enable(!0),
+                      }),
                   }),
             T
                 ? null
@@ -80,7 +84,9 @@ function S(e) {
                       checked: P,
                       onChange: (e) => {
                           p.bm.updateSetting(e),
-                              m.default.track(E.HAw.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: e });
+                              m.default.track(E.HAw.UPDATE_USER_SETTINGS_LOCAL, {
+                                  always_preview_video: e,
+                              });
                       },
                   }),
             !t &&

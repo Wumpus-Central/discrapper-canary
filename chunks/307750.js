@@ -1,4 +1,6 @@
-t.d(a, { default: () => p });
+t.d(a, {
+    default: () => p,
+});
 var d = t(627968),
     r = t(64700),
     c = t(397927),
@@ -10,11 +12,14 @@ var d = t(627968),
     i = t(652215),
     s = t(985018);
 let u = [o.tF.SOMETHING_ELSE];
+
 function p(e) {
     let { onClose: a, transitionState: p } = e,
         _ = (0, f.A)(o.A4);
     r.useEffect(() => {
-        n.default.track(i.HAw.OPEN_MODAL, { type: "Block User Feedback" });
+        n.default.track(i.HAw.OPEN_MODAL, {
+            type: "Block User Feedback",
+        });
     }, []);
     let O = r.useCallback((e) => {
         var a;
@@ -51,7 +56,12 @@ function p(e) {
                                         });
                                 }
                                 return e;
-                            })({ body: s.intl.string(s.t["d9+vQ8"]) }, a),
+                            })(
+                                {
+                                    body: s.intl.string(s.t["d9+vQ8"]),
+                                },
+                                a,
+                            ),
                         );
                 });
     }, []);

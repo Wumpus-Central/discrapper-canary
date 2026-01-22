@@ -9,16 +9,20 @@ var l = n(562465),
     r = n(73153),
     a = n(523599),
     i = n(652215);
+
 function s() {
     return a.A.isLoading || a.A.isLoadingNextPage;
 }
+
 function o(e, t) {
     let n = (function (e) {
         let { before: t, userId: n, targetId: l, action: r } = e,
             s = null != n ? n : a.A.userIdFilter,
             o = null != r ? r : a.A.actionFilter,
             c = null != l ? l : a.A.targetIdFilter,
-            u = { limit: i.$jw };
+            u = {
+                limit: i.$jw,
+            };
         return (
             null != t && (u.before = t),
             null != s && (u.user_id = s),
@@ -34,10 +38,13 @@ function o(e, t) {
         rejectWithError: !0,
     });
 }
+
 function c(e, t, n, l) {
     if (!s() && null != e)
         return (
-            r.h.dispatch({ type: "AUDIT_LOG_FETCH_START" }),
+            r.h.dispatch({
+                type: "AUDIT_LOG_FETCH_START",
+            }),
             o(e, {
                 userId: t,
                 action: l,
@@ -66,10 +73,14 @@ function c(e, t, n, l) {
                         applicationCommands: c,
                     });
                 },
-                () => r.h.dispatch({ type: "AUDIT_LOG_FETCH_FAIL" }),
+                () =>
+                    r.h.dispatch({
+                        type: "AUDIT_LOG_FETCH_FAIL",
+                    }),
             )
         );
 }
+
 function u(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     if (!a.A.hasOlderLogs || s() || null == e) return;
@@ -83,7 +94,9 @@ function u(e) {
             before: i,
             isGroupedFetch: t,
         }),
-        o(e, { before: i }).then(
+        o(e, {
+            before: i,
+        }).then(
             (e) => {
                 let {
                     audit_log_entries: t,
@@ -107,10 +120,14 @@ function u(e) {
                     applicationCommands: c,
                 });
             },
-            () => r.h.dispatch({ type: "AUDIT_LOG_FETCH_NEXT_PAGE_FAIL" }),
+            () =>
+                r.h.dispatch({
+                    type: "AUDIT_LOG_FETCH_NEXT_PAGE_FAIL",
+                }),
         )
     );
 }
+
 function E(e, t) {
     if (!s() && null != t)
         return (
@@ -121,6 +138,7 @@ function E(e, t) {
             c(t, null, null, e)
         );
 }
+
 function d(e, t) {
     if (!s() && null != t)
         return (
@@ -131,6 +149,7 @@ function d(e, t) {
             c(t, e)
         );
 }
+
 function _(e, t) {
     if (!s() && null != t)
         return (

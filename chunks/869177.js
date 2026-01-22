@@ -1,9 +1,12 @@
-n.d(t, { V: () => u });
+n.d(t, {
+    V: () => u,
+});
 var r = n(627968),
     i = n(397927),
     a = n(405139),
     s = n(985018),
     o = n(802177);
+
 function l(e, t, n) {
     return (
         t in e
@@ -17,6 +20,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -33,6 +37,7 @@ function c(e) {
     }
     return e;
 }
+
 function u(e) {
     let t,
         {
@@ -52,7 +57,9 @@ function u(e) {
             onValidPaymentRequest: d,
             onChooseType: n,
             loadingComponent: (0, r.jsx)(i.y$y, {
-                style: { marginTop: 16 },
+                style: {
+                    marginTop: 16,
+                },
                 type: i.tVU.PULSING_ELLIPSIS,
             }),
         };

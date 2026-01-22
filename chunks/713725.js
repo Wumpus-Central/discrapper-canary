@@ -1,5 +1,7 @@
 e.exports = function (e) {
-    let t = e.COMMENT(/\{/, /\}/, { contains: ["self"] });
+    let t = e.COMMENT(/\{/, /\}/, {
+        contains: ["self"],
+    });
     return {
         name: "Parser3",
         subLanguage: "xml",

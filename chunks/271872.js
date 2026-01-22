@@ -1,4 +1,6 @@
-r.d(t, { A: () => u });
+r.d(t, {
+    A: () => u,
+});
 var n = r(562465),
     s = r(47167),
     a = r(71393),
@@ -8,6 +10,7 @@ var n = r(562465),
     c = r(544105),
     f = r(652215),
     d = r(985018);
+
 function u(e, t) {
     var r;
     let { nonce: u, forQRCode: p } = t,

@@ -1,4 +1,8 @@
-n.d(t, { A: () => x }), n(228524), n(896048);
+n.d(t, {
+    A: () => x,
+}),
+    n(228524),
+    n(896048);
 var l = n(627968),
     a = n(64700),
     r = n(503698),
@@ -12,6 +16,7 @@ var l = n(627968),
     h = n(191817);
 let m = c().parserFor(u.A),
     b = c().reactFor(c().ruleOutput(u.A, "react"));
+
 function f(e) {
     let { description: t, supportsMarkdown: n } = e,
         [r, s] = a.useState(!1),
@@ -45,7 +50,9 @@ function f(e) {
                           className: h.R4,
                           parser: m,
                           output: b,
-                          state: { allowLinks: !0 },
+                          state: {
+                              allowLinks: !0,
+                          },
                           children: t,
                       })
                     : (0, l.jsx)(o.Text, {
@@ -63,6 +70,7 @@ function f(e) {
         ],
     });
 }
+
 function g(e) {
     let { onToggle: t, isShowingMore: n } = e,
         r = a.useMemo(
@@ -93,7 +101,15 @@ function g(e) {
     return (0, l.jsxs)(o.DUT, {
         className: h.dO,
         onClick: t,
-        children: [(0, l.jsx)("div", { className: h.yF }), r, (0, l.jsx)("div", { className: h.yF })],
+        children: [
+            (0, l.jsx)("div", {
+                className: h.yF,
+            }),
+            r,
+            (0, l.jsx)("div", {
+                className: h.yF,
+            }),
+        ],
     });
 }
 let x = function (e) {

@@ -1,4 +1,8 @@
-n.d(t, { l: () => p }), n(896048), n(667532);
+n.d(t, {
+    l: () => p,
+}),
+    n(896048),
+    n(667532);
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -8,6 +12,7 @@ var r = n(627968),
     c = n(967198),
     u = n(743790),
     d = n(960016);
+
 function f(e) {
     let { children: t } = e;
     return (0, r.jsx)(s.Ay, {
@@ -18,6 +23,7 @@ function f(e) {
         children: t,
     });
 }
+
 function p(e) {
     let { guildIds: t } = e,
         n = (0, i.bG)([c.A], () => c.A.getGuildId()),

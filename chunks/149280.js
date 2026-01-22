@@ -1,4 +1,6 @@
-t.d(n, { A: () => d });
+t.d(n, {
+    A: () => d,
+});
 var l = t(311907),
     r = t(554146),
     i = t(386849),
@@ -7,6 +9,7 @@ var l = t(311907),
     c = t(576705),
     o = t(937161),
     u = t(652215);
+
 function d(e) {
     var n, t, d;
     let _ = (0, l.bG)([c.A], () => c.A.can(u.xBc.ADMINISTRATOR, e)),

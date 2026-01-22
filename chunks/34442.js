@@ -15,6 +15,7 @@ var r = n(627968),
     d = n(958338),
     f = n(985018),
     p = n(810824);
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -40,6 +41,7 @@ function b(e) {
     }
     return e;
 }
+
 function g(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -58,6 +60,7 @@ function g(e, t) {
         e
     );
 }
+
 function m(e, t) {
     if (null == e) return {};
     var n,
@@ -86,6 +89,7 @@ function m(e, t) {
             (r = n[l]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
     return i;
 }
+
 function y(e) {
     let { widgetType: t, widget: n, onAddGame: y, children: O } = e,
         j = m(e, ["widgetType", "widget", "onAddGame", "children"]),
@@ -99,7 +103,9 @@ function y(e) {
             (e) => {
                 (0, u.ew)({
                     widgetType: t,
-                    game: { applicationId: e },
+                    game: {
+                        applicationId: e,
+                    },
                 }),
                     s.ORC.announce(f.intl.string(f.t.q0U3DE)),
                     h({
@@ -193,7 +199,9 @@ function y(e) {
                                 autoFocus: !0,
                                 onQueryChange: R,
                             }),
-                            (0, r.jsx)(a.X2, { maxVisibleItems: 7 }),
+                            (0, r.jsx)(a.X2, {
+                                maxVisibleItems: 7,
+                            }),
                         ],
                     }),
                 });
@@ -202,6 +210,7 @@ function y(e) {
         }),
     );
 }
+
 function O(e) {
     let { disabled: t } = e,
         n = m(e, ["disabled"]),
@@ -237,6 +246,7 @@ function O(e) {
         ),
     );
 }
+
 function j(e) {
     let t = l.useRef(null);
     return (0, r.jsx)(
@@ -263,7 +273,11 @@ function j(e) {
                                 },
                                 e,
                             ),
-                            { children: (0, r.jsx)(s.pa$, { color: "currentColor" }) },
+                            {
+                                children: (0, r.jsx)(s.pa$, {
+                                    color: "currentColor",
+                                }),
+                            },
                         ),
                     ),
             },

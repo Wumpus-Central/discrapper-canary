@@ -1,5 +1,9 @@
 let r;
-n.d(t, { A: () => h }), n(321073), n(896048);
+n.d(t, {
+    A: () => h,
+}),
+    n(321073),
+    n(896048);
 var i = n(635377),
     a = n.n(i),
     s = n(686956),
@@ -8,7 +12,10 @@ var i = n(635377),
     c = n(927813),
     u = n(427262),
     d = n(985018);
-let f = new (a())({ maxAge: +c.A.Millis.MINUTE });
+let f = new (a())({
+    maxAge: +c.A.Millis.MINUTE,
+});
+
 function p(e, t, n) {
     null != r && clearTimeout(r),
         (r = setTimeout(() => {
@@ -29,6 +36,7 @@ function p(e, t, n) {
             r.length > 0 && s.A.requestMembers(r, t.toLocaleLowerCase(), n);
         }, 200));
 }
+
 function _(e, t) {
     let n = "".concat(null != e ? e : "", ":").concat(t),
         r = f.get(n);

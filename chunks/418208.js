@@ -12,14 +12,17 @@ var r = n(311907),
     o = n(576705),
     l = n(309010),
     c = n(818348);
+
 function u() {
     let e = (0, i.yM)();
     return (0, a.f)("useIsStageSpeakingDisabledForCurrentUser") && e;
 }
+
 function d() {
     let e = (0, i.NI)();
     return (0, a.W)("isStageSpeakingDisabledForCurrentUser") && e;
 }
+
 function f(e) {
     let t = (0, i.$8)(),
         n = null != e ? e : l.A.getChannelId(),
@@ -27,6 +30,7 @@ function f(e) {
         u = null != r && o.A.can(c.xB.REQUEST_TO_SPEAK, r);
     return (0, a.W)("shouldAgeVerifyToSpeakForCurrentUser") && !t && u;
 }
+
 function p(e) {
     let t = null != e ? e : l.A.getChannelId(),
         n = (0, r.bG)([o.A, s.A], () => {
@@ -36,6 +40,7 @@ function p(e) {
         u = (0, i.uE)();
     return (0, a.f)("useShouldAgeVerifyToSpeakForCurrentUser") && !u && n;
 }
+
 function _(e) {
     let t = null != e ? e : l.A.getChannelId(),
         n = (0, r.bG)([o.A, s.A], () => {

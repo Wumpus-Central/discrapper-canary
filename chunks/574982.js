@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -8,6 +10,7 @@ var i = n(311907),
     l = n(430452),
     c = n(531525),
     u = n(985018);
+
 function d() {
     let e = (0, i.bG)([l.A], () => l.A.getEnableSilenceWarning());
     return (0, r.jsx)(o.x, {

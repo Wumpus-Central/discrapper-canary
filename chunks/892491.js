@@ -1,4 +1,6 @@
-n.d(t, { F: () => r });
+n.d(t, {
+    F: () => r,
+});
 var r = (function (e) {
     return (
         (e.DARK = "DARK"),

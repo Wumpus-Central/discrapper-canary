@@ -1,4 +1,6 @@
-t(697509)(r, "__esModule", { value: !0 }),
+t(697509)(r, "__esModule", {
+    value: !0,
+}),
     (r.default = void 0),
     (r.default = {
         abstract: !1,
@@ -15,21 +17,29 @@ t(697509)(r, "__esModule", { value: !0 }),
         },
         relatedConcepts: [
             {
-                concept: { name: "item" },
+                concept: {
+                    name: "item",
+                },
                 module: "XForms",
             },
             {
-                concept: { name: "listitem" },
+                concept: {
+                    name: "listitem",
+                },
                 module: "ARIA",
             },
             {
-                concept: { name: "option" },
+                concept: {
+                    name: "option",
+                },
                 module: "HTML",
             },
         ],
         requireContextRole: [],
         requiredContextRole: [],
         requiredOwnedElements: [],
-        requiredProps: { "aria-selected": "false" },
+        requiredProps: {
+            "aria-selected": "false",
+        },
         superClass: [["roletype", "widget", "input"]],
     });

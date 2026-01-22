@@ -1,4 +1,6 @@
-n.d(t, { j: () => v });
+n.d(t, {
+    j: () => v,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -35,7 +37,9 @@ let A = () => (0, h.U)(!1),
             T = (null == S || null == (n = S.subscription_trial) ? void 0 : n.sku_id) === E.pe.TIER_0,
             C = null != S || null != I;
         return (0, r.jsxs)("div", {
-            className: s()(y.VL, { [y.Hz]: C }),
+            className: s()(y.VL, {
+                [y.Hz]: C,
+            }),
             children: [
                 C
                     ? (0, r.jsx)(f.Ay, {
@@ -52,7 +56,9 @@ let A = () => (0, h.U)(!1),
                                     planName: (0, _.RH)(E.gD.PREMIUM_MONTH_TIER_0),
                                     onClick: h,
                                 })
-                              : b.intl.format(b.t.jt7JX6, { onClick: h }),
+                              : b.intl.format(b.t.jt7JX6, {
+                                    onClick: h,
+                                }),
                       })
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
@@ -70,7 +76,9 @@ let A = () => (0, h.U)(!1),
                               (0, r.jsx)(o.Text, {
                                   className: y.GR,
                                   variant: "text-md/normal",
-                                  children: b.intl.format(b.t.jt7JX6, { onClick: h }),
+                                  children: b.intl.format(b.t.jt7JX6, {
+                                      onClick: h,
+                                  }),
                               }),
                           ],
                       }),

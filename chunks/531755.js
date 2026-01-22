@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968),
     l = n(503698),
     i = n.n(l),
@@ -7,6 +9,7 @@ var r = n(627968),
     o = n(228053),
     c = n(985018),
     u = n(401775);
+
 function d(e) {
     let { wishlist: t, analyticsLocations: n, user: l, isOwner: d, className: f } = e;
     return (0, r.jsxs)("div", {
@@ -17,7 +20,9 @@ function d(e) {
                 color: "text-subtle",
                 children: d
                     ? c.intl.string(c.t["+GB8Kt"])
-                    : c.intl.formatToPlainString(c.t["D/FWJf"], { username: s.Ay.getName(l) }),
+                    : c.intl.formatToPlainString(c.t["D/FWJf"], {
+                          username: s.Ay.getName(l),
+                      }),
             }),
             (0, r.jsx)(o.A, {
                 wishlist: t,

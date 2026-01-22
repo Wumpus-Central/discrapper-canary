@@ -1,4 +1,6 @@
-n.d(t, { A: () => u }),
+n.d(t, {
+    A: () => u,
+}),
     n(896048),
     n(801460),
     n(508300),
@@ -23,14 +25,27 @@ var a = n(627968),
     o = n(783878),
     c = n(732955),
     d = n(397927);
+
 function u() {
-    let e = Object.keys(i).map((e) => (0, a.jsx)(h, { riveName: e }, e));
+    let e = Object.keys(i).map((e) =>
+        (0, a.jsx)(
+            h,
+            {
+                riveName: e,
+            },
+            e,
+        ),
+    );
     return (0, a.jsx)(r.ArX, {
-        style: { maxHeight: "100%" },
+        style: {
+            maxHeight: "100%",
+        },
         children: (0, a.jsxs)(r.BJc, {
             gap: 24,
             padding: 8,
-            style: { boxSizing: "border-box" },
+            style: {
+                boxSizing: "border-box",
+            },
             children: [
                 (0, a.jsx)(r.DZT, {
                     variant: "heading-lg/medium",
@@ -56,6 +71,7 @@ function u() {
         }),
     });
 }
+
 function m() {
     let [e, t] = l.useState(null),
         [n, i] = l.useState(null),
@@ -70,7 +86,7 @@ function m() {
                 o(null != (e = null == (n = m.current) ? void 0 : n.getProperties()) ? e : {}),
                     u(null != (t = null == (a = m.current) ? void 0 : a.getArtboards()) ? t : []),
                     i({});
-            }, 1000);
+            }, 1e3);
         }, []),
         j = l.useCallback(
             (e, t) => {
@@ -209,6 +225,7 @@ function m() {
         ],
     });
 }
+
 function p(e) {
     let { property: t, type: n, value: l, onChange: i, artboards: c } = e;
     return "string" === n
@@ -274,6 +291,7 @@ function p(e) {
                       })
                     : null;
 }
+
 function h(e) {
     var t;
     let { riveName: n, onRiveLoad: s } = e,
@@ -286,7 +304,9 @@ function h(e) {
         {
             gap: 8,
             children: [
-                (0, a.jsx)("label", { children: n }),
+                (0, a.jsx)("label", {
+                    children: n,
+                }),
                 (0, a.jsxs)(r.BJc, {
                     justify: "space-between",
                     direction: "horizontal",

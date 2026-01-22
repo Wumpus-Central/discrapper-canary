@@ -1,4 +1,7 @@
-n.d(t, { A: () => j }), n(321073);
+n.d(t, {
+    A: () => j,
+}),
+    n(321073);
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -29,6 +32,7 @@ var r = n(627968),
     w = n(842157),
     P = n(49999),
     D = n(985018);
+
 function x(e, t) {
     var n;
     let r = (0, b.d)(e),
@@ -47,6 +51,7 @@ function x(e, t) {
         launchableAppId: r,
     };
 }
+
 function L(e, t) {
     var n, r, i, a;
     let { bot: s } = t,
@@ -66,6 +71,7 @@ function L(e, t) {
         name: null != (n = null == (a = e.activity) ? void 0 : a.name_override) ? n : t.name,
     };
 }
+
 function j(e) {
     var t, n;
     let {
@@ -107,7 +113,9 @@ function j(e) {
         }, [Y]),
         K = (0, h.F)(g),
         z = i.useMemo(() => (null != B ? B : null != K && U ? K : void 0), [U, B, K]),
-        q = u.A.useConfig({ location: "RichPresenceGameActivityInviteEmbed" }),
+        q = u.A.useConfig({
+            location: "RichPresenceGameActivityInviteEmbed",
+        }),
         { canStartAuthorization: X, hasAlreadyLinked: Z, startAuthorization: Q } = (0, f.RD)(g),
         $ = (0, d.z)(Q, Z),
         J = !(0, I.A)(k, v, g.id),
@@ -127,12 +135,18 @@ function j(e) {
                                 graphic: {
                                     type: "dynamic",
                                     component: l.Z86.ACCOUNT_LINK_DISPLAY,
-                                    props: { application: g },
+                                    props: {
+                                        application: g,
+                                    },
                                 },
-                                title: D.intl.formatToPlainString(D.t["lo6H6+"], { gameName: g.name }),
+                                title: D.intl.formatToPlainString(D.t["lo6H6+"], {
+                                    gameName: g.name,
+                                }),
                                 body: D.intl.string(D.t.qYAzOp),
                                 targetElementRef: et,
-                                caretConfig: { align: "start" },
+                                caretConfig: {
+                                    align: "start",
+                                },
                                 shouldShow: !0,
                                 gradientColor: "purple",
                                 onRequestClose: () => n(P.i.USER_DISMISS),

@@ -1,4 +1,6 @@
-n.d(i, { default: () => h });
+n.d(i, {
+    default: () => h,
+});
 var l = n(627968);
 n(64700);
 var e = n(311907),
@@ -13,6 +15,7 @@ var e = n(311907),
     g = n(967198),
     A = n(652215),
     E = n(985018);
+
 function h(t) {
     let { guild: i, onSelect: n } = t,
         h = i.id,
@@ -53,7 +56,9 @@ function h(t) {
                         subtitle:
                             (null == b ? void 0 : b.applicationStatus) === p.B5.STARTED
                                 ? E.intl.string(E.t.fJwWVt)
-                                : E.intl.format(E.t["9ZezpN"], { name: i.name }),
+                                : E.intl.format(E.t["9ZezpN"], {
+                                      name: i.name,
+                                  }),
                         confirmText: E.intl.string(E.t.p89ACt),
                         cancelText: E.intl.string(E.t.oEAioF),
                         onConfirm: m,
@@ -61,7 +66,9 @@ function h(t) {
                 },
                 color: "danger",
             }),
-            (0, l.jsx)(a.rXV, { children: C }),
+            (0, l.jsx)(a.rXV, {
+                children: C,
+            }),
         ],
     });
 }

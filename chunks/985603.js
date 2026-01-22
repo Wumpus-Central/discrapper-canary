@@ -1,4 +1,15 @@
-n.d(t, { A: () => k }), n(747238), n(896048), n(680155), n(323874), n(14289), n(35956), n(638769), n(693327), n(554719);
+n.d(t, {
+    A: () => k,
+}),
+    n(747238),
+    n(896048),
+    n(680155),
+    n(323874),
+    n(14289),
+    n(35956),
+    n(638769),
+    n(693327),
+    n(554719);
 var r = n(627968);
 n(64700);
 var i = n(835245),
@@ -32,6 +43,7 @@ var i = n(835245),
     w = n(613057),
     L = n(652215),
     R = n(654487);
+
 function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -57,6 +69,7 @@ function D(e) {
     }
     return e;
 }
+
 function M(e, t) {
     null != e &&
         C.default.track(L.HAw.EXTERNAL_DYNAMIC_LINK_RECEIVED, {
@@ -86,7 +99,12 @@ let k = {
             if (null == S.default.getCurrentUser()) return;
             let { guildTemplate: i } = await b.A.resolveGuildTemplate(t);
             if (null == i)
-                throw new x.A({ errorCode: L.Lw6.INVALID_GUILD_TEMPLATE }, "Invalid guild template id: ".concat(t));
+                throw new x.A(
+                    {
+                        errorCode: L.Lw6.INVALID_GUILD_TEMPLATE,
+                    },
+                    "Invalid guild template id: ".concat(t),
+                );
             return (
                 j.Ay.focus(),
                 (0, a.mMO)(async () => {
@@ -96,7 +114,10 @@ let k = {
                         return (0, r.jsx)(
                             e,
                             ((n = D({}, t)),
-                            (l = l = { guildTemplate: i }),
+                            (l = l =
+                                {
+                                    guildTemplate: i,
+                                }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
                                 : (function (e, t) {
@@ -138,12 +159,30 @@ let k = {
                                 }),
                                 (0, a.mMO)(async () => {
                                     let { default: e } = await n.e("14439").then(n.bind(n, 67327));
-                                    return (n) => (0, r.jsx)(e, D({ code: t }, n));
+                                    return (n) =>
+                                        (0, r.jsx)(
+                                            e,
+                                            D(
+                                                {
+                                                    code: t,
+                                                },
+                                                n,
+                                            ),
+                                        );
                                 }),
-                                e({ giftCode: l });
+                                e({
+                                    giftCode: l,
+                                });
                         })
                         .catch(() =>
-                            i(new x.A({ errorCode: L.Lw6.INVALID_GIFT_CODE }, "Invalid gift code: ".concat(t))),
+                            i(
+                                new x.A(
+                                    {
+                                        errorCode: L.Lw6.INVALID_GIFT_CODE,
+                                    },
+                                    "Invalid gift code: ".concat(t),
+                                ),
+                            ),
                         );
                 });
             });
@@ -200,7 +239,9 @@ let k = {
                     break;
                 case w.XK.GAME_SHOP:
                     null != r &&
-                        ((0, I.bG)({ pathname: L.BVt.CHANNELS_GAME_SHOP(r.guildId, r.pageIndex, r.skuId, r.slug) }),
+                        ((0, I.bG)({
+                            pathname: L.BVt.CHANNELS_GAME_SHOP(r.guildId, r.pageIndex, r.skuId, r.slug),
+                        }),
                         M(r.fingerprint, (0, w.OE)(t)));
                     break;
                 case w.XK.QUEST_HOME:
@@ -218,7 +259,12 @@ let k = {
                     } else (0, I.bG)(L.BVt.QUEST_HOME_V2);
                     break;
                 case w.XK.QUEST_PREVIEW_TOOL:
-                    if ((0, O.U)({ location: R.rE.QUEST_PREVIEW_TOOL_2 }) && null != r) {
+                    if (
+                        (0, O.U)({
+                            location: R.rE.QUEST_PREVIEW_TOOL_2,
+                        }) &&
+                        null != r
+                    ) {
                         let e = new URLSearchParams();
                         e.set(y.L1.TAB, y.NC.PREVIEW_TOOL),
                             null != r.questId && e.set(y.L1.QUEST_ID, r.questId),
@@ -244,7 +290,14 @@ let k = {
                     if (null != a) return (0, _.openOAuth2ModalWithCreateGuildModal)(a), !0;
                     return !1;
                 case w.XK.ONE_TIME_LOGIN:
-                    if (null != r) return (0, E.N)({ token: r.token }), M(r.fingerprint, (0, w.OE)(t)), !0;
+                    if (null != r)
+                        return (
+                            (0, E.N)({
+                                token: r.token,
+                            }),
+                            M(r.fingerprint, (0, w.OE)(t)),
+                            !0
+                        );
                     return !1;
                 case w.XK.SHOP:
                     null != r &&
@@ -256,7 +309,10 @@ let k = {
                     break;
                 case w.XK.FEATURES:
                     (null == r ? void 0 : r.path) != null &&
-                        ((0, I.bG)({ pathname: r.path }), M(r.fingerprint, (0, w.OE)(t)));
+                        ((0, I.bG)({
+                            pathname: r.path,
+                        }),
+                        M(r.fingerprint, (0, w.OE)(t)));
                     break;
                 case w.XK.ACTIVITIES:
                     if (null != r) {
@@ -282,7 +338,9 @@ let k = {
                                             failure_reason: "no_bot_user",
                                             attempt_id: n,
                                         });
-                                    let o = await u.A.openPrivateChannel({ recipientIds: s }),
+                                    let o = await u.A.openPrivateChannel({
+                                            recipientIds: s,
+                                        }),
                                         c = new URL(t),
                                         d = null != (r = c.searchParams.get("referrer_id")) ? r : void 0,
                                         { customId: p } = await (0, A.d9)(
@@ -342,7 +400,9 @@ let k = {
             } = e;
             if (!v.A.hasPendingAuthorizedState(l))
                 throw new x.A(
-                    { errorCode: L.Lw6.INVALID_CONNECTION_CALLBACK_STATE },
+                    {
+                        errorCode: L.Lw6.INVALID_CONNECTION_CALLBACK_STATE,
+                    },
                     "Provider authorization did not originate from this discord client",
                 );
             try {
@@ -357,7 +417,12 @@ let k = {
                 );
             } catch (e) {
                 if ((null == e ? void 0 : e.status) === 400)
-                    throw new x.A({ errorCode: L.Lw6.BAD_REQUEST_FOR_PROVIDER }, "Bad request for provider");
+                    throw new x.A(
+                        {
+                            errorCode: L.Lw6.BAD_REQUEST_FOR_PROVIDER,
+                        },
+                        "Bad request for provider",
+                    );
                 throw (N._.dispatch(L.jej.CONNECTIONS_CALLBACK_ERROR), e);
             }
         },

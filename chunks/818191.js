@@ -1,7 +1,11 @@
-n.d(t, { i: () => s }), n(321073);
+n.d(t, {
+    i: () => s,
+}),
+    n(321073);
 var r = n(954571),
     i = n(834720),
     l = n(652215);
+
 function s(e) {
     let t = i.Ay.getDiscoveryChecklist(e),
         n = [];

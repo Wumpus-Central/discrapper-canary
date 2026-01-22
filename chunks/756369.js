@@ -110,6 +110,7 @@ var r,
     ez = n(652215),
     eq = n(985018),
     eX = n(867525);
+
 function eZ(e, t, n) {
     return (
         t in e
@@ -123,6 +124,7 @@ function eZ(e, t, n) {
         e
     );
 }
+
 function eQ(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -139,6 +141,7 @@ function eQ(e) {
     }
     return e;
 }
+
 function e$(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -151,6 +154,7 @@ function e$(e, t) {
     }
     return n;
 }
+
 function eJ(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -162,6 +166,7 @@ function eJ(e, t) {
         e
     );
 }
+
 function e0(e, t) {
     if (null == e) return {};
     var n,
@@ -178,6 +183,7 @@ function e0(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function e1(e, t) {
     if (null == e) return {};
     var n,
@@ -205,6 +211,7 @@ let e2 = [ez.Auw.GIFV],
               })
             : null;
     };
+
 function e5(e, t) {
     return (
         e === t ||
@@ -250,7 +257,9 @@ class e7 extends (r = a.Component) {
                 });
                 break;
             case ev.xC.AGE_VERIFICATION_RETRY:
-                r = (0, i.jsx)(E.A, { channelId: t.id });
+                r = (0, i.jsx)(E.A, {
+                    channelId: t.id,
+                });
                 break;
             default:
                 return null;
@@ -277,8 +286,22 @@ class e7 extends (r = a.Component) {
                                 r,
                             )
                           : null;
-                  if (n === T.I.TEMPLATE) return (0, i.jsx)(V.A, { code: r }, r);
-                  if (n === T.I.EVENT) return (0, i.jsx)(G.A, { code: r }, r);
+                  if (n === T.I.TEMPLATE)
+                      return (0, i.jsx)(
+                          V.A,
+                          {
+                              code: r,
+                          },
+                          r,
+                      );
+                  if (n === T.I.EVENT)
+                      return (0, i.jsx)(
+                          G.A,
+                          {
+                              code: r,
+                          },
+                          r,
+                      );
                   if (n === T.I.CHANNEL_LINK)
                       return (0, i.jsx)(
                           ew.A,
@@ -310,8 +333,22 @@ class e7 extends (r = a.Component) {
                           },
                           r,
                       );
-                  } else if (n === T.I.GUILD_PRODUCT) return (0, i.jsx)(U.A, { code: r }, r);
-                  else if (n === T.I.SERVER_SHOP) return (0, i.jsx)(C.A, { guildId: r }, r);
+                  } else if (n === T.I.GUILD_PRODUCT)
+                      return (0, i.jsx)(
+                          U.A,
+                          {
+                              code: r,
+                          },
+                          r,
+                      );
+                  else if (n === T.I.SERVER_SHOP)
+                      return (0, i.jsx)(
+                          C.A,
+                          {
+                              guildId: r,
+                          },
+                          r,
+                      );
                   else if (n === T.I.SOCIAL_LAYER_STOREFRONT) {
                       let [e, t] = r.split("-"),
                           { channel: n } = this.props;
@@ -324,7 +361,14 @@ class e7 extends (r = a.Component) {
                           },
                           r,
                       );
-                  } else if (n === T.I.QUESTS_EMBED) return (0, i.jsx)(ee.A, { questId: r }, r);
+                  } else if (n === T.I.QUESTS_EMBED)
+                      return (0, i.jsx)(
+                          ee.A,
+                          {
+                              questId: r,
+                          },
+                          r,
+                      );
                   else if (n === T.I.APP_DIRECTORY_STOREFRONT)
                       return (0, i.jsx)(
                           y.G,
@@ -443,6 +487,7 @@ class e7 extends (r = a.Component) {
             ),
             m = p.length > 1,
             g = (0, c.Lt)(d, ez.pr7.IS_VOICE_MESSAGE);
+
         function E(e, t) {
             return (0, eS.iW)(e.originalItem, t);
         }
@@ -487,7 +532,9 @@ class e7 extends (r = a.Component) {
                 });
             return u in _ && m && ((c.onClick = _[u]), (c.handlePreloadImage = h[u])), c;
         });
-        return (0, i.jsx)(eF.A, { items: b });
+        return (0, i.jsx)(eF.A, {
+            items: b,
+        });
     }
     renderEmbeds(e) {
         let { renderEmbeds: t, hasBailedAst: n } = this.props;
@@ -626,9 +673,15 @@ class e7 extends (r = a.Component) {
             header: eq.intl.string(eq.t.VL1KOk),
             confirmText: eq.intl.string(eq.t.YEHppG),
             cancelText: eq.intl.string(eq.t["ETE/oC"]),
-            onCancel: () => this.setState({ showSuppressModal: !1 }),
+            onCancel: () =>
+                this.setState({
+                    showSuppressModal: !1,
+                }),
             onConfirm: () => {
-                _.A.suppressEmbeds(e.id, t.id), this.setState({ showSuppressModal: !1 });
+                _.A.suppressEmbeds(e.id, t.id),
+                    this.setState({
+                        showSuppressModal: !1,
+                    });
             },
             children: [
                 (0, i.jsx)(p.Text, {
@@ -649,7 +702,9 @@ class e7 extends (r = a.Component) {
         let { channel: e, message: t } = this.props,
             { attachmentToDelete: n } = this.state;
         return null == n
-            ? void this.setState({ showRemoveAttachmentModal: !1 })
+            ? void this.setState({
+                  showRemoveAttachmentModal: !1,
+              })
             : (0, i.jsx)(p.MJ3, {
                   dismissable: !0,
                   header: eq.intl.string(eq.t.CbTIEo),
@@ -713,17 +768,23 @@ class e7 extends (r = a.Component) {
     }
     renderSafetyPolicyNotice(e) {
         return 1 === e.embeds.length && e.embeds[0].type === ez.Auw.SAFETY_POLICY_NOTICE
-            ? (0, i.jsx)(er.V, { message: e })
+            ? (0, i.jsx)(er.V, {
+                  message: e,
+              })
             : null;
     }
     renderSafetySystemNotification(e) {
         return 1 === e.embeds.length && e.embeds[0].type === ez.Auw.SAFETY_SYSTEM_NOTIFICATION
-            ? (0, i.jsx)(ei.l, { embed: e.embeds[0] })
+            ? (0, i.jsx)(ei.l, {
+                  embed: e.embeds[0],
+              })
             : null;
     }
     renderMediaObscureNotice(e) {
         return (0 !== e.attachments.length || 0 !== e.embeds.length) && (0, R.KM)(e)
-            ? (0, i.jsx)(P.A, { message: e })
+            ? (0, i.jsx)(P.A, {
+                  message: e,
+              })
             : null;
     }
     renderPoll(e, t) {
@@ -735,13 +796,23 @@ class e7 extends (r = a.Component) {
             });
     }
     renderShareClientTheme(e) {
-        return null != e.sharedClientTheme ? (0, i.jsx)(I.f, { message: e }) : null;
+        return null != e.sharedClientTheme
+            ? (0, i.jsx)(I.f, {
+                  message: e,
+              })
+            : null;
     }
     renderReportedMessage(e) {
-        if (e.messageSnapshots.length > 0 && (0, et.Mn)(e, this.props.channel)) return (0, i.jsx)(en.A, { message: e });
+        if (e.messageSnapshots.length > 0 && (0, et.Mn)(e, this.props.channel))
+            return (0, i.jsx)(en.A, {
+                message: e,
+            });
     }
     renderForwardedMessage(e) {
-        if (e.messageSnapshots.length > 0 && !(0, et.Mn)(e, this.props.channel)) return (0, i.jsx)(x.A, { message: e });
+        if (e.messageSnapshots.length > 0 && !(0, et.Mn)(e, this.props.channel))
+            return (0, i.jsx)(x.A, {
+                message: e,
+            });
     }
     renderEditedTag(e, t) {
         return (0, i.jsx)(eY.A, {
@@ -915,7 +986,11 @@ class e7 extends (r = a.Component) {
             ),
             eZ(this, "handleEmbedSuppressed", (e) => {
                 let { channel: t, message: n } = this.props;
-                e.shiftKey ? _.A.suppressEmbeds(t.id, n.id) : this.setState({ showSuppressModal: !0 });
+                e.shiftKey
+                    ? _.A.suppressEmbeds(t.id, n.id)
+                    : this.setState({
+                          showSuppressModal: !0,
+                      });
             }),
             eZ(this, "handleRemoveAttachment", (e) => {
                 let t = e.originalItem;
@@ -926,6 +1001,7 @@ class e7 extends (r = a.Component) {
             });
     }
 }
+
 function e8(e) {
     var t;
     let { channel: n, message: r, renderSuppressEmbeds: a, isMessageSnapshot: s } = e,
@@ -1002,7 +1078,9 @@ function e8(e) {
                         },
                         R,
                     ),
-                    { disableReactionReads: !!C || R.disableReactionReads },
+                    {
+                        disableReactionReads: !!C || R.disableReactionReads,
+                    },
                 ),
                 e,
             ),

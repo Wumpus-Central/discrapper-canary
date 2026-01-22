@@ -1,4 +1,8 @@
-n.d(t, { A: () => h }), n(228524), n(896048);
+n.d(t, {
+    A: () => h,
+}),
+    n(228524),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -20,7 +24,13 @@ let f = 200,
             y = i.useRef(null),
             O = i.useMemo(
                 () =>
-                    i.Children.map(t, (e) => (!i.isValidElement(e) || _(e) ? e : i.cloneElement(e, { tabIndex: -1 }))),
+                    i.Children.map(t, (e) =>
+                        !i.isValidElement(e) || _(e)
+                            ? e
+                            : i.cloneElement(e, {
+                                  tabIndex: -1,
+                              }),
+                    ),
                 [t],
             ),
             [A, v] = i.useState(!1),
@@ -63,7 +73,9 @@ let f = 200,
                     });
             });
             return (
-                n.observe(e, { childList: !0 }),
+                n.observe(e, {
+                    childList: !0,
+                }),
                 e.addEventListener("scrollend", w),
                 () => {
                     t.disconnect(), n.disconnect(), e.removeEventListener("scrollend", w);
@@ -83,7 +95,9 @@ let f = 200,
                                 left: n,
                                 behavior: "smooth",
                             }),
-                            e.addEventListener("scrollend", () => (b.current = !1), { once: !0 }),
+                            e.addEventListener("scrollend", () => (b.current = !1), {
+                                once: !0,
+                            }),
                             w();
                     }, f),
                 [m, w],
@@ -101,7 +115,9 @@ let f = 200,
                                 left: n,
                                 behavior: "smooth",
                             }),
-                            e.addEventListener("scrollend", () => (b.current = !1), { once: !0 }),
+                            e.addEventListener("scrollend", () => (b.current = !1), {
+                                once: !0,
+                            }),
                             w();
                     }, f),
                 [m, w],
@@ -125,7 +141,9 @@ let f = 200,
                     }
                 }, 10);
             },
-            k = { "--custom-edge-fade-width": p(a) };
+            k = {
+                "--custom-edge-fade-width": p(a),
+            };
         return (0, r.jsxs)("div", {
             ref: P,
             style: k,
@@ -136,7 +154,9 @@ let f = 200,
                         className: d.o1,
                         children: [
                             (0, r.jsx)("div", {
-                                className: s()(d.x6, { [d.r9]: !S && h }),
+                                className: s()(d.x6, {
+                                    [d.r9]: !S && h,
+                                }),
                                 children: (0, r.jsx)(l.K0, {
                                     icon: l.Zge,
                                     variant: "overlay-secondary",
@@ -147,7 +167,9 @@ let f = 200,
                                 }),
                             }),
                             (0, r.jsx)("div", {
-                                className: s()(d.x6, { [d.r9]: !T && h }),
+                                className: s()(d.x6, {
+                                    [d.r9]: !T && h,
+                                }),
                                 children: (0, r.jsx)(l.K0, {
                                     icon: l.KS6,
                                     variant: "overlay-secondary",

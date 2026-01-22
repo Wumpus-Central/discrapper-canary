@@ -1,5 +1,7 @@
 a.r(t),
-    a.d(t, { default: () => c }),
+    a.d(t, {
+        default: () => c,
+    }),
     a(896048),
     a(321073),
     a(457529),
@@ -13,6 +15,7 @@ var o = a(626584),
     i = a(274372),
     l = a(372684),
     n = a(672412);
+
 function s(e, t, a) {
     return (
         t in e
@@ -137,7 +140,7 @@ class d {
                 let a = t[0],
                     o = d.find((e) => c(e) === a);
                 if (null != o) {
-                    let t = n + 1000 * e.t0;
+                    let t = n + 1e3 * e.t0;
                     if (null != e.words && e.words.length > 0) {
                         let a = c(o).split(" "),
                             i = e.words.map((e) =>
@@ -175,13 +178,15 @@ class d {
                                         }
                                         return e;
                                     })({}, e),
-                                    { cleanText: c(e.text) },
+                                    {
+                                        cleanText: c(e.text),
+                                    },
                                 ),
                             );
                         for (let e = 0; e <= i.length - a.length; e++) {
                             let l = i.slice(e, e + a.length);
                             if (l.map((e) => e.cleanText).join(" ") === c(o)) {
-                                t = n + 1000 * l[0].t0;
+                                t = n + 1e3 * l[0].t0;
                                 break;
                             }
                         }

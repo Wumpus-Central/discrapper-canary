@@ -16,6 +16,7 @@ var r = n(627968),
     f = n(61881),
     h = n(985018),
     A = n(461349);
+
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -41,6 +42,7 @@ function g(e) {
     }
     return e;
 }
+
 function m(e) {
     let { imageSrc: t, gameName: n } = e,
         [l, a] = i.useState(!1),
@@ -65,6 +67,7 @@ function m(e) {
               onLoad: () => a(!1),
           });
 }
+
 function b(e) {
     let { imageSrc: t, gameName: n, applicationId: l, userId: g, className: b, hideTooltip: _ = !1, coverRef: E } = e,
         O = (0, s.bG)([f.A], () => f.A.hasUnsavedChanges()),
@@ -76,7 +79,9 @@ function b(e) {
             trackEntryPointImpression: !0,
         }),
         I = null != n ? n : h.intl.string(h.t.GIWFlF),
-        v = h.intl.formatToPlainString(h.t["8QLQB+"], { gameName: I }),
+        v = h.intl.formatToPlainString(h.t["8QLQB+"], {
+            gameName: I,
+        }),
         S = i.useCallback(
             (e) => {
                 if (O) {
@@ -120,6 +125,7 @@ function b(e) {
               }),
     );
 }
+
 function _(e) {
     let { applicationId: t, userId: n, className: i, disableInteraction: l = !1, hideTooltip: s, coverRef: o } = e,
         u = (function (e, t) {

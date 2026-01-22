@@ -1,4 +1,7 @@
-a.d(t, { EmojiAddModal: () => u }), a(896048);
+a.d(t, {
+    EmojiAddModal: () => u,
+}),
+    a(896048);
 var i = a(627968),
     n = a(64700),
     s = a(158954),
@@ -8,6 +11,7 @@ var i = a(627968),
     c = a(320137),
     o = a(985018),
     m = a(887369);
+
 function h(e) {
     let { emoji: t, onChange: a, value: n } = e,
         s = r.Ay.getEmojiURL({
@@ -42,6 +46,7 @@ function h(e) {
         }),
     });
 }
+
 function u(e) {
     let {
             guildId: t,
@@ -65,7 +70,9 @@ function u(e) {
                 onClick: x,
             },
             {
-                text: o.intl.format(o.t.pX74jh, { totalEmoji: p.size }),
+                text: o.intl.format(o.t.pX74jh, {
+                    totalEmoji: p.size,
+                }),
                 variant: "primary",
                 onClick: function () {
                     d(p), x();
@@ -78,7 +85,9 @@ function u(e) {
             children: [
                 (0, i.jsx)(l.Text, {
                     variant: "text-md/normal",
-                    children: o.intl.format(o.t["OnK+C1"], { transitionToManageEmoji: r }),
+                    children: o.intl.format(o.t["OnK+C1"], {
+                        transitionToManageEmoji: r,
+                    }),
                 }),
                 null != j &&
                     j.length > 0 &&

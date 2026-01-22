@@ -1,5 +1,8 @@
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 var r = n(73153);
+
 function i(e) {
     let { channelId: t, applicationId: n, intent: i, inviterUserId: a, analyticsLocations: s, commandOrigin: o } = e;
     r.h.dispatch({

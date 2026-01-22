@@ -8,7 +8,7 @@ var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
-    o = n(432022),
+    o = n(108531),
     l = n(311907),
     c = n(397927),
     u = n(442433),
@@ -37,6 +37,7 @@ var r = n(627968),
     x = n(652215),
     L = n(985018),
     j = n(585990);
+
 function M(e, t, n) {
     return (
         t in e
@@ -50,6 +51,7 @@ function M(e, t, n) {
         e
     );
 }
+
 function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -66,6 +68,7 @@ function k(e) {
     }
     return e;
 }
+
 function U(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -78,6 +81,7 @@ function U(e, t) {
     }
     return n;
 }
+
 function G(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -89,6 +93,7 @@ function G(e, t) {
         e
     );
 }
+
 function V(e) {
     switch (e) {
         case x.OSZ.LARGE:
@@ -99,6 +104,7 @@ function V(e) {
             return c._3J.SIZE_32;
     }
 }
+
 function F(e) {
     return c.vCh[e].size;
 }
@@ -110,7 +116,7 @@ let B = () =>
                 let { default: t } = e;
                 return t;
             }),
-    H = 10000,
+    H = 1e4,
     Y = 2600,
     W = 16,
     K = {
@@ -148,6 +154,7 @@ let B = () =>
             delay: 300,
         },
     };
+
 function q(e, t) {
     let [n, r] = i.useState(null != e && e > Date.now() - H),
         [a, s] = i.useState(!1),
@@ -192,7 +199,11 @@ let X = i.memo(function (e) {
             { ref: E, width: b } = (0, _.Ay)(),
             y = (0, l.bG)([g.A], () => g.A.useReducedMotion),
             O = p ? "entering" : "exiting",
-            { width: A } = (0, o.useSpring)(G(k({}, K[O]), { width: f ? b : u })),
+            { width: A } = (0, o.useSpring)(
+                G(k({}, K[O]), {
+                    width: f ? b : u,
+                }),
+            ),
             { opacity: v } = (0, o.useSpring)(
                 G(k({}, z[O]), {
                     opacity: +!!f,
@@ -203,7 +214,9 @@ let X = i.memo(function (e) {
             ),
             S = i.useMemo(() => (h || y ? "none" : "block"), [h, y]);
         return (0, r.jsx)(o.animated.div, {
-            className: s()(j.rH, { [j.pG]: d }),
+            className: s()(j.rH, {
+                [j.pG]: d,
+            }),
             style: {
                 width: A,
                 opacity: v,
@@ -227,7 +240,9 @@ let X = i.memo(function (e) {
                         children: (0, r.jsx)(c.Text, {
                             variant: "text-xs/medium",
                             color: "text-default",
-                            children: L.intl.format(L.t.uFcReq, { nick: t }),
+                            children: L.intl.format(L.t.uFcReq, {
+                                nick: t,
+                            }),
                         }),
                     }),
                     !d &&
@@ -236,7 +251,9 @@ let X = i.memo(function (e) {
                             shouldAnimate: !y,
                             className: j.lY,
                         }),
-                    (0, r.jsx)("div", { className: j.k1 }),
+                    (0, r.jsx)("div", {
+                        className: j.k1,
+                    }),
                 ],
             }),
         });
@@ -442,7 +459,9 @@ let X = i.memo(function (e) {
                                 rightAlign: !0,
                             }),
                         (0, r.jsx)(Q, {
-                            className: s()(j.my, { [j.yS]: eE === -1 / 0 }),
+                            className: s()(j.my, {
+                                [j.yS]: eE === -1 / 0,
+                            }),
                             size: eh,
                             src: eg,
                             isSpeaking: eo,
@@ -476,7 +495,9 @@ let X = i.memo(function (e) {
                     onMouseLeave: eu,
                     children: [
                         (0, r.jsx)(Q, {
-                            className: s()(j.my, { [j.yS]: eE === -1 / 0 }),
+                            className: s()(j.my, {
+                                [j.yS]: eE === -1 / 0,
+                            }),
                             size: eh,
                             src: eg,
                             isSpeaking: eo,
@@ -506,7 +527,9 @@ let X = i.memo(function (e) {
                                   spacing: 0,
                                   children: () =>
                                       (0, r.jsxs)("div", {
-                                          className: s()(j.Xh, { [j.$A]: ec }),
+                                          className: s()(j.Xh, {
+                                              [j.$A]: ec,
+                                          }),
                                           ref: Y,
                                           children: [
                                               (0, r.jsx)(c.Text, {

@@ -1,10 +1,15 @@
-n.d(t, { A: () => E }), n(457529), n(65821);
+n.d(t, {
+    A: () => E,
+}),
+    n(457529),
+    n(65821);
 var r,
     i,
     l,
     a,
     s = n(627968),
     o = n(64700);
+
 function c(e, t, n) {
     return (
         t in e
@@ -18,6 +23,7 @@ function c(e, t, n) {
         e
     );
 }
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,9 +40,12 @@ function u(e) {
     }
     return e;
 }
+
 function d(e, t) {
     return u(
-        { "@type": e },
+        {
+            "@type": e,
+        },
         (function e(t) {
             return (
                 Object.keys(t).forEach((n) => {
@@ -57,9 +66,11 @@ function d(e, t) {
         ),
     );
 }
+
 function p(e) {
     return d("Thing", e);
 }
+
 function f(e) {
     return d("Product", e);
 }
@@ -85,11 +96,13 @@ var h =
         (l.PRESALE = "http://schema.org/PreSale"),
         (l.SOLD_OUT = "http://schema.org/SoldOut"),
         l);
+
 function g(e) {
     return d("Offer", e);
 }
 (g.ItemConditions = h), (g.ItemAvailability = A);
 var m = (((a = m || {}).YEARLY = "ANN"), (a.MONTHLY = "MON"), a);
+
 function b(e) {
     return d("QuantitativeValue", e);
 }
@@ -97,7 +110,14 @@ b.UnitCodes = m;
 class _ extends (r = o.Component) {
     render() {
         let { debug: e, data: t } = this.props,
-            n = JSON.stringify(u({ "@context": "http://schema.org" }, t));
+            n = JSON.stringify(
+                u(
+                    {
+                        "@context": "http://schema.org",
+                    },
+                    t,
+                ),
+            );
         return (0, s.jsx)("script", {
             type: "application/ld+json",
             children: n,

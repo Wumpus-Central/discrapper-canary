@@ -27,9 +27,11 @@ var a = n(450827),
     x = n(427262),
     b = n(926140);
 let g = new i.A("SearchDebugUtils");
+
 function v() {
     g.info("--------------------------");
 }
+
 function j() {
     let e = s.A.getMutablePrivateChannels(),
         t = [],
@@ -74,6 +76,7 @@ function j() {
         }),
         g.info("END Logging DM Channels\n");
 }
+
 function y() {
     let e = s.A.getMutablePrivateChannels(),
         t = [],
@@ -118,6 +121,7 @@ function y() {
         }),
         g.info("END Logging DM Channels\n");
 }
+
 function _() {
     let e = m.A.getFriendIDs();
     g.info("START Discord Friends"),
@@ -136,6 +140,7 @@ function _() {
         }),
         g.info("END Discord Friends\n");
 }
+
 function A() {
     let e = o.A.getFrequentlyWithoutFetchingLatest(),
         t = [],
@@ -174,6 +179,7 @@ function A() {
         v(),
         g.info("END Frecency\n");
 }
+
 function C() {
     let e = r.A.getProps();
     g.info("START Quick Switcher State"),

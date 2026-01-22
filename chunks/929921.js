@@ -1,9 +1,12 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var r,
     i = n(311907),
     a = n(73153),
     s = n(753070),
     o = n(731854);
+
 function l(e, t, n) {
     return (
         t in e
@@ -21,6 +24,7 @@ let c = s.jQ.PRESET_VIDEO,
     u = s.on.RESOLUTION_720,
     d = s.kn.FPS_30,
     f = !0;
+
 function p(e) {
     let { settings: t } = e;
     if ((null == t ? void 0 : t.context) !== o.x.STREAM || (null == t ? void 0 : t.qualityOptions) == null) return !1;
@@ -32,6 +36,7 @@ function p(e) {
         n
     );
 }
+
 function _(e) {
     let { preset: t, resolution: n, frameRate: r, soundshareEnabled: i } = e,
         a = !1;

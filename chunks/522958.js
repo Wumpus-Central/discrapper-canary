@@ -1,9 +1,14 @@
-n.d(t, { n: () => d }), n(747238), n(896048);
+n.d(t, {
+    n: () => d,
+}),
+    n(747238),
+    n(896048);
 var a = n(627968),
     l = n(64700),
     i = n(397927),
     r = n(147925),
     s = n(159452);
+
 function o(e) {
     let { text: t } = e;
     return (0, a.jsx)("span", {
@@ -13,7 +18,9 @@ function o(e) {
                 "span",
                 {
                     className: s.ZF,
-                    style: { "--custom-letter-index": t },
+                    style: {
+                        "--custom-letter-index": t,
+                    },
                     children: e,
                 },
                 t,
@@ -21,11 +28,12 @@ function o(e) {
         ),
     });
 }
+
 function c(e) {
     let { text: t } = e;
     return (0, a.jsx)("span", {
         className: s.IR,
-        children: "\u2B50 "
+        children: "⭐ "
             .concat(t)
             .split("")
             .map((e, t) =>
@@ -33,7 +41,9 @@ function c(e) {
                     "span",
                     {
                         className: s.EC,
-                        style: { "--custom-letter-index": t },
+                        style: {
+                            "--custom-letter-index": t,
+                        },
                         children: e,
                     },
                     t,
@@ -41,6 +51,7 @@ function c(e) {
             ),
     });
 }
+
 function d(e) {
     let { title: t, initExpanded: n, highlightMode: d = "none", children: u } = e,
         [m, p] = l.useState(n),
@@ -52,12 +63,16 @@ function d(e) {
             "migrated" === d
                 ? (0, a.jsx)(i.Text, {
                       variant: e,
-                      children: (0, a.jsx)(o, { text: t }),
+                      children: (0, a.jsx)(o, {
+                          text: t,
+                      }),
                   })
                 : "migrated-root" === d
                   ? (0, a.jsx)(i.Text, {
                         variant: e,
-                        children: (0, a.jsx)(c, { text: t }),
+                        children: (0, a.jsx)(c, {
+                            text: t,
+                        }),
                     })
                   : (0, a.jsx)(i.Text, {
                         variant: e,

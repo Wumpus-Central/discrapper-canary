@@ -1,8 +1,12 @@
-n.d(t, { A: () => s }), n(896048);
+n.d(t, {
+    A: () => s,
+}),
+    n(896048);
 var r = n(64700),
     l = n(172218),
     i = n(521741),
     a = n(633075);
+
 function s(e) {
     let { widget: t, onAction: n } = e,
         [s, o] = (0, r.useState)(!1),
@@ -36,7 +40,12 @@ function s(e) {
                                     });
                             }
                             return e;
-                        })({ action: "VIEW_WIDGET" }, t.getProfileAnalyticsOptions()),
+                        })(
+                            {
+                                action: "VIEW_WIDGET",
+                            },
+                            t.getProfileAnalyticsOptions(),
+                        ),
                     ),
                     o(!0));
             },

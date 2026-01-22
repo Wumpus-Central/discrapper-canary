@@ -78,6 +78,7 @@ function r(e) {
         }
     );
 }
+
 function i(e) {
     let { image: t, cropDimensions: n, cropOriginCoordinates: i, maxDimensions: l, imageRotation: s = 0 } = e,
         {
@@ -105,6 +106,7 @@ function i(e) {
         null != h && (h.rotate((s * Math.PI) / 180), h.drawImage(t, a, c, o, d, u, f, g, b)), x.toDataURL("image/png")
     );
 }
+
 function l(e, t, n) {
     let r = e.naturalWidth / e.naturalHeight,
         l = t,

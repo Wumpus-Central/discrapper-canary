@@ -1,4 +1,6 @@
-n.d(t, { N: () => o });
+n.d(t, {
+    N: () => o,
+});
 var r = n(837057),
     i = n(310419),
     a = n(967198),
@@ -13,7 +15,9 @@ let o = {
             tab: s.GlobalDiscoveryTab.APPS,
             newSessionState: {
                 guildId: null != t ? t : null,
-                entrypoint: { name: i.sW.KEYBOARD_SHORTCUT },
+                entrypoint: {
+                    name: i.sW.KEYBOARD_SHORTCUT,
+                },
             },
         });
     },

@@ -1,7 +1,10 @@
-n.d(t, { p: () => s });
+n.d(t, {
+    p: () => s,
+});
 var r = n(321733),
     i = n(294292),
     a = n(317374);
+
 function s(e) {
     return function (t) {
         var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
@@ -24,9 +27,11 @@ function s(e) {
         );
     };
 }
+
 function o(e) {
     (0, r.V)(Array.isArray(e), "Expected targetIds to be an array.");
 }
+
 function l(e, t, n) {
     (0, r.V)(t.isDragging(), "Cannot call hover while not dragging."),
         (0, r.V)(!t.didDrop(), "Cannot call hover after drop.");
@@ -37,6 +42,7 @@ function l(e, t, n) {
         (0, r.V)(s, "Expected targetIds to be registered.");
     }
 }
+
 function c(e, t, n) {
     for (var r = e.length - 1; r >= 0; r--) {
         var a = e[r],
@@ -44,6 +50,7 @@ function c(e, t, n) {
         (0, i.k)(s, n) || e.splice(r, 1);
     }
 }
+
 function u(e, t, n) {
     e.forEach(function (e) {
         n.getTarget(e).hover(t, e);

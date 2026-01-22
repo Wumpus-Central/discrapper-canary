@@ -28,6 +28,7 @@ var r = n(627968),
     x = n(652215),
     E = n(985018),
     _ = n(33925);
+
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -53,6 +54,7 @@ function C(e) {
     }
     return e;
 }
+
 function S(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -71,6 +73,7 @@ function S(e, t) {
         e
     );
 }
+
 function I(e) {
     e.stopPropagation();
 }
@@ -206,11 +209,15 @@ let N = l.memo(function (e) {
                                                 categoryName: i.name,
                                             }),
                                             "aria-expanded": !R,
-                                            focusProps: { enabled: !1 },
+                                            focusProps: {
+                                                enabled: !1,
+                                            },
                                             children: [
                                                 (0, r.jsx)(g.A, {
                                                     className: _.UU,
-                                                    children: (0, r.jsx)(c.A, { children: i.name }),
+                                                    children: (0, r.jsx)(c.A, {
+                                                        children: i.name,
+                                                    }),
                                                 }),
                                                 T
                                                     ? null
@@ -265,7 +272,9 @@ let N = l.memo(function (e) {
                         className: _.rb,
                         children: (0, r.jsx)(g.A, {
                             className: _.UU,
-                            children: (0, r.jsx)(c.A, { children: t }),
+                            children: (0, r.jsx)(c.A, {
+                                children: t,
+                            }),
                         }),
                     }),
                     null != n
@@ -315,12 +324,18 @@ let N = l.memo(function (e) {
                           className: a()(_.Ki, _._V),
                           children: (0, r.jsx)(g.A, {
                               className: _.UU,
-                              children: (0, r.jsx)(c.A, { children: E.intl.string(E.t["V/u9Dy"]) }),
+                              children: (0, r.jsx)(c.A, {
+                                  children: E.intl.string(E.t["V/u9Dy"]),
+                              }),
                           }),
                       }),
                   })
                 : null
-            : (0, r.jsx)("div", { style: { height: 16 } });
+            : (0, r.jsx)("div", {
+                  style: {
+                      height: 16,
+                  },
+              });
     }),
     D = l.memo(function (e) {
         let { channel: t } = e;
@@ -330,7 +345,9 @@ let N = l.memo(function (e) {
                 className: a()(_.Ki, _._V),
                 children: (0, r.jsx)(g.A, {
                     className: _.UU,
-                    children: (0, r.jsx)(c.A, { children: t.name }),
+                    children: (0, r.jsx)(c.A, {
+                        children: t.name,
+                    }),
                 }),
             }),
         });

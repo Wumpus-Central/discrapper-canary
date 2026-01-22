@@ -1,4 +1,6 @@
-n.d(t, { Ay: () => U });
+n.d(t, {
+    Ay: () => U,
+});
 var l = n(627968);
 n(64700);
 var r = n(503698),
@@ -27,6 +29,7 @@ var r = n(503698),
     R = n(743981),
     D = n(985018),
     L = n(186891);
+
 function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -52,6 +55,7 @@ function x(e) {
     }
     return e;
 }
+
 function C(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -70,6 +74,7 @@ function C(e, t) {
         e
     );
 }
+
 function M(e) {
     let { user: t, guildId: n, onClose: r } = e,
         a = t.id,
@@ -141,6 +146,7 @@ function M(e) {
         ],
     });
 }
+
 function v(e) {
     let { tag: t = "div", text: n, disabled: r, children: i, onClick: c } = e,
         u = (function (e, t) {
@@ -181,7 +187,9 @@ function v(e) {
             C(x({}, u), {
                 tag: t,
                 "aria-label": n,
-                className: a()(L.YB, { [L.aA]: r }),
+                className: a()(L.YB, {
+                    [L.aA]: r,
+                }),
                 onClick: r ? void 0 : c,
                 children: (0, l.jsx)("div", {
                     className: L.MU,
@@ -191,6 +199,7 @@ function v(e) {
         ),
     });
 }
+
 function j(e) {
     let { user: t, member: r, guildId: a, moderatorReportId: s } = e,
         T = (0, i.bG)([I.A], () => I.A.getGuild(a)),
@@ -222,7 +231,9 @@ function j(e) {
                 disabled: j,
                 text: D.intl.string(D.t["g33r/P"]),
                 onClick: () => {
-                    c.A.openPrivateChannel({ recipientIds: t.id });
+                    c.A.openPrivateChannel({
+                        recipientIds: t.id,
+                    });
                 },
                 children: (0, l.jsx)(o.oyn, {
                     size: "custom",
@@ -321,6 +332,7 @@ function j(e) {
         ],
     });
 }
+
 function U(e) {
     let { userId: t, guildId: n, onClose: r, moderatorReportId: a } = e,
         s = (0, i.bG)([S.default], () => S.default.getUser(t), [t]),

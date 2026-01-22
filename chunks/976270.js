@@ -1,4 +1,7 @@
-t.d(l, { A: () => D }), t(896048);
+t.d(l, {
+    A: () => D,
+}),
+    t(896048);
 var n = t(627968);
 t(64700);
 var i = t(397927),
@@ -30,6 +33,7 @@ var i = t(397927),
     S = t(996988),
     C = t(985018),
     L = t(763563);
+
 function D(e) {
     let {
             user: l,
@@ -90,7 +94,9 @@ function D(e) {
                         component: (0, n.jsx)(i.AC4, {
                             children: (0, n.jsx)(i.H, {
                                 id: J,
-                                children: C.intl.format(C.t.KRe1Fk, { name: Y }),
+                                children: C.intl.format(C.t.KRe1Fk, {
+                                    name: Y,
+                                }),
                             }),
                         }),
                         children: (0, n.jsxs)(h.A, {
@@ -152,7 +158,9 @@ function D(e) {
                                                             user: l,
                                                             guildId: z,
                                                         }),
-                                                        (0, n.jsx)(v.A, { user: l }),
+                                                        (0, n.jsx)(v.A, {
+                                                            user: l,
+                                                        }),
                                                     ],
                                                 }),
                                             ],

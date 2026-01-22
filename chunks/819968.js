@@ -1,4 +1,7 @@
-n.d(t, { A: () => j }), n(896048);
+n.d(t, {
+    A: () => j,
+}),
+    n(896048);
 var r = n(627968),
     a = n(64700),
     l = n(311907),
@@ -12,6 +15,7 @@ var r = n(627968),
     m = n(985018),
     h = n(392294);
 let f = "expanded-area";
+
 function b(e) {
     let { attachments: t, role: n, roleLocked: l } = e,
         [i, x] = a.useState(!1);
@@ -36,7 +40,9 @@ function b(e) {
                     }),
                 ],
             }),
-            (0, r.jsx)(s.hKd, { size: 12 }),
+            (0, r.jsx)(s.hKd, {
+                size: 12,
+            }),
             i &&
                 (0, r.jsxs)("ul", {
                     className: h.cu,
@@ -46,13 +52,23 @@ function b(e) {
                             label: m.intl.string(m.t.DWYJua),
                             children: (0, r.jsx)("ul", {
                                 className: h.yO,
-                                children: t.map((e) => (0, r.jsx)(o.A, { attachment: e }, e.id)),
+                                children: t.map((e) =>
+                                    (0, r.jsx)(
+                                        o.A,
+                                        {
+                                            attachment: e,
+                                        },
+                                        e.id,
+                                    ),
+                                ),
                             }),
                         }),
                         null != n &&
                             (0, r.jsxs)(r.Fragment, {
                                 children: [
-                                    (0, r.jsx)("div", { className: h.me }),
+                                    (0, r.jsx)("div", {
+                                        className: h.me,
+                                    }),
                                     (0, r.jsx)(d.A, {
                                         label: m.intl.string(m.t.o9xphc),
                                         children: (0, r.jsx)(u.A, {
@@ -68,6 +84,7 @@ function b(e) {
         ],
     });
 }
+
 function j(e) {
     var t;
     let { listing: n } = e,

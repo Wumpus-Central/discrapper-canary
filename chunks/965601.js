@@ -1,4 +1,8 @@
-n.d(t, { C: () => p }), n(896048), n(733351);
+n.d(t, {
+    C: () => p,
+}),
+    n(896048),
+    n(733351);
 var r = n(627968),
     l = n(64700),
     i = n(562465),
@@ -13,7 +17,9 @@ async function f(e) {
         var t, n;
         let r = await i.Bo.post({
             url: u.Rsh.AI_TITLE,
-            body: { content: e },
+            body: {
+                content: e,
+            },
             oldFormErrors: !0,
             rejectWithError: !1,
         });
@@ -22,6 +28,7 @@ async function f(e) {
         return null;
     }
 }
+
 function p(e) {
     let { parentChannel: t, parentMessageId: n, updateThreadSettings: i, threadSettings: u, textAreaState: p } = e,
         [h, b] = l.useState(!1),
@@ -39,7 +46,11 @@ function p(e) {
                     } else p.textValue.trim().length >= 10 && (r = p.textValue);
                     if (null != r) {
                         let e = await f(r);
-                        null != e && "" !== e.trim() && i({ name: e });
+                        null != e &&
+                            "" !== e.trim() &&
+                            i({
+                                name: e,
+                            });
                     }
                 } finally {
                     b(!1);
@@ -47,7 +58,13 @@ function p(e) {
             }
         }, [t.id, n, i, A, p.textValue]);
     l.useEffect(() => {
-        m(!1), b(!1), t.id === u.parentChannelId && n !== u.parentMessageId && i({ name: "" });
+        m(!1),
+            b(!1),
+            t.id === u.parentChannelId &&
+                n !== u.parentMessageId &&
+                i({
+                    name: "",
+                });
     }, [n, i, t.id, u.parentChannelId, u.parentMessageId]),
         l.useEffect(() => {
             (null != u.name && "" !== u.name.trim()) || g || (A && null != n && (m(!0), y()));

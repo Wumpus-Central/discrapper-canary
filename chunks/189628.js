@@ -1,4 +1,7 @@
-n.d(t, { A: () => D }), n(896048);
+n.d(t, {
+    A: () => D,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -20,6 +23,7 @@ var r = n(627968),
     O = n(692092),
     A = n(985018),
     v = n(351341);
+
 function S(e, t, n) {
     return (
         t in e
@@ -33,6 +37,7 @@ function S(e, t, n) {
         e
     );
 }
+
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -49,6 +54,7 @@ function I(e) {
     }
     return e;
 }
+
 function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -61,6 +67,7 @@ function T(e, t) {
     }
     return n;
 }
+
 function C(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -72,6 +79,7 @@ function C(e, t) {
         e
     );
 }
+
 function N(e, t) {
     if (null == e) return {};
     var n,
@@ -88,6 +96,7 @@ function N(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function R(e, t) {
     if (null == e) return {};
     var n,
@@ -143,7 +152,9 @@ let w = (e, t) => "".concat(e, ":").concat(t),
                         guildName: L.name,
                     })),
                 l)
-                    ? A.intl.formatToPlainString(A.t["9FI9Z0"], { names: e })
+                    ? A.intl.formatToPlainString(A.t["9FI9Z0"], {
+                          names: e,
+                      })
                     : e;
             },
             M = _ && !P;
@@ -178,6 +189,7 @@ let w = (e, t) => "".concat(e, ":").concat(t),
             ),
         });
     });
+
 function D(e) {
     var t;
     let {
@@ -280,7 +292,9 @@ function D(e) {
         }),
         S
             ? (0, r.jsx)(l.m_, {
-                  text: A.intl.formatToPlainString(A.t.glqNsf, { key: (0, y.isMac)() ? "Opt" : "Alt" }),
+                  text: A.intl.formatToPlainString(A.t.glqNsf, {
+                      key: (0, y.isMac)() ? "Opt" : "Alt",
+                  }),
                   position: "top",
                   delay: 200,
                   children: ea,

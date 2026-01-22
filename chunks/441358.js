@@ -1,4 +1,8 @@
-n.d(t, { A: () => _ }), n(896048), n(733351);
+n.d(t, {
+    A: () => _,
+}),
+    n(896048),
+    n(733351);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -21,6 +25,7 @@ var r = n(627968),
     O = n(985018),
     v = n(653952),
     H = n(658122);
+
 function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -46,6 +51,7 @@ function w(e) {
     }
     return e;
 }
+
 function A(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -72,6 +78,7 @@ let D = [
     h.UP.MANUAL_MEMBER_VERIFICATION,
     h.UP.SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL,
 ];
+
 function S(e) {
     let { type: t, text: n, size: l, vanityUrl: i, isFocused: a } = e,
         s = null != l ? l : 16,
@@ -144,12 +151,15 @@ function S(e) {
             null != c ? c : null,
             (0, r.jsx)(C.Text, {
                 variant: 12 === s ? "text-xs/medium" : "text-sm/medium",
-                className: o()(v.QK, { [v.in]: a }),
+                className: o()(v.QK, {
+                    [v.in]: a,
+                }),
                 children: n,
             }),
         ],
     });
 }
+
 function _(e) {
     var t;
     let { guildId: n, onClose: i } = e,

@@ -1,4 +1,10 @@
-n.d(t, { A: () => O }), n(896048), n(638769), n(321073), n(667532);
+n.d(t, {
+    A: () => O,
+}),
+    n(896048),
+    n(638769),
+    n(321073),
+    n(667532);
 var r,
     i = n(311907),
     l = n(73153),
@@ -7,6 +13,7 @@ var r,
     a = n(994500),
     u = n(287809),
     c = n(652215);
+
 function d(e, t, n) {
     return (
         t in e
@@ -20,6 +27,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +44,7 @@ function p(e) {
     }
     return e;
 }
+
 function g(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -134,7 +143,13 @@ let O = new m(l.h, {
     UPDATE_FRIEND_GROUP: function (e) {
         let { groupId: t, name: n } = e,
             r = f.findIndex((e) => e.id === t);
-        return -1 !== r && ((f[r] = g(p({}, f[r]), { name: n })), !0);
+        return (
+            -1 !== r &&
+            ((f[r] = g(p({}, f[r]), {
+                name: n,
+            })),
+            !0)
+        );
     },
     DELETE_FRIEND_GROUP: function (e) {
         let { groupId: t } = e,
@@ -173,6 +188,12 @@ let O = new m(l.h, {
         let i = f[r],
             l = new Set(n),
             s = i.userIds.filter((e) => !l.has(e));
-        return s.length !== i.userIds.length && ((f[r] = g(p({}, i), { userIds: s })), !0);
+        return (
+            s.length !== i.userIds.length &&
+            ((f[r] = g(p({}, i), {
+                userIds: s,
+            })),
+            !0)
+        );
     },
 });

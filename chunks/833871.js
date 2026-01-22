@@ -37,6 +37,7 @@ var r = n(53635),
         type: !0,
     },
     l = {};
+
 function c(e) {
     return r.isMemo(e) ? o : l[e.$$typeof] || i;
 }
@@ -47,6 +48,7 @@ var u = Object.defineProperty,
     p = Object.getOwnPropertyDescriptor,
     _ = Object.getPrototypeOf,
     h = Object.prototype;
+
 function m(e, t, n) {
     if ("string" != typeof t) {
         if (h) {

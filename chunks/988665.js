@@ -24,6 +24,7 @@ n.d(t, {
     n(321073);
 let i = /.+/g,
     a = "NON_TOKEN";
+
 function s(e, t, n) {
     if (null == t) return null;
     for (let r = 0; r < t.length; r++) {
@@ -41,6 +42,7 @@ function s(e, t, n) {
     }
     return null;
 }
+
 function o(e, t) {
     if (null == e) return null;
     let n = [...e];

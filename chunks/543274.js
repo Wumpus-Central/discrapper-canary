@@ -1,4 +1,7 @@
-n.d(t, { K: () => S }), n(321073);
+n.d(t, {
+    K: () => S,
+}),
+    n(321073);
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -23,6 +26,7 @@ var r = n(627968),
     E = n(652215),
     _ = n(49999),
     C = n(985018);
+
 function S(e) {
     let { channel: t, idle: n, whichPopoutIsOpen: S, setWhichPopoutIsOpen: I } = e,
         N = (0, i.bG)([u.Ay], () => u.Ay.isLaunchingActivity()),
@@ -30,7 +34,9 @@ function S(e) {
         P = (0, f.dL)(T),
         w = T !== f.xy.CAN_LAUNCH || N,
         { isHovered: R, setIsHovered: D, onMouseEnter: M, onMouseLeave: L } = (0, j.A)(200, 300),
-        G = (0, d.b)({ surface: c.YI.VOICE_LAUNCHER }),
+        G = (0, d.b)({
+            surface: c.YI.VOICE_LAUNCHER,
+        }),
         k = (0, i.bG)(
             [u.Ay],
             () => null != u.Ay.getSelfEmbeddedActivityForLocation(u.Ay.getConnectedActivityLocation()),
@@ -53,7 +59,9 @@ function S(e) {
                                   type: "channel",
                                   channel: t,
                               }
-                            : { type: "contextless" },
+                            : {
+                                  type: "contextless",
+                              },
                     openInPopout: F,
                     analyticsLocation: B,
                 });

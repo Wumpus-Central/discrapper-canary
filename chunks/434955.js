@@ -14,7 +14,9 @@ e.exports = function (e) {
                 end: "`",
                 contains: [e.BACKSLASH_ESCAPE],
             },
-            { begin: /[$%@](\^\w\b|#\w+|[^\s\w{]|\{\w+\}|\w+)/ },
+            {
+                begin: /[$%@](\^\w\b|#\w+|[^\s\w{]|\{\w+\}|\w+)/,
+            },
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
         ],

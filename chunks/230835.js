@@ -22,9 +22,11 @@ var r = n(64700),
     _ = (function (e) {
         return (e.RESET_BUTTON = "reset_button"), (e.EDITOR_CLOSE = "editor_close"), e;
     })({});
+
 function h(e) {
     return (0, a.Mw)(e) ? p.NJ.DARK : p.NJ.LIGHT;
 }
+
 function m(e) {
     let t = l.eh.getSetting(),
         n =
@@ -33,6 +35,7 @@ function m(e) {
             f.ag[t.backgroundGradientPresetId].theme !== e;
     (0, s.GQ)(e), n && (0, u.S8)();
 }
+
 function g() {
     let [e] = r.useState(() => o.A.theme);
     return r.useCallback(
@@ -50,13 +53,16 @@ function g() {
         [e],
     );
 }
+
 function E() {
     let e = h(o.A.theme);
     e !== o.A.theme && m(e);
 }
+
 function b(e, t, n) {
     0 === e.length && n([t]), E();
 }
+
 function y(e, t) {
     var n, r, i, a;
     let s = l.eh.getSetting().customUserThemeSettings,
@@ -82,6 +88,7 @@ function y(e, t) {
         }
     );
 }
+
 function O() {
     let { colors: e, chassisMixAmount: t, gradientAngle: n } = (0, c.ko)(),
         a = (0, i.bG)([o.A], () => o.A.theme),

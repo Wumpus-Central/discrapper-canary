@@ -1,4 +1,7 @@
-n.d(t, { A: () => b }), n(896048);
+n.d(t, {
+    A: () => b,
+}),
+    n(896048);
 var r = n(835245),
     i = n(451988),
     a = n(439372),
@@ -10,6 +13,7 @@ var r = n(835245),
     d = n(973522),
     f = n(15285),
     p = n(652215);
+
 function _(e, t, n) {
     return (
         t in e
@@ -24,9 +28,11 @@ function _(e, t, n) {
     );
 }
 let h = 5 * u.A.Millis.MINUTE;
+
 function m(e) {
     return e.distributor === p.d3x.ROBLOX ? (0, s.hD)(e) : null;
 }
+
 function g(e) {
     var t;
     let n = null != e.name ? e.name : "",

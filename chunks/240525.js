@@ -1,4 +1,7 @@
-n.d(t, { Ay: () => M }), n(896048);
+n.d(t, {
+    Ay: () => M,
+}),
+    n(896048);
 var r = n(734057),
     i = n(498642),
     a = n(536802),
@@ -10,6 +13,7 @@ var r = n(734057),
     d = n(363433),
     f = n(552618),
     p = n(879658);
+
 function _(e, t, n) {
     return (
         t in e
@@ -123,37 +127,47 @@ class I extends a.A {
         });
     }
 }
+
 function T() {
     let e = s.A.getChannelId();
     null != e && I.recordChannel(e);
 }
+
 function C() {
     I.dropUnreachableChannels(), I.replaceLru((0, p.I)(A, h + g));
 }
+
 function N(e) {
     let t = e.id,
         n = (0, f.c)(e),
         r = s.A.getChannelId();
     n && t === r && I.recordChannel(t), n || I.deleteChannel(t);
 }
+
 function R(e) {
     for (let t of e.channels) N(t);
 }
+
 function w(e) {
     I.deleteChannel(e.channel.id);
 }
+
 function P(e) {
     N(e.channel);
 }
+
 function D(e) {
     I.deleteChannel(e.channel.id);
 }
+
 function x(e) {
     return !e.guild.unavailable && (I.deleteGuild(e.guild.id), !0);
 }
+
 function L(e) {
     A.clear(), v.clear(), (S = !1);
 }
+
 function j(e) {
     S = !0;
 }

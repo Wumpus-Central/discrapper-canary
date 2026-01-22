@@ -1,4 +1,7 @@
-n.d(t, { A: () => m }), n(896048);
+n.d(t, {
+    A: () => m,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(352505),
@@ -12,6 +15,7 @@ var r = n(627968),
     p = n(985018),
     _ = n(903957);
 let h = i.lazy(() => Promise.all([n.e("55896"), n.e("72756")]).then(n.bind(n, 532255)));
+
 function m(e, t) {
     let {
             hideSimpleEmbedContent: m,
@@ -25,8 +29,12 @@ function m(e, t) {
             previewLinkTarget: S = !1,
             viewingChannelId: I,
         } = t,
-        T = a.m.useExperiment({ location: "useMessageRenderedContent" }).enabled,
-        C = (0, d.I)({ location: "useMessageRenderedContent" }),
+        T = a.m.useExperiment({
+            location: "useMessageRenderedContent",
+        }).enabled,
+        C = (0, d.I)({
+            location: "useMessageRenderedContent",
+        }),
         [N, R] = i.useState(!1),
         w = i.useCallback((e) => {
             e && R(!0);
@@ -63,7 +71,9 @@ function m(e, t) {
                                   guildId: (0, o.U)(e),
                                   setHasSpoilerEmbeds: w,
                               },
-                              children: (0, r.jsx)(h, { content: e.content }),
+                              children: (0, r.jsx)(h, {
+                                  content: e.content,
+                              }),
                           }),
                       }),
                       hasSpoilerEmbeds: N,

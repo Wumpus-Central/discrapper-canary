@@ -13,13 +13,16 @@ var r = n(311907),
     u = n(652215),
     c = n(49999),
     d = n(355097);
+
 function p(e, t) {
     let n = s.A.getDismissedGuildContent(t);
     return null != n && (0, o.c0)(n, e);
 }
+
 function m(e, t) {
     return (0, r.bG)([s.A], () => p(e, t));
 }
+
 function f(e, t, n, r, s) {
     (0, i.TG)(
         n,
@@ -37,9 +40,11 @@ function f(e, t, n, r, s) {
                 action: null != s ? s : c.i.UNKNOWN,
             });
 }
+
 function y(e, t, n, r) {
     f(!0, e, t, n, r);
 }
+
 function g(e, t) {
     f(!1, e, t);
 }

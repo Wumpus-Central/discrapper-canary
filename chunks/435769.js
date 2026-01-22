@@ -1,4 +1,6 @@
-r.d(t, { A: () => d });
+r.d(t, {
+    A: () => d,
+});
 var n = r(527758),
     a = r(47312),
     i = r(64700),
@@ -74,9 +76,14 @@ let d = (function (e) {
                 t = (0, o.yO)(this.props.scriptLocation),
                 r = (0, o.CC)(t);
             ((this._hcaptcha = r.window.hcaptcha || void 0), void 0 !== this._hcaptcha)
-                ? this.setState({ isApiReady: !0 }, function () {
-                      e.renderCaptcha();
-                  })
+                ? this.setState(
+                      {
+                          isApiReady: !0,
+                      },
+                      function () {
+                          e.renderCaptcha();
+                      },
+                  )
                 : this.loadCaptcha();
         }),
         (r.componentWillUnmount = function () {
@@ -161,20 +168,30 @@ let d = (function (e) {
             var t = this.state.captchaId,
                 r = this._hcaptcha;
             this.isReady() &&
-                this.setState({ isRemoved: !0 }, function () {
-                    r.remove(t), e && e();
-                });
+                this.setState(
+                    {
+                        isRemoved: !0,
+                    },
+                    function () {
+                        r.remove(t), e && e();
+                    },
+                );
         }),
         (r.handleOnLoad = function () {
             var e = this;
-            this.setState({ isApiReady: !0 }, function () {
-                var t = (0, o.yO)(e.props.scriptLocation);
-                (e._hcaptcha = (0, o.CC)(t).window.hcaptcha),
-                    e.renderCaptcha(function () {
-                        var t = e.props.onLoad;
-                        t && t();
-                    });
-            });
+            this.setState(
+                {
+                    isApiReady: !0,
+                },
+                function () {
+                    var t = (0, o.yO)(e.props.scriptLocation);
+                    (e._hcaptcha = (0, o.CC)(t).window.hcaptcha),
+                        e.renderCaptcha(function () {
+                            var t = e.props.onLoad;
+                            t && t();
+                        });
+                },
+            );
         }),
         (r.handleSubmit = function (e) {
             var t = this.props.onVerify,

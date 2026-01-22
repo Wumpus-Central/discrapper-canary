@@ -1,4 +1,7 @@
-n.d(t, { A: () => v }), n(896048);
+n.d(t, {
+    A: () => v,
+}),
+    n(896048);
 var r = n(735438),
     i = n.n(r),
     a = n(562465),
@@ -13,6 +16,7 @@ var r = n(735438),
     _ = n(946132),
     h = n(937136),
     m = n(652215);
+
 function g(e, t, n) {
     return (
         t in e
@@ -28,7 +32,7 @@ function g(e, t, n) {
 }
 let E = new c.A("MessagePreviewManager"),
     b = 30,
-    y = 1000,
+    y = 1e3,
     O = 5;
 class A extends o.A {
     addWant(e) {
@@ -90,7 +94,9 @@ class A extends o.A {
                   let e = (
                       await a.Bo.post({
                           url: m.Rsh.MESSAGE_PREVIEWS,
-                          body: { channel_ids: t },
+                          body: {
+                              channel_ids: t,
+                          },
                           rejectWithError: !1,
                       })
                   ).body;

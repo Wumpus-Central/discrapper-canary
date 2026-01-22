@@ -1,4 +1,8 @@
-n.d(t, { A: () => p }), n(747238), n(896048);
+n.d(t, {
+    A: () => p,
+}),
+    n(747238),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -24,7 +28,7 @@ let p = function (e) {
     }, []),
         i.useEffect(() => {
             if (0 !== p) return;
-            let e = setTimeout(() => (0, d.pX)((0, c.W)()), 3000);
+            let e = setTimeout(() => (0, d.pX)((0, c.W)()), 3e3);
             return () => clearTimeout(e);
         }, [p]);
     let m = i.useCallback(
@@ -46,7 +50,9 @@ let p = function (e) {
                         className: f.QB,
                         children: h.intl.string(h.t.qllnGm),
                     }),
-                    (0, r.jsx)(u.tK, { children: h.intl.string(h.t.SXCxye) }),
+                    (0, r.jsx)(u.tK, {
+                        children: h.intl.string(h.t.SXCxye),
+                    }),
                     (0, r.jsx)("div", {
                         className: f.eT,
                         children: (0, r.jsx)(a.Button, {
@@ -68,7 +74,12 @@ let p = function (e) {
         case 0:
         case 2:
             return (0, r.jsxs)(u.Ay, {
-                children: [(0, r.jsx)(u.hE, { children: h.intl.string(h.t["Z+hCVU"]) }), (0, r.jsx)(u.CK, {})],
+                children: [
+                    (0, r.jsx)(u.hE, {
+                        children: h.intl.string(h.t["Z+hCVU"]),
+                    }),
+                    (0, r.jsx)(u.CK, {}),
+                ],
             });
         case 3:
             return (0, r.jsxs)(u.Ay, {
@@ -77,7 +88,9 @@ let p = function (e) {
                         className: f.QB,
                         children: h.intl.string(h.t.csrAMJ),
                     }),
-                    (0, r.jsx)(u.tK, { children: h.intl.string(h.t.ghBJz9) }),
+                    (0, r.jsx)(u.tK, {
+                        children: h.intl.string(h.t.ghBJz9),
+                    }),
                 ],
             });
     }

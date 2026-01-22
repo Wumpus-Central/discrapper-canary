@@ -1,4 +1,6 @@
-n.d(t, { A: () => j });
+n.d(t, {
+    A: () => j,
+});
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -17,6 +19,7 @@ var r = n(627968),
     A = n(794904);
 let y = a._3J.SIZE_40,
     O = (0, a.FT9)(y);
+
 function j(e) {
     let { user: t, status: j, guildId: v, channelId: x, onSelect: E } = e,
         { theme: _, themeType: C } = (0, b.E)(),
@@ -26,7 +29,9 @@ function j(e) {
             isMobileOnline: h.A.isMobileOnline(t.id),
         })),
         T = (0, p.A)(t.id),
-        { voiceActivityStatusEnabled: P } = (0, c.g)({ location: "UserProfileMutualFriendRow" }),
+        { voiceActivityStatusEnabled: P } = (0, c.g)({
+            location: "UserProfileMutualFriendRow",
+        }),
         { voiceChannel: w } = (0, u.A)({
             userId: P ? t.id : void 0,
             guildId: v,
@@ -41,7 +46,11 @@ function j(e) {
                           left: 4,
                       },
                   }
-                : { offset: { right: 8 } },
+                : {
+                      offset: {
+                          right: 8,
+                      },
+                  },
         className: A.nM,
         onClick: E,
         onContextMenu: (e) => {
@@ -78,7 +87,10 @@ function j(e) {
                             }
                             return e;
                         })({}, n)),
-                        (i = i = { user: t }),
+                        (i = i =
+                            {
+                                user: t,
+                            }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(i))
                             : (function (e, t) {

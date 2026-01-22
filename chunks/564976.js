@@ -1,4 +1,6 @@
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var r = n(140851),
     i = n(559751),
     a = n(264816),
@@ -44,7 +46,14 @@ let _ = {
             x = t.modifiersData.popperOffsets,
             L = t.rects.reference,
             j = t.rects.popper,
-            M = "function" == typeof T ? T(Object.assign({}, t.rects, { placement: t.placement })) : T,
+            M =
+                "function" == typeof T
+                    ? T(
+                          Object.assign({}, t.rects, {
+                              placement: t.placement,
+                          }),
+                      )
+                    : T,
             k =
                 "number" == typeof M
                     ? {

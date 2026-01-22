@@ -1,4 +1,7 @@
-n.d(t, { A: () => b }), n(896048);
+n.d(t, {
+    A: () => b,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -18,6 +21,7 @@ let g = (0, f.createChannelRecord)({
         type: _.rbe.DM,
     }),
     E = (0, d.Ld)();
+
 function b(e) {
     let {
             label: t = h.intl.string(h.t.B3miE8),
@@ -31,9 +35,11 @@ function b(e) {
         [y, O] = i.useState(null != a ? a : d),
         [A, v] = i.useState((0, c.x7)(y)),
         S = i.useRef(!1);
+
     function I(e, t, r) {
         t !== y && (O(t), v(r), n(t));
     }
+
     function T() {
         return new Promise((e) => {
             e({
@@ -82,7 +88,9 @@ function b(e) {
                             }),
                             (0, r.jsx)(o.AC4, {
                                 id: E,
-                                children: h.intl.format(h.t["+DFxLc"], { maxLength: p.Jo }),
+                                children: h.intl.format(h.t["+DFxLc"], {
+                                    maxLength: p.Jo,
+                                }),
                             }),
                         ],
                     }),

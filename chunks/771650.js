@@ -43,6 +43,7 @@ var r = n(91871),
     S = n(233003),
     I = n(652215),
     T = n(985018);
+
 function C(e, t, n) {
     return (
         t in e
@@ -56,6 +57,7 @@ function C(e, t, n) {
         e
     );
 }
+
 function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -72,6 +74,7 @@ function N(e) {
     }
     return e;
 }
+
 function R(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -84,6 +87,7 @@ function R(e, t) {
     }
     return n;
 }
+
 function w(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -95,6 +99,7 @@ function w(e, t) {
         e
     );
 }
+
 function P() {
     return new Set(
         l()
@@ -102,6 +107,7 @@ function P() {
             .map((e) => e.toLowerCase()),
     );
 }
+
 function D() {
     return new Set(
         l()
@@ -109,6 +115,7 @@ function D() {
             .map((e) => e.toLowerCase()),
     );
 }
+
 function x() {
     let e = new Date().getFullYear();
     return new Set(
@@ -117,16 +124,20 @@ function x() {
             .map((e) => e.toString()),
     );
 }
+
 function L(e, t) {
     return [e, e.clone().add(1, t)];
 }
+
 function j(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
     return L(l()().startOf(e).add(t, e), e);
 }
+
 function M(e, t, n) {
     return L(l()(e, t).local(), n);
 }
+
 function k() {
     return {
         [T.intl.string(T.t.HYiVEQ)]: () => j("day"),
@@ -142,12 +153,15 @@ let U = "([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})",
     F = "([^\\d\\s]+)",
     B = RegExp("(?:\\s*(".concat(U, "|").concat(V, "|").concat(G, "|").concat(F, "))"), "i"),
     H = RegExp("\\s*(true|false)", "i");
+
 function Y(e) {
     return "".concat(e, ":");
 }
+
 function W(e) {
     return RegExp(Y(e), "i");
 }
+
 function K(e) {
     let t,
         n = e.getMatch(1),
@@ -165,6 +179,7 @@ function K(e) {
                   )) && (e.setData("userId", t), !0)
     );
 }
+
 function z(e, t) {
     let n,
         r,
@@ -187,10 +202,13 @@ function z(e, t) {
             !0)
     );
 }
+
 function q(e, t, n) {
     let r = f.Ay.getChannels(n)[f.I6].concat(f.Ay.getChannels(n)[f.vM]),
         i = f.Ay.getTextChannelNameDisambiguations(n),
-        a = v.A.getCurrentConfig({ location: "guildChannelValidator" }).enabled,
+        a = v.A.getCurrentConfig({
+            location: "guildChannelValidator",
+        }).enabled,
         o = s()
             .chain(r)
             .map((e) => {
@@ -212,6 +230,7 @@ function q(e, t, n) {
         !0)
     );
 }
+
 function X(e, t) {
     let n = Object.values(d.A.getMutablePrivateChannels()).filter((e) => {
         if (e.isGroupDM() && t === (0, u.m1)(e, m.default, p.A)) return !0;
@@ -231,6 +250,7 @@ function X(e, t) {
         !0)
     );
 }
+
 function Z(e, t) {
     let n = e.getMatch(1);
     return I.Ut1.test(n)
@@ -240,6 +260,7 @@ function Z(e, t) {
           ? q(e, n, t.guildId)
           : t.type === I.I4_.DMS && !h.A.hidePersonalInformation && X(e, n);
 }
+
 function Q(e) {
     let t = {
         [T.intl.string(T.t.ZNR2fi)]: "link",
@@ -254,6 +275,7 @@ function Q(e) {
     }[e.getMatch(1)];
     return null != t && "" !== t && (e.setData("has", t), !0);
 }
+
 function $(e) {
     let t = {
         [T.intl.string(T.t.tPZo4p)]: "user",
@@ -262,9 +284,11 @@ function $(e) {
     }[e.getMatch(1)];
     return null != t && "" !== t && (e.setData("author_type", t), !0);
 }
+
 function J() {
     return [...Array.from(P()), ...Array.from(D()), ...Array.from(x()), ...Object.keys(k())];
 }
+
 function ee(e, t, n) {
     return et(e, t, J()).map((e) =>
         w(N({}, e), {
@@ -273,14 +297,18 @@ function ee(e, t, n) {
         }),
     );
 }
+
 function et(e, t, n) {
     let r = e.toLocaleLowerCase();
     return s()(n)
         .filter((e) => i()(r, e.toLocaleLowerCase()))
         .take(t)
-        .map((e) => ({ text: e }))
+        .map((e) => ({
+            text: e,
+        }))
         .value();
 }
+
 function en(e) {
     if (null == e) return [];
     let t = new Set(),
@@ -309,6 +337,7 @@ function en(e) {
         i
     );
 }
+
 function er(e) {
     let { query: t, searchContext: n, maxResults: r = 10, tokens: i } = e,
         a = {
@@ -345,10 +374,18 @@ function er(e) {
                     e.slice(0, r)
                 );
             }
-            s = g.Ay.queryGuildUsers(w(N({}, a), { guildId: n.guildId }));
+            s = g.Ay.queryGuildUsers(
+                w(N({}, a), {
+                    guildId: n.guildId,
+                }),
+            );
             break;
         case I.I4_.CHANNEL:
-            s = g.Ay.queryChannelUsers(w(N({}, a), { channelId: n.channelId }));
+            s = g.Ay.queryChannelUsers(
+                w(N({}, a), {
+                    channelId: n.channelId,
+                }),
+            );
             break;
         case I.I4_.DMS:
             let o = en(null != i ? i : []);
@@ -361,7 +398,12 @@ function er(e) {
                             boosters: (0, g.X3)(c.rD.USER),
                         }),
                     ));
-            } else s = g.Ay.queryAllUsers(w(N({}, a), { boosters: (0, g.X3)(c.rD.USER) }));
+            } else
+                s = g.Ay.queryAllUsers(
+                    w(N({}, a), {
+                        boosters: (0, g.X3)(c.rD.USER),
+                    }),
+                );
             break;
         default:
             return [];
@@ -390,9 +432,11 @@ function er(e) {
         f
     );
 }
+
 function ei() {
     return !h.A.hidePersonalInformation;
 }
+
 function ea(e, t, n) {
     let r = g.Ay.queryGroupDMs({
             query: e,
@@ -451,8 +495,11 @@ function ea(e, t, n) {
     }
     return a.slice(0, t);
 }
+
 function es(e, t, n) {
-    let r = v.A.getCurrentConfig({ location: "getGuildChannelAutocompletions" }).enabled,
+    let r = v.A.getCurrentConfig({
+            location: "getGuildChannelAutocompletions",
+        }).enabled,
         i = g.Ay.queryChannels({
             query: e,
             type: f.I6,
@@ -496,6 +543,7 @@ function es(e, t, n) {
         })
         .value();
 }
+
 function eo(e) {
     let { query: t, searchContext: n, maxResults: r } = e;
     return ((t = t.trim()).startsWith('"') && t.endsWith('"')
@@ -512,6 +560,7 @@ let el = /^(?:\s*(\d{17,20}|@me|([^@#:]+)#([0-9]{4})|([a-z0-9_.]{2,32})))/i;
 var ec = (function (e) {
     return (e.FILTER = "FILTER"), (e.ANSWER = "ANSWER"), e;
 })({});
+
 function eu(e) {
     let t = [T.intl.string(T.t.tPZo4p), T.intl.string(T.t.JL7sRS), T.intl.string(T.t.WjkIKU)],
         n = [
@@ -679,7 +728,14 @@ function eu(e) {
             componentType: "FILTER",
             key: Y(T.intl.string(T.t["0B74eY"])),
             plainText: T.intl.string(T.t["0B74eY"]),
-            getAutocompletions: () => [{ text: "true" }, { text: "false" }],
+            getAutocompletions: () => [
+                {
+                    text: "true",
+                },
+                {
+                    text: "false",
+                },
+            ],
         },
         [I.LWr.ANSWER_PINNED]: {
             regex: H,
@@ -711,15 +767,21 @@ function eu(e) {
     };
 }
 let ed = {};
+
 function ef() {
-    return eu({ type: I.I4_.DMS });
+    return eu({
+        type: I.I4_.DMS,
+    });
 }
+
 function ep() {
     Object.assign(ed, eu());
 }
+
 function e_(e) {
     return I.l90.test(e);
 }
+
 function eh(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.keys(ed).length,
         n = [];
@@ -736,6 +798,7 @@ function eh(e) {
     }
     return n;
 }
+
 function em(e) {
     if (0 === e.length) return !1;
     let t = e.toLowerCase().replace(/^@/, "");

@@ -22,6 +22,7 @@ var a = n(627968),
 let v = p.A.Millis.HOUR,
     j = p.A.Millis.DAY,
     y = 4 * p.A.Millis.DAY;
+
 function _() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         { shouldShow: t = !0 } = e,
@@ -56,6 +57,7 @@ function _() {
         )
     );
 }
+
 function A(e) {
     let { targetElementRef: t, onDismiss: n, children: l } = e,
         {
@@ -74,13 +76,18 @@ function A(e) {
                       targetElementRef: t,
                       title: b.intl.string(r),
                       body: b.intl.string(o),
-                      caretConfig: { align: "start" },
+                      caretConfig: {
+                          align: "start",
+                      },
                       gradientColor: "purple",
                       actions: [
                           {
                               text: b.intl.string(b.t.fwPurU),
                               onClick: () => {
-                                  (0, c.A)({ nextStatus: x.cl.ONLINE }), null == n || n(f.i.PRIMARY);
+                                  (0, c.A)({
+                                      nextStatus: x.cl.ONLINE,
+                                  }),
+                                      null == n || n(f.i.PRIMARY);
                               },
                           },
                       ],

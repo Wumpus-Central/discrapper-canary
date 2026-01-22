@@ -1,4 +1,9 @@
-n.d(t, { A: () => x }), n(896048), n(65821), n(492834);
+n.d(t, {
+    A: () => x,
+}),
+    n(896048),
+    n(65821),
+    n(492834);
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -14,6 +19,7 @@ var r = n(627968),
     g = n(985018),
     m = n(497039),
     A = n(473169);
+
 function x(e) {
     let { setOriginalEmail: t, setSlide: s, ready: x, token: _ } = e,
         [E, b] = i.useState(!1),
@@ -34,7 +40,9 @@ function x(e) {
                     src: null == y ? n(79418) : n(579656),
                     className: l()(A.SX, A.Ot),
                 }),
-                (0, r.jsx)(u.hE, { children: g.intl.string(g.t.IfBQ56) }),
+                (0, r.jsx)(u.hE, {
+                    children: g.intl.string(g.t.IfBQ56),
+                }),
                 null != y && "" !== y
                     ? (0, r.jsx)(o.Text, {
                           variant: "text-sm/normal",
@@ -80,7 +88,9 @@ function x(e) {
                                                     token: _,
                                                     password: N,
                                                 },
-                                                trackedActionData: { event: a.NetworkActionNames.ACCOUNT_REVERT },
+                                                trackedActionData: {
+                                                    event: a.NetworkActionNames.ACCOUNT_REVERT,
+                                                },
                                                 rejectWithError: !1,
                                             })
                                                 .then((e) => {

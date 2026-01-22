@@ -1,10 +1,13 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
     s = n.n(i),
     l = n(854378),
     a = n(478018);
+
 function o(e) {
     var t, n;
     let { children: i, className: o } = e,
@@ -76,7 +79,9 @@ function o(e) {
                         "div",
                         {
                             className: a.fi,
-                            style: { flexBasis: "".concat(100 / u.length, "%") },
+                            style: {
+                                flexBasis: "".concat(100 / u.length, "%"),
+                            },
                             children: e,
                         },
                         t,

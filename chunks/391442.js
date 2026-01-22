@@ -1,20 +1,25 @@
-n.d(e, { A: () => i });
+n.d(t, {
+    A: () => s,
+});
 var r = n(627968);
 n(64700);
-var l = n(397927),
-    a = n(520320);
-function i(t) {
-    let { children: e, label: n } = t;
+var a = n(397927),
+    l = n(520320);
+
+function s(e) {
+    let { children: t, label: n } = e;
     return (0, r.jsxs)("li", {
         children: [
-            (0, r.jsx)(l.Text, {
+            (0, r.jsx)(a.Text, {
                 variant: "text-xs/semibold",
                 color: "text-default",
-                className: a.a,
+                className: l.a,
                 children: n,
             }),
-            (0, r.jsx)(l.hKd, { size: 12 }),
-            e,
+            (0, r.jsx)(a.hKd, {
+                size: 12,
+            }),
+            t,
         ],
     });
 }

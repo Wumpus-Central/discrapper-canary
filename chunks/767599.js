@@ -11,12 +11,14 @@ var r = n(319060),
     s = n(652215),
     o = n(985018);
 let l = 0;
+
 function c() {
     return {
         id: l,
         name: o.intl.string(o.t.E407b7),
     };
 }
+
 function u(e) {
     let { itemId: t, hash: n, containerWidth: i = parseFloat(r.A.APPLICATION_DIRECTORY_CONTENT_MAX_WIDTH) } = e;
     return (0, a.D)({
@@ -30,6 +32,7 @@ let d = (e) => {
     let t = e.match(/.*(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=)([^#&?]*).*/);
     return null != t ? t[1] : null;
 };
+
 function f(e) {
     switch (e.type) {
         case i.LZ.MEDIA_PROXY:

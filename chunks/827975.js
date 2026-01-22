@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968);
 n(64700);
 var l = n(837381),
@@ -11,6 +13,7 @@ var l = n(837381),
     d = n(818348),
     f = n(985018),
     p = n(697491);
+
 function h() {
     var e, t;
     let n = (0, i.bG)([s.A, o.A], () => s.A.unavailableGuilds.filter((e) => null == o.A.getGuild(e)).length),
@@ -19,7 +22,9 @@ function h() {
         ? null
         : (0, r.jsx)(c.c, {
               children: (0, r.jsx)(u.A, {
-                  text: f.intl.format(f.t["TnH05/"], { count: n }),
+                  text: f.intl.format(f.t["TnH05/"], {
+                      count: n,
+                  }),
                   children: (0, r.jsx)(
                       a.MzZ,
                       ((e = (function (e) {
@@ -51,7 +56,9 @@ function h() {
                               href: d.qF.STATUS,
                               target: "_blank",
                               className: p.h,
-                              "aria-label": f.intl.formatToPlainString(f.t["MEpX+2"], { count: n }),
+                              "aria-label": f.intl.formatToPlainString(f.t["MEpX+2"], {
+                                  count: n,
+                              }),
                           },
                           h,
                       )),

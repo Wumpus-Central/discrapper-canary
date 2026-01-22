@@ -1,4 +1,7 @@
-n.d(t, { f: () => a }), n(896048);
+n.d(t, {
+    f: () => a,
+}),
+    n(896048);
 var r = n(353640),
     i = n(121894),
     l = n(250527);
@@ -8,7 +11,7 @@ let s = new Map(),
         tryFetchTopGames: async (n) => {
             let r = t().topGames,
                 a = s.get(n);
-            if (null != a && Date.now() - a < 3600000) {
+            if (null != a && Date.now() - a < 36e5) {
                 var c;
                 return null != (c = r.get(n)) ? c : {};
             }
@@ -17,7 +20,9 @@ let s = new Map(),
             return (
                 d.set(n, o),
                 (0, i.r)(() => {
-                    e({ topGames: d });
+                    e({
+                        topGames: d,
+                    });
                 }),
                 s.set(n, Date.now()),
                 o

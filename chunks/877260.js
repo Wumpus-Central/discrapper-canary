@@ -1,4 +1,8 @@
-r.d(t, { L: () => v }), r(321073), r(896048);
+r.d(t, {
+    L: () => v,
+}),
+    r(321073),
+    r(896048);
 var n = r(627968),
     l = r(64700),
     o = r(503698),
@@ -17,6 +21,7 @@ var n = r(627968),
     j = r(188180),
     h = r(985018),
     m = r(658646);
+
 function v(e) {
     let { root: t, footer: r, onClose: o, emptyState: s, searchQuery: O, onSearchChange: j } = e,
         v = g.A.useField("showNavigationMobile"),
@@ -262,6 +267,7 @@ function v(e) {
         })
     );
 }
+
 function x(e) {
     var t;
     let { section: r, visibleContent: l, hoisted: o = !1 } = e,
@@ -294,6 +300,7 @@ function x(e) {
         ],
     });
 }
+
 function S(e) {
     let { searchQuery: t, onSearchChange: r } = e,
         o = l.useRef(null),

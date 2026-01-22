@@ -1,10 +1,14 @@
-n.d(t, { A: () => f }), n(896048);
+n.d(t, {
+    A: () => f,
+}),
+    n(896048);
 var r,
     i = n(627968),
     a = n(64700),
     s = n(503698),
     o = n.n(s),
     l = n(907961);
+
 function c(e, t, n) {
     return (
         t in e
@@ -18,6 +22,7 @@ function c(e, t, n) {
         e
     );
 }
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -71,7 +76,17 @@ class d extends (r = a.PureComponent) {
         if (null == e) {
             if (null == n) return null;
             let e = a.Children.only(n);
-            return a.cloneElement(e, u({ style: { display: t && !r ? void 0 : "none" } }, e.props));
+            return a.cloneElement(
+                e,
+                u(
+                    {
+                        style: {
+                            display: t && !r ? void 0 : "none",
+                        },
+                    },
+                    e.props,
+                ),
+            );
         }
         return (0, i.jsx)(o, {
             paused: s,
@@ -83,7 +98,9 @@ class d extends (r = a.PureComponent) {
     render() {
         let { mirror: e, className: t } = this.props;
         return (0, i.jsxs)("div", {
-            className: o()(l.Ki, t, { [l.e7]: e }),
+            className: o()(l.Ki, t, {
+                [l.e7]: e,
+            }),
             onDoubleClick: this.handleDoubleClick,
             onContextMenu: this.handleContextMenu,
             children: [
@@ -123,5 +140,7 @@ class d extends (r = a.PureComponent) {
             });
     }
 }
-c(d, "defaultProps", { paused: !0 });
+c(d, "defaultProps", {
+    paused: !0,
+});
 let f = d;

@@ -1,4 +1,6 @@
-a.d(t, { A: () => o });
+a.d(t, {
+    A: () => o,
+});
 var n = a(627968);
 a(64700);
 var l = a(503698),
@@ -6,6 +8,7 @@ var l = a(503698),
     s = a(397927),
     r = a(985018),
     c = a(919021);
+
 function o(e) {
     let { onComplete: t } = e;
     return (0, n.jsxs)(s.DUT, {

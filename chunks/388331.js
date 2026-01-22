@@ -1,4 +1,7 @@
-n.d(t, { A: () => E }), n(896048);
+n.d(t, {
+    A: () => E,
+}),
+    n(896048);
 var r = n(627968);
 n(64700);
 var i = n(179771),
@@ -34,7 +37,9 @@ let E = {
         validation: (e) =>
             (0, g.A)(e)
                 .optional()
-                .keys({ pid: e.number().optional().min(0) }),
+                .keys({
+                    pid: e.number().optional().min(0),
+                }),
         handler(e) {
             let {
                     args: { pid: t },
@@ -45,13 +50,19 @@ let E = {
                 f = (0, m.A)();
             null != f &&
                 (null != t && null != a && a.pid !== t && (0, A.isWindows)()
-                    ? (0, s.XI)(f.guild_id, f.id, { pid: t })
+                    ? (0, s.XI)(f.guild_id, f.id, {
+                          pid: t,
+                      })
                     : null != i
                       ? (0, s.nO)(!1)
                       : null != t && (0, A.isWindows)()
-                        ? (0, s.XI)(f.guild_id, f.id, { pid: t })
+                        ? (0, s.XI)(f.guild_id, f.id, {
+                              pid: t,
+                          })
                         : null != d
-                          ? (0, s.XI)(f.guild_id, f.id, { pid: d.pid })
+                          ? (0, s.XI)(f.guild_id, f.id, {
+                                pid: d.pid,
+                            })
                           : (0, l.mMO)(async () => {
                                 let { default: e } = await n.e("96811").then(n.bind(n, 648230));
                                 return (t) => {
@@ -83,7 +94,10 @@ let E = {
                                             }
                                             return e;
                                         })({}, t)),
-                                        (i = i = { analyticsLocations: [o.A.RPC] }),
+                                        (i = i =
+                                            {
+                                                analyticsLocations: [o.A.RPC],
+                                            }),
                                         Object.getOwnPropertyDescriptors
                                             ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
                                             : (function (e, t) {

@@ -1,4 +1,11 @@
-n.d(t, { A: () => I }), n(896048), n(747238), n(812715), n(321073), n(733351);
+n.d(t, {
+    A: () => I,
+}),
+    n(896048),
+    n(747238),
+    n(812715),
+    n(321073),
+    n(733351);
 var r = n(507392),
     i = n.n(r),
     a = n(64460),
@@ -33,15 +40,18 @@ let d = {},
     ].map((e) => e.replace("mod", h)),
     b = () => [],
     y = [];
+
 function O(e, t) {
     let n = (e) => t(e, e.key);
     document.addEventListener(e, n), y.push(() => document.removeEventListener(e, n));
 }
+
 function A(e) {
     let t = [];
     for (let n of Object.values(e)) null != n && t.push(...n.binds);
     return t.map((e) => e.replace("mod", h));
 }
+
 function v(e, t) {
     return (n, r) => (
         l.default.track(u.HAw.KEYBOARD_SHORTCUT_USED, {
@@ -51,6 +61,7 @@ function v(e, t) {
         t(n, r)
     );
 }
+
 function S(e) {
     for (let [t, n] of Object.entries(e)) {
         if (null == n) continue;

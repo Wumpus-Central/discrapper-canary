@@ -1,4 +1,8 @@
-n.d(t, { A: () => S }), n(896048), n(938796);
+n.d(t, {
+    A: () => S,
+}),
+    n(896048),
+    n(938796);
 var r = n(627968),
     i = n(64700),
     l = n(284009),
@@ -20,6 +24,7 @@ var r = n(627968),
     y = n(921925),
     P = n(985018),
     O = n(820970);
+
 function S(e) {
     var t, n;
     let {
@@ -62,7 +67,11 @@ function S(e) {
         [en, er] = i.useState(null),
         ei = (0, p.bg)(null != (t = null == Y ? void 0 : Y.flags) ? t : 0);
     i.useEffect(() => {
-        null != G && null != z.current && z.current.scrollIntoView({ behavior: "smooth" });
+        null != G &&
+            null != z.current &&
+            z.current.scrollIntoView({
+                behavior: "smooth",
+            });
     }, [G]);
     let el = i.useCallback(
             (e) => {
@@ -77,7 +86,9 @@ function S(e) {
     };
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(x.A, { className: O.jD }),
+            (0, r.jsx)(x.A, {
+                className: O.jD,
+            }),
             (0, r.jsxs)(v.dZ, {
                 children: [
                     (0, r.jsx)(y.A, {}),

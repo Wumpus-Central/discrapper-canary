@@ -19,6 +19,7 @@ n.d(t, {
     n(947204),
     n(896048);
 let i = "NativeAppStartup";
+
 function a(e, t, n, r, i) {
     return "".concat(e, ":").concat(t, ":").concat(n, ":").concat(r, ":").concat(i);
 }

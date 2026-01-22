@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -6,6 +8,7 @@ var r = n(627968),
     o = n(486020),
     l = n(985018),
     c = n(921010);
+
 function u(e) {
     let {
             application: t,
@@ -32,7 +35,9 @@ function u(e) {
         );
     return null == _
         ? p
-            ? (0, r.jsx)("div", { className: s()(c.K, c.q, a) })
+            ? (0, r.jsx)("div", {
+                  className: s()(c.K, c.q, a),
+              })
             : null
         : (0, r.jsx)("img", {
               className: s()(c.K, a),

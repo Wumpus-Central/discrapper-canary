@@ -1,8 +1,12 @@
-n.d(e, { A: () => s }), n(228524);
+n.d(e, {
+    A: () => s,
+}),
+    n(228524);
 var r = n(627968);
 n(64700);
 var i = n(397927),
     a = n(286965);
+
 function s(t) {
     let { heroImage: e, children: n, header: s, description: l } = t;
     return (0, r.jsxs)(r.Fragment, {

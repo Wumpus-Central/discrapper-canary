@@ -1,4 +1,7 @@
-n.d(t, { A: () => v }), n(896048);
+n.d(t, {
+    A: () => v,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -13,6 +16,7 @@ var r = n(627968),
     _ = n(652215),
     h = n(211332),
     m = n(473169);
+
 function g(e, t, n) {
     return (
         t in e
@@ -26,6 +30,7 @@ function g(e, t, n) {
         e
     );
 }
+
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,6 +47,7 @@ function E(e) {
     }
     return e;
 }
+
 function b(e, t) {
     if (null == e) return {};
     var n,
@@ -58,6 +64,7 @@ function b(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function y(e, t) {
     if (null == e) return {};
     var n,
@@ -87,11 +94,18 @@ class A extends i.PureComponent {
                       color: o,
                       background: null != n ? n : d.A.unsafe_rawColors.BRAND_500.css,
                   })
-                : null != n && (e = { color: n }),
+                : null != n &&
+                  (e = {
+                      color: n,
+                  }),
             (0, r.jsx)(u.vN3, {
-                offset: { left: 4 },
+                offset: {
+                    left: 4,
+                },
                 children: (0, r.jsxs)(p.A, {
-                    className: s()(h.OR, i, { [h.wH]: t }),
+                    className: s()(h.OR, i, {
+                        [h.wH]: t,
+                    }),
                     onClick: this.handleClick,
                     onKeyUp: this.handleKeyUp,
                     align: p.A.Align.CENTER,
@@ -123,7 +137,9 @@ class A extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            g(this, "state", { color: O(this.props.color) }),
+            g(this, "state", {
+                color: O(this.props.color),
+            }),
             g(this, "handleKeyUp", (e) => {
                 if (e.which === _.Ks6.ENTER || e.which === _.Ks6.SPACE) {
                     let e = this.props,

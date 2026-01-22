@@ -1,4 +1,7 @@
-n.d(t, { A: () => x }), n(896048);
+n.d(t, {
+    A: () => x,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -26,6 +29,7 @@ var r = n(627968),
     C = n(414062),
     N = n(985018),
     R = n(784505);
+
 function w(e) {
     let { dropping: t, fileInputRef: n, minValues: i, maxValues: a, guildId: o } = e,
         l = (0, A.o2)(o),
@@ -37,7 +41,9 @@ function w(e) {
         className: R.pp,
         children: [
             (0, r.jsxs)("div", {
-                className: s()(R.e8, { [R.R]: t }),
+                className: s()(R.e8, {
+                    [R.R]: t,
+                }),
                 children: [
                     (0, r.jsx)(u.H8$, {
                         color: u.LU0.colors.ICON_STRONG,
@@ -94,6 +100,7 @@ function w(e) {
         ],
     });
 }
+
 function P() {
     return (0, r.jsxs)("div", {
         className: s()(R.pp, R.e8),
@@ -115,13 +122,16 @@ function P() {
         ],
     });
 }
+
 function D(e) {
     var t;
     let { upload: n, handleRemoveFile: i, singleFileInput: a } = e;
     return (0, r.jsxs)(
         "div",
         {
-            className: s()(R.NJ, { [R.j1]: a }),
+            className: s()(R.NJ, {
+                [R.j1]: a,
+            }),
             children: [
                 (0, r.jsx)(g.J, {
                     upload: n,
@@ -151,6 +161,7 @@ function D(e) {
         n.id,
     );
 }
+
 function x(e) {
     var t;
     let { minValues: n, maxValues: a } = e,
@@ -180,7 +191,9 @@ function x(e) {
                 if (A.length + e.length > a)
                     return (0, p.openUploadError)({
                         title: N.intl.string(N.t.wOr6hB),
-                        help: N.intl.formatToPlainString(N.t.dy6viJ, { maxValues: a }),
+                        help: N.intl.formatToPlainString(N.t.dy6viJ, {
+                            maxValues: a,
+                        }),
                     });
                 if ((0, S.fJ)(e, M.guild_id)) return (0, v.V)(M, e);
                 let n = e.map((e) => {

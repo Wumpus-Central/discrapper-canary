@@ -1,7 +1,10 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(481613),
     i = n.n(r),
     a = n(72290);
+
 function s(e, t) {
     if (!e.startsWith("discord:")) return (location.href = e), a.nextTick(() => t(!0));
     let { body: n } = document;
@@ -16,10 +19,12 @@ function s(e, t) {
     window.setTimeout(() => {
         var e;
         (null != (e = null == r ? void 0 : r.parentElement) ? e : null) !== null && n.removeChild(r);
-    }, 1000);
+    }, 1e3);
 }
+
 function o(e, t) {
     let n = !1;
+
     function r() {
         n = !0;
     }
@@ -27,11 +32,13 @@ function o(e, t) {
         (location.href = e),
         setTimeout(() => {
             window.removeEventListener("blur", r), t(n);
-        }, 1000);
+        }, 1e3);
 }
+
 function l(e, t) {
     t(!1);
 }
+
 function c(e, t) {
     (location.href = e), a.nextTick(() => t(!0));
 }

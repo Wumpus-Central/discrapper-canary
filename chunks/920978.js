@@ -4,9 +4,15 @@ e.exports = function (e) {
         r = {
             className: "attr",
             variants: [
-                { begin: /[\w*@][\w*@ :()\./-]*:(?=[ \t]|$)/ },
-                { begin: /"[\w*@][\w*@ :()\./-]*":(?=[ \t]|$)/ },
-                { begin: /'[\w*@][\w*@ :()\./-]*':(?=[ \t]|$)/ },
+                {
+                    begin: /[\w*@][\w*@ :()\./-]*:(?=[ \t]|$)/,
+                },
+                {
+                    begin: /"[\w*@][\w*@ :()\./-]*":(?=[ \t]|$)/,
+                },
+                {
+                    begin: /'[\w*@][\w*@ :()\./-]*':(?=[ \t]|$)/,
+                },
             ],
         },
         i = {
@@ -43,7 +49,9 @@ e.exports = function (e) {
                     begin: /"/,
                     end: /"/,
                 },
-                { begin: /\S+/ },
+                {
+                    begin: /\S+/,
+                },
             ],
             contains: [e.BACKSLASH_ESCAPE, i],
         },
@@ -63,7 +71,9 @@ e.exports = function (e) {
                     begin: /"/,
                     end: /"/,
                 },
-                { begin: /[^\s,{}[\]]+/ },
+                {
+                    begin: /[^\s,{}[\]]+/,
+                },
             ],
         }),
         l = {
@@ -142,7 +152,9 @@ e.exports = function (e) {
             e.HASH_COMMENT_MODE,
             {
                 beginKeywords: t,
-                keywords: { literal: t },
+                keywords: {
+                    literal: t,
+                },
             },
             l,
             {

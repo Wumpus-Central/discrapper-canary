@@ -1,8 +1,12 @@
-r.d(t, { q: () => i }), r(896048);
+r.d(t, {
+    q: () => i,
+}),
+    r(896048);
 var n = r(64700),
     l = r(311907),
     u = r(383501),
     a = r(814278);
+
 function i(e) {
     let { userId: t } = e,
         r = (0, l.bG)([u.A], () => u.A.getSecureFramesRosterMapEntry(t)),

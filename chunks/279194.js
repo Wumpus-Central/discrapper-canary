@@ -1,2 +1,4 @@
-n.d(t, { qx: () => r });
+n.d(t, {
+    qx: () => r,
+});
 let r = "domainMigrationSuccess";

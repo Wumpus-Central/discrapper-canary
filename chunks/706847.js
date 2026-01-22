@@ -14,6 +14,7 @@ var r = n(627968),
     f = n(652215),
     p = n(985018),
     h = n(783971);
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -39,6 +40,7 @@ function b(e) {
     }
     return e;
 }
+
 function g(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -57,6 +59,7 @@ function g(e, t) {
         e
     );
 }
+
 function m(e) {
     let { channel: t, narrow: n } = e,
         i = (0, d.lK)(t);
@@ -64,11 +67,15 @@ function m(e) {
         l.useEffect(() => {
             c.default.track(
                 f.HAw.CHANNEL_BANNER_VIEWED,
-                g(b({}, (0, o.H$)(t.getGuildId()), (0, o.dI)(t)), { banner_type: "thread" }),
+                g(b({}, (0, o.H$)(t.getGuildId()), (0, o.dI)(t)), {
+                    banner_type: "thread",
+                }),
             );
         }, [t]),
         (0, r.jsxs)("div", {
-            className: a()(h.JD, { [h.sc]: n }),
+            className: a()(h.JD, {
+                [h.sc]: n,
+            }),
             children: [
                 (0, r.jsx)(s.Text, {
                     className: h.E5,
@@ -97,6 +104,7 @@ function m(e) {
         })
     );
 }
+
 function A(e) {
     let { channel: t, narrow: n } = e,
         i = (0, d.H_)(t);
@@ -104,11 +112,15 @@ function A(e) {
         l.useEffect(() => {
             c.default.track(
                 f.HAw.CHANNEL_BANNER_VIEWED,
-                g(b({}, (0, o.H$)(t.getGuildId()), (0, o.dI)(t)), { banner_type: "thread" }),
+                g(b({}, (0, o.H$)(t.getGuildId()), (0, o.dI)(t)), {
+                    banner_type: "thread",
+                }),
             );
         }, [t]),
         (0, r.jsxs)("div", {
-            className: a()(h.JD, { [h.sc]: n }),
+            className: a()(h.JD, {
+                [h.sc]: n,
+            }),
             children: [
                 (0, r.jsx)(s.Text, {
                     className: h.E5,

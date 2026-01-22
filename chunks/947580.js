@@ -1,7 +1,10 @@
-n.d(t, { Cf: () => a });
+n.d(t, {
+    Cf: () => a,
+});
 var r = n(403362),
     l = n(51082),
     i = n(806931);
+
 function a(e, t, n) {
     return null == t || t.type === i.lp.ACTIVITY
         ? []

@@ -1,4 +1,9 @@
-n.r(t), n.d(t, { default: () => eI }), n(896048), n(65821);
+n.r(t),
+    n.d(t, {
+        default: () => eI,
+    }),
+    n(896048),
+    n(65821);
 var r,
     i = n(311907),
     a = n(506774),
@@ -18,6 +23,7 @@ var r,
     b = n(531685),
     y = n(652215),
     O = n(672396);
+
 function A(e, t, n) {
     return (
         t in e
@@ -31,6 +37,7 @@ function A(e, t, n) {
         e
     );
 }
+
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -47,6 +54,7 @@ function v(e) {
     }
     return e;
 }
+
 function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -59,6 +67,7 @@ function S(e, t) {
     }
     return n;
 }
+
 function I(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -70,6 +79,7 @@ function I(e, t) {
         e
     );
 }
+
 function T(e, t) {
     if (null == e) return {};
     var n,
@@ -86,6 +96,7 @@ function T(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function C(e, t) {
     if (null == e) return {};
     var n,
@@ -121,6 +132,7 @@ let N = Object.freeze({
     j = !1,
     M = new Set(),
     k = !1;
+
 function U(e) {
     let t = w[e];
     return null == t && (t = w[e] = v({}, N)), t;
@@ -221,13 +233,19 @@ let G = v({}, N),
         "SOUNDBOARD_SET_OVERLAY_ENABLED",
         "STREAM_STOP",
     ]);
+
 function B(e) {
     return (
         (null == e.version && 1 === E.OVERLAY_VERSION) ||
         e.version === E.OVERLAY_VERSION ||
-        (s.h.dispatch({ type: "OVERLAY_INCOMPATIBLE_APP" }), (0, l.Zf)(), !1)
+        (s.h.dispatch({
+            type: "OVERLAY_INCOMPATIBLE_APP",
+        }),
+        (0, l.Zf)(),
+        !1)
     );
 }
+
 function H(e) {
     if (("OVERLAY_INITIALIZE" === e.type && B(e) && (j = !0), j)) {
         var t, n;
@@ -257,7 +275,11 @@ function H(e) {
                     s.h.dispatch(e);
                 break;
             case "THREAD_LIST_SYNC":
-                s.h.dispatch(I(v({}, e), { threads: e.threads.map((e) => (0, f.createChannelRecord)(e)) }));
+                s.h.dispatch(
+                    I(v({}, e), {
+                        threads: e.threads.map((e) => (0, f.createChannelRecord)(e)),
+                    }),
+                );
                 break;
             case "GUILD_CREATE":
                 let i = (e) => (0, f.createChannelRecord)(e),
@@ -292,15 +314,19 @@ function H(e) {
         }
     }
 }
+
 function Y(e) {
     e.isSwitchingAccount || (w = {});
 }
+
 function W(e) {
     e.userId in w && delete w[e.userId];
 }
+
 function K() {
     D.clear();
 }
+
 function z(e) {
     let { focusedPID: t, trackedGames: n, overlayStoredSettings: r } = e;
     (R = t),
@@ -313,6 +339,7 @@ function z(e) {
                 oopEnabled: r.oopEnabled,
             }));
 }
+
 function q() {
     let e = G.selectedGuildId,
         t = G.selectedChannelId;
@@ -329,95 +356,118 @@ function q() {
     }
     (G.selectedGuildId = e), (G.selectedChannelId = t);
 }
+
 function X() {
     if (!__OVERLAY__) return !1;
     let e = R === (0, E.getPID)(),
         t = D.has((0, E.getPID)()) || M.size > 0;
     e && t ? (0, o.XC)(window, !0) : (0, o.XC)(window, !1);
 }
+
 function Z() {}
+
 function Q(e) {
     let { locked: t, pid: n } = e;
     t ? D.delete(n) : D.add(n), J(), X(), (k = !1);
 }
+
 function $(e) {
     let { region: t } = e;
     if (R !== (0, E.getPID)() || M.has(t)) return !1;
     M.add(t);
 }
+
 function J() {
     if (R !== (0, E.getPID)()) return !1;
     M.clear();
 }
+
 function ee(e) {
     let { pid: t } = e;
     (R = t), X();
 }
+
 function et(e) {
     let { guildId: t, channelId: n } = e;
     (G.selectedGuildId = t), (G.selectedChannelId = n);
 }
+
 function en(e) {
     let { callId: t } = e;
     P = t;
 }
+
 function er() {
     P = null;
 }
+
 function ei() {
     if (__OVERLAY__) {
         let e = b.A.windowSize();
         (0, E.validResolution)(e) || (k = !1);
     }
 }
+
 function ea(e) {
     k = e.isPreviewingInGame;
 }
+
 function es(e) {
     let { mode: t } = e;
     G.displayNameMode = t;
 }
+
 function eo(e) {
     let { mode: t } = e;
     G.displayUserMode = t;
 }
+
 function el(e) {
     let { mode: t } = e;
     G.avatarSizeMode = t;
 }
+
 function ec(e) {
     let { mode: t } = e;
     G.notificationPositionMode = t;
 }
+
 function eu(e) {
     let { disable: t } = e;
     G.disableClickableRegions = t;
 }
+
 function ed(e) {
     let { shouldShow: t } = e;
     G.showKeybindIndicators = t;
 }
+
 function ef(e) {
     let { message: t } = e,
         n = G.customInviteMessage !== t;
     return (G.customInviteMessage = t), n;
 }
+
 function ep(e) {
     let { opacity: t } = e,
         n = G.textWidgetOpacity !== t;
     return (G.textWidgetOpacity = t), n;
 }
+
 function e_(e) {
     let { shouldShow: t } = e,
         n = G.showGameInviteNotification !== t;
     return (G.showGameInviteNotification = t), n;
 }
+
 function eh() {
     G.disableExternalLinkAlert = !0;
 }
+
 function em() {
     x = !0;
 }
+
 function eg() {
     s.h.addInterceptor((e) => {
         if (L || !F.has(e.type)) return !1;
@@ -457,6 +507,7 @@ function eg() {
         );
     });
 }
+
 function eE(e) {
     let t = (0, E.getPID)();
     if (null == e.pid || e.pid === t)
@@ -468,6 +519,7 @@ function eE(e) {
                 null != e.payloads && ((L = !0), e.payloads.forEach((e) => H(e)), (L = !1));
         }
 }
+
 function eb() {
     eg(),
         (0, l.QZ)(eE, (0, E.getRPCAuthToken)()),
@@ -479,9 +531,11 @@ function eb() {
         });
 }
 let ey = new Map();
+
 function eO(e) {
     __OVERLAY__ && (null != e.trackedGame ? ey.set(e.pid, e.trackedGame) : ey.delete(e.pid));
 }
+
 function eA(e) {
     __OVERLAY__ &&
         c.x.update({
@@ -489,6 +543,7 @@ function eA(e) {
             oopEnabled: e.oopEnabled,
         });
 }
+
 function ev(e) {
     D.delete(e.previousAssociatedGamePID);
 }
@@ -607,7 +662,11 @@ A(eS, "displayName", "OverlayStore"),
         },
         (e) => {
             let t = p.default.getId();
-            return null == e || null == t ? {} : { [t]: v({}, e) };
+            return null == e || null == t
+                ? {}
+                : {
+                      [t]: v({}, e),
+                  };
         },
     ]);
 let eI = new eS(s.h, {

@@ -1,4 +1,9 @@
-n.d(t, { A: () => V }), n(896048), n(65821), n(938796);
+n.d(t, {
+    A: () => V,
+}),
+    n(896048),
+    n(65821),
+    n(938796);
 var r = n(627968);
 n(64700);
 var i = n(179771),
@@ -41,7 +46,9 @@ async function G(e, t, n, r) {
         l = I.A.getApplicationActivity(t);
     if (null == l || null == l.secrets || !(0, P.px)(r, l.party, l.secrets))
         throw new x.A(
-            { errorCode: k.Lw6.NO_ELIGIBLE_ACTIVITY },
+            {
+                errorCode: k.Lw6.NO_ELIGIBLE_ACTIVITY,
+            },
             "No eligible activity for application. Ensure an activity includes a party and appropriate secret.",
         );
     let a = (0, g.A)(l, v.A);
@@ -51,7 +58,9 @@ async function G(e, t, n, r) {
             throw (
                 (t(),
                 new x.A(
-                    { errorCode: k.Lw6.NO_ELIGIBLE_ACTIVITY },
+                    {
+                        errorCode: k.Lw6.NO_ELIGIBLE_ACTIVITY,
+                    },
                     "No eligible activity for application. Ensure user does have have privacy enabled.",
                 ))
             );
@@ -76,7 +85,13 @@ let V = {
                     args: { user_id: n, pid: r },
                 } = e,
                 i = t.application.id;
-            if (null == i) throw new x.A({ errorCode: k.Lw6.INVALID_COMMAND }, "No application.");
+            if (null == i)
+                throw new x.A(
+                    {
+                        errorCode: k.Lw6.INVALID_COMMAND,
+                    },
+                    "No application.",
+                );
             return G(r, i, n, k.xL.JOIN);
         },
     },
@@ -121,7 +136,13 @@ let V = {
                     args: { type: n, user_id: r, content: i, pid: l },
                 } = e,
                 a = t.application.id;
-            if (null == a) throw new x.A({ errorCode: k.Lw6.INVALID_COMMAND }, "No application.");
+            if (null == a)
+                throw new x.A(
+                    {
+                        errorCode: k.Lw6.INVALID_COMMAND,
+                    },
+                    "No application.",
+                );
             return G(l, a, r, n, i);
         },
     },
@@ -146,7 +167,13 @@ let V = {
                     args: { type: n, user_id: r, session_id: i, channel_id: l, message_id: a, application_id: s },
                 } = e,
                 o = t.transport === M.z4.IPC && null != s ? s : t.application.id;
-            if (null == o) throw new x.A({ errorCode: k.Lw6.INVALID_COMMAND }, "No application.");
+            if (null == o)
+                throw new x.A(
+                    {
+                        errorCode: k.Lw6.INVALID_COMMAND,
+                    },
+                    "No application.",
+                );
             let c = Promise.resolve(!1);
             return (
                 n === k.xL.JOIN &&
@@ -158,7 +185,13 @@ let V = {
                         messageId: a,
                     })),
                 c.then((e) => {
-                    if (!e) throw new x.A({ errorCode: k.Lw6.INVALID_INVITE }, "Invite is expired or invalid.");
+                    if (!e)
+                        throw new x.A(
+                            {
+                                errorCode: k.Lw6.INVALID_INVITE,
+                            },
+                            "Invite is expired or invalid.",
+                        );
                 })
             );
         },
@@ -170,7 +203,13 @@ let V = {
         handler(e) {
             let { socket: t } = e,
                 i = t.application;
-            if (null == i.id) throw new x.A({ errorCode: k.Lw6.INVALID_COMMAND }, "No application.");
+            if (null == i.id)
+                throw new x.A(
+                    {
+                        errorCode: k.Lw6.INVALID_COMMAND,
+                    },
+                    "No application.",
+                );
             let { channel: l, guild: a, frame: o } = (0, R.W)(),
                 u = (0, A.Ay)({
                     application: t.application,
@@ -181,12 +220,19 @@ let V = {
             let p = null != d ? k.BRT.POPOUT : k.BRT.APP;
             if (((0, j.sP)({}, null == d ? void 0 : d.document), null != o)) {
                 if (o.applicationId !== i.id)
-                    throw new x.A({ errorCode: k.Lw6.INVALID_COMMAND }, "Application is not currently mounted.");
+                    throw new x.A(
+                        {
+                            errorCode: k.Lw6.INVALID_COMMAND,
+                        },
+                        "Application is not currently mounted.",
+                    );
                 let e = I.A.getApplicationActivity(i.id);
                 if (null != e) (0, c.qf)(e, !1, p);
                 else
                     throw new x.A(
-                        { errorCode: k.Lw6.NO_ELIGIBLE_ACTIVITY },
+                        {
+                            errorCode: k.Lw6.NO_ELIGIBLE_ACTIVITY,
+                        },
                         "No eligible activity for application. Ensure an activity was set using setActivity.",
                     );
             } else
@@ -246,7 +292,9 @@ let V = {
                             );
                         };
                     },
-                    { contextKey: p === k.BRT.POPOUT ? s.KX8 : s.SYi },
+                    {
+                        contextKey: p === k.BRT.POPOUT ? s.KX8 : s.SYi,
+                    },
                 );
         },
     },
@@ -258,7 +306,13 @@ let V = {
             var t;
             let { socket: n } = e,
                 r = n.application.id;
-            if (null == r) throw new x.A({ errorCode: k.Lw6.INVALID_COMMAND }, "No application.");
+            if (null == r)
+                throw new x.A(
+                    {
+                        errorCode: k.Lw6.INVALID_COMMAND,
+                    },
+                    "No application.",
+                );
             let i = null == (t = (0, L.A)()) ? void 0 : t.id;
             return new Promise((e, t) => {
                 !(function (e, t) {
@@ -269,7 +323,13 @@ let V = {
                         let e = S.A.getLastFocusedWindowId();
                         n = null == e ? null : null == (r = (0, _.Iy)(e)) ? void 0 : r.renderWindow;
                     }
-                    if (null == n) throw new x.A({ errorCode: k.Lw6.UNKNOWN_ERROR }, "No valid window found");
+                    if (null == n)
+                        throw new x.A(
+                            {
+                                errorCode: k.Lw6.UNKNOWN_ERROR,
+                            },
+                            "No valid window found",
+                        );
                     let i = n.document.createElement("input");
                     (i.style.display = "none"),
                         (i.type = "file"),
@@ -279,7 +339,7 @@ let V = {
                             n.document.body.removeEventListener("focus", l, !0),
                             setTimeout(() => {
                                 n.document.body.removeChild(i);
-                            }, 1000);
+                            }, 1e3);
                     };
                     i.addEventListener("change", () => {
                         (0, C.Vq)(i.files) && e(i.files[0]), l();
@@ -293,21 +353,29 @@ let V = {
                 })(
                     async (n) => {
                         let l = await (0, h.CS)(r, i, n);
-                        (0, C.Vq)(l) && (0, C.Vq)(l.url) && !(l instanceof p.A) ? e({ image_url: l.url }) : t(l);
+                        (0, C.Vq)(l) && (0, C.Vq)(l.url) && !(l instanceof p.A)
+                            ? e({
+                                  image_url: l.url,
+                              })
+                            : t(l);
                     },
                     () => t(Error("Upload canceled")),
                 );
             }).catch((e) => {
                 var t;
                 throw new x.A(
-                    { errorCode: k.Lw6.UNKNOWN_ERROR },
+                    {
+                        errorCode: k.Lw6.UNKNOWN_ERROR,
+                    },
                     null != (t = null == e ? void 0 : e.message) ? t : "Failed to upload image",
                 );
             });
         },
     }),
     [k.e$_.OPEN_SHARE_MOMENT_DIALOG]: (0, a.T)(k.e$_.OPEN_SHARE_MOMENT_DIALOG, {
-        scope: { [M.sm.ANY]: [M.VH] },
+        scope: {
+            [M.sm.ANY]: [M.VH],
+        },
         handler(e) {
             var t;
             let {
@@ -316,12 +384,28 @@ let V = {
             } = e;
             (0, P.lG)(n.transport);
             let i = n.application.id;
-            if (null == i) throw new x.A({ errorCode: k.Lw6.INVALID_COMMAND }, "No application.");
+            if (null == i)
+                throw new x.A(
+                    {
+                        errorCode: k.Lw6.INVALID_COMMAND,
+                    },
+                    "No application.",
+                );
             if (!(0, l.Lt)(null != (t = n.application.flags) ? t : 0, k.gfo.EMBEDDED))
-                throw new x.A({ errorCode: k.Lw6.INVALID_COMMAND }, "This application cannot access this API");
+                throw new x.A(
+                    {
+                        errorCode: k.Lw6.INVALID_COMMAND,
+                    },
+                    "This application cannot access this API",
+                );
             let a = (0, L.A)();
             if (!T.A.isDiscordCdnUrl(r))
-                throw new x.A({ errorCode: k.Lw6.INVALID_PAYLOAD }, "mediaUrl must be a Discord CDN url");
+                throw new x.A(
+                    {
+                        errorCode: k.Lw6.INVALID_PAYLOAD,
+                    },
+                    "mediaUrl must be a Discord CDN url",
+                );
             (0, m.g)({
                 applicationId: i,
                 channelId: null == a ? void 0 : a.id,
@@ -349,12 +433,35 @@ let V = {
                     },
                 } = e,
                 f = r.application.id;
-            if (null == f) throw new x.A({ errorCode: k.Lw6.INVALID_COMMAND }, "No application.");
-            if (!U.mO.includes(f)) throw new x.A({ errorCode: k.Lw6.INVALID_COMMAND }, "Unsupported application.");
+            if (null == f)
+                throw new x.A(
+                    {
+                        errorCode: k.Lw6.INVALID_COMMAND,
+                    },
+                    "No application.",
+                );
+            if (!U.mO.includes(f))
+                throw new x.A(
+                    {
+                        errorCode: k.Lw6.INVALID_COMMAND,
+                    },
+                    "Unsupported application.",
+                );
             if (!(0, l.Lt)(null != (t = r.application.flags) ? t : 0, k.gfo.EMBEDDED))
-                throw new x.A({ errorCode: k.Lw6.INVALID_COMMAND }, "This application cannot access this API");
+                throw new x.A(
+                    {
+                        errorCode: k.Lw6.INVALID_COMMAND,
+                    },
+                    "This application cannot access this API",
+                );
             let h = (0, L.A)();
-            if (null == h && c) throw new x.A({ errorCode: k.Lw6.INVALID_COMMAND }, "No channel found");
+            if (null == h && c)
+                throw new x.A(
+                    {
+                        errorCode: k.Lw6.INVALID_COMMAND,
+                    },
+                    "No channel found",
+                );
             if (null !== a || null !== o || null !== u) {
                 let e = [];
                 void 0 !== a &&
@@ -391,7 +498,11 @@ let V = {
                         },
                         requireLaunchChannel: !0 === c,
                         onShareResult: (n) => {
-                            t || (t = n), r.lock(), e({ success: t });
+                            t || (t = n),
+                                r.lock(),
+                                e({
+                                    success: t,
+                                });
                         },
                         previewMessage: n,
                         contextKey: l,

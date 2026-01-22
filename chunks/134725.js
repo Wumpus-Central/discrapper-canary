@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -8,6 +10,7 @@ var i = n(311907),
     o = n(734057),
     s = n(652215),
     u = n(985018);
+
 function d(e) {
     return (0, i.bG)([c.A, o.A], () => {
         let t = Object.values(o.A.getMutableBasicGuildChannelsForGuild(e.guild_id)).filter(

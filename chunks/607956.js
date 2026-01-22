@@ -1,9 +1,12 @@
-r.d(t, { default: () => l });
+r.d(t, {
+    default: () => l,
+});
 var n = r(627968),
     o = r(64700),
     c = r(397927),
     a = r(442433),
     i = r(545059);
+
 function l(e) {
     let { groupId: t, onSelect: l } = e,
         u = o.useCallback(() => {
@@ -38,7 +41,10 @@ function l(e) {
                             }
                             return e;
                         })({}, r)),
-                        (c = c = { groupId: t }),
+                        (c = c =
+                            {
+                                groupId: t,
+                            }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(c))
                             : (function (e, t) {

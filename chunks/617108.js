@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -44,7 +46,9 @@ let g = function (e) {
         ? (0, r.jsxs)(d.T0, {
               onClick: n,
               children: [
-                  (0, r.jsx)(d.In, { children: (0, f.rn)(y, Number(b.discount.amount)) }),
+                  (0, r.jsx)(d.In, {
+                      children: (0, f.rn)(y, Number(b.discount.amount)),
+                  }),
                   (0, r.jsx)(d.fY, {
                       onClick: v,
                       text: h.intl.string(h.t.zLXssK),

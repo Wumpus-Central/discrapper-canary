@@ -15,6 +15,7 @@ var r = e(503698),
     w = e(583970),
     o = e(985018),
     Q = e(197827);
+
 function i(A) {
     return (0, g.jsxs)("div", {
         className: v()(Q.zC, A.className),
@@ -105,20 +106,26 @@ let H = function (A) {
                 className: Q.E6,
                 avatar: B.A,
                 username: "Roka",
-                usernameStyle: { color: "var(--brand-400)" },
+                usernameStyle: {
+                    color: "var(--brand-400)",
+                },
                 message: o.intl.string(w.default.bpghV6),
             }),
             (0, g.jsx)(i, {
                 className: Q.E6,
                 avatar: h.A,
                 username: "hongo",
-                usernameStyle: { color: "var(--green-230)" },
+                usernameStyle: {
+                    color: "var(--green-230)",
+                },
                 message: o.intl.string(w.default.rnpv79),
             }),
             (0, g.jsx)(i, {
                 avatar: n.A,
                 username: "Lily",
-                usernameStyle: { color: "var(--orange-300)" },
+                usernameStyle: {
+                    color: "var(--orange-300)",
+                },
                 message: o.intl.string(w.default.u7tjsh),
                 decorations: (0, g.jsx)(
                     C.M,
@@ -153,14 +160,18 @@ let H = function (A) {
                 className: Q.E6,
                 avatar: l.A,
                 username: "sharon",
-                usernameStyle: { color: "var(--brand-400)" },
+                usernameStyle: {
+                    color: "var(--brand-400)",
+                },
                 message: o.intl.string(w.default.GlWVJH),
             }),
             (0, g.jsx)(i, {
                 className: Q.E6,
                 avatar: n.A,
                 username: "Lily",
-                usernameStyle: { color: "var(--orange-300)" },
+                usernameStyle: {
+                    color: "var(--orange-300)",
+                },
                 message: o.intl.string(w.default.AIp9hh),
             }),
         ],

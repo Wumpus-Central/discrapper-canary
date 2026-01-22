@@ -1,5 +1,7 @@
 let r;
-n.d(t, { A: () => U }),
+n.d(t, {
+    A: () => U,
+}),
     n(927092),
     n(212978),
     n(834879),
@@ -33,8 +35,8 @@ var i = n(284009),
     y = n(502075),
     O = n(652215),
     A = n(731854);
-let v = 300000,
-    S = 60000,
+let v = 3e5,
+    S = 6e4,
     I = new d.Ep(),
     T = !1,
     C = window.document.createElement("canvas"),
@@ -42,6 +44,7 @@ let v = 300000,
     R = 288;
 (C.width = 512), (C.height = R);
 let w = C.getContext("2d");
+
 function P() {
     I.stop(), null != r && (r = null);
 }
@@ -56,6 +59,7 @@ let D = o().debounce((e, t, n, r) => {
         }),
     );
 }, 500);
+
 function x(e) {
     let t = Math.min(N / e.width, R / e.height),
         n = e.width * t,
@@ -87,7 +91,9 @@ async function L(e, t) {
                 a()(null != e, "Auth token was null while sending screenshot."),
                     await E.Ay.makeChunkedRequest(
                         O.Rsh.STREAM_PREVIEW(t),
-                        { thumbnail: r },
+                        {
+                            thumbnail: r,
+                        },
                         {
                             method: "POST",
                             token: e,
@@ -96,7 +102,9 @@ async function L(e, t) {
             } else
                 await l.Bo.post({
                     url: O.Rsh.STREAM_PREVIEW(t),
-                    body: { thumbnail: r },
+                    body: {
+                        thumbnail: r,
+                    },
                     oldFormErrors: !0,
                     rejectWithError: !1,
                 });
@@ -107,6 +115,7 @@ async function L(e, t) {
         }
     r === e && (T ? I.start(S, n) : I.start(v, n));
 }
+
 function j(e, t) {
     let n = 0;
     return (g.isPlatformEmbedded ? k : M)(e, (e) => {
@@ -115,6 +124,7 @@ function j(e, t) {
         return !1;
     });
 }
+
 function M(e, t) {
     let n = (0, u.yL)(e);
     if (null == n) return Promise.resolve(new ImageData(0, 0));
@@ -137,6 +147,7 @@ function M(e, t) {
         (a.ontimeupdate = null), a.removeAttribute("srcObject"), a.load();
     });
 }
+
 function k(e, t) {
     let n = (0, c.lE)();
     return new Promise((i, a) => {

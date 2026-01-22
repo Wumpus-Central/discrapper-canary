@@ -1,4 +1,8 @@
-n.d(t, { w: () => y }), n(457529), n(896048);
+n.d(t, {
+    w: () => y,
+}),
+    n(457529),
+    n(896048);
 var r,
     i = n(311907),
     a = n(73153),
@@ -6,6 +10,7 @@ var r,
     o = n(954571),
     l = n(723702),
     c = n(837921);
+
 function u(e, t, n) {
     return (
         t in e
@@ -19,6 +24,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,6 +41,7 @@ function d(e) {
     }
     return e;
 }
+
 function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -47,6 +54,7 @@ function f(e, t) {
     }
     return n;
 }
+
 function p(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -58,7 +66,9 @@ function p(e, t) {
         e
     );
 }
-let _ = { hashes: {} };
+let _ = {
+    hashes: {},
+};
 async function h() {
     if (!l.isPlatformEmbedded || !(0, l.isWindows)()) return [];
     await c.Ay.ensureModule("discord_media");
@@ -70,18 +80,30 @@ async function m() {
         let t = (await h()).filter((e) => _.hashes[e.name] !== e.hash);
         for (let { name: n, hash: r, data: i } of t) {
             var e;
-            let t = p(d({}, i), { gpus: null == (e = i.gpus) ? void 0 : e.map((e) => JSON.stringify(e)) });
-            o.default.track(n, t), ((_ = { hashes: d({}, _.hashes) }).hashes[n] = r);
+            let t = p(d({}, i), {
+                gpus: null == (e = i.gpus) ? void 0 : e.map((e) => JSON.stringify(e)),
+            });
+            o.default.track(n, t),
+                ((_ = {
+                    hashes: d({}, _.hashes),
+                }).hashes[n] = r);
         }
         t.length > 0 && b.emitChange();
     } catch (e) {}
 }
+
 function g() {
     return m(), !1;
 }
 class E extends (r = i.Ay.PersistedStore) {
     initialize(e) {
-        (_ = null != e && "object" == typeof e.hashes ? e : { hashes: {} }), this.waitFor(s.A);
+        (_ =
+            null != e && "object" == typeof e.hashes
+                ? e
+                : {
+                      hashes: {},
+                  }),
+            this.waitFor(s.A);
     }
     getState() {
         return _;
@@ -95,7 +117,10 @@ class E extends (r = i.Ay.PersistedStore) {
     }
 }
 u(E, "displayName", "SystemAnalyticsStore"), u(E, "persistKey", "SystemAnalyticsStore");
-let b = new E(a.h, { START_SESSION: g });
+let b = new E(a.h, {
+    START_SESSION: g,
+});
+
 function y() {
     return b.info();
 }

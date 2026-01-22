@@ -1,4 +1,7 @@
-n.d(t, { default: () => w }), n(896048);
+n.d(t, {
+    default: () => w,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(284009),
@@ -17,6 +20,7 @@ var r = n(627968),
     v = n(551385),
     C = n(94939);
 let O = (0, d.k)(b.A);
+
 function j(e) {
     let { devices: t, selectedDeviceId: n, onSelectDeviceId: l } = e,
         i = t.map((e) => {
@@ -34,10 +38,13 @@ function j(e) {
                 options: i,
                 onChange: (e) => l(e),
             }),
-            (0, r.jsx)(p.A, { children: y.intl.string(y.t.dI4HFq) }),
+            (0, r.jsx)(p.A, {
+                children: y.intl.string(y.t.dI4HFq),
+            }),
         ],
     });
 }
+
 function m() {
     return (0, r.jsx)("div", {
         className: v.jK,
@@ -49,6 +56,7 @@ function m() {
         }),
     });
 }
+
 function w(e) {
     let t,
         n,
@@ -83,7 +91,9 @@ function w(e) {
             E(!1),
                 f.A.show({
                     title: y.intl.string(y.t.QL1y93),
-                    body: y.intl.formatToPlainString(y.t["6ZyNH/"], { deviceName: e.name }),
+                    body: y.intl.formatToPlainString(y.t["6ZyNH/"], {
+                        deviceName: e.name,
+                    }),
                 });
         }
     };
@@ -118,7 +128,11 @@ function w(e) {
             subtitle: i,
             actions: d,
             transitionState: C,
-            trackingProps: { impression: { impressionName: s.ImpressionNames.GAME_CONSOLE_DEVICE_LIST } },
+            trackingProps: {
+                impression: {
+                    impressionName: s.ImpressionNames.GAME_CONSOLE_DEVICE_LIST,
+                },
+            },
             onClose: O,
             children: t,
         })

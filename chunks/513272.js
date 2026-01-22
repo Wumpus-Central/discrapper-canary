@@ -1,5 +1,13 @@
 let r, i, a, s;
-n.d(t, { A: () => H }), n(864466), n(443073), n(638769), n(896048), n(321073), n(264879);
+n.d(t, {
+    A: () => H,
+}),
+    n(864466),
+    n(443073),
+    n(638769),
+    n(896048),
+    n(321073),
+    n(264879);
 var o,
     l = n(735438),
     c = n.n(l),
@@ -19,6 +27,7 @@ var o,
     v = n(661191),
     S = n(241843),
     I = n(521732);
+
 function T(e, t, n) {
     return (
         t in e
@@ -32,6 +41,7 @@ function T(e, t, n) {
         e
     );
 }
+
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -48,6 +58,7 @@ function C(e) {
     }
     return e;
 }
+
 function N(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -60,6 +71,7 @@ function N(e, t) {
     }
     return n;
 }
+
 function R(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -85,6 +97,7 @@ let w = {},
     k = [],
     U = 75,
     G = 25;
+
 function V() {
     M = h.A.getProps()
         .results.filter((e) => e.type === p.rD.TEXT_CHANNEL && 0 === e.record.type)
@@ -92,7 +105,9 @@ function V() {
 }
 class F extends (o = u.Ay.PersistedStore) {
     getState() {
-        return { shouldShowTopicsBar: r };
+        return {
+            shouldShowTopicsBar: r,
+        };
     }
     initialize(e) {
         var t;
@@ -190,6 +205,7 @@ class F extends (o = u.Ay.PersistedStore) {
         return a;
     }
 }
+
 function B(e, t, n, r) {
     let i = null == t || t < n;
     return !(null == e || e > r) && !i;
@@ -213,20 +229,40 @@ let H = new F(d.h, {
                 a = t.findIndex((t) => t.id === (null == e ? void 0 : e.id));
             a > -1 ? (t[a] = e) : t.push(e), (w[i] = t);
         }
-        let o = R(C({}, null != (t = P[i]) ? t : { fetching: !1 }), {
-            summaryId: void 0,
-            summaryIdLastReceivedAt: s,
-            summaryIdError: a,
-        });
+        let o = R(
+            C(
+                {},
+                null != (t = P[i])
+                    ? t
+                    : {
+                          fetching: !1,
+                      },
+            ),
+            {
+                summaryId: void 0,
+                summaryIdLastReceivedAt: s,
+                summaryIdError: a,
+            },
+        );
         P[i] = o;
     },
     REQUEST_CHANNEL_SUMMARY(e) {
         var t;
         let { channelId: n, summaryId: r, requestedAt: i } = e;
-        P[n] = R(C({}, null != (t = P[n]) ? t : { fetching: !1 }), {
-            summaryId: r,
-            summaryIdLastRequestedAt: i,
-        });
+        P[n] = R(
+            C(
+                {},
+                null != (t = P[n])
+                    ? t
+                    : {
+                          fetching: !1,
+                      },
+            ),
+            {
+                summaryId: r,
+                summaryIdLastRequestedAt: i,
+            },
+        );
     },
     RECEIVE_CHANNEL_SUMMARIES(e) {
         let { summaries: t, channelId: n, error: r, receivedAt: i } = e,

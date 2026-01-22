@@ -1,4 +1,7 @@
-n.d(t, { i: () => u }), n(417597);
+n.d(t, {
+    i: () => u,
+}),
+    n(417597);
 var i = n(832712),
     r = n(543465),
     s = n(477427),
@@ -6,6 +9,7 @@ var i = n(832712),
     a = n(24873),
     o = n(652215),
     c = n(355097);
+
 function u(e, t) {
     let n = r.Ay.getGuildFlags(e);
     t === a.N9.ALL_MESSAGES

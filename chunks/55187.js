@@ -1,4 +1,7 @@
-t.d(e, { b: () => C }), t(65821);
+t.d(e, {
+    b: () => C,
+}),
+    t(65821);
 var n = t(627968),
     r = t(64700),
     s = t(284009),
@@ -14,6 +17,7 @@ var n = t(627968),
     h = t(985018),
     p = t(689588);
 let j = new u.A("TwoWayLink");
+
 function C(a) {
     let {
             platformType: e,
@@ -31,7 +35,12 @@ function C(a) {
         A = r.useCallback(async () => {
             let a;
             try {
-                if (((a = await (0, x.d)(e, { twoWayLinkType: l.I.DESKTOP })), null == a))
+                if (
+                    ((a = await (0, x.d)(e, {
+                        twoWayLinkType: l.I.DESKTOP,
+                    })),
+                    null == a)
+                )
                     throw Error("missing authorizeURL");
             } catch (a) {
                 j.error("Error opening provider authorize page", a), g();
@@ -112,7 +121,9 @@ function C(a) {
                                 tag: "p",
                                 variant: "text-sm/normal",
                                 color: "text-default",
-                                children: h.intl.format(h.t.XhlYYn, { redirectUrl: k }),
+                                children: h.intl.format(h.t.XhlYYn, {
+                                    redirectUrl: k,
+                                }),
                             }),
                     ],
                 }),

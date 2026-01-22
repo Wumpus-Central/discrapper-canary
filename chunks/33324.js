@@ -1,4 +1,7 @@
-n.d(t, { A: () => v }), n(321073);
+n.d(t, {
+    A: () => v,
+}),
+    n(321073);
 var r = n(417597),
     l = n(41200),
     i = n(496767),
@@ -18,13 +21,16 @@ var r = n(417597),
     y = n(590877),
     O = n(281405),
     j = n(652215);
+
 function v(e) {
     let t = (0, f.A)(e.id),
         n = (0, i.W)(e.id),
         v = (0, d.vz)(e.id),
         x = (0, l.r)(e),
         E = (0, m.jz)(e),
-        _ = (0, A.kt)({ location: "guild-action-rows" }),
+        _ = (0, A.kt)({
+            location: "guild-action-rows",
+        }),
         C = (0, c.d)(e.id),
         S = (0, r.bG)([s.h], () => s.h.getNewMemberActions(e.id), [e.id]),
         I = (0, u.A)(e.id),

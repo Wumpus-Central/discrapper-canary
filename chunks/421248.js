@@ -1,4 +1,7 @@
-n.d(t, { Z: () => O }), n(667532);
+n.d(t, {
+    Z: () => O,
+}),
+    n(667532);
 var r = n(627968);
 n(64700);
 var i = n(873298),
@@ -16,6 +19,7 @@ var i = n(873298),
     m = n(531525),
     g = n(985018),
     E = n(842130);
+
 function b(e, t, n) {
     return (
         t in e
@@ -29,6 +33,7 @@ function b(e, t, n) {
         e
     );
 }
+
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -45,6 +50,7 @@ function y(e) {
     }
     return e;
 }
+
 function O() {
     var e;
     let t = null == (e = (0, f.A)()) || e,
@@ -54,7 +60,9 @@ function O() {
         S = (e) => {
             let t = Object.values(e);
             (0, o.hK)() && t.includes(i.TO.SHOW)
-                ? a.A.showAgeVerificationGetStartedModal({ entryPoint: s.q1.SENSITIVE_MEDIA_FILTER_SETTINGS })
+                ? a.A.showAgeVerificationGetStartedModal({
+                      entryPoint: s.q1.SENSITIVE_MEDIA_FILTER_SETTINGS,
+                  })
                 : (0, l.Jz)(e);
         },
         I = [
@@ -93,7 +101,10 @@ function O() {
                     {
                         title: g.intl.string(g.t["+uI23H"]),
                         value: A,
-                        onChange: (e) => S({ explicitContentFriendDm: e }),
+                        onChange: (e) =>
+                            S({
+                                explicitContentFriendDm: e,
+                            }),
                         options: I,
                     },
                     N,
@@ -105,7 +116,10 @@ function O() {
                     {
                         title: g.intl.string(g.t["Yh+HX1"]),
                         value: v,
-                        onChange: (e) => S({ explicitContentNonFriendDm: e }),
+                        onChange: (e) =>
+                            S({
+                                explicitContentNonFriendDm: e,
+                            }),
                         options: I,
                     },
                     N,
@@ -114,7 +128,10 @@ function O() {
             (0, r.jsx)(_.A, {
                 title: g.intl.string(g.t["FP+a42"]),
                 value: O,
-                onChange: (e) => S({ explicitContentGuilds: e }),
+                onChange: (e) =>
+                    S({
+                        explicitContentGuilds: e,
+                    }),
                 isDisabled: !t || b,
                 tooltipText: n ? g.intl.string(E.default["6Af/cw"]) : void 0,
                 options: T,

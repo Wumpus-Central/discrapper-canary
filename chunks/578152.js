@@ -1,4 +1,8 @@
-n.d(t, { A: () => y }), n(896048), n(321073);
+n.d(t, {
+    A: () => y,
+}),
+    n(896048),
+    n(321073);
 var r = n(562465),
     i = n(506774),
     a = n(73153),
@@ -9,6 +13,7 @@ var r = n(562465),
     u = n(723702),
     d = n(728458),
     f = n(837921);
+
 function p(e, t, n) {
     return (
         t in e
@@ -108,7 +113,9 @@ class b extends s.A {
                         (u.isPlatformEmbedded
                             ? n && f.Ay.canBootstrapNewUpdater
                                 ? t._requestNewUpdaterBootstrap()
-                                : f.Ay.send("CHECK_FOR_UPDATES", { allowMultipleUpdates: !1 })
+                                : f.Ay.send("CHECK_FOR_UPDATES", {
+                                      allowMultipleUpdates: !1,
+                                  })
                             : t._handleNativeUpdateNotAvailable()),
                     new Promise((e) => {
                         t.updateAvailable ? e(!0) : t._callbacks.push(e);
@@ -116,7 +123,9 @@ class b extends s.A {
                 );
             }),
             p(this, "_handleCheckingForUpdates", () => {
-                a.h.dispatch({ type: "CHECKING_FOR_UPDATES" });
+                a.h.dispatch({
+                    type: "CHECKING_FOR_UPDATES",
+                });
             }),
             p(this, "_handleNativeUpdateNotAvailable", () => {
                 this._handleCheckingForUpdates(),
@@ -126,12 +135,14 @@ class b extends s.A {
                             .concat(location.host)
                             .concat("/assets/", "version.")
                             .concat(window.GLOBAL_ENV.RELEASE_CHANNEL, ".json"),
-                        query: { _: (Date.now() / 1000 / 60 / 5) | 0 },
+                        query: {
+                            _: (Date.now() / 1e3 / 60 / 5) | 0,
+                        },
                         oldFormErrors: !0,
                         rejectWithError: !0,
                     }).then(
                         (e) => {
-                            if (null == e.body || "4e1818290817afb4d92f289508416cc4e8e00823" === e.body.hash)
+                            if (null == e.body || "61528d3e3435ecbee37bf641aa64b9de561b202c" === e.body.hash)
                                 return this._handleUpdateNotAvailable();
                             if (e.body.required || (0, o.kK)()) return this._handleUpdateDownloaded(!1);
                             let t = "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL ? h : m;
@@ -144,17 +155,24 @@ class b extends s.A {
                     );
             }),
             p(this, "_handleUpdateNotAvailable", () => {
-                a.h.dispatch({ type: "UPDATE_NOT_AVAILABLE" }), this._emitCallbacks();
+                a.h.dispatch({
+                    type: "UPDATE_NOT_AVAILABLE",
+                }),
+                    this._emitCallbacks();
             }),
             p(this, "_handleUpdateAvailable", (e) => {
                 (this.updateAvailable = !0),
                     (this.nativeUpdateAvailable = e),
-                    a.h.dispatch({ type: "UPDATE_AVAILABLE" });
+                    a.h.dispatch({
+                        type: "UPDATE_AVAILABLE",
+                    });
             }),
             p(this, "_handleUpdateManually", () => {
                 (this.updateAvailable = !0),
                     (this.nativeUpdateAvailable = !0),
-                    a.h.dispatch({ type: "UPDATE_MANUALLY" });
+                    a.h.dispatch({
+                        type: "UPDATE_MANUALLY",
+                    });
             }),
             p(this, "_handleUpdateError", (e) => {
                 (this.updateAvailable = !1),

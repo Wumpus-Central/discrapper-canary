@@ -1,7 +1,10 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(403362),
     i = n(743981),
     l = n(985018);
+
 function s(e) {
     switch (e) {
         case i.bl.SWORD:

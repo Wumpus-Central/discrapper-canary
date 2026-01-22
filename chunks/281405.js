@@ -1,4 +1,6 @@
-n.d(t, { n: () => r });
+n.d(t, {
+    n: () => r,
+});
 var r = (function (e) {
     return (
         (e.GUILD_PREMIUM_PROGRESS_BAR = "guild-premium-progress-bar"),

@@ -1,5 +1,6 @@
 function r(e) {
     let { getFocusableElements: t, getActiveElement: n, scrollToStart: r, scrollToEnd: i } = e;
+
     function a(e) {
         var n;
         return null !=
@@ -13,6 +14,7 @@ function r(e) {
             ? n
             : null;
     }
+
     function s(e) {
         let n = t();
         for (let t = n.length - 1; t >= 0; t--) {
@@ -22,10 +24,12 @@ function r(e) {
         }
         return null;
     }
+
     function o() {
         var e;
         return null != (e = t()[0]) ? e : null;
     }
+
     function l() {
         var e;
         let n = t();
@@ -48,4 +52,6 @@ function r(e) {
         getLastFocusableElement: l,
     };
 }
-n.d(t, { C: () => r });
+n.d(t, {
+    C: () => r,
+});

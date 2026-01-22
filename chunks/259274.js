@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968);
 n(64700);
 var i = n(814278),
@@ -8,6 +10,7 @@ var i = n(814278),
     l = n(531525),
     c = n(985018),
     u = n(290960);
+
 function d() {
     let e = (0, a.G)();
     return (0, r.jsxs)(o.h, {
@@ -15,14 +18,18 @@ function d() {
         children: [
             (0, r.jsx)(o._, {
                 header: c.intl.string(c.t["5b3FNI"]),
-                description: c.intl.format(c.t.jrTSWU, { helpArticle: (0, i.dc)() }),
+                description: c.intl.format(c.t.jrTSWU, {
+                    helpArticle: (0, i.dc)(),
+                }),
             }),
             e.map((e) =>
                 (0, r.jsx)(
                     "div",
                     {
                         className: u.A,
-                        children: (0, r.jsx)(s.L, { userId: e }),
+                        children: (0, r.jsx)(s.L, {
+                            userId: e,
+                        }),
                     },
                     e,
                 ),

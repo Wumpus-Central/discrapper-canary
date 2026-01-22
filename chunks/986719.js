@@ -1,9 +1,12 @@
-n.d(t, { A: () => l });
+n.d(t, {
+    A: () => l,
+});
 var r = n(64700),
     i = n(884362),
     a = n(741918),
     s = n(267102),
     o = n(374803);
+
 function l(e) {
     var t, n, l;
     let { navId: c, scrollerRef: u, state: d, onFocus: f } = e,
@@ -12,7 +15,10 @@ function l(e) {
             let n = p.document.querySelector(e);
             if (null != n) {
                 var r;
-                null == (r = u.current) || r.scrollIntoViewNode({ node: n });
+                null == (r = u.current) ||
+                    r.scrollIntoViewNode({
+                        node: n,
+                    });
             }
             null == f || f(+t);
         },

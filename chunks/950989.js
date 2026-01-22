@@ -1,4 +1,7 @@
-t.d(n, { default: () => y }), t(896048);
+t.d(n, {
+    default: () => y,
+}),
+    t(896048);
 var l = t(627968),
     i = t(64700),
     o = t(158954),
@@ -15,6 +18,7 @@ var l = t(627968),
     g = t(650583),
     f = t(985018),
     j = t(465161);
+
 function y(e) {
     var n;
     let { transitionState: t, onClose: y, channelId: h, guildId: O, tag: k } = e,
@@ -234,7 +238,9 @@ function y(e) {
                                 : void 0,
                     }),
                 }),
-                (0, l.jsx)(r.hKd, { size: 16 }),
+                (0, l.jsx)(r.hKd, {
+                    size: 16,
+                }),
                 (0, l.jsx)(r.Checkbox, {
                     checked: null != A && A,
                     onChange: (e) => E(e || ((null == k ? void 0 : k.moderated) == null && void 0)),

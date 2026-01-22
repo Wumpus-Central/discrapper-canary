@@ -1,4 +1,14 @@
-n.d(t, { A: () => g }), n(896048), n(693327), n(554719), n(680155), n(323874), n(14289), n(35956), n(747238);
+n.d(t, {
+    A: () => g,
+}),
+    n(896048),
+    n(693327),
+    n(554719),
+    n(680155),
+    n(323874),
+    n(14289),
+    n(35956),
+    n(747238);
 var l = n(627968),
     r = n(64700),
     a = n(397927),
@@ -9,6 +19,7 @@ var l = n(627968),
     d = n(473169);
 let u = ["cdn.discord.com", "cdn.discordapp.com", "media.discordapp.net"],
     m = /^https:\/\/(?:ptb\.|canary\.)?discord(?:app)?\.com\/channels\/(?:@me|\d+)\/\d+\/\d+$/;
+
 function b(e) {
     try {
         return new URL(e), !0;
@@ -16,6 +27,7 @@ function b(e) {
         return !1;
     }
 }
+
 function p(e) {
     return (
         "" !== e &&
@@ -66,7 +78,10 @@ let x = (e) => {
                         }
                         return e;
                     })({}, i.A.defaultRules)),
-                    (t = t = { link: s.B }),
+                    (t = t =
+                        {
+                            link: s.B,
+                        }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
                         : (function (e, t) {

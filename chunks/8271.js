@@ -1,4 +1,6 @@
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var r = n(627968);
 n(64700);
 var i = n(632553),
@@ -11,6 +13,7 @@ var i = n(632553),
     d = n(652215),
     f = n(985018),
     p = n(842130);
+
 function _() {
     let e = o.vf.useSetting(),
         t = o.H1.useSetting(),
@@ -20,7 +23,9 @@ function _() {
         setting: u.H.PRIVACY_DATA_QUESTS_3P,
         children: (0, r.jsx)(c.Ay, {
             title: f.intl.string(f.t.CyLYKZ),
-            note: f.intl.format(f.t["2QFDU/"], { helpdeskArticle: s.A.getArticleURL(d.MVz.QUESTS_PRIVACY_CONTROLS) }),
+            note: f.intl.format(f.t["2QFDU/"], {
+                helpdeskArticle: s.A.getArticleURL(d.MVz.QUESTS_PRIVACY_CONTROLS),
+            }),
             value: !e,
             onChange: (e) => o.vf.updateSetting(!e),
             disabled: _ || t || n,

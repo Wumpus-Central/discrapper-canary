@@ -31,6 +31,7 @@ let d = (e) => {
             variant: "secondary",
         });
     };
+
 function p(e) {
     let { className: t, ref: n, children: i, onClick: s } = e;
     return (0, r.jsx)(o.NPJ, {
@@ -45,11 +46,15 @@ function p(e) {
                         children: i,
                     }),
                     (0, r.jsx)(o.DUT, {
-                        focusProps: { offset: 6 },
+                        focusProps: {
+                            offset: 6,
+                        },
                         className: u.b,
                         onClick: s,
                         "aria-label": c.intl.string(c.t.WAI6xu),
-                        children: (0, r.jsx)(o.PGe, { size: "sm" }),
+                        children: (0, r.jsx)(o.PGe, {
+                            size: "sm",
+                        }),
                     }),
                 ],
             }),

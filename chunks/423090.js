@@ -8,6 +8,7 @@ var i = n(855522),
     a = n(158954),
     s = n(827734),
     o = n(477540);
+
 function l(e) {
     let { type: t } = e;
     return (0, r.jsx)(c, {
@@ -24,6 +25,7 @@ function l(e) {
         text: "user" === t ? i.A.Messages.STOREFRONT_USER_SUBSCRIPTION : i.A.Messages.STOREFRONT_SERVER_SUBSCRIPTION,
     });
 }
+
 function c(e) {
     let { icon: t, text: n } = e;
     return (0, r.jsxs)("div", {

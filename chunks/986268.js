@@ -1,4 +1,6 @@
-n.d(t, { A: () => A });
+n.d(t, {
+    A: () => A,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -17,6 +19,7 @@ var i = n(503698),
     g = n(652215),
     E = n(985018),
     b = n(617286);
+
 function y(e) {
     let { guild: t, isBannerVisible: n, disableBoostClick: i } = e,
         a = (0, s.bG)([h.default, _.Ay], () => {
@@ -43,7 +46,9 @@ function y(e) {
         className: b._C,
         children: (0, r.jsx)(o.un, {
             title: y,
-            body: E.intl.format(E.t.If4iTS, { subscriberCount: u }),
+            body: E.intl.format(E.t.If4iTS, {
+                subscriberCount: u,
+            }),
             position: "bottom",
             children: (0, r.jsx)(l.DUT, {
                 className: b.__invalid_premiumGuildIcon,
@@ -58,6 +63,7 @@ function y(e) {
         }),
     });
 }
+
 function O(e) {
     let { guild: t, disableColor: n, disableBoostClick: i } = e;
     return (0, c.A)(t)
@@ -68,7 +74,9 @@ function O(e) {
                   size: 18,
                   tooltipPosition: "bottom",
                   tooltipColor: l.STz.Colors.PRIMARY,
-                  className: a()(b.n2, { [b.cE]: n }),
+                  className: a()(b.n2, {
+                      [b.cE]: n,
+                  }),
                   disableBoostClick: i,
               }),
           })
@@ -79,10 +87,13 @@ function O(e) {
                   size: 18,
                   tooltipPosition: "bottom",
                   tooltipColor: l.STz.Colors.PRIMARY,
-                  className: a()(b.n2, { [b.cE]: n }),
+                  className: a()(b.n2, {
+                      [b.cE]: n,
+                  }),
               }),
           });
 }
+
 function A(e) {
     let { guild: t, disableBoostClick: n } = e,
         i = !1;

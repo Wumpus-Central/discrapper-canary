@@ -10,6 +10,7 @@ var r = n(627968),
     l = n(435738),
     c = n(652215),
     u = n(985018);
+
 function d(e, t, n) {
     return (
         t in e
@@ -23,6 +24,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -39,6 +41,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -51,6 +54,7 @@ function p(e, t) {
     }
     return n;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -105,7 +109,9 @@ let h = (e) => {
             align: "right",
             renderPopout: (e) => {
                 let { closePopout: t } = e;
-                return (0, r.jsx)(h, { closePopout: t });
+                return (0, r.jsx)(h, {
+                    closePopout: t,
+                });
             },
             children: (t) =>
                 (0, r.jsx)(
@@ -120,7 +126,9 @@ let h = (e) => {
                             height: "12px",
                             display: "flex",
                         },
-                        children: (0, r.jsx)(s.Zes, { size: "xxs" }),
+                        children: (0, r.jsx)(s.Zes, {
+                            size: "xxs",
+                        }),
                     }),
                 ),
         });

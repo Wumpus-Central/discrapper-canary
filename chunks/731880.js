@@ -1,1 +1,3 @@
-e.exports = { Xn: "_43badeb6727f2ffe" };
+e.exports = {
+    Xn: "_43badeb6727f2ffe",
+};

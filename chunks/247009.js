@@ -1,20 +1,22 @@
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});
 var r = {};
 r = {
-    calendar: "Kalendár",
+    calendar: "Kalend\xe1r",
     day: "deň",
     dayPeriod: "AM/PM",
-    endDate: "Dátum ukončenia",
+    endDate: "D\xe1tum ukončenia",
     era: "letopočet",
     hour: "hodina",
-    minute: "minúta",
+    minute: "min\xfata",
     month: "mesiac",
     second: "sekunda",
     selectedDateDescription: (e) => `Vybrat\xfd d\xe1tum: ${e.date}`,
     selectedRangeDescription: (e) => `Vybrat\xfd rozsah: od ${e.startDate} do ${e.endDate}`,
     selectedTimeDescription: (e) => `Vybrat\xfd \u{10D}as: ${e.time}`,
-    startDate: "Dátum začatia",
-    timeZoneName: "časové pásmo",
-    weekday: "deň týždňa",
+    startDate: "D\xe1tum začatia",
+    timeZoneName: "časov\xe9 p\xe1smo",
+    weekday: "deň t\xfdždňa",
     year: "rok",
 };

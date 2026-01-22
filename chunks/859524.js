@@ -38,8 +38,9 @@ var p = n(222823),
     g = n(800319),
     m = n(883344),
     b = n(596720),
-    _ = n(449000),
+    _ = n(449e3),
     E = n(652215);
+
 function O(e, t) {
     return "hydration-".concat(e, "-").concat(t);
 }
@@ -51,9 +52,11 @@ var y =
     (r[(r.LESS = 3)] = "LESS"),
     (r[(r.MUTED = 4)] = "MUTED"),
     r);
+
 function I(e) {
     return e.type === b.Mm.MESSAGE || e.type === b.Mm.GENERATED_CANDIDATE || e.type === b.Mm.GUILD_EVENT;
 }
+
 function v(e) {
     return e < -1.5 ? 4 : e < 0 ? 3 : e > 0 ? 2 : 1;
 }
@@ -122,6 +125,7 @@ async function C() {
         n = m.A.getNextIndexToHydrate();
     await S([...e, ...t], n, n + b.w5);
 }
+
 function N(e) {
     let t = [];
     null != e.messages && (t = e.messages);
@@ -149,6 +153,7 @@ function N(e) {
         messages: n,
     };
 }
+
 function T(e, t) {
     var n, r;
     return (
@@ -197,13 +202,16 @@ function T(e, t) {
         n
     );
 }
+
 function j(e, t) {
     let n = p.Ay.getTrackedAckMessageId(e);
     return null == n || f.default.extractTimestamp(t) > f.default.extractTimestamp(n);
 }
+
 function x(e) {
     return (0, A.HF)(e);
 }
+
 function P(e) {
     var t;
     return {
@@ -229,6 +237,7 @@ function P(e) {
         score_components: e.score_components,
     };
 }
+
 function w(e, t, n) {
     let r = _.A.getReadTimestamp(e);
     null == r && (r = null == n ? void 0 : n[e]);
@@ -241,6 +250,7 @@ function w(e, t, n) {
             ? 1
             : i - r;
 }
+
 function L(e) {
     let t = [...m.A.getUnreadDisplayItems(), ...m.A.getReadDisplayItems()],
         n = null;
@@ -255,6 +265,7 @@ function L(e) {
     let r = t.findIndex((e) => e.id === n);
     return r < 0 ? [] : t.slice(0, r + 1);
 }
+
 function R(e) {
     var t, n;
     let r, i;
@@ -282,6 +293,7 @@ function R(e) {
         (null == s ? void 0 : s.nsfwLevel) === E.ftr.AGE_RESTRICTED
     );
 }
+
 function D(e) {
     switch (e.data.kind) {
         case "end":

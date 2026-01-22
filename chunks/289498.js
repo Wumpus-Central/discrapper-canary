@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -16,6 +18,7 @@ var i = n(503698),
 let m = (e) => {
     let { disabled: t = !1, type: n, className: i, innerClassName: m, onConnect: g } = e,
         E = (0, c.Ay)();
+
     function b(e) {
         let t = u.A.get(e);
         (0, f.A)({
@@ -38,7 +41,9 @@ let m = (e) => {
                     className: a()(h.vW, m),
                     type: "button",
                     disabled: t,
-                    style: { backgroundImage: "url('".concat((0, o.Mw)(E) ? y.icon.darkSVG : y.icon.lightSVG, "')") },
+                    style: {
+                        backgroundImage: "url('".concat((0, o.Mw)(E) ? y.icon.darkSVG : y.icon.lightSVG, "')"),
+                    },
                     onClick: null != g ? g : () => b(n),
                     "aria-label": y.name,
                 }),

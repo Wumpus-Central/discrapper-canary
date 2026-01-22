@@ -1,8 +1,11 @@
-r.d(t, { default: () => i });
+r.d(t, {
+    default: () => i,
+});
 var n = r(627968);
 r(64700);
 var o = r(158954),
     l = r(985018);
+
 function i(e) {
     let { onConfirm: t } = e,
         r = (function (e, t) {

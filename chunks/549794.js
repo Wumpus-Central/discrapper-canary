@@ -1,4 +1,14 @@
-n.d(t, { A: () => N }), n(896048), n(693327), n(554719), n(680155), n(323874), n(14289), n(35956), n(938796);
+n.d(t, {
+    A: () => N,
+}),
+    n(896048),
+    n(693327),
+    n(554719),
+    n(680155),
+    n(323874),
+    n(14289),
+    n(35956),
+    n(938796);
 var r = n(665260),
     i = n(420970),
     l = n(975807),
@@ -50,7 +60,10 @@ let v = new Set([y.AM, y.eK]),
             scope: {
                 [E.sm.ANY]: [E.VH, E.W_],
             },
-            validation: (e) => (0, _.A)(e).required().keys({ url: e.string().required() }),
+            validation: (e) =>
+                (0, _.A)(e).required().keys({
+                    url: e.string().required(),
+                }),
             handler(e) {
                 let {
                     socket: t,
@@ -77,7 +90,9 @@ let v = new Set([y.AM, y.eK]),
                                 url: s,
                                 opened: !0,
                             }),
-                            Promise.resolve({ opened: !0 })
+                            Promise.resolve({
+                                opened: !0,
+                            })
                         );
                     return new Promise((e) =>
                         (0, A.h)(
@@ -92,7 +107,9 @@ let v = new Set([y.AM, y.eK]),
                                             url: s,
                                             opened: !0,
                                         }),
-                                        e({ opened: !0 });
+                                        e({
+                                            opened: !0,
+                                        });
                                 },
                                 onCancel: () => {
                                     var n;
@@ -101,7 +118,9 @@ let v = new Set([y.AM, y.eK]),
                                         url: s,
                                         opened: !1,
                                     }),
-                                        e({ opened: !1 });
+                                        e({
+                                            opened: !1,
+                                        });
                                 },
                             },
                             void 0,
@@ -113,30 +132,43 @@ let v = new Set([y.AM, y.eK]),
                         ),
                     );
                 } catch (e) {
-                    throw new m.A({ errorCode: O.Lw6.INVALID_COMMAND }, "Invalid URL: ".concat(n));
+                    throw new m.A(
+                        {
+                            errorCode: O.Lw6.INVALID_COMMAND,
+                        },
+                        "Invalid URL: ".concat(n),
+                    );
                 }
             },
         },
         [O.e$_.NAVIGATE_TO_CONNECTIONS]: {
             validation: (e) => (0, _.A)(e),
-            scope: { [E.sm.ANY]: [E.VH] },
+            scope: {
+                [E.sm.ANY]: [E.VH],
+            },
             handler(e) {
                 let { socket: t } = e;
                 (0, b.lG)(t.transport);
                 let r = (0, b.D2)(t.application);
                 if (!v.has(r))
                     throw new m.A(
-                        { errorCode: O.Lw6.UNAUTHORIZED_FOR_APPLICATION },
+                        {
+                            errorCode: O.Lw6.UNAUTHORIZED_FOR_APPLICATION,
+                        },
                         "Command not available for this application",
                     );
                 {
                     let { openUserSettings: e } = n(840065);
-                    e(p.X.CONNECTIONS_PANEL, { section: O.nc_.CONNECTIONS });
+                    e(p.X.CONNECTIONS_PANEL, {
+                        section: O.nc_.CONNECTIONS,
+                    });
                 }
             },
         },
         [O.e$_.SHARE_LINK]: (0, i.T)(O.e$_.SHARE_LINK, {
-            scope: { [E.sm.ANY]: [E.VH] },
+            scope: {
+                [E.sm.ANY]: [E.VH],
+            },
             handler(e) {
                 var t;
                 let {
@@ -145,9 +177,20 @@ let v = new Set([y.AM, y.eK]),
                 } = e;
                 (0, b.lG)(n.transport);
                 let s = (0, b.D2)(n.application);
-                if (null == s) throw new m.A({ errorCode: O.Lw6.INVALID_COMMAND }, "No application.");
+                if (null == s)
+                    throw new m.A(
+                        {
+                            errorCode: O.Lw6.INVALID_COMMAND,
+                        },
+                        "No application.",
+                    );
                 if (!(0, r.Lt)(null != (t = n.application.flags) ? t : 0, O.gfo.EMBEDDED))
-                    throw new m.A({ errorCode: O.Lw6.INVALID_COMMAND }, "This application cannot access this API");
+                    throw new m.A(
+                        {
+                            errorCode: O.Lw6.INVALID_COMMAND,
+                        },
+                        "This application cannot access this API",
+                    );
                 return new Promise((e) => {
                     (0, c.a)({
                         applicationId: s,

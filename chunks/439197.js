@@ -1,1 +1,3 @@
-e.exports = { V: "_37aae7b4da20fb83" };
+e.exports = {
+    V: "_37aae7b4da20fb83",
+};

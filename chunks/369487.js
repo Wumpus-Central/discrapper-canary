@@ -1,4 +1,6 @@
-n.d(t, { R: () => r });
+n.d(t, {
+    R: () => r,
+});
 let r = (0, n(600975).C)({
     kind: "user",
     id: "2025-10_word_frequency_store_rollout",

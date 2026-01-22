@@ -8,6 +8,7 @@ var r = n(627968);
 n(64700);
 var i = n(397927),
     a = n(530912);
+
 function s(e, t, n) {
     return (
         t in e
@@ -21,6 +22,7 @@ function s(e, t, n) {
         e
     );
 }
+
 function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,6 +39,7 @@ function o(e) {
     }
     return e;
 }
+
 function l(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -49,6 +52,7 @@ function l(e, t) {
     }
     return n;
 }
+
 function c(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -61,6 +65,7 @@ function c(e, t) {
     );
 }
 let u = "forward-modal";
+
 function d(e) {
     let {
         message: t,
@@ -89,12 +94,16 @@ function d(e) {
                         }),
                     );
             },
-            { modalKey: u },
+            {
+                modalKey: u,
+            },
         );
 }
+
 function f() {
     (0, i.OoC)(u);
 }
+
 function p(e) {
     let { message: t, failedDestinations: a, forwardOptions: s } = e;
     (0, i.mMO)(async () => {

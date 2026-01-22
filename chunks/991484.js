@@ -1,5 +1,9 @@
-n.d(t, { A: () => i }), n(896048);
+n.d(t, {
+    A: () => i,
+}),
+    n(896048);
 var r = n(64700);
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -25,6 +29,7 @@ function l(e) {
     }
     return e;
 }
+
 function o(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -43,6 +48,7 @@ function o(e, t) {
         e
     );
 }
+
 function i(e) {
     let {
             getCurrentVideoTime: t,
@@ -89,7 +95,7 @@ function i(e) {
             if (null == e || null == d) return;
             let n = Date.now();
             n - p.current < c ||
-                e - d.segmentStartSec < u / 1000 ||
+                e - d.segmentStartSec < u / 1e3 ||
                 (E(
                     o(l({}, d), {
                         endTime: n,

@@ -16,6 +16,7 @@ n(206626);
 var i = n(227309),
     a = n(652215),
     s = n(985018);
+
 function o(e, t, n) {
     return (
         t in e
@@ -29,6 +30,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -45,6 +47,7 @@ function l(e) {
     }
     return e;
 }
+
 function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -57,6 +60,7 @@ function c(e, t) {
     }
     return n;
 }
+
 function u(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -68,6 +72,7 @@ function u(e, t) {
         e
     );
 }
+
 function d(e) {
     if (e.distributor === a.d3x.ROBLOX && null != e.sku) {
         var t, n;
@@ -77,11 +82,15 @@ function d(e) {
     }
     return null;
 }
+
 function f(e) {
     return e.distributor === a.d3x.ROBLOX && null != e.gameMetadata && null != e.gameMetadata[i.IO.PLACE_ID]
-        ? JSON.stringify({ placeId: e.gameMetadata[i.IO.PLACE_ID] })
+        ? JSON.stringify({
+              placeId: e.gameMetadata[i.IO.PLACE_ID],
+          })
         : null;
 }
+
 function p(e) {
     return e.distributor !== a.d3x.ROBLOX ||
         null == e.gameMetadata ||
@@ -94,24 +103,45 @@ function p(e) {
               sync_id: e.gameMetadata[i.IO.ROBLOX_TIME_STARTED],
           };
 }
+
 function _(e) {
     var t;
     return (null == (t = e.metadata) ? void 0 : t.distributor) === a.d3x.ROBLOX && e.application_id !== i.a7;
 }
+
 function h(e) {
     if (!_(e)) return e;
-    let t = r.a.getConfig({ location: "transformRobloxSubgameNames" }).alternativeTitle ? s.t.HjVwG3 : s.t.G6BGdx;
-    return u(l({}, e), { name: s.intl.formatToPlainString(t, { subgameName: e.name }) });
+    let t = r.a.getConfig({
+        location: "transformRobloxSubgameNames",
+    }).alternativeTitle
+        ? s.t.HjVwG3
+        : s.t.G6BGdx;
+    return u(l({}, e), {
+        name: s.intl.formatToPlainString(t, {
+            subgameName: e.name,
+        }),
+    });
 }
+
 function m(e) {
     if (e.type !== a.$pd.PLAYING || !_(e)) return e;
     let t = Number(e.sync_id),
         n = l({}, e);
-    return (n.application_id = i.a7), (n.name = a.gG4[a.d3x.ROBLOX]), isNaN(t) || (n.timestamps = { start: t }), n;
+    return (
+        (n.application_id = i.a7),
+        (n.name = a.gG4[a.d3x.ROBLOX]),
+        isNaN(t) ||
+            (n.timestamps = {
+                start: t,
+            }),
+        n
+    );
 }
+
 function g(e) {
     return e.distributor === a.d3x.ROBLOX && e.id !== i.a7;
 }
+
 function E(e) {
     return e.thirdPartySkus.some((e) => e.distributor === a.d3x.ROBLOX);
 }

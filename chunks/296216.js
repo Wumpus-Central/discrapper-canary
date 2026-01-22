@@ -11,6 +11,7 @@ var r = n(205369),
     c = n(607567),
     u = n(652215);
 let d = "DRAGGABLE_USER";
+
 function f(e) {
     return (0, r.T)(
         d,
@@ -37,6 +38,7 @@ function f(e) {
         }),
     )(e);
 }
+
 function p(e) {
     return (0, l.I)(
         d,
@@ -47,9 +49,13 @@ function p(e) {
             },
             beginDrag(e) {
                 let { user: t } = e;
-                return { user: t };
+                return {
+                    user: t,
+                };
             },
         },
-        (e) => ({ connectUserDragSource: e.dragSource() }),
+        (e) => ({
+            connectUserDragSource: e.dragSource(),
+        }),
     )(e);
 }

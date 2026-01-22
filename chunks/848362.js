@@ -16,6 +16,7 @@ var r = n(627968),
     _ = n(562153),
     h = n(652215),
     m = n(985018);
+
 function g(e, t, n) {
     let r = (0, a.bG)([l.A], () => (null != e ? l.A.getSelectedParticipantId(e.id) : null)),
         s = (0, a.bG)([f.A], () => (null != r ? f.A.getActiveStreamForStreamKey(r) : null), [r]),
@@ -33,6 +34,7 @@ function g(e, t, n) {
               }));
     }, [o, n, e, s, null == t ? void 0 : t.id]);
 }
+
 function E(e) {
     var t;
     let {
@@ -75,7 +77,9 @@ function E(e) {
                             s.Drp,
                             {
                                 id: t.ownerId,
-                                label: m.intl.formatToPlainString(m.t["7rkg+/"], { username: n }),
+                                label: m.intl.formatToPlainString(m.t["7rkg+/"], {
+                                    username: n,
+                                }),
                                 icon: s.GT3,
                                 action: () => (0, d.A)(t),
                             },

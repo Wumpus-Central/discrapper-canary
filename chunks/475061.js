@@ -1,4 +1,6 @@
-i.d(e, { p: () => d });
+i.d(e, {
+    p: () => d,
+});
 var n = i(627968),
     l = i(64700),
     s = i(419954),
@@ -9,8 +11,11 @@ var n = i(627968),
     T = i(428961),
     A = i(639500),
     S = i(985018);
+
 function E() {
-    return (0, n.jsx)(u.A, { sourcePage: "voice" });
+    return (0, n.jsx)(u.A, {
+        sourcePage: "voice",
+    });
 }
 let d = (0, s.zZ)(a.X.VOICE_CATEGORY, {
     useTitle: () => S.intl.string(S.t.K3lovD),

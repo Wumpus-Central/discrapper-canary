@@ -118,9 +118,11 @@ let o = new Set([
         [a.he.PRZELEWY24]: "p24",
         [a.he.EPS]: "eps",
     };
+
 function f(e) {
     return e in c;
 }
+
 function p(e) {
     if (f(e)) {
         var t;
@@ -140,6 +142,7 @@ let _ = (e, t) =>
               : e in t
                 ? t[e]
                 : null;
+
 function h(e) {
     return l.size > 0 && l.has(e) ? "test" === (0, i.ux)() : o.has(e);
 }

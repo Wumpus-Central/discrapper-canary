@@ -12,7 +12,9 @@ var r = n(627968),
 let u = [o.zi, o.Rq],
     d = (e) => {
         let { entry: t, channel: n, selected: i } = e,
-            { largeImage: d } = (0, a.nO)({ entry: t });
+            { largeImage: d } = (0, a.nO)({
+                entry: t,
+            });
         return (0, r.jsxs)(l.Zp, {
             selected: i,
             children: [
@@ -23,10 +25,20 @@ let u = [o.zi, o.Rq],
                             channelId: n.id,
                             guildId: n.guild_id,
                         }),
-                        (0, r.jsx)(l.ZB, { children: t.extra.media_title }),
+                        (0, r.jsx)(l.ZB, {
+                            children: t.extra.media_title,
+                        }),
                         (0, r.jsx)(o.mG, {
                             location: o.N5.CARD,
-                            children: u.map((e, n) => (0, r.jsx)(e, { entry: t }, n)),
+                            children: u.map((e, n) =>
+                                (0, r.jsx)(
+                                    e,
+                                    {
+                                        entry: t,
+                                    },
+                                    n,
+                                ),
+                            ),
                         }),
                     ],
                 }),

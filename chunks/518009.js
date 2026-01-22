@@ -10,9 +10,11 @@ var r = n(64700),
         return (e[(e.MOUNTED = 0)] = "MOUNTED"), (e[(e.ENTERED = 1)] = "ENTERED"), (e[(e.YEETED = 2)] = "YEETED"), e;
     })({});
 let a = {};
+
 function s(e) {
     return e;
 }
+
 function o(e) {
     let { items: t, renderItem: n, getItemKey: i, wrapChildren: o = s, lazyCleanUpDelay: l } = e,
         c = r.useRef(-1);

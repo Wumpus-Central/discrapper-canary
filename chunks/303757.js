@@ -1,4 +1,6 @@
-n.d(t, { $: () => s });
+n.d(t, {
+    $: () => s,
+});
 var r = n(397927),
     i = n(272613),
     a = n(819638);
@@ -11,6 +13,8 @@ let s = {
                   slide: a.oS.JOIN_GUILD,
                   location: "Keyboard Shortcut",
               })
-            : i.A.openCreateGuildModal({ location: "Keyboard Shortcut" });
+            : i.A.openCreateGuildModal({
+                  location: "Keyboard Shortcut",
+              });
     },
 };

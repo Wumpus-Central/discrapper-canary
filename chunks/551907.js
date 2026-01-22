@@ -41,7 +41,9 @@
                     var t = Object.defineProperty || !1;
                     if (t)
                         try {
-                            t({}, "a", { value: 1 });
+                            t({}, "a", {
+                                value: 1,
+                            });
                         } catch (e) {
                             t = !1;
                         }
@@ -558,13 +560,13 @@
                         A = "[" + f + "]",
                         v = "(?:" + E + "|" + b + ")",
                         S = "(?:" + A + "|" + b + ")",
-                        I = "(?:['\u2019](?:d|ll|m|re|s|t|ve))?",
-                        T = "(?:['\u2019](?:D|LL|M|RE|S|T|VE))?",
+                        I = "(?:['’](?:d|ll|m|re|s|t|ve))?",
+                        T = "(?:['’](?:D|LL|M|RE|S|T|VE))?",
                         C = "(?:" + h + "|\\ud83c[\\udffb-\\udfff])?",
                         N = "[\\ufe0e\\ufe0f]?",
                         R = N + C + "(?:\\u200d(?:" + ["[^" + c + "]", y, O].join("|") + ")" + N + C + ")*",
                         w = "(?:" + [g, y, O].join("|") + ")" + R,
-                        P = RegExp("['\u2019]", "g"),
+                        P = RegExp("['’]", "g"),
                         D = RegExp(h, "g"),
                         x = RegExp(
                             [
@@ -781,6 +783,7 @@
                         V = k.Symbol,
                         F = V ? V.prototype : void 0,
                         B = F ? F.toString : void 0;
+
                     function H(e) {
                         return null == e
                             ? ""
@@ -911,8 +914,9 @@
                                       return e.__proto__;
                                   }
                                 : null);
+
                     function L(e, t) {
-                        if (e === 1 / 0 || e === -1 / 0 || e != e || (e && e > -1000 && e < 1000) || A.call(/e/, t))
+                        if (e === 1 / 0 || e === -1 / 0 || e != e || (e && e > -1e3 && e < 1e3) || A.call(/e/, t))
                             return t;
                         var n = /[0-9](?=(?:[0-9]{3})+(?![0-9]))/g;
                         if ("number" == typeof e) {
@@ -938,22 +942,28 @@
                             double: /(["\\])/g,
                             single: /(['\\])/g,
                         };
+
                     function V(e, t, n) {
                         var r = U[n.quoteStyle || t];
                         return r + e + r;
                     }
+
                     function F(e) {
                         return b.call(String(e), /"/g, "&quot;");
                     }
+
                     function B(e) {
                         return !P || !("object" == typeof e && (P in e || void 0 !== e[P]));
                     }
+
                     function H(e) {
                         return "[object Array]" === q(e) && B(e);
                     }
+
                     function Y(e) {
                         return "[object RegExp]" === q(e) && B(e);
                     }
+
                     function W(e) {
                         if (w) return e && "object" == typeof e && e instanceof Symbol;
                         if ("symbol" == typeof e) return !0;
@@ -984,7 +994,7 @@
                         if (
                             z(l, "indent") &&
                             null !== l.indent &&
-                            "\t" !== l.indent &&
+                            "	" !== l.indent &&
                             !(parseInt(l.indent, 10) === l.indent && l.indent > 0)
                         )
                             throw TypeError('option "indent" must be "\\t", an integer > 0, or `null`');
@@ -1010,7 +1020,7 @@
                         var M,
                             G = (function (e, t) {
                                 var n;
-                                if ("\t" === e.indent) n = "\t";
+                                if ("	" === e.indent) n = "	";
                                 else {
                                     if (!("number" == typeof e.indent && e.indent > 0)) return null;
                                     n = S.call(Array(e.indent + 1), " ");
@@ -1022,9 +1032,12 @@
                             })(l, i);
                         if (void 0 === o) o = [];
                         else if (X(o, t) >= 0) return "[Circular]";
+
                         function K(t, n, r) {
                             if ((n && (o = I.call(o)).push(n), r)) {
-                                var a = { depth: l.depth };
+                                var a = {
+                                    depth: l.depth,
+                                };
                                 return z(l, "quoteStyle") && (a.quoteStyle = l.quoteStyle), e(t, a, i + 1, o);
                             }
                             return e(t, l, i + 1, o);
@@ -1089,7 +1102,10 @@
                                 : "{ [" + String(t) + "] " + S.call(v.call("[cause]: " + K(t.cause), ec), ", ") + " }";
                         }
                         if ("object" == typeof t && h) {
-                            if (k && "function" == typeof t[k] && j) return j(t, { depth: N - i });
+                            if (k && "function" == typeof t[k] && j)
+                                return j(t, {
+                                    depth: N - i,
+                                });
                             if ("symbol" !== h && "function" == typeof t.inspect) return t.inspect();
                         }
                         if (
@@ -1243,17 +1259,21 @@
                         function (e) {
                             return e in this;
                         };
+
                     function z(e, t) {
                         return K.call(e, t);
                     }
+
                     function q(e) {
                         return h.call(e);
                     }
+
                     function X(e, t) {
                         if (e.indexOf) return e.indexOf(t);
                         for (var n = 0, r = e.length; n < r; n++) if (e[n] === t) return n;
                         return -1;
                     }
+
                     function Z(e, t) {
                         if (e.length > t.maxStringLength) {
                             var n = e.length - t.maxStringLength,
@@ -1263,6 +1283,7 @@
                         var i = G[t.quoteStyle || "single"];
                         return (i.lastIndex = 0), V(b.call(b.call(e, i, "\\$1"), /[\x00-\x1f]/g, Q), "single", t);
                     }
+
                     function Q(e) {
                         var t = e.charCodeAt(0),
                             n = {
@@ -1274,20 +1295,25 @@
                             }[t];
                         return n ? "\\" + n : "\\x" + (t < 16 ? "0" : "") + y.call(t.toString(16));
                     }
+
                     function $(e) {
                         return "Object(" + e + ")";
                     }
+
                     function J(e) {
                         return e + " { ? }";
                     }
+
                     function ee(e, t, n, r) {
                         return e + " (" + t + ") {" + (r ? et(n, r) : S.call(n, ", ")) + "}";
                     }
+
                     function et(e, t) {
                         if (0 === e.length) return "";
                         var n = "\n" + t.prev + t.base;
                         return n + S.call(e, "," + n) + "\n" + t.prev;
                     }
+
                     function en(e, t) {
                         var n = H(e),
                             r = [];
@@ -1424,7 +1450,11 @@
                             if (void 0 === T) return D;
                             if ("comma" === a && l(T))
                                 A && h && (T = i.maybeMap(T, h)),
-                                    (P = [{ value: T.length > 0 ? T.join(",") || null : void 0 }]);
+                                    (P = [
+                                        {
+                                            value: T.length > 0 ? T.join(",") || null : void 0,
+                                        },
+                                    ]);
                             else if (l(m)) P = m;
                             else {
                                 var x = Object.keys(T);
@@ -1605,7 +1635,17 @@
                             return e;
                         })(),
                         o = function (e, t) {
-                            for (var n = t && t.plainObjects ? { __proto__: null } : {}, r = 0; r < e.length; ++r)
+                            for (
+                                var n =
+                                        t && t.plainObjects
+                                            ? {
+                                                  __proto__: null,
+                                              }
+                                            : {},
+                                    r = 0;
+                                r < e.length;
+                                ++r
+                            )
                                 void 0 !== e[r] && (n[r] = e[r]);
                             return n;
                         },
@@ -1624,7 +1664,9 @@
                             for (
                                 var t = [
                                         {
-                                            obj: { o: e },
+                                            obj: {
+                                                o: e,
+                                            },
                                             prop: "o",
                                         },
                                     ],
@@ -1823,7 +1865,10 @@
                                     })(e, t);
                                 },
                                 set: function (t, n) {
-                                    e || (e = { next: void 0 }),
+                                    e ||
+                                        (e = {
+                                            next: void 0,
+                                        }),
                                         (function (e, t, n) {
                                             var r = a(e, t);
                                             r
@@ -1882,7 +1927,9 @@
                     var t = Object.defineProperty || !1;
                     if (t)
                         try {
-                            t({}, "a", { value: 1 });
+                            t({}, "a", {
+                                value: 1,
+                            });
                         } catch (e) {
                             t = !1;
                         }
@@ -2282,7 +2329,9 @@
                     var t = Object.defineProperty || !1;
                     if (t)
                         try {
-                            t({}, "a", { value: 1 });
+                            t({}, "a", {
+                                value: 1,
+                            });
                         } catch (e) {
                             t = !1;
                         }
@@ -2636,15 +2685,23 @@
                 2634: () => {},
             },
             t = {};
+
         function n(r) {
             var i = t[r];
             if (void 0 !== i) return i.exports;
-            var a = (t[r] = { exports: {} });
+            var a = (t[r] = {
+                exports: {},
+            });
             return e[r](a, a.exports, n), a.exports;
         }
         (n.n = (e) => {
             var t = e && e.__esModule ? () => e.default : () => e;
-            return n.d(t, { a: t }), t;
+            return (
+                n.d(t, {
+                    a: t,
+                }),
+                t
+            );
         }),
             (n.d = (e, t) => {
                 for (var r in t)
@@ -2667,7 +2724,9 @@
         var r = {};
         return (
             (() => {
-                n.d(r, { default: () => S });
+                n.d(r, {
+                    default: () => S,
+                });
                 var e,
                     t,
                     i,
@@ -2715,6 +2774,7 @@
                         e
                     );
                 })();
+
                 function l(e) {
                     switch (e) {
                         case "development":
@@ -2771,6 +2831,7 @@
                                 return e;
                             }).apply(this, arguments);
                     };
+
                 function f(e) {
                     return Array.isArray(e)
                         ? e.map(f)
@@ -2812,7 +2873,9 @@
                         try {
                             for (; (void 0 === t || t-- > 0) && !(r = a.next()).done; ) s.push(r.value);
                         } catch (e) {
-                            i = { error: e };
+                            i = {
+                                error: e,
+                            };
                         } finally {
                             try {
                                 r && !r.done && (n = a.return) && n.call(a);
@@ -2836,7 +2899,13 @@
                                         "persona: stylesheet ".concat(this.id, " already appended. skipping."),
                                     );
                                 else {
-                                    var t = g("style", { id: this.id }, [document.createTextNode(e)]);
+                                    var t = g(
+                                        "style",
+                                        {
+                                            id: this.id,
+                                        },
+                                        [document.createTextNode(e)],
+                                    );
                                     document.head.appendChild(t);
                                 }
                             }),
@@ -2850,6 +2919,7 @@
                             e
                         );
                     })();
+
                 function m(e, t, n) {
                     void 0 === n && (n = []);
                     var r,
@@ -2865,7 +2935,9 @@
                             "className" === d && (d = "class"), o.setAttribute(d, f);
                         }
                     } catch (e) {
-                        r = { error: e };
+                        r = {
+                            error: e,
+                        };
                     } finally {
                         try {
                             c && !c.done && (i = l.return) && i.call(l);
@@ -2879,7 +2951,9 @@
                             !1 !== g && o.appendChild(g);
                         }
                     } catch (e) {
-                        a = { error: e };
+                        a = {
+                            error: e,
+                        };
                     } finally {
                         try {
                             m && !m.done && (s = h.return) && s.call(h);
@@ -2889,6 +2963,7 @@
                     }
                     return o;
                 }
+
                 function g(e, t, n) {
                     void 0 === n && (n = []);
                     var r,
@@ -2904,7 +2979,9 @@
                             "className" === d && (d = "class"), o.setAttribute(d, f);
                         }
                     } catch (e) {
-                        r = { error: e };
+                        r = {
+                            error: e,
+                        };
                     } finally {
                         try {
                             c && !c.done && (i = l.return) && i.call(l);
@@ -2919,7 +2996,9 @@
                                 ("string" == typeof g ? o.appendChild(document.createTextNode(g)) : o.appendChild(g));
                         }
                     } catch (e) {
-                        a = { error: e };
+                        a = {
+                            error: e,
+                        };
                     } finally {
                         try {
                             m && !m.done && (s = h.return) && s.call(h);
@@ -2929,11 +3008,13 @@
                     }
                     return o;
                 }
+
                 function E(e) {
                     return "string" == typeof e ? e : "number" == typeof e ? "".concat(e, "px") : "";
                 }
                 var b = ["allow-scripts", "allow-same-origin", "allow-popups"],
                     y = ["allow-forms", "allow-modals", "allow-top-navigation-by-user-activation"];
+
                 function O(e, t, n, r) {
                     var i = r.accountId,
                         a = r.accountTypeId,
@@ -3023,6 +3104,7 @@
                     var t = e.split(".");
                     return t.length <= 1 ? e : t.slice(-2).join(".");
                 };
+
                 function v(t, n) {
                     var r = n.onLoad,
                         i = n.onReady,
@@ -3185,27 +3267,33 @@
                                         })
                                         .join("")),
                                 this.containerElement.setAttribute("id", this.containerId),
-                                (this.loadingElement = g("div", { class: "persona-widget__centered-frame" }, [
-                                    m(
-                                        "svg",
-                                        {
-                                            xmlns: "http://www.w3.org/2000/svg",
-                                            width: "114",
-                                            height: "114",
-                                            class: "persona-widget__loading-spinner",
-                                        },
-                                        [
-                                            m("path", {
-                                                fill: "none",
-                                                stroke: "#0F2B72",
-                                                strokeLinecap: "round",
-                                                strokeLinejoin: "round",
-                                                strokeWidth: "2",
-                                                d: "M25.887 10.432a56.275 56.275 0 0 0-15.455 15.455 55.86 55.86 0 0 0-5.183 9.678A55.576 55.576 0 0 0 2.066 46.07m-.8 5.438A56.678 56.678 0 0 0 1 57m4.249 21.435a55.86 55.86 0 0 0 5.183 9.678 56.275 56.275 0 0 0 6.97 8.485m8.485 6.97a55.86 55.86 0 0 0 9.678 5.183 55.576 55.576 0 0 0 10.506 3.183c3.535.7 7.19 1.066 10.929 1.066 3.74 0 7.394-.367 10.929-1.066a55.576 55.576 0 0 0 10.506-3.183 55.86 55.86 0 0 0 9.678-5.183 56.275 56.275 0 0 0 15.455-15.455 55.86 55.86 0 0 0 5.183-9.678 55.576 55.576 0 0 0 3.183-10.506A56.274 56.274 0 0 0 113 57c0-3.74-.367-7.394-1.066-10.929a55.576 55.576 0 0 0-3.183-10.506M96.598 17.402a56.275 56.275 0 0 0-8.485-6.97 55.86 55.86 0 0 0-9.678-5.183A55.576 55.576 0 0 0 67.93 2.066 56.274 56.274 0 0 0 57 1c-3.74 0-7.394.367-10.929 1.066m-34.94 30.418A51.76 51.76 0 0 0 7.225 41.9a51.633 51.633 0 0 0-1.98 10 52.63 52.63 0 0 0 .744 15.247 51.633 51.633 0 0 0 7.768 18.743 52.188 52.188 0 0 0 10.254 11.308 52.188 52.188 0 0 0 8.472 5.67m9.417 3.905a51.633 51.633 0 0 0 10 1.98 52.63 52.63 0 0 0 10.197 0 51.939 51.939 0 0 0 10-1.98 51.61 51.61 0 0 0 9.418-3.904 51.984 51.984 0 0 0 8.472-5.671m3.782-3.43a52.308 52.308 0 0 0 3.429-3.78m9.575-17.89a51.633 51.633 0 0 0 1.98-10 52.63 52.63 0 0 0-.744-15.247 51.633 51.633 0 0 0-7.768-18.743 52.188 52.188 0 0 0-10.254-11.308m-4.097-3.043a51.984 51.984 0 0 0-4.375-2.628M67.148 5.99a51.939 51.939 0 0 0-5.05-.743 52.63 52.63 0 0 0-15.246.743 51.633 51.633 0 0 0-18.743 7.768M24.012 16.8a52.308 52.308 0 0 0-3.782 3.43",
-                                            }),
-                                        ],
-                                    ),
-                                ])),
+                                (this.loadingElement = g(
+                                    "div",
+                                    {
+                                        class: "persona-widget__centered-frame",
+                                    },
+                                    [
+                                        m(
+                                            "svg",
+                                            {
+                                                xmlns: "http://www.w3.org/2000/svg",
+                                                width: "114",
+                                                height: "114",
+                                                class: "persona-widget__loading-spinner",
+                                            },
+                                            [
+                                                m("path", {
+                                                    fill: "none",
+                                                    stroke: "#0F2B72",
+                                                    strokeLinecap: "round",
+                                                    strokeLinejoin: "round",
+                                                    strokeWidth: "2",
+                                                    d: "M25.887 10.432a56.275 56.275 0 0 0-15.455 15.455 55.86 55.86 0 0 0-5.183 9.678A55.576 55.576 0 0 0 2.066 46.07m-.8 5.438A56.678 56.678 0 0 0 1 57m4.249 21.435a55.86 55.86 0 0 0 5.183 9.678 56.275 56.275 0 0 0 6.97 8.485m8.485 6.97a55.86 55.86 0 0 0 9.678 5.183 55.576 55.576 0 0 0 10.506 3.183c3.535.7 7.19 1.066 10.929 1.066 3.74 0 7.394-.367 10.929-1.066a55.576 55.576 0 0 0 10.506-3.183 55.86 55.86 0 0 0 9.678-5.183 56.275 56.275 0 0 0 15.455-15.455 55.86 55.86 0 0 0 5.183-9.678 55.576 55.576 0 0 0 3.183-10.506A56.274 56.274 0 0 0 113 57c0-3.74-.367-7.394-1.066-10.929a55.576 55.576 0 0 0-3.183-10.506M96.598 17.402a56.275 56.275 0 0 0-8.485-6.97 55.86 55.86 0 0 0-9.678-5.183A55.576 55.576 0 0 0 67.93 2.066 56.274 56.274 0 0 0 57 1c-3.74 0-7.394.367-10.929 1.066m-34.94 30.418A51.76 51.76 0 0 0 7.225 41.9a51.633 51.633 0 0 0-1.98 10 52.63 52.63 0 0 0 .744 15.247 51.633 51.633 0 0 0 7.768 18.743 52.188 52.188 0 0 0 10.254 11.308 52.188 52.188 0 0 0 8.472 5.67m9.417 3.905a51.633 51.633 0 0 0 10 1.98 52.63 52.63 0 0 0 10.197 0 51.939 51.939 0 0 0 10-1.98 51.61 51.61 0 0 0 9.418-3.904 51.984 51.984 0 0 0 8.472-5.671m3.782-3.43a52.308 52.308 0 0 0 3.429-3.78m9.575-17.89a51.633 51.633 0 0 0 1.98-10 52.63 52.63 0 0 0-.744-15.247 51.633 51.633 0 0 0-7.768-18.743 52.188 52.188 0 0 0-10.254-11.308m-4.097-3.043a51.984 51.984 0 0 0-4.375-2.628M67.148 5.99a51.939 51.939 0 0 0-5.05-.743 52.63 52.63 0 0 0-15.246.743 51.633 51.633 0 0 0-18.743 7.768M24.012 16.8a52.308 52.308 0 0 0-3.782 3.43",
+                                                }),
+                                            ],
+                                        ),
+                                    ],
+                                )),
                                 this.containerElement.append(this.loadingElement),
                                 this.isLoading
                                     ? (this.loadingElement.style.display = "block")
@@ -3291,7 +3379,9 @@
                                     n.postMessage(
                                         {
                                             action: t.Exit,
-                                            metadata: { force: e },
+                                            metadata: {
+                                                force: e,
+                                            },
                                         },
                                         this.baseUrl,
                                     ),

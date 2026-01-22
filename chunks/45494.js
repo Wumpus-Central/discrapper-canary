@@ -21,6 +21,7 @@ var i,
     m = n(222823),
     g = n(661191),
     E = n(152007);
+
 function b(e, t, n) {
     return (
         t in e
@@ -44,6 +45,7 @@ let y = 25,
     C = [],
     N = 0,
     R = o.n.MATCH_SOME;
+
 function w() {
     (O = !1),
         (A = !0),
@@ -56,9 +58,11 @@ function w() {
         (C = []),
         (R = o.n.MATCH_SOME);
 }
+
 function P(e, t) {
     return t === l.T.LATEST_ACTIVITY ? m.Ay.lastMessageId(e.id) : e.id;
 }
+
 function D(e) {
     (e.channelId === I && e.sortOrder === T && (0, c._)(e.tagFilter, r) && e.tagSetting === R) || w(),
         (I = e.channelId),
@@ -68,6 +72,7 @@ function D(e) {
         (O = !0),
         (A = !1);
 }
+
 function x(e) {
     if (e.channelId !== I || e.sortOrder !== T || !(0, c._)(e.tagFilter, r) || e.tagSetting !== R) return !1;
     let t = e.threads.filter((e) => _.A_.has(e.type)).map((e) => e.id);
@@ -89,9 +94,11 @@ function x(e) {
         (O = !1),
         (A = !1);
 }
+
 function L(e) {
     return (null == I || null == e.channelId || I === e.channelId) && j();
 }
+
 function j() {
     if (null == I) return !1;
     let e = !v,
@@ -120,22 +127,27 @@ function j() {
         .reverse()
         .value();
 }
+
 function M(e) {
     if (e.channelId !== I || e.sortOrder !== T || !(0, c._)(e.tagFilter, r) || e.tagSetting !== R) return !1;
     (O = !1), (S = !0), (A = !1);
 }
+
 function k(e) {
     if (e.channel.id !== I) return !1;
     w();
 }
+
 function U(e) {
     if (!(C.indexOf(e) >= 0)) return !1;
     C = C.filter((t) => t !== e);
 }
+
 function G(e) {
     let { channel: t } = e;
     return U(t.id);
 }
+
 function V(e) {
     let { channel: t } = e;
     return I === t.parent_id && !!(0, f.yr)(t.id) && void U(t.id);

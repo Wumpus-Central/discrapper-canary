@@ -24,6 +24,7 @@ var r,
     m = n(961350),
     g = n(287809),
     E = n(652215);
+
 function b(e, t, n) {
     return (
         t in e
@@ -45,6 +46,7 @@ let y = Object.freeze([]),
     I = {},
     T = {},
     C = {};
+
 function N(e, t) {
     let n = O[e];
     return null != n ? n[t] : null;
@@ -63,20 +65,25 @@ let R = (e) => {
             return 0;
     }
 };
+
 function w(e, t) {
     return R(t) - R(e);
 }
 let P = (e) => +!!(0, u.A)(e);
+
 function D(e, t) {
     return P(t) - P(e);
 }
+
 function x(e, t) {
     var n, r;
     return (null != (n = t.created_at) ? n : 0) - (null != (r = e.created_at) ? r : 0);
 }
+
 function L(e, t) {
     return w(e, t) || D(e, t) || x(e, t);
 }
+
 function j(e) {
     if (0 === e.length) return e;
     let t = [],
@@ -84,22 +91,34 @@ function j(e) {
     for (let r of e) r.type === E.$pd.PLAYING ? n.push(r) : t.push(r);
     return n.length <= 1 ? e : [...t, [...n].sort(L)[0]].sort(L);
 }
+
 function M(e, t) {
     (v[e] = t), (S[e] = j(t));
 }
+
 function k(e) {
     delete v[e], delete S[e];
 }
+
 function U(e, t) {
     if (t === m.default.getId())
         return {
             visible: e,
             hidden: [],
         };
-    let n = p.a.getConfig({ location: "presence_filtering" }).enabled
+    let n = p.a.getConfig({
+            location: "presence_filtering",
+        }).enabled
             ? e.map((e) => (0, _.Dh)(e))
             : e.map((e) => (0, _.Ar)(e)),
-        r = f.o.getCurrentConfig({ location: "presence_filtering" }, { autoTrackExposure: !1 });
+        r = f.o.getCurrentConfig(
+            {
+                location: "presence_filtering",
+            },
+            {
+                autoTrackExposure: !1,
+            },
+        );
     if (!r.filterGamePresence && !r.filterRichPresence)
         return {
             visible: n,
@@ -120,6 +139,7 @@ function U(e, t) {
         hidden: a,
     };
 }
+
 function G(e) {
     if ((delete A[e], k(e), delete I[e], delete T[e], null == O[e])) return;
     let t = Object.values(O[e]),
@@ -154,6 +174,7 @@ function G(e) {
                 }),
             ));
 }
+
 function V(e) {
     return 0 === e.length
         ? e
@@ -166,6 +187,7 @@ function V(e) {
               ).values(),
           ];
 }
+
 function F(e) {
     let t = O[e];
     if (null == t) return;
@@ -178,6 +200,7 @@ function F(e) {
             null != n.clientStatus && (T[e] = n.clientStatus);
     }
 }
+
 function B(e) {
     let {
         guildId: t,
@@ -218,6 +241,7 @@ function B(e) {
     }
     return delete C[n], G(n), !0;
 }
+
 function H(e) {
     let {
         guildId: t,
@@ -255,28 +279,42 @@ function H(e) {
         };
     }
 }
+
 function Y(e, t) {
     if (t === m.default.getId()) return !1;
     let n = O[t];
     if (null == n || null == n[e]) return !1;
     delete n[e], 0 === Object.keys(n).length && delete O[t], G(t);
 }
+
 function W(e) {
     for (let t of h.default.keys(O)) Y(e, t);
 }
+
 function K() {
     return !0;
 }
+
 function z(e) {
     let { guilds: t, presences: n } = e,
         r = m.default.getId();
     (O = {}),
         (C = {}),
-        (A = { [r]: A[r] }),
-        (v = { [r]: v[r] }),
-        (S = { [r]: S[r] }),
-        (I = { [r]: I[r] }),
-        (T = { [r]: {} });
+        (A = {
+            [r]: A[r],
+        }),
+        (v = {
+            [r]: v[r],
+        }),
+        (S = {
+            [r]: S[r],
+        }),
+        (I = {
+            [r]: I[r],
+        }),
+        (T = {
+            [r]: {},
+        });
     let i = new Set();
     t.forEach((e) => {
         e.presences.forEach((t) => {
@@ -324,6 +362,7 @@ function z(e) {
         i.delete(r),
         i.forEach(F);
 }
+
 function q(e) {
     let { presences: t } = e;
     (O = t.presencesForGuilds),
@@ -332,6 +371,7 @@ function q(e) {
         (I = t.hiddenActivities),
         (C = t.activityMetadata);
 }
+
 function X(e) {
     let { presences: t } = e;
     W(E.ME),
@@ -356,6 +396,7 @@ function X(e) {
                 });
         });
 }
+
 function Z(e) {
     let { guild: t } = e;
     t.presences.forEach((e) => {
@@ -371,14 +412,17 @@ function Z(e) {
         });
     });
 }
+
 function Q(e) {
     let { guild: t } = e;
     W(t.id);
 }
+
 function $(e) {
     let { guildId: t, user: n } = e;
     return Y(t, n.id);
 }
+
 function J(e) {
     let { updates: t } = e;
     return t
@@ -404,6 +448,7 @@ function J(e) {
         })
         .some((e) => e);
 }
+
 function ee(e) {
     let { guildId: t, members: n } = e;
     n.forEach((e) => {
@@ -419,6 +464,7 @@ function ee(e) {
             });
     });
 }
+
 function et(e) {
     let { guildId: t, addedMembers: n } = e;
     null == n ||
@@ -435,11 +481,13 @@ function et(e) {
                 });
         });
 }
+
 function en(e) {
     let t = m.default.getId();
     if (A[t] === e.status && v[t] === e.activities && I[t] === e.hiddenActivities) return !1;
     (A[t] = e.status), M(t, [...e.activities].sort(L)), (I[t] = [...e.hiddenActivities].sort(L)), delete C[t];
 }
+
 function er(e) {
     let { userId: t, metadata: n } = e;
     return (C[t] = n), !1;

@@ -1,10 +1,13 @@
-n.d(e, { A: () => o });
+n.d(e, {
+    A: () => o,
+});
 var s = n(627968);
 n(64700);
 var i = n(503698),
     l = n.n(i),
     r = n(397927),
     a = n(186261);
+
 function o(t) {
     let { tips: e, className: n, headerText: i } = t;
     return (0, s.jsxs)("div", {

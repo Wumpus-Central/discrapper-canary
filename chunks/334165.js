@@ -1,7 +1,10 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var a,
     l = n(311907),
     i = n(73153);
+
 function r(e, t, n) {
     return (
         t in e
@@ -15,7 +18,9 @@ function r(e, t, n) {
         e
     );
 }
-let s = { lastSeenInfos: {} },
+let s = {
+        lastSeenInfos: {},
+    },
     o = s;
 class c extends (a = l.Ay.PersistedStore) {
     initialize(e) {

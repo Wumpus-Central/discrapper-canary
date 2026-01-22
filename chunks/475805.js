@@ -1,4 +1,6 @@
-n.d(t, { A: () => P });
+n.d(t, {
+    A: () => P,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -50,7 +52,9 @@ let w = (e, t) => {
                     children: (0, r.jsxs)("div", {
                         className: R.hQ,
                         children: [
-                            (0, r.jsx)(T.A, { containerVisibilityPercentage: k }),
+                            (0, r.jsx)(T.A, {
+                                containerVisibilityPercentage: k,
+                            }),
                             B &&
                                 (null != w
                                     ? (0, r.jsx)(y.A, {
@@ -59,7 +63,9 @@ let w = (e, t) => {
                                       })
                                     : (0, r.jsx)("div", {
                                           className: R.XN,
-                                          children: (0, r.jsx)(I.A, { enablePremiumBrandRefresh: !0 }),
+                                          children: (0, r.jsx)(I.A, {
+                                              enablePremiumBrandRefresh: !0,
+                                          }),
                                       })),
                             (0, r.jsx)("div", {
                                 className: R.s8,
@@ -113,7 +119,9 @@ let w = (e, t) => {
                                         children: (0, r.jsx)(c.Text, {
                                             color: "text-muted",
                                             variant: "text-xs/medium",
-                                            children: N.intl.format(N.t.kt9wxs, { cheapestMonthlyPrice: D }),
+                                            children: N.intl.format(N.t.kt9wxs, {
+                                                cheapestMonthlyPrice: D,
+                                            }),
                                         }),
                                     }),
                                     null != V &&

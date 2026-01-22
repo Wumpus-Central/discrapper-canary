@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -19,10 +21,14 @@ let d = function (e) {
         children: [
             (0, r.jsx)("span", {
                 className: u.r,
-                style: { backgroundColor: "rgba(0, 0, 0, ".concat(f, ")") },
+                style: {
+                    backgroundColor: "rgba(0, 0, 0, ".concat(f, ")"),
+                },
             }),
             (0, r.jsx)("span", {
-                style: { opacity: i },
+                style: {
+                    opacity: i,
+                },
                 children: c.intl.string(c.t.o6FLcF),
             }),
         ],

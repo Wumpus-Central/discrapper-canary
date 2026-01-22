@@ -1,4 +1,7 @@
-n.d(t, { A: () => r }), n(896048);
+n.d(t, {
+    A: () => r,
+}),
+    n(896048);
 let r = {
     makeMemoizer: function (e) {
         let t = new Map();

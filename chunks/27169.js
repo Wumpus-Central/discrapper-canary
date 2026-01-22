@@ -1,4 +1,6 @@
-n.d(t, { F: () => u });
+n.d(t, {
+    F: () => u,
+});
 var r = n(627968),
     i = n(64700),
     l = n(990078),
@@ -6,6 +8,7 @@ var r = n(627968),
     s = n(793322),
     o = n(985018),
     c = n(168221);
+
 function u(e) {
     var t, n;
     let { focusSectionProps: u } = e,
@@ -55,7 +58,9 @@ function u(e) {
                     className: c.F,
                     onClick: d,
                     children: [
-                        (0, r.jsx)(a.txs, { size: "xs" }),
+                        (0, r.jsx)(a.txs, {
+                            size: "xs",
+                        }),
                         (0, r.jsx)(a.Text, {
                             variant: "text-sm/medium",
                             lineClamp: 1,

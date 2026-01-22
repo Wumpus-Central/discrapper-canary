@@ -1,4 +1,6 @@
-t(697509)(r, "__esModule", { value: !0 }),
+t(697509)(r, "__esModule", {
+    value: !0,
+}),
     (r.default = void 0),
     (r.default = {
         abstract: !1,
@@ -10,13 +12,17 @@ t(697509)(r, "__esModule", { value: !0 }),
         props: {},
         relatedConcepts: [
             {
-                concept: { name: "button" },
+                concept: {
+                    name: "button",
+                },
                 module: "ARIA",
             },
         ],
         requireContextRole: [],
         requiredContextRole: [],
         requiredOwnedElements: [],
-        requiredProps: { "aria-checked": null },
+        requiredProps: {
+            "aria-checked": null,
+        },
         superClass: [["roletype", "widget", "input", "checkbox"]],
     });

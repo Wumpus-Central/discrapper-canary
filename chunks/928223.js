@@ -1,4 +1,6 @@
-t.d(l, { A: () => u });
+t.d(l, {
+    A: () => u,
+});
 var n = t(627968);
 t(64700);
 var i = t(347805),
@@ -8,6 +10,7 @@ var i = t(347805),
     o = t(518477),
     d = t(985018),
     c = t(225675);
+
 function u(e) {
     let { userId: l } = e,
         t = (0, s.g)(),
@@ -19,7 +22,10 @@ function u(e) {
             userId: l,
             className: c.N,
             autoFocus: t === o.bk.NOTE,
-            onUpdate: () => u({ action: "SET_NOTE" }),
+            onUpdate: () =>
+                u({
+                    action: "SET_NOTE",
+                }),
         }),
     });
 }

@@ -1,4 +1,6 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var r = n(627968);
 n(64700);
 var l = n(417597),
@@ -12,6 +14,7 @@ var l = n(417597),
     f = n(661191),
     p = n(985018),
     h = n(713531);
+
 function b(e) {
     let { userId: t, guildId: n, textClassName: b, tooltipDelay: g } = e,
         m = (0, l.bG)([c.default], () => c.default.locale),
@@ -49,7 +52,9 @@ function b(e) {
                           }),
                       ],
                   }),
-                  (0, r.jsx)("div", { className: h.yF }),
+                  (0, r.jsx)("div", {
+                      className: h.yF,
+                  }),
                   (0, r.jsxs)("div", {
                       className: h.R1,
                       children: [

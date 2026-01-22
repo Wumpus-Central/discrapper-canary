@@ -7,12 +7,16 @@ let i = (0, r.C)({
         kind: "user",
         id: "2023-10_triggerdebuggingaa",
         label: "Trigger Debugging User AA Experiment",
-        defaultConfig: { inUse: !1 },
+        defaultConfig: {
+            inUse: !1,
+        },
         treatments: [
             {
                 id: 1,
                 label: "On",
-                config: { inUse: !0 },
+                config: {
+                    inUse: !0,
+                },
             },
         ],
     }),
@@ -20,12 +24,16 @@ let i = (0, r.C)({
         kind: "guild",
         id: "2023-10_guildaa",
         label: "Trigger Debugging Guild AA Experiment",
-        defaultConfig: { inUse: !1 },
+        defaultConfig: {
+            inUse: !1,
+        },
         treatments: [
             {
                 id: 1,
                 label: "On",
-                config: { inUse: !0 },
+                config: {
+                    inUse: !0,
+                },
             },
         ],
     }),
@@ -37,12 +45,23 @@ let i = (0, r.C)({
                 location: t,
                 guildId: e,
             },
-            { autoTrackExposure: !1 },
+            {
+                autoTrackExposure: !1,
+            },
         ),
             l.trackExposure({
                 location: t,
                 guildId: e,
             }),
-            i.useExperiment({ location: n }, { autoTrackExposure: !1 }),
-            i.trackExposure({ location: n });
+            i.useExperiment(
+                {
+                    location: n,
+                },
+                {
+                    autoTrackExposure: !1,
+                },
+            ),
+            i.trackExposure({
+                location: n,
+            });
     };

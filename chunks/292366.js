@@ -1,4 +1,6 @@
-n.d(t, { A: () => I });
+n.d(t, {
+    A: () => I,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -16,6 +18,7 @@ var i = n(503698),
     m = n(489414),
     g = n(985018),
     E = n(592392);
+
 function b(e, t, n) {
     return (
         t in e
@@ -29,6 +32,7 @@ function b(e, t, n) {
         e
     );
 }
+
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -45,6 +49,7 @@ function y(e) {
     }
     return e;
 }
+
 function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -57,6 +62,7 @@ function O(e, t) {
     }
     return n;
 }
+
 function A(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -68,6 +74,7 @@ function A(e, t) {
         e
     );
 }
+
 function v(e) {
     switch (e) {
         case d.in.PRIMARY:
@@ -81,6 +88,7 @@ function v(e) {
             return o.$n.Colors.PRIMARY;
     }
 }
+
 function S(e) {
     let { url: t, onSelect: n } = e;
     return p.p5 && null != t
@@ -99,6 +107,7 @@ function S(e) {
           })
         : null;
 }
+
 function I(e) {
     let t,
         { label: n, style: i, disabled: p, emoji: g, url: b, skuId: O } = e,
@@ -131,7 +140,15 @@ function I(e) {
             disabled: p || T === m.BB.DISABLED || C || w,
             onClick: t,
             onContextMenu: (e) => {
-                L && (0, c.jA)(e, (e) => (0, r.jsx)(S, A(y({}, e), { url: b })));
+                L &&
+                    (0, c.jA)(e, (e) =>
+                        (0, r.jsx)(
+                            S,
+                            A(y({}, e), {
+                                url: b,
+                            }),
+                        ),
+                    );
             },
             role: L ? "link" : "button",
             children: [
@@ -153,7 +170,9 @@ function I(e) {
                             : null,
                         D
                             ? (0, r.jsx)(u.A, {
-                                  className: a()({ [E.MR]: x }),
+                                  className: a()({
+                                      [E.MR]: x,
+                                  }),
                                   src: g.src,
                                   emojiId: g.id,
                                   emojiName: g.name,

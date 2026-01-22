@@ -1,8 +1,12 @@
-n.d(t, { A: () => _ }), n(896048);
+n.d(t, {
+    A: () => _,
+}),
+    n(896048);
 var r,
     i = n(311907),
     a = n(73153),
     s = n(617617);
+
 function o(e, t, n) {
     return (
         t in e
@@ -17,6 +21,7 @@ function o(e, t, n) {
     );
 }
 let l = new Set();
+
 function c() {
     let e = s.A.getGuildFolders();
     if (null == e) return !1;
@@ -24,14 +29,17 @@ function c() {
     for (let n of l) e.some((e) => e.folderId === n) || ((l = new Set(l)).delete(n), (t = !0));
     return t;
 }
+
 function u(e) {
     let { folderId: t } = e;
     (l = new Set(l)).has(t) ? l.delete(t) : l.add(t);
 }
+
 function d(e) {
     let { folderId: t, expanded: n } = e;
     (l = new Set(l)), n ? l.add(t) : l.has(t) && l.delete(t);
 }
+
 function f() {
     if (0 === l.size) return !1;
     l = new Set();
@@ -41,7 +49,9 @@ class p extends (r = i.Ay.PersistedStore) {
         null != e && (l = new Set(e.expandedFolders)), this.waitFor(s.A);
     }
     getState() {
-        return { expandedFolders: Array.from(l) };
+        return {
+            expandedFolders: Array.from(l),
+        };
     }
     getExpandedFolders() {
         return l;

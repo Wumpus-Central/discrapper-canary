@@ -1,4 +1,6 @@
-n.d(t, { g: () => r });
+n.d(t, {
+    g: () => r,
+});
 let r = (e) => {
     switch (e) {
         case "top":

@@ -1,4 +1,6 @@
-l.d(t, { A: () => x });
+l.d(t, {
+    A: () => x,
+});
 var n = l(627968),
     a = l(64700),
     s = l(508425),
@@ -12,6 +14,7 @@ var n = l(627968),
     m = l(985018),
     b = l(512134),
     p = l(880203);
+
 function x(e) {
     var t;
     let { selectedColors: l, setSelectedColors: x, defaultColor: g, selectedEffectId: j, className: h } = e,

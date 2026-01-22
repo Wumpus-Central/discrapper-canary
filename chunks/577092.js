@@ -1,4 +1,7 @@
-n.d(t, { A: () => w }), n(321073);
+n.d(t, {
+    A: () => w,
+}),
+    n(321073);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -102,10 +105,17 @@ let I = (e) => {
                                                 });
                                         }
                                         return e;
-                                    })({ guildId: t }, n),
+                                    })(
+                                        {
+                                            guildId: t,
+                                        },
+                                        n,
+                                    ),
                                 );
                         });
-                    })({ guildId: t.id });
+                    })({
+                        guildId: t.id,
+                    });
             },
             disabled: !l,
         });
@@ -255,7 +265,10 @@ let I = (e) => {
                                   objectType: (0, O.k1)(y.tier),
                               },
                           }))
-                        : Y && (f = (0, r.jsx)(P, { guild: t })),
+                        : Y &&
+                          (f = (0, r.jsx)(P, {
+                              guild: t,
+                          })),
                     (0, r.jsxs)(
                         E.A,
                         {
@@ -314,7 +327,9 @@ let I = (e) => {
                                                 color: "text-default",
                                                 children:
                                                     y.tier === N.TVA.TIER_1
-                                                        ? S.intl.formatToPlainString(S.t.psMYux, { numAdditional: X })
+                                                        ? S.intl.formatToPlainString(S.t.psMYux, {
+                                                              numAdditional: X,
+                                                          })
                                                         : S.intl.formatToPlainString(S.t.bLykEe, {
                                                               numAdditional: X,
                                                               numTotal: F,

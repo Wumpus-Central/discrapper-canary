@@ -1,5 +1,8 @@
 var i, r;
-Object.defineProperty(e, "__esModule", { value: !0 }), (e.ICalAlarmType = void 0);
+Object.defineProperty(e, "__esModule", {
+    value: !0,
+}),
+    (e.ICalAlarmType = void 0);
 let n = a(778090);
 ((r = i = e.ICalAlarmType || (e.ICalAlarmType = {})).display = "display"),
     (r.audio = "audio"),

@@ -18,6 +18,7 @@ var l = n(627968),
     v = n(427262),
     A = n(985018),
     I = n(912579);
+
 function m(e, t, n) {
     return (
         t in e
@@ -86,7 +87,9 @@ class x extends i.Component {
         if (null != n) {
             let l = v.Ay.getName(n),
                 i = c.A.getNickname(n.id),
-                s = v.Ay.getUserTag(n, { decoration: "never" });
+                s = v.Ay.getUserTag(n, {
+                    decoration: "never",
+                });
             (e = null != i ? i : l), (t = s);
         }
         let u = (0, l.jsx)(s.Button, {
@@ -138,10 +141,14 @@ class x extends i.Component {
                 hovered: !1,
             }),
             m(this, "handleMouseEnter", () => {
-                this.setState({ hovered: !0 });
+                this.setState({
+                    hovered: !0,
+                });
             }),
             m(this, "handleMouseLeave", () => {
-                this.setState({ hovered: !1 });
+                this.setState({
+                    hovered: !1,
+                });
             }),
             m(this, "getInviteAnalyticsMetadata", () => {
                 let { row: e, source: t } = this.props;
@@ -155,7 +162,9 @@ class x extends i.Component {
                 let { user: e, channel: t, inviteKey: n, location: l } = this.props;
                 null != n &&
                     (null != t
-                        ? (this.setState({ sending: !0 }),
+                        ? (this.setState({
+                              sending: !0,
+                          }),
                           r.A.enqueue(
                               {
                                   type: r.F.GROUP_DM,
@@ -172,7 +181,9 @@ class x extends i.Component {
                               },
                           ))
                         : null != e &&
-                          (this.setState({ sending: !0 }),
+                          (this.setState({
+                              sending: !0,
+                          }),
                           r.A.enqueue(
                               {
                                   type: r.F.USER,

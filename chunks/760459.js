@@ -1,7 +1,10 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 var l = n(627968),
     r = n(942528),
     i = n(409626);
+
 function a(e) {
     var t, n;
     let { entry: a, viewId: s, officialGuildId: o } = e;

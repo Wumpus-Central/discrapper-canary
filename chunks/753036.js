@@ -1,4 +1,7 @@
-n.d(t, { A: () => h }), n(896048);
+n.d(t, {
+    A: () => h,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(846857),
@@ -10,7 +13,8 @@ var r = n(627968),
     d = n(751758),
     f = n(778007),
     p = n(308021);
-let _ = 1000;
+let _ = 1e3;
+
 function h() {
     let e = (0, i.useContext)(c.P),
         t = (0, o.rdh)(e.primaryColor).hex(),
@@ -56,7 +60,9 @@ function h() {
             v
                 ? (0, r.jsx)("div", {
                       className: d.xJ,
-                      style: { borderColor: t },
+                      style: {
+                          borderColor: t,
+                      },
                       children: (0, r.jsx)(o.Apm, {
                           initialValue: A,
                           minValue: 0,
@@ -75,7 +81,9 @@ function h() {
                 autoPlay: !0,
                 loop: !0,
                 muted: m,
-                children: (0, r.jsx)("source", { src: a.A }),
+                children: (0, r.jsx)("source", {
+                    src: a.A,
+                }),
             }),
         ],
     });

@@ -1,4 +1,6 @@
-Object.defineProperty(t, "__esModule", { value: !0 }),
+Object.defineProperty(t, "__esModule", {
+    value: !0,
+}),
     (t.stringFormatter = t.StringBuilder = void 0),
     (t.formatToPlainString = a);
 let r = n(941242);
@@ -19,6 +21,7 @@ class i extends r.FormatBuilder {
         return [this.result];
     }
 }
+
 function a(e, t) {
     return "string" == typeof e ? e : this.bindFormatValues(i, e, t)[0];
 }

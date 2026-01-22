@@ -7,8 +7,9 @@ n.d(t, {
 var r = n(71393),
     i = n(967198),
     a = n(276041);
-let s = 3000,
-    o = 3600000;
+let s = 3e3,
+    o = 36e5;
+
 function l() {
     let { guildStore: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         t = null != e ? e : r.A,
@@ -16,9 +17,11 @@ function l() {
         i = (null == n ? void 0 : n.joinedAt) instanceof Date && Date.now() - n.joinedAt.getTime() <= o;
     return 1 === t.getGuildCount() && i;
 }
+
 function c(e) {
     return e.isDM() && 1 === e.rawRecipients.length && e.rawRecipients[0].id === a.t && l();
 }
+
 function u(e) {
     return new Promise((t, n) => {
         if (i.A.getGuildId() === e) return void t();

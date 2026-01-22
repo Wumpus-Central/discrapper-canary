@@ -21,6 +21,7 @@ var r,
     E = n(652215),
     b = n(746080),
     y = n(818348);
+
 function O(e, t, n) {
     return (
         t in e
@@ -34,6 +35,7 @@ function O(e, t, n) {
         e
     );
 }
+
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -50,6 +52,7 @@ function A(e) {
     }
     return e;
 }
+
 function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -62,6 +65,7 @@ function v(e, t) {
     }
     return n;
 }
+
 function S(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -81,6 +85,7 @@ let I = "message_requests",
     w = {},
     P = !1,
     D = null;
+
 function x(e) {
     if (null == e) return null;
     if ((0, b.jq)(e)) {
@@ -89,24 +94,30 @@ function x(e) {
     }
     return e;
 }
+
 function L(e) {
     return [c.PE.VIEW_CHANNEL, c.PE.VIEW_THREAD, c.PE.VIEW_MESSAGE_REQUEST, c.PE.VIEW_MOD_REPORT].includes(e.type);
 }
+
 function j(e) {
     let t = !1;
     P && ((P = !1), (t = !0));
     let n = x(h.A.getChannelId());
     return null != n && n in R && (delete R[n], (t = !0)), t && e ? e : !e;
 }
+
 function M() {
     P && u._.dispatch(E.jej.SEARCH_RESULTS_CLOSE), C && (C = j(C)), (T = j(T));
 }
+
 function k() {
     T && (T = j(T)), (C = j(C));
 }
+
 function U() {
     N || u._.dispatch(E.jej.SEARCH_RESULTS_CLOSE), (N = j(N));
 }
+
 function G(e) {
     let { sidebarType: t, guildId: n, baseChannelId: r, details: i } = e;
     P = !1;
@@ -122,10 +133,12 @@ function G(e) {
         !0)
     );
 }
+
 function V(e) {
     let { guildId: t } = e;
     return null != w[t] && (delete w[t], !0);
 }
+
 function F(e) {
     let { sidebarType: t, baseChannelId: n, channelId: r, details: i } = e;
     P = !1;
@@ -136,8 +149,16 @@ function F(e) {
         channelId: r,
         details: i,
     };
-    return t === c.PE.VIEW_MOD_REPORT && (s = S(A({}, s), { baseChannelId: n })), (R[a] = s), !0;
+    return (
+        t === c.PE.VIEW_MOD_REPORT &&
+            (s = S(A({}, s), {
+                baseChannelId: n,
+            })),
+        (R[a] = s),
+        !0
+    );
 }
+
 function B(e) {
     let { parentChannelId: t, parentMessageId: n, location: r } = e;
     P = !1;
@@ -150,6 +171,7 @@ function B(e) {
             location: r,
         });
 }
+
 function H(e) {
     let { channel: t } = e;
     if (t.id in R) return delete R[t.id], !0;
@@ -160,12 +182,14 @@ function H(e) {
     }
     return n;
 }
+
 function Y(e) {
     let { channel: t } = e,
         n = R[t.parent_id];
     if (null == n || n.type !== c.PE.VIEW_THREAD || n.channelId !== t.id) return !1;
     delete R[t.parent_id];
 }
+
 function W(e) {
     var t;
     let { channel: n } = e;
@@ -179,6 +203,7 @@ function W(e) {
             channelId: n.id,
         });
 }
+
 function K() {
     let e = !1;
     for (let t in R) {
@@ -190,19 +215,23 @@ function K() {
     }
     return e;
 }
+
 function z(e) {
     let { baseChannelId: t } = e,
         n = x(t);
     null != n && delete R[n];
 }
+
 function q() {
     let e = null != D && l.A.hasSearchState(D);
     if (e === P) return !1;
     P = e;
 }
+
 function X() {
     i.Fr && T && ((T = !1), (C = !1));
 }
+
 function Z(e) {
     return (D = e.searchContextId), q();
 }

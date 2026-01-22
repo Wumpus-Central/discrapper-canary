@@ -1,10 +1,14 @@
-n.d(t, { A: () => S }), n(896048);
+n.d(t, {
+    A: () => S,
+}),
+    n(896048);
 var r,
     i = n(284009),
     a = n.n(i),
     s = n(311907),
     o = n(73153),
     l = n(365971);
+
 function c(e, t, n) {
     return (
         t in e
@@ -18,6 +22,7 @@ function c(e, t, n) {
         e
     );
 }
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,6 +39,7 @@ function u(e) {
     }
     return e;
 }
+
 function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -46,6 +52,7 @@ function d(e, t) {
     }
     return n;
 }
+
 function f(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -59,6 +66,7 @@ function f(e, t) {
 }
 let p = null,
     _ = new Map();
+
 function h(e) {
     let t = _.get(e);
     return null == t
@@ -74,6 +82,7 @@ function h(e) {
           })
         : t;
 }
+
 function m(e) {
     a()(!_.has(e.windowId), "Window initialized multiple times");
     let { width: t, height: n, isElementFullscreen: r, focused: i, visible: s } = e;
@@ -91,24 +100,50 @@ function m(e) {
         !0
     );
 }
+
 function g(e) {
     let t = h(e.windowId);
     return (
         t.isElementFullscreen !== e.isElementFullscreen &&
-        (_.set(e.windowId, f(u({}, t), { isElementFullscreen: e.isElementFullscreen })), !0)
+        (_.set(
+            e.windowId,
+            f(u({}, t), {
+                isElementFullscreen: e.isElementFullscreen,
+            }),
+        ),
+        !0)
     );
 }
+
 function E(e) {
     let t = h(e.windowId);
     return (
         t.focused !== e.focused &&
-        (e.focused && (p = e.windowId), _.set(e.windowId, f(u({}, t), { focused: e.focused })), !0)
+        (e.focused && (p = e.windowId),
+        _.set(
+            e.windowId,
+            f(u({}, t), {
+                focused: e.focused,
+            }),
+        ),
+        !0)
     );
 }
+
 function b(e) {
     let t = h(e.windowId);
-    return t.visible !== e.visible && (_.set(e.windowId, f(u({}, t), { visible: e.visible })), !0);
+    return (
+        t.visible !== e.visible &&
+        (_.set(
+            e.windowId,
+            f(u({}, t), {
+                visible: e.visible,
+            }),
+        ),
+        !0)
+    );
 }
+
 function y(e) {
     let t = h(e.windowId);
     return (
@@ -125,6 +160,7 @@ function y(e) {
         !0)
     );
 }
+
 function O(e) {
     return _.delete(e.windowId), p === e.windowId && (p = null), !0;
 }

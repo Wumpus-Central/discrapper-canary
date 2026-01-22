@@ -1,4 +1,6 @@
-n.d(t, { F: () => v });
+n.d(t, {
+    F: () => v,
+});
 var l = n(627968),
     r = n(503698),
     i = n.n(r),
@@ -15,6 +17,7 @@ var l = n(627968),
     j = n(788868),
     y = n(985018),
     h = n(113437);
+
 function v(e) {
     let { handleStepChange: t, handleClose: n, referralTrialOfferId: r } = e,
         {
@@ -59,7 +62,11 @@ function v(e) {
                         startedPaymentFlowWithPaymentSources: o,
                     });
                 d !== m.pn.WHAT_YOU_LOSE && h && ((d = m.pn.REVIEW), a((0, f.xT)(n, t, u))),
-                    r(d, { analyticsDataOverride: { sku_id: n } });
+                    r(d, {
+                        analyticsDataOverride: {
+                            sku_id: n,
+                        },
+                    });
             })({
                 activeSubscription: s,
                 newSkuId: e,
@@ -76,7 +83,11 @@ function v(e) {
                 let { setSelectedPlanId: t, handleStepChange: n, hasPaymentSources: l, setSelectedSkuId: r } = e;
                 r((0, c.mH)(j.pe.TIER_2)),
                     t(j.gD.PREMIUM_GROUP_MONTH),
-                    n(l ? m.pn.REVIEW : m.pn.ADD_PAYMENT_STEPS, { analyticsDataOverride: { sku_id: j.pe.TIER_2 } });
+                    n(l ? m.pn.REVIEW : m.pn.ADD_PAYMENT_STEPS, {
+                        analyticsDataOverride: {
+                            sku_id: j.pe.TIER_2,
+                        },
+                    });
             })({
                 setSelectedPlanId: u,
                 handleStepChange: t,
@@ -89,6 +100,7 @@ function v(e) {
         showPromotionalGiftBanner: P,
     });
 }
+
 function b(e) {
     let {
             selectSku: t,

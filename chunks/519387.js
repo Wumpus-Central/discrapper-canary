@@ -1,4 +1,8 @@
-n.d(i, { default: () => p }), n(321073), n(896048);
+n.d(i, {
+    default: () => p,
+}),
+    n(321073),
+    n(896048);
 var s = n(627968);
 n(64700);
 var r = n(136722),
@@ -6,6 +10,7 @@ var r = n(136722),
     e = n(595738),
     l = n(376092),
     o = n(985018);
+
 function p(t) {
     let { defaultMemberPermissions: i, onClose: n, transitionState: p } = t,
         c = [];
@@ -22,6 +27,8 @@ function p(t) {
                 onClick: n,
             },
         ],
-        children: (0, s.jsx)(e.A, { grantedPermissions: c }),
+        children: (0, s.jsx)(e.A, {
+            grantedPermissions: c,
+        }),
     });
 }

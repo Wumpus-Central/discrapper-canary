@@ -44,10 +44,13 @@ async function f(e, t) {
         return n;
     throw Error(u);
 }
+
 function p(e, t) {
     return l.Ay.query(
         e,
-        { commandTypes: [a.kc.PRIMARY_ENTRY_POINT] },
+        {
+            commandTypes: [a.kc.PRIMARY_ENTRY_POINT],
+        },
         {
             placeholderCount: 1,
             scoreMethod: c.M.COMMAND_ONLY,
@@ -57,6 +60,7 @@ function p(e, t) {
         },
     ).commands[0];
 }
+
 function _(e, t) {
     let { commands: n, loading: i } = h(e, t),
         a = n[0],
@@ -73,10 +77,13 @@ function _(e, t) {
         a
     );
 }
+
 function h(e, t) {
     return (0, l.ZA)(
         e,
-        { commandTypes: d },
+        {
+            commandTypes: d,
+        },
         {
             placeholderCount: 1,
             scoreMethod: c.M.COMMAND_ONLY,
@@ -86,11 +93,13 @@ function h(e, t) {
         },
     );
 }
+
 function m(e) {
     let { context: t, applicationId: n, botUserId: r } = e,
         i = _(t, n);
     return null != i && null != r && g(i);
 }
+
 function g(e) {
     if (null == e) return !1;
     let t = null != e.integration_types && e.integration_types.includes(i.b.USER_INSTALL),

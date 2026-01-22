@@ -1,4 +1,7 @@
-n.d(t, { default: () => h }), n(896048);
+n.d(t, {
+    default: () => h,
+}),
+    n(896048);
 var l = n(627968),
     r = n(64700),
     i = n(158954),
@@ -9,6 +12,7 @@ var l = n(627968),
     c = n(974930),
     o = n(422845),
     g = n(985018);
+
 function h(e) {
     let { guildEvent: t, recurrenceId: n, transitionState: h, onClose: p } = e,
         x = (0, u.A)(n, t.id),

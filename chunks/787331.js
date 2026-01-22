@@ -1,4 +1,6 @@
-n.d(t, { A: () => A });
+n.d(t, {
+    A: () => A,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -12,6 +14,7 @@ var i = n(397927),
     p = n(652215),
     f = n(985018),
     h = n(276991);
+
 function A(e) {
     let { user: t, nickname: n, status: A, isFocused: g } = e,
         { analyticsLocations: m } = (0, a.Ay)(),
@@ -19,7 +22,9 @@ function A(e) {
             null == e || e.stopPropagation(),
                 l.A.addRelationship({
                     userId: t.id,
-                    context: { location: "Friends" },
+                    context: {
+                        location: "Friends",
+                    },
                     type: void 0,
                     fromFriendSuggestion: !0,
                 });

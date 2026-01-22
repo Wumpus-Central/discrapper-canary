@@ -1,9 +1,12 @@
-n.d(t, { Ay: () => P }), n(896048);
+n.d(t, {
+    Ay: () => P,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
     a = n.n(i),
-    s = n(432022),
+    s = n(108531),
     o = n(607399),
     c = n(311907),
     u = n(990078),
@@ -20,6 +23,7 @@ var r = n(627968),
     j = n(349828),
     v = n(985018),
     x = n(668560);
+
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -45,6 +49,7 @@ function E(e) {
     }
     return e;
 }
+
 function _(e) {
     var t;
     let { guild: n, controller: l, guildBanner: i, animate: c } = e,
@@ -56,10 +61,16 @@ function _(e) {
             transform: u.to((e) => "translateY(-".concat((1 - e) * 90, "px)")),
         },
         children: (0, r.jsx)(s.animated.div, {
-            className: a()(x._e, { [x.fr]: o.Fr }),
-            style: { transform: u.to((e) => "translateY(".concat((1 - e) * 90, "px)")) },
+            className: a()(x._e, {
+                [x.fr]: o.Fr,
+            }),
+            style: {
+                transform: u.to((e) => "translateY(".concat((1 - e) * 90, "px)")),
+            },
             children: (0, r.jsx)("img", {
-                className: a()(x.Q, { [x.fr]: o.Fr }),
+                className: a()(x.Q, {
+                    [x.fr]: o.Fr,
+                }),
                 src:
                     null !=
                     (t = m.Ay.getGuildBannerURL(
@@ -77,6 +88,7 @@ function _(e) {
         }),
     });
 }
+
 function C(e) {
     let { guild: t, controller: n, hasBanner: l, hasSubheader: i } = e,
         { value: o } = n.springs,
@@ -114,10 +126,17 @@ function C(e) {
           })
         : (0, r.jsx)(s.animated.div, {
               className: x.pS,
-              style: l ? { opacity: o } : { height: o.to((e) => "".concat(20 * e, "px")) },
+              style: l
+                  ? {
+                        opacity: o,
+                    }
+                  : {
+                        height: o.to((e) => "".concat(20 * e, "px")),
+                    },
               children: f,
           });
 }
+
 function S() {
     return (0, r.jsx)(d.Gg5, {
         size: "custom",
@@ -127,6 +146,7 @@ function S() {
         width: 20,
     });
 }
+
 function I(e) {
     let { guild: t } = e;
     return (0, r.jsx)(d.Heading, {
@@ -137,6 +157,7 @@ function I(e) {
     });
 }
 let N = [j.V, O.gNP];
+
 function T(e) {
     var t;
     let { bannerVisible: i, guild: a, onClick: s, onContextMenu: o, ariaControls: f, ariaExpanded: b, children: m } = e,
@@ -196,7 +217,9 @@ function T(e) {
                                 isBannerVisible: i,
                             }),
                             a.id === j.V && (0, r.jsx)(S, {}),
-                            (0, r.jsx)(I, { guild: a }),
+                            (0, r.jsx)(I, {
+                                guild: a,
+                            }),
                         ],
                     }),
                     (0, r.jsx)("div", {
@@ -262,7 +285,7 @@ let P = l.memo(function (e) {
                 U(!0),
                 (B.current = setTimeout(() => {
                     U(!1);
-                }, 5000)),
+                }, 5e3)),
                 () => {
                     clearTimeout(B.current);
                 }
@@ -295,7 +318,9 @@ let P = l.memo(function (e) {
                         onContextMenu: u,
                         children: [
                             (0, r.jsxs)("header", {
-                                className: a()(x.wx, I, { [x.jD]: o.Fr }),
+                                className: a()(x.wx, I, {
+                                    [x.jD]: o.Fr,
+                                }),
                                 children: [
                                     (0, r.jsx)("div", {
                                         className: a()(x.VW, x.Nk),
@@ -326,7 +351,9 @@ let P = l.memo(function (e) {
                                       animate: k,
                                   })
                                 : null,
-                            (0, r.jsx)(w, { controller: i }),
+                            (0, r.jsx)(w, {
+                                controller: i,
+                            }),
                         ],
                     }),
                     G && W()
@@ -336,13 +363,16 @@ let P = l.memo(function (e) {
                                   U(!0), clearTimeout(B.current);
                               },
                               onMouseLeave: () => U(!1),
-                              style: { height: E },
+                              style: {
+                                  height: E,
+                              },
                           })
                         : null,
                 ],
             }),
     });
 });
+
 function w(e) {
     let { controller: t } = e,
         { theme: n } = (0, d.wRf)(),
@@ -351,11 +381,15 @@ function w(e) {
         children: [
             (0, r.jsx)(s.animated.div, {
                 className: x.UL,
-                style: { opacity: l.to((e) => 0.5 * e) },
+                style: {
+                    opacity: l.to((e) => 0.5 * e),
+                },
             }),
             (0, r.jsx)(s.animated.div, {
                 className: x.ze,
-                style: { opacity: l.to((e) => e) },
+                style: {
+                    opacity: l.to((e) => e),
+                },
             }),
             (0, r.jsx)(s.animated.div, {
                 className: x.iI,

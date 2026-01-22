@@ -36,6 +36,7 @@ var r = n(627968),
     L = n(652215),
     j = n(985018),
     M = n(139674);
+
 function k() {
     let e = (0, o.bG)([y.default], () => {
             let e = y.default.getCurrentUser();
@@ -43,12 +44,20 @@ function k() {
         }),
         t = (0, o.bG)([g.A], () => g.A.getBackupCodes()),
         n = (0, f.g)(),
-        { teams: i, loading: a } = (0, h.A)({ refreshOnDepChange: !0 });
+        { teams: i, loading: a } = (0, h.A)({
+            refreshOnDepChange: !0,
+        });
     return (0, r.jsxs)(l.lVW, {
         children: [
             (0, r.jsxs)(_.x, {
                 setting: x.H.ACCOUNT_PROFILE,
-                children: [n && (0, r.jsx)(R.A, {}), (0, r.jsx)(P.A, { currentUser: e }), (0, r.jsx)(D.A, {})],
+                children: [
+                    n && (0, r.jsx)(R.A, {}),
+                    (0, r.jsx)(P.A, {
+                        currentUser: e,
+                    }),
+                    (0, r.jsx)(D.A, {}),
+                ],
             }),
             (0, r.jsx)(_.x, {
                 setting: x.H.ACCOUNT_PASSWORD_AND_AUTHENTICATION,
@@ -63,7 +72,9 @@ function k() {
                         }),
                         (0, r.jsx)(_.x, {
                             setting: x.H.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
-                            children: (0, r.jsx)(T.A, { backupCodes: t }),
+                            children: (0, r.jsx)(T.A, {
+                                backupCodes: t,
+                            }),
                         }),
                     ],
                 }),

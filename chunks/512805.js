@@ -1,10 +1,14 @@
-n.d(t, { A: () => c }), n(896048);
+n.d(t, {
+    A: () => c,
+}),
+    n(896048);
 var l = n(627968),
     r = n(64700),
     i = n(503698),
     a = n.n(i),
     s = n(414079),
     o = n(980009);
+
 function c(e) {
     let { hasSetEmoji: t, onClick: n, children: i, className: c, buttonClassName: u } = e,
         [d, m] = r.useState(!1),

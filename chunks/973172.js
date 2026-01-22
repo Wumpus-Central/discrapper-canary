@@ -1,9 +1,14 @@
-n.d(t, { A: () => c }), n(321073), n(896048);
+n.d(t, {
+    A: () => c,
+}),
+    n(321073),
+    n(896048);
 var l = n(64700),
     a = n(311907),
     r = n(142120),
     i = n(71393),
     s = n(680646);
+
 function c(e) {
     let { application: t, showMutualGuilds: n = !0 } = e,
         c = (0, a.bG)([s.A], () => s.A.getGuildIdsForApplication(null == t ? void 0 : t.id), [t]),

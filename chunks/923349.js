@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r,
     i = n(989349),
     a = n.n(i),
@@ -7,6 +9,7 @@ var r,
     l = n(272207),
     c = n(287809),
     u = n(927578);
+
 function d(e, t, n) {
     return (
         t in e
@@ -21,6 +24,7 @@ function d(e, t, n) {
     );
 }
 let f = !1;
+
 function p(e) {
     let { subscription: t } = e;
     if (null != t) {
@@ -41,4 +45,6 @@ class _ extends (r = s.Ay.Store) {
     }
 }
 d(_, "displayName", "SubscriptionRemindersStore");
-let h = new _(o.h, { BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_SUCCESS: p });
+let h = new _(o.h, {
+    BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_SUCCESS: p,
+});

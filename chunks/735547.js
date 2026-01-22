@@ -22,6 +22,7 @@ var i,
     s = n(652215),
     S = n(172799),
     o = n(985018);
+
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -47,6 +48,7 @@ function E(e) {
     }
     return e;
 }
+
 function P(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -110,6 +112,7 @@ let d = (e, t) => null != e && _.Ay.isMember(e, t),
             }
         }
     };
+
 function g(e) {
     let {
             query: t,
@@ -159,7 +162,11 @@ function g(e) {
                             }),
                             i.numChannels++);
                     }
-            })(P(E({}, e), { suggestedChannelIds: l }))),
+            })(
+                P(E({}, e), {
+                    suggestedChannelIds: l,
+                }),
+            )),
             ((e) => {
                 let {
                     omitUserIds: t,
@@ -184,8 +191,16 @@ function g(e) {
                             }),
                             _.numFriends++);
                     }
-            })(P(E({}, e), { suggestedUserIds: i })),
-            m(P(E({}, e), { includeGroupDms: !0 })),
+            })(
+                P(E({}, e), {
+                    suggestedUserIds: i,
+                }),
+            ),
+            m(
+                P(E({}, e), {
+                    includeGroupDms: !0,
+                }),
+            ),
             ((e) => {
                 let { omitUserIds: t, maxRowsWithoutQuery: n, omitGuildId: I, shownUserIds: i, rows: l, counts: r } = e;
                 for (let e of O.A.getFriendIDs()) {
@@ -225,7 +240,11 @@ function g(e) {
                         }),
                             I.numChannels++;
                     });
-            })(P(E({}, e), { inviteTargetType: n })),
+            })(
+                P(E({}, e), {
+                    inviteTargetType: n,
+                }),
+            ),
             ((e) => {
                 let { query: t, rows: n, counts: I, omitUserIds: i, shownUserIds: l, suggestedUserIds: r } = e;
                 if (null == r) return;
@@ -331,6 +350,7 @@ function g(e) {
         counts: f,
     };
 }
+
 function c(e, t) {
     let [n, I] = [[], []];
     for (let i of e)
@@ -345,6 +365,7 @@ function c(e, t) {
         }
     return [n, I];
 }
+
 function p(e, t) {
     for (let n of a.A.getPrivateChannelIds()) {
         let I = r.A.getChannel(n);
@@ -358,6 +379,7 @@ function p(e, t) {
     }
     return null;
 }
+
 function V(e) {
     let { channel: t, inviteTargetType: n, applicationId: I } = e;
     if (n === S.yV.EMBEDDED_APPLICATION && null != t) {
@@ -411,6 +433,7 @@ let D = "minutes",
             type: h,
         },
     };
+
 function U(e, t) {
     let n = parseInt(t, 10),
         I = 0 === n,
@@ -418,22 +441,32 @@ function U(e, t) {
     switch (M[e].type) {
         case D:
             if (I) return o.intl.string(o.t["/WbTXD"]);
-            return o.intl.formatToPlainString(o.t.eDRWJK, { numUses: n });
+            return o.intl.formatToPlainString(o.t.eDRWJK, {
+                numUses: n,
+            });
         case y:
-            if (I) return o.intl.formatToPlainString(o.t.ZVdJMy, { numHours: i });
+            if (I)
+                return o.intl.formatToPlainString(o.t.ZVdJMy, {
+                    numHours: i,
+                });
             return o.intl.formatToPlainString(o.t.NgZgAB, {
                 numHours: i,
                 numUses: n,
             });
         case A:
-            if (I) return o.intl.formatToPlainString(o.t.T96qss, { numDays: i });
+            if (I)
+                return o.intl.formatToPlainString(o.t.T96qss, {
+                    numDays: i,
+                });
             return o.intl.formatToPlainString(o.t.TfuB9B, {
                 numDays: i,
                 numUses: n,
             });
         case h:
             if (I) return o.intl.string(o.t.QrHBnC);
-            return o.intl.formatToPlainString(o.t.yJnTxI, { numUses: n });
+            return o.intl.formatToPlainString(o.t.yJnTxI, {
+                numUses: n,
+            });
         default:
             return "";
     }

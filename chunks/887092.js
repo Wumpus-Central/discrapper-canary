@@ -1,10 +1,13 @@
-a.d(t, { A: () => i });
+a.d(t, {
+    A: () => i,
+});
 var c = a(627968),
     n = a(311907),
     l = a(397927),
     d = a(928658),
     r = a(734057),
     o = a(985018);
+
 function i(e, t, a) {
     let i = (0, n.bG)([r.A], () => r.A.getChannel(t)),
         f = null == i ? void 0 : i.getGuildId();

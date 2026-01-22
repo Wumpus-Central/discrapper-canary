@@ -1,4 +1,6 @@
-n.d(t, { MA: () => i });
+n.d(t, {
+    MA: () => i,
+});
 let r = (0, n(600975).C)({
     kind: "user",
     id: "2025-04_ignore_user_feedback",
@@ -26,6 +28,14 @@ let r = (0, n(600975).C)({
         },
     ],
 });
+
 function i(e) {
-    return r.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
+    return r.getCurrentConfig(
+        {
+            location: e,
+        },
+        {
+            autoTrackExposure: !0,
+        },
+    );
 }

@@ -11,13 +11,16 @@ function r(e, t, n) {
         e
     );
 }
+
 function i(e, t) {
     let n = -1 / 0;
     e.getFloatFrequencyData(t);
     for (let e = 4; e < t.length; e++) t[e] > n && t[e] < 0 && (n = t[e]);
     return n;
 }
-n.d(t, { A: () => a }),
+n.d(t, {
+    A: () => a,
+}),
     n(321073),
     n(927092),
     n(212978),

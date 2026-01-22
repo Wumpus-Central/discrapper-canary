@@ -1,4 +1,6 @@
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -40,7 +42,9 @@ let _ = function (e) {
                     variant: e ? "heading-md/semibold" : "heading-xxl/extrabold",
                     color: t,
                     tag: "span",
-                    children: (0, r.jsx)("span", { children: A }),
+                    children: (0, r.jsx)("span", {
+                        children: A,
+                    }),
                 }),
                 (0, r.jsxs)(l.Text, {
                     variant: "text-xs/medium",

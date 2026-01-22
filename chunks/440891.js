@@ -1,4 +1,7 @@
-n.d(t, { A: () => b }), n(896048);
+n.d(t, {
+    A: () => b,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     o = n(311907),
@@ -15,6 +18,7 @@ var r = n(627968),
     E = n(985018),
     g = n(500271);
 let h = async () => await n.e("40119").then(n.t.bind(n, 718698, 19));
+
 function b(e) {
     var t, n, b, y;
     let { tooltipPosition: O } = e,
@@ -27,7 +31,9 @@ function b(e) {
         { completedRatio: P, completedRatioDisplay: I } = (0, u.O9)(S),
         L = (null == (n = S.userStatus) ? void 0 : n.completedAt) != null,
         R = (null == (b = S.userStatus) ? void 0 : b.claimedAt) != null,
-        k = E.intl.formatToPlainString(L && !R ? E.t.NRp4K4 : E.t["12IWP2"], { rewardName: N });
+        k = E.intl.formatToPlainString(L && !R ? E.t.NRp4K4 : E.t["12IWP2"], {
+            rewardName: N,
+        });
     l.useEffect(() => {
         var e, t;
         null == T.current && (null == (e = S.userStatus) ? void 0 : e.completedAt) != null && w(!0),
@@ -62,7 +68,11 @@ function b(e) {
                 },
                 children: (0, r.jsx)(s.DUT, {
                     className: g.md,
-                    style: L ? { cursor: "pointer" } : void 0,
+                    style: L
+                        ? {
+                              cursor: "pointer",
+                          }
+                        : void 0,
                     onClick: (e) => {
                         L && M(e);
                     },

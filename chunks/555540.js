@@ -1,5 +1,9 @@
-n.d(t, { $: () => s }), n(896048);
+n.d(t, {
+    $: () => s,
+}),
+    n(896048);
 var i = n(64700);
+
 function s(e, t, n) {
     let s = i.useRef(null),
         [r, l] = i.useState(!1),

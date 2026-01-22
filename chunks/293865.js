@@ -1,4 +1,6 @@
-l.d(n, { A: () => N });
+l.d(n, {
+    A: () => N,
+});
 var t = l(627968),
     a = l(64700),
     r = l(503698),
@@ -18,6 +20,7 @@ var t = l(627968),
     A = l(574885),
     p = l(66087),
     v = l(540725);
+
 function y(e) {
     let { guild: n } = e,
         {
@@ -74,10 +77,17 @@ let N = a.memo(function (e) {
                 className: A.w5,
                 children: [
                     (0, t.jsx)("div", {
-                        className: i()(A.NC, { [A.KN]: !O }),
-                        style: { backgroundImage: "url(".concat(O ? N : "dark" === _ ? p : v, ")") },
+                        className: i()(A.NC, {
+                            [A.KN]: !O,
+                        }),
+                        style: {
+                            backgroundImage: "url(".concat(O ? N : "dark" === _ ? p : v, ")"),
+                        },
                     }),
-                    I && (0, t.jsx)(y, { guild: r }),
+                    I &&
+                        (0, t.jsx)(y, {
+                            guild: r,
+                        }),
                 ],
             }),
             (0, t.jsx)("div", {

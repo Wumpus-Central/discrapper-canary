@@ -22,6 +22,7 @@ var r = n(627968),
     E = n(49999),
     b = n(788868),
     y = n(738386);
+
 function O() {
     let e,
         t = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
@@ -55,6 +56,7 @@ function O() {
         e
     );
 }
+
 function A(e) {
     var t, n;
     let { decoration: i, label: a, isSelected: o } = e,
@@ -69,10 +71,16 @@ function A(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)("div", {
-                className: s()(y.gj, { [y.wH]: o && !d }),
+                className: s()(y.gj, {
+                    [y.wH]: o && !d,
+                }),
                 children: [a, p],
             }),
-            (0, r.jsx)("div", { className: s()(y.Tp, { [y._I]: !d && o }) }),
+            (0, r.jsx)("div", {
+                className: s()(y.Tp, {
+                    [y._I]: !d && o,
+                }),
+            }),
         ],
     });
 }

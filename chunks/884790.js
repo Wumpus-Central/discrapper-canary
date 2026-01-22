@@ -1,4 +1,6 @@
-r.d(t, { A: () => O });
+r.d(t, {
+    A: () => O,
+});
 var n = r(627968);
 r(64700);
 var o = r(311907),
@@ -9,6 +11,7 @@ var o = r(311907),
     u = r(71393),
     b = r(652215),
     s = r(985018);
+
 function O(e, t) {
     let O = t === b.BRT.POPOUT,
         p = (0, o.bG)([u.A], () => u.A.getGuild(e), [e]),

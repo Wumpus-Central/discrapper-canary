@@ -1,4 +1,6 @@
-n.d(t, { M: () => r });
+n.d(t, {
+    M: () => r,
+});
 let r = {
     nitro_unsubbed: 100,
     checkpoint_completed: 10,

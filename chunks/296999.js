@@ -9,7 +9,9 @@ e.exports = function (e) {
         },
         n = e.COMMENT("#", "$"),
         r = "([A-Za-z_]|::)(\\w|::)*",
-        i = e.inherit(e.TITLE_MODE, { begin: r }),
+        i = e.inherit(e.TITLE_MODE, {
+            begin: r,
+        }),
         a = {
             className: "variable",
             begin: "\\$" + r,

@@ -6,6 +6,7 @@ var r = n(627968);
 n(64700);
 var i = n(397927);
 let l = "command-share-modal";
+
 function a(e) {
     let {
         applicationId: t,

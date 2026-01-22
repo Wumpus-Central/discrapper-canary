@@ -96,9 +96,11 @@ let g = {
         ],
     },
     S = (e, t) => E[e].flags.has(t);
+
 function f(e) {
     return Array.from(E[e].availableActionTypes);
 }
+
 function O(e, t) {
     let { id: n, eventType: r, triggerType: l, actions: i } = e,
         a = E[l];
@@ -108,6 +110,7 @@ function O(e, t) {
         throw Error("You have provided an action that is not available for this trigger type");
     if (r !== a.eventType) throw Error("You have provided an event type that is not available for this trigger type");
 }
+
 function d(e) {
     let t = (0, u.XO)(e);
     return i.useMemo(
@@ -132,6 +135,7 @@ function d(e) {
         [t],
     );
 }
+
 function p(e, t) {
     let n = (0, a.p)(t);
     switch (e) {

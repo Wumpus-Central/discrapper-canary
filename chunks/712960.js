@@ -1,8 +1,13 @@
-n.d(t, { A: () => E }), n(65821), n(896048);
+n.d(t, {
+    A: () => E,
+}),
+    n(65821),
+    n(896048);
 var r,
     i = n(627968),
     a = n(64700),
     s = n(652215);
+
 function o(e, t, n) {
     return (
         t in e
@@ -25,6 +30,7 @@ let l = (e, t) => {
 var u = (function (e) {
     return (e[(e.DISABLED = 0)] = "DISABLED"), (e[(e.DEFAULT = 1)] = "DEFAULT"), (e[(e.OFFSET = 2)] = "OFFSET"), e;
 })(u || {});
+
 function d(e, t, n, r, i) {
     let { top: a, bottom: s, left: o, right: l } = e;
     if (
@@ -48,6 +54,7 @@ function d(e, t, n, r, i) {
         right: l,
     };
 }
+
 function f(e) {
     let { top: t, left: n } = e;
     return {
@@ -55,9 +62,11 @@ function f(e) {
         y: t,
     };
 }
+
 function p(e) {
     return [null == e.bottom ? "TOP" : "BOTTOM", null == e.right ? "LEFT" : "RIGHT"];
 }
+
 function _(e) {
     let { top: t, left: n, bottom: r, right: i } = e;
     return (
@@ -71,6 +80,7 @@ function _(e) {
         }
     );
 }
+
 function h(e) {
     let { top: t, left: n, bottom: r, right: i } = e;
     return (
@@ -86,6 +96,7 @@ function h(e) {
         }
     );
 }
+
 function m(e) {
     let { top: t, left: n, bottom: r, right: i } = e;
     return (
@@ -101,6 +112,7 @@ function m(e) {
         }
     );
 }
+
 function g(e) {
     return null != e ? "".concat(e, "px") : "auto";
 }
@@ -272,11 +284,16 @@ class E extends (r = a.PureComponent) {
                 window.removeEventListener("mousemove", this.handleMouseMove),
                     window.removeEventListener("mouseup", this.handleMouseUp),
                     this.state.dragging &&
-                        this.setState({ dragging: !1 }, () => {
-                            let { onDragEnd: e } = this.props,
-                                { current: t } = this.draggableRef;
-                            null != t && null != e && e(this.position, t);
-                        });
+                        this.setState(
+                            {
+                                dragging: !1,
+                            },
+                            () => {
+                                let { onDragEnd: e } = this.props,
+                                    { current: t } = this.draggableRef;
+                                null != t && null != e && e(this.position, t);
+                            },
+                        );
             }),
             o(this, "_checkBoundsRAF", null),
             o(this, "checkBounds", () => {

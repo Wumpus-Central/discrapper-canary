@@ -11,6 +11,7 @@ var r = n(627968),
     a = n(143236),
     s = n(444927),
     o = n(203982);
+
 function l(e, t, n) {
     return (
         t in e
@@ -59,6 +60,7 @@ let d = i.createContext(new u()),
             })
         );
     });
+
 function p(e) {
     let { event: t, handler: n } = e,
         r = i.useContext(d),
@@ -84,6 +86,7 @@ function p(e) {
         null
     );
 }
+
 function _(e) {
     return p(e), null;
 }

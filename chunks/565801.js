@@ -7,17 +7,26 @@ var r = n(67733),
     a = n(74733),
     s = n(64700),
     o = n(555578);
+
 function l(e) {
     let { filter: t, layoutDelegate: n } = e,
         l = (0, i.R)(e),
         c = (0, s.useMemo)(() => (e.disabledKeys ? new Set(e.disabledKeys) : new Set()), [e.disabledKeys]),
         d = (0, s.useCallback)((e) => new (0, r.J)(t ? t(e) : e), [t]),
         f = (0, s.useMemo)(
-            () => ({ suppressTextValueWarning: e.suppressTextValueWarning }),
+            () => ({
+                suppressTextValueWarning: e.suppressTextValueWarning,
+            }),
             [e.suppressTextValueWarning],
         ),
         p = (0, o.G)(e, d, f),
-        _ = (0, s.useMemo)(() => new (0, a.Y)(p, l, { layoutDelegate: n }), [p, l, n]);
+        _ = (0, s.useMemo)(
+            () =>
+                new (0, a.Y)(p, l, {
+                    layoutDelegate: n,
+                }),
+            [p, l, n],
+        );
     return (
         u(p, _),
         {
@@ -27,6 +36,7 @@ function l(e) {
         }
     );
 }
+
 function c(e, t) {
     let n = (0, s.useMemo)(() => (t ? e.collection.filter(t) : e.collection), [e.collection, t]),
         r = e.selectionManager.withCollection(n);
@@ -39,6 +49,7 @@ function c(e, t) {
         }
     );
 }
+
 function u(e, t) {
     let n = (0, s.useRef)(null);
     (0, s.useEffect)(() => {

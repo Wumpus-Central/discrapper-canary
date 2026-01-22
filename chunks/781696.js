@@ -10,7 +10,7 @@ var r,
     s = n(503698),
     o = n.n(s),
     l = n(340287),
-    c = n(432022),
+    c = n(108531),
     u = n(607399),
     d = n(621466),
     f = n(158954),
@@ -20,6 +20,7 @@ var r,
     m = n(775602),
     g = n(750506),
     E = n(197290);
+
 function b(e, t, n) {
     return (
         t in e
@@ -33,6 +34,7 @@ function b(e, t, n) {
         e
     );
 }
+
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -49,6 +51,7 @@ function y(e) {
     }
     return e;
 }
+
 function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -61,6 +64,7 @@ function O(e, t) {
     }
     return n;
 }
+
 function A(e, t) {
     if (null == e) return {};
     var n,
@@ -77,6 +81,7 @@ function A(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function v(e, t) {
     if (null == e) return {};
     var n,
@@ -107,6 +112,7 @@ let I = 16,
         green: E.x7,
         red: E.Rp,
     });
+
 function w(e, t, n) {
     let r = "left" === e || "right" === e,
         i = r ? "top" : "left",
@@ -116,7 +122,9 @@ function w(e, t, n) {
         l = n;
     return (
         t === a ? ((o = "0%"), (l += I)) : t === s && ((o = "100%"), (l -= T + T)),
-        { [i]: "calc(".concat(o, " + ").concat(l, "px)") }
+        {
+            [i]: "calc(".concat(o, " + ").concat(l, "px)"),
+        }
     );
 }
 let P = (e) => {
@@ -152,7 +160,15 @@ let P = (e) => {
                 let { position: t, nudge: p } = e;
                 return (0, i.jsxs)(c.animated.div, {
                     onClick: l,
-                    className: o()(E.YL, R[null != t ? t : r], R[a], { [E.Cy]: h }, u),
+                    className: o()(
+                        E.YL,
+                        R[null != t ? t : r],
+                        R[a],
+                        {
+                            [E.Cy]: h,
+                        },
+                        u,
+                    ),
                     style: y({}, _, d),
                     "data-mtctest-ignore": A,
                     children: [
@@ -165,7 +181,13 @@ let P = (e) => {
                             style: w(null != t ? t : r, n, p),
                         }),
                         (0, i.jsx)("div", {
-                            className: o()(E.rv, { [E.u2]: m }, f),
+                            className: o()(
+                                E.rv,
+                                {
+                                    [E.u2]: m,
+                                },
+                                f,
+                            ),
                             children: s,
                         }),
                     ],
@@ -218,7 +240,11 @@ let P = (e) => {
     };
 class M extends (r = a.Component) {
     static getDerivedStateFromProps(e, t) {
-        return t.shouldShowTooltip && null == e.text ? { shouldShowTooltip: !1 } : null;
+        return t.shouldShowTooltip && null == e.text
+            ? {
+                  shouldShowTooltip: !1,
+              }
+            : null;
     }
     componentDidMount() {
         this.shouldShowTooltip(this.props, this.state) && this.setDomElement();
@@ -264,7 +290,9 @@ class M extends (r = a.Component) {
                     void 0 === this.props.targetElementRef &&
                         (0, i.jsx)("span", {
                             ref: this.siblingDomRef,
-                            style: { display: "none" },
+                            style: {
+                                display: "none",
+                            },
                         }),
                     this.renderTooltip(),
                 ],
@@ -338,17 +366,23 @@ class M extends (r = a.Component) {
                 ? null == (t = (n = this.props).onTooltipShow) || t.call(n)
                 : null == (r = (i = this.props).onTooltipHide) || r.call(i),
                 l.flushSync(() => {
-                    this.setState({ shouldShowTooltip: e });
+                    this.setState({
+                        shouldShowTooltip: e,
+                    });
                 });
         }
     }
     constructor(...e) {
         super(...e),
             b(this, "showTimeout", new p.Ep()),
-            b(this, "domElementRef", { current: null }),
+            b(this, "domElementRef", {
+                current: null,
+            }),
             b(this, "hasDomElement", !1),
             b(this, "siblingDomRef", a.createRef()),
-            b(this, "state", { shouldShowTooltip: !1 }),
+            b(this, "state", {
+                shouldShowTooltip: !1,
+            }),
             b(this, "handleMouseEnter", () => {
                 ((u.Fr || u.v1) && !0 === this.props.clickableOnMobile) || this.show();
             }),

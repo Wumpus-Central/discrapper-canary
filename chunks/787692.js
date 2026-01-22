@@ -9,7 +9,9 @@ t.exports = function (t) {
             var r = [];
             return (
                 ((r.constructor = {})[i] = function () {
-                    return { foo: 1 };
+                    return {
+                        foo: 1,
+                    };
                 }),
                 1 !== r[t](Boolean).foo
             );

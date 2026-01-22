@@ -1,10 +1,13 @@
-n.d(t, { C: () => v }), n(896048);
+n.d(t, {
+    C: () => v,
+}),
+    n(896048);
 var r,
     l = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
-    o = n(432022),
+    o = n(108531),
     c = n(696292),
     u = n(397927),
     d = n(753845),
@@ -24,6 +27,7 @@ var j =
     (((r = j || {})[(r.THIRTEEN_BY_ELEVEN = 0)] = "THIRTEEN_BY_ELEVEN"),
     (r[(r.SIXTEEN_BY_NINE = 1)] = "SIXTEEN_BY_NINE"),
     r);
+
 function v(e) {
     var t;
     let { context: n, activityItem: r, onClick: a, aspectRatio: j = 0, animatedDivClass: v, commandOrigin: x } = e,
@@ -55,7 +59,9 @@ function v(e) {
                     className: A.Gz,
                     children: (0, l.jsx)("div", {
                         className: A.fC,
-                        children: (0, l.jsx)(h.A, { labelType: S }),
+                        children: (0, l.jsx)(h.A, {
+                            labelType: S,
+                        }),
                     }),
                 }),
             [S],
@@ -100,8 +106,12 @@ function v(e) {
         className: A.XA,
         children: (0, l.jsx)(u.c7X, {
             config: O,
-            from: { value: 0 },
-            to: { value: +!!I },
+            from: {
+                value: 0,
+            },
+            to: {
+                value: +!!I,
+            },
             children: (e) => {
                 let { value: t } = e;
                 return (0, l.jsx)(u.NPJ, {

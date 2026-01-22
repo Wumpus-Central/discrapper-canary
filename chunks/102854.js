@@ -1,4 +1,6 @@
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var r = n(627968),
     i = n(64700),
     a = n(156828),
@@ -29,6 +31,7 @@ let p = (0, a.Fe)({
         ]).then(n.bind(n, 902592)),
     webpackId: 902592,
 });
+
 function _(e) {
     let { mobile: t } = e,
         n = (0, s.bG)([l.A], () => l.A.isDeveloper),
@@ -47,6 +50,8 @@ function _(e) {
         [h],
     ),
     (t ? n : a) && !_)
-        ? (0, r.jsx)(p, { mobile: t })
+        ? (0, r.jsx)(p, {
+              mobile: t,
+          })
         : null;
 }

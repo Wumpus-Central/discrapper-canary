@@ -23,6 +23,7 @@ var r = n(627968),
     m = n(225012),
     g = n(885621),
     E = n(658122);
+
 function b(e, t, n) {
     return (
         t in e
@@ -36,6 +37,7 @@ function b(e, t, n) {
         e
     );
 }
+
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -52,6 +54,7 @@ function y(e) {
     }
     return e;
 }
+
 function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -64,6 +67,7 @@ function O(e, t) {
     }
     return n;
 }
+
 function A(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -75,6 +79,7 @@ function A(e, t) {
         e
     );
 }
+
 function v(e) {
     return null == e
         ? []
@@ -91,6 +96,7 @@ function v(e) {
                       : [e];
           });
 }
+
 function S(e) {
     return v(e).reduce((e, t) => {
         var n, r;
@@ -205,6 +211,7 @@ function S(e) {
         );
     }, []);
 }
+
 function I(e) {
     return e.reduce(
         (e, t) => (
@@ -218,6 +225,7 @@ function I(e) {
         [],
     );
 }
+
 function T(e, t, n, i) {
     let a = 0,
         s = [];
@@ -231,14 +239,31 @@ function T(e, t, n, i) {
                 a > 0 && o.length > 0 && (c.push((0, r.jsx)(m.wv, {}, "separator-".concat(l))), (a = 0)), s.push([]);
                 break;
             case "groupend":
-                s.length > 0 && e.push((0, r.jsx)(m.YJ, y({ contents: s.pop() }, o.props), "group-".concat(l)));
+                s.length > 0 &&
+                    e.push(
+                        (0, r.jsx)(
+                            m.YJ,
+                            y(
+                                {
+                                    contents: s.pop(),
+                                },
+                                o.props,
+                            ),
+                            "group-".concat(l),
+                        ),
+                    );
                 break;
             case "item": {
                 let { children: e, childRowHeight: s, onChildrenScroll: l, listClassName: u, subMenuClassName: d } = o,
                     f = null != e,
                     p = [...n, o.key],
                     _ = t.isFocused(p),
-                    h = null != e ? { "aria-haspopup": !0 } : {},
+                    h =
+                        null != e
+                            ? {
+                                  "aria-haspopup": !0,
+                              }
+                            : {},
                     g = (0, r.jsx)(
                         m.q7,
                         A(y({}, o.props), {
@@ -265,7 +290,9 @@ function T(e, t, n, i) {
                                   A(y({}, o.props), {
                                       parentItem: g,
                                       isFocused: _,
-                                      menuSubmenuProps: t.getSubmenuProps({ path: p }),
+                                      menuSubmenuProps: t.getSubmenuProps({
+                                          path: p,
+                                      }),
                                       rows: T(e, t, p, i),
                                       rowHeight: s,
                                       onScroll: l,
@@ -281,7 +308,9 @@ function T(e, t, n, i) {
                                       subMenuClassName: d,
                                       parentItem: g,
                                       isFocused: _,
-                                      menuSubmenuProps: t.getSubmenuProps({ path: p }),
+                                      menuSubmenuProps: t.getSubmenuProps({
+                                          path: p,
+                                      }),
                                       renderSubmenu: () => T(e, t, p, i),
                                   }),
                                   "".concat(o.key, "-submenu"),
@@ -372,7 +401,9 @@ function T(e, t, n, i) {
                         m.TV,
                         A(y({}, o.props), {
                             isFocused: t.isFocused(e),
-                            menuItemProps: t.getItemProps({ path: e }),
+                            menuItemProps: t.getItemProps({
+                                path: e,
+                            }),
                             onClose: i,
                         }),
                         o.key,
@@ -388,7 +419,9 @@ function T(e, t, n, i) {
                         m.O1,
                         A(y({}, o.props), {
                             isFocused: t.isFocused(e),
-                            menuItemProps: t.getItemProps({ path: e }),
+                            menuItemProps: t.getItemProps({
+                                path: e,
+                            }),
                             onClose: i,
                             children: o.children,
                         }),
@@ -401,6 +434,7 @@ function T(e, t, n, i) {
         return e;
     }, []);
 }
+
 function C(e) {
     var t;
     let {
@@ -464,7 +498,9 @@ function C(e) {
                                 (0, r.jsx)(m.q7, {
                                     disabled: !0,
                                     label: () => (0, r.jsx)(R, {}),
-                                    menuItemProps: L.getItemProps({ path: ["empty"] }),
+                                    menuItemProps: L.getItemProps({
+                                        path: ["empty"],
+                                    }),
                                     isFocused: !1,
                                     onFocus: () => {},
                                     onClose: O,
@@ -477,15 +513,17 @@ function C(e) {
         ),
     });
 }
+
 function N() {
     return (0, r.jsx)("div", {
         className: s()(E.menu, E.loader, E.flexible),
         children: (0, r.jsx)(u.y$y, {}),
     });
 }
+
 function R() {
-    let e = "\u266B (つ\uFF61\u25D5‿‿\u25D5\uFF61)つ \u266A",
-        t = "\u266B \u2282(\uFF61\u25D5‿‿\u25D5\uFF61\u2282) \u266A",
+    let e = "♫ (つ｡◕‿‿◕｡)つ ♪",
+        t = "♫ ⊂(｡◕‿‿◕｡⊂) ♪",
         [n, a] = i.useState(e);
     return (
         i.useEffect(() => {

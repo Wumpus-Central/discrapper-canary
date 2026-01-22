@@ -1,6 +1,9 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(627968),
     i = n(397927);
+
 function a(e, t, n) {
     return (
         t in e
@@ -14,6 +17,7 @@ function a(e, t, n) {
         e
     );
 }
+
 function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -30,6 +34,7 @@ function s(e) {
     }
     return e;
 }
+
 function o(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -42,6 +47,7 @@ function o(e, t) {
     }
     return n;
 }
+
 function l(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -54,6 +60,7 @@ function l(e, t) {
     );
 }
 let c = (e) => "gift-option-select-modal-".concat(e.id);
+
 function u(e) {
     let {
         giftRecipient: t,

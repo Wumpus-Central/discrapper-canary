@@ -1,4 +1,7 @@
-a.d(t, { default: () => W }), a(896048);
+a.d(t, {
+    default: () => W,
+}),
+    a(896048);
 var s = a(627968),
     n = a(64700),
     i = a(503698),
@@ -29,6 +32,7 @@ var s = a(627968),
     R = a(484252),
     w = a(460290),
     T = a(181713);
+
 function k(e) {
     let { onVideoLoaded: t } = e;
     return (0, s.jsx)(f.A, {
@@ -44,6 +48,7 @@ function k(e) {
         }),
     });
 }
+
 function D(e) {
     let { onVideoLoaded: t, isLoading: a } = e,
         i = (0, r.bG)([o.A], () => o.A.useReducedMotion),
@@ -83,7 +88,9 @@ function D(e) {
                 loop: !0,
                 muted: !0,
                 playsInline: !0,
-                className: c()(E.nH, E.EZ, { [E.R]: u }),
+                className: c()(E.nH, E.EZ, {
+                    [E.R]: u,
+                }),
                 controls: !1,
                 onCanPlayThrough: n.useCallback(() => _(!0), []),
                 children: (0, s.jsx)("source", {
@@ -108,7 +115,9 @@ function D(e) {
             (0, s.jsxs)("div", {
                 className: E.Se,
                 children: [
-                    (0, s.jsx)(k, { onVideoLoaded: n.useCallback(() => N(!0), []) }),
+                    (0, s.jsx)(k, {
+                        onVideoLoaded: n.useCallback(() => N(!0), []),
+                    }),
                     (0, s.jsx)(k, {}),
                     (0, s.jsx)(k, {}),
                     (0, s.jsx)(k, {}),
@@ -117,6 +126,7 @@ function D(e) {
         ],
     });
 }
+
 function P(e) {
     let { isLoading: t, onClose: a, orbsEarned: n, orbsBalance: i, onVideoLoaded: c } = e,
         r = async () => {
@@ -152,7 +162,9 @@ function P(e) {
                             (0, s.jsx)(l.Heading, {
                                 variant: "heading-xl/semibold",
                                 color: "text-strong",
-                                children: S.intl.formatToPlainString(S.t.YMor7k, { count: n }),
+                                children: S.intl.formatToPlainString(S.t.YMor7k, {
+                                    count: n,
+                                }),
                             }),
                         ],
                     }),
@@ -188,6 +200,7 @@ function P(e) {
         ],
     });
 }
+
 function W(e) {
     var t, a;
     let { initialQuest: i, onClose: c, transitionState: r, sourceQuestContent: l, location: d } = e,

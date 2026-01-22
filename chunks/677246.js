@@ -15,6 +15,7 @@
             )
         );
     }
+
     function n(e) {
         switch (r(e)) {
             case 1:
@@ -27,12 +28,15 @@
                 return e + " vloaz";
         }
     }
+
     function r(e) {
         return e > 9 ? r(e % 10) : e;
     }
+
     function i(e, t) {
         return 2 === t ? a(e) : e;
     }
+
     function a(e) {
         var t = {
             m: "v",
@@ -67,7 +71,7 @@
         relativeTime: {
             future: "a-benn %s",
             past: "%s 'zo",
-            s: "un nebeud segondennoù",
+            s: "un nebeud segondenno\xf9",
             ss: "%d eilenn",
             m: "ur vunutenn",
             mm: t,
@@ -82,7 +86,7 @@
         },
         dayOfMonthOrdinalParse: /\d{1,2}(añ|vet)/,
         ordinal: function (e) {
-            var t = 1 === e ? "añ" : "vet";
+            var t = 1 === e ? "a\xf1" : "vet";
             return e + t;
         },
         week: {

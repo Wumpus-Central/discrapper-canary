@@ -26,6 +26,7 @@ let l = "custom-theme-background",
     b = 40,
     y = 0.1,
     O = 0.05;
+
 function A(e, t, n, r) {
     let a = e.slice();
     1 === e.length && a.push(e[0]);
@@ -93,9 +94,18 @@ function A(e, t, n, r) {
         .concat(w, "\n      ")
         .concat(P, "\n      }");
 }
+
 function v(e, t) {
-    let n = a.A.unsafe_rawColors[e.colors[0].token].resolve({ saturation: 1 }).hex(),
-        r = a.A.unsafe_rawColors[e.colors[e.colors.length - 1].token].resolve({ saturation: 1 }).hex(),
+    let n = a.A.unsafe_rawColors[e.colors[0].token]
+            .resolve({
+                saturation: 1,
+            })
+            .hex(),
+        r = a.A.unsafe_rawColors[e.colors[e.colors.length - 1].token]
+            .resolve({
+                saturation: 1,
+            })
+            .hex(),
         i = (0, o.Zk)({
             enabled: !0,
             primaryColor: n,

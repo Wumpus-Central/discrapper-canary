@@ -1,4 +1,6 @@
-n.d(t, { A: () => E });
+n.d(t, {
+    A: () => E,
+});
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -15,6 +17,7 @@ var r = n(627968),
     g = n(652215),
     y = n(985018),
     p = n(284700);
+
 function E(e) {
     let { guildId: t, userId: E, analyticsLocation: j, analyticsLocations: m, context: v, icon: _ } = e,
         h = b.A.getGuild(t),
@@ -22,7 +25,12 @@ function E(e) {
         M = (0, i.bG)([O.default], () => O.default.getUser(E)),
         P = (0, i.bG)([A.Ay], () => A.Ay.isGuestOrLurker(t, E), [t, E]);
     (0, i.bG)([f.A], () => f.A.getGuildVersion(t), [t]);
-    let C = l.useMemo(() => ({ [t]: [E] }), [t, E]);
+    let C = l.useMemo(
+        () => ({
+            [t]: [E],
+        }),
+        [t, E],
+    );
     (0, o.E)(C, "useChangeIdentityItem");
     let I = v === g.BRT.POPOUT,
         D = (0, c.A)({
@@ -49,7 +57,9 @@ function E(e) {
         icon: _,
         action: () => {
             N
-                ? ((0, s.A)(M.id, M.getAvatarURL(t, 80), { guildId: t }),
+                ? ((0, s.A)(M.id, M.getAvatarURL(t, 80), {
+                      guildId: t,
+                  }),
                   D(),
                   x.dispatch(g.jej.POPOUT_CLOSE),
                   (0, a.s7G)())

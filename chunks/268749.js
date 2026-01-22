@@ -17,6 +17,7 @@ var r = n(735438),
     f = n(904813),
     O = n(652215),
     d = n(985018);
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -58,7 +59,10 @@ let h = Object.freeze({
                 c = l().cloneDeep(n);
             null != c &&
                 ((r = p({}, c)),
-                (i = i = { actions: c.actions.filter(s.Vq) }),
+                (i = i =
+                    {
+                        actions: c.actions.filter(s.Vq),
+                    }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
                     : (function (e, t) {
@@ -141,7 +145,9 @@ let h = Object.freeze({
             }
             try {
                 (0, u.r)(() => {
-                    e({ isLoading: !0 });
+                    e({
+                        isLoading: !0,
+                    });
                 });
                 let n = null;
                 return (
@@ -176,6 +182,7 @@ let h = Object.freeze({
             return r(n, e);
         },
     }));
+
 function R() {
     return _(
         (e) => ({
@@ -190,6 +197,7 @@ function R() {
         i.x,
     );
 }
+
 function y() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
         t = _(

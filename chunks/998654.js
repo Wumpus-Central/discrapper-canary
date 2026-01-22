@@ -1,7 +1,10 @@
-n.d(t, { w: () => l });
+n.d(t, {
+    w: () => l,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927);
+
 function l(e) {
     (0, i.mMO)(
         async () => {
@@ -36,6 +39,8 @@ function l(e) {
                     })({}, n, e),
                 );
         },
-        { modalKey: "Guild Settings Picker Modal" },
+        {
+            modalKey: "Guild Settings Picker Modal",
+        },
     );
 }

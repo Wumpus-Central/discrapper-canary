@@ -60,6 +60,7 @@ var r = n(205693),
     w = n(956050),
     P = n(696016),
     D = n(652215);
+
 function x(e, t, n) {
     return (
         t in e
@@ -73,6 +74,7 @@ function x(e, t, n) {
         e
     );
 }
+
 function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -89,6 +91,7 @@ function L(e) {
     }
     return e;
 }
+
 function j(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -101,6 +104,7 @@ function j(e, t) {
     }
     return n;
 }
+
 function M(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -115,14 +119,25 @@ function M(e, t) {
 async function k(e) {
     let { allowVoiceRecording: t } = e;
     await f.Q$.updateSetting(t),
-        y.default.track(D.HAw.CLIPS_SETTINGS_UPDATED, { allow_voice_recording: t }),
-        a.h.dispatch({ type: "CLIPS_ALLOW_VOICE_RECORDING_UPDATE" });
+        y.default.track(D.HAw.CLIPS_SETTINGS_UPDATED, {
+            allow_voice_recording: t,
+        }),
+        a.h.dispatch({
+            type: "CLIPS_ALLOW_VOICE_RECORDING_UPDATE",
+        });
 }
 async function U(e) {
     let { clipsEnabled: t, guildId: n, trackAnalytics: r = !1 } = e;
     await a.h.dispatch({
         type: "CLIPS_SETTINGS_UPDATE",
-        settings: L({ clipsEnabled: t }, !t && { decoupledClipsEnabled: !1 }),
+        settings: L(
+            {
+                clipsEnabled: t,
+            },
+            !t && {
+                decoupledClipsEnabled: !1,
+            },
+        ),
     }),
         r &&
             y.default.track(
@@ -132,55 +147,99 @@ async function U(e) {
                         clips_enabled: t,
                         guild_id: n,
                     },
-                    !t && { decoupled_clips_enabled: !1 },
+                    !t && {
+                        decoupled_clips_enabled: !1,
+                    },
                 ),
             );
 }
+
 function G(e) {
     let { enabled: t, trackAnalytics: n = !1 } = e;
     a.h.dispatch({
         type: "CLIPS_SETTINGS_UPDATE",
-        settings: M(L({}, t && { clipsEnabled: !0 }), { decoupledClipsEnabled: t }),
+        settings: M(
+            L(
+                {},
+                t && {
+                    clipsEnabled: !0,
+                },
+            ),
+            {
+                decoupledClipsEnabled: t,
+            },
+        ),
     }),
         n &&
             y.default.track(
                 D.HAw.CLIPS_SETTINGS_UPDATED,
-                M(L({}, t && { clips_enabled: !0 }), { decoupled_clips_enabled: t }),
+                M(
+                    L(
+                        {},
+                        t && {
+                            clips_enabled: !0,
+                        },
+                    ),
+                    {
+                        decoupled_clips_enabled: t,
+                    },
+                ),
             );
 }
+
 function V(e) {
     a.h.dispatch({
         type: "CLIPS_SETTINGS_UPDATE",
-        settings: { remindersEnabled: e },
+        settings: {
+            remindersEnabled: e,
+        },
     }),
-        y.default.track(D.HAw.CLIPS_SETTINGS_UPDATED, { reminders_enabled: e });
+        y.default.track(D.HAw.CLIPS_SETTINGS_UPDATED, {
+            reminders_enabled: e,
+        });
 }
+
 function F(e) {
     a.h.dispatch({
         type: "CLIPS_SETTINGS_UPDATE",
-        settings: { storageLocation: e },
+        settings: {
+            storageLocation: e,
+        },
     });
 }
+
 function B(e) {
     a.h.dispatch({
         type: "CLIPS_SETTINGS_UPDATE",
-        settings: { clipsQuality: e },
+        settings: {
+            clipsQuality: e,
+        },
     });
 }
+
 function H(e) {
     a.h.dispatch({
         type: "CLIPS_SETTINGS_UPDATE",
-        settings: { clipsLength: e },
+        settings: {
+            clipsLength: e,
+        },
     });
 }
+
 function Y(e) {
     let { enabled: t, trackAnalytics: n = !1 } = e;
     a.h.dispatch({
         type: "CLIPS_SETTINGS_UPDATE",
-        settings: { viewerClipsEnabled: t },
+        settings: {
+            viewerClipsEnabled: t,
+        },
     }),
-        n && y.default.track(D.HAw.CLIPS_SETTINGS_UPDATED, { viewer_clips_enabled: t });
+        n &&
+            y.default.track(D.HAw.CLIPS_SETTINGS_UPDATED, {
+                viewer_clips_enabled: t,
+            });
 }
+
 function W(e) {
     var t;
     let n, r, i;
@@ -206,6 +265,7 @@ function W(e) {
         application_name: null == a ? void 0 : a.name,
     };
 }
+
 function K(e, t) {
     var n, r, i, a, s, l, c, u, d, f, _;
     let h = new Map();
@@ -285,7 +345,9 @@ async function z(e) {
             (o.length = e),
             P.nx.info("Clip save succeeded with ".concat(e, "ms and thumbnail ").concat(r.length, " bytes thumbnail.")),
             await d.updateClipMetadata(u, JSON.stringify(o)),
-            M(L({}, o), { filepath: u })
+            M(L({}, o), {
+                filepath: u,
+            })
         );
     } catch (r) {
         if (
@@ -312,7 +374,14 @@ async function q(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "manual",
         s = arguments.length > 2 ? arguments[2] : void 0,
         o = arguments.length > 3 ? arguments[3] : void 0,
-        { enableViewerClipping: f } = u.A.getCurrentConfig({ location: "SaveClip" }, { autoTrackExposure: !1 });
+        { enableViewerClipping: f } = u.A.getCurrentConfig(
+            {
+                location: "SaveClip",
+            },
+            {
+                autoTrackExposure: !1,
+            },
+        );
     if (v.A.getIsAtMaxSaveClipOperations()) return;
     let p = (0, C.TD)() && null != _.A.getCurrentUserActiveStream(),
         E =
@@ -384,11 +453,13 @@ async function q(e) {
         P.nx.error("Clip Failed to Save", e),
             null == D || D.stop(),
             (0, d.Ak)("clip_error", 0.5),
-            a.h.dispatch({ type: "CLIPS_SAVE_CLIP_ERROR" });
+            a.h.dispatch({
+                type: "CLIPS_SAVE_CLIP_ERROR",
+            });
     }
     P.nx.info(
         ""
-            .concat(v.A.getSettings().clipsLength / 1000, "s clip save took ")
+            .concat(v.A.getSettings().clipsLength / 1e3, "s clip save took ")
             .concat(Math.round(performance.now() - x), "ms"),
     );
 }
@@ -453,11 +524,14 @@ async function X(e, t) {
             (P.nx.error("Failed to save screenshot:", e),
             null == A || A.stop(),
             (0, d.Ak)("clip_error", 0.5),
-            a.h.dispatch({ type: "CLIPS_SAVE_CLIP_ERROR" }),
+            a.h.dispatch({
+                type: "CLIPS_SAVE_CLIP_ERROR",
+            }),
             e)
         );
     }
 }
+
 function Z(e, t) {
     a.h.dispatch({
         type: "CLIPS_SAVE_ANIMATION_END",
@@ -471,20 +545,30 @@ async function Q(e, t) {
     let r = L({}, n, t);
     null != (await (0, N.q)(r)) &&
         (await m.A.getMediaEngine().updateClipMetadata(r.filepath, JSON.stringify(r)),
-        y.default.track(D.HAw.CLIP_EDITED, { clip_id: r.id }),
+        y.default.track(D.HAw.CLIP_EDITED, {
+            clip_id: r.id,
+        }),
         a.h.dispatch({
             type: "CLIPS_UPDATE_METADATA",
             clip: r,
         }));
 }
 async function $(e) {
-    await Q(e.id, { isFavorite: !e.isFavorite });
+    await Q(e.id, {
+        isFavorite: !e.isFavorite,
+    });
 }
+
 function J() {
-    a.h.dispatch({ type: "CLIPS_CLEAR_CLIPS_SESSION" });
+    a.h.dispatch({
+        type: "CLIPS_CLEAR_CLIPS_SESSION",
+    });
 }
+
 function ee() {
-    a.h.dispatch({ type: "CLIPS_CLEAR_NEW_CLIP_IDS" });
+    a.h.dispatch({
+        type: "CLIPS_CLEAR_NEW_CLIP_IDS",
+    });
 }
 async function et(e) {
     var t;
@@ -492,7 +576,11 @@ async function et(e) {
     let n = await s.A.clips.loadClipsDirectory(e),
         r = [];
     for (let e of n) {
-        let t = await (0, N.q)(M(L({}, e.metadata), { filepath: e.filepath }));
+        let t = await (0, N.q)(
+            M(L({}, e.metadata), {
+                filepath: e.filepath,
+            }),
+        );
         null != t && r.push(t);
     }
     a.h.dispatch({
@@ -519,7 +607,7 @@ async function er(e) {
                 ? t
                 : {
                       start: 0,
-                      end: e.length / 1000,
+                      end: e.length / 1e3,
                       applicationAudio: !0,
                       voiceAudio: !0,
                       soundboardAudio: !0,
@@ -527,24 +615,32 @@ async function er(e) {
         );
     return e.type === S.nQ.SCREENSHOT ? r : (0, R.A)(r);
 }
+
 function ei(e) {
     a.h.dispatch({
         type: "CLIPS_SET_EXPORTING",
         clipIds: e,
     });
 }
+
 function ea(e) {
     a.h.dispatch({
         type: "CLIPS_SETTINGS_UPDATE",
-        settings: { maxAutoClips: e },
+        settings: {
+            maxAutoClips: e,
+        },
     });
 }
+
 function es(e) {
     a.h.dispatch({
         type: "CLIPS_SETTINGS_UPDATE",
-        settings: { clipSignals: L({}, v.A.getSettings().clipSignals, e) },
+        settings: {
+            clipSignals: L({}, v.A.getSettings().clipSignals, e),
+        },
     });
 }
+
 function eo(e) {
     let t = m.A.getMediaEngine().setClipsMLPipelineTypeEnabled;
     null != t &&
@@ -554,15 +650,21 @@ function eo(e) {
         t("whisper_transcription", e.whisperTranscription)),
         a.h.dispatch({
             type: "CLIPS_SETTINGS_UPDATE",
-            settings: { mlPipelinesEnabled: L({}, v.A.getSettings().mlPipelinesEnabled, e) },
+            settings: {
+                mlPipelinesEnabled: L({}, v.A.getSettings().mlPipelinesEnabled, e),
+            },
         });
 }
+
 function el(e) {
     a.h.dispatch({
         type: "CLIPS_SETTINGS_UPDATE",
-        settings: { autoClipPhrases: e },
+        settings: {
+            autoClipPhrases: e,
+        },
     });
 }
+
 function ec(e, t) {
     a.h.dispatch({
         type: "CLIPS_SIGNAL_CREATED",
@@ -570,9 +672,14 @@ function ec(e, t) {
         timestamp: t,
     });
 }
+
 function eu() {
-    ec({ type: S.Gy.MANUAL });
+    ec({
+        type: S.Gy.MANUAL,
+    });
 }
 async function ed(e) {
-    await Q(e, { isTemporary: !1 });
+    await Q(e, {
+        isTemporary: !1,
+    });
 }

@@ -1,6 +1,9 @@
-r.d(t, { A: () => n });
+r.d(t, {
+    A: () => n,
+});
 var s = r(401755),
     l = r(985018);
+
 function n(e) {
     switch (e) {
         case s.IZ.CLASSROOM:

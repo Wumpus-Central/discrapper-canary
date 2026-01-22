@@ -1,16 +1,18 @@
-a.d(t, { A: () => r });
+a.d(t, {
+    A: () => r,
+});
 var n = {
     lessThanXSeconds: {
-        one: "mindre end ét sekund",
+        one: "mindre end \xe9t sekund",
         other: "mindre end {{count}} sekunder",
     },
     xSeconds: {
         one: "1 sekund",
         other: "{{count}} sekunder",
     },
-    halfAMinute: "ét halvt minut",
+    halfAMinute: "\xe9t halvt minut",
     lessThanXMinutes: {
-        one: "mindre end ét minut",
+        one: "mindre end \xe9t minut",
         other: "mindre end {{count}} minutter",
     },
     xMinutes: {
@@ -38,28 +40,28 @@ var n = {
         other: "{{count}} uger",
     },
     aboutXMonths: {
-        one: "cirka 1 måned",
-        other: "cirka {{count}} måneder",
+        one: "cirka 1 m\xe5ned",
+        other: "cirka {{count}} m\xe5neder",
     },
     xMonths: {
-        one: "1 måned",
-        other: "{{count}} måneder",
+        one: "1 m\xe5ned",
+        other: "{{count}} m\xe5neder",
     },
     aboutXYears: {
-        one: "cirka 1 år",
-        other: "cirka {{count}} år",
+        one: "cirka 1 \xe5r",
+        other: "cirka {{count}} \xe5r",
     },
     xYears: {
-        one: "1 år",
-        other: "{{count}} år",
+        one: "1 \xe5r",
+        other: "{{count}} \xe5r",
     },
     overXYears: {
-        one: "over 1 år",
-        other: "over {{count}} år",
+        one: "over 1 \xe5r",
+        other: "over {{count}} \xe5r",
     },
     almostXYears: {
-        one: "næsten 1 år",
-        other: "næsten {{count}} år",
+        one: "n\xe6sten 1 \xe5r",
+        other: "n\xe6sten {{count}} \xe5r",
     },
 };
 let r = function (e, t, a) {

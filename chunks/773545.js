@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(64700),
     i = n(311907),
     a = n(183636),
@@ -9,9 +11,11 @@ var r = n(64700),
     u = n(302654),
     d = n(710969);
 let f = 10 * s.A.Millis.MINUTE;
+
 function p(e) {
     return null != e && e.fetchedAt + e.ttlMillis >= Date.now();
 }
+
 function _(e, t, n) {
     if ((0, o.I)() || p(e)) return;
     if ("focused" !== a.A.getState()) {
@@ -19,9 +23,12 @@ function _(e, t, n) {
         return;
     }
     if (c.A.isFetchingQuestToDeliverByPlacement(t)) return;
-    let { enableNewRequestBehavior: r } = u.A.getConfig({ location: "maybeRefreshAd" });
+    let { enableNewRequestBehavior: r } = u.A.getConfig({
+        location: "maybeRefreshAd",
+    });
     r && ((0, l.N1)(), (0, l.r8)(t, n));
 }
+
 function h(e) {
     let t = (0, r.useRef)(null),
         n = (0, i.bG)([c.A], () => c.A.questDeliveryOverride),

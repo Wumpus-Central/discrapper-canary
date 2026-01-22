@@ -29,6 +29,7 @@ var r = n(64700),
     p = n(696451),
     _ = n(752319),
     h = n(287809);
+
 function m(e) {
     return r.useMemo(() => {
         let t = p.Ay.getMutableAllGuildsAndMembers(),
@@ -41,6 +42,7 @@ function m(e) {
         return null != n ? Object.entries(n).map((e) => e[1][0]) : [];
     }, [e]);
 }
+
 function g(e, t) {
     var n;
     let r = (0, o.bG)([p.Ay], () => (void 0 === t ? null : p.Ay.getMember(t, e.id))),
@@ -60,6 +62,7 @@ function g(e, t) {
         pendingErrors: null != t ? c : s,
     };
 }
+
 function E(e, t) {
     let n = (0, o.bG)([p.Ay], () => (void 0 === t || null == e ? null : p.Ay.getMember(t, e.id))),
         { pendingUserDisplayNameStyles: r, userErrors: i } = (0, o.cf)([_.A], () => ({
@@ -79,11 +82,13 @@ function E(e, t) {
         pendingErrors: null != t ? s : i,
     };
 }
+
 function b(e) {
     let { user: t, guildId: n } = e,
         r = (0, o.bG)([p.Ay], () => (null != n ? p.Ay.getMember(n, t.id) : null));
     return null != n ? (null == r ? void 0 : r.avatarDecoration) : t.avatarDecoration;
 }
+
 function y(e) {
     let { user: t, guildId: n } = e;
     return (0, o.bG)([f.A], () => {
@@ -97,6 +102,7 @@ function y(e) {
               : r.profileEffect;
     });
 }
+
 function O(e) {
     let t = (0, o.cf)([_.A], () => ({
             pendingAvatarDecoration: _.A.getPendingAvatarDecoration(),
@@ -108,6 +114,7 @@ function O(e) {
         }));
     return null != e ? n : t;
 }
+
 function A(e) {
     let t = (0, o.cf)([_.A], () => ({
             pendingProfileEffect: _.A.getPendingProfileEffect(),
@@ -119,12 +126,15 @@ function A(e) {
         }));
     return null != e ? n : t;
 }
+
 function v(e, t) {
     (0, d.Er)(e === t ? void 0 : e);
 }
+
 function S(e, t) {
     (0, l.zq)((null == e ? void 0 : e.imageUri) === t ? void 0 : e);
 }
+
 function I(e, t) {
     let n = h.default.getCurrentUser();
     if ((a()(null != n, "user cannot be null"), null == t)) {
@@ -142,6 +152,7 @@ function I(e, t) {
         });
     }
 }
+
 function T(e, t) {
     var n, r;
     let i = h.default.getCurrentUser();
@@ -159,6 +170,7 @@ function T(e, t) {
         });
     }
 }
+
 function C(e, t) {
     var n, r, i;
     let o = h.default.getCurrentUser();
@@ -176,6 +188,7 @@ function C(e, t) {
         });
     }
 }
+
 function N(e) {
     let { userValue: t, guildValue: n, pendingValue: r, guildId: i } = e,
         a = "" === r || null === r,
@@ -183,9 +196,11 @@ function N(e) {
         o = "" !== n && null != n;
     return a ? (null != i ? t : null) : s ? r : null != i && o ? n : t;
 }
+
 function R(e, t) {
     return void 0 === e ? null != t : null != e;
 }
+
 function w(e, t) {
     return void 0 === e ? null != t : null != e;
 }

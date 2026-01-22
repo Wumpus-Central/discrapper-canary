@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -8,6 +10,7 @@ var i = n(503698),
     l = n(291812),
     c = n(643204),
     u = n(759522);
+
 function d(e, t, n) {
     return (
         t in e
@@ -21,6 +24,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,6 +41,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -49,6 +54,7 @@ function p(e, t) {
     }
     return n;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -60,6 +66,7 @@ function _(e, t) {
         e
     );
 }
+
 function h(e, t) {
     if (null == e) return {};
     var n,
@@ -76,6 +83,7 @@ function h(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function m(e, t) {
     if (null == e) return {};
     var n,
@@ -86,6 +94,7 @@ function m(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function g(e) {
     let {
             message: t,
@@ -109,13 +118,26 @@ function g(e) {
         ]),
         y = (0, s.Ay)(t);
     return (0, r.jsx)("div", {
-        className: a()({ [u.Ym]: E }, u.gD, { [u.oE]: p }, d),
+        className: a()(
+            {
+                [u.Ym]: E,
+            },
+            u.gD,
+            {
+                [u.oE]: p,
+            },
+            d,
+        ),
         children: (0, r.jsx)(
             o.A,
             _(f({}, b), {
-                className: a()(u.zC, { [u.oE]: p }),
+                className: a()(u.zC, {
+                    [u.oE]: p,
+                }),
                 childrenMessageContent: (0, r.jsx)(l.Ay, {
-                    className: a()(u.__invalid_messageContent, { [u.oE]: p }),
+                    className: a()(u.__invalid_messageContent, {
+                        [u.oE]: p,
+                    }),
                     message: t,
                     content: i,
                     compact: null != p && p,
@@ -130,7 +152,9 @@ function g(e) {
                             guildId: null == n ? void 0 : n.guild_id,
                             compact: p,
                             hideTimestamp: g,
-                            className: a()(u.wx, { [u.oE]: p }),
+                            className: a()(u.wx, {
+                                [u.oE]: p,
+                            }),
                         },
                         null != m ? m : {},
                     ),

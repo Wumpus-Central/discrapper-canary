@@ -1,4 +1,6 @@
-n.d(t, { u: () => c });
+n.d(t, {
+    u: () => c,
+});
 var r = n(627968),
     i = n(64700),
     s = n(397927),
@@ -35,7 +37,9 @@ let c = (e) => {
                                 variant: "text-md/medium",
                                 children: a.intl.string(a.t["AszWL/"]),
                             }),
-                            (0, r.jsx)(s.uhT, { size: "sm" }),
+                            (0, r.jsx)(s.uhT, {
+                                size: "sm",
+                            }),
                         ],
                     }),
                     (0, r.jsxs)(s.DUT, {
@@ -46,7 +50,9 @@ let c = (e) => {
                                 variant: "text-md/medium",
                                 children: a.intl.string(a.t.jMSjZL),
                             }),
-                            (0, r.jsx)(s.uhT, { size: "sm" }),
+                            (0, r.jsx)(s.uhT, {
+                                size: "sm",
+                            }),
                         ],
                     }),
                 ],

@@ -1,4 +1,7 @@
-n.d(t, { U: () => c }), n(228524);
+n.d(t, {
+    U: () => c,
+}),
+    n(228524);
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -6,6 +9,7 @@ var i = n(503698),
     s = n(158954),
     o = n(397927),
     l = n(411809);
+
 function c(e) {
     let {
         headingColor: t = "text-strong",
@@ -19,7 +23,9 @@ function c(e) {
         style: _,
     } = e;
     return (0, r.jsxs)(o.DUT, {
-        className: a()(l.EA, { [l.vk]: null != f }),
+        className: a()(l.EA, {
+            [l.vk]: null != f,
+        }),
         onClick: f,
         innerRef: p,
         style: _,

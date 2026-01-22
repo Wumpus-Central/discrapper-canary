@@ -1,4 +1,10 @@
-n.d(t, { A: () => S }), n(446912), n(896048), n(864466), n(443073);
+n.d(t, {
+    A: () => S,
+}),
+    n(446912),
+    n(896048),
+    n(864466),
+    n(443073);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -19,6 +25,7 @@ var r = n(627968),
     y = n(985018),
     O = n(856171);
 let A = 4;
+
 function v(e) {
     let t = (0, u.A)(e.map((e) => e.applicationId));
     return (0, o.cf)([d.A], () =>
@@ -33,6 +40,7 @@ function v(e) {
         ),
     );
 }
+
 function S(e) {
     let { widgets: t = [], onClick: n, className: a } = e,
         { trackUserProfileAction: u } = (0, _.NJ)(),
@@ -85,12 +93,20 @@ function S(e) {
                   );
         }, [T, C]),
         (0, i.useEffect)(() => {
-            0 === N.length || D.current || (u({ action: "VIEW_GAME_WIDGET_BREADCRUMB" }), (D.current = !0));
+            0 === N.length ||
+                D.current ||
+                (u({
+                    action: "VIEW_GAME_WIDGET_BREADCRUMB",
+                }),
+                (D.current = !0));
         }, [u, N.length]),
         (0, r.jsx)(l.DUT, {
             "aria-label": y.intl.string(y.t.JjiwFx),
             onClick: () => {
-                u({ action: "PRESS_GAME_WIDGET_BREADCRUMB" }), n();
+                u({
+                    action: "PRESS_GAME_WIDGET_BREADCRUMB",
+                }),
+                    n();
             },
             className: O.QF,
             children: (0, r.jsxs)(g.A.Overlay, {
@@ -120,13 +136,16 @@ function S(e) {
         })
     );
 }
+
 function I(e) {
     let { iconUrl: t, name: n, displayCount: i, gameCount: a } = e;
     return (0, r.jsxs)("div", {
         className: O.Kk,
         children: [
             (0, r.jsx)("img", {
-                className: s()({ [O.um]: i }),
+                className: s()({
+                    [O.um]: i,
+                }),
                 src: t,
                 alt: n,
             }),

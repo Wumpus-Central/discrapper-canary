@@ -1,4 +1,6 @@
-t.d(n, { default: () => w });
+t.d(n, {
+    default: () => w,
+});
 var r = t(627968),
     l = t(64700),
     i = t(735438),
@@ -26,6 +28,7 @@ var v = t(661191),
     k = t(790782),
     E = t(985018),
     P = t(586426);
+
 function w(e) {
     let { transitionState: n, onClose: i, guildId: w } = e,
         G = (0, d.GV)(),
@@ -78,7 +81,9 @@ function w(e) {
                             variant: "heading-md/semibold",
                             children:
                                 I.length > 0
-                                    ? E.intl.formatToPlainString(E.t.IBdqSu, { number: I.length })
+                                    ? E.intl.formatToPlainString(E.t.IBdqSu, {
+                                          number: I.length,
+                                      })
                                     : E.intl.string(E.t.tlopTM),
                         }),
                         S &&
@@ -133,7 +138,10 @@ function w(e) {
                                                             }
                                                             return e;
                                                         })({}, n)),
-                                                        (l = l = { guildId: w }),
+                                                        (l = l =
+                                                            {
+                                                                guildId: w,
+                                                            }),
                                                         Object.getOwnPropertyDescriptors
                                                             ? Object.defineProperties(
                                                                   t,

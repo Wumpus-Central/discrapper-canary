@@ -1,4 +1,6 @@
-n.d(t, { A: () => E });
+n.d(t, {
+    A: () => E,
+});
 var r = n(349941),
     i = n(406935),
     a = n(535586),
@@ -9,6 +11,7 @@ var r = n(349941),
     u = n(146901),
     d = n(652215),
     f = n(985018);
+
 function p(e, t, n) {
     return (
         t in e
@@ -22,6 +25,7 @@ function p(e, t, n) {
         e
     );
 }
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -38,6 +42,7 @@ function _(e) {
     }
     return e;
 }
+
 function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -50,6 +55,7 @@ function h(e, t) {
     }
     return n;
 }
+
 function m(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -61,9 +67,13 @@ function m(e, t) {
         e
     );
 }
+
 function g(e, t) {
     let n = (0, c.MU)(e);
-    if ("0" === t) return f.intl.formatToPlainString(f.t.dO2aLi, { statusLabel: n });
+    if ("0" === t)
+        return f.intl.formatToPlainString(f.t.dO2aLi, {
+            statusLabel: n,
+        });
     let { kind: r, dateString: i, timeString: a } = (0, u._)(t);
     return "today" === r
         ? f.intl.formatToPlainString(f.t["r50t/S"], {
@@ -83,12 +93,16 @@ async function E(e) {
     await s.wc.updateAsync(
         "status",
         (e) => {
-            (e.status = i.hU.create({ value: t })),
+            (e.status = i.hU.create({
+                value: t,
+            })),
                 (e.statusExpiresAtMs = p),
                 (e.statusCreatedAtMs =
                     n === t && null != e.statusCreatedAtMs
                         ? e.statusCreatedAtMs
-                        : i.ol.create({ value: "".concat(Date.now()) }));
+                        : i.ol.create({
+                              value: "".concat(Date.now()),
+                          }));
         },
         s.Sb.INFREQUENT_USER_ACTION,
     );
@@ -101,7 +115,10 @@ async function E(e) {
         },
         a.A.getGlobalStats(),
     );
-    null != u && (E = m(_({}, E), { expire_duration_minutes: null != u ? u / 60000 : null })),
+    null != u &&
+        (E = m(_({}, E), {
+            expire_duration_minutes: null != u ? u / 6e4 : null,
+        })),
         null != c && (E = _({}, E, c)),
         l.default.track(d.HAw.USER_STATUS_UPDATED, E);
 }

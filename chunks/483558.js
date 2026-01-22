@@ -1,9 +1,13 @@
-n.d(t, { q: () => o }), n(896048);
+n.d(t, {
+    q: () => o,
+}),
+    n(896048);
 var r = n(64700),
     l = n(311907),
     i = n(961350),
     a = n(622543),
     s = n(735321);
+
 function o(e) {
     let [t, n] = r.useState(!1),
         o = e.type,

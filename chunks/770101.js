@@ -1,4 +1,8 @@
-n.d(t, { default: () => O }), n(321073), n(896048);
+n.d(t, {
+    default: () => O,
+}),
+    n(321073),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(91871),
@@ -15,6 +19,7 @@ var r = n(627968),
     m = n(652215),
     g = n(985018),
     E = n(197161);
+
 function b(e) {
     let { setQuery: t, query: n } = e;
     return (0, r.jsx)(c.IWV, {
@@ -25,6 +30,7 @@ function b(e) {
         onClear: () => t(""),
     });
 }
+
 function y(e) {
     let { isTransfer: t = !1, selectedSlotGuilds: n, onClose: i, onSelectGuild: a, query: o } = e,
         b = (0, l.bG)([_.Ay], () => _.Ay.getFlattenedGuildIds()),
@@ -40,6 +46,7 @@ function y(e) {
                 );
             }, []),
         );
+
     function O() {
         i(), (0, u.jH)(), (0, f.pX)(m.BVt.GUILD_DISCOVERY);
     }
@@ -111,6 +118,7 @@ function y(e) {
         ],
     });
 }
+
 function O(e) {
     let { onClose: t, onSelectGuild: n, transitionState: a, isTransfer: s = !1, selectedSlotGuilds: l } = e,
         [c, u] = i.useState(""),

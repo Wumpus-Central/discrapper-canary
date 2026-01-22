@@ -1,4 +1,8 @@
-n.d(t, { A: () => W }), n(896048), n(638769);
+n.d(t, {
+    A: () => W,
+}),
+    n(896048),
+    n(638769);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -26,7 +30,8 @@ var r = n(627968),
     C = n(339984),
     N = n(788868),
     R = n(985018),
-    w = n(151000);
+    w = n(151e3);
+
 function P(e, t, n) {
     return (
         t in e
@@ -40,6 +45,7 @@ function P(e, t, n) {
         e
     );
 }
+
 function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -56,6 +62,7 @@ function D(e) {
     }
     return e;
 }
+
 function x(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -68,6 +75,7 @@ function x(e, t) {
     }
     return n;
 }
+
 function L(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -81,6 +89,7 @@ function L(e, t) {
 }
 let j = 25,
     M = 720;
+
 function k() {
     return [
         {
@@ -89,6 +98,7 @@ function k() {
         },
     ];
 }
+
 function U(e) {
     let {
         icon: t,
@@ -110,7 +120,11 @@ function U(e) {
         onBlur: f,
         onClick: u ? void 0 : n,
         children: [
-            l ? (0, r.jsx)("div", { className: w.SH }) : null,
+            l
+                ? (0, r.jsx)("div", {
+                      className: w.SH,
+                  })
+                : null,
             (0, r.jsxs)("div", {
                 className: w.kV,
                 children: [
@@ -138,6 +152,7 @@ function U(e) {
         ],
     });
 }
+
 function G(e) {
     let { option: t, source: n, isAnimated: a } = e,
         [s, o] = i.useState(!1);
@@ -149,7 +164,9 @@ function G(e) {
     )
         return (0, r.jsx)("div", {
             className: w.PQ,
-            style: { backgroundImage: "url(".concat(n, ")") },
+            style: {
+                backgroundImage: "url(".concat(n, ")"),
+            },
         });
     let l = (0, y.Bo)({
         userId: t.user_id,
@@ -166,6 +183,7 @@ function G(e) {
         alt: t.id,
     });
 }
+
 function V(e) {
     let {
             option: t,
@@ -196,6 +214,7 @@ function V(e) {
                   option: (0, A.d1)(t) ? t : void 0,
                   source: a,
               });
+
     function j() {
         null != v &&
             C &&
@@ -207,7 +226,9 @@ function V(e) {
             }));
     }
     return (0, r.jsxs)(c.DUT, {
-        className: s()(w.gf, { [w.JI]: l }),
+        className: s()(w.gf, {
+            [w.JI]: l,
+        }),
         onClick: () => f(t),
         onContextMenu: (e) =>
             (0, u.L3)(e, async () => {
@@ -222,7 +243,11 @@ function V(e) {
                     );
             }),
         children: [
-            l ? (0, r.jsx)("div", { className: w.SH }) : null,
+            l
+                ? (0, r.jsx)("div", {
+                      className: w.SH,
+                  })
+                : null,
             (0, r.jsx)("div", {
                 onFocus: j,
                 onMouseEnter: j,
@@ -246,6 +271,7 @@ function V(e) {
         ],
     });
 }
+
 function F() {
     return (0, r.jsxs)("div", {
         className: w.j1,
@@ -262,9 +288,11 @@ function F() {
         ],
     });
 }
+
 function B(e) {
     let { onClick: t, tooltipText: n, disabled: i = !1 } = e,
         a = (0, o.bG)([g.A], () => g.A.hasHotspot(T._.ANIMATED_VIDEO_BG_CUSTOM_TOOLTIP_NEW));
+
     function s() {
         m.sF(T._.ANIMATED_VIDEO_BG_CUSTOM_TOOLTIP_NEW);
     }
@@ -295,7 +323,14 @@ function B(e) {
                             }),
                         ],
                     }),
-                    children: [(0, r.jsx)("div", { className: w.eD }), (0, r.jsx)("div", { className: w.G5 })],
+                    children: [
+                        (0, r.jsx)("div", {
+                            className: w.eD,
+                        }),
+                        (0, r.jsx)("div", {
+                            className: w.G5,
+                        }),
+                    ],
                 }),
                 a &&
                     (0, r.jsx)(c.LpS, {
@@ -306,6 +341,7 @@ function B(e) {
         }),
     });
 }
+
 function H(e) {
     let { onClick: t } = e,
         n = (0, d.p)(),
@@ -324,11 +360,17 @@ function H(e) {
         })
     );
 }
+
 function Y(e) {
     let { onAddBackgroundImage: t, disabled: i } = e,
         a = (0, c.k34)(),
-        s = i ? R.intl.formatToPlainString(R.t.ykGFeD, { maxCustomBackgrounds: j }) : R.intl.string(R.t.Qx0tFc),
+        s = i
+            ? R.intl.formatToPlainString(R.t.ykGFeD, {
+                  maxCustomBackgrounds: j,
+              })
+            : R.intl.string(R.t.Qx0tFc),
         o = k();
+
     function l() {
         (0, c.mMO)(
             async () => {
@@ -356,7 +398,9 @@ function Y(e) {
                         ),
                     );
             },
-            { contextKey: a },
+            {
+                contextKey: a,
+            },
         );
     }
     return (0, r.jsx)(B, {
@@ -365,6 +409,7 @@ function Y(e) {
         tooltipText: s,
     });
 }
+
 function W(e) {
     let {
             canUseCustomBackgrounds: t,
@@ -403,14 +448,18 @@ function W(e) {
                     icon: c.fBX,
                     onClick: () => o("blur"),
                     text: R.intl.string(R.t.LhSyL8),
-                    children: (0, r.jsx)("div", { className: w.LJ }),
+                    children: (0, r.jsx)("div", {
+                        className: w.LJ,
+                    }),
                 }),
                 t
                     ? (0, r.jsx)(Y, {
                           onAddBackgroundImage: d,
                           disabled: m,
                       })
-                    : (0, r.jsx)(H, { onClick: u }),
+                    : (0, r.jsx)(H, {
+                          onClick: u,
+                      }),
                 h.map((e) => {
                     let t = (0, y.Bo)({
                         userId: e.user_id,

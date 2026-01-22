@@ -1,4 +1,7 @@
-n.d(t, { A: () => m }), n(321073);
+n.d(t, {
+    A: () => m,
+}),
+    n(321073);
 var l = n(627968),
     r = n(64700),
     a = n(503698),
@@ -17,6 +20,7 @@ var l = n(627968),
     h = n(652215),
     I = n(985018),
     O = n(636376);
+
 function N(e) {
     var t, n;
     let { permission: r, roleIds: a, guild: _, specMap: g } = e,
@@ -48,7 +52,9 @@ function N(e) {
             ],
         }),
         children: (0, l.jsxs)(c.DUT, {
-            className: i()(O.t2, { [O.aE]: N }),
+            className: i()(O.t2, {
+                [O.aE]: N,
+            }),
             children: [
                 N &&
                     (0, l.jsx)(c.m5V, {
@@ -132,7 +138,9 @@ let m = r.memo(function (e) {
                                   (0, l.jsx)(c.Text, {
                                       variant: "eyebrow",
                                       color: "interactive-text-default",
-                                      children: I.intl.format(I.t["0x6aTm"], { count: d }),
+                                      children: I.intl.format(I.t["0x6aTm"], {
+                                          count: d,
+                                      }),
                                   }),
                                   (0, l.jsx)(c._BQ, {
                                       size: "custom",

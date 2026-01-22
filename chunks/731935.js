@@ -1,4 +1,9 @@
-n.d(t, { A: () => p }), n(896048), n(938796), n(228524);
+n.d(t, {
+    A: () => p,
+}),
+    n(896048),
+    n(938796),
+    n(228524);
 var r = n(989349),
     i = n.n(r),
     a = n(665260),
@@ -6,6 +11,7 @@ var r = n(989349),
     o = n(871123),
     l = n(611010),
     c = n(652215);
+
 function u(e, t, n) {
     return (
         t in e
@@ -20,8 +26,12 @@ function u(e, t, n) {
     );
 }
 let d = ["500428425362931713", "451550535720501248", "471376328319303681", "466696214818193408"];
+
 function f(e) {
-    if (null != e && null != e.social_layer) return { socialLayer: (0, o.M$)(e.social_layer) };
+    if (null != e && null != e.social_layer)
+        return {
+            socialLayer: (0, o.M$)(e.social_layer),
+        };
 }
 class p extends s.A {
     static createFromServer(e) {

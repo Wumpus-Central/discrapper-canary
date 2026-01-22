@@ -1,4 +1,7 @@
-i.d(e, { I: () => o }), i(896048);
+i.d(e, {
+    I: () => o,
+}),
+    i(896048);
 var n = i(554146),
     l = i(379848),
     s = i(419954),
@@ -12,4 +15,6 @@ let a = (0, s.E2)(r.X.OVERLAY_NUX, {
             return t === n.M.OVERLAY_OOP_SETTINGS_NUX;
         },
     }),
-    o = (0, s.zZ)(r.X.OVERLAY_NUX_CATEGORY, { buildLayout: () => [a] });
+    o = (0, s.zZ)(r.X.OVERLAY_NUX_CATEGORY, {
+        buildLayout: () => [a],
+    });

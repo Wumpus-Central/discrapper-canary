@@ -1,4 +1,6 @@
-r.d(t, { A: () => s });
+r.d(t, {
+    A: () => s,
+});
 var n = r(64700),
     o = r(84162),
     a = r(717519),
@@ -29,6 +31,7 @@ let s = function (e) {
     var t = (function (t) {
         if ("function" != typeof t && null !== t)
             throw TypeError("Super expression must either be null or a function, not " + typeof t);
+
         function r(e) {
             if (!(this instanceof r)) throw TypeError("Cannot call a class as a function");
             var t = (function (e, t) {
@@ -76,7 +79,18 @@ let s = function (e) {
                             var t = {};
                             return (
                                 this.props.onSwatchHover && (t.onSwatchHover = this.handleSwatchHover),
-                                n.createElement(e, i({}, this.props, this.state, { onChange: this.handleChange }, t))
+                                n.createElement(
+                                    e,
+                                    i(
+                                        {},
+                                        this.props,
+                                        this.state,
+                                        {
+                                            onChange: this.handleChange,
+                                        },
+                                        t,
+                                    ),
+                                )
                             );
                         },
                     },

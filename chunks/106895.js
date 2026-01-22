@@ -1,4 +1,6 @@
-r.d(e, { default: () => u });
+r.d(e, {
+    default: () => u,
+});
 var n = r(627968),
     i = r(64700),
     a = r(158954),
@@ -108,14 +110,18 @@ let u = (t) => {
                                 (0, n.jsx)(c.Text, {
                                     variant: "text-sm/normal",
                                     color: "text-muted",
-                                    children: d.intl.format(d.t["0NJZAU"], { channelName: O }),
+                                    children: d.intl.format(d.t["0NJZAU"], {
+                                        channelName: O,
+                                    }),
                                 }),
                             ],
                         }),
                         null != j &&
                             (0, n.jsxs)(n.Fragment, {
                                 children: [
-                                    (0, n.jsx)("div", { className: p.yF }),
+                                    (0, n.jsx)("div", {
+                                        className: p.yF,
+                                    }),
                                     (0, n.jsx)(c.Text, {
                                         variant: "text-xs/normal",
                                         color: "text-muted",

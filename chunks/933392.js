@@ -1,8 +1,14 @@
-n.d(t, { A: () => p }), n(321073), n(896048), n(638769);
+n.d(t, {
+    A: () => p,
+}),
+    n(321073),
+    n(896048),
+    n(638769);
 var r,
     i = n(311907),
     a = n(73153),
     s = n(380098);
+
 function o(e, t, n) {
     return (
         t in e
@@ -17,6 +23,7 @@ function o(e, t, n) {
     );
 }
 let l = [];
+
 function c(e) {
     let { payments: t } = e;
     for (let e of t) {
@@ -26,12 +33,14 @@ function c(e) {
     }
     l.sort((e, t) => t.createdAt.getTime() - e.createdAt.getTime()), (l = [...l]);
 }
+
 function u(e) {
     let { payment: t } = e,
         n = s.A.createFromServer(t),
         r = l.findIndex((e) => e.id === t.id);
     -1 === r ? (l.push(n), l.sort((e, t) => t.createdAt.getTime() - e.createdAt.getTime())) : (l[r] = n), (l = [...l]);
 }
+
 function d() {
     l = [];
 }

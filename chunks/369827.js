@@ -1,8 +1,12 @@
-n.d(t, { A: () => o }), n(896048);
+n.d(t, {
+    A: () => o,
+}),
+    n(896048);
 var r = n(64700),
     i = n(311907),
     a = n(384904),
     s = n(295405);
+
 function o(e) {
     let { isGift: t, activeSubscription: n, eligiblePaymentGateways: o } = e,
         {

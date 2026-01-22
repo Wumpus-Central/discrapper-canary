@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(627968),
     i = n(503698),
     a = n.n(i),
@@ -6,6 +8,7 @@ var r = n(627968),
     o = n(899728),
     l = n(88001),
     c = n(183954);
+
 function u(e) {
     let { className: t, premiumGroupRole: n } = e,
         i = (0, o.A)(n, !0);

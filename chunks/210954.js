@@ -1,4 +1,6 @@
-n.d(t, { A: () => C });
+n.d(t, {
+    A: () => C,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -23,6 +25,7 @@ var i = n(503698),
     v = n(463967),
     S = n(319567),
     I = n(976092);
+
 function T(e) {
     let { isLoading: t } = e,
         n = (0, s.bG)([E.A], () => E.A.getConnectedFrame()),
@@ -38,6 +41,7 @@ function T(e) {
         instance_id: "example-cl-instance",
         platform: A.vu.DESKTOP,
     };
+
     function P(e) {
         let { onActive: t, onForceIdle: i, idle: a } = e;
         return N && null != n
@@ -69,7 +73,7 @@ function T(e) {
     return (
         null != n.proxyTicket && (w.discord_proxy_ticket = n.proxyTicket),
         (0, r.jsx)(h.Ay, {
-            timeout: 2000,
+            timeout: 2e3,
             children: (e) => {
                 let { idle: i, onActive: s, onForceIdle: f } = e;
                 return (0, r.jsxs)(_.A, {
@@ -92,7 +96,11 @@ function T(e) {
                             }),
                         }),
                         t || d
-                            ? (0, r.jsx)(o.y$y, { className: a()(v.pU, { [v.p0]: N }) })
+                            ? (0, r.jsx)(o.y$y, {
+                                  className: a()(v.pU, {
+                                      [v.p0]: N,
+                                  }),
+                              })
                             : (0, r.jsx)(c.o, {
                                   allowPopups: (0, l.b)(u),
                                   referrerPolicy: "origin",
@@ -115,6 +123,8 @@ let C = () => {
         t = (0, s.bG)([E.A], () => E.A.isFrameActive());
     return (0, r.jsx)(d.f5, {
         value: e,
-        children: (0, r.jsx)(T, { isLoading: !t }),
+        children: (0, r.jsx)(T, {
+            isLoading: !t,
+        }),
     });
 };

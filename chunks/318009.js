@@ -1,4 +1,7 @@
-n.d(t, { A: () => I }), n(896048);
+n.d(t, {
+    A: () => I,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(110259),
@@ -14,6 +17,7 @@ var r = n(627968),
     h = n(712687),
     m = n(203982),
     g = n(652215);
+
 function E(e, t, n) {
     return (
         t in e
@@ -27,6 +31,7 @@ function E(e, t, n) {
         e
     );
 }
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -43,6 +48,7 @@ function b(e) {
     }
     return e;
 }
+
 function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -55,6 +61,7 @@ function y(e, t) {
     }
     return n;
 }
+
 function O(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -66,6 +73,7 @@ function O(e, t) {
         e
     );
 }
+
 function A() {
     window.getSelection().removeAllRanges();
 }
@@ -83,7 +91,12 @@ let v = (e) => {
             disableClickTrap: y = !1,
         } = e,
         O = i.useRef(null),
-        v = i.useMemo(() => ({ current: u }), [u]),
+        v = i.useMemo(
+            () => ({
+                current: u,
+            }),
+            [u],
+        ),
         S = i.useRef(n);
     i.useEffect(() => {
         S.current = n;
@@ -151,7 +164,12 @@ let v = (e) => {
               crossAccessFlip: !1,
               renderLayer: (e) => {
                   let { update: n } = e;
-                  return t({ position: h }, n);
+                  return t(
+                      {
+                          position: h,
+                      },
+                      n,
+                  );
               },
               children: () => null,
           })
@@ -178,10 +196,15 @@ class S extends i.PureComponent {
             null != e)
         ) {
             let t = setTimeout(() => {
-                this.setState({ render: () => (0, r.jsx)(c.XSw, {}) });
+                this.setState({
+                    render: () => (0, r.jsx)(c.XSw, {}),
+                });
             }, 300);
             e().then((e) => {
-                this.setState({ render: e }), clearTimeout(t);
+                this.setState({
+                    render: e,
+                }),
+                    clearTimeout(t);
             });
         }
     }
@@ -234,7 +257,9 @@ class S extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            E(this, "state", { render: void 0 }),
+            E(this, "state", {
+                render: void 0,
+            }),
             E(this, "closeResize", (e) => {
                 let { renderWindow: t } = this.props;
                 e.target === t && this.close();
@@ -245,6 +270,7 @@ class S extends i.PureComponent {
             });
     }
 }
+
 function I() {
     let {
             contextMenu: e,

@@ -1,4 +1,8 @@
-n.d(t, { A: () => v }), n(321073), n(896048);
+n.d(t, {
+    A: () => v,
+}),
+    n(321073),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -15,6 +19,7 @@ var r = n(627968),
     g = n(254187),
     m = n(20976),
     A = n(162253);
+
 function y(e, t, n) {
     return (
         t in e
@@ -147,6 +152,7 @@ class j extends l.PureComponent {
             y(this, "widthAnimation", new s.A.Value(0));
     }
 }
+
 function v(e) {
     var t;
     let { participants: n, onContextMenu: l, className: i, onClick: s, width: u, guildId: m } = e,

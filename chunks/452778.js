@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var l = n(627968);
 n(64700);
 var r = n(503698),
@@ -29,7 +31,10 @@ let h = (e) => {
             minutes: e,
             seconds: r - 60 * e,
         });
-    } else n = u.intl.formatToPlainString(u.t["9yE8Ga"], { seconds: r });
+    } else
+        n = u.intl.formatToPlainString(u.t["9yE8Ga"], {
+            seconds: r,
+        });
     if (!h && i > 0) {
         let e = s().duration(i);
         if (i > d.A.Millis.HOUR) {
@@ -49,7 +54,9 @@ let h = (e) => {
         x = (0, l.jsx)(o.xbX, {
             size: "xs",
             color: "currentColor",
-            className: a()(m.Eq, { [m.iE]: f }),
+            className: a()(m.Eq, {
+                [m.iE]: f,
+            }),
         });
     return (0, l.jsx)(c.m, {
         text: n,

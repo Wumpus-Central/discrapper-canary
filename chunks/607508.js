@@ -10,6 +10,7 @@ var r = n(665260),
     o = n(152007),
     l = n(37411),
     c = n(652215);
+
 function u(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o.A,
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : s.Ay,
@@ -28,6 +29,7 @@ function u(e) {
           ? l.CP.ONLY_MENTIONS
           : l.CP.ALL_MESSAGES;
 }
+
 function d(e) {
     return (0, i.bG)([o.A, s.Ay, a.A], () => u(e), [e]);
 }

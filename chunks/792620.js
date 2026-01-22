@@ -29,6 +29,7 @@ var r = n(735438),
     a = n(927813),
     s = n(403362),
     o = n(859703);
+
 function l(e, t) {
     if (null == e) return;
     let n = new Set();
@@ -39,48 +40,65 @@ function l(e, t) {
     }
     return n.size > 0 ? Array.from(n) : void 0;
 }
+
 function c(e) {
     if (null == e) return;
     let t = Object.keys(e.config.taskConfigV2.tasks);
     return l(e, t);
 }
+
 function u(e) {
     return l(e, [i.n.PLAY_ON_DESKTOP]);
 }
+
 function d(e) {
     let t = l(e, [i.n.PLAY_ON_XBOX, i.n.PLAY_ON_PLAYSTATION]);
     return null == t ? void 0 : t[0];
 }
+
 function f(e) {
     let t = l(e, [i.n.PLAY_ACTIVITY]);
     return null == t ? void 0 : t[0];
 }
+
 function p(e) {
     let t = l(e, [i.n.PLAY_ACTIVITY, i.n.ACHIEVEMENT_IN_ACTIVITY]);
     return null == t ? void 0 : t[0];
 }
+
 function _(e) {
     let t = l(e, [i.n.STREAM_ON_DESKTOP]);
     return null == t ? void 0 : t[0];
 }
+
 function h(e) {
     return null != e.taskConfigV2.tasks[i.n.PLAY_ON_DESKTOP];
 }
+
 function m(e) {
     let { quest: t } = e;
     return h(t.config);
 }
+
 function g(e) {
     let { quest: t } = e;
     return null != t.config.taskConfigV2.tasks[i.n.STREAM_ON_DESKTOP];
 }
+
 function E(e) {
     return null != e.config.taskConfigV2.tasks[i.n.PLAY_ACTIVITY];
 }
+
 function b(e) {
-    return null != e && m({ quest: e });
+    return (
+        null != e &&
+        m({
+            quest: e,
+        })
+    );
 }
 let y = (e) => (t) => e.some((e) => null != t.config.taskConfigV2.tasks[e]);
+
 function O(e) {
     return Array.from(i.o.IN_GAME).some((t) => null != e.config.taskConfigV2.tasks[t]);
 }
@@ -89,6 +107,7 @@ let A = y([i.n.PLAY_ON_XBOX, i.n.PLAY_ON_PLAYSTATION]),
     S = y([i.n.WATCH_VIDEO_ON_MOBILE]),
     I = y([i.n.WATCH_VIDEO, i.n.WATCH_VIDEO_ON_MOBILE]),
     T = (e) => S(e) && !v(e);
+
 function C(e) {
     return A(e);
 }
@@ -99,12 +118,15 @@ let N = (e, t) => {
     let a = new Date(i).valueOf();
     return !isNaN(a) && a > Date.now();
 };
+
 function R(e) {
     return null != e.userStatus && (N(e.userStatus, i.n.PLAY_ON_XBOX) || N(e.userStatus, i.n.PLAY_ON_PLAYSTATION));
 }
+
 function w(e) {
     return new Set(Object.keys(e.config.taskConfigV2.tasks));
 }
+
 function P(e) {
     return (null == e ? void 0 : e.type) === i.n.PLAY_ON_DESKTOP;
 }
@@ -248,6 +270,7 @@ let D = (e, t) => (e > 0 ? (0, r.floor)(Math.min(t / e, 1), 4) : 0),
                     taskType: i.n.STREAM_ON_DESKTOP,
                 });
     };
+
 function B(e) {
     var t;
     let n = e.taskConfigV2.tasks,
@@ -255,6 +278,7 @@ function B(e) {
         a = n[i.n.ACHIEVEMENT_IN_GAME];
     return null != (t = null != r ? r : a) ? t : null;
 }
+
 function H(e) {
     var t, n, r, i;
     let a = B(e.config);
@@ -273,19 +297,23 @@ function H(e) {
         percentComplete: o,
     };
 }
+
 function Y(e) {
     return W(e.targetSeconds - e.progressSeconds);
 }
+
 function W(e) {
     return {
         minutes: Math.max(0, Math.floor(e / 60)),
         seconds: Math.max(0, Math.floor(e % 60)),
     };
 }
+
 function K(e) {
     let t = Y(e);
     return z(t.minutes, t.seconds);
 }
+
 function z(e, t) {
     return "".concat(String(e).padStart(2, "0"), ":").concat(String(t).padStart(2, "0"));
 }

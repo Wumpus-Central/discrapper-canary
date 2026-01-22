@@ -1,5 +1,8 @@
 let r;
-n.d(t, { A: () => A }), n(896048);
+n.d(t, {
+    A: () => A,
+}),
+    n(896048);
 var i,
     a = n(311907),
     s = n(73153),
@@ -7,6 +10,7 @@ var i,
     l = n(611010),
     c = n(927813),
     u = n(723702);
+
 function d(e, t, n) {
     return (
         t in e
@@ -25,6 +29,7 @@ let f = c.A.Millis.DAY,
     _ = "",
     h = null,
     m = !1;
+
 function g(e) {
     var t, n, r, i;
     return {
@@ -36,12 +41,15 @@ function g(e) {
         thirdPartySkus: null != (i = e.third_party_skus) ? i : [],
     };
 }
+
 function E() {
     r = !0;
 }
+
 function b() {
     (r = !1), (m = !0);
 }
+
 function y(e) {
     let { nonGames: t, etag: n } = e;
     for (let e of (null != n && _ !== n && (p.clear(), (_ = n)), t)) p.set(e.id, g(e));

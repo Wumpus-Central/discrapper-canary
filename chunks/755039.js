@@ -1,9 +1,12 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var a = n(627968);
 n(64700);
-var l = n(432022),
+var l = n(108531),
     i = n(397927),
     r = n(717283);
+
 function s(e) {
     let { text: t } = e,
         n = (0, i.pnh)(t, {

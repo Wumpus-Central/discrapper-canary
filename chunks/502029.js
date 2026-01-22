@@ -1,4 +1,6 @@
-n.d(t, { default: () => o });
+n.d(t, {
+    default: () => o,
+});
 var i = n(627968);
 n(64700);
 var r = n(397927),
@@ -8,6 +10,7 @@ var r = n(397927),
     c = n(568873),
     l = n(652215),
     u = n(985018);
+
 function o(e) {
     let { guildId: t, analyticsContext: n, onSelect: o } = e,
         h = (0, a.A)(t),
@@ -20,7 +23,14 @@ function o(e) {
             onClose: s.Z_,
             "aria-label": u.intl.string(u.t.liqwPJ),
             onSelect: o,
-            children: [(0, i.jsx)(r.rXV, { children: h }), (0, i.jsx)(r.rXV, { children: v })],
+            children: [
+                (0, i.jsx)(r.rXV, {
+                    children: h,
+                }),
+                (0, i.jsx)(r.rXV, {
+                    children: v,
+                }),
+            ],
         }),
     });
 }

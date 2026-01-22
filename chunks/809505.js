@@ -10,6 +10,7 @@ var r = n(873298),
     s = n(652215);
 n(656402);
 var o = n(985018);
+
 function l(e) {
     switch (e) {
         case (0, i.dE)("PRIMARY_400"):
@@ -26,6 +27,7 @@ function l(e) {
             return a.t.NONE;
     }
 }
+
 function c(e) {
     return e.map((e) => ({
         title: e.name,
@@ -35,6 +37,7 @@ function c(e) {
         disabled: e.disabled,
     }));
 }
+
 function u() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
@@ -53,13 +56,17 @@ function u() {
         },
         {
             name: o.intl.string(o.t.WwNoR4),
-            desc: o.intl.formatToPlainString(o.t.VS14ga, { min: s.$8o.ACCOUNT_AGE }),
+            desc: o.intl.formatToPlainString(o.t.VS14ga, {
+                min: s.$8o.ACCOUNT_AGE,
+            }),
             value: s.PvD.MEDIUM,
             color: t ? void 0 : (0, i.dE)("YELLOW_360"),
         },
         {
             name: o.intl.string(o.t.I2jMUF),
-            desc: o.intl.formatToPlainString(o.t["r+b3I4"], { min: s.$8o.MEMBER_AGE }),
+            desc: o.intl.formatToPlainString(o.t["r+b3I4"], {
+                min: s.$8o.MEMBER_AGE,
+            }),
             value: s.PvD.HIGH,
             color: t ? void 0 : (0, i.dE)("ORANGE_345"),
         },
@@ -71,6 +78,7 @@ function u() {
         },
     ];
 }
+
 function d() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     return [
@@ -96,6 +104,7 @@ function d() {
         },
     ];
 }
+
 function f() {
     return [
         {

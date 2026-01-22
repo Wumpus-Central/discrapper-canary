@@ -1,4 +1,6 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var l = n(627968),
     a = n(64700),
     r = n(311907),
@@ -17,7 +19,10 @@ let b = function (e) {
         g = a.useRef(null),
         x = a.useCallback(() => {
             var e;
-            null == (e = g.current) || e.scrollTo({ to: 0 });
+            null == (e = g.current) ||
+                e.scrollTo({
+                    to: 0,
+                });
         }, []),
         v = (0, r.bG)([u.A], () => u.A.getCategories()),
         j = a.useMemo(() => v.find((e) => e.id === n), [v, n]),
@@ -36,7 +41,9 @@ let b = function (e) {
                     null == j
                         ? (0, l.jsx)("div", {
                               className: m.U,
-                              children: (0, l.jsx)(p.A, { className: m.z }),
+                              children: (0, l.jsx)(p.A, {
+                                  className: m.z,
+                              }),
                           })
                         : (0, l.jsx)(h.A, {
                               categoryId: j.id,

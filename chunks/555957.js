@@ -1,4 +1,8 @@
-l.d(t, { A: () => T }), l(896048), l(321073);
+l.d(t, {
+    A: () => T,
+}),
+    l(896048),
+    l(321073);
 var n = l(627968),
     r = l(64700),
     i = l(503698),
@@ -65,7 +69,7 @@ let T = function (e) {
                         "" !== v.activity.details &&
                         e.push(v.activity.details);
             }
-            return e.join(" \u203A ");
+            return e.join(" › ");
         }, [
             Z,
             null == T ? void 0 : T.name,
@@ -146,14 +150,20 @@ let T = function (e) {
                                         actionsDisabled: O,
                                         showShareAndEdit: !0,
                                         onShare: () => {
-                                            x.default.track(M.HAw.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: "share" });
+                                            x.default.track(M.HAw.CLIP_GALLERY_CARD_BUTTON_CLICKED, {
+                                                type: "share",
+                                            });
                                         },
                                         onEdit: () => {
-                                            x.default.track(M.HAw.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: "edit" });
+                                            x.default.track(M.HAw.CLIP_GALLERY_CARD_BUTTON_CLICKED, {
+                                                type: "edit",
+                                            });
                                         },
                                         onBeforeDelete: J,
                                         onAfterDelete: () => {
-                                            x.default.track(M.HAw.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: "delete" });
+                                            x.default.track(M.HAw.CLIP_GALLERY_CARD_BUTTON_CLICKED, {
+                                                type: "delete",
+                                            });
                                         },
                                     }),
                                 Object.getOwnPropertyDescriptors
@@ -172,7 +182,9 @@ let T = function (e) {
                             );
                         };
                     },
-                    { onClose: en },
+                    {
+                        onClose: en,
+                    },
                 );
             },
             [v, U, K, O, J, en],
@@ -218,11 +230,15 @@ let T = function (e) {
                 (0, n.jsxs)("div", {
                     className: H.wI,
                     children: [
-                        (0, n.jsx)(_, { clip: v }),
+                        (0, n.jsx)(_, {
+                            clip: v,
+                        }),
                         (0, n.jsxs)("div", {
                             className: H.i0,
                             children: [
-                                (0, n.jsx)(V, { clip: v }),
+                                (0, n.jsx)(V, {
+                                    clip: v,
+                                }),
                                 (0, n.jsx)(p.Text, {
                                     className: H.xD,
                                     color: "text-subtle",
@@ -265,6 +281,7 @@ let T = function (e) {
         }),
     });
 };
+
 function R(e) {
     let { clip: t, isNew: l, videoRef: i, onOpenContextMenu: a, actionsDisabled: s } = e,
         o = 0 === t.length,
@@ -309,12 +326,12 @@ function R(e) {
                 l = null != t.editMetadata ? t.editMetadata.end - t.editMetadata.start : null,
                 n = !1;
             if (null != t.editMetadata) {
-                let r = null != l && 1000 * l < t.length,
+                let r = null != l && 1e3 * l < t.length,
                     i =
                         !1 === t.editMetadata.applicationAudio ||
                         !1 === t.editMetadata.voiceAudio ||
                         !1 === t.editMetadata.soundboardAudio;
-                (n = r || i), null != l && 1000 * l < t.length && (e = 1000 * l);
+                (n = r || i), null != l && 1e3 * l < t.length && (e = 1e3 * l);
             }
             let r = c().duration(e),
                 i = r.minutes(),
@@ -344,7 +361,9 @@ function R(e) {
     return (0, n.jsxs)("div", {
         className: H.QB,
         children: [
-            (0, n.jsx)("div", { className: H.ne }),
+            (0, n.jsx)("div", {
+                className: H.ne,
+            }),
             !s &&
                 (0, n.jsxs)("div", {
                     className: H.g3,
@@ -375,7 +394,9 @@ function R(e) {
                     className: H.X7,
                     children: (0, n.jsx)("div", {
                         className: H.Z2,
-                        style: { width: "".concat(d, "%") },
+                        style: {
+                            width: "".concat(d, "%"),
+                        },
                     }),
                 }),
             "auto" === t.clipMethod &&
@@ -398,7 +419,11 @@ function R(e) {
                 (0, n.jsxs)("div", {
                     className: H.OH,
                     children: [
-                        !u && l && (0, n.jsx)(p.LpS, { text: L.intl.string(L.t.y2b7CA) }),
+                        !u &&
+                            l &&
+                            (0, n.jsx)(p.LpS, {
+                                text: L.intl.string(L.t.y2b7CA),
+                            }),
                         !o &&
                             (0, n.jsxs)(n.Fragment, {
                                 children: [
@@ -423,6 +448,7 @@ function R(e) {
         ],
     });
 }
+
 function V(e) {
     let { clip: t } = e,
         l = (0, N.h)(t),
@@ -434,12 +460,15 @@ function V(e) {
         children: r ? l : t.name,
     });
 }
+
 function G(e) {
     let { clip: t, videoRef: l } = e,
         r = (0, S.j)(t),
         i = t.type === I.nQ.SCREENSHOT;
     return t.type === I.nQ.VOICE_CLIP
-        ? (0, n.jsx)(k.A, { className: H.fT })
+        ? (0, n.jsx)(k.A, {
+              className: H.fT,
+          })
         : i
           ? (0, n.jsx)("img", {
                 alt: "",
@@ -471,6 +500,7 @@ function G(e) {
                     }),
                 });
 }
+
 function _(e) {
     let { clip: t } = e,
         l = (0, u.bG)([b.A], () => (null != t.applicationId ? b.A.getApplication(t.applicationId) : null)),

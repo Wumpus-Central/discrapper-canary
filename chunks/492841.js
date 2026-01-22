@@ -1,9 +1,12 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var i = n(937161),
     l = n(406704),
     r = n(576705),
     s = n(143413),
     a = n(652215);
+
 function o(e, t) {
     let n = !t.isSystemDM() && !(0, s.A)(e),
         { enabled: o } = i.A.getCurrentConfig({

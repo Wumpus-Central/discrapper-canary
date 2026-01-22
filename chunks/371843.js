@@ -1,8 +1,11 @@
-t.d(l, { A: () => a });
+t.d(l, {
+    A: () => a,
+});
 var n = t(913453),
     i = t(186272),
     r = t(518477),
     s = t(985018);
+
 function a(e) {
     let { mutualGuilds: l } = (0, n.A)(e),
         t = null == l ? void 0 : l.length;

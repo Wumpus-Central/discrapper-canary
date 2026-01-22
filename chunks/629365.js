@@ -15,7 +15,7 @@
             L: "DD/MM/YYYY",
             LL: "D MMMM YYYY",
             LLL: "D MMMM YYYY HH:mm",
-            LLLL: "dddd\u060C D MMMM YYYY HH:mm",
+            LLLL: "dddd، D MMMM YYYY HH:mm",
         },
         meridiemParse: /صبح|شام/,
         isPM: function (e) {
@@ -52,7 +52,7 @@
             return e.replace(/،/g, ",");
         },
         postformat: function (e) {
-            return e.replace(/,/g, "\u060C");
+            return e.replace(/,/g, "،");
         },
         week: {
             dow: 1,

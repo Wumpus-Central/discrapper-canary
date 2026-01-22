@@ -14,6 +14,7 @@ var r = n(205327),
     o = n(652215),
     l = n(272984),
     c = n(278086);
+
 function u(e) {
     if ((0, a.Tq)(e)) {
         var t, n;
@@ -21,9 +22,11 @@ function u(e) {
     }
     return !!(0, a.p6)(e) && e.extra.media.provider === r.X.SPOTIFY;
 }
+
 function d(e) {
     return !!(0, a.Lf)(e) && e.extra.application_id === c.ex;
 }
+
 function f(e, t) {
     let n = e.extra;
     return (
@@ -32,6 +35,7 @@ function f(e, t) {
             ("game_name" in n ? t.name === n.game_name : "activity_name" in n && t.name === n.activity_name))
     );
 }
+
 function p(e, t) {
     if (u(e)) {
         var n;
@@ -39,9 +43,11 @@ function p(e, t) {
     }
     return !1;
 }
+
 function _(e, t) {
     return !!((0, i.A)(t) && d(e)) && e.extra.media_title === t.details;
 }
+
 function h(e, t) {
     let n = e.filter(s.JM);
     return t.type === o.$pd.PLAYING

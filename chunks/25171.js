@@ -1,4 +1,8 @@
-n.d(t, { A: () => x }), n(65821), n(896048);
+n.d(t, {
+    A: () => x,
+}),
+    n(65821),
+    n(896048);
 var r = n(781763),
     i = n(626584),
     a = n(606076),
@@ -12,6 +16,7 @@ var r = n(781763),
     p = n(998218),
     _ = n(837921),
     h = n(652215);
+
 function m(e, t, n) {
     return (
         t in e
@@ -25,6 +30,7 @@ function m(e, t, n) {
         e
     );
 }
+
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -41,6 +47,7 @@ function g(e) {
     }
     return e;
 }
+
 function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -53,6 +60,7 @@ function E(e, t) {
     }
     return n;
 }
+
 function b(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -69,8 +77,9 @@ let y = new i.A("Games"),
     A = 0,
     v = null,
     S = 250,
-    I = 120000,
-    T = 3600000;
+    I = 12e4,
+    T = 36e5;
+
 function C() {
     return null != v
         ? Promise.resolve(v)
@@ -83,6 +92,7 @@ function C() {
             })
           : Promise.reject(Error("not desktop client"));
 }
+
 function N(e) {
     let t = {
             id: e.id,
@@ -90,11 +100,18 @@ function N(e) {
             thirdPartySkus: e.thirdPartySkus,
             executables: e.executables.filter((e) => e.os === (0, f.getPlatformName)()).map((e) => e.name),
         },
-        n = e.aliases.map((e) => b(g({}, t), { name: e }));
+        n = e.aliases.map((e) =>
+            b(g({}, t), {
+                name: e,
+            }),
+        );
     return [t, ...n];
 }
+
 function R(e) {
-    return { id: e };
+    return {
+        id: e,
+    };
 }
 async function w(e) {
     if (
@@ -123,6 +140,7 @@ async function w(e) {
     }
     throw Error("could not find launchable");
 }
+
 function P(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
     e()
@@ -131,6 +149,7 @@ function P(e, t, n) {
               r * S <= I ? P(e, t, n, r + 1) : n();
           }, S);
 }
+
 function D(e) {
     return (
         y.info("launch", e),

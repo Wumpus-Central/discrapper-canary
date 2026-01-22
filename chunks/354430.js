@@ -1,7 +1,10 @@
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var r,
     i = n(311907),
     a = n(73153);
+
 function s(e, t, n) {
     return (
         t in e
@@ -15,16 +18,21 @@ function s(e, t, n) {
         e
     );
 }
-let o = { topEmojisByGuildId: {} },
+let o = {
+        topEmojisByGuildId: {},
+    },
     l = o,
     c = {};
+
 function u() {
     (l = o), (c = {});
 }
+
 function d(e) {
     let { guildId: t } = e;
     c[t] = !0;
 }
+
 function f(e) {
     let { guildId: t, topEmojisMetadata: n } = e;
     (l.topEmojisByGuildId[t] = n.map((e) => e.emojiId)), (c[t] = !1);

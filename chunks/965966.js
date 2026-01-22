@@ -29,12 +29,19 @@ let p = (e) => {
             [i, l] = [n[0], n[1]];
         return (0, r.jsxs)("div", {
             className: u.Yk,
-            children: [(0, r.jsx)(p, { digit: i }), (0, r.jsx)(p, { digit: l })],
+            children: [
+                (0, r.jsx)(p, {
+                    digit: i,
+                }),
+                (0, r.jsx)(p, {
+                    digit: l,
+                }),
+            ],
         });
     },
     h = (e) => {
         let { expiresAt: t, tooltipText: n } = e,
-            { days: c, hours: p, minutes: h, seconds: A } = (0, s.A)(Date.parse(t), 1000),
+            { days: c, hours: p, minutes: h, seconds: A } = (0, s.A)(Date.parse(t), 1e3),
             g = c > 0 ? [c, p, h] : p > 0 ? [p, h, A] : [h, A],
             m = (0, o.k8)(i.M.NITRO_TAB_BADGE_OFFER_REMINDER);
         return (0, r.jsx)(l.m, {
@@ -55,7 +62,13 @@ let p = (e) => {
                         children: g.map((e, t) =>
                             (0, r.jsxs)(r.Fragment, {
                                 children: [
-                                    (0, r.jsx)(f, { value: e }, t),
+                                    (0, r.jsx)(
+                                        f,
+                                        {
+                                            value: e,
+                                        },
+                                        t,
+                                    ),
                                     t !== g.length - 1 &&
                                         (0, r.jsx)("div", {
                                             className: u.Nm,

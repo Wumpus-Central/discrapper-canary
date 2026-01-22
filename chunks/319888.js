@@ -1,4 +1,11 @@
-n.d(t, { A: () => l }), n(591487), n(727858), n(747238), n(896048), n(321073);
+n.d(t, {
+    A: () => l,
+}),
+    n(591487),
+    n(727858),
+    n(747238),
+    n(896048),
+    n(321073);
 let r = {
         1: "bold",
         4: "underline",
@@ -25,6 +32,7 @@ let r = {
     },
     s = /\x1B\[(\d+(?:[:;]\d+)*)m/,
     o = new RegExp("(?=".concat(s.source, ")"));
+
 function l() {
     let e = {
             className: "ansi-control-sequence",
@@ -52,6 +60,7 @@ function l() {
         }
     );
 }
+
 function c(e, t, n, r) {
     return {
         className: "ansi-".concat(e, "-").concat(t),
@@ -65,6 +74,7 @@ function c(e, t, n, r) {
         },
     };
 }
+
 function u(e, t, n, r) {
     let i = ["0", ...n];
     return (
@@ -75,6 +85,7 @@ function u(e, t, n, r) {
         })
     );
 }
+
 function d(e) {
     for (let t = 0; t < e.length; t++) e[t].contains = e.slice(t + 1);
 }

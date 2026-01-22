@@ -1,5 +1,8 @@
 let i;
-n.d(t, { A: () => ev }), n(321073);
+n.d(t, {
+    A: () => ev,
+}),
+    n(321073);
 var r = n(627968),
     s = n(64700),
     l = n(503698),
@@ -64,6 +67,7 @@ n(644434);
 var ec = n(652215),
     ed = n(985018),
     eu = n(675490);
+
 function eh(e, t, n) {
     return (
         t in e
@@ -77,6 +81,7 @@ function eh(e, t, n) {
         e
     );
 }
+
 function ep(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -93,6 +98,7 @@ function ep(e) {
     }
     return e;
 }
+
 function ef(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -113,13 +119,21 @@ function ef(e, t) {
 }
 (f.Ay.PersistedStore.disableWrites = __OVERLAY__), f.Ay.initialize();
 let eb = null;
+
 function eg(e) {
     e.preventDefault();
 }
+
 function ey(e) {
     (0, g.L3)(e, async () => {
         let { default: e } = await n.e("92843").then(n.bind(n, 254790));
-        return (t) => (0, r.jsx)(e, ef(ep({}, t), { version: 0 }));
+        return (t) =>
+            (0, r.jsx)(
+                e,
+                ef(ep({}, t), {
+                    version: 0,
+                }),
+            );
     });
 }
 Y.isPlatformEmbedded;
@@ -179,7 +193,10 @@ class eO extends s.Component {
             if (!e.locked && this.props.locked) {
                 if ((window.addEventListener("contextmenu", eg, !1), null != eb)) {
                     let e = Date.now() - eb;
-                    y.A.track(ec.HAw.OVERLAY_LOCKED, { unlocked_duration: e }), (eb = null);
+                    y.A.track(ec.HAw.OVERLAY_LOCKED, {
+                        unlocked_duration: e,
+                    }),
+                        (eb = null);
                 }
                 O.A.disable(),
                     (this.activeKeyEventShapes = []),
@@ -216,13 +233,18 @@ class eO extends s.Component {
             overlay_render_method: q.Ue[q.Ue.Hook],
             unpinned_widget_types: R.A.getAllUnpinnedPinnedWidgets(X.OVERLAY_LAYOUT_ID),
         }),
-            Q.A.trackExposure({ location: "Overlay" });
+            Q.A.trackExposure({
+                location: "Overlay",
+            });
         let h = s && !l && null != c,
             p = t && null != o && null != a,
             f = eo.A.isNotificationDisabled(ea.KS.WelcomeNudge),
             g = eo.A.isNotificationDisabled(ea.KS.GoLiveNudge);
         if (
-            (f || (e = { type: ea.Jr.WELCOME }),
+            (f ||
+                (e = {
+                    type: ea.Jr.WELCOME,
+                }),
             d && !f
                 ? (e = {
                       type: ea.Jr.KEYBIND_INDICATORS,
@@ -266,7 +288,13 @@ class eO extends s.Component {
                     ? F.Ay.send("OPEN_EXTERNAL_URL", t)
                     : (0, b.mMO)(async () => {
                           let { default: e } = await n.e("30582").then(n.bind(n, 613429));
-                          return (n) => (0, r.jsx)(e, ef(ep({}, n), { url: t }));
+                          return (n) =>
+                              (0, r.jsx)(
+                                  e,
+                                  ef(ep({}, n), {
+                                      url: t,
+                                  }),
+                              );
                       });
             });
         }
@@ -349,7 +377,9 @@ class eO extends s.Component {
                     keybind: t,
                 }),
                 (0, r.jsx)(ee.A, {}),
-                (0, r.jsx)("div", { className: eu._C }),
+                (0, r.jsx)("div", {
+                    className: eu._C,
+                }),
             ],
         });
     }
@@ -389,6 +419,7 @@ class eO extends s.Component {
         O.A.setLayout(t ? m.dY : m.CJ), t && O.A.enable();
     }
 }
+
 function ev() {
     let {
             locked: e,

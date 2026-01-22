@@ -23,6 +23,7 @@ var l = n(562465),
     m = n(652215),
     g = n(539916),
     f = n(985018);
+
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -48,6 +49,7 @@ function h(e) {
     }
     return e;
 }
+
 function N(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -66,21 +68,27 @@ function N(e, t) {
         e
     );
 }
+
 function I() {
-    r.h.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_RESET" });
+    r.h.dispatch({
+        type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_RESET",
+    });
 }
+
 function p(e, t, n) {
     S(
         e,
         u.A.editedOnboardingPrompts.map((e) => (e.id === t ? h({}, e, n) : e)),
     );
 }
+
 function O(e, t) {
     S(
         e,
         u.A.editedOnboardingPrompts.filter((e) => e.id !== t),
     );
 }
+
 function S(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
     if (
@@ -97,6 +105,7 @@ function S(e, t) {
         });
     }
 }
+
 function E(e, t) {
     let n;
     if (!u.A.hasChanges()) return null;
@@ -145,7 +154,9 @@ function E(e, t) {
         throw (
             (i.A.show({
                 title: f.intl.string(f.t.iLdiqY),
-                body: f.intl.formatToPlainString(f.t["cTb/rg"], { numQuestions: g.D1 }),
+                body: f.intl.formatToPlainString(f.t["cTb/rg"], {
+                    numQuestions: g.D1,
+                }),
             }),
             r.h.dispatch({
                 type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED",
@@ -158,13 +169,20 @@ function E(e, t) {
 async function A(e, t) {
     if (!u.A.hasChanges()) return;
     let n = E(e, t);
-    null == n && (n = []), r.h.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_SUBMIT" });
+    null == n && (n = []),
+        r.h.dispatch({
+            type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_SUBMIT",
+        });
     try {
-        await _(e.id, { prompts: n.map(g.SA) }),
+        await _(e.id, {
+            prompts: n.map(g.SA),
+        }),
             r.h.dispatch({
                 type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_SUCCESS",
                 guildId: e.id,
-                updates: { prompts: n },
+                updates: {
+                    prompts: n,
+                },
             });
     } catch (n) {
         var l;
@@ -174,7 +192,9 @@ async function A(e, t) {
                 title: f.intl.string(f.t.iLdiqY),
                 body: [e, t].filter(d.Vq).join(": "),
             }),
-            r.h.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED" }),
+            r.h.dispatch({
+                type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED",
+            }),
             Error("failed to save prompts"))
         );
     }
@@ -183,10 +203,14 @@ async function x(e, t) {
     r.h.dispatch({
         type: "GUILD_ONBOARDING_PROMPTS_LOCAL_UPDATE",
         guildId: e,
-        updates: { enabled: t },
+        updates: {
+            enabled: t,
+        },
     });
     try {
-        await _(e, { enabled: t });
+        await _(e, {
+            enabled: t,
+        });
     } catch (l) {
         var n;
         let { fieldName: e, error: t } = null != (n = new s.LG(l).getAnyErrorMessageAndField()) ? n : {};
@@ -203,19 +227,26 @@ async function _(e, t) {
         rejectWithError: !1,
     });
 }
+
 function j(e, t, n) {
-    let l = { optionErrors: [] },
+    let l = {
+            optionErrors: [],
+        },
         r = !1;
     return (
         n.title.length <= 0 && ((l.title = f.intl.string(f.t.h8Hg1T)), (r = !0)),
         n.options.length <= 0 && ((l.options = f.intl.string(f.t["64tF+W"])), (r = !0)),
         n.inOnboarding &&
             t.filter((e) => e.inOnboarding).length > g.D1 &&
-            ((l.config = f.intl.formatToPlainString(f.t["cTb/rg"], { numQuestions: g.D1 })), (r = !0)),
+            ((l.config = f.intl.formatToPlainString(f.t["cTb/rg"], {
+                numQuestions: g.D1,
+            })),
+            (r = !0)),
         (l.optionErrors = n.options.map((l) => T(e, t, n, l))),
         (r = r || l.optionErrors.some((e) => null != e)) ? l : null
     );
 }
+
 function T(e, t, n, l) {
     var r, i, s;
     if (n.singleSelect) {

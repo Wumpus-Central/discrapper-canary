@@ -11,6 +11,7 @@ var a = r(225191),
     l = r(213841),
     u = r.n(l),
     b = r(773299);
+
 function f(e, t) {
     var r = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -23,6 +24,7 @@ function f(e, t) {
     }
     return r;
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {};
@@ -77,7 +79,9 @@ var h = o.default,
                         return function (r) {
                             for (var a = arguments.length, n = Array(a > 1 ? a - 1 : 0), s = 1; s < a; s++)
                                 n[s - 1] = arguments[s];
-                            return g({ className: e })(t.apply(void 0, [r].concat(n)));
+                            return g({
+                                className: e,
+                            })(t.apply(void 0, [r].concat(n)));
                         };
                 }
                 break;
@@ -94,7 +98,9 @@ var h = o.default,
                         return function (r) {
                             for (var a = arguments.length, n = Array(a > 1 ? a - 1 : 0), s = 1; s < a; s++)
                                 n[s - 1] = arguments[s];
-                            return g({ style: e })(t.apply(void 0, [r].concat(n)));
+                            return g({
+                                style: e,
+                            })(t.apply(void 0, [r].concat(n)));
                         };
                 }
                 break;
@@ -104,13 +110,27 @@ var h = o.default,
                         return function (r) {
                             for (var a = arguments.length, n = Array(a > 1 ? a - 1 : 0), s = 1; s < a; s++)
                                 n[s - 1] = arguments[s];
-                            return e.apply(void 0, [g(r)({ className: t })].concat(n));
+                            return e.apply(
+                                void 0,
+                                [
+                                    g(r)({
+                                        className: t,
+                                    }),
+                                ].concat(n),
+                            );
                         };
                     case "object":
                         return function (r) {
                             for (var a = arguments.length, n = Array(a > 1 ? a - 1 : 0), s = 1; s < a; s++)
                                 n[s - 1] = arguments[s];
-                            return e.apply(void 0, [g(r)({ style: t })].concat(n));
+                            return e.apply(
+                                void 0,
+                                [
+                                    g(r)({
+                                        style: t,
+                                    }),
+                                ].concat(n),
+                            );
                         };
                     case "function":
                         return function (r) {
@@ -205,8 +225,20 @@ var h = o.default,
             ? "".concat(e, ":inverted")
             : e && k(e) && e.extend
               ? "string" == typeof e.extend
-                  ? d(d({}, e), {}, { extend: "".concat(e.extend, ":inverted") })
-                  : d(d({}, e), {}, { extend: w(e.extend) })
+                  ? d(
+                        d({}, e),
+                        {},
+                        {
+                            extend: "".concat(e.extend, ":inverted"),
+                        },
+                    )
+                  : d(
+                        d({}, e),
+                        {},
+                        {
+                            extend: w(e.extend),
+                        },
+                    )
               : e
                 ? w(e)
                 : e;

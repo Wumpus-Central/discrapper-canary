@@ -1,4 +1,6 @@
-i.d(e, { c: () => T });
+i.d(e, {
+    c: () => T,
+});
 var n = i(574381),
     l = i(311907),
     s = i(55619),
@@ -15,7 +17,9 @@ let T = (0, r.zD)(a.X.STREAMING_AUTO_STREAMER_MODE, {
         });
     },
     setValue: function (t) {
-        s.A.update({ autoToggle: t });
+        s.A.update({
+            autoToggle: t,
+        });
     },
     usePredicate: function () {
         return n.Av;

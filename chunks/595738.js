@@ -1,4 +1,6 @@
-r.d(t, { A: () => c });
+r.d(t, {
+    A: () => c,
+});
 var i = r(627968);
 r(64700);
 var n = r(503698),
@@ -6,6 +8,7 @@ var n = r(503698),
     o = r(397927),
     s = r(376092),
     l = r(565928);
+
 function c(e) {
     let {
         grantedPermissions: t,

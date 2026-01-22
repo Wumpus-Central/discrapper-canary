@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -17,7 +19,9 @@ let A = c.GY.binds["0"],
     m = (e) => {
         var t, n;
         let { firstElementFocusJumpSectionProps: i = {} } = e,
-            { titlebarIconSize: c } = (0, u.p)({ location: "BackForwardButtons" }),
+            { titlebarIconSize: c } = (0, u.p)({
+                location: "BackForwardButtons",
+            }),
             { canGoBack: m, canGoForward: b } = (0, a.cf)([d.A], () => ({
                 canGoBack: d.A.canGoBack,
                 canGoForward: d.A.canGoForward,
@@ -60,7 +64,9 @@ let A = c.GY.binds["0"],
                             {
                                 "aria-label": f.intl.string(f.t.B9vzIP),
                                 "aria-disabled": !m,
-                                className: l()(h.x6, h.aX, { [h.r9]: !m }),
+                                className: l()(h.x6, h.aX, {
+                                    [h.r9]: !m,
+                                }),
                                 onClick: () => (0, p.OE)("nav_button"),
                             },
                             i,
@@ -95,7 +101,9 @@ let A = c.GY.binds["0"],
                     children: (0, r.jsx)(o.DUT, {
                         "aria-label": f.intl.string(f.t["9KJ29e"]),
                         "aria-disabled": !b,
-                        className: l()(h.x6, h.sY, { [h.r9]: !b }),
+                        className: l()(h.x6, h.sY, {
+                            [h.r9]: !b,
+                        }),
                         onClick: () => (0, p.Qb)("nav_button"),
                         children: (0, r.jsx)(o.EdP, {
                             size: c,

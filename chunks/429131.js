@@ -27,6 +27,7 @@ var r = n(627968),
     O = n(652215),
     S = n(985018),
     w = n(898515);
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -52,6 +53,7 @@ function _(e) {
     }
     return e;
 }
+
 function E(e, t) {
     if (null == e) return {};
     var n,
@@ -96,11 +98,15 @@ let A = (e) => {
                     variant: i,
                     children: l,
                 }),
-                s && (0, r.jsx)(m.LpS, { text: S.intl.string(S.t.nhbtEl) }),
+                s &&
+                    (0, r.jsx)(m.LpS, {
+                        text: S.intl.string(S.t.nhbtEl),
+                    }),
             ],
         }),
     });
 };
+
 function C(e) {
     let {
             transitionState: t,
@@ -196,7 +202,10 @@ function C(e) {
                         a.map((e, t) =>
                             (0, r.jsxs)(r.Fragment, {
                                 children: [
-                                    0 !== t && (0, r.jsx)("div", { className: w.OO }),
+                                    0 !== t &&
+                                        (0, r.jsx)("div", {
+                                            className: w.OO,
+                                        }),
                                     (0, r.jsx)(
                                         A,
                                         {
@@ -225,6 +234,7 @@ function C(e) {
         }),
     });
 }
+
 function N(e) {
     let { guildId: t, data: n, file: l } = e,
         a = E(e, ["guildId", "data", "file"]),
@@ -278,6 +288,7 @@ function N(e) {
         ),
     );
 }
+
 function R(e) {
     let { emoji: t, guildId: n } = e,
         l = E(e, ["emoji", "guildId"]),
@@ -295,7 +306,9 @@ function R(e) {
                     roles: e,
                 })) && r();
         },
-        c = (0, x.uP)(n, { includeSoftDeleted: !0 });
+        c = (0, x.uP)(n, {
+            includeSoftDeleted: !0,
+        });
     c.sort((e, t) => Number(e.soft_deleted) - Number(t.soft_deleted));
     let u = (0, v.A)(n),
         m = i.useMemo(() => {

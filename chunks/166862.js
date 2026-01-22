@@ -1,4 +1,7 @@
-n.d(t, { A: () => I }), n(896048);
+n.d(t, {
+    A: () => I,
+}),
+    n(896048);
 var r,
     i = n(311907),
     a = n(73153),
@@ -7,6 +10,7 @@ var r,
     l = n(723702),
     c = n(861382),
     u = n(652215);
+
 function d(e, t, n) {
     return (
         t in e
@@ -23,6 +27,7 @@ function d(e, t, n) {
 let f = new Map(),
     p = new Map(),
     _ = new Map();
+
 function h(e) {
     if (!p.has(e)) {
         var t;
@@ -39,9 +44,11 @@ function h(e) {
     }
     return p.get(e);
 }
+
 function m() {
     return f.clear(), p.clear(), !0;
 }
+
 function g(e) {
     var t;
     let { nonce: n, channelId: r, query: i, name: a } = e,
@@ -65,6 +72,7 @@ function g(e) {
         return (s.lastErrored = !1), !0;
 }
 let E = (0, l.isDesktop)();
+
 function b(e) {
     var t, n, r;
     let { choices: i, nonce: a } = e,
@@ -105,6 +113,7 @@ function b(e) {
         !0
     );
 }
+
 function y(e) {
     let { nonce: t } = e;
     if (null == t) return !1;
@@ -123,14 +132,17 @@ function y(e) {
         !0
     );
 }
+
 function O(e) {
     let { channelId: t, command: n } = e;
     v(t, null == n ? void 0 : n.id);
 }
+
 function A(e) {
     let { channelId: t, command: n } = e;
     v(t, null == n ? void 0 : n.id);
 }
+
 function v(e, t) {
     let n = c.A.getActiveOptionName(e),
         r = p.get(e);

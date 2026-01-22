@@ -1,4 +1,8 @@
-n.d(t, { A: () => u }), n(896048), n(446912);
+n.d(t, {
+    A: () => u,
+}),
+    n(896048),
+    n(446912);
 var r = n(64700),
     i = n(735438),
     a = n(311907),
@@ -6,6 +10,7 @@ var r = n(64700),
     o = n(21119),
     l = n(711014),
     c = n(622543);
+
 function u(e) {
     let [t, n, u, d, f] = (0, a.yK)([c.A], () => [
             c.A.getMutualFriendsCount(e.id),

@@ -1,4 +1,7 @@
-n.d(t, { A: () => d }), n(896048);
+n.d(t, {
+    A: () => d,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(189213),
@@ -6,6 +9,7 @@ var r = n(627968),
     o = n(98207),
     l = n(985018),
     c = n(876692);
+
 function u(e, t, n) {
     return (
         t in e
@@ -76,7 +80,9 @@ class d extends i.PureComponent {
                         variant: "text-sm/normal",
                         children: (0, r.jsx)(s.DUT, {
                             onClick: this.handleRetry,
-                            children: (0, r.jsx)(s.MzZ, { children: l.intl.string(l.t.PZgmxv) }),
+                            children: (0, r.jsx)(s.MzZ, {
+                                children: l.intl.string(l.t.PZgmxv),
+                            }),
                         }),
                     }),
                 ],
@@ -97,21 +103,33 @@ class d extends i.PureComponent {
             }),
             u(this, "handleRetry", async () => {
                 await o.A.sendMFABackupCodesVerificationKeyEmail(this.props.password),
-                    this.setState({ retrySuccess: !0 });
+                    this.setState({
+                        retrySuccess: !0,
+                    });
             }),
             u(this, "handleSubmit", async (e) => {
-                e.preventDefault(), this.setState({ isLoading: !0 });
+                e.preventDefault(),
+                    this.setState({
+                        isLoading: !0,
+                    });
                 try {
                     await o.A.confirmViewBackupCodes(this.state.code, !1), this.props.onClose();
                 } catch (e) {
                     if (null == e.body) return;
-                    e.body.message && this.setState({ errorMessage: e.body.message });
+                    e.body.message &&
+                        this.setState({
+                            errorMessage: e.body.message,
+                        });
                 } finally {
-                    this.setState({ isLoading: !1 });
+                    this.setState({
+                        isLoading: !1,
+                    });
                 }
             }),
             u(this, "handleCodeChange", (e) => {
-                this.setState({ code: e });
+                this.setState({
+                    code: e,
+                });
             });
     }
 }

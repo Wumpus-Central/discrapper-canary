@@ -1,5 +1,8 @@
 let r, i;
-n.d(t, { A: () => v }), n(896048);
+n.d(t, {
+    A: () => v,
+}),
+    n(896048);
 var a,
     s = n(735438),
     o = n.n(s),
@@ -12,6 +15,7 @@ var a,
     _ = n(430452),
     h = n(485296),
     m = n(806931);
+
 function g(e, t, n) {
     return (
         t in e
@@ -25,6 +29,7 @@ function g(e, t, n) {
         e
     );
 }
+
 function E() {
     let e,
         t = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
@@ -75,6 +80,7 @@ function E() {
     i !== e && ((i = e), t && A.emitChange());
 }
 let b = o().debounce(E, 300);
+
 function y() {
     return b(), !1;
 }
@@ -87,5 +93,7 @@ class O extends (a = l.Ay.Store) {
     }
 }
 g(O, "displayName", "VideoSpeakerStore");
-let A = new O(c.h, { AUDIO_SET_LOCAL_VIDEO_DISABLED: y }),
+let A = new O(c.h, {
+        AUDIO_SET_LOCAL_VIDEO_DISABLED: y,
+    }),
     v = A;

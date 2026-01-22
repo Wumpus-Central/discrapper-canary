@@ -1,4 +1,6 @@
-n.d(t, { V: () => O });
+n.d(t, {
+    V: () => O,
+});
 var r = n(974111),
     i = n(294819),
     a = n(376472),
@@ -17,6 +19,7 @@ var r = n(974111),
     E = n(849352),
     b = n(670184),
     y = n(73733);
+
 function O(e, t, n) {
     let O = (0, m.useRef)(""),
         { locale: v, direction: S } = (0, g.Y)(),
@@ -65,7 +68,13 @@ function O(e, t, n) {
                 (O.current = ""), void 0 !== e.minValue && t.setSegment(e.type, e.minValue);
             },
         }),
-        j = (0, m.useMemo)(() => new (0, h.d)(v, { maximumFractionDigits: 0 }), [v]),
+        j = (0, m.useMemo)(
+            () =>
+                new (0, h.d)(v, {
+                    maximumFractionDigits: 0,
+                }),
+            [v],
+        ),
         M = () => {
             if (
                 (e.text === e.placeholder && R.focusPrevious(),
@@ -90,7 +99,9 @@ function O(e, t, n) {
                         e.preventDefault(), e.stopPropagation(), M();
                 }
         },
-        { startsWith: U } = (0, b.U)({ sensitivity: "base" }),
+        { startsWith: U } = (0, b.U)({
+            sensitivity: "base",
+        }),
         G = (0, E.i)({
             hour: "numeric",
             hour12: !0,
@@ -174,7 +185,11 @@ function O(e, t, n) {
             }
         },
         W = () => {
-            (O.current = ""), n.current && (0, l.o)(n.current, { containingElement: (0, c.m)(n.current) });
+            (O.current = ""),
+                n.current &&
+                    (0, l.o)(n.current, {
+                        containingElement: (0, c.m)(n.current),
+                    });
             let e = window.getSelection();
             null == e || e.collapse(n.current);
         },
@@ -230,8 +245,15 @@ function O(e, t, n) {
             "aria-label": `${Q}${T ? `, ${T}` : ""}${C ? ", " : ""}`,
             "aria-labelledby": C,
         });
-    if ("literal" === e.type) return { segmentProps: { "aria-hidden": !0 } };
-    let J = { caretColor: "transparent" };
+    if ("literal" === e.type)
+        return {
+            segmentProps: {
+                "aria-hidden": !0,
+            },
+        };
+    let J = {
+        caretColor: "transparent",
+    };
     if ("rtl" === S) {
         J.unicodeBidi = "embed";
         let t = P[e.type];
@@ -264,6 +286,7 @@ function O(e, t, n) {
         }),
     };
 }
+
 function A(e) {
     e.sort();
     let t = e[0],

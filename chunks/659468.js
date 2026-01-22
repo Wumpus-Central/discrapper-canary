@@ -1,8 +1,14 @@
-n.d(t, { A: () => d }), n(321073), n(65821), n(896048);
+n.d(t, {
+    A: () => d,
+}),
+    n(321073),
+    n(65821),
+    n(896048);
 var r = n(143236),
     i = n(214958),
     a = n.n(i),
     s = n(400976);
+
 function o(e, t, n) {
     return (
         t in e
@@ -16,6 +22,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -32,6 +39,7 @@ function l(e) {
     }
     return e;
 }
+
 function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -44,6 +52,7 @@ function c(e, t) {
     }
     return n;
 }
+
 function u(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -65,7 +74,10 @@ class d extends r.EventEmitter {
                 type: "audio",
             }),
             this.activeAudioSSRCs[e] !== t &&
-                ((this.activeAudioSSRCs = u(l({}, this.activeAudioSSRCs), { [e]: t })), (r = !0)),
+                ((this.activeAudioSSRCs = u(l({}, this.activeAudioSSRCs), {
+                    [e]: t,
+                })),
+                (r = !0)),
             null != n &&
                 (n > 0
                     ? (this.streams.some((e) => e.ssrc === n) ||
@@ -75,7 +87,10 @@ class d extends r.EventEmitter {
                               type: "video",
                           }),
                       this.activeVideoSSRCs[e] !== n &&
-                          ((this.activeVideoSSRCs = u(l({}, this.activeVideoSSRCs), { [e]: n })), (r = !0)))
+                          ((this.activeVideoSSRCs = u(l({}, this.activeVideoSSRCs), {
+                              [e]: n,
+                          })),
+                          (r = !0)))
                     : null != this.activeVideoSSRCs[e] &&
                       ((r = !0),
                       (this.activeVideoSSRCs = l({}, this.activeVideoSSRCs)),

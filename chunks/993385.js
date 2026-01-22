@@ -1,10 +1,13 @@
-n.d(t, { $: () => a });
+n.d(t, {
+    $: () => a,
+});
 var r = n(640831),
     i = n(476575);
+
 function a(e) {
     var t;
     return "number" == typeof e
-        ? e >>> 0 === e && e >= 0 && e <= 4294967295
+        ? e >>> 0 === e && e >= 0 && e <= 0xffffffff
             ? e
             : null
         : (t = r.E1.exec(e))
@@ -27,6 +30,7 @@ function a(e) {
                           ? (o(c(t[1]), d(t[2]), d(t[3])) | u(t[4])) >>> 0
                           : null;
 }
+
 function s(e, t, n) {
     return e < 60
         ? [t, n, 0]
@@ -40,6 +44,7 @@ function s(e, t, n) {
                 ? [n, 0, t]
                 : [t, 0, n];
 }
+
 function o(e, t, n) {
     var r = (1 - Math.abs(2 * n - 1)) * t,
         i = r * (1 - Math.abs(((e / 60) % 2) - 1)),
@@ -51,17 +56,21 @@ function o(e, t, n) {
         (Math.round((o[2] + a) * 255) << 8)
     );
 }
+
 function l(e) {
     var t = parseInt(e, 10);
     return t < 0 ? 0 : t > 255 ? 255 : t;
 }
+
 function c(e) {
     return (((parseFloat(e) % 360) + 360) % 360) / 360;
 }
+
 function u(e) {
     var t = parseFloat(e);
     return t < 0 ? 0 : t > 1 ? 255 : Math.round(255 * t);
 }
+
 function d(e) {
     var t = parseFloat(e);
     return t < 0 ? 0 : t > 100 ? 1 : t / 100;

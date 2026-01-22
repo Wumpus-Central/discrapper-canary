@@ -2,12 +2,12 @@
     t(n(989349));
 })(0, function (e) {
     return e.defineLocale("se", {
-        months: "ođđajagemánnu_guovvamánnu_njukčamánnu_cuoŋománnu_miessemánnu_geassemánnu_suoidnemánnu_borgemánnu_čakčamánnu_golggotmánnu_skábmamánnu_juovlamánnu".split(
+        months: "ođđajagem\xe1nnu_guovvam\xe1nnu_njukčam\xe1nnu_cuoŋom\xe1nnu_miessem\xe1nnu_geassem\xe1nnu_suoidnem\xe1nnu_borgem\xe1nnu_čakčam\xe1nnu_golggotm\xe1nnu_sk\xe1bmam\xe1nnu_juovlam\xe1nnu".split(
             "_",
         ),
-        monthsShort: "ođđj_guov_njuk_cuo_mies_geas_suoi_borg_čakč_golg_skáb_juov".split("_"),
-        weekdays: "sotnabeaivi_vuossárga_maŋŋebárga_gaskavahkku_duorastat_bearjadat_lávvardat".split("_"),
-        weekdaysShort: "sotn_vuos_maŋ_gask_duor_bear_láv".split("_"),
+        monthsShort: "ođđj_guov_njuk_cuo_mies_geas_suoi_borg_čakč_golg_sk\xe1b_juov".split("_"),
+        weekdays: "sotnabeaivi_vuoss\xe1rga_maŋŋeb\xe1rga_gaskavahkku_duorastat_bearjadat_l\xe1vvardat".split("_"),
+        weekdaysShort: "sotn_vuos_maŋ_gask_duor_bear_l\xe1v".split("_"),
         weekdaysMin: "s_v_m_g_d_b_L".split("_"),
         longDateFormat: {
             LT: "HH:mm",
@@ -36,8 +36,8 @@
             hh: "%d diimmut",
             d: "okta beaivi",
             dd: "%d beaivvit",
-            M: "okta mánnu",
-            MM: "%d mánut",
+            M: "okta m\xe1nnu",
+            MM: "%d m\xe1nut",
             y: "okta jahki",
             yy: "%d jagit",
         },

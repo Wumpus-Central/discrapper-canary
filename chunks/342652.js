@@ -1,9 +1,14 @@
-n.d(t, { z: () => f }), n(321073), n(228524);
+n.d(t, {
+    z: () => f,
+}),
+    n(321073),
+    n(228524);
 var r = n(491533),
     i = n(583954),
     a = n(816334),
     s = n(365170),
     o = n(241678);
+
 function l(e, t, n) {
     return (
         t in e
@@ -17,6 +22,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -33,7 +39,18 @@ function c(e) {
     }
     return e;
 }
-let u = (e, t, n) => c({ AvatarImage: e }, null != t && { MediaImage: t }, null != n && { ApplicationImage: n }),
+let u = (e, t, n) =>
+        c(
+            {
+                AvatarImage: e,
+            },
+            null != t && {
+                MediaImage: t,
+            },
+            null != n && {
+                ApplicationImage: n,
+            },
+        ),
     d = (e, t) => {
         let n = [
             {
@@ -105,7 +122,9 @@ let u = (e, t, n) => c({ AvatarImage: e }, null != t && { MediaImage: t }, null 
                         h: 96,
                     },
                     8,
-                    { fillMode: i.VZ.Contain },
+                    {
+                        fillMode: i.VZ.Contain,
+                    },
                 );
                 n === i.uS.Failure &&
                     (n = e.drawRoundedImage(

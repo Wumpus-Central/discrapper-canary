@@ -1,13 +1,22 @@
-n.d(t, { F: () => l }), n(228524);
+n.d(t, {
+    F: () => l,
+}),
+    n(228524);
 var r = n(627968);
 n(64700);
 var i = n(855522),
     a = n(158954),
     s = n(183377);
 let o = 96;
+
 function l(e) {
     let { benefits: t, description: n, imgSrc: l, title: c, tag: u, FallbackIcon: d } = e,
-        f = null != l ? { "--custom-background-url": "url(".concat(l.toString(), ")") } : void 0,
+        f =
+            null != l
+                ? {
+                      "--custom-background-url": "url(".concat(l.toString(), ")"),
+                  }
+                : void 0,
         p = null != n && "" !== n;
     return (0, r.jsxs)("div", {
         className: s.kL,
@@ -42,7 +51,10 @@ function l(e) {
                     (0, r.jsxs)("div", {
                         className: s.zH,
                         children: [
-                            null != u && (0, r.jsx)("div", { children: u }),
+                            null != u &&
+                                (0, r.jsx)("div", {
+                                    children: u,
+                                }),
                             (0, r.jsx)(a.DZT, {
                                 color: "text-strong",
                                 variant: "heading-xl/semibold",

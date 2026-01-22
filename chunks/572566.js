@@ -1,4 +1,8 @@
 function r(e) {
-    return e.toLocaleDateString(void 0, { dateStyle: "long" });
+    return e.toLocaleDateString(void 0, {
+        dateStyle: "long",
+    });
 }
-n.d(t, { Y: () => r });
+n.d(t, {
+    Y: () => r,
+});

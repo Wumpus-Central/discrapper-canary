@@ -10,6 +10,7 @@ var r = n(735438),
     o = n(125385),
     l = n(818307),
     c = n(652215);
+
 function u(e, t, n) {
     return (
         t in e
@@ -23,6 +24,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -39,6 +41,7 @@ function d(e) {
     }
     return e;
 }
+
 function f(e) {
     return null != e && "null" !== e && e !== c.ME && "undefined" !== e && e !== c.YYv;
 }
@@ -114,11 +117,16 @@ class p {
     }
     subscribeToMemberUpdates(e) {
         if (!f(e)) return !1;
-        this._enqueue(e, { member_updates: !0 }), this._memberUpdates.add(e);
+        this._enqueue(e, {
+            member_updates: !0,
+        }),
+            this._memberUpdates.add(e);
     }
     unsubscribeFromMemberUpdates(e) {
         if (!f(e)) return !1;
-        this._enqueue(e, { member_updates: !1 });
+        this._enqueue(e, {
+            member_updates: !1,
+        });
     }
     subscribeThreadMemberList(e, t, n) {
         return !!f(e) && this._threadMemberLists.subscribe(e, t, n);
@@ -127,17 +135,47 @@ class p {
         return !!f(e) && this._threadMemberLists.unsubscribe(e, t);
     }
     subscribeToGuild(e) {
-        this._subscribeToFeature(e, this._typing, { typing: !0 }),
-            this._subscribeToFeature(e, this._activities, { activities: !0 }),
-            this._subscribeToFeature(e, this._threads, { threads: !0 });
+        this._subscribeToFeature(e, this._typing, {
+            typing: !0,
+        }),
+            this._subscribeToFeature(e, this._activities, {
+                activities: !0,
+            }),
+            this._subscribeToFeature(e, this._threads, {
+                threads: !0,
+            });
     }
     _subscribeToFeature(e, t, n) {
         !f(e) || t.has(e) || (t.add(e), this._enqueue(e, n));
     }
     constructor(e) {
-        u(this, "_members", new o.A((e, t) => this._enqueue(e, { members: t }))),
-            u(this, "_channels", new s.Ay((e, t) => this._enqueue(e, { channels: t }))),
-            u(this, "_threadMemberLists", new l.A((e, t) => this._enqueue(e, { thread_member_lists: t }))),
+        u(
+            this,
+            "_members",
+            new o.A((e, t) =>
+                this._enqueue(e, {
+                    members: t,
+                }),
+            ),
+        ),
+            u(
+                this,
+                "_channels",
+                new s.Ay((e, t) =>
+                    this._enqueue(e, {
+                        channels: t,
+                    }),
+                ),
+            ),
+            u(
+                this,
+                "_threadMemberLists",
+                new l.A((e, t) =>
+                    this._enqueue(e, {
+                        thread_member_lists: t,
+                    }),
+                ),
+            ),
             u(this, "_typing", new Set()),
             u(this, "_threads", new Set()),
             u(this, "_activities", new Set()),

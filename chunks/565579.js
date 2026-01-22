@@ -1,4 +1,7 @@
-n.d(t, { m: () => s }), n(747238);
+n.d(t, {
+    m: () => s,
+}),
+    n(747238);
 var r = n(76522),
     i = n(652215),
     a = n(985018);
@@ -29,7 +32,10 @@ let s = [
         },
     },
     {
-        check: (e) => !!i.AKn.test(e) && { body: a.intl.string(a.t.sTwS1a) },
+        check: (e) =>
+            !!i.AKn.test(e) && {
+                body: a.intl.string(a.t.sTwS1a),
+            },
         analyticsType: "API Token Warning",
     },
 ];

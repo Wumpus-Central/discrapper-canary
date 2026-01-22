@@ -1,4 +1,6 @@
-n.d(t, { I: () => g });
+n.d(t, {
+    I: () => g,
+});
 var r = n(627968),
     i = n(64700),
     l = n(582754),
@@ -9,11 +11,14 @@ var r = n(627968),
     d = n(600854),
     u = n(347953),
     f = n(622327);
+
 function g(e) {
     let { canManageGuild: t, premiumProgressBarEnabled: n } = e,
         g = (0, a.Ay)(),
         b = i.useCallback((e) => {
-            c.A.updateGuild({ premiumProgressBarEnabled: e });
+            c.A.updateGuild({
+                premiumProgressBarEnabled: e,
+            });
         }, []);
     return (0, r.jsxs)("div", {
         className: d.kL,

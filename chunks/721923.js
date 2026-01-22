@@ -1,4 +1,7 @@
-n.d(t, { A: () => w }), n(896048);
+n.d(t, {
+    A: () => w,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -20,6 +23,7 @@ var r = n(627968),
     O = n(788868),
     A = n(985018),
     v = n(737211);
+
 function S(e, t, n) {
     return (
         t in e
@@ -33,6 +37,7 @@ function S(e, t, n) {
         e
     );
 }
+
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -49,6 +54,7 @@ function I(e) {
     }
     return e;
 }
+
 function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -61,6 +67,7 @@ function T(e, t) {
     }
     return n;
 }
+
 function C(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -72,6 +79,7 @@ function C(e, t) {
         e
     );
 }
+
 function N(e, t) {
     if (null == e) return {};
     var n,
@@ -88,6 +96,7 @@ function N(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function R(e, t) {
     if (null == e) return {};
     var n,
@@ -141,7 +150,9 @@ let w = (e) => {
     }, [Y]);
     let W = (0, E.D$)(m.A.boostSlots),
         K = null != T ? Math.max((0, E.Os)(a, T), 1) : 1,
-        z = (0, E.Nc)({ fractionalState: H }),
+        z = (0, E.Nc)({
+            fractionalState: H,
+        }),
         q = async () => {
             B(!0),
                 await (0, b.g)({
@@ -198,14 +209,24 @@ let w = (e) => {
                           d.wLn,
                           C(
                               I(
-                                  C(I({ "data-migration-pending": !0 }, e), {
-                                      disabled: !0,
-                                      size: u.$n.Sizes.SMALL,
-                                      pauseAnimation: P,
-                                  }),
+                                  C(
+                                      I(
+                                          {
+                                              "data-migration-pending": !0,
+                                          },
+                                          e,
+                                      ),
+                                      {
+                                          disabled: !0,
+                                          size: u.$n.Sizes.SMALL,
+                                          pauseAnimation: P,
+                                      },
+                                  ),
                                   U,
                               ),
-                              { children: Z },
+                              {
+                                  children: Z,
+                              },
                           ),
                       ),
               })
@@ -228,7 +249,9 @@ let w = (e) => {
                         U,
                     ),
                     {
-                        className: s()(U.className, { [v.yj]: L }),
+                        className: s()(U.className, {
+                            [v.yj]: L,
+                        }),
                         submitting: F,
                         onClick: q,
                         pauseAnimation: P,

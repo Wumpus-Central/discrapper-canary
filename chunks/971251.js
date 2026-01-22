@@ -1,10 +1,14 @@
-n.d(t, { A: () => d }), n(896048);
+n.d(t, {
+    A: () => d,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
     s = n.n(l),
     a = n(652215),
     c = n(992415);
+
 function o(e, t, n) {
     return (
         t in e
@@ -28,7 +32,9 @@ class d extends i.Component {
             this.props.value !== e.value &&
             this.props.value !== this.state.value &&
             u(this.props.value, this.props, this.state) &&
-            this.setState({ value: this.props.value });
+            this.setState({
+                value: this.props.value,
+            });
     }
     render() {
         let e,
@@ -87,7 +93,10 @@ class d extends i.Component {
             }),
             o(this, "handleChange", (e) => {
                 let { onChange: t } = this.props;
-                this.setState({ value: e.currentTarget.value }), null == t || t(e);
+                this.setState({
+                    value: e.currentTarget.value,
+                }),
+                    null == t || t(e);
             }),
             o(this, "handleFocus", (e) => {
                 let { onFocus: t } = this.props;
@@ -99,7 +108,9 @@ class d extends i.Component {
             }),
             o(this, "handleBlur", (e) => {
                 if (u("", this.props, this.state)) {
-                    this.setState({ focused: !1 });
+                    this.setState({
+                        focused: !1,
+                    });
                     let { onBlur: t } = this.props;
                     null == t || t(e);
                 } else
@@ -120,6 +131,7 @@ class d extends i.Component {
             });
     }
 }
+
 function u() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
         t = arguments.length > 1 ? arguments[1] : void 0,

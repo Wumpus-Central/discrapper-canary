@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var a = n(627968),
     l = n(64700),
     i = n(397927),
@@ -19,6 +21,7 @@ let m = (0, s.D)(() => ({
     isSuccess: !1,
     errorMessage: null,
 }));
+
 function p() {
     let e = m.useField("includeFrecency"),
         t = m.useField("includeFriends"),
@@ -59,9 +62,13 @@ function p() {
                         });
                 } catch (t) {
                     let e = new r.LG(t);
-                    m.setState({ errorMessage: e.getAnyErrorMessage() });
+                    m.setState({
+                        errorMessage: e.getAnyErrorMessage(),
+                    });
                 } finally {
-                    m.setState({ isUploading: !1 });
+                    m.setState({
+                        isUploading: !1,
+                    });
                 }
         }, []);
     return (0, a.jsxs)(i.nVY, {
@@ -74,41 +81,59 @@ function p() {
                 description:
                     "Frecency is a measure of how often you visit a guild or channel. Includes frecency scores for guilds and channels along with the guild or channel IDs.",
                 checked: e,
-                onChange: () => m.setState({ includeFrecency: !e }),
+                onChange: () =>
+                    m.setState({
+                        includeFrecency: !e,
+                    }),
             }),
             (0, a.jsx)(i.dOG, {
                 label: "Friends",
                 description: "Includes all Discord Friend usernames, global names, and nicknames.",
                 checked: t,
-                onChange: () => m.setState({ includeFriends: !t }),
+                onChange: () =>
+                    m.setState({
+                        includeFriends: !t,
+                    }),
             }),
             (0, a.jsx)(i.dOG, {
                 label: "DMs",
                 description:
                     "Includes recipient user ids, usernames, global names, nicknames for all DMs. Does NOT include any message data.",
                 checked: n,
-                onChange: () => m.setState({ includeDMs: !n }),
+                onChange: () =>
+                    m.setState({
+                        includeDMs: !n,
+                    }),
             }),
             (0, a.jsx)(i.dOG, {
                 label: "Group DMs",
                 description:
                     "Includes recipient user ids, usernames, global names, nicknames, and custom channel names for all Group DMs. Does NOT include any message data.",
                 checked: s,
-                onChange: () => m.setState({ includeGDMs: !s }),
+                onChange: () =>
+                    m.setState({
+                        includeGDMs: !s,
+                    }),
             }),
             (0, a.jsx)(i.dOG, {
                 label: "Quick Switcher Results",
                 description:
                     "Includes the current QuickSwitcher query and results. If you include this, please ensure the QuickSwitcher is open when you click to Upload Snapshot Logs.",
                 checked: p,
-                onChange: () => m.setState({ includeQuickSwitcherState: !p }),
+                onChange: () =>
+                    m.setState({
+                        includeQuickSwitcherState: !p,
+                    }),
             }),
             (0, a.jsx)(i.dOG, {
                 label: "User Search Worker",
                 description:
                     "Includes all users that your client knows about. For each user, includes the user id, username, nickname, and any guild nicknames.",
                 checked: h,
-                onChange: () => m.setState({ includeUserSearchWorkerState: !h }),
+                onChange: () =>
+                    m.setState({
+                        includeUserSearchWorkerState: !h,
+                    }),
             }),
             (0, a.jsx)(d.q, {
                 isUploading: f,

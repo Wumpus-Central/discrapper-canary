@@ -8,6 +8,7 @@ var r = n(873298),
     i = n(632119),
     a = n(444802),
     s = n(93857);
+
 function o(e, t, n) {
     return (
         t in e
@@ -21,6 +22,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,7 +44,11 @@ let c = (e) => null != e && e !== r.TO.UNSET_EXPLICIT_CONTENT_REDACTION,
         let t = s.oQ.getControlledSetting(e),
             { goreContentNonFriendDm: n, goreContentFriendDm: i } = null != t ? t : {};
         return {
-            goreContentNonFriendDm: c(n) ? n : (0, a.jj)({ isDm: !0 }),
+            goreContentNonFriendDm: c(n)
+                ? n
+                : (0, a.jj)({
+                      isDm: !0,
+                  }),
             goreContentFriendDm: c(i)
                 ? i
                 : (0, a.jj)({

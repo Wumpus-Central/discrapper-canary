@@ -1,4 +1,6 @@
-n.d(t, { m: () => u });
+n.d(t, {
+    m: () => u,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -8,6 +10,7 @@ var i = n(311907),
     s = n(178186),
     d = n(287809),
     c = n(985018);
+
 function u(e) {
     let t = (0, i.bG)([d.default], () => d.default.getCurrentUser()),
         n = (0, i.bG)([o.Ay], () => o.Ay.getChannelSafetyWarnings(e.id));

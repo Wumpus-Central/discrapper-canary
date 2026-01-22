@@ -13,6 +13,7 @@ var r = n(627968),
     u = n(916845),
     d = n(397927),
     f = n(714657);
+
 function p(e, t, n) {
     return (
         t in e
@@ -26,6 +27,7 @@ function p(e, t, n) {
         e
     );
 }
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,6 +44,7 @@ function _(e) {
     }
     return e;
 }
+
 function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -54,6 +57,7 @@ function h(e, t) {
     }
     return n;
 }
+
 function m(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -65,6 +69,7 @@ function m(e, t) {
         e
     );
 }
+
 function g(e, t) {
     if (null == e) return {};
     var n,
@@ -81,6 +86,7 @@ function g(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function E(e, t) {
     if (null == e) return {};
     var n,
@@ -91,6 +97,7 @@ function E(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function b(e) {
     let { title: t, body: n } = e;
     return (0, r.jsxs)("div", {
@@ -112,6 +119,7 @@ function b(e) {
         ],
     });
 }
+
 function y(e) {
     var t;
     let {
@@ -194,7 +202,9 @@ function y(e) {
                       alignmentStrategy: "edge",
                       align: w.align,
                   }
-                : { alignmentStrategy: "trigger-center" },
+                : {
+                      alignmentStrategy: "trigger-center",
+                  },
         );
     return (0, r.jsx)(
         o.x,
@@ -209,7 +219,9 @@ function y(e) {
                         }),
                     null != p &&
                         (0, r.jsx)("div", {
-                            className: s()(f.graphic, { [f["graphic--".concat(h)]]: null != h }),
+                            className: s()(f.graphic, {
+                                [f["graphic--".concat(h)]]: null != h,
+                            }),
                             children: (0, r.jsx)(
                                 d.vYh,
                                 m(_({}, p), {
@@ -227,7 +239,10 @@ function y(e) {
                               className: f.actionBar,
                           })
                         : null,
-                    null != x && (0, r.jsx)(c.F, { className: k }),
+                    null != x &&
+                        (0, r.jsx)(c.F, {
+                            className: k,
+                        }),
                 ],
             }),
         }),

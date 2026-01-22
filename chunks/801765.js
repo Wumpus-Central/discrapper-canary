@@ -16,9 +16,11 @@ let s = {
     10: i.A.getSrationalAt,
     13: i.A.getIfdPointerAt,
 };
+
 function o(e, t, n) {
     return t + i.A.getLongAt(e, t + 4, n);
 }
+
 function l(e, t, n, s, o, d) {
     let f = i.A.getTypeSize("SHORT"),
         p = 12,
@@ -42,9 +44,11 @@ function l(e, t, n, s, o, d) {
     }
     return _;
 }
+
 function c(e, t, n) {
     return t + i.A.getTypeSize("SHORT") <= e.byteLength ? i.A.getShortAt(e, t, n) : 0;
 }
+
 function u(e, t, n, r, s, o) {
     let l,
         c,
@@ -82,18 +86,22 @@ function u(e, t, n, r, s, o) {
         __offset: c,
     };
 }
+
 function d(e, t) {
     return i.A.typeSizes[e] * t <= i.A.getTypeSize("LONG");
 }
+
 function f(e, t, n, r, a, o = !1) {
     let l = [];
     o && ((r *= i.A.typeSizes[n]), (n = i.A.tagTypes.BYTE));
     for (let o = 0; o < r; o++) l.push(s[n](e, t, a)), (t += i.A.typeSizes[n]);
     return n === i.A.tagTypes.ASCII ? (l = i.A.getAsciiValue(l)) : 1 === l.length && (l = l[0]), l;
 }
+
 function p(e, t, n, r, a) {
     return t + n + i.A.typeSizes[r] * a <= e.byteLength;
 }
+
 function _(e) {
     let t = [],
         n = 0;
@@ -106,6 +114,7 @@ function _(e) {
     }
     return t;
 }
+
 function h(e) {
     try {
         return e.map((e) => decodeURIComponent(escape(e)));
@@ -113,6 +122,7 @@ function h(e) {
         return e;
     }
 }
+
 function m(e) {
     return e instanceof Array ? e.join(", ") : e;
 }

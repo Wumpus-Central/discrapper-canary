@@ -6,6 +6,7 @@ function t() {
         e || 0
     );
 }
+
 function n() {
     var e;
     return (
@@ -14,6 +15,7 @@ function n() {
         e || 0
     );
 }
+
 function r() {
     return {
         width: window.innerWidth || t(),

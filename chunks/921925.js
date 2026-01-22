@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(627968),
     i = n(64700),
     a = n(397927),
@@ -9,6 +11,7 @@ var r = n(627968),
     u = n(166532),
     d = n(652215),
     f = n(985018);
+
 function p(e) {
     let { planError: t, purchaseErrorBlockRef: n, className: p } = e,
         {

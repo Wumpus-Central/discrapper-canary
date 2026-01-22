@@ -1,4 +1,9 @@
-n.d(t, { t: () => g }), n(321073), n(896048), n(667532);
+n.d(t, {
+    t: () => g,
+}),
+    n(321073),
+    n(896048),
+    n(667532);
 var i = n(64700),
     r = n(284009),
     l = n.n(r),
@@ -12,6 +17,7 @@ var i = n(64700),
     f = n(488926),
     p = n(633334),
     m = n(652215);
+
 function g(e) {
     let t = (0, a.bG)([d.A], () => d.A.getGuild(e));
     l()(null != t, "guild must be present to be editing its integration settings");
@@ -76,6 +82,7 @@ function g(e) {
         unfilteredCount: E.members.length + E.roles.length,
     };
 }
+
 function h(e) {
     let t = [e.username];
     return (
@@ -86,6 +93,7 @@ function h(e) {
         }
     );
 }
+
 function x(e) {
     return {
         id: e.id,

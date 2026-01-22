@@ -23,6 +23,7 @@ var r = n(562465),
     d = n(760321),
     f = n(800007),
     p = n(652215);
+
 function _(e) {
     var t, n;
     let r = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
@@ -33,7 +34,7 @@ function _(e) {
                 guildId: e,
                 catalog: l.q.reduce((e, t) => ((e[t.id] = t), e), {}),
             });
-        }, 5000);
+        }, 5e3);
     let s = null != (t = null == (n = a.default.getCurrentUser()) ? void 0 : n.isStaff()) && t;
     return (0, o.aP)({
         url: p.Rsh.COLLECTION_PUBLISHED_LISTINGS_SKU(f.q4),
@@ -57,6 +58,7 @@ function _(e) {
         });
     });
 }
+
 function h(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = arguments.length > 2 ? arguments[2] : void 0;
@@ -67,7 +69,7 @@ function h(e) {
                   guildId: e,
                   instances: l.L.reduce((e, t) => ((e[t.id] = t), e), {}),
               });
-          }, 5000),
+          }, 5e3),
           Promise.resolve())
         : r.Bo.get({
               url: p.Rsh.GAME_SERVERS(e),
@@ -85,6 +87,7 @@ function h(e) {
               }
           });
 }
+
 function m(e, t) {
     return r.Bo.get({
         url: p.Rsh.PRODUCT_FOR_SKU(t),
@@ -112,6 +115,7 @@ function m(e, t) {
         }
     });
 }
+
 function g(e, t) {
     if (e) {
         var n;
@@ -121,9 +125,13 @@ function g(e, t) {
         });
     }
 }
+
 function E() {
-    i.h.dispatch({ type: "GAME_SERVER_REGION_PING_STATE_RESET" });
+    i.h.dispatch({
+        type: "GAME_SERVER_REGION_PING_STATE_RESET",
+    });
 }
+
 function b(e, t) {
     i.h.dispatch({
         type: "GAME_SERVER_REGION_PING_STATE_UPDATE",
@@ -131,6 +139,7 @@ function b(e, t) {
         state: t,
     });
 }
+
 function y(e, t, n, i) {
     return r.Bo.post({
         url: p.Rsh.GUILD_POWERUP_TOGGLE(e, t),
@@ -142,6 +151,7 @@ function y(e, t, n, i) {
         oldFormErrors: !0,
     });
 }
+
 function O(e, t, n, i) {
     return r.Bo.patch({
         url: p.Rsh.GUILD_POWERUP_UPDATE(e, t),
@@ -153,14 +163,18 @@ function O(e, t, n, i) {
         oldFormErrors: !0,
     });
 }
+
 function A(e, t, n) {
     return r.Bo.del({
         url: p.Rsh.GUILD_POWERUP_TOGGLE(e, t),
-        query: { entitlement_id: n },
+        query: {
+            entitlement_id: n,
+        },
         rejectWithError: !0,
         oldFormErrors: !0,
     });
 }
+
 function v(e) {
     return r.Bo.get({
         url: p.Rsh.GAME_SERVER_REGIONS(e),
@@ -174,6 +188,7 @@ function v(e) {
         });
     });
 }
+
 function S(e, t) {
     return r.Bo.post({
         url: p.Rsh.GAME_SERVER_WAKE(e, t),

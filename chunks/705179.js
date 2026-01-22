@@ -11,10 +11,13 @@ function s(t, e, i) {
         t
     );
 }
+
 function n(t, e) {
     return Math.max(Math.min((t - e) / 30, 1), -1);
 }
-i.d(e, { A: () => r });
+i.d(e, {
+    A: () => r,
+});
 let r = class {
     initialize() {
         window.addEventListener("mousemove", this.handleMouseMove);

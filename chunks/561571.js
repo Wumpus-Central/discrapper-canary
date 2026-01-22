@@ -1,10 +1,12 @@
-i.d(n, { A: () => a });
+i.d(n, {
+    A: () => a,
+});
 var e = i(385987);
 let a = {
     date: (0, e.A)({
         formats: {
-            full: "EEEE, 'ngày' d MMMM 'năm' y",
-            long: "'ngày' d MMMM 'năm' y",
+            full: "EEEE, 'ng\xe0y' d MMMM 'năm' y",
+            long: "'ng\xe0y' d MMMM 'năm' y",
             medium: "d MMM 'năm' y",
             short: "dd/MM/y",
         },

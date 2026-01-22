@@ -16,6 +16,7 @@ var r = n(735438),
     d = n(687658),
     f = n(167127),
     p = n(166929);
+
 function _(e, t, n) {
     return (
         t in e
@@ -29,6 +30,7 @@ function _(e, t, n) {
         e
     );
 }
+
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -45,6 +47,7 @@ function h(e) {
     }
     return e;
 }
+
 function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -57,6 +60,7 @@ function m(e, t) {
     }
     return n;
 }
+
 function g(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -68,6 +72,7 @@ function g(e, t) {
         e
     );
 }
+
 function E(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
     return null != e ? Math.round(e) : t;
@@ -122,10 +127,14 @@ class y extends s.A {
             i().forEach(this.inboundStats, (e) => {
                 e.statsWindow = [];
             }),
-            this.updateSendState({ paused: !0 });
+            this.updateSendState({
+                paused: !0,
+            });
     }
     resume() {
-        this.updateSendState({ paused: !1 });
+        this.updateSendState({
+            paused: !1,
+        });
     }
     stop() {
         this.connection.off(o.yq.Stats, this.sampleStats),
@@ -232,7 +241,7 @@ class y extends s.A {
                     m = t.targetBitrateHistogram.getReport(d),
                     b = t.outboundBandwidthSurplus.getReport(d),
                     y = this.videoEntropy.getReport(d),
-                    O = t.aggregationDuration / 1000;
+                    O = t.aggregationDuration / 1e3;
                 e.push(
                     g(h({}, this.getStats(t)), {
                         target_fps: O > 0 ? Math.round((null != (r = t.targetFrames) ? r : 0) / O) : 0,
@@ -336,8 +345,8 @@ class y extends s.A {
         var t;
         if (null == e) return null;
         let n = Number(this.streamStart),
-            r = (null != this.streamEnd ? this.streamEnd - n : this.timestampProducer.now() - n) / 1000,
-            i = Math.max(e.aggregationDuration, 0) / 1000,
+            r = (null != this.streamEnd ? this.streamEnd - n : this.timestampProducer.now() - n) / 1e3,
+            i = Math.max(e.aggregationDuration, 0) / 1e3,
             a = [1, 5, 10, 25, 50, 75],
             s = [1, 5, 10, 25, 50, 75, 99],
             o = [1, 5, 10, 25, 50, 75, 99],
@@ -353,16 +362,16 @@ class y extends s.A {
                     duration: Math.floor(r),
                     duration_aggregation: E(i),
                     duration_stopped_receiving: E(e.videoStoppedDuration.asSeconds()),
-                    duration_stream_under_8mbps: E(e.bitrateBuckets[8000000]),
-                    duration_stream_under_7mbps: E(e.bitrateBuckets[7000000]),
-                    duration_stream_under_6mbps: E(e.bitrateBuckets[6000000]),
-                    duration_stream_under_5mbps: E(e.bitrateBuckets[5000000]),
-                    duration_stream_under_4mbps: E(e.bitrateBuckets[4000000]),
-                    duration_stream_under_3mbps: E(e.bitrateBuckets[3000000]),
-                    duration_stream_under_2mbps: E(e.bitrateBuckets[2000000]),
-                    duration_stream_under_1_5mbps: E(e.bitrateBuckets[1500000]),
-                    duration_stream_under_1mbps: E(e.bitrateBuckets[1000000]),
-                    duration_stream_under_0_5mbps: E(e.bitrateBuckets[500000]),
+                    duration_stream_under_8mbps: E(e.bitrateBuckets[8e6]),
+                    duration_stream_under_7mbps: E(e.bitrateBuckets[7e6]),
+                    duration_stream_under_6mbps: E(e.bitrateBuckets[6e6]),
+                    duration_stream_under_5mbps: E(e.bitrateBuckets[5e6]),
+                    duration_stream_under_4mbps: E(e.bitrateBuckets[4e6]),
+                    duration_stream_under_3mbps: E(e.bitrateBuckets[3e6]),
+                    duration_stream_under_2mbps: E(e.bitrateBuckets[2e6]),
+                    duration_stream_under_1_5mbps: E(e.bitrateBuckets[15e5]),
+                    duration_stream_under_1mbps: E(e.bitrateBuckets[1e6]),
+                    duration_stream_under_0_5mbps: E(e.bitrateBuckets[5e5]),
                     duration_stream_at_0mbps: E(e.bitrateBuckets[0]),
                     duration_fps_under_60: E(e.fpsBuckets[60]),
                     duration_fps_under_55: E(e.fpsBuckets[55]),
@@ -386,9 +395,9 @@ class y extends s.A {
                     duration_resolution_under_480: E(e.resolutionBuckets[480]),
                     duration_resolution_under_360: E(e.resolutionBuckets[360]),
                     num_pauses: this.pausedCount,
-                    duration_paused: E(this.paused.totalDuration() / 1000),
-                    duration_zero_receivers: E(this.zeroReceivers.totalDuration() / 1000),
-                    duration_video_stopped: E(this.videoStopped.totalDuration() / 1000),
+                    duration_paused: E(this.paused.totalDuration() / 1e3),
+                    duration_zero_receivers: E(this.zeroReceivers.totalDuration() / 1e3),
+                    duration_video_stopped: E(this.videoStopped.totalDuration() / 1e3),
                     duration_hq_simulcast_stream_watched: E(this.hqSimulcastStreamWatched.totalDurationSeconds()),
                     duration_lq_simulcast_stream_watched: E(this.lqSimulcastStreamWatched.totalDurationSeconds()),
                     duration_hq_simulcast_stream_eligible: E(this.hqSimulcastStreamEligible.totalDurationSeconds()),
@@ -434,7 +443,7 @@ class y extends s.A {
                     local_want_percentile90: _.percentiles[90],
                     local_want_percentile95: _.percentiles[95],
                     average_local_want: _.mean,
-                    duration_video_effect: E(this.videoEffectDuration.totalDuration() / 1000),
+                    duration_video_effect: E(this.videoEffectDuration.totalDuration() / 1e3),
                     cryptor_max_attempts: e.cryptorMaxAttempts,
                     duration_decoder_ffmpeg: E(e.decoderBuckets[p.eq.FFMPEG]),
                     duration_decoder_dav1d: E(e.decoderBuckets[p.eq.DAV1D]),
@@ -527,7 +536,9 @@ class y extends s.A {
             u = (0, c.isWeb)() ? 1 : null != (r = null == (s = l.receiverReports) ? void 0 : s.length) ? r : 0,
             d = new Set(),
             f = new Set();
-        this.updateSendState({ receivers: u });
+        this.updateSendState({
+            receivers: u,
+        });
         let _ = this.cameraDuration.value;
         (this.cameraDuration.value = this.connection.context === o.x.DEFAULT && null != t.camera),
             (this.cameraOpportunityDuration.value =

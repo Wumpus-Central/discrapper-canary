@@ -1,4 +1,8 @@
-n.d(t, { A: () => _ }), n(938796), n(896048);
+n.d(t, {
+    A: () => _,
+}),
+    n(938796),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(665260),
@@ -19,6 +23,7 @@ var r = n(627968),
     O = n(652215);
 n(294920);
 var j = n(119907);
+
 function v(e) {
     let { value: t, channel: n } = e;
     return (0, g.i)({
@@ -29,6 +34,7 @@ function v(e) {
         respectCooldown: !1,
     });
 }
+
 function x(e) {
     let { channel: t, message: n } = e,
         { id: c } = t,
@@ -151,6 +157,7 @@ function x(e) {
           })
         : null;
 }
+
 function E(e) {
     let {
             textValue: t,
@@ -199,6 +206,7 @@ function E(e) {
         )
     );
 }
+
 function _(e, t, n) {
     let { message: l, channel: i, compact: a } = e;
     return n

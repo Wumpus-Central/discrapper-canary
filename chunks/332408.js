@@ -1,4 +1,8 @@
-n.d(t, { A: () => F }), n(896048), n(801541);
+n.d(t, {
+    A: () => F,
+}),
+    n(896048),
+    n(801541);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -39,7 +43,9 @@ let k = () =>
             children: (0, r.jsxs)("div", {
                 className: M.mR,
                 children: [
-                    (0, r.jsx)(O.A, { className: M.PC }),
+                    (0, r.jsx)(O.A, {
+                        className: M.PC,
+                    }),
                     (0, r.jsx)(d.Heading, {
                         variant: "heading-md/bold",
                         color: "always-white",
@@ -119,14 +125,19 @@ let k = () =>
     },
     V = (e) => {
         let { markAsDismissed: t, isCoachmark: n } = e,
-            { isPreview: a } = (0, l.cf)([C.A], () => ({ isPreview: C.A.isPreview })),
+            { isPreview: a } = (0, l.cf)([C.A], () => ({
+                isPreview: C.A.isPreview,
+            })),
             [s, c] = i.useState(!1),
             d = (0, R.H)(),
             f = () => {
                 null != t && t(x.i.DISMISS),
                     d(D.HAw.CLIENT_THEME_PREVIEW_CLOSED),
                     (0, N.D)(),
-                    n || (0, v.openUserSettings)(A.X.APPEARANCE_PANEL, { section: D.nc_.APPEARANCE });
+                    n ||
+                        (0, v.openUserSettings)(A.X.APPEARANCE_PANEL, {
+                            section: D.nc_.APPEARANCE,
+                        });
             },
             p = (0, E.X)(
                 {
@@ -142,8 +153,21 @@ let k = () =>
                 isCoachmark: n,
                 forceShowCloseButton: s,
             })
-                .with({ isCoachmark: !0 }, { forceShowCloseButton: !0 }, () => j.intl.string(j.t.cpT0Cq))
-                .with({ isPreview: !0 }, () => p)
+                .with(
+                    {
+                        isCoachmark: !0,
+                    },
+                    {
+                        forceShowCloseButton: !0,
+                    },
+                    () => j.intl.string(j.t.cpT0Cq),
+                )
+                .with(
+                    {
+                        isPreview: !0,
+                    },
+                    () => p,
+                )
                 .otherwise(() => j.intl.string(j.t.Olc2K3));
         return (0, r.jsxs)("div", {
             className: M.N3,
@@ -164,6 +188,7 @@ let k = () =>
             ],
         });
     };
+
 function F(e) {
     let { markAsDismissed: t, showClientThemesCoachmark: n } = e,
         { analyticsLocations: a } = (0, m.Ay)(h.A.CLIENT_THEMES_EDITOR),
@@ -195,14 +220,21 @@ function F(e) {
                 className: s()(M.HS, c ? M.hP : null),
                 children: (0, r.jsxs)(d.Fmo, {
                     children: [
-                        n ? (0, r.jsx)(k, {}) : (0, r.jsx)(U, { markAsDismissed: t }),
+                        n
+                            ? (0, r.jsx)(k, {})
+                            : (0, r.jsx)(U, {
+                                  markAsDismissed: t,
+                              }),
                         (0, r.jsx)(w.A, {}),
                         (0, r.jsx)(d.HOs, {
                             className: M.sV,
                             children: (0, r.jsxs)(P.Ay, {
                                 type: P.v0.EDITOR,
                                 children: [
-                                    !o && (0, r.jsx)(P.Ay.Basic, { className: M.Gg }),
+                                    !o &&
+                                        (0, r.jsx)(P.Ay.Basic, {
+                                            className: M.Gg,
+                                        }),
                                     (0, r.jsx)(P.Ay.Gradient, {
                                         className: M.Gg,
                                         isCoachmark: n,

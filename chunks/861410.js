@@ -1,9 +1,13 @@
-n.d(t, { A: () => p }), n(228524);
+n.d(t, {
+    A: () => p,
+}),
+    n(228524);
 var r,
     i = n(311907),
     l = n(73153),
     s = n(71393),
     a = n(652215);
+
 function c(e, t, n) {
     return (
         t in e
@@ -26,6 +30,7 @@ let o = {
     u = !1,
     f = !1,
     g = o;
+
 function b(e) {
     let { welcomeScreen: t, guildId: n } = e,
         r = s.A.getGuild(n);

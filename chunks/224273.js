@@ -7,7 +7,9 @@ e.exports = (function e(t, n, r) {
                 var c = Error("Cannot find module '" + a + "'");
                 throw ((c.code = "MODULE_NOT_FOUND"), c);
             }
-            var d = (n[a] = { exports: {} });
+            var d = (n[a] = {
+                exports: {},
+            });
             t[a][0].call(
                 d.exports,
                 function (e) {
@@ -30,6 +32,7 @@ e.exports = (function e(t, n, r) {
         1: [
             function (e, t, n) {
                 var r = {};
+
                 function i(e) {
                     var t,
                         n = JSON.stringify(e);
@@ -73,7 +76,9 @@ e.exports = (function e(t, n, r) {
             function (e, t, n) {
                 t.exports = e("./dist/load-script");
             },
-            { "./dist/load-script": 1 },
+            {
+                "./dist/load-script": 1,
+            },
         ],
         3: [
             function (e, t, n) {
@@ -157,7 +162,9 @@ e.exports = (function e(t, n, r) {
                     return r((e = e || window.navigator.userAgent)) && ((t = e), /\bGSA\b/.test(t));
                 };
             },
-            { "./is-ios": 14 },
+            {
+                "./is-ios": 14,
+            },
         ],
         11: [
             function (e, t, n) {
@@ -202,7 +209,9 @@ e.exports = (function e(t, n, r) {
                     return (t = void 0 !== t ? t : window.statusbar.visible), r(e) && t;
                 };
             },
-            { "./is-ios-webview": 12 },
+            {
+                "./is-ios-webview": 12,
+            },
         ],
         14: [
             function (e, t, n) {
@@ -213,7 +222,9 @@ e.exports = (function e(t, n, r) {
                     return t ? i || r(e, n) : i;
                 };
             },
-            { "./is-ipados": 15 },
+            {
+                "./is-ipados": 15,
+            },
         ],
         15: [
             function (e, t, n) {
@@ -263,6 +274,7 @@ e.exports = (function e(t, n, r) {
                     a = e("./is-chrome"),
                     s = e("./is-samsung"),
                     c = e("./is-duckduckgo");
+
                 function d(e) {
                     return (e = e || window.navigator.userAgent).indexOf("Opera Mini") > -1;
                 }
@@ -294,61 +306,81 @@ e.exports = (function e(t, n, r) {
             function (e, t, n) {
                 t.exports = e("./dist/is-android");
             },
-            { "./dist/is-android": 3 },
+            {
+                "./dist/is-android": 3,
+            },
         ],
         21: [
             function (e, t, n) {
                 t.exports = e("./dist/is-chrome-os");
             },
-            { "./dist/is-chrome-os": 4 },
+            {
+                "./dist/is-chrome-os": 4,
+            },
         ],
         22: [
             function (e, t, n) {
                 t.exports = e("./dist/is-chrome");
             },
-            { "./dist/is-chrome": 5 },
+            {
+                "./dist/is-chrome": 5,
+            },
         ],
         23: [
             function (e, t, n) {
                 t.exports = e("./dist/is-firefox");
             },
-            { "./dist/is-firefox": 8 },
+            {
+                "./dist/is-firefox": 8,
+            },
         ],
         24: [
             function (e, t, n) {
                 t.exports = e("./dist/is-ios-safari");
             },
-            { "./dist/is-ios-safari": 11 },
+            {
+                "./dist/is-ios-safari": 11,
+            },
         ],
         25: [
             function (e, t, n) {
                 t.exports = e("./dist/is-ios-webview");
             },
-            { "./dist/is-ios-webview": 12 },
+            {
+                "./dist/is-ios-webview": 12,
+            },
         ],
         26: [
             function (e, t, n) {
                 t.exports = e("./dist/is-ios-wkwebview");
             },
-            { "./dist/is-ios-wkwebview": 13 },
+            {
+                "./dist/is-ios-wkwebview": 13,
+            },
         ],
         27: [
             function (e, t, n) {
                 t.exports = e("./dist/is-ios");
             },
-            { "./dist/is-ios": 14 },
+            {
+                "./dist/is-ios": 14,
+            },
         ],
         28: [
             function (e, t, n) {
                 t.exports = e("./dist/is-samsung");
             },
-            { "./dist/is-samsung": 17 },
+            {
+                "./dist/is-samsung": 17,
+            },
         ],
         29: [
             function (e, t, n) {
                 t.exports = e("./dist/supports-popups");
             },
-            { "./dist/supports-popups": 19 },
+            {
+                "./dist/supports-popups": 19,
+            },
         ],
         30: [
             function (e, t, n) {
@@ -380,7 +412,9 @@ e.exports = (function e(t, n, r) {
                             return !!t && t.length > 0;
                         }),
                         (e.createChild = function (t) {
-                            t.prototype = Object.create(e.prototype, { constructor: t });
+                            t.prototype = Object.create(e.prototype, {
+                                constructor: t,
+                            });
                         }),
                         e
                     );
@@ -522,7 +556,9 @@ e.exports = (function e(t, n, r) {
         ],
         33: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }),
+                Object.defineProperty(n, "__esModule", {
+                    value: !0,
+                }),
                     (n.assign = void 0),
                     (n.assign = function (e) {
                         for (var t = [], n = 1; n < arguments.length; n++) t[n - 1] = arguments[n];
@@ -541,7 +577,9 @@ e.exports = (function e(t, n, r) {
         ],
         34: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }),
+                Object.defineProperty(n, "__esModule", {
+                    value: !0,
+                }),
                     (n.defaultAttributes = void 0),
                     (n.defaultAttributes = {
                         src: "about:blank",
@@ -554,7 +592,9 @@ e.exports = (function e(t, n, r) {
         ],
         35: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }),
+                Object.defineProperty(n, "__esModule", {
+                    value: !0,
+                }),
                     (n.setAttributes = void 0),
                     (n.setAttributes = function (e, t) {
                         for (var n in t)
@@ -579,7 +619,9 @@ e.exports = (function e(t, n, r) {
         ],
         37: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }),
+                Object.defineProperty(n, "__esModule", {
+                    value: !0,
+                }),
                     (n.deferred = function (e) {
                         return function () {
                             for (var t = [], n = 0; n < arguments.length; n++) t[n] = arguments[n];
@@ -597,7 +639,9 @@ e.exports = (function e(t, n, r) {
         ],
         38: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }),
+                Object.defineProperty(n, "__esModule", {
+                    value: !0,
+                }),
                     (n.once = function (e) {
                         var t = !1;
                         return function () {
@@ -610,7 +654,9 @@ e.exports = (function e(t, n, r) {
         ],
         39: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }),
+                Object.defineProperty(n, "__esModule", {
+                    value: !0,
+                }),
                     (n.promiseOrCallback = function (e, t) {
                         if (!t) return e;
                         e.then(function (e) {
@@ -627,6 +673,7 @@ e.exports = (function e(t, n, r) {
                 var r = e("./lib/deferred"),
                     i = e("./lib/once"),
                     o = e("./lib/promise-or-callback");
+
                 function a(e) {
                     return function () {
                         for (var t, n = [], a = 0; a < arguments.length; a++) n[a] = arguments[a];
@@ -677,6 +724,7 @@ e.exports = (function e(t, n, r) {
                                         o(e);
                                     }
                                 }
+
                                 function s(e) {
                                     try {
                                         c(r.throw(e));
@@ -684,6 +732,7 @@ e.exports = (function e(t, n, r) {
                                         o(e);
                                     }
                                 }
+
                                 function c(e) {
                                     var t;
                                     e.done
@@ -698,6 +747,7 @@ e.exports = (function e(t, n, r) {
                                 c((r = r.apply(e, t || [])).next());
                             });
                         }
+
                         function n(e, t) {
                             var n,
                                 r,
@@ -724,6 +774,7 @@ e.exports = (function e(t, n, r) {
                                     }),
                                 o
                             );
+
                             function s(o) {
                                 return function (s) {
                                     var c = [o, s];
@@ -802,6 +853,7 @@ e.exports = (function e(t, n, r) {
                             i,
                             o = {},
                             a = {};
+
                         function s(e) {
                             var t,
                                 n = JSON.stringify(e);
@@ -837,7 +889,9 @@ e.exports = (function e(t, n, r) {
                         (s.clearCache = function () {
                             a = {};
                         }),
-                            Object.defineProperty(o, "__esModule", { value: !0 }),
+                            Object.defineProperty(o, "__esModule", {
+                                value: !0,
+                            }),
                             (o.loadStylesheet = c = o.loadScript = void 0);
                         var c = (o.loadScript = s);
                         o.loadStylesheet = function (e) {
@@ -865,9 +919,11 @@ e.exports = (function e(t, n, r) {
                                 LOCALE_PATH: "".concat(l, "/locales/"),
                                 CDNX_PROD: "https://www.paypalobjects.com",
                             };
+
                         function p() {
                             return "function" == typeof window.define && !!window.define.amd;
                         }
+
                         function _(e, r, i) {
                             var o, a;
                             return (
@@ -944,13 +1000,16 @@ e.exports = (function e(t, n, r) {
                                     },
                                 }),
                                 i);
+
                         function A(e, t) {
                             var n;
                             if ((void 0 === t && (t = !0), p())) {
                                 p() &&
                                     "function" == typeof window.requirejs &&
                                     "function" == typeof window.requirejs.config &&
-                                    requirejs.config({ paths: (((n = {})[d] = e), n) });
+                                    requirejs.config({
+                                        paths: (((n = {})[d] = e), n),
+                                    });
                                 var r = ""
                                     .concat(d, "/")
                                     .concat(t ? u.AXO_ASSET_NAME.minified : u.AXO_ASSET_NAME.unminified);
@@ -964,6 +1023,7 @@ e.exports = (function e(t, n, r) {
                                 forceScriptReload: !0,
                             });
                         }
+
                         function T(e) {
                             var t = e.assetUrl,
                                 n = e.bundleId;
@@ -1020,7 +1080,14 @@ e.exports = (function e(t, n, r) {
                                             case 4:
                                                 throw Error("unsupported axo platform");
                                             case 5:
-                                                return [2, { metadata: { localeUrl: o } }];
+                                                return [
+                                                    2,
+                                                    {
+                                                        metadata: {
+                                                            localeUrl: o,
+                                                        },
+                                                    },
+                                                ];
                                         }
                                     });
                                 });
@@ -1083,15 +1150,18 @@ e.exports = (function e(t, n, r) {
                         l.HIPERCARD,
                     ],
                     p = (0, c.clone)(u);
+
                 function _(e) {
                     return d[e] || i[e];
                 }
+
                 function E(e, t) {
                     void 0 === t && (t = !1);
                     var n = p.indexOf(e);
                     if (!t && -1 === n) throw Error('"' + e + '" is not a supported card type.');
                     return n;
                 }
+
                 function h(e) {
                     var t = [];
                     if (!(0, a.isValidInputType)(e)) return t;
@@ -1144,7 +1214,10 @@ e.exports = (function e(t, n, r) {
         ],
         43: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }), (n.addMatchingCardsToResults = void 0);
+                Object.defineProperty(n, "__esModule", {
+                    value: !0,
+                }),
+                    (n.addMatchingCardsToResults = void 0);
                 var r = e("./clone"),
                     i = e("./matches");
                 n.addMatchingCardsToResults = function (e, t, n) {
@@ -1272,7 +1345,7 @@ e.exports = (function e(t, n, r) {
                     maestro: {
                         niceType: "Maestro",
                         type: "maestro",
-                        patterns: [493698, [500000, 504174], [504176, 506698], [506779, 508999], [56, 59], 63, 67, 6],
+                        patterns: [493698, [5e5, 504174], [504176, 506698], [506779, 508999], [56, 59], 63, 67, 6],
                         gaps: [4, 8, 12],
                         lengths: [12, 13, 14, 15, 16, 17, 18, 19],
                         code: {
@@ -1294,7 +1367,7 @@ e.exports = (function e(t, n, r) {
                             457393,
                             504175,
                             [506699, 506778],
-                            [509000, 509999],
+                            [509e3, 509999],
                             627780,
                             636297,
                             636368,
@@ -1307,7 +1380,7 @@ e.exports = (function e(t, n, r) {
                             [650720, 650727],
                             [650901, 650978],
                             [651652, 651679],
-                            [655000, 655019],
+                            [655e3, 655019],
                             [655021, 655058],
                         ],
                         gaps: [4, 8, 12],
@@ -1331,7 +1404,7 @@ e.exports = (function e(t, n, r) {
                     hiper: {
                         niceType: "Hiper",
                         type: "hiper",
-                        patterns: [637095, 63737423, 63743358, 637568, 637599, 637609, 637612],
+                        patterns: [637095, 0x3cc8e4f, 0x3cca57e, 637568, 637599, 637609, 637612],
                         gaps: [4, 8, 12],
                         lengths: [16],
                         code: {
@@ -1356,7 +1429,9 @@ e.exports = (function e(t, n, r) {
         ],
         45: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }),
+                Object.defineProperty(n, "__esModule", {
+                    value: !0,
+                }),
                     (n.clone = void 0),
                     (n.clone = function (e) {
                         return e ? JSON.parse(JSON.stringify(e)) : null;
@@ -1366,7 +1441,9 @@ e.exports = (function e(t, n, r) {
         ],
         46: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }),
+                Object.defineProperty(n, "__esModule", {
+                    value: !0,
+                }),
                     (n.findBestMatch = void 0),
                     (n.findBestMatch = function (e) {
                         var t;
@@ -1383,7 +1460,9 @@ e.exports = (function e(t, n, r) {
         ],
         47: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }),
+                Object.defineProperty(n, "__esModule", {
+                    value: !0,
+                }),
                     (n.isValidInputType = void 0),
                     (n.isValidInputType = function (e) {
                         return "string" == typeof e || e instanceof String;
@@ -1393,7 +1472,9 @@ e.exports = (function e(t, n, r) {
         ],
         48: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }),
+                Object.defineProperty(n, "__esModule", {
+                    value: !0,
+                }),
                     (n.matches = void 0),
                     (n.matches = function (e, t) {
                         var n, r, i, o, a, s;
@@ -1412,7 +1493,10 @@ e.exports = (function e(t, n, r) {
         ],
         49: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }), (n.Framebus = void 0);
+                Object.defineProperty(n, "__esModule", {
+                    value: !0,
+                }),
+                    (n.Framebus = void 0);
                 var r = e("./lib"),
                     i = "u" > typeof window && window.Promise;
                 n.Framebus = (function () {
@@ -1572,7 +1656,9 @@ e.exports = (function e(t, n, r) {
                     );
                 })();
             },
-            { "./lib": 57 },
+            {
+                "./lib": 57,
+            },
         ],
         50: [
             function (e, t, n) {
@@ -1587,7 +1673,10 @@ e.exports = (function e(t, n, r) {
         ],
         51: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }), (n.detach = n.attach = void 0);
+                Object.defineProperty(n, "__esModule", {
+                    value: !0,
+                }),
+                    (n.detach = n.attach = void 0);
                 var r = e("./"),
                     i = !1;
                 (n.attach = function () {
@@ -1597,11 +1686,16 @@ e.exports = (function e(t, n, r) {
                         (i = !1), window.removeEventListener("message", r.onMessage, !1);
                     });
             },
-            { "./": 57 },
+            {
+                "./": 57,
+            },
         ],
         52: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }), (n.broadcastToChildWindows = void 0);
+                Object.defineProperty(n, "__esModule", {
+                    value: !0,
+                }),
+                    (n.broadcastToChildWindows = void 0);
                 var r = e("./");
                 n.broadcastToChildWindows = function (e, t, n) {
                     for (var i = r.childWindows.length - 1; i >= 0; i--) {
@@ -1616,11 +1710,16 @@ e.exports = (function e(t, n, r) {
                     }
                 };
             },
-            { "./": 57 },
+            {
+                "./": 57,
+            },
         ],
         53: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }), (n.broadcast = void 0);
+                Object.defineProperty(n, "__esModule", {
+                    value: !0,
+                }),
+                    (n.broadcast = void 0);
                 var r = e("./");
                 n.broadcast = function e(t, n) {
                     var i,
@@ -1646,11 +1745,15 @@ e.exports = (function e(t, n, r) {
                     } catch (e) {}
                 };
             },
-            { "./": 57 },
+            {
+                "./": 57,
+            },
         ],
         54: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }),
+                Object.defineProperty(n, "__esModule", {
+                    value: !0,
+                }),
                     (n.subscribers = n.childWindows = n.prefix = void 0),
                     (n.prefix = "/*framebus*/"),
                     (n.childWindows = []),
@@ -1660,7 +1763,10 @@ e.exports = (function e(t, n, r) {
         ],
         55: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }), (n.dispatch = void 0);
+                Object.defineProperty(n, "__esModule", {
+                    value: !0,
+                }),
+                    (n.dispatch = void 0);
                 var r = e("./");
                 n.dispatch = function (e, t, n, i, o) {
                     if (r.subscribers[e] && r.subscribers[e][t]) {
@@ -1670,11 +1776,15 @@ e.exports = (function e(t, n, r) {
                     }
                 };
             },
-            { "./": 57 },
+            {
+                "./": 57,
+            },
         ],
         56: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }),
+                Object.defineProperty(n, "__esModule", {
+                    value: !0,
+                }),
                     (n.hasOpener = void 0),
                     (n.hasOpener = function (e) {
                         return e.top === e && null != e.opener && e.opener !== e && !0 !== e.opener.closed;
@@ -1708,7 +1818,9 @@ e.exports = (function e(t, n, r) {
                             for (var n in e)
                                 "default" === n || Object.prototype.hasOwnProperty.call(t, n) || r(t, e, n);
                         };
-                Object.defineProperty(n, "__esModule", { value: !0 }),
+                Object.defineProperty(n, "__esModule", {
+                    value: !0,
+                }),
                     i(e("./attach"), n),
                     i(e("./broadcast-to-child-windows"), n),
                     i(e("./broadcast"), n),
@@ -1743,7 +1855,9 @@ e.exports = (function e(t, n, r) {
         ],
         58: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }),
+                Object.defineProperty(n, "__esModule", {
+                    value: !0,
+                }),
                     (n.isntString = void 0),
                     (n.isntString = function (e) {
                         return "string" != typeof e;
@@ -1753,7 +1867,10 @@ e.exports = (function e(t, n, r) {
         ],
         59: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }), (n.onMessage = void 0);
+                Object.defineProperty(n, "__esModule", {
+                    value: !0,
+                }),
+                    (n.onMessage = void 0);
                 var r = e("./");
                 n.onMessage = function (e) {
                     if (!(0, r.isntString)(e.data)) {
@@ -1768,11 +1885,16 @@ e.exports = (function e(t, n, r) {
                     }
                 };
             },
-            { "./": 57 },
+            {
+                "./": 57,
+            },
         ],
         60: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }), (n.packagePayload = void 0);
+                Object.defineProperty(n, "__esModule", {
+                    value: !0,
+                }),
+                    (n.packagePayload = void 0);
                 var r = e("./");
                 n.packagePayload = function (e, t, n, i) {
                     var o,
@@ -1789,11 +1911,15 @@ e.exports = (function e(t, n, r) {
                     return o;
                 };
             },
-            { "./": 57 },
+            {
+                "./": 57,
+            },
         ],
         61: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }),
+                Object.defineProperty(n, "__esModule", {
+                    value: !0,
+                }),
                     (n.sendMessage = void 0),
                     (n.sendMessage = function (e, t, n) {
                         try {
@@ -1808,16 +1934,28 @@ e.exports = (function e(t, n, r) {
                 var r =
                     (this && this.__importDefault) ||
                     function (e) {
-                        return e && e.__esModule ? e : { default: e };
+                        return e && e.__esModule
+                            ? e
+                            : {
+                                  default: e,
+                              };
                     };
-                Object.defineProperty(n, "__esModule", { value: !0 }), (n.subscribeReplier = void 0);
+                Object.defineProperty(n, "__esModule", {
+                    value: !0,
+                }),
+                    (n.subscribeReplier = void 0);
                 var i = e("../framebus"),
                     o = r(e("@braintree/uuid"));
                 n.subscribeReplier = function (e, t) {
                     var n = (0, o.default)();
                     return (
-                        i.Framebus.target({ origin: t }).on(n, function r(o, a) {
-                            e(o, a), i.Framebus.target({ origin: t }).off(n, r);
+                        i.Framebus.target({
+                            origin: t,
+                        }).on(n, function r(o, a) {
+                            e(o, a),
+                                i.Framebus.target({
+                                    origin: t,
+                                }).off(n, r);
                         }),
                         n
                     );
@@ -1830,23 +1968,33 @@ e.exports = (function e(t, n, r) {
         ],
         63: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }), (n.subscriptionArgsInvalid = void 0);
+                Object.defineProperty(n, "__esModule", {
+                    value: !0,
+                }),
+                    (n.subscriptionArgsInvalid = void 0);
                 var r = e("./");
                 n.subscriptionArgsInvalid = function (e, t, n) {
                     return !!(0, r.isntString)(e) || "function" != typeof t || (0, r.isntString)(n);
                 };
             },
-            { "./": 57 },
+            {
+                "./": 57,
+            },
         ],
         64: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 });
+                Object.defineProperty(n, "__esModule", {
+                    value: !0,
+                });
             },
             {},
         ],
         65: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }), (n.unpackPayload = void 0);
+                Object.defineProperty(n, "__esModule", {
+                    value: !0,
+                }),
+                    (n.unpackPayload = void 0);
                 var r = e("./");
                 n.unpackPayload = function (e) {
                     var t;
@@ -1870,7 +2018,9 @@ e.exports = (function e(t, n, r) {
                     return t;
                 };
             },
-            { "./": 57 },
+            {
+                "./": 57,
+            },
         ],
         66: [
             function (e, t, n) {
@@ -1885,7 +2035,9 @@ e.exports = (function e(t, n, r) {
         ],
         67: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }),
+                Object.defineProperty(n, "__esModule", {
+                    value: !0,
+                }),
                     (n.isIos = n.isIE9 = n.isSamsungBrowser = n.isAndroidChrome = n.isKitKatWebview = void 0);
                 var r = "u" > typeof window && window.navigator && window.navigator.userAgent,
                     i = e("@braintree/browser-detection/is-android"),
@@ -1923,19 +2075,25 @@ e.exports = (function e(t, n, r) {
                     return !(0, r.isSamsungBrowser)();
                 };
             },
-            { "./lib/device": 67 },
+            {
+                "./lib/device": 67,
+            },
         ],
         69: [
             function (e, t, n) {
                 arguments[4][3][0].apply(n, arguments);
             },
-            { dup: 3 },
+            {
+                dup: 3,
+            },
         ],
         70: [
             function (e, t, n) {
                 arguments[4][4][0].apply(n, arguments);
             },
-            { dup: 4 },
+            {
+                dup: 4,
+            },
         ],
         71: [
             function (e, t, n) {
@@ -1954,13 +2112,17 @@ e.exports = (function e(t, n, r) {
             function (e, t, n) {
                 arguments[4][6][0].apply(n, arguments);
             },
-            { dup: 6 },
+            {
+                dup: 6,
+            },
         ],
         73: [
             function (e, t, n) {
                 arguments[4][7][0].apply(n, arguments);
             },
-            { dup: 7 },
+            {
+                dup: 7,
+            },
         ],
         74: [
             function (e, t, n) {
@@ -1983,25 +2145,33 @@ e.exports = (function e(t, n, r) {
             function (e, t, n) {
                 arguments[4][15][0].apply(n, arguments);
             },
-            { dup: 15 },
+            {
+                dup: 15,
+            },
         ],
         77: [
             function (e, t, n) {
                 arguments[4][16][0].apply(n, arguments);
             },
-            { dup: 16 },
+            {
+                dup: 16,
+            },
         ],
         78: [
             function (e, t, n) {
                 arguments[4][17][0].apply(n, arguments);
             },
-            { dup: 17 },
+            {
+                dup: 17,
+            },
         ],
         79: [
             function (e, t, n) {
                 arguments[4][18][0].apply(n, arguments);
             },
-            { dup: 18 },
+            {
+                dup: 18,
+            },
         ],
         80: [
             function (e, t, n) {
@@ -2034,7 +2204,9 @@ e.exports = (function e(t, n, r) {
             function (e, t, n) {
                 t.exports = e("./dist/is-ie9");
             },
-            { "./dist/is-ie9": 74 },
+            {
+                "./dist/is-ie9": 74,
+            },
         ],
         84: [
             function (e, t, n) {
@@ -2049,7 +2221,9 @@ e.exports = (function e(t, n, r) {
             function (e, t, n) {
                 t.exports = e("./dist/supports-input-formatting");
             },
-            { "./dist/supports-input-formatting": 68 },
+            {
+                "./dist/supports-input-formatting": 68,
+            },
         ],
         86: [
             function (e, t, n) {
@@ -2059,6 +2233,7 @@ e.exports = (function e(t, n, r) {
                     a = e("../lib/methods"),
                     s = e("../lib/convert-methods-to-error"),
                     c = e("@braintree/wrap-promise");
+
                 function d(e) {
                     this._client = e.client;
                 }
@@ -2068,7 +2243,9 @@ e.exports = (function e(t, n, r) {
                     return n
                         ? ((t = o(
                               {
-                                  _meta: { source: "american-express" },
+                                  _meta: {
+                                      source: "american-express",
+                                  },
                                   paymentMethodNonce: n,
                               },
                               e,
@@ -2087,7 +2264,9 @@ e.exports = (function e(t, n, r) {
                                           code: i.AMEX_NETWORK_ERROR.code,
                                           message:
                                               "A network error occurred when getting the American Express rewards balance.",
-                                          details: { originalError: e },
+                                          details: {
+                                              originalError: e,
+                                          },
                                       }),
                                   );
                               }))
@@ -2106,7 +2285,9 @@ e.exports = (function e(t, n, r) {
                                       method: "get",
                                       endpoint: "payment_methods/amex_express_checkout_cards/" + e.nonce,
                                       data: {
-                                          _meta: { source: "american-express" },
+                                          _meta: {
+                                              source: "american-express",
+                                          },
                                           paymentMethodNonce: e.nonce,
                                       },
                                   })
@@ -2117,7 +2298,9 @@ e.exports = (function e(t, n, r) {
                                               code: i.AMEX_NETWORK_ERROR.code,
                                               message:
                                                   "A network error occurred when getting the American Express Checkout nonce profile.",
-                                              details: { originalError: e },
+                                              details: {
+                                                  originalError: e,
+                                              },
                                           }),
                                       );
                                   })
@@ -2157,7 +2340,9 @@ e.exports = (function e(t, n, r) {
                     },
                 };
             },
-            { "../lib/braintree-error": 143 },
+            {
+                "../lib/braintree-error": 143,
+            },
         ],
         88: [
             function (e, t, n) {
@@ -2206,6 +2391,7 @@ e.exports = (function e(t, n, r) {
                     a = e("../lib/methods"),
                     s = e("../lib/convert-methods-to-error"),
                     c = e("@braintree/wrap-promise");
+
                 function d(e) {
                     (this._instantiatedWithClient = !e.useDeferredClient),
                         (this._client = e.client),
@@ -2270,7 +2456,9 @@ e.exports = (function e(t, n, r) {
                                               method: "post",
                                               endpoint: "apple_pay_web/sessions",
                                               data: {
-                                                  _meta: { source: "apple-pay" },
+                                                  _meta: {
+                                                      source: "apple-pay",
+                                                  },
                                                   applePayWebSession: n,
                                               },
                                           })
@@ -2290,7 +2478,9 @@ e.exports = (function e(t, n, r) {
                                                     type: o.APPLE_PAY_MERCHANT_VALIDATION_FAILED.type,
                                                     code: o.APPLE_PAY_MERCHANT_VALIDATION_FAILED.code,
                                                     message: o.APPLE_PAY_MERCHANT_VALIDATION_FAILED.message,
-                                                    details: { originalError: e.details.originalError },
+                                                    details: {
+                                                        originalError: e.details.originalError,
+                                                    },
                                                 }),
                                             )
                                           : Promise.reject(
@@ -2298,7 +2488,9 @@ e.exports = (function e(t, n, r) {
                                                     type: o.APPLE_PAY_MERCHANT_VALIDATION_NETWORK.type,
                                                     code: o.APPLE_PAY_MERCHANT_VALIDATION_NETWORK.code,
                                                     message: o.APPLE_PAY_MERCHANT_VALIDATION_NETWORK.message,
-                                                    details: { originalError: e },
+                                                    details: {
+                                                        originalError: e,
+                                                    },
                                                 }),
                                             );
                                   })
@@ -2313,7 +2505,9 @@ e.exports = (function e(t, n, r) {
                                           method: "post",
                                           endpoint: "payment_methods/apple_payment_tokens",
                                           data: {
-                                              _meta: { source: "apple-pay" },
+                                              _meta: {
+                                                  source: "apple-pay",
+                                              },
                                               applePaymentToken: Object.assign({}, e.token, {
                                                   paymentData: btoa(JSON.stringify(e.token.paymentData)),
                                               }),
@@ -2334,7 +2528,9 @@ e.exports = (function e(t, n, r) {
                                                   type: o.APPLE_PAY_TOKENIZATION.type,
                                                   code: o.APPLE_PAY_TOKENIZATION.code,
                                                   message: o.APPLE_PAY_TOKENIZATION.message,
-                                                  details: { originalError: e },
+                                                  details: {
+                                                      originalError: e,
+                                                  },
                                               }),
                                           )
                                       );
@@ -2391,7 +2587,9 @@ e.exports = (function e(t, n, r) {
                     },
                 };
             },
-            { "../lib/braintree-error": 143 },
+            {
+                "../lib/braintree-error": 143,
+            },
         ],
         91: [
             function (e, t, n) {
@@ -2473,6 +2671,7 @@ e.exports = (function e(t, n, r) {
                     g = e("../lib/constants").FRAUDNET_SOURCE,
                     P = e("../lib/constants").FRAUDNET_URL,
                     b = {};
+
                 function v(e) {
                     var t, n;
                     if (((t = JSON.stringify((e = e || {}))), !(n = e.gatewayConfiguration)))
@@ -2500,7 +2699,9 @@ e.exports = (function e(t, n, r) {
                                 code: f.CLIENT_GATEWAY_CONFIGURATION_INVALID_DOMAIN.code,
                                 message: "graphQL.url property is on an invalid domain.",
                             });
-                        this._graphQL = new i({ graphQL: n.graphQL });
+                        this._graphQL = new i({
+                            graphQL: n.graphQL,
+                        });
                     }
                 }
                 (v.initialize = function (e) {
@@ -2657,7 +2858,12 @@ e.exports = (function e(t, n, r) {
                                                         message: f.CLIENT_GRAPHQL_REQUEST_ERROR.message,
                                                     }),
                                                 )
-                                              : ((a = h({ _httpStatus: o }, r)),
+                                              : ((a = h(
+                                                    {
+                                                        _httpStatus: o,
+                                                    },
+                                                    r,
+                                                )),
                                                 _ &&
                                                     a.creditCards &&
                                                     a.creditCards.length > 0 &&
@@ -2720,7 +2926,9 @@ e.exports = (function e(t, n, r) {
         ],
         93: [
             function (e, t, n) {
-                t.exports = { BRAINTREE_VERSION: "2018-05-10" };
+                t.exports = {
+                    BRAINTREE_VERSION: "2018-05-10",
+                };
             },
             {},
         ],
@@ -2788,7 +2996,9 @@ e.exports = (function e(t, n, r) {
                     },
                 };
             },
-            { "../lib/braintree-error": 143 },
+            {
+                "../lib/braintree-error": 143,
+            },
         ],
         95: [
             function (e, t, n) {
@@ -2858,7 +3068,9 @@ e.exports = (function e(t, n, r) {
                                                             : c.CLIENT_GATEWAY_NETWORK).type,
                                                   code: a.code,
                                                   message: a.message,
-                                                  details: { originalError: e },
+                                                  details: {
+                                                      originalError: e,
+                                                  },
                                               }),
                                           )
                                         : n({
@@ -2939,7 +3151,12 @@ e.exports = (function e(t, n, r) {
                                 I = t.timeout,
                                 N = s.getRequestObject(),
                                 O = !!(T && T.isGraphQLRequest(A, t.data));
-                            (t.headers = i({ "Content-Type": "application/json" }, t.headers)),
+                            (t.headers = i(
+                                {
+                                    "Content-Type": "application/json",
+                                },
+                                t.headers,
+                            )),
                                 (A = (E = O ? new d(t) : new l(t)).getUrl()),
                                 (h = E.getBody()),
                                 (m = E.getMethod()),
@@ -3093,6 +3310,7 @@ e.exports = (function e(t, n, r) {
                         INTERNATIONAL_MAESTRO: "maestro",
                         JCB: "jcb",
                     };
+
                 function l(e, t) {
                     return e.reduce(function (e, n) {
                         return t.hasOwnProperty(n) ? e.concat(t[n]) : e;
@@ -3107,7 +3325,9 @@ e.exports = (function e(t, n, r) {
                               environment: (_ = n.data.clientConfiguration).environment.toLowerCase(),
                               clientApiUrl: _.clientApiUrl,
                               assetsUrl: _.assetsUrl,
-                              analytics: { url: _.analyticsUrl },
+                              analytics: {
+                                  url: _.analyticsUrl,
+                              },
                               merchantId: _.merchantId,
                               venmo: "off",
                           }),
@@ -3125,16 +3345,23 @@ e.exports = (function e(t, n, r) {
                               delete p.applePayWeb.supportedCardBrands),
                           _.fastlane && (p.fastlane = _.fastlane),
                           _.ideal && (p.ideal = _.ideal),
-                          _.kount && (p.kount = { kountMerchantId: _.kount.merchantId }),
+                          _.kount &&
+                              (p.kount = {
+                                  kountMerchantId: _.kount.merchantId,
+                              }),
                           _.creditCard
                               ? ((p.challenges = _.creditCard.challenges.map(function (e) {
                                     return e.toLowerCase();
                                 })),
-                                (p.creditCards = { supportedCardTypes: l(_.creditCard.supportedCardBrands, o) }),
+                                (p.creditCards = {
+                                    supportedCardTypes: l(_.creditCard.supportedCardBrands, o),
+                                }),
                                 (p.threeDSecureEnabled = _.creditCard.threeDSecureEnabled),
                                 (p.threeDSecure = _.creditCard.threeDSecure))
                               : ((p.challenges = []),
-                                (p.creditCards = { supportedCardTypes: [] }),
+                                (p.creditCards = {
+                                    supportedCardTypes: [],
+                                }),
                                 (p.threeDSecureEnabled = !1)),
                           _.googlePay &&
                               (p.androidPay = {
@@ -3179,7 +3406,9 @@ e.exports = (function e(t, n, r) {
                           _.usBankAccount &&
                               (p.usBankAccount = {
                                   routeId: _.usBankAccount.routeId,
-                                  plaid: { publicKey: _.usBankAccount.plaidPublicKey },
+                                  plaid: {
+                                      publicKey: _.usBankAccount.plaidPublicKey,
+                                  },
                               }),
                           p)
                         : r(e);
@@ -3212,7 +3441,9 @@ e.exports = (function e(t, n, r) {
                         NO: "No",
                         UNKNOWN: "Unknown",
                     },
-                    a = { PSDTWO: "psd2" };
+                    a = {
+                        PSDTWO: "psd2",
+                    };
                 t.exports = function (e) {
                     var t, n, s, c, d, l;
                     return e.data && !e.errors
@@ -3258,7 +3489,9 @@ e.exports = (function e(t, n, r) {
                         : r(e);
                 };
             },
-            { "./error": 102 },
+            {
+                "./error": 102,
+            },
         ],
         101: [
             function (e, t, n) {
@@ -3282,7 +3515,9 @@ e.exports = (function e(t, n, r) {
                         NO: "No",
                         UNKNOWN: "Unknown",
                     },
-                    a = { PSDTWO: "psd2" };
+                    a = {
+                        PSDTWO: "psd2",
+                    };
                 t.exports = function (e) {
                     var t, n, s, c, d, l;
                     return e.data && !e.errors
@@ -3326,7 +3561,9 @@ e.exports = (function e(t, n, r) {
                         : r(e);
                 };
             },
-            { "./error": 102 },
+            {
+                "./error": 102,
+            },
         ],
         102: [
             function (e, t, n) {
@@ -3367,18 +3604,30 @@ e.exports = (function e(t, n, r) {
                                       })(e.extensions.inputPath.slice(1), e, r);
                               }),
                               r)).length
-                            ? { error: { message: t.errors[0].message } }
+                            ? {
+                                  error: {
+                                      message: t.errors[0].message,
+                                  },
+                              }
                             : {
-                                  error: { message: { creditCard: "Credit card is invalid" }[i[0].field] },
+                                  error: {
+                                      message: {
+                                          creditCard: "Credit card is invalid",
+                                      }[i[0].field],
+                                  },
                                   fieldErrors: i,
                               }
                         : o
                           ? {
-                                error: { message: e.errors[0].message },
+                                error: {
+                                    message: e.errors[0].message,
+                                },
                                 fieldErrors: [],
                             }
                           : {
-                                error: { message: "There was a problem serving your request" },
+                                error: {
+                                    message: "There was a problem serving your request",
+                                },
                                 fieldErrors: [],
                             };
                 };
@@ -3420,7 +3669,9 @@ e.exports = (function e(t, n, r) {
                         A,
                         T,
                         I,
-                        N = { hasAuthenticationInsight: !!(e.authenticationInsight && e.merchantAccountId) };
+                        N = {
+                            hasAuthenticationInsight: !!(e.authenticationInsight && e.merchantAccountId),
+                        };
                     return {
                         query:
                             ((_ = N.hasAuthenticationInsight),
@@ -3463,7 +3714,9 @@ e.exports = (function e(t, n, r) {
                                     },
                                 }),
                                 n.hasAuthenticationInsight &&
-                                    (d.authenticationInsightInput = { merchantAccountId: t.merchantAccountId }),
+                                    (d.authenticationInsightInput = {
+                                        merchantAccountId: t.merchantAccountId,
+                                    }),
                                 o && (d.input.creditCard.billingAddress = o),
                                 (l = t),
                                 (u = d.input),
@@ -3474,7 +3727,13 @@ e.exports = (function e(t, n, r) {
                                     : (l.authorizationFingerprint && l.tokenizationKey) || l.authorizationFingerprint
                                       ? (p = !0)
                                       : l.tokenizationKey && (p = !1),
-                                "boolean" == typeof p && (u.options = r({ validate: p }, u.options)),
+                                "boolean" == typeof p &&
+                                    (u.options = r(
+                                        {
+                                            validate: p,
+                                        },
+                                        u.options,
+                                    )),
                                 (d.input = u),
                                 d).input,
                                 {
@@ -3486,12 +3745,16 @@ e.exports = (function e(t, n, r) {
                             )),
                             "authAssertion" in m && (I.authAssertion = m.authAssertion),
                             T && (I.shippingAddress = T),
-                            { input: I }),
+                            {
+                                input: I,
+                            }),
                         operationName: "TokenizeCreditCardForPayPalConnect",
                     };
                 };
             },
-            { "../../../../lib/assign": 140 },
+            {
+                "../../../../lib/assign": 140,
+            },
         ],
         105: [
             function (e, t, n) {
@@ -3508,7 +3771,9 @@ e.exports = (function e(t, n, r) {
                         l,
                         u,
                         p,
-                        _ = { hasAuthenticationInsight: !!(e.authenticationInsight && e.merchantAccountId) };
+                        _ = {
+                            hasAuthenticationInsight: !!(e.authenticationInsight && e.merchantAccountId),
+                        };
                     return {
                         query:
                             ((o = _.hasAuthenticationInsight),
@@ -3538,7 +3803,9 @@ e.exports = (function e(t, n, r) {
                                 },
                             }),
                             _.hasAuthenticationInsight &&
-                                (p.authenticationInsightInput = { merchantAccountId: e.merchantAccountId }),
+                                (p.authenticationInsightInput = {
+                                    merchantAccountId: e.merchantAccountId,
+                                }),
                             c && (p.input.creditCard.billingAddress = c),
                             (t = e),
                             (n = p.input),
@@ -3547,14 +3814,22 @@ e.exports = (function e(t, n, r) {
                                 : (t.authorizationFingerprint && t.tokenizationKey) || t.authorizationFingerprint
                                   ? (i = !0)
                                   : t.tokenizationKey && (i = !1),
-                            "boolean" == typeof i && (n.options = r({ validate: i }, n.options)),
+                            "boolean" == typeof i &&
+                                (n.options = r(
+                                    {
+                                        validate: i,
+                                    },
+                                    n.options,
+                                )),
                             (p.input = n),
                             p),
                         operationName: "TokenizeCreditCard",
                     };
                 };
             },
-            { "../../../../lib/assign": 140 },
+            {
+                "../../../../lib/assign": 140,
+            },
         ],
         106: [
             function (e, t, n) {
@@ -3563,6 +3838,7 @@ e.exports = (function e(t, n, r) {
                         configuration: "configuration",
                     },
                     i = ["creditCard.options.unionPayEnrollment"];
+
                 function o(e) {
                     this._config = e.graphQL;
                 }
@@ -3626,6 +3902,7 @@ e.exports = (function e(t, n, r) {
                         },
                         configuration: p,
                     };
+
                 function h(e) {
                     var t = e.graphQL.getClientApiPath(e.url);
                     (this._graphQL = e.graphQL),
@@ -3661,7 +3938,14 @@ e.exports = (function e(t, n, r) {
                                 );
                             })(this._data),
                             t = this._generator(e, a(this._data.creditCard));
-                        return JSON.stringify(i({ clientSdkMetadata: this._clientSdkMetadata }, t));
+                        return JSON.stringify(
+                            i(
+                                {
+                                    clientSdkMetadata: this._clientSdkMetadata,
+                                },
+                                t,
+                            ),
+                        );
                     }),
                     (h.prototype.getMethod = function () {
                         return "POST";
@@ -3733,7 +4017,7 @@ e.exports = (function e(t, n, r) {
                 t.exports = function (e, t) {
                     (t = r(t || Function.prototype)),
                         (e.method = (e.method || "GET").toUpperCase()),
-                        (e.timeout = null == e.timeout ? 60000 : e.timeout),
+                        (e.timeout = null == e.timeout ? 6e4 : e.timeout),
                         (e.data = e.data || {}),
                         i.request(e, t);
                 };
@@ -3798,7 +4082,9 @@ e.exports = (function e(t, n, r) {
                     },
                 };
             },
-            { "../lib/braintree-error": 143 },
+            {
+                "../lib/braintree-error": 143,
+            },
         ],
         113: [
             function (e, t, n) {
@@ -3807,7 +4093,9 @@ e.exports = (function e(t, n, r) {
                     o = e("../lib/constants").FRAUDNET_SOURCE,
                     a = e("../lib/constants").FRAUDNET_URL,
                     s = e("../lib/assets").loadScript;
+
                 function c() {}
+
                 function d(e) {
                     e && e.parentNode && e.parentNode.removeChild(e);
                 }
@@ -3827,7 +4115,7 @@ e.exports = (function e(t, n, r) {
                             "https://b.stats.paypal.com/counter.cgi?i=127.0.0.1&p=" +
                             this.sessionId +
                             "&t=" +
-                            new Date().getTime() / 1000 +
+                            new Date().getTime() / 1e3 +
                             "&a=14"),
                         (this._parameterBlock =
                             ((t = this.sessionId),
@@ -3844,7 +4132,9 @@ e.exports = (function e(t, n, r) {
                             d.setAttribute("fncls", i),
                             (d.text = JSON.stringify(l)),
                             d)),
-                        s({ src: a })
+                        s({
+                            src: a,
+                        })
                             .then(function (e) {
                                 return (p._thirdPartyBlock = e), p;
                             })
@@ -3892,7 +4182,9 @@ e.exports = (function e(t, n, r) {
                     create: u(function (e) {
                         var t,
                             n = "Data Collector",
-                            _ = { _instances: [] };
+                            _ = {
+                                _instances: [],
+                            };
                         return a
                             .verify({
                                 name: n,
@@ -4002,6 +4294,7 @@ e.exports = (function e(t, n, r) {
                         production: "https://assets.braintreegateway.com/data",
                     },
                     s = {};
+
                 function c(e) {
                     var t = c.getCachedDeviceData(e.merchantId);
                     if (t) {
@@ -4125,6 +4418,7 @@ e.exports = (function e(t, n, r) {
                             },
                         },
                     };
+
                 function l(e, t, n) {
                     if (4 !== t.length) throw new d.exception.invalid("invalid aes block size");
                     var r = e.b[n],
@@ -4167,6 +4461,7 @@ e.exports = (function e(t, n, r) {
                             (t = s);
                     return E;
                 }
+
                 function u(e, t) {
                     var n,
                         r,
@@ -4218,6 +4513,7 @@ e.exports = (function e(t, n, r) {
                         (o[6] = (o[6] + _) | 0),
                         (o[7] = (o[7] + E) | 0);
                 }
+
                 function p(e, t) {
                     var n,
                         r = d.random.B[e],
@@ -4225,18 +4521,22 @@ e.exports = (function e(t, n, r) {
                     for (n in r) r.hasOwnProperty(n) && i.push(r[n]);
                     for (n = 0; n < i.length; n++) i[n](t);
                 }
+
                 function _(e, t) {
                     "u" > typeof window && window.performance && "function" == typeof window.performance.now
                         ? e.addEntropy(window.performance.now(), t, "loadtime")
                         : e.addEntropy(new Date().valueOf(), t, "loadtime");
                 }
+
                 function E(e) {
                     (e.b = h(e).concat(h(e))), (e.C = new d.cipher.aes(e.b));
                 }
+
                 function h(e) {
                     for (var t = 0; 4 > t && ((e.g[t] = (e.g[t] + 1) | 0), !e.g[t]); t++);
                     return e.C.encrypt(e.g);
                 }
+
                 function m(e, t) {
                     return function () {
                         t.apply(e, arguments);
@@ -4306,11 +4606,11 @@ e.exports = (function e(t, n, r) {
                                         d[t] = o,
                                         l[o] = t,
                                         a =
-                                            (16843009 * (i = u[(e = u[(r = u[t])])])) ^
+                                            (0x1010101 * (i = u[(e = u[(r = u[t])])])) ^
                                             (65537 * e) ^
                                             (257 * r) ^
-                                            (16843008 * t),
-                                        i = (257 * u[o]) ^ (16843008 * o),
+                                            (0x1010100 * t),
+                                        i = (257 * u[o]) ^ (0x1010100 * o),
                                         e = 0;
                                     4 > e;
                                     e++
@@ -4350,15 +4650,15 @@ e.exports = (function e(t, n, r) {
                             var n = (e = e.slice(0, Math.ceil(t / 32))).length;
                             return (
                                 (t &= 31),
-                                0 < n && t && (e[n - 1] = d.bitArray.partial(t, e[n - 1] & (2147483648 >> (t - 1)), 1)),
+                                0 < n && t && (e[n - 1] = d.bitArray.partial(t, e[n - 1] & (0x80000000 >> (t - 1)), 1)),
                                 e
                             );
                         },
                         partial: function (e, t, n) {
-                            return 32 === e ? t : (n ? 0 | t : t << (32 - e)) + 1099511627776 * e;
+                            return 32 === e ? t : (n ? 0 | t : t << (32 - e)) + 0x10000000000 * e;
                         },
                         getPartial: function (e) {
-                            return Math.round(e / 1099511627776) || 32;
+                            return Math.round(e / 0x10000000000) || 32;
                         },
                         equal: function (e, t) {
                             if (d.bitArray.bitLength(e) !== d.bitArray.bitLength(t)) return !1;
@@ -4415,7 +4715,7 @@ e.exports = (function e(t, n, r) {
                         fromBits: function (e) {
                             var t,
                                 n = "";
-                            for (t = 0; t < e.length; t++) n += ((0 | e[t]) + 263882790666240).toString(16).substr(4);
+                            for (t = 0; t < e.length; t++) n += ((0 | e[t]) + 0xf00000000000).toString(16).substr(4);
                             return n.substr(0, d.bitArray.bitLength(e) / 4);
                         },
                         toBits: function (e) {
@@ -4443,7 +4743,7 @@ e.exports = (function e(t, n, r) {
                             "string" == typeof e && (e = d.codec.utf8String.toBits(e));
                             var t,
                                 n = (this.o = d.bitArray.concat(this.o, e));
-                            if (((t = this.h), 9007199254740991 < (e = this.h = t + d.bitArray.bitLength(e))))
+                            if (((t = this.h), 0x1fffffffffffff < (e = this.h = t + d.bitArray.bitLength(e))))
                                 throw new d.exception.invalid("Cannot hash more than 2^53 - 1 bits");
                             if ("u" > typeof Uint32Array) {
                                 var r = new Uint32Array(n),
@@ -4460,7 +4760,7 @@ e.exports = (function e(t, n, r) {
                                 n = this.u,
                                 t = d.bitArray.concat(t, [d.bitArray.partial(1, 1)]);
                             for (e = t.length + 2; 15 & e; e++) t.push(0);
-                            for (t.push(Math.floor(this.h / 4294967296)), t.push(0 | this.h); t.length; )
+                            for (t.push(Math.floor(this.h / 0x100000000)), t.push(0 | this.h); t.length; )
                                 u(this, t.splice(0, 16));
                             return this.reset(), n;
                         },
@@ -4468,7 +4768,7 @@ e.exports = (function e(t, n, r) {
                         b: [],
                         G: function () {
                             function e(e) {
-                                return (4294967296 * (e - Math.floor(e))) | 0;
+                                return (0x100000000 * (e - Math.floor(e))) | 0;
                             }
                             for (var t, n, r = 0, i = 2; 64 > r; i++) {
                                 for (t = 2, n = !0; t * t <= i; t++)
@@ -4505,7 +4805,7 @@ e.exports = (function e(t, n, r) {
                             (this.A = 2),
                             (this.O = 65536),
                             (this.I = [0, 48, 64, 96, 128, 192, 256, 384, 512, 768, 1024]),
-                            (this.P = 30000),
+                            (this.P = 3e4),
                             (this.N = 80);
                     }),
                     (d.prng.prototype = {
@@ -4520,7 +4820,7 @@ e.exports = (function e(t, n, r) {
                                     o = [],
                                     a = 0;
                                 for (i = 0, this.L = o[0] = new Date().valueOf() + this.P; 16 > i; i++)
-                                    o.push((4294967296 * Math.random()) | 0);
+                                    o.push((0x100000000 * Math.random()) | 0);
                                 for (
                                     i = 0;
                                     i < this.c.length &&
@@ -4732,7 +5032,9 @@ e.exports = (function e(t, n, r) {
                             return d;
                         });
             },
-            { crypto: void 0 },
+            {
+                crypto: void 0,
+            },
         ],
         117: [
             function (e, t, n) {
@@ -4743,7 +5045,9 @@ e.exports = (function e(t, n, r) {
                     },
                 };
             },
-            { "../lib/braintree-error": 143 },
+            {
+                "../lib/braintree-error": 143,
+            },
         ],
         118: [
             function (e, t, n) {
@@ -4782,7 +5086,15 @@ e.exports = (function e(t, n, r) {
                                     delete e.deviceData,
                                     delete e.minified,
                                     delete e.btSdkVersion,
-                                    window.braintree.fastlane.create(s({ platformOptions: n }, e, t.metadata))
+                                    window.braintree.fastlane.create(
+                                        s(
+                                            {
+                                                platformOptions: n,
+                                            },
+                                            e,
+                                            t.metadata,
+                                        ),
+                                    )
                                 );
                             })
                             .catch(function (e) {
@@ -4874,7 +5186,9 @@ e.exports = (function e(t, n, r) {
                     },
                 };
             },
-            { "../lib/braintree-error": 143 },
+            {
+                "../lib/braintree-error": 143,
+            },
         ],
         121: [
             function (e, t, n) {
@@ -4891,6 +5205,7 @@ e.exports = (function e(t, n, r) {
                         1: "_createV1PaymentDataRequest",
                         2: "_createV2PaymentDataRequest",
                     };
+
                 function _(e) {
                     if (
                         ((this._createPromise = e.createPromise),
@@ -5027,7 +5342,9 @@ e.exports = (function e(t, n, r) {
                                             code: d.GOOGLE_PAYMENT_GATEWAY_ERROR.code,
                                             message: d.GOOGLE_PAYMENT_GATEWAY_ERROR.message,
                                             type: d.GOOGLE_PAYMENT_GATEWAY_ERROR.type,
-                                            details: { originalError: e },
+                                            details: {
+                                                originalError: e,
+                                            },
                                         }),
                                     )
                                 );
@@ -5162,11 +5479,13 @@ e.exports = (function e(t, n, r) {
                     a = e("../shared/find-parent-tags"),
                     s = ["INPUT", "SELECT", "TEXTAREA"],
                     c = ["hidden", "button", "reset", "submit", "checkbox", "radio", "file"];
+
                 function d(e) {
                     return i.hasSoftwareKeyboard()
                         ? s.indexOf(e.tagName) > -1 && 0 > c.indexOf(e.type)
                         : "hidden" !== e.type;
                 }
+
                 function l(e) {
                     var t, n;
                     for (t = 0; t < e.length; t++) if (d((n = e[t]))) return n;
@@ -5253,7 +5572,9 @@ e.exports = (function e(t, n, r) {
                     );
                 };
             },
-            { "../shared/constants": 131 },
+            {
+                "../shared/constants": 131,
+            },
         ],
         127: [
             function (e, t, n) {
@@ -5288,6 +5609,7 @@ e.exports = (function e(t, n, r) {
                     D = e("@braintree/wrap-promise"),
                     w = e("./focus-change"),
                     L = e("../shared/focus-intercept").destroy;
+
                 function M(e) {
                     var t,
                         n,
@@ -5386,14 +5708,18 @@ e.exports = (function e(t, n, r) {
                                         type: E.HOSTED_FIELDS_FIELD_PROPERTY_INVALID.type,
                                         code: E.HOSTED_FIELDS_FIELD_PROPERTY_INVALID.code,
                                         message: "The value for maxlength must be a number.",
-                                        details: { fieldKey: t },
+                                        details: {
+                                            fieldKey: t,
+                                        },
                                     });
                                 if (n.minlength && "number" != typeof n.minlength)
                                     throw new l({
                                         type: E.HOSTED_FIELDS_FIELD_PROPERTY_INVALID.type,
                                         code: E.HOSTED_FIELDS_FIELD_PROPERTY_INVALID.code,
                                         message: "The value for minlength must be a number.",
-                                        details: { fieldKey: t },
+                                        details: {
+                                            fieldKey: t,
+                                        },
                                     });
                                 (o = s({
                                     type: t,
@@ -5441,7 +5767,9 @@ e.exports = (function e(t, n, r) {
                             A.TRIGGER_FOCUS_CHANGE,
                             w.createFocusChangeHandler(k, {
                                 onRemoveFocusIntercepts: function (e) {
-                                    b._bus.emit(A.REMOVE_FOCUS_INTERCEPTS, { id: e });
+                                    b._bus.emit(A.REMOVE_FOCUS_INTERCEPTS, {
+                                        id: e,
+                                    });
                                 },
                                 onTriggerInputFocus: function (e) {
                                     b.focus(e);
@@ -5457,7 +5785,9 @@ e.exports = (function e(t, n, r) {
                             N.sendEvent(b._clientPromise, "hosted-fields.input.started");
                         }),
                         this._bus.on(A.BIN_AVAILABLE, function (e) {
-                            b._emit("binAvailable", { bin: e });
+                            b._emit("binAvailable", {
+                                bin: e,
+                            });
                         }),
                         (t = setTimeout(function () {
                             N.sendEvent(b._clientPromise, "custom.hosted-fields.load.timed-out"), b._emit("timeout");
@@ -5542,6 +5872,7 @@ e.exports = (function e(t, n, r) {
                                 for (r = 0; r < n.length; r++) n[r].removeEventListener("click", a, !1);
                             });
                         }
+
                         function a() {
                             i.focus(e);
                         }
@@ -5560,7 +5891,9 @@ e.exports = (function e(t, n, r) {
                               ? w.removeExtraFocusElements(
                                     e,
                                     function (e) {
-                                        this._bus.emit(A.REMOVE_FOCUS_INTERCEPTS, { id: e });
+                                        this._bus.emit(A.REMOVE_FOCUS_INTERCEPTS, {
+                                            id: e,
+                                        });
                                     }.bind(this),
                                 )
                               : this._bus.emit(A.REMOVE_FOCUS_INTERCEPTS);
@@ -5765,7 +6098,9 @@ e.exports = (function e(t, n, r) {
                         var t;
                         return (O.hasOwnProperty(e)
                             ? this._fields.hasOwnProperty(e)
-                                ? this._bus.emit(A.CLEAR_FIELD, { field: e })
+                                ? this._bus.emit(A.CLEAR_FIELD, {
+                                      field: e,
+                                  })
                                 : (t = new l({
                                       type: E.HOSTED_FIELDS_FIELD_NOT_PRESENT.type,
                                       code: E.HOSTED_FIELDS_FIELD_NOT_PRESENT.code,
@@ -5792,7 +6127,9 @@ e.exports = (function e(t, n, r) {
                         return (O.hasOwnProperty(e)
                             ? this._fields.hasOwnProperty(e)
                                 ? (n.frameElement.focus(),
-                                  this._bus.emit(A.TRIGGER_INPUT_FOCUS, { field: e }),
+                                  this._bus.emit(A.TRIGGER_INPUT_FOCUS, {
+                                      field: e,
+                                  }),
                                   y.isIos() &&
                                       setTimeout(function () {
                                           var e, t, r;
@@ -6229,7 +6566,9 @@ e.exports = (function e(t, n, r) {
                     },
                 };
             },
-            { "../../lib/braintree-error": 143 },
+            {
+                "../../lib/braintree-error": 143,
+            },
         ],
         133: [
             function (e, t, n) {
@@ -6323,7 +6662,9 @@ e.exports = (function e(t, n, r) {
                     );
                 };
             },
-            { "credit-card-type": 42 },
+            {
+                "credit-card-type": 42,
+            },
         ],
         136: [
             function (e, t, n) {
@@ -6580,17 +6921,21 @@ e.exports = (function e(t, n, r) {
                         a = o,
                         s = r(t);
                     if (0 === o) return void s(null);
+
                     function c(e) {
                         e ? s(e) : 0 == (a -= 1) && s(null);
                     }
                     for (i = 0; i < o; i++) (n = e[i]), 0 === n.length ? (n(), c(null)) : n(c);
                 };
             },
-            { "./once": 176 },
+            {
+                "./once": 176,
+            },
         ],
         143: [
             function (e, t, n) {
                 var r = e("./enumerate");
+
                 function i(e) {
                     if (!i.types.hasOwnProperty(e.type)) throw Error(e.type + " is not a valid type.");
                     if (!e.code) throw Error("Error code required.");
@@ -6611,7 +6956,9 @@ e.exports = (function e(t, n, r) {
                     }),
                     (t.exports = i);
             },
-            { "./enumerate": 153 },
+            {
+                "./enumerate": 153,
+            },
         ],
         144: [
             function (e, t, n) {
@@ -6646,7 +6993,7 @@ e.exports = (function e(t, n, r) {
                 var r = "3.112.1";
                 t.exports = {
                     ANALYTICS_PREFIX: "web.",
-                    ANALYTICS_REQUEST_TIMEOUT_MS: 2000,
+                    ANALYTICS_REQUEST_TIMEOUT_MS: 2e3,
                     ANALYTICS_URL: "https://www.paypal.com/xoplatform/logger/api/logger",
                     ASSETS_URLS: {
                         production: "https://assets.braintreegateway.com",
@@ -6664,7 +7011,7 @@ e.exports = (function e(t, n, r) {
                         production: "https://payments.braintree-api.com/graphql",
                         sandbox: "https://payments.sandbox.braintree-api.com/graphql",
                     },
-                    INTEGRATION_TIMEOUT_MS: 60000,
+                    INTEGRATION_TIMEOUT_MS: 6e4,
                     VERSION: r,
                     INTEGRATION: "custom",
                     SOURCE: "client",
@@ -6705,11 +7052,15 @@ e.exports = (function e(t, n, r) {
                               type: t.type,
                               code: t.code,
                               message: t.message,
-                              details: { originalError: e },
+                              details: {
+                                  originalError: e,
+                              },
                           });
                 };
             },
-            { "./braintree-error": 143 },
+            {
+                "./braintree-error": 143,
+            },
         ],
         148: [
             function (e, t, n) {
@@ -6720,7 +7071,9 @@ e.exports = (function e(t, n, r) {
                     },
                 };
             },
-            { "./constants": 145 },
+            {
+                "./constants": 145,
+            },
         ],
         149: [
             function (e, t, n) {
@@ -6771,14 +7124,18 @@ e.exports = (function e(t, n, r) {
                             ? Promise.resolve(e.client)
                             : ((window.braintree && window.braintree.client) ||
                                   (t = i
-                                      .loadScript({ src: e.assetsUrl + "/web/" + a + "/js/client.min.js" })
+                                      .loadScript({
+                                          src: e.assetsUrl + "/web/" + a + "/js/client.min.js",
+                                      })
                                       .catch(function (e) {
                                           return Promise.reject(
                                               new r({
                                                   type: o.CLIENT_SCRIPT_FAILED_TO_LOAD.type,
                                                   code: o.CLIENT_SCRIPT_FAILED_TO_LOAD.code,
                                                   message: o.CLIENT_SCRIPT_FAILED_TO_LOAD.message,
-                                                  details: { originalError: e },
+                                                  details: {
+                                                      originalError: e,
+                                                  },
                                               }),
                                           );
                                       })),
@@ -6828,6 +7185,7 @@ e.exports = (function e(t, n, r) {
         152: [
             function (e, t, n) {
                 var r = e("./batch-execute-functions");
+
                 function i() {
                     (this._teardownRegistry = []), (this._isTearingDown = !1);
                 }
@@ -6849,7 +7207,9 @@ e.exports = (function e(t, n, r) {
                     }),
                     (t.exports = i);
             },
-            { "./batch-execute-functions": 142 },
+            {
+                "./batch-execute-functions": 142,
+            },
         ],
         153: [
             function (e, t, n) {
@@ -6891,7 +7251,9 @@ e.exports = (function e(t, n, r) {
                     },
                 };
             },
-            { "./braintree-error": 143 },
+            {
+                "./braintree-error": 143,
+            },
         ],
         155: [
             function (e, t, n) {
@@ -6928,7 +7290,9 @@ e.exports = (function e(t, n, r) {
                     E = e("./../../assign").assign,
                     h = e("../../constants").BUS_CONFIGURATION_REQUEST_EVENT,
                     m = ["name", "dispatchFrameUrl", "openFrameUrl"];
+
                 function f() {}
+
                 function y(e) {
                     if (!e) throw Error("Valid configuration is required");
                     if (
@@ -6949,7 +7313,9 @@ e.exports = (function e(t, n, r) {
                             left: e.left,
                         }),
                         (this.state = e.state || {}),
-                        (this._bus = new a({ channel: this._serviceId })),
+                        (this._bus = new a({
+                            channel: this._serviceId,
+                        })),
                         this._setBusEvents();
                 }
                 (y.prototype.initialize = function (e) {
@@ -7102,7 +7468,9 @@ e.exports = (function e(t, n, r) {
                     },
                 };
             },
-            { "./frame-service": 157 },
+            {
+                "./frame-service": 157,
+            },
         ],
         159: [
             function (e, t, n) {
@@ -7121,7 +7489,9 @@ e.exports = (function e(t, n, r) {
                         zIndex: 20001,
                         background: "#FFFFFF",
                     };
+
                 function s() {}
+
                 function c(e) {
                     (this._closed = null),
                         (this._frame = null),
@@ -7197,7 +7567,9 @@ e.exports = (function e(t, n, r) {
             function (e, t, n) {
                 var r = e("../../../braintree-error"),
                     i = e("../../shared/errors");
+
                 function o() {}
+
                 function a(e) {
                     (this._closed = null), (this._options = e);
                 }
@@ -7220,7 +7592,9 @@ e.exports = (function e(t, n, r) {
                         return !!this._closed;
                     }),
                     (a.prototype.redirect = function (e) {
-                        this.open({ openFrameUrl: e });
+                        this.open({
+                            openFrameUrl: e,
+                        });
                     }),
                     (t.exports = a);
             },
@@ -7233,6 +7607,7 @@ e.exports = (function e(t, n, r) {
             function (e, t, n) {
                 var r = e("../../../shared/constants"),
                     i = e("./position");
+
                 function o(e, t, n) {
                     return void 0 !== t ? t : i[e](n);
                 }
@@ -7252,6 +7627,7 @@ e.exports = (function e(t, n, r) {
         162: [
             function (e, t, n) {
                 var r = e("./compose-options");
+
                 function i(e) {
                     (this._frame = null), (this._options = e || {});
                 }
@@ -7273,7 +7649,9 @@ e.exports = (function e(t, n, r) {
                     }),
                     (t.exports = i);
             },
-            { "./compose-options": 161 },
+            {
+                "./compose-options": 161,
+            },
         ],
         163: [
             function (e, t, n) {
@@ -7343,18 +7721,23 @@ e.exports = (function e(t, n, r) {
                     },
                 };
             },
-            { "../../braintree-error": 143 },
+            {
+                "../../braintree-error": 143,
+            },
         ],
         167: [
             function (e, t, n) {
                 t.exports = e("../../enumerate")(["DISPATCH_FRAME_READY", "DISPATCH_FRAME_REPORT"], "frameService:");
             },
-            { "../../enumerate": 153 },
+            {
+                "../../enumerate": 153,
+            },
         ],
         168: [
             function (e, t, n) {
                 var r = "3.112.1",
                     i = e("./assign").assign;
+
                 function o(e, t) {
                     var n = e.analyticsMetadata;
                     return i(
@@ -7405,7 +7788,10 @@ e.exports = (function e(t, n, r) {
                                       },
                                   ],
                               }),
-                              n && (r.merchantInfo = { merchantId: n }),
+                              n &&
+                                  (r.merchantInfo = {
+                                      merchantId: n,
+                                  }),
                               a.paypalClientId &&
                                   ((i = {
                                       type: "PAYPAL",
@@ -7413,7 +7799,9 @@ e.exports = (function e(t, n, r) {
                                           purchase_context: {
                                               purchase_units: [
                                                   {
-                                                      payee: { client_id: a.paypalClientId },
+                                                      payee: {
+                                                          client_id: a.paypalClientId,
+                                                      },
                                                       recurring_payment: !0,
                                                   },
                                               ],
@@ -7421,7 +7809,9 @@ e.exports = (function e(t, n, r) {
                                       },
                                       tokenizationSpecification: {
                                           type: "PAYMENT_GATEWAY",
-                                          parameters: o(e, { "braintree:paypalClientId": a.paypalClientId }),
+                                          parameters: o(e, {
+                                              "braintree:paypalClientId": a.paypalClientId,
+                                          }),
                                       },
                                   }),
                                   r.allowedPaymentMethods.push(i)))
@@ -7449,7 +7839,9 @@ e.exports = (function e(t, n, r) {
                     );
                 };
             },
-            { "./assign": 140 },
+            {
+                "./assign": 140,
+            },
         ],
         169: [
             function (e, t, n) {
@@ -7550,6 +7942,7 @@ e.exports = (function e(t, n, r) {
                 function r(e) {
                     return (e = e || window.location.href), /\?/.test(e);
                 }
+
                 function i(e, t) {
                     var n,
                         r,
@@ -7611,9 +8004,11 @@ e.exports = (function e(t, n, r) {
             function (e, t, n) {
                 var r = e("@braintree/uuid"),
                     i = e("./find-root-node");
+
                 function o(e) {
                     return "[object ShadowRoot]" === (e = i(e)).toString();
                 }
+
                 function a(e) {
                     return o((e = i(e))) ? e.host : null;
                 }
@@ -7665,7 +8060,9 @@ e.exports = (function e(t, n, r) {
                     },
                 };
             },
-            { "./querystring": 177 },
+            {
+                "./querystring": 177,
+            },
         ],
         181: [
             function (e, t, n) {
@@ -7678,6 +8075,7 @@ e.exports = (function e(t, n, r) {
         182: [
             function (e, t, n) {
                 var r = "function" == typeof atob ? atob : i;
+
                 function i(e) {
                     var t,
                         n,
@@ -7779,6 +8177,7 @@ e.exports = (function e(t, n, r) {
                     E = e("./constants"),
                     h = e("../shared/errors"),
                     m = e("../../lib/assign").assign;
+
                 function f(e) {
                     (this._client = e.client),
                         (this._assetsUrl = e.client.getConfiguration().gatewayConfiguration.assetsUrl + "/web/3.112.1"),
@@ -7790,6 +8189,7 @@ e.exports = (function e(t, n, r) {
                         (this._merchantAccountId = e.merchantAccountId),
                         e.redirectUrl && ((this._redirectUrl = e.redirectUrl), (this._isRedirectFlow = !0));
                 }
+
                 function y(e) {
                     var t = e.blikOptions || {},
                         n = "string" == typeof e.paymentType ? e.paymentType.toLowerCase() : e.paymentType;
@@ -7995,7 +8395,10 @@ e.exports = (function e(t, n, r) {
                                     state: r.region,
                                 }),
                                 O._isRedirectFlow
-                                    ? ((I = p.queryify(O._redirectUrl, { wasCanceled: !0 })), (N = O._redirectUrl))
+                                    ? ((I = p.queryify(O._redirectUrl, {
+                                          wasCanceled: !0,
+                                      })),
+                                      (N = O._redirectUrl))
                                     : ((I = p.queryify(
                                           O._assetsUrl + "/html/local-payment-redirect-frame" + o(O._isDebug) + ".html",
                                           {
@@ -8079,7 +8482,9 @@ e.exports = (function e(t, n, r) {
                                                 : O._isRedirectFlow
                                                   ? (window.location.href = t.paymentResource.redirectUrl)
                                                   : e.onPaymentStart(
-                                                        { paymentId: t.paymentResource.paymentToken },
+                                                        {
+                                                            paymentId: t.paymentResource.paymentToken,
+                                                        },
                                                         function () {
                                                             O._frameService.redirect(t.paymentResource.redirectUrl);
                                                         },
@@ -8095,7 +8500,9 @@ e.exports = (function e(t, n, r) {
                                                       type: h.LOCAL_PAYMENT_INVALID_PAYMENT_OPTION.type,
                                                       code: h.LOCAL_PAYMENT_INVALID_PAYMENT_OPTION.code,
                                                       message: h.LOCAL_PAYMENT_INVALID_PAYMENT_OPTION.message,
-                                                      details: { originalError: e },
+                                                      details: {
+                                                          originalError: e,
+                                                      },
                                                   }),
                                               )
                                             : d.reject(
@@ -8206,7 +8613,9 @@ e.exports = (function e(t, n, r) {
                                                 code: h.LOCAL_PAYMENT_WINDOW_OPEN_FAILED.code,
                                                 type: h.LOCAL_PAYMENT_WINDOW_OPEN_FAILED.type,
                                                 message: h.LOCAL_PAYMENT_WINDOW_OPEN_FAILED.message,
-                                                details: { originalError: o },
+                                                details: {
+                                                    originalError: o,
+                                                },
                                             }),
                                         );
                             else
@@ -8402,7 +8811,9 @@ e.exports = (function e(t, n, r) {
                     },
                 };
             },
-            { "../../lib/braintree-error": 143 },
+            {
+                "../../lib/braintree-error": 143,
+            },
         ],
         187: [
             function (e, t, n) {
@@ -8416,6 +8827,7 @@ e.exports = (function e(t, n, r) {
                     l = e("../../lib/convert-to-braintree-error"),
                     u = e("../shared/constants"),
                     p = e("../../lib/constants").INTEGRATION_TIMEOUT_MS;
+
                 function _(e) {
                     var t = e.client.getConfiguration();
                     (this._client = e.client),
@@ -8554,7 +8966,9 @@ e.exports = (function e(t, n, r) {
                                                       code: o.MASTERPASS_POPUP_OPEN_FAILED.code,
                                                       type: o.MASTERPASS_POPUP_OPEN_FAILED.type,
                                                       message: o.MASTERPASS_POPUP_OPEN_FAILED.message,
-                                                      details: { originalError: r },
+                                                      details: {
+                                                          originalError: r,
+                                                      },
                                                   }),
                                               );
                                           return;
@@ -8647,6 +9061,7 @@ e.exports = (function e(t, n, r) {
                     s = e("../lib/create-deferred-client"),
                     c = e("../lib/create-assets-url"),
                     d = e("./shared/errors");
+
                 function l() {
                     return !!(window.popupBridge || o.supportsPopups());
                 }
@@ -8696,9 +9111,13 @@ e.exports = (function e(t, n, r) {
         ],
         189: [
             function (e, t, n) {
-                t.exports = { supportsPopups: e("@braintree/browser-detection/supports-popups") };
+                t.exports = {
+                    supportsPopups: e("@braintree/browser-detection/supports-popups"),
+                };
             },
-            { "@braintree/browser-detection/supports-popups": 29 },
+            {
+                "@braintree/browser-detection/supports-popups": 29,
+            },
         ],
         190: [
             function (e, t, n) {
@@ -8770,7 +9189,9 @@ e.exports = (function e(t, n, r) {
                     },
                 };
             },
-            { "../../lib/braintree-error": 143 },
+            {
+                "../../lib/braintree-error": 143,
+            },
         ],
         192: [
             function (e, t, n) {
@@ -8799,6 +9220,7 @@ e.exports = (function e(t, n, r) {
                         UnionPay: "unionpay",
                         Maestro: "maestro",
                     };
+
                 function A(e) {
                     var t = e.enabledPaymentMethods || {};
                     p.call(this),
@@ -8816,7 +9238,9 @@ e.exports = (function e(t, n, r) {
                                 return this._supportedPaymentMethods[e];
                             }.bind(this),
                         )),
-                        (this._bus = new o({ channel: this._componentId }));
+                        (this._bus = new o({
+                            channel: this._componentId,
+                        }));
                 }
                 p.createChild(A),
                     (A.prototype._constructDefaultSupportedPaymentMethods = function () {
@@ -8872,7 +9296,9 @@ e.exports = (function e(t, n, r) {
                                           r.sendEvent(t._client, "payment-request.initialized"),
                                               t._bus.on(h.SHIPPING_ADDRESS_CHANGE, function (e) {
                                                   var n = {
-                                                      target: { shippingAddress: e },
+                                                      target: {
+                                                          shippingAddress: e,
+                                                      },
                                                       updateWith: function (e) {
                                                           t._bus.emit(h.UPDATE_SHIPPING_ADDRESS, e);
                                                       },
@@ -8882,7 +9308,9 @@ e.exports = (function e(t, n, r) {
                                               }),
                                               t._bus.on(h.SHIPPING_OPTION_CHANGE, function (e) {
                                                   var n = {
-                                                      target: { shippingOption: e },
+                                                      target: {
+                                                          shippingOption: e,
+                                                      },
                                                       updateWith: function (e) {
                                                           t._bus.emit(h.UPDATE_SHIPPING_OPTION, e);
                                                       },
@@ -9001,7 +9429,9 @@ e.exports = (function e(t, n, r) {
                                         type: m.PAYMENT_REQUEST_CANCELED.type,
                                         code: m.PAYMENT_REQUEST_CANCELED.code,
                                         message: m.PAYMENT_REQUEST_CANCELED.message,
-                                        details: { originalError: e },
+                                        details: {
+                                            originalError: e,
+                                        },
                                     })),
                                     r.sendEvent(this._client, "payment-request.tokenize.canceled"),
                                     t
@@ -9011,7 +9441,9 @@ e.exports = (function e(t, n, r) {
                                     type: m.PAYMENT_REQUEST_INITIALIZATION_MISCONFIGURED.type,
                                     code: m.PAYMENT_REQUEST_INITIALIZATION_MISCONFIGURED.code,
                                     message: m.PAYMENT_REQUEST_INITIALIZATION_MISCONFIGURED.message,
-                                    details: { originalError: e },
+                                    details: {
+                                        originalError: e,
+                                    },
                                 });
                                 break;
                             case "BRAINTREE_GATEWAY_GOOGLE_PAYMENT_TOKENIZATION_ERROR":
@@ -9019,7 +9451,9 @@ e.exports = (function e(t, n, r) {
                                     type: m.PAYMENT_REQUEST_GOOGLE_PAYMENT_FAILED_TO_TOKENIZE.type,
                                     code: m.PAYMENT_REQUEST_GOOGLE_PAYMENT_FAILED_TO_TOKENIZE.code,
                                     message: m.PAYMENT_REQUEST_GOOGLE_PAYMENT_FAILED_TO_TOKENIZE.message,
-                                    details: { originalError: e },
+                                    details: {
+                                        originalError: e,
+                                    },
                                 });
                                 break;
                             case "BRAINTREE_GATEWAY_GOOGLE_PAYMENT_PARSING_ERROR":
@@ -9027,7 +9461,9 @@ e.exports = (function e(t, n, r) {
                                     type: m.PAYMENT_REQUEST_GOOGLE_PAYMENT_PARSING_ERROR.type,
                                     code: m.PAYMENT_REQUEST_GOOGLE_PAYMENT_PARSING_ERROR.code,
                                     message: m.PAYMENT_REQUEST_GOOGLE_PAYMENT_PARSING_ERROR.message,
-                                    details: { originalError: e },
+                                    details: {
+                                        originalError: e,
+                                    },
                                 });
                                 break;
                             default:
@@ -9035,7 +9471,9 @@ e.exports = (function e(t, n, r) {
                                     code: m.PAYMENT_REQUEST_NOT_COMPLETED.code,
                                     type: e.type || _.types.CUSTOMER,
                                     message: m.PAYMENT_REQUEST_NOT_COMPLETED.message,
-                                    details: { originalError: e },
+                                    details: {
+                                        originalError: e,
+                                    },
                                 });
                         }
                         return r.sendEvent(this._client, "payment-request.tokenize.failed"), t;
@@ -9048,7 +9486,9 @@ e.exports = (function e(t, n, r) {
                                     type: m.PAYMENT_REQUEST_INITIALIZATION_MISCONFIGURED.type,
                                     code: m.PAYMENT_REQUEST_INITIALIZATION_MISCONFIGURED.code,
                                     message: m.PAYMENT_REQUEST_INITIALIZATION_MISCONFIGURED.message,
-                                    details: { originalError: e },
+                                    details: {
+                                        originalError: e,
+                                    },
                                 });
                                 break;
                             case "NotAllowedError":
@@ -9056,7 +9496,9 @@ e.exports = (function e(t, n, r) {
                                     type: m.PAYMENT_REQUEST_CAN_MAKE_PAYMENT_NOT_ALLOWED.type,
                                     code: m.PAYMENT_REQUEST_CAN_MAKE_PAYMENT_NOT_ALLOWED.code,
                                     message: m.PAYMENT_REQUEST_CAN_MAKE_PAYMENT_NOT_ALLOWED.message,
-                                    details: { originalError: e },
+                                    details: {
+                                        originalError: e,
+                                    },
                                 });
                                 break;
                             default:
@@ -9064,7 +9506,9 @@ e.exports = (function e(t, n, r) {
                                     code: m.PAYMENT_REQUEST_CAN_MAKE_PAYMENT_FAILED.code,
                                     type: m.PAYMENT_REQUEST_CAN_MAKE_PAYMENT_FAILED.type,
                                     message: m.PAYMENT_REQUEST_CAN_MAKE_PAYMENT_FAILED.message,
-                                    details: { originalError: e },
+                                    details: {
+                                        originalError: e,
+                                    },
                                 });
                         }
                         return r.sendEvent(this._client, "payment-request.can-make-payment.failed"), t;
@@ -9216,7 +9660,9 @@ e.exports = (function e(t, n, r) {
                     },
                 };
             },
-            { "../../lib/braintree-error": 143 },
+            {
+                "../../lib/braintree-error": 143,
+            },
         ],
         196: [
             function (e, t, n) {
@@ -9285,7 +9731,9 @@ e.exports = (function e(t, n, r) {
                     },
                 };
             },
-            { "../lib/braintree-error": 143 },
+            {
+                "../lib/braintree-error": 143,
+            },
         ],
         197: [
             function (e, t, n) {
@@ -9337,6 +9785,7 @@ e.exports = (function e(t, n, r) {
                     A = e("../lib/camel-case-to-snake-case"),
                     T = e("../lib/constants").INTEGRATION_TIMEOUT_MS,
                     I = ["amount", "currency", "vaultInitiatedCheckoutPaymentMethodToken"];
+
                 function N(e) {
                     (this._merchantAccountId = e.merchantAccountId),
                         (this._autoSetDataUserIdToken = !!e.autoSetDataUserIdToken);
@@ -9453,7 +9902,9 @@ e.exports = (function e(t, n, r) {
                                                     type: u.PAYPAL_INVALID_PAYMENT_OPTION.type,
                                                     code: u.PAYPAL_INVALID_PAYMENT_OPTION.code,
                                                     message: u.PAYPAL_INVALID_PAYMENT_OPTION.message,
-                                                    details: { originalError: e },
+                                                    details: {
+                                                        originalError: e,
+                                                    },
                                                 }),
                                             )
                                           : Promise.reject(
@@ -9489,7 +9940,9 @@ e.exports = (function e(t, n, r) {
                                                       type: u.PAYPAL_INVALID_PAYMENT_OPTION.type,
                                                       code: u.PAYPAL_INVALID_PAYMENT_OPTION.code,
                                                       message: u.PAYPAL_INVALID_PAYMENT_OPTION.message,
-                                                      details: { originalError: e },
+                                                      details: {
+                                                          originalError: e,
+                                                      },
                                                   }),
                                               ))
                                             : (r.sendEvent(
@@ -9540,7 +9993,9 @@ e.exports = (function e(t, n, r) {
                                 )
                               : ((this._vaultInitiatedCheckoutInProgress = !0),
                                 this._addModalBackdrop(e),
-                                (e = i({}, e, { flow: "checkout" })),
+                                (e = i({}, e, {
+                                    flow: "checkout",
+                                })),
                                 r.sendEvent(this._clientPromise, "paypal-checkout.startVaultInitiatedCheckout.started"),
                                 this._waitForVaultInitiatedCheckoutDependencies()
                                     .then(function () {
@@ -9580,7 +10035,9 @@ e.exports = (function e(t, n, r) {
                                                         message:
                                                             u.PAYPAL_START_VAULT_INITIATED_CHECKOUT_POPUP_OPEN_FAILED
                                                                 .message,
-                                                        details: { originalError: e },
+                                                        details: {
+                                                            originalError: e,
+                                                        },
                                                     }),
                                                 ))
                                               : Promise.reject(e);
@@ -9750,7 +10207,13 @@ e.exports = (function e(t, n, r) {
                                     this._authorizationInformation.fingerprint &&
                                     this._authorizationInformation.fingerprint.split("?")[0]),
                             (this._paypalScript = document.createElement("script")),
-                            (e = i({}, { components: "buttons" }, e)),
+                            (e = i(
+                                {},
+                                {
+                                    components: "buttons",
+                                },
+                                e,
+                            )),
                             delete e.dataAttributes,
                             e.vault
                                 ? (e.intent = e.intent || "tokenize")
@@ -9905,7 +10368,9 @@ e.exports = (function e(t, n, r) {
                             a = {
                                 paypalAccount: {
                                     correlationId: this._riskCorrelationId || t.billingToken || t.ecToken,
-                                    options: { validate: o && !i && e.vault },
+                                    options: {
+                                        validate: o && !i && e.vault,
+                                    },
                                 },
                             };
                         return (
@@ -9996,6 +10461,7 @@ e.exports = (function e(t, n, r) {
                     h = e("../../lib/convert-methods-to-error"),
                     m = e("../../lib/querystring"),
                     f = e("@braintree/wrap-promise");
+
                 function y(e) {
                     (this._client = e.client),
                         (this._assetsUrl =
@@ -10082,7 +10548,9 @@ e.exports = (function e(t, n, r) {
                                                         code: E.PAYPAL_POPUP_OPEN_FAILED.code,
                                                         type: E.PAYPAL_POPUP_OPEN_FAILED.type,
                                                         message: E.PAYPAL_POPUP_OPEN_FAILED.message,
-                                                        details: { originalError: a },
+                                                        details: {
+                                                            originalError: a,
+                                                        },
                                                     }),
                                                 )
                                           : s && r._tokenizePayPal(e, s).then(t).catch(n);
@@ -10151,7 +10619,9 @@ e.exports = (function e(t, n, r) {
                             o = {
                                 paypalAccount: {
                                     correlationId: t.ba_token || t.token,
-                                    options: { validate: "vault" === e.flow && !i },
+                                    options: {
+                                        validate: "vault" === e.flow && !i,
+                                    },
                                 },
                             };
                         return (
@@ -10180,7 +10650,10 @@ e.exports = (function e(t, n, r) {
                                     "checkout" === e.flow
                                         ? r.paymentResource.redirectUrl
                                         : r.agreementSetup.approvalUrl),
-                                    "commit" === e.useraction && (i = m.queryify(i, { useraction: "commit" })),
+                                    "commit" === e.useraction &&
+                                        (i = m.queryify(i, {
+                                            useraction: "commit",
+                                        })),
                                     window.popupBridge && u.sendEvent(n, "paypal.tokenization.opened-popupbridge"),
                                     t._frameService.redirect(i);
                             })
@@ -10192,7 +10665,9 @@ e.exports = (function e(t, n, r) {
                                               type: E.PAYPAL_INVALID_PAYMENT_OPTION.type,
                                               code: E.PAYPAL_INVALID_PAYMENT_OPTION.code,
                                               message: E.PAYPAL_INVALID_PAYMENT_OPTION.message,
-                                              details: { originalError: e },
+                                              details: {
+                                                  originalError: e,
+                                              },
                                           }),
                                       )
                                     : Promise.reject(
@@ -10397,7 +10872,9 @@ e.exports = (function e(t, n, r) {
                     },
                 };
             },
-            { "../../lib/braintree-error": 143 },
+            {
+                "../../lib/braintree-error": 143,
+            },
         ],
         203: [
             function (e, t, n) {
@@ -10431,6 +10908,7 @@ e.exports = (function e(t, n, r) {
                     i = e("../lib/analytics"),
                     o = e("../lib/create-assets-url"),
                     a = e("../lib/create-deferred-client");
+
                 function s() {}
                 (s.prototype.initialize = function (e) {
                     var t = this;
@@ -10503,6 +10981,7 @@ e.exports = (function e(t, n, r) {
                     c = e("../shared/constants").BILLING_ADDRESS_OPTIONS,
                     d = e("../../lib/snake-case-to-camel-case"),
                     l = e("../../lib/assign").assign;
+
                 function u(e, t) {
                     var n = {
                         sepa_debit_account: {
@@ -10538,7 +11017,9 @@ e.exports = (function e(t, n, r) {
                         var n = {
                             sepa_debit: {
                                 account_holder_name: t.accountHolderName,
-                                billing_address: { country_code: t.countryCode },
+                                billing_address: {
+                                    country_code: t.countryCode,
+                                },
                                 iban: t.iban,
                                 merchant_or_partner_customer_id: t.customerId,
                                 mandate_type: t.mandateType,
@@ -10669,6 +11150,7 @@ e.exports = (function e(t, n, r) {
                     c = e("../shared/has-missing-option"),
                     d = e("../../lib/analytics"),
                     l = e("../../lib/assign").assign;
+
                 function u(e) {
                     var t = e.client.getConfiguration();
                     (this._client = e.client),
@@ -10871,7 +11353,9 @@ e.exports = (function e(t, n, r) {
                     },
                 };
             },
-            { "../../lib/braintree-error": 143 },
+            {
+                "../../lib/braintree-error": 143,
+            },
         ],
         210: [
             function (e, t, n) {
@@ -10900,6 +11384,7 @@ e.exports = (function e(t, n, r) {
                     h = e("../../../lib/use-min"),
                     m = e("../../../lib/constants").BUS_CONFIGURATION_REQUEST_EVENT,
                     f = "3.112.1";
+
                 function y(e) {
                     c.call(this),
                         (this._client = e.client),
@@ -11008,7 +11493,9 @@ e.exports = (function e(t, n, r) {
                                                 type: t.type,
                                                 code: t.code,
                                                 message: t.message,
-                                                details: { originalError: e },
+                                                details: {
+                                                    originalError: e,
+                                                },
                                             }),
                                         )
                                     );
@@ -11100,7 +11587,9 @@ e.exports = (function e(t, n, r) {
                         return r({}, e);
                     }),
                     (y.prototype._formatLookupData = function (e) {
-                        var t = { amount: e.amount };
+                        var t = {
+                            amount: e.amount,
+                        };
                         return (
                             !0 === e.collectDeviceData &&
                                 ((t.browserColorDepth = window.screen.colorDepth),
@@ -11234,15 +11723,18 @@ e.exports = (function e(t, n, r) {
         212: [
             function (e, t, n) {
                 var r = e("./songbird");
+
                 function i(e) {
                     r.call(this, e);
                 }
-                (i.prototype = Object.create(r.prototype, { constructor: r })),
+                (i.prototype = Object.create(r.prototype, {
+                    constructor: r,
+                })),
                     (i.prototype._createV1IframeModalElement = function (e) {
                         var t = document.createElement("div");
                         return (
                             (t.innerHTML =
-                                '<div class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="CCAFrameModal-label" aria-hidden="true" style="display: block;"><div class="modal-dialog" style="width:440px;z-index:999999;"><div class="modal-content"><div class="modal-body" data-braintree-v1-fallback-iframe-container><button type="button" data-braintree-v1-fallback-close-button class="close" data-dismiss="modal" aria-hidden="true">\xD7</button></div></div></div><div data-braintree-v1-fallback-backdrop style="position: fixed;cursor: pointer;z-index: 999998;top: 0;left: 0;width: 100%;height: 100%;"></div></div>'),
+                                '<div class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="CCAFrameModal-label" aria-hidden="true" style="display: block;"><div class="modal-dialog" style="width:440px;z-index:999999;"><div class="modal-content"><div class="modal-body" data-braintree-v1-fallback-iframe-container><button type="button" data-braintree-v1-fallback-close-button class="close" data-dismiss="modal" aria-hidden="true">\xd7</button></div></div></div><div data-braintree-v1-fallback-backdrop style="position: fixed;cursor: pointer;z-index: 999998;top: 0;left: 0;width: 100%;height: 100%;"></div></div>'),
                             t.querySelector("[data-braintree-v1-fallback-iframe-container]").appendChild(e),
                             t
                         );
@@ -11253,15 +11745,20 @@ e.exports = (function e(t, n, r) {
                     }),
                     (t.exports = i);
             },
-            { "./songbird": 217 },
+            {
+                "./songbird": 217,
+            },
         ],
         213: [
             function (e, t, n) {
                 var r = e("./songbird");
+
                 function i(e) {
                     r.call(this, e);
                 }
-                (i.prototype = Object.create(r.prototype, { constructor: r })),
+                (i.prototype = Object.create(r.prototype, {
+                    constructor: r,
+                })),
                     (i.prototype._createV1IframeModalElement = function (e) {
                         var t = document.createElement("div"),
                             n = !!(
@@ -11272,7 +11769,7 @@ e.exports = (function e(t, n, r) {
                             );
                         return (
                             (t.innerHTML =
-                                '<div style="position: fixed;z-index: 999999;top: 50%;left: 50%;padding: 24px 20px;transform: translate(-50%,-50%);border-radius: 2px;background: #fff;max-width: 100%;overflow: auto;"><div><button data-braintree-v1-fallback-close-button style="font-family: Helvetica,Arial,sans-serif;font-size: 25px;line-height: 12px;position: absolute;top: 2px;right: 0px;cursor: pointer;color: #999;border: 0;outline: none;background: none;" onMouseOver="this.style.color=\'#000\'" onMouseOut="this.style.color=\'#999\'">\xD7</button></div><div data-braintree-v1-fallback-iframe-container style="height: 400px;"></div></div><div data-braintree-v1-fallback-backdrop style="position: fixed;z-index: 999998;cursor: pointer;top: 0;left: 0;width: 100%;height: 100%;transition: opacity 1ms ease;background: rgba(0,0,0,.6);"></div>'),
+                                '<div style="position: fixed;z-index: 999999;top: 50%;left: 50%;padding: 24px 20px;transform: translate(-50%,-50%);border-radius: 2px;background: #fff;max-width: 100%;overflow: auto;"><div><button data-braintree-v1-fallback-close-button style="font-family: Helvetica,Arial,sans-serif;font-size: 25px;line-height: 12px;position: absolute;top: 2px;right: 0px;cursor: pointer;color: #999;border: 0;outline: none;background: none;" onMouseOver="this.style.color=\'#000\'" onMouseOut="this.style.color=\'#999\'">\xd7</button></div><div data-braintree-v1-fallback-iframe-container style="height: 400px;"></div></div><div data-braintree-v1-fallback-backdrop style="position: fixed;z-index: 999998;cursor: pointer;top: 0;left: 0;width: 100%;height: 100%;transition: opacity 1ms ease;background: rgba(0,0,0,.6);"></div>'),
                             n || (t.querySelector("[data-braintree-v1-fallback-close-button]").style.display = "none"),
                             t.querySelector("[data-braintree-v1-fallback-iframe-container]").appendChild(e),
                             t
@@ -11280,7 +11777,9 @@ e.exports = (function e(t, n, r) {
                     }),
                     (t.exports = i);
             },
-            { "./songbird": 217 },
+            {
+                "./songbird": 217,
+            },
         ],
         214: [
             function (e, t, n) {
@@ -11304,10 +11803,13 @@ e.exports = (function e(t, n, r) {
                     i = e("../../../lib/braintree-error"),
                     o = e("../../shared/errors"),
                     a = e("../../../lib/enumerate");
+
                 function s(e) {
                     r.call(this, e);
                 }
-                (s.prototype = Object.create(r.prototype, { constructor: r })),
+                (s.prototype = Object.create(r.prototype, {
+                    constructor: r,
+                })),
                     (s.events = a(["AUTHENTICATION_IFRAME_AVAILABLE"], "inline-iframe-framework:")),
                     (s.prototype.setUpEventListeners = function (e) {
                         r.prototype.setUpEventListeners.call(this, e),
@@ -11322,7 +11824,9 @@ e.exports = (function e(t, n, r) {
                     (s.prototype._addV1IframeToPage = function () {
                         this._emit(
                             s.events.AUTHENTICATION_IFRAME_AVAILABLE,
-                            { element: this._v1Modal },
+                            {
+                                element: this._v1Modal,
+                            },
                             function () {},
                         );
                     }),
@@ -11342,9 +11846,15 @@ e.exports = (function e(t, n, r) {
                               "suppress" === t.data.mode
                                   ? ((a.style.display = "none"), document.body.appendChild(a), n())
                                   : "static" === t.data.mode &&
-                                    this._emit(s.events.AUTHENTICATION_IFRAME_AVAILABLE, { element: a }, function () {
-                                        n();
-                                    }));
+                                    this._emit(
+                                        s.events.AUTHENTICATION_IFRAME_AVAILABLE,
+                                        {
+                                            element: a,
+                                        },
+                                        function () {
+                                            n();
+                                        },
+                                    ));
                     }),
                     (t.exports = s);
             },
@@ -11359,10 +11869,13 @@ e.exports = (function e(t, n, r) {
             function (e, t, n) {
                 var r = e("./base"),
                     i = e("../../../lib/deferred");
+
                 function o(e) {
                     r.call(this, e);
                 }
-                (o.prototype = Object.create(r.prototype, { constructor: o })),
+                (o.prototype = Object.create(r.prototype, {
+                    constructor: o,
+                })),
                     (o.prototype.setUpEventListeners = function () {}),
                     (o.prototype.transformV1CustomerBillingAddress = function (e) {
                         return (
@@ -11467,6 +11980,7 @@ e.exports = (function e(t, n, r) {
                     m = "3.112.1",
                     f = ["ui.close", "ui.render", "ui.renderHidden", "ui.loading.close", "ui.loading.render"],
                     y = ["low_value", "transaction_risk_analysis"];
+
                 function A(e) {
                     r.call(this, e),
                         (this._songbirdInitFailed = !1),
@@ -11479,6 +11993,7 @@ e.exports = (function e(t, n, r) {
                         this.setupSongbird(e),
                         (this._cardinalEvents = []);
                 }
+
                 function T(e, t, n) {
                     (t[n + "Line1"] = e.streetAddress),
                         (t[n + "Line2"] = e.extendedAddress),
@@ -11489,7 +12004,9 @@ e.exports = (function e(t, n, r) {
                         (t[n + "CountryCode"] = e.countryCodeAlpha2);
                 }
                 (_.suppressUnhandledPromiseMessage = !0),
-                    (A.prototype = Object.create(r.prototype, { constructor: A })),
+                    (A.prototype = Object.create(r.prototype, {
+                        constructor: A,
+                    })),
                     (A.events = u(
                         [
                             "LOOKUP_COMPLETE",
@@ -11598,6 +12115,7 @@ e.exports = (function e(t, n, r) {
                             n = t.querySelector("[data-braintree-v1-fallback-close-button]"),
                             r = t.querySelector("[data-braintree-v1-fallback-backdrop]"),
                             i = this;
+
                         function o() {
                             t.parentNode.removeChild(t),
                                 i.cancelVerifyCard(l.THREEDS_CARDINAL_SDK_CANCELED),
@@ -11674,7 +12192,9 @@ e.exports = (function e(t, n, r) {
                                     ),
                                     t._setupFrameworkSpecificListeners(),
                                     window.Cardinal.configure(a),
-                                    window.Cardinal.setup("init", { jwt: r }),
+                                    window.Cardinal.setup("init", {
+                                        jwt: r,
+                                    }),
                                     (t._clientMetadata.cardinalDeviceDataCollectionTimeElapsed = Date.now() - o),
                                     t.setCardinalListener("payments.validated", t._createPaymentsValidatedCallback());
                             })
@@ -11692,7 +12212,11 @@ e.exports = (function e(t, n, r) {
                         var t = e.cardinalSDKConfig || {},
                             n = t.payment || {};
                         return (
-                            !t.logging && e.loggingEnabled && (t.logging = { level: "verbose" }),
+                            !t.logging &&
+                                e.loggingEnabled &&
+                                (t.logging = {
+                                    level: "verbose",
+                                }),
                             (t.payment = {}),
                             n.hasOwnProperty("displayLoading") && (t.payment.displayLoading = n.displayLoading),
                             n.hasOwnProperty("displayExitButton") &&
@@ -11710,7 +12234,9 @@ e.exports = (function e(t, n, r) {
                                         c.sendEvent(t._client, "three-d-secure.cardinal-sdk.init.setup-timeout"),
                                             t.handleSongbirdError("cardinal-sdk-setup-timeout");
                                     }, e.timeout || E)),
-                                    d.loadScript({ src: n })
+                                    d.loadScript({
+                                        src: n,
+                                    })
                                 );
                             })
                             .catch(function (e) {
@@ -11782,7 +12308,9 @@ e.exports = (function e(t, n, r) {
                                         type: l.THREEDS_JWT_AUTHENTICATION_FAILED.type,
                                         code: l.THREEDS_JWT_AUTHENTICATION_FAILED.code,
                                         message: l.THREEDS_JWT_AUTHENTICATION_FAILED.message,
-                                        details: { originalError: e },
+                                        details: {
+                                            originalError: e,
+                                        },
                                     });
                                     return (
                                         c.sendEvent(
@@ -11916,7 +12444,11 @@ e.exports = (function e(t, n, r) {
                                     AcsUrl: e.lookup.acsUrl,
                                     Payload: e.lookup.pareq,
                                 },
-                                { OrderDetails: { TransactionId: e.lookup.transactionId } },
+                                {
+                                    OrderDetails: {
+                                        TransactionId: e.lookup.transactionId,
+                                    },
+                                },
                             );
                     }),
                     (A.prototype._formatLookupData = function (e) {
@@ -12008,6 +12540,7 @@ e.exports = (function e(t, n, r) {
                     o = e("../../lib/convert-methods-to-error"),
                     a = e("@braintree/event-emitter"),
                     s = e("./frameworks");
+
                 function c(e) {
                     var t = this,
                         n = s[e.framework];
@@ -12021,7 +12554,10 @@ e.exports = (function e(t, n, r) {
                     (c.prototype.verifyCard = function (e) {
                         var t;
                         return (
-                            this.hasListener("lookup-complete") && (t = { ignoreOnLookupCompleteRequirement: !0 }),
+                            this.hasListener("lookup-complete") &&
+                                (t = {
+                                    ignoreOnLookupCompleteRequirement: !0,
+                                }),
                             this._framework.verifyCard(e, t)
                         );
                     }),
@@ -12308,13 +12844,17 @@ e.exports = (function e(t, n, r) {
                     },
                 };
             },
-            { "../../lib/braintree-error": 143 },
+            {
+                "../../lib/braintree-error": 143,
+            },
         ],
         222: [
             function (e, t, n) {
                 t.exports = e("../../lib/enumerate")(["AUTHENTICATION_COMPLETE"], "threedsecure:");
             },
-            { "../../lib/enumerate": 153 },
+            {
+                "../../lib/enumerate": 153,
+            },
         ],
         223: [
             function (e, t, n) {
@@ -12375,7 +12915,9 @@ e.exports = (function e(t, n, r) {
                     HOSTED_FIELDS_FRAME_NAME: "braintreeunionpayhostedfields",
                 };
             },
-            { "../../lib/enumerate": 153 },
+            {
+                "../../lib/enumerate": 153,
+            },
         ],
         225: [
             function (e, t, n) {
@@ -12444,7 +12986,9 @@ e.exports = (function e(t, n, r) {
                     },
                 };
             },
-            { "../../lib/braintree-error": 143 },
+            {
+                "../../lib/braintree-error": 143,
+            },
         ],
         226: [
             function (e, t, n) {
@@ -12462,6 +13006,7 @@ e.exports = (function e(t, n, r) {
                     E = e("@braintree/uuid"),
                     h = e("@braintree/wrap-promise"),
                     m = e("../../lib/constants").BUS_CONFIGURATION_REQUEST_EVENT;
+
                 function f(e) {
                     this._options = e;
                 }
@@ -12478,8 +13023,12 @@ e.exports = (function e(t, n, r) {
                                     method: "get",
                                     endpoint: "payment_methods/credit_cards/capabilities",
                                     data: {
-                                        _meta: { source: "unionpay" },
-                                        creditCard: { number: o },
+                                        _meta: {
+                                            source: "unionpay",
+                                        },
+                                        creditCard: {
+                                            number: o,
+                                        },
                                     },
                                 })
                                 .then(function (e) {
@@ -12494,7 +13043,9 @@ e.exports = (function e(t, n, r) {
                                                   type: l.UNIONPAY_FETCH_CAPABILITIES_NETWORK_ERROR.type,
                                                   code: l.UNIONPAY_FETCH_CAPABILITIES_NETWORK_ERROR.code,
                                                   message: l.UNIONPAY_FETCH_CAPABILITIES_NETWORK_ERROR.message,
-                                                  details: { originalError: e },
+                                                  details: {
+                                                      originalError: e,
+                                                  },
                                               }),
                                           );
                                 })
@@ -12504,7 +13055,9 @@ e.exports = (function e(t, n, r) {
                                       return new Promise(function (e, n) {
                                           t._bus.emit(
                                               u.HOSTED_FIELDS_FETCH_CAPABILITIES,
-                                              { hostedFields: a },
+                                              {
+                                                  hostedFields: a,
+                                              },
                                               function (t) {
                                                   t.err ? n(new i(t.err)) : e(t.payload);
                                               },
@@ -12544,7 +13097,9 @@ e.exports = (function e(t, n, r) {
                         if (a && a.number) {
                             if (
                                 ((t = {
-                                    _meta: { source: "unionpay" },
+                                    _meta: {
+                                        source: "unionpay",
+                                    },
                                     unionPayEnrollment: {
                                         number: a.number,
                                         mobileCountryCode: s.countryCode,
@@ -12605,10 +13160,16 @@ e.exports = (function e(t, n, r) {
                             ? Promise.reject(new i(l.UNIONPAY_CARD_AND_HOSTED_FIELDS_INSTANCES))
                             : a
                               ? ((t = {
-                                    _meta: { source: "unionpay" },
+                                    _meta: {
+                                        source: "unionpay",
+                                    },
                                     creditCard: {
                                         number: e.card.number,
-                                        options: { unionPayEnrollment: { id: e.enrollmentId } },
+                                        options: {
+                                            unionPayEnrollment: {
+                                                id: e.enrollmentId,
+                                            },
+                                        },
                                     },
                                 }),
                                 e.smsCode && (t.creditCard.options.unionPayEnrollment.smsCode = e.smsCode),
@@ -12720,7 +13281,9 @@ e.exports = (function e(t, n, r) {
         ],
         227: [
             function (e, t, n) {
-                t.exports = { PLAID_LINK_JS: "https://cdn.plaid.com/link/v2/stable/link-initialize.js" };
+                t.exports = {
+                    PLAID_LINK_JS: "https://cdn.plaid.com/link/v2/stable/link-initialize.js",
+                };
             },
             {},
         ],
@@ -12773,7 +13336,9 @@ e.exports = (function e(t, n, r) {
                     },
                 };
             },
-            { "../lib/braintree-error": 143 },
+            {
+                "../lib/braintree-error": 143,
+            },
         ],
         229: [
             function (e, t, n) {
@@ -12833,11 +13398,13 @@ e.exports = (function e(t, n, r) {
                     u = e("@braintree/wrap-promise"),
                     p = T("UsBankAccount"),
                     _ = T("UsBankLogin");
+
                 function E(e) {
                     (this._client = e.client),
                         (this._isTokenizingBankLogin = !1),
                         s.sendEvent(this._client, "usbankaccount.initialized");
                 }
+
                 function h(e) {
                     var t,
                         n = e.details && e.details.httpStatus;
@@ -12848,10 +13415,13 @@ e.exports = (function e(t, n, r) {
                                 : n < 500
                                   ? o.US_BANK_ACCOUNT_FAILED_TOKENIZATION
                                   : o.US_BANK_ACCOUNT_TOKENIZATION_NETWORK_ERROR,
-                        )).details = { originalError: e }),
+                        )).details = {
+                            originalError: e,
+                        }),
                         t
                     );
                 }
+
                 function m(e, t) {
                     var n = e.data[t].paymentMethod,
                         r = n.details.last4;
@@ -12862,6 +13432,7 @@ e.exports = (function e(t, n, r) {
                         type: "us_bank_account",
                     };
                 }
+
                 function f(e, t) {
                     function n() {
                         var r = this.readyState;
@@ -12871,6 +13442,7 @@ e.exports = (function e(t, n, r) {
                             e.removeEventListener("readystatechange", n),
                             t(null, window.Plaid));
                     }
+
                     function i() {
                         e.parentNode.removeChild(e), t(new r(o.US_BANK_ACCOUNT_LOGIN_LOAD_FAILED));
                     }
@@ -12878,6 +13450,7 @@ e.exports = (function e(t, n, r) {
                         e.addEventListener("load", n),
                         e.addEventListener("readystatechange", n);
                 }
+
                 function y(e) {
                     return {
                         streetAddress: e.streetAddress,
@@ -12887,14 +13460,19 @@ e.exports = (function e(t, n, r) {
                         zipCode: e.postalCode,
                     };
                 }
+
                 function A(e, t) {
                     "personal" === t.ownershipType
                         ? (e.individualOwner = {
                               firstName: t.firstName,
                               lastName: t.lastName,
                           })
-                        : "business" === t.ownershipType && (e.businessOwner = { businessName: t.businessName });
+                        : "business" === t.ownershipType &&
+                          (e.businessOwner = {
+                              businessName: t.businessName,
+                          });
                 }
+
                 function T(e) {
                     return (
                         "mutation Tokenize" +
@@ -12952,7 +13530,11 @@ e.exports = (function e(t, n, r) {
                                     api: "graphQLApi",
                                     data: {
                                         query: p,
-                                        variables: { input: { usBankAccount: r } },
+                                        variables: {
+                                            input: {
+                                                usBankAccount: r,
+                                            },
+                                        },
                                     },
                                 })
                                 .then(function (e) {
@@ -13019,7 +13601,9 @@ e.exports = (function e(t, n, r) {
                                                                             data: {
                                                                                 query: _,
                                                                                 variables: {
-                                                                                    input: { usBankLogin: l },
+                                                                                    input: {
+                                                                                        usBankLogin: l,
+                                                                                    },
                                                                                 },
                                                                             },
                                                                         })
@@ -13108,7 +13692,9 @@ e.exports = (function e(t, n, r) {
                     },
                 };
             },
-            { "../lib/braintree-error": 143 },
+            {
+                "../lib/braintree-error": 143,
+            },
         ],
         232: [
             function (e, t, n) {
@@ -13156,9 +13742,11 @@ e.exports = (function e(t, n, r) {
                     a = e("../lib/convert-methods-to-error"),
                     s = e("../lib/methods"),
                     c = e("@braintree/wrap-promise");
+
                 function d(e) {
                     this._createPromise = e.createPromise;
                 }
+
                 function l(e) {
                     var t = {
                         nonce: e.nonce,
@@ -13178,7 +13766,9 @@ e.exports = (function e(t, n, r) {
                                 return e.request({
                                     endpoint: "payment_methods",
                                     method: "get",
-                                    data: { defaultFirst: t },
+                                    data: {
+                                        defaultFirst: t,
+                                    },
                                 });
                             })
                             .then(
@@ -13205,7 +13795,11 @@ e.exports = (function e(t, n, r) {
                                           api: "graphQLApi",
                                           data: {
                                               query: "mutation DeletePaymentMethodFromSingleUseToken($input: DeletePaymentMethodFromSingleUseTokenInput!) {  deletePaymentMethodFromSingleUseToken(input: $input) {    clientMutationId  }}",
-                                              variables: { input: { singleUseTokenId: e } },
+                                              variables: {
+                                                  input: {
+                                                      singleUseTokenId: e,
+                                                  },
+                                              },
                                               operationName: "DeletePaymentMethodFromSingleUseToken",
                                           },
                                       })
@@ -13226,7 +13820,9 @@ e.exports = (function e(t, n, r) {
                                                           "A payment method for payment method nonce `" +
                                                           e +
                                                           "` could not be found.",
-                                                      details: { originalError: s },
+                                                      details: {
+                                                          originalError: s,
+                                                      },
                                                   })),
                                               a ||
                                                   (a = new i({
@@ -13236,7 +13832,9 @@ e.exports = (function e(t, n, r) {
                                                           "An unknown error occured when attempting to delete the payment method assocaited with the payment method nonce `" +
                                                           e +
                                                           "`.",
-                                                      details: { originalError: s },
+                                                      details: {
+                                                          originalError: s,
+                                                      },
                                                   })),
                                               Promise.reject(a)
                                           );
@@ -13262,18 +13860,26 @@ e.exports = (function e(t, n, r) {
                 var r = (
                     (this && this.__importDefault) ||
                     function (e) {
-                        return e && e.__esModule ? e : { default: e };
+                        return e && e.__esModule
+                            ? e
+                            : {
+                                  default: e,
+                              };
                     }
                 )(e("./venmo-desktop"));
                 t.exports = function (e) {
                     return new r.default(e).initialize();
                 };
             },
-            { "./venmo-desktop": 236 },
+            {
+                "./venmo-desktop": 236,
+            },
         ],
         235: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }),
+                Object.defineProperty(n, "__esModule", {
+                    value: !0,
+                }),
                     (n.VENMO_PAYMENT_CONTEXT_STATUS_QUERY =
                         n.LEGACY_VENMO_PAYMENT_CONTEXT_STATUS_QUERY =
                         n.UPDATE_PAYMENT_CONTEXT_QUERY =
@@ -13313,9 +13919,15 @@ e.exports = (function e(t, n, r) {
                     i =
                         (this && this.__importDefault) ||
                         function (e) {
-                            return e && e.__esModule ? e : { default: e };
+                            return e && e.__esModule
+                                ? e
+                                : {
+                                      default: e,
+                                  };
                         };
-                Object.defineProperty(n, "__esModule", { value: !0 });
+                Object.defineProperty(n, "__esModule", {
+                    value: !0,
+                });
                 var o = i(e("framebus")),
                     a = i(e("@braintree/iframer")),
                     s = i(e("@braintree/uuid")),
@@ -13437,7 +14049,7 @@ e.exports = (function e(t, n, r) {
                             this.isHidden ||
                                 setTimeout(function () {
                                     t.completedHandler && t.completedHandler(e), delete t.completedHandler;
-                                }, 2000);
+                                }, 2e3);
                         }),
                         (e.prototype.triggerRejected = function (e) {
                             this.launchDesktopPromiseRejectFunction && this.launchDesktopPromiseRejectFunction(e);
@@ -13450,7 +14062,10 @@ e.exports = (function e(t, n, r) {
                         }),
                         (e.prototype.displayError = function (e) {
                             this.isHidden ||
-                                (this.bus.emit(c.VENMO_DESKTOP_DISPLAY_ERROR, { message: e }), this.setAlert(e));
+                                (this.bus.emit(c.VENMO_DESKTOP_DISPLAY_ERROR, {
+                                    message: e,
+                                }),
+                                this.setAlert(e));
                         }),
                         (e.prototype.displayQRCode = function (e, t) {
                             this.isHidden ||
@@ -13544,7 +14159,7 @@ e.exports = (function e(t, n, r) {
                                           return new n.Promise(function (r, i) {
                                               setTimeout(function () {
                                                   n.pollForStatusChange(e, t).then(r).catch(i);
-                                              }, 1000);
+                                              }, 1e3);
                                           });
                                       })
                                 : this.Promise.resolve();
@@ -13576,7 +14191,9 @@ e.exports = (function e(t, n, r) {
                             return (
                                 this.profileId && (t.merchantProfileId = this.profileId),
                                 this.displayName && (t.displayName = this.displayName),
-                                this.apiRequest(d.CREATE_PAYMENT_CONTEXT_QUERY, { input: t }).then(function (e) {
+                                this.apiRequest(d.CREATE_PAYMENT_CONTEXT_QUERY, {
+                                    input: t,
+                                }).then(function (e) {
                                     return e.createVenmoPaymentContext.venmoPaymentContext;
                                 })
                             );
@@ -13620,7 +14237,9 @@ e.exports = (function e(t, n, r) {
                             var e = this.shouldUseLegacyQRCodeMutation
                                 ? d.LEGACY_VENMO_PAYMENT_CONTEXT_STATUS_QUERY
                                 : d.VENMO_PAYMENT_CONTEXT_STATUS_QUERY;
-                            return this.apiRequest(e, { id: this.venmoContextId }).then(function (e) {
+                            return this.apiRequest(e, {
+                                id: this.venmoContextId,
+                            }).then(function (e) {
                                 return e.node;
                             });
                         }),
@@ -13747,7 +14366,7 @@ e.exports = (function e(t, n, r) {
             function (e, t, n) {
                 t.exports = {
                     DOCUMENT_VISIBILITY_CHANGE_EVENT_DELAY: 500,
-                    DEFAULT_PROCESS_RESULTS_DELAY: 1000,
+                    DEFAULT_PROCESS_RESULTS_DELAY: 1e3,
                     VENMO_APP_OR_MOBILE_AUTH_URL: "https://venmo.com/go/checkout",
                     VENMO_MOBILE_APP_AUTH_ONLY_URL: "https://venmo.com/braintree/checkout",
                     VENMO_WEB_LOGIN_URL: "https://account.venmo.com/go/web",
@@ -13867,11 +14486,15 @@ e.exports = (function e(t, n, r) {
                     },
                 };
             },
-            { "../../lib/braintree-error": 143 },
+            {
+                "../../lib/braintree-error": 143,
+            },
         ],
         241: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }),
+                Object.defineProperty(n, "__esModule", {
+                    value: !0,
+                }),
                     (n.VENMO_DESKTOP_UNKNOWN_ERROR =
                         n.VENMO_DESKTOP_REQUEST_NEW_QR_CODE =
                         n.VENMO_DESKTOP_CLOSED_FROM_PARENT =
@@ -13907,7 +14530,9 @@ e.exports = (function e(t, n, r) {
                           : r.VENMO_MOBILE_APP_AUTH_ONLY_URL;
                 };
             },
-            { "./constants": 239 },
+            {
+                "./constants": 239,
+            },
         ],
         243: [
             function (e, t, n) {
@@ -13954,6 +14579,7 @@ e.exports = (function e(t, n, r) {
                     u = "venmo-popup-continue-button",
                     p = "venmo-message",
                     _ = "venmo-instructions";
+
                 function E(e) {
                     var t = e.frameServiceInstance,
                         n = e.venmoUrl,
@@ -13989,6 +14615,7 @@ e.exports = (function e(t, n, r) {
                         d
                     );
                 }
+
                 function h() {
                     document.getElementById("venmo-desktop-web-backdrop").classList.add("hidden");
                 }
@@ -14183,6 +14810,7 @@ e.exports = (function e(t, n, r) {
                     T = e("./external/"),
                     I = e("./external/queries"),
                     N = "3.112.1";
+
                 function O(e) {
                     var t = this;
                     (this._allowDesktopWebLogin = e.allowDesktopWebLogin || !1),
@@ -14267,7 +14895,7 @@ e.exports = (function e(t, n, r) {
                                 }))
                               : this._shouldCreateVenmoPaymentContext &&
                                 ((this._mobilePollingInterval = 250),
-                                (this._mobilePollingExpiresThreshold = 300000),
+                                (this._mobilePollingExpiresThreshold = 3e5),
                                 (this._createPromise = this._createPromise.then(function (e) {
                                     var n,
                                         i,
@@ -14312,7 +14940,9 @@ e.exports = (function e(t, n, r) {
                                                                     ? e.details.originalError[0].message
                                                                     : s.VENMO_MOBILE_PAYMENT_CONTEXT_SETUP_FAILED
                                                                           .message,
-                                                            details: { originalError: e },
+                                                            details: {
+                                                                originalError: e,
+                                                            },
                                                         }),
                                                     )
                                                 );
@@ -14328,6 +14958,7 @@ e.exports = (function e(t, n, r) {
                                     );
                                 })));
                 }
+
                 function g(e) {
                     var t = (e || window.location.hash.substring(1)).split("&").reduce(function (e, t) {
                         var n = t.split("="),
@@ -14337,9 +14968,11 @@ e.exports = (function e(t, n, r) {
                     }, {});
                     return t.resourceId && (t.id = t.resourceId), t;
                 }
+
                 function P(e) {
                     return "@" + (e = e || "").replace("@", "");
                 }
+
                 function b() {
                     var e;
                     return (
@@ -14629,7 +15262,9 @@ e.exports = (function e(t, n, r) {
                                     api: "graphQLApi",
                                     data: {
                                         query: r,
-                                        variables: { id: e },
+                                        variables: {
+                                            id: e,
+                                        },
                                     },
                                 });
                             })
@@ -14688,7 +15323,9 @@ e.exports = (function e(t, n, r) {
                                               type: s.VENMO_MOBILE_POLLING_TOKENIZATION_NETWORK_ERROR.type,
                                               code: s.VENMO_MOBILE_POLLING_TOKENIZATION_NETWORK_ERROR.code,
                                               message: s.VENMO_MOBILE_POLLING_TOKENIZATION_NETWORK_ERROR.message,
-                                              details: { originalError: e },
+                                              details: {
+                                                  originalError: e,
+                                              },
                                           }),
                                       );
                                   })
@@ -14752,6 +15389,7 @@ e.exports = (function e(t, n, r) {
                             n,
                             i = this;
                         if (this.hasTokenizationResult()) return this.processHashChangeFlowResults();
+
                         function o(e) {
                             var t;
                             i.processHashChangeFlowResults(e)
@@ -14815,7 +15453,9 @@ e.exports = (function e(t, n, r) {
                                                   type: s.VENMO_DESKTOP_UNKNOWN_ERROR.type,
                                                   code: s.VENMO_DESKTOP_UNKNOWN_ERROR.code,
                                                   message: s.VENMO_DESKTOP_UNKNOWN_ERROR.message,
-                                                  details: { originalError: t },
+                                                  details: {
+                                                      originalError: t,
+                                                  },
                                               }),
                                           );
                                 }),
@@ -14985,7 +15625,9 @@ e.exports = (function e(t, n, r) {
                     },
                 };
             },
-            { "../lib/braintree-error": 143 },
+            {
+                "../lib/braintree-error": 143,
+            },
         ],
         247: [
             function (e, t, n) {
@@ -15049,6 +15691,7 @@ e.exports = (function e(t, n, r) {
                         Discover: "DISCOVER",
                         "American Express": "AMEX",
                     };
+
                 function u(e) {
                     this._client = e.client;
                 }
@@ -15079,7 +15722,9 @@ e.exports = (function e(t, n, r) {
                                       method: "post",
                                       endpoint: "payment_methods/visa_checkout_cards",
                                       data: {
-                                          _meta: { source: "visa-checkout" },
+                                          _meta: {
+                                              source: "visa-checkout",
+                                          },
                                           visaCheckoutCard: {
                                               callId: e.callid,
                                               encryptedPaymentData: e.encPaymentData,
@@ -15101,7 +15746,9 @@ e.exports = (function e(t, n, r) {
                                                   type: o.VISA_CHECKOUT_TOKENIZATION.type,
                                                   code: o.VISA_CHECKOUT_TOKENIZATION.code,
                                                   message: o.VISA_CHECKOUT_TOKENIZATION.message,
-                                                  details: { originalError: e },
+                                                  details: {
+                                                      originalError: e,
+                                                  },
                                               }),
                                           )
                                       );

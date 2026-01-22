@@ -11,6 +11,7 @@ var r = n(398590),
     s = n(944771),
     o = n(3258),
     l = n(652215);
+
 function c(e) {
     for (let t of s.componentPlaygroundConfigs) {
         let n = t.collections.find((t) => t.id.toLowerCase() === e.toLowerCase());
@@ -18,6 +19,7 @@ function c(e) {
     }
     return null;
 }
+
 function u(e, t) {
     for (let n of s.componentPlaygroundConfigs) {
         let r = n.collections.find((t) => t.id.toLowerCase() === e.toLowerCase());
@@ -29,6 +31,7 @@ function u(e, t) {
     }
     return null;
 }
+
 function d(e, t) {
     let n = a.default.getCurrentUser();
     if (!(null == n ? void 0 : n.isStaff()) && !(null == n ? void 0 : n.isStaffPersonal())) return !1;
@@ -43,6 +46,7 @@ function d(e, t) {
         !0
     );
 }
+
 function f(e) {
     let { match: t } = e;
     return d(t.collection, t.story);

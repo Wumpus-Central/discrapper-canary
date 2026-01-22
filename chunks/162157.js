@@ -1,4 +1,6 @@
-n.d(t, { h: () => r });
+n.d(t, {
+    h: () => r,
+});
 var r = (function (e) {
     return (
         (e.GENERAL = "general"),

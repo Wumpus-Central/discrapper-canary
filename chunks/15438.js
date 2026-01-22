@@ -1,4 +1,7 @@
-n.d(t, { A: () => h }), n(896048);
+n.d(t, {
+    A: () => h,
+}),
+    n(896048);
 var r,
     i,
     l = n(311907),
@@ -8,7 +11,9 @@ var r,
     c = n(71393),
     u = n(576705),
     d = n(652215);
-let p = { MAX_MEMBER_COUNT: new Set() };
+let p = {
+    MAX_MEMBER_COUNT: new Set(),
+};
 class f extends (r = l.Ay.Store) {
     initialize() {
         var e;
@@ -24,7 +29,7 @@ class f extends (r = l.Ay.Store) {
         if (null == e) return !1;
         let n = null != (t = o.A.getMemberCount(e.id)) ? t : 0,
             r = u.A.can(d.xBc.ADMINISTRATOR, e);
-        return !p[d.n5X.MAX_MEMBER_COUNT].has(e.id) && r && e.maxMembers > 0 && e.maxMembers - n <= 10000;
+        return !p[d.n5X.MAX_MEMBER_COUNT].has(e.id) && r && e.maxMembers > 0 && e.maxMembers - n <= 1e4;
     }
 }
 (i = "displayName") in f

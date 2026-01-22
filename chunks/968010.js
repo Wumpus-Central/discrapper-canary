@@ -1,4 +1,6 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var l = n(64700),
     i = n(311907),
     s = n(34457),
@@ -7,6 +9,7 @@ var l = n(64700),
     o = n(287809),
     u = n(488926),
     d = n(652215);
+
 function c(e) {
     let {
         sortedRoles: t,

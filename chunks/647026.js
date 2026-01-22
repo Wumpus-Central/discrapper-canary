@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968);
 n(64700);
 var l = n(397927),
@@ -23,7 +25,9 @@ let d = (e) => {
     if (m)
         t = (0, r.jsx)("div", {
             className: o.$$,
-            children: (0, r.jsx)(l.y$y, { className: o.u1 }),
+            children: (0, r.jsx)(l.y$y, {
+                className: o.u1,
+            }),
         });
     else if (0 === g.length) {
         let e =
@@ -66,7 +70,15 @@ let d = (e) => {
     } else
         t = (0, r.jsx)("div", {
             className: o.vY,
-            children: g.map((e) => (0, r.jsx)(a.A, { entry: e }, e.guildId)),
+            children: g.map((e) =>
+                (0, r.jsx)(
+                    a.A,
+                    {
+                        entry: e,
+                    },
+                    e.guildId,
+                ),
+            ),
         });
     return (0, r.jsx)("div", {
         className: o.$$,
@@ -82,7 +94,9 @@ let d = (e) => {
                                 (0, r.jsx)(l.DUT, {
                                     onClick: p,
                                     className: c.UE,
-                                    children: (0, r.jsx)(i.A, { direction: i.A.Directions.LEFT }),
+                                    children: (0, r.jsx)(i.A, {
+                                        direction: i.A.Directions.LEFT,
+                                    }),
                                 }),
                                 (0, r.jsx)(l.Heading, {
                                     variant: "heading-xl/semibold",

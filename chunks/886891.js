@@ -1,4 +1,6 @@
-n.d(t, { A: () => E });
+n.d(t, {
+    A: () => E,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -14,6 +16,7 @@ var r = n(627968),
     h = n(996988),
     m = n(985018),
     g = n(134327);
+
 function E(e) {
     let { user: t, guildId: n, channelId: a, applicationId: E, isGameRelationship: b = !1, className: y } = e,
         { themeType: O } = (0, _.E)(),
@@ -28,10 +31,16 @@ function E(e) {
             location: I,
         }),
         N = i.useCallback(() => {
-            T(), S({ action: b ? "ACCEPT_GAME_FRIEND_REQUEST" : "ACCEPT_FRIEND_REQUEST" });
+            T(),
+                S({
+                    action: b ? "ACCEPT_GAME_FRIEND_REQUEST" : "ACCEPT_FRIEND_REQUEST",
+                });
         }, [T, b, S]),
         R = i.useCallback(() => {
-            C(), S({ action: b ? "IGNORE_GAME_FRIEND_REQUEST" : "IGNORE_FRIEND_REQUEST" });
+            C(),
+                S({
+                    action: b ? "IGNORE_GAME_FRIEND_REQUEST" : "IGNORE_FRIEND_REQUEST",
+                });
         }, [C, b, S]),
         w = null != E,
         P = (0, c.h)(E);
@@ -60,7 +69,9 @@ function E(e) {
                         })
                       : (0, r.jsx)(o.Text, {
                             variant: "text-sm/normal",
-                            children: m.intl.format(m.t.uIomXw, { username: v }),
+                            children: m.intl.format(m.t.uIomXw, {
+                                username: v,
+                            }),
                         }),
                   (0, r.jsxs)("div", {
                       className: g.UD,

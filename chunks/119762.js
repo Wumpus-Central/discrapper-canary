@@ -26,6 +26,7 @@ var r = n(627968),
     b = n(652215),
     y = n(985018),
     O = n(928344);
+
 function A() {
     return (0, r.jsx)(l.Text, {
         variant: "text-sm/normal",
@@ -33,6 +34,7 @@ function A() {
         children: y.intl.string(y.t.zZp618),
     });
 }
+
 function v() {
     let { currentSession: e } = (0, d.r)();
     return null == e
@@ -48,6 +50,7 @@ function v() {
               }),
           });
 }
+
 function S(e) {
     let { checked: t, otherSessions: n } = e;
     return (0, r.jsx)(l.D0$, {
@@ -61,7 +64,9 @@ function S(e) {
                 size: "sm",
                 text:
                     t.size > 0
-                        ? y.intl.formatToPlainString(y.t["83CPLj"], { count: t.size })
+                        ? y.intl.formatToPlainString(y.t["83CPLj"], {
+                              count: t.size,
+                          })
                         : y.intl.string(y.t.cLmmeY),
                 onClick: () => {
                     t.size > 0 ? (0, u.U0)(Array.from(t)) : (0, u.U0)(n.map((e) => e.id_hash));
@@ -70,6 +75,7 @@ function S(e) {
         }),
     });
 }
+
 function I() {
     let e = (0, m.dk)("OtherSessionsSetting"),
         { currentSession: t, otherSessions: n } = (0, d.r)(),
@@ -118,6 +124,7 @@ function I() {
               ],
           });
 }
+
 function T() {
     return (
         i.useEffect(
@@ -142,6 +149,7 @@ function T() {
         })
     );
 }
+
 function C(e) {
     var t, n, i, a, o;
     let { session: c, current: f, setChecked: p, checked: h, useChecks: m } = e,
@@ -159,7 +167,9 @@ function C(e) {
     return (0, r.jsxs)(
         "div",
         {
-            className: s()(O.dZ, { [O.gg]: f }),
+            className: s()(O.dZ, {
+                [O.gg]: f,
+            }),
             children: [
                 (0, r.jsxs)("div", {
                     className: O.OC,
@@ -178,12 +188,18 @@ function C(e) {
                                     variant: "eyebrow",
                                     className: O.nT,
                                     children: [
-                                        (0, r.jsx)("span", { children: S[0] }),
+                                        (0, r.jsx)("span", {
+                                            children: S[0],
+                                        }),
                                         S.length > 1 &&
                                             (0, r.jsxs)(r.Fragment, {
                                                 children: [
-                                                    (0, r.jsx)("span", { children: "\xB7" }),
-                                                    (0, r.jsx)("span", { children: S[1] }),
+                                                    (0, r.jsx)("span", {
+                                                        children: "\xb7",
+                                                    }),
+                                                    (0, r.jsx)("span", {
+                                                        children: S[1],
+                                                    }),
                                                 ],
                                             }),
                                     ],
@@ -192,12 +208,18 @@ function C(e) {
                                     variant: "text-sm/medium",
                                     className: O.nT,
                                     children: [
-                                        (0, r.jsx)("span", { children: I[0] }),
+                                        (0, r.jsx)("span", {
+                                            children: I[0],
+                                        }),
                                         I.length > 1 &&
                                             (0, r.jsxs)(r.Fragment, {
                                                 children: [
-                                                    (0, r.jsx)("span", { children: "\xB7" }),
-                                                    (0, r.jsx)("span", { children: I[1] }),
+                                                    (0, r.jsx)("span", {
+                                                        children: "\xb7",
+                                                    }),
+                                                    (0, r.jsx)("span", {
+                                                        children: I[1],
+                                                    }),
                                                 ],
                                             }),
                                     ],
@@ -229,12 +251,16 @@ function C(e) {
                                 }),
                     ],
                 }),
-                !f && (0, r.jsx)(l.cGx, { className: O.O9 }),
+                !f &&
+                    (0, r.jsx)(l.cGx, {
+                        className: O.O9,
+                    }),
             ],
         },
         c.id_hash,
     );
 }
+
 function N() {
     return (0, r.jsxs)("div", {
         className: s()(O.dZ, O.EC),
@@ -256,7 +282,9 @@ function N() {
                                 variant: "eyebrow",
                                 className: O.nT,
                                 color: "text-muted",
-                                children: (0, r.jsx)("span", { children: y.intl.string(y.t.iUa0sn) }),
+                                children: (0, r.jsx)("span", {
+                                    children: y.intl.string(y.t.iUa0sn),
+                                }),
                             }),
                             (0, r.jsx)(l.Text, {
                                 variant: "text-sm/medium",
@@ -276,10 +304,13 @@ function N() {
                     }),
                 ],
             }),
-            (0, r.jsx)("div", { className: O.O9 }),
+            (0, r.jsx)("div", {
+                className: O.O9,
+            }),
         ],
     });
 }
+
 function R(e) {
     switch (null == e ? void 0 : e.toLowerCase().trim()) {
         case null:

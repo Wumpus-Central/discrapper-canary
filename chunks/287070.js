@@ -1,4 +1,6 @@
-n.d(t, { A: () => S });
+n.d(t, {
+    A: () => S,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -21,6 +23,7 @@ var i = n(503698),
     O = n(996988),
     A = n(985018),
     v = n(633960);
+
 function S(e) {
     var t, n;
     let {
@@ -101,7 +104,12 @@ function S(e) {
                             pendingAccentColor: N,
                             isTryItOut: B,
                             disabledInputs: H,
-                            onUpsellClick: () => (null == T ? void 0 : T({ object: y.ZSU.EDIT_PROFILE_BANNER })),
+                            onUpsellClick: () =>
+                                null == T
+                                    ? void 0
+                                    : T({
+                                          object: y.ZSU.EDIT_PROFILE_BANNER,
+                                      }),
                         }),
                         (0, r.jsx)(m.A, {
                             user: i,
@@ -115,7 +123,12 @@ function S(e) {
                             className: V,
                             disabledInputs: H,
                             isTryItOut: B,
-                            onUpsellClick: () => (null == T ? void 0 : T({ object: y.ZSU.AVATAR })),
+                            onUpsellClick: () =>
+                                null == T
+                                    ? void 0
+                                    : T({
+                                          object: y.ZSU.AVATAR,
+                                      }),
                         }),
                         !Y &&
                             (0, r.jsx)(p.A, {
@@ -147,7 +160,10 @@ function S(e) {
                     hideMessageInput: K,
                     hideExampleButton: X,
                 }),
-                null != en && (0, r.jsx)(l.A, { skuId: en.skuId }),
+                null != en &&
+                    (0, r.jsx)(l.A, {
+                        skuId: en.skuId,
+                    }),
             ],
         });
     return Z
@@ -155,6 +171,8 @@ function S(e) {
         : (0, r.jsx)("div", {
               role: "img",
               "aria-label": A.intl.string(A.t.ayozFl),
-              children: (0, r.jsx)(o.M1G, { children: ea }),
+              children: (0, r.jsx)(o.M1G, {
+                  children: ea,
+              }),
           });
 }

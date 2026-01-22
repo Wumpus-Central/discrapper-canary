@@ -1,4 +1,7 @@
-r.d(t, { default: () => m }), r(896048);
+r.d(t, {
+    default: () => m,
+}),
+    r(896048);
 var n = r(627968),
     l = r(64700),
     o = r(158954),
@@ -13,6 +16,7 @@ var n = r(627968),
     d = r(641131),
     O = r(985018),
     y = r(544800);
+
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
@@ -38,6 +42,7 @@ function g(e) {
     }
     return e;
 }
+
 function h(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -56,6 +61,7 @@ function h(e, t) {
         e
     );
 }
+
 function m(e) {
     let { guildId: t, user: r, location: m, modReportId: j } = e,
         v = (function (e, t) {
@@ -121,8 +127,12 @@ function m(e) {
         ? (0, n.jsx)(
               o.Modal,
               h(g({}, v), {
-                  title: O.intl.formatToPlainString(O.t["1Ie87p"], { user: r.username }),
-                  subtitle: O.intl.format(O.t["/yH0UT"], { user: "@".concat(p.Ay.getName(r)) }),
+                  title: O.intl.formatToPlainString(O.t["1Ie87p"], {
+                      user: r.username,
+                  }),
+                  subtitle: O.intl.format(O.t["/yH0UT"], {
+                      user: "@".concat(p.Ay.getName(r)),
+                  }),
                   actions: [
                       {
                           text: O.intl.string(O.t["3glT6Z"]),
@@ -154,7 +164,9 @@ function m(e) {
               h(
                   g(
                       {
-                          header: O.intl.formatToPlainString(O.t["1Ie87p"], { user: r.username }),
+                          header: O.intl.formatToPlainString(O.t["1Ie87p"], {
+                              user: r.username,
+                          }),
                           confirmText: O.intl.string(O.t["3glT6Z"]),
                           cancelText: O.intl.string(O.t["ETE/oC"]),
                           onConfirm: k,
@@ -166,7 +178,9 @@ function m(e) {
                           (0, n.jsx)(a.Text, {
                               variant: "text-md/normal",
                               className: y.Y,
-                              children: O.intl.format(O.t["/yH0UT"], { user: "@".concat(p.Ay.getName(r)) }),
+                              children: O.intl.format(O.t["/yH0UT"], {
+                                  user: "@".concat(p.Ay.getName(r)),
+                              }),
                           }),
                           (0, n.jsx)("div", {
                               className: y.Y,

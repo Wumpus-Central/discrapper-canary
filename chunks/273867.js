@@ -1,4 +1,8 @@
-n.d(t, { A: () => A }), n(896048), n(321073);
+n.d(t, {
+    A: () => A,
+}),
+    n(896048),
+    n(321073);
 var r = n(136722),
     i = n(937724),
     a = n(626584),
@@ -12,6 +16,7 @@ var r = n(136722),
     p = n(799422),
     _ = n(723176),
     h = n(453001);
+
 function m(e, t, n) {
     return (
         t in e
@@ -104,7 +109,7 @@ class E {
                     g.warn("couldn't optimstically write basic_channel:", e);
                     return;
                 }
-                await new Promise((e) => setTimeout(e, 1000));
+                await new Promise((e) => setTimeout(e, 1e3));
             }
         }
     }
@@ -201,6 +206,7 @@ class E {
             });
     }
 }
+
 function b(e, t) {
     return (
         null == e ||
@@ -209,6 +215,7 @@ function b(e, t) {
         f.A.computeBasicPermissions(e) !== f.A.computeBasicPermissions(t)
     );
 }
+
 function y(e) {
     return Object.values(c.A.getMutableGuildChannelsForGuild(e)).map((e) => ({
         id: e.id,
@@ -218,6 +225,7 @@ function y(e) {
         basicPermissions: p.A.asBasicFlag(f.A.computePermissions(e)),
     }));
 }
+
 function O(e) {
     let t = [],
         n = [];

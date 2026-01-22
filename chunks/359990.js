@@ -27,6 +27,7 @@ var r = n(627968),
     A = n(652215),
     v = n(985018),
     S = n(754388);
+
 function I(e, t, n) {
     return (
         t in e
@@ -40,6 +41,7 @@ function I(e, t, n) {
         e
     );
 }
+
 function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -56,6 +58,7 @@ function T(e) {
     }
     return e;
 }
+
 function C(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -68,6 +71,7 @@ function C(e, t) {
     }
     return n;
 }
+
 function N(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -79,6 +83,7 @@ function N(e, t) {
         e
     );
 }
+
 function R(e) {
     let {
             transitionState: t,
@@ -326,6 +331,7 @@ function R(e) {
         ],
     });
 }
+
 function w(e) {
     let { onSelect: t, credential: i } = e;
     return (0, r.jsxs)(o.W1t, {
@@ -340,7 +346,16 @@ function w(e) {
                 action: () => {
                     (0, o.mMO)(async () => {
                         let { default: e } = await n.e("50267").then(n.bind(n, 428726));
-                        return (t) => (0, r.jsx)(e, T({ credential: i }, t));
+                        return (t) =>
+                            (0, r.jsx)(
+                                e,
+                                T(
+                                    {
+                                        credential: i,
+                                    },
+                                    t,
+                                ),
+                            );
                     });
                 },
             }),
@@ -355,6 +370,7 @@ function w(e) {
         ],
     });
 }
+
 function P() {
     let {
         credentials: e,
@@ -425,13 +441,17 @@ function P() {
         })
     );
 }
+
 function D(e) {
     if (null !== e.last_used)
         return (0, r.jsx)(o.Text, {
             variant: "text-sm/normal",
-            children: v.intl.format(v.t["7JgxF5"], { lastUsed: (0, c.Y)(e.last_used) }),
+            children: v.intl.format(v.t["7JgxF5"], {
+                lastUsed: (0, c.Y)(e.last_used),
+            }),
         });
 }
+
 function x(e) {
     return (0, r.jsxs)(
         "div",
@@ -449,7 +469,14 @@ function x(e) {
                         asset: o.FHP,
                     },
                     onClick: (t) => {
-                        (0, l.jA)(t, (t) => (0, r.jsx)(w, N(T({}, t), { credential: e })));
+                        (0, l.jA)(t, (t) =>
+                            (0, r.jsx)(
+                                w,
+                                N(T({}, t), {
+                                    credential: e,
+                                }),
+                            ),
+                        );
                     },
                     "aria-label": v.intl.string(v.t["+nrTbK"]),
                     size: "sm",

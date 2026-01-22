@@ -1,4 +1,6 @@
-n.d(t, { g: () => u });
+n.d(t, {
+    g: () => u,
+});
 var a = n(627968);
 n(64700);
 var l = n(311907),
@@ -8,13 +10,16 @@ var l = n(311907),
     o = n(71393),
     c = n(985018),
     d = n(997810);
+
 function u(e, t, n, u, m) {
     let p = (0, l.bG)([o.A], () => o.A.getGuild(e)),
         h = (0, s.A)({
             guild: p,
             analyticsLocations: t,
         }),
-        f = (0, s.A)({ analyticsLocations: t });
+        f = (0, s.A)({
+            analyticsLocations: t,
+        });
     return (0, a.jsxs)(a.Fragment, {
         children: [
             null != p
@@ -41,7 +46,9 @@ function u(e, t, n, u, m) {
                                               (0, a.jsx)(i.Text, {
                                                   variant: "text-xs/normal",
                                                   lineClamp: 1,
-                                                  style: { maxWidth: "150px" },
+                                                  style: {
+                                                      maxWidth: "150px",
+                                                  },
                                                   children: null == p ? void 0 : p.name,
                                               }),
                                           ],
@@ -73,7 +80,11 @@ function u(e, t, n, u, m) {
                                     variant: "text-sm/medium",
                                     children: c.intl.string(c.t.HmFaFB),
                                 }),
-                                n ? (0, a.jsx)(i.LpS, { text: c.intl.string(c.t.y2b7CA) }) : void 0,
+                                n
+                                    ? (0, a.jsx)(i.LpS, {
+                                          text: c.intl.string(c.t.y2b7CA),
+                                      })
+                                    : void 0,
                             ],
                         }),
                     action: () => {

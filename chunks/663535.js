@@ -1,4 +1,6 @@
-n.d(t, { A: () => x });
+n.d(t, {
+    A: () => x,
+});
 var r = n(627968),
     l = n(64700),
     a = n(311907),
@@ -54,7 +56,10 @@ let x = l.memo(function (e) {
                             }
                             return e;
                         })({}, t)),
-                        (l = l = { channel: c }),
+                        (l = l =
+                            {
+                                channel: c,
+                            }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
                             : (function (e, t) {
@@ -94,10 +99,13 @@ let x = l.memo(function (e) {
                     (0, m.A)(c),
                 ],
             }),
-            (0, r.jsx)(v, { channel: c }),
+            (0, r.jsx)(v, {
+                channel: c,
+            }),
         ],
     });
 });
+
 function v(e) {
     let { channel: t } = e,
         n = (0, a.bG)([g.A], () => {

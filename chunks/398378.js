@@ -1,9 +1,12 @@
-r.d(t, { K: () => c });
+r.d(t, {
+    K: () => c,
+});
 var a = r(64700),
     n = r(475743),
     s = r(954571),
     i = r(21251),
     l = r(652215);
+
 function c(e) {
     let t = (0, n.A)(e);
     a.useEffect(() => {

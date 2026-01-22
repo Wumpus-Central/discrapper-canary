@@ -1,4 +1,6 @@
-t.d(A, { A: () => b });
+t.d(A, {
+    A: () => b,
+});
 var r = t(627968),
     n = t(64700),
     l = t(284009),
@@ -10,6 +12,7 @@ var r = t(627968),
     c = t(652215),
     u = t(985018),
     g = t(228580);
+
 function f(e) {
     for (var A = 1; A < arguments.length; A++) {
         var t = null != arguments[A] ? arguments[A] : {},
@@ -35,6 +38,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e, A) {
     return (
         (A = null != A ? A : {}),
@@ -54,11 +58,20 @@ function p(e, A) {
     );
 }
 let m = (0, o.Ld)();
+
 function b(e) {
     let { newRoleParams: A, setNewRoleParams: t } = e,
         l = n.useRef(null),
         { name: o, color: b } = A,
-        v = (e) => t((A) => (a()(null != A, "newRoleParams should be defined"), p(f({}, A), { color: e })));
+        v = (e) =>
+            t(
+                (A) => (
+                    a()(null != A, "newRoleParams should be defined"),
+                    p(f({}, A), {
+                        color: e,
+                    })
+                ),
+            );
     return (0, r.jsxs)("div", {
         className: g.CJ,
         children: [
@@ -66,7 +79,14 @@ function b(e) {
                 autoFocus: !0,
                 value: o,
                 onChange: (e) =>
-                    t((A) => (a()(null != A, "newRoleParams should be defined"), p(f({}, A), { name: e }))),
+                    t(
+                        (A) => (
+                            a()(null != A, "newRoleParams should be defined"),
+                            p(f({}, A), {
+                                name: e,
+                            })
+                        ),
+                    ),
                 id: m,
                 placeholder: u.intl.string(u.t.oNauug),
                 maxLength: c.fHV,
@@ -74,7 +94,11 @@ function b(e) {
             (0, r.jsxs)("div", {
                 className: g.P4,
                 children: [
-                    (0, r.jsx)(s.AC4, { children: u.intl.format(u.t["Vlq/pH"], { color: (0, i.Hl)(b) }) }),
+                    (0, r.jsx)(s.AC4, {
+                        children: u.intl.format(u.t["Vlq/pH"], {
+                            color: (0, i.Hl)(b),
+                        }),
+                    }),
                     (0, r.jsx)(s.YNO, {
                         targetElementRef: l,
                         renderPopout: (e) =>
@@ -98,7 +122,9 @@ function b(e) {
                     }),
                 ],
             }),
-            (0, r.jsx)(d.A, { role: A }),
+            (0, r.jsx)(d.A, {
+                role: A,
+            }),
         ],
     });
 }

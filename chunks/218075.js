@@ -14,6 +14,7 @@ var i = n(397927),
             e
         );
     })({});
+
 function l(e) {
     let { paymentRestrictionBannerType: t } = e,
         n = "";
@@ -47,7 +48,9 @@ function l(e) {
                 variant: "text-sm/normal",
                 children: n,
             }),
-            (0, r.jsx)("div", { className: s.u }),
+            (0, r.jsx)("div", {
+                className: s.u,
+            }),
         ],
     });
 }

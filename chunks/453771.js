@@ -23,13 +23,17 @@ var r = n(796873),
     d = n(652215),
     f = n(788868),
     p = n(985018);
-let _ = 524288000,
-    h = 524288000;
+let _ = 524288e3,
+    h = 524288e3;
+
 function m(e, t) {
     return e instanceof File ? e : g(e.data.buffer, e.filename, null != t ? t : "text/plain");
 }
+
 function g(e, t, n) {
-    return new File([e], t, { type: n });
+    return new File([e], t, {
+        type: n,
+    });
 }
 let E = [
     {
@@ -89,9 +93,11 @@ let E = [
         klass: "audio",
     },
 ];
+
 function b(e) {
     return y(e.name, e.type);
 }
+
 function y(e, t) {
     var n;
     e = null != (n = null == e ? void 0 : e.toLowerCase()) ? n : "";
@@ -100,9 +106,11 @@ function y(e, t) {
     );
     return null != r ? r.klass : "unknown";
 }
+
 function O(e) {
     return i().filesize(e);
 }
+
 function A(e) {
     let t = l.default.getCurrentUser(),
         n = u.Ay.getUserMaxFileSize(t);
@@ -110,26 +118,35 @@ function A(e) {
     let r = o.A.getGuild(e);
     return Math.max(null != r ? f.TG[r.premiumTier].limits.fileSize : d.TbF, n);
 }
+
 function v(e, t) {
     let n = A(t);
     return Array.from(e).some((e) => e.size > n);
 }
+
 function S(e) {
     let t = 0;
     for (let n of e) t += n.size;
     return t;
 }
+
 function I(e) {
     return S(e) > T();
 }
+
 function T() {
     let e = l.default.getCurrentUser();
     return null != e && e.isStaff() ? h : _;
 }
+
 function C(e) {
     let { guildId: t, onClick: n } = e,
-        r = (0, c.Xq)(A(t) / 1024, { useKibibytes: !0 }),
-        i = (0, c.Xq)(f.f3 / 1024, { useKibibytes: !0 });
+        r = (0, c.Xq)(A(t) / 1024, {
+            useKibibytes: !0,
+        }),
+        i = (0, c.Xq)(f.f3 / 1024, {
+            useKibibytes: !0,
+        });
     return p.intl.format(p.t.tRuxk9, {
         maxSize: r,
         premiumMaxSize: i,

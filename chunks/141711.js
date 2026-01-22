@@ -1,4 +1,6 @@
-i.d(t, { A: () => tx });
+i.d(t, {
+    A: () => tx,
+});
 var r = Object.create,
     s = Object.defineProperty,
     a = Object.getOwnPropertyDescriptor,
@@ -12,7 +14,16 @@ var r = Object.create,
     },
     d = function (e, t) {
         return function () {
-            return t || e((t = { exports: {} }).exports, t), t.exports;
+            return (
+                t ||
+                    e(
+                        (t = {
+                            exports: {},
+                        }).exports,
+                        t,
+                    ),
+                t.exports
+            );
         };
     },
     u = function (e, t, i, r) {
@@ -46,12 +57,14 @@ var r = Object.create,
     f = d(function (e, t) {
         t.exports = "u" > typeof window ? window : "u" > typeof global ? global : "u" > typeof self ? self : {};
     });
+
 function g(e, t) {
     return null != t && "u" > typeof Symbol && t[Symbol.hasInstance] ? !!t[Symbol.hasInstance](e) : g(e, t);
 }
 var p = h(function () {
     p();
 });
+
 function v(e) {
     return e && "u" > typeof Symbol && e.constructor === Symbol ? "symbol" : typeof e;
 }
@@ -136,7 +149,7 @@ var y = h(function () {}),
                     case 3:
                         return s(t.data);
                     case 8:
-                        return "<!--" + t.data + "-->";
+                        return "\x3c!--" + t.data + "--\x3e";
                     default:
                         var a, n, l;
                         return (
@@ -228,6 +241,7 @@ var y = h(function () {}),
             "track",
             "wbr",
         ];
+
         function r(e) {
             var t = [];
             return (
@@ -254,6 +268,7 @@ var y = h(function () {}),
                 t.length ? " " + t.join(" ") : ""
             );
         }
+
         function s(e) {
             var t = "";
             return (
@@ -270,6 +285,7 @@ var y = h(function () {}),
             a = A(),
             n = L(),
             l = "http://www.w3.org/1999/xhtml";
+
         function o(e, t, i) {
             if (!g(this, o)) return new o(e);
             var r = void 0 === i ? l : i || null;
@@ -384,6 +400,7 @@ var y = h(function () {}),
     k = d(function (e, t) {
         p();
         var i = R();
+
         function r(e) {
             if (!g(this, r)) return new r();
             (this.childNodes = []), (this.parentNode = null), (this.ownerDocument = e || null);
@@ -422,6 +439,7 @@ var y = h(function () {}),
             o = S(),
             h = b(),
             d = A();
+
         function u() {
             if (!g(this, u)) return new u();
             (this.head = this.createElement("head")),
@@ -479,11 +497,13 @@ var y = h(function () {}),
             : (i = r["__GLOBAL_DOCUMENT_CACHE@4"]) || (i = r["__GLOBAL_DOCUMENT_CACHE@4"] = s),
             (t.exports = i);
     });
+
 function x(e, t) {
     (null == t || t > e.length) && (t = e.length);
     for (var i = 0, r = Array(t); i < t; i++) r[i] = e[i];
     return r;
 }
+
 function C(e, t) {
     if (e) {
         if ("string" == typeof e) return x(e, t);
@@ -493,6 +513,7 @@ function C(e, t) {
         if ("Arguments" === i || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(i)) return x(e, t);
     }
 }
+
 function O(e, t) {
     return (
         (function (e) {
@@ -559,7 +580,7 @@ var M = c(f()),
         return l ? t.substring(0, 28) + l : t;
     },
     $ = function () {
-        return ("000000" + ((2176782336 * Math.random()) | 0).toString(36)).slice(-6);
+        return ("000000" + ((0x81bf1000 * Math.random()) | 0).toString(36)).slice(-6);
     },
     G = function (e) {
         var t;
@@ -575,6 +596,7 @@ var M = c(f()),
             i = t && t.nodeName ? t.nodeName.toLowerCase() : "";
         return [t, e, i];
     };
+
 function K(e) {
     return (
         (function (e) {
@@ -635,16 +657,20 @@ var q = (function (e) {
         };
     })("[mux]"),
     V = c(f());
+
 function j() {
     return "1" === (V.default.doNotTrack || (V.default.navigator && V.default.navigator.doNotTrack));
 }
+
 function W(e) {
     if (void 0 === e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return e;
 }
+
 function Y(e, t) {
     if (!g(e, t)) throw TypeError("Cannot call a class as a function");
 }
+
 function Q(e, t) {
     for (var i = 0; i < t.length; i++) {
         var r = t[i];
@@ -654,9 +680,11 @@ function Q(e, t) {
             Object.defineProperty(e, r.key, r);
     }
 }
+
 function X(e, t, i) {
     return t && Q(e.prototype, t), i && Q(e, i), e;
 }
+
 function z(e, t, i) {
     return (
         t in e
@@ -670,6 +698,7 @@ function z(e, t, i) {
         e
     );
 }
+
 function J(e) {
     return (J = Object.setPrototypeOf
         ? Object.getPrototypeOf
@@ -677,6 +706,7 @@ function J(e) {
               return e.__proto__ || Object.getPrototypeOf(e);
           })(e);
 }
+
 function Z(e, t, i) {
     return (Z =
         "u" > typeof Reflect && Reflect.get
@@ -692,6 +722,7 @@ function Z(e, t, i) {
                   }
               })(e, t, i || e);
 }
+
 function ee(e, t) {
     return (ee =
         Object.setPrototypeOf ||
@@ -724,9 +755,11 @@ var et = function (e) {
             t = e && e.timing;
         return t && t.navigationStart;
     };
+
 function el(e, t, i) {
     (i = void 0 === i ? 1 : i), (e[t] = e[t] || 0), (e[t] += i);
 }
+
 function eo(e) {
     for (var t = 1; t < arguments.length; t++) {
         var i = null != arguments[t] ? arguments[t] : {},
@@ -743,6 +776,7 @@ function eo(e) {
     }
     return e;
 }
+
 function eh(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -763,6 +797,7 @@ function eh(e, t) {
 }
 var ed = ["x-request-id", "cf-ray", "x-amz-cf-id", "x-akamai-request-id"],
     eu = ["x-cdn", "content-type"].concat(ed);
+
 function ec(e) {
     var t = {};
     return (
@@ -781,6 +816,7 @@ function ec(e) {
         t
     );
 }
+
 function ef(e) {
     if (e) {
         var t = ed.find(function (t) {
@@ -1161,7 +1197,9 @@ var eg = function (e) {
         var l = {},
             o = function (e) {
                 if ("function" != typeof e.getRequests) return null;
-                var t = e.getRequests({ state: "executed" });
+                var t = e.getRequests({
+                    state: "executed",
+                });
                 return 0 === t.length ? null : t[t.length - 1];
             },
             h = function (e) {
@@ -1299,7 +1337,9 @@ var eg = function (e) {
                         return t.qualityIndex === e.newQuality;
                     });
                     if (!(l && "number" == typeof l.bitrate)) return void r.warn("missing bitrate info for ".concat(n));
-                    u[n] = eh(eo({}, l), { codec: i.getCurrentTrackFor(n).codec });
+                    u[n] = eh(eo({}, l), {
+                        codec: i.getCurrentTrackFor(n).codec,
+                    });
                     var o = c();
                     o && a("renditionchange", o);
                 }
@@ -1413,7 +1453,13 @@ var eg = function (e) {
                                 n = this._listeners["after" + e] || [],
                                 l = function (t, r) {
                                     (t = t.slice()).forEach(function (t) {
-                                        t.call(i, { type: e }, r);
+                                        t.call(
+                                            i,
+                                            {
+                                                type: e,
+                                            },
+                                            r,
+                                        );
                                     });
                                 };
                             l(r, t), l(s, t), l(a, t), l(n, t);
@@ -1463,7 +1509,9 @@ var eg = function (e) {
                 t.on("devicesleep", function (e, r) {
                     null !== i._playbackHeartbeatInterval &&
                         (ek.default.clearInterval(i._playbackHeartbeatInterval),
-                        t.emit("playbackheartbeatend", { viewer_time: r.viewer_time }),
+                        t.emit("playbackheartbeatend", {
+                            viewer_time: r.viewer_time,
+                        }),
                         (i._playbackHeartbeatInterval = null));
                 });
         }
@@ -1643,10 +1691,10 @@ var eg = function (e) {
                         e > this._playbackTimeTrackerLastPlayheadPosition
                             ? (r = e - this._playbackTimeTrackerLastPlayheadPosition)
                             : this._isAdPlaying && (r = i),
-                            r > 0 && r <= 1000 && el(this.pm.data, "view_content_playback_time", r),
+                            r > 0 && r <= 1e3 && el(this.pm.data, "view_content_playback_time", r),
                             null !== this._callbackUpdatePlaybackTime &&
                                 i > 0 &&
-                                i <= 1000 &&
+                                i <= 1e3 &&
                                 (this._isAdPlaying && el(this.pm.data, "ad_playing_time_ms_cumulative", i),
                                 el(this.pm.data, "view_playing_time_ms_cumulative", i)),
                             (this._playbackTimeTrackerLastPlayheadPosition = e),
@@ -1717,12 +1765,12 @@ var eg = function (e) {
                         var r = e.viewer_time - i;
                         el(t.data, "view_rebuffer_duration", r),
                             (i = e.viewer_time),
-                            t.data.view_rebuffer_duration > 300000 &&
+                            t.data.view_rebuffer_duration > 3e5 &&
                                 (t.emit("viewend"),
                                 t.send("viewend"),
                                 t.mux.log.warn(
                                     "Ending view after rebuffering for longer than ".concat(
-                                        300000,
+                                        3e5,
                                         "ms, future events will be ignored unless a programchange or videochange occurs.",
                                     ),
                                 ));
@@ -1761,7 +1809,9 @@ var eg = function (e) {
                     t.on("playbackheartbeat", this._checkIfRebuffering.bind(this)),
                     t.on("playbackheartbeatend", this._cleanupRebufferTracker.bind(this)),
                     t.on("seeking", function () {
-                        i._cleanupRebufferTracker(null, { viewer_time: B() });
+                        i._cleanupRebufferTracker(null, {
+                            viewer_time: B(),
+                        });
                     }));
         }
         return (
@@ -1784,7 +1834,9 @@ var eg = function (e) {
                             i >= this.pm.sustainedRebufferThreshold &&
                             (this._rebuffering ||
                                 ((this._rebuffering = !0),
-                                this.pm.emit("rebufferstart", { viewer_time: this._lastPlayheadTimeUpdatedTime }))),
+                                this.pm.emit("rebufferstart", {
+                                    viewer_time: this._lastPlayheadTimeUpdatedTime,
+                                }))),
                             (this._lastCheckedTime = t.viewer_time);
                     },
                 },
@@ -1809,7 +1861,10 @@ var eg = function (e) {
                     value: function (e, t) {
                         var i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
                         if (this._rebuffering)
-                            (this._rebuffering = !1), this.pm.emit("rebufferend", { viewer_time: t.viewer_time });
+                            (this._rebuffering = !1),
+                                this.pm.emit("rebufferend", {
+                                    viewer_time: t.viewer_time,
+                                });
                         else {
                             if (null === this._lastCheckedTime) return;
                             var r = this.pm.data.player_playhead_time - this._lastPlayheadTime,
@@ -1818,7 +1873,9 @@ var eg = function (e) {
                                 r > 0 &&
                                 s - r > this.pm.minimumRebufferDuration &&
                                 ((this._lastCheckedTime = null),
-                                this.pm.emit("rebufferstart", { viewer_time: this._lastPlayheadTimeUpdatedTime }),
+                                this.pm.emit("rebufferstart", {
+                                    viewer_time: this._lastPlayheadTimeUpdatedTime,
+                                }),
                                 this.pm.emit("rebufferend", {
                                     viewer_time: this._lastPlayheadTimeUpdatedTime + s - r,
                                 }));
@@ -1863,7 +1920,7 @@ var eg = function (e) {
                     value: function () {
                         return (
                             void 0 === this.pm.data.view_content_playback_time ||
-                            this.pm.data.view_content_playback_time <= 1000
+                            this.pm.data.view_content_playback_time <= 1e3
                         );
                     },
                 },
@@ -1871,7 +1928,9 @@ var eg = function (e) {
                     key: "calculateTimeToFirstFrame",
                     value: function (e, t) {
                         t === this.pm.data.view_id &&
-                            (this.pm.watchTimeTracker._updateWatchTime(null, { viewer_time: e }),
+                            (this.pm.watchTimeTracker._updateWatchTime(null, {
+                                viewer_time: e,
+                            }),
                             (this.pm.data.view_time_to_first_frame = this.pm.data.view_watch_time),
                             (this.pm.data.player_autoplay_on || this.pm.data.video_is_autoplay) &&
                                 this.pm.pageLoadInitTime &&
@@ -1961,7 +2020,7 @@ var eg = function (e) {
                     (r = -1);
             };
         t.on("seeking", function (e, a) {
-            if ((Object.assign(t.data, a), i.isSeeking && a.viewer_time - r <= 2000)) {
+            if ((Object.assign(t.data, a), i.isSeeking && a.viewer_time - r <= 2e3)) {
                 r = a.viewer_time;
                 return;
             }
@@ -2034,7 +2093,12 @@ var eg = function (e) {
                 t.on("playing", r),
                 t.on("viewend", r),
                 t.on("adrequest", function (e, r) {
-                    (r = Object.assign({ ad_request_id: "generatedAdRequestId" + i._currentAdRequestNumber++ }, r)),
+                    (r = Object.assign(
+                        {
+                            ad_request_id: "generatedAdRequestId" + i._currentAdRequestNumber++,
+                        },
+                        r,
+                    )),
                         eB(i._adRequests, r),
                         el(t.data, "view_ad_request_count"),
                         i.inPrerollPosition() &&
@@ -2042,7 +2106,12 @@ var eg = function (e) {
                             i._adHasPlayed || el(t.data, "view_preroll_request_count"));
                 }),
                 t.on("adresponse", function (e, r) {
-                    (r = Object.assign({ ad_request_id: "generatedAdRequestId" + i._currentAdResponseNumber++ }, r)),
+                    (r = Object.assign(
+                        {
+                            ad_request_id: "generatedAdRequestId" + i._currentAdResponseNumber++,
+                        },
+                        r,
+                    )),
                         eB(i._adResponses, r);
                     var s = i.findAdRequest(r.ad_request_id);
                     s && el(t.data, "view_ad_request_time", Math.max(0, r.viewer_time - s.viewer_time));
@@ -2092,7 +2161,7 @@ var eg = function (e) {
                     value: function () {
                         return (
                             void 0 === this.pm.data.view_content_playback_time ||
-                            this.pm.data.view_content_playback_time <= 1000
+                            this.pm.data.view_content_playback_time <= 1e3
                         );
                     },
                 },
@@ -2145,12 +2214,20 @@ var eg = function (e) {
                 var r = B(),
                     s = i.lastWallClockTime;
                 (i.lastWallClockTime = r),
-                    r - s > 30000 &&
-                        (t.emit("devicesleep", { viewer_time: s }),
-                        Object.assign(t.data, { viewer_time: s }),
+                    r - s > 3e4 &&
+                        (t.emit("devicesleep", {
+                            viewer_time: s,
+                        }),
+                        Object.assign(t.data, {
+                            viewer_time: s,
+                        }),
                         t.send("devicesleep"),
-                        t.emit("devicewake", { viewer_time: r }),
-                        Object.assign(t.data, { viewer_time: r }),
+                        t.emit("devicewake", {
+                            viewer_time: r,
+                        }),
+                        Object.assign(t.data, {
+                            viewer_time: r,
+                        }),
                         t.send("devicewake"));
             };
         t.one("playbackheartbeat", r),
@@ -2172,9 +2249,18 @@ var eg = function (e) {
                 var a;
                 if ("u" > typeof document) {
                     if (arguments.length > 1) {
-                        if ("number" == typeof (s = tl({ path: "/" }, i.defaults, s)).expires) {
+                        if (
+                            "number" ==
+                            typeof (s = tl(
+                                {
+                                    path: "/",
+                                },
+                                i.defaults,
+                                s,
+                            )).expires
+                        ) {
                             var n = new Date();
-                            n.setMilliseconds(n.getMilliseconds() + 86400000 * s.expires), (s.expires = n);
+                            n.setMilliseconds(n.getMilliseconds() + 864e5 * s.expires), (s.expires = n);
                         }
                         try {
                             (a = JSON.stringify(r)), /^[\{\[]/.test(a) && (r = a);
@@ -2231,11 +2317,22 @@ var eg = function (e) {
                     return i.call(i, e);
                 }),
                 (i.getJSON = function () {
-                    return i.apply({ json: !0 }, [].slice.call(arguments));
+                    return i.apply(
+                        {
+                            json: !0,
+                        },
+                        [].slice.call(arguments),
+                    );
                 }),
                 (i.defaults = {}),
                 (i.remove = function (e, t) {
-                    i(e, "", tl(t, { expires: -1 }));
+                    i(
+                        e,
+                        "",
+                        tl(t, {
+                            expires: -1,
+                        }),
+                    );
                 }),
                 (i.withConverter = e),
                 i
@@ -2269,7 +2366,9 @@ var eg = function (e) {
                         return "".concat(i, "=").concat(r);
                     })
                     .join("&"),
-                { expires: 365 },
+                {
+                    expires: 365,
+                },
             );
         } catch (e) {}
     },
@@ -2293,7 +2392,7 @@ var eg = function (e) {
             e.session_id && ((e.sid = e.session_id), delete e.session_id),
             e.session_expires && ((e.sex = e.session_expires), delete e.session_expires),
             (!e.sex || e.sex < t) && ((e.sid = U()), (e.sst = t)),
-            (e.sex = t + 1500000),
+            (e.sex = t + 15e5),
             ej(e),
             {
                 session_id: e.sid,
@@ -2527,11 +2626,13 @@ var eJ = e0({
         wa: "watch",
         wt: "waiting",
     });
+
 function e0(e) {
     var t = {};
     for (var i in e) e.hasOwnProperty(i) && (t[e[i]] = i);
     return t;
 }
+
 function e1(e) {
     var t = {},
         i = {};
@@ -2562,7 +2663,7 @@ var e2 = c(f()),
     e4 = {
         maxBeaconSize: 300,
         maxQueueLength: 3600,
-        baseTimeBetweenBeacons: 10000,
+        baseTimeBetweenBeacons: 1e4,
         maxPayloadKBSize: 500,
     },
     e5 = ["hb", "requestcompleted", "requestfailed", "requestcanceled"],
@@ -2603,7 +2704,13 @@ var e2 = c(f()),
                     ? this._eventQueue.length - this._options.maxBeaconSize
                     : 0,
             t = this._eventQueue.slice(e);
-        e > 0 && Object.assign(t[t.length - 1], e1({ mux_view_message: "event queue truncated" }));
+        e > 0 &&
+            Object.assign(
+                t[t.length - 1],
+                e1({
+                    mux_view_message: "event queue truncated",
+                }),
+            );
         var i = this._createPayload(t);
         e9(this._beaconUrl, i, !0, function () {});
     }),
@@ -2643,7 +2750,9 @@ var e2 = c(f()),
     }),
     (e8.prototype._createPayload = function (e) {
         var t = this,
-            i = { transmission_timestamp: Math.round(B()) };
+            i = {
+                transmission_timestamp: Math.round(B()),
+            };
         this._roundTripTime && (i.rtt_ms = Math.round(this._roundTripTime));
         var r,
             s,
@@ -2693,7 +2802,9 @@ var e6 =
                 .fetch(e, {
                     method: "POST",
                     body: t,
-                    headers: { "Content-Type": "text/plain" },
+                    headers: {
+                        "Content-Type": "text/plain",
+                    },
                     keepalive: e6(t),
                 })
                 .then(function (e) {
@@ -2897,7 +3008,7 @@ var e6 =
                             "viewstart" === e ||
                             "viewend" === e ||
                             !this.previousBeaconData ||
-                            this.mux.utils.now() - this.lastEventTime >= 600000
+                            this.mux.utils.now() - this.lastEventTime >= 6e5
                         )
                             (r = eo({}, t)),
                                 s && (this.previousBeaconData = r),
@@ -2968,12 +3079,12 @@ var e6 =
                     : (h = (null != c ? c : 0) - (null != d ? d : 0)),
                 h > 0 && f && f > 0)
             ) {
-                var g = (f / h) * 8000;
+                var g = (f / h) * 8e3;
                 n++,
                     (r += f),
                     (s += h),
                     (t.data.view_min_request_throughput = Math.min(t.data.view_min_request_throughput || 1 / 0, g)),
-                    (t.data.view_average_request_throughput = (r / s) * 8000),
+                    (t.data.view_average_request_throughput = (r / s) * 8e3),
                     (t.data.view_request_count = a),
                     o > 0 &&
                         ((i += o),
@@ -2996,22 +3107,35 @@ var e6 =
                 var s = r.viewer_time,
                     a = B(),
                     n = i._lastEventTime;
-                if (((i._lastEventTime = a), n && a - n > 3600000)) {
+                if (((i._lastEventTime = a), n && a - n > 36e5)) {
                     var l = Object.keys(t.data).reduce(function (e, i) {
                         return 0 === i.indexOf("video_") ? Object.assign(e, z({}, i, t.data[i])) : e;
                     }, {});
                     t.mux.log.info("Received event after at least an hour inactivity, creating a new view");
                     var o = t.playbackHeartbeat._playheadShouldBeProgressing;
-                    t._resetView(Object.assign({ viewer_time: s }, l)),
+                    t._resetView(
+                        Object.assign(
+                            {
+                                viewer_time: s,
+                            },
+                            l,
+                        ),
+                    ),
                         (t.playbackHeartbeat._playheadShouldBeProgressing = o),
                         t.playbackHeartbeat._playheadShouldBeProgressing &&
                             "play" !== e.type &&
                             "adbreakstart" !== e.type &&
-                            (t.emit("play", { viewer_time: s }),
-                            "playing" !== e.type && t.emit("playing", { viewer_time: s }));
+                            (t.emit("play", {
+                                viewer_time: s,
+                            }),
+                            "playing" !== e.type &&
+                                t.emit("playing", {
+                                    viewer_time: s,
+                                }));
                 }
             });
     };
+
 function tn(e, t) {
     return (null == e ? void 0 : e.toLowerCase()) === (null == t ? void 0 : t.toLowerCase());
 }
@@ -3039,7 +3163,14 @@ var tl,
                             : null != s && s.viewer_time
                               ? s.viewer_time
                               : Date.now();
-                null != l && !tn(l, a) && n <= o && ((a = l), (n = o), t.emit("cdnchange", { video_cdn: l }));
+                null != l &&
+                    !tn(l, a) &&
+                    n <= o &&
+                    ((a = l),
+                    (n = o),
+                    t.emit("cdnchange", {
+                        video_cdn: l,
+                    }));
             },
             r = null,
             s = null,
@@ -3159,6 +3290,7 @@ var tl,
                         e && ("object" === v(e) || "function" == typeof e) ? e : W(this)
                     );
                 });
+
         function r(e, t, s) {
             Y(this, r),
                 z(W((a = i.call(this))), "pageLoadEndTime", void 0),
@@ -3204,7 +3336,7 @@ var tl,
                     {
                         debug: !1,
                         minimumRebufferDuration: 250,
-                        sustainedRebufferThreshold: 1000,
+                        sustainedRebufferThreshold: 1e3,
                         playbackHeartbeatTime: 25,
                         beaconDomain: "litix.io",
                         sampleRate: 1,
@@ -3278,7 +3410,11 @@ var tl,
                         this.mux.log.warn(
                             "The `programchange` event is intended to be used when the content changes mid playback without the video source changing, however the video is not currently playing. If the video source is changing please use the videochange event otherwise you will lose startup time information.",
                         ),
-                        this._resetView(Object.assign(t, { view_program_changed: !0 })),
+                        this._resetView(
+                            Object.assign(t, {
+                                view_program_changed: !0,
+                            }),
+                        ),
                         n(),
                         this.emit("play"),
                         this.emit("playing");
@@ -3367,7 +3503,12 @@ var tl,
                     key: "emit",
                     value: function (e, t) {
                         var i,
-                            s = Object.assign({ viewer_time: this.mux.utils.now() }, t),
+                            s = Object.assign(
+                                {
+                                    viewer_time: this.mux.utils.now(),
+                                },
+                                t,
+                            ),
                             a = [e, s];
                         if (this.emitTranslator)
                             try {
@@ -3553,7 +3694,7 @@ var tl,
                         window.clearTimeout(this._heartBeatTimeout),
                             (this._heartBeatTimeout = window.setTimeout(function () {
                                 e.data.player_is_paused || e.emit("hb");
-                            }, 10000));
+                            }, 1e4));
                     },
                 },
                 {
@@ -3735,7 +3876,9 @@ var tT = function (e, t) {
                     for (var r = e.replace(/['"]+/g, "").split("="), s = 0; s < r.length; s++)
                         "DATA-ID" === r[s] && (t["DATA-ID"] = r[1 - s]), "VALUE" === r[s] && (t.VALUE = r[1 - s]);
                 }),
-                { data: t }
+                {
+                    data: t,
+                }
             );
         }
     },
@@ -3760,7 +3903,7 @@ var tT = function (e, t) {
                 : "";
         },
         secondsToMs: function (e) {
-            return Math.floor(1000 * e);
+            return Math.floor(1e3 * e);
         },
         assign: Object.assign,
         headersStringToObject: ec,
@@ -3810,57 +3953,65 @@ var tT = function (e, t) {
                     (s.mux.destroy(),
                     delete s.mux,
                     l.warn("Already monitoring this video element, replacing existing event listeners")),
-                    ((i = Object.assign({ automaticErrorTracking: !0 }, i, {
-                        getPlayheadTime: function () {
-                            return h(s.currentTime);
+                    ((i = Object.assign(
+                        {
+                            automaticErrorTracking: !0,
                         },
-                        getStateData: function () {
-                            var e,
-                                t,
-                                i = (null == (e = this.getPlayheadTime) ? void 0 : e.call(this)) || h(s.currentTime),
-                                r = this.hlsjs && this.hlsjs.url,
-                                a =
-                                    this.dashjs &&
-                                    "function" == typeof this.dashjs.getSource &&
-                                    this.dashjs.getSource(),
-                                n = {
-                                    player_is_paused: s.paused,
-                                    player_width: parseInt(o(s, "width")),
-                                    player_height: parseInt(o(s, "height")),
-                                    player_autoplay_on: s.autoplay,
-                                    player_preload_on: s.preload,
-                                    player_language_code: s.lang,
-                                    player_is_fullscreen:
-                                        tm.default &&
-                                        !!(
-                                            tm.default.fullscreenElement ||
-                                            tm.default.webkitFullscreenElement ||
-                                            tm.default.mozFullScreenElement ||
-                                            tm.default.msFullscreenElement
-                                        ),
-                                    video_poster_url: s.poster,
-                                    video_source_url: r || a || s.currentSrc,
-                                    video_source_duration: h(s.duration),
-                                    video_source_height: s.videoHeight,
-                                    video_source_width: s.videoWidth,
-                                    view_dropped_frame_count:
-                                        null == s || null == (t = s.getVideoPlaybackQuality)
-                                            ? void 0
-                                            : t.call(s).droppedVideoFrames,
-                                };
-                            if (s.getStartDate && i > 0) {
-                                var l = s.getStartDate();
-                                if (l && "function" == typeof l.getTime && l.getTime()) {
-                                    var d = l.getTime();
-                                    (n.player_program_time = d + i),
-                                        s.seekable.length > 0 &&
-                                            (n.player_live_edge_program_time =
-                                                d + s.seekable.end(s.seekable.length - 1));
+                        i,
+                        {
+                            getPlayheadTime: function () {
+                                return h(s.currentTime);
+                            },
+                            getStateData: function () {
+                                var e,
+                                    t,
+                                    i =
+                                        (null == (e = this.getPlayheadTime) ? void 0 : e.call(this)) ||
+                                        h(s.currentTime),
+                                    r = this.hlsjs && this.hlsjs.url,
+                                    a =
+                                        this.dashjs &&
+                                        "function" == typeof this.dashjs.getSource &&
+                                        this.dashjs.getSource(),
+                                    n = {
+                                        player_is_paused: s.paused,
+                                        player_width: parseInt(o(s, "width")),
+                                        player_height: parseInt(o(s, "height")),
+                                        player_autoplay_on: s.autoplay,
+                                        player_preload_on: s.preload,
+                                        player_language_code: s.lang,
+                                        player_is_fullscreen:
+                                            tm.default &&
+                                            !!(
+                                                tm.default.fullscreenElement ||
+                                                tm.default.webkitFullscreenElement ||
+                                                tm.default.mozFullScreenElement ||
+                                                tm.default.msFullscreenElement
+                                            ),
+                                        video_poster_url: s.poster,
+                                        video_source_url: r || a || s.currentSrc,
+                                        video_source_duration: h(s.duration),
+                                        video_source_height: s.videoHeight,
+                                        video_source_width: s.videoWidth,
+                                        view_dropped_frame_count:
+                                            null == s || null == (t = s.getVideoPlaybackQuality)
+                                                ? void 0
+                                                : t.call(s).droppedVideoFrames,
+                                    };
+                                if (s.getStartDate && i > 0) {
+                                    var l = s.getStartDate();
+                                    if (l && "function" == typeof l.getTime && l.getTime()) {
+                                        var d = l.getTime();
+                                        (n.player_program_time = d + i),
+                                            s.seekable.length > 0 &&
+                                                (n.player_live_edge_program_time =
+                                                    d + s.seekable.end(s.seekable.length - 1));
+                                    }
                                 }
-                            }
-                            return n;
+                                return n;
+                            },
                         },
-                    })).data = Object.assign(
+                    )).data = Object.assign(
                         {
                             player_software: "HTML5 Video Element",
                             player_mux_plugin_name: "VideoElementMonitor",

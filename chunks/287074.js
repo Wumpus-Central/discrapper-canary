@@ -1,4 +1,7 @@
-n.d(t, { A: () => m }), n(896048);
+n.d(t, {
+    A: () => m,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -11,6 +14,7 @@ var r = n(627968),
     f = n(58736),
     p = n(652215),
     h = n(985018);
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +40,7 @@ function b(e) {
     }
     return e;
 }
+
 function g(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -64,6 +69,7 @@ let m = function (e) {
         v = l.useCallback(() => {
             n || A((e) => !e);
         }, [n]);
+
     function x(e) {
         (null == e ? void 0 : e.shiftKey) || O.dispatch(p.jej.POPOUT_CLOSE);
     }

@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var l = n(627968),
     r = n(64700),
     a = n(732955),
@@ -10,6 +12,7 @@ var l = n(627968),
     u = n(652215),
     m = n(985018),
     h = n(659002);
+
 function f(e) {
     let { channelName: t, guildId: f, tagFilter: g, channel: x } = e,
         b = (0, o.S4)(x),
@@ -48,7 +51,10 @@ function f(e) {
                                 }
                                 return e;
                             })({}, t)),
-                            (r = r = { guildId: f }),
+                            (r = r =
+                                {
+                                    guildId: f,
+                                }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
                                 : (function (e, t) {
@@ -79,19 +85,29 @@ function f(e) {
             (0, l.jsx)(i.Heading, {
                 className: h.w,
                 variant: "heading-md/semibold",
-                children: y ? m.intl.formatToPlainString(m.t.lvPci0, { numTags: g.size }) : m.intl.string(m.t.PwTMG0),
+                children: y
+                    ? m.intl.formatToPlainString(m.t.lvPci0, {
+                          numTags: g.size,
+                      })
+                    : m.intl.string(m.t.PwTMG0),
             }),
             (0, l.jsx)(i.Text, {
                 color: "text-default",
                 variant: "text-sm/normal",
                 children: y
-                    ? m.intl.formatToPlainString(m.t.AAeye1, { numTags: g.size })
-                    : m.intl.formatToPlainString(m.t.YtsXFD, { channelName: t }),
+                    ? m.intl.formatToPlainString(m.t.AAeye1, {
+                          numTags: g.size,
+                      })
+                    : m.intl.formatToPlainString(m.t.YtsXFD, {
+                          channelName: t,
+                      }),
             }),
             A &&
                 (0, l.jsxs)(l.Fragment, {
                     children: [
-                        (0, l.jsx)(i.hKd, { size: 16 }),
+                        (0, l.jsx)(i.hKd, {
+                            size: 16,
+                        }),
                         (0, l.jsx)(a.$nd, {
                             text: C ? m.intl.string(m.t.DgatTQ) : m.intl.string(m.t.wOKE8I),
                             variant: "secondary",

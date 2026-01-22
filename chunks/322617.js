@@ -1,4 +1,6 @@
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});
 var r = {};
 r = {
     ascending: "vzostupne",
@@ -6,8 +8,8 @@ r = {
     columnSize: (e) => `Po\u{10D}et pixelov: ${e.value}`,
     descending: "zostupne",
     descendingSort: (e) => `zoraden\xe9 zostupne pod\u{13E}a st\u{13A}pca ${e.columnName}`,
-    resizerDescription: "Stlačením klávesu Enter začnete zmenu veľkosti",
+    resizerDescription: "Stlačen\xedm kl\xe1vesu Enter začnete zmenu veľkosti",
     select: "Vybrať",
     selectAll: "Vybrať všetko",
-    sortable: "zoraditeľný stĺpec",
+    sortable: "zoraditeľn\xfd stĺpec",
 };

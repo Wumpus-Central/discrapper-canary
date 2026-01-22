@@ -1,8 +1,12 @@
-n.d(t, { A: () => C }), n(896048);
+n.d(t, {
+    A: () => C,
+}),
+    n(896048);
 var r,
     i = n(311907),
     a = n(73153),
     s = n(83971);
+
 function o(e, t, n) {
     return (
         t in e
@@ -16,6 +20,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -32,6 +37,7 @@ function l(e) {
     }
     return e;
 }
+
 function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -44,6 +50,7 @@ function c(e, t) {
     }
     return n;
 }
+
 function u(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -60,42 +67,64 @@ let d = new Map(),
     p = null,
     _ = !1,
     h = !1;
+
 function m(e) {
     let { userId: t } = e;
     f.add(t);
 }
+
 function g(e) {
     let { outbox: t, userId: n } = e;
-    d.set(n, u(l({}, t), { lastFetched: Date.now() })), f.delete(n);
+    d.set(
+        n,
+        u(l({}, t), {
+            lastFetched: Date.now(),
+        }),
+    ),
+        f.delete(n);
 }
+
 function E(e) {
     let { userId: t } = e;
     f.delete(t);
 }
+
 function b() {
     (p = null), (_ = !0);
 }
+
 function y(e) {
     let { entry: t, userId: n } = e;
     p = null;
     let r = d.get(n);
     if (null == r) return !1;
     let i = r.entries.filter((e) => e.id !== t.id);
-    d.set(n, u(l({}, r), { entries: i })), (_ = !1);
+    d.set(
+        n,
+        u(l({}, r), {
+            entries: i,
+        }),
+    ),
+        (_ = !1);
 }
+
 function O(e) {
     let { error: t } = e;
     (p = t), (_ = !1);
 }
+
 function A() {
     (p = null), (_ = !1);
 }
+
 function v() {
     (d = new Map()), (f = new Set()), (p = null), (_ = !1);
 }
+
 function S() {
     v(), (h = !0);
 }
+
 function I() {
     v();
 }

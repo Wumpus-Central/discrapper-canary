@@ -1,4 +1,7 @@
-r.d(e, { default: () => _ }), r(896048);
+r.d(e, {
+    default: () => _,
+}),
+    r(896048);
 var n = r(627968),
     o = r(64700),
     i = r(158954),
@@ -11,6 +14,7 @@ var n = r(627968),
     f = r(652215),
     O = r(519412),
     m = r(985018);
+
 function b(t) {
     for (var e = 1; e < arguments.length; e++) {
         var r = null != arguments[e] ? arguments[e] : {},
@@ -36,6 +40,7 @@ function b(t) {
     }
     return t;
 }
+
 function d(t, e) {
     return (
         (e = null != e ? e : {}),
@@ -54,6 +59,7 @@ function d(t, e) {
         t
     );
 }
+
 function y(t, e) {
     if (null == t) return {};
     var r,
@@ -97,7 +103,9 @@ let P = {
                         title: m.intl.formatToPlainString(O.default["4e7WtF"], {
                             premiumGroupProductName: (0, p.DP)(),
                         }),
-                        subtitle: m.intl.formatToPlainString(O.default["3kVEg0"], { cooldownMonths: p.wl }),
+                        subtitle: m.intl.formatToPlainString(O.default["3kVEg0"], {
+                            cooldownMonths: p.wl,
+                        }),
                         onClose: e,
                     },
                     l,
@@ -134,7 +142,9 @@ let P = {
             b(
                 {
                     size: "md",
-                    title: m.intl.formatToPlainString(O.default.IrvJHs, { premiumGroupProductName: (0, p.DP)() }),
+                    title: m.intl.formatToPlainString(O.default.IrvJHs, {
+                        premiumGroupProductName: (0, p.DP)(),
+                    }),
                     subtitle: m.intl.formatToPlainString(O.default.cQDYKU, {
                         premiumGroupProductName: (0, p.DP)(),
                         cooldownMonths: p.wl,
@@ -169,7 +179,9 @@ let P = {
             let t = Date.now();
             (_.current = t),
                 (j.current = t),
-                a.default.track(f.HAw.PREMIUM_GROUP_MEMBER_CANCELLATION_STARTED, { subscription_id: e });
+                a.default.track(f.HAw.PREMIUM_GROUP_MEMBER_CANCELLATION_STARTED, {
+                    subscription_id: e,
+                });
         });
         let C = (t, r) => {
                 a.default.track(f.HAw.PREMIUM_GROUP_MEMBER_CANCELLATION_STEP, {
@@ -187,7 +199,9 @@ let P = {
             R = async () => {
                 m(!0),
                     (await (0, s.oO)(e, r.id)).ok &&
-                        (a.default.track(f.HAw.PREMIUM_GROUP_MEMBER_CANCELLATION_COMPLETED, { subscription_id: e }),
+                        (a.default.track(f.HAw.PREMIUM_GROUP_MEMBER_CANCELLATION_COMPLETED, {
+                            subscription_id: e,
+                        }),
                         i()),
                     m(!1);
             };

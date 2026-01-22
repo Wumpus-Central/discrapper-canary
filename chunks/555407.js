@@ -1,4 +1,7 @@
-n.d(t, { A: () => b }), n(896048);
+n.d(t, {
+    A: () => b,
+}),
+    n(896048);
 var l = n(64700),
     a = n(735438),
     i = n.n(a),
@@ -9,6 +12,7 @@ var l = n(64700),
     u = n(285059),
     o = n(698441),
     f = n(974930);
+
 function b(e, t, n) {
     let a = (0, c.bG)([o.Ay], () => o.Ay.getGuildScheduledEvent(e)),
         b = (0, r.A)(n),

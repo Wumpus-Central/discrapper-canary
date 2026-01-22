@@ -1,4 +1,8 @@
-n.d(t, { A: () => F }), n(228524), n(801541);
+n.d(t, {
+    A: () => F,
+}),
+    n(228524),
+    n(801541);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -25,6 +29,7 @@ var r = n(627968),
     T = n(205806),
     C = n(473169),
     N = n(525351);
+
 function R(e, t, n) {
     return (
         t in e
@@ -38,6 +43,7 @@ function R(e, t, n) {
         e
     );
 }
+
 function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -54,6 +60,7 @@ function w(e) {
     }
     return e;
 }
+
 function P(e, t) {
     if (null == e) return {};
     var n,
@@ -70,6 +77,7 @@ function P(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function D(e, t) {
     if (null == e) return {};
     var n,
@@ -80,6 +88,7 @@ function D(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function x(e) {
     let { header: t, description: n, stepNumber: i } = e;
     return (0, r.jsxs)("div", {
@@ -90,14 +99,18 @@ function x(e) {
                 children: (0, r.jsx)(c.Heading, {
                     variant: "heading-md/semibold",
                     color: "text-brand",
-                    children: (0, r.jsx)(c.Fmo, { children: i }),
+                    children: (0, r.jsx)(c.Fmo, {
+                        children: i,
+                    }),
                 }),
             }),
             (0, r.jsxs)("div", {
                 children: [
                     (0, r.jsx)(c.Heading, {
                         variant: "heading-sm/bold",
-                        children: (0, r.jsx)(c.Fmo, { children: t }),
+                        children: (0, r.jsx)(c.Fmo, {
+                            children: t,
+                        }),
                     }),
                     (0, r.jsx)(c.Text, {
                         variant: "text-sm/medium",
@@ -109,6 +122,7 @@ function x(e) {
         ],
     });
 }
+
 function L() {
     return (0, r.jsxs)("div", {
         className: s()(T.aP, I.a, T.dO, T.p2),
@@ -121,7 +135,9 @@ function L() {
                             (0, r.jsx)(c.Heading, {
                                 className: C.QB,
                                 variant: "heading-xl/medium",
-                                children: (0, r.jsx)(c.Fmo, { children: S.intl.string(v.default.pHEnV5) }),
+                                children: (0, r.jsx)(c.Fmo, {
+                                    children: S.intl.string(v.default.pHEnV5),
+                                }),
                             }),
                             (0, r.jsx)(c.Text, {
                                 variant: "text-sm/medium",
@@ -161,6 +177,7 @@ function L() {
         ],
     });
 }
+
 function j() {
     let e = (0, h.xr)();
     return (0, r.jsxs)("div", {
@@ -171,7 +188,9 @@ function j() {
                     (0, r.jsx)(c.Heading, {
                         className: C.QB,
                         variant: "heading-xl/medium",
-                        children: (0, r.jsx)(c.Fmo, { children: S.intl.string(v.default.zUCWEL) }),
+                        children: (0, r.jsx)(c.Fmo, {
+                            children: S.intl.string(v.default.zUCWEL),
+                        }),
                     }),
                     (0, r.jsx)(c.Text, {
                         variant: "text-sm/medium",
@@ -192,6 +211,7 @@ function j() {
         ],
     });
 }
+
 function M(e) {
     let { sectionType: t, sectionTitle: n, requests: a } = e,
         s = i.useRef(null),
@@ -210,7 +230,13 @@ function M(e) {
                               userId: s.id,
                               isLast: o,
                               children: () =>
-                                  t === O.Ef.ACTIVE ? (0, r.jsx)(E.w, { user: s }) : (0, r.jsx)(b.M, { user: s }),
+                                  t === O.Ef.ACTIVE
+                                      ? (0, r.jsx)(E.w, {
+                                            user: s,
+                                        })
+                                      : (0, r.jsx)(b.M, {
+                                            user: s,
+                                        }),
                           },
                           s.id,
                       );
@@ -298,7 +324,9 @@ let k = () => {
                       }),
                       (0, r.jsx)("div", {
                           className: T.aP,
-                          children: (0, r.jsx)(m.A, { text: S.intl.string(v.default.C4ScLD) }),
+                          children: (0, r.jsx)(m.A, {
+                              text: S.intl.string(v.default.C4ScLD),
+                          }),
                       }),
                   ],
               });
@@ -307,8 +335,12 @@ let k = () => {
         let e = (0, h.xr)(),
             t = (0, _.A)() ? O.Y7 : O.kp,
             n = (0, f.y)(
-                S.intl.formatToPlainString(v.default["1/PzIj"], { maxConnections: t }),
-                S.intl.formatToPlainString(v.default.RcTgiE, { maxConnections: t }),
+                S.intl.formatToPlainString(v.default["1/PzIj"], {
+                    maxConnections: t,
+                }),
+                S.intl.formatToPlainString(v.default.RcTgiE, {
+                    maxConnections: t,
+                }),
             );
         return e
             ? (0, r.jsx)("div", {
@@ -328,12 +360,24 @@ let k = () => {
                 helpline: e,
                 throughline: t,
             })
-                .with({ helpline: !0 }, () =>
-                    S.intl.format(v.default["KOwsf/"], {
-                        helpLink: "https://support.discord.com/hc/articles/7925648993943-Crisis-Text-Line",
-                    }),
+                .with(
+                    {
+                        helpline: !0,
+                    },
+                    () =>
+                        S.intl.format(v.default["KOwsf/"], {
+                            helpLink: "https://support.discord.com/hc/articles/7925648993943-Crisis-Text-Line",
+                        }),
                 )
-                .with({ throughline: !0 }, () => S.intl.format(v.default["6tsC8u"], { helpLink: A.CL }))
+                .with(
+                    {
+                        throughline: !0,
+                    },
+                    () =>
+                        S.intl.format(v.default["6tsC8u"], {
+                            helpLink: A.CL,
+                        }),
+                )
                 .otherwise(() => null);
         return null == n
             ? null
@@ -343,7 +387,9 @@ let k = () => {
                       (0, r.jsx)(c.Heading, {
                           className: T.rH,
                           variant: "heading-sm/semibold",
-                          children: (0, r.jsx)(c.Fmo, { children: S.intl.string(v.default["7/tVhv"]) }),
+                          children: (0, r.jsx)(c.Fmo, {
+                              children: S.intl.string(v.default["7/tVhv"]),
+                          }),
                       }),
                       (0, r.jsx)(c.Text, {
                           variant: "text-xs/medium",
@@ -356,8 +402,12 @@ let k = () => {
     V = () => {
         let e = (0, h.xk)(O.Ef.PENDING),
             t = (0, f.y)(
-                S.intl.formatToPlainString(v.default.IkAgkG, { count: e.length }),
-                S.intl.formatToPlainString(v.default.Q8XnAa, { count: e.length }),
+                S.intl.formatToPlainString(v.default.IkAgkG, {
+                    count: e.length,
+                }),
+                S.intl.formatToPlainString(v.default.Q8XnAa, {
+                    count: e.length,
+                }),
             );
         return 0 === e.length
             ? null

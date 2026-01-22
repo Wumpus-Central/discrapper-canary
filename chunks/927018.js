@@ -200,20 +200,31 @@ let o = {
         checkUnlock: (e) => 113 === e.value,
     },
 };
+
 function l(e) {
     return o[e];
 }
 let c = (e) => {
     switch (e) {
         case 0:
-            return { color: "#1ABC9C" };
+            return {
+                color: "#1ABC9C",
+            };
         case 1:
-            return { color: "#3498DB" };
+            return {
+                color: "#3498DB",
+            };
         case 2:
-            return { color: "#9B59B6" };
+            return {
+                color: "#9B59B6",
+            };
         case 3:
-            return { color: "#E91E63" };
+            return {
+                color: "#E91E63",
+            };
         case 4:
-            return { color: "#E67E22" };
+            return {
+                color: "#E67E22",
+            };
     }
 };

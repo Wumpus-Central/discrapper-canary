@@ -1,4 +1,6 @@
-n.d(t, { default: () => h });
+n.d(t, {
+    default: () => h,
+});
 var r = n(627968);
 n(64700);
 var i = n(284009),
@@ -9,6 +11,7 @@ var i = n(284009),
     c = n(998678),
     u = n(985018),
     d = n(893659);
+
 function f(e, t, n) {
     return (
         t in e
@@ -22,6 +25,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -38,6 +42,7 @@ function p(e) {
     }
     return e;
 }
+
 function _(e) {
     let {
             transitionState: t,
@@ -61,12 +66,15 @@ function _(e) {
                 a()(null != t, "paymentSource missing"), null == o || o(t), i();
             },
             onStepChange: () => {},
-            header: (0, r.jsx)(s.rQ0, { title: u.intl.string(u.t.eQ2bLp) }),
+            header: (0, r.jsx)(s.rQ0, {
+                title: u.intl.string(u.t.eQ2bLp),
+            }),
             analyticsLocation: n,
             hideBreadcrumbs: !0,
             toastContent: f,
             overwriteSubscriptionPaymentSource: _,
         });
+
     function g(e) {
         e.preventDefault();
     }
@@ -82,6 +90,7 @@ function _(e) {
         }),
     });
 }
+
 function h(e) {
     let t = null;
     return (0, r.jsx)(o.PaymentContextProvider, {

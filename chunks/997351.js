@@ -1,4 +1,6 @@
-n.d(t, { A: () => v });
+n.d(t, {
+    A: () => v,
+});
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -15,6 +17,7 @@ var r = n(627968),
     m = n(652215),
     g = n(985018),
     E = n(950503);
+
 function b(e, t, n) {
     return (
         t in e
@@ -28,6 +31,7 @@ function b(e, t, n) {
         e
     );
 }
+
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -44,6 +48,7 @@ function y(e) {
     }
     return e;
 }
+
 function O(e, t) {
     if (null == e) return {};
     var n,
@@ -60,6 +65,7 @@ function O(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function A(e, t) {
     if (null == e) return {};
     var n,
@@ -70,6 +76,7 @@ function A(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function v(e) {
     let { onClose: t, handleLearnMore: n } = e,
         b = O(e, ["onClose", "handleLearnMore"]),
@@ -84,7 +91,9 @@ function v(e) {
         }),
         C = i.useMemo(() => {
             let e = p.Ay.getUserMaxFileSize(A);
-            return (0, u.Xq)(e / 1024, { useKibibytes: !0 });
+            return (0, u.Xq)(e / 1024, {
+                useKibibytes: !0,
+            });
         }, [A]),
         N = (0, d.Iu)({
             guildId: S,
@@ -109,9 +118,13 @@ function v(e) {
                 type: h.e.UPLOAD_ERROR_UPSELL,
                 title: g.intl.string(g.t["9C+41g"]),
                 body: R,
-                context: g.intl.formatToPlainString(g.t.q5fTZp, { maxSize: C }),
+                context: g.intl.formatToPlainString(g.t.q5fTZp, {
+                    maxSize: C,
+                }),
                 glowUp: N,
-                analyticsLocation: { section: m.JJy.FILE_UPLOAD_POPOUT },
+                analyticsLocation: {
+                    section: m.JJy.FILE_UPLOAD_POPOUT,
+                },
                 onClose: t,
                 subscriptionTier: h.pe.TIER_2,
                 secondaryCTA: g.intl.string(g.t.ZnqyZ2),

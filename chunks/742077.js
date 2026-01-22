@@ -1,4 +1,9 @@
-n.d(t, { A: () => J }), n(896048), n(638769), n(264879);
+n.d(t, {
+    A: () => J,
+}),
+    n(896048),
+    n(638769),
+    n(264879);
 var r,
     i = n(91871),
     a = n.n(i),
@@ -29,6 +34,7 @@ var r,
     w = n(144914),
     P = n(227841),
     D = n(652215);
+
 function x(e, t, n) {
     return (
         t in e
@@ -47,9 +53,13 @@ let L = 5,
     M = [],
     k = "",
     U = !1;
+
 function G(e, t) {
-    return e.application.name.localeCompare(t.application.name, h.default.locale, { sensitivity: "base" });
+    return e.application.name.localeCompare(t.application.name, h.default.locale, {
+        sensitivity: "base",
+    });
 }
+
 function V(e, t) {
     return null != e && c()(e.createdAt).isAfter(j) && 0 === t;
 }
@@ -94,16 +104,19 @@ let F = {
         return n === D.tSW.DESCENDING ? a.reverse() : a;
     }),
     K = (0, I.L_)((e) => e.filter((e) => null != e.libraryApplication && e.libraryApplication.isHidden()));
+
 function z(e, t) {
     let n = y.A.getCurrentUserStatisticsForApplication(e.id);
     if (null != n) return new Date(n.last_played_at).getTime();
     let r = t[e.id];
     return null != r ? r : 0;
 }
+
 function q(e) {
     let { query: t } = e;
     k = t;
 }
+
 function X(e, t, n, r, i) {
     if (!i && t.has(e.id)) return null;
     let a = f.A.getApplication(e.id);
@@ -133,6 +146,7 @@ function X(e, t, n, r, i) {
           }
         : null;
 }
+
 function Z(e, t, n, r) {
     let i = null != e ? f.A.getApplication(e) : null;
     if (null == i || null == e || t.has(e)) return null;
@@ -162,6 +176,7 @@ function Z(e, t, n, r) {
         }
     );
 }
+
 function Q() {
     let e = new Set(p.Ay.getRunningVerifiedApplicationIds()),
         t = {},
@@ -220,4 +235,6 @@ class $ extends (r = u.Ay.Store) {
     }
 }
 x($, "displayName", "ApplicationViewStore");
-let J = new $(d.h, { LIBRARY_APPLICATION_FILTER_UPDATE: q });
+let J = new $(d.h, {
+    LIBRARY_APPLICATION_FILTER_UPDATE: q,
+});

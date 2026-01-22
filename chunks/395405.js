@@ -1,4 +1,7 @@
-n.d(t, { A: () => w }), n(896048);
+n.d(t, {
+    A: () => w,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -25,6 +28,7 @@ var r = n(627968),
     _ = n(652215),
     S = n(985018),
     T = n(306769);
+
 function I(e, t, n) {
     return (
         t in e
@@ -112,7 +116,9 @@ class P extends i.Component {
                 }),
                 (0, r.jsx)("div", {
                     className: T.iL,
-                    children: S.intl.format(S.t["0r7snZ"], { count: t }),
+                    children: S.intl.format(S.t["0r7snZ"], {
+                        count: t,
+                    }),
                 }),
             ],
         });
@@ -120,7 +126,9 @@ class P extends i.Component {
     render() {
         let { guildId: e, renderTier: t, levelSubscriptionCount: n, uniqueSubscriberCount: i, tiers: l } = this.props;
         return null == n
-            ? (0, r.jsx)(f.y$y, { type: f.y$y.Type.SPINNING_CIRCLE })
+            ? (0, r.jsx)(f.y$y, {
+                  type: f.y$y.Type.SPINNING_CIRCLE,
+              })
             : null == e
               ? null
               : (0, r.jsx)("div", {
@@ -170,13 +178,17 @@ class P extends i.Component {
                         s = e > 0 ? C : 0;
                     r[t] = l - n + 32 - s;
                 }
-                this.setState({ tierPositions: r });
+                this.setState({
+                    tierPositions: r,
+                });
             }),
             I(this, "setTierRef", (e, t) => {
                 this.tierRefs[t.tier] = e;
             }),
             I(this, "handleAnimatedTier", (e) => {
-                this.setState({ animatedTier: e.key });
+                this.setState({
+                    animatedTier: e.key,
+                });
             }),
             I(this, "renderSubscriber", (e, t, n) => {
                 var i;
@@ -257,7 +269,12 @@ class P extends i.Component {
                                             });
                                     }
                                     return e;
-                                })({ className: T.h1 }, t)),
+                                })(
+                                    {
+                                        className: T.h1,
+                                    },
+                                    t,
+                                )),
                                 (i = i =
                                     {
                                         ref: this.subscribersPopoutTargetRef,

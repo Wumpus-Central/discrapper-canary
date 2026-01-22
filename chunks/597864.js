@@ -1,8 +1,11 @@
-n.d(t, { B: () => s });
+n.d(t, {
+    B: () => s,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
     a = n(314582);
+
 function s(e) {
     let {
             choiceId: t,
@@ -48,7 +51,11 @@ function s(e) {
                         id: f,
                         variant: "text-md/normal",
                         color: "text-subtle",
-                        children: (0, r.jsx)("div", { dangerouslySetInnerHTML: { __html: n.Display } }),
+                        children: (0, r.jsx)("div", {
+                            dangerouslySetInnerHTML: {
+                                __html: n.Display,
+                            },
+                        }),
                     }),
                 ],
             }),

@@ -1,4 +1,7 @@
-n.d(t, { A: () => w }), n(896048);
+n.d(t, {
+    A: () => w,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -21,6 +24,7 @@ var r = n(627968),
     A = n(788868),
     v = n(996988),
     S = n(735027);
+
 function I(e, t, n) {
     return (
         t in e
@@ -34,6 +38,7 @@ function I(e, t, n) {
         e
     );
 }
+
 function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -50,6 +55,7 @@ function T(e) {
     }
     return e;
 }
+
 function C(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -62,6 +68,7 @@ function C(e, t) {
     }
     return n;
 }
+
 function N(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -74,6 +81,7 @@ function N(e, t) {
     );
 }
 let R = h.Ay.getEnableHardwareAcceleration() ? l.JsQ : l.euF;
+
 function w(e) {
     let {
             user: t,
@@ -134,7 +142,9 @@ function w(e) {
               l.DUT,
               N(T({}, z), {
                   className: s()(Y, S.vk),
-                  focusProps: { ringClassName: S.Rg },
+                  focusProps: {
+                      ringClassName: S.Rg,
+                  },
                   onClick: () => {
                       j({
                           action: "PRESS_VIEW_PROFILE",

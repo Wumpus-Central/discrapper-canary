@@ -1,4 +1,6 @@
-r.d(t, { A: () => c });
+r.d(t, {
+    A: () => c,
+});
 var n = r(627968);
 r(64700);
 var o = r(397927),
@@ -6,6 +8,7 @@ var o = r(397927),
     i = r(579872),
     l = r(48686),
     a = r(985018);
+
 function c(e, t, c) {
     t && (0, l.t)()
         ? (0, o.mMO)(async () => {
@@ -50,5 +53,7 @@ function c(e, t, c) {
                   title: a.intl.string(a.t["+JQCa/"]),
                   body: a.intl.string(a.t.hsNm7d),
               })
-            : u.A.toggleSelfMute({ location: c });
+            : u.A.toggleSelfMute({
+                  location: c,
+              });
 }

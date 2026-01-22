@@ -8,6 +8,7 @@ var r = n(311907),
     a = n(487329),
     s = n(161518),
     o = n(731854);
+
 function l(e, t) {
     return (0, r.bG)([s.A, i.default], () => {
         for (let n of i.default.getId() === t
@@ -23,6 +24,7 @@ function l(e, t) {
             if (n.mediaContext === e && n.userId === t) return n;
     });
 }
+
 function c(e, t) {
     var n;
     return null == (n = l(e, t)) ? void 0 : n.type;

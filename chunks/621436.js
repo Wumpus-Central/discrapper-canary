@@ -1,6 +1,9 @@
-n.d(t, { A: () => l });
+n.d(t, {
+    A: () => l,
+});
 var i = n(961350),
     r = n(652215);
+
 function l(e) {
     if (r.kvI.CALLABLE.has(e.type)) {
         var t;

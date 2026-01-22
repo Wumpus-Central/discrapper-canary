@@ -42,7 +42,9 @@ var n = e(834647),
                             stat: !0,
                             forced: !0,
                         },
-                        { getOwnPropertyNames: f.f },
+                        {
+                            getOwnPropertyNames: f.f,
+                        },
                     ));
         },
         fastKey: function (t, r) {

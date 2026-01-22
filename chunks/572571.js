@@ -1,6 +1,8 @@
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});
 var r = {};
 r = {
     removeButtonLabel: "Fjern",
-    removeDescription: "Trykk på Slett for å fjerne taggen.",
+    removeDescription: "Trykk p\xe5 Slett for \xe5 fjerne taggen.",
 };

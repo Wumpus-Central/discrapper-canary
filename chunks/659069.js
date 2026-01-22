@@ -1,4 +1,7 @@
-n.d(t, { A: () => ei }), n(896048);
+n.d(t, {
+    A: () => ei,
+}),
+    n(896048);
 var l = n(627968),
     r = n(64700),
     i = n(503698),
@@ -48,6 +51,7 @@ var l = n(627968),
     J = n(713273),
     z = n(638990),
     X = n(206314);
+
 function Q(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -75,6 +79,7 @@ function Q(e) {
 }
 let $ = o._3J.SIZE_80,
     ee = "required";
+
 function et(e) {
     var t, n, r;
     let { guild: i, user: c } = e,
@@ -99,7 +104,9 @@ function et(e) {
         E = O.filter((e) => x.includes(e.id)),
         S = (0, C.Ay)(c.id, i.id);
     (0, b.Ay)(() => {
-        (0, v.A)(c.id, c.getAvatarURL(i.id, (0, o.FT9)($)), { guildId: i.id });
+        (0, v.A)(c.id, c.getAvatarURL(i.id, (0, o.FT9)($)), {
+            guildId: i.id,
+        });
     });
     let I = (0, A.parseBioReact)(null == S ? void 0 : S.bio),
         R = D.Ay.getEnableHardwareAcceleration() ? o.JsQ : o.euF;
@@ -161,7 +168,9 @@ function et(e) {
                         E.length > 0 &&
                         (0, l.jsxs)(l.Fragment, {
                             children: [
-                                (0, l.jsx)("hr", { className: J.me }),
+                                (0, l.jsx)("hr", {
+                                    className: J.me,
+                                }),
                                 (0, l.jsx)(o.Text, {
                                     variant: "text-xs/semibold",
                                     color: "text-muted",
@@ -203,6 +212,7 @@ function et(e) {
         ],
     });
 }
+
 function en(e) {
     var t;
     let { prompt: n, guild: i } = e,
@@ -229,7 +239,14 @@ function en(e) {
                 ),
         }),
         { handleSelectOption: j } = (0, H.A)(i.id),
-        O = n.options.map((e) => Q({ value: e.id }, e)),
+        O = n.options.map((e) =>
+            Q(
+                {
+                    value: e.id,
+                },
+                e,
+            ),
+        ),
         C = n.options.filter((e) => m.includes(e.id)).map((e) => e.id);
     return (0, l.jsxs)("div", {
         className: J.J1,
@@ -249,7 +266,9 @@ function en(e) {
                     n.title,
                     n.required
                         ? (0, l.jsx)("span", {
-                              className: a()(J.mw, { [J.So]: (null == d ? void 0 : d.type) === ee }),
+                              className: a()(J.mw, {
+                                  [J.So]: (null == d ? void 0 : d.type) === ee,
+                              }),
                               children: "*",
                           })
                         : null,
@@ -265,7 +284,10 @@ function en(e) {
                     else {
                         let e = m.filter((e) => !l.includes(e)),
                             t = n.options.filter((t) => e.includes(t.id));
-                        if (m.length <= t.length && n.required) return void u({ type: ee });
+                        if (m.length <= t.length && n.required)
+                            return void u({
+                                type: ee,
+                            });
                         t.forEach((e) => {
                             j(n, e, !1), f.delete(e.id);
                         });
@@ -283,6 +305,7 @@ function en(e) {
         ],
     });
 }
+
 function el(e) {
     let { guild: t } = e,
         n = (0, s.bG)([T.A], () => T.A.getConnections(t.id));
@@ -318,6 +341,7 @@ function el(e) {
               ],
           });
 }
+
 function er(e) {
     var t;
     let { prompt: n, guild: i } = e,
@@ -362,7 +386,9 @@ function er(e) {
                     n.title,
                     n.required
                         ? (0, l.jsx)("span", {
-                              className: a()(J.mw, { [J.So]: (null == d ? void 0 : d.type) === ee }),
+                              className: a()(J.mw, {
+                                  [J.So]: (null == d ? void 0 : d.type) === ee,
+                              }),
                               children: "*",
                           })
                         : null,
@@ -379,7 +405,9 @@ function er(e) {
                             option: e,
                             onSelect: (t) => {
                                 !t && 1 === m.length && n.required
-                                    ? u({ type: ee })
+                                    ? u({
+                                          type: ee,
+                                      })
                                     : (j(n, e, null != t && t),
                                       n.singleSelect && t && n.options.forEach((e) => f.delete(e.id)),
                                       t ? f.add(e.id) : f.delete(e.id),
@@ -402,6 +430,7 @@ function er(e) {
         ],
     });
 }
+
 function ei(e) {
     let { guildId: t, onBrowseChannels: n } = e,
         i = (0, d.Mw)((0, h.Ay)()),
@@ -480,7 +509,9 @@ function ei(e) {
                     }),
                     (0, l.jsx)(o.Text, {
                         variant: "text-sm/medium",
-                        children: Y.intl.format(Y.t["jH+ktB"], { onBrowseChannels: m }),
+                        children: Y.intl.format(Y.t["jH+ktB"], {
+                            onBrowseChannels: m,
+                        }),
                     }),
                 ],
             }),
@@ -500,12 +531,16 @@ function ei(e) {
                                     children: (0, l.jsx)(o.Heading, {
                                         variant: "heading-md/semibold",
                                         color: "text-strong",
-                                        children: Y.intl.format(Y.t.iB5Gqe, { count: y.length + _ }),
+                                        children: Y.intl.format(Y.t.iB5Gqe, {
+                                            count: y.length + _,
+                                        }),
                                     }),
                                 }),
                                 y.map(P),
                                 v.map(P),
-                                (0, l.jsx)("div", { className: J.DY }),
+                                (0, l.jsx)("div", {
+                                    className: J.DY,
+                                }),
                             ],
                         }),
                     N.length > 0 &&
@@ -516,7 +551,9 @@ function ei(e) {
                                         (0, l.jsx)(o.Heading, {
                                             variant: "heading-md/semibold",
                                             color: "text-strong",
-                                            children: Y.intl.format(Y.t["8IV8K9"], { count: N.length }),
+                                            children: Y.intl.format(Y.t["8IV8K9"], {
+                                                count: N.length,
+                                            }),
                                         }),
                                         (0, l.jsx)(o.Text, {
                                             variant: "text-xs/normal",
@@ -528,7 +565,9 @@ function ei(e) {
                                 N.map(P),
                             ],
                         }),
-                    (0, l.jsx)(el, { guild: b }),
+                    (0, l.jsx)(el, {
+                        guild: b,
+                    }),
                 ],
             }),
             g &&

@@ -1,4 +1,8 @@
-n.d(t, { A: () => N }), n(938796), n(896048);
+n.d(t, {
+    A: () => N,
+}),
+    n(938796),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -22,6 +26,7 @@ var r = n(627968),
     x = n(985018),
     E = n(641131),
     _ = n(378720);
+
 function C(e, t, n) {
     return (
         t in e
@@ -35,6 +40,7 @@ function C(e, t, n) {
         e
     );
 }
+
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -149,7 +155,10 @@ class I extends l.PureComponent {
                         },
                         p,
                     )),
-                    (C = C = { children: A }),
+                    (C = C =
+                        {
+                            children: A,
+                        }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(y, Object.getOwnPropertyDescriptors(C))
                         : (function (e, t) {
@@ -220,10 +229,14 @@ class I extends l.PureComponent {
                 this.handleDelete(), null == (e = (t = this.props).onClose) || e.call(t);
             }),
             C(this, "handleToggleReport", (e) => {
-                this.setState({ report: e });
+                this.setState({
+                    report: e,
+                });
             }),
             C(this, "handleToggleResolveFlag", (e) => {
-                this.setState({ resolveFlag: e });
+                this.setState({
+                    resolveFlag: e,
+                });
             });
     }
 }
@@ -231,7 +244,11 @@ let N = {
     confirmPin: function (e, t) {
         let n,
             l = (0, p.m1)(e, y.default, A.A);
-        (n = e.isPrivate() ? x.intl.string(x.t.hMRngA) : x.intl.formatToPlainString(x.t["3IRluI"], { channelName: l })),
+        (n = e.isPrivate()
+            ? x.intl.string(x.t.hMRngA)
+            : x.intl.formatToPlainString(x.t["3IRluI"], {
+                  channelName: l,
+              })),
             (0, c.A)({
                 title: x.intl.string(x.t.bKMaZX),
                 subtitle: n,
@@ -272,7 +289,9 @@ let N = {
                             disableInteraction: !0,
                         }),
                     }),
-                    (0, r.jsx)(h.A, { children: x.intl.format(x.t.oCVB3Y, {}) }),
+                    (0, r.jsx)(h.A, {
+                        children: x.intl.format(x.t.oCVB3Y, {}),
+                    }),
                 ],
             }),
         });

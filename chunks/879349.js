@@ -1,4 +1,6 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(627968);
 n(64700);
 var l = n(311907),
@@ -6,6 +8,7 @@ var l = n(311907),
     a = n(713654),
     s = n(71393),
     o = n(234021);
+
 function c(e) {
     let { channel: t } = e,
         n = (0, l.bG)([s.A], () => s.A.getGuild(t.guild_id)),
@@ -15,7 +18,9 @@ function c(e) {
         : (0, r.jsxs)("div", {
               className: o.hY,
               children: [
-                  (0, r.jsx)(c, { className: o.p }),
+                  (0, r.jsx)(c, {
+                      className: o.p,
+                  }),
                   (0, r.jsx)(i.Text, {
                       variant: "text-md/semibold",
                       color: "interactive-text-default",

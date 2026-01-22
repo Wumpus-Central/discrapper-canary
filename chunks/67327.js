@@ -1,4 +1,8 @@
-r.d(t, { default: () => en }), r(896048), r(65821);
+r.d(t, {
+    default: () => en,
+}),
+    r(896048),
+    r(65821);
 var n = r(627968),
     i = r(64700),
     l = r(503698),
@@ -47,6 +51,7 @@ var n = r(627968),
     q = r(910143),
     W = r(428721),
     J = r(852119);
+
 function Y(e, t, r) {
     return (
         t in e
@@ -60,6 +65,7 @@ function Y(e, t, r) {
         e
     );
 }
+
 function X(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
@@ -125,7 +131,9 @@ class et extends i.Component {
         });
     }
     get buttonText() {
-        return (0, G.UJ)(this.step, this.props.giftCode, { isCustomGift: this.state.isCustomGift });
+        return (0, G.UJ)(this.step, this.props.giftCode, {
+            isCustomGift: this.state.isCustomGift,
+        });
     }
     get firstHeaderText() {
         let { isCustomGift: e, opened: t, accepted: r } = this.state,
@@ -142,13 +150,21 @@ class et extends i.Component {
                 if (null != l)
                     switch (l) {
                         case a.R.AVATAR_DECORATION:
-                            return Q.intl.formatToPlainString(Q.t.SKduyh, { sender: t });
+                            return Q.intl.formatToPlainString(Q.t.SKduyh, {
+                                sender: t,
+                            });
                         case a.R.PROFILE_EFFECT:
-                            return Q.intl.formatToPlainString(Q.t["1w42T2"], { sender: t });
+                            return Q.intl.formatToPlainString(Q.t["1w42T2"], {
+                                sender: t,
+                            });
                         case a.R.NAMEPLATE:
-                            return Q.intl.formatToPlainString(Q.t.vFiQlU, { sender: t });
+                            return Q.intl.formatToPlainString(Q.t.vFiQlU, {
+                                sender: t,
+                            });
                         default:
-                            return Q.intl.formatToPlainString(Q.t.U4Ko2y, { sender: t });
+                            return Q.intl.formatToPlainString(Q.t.U4Ko2y, {
+                                sender: t,
+                            });
                     }
                 return Q.intl.formatToPlainString(Q.t["0UR0u4"], {
                     sender: t,
@@ -163,7 +179,9 @@ class et extends i.Component {
     get secondHeaderText() {
         if (!this.state.isCustomGift || this.state.opened || this.state.accepted) return null;
         let e = N.default.getUser(this.props.giftCode.userId);
-        return Q.intl.formatToPlainString(Q.t.DDO4Wz, { sender: U.Ay.getName(e) });
+        return Q.intl.formatToPlainString(Q.t.DDO4Wz, {
+            sender: U.Ay.getName(e),
+        });
     }
     get bodyText() {
         let { sku: e, accepting: t, libraryApplication: r, subscriptionPlan: n } = this.props;
@@ -268,7 +286,10 @@ class et extends i.Component {
                                 giftStyle: i.giftStyle,
                                 className: q.C9,
                             }),
-                        !b && (0, n.jsx)("div", { className: q.Dv }),
+                        !b &&
+                            (0, n.jsx)("div", {
+                                className: q.Dv,
+                            }),
                         !g &&
                             (0, n.jsx)(u.s_y, {
                                 "data-migration-pending": !0,
@@ -303,10 +324,14 @@ class et extends i.Component {
                                     variant: "heading-sm/semibold",
                                     children: [
                                         (0, n.jsx)("div", {
-                                            className: s()({ [q.Qw]: b }),
+                                            className: s()({
+                                                [q.Qw]: b,
+                                            }),
                                             children: this.firstHeaderText,
                                         }),
-                                        (0, n.jsx)("div", { children: this.secondHeaderText }),
+                                        (0, n.jsx)("div", {
+                                            children: this.secondHeaderText,
+                                        }),
                                     ],
                                 }),
                                 !(b && !m) &&
@@ -326,7 +351,12 @@ class et extends i.Component {
                                         className: q.l$,
                                         giftStyle: i.giftStyle,
                                     }),
-                                this.state.opened && !v && g && (0, n.jsx)(A.A, { giftCode: i }),
+                                this.state.opened &&
+                                    !v &&
+                                    g &&
+                                    (0, n.jsx)(A.A, {
+                                        giftCode: i,
+                                    }),
                                 v &&
                                     (0, n.jsx)(u.Text, {
                                         className: q.rf,
@@ -345,7 +375,9 @@ class et extends i.Component {
                                             (0, n.jsx)(u.Heading, {
                                                 id: l,
                                                 variant: "heading-md/semibold",
-                                                children: Q.intl.format(Q.t.DDO4Wz, { sender: U.Ay.getName(y) }),
+                                                children: Q.intl.format(Q.t.DDO4Wz, {
+                                                    sender: U.Ay.getName(y),
+                                                }),
                                             }),
                                             (0, n.jsx)(u.Text, {
                                                 className: q.$B,
@@ -373,7 +405,9 @@ class et extends i.Component {
                     !t &&
                     O &&
                     (null == p || null == j
-                        ? (0, n.jsx)(Z, { openedGift: O && !m && !t })
+                        ? (0, n.jsx)(Z, {
+                              openedGift: O && !m && !t,
+                          })
                         : (0, n.jsx)(V.A, {
                               confettiTarget: this.modalRef.current,
                               emojiURL: j,
@@ -402,7 +436,9 @@ class et extends i.Component {
             }),
             Y(this, "modalRef", i.createRef()),
             Y(this, "handleOpen", () => {
-                this.setState({ opened: !0 });
+                this.setState({
+                    opened: !0,
+                });
             }),
             Y(this, "handleAccept", async () => {
                 let { giftCode: e, channelContext: t, onAccept: r } = this.props;
@@ -410,17 +446,28 @@ class et extends i.Component {
                 try {
                     await d.A.redeemGiftCode({
                         code: e.code,
-                        options: { channelId: t },
+                        options: {
+                            channelId: t,
+                        },
                     }),
-                        this.setState({ accepted: !0 }),
+                        this.setState({
+                            accepted: !0,
+                        }),
                         null == r || r();
                 } catch (e) {
-                    this.setState({ error: e });
+                    this.setState({
+                        error: e,
+                    });
                 }
             }),
             Y(this, "handleGoToLibrary", () => {
                 let { onClose: e, libraryApplication: t } = this.props;
-                (0, w.pX)($.BVt.APPLICATION_LIBRARY, { state: { applicationId: null != t ? t.id : void 0 } }), e();
+                (0, w.pX)($.BVt.APPLICATION_LIBRARY, {
+                    state: {
+                        applicationId: null != t ? t.id : void 0,
+                    },
+                }),
+                    e();
             }),
             Y(this, "getDefaultAnimationStatus", () => (this.step === $.frR.OPEN ? H.oA.IDLE : H.oA.ACTION)),
             Y(this, "getIdleAnimationStatus", () => {

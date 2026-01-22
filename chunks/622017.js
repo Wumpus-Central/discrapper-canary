@@ -1,8 +1,11 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(64700),
     i = n(311907),
     a = n(73153),
     s = n(233317);
+
 function o(e) {
     let { useCachedData: t = !1, fetch: n = !0 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         {

@@ -1,4 +1,6 @@
-n.d(t, { f: () => f });
+n.d(t, {
+    f: () => f,
+});
 var r = n(627968),
     i = n(444802),
     a = n(524738),
@@ -8,6 +10,7 @@ var r = n(627968),
     c = n(443357),
     u = n(985018),
     d = n(993128);
+
 function f() {
     let e = (0, i.WX)(),
         t = [
@@ -28,7 +31,9 @@ function f() {
         children: [
             (0, r.jsx)(s._, {
                 header: u.intl.string(u.t["Hj/But"]),
-                description: u.intl.format(u.t["H/Icz+"], { learnMoreLink: o.A.getArticleURL(e) }),
+                description: u.intl.format(u.t["H/Icz+"], {
+                    learnMoreLink: o.A.getArticleURL(e),
+                }),
             }),
             (0, r.jsx)(a._, {
                 tabs: t,

@@ -39,6 +39,7 @@ var r = n(627968),
     O = n(439147),
     A = n(81437),
     v = n(652215);
+
 function S(e, t, n) {
     return (
         t in e
@@ -52,6 +53,7 @@ function S(e, t, n) {
         e
     );
 }
+
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -68,6 +70,7 @@ function I(e) {
     }
     return e;
 }
+
 function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -80,6 +83,7 @@ function T(e, t) {
     }
     return n;
 }
+
 function C(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -91,18 +95,26 @@ function C(e, t) {
         e
     );
 }
+
 function N(e, t, n) {
     return i.useCallback(() => {
-        n({ [e]: !t });
+        n({
+            [e]: !t,
+        });
     }, [e, n, t]);
 }
+
 function R(e, t, n) {
     return i.useCallback(
         (r) => {
             let i = h.default.getUser(e);
             if (null == i) return;
             if ((r.preventDefault(), r.stopPropagation(), !r.shiftKey)) return void n();
-            let a = "@".concat(b.Ay.getUserTag(i, { decoration: "never" })),
+            let a = "@".concat(
+                    b.Ay.getUserTag(i, {
+                        decoration: "never",
+                    }),
+                ),
                 s = "<@".concat(e, ">");
             g._.dispatchToLastSubscribed(v.jej.INSERT_TEXT, {
                 plainText: a,
@@ -113,22 +125,27 @@ function R(e, t, n) {
         [e, t, n],
     );
 }
+
 function w(e, t, n, r) {
     let i = N("usernameProfile", n, r);
     return R(e.author.id, t.id, i);
 }
+
 function P(e, t, n, r) {
     let i = N("referencedUsernameProfile", n, r);
     return R(null == e ? void 0 : e.author.id, t.id, i);
 }
+
 function D(e, t, n, r) {
     let i = N("interactionUsernameProfile", n, r);
     return R(null == e ? void 0 : e.user.id, t.id, i);
 }
+
 function x(e, t, n, r) {
     let i = N("referencedUsernameProfile", n, r);
     return R(e, t.id, i);
 }
+
 function L(e) {
     return i.useCallback(
         (t) => {
@@ -137,15 +154,19 @@ function L(e) {
         [e],
     );
 }
+
 function j(e, t) {
     return L(N("avatarProfile", e, t));
 }
+
 function M(e, t) {
     return L(N("referencedAvatarProfile", e, t));
 }
+
 function k(e, t) {
     return L(N("interactionAvatarProfile", e, t));
 }
+
 function U(e, t, a, l) {
     let { id: c } = t,
         { id: d, flags: h } = e,
@@ -171,7 +192,9 @@ function U(e, t, a, l) {
                     channel: c,
                     location: "right_click",
                 }),
-                a({ contextMenu: !0 }),
+                a({
+                    contextMenu: !0,
+                }),
                 (0, o.L3)(
                     e,
                     async () => {
@@ -194,7 +217,10 @@ function U(e, t, a, l) {
                             );
                     },
                     {
-                        onClose: () => a({ contextMenu: !1 }),
+                        onClose: () =>
+                            a({
+                                contextMenu: !1,
+                            }),
                         context: b,
                     },
                 ));
@@ -202,6 +228,7 @@ function U(e, t, a, l) {
         [g, c, d, a, b, l],
     );
 }
+
 function G(e, t) {
     return i.useCallback(
         (n) => {
@@ -212,6 +239,7 @@ function G(e, t) {
         [e, t],
     );
 }
+
 function V(e, t, n) {
     return i.useCallback(
         (r) => {
@@ -229,6 +257,7 @@ function V(e, t, n) {
         [e, t, n],
     );
 }
+
 function F(e, t) {
     return i.useCallback(
         (n) => {
@@ -239,6 +268,7 @@ function F(e, t) {
         [e, t],
     );
 }
+
 function B(e, t) {
     let { id: n } = e,
         { id: r } = t;
@@ -249,6 +279,7 @@ function B(e, t) {
         [r, n],
     );
 }
+
 function H(e) {
     let { groupId: t, message: n, defaultValue: r } = e,
         a = n.author.id,
@@ -269,6 +300,7 @@ function H(e) {
         handleMouseLeave: f,
     };
 }
+
 function Y(e, t) {
     let [n, r] = i.useState(!1),
         [s, o] = i.useState(!1);
@@ -293,6 +325,7 @@ function Y(e, t) {
         hasFocused: s,
     };
 }
+
 function W(e, t) {
     return i.useCallback(() => {
         let { messageReference: n } = e,
@@ -307,6 +340,7 @@ function W(e, t) {
         (null == t || (0, A.A)(t, r)) && r();
     }, [t, e]);
 }
+
 function K(e, t) {
     let n = N("interactionData", e, t);
     return i.useCallback(

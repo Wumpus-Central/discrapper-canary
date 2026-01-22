@@ -1,4 +1,8 @@
-n.d(t, { s: () => w }), n(228524), n(896048);
+n.d(t, {
+    s: () => w,
+}),
+    n(228524),
+    n(896048);
 var r = n(627968),
     i = n(64700);
 n(516773);
@@ -22,6 +26,7 @@ var l = n(311907),
     v = n(814758),
     A = n(985018),
     E = n(409203);
+
 function N() {
     return (0, r.jsx)(s.Text, {
         tag: "span",
@@ -31,17 +36,24 @@ function N() {
         children: "*",
     });
 }
+
 function _(e) {
     var t;
     let { guild: n, requireDescription: a } = e,
         c = i.useCallback((e) => {
-            f.A.updateGuild({ discoverySplash: e });
+            f.A.updateGuild({
+                discoverySplash: e,
+            });
         }, []),
         o = i.useCallback(() => {
-            f.A.updateGuild({ discoverySplash: null });
+            f.A.updateGuild({
+                discoverySplash: null,
+            });
         }, []),
         g = i.useCallback((e) => {
-            f.A.updateGuild({ description: e });
+            f.A.updateGuild({
+                description: e,
+            });
         }, []),
         { memberCount: b, onlineCount: p } = (0, l.cf)([u.A], () => ({
             memberCount: u.A.getMemberCount(n.id),
@@ -144,6 +156,7 @@ function _(e) {
         ],
     });
 }
+
 function S(e) {
     let { guild: t, guildMetadata: n, requirePrimaryCategory: i, error: l } = e;
     return (0, r.jsxs)("div", {
@@ -219,6 +232,7 @@ function S(e) {
         ],
     });
 }
+
 function T(e) {
     let { guildId: t, guildMetadata: n, requireTag: l, error: d } = e,
         [u, f] = i.useState(null),
@@ -300,7 +314,9 @@ function T(e) {
                           }),
                           (0, r.jsx)("div", {
                               className: E.wF,
-                              children: (0, r.jsx)(o.z, { pills: p }),
+                              children: (0, r.jsx)(o.z, {
+                                  pills: p,
+                              }),
                           }),
                       ],
                   })
@@ -308,6 +324,7 @@ function T(e) {
         ],
     });
 }
+
 function I(e) {
     let { guild: t, guildMetadata: n } = e,
         { emojiDiscoverabilityEnabled: l } = n,
@@ -351,11 +368,14 @@ function I(e) {
         ],
     });
 }
+
 function C(e) {
     let { preferredLocale: t } = e,
         n = i.useMemo(() => (0, v.fr)(), []),
         l = i.useCallback((e) => {
-            f.A.updateGuild({ preferredLocale: e });
+            f.A.updateGuild({
+                preferredLocale: e,
+            });
         }, []);
     return (0, r.jsx)(s.l6P, {
         layout: "horizontal-responsive",
@@ -368,9 +388,13 @@ function C(e) {
         fullWidth: !0,
     });
 }
+
 function P() {
-    return (0, r.jsx)("div", { className: E.yF });
+    return (0, r.jsx)("div", {
+        className: E.yF,
+    });
 }
+
 function w(e) {
     let { requireTerms: t, rules: n, settingsView: i } = e,
         {
@@ -414,7 +438,9 @@ function w(e) {
                 guildMetadata: a,
             }),
             (0, r.jsx)(P, {}),
-            (0, r.jsx)(C, { preferredLocale: c.preferredLocale }),
+            (0, r.jsx)(C, {
+                preferredLocale: c.preferredLocale,
+            }),
             (0, r.jsx)(P, {}),
             (0, r.jsx)("div", {
                 children: (0, r.jsx)(j.D, {

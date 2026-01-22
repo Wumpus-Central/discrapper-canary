@@ -8,6 +8,7 @@ var r = n(562465),
     i = n(73153),
     a = n(463347),
     s = n(652215);
+
 function o(e) {
     (0, a.tZ)(e) ||
         (i.h.dispatch({
@@ -37,8 +38,11 @@ function o(e) {
                 }),
         ));
 }
+
 function l(e, t) {
-    i.h.dispatch({ type: "NEWLY_ADDED_EMOJI_SEEN_UPDATED" }),
+    i.h.dispatch({
+        type: "NEWLY_ADDED_EMOJI_SEEN_UPDATED",
+    }),
         null != e &&
             null != t &&
             i.h.dispatch({
@@ -47,6 +51,7 @@ function l(e, t) {
                 emojiId: t,
             });
 }
+
 function c(e, t) {
     null != e &&
         null != t &&

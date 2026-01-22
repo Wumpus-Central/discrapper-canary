@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(627968),
     i = n(64700),
     l = n(342494),
@@ -6,6 +8,7 @@ var r = n(627968),
     s = n(652215),
     o = n(985018),
     c = n(78701);
+
 function u(e) {
     let { onNavigateToQuestHome: t, onRender: n, onRequestClose: u, targetElementRef: d } = e,
         p = i.useCallback(() => {
@@ -25,7 +28,9 @@ function u(e) {
             ],
             align: "top",
             body: o.intl.string(o.t.o4NGXc),
-            caretConfig: { align: "start" },
+            caretConfig: {
+                align: "start",
+            },
             gradientColor: "purple",
             graphic: {
                 type: "image",

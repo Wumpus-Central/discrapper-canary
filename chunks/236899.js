@@ -1,5 +1,11 @@
 let r;
-n.d(t, { A: () => x }), n(896048), n(747238), n(812715), n(638769);
+n.d(t, {
+    A: () => x,
+}),
+    n(896048),
+    n(747238),
+    n(812715),
+    n(638769);
 var i,
     a = n(311907),
     s = n(73153),
@@ -7,6 +13,7 @@ var i,
     l = n(215619),
     c = n(968011),
     u = n(369487);
+
 function d(e, t, n) {
     return (
         t in e
@@ -27,9 +34,11 @@ let f = 5,
     m = 10,
     g = new Map(),
     E = 0;
+
 function b(e) {
     return e.replace(/[^\w\s]|\b\d+\b/g, "");
 }
+
 function y(e) {
     return b(e)
         .replace(
@@ -38,9 +47,11 @@ function y(e) {
         )
         .split(/\s+/);
 }
+
 function O(e) {
     return Array.from(e.entries()).sort((e, t) => t[1] - e[1]);
 }
+
 function A(e, t) {
     if (e.size <= t) return;
     let n = O(e);
@@ -50,12 +61,14 @@ function A(e, t) {
         e.set(t, i);
     }
 }
+
 function v() {
-    let e = 1000,
-        t = 5000,
+    let e = 1e3,
+        t = 5e3,
         n = 0.05;
-    return E < 1000 || Math.random() < (1 - n) * Math.max(0, 1 - (E - e) / (t - e)) + n;
+    return E < 1e3 || Math.random() < (1 - n) * Math.max(0, 1 - (E - e) / (t - e)) + n;
 }
+
 function S(e) {
     null == r && (r = l.M.createEstimate(_, h));
     let t = !1;
@@ -69,20 +82,39 @@ function S(e) {
             }
     A(g, p), t && D.emitChange();
 }
+
 function I() {
-    let e = u.R.getCurrentConfig({ location: "WordFrequencyStore" }, { autoTrackExposure: !0 }).enabled,
-        t = (0, c.sA)("WordFrequencyStore", { autoTrackExposure: !1 }).enabled;
+    let e = u.R.getCurrentConfig(
+            {
+                location: "WordFrequencyStore",
+            },
+            {
+                autoTrackExposure: !0,
+            },
+        ).enabled,
+        t = (0, c.sA)("WordFrequencyStore", {
+            autoTrackExposure: !1,
+        }).enabled;
     return e || t;
 }
+
 function T() {
     return (
         !!o.A.hasLoadedExperiments &&
-        u.R.getCurrentConfig({ location: "WordFrequencyStore" }, { autoTrackExposure: !1 }).resetDataIfUnused
+        u.R.getCurrentConfig(
+            {
+                location: "WordFrequencyStore",
+            },
+            {
+                autoTrackExposure: !1,
+            },
+        ).resetDataIfUnused
     );
 }
 let C = () => {
     (r = void 0), g.clear(), (E = 0);
 };
+
 function N(e) {
     return I()
         ? (requestIdleCallback(() => {

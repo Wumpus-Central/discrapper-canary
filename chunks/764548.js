@@ -1,4 +1,9 @@
-t.d(i, { A: () => T }), t(228524), t(896048), t(747238);
+t.d(i, {
+    A: () => T,
+}),
+    t(228524),
+    t(896048),
+    t(747238);
 var n = t(627968),
     l = t(64700),
     r = t(503698),
@@ -72,7 +77,9 @@ let h = [16, 16, 14, 14, 12, 10, 8],
                 className: S.DE,
                 children: (0, n.jsx)(a.Text, {
                     className: S.q9,
-                    style: { fontSize: null != (t = h[e.length]) ? t : h[h.length - 1] },
+                    style: {
+                        fontSize: null != (t = h[e.length]) ? t : h[h.length - 1],
+                    },
                     variant: "text-sm/normal",
                     children: e,
                 }),
@@ -130,7 +137,9 @@ let h = [16, 16, 14, 14, 12, 10, 8],
                                 (0, n.jsx)(a.Text, {
                                     className: S.J5,
                                     variant: "text-md/normal",
-                                    children: (0, n.jsx)("span", { children: L }),
+                                    children: (0, n.jsx)("span", {
+                                        children: L,
+                                    }),
                                 }),
                             ],
                         }),
@@ -151,12 +160,18 @@ let h = [16, 16, 14, 14, 12, 10, 8],
                                     (0, n.jsxs)("div", {
                                         className: S.Kl,
                                         children: [
-                                            (0, n.jsx)("div", { className: S.JX }),
+                                            (0, n.jsx)("div", {
+                                                className: S.JX,
+                                            }),
                                             (0, n.jsx)(a.Text, {
                                                 variant: "text-xs/normal",
                                                 children: m
-                                                    ? _.intl.formatToPlainString(_.t.YMor7k, { count: V })
-                                                    : _.intl.formatToPlainString(_.t["LC+S+m"], { membersOnline: V }),
+                                                    ? _.intl.formatToPlainString(_.t.YMor7k, {
+                                                          count: V,
+                                                      })
+                                                    : _.intl.formatToPlainString(_.t["LC+S+m"], {
+                                                          membersOnline: V,
+                                                      }),
                                             }),
                                         ],
                                     }),
@@ -164,12 +179,18 @@ let h = [16, 16, 14, 14, 12, 10, 8],
                                     (0, n.jsxs)("div", {
                                         className: S.Kl,
                                         children: [
-                                            (0, n.jsx)("div", { className: S.Li }),
+                                            (0, n.jsx)("div", {
+                                                className: S.Li,
+                                            }),
                                             (0, n.jsx)(a.Text, {
                                                 variant: "text-xs/normal",
                                                 children: m
-                                                    ? _.intl.formatToPlainString(_.t.YMor7k, { count: F })
-                                                    : _.intl.formatToPlainString(_.t.zRl6XR, { count: F }),
+                                                    ? _.intl.formatToPlainString(_.t.YMor7k, {
+                                                          count: F,
+                                                      })
+                                                    : _.intl.formatToPlainString(_.t.zRl6XR, {
+                                                          count: F,
+                                                      }),
                                             }),
                                         ],
                                     }),

@@ -32,14 +32,17 @@ var r,
     d = {},
     p = [],
     h = /acit|ex(?:s|g|n|p|$)|rph|grid|ows|mnc|ntw|ine[ch]|zoo|^ord|itera/i;
+
 function f(e, t) {
     for (var n in t) e[n] = t[n];
     return e;
 }
+
 function m(e) {
     var t = e.parentNode;
     t && t.removeChild(e);
 }
+
 function y(e, t, n) {
     var a,
         o,
@@ -53,6 +56,7 @@ function y(e, t, n) {
         for (i in e.defaultProps) void 0 === s[i] && (s[i] = e.defaultProps[i]);
     return v(e, s, a, o, null);
 }
+
 function v(e, t, n, r, i) {
     var s = {
         type: e,
@@ -71,21 +75,26 @@ function v(e, t, n, r, i) {
     };
     return null == i && null != a.vnode && a.vnode(s), s;
 }
+
 function g(e) {
     return e.children;
 }
+
 function b(e, t) {
     (this.props = e), (this.context = t);
 }
+
 function A(e, t) {
     if (null == t) return e.__ ? A(e.__, e.__.__k.indexOf(e) + 1) : null;
     for (var n; t < e.__k.length; t++) if (null != (n = e.__k[t]) && null != n.__e) return n.__e;
     return "function" == typeof e.type ? A(e) : null;
 }
+
 function _(e) {
     ((!e.__d && (e.__d = !0) && i.push(e) && !k.__r++) || s !== a.debounceRendering) &&
         ((s = a.debounceRendering) || l)(k);
 }
+
 function k() {
     var e, t, n, r, a, o, s, l;
     for (i.sort(c); (e = i.shift()); )
@@ -124,6 +133,7 @@ function k() {
             i.length > t && i.sort(c));
     k.__r = 0;
 }
+
 function C(e, t, n, r, o, i, s, l, c, u) {
     var h,
         f,
@@ -143,7 +153,15 @@ function C(e, t, n, r, o, i, s, l, c, u) {
                     : "string" == typeof b || "number" == typeof b || "bigint" == typeof b
                       ? v(null, b, null, null, b)
                       : Array.isArray(b)
-                        ? v(g, { children: b }, null, null, null)
+                        ? v(
+                              g,
+                              {
+                                  children: b,
+                              },
+                              null,
+                              null,
+                              null,
+                          )
                         : b.__b > 0
                           ? v(b.type, b.props, b.key, b.ref ? b.ref : null, b.__v)
                           : b)
@@ -209,6 +227,7 @@ function C(e, t, n, r, o, i, s, l, c, u) {
             })(S[h], S[h]));
     if (C) for (h = 0; h < C.length; h++) O(C[h], C[++h], C[++h]);
 }
+
 function w(e, t, n, r, a, o) {
     var i, s, l;
     if (void 0 !== t.__d) (i = t.__d), (t.__d = void 0);
@@ -220,11 +239,13 @@ function w(e, t, n, r, a, o) {
         }
     return void 0 !== i ? i : a.nextSibling;
 }
+
 function S(e, t, n) {
     "-" === t[0]
         ? e.setProperty(t, null == n ? "" : n)
         : (e[t] = null == n ? "" : "number" != typeof n || h.test(t) ? n : n + "px");
 }
+
 function N(e, t, n, r, a) {
     var o;
     e: if ("style" === t)
@@ -260,12 +281,15 @@ function N(e, t, n, r, a) {
             (null == n || (!1 === n && "-" !== t[4]) ? e.removeAttribute(t) : e.setAttribute(t, n));
     }
 }
+
 function x(e) {
     return this.l[e.type + !1](a.event ? a.event(e) : e);
 }
+
 function P(e) {
     return this.l[e.type + !0](a.event ? a.event(e) : e);
 }
+
 function R(e, t, n, o, i, s, l, c, u) {
     var p,
         h,
@@ -467,6 +491,7 @@ function R(e, t, n, o, i, s, l, c, u) {
         (t.__v = null), (u || null != s) && ((t.__e = c), (t.__h = !!u), (s[s.indexOf(c)] = null)), a.__e(e, t, n);
     }
 }
+
 function F(e, t) {
     a.__c && a.__c(t, e),
         e.some(function (t) {
@@ -481,6 +506,7 @@ function F(e, t) {
             }
         });
 }
+
 function O(e, t, n) {
     try {
         "function" == typeof e ? e(t) : (e.current = t);
@@ -488,9 +514,11 @@ function O(e, t, n) {
         a.__e(e, n);
     }
 }
+
 function E(e, t, n) {
     return this.constructor(e, n);
 }
+
 function I(e, t, n) {
     var o, i, s;
     a.__ && a.__(e, t),
@@ -509,6 +537,7 @@ function I(e, t, n) {
         ),
         F(s, e);
 }
+
 function M(e, t, n) {
     var a,
         o,
@@ -520,6 +549,7 @@ function M(e, t, n) {
         v(e.type, s, a || e.key, o || e.ref, null)
     );
 }
+
 function T(e, t) {
     var n = {
         __c: (t = "__cC" + u++),

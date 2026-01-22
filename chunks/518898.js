@@ -1,6 +1,9 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(627968),
     i = n(64700);
+
 function a(e) {
     return {
         position: "vertical" === e ? "absolute" : "relative",
@@ -10,6 +13,7 @@ function a(e) {
         flex: "0 0 auto",
     };
 }
+
 function s(e) {
     let { paddingFix: t = !0, orientation: n = "vertical", dir: s, className: o, scrollerRef: l, specs: c } = e,
         u = (0, i.useRef)(null);

@@ -1,4 +1,7 @@
-r.d(t, { default: () => m }), r(896048);
+r.d(t, {
+    default: () => m,
+}),
+    r(896048);
 var n = r(627968),
     s = r(64700),
     o = r(732955),
@@ -10,6 +13,7 @@ var n = r(627968),
     p = r(114329),
     u = r(985018),
     b = r(48835);
+
 function d(e, t, r) {
     return (
         t in e
@@ -81,10 +85,14 @@ class g extends s.PureComponent {
                 this.props.onClose();
             }),
             d(this, "handleNameChange", (e) => {
-                this.setState({ name: e });
+                this.setState({
+                    name: e,
+                });
             }),
             d(this, "handleColorChange", (e) => {
-                this.setState({ color: e });
+                this.setState({
+                    color: e,
+                });
             }),
             d(this, "handleSubmit", (e) => {
                 e.preventDefault();

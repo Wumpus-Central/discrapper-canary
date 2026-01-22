@@ -23,6 +23,7 @@ var r = n(954571),
             e
         );
     })({});
+
 function s(e) {
     let { applicationId: t, linkType: n, area: a, referrerId: s, customId: o, isDeadEnd: l } = e;
     r.default.track(i.HAw.APP_EMBED_CLICKED, {
@@ -34,6 +35,7 @@ function s(e) {
         is_dead_end: l,
     });
 }
+
 function o(e) {
     let { appId: t, linkType: n, referrerId: a, customId: s, guildId: o, channelId: l, messageId: c } = e;
     r.default.track(i.HAw.APP_EMBED_VIEWED, {
@@ -46,6 +48,7 @@ function o(e) {
         message_id: c,
     });
 }
+
 function l(e, t, n, a) {
     r.default.track(i.HAw.APP_EMBED_LINK_SENT, {
         application_id: e,

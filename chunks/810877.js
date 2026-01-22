@@ -1,4 +1,7 @@
-n.d(t, { W: () => p }), n(747238);
+n.d(t, {
+    W: () => p,
+}),
+    n(747238);
 var r = n(830917),
     i = n(397927),
     l = n(157559),
@@ -90,7 +93,9 @@ let m = (e, t, n, r) => (
                                   file_size: b.byteLength(t),
                                   upload_id: x,
                               }),
-                              (e = g.intl.formatToPlainString(g.t.kIO9jy, { maxSize: u.i9 })),
+                              (e = g.intl.formatToPlainString(g.t.kIO9jy, {
+                                  maxSize: u.i9,
+                              })),
                               (n = a.o.TOO_BIG))
                             : (null != r.image || r.code === f.t02.INVALID_FILE_ASSET_SIZE_RESIZE_GIF) &&
                               (n = a.o.RESIZE_GIF)),

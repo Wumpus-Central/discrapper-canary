@@ -10,4 +10,7 @@ function r(e) {
         maxPartySize: n,
     };
 }
-n.d(t, { _: () => r }), n(896048);
+n.d(t, {
+    _: () => r,
+}),
+    n(896048);

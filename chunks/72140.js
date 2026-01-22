@@ -10,6 +10,7 @@ var i = n(503698),
     o = n(985018),
     l = n(478482),
     c = n(404648);
+
 function u() {
     return (0, r.jsxs)("div", {
         className: a()(l.dt, l.dE),
@@ -27,6 +28,7 @@ function u() {
         ],
     });
 }
+
 function d(e) {
     let { text: t, color: n } = e;
     return (0, r.jsxs)("div", {
@@ -37,7 +39,9 @@ function d(e) {
                 className: l.YW,
                 color: n,
             }),
-            (0, r.jsx)("div", { children: t }),
+            (0, r.jsx)("div", {
+                children: t,
+            }),
         ],
     });
 }

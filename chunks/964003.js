@@ -1,4 +1,7 @@
-n.d(t, { A: () => y }), n(228524);
+n.d(t, {
+    A: () => y,
+}),
+    n(228524);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -58,7 +61,9 @@ let E = 1140,
             V = i.useMemo(
                 () =>
                     (0, o.debounce)(() => {
-                        f.default.track(h.HAw.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, o.snakeCase)(t) });
+                        f.default.track(h.HAw.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, {
+                            box_type: (0, o.snakeCase)(t),
+                        });
                     }, 800),
                 [t],
             ),
@@ -87,7 +92,9 @@ let E = 1140,
                       : (0, r.jsx)("div", {
                             className: g.badgeContainer,
                             children: (0, r.jsx)(l.Exy, {
-                                type: { text: N },
+                                type: {
+                                    text: N,
+                                },
                                 variant: R,
                             }),
                         }),
@@ -132,7 +139,9 @@ let E = 1140,
                             muted: !0,
                             poster: O,
                             loop: !0,
-                            className: s()(U ? g.overlayImage : g.boxVideo, { [I]: null != I }),
+                            className: s()(U ? g.overlayImage : g.boxVideo, {
+                                [I]: null != I,
+                            }),
                             ref: L,
                             children: (0, r.jsx)("source", {
                                 src: A,

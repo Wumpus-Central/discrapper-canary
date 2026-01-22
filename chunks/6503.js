@@ -1,4 +1,8 @@
-n.d(t, { default: () => N }), n(896048), n(65821);
+n.d(t, {
+    default: () => N,
+}),
+    n(896048),
+    n(65821);
 var l = n(627968),
     i = n(64700),
     a = n(284009),
@@ -24,6 +28,7 @@ let w = [
         extensions: ["mp3", "wav", "ogg", "opus", "x-wav", "mp4"],
     },
 ];
+
 function N(e) {
     var t, n, a, N;
     let { guildId: O, sourceFile: A, existingSound: C, onClose: S, transitionState: P, showGuildPicker: E = !1 } = e,
@@ -46,12 +51,15 @@ function N(e) {
             Z(e);
         }
     }
+
     function Z(e) {
         if (e instanceof o.A) Y(e);
         else if (e instanceof Error) {
             let t = {
                 status: 500,
-                body: { message: e.message },
+                body: {
+                    message: e.message,
+                },
             };
             Y(new o.A(t));
         } else Y(new o.A(e));
@@ -85,7 +93,7 @@ function N(e) {
             null != K &&
             (function (e) {
                 if (null == e) return !0;
-                let t = (e.endMs - e.startMs) / 1000;
+                let t = (e.endMs - e.startMs) / 1e3;
                 return t > 0 && t <= p.cT;
             })(q),
         ei = i.useCallback(async (e, t) => {

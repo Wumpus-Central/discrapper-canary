@@ -1,8 +1,12 @@
-n.d(t, { A: () => u }), n(896048);
+n.d(t, {
+    A: () => u,
+}),
+    n(896048);
 var r = n(780964),
     i = n(840065),
     a = n(857266),
     s = n(652215);
+
 function o(e, t, n) {
     return (
         t in e
@@ -16,6 +20,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -32,6 +37,7 @@ function l(e) {
     }
     return e;
 }
+
 function c(e) {
     switch (e) {
         case a.J.MY_GAMES:
@@ -44,8 +50,17 @@ function c(e) {
             return [r.X.ACTIVITY_PRIVACY_PANEL, s.nc_.ACTIVITY_PRIVACY];
     }
 }
+
 function u(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         [n, r] = c(e);
-    (0, i.openUserSettings)(n, l({ section: r }, t));
+    (0, i.openUserSettings)(
+        n,
+        l(
+            {
+                section: r,
+            },
+            t,
+        ),
+    );
 }

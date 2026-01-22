@@ -1,4 +1,6 @@
-l.d(t, { X: () => u });
+l.d(t, {
+    X: () => u,
+});
 var n = l(64700),
     r = l(59520),
     s = l(440938),
@@ -21,7 +23,9 @@ let c = (e, t, l, n) => {
     },
     u = (e, t) => {
         let { analyticsSource: l } = (0, a.lC)(t),
-            i = (0, r.I)(c, 5000, [], { trailing: !0 }),
+            i = (0, r.I)(c, 5e3, [], {
+                trailing: !0,
+            }),
             u = (0, s.uM)(),
             d = null == u ? void 0 : u.sessionId;
         return {

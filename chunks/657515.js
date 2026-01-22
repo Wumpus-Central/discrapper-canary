@@ -1,4 +1,6 @@
-n.d(t, { zH: () => O });
+n.d(t, {
+    zH: () => O,
+});
 var r = n(575593),
     i = n(517950),
     a = n(793574),
@@ -86,9 +88,14 @@ let m = {
             heading: () => l.intl.string(l.t.OEtqpm),
             subheading: function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-                return l.intl.formatToPlainString(l.t["2h5M+X"], { availableCount: e });
+                return l.intl.formatToPlainString(l.t["2h5M+X"], {
+                    availableCount: e,
+                });
             },
-            mobileSubheading: (e) => l.intl.formatToPlainString(l.t["2h5M+X"], { availableCount: e }),
+            mobileSubheading: (e) =>
+                l.intl.formatToPlainString(l.t["2h5M+X"], {
+                    availableCount: e,
+                }),
             gradientConfig: b,
             getImageUrl: (e, t) => (t ? f.A : d.A),
             getBannerImageUrl: () => h.A,

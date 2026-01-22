@@ -1,10 +1,14 @@
-n.d(t, { A: () => E }), n(896048);
+n.d(t, {
+    A: () => E,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
     o = n(118356),
     l = n(823598);
+
 function c(e, t, n) {
     return (
         t in e
@@ -18,6 +22,7 @@ function c(e, t, n) {
         e
     );
 }
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,6 +39,7 @@ function u(e) {
     }
     return e;
 }
+
 function d(e, t) {
     if (null == e) return {};
     var n,
@@ -50,6 +56,7 @@ function d(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function f(e, t) {
     if (null == e) return {};
     var n,
@@ -76,14 +83,17 @@ class _ {
     }
 }
 let h = new Map();
+
 function m(e) {
     let t = h.get(e);
     return null == t ? ((t = new _(e)), (0, l.lE)().addDirectVideoOutputSink(e), h.set(e, t)) : t.addref(), t.stream;
 }
+
 function g(e) {
     let t = h.get(e);
     null != t && t.release() && ((0, l.lE)().removeDirectVideoOutputSink(e), h.delete(e));
 }
+
 function E(e, t) {
     let [n, ...a] = [e, t],
         { streamId: o, paused: l = !1, onReady: c, onResize: f, reportContainerResized: _ = !0, className: h } = n,
@@ -105,6 +115,7 @@ function E(e, t) {
     return (
         i.useLayoutEffect(() => {
             let { current: e } = y;
+
             function t() {
                 var e, t, n, r, i, a;
                 let { width: s, height: o } = A.current,
@@ -118,6 +129,7 @@ function E(e, t) {
                     null == (i = (a = v.current).onResize) || i.call(a, e), (A.current = e);
                 }
             }
+
             function n() {
                 var e, t;
                 p.info(
@@ -127,6 +139,7 @@ function E(e, t) {
                 ),
                     null == (e = (t = v.current).onReady) || e.call(t);
             }
+
             function r() {
                 if (!v.current.paused) {
                     var e;

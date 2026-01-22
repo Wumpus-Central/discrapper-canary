@@ -22,27 +22,33 @@ var r = n(311907),
     p = n(652215),
     _ = n(985018);
 let h = new s.A("SystemServiceNativeUtils"),
-    m = -2147023673,
+    m = -0x7ff8fb39,
     g = 0;
+
 function E() {
     var e;
     return !!c.isPlatformEmbedded && null != (e = d.Ay.IsSystemServiceInstalled()) && e;
 }
+
 function b() {
     return !!c.isPlatformEmbedded && !0 === d.Ay.CanSystemServiceBeInstalled();
 }
+
 function y() {
     var e;
     return !!c.isPlatformEmbedded && null != (e = d.Ay.CanSystemServiceBeInstalled()) && e;
 }
+
 function O() {
     let e = (0, r.bG)([o.Ay], () => o.Ay.canShowAdminWarning),
         t = y();
     return !!c.isPlatformEmbedded && e && !E() && t;
 }
+
 function A(e) {
     return !!c.isPlatformEmbedded && e.canShowAdminWarning && !E() && b();
 }
+
 function v(e, t, n) {
     (0, f.H)(e, t),
         "running" === t.state
@@ -60,6 +66,7 @@ function v(e, t, n) {
                   modules: [e],
               }));
 }
+
 function S(e) {
     c.isPlatformEmbedded &&
         (d.Ay.InputEventServiceSetStatusCallback((t) => {
@@ -77,7 +84,11 @@ async function I(e) {
             (await d.Ay.DoesSystemServiceHaveUpdate()) && (await d.Ay.UpdateSystemService()), S(e);
         } catch (e) {
             throw (
-                (u.A.captureMessage("Error during system service initialization", { extra: { error: e } }),
+                (u.A.captureMessage("Error during system service initialization", {
+                    extra: {
+                        error: e,
+                    },
+                }),
                 h.error("System service initialization failed", e),
                 e)
             );
@@ -89,16 +100,21 @@ async function T() {
         d.Ay.ToolServiceSetAllowed(!1),
         await a.h.dispatch({
             type: "SYSTEM_SERVICE_INITIALIZE",
-            status: { state: "unknown" },
+            status: {
+                state: "unknown",
+            },
             modules: ["input-service"],
         }),
         await a.h.dispatch({
             type: "SYSTEM_SERVICE_INITIALIZE",
-            status: { state: "unknown" },
+            status: {
+                state: "unknown",
+            },
             modules: ["tool-service"],
         }),
         h.info("System service terminated."));
 }
+
 function C(e) {
     if (e instanceof Error)
         try {
@@ -109,6 +125,7 @@ function C(e) {
             return;
         }
 }
+
 function N(e, t) {
     t && (0, i.showToast)(e);
 }
@@ -129,12 +146,18 @@ async function R(e) {
             if (null == n && r instanceof Error) {
                 N(
                     (0, i.createToast)(
-                        _.intl.formatToPlainString(_.t.sdKYCE, { error: r.message }),
+                        _.intl.formatToPlainString(_.t.sdKYCE, {
+                            error: r.message,
+                        }),
                         i.ToastType.FAILURE,
                     ),
                     t,
                 ),
-                    u.A.captureMessage("Unknown error during system service installation", { extra: { error: r } }),
+                    u.A.captureMessage("Unknown error during system service installation", {
+                        extra: {
+                            error: r,
+                        },
+                    }),
                     h.error("System service install failed.", r),
                     l.default.track(p.HAw.SYSTEM_SERVICE_INSTALL_ATTEMPTED, {
                         success: !1,
@@ -144,9 +167,19 @@ async function R(e) {
                 return;
             }
             if (null == n) {
-                N((0, i.createToast)(_.intl.formatToPlainString(_.t.sdKYCE, { error: r }), i.ToastType.FAILURE), t),
+                N(
+                    (0, i.createToast)(
+                        _.intl.formatToPlainString(_.t.sdKYCE, {
+                            error: r,
+                        }),
+                        i.ToastType.FAILURE,
+                    ),
+                    t,
+                ),
                     u.A.captureMessage("Really unknown error during system service installation", {
-                        extra: { error: r },
+                        extra: {
+                            error: r,
+                        },
                     }),
                     h.error("System service install failed.", r),
                     l.default.track(p.HAw.SYSTEM_SERVICE_INSTALL_ATTEMPTED, {
@@ -171,13 +204,19 @@ async function R(e) {
             }
             N(
                 (0, i.createToast)(
-                    _.intl.formatToPlainString(_.t.sdKYCE, { error: n.error_message }),
+                    _.intl.formatToPlainString(_.t.sdKYCE, {
+                        error: n.error_message,
+                    }),
                     i.ToastType.FAILURE,
                 ),
                 t,
             ),
                 n.error_code !== g &&
-                    u.A.captureMessage("Error during system service installation", { extra: { error: n } }),
+                    u.A.captureMessage("Error during system service installation", {
+                        extra: {
+                            error: n,
+                        },
+                    }),
                 h.error("System service install failed.", n);
         }
 }
@@ -198,12 +237,18 @@ async function w(e) {
             if (null == n && r instanceof Error) {
                 N(
                     (0, i.createToast)(
-                        _.intl.formatToPlainString(_.t.oHh3oI, { error: r.message }),
+                        _.intl.formatToPlainString(_.t.oHh3oI, {
+                            error: r.message,
+                        }),
                         i.ToastType.FAILURE,
                     ),
                     t,
                 ),
-                    u.A.captureMessage("Unknown error during system service uninstallation", { extra: { error: r } }),
+                    u.A.captureMessage("Unknown error during system service uninstallation", {
+                        extra: {
+                            error: r,
+                        },
+                    }),
                     h.error("System service uninstall failed.", r),
                     l.default.track(p.HAw.SYSTEM_SERVICE_UNINSTALL_ATTEMPTED, {
                         success: !1,
@@ -213,9 +258,19 @@ async function w(e) {
                 return;
             }
             if (null == n) {
-                N((0, i.createToast)(_.intl.formatToPlainString(_.t.oHh3oI, { error: r }), i.ToastType.FAILURE), t),
+                N(
+                    (0, i.createToast)(
+                        _.intl.formatToPlainString(_.t.oHh3oI, {
+                            error: r,
+                        }),
+                        i.ToastType.FAILURE,
+                    ),
+                    t,
+                ),
                     u.A.captureMessage("Really unknown error during system service uninstallation", {
-                        extra: { error: r },
+                        extra: {
+                            error: r,
+                        },
                     }),
                     h.error("System service uninstall failed.", r),
                     l.default.track(p.HAw.SYSTEM_SERVICE_UNINSTALL_ATTEMPTED, {
@@ -233,12 +288,18 @@ async function w(e) {
             }),
                 N(
                     (0, i.createToast)(
-                        _.intl.formatToPlainString(_.t.oHh3oI, { error: n.error_message }),
+                        _.intl.formatToPlainString(_.t.oHh3oI, {
+                            error: n.error_message,
+                        }),
                         i.ToastType.FAILURE,
                     ),
                     t,
                 ),
-                u.A.captureMessage("Error during system service uninstallation", { extra: { error: n } }),
+                u.A.captureMessage("Error during system service uninstallation", {
+                    extra: {
+                        error: n,
+                    },
+                }),
                 h.error("System service uninstall failed.", n);
         }
 }

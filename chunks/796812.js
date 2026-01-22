@@ -1,4 +1,6 @@
-n.d(t, { Ay: () => T });
+n.d(t, {
+    Ay: () => T,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -17,6 +19,7 @@ var r = n(627968),
     E = n(503364),
     b = n(985018),
     y = n(643850);
+
 function O(e) {
     let { detectedGame: t } = e,
         n = i.useMemo(() => {
@@ -36,10 +39,15 @@ function O(e) {
         className: y.is,
         style:
             null != n && n.length > 0
-                ? { backgroundImage: 'url("'.concat(n, '")') }
-                : { backgroundColor: u.LU0.colors.BACKGROUND_BRAND.css },
+                ? {
+                      backgroundImage: 'url("'.concat(n, '")'),
+                  }
+                : {
+                      backgroundColor: u.LU0.colors.BACKGROUND_BRAND.css,
+                  },
     });
 }
+
 function A(e) {
     let { application: t } = e,
         n = null == t ? void 0 : t.getIconURL(160, _.QB ? "webp" : "png");
@@ -51,16 +59,21 @@ function A(e) {
                       className: y.Gt,
                       src: n,
                       height: 80,
-                      alt: b.intl.formatToPlainString(b.t["nh+jWk"], { game: t.name }),
+                      alt: b.intl.formatToPlainString(b.t["nh+jWk"], {
+                          game: t.name,
+                      }),
                   })
                 : (0, r.jsx)(u._7Z, {
                       size: "lg",
                       className: y.ct,
                       color: u.LU0.colors.BACKGROUND_SURFACE_HIGH,
-                      style: { backgroundColor: u.LU0.colors.BACKGROUND_BRAND.css },
+                      style: {
+                          backgroundColor: u.LU0.colors.BACKGROUND_BRAND.css,
+                      },
                   }),
     });
 }
+
 function v(e) {
     var t;
     let { application: n, detectedGame: a } = e,
@@ -82,6 +95,7 @@ function v(e) {
         ],
     });
 }
+
 function S(e) {
     var t;
     let { detectedGame: n, openFullGameProfile: i } = e;
@@ -118,6 +132,7 @@ function S(e) {
         ],
     });
 }
+
 function I(e) {
     let { application: t } = e,
         n = (0, l.bG)([p.A], () => p.A.getMute(t.id)),
@@ -161,6 +176,7 @@ function I(e) {
         ],
     });
 }
+
 function T(e) {
     let { application: t, detectedGame: n, className: a, onClose: o } = e,
         l = (0, g.A)(
@@ -182,9 +198,15 @@ function T(e) {
     return (0, r.jsxs)("div", {
         className: s()(y.kL, a),
         children: [
-            (0, r.jsx)(O, { detectedGame: n }),
-            (0, r.jsx)(I, { application: t }),
-            (0, r.jsx)(A, { application: t }),
+            (0, r.jsx)(O, {
+                detectedGame: n,
+            }),
+            (0, r.jsx)(I, {
+                application: t,
+            }),
+            (0, r.jsx)(A, {
+                application: t,
+            }),
             (0, r.jsx)(v, {
                 application: t,
                 detectedGame: n,

@@ -1,4 +1,8 @@
-n.d(t, { A: () => m }), n(896048), n(321073);
+n.d(t, {
+    A: () => m,
+}),
+    n(896048),
+    n(321073);
 var l = n(627968),
     r = n(64700),
     i = n(827734),
@@ -7,9 +11,11 @@ var l = n(627968),
     c = n(565645),
     s = n(985018),
     u = n(745939);
+
 function d(e) {
     return null != e && (null != e.id || null != e.name);
 }
+
 function m(e) {
     let { options: t, value: n, onChange: m, canBeNew: p, memberCounts: h } = e,
         f = r.useMemo(() => {
@@ -72,7 +78,9 @@ function m(e) {
                                 children: (0, l.jsx)(o.Text, {
                                     variant: "text-xs/normal",
                                     color: "always-white",
-                                    children: s.intl.format(s.t.EgKsZA, { memberCount: r }),
+                                    children: s.intl.format(s.t.EgKsZA, {
+                                        memberCount: r,
+                                    }),
                                 }),
                             }),
                     ],

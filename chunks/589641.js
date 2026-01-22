@@ -15,10 +15,14 @@ var r = n(627968),
     p = n(835002),
     _ = n(985018),
     h = n(842130);
+
 function m() {
     let e = (0, l.vx)(),
         t = () => {
-            (0, f.default)(), s.A.openPrivateChannel({ recipientIds: e });
+            (0, f.default)(),
+                s.A.openPrivateChannel({
+                    recipientIds: e,
+                });
         };
     return (0, r.jsx)(u.e, {
         label: h.default.i284fU,
@@ -27,12 +31,15 @@ function m() {
         count: e.length,
     });
 }
+
 function g() {
     let e = (0, o.uM)(),
         t = (0, l.vx)(),
         n = i.useCallback(() => {
             (0, f.default)(),
-                s.A.openPrivateChannel({ recipientIds: t }),
+                s.A.openPrivateChannel({
+                    recipientIds: t,
+                }),
                 (0, c.N)(p.YA.CONTENT_AND_SOCIAL_PARENTAL_CONTROLS_NOTICE, p.YX.LEARN_MORE);
         }, [t]),
         u = i.useCallback(() => {

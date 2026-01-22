@@ -17,6 +17,7 @@ var l,
     u = n(177068),
     E = n(736130),
     d = n(652215);
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -44,6 +45,7 @@ function _(e) {
 }
 let g = -1;
 var A = (((l = {}).MESSAGES = "messages"), (l.LINKS = "links"), (l.MEDIA = "media"), (l.ALL_COUNTS = "all_counts"), l);
+
 function T(e, t, n) {
     let l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
         r = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
@@ -69,6 +71,7 @@ let f = {
         });
     },
     O = (e) => h((t) => t.get(e), a.x);
+
 function N(e, t, n) {
     let l = null != n ? n : {};
     switch (t) {
@@ -110,9 +113,15 @@ function N(e, t, n) {
                 l,
             );
         default:
-            return _({ author_id: e }, l);
+            return _(
+                {
+                    author_id: e,
+                },
+                l,
+            );
     }
 }
+
 function m(e, t, n) {
     return (function (e, t, n, l) {
         let { addtionalQuery: a, shouldDispatch: i = !1 } = l,
@@ -183,6 +192,7 @@ function m(e, t, n) {
         );
     })(e, t, "messages", n);
 }
+
 function S(e, t, n, l) {
     let a = r.useMemo(() => T(e, t, n, l, !0), [e, t, n, l]),
         i = O(a),
@@ -193,6 +203,7 @@ function S(e, t, n, l) {
         state: i,
     };
 }
+
 function p(e, t, n) {
     var l, a, i;
     let { key: s, state: o } = S(e, t, "messages", n),
@@ -240,7 +251,9 @@ function p(e, t, n) {
         let n = setTimeout(async () => {
             let t = null;
             try {
-                let n = await e.makeRequest({ rejectWithError: !1 });
+                let n = await e.makeRequest({
+                    rejectWithError: !1,
+                });
                 t = null == n ? void 0 : n.body;
             } catch (e) {
                 t = null;

@@ -1,4 +1,7 @@
-n.d(t, { A: () => M }), n(896048);
+n.d(t, {
+    A: () => M,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -32,6 +35,7 @@ var r = n(627968),
     L = n(988794),
     R = n(985018),
     D = n(861968);
+
 function M(e) {
     let { guild: t, isStudyRoomNotice: n = !1 } = e,
         l = (0, b.V)(t.id),
@@ -40,8 +44,12 @@ function M(e) {
         { isStageNoticeHidden: M, isEventNoticeHidden: U } = (0, s.cf)(
             [g.A],
             () => ({
-                isStageNoticeHidden: g.A.isLiveChannelNoticeHidden({ stageId: null == T ? void 0 : T.id }),
-                isEventNoticeHidden: g.A.isLiveChannelNoticeHidden({ eventId: null == d ? void 0 : d.id }),
+                isStageNoticeHidden: g.A.isLiveChannelNoticeHidden({
+                    stageId: null == T ? void 0 : T.id,
+                }),
+                isEventNoticeHidden: g.A.isLiveChannelNoticeHidden({
+                    eventId: null == d ? void 0 : d.id,
+                }),
             }),
             [T, d],
         ),
@@ -87,7 +95,7 @@ function M(e) {
                     let e = (0, p.gU)(i);
                     return {
                         noticeType: 3,
-                        title: "\uD83D\uDCDA\u2615 ".concat(i.name),
+                        title: "\uD83D\uDCDA☕ ".concat(i.name),
                         location: R.intl.string(R.t.LZA6Na),
                         locationIcon:
                             null != e
@@ -123,7 +131,10 @@ function M(e) {
                                 }),
                                 canListenIn: l,
                                 buttonText: e,
-                                onClose: () => (0, A.iF)({ stageId: null == n ? void 0 : n.id }),
+                                onClose: () =>
+                                    (0, A.iF)({
+                                        stageId: null == n ? void 0 : n.id,
+                                    }),
                                 users: o.length > 5 ? o.slice(0, 5) : o,
                                 overflowUsers:
                                     u < 1
@@ -168,7 +179,10 @@ function M(e) {
                             }),
                             canListenIn: l,
                             buttonText: e,
-                            onClose: () => (0, A.iF)({ stageId: null == n ? void 0 : n.id }),
+                            onClose: () =>
+                                (0, A.iF)({
+                                    stageId: null == n ? void 0 : n.id,
+                                }),
                             users: o.length > 5 ? o.slice(0, 5) : o,
                             overflowUsers:
                                 u < 1
@@ -195,7 +209,10 @@ function M(e) {
                     );
                 } else if (t.entity_type === L.Ps.EXTERNAL) {
                     let e = (0, E.oF)(t);
-                    if (null == e) return { noticeType: null };
+                    if (null == e)
+                        return {
+                            noticeType: null,
+                        };
                     let n = h.Ay.getUserCount(t.id, _);
                     return {
                         noticeType: 1,
@@ -210,7 +227,10 @@ function M(e) {
                         }),
                         canListenIn: !1,
                         buttonText: R.intl.string(R.t.iW6Xuo),
-                        onClose: () => (0, A.iF)({ eventId: null == t ? void 0 : t.id }),
+                        onClose: () =>
+                            (0, A.iF)({
+                                eventId: null == t ? void 0 : t.id,
+                            }),
                         users: null == s ? [] : [s],
                         overflowUsers:
                             n < 1
@@ -251,7 +271,10 @@ function M(e) {
                                 : null,
                         canListenIn: l,
                         buttonText: R.intl.string(R.t.nxUtoQ),
-                        onClose: () => (0, A.iF)({ eventId: null == t ? void 0 : t.id }),
+                        onClose: () =>
+                            (0, A.iF)({
+                                eventId: null == t ? void 0 : t.id,
+                            }),
                         users: null == s ? [] : [s],
                         overflowUsers:
                             n < 1
@@ -276,7 +299,9 @@ function M(e) {
                                   }),
                     };
                 }
-                return { noticeType: null };
+                return {
+                    noticeType: null,
+                };
             })({
                 guildEvent: d,
                 stageInstance: T,
@@ -374,7 +399,9 @@ function M(e) {
                                             ((0, I.av)(l), (0, y.uh)(l.getGuildId(), l.id));
                                     else {
                                         if (null == d) return;
-                                        (0, f.uR)({ eventId: d.id });
+                                        (0, f.uR)({
+                                            eventId: d.id,
+                                        });
                                     }
                                 },
                                 fullWidth: !0,
@@ -384,6 +411,7 @@ function M(e) {
               ],
           });
 }
+
 function k(e) {
     let { user: t, guildId: n } = e,
         l = i.useRef(null);

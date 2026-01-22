@@ -1,4 +1,6 @@
-n.d(e, { default: () => x });
+n.d(e, {
+    default: () => x,
+});
 var r = n(627968),
     i = n(64700),
     l = n(158954),
@@ -12,6 +14,7 @@ var r = n(627968),
     b = n(518477),
     p = n(985018),
     g = n(22047);
+
 function j(t) {
     let { widget: e, user: n } = t;
     return (0, r.jsx)(d.u, {
@@ -20,6 +23,7 @@ function j(t) {
         disableInteraction: !0,
     });
 }
+
 function x(t) {
     let { transitionState: e, widget: n, userId: d, onClose: x, trackUserProfileEditAction: h } = t,
         m = i.useCallback(() => {
@@ -49,7 +53,12 @@ function x(t) {
                                 });
                         }
                         return t;
-                    })({ action: "WIDGET_REMOVED" }, n.getProfileEditAnalyticsOptions()),
+                    })(
+                        {
+                            action: "WIDGET_REMOVED",
+                        },
+                        n.getProfileEditAnalyticsOptions(),
+                    ),
                 ),
                 x(),
                 (0, f.XA)(b.jM.WIDGET_REMOVED);
@@ -61,7 +70,9 @@ function x(t) {
               transitionState: e,
               onClose: x,
               title: p.intl.string(p.t.Mm07Yc),
-              subtitle: p.intl.format(p.t["x+djI4"], { helpUrl: o.C }),
+              subtitle: p.intl.format(p.t["x+djI4"], {
+                  helpUrl: o.C,
+              }),
               actions: [
                   {
                       variant: "secondary",

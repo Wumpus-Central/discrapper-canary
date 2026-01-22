@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -8,6 +10,7 @@ var i = n(503698),
     c = n(709066),
     o = n(351906),
     d = n(89200);
+
 function u(e) {
     let { className: t, avatarURL: n, name: i, bot: u, verifiedBot: f, userTag: g } = e,
         b = (0, s.bG)([o.A], () => o.A.hidePersonalInformation);

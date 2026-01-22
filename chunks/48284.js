@@ -1,5 +1,8 @@
-n.d(t, { b: () => i });
+n.d(t, {
+    b: () => i,
+});
 var r = n(723906);
+
 function i(e, t) {
     let { id: n, "aria-label": i, "aria-labelledby": a } = e;
     return (

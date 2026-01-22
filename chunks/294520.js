@@ -92,6 +92,7 @@ let _ = (e, t) => {
                     ? s.Oc.SPOILER
                     : null;
     };
+
 function g(e) {
     switch (e.type) {
         case l.vV.EMBED:
@@ -113,6 +114,7 @@ function g(e) {
             return null;
     }
 }
+
 function E(e, t, n) {
     if (null == e) return [!1, void 0];
     let r = g(e);
@@ -127,6 +129,7 @@ function E(e, t, n) {
             ? [t, s.Oc.SPOILER]
             : [!1, void 0];
 }
+
 function b(e) {
     let { channel: t, media: n } = e,
         r = (0, i.bG)([u.A], () => null != t && u.A.can(f.xBc.MANAGE_MESSAGES, t)),

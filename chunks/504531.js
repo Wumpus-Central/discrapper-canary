@@ -42,6 +42,7 @@ var r = n(271830),
     O = n.n(y),
     A = n(1214),
     v = n.n(A);
+
 function S(e, t, n, i) {
     let a = i.getCurrentContent(),
         s = null;
@@ -53,8 +54,14 @@ function S(e, t, n, i) {
             focusKey: o.getKey(),
             focusOffset: n,
         });
-    return (a = r.Modifier.applyEntity(a, l, s)), r.EditorState.set(i, { currentContent: a });
+    return (
+        (a = r.Modifier.applyEntity(a, l, s)),
+        r.EditorState.set(i, {
+            currentContent: a,
+        })
+    );
 }
+
 function I(e, t, n, i) {
     let a,
         s,
@@ -80,6 +87,7 @@ function I(e, t, n, i) {
         r.EditorState.push(t, l, s)
     );
 }
+
 function T(e, t) {
     switch (e) {
         case "delete":
@@ -96,6 +104,7 @@ function T(e, t) {
             return t;
     }
 }
+
 function C(e, t) {
     switch (e) {
         case "transpose-characters":
@@ -108,9 +117,11 @@ function C(e, t) {
             return t;
     }
 }
+
 function N(e) {
     return e.getCurrentContent().getFirstBlock().getText();
 }
+
 function R(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         r = t.getCurrentContent(),
@@ -148,7 +159,18 @@ function R(e, t) {
             )
                 return;
             let i = n[e.type];
-            t = S([e.type, null != i && i.mutable ? "MUTABLE" : "IMMUTABLE", { token: e }], e.start, e.end, t);
+            t = S(
+                [
+                    e.type,
+                    null != i && i.mutable ? "MUTABLE" : "IMMUTABLE",
+                    {
+                        token: e,
+                    },
+                ],
+                e.start,
+                e.end,
+                t,
+            );
         }),
         s.forEach((e) => {
             e.processed || (t = S(null, e.start, e.end, t));
@@ -156,40 +178,50 @@ function R(e, t) {
         t
     );
 }
+
 function w(e) {
     return r.EditorState.createEmpty(new r.CompositeDecorator(e));
 }
+
 function P(e, t) {
     return r.EditorState.createWithContent(t, new r.CompositeDecorator(e));
 }
+
 function D(e) {
     let t = r.EditorState.push(e, r.ContentState.createFromText("")),
         n = e.getSelection();
     return null != n && n.hasFocus && (t = r.EditorState.moveFocusToEnd(t)), t;
 }
+
 function x(e, t) {
     let n = N(t);
     return I(e, t, 0, n.length);
 }
+
 function L(e, t) {
     let n = t.getSelection();
     return (n = (n = n.set("focusOffset", e)).set("anchorOffset", e)), r.EditorState.forceSelection(t, n);
 }
+
 function j(e) {
     return L(e.getCurrentContent().getFirstBlock().getText().length, e);
 }
+
 function M(e) {
     return L(0, e);
 }
+
 function k(e) {
     let t = e.getSelection();
     return (t = (t = t.set("focusOffset", 0)).set("isBackward", !0)), r.EditorState.forceSelection(e, t);
 }
+
 function U(e) {
     let t = N(e),
         n = e.getSelection();
     return (n = (n = n.set("focusOffset", t.length)).set("isBackward", !1)), r.EditorState.forceSelection(e, n);
 }
+
 function G(e) {
     let t = e.getCurrentContent().getFirstBlock(),
         n = new r.SelectionState({
@@ -200,6 +232,7 @@ function G(e) {
         });
     return r.EditorState.forceSelection(e, n);
 }
+
 function V(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 512,
         n = N(e);
@@ -212,6 +245,7 @@ function V(e) {
     }
     return e;
 }
+
 function F(e) {
     let t = window.getSelection();
     if (null == t || "Caret" !== t.type || null == e) return;
@@ -225,6 +259,7 @@ function F(e) {
         ? (e.scrollLeft = a - 10)
         : a > e.scrollLeft + e.offsetWidth && (e.scrollLeft = a - e.offsetWidth + 3);
 }
+
 function B(e, t) {
     for (; null != e; ) {
         if (e === t) return !0;
@@ -232,6 +267,7 @@ function B(e, t) {
     }
     return !1;
 }
+
 function H(e) {
     return 0 === N(e).length;
 }

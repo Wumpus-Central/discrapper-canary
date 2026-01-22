@@ -1,4 +1,7 @@
-n.d(t, { A: () => S }), n(896048);
+n.d(t, {
+    A: () => S,
+}),
+    n(896048);
 var l = n(627968),
     a = n(64700),
     r = n(503698),
@@ -20,6 +23,7 @@ var l = n(627968),
     A = n(652215),
     _ = n(789113);
 let y = o.K.APPLICATION_DIRECTORY;
+
 function O(e) {
     let { collection: t, index: n, onSelectApplication: r } = e,
         c = (function (e) {
@@ -58,7 +62,9 @@ function O(e) {
         ref: c,
         children: [
             (0, l.jsx)(h.Heading, {
-                className: i()(_.Gf, { [_.SH]: 0 === n }),
+                className: i()(_.Gf, {
+                    [_.SH]: 0 === n,
+                }),
                 variant: "heading-lg/semibold",
                 color: "text-strong",
                 children: t.title,
@@ -107,7 +113,9 @@ let S = function (e) {
     return r === f.e.ERROR
         ? (0, l.jsx)("div", {
               className: _.Un,
-              children: (0, l.jsx)(j.A, { className: _.z3 }),
+              children: (0, l.jsx)(j.A, {
+                  className: _.z3,
+              }),
           })
         : (0, l.jsx)(x.A, {
               loading: r === f.e.FETCHING,

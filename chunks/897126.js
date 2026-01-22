@@ -1,4 +1,6 @@
-i.d(s, { default: () => u });
+i.d(s, {
+    default: () => u,
+});
 var a = i(627968),
     e = i(64700),
     n = i(732955),
@@ -19,7 +21,9 @@ let u = (t) => {
             actions: void 0,
             onClose: u,
             transitionState: s,
-            children: (0, a.jsx)(c.y$y, { className: l.u }),
+            children: (0, a.jsx)(c.y$y, {
+                className: l.u,
+            }),
         })
     );
 };

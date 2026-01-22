@@ -14,9 +14,11 @@ let i = 9 / 16,
     a = (e, t) => e * t,
     o = (e) => l(e, i),
     s = (e) => a(e, r);
+
 function c(e, t) {
     return t * (Math.max(1, e) - 1);
 }
+
 function u(e) {
     let { width: t, height: n, containerOffset: i, gapSize: r, tileCount: l, isVertical: a } = e,
         o = a ? t : t - c(l, r),
@@ -26,6 +28,7 @@ function u(e) {
         horizontalRatio: (o - i) / (s - i),
     };
 }
+
 function d(e, t, n) {
     let { containerOffset: i, gapSize: r, tileCount: o, isVertical: s } = t,
         { maxWidth: d, maxHeight: p } = n,
@@ -58,6 +61,7 @@ function d(e, t, n) {
         }
     );
 }
+
 function p(e, t) {
     let { maxWidth: n, maxHeight: i } = t;
     return {

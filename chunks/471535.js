@@ -1,9 +1,13 @@
-n.d(t, { A: () => B }), n(896048), n(321073);
+n.d(t, {
+    A: () => B,
+}),
+    n(896048),
+    n(321073);
 var r = n(627968),
     l = n(64700),
     o = n(503698),
     i = n.n(o),
-    s = n(432022),
+    s = n(108531),
     a = n(942381),
     c = n(311907),
     u = n(397927),
@@ -42,6 +46,7 @@ let F = {
     friction: 5,
     clamp: !0,
 };
+
 function B(e) {
     var t, n, o, B, K, G, H;
     let {
@@ -173,8 +178,8 @@ function B(e) {
             isMetadataLoaded: e4,
             isInitialSeekComplete: e8,
             onAnalytics: tb,
-            emitIntervalMs: 4000,
-            minSegmentDurationMs: 2000,
+            emitIntervalMs: 4e3,
+            minSegmentDurationMs: 2e3,
         }),
         tA = l.useCallback(
             (e) => {
@@ -237,7 +242,7 @@ function B(e) {
                         () => {
                             ef === N.Q6.PLAYING && tD(!0);
                         },
-                        Math.max(0, 3000 - (performance.now() - tN.current)),
+                        Math.max(0, 3e3 - (performance.now() - tN.current)),
                     ));
         }, [ef]),
         tI = () => {
@@ -377,11 +382,13 @@ function B(e) {
         if (!eS) return;
         let e = setTimeout(() => {
             e_(!1);
-        }, 1000);
+        }, 1e3);
         return () => clearTimeout(e);
     }, [eS]);
     let [{ controlBarAnimSpring: tY }, tW] = (0, u.zhh)(() => ({
-            from: { controlBarAnimSpring: 0 },
+            from: {
+                controlBarAnimSpring: 0,
+            },
             config: F,
             onStart: () => {
                 eQ(!1);
@@ -392,7 +399,9 @@ function B(e) {
         })),
         tq = (0, l.useRef)(null),
         [{ captionHeightSpring: tz }, tZ] = (0, u.zhh)(() => ({
-            from: { captionHeightSpring: 0 },
+            from: {
+                captionHeightSpring: 0,
+            },
             config: F,
         }));
     l.useEffect(() => {
@@ -513,7 +522,7 @@ function B(e) {
                     onPlaying: () => {
                         if (!eB.current) return;
                         let e = performance.now() - Z;
-                        tt.info("[QV] | \u23F0 Video FCP: ".concat(e, "ms")), ty(e), (eB.current = !1);
+                        tt.info("[QV] | ⏰ Video FCP: ".concat(e, "ms")), ty(e), (eB.current = !1);
                     },
                     onWaiting: (e) => {
                         (eG.current = performance.now()),
@@ -607,10 +616,14 @@ function B(e) {
                                     ef === N.Q6.PAUSED && tA(N.Q6.PLAYING), en(!1);
                                 },
                                 tabIndex: -1,
-                                children: (0, r.jsx)("div", { className: U.BG }),
+                                children: (0, r.jsx)("div", {
+                                    className: U.BG,
+                                }),
                             }),
                             (0, r.jsx)(s.animated.div, {
-                                className: i()(U.xr, { [U.MZ]: "portrait" === X }),
+                                className: i()(U.xr, {
+                                    [U.MZ]: "portrait" === X,
+                                }),
                                 style: {
                                     marginBottom: (0, s.to)([tY, tz], (e, t) => "".concat(e * to[tr] + t, "px")),
                                 },
@@ -646,8 +659,12 @@ function B(e) {
                         }),
                         children:
                             ef === N.Q6.PLAYING
-                                ? (0, r.jsx)(u.udU, { className: U.PK })
-                                : (0, r.jsx)(u.E$n, { className: U.PK }),
+                                ? (0, r.jsx)(u.udU, {
+                                      className: U.PK,
+                                  })
+                                : (0, r.jsx)(u.E$n, {
+                                      className: U.PK,
+                                  }),
                     },
                     ef,
                 ),

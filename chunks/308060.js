@@ -20,6 +20,7 @@ var r = n(72290);
             (l.setImmediate = c),
             (l.clearImmediate = u);
     }
+
     function c(e) {
         "function" != typeof e && (e = Function("" + e));
         for (var t = Array(arguments.length - 1), r = 0; r < t.length; r++) t[r] = arguments[r + 1];
@@ -29,9 +30,11 @@ var r = n(72290);
         };
         return (a[i] = s), n(i), i++;
     }
+
     function u(e) {
         delete a[e];
     }
+
     function d(e) {
         var n = e.callback,
             r = e.args;
@@ -52,6 +55,7 @@ var r = n(72290);
                 n.apply(t, r);
         }
     }
+
     function f(e) {
         if (s) setTimeout(f, 0, e);
         else {
@@ -66,6 +70,7 @@ var r = n(72290);
             }
         }
     }
+
     function p() {
         n = function (e) {
             r.nextTick(function () {
@@ -73,6 +78,7 @@ var r = n(72290);
             });
         };
     }
+
     function _() {
         if (e.postMessage && !e.importScripts) {
             var t = !0,
@@ -87,6 +93,7 @@ var r = n(72290);
             );
         }
     }
+
     function h() {
         var t = "setImmediate$" + Math.random() + "$",
             r = function (n) {
@@ -97,6 +104,7 @@ var r = n(72290);
                 e.postMessage(t + n, "*");
             });
     }
+
     function m() {
         var e = new MessageChannel();
         (e.port1.onmessage = function (e) {
@@ -106,6 +114,7 @@ var r = n(72290);
                 e.port2.postMessage(t);
             });
     }
+
     function g() {
         var e = o.documentElement;
         n = function (t) {
@@ -116,6 +125,7 @@ var r = n(72290);
                 e.appendChild(n);
         };
     }
+
     function E() {
         n = function (e) {
             setTimeout(f, 0, e);

@@ -1,4 +1,6 @@
-n.d(t, { V: () => d });
+n.d(t, {
+    V: () => d,
+});
 var r = n(627968),
     i = n(64700),
     a = n(397927),
@@ -8,6 +10,7 @@ var o = n(381247),
     l = n(756366),
     c = n(985018),
     u = n(794873);
+
 function d(e) {
     let { label: t, lineItems: n, currency: a, defaultExpanded: l = !1 } = e,
         c = n.length > 0,
@@ -15,7 +18,9 @@ function d(e) {
         _ = i.useMemo(() => n.reduce((e, t) => (t.amount < 0 ? e + Math.abs(t.amount) : e), 0), [n]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)("div", { className: u.y }),
+            (0, r.jsx)("div", {
+                className: u.y,
+            }),
             (0, r.jsx)(o.h, {
                 label: t,
                 defaultExpanded: l,
@@ -45,6 +50,7 @@ function d(e) {
         ],
     });
 }
+
 function f(e) {
     let { amount: t, currency: n } = e;
     if (0 === t) return null;
@@ -52,9 +58,12 @@ function f(e) {
     return (0, r.jsx)(a.Text, {
         variant: "text-md/medium",
         color: "text-feedback-positive",
-        children: c.intl.format(l.default.pDVleg, { amount: i }),
+        children: c.intl.format(l.default.pDVleg, {
+            amount: i,
+        }),
     });
 }
+
 function p(e) {
     let { amount: t, currency: n } = e,
         i = (0, s.$g)(t, n);
@@ -63,8 +72,12 @@ function p(e) {
         color: "text-strong",
         className: u.p,
         children: [
-            (0, r.jsx)("span", { children: c.intl.string(l.default.Zxav97) }),
-            (0, r.jsx)("span", { children: i }),
+            (0, r.jsx)("span", {
+                children: c.intl.string(l.default.Zxav97),
+            }),
+            (0, r.jsx)("span", {
+                children: i,
+            }),
         ],
     });
 }

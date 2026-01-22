@@ -15,16 +15,20 @@ var l = n(311907),
     m = n(49999),
     p = n(985018);
 let h = new o.A("GuildTagAvailableCoachmark");
+
 function f(e) {
     var t;
     let n = (0, l.bG)([c.A], () => c.A.getGuild(e.guildId));
+
     function o(t) {
         var a, l;
         (null == n || null == (a = n.profile) ? void 0 : a.tag) != null &&
             s.h.dispatch({
                 type: "GUILD_TAG_CHANGED_COACHMARK_SEEN",
                 guildId: n.id,
-                lastSeenInfo: { tag: n.profile.tag },
+                lastSeenInfo: {
+                    tag: n.profile.tag,
+                },
             }),
             null == (l = e.onDismiss) || l.call(e, t);
     }
@@ -63,7 +67,9 @@ function f(e) {
                         guildProfile: n.profile,
                     },
                 },
-                title: p.intl.formatToPlainString(p.t["m/Tc3n"], { guildName: n.name }),
+                title: p.intl.formatToPlainString(p.t["m/Tc3n"], {
+                    guildName: n.name,
+                }),
                 body: p.intl.string(p.t.DrAXIr),
                 actions: g,
                 size: "md",
@@ -72,9 +78,11 @@ function f(e) {
         ],
     });
 }
+
 function x(e) {
     var t;
     let n = (0, l.bG)([c.A], () => c.A.getGuild(e.guildId));
+
     function s(t) {
         var n;
         null == (n = e.onDismiss) || n.call(e, t);
@@ -114,7 +122,9 @@ function x(e) {
                         guildProfile: n.profile,
                     },
                 },
-                title: p.intl.formatToPlainString(p.t.VFqnyU, { guildName: n.name }),
+                title: p.intl.formatToPlainString(p.t.VFqnyU, {
+                    guildName: n.name,
+                }),
                 body: p.intl.string(p.t.DrAXIr),
                 actions: b,
                 size: "md",

@@ -1,8 +1,11 @@
-n.d(t, { S: () => a });
+n.d(t, {
+    S: () => a,
+});
 var l = n(627968);
 n(64700);
 var r = n(158954),
     i = n(626586);
+
 function a(e) {
     var t;
     let { renderExampleSection: n } = (0, i.L)();
@@ -37,6 +40,7 @@ function a(e) {
               })({}, e),
           );
 }
+
 function s(e) {
     return (0, l.jsx)(r.EYj, {
         variant: "text-md/normal",

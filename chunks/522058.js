@@ -287,7 +287,9 @@ e.exports = function (e) {
         s = {
             relevance: 0,
             match: [/\./, r],
-            className: { 2: "property" },
+            className: {
+                2: "property",
+            },
         };
     return {
         name: "Processing",

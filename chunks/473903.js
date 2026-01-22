@@ -1,6 +1,9 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(77729);
 let i = new (n(626584).A)("IntentsBindings");
+
 function a() {
     var e;
     return null != (e = null === r.A || void 0 === r.A ? void 0 : r.A.features.supports("intents")) && e;

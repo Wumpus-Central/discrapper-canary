@@ -1,4 +1,7 @@
-n.d(t, { n: () => l }), n(896048);
+n.d(t, {
+    n: () => l,
+}),
+    n(896048);
 var r = n(64700),
     i = n(651162);
 let l = (e, t, n) => {
@@ -14,7 +17,7 @@ let l = (e, t, n) => {
                     () => {
                         l(!0);
                     },
-                    Math.min(2147483647, i),
+                    Math.min(0x7fffffff, i),
                 );
                 return () => clearTimeout(s);
             }, [t, n, e]),

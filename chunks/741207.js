@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -12,6 +14,7 @@ var i = n(311907),
     f = n(200700),
     g = n(985018),
     b = n(86181);
+
 function m(e) {
     var t;
     let { action: n, triggerType: m, guildId: p, toggled: x, onToggleAction: h } = e,
@@ -53,8 +56,12 @@ function m(e) {
                                 null === v
                                     ? null
                                     : m === d.uh.MENTION_SPAM
-                                      ? g.intl.format(g.t.i3lsKD, { friendlyDurationString: v })
-                                      : g.intl.format(g.t.mvHxze, { friendlyDurationString: v }),
+                                      ? g.intl.format(g.t.i3lsKD, {
+                                            friendlyDurationString: v,
+                                        })
+                                      : g.intl.format(g.t.mvHxze, {
+                                            friendlyDurationString: v,
+                                        }),
                                 A &&
                                     (0, r.jsx)(s.DUT, {
                                         onClick: j(!0),

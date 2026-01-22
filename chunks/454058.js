@@ -1,4 +1,7 @@
-n.d(t, { A: () => x }), n(896048);
+n.d(t, {
+    A: () => x,
+}),
+    n(896048);
 var r,
     i = n(311907),
     a = n(73153),
@@ -15,6 +18,7 @@ var r,
     m = n(927813),
     g = n(661191),
     E = n(652215);
+
 function b(e, t, n) {
     return (
         t in e
@@ -31,32 +35,39 @@ function b(e, t, n) {
 let y = new Set(),
     O = {},
     A = {};
+
 function v(e) {
     let { guild: t } = e;
     delete O[t.id];
 }
+
 function S(e) {
     var t;
     let { channel: n } = e;
     n.isVocal() || ((O[n.guild_id] = null != (t = O[n.guild_id]) ? t : new Set()), O[n.guild_id].add(n.id));
 }
+
 function I(e) {
     let { guildId: t, channelIds: n } = e;
     if (null == O[t]) return !1;
     n.forEach((e) => O[t].delete(e)), 0 === O[t].size && delete O[t];
 }
+
 function T(e) {
     let { guildId: t, channelId: n } = e;
     return null != t && (null == O[t] || A[t] < Date.now() - m.A.Millis.HOUR ? (w(t), !0) : (null != n && R(t, n), !1));
 }
+
 function C(e) {
     let { guildId: t, channelId: n, sidebarType: r } = e;
     return null != t && r === o.PE.VIEW_CHANNEL && (R(t, n), !1);
 }
+
 function N(e) {
     let { guildId: t, baseChannelId: n } = e;
     return null != t && (R(t, n), !1);
 }
+
 function R(e, t) {
     let n = O[e];
     if (null != n && null != t && n.has(t)) {
@@ -78,6 +89,7 @@ function R(e, t) {
             );
     }
 }
+
 function w(e) {
     var t;
     if (null != O[e]) return;
@@ -101,6 +113,7 @@ function w(e) {
         )),
         (A[e] = Date.now()));
 }
+
 function P() {
     g.default.keys(O).forEach((e) => {
         let t = O[e];

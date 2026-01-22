@@ -1,8 +1,11 @@
-n.d(t, { w: () => c });
+n.d(t, {
+    w: () => c,
+});
 var r = n(728458);
 let i = null,
     a = null,
     s = null;
+
 function o(e, t, n) {
     return (
         t.beginPath(),
@@ -13,6 +16,7 @@ function o(e, t, n) {
         t
     );
 }
+
 function l(e) {
     let t = document.createElement("canvas"),
         n = t.getContext("2d"),
@@ -21,6 +25,7 @@ function l(e) {
     let i = t.toDataURL();
     return t.remove(), i;
 }
+
 function c(e) {
     let t = new Image();
     return (

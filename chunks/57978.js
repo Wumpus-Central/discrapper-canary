@@ -52,6 +52,7 @@ var r = n(627968),
     X = n(437466),
     Z = n(23145),
     Q = n(56582);
+
 function $(e, t, n) {
     return (
         t in e
@@ -65,6 +66,7 @@ function $(e, t, n) {
         e
     );
 }
+
 function J(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -144,7 +146,10 @@ let en = (e) => ({
                         section: E.nc_.PROFILE_CUSTOMIZATION,
                         analyticsLocations: t,
                     },
-                    () => (0, c.L)({ analyticsLocations: t }),
+                    () =>
+                        (0, c.L)({
+                            analyticsLocations: t,
+                        }),
                 );
             }, [t]),
             N = () => {
@@ -171,7 +176,9 @@ let en = (e) => ({
             x = {
                 name: "referralProgram",
                 title: A.intl.string(A.t.tPY4o9),
-                description: A.intl.format(A.t.jRPQUH, { learnMoreLink: w }),
+                description: A.intl.format(A.t.jRPQUH, {
+                    learnMoreLink: w,
+                }),
                 previewImage: P.referralProgram.thumbnail,
                 videoUrl: P.referralProgram.assetUrl,
             },
@@ -198,7 +205,9 @@ let en = (e) => ({
             },
             M = {
                 name: "premiumGroup",
-                title: A.intl.formatToPlainString(y.default.VFEDDB, { premiumGroupProductName: (0, g.DP)() }),
+                title: A.intl.formatToPlainString(y.default.VFEDDB, {
+                    premiumGroupProductName: (0, g.DP)(),
+                }),
                 description: A.intl.formatToPlainString(y.default.WudmR3, {
                     totalSeats: g.aw,
                     premiumGroupProductName: (0, g.DP)(),
@@ -251,7 +260,9 @@ let en = (e) => ({
             H = {
                 name: "orbRewards",
                 title: A.intl.string(O.default["ZFJ/NU"]),
-                description: A.intl.formatToPlainString(O.default.VuvFfT, { orbsCount: F }),
+                description: A.intl.formatToPlainString(O.default.VuvFfT, {
+                    orbsCount: F,
+                }),
                 descriptionCta: A.intl.string(A.t.hvVgAZ),
                 onClick: () => {
                     window.open(_.A.getArticleURL(E.MVz.ORBS_REWARDS_FAQ), "_blank");

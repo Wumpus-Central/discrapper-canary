@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var l = n(627968);
 n(64700);
 var a = n(503698),
@@ -16,6 +18,7 @@ var a = n(503698),
     m = n(988794),
     x = n(985018),
     v = n(473190);
+
 function g(e) {
     let { recurrenceId: t, originalScheduledStartTime: a, guildEventId: g, onClick: p, isActive: j } = e,
         A = (0, c.bG)([f.Ay], () => f.Ay.getGuildScheduledEvent(g)),

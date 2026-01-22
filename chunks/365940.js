@@ -1,4 +1,7 @@
-r.d(t, { A: () => S }), r(896048);
+r.d(t, {
+    A: () => S,
+}),
+    r(896048);
 var n = r(627968),
     l = r(64700),
     i = r(503698),
@@ -17,6 +20,7 @@ var n = r(627968),
     j = r(985018),
     m = r(292750),
     h = r(906471);
+
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
@@ -42,6 +46,7 @@ function E(e) {
     }
     return e;
 }
+
 function v(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -60,6 +65,7 @@ function v(e, t) {
         e
     );
 }
+
 function I(e) {
     var t;
     let { guildInfo: r, onClick: l, submitting: i } = e,
@@ -83,7 +89,11 @@ function I(e) {
                 children: (0, n.jsx)(O.A, {
                     className: m.$f,
                     iconSrc: o,
-                    guild: (0, d.yF)(v(E({}, r), { features: [] })),
+                    guild: (0, d.yF)(
+                        v(E({}, r), {
+                            features: [],
+                        }),
+                    ),
                     size: O.A.Sizes.MEDIUM,
                 }),
             }),
@@ -93,7 +103,9 @@ function I(e) {
                 children: r.name,
             }),
             i
-                ? (0, n.jsx)(u.y$y, { type: u.y$y.Type.PULSING_ELLIPSIS })
+                ? (0, n.jsx)(u.y$y, {
+                      type: u.y$y.Type.PULSING_ELLIPSIS,
+                  })
                 : (0, n.jsx)("img", {
                       alt: "",
                       src: h,
@@ -145,7 +157,9 @@ let S = (e) => {
             s.Modal,
             v(E({}, f), {
                 title: j.intl.string(j.t.mOMeiR),
-                subtitle: j.intl.format(j.t.dZeiTJ, { onJoinWaitlist: P }),
+                subtitle: j.intl.format(j.t.dZeiTJ, {
+                    onJoinWaitlist: P,
+                }),
                 input: (0, n.jsxs)(n.Fragment, {
                     children: [
                         (0, n.jsx)(u.IWV, {
@@ -211,7 +225,9 @@ let S = (e) => {
                                       (0, n.jsx)(u.Text, {
                                           className: m.He,
                                           variant: "text-md/normal",
-                                          children: j.intl.format(j.t.flgDKM, { onJoinWaitlist: P }),
+                                          children: j.intl.format(j.t.flgDKM, {
+                                              onJoinWaitlist: P,
+                                          }),
                                       }),
                                   ],
                               }),

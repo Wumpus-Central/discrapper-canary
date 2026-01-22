@@ -1,4 +1,8 @@
-n.d(t, { V: () => E }), n(896048), n(321073);
+n.d(t, {
+    V: () => E,
+}),
+    n(896048),
+    n(321073);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -18,6 +22,7 @@ var r = n(627968),
     y = n(709562),
     O = n(652215),
     j = n(985018);
+
 function v(e) {
     let t = (0, o.bG)([b.A], () => !(0, s.isEmpty)(b.A.getTypingUsers(e)), [e]),
         n = (0, o.bG)([h.A], () => h.A.getVoiceChannelId() === e, [e]),
@@ -36,6 +41,7 @@ function v(e) {
         isTyping: t,
     };
 }
+
 function x(e) {
     let { className: t, channelId: n } = e,
         { unreadCount: l, mentionCount: i, isTyping: a, voiceChannelIsSelected: s } = v(n);
@@ -47,6 +53,7 @@ function x(e) {
         canBadge: s,
     });
 }
+
 function E(e) {
     let t,
         {
@@ -160,7 +167,7 @@ function E(e) {
                 M &&
                     (e = setTimeout(() => {
                         L(!1);
-                    }, 3000)),
+                    }, 3e3)),
                 () => {
                     clearTimeout(e);
                 }
@@ -168,7 +175,12 @@ function E(e) {
         }, [M]);
     let k = [(t = h && C ? j.intl.string(j.t.DPgc5h) : I ? j.intl.string(j.t.nthdxB) : j.intl.string(j.t["5KxXrK"]))];
     return (
-        P > 0 && k.push(j.intl.formatToPlainString(j.t["3l1GOx"], { mentionCount: P })),
+        P > 0 &&
+            k.push(
+                j.intl.formatToPlainString(j.t["3l1GOx"], {
+                    mentionCount: P,
+                }),
+            ),
         T > 0 && k.push(j.intl.string(j.t.x5zAGZ)),
         (0, r.jsx)(
             y.A,
@@ -204,7 +216,12 @@ function E(e) {
                     "aria-label": k.join(", "),
                     iconComponent: R,
                     tooltipPosition: "bottom",
-                    wrapperClassName: a()(i, null != s && { [s]: N }),
+                    wrapperClassName: a()(
+                        i,
+                        null != s && {
+                            [s]: N,
+                        },
+                    ),
                     forceTooltipOpen: M,
                 },
                 E,

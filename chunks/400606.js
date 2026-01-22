@@ -4,6 +4,7 @@ n.d(t, {
 });
 var r = n(534278),
     i = n(408713);
+
 function a(e, t) {
     let n = s(e, t, "left"),
         r = s(e, t, "top"),
@@ -46,6 +47,7 @@ function a(e, t) {
             top: l,
         });
 }
+
 function s(e, t, n) {
     let r = "left" === n ? "offsetLeft" : "offsetTop",
         i = 0;
@@ -58,6 +60,7 @@ function s(e, t, n) {
     }
     return i;
 }
+
 function o(e, t) {
     if (e && document.contains(e)) {
         let c = document.scrollingElement || document.documentElement;
@@ -65,7 +68,11 @@ function o(e, t) {
         else {
             var n, s, o, l;
             let { left: r, top: i } = e.getBoundingClientRect();
-            null == e || null == (n = e.scrollIntoView) || n.call(e, { block: "nearest" });
+            null == e ||
+                null == (n = e.scrollIntoView) ||
+                n.call(e, {
+                    block: "nearest",
+                });
             let { left: a, top: c } = e.getBoundingClientRect();
             (Math.abs(r - a) > 1 || Math.abs(i - c) > 1) &&
                 (null == t ||
@@ -75,7 +82,10 @@ function o(e, t) {
                         block: "center",
                         inline: "center",
                     }),
-                null == (l = e.scrollIntoView) || l.call(e, { block: "nearest" }));
+                null == (l = e.scrollIntoView) ||
+                    l.call(e, {
+                        block: "nearest",
+                    }));
         }
     }
 }

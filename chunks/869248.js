@@ -1,4 +1,6 @@
-n.d(t, { A: () => I });
+n.d(t, {
+    A: () => I,
+});
 var r = n(627968),
     i = n(64700),
     l = n(311907),
@@ -19,6 +21,7 @@ var r = n(627968),
     E = n(985018),
     O = n(305585),
     y = n(633030);
+
 function I(e) {
     let { channel: t, baseChannelId: n } = e,
         I = (0, b.Ay)(t),

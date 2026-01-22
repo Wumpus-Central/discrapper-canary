@@ -1,4 +1,6 @@
-n.d(t, { Q: () => p });
+n.d(t, {
+    Q: () => p,
+});
 var r = n(966209),
     i = n(805447),
     a = n(885714),
@@ -9,6 +11,7 @@ var r = n(966209),
     u = n(64700),
     d = n(853590),
     f = n(404108);
+
 function p(e, t, n) {
     var p;
     let { node: h, isVirtualized: m, focusMode: g = "child", shouldSelectOnPressUp: E, onAction: b } = e,
@@ -54,7 +57,10 @@ function p(e, t, n) {
                 case "ArrowLeft": {
                     let t = "rtl" === y ? f.nextNode() : f.previousNode();
                     if (("child" === g && t === n.current && (t = null), e.preventDefault(), e.stopPropagation(), t))
-                        (0, i.l)(t), (0, o.o)(t, { containingElement: (0, l.m)(n.current) });
+                        (0, i.l)(t),
+                            (0, o.o)(t, {
+                                containingElement: (0, l.m)(n.current),
+                            });
                     else {
                         if ((null == (r = O.getKeyLeftOf) ? void 0 : r.call(O, h.key)) !== h.key) {
                             null == (a = n.current.parentElement) ||
@@ -62,17 +68,26 @@ function p(e, t, n) {
                             break;
                         }
                         "cell" === g && "rtl" === y
-                            ? ((0, i.l)(n.current), (0, o.o)(n.current, { containingElement: (0, l.m)(n.current) }))
+                            ? ((0, i.l)(n.current),
+                              (0, o.o)(n.current, {
+                                  containingElement: (0, l.m)(n.current),
+                              }))
                             : ((f.currentNode = n.current),
                               (t = "rtl" === y ? f.firstChild() : _(f)) &&
-                                  ((0, i.l)(t), (0, o.o)(t, { containingElement: (0, l.m)(n.current) })));
+                                  ((0, i.l)(t),
+                                  (0, o.o)(t, {
+                                      containingElement: (0, l.m)(n.current),
+                                  })));
                     }
                     break;
                 }
                 case "ArrowRight": {
                     let t = "rtl" === y ? f.previousNode() : f.nextNode();
                     if (("child" === g && t === n.current && (t = null), e.preventDefault(), e.stopPropagation(), t))
-                        (0, i.l)(t), (0, o.o)(t, { containingElement: (0, l.m)(n.current) });
+                        (0, i.l)(t),
+                            (0, o.o)(t, {
+                                containingElement: (0, l.m)(n.current),
+                            });
                     else {
                         if ((null == (c = O.getKeyRightOf) ? void 0 : c.call(O, h.key)) !== h.key) {
                             null == (u = n.current.parentElement) ||
@@ -80,10 +95,16 @@ function p(e, t, n) {
                             break;
                         }
                         "cell" === g && "ltr" === y
-                            ? ((0, i.l)(n.current), (0, o.o)(n.current, { containingElement: (0, l.m)(n.current) }))
+                            ? ((0, i.l)(n.current),
+                              (0, o.o)(n.current, {
+                                  containingElement: (0, l.m)(n.current),
+                              }))
                             : ((f.currentNode = n.current),
                               (t = "rtl" === y ? _(f) : f.firstChild()) &&
-                                  ((0, i.l)(t), (0, o.o)(t, { containingElement: (0, l.m)(n.current) })));
+                                  ((0, i.l)(t),
+                                  (0, o.o)(t, {
+                                      containingElement: (0, l.m)(n.current),
+                                  })));
                     }
                     break;
                 }
@@ -133,6 +154,7 @@ function p(e, t, n) {
         }
     );
 }
+
 function _(e) {
     let t = null,
         n = null;

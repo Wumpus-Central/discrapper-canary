@@ -1,4 +1,11 @@
-n.d(t, { A: () => k }), n(321073), n(896048), n(114821), n(339614), n(667532);
+n.d(t, {
+    A: () => k,
+}),
+    n(321073),
+    n(896048),
+    n(114821),
+    n(339614),
+    n(667532);
 var r = n(627968),
     a = n(64700),
     i = n(735438),
@@ -27,6 +34,7 @@ var r = n(627968),
     j = n(731854),
     P = n(985018),
     N = n(518959);
+
 function I(e, t, n, a, i) {
     let s = [];
     if (null == t) return s;
@@ -38,7 +46,9 @@ function I(e, t, n, a, i) {
     if (
         (s.push({
             section: u.Fq.HEADER,
-            label: P.intl.formatToPlainString(P.t.PK5fOC, { context: e }),
+            label: P.intl.formatToPlainString(P.t.PK5fOC, {
+                context: e,
+            }),
         }),
         null != c &&
             s.push({
@@ -140,6 +150,7 @@ function I(e, t, n, a, i) {
     }
     return s;
 }
+
 function k() {
     var e, t;
     let { defaultStats: n, streamStats: i } = (0, s.bG)(
@@ -171,7 +182,9 @@ function k() {
                 m = n.flatMap((e, t) => I(j.x.STREAM, e, t, a, null == s ? void 0 : s.getGuildId())),
                 p = [],
                 y = [],
-                h = { section: u.Fq.DIVIDER };
+                h = {
+                    section: u.Fq.DIVIDER,
+                };
             return (
                 null != i &&
                     (p.push(h),
@@ -179,7 +192,9 @@ function k() {
                         section: S.zWA.SCREENSHARE,
                         label: P.intl.string(P.t["gWbr/U"]),
                         element: R.A,
-                        elementProps: { screenshare: i },
+                        elementProps: {
+                            screenshare: i,
+                        },
                     })),
                 null != l &&
                     (y.push(h),
@@ -187,7 +202,9 @@ function k() {
                         section: S.zWA.CLIPS,
                         label: P.intl.string(P.t.MKrFKE),
                         element: E.A,
-                        elementProps: { clips: l },
+                        elementProps: {
+                            clips: l,
+                        },
                     })),
                 m.length > 0 && m.unshift(h),
                 [

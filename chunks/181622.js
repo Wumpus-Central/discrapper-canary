@@ -1,4 +1,6 @@
-n.d(t, { ForwardFailedAlertModal: () => P });
+n.d(t, {
+    ForwardFailedAlertModal: () => P,
+});
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -17,6 +19,7 @@ var r = n(627968),
     m = n(294454),
     O = n(985018),
     g = n(655412);
+
 function x(e) {
     let { icon: t, label: n } = e;
     return (0, r.jsxs)("div", {
@@ -32,6 +35,7 @@ function x(e) {
         ],
     });
 }
+
 function A(e) {
     let { channel: t } = e,
         n = (0, o.Ay)(t);
@@ -44,6 +48,7 @@ function A(e) {
         label: n,
     });
 }
+
 function v(e) {
     let { user: t } = e,
         n = j.Ay.useName(t),
@@ -59,6 +64,7 @@ function v(e) {
         label: null != l ? l : n,
     });
 }
+
 function w(e) {
     let { channel: t } = e,
         n = (0, i.bG)([b.A], () => b.A.getGuild(null == t ? void 0 : t.guild_id)),
@@ -72,6 +78,7 @@ function w(e) {
         label: l,
     });
 }
+
 function _(e) {
     let { destination: t } = e,
         { channel: n, user: l } = (0, i.cf)([f.A, y.default], () => ({
@@ -79,13 +86,20 @@ function _(e) {
             user: "user" === t.type ? y.default.getUser(t.id) : null,
         }));
     return (null == n ? void 0 : n.isGroupDM())
-        ? (0, r.jsx)(A, { channel: n })
+        ? (0, r.jsx)(A, {
+              channel: n,
+          })
         : null != l
-          ? (0, r.jsx)(v, { user: l })
+          ? (0, r.jsx)(v, {
+                user: l,
+            })
           : null != n
-            ? (0, r.jsx)(w, { channel: n })
+            ? (0, r.jsx)(w, {
+                  channel: n,
+              })
             : null;
 }
+
 function P(e) {
     var t, n;
     let { message: i, failedDestinations: a, forwardOptions: o } = e,
@@ -169,11 +183,21 @@ function P(e) {
                 children: [
                     (0, r.jsx)(s.Text, {
                         variant: "text-md/medium",
-                        children: O.intl.format(O.t.cn9vFb, { count: a.length }),
+                        children: O.intl.format(O.t.cn9vFb, {
+                            count: a.length,
+                        }),
                     }),
                     (0, r.jsx)("div", {
                         className: g.Zc,
-                        children: a.map((e, t) => (0, r.jsx)(_, { destination: e }, t)),
+                        children: a.map((e, t) =>
+                            (0, r.jsx)(
+                                _,
+                                {
+                                    destination: e,
+                                },
+                                t,
+                            ),
+                        ),
                     }),
                 ],
             }),

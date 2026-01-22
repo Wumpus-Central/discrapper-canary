@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var i = n(627968);
 n(64700);
 var s = n(503698),
@@ -19,11 +21,15 @@ let u = (e) => {
             guildId: u.guild_id,
             messageId: null == s ? void 0 : s.id,
             stopPropagation: !0,
-            ariaLabel: c.intl.formatToPlainString(c.t.CSIeU1, { name: f }),
+            ariaLabel: c.intl.formatToPlainString(c.t.CSIeU1, {
+                name: f,
+            }),
         })(null != p ? p : void 0)(f, u.id);
     return (0, i.jsxs)(l.Text, {
         tag: "span",
-        className: r()(d.c, { [d.p]: g }),
+        className: r()(d.c, {
+            [d.p]: g,
+        }),
         variant: "text-sm/semibold",
         children: [v, !0 === h ? ": " : null],
     });

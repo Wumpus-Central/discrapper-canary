@@ -1,4 +1,6 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(746280),
     i = n(90727),
     a = (function () {
@@ -54,12 +56,14 @@ var r = n(746280),
             e
         );
     })();
+
 function s(e, t) {
     void 0 === t && (t = r.A);
     var n = {},
         s = new a(t.tokens);
     if (!s.start(e)) return null;
     return o(), n;
+
     function o() {
         s.expect("every");
         var e = s.acceptNumber();
@@ -132,6 +136,7 @@ function s(e, t) {
                 throw Error("Unknown symbol");
         }
     }
+
     function l() {
         var e = s.accept("on"),
             t = s.accept("the");
@@ -162,6 +167,7 @@ function s(e, t) {
                 }
             } while (s.accept("comma") || s.accept("the") || s.accept("on"));
     }
+
     function c() {
         if (s.accept("at"))
             do {
@@ -173,6 +179,7 @@ function s(e, t) {
                 }
             } while (s.accept("comma") || s.accept("at"));
     }
+
     function u() {
         switch (s.symbol) {
             case "january":
@@ -203,6 +210,7 @@ function s(e, t) {
                 return !1;
         }
     }
+
     function d() {
         switch (s.symbol) {
             case "monday":
@@ -217,6 +225,7 @@ function s(e, t) {
                 return !1;
         }
     }
+
     function f() {
         switch (s.symbol) {
             case "last":
@@ -235,6 +244,7 @@ function s(e, t) {
                 return !1;
         }
     }
+
     function p() {
         s.accept("on"), s.accept("the");
         var e = f();
@@ -244,6 +254,7 @@ function s(e, t) {
                 n.bymonthday.push(e), s.nextSymbol();
             }
     }
+
     function _() {
         if ("until" === s.symbol) {
             var e = Date.parse(s.text);

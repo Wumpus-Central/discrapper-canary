@@ -12,6 +12,7 @@ var r = n(735438),
     l = n(687658),
     c = n(167127),
     u = n(499954);
+
 function d(e, t, n) {
     return (
         t in e
@@ -25,6 +26,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -41,6 +43,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -53,6 +56,7 @@ function p(e, t) {
     }
     return n;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -64,6 +68,7 @@ function _(e, t) {
         e
     );
 }
+
 function h(e) {
     let t = {};
     for (let n in e) {
@@ -139,7 +144,7 @@ class g extends a.A {
     }
     getBytesStats() {
         let e = i().reduce(this.inboundStats, (e, t) => e + t.bytesReceived, 0),
-            t = this.outboundStats.aggregationDurationMs / 1000;
+            t = this.outboundStats.aggregationDurationMs / 1e3;
         return {
             bytes_sent: this.outboundStats.bytesSent,
             bytes_received: e,
@@ -344,7 +349,7 @@ class g extends a.A {
     }
     calculateMos(e, t) {
         let n = this.calculateR(e, t);
-        return n < 0 ? 1 : n > 100 ? 4.5 : 1 + 0.035 * n + 0.0000071 * n * (n - 60) * (100 - n);
+        return n < 0 ? 1 : n > 100 ? 4.5 : 1 + 0.035 * n + 71e-7 * n * (n - 60) * (100 - n);
     }
     calculateR(e, t) {
         return 93.4 - (0.024 * e + (e > 177.3 ? 0.11 * (e - 177.3) : 0)) - (10 + (122 * t) / (t + 10));
@@ -391,7 +396,7 @@ class g extends a.A {
                 }
                 let r = performance.now();
                 e.aggregationDurationMs += r - e.previousTimestampMs;
-                let i = (r - e.previousTimestampMs) / 1000;
+                let i = (r - e.previousTimestampMs) / 1e3;
                 (e.bytesAvailable += (t / 8) * i), (e.bytesTarget += (n / 8) * i), (e.previousTimestampMs = r);
             }),
             (this.sampleStats = (e) => {

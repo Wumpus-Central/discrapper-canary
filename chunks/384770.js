@@ -1,5 +1,8 @@
-n.d(t, { F: () => i });
+n.d(t, {
+    F: () => i,
+});
 var r = n(124651);
+
 function i(e, t, n) {
     if (t === n) return !0;
     if (!t || !n) return !1;
@@ -29,6 +32,7 @@ function i(e, t, n) {
     return !0;
 }
 let a = Object.values;
+
 function s(e, t, n) {
     if (t === n) return !0;
     if (e !== r.LN.BYTES) return !1;
@@ -38,11 +42,13 @@ function s(e, t, n) {
     for (let e = 0; e < i.length; e++) if (i[e] != a[e]) return !1;
     return !0;
 }
+
 function o(e, t, n) {
     if (t.length !== n.length) return !1;
     for (let r = 0; r < t.length; r++) if (!s(e, t[r], n[r])) return !1;
     return !0;
 }
+
 function l(e, t, n) {
     if (t.length !== n.length) return !1;
     for (let r = 0; r < t.length; r++) if (!e.equals(t[r], n[r])) return !1;

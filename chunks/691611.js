@@ -1,4 +1,6 @@
-n.d(t, { A: () => N });
+n.d(t, {
+    A: () => N,
+});
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -22,6 +24,7 @@ var r = n(627968),
     I = n(652215),
     v = n(456107),
     S = n(119907);
+
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -156,7 +159,10 @@ let N = i.memo(function (e) {
                 childrenMessageContent: (0, m.A)(e, B),
                 childrenSystemMessage: (0, _.A)(
                     ((i = C({}, e)),
-                    (l = l = { disableInteraction: U }),
+                    (l = l =
+                        {
+                            disableInteraction: U,
+                        }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
                         : (function (e, t) {

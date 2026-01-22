@@ -8,6 +8,7 @@ var r = n(835245),
     s = n(604594);
 let o = 12 * i.A.Millis.HOUR,
     l = null;
+
 function c() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         t = Date.now();
@@ -20,9 +21,11 @@ function c() {
           })
         : (e && (l.lastUsedTimestamp = t), l);
 }
+
 function u() {
     l = null;
 }
+
 function d(e) {
     let t = Date.now();
     if (t < e.createdAtTimestamp)

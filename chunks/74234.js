@@ -1,8 +1,11 @@
-n.d(t, { Q: () => d });
+n.d(t, {
+    Q: () => d,
+});
 var r = n(294946),
     i = n(58862),
     a = n(274004),
     s = n(15020);
+
 function o(e, t, n, r, i, a) {
     let o = e[t++] ^ n[r++],
         l = e[t++] ^ n[r++],
@@ -86,12 +89,14 @@ function o(e, t, n, r, i, a) {
         (i[a++] = (O + k) | 0),
         (i[a++] = (A + U) | 0);
 }
+
 function l(e, t, n, r, i) {
     let a = r + 0,
         s = r + 16 * i;
     for (let r = 0; r < 16; r++) n[s + r] = e[t + (2 * i - 1) * 16 + r];
     for (let r = 0; r < i; r++, a += 16, t += 16) o(n, s, e, t, n, a), r > 0 && (s += 16), o(n, a, e, (t += 16), n, s);
 }
+
 function c(e, t, n) {
     let {
         N: o,
@@ -105,7 +110,7 @@ function c(e, t, n) {
         {
             dkLen: 32,
             asyncTick: 10,
-            maxmem: 1073742848,
+            maxmem: 0x40000400,
         },
         n,
     );
@@ -121,11 +126,11 @@ function c(e, t, n) {
         throw Error("progressCb should be function");
     let _ = 128 * l,
         h = _ / 4;
-    if (o <= 1 || (o & (o - 1)) != 0 || o > 4294967296)
+    if (o <= 1 || (o & (o - 1)) != 0 || o > 0x100000000)
         throw Error("Scrypt: N must be larger than 1, a power of 2, and less than 2^32");
-    if (c < 0 || c > ((4294967296 - 1) * 32) / _)
+    if (c < 0 || c > ((0x100000000 - 1) * 32) / _)
         throw Error("Scrypt: p must be a positive integer less than or equal to ((2^32 - 1) * 32) / (128 * r)");
-    if (u < 0 || u > (4294967296 - 1) * 32)
+    if (u < 0 || u > (0x100000000 - 1) * 32)
         throw Error("Scrypt: dkLen should be positive integer less than or equal to (2^32 - 1) * 32");
     let m = _ * (o + c);
     if (m > f) throw Error(`Scrypt: parameters too large, ${m} (128 * r * (N + p)) > ${f} (maxmem)`);
@@ -139,7 +144,7 @@ function c(e, t, n) {
         O = () => {};
     if (p) {
         let e = 2 * o * c,
-            t = Math.max(Math.floor(e / 10000), 1),
+            t = Math.max(Math.floor(e / 1e4), 1),
             n = 0;
         O = () => {
             n++, p && (!(n % t) || n === e) && p(n / e);
@@ -159,6 +164,7 @@ function c(e, t, n) {
         asyncTick: d,
     };
 }
+
 function u(e, t, n, r, s) {
     let o = (0, a.A)(i.sc, e, n, {
         c: 1,

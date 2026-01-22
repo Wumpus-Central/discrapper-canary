@@ -20,9 +20,11 @@ let h = {
     BLACK: f.Ql,
     GRAY: f.wm,
 };
+
 function m(e) {
     return Math.round(e / p) * p;
 }
+
 function g(e) {
     let {
             notchBackground: t,
@@ -37,7 +39,9 @@ function g(e) {
         b = i.useMemo(() => (null != E ? m(E) : 0), [E]),
         y = i.useMemo(() => {
             let e = Math.abs(m((b * (100 - Math.max(0, Math.min(100, n)))) / 100) - b);
-            return { transform: "translateX(".concat(e, "px)") };
+            return {
+                transform: "translateX(".concat(e, "px)"),
+            };
         }, [n, b]),
         O = i.useMemo(
             () => ({

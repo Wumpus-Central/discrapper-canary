@@ -1,4 +1,8 @@
-l.d(t, { A: () => g }), l(896048), l(228524);
+l.d(t, {
+    A: () => g,
+}),
+    l(896048),
+    l(228524);
 var r = l(627968),
     n = l(64700),
     i = l(512750),
@@ -13,6 +17,7 @@ var r = l(627968),
     m = l(867060),
     v = l(568065),
     A = l(876380);
+
 function g(e) {
     let { guildId: t, powerup: l } = e,
         [g, x] = n.useState(void 0);

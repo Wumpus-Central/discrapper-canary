@@ -27,6 +27,7 @@ var r = n(627968),
     S = n(980504),
     I = n(985018),
     T = n(646561);
+
 function C(e) {
     return (0, a.bG)([p.A], () => {
         if (null == e) return null;
@@ -34,6 +35,7 @@ function C(e) {
         return p.A.getSound(t === S.XH ? S.mV : t, n);
     });
 }
+
 function N() {
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -48,6 +50,7 @@ function N() {
         ],
     });
 }
+
 function R() {
     let { analyticsLocations: e } = (0, l.Ay)(),
         [t, n] = i.useState(S.XH),
@@ -56,19 +59,30 @@ function R() {
         E = (null == o ? void 0 : o.type) === h.PP.GLOBAL,
         y = (0, a.bG)([p.A], () => p.A.hasFetchedAllSounds()) && null != o && null == d;
     i.useEffect(() => {
-        y && (0, _.ND)({ location: e });
+        y &&
+            (0, _.ND)({
+                location: e,
+            });
     }, [y, e]),
         i.useEffect(() => {
             (0, f.E7)();
         }, []);
     let O = i.useCallback((e, t) => {
         let { inDropdown: n } = t;
-        return null == e ? null : n ? (0, r.jsx)(w, { guildId: e.value }) : null;
+        return null == e
+            ? null
+            : n
+              ? (0, r.jsx)(w, {
+                    guildId: e.value,
+                })
+              : null;
     }, []);
     return (0, r.jsx)(b.A, {
         children: (0, r.jsxs)(s.nVY, {
             label: I.intl.string(I.t.nzUc3B),
-            description: I.intl.format(I.t.u9RWmv, { helpdeskArticle: g.A.getArticleURL(v.MVz.SOUNDBOARD) }),
+            description: I.intl.format(I.t.u9RWmv, {
+                helpdeskArticle: g.A.getArticleURL(v.MVz.SOUNDBOARD),
+            }),
             children: [
                 (0, r.jsx)(c.A, {
                     guildId: t,
@@ -112,6 +126,7 @@ function R() {
         }),
     });
 }
+
 function w(e) {
     let { guildId: t } = e,
         n = (0, a.bG)([E.A], () => {

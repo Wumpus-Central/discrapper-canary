@@ -1,4 +1,7 @@
-n.d(t, { A: () => O }), n(896048);
+n.d(t, {
+    A: () => O,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(397927),
@@ -9,6 +12,7 @@ var r = n(627968),
     u = n(331441),
     d = n(20770),
     f = n(985018);
+
 function p(e, t, n) {
     return (
         t in e
@@ -22,6 +26,7 @@ function p(e, t, n) {
         e
     );
 }
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -38,6 +43,7 @@ function _(e) {
     }
     return e;
 }
+
 function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -50,6 +56,7 @@ function h(e, t) {
     }
     return n;
 }
+
 function m(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -61,6 +68,7 @@ function m(e, t) {
         e
     );
 }
+
 function g(e, t) {
     if (null == e) return {};
     var n,
@@ -77,6 +85,7 @@ function g(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function E(e, t) {
     if (null == e) return {};
     var n,
@@ -90,34 +99,58 @@ function E(e, t) {
 let b = "https://support.discord.com/hc/en-us";
 class y extends i.PureComponent {
     static getDerivedStateFromError(e) {
-        return { hasError: !0 };
+        return {
+            hasError: !0,
+        };
     }
     render() {
         return this.state.hasError
             ? (0, r.jsxs)(a.$Td, {
                   color: a.Hv$.DANGER,
-                  style: { borderRadius: 0 },
+                  style: {
+                      borderRadius: 0,
+                  },
                   children: [
-                      f.intl.format(f.t.IIHUUF, { subscriptionId: this.props.subscription.id }),
+                      f.intl.format(f.t.IIHUUF, {
+                          subscriptionId: this.props.subscription.id,
+                      }),
                       " ",
-                      f.intl.format(f.t.fh65ES, { helpLink: b }),
+                      f.intl.format(f.t.fh65ES, {
+                          helpLink: b,
+                      }),
                   ],
               })
             : this.props.children;
     }
     constructor(...e) {
-        super(...e), p(this, "state", { hasError: !1 });
+        super(...e),
+            p(this, "state", {
+                hasError: !1,
+            });
     }
 }
+
 function O(e) {
     let { subscriptions: t, updateHeader: n } = e,
-        [a, p] = i.useState({ route: u.R.HOME }),
+        [a, p] = i.useState({
+            route: u.R.HOME,
+        }),
         { route: h } = a,
         E = () => {
-            p({ route: u.R.HOME });
+            p({
+                route: u.R.HOME,
+            });
         },
         b = (e) => {
-            p(_({ route: u.R.SWITCH_APP_PLANS }, e)), n(f.intl.string(f.t.VFqtkP), E);
+            p(
+                _(
+                    {
+                        route: u.R.SWITCH_APP_PLANS,
+                    },
+                    e,
+                ),
+            ),
+                n(f.intl.string(f.t.VFqtkP), E);
         },
         [O, A] = i.useState({});
     i.useEffect(() => {
@@ -125,13 +158,25 @@ function O(e) {
             var e;
             let t = null == (e = n.items[0]) ? void 0 : e.planId;
             null != t &&
-                (A((e) => m(_({}, e), { [n.id]: c.G.LOADING })),
+                (A((e) =>
+                    m(_({}, e), {
+                        [n.id]: c.G.LOADING,
+                    }),
+                ),
                 (0, o._R)(t)
                     .then(() => {
-                        A((e) => m(_({}, e), { [n.id]: c.G.DONE }));
+                        A((e) =>
+                            m(_({}, e), {
+                                [n.id]: c.G.DONE,
+                            }),
+                        );
                     })
                     .catch(() => {
-                        A((e) => m(_({}, e), { [n.id]: c.G.ERROR }));
+                        A((e) =>
+                            m(_({}, e), {
+                                [n.id]: c.G.ERROR,
+                            }),
+                        );
                     }));
         }
     }, [t]);
@@ -159,7 +204,12 @@ function O(e) {
         case u.R.SWITCH_APP_PLANS:
             let { route: I } = a,
                 T = g(a, ["route"]);
-            return (0, r.jsx)(d.A, m(_({}, T), { navigateToHome: E }));
+            return (0, r.jsx)(
+                d.A,
+                m(_({}, T), {
+                    navigateToHome: E,
+                }),
+            );
         default:
             (0, s.xb)(h);
     }

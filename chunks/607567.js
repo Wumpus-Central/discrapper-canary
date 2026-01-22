@@ -19,6 +19,7 @@ var r,
     h = n(661191),
     m = n(427262),
     g = n(652215);
+
 function E(e, t, n) {
     return (
         t in e
@@ -32,6 +33,7 @@ function E(e, t, n) {
         e
     );
 }
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -48,6 +50,7 @@ function b(e) {
     }
     return e;
 }
+
 function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -60,6 +63,7 @@ function y(e, t) {
     }
     return n;
 }
+
 function O(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -73,13 +77,16 @@ function O(e, t) {
 }
 let A = Object.freeze([]),
     v = {};
+
 function S(e) {
     let t = v[e];
     return null == t && ((t = new w(e)), (v[e] = t)), t;
 }
+
 function I(e, t) {
     return f.Ay.getMember(e, t.id);
 }
+
 function T(e, t, n) {
     var r;
     let i = null != (r = null == t ? void 0 : t.nick) ? r : m.Ay.getName(n);
@@ -88,15 +95,18 @@ function T(e, t, n) {
         comparator: C(e, i),
     };
 }
+
 function C(e, t) {
     return ""
         .concat(e.selfStream ? "\0" : "\x01")
         .concat(t.toLowerCase(), "\0")
         .concat(e.userId);
 }
+
 function N(e, t, n) {
     return T(n, I(e, t), t);
 }
+
 function R(e, t, n, r) {
     var i;
     let a = p.default.getUser(n),
@@ -229,12 +239,15 @@ class w {
             (this.guildId = e);
     }
 }
+
 function P() {
     v = {};
 }
+
 function D() {
     V();
 }
+
 function x(e) {
     let { voiceStates: t } = e;
     return t.reduce((e, t) => {
@@ -242,6 +255,7 @@ function x(e) {
         return S(null != n ? n : g.ME).updateVoiceState(r) || e;
     }, !1);
 }
+
 function L(e) {
     var t, n;
     let r = !1,
@@ -252,26 +266,32 @@ function L(e) {
     for (let t of i) s.has(t) || (r = S(e.guildId).updateMember(t) || r);
     return r;
 }
+
 function j(e) {
     let { guildId: t } = e,
         n = u.default.getId();
     return null != n && S(null != t ? t : g.ME).updateVoiceState(n);
 }
+
 function M() {
     return a().reduce(v, (e, t) => t.updateUsers() || e, !1);
 }
+
 function k(e) {
     let { guildId: t, user: n } = e;
     return S(t).updateMember(n.id);
 }
+
 function U(e) {
     let { guild: t } = e;
     delete v[t.id];
 }
+
 function G(e) {
     let { guild: t } = e;
     delete v[t.id];
 }
+
 function V() {
     v = {};
     let e = _.A.getAllVoiceStates();

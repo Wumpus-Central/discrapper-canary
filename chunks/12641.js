@@ -1,9 +1,12 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 var i = n(627968),
     r = n(64700),
     s = n(503698),
     l = n.n(s),
     o = n(690157);
+
 function a(e) {
     let { keybind: t, separator: n = "+", className: s } = e;
     return (0, i.jsx)(i.Fragment, {

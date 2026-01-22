@@ -5,6 +5,7 @@ n.d(t, {
 var r = n(572808),
     i = n(588703),
     a = n(985018);
+
 function s(e) {
     return {
         userId: e.user_id,
@@ -12,12 +13,14 @@ function s(e) {
         avatar: e.avatar,
     };
 }
+
 function o(e) {
     return {
         id: e.id,
         claimedBy: e.claimed_by,
     };
 }
+
 function l(e) {
     return {
         roomId: e.room_id,
@@ -25,6 +28,7 @@ function l(e) {
         seats: e.seats.map(o),
     };
 }
+
 function c(e) {
     switch (e) {
         case r.wS.RADIO:

@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -10,6 +12,7 @@ var i = n(311907),
     d = n(239705),
     u = n(985018),
     f = n(86181);
+
 function g(e) {
     var t;
     let { action: n, triggerType: g, toggled: b, onToggleAction: m } = e,
@@ -50,7 +53,10 @@ function g(e) {
                             color: "text-muted",
                             variant: "text-xs/medium",
                             children: [
-                                null != j && u.intl.format(u.t["8Sr/ar"], { channelName: j }),
+                                null != j &&
+                                    u.intl.format(u.t["8Sr/ar"], {
+                                        channelName: j,
+                                    }),
                                 (0, r.jsx)(l.DUT, {
                                     onClick: p(!0),
                                     className: f._2,

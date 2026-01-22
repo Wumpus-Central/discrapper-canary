@@ -1,4 +1,8 @@
-n.d(t, { A: () => N }), n(896048), n(65821);
+n.d(t, {
+    A: () => N,
+}),
+    n(896048),
+    n(65821);
 var l,
     a = n(627968),
     r = n(64700),
@@ -16,6 +20,7 @@ var l,
     g = n(652215),
     x = n(985018),
     v = n(60370);
+
 function j(e, t, n) {
     return (
         t in e
@@ -29,6 +34,7 @@ function j(e, t, n) {
         e
     );
 }
+
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -45,6 +51,7 @@ function A(e) {
     }
     return e;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -63,6 +70,7 @@ function _(e, t) {
         e
     );
 }
+
 function y(e, t) {
     if (null == e) return {};
     var n,
@@ -106,7 +114,12 @@ let O = (e) => {
     S = (e) => {
         let { containerClassName: t, className: n } = e,
             l = y(e, ["containerClassName", "className"]);
-        return (0, a.jsx)(h.Ay, _(A({}, l), { className: s()(n, t) }));
+        return (0, a.jsx)(
+            h.Ay,
+            _(A({}, l), {
+                className: s()(n, t),
+            }),
+        );
     },
     C = {
         width: 1280,
@@ -122,7 +135,12 @@ let O = (e) => {
             l,
             { item: r, onPlay: i, volume: s, onVolumeChange: c, onMute: p, isMuted: h, autoPlay: m } = e;
         if (r.type === g.geh.YOUTUBE_VIDEO)
-            (t = A({ url: (0, g.PE$)(r.youtubeVideoId) }, C)),
+            (t = A(
+                {
+                    url: (0, g.PE$)(r.youtubeVideoId),
+                },
+                C,
+            )),
                 (n = A(
                     {
                         url: ""
@@ -182,7 +200,10 @@ class P extends (l = r.PureComponent) {
     }
     handleCurrentItemClick(e, t) {
         let { onCurrentItemClick: n } = this.props;
-        null != n && n(e, t), this.setState({ hasInteracted: !0 });
+        null != n && n(e, t),
+            this.setState({
+                hasInteracted: !0,
+            });
     }
     render() {
         let { items: e, autoplayInterval: t, className: n, paused: l, themedPagination: r } = this.props,
@@ -227,23 +248,31 @@ class P extends (l = r.PureComponent) {
                 });
             }),
             j(this, "handleChangeItem", (e) => {
-                this.setState({ isVideoPlaying: !1 }),
+                this.setState({
+                    isVideoPlaying: !1,
+                }),
                     e.type === g.geh.IMG &&
                         this.setState({
                             imageLoadingStartTime: new Map(this.state.imageLoadingStartTime).set(e.src, Date.now()),
                         });
             }),
             j(this, "handleIntentionalChange", (e, t, n, l) => {
-                this.setState({ hasInteracted: !0 });
+                this.setState({
+                    hasInteracted: !0,
+                });
                 let { onIntentionalChange: a } = this.props;
                 null != a && a(e, t, n, l);
             }),
             j(this, "handleOnErrorImg", (e) => {
-                this.setState({ status: new Map(this.state.status).set(e.target.src, "errored") });
+                this.setState({
+                    status: new Map(this.state.status).set(e.target.src, "errored"),
+                });
             }),
             j(this, "handleOnLoadImg", (e) => {
                 let { onImageLoad: t } = this.props;
-                this.setState({ status: new Map(this.state.status).set(e.target.src, "loaded") });
+                this.setState({
+                    status: new Map(this.state.status).set(e.target.src, "loaded"),
+                });
                 let n = this.state.imageLoadingStartTime.get(e.target.src),
                     l = null != n ? Date.now() - n : void 0;
                 null == t ||
@@ -286,13 +315,17 @@ class P extends (l = r.PureComponent) {
                             n = (0, a.jsxs)(a.Fragment, {
                                 children: [
                                     (0, a.jsx)(c.y$y, {
-                                        className: s()(v.u1, { [v.R]: void 0 !== this.state.status.get(e.src) }),
+                                        className: s()(v.u1, {
+                                            [v.R]: void 0 !== this.state.status.get(e.src),
+                                        }),
                                         type: c.y$y.Type.SPINNING_CIRCLE,
                                     }),
                                     (0, a.jsx)("img", {
                                         onError: this.handleOnErrorImg,
                                         onLoad: this.handleOnLoadImg,
-                                        className: s()(v.JD, { [v.R]: "loaded" !== this.state.status.get(e.src) }),
+                                        className: s()(v.JD, {
+                                            [v.R]: "loaded" !== this.state.status.get(e.src),
+                                        }),
                                         src: e.src,
                                         alt: t,
                                     }),

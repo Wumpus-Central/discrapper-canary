@@ -1,4 +1,6 @@
-n.d(t, { W: () => u });
+n.d(t, {
+    W: () => u,
+});
 var r = n(713125),
     i = n(473529),
     a = n(871123),
@@ -6,6 +8,7 @@ var r = n(713125),
     o = n(808728),
     l = n(309010),
     c = n(746080);
+
 function u(e) {
     var t;
     let n = l.A.getChannelId(e),

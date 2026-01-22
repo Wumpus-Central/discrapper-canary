@@ -1,6 +1,8 @@
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});
 var r = {};
 r = {
-    removeButtonLabel: "Odstrániť",
-    removeDescription: "Ak chcete odstrániť značku, stlačte kláves Delete.",
+    removeButtonLabel: "Odstr\xe1niť",
+    removeDescription: "Ak chcete odstr\xe1niť značku, stlačte kl\xe1ves Delete.",
 };

@@ -35,6 +35,7 @@ var r = n(627968),
     R = n(652215),
     D = n(806931),
     M = n(742149);
+
 function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -60,6 +61,7 @@ function L(e) {
     }
     return e;
 }
+
 function G(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -159,7 +161,9 @@ let k = 16 / 9,
                         0 === x.filter((t) => (0, y._z)(t) === e.id && t.state !== R.XYD.ENDED).length
                     ) {
                         if (!(0, O.eo)(i, N.A, S.A, I.A, A.default)[0]) return;
-                        (0, f.A9)((0, y.Iy)(e.id), { forceMultiple: t.shiftKey });
+                        (0, f.A9)((0, y.Iy)(e.id), {
+                            forceMultiple: t.shiftKey,
+                        });
                     }
                     (null == E ? void 0 : E.id) === e.id
                         ? C
@@ -237,21 +241,30 @@ let k = 16 / 9,
                                             }),
                                         );
                                 },
-                                { context: A },
+                                {
+                                    context: A,
+                                },
                             );
                         return;
                     case D.lp.USER:
                     default:
                         if ((S(D.qs.USER), l))
-                            return (0, x.r)(t, v, i, { context: A }, (e, t) =>
-                                (0, m.Y)({
-                                    menuName: e,
-                                    menuItemProps: t,
-                                    entrypoint: D.GK.THREE_DOT,
-                                    targetUserId: v.id,
-                                    location: f,
-                                    tileType: D.qs.USER,
-                                }),
+                            return (0, x.r)(
+                                t,
+                                v,
+                                i,
+                                {
+                                    context: A,
+                                },
+                                (e, t) =>
+                                    (0, m.Y)({
+                                        menuName: e,
+                                        menuItemProps: t,
+                                        entrypoint: D.GK.THREE_DOT,
+                                        targetUserId: v.id,
+                                        location: f,
+                                        tileType: D.qs.USER,
+                                    }),
                             );
                         (0, d.L3)(
                             t,
@@ -280,7 +293,9 @@ let k = 16 / 9,
                                         }),
                                     );
                             },
-                            { context: A },
+                            {
+                                context: A,
+                            },
                         );
                 }
             };

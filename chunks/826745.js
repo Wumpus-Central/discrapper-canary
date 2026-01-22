@@ -1,5 +1,7 @@
 let r;
-n.d(t, { y: () => y });
+n.d(t, {
+    y: () => y,
+});
 var i,
     a = n(627968),
     s = n(64700),
@@ -8,6 +10,7 @@ var i,
     c = n(745262),
     u = n(158954),
     d = n(829681);
+
 function f(e, t, n) {
     return (
         t in e
@@ -21,6 +24,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,6 +41,7 @@ function p(e) {
     }
     return e;
 }
+
 function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -49,6 +54,7 @@ function _(e, t) {
     }
     return n;
 }
+
 function h(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -60,6 +66,7 @@ function h(e, t) {
         e
     );
 }
+
 function m(e, t) {
     if (null == e) return {};
     var n,
@@ -76,6 +83,7 @@ function m(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function g(e, t) {
     if (null == e) return {};
     var n,
@@ -122,14 +130,19 @@ class y extends (i = s.PureComponent) {
         let { fontWidthEstimate: n, rows: i } = this.props,
             a = null != (e = this.props.value) ? e : t.value;
         if (null != n && -1 === a.indexOf("\n") && a.length * n < 0.8 * t.offsetWidth)
-            return void this.setState({ height: void 0 });
+            return void this.setState({
+                height: void 0,
+            });
         null == r && null != document.body && ((r = document.createElement("textarea")), document.body.appendChild(r));
         let { paddingSize: s, borderSize: o, boxSizing: l, sizingStyle: c } = this.calculateNodeStyling(t);
         r.setAttribute("style", c + ";" + E),
             (r.value = a),
             null != i ? r.setAttribute("rows", "".concat(i)) : r.removeAttribute("rows");
         let u = r.scrollHeight;
-        "border-box" === l ? (u += o) : "content-box" === l && (u -= s), this.setState({ height: u });
+        "border-box" === l ? (u += o) : "content-box" === l && (u -= s),
+            this.setState({
+                height: u,
+            });
     }
     calculateNodeStyling(e) {
         let t = window.getComputedStyle(e),
@@ -203,7 +216,9 @@ class y extends (i = s.PureComponent) {
                 let { onChange: t } = this.props;
                 null == t || t(e), this.calculateSize();
             }),
-            (this.state = { height: void 0 });
+            (this.state = {
+                height: void 0,
+            });
     }
 }
 f(y, "defaultProps", {

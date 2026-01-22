@@ -33,7 +33,7 @@ let n = async (e) =>
         let w = !1;
         return new Promise((_, E) => {
             var p;
-            let S = s ?? 2000;
+            let S = s ?? 2e3;
             S > 0 &&
                 setTimeout(() => {
                     (w = !0),

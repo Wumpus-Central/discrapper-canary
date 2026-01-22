@@ -1,4 +1,6 @@
-n.d(t, { G: () => i });
+n.d(t, {
+    G: () => i,
+});
 let r = new (0, n(731692).B)(
     {
         ach: {
@@ -87,7 +89,7 @@ let r = new (0, n(731692).B)(
             day: "dd",
         },
         da: {
-            year: "åååå",
+            year: "\xe5\xe5\xe5\xe5",
             month: "mm",
             day: "dd",
         },
@@ -139,7 +141,7 @@ let r = new (0, n(731692).B)(
         ff: {
             year: "hhhh",
             month: "ll",
-            day: "ññ",
+            day: "\xf1\xf1",
         },
         fi: {
             year: "vvvv",
@@ -187,7 +189,7 @@ let r = new (0, n(731692).B)(
             day: "dd",
         },
         hu: {
-            year: "éééé",
+            year: "\xe9\xe9\xe9\xe9",
             month: "hh",
             day: "nn",
         },
@@ -267,7 +269,7 @@ let r = new (0, n(731692).B)(
             day: "hh",
         },
         nb: {
-            year: "åååå",
+            year: "\xe5\xe5\xe5\xe5",
             month: "mm",
             day: "dd",
         },
@@ -277,12 +279,12 @@ let r = new (0, n(731692).B)(
             day: "dd",
         },
         nn: {
-            year: "åååå",
+            year: "\xe5\xe5\xe5\xe5",
             month: "mm",
             day: "dd",
         },
         no: {
-            year: "åååå",
+            year: "\xe5\xe5\xe5\xe5",
             month: "mm",
             day: "dd",
         },
@@ -342,7 +344,7 @@ let r = new (0, n(731692).B)(
             day: "дд",
         },
         sv: {
-            year: "åååå",
+            year: "\xe5\xe5\xe5\xe5",
             month: "mm",
             day: "dd",
         },
@@ -384,10 +386,11 @@ let r = new (0, n(731692).B)(
     },
     "en",
 );
+
 function i(e, t, n) {
     return "era" === e || "dayPeriod" === e
         ? t
         : "year" === e || "month" === e || "day" === e
           ? r.getStringForLocale(e, n)
-          : "\u2013\u2013";
+          : "––";
 }

@@ -1,15 +1,19 @@
 function n(e, t, n) {
     (this.locales = e), (this.formats = t), (this.pluralFn = n);
 }
+
 function r(e) {
     this.id = e;
 }
+
 function i(e, t, n, r, i) {
     (this.id = e), (this.useOrdinal = t), (this.offset = n), (this.options = r), (this.pluralFn = i);
 }
+
 function a(e, t, n, r) {
     (this.id = e), (this.offset = t), (this.numberFormat = n), (this.string = r);
 }
+
 function s(e, t) {
     (this.id = e), (this.options = t);
 }

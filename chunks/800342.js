@@ -18,6 +18,7 @@ n(328968);
 var l = n(147964),
     c = n(371794),
     u = n(652215);
+
 function d(e, t, n) {
     return (
         t in e
@@ -31,6 +32,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -47,6 +49,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -59,6 +62,7 @@ function p(e, t) {
     }
     return n;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -70,6 +74,7 @@ function _(e, t) {
         e
     );
 }
+
 function h(e, t) {
     if (null == e) return {};
     var n,
@@ -86,6 +91,7 @@ function h(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function m(e, t) {
     if (null == e) return {};
     var n,
@@ -96,8 +102,11 @@ function m(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function g(e) {
-    let t = { application_id: e };
+    let t = {
+        application_id: e,
+    };
     return (0, c.aP)({
         url: u.Rsh.STORE_PUBLISHED_LISTINGS_SKUS,
         query: t,
@@ -107,12 +116,17 @@ function g(e) {
         (e) => (
             i.h.dispatch({
                 type: "STORE_LISTINGS_FETCH_SUCCESS",
-                storeListings: e.body.map((e) => _(f({}, e), { published: !0 })),
+                storeListings: e.body.map((e) =>
+                    _(f({}, e), {
+                        published: !0,
+                    }),
+                ),
             }),
             e.body
         ),
     );
 }
+
 function E(e) {
     let t = o.A.get(e),
         n =
@@ -146,6 +160,7 @@ function E(e) {
             })
     );
 }
+
 function b(e) {
     return (0, c.aP)({
         url: u.Rsh.STORE_LISTING(e),
@@ -157,6 +172,7 @@ function b(e) {
         });
     });
 }
+
 function y(e) {
     return (0, c.aP)({
         url: u.Rsh.STORE_PUBLISHED_LISTINGS_APPLICATION(e),
@@ -168,12 +184,17 @@ function y(e) {
         });
     });
 }
+
 function O() {
-    i.h.dispatch({ type: "APPLICATION_STORE_MATURE_AGREE" });
+    i.h.dispatch({
+        type: "APPLICATION_STORE_MATURE_AGREE",
+    });
 }
+
 function A() {
     (0, s.pX)(u.BVt.APPLICATION_STORE);
 }
+
 function v(e) {
     return r.Bo.post({
         url: u.Rsh.STORE_PUBLISHED_LISTINGS_SKU_JOIN_GUILD(e),
@@ -181,6 +202,7 @@ function v(e) {
         rejectWithError: !1,
     });
 }
+
 function S(e, t) {
     let n = (0, c.vy)(e, t),
         { pathname: r } = n,

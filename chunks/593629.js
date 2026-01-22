@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968);
 n(64700);
 var i = n(317097),
@@ -8,6 +10,7 @@ var i = n(317097),
     l = n(911180),
     c = n(128450),
     u = n(985018);
+
 function d(e) {
     var t;
     let { user: n, savedUserColor: d, pendingColor: f, setPendingAccentColor: p } = e,

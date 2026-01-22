@@ -15,6 +15,7 @@ var r = n(974690),
     l = n(365170),
     c = n(241678),
     u = n(985018);
+
 function d(e, t, n) {
     return (
         t in e
@@ -28,6 +29,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -61,13 +63,22 @@ let p = (e) => {
             : [
                   {
                       iconPath: c.pc,
-                      text: u.intl.formatToPlainString(u.t.HtifnG, { count: n }),
+                      text: u.intl.formatToPlainString(u.t.HtifnG, {
+                          count: n,
+                      }),
                   },
               ];
     },
     h = (e) => {
         let { avatarSrc: t, mediaImageSrc: n } = e;
-        return f({ AvatarImage: t }, null != n && { MediaImage: n });
+        return f(
+            {
+                AvatarImage: t,
+            },
+            null != n && {
+                MediaImage: n,
+            },
+        );
     },
     m = async (e) => {
         let { user: t, channel: n, mediaImageSrc: r, artist: i, description: o, colors: c, badges: u } = e,
@@ -99,6 +110,7 @@ let p = (e) => {
             },
         });
     };
+
 function g(e, t) {
     e.setColor("white"),
         e.setFont({
@@ -118,6 +130,7 @@ function g(e, t) {
             !0,
         );
 }
+
 function E(e) {
     e.drawRoundedImage(
         "AvatarImage",
@@ -132,6 +145,7 @@ function E(e) {
         50,
     );
 }
+
 function b(e) {
     e.drawRoundedImage(
         "MediaImage",
@@ -144,7 +158,9 @@ function b(e) {
             h: 96,
         },
         8,
-        { fillMode: a.VZ.Contain },
+        {
+            fillMode: a.VZ.Contain,
+        },
     ) === a.uS.Failure &&
         e.drawPath(
             i.f,
@@ -156,6 +172,7 @@ function b(e) {
             2 + 2 / 3,
         );
 }
+
 function y(e, t) {
     let n = t.map((e, t) => ({
         color: e,

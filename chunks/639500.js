@@ -1,4 +1,6 @@
-i.d(e, { L: () => _ });
+i.d(e, {
+    L: () => _,
+});
 var n = i(627968),
     l = i(417597),
     s = i(397927),
@@ -26,7 +28,9 @@ let d = "".concat(
                     (0, n.jsx)(s.Text, {
                         variant: "text-sm/normal",
                         color: "text-subtle",
-                        children: E.intl.format(E.t["V+B3FH"], { guideURL: d }),
+                        children: E.intl.format(E.t["V+B3FH"], {
+                            guideURL: d,
+                        }),
                     }),
                 ],
             });

@@ -1,4 +1,6 @@
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});
 var r = {};
 r = {
     ascending: "artan sırada",
@@ -6,8 +8,8 @@ r = {
     columnSize: (e) => `${e.value} piksel`,
     descending: "azalan sırada",
     descendingSort: (e) => `${e.columnName} s\xfctuna g\xf6re azalan d\xfczende s\u{131}rala`,
-    resizerDescription: "Yeniden boyutlandırmak için Enter'a basın",
-    select: "Seç",
-    selectAll: "Tümünü Seç",
-    sortable: "Sıralanabilir sütun",
+    resizerDescription: "Yeniden boyutlandırmak i\xe7in Enter'a basın",
+    select: "Se\xe7",
+    selectAll: "T\xfcm\xfcn\xfc Se\xe7",
+    sortable: "Sıralanabilir s\xfctun",
 };

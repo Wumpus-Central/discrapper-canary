@@ -1,8 +1,11 @@
-n.d(t, { J: () => o });
+n.d(t, {
+    J: () => o,
+});
 var r,
     i = n(3388),
     a = n(64700);
 let s = null != (r = a.useInsertionEffect) ? r : i.N;
+
 function o(e) {
     let t = (0, a.useRef)(null);
     return (

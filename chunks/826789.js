@@ -1,4 +1,6 @@
-r.d(t, { default: () => O });
+r.d(t, {
+    default: () => O,
+});
 var n = r(627968);
 r(64700);
 var o = r(192308),
@@ -12,6 +14,7 @@ var o = r(192308),
     p = r(788868),
     u = r(985018),
     y = r(976385);
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
@@ -37,6 +40,7 @@ function d(e) {
     }
     return e;
 }
+
 function O(e) {
     let { onClose: t, analyticsSource: r } = e,
         O = (function (e, t) {
@@ -75,6 +79,7 @@ function O(e) {
             alt: "HD Streaming Nitro Perk",
             src: "https://cdn.discordapp.com/assets/premium/roadblocks/hd_streaming.png",
         });
+
     function g() {
         (0, l.A)(),
             (0, o.closeAllModals)(),
@@ -86,7 +91,9 @@ function O(e) {
     }
     let w = u.intl.string(u.t.ewxv3J),
         j = u.intl.string(u.t.qlsCDB);
-    return (0, c.A)({ location: "StreamUpsellModal" })
+    return (0, c.A)({
+        location: "StreamUpsellModal",
+    })
         ? (0, n.jsx)(
               i.A,
               d(

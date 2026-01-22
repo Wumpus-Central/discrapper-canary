@@ -32,7 +32,7 @@ let a = "publicSuccessModalSeen",
         i.xBc.MENTION_EVERYONE,
     ],
     u = r.kg(...c),
-    d = 1000,
+    d = 1e3,
     f = "Enable Community Modal";
 var p = (function (e) {
     return (

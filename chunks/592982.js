@@ -1,4 +1,6 @@
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var r = n(627968);
 n(64700);
 var l = n(311907),
@@ -22,6 +24,7 @@ var l = n(311907),
     v = n(652215),
     x = n(985018),
     E = n(220636);
+
 function _(e) {
     let { onClose: t, onSelect: n, channel: _, remoteMode: C, onInteraction: S } = e,
         I = (0, o.Us)(),
@@ -52,7 +55,9 @@ function _(e) {
         navId: "more-settings-context",
         "aria-label": x.intl.string(x.t.FTLzdR),
         children: [
-            (0, r.jsx)(i.rXV, { children: T !== v.rbe.GUILD_STAGE_VOICE ? G : null }),
+            (0, r.jsx)(i.rXV, {
+                children: T !== v.rbe.GUILD_STAGE_VOICE ? G : null,
+            }),
             (0, r.jsxs)(i.rXV, {
                 children: [
                     T === v.rbe.GUILD_STAGE_VOICE ? V : null,
@@ -63,7 +68,9 @@ function _(e) {
                     T === v.rbe.GUILD_STAGE_VOICE || T === v.rbe.GUILD_VOICE ? L : null,
                 ],
             }),
-            (0, r.jsx)(i.rXV, { children: W }),
+            (0, r.jsx)(i.rXV, {
+                children: W,
+            }),
             (0, r.jsxs)(i.rXV, {
                 children: [!_.isManaged() && _.isPrivate() ? z : null, U],
             }),

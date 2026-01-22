@@ -1,4 +1,8 @@
-n.d(t, { A: () => O }), n(321073), n(896048);
+n.d(t, {
+    A: () => O,
+}),
+    n(321073),
+    n(896048);
 var i = n(627968),
     r = n(64700),
     l = n(136722),
@@ -16,6 +20,7 @@ var i = n(627968),
     h = n(486020),
     x = n(985018),
     j = n(906809);
+
 function O(e) {
     var t;
     let { guild: n, applicationIntegration: O } = e,
@@ -57,7 +62,9 @@ function O(e) {
                         (0, i.jsx)(s.Text, {
                             color: "text-strong",
                             variant: "text-sm/normal",
-                            children: x.intl.format(x.t.GyhzGw, { user: A.toString() }),
+                            children: x.intl.format(x.t.GyhzGw, {
+                                user: A.toString(),
+                            }),
                         }),
                         (0, i.jsx)(u.A, {
                             className: j.Tc,
@@ -71,10 +78,14 @@ function O(e) {
                     for (let e of f.Q) l.zy(r, e) ? a.push(e) : o.push(e);
                     return (0, i.jsxs)(i.Fragment, {
                         children: [
-                            (0, i.jsx)(s.cGx, { className: j.yF }),
+                            (0, i.jsx)(s.cGx, {
+                                className: j.yF,
+                            }),
                             n.length > 0
                                 ? (0, i.jsx)(s.D0$, {
-                                      label: x.intl.format(x.t.PCs0oo, { numRoles: n.length }),
+                                      label: x.intl.format(x.t.PCs0oo, {
+                                          numRoles: n.length,
+                                      }),
                                       children: (0, i.jsx)(c.Ay, {
                                           className: j.pf,
                                           user: e,

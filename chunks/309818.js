@@ -1,4 +1,7 @@
-n.d(t, { A: () => O }), n(321073);
+n.d(t, {
+    A: () => O,
+}),
+    n(321073);
 var r = n(627968),
     i = n(64700),
     a = n(284009),
@@ -17,6 +20,7 @@ var r = n(627968),
     E = n(652215),
     b = n(985018),
     y = n(563111);
+
 function O(e) {
     let t,
         { invite: n, message: a, currentUserId: O, onTransitionToInviteChannel: A, onAcceptInstantInvite: v } = e,
@@ -67,7 +71,9 @@ function O(e) {
         S && (x = b.intl.string(b.t.qmtuXE)),
         (0, r.jsxs)(f.A, {
             children: [
-                (0, r.jsx)(f.A.Header, { text: x }),
+                (0, r.jsx)(f.A.Header, {
+                    text: x,
+                }),
                 (0, r.jsxs)(f.A.Body, {
                     children: [
                         (0, r.jsxs)("div", {
@@ -80,7 +86,9 @@ function O(e) {
                                 (0, r.jsx)(f.A.Info, {
                                     title: w,
                                     onClick: N ? R : void 0,
-                                    children: (0, r.jsx)(f.A.Data, { members: t.length }),
+                                    children: (0, r.jsx)(f.A.Data, {
+                                        members: t.length,
+                                    }),
                                 }),
                             ],
                         }),

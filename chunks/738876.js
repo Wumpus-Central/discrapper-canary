@@ -1,4 +1,7 @@
-n.d(t, { A: () => j }), n(896048);
+n.d(t, {
+    A: () => j,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -35,7 +38,9 @@ let j = function (e) {
                 ? O.intl.string(O.t.RBBLhL)
                 : O.intl.string(O.t.gUx4eu)
             : x
-              ? O.intl.format(O.t.dYP2Fc, { destination: (0, o.m1)(j, h.default, p.A, !0) })
+              ? O.intl.format(O.t.dYP2Fc, {
+                    destination: (0, o.m1)(j, h.default, p.A, !0),
+                })
               : O.intl.string(O.t.h76ulG);
     return S || !P
         ? null

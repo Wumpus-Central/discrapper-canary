@@ -1,4 +1,9 @@
-n.d(t, { A: () => q }), n(896048), n(321073), n(638769);
+n.d(t, {
+    A: () => q,
+}),
+    n(896048),
+    n(321073),
+    n(638769);
 var r,
     i = n(311907),
     a = n(73153),
@@ -12,6 +17,7 @@ var r,
     p = n(322387),
     _ = n(995273),
     h = n(652215);
+
 function m(e, t, n) {
     return (
         t in e
@@ -25,6 +31,7 @@ function m(e, t, n) {
         e
     );
 }
+
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -41,6 +48,7 @@ function g(e) {
     }
     return e;
 }
+
 function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -53,6 +61,7 @@ function E(e, t) {
     }
     return n;
 }
+
 function b(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -78,9 +87,11 @@ let y = {
     notifCenterActive: !1,
     notifCenterTabFocused: !1,
 };
+
 function O(e) {
     return null != e.id && null != e.type;
 }
+
 function A() {
     let { keepLocalItems: e = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     y = {
@@ -98,15 +109,21 @@ function A() {
         notifCenterTabFocused: !1,
     };
 }
+
 function v() {
-    A({ keepLocalItems: !0 });
+    A({
+        keepLocalItems: !0,
+    });
 }
+
 function S() {
     y.loading = !0;
 }
+
 function I() {
     (y.loading = !1), (y.initialized = !0), (y.errored = !0);
 }
+
 function T(e) {
     return b(g({}, e), {
         kind: "notification-center-item",
@@ -114,12 +131,14 @@ function T(e) {
         applicationId: null != e.application ? e.application.id : void 0,
     });
 }
+
 function C(e) {
     let { unknownApplicationIds: t } = e;
     if (null == t) return;
     let n = new Set(t);
     y.notifCenterLocalItems = y.notifCenterLocalItems.filter((e) => null == e.applicationId || !n.has(e.applicationId));
 }
+
 function N(e) {
     A();
     let t = [],
@@ -144,6 +163,7 @@ function N(e) {
         }),
         (y.notifCenterLocalItems = t);
 }
+
 function R(e) {
     let { items: t, hasMore: n, cursor: r } = e;
     y.loading &&
@@ -157,6 +177,7 @@ function R(e) {
         y.notifCenterItems.sort((e, t) => f.default.compare(t.id, e.id)),
         t.forEach((e) => y.notifCenterIds.add(e.id)));
 }
+
 function w(e) {
     let t = "NOTIFICATION_CENTER_ITEM_CREATE" === e.type ? T(e.item) : e.item;
     if (!y.initialized || !O(t) || y.notifCenterIds.has(t.id)) return !1;
@@ -164,37 +185,54 @@ function w(e) {
         (y.notifCenterItems = [t, ...y.notifCenterItems]),
         y.notifCenterItems.sort((e, t) => f.default.compare(t.id, e.id));
 }
+
 function P(e) {
     let { id: t } = e;
     if (!y.notifCenterIds.has(t)) return !1;
     y.notifCenterIds.delete(t), (y.notifCenterItems = y.notifCenterItems.filter((e) => e.id !== t));
 }
+
 function D(e, t) {
-    y.notifCenterItems = y.notifCenterItems.map((n) => (e.includes(n.id) ? b(g({}, n), { acked: t }) : n)).filter(O);
+    y.notifCenterItems = y.notifCenterItems
+        .map((n) =>
+            e.includes(n.id)
+                ? b(g({}, n), {
+                      acked: t,
+                  })
+                : n,
+        )
+        .filter(O);
 }
+
 function x(e) {
     let { ids: t } = e;
     D(t, !0);
 }
+
 function L(e) {
     let { ids: t } = e;
     D(t, !1);
 }
+
 function j(e) {
     let { active: t } = e;
     y.notifCenterActive = t;
 }
+
 function M(e) {
     let { focused: t } = e;
     y.notifCenterTabFocused = t;
 }
+
 function k(e, t, n) {
     var r;
     return e.type === t && (null == (r = e.other_user) ? void 0 : r.id) === n;
 }
+
 function U(e, t, n, r) {
     return k(e, t, n) && e.applicationId === r;
 }
+
 function G(e) {
     let { relationship: t } = e,
         { id: n, type: r, isSpamRequest: i, userIgnored: a, user: s, since: o, originApplicationId: l } = t;
@@ -227,6 +265,7 @@ function G(e) {
                     !k(e, p.Uo.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED, n),
             ));
 }
+
 function V(e) {
     y.notifCenterLocalItems = y.notifCenterLocalItems.filter(
         (t) =>
@@ -234,6 +273,7 @@ function V(e) {
             !k(t, p.Uo.INCOMING_FRIEND_REQUESTS_ACCEPTED, e.relationship.id),
     );
 }
+
 function F(e) {
     let { gameRelationship: t } = e,
         { id: n, type: r, since: i, applicationId: a } = t;
@@ -255,6 +295,7 @@ function F(e) {
         );
     }
 }
+
 function B(e) {
     let { userId: t, applicationId: n } = e;
     y.notifCenterLocalItems = y.notifCenterLocalItems.filter(
@@ -262,6 +303,7 @@ function B(e) {
             !U(e, p.Uo.INCOMING_GAME_FRIEND_REQUESTS, t, n) && !U(e, p.Uo.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED, t, n),
     );
 }
+
 function H(e) {
     let { item_enum: t } = e;
     y.notifCenterItems = y.notifCenterItems
@@ -275,18 +317,23 @@ function H(e) {
         )
         .filter(O);
 }
+
 function Y(e) {
     let { guildScheduledEvent: t } = e;
     W(t);
 }
+
 function W(e) {
     (0, o.AZ)(e) &&
         (y.notifCenterItems = y.notifCenterItems.map((t) =>
             t.type === p.hW.GUILD_SCHEDULED_EVENT_STARTED && t.guild_scheduled_event_id === e.id
-                ? b(g({}, t), { disable_action: !0 })
+                ? b(g({}, t), {
+                      disable_action: !0,
+                  })
                 : t,
         ));
 }
+
 function K(e) {
     let { newBuild: t } = e;
     if (null !== t) {
@@ -298,7 +345,10 @@ function K(e) {
 class z extends (r = i.Ay.PersistedStore) {
     initialize(e) {
         if ((this.waitFor(d.default, u.A, s.A), null != e)) {
-            let t = (e) => b(g({}, e), { message: null != e.message ? new c.Ay(e.message) : void 0 }),
+            let t = (e) =>
+                    b(g({}, e), {
+                        message: null != e.message ? new c.Ay(e.message) : void 0,
+                    }),
                 n = e.notifCenterItems.map(t);
             n.length > 0 &&
                 (y = b(g({}, y), {
@@ -310,7 +360,10 @@ class z extends (r = i.Ay.PersistedStore) {
         }
     }
     getState() {
-        let e = (e) => b(g({}, e), { message: null != e.message ? e.message.toJS() : void 0 });
+        let e = (e) =>
+            b(g({}, e), {
+                message: null != e.message ? e.message.toJS() : void 0,
+            });
         return b(g({}, y), {
             notifCenterItems: y.notifCenterItems.map(e),
             staleNotifCenterItems: y.staleNotifCenterItems.map(e),

@@ -1,6 +1,9 @@
-n.d(t, { O: () => a });
-let r = 1000,
+n.d(t, {
+    O: () => a,
+});
+let r = 1e3,
     i = window;
+
 function a(e, t) {
     let n = i;
     if (void 0 !== n && null != n.requestIdleCallback && null != n.cancelIdleCallback) {

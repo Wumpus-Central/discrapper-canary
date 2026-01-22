@@ -1,4 +1,6 @@
-n.d(t, { A: () => A });
+n.d(t, {
+    A: () => A,
+});
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -18,6 +20,7 @@ var r = n(627968),
     j = n(192),
     x = n(985018),
     h = n(856969);
+
 function v(e) {
     let { index: t, widget: n, additionalManageWidgetMenuItems: i, children: s } = e,
         o = l.useRef(null),
@@ -38,7 +41,9 @@ function v(e) {
             listType: "WIDGETS",
             itemType: "WIDGET",
             itemId: b,
-            itemPreviewProps: { widget: n },
+            itemPreviewProps: {
+                widget: n,
+            },
             onReorder: f.R_,
             onEnd: () => p(n.type),
         }),
@@ -52,7 +57,9 @@ function v(e) {
             [h.Ze]: w,
             [h.Id]: m,
         }),
-        "aria-label": x.intl.formatToPlainString(x.t.YLczh4, { positionNumber: t + 1 }),
+        "aria-label": x.intl.formatToPlainString(x.t.YLczh4, {
+            positionNumber: t + 1,
+        }),
         children: [
             (0, r.jsx)(y.A, {
                 buttonRef: o,
@@ -64,6 +71,7 @@ function v(e) {
         ],
     });
 }
+
 function A(e) {
     let {
             userId: t,

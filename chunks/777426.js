@@ -1,4 +1,6 @@
-n.d(t, { A: () => T });
+n.d(t, {
+    A: () => T,
+});
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -25,6 +27,7 @@ var r = n(627968),
 n(646363);
 var C = n(985018),
     N = n(847295);
+
 function T(e) {
     let {
             ref: t,
@@ -130,7 +133,9 @@ function T(e) {
                                         (0, r.jsx)(u.Text, {
                                             variant: "text-xs/normal",
                                             color: "text-subtle",
-                                            children: C.intl.formatToPlainString(C.t.S3fdq7, { numberOfYears: V }),
+                                            children: C.intl.formatToPlainString(C.t.S3fdq7, {
+                                                numberOfYears: V,
+                                            }),
                                         }),
                                     ],
                                 }),

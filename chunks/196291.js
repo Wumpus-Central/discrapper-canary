@@ -1,4 +1,7 @@
-n.d(t, { A: () => V }), n(228524);
+n.d(t, {
+    A: () => V,
+}),
+    n(228524);
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -32,6 +35,7 @@ var r = n(627968),
     x = n(355097),
     L = n(985018),
     j = n(567567);
+
 function M(e, t, n) {
     return (
         t in e
@@ -45,6 +49,7 @@ function M(e, t, n) {
         e
     );
 }
+
 function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -61,6 +66,7 @@ function k(e) {
     }
     return e;
 }
+
 function U(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -73,6 +79,7 @@ function U(e, t) {
     }
     return n;
 }
+
 function G(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -84,6 +91,7 @@ function G(e, t) {
         e
     );
 }
+
 function V(e) {
     var t, n;
     let { user: M, isVisible: U, shouldShow: V } = e,
@@ -98,7 +106,9 @@ function V(e) {
         } = (0, a.cf)([O.A], () => {
             let e = O.A.getAllPending(),
                 t = O.A.getErrors();
-            return G(k({}, e, O.A.getAllTryItOut()), { errors: t });
+            return G(k({}, e, O.A.getAllTryItOut()), {
+                errors: t,
+            });
         }),
         { preset: q, onShuffle: X } = (0, f.A)(),
         Z = i.useRef(null);
@@ -113,13 +123,17 @@ function V(e) {
                 ((0, o.zq)(K),
                 (0, b.Zz)(W),
                 (0, b.Dv)(z),
-                A.default.track(P.HAw.TRY_IT_OUT_PRESET_SELECTED, { preset: q }));
+                A.default.track(P.HAw.TRY_IT_OUT_PRESET_SELECTED, {
+                    preset: q,
+                }));
         };
     i.useEffect(() => {
         U &&
             A.default.track(P.HAw.PREMIUM_UPSELL_VIEWED, {
                 type: D.e.PREMIUM_PROFILE_TRY_IT_OUT,
-                location: { page: P.liQ.USER_SETTINGS },
+                location: {
+                    page: P.liQ.USER_SETTINGS,
+                },
                 location_stack: J,
             });
     }, [J, M, U]);
@@ -130,7 +144,9 @@ function V(e) {
             F
                 ? L.intl.string(L.t.AfRWI8)
                 : er
-                  ? L.intl.formatToPlainString(L.t.bkQ4bH, { percent: null == en ? void 0 : en.discount.amount })
+                  ? L.intl.formatToPlainString(L.t.bkQ4bH, {
+                        percent: null == en ? void 0 : en.discount.amount,
+                    })
                   : L.intl.string(L.t.pj0XBN);
     return V
         ? (0, r.jsx)(c.f5, {
@@ -160,7 +176,9 @@ function V(e) {
                                       preset: q,
                                       onShuffle: X,
                                   }),
-                                  (0, r.jsx)(w.A, { user: M }),
+                                  (0, r.jsx)(w.A, {
+                                      user: M,
+                                  }),
                               ],
                           }),
                           children: (0, r.jsxs)("div", {
@@ -238,7 +256,9 @@ function V(e) {
                       et &&
                           (0, r.jsxs)("div", {
                               children: [
-                                  (0, r.jsx)("div", { className: j.BU }),
+                                  (0, r.jsx)("div", {
+                                      className: j.BU,
+                                  }),
                                   (0, r.jsx)(m.Ay, {
                                       type: D.e.CUSTOM_PROFILE_TRY_OUT_UPSELL,
                                       subscriptionTier: D.pe.TIER_2,

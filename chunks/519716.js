@@ -1,4 +1,13 @@
-n.r(t), n.d(t, { default: () => m }), n(747238), n(896048), n(680155), n(323874), n(14289), n(35956);
+n.r(t),
+    n.d(t, {
+        default: () => m,
+    }),
+    n(747238),
+    n(896048),
+    n(680155),
+    n(323874),
+    n(14289),
+    n(35956);
 var a = n(627968);
 n(64700);
 var r = n(421380),
@@ -47,12 +56,16 @@ let m = (0, o.C)(function (e) {
                 (0, a.jsx)(l.Heading, {
                     variant: "text-lg/bold",
                     className: f.wx,
-                    children: u.intl.format(u.t.Pw4vee, { provider: o.name }),
+                    children: u.intl.format(u.t.Pw4vee, {
+                        provider: o.name,
+                    }),
                 }),
                 (0, a.jsx)(l.Text, {
                     variant: "text-md/normal",
                     className: f.rf,
-                    children: u.intl.format(u.t.rHlSVB, { provider: o.name }),
+                    children: u.intl.format(u.t.rHlSVB, {
+                        provider: o.name,
+                    }),
                 }),
                 (0, a.jsx)(r.$n, {
                     size: r.$n.Sizes.LARGE,

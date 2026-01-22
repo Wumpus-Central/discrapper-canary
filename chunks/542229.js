@@ -1,4 +1,8 @@
-n.d(t, { A: () => u }), n(896048), n(492834);
+n.d(t, {
+    A: () => u,
+}),
+    n(896048),
+    n(492834);
 var r = n(627968),
     l = n(64700),
     i = n(533925),
@@ -7,6 +11,7 @@ var r = n(627968),
     o = n(398450),
     d = n(652215),
     c = n(985018);
+
 function u(e) {
     let { mfaChallenge: t, finish: n, setSlide: u, onClose: f, isSlideReady: h, headerAlignStart: g } = e,
         [p, m] = l.useState(!1),
@@ -19,7 +24,9 @@ function u(e) {
         m(!0),
             s.Bo.post({
                 url: d.Rsh.LOGIN_SMS_SEND,
-                body: { ticket: t.ticket },
+                body: {
+                    ticket: t.ticket,
+                },
                 oldFormErrors: !0,
                 rejectWithError: !1,
             })
@@ -40,7 +47,12 @@ function u(e) {
                 null == (e = O.current) || e.focus();
             }
         }, [h]);
-    let w = null == b ? c.intl.string(c.t.LQdCQE) : c.intl.formatToPlainString(c.t["8r6h7+"], { phoneNumber: b });
+    let w =
+        null == b
+            ? c.intl.string(c.t.LQdCQE)
+            : c.intl.formatToPlainString(c.t["8r6h7+"], {
+                  phoneNumber: b,
+              });
     return (0, r.jsxs)("form", {
         onSubmit: (e) => {
             e.preventDefault(),
@@ -85,7 +97,9 @@ function u(e) {
                                 onClick: () => {
                                     s.Bo.post({
                                         url: d.Rsh.LOGIN_SMS_SEND,
-                                        body: { ticket: t.ticket },
+                                        body: {
+                                            ticket: t.ticket,
+                                        },
                                         oldFormErrors: !0,
                                         rejectWithError: !1,
                                     })
@@ -100,7 +114,9 @@ function u(e) {
                             }),
                         ],
                     }),
-                    (0, r.jsx)(o.A.SlideError, { error: x }),
+                    (0, r.jsx)(o.A.SlideError, {
+                        error: x,
+                    }),
                 ],
             }),
             (0, r.jsx)(o.A.SlideFooter, {

@@ -12,25 +12,32 @@ n.d(t, {
 var r = n(264927),
     i = n(143413),
     a = n(652215);
+
 function s(e) {
     return "message-content-".concat(e.id);
 }
+
 function o(e) {
     return "message-reply-context-".concat(e.id);
 }
+
 function l(e, t) {
     let n = null != t ? t : e.id;
     return "message-username-".concat(n);
 }
+
 function c(e) {
     return "message-timestamp-".concat(e.id);
 }
+
 function u(e) {
     return "message-reactions-".concat(e.id);
 }
+
 function d(e) {
     return "message-accessories-".concat(e.id);
 }
+
 function f(e, t, n) {
     let u = e.type === a.lAJ.REPLY && null != e.messageReference,
         f = e.embeds.length > 0,
@@ -63,6 +70,7 @@ function f(e, t, n) {
     }
     return C.trim();
 }
+
 function p(e) {
     if (0 === e.reactions.length) return;
     let t = u(e);

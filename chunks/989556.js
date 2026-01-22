@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968),
     i = n(503698),
     l = n.n(i),
@@ -18,8 +20,11 @@ let h = function (e) {
     let { className: t, guildId: n, tag: i, badge: h, primaryColor: j, secondaryColor: O, isDisabled: y = !1 } = e,
         v = (0, s.bG)([g.A], () => g.A.getProps().originalProfile),
         A = null != v && v.tag !== i;
+
     function E(e) {
-        f.A.updateGuildProfile(n, { tag: e });
+        f.A.updateGuildProfile(n, {
+            tag: e,
+        });
     }
     return (0, r.jsxs)("div", {
         className: t,

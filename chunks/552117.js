@@ -1,4 +1,8 @@
-n.d(t, { A: () => J }), n(228524), n(896048);
+n.d(t, {
+    A: () => J,
+}),
+    n(228524),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -32,6 +36,7 @@ var r = n(627968),
     x = n(985018),
     L = n(986785),
     j = n(767419);
+
 function M(e, t, n) {
     return (
         t in e
@@ -45,6 +50,7 @@ function M(e, t, n) {
         e
     );
 }
+
 function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -61,6 +67,7 @@ function k(e) {
     }
     return e;
 }
+
 function U(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -73,6 +80,7 @@ function U(e, t) {
     }
     return n;
 }
+
 function G(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -92,8 +100,12 @@ let V = 80,
     W = 12,
     K = (e, t) =>
         t
-            ? x.intl.format(x.t.auckXz, { stickerPackName: e.name })
-            : x.intl.format(x.t.OzB6e3, { stickerPackName: e.name }),
+            ? x.intl.format(x.t.auckXz, {
+                  stickerPackName: e.name,
+              })
+            : x.intl.format(x.t.OzB6e3, {
+                  stickerPackName: e.name,
+              }),
     z = (e) => {
         let { sticker: t, stickerPack: n } = e;
         return i.useMemo(
@@ -106,6 +118,7 @@ let V = 80,
             [t, n],
         );
     };
+
 function q(e) {
     S.default.track(P.HAw.PREMIUM_PROMOTION_OPENED, {
         location_page: null != e.guild_id ? P.liQ.GUILD_CHANNEL : P.liQ.DM_CHANNEL,
@@ -113,6 +126,7 @@ function q(e) {
     }),
         (0, y.Z)();
 }
+
 function X(e) {
     let { sticker: t, description: n } = e;
     return (0, r.jsxs)(h.A, {
@@ -129,7 +143,9 @@ function X(e) {
                 children: [
                     (0, r.jsx)(d.Text, {
                         variant: "text-md/semibold",
-                        children: (0, r.jsx)(l.A, { children: t.name }),
+                        children: (0, r.jsx)(l.A, {
+                            children: t.name,
+                        }),
                     }),
                     null != n &&
                         (0, r.jsx)(d.Text, {
@@ -183,7 +199,9 @@ let Z = (e) => {
             }, [n.pack_id]),
             c || null == l)
         )
-            return (0, r.jsx)(b.Y0, { className: L.v0 });
+            return (0, r.jsx)(b.Y0, {
+                className: L.v0,
+            });
         let g = u,
             E = () => {
                 g &&
@@ -253,7 +271,14 @@ let Z = (e) => {
                 }),
                 [a.guild_id],
             ),
-            { current: $ } = i.useRef(k({ guild_id: a.getGuildId() }, (0, _.dI)(a))),
+            { current: $ } = i.useRef(
+                k(
+                    {
+                        guild_id: a.getGuildId(),
+                    },
+                    (0, _.dI)(a),
+                ),
+            ),
             J = {
                 stickerSourceGuild: V,
                 refreshPositionKey: y,
@@ -299,11 +324,21 @@ let Z = (e) => {
                 e();
             }, [N, T]),
             (0, p.Ay)(() => {
-                S.default.track(P.HAw.OPEN_POPOUT, k({ type: ei }, $));
+                S.default.track(
+                    P.HAw.OPEN_POPOUT,
+                    k(
+                        {
+                            type: ei,
+                        },
+                        $,
+                    ),
+                );
             }),
             !N)
         )
-            return (0, r.jsx)(b.Y0, { className: L.v0 });
+            return (0, r.jsx)(b.Y0, {
+                className: L.v0,
+            });
         {
             let e = () => {
                     let e = async () => {
@@ -327,7 +362,9 @@ let Z = (e) => {
                                     subscriptionTier: D.pe.TIER_2,
                                     size: u.$n.Sizes.SMALL,
                                     fullWidth: !0,
-                                    textOptions: { textOverride: x.intl.string(x.t["gl/XHJ"]) },
+                                    textOptions: {
+                                        textOverride: x.intl.string(x.t["gl/XHJ"]),
+                                    },
                                     onSubscribeModalClose: (t) => (t ? e() : l()),
                                     postSuccessGuild: F || null == T ? void 0 : T,
                                     premiumModalAnalyticsLocation: Q,
@@ -389,7 +426,9 @@ let Z = (e) => {
                                                     (0, r.jsx)(d.abt, {
                                                         size: "md",
                                                         color: "currentColor",
-                                                        className: s()(j.ZB, { [j.cP]: !Y }),
+                                                        className: s()(j.ZB, {
+                                                            [j.cP]: !Y,
+                                                        }),
                                                     }),
                                                 ],
                                             }),
@@ -403,31 +442,39 @@ let Z = (e) => {
                                                 children: t.map((e) =>
                                                     (0, r.jsx)(
                                                         c.m,
-                                                        G(k({ text: e.name }, b.Uk), {
-                                                            children: (0, r.jsx)(
-                                                                "div",
+                                                        G(
+                                                            k(
                                                                 {
-                                                                    className: s()(j.Th, {
-                                                                        [L.vT]: null != z && z !== e.id,
-                                                                    }),
-                                                                    onMouseEnter: () => {
-                                                                        Z(e.id);
-                                                                    },
-                                                                    onMouseLeave: () => {
-                                                                        Z(null);
-                                                                    },
-                                                                    children: (0, r.jsx)(R.A, {
-                                                                        size: B,
-                                                                        enlargeOnInteraction: !0,
-                                                                        enlargeWithName: !1,
-                                                                        enlargeScaleFactor: H,
-                                                                        isInteracting: z === e.id,
-                                                                        sticker: e,
-                                                                    }),
+                                                                    text: e.name,
                                                                 },
-                                                                e.id,
+                                                                b.Uk,
                                                             ),
-                                                        }),
+                                                            {
+                                                                children: (0, r.jsx)(
+                                                                    "div",
+                                                                    {
+                                                                        className: s()(j.Th, {
+                                                                            [L.vT]: null != z && z !== e.id,
+                                                                        }),
+                                                                        onMouseEnter: () => {
+                                                                            Z(e.id);
+                                                                        },
+                                                                        onMouseLeave: () => {
+                                                                            Z(null);
+                                                                        },
+                                                                        children: (0, r.jsx)(R.A, {
+                                                                            size: B,
+                                                                            enlargeOnInteraction: !0,
+                                                                            enlargeWithName: !1,
+                                                                            enlargeScaleFactor: H,
+                                                                            isInteracting: z === e.id,
+                                                                            sticker: e,
+                                                                        }),
+                                                                    },
+                                                                    e.id,
+                                                                ),
+                                                            },
+                                                        ),
                                                         e.id,
                                                     ),
                                                 ),
@@ -443,6 +490,7 @@ let Z = (e) => {
             });
         }
     };
+
 function $(e) {
     let { channel: t, closePopout: n, sticker: i } = e;
     return (0, r.jsx)(b.Uq, {

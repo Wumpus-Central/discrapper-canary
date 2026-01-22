@@ -47,6 +47,7 @@ var r = n(64700),
     T = n(2242),
     C = n(652215),
     N = n(788868);
+
 function R(e, t, n) {
     return (
         t in e
@@ -60,6 +61,7 @@ function R(e, t, n) {
         e
     );
 }
+
 function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -76,6 +78,7 @@ function w(e) {
     }
     return e;
 }
+
 function P(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -88,6 +91,7 @@ function P(e, t) {
     }
     return n;
 }
+
 function D(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -99,6 +103,7 @@ function D(e, t) {
         e
     );
 }
+
 function x(e, t, n) {
     let i = (0, I.y)((e) => e.setListing),
         a = r.useCallback(
@@ -106,7 +111,9 @@ function x(e, t, n) {
                 i(e, (e) => {
                     var i;
                     let a = null != (i = null == e ? void 0 : e[t]) ? i : n;
-                    return Object.assign({}, e, { [t]: "function" == typeof r ? r(a) : r });
+                    return Object.assign({}, e, {
+                        [t]: "function" == typeof r ? r(a) : r,
+                    });
                 });
             },
             [i, e, t, n],
@@ -117,11 +124,13 @@ function x(e, t, n) {
         });
     return [void 0 !== s ? s : n, a];
 }
+
 function L(e, t) {
     let n = (0, u.bG)([b.A], () => b.A.getSubscriptionListing(e)),
         i = (0, p.A)(() => t);
     return r.useMemo(() => i(n), [n, i]);
 }
+
 function j(e) {
     let t = L(e, (e) => {
         var t;
@@ -129,6 +138,7 @@ function j(e) {
     });
     return x(e, "name", t);
 }
+
 function M(e) {
     let t = L(e, (e) => {
         var t;
@@ -136,6 +146,7 @@ function M(e) {
     });
     return x(e, "priceTier", t);
 }
+
 function k(e) {
     let t = L(e, (e) => {
         var t;
@@ -143,12 +154,14 @@ function k(e) {
     });
     return x(e, "description", t);
 }
+
 function U(e, t) {
     let n = L(e, (e) => {
         if ((null == e ? void 0 : e.image_asset) != null) return (0, h.YE)(e.application_id, e.image_asset, t);
     });
     return x(e, "image", n);
 }
+
 function G(e, t) {
     let n = (0, A.A)(t, e);
     return x(
@@ -163,6 +176,7 @@ function G(e, t) {
         }, [n]),
     );
 }
+
 function V(e, t) {
     let n = (0, A.A)(t, e),
         i = (0, I.y)((t) => {
@@ -182,6 +196,7 @@ function V(e, t) {
         return void 0 !== i && ((e.color = i), (e.colorString = (0, l.Hl)(i))), e;
     }, [n, a, i]);
 }
+
 function F(e, t) {
     let n = (0, A.A)(t, e);
     return x(
@@ -193,6 +208,7 @@ function F(e, t) {
         }, [n]),
     );
 }
+
 function B(e, t) {
     let n = (0, A.A)(t, e);
     return x(
@@ -210,16 +226,19 @@ function B(e, t) {
     );
 }
 let H = [];
+
 function Y(e) {
     let t = L(e, (e) => (null == e ? H : e.role_benefits.benefits.filter(m.B1)));
     return x(e, "channelBenefits", t);
 }
 let W = [];
+
 function K(e) {
     let t = L(e, (e) => (null == e ? W : e.role_benefits.benefits.filter(m.b1)));
     return x(e, "intangibleBenefits", t);
 }
 let z = new Set();
+
 function q(e, t) {
     return 0 === e.length
         ? z
@@ -232,6 +251,7 @@ function q(e, t) {
                   }),
           );
 }
+
 function X(e, t) {
     let n = (0, A.A)(t, e),
         i = (0, u.yK)([_.Ay], () => _.Ay.getGuildEmoji(t), [t]);
@@ -241,26 +261,31 @@ function X(e, t) {
         r.useMemo(() => (null == n ? z : q(i, n.id)), [i, n]),
     );
 }
+
 function Z(e) {
     var t;
     let n = (0, E.dL)(e),
         { selectedOption: r } = (0, v.A)(null != (t = null == n ? void 0 : n.active_trial) ? t : null);
     return x(e, "trialInterval", null != r ? r : null);
 }
+
 function Q(e) {
     var t;
     let n = (0, E.dL)(e);
     return x(e, "trialLimit", null != (t = null == n ? void 0 : n.max_num_active_trial_users) ? t : null);
 }
+
 function $(e) {
     return (0, I.y)((t) => void 0 !== t.listings[e]);
 }
+
 function J(e) {
     return (0, I.y)((t) => {
         for (let n of e) if (void 0 !== t.listings[n]) return !0;
         return !1;
     });
 }
+
 function ee(e) {
     let t = L(e, (e) => (null == e ? void 0 : e.subscription_plans[0])),
         [n] = x(e, "priceTier", void 0);
@@ -277,14 +302,21 @@ function ee(e) {
         }, [t, n]),
     ];
 }
+
 function et(e, t) {
     (0, c.r)(() => {
-        I.y.setState((n) => ({ listings: D(w({}, n.listings), { [t]: n.listings[e] }) }));
+        I.y.setState((n) => ({
+            listings: D(w({}, n.listings), {
+                [t]: n.listings[e],
+            }),
+        }));
     });
 }
+
 function en(e) {
     et("nonexistantEditStateId", e);
 }
+
 function er(e, t) {
     (0, c.r)(() => {
         I.y.setState((n) => ({
@@ -346,6 +378,7 @@ async function ei(e) {
         await Promise.all([...a, ...o]);
     }
 }
+
 function ea(e) {
     var t;
     let { guildId: n, editStateId: r, groupListingId: i } = e,
@@ -422,6 +455,7 @@ async function es(e) {
         onBeforeDispatchNewListing: i,
     });
 }
+
 function eo() {
     let [e, t] = r.useState(!1),
         [n, i] = r.useState();
@@ -472,8 +506,14 @@ function eo() {
         }, []),
     };
 }
+
 function el(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : { includeSoftDeleted: !1 },
+    let n =
+            arguments.length > 2 && void 0 !== arguments[2]
+                ? arguments[2]
+                : {
+                      includeSoftDeleted: !1,
+                  },
         i = (0, E.cY)(e, n),
         a = (0, I.y)((e) => e.editStateIdsForGroup[t]),
         s = (0, I.y)((e) => e.setEditStateIdsForGroup),

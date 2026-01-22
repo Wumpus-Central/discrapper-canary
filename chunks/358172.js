@@ -1,4 +1,6 @@
-n.d(t, { A: () => E });
+n.d(t, {
+    A: () => E,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -55,13 +57,19 @@ let E = function (e) {
                                   (0, r.jsx)(l.Text, {
                                       variant: "text-sm/bold",
                                       color: "text-muted",
-                                      children: m.intl.format(m.t["pob/cL"], { subscriptions: b }),
+                                      children: m.intl.format(m.t["pob/cL"], {
+                                          subscriptions: b,
+                                      }),
                                   }),
-                                  (0, r.jsx)("div", { className: g.me }),
+                                  (0, r.jsx)("div", {
+                                      className: g.me,
+                                  }),
                                   (0, r.jsx)(l.Text, {
                                       variant: "text-sm/bold",
                                       color: "text-muted",
-                                      children: (0, _.gb)(E.premiumTier, { useLevels: !1 }),
+                                      children: (0, _.gb)(E.premiumTier, {
+                                          useLevels: !1,
+                                      }),
                                   }),
                               ],
                           }),
@@ -87,7 +95,9 @@ let E = function (e) {
                             onClick: () => {
                                 (0, u.K)({
                                     guildId: E.id,
-                                    location: { section: h.JJy.GUILD_BOOSTING_RECOMMENDED_SERVER_GO_TO_SERVER_CTA },
+                                    location: {
+                                        section: h.JJy.GUILD_BOOSTING_RECOMMENDED_SERVER_GO_TO_SERVER_CTA,
+                                    },
                                 });
                             },
                         }),

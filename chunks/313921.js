@@ -1,4 +1,7 @@
-n.d(t, { default: () => h }), n(65821);
+n.d(t, {
+    default: () => h,
+}),
+    n(65821);
 var r = n(627968),
     o = n(64700),
     i = n(522579),
@@ -25,7 +28,12 @@ let h = (0, d.A)(
                 m = (function (e, t) {
                     let { canManageGuildExpressions: i } = (0, l.cf)(
                             [p.A],
-                            () => (null == t ? { canManageGuildExpressions: !1 } : p.A.getGuildPermissionProps(t)),
+                            () =>
+                                null == t
+                                    ? {
+                                          canManageGuildExpressions: !1,
+                                      }
+                                    : p.A.getGuildPermissionProps(t),
                             [t],
                         ),
                         a = o.useCallback(() => {
@@ -152,7 +160,9 @@ let h = (0, d.A)(
                 }),
             });
         },
-        { object: m.ZSU.CONTEXT_MENU },
+        {
+            object: m.ZSU.CONTEXT_MENU,
+        },
     ),
     [b.A.CONTEXT_MENU, b.A.SOUNDBOARD_BUTTON],
 );

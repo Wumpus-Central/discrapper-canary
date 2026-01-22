@@ -1,4 +1,7 @@
-t.d(l, { default: () => h }), t(896048);
+t.d(l, {
+    default: () => h,
+}),
+    t(896048);
 var n = t(627968);
 t(64700);
 var s = t(417597),
@@ -11,6 +14,7 @@ var s = t(417597),
     d = t(652215),
     g = t(985018),
     b = t(378720);
+
 function h(e) {
     let { channelId: l, messageId: t, transitionState: h, onClose: S } = e,
         _ = (0, s.bG)([c.A], () => c.A.getChannel(l)),
@@ -35,7 +39,9 @@ function h(e) {
                             (0, n.jsx)(i.Text, {
                                 className: b.YK,
                                 variant: "text-sm/normal",
-                                children: g.intl.format(g.t.GCGrNP, { numGuildsFollowing: f.guildsFollowing }),
+                                children: g.intl.format(g.t.GCGrNP, {
+                                    numGuildsFollowing: f.guildsFollowing,
+                                }),
                             }),
                             (0, n.jsx)(i.Text, {
                                 variant: "text-sm/normal",

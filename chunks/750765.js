@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var r = n(627968);
 n(64700);
 var i = n(284009),
@@ -14,6 +16,7 @@ var i = n(284009),
     _ = n(652215),
     h = n(731854),
     m = n(985018);
+
 function g(e) {
     let { onClose: t, onSelect: n, minimal: i = !1, appContext: g, onInteraction: E } = e,
         { analyticsLocations: b } = (0, c.Ay)(),

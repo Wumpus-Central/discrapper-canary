@@ -1,4 +1,6 @@
-n.d(t, { w: () => r });
+n.d(t, {
+    w: () => r,
+});
 var l,
     r =
         (((l = {})[(l.OFFICIAL = 1)] = "OFFICIAL"),

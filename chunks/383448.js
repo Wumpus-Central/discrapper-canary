@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -12,6 +14,7 @@ var i = n(503698),
     f = n(652215),
     p = n(985018),
     _ = n(842218);
+
 function h(e) {
     let { user: t, className: n } = e,
         {
@@ -46,7 +49,7 @@ function h(e) {
                                       (0, r.jsx)(s.EYj, {
                                           variant: "text-sm/semibold",
                                           color: "text-default",
-                                          children: "\u2022",
+                                          children: "•",
                                       }),
                                       (0, r.jsx)(s.EYj, {
                                           variant: "text-sm/semibold",

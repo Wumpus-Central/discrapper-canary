@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var r = n(73153),
     i = n(157559),
     a = n(956793),
@@ -11,6 +13,7 @@ var r = n(73153),
 n(603266);
 var f = n(652215),
     p = n(985018);
+
 function _() {
     let e = c.A.getVoiceStateForUser(o.default.getId()),
         t = l.A.getChannel(null == e ? void 0 : e.channelId);
@@ -49,7 +52,9 @@ async function h(e, t) {
 }
 let m = {
     clearUploadedKeyVersions: function () {
-        r.h.dispatch({ type: "SECURE_FRAMES_UPLOADED_KEY_VERSION_CLEAR" });
+        r.h.dispatch({
+            type: "SECURE_FRAMES_UPLOADED_KEY_VERSION_CLEAR",
+        });
     },
     updatePersistentCodesEnabled: async function (e) {
         let t = _();

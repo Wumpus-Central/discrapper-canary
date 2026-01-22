@@ -1,4 +1,7 @@
-n.d(t, { A: () => d }), n(228524);
+n.d(t, {
+    A: () => d,
+}),
+    n(228524);
 var r = n(627968),
     i = n(64700),
     a = n(397927),
@@ -7,6 +10,7 @@ var r = n(627968),
     l = n(768349),
     c = n(985018),
     u = n(609653);
+
 function d(e) {
     let { application: t, message: n, header: d, onClickContent: f, onView: p, guildId: _ } = e,
         h = i.useMemo(

@@ -31,6 +31,7 @@ var r,
         Object.create ||
         function (e, t) {
             var n;
+
             function r() {}
             for (var i in ((r.prototype = e), (n = new r()), t)) c.call(t, i) && u(n, i, t[i]);
             return n;
@@ -405,9 +406,11 @@ var r,
         VUV: 0,
         VND: 0,
     };
+
 function w(e) {
     return !(!i.expBCP47Syntax.test(e) || i.expVariantDupes.test(e) || i.expSingletonDupes.test(e));
 }
+
 function P(e) {
     var t, n;
     n = (e = e.toLowerCase()).split("-");
@@ -427,13 +430,16 @@ function P(e) {
               ((n[r] = N[n[r]][0]), 1 === r && N[n[1]][1] === n[0] && ((n = p.call(n, r++)), (a -= 1)));
     return m.call(n, "-");
 }
+
 function D() {
     return r;
 }
+
 function x(e) {
     var t = eg(String(e));
     return !1 !== S.test(t);
 }
+
 function L(e) {
     if (void 0 === e) return new eh();
     for (var t = new eh(), e = "string" == typeof e ? [e] : e, n = eE(e), r = n.length, i = 0; i < r; ) {
@@ -450,6 +456,7 @@ function L(e) {
     }
     return t;
 }
+
 function j(e, t) {
     for (var n = t; ; ) {
         if (d.call(e, n) > -1) return n;
@@ -458,6 +465,7 @@ function j(e, t) {
         r >= 2 && "-" === n.charAt(r - 2) && (r -= 2), (n = n.substring(0, r));
     }
 }
+
 function M(e, t) {
     for (var n, r = 0, i = t.length; r < i && !n; ) {
         var a = t[r],
@@ -475,9 +483,11 @@ function M(e, t) {
     } else o["[[locale]]"] = D();
     return o;
 }
+
 function k(e, t) {
     return M(e, t);
 }
+
 function U(e, t, n, r, i) {
     if (0 === e.length) throw ReferenceError("No locale data has been provided for this object yet.");
     if ("lookup" === n["[[localeMatcher]]"]) var a = M(e, t);
@@ -523,6 +533,7 @@ function U(e, t, n, r, i) {
             s = C + h + N;
     return (_["[[locale]]"] = s), _;
 }
+
 function G(e, t) {
     for (var n = t.length, r = new eh(), i = 0; i < n; ) {
         var a = t[i];
@@ -530,9 +541,11 @@ function G(e, t) {
     }
     return p.call(r);
 }
+
 function V(e, t) {
     return G(e, t);
 }
+
 function F(e, t, n) {
     if (void 0 !== n) {
         var n = new e_(eE(n)),
@@ -549,8 +562,14 @@ function F(e, t, n) {
                 configurable: !1,
                 value: i[a],
             });
-    return u(i, "length", { writable: !1 }), i;
+    return (
+        u(i, "length", {
+            writable: !1,
+        }),
+        i
+    );
 }
+
 function B(e, t, n, r, i) {
     var a = e[t];
     if (void 0 !== a) {
@@ -560,6 +579,7 @@ function B(e, t, n, r, i) {
     }
     return i;
 }
+
 function H(e, t, n, r, i) {
     var a = e[t];
     if (void 0 !== a) {
@@ -569,11 +589,13 @@ function H(e, t, n, r, i) {
     }
     return i;
 }
+
 function Y() {
     var e = arguments[0],
         t = arguments[1];
     return this && this !== s ? W(eE(this), e, t) : new s.NumberFormat(e, t);
 }
+
 function W(e, t, n) {
     var r = eb(e),
         i = em();
@@ -634,9 +656,11 @@ function W(e, t, n) {
         e
     );
 }
+
 function K(e) {
     return void 0 !== R[e] ? R[e] : 2;
 }
+
 function z() {
     var e = this != null && "object" == typeof this && eb(this);
     if (!e || !e["[[initializedNumberFormat]]"])
@@ -650,6 +674,7 @@ function z() {
     }
     return e["[[boundFormat]]"];
 }
+
 function q(e, t) {
     var n,
         r = em(),
@@ -705,6 +730,7 @@ function q(e, t) {
     }
     return r.exp.test(r.input), v;
 }
+
 function X(e, t, n) {
     var r = n;
     if (0 === e)
@@ -727,6 +753,7 @@ function X(e, t, n) {
     }
     return i;
 }
+
 function Z(e, t, n, r) {
     var i,
         a = Number.prototype.toFixed.call(e, r),
@@ -749,7 +776,9 @@ u(s, "NumberFormat", {
     writable: !0,
     value: Y,
 }),
-    u(s.NumberFormat, "prototype", { writable: !1 }),
+    u(s.NumberFormat, "prototype", {
+        writable: !1,
+    }),
     (b.NumberFormat = {
         "[[availableLocales]]": [],
         "[[relevantExtensionKeys]]": ["nu"],
@@ -788,11 +817,13 @@ var Q = {
     thai: ["๐", "๑", "๒", "๓", "๔", "๕", "๖", "๗", "๘", "๙"],
     tibt: ["༠", "༡", "༢", "༣", "༤", "༥", "༦", "༧", "༨", "༩"],
 };
+
 function $() {
     var e = arguments[0],
         t = arguments[1];
     return this && this !== s ? J(eE(this), e, t) : new s.DateTimeFormat(e, t);
 }
+
 function J(e, t, n) {
     var r = eb(e),
         i = em();
@@ -887,7 +918,9 @@ u(s.NumberFormat.prototype, "resolvedOptions", {
         writable: !0,
         value: $,
     }),
-    u($, "prototype", { writable: !1 });
+    u($, "prototype", {
+        writable: !1,
+    });
 var ee = {
     weekday: ["narrow", "short", "long"],
     era: ["narrow", "short", "long"],
@@ -899,9 +932,11 @@ var ee = {
     second: ["2-digit", "numeric"],
     timeZoneName: ["short", "long"],
 };
+
 function et(e) {
     return "[object Array]" === Object.prototype.toString.call(e) ? e : a.createDateTimeFormats(e);
 }
+
 function en(e, t, n) {
     if (void 0 === e) e = null;
     else {
@@ -920,9 +955,11 @@ function en(e, t, n) {
         e
     );
 }
+
 function er(e, t) {
     return ei(e, t);
 }
+
 function ei(e, t, n) {
     for (var r, i = 8, a = 120, s = 20, o = 8, l = 6, u = 6, f = 3, p = -1 / 0, _ = 0, h = t.length; _ < h; ) {
         var m = t[_],
@@ -948,9 +985,11 @@ function ei(e, t, n) {
     }
     return r;
 }
+
 function ea(e, t) {
     return ei(e, t, !0);
 }
+
 function es() {
     var e = this != null && "object" == typeof this && eb(this);
     if (!e || !e["[[initializedDateTimeFormat]]"])
@@ -965,12 +1004,15 @@ function es() {
     }
     return e["[[boundFormat]]"];
 }
+
 function eo(e, t) {
     if (!isFinite(t)) throw RangeError("Invalid valid date passed to format");
     var n = e.__getInternalProperties(y),
         r = em(),
         i = n["[[locale]]"],
-        a = new s.NumberFormat([i], { useGrouping: !1 }),
+        a = new s.NumberFormat([i], {
+            useGrouping: !1,
+        }),
         o = new s.NumberFormat([i], {
             minimumIntegerDigits: 2,
             useGrouping: !1,
@@ -1024,6 +1066,7 @@ function eo(e, t) {
         u
     );
 }
+
 function el(e, t, n) {
     var r = new Date(e),
         i = "get" + (n || "");
@@ -1093,6 +1136,7 @@ var ec = (s.__localeSensitiveProtos = {
     Number: {},
     Date: {},
 });
+
 function eu(e, t) {
     if (!e.number) throw Error("Object passed doesn't contain locale data for Intl.NumberFormat");
     var n,
@@ -1109,11 +1153,13 @@ function eu(e, t) {
         A || (W(s.NumberFormat.prototype), (A = !0)),
         e.date && !v && (J(s.DateTimeFormat.prototype), (v = !0));
 }
+
 function ed(e) {
     if ("function" == typeof Math.log10) return Math.floor(Math.log10(e));
     var t = Math.round(Math.log(e) * Math.LOG10E);
     return t - (Number("1e" + t) > e);
 }
+
 function ef(e) {
     if (!c.call(this, "[[availableLocales]]")) throw TypeError("supportedLocalesOf() is not a constructor");
     var t = em(),
@@ -1122,6 +1168,7 @@ function ef(e) {
         i = L(e);
     return t.exp.test(t.input), F(r, i, n);
 }
+
 function ep(e, t, n, r, i) {
     var a = e[t] && e[t][n] ? e[t][n] : e.gregory[n],
         s = {
@@ -1132,6 +1179,7 @@ function ep(e, t, n, r, i) {
         o = c.call(a, r) ? a[r] : c.call(a, s[r][0]) ? a[s[r][0]] : a[s[r][1]];
     return null != i ? o[i] : o;
 }
+
 function e_(e) {
     for (var t in e)
         (e instanceof e_ || c.call(e, t)) &&
@@ -1142,6 +1190,7 @@ function e_(e) {
                 configurable: !0,
             });
 }
+
 function eh() {
     u(this, "length", {
         writable: !0,
@@ -1149,12 +1198,15 @@ function eh() {
     }),
         arguments.length && h.apply(this, p.call(arguments));
 }
+
 function em() {
     for (
         var e = /[.?*+^$[\]\\(){}|-]/g,
             t = RegExp.lastMatch || "",
             n = RegExp.multiline ? "m" : "",
-            r = { input: RegExp.input },
+            r = {
+                input: RegExp.input,
+            },
             i = new eh(),
             a = !1,
             s = {},
@@ -1172,6 +1224,7 @@ function em() {
         }
     return (r.exp = new RegExp(m.call(i, "") + t, n)), r;
 }
+
 function eg(e) {
     for (var t = e.length; t--; ) {
         var n = e.charAt(t);
@@ -1179,10 +1232,12 @@ function eg(e) {
     }
     return e;
 }
+
 function eE(e) {
     if (null == e) throw TypeError("Cannot convert null or undefined to object");
     return Object(e);
 }
+
 function eb(e) {
     return c.call(e, "__getInternalProperties") ? e.__getInternalProperties(y) : f(null);
 }

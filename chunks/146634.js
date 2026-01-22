@@ -1,4 +1,8 @@
-s.d(e, { A: () => c }), s(321073), s(896048);
+s.d(e, {
+    A: () => c,
+}),
+    s(321073),
+    s(896048);
 var n,
     i = s(627968),
     l = s(64700),
@@ -8,6 +12,7 @@ var n,
     h = s(652215),
     d = s(985018),
     u = s(31008);
+
 function g(t, e, s) {
     return (
         e in t
@@ -60,7 +65,9 @@ class p extends (n = l.PureComponent) {
             { email: s, password: n } = this.state;
         return (0, i.jsx)(o.BJc, {
             gap: 40,
-            padding: { bottom: 8 },
+            padding: {
+                bottom: 8,
+            },
             children: (0, i.jsxs)(o.BJc, {
                 gap: 20,
                 children: [
@@ -91,7 +98,9 @@ class p extends (n = l.PureComponent) {
         return (
             (t =
                 e && null != s
-                    ? d.intl.format(d.t.JqLgQL, { email: s })
+                    ? d.intl.format(d.t.JqLgQL, {
+                          email: s,
+                      })
                     : n
                       ? d.intl.string(d.t.tSXg8O)
                       : d.intl.string(d.t.KW5DEh)),
@@ -130,7 +139,7 @@ class p extends (n = l.PureComponent) {
                             resent: !0,
                             shouldClose: !0,
                         }),
-                        this._timeout.start(3000, () => {
+                        this._timeout.start(3e3, () => {
                             this.state.shouldClose && e();
                         }));
             }),
@@ -143,10 +152,14 @@ class p extends (n = l.PureComponent) {
                     t();
             }),
             g(this, "handleEmailChange", (t) => {
-                this.setState({ email: t });
+                this.setState({
+                    email: t,
+                });
             }),
             g(this, "handlePasswordChange", (t) => {
-                this.setState({ password: t });
+                this.setState({
+                    password: t,
+                });
             }),
             g(this, "handleKeyPress", (t) => {
                 let { email: e, password: s } = this.state;

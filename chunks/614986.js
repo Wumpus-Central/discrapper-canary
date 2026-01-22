@@ -1,7 +1,10 @@
-n.d(t, { A: () => L }), n(896048);
+n.d(t, {
+    A: () => L,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
-    s = n(432022),
+    s = n(108531),
     l = n(311907),
     a = n(397927),
     o = n(846293),
@@ -21,6 +24,7 @@ var r = n(627968),
     v = n(652215),
     j = n(985018),
     y = n(446160);
+
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -46,6 +50,7 @@ function S(e) {
     }
     return e;
 }
+
 function N(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -64,6 +69,7 @@ function N(e, t) {
         e
     );
 }
+
 function O() {
     return (0, r.jsx)("div", {
         className: y.$k,
@@ -92,6 +98,7 @@ let I = (e) => {
             (0, A.xb)(n);
     }
 };
+
 function T(e) {
     let { invite: t, onAcceptInvite: n } = e;
     return (null == t ? void 0 : t.state) === v.elq.BANNED
@@ -106,6 +113,7 @@ function T(e) {
               onClick: n,
           });
 }
+
 function C(e) {
     let { children: t, cardChildren: n, startAnimHeightPx: l, innerStyle: o } = e,
         { invite: c } = (function (e, t) {
@@ -168,6 +176,7 @@ function C(e) {
         })
     );
 }
+
 function R(e) {
     let { invite: t } = e;
     return null != t && (0, _.Fk)(t)
@@ -181,11 +190,21 @@ function R(e) {
                       },
                       e,
                   ),
-                  { children: (e) => (null == t ? null : 1 === e ? (0, r.jsx)(b.s, { invite: t }) : null) },
+                  {
+                      children: (e) =>
+                          null == t
+                              ? null
+                              : 1 === e
+                                ? (0, r.jsx)(b.s, {
+                                      invite: t,
+                                  })
+                                : null,
+                  },
               ),
           )
         : null;
 }
+
 function w(e) {
     let { invite: t } = e,
         n = {
@@ -209,9 +228,19 @@ function w(e) {
                         if (null == t) return (0, r.jsx)(O, {});
                         switch (n) {
                             case 1:
-                                return (0, r.jsx)(E.A, N(S({}, e), { invite: t }));
+                                return (0, r.jsx)(
+                                    E.A,
+                                    N(S({}, e), {
+                                        invite: t,
+                                    }),
+                                );
                             case 2:
-                                return (0, r.jsx)(T, N(S({}, e), { invite: t }));
+                                return (0, r.jsx)(
+                                    T,
+                                    N(S({}, e), {
+                                        invite: t,
+                                    }),
+                                );
                             default:
                                 return (0, r.jsx)(O, {});
                         }
@@ -220,6 +249,7 @@ function w(e) {
         ),
     );
 }
+
 function P(e) {
     let { invite: t, onAcceptInvite: n } = e,
         { guild: i } = null != t ? t : {},
@@ -236,9 +266,18 @@ function P(e) {
         className: y.G3,
         style: s,
         contentClassName: y.__,
-        children: [(0, r.jsx)(w, N(S({}, e), { onAcceptInvite: n })), (0, r.jsx)(R, S({}, e))],
+        children: [
+            (0, r.jsx)(
+                w,
+                N(S({}, e), {
+                    onAcceptInvite: n,
+                }),
+            ),
+            (0, r.jsx)(R, S({}, e)),
+        ],
     });
 }
+
 function L(e) {
     let { inviteKey: t, transitionTo: n } = e,
         s = (0, l.bG)([p.A], () => p.A.getInvite(t));
@@ -255,7 +294,9 @@ function L(e) {
                         invite_code: t,
                         friends_count: null == s ? void 0 : s.friends_count,
                     },
-                    { flush: !0 },
+                    {
+                        flush: !0,
+                    },
                 );
         }, [s, t]),
         (0, r.jsx)(P, {

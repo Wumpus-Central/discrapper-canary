@@ -1,4 +1,10 @@
-n.d(t, { A: () => U }), n(801460), n(508300), n(650828), n(896048);
+n.d(t, {
+    A: () => U,
+}),
+    n(801460),
+    n(508300),
+    n(650828),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -24,6 +30,7 @@ let h = 40,
     S = 4,
     I = [0, 0, 0, 0, 0],
     T = 200;
+
 function C(e) {
     let t;
     if (null == e) return;
@@ -36,6 +43,7 @@ function C(e) {
     for (let e = 0; e < t.length; e++) n[e] = t.charCodeAt(e) / 255;
     return n;
 }
+
 function N(e, t) {
     if (null != e && null != t) {
         if (e.length < t) {
@@ -45,15 +53,18 @@ function N(e, t) {
         return (0, f.A)(e, t);
     }
 }
+
 function R(e) {
     let t;
     return Math.floor(((t = e <= m ? h : e >= E ? g : ((Math.min(e, E) - m) / (E - m)) * (g - h) + h) + y) / O) * O - y;
 }
+
 function w(e) {
     if (null == e) return;
     let t = 2 * b + y;
     return Math.floor((e + y) / t);
 }
+
 function P(e, t, n, r, i) {
     e.moveTo(t, n + i),
         e.lineTo(t, n + r - i),
@@ -62,15 +73,18 @@ function P(e, t, n, r, i) {
         e.arc(t + i, n + i, i, 0, Math.PI, !0),
         e.closePath();
 }
+
 function D(e) {
     let { showAll: t, currentTime: n, duration: r, numSegments: i } = e;
     return t ? i : Math.max(0, Math.round((n / r) * i));
 }
+
 function x(e) {
     let { context: t, devicePixelRatio: n, canvasHeight: r, segmentValue: i, segmentIndex: a, constrainMin: s } = e,
         o = s ? (A - v) * i + v : A * i;
     0 === o || P(t, a * (2 * b + y) * n, (r / 2 - o / 2) * n, o * n, b * n);
 }
+
 function L(e, t) {
     let n = i.useMemo(() => C(e), [e]),
         r = i.useMemo(() => w(t), [t]);
@@ -79,6 +93,7 @@ function L(e, t) {
         return null != (e = N(null != n ? n : [], r)) ? e : I;
     }, [n, r]);
 }
+
 function j(e, t, n) {
     let [r, a] = i.useState(e),
         [s, o] = i.useState(e),
@@ -93,6 +108,7 @@ function j(e, t, n) {
         [r, s]
     );
 }
+
 function M(e, t) {
     let n = (0, l.rdh)(o.A.colors.BACKGROUND_MOD_MUTED).hex(),
         r = (0, l.rdh)(o.A.colors.INTERACTIVE_TEXT_DEFAULT).hex(),
@@ -112,11 +128,13 @@ function M(e, t) {
         inactiveFillColor: h,
     };
 }
+
 function k(e, t, n, r) {
     if (null == r) return [t, !1];
     let i = Math.min((n - r) / T, 1);
     return 1 === i ? [t, !1] : [(0, d.De)(e, t, i), !0];
 }
+
 function U(e) {
     let {
             className: t,
@@ -184,6 +202,7 @@ function U(e) {
         }, [O, a, o, l]),
         i.useEffect(() => {
             let e = null;
+
             function t(n) {
                 let r = g.current,
                     i = null == r ? void 0 : r.getContext("2d"),
@@ -244,7 +263,9 @@ function U(e) {
     return (0, r.jsx)("canvas", {
         onMouseDown: H,
         className: s()(_.J, t),
-        style: { width: b },
+        style: {
+            width: b,
+        },
         ref: g,
         height: (A + 2 * S) * window.devicePixelRatio,
         width: (null != E ? E : 0) * window.devicePixelRatio,

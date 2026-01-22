@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968),
     i = n(64700),
     a = n(397927),
@@ -6,6 +8,7 @@ var r = n(627968),
     o = n(837921),
     l = n(332191),
     c = n(985018);
+
 function u(e, t, n) {
     return (
         t in e
@@ -71,15 +74,24 @@ class d extends i.PureComponent {
         super(e),
             u(this, "handleToggleOpenOnStartup", () => {
                 let e = !this.state.openOnStartup;
-                this.setState({ openOnStartup: e }), o.Ay.send("TOGGLE_OPEN_ON_STARTUP", e);
+                this.setState({
+                    openOnStartup: e,
+                }),
+                    o.Ay.send("TOGGLE_OPEN_ON_STARTUP", e);
             }),
             u(this, "handleToggleStartMinimized", () => {
                 let e = !this.state.startMinimized;
-                this.setState({ startMinimized: e }), o.Ay.send("TOGGLE_START_MINIMIZED", e);
+                this.setState({
+                    startMinimized: e,
+                }),
+                    o.Ay.send("TOGGLE_START_MINIMIZED", e);
             }),
             u(this, "handleToggleMinimizeToTray", () => {
                 let e = !this.state.minimizeToTray;
-                this.setState({ minimizeToTray: e }), o.Ay.send("TOGGLE_MINIMIZE_TO_TRAY", e);
+                this.setState({
+                    minimizeToTray: e,
+                }),
+                    o.Ay.send("TOGGLE_MINIMIZE_TO_TRAY", e);
             }),
             (this.state = {
                 openOnStartup: !0,

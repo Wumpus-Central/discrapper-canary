@@ -71,6 +71,7 @@ if (r.env.NODE_DEBUG) {
         "i",
     );
 }
+
 function c(e, n) {
     var r = {
         seen: [],
@@ -88,13 +89,16 @@ function c(e, n) {
         p(r, e, r.depth)
     );
 }
+
 function u(e, t) {
     var n = c.styles[t];
-    return n ? "\x1B[" + c.colors[n][0] + "m" + e + "\x1B[" + c.colors[n][1] + "m" : e;
+    return n ? "\x1b[" + c.colors[n][0] + "m" + e + "\x1b[" + c.colors[n][1] + "m" : e;
 }
+
 function d(e, t) {
     return e;
 }
+
 function f(e) {
     var t = {};
     return (
@@ -104,6 +108,7 @@ function f(e) {
         t
     );
 }
+
 function p(e, n, r) {
     if (
         e.customInspect &&
@@ -160,6 +165,7 @@ function p(e, n, r) {
         E(i, u, y)
     );
 }
+
 function _(e, t) {
     if (S(t)) return e.stylize("undefined", "undefined");
     if (v(t)) {
@@ -174,9 +180,11 @@ function _(e, t) {
             ? e.stylize("null", "null")
             : void 0;
 }
+
 function h(e) {
     return "[" + Error.prototype.toString.call(e) + "]";
 }
+
 function m(e, t, n, r, i) {
     for (var a = [], s = 0, o = t.length; s < o; ++s)
         L(t, String(s)) ? a.push(g(e, t, n, r, String(s), !0)) : a.push("");
@@ -187,10 +195,13 @@ function m(e, t, n, r, i) {
         a
     );
 }
+
 function g(e, t, n, r, i, a) {
     var s, o, l;
     if (
-        ((l = Object.getOwnPropertyDescriptor(t, i) || { value: t[i] }).get
+        ((l = Object.getOwnPropertyDescriptor(t, i) || {
+            value: t[i],
+        }).get
             ? (o = l.set ? e.stylize("[Getter/Setter]", "special") : e.stylize("[Getter]", "special"))
             : l.set && (o = e.stylize("[Setter]", "special")),
         L(r, i) || (s = "[" + i + "]"),
@@ -226,6 +237,7 @@ function g(e, t, n, r, i, a) {
     }
     return s + ": " + o;
 }
+
 function E(e, t, n) {
     var r = 0;
     return e.reduce(function (e, t) {
@@ -234,42 +246,55 @@ function E(e, t, n) {
         ? n[0] + ("" === t ? "" : t + "\n ") + " " + e.join(",\n  ") + " " + n[1]
         : n[0] + t + " " + e.join(", ") + " " + n[1];
 }
+
 function b(e) {
     return Array.isArray(e);
 }
+
 function y(e) {
     return "boolean" == typeof e;
 }
+
 function O(e) {
     return null === e;
 }
+
 function A(e) {
     return "number" == typeof e;
 }
+
 function v(e) {
     return "string" == typeof e;
 }
+
 function S(e) {
     return void 0 === e;
 }
+
 function I(e) {
     return T(e) && "[object RegExp]" === w(e);
 }
+
 function T(e) {
     return "object" == typeof e && null !== e;
 }
+
 function C(e) {
     return T(e) && "[object Date]" === w(e);
 }
+
 function N(e) {
     return T(e) && ("[object Error]" === w(e) || e instanceof Error);
 }
+
 function R(e) {
     return "function" == typeof e;
 }
+
 function w(e) {
     return Object.prototype.toString.call(e);
 }
+
 function P(e) {
     return e < 10 ? "0" + e.toString(10) : e.toString(10);
 }
@@ -343,11 +368,13 @@ function P(e) {
     }),
     (t.isBuffer = n(308505));
 var D = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
 function x() {
     var e = new Date(),
         t = [P(e.getHours()), P(e.getMinutes()), P(e.getSeconds())].join(":");
     return [e.getDate(), D[e.getMonth()], t].join(" ");
 }
+
 function L(e, t) {
     return Object.prototype.hasOwnProperty.call(e, t);
 }
@@ -361,6 +388,7 @@ function L(e, t) {
         return e;
     });
 var j = "u" > typeof Symbol ? Symbol("util.promisify.custom") : void 0;
+
 function M(e, t) {
     if (!e) {
         var n = Error("Promise was rejected with a falsy value");
@@ -383,6 +411,7 @@ function M(e, t) {
             t
         );
     }
+
     function t() {
         for (
             var t,
@@ -421,6 +450,7 @@ function M(e, t) {
     (t.promisify.custom = j),
     (t.callbackify = function (e) {
         if ("function" != typeof e) throw TypeError('The "original" argument must be of type Function');
+
         function t() {
             for (var t = [], n = 0; n < arguments.length; n++) t.push(arguments[n]);
             var i = t.pop();

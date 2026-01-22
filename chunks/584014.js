@@ -1,10 +1,14 @@
-n.d(t, { A: () => c }), n(896048);
+n.d(t, {
+    A: () => c,
+}),
+    n(896048);
 var r = n(64700),
     i = n(964486),
     a = n(946261),
     s = n(536184),
     o = n(523006),
     l = n(257645);
+
 function c(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { audioRef: n } = r.useContext(o.A),
@@ -19,7 +23,12 @@ function c(e) {
         });
     (0, i.Ay)(() => {
         let { current: e } = n;
-        null != e && null != t.soundId && u && e.addEventListener("pause", () => d(!1), { once: !0 });
+        null != e &&
+            null != t.soundId &&
+            u &&
+            e.addEventListener("pause", () => d(!1), {
+                once: !0,
+            });
     });
     let f = r.useCallback(async () => {
         if (null == e) {

@@ -36,7 +36,9 @@ let d = (e) => {
                             }),
                             (0, r.jsx)(a.Text, {
                                 variant: "text-xs/normal",
-                                children: c.intl.format(c.t.AGKQq6, { numReferrals: 3 }),
+                                children: c.intl.format(c.t.AGKQq6, {
+                                    numReferrals: 3,
+                                }),
                             }),
                         ],
                     }),
@@ -47,7 +49,9 @@ let d = (e) => {
             position: "right",
             "aria-label": c.intl.string(c.t.USo4s7),
             asContainer: !0,
-            children: (0, r.jsx)("div", { children: t }),
+            children: (0, r.jsx)("div", {
+                children: t,
+            }),
         });
     },
     p = (e) => {
@@ -56,6 +60,8 @@ let d = (e) => {
             i.useEffect(() => {
                 t && n();
             }, [t, n]),
-            (0, r.jsx)(o.A, { copy: c.intl.string(c.t.y2b7CA) })
+            (0, r.jsx)(o.A, {
+                copy: c.intl.string(c.t.y2b7CA),
+            })
         );
     };

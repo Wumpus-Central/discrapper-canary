@@ -1,4 +1,7 @@
-n.d(t, { E: () => v }), n(896048);
+n.d(t, {
+    E: () => v,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(280513),
@@ -17,6 +20,7 @@ var r = n(627968),
     h = n(966394),
     j = n(985018),
     O = n(93100);
+
 function y(e) {
     let { guildId: t } = e,
         { guildProfile: o, fetchGuildProfile: g, fetchStatus: y } = (0, f.u)(t),
@@ -85,19 +89,25 @@ function y(e) {
                                             className: O.fi,
                                             children: (0, r.jsx)(s.D0$, {
                                                 label: j.intl.string(j.t.TRyLUh),
-                                                children: (0, r.jsx)(d.A, { value: t }),
+                                                children: (0, r.jsx)(d.A, {
+                                                    value: t,
+                                                }),
                                             }),
                                         }),
                                         (0, r.jsx)("div", {
                                             className: O.fi,
                                             children: (0, r.jsx)(s.D0$, {
                                                 label: j.intl.string(j.t.VECJcK),
-                                                children: (0, r.jsx)(d.A, { value: _ }),
+                                                children: (0, r.jsx)(d.A, {
+                                                    value: _,
+                                                }),
                                             }),
                                         }),
                                     ],
                                 }),
-                                (0, r.jsx)("div", { className: O.yF }),
+                                (0, r.jsx)("div", {
+                                    className: O.yF,
+                                }),
                                 (0, r.jsxs)("div", {
                                     className: O.cL,
                                     children: [
@@ -106,7 +116,9 @@ function y(e) {
                                             children: (0, r.jsx)(s.D0$, {
                                                 label: j.intl.string(j.t.XVGbn1),
                                                 description: j.intl.string(j.t["+baN11"]),
-                                                children: (0, r.jsx)(d.A, { value: S }),
+                                                children: (0, r.jsx)(d.A, {
+                                                    value: S,
+                                                }),
                                             }),
                                         }),
                                         (0, r.jsx)("img", {
@@ -124,12 +136,17 @@ function y(e) {
           })
         : (0, r.jsx)(c.y$y, {});
 }
+
 function v(e) {
     let { guildId: t } = e,
         n = (0, a.bG)([g.A], () => g.A.enabled);
     return (0, r.jsx)(c.nVY, {
         label: j.intl.string(j.t["qlhNb+"]),
         description: j.intl.string(j.t["dNn/1i"]),
-        children: n ? (0, r.jsx)(o.A, {}) : (0, r.jsx)(y, { guildId: t }),
+        children: n
+            ? (0, r.jsx)(o.A, {})
+            : (0, r.jsx)(y, {
+                  guildId: t,
+              }),
     });
 }

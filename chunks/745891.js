@@ -1,4 +1,7 @@
-n.d(t, { A: () => A }), n(896048);
+n.d(t, {
+    A: () => A,
+}),
+    n(896048);
 var i = n(627968),
     r = n(64700),
     s = n(311907),
@@ -16,7 +19,9 @@ let b = Object.values(u.Li).map((e) => 100 * e),
 class y extends r.PureComponent {
     handleUpdateBackgroundOpacity(e) {
         o.A.setTextWidgetOpacity((0, d.A)(e / 100)),
-            o.A.track(h.HAw.OVERLAY_SETTINGS_UPDATED, { text_opacity_slider: e });
+            o.A.track(h.HAw.OVERLAY_SETTINGS_UPDATED, {
+                text_opacity_slider: e,
+            });
     }
     handlePreviewBackgroundOpacity(e) {
         o.A.setTextWidgetOpacity((0, d.A)(e / 100));
@@ -59,4 +64,6 @@ class y extends r.PureComponent {
             })(this, "initialValue", 100 * this.props.opacity);
     }
 }
-let A = s.Ay.connectStores([c.default], () => ({ opacity: c.default.getTextWidgetOpacity() }))(y);
+let A = s.Ay.connectStores([c.default], () => ({
+    opacity: c.default.getTextWidgetOpacity(),
+}))(y);

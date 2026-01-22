@@ -1,4 +1,7 @@
-n.d(t, { l: () => R }), n(896048);
+n.d(t, {
+    l: () => R,
+}),
+    n(896048);
 var l = n(627968),
     r = n(64700),
     i = n(503698),
@@ -106,7 +109,10 @@ let T = new h.A("EmojiStudio"),
             [J, B, $, D, U],
         );
         (0, m.l0)(() => {
-            et.current || ea({ reason: "closed" });
+            et.current ||
+                ea({
+                    reason: "closed",
+                });
         });
         let es = r.useCallback(async () => {
                 if ((K(null), null == U)) return void K(p.j.MISSING_GUILD);
@@ -119,7 +125,9 @@ let T = new h.A("EmojiStudio"),
                         image: V,
                         guildId: U,
                         name: q,
-                        analyticsLocation: { page: w.liQ.EMOJI_STUDIO },
+                        analyticsLocation: {
+                            page: w.liQ.EMOJI_STUDIO,
+                        },
                     })),
                         f.X({
                             emojiId: e.id,
@@ -169,7 +177,9 @@ let T = new h.A("EmojiStudio"),
                     }
                 (0, E.O)(!1),
                     (0, o.OoC)(p.y),
-                    ea({ reason: "uploaded" }),
+                    ea({
+                        reason: "uploaded",
+                    }),
                     (et.current = !0),
                     (0, y.T)({
                         emoji: e,
@@ -182,7 +192,9 @@ let T = new h.A("EmojiStudio"),
                 K(null), null != D && X(D.data), (ee.current = 0), (0, E.O)(!1), null == (e = en.current) || e.reset();
             }, [en, D]),
             eo = r.useCallback(() => {
-                (0, I.p)({ onClose: eu });
+                (0, I.p)({
+                    onClose: eu,
+                });
             }, [eu]),
             ec = r.useCallback((e) => {
                 let { imageData: t, imageDataTimestamp: n = 0, error: l } = e,
@@ -221,7 +233,9 @@ let T = new h.A("EmojiStudio"),
                   }),
               })
             : (0, l.jsxs)("main", {
-                  className: a()(M.iW, { [M.WY]: null != D }),
+                  className: a()(M.iW, {
+                      [M.WY]: null != D,
+                  }),
                   children: [
                       (0, l.jsxs)("div", {
                           className: M.EN,
@@ -302,7 +316,9 @@ let T = new h.A("EmojiStudio"),
                                                               src: V,
                                                               alt: C.intl.string(C.t["zS0K+s"]),
                                                           }),
-                                                          (0, l.jsx)("span", { children: "6" }),
+                                                          (0, l.jsx)("span", {
+                                                              children: "6",
+                                                          }),
                                                       ],
                                                   }),
                                               }),
@@ -368,7 +384,9 @@ let T = new h.A("EmojiStudio"),
     k = (e) => {
         let { src: t, alt: n } = e;
         return null == t || "" === t
-            ? (0, l.jsx)("div", { className: M.A3 })
+            ? (0, l.jsx)("div", {
+                  className: M.A3,
+              })
             : (0, l.jsx)("img", {
                   src: t,
                   alt: n,

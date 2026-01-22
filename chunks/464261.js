@@ -1,4 +1,7 @@
-a.d(t, { C: () => A }), a(896048);
+a.d(t, {
+    C: () => A,
+}),
+    a(896048);
 var s,
     l = a(627968),
     r = a(64700),
@@ -7,6 +10,7 @@ var s,
     o = a(112895),
     c = a(818348),
     d = a(855522);
+
 function u(e, t, a) {
     return (
         t in e
@@ -150,7 +154,11 @@ class A extends (s = r.PureComponent) {
                             children: (0, l.jsx)(u, {
                                 className: r.mainNavLink,
                                 eventName: N,
-                                data: e.linkClicked ? { linkClicked: e.linkClicked } : {},
+                                data: e.linkClicked
+                                    ? {
+                                          linkClicked: e.linkClicked,
+                                      }
+                                    : {},
                                 href: e.route,
                                 rel: "me",
                                 children: e.title,
@@ -174,7 +182,9 @@ class A extends (s = r.PureComponent) {
                                       tag: "span",
                                       className: r.mainNavLink,
                                       eventName: N,
-                                      data: { linkClicked: e.linkClicked },
+                                      data: {
+                                          linkClicked: e.linkClicked,
+                                      },
                                       children: e.title,
                                   }),
                               }),
@@ -186,14 +196,22 @@ class A extends (s = r.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            u(this, "state", { sectionShown: null }),
+            u(this, "state", {
+                sectionShown: null,
+            }),
             u(this, "closeSubNav", () => {
                 let { sectionShown: e } = this.state;
-                null !== e && this.setState({ sectionShown: null });
+                null !== e &&
+                    this.setState({
+                        sectionShown: null,
+                    });
             }),
             u(this, "openSubNav", (e) => {
                 let { sectionShown: t } = this.state;
-                t !== e && this.setState({ sectionShown: e });
+                t !== e &&
+                    this.setState({
+                        sectionShown: e,
+                    });
             });
     }
 }

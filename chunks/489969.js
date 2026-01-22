@@ -7,14 +7,22 @@ e.exports = function (e) {
                 {
                     begin: /'/,
                     end: /'/,
-                    contains: [{ match: /''/ }],
+                    contains: [
+                        {
+                            match: /''/,
+                        },
+                    ],
                 },
             ],
         },
         i = {
             begin: /"/,
             end: /"/,
-            contains: [{ match: /""/ }],
+            contains: [
+                {
+                    match: /""/,
+                },
+            ],
         },
         a = ["true", "false", "unknown"],
         s = ["double precision", "large object", "with timezone", "without timezone"],
@@ -558,8 +566,11 @@ e.exports = function (e) {
         h = {
             match: t.concat(/\b/, t.either(...d), /\s*\(/),
             relevance: 0,
-            keywords: { built_in: d },
+            keywords: {
+                built_in: d,
+            },
         };
+
     function m(e) {
         return t.concat(/\b/, t.either(...e.map((e) => e.replace(/\s+/, "\\s+"))), /\b/);
     }
@@ -577,7 +588,9 @@ e.exports = function (e) {
             keyword: (function (e, { exceptions: t, when: n } = {}) {
                 let r = n;
                 return (t = t || []), e.map((e) => (e.match(/\|\d+$/) || t.includes(e) ? e : r(e) ? `${e}|0` : e));
-            })(f, { when: (e) => e.length < 3 }),
+            })(f, {
+                when: (e) => e.length < 3,
+            }),
             literal: a,
             type: o,
             built_in: c,

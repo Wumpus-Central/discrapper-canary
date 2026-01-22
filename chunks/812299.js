@@ -8,6 +8,7 @@ var i = n(709066),
     a = n(455207),
     s = n(943667),
     o = n(679740);
+
 function l(e) {
     let t,
         { message: n, channel: r, user: o, isRepliedMessage: l } = e;
@@ -26,6 +27,7 @@ function l(e) {
         t
     );
 }
+
 function c(e) {
     let { message: t, channel: n, user: a, compact: s, isRepliedMessage: c, hideIcon: u = !1, children: d } = e,
         f = l({

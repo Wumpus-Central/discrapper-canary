@@ -14,6 +14,7 @@ var r = n(627968),
     d = n(331322),
     f = n(834730),
     p = n(314288);
+
 function _(e, t, n) {
     return (
         t in e
@@ -27,6 +28,7 @@ function _(e, t, n) {
         e
     );
 }
+
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -43,6 +45,7 @@ function h(e) {
     }
     return e;
 }
+
 function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -55,6 +58,7 @@ function m(e, t) {
     }
     return n;
 }
+
 function g(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -66,6 +70,7 @@ function g(e, t) {
         e
     );
 }
+
 function E(e, t) {
     if (null == e) return {};
     var n,
@@ -82,6 +87,7 @@ function E(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function b(e, t) {
     if (null == e) return {};
     var n,
@@ -92,6 +98,7 @@ function b(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function y(e) {
     let { disabled: t, isSelected: n } = e,
         [a, o] = (0, i.useState)(void 0),
@@ -112,6 +119,7 @@ function y(e) {
         })
     );
 }
+
 function O() {
     return (0, r.jsxs)("svg", {
         className: p.radioIndicator,
@@ -142,6 +150,7 @@ function O() {
         ],
     });
 }
+
 function A(e) {
     let { desc: t, disabled: n, leadingIcon: a, name: u, value: _, isSelected: h } = e,
         m = (0, i.useRef)(null),
@@ -202,6 +211,7 @@ function A(e) {
         })
     );
 }
+
 function v(e) {
     let { onChange: t, options: n, value: i, disabled: a = !1, "aria-labelledby": s } = e,
         l = E(e, ["onChange", "options", "value", "disabled", "aria-labelledby"]),
@@ -229,10 +239,18 @@ function v(e) {
                     children: n.map((e, t) =>
                         (0, r.jsx)(
                             A,
-                            g(h({ index: t }, e), {
-                                value: String(e.value),
-                                isSelected: i === e.value,
-                            }),
+                            g(
+                                h(
+                                    {
+                                        index: t,
+                                    },
+                                    e,
+                                ),
+                                {
+                                    value: String(e.value),
+                                    isSelected: i === e.value,
+                                },
+                            ),
                             String(e.value),
                         ),
                     ),

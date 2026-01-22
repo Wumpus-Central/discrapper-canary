@@ -60,12 +60,19 @@ let r = (0, n(600975).C)({
         },
     ],
 });
+
 function i(e) {
     return !1;
 }
+
 function a(e) {
-    return r.useExperiment({ location: e }).darkerGuildListBackground;
+    return r.useExperiment({
+        location: e,
+    }).darkerGuildListBackground;
 }
+
 function s(e) {
-    return r.useExperiment({ location: e }).distinctBorders;
+    return r.useExperiment({
+        location: e,
+    }).distinctBorders;
 }

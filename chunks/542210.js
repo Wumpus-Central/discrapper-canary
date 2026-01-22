@@ -1,9 +1,12 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
     l = n(239705),
     s = n(300328);
+
 function a(e) {
     var t;
     let { action: n, actionType: a, triggerType: c } = e,

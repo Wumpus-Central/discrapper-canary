@@ -1,8 +1,11 @@
-n.d(t, { o: () => o });
+n.d(t, {
+    o: () => o,
+});
 var r = n(885714),
     i = n(628024),
     a = n(744493),
     s = n(64700);
+
 function o(e = {}) {
     let { autoFocus: t = !1, isTextInput: n, within: l } = e,
         c = (0, s.useRef)({
@@ -23,7 +26,9 @@ function o(e = {}) {
             (c.current.isFocusVisible = e), _();
         },
         [],
-        { isTextInput: n },
+        {
+            isTextInput: n,
+        },
     );
     let { focusProps: m } = (0, i.i)({
             isDisabled: l,

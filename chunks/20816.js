@@ -1,9 +1,12 @@
 var t = Object.prototype.hasOwnProperty,
     n = "~";
+
 function r() {}
+
 function i(e, t, n) {
     (this.fn = e), (this.context = t), (this.once = n || !1);
 }
+
 function a(e, t, r, a, s) {
     if ("function" != typeof r) throw TypeError("The listener must be a function");
     var o = new i(r, a || e, s),
@@ -17,9 +20,11 @@ function a(e, t, r, a, s) {
         e
     );
 }
+
 function s(e, t) {
     0 == --e._eventsCount ? (e._events = new r()) : delete e._events[t];
 }
+
 function o() {
     (this._events = new r()), (this._eventsCount = 0);
 }

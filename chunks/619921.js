@@ -1,4 +1,6 @@
-n.d(t, { A: () => S });
+n.d(t, {
+    A: () => S,
+});
 var r,
     i,
     a,
@@ -11,6 +13,7 @@ var r,
     f = n(309010),
     p = n(645959),
     _ = n(652215);
+
 function h(e, t, n) {
     return (
         t in e
@@ -29,20 +32,24 @@ let m = (null != (r = null == (a = window) || null == (i = a.location) ? void 0 
 )
     ? _.BVt.ACTIVITIES
     : null;
+
 function g() {
     let e = p.A.getPrivateChannelIds(),
         t = f.A.getChannelId(_.ME);
     (null != t || null != e[0]) && (m = _.BVt.CHANNEL(_.ME, null != t ? t : e[0]));
 }
+
 function E(e) {
     let { link: t } = e;
     if (m === t) return !1;
     m = t;
 }
+
 function b() {
     if (null == m || !m.startsWith(_.BVt.APPLICATION_STORE)) return !1;
     m = _.BVt.APPLICATION_STORE;
 }
+
 function y(e) {
     let { location: t } = e;
     E({
@@ -50,6 +57,7 @@ function y(e) {
         type: "APP_VIEW_SET_HOME_LINK",
     });
 }
+
 function O(e) {
     let { guildId: t, channelId: n } = e;
     if (null == t && null != n) {
@@ -58,6 +66,7 @@ function O(e) {
     }
     return !1;
 }
+
 function A(e) {
     let { channel: t } = e;
     null == t.guild_id && null != t.id && null != m && m === _.BVt.CHANNEL(_.ME, t.id) && (m = null);

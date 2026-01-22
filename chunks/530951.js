@@ -1,4 +1,6 @@
-n.d(t, { default: () => f });
+n.d(t, {
+    default: () => f,
+});
 var r = n(627968);
 n(64700);
 var o = n(976860),
@@ -9,6 +11,7 @@ var o = n(976860),
     s = n(985018),
     u = n(774911),
     p = n(936037);
+
 function O() {
     return (0, r.jsx)("div", {
         className: u.J,
@@ -19,6 +22,7 @@ function O() {
         }),
     });
 }
+
 function f(e) {
     let { onClose: t, source: n } = e,
         u = (function (e, t) {

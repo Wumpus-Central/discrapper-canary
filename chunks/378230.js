@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var a = n(627968);
 n(64700);
 var l = n(503698),
@@ -12,6 +14,7 @@ var l = n(503698),
     m = n(111162),
     p = n(667380),
     h = n(661251);
+
 function f() {
     let {
         personaForceFaeFail: e,
@@ -31,7 +34,9 @@ function f() {
                         variant: "heading-lg/semibold",
                         children: "Quick Actions",
                     }),
-                    (0, a.jsx)(s.cGx, { gap: 16 }),
+                    (0, a.jsx)(s.cGx, {
+                        gap: 16,
+                    }),
                     (0, a.jsxs)("div", {
                         className: p.h,
                         children: [
@@ -62,8 +67,12 @@ function f() {
                         variant: "heading-lg/semibold",
                         children: "Persona Configurations",
                     }),
-                    (0, a.jsx)("div", { children: "Note: this only works for generated test users" }),
-                    (0, a.jsx)(s.cGx, { gap: 16 }),
+                    (0, a.jsx)("div", {
+                        children: "Note: this only works for generated test users",
+                    }),
+                    (0, a.jsx)(s.cGx, {
+                        gap: 16,
+                    }),
                     (0, a.jsxs)("div", {
                         className: p.h,
                         children: [
@@ -72,19 +81,28 @@ function f() {
                                 description:
                                     "Use actual pilot template (skips age override screen) for Persona age verification testing",
                                 checked: n,
-                                onChange: (e) => (0, o.x)({ personaDisableModularPilotTestTemplate: e }),
+                                onChange: (e) =>
+                                    (0, o.x)({
+                                        personaDisableModularPilotTestTemplate: e,
+                                    }),
                             }),
                             (0, a.jsx)(s.dOG, {
                                 label: "Force FAE to Fail",
                                 description: "Force Facial Age Estimation to fail for testing with Persona",
                                 checked: e,
-                                onChange: (e) => (0, o.x)({ personaForceFaeFail: e }),
+                                onChange: (e) =>
+                                    (0, o.x)({
+                                        personaForceFaeFail: e,
+                                    }),
                             }),
                             (0, a.jsx)(s.dOG, {
                                 label: "Force ID Verification to Fail",
                                 description: "Force ID verification to fail for testing with Persona",
                                 checked: t,
-                                onChange: (e) => (0, o.x)({ personaForceIdVerificationFail: e }),
+                                onChange: (e) =>
+                                    (0, o.x)({
+                                        personaForceIdVerificationFail: e,
+                                    }),
                             }),
                         ],
                     }),

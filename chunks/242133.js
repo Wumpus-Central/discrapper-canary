@@ -1,4 +1,6 @@
-n.d(t, { g: () => o }),
+n.d(t, {
+    g: () => o,
+}),
     n(927092),
     n(212978),
     n(201528),
@@ -15,6 +17,7 @@ var r = n(626584),
     i = n(723702),
     a = n(837921),
     s = n(158719);
+
 function o() {
     if (i.isPlatformEmbedded) {
         let e;

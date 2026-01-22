@@ -1,4 +1,6 @@
-n.d(t, { A: () => C });
+n.d(t, {
+    A: () => C,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -21,6 +23,7 @@ var r = n(627968),
     A = n(785263);
 let v = 2,
     S = 10;
+
 function I(e, t) {
     let n = e.id,
         r = t.id;
@@ -34,8 +37,10 @@ function I(e, t) {
         return S;
     }, [n, r]);
 }
+
 function T(e) {
     let { channel: t, message: n, replyChainLength: a } = e;
+
     function s() {
         (0, _.Jx)(t.id), (0, g.Tv)(t, n, "Reply Chain Nudge");
     }
@@ -66,7 +71,9 @@ function T(e) {
                     color: "text-default",
                     className: A.Qq,
                     variant: "text-sm/normal",
-                    children: O.intl.format(O.t.B3V0FM, { count: Math.min(S, a + 1) }),
+                    children: O.intl.format(O.t.B3V0FM, {
+                        count: Math.min(S, a + 1),
+                    }),
                 }),
                 (0, r.jsx)(c.Text, {
                     color: "text-link",
@@ -78,6 +85,7 @@ function T(e) {
         })
     );
 }
+
 function C(e) {
     let { reply: t, chatInputType: n } = e,
         { channel: i, message: a, shouldMention: o, showMentionToggle: u } = t,
@@ -91,14 +99,18 @@ function C(e) {
             displayNameStyles: w,
         } = (0, f.Ay)(a),
         P = (0, p.gn)(g, R, C),
-        D = (0, d.a)({ displayNameStyles: w }),
+        D = (0, d.a)({
+            displayNameStyles: w,
+        }),
         x = I(i, a),
         L = (0, m.n)(i, a),
         j = n.showThreadPromptOnReply && x >= v && L,
         M = () => (0, h.pX)(y.BVt.CHANNEL(i.getGuildId(), i.id, a.id));
+
     function k(e) {
         e.stopPropagation(), (0, _.vz)(i.id, !o);
     }
+
     function U(e) {
         e.stopPropagation(), (0, _.Jx)(i.id);
     }
@@ -176,7 +188,9 @@ function C(e) {
                                             }),
                                         ],
                                     }),
-                                (0, r.jsx)(b.x, { onClick: U }),
+                                (0, r.jsx)(b.x, {
+                                    onClick: U,
+                                }),
                             ],
                         }),
                     ],

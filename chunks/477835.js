@@ -1,4 +1,7 @@
-n.d(t, { A: () => P }), n(896048);
+n.d(t, {
+    A: () => P,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -25,6 +28,7 @@ var r = n(627968),
     C = n(49999),
     N = n(985018),
     T = n(255259);
+
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -50,6 +54,7 @@ function j(e) {
     }
     return e;
 }
+
 function x(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -68,6 +73,7 @@ function x(e, t) {
         e
     );
 }
+
 function P(e) {
     let { channel: t } = e,
         l = (function (e, t) {
@@ -107,9 +113,12 @@ function P(e) {
         D = w || L || R,
         [M, k] = i.useState(!1),
         U = t.getGuildId(),
-        G = (0, y.VE)({ isSoundboardButtonDisabled: D }),
+        G = (0, y.VE)({
+            isSoundboardButtonDisabled: D,
+        }),
         [V, B] = (0, b.DP)(G),
         { analyticsLocations: H, parentAnalyticsLocation: F } = (0, A.Ay)(h.A.SOUNDBOARD_BUTTON);
+
     function Y(e) {
         null != U &&
             (0, f.L3)(e, async () => {
@@ -125,7 +134,9 @@ function P(e) {
                                 },
                                 t,
                             ),
-                            { onInteraction: (0, m.s)("SoundboardContextMenu", h.A.RTC_PANEL) },
+                            {
+                                onInteraction: (0, m.s)("SoundboardContextMenu", h.A.RTC_PANEL),
+                            },
                         ),
                     );
             });
@@ -184,34 +195,42 @@ function P(e) {
                                 d.$n,
                                 x(
                                     j(
-                                        x(j({ "data-migration-pending": !0 }, e), {
-                                            className: a()(T.x6, T.Sq, {
-                                                [T.W4]: M,
-                                                [T.r9]: D,
-                                            }),
-                                            wrapperClassName: T.x6,
-                                            innerClassName: T.bk,
-                                            disabled: D,
-                                            onClick: () => {
-                                                null != V &&
-                                                    V !== o.M.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
-                                                    B(C.i.UNKNOWN),
-                                                    k(!M),
-                                                    z(),
-                                                    (0, g.X)(F, g.O.SOUNDBOARD);
+                                        x(
+                                            j(
+                                                {
+                                                    "data-migration-pending": !0,
+                                                },
+                                                e,
+                                            ),
+                                            {
+                                                className: a()(T.x6, T.Sq, {
+                                                    [T.W4]: M,
+                                                    [T.r9]: D,
+                                                }),
+                                                wrapperClassName: T.x6,
+                                                innerClassName: T.bk,
+                                                disabled: D,
+                                                onClick: () => {
+                                                    null != V &&
+                                                        V !== o.M.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
+                                                        B(C.i.UNKNOWN),
+                                                        k(!M),
+                                                        z(),
+                                                        (0, g.X)(F, g.O.SOUNDBOARD);
+                                                },
+                                                onMouseEnter: (e) => {
+                                                    var t;
+                                                    null == (t = l.onMouseEnter) || t.call(l, e), W();
+                                                },
+                                                onMouseLeave: (e) => {
+                                                    var t;
+                                                    null == (t = l.onMouseLeave) || t.call(l, e), q();
+                                                },
+                                                onContextMenu: Y,
+                                                fullWidth: !0,
+                                                size: d.$n.Sizes.MEDIUM,
                                             },
-                                            onMouseEnter: (e) => {
-                                                var t;
-                                                null == (t = l.onMouseEnter) || t.call(l, e), W();
-                                            },
-                                            onMouseLeave: (e) => {
-                                                var t;
-                                                null == (t = l.onMouseLeave) || t.call(l, e), q();
-                                            },
-                                            onContextMenu: Y,
-                                            fullWidth: !0,
-                                            size: d.$n.Sizes.MEDIUM,
-                                        }),
+                                        ),
                                         l,
                                     ),
                                     {

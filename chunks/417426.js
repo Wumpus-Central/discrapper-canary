@@ -1,4 +1,7 @@
-n.d(t, { A: () => u }), n(321073);
+n.d(t, {
+    A: () => u,
+}),
+    n(321073);
 var r = n(562465),
     i = n(319400),
     l = n(73153),
@@ -84,6 +87,8 @@ let u = {
         });
     },
     resetSearchLayout: function () {
-        l.h.dispatch({ type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_LAYOUT_RESET" });
+        l.h.dispatch({
+            type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_LAYOUT_RESET",
+        });
     },
 };

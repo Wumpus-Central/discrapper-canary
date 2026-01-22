@@ -1,4 +1,6 @@
-n.d(t, { Q: () => E });
+n.d(t, {
+    Q: () => E,
+});
 var r = n(908909),
     i = n(974111),
     a = n(185288),
@@ -13,9 +15,11 @@ var r = n(908909),
     _ = n(47276),
     h = n(853590),
     m = n(64700);
+
 function g(e) {
     return e && e.__esModule ? e.default : e;
 }
+
 function E(e, t, n) {
     let E = (0, o.Bi)(),
         b = (0, o.Bi)(),
@@ -36,8 +40,14 @@ function E(e, t, n) {
         R = (0, a.P)(t, n),
         w = T["aria-labelledby"] || T.id,
         { locale: P } = (0, h.Y)(),
-        D = t.formatValue(P, { month: "long" }),
-        x = D ? O.format("selectedDateDescription", { date: D }) : "",
+        D = t.formatValue(P, {
+            month: "long",
+        }),
+        x = D
+            ? O.format("selectedDateDescription", {
+                  date: D,
+              })
+            : "",
         L = (0, l.I)(x),
         j = [L["aria-describedby"], T["aria-describedby"]].filter(Boolean).join(" ") || void 0,
         M = (0, c.$)(e),

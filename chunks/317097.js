@@ -12,14 +12,17 @@ n.d(t, {
     n(747238);
 var r = n(310784),
     i = n.n(r);
+
 function a(e) {
     return 1 === e.length ? "0".concat(e) : e;
 }
+
 function s(e) {
     return i()(e).num();
 }
+
 function o(e) {
-    if (e <= 16777215) {
+    if (e <= 0xffffff) {
         let t = (e >> 16) & 255,
             n = (e >> 8) & 255,
             r = 255 & e;
@@ -38,6 +41,7 @@ function o(e) {
             .concat(a(r.toString(16)));
     }
 }
+
 function l(e) {
     let t = (e >> 16) & 255,
         n = (e >> 8) & 255,
@@ -60,6 +64,7 @@ function l(e) {
         }
     );
 }
+
 function c(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
@@ -77,12 +82,14 @@ function c(e) {
                 .concat(r, ")")
           : "hsla(".concat(i, ", ").concat(o, "%, ").concat(c, "%, ").concat(r, ")");
 }
+
 function u(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
     if (!i().valid(e)) return null;
     let n = i()(e);
     return n.alpha(null != t ? t : n.alpha()).css();
 }
+
 function d(e, t) {
     null == t && (t = ((e >> 24) & 255) / 255);
     let n = (e >> 16) & 255,
@@ -90,19 +97,24 @@ function d(e, t) {
         i = 255 & e;
     return "rgba(".concat(n, ", ").concat(r, ", ").concat(i, ", ").concat(t, ")");
 }
+
 function f(e) {
     return 1 - (0.299 * ((e >> 16) & 255) + 0.587 * ((e >> 8) & 255) + 0.114 * (255 & e)) / 255;
 }
+
 function p(e) {
     return i().valid(e);
 }
+
 function _(e) {
     return [(e >> 16) & 255, (e >> 8) & 255, 255 & e];
 }
+
 function h(e, t, n) {
     var r = [e, t, n].map((e) => ((e /= 255) <= 0.03928 ? e / 12.92 : Math.pow((e + 0.055) / 1.055, 2.4)));
     return 0.2126 * r[0] + 0.7152 * r[1] + 0.0722 * r[2];
 }
+
 function m(e, t) {
     let n = _(e),
         r = _(t);

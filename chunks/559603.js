@@ -1,4 +1,6 @@
-n.d(t, { A: () => x });
+n.d(t, {
+    A: () => x,
+});
 var r = n(627968),
     i = n(64700),
     l = n(858229),
@@ -11,6 +13,7 @@ var r = n(627968),
     f = n(411335),
     g = n(985018),
     b = n(578551);
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +39,7 @@ function m(e) {
     }
     return e;
 }
+
 function p(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -54,18 +58,31 @@ function p(e, t) {
         e
     );
 }
+
 function x(e) {
     var t, n, x, h, j, O;
     let { rule: y, onChangeRule: v } = e,
         A = i.useCallback(
             (e) => {
-                v(p(m({}, y), { triggerMetadata: p(m({}, y.triggerMetadata), { keywordFilter: e }) }));
+                v(
+                    p(m({}, y), {
+                        triggerMetadata: p(m({}, y.triggerMetadata), {
+                            keywordFilter: e,
+                        }),
+                    }),
+                );
             },
             [v, y],
         ),
         E = i.useCallback(
             (e) => {
-                v(p(m({}, y), { triggerMetadata: p(m({}, y.triggerMetadata), { allowList: e }) }));
+                v(
+                    p(m({}, y), {
+                        triggerMetadata: p(m({}, y.triggerMetadata), {
+                            allowList: e,
+                        }),
+                    }),
+                );
             },
             [v, y],
         );
@@ -98,7 +115,9 @@ function x(e) {
                     }),
                 ],
             }),
-            (0, r.jsx)(u.A, { type: u.A.Type.ARROW_DOWN }),
+            (0, r.jsx)(u.A, {
+                type: u.A.Type.ARROW_DOWN,
+            }),
             (0, r.jsx)(d.A, {
                 step: 2,
                 header: g.intl.string(g.t["18TOiQ"]),
@@ -107,7 +126,9 @@ function x(e) {
                     onChangeRule: v,
                 }),
             }),
-            (0, r.jsx)(u.A, { type: u.A.Type.CROSS }),
+            (0, r.jsx)(u.A, {
+                type: u.A.Type.CROSS,
+            }),
             (0, r.jsx)(d.A, {
                 step: 3,
                 header: g.intl.string(g.t.eq3gjh),

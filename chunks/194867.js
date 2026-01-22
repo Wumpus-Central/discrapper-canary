@@ -1,4 +1,8 @@
-l.d(t, { A: () => m }), l(896048), l(228524);
+l.d(t, {
+    A: () => m,
+}),
+    l(896048),
+    l(228524);
 var r = l(627968),
     n = l(64700),
     i = l(311907),
@@ -10,6 +14,7 @@ var r = l(627968),
     c = l(744201),
     f = l(271484),
     p = l(628743);
+
 function m(e) {
     var t, l, m;
     let { guildId: v, group: A, powerups: g } = e,

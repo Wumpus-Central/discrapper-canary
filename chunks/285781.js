@@ -1,7 +1,11 @@
-n.d(t, { U: () => u }), n(896048);
+n.d(t, {
+    U: () => u,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(158954);
+
 function s(e, t, n) {
     return (
         t in e
@@ -15,6 +19,7 @@ function s(e, t, n) {
         e
     );
 }
+
 function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -31,6 +36,7 @@ function o(e) {
     }
     return e;
 }
+
 function l(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -43,6 +49,7 @@ function l(e, t) {
     }
     return n;
 }
+
 function c(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -64,10 +71,18 @@ let u = {
                 let [t, n] = i.useState(!1);
                 return (0, r.jsx)(
                     a.TOt,
-                    c(o({ "data-migration-pending": !0 }, e), {
-                        onChange: n,
-                        checked: t,
-                    }),
+                    c(
+                        o(
+                            {
+                                "data-migration-pending": !0,
+                            },
+                            e,
+                        ),
+                        {
+                            onChange: n,
+                            checked: t,
+                        },
+                    ),
                 );
             },
             controls: {

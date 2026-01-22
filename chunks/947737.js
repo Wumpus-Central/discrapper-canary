@@ -1,9 +1,14 @@
-n.d(t, { A: () => o }), n(896048), n(492834);
+n.d(t, {
+    A: () => o,
+}),
+    n(896048),
+    n(492834);
 var r = n(627968),
     l = n(64700),
     i = n(397927),
     s = n(398450),
     a = n(985018);
+
 function o(e) {
     let { mfaChallenge: t, finish: n, setSlide: o, onClose: d, isSlideReady: c, headerAlignStart: u } = e,
         [f, h] = l.useState(!1),
@@ -50,7 +55,9 @@ function o(e) {
                             spellCheck: "false",
                             disabled: f,
                         }),
-                        (0, r.jsx)(s.A.SlideError, { error: g }),
+                        (0, r.jsx)(s.A.SlideError, {
+                            error: g,
+                        }),
                     ],
                 }),
                 (0, r.jsx)(s.A.SlideFooter, {

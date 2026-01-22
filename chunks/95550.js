@@ -61,6 +61,7 @@ var r,
     $ = n(650583),
     ee = n(985018),
     et = n(587360);
+
 function en(e, t, n) {
     return (
         t in e
@@ -74,6 +75,7 @@ function en(e, t, n) {
         e
     );
 }
+
 function er(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -90,6 +92,7 @@ function er(e) {
     }
     return e;
 }
+
 function el(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -108,6 +111,7 @@ function el(e, t) {
         e
     );
 }
+
 function ei(e, t) {
     if (null == e) return {};
     var n,
@@ -273,8 +277,21 @@ class ec extends (r = i.PureComponent) {
     createInvite() {
         let { channel: e } = this.props;
         if (null == e || !e.isMultiUserDM() || this.isPartyFull()) return;
-        let { inviteMaxAgeSeconds: t } = X.A.getCurrentConfig({ location: "5326c5_1" }, { autoTrackExposure: !1 });
-        m.Ay.createInvite(e.id, { max_age: t }, Z.PE1.GROUP_DM);
+        let { inviteMaxAgeSeconds: t } = X.A.getCurrentConfig(
+            {
+                location: "5326c5_1",
+            },
+            {
+                autoTrackExposure: !1,
+            },
+        );
+        m.Ay.createInvite(
+            e.id,
+            {
+                max_age: t,
+            },
+            Z.PE1.GROUP_DM,
+        );
     }
     isPartyFull() {
         let { channel: e } = this.props;
@@ -330,12 +347,18 @@ class ec extends (r = i.PureComponent) {
             if (null == t) throw Error("no recipient in DM");
             let n = H.default.getUser(t),
                 r = null != n ? n.username : "";
-            return ee.intl.format(ee.t["eg+R9x"], { username: r });
+            return ee.intl.format(ee.t["eg+R9x"], {
+                username: r,
+            });
         }
         let n = this.getRemaining();
         return n <= 0
-            ? ee.intl.formatToPlainString(ee.t.xYr004, { number: this.getMaxParticipants() })
-            : ee.intl.formatToPlainString(ee.t.HrSDPF, { number: n });
+            ? ee.intl.formatToPlainString(ee.t.xYr004, {
+                  number: this.getMaxParticipants(),
+              })
+            : ee.intl.formatToPlainString(ee.t.HrSDPF, {
+                  number: n,
+              });
     }
     handleKeyDown(e) {
         let { selectedRow: t, selectedUsers: n, results: r, query: l } = this.props,
@@ -399,7 +422,11 @@ class ec extends (r = i.PureComponent) {
         return this.isNotFriends() || !e
             ? null
             : this.isPartyFull()
-              ? (0, l.jsx)("div", { children: ee.intl.format(ee.t.xYr004, { number: this.getMaxParticipants() }) })
+              ? (0, l.jsx)("div", {
+                    children: ee.intl.format(ee.t.xYr004, {
+                        number: this.getMaxParticipants(),
+                    }),
+                })
               : null;
     }
     getListProps() {
@@ -451,7 +478,12 @@ class ec extends (r = i.PureComponent) {
             a = i.length > 0;
         return (0, l.jsx)(f.D0$, {
             label: ee.intl.string(ee.t.t3O2BR),
-            helperText: i.length > 0 ? ee.intl.format(ee.t.ZVdJMy, { numHours: "".concat(24) }) : void 0,
+            helperText:
+                i.length > 0
+                    ? ee.intl.format(ee.t.ZVdJMy, {
+                          numHours: "".concat(24),
+                      })
+                    : void 0,
             children: (0, l.jsx)(f.e2O, {
                 supportsCopy: K.p5,
                 placeholder: (0, N.A)(ee.intl.string(ee.t.lPVBqP)),
@@ -516,9 +548,16 @@ class ec extends (r = i.PureComponent) {
                     this.getCreateGroupButtonAction(),
                 ],
             };
-        if (t.isDM()) return { actions: [this.getCreateGroupButtonAction()] };
+        if (t.isDM())
+            return {
+                actions: [this.getCreateGroupButtonAction()],
+            };
         let r = this.getInviteLinkFooter();
-        return null != r ? { actionBarInput: r } : {};
+        return null != r
+            ? {
+                  actionBarInput: r,
+              }
+            : {};
     }
     render() {
         var e;
@@ -539,8 +578,12 @@ class ec extends (r = i.PureComponent) {
     handleAddFriend(e) {
         this.props.onClose(),
             y.A.sendRequest({
-                discordTag: q.Ay.getUserTag(e, { identifiable: "always" }),
-                context: { location: "Group DM" },
+                discordTag: q.Ay.getUserTag(e, {
+                    identifiable: "always",
+                }),
+                context: {
+                    location: "Group DM",
+                },
             });
     }
     _getUserAffinities(e) {
@@ -568,11 +611,17 @@ class ec extends (r = i.PureComponent) {
             en(this, "_existingTimeout", null),
             en(this, "scrollPageUp", () => {
                 var e;
-                null == (e = this.scrollerRef.current) || e.scrollPageUp({ animate: !0 });
+                null == (e = this.scrollerRef.current) ||
+                    e.scrollPageUp({
+                        animate: !0,
+                    });
             }),
             en(this, "scrollPageDown", () => {
                 var e;
-                null == (e = this.scrollerRef.current) || e.scrollPageDown({ animate: !0 });
+                null == (e = this.scrollerRef.current) ||
+                    e.scrollPageDown({
+                        animate: !0,
+                    });
             }),
             en(this, "renderMobileCloseButton", () =>
                 (0, l.jsx)("div", {
@@ -678,21 +727,33 @@ class ec extends (r = i.PureComponent) {
                     this.forceFocus();
             }),
             en(this, "handleAddFriendNavigation", () => {
-                g.A.transitionToSection(Z.m3P.ADD_FRIEND, { explicit: !0 }), this.props.onClose();
+                g.A.transitionToSection(Z.m3P.ADD_FRIEND, {
+                    explicit: !0,
+                }),
+                    this.props.onClose();
             }),
             en(this, "handleScroll", () => {
                 let e = this.scrollerRef.current;
-                null != e && this.setState({ separator: !e.isScrolledToTop() });
+                null != e &&
+                    this.setState({
+                        separator: !e.isScrolledToTop(),
+                    });
             }),
             en(this, "handleChannelNameChange", (e) => {
-                this.setState({ newChannelName: e });
+                this.setState({
+                    newChannelName: e,
+                });
             }),
             en(this, "handleIconChange", (e) => {
                 let { imageUri: t } = e;
-                this.setState({ previewIcon: t });
+                this.setState({
+                    previewIcon: t,
+                });
             }),
             en(this, "handleIconRemove", () => {
-                this.setState({ previewIcon: null });
+                this.setState({
+                    previewIcon: null,
+                });
             }),
             en(this, "createNewDM", (e) => {
                 let t = this._searchCounter,
@@ -795,10 +856,14 @@ class ec extends (r = i.PureComponent) {
                 let { channel: t, invite: n } = this.props;
                 null != n && (0, K.C)(e),
                     null != this.copyTimeout && clearTimeout(this.copyTimeout),
-                    this.setState({ copied: !0 }),
+                    this.setState({
+                        copied: !0,
+                    }),
                     (this.copyTimeout = setTimeout(() => {
-                        this.setState({ copied: !1 });
-                    }, 1000)),
+                        this.setState({
+                            copied: !1,
+                        });
+                    }, 1e3)),
                     B.default.track(Z.HAw.COPY_INSTANT_INVITE, {
                         server: null,
                         channel: null != t ? t.id : null,
@@ -814,6 +879,7 @@ class ec extends (r = i.PureComponent) {
             });
     }
 }
+
 function eu(e) {
     let { selectedUsers: t, channelName: n, previewIcon: r, onIconChange: i, onIconRemove: a, onChange: s } = e,
         { analyticsLocations: o } = (0, E.Ay)(v.A.NEW_GROUP_DM_INVITE_MODAL),
@@ -847,6 +913,7 @@ function eu(e) {
         ],
     });
 }
+
 function ed(e) {
     let { channel: t } = e,
         n = ei(e, ["channel"]),
@@ -885,15 +952,27 @@ function ed(e) {
         ),
     );
 }
+
 function ef(e) {
     let { channel: t, subscribeToGlobalHotkey: n } = e,
         r = "channel-invite-modal-".concat(null == t ? void 0 : t.id),
         a = (0, f.Ry6)(r),
         s = i.useCallback(
             () =>
-                (0, f.mMO)(() => Promise.resolve((e) => (0, l.jsx)(ed, el(er({}, e), { channel: t }))), {
-                    modalKey: r,
-                }),
+                (0, f.mMO)(
+                    () =>
+                        Promise.resolve((e) =>
+                            (0, l.jsx)(
+                                ed,
+                                el(er({}, e), {
+                                    channel: t,
+                                }),
+                            ),
+                        ),
+                    {
+                        modalKey: r,
+                    },
+                ),
             [t, r],
         ),
         o = i.useCallback(() => (a ? (0, f.OoC)(r) : s()), [a, r, s]);
@@ -916,6 +995,7 @@ function ef(e) {
         }
     );
 }
+
 function ep(e) {
     var t, n;
     let {
@@ -946,6 +1026,7 @@ function ep(e) {
               tooltipPosition: d,
           });
 }
+
 function eh(e) {
     let { channel: t, fullWidth: n = !1, text: r, icon: a, subscribeToGlobalHotkey: s = !1 } = e,
         o = ei(e, ["channel", "fullWidth", "text", "icon", "subscribeToGlobalHotkey"]),
@@ -967,6 +1048,7 @@ function eh(e) {
         }),
     );
 }
+
 function eb(e) {
     let t = eg(e);
     return new Set(
@@ -978,6 +1060,7 @@ function eb(e) {
             .value(),
     );
 }
+
 function eg(e) {
     return JSON.stringify(e.sort());
 }

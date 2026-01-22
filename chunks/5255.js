@@ -1,4 +1,8 @@
-n.d(t, { A: () => k }), n(896048), n(65821);
+n.d(t, {
+    A: () => k,
+}),
+    n(896048),
+    n(65821);
 var r,
     i = n(311907),
     a = n(73153),
@@ -6,6 +10,7 @@ var r,
     o = n(580630),
     l = n(558519),
     c = n(818348);
+
 function u(e, t, n) {
     return (
         t in e
@@ -19,6 +24,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,6 +41,7 @@ function d(e) {
     }
     return e;
 }
+
 function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -47,6 +54,7 @@ function f(e, t) {
     }
     return n;
 }
+
 function p(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -68,35 +76,46 @@ let _ = l.vx.DISCONNECTED,
     O = !1,
     A = !1,
     v = null;
+
 function S(e) {
     let { connectionState: t } = e;
     _ = t;
 }
+
 function I(e) {
     let t = e.currencyCode.toLowerCase(),
         n = e.price / 100,
         r =
             "BG" === v && t === c.Yr.EUR
-                ? (0, o.ze)(n, { convertToMajorUnits: !1 })
-                : (0, o.Gp)(n, t, { convertToMajorUnits: !1 });
+                ? (0, o.ze)(n, {
+                      convertToMajorUnits: !1,
+                  })
+                : (0, o.Gp)(n, t, {
+                      convertToMajorUnits: !1,
+                  });
     return p(d({}, e), {
         price: e.price,
         currencyCode: t,
         priceString: r,
     });
 }
+
 function T() {
     A = !0;
 }
+
 function C() {
     A = !1;
 }
+
 function N() {
     O = !0;
 }
+
 function R() {
     O = !1;
 }
+
 function w(e) {
     var t;
     let { skus: n, skusType: r } = e;
@@ -127,23 +146,28 @@ function w(e) {
             A = !1;
     }
 }
+
 function P(e) {
     let { productId: t } = e;
     E.add(t);
 }
+
 function D(e) {
     let { productId: t } = e;
     if (!E.has(t)) throw Error("Tried verifying product without initialization: ".concat(t));
     E.delete(t);
 }
+
 function x(e) {
     let { pendingDowngrade: t } = e;
     b = t;
 }
+
 function L(e) {
     let { isDowngrading: t } = e;
     y = t;
 }
+
 function j(e) {
     let { countryCode: t } = e;
     v = t;

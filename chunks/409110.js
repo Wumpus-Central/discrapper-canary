@@ -1,4 +1,7 @@
-n.d(t, { A: () => _ }), n(896048);
+n.d(t, {
+    A: () => _,
+}),
+    n(896048);
 var i = n(627968),
     r = n(64700),
     s = n(311907),
@@ -17,6 +20,7 @@ var i = n(627968),
     A = n(407195),
     m = n(61714),
     O = n(652215);
+
 function v(e, t, n) {
     return (
         t in e
@@ -77,7 +81,9 @@ class x extends r.PureComponent {
             !e.locked &&
             null != this.state.lastLayoutUpdate &&
             (o.A.track(O.HAw.OVERLAY_LAYOUT_UPDATED, this.state.lastLayoutUpdate),
-            this.setState({ lastLayoutUpdate: null }));
+            this.setState({
+                lastLayoutUpdate: null,
+            }));
     }
     renderWidget(e, t, n) {
         let {
@@ -136,7 +142,9 @@ class x extends r.PureComponent {
                   hidden: !v,
                   resizeX: A,
                   resizeY: m,
-                  style: { zIndex: d },
+                  style: {
+                      zIndex: d,
+                  },
                   dragAnywhere: O,
                   active: !r || l,
                   onUpdate: this.handleUpdate,
@@ -188,11 +196,19 @@ class x extends r.PureComponent {
             }),
             v(this, "handleDragStart", () => {
                 let { widget: e } = this.props;
-                null != e && (e.pinned && o.A.setPreviewInGameMode(!0), this.setState({ dragging: !0 }));
+                null != e &&
+                    (e.pinned && o.A.setPreviewInGameMode(!0),
+                    this.setState({
+                        dragging: !0,
+                    }));
             }),
             v(this, "handleDragEnd", () => {
                 let { widget: e } = this.props;
-                null != e && (e.pinned && o.A.setPreviewInGameMode(!1), this.setState({ dragging: !1 }));
+                null != e &&
+                    (e.pinned && o.A.setPreviewInGameMode(!1),
+                    this.setState({
+                        dragging: !1,
+                    }));
             });
     }
 }
@@ -208,6 +224,7 @@ let S = s.Ay.connectStores([d.A, u.default], (e) => {
         isActiveRegion: null != n && n.type === O.uss.TEXT && i.has(O.ajI.TEXT_WIDGET),
     };
 })(x);
+
 function j(e, t) {
     return (0, i.jsx)(
         S,

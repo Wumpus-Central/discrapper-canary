@@ -1,4 +1,6 @@
-n.d(t, { A: () => x });
+n.d(t, {
+    A: () => x,
+});
 var r,
     i = n(627968),
     a = n(64700),
@@ -17,6 +19,7 @@ var r,
     E = n(515718),
     b = n(821589),
     y = n(263499);
+
 function O(e, t, n) {
     return (
         t in e
@@ -30,6 +33,7 @@ function O(e, t, n) {
         e
     );
 }
+
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -46,6 +50,7 @@ function A(e) {
     }
     return e;
 }
+
 function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -58,6 +63,7 @@ function v(e, t) {
     }
     return n;
 }
+
 function S(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -69,6 +75,7 @@ function S(e, t) {
         e
     );
 }
+
 function I(e, t) {
     if (null == e) return {};
     var n,
@@ -85,6 +92,7 @@ function I(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function T(e, t) {
     if (null == e) return {};
     var n,
@@ -206,7 +214,12 @@ class w extends a.PureComponent {
                         "aria-hidden": C,
                         style:
                             null == r.icon
-                                ? A({ fontSize: (null != (t = D[L.length]) ? t : D[D.length - 1]) * d }, u)
+                                ? A(
+                                      {
+                                          fontSize: (null != (t = D[L.length]) ? t : D[D.length - 1]) * d,
+                                      },
+                                      u,
+                                  )
                                 : u,
                         onClick: null != g || null == h ? void 0 : h,
                         tabIndex: v,
@@ -237,7 +250,12 @@ class w extends a.PureComponent {
                   "aria-hidden": a,
                   to: {
                       pathname: e,
-                      state: null != n ? { analyticsSource: n } : null,
+                      state:
+                          null != n
+                              ? {
+                                    analyticsSource: n,
+                                }
+                              : null,
                   },
                   "aria-label": t.name,
                   tabIndex: r,
@@ -254,7 +272,11 @@ let P = c.Ay.connectStores([g.A], (e) => {
                 t instanceof _.GO
                     ? t.getIconURL(null != s ? s : N[a], n && g.A.isFocused())
                     : (0, m.Iv)(t, null != s ? s : N[a], n && g.A.isFocused(), o)),
-        { style: S(A({}, i), { backgroundImage: (0, E.wU)(r) }) }
+        {
+            style: S(A({}, i), {
+                backgroundImage: (0, E.wU)(r),
+            }),
+        }
     );
 })((0, p.Y)((e) => (0, i.jsx)(w, A({}, e))));
 class D extends (r = a.PureComponent) {

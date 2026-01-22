@@ -15,6 +15,7 @@ var i = n(503698),
     c = n(294726),
     m = n(985018),
     v = n(227530);
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -40,6 +41,7 @@ function f(e) {
     }
     return e;
 }
+
 function g(e) {
     let { onNext: t } = (0, d.bv)();
     return (0, l.jsx)(
@@ -56,6 +58,7 @@ function g(e) {
         ),
     );
 }
+
 function b(e) {
     let { onNext: t, stepLoading: n, gameServerInstance: i, availableBoostCount: a, planCost: r } = (0, d.bv)(),
         s = r > 0 && a < r,
@@ -80,6 +83,7 @@ function b(e) {
         ),
     );
 }
+
 function p(e) {
     var t;
     let { stepAction: n } = (0, d.bv)(),
@@ -93,6 +97,7 @@ function p(e) {
             s()(null != i, "Invalid stepType ".concat(i));
     }
 }
+
 function _(e) {
     var t, n, i;
     let a,
@@ -134,6 +139,7 @@ function _(e) {
         )
     );
 }
+
 function j(e) {
     let { step: t, className: n, children: i } = e,
         { footerNode: r, step: s } = (0, d.bv)();

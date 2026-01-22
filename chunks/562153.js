@@ -9,6 +9,7 @@ var r = n(311907),
     s = n(994500),
     o = n(427262),
     l = n(985018);
+
 function c(e, t, n) {
     if (null == n) return null;
     if (null != e) return a.Ay.getNick(e, n.id);
@@ -18,10 +19,12 @@ function c(e, t, n) {
     }
     return null;
 }
+
 function u(e, t, n) {
     var r;
     return null == n ? l.intl.string(l.t.sKdZ6U) : null != (r = c(e, t, n)) ? r : o.Ay.getName(n);
 }
+
 function d(e, t, n) {
     return (0, r.bG)([a.Ay, i.A, s.A], () => u(e, t, n));
 }

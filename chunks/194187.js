@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -10,6 +12,7 @@ var i = n(503698),
     u = n(200041),
     d = n(985018),
     f = n(123511);
+
 function p(e) {
     let {
             channel: t,
@@ -24,7 +27,9 @@ function p(e) {
         E = (0, s.S31)(s.clD.ONLINE),
         b = (0, o.Ay)(t),
         y = t.isDM() || t.isGroupDM(),
-        { enableTopNavButton: O } = (0, l.tR)({ location: "VoiceActivityStatusWithCombinedTooltip" }),
+        { enableTopNavButton: O } = (0, l.tR)({
+            location: "VoiceActivityStatusWithCombinedTooltip",
+        }),
         A =
             O && null != b
                 ? b

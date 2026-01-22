@@ -1,9 +1,12 @@
-n.d(t, { A: () => b }), n(896048);
+n.d(t, {
+    A: () => b,
+}),
+    n(896048);
 var i = n(627968),
     r = n(64700),
     l = n(503698),
     a = n.n(l),
-    o = n(432022),
+    o = n(108531),
     s = n(397927),
     c = n(475743),
     u = n(652896),
@@ -15,6 +18,7 @@ var i = n(627968),
     g = n(897720),
     y = n(652215),
     A = n(578950);
+
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -40,6 +44,7 @@ function O(e) {
     }
     return e;
 }
+
 function E(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -172,7 +177,13 @@ let v = {
                     [A.Vd]: P,
                     [A.xM]: !P,
                 }),
-                style: P ? { height: L } : { width: k },
+                style: P
+                    ? {
+                          height: L,
+                      }
+                    : {
+                          width: k,
+                      },
                 children: M((e, t, r, a) =>
                     (0, i.jsx)(o.animated.div, {
                         className: A.ux,

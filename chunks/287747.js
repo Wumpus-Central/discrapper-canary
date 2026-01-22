@@ -24,7 +24,7 @@
             sameElse: "L",
         },
         relativeTime: {
-            future: "f\u2019 %s",
+            future: "f’ %s",
             past: "%s ilu",
             s: "ftit sekondi",
             ss: "%d sekondi",
@@ -40,7 +40,7 @@
             yy: "%d sni",
         },
         dayOfMonthOrdinalParse: /\d{1,2}º/,
-        ordinal: "%dº",
+        ordinal: "%d\xba",
         week: {
             dow: 1,
             doy: 4,

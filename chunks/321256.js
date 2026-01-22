@@ -1,4 +1,7 @@
-n.d(t, { A: () => p }), n(896048);
+n.d(t, {
+    A: () => p,
+}),
+    n(896048);
 var r = n(439372),
     i = n(965957),
     a = n(312671),
@@ -7,6 +10,7 @@ var r = n(439372),
     l = n(552122),
     c = n(768612),
     u = n(235079);
+
 function d(e, t, n) {
     return (
         t in e
@@ -45,7 +49,9 @@ class f extends r.A {
     }
     constructor(...e) {
         super(...e),
-            d(this, "actions", { NOTIFICATIONS_SET_DISABLED_SOUNDS: this.updateRingtone }),
+            d(this, "actions", {
+                NOTIFICATIONS_SET_DISABLED_SOUNDS: this.updateRingtone,
+            }),
             d(this, "subscription", void 0),
             d(this, "handleExperimentUpdated", () => {
                 this.updateSoundpack(), this.updateRingtone();

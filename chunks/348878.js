@@ -7,7 +7,9 @@ t.exports =
     !(function () {
         if (void 0 !== this) return !0;
         try {
-            Object.defineProperty([], "length", { writable: !1 }).length = 1;
+            Object.defineProperty([], "length", {
+                writable: !1,
+            }).length = 1;
         } catch (t) {
             return t instanceof TypeError;
         }

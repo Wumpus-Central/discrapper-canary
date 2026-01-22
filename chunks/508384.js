@@ -1,4 +1,7 @@
-n.d(t, { A: () => p }), n(896048);
+n.d(t, {
+    A: () => p,
+}),
+    n(896048);
 var l = n(627968),
     i = n(64700),
     r = n(503698),
@@ -11,6 +14,7 @@ var l = n(627968),
     h = n(246199),
     g = n(967144),
     m = n(881762);
+
 function f(e) {
     let { role: t, guild: r } = e,
         [a, o] = i.useState(!1);
@@ -72,10 +76,14 @@ function f(e) {
                                   );
                               };
                           },
-                          { onClose: () => o(!1) },
+                          {
+                              onClose: () => o(!1),
+                          },
                       );
               },
-              className: s()(m.X2, { [m.ho]: a }),
+              className: s()(m.X2, {
+                  [m.ho]: a,
+              }),
               children: (0, l.jsx)(c.jNK, {
                   size: "custom",
                   color: "currentColor",
@@ -85,6 +93,7 @@ function f(e) {
           })
         : null;
 }
+
 function p(e) {
     let {
             color: t,
@@ -106,7 +115,9 @@ function p(e) {
         } = e,
         E = (0, g.X_)(s.id, r, null == r ? void 0 : r.colorStrings);
     return u
-        ? (0, l.jsx)("div", { className: m.rz })
+        ? (0, l.jsx)("div", {
+              className: m.rz,
+          })
         : (0, l.jsx)(c.VQ0.Item, {
               className: m.JC,
               id: i,

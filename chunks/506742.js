@@ -1,4 +1,6 @@
-n.d(t, { a: () => d });
+n.d(t, {
+    a: () => d,
+});
 var r = n(627968);
 n(64700);
 var l = n(503698),
@@ -18,7 +20,11 @@ let d = (e) => {
         variant: d,
         className: a()(o.v, l),
         children: [
-            (0, r.jsx)(i.AC4, { children: c.intl.format(c.t["2CEGln"], { price: u }) }),
+            (0, r.jsx)(i.AC4, {
+                children: c.intl.format(c.t["2CEGln"], {
+                    price: u,
+                }),
+            }),
             (0, r.jsx)("span", {
                 "aria-hidden": !0,
                 children: u,

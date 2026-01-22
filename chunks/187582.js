@@ -1,4 +1,8 @@
-n.d(t, { A: () => M }), n(896048), n(321073);
+n.d(t, {
+    A: () => M,
+}),
+    n(896048),
+    n(321073);
 var r = n(627968),
     l = n(64700),
     i = n(607399),
@@ -26,6 +30,7 @@ var r = n(627968),
     S = n(652215),
     I = n(985018),
     N = n(701939);
+
 function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -53,6 +58,7 @@ function T(e) {
 }
 let P = [],
     w = C.Ay.getEnableHardwareAcceleration();
+
 function R(e) {
     let { user: t, channel: s, status: d, activities: f } = e,
         p = (0, a.bG)([O.A], () => null != O.A.getTypingUsers(s.id)[t.id]),
@@ -94,16 +100,24 @@ function R(e) {
             });
         },
         R = () => {
-            let e = "@".concat(_.Ay.getUserTag(t, { decoration: "never" })),
+            let e = "@".concat(
+                    _.Ay.getUserTag(t, {
+                        decoration: "never",
+                    }),
+                ),
                 n = "<@".concat(t.id, ">");
-            x._.dispatch(S.jej.TEXTAREA_FOCUS, { channelId: s.id }),
+            x._.dispatch(S.jej.TEXTAREA_FOCUS, {
+                channelId: s.id,
+            }),
                 x._.dispatchToLastSubscribed(S.jej.INSERT_TEXT, {
                     plainText: e,
                     rawText: n,
                 }),
                 c.A.startTyping(s.id);
         },
-        D = (0, g.r)({ user: t }),
+        D = (0, g.r)({
+            user: t,
+        }),
         [M, L] = l.useState(!1);
     return (0, r.jsx)(m.A, {
         targetElementRef: N,
@@ -187,6 +201,7 @@ function R(e) {
         },
     });
 }
+
 function D(e, t) {
     if (e.listItems.length !== t.listItems.length) return !1;
     for (let n = 0; n < e.listItems.length; n++) {
@@ -196,6 +211,7 @@ function D(e, t) {
     }
     return !0;
 }
+
 function M(e) {
     let { channel: t } = e,
         n = j.default.getCurrentUser(),
@@ -227,7 +243,9 @@ function M(e) {
                     };
                     a.push(e);
                 }
-                return { listItems: a };
+                return {
+                    listItems: a,
+                };
             },
             [t],
             D,
@@ -253,8 +271,11 @@ function M(e) {
                         (0, r.jsxs)(b.A, {
                             className: N.lL,
                             children: [
-                                "".concat(I.intl.string(I.t["9Oq93m"]), "\u2014").concat(c.length, " "),
-                                u && (0, r.jsx)(p.A, { type: p.A.Types.STAFF_ONLY_DM }),
+                                "".concat(I.intl.string(I.t["9Oq93m"]), "—").concat(c.length, " "),
+                                u &&
+                                    (0, r.jsx)(p.A, {
+                                        type: p.A.Types.STAFF_ONLY_DM,
+                                    }),
                             ],
                         }),
                         c.map((e) =>

@@ -1,4 +1,6 @@
-n.d(t, { v: () => f });
+n.d(t, {
+    v: () => f,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -32,7 +34,9 @@ let f = (e) => {
                     className: d.sT,
                     variant: "text-sm/normal",
                     color: "text-default",
-                    children: u.intl.format(u.t.TnhFHv, { benefits: _.asString() }),
+                    children: u.intl.format(u.t.TnhFHv, {
+                        benefits: _.asString(),
+                    }),
                 }),
             (0, r.jsxs)("div", {
                 className: d.o1,

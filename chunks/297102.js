@@ -1,4 +1,7 @@
-n.d(e, { default: () => x }), n(321073);
+n.d(e, {
+    default: () => x,
+}),
+    n(321073);
 var i = n(627968),
     r = n(64700),
     l = n(835245),
@@ -103,7 +106,12 @@ let x = function (t) {
                                     });
                             }
                             return t;
-                        })({ variant: "clickable" }, t),
+                        })(
+                            {
+                                variant: "clickable",
+                            },
+                            t,
+                        ),
                         e,
                     ),
                 ),

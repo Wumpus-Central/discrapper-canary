@@ -1,4 +1,6 @@
-r.d(t, { default: () => f });
+r.d(t, {
+    default: () => f,
+});
 var n = r(627968);
 r(64700);
 var o = r(397927),
@@ -24,14 +26,18 @@ let f = (0, a.A)(
                 "aria-label": p.intl.string(p.t.liqwPJ),
                 onSelect: i,
                 children: [
-                    (0, n.jsx)(o.rXV, { children: l }),
+                    (0, n.jsx)(o.rXV, {
+                        children: l,
+                    }),
                     (0, n.jsxs)(o.rXV, {
                         children: [O, a],
                     }),
                 ],
             });
         },
-        { object: O.ZSU.CONTEXT_MENU },
+        {
+            object: O.ZSU.CONTEXT_MENU,
+        },
     ),
     [l.A.CONTEXT_MENU, l.A.GUILD_MODERATION_RAID_MENU],
 );

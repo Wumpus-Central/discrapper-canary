@@ -41,6 +41,7 @@ var i = n(835245),
     U = n(859007),
     G = n(652215),
     V = n(985018);
+
 function F(e, t, n) {
     return (
         t in e
@@ -54,10 +55,11 @@ function F(e, t, n) {
         e
     );
 }
-let B = 2000,
+let B = 2e3,
     H = {},
     Y = {},
     W = {};
+
 function K(e) {
     var t;
     return {
@@ -67,6 +69,7 @@ function K(e) {
                 : t.client_platform_config[(0, j.A)((0, v.getOS)())].release_phase,
     };
 }
+
 function z(e) {
     let { applicationId: t, nonce: n, locations: r, source: i } = e;
     return (
@@ -79,13 +82,16 @@ function z(e) {
         !0)
     );
 }
+
 function q(e, t) {
     let n = Y[e];
     if (null != n && n.nonce === t) return delete Y[e], n;
 }
+
 function X(e, t) {
     setTimeout(() => q(e, t), B);
 }
+
 function Z(e) {
     let { applicationId: t, nonce: n, analyticsLocations: r, source: i } = e;
     z({
@@ -104,7 +110,9 @@ async function Q(e) {
         null != o &&
         (await a.Bo.post({
             url: G.Rsh.ACTIVITY_LEAVE(n, r.id, i),
-            body: { session_id: o },
+            body: {
+                session_id: o,
+            },
             retries: 2,
             rejectWithError: !1,
         }));
@@ -150,6 +158,7 @@ async function Q(e) {
         }),
         delete H[n];
 }
+
 function $(e) {
     var t, n;
     let {
@@ -161,7 +170,12 @@ function $(e) {
         location: u,
         inviterUserId: f,
     } = e;
-    if ((0, U.y)({ applicationId: r })) return;
+    if (
+        (0, U.y)({
+            applicationId: r,
+        })
+    )
+        return;
     let h = m.default.getId(),
         b = l.find((e) => e.userId === h),
         A = (0, L.H)(u),
@@ -235,6 +249,7 @@ function $(e) {
             embedded_activity_location_kind: u.kind,
         });
 }
+
 function J(e) {
     return H[e];
 }
@@ -397,7 +412,9 @@ class ee extends c.A {
                 if (!(0, M.A)(null == d || null == (r = d.embedded_activity_config) ? void 0 : r.supported_platforms))
                     return void this.showLaunchErrorModal(V.intl.string(V.t.uGDCcw));
                 let p = null != (t = null == c ? void 0 : c.getGuildId()) ? t : void 0,
-                    { activityConfigs: _, applications: m } = await (0, T.LV)({ guildId: p });
+                    { activityConfigs: _, applications: m } = await (0, T.LV)({
+                        guildId: p,
+                    });
                 if (
                     null ==
                     (0, N.A)({

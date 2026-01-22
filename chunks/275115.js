@@ -1,4 +1,7 @@
-n.d(t, { A: () => B }), n(896048);
+n.d(t, {
+    A: () => B,
+}),
+    n(896048);
 var r,
     i = n(812729),
     a = n.n(i),
@@ -12,6 +15,7 @@ var r,
     p = n(96175),
     _ = n(672396),
     h = n(392164);
+
 function m(e, t, n) {
     return (
         t in e
@@ -26,15 +30,17 @@ function m(e, t, n) {
     );
 }
 let g = new o.Vy("OverlayV3NativeClickZoneStore"),
-    E = 30000,
+    E = 3e4,
     b = null,
     y = [],
     O = [],
     A = {},
     v = !1;
+
 function S(e) {
     return !a()(e, y);
 }
+
 function I(e) {
     let t = setTimeout(() => {
         R(t);
@@ -51,6 +57,7 @@ function I(e) {
         return null != r && clearTimeout(r), (A[e.name] = t), n;
     });
 }
+
 function T(e, t) {
     var n;
     if (null == b) return void g.error("Overlay module not found");
@@ -68,18 +75,22 @@ function T(e, t) {
         g.error("Error setting capture zones:", e);
     }
 }
+
 function C(e) {
     return Object.keys(A).filter((t) => A[t] === e);
 }
+
 function N() {
     return O.length > 0 && 0 === y.length;
 }
+
 function R(e) {
     let t = C(e);
     for (let n of (null != e && clearTimeout(e), t)) delete A[n];
     let n = O.filter((e) => !t.includes(e.name));
     N() || ((y = n), T(n, "timer_expired")), (O = [...n]);
 }
+
 function w(e, t) {
     if (!f.A.isOverlayEnabled) {
         if (0 === y.length) return;
@@ -88,16 +99,20 @@ function w(e, t) {
     }
     T(e, t), (y = e), (O = [...e]);
 }
+
 function P(e) {
     for (let e of Object.values(A)) null != e && clearTimeout(e);
     (A = {}), (y = []), (O = []), T([], e);
 }
+
 function D() {
     0 !== y.length && ((O = [...y]), (y = []), T([], "store_click_zones"));
 }
+
 function x() {
     y.length > 0 || T((y = [...O]), "refresh_click_zones");
 }
+
 function L(e, t, n, r) {
     let i = c.A.getWindow(h.f);
     if (null == i) return;
@@ -114,22 +129,28 @@ function L(e, t, n, r) {
         l = i.document.elementFromPoint(a, s);
     null != l && l.dispatchEvent(o);
 }
+
 function j(e) {
     return P("crashed"), !0;
 }
+
 function M(e) {
     let { zones: t } = e;
     return w(t, "set_click_zones"), !0;
 }
+
 function k() {
     return P("refresh_host_window"), !0;
 }
+
 function U() {
     return null == (b = f.A.getNativeModule()) || !!v || ((v = !0), b.setCaptureZoneCallback(L), !0);
 }
+
 function G() {
     return (b = null), !0;
 }
+
 function V(e) {
     let { pid: t } = e;
     return 0 === t ? D() : x(), !0;

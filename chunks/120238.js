@@ -1,4 +1,7 @@
-n.d(t, { A: () => d }), n(228524);
+n.d(t, {
+    A: () => d,
+}),
+    n(228524);
 var a = n(627968),
     l = n(64700),
     i = n(397927),
@@ -9,7 +12,10 @@ var a = n(627968),
 let d = (e) => {
     let { onSubmit: t, disabled: n } = e,
         d = l.useCallback(async () => {
-            await t({ type: r.Ij.Empty }), window.location.reload();
+            await t({
+                type: r.Ij.Empty,
+            }),
+                window.location.reload();
         }, [t]);
     return (0, a.jsxs)("div", {
         className: c.kL,

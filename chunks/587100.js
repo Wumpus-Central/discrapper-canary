@@ -1,8 +1,11 @@
-n.d(t, { qQ: () => u });
+n.d(t, {
+    qQ: () => u,
+});
 let r = 50,
     i = "?",
     a = /\(error: (.*)\)/,
     s = /captureMessage|captureException/;
+
 function o(e) {
     if (!e.length) return [];
     let t = Array.from(e);
@@ -17,10 +20,12 @@ function o(e) {
         }))
     );
 }
+
 function l(e) {
     return e[e.length - 1] || {};
 }
 let c = "<anonymous>";
+
 function u(e) {
     try {
         if (!e || "function" != typeof e) return c;

@@ -1,4 +1,8 @@
-n.d(t, { E: () => f }), n(896048), n(65821);
+n.d(t, {
+    E: () => f,
+}),
+    n(896048),
+    n(65821);
 var r = n(627968),
     i = n(64700),
     a = n(397927),
@@ -8,6 +12,7 @@ var r = n(627968),
     c = n(437918),
     u = n(985018);
 let d = [];
+
 function f(e) {
     let { gameFriends: t, hasIncomingPendingGameFriends: n, hasOutgoingPendingGameFriends: f } = e,
         [p, _] = i.useState(!1),
@@ -28,7 +33,9 @@ function f(e) {
             if (t.length > 0) {
                 var e;
                 return {
-                    tooltipText: (0, r.jsx)(l.a, { applications: E }),
+                    tooltipText: (0, r.jsx)(l.a, {
+                        applications: E,
+                    }),
                     ariaLabel: null != (e = (0, c._)(E)) ? e : u.intl.string(u.t.ujfP6f),
                 };
             }

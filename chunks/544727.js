@@ -1,4 +1,6 @@
-i.d(e, { $: () => S });
+i.d(e, {
+    $: () => S,
+});
 var n = i(627968);
 i(64700);
 var l = i(311907),
@@ -24,7 +26,9 @@ let S = (0, o.E2)(T.X.CLIPS_STORAGE_LOCATION, {
             description: A.intl.string(A.t.svjwGh),
             layout: "horizontal",
             children: (0, n.jsx)(s.DUT, {
-                "aria-label": A.intl.formatToPlainString(A.t.iMONTj, { storageLocation: t }),
+                "aria-label": A.intl.formatToPlainString(A.t.iMONTj, {
+                    storageLocation: t,
+                }),
                 onClick: e,
                 children: (0, n.jsx)(s.ksK, {
                     tabIndex: -1,

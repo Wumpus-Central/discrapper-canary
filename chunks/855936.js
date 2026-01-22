@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var a = n(627968),
     l = n(64700),
     i = n(503698),
@@ -7,6 +9,7 @@ var a = n(627968),
     o = n(936388),
     c = n(195338),
     d = n(661251);
+
 function u() {
     let e = l.useRef(null);
     return (0, a.jsx)("div", {

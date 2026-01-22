@@ -1,4 +1,6 @@
-n.d(t, { T: () => r });
+n.d(t, {
+    T: () => r,
+});
 let r = {
     GIFT_INVENTORY_SETTINGS_BADGE: 1,
     QUEST_BAR: 2,

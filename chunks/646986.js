@@ -1,4 +1,7 @@
-n.d(t, { A: () => S }), n(321073);
+n.d(t, {
+    A: () => S,
+}),
+    n(321073);
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -16,6 +19,7 @@ var r = n(627968),
     g = n(518477),
     E = n(818348),
     b = n(985018);
+
 function y(e, t, n) {
     return (
         t in e
@@ -29,6 +33,7 @@ function y(e, t, n) {
         e
     );
 }
+
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -45,6 +50,7 @@ function O(e) {
     }
     return e;
 }
+
 function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -57,6 +63,7 @@ function A(e, t) {
     }
     return n;
 }
+
 function v(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -68,6 +75,7 @@ function v(e, t) {
         e
     );
 }
+
 function S(e) {
     let { user: t, currentUser: n, guildId: y, onOpenUserProfileModal: A, onClose: S } = e,
         { analyticsLocations: I } = (0, o.Ay)(),
@@ -82,7 +90,9 @@ function S(e) {
             let e = P ? c.A.getStatus() : l.A.getStatus(t.id, y);
             return e === E.cl.OFFLINE || e === E.cl.INVISIBLE;
         }),
-        { voiceActivityStatusEnabled: x } = (0, s.G)({ location: "UserProfileStackedActivity" }),
+        { voiceActivityStatusEnabled: x } = (0, s.G)({
+            location: "UserProfileStackedActivity",
+        }),
         L = x && null == N && null == w && null != R,
         j = i.useCallback(
             (e) => {
@@ -93,11 +103,46 @@ function S(e) {
                         onClose: S,
                     });
                 return (
-                    null != N && i.push((0, r.jsx)(h.A, O({ stream: N }, a), "stream")),
+                    null != N &&
+                        i.push(
+                            (0, r.jsx)(
+                                h.A,
+                                O(
+                                    {
+                                        stream: N,
+                                    },
+                                    a,
+                                ),
+                                "stream",
+                            ),
+                        ),
                     C.forEach((e, t) => {
-                        i.push((0, r.jsx)(_.A, O({ activity: e }, a), "live-".concat(t)));
+                        i.push(
+                            (0, r.jsx)(
+                                _.A,
+                                O(
+                                    {
+                                        activity: e,
+                                    },
+                                    a,
+                                ),
+                                "live-".concat(t),
+                            ),
+                        );
                     }),
-                    L && i.push((0, r.jsx)(m.A, O({ voiceChannel: R }, a), "voice")),
+                    L &&
+                        i.push(
+                            (0, r.jsx)(
+                                m.A,
+                                O(
+                                    {
+                                        voiceChannel: R,
+                                    },
+                                    a,
+                                ),
+                                "voice",
+                            ),
+                        ),
                     i
                 );
             },
@@ -113,7 +158,10 @@ function S(e) {
                       action: "PRESS_SHOW_MORE_ACTIVITY",
                       analyticsLocations: I,
                   }),
-                      null == A || A({ tabSection: g.RP.ACTIVITY });
+                      null == A ||
+                          A({
+                              tabSection: g.RP.ACTIVITY,
+                          });
               },
           });
 }

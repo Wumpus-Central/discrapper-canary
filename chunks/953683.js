@@ -1,6 +1,10 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 var r = n(559374),
-    i = { passive: !0 };
+    i = {
+        passive: !0,
+    };
 let a = {
     name: "eventListeners",
     enabled: !0,

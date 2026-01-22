@@ -1,5 +1,8 @@
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 var r = n(444746);
+
 function i(e, t) {
     var n = t.getRootNode && t.getRootNode();
     if (e.contains(t)) return !0;

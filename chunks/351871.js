@@ -1,8 +1,12 @@
-n.d(t, { A: () => c }), n(896048);
+n.d(t, {
+    A: () => c,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(201327),
     s = n(539541);
+
 function o(e) {
     null != e && e.getTracks().forEach((e) => e.stop());
 }
@@ -23,6 +27,7 @@ async function l(e) {
         return null;
     }
 }
+
 function c(e) {
     let { deviceId: t, width: n, height: c, disabled: u } = e,
         [d, f] = i.useState();

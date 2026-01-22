@@ -42,6 +42,7 @@ var r,
     L = n(661191),
     G = n(652215),
     k = n(37411);
+
 function U(e, t, n) {
     return (
         t in e
@@ -55,6 +56,7 @@ function U(e, t, n) {
         e
     );
 }
+
 function V(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -71,6 +73,7 @@ function V(e) {
     }
     return e;
 }
+
 function F(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -110,7 +113,10 @@ class W extends a.EventEmitter {
             r = t.map((e) => {
                 if (e.isFullyLoaded || e.deleted || n) return e;
                 if (e.collapsed)
-                    if (!e.hasLoadedAnything) return F(V({}, e), { hasLoadedAnything: !0 });
+                    if (!e.hasLoadedAnything)
+                        return F(V({}, e), {
+                            hasLoadedAnything: !0,
+                        });
                     else return e;
                 return (
                     (e = this.populateInitialStateFromStore(e)).isFullyLoaded ||
@@ -142,7 +148,9 @@ class W extends a.EventEmitter {
         (0, M.xb)(e);
     }
     clearScrollToChannelIndex() {
-        this.setState({ scrollToChannelIndex: null });
+        this.setState({
+            scrollToChannelIndex: null,
+        });
     }
     loadChannelMessages(e) {
         f.A.clearChannel(e.channelId);
@@ -157,7 +165,9 @@ class W extends a.EventEmitter {
         return (
             null != t &&
             !1 !== t &&
-            (this.setState({ loadState: "loading" }),
+            (this.setState({
+                loadState: "loading",
+            }),
             t.then(
                 (t) => {
                     this.setState({
@@ -232,7 +242,7 @@ class W extends a.EventEmitter {
             (this.maybeLoadMore = () => {
                 var e;
                 let t = null == (e = this.scrollerRef.current) ? void 0 : e.getScrollerState();
-                null == t || (t.scrollHeight - t.scrollTop - t.offsetHeight < 2000 && this.loadMore());
+                null == t || (t.scrollHeight - t.scrollTop - t.offsetHeight < 2e3 && this.loadMore());
             }),
             (this.reloadMessages = () => {
                 this.setState({
@@ -260,7 +270,13 @@ class W extends a.EventEmitter {
                 let r = this.state.channels.find((e) => e.channelId === t);
                 (null != r && this.undoStack.push(r), 1 === this.state.channels.length)
                     ? this.deleteChannel(t)
-                    : (this.setState({ channels: this.updateChannel(t, (e) => F(V({}, e), { deleted: !0 })) }),
+                    : (this.setState({
+                          channels: this.updateChannel(t, (e) =>
+                              F(V({}, e), {
+                                  deleted: !0,
+                              }),
+                          ),
+                      }),
                       h.A.useReducedMotion && this.deleteChannel(t),
                       this.maybeLoadMore());
             }),
@@ -289,7 +305,9 @@ class W extends a.EventEmitter {
             }),
             (this.markGuildRead = (e) => {
                 d.h.wait(() => (0, m.A)([e], G.JJy.INBOX)),
-                    this.setState({ channels: this.state.channels.filter((t) => t.guildId !== e) }),
+                    this.setState({
+                        channels: this.state.channels.filter((t) => t.guildId !== e),
+                    }),
                     this.maybeLoadMore();
             }),
             (this.deleteChannel = (e) => {
@@ -306,7 +324,9 @@ class W extends a.EventEmitter {
                         messageId: e.newestUnreadMessageId,
                     })),
                 ),
-                    this.setState({ channels: [] });
+                    this.setState({
+                        channels: [],
+                    });
             }),
             (this.toggle = (e) => {
                 let { channelId: t, guildId: n } = e,
@@ -327,7 +347,11 @@ class W extends a.EventEmitter {
                         scrollToChannelIndex: a,
                         collapsedChannels: l,
                         loadState: "done" !== i || o || s.isFullyLoaded ? i : "loaded",
-                        channels: this.updateChannel(t, (e) => F(V({}, e), { collapsed: o })),
+                        channels: this.updateChannel(t, (e) =>
+                            F(V({}, e), {
+                                collapsed: o,
+                            }),
+                        ),
                     }),
                     s.collapsed ? s.isFullyLoaded || this.loadMore() : this.maybeLoadMore();
             }),
@@ -335,11 +359,17 @@ class W extends a.EventEmitter {
                 let e = this.state.channels.filter(
                     (e) => !R.Ay.isGuildOrCategoryOrChannelMuted(e.guildId, e.channelId),
                 );
-                e.length !== this.state.channels.length && this.setState({ channels: e });
+                e.length !== this.state.channels.length &&
+                    this.setState({
+                        channels: e,
+                    });
             }),
             (this.handleJoinedThreadsStoreChange = () => {
                 let e = this.state.channels.filter((e) => !j.A.isMuted(e.channelId));
-                e.length !== this.state.channels.length && this.setState({ channels: e });
+                e.length !== this.state.channels.length &&
+                    this.setState({
+                        channels: e,
+                    });
             }),
             (this.handleActiveThreadsStoreChange = () => {
                 let e = this.state.channels.map((e) => {
@@ -353,11 +383,14 @@ class W extends a.EventEmitter {
                         });
                     }
                 });
-                this.setState({ channels: e });
+                this.setState({
+                    channels: e,
+                });
             });
         for (let t = 0; t < e.channels.length; t++) e.channels[t].order = t;
     }
 }
+
 function z(e, t) {
     var n;
     let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
@@ -382,6 +415,7 @@ function z(e, t) {
         isFullyLoaded: e.isFullyLoaded || (a && o) || (t && !l.hasMoreAfter),
     });
 }
+
 function Y() {
     var e;
     let t,
@@ -428,6 +462,7 @@ function Y() {
         }
     );
 }
+
 function q(e, t, n, r) {
     if (null == r) return;
     let l = C.A.getChannel(r);
@@ -483,9 +518,17 @@ function q(e, t, n, r) {
         order: 0,
     };
     (0, b.qR)(l)
-        ? t.push(F(V({}, u), { type: "nsfw" }))
+        ? t.push(
+              F(V({}, u), {
+                  type: "nsfw",
+              }),
+          )
         : l.isForumLikeChannel()
-          ? t.push(F(V({}, u), { type: "forum" }))
+          ? t.push(
+                F(V({}, u), {
+                    type: "forum",
+                }),
+            )
           : t.push(
                 F(V({}, u), {
                     type: "messages",
@@ -495,6 +538,7 @@ function q(e, t, n, r) {
 }
 let X = 2 * D.A.Millis.DAY,
     J = 10 * D.A.Millis.DAY;
+
 function Q(e) {
     let [t, n] = i.useState(() => new W(Y(), e)),
         [r, l] = i.useState(!1),

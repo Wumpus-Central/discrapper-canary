@@ -1,4 +1,7 @@
-t.d(A, { A: () => b }), t(896048);
+t.d(A, {
+    A: () => b,
+}),
+    t(896048);
 var r = t(627968),
     n = t(64700),
     l = t(503698),
@@ -9,6 +12,7 @@ var r = t(627968),
     d = t(946274),
     c = t(985018),
     u = t(893347);
+
 function g(e) {
     for (var A = 1; A < arguments.length; A++) {
         var t = null != arguments[A] ? arguments[A] : {},
@@ -34,6 +38,7 @@ function g(e) {
     }
     return e;
 }
+
 function f(e, A) {
     return (
         (A = null != A ? A : {}),
@@ -90,6 +95,7 @@ let p = "custom-image",
             ),
         );
     });
+
 function b(e) {
     let {
             presetImages: A,
@@ -109,7 +115,12 @@ function b(e) {
     n.useEffect(() => {
         b !== p && (V(null), x(null));
     }, [b]);
-    let K = null != O ? c.intl.formatToPlainString(c.t["Kw+5YX"], { filename: O }) : c.intl.string(c.t.SNPvSv),
+    let K =
+            null != O
+                ? c.intl.formatToPlainString(c.t["Kw+5YX"], {
+                      filename: O,
+                  })
+                : c.intl.string(c.t.SNPvSv),
         N = (0, s._u)({
             orientation: "horizontal",
             isDisabled: C,
@@ -200,7 +211,9 @@ function b(e) {
                                         var e;
                                         return null == (e = y.current) ? void 0 : e.activateUploadDialogue();
                                     },
-                                    "aria-label": c.intl.formatToPlainString(c.t.Qc9Lg6, { filename: O }),
+                                    "aria-label": c.intl.formatToPlainString(c.t.Qc9Lg6, {
+                                        filename: O,
+                                    }),
                                     children: (0, r.jsx)(o.R2l, {
                                         size: "xs",
                                         color: "currentColor",
@@ -216,7 +229,9 @@ function b(e) {
                                     onClick: () => {
                                         l === p && v(A[0].data, A[0].name), V(null), x(null);
                                     },
-                                    "aria-label": c.intl.formatToPlainString(c.t.Z43V9S, { filename: O }),
+                                    "aria-label": c.intl.formatToPlainString(c.t.Z43V9S, {
+                                        filename: O,
+                                    }),
                                     children: (0, r.jsx)(o.ucK, {
                                         size: "md",
                                         color: "currentColor",

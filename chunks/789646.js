@@ -8,11 +8,13 @@ var r = n(627968),
     i = n(64700),
     a = n(403362);
 let s = i.createContext(void 0);
+
 function o() {
     let e = i.useContext(s);
     if (null == e) throw Error("No PollFocusContextProvider found");
     return e;
 }
+
 function l(e) {
     let { children: t, actionButtonRef: n, pollAnswerRef: a, manageFocusOnAction: o } = e,
         l = i.useMemo(
@@ -28,6 +30,7 @@ function l(e) {
         children: t,
     });
 }
+
 function c(e) {
     let { children: t } = e,
         [n, s] = i.useState(),

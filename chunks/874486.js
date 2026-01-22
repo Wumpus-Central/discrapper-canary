@@ -1,4 +1,6 @@
-n.d(t, { A: () => y });
+n.d(t, {
+    A: () => y,
+});
 var r,
     i = n(311907),
     a = n(73153),
@@ -6,6 +8,7 @@ var r,
     o = n(414736),
     l = n(3137),
     c = n(559908);
+
 function u(e, t, n) {
     return (
         t in e
@@ -19,6 +22,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,6 +39,7 @@ function d(e) {
     }
     return e;
 }
+
 function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -47,6 +52,7 @@ function f(e, t) {
     }
     return n;
 }
+
 function p(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -58,9 +64,12 @@ function p(e, t) {
         e
     );
 }
-let _ = 2000,
-    h = { unlockedAchievements: {} },
+let _ = 2e3,
+    h = {
+        unlockedAchievements: {},
+    },
     m = d({}, h);
+
 function g(e) {
     return (
         null == m.unlockedAchievements[e] &&
@@ -76,6 +85,7 @@ function g(e) {
         !0)
     );
 }
+
 function E(e) {
     let { achievementId: t } = e;
     if (!l.A.isEnabled()) return !1;
@@ -99,4 +109,6 @@ class b extends (r = i.Ay.PersistedStore) {
     }
 }
 u(b, "displayName", "PoggermodeAchievementStore"), u(b, "persistKey", "PoggermodeAchievementStore");
-let y = new b(a.h, { POGGERMODE_ACHIEVEMENT_UNLOCK: E });
+let y = new b(a.h, {
+    POGGERMODE_ACHIEVEMENT_UNLOCK: E,
+});

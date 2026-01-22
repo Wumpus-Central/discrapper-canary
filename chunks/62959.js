@@ -1,1 +1,3 @@
-e.exports = { W: "ac7d677ce5bc4636" };
+e.exports = {
+    W: "ac7d677ce5bc4636",
+};

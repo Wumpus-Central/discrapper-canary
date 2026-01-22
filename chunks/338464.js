@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -15,8 +17,12 @@ let f = (e) => {
             className: a()(d.KT, t === c.tm.TOP_GUILD_EMOJI ? d.S7 : d.lD),
             children: [
                 t === c.tm.TOP_GUILD_EMOJI
-                    ? (0, r.jsx)(o.A, { foreground: d.Gb })
-                    : (0, r.jsx)(l.A, { foreground: d.Gb }),
+                    ? (0, r.jsx)(o.A, {
+                          foreground: d.Gb,
+                      })
+                    : (0, r.jsx)(l.A, {
+                          foreground: d.Gb,
+                      }),
                 (0, r.jsx)(s.Text, {
                     variant: "text-sm/semibold",
                     color: "always-white",
@@ -55,7 +61,9 @@ let f = (e) => {
                                           size: "custom",
                                           color: "currentColor",
                                           "aria-label": p
-                                              ? u.intl.formatToPlainString(u.t["+fdUkf"], { names: o })
+                                              ? u.intl.formatToPlainString(u.t["+fdUkf"], {
+                                                    names: o,
+                                                })
                                               : void 0,
                                           width: 15,
                                           height: 15,
@@ -80,7 +88,9 @@ let f = (e) => {
                           "aria-hidden": !0,
                           children: i,
                       })
-                    : (0, r.jsx)(f, { emojiSubCategory: _ }),
+                    : (0, r.jsx)(f, {
+                          emojiSubCategory: _,
+                      }),
             ],
         });
     };

@@ -1,4 +1,7 @@
-n.d(t, { P: () => T }), n(896048);
+n.d(t, {
+    P: () => T,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(349288),
@@ -15,6 +18,7 @@ var r = n(627968),
     m = n(734057),
     g = n(841549),
     E = n(560936);
+
 function b(e, t, n) {
     return (
         t in e
@@ -28,6 +32,7 @@ function b(e, t, n) {
         e
     );
 }
+
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -44,6 +49,7 @@ function y(e) {
     }
     return e;
 }
+
 function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -56,6 +62,7 @@ function O(e, t) {
     }
     return n;
 }
+
 function A(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -67,6 +74,7 @@ function A(e, t) {
         e
     );
 }
+
 function v(e, t) {
     if (null == e) return {};
     var n,
@@ -83,6 +91,7 @@ function v(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function S(e, t) {
     if (null == e) return {};
     var n,
@@ -93,6 +102,7 @@ function S(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function I(e, t) {
     return i.useCallback(
         (n) => {
@@ -102,6 +112,7 @@ function I(e, t) {
         [e, t],
     );
 }
+
 function T(e) {
     let {
             user: t,
@@ -119,7 +130,9 @@ function T(e) {
             userId: null == t ? void 0 : t.id,
             guildId: m,
         }),
-        w = (0, p.a)({ displayNameStyles: R }),
+        w = (0, p.a)({
+            displayNameStyles: R,
+        }),
         P = I(t, n),
         D = i.useContext(s.C);
     return (
@@ -192,7 +205,15 @@ function T(e) {
                                               { onClick: i } = n,
                                               a = v(n, ["onClick"]),
                                               [s] = r;
-                                          return p(y({ onClick: _(i) }, a), s);
+                                          return p(
+                                              y(
+                                                  {
+                                                      onClick: _(i),
+                                                  },
+                                                  a,
+                                              ),
+                                              s,
+                                          );
                                       },
                                   })
                                 : p(void 0, void 0),

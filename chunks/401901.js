@@ -54,7 +54,14 @@ let b = i.memo(function (e) {
         children: [
             null != t &&
                 (0, r.jsx)(a, {
-                    className: s()(f.video, (0, d.t)(f, "video", b), { [f.mirror]: g }, p),
+                    className: s()(
+                        f.video,
+                        (0, d.t)(f, "video", b),
+                        {
+                            [f.mirror]: g,
+                        },
+                        p,
+                    ),
                     streamId: t,
                     onResize: n,
                     onReady: x,
@@ -63,7 +70,9 @@ let b = i.memo(function (e) {
             m
                 ? null
                 : (0, r.jsx)("div", {
-                      className: s()(f.previewWrapper, { [f.loading]: E }),
+                      className: s()(f.previewWrapper, {
+                          [f.loading]: E,
+                      }),
                       children:
                           E &&
                           (0, r.jsxs)(i.Fragment, {
@@ -76,9 +85,13 @@ let b = i.memo(function (e) {
                                         })
                                       : (0, r.jsx)("div", {
                                             className: f.emptyPreviewWrapper,
-                                            children: (0, r.jsx)("div", { className: f.emptyPreview }),
+                                            children: (0, r.jsx)("div", {
+                                                className: f.emptyPreview,
+                                            }),
                                         }),
-                                  (0, r.jsx)(o.y$y, { className: f.spinner }),
+                                  (0, r.jsx)(o.y$y, {
+                                      className: f.spinner,
+                                  }),
                               ],
                           }),
                   }),

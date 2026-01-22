@@ -1,4 +1,7 @@
-n.d(t, { A: () => h }), n(228524);
+n.d(t, {
+    A: () => h,
+}),
+    n(228524);
 var l = n(627968),
     a = n(64700),
     r = n(503698),
@@ -8,15 +11,23 @@ var l = n(627968),
     o = n(736653),
     d = n(611371),
     u = n(262834);
+
 function p(e) {
     let { title: t, betaTag: n, color: a = "text-strong" } = e;
     return (0, l.jsxs)(c.Heading, {
         className: i()(u.DD, u.Zv),
         variant: "display-lg",
         color: a,
-        children: [t, n && (0, l.jsx)(d.A, { className: u.TN })],
+        children: [
+            t,
+            n &&
+                (0, l.jsx)(d.A, {
+                    className: u.TN,
+                }),
+        ],
     });
 }
+
 function h(e) {
     let { title: t, titleColor: n, description: r, button: d, className: h, children: m, betaTag: b = !1 } = e,
         f = (0, o.Ay)(),

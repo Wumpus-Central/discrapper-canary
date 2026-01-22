@@ -10,20 +10,27 @@ let o = (0, r.C)({
     kind: "guild",
     id: "2025-08_go_live_guild_notification",
     label: "Go live notification guild experiment",
-    defaultConfig: { enabled: !1 },
+    defaultConfig: {
+        enabled: !1,
+    },
     treatments: [
         {
             id: 1,
             label: "Go live notification on by default",
-            config: { enabled: !0 },
+            config: {
+                enabled: !0,
+            },
         },
         {
             id: 2,
             label: "Go live notification includes game data if available",
-            config: { enabled: !0 },
+            config: {
+                enabled: !0,
+            },
         },
     ],
 });
+
 function l(e) {
     let { guildId: t, location: n } = e;
     return (
@@ -34,6 +41,7 @@ function l(e) {
         }).enabled
     );
 }
+
 function c(e, t) {
     let n = e;
     if (null == n) {

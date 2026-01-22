@@ -17,6 +17,7 @@ var r = l(627968),
     d = l(333354),
     c = l(985018),
     f = l(876380);
+
 function p(e) {
     let { text: t } = e;
     return (0, r.jsxs)("div", {
@@ -34,6 +35,7 @@ function p(e) {
         ],
     });
 }
+
 function m(e) {
     let { dateString: t } = e;
     return (0, r.jsxs)("div", {
@@ -46,11 +48,14 @@ function m(e) {
             (0, r.jsx)(o.Text, {
                 color: "status-warning",
                 variant: "text-sm/bold",
-                children: c.intl.formatToMarkdownString(d.default["ol/ao/"], { dateString: (0, a.A)(t) }),
+                children: c.intl.formatToMarkdownString(d.default["ol/ao/"], {
+                    dateString: (0, a.A)(t),
+                }),
             }),
         ],
     });
 }
+
 function v(e) {
     let { removingAt: t } = e;
     return (0, r.jsxs)("div", {
@@ -63,11 +68,14 @@ function v(e) {
             (0, r.jsx)(o.Text, {
                 color: "status-warning",
                 variant: "text-sm/bold",
-                children: c.intl.formatToPlainString(d.default["6e2ry1"], { dateString: (0, u.A)(t) }),
+                children: c.intl.formatToPlainString(d.default["6e2ry1"], {
+                    dateString: (0, u.A)(t),
+                }),
             }),
         ],
     });
 }
+
 function A(e) {
     let { cost: t, costDecorator: l, status: n, className: i } = e,
         a = void 0 !== t ? f._A : f.$3;
@@ -94,12 +102,22 @@ function A(e) {
                         }),
                     ],
                 }),
-            (null == n ? void 0 : n.type) === "expiring" && (0, r.jsx)(m, { dateString: n.expiringAt }),
-            (null == n ? void 0 : n.type) === "removing" && (0, r.jsx)(v, { removingAt: n.removingAt }),
-            (null == n ? void 0 : n.type) === "active" && (0, r.jsx)(p, { text: n.statusText }),
+            (null == n ? void 0 : n.type) === "expiring" &&
+                (0, r.jsx)(m, {
+                    dateString: n.expiringAt,
+                }),
+            (null == n ? void 0 : n.type) === "removing" &&
+                (0, r.jsx)(v, {
+                    removingAt: n.removingAt,
+                }),
+            (null == n ? void 0 : n.type) === "active" &&
+                (0, r.jsx)(p, {
+                    text: n.statusText,
+                }),
         ],
     });
 }
+
 function g(e) {
     let { children: t } = e;
     return (0, r.jsx)("div", {
@@ -107,6 +125,7 @@ function g(e) {
         children: t,
     });
 }
+
 function x(e) {
     let { title: t, textColor: l, children: n, footer: i } = e;
     return (0, r.jsxs)("div", {
@@ -143,7 +162,9 @@ let b = n.forwardRef(function (e, t) {
         children: A,
     } = e;
     return (0, r.jsx)("div", {
-        className: s()(f.gp, { [f.Wq]: d && !i }),
+        className: s()(f.gp, {
+            [f.Wq]: d && !i,
+        }),
         ref: t,
         children: (0, r.jsxs)(o.sqX, {
             "aria-label": n,

@@ -1,4 +1,6 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -42,9 +44,17 @@ let E = (e) => {
     return 0 === o
         ? null
         : (0, r.jsxs)(r.Fragment, {
-              children: [(0, r.jsx)(d.A, { className: o > 0 ? m.$P : m.q0 }), (0, r.jsx)(g, { tier: s })],
+              children: [
+                  (0, r.jsx)(d.A, {
+                      className: o > 0 ? m.$P : m.q0,
+                  }),
+                  (0, r.jsx)(g, {
+                      tier: s,
+                  }),
+              ],
           });
 };
+
 function b(e) {
     let { guild: t, className: n, subscriptionChange: a } = e,
         c = (0, o.bG)([_.A], () => null != _.A.getStateForGuild(t.id));
@@ -69,7 +79,9 @@ function b(e) {
                         (0, r.jsxs)("div", {
                             className: m.jp,
                             children: [
-                                (0, r.jsx)(g, { tier: t.premiumTier }),
+                                (0, r.jsx)(g, {
+                                    tier: t.premiumTier,
+                                }),
                                 (0, r.jsx)(E, {
                                     guild: t,
                                     subscriptionChange: null != a ? a : 0,

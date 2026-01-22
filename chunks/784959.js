@@ -1,11 +1,15 @@
-i.d(e, { A: () => S });
+i.d(e, {
+    A: () => S,
+});
 var n = i(934551),
     l = i(419954),
     s = i(780964),
     r = i(358776),
     u = i(640068),
     a = i(1626);
-let o = (0, l.zZ)(s.X.EXPERIMENTS_CATEGORY, { buildLayout: () => [a.h] }),
+let o = (0, l.zZ)(s.X.EXPERIMENTS_CATEGORY, {
+        buildLayout: () => [a.h],
+    }),
     T = (0, l.t_)(s.X.EXPERIMENTS_PANEL, {
         usePredicate: () => !(0, r.dk)("LegacyExperimentsPanel"),
         useTitle: () => "Experiments",

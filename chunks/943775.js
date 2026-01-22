@@ -1,5 +1,8 @@
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 var r = n(998218);
+
 function i(e, t) {
     let n = e.getIconSource(t);
     if (null != n && "number" != typeof n) {

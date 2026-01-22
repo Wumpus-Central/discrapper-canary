@@ -52,7 +52,9 @@ let c = (e) => {
             });
     },
     d = () => {
-        i.default.track(s.HAw.SEARCH_STARTED, { search_type: s.I4_.STICKER });
+        i.default.track(s.HAw.SEARCH_STARTED, {
+            search_type: s.I4_.STICKER,
+        });
     },
     f = (e, t, n) => {
         r.Ay.trackWithMetadata(s.HAw.SEARCH_RESULT_VIEWED, {

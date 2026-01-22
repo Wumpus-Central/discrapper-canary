@@ -1,4 +1,6 @@
-n.d(t, { A: () => x });
+n.d(t, {
+    A: () => x,
+});
 var a = n(627968),
     r = n(64700),
     i = n(311907),
@@ -15,6 +17,7 @@ var a = n(627968),
     m = n(788868),
     _ = n(985018),
     g = n(560207);
+
 function x(e) {
     let { analyticsSection: t, type: n } = e,
         x = (0, i.bG)([u.default], () => u.default.getCurrentUser()),
@@ -39,7 +42,9 @@ function x(e) {
         look: c.$n.Looks.LINK,
         color: c.$n.Colors.LINK,
         subscriptionTier: m.pe.TIER_2,
-        textOptions: { textOverride: _.intl.format(_.t["944tDv"], {}) },
+        textOptions: {
+            textOverride: _.intl.format(_.t["944tDv"], {}),
+        },
         showIcon: !1,
         premiumModalAnalyticsLocation: {
             section: t,

@@ -1,4 +1,6 @@
-r.d(t, { default: () => p });
+r.d(t, {
+    default: () => p,
+});
 var n = r(627968);
 r(64700);
 var o = r(397927),
@@ -8,6 +10,7 @@ var o = r(397927),
     a = r(585171),
     u = r(374426),
     s = r(985018);
+
 function b(e) {
     let { guildId: t, onSelect: r, onPickerClose: i, onInteraction: c } = e,
         b = (0, u.A)(t, i),
@@ -23,6 +26,7 @@ function b(e) {
         }),
     });
 }
+
 function p(e) {
     let { analyticsLocations: t } = (0, c.Ay)(e.sourceAnalyticsLocations, i.A.SOUNDBOARD_CONTEXT_MENU);
     return (0, n.jsx)(c.f5, {

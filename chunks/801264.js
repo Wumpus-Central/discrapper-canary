@@ -19,6 +19,7 @@ let c = {
         info: s.mir,
         warning: s.EpV,
     };
+
 function d(e) {
     let { children: t, className: n, look: i = "info" } = e,
         l = u[i];

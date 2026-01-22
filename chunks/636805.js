@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var r = n(627968);
 n(64700);
 var i = n(554146),
@@ -40,7 +42,9 @@ class g extends s.A {
         (0, f.zd)(), (0, c.Vh)(i.M.FORUM_CHANNEL_UPSELL_MODAL);
         let E = function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : A.i.DISMISS;
-            (0, o.Dr)(i.M.FORUM_CHANNEL_UPSELL_MODAL, { dismissAction: e });
+            (0, o.Dr)(i.M.FORUM_CHANNEL_UPSELL_MODAL, {
+                dismissAction: e,
+            });
         };
         (0, l.mMO)(
             async () => {
@@ -99,7 +103,10 @@ class g extends s.A {
                 };
             },
             {
-                onCloseCallback: () => (0, o.Dr)(i.M.FORUM_CHANNEL_UPSELL_MODAL, { dismissAction: A.i.DISMISS }),
+                onCloseCallback: () =>
+                    (0, o.Dr)(i.M.FORUM_CHANNEL_UPSELL_MODAL, {
+                        dismissAction: A.i.DISMISS,
+                    }),
                 onCloseRequest: h.FXj,
             },
         );

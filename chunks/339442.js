@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -9,6 +11,7 @@ var i = n(397927),
     c = n(788868),
     u = n(985018),
     d = n(93448);
+
 function f(e) {
     var t, n;
     let f = (0, a.L)(c.PremiumTypes.TIER_2);

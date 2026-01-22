@@ -7,6 +7,7 @@ n.d(t, {
 var r = n(353640),
     i = n(121894),
     a = n(652215);
+
 function s(e, t, n) {
     return (
         t in e
@@ -20,6 +21,7 @@ function s(e, t, n) {
         e
     );
 }
+
 function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +38,7 @@ function o(e) {
     }
     return e;
 }
+
 function l(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -48,6 +51,7 @@ function l(e, t) {
     }
     return n;
 }
+
 function c(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -63,6 +67,7 @@ let u = (0, r.v)(() => ({
     currentToastMap: new Map(),
     queuedToastsMap: new Map(),
 }));
+
 function d(e) {
     var t, n;
     let r = null != (t = null == (n = e.options) ? void 0 : n.appContext) ? t : a.BRT.APP;
@@ -72,15 +77,26 @@ function d(e) {
                 var n;
                 let i = new Map(t.queuedToastsMap),
                     a = null != (n = i.get(r)) ? n : [];
-                return i.set(r, [...a, e]), c(o({}, t), { queuedToastsMap: i });
+                return (
+                    i.set(r, [...a, e]),
+                    c(o({}, t), {
+                        queuedToastsMap: i,
+                    })
+                );
             }
             {
                 let n = new Map(t.currentToastMap);
-                return n.set(r, e), c(o({}, t), { currentToastMap: n });
+                return (
+                    n.set(r, e),
+                    c(o({}, t), {
+                        currentToastMap: n,
+                    })
+                );
             }
         });
     });
 }
+
 function f() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : a.BRT.APP;
     (0, i.r)(() => {
@@ -88,7 +104,12 @@ function f() {
             var n, r;
             if (0 === (null != (n = t.queuedToastsMap.get(e)) ? n : []).length) {
                 let n = new Map(t.currentToastMap);
-                return n.delete(e), c(o({}, t), { currentToastMap: n });
+                return (
+                    n.delete(e),
+                    c(o({}, t), {
+                        currentToastMap: n,
+                    })
+                );
             }
             let i = new Map(t.currentToastMap),
                 a = new Map(t.queuedToastsMap),

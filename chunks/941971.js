@@ -1,9 +1,11 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
     a = n.n(i),
-    s = n(432022),
+    s = n(108531),
     o = n(397927),
     l = n(94095);
 let c = Object.freeze({
@@ -15,6 +17,7 @@ let c = Object.freeze({
         height: 8,
         transform: "translateX(-4px) translateZ(0)",
     });
+
 function d(e) {
     let { selected: t = !1, hovered: n = !1, unread: i = !1, disabled: d = !1, className: f } = e;
     (t = !d && t), (n = !d && n), (i = !d && i);

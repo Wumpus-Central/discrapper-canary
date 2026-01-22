@@ -21,6 +21,7 @@ var r = n(627968),
     E = n(639149),
     b = n(941673),
     y = n(818348);
+
 function O(e, t, n) {
     return (
         t in e
@@ -34,6 +35,7 @@ function O(e, t, n) {
         e
     );
 }
+
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -59,6 +61,7 @@ let v = function () {
             isGift: e,
         });
 };
+
 function S(e) {
     let {
             onClose: t,
@@ -83,6 +86,7 @@ function S(e) {
         transitionState: i,
     });
 }
+
 function I() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     return [
@@ -110,9 +114,12 @@ let T = (e) => {
                 null != _.A.get(n) ||
                 (0, m.qf)(c.guildId, n);
         }, [c, n]),
-        { analyticsLocations: l }
+        {
+            analyticsLocations: l,
+        }
     );
 };
+
 function C(e) {
     let { loadId: t, applicationId: n, isGift: i = !1, giftRecipient: a, giftingOrigin: o, additionalUserIds: u } = e,
         { analyticsLocations: f } = T(e);

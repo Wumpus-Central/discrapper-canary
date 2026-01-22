@@ -1,4 +1,6 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(627968),
     l = n(64700),
     i = n(827734),
@@ -33,7 +35,12 @@ let o = l.forwardRef(function (e, t) {
                     });
             }
             return e;
-        })({ marginTop: 8 * !!n }, l),
+        })(
+            {
+                marginTop: 8 * !!n,
+            },
+            l,
+        ),
         children: [
             (0, r.jsx)(s.mir, {
                 size: "custom",

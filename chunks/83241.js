@@ -1,4 +1,6 @@
-n.d(t, { P: () => i });
+n.d(t, {
+    P: () => i,
+});
 let r = (0, n(600975).C)({
     kind: "user",
     id: "2022-12_channel_notice_redesign",
@@ -34,11 +36,16 @@ let r = (0, n(600975).C)({
         },
     ],
 });
+
 function i() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         { showRedesignedChannelNotice: t, showRedesignedLiveChannelNotice: n } = r.useExperiment(
-            { location: "c0d6eb_1" },
-            { autoTrackExposure: e },
+            {
+                location: "c0d6eb_1",
+            },
+            {
+                autoTrackExposure: e,
+            },
         );
     return {
         showRedesignedChannelNotice: t,

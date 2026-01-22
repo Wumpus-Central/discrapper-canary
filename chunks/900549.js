@@ -1,8 +1,11 @@
-a.d(e, { w: () => l });
+a.d(e, {
+    w: () => l,
+});
 var n = a(627968),
     r = a(397927),
     i = a(60888),
     s = a(117013);
+
 function l(t) {
     let { url: e } = t,
         { protocol: a, hostname: l, theRestOfTheUrl: o } = (0, i.L)(e);

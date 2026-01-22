@@ -7,6 +7,7 @@ var r = n(627968),
     i = n(64700),
     a = n(158954),
     s = n(989395);
+
 function o(e, t, n) {
     return (
         t in e
@@ -20,6 +21,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +38,7 @@ function l(e) {
     }
     return e;
 }
+
 function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -48,6 +51,7 @@ function c(e, t) {
     }
     return n;
 }
+
 function u(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -59,6 +63,7 @@ function u(e, t) {
         e
     );
 }
+
 function d(e, t) {
     if (null == e) return {};
     var n,
@@ -75,6 +80,7 @@ function d(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function f(e, t) {
     if (null == e) return {};
     var n,
@@ -85,7 +91,9 @@ function f(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
-let p = i.createContext({ inDialog: void 0 }),
+let p = i.createContext({
+        inDialog: void 0,
+    }),
     _ = i.forwardRef(function (e, t) {
         let { children: n, impressionType: o, impression: c, disableTrack: f, returnRef: _ } = e,
             h = d(e, ["children", "impressionType", "impression", "disableTrack", "returnRef"]),
@@ -93,14 +101,18 @@ let p = i.createContext({ inDialog: void 0 }),
             g = i.useRef(null),
             [E, b] = i.useState(!1),
             y = E ? g : m;
-        (0, a.tjt)(y, { returnRef: _ }),
+        (0, a.tjt)(y, {
+            returnRef: _,
+        }),
             i.useContext(s.A)(
                 {
                     type: o,
                     name: null == c ? void 0 : c.impressionName,
                     properties: null == c ? void 0 : c.impressionProperties,
                 },
-                { disableTrack: f },
+                {
+                    disableTrack: f,
+                },
             ),
             i.useImperativeHandle(t, () => m.current);
         let O = i.useCallback(

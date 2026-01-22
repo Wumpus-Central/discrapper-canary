@@ -1,10 +1,16 @@
-n.d(t, { p: () => u }), n(747238), n(64700), n(417597);
+n.d(t, {
+    p: () => u,
+}),
+    n(747238),
+    n(64700),
+    n(417597);
 var r = n(71393),
     i = n(723702),
     a = n(540763),
     s = n(652215);
 let o = "13.2",
     l = [s.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE];
+
 function c(e, t) {
     let n = e.split(".").map(Number),
         r = t.split(".").map(Number),
@@ -18,6 +24,7 @@ function c(e, t) {
     }
     return 0;
 }
+
 function u(e) {
     if (!(0, i.isIOS)()) return !1;
     let t = (0, a.O)();

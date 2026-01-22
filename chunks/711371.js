@@ -19,6 +19,7 @@ var r = n(284009),
     s = n(253018),
     o = n(184034),
     l = n(551483);
+
 function c(e, t, n) {
     return (
         t in e
@@ -32,6 +33,7 @@ function c(e, t, n) {
         e
     );
 }
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -48,6 +50,7 @@ function u(e) {
     }
     return e;
 }
+
 function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -60,6 +63,7 @@ function d(e, t) {
     }
     return n;
 }
+
 function f(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -103,6 +107,7 @@ if ((n(654821), !a.KE._addedDiscordOverrides)) {
             T = d ? I : S,
             C = d ? S : I,
             N = !1;
+
         function* R(n) {
             let [r, i] = n,
                 l = i.length,
@@ -141,7 +146,12 @@ if ((n(654821), !a.KE._addedDiscordOverrides)) {
                         let n = a.KE.range(t, p);
                         for (let r of (g.equals(p, y.path) && (n.anchor = y),
                         g.equals(p, O.path) && (n.focus = O),
-                        e(t, f(u({}, o), { at: n }))))
+                        e(
+                            t,
+                            f(u({}, o), {
+                                at: n,
+                            }),
+                        )))
                             yield r;
                     }
             }
@@ -258,8 +268,12 @@ let p = f(u({}, a.KE, s.rL), {
             if (null == e.selection) return null;
             if (b.isExpanded(e.selection)) {
                 let [n, r] = b.edges(e.selection),
-                    i = p.after(e, n, { unit: "offset" }),
-                    a = p.before(e, r, { unit: "offset" });
+                    i = p.after(e, n, {
+                        unit: "offset",
+                    }),
+                    a = p.before(e, r, {
+                        unit: "offset",
+                    });
                 if (null == i || null == a || !E.equals(i, a)) return null;
                 t = i;
             } else t = e.selection.anchor;
@@ -526,7 +540,11 @@ let p = f(u({}, a.KE, s.rL), {
                     anchor: p.start(e, r[1]),
                     focus: t,
                 },
-                a = Array.from(p.positions(e, { at: i })),
+                a = Array.from(
+                    p.positions(e, {
+                        at: i,
+                    }),
+                ),
                 s = v(e, t, a, !0);
             if (n && E.equals(t, s) && !E.isAtEnd(t, r)) {
                 let n = p.after(e, t);
@@ -542,7 +560,11 @@ let p = f(u({}, a.KE, s.rL), {
                     anchor: t,
                     focus: p.end(e, r[1]),
                 },
-                a = Array.from(p.positions(e, { at: i })),
+                a = Array.from(
+                    p.positions(e, {
+                        at: i,
+                    }),
+                ),
                 s = v(e, t, a, !1);
             if (n && E.equals(t, s) && !E.isAtEnd(t, r)) {
                 let n = p.after(e, t);

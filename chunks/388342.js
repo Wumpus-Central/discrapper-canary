@@ -18,7 +18,9 @@ e.exports = function (e) {
                 end: /"\}/,
                 contains: [e.BACKSLASH_ESCAPE],
             },
-            e.COMMENT(";", "$", { relevance: 0 }),
+            e.COMMENT(";", "$", {
+                relevance: 0,
+            }),
             {
                 className: "meta",
                 begin: "#",
@@ -28,7 +30,9 @@ e.exports = function (e) {
                         "addion cfunc cmd cmpopt comfunc const defcfunc deffunc define else endif enum epack func global if ifdef ifndef include modcfunc modfunc modinit modterm module pack packopt regcmd runtime undef usecom uselib",
                 },
                 contains: [
-                    e.inherit(e.QUOTE_STRING_MODE, { className: "string" }),
+                    e.inherit(e.QUOTE_STRING_MODE, {
+                        className: "string",
+                    }),
                     e.NUMBER_MODE,
                     e.C_NUMBER_MODE,
                     e.C_LINE_COMMENT_MODE,

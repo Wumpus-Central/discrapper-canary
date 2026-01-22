@@ -1,4 +1,6 @@
-r.d(t, { default: () => L });
+r.d(t, {
+    default: () => L,
+});
 var n = r(627968),
     s = r(64700),
     c = r(503698),
@@ -64,9 +66,14 @@ let I = (e) => {
                     onClick: d,
                     className: w.b,
                 }),
-                u && (0, n.jsx)(x.Vq, { className: w.Fg }),
+                u &&
+                    (0, n.jsx)(x.Vq, {
+                        className: w.Fg,
+                    }),
                 (0, n.jsx)("img", {
-                    className: i()(w.c8, { [w.mk]: u }),
+                    className: i()(w.c8, {
+                        [w.mk]: u,
+                    }),
                     src: r(377191),
                     alt: "",
                 }),
@@ -79,14 +86,18 @@ let I = (e) => {
                                   className: w.R_,
                                   children:
                                       null == a
-                                          ? (0, n.jsx)(o.y$y, { type: o.y$y.Type.PULSING_ELLIPSIS })
+                                          ? (0, n.jsx)(o.y$y, {
+                                                type: o.y$y.Type.PULSING_ELLIPSIS,
+                                            })
                                           : N.intl.format(N.t.TBsJfQ, {
                                                 monthlyPrice: (0, S.$g)(a.amount, a.currency),
                                             }),
                               }),
                               (0, n.jsx)("div", {
                                   className: w.md,
-                                  children: (0, n.jsx)(I, { locale: f }),
+                                  children: (0, n.jsx)(I, {
+                                      locale: f,
+                                  }),
                               }),
                           ],
                       }),
@@ -95,7 +106,9 @@ let I = (e) => {
     },
     M = (e) => {
         let { trialOffer: t, discountOffer: r, onClose: s } = e,
-            c = { section: k.JJy.STICKER_PREMIUM_TIER_2_UPSELL_MODAL };
+            c = {
+                section: k.JJy.STICKER_PREMIUM_TIER_2_UPSELL_MODAL,
+            };
         return (0, n.jsxs)(o.jlY, {
             "data-migration-pending": !0,
             className: w.qr,
@@ -107,7 +120,9 @@ let I = (e) => {
                     onClick: s,
                 }),
                 (0, n.jsx)(O.A, {
-                    textOptions: { textOverride: null != t || null != r ? N.intl.string(N.t["Gd/XHF"]) : void 0 },
+                    textOptions: {
+                        textOverride: null != t || null != r ? N.intl.string(N.t["Gd/XHF"]) : void 0,
+                    },
                     premiumModalAnalyticsLocation: c,
                     subscriptionTier: C.pe.TIER_2,
                     size: a.$n.Sizes.SMALL,
@@ -119,6 +134,7 @@ let I = (e) => {
             ],
         });
     };
+
 function L(e) {
     var t, r;
     let { onClose: c } = e,
@@ -194,7 +210,12 @@ function L(e) {
                         });
                 }
                 return e;
-            })({ "data-migration-pending": !0 }, i)),
+            })(
+                {
+                    "data-migration-pending": !0,
+                },
+                i,
+            )),
             (r = r =
                 {
                     "aria-labelledby": "sticker-pack-premium-upsell-modal-header",

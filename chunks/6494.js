@@ -1,8 +1,11 @@
-n.d(t, { n: () => o });
+n.d(t, {
+    n: () => o,
+});
 var r = n(150047),
     i = n(959462),
     a = n(3388),
     s = n(64700);
+
 function o(e, t) {
     let { collection: n, onLoadMore: o, scrollOffset: l = 1 } = e,
         c = (0, s.useRef)(null),

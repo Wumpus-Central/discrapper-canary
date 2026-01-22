@@ -1,8 +1,11 @@
-n.d(t, { L: () => h });
+n.d(t, {
+    L: () => h,
+});
 var r = n(64700),
     i = n(158954),
     a = n(397927),
     s = n(555115);
+
 function o(e, t, n) {
     return (
         t in e
@@ -16,6 +19,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -32,6 +36,7 @@ function l(e) {
     }
     return e;
 }
+
 function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -44,6 +49,7 @@ function c(e, t) {
     }
     return n;
 }
+
 function u(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -55,6 +61,7 @@ function u(e, t) {
         e
     );
 }
+
 function d(e, t) {
     if (null == e) return {};
     var n,
@@ -71,6 +78,7 @@ function d(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function f(e, t) {
     if (null == e) return {};
     var n,
@@ -97,10 +105,18 @@ let p = 10,
             };
         if (t)
             return {
-                from: { opacity: 0 },
-                enter: { opacity: 1 },
-                leave: { opacity: 0 },
-                config: { duration: 150 },
+                from: {
+                    opacity: 0,
+                },
+                enter: {
+                    opacity: 1,
+                },
+                leave: {
+                    opacity: 0,
+                },
+                config: {
+                    duration: 150,
+                },
             };
         switch (e) {
             case "top":
@@ -126,6 +142,7 @@ let p = 10,
             config: void 0,
         };
     };
+
 function h(e) {
     let { shouldShow: t, caretPosition: n, onExitComplete: o } = e,
         { reducedMotion: c } = r.useContext(i.CZY),

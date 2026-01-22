@@ -1,5 +1,10 @@
-n.d(t, { B: () => l }), n(896048), n(321073);
+n.d(t, {
+    B: () => l,
+}),
+    n(896048),
+    n(321073);
 var a = n(360619);
+
 function l() {
     let e = (0, a.PH)(),
         t = new Map();
@@ -12,6 +17,8 @@ function l() {
             let i = null != (n = l.parent) ? n : "root";
             t.set(a, []), t.has(i) || t.set(i, []), t.get(i).push(a);
         }),
-        { legacySettingDirectory: t }
+        {
+            legacySettingDirectory: t,
+        }
     );
 }

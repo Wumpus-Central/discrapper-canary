@@ -1,4 +1,7 @@
-n.d(t, { A: () => T }), n(896048);
+n.d(t, {
+    A: () => T,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -22,6 +25,7 @@ var r = n(627968),
     I = n(652215),
     v = n(985018),
     S = n(811911);
+
 function C(e, t, n) {
     return (
         t in e
@@ -44,15 +48,23 @@ class N extends i.PureComponent {
                   className: S.Fj,
                   align: A.A.Align.CENTER,
                   children: [
-                      (0, r.jsx)("div", { className: S.JX }),
-                      (0, r.jsx)("span", {
-                          className: S.WI,
-                          children: v.intl.format(v.t["LC+S+m"], { membersOnline: t }),
+                      (0, r.jsx)("div", {
+                          className: S.JX,
                       }),
-                      (0, r.jsx)("div", { className: S.Li }),
                       (0, r.jsx)("span", {
                           className: S.WI,
-                          children: v.intl.format(v.t.zRl6XR, { count: e }),
+                          children: v.intl.format(v.t["LC+S+m"], {
+                              membersOnline: t,
+                          }),
+                      }),
+                      (0, r.jsx)("div", {
+                          className: S.Li,
+                      }),
+                      (0, r.jsx)("span", {
+                          className: S.WI,
+                          children: v.intl.format(v.t.zRl6XR, {
+                              count: e,
+                          }),
                       }),
                   ],
               });
@@ -81,7 +93,9 @@ class N extends i.PureComponent {
                       (p = (0, r.jsxs)(A.A, {
                           align: A.A.Align.CENTER,
                           children: [
-                              (0, r.jsx)("div", { children: v.intl.string(v.t.cEnaWx) }),
+                              (0, r.jsx)("div", {
+                                  children: v.intl.string(v.t.cEnaWx),
+                              }),
                               (0, r.jsx)(u.A9s, {
                                   size: "md",
                                   color: "currentColor",
@@ -94,7 +108,9 @@ class N extends i.PureComponent {
             (0, r.jsxs)("div", {
                 className: a()(s, o === y.q.SMALL ? S.T8 : S.vm),
                 children: [
-                    (0, r.jsx)(h.A, { children: v.intl.string(v.t.s1KcLo) }),
+                    (0, r.jsx)(h.A, {
+                        children: v.intl.string(v.t.s1KcLo),
+                    }),
                     (0, r.jsxs)("div", {
                         className: S.Qs,
                         children: [
@@ -151,7 +167,9 @@ class N extends i.PureComponent {
                     } catch (e) {}
             }),
             C(this, "handleLogin", () => {
-                let e = { redirect_to: I.BVt.APPLICATION_STORE_LISTING_SKU(this.props.skuId) };
+                let e = {
+                    redirect_to: I.BVt.APPLICATION_STORE_LISTING_SKU(this.props.skuId),
+                };
                 (0, b.pX)(I.BVt.LOGIN, {
                     search: (0, s.stringify)(e),
                     source: "verified_guild_invite",

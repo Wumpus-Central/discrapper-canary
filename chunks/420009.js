@@ -1,9 +1,12 @@
-n.d(t, { A: () => l });
+n.d(t, {
+    A: () => l,
+});
 var r = n(64700),
     i = n(52133),
     a = n(803306),
     s = n(256587),
     o = n(287809);
+
 function l(e) {
     let { entry: t, channel: n } = e,
         l = r.useRef([]);

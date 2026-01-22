@@ -9,12 +9,12 @@ n.d(t, {
     n(896048);
 var r = n(627968),
     i = n(64700),
-    a = n(432022),
+    a = n(108531),
     s = n(397927),
     o = n(396583);
-let l = 3000,
-    c = 4000,
-    u = 6000;
+let l = 3e3,
+    c = 4e3,
+    u = 6e3;
 var d = (function (e) {
         return (e.SINE = "sine"), (e.COSINE = "cosine"), e;
     })({}),
@@ -36,35 +36,59 @@ let p = (e) => {
         m = (0, s.zhh)(
             null != u
                 ? {
-                      from: { y: 0 },
-                      to: { y: 1 },
-                      config: { duration: u.duration * _ },
+                      from: {
+                          y: 0,
+                      },
+                      to: {
+                          y: 1,
+                      },
+                      config: {
+                          duration: u.duration * _,
+                      },
                       loop: !0,
                   }
-                : { y: 0 },
+                : {
+                      y: 0,
+                  },
         ),
         g = (null == u ? void 0 : u.path) === "sine" ? Math.sin : Math.cos,
         [E, b] = (0, i.useState)(1),
         y = (0, s.zhh)(
             null != c
                 ? {
-                      from: { scale: E > 0 ? c.startScale : c.endScale },
-                      to: { scale: E > 0 ? c.endScale : c.startScale },
-                      config: { duration: c.duration * _ },
+                      from: {
+                          scale: E > 0 ? c.startScale : c.endScale,
+                      },
+                      to: {
+                          scale: E > 0 ? c.endScale : c.startScale,
+                      },
+                      config: {
+                          duration: c.duration * _,
+                      },
                       onRest: () => b((e) => -1 * e),
                   }
-                : { scale: 1 },
+                : {
+                      scale: 1,
+                  },
         ),
         [O, A] = (0, i.useState)(1),
         v = (0, s.zhh)(
             null != l
                 ? {
-                      from: { blur: O > 0 ? l.startBlurRadius : l.endBlurRadius },
-                      to: { blur: O > 0 ? l.endBlurRadius : l.startBlurRadius },
-                      config: { duration: l.duration * _ },
+                      from: {
+                          blur: O > 0 ? l.startBlurRadius : l.endBlurRadius,
+                      },
+                      to: {
+                          blur: O > 0 ? l.endBlurRadius : l.startBlurRadius,
+                      },
+                      config: {
+                          duration: l.duration * _,
+                      },
                       onRest: () => A((e) => -1 * e),
                   }
-                : { blur: 0 },
+                : {
+                      blur: 0,
+                  },
         ),
         S = (0, i.useMemo)(() => Math.round((750 + (200 * Math.random() - 100)) * _), [_]),
         I = 5,

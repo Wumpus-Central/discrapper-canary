@@ -1,9 +1,12 @@
-l.d(t, { A: () => o });
+l.d(t, {
+    A: () => o,
+});
 var n = l(64700),
     r = l(155999),
     s = l.n(r),
     a = l(311907),
     i = l(590180);
+
 function o() {
     let e = (0, a.bG)([i.A], () => i.A.products);
     return (0, n.useCallback)(

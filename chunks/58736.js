@@ -16,6 +16,7 @@ var r = n(627968),
     f = n(573435),
     p = n(640708),
     _ = n(870826);
+
 function h(e, t, n) {
     return (
         t in e
@@ -29,6 +30,7 @@ function h(e, t, n) {
         e
     );
 }
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -45,6 +47,7 @@ function m(e) {
     }
     return e;
 }
+
 function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -57,6 +60,7 @@ function g(e, t) {
     }
     return n;
 }
+
 function E(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -68,6 +72,7 @@ function E(e, t) {
         e
     );
 }
+
 function b(e, t) {
     if (null == e) return {};
     var n,
@@ -84,6 +89,7 @@ function b(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function y(e, t) {
     if (null == e) return {};
     var n,
@@ -113,7 +119,9 @@ let O = 24,
                 children: (0, r.jsx)(u.Heading, {
                     variant: "text-md/medium",
                     color: d ? "text-default" : void 0,
-                    className: s()(t, _.DD, { [_.NP]: null != o }),
+                    className: s()(t, _.DD, {
+                        [_.NP]: null != o,
+                    }),
                     id: c,
                     children: i,
                 }),
@@ -164,7 +172,12 @@ let O = 24,
                 "aria-haspopup": L,
                 "data-jump-section": j,
             } = e,
-            M = null != E ? { secondaryColorClass: E } : {},
+            M =
+                null != E
+                    ? {
+                          secondaryColorClass: E,
+                      }
+                    : {},
             k = (0, r.jsx)(
                 b,
                 m(
@@ -195,7 +208,9 @@ let O = 24,
                     null == A
                         ? (0, r.jsx)("div", {
                               ref: t,
-                              className: s()(n, _.P0, { [_.Ir]: l }),
+                              className: s()(n, _.P0, {
+                                  [_.Ir]: l,
+                              }),
                               "aria-label": U,
                               children: (0, r.jsx)(
                                   b,
@@ -246,7 +261,11 @@ let O = 24,
                                             children: k,
                                         })
                                       : k,
-                                  d ? (0, r.jsx)("span", { className: s()(_.bG, "top" === p ? _.uZ : _.kl) }) : null,
+                                  d
+                                      ? (0, r.jsx)("span", {
+                                            className: s()(_.bG, "top" === p ? _.uZ : _.kl),
+                                        })
+                                      : null,
                                   a,
                               ],
                           }),
@@ -268,8 +287,11 @@ let O = 24,
     }),
     I = (e) => {
         let { className: t } = e;
-        return (0, r.jsx)(p.A, { className: s()(_.Om, t) });
+        return (0, r.jsx)(p.A, {
+            className: s()(_.Om, t),
+        });
     };
+
 function T(e) {
     let { direction: t = "right", className: n } = e;
     return "right" === t
@@ -320,7 +342,9 @@ let C = (e) => {
                     className: _.cM,
                     children: [
                         (0, r.jsxs)("div", {
-                            className: s()(_.Y_, n, { [_.E1]: b }),
+                            className: s()(_.Y_, n, {
+                                [_.E1]: b,
+                            }),
                             onDoubleClick: h,
                             children: [
                                 l.Fr && null != v

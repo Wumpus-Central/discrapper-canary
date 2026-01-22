@@ -1,4 +1,8 @@
-n.d(t, { Ay: () => O }), n(228524), n(65821);
+n.d(t, {
+    Ay: () => O,
+}),
+    n(228524),
+    n(65821);
 var r = n(310784),
     i = n.n(r),
     a = n(563304),
@@ -16,6 +20,7 @@ let { Themes: _ } = f.zv,
     { Shadows: g } = u.z,
     { Spacing: E } = d.z,
     b = Symbol("semanticColor");
+
 function y(e) {
     if ("string" == typeof e) {
         let t = e.toUpperCase();
@@ -26,11 +31,15 @@ function y(e) {
 }
 let O = {
     themes: _,
-    colors: s()(h, (e, t) => ({ [b]: t })),
+    colors: s()(h, (e, t) => ({
+        [b]: t,
+    })),
     unsafe_rawColors: m,
     shadows: s()(g, (e) => {
         function t(t) {
-            return { resolve: (n, r) => t(e[n].nativeStyles, r) };
+            return {
+                resolve: (n, r) => t(e[n].nativeStyles, r),
+            };
         }
         return {
             shadowOffset: t((e, t) => (t ? void 0 : e.shadowOffset)),

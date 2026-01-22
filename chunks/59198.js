@@ -1,4 +1,7 @@
-t.d(e, { W: () => p }), t(896048);
+t.d(e, {
+    W: () => p,
+}),
+    t(896048);
 var n = t(627968),
     r = t(64700),
     s = t(284009),
@@ -12,6 +15,7 @@ var n = t(627968),
     u = t(985018),
     N = t(689588);
 let h = new d.A("TwoWayLinkDiscordConsentWeb");
+
 function p(a) {
     let {
             platformType: e,

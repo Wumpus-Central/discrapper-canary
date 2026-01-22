@@ -12,6 +12,7 @@ var i = n(562465),
     u = n(45938),
     d = n(652215),
     f = n(788868);
+
 function p(e, t, n) {
     return (
         t in e
@@ -25,6 +26,7 @@ function p(e, t, n) {
         e
     );
 }
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -63,7 +65,9 @@ async function h(e) {
                 type: "GIFT_CODE_RESOLVE_SUCCESS",
                 giftCode: r,
             }),
-            { giftCode: r }
+            {
+                giftCode: r,
+            }
         );
     } catch (t) {
         throw (

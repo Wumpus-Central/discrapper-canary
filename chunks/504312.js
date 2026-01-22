@@ -1,4 +1,9 @@
-n.d(t, { Y: () => u }), n(321073), n(896048), n(228524);
+n.d(t, {
+    Y: () => u,
+}),
+    n(321073),
+    n(896048),
+    n(228524);
 var r = n(627968),
     i = n(64700),
     a = n(397927),
@@ -216,7 +221,9 @@ let u = {
                                   id: 2,
                                   label: "Server Boost",
                                   amount: 499,
-                                  icon: (0, r.jsx)(a.tvc, { size: "xs" }),
+                                  icon: (0, r.jsx)(a.tvc, {
+                                      size: "xs",
+                                  }),
                               },
                           ]
                         : [];
@@ -261,6 +268,7 @@ let u = {
                     giftUsername: _,
                     giftNickname: h,
                 } = e;
+
                 function m(e, c) {
                     return (0, r.jsx)(s.f7, {
                         header: n ? t : void 0,

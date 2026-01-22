@@ -6,6 +6,7 @@ var r = n(909144),
     i = n(314739),
     a = n(64700);
 let s = a.createContext(null);
+
 function o(e) {
     let { locale: t, children: n } = e,
         i = a.useMemo(
@@ -15,13 +16,27 @@ function o(e) {
             }),
             [t],
         );
-    return a.createElement(s.Provider, { value: i }, n);
+    return a.createElement(
+        s.Provider,
+        {
+            value: i,
+        },
+        n,
+    );
 }
+
 function l(e) {
     let { children: t } = e,
         n = (0, i.D)();
-    return a.createElement(s.Provider, { value: n }, t);
+    return a.createElement(
+        s.Provider,
+        {
+            value: n,
+        },
+        t,
+    );
 }
+
 function c(e) {
     let { locale: t, children: n } = e;
     return t
@@ -29,8 +44,11 @@ function c(e) {
               locale: t,
               children: n,
           })
-        : a.createElement(l, { children: n });
+        : a.createElement(l, {
+              children: n,
+          });
 }
+
 function u() {
     let e = (0, i.D)();
     return (0, a.useContext)(s) || e;

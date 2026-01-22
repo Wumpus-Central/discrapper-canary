@@ -1,6 +1,6 @@
 class t {
     constructor() {
-        (this.max = 1000), (this.map = new Map());
+        (this.max = 1e3), (this.map = new Map());
     }
     get(e) {
         let t = this.map.get(e);

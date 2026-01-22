@@ -1,4 +1,7 @@
-n.d(t, { default: () => _ }), n(896048);
+n.d(t, {
+    default: () => _,
+}),
+    n(896048);
 var l = n(627968),
     i = n(64700),
     r = n(158954),
@@ -62,13 +65,19 @@ let _ = (e) => {
             };
         switch (w) {
             case d.K5.DEFAULT:
-                e = G.intl.format(G.t.iWlB6h, { onClick: t });
+                e = G.intl.format(G.t.iWlB6h, {
+                    onClick: t,
+                });
                 break;
             case d.K5.TODO:
-                e = G.intl.format(G.t["/rjozD"], { onClick: t });
+                e = G.intl.format(G.t["/rjozD"], {
+                    onClick: t,
+                });
                 break;
             case d.K5.RESOURCE:
-                e = G.intl.format(G.t.Nf5ptw, { onClick: t });
+                e = G.intl.format(G.t.Nf5ptw, {
+                    onClick: t,
+                });
                 break;
             case d.K5.RULES:
                 e = G.intl.format(G.t["kB1f+3"], {
@@ -100,22 +109,30 @@ let _ = (e) => {
         t.type === h.rbe.GUILD_CATEGORY
             ? {
                   deleteText: G.intl.string(G.t.ifbXnL),
-                  deleteBody: G.intl.format(G.t.a6Gz9J, { channelName: v }),
+                  deleteBody: G.intl.format(G.t.a6Gz9J, {
+                      channelName: v,
+                  }),
               }
             : t.isForumPost()
               ? {
                     deleteText: x ? G.intl.string(G.t.nEOg1N) : G.intl.string(G.t.xwMqD7),
                     deleteBody:
                         x && B && !L
-                            ? G.intl.format(G.t["6/pY2+"], { postName: v })
+                            ? G.intl.format(G.t["6/pY2+"], {
+                                  postName: v,
+                              })
                             : x
-                              ? G.intl.format(G.t.su3voL, { postName: v })
+                              ? G.intl.format(G.t.su3voL, {
+                                    postName: v,
+                                })
                               : G.intl.string(G.t.RUHcyk),
                 }
               : t.isThread()
                 ? {
                       deleteText: G.intl.string(G.t.H7vTe2),
-                      deleteBody: G.intl.format(G.t.a6Gz9J, { channelName: v }),
+                      deleteBody: G.intl.format(G.t.a6Gz9J, {
+                          channelName: v,
+                      }),
                   }
                 : D && T > 0
                   ? {
@@ -127,7 +144,9 @@ let _ = (e) => {
                     }
                   : {
                         deleteText: G.intl.string(G.t["8D8Rsb"]),
-                        deleteBody: G.intl.format(G.t.a6Gz9J, { channelName: v }),
+                        deleteBody: G.intl.format(G.t.a6Gz9J, {
+                            channelName: v,
+                        }),
                     };
     return (0, l.jsx)(r.Modal, {
         size: "sm",
@@ -151,7 +170,9 @@ let _ = (e) => {
             ? (0, l.jsx)(a.Text, {
                   variant: "text-md/normal",
                   color: "text-default",
-                  children: G.intl.format(G.t.Ze005A, { count: p.length }),
+                  children: G.intl.format(G.t.Ze005A, {
+                      count: p.length,
+                  }),
               })
             : null,
     });

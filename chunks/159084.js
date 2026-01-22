@@ -1,4 +1,6 @@
-n.d(t, { z: () => f });
+n.d(t, {
+    z: () => f,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -9,6 +11,7 @@ var i = n(311907),
     c = n(985018),
     u = n(649778);
 let d = n(843020);
+
 function p(e) {
     let { children: t } = e,
         n = (0, i.bG)([a.A], () => a.A.getHighestState());
@@ -30,7 +33,9 @@ function p(e) {
                                       className: u.Ns,
                                       children: c.intl.string(c.t.csrAMJ),
                                   }),
-                                  (0, r.jsx)(l.tK, { children: c.intl.string(c.t.ghBJz9) }),
+                                  (0, r.jsx)(l.tK, {
+                                      children: c.intl.string(c.t.ghBJz9),
+                                  }),
                               ],
                           }),
                       }),
@@ -47,7 +52,9 @@ function p(e) {
                       className: u.kL,
                       children: (0, r.jsxs)(l.Ay, {
                           children: [
-                              (0, r.jsx)(l.hE, { children: c.intl.string(c.t["Z+hCVU"]) }),
+                              (0, r.jsx)(l.hE, {
+                                  children: c.intl.string(c.t["Z+hCVU"]),
+                              }),
                               (0, r.jsx)(l.CK, {}),
                           ],
                       }),
@@ -55,8 +62,10 @@ function p(e) {
               ],
           });
 }
+
 function f(e) {
     var t, n;
+
     function i(t) {
         return (0, r.jsx)(p, {
             children: (0, r.jsx)(

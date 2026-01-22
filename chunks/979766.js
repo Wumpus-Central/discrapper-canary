@@ -1,4 +1,6 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var i = n(627968);
 n(64700);
 var l = n(397927),
@@ -7,6 +9,7 @@ var l = n(397927),
     a = n(145530),
     o = n(652215),
     u = n(985018);
+
 function c(e, t) {
     return e.state !== o.cmJ.SEND_FAILED && (0, s.A)(e, t)
         ? !1 === e.pinned

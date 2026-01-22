@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968);
 n(64700);
 var i = n(582754),
@@ -18,8 +20,12 @@ let f = function (e) {
         : (0, r.jsxs)("div", {
               className: c.bR,
               children: [
-                  (0, r.jsx)("div", { className: c.v0 }),
-                  (0, r.jsx)("div", { className: c.X2 }),
+                  (0, r.jsx)("div", {
+                      className: c.v0,
+                  }),
+                  (0, r.jsx)("div", {
+                      className: c.X2,
+                  }),
                   (0, r.jsx)("div", {
                       className: c.Dg,
                       children: (0, r.jsxs)("div", {

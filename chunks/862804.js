@@ -1,4 +1,6 @@
-n.d(t, { j: () => g });
+n.d(t, {
+    j: () => g,
+});
 var r = n(47167),
     i = n(958340),
     a = n(734057),
@@ -10,6 +12,7 @@ var r = n(47167),
     d = n(405269);
 n(427930);
 var f = n(985018);
+
 function p(e, t, n) {
     return (
         t in e
@@ -24,6 +27,7 @@ function p(e, t, n) {
     );
 }
 let _ = 16;
+
 function h(e, t) {
     return {
         originLabel: e.name,
@@ -40,6 +44,7 @@ function h(e, t) {
         }),
     };
 }
+
 function m(e, t) {
     return {
         originLabel: e,
@@ -67,7 +72,9 @@ class g {
             if (null == e) {
                 let e = E.getGuild(S.guild_id);
                 return null == e
-                    ? { snapshotIndex: y }
+                    ? {
+                          snapshotIndex: y,
+                      }
                     : {
                           snapshotIndex: y,
                           footerInfo: h(e, v),
@@ -78,13 +85,20 @@ class g {
                       snapshotIndex: y,
                       footerInfo: m((0, r.m1)(e, p, _, !0), v),
                   }
-                : { snapshotIndex: y };
+                : {
+                      snapshotIndex: y,
+                  };
         }
         let I = null == (n = O.messageReference) ? void 0 : n.guild_id;
-        if (null == I) return { snapshotIndex: y };
+        if (null == I)
+            return {
+                snapshotIndex: y,
+            };
         let T = null != (e = E.getGuild(I)) ? e : b.getGuild(I);
         return null == T
-            ? { snapshotIndex: y }
+            ? {
+                  snapshotIndex: y,
+              }
             : {
                   snapshotIndex: y,
                   footerInfo: h(T, v),

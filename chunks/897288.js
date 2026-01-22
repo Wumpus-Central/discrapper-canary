@@ -1,4 +1,7 @@
-n.d(t, { A: () => v }), n(638769);
+n.d(t, {
+    A: () => v,
+}),
+    n(638769);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -13,6 +16,7 @@ var r = n(627968),
     _ = n(652215),
     h = n(985018),
     m = n(420206);
+
 function g(e, t, n) {
     return (
         t in e
@@ -26,6 +30,7 @@ function g(e, t, n) {
         e
     );
 }
+
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,6 +47,7 @@ function E(e) {
     }
     return e;
 }
+
 function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -54,6 +60,7 @@ function b(e, t) {
     }
     return n;
 }
+
 function y(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -65,6 +72,7 @@ function y(e, t) {
         e
     );
 }
+
 function O(e, t) {
     if (null == e) return {};
     var n,
@@ -81,6 +89,7 @@ function O(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function A(e, t) {
     if (null == e) return {};
     var n,
@@ -91,6 +100,7 @@ function A(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function v(e) {
     let { guild: t, roles: n, className: a } = e,
         g = i.useMemo(() => "invite-roles-".concat((0, o.A)()), []),
@@ -107,7 +117,9 @@ function v(e) {
         );
     if (null == t || 0 === A.length) return null;
     let v = A.length,
-        S = h.intl.formatToPlainString(h.t.PCs0oo, { numRoles: v });
+        S = h.intl.formatToPlainString(h.t.PCs0oo, {
+            numRoles: v,
+        });
     return (0, r.jsx)(c.hD, {
         navigator: b,
         children: (0, r.jsx)(c.PR, {

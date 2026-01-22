@@ -1,4 +1,6 @@
-n.d(t, { A: () => k });
+n.d(t, {
+    A: () => k,
+});
 var r = n(627968);
 n(64700);
 var i = n(284009),
@@ -30,6 +32,7 @@ var i = n(284009),
     w = n(927578),
     P = n(985018),
     D = n(264671);
+
 function x(e, t, n) {
     return (
         t in e
@@ -43,6 +46,7 @@ function x(e, t, n) {
         e
     );
 }
+
 function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -59,6 +63,7 @@ function L(e) {
     }
     return e;
 }
+
 function j(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -71,6 +76,7 @@ function j(e, t) {
     }
     return n;
 }
+
 function M(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -82,6 +88,7 @@ function M(e, t) {
         e
     );
 }
+
 function k() {
     var e, t, n, i, x, j, k, U;
     let G = (0, s.bG)([R.default], () => {
@@ -103,7 +110,9 @@ function k() {
         } = (0, s.cf)([N.A], () => {
             let e = N.A.getAllPending(),
                 t = N.A.getErrors();
-            return M(L({}, e), { errors: t });
+            return M(L({}, e), {
+                errors: t,
+            });
         }),
         Q = (0, S.V7)({
             userId: G.id,
@@ -203,7 +212,9 @@ function k() {
                 },
                 "decoration",
             ),
-            (0, r.jsx)(g.A, { user: G }),
+            (0, r.jsx)(g.A, {
+                user: G,
+            }),
             (0, r.jsx)(
                 y.A,
                 {

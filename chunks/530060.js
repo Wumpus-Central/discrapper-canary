@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -24,7 +26,9 @@ let h = (e) => {
                       (0, r.jsx)(o.DZT, {
                           variant: "heading-xxl/extrabold",
                           className: _.R_,
-                          style: { textAlign: "start" },
+                          style: {
+                              textAlign: "start",
+                          },
                           children: p.intl.string(f.default.EdGvBM),
                       }),
                       (0, r.jsx)(o.EYj, {

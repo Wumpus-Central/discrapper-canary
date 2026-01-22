@@ -8,6 +8,7 @@ var r = n(64700),
     s = n(488803),
     o = n(522055),
     l = n(645619);
+
 function c(e) {
     var t, n, r, i;
     let c = null != (t = null == (n = a.A.getGuild(e)) ? void 0 : n.premiumSubscriberCount) ? t : 0,
@@ -27,6 +28,7 @@ function c(e) {
         total: c,
     };
 }
+
 function u(e) {
     var t;
     let n =

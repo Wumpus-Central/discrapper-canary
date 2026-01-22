@@ -9,6 +9,7 @@ let a = {
     CollectionRoot: ({ collection: e, renderDropIndicator: t }) => s(e, null, t),
     CollectionBranch: ({ collection: e, parent: t, renderDropIndicator: n }) => s(e, t, n),
 };
+
 function s(e, t, n) {
     return (0, r.p)({
         items: t ? e.getChildren(t.key) : e,
@@ -31,6 +32,7 @@ function s(e, t, n) {
         },
     });
 }
+
 function o(e, t, n) {
     let r = t.key,
         a = e.getKeyAfter(r),
@@ -47,13 +49,19 @@ function o(e, t, n) {
                 key: r.key,
                 dropPosition: "after",
             });
-            (0, i.isValidElement)(t) && l.push((0, i.cloneElement)(t, { key: `${r.key}-after` })),
+            (0, i.isValidElement)(t) &&
+                l.push(
+                    (0, i.cloneElement)(t, {
+                        key: `${r.key}-after`,
+                    }),
+                ),
                 (r = null != r.parentKey ? e.getItem(r.parentKey) : null);
         }
     }
     return l;
 }
 let l = (0, i.createContext)(a);
+
 function c(e) {
     return (0, i.useMemo)(() => (null != e ? new Set([e]) : null), [e]);
 }

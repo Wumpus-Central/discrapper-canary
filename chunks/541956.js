@@ -12,13 +12,19 @@ var i,
         (i[(i.REMOVE_ROLE = 1)] = "REMOVE_ROLE"),
         (i[(i.DENY_ROLE = 2)] = "DENY_ROLE"),
         i);
+
 function c(e, t) {
     let n;
     0 === e
         ? (n = s.intl.format(s.t["/S6f5y"], {}))
         : 1 === e
-          ? (n = s.intl.format(s.t.EBhv4R, { name: t }))
-          : 2 === e && (n = s.intl.format(s.t["59Dbw0"], { name: t })),
+          ? (n = s.intl.format(s.t.EBhv4R, {
+                name: t,
+            }))
+          : 2 === e &&
+            (n = s.intl.format(s.t["59Dbw0"], {
+                name: t,
+            })),
         r.A.show({
             title: s.intl.string(s.t.vElC9b),
             body: n,

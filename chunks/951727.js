@@ -35,6 +35,7 @@ let I = {
     editing: !1,
     showResults: !1,
 };
+
 function T(e, t) {
     for (let n of e) if (("number" == typeof n.emoji.id ? "".concat(n.emoji.id) : n.emoji.id) === t) return n;
 }
@@ -63,7 +64,12 @@ let C = (e) =>
             },
             () => "loserSelected",
         )
-        .with({ isExpired: !0 }, () => "notVoted")
+        .with(
+            {
+                isExpired: !0,
+            },
+            () => "notVoted",
+        )
         .with(
             {
                 didSelfVote: !0,
@@ -78,7 +84,12 @@ let C = (e) =>
             },
             () => "notVoted",
         )
-        .with({ isSelected: !0 }, () => "selected")
+        .with(
+            {
+                isSelected: !0,
+            },
+            () => "selected",
+        )
         .with(
             {
                 isExpired: !1,
@@ -87,6 +98,7 @@ let C = (e) =>
             () => "notVoted",
         )
         .otherwise(() => "normalVote");
+
 function N(e) {
     let { animateEmoji: t = !1, size: n = 48 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
     if (null == e) return;
@@ -111,9 +123,11 @@ function N(e) {
         animated: l,
     };
 }
+
 function R(e) {
     return null == e.poll || f.A.getMessage(e.channel_id, e.id) === e;
 }
+
 function w(e, t) {
     var n, r, i, a;
     let { formattedExpirationLabel: s } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
@@ -165,6 +179,7 @@ function w(e, t) {
         showResults: y,
     };
 }
+
 function P(e, t) {
     var n, s;
     let {
@@ -181,7 +196,9 @@ function P(e, t) {
         g = (0, y.T)(f, h),
         A = d.answers,
         v = d.layout_type,
-        I = w(e, t, { formattedExpirationLabel: c });
+        I = w(e, t, {
+            formattedExpirationLabel: c,
+        });
     if (null == I) return;
     let {
             canTapAnswers: R,
@@ -201,7 +218,9 @@ function P(e, t) {
             showResults: Y,
         } = I,
         W = (0, E.aw)(V),
-        K = S.intl.formatToPlainString(S.t.XRkuof, { count: W }),
+        K = S.intl.formatToPlainString(S.t.XRkuof, {
+            count: W,
+        }),
         z = Math.max(
             ...A.map((e) => {
                 var t, n;
@@ -230,7 +249,9 @@ function P(e, t) {
                 answerId: s,
                 pollMedia: {
                     text: e.poll_media.text,
-                    emoji: N(e.poll_media.emoji, { animateEmoji: o }),
+                    emoji: N(e.poll_media.emoji, {
+                        animateEmoji: o,
+                    }),
                     stickerId: e.poll_media.sticker_id,
                     attachmentIds: e.poll_media.attachment_ids,
                 },
@@ -242,7 +263,11 @@ function P(e, t) {
                 votesPercentage: Math.round(100 * u),
                 votes: (0, r.YW)(v)
                     .with(i.Z.IMAGE_ONLY_ANSWERS, () => "(".concat(c.toLocaleString(), ")"))
-                    .otherwise(() => S.intl.formatToPlainString(S.t.XRkuof, { count: c })),
+                    .otherwise(() =>
+                        S.intl.formatToPlainString(S.t.XRkuof, {
+                            count: c,
+                        }),
+                    ),
             };
         }),
         X = (0, r.YW)({
@@ -254,20 +279,40 @@ function P(e, t) {
             isInteractive: G,
             showResults: Y,
         })
-            .with({ isInteractive: !1 }, () => void 0)
-            .with({ isExpired: !0 }, () => void 0)
-            .with({ isEditingVote: !0 }, () => ({
-                label: S.intl.string(S.t.JwkNU4),
-                presentation: "button",
-                enabled: j,
-                type: "submit",
-            }))
-            .with({ canRemoveVote: !0 }, () => ({
-                label: S.intl.string(S.t.XhQEh8),
-                presentation: "secondaryButton",
-                enabled: !0,
-                type: "remove",
-            }))
+            .with(
+                {
+                    isInteractive: !1,
+                },
+                () => void 0,
+            )
+            .with(
+                {
+                    isExpired: !0,
+                },
+                () => void 0,
+            )
+            .with(
+                {
+                    isEditingVote: !0,
+                },
+                () => ({
+                    label: S.intl.string(S.t.JwkNU4),
+                    presentation: "button",
+                    enabled: j,
+                    type: "submit",
+                }),
+            )
+            .with(
+                {
+                    canRemoveVote: !0,
+                },
+                () => ({
+                    label: S.intl.string(S.t.XhQEh8),
+                    presentation: "secondaryButton",
+                    enabled: !0,
+                    type: "remove",
+                }),
+            )
             .with(
                 {
                     hasVoted: !1,
@@ -303,12 +348,17 @@ function P(e, t) {
                     enabled: !1,
                 }),
             )
-            .with({ isEditingVote: !0 }, () => ({
-                label: S.intl.string(S.t["ETE/oC"]),
-                presentation: "textButton",
-                enabled: !0,
-                type: "cancel",
-            }))
+            .with(
+                {
+                    isEditingVote: !0,
+                },
+                () => ({
+                    label: S.intl.string(S.t["ETE/oC"]),
+                    presentation: "textButton",
+                    enabled: !0,
+                    type: "cancel",
+                }),
+            )
             .otherwise(() => ({
                 label: K,
                 secondaryLabel: L,
@@ -332,9 +382,24 @@ function P(e, t) {
             isExpired: U,
             canSelectMultipleAnswers: J,
         })
-            .with({ isInteractive: !1 }, () => void 0)
-            .with({ isExpired: !0 }, () => void 0)
-            .with({ canSelectMultipleAnswers: !0 }, () => S.intl.string(S.t.yCXvxa))
+            .with(
+                {
+                    isInteractive: !1,
+                },
+                () => void 0,
+            )
+            .with(
+                {
+                    isExpired: !0,
+                },
+                () => void 0,
+            )
+            .with(
+                {
+                    canSelectMultipleAnswers: !0,
+                },
+                () => S.intl.string(S.t.yCXvxa),
+            )
             .otherwise(() => S.intl.string(S.t["9Y2wKO"]));
     return {
         question: d.question,
@@ -345,10 +410,30 @@ function P(e, t) {
             canTapAnswers: R,
             canSelectMultipleAnswers: J,
         })
-            .with({ tapShouldOpenVotersModal: !0 }, () => b.CQ.LIST)
-            .with({ canTapAnswers: !1 }, () => b.CQ.LIST)
-            .with({ canSelectMultipleAnswers: !1 }, () => b.CQ.RADIO_BUTTONS)
-            .with({ canSelectMultipleAnswers: !0 }, () => b.CQ.CHECKBOXES)
+            .with(
+                {
+                    tapShouldOpenVotersModal: !0,
+                },
+                () => b.CQ.LIST,
+            )
+            .with(
+                {
+                    canTapAnswers: !1,
+                },
+                () => b.CQ.LIST,
+            )
+            .with(
+                {
+                    canSelectMultipleAnswers: !1,
+                },
+                () => b.CQ.RADIO_BUTTONS,
+            )
+            .with(
+                {
+                    canSelectMultipleAnswers: !0,
+                },
+                () => b.CQ.CHECKBOXES,
+            )
             .exhaustive(),
         answerTapAccessibilityLabel: H ? Z : void 0,
         layoutType: v,

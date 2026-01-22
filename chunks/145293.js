@@ -1,4 +1,6 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var r = n(627968);
 n(64700);
 var i = n(960488),
@@ -15,7 +17,9 @@ var i = n(960488),
     A = n(652215),
     g = n(788868),
     m = n(187585);
-let b = l.Ay.connectStores([f.default], () => ({ user: f.default.getCurrentUser() }))(
+let b = l.Ay.connectStores([f.default], () => ({
+    user: f.default.getCurrentUser(),
+}))(
     (0, o.A)(
         (0, s.A)((e) => {
             let { isAuthenticated: t, user: n } = e,
@@ -32,13 +36,19 @@ let b = l.Ay.connectStores([f.default], () => ({ user: f.default.getCurrentUser(
                                       ? (0, r.jsx)(d.A, {
                                             align: d.A.Align.CENTER,
                                             justify: d.A.Justify.CENTER,
-                                            children: (0, r.jsx)(a.y$y, { className: m.u1 }),
+                                            children: (0, r.jsx)(a.y$y, {
+                                                className: m.u1,
+                                            }),
                                         })
-                                      : (0, r.jsx)(p.A, { entrypoint: g.tU.ApplicationStoreHome }),
+                                      : (0, r.jsx)(p.A, {
+                                            entrypoint: g.tU.ApplicationStoreHome,
+                                        }),
                           }),
                       ],
                   })
-                : (0, r.jsx)(i.rd, { to: A.BVt.LOGIN });
+                : (0, r.jsx)(i.rd, {
+                      to: A.BVt.LOGIN,
+                  });
         }),
     ),
 );

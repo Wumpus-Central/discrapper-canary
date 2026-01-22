@@ -1,4 +1,6 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(322811),
     i = n(355418),
     a = n(658809);
@@ -34,7 +36,10 @@ class s extends i.c {
                 e.imply("hour", 22), e.imply("minute", 0), e.imply("second", 0), e.imply("meridiem", r.FF.PM);
                 break;
             case "mitternacht":
-                e.get("hour") > 1 && e.addDurationAsImplied({ day: 1 }),
+                e.get("hour") > 1 &&
+                    e.addDurationAsImplied({
+                        day: 1,
+                    }),
                     e.imply("hour", 0),
                     e.imply("minute", 0),
                     e.imply("second", 0),

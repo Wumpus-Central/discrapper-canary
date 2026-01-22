@@ -1,7 +1,10 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r,
     l = n(311907),
     i = n(73153);
+
 function a(e, t, n) {
     return (
         t in e
@@ -15,7 +18,9 @@ function a(e, t, n) {
         e
     );
 }
-let s = { toastsEnabledForChannel: {} },
+let s = {
+        toastsEnabledForChannel: {},
+    },
     o = s;
 class c extends (r = l.Ay.PersistedStore) {
     initialize(e) {

@@ -1,4 +1,6 @@
-n.d(t, { A: () => v });
+n.d(t, {
+    A: () => v,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -14,6 +16,7 @@ var i = n(503698),
     b = n(35275),
     m = n(985018),
     p = n(518863);
+
 function x(e) {
     let { subscribers: t } = e;
     return (0, r.jsxs)("div", {
@@ -30,7 +33,9 @@ function x(e) {
             (0, r.jsxs)("div", {
                 className: p.Dn,
                 children: [
-                    (0, r.jsx)(b.A, { color: s.A.colors.WHITE.css }),
+                    (0, r.jsx)(b.A, {
+                        color: s.A.colors.WHITE.css,
+                    }),
                     (0, r.jsx)(a.Text, {
                         variant: "text-md/normal",
                         color: "always-white",
@@ -41,6 +46,7 @@ function x(e) {
         ],
     });
 }
+
 function h(e) {
     let { guildName: t, guildIcon: n, guildAvatarUrl: i, subscriberCount: l } = e,
         s = (0, u.dangerouslyConstructGuildRecordFromUntypedObject)({
@@ -64,12 +70,16 @@ function h(e) {
                         color: "text-strong",
                         children: t,
                     }),
-                    null != l && (0, r.jsx)(x, { subscribers: l }),
+                    null != l &&
+                        (0, r.jsx)(x, {
+                            subscribers: l,
+                        }),
                 ],
             }),
         ],
     });
 }
+
 function j(e) {
     let { quote: t, quoteAttribution: n, quoteAttributionTitle: i } = e;
     return (0, r.jsxs)("div", {
@@ -91,6 +101,7 @@ function j(e) {
         ],
     });
 }
+
 function O(e) {
     let { emojisToShow: t, notShownEmojiCount: n, storePageUrl: i } = e,
         s = null != t && t.length > 0,
@@ -163,6 +174,7 @@ function O(e) {
               }),
     });
 }
+
 function y(e) {
     let { highlightedCreatorGuild: t } = e,
         { guild_id: n, quote: i, quote_attribution: l, quote_attribution_title: s } = t,
@@ -205,6 +217,7 @@ function y(e) {
         ],
     });
 }
+
 function v(e) {
     let { highlightedCreators: t } = e;
     return (0, r.jsxs)("div", {
@@ -214,12 +227,17 @@ function v(e) {
                 color: "text-strong",
                 children: m.intl.string(m.t["tJp+QV"]),
             }),
-            (0, r.jsx)(a.hKd, { size: 24 }),
+            (0, r.jsx)(a.hKd, {
+                size: 24,
+            }),
             (0, r.jsx)(g.A, {
                 carouselClassName: p.g9,
                 items: t,
-                renderItem: (e) => (0, r.jsx)(y, { highlightedCreatorGuild: e }),
-                intervalBetweenAutomaticItemRotations: 7000,
+                renderItem: (e) =>
+                    (0, r.jsx)(y, {
+                        highlightedCreatorGuild: e,
+                    }),
+                intervalBetweenAutomaticItemRotations: 7e3,
             }),
         ],
     });

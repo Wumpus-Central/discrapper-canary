@@ -1,4 +1,6 @@
-n.d(t, { d: () => U });
+n.d(t, {
+    d: () => U,
+});
 var r = n(417597),
     i = n(582754),
     a = n(736653),
@@ -53,10 +55,16 @@ let k = (e, t, n) => ((0, i.Mw)(e) ? t : n),
                     }
                 };
                 return U
-                    ? p.intl.format(p.t.aj1pfZ, { onCheckItOutClick: t })
-                    : p.intl.format(p.t.d2oYS8, { onTryItOutClick: t });
+                    ? p.intl.format(p.t.aj1pfZ, {
+                          onCheckItOutClick: t,
+                      })
+                    : p.intl.format(p.t.d2oYS8, {
+                          onTryItOutClick: t,
+                      });
             },
-            V = (0, l.Xq)(u.f3 / 1024, { useKibibytes: !0 });
+            V = (0, l.Xq)(u.f3 / 1024, {
+                useKibibytes: !0,
+            });
         return {
             badge: {
                 title: p.intl.string(p.t.SS87rQ),
@@ -150,8 +158,12 @@ let k = (e, t, n) => ((0, i.Mw)(e) ? t : n),
                 imageClassName: t.superReactionsImage,
             },
             upload: {
-                title: p.intl.formatToPlainString(p.t.jqhAdL, { premiumMaxSize: V }),
-                description: p.intl.formatToPlainString(p.t["HI+cfm"], { premiumMaxSize: V }),
+                title: p.intl.formatToPlainString(p.t.jqhAdL, {
+                    premiumMaxSize: V,
+                }),
+                description: p.intl.formatToPlainString(p.t["HI+cfm"], {
+                    premiumMaxSize: V,
+                }),
                 imageSource: M,
                 imageClassName: t.uploadImage,
             },

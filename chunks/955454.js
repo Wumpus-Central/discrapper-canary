@@ -1,4 +1,8 @@
-n.d(t, { A: () => O }), n(896048), n(638769);
+n.d(t, {
+    A: () => O,
+}),
+    n(896048),
+    n(638769);
 var r = n(627968),
     l = n(64700),
     i = n(735438),
@@ -16,6 +20,7 @@ var r = n(627968),
     m = n(652215),
     A = n(37411),
     y = n(357976);
+
 function O(e) {
     let { channel: t, channelRecord: n, deleteChannel: i } = e,
         O = (0, s.yK)(

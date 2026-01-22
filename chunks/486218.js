@@ -1,1 +1,3 @@
-e.exports = { U: "_79aa3c6a8ecad5b5" };
+e.exports = {
+    U: "_79aa3c6a8ecad5b5",
+};

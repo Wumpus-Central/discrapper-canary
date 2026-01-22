@@ -1,4 +1,6 @@
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -37,7 +39,9 @@ let _ = (e) => {
                             containerVisibilityPercentage: h,
                             isMotionReduced: i,
                         }),
-                        (0, r.jsx)(c.A, { children: f.intl.string(f.t["hqjDX/"]) }),
+                        (0, r.jsx)(c.A, {
+                            children: f.intl.string(f.t["hqjDX/"]),
+                        }),
                     ],
                 }),
             }),

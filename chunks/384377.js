@@ -4,7 +4,10 @@ n.d(t, {
 });
 let r = (0, n(353640).v)((e) => ({
         toastType: null,
-        showToast: (t) => e({ toastType: t }),
+        showToast: (t) =>
+            e({
+                toastType: t,
+            }),
     })),
     i = () => r((e) => e.toastType),
     a = (e) => {

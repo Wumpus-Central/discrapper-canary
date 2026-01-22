@@ -1,6 +1,9 @@
-n.d(t, { a: () => r });
+n.d(t, {
+    a: () => r,
+});
 var l = n(665260),
     a = n(652215);
+
 function r(e) {
     if (null != e)
         return {

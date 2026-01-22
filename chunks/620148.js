@@ -1,6 +1,10 @@
-n.d(t, { A: () => a }), n(896048);
+n.d(t, {
+    A: () => a,
+}),
+    n(896048);
 var r = n(429913),
     i = n(902439);
+
 function a() {
     let { fetchesApplication: e = !0 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         t = (0, i.A)(),

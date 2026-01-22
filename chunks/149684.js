@@ -1,4 +1,6 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 var r = n(355418),
     i = n(996483);
 class a extends r.c {
@@ -14,7 +16,7 @@ class a extends r.c {
             case "hoje":
                 return i.Ec(e.reference);
             case "amanha":
-            case "amanhã":
+            case "amanh\xe3":
                 return i.uf(e.reference);
             case "ontem":
                 return i.jI(e.reference);

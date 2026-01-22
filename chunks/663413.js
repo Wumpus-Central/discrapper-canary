@@ -1,4 +1,7 @@
-n.d(t, { A: () => A }), n(896048);
+n.d(t, {
+    A: () => A,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -15,6 +18,7 @@ var r = n(627968),
     m = n(203480),
     g = n(652215);
 let E = new Set([g.BVt.LOGIN, g.BVt.REGISTER]);
+
 function b(e) {
     let { lang: t, style: n, className: a } = (0, _.xb)(),
         o = (0, l.zy)(),
@@ -24,9 +28,12 @@ function b(e) {
     return (0, r.jsx)("html", {
         lang: t,
         style: "".concat(n, " --devtools-sidebar-width: ").concat(d, "px;"),
-        className: s()(a, e, { overlay: __OVERLAY__ }),
+        className: s()(a, e, {
+            overlay: __OVERLAY__,
+        }),
     });
 }
+
 function y() {
     let [e, t] = i.useState([]);
     return (
@@ -57,11 +64,20 @@ function y() {
         })
     );
 }
+
 function O(e) {
     let { children: t, skipsSettingDefaultPageTitle: n } = e;
-    (0, h.cu)({ skipsSettingDefaultPageTitle: n });
+    (0, h.cu)({
+        skipsSettingDefaultPageTitle: n,
+    });
     let { clientThemesClassName: a, clientThemesCSS: s } = (0, d.Ay)(),
-        l = i.createElement("style", { [d.Vg]: !0 }, s);
+        l = i.createElement(
+            "style",
+            {
+                [d.Vg]: !0,
+            },
+            s,
+        );
     return (0, r.jsxs)(o.mg, {
         children: [b(a), y(), l, t],
     });

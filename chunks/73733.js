@@ -1,13 +1,17 @@
-n.d(t, { y: () => u });
+n.d(t, {
+    y: () => u,
+});
 var r = n(956817),
     i = n(217512),
     a = n(64700),
     s = n(959462),
     o = n(114099),
     l = n(47276);
+
 function c(e) {
     return e && e.__esModule ? e.default : e;
 }
+
 function u(e) {
     let t = (0, a.useRef)(void 0),
         {
@@ -63,7 +67,7 @@ function u(e) {
         C = () => {
             I.current = !1;
         },
-        N = "" === u ? A.format("Empty") : (u || `${n}`).replace("-", "\u2212");
+        N = "" === u ? A.format("Empty") : (u || `${n}`).replace("-", "−");
     (0, a.useEffect)(() => {
         I.current && ((0, i.pA)("assertive"), (0, i.iP)(N, "assertive"));
     }, [N]);

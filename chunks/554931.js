@@ -1,6 +1,10 @@
-n.d(t, { A: () => l }), n(896048);
+n.d(t, {
+    A: () => l,
+}),
+    n(896048);
 var r = n(835245),
     i = n(822382);
+
 function a(e, t, n) {
     return (
         t in e
@@ -14,6 +18,7 @@ function a(e, t, n) {
         e
     );
 }
+
 function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -30,6 +35,7 @@ function s(e) {
     }
     return e;
 }
+
 function o() {
     return {
         sessionId: (0, r.A)(),
@@ -59,7 +65,9 @@ class l {
         return null != (t = null == (n = this.getSession(e)) ? void 0 : n.searchQueryId) ? t : null;
     }
     refreshQueryId(e) {
-        this.setSession(e, { searchQueryId: (0, r.A)() });
+        this.setSession(e, {
+            searchQueryId: (0, r.A)(),
+        });
     }
     initialize(e) {
         for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), i = 1; i < t; i++) n[i - 1] = arguments[i];

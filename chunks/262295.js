@@ -1,4 +1,6 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -32,7 +34,9 @@ let l = i.forwardRef((e, t) => {
                 children: a,
             }),
             (0, r.jsxs)("div", {
-                className: s()(o.Qs, { [o.e8]: m }),
+                className: s()(o.Qs, {
+                    [o.e8]: m,
+                }),
                 children: [
                     (0, r.jsxs)("div", {
                         className: o.BG,

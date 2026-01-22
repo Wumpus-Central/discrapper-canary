@@ -1,4 +1,6 @@
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -11,6 +13,7 @@ var i = n(503698),
     d = n(339984),
     f = n(985018),
     p = n(52506);
+
 function _(e) {
     let {
             showRemoveBannerButton: t,
@@ -37,7 +40,9 @@ function _(e) {
             className: p.NC,
             children: [
                 (0, r.jsx)(A, {
-                    className: a()({ [p.yj]: y }),
+                    className: a()({
+                        [p.yj]: y,
+                    }),
                     size: s.$n.Sizes.SMALL,
                     onClick: () =>
                         (0, c.XD)({

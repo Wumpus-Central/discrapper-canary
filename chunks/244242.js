@@ -1,6 +1,9 @@
-n.d(t, { L: () => a });
+n.d(t, {
+    L: () => a,
+});
 var r = n(627968),
     i = n(397927);
+
 function a(e) {
     let { children: t } = e;
     return (0, r.jsx)(i.BJc, {

@@ -1,4 +1,6 @@
-n.d(t, { C: () => E });
+n.d(t, {
+    C: () => E,
+});
 var r = n(627968),
     i = n(64700),
     l = n(512750),
@@ -18,6 +20,7 @@ var r = n(627968),
     j = n(874864),
     O = n(985018),
     y = n(802498);
+
 function v(e) {
     let { originalVanityURLCode: t } = e;
     if (null != t && t.length > 0) {
@@ -34,6 +37,7 @@ function v(e) {
     }
     return null;
 }
+
 function A(e) {
     let { guild: t, vanityURLCode: n, vanityURLUses: l, originalVanityURLCode: a, errorDetails: c } = e,
         o = (null == t ? void 0 : t.features.has(h.GuildFeatures.VANITY_URL)) === !0,
@@ -61,7 +65,9 @@ function A(e) {
                         ? (0, r.jsx)(s.Text, {
                               variant: "text-sm/medium",
                               color: "text-subtle",
-                              children: O.intl.format(O.t.MVWOUY, { uses: l }),
+                              children: O.intl.format(O.t.MVWOUY, {
+                                  uses: l,
+                              }),
                           })
                         : null,
                 ],
@@ -85,6 +91,7 @@ function A(e) {
         ],
     });
 }
+
 function E(e) {
     let { guild: t, vanityURLCode: n, vanityURLUses: s, originalVanityURLCode: o, errorDetails: g } = e,
         { analyticsLocations: x } = (0, c.Ay)(),
@@ -118,9 +125,13 @@ function E(e) {
                   })
                 : (0, r.jsx)("div", {
                       className: y.Oy,
-                      children: (0, r.jsx)(m.u, { onClick: E }),
+                      children: (0, r.jsx)(m.u, {
+                          onClick: E,
+                      }),
                   }),
-            (0, r.jsx)(v, { originalVanityURLCode: o }),
+            (0, r.jsx)(v, {
+                originalVanityURLCode: o,
+            }),
         ],
     });
 }

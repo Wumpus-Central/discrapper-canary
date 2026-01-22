@@ -1,4 +1,7 @@
-n.d(t, { A: () => p }), n(896048);
+n.d(t, {
+    A: () => p,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(397927),
@@ -9,6 +12,7 @@ var r = n(627968),
     u = n(679492),
     d = n(645463),
     f = n(985018);
+
 function p(e) {
     var t;
     let {
@@ -52,7 +56,10 @@ function p(e) {
               position: "right",
               disablePointerEvents: !1,
               onRequestOpen: () => {
-                  S({ action: "OPEN_MENU" }), A(!0);
+                  S({
+                      action: "OPEN_MENU",
+                  }),
+                      A(!0);
               },
               renderPopout: (e) => {
                   let { closePopout: t } = e;
@@ -65,7 +72,9 @@ function p(e) {
                           },
                           "aria-label": f.intl.string(f.t.PlAQz1),
                           onSelect: g,
-                          children: (0, r.jsx)(a.rXV, { children: N }),
+                          children: (0, r.jsx)(a.rXV, {
+                              children: N,
+                          }),
                       }),
                   });
               },

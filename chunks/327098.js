@@ -1,8 +1,12 @@
-n.d(t, { A: () => o }), n(896048);
+n.d(t, {
+    A: () => o,
+}),
+    n(896048);
 var r = n(311907),
     i = n(933958),
     a = n(429913),
     s = n(574520);
+
 function o(e) {
     let t = (0, r.bG)([s.A], () => s.A.getMatchingActivity(e)),
         [n, o] = (0, a.A)([

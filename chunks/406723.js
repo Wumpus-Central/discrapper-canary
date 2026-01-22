@@ -34,6 +34,7 @@ e.exports = function (e) {
             ],
             keywords: a,
         };
+
     function c(e, t) {
         let n = [
             {
@@ -185,7 +186,11 @@ e.exports = function (e) {
                 className: "meta",
                 begin: "@\\[",
                 end: "\\]",
-                contains: [e.inherit(e.QUOTE_STRING_MODE, { className: "string" })],
+                contains: [
+                    e.inherit(e.QUOTE_STRING_MODE, {
+                        className: "string",
+                    }),
+                ],
             },
             o,
             e.HASH_COMMENT_MODE,
@@ -194,20 +199,38 @@ e.exports = function (e) {
                 beginKeywords: "class module struct",
                 end: "$|;",
                 illegal: /=/,
-                contains: [e.HASH_COMMENT_MODE, e.inherit(e.TITLE_MODE, { begin: i }), { begin: "<" }],
+                contains: [
+                    e.HASH_COMMENT_MODE,
+                    e.inherit(e.TITLE_MODE, {
+                        begin: i,
+                    }),
+                    {
+                        begin: "<",
+                    },
+                ],
             },
             {
                 className: "class",
                 beginKeywords: "lib enum union",
                 end: "$|;",
                 illegal: /=/,
-                contains: [e.HASH_COMMENT_MODE, e.inherit(e.TITLE_MODE, { begin: i })],
+                contains: [
+                    e.HASH_COMMENT_MODE,
+                    e.inherit(e.TITLE_MODE, {
+                        begin: i,
+                    }),
+                ],
             },
             {
                 beginKeywords: "annotation",
                 end: "$|;",
                 illegal: /=/,
-                contains: [e.HASH_COMMENT_MODE, e.inherit(e.TITLE_MODE, { begin: i })],
+                contains: [
+                    e.HASH_COMMENT_MODE,
+                    e.inherit(e.TITLE_MODE, {
+                        begin: i,
+                    }),
+                ],
                 relevance: 2,
             },
             {
@@ -241,17 +264,32 @@ e.exports = function (e) {
             {
                 className: "symbol",
                 begin: ":",
-                contains: [u, { begin: r }],
+                contains: [
+                    u,
+                    {
+                        begin: r,
+                    },
+                ],
                 relevance: 0,
             },
             {
                 className: "number",
                 variants: [
-                    { begin: "\\b0b([01_]+)" + t },
-                    { begin: "\\b0o([0-7_]+)" + t },
-                    { begin: "\\b0x([A-Fa-f0-9_]+)" + t },
-                    { begin: "\\b([1-9][0-9_]*[0-9]|[0-9])(\\.[0-9][0-9_]*)?([eE]_?[-+]?[0-9_]*)?" + n + "(?!_)" },
-                    { begin: "\\b([1-9][0-9_]*|0)" + t },
+                    {
+                        begin: "\\b0b([01_]+)" + t,
+                    },
+                    {
+                        begin: "\\b0o([0-7_]+)" + t,
+                    },
+                    {
+                        begin: "\\b0x([A-Fa-f0-9_]+)" + t,
+                    },
+                    {
+                        begin: "\\b([1-9][0-9_]*[0-9]|[0-9])(\\.[0-9][0-9_]*)?([eE]_?[-+]?[0-9_]*)?" + n + "(?!_)",
+                    },
+                    {
+                        begin: "\\b([1-9][0-9_]*|0)" + t,
+                    },
                 ],
                 relevance: 0,
             },

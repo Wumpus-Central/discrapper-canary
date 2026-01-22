@@ -10,6 +10,7 @@ var r = n(835245),
     s = n(837921),
     o = n(614792),
     l = n(652215);
+
 function c(e, t, n) {
     return (
         t in e
@@ -23,6 +24,7 @@ function c(e, t, n) {
         e
     );
 }
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -39,6 +41,7 @@ function u(e) {
     }
     return e;
 }
+
 function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -51,6 +54,7 @@ function d(e, t) {
     }
     return n;
 }
+
 function f(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -62,6 +66,7 @@ function f(e, t) {
         e
     );
 }
+
 function p() {
     return window.GLOBAL_ENV.HTML_TIMESTAMP;
 }
@@ -118,12 +123,15 @@ class _ {
     }
 }
 let h = new _();
+
 function m(e) {
     h.trackAppUIViewed(e);
 }
+
 function g() {
     h.trackTTI();
 }
+
 function E() {
     var e, t, n;
     let r = "--campaign-id=";
@@ -134,9 +142,13 @@ function E() {
             : t.call(n))
         ? e
         : [])
-        if (a.startsWith(r)) return { referrer: a.substr(r.length) };
+        if (a.startsWith(r))
+            return {
+                referrer: a.substr(r.length),
+            };
     return {};
 }
+
 function b() {
     let e = !1,
         t = {

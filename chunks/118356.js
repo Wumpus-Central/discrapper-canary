@@ -6,6 +6,7 @@ n.d(t, {
 }),
     n(896048);
 var r = n(631159);
+
 function i(e, t, n) {
     return (
         t in e
@@ -21,13 +22,16 @@ function i(e, t, n) {
 }
 let a = "\nfont-weight: bold;\ncolor: purple;\n",
     s = () => {};
+
 function o(e) {
     s = e;
 }
 let l = () => {};
+
 function c(e) {
     l = e;
 }
+
 function u(e, t, n) {
     for (var r = arguments.length, i = Array(r > 3 ? r - 3 : 0), s = 3; s < r; s++) i[s - 3] = arguments[s];
     "file-only" !== t && console[t]("%c[".concat(e, "]"), a, n, ...i);

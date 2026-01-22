@@ -37,6 +37,7 @@ var r = n(83790),
     l = n(594579),
     c = n(788868);
 let u = new i.A("ProductCatalog.tsx");
+
 function d(e, t) {
     if (null == t || null == t.premiumType) return !1;
     try {
@@ -132,6 +133,7 @@ let M = new f(r.w.INCREASED_GUILD_LIMIT),
     }),
     B = [C, N, V],
     H = [V];
+
 function Y(e, t, n) {
     return (
         !(

@@ -1,4 +1,6 @@
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 var r = n(723702);
 async function i(e, t) {
     let { default: i } = await Promise.resolve().then(n.bind(n, 352423)),

@@ -8,6 +8,7 @@ var r = n(64700),
     a = n(824552),
     s = n(546183),
     o = n(403362);
+
 function l(e, t) {
     let { disableFetch: n = !1 } = null != t ? t : {},
         l = (0, i.yK)([s.default], () => {
@@ -47,6 +48,7 @@ function l(e, t) {
         }
     );
 }
+
 function c(e, t) {
     let { tokens: n, fetched: i } = l(
         r.useMemo(() => (null != e ? [e] : null), [e]),

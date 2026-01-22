@@ -1,4 +1,6 @@
-n.d(t, { d: () => s });
+n.d(t, {
+    d: () => s,
+});
 var r = n(685369);
 let i = RegExp("^.*\\(.*\\).*$"),
     a = ["latn", "arab", "hanidec", "deva", "beng", "fullwide"];
@@ -17,6 +19,7 @@ class s {
     }
 }
 let o = new Map();
+
 function l(e, t, n) {
     let r = c(e, t);
     if (!e.includes("-nu-") && !r.isValidPartialNumber(n)) {
@@ -28,6 +31,7 @@ function l(e, t, n) {
     }
     return r;
 }
+
 function c(e, t) {
     let n =
             e +
@@ -88,7 +92,7 @@ class u {
                         this.symbols.decimal,
                     )),
                 this.symbols.group && (e = _(e, ".", this.symbols.group))),
-            "\u2019" === this.symbols.group && e.includes("'") && (e = _(e, "'", this.symbols.group)),
+            "’" === this.symbols.group && e.includes("'") && (e = _(e, "'", this.symbols.group)),
             "fr-FR" === this.options.locale &&
                 this.symbols.group &&
                 ((e = _(e, " ", this.symbols.group)), (e = _(e, /\u00A0/g, this.symbols.group))),
@@ -139,6 +143,7 @@ class u {
 }
 let d = new Set(["decimal", "fraction", "integer", "minusSign", "plusSign", "group"]),
     f = [0, 4, 2, 1, 11, 20, 3, 7, 100, 21, 0.1, 1.1];
+
 function p(e, t, n, r) {
     var i, a, s, o, l;
     let c = new Intl.NumberFormat(e, {
@@ -176,7 +181,11 @@ function p(e, t, n, r) {
             ]),
         ].sort((e, t) => t.length - e.length),
         O = 0 === y.length ? RegExp("[\\p{White_Space}]", "gu") : RegExp(`${y.join("|")}|[\\p{White_Space}]`, "gu"),
-        A = [...new Intl.NumberFormat(n.locale, { useGrouping: !1 }).format(9876543210)].reverse(),
+        A = [
+            ...new Intl.NumberFormat(n.locale, {
+                useGrouping: !1,
+            }).format(0x24cb016ea),
+        ].reverse(),
         v = new Map(A.map((e, t) => [e, t]));
     return {
         minusSign: m,
@@ -188,9 +197,11 @@ function p(e, t, n, r) {
         index: (e) => String(v.get(e)),
     };
 }
+
 function _(e, t, n) {
     return e.replaceAll ? e.replaceAll(t, n) : e.split(t).join(n);
 }
+
 function h(e) {
     return e.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }

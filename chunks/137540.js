@@ -1,4 +1,9 @@
-a.d(t, { A: () => c }), a(65821), a(747238), a(896048);
+a.d(t, {
+    A: () => c,
+}),
+    a(65821),
+    a(747238),
+    a(896048);
 var s = a(627968),
     l = a(64700),
     r = a(830845),
@@ -20,7 +25,9 @@ class o extends l.Component {
                       pathname: c,
                       hash: d,
                       search: u,
-                      state: { previousLinkLocation: t },
+                      state: {
+                          previousLinkLocation: t,
+                      },
                   },
                   role: i,
                   children: l,
@@ -33,7 +40,9 @@ class o extends l.Component {
                       pathname: c,
                       hash: d,
                       search: u,
-                      state: { previousLinkLocation: t },
+                      state: {
+                          previousLinkLocation: t,
+                      },
                   },
                   role: i,
                   children: l,

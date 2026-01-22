@@ -11,7 +11,9 @@ function r(e, t, n) {
         e
     );
 }
-n.d(t, { T: () => i });
+n.d(t, {
+    T: () => i,
+});
 class i {
     static fromServer(e) {
         return new i(e);

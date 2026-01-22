@@ -1,4 +1,9 @@
-n.r(t), n.d(t, { ItemDetailsModal: () => g }), n(228524), n(733351);
+n.r(t),
+    n.d(t, {
+        ItemDetailsModal: () => g,
+    }),
+    n(228524),
+    n(733351);
 var r = n(627968);
 n(64700);
 var i = n(423090),
@@ -14,6 +19,7 @@ var i = n(423090),
     _ = n(86889),
     h = n(652215),
     m = n(985018);
+
 function g(e) {
     var t, n, g, E;
     let { onClose: b, transitionState: y, skuId: O, appId: A, onHeaderTitleClick: v } = e,
@@ -49,7 +55,12 @@ function g(e) {
                   title: C,
                   description: N,
                   imgSrc: R,
-                  tag: null != P ? (0, r.jsx)(i.v, { text: P }) : void 0,
+                  tag:
+                      null != P
+                          ? (0, r.jsx)(i.v, {
+                                text: P,
+                            })
+                          : void 0,
                   FallbackIcon: s.qyI,
               }),
           });

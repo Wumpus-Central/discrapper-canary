@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -12,6 +14,7 @@ var r = n(627968),
     g = n(985018),
     b = n(802652);
 let m = (0, f.xI)(a.A.ROLE_ICON_UPLOADER_ICON_SIZE);
+
 function p(e) {
     let { role: t, "aria-label": n = g.intl.string(g.t["MsUY/S"]), className: l, onClick: a, disabled: f = !1 } = e,
         p = i.useRef(null),
@@ -61,7 +64,9 @@ function p(e) {
         ringTarget: p,
         children: (0, r.jsxs)(c.DUT, {
             "aria-label": n,
-            className: s()(b.kL, l, { [b.r9]: f }),
+            className: s()(b.kL, l, {
+                [b.r9]: f,
+            }),
             onClick: f ? void 0 : a,
             "aria-disabled": f,
             children: [
@@ -70,7 +75,11 @@ function p(e) {
                     className: b.VH,
                     children: h,
                 }),
-                null != x ? (0, r.jsx)(d.L, { className: b.Sl }) : null,
+                null != x
+                    ? (0, r.jsx)(d.L, {
+                          className: b.Sl,
+                      })
+                    : null,
             ],
         }),
     });

@@ -4,7 +4,9 @@ try {
     var a = 0,
         s = {
             next: function () {
-                return { done: !!a++ };
+                return {
+                    done: !!a++,
+                };
             },
             return: function () {
                 i = !0;
@@ -29,7 +31,9 @@ e.exports = function (e, t) {
         (a[r] = function () {
             return {
                 next: function () {
-                    return { done: (n = !0) };
+                    return {
+                        done: (n = !0),
+                    };
                 },
             };
         }),

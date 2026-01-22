@@ -1,4 +1,8 @@
-n.d(t, { A: () => en }), n(896048), n(321073);
+n.d(t, {
+    A: () => en,
+}),
+    n(896048),
+    n(321073);
 var r,
     i = n(812729),
     a = n.n(i),
@@ -21,6 +25,7 @@ var r,
     A = n(69407),
     v = n(312006),
     S = n(446600);
+
 function I(e, t, n) {
     return (
         t in e
@@ -41,16 +46,19 @@ let T = "NO_GUILD",
     ),
     N = new Set(),
     R = {};
+
 function w(e) {
     var t;
     return null != (t = e.getGuildId()) ? t : T;
 }
+
 function P(e) {
     return C.values(null != e ? e : void 0, !0).map((e) => {
         let { id: t } = e;
         return t;
     });
 }
+
 function D(e) {
     N.has(e) ||
         (N.add(e),
@@ -60,19 +68,23 @@ function D(e) {
                 j(e) && C.set(e.id, e);
             }));
 }
+
 function x(e) {
     let t = R[e];
     if (null != t) return t;
     let n = _.A.getChannel(e);
     return null != n && n.isGuildStageVoice() && (D(n.guild_id), j(n)) ? L(e) : null;
 }
+
 function L(e) {
     let t = R[e];
     return null == t && ((t = new A.Ay(e)), (R[e] = t), t.rebuild()), t;
 }
+
 function j(e) {
     return null != e && e.isGuildStageVoice() && O.Ay.countVoiceStatesForChannel(e.id) > 0;
 }
+
 function M(e, t) {
     let n = _.A.getChannel(e);
     return null != n && n.isGuildStageVoice()
@@ -81,6 +93,7 @@ function M(e, t) {
             : null == C.get(n.id) && C.set(n.id, n)
         : V(e);
 }
+
 function k(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : P();
     return t.reduce((t, n) => {
@@ -88,25 +101,31 @@ function k(e) {
         return e(r) ? (M(n, r), !0) : t;
     }, !1);
 }
+
 function U(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : P();
     return k((t) => t.updateParticipant(e), t);
 }
+
 function G(e) {
     for (let t of C.values(e)) C.delete(t.id), delete R[t.id];
     N.delete(e);
 }
+
 function V(e) {
     return null != e && (delete R[e], C.delete(e), !0);
 }
+
 function F() {
     N.clear(), C.clear(), (R = {});
 }
+
 function B(e, t, n) {
     if (null == n || e.has(n)) return;
     let r = _.A.getChannel(n);
     (null == r ? void 0 : r.isGuildStageVoice()) && (t.add(n), null == R[n] && e.add(n));
 }
+
 function H(e) {
     let { voiceStates: t } = e,
         n = new Set();
@@ -116,44 +135,53 @@ function H(e) {
         return (B(n, r, t.oldChannelId), B(n, r, t.channelId), 0 === r.size) ? e : U(t.userId, Array.from(r)) || e;
     }, !1);
 }
+
 function Y(e) {
     let { chunks: t } = e,
         n = !1;
     for (let e of t) for (let t of e.members) n = U(t.user.id) || n;
     return n;
 }
+
 function W(e) {
     let t = !1;
     for (let n of P(e.guildId)) t = L(n).rebuild() || t;
     return t;
 }
+
 function K(e) {
     let { user: t } = e;
     return U(t.id);
 }
+
 function z(e) {
     let { relationship: t } = e;
     return U(t.id);
 }
+
 function q(e) {
     let { guild: t } = e;
     G(t.id);
 }
+
 function X(e) {
     let { channelId: t, guildId: n, userId: r } = e;
     return null != n && !!N.has(n) && U(r, [t]);
 }
+
 function Z(e) {
     let { streamKey: t } = e,
         { channelId: n, guildId: r, ownerId: i } = (0, d.Iy)(t);
     return null != r && !!N.has(r) && U(i, [n]);
 }
+
 function Q(e) {
     let {
         channel: { id: t },
     } = e;
     return V(t);
 }
+
 function $(e) {
     let { channels: t } = e,
         n = t.reduce((e, t) => {
@@ -165,6 +193,7 @@ function $(e) {
         }, []);
     return k((e) => e.rebuild(), n), n.length > 0;
 }
+
 function J(e) {
     let { guildId: t } = e;
     if (N.has(t)) return k((e) => e.rebuild(), P(t));

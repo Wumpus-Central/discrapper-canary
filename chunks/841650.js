@@ -1,4 +1,8 @@
-n.d(t, { A: () => N }), n(321073), n(896048);
+n.d(t, {
+    A: () => N,
+}),
+    n(321073),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -16,9 +20,11 @@ var r = n(627968),
     x = n(652215),
     h = n(985018),
     j = n(987772);
+
 function O(e) {
     return String(e);
 }
+
 function y(e) {
     let { icon: t, title: n, subtitle: i, className: l } = e;
     return (0, r.jsxs)("div", {
@@ -47,6 +53,7 @@ function y(e) {
         ],
     });
 }
+
 function v() {
     return (0, r.jsx)(y, {
         icon: (0, r.jsx)(o.j96, {
@@ -58,6 +65,7 @@ function v() {
         className: j.fp,
     });
 }
+
 function A(e) {
     var t;
     let { channelId: n } = e,
@@ -68,15 +76,25 @@ function A(e) {
         a = (0, d.m1)(i, m.default, b.A),
         c = null != l ? (0, d.m1)(l, m.default, b.A) : void 0;
     return (0, r.jsx)(y, {
-        icon: null != s && (0, r.jsx)(s, { className: j.IX }),
+        icon:
+            null != s &&
+            (0, r.jsx)(s, {
+                className: j.IX,
+            }),
         title: a,
         subtitle: c,
     });
 }
+
 function E(e) {
     let { value: t } = e;
-    return null != t ? (0, r.jsx)(A, { channelId: t }) : (0, r.jsx)(v, {});
+    return null != t
+        ? (0, r.jsx)(A, {
+              channelId: t,
+          })
+        : (0, r.jsx)(v, {});
 }
+
 function N(e) {
     let {
             label: t,

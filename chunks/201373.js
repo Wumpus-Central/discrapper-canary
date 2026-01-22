@@ -1,10 +1,13 @@
-n.d(t, { o: () => f });
+n.d(t, {
+    o: () => f,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
     a = n(92077),
     s = n(293066),
     o = n(775228);
+
 function l(e, t, n) {
     return (
         t in e
@@ -18,6 +21,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,6 +38,7 @@ function c(e) {
     }
     return e;
 }
+
 function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -46,6 +51,7 @@ function u(e, t) {
     }
     return n;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -57,6 +63,7 @@ function d(e, t) {
         e
     );
 }
+
 function f(e, t, l, u, f) {
     let p = o.A.getInstallationPath(e.id, t),
         _ = null != e.eulaId && !s.A.hasAcceptedEULA(e.eulaId);

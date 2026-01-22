@@ -112,7 +112,9 @@ e.exports = function (e) {
                     },
                 ],
             },
-            { begin: /:=/ },
+            {
+                begin: /:=/,
+            },
             {
                 className: "function",
                 beginKeywords: "func",

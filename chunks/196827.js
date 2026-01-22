@@ -19,11 +19,17 @@ let f = (e) => {
         return (0, r.jsxs)("div", {
             className: u.Rx,
             children: [
-                (0, r.jsx)(o.A, { className: l()(u.gv, { [u.fk]: !s }) }),
+                (0, r.jsx)(o.A, {
+                    className: l()(u.gv, {
+                        [u.fk]: !s,
+                    }),
+                }),
                 (0, r.jsx)(a.Text, {
                     variant: "text-md/normal",
                     className: u.ck,
-                    children: d.intl.format(d.t.OTHOvZ, { value: i }),
+                    children: d.intl.format(d.t.OTHOvZ, {
+                        value: i,
+                    }),
                 }),
             ],
         });

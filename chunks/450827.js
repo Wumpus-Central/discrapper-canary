@@ -1,4 +1,6 @@
-n.d(t, { A: () => N }),
+n.d(t, {
+    A: () => N,
+}),
     n(938796),
     n(321073),
     n(896048),
@@ -27,6 +29,7 @@ var r = n(735438),
     m = n(661191),
     g = n(427262),
     E = n(652215);
+
 function b(e, t, n) {
     return (
         t in e
@@ -41,6 +44,7 @@ function b(e, t, n) {
     );
 }
 let y = 10;
+
 function O(e) {
     var t, n;
     if (null == e || f.A.isBlockedOrIgnored(e.id)) return null;
@@ -66,9 +70,11 @@ function O(e) {
         r
     );
 }
+
 function A(e, t, n) {
     null != e && (e.nicknames[t] = null != n && "" !== n ? n : null);
 }
+
 function v(e) {
     let t = [];
     if (null == e || !(0, l.Gw)(e.type)) return t;
@@ -81,6 +87,7 @@ function v(e) {
         t
     );
 }
+
 function S(e, t) {
     let n = [];
     return (
@@ -91,6 +98,7 @@ function S(e, t) {
         n
     );
 }
+
 function I(e) {
     var t;
     let { message: n, nicknameContextId: r } = e,
@@ -308,7 +316,9 @@ class C extends o.A {
                     let e = p.default.getCurrentUser();
                     if (null == e) return;
                     let t = O(e),
-                        n = { [t.id]: t };
+                        n = {
+                            [t.id]: t,
+                        };
                     Object.values(p.default.getUsers()).forEach((e) => {
                         n[e.id] = O(e);
                     });
@@ -321,7 +331,7 @@ class C extends o.A {
                             null != s && A(s, e, o);
                         }
                     this.updateUsers(Object.values(n), "connection_open");
-                }, 3000);
+                }, 3e3);
             }),
             b(this, "_handleConnectionOpenSupplemental", (e) => {
                 let { guilds: t } = e;
@@ -345,7 +355,7 @@ class C extends o.A {
                             );
                         });
                     this.updateUsers([...e, ...n], "connection_open_supplemental");
-                }, 3000);
+                }, 3e3);
             }),
             b(this, "_handleOverlayInitialize", (e) => {
                 let { users: t, guildMembers: n } = e,
@@ -455,7 +465,11 @@ class C extends o.A {
             }),
             b(this, "_handleLoadMessagesSuccess", (e) => {
                 let { messages: t } = e,
-                    n = t.flatMap((e) => I({ message: e }));
+                    n = t.flatMap((e) =>
+                        I({
+                            message: e,
+                        }),
+                    );
                 this.updateUsers(n, "load_messages_success");
             }),
             b(this, "_handleLoadPinnedMessagesSuccess", (e) => {
@@ -463,7 +477,9 @@ class C extends o.A {
                     n = [];
                 t.forEach((e) => {
                     let { message: t } = e;
-                    I({ message: t }).forEach((e) => n.push(e));
+                    I({
+                        message: t,
+                    }).forEach((e) => n.push(e));
                 }),
                     this.updateUsers(n, "load_pinned_messages_success");
             }),
@@ -474,7 +490,9 @@ class C extends o.A {
                     let { messages: t } = e;
                     t.forEach((e) => {
                         e.forEach((e) => {
-                            I({ message: e }).forEach((e) => n.push(e));
+                            I({
+                                message: e,
+                            }).forEach((e) => n.push(e));
                         });
                     });
                 }),
@@ -501,7 +519,9 @@ class C extends o.A {
                     this.updateUsers(a, "load_threads_success");
             }),
             b(this, "_handleMessageCreateOrUpdate", (e) => {
-                let t = I({ message: e.message });
+                let t = I({
+                    message: e.message,
+                });
                 this.updateUsers(t, "message_create_or_update");
             }),
             b(this, "_handleGuildScheduledEventUsersFetchSuccess", (e) => {

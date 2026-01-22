@@ -1,13 +1,18 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var i = n(471024),
     r = n(486020),
     s = n(684748),
     l = n(652215),
     o = n(672396),
     a = n(985018);
+
 function c(e, t) {
     let n = e.username,
-        c = a.intl.format(a.t["Yk+uYG"], { username: "" }),
+        c = a.intl.format(a.t["Yk+uYG"], {
+            username: "",
+        }),
         d = (0, r.ku)(e),
         { trackView: u, trackClick: h } = (0, s.Y)(o.KS.ActivityUserJoin, {
             notif_type: o.KS.ActivityUserJoin,

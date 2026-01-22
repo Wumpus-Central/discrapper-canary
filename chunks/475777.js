@@ -1,6 +1,9 @@
-n.d(t, { A: () => l });
+n.d(t, {
+    A: () => l,
+});
 var r = n(531335),
     i = n(652215);
+
 function l(e, t, n) {
     return (0, r.A)({
         guild: t,

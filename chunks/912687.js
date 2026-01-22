@@ -23,7 +23,9 @@ let u = (0, l.createContext)({}),
                 },
                 defaultClassName: "react-aria-ToggleButtonGroup",
             }),
-            _ = (0, s.$)(e, { global: !0 });
+            _ = (0, s.$)(e, {
+                global: !0,
+            });
         return l.createElement(
             "div",
             {
@@ -33,6 +35,12 @@ let u = (0, l.createContext)({}),
                 "data-orientation": e.orientation || "horizontal",
                 "data-disabled": e.isDisabled || void 0,
             },
-            l.createElement(d.Provider, { value: n }, l.createElement(i.D, null, p.children)),
+            l.createElement(
+                d.Provider,
+                {
+                    value: n,
+                },
+                l.createElement(i.D, null, p.children),
+            ),
         );
     });

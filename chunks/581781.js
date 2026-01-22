@@ -1,4 +1,7 @@
-n.d(t, { A: () => f }), n(896048);
+n.d(t, {
+    A: () => f,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -8,6 +11,7 @@ var r = n(627968),
     c = n(534400),
     u = n(743981),
     d = n(996373);
+
 function f(e) {
     let { className: t, guildTag: n, guildBadge: a, guildId: f, guildName: p, guildIcon: _, guildIconSize: h } = e,
         m = i.useRef(null),

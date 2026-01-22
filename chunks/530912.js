@@ -12,6 +12,7 @@ var r = n(64700),
     s = n(734057),
     o = n(954571),
     l = n(652215);
+
 function c(e, t, n) {
     return (
         t in e
@@ -25,6 +26,7 @@ function c(e, t, n) {
         e
     );
 }
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -41,6 +43,7 @@ function u(e) {
     }
     return e;
 }
+
 function d(e, t, n) {
     o.default.track(l.HAw.FORWARD_MESSAGE_STARTED, {
         channel_id: e,
@@ -48,6 +51,7 @@ function d(e, t, n) {
         source: n,
     });
 }
+
 function f(e) {
     let { channelId: t, messageId: n, numDestinationChanges: r, numQueryChanges: i } = e;
     o.default.track(l.HAw.FORWARD_MESSAGE_CANCELLED, {
@@ -57,6 +61,7 @@ function f(e) {
         num_query_changes: i,
     });
 }
+
 function p(e) {
     let {
         channelId: t,
@@ -96,6 +101,7 @@ function p(e) {
         );
     }
 }
+
 function _() {
     return r.useMemo(
         () =>
@@ -109,6 +115,7 @@ function _() {
         [],
     );
 }
+
 function h() {
     return r.useMemo(
         () =>
@@ -121,6 +128,7 @@ function h() {
         [],
     );
 }
+
 function m() {
     return r.useMemo(
         () =>

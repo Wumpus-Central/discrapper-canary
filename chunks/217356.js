@@ -1,4 +1,7 @@
-n.d(t, { A: () => E }), n(896048);
+n.d(t, {
+    A: () => E,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -8,6 +11,7 @@ var r = n(627968),
     c = n(685073),
     u = n(534400),
     d = n(277150);
+
 function f(e, t, n) {
     return (
         t in e
@@ -21,6 +25,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,6 +42,7 @@ function p(e) {
     }
     return e;
 }
+
 function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -49,6 +55,7 @@ function _(e, t) {
     }
     return n;
 }
+
 function h(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -60,6 +67,7 @@ function h(e, t) {
         e
     );
 }
+
 function m(e, t) {
     if (null == e) return {};
     var n,
@@ -76,6 +84,7 @@ function m(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function g(e, t) {
     if (null == e) return {};
     var n,
@@ -89,18 +98,27 @@ function g(e, t) {
 let E = i.memo(function (e) {
     let { children: t, isOverlay: n, contextGuildId: a } = e,
         f = m(e, ["children", "isOverlay", "contextGuildId"]),
-        [_, g] = i.useState({ maskImage: "none" }),
+        [_, g] = i.useState({
+            maskImage: "none",
+        }),
         E = i.useRef(null),
         b = (0, l.A)(() => {
             var e, t, r, i;
             let a = null != (e = null == (r = y.current) ? void 0 : r.getBoundingClientRect()) ? e : null,
                 s = null != (t = null == (i = E.current) ? void 0 : i.getBoundingClientRect()) ? t : null;
-            if (n || null == a || null == s) return void g({ maskImage: "none" });
+            if (n || null == a || null == s)
+                return void g({
+                    maskImage: "none",
+                });
             let o = s.right - a.right,
                 l = s.width - o;
             l > s.width
-                ? g({ maskImage: "none" })
-                : g({ maskImage: "linear-gradient(to right, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) ".concat(l, "px)") });
+                ? g({
+                      maskImage: "none",
+                  })
+                : g({
+                      maskImage: "linear-gradient(to right, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) ".concat(l, "px)"),
+                  });
         }),
         y = (0, o.w)(b),
         O = (0, c.Wb)(f.userId, a);

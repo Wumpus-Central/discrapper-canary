@@ -1,10 +1,13 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(64700),
     l = n(311907),
     i = n(824552),
     a = n(627363),
     s = n(587895),
     o = n(546183);
+
 function c(e) {
     let t = (null == e ? void 0 : e.require_application_authorization) ? e.application_id : null,
         { authorizationsFetchState: n, applicationOAuth2Token: c } = (0, l.cf)([o.default], () => ({

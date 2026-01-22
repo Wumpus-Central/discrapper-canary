@@ -1,4 +1,7 @@
-n.d(t, { A: () => m }), n(896048);
+n.d(t, {
+    A: () => m,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(311907),
@@ -11,6 +14,7 @@ var r = n(627968),
     p = n(58736),
     f = n(985018),
     h = n(892513);
+
 function A(e, t, n) {
     return (
         t in e
@@ -52,7 +56,12 @@ class g extends i.PureComponent {
                             });
                     }
                     return e;
-                })({ source: "Links" }, e),
+                })(
+                    {
+                        source: "Links",
+                    },
+                    e,
+                ),
             ),
         );
     }
@@ -98,8 +107,14 @@ class g extends i.PureComponent {
                     : this.doUpdate();
             }),
             A(this, "doUpdate", () => {
-                this.state.clicked || (this.setState({ clicked: !0 }), (0, o.a)());
+                this.state.clicked ||
+                    (this.setState({
+                        clicked: !0,
+                    }),
+                    (0, o.a)());
             });
     }
 }
-let m = l.Ay.connectStores([u.A], () => ({ mode: u.A.getState() }))(g);
+let m = l.Ay.connectStores([u.A], () => ({
+    mode: u.A.getState(),
+}))(g);

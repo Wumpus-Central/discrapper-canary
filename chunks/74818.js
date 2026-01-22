@@ -1,4 +1,6 @@
-n.d(t, { l: () => D });
+n.d(t, {
+    l: () => D,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -20,6 +22,7 @@ var r = n(627968),
     O = n(763600),
     A = n(985018),
     v = n(526008);
+
 function S(e, t, n) {
     return (
         t in e
@@ -33,6 +36,7 @@ function S(e, t, n) {
         e
     );
 }
+
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -49,6 +53,7 @@ function I(e) {
     }
     return e;
 }
+
 function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -61,6 +66,7 @@ function T(e, t) {
     }
     return n;
 }
+
 function C(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -72,6 +78,7 @@ function C(e, t) {
         e
     );
 }
+
 function N(e, t) {
     if (null == e) return {};
     var n,
@@ -88,6 +95,7 @@ function N(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function R(e, t) {
     if (null == e) return {};
     var n,
@@ -100,6 +108,7 @@ function R(e, t) {
 }
 let w = 24,
     P = 36;
+
 function D(e) {
     let {
             selectionMode: t,
@@ -282,7 +291,13 @@ function D(e) {
         [es, ei, Q, eI],
     );
     let eC = (0, p.rdh)(f.A.modules.select.MAX_WIDTH),
-        eN = i.useMemo(() => ({ horizontalControlColumnWidth: "min(".concat(eC, "px, auto)") }), [eC]);
+        eN = i.useMemo(
+            () => ({
+                horizontalControlColumnWidth: "min(".concat(eC, "px, auto)"),
+            }),
+            [eC],
+        );
+
     function eR(e) {
         return (0, r.jsxs)(r.Fragment, {
             children: [
@@ -310,8 +325,24 @@ function D(e) {
                             children: (0, r.jsxs)(d.sqX, {
                                 "aria-label": X,
                                 buttonRef: eo,
-                                buttonProps: C(I({}, null != z ? { id: z } : {}), { style: { marginLeft: -4 } }),
-                                focusProps: { ringTarget: el },
+                                buttonProps: C(
+                                    I(
+                                        {},
+                                        null != z
+                                            ? {
+                                                  id: z,
+                                              }
+                                            : {},
+                                    ),
+                                    {
+                                        style: {
+                                            marginLeft: -4,
+                                        },
+                                    },
+                                ),
+                                focusProps: {
+                                    ringTarget: el,
+                                },
                                 className: s()(v.L5, {
                                     [v.kj]: H,
                                     [v.M8]: "multiple" === t,
@@ -394,12 +425,15 @@ function D(e) {
             layoutConfig: eN,
             children: (e) =>
                 (0, r.jsx)("div", {
-                    style: { width: S ? "100%" : "minmax(".concat(eb, "px, 100%)") },
+                    style: {
+                        width: S ? "100%" : "minmax(".concat(eb, "px, 100%)"),
+                    },
                     children: eR(e),
                 }),
         }),
     );
 }
+
 function x(e, t) {
     let { ref: n, width: a } = (0, _.Ay)(),
         s = i.useId();
@@ -431,6 +465,7 @@ function x(e, t) {
         ),
     };
 }
+
 function L(e) {
     let { placeholder: t, selectionMode: n, selectedItems: i, onRemove: a, tagGroupRef: s } = e;
     return null == i || 0 === i.length
@@ -451,5 +486,10 @@ function L(e) {
                 layout: "inline",
                 onRemove: a,
             })
-          : (0, r.jsx)(m.c, C(I({}, i[0]), { inInput: !0 }));
+          : (0, r.jsx)(
+                m.c,
+                C(I({}, i[0]), {
+                    inInput: !0,
+                }),
+            );
 }

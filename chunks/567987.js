@@ -1,4 +1,6 @@
-n.d(t, { E: () => f });
+n.d(t, {
+    E: () => f,
+});
 var r = n(627968),
     l = n(64700),
     i = n(284009),
@@ -10,6 +12,7 @@ var r = n(627968),
     d = n(480890),
     h = n(806931),
     p = n(652215);
+
 function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,6 +38,7 @@ function w(e) {
     }
     return e;
 }
+
 function b(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -53,12 +57,15 @@ function b(e, t) {
         e
     );
 }
+
 function f(e) {
     let { channel: t } = e;
     return l.useCallback(
         (e, l, i, f) => {
             if (null == t) return;
-            let I = { context: p.BRT.CALL_TILE_POPOUT };
+            let I = {
+                context: p.BRT.CALL_TILE_POPOUT,
+            };
             switch (e.type) {
                 case h.lp.HIDDEN_STREAM:
                 case h.lp.STREAM:

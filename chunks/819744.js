@@ -12,11 +12,14 @@ var r = n(562465),
     c = n(320501),
     u = n(203982),
     d = n(652215);
+
 function f(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d.lAJ.GUILD_DEADCHAT_REVIVE_PROMPT;
     r.Bo.post({
         url: d.Rsh.FORCE_SEND_PROMPT(e),
-        body: { prompt_type: t },
+        body: {
+            prompt_type: t,
+        },
         rejectWithError: !0,
     });
 }
@@ -52,6 +55,7 @@ async function _(e) {
             i.A.saveDraft(e.channel_id, t.text, l.C.ChannelMessage);
     }
 }
+
 function h(e) {
     c.A.getMessages(e).hasMoreAfter ? a.A.jumpToPresent(e, d.EMb) : u._.dispatch(d.jej.SCROLLTO_PRESENT);
 }

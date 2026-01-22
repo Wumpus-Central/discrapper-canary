@@ -1,4 +1,7 @@
-n.d(t, { A: () => m }), n(896048);
+n.d(t, {
+    A: () => m,
+}),
+    n(896048);
 var a = n(627968),
     l = n(64700),
     i = n(311907),
@@ -6,6 +9,7 @@ var a = n(627968),
     s = n(274372),
     o = n(372684),
     c = n(399925);
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -31,6 +35,7 @@ function d(e) {
     }
     return e;
 }
+
 function u(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -49,6 +54,7 @@ function u(e, t) {
         e
     );
 }
+
 function m() {
     let { mlPipelinesEnabled: e } = (0, i.cf)([s.A], () => ({
             mlPipelinesEnabled: s.A.getSettings().mlPipelinesEnabled,
@@ -85,7 +91,11 @@ function m() {
                         whisper: !1,
                     }),
                     (window.__CLIPS_DEBUG__[e] = a),
-                    n((t) => u(d({}, t), { [e]: a }));
+                    n((t) =>
+                        u(d({}, t), {
+                            [e]: a,
+                        }),
+                    );
             },
             [t],
         );
@@ -98,7 +108,10 @@ function m() {
                         children: [
                             (0, a.jsx)(r.Button, {
                                 text: "Manual",
-                                onClick: () => c.Ts({ type: o.Gy.MANUAL }),
+                                onClick: () =>
+                                    c.Ts({
+                                        type: o.Gy.MANUAL,
+                                    }),
                             }),
                             (0, a.jsx)(r.Button, {
                                 text: "Distributed",
@@ -251,22 +264,42 @@ function m() {
                         (0, a.jsx)(r.dOG, {
                             label: "Emotion Classifier",
                             checked: e.emotionClassifier,
-                            onChange: (t) => c.dR(u(d({}, e), { emotionClassifier: t })),
+                            onChange: (t) =>
+                                c.dR(
+                                    u(d({}, e), {
+                                        emotionClassifier: t,
+                                    }),
+                                ),
                         }),
                         (0, a.jsx)(r.dOG, {
                             label: "Wake Word Detector",
                             checked: e.wakeWordDetector,
-                            onChange: (t) => c.dR(u(d({}, e), { wakeWordDetector: t })),
+                            onChange: (t) =>
+                                c.dR(
+                                    u(d({}, e), {
+                                        wakeWordDetector: t,
+                                    }),
+                                ),
                         }),
                         (0, a.jsx)(r.dOG, {
                             label: "Yell Detector",
                             checked: e.yellDetector,
-                            onChange: (t) => c.dR(u(d({}, e), { yellDetector: t })),
+                            onChange: (t) =>
+                                c.dR(
+                                    u(d({}, e), {
+                                        yellDetector: t,
+                                    }),
+                                ),
                         }),
                         (0, a.jsx)(r.dOG, {
                             label: "Whisper Transcription",
                             checked: e.whisperTranscription,
-                            onChange: (t) => c.dR(u(d({}, e), { whisperTranscription: t })),
+                            onChange: (t) =>
+                                c.dR(
+                                    u(d({}, e), {
+                                        whisperTranscription: t,
+                                    }),
+                                ),
                         }),
                     ],
                 }),

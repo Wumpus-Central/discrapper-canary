@@ -1,9 +1,12 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
     a = n(204925),
     s = n(818348);
+
 function o(e, t, n) {
     return (
         t in e
@@ -17,6 +20,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -53,7 +57,16 @@ let c = {
         (0, i.mMO)(
             async () => {
                 let { default: t } = await n.e("27672").then(n.bind(n, 888363));
-                return (n) => (0, r.jsx)(t, l({ claimRequired: e }, n));
+                return (n) =>
+                    (0, r.jsx)(
+                        t,
+                        l(
+                            {
+                                claimRequired: e,
+                            },
+                            n,
+                        ),
+                    );
             },
             {
                 onCloseRequest: e ? s.tE : null,

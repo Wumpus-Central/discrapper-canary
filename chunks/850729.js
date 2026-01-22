@@ -1,4 +1,7 @@
-n.d(t, { C: () => L }), n(896048);
+n.d(t, {
+    C: () => L,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(837381),
@@ -42,6 +45,7 @@ let D = {
         y: 0,
     },
 };
+
 function M(e) {
     var t, n;
     let { selected: a, user: d, badge: p, link: h, showProgressBadge: m } = e,
@@ -69,7 +73,9 @@ function M(e) {
             selected: !0,
             lowerBadge: p > 0 ? (0, I.wN)(p) : null,
             upperBadge: U,
-            lowerBadgeSize: { width: (0, o.o6S)(p) },
+            lowerBadgeSize: {
+                width: (0, o.o6S)(p),
+            },
             children: (0, r.jsx)(
                 o.jlP,
                 ((t = (function (e) {
@@ -113,7 +119,7 @@ function M(e) {
                                     j(!0),
                                     setTimeout(() => {
                                         j(!1);
-                                    }, 1000);
+                                    }, 1e3);
                             }
                         },
                         selected: V,
@@ -176,6 +182,7 @@ function M(e) {
         }),
     });
 }
+
 function L() {
     let e = (0, E.q)(),
         t = (0, a.bG)([v.A, j.A], () => {

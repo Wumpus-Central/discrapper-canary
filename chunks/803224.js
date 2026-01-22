@@ -1,9 +1,12 @@
-n.d(t, { A: () => O });
+n.d(t, {
+    A: () => O,
+});
 var r,
     i = n(311907),
     a = n(73153),
     s = n(723702),
     o = n(652215);
+
 function l(e, t, n) {
     return (
         t in e
@@ -17,6 +20,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -43,36 +47,51 @@ let u = {
         notifyMessagesInSelectedChannel: !1,
     },
     d = u;
+
 function f(e) {
     let { desktopType: t } = e;
     d.desktopType = t;
 }
+
 function p(e) {
     let { sounds: t } = e;
     d.disabledSounds = t;
 }
+
 function _() {
     d.disableAllSounds = !d.disableAllSounds;
 }
+
 function h(e) {
     let { ttsType: t } = e;
     d.ttsType = t;
 }
+
 function m(e) {
     let { disableUnreadBadge: t } = e;
     d.disableUnreadBadge = t;
 }
+
 function g(e) {
     let { taskbarFlash: t } = e;
     d.taskbarFlash = t;
 }
+
 function E(e) {
     let { notify: t } = e;
     d.notifyMessagesInSelectedChannel = t;
 }
+
 function b(e) {
     let { enabled: t } = e;
-    t === o.kCE.BLOCKED ? f({ desktopType: o.nRU.NEVER }) : t === o.kCE.ENABLED && f({ desktopType: o.nRU.ALL });
+    t === o.kCE.BLOCKED
+        ? f({
+              desktopType: o.nRU.NEVER,
+          })
+        : t === o.kCE.ENABLED &&
+          f({
+              desktopType: o.nRU.ALL,
+          });
 }
 class y extends (r = i.Ay.DeviceSettingsStore) {
     initialize(e) {

@@ -1,4 +1,7 @@
-n.d(t, { A: () => d }), n(228524);
+n.d(t, {
+    A: () => d,
+}),
+    n(228524);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -7,6 +10,7 @@ var r = n(627968),
     o = n(397927),
     c = n(985018),
     u = n(67170);
+
 function d(e) {
     let {
             className: t,
@@ -26,7 +30,13 @@ function d(e) {
             [g],
         );
     return (0, r.jsxs)(o.DUT, {
-        className: a()(u.kL, t, null != b && { [u.U6]: b }),
+        className: a()(
+            u.kL,
+            t,
+            null != b && {
+                [u.U6]: b,
+            },
+        ),
         onClick: h,
         children: [
             (0, r.jsx)("div", {
@@ -54,13 +64,15 @@ function d(e) {
                                       variant: "text-xs/normal",
                                       color: "text-strong",
                                       className: u.Om,
-                                      children: "\u2022",
+                                      children: "•",
                                   }),
                                   (0, r.jsx)(o.Text, {
                                       variant: "text-xs/normal",
                                       color: "text-strong",
                                       className: u.mG,
-                                      children: c.intl.format(c.t.NywdIj, { count: p }),
+                                      children: c.intl.format(c.t.NywdIj, {
+                                          count: p,
+                                      }),
                                   }),
                               ],
                           })

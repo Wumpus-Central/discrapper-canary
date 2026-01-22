@@ -1,4 +1,8 @@
-n.d(t, { A: () => I }), n(896048), n(638769);
+n.d(t, {
+    A: () => I,
+}),
+    n(896048),
+    n(638769);
 var r,
     i = n(627968),
     a = n(64700),
@@ -15,6 +19,7 @@ var r,
     m = n(652215),
     g = n(985018),
     E = n(228851);
+
 function b(e, t, n) {
     return (
         t in e
@@ -28,6 +33,7 @@ function b(e, t, n) {
         e
     );
 }
+
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -44,6 +50,7 @@ function y(e) {
     }
     return e;
 }
+
 function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -56,6 +63,7 @@ function O(e, t) {
     }
     return n;
 }
+
 function A(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -97,7 +105,11 @@ class v extends (r = a.PureComponent) {
               })
             : (0, i.jsxs)(i.Fragment, {
                   children: [
-                      r > 0 && !a ? (0, i.jsx)(c.cGx, { className: E.__invalid_sourceDivider }) : null,
+                      r > 0 && !a
+                          ? (0, i.jsx)(c.cGx, {
+                                className: E.__invalid_sourceDivider,
+                            })
+                          : null,
                       (0, i.jsxs)("div", {
                           className: E.Yb,
                           children: [
@@ -231,24 +243,37 @@ class S extends a.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            b(this, "state", { editingPayment: null }),
+            b(this, "state", {
+                editingPayment: null,
+            }),
             b(this, "handleEditClick", async (e) => {
                 try {
-                    await u.Gr(e), this.setState({ editingPayment: e });
+                    await u.Gr(e),
+                        this.setState({
+                            editingPayment: e,
+                        });
                 } catch (e) {}
             }),
             b(this, "handleCancel", () => {
-                this.setState({ editingPayment: null });
+                this.setState({
+                    editingPayment: null,
+                });
             }),
             b(this, "handleDelete", async (e) => {
                 try {
-                    await u.JQ(e), this.setState({ editingPayment: null });
+                    await u.JQ(e),
+                        this.setState({
+                            editingPayment: null,
+                        });
                 } catch (e) {}
             }),
             b(this, "handleSubmit", async (e, t) => {
                 if (null != e)
                     try {
-                        await u.Ps(e, t), this.setState({ editingPayment: null });
+                        await u.Ps(e, t),
+                            this.setState({
+                                editingPayment: null,
+                            });
                     } catch (e) {}
             }),
             b(this, "handlePaymentSourceAdded", async (e) => {
@@ -258,7 +283,13 @@ class S extends a.PureComponent {
                 (0, c.mMO)(
                     async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 362111));
-                        return (t) => (0, i.jsx)(e, A(y({}, t), { onAddPaymentSource: this.handlePaymentSourceAdded }));
+                        return (t) =>
+                            (0, i.jsx)(
+                                e,
+                                A(y({}, t), {
+                                    onAddPaymentSource: this.handlePaymentSourceAdded,
+                                }),
+                            );
                     },
                     {
                         onCloseCallback: () => {

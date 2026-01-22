@@ -1,1 +1,3 @@
-t.exports = { u: "_9f99fa4c8039b086" };
+t.exports = {
+    u: "_9f99fa4c8039b086",
+};

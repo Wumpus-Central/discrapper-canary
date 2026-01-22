@@ -1,4 +1,7 @@
-n.d(t, { A: () => y }), n(896048);
+n.d(t, {
+    A: () => y,
+}),
+    n(896048);
 var r = n(64700),
     i = n(311907),
     l = n(827343),
@@ -53,10 +56,16 @@ class E extends r.PureComponent {
 }
 let O = () => null;
 g.isPlatformEmbedded &&
-    (m.Ay.on("SYSTEM_TRAY_TOGGLE_MUTE", () => l.A.toggleSelfMute({ location: "System Tray" })),
+    (m.Ay.on("SYSTEM_TRAY_TOGGLE_MUTE", () =>
+        l.A.toggleSelfMute({
+            location: "System Tray",
+        }),
+    ),
     m.Ay.on("SYSTEM_TRAY_TOGGLE_DEAFEN", () => l.A.toggleSelfDeaf()),
     m.Ay.on("SYSTEM_TRAY_OPEN_VOICE_SETTINGS", () => {
-        (0, c.openUserSettings)(o.X.VOICE_AND_VIDEO_PANEL, { section: b.nc_.VOICE });
+        (0, c.openUserSettings)(o.X.VOICE_AND_VIDEO_PANEL, {
+            section: b.nc_.VOICE,
+        });
     }),
     (O = i.Ay.connectStores([f.A, d.A, A.A, u.default, h.A, p.A, a.A], () => {
         let e = u.default.getTotalMentionCount(),

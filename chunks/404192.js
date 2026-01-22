@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var l = n(627968);
 n(64700);
 var r = n(503698),
@@ -46,6 +48,7 @@ let u = (e) => {
           })
         : null;
 };
+
 function m(e) {
     let { elements: t } = e;
     if (
@@ -60,7 +63,13 @@ function m(e) {
         return null;
     let n = t.map((e, t) => {
             let { data: n } = e;
-            return (0, l.jsx)(u, { data: n }, "external-link+".concat(t));
+            return (0, l.jsx)(
+                u,
+                {
+                    data: n,
+                },
+                "external-link+".concat(t),
+            );
         }),
         r = t.some((e) => {
             let { data: t } = e;

@@ -1,4 +1,6 @@
-r.d(t, { default: () => h });
+r.d(t, {
+    default: () => h,
+});
 var n = r(627968);
 r(64700);
 var o = r(793574),
@@ -18,6 +20,7 @@ var o = r(793574),
     g = r(920241),
     P = r(316464),
     m = r(818348);
+
 function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
@@ -43,6 +46,7 @@ function w(e) {
     }
     return e;
 }
+
 function v(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -75,7 +79,9 @@ let x = [
                     onReturn: () => {
                         0 === Object.keys(d.A.paymentSources).length
                             ? e.handleClose()
-                            : e.handleStepChange(u.pn.REVIEW, { trackedFromStep: u.pn.ADD_PAYMENT_STEPS });
+                            : e.handleStepChange(u.pn.REVIEW, {
+                                  trackedFromStep: u.pn.ADD_PAYMENT_STEPS,
+                              });
                     },
                 }),
             ),
@@ -97,6 +103,7 @@ let x = [
         renderStep: (e) => (0, n.jsx)(j.A, w({}, e)),
     },
 ];
+
 function h(e) {
     let { guildProductContext: t, sourceAnalyticsLocations: r, applicationId: u } = e,
         p = (function (e, t) {

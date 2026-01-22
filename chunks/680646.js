@@ -7,6 +7,7 @@ var r,
     i = n(311907),
     a = n(73153),
     s = n(927813);
+
 function o(e, t, n) {
     return (
         t in e
@@ -35,24 +36,29 @@ let c = {
     nextFetchRetryTimeMs: null,
     fetchState: 0,
 };
+
 function u() {
     (c.applicationIdToGuildIds = {}), (c.lastFetchTimeMs = null), (c.nextFetchRetryTimeMs = null), (c.fetchState = 0);
 }
+
 function d() {
     c.fetchState = 1;
 }
+
 function f(e) {
     let { applicationId: t, guildId: n } = e;
     null == c.applicationIdToGuildIds[t] && (c.applicationIdToGuildIds[t] = new Set()),
         c.applicationIdToGuildIds[t].add(n),
         (c.applicationIdToGuildIds[t] = new Set(c.applicationIdToGuildIds[t]));
 }
+
 function p(e) {
     let { applicationId: t, guildId: n } = e;
     null != c.applicationIdToGuildIds[t] &&
         (c.applicationIdToGuildIds[t].delete(n),
         (c.applicationIdToGuildIds[t] = new Set(c.applicationIdToGuildIds[t])));
 }
+
 function _(e) {
     let { guildIdToApplicationIds: t } = e;
     for (let e in ((c.fetchState = 2),
@@ -66,6 +72,7 @@ function _(e) {
                 guildId: e,
             });
 }
+
 function h(e) {
     let { retryAfterSeconds: t } = e;
     if (((c.fetchState = 3), null != t)) {
@@ -73,6 +80,7 @@ function h(e) {
         c.nextFetchRetryTimeMs = Date.now() + e;
     }
 }
+
 function m(e) {
     let { application: t, guildId: n } = e;
     null != t &&
@@ -81,6 +89,7 @@ function m(e) {
             guildId: n,
         });
 }
+
 function g(e) {
     let { applicationId: t, guildId: n } = e;
     null != t &&

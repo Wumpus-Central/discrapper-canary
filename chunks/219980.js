@@ -1,4 +1,6 @@
-n.d(t, { J: () => _ });
+n.d(t, {
+    J: () => _,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -6,6 +8,7 @@ var i = n(311907),
 n(964486), n(786953);
 var s = n(505274),
     o = n(448362);
+
 function l(e, t, n) {
     return (
         t in e
@@ -19,6 +22,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,6 +39,7 @@ function c(e) {
     }
     return e;
 }
+
 function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -47,6 +52,7 @@ function u(e, t) {
     }
     return n;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -58,6 +64,7 @@ function d(e, t) {
         e
     );
 }
+
 function f(e, t) {
     if (null == e) return {};
     var n,
@@ -74,6 +81,7 @@ function f(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function p(e, t) {
     if (null == e) return {};
     var n,
@@ -84,11 +92,22 @@ function p(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function _(e) {
     let { pillRef: t } = e,
         n = f(e, ["pillRef"]),
-        { balancePillOverlay: l } = (0, i.cf)([s.A], () => ({ balancePillOverlay: s.A.balancePillOverlay })),
-        u = (0, r.jsx)(o.Gy, c({ ref: t }, n)),
+        { balancePillOverlay: l } = (0, i.cf)([s.A], () => ({
+            balancePillOverlay: s.A.balancePillOverlay,
+        })),
+        u = (0, r.jsx)(
+            o.Gy,
+            c(
+                {
+                    ref: t,
+                },
+                n,
+            ),
+        ),
         p = (0, r.jsx)(
             o.Gy,
             d(c({}, n), {

@@ -1,4 +1,6 @@
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});
 var r = (function (e) {
     return (
         (e[(e.BLOCK_MESSAGE = 1)] = "BLOCK_MESSAGE"),

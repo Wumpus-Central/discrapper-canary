@@ -1,4 +1,7 @@
-n.d(t, { A: () => u }), n(321073);
+n.d(t, {
+    A: () => u,
+}),
+    n(321073);
 var a = n(627968),
     l = n(64700),
     i = n(554146),
@@ -7,10 +10,13 @@ var a = n(627968),
     o = n(364504),
     c = n(735321),
     d = n(162942);
+
 function u(e) {
     let { displayProfile: t, handleOpenUserProfileModal: n, height: u } = e,
         m = (0, c.yy)(t),
-        p = (0, s.A)({ location: "AccountProfilePopoutUpsell" }),
+        p = (0, s.A)({
+            location: "AccountProfilePopoutUpsell",
+        }),
         h = l.useMemo(() => {
             let e = [];
             return (

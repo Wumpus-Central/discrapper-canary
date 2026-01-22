@@ -1,7 +1,10 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r,
     i = n(311907),
     a = n(73153);
+
 function s(e, t, n) {
     return (
         t in e
@@ -15,6 +18,7 @@ function s(e, t, n) {
         e
     );
 }
+
 function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -31,6 +35,7 @@ function o(e) {
     }
     return e;
 }
+
 function l() {
     return {
         usageByApplicationId: {},
@@ -38,6 +43,7 @@ function l() {
     };
 }
 let c = l();
+
 function u() {
     c = l();
 }
@@ -50,4 +56,6 @@ class d extends (r = i.Ay.PersistedStore) {
     }
 }
 s(d, "displayName", "ActivityShelfStore"), s(d, "persistKey", "ActivityShelfStore");
-let f = new d(a.h, { LOGOUT: u });
+let f = new d(a.h, {
+    LOGOUT: u,
+});

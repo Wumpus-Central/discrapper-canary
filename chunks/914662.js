@@ -1,9 +1,12 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(627968);
 n(64700);
 var l = n(397927),
     i = n(985018),
     a = n(135716);
+
 function s(e) {
     let { onClose: t, guildName: n } = e;
     return (0, r.jsxs)("div", {
@@ -29,7 +32,9 @@ function s(e) {
                     }),
                     (0, r.jsx)(l.Text, {
                         variant: "text-sm/normal",
-                        children: i.intl.format(i.t["4/6vQh"], { guildName: n }),
+                        children: i.intl.format(i.t["4/6vQh"], {
+                            guildName: n,
+                        }),
                     }),
                     (0, r.jsx)("div", {
                         "data-button-hoisted-classname-wrapper": !0,

@@ -15,6 +15,7 @@ var r = n(311907),
     p = n(994500),
     _ = n(977997),
     h = n(652215);
+
 function m(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "useCanRing",
         n = arguments.length > 2 ? arguments[2] : void 0,
@@ -26,6 +27,7 @@ function m(e) {
         d = E(e, t, i) || u;
     return s && !a && !e.bot && !e.system && !e.isProvisional && d;
 }
+
 function g(e) {
     let t = h.kvI.CALLABLE.has(e.type),
         n = e.type === h.rbe.GUILD_VOICE;
@@ -43,6 +45,7 @@ function g(e) {
     }
     return !1;
 }
+
 function E(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "useCanRingToGuildVoiceChannel",
         n = arguments.length > 2 ? arguments[2] : void 0,

@@ -1,4 +1,6 @@
-n.d(t, { O: () => r });
+n.d(t, {
+    O: () => r,
+});
 let r = (0, n(945810).mj)({
     name: "2025-08-mobile-apple-payment-links",
     kind: "user",

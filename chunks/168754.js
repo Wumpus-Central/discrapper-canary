@@ -1,8 +1,11 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 var r = n(627968);
 n(64700);
 var l = n(697744),
     i = n(709562);
+
 function a(e) {
     let { isActivityActive: t, onMouseEnter: n, onMouseLeave: a, onClick: s } = e,
         o = (function (e, t) {

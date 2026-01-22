@@ -1,1 +1,3 @@
-e.exports = { l: "cfdf98618012fca8" };
+e.exports = {
+    l: "cfdf98618012fca8",
+};

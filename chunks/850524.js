@@ -1,4 +1,13 @@
-n.d(t, { u: () => E }), n(896048), n(65821), n(747238), n(812715), n(733351), n(321073), n(457529);
+n.d(t, {
+    u: () => E,
+}),
+    n(896048),
+    n(65821),
+    n(747238),
+    n(812715),
+    n(733351),
+    n(321073),
+    n(457529);
 var r = n(118356),
     i = n(996308),
     a = n(92277),
@@ -32,7 +41,9 @@ async function m(e, t) {
                     _type: Object.prototype.toString.call(o),
                 };
             } catch (e) {
-                u = { _error: "Context not serializable" };
+                u = {
+                    _error: "Context not serializable",
+                };
             }
         }
     let d = {
@@ -54,6 +65,7 @@ async function m(e, t) {
             _ === h && c.error("Too many RPC send failures, suppressing further error logs"));
     }
 }
+
 function g(e) {
     return {
         log: (t, n) =>
@@ -103,6 +115,7 @@ function g(e) {
             ),
     };
 }
+
 function E(e) {
     if (__OVERLAY__) {
         if (d) return void p.warn("Overlay logger already set up, skipping duplicate setup");
@@ -201,7 +214,9 @@ function E(e) {
                                   stack: e.reason.stack,
                               }))
                             : ("string" == typeof e.reason && (t = "Unhandled promise rejection: ".concat(e.reason)),
-                              (n = { reason: e.reason })),
+                              (n = {
+                                  reason: e.reason,
+                              })),
                             u.crash(t, n);
                     } catch (t) {
                         p.error("[Failed to log rejection]", t, e);
@@ -244,6 +259,7 @@ function E(e) {
             p.log("Overlay error handlers and console interception set up");
     }
 }
+
 function b(e) {
     if (0 === e.length) return e;
     let t = [],
@@ -264,6 +280,7 @@ function b(e) {
     }
     return t;
 }
+
 function y(e) {
     if (null === e) return "null";
     if (void 0 === e) return "undefined";

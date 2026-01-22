@@ -1,4 +1,7 @@
-n.d(t, { A: () => x }), n(896048);
+n.d(t, {
+    A: () => x,
+}),
+    n(896048);
 var a = n(627968);
 n(64700);
 var l = n(989349),
@@ -12,6 +15,7 @@ var l = n(989349),
     m = n(287809),
     p = n(105040),
     h = n(661251);
+
 function f(e) {
     let t = new Date(e);
     return (
@@ -28,6 +32,7 @@ function f(e) {
         })
     );
 }
+
 function x() {
     let e = (0, r.bG)([d.Ay], () => d.Ay.getDevToolTotalFriendAnniversaries()),
         t = (0, r.bG)([d.Ay], () => d.Ay.getDevToolCurrentDate()),
@@ -63,7 +68,9 @@ function x() {
                     children: (0, a.jsxs)(s.BJc, {
                         gap: 8,
                         direction: "horizontal",
-                        style: { flex: 1 },
+                        style: {
+                            flex: 1,
+                        },
                         children: [
                             (0, a.jsx)(s.l6P, {
                                 label: "Number of anniversaries to generate",
@@ -226,7 +233,9 @@ function x() {
                                 size: "sm",
                                 text: "Clear",
                                 onClick: () => {
-                                    o.h.dispatch({ type: "DEV_TOOLS_RESET_CURRENT_DATE" });
+                                    o.h.dispatch({
+                                        type: "DEV_TOOLS_RESET_CURRENT_DATE",
+                                    });
                                 },
                             }),
                         ],
@@ -250,7 +259,9 @@ function x() {
                                         size: "sm",
                                         text: "Reset",
                                         onClick: () => {
-                                            o.h.dispatch({ type: "DEV_TOOLS_GIFT_MESSAGE_COOLDOWN_RESET" });
+                                            o.h.dispatch({
+                                                type: "DEV_TOOLS_GIFT_MESSAGE_COOLDOWN_RESET",
+                                            });
                                         },
                                     }),
                                 ],
@@ -303,7 +314,9 @@ function x() {
                                         size: "sm",
                                         text: "Reset",
                                         onClick: () => {
-                                            o.h.dispatch({ type: "DEV_TOOLS_GIFT_UNREAD_NOTIFICATION_COOLDOWN_RESET" });
+                                            o.h.dispatch({
+                                                type: "DEV_TOOLS_GIFT_UNREAD_NOTIFICATION_COOLDOWN_RESET",
+                                            });
                                         },
                                     }),
                                 ],
@@ -360,7 +373,9 @@ function x() {
                             size: "sm",
                             text: "Clear",
                             onClick: () => {
-                                o.h.dispatch({ type: "DEV_TOOLS_FRIENDS_LIST_GIFT_INTENTS_SHOWN_RESET" });
+                                o.h.dispatch({
+                                    type: "DEV_TOOLS_FRIENDS_LIST_GIFT_INTENTS_SHOWN_RESET",
+                                });
                             },
                         }),
                     ],

@@ -1,4 +1,7 @@
-n.d(t, { J: () => h }), n(896048);
+n.d(t, {
+    J: () => h,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -10,6 +13,7 @@ var r = n(627968),
     d = n(652215),
     f = n(985018),
     p = n(476555);
+
 function _(e) {
     switch (e.state) {
         case "unknown":
@@ -34,6 +38,7 @@ function _(e) {
             (0, c.xb)(e.state);
     }
 }
+
 function h() {
     let e = (0, l.XQ)(),
         [t, n] = i.useState(!1),
@@ -66,7 +71,11 @@ function h() {
                         ? (0, r.jsx)(s.Text, {
                               variant: "text-sm/normal",
                               color: E ? "text-feedback-positive" : "text-feedback-warning",
-                              children: E ? f.intl.string(f.t.KHVMkW) : f.intl.format(f.t["5Rlr0b"], { status: _(m) }),
+                              children: E
+                                  ? f.intl.string(f.t.KHVMkW)
+                                  : f.intl.format(f.t["5Rlr0b"], {
+                                        status: _(m),
+                                    }),
                           })
                         : null,
                 ],

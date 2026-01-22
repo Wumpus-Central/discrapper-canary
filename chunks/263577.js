@@ -1,4 +1,7 @@
-n.d(t, { V: () => p }), n(896048);
+n.d(t, {
+    V: () => p,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -9,6 +12,7 @@ var r = n(627968),
     u = n(736653),
     d = n(985018),
     f = n(895237);
+
 function p(e) {
     let {
             src: t,
@@ -31,7 +35,9 @@ function p(e) {
             width: "100%",
             height: "100%",
             color: (0, l.Mw)(E) ? c.LU0.colors.WHITE : c.LU0.colors.BLACK,
-            style: { maxWidth: b },
+            style: {
+                maxWidth: b,
+            },
             className: s()(f.f, p),
         });
     let I =

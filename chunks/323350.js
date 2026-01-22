@@ -18,6 +18,7 @@ var r = n(284009),
     f = n(287809),
     p = n(427262),
     _ = n(711371);
+
 function h(e, t, n) {
     return (
         t in e
@@ -31,6 +32,7 @@ function h(e, t, n) {
         e
     );
 }
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -47,6 +49,7 @@ function m(e) {
     }
     return e;
 }
+
 function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -59,6 +62,7 @@ function g(e, t) {
     }
     return n;
 }
+
 function E(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -70,6 +74,7 @@ function E(e, t) {
         e
     );
 }
+
 function b(e, t) {
     let { mode: n, ignoreTrailingEmptyNodes: r, preventEmojiSurrogates: i } = null != t ? t : {},
         [a, s] = (null == t ? void 0 : t.range) != null ? _.ZF.edges(t.range) : [void 0, void 0];
@@ -81,6 +86,7 @@ function b(e, t) {
         preventEmojiSurrogates: i,
     });
 }
+
 function y(e, t) {
     var n, r;
     let {
@@ -140,6 +146,7 @@ function y(e, t) {
     }
     return E.join(o);
 }
+
 function O(e, t) {
     let { mode: n, start: r, allowBlockQuotePrefix: i = !1, preventEmojiSurrogates: h = !1 } = null != t ? t : {};
     if (_.l5.isText(e)) return A(e.text, t);
@@ -201,7 +208,11 @@ function O(e, t) {
             if ("raw" === n) return t;
             let r = f.default.getUser(e.userId);
             if (null == r) return t;
-            return "@".concat(p.Ay.getUserTag(r, { decoration: "never" }));
+            return "@".concat(
+                p.Ay.getUserTag(r, {
+                    decoration: "never",
+                }),
+            );
         }
         case "commandMention":
             return "</".concat(e.commandName, ":").concat(e.commandId, ">");
@@ -229,6 +240,7 @@ function O(e, t) {
         }
     }
 }
+
 function A(e, t) {
     var n, r;
     let { start: a, end: s } = null != t ? t : {};

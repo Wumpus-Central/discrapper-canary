@@ -1,7 +1,10 @@
-n.d(t, { o: () => s });
+n.d(t, {
+    o: () => s,
+});
 var r = n(64700),
     i = n(66455),
     a = n(348275);
+
 function s(e, t, n, s) {
     let o = r.useCallback(
             (e) => {

@@ -1,4 +1,6 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(627968),
     i = n(158954),
     a = n(206418),
@@ -8,7 +10,9 @@ var r = n(627968),
 let c = (e) => {
     let { showSubtext: t = !1 } = e;
     return (0, r.jsxs)(a.A, {
-        assetComponent: (0, r.jsx)(s.A, { className: l.jc }),
+        assetComponent: (0, r.jsx)(s.A, {
+            className: l.jc,
+        }),
         tooltipWordmarkComponent: (0, r.jsx)(i.DZT, {
             variant: "heading-md/extrabold",
             className: l.RK,

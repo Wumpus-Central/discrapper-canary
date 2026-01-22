@@ -45,58 +45,144 @@ e.exports = function (e) {
             {
                 className: "keyword",
                 variants: [
-                    { begin: /\bTEXT\s*SEARCH\b/ },
-                    { begin: /\b(PRIMARY|FOREIGN|FOR(\s+NO)?)\s+KEY\b/ },
-                    { begin: /\bPARALLEL\s+(UNSAFE|RESTRICTED|SAFE)\b/ },
-                    { begin: /\bSTORAGE\s+(PLAIN|EXTERNAL|EXTENDED|MAIN)\b/ },
-                    { begin: /\bMATCH\s+(FULL|PARTIAL|SIMPLE)\b/ },
-                    { begin: /\bNULLS\s+(FIRST|LAST)\b/ },
-                    { begin: /\bEVENT\s+TRIGGER\b/ },
-                    { begin: /\b(MAPPING|OR)\s+REPLACE\b/ },
-                    { begin: /\b(FROM|TO)\s+(PROGRAM|STDIN|STDOUT)\b/ },
-                    { begin: /\b(SHARE|EXCLUSIVE)\s+MODE\b/ },
-                    { begin: /\b(LEFT|RIGHT)\s+(OUTER\s+)?JOIN\b/ },
-                    { begin: /\b(FETCH|MOVE)\s+(NEXT|PRIOR|FIRST|LAST|ABSOLUTE|RELATIVE|FORWARD|BACKWARD)\b/ },
-                    { begin: /\bPRESERVE\s+ROWS\b/ },
-                    { begin: /\bDISCARD\s+PLANS\b/ },
-                    { begin: /\bREFERENCING\s+(OLD|NEW)\b/ },
-                    { begin: /\bSKIP\s+LOCKED\b/ },
-                    { begin: /\bGROUPING\s+SETS\b/ },
-                    { begin: /\b(BINARY|INSENSITIVE|SCROLL|NO\s+SCROLL)\s+(CURSOR|FOR)\b/ },
-                    { begin: /\b(WITH|WITHOUT)\s+HOLD\b/ },
-                    { begin: /\bWITH\s+(CASCADED|LOCAL)\s+CHECK\s+OPTION\b/ },
-                    { begin: /\bEXCLUDE\s+(TIES|NO\s+OTHERS)\b/ },
-                    { begin: /\bFORMAT\s+(TEXT|XML|JSON|YAML)\b/ },
-                    { begin: /\bSET\s+((SESSION|LOCAL)\s+)?NAMES\b/ },
-                    { begin: /\bIS\s+(NOT\s+)?UNKNOWN\b/ },
-                    { begin: /\bSECURITY\s+LABEL\b/ },
-                    { begin: /\bSTANDALONE\s+(YES|NO|NO\s+VALUE)\b/ },
-                    { begin: /\bWITH\s+(NO\s+)?DATA\b/ },
-                    { begin: /\b(FOREIGN|SET)\s+DATA\b/ },
-                    { begin: /\bSET\s+(CATALOG|CONSTRAINTS)\b/ },
-                    { begin: /\b(WITH|FOR)\s+ORDINALITY\b/ },
-                    { begin: /\bIS\s+(NOT\s+)?DOCUMENT\b/ },
-                    { begin: /\bXML\s+OPTION\s+(DOCUMENT|CONTENT)\b/ },
-                    { begin: /\b(STRIP|PRESERVE)\s+WHITESPACE\b/ },
-                    { begin: /\bNO\s+(ACTION|MAXVALUE|MINVALUE)\b/ },
-                    { begin: /\bPARTITION\s+BY\s+(RANGE|LIST|HASH)\b/ },
-                    { begin: /\bAT\s+TIME\s+ZONE\b/ },
-                    { begin: /\bGRANTED\s+BY\b/ },
-                    { begin: /\bRETURN\s+(QUERY|NEXT)\b/ },
-                    { begin: /\b(ATTACH|DETACH)\s+PARTITION\b/ },
-                    { begin: /\bFORCE\s+ROW\s+LEVEL\s+SECURITY\b/ },
+                    {
+                        begin: /\bTEXT\s*SEARCH\b/,
+                    },
+                    {
+                        begin: /\b(PRIMARY|FOREIGN|FOR(\s+NO)?)\s+KEY\b/,
+                    },
+                    {
+                        begin: /\bPARALLEL\s+(UNSAFE|RESTRICTED|SAFE)\b/,
+                    },
+                    {
+                        begin: /\bSTORAGE\s+(PLAIN|EXTERNAL|EXTENDED|MAIN)\b/,
+                    },
+                    {
+                        begin: /\bMATCH\s+(FULL|PARTIAL|SIMPLE)\b/,
+                    },
+                    {
+                        begin: /\bNULLS\s+(FIRST|LAST)\b/,
+                    },
+                    {
+                        begin: /\bEVENT\s+TRIGGER\b/,
+                    },
+                    {
+                        begin: /\b(MAPPING|OR)\s+REPLACE\b/,
+                    },
+                    {
+                        begin: /\b(FROM|TO)\s+(PROGRAM|STDIN|STDOUT)\b/,
+                    },
+                    {
+                        begin: /\b(SHARE|EXCLUSIVE)\s+MODE\b/,
+                    },
+                    {
+                        begin: /\b(LEFT|RIGHT)\s+(OUTER\s+)?JOIN\b/,
+                    },
+                    {
+                        begin: /\b(FETCH|MOVE)\s+(NEXT|PRIOR|FIRST|LAST|ABSOLUTE|RELATIVE|FORWARD|BACKWARD)\b/,
+                    },
+                    {
+                        begin: /\bPRESERVE\s+ROWS\b/,
+                    },
+                    {
+                        begin: /\bDISCARD\s+PLANS\b/,
+                    },
+                    {
+                        begin: /\bREFERENCING\s+(OLD|NEW)\b/,
+                    },
+                    {
+                        begin: /\bSKIP\s+LOCKED\b/,
+                    },
+                    {
+                        begin: /\bGROUPING\s+SETS\b/,
+                    },
+                    {
+                        begin: /\b(BINARY|INSENSITIVE|SCROLL|NO\s+SCROLL)\s+(CURSOR|FOR)\b/,
+                    },
+                    {
+                        begin: /\b(WITH|WITHOUT)\s+HOLD\b/,
+                    },
+                    {
+                        begin: /\bWITH\s+(CASCADED|LOCAL)\s+CHECK\s+OPTION\b/,
+                    },
+                    {
+                        begin: /\bEXCLUDE\s+(TIES|NO\s+OTHERS)\b/,
+                    },
+                    {
+                        begin: /\bFORMAT\s+(TEXT|XML|JSON|YAML)\b/,
+                    },
+                    {
+                        begin: /\bSET\s+((SESSION|LOCAL)\s+)?NAMES\b/,
+                    },
+                    {
+                        begin: /\bIS\s+(NOT\s+)?UNKNOWN\b/,
+                    },
+                    {
+                        begin: /\bSECURITY\s+LABEL\b/,
+                    },
+                    {
+                        begin: /\bSTANDALONE\s+(YES|NO|NO\s+VALUE)\b/,
+                    },
+                    {
+                        begin: /\bWITH\s+(NO\s+)?DATA\b/,
+                    },
+                    {
+                        begin: /\b(FOREIGN|SET)\s+DATA\b/,
+                    },
+                    {
+                        begin: /\bSET\s+(CATALOG|CONSTRAINTS)\b/,
+                    },
+                    {
+                        begin: /\b(WITH|FOR)\s+ORDINALITY\b/,
+                    },
+                    {
+                        begin: /\bIS\s+(NOT\s+)?DOCUMENT\b/,
+                    },
+                    {
+                        begin: /\bXML\s+OPTION\s+(DOCUMENT|CONTENT)\b/,
+                    },
+                    {
+                        begin: /\b(STRIP|PRESERVE)\s+WHITESPACE\b/,
+                    },
+                    {
+                        begin: /\bNO\s+(ACTION|MAXVALUE|MINVALUE)\b/,
+                    },
+                    {
+                        begin: /\bPARTITION\s+BY\s+(RANGE|LIST|HASH)\b/,
+                    },
+                    {
+                        begin: /\bAT\s+TIME\s+ZONE\b/,
+                    },
+                    {
+                        begin: /\bGRANTED\s+BY\b/,
+                    },
+                    {
+                        begin: /\bRETURN\s+(QUERY|NEXT)\b/,
+                    },
+                    {
+                        begin: /\b(ATTACH|DETACH)\s+PARTITION\b/,
+                    },
+                    {
+                        begin: /\bFORCE\s+ROW\s+LEVEL\s+SECURITY\b/,
+                    },
                     {
                         begin: /\b(INCLUDING|EXCLUDING)\s+(COMMENTS|CONSTRAINTS|DEFAULTS|IDENTITY|INDEXES|STATISTICS|STORAGE|ALL)\b/,
                     },
-                    { begin: /\bAS\s+(ASSIGNMENT|IMPLICIT|PERMISSIVE|RESTRICTIVE|ENUM|RANGE)\b/ },
+                    {
+                        begin: /\bAS\s+(ASSIGNMENT|IMPLICIT|PERMISSIVE|RESTRICTIVE|ENUM|RANGE)\b/,
+                    },
                 ],
             },
-            { begin: /\b(FORMAT|FAMILY|VERSION)\s*\(/ },
+            {
+                begin: /\b(FORMAT|FAMILY|VERSION)\s*\(/,
+            },
             {
                 begin: /\bINCLUDE\s*\(/,
                 keywords: "INCLUDE",
             },
-            { begin: /\bRANGE(?!\s*(BETWEEN|UNBOUNDED|CURRENT|[-0-9]+))/ },
+            {
+                begin: /\bRANGE(?!\s*(BETWEEN|UNBOUNDED|CURRENT|[-0-9]+))/,
+            },
             {
                 begin: /\b(VERSION|OWNER|TEMPLATE|TABLESPACE|CONNECTION\s+LIMIT|PROCEDURE|RESTRICT|JOIN|PARSER|COPY|START|END|COLLATION|INPUT|ANALYZE|STORAGE|LIKE|DEFAULT|DELIMITER|ENCODING|COLUMN|CONSTRAINT|TABLE|SCHEMA)\s*=/,
             },
@@ -114,11 +200,15 @@ e.exports = function (e) {
             },
             {
                 begin: /\b(XMLELEMENT|XMLPI)\s*\(\s*NAME/,
-                keywords: { keyword: "NAME" },
+                keywords: {
+                    keyword: "NAME",
+                },
             },
             {
                 begin: /\b(XMLPARSE|XMLSERIALIZE)\s*\(\s*(DOCUMENT|CONTENT)/,
-                keywords: { keyword: "DOCUMENT CONTENT" },
+                keywords: {
+                    keyword: "DOCUMENT CONTENT",
+                },
             },
             {
                 beginKeywords: "CACHE INCREMENT MAXVALUE MINVALUE",
@@ -141,8 +231,12 @@ e.exports = function (e) {
                     type: "LANGUAGE_HANDLER TRIGGER EVENT_TRIGGER FDW_HANDLER INDEX_AM_HANDLER TSM_HANDLER",
                 },
             },
-            { begin: "\\b(" + f + ")\\s*\\(" },
-            { begin: "\\.(" + l + ")\\b" },
+            {
+                begin: "\\b(" + f + ")\\s*\\(",
+            },
+            {
+                begin: "\\.(" + l + ")\\b",
+            },
             {
                 begin: "\\b(" + l + ")\\s+PATH\\b",
                 keywords: {
@@ -158,13 +252,21 @@ e.exports = function (e) {
                 className: "string",
                 begin: "'",
                 end: "'",
-                contains: [{ begin: "''" }],
+                contains: [
+                    {
+                        begin: "''",
+                    },
+                ],
             },
             {
                 className: "string",
                 begin: "(e|E|u&|U&)'",
                 end: "'",
-                contains: [{ begin: "\\\\." }],
+                contains: [
+                    {
+                        begin: "\\\\.",
+                    },
+                ],
                 relevance: 10,
             },
             e.END_SAME_AS_BEGIN({
@@ -194,7 +296,11 @@ e.exports = function (e) {
             {
                 begin: '"',
                 end: '"',
-                contains: [{ begin: '""' }],
+                contains: [
+                    {
+                        begin: '""',
+                    },
+                ],
             },
             e.C_NUMBER_MODE,
             e.C_BLOCK_COMMENT_MODE,
@@ -206,7 +312,9 @@ e.exports = function (e) {
                         begin: "%(ROW)?TYPE",
                         relevance: 10,
                     },
-                    { begin: "\\$\\d+" },
+                    {
+                        begin: "\\$\\d+",
+                    },
                     {
                         begin: "^#\\w",
                         end: "$",

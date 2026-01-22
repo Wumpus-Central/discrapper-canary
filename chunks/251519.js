@@ -1,4 +1,7 @@
-n.d(t, { A: () => D }), n(896048);
+n.d(t, {
+    A: () => D,
+}),
+    n(896048);
 var r = n(284009),
     i = n.n(r),
     a = n(451988),
@@ -20,6 +23,7 @@ var r = n(284009),
     O = n(544105),
     A = n(731854),
     v = n(985018);
+
 function S(e, t, n) {
     return (
         t in e
@@ -34,15 +38,22 @@ function S(e, t, n) {
     );
 }
 let I = new c.A("GameConsoleManager"),
-    T = 3000,
-    C = 60000,
-    N = 180000;
+    T = 3e3,
+    C = 6e4,
+    N = 18e4;
 async function R(e) {
     let t = f.A.getChannelId();
     i()(null == t, "Syncing to remote while in voice!"),
-        e.selfMute !== d.A.isSelfMute() && (await o.A.toggleSelfMute({ syncRemote: !1 })),
-        e.selfDeaf !== d.A.isSelfDeaf() && o.A.toggleSelfDeaf({ syncRemote: !1 });
+        e.selfMute !== d.A.isSelfMute() &&
+            (await o.A.toggleSelfMute({
+                syncRemote: !1,
+            })),
+        e.selfDeaf !== d.A.isSelfDeaf() &&
+            o.A.toggleSelfDeaf({
+                syncRemote: !1,
+            });
 }
+
 function w(e) {
     let t = E.default.getAwaitingRemoteSessionInfo();
     return e.find((e) => {

@@ -1,4 +1,8 @@
-i.r(t), i.d(t, { default: () => u }), i(896048);
+i.r(t),
+    i.d(t, {
+        default: () => u,
+    }),
+    i(896048);
 var n = i(627968),
     r = i(64700),
     s = i(827734),
@@ -7,10 +11,18 @@ var n = i(627968),
     o = i(348639),
     a = i(972049),
     d = i(772958);
+
 function u() {
     let [e, t] = r.useState(!1),
         i = (0, d.vX)(),
-        { reporting: u } = o.A.useExperiment({ location: "be7a1c_1" }, { autoTrackExposure: !1 });
+        { reporting: u } = o.A.useExperiment(
+            {
+                location: "be7a1c_1",
+            },
+            {
+                autoTrackExposure: !1,
+            },
+        );
     return (r.useEffect(() => {
         if (u && e && null != i)
             return (

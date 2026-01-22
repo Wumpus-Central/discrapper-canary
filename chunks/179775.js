@@ -1,4 +1,6 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(627968);
 n(64700);
 var i = n(234419),
@@ -13,11 +15,15 @@ let c = (e) => {
         u = o.intl.string(o.t.IBYG5U);
     return (
         void 0 !== t
-            ? (u = o.intl.formatToPlainString(o.t.iiLbvu, { percent: t }))
+            ? (u = o.intl.formatToPlainString(o.t.iiLbvu, {
+                  percent: t,
+              }))
             : c && (u = o.intl.string(o.t.gtNqJQ)),
         (0, r.jsx)("div", {
             className: l.f,
-            children: (0, r.jsx)(a.D, { text: u }),
+            children: (0, r.jsx)(a.D, {
+                text: u,
+            }),
         })
     );
 };

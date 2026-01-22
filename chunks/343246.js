@@ -1,7 +1,11 @@
-n.d(t, { t: () => l }), n(747238);
+n.d(t, {
+    t: () => l,
+}),
+    n(747238);
 var r = n(151258),
     i = n(773669),
     a = n(985018);
+
 function s(e, t) {
     try {
         return Intl.DateTimeFormat(e, t).format;
@@ -9,6 +13,7 @@ function s(e, t) {
         return Intl.DateTimeFormat(void 0, t).format;
     }
 }
+
 function o(e, t) {
     if (null == r.t) return null;
     try {
@@ -30,6 +35,7 @@ function o(e, t) {
         return null;
     }
 }
+
 function l(e) {
     let t = i.default.locale,
         n = o(t, e);

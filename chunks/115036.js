@@ -1,5 +1,7 @@
 let r, i, a;
-n.d(t, { A: () => R });
+n.d(t, {
+    A: () => R,
+});
 var s,
     o = n(835245),
     l = n(311907),
@@ -11,6 +13,7 @@ var s,
     _ = n(353835),
     h = n(723702),
     m = n(536194);
+
 function g(e, t, n) {
     return (
         t in e
@@ -27,27 +30,34 @@ function g(e, t, n) {
 let E = "BrowserHandoffStore",
     b = !1,
     y = new u.Ep();
+
 function O() {
     null != r && null != i && (window.open("".concat(r, "&key=").concat(i)), _.A.focus(null, !0));
 }
+
 function A() {
     (i = null), y.stop(), (b = !1), c.w.set(E, b);
 }
+
 function v(e) {
     (r = "".concat(location.protocol, "//").concat(location.host, "/handoff?rpc=").concat(e.port)), O();
 }
+
 function S(e) {
     if (null != i) return !1;
     (i = (0, o.A)()), y.start(e.timeout, () => (0, f.mZ)()), O();
 }
+
 function I(e) {
     let { handoffKey: t, handoffToken: n, timeout: r } = e;
     if (null == t || null == n) return !1;
     (b = !0), y.start(r, () => (0, f.mZ)());
 }
+
 function T(e) {
     a = new p.A(e.user);
 }
+
 function C() {
     A();
 }

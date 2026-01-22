@@ -1,4 +1,9 @@
-n.r(t), n.d(t, { default: () => H }), n(896048), n(733351);
+n.r(t),
+    n.d(t, {
+        default: () => H,
+    }),
+    n(896048),
+    n(733351);
 var l = n(627968),
     a = n(64700),
     r = n(503698),
@@ -35,6 +40,7 @@ var l = n(627968),
     k = n(652215),
     M = n(985018),
     U = n(67242);
+
 function G(e) {
     let { applicationId: t, hideDetailHeaderButtons: n, onClickBack: r } = e,
         s = (0, c.bG)([_.A], () => _.A.getApplication(t)),
@@ -77,6 +83,7 @@ function G(e) {
         ],
     });
 }
+
 function V() {
     let e = a.useCallback(() => {
             (0, S.dG)();
@@ -146,7 +153,9 @@ let H = function () {
                 I.h.setState({
                     trackedOpenedFromExternalEntrypoint: !0,
                     sessionId: e,
-                    entrypoint: { name: I.sW.EXTERNAL },
+                    entrypoint: {
+                        name: I.sW.EXTERNAL,
+                    },
                     guildId: null,
                 });
         }
@@ -157,7 +166,13 @@ let H = function () {
         a.useEffect(() => {
             H && j.wD();
         }, [H]),
-        a.useEffect(() => I.tS.setState({ lastItem: T }), [T]);
+        a.useEffect(
+            () =>
+                I.tS.setState({
+                    lastItem: T,
+                }),
+            [T],
+        );
     let ea = null != B,
         er = (null == T ? void 0 : T.type) === I.ev.SEARCH,
         {
@@ -165,7 +180,9 @@ let H = function () {
             onSearchTextChange: es,
             onClearSearch: ec,
             onSearchSubmit: eo,
-        } = (0, C.v)({ initialQuery: null != z ? z : "" }),
+        } = (0, C.v)({
+            initialQuery: null != z ? z : "",
+        }),
         ed = A.A.useField("searchBarState"),
         {
             onTabsAvailableWidthChange: eu,
@@ -175,7 +192,10 @@ let H = function () {
             isSearchBarVisible: !0,
             isSearchBarEmpty: "" === ei.trim(),
             searchBarState: ed,
-            setSearchBarState: (e) => A.A.setState({ searchBarState: e }),
+            setSearchBarState: (e) =>
+                A.A.setState({
+                    searchBarState: e,
+                }),
         }),
         em = a.useCallback(
             (e) => {
@@ -183,7 +203,13 @@ let H = function () {
             },
             [er, ec, q, _],
         ),
-        eb = a.useCallback((e) => (0, P.YR)({ applicationId: e }), []),
+        eb = a.useCallback(
+            (e) =>
+                (0, P.YR)({
+                    applicationId: e,
+                }),
+            [],
+        ),
         ef = ea || er,
         eg = a.useCallback(() => {
             null != (0, I.Bn)() ? (0, f.aX)() : (0, P.eM)();
@@ -213,7 +239,9 @@ let H = function () {
             [ex, n],
         );
     return (0, l.jsxs)("div", {
-        className: i()(U.nw, { [U.Yz]: t }),
+        className: i()(U.nw, {
+            [U.Yz]: t,
+        }),
         children: [
             t ? (0, l.jsx)(V, {}) : null,
             (0, l.jsxs)("div", {
@@ -222,7 +250,10 @@ let H = function () {
                     (0, l.jsxs)(p.Ay, {
                         variant: ef ? p.Z5.RELATIVE : p.Z5.OVERLAY,
                         children: [
-                            !ef && (0, l.jsx)(p.ns, { scrollPosition: r }),
+                            !ef &&
+                                (0, l.jsx)(p.ns, {
+                                    scrollPosition: r,
+                                }),
                             ea
                                 ? (0, l.jsx)(G, {
                                       applicationId: B,
@@ -236,7 +267,9 @@ let H = function () {
                                                     icon: o.Zge,
                                                     onClick: eg,
                                                 })
-                                              : (0, l.jsx)(p.T4, { icon: o.k9F }),
+                                              : (0, l.jsx)(p.T4, {
+                                                    icon: o.k9F,
+                                                }),
                                           er
                                               ? (0, l.jsx)(o.Heading, {
                                                     variant: "heading-lg/semibold",
@@ -244,7 +277,9 @@ let H = function () {
                                                     className: U.wL,
                                                     children:
                                                         null != z && "" !== z
-                                                            ? M.intl.formatToPlainString(M.t.zHdzqW, { query: z })
+                                                            ? M.intl.formatToPlainString(M.t.zHdzqW, {
+                                                                  query: z,
+                                                              })
                                                             : M.intl.formatToPlainString(M.t.Qhj5Br, {
                                                                   categoryName:
                                                                       null != (e = null == Z ? void 0 : Z.name)

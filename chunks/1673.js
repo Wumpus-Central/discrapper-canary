@@ -1,11 +1,20 @@
-n.d(t, { Y5: () => a });
+n.d(t, {
+    Y5: () => a,
+});
 var r = n(322811),
     i = n(374372);
+
 function a(e, t, n) {
     let r = s(e.getDateWithAdjustedTimezone(), t, n),
         a = new i.BP(e);
-    return (a = a.addDurationAsImplied({ day: r })).assign("weekday", t), a;
+    return (
+        (a = a.addDurationAsImplied({
+            day: r,
+        })).assign("weekday", t),
+        a
+    );
 }
+
 function s(e, t, n) {
     let i = e.getDay();
     switch (n) {
@@ -25,15 +34,18 @@ function s(e, t, n) {
     }
     return o(e, t);
 }
+
 function o(e, t) {
     let n = c(e, t),
         r = l(e, t);
     return r < -n ? r : n;
 }
+
 function l(e, t) {
     let n = t - e.getDay();
     return n < 0 && (n += 7), n;
 }
+
 function c(e, t) {
     let n = t - e.getDay();
     return n >= 0 && (n -= 7), n;

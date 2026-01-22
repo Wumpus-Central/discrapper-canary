@@ -12,6 +12,7 @@ var a = n(397927),
     c = n(301518),
     u = n(373856),
     d = n(652215);
+
 function f(e, t, n) {
     return (
         t in e
@@ -25,6 +26,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -41,6 +43,7 @@ function p(e) {
     }
     return e;
 }
+
 function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -53,6 +56,7 @@ function _(e, t) {
     }
     return n;
 }
+
 function h(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -67,9 +71,12 @@ function h(e, t) {
 n(231723);
 let m = "orb-checkout-payment-modal-key",
     g = () => (0, a.Ry6)(m);
+
 function E() {
     s.h.wait(() => {
-        s.h.dispatch({ type: "PAYMENT_MODAL_OPEN" });
+        s.h.dispatch({
+            type: "PAYMENT_MODAL_OPEN",
+        });
     });
 }
 let b = (e) => {
@@ -81,7 +88,9 @@ let b = (e) => {
                 onCloseCallback: l,
                 rentalDuration: f,
             } = e,
-            { enabled: p } = (0, o.ik)({ location: "openOrbCheckoutPaymentModal" }),
+            { enabled: p } = (0, o.ik)({
+                location: "openOrbCheckoutPaymentModal",
+            }),
             _ = (0, i.A)(),
             h = !1,
             g = () => {
@@ -103,7 +112,10 @@ let b = (e) => {
                 analyticsLocations: r,
                 analyticsSourceLocation: s,
                 onCloseCallback: () => {
-                    (0, c.S)({ checkoutSucceeded: h }), null == l || l();
+                    (0, c.S)({
+                        checkoutSucceeded: h,
+                    }),
+                        null == l || l();
                 },
                 rentalDuration: f,
                 onCloseRequest: g,
@@ -170,7 +182,9 @@ let b = (e) => {
                                     },
                                     n,
                                 ),
-                                { loadId: o },
+                                {
+                                    loadId: o,
+                                },
                             ),
                         );
                 },

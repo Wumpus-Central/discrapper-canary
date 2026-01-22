@@ -1,9 +1,21 @@
 var a = t(828066);
-t(697509)(r, "__esModule", { value: !0 }),
+t(697509)(r, "__esModule", {
+    value: !0,
+}),
     (r.default = void 0),
     (r.default = new (a(t(747562)).default)([
-        ["aria-activedescendant", { type: "id" }],
-        ["aria-atomic", { type: "boolean" }],
+        [
+            "aria-activedescendant",
+            {
+                type: "id",
+            },
+        ],
+        [
+            "aria-atomic",
+            {
+                type: "boolean",
+            },
+        ],
         [
             "aria-autocomplete",
             {
@@ -11,12 +23,42 @@ t(697509)(r, "__esModule", { value: !0 }),
                 values: ["inline", "list", "both", "none"],
             },
         ],
-        ["aria-busy", { type: "boolean" }],
-        ["aria-checked", { type: "tristate" }],
-        ["aria-colcount", { type: "integer" }],
-        ["aria-colindex", { type: "integer" }],
-        ["aria-colspan", { type: "integer" }],
-        ["aria-controls", { type: "idlist" }],
+        [
+            "aria-busy",
+            {
+                type: "boolean",
+            },
+        ],
+        [
+            "aria-checked",
+            {
+                type: "tristate",
+            },
+        ],
+        [
+            "aria-colcount",
+            {
+                type: "integer",
+            },
+        ],
+        [
+            "aria-colindex",
+            {
+                type: "integer",
+            },
+        ],
+        [
+            "aria-colspan",
+            {
+                type: "integer",
+            },
+        ],
+        [
+            "aria-controls",
+            {
+                type: "idlist",
+            },
+        ],
         [
             "aria-current",
             {
@@ -24,9 +66,24 @@ t(697509)(r, "__esModule", { value: !0 }),
                 values: ["page", "step", "location", "date", "time", !0, !1],
             },
         ],
-        ["aria-describedby", { type: "idlist" }],
-        ["aria-details", { type: "id" }],
-        ["aria-disabled", { type: "boolean" }],
+        [
+            "aria-describedby",
+            {
+                type: "idlist",
+            },
+        ],
+        [
+            "aria-details",
+            {
+                type: "id",
+            },
+        ],
+        [
+            "aria-disabled",
+            {
+                type: "boolean",
+            },
+        ],
         [
             "aria-dropeffect",
             {
@@ -34,7 +91,12 @@ t(697509)(r, "__esModule", { value: !0 }),
                 values: ["copy", "execute", "link", "move", "none", "popup"],
             },
         ],
-        ["aria-errormessage", { type: "id" }],
+        [
+            "aria-errormessage",
+            {
+                type: "id",
+            },
+        ],
         [
             "aria-expanded",
             {
@@ -42,7 +104,12 @@ t(697509)(r, "__esModule", { value: !0 }),
                 allowundefined: !0,
             },
         ],
-        ["aria-flowto", { type: "idlist" }],
+        [
+            "aria-flowto",
+            {
+                type: "idlist",
+            },
+        ],
         [
             "aria-grabbed",
             {
@@ -71,10 +138,30 @@ t(697509)(r, "__esModule", { value: !0 }),
                 values: ["grammar", !1, "spelling", !0],
             },
         ],
-        ["aria-keyshortcuts", { type: "string" }],
-        ["aria-label", { type: "string" }],
-        ["aria-labelledby", { type: "idlist" }],
-        ["aria-level", { type: "integer" }],
+        [
+            "aria-keyshortcuts",
+            {
+                type: "string",
+            },
+        ],
+        [
+            "aria-label",
+            {
+                type: "string",
+            },
+        ],
+        [
+            "aria-labelledby",
+            {
+                type: "idlist",
+            },
+        ],
+        [
+            "aria-level",
+            {
+                type: "integer",
+            },
+        ],
         [
             "aria-live",
             {
@@ -82,9 +169,24 @@ t(697509)(r, "__esModule", { value: !0 }),
                 values: ["assertive", "off", "polite"],
             },
         ],
-        ["aria-modal", { type: "boolean" }],
-        ["aria-multiline", { type: "boolean" }],
-        ["aria-multiselectable", { type: "boolean" }],
+        [
+            "aria-modal",
+            {
+                type: "boolean",
+            },
+        ],
+        [
+            "aria-multiline",
+            {
+                type: "boolean",
+            },
+        ],
+        [
+            "aria-multiselectable",
+            {
+                type: "boolean",
+            },
+        ],
         [
             "aria-orientation",
             {
@@ -92,11 +194,36 @@ t(697509)(r, "__esModule", { value: !0 }),
                 values: ["vertical", "undefined", "horizontal"],
             },
         ],
-        ["aria-owns", { type: "idlist" }],
-        ["aria-placeholder", { type: "string" }],
-        ["aria-posinset", { type: "integer" }],
-        ["aria-pressed", { type: "tristate" }],
-        ["aria-readonly", { type: "boolean" }],
+        [
+            "aria-owns",
+            {
+                type: "idlist",
+            },
+        ],
+        [
+            "aria-placeholder",
+            {
+                type: "string",
+            },
+        ],
+        [
+            "aria-posinset",
+            {
+                type: "integer",
+            },
+        ],
+        [
+            "aria-pressed",
+            {
+                type: "tristate",
+            },
+        ],
+        [
+            "aria-readonly",
+            {
+                type: "boolean",
+            },
+        ],
         [
             "aria-relevant",
             {
@@ -104,11 +231,36 @@ t(697509)(r, "__esModule", { value: !0 }),
                 values: ["additions", "all", "removals", "text"],
             },
         ],
-        ["aria-required", { type: "boolean" }],
-        ["aria-roledescription", { type: "string" }],
-        ["aria-rowcount", { type: "integer" }],
-        ["aria-rowindex", { type: "integer" }],
-        ["aria-rowspan", { type: "integer" }],
+        [
+            "aria-required",
+            {
+                type: "boolean",
+            },
+        ],
+        [
+            "aria-roledescription",
+            {
+                type: "string",
+            },
+        ],
+        [
+            "aria-rowcount",
+            {
+                type: "integer",
+            },
+        ],
+        [
+            "aria-rowindex",
+            {
+                type: "integer",
+            },
+        ],
+        [
+            "aria-rowspan",
+            {
+                type: "integer",
+            },
+        ],
         [
             "aria-selected",
             {
@@ -116,7 +268,12 @@ t(697509)(r, "__esModule", { value: !0 }),
                 allowundefined: !0,
             },
         ],
-        ["aria-setsize", { type: "integer" }],
+        [
+            "aria-setsize",
+            {
+                type: "integer",
+            },
+        ],
         [
             "aria-sort",
             {
@@ -124,8 +281,28 @@ t(697509)(r, "__esModule", { value: !0 }),
                 values: ["ascending", "descending", "none", "other"],
             },
         ],
-        ["aria-valuemax", { type: "number" }],
-        ["aria-valuemin", { type: "number" }],
-        ["aria-valuenow", { type: "number" }],
-        ["aria-valuetext", { type: "string" }],
+        [
+            "aria-valuemax",
+            {
+                type: "number",
+            },
+        ],
+        [
+            "aria-valuemin",
+            {
+                type: "number",
+            },
+        ],
+        [
+            "aria-valuenow",
+            {
+                type: "number",
+            },
+        ],
+        [
+            "aria-valuetext",
+            {
+                type: "string",
+            },
+        ],
     ]));

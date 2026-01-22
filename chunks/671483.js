@@ -1,4 +1,6 @@
-e.d(t, { A: () => h });
+e.d(t, {
+    A: () => h,
+});
 var i = e(627968);
 e(64700);
 var l = e(311907),
@@ -11,6 +13,7 @@ var l = e(311907),
     u = e(309698),
     A = e(652215),
     b = e(985018);
+
 function h(n, t) {
     let h = (0, l.bG)([d.A], () => d.A.can(A.xBc.MANAGE_CHANNELS, t)),
         g = (0, s.Ay)(n),
@@ -61,10 +64,17 @@ function h(n, t) {
                                                     });
                                             }
                                             return n;
-                                        })({ channel: n }, e),
+                                        })(
+                                            {
+                                                channel: n,
+                                            },
+                                            e,
+                                        ),
                                     );
                             },
-                            { modalKey: c.m },
+                            {
+                                modalKey: c.m,
+                            },
                         );
                     },
                 })

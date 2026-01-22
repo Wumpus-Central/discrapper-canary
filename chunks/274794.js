@@ -1,4 +1,11 @@
-n.d(t, { A: () => b }), n(667532), n(457529), n(321073), n(65821), n(896048);
+n.d(t, {
+    A: () => b,
+}),
+    n(667532),
+    n(457529),
+    n(321073),
+    n(65821),
+    n(896048);
 var r = n(284009),
     i = n.n(r),
     a = n(735438),
@@ -10,6 +17,7 @@ var r = n(284009),
     d = n(722306),
     f = n(613057),
     p = n(652215);
+
 function _(e, t, n) {
     return (
         t in e
@@ -25,9 +33,11 @@ function _(e, t, n) {
 }
 let h = "RPC_STORE_WAIT",
     m = [];
+
 function g(e, t) {
     return s().isEqual(e, s().pick(t, Object.keys(e)));
 }
+
 function E(e) {
     return !!m.includes(e) || (m.unshift(e), m.splice(50), !1);
 }
@@ -63,12 +73,28 @@ class b {
     handleRequest(e, t) {
         new Promise((n) => {
             if (null == t.nonce || "" === t.nonce)
-                throw new c.A({ errorCode: p.Lw6.INVALID_PAYLOAD }, "Payload requires a nonce");
+                throw new c.A(
+                    {
+                        errorCode: p.Lw6.INVALID_PAYLOAD,
+                    },
+                    "Payload requires a nonce",
+                );
             let r = t.cmd,
                 i = this.commands[r];
-            if (null == i) throw new c.A({ errorCode: p.Lw6.INVALID_COMMAND }, "Invalid command: ".concat(t.cmd));
+            if (null == i)
+                throw new c.A(
+                    {
+                        errorCode: p.Lw6.INVALID_COMMAND,
+                    },
+                    "Invalid command: ".concat(t.cmd),
+                );
             if (!(0, d.A)(e.authorization.scopes, i.scope))
-                throw new c.A({ errorCode: p.Lw6.INVALID_PERMISSIONS }, "Not authenticated or invalid scope");
+                throw new c.A(
+                    {
+                        errorCode: p.Lw6.INVALID_PERMISSIONS,
+                    },
+                    "Not authenticated or invalid scope",
+                );
             o.default.track(p.HAw.RPC_COMMAND_SENT, {
                 command: r,
                 scope: "object" == typeof i.scope ? JSON.stringify(i.scope) : i.scope,
@@ -83,9 +109,25 @@ class b {
                         if (null != e.validation) {
                             let a = await this.getJoi();
                             i()(null != e.validation, "command.validation must not be null"),
-                                a.validate(t.args, e.validation(a), { convert: !1 }, (t) => {
-                                    null != t ? r(new c.A({ errorCode: p.Lw6.INVALID_PAYLOAD }, t.message)) : n(e);
-                                });
+                                a.validate(
+                                    t.args,
+                                    e.validation(a),
+                                    {
+                                        convert: !1,
+                                    },
+                                    (t) => {
+                                        null != t
+                                            ? r(
+                                                  new c.A(
+                                                      {
+                                                          errorCode: p.Lw6.INVALID_PAYLOAD,
+                                                      },
+                                                      t.message,
+                                                  ),
+                                              )
+                                            : n(e);
+                                    },
+                                );
                         } else n(e);
                     }),
             )
@@ -204,15 +246,25 @@ class b {
         let r = t();
         if (r || 0 === n) return Promise.resolve(r);
         let i = s().uniqueId(),
-            a = () => this.removeSubscription(e, h, { uniqueId: i });
+            a = () =>
+                this.removeSubscription(e, h, {
+                    uniqueId: i,
+                });
         return new Promise((r, s) => {
             let o = setTimeout(() => {
                 a(), s(Error("timeout"));
             }, n * l.A.Millis.SECOND);
-            this.addSubscription(e, h, { uniqueId: i }, () => {
-                let e = t();
-                e && (clearTimeout(o), r(e));
-            });
+            this.addSubscription(
+                e,
+                h,
+                {
+                    uniqueId: i,
+                },
+                () => {
+                    let e = t();
+                    e && (clearTimeout(o), r(e));
+                },
+            );
         }).then((e) => (a(), e));
     }
     constructor(e) {

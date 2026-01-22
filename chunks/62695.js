@@ -83,7 +83,7 @@
                 .replace(/\d/g, function (e) {
                     return t[e];
                 })
-                .replace(/,/g, "\u060C");
+                .replace(/,/g, "،");
         },
         dayOfMonthOrdinalParse: /\d{1,2}م/,
         ordinal: "%dم",

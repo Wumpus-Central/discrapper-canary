@@ -1,4 +1,6 @@
-n.d(t, { A: () => A });
+n.d(t, {
+    A: () => A,
+});
 var r = n(627968),
     i = n(64700),
     a = n(397927),
@@ -15,6 +17,7 @@ var r = n(627968),
     m = n(746080),
     g = n(985018),
     E = n(424288);
+
 function b(e) {
     let { author: t, channel: n, message: r } = e,
         a = n.guild_id,
@@ -27,7 +30,9 @@ function b(e) {
         { analyticsLocations: u } = (0, o.Ay)(s.A.GUILD_ROLE_SUBSCRIPTION_PURCHASE_SYSTEM_MESSAGE),
         p = r.roleSubscriptionData,
         _ = i.useCallback(() => {
-            (0, d.pX)(h.BVt.CHANNEL(a, m.VV.ROLE_SUBSCRIPTIONS), { sourceLocationStack: u }),
+            (0, d.pX)(h.BVt.CHANNEL(a, m.VV.ROLE_SUBSCRIPTIONS), {
+                sourceLocationStack: u,
+            }),
                 (null == p ? void 0 : p.role_subscription_listing_id) != null &&
                     (0, f.xH)(a, n.id, r.id, p.role_subscription_listing_id);
         }, [a, n, r, p, u]);
@@ -41,6 +46,7 @@ function b(e) {
               roleSubscriptionData: r.roleSubscriptionData,
           });
 }
+
 function y(e) {
     let { username: t } = e;
     return (0, r.jsx)("div", {
@@ -68,22 +74,28 @@ function y(e) {
         }),
     });
 }
+
 function O(e) {
     let { guildId: t, user: n, username: i } = e;
     return (0, r.jsxs)("div", {
         className: E.pG,
         role: "img",
-        "aria-label": g.intl.formatToPlainString(g.t["utf8+W"], { username: i }),
+        "aria-label": g.intl.formatToPlainString(g.t["utf8+W"], {
+            username: i,
+        }),
         children: [
             (0, r.jsx)(_.A, {
                 guildId: t,
                 user: n,
                 className: E.sz,
             }),
-            (0, r.jsx)(y, { username: i }),
+            (0, r.jsx)(y, {
+                username: i,
+            }),
         ],
     });
 }
+
 function A(e) {
     var t, i;
     let { channel: a, message: s, compact: o } = e,

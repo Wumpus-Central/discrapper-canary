@@ -28,6 +28,7 @@ var r = n(665260),
     l = n(302654),
     c = n(654487),
     u = n(652215);
+
 function d(e, t, n) {
     return (
         t in e
@@ -41,6 +42,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -57,6 +59,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -69,6 +72,7 @@ function p(e, t) {
     }
     return n;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -80,7 +84,8 @@ function _(e, t) {
         e
     );
 }
-let h = 2592000000;
+let h = 2592e6;
+
 function m(e, t, n) {
     var r;
     let i = Array.isArray(t) ? new Map(t.map((e) => [e.id, e])) : t,
@@ -90,26 +95,32 @@ function m(e, t, n) {
     let o = null == (r = a.get(e)) ? void 0 : r.replacementId;
     if (null != o) return i.get(o);
 }
+
 function g(e) {
     return Object.keys(c.TY).includes(o.uF[e]);
 }
+
 function E(e, t) {
     if (!g(t)) return !1;
     let n = o.uF[t];
     return (0, r.Lt)(e.dismissedQuestContent, c.TY[n]);
 }
+
 function b(e, t) {
     return e.targetedContent.includes(t);
 }
+
 function y(e) {
     return new Date(e.config.expiresAt).valueOf() <= Date.now();
 }
+
 function O(e) {
     if (!y(e)) return !1;
     let t = Date.now() - h,
         n = new Date(e.config.expiresAt).valueOf();
     return null != e.config.expiresAt && !(n <= t);
 }
+
 function A(e) {
     let t = null,
         n = Date.now();
@@ -119,16 +130,24 @@ function A(e) {
     }
     return t;
 }
+
 function v(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { dateStyle: "short" };
+    let t =
+        arguments.length > 1 && void 0 !== arguments[1]
+            ? arguments[1]
+            : {
+                  dateStyle: "short",
+              };
     return null == e ? "" : new Date(e).toLocaleDateString(i.default.locale, t);
 }
+
 function S(e, t, n) {
     let r = t.get(n);
     if (null == r) return;
     let i = e.get(r.quest.id);
     if (null != i && !y(i)) return i;
 }
+
 function I(e) {
     return {
         [o.uF.QUEST_BAR]: o.yW.DESKTOP_ACCOUNT_PANEL_AREA,
@@ -136,12 +155,16 @@ function I(e) {
         [o.uF.QUEST_BAR_MOBILE]: o.yW.MOBILE_HOME_DOCK_AREA,
     }[e];
 }
+
 function T(e) {
     let t = I(e);
     return null != t && c.J6.has(t);
 }
+
 function C(e) {
-    let { enableNewRequestBehavior: t } = l.A.getConfig({ location: "getQuestDeliveryDataForPlacement" });
+    let { enableNewRequestBehavior: t } = l.A.getConfig({
+        location: "getQuestDeliveryDataForPlacement",
+    });
     if (t) {
         let t = s.A.questAdDecisionByPlacement.get(e);
         return null == t
@@ -171,6 +194,7 @@ function C(e) {
               };
     }
 }
+
 function N(e, t) {
     var n;
     let r = I(t);
@@ -178,16 +202,19 @@ function N(e, t) {
     let { adDecisionData: i, questId: a } = null != (n = C(r)) ? n : {};
     return null != i && a === e ? i : c.K3;
 }
+
 function R(e) {
     var t;
     let n = I(e);
     if (null != n) return null == (t = C(n)) ? void 0 : t.metadataRaw;
 }
+
 function w(e) {
     var t;
     let n = I(e);
     if (null != n) return null == (t = C(n)) ? void 0 : t.metadataSealed;
 }
+
 function P(e, t) {
     var n;
     let r = I(e);
@@ -199,6 +226,7 @@ function P(e, t) {
         return null == e ? void 0 : e.trafficMetadataRaw;
     }
 }
+
 function D(e, t) {
     var n;
     let r = I(e);
@@ -210,14 +238,24 @@ function D(e, t) {
         return null == e ? void 0 : e.trafficMetadataSealed;
     }
 }
+
 function x(e) {
     var t;
     let n = I(e);
     if (null != n) return null == (t = C(n)) ? void 0 : t.adContext;
 }
+
 function L(e, t) {
-    a.A.captureException(e, _(f({}, t), { tags: _(f({}, null == t ? void 0 : t.tags), { app_context: "quests" }) }));
+    a.A.captureException(
+        e,
+        _(f({}, t), {
+            tags: _(f({}, null == t ? void 0 : t.tags), {
+                app_context: "quests",
+            }),
+        }),
+    );
 }
+
 function j() {
     return window.location.pathname.startsWith(u.BVt.QUEST_HOME);
 }

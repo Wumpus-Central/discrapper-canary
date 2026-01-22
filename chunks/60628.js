@@ -1,4 +1,6 @@
-n.d(t, { lr: () => I });
+n.d(t, {
+    lr: () => I,
+});
 var r = n(650682),
     i = n(968172),
     a = n(825913),
@@ -59,7 +61,13 @@ let A = (0, O.createContext)(null),
             ref: R,
             onResize: H,
         });
-        let { focusProps: Y, isFocused: W, isFocusVisible: K } = (0, m.o)({ within: !0 }),
+        let {
+                focusProps: Y,
+                isFocused: W,
+                isFocusVisible: K,
+            } = (0, m.o)({
+                within: !0,
+            }),
             z = (0, a.Sl)({
                 ...e,
                 values: {
@@ -73,7 +81,9 @@ let A = (0, O.createContext)(null),
                 },
                 defaultClassName: "react-aria-DatePicker",
             }),
-            q = (0, b.$)(e, { global: !0 });
+            q = (0, b.$)(e, {
+                global: !0,
+            });
         return (
             delete q.id,
             O.createElement(
@@ -113,7 +123,9 @@ let A = (0, O.createContext)(null),
                                 trigger: "DatePicker",
                                 triggerRef: R,
                                 placement: "bottom start",
-                                style: { "--trigger-width": F },
+                                style: {
+                                    "--trigger-width": F,
+                                },
                                 clearContexts: S,
                             },
                         ],

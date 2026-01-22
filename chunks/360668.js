@@ -1,4 +1,6 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var r = n(627968);
 n(64700);
 var i = n(793574),
@@ -16,6 +18,7 @@ var i = n(793574),
     m = n(531525),
     g = n(731854),
     E = n(985018);
+
 function b() {
     let e = s.A.supports(g.O5.SIDECHAIN_COMPRESSION),
         { analyticsLocations: t } = (0, a.Ay)([i.A.USER_SETTINGS_VIDEO_TAB]);

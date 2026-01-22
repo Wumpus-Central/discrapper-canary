@@ -1,7 +1,10 @@
-n.d(t, { r: () => s });
+n.d(t, {
+    r: () => s,
+});
 var r = n(64700),
     i = n(844222),
     a = n(460890);
+
 function s(e, t) {
     var n;
     let { theme: s, saturation: o, experiments: l } = (0, a.G9)(),

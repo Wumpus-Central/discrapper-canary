@@ -1,4 +1,10 @@
-n.d(t, { jO: () => d }), n(734808), n(896048), n(321073), n(65821);
+n.d(t, {
+    jO: () => d,
+}),
+    n(734808),
+    n(896048),
+    n(321073),
+    n(65821);
 var r = n(852015),
     i = n(144367),
     a = n(428420),
@@ -115,7 +121,9 @@ class u extends s.G {
 let d = new u();
 class f extends s.G {
     create(e) {
-        let t = { variationId: 0 };
+        let t = {
+            variationId: 0,
+        };
         return (
             globalThis.Object.defineProperty(t, a.$, {
                 enumerable: !1,
@@ -162,7 +170,11 @@ class f extends s.G {
 let p = new f();
 class _ extends s.G {
     create(e) {
-        let t = { filter: { oneofKind: void 0 } };
+        let t = {
+            filter: {
+                oneofKind: void 0,
+            },
+        };
         return (
             globalThis.Object.defineProperty(t, a.$, {
                 enumerable: !1,
@@ -623,7 +635,9 @@ class m extends s.G {
 let g = new m();
 class E extends s.G {
     create(e) {
-        let t = { guildIds: [] };
+        let t = {
+            guildIds: [],
+        };
         return (
             globalThis.Object.defineProperty(t, a.$, {
                 enumerable: !1,
@@ -678,7 +692,9 @@ class E extends s.G {
 let b = new E();
 class y extends s.G {
     create(e) {
-        let t = { userIds: [] };
+        let t = {
+            userIds: [],
+        };
         return (
             globalThis.Object.defineProperty(t, a.$, {
                 enumerable: !1,
@@ -733,7 +749,9 @@ class y extends s.G {
 let O = new y();
 class A extends s.G {
     create(e) {
-        let t = { locales: [] };
+        let t = {
+            locales: [],
+        };
         return (
             globalThis.Object.defineProperty(t, a.$, {
                 enumerable: !1,
@@ -781,7 +799,9 @@ class A extends s.G {
 let v = new A();
 class S extends s.G {
     create(e) {
-        let t = { locales: [] };
+        let t = {
+            locales: [],
+        };
         return (
             globalThis.Object.defineProperty(t, a.$, {
                 enumerable: !1,
@@ -829,7 +849,9 @@ class S extends s.G {
 let I = new S();
 class T extends s.G {
     create(e) {
-        let t = { locales: [] };
+        let t = {
+            locales: [],
+        };
         return (
             globalThis.Object.defineProperty(t, a.$, {
                 enumerable: !1,
@@ -877,7 +899,9 @@ class T extends s.G {
 let C = new T();
 class N extends s.G {
     create(e) {
-        let t = { locations: [] };
+        let t = {
+            locations: [],
+        };
         return (
             globalThis.Object.defineProperty(t, a.$, {
                 enumerable: !1,
@@ -1063,7 +1087,11 @@ class D extends s.G {
 let x = new D();
 class L extends s.G {
     create(e) {
-        let t = { location: { oneofKind: void 0 } };
+        let t = {
+            location: {
+                oneofKind: void 0,
+            },
+        };
         return (
             globalThis.Object.defineProperty(t, a.$, {
                 enumerable: !1,
@@ -1147,7 +1175,9 @@ class L extends s.G {
 let j = new L();
 class M extends s.G {
     create(e) {
-        let t = { blocks: [] };
+        let t = {
+            blocks: [],
+        };
         return (
             globalThis.Object.defineProperty(t, a.$, {
                 enumerable: !1,
@@ -1433,7 +1463,9 @@ class B extends s.G {
 let H = new B();
 class Y extends s.G {
     create(e) {
-        let t = { inclusive: !1 };
+        let t = {
+            inclusive: !1,
+        };
         return (
             globalThis.Object.defineProperty(t, a.$, {
                 enumerable: !1,
@@ -1493,7 +1525,9 @@ class Y extends s.G {
 let W = new Y();
 class K extends s.G {
     create(e) {
-        let t = { version: 0 };
+        let t = {
+            version: 0,
+        };
         return (
             globalThis.Object.defineProperty(t, a.$, {
                 enumerable: !1,
@@ -1540,7 +1574,9 @@ class K extends s.G {
 let z = new K();
 class q extends s.G {
     create(e) {
-        let t = { allowNonNativeWeb: !1 };
+        let t = {
+            allowNonNativeWeb: !1,
+        };
         return (
             globalThis.Object.defineProperty(t, a.$, {
                 enumerable: !1,
@@ -1767,7 +1803,9 @@ class $ extends s.G {
 let J = new $();
 class ee extends s.G {
     create(e) {
-        let t = { inclusive: !1 };
+        let t = {
+            inclusive: !1,
+        };
         return (
             globalThis.Object.defineProperty(t, a.$, {
                 enumerable: !1,
@@ -1827,7 +1865,9 @@ class ee extends s.G {
 let et = new ee();
 class en extends s.G {
     create(e) {
-        let t = { major: 0 };
+        let t = {
+            major: 0,
+        };
         return (
             globalThis.Object.defineProperty(t, a.$, {
                 enumerable: !1,
@@ -1968,7 +2008,9 @@ class ei extends s.G {
 let ea = new ei();
 class es extends s.G {
     create(e) {
-        let t = { isBot: !1 };
+        let t = {
+            isBot: !1,
+        };
         return (
             globalThis.Object.defineProperty(t, a.$, {
                 enumerable: !1,
@@ -2075,7 +2117,9 @@ class el extends s.G {
 let ec = new el();
 class eu extends s.G {
     create(e) {
-        let t = { value: "0" };
+        let t = {
+            value: "0",
+        };
         return (
             globalThis.Object.defineProperty(t, a.$, {
                 enumerable: !1,
@@ -2182,7 +2226,9 @@ class ef extends s.G {
 let ep = new ef();
 class e_ extends s.G {
     create(e) {
-        let t = { mask: "0" };
+        let t = {
+            mask: "0",
+        };
         return (
             globalThis.Object.defineProperty(t, a.$, {
                 enumerable: !1,
@@ -2303,7 +2349,9 @@ class em extends s.G {
 let eg = new em();
 class eE extends s.G {
     create(e) {
-        let t = { releaseChannels: [] };
+        let t = {
+            releaseChannels: [],
+        };
         return (
             globalThis.Object.defineProperty(t, a.$, {
                 enumerable: !1,
@@ -2351,7 +2399,9 @@ class eE extends s.G {
 let eb = new eE();
 class ey extends s.G {
     create(e) {
-        let t = { value: !1 };
+        let t = {
+            value: !1,
+        };
         return (
             globalThis.Object.defineProperty(t, a.$, {
                 enumerable: !1,
@@ -2467,7 +2517,9 @@ class eA extends s.G {
 let ev = new eA();
 class eS extends s.G {
     create(e) {
-        let t = { premiumTypes: [] };
+        let t = {
+            premiumTypes: [],
+        };
         return (
             globalThis.Object.defineProperty(t, a.$, {
                 enumerable: !1,
@@ -2594,7 +2646,9 @@ class eT extends s.G {
 let eC = new eT();
 class eN extends s.G {
     create(e) {
-        let t = { guildIds: [] };
+        let t = {
+            guildIds: [],
+        };
         return (
             globalThis.Object.defineProperty(t, a.$, {
                 enumerable: !1,
@@ -2709,7 +2763,9 @@ class ew extends s.G {
 let eP = new ew();
 class eD extends s.G {
     create(e) {
-        let t = { features: [] };
+        let t = {
+            features: [],
+        };
         return (
             globalThis.Object.defineProperty(t, a.$, {
                 enumerable: !1,

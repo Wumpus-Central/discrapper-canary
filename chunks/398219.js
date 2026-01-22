@@ -1,7 +1,11 @@
-n.d(t, { F: () => a }), n(667532);
+n.d(t, {
+    F: () => a,
+}),
+    n(667532);
 var r = n(735438),
     l = n.n(r),
     i = n(403362);
+
 function a(e, t) {
     return l()(e)
         .map(t.getUser)

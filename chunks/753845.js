@@ -1,4 +1,6 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(627968),
     i = n(64700),
     a = n(417597),
@@ -17,5 +19,7 @@ let c = (e) => {
               sourceQuestContent: c,
               children: n,
           })
-        : (0, r.jsx)(r.Fragment, { children: n(f, f) });
+        : (0, r.jsx)(r.Fragment, {
+              children: n(f, f),
+          });
 };

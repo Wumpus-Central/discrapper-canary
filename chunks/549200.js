@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968),
     i = n(311907),
     a = n(936388),
@@ -8,6 +10,7 @@ var r = n(627968),
     c = n(578746),
     u = n(531525),
     d = n(985018);
+
 function f() {
     let e = (0, i.bG)([s.A], () => s.A.getPersistentCodesEnabled());
     return (0, r.jsx)(l.h, {
@@ -16,7 +19,9 @@ function f() {
             value: e,
             onChange: a.A.updatePersistentCodesEnabled,
             title: d.intl.string(d.t["opi/XK"]),
-            note: d.intl.format(d.t["/T+ZlP"], { helpArticle: (0, o.Lu)() }),
+            note: d.intl.format(d.t["/T+ZlP"], {
+                helpArticle: (0, o.Lu)(),
+            }),
         }),
     });
 }

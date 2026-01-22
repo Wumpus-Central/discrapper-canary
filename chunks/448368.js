@@ -32,6 +32,7 @@ var r = n(627968),
     R = n(985018),
     w = n(679740),
     P = n(206314);
+
 function D(e) {
     let { width: t = 12, height: n = 8, color: i = "currentColor", className: a, foreground: s } = e;
     return (0, r.jsx)("svg", {
@@ -46,6 +47,7 @@ function D(e) {
         }),
     });
 }
+
 function x(e) {
     let { width: t = 18, height: n = 18, className: i, foreground: a } = e;
     return (0, r.jsx)("svg", {
@@ -60,6 +62,7 @@ function x(e) {
         }),
     });
 }
+
 function L(e, t, n, i, a, o) {
     return (0, r.jsx)("img", {
         alt: "",
@@ -80,6 +83,7 @@ function L(e, t, n, i, a, o) {
         ref: o,
     });
 }
+
 function j(e, t, n) {
     let {
             referencedMessage: a,
@@ -98,11 +102,15 @@ function j(e, t, n) {
         return n === N.lAJ.CONTEXT_MENU_COMMAND
             ? (0, r.jsx)("div", {
                   className: w.Do,
-                  children: (0, r.jsx)(c.oyn, { size: "xs" }),
+                  children: (0, r.jsx)(c.oyn, {
+                      size: "xs",
+                  }),
               })
             : (0, r.jsx)("div", {
                   className: w.Cz,
-                  children: (0, r.jsx)(D, { className: w.UE }),
+                  children: (0, r.jsx)(D, {
+                      className: w.UE,
+                  }),
               });
     if (
         a.message.type === N.lAJ.USER_JOIN ||
@@ -110,7 +118,9 @@ function j(e, t, n) {
         a.message.type === N.lAJ.GUILD_DEADCHAT_REVIVE_PROMPT ||
         a.message.type === N.lAJ.GUILD_GAMING_STATS_PROMPT
     )
-        return (0, r.jsx)(x, { className: w.VJ });
+        return (0, r.jsx)(x, {
+            className: w.VJ,
+        });
     if (a.message.type === N.lAJ.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION)
         return (0, r.jsx)(c.qyI, {
             size: "md",
@@ -142,6 +152,7 @@ function j(e, t, n) {
               children: y(),
           });
 }
+
 function M(e, t) {
     let {
             baseMessage: n,
@@ -174,6 +185,7 @@ function M(e, t) {
               isRepliedMessage: !0,
           });
 }
+
 function k(e, t, n) {
     let { content: i, referencedMessage: a, isReplyAuthorBlocked: o, isReplyAuthorIgnored: l, onClickReply: u } = e,
         d = a.state !== g.a.DELETED ? u : void 0;
@@ -193,7 +205,9 @@ function k(e, t, n) {
                 children: [
                     p,
                     (0, r.jsx)(c.DUT, {
-                        className: s()(w.$y, w.vk, { [w.FQ]: t }),
+                        className: s()(w.$y, w.vk, {
+                            [w.FQ]: t,
+                        }),
                         onClick: d,
                         onMouseEnter: n,
                         onMouseLeave: n,
@@ -232,6 +246,7 @@ function k(e, t, n) {
             (0, A.xb)(a);
     }
 }
+
 function U(e, t, n, i, a, o) {
     let l,
         u,
@@ -338,6 +353,7 @@ function U(e, t, n, i, a, o) {
         }
     );
 }
+
 function G(e) {
     let t,
         {
@@ -365,7 +381,15 @@ function G(e) {
     let I = o.type === N.lAJ.CONTEXT_MENU_COMMAND;
     return (0, r.jsxs)("div", {
         id: (0, v.nS)(o),
-        className: s()(w.JZ, S, I ? w.C4 : { [w.NB]: !f && p }),
+        className: s()(
+            w.JZ,
+            S,
+            I
+                ? w.C4
+                : {
+                      [w.NB]: !f && p,
+                  },
+        ),
         "aria-label": t,
         children: [
             f &&
@@ -373,7 +397,9 @@ function G(e) {
                 (0, r.jsx)(c.DUT, {
                     tag: "div",
                     "aria-label": R.intl.string(R.t.dpjpOp),
-                    className: s()(w.Uo, { [w.xe]: _ }),
+                    className: s()(w.Uo, {
+                        [w.xe]: _,
+                    }),
                     onClick: e.onClickReply,
                     onMouseEnter: E,
                     onMouseLeave: E,

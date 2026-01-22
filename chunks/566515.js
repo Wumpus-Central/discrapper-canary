@@ -1,8 +1,12 @@
-t.d(r, { A: () => o });
+t.d(r, {
+    A: () => o,
+});
 var a = Object.prototype.toString;
+
 function l(e) {
     return "function" == typeof e || "[object Function]" === a.call(e);
 }
+
 function o(e, r) {
     var t,
         a,
@@ -20,7 +24,7 @@ function o(e, r) {
                           : t,
                     0,
                 ),
-                9007199254740991,
+                0x1fffffffffffff,
             ),
             i = l(o) ? Object(new o(n)) : Array(n),
             u = 0;

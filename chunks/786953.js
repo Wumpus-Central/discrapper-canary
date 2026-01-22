@@ -12,7 +12,9 @@ var r = n(562465),
 let c = new s.A("VirtualCurrencyActionCreators");
 async function u() {
     i.h.wait(() => {
-        i.h.dispatch({ type: "VIRTUAL_CURRENCY_BALANCE_FETCH" });
+        i.h.dispatch({
+            type: "VIRTUAL_CURRENCY_BALANCE_FETCH",
+        });
     });
     try {
         let e = await r.Bo.get({
@@ -67,7 +69,15 @@ async function d(e) {
         if (null == a || !Array.isArray(a)) {
             let e = "Could not read entitlements from Virtual Currency redemption response. Response: ",
                 t = Error(e, a);
-            throw (c.error(e, a), o.A.captureException(t, { tags: { app_context: "virtual_currency" } }), t);
+            throw (
+                (c.error(e, a),
+                o.A.captureException(t, {
+                    tags: {
+                        app_context: "virtual_currency",
+                    },
+                }),
+                t)
+            );
         }
         return (
             i.h.dispatch({

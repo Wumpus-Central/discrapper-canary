@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -9,7 +11,9 @@ var i = n(397927),
     c = n(82652),
     u = n(888283);
 let d = () => {
-    let e = { section: o.JJy.REVERSE_TRIAL_BANNER };
+    let e = {
+        section: o.JJy.REVERSE_TRIAL_BANNER,
+    };
     return (0, r.jsxs)("div", {
         className: c.vK,
         children: [
@@ -29,7 +33,9 @@ let d = () => {
                 children: (0, r.jsx)(i.Text, {
                     color: "text-subtle",
                     variant: "text-sm/normal",
-                    children: l.intl.format(l.t.uu1WAa, { weeks: 1 }),
+                    children: l.intl.format(l.t.uu1WAa, {
+                        weeks: 1,
+                    }),
                 }),
             }),
             (0, r.jsx)(a.A, {

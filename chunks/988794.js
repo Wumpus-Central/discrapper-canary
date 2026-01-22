@@ -25,7 +25,7 @@ n.d(t, {
 var r = n(927813),
     i = n(652215);
 let a = 100,
-    s = 1000,
+    s = 1e3,
     o = 100,
     l = "Guild Events Modal",
     c = "-1";

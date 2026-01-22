@@ -4,6 +4,7 @@ n.d(t, {
 });
 var r = n(652215),
     i = n(985018);
+
 function l(e) {
     switch (e) {
         case r.t02.UNKNOWN_CHANNEL:
@@ -22,6 +23,7 @@ function l(e) {
             return i.intl.string(i.t.ckQidX);
     }
 }
+
 function s(e) {
     return (
         e.features.has(r.GuildFeatures.VANITY_URL) ||

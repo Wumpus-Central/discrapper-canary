@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -10,6 +12,7 @@ var i = n(503698),
     u = n(518477),
     d = n(985018),
     f = n(90460);
+
 function p(e) {
     let { userId: t, isVisible: n, onOpenProfile: i } = e,
         { note: p } = (0, c.A)(t),
@@ -19,7 +22,9 @@ function p(e) {
         g = _ ? p : d.intl.string(d.t["1ZZtts"]),
         { trackUserProfileAction: E } = (0, l.NJ)(),
         b = () => {
-            E({ action: "PRESS_ADD_NOTE" }),
+            E({
+                action: "PRESS_ADD_NOTE",
+            }),
                 null == i ||
                     i({
                         tabSection: u.RP.USER_INFO,

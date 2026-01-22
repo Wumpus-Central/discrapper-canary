@@ -1,4 +1,9 @@
-n.d(t, { A: () => g }), n(896048), n(65821), n(457529);
+n.d(t, {
+    A: () => g,
+}),
+    n(896048),
+    n(65821),
+    n(457529);
 var r = n(143236),
     i = n(735438),
     a = n.n(i),
@@ -8,6 +13,7 @@ var r = n(143236),
     c = n(972711),
     u = n(652215),
     d = n(381941);
+
 function f(e, t, n) {
     return (
         t in e
@@ -21,6 +27,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,6 +44,7 @@ function p(e) {
     }
     return e;
 }
+
 function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -49,6 +57,7 @@ function _(e, t) {
     }
     return n;
 }
+
 function h(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -73,12 +82,16 @@ class g extends r.EventEmitter {
         let n = (0, l.B)(null == (t = this.files[0]) || null == (e = t.item) ? void 0 : e.target);
         return this.files.length > n.getMaxAttachmentsCount()
             ? (m.log("Too many attachments for ".concat(this.id)),
-              this._handleError({ code: u.t02.TOO_MANY_ATTACHMENTS }),
+              this._handleError({
+                  code: u.t02.TOO_MANY_ATTACHMENTS,
+              }),
               !1)
             : !(this._fileSize() > n.getMaxTotalAttachmentSize()) ||
                   (this._handleError({
                       code: u.t02.ENTITY_TOO_LARGE,
-                      reason: { type: d.ty.POSTCOMPRESSION_SUM_TOO_LARGE },
+                      reason: {
+                          type: d.ty.POSTCOMPRESSION_SUM_TOO_LARGE,
+                      },
                   }),
                   !1);
     }
@@ -149,7 +162,9 @@ class g extends r.EventEmitter {
         if (null == t || t.isCancelled()) return;
         let n = this.files.indexOf(t);
         (this.files = [...this.files.slice(0, n), ...this.files.slice(n + 1)]),
-            (this._file = h(p({}, this._file), { items: this.files })),
+            (this._file = h(p({}, this._file), {
+                items: this.files,
+            })),
             await (0, o.sm)(t),
             t.cancel(),
             this.emit("cancel-upload-item", this._file),
@@ -190,7 +205,7 @@ class g extends r.EventEmitter {
             f(this, "_handleProgress", (e, t, n) => {
                 let r = Date.now(),
                     i = (0, c.YL)(e, t),
-                    a = Math.floor((e - this._loaded) / ((r - this._lastUpdate) / 1000));
+                    a = Math.floor((e - this._loaded) / ((r - this._lastUpdate) / 1e3));
                 if (null != n) {
                     var s;
                     null == (s = this._file.items) ||

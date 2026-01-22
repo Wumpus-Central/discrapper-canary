@@ -1,4 +1,6 @@
-n.d(t, { WrappedUnifiedPaymentModal: () => b });
+n.d(t, {
+    WrappedUnifiedPaymentModal: () => b,
+});
 var r = n(627968),
     o = n(64700),
     i = n(937008),
@@ -7,6 +9,7 @@ var r = n(627968),
     s = n(285871),
     c = n(736843),
     p = n(818348);
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -32,6 +35,7 @@ function u(e) {
     }
     return e;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -90,7 +94,9 @@ let y = (e) => {
                     },
                     j,
                 ),
-                { onClose: h },
+                {
+                    onClose: h,
+                },
             ),
         );
     },

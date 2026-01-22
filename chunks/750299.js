@@ -1,4 +1,6 @@
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 var a = n(722023),
     r = n(303527);
 let i = {
@@ -63,7 +65,9 @@ let i = {
         defaultParseWidth: "any",
     }),
     dayPeriod: (0, r.A)({
-        matchPatterns: { any: /^(AM|PM|午前|午後|正午|深夜|真夜中|夜|朝)/i },
+        matchPatterns: {
+            any: /^(AM|PM|午前|午後|正午|深夜|真夜中|夜|朝)/i,
+        },
         defaultMatchWidth: "any",
         parsePatterns: {
             any: {

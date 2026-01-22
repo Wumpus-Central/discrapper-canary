@@ -53,7 +53,9 @@ let p = {
                           [s.v.NON_FRIEND_DM]: null == (r = a.Vd.getSetting()) ? void 0 : r.explicitContentNonFriendDm,
                       };
             return {
-                [s.v.GUILD]: (0, l.Ys)({ setting: null == i ? void 0 : i[s.v.GUILD] }),
+                [s.v.GUILD]: (0, l.Ys)({
+                    setting: null == i ? void 0 : i[s.v.GUILD],
+                }),
                 [s.v.FRIEND_DM]: (0, l.Ys)({
                     setting: null == i ? void 0 : i[s.v.FRIEND_DM],
                     isDm: !0,
@@ -94,7 +96,9 @@ let p = {
                           [s.v.NON_FRIEND_DM]: null == (r = a.qN.getSetting()) ? void 0 : r.goreContentNonFriendDm,
                       };
             return {
-                [s.v.GUILD]: (0, c.gC)({ setting: null == i ? void 0 : i[s.v.GUILD] }),
+                [s.v.GUILD]: (0, c.gC)({
+                    setting: null == i ? void 0 : i[s.v.GUILD],
+                }),
                 [s.v.FRIEND_DM]: (0, c.gC)({
                     setting: null == i ? void 0 : i[s.v.FRIEND_DM],
                     isDm: !0,

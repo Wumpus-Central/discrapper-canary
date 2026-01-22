@@ -17,6 +17,7 @@ var r,
     p = n(967198),
     _ = n(652215),
     h = n(355097);
+
 function m(e, t, n) {
     return (
         t in e
@@ -30,6 +31,7 @@ function m(e, t, n) {
         e
     );
 }
+
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -46,6 +48,7 @@ function g(e) {
     }
     return e;
 }
+
 function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -58,6 +61,7 @@ function E(e, t) {
     }
     return n;
 }
+
 function b(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -101,6 +105,7 @@ let y = 10,
     }),
     S = null,
     I = null;
+
 function T(e) {
     let { guildId: t, channelId: n } = e,
         r = !1;
@@ -128,6 +133,7 @@ function T(e) {
         r
     );
 }
+
 function C(e) {
     let {
         settings: { type: t },
@@ -135,16 +141,23 @@ function C(e) {
     } = e;
     return t === h.oD.FRECENCY_AND_FAVORITES_SETTINGS && !!n && ((R.pendingUsages = []), !0);
 }
+
 function N() {
     var e;
     let t = null == (e = c.A.frecencyWithoutFetchingLatest.guildAndChannelFrecency) ? void 0 : e.guildAndChannels;
     if (null == t) return !1;
     v.overwriteHistory(
-        a().mapValues(t, (e) => b(g({}, e), { recentUses: e.recentUses.map(Number).filter((e) => e > 0) })),
+        a().mapValues(t, (e) =>
+            b(g({}, e), {
+                recentUses: e.recentUses.map(Number).filter((e) => e > 0),
+            }),
+        ),
         R.pendingUsages,
     );
 }
-let R = { pendingUsages: [] };
+let R = {
+    pendingUsages: [],
+};
 class w extends (r = s.Ay.PersistedStore) {
     initialize(e) {
         this.waitFor(u.A, d.A, f.A, p.A, c.A),

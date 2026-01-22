@@ -24,6 +24,7 @@ var r,
     E = n(515718),
     b = n(652215),
     y = n(838541);
+
 function O(e, t, n) {
     return (
         t in e
@@ -37,6 +38,7 @@ function O(e, t, n) {
         e
     );
 }
+
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -53,6 +55,7 @@ function A(e) {
     }
     return e;
 }
+
 function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -65,6 +68,7 @@ function v(e, t) {
     }
     return n;
 }
+
 function S(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -112,7 +116,14 @@ class P extends (r = a.Component) {
                     animated: r,
                     srcIsAnimated: i,
                 }))
-                ? ((s = "webp"), (P.isSrcPNG({ src: t }) || P.isSrcAVIF({ src: t })) && (o = "lossless"))
+                ? ((s = "webp"),
+                  (P.isSrcPNG({
+                      src: t,
+                  }) ||
+                      P.isSrcAVIF({
+                          src: t,
+                      })) &&
+                      (o = "lossless"))
                 : a && (s = "png"),
             {
                 format: s,
@@ -179,8 +190,13 @@ class P extends (r = a.Component) {
             imageProps: { src: f, height: g, width: E, original: y, sourceMetadata: O },
         } = e;
         if (
-            (i && p.A.increment({ name: o.K.IMAGE_LOAD_ERROR }),
-            !D.getCurrentConfig({ location: "lazy_image" }).enabled)
+            (i &&
+                p.A.increment({
+                    name: o.K.IMAGE_LOAD_ERROR,
+                }),
+            !D.getCurrentConfig({
+                location: "lazy_image",
+            }).enabled)
         )
             return;
         let A = await fetch(a.url).catch(() => void 0),
@@ -228,7 +244,11 @@ class P extends (r = a.Component) {
     getSrc(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             { src: n, width: r, height: i, maxWidth: a, maxHeight: s, mediaLayoutType: o } = this.props,
-            { format: l, quality: c } = P.getFormatQuality(S(A({}, this.props), { freeze: t }));
+            { format: l, quality: c } = P.getFormatQuality(
+                S(A({}, this.props), {
+                    freeze: t,
+                }),
+            );
         return (0, f.AE)({
             src: n,
             width: r,
@@ -376,7 +396,15 @@ class P extends (r = a.Component) {
                             });
                 } else V.src = this.getSrc(k);
         }
-        return (0, i.jsx)(c._, A({ ref: this._imageRef }, V));
+        return (0, i.jsx)(
+            c._,
+            A(
+                {
+                    ref: this._imageRef,
+                },
+                V,
+            ),
+        );
     }
     constructor(e) {
         super(e),
@@ -395,37 +423,54 @@ class P extends (r = a.Component) {
                 P.visibilityObserver.unobserve(this);
             }),
             O(this, "handleImageLoad", (e, t) => {
-                this.setState({ readyState: e ? b.Rv1.ERROR : b.Rv1.READY }, () => {
-                    var n;
-                    let { format: r, quality: i } = P.getFormatQuality(this.props);
-                    P.trackLoadingCompleted({
-                        error: e,
-                        imageData: t,
-                        trigger: null != (n = this.props.trigger) ? n : "LOAD",
-                        startLoadingTime: this.startLoadingTime,
-                        readyState: this.state.readyState,
-                        format: r,
-                        quality: i,
-                        imageProps: this.props,
-                    });
-                });
+                this.setState(
+                    {
+                        readyState: e ? b.Rv1.ERROR : b.Rv1.READY,
+                    },
+                    () => {
+                        var n;
+                        let { format: r, quality: i } = P.getFormatQuality(this.props);
+                        P.trackLoadingCompleted({
+                            error: e,
+                            imageData: t,
+                            trigger: null != (n = this.props.trigger) ? n : "LOAD",
+                            startLoadingTime: this.startLoadingTime,
+                            readyState: this.state.readyState,
+                            format: r,
+                            quality: i,
+                            imageProps: this.props,
+                        });
+                    },
+                );
             }),
             O(this, "onMouseEnter", (e) => {
-                P.isAnimated(this.props) && this.setState({ hasMouseOver: !0 });
+                P.isAnimated(this.props) &&
+                    this.setState({
+                        hasMouseOver: !0,
+                    });
                 let { onMouseEnter: t } = this.props;
                 null == t || t(e);
             }),
             O(this, "onMouseLeave", (e) => {
-                P.isAnimated(this.props) && this.setState({ hasMouseOver: !1 });
+                P.isAnimated(this.props) &&
+                    this.setState({
+                        hasMouseOver: !1,
+                    });
                 let { onMouseLeave: t } = this.props;
                 null == t || t(e);
             }),
             O(this, "onFocus", (e) => {
-                P.isAnimated(this.props) && this.setState({ hasFocus: !0 });
+                P.isAnimated(this.props) &&
+                    this.setState({
+                        hasFocus: !0,
+                    });
             }),
             O(this, "onBlur", (e) => {
                 let { currentTarget: t, relatedTarget: n } = e;
-                t.contains(n) || this.setState({ hasFocus: !1 });
+                t.contains(n) ||
+                    this.setState({
+                        hasFocus: !1,
+                    });
             }),
             O(this, "onClick", (e) => {
                 let { onZoom: t, onClick: n } = this.props;
@@ -447,7 +492,13 @@ class P extends (r = a.Component) {
             (0, f.LE)(this.getSrc(this.getRatio(), P.isAnimated(this.props))) && (this.state.readyState = b.Rv1.READY);
     }
 }
-O(P, "visibilityObserver", new l.j({ threshold: 0.6 })),
+O(
+    P,
+    "visibilityObserver",
+    new l.j({
+        threshold: 0.6,
+    }),
+),
     O(P, "defaultProps", {
         shouldLink: !1,
         autoPlay: !1,
@@ -461,17 +512,23 @@ let D = (0, u.C)({
     kind: "user",
     id: "2024-02_image_load_metrics",
     label: "Image load metrics Config User Experiment",
-    defaultConfig: { enabled: !1 },
+    defaultConfig: {
+        enabled: !1,
+    },
     treatments: [
         {
             id: 1,
             label: "Do not send metrics for image load",
-            config: { enabled: !1 },
+            config: {
+                enabled: !1,
+            },
         },
         {
             id: 2,
             label: "Send metrics for image load",
-            config: { enabled: !0 },
+            config: {
+                enabled: !0,
+            },
         },
     ],
 });

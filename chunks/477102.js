@@ -1,4 +1,8 @@
-n.d(t, { A: () => _ }), n(896048), n(638769);
+n.d(t, {
+    A: () => _,
+}),
+    n(896048),
+    n(638769);
 var a = n(627968),
     l = n(64700),
     i = n(110259),
@@ -15,6 +19,7 @@ var a = n(627968),
     x = n(985018),
     b = n(815907),
     g = n(661251);
+
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -40,6 +45,7 @@ function v(e) {
     }
     return e;
 }
+
 function j(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -82,17 +88,31 @@ let y = {
                     onResend: () => {},
                     onSuccess: () => {},
                     confirmButtonText: x.intl.string(x.t["13ofGu"]),
-                    impression: { impressionName: i.ImpressionNames.URF_CONFIRM_EMAIL_CODE },
+                    impression: {
+                        impressionName: i.ImpressionNames.URF_CONFIRM_EMAIL_CODE,
+                    },
                 }),
             );
     },
     AgeVerificationRetryModal: async () => {
         let { default: e } = await n.e("18467").then(n.bind(n, 297102));
-        return (t) => (0, a.jsx)(e, j(v({}, t), { entryPoint: o.q1.DEV_TOOLS_AGE_VERIFICATION_RETRY_MODAL }));
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                j(v({}, t), {
+                    entryPoint: o.q1.DEV_TOOLS_AGE_VERIFICATION_RETRY_MODAL,
+                }),
+            );
     },
     ExistingUserAgeGatePrompt: async () => {
         let { default: e } = await Promise.all([n.e("10136"), n.e("63090")]).then(n.bind(n, 776971));
-        return (t) => (0, a.jsx)(e, j(v({}, t), { source: f.w_.NSFW_SERVER }));
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                j(v({}, t), {
+                    source: f.w_.NSFW_SERVER,
+                }),
+            );
     },
     ExistingUserAgeGateUnderage: async () => {
         let { default: e } = await n.e("80959").then(n.bind(n, 784578));
@@ -104,7 +124,13 @@ let y = {
     },
     AutomatedUnderageAppealModal: async () => {
         let { default: e } = await n.e("93530").then(n.bind(n, 244321));
-        return (t) => (0, a.jsx)(e, j(v({}, t), { classificationId: "123" }));
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                j(v({}, t), {
+                    classificationId: "123",
+                }),
+            );
     },
     AutomodRaidResolveModal: async () => {
         let { default: e } = await n.e("7133").then(n.bind(n, 580812));
@@ -119,7 +145,13 @@ let y = {
     },
     AutomodUserProfileQuarantineAlert: async () => {
         let { default: e } = await n.e("52343").then(n.bind(n, 725034));
-        return (t) => (0, a.jsx)(e, j(v({}, t), { guildId: "123" }));
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                j(v({}, t), {
+                    guildId: "123",
+                }),
+            );
     },
     PhoneVerificationModal: async () => {
         let { default: e } = await Promise.resolve().then(n.bind(n, 515258));
@@ -159,7 +191,9 @@ let y = {
                         type: "dynamic",
                         component: e.DEMO,
                         aspectRatio: "6/4",
-                        props: { text: "Dynamic Content Loaded!" },
+                        props: {
+                            text: "Dynamic Content Loaded!",
+                        },
                     },
                     actions: [
                         {
@@ -197,7 +231,7 @@ let y = {
                 status: 1,
                 currency: "usd",
                 currentPeriodStart: new Date(),
-                currentPeriodEnd: new Date(Date.now() + 2592000000),
+                currentPeriodEnd: new Date(Date.now() + 2592e6),
                 items: [
                     {
                         id: "test-item-id",
@@ -284,7 +318,7 @@ let y = {
                 nsfw: !1,
                 topic: void 0,
                 lastMessageId: void 0,
-                bitrate: 64000,
+                bitrate: 64e3,
                 userLimit: 0,
                 rateLimitPerUser: 0,
                 icon: null,
@@ -369,7 +403,13 @@ let y = {
     },
     AppealIngestionModal: async () => {
         let { default: e } = await Promise.all([n.e("74327"), n.e("99484")]).then(n.bind(n, 355690));
-        return (t) => (0, a.jsx)(e, j(v({}, t), { classificationId: "123456789" }));
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                j(v({}, t), {
+                    classificationId: "123456789",
+                }),
+            );
     },
     CreateTagModal: async () => {
         let { default: e } = await n.e("47326").then(n.bind(n, 950989));
@@ -473,6 +513,7 @@ let y = {
             ),
             c = await Promise.resolve().then(n.t.bind(n, 64700, 19)),
             d = "TestUser";
+
         function u(n) {
             let [u, m] = c.useState(s.DURATION_60_SEC),
                 [p, h] = c.useState(""),
@@ -512,7 +553,7 @@ let y = {
                             reason: null != p ? p : "No reason provided",
                             resolveFlag: b,
                         }),
-                        await new Promise((e) => setTimeout(e, 1000)),
+                        await new Promise((e) => setTimeout(e, 1e3)),
                         x(!1),
                         n.onClose();
                 }, [u, p, b, n]);
@@ -622,6 +663,7 @@ let y = {
             o = 200,
             c = 60,
             d = 8;
+
         function u(n) {
             let [u, m] = r.useState(!1),
                 [p, h] = r.useState(!1),
@@ -631,7 +673,7 @@ let y = {
                             powerup: s,
                             guildId: "123456789",
                         }),
-                        await new Promise((e) => setTimeout(e, 2000)),
+                        await new Promise((e) => setTimeout(e, 2e3)),
                         h(!1),
                         n.onClose();
                 }, [n]);
@@ -680,22 +722,22 @@ let y = {
                                     (0, a.jsxs)(t, {
                                         variant: "text-sm/normal",
                                         color: "text-subtle",
-                                        children: ["\u2022 ", o, " emoji slots"],
+                                        children: ["• ", o, " emoji slots"],
                                     }),
                                     (0, a.jsxs)(t, {
                                         variant: "text-sm/normal",
                                         color: "text-subtle",
-                                        children: ["\u2022 ", c, " sticker slots"],
+                                        children: ["• ", c, " sticker slots"],
                                     }),
                                     (0, a.jsxs)(t, {
                                         variant: "text-sm/normal",
                                         color: "text-subtle",
-                                        children: ["\u2022 ", d, " sound slots"],
+                                        children: ["• ", d, " sound slots"],
                                     }),
                                     (0, a.jsx)(t, {
                                         variant: "text-sm/normal",
                                         color: "text-subtle",
-                                        children: "\u2022 Custom server banner",
+                                        children: "• Custom server banner",
                                     }),
                                 ],
                             }),
@@ -718,7 +760,7 @@ let y = {
                                     (0, a.jsx)("span", {
                                         role: "img",
                                         "aria-label": "Warning",
-                                        children: "\u26A0️",
+                                        children: "⚠️",
                                     }),
                                     " ",
                                     "Warning",
@@ -776,7 +818,7 @@ let y = {
                     console.log("DataHarvestModal: Requesting data export for:", e),
                         setTimeout(() => {
                             console.log("DataHarvestModal: Data export request submitted successfully");
-                        }, 1000);
+                        }, 1e3);
                 },
             });
     },
@@ -857,7 +899,13 @@ let y = {
     },
     AddFavoriteChannelModal: async () => {
         let { default: e } = await n.e("59839").then(n.bind(n, 889186));
-        return (t) => (0, a.jsx)(e, j(v({}, t), { parentId: null }));
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                j(v({}, t), {
+                    parentId: null,
+                }),
+            );
     },
     ActivityShareMomentModal: async () => {
         let { default: e } = await Promise.all([n.e("28136"), n.e("21743"), n.e("58697")]).then(n.bind(n, 190930));
@@ -887,7 +935,9 @@ let y = {
         return (t) =>
             (0, a.jsx)(
                 e,
-                j(v({}, t), { onClose: () => (console.log("OptInReorderAttemptModal: Modal closed"), t.onClose()) }),
+                j(v({}, t), {
+                    onClose: () => (console.log("OptInReorderAttemptModal: Modal closed"), t.onClose()),
+                }),
             );
     },
     GuildAntiRaidReportModal: async () => {
@@ -905,6 +955,7 @@ let y = {
         let { VoidConfirmModal: e } = await Promise.resolve().then(n.bind(n, 640238)),
             { Text: t, Heading: l } = await Promise.resolve().then(n.bind(n, 397927)),
             i = await Promise.resolve().then(n.t.bind(n, 64700, 19));
+
         function r(n) {
             let [r, o] = i.useState(!1),
                 [c, d] = i.useState(!1);
@@ -928,7 +979,9 @@ let y = {
                                 children: [
                                     (0, a.jsx)(l, {
                                         variant: "heading-md/semibold",
-                                        style: { marginBottom: "12px" },
+                                        style: {
+                                            marginBottom: "12px",
+                                        },
                                         children: "Terms of Service Consent",
                                     }),
                                     (0, a.jsx)(s.Checkbox, {
@@ -940,7 +993,9 @@ let y = {
                                     (0, a.jsxs)(t, {
                                         variant: "text-sm/normal",
                                         color: "text-subtle",
-                                        style: { marginTop: "8px" },
+                                        style: {
+                                            marginTop: "8px",
+                                        },
                                         children: ["Consent status: ", r ? "Agreed" : "Not agreed"],
                                     }),
                                 ],
@@ -949,7 +1004,9 @@ let y = {
                                 children: [
                                     (0, a.jsx)(l, {
                                         variant: "heading-md/semibold",
-                                        style: { marginBottom: "12px" },
+                                        style: {
+                                            marginBottom: "12px",
+                                        },
                                         children: "Promotional Email Consent",
                                     }),
                                     (0, a.jsx)(s.Checkbox, {
@@ -961,7 +1018,9 @@ let y = {
                                     (0, a.jsxs)(t, {
                                         variant: "text-sm/normal",
                                         color: "text-subtle",
-                                        style: { marginTop: "8px" },
+                                        style: {
+                                            marginTop: "8px",
+                                        },
                                         children: ["Promo consent status: ", c ? "Opted in" : "Not opted in"],
                                     }),
                                 ],
@@ -1018,7 +1077,7 @@ let y = {
                 publicUpdatesChannelId: null,
                 maxStageVideoChannelUsers: 10,
                 maxVideoChannelUsers: 25,
-                maxMembers: 500000,
+                maxMembers: 5e5,
                 nsfwLevel: 0,
                 ownerConfiguredContentLevel: null,
                 hubType: null,
@@ -1027,7 +1086,13 @@ let y = {
                 premiumFeatures: null,
                 moderatorReporting: null,
             });
-        return (t) => (0, a.jsx)(e, j(v({}, t), { guild: l }));
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                j(v({}, t), {
+                    guild: l,
+                }),
+            );
     },
     GuildVerificationLevelModalCommunity: async () => {
         let { default: e } = await n.e("70232").then(n.bind(n, 313003)),
@@ -1064,7 +1129,7 @@ let y = {
                 publicUpdatesChannelId: null,
                 maxStageVideoChannelUsers: 10,
                 maxVideoChannelUsers: 25,
-                maxMembers: 500000,
+                maxMembers: 5e5,
                 nsfwLevel: 0,
                 ownerConfiguredContentLevel: null,
                 hubType: null,
@@ -1073,7 +1138,13 @@ let y = {
                 premiumFeatures: null,
                 moderatorReporting: null,
             });
-        return (t) => (0, a.jsx)(e, j(v({}, t), { guild: i }));
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                j(v({}, t), {
+                    guild: i,
+                }),
+            );
     },
     EmojiAddModal: async () => {
         let { EmojiAddModal: e } = await n.e("90410").then(n.bind(n, 126033));
@@ -1154,13 +1225,21 @@ let y = {
             );
     },
     FamilyCenterQRCodeModal: async () => {
-        let { default: e } = await Promise.all([n.e("43887"), n.e("72875")]).then(n.bind(n, 320742));
+        let { default: e } = await Promise.all([n.e("14882"), n.e("72875")]).then(n.bind(n, 320742));
         return (t) => (0, a.jsx)(e, v({}, t));
     },
     PremiumGroupFriendsSelectorModal: async () => {
         let { default: e } = await n.e("73987").then(n.bind(n, 773486)),
             t = m.A.getPremiumGroupSubscription();
-        return null == t ? () => null : (n) => (0, a.jsx)(e, j(v({}, n), { subscription: t }));
+        return null == t
+            ? () => null
+            : (n) =>
+                  (0, a.jsx)(
+                      e,
+                      j(v({}, n), {
+                          subscription: t,
+                      }),
+                  );
     },
     PremiumGroupAcceptInviteModal: async () => {
         let { default: e } = await n.e("60072").then(n.bind(n, 159707));
@@ -1197,23 +1276,41 @@ let y = {
                     actionText: "Submit",
                     handleSubmit: async (e) => {
                         console.log("PasswordConfirm: Password submitted:", e),
-                            await new Promise((e) => setTimeout(e, 1000));
+                            await new Promise((e) => setTimeout(e, 1e3));
                     },
                 }),
             );
     },
     BlockedDomainModal: async () => {
         let { default: e } = await n.e("40850").then(n.bind(n, 534340));
-        return (t) => (0, a.jsx)(e, j(v({}, t), { url: "https://example-phishing-site.com/malicious-page" }));
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                j(v({}, t), {
+                    url: "https://example-phishing-site.com/malicious-page",
+                }),
+            );
     },
     DmSettingsUpsellModal: async () => {
         let { default: e } = await n.e("62684").then(n.bind(n, 228855)),
             t = Object.keys(d.A.getGuilds())[0];
-        return (n) => (0, a.jsx)(e, j(v({}, n), { guildId: t }));
+        return (n) =>
+            (0, a.jsx)(
+                e,
+                j(v({}, n), {
+                    guildId: t,
+                }),
+            );
     },
     LinkNotDiscordModal: async () => {
         let { default: e } = await n.e("20978").then(n.bind(n, 696452));
-        return (t) => (0, a.jsx)(e, j(v({}, t), { url: "https://external-website.com/some-page" }));
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                j(v({}, t), {
+                    url: "https://external-website.com/some-page",
+                }),
+            );
     },
     UrgentMessageModal: async () => {
         let { default: e } = await n.e("88077").then(n.bind(n, 187964));
@@ -1226,7 +1323,15 @@ let y = {
     DisableRiskyPermsModal: async () => {
         let { default: e } = await n.e("71905").then(n.bind(n, 868952)),
             t = Object.values(d.A.getGuilds())[0];
-        return null == t ? () => null : (n) => (0, a.jsx)(e, j(v({}, n), { guild: t }));
+        return null == t
+            ? () => null
+            : (n) =>
+                  (0, a.jsx)(
+                      e,
+                      j(v({}, n), {
+                          guild: t,
+                      }),
+                  );
     },
     OtherFriendRequestsModal: async () => {
         let { default: e } = await Promise.all([n.e("71853"), n.e("75052")]).then(n.bind(n, 516259));
@@ -1241,6 +1346,7 @@ let y = {
         return (t) => (0, a.jsx)(e, v({}, t));
     },
 };
+
 function _() {
     let e = l.useMemo(
             () =>

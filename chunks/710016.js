@@ -1,4 +1,8 @@
-n.d(t, { A: () => y }), n(896048), n(321073);
+n.d(t, {
+    A: () => y,
+}),
+    n(896048),
+    n(321073);
 var l,
     a = n(627968),
     r = n(64700),
@@ -15,6 +19,7 @@ var l,
     f = n(203982),
     g = n(652215),
     x = n(904482);
+
 function v(e, t, n) {
     return (
         t in e
@@ -28,6 +33,7 @@ function v(e, t, n) {
         e
     );
 }
+
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -61,7 +67,15 @@ class _ extends r.Component {
                     easing: d.A.Easing.out(d.A.Easing.linear),
                     duration: 200,
                 }),
-                d.A.spring(n, j({ toValue: 0 }, A)),
+                d.A.spring(
+                    n,
+                    j(
+                        {
+                            toValue: 0,
+                        },
+                        A,
+                    ),
+                ),
             ]).start();
     }
     componentWillLeave(e) {
@@ -73,7 +87,15 @@ class _ extends r.Component {
                 easing: d.A.Easing.in(d.A.Easing.linear),
                 duration: 200,
             }),
-            d.A.spring(l, j({ toValue: -1 * t[t.length - 1] }, A)),
+            d.A.spring(
+                l,
+                j(
+                    {
+                        toValue: -1 * t[t.length - 1],
+                    },
+                    A,
+                ),
+            ),
         ]).start(e);
     }
     getStyle() {
@@ -202,4 +224,6 @@ class y extends (l = r.Component) {
             });
     }
 }
-v(y, "defaultProps", { startWith: 0 });
+v(y, "defaultProps", {
+    startWith: 0,
+});

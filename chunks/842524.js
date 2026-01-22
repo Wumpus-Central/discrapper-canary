@@ -1,7 +1,10 @@
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var r,
     i = n(311907),
     a = n(73153);
+
 function s(e, t, n) {
     return (
         t in e
@@ -15,6 +18,7 @@ function s(e, t, n) {
         e
     );
 }
+
 function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -31,6 +35,7 @@ function o(e) {
     }
     return e;
 }
+
 function l(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -43,6 +48,7 @@ function l(e, t) {
     }
     return n;
 }
+
 function c(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -55,9 +61,13 @@ function c(e, t) {
     );
 }
 let u = d();
+
 function d() {
-    return { ignoreTimestamps: {} };
+    return {
+        ignoreTimestamps: {},
+    };
 }
+
 function f(e) {
     let { userId: t, timestamp: n } = e;
     u.ignoreTimestamps[t] = n;
@@ -66,7 +76,9 @@ class p extends (r = i.Ay.PersistedStore) {
     initialize(e) {
         var t;
         let n = null != (t = null == e ? void 0 : e.ignoreTimestamps) ? t : {};
-        u = c(o({}, d()), { ignoreTimestamps: n });
+        u = c(o({}, d()), {
+            ignoreTimestamps: n,
+        });
     }
     getState() {
         return u;
@@ -76,4 +88,6 @@ class p extends (r = i.Ay.PersistedStore) {
     }
 }
 s(p, "displayName", "IgnoreNoticeStore"), s(p, "persistKey", "IgnoreNoticeStore");
-let _ = new p(a.h, { RELATIONSHIP_IGNORE_USER_SUCCESS: f });
+let _ = new p(a.h, {
+    RELATIONSHIP_IGNORE_USER_SUCCESS: f,
+});

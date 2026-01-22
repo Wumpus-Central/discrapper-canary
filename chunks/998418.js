@@ -9,9 +9,11 @@ var r = n(311907),
     s = n(800007),
     o = n(568065),
     l = n(652215);
+
 function c(e) {
     return e.type !== o.b_.INACTIVE;
 }
+
 function u(e, t) {
     var n, c;
     let u = (0, r.bG)([i.A], () => i.A.getGuild(e)),
@@ -20,6 +22,7 @@ function u(e, t) {
             null !=
                 (n = null == u || null == (c = u.features) ? void 0 : c.has(l.GuildFeatures.PREMIUM_TIER_3_OVERRIDE)) &&
             n;
+
     function p(e) {
         if (e.skuId === s.W5) {
             var t, n;
@@ -69,6 +72,7 @@ function u(e, t) {
             p
         );
     }
+
     function _(e) {
         var t, n;
         if (null == e || null == u || null == d)
@@ -92,15 +96,18 @@ function u(e, t) {
             levelPowerup: null != a ? (null == (n = d.allPowerups) ? void 0 : n[a]) : void 0,
         };
     }
+
     function h(e) {
         return f && o.o2.has(e.skuId);
     }
+
     function m(e) {
         var t, n;
         return null != (t = null == d || null == (n = d.unlockedPowerups) ? void 0 : n[e.skuId]) ? t : null;
     }
     return t.map((e) => p(e));
 }
+
 function d(e, t) {
     let n = u(e, null == t ? [] : [t]);
     return n.length <= 0

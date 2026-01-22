@@ -1,10 +1,14 @@
 let r, i, a, s;
-n.d(t, { A: () => w }), n(896048);
+n.d(t, {
+    A: () => w,
+}),
+    n(896048);
 var o,
     l = n(311907),
     c = n(73153),
     u = n(652215),
     d = n(806931);
+
 function f(e, t, n) {
     return (
         t in e
@@ -18,6 +22,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,6 +39,7 @@ function p(e) {
     }
     return e;
 }
+
 function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -46,6 +52,7 @@ function _(e, t) {
     }
     return n;
 }
+
 function h(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -65,6 +72,7 @@ let m = new Map(),
         [d.R8.CAMERA_PREVIEW]: d.fG[d.R8.CAMERA_PREVIEW],
         [d.R8.HAVEN]: d.fG[d.R8.HAVEN],
     };
+
 function y(e) {
     var t, n;
     let { id: o, component: l, props: c } = e;
@@ -85,6 +93,7 @@ function y(e) {
                 ? null == a && (a = o)
                 : l === u.o1q.HAVEN && null == s && (s = o);
 }
+
 function O(e) {
     let { id: t } = e;
     if (!m.has(t)) return !1;
@@ -113,44 +122,65 @@ function O(e) {
                   }));
     }
 }
+
 function A(e) {
     let { id: t, position: n } = e;
     if (null == t || (r !== t && i !== t && a !== t && s !== t)) return !1;
     {
         let e = new Map();
         m.forEach((t, r) => {
-            e.set(r, h(p({}, t), { position: n }));
+            e.set(
+                r,
+                h(p({}, t), {
+                    position: n,
+                }),
+            );
         }),
             (m = e),
             (E = n);
     }
 }
+
 function v(e) {
     let { width: t, pipType: n } = e;
     b[n] = t;
 }
+
 function S(e) {
     let { id: t, rect: n } = e;
     g[t] = n;
 }
+
 function I(e) {
     let { id: t } = e;
     if (r !== t && i !== t && a !== t && s !== t) return !1;
     {
         let e = m.get(t);
         if (null == e) return !1;
-        m.set(t, h(p({}, e), { hidden: !0 }));
+        m.set(
+            t,
+            h(p({}, e), {
+                hidden: !0,
+            }),
+        );
     }
 }
+
 function T(e) {
     let { id: t } = e;
     if (r !== t && i !== t && a !== t && s !== t) return !1;
     {
         let e = m.get(t);
         if (null == e) return !1;
-        m.set(t, h(p({}, e), { hidden: !1 }));
+        m.set(
+            t,
+            h(p({}, e), {
+                hidden: !1,
+            }),
+        );
     }
 }
+
 function C(e) {
     let { id: t } = e,
         n = m.get(t);
@@ -163,6 +193,7 @@ function C(e) {
                 ? (a = t)
                 : n.component === u.o1q.HAVEN && (s = t));
 }
+
 function N() {
     (r = null), (i = null), (a = null), (s = null), (m = new Map());
 }

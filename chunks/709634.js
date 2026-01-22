@@ -1,4 +1,6 @@
-n.d(t, { A: () => O });
+n.d(t, {
+    A: () => O,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -56,7 +58,7 @@ let O = (e) => {
                 children: [
                     (0, r.jsx)("span", {
                         className: E.Ek,
-                        children: "\u2022",
+                        children: "•",
                     }),
                     (0, r.jsx)(d.A, {
                         timestamp: A,

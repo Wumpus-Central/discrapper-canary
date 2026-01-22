@@ -1,6 +1,9 @@
-n.d(e, { b: () => a });
+n.d(e, {
+    b: () => a,
+});
 var l = n(311907),
     r = n(287809);
+
 function a() {
     return (0, l.bG)([r.default], () => {
         var t, e;

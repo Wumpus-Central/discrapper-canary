@@ -1,9 +1,12 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r,
     i,
     l = n(311907),
     a = n(73153);
 let s = "UPDATE_NOT_AVAILABLE";
+
 function o(e) {
     s = e.type;
 }

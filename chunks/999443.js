@@ -1,4 +1,7 @@
-n.d(t, { A: () => z }), n(896048);
+n.d(t, {
+    A: () => z,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -34,6 +37,7 @@ var r = n(627968),
     j = n(746080),
     M = n(206314),
     k = n(829681);
+
 function U(e, t, n) {
     return (
         t in e
@@ -47,6 +51,7 @@ function U(e, t, n) {
         e
     );
 }
+
 function G(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -63,6 +68,7 @@ function G(e) {
     }
     return e;
 }
+
 function V(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -75,6 +81,7 @@ function V(e, t) {
     }
     return n;
 }
+
 function F(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -86,6 +93,7 @@ function F(e, t) {
         e
     );
 }
+
 function B(e) {
     let { emojiTooltipPosition: t = "top", enableEmojiClick: n = !0 } = e;
     return {
@@ -103,10 +111,17 @@ function B(e) {
                       },
                       s,
                   )
-                : (0, r.jsx)("span", { children: e.surrogate }, s);
+                : (0, r.jsx)(
+                      "span",
+                      {
+                          children: e.surrogate,
+                      },
+                      s,
+                  );
         },
     };
 }
+
 function H(e) {
     let { emojiTooltipPosition: t = "top", enableEmojiClick: n = !0 } = e;
     return {
@@ -115,7 +130,9 @@ function H(e) {
                 d = f.Ay.getDisambiguatedEmojiContext(o).getById(e.emojiId);
             if (null != d) {
                 let t = d.require_colons;
-                e = F(G({}, e), { name: t ? ":".concat(d.name, ":") : d.name });
+                e = F(G({}, e), {
+                    name: t ? ":".concat(d.name, ":") : d.name,
+                });
             }
             return (0, r.jsx)(
                 b.X,
@@ -132,6 +149,7 @@ function H(e) {
         },
     };
 }
+
 function Y(e, t, n) {
     let r = S.A.getGuild(e);
     if (null == e || null == r) return;
@@ -171,6 +189,7 @@ function Y(e, t, n) {
                 });
     }
 }
+
 function W(e) {
     let { text: t } = e,
         [n, a] = i.useState(!1),
@@ -202,14 +221,27 @@ let K = {
                 {
                     className: M.h,
                     children: [
-                        (0, r.jsx)("div", { className: M.r }),
-                        (0, r.jsx)("blockquote", { children: t(e.content, n) }),
+                        (0, r.jsx)("div", {
+                            className: M.r,
+                        }),
+                        (0, r.jsx)("blockquote", {
+                            children: t(e.content, n),
+                        }),
                     ],
                 },
                 n.key,
             ),
     },
-    s: { react: (e, t, n) => (0, r.jsx)("s", { children: t(e.content, n) }, n.key) },
+    s: {
+        react: (e, t, n) =>
+            (0, r.jsx)(
+                "s",
+                {
+                    children: t(e.content, n),
+                },
+                n.key,
+            ),
+    },
     highlight: {
         react: (e, t, n) =>
             (0, r.jsx)(
@@ -221,7 +253,16 @@ let K = {
                 n.key,
             ),
     },
-    paragraph: { react: (e, t, n) => (0, r.jsx)("p", { children: t(e.content, n) }, n.key) },
+    paragraph: {
+        react: (e, t, n) =>
+            (0, r.jsx)(
+                "p",
+                {
+                    children: t(e.content, n),
+                },
+                n.key,
+            ),
+    },
     inlineCode: {
         react: (e, t, n) =>
             (0, r.jsx)(
@@ -249,7 +290,9 @@ let K = {
                             I.p5
                                 ? (0, r.jsx)("div", {
                                       className: M.lB,
-                                      children: (0, r.jsx)(W, { text: e.content }),
+                                      children: (0, r.jsx)(W, {
+                                          text: e.content,
+                                      }),
                                   })
                                 : null,
                             (0, r.jsx)(d.c2, {
@@ -264,7 +307,9 @@ let K = {
                                             ? a()
                                             : (0, r.jsx)("code", {
                                                   className: s()(k.kw, "hljs", n.language),
-                                                  dangerouslySetInnerHTML: { __html: n.value },
+                                                  dangerouslySetInnerHTML: {
+                                                      __html: n.value,
+                                                  },
                                               });
                                     }
                                 },
@@ -279,8 +324,20 @@ let K = {
     text: {
         react: (e, t, n) =>
             "string" == typeof e.content
-                ? (0, r.jsx)("span", { children: e.content }, n.key)
-                : (0, r.jsx)("span", { children: t(e.content, n) }, n.key),
+                ? (0, r.jsx)(
+                      "span",
+                      {
+                          children: e.content,
+                      },
+                      n.key,
+                  )
+                : (0, r.jsx)(
+                      "span",
+                      {
+                          children: t(e.content, n),
+                      },
+                      n.key,
+                  ),
     },
     spoiler: {
         react: (e, t, n) =>
@@ -290,7 +347,11 @@ let K = {
                     type: O.Ay.Types.TEXT,
                     inline: n.formatInline,
                     renderTextElement: (e, t) =>
-                        null == e || e.type !== u.A || t ? e : i.cloneElement(e, { tabIndex: -1 }),
+                        null == e || e.type !== u.A || t
+                            ? e
+                            : i.cloneElement(e, {
+                                  tabIndex: -1,
+                              }),
                     children: () => t(e.content, n),
                 },
                 n.key,
@@ -330,7 +391,16 @@ let K = {
                 : null;
         },
     },
-    timestamp: { react: (e, t, n) => (0, r.jsx)(C.A, { node: e }, n.key) },
+    timestamp: {
+        react: (e, t, n) =>
+            (0, r.jsx)(
+                C.A,
+                {
+                    node: e,
+                },
+                n.key,
+            ),
+    },
     list: {
         react: (e, t, n) => {
             let i = e.ordered ? "ol" : "ul",
@@ -338,13 +408,24 @@ let K = {
             return (0, o.reactElement)(i, "".concat(n.key), {
                 start: e.start,
                 className: n.formatInline ? M.tZ : null,
-                style: { "--totalCharacters": a },
+                style: {
+                    "--totalCharacters": a,
+                },
                 children: e.items.map((e, i) => {
                     let a = (0, o.reactElement)("span", "".concat(n.key, "-").concat(i, "-innerSpan"), {
                         children: t(e, n),
                     });
                     return (0, o.reactElement)("li", "".concat(n.key, "-").concat(i) + i, {
-                        children: [a, (0, r.jsx)(l.AC4, { children: "," }, "screen-reader-pause")],
+                        children: [
+                            a,
+                            (0, r.jsx)(
+                                l.AC4,
+                                {
+                                    children: ",",
+                                },
+                                "screen-reader-pause",
+                            ),
+                        ],
                     });
                 }),
             });
@@ -352,9 +433,20 @@ let K = {
     },
     heading: {
         react: (e, t, n) => {
-            let i = (0, o.reactElement)("span", "".concat(n.key, "-innerSpan"), { children: t(e.content, n) });
+            let i = (0, o.reactElement)("span", "".concat(n.key, "-innerSpan"), {
+                children: t(e.content, n),
+            });
             return (0, o.reactElement)("h" + e.level, (null == n ? void 0 : n.key) != null ? "".concat(n.key) : null, {
-                children: [i, (0, r.jsx)(l.AC4, { children: "," }, "screen-reader-pause")],
+                children: [
+                    i,
+                    (0, r.jsx)(
+                        l.AC4,
+                        {
+                            children: ",",
+                        },
+                        "screen-reader-pause",
+                    ),
+                ],
                 className: n.formatInline ? M.tZ : null,
             });
         },
@@ -383,10 +475,14 @@ let K = {
                 n.key,
             ),
     },
-    message: { react: (e, t, n) => (0, r.jsx)(g.A, {}, n.key) },
+    message: {
+        react: (e, t, n) => (0, r.jsx)(g.A, {}, n.key),
+    },
     subtext: {
         react: (e, t, n) => {
-            let r = (0, o.reactElement)("span", "".concat(n.key, "-innerSpan"), { children: t(e.content, n) });
+            let r = (0, o.reactElement)("span", "".concat(n.key, "-innerSpan"), {
+                children: t(e.content, n),
+            });
             return (0, o.reactElement)("small", (null == n ? void 0 : n.key) != null ? "".concat(n.key) : null, {
                 children: r,
                 className: n.formatInline ? M.tZ : null,
@@ -396,10 +492,23 @@ let K = {
     silentPrefix: {
         react: (e, t, n) =>
             "string" == typeof e.content
-                ? (0, r.jsx)("span", { children: e.content }, n.key)
-                : (0, r.jsx)("span", { children: t(e.content, n) }, n.key),
+                ? (0, r.jsx)(
+                      "span",
+                      {
+                          children: e.content,
+                      },
+                      n.key,
+                  )
+                : (0, r.jsx)(
+                      "span",
+                      {
+                          children: t(e.content, n),
+                      },
+                      n.key,
+                  ),
     },
 };
+
 function z(e) {
     return F(G({}, K), {
         link: (0, x.A)(e),

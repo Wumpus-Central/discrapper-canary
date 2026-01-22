@@ -26,15 +26,25 @@ let a = (0, r.mj)({
         },
     },
 });
+
 function s(e) {
     let { location: t } = e,
-        n = a.useConfig({ location: t }).enabled,
-        r = (0, i.A)({ location: t });
+        n = a.useConfig({
+            location: t,
+        }).enabled,
+        r = (0, i.A)({
+            location: t,
+        });
     return n && r;
 }
+
 function o(e) {
     let { location: t } = e,
-        n = s({ location: t }),
-        r = a.useConfig({ location: t });
+        n = s({
+            location: t,
+        }),
+        r = a.useConfig({
+            location: t,
+        });
     return n && r.shouldShowShopBannerWhenWishlistEmpty;
 }

@@ -13,17 +13,23 @@ let a = "#5865F2",
         gradientAngle: 0,
         setColors: (t) => {
             (0, i.r)(() => {
-                e({ colors: t });
+                e({
+                    colors: t,
+                });
             });
         },
         setChassisMixAmount: (t) => {
             (0, i.r)(() => {
-                e({ chassisMixAmount: Math.round(t) });
+                e({
+                    chassisMixAmount: Math.round(t),
+                });
             });
         },
         setGradientAngle: (t) => {
             (0, i.r)(() => {
-                e({ gradientAngle: Math.round(t) });
+                e({
+                    gradientAngle: Math.round(t),
+                });
             });
         },
         setAll: (t) => {

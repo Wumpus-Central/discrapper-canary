@@ -1,6 +1,10 @@
-n.d(t, { A: () => a }), n(896048);
+n.d(t, {
+    A: () => a,
+}),
+    n(896048);
 var r = n(35277),
     i = n(711371);
+
 function a(e) {
     let { apply: t, deleteBackward: n, deleteForward: a, deleteFragment: o, insertText: l } = e;
     return (
@@ -65,6 +69,7 @@ function a(e) {
         e
     );
 }
+
 function s(e, t, n) {
     let a = i.VW.getCurrentInline(e);
     if ("block" === t) return !0;

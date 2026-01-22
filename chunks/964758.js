@@ -1,4 +1,7 @@
-n.d(t, { A: () => x }), n(896048);
+n.d(t, {
+    A: () => x,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(284009),
@@ -13,6 +16,7 @@ var r = n(627968),
     b = n(244912),
     m = n(963175),
     p = n(985018);
+
 function x() {
     var e;
     let { editStateId: t } = (0, u.O)(),
@@ -62,7 +66,9 @@ function x() {
                 maxOptionsVisible: 5,
                 disabled: !v || E,
             }),
-            (0, r.jsx)(a.hKd, { size: 24 }),
+            (0, r.jsx)(a.hKd, {
+                size: 24,
+            }),
             (0, r.jsx)(a.l6P, {
                 selectionMode: "single",
                 label: p.intl.string(p.t["/JD9oe"]),

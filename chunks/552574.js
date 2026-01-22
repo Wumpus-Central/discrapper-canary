@@ -1,8 +1,12 @@
-n.d(t, { A: () => o }), n(896048);
+n.d(t, {
+    A: () => o,
+}),
+    n(896048);
 var r = n(311907),
     i = n(251913),
     a = n(825755),
     s = n(153084);
+
 function o() {
     let e = (0, r.bG)([a.A], () => a.A.error),
         [t, n] = (0, r.yK)([s.A], () => [s.A.error, s.A.isAwaitingAuthentication]);

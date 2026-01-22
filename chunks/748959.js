@@ -1,13 +1,22 @@
-t.d(l, { I: () => o }), t(228524);
+t.d(l, {
+    I: () => o,
+}),
+    t(228524);
 var n = t(627968),
     a = t(64700),
     s = t(397927),
     i = t(439303),
     d = t(183802),
     r = t(963879);
+
 function o(e) {
     let { leaderboard: l, skuId: t, applicationId: o, guildId: c, analyticsLocations: u, analyticsSectionId: f } = e,
-        g = a.useMemo(() => ({ pageSection: f }), [f]);
+        g = a.useMemo(
+            () => ({
+                pageSection: f,
+            }),
+            [f],
+        );
     return null == l
         ? null
         : (0, n.jsx)(i.E9, {

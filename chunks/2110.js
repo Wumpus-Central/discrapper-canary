@@ -1,4 +1,7 @@
-n.d(t, { x: () => r }), n(896048);
+n.d(t, {
+    x: () => r,
+}),
+    n(896048);
 let r = {
     IN_APP: new Set([
         "application",

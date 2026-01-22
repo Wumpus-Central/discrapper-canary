@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var r = n(627968);
 n(64700);
 var i = n(377802),
@@ -11,6 +13,7 @@ var i = n(377802),
     d = n(106044),
     p = n(42473),
     f = n(985018);
+
 function h(e) {
     var t, n;
     let { tooltipText: l, onClick: o } = e,
@@ -51,7 +54,12 @@ function h(e) {
             },
             u,
         )),
-        (n = n = { icon: (0, r.jsx)(d, { size: "refresh_sm" }) }),
+        (n = n =
+            {
+                icon: (0, r.jsx)(d, {
+                    size: "refresh_sm",
+                }),
+            }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
             : (function (e, t) {
@@ -67,6 +75,7 @@ function h(e) {
         t),
     );
 }
+
 function A(e) {
     let { channel: t } = e;
     return (0, r.jsx)(h, {
@@ -76,6 +85,7 @@ function A(e) {
         },
     });
 }
+
 function g(e) {
     let { channel: t } = e;
     return (0, r.jsx)(h, {
@@ -85,7 +95,14 @@ function g(e) {
         },
     });
 }
+
 function m(e) {
     let { channel: t } = e;
-    return t.isGuildStageVoice() ? (0, r.jsx)(A, { channel: t }) : (0, r.jsx)(g, { channel: t });
+    return t.isGuildStageVoice()
+        ? (0, r.jsx)(A, {
+              channel: t,
+          })
+        : (0, r.jsx)(g, {
+              channel: t,
+          });
 }

@@ -1,4 +1,7 @@
-n.d(t, { k: () => _ }), n(896048);
+n.d(t, {
+    k: () => _,
+}),
+    n(896048);
 var r = n(824120),
     i = n.n(r),
     a = n(181370),
@@ -8,6 +11,7 @@ var r = n(824120),
     c = n(71393),
     u = n(927813),
     d = n(661191);
+
 function f(e, t, n) {
     let r, a, s;
     try {
@@ -17,6 +21,7 @@ function f(e, t, n) {
     }
     return !((null != a && r.lesser(a)) || (null != s && r.greater(s)));
 }
+
 function p(e) {
     let t, n;
     for (let [r, i] of e)
@@ -90,7 +95,7 @@ let _ = {
             }
         return (e) => {
             let r = s().v3("".concat(t, ":").concat(e));
-            return (r > 0 ? r + r : r >>> 0) % 10000 < n;
+            return (r > 0 ? r + r : r >>> 0) % 1e4 < n;
         };
     },
 };

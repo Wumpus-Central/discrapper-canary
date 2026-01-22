@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -126,9 +128,13 @@ let u = function (e) {
             });
     }
     return (0, r.jsxs)("span", {
-        className: a()("channelWithIcon", { [c.bV]: "text" === t }),
+        className: a()("channelWithIcon", {
+            [c.bV]: "text" === t,
+        }),
         children: [
-            (0, r.jsx)(o.A, { children: i }),
+            (0, r.jsx)(o.A, {
+                children: i,
+            }),
             null != n && "" !== n
                 ? (0, r.jsx)("span", {
                       className: c.UU,

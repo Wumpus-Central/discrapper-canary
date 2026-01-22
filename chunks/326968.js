@@ -1,14 +1,16 @@
-t.d(a, { A: () => o });
+t.d(a, {
+    A: () => o,
+});
 var n = t(981737);
 let o = {
     ordinalNumber: function (e, a) {
-        return Number(e) + "º";
+        return Number(e) + "\xba";
     },
     era: (0, n.A)({
         values: {
             narrow: ["AC", "DC"],
             abbreviated: ["AC", "DC"],
-            wide: ["antes de cristo", "después de cristo"],
+            wide: ["antes de cristo", "despu\xe9s de cristo"],
         },
         defaultWidth: "wide",
     }),
@@ -16,7 +18,7 @@ let o = {
         values: {
             narrow: ["1", "2", "3", "4"],
             abbreviated: ["T1", "T2", "T3", "T4"],
-            wide: ["1º trimestre", "2º trimestre", "3º trimestre", "4º trimestre"],
+            wide: ["1\xba trimestre", "2\xba trimestre", "3\xba trimestre", "4\xba trimestre"],
         },
         defaultWidth: "wide",
         argumentCallback: function (e) {
@@ -47,9 +49,9 @@ let o = {
     day: (0, n.A)({
         values: {
             narrow: ["d", "l", "m", "m", "j", "v", "s"],
-            short: ["do", "lu", "ma", "mi", "ju", "vi", "sá"],
-            abbreviated: ["dom", "lun", "mar", "mié", "jue", "vie", "sáb"],
-            wide: ["domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado"],
+            short: ["do", "lu", "ma", "mi", "ju", "vi", "s\xe1"],
+            abbreviated: ["dom", "lun", "mar", "mi\xe9", "jue", "vie", "s\xe1b"],
+            wide: ["domingo", "lunes", "martes", "mi\xe9rcoles", "jueves", "viernes", "s\xe1bado"],
         },
         defaultWidth: "wide",
     }),
@@ -60,7 +62,7 @@ let o = {
                 pm: "p",
                 midnight: "mn",
                 noon: "md",
-                morning: "mañana",
+                morning: "ma\xf1ana",
                 afternoon: "tarde",
                 evening: "tarde",
                 night: "noche",
@@ -70,7 +72,7 @@ let o = {
                 pm: "PM",
                 midnight: "medianoche",
                 noon: "mediodia",
-                morning: "mañana",
+                morning: "ma\xf1ana",
                 afternoon: "tarde",
                 evening: "tarde",
                 night: "noche",
@@ -80,7 +82,7 @@ let o = {
                 pm: "p.m.",
                 midnight: "medianoche",
                 noon: "mediodia",
-                morning: "mañana",
+                morning: "ma\xf1ana",
                 afternoon: "tarde",
                 evening: "tarde",
                 night: "noche",
@@ -93,7 +95,7 @@ let o = {
                 pm: "p",
                 midnight: "mn",
                 noon: "md",
-                morning: "de la mañana",
+                morning: "de la ma\xf1ana",
                 afternoon: "de la tarde",
                 evening: "de la tarde",
                 night: "de la noche",
@@ -103,7 +105,7 @@ let o = {
                 pm: "PM",
                 midnight: "medianoche",
                 noon: "mediodia",
-                morning: "de la mañana",
+                morning: "de la ma\xf1ana",
                 afternoon: "de la tarde",
                 evening: "de la tarde",
                 night: "de la noche",
@@ -113,7 +115,7 @@ let o = {
                 pm: "p.m.",
                 midnight: "medianoche",
                 noon: "mediodia",
-                morning: "de la mañana",
+                morning: "de la ma\xf1ana",
                 afternoon: "de la tarde",
                 evening: "de la tarde",
                 night: "de la noche",

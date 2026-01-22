@@ -39,6 +39,7 @@ var r = n(627968),
     L = n(818348),
     j = n(985018),
     M = n(176240);
+
 function k(e, t, n) {
     return (
         t in e
@@ -52,6 +53,7 @@ function k(e, t, n) {
         e
     );
 }
+
 function U(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -68,6 +70,7 @@ function U(e) {
     }
     return e;
 }
+
 function G(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -80,6 +83,7 @@ function G(e, t) {
     }
     return n;
 }
+
 function V(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -91,6 +95,7 @@ function V(e, t) {
         e
     );
 }
+
 function F(e, t) {
     if (null == e) return {};
     var n,
@@ -107,6 +112,7 @@ function F(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function B(e, t) {
     if (null == e) return {};
     var n,
@@ -166,7 +172,9 @@ let Y = Object.freeze({
                     variant: "text-md/medium",
                     children: s,
                 }),
-                (0, r.jsx)(b.A, { className: M.PC }),
+                (0, r.jsx)(b.A, {
+                    className: M.PC,
+                }),
             ],
         });
     },
@@ -185,7 +193,10 @@ let Y = Object.freeze({
                     type: "EDITOR",
                     isPreview: !0,
                 },
-                () => j.intl.format(j.t.G8yQXi, { onPremiumClick: () => m.Z }),
+                () =>
+                    j.intl.format(j.t.G8yQXi, {
+                        onPremiumClick: () => m.Z,
+                    }),
             )
             .with(
                 {
@@ -201,7 +212,15 @@ let Y = Object.freeze({
                 },
                 () => j.intl.string(j.t.dqDFwe),
             )
-            .with({ isPreview: !0 }, () => j.intl.format(j.t["DWIjJ/"], { onPremiumClick: () => m.Z }))
+            .with(
+                {
+                    isPreview: !0,
+                },
+                () =>
+                    j.intl.format(j.t["DWIjJ/"], {
+                        onPremiumClick: () => m.Z,
+                    }),
+            )
             .otherwise(() => j.intl.string(j.t["np0X/u"]));
         return (0, r.jsx)(c.Heading, {
             variant: "text-sm/normal",
@@ -219,7 +238,9 @@ let Y = Object.freeze({
             ? (0, r.jsx)(E.Ay, {
                   type: P.e.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                   subscriptionTier: P.pe.TIER_2,
-                  children: j.intl.format(j.t.G8yQXi, { onPremiumClick: () => m.Z }),
+                  children: j.intl.format(j.t.G8yQXi, {
+                      onPremiumClick: () => m.Z,
+                  }),
               })
             : (0, r.jsxs)("div", {
                   className: M.wx,
@@ -363,8 +384,12 @@ let Y = Object.freeze({
                     direction: "horizontal",
                     wrap: !0,
                     gap: 8,
-                    style: { marginTop: 16 },
-                    children: (0, r.jsx)(Z, { disabled: i }),
+                    style: {
+                        marginTop: 16,
+                    },
+                    children: (0, r.jsx)(Z, {
+                        disabled: i,
+                    }),
                 }),
             ],
         });
@@ -385,7 +410,12 @@ let Y = Object.freeze({
                         analyticsLocations: o,
                         themeName: "default ".concat(e),
                     }),
-                    (0, u.u_)({ theme: e }, a);
+                    (0, u.u_)(
+                        {
+                            theme: e,
+                        },
+                        a,
+                    );
             };
         return (0, r.jsxs)(r.Fragment, {
             children: [
@@ -448,8 +478,17 @@ let Y = Object.freeze({
                     wrap: !0,
                     gap: 8,
                     justify: t ? "center" : "start",
-                    style: { marginTop: 16 },
-                    children: [(0, r.jsx)($, { systemSelectorFirst: !0 }), (0, r.jsx)(Z, { disabled: !1 })],
+                    style: {
+                        marginTop: 16,
+                    },
+                    children: [
+                        (0, r.jsx)($, {
+                            systemSelectorFirst: !0,
+                        }),
+                        (0, r.jsx)(Z, {
+                            disabled: !1,
+                        }),
+                    ],
                 }),
             ],
         });
@@ -474,10 +513,18 @@ let Y = Object.freeze({
             value: u,
             children: (0, r.jsx)(
                 "div",
-                V(U({ ref: o }, c), {
-                    className: M.__invalid_container,
-                    children: n,
-                }),
+                V(
+                    U(
+                        {
+                            ref: o,
+                        },
+                        c,
+                    ),
+                    {
+                        className: M.__invalid_container,
+                        children: n,
+                    },
+                ),
             ),
         });
     };
@@ -489,8 +536,12 @@ let Y = Object.freeze({
             direction: "horizontal",
             wrap: !0,
             gap: 8,
-            style: { marginTop: 16 },
-            children: (0, r.jsx)($, { hideSystemSelector: n }),
+            style: {
+                marginTop: 16,
+            },
+            children: (0, r.jsx)($, {
+                hideSystemSelector: n,
+            }),
         }),
     });
 }),

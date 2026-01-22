@@ -23,9 +23,11 @@ var r = n(627968),
     E = n(785294),
     b = n(473169);
 let y = (0, p.Ld)();
+
 function O() {
     let [e, t] = i.useState(-100),
         [n, r] = i.useState(!1);
+
     function a(e, n) {
         t(e), r((n & h.ME.VOICE) === h.ME.VOICE);
     }
@@ -33,7 +35,7 @@ function O() {
         i.useEffect(() => {
             let e = new c.Ep();
             return (
-                e.start(1000, () => {
+                e.start(1e3, () => {
                     _.A.getMediaEngine().on(l.bg.VoiceActivity, a), e.stop();
                 }),
                 () => {
@@ -47,6 +49,7 @@ function O() {
         }
     );
 }
+
 function A(e) {
     let { isSpeaking: t, className: n, id: i, ariaDescribedBy: a, ariaLabelledBy: o, disabled: l } = e;
     return (0, r.jsx)("div", {
@@ -62,6 +65,7 @@ function A(e) {
         }),
     });
 }
+
 function v(e) {
     let { volume: t, id: n, ariaDescribedBy: i, ariaLabelledBy: a, disabled: l } = e,
         { threshold: c, autoThreshold: p } = (0, o.cf)([_.A], () => ({
@@ -69,6 +73,7 @@ function v(e) {
             autoThreshold: _.A.getModeOptions().autoThreshold,
         })),
         h = (0, o.bG)([_.A], () => _.A.getMode());
+
     function m(e, t) {
         f.A.setMode(h, {
             threshold: e,
@@ -84,8 +89,12 @@ function v(e) {
             initialValue: c + 100,
             onValueRender: (e) => "".concat((-((100 - e) * 1)).toFixed(0), "dB"),
             onValueChange: (e) => m(-((100 - e) * 1), p),
-            barStyles: { background: u.A.unsafe_rawColors.GREEN_360.css },
-            fillStyles: { background: u.A.unsafe_rawColors.YELLOW_300.css },
+            barStyles: {
+                background: u.A.unsafe_rawColors.GREEN_360.css,
+            },
+            fillStyles: {
+                background: u.A.unsafe_rawColors.YELLOW_300.css,
+            },
             "aria-labelledby": y,
             disabled: l,
             children: (0, r.jsxs)("div", {
@@ -93,14 +102,19 @@ function v(e) {
                 children: [
                     (0, r.jsx)("div", {
                         className: s()(g.GS, g.SH),
-                        style: { width: l ? 0 : t + 100 + "%" },
+                        style: {
+                            width: l ? 0 : t + 100 + "%",
+                        },
                     }),
-                    (0, r.jsx)("div", { className: "grow" }),
+                    (0, r.jsx)("div", {
+                        className: "grow",
+                    }),
                 ],
             }),
         }),
     });
 }
+
 function S() {
     let { threshold: e, autoThreshold: t } = (0, o.cf)([_.A], () => ({
             threshold: _.A.getModeOptions().threshold,
@@ -112,6 +126,7 @@ function S() {
         })),
         { volume: a, isSpeaking: s } = O(),
         l = (0, o.bG)([_.A], () => _.A.isEnabled());
+
     function c(e, t) {
         f.A.setMode(n, {
             threshold: e,
@@ -132,7 +147,9 @@ function S() {
                 ? (0, r.jsxs)("section", {
                       className: g.Mo,
                       children: [
-                          (0, r.jsx)(A, { isSpeaking: s }),
+                          (0, r.jsx)(A, {
+                              isSpeaking: s,
+                          }),
                           (0, r.jsx)(d.Text, {
                               variant: "text-md/normal",
                               className: b.QB,
@@ -140,12 +157,16 @@ function S() {
                           }),
                       ],
                   })
-                : (0, r.jsx)(v, { volume: a }),
+                : (0, r.jsx)(v, {
+                      volume: a,
+                  }),
             !l &&
                 (0, r.jsx)(d.po8, {
                     messageType: d.YCn.WARNING,
                     className: b.QB,
-                    children: m.intl.format(m.t["O13I+O"], { onEnableClick: () => f.A.enable(!0) }),
+                    children: m.intl.format(m.t["O13I+O"], {
+                        onEnableClick: () => f.A.enable(!0),
+                    }),
                 }),
         ],
     });

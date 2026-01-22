@@ -1,4 +1,7 @@
-n.d(t, { A: () => y }), n(896048);
+n.d(t, {
+    A: () => y,
+}),
+    n(896048);
 var r,
     l,
     i = n(311907),
@@ -11,13 +14,16 @@ var r,
     f = n(645959);
 let p = [],
     h = new Set();
+
 function b() {
     let e = f.A.getPrivateChannelIds().filter((e) => u.Ay.getMentionCount(e) > 0);
     return e.length > 20 && (e.length = 20), !(0, o.in)(e, p) && ((p = e), (h = new Set(e)), !0);
 }
+
 function g() {
     return b();
 }
+
 function m(e) {
     let { channelId: t } = e,
         n = c.A.getChannel(t);

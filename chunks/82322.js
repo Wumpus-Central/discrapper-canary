@@ -21,6 +21,7 @@ var r =
             return n && e(t.prototype, n), r && e(t, r), t;
         };
     })();
+
 function a(e, t) {
     if (!(e instanceof t)) throw TypeError("Cannot call a class as a function");
 }
@@ -74,6 +75,7 @@ var s = n(297920),
             e
         );
     })();
+
 function u(e, t, n, r, i, a, s, o) {
     var l = e;
     if (l < t)
@@ -93,14 +95,15 @@ function u(e, t, n, r, i, a, s, o) {
             r === -1 / 0 ? (l = -l) : i === 1 / 0 ? (l += r) : (l = l * (i - r) + r),
             l);
 }
+
 function d(e) {
     var t = s(e);
     return null === t
         ? e
         : "rgba(" +
-              ((4278190080 & (t = t || 0)) >>> 24) +
+              ((0xff000000 & (t = t || 0)) >>> 24) +
               ", " +
-              ((16711680 & t) >>> 16) +
+              ((0xff0000 & t) >>> 16) +
               ", " +
               ((65280 & t) >>> 8) +
               ", " +
@@ -108,6 +111,7 @@ function d(e) {
               ")";
 }
 var f = /[0-9\.-]+/g;
+
 function p(e) {
     var t = e.outputRange;
     o(t.length >= 2, "Bad output range"), _((t = t.map(d)));
@@ -120,7 +124,11 @@ function p(e) {
         });
     });
     var i = t[0].match(f).map(function (t, i) {
-            return c.create(r({}, e, { outputRange: n[i] }));
+            return c.create(
+                r({}, e, {
+                    outputRange: n[i],
+                }),
+            );
         }),
         a = /^rgb/.test(t[0]);
     return function (e) {
@@ -131,18 +139,22 @@ function p(e) {
         });
     };
 }
+
 function _(e) {
     for (var t = e[0].replace(f, ""), n = 1; n < e.length; ++n)
         o(t === e[n].replace(f, ""), "invalid pattern " + e[0] + " and " + e[n]);
 }
+
 function h(e, t) {
     for (var n = 1; n < t.length - 1 && !(t[n] >= e); ++n);
     return n - 1;
 }
+
 function m(e) {
     o(e.length >= 2, "inputRange must have at least 2 elements");
     for (var t = 1; t < e.length; ++t) o(e[t] >= e[t - 1], "inputRange must be monotonically increasing " + e);
 }
+
 function g(e, t) {
     o(t.length >= 2, e + " must have at least 2 elements"),
         o(2 !== t.length || t[0] !== -1 / 0 || t[1] !== 1 / 0, e + "cannot be ]-infinity;+infinity[ " + t);

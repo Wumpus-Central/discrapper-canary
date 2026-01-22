@@ -17,15 +17,20 @@ n.d(t, {
 var r = n(73153),
     i = n(686956),
     l = n(619006);
+
 function s(e) {
     r.h.dispatch({
         type: "GUILD_SETTINGS_ROLES_SORT_UPDATE",
         roles: e,
     });
 }
+
 function a() {
-    r.h.dispatch({ type: "GUILD_SETTINGS_ROLES_INIT" });
+    r.h.dispatch({
+        type: "GUILD_SETTINGS_ROLES_INIT",
+    });
 }
+
 function c(e, t, n) {
     r.h.dispatch({
         type: "GUILD_SETTINGS_ROLES_UPDATE_PERMISSIONS",
@@ -34,12 +39,14 @@ function c(e, t, n) {
         allow: n,
     });
 }
+
 function o(e) {
     r.h.dispatch({
         type: "GUILD_SETTINGS_ROLES_CLEAR_PERMISSIONS",
         id: e,
     });
 }
+
 function d(e, t) {
     r.h.dispatch({
         type: "GUILD_SETTINGS_ROLES_UPDATE_NAME",
@@ -47,6 +54,7 @@ function d(e, t) {
         name: t,
     });
 }
+
 function u(e, t) {
     r.h.dispatch({
         type: "GUILD_SETTINGS_ROLES_UPDATE_COLOR",
@@ -54,6 +62,7 @@ function u(e, t) {
         color: t,
     });
 }
+
 function f(e, t, n) {
     r.h.dispatch({
         type: "GUILD_SETTINGS_ROLES_UPDATE_COLORS",
@@ -62,6 +71,7 @@ function f(e, t, n) {
         currentStyle: n,
     });
 }
+
 function g(e, t) {
     r.h.dispatch({
         type: "GUILD_SETTINGS_ROLES_ROLE_STYLE_UPDATE",
@@ -69,6 +79,7 @@ function g(e, t) {
         currentStyle: t,
     });
 }
+
 function b(e, t, n) {
     r.h.dispatch({
         type: "GUILD_SETTINGS_ROLES_UPDATE_SETTINGS",
@@ -77,6 +88,7 @@ function b(e, t, n) {
         mentionable: n,
     });
 }
+
 function m(e, t, n) {
     r.h.dispatch({
         type: "GUILD_SETTINGS_ROLES_UPDATE_ROLE_ICON",
@@ -85,6 +97,7 @@ function m(e, t, n) {
         unicodeEmoji: n,
     });
 }
+
 function p(e, t) {
     r.h.dispatch({
         type: "GUILD_SETTINGS_ROLES_UPDATE_ROLE_CONNECTION_CONFIGURATIONS",
@@ -95,7 +108,9 @@ function p(e, t) {
 async function x(e, t, n, s, a) {
     var c, o, d, u;
     let f = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : {};
-    r.h.dispatch({ type: "GUILD_SETTINGS_ROLES_SUBMITTING" });
+    r.h.dispatch({
+        type: "GUILD_SETTINGS_ROLES_SUBMITTING",
+    });
     try {
         for (null != n && n.length > 0 && (await i.A.batchRoleUpdate(e, n)); null != t && t.length > 0; ) {
             let n = t.pop();
@@ -118,7 +133,9 @@ async function x(e, t, n, s, a) {
                 let n = a.get(t);
                 await (0, l.qK)(e, t, null != n ? n : []);
             }
-        r.h.dispatch({ type: "GUILD_SETTINGS_ROLES_SAVE_SUCCESS" });
+        r.h.dispatch({
+            type: "GUILD_SETTINGS_ROLES_SAVE_SUCCESS",
+        });
     } catch (e) {
         if (
             (r.h.dispatch({

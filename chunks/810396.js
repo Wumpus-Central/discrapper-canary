@@ -1,4 +1,6 @@
-n.d(t, { A: () => E });
+n.d(t, {
+    A: () => E,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -15,6 +17,7 @@ var i = n(503698),
     h = n(518477),
     m = n(985018),
     g = n(47202);
+
 function E(e) {
     let {
             user: t,
@@ -51,7 +54,13 @@ function E(e) {
         }),
         L = null != x;
     return (0, r.jsxs)("div", {
-        className: a()(g.kL, { [g.Od]: null != D }, S),
+        className: a()(
+            g.kL,
+            {
+                [g.Od]: null != D,
+            },
+            S,
+        ),
         children: [
             (0, r.jsxs)("div", {
                 className: g.Fj,

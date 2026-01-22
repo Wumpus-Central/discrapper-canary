@@ -1,4 +1,6 @@
-r.d(t, { A: () => f });
+r.d(t, {
+    A: () => f,
+});
 var n,
     l,
     a = r(311907),
@@ -19,7 +21,7 @@ class u extends (l = a.Ay.Store) {
     }
     get shouldFetch() {
         var e;
-        return Date.now() - (null != (e = c.lastFetchedAt) ? e : 0) > 300000 && !c.isFetching;
+        return Date.now() - (null != (e = c.lastFetchedAt) ? e : 0) > 3e5 && !c.isFetching;
     }
     getAvatars() {
         return o;

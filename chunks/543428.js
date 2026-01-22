@@ -19,6 +19,7 @@ var n = l(627968),
     b = l(409067),
     v = l(985018),
     j = l(144894);
+
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var l = null != arguments[t] ? arguments[t] : {},
@@ -44,6 +45,7 @@ function h(e) {
     }
     return e;
 }
+
 function g(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -68,6 +70,7 @@ let O = r.createContext({
     clearSelection: () => {},
     isMultiSelectMode: !1,
 });
+
 function x(e) {
     let { channelId: t, onClose: x, onClipClick: C } = e,
         w = (function (e, t) {
@@ -153,12 +156,17 @@ function x(e) {
                             }),
                         );
                 },
-                { stackingBehavior: "stack" },
+                {
+                    stackingBehavior: "stack",
+                },
             );
         }, [N, A, G]),
         z = r.useCallback(async () => {
             let e = N.filter((e) => A.has(e.id));
-            await D({ clips: e }), G();
+            await D({
+                clips: e,
+            }),
+                G();
         }, [N, A, D, G]),
         U = r.useMemo(
             () => ({
@@ -175,78 +183,86 @@ function x(e) {
             value: U,
             children: (0, n.jsx)(
                 s.N,
-                g(h({ onClose: x }, w), {
-                    children: (0, n.jsxs)("div", {
-                        className: j.jT,
-                        children: [
-                            (0, n.jsx)(f.A, {
-                                clipsByGame: E,
-                                filteredClips: k,
-                                favoriteClips: S,
-                                allClips: N,
-                            }),
-                            (0, n.jsxs)("div", {
-                                className: j.Qs,
-                                children: [
-                                    (0, n.jsxs)("div", {
-                                        className: j.$Q,
-                                        children: [
-                                            (0, n.jsx)(c.Heading, {
-                                                variant: "heading-md/medium",
-                                                color: "text-default",
-                                                children: R,
-                                            }),
-                                            (0, n.jsxs)("div", {
-                                                className: j.$s,
-                                                children: [
-                                                    _ &&
-                                                        (0, n.jsxs)(n.Fragment, {
-                                                            children: [
-                                                                (0, n.jsx)(a.m, {
-                                                                    text: v.intl.string(v.t.RDE0Sc),
-                                                                    children: (0, n.jsx)(c.K0, {
-                                                                        onClick: z,
-                                                                        icon: c.liv,
-                                                                        size: "sm",
-                                                                        variant: "icon-only",
-                                                                        "aria-label": v.intl.string(v.t.RDE0Sc),
-                                                                        loading: M,
+                g(
+                    h(
+                        {
+                            onClose: x,
+                        },
+                        w,
+                    ),
+                    {
+                        children: (0, n.jsxs)("div", {
+                            className: j.jT,
+                            children: [
+                                (0, n.jsx)(f.A, {
+                                    clipsByGame: E,
+                                    filteredClips: k,
+                                    favoriteClips: S,
+                                    allClips: N,
+                                }),
+                                (0, n.jsxs)("div", {
+                                    className: j.Qs,
+                                    children: [
+                                        (0, n.jsxs)("div", {
+                                            className: j.$Q,
+                                            children: [
+                                                (0, n.jsx)(c.Heading, {
+                                                    variant: "heading-md/medium",
+                                                    color: "text-default",
+                                                    children: R,
+                                                }),
+                                                (0, n.jsxs)("div", {
+                                                    className: j.$s,
+                                                    children: [
+                                                        _ &&
+                                                            (0, n.jsxs)(n.Fragment, {
+                                                                children: [
+                                                                    (0, n.jsx)(a.m, {
+                                                                        text: v.intl.string(v.t.RDE0Sc),
+                                                                        children: (0, n.jsx)(c.K0, {
+                                                                            onClick: z,
+                                                                            icon: c.liv,
+                                                                            size: "sm",
+                                                                            variant: "icon-only",
+                                                                            "aria-label": v.intl.string(v.t.RDE0Sc),
+                                                                            loading: M,
+                                                                        }),
                                                                     }),
-                                                                }),
-                                                                (0, n.jsx)(a.m, {
-                                                                    text: v.intl.string(v.t.oyYWHE),
-                                                                    children: (0, n.jsx)(c.K0, {
-                                                                        onClick: K,
-                                                                        icon: c.ucK,
-                                                                        size: "sm",
-                                                                        variant: "icon-only",
-                                                                        "aria-label": v.intl.string(v.t.oyYWHE),
+                                                                    (0, n.jsx)(a.m, {
+                                                                        text: v.intl.string(v.t.oyYWHE),
+                                                                        children: (0, n.jsx)(c.K0, {
+                                                                            onClick: K,
+                                                                            icon: c.ucK,
+                                                                            size: "sm",
+                                                                            variant: "icon-only",
+                                                                            "aria-label": v.intl.string(v.t.oyYWHE),
+                                                                        }),
                                                                     }),
-                                                                }),
-                                                            ],
+                                                                ],
+                                                            }),
+                                                        (0, n.jsx)(c.K0, {
+                                                            onClick: x,
+                                                            icon: c.d$L,
+                                                            size: "sm",
+                                                            variant: "icon-only",
+                                                            "aria-label": v.intl.string(v.t.cpT0Cq),
                                                         }),
-                                                    (0, n.jsx)(c.K0, {
-                                                        onClick: x,
-                                                        icon: c.d$L,
-                                                        size: "sm",
-                                                        variant: "icon-only",
-                                                        "aria-label": v.intl.string(v.t.cpT0Cq),
-                                                    }),
-                                                ],
-                                            }),
-                                        ],
-                                    }),
-                                    (0, n.jsx)(m.A, {
-                                        channelId: t,
-                                        filteredClips: T,
-                                        totalClipCount: N.length,
-                                        onClipClick: C,
-                                    }),
-                                ],
-                            }),
-                        ],
-                    }),
-                }),
+                                                    ],
+                                                }),
+                                            ],
+                                        }),
+                                        (0, n.jsx)(m.A, {
+                                            channelId: t,
+                                            filteredClips: T,
+                                            totalClipCount: N.length,
+                                            onClipClick: C,
+                                        }),
+                                    ],
+                                }),
+                            ],
+                        }),
+                    },
+                ),
             ),
         }),
     });

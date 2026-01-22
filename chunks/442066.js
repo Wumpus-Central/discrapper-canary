@@ -107,7 +107,11 @@ e.exports = function (e) {
         f = {
             className: "string",
             begin: "~[A-Z](?=" + l + ")",
-            contains: c.map((t) => e.inherit(t, { contains: [u(t.end)] })),
+            contains: c.map((t) =>
+                e.inherit(t, {
+                    contains: [u(t.end)],
+                }),
+            ),
         },
         p = {
             className: "regex",
@@ -198,11 +202,18 @@ e.exports = function (e) {
             e.HASH_COMMENT_MODE,
             m,
             h,
-            { begin: "::" },
+            {
+                begin: "::",
+            },
             {
                 className: "symbol",
                 begin: ":(?![\\s:])",
-                contains: [_, { begin: r }],
+                contains: [
+                    _,
+                    {
+                        begin: r,
+                    },
+                ],
                 relevance: 0,
             },
             {

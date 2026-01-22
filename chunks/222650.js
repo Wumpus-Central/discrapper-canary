@@ -11,6 +11,7 @@ var r = l(990078),
     o = l(53516),
     c = l(985018),
     d = l(712104);
+
 function u() {
     return (0, n.jsx)(a.ZK, {
         className: d.jm,
@@ -30,6 +31,7 @@ function u() {
         }),
     });
 }
+
 function f(e) {
     let { isUserVerified: t } = e,
         r = t ? c.intl.string(c.t.WWzQta) : c.intl.string(c.t.woMjLV);
@@ -74,10 +76,17 @@ function f(e) {
                                             });
                                     }
                                     return e;
-                                })({ reason: i.d.GUILD_PHONE_REQUIRED }, t),
+                                })(
+                                    {
+                                        reason: i.d.GUILD_PHONE_REQUIRED,
+                                    },
+                                    t,
+                                ),
                             );
                     },
-                    { modalKey: o.V },
+                    {
+                        modalKey: o.V,
+                    },
                 );
             },
         }),

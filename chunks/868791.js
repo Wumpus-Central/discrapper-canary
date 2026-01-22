@@ -1,4 +1,7 @@
-Object.defineProperty(t, "__esModule", { value: !0 }), (t.OtherTypes = void 0);
+Object.defineProperty(t, "__esModule", {
+    value: !0,
+}),
+    (t.OtherTypes = void 0);
 class n {}
 (t.OtherTypes = n),
     (n.BLEND = {

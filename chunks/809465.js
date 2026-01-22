@@ -1,4 +1,10 @@
-n.d(t, { A: () => O }), n(896048), n(747238), n(812715), n(321073);
+n.d(t, {
+    A: () => O,
+}),
+    n(896048),
+    n(747238),
+    n(812715),
+    n(321073);
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -13,6 +19,7 @@ var i = n(503698),
     p = n(837921),
     _ = n(985018),
     h = n(355893);
+
 function m(e, t, n) {
     return (
         t in e
@@ -26,6 +33,7 @@ function m(e, t, n) {
         e
     );
 }
+
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,6 +50,7 @@ function g(e) {
     }
     return e;
 }
+
 function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -54,6 +63,7 @@ function E(e, t) {
     }
     return n;
 }
+
 function b(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -65,6 +75,7 @@ function b(e, t) {
         e
     );
 }
+
 function y() {
     var e;
     let t = null === o() || void 0 === o() || null == (e = o().os) ? void 0 : e.toString();
@@ -72,7 +83,7 @@ function y() {
     let n = c.A.os.release,
         [r, i, a] = p.Ay.parsedOSRelease;
     if (
-        (t.includes("Windows 10") && void 0 !== a && a >= 22000 && (t = t.replace("Windows 10", "Windows 11")),
+        (t.includes("Windows 10") && void 0 !== a && a >= 22e3 && (t = t.replace("Windows 10", "Windows 11")),
         t.includes("OS X 10.15.7") && void 0 !== r && r >= 20)
     ) {
         let e = r >= 25 ? r + 1 : r - 9;
@@ -80,13 +91,14 @@ function y() {
     }
     return "".concat(t, " (").concat(n, ")");
 }
+
 function O(e) {
     var t, n, i, s, o;
     let { compact: p = !1 } = e,
         m = (0, d.GV)(),
         E = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        O = "488133",
-        A = "4e1818290817afb4d92f289508416cc4e8e00823".substring(0, 7),
+        O = "488230",
+        A = "61528d3e3435ecbee37bf641aa64b9de561b202c".substring(0, 7),
         v = null === c.A || void 0 === c.A ? void 0 : c.A.remoteApp.getVersion(),
         S = null === c.A || void 0 === c.A || null == (t = (n = c.A.remoteApp).getBuildNumber) ? void 0 : t.call(n),
         I = null === c.A || void 0 === c.A || null == (i = (s = c.A.remoteApp).getAppArch) ? void 0 : i.call(s),

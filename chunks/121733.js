@@ -1,7 +1,10 @@
-r.d(t, { A: () => i });
+r.d(t, {
+    A: () => i,
+});
 var o = r(627968);
 r(64700);
 var n = r(953727);
+
 function i(e) {
     var t, r;
     let { width: i = 24, height: c = 24, color: l = "currentColor" } = e,

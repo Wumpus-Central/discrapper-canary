@@ -11,9 +11,11 @@ let s = (0, a.createContext)({
     open: u,
     useHref: (e) => e,
 });
+
 function o() {
     return (0, a.useContext)(s);
 }
+
 function l(e, t, n = !0) {
     var a, s;
     let { metaKey: o, ctrlKey: c, altKey: u, shiftKey: d } = t;
@@ -40,6 +42,7 @@ function l(e, t, n = !0) {
               });
     (l.isOpening = n), (0, r.e)(e), e.dispatchEvent(f), (l.isOpening = !1);
 }
+
 function c(e, t) {
     if (e instanceof HTMLAnchorElement) t(e);
     else if (e.hasAttribute("data-href")) {
@@ -55,9 +58,11 @@ function c(e, t) {
             e.removeChild(n);
     }
 }
+
 function u(e, t) {
     c(e, (e) => l(e, t));
 }
+
 function d(e) {
     var t;
     let n = o().useHref(null != (t = e.href) ? t : "");

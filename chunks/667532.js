@@ -7,7 +7,9 @@ var r = n(557939),
     c = 1 !== [].unshift(0),
     u = function () {
         try {
-            Object.defineProperty([], "length", { writable: !1 }).unshift();
+            Object.defineProperty([], "length", {
+                writable: !1,
+            }).unshift();
         } catch (e) {
             return e instanceof TypeError;
         }

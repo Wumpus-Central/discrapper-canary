@@ -28,6 +28,7 @@ var r = n(735438),
     y = n(806931),
     O = n(652215),
     A = n(731854);
+
 function v(e, t, n) {
     return (
         t in e
@@ -41,6 +42,7 @@ function v(e, t, n) {
         e
     );
 }
+
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -57,6 +59,7 @@ function S(e) {
     }
     return e;
 }
+
 function I(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -69,6 +72,7 @@ function I(e, t) {
     }
     return n;
 }
+
 function T(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -81,10 +85,12 @@ function T(e, t) {
     );
 }
 let C = "__EMBEDDED_ACTIVITIES__";
+
 function N(e) {
     let { applicationId: t, instanceId: n } = e;
     return null != n ? "activity-".concat(t, "-").concat(n) : "activity-".concat(t);
 }
+
 function R(e) {
     switch (e.type) {
         case y.lp.ACTIVITY:
@@ -103,6 +109,7 @@ function R(e) {
             );
     }
 }
+
 function w(e, t) {
     let [, n] = e,
         [, r] = t;
@@ -119,6 +126,7 @@ var P = (function (e) {
         e
     );
 })({});
+
 function D(e) {
     return u.default.getId() === e && _.A.isCurrentUserPTTLatched();
 }
@@ -283,25 +291,33 @@ class x {
                         (null == (i = this.call) || null == (r = i.ringing) ? void 0 : r.includes(e)) ||
                         this.guildRingingUsers.has(e)) && t;
         (null != C || P) &&
-            ((b = T(S({ type: y.lp.USER }, m.A.getUserStreamData(e, w)), {
-                user: I,
-                id: I.id,
-                voiceState: C,
-                voicePlatform: N,
-                speaking: (0, a.R)({
-                    userId: e,
-                    checkIsMuted: !0,
-                }),
-                voiceDb: _.A.getVoiceVolume(e),
-                latched: D(e),
-                lastSpoke: null != (s = this.lastSpoke[e]) ? s : 0,
-                soundsharing: _.A.isSoundSharing(e),
-                ringing: P,
-                userNick: E.Ay.getName(w, this.channelId, I),
-                userAvatarDecoration: (0, o.U)(I, w),
-                localVideoDisabled: p.A.isLocalVideoDisabled(I.id),
-                isPoppedOut: this.poppedOutParticipants.has(I.id),
-            })),
+            ((b = T(
+                S(
+                    {
+                        type: y.lp.USER,
+                    },
+                    m.A.getUserStreamData(e, w),
+                ),
+                {
+                    user: I,
+                    id: I.id,
+                    voiceState: C,
+                    voicePlatform: N,
+                    speaking: (0, a.R)({
+                        userId: e,
+                        checkIsMuted: !0,
+                    }),
+                    voiceDb: _.A.getVoiceVolume(e),
+                    latched: D(e),
+                    lastSpoke: null != (s = this.lastSpoke[e]) ? s : 0,
+                    soundsharing: _.A.isSoundSharing(e),
+                    ringing: P,
+                    userNick: E.Ay.getName(w, this.channelId, I),
+                    userAvatarDecoration: (0, o.U)(I, w),
+                    localVideoDisabled: p.A.isLocalVideoDisabled(I.id),
+                    isPoppedOut: this.poppedOutParticipants.has(I.id),
+                },
+            )),
             v.push(b));
         let x = null != (n = c.A.getStreamForUser(e, w)) ? n : c.A.getActiveStreamForUser(e, w);
         if (null != x && x.channelId === this.channelId) {

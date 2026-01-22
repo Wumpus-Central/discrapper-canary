@@ -1,4 +1,7 @@
-a.r(e), a.d(e, { default: () => o });
+a.r(e),
+    a.d(e, {
+        default: () => o,
+    });
 var d = a(632903),
     m = a(247320),
     l = a(416616),

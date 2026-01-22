@@ -1,10 +1,14 @@
-n.d(t, { l: () => u }), n(938796);
+n.d(t, {
+    l: () => u,
+}),
+    n(938796);
 var r = n(665260),
     i = n(134861),
     a = n(528767),
     s = n(723702),
     o = n(182892),
     l = n(652215);
+
 function c(e) {
     let { platform: t } = e;
     return (
@@ -21,6 +25,7 @@ function c(e) {
                   t === l.yTV.DESKTOP)
     );
 }
+
 function u(e) {
     var t, n, i;
     if (null == e) return null;

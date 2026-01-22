@@ -11,6 +11,7 @@ function r(e, t, n) {
         e
     );
 }
+
 function i(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -27,6 +28,7 @@ function i(e) {
     }
     return e;
 }
+
 function a(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -39,6 +41,7 @@ function a(e, t) {
     }
     return n;
 }
+
 function s(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -108,4 +111,12 @@ let o = [
             value: "YT",
         },
     ],
-    l = Object.freeze(o.reduce((e, t) => s(i({}, e), { [t.label.toLowerCase()]: t.value }), {}));
+    l = Object.freeze(
+        o.reduce(
+            (e, t) =>
+                s(i({}, e), {
+                    [t.label.toLowerCase()]: t.value,
+                }),
+            {},
+        ),
+    );

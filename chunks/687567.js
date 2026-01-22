@@ -1,2 +1,4 @@
-n.d(t, { S: () => r });
+n.d(t, {
+    S: () => r,
+});
 var r = "u" > typeof window ? window : {};

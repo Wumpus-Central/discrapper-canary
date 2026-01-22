@@ -1,4 +1,6 @@
-n.d(t, { A: () => O });
+n.d(t, {
+    A: () => O,
+});
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -13,6 +15,7 @@ var r = n(627968),
     _ = n(993401),
     h = n(985018),
     m = n(78219);
+
 function g(e, t, n) {
     return (
         t in e
@@ -26,6 +29,7 @@ function g(e, t, n) {
         e
     );
 }
+
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,6 +46,7 @@ function E(e) {
     }
     return e;
 }
+
 function b(e, t) {
     if (null == e) return {};
     var n,
@@ -58,6 +63,7 @@ function b(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function y(e, t) {
     if (null == e) return {};
     var n,
@@ -68,12 +74,15 @@ function y(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function O(e) {
     let { user: t, guildId: n, fullWidth: g, appContext: y, onClose: O } = e,
         A = (0, a.bG)([c.default], () => c.default.getId() === t.id),
         v = (0, a.bG)([u.A], () => (null != n ? u.A.getGuild(n) : null)),
         S = (0, a.bG)([p.A], () => p.A.hasUnsavedChanges()),
-        I = (0, l.A)({ guild: v }),
+        I = (0, l.A)({
+            guild: v,
+        }),
         T = (0, l.A)({}),
         { trackUserProfileAction: C } = (0, d.NJ)(),
         N = i.useRef(null);
@@ -106,7 +115,12 @@ function O(e) {
                                   label: h.intl.string(h.t["PKQB/H"]),
                                   subtext: h.intl.string(h.t.VYHWKJ),
                                   action: () => {
-                                      C({ action: "EDIT_GUILD_PROFILE" }), null == O || O(), I(), (0, o.A)(y);
+                                      C({
+                                          action: "EDIT_GUILD_PROFILE",
+                                      }),
+                                          null == O || O(),
+                                          I(),
+                                          (0, o.A)(y);
                                   },
                               }),
                               (0, r.jsx)(s.Drp, {
@@ -114,7 +128,12 @@ function O(e) {
                                   label: h.intl.string(h.t.HmFaFB),
                                   subtext: h.intl.string(h.t["+EERMk"]),
                                   action: () => {
-                                      C({ action: "EDIT_PROFILE" }), null == O || O(), T(), (0, o.A)(y);
+                                      C({
+                                          action: "EDIT_PROFILE",
+                                      }),
+                                          null == O || O(),
+                                          T(),
+                                          (0, o.A)(y);
                                   },
                               }),
                           ],

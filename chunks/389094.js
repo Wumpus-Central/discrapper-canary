@@ -1,4 +1,7 @@
-r.d(t, { default: () => b }), r(896048);
+r.d(t, {
+    default: () => b,
+}),
+    r(896048);
 var n = r(627968),
     l = r(64700),
     c = r(284009),
@@ -47,7 +50,9 @@ let b = (e) => {
                             }),
                         }),
                         (0, n.jsx)(a.A.Content, {
-                            children: (0, n.jsx)(a.A.Notice, { notice: u.intl.string(d.default.LcM8BS) }),
+                            children: (0, n.jsx)(a.A.Notice, {
+                                notice: u.intl.string(d.default.LcM8BS),
+                            }),
                         }),
                     ],
                 }),

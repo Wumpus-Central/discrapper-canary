@@ -1,4 +1,6 @@
-i.d(t, { default: () => u });
+i.d(t, {
+    default: () => u,
+});
 var n = i(627968),
     l = i(64700),
     r = i(732955),
@@ -7,6 +9,7 @@ var n = i(627968),
     a = i(652215),
     o = i(985018),
     d = i(390790);
+
 function u(e) {
     let { guildId: t, transitionState: i, onClose: u, onConfirm: p } = e,
         { rules: h, rulesAccepted: _ } = (0, c.P)(),

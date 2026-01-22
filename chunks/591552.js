@@ -1,4 +1,9 @@
-n.d(t, { A: () => B }), n(321073), n(864466), n(443073);
+n.d(t, {
+    A: () => B,
+}),
+    n(321073),
+    n(864466),
+    n(443073);
 var r,
     i = n(735438),
     a = n.n(i),
@@ -11,6 +16,7 @@ var r,
     f = n(112389),
     p = n(713125),
     _ = n(539916);
+
 function h(e, t, n) {
     return (
         t in e
@@ -24,6 +30,7 @@ function h(e, t, n) {
         e
     );
 }
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -40,6 +47,7 @@ function m(e) {
     }
     return e;
 }
+
 function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -52,6 +60,7 @@ function g(e, t) {
     }
     return n;
 }
+
 function E(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -67,19 +76,27 @@ let b = {},
     y = {},
     O = {},
     A = !1;
+
 function v() {
     A = !0;
 }
+
 function S() {
     (A = !1), (b = {});
 }
+
 function I(e, t, n) {
     let r = !1,
         i = [];
     for (let t = 0; t < e.options.length; t++) {
         let a = e.options[t],
             s = null == n[a.id];
-        s && (r = !0), i.push(E(m({}, a), { isUnseen: s }));
+        s && (r = !0),
+            i.push(
+                E(m({}, a), {
+                    isUnseen: s,
+                }),
+            );
     }
     return E(m({}, e), {
         options: i,
@@ -87,9 +104,11 @@ function I(e, t, n) {
         isNew: null == t[e.id],
     });
 }
+
 function T(e, t, n) {
     return e.map((e) => I(e, t, n));
 }
+
 function C(e) {
     let {
         guildId: t,
@@ -121,9 +140,11 @@ function C(e) {
         d || P(t, a),
         (O[t] = Date.now());
 }
+
 function N() {
     A = !1;
 }
+
 function R(e) {
     var t, n, r, i, a, s, o, l, c;
     let { guildId: u, updates: d } = e,
@@ -138,8 +159,11 @@ function R(e) {
                 ? r
                 : {},
         _ = T(null != (a = null != (s = d.prompts) ? s : null == (c = b[u]) ? void 0 : c.prompts) ? a : [], f, p);
-    b[u] = E(m({}, b[u], d), { prompts: _ });
+    b[u] = E(m({}, b[u], d), {
+        prompts: _,
+    });
 }
+
 function w(e) {
     let { guildId: t, optionId: n, selected: r, removedOptionIds: i } = e;
     return (
@@ -154,6 +178,7 @@ function w(e) {
             !0))
     );
 }
+
 function P(e, t) {
     if (null == y[e]) return;
     let n = {};
@@ -165,8 +190,11 @@ function P(e, t) {
     Object.keys(n).forEach((e) => {
         !0 !== n[e] || t.includes(e) || r.push(e);
     }),
-        (b[e] = E(m({}, b[e]), { responses: r }));
+        (b[e] = E(m({}, b[e]), {
+            responses: r,
+        }));
 }
+
 function D(e) {
     let { guildId: t, options: n, prompts_seen: r, options_seen: i } = e;
     P(t, n);
@@ -180,20 +208,28 @@ function D(e) {
         onboardingResponsesSeen: i,
     });
 }
+
 function x(e) {
     let { guildId: t, channelIds: n } = e;
-    b[t] = E(m({}, b[t]), { defaultChannelIds: n });
+    b[t] = E(m({}, b[t]), {
+        defaultChannelIds: n,
+    });
 }
+
 function L(e) {
     let { guildId: t, connections: n } = e;
     if (null == b[t]) return !1;
-    b[t] = E(m({}, b[t]), { connections: n });
+    b[t] = E(m({}, b[t]), {
+        connections: n,
+    });
 }
+
 function j(e) {
     let { guildId: t, mode: n } = e,
         r = b[t];
     null != r && (r.mode = n);
 }
+
 function M(e) {
     let { guild: t } = e;
     delete b[t.id], delete y[t.id], delete O[t.id];

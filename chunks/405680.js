@@ -1,4 +1,7 @@
-n.d(t, { A: () => R }), n(896048);
+n.d(t, {
+    A: () => R,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -144,8 +147,12 @@ let R = function (e) {
                                             closeLayer: F,
                                             onCtaVisibilityChange: D,
                                         }),
-                                        (0, r.jsx)(A.A, { guild: n }),
-                                        (0, r.jsx)(v.A, { guild: n }),
+                                        (0, r.jsx)(A.A, {
+                                            guild: n,
+                                        }),
+                                        (0, r.jsx)(v.A, {
+                                            guild: n,
+                                        }),
                                     ],
                                 }),
                                 (0, r.jsx)(I.$, {}),
@@ -174,7 +181,9 @@ let R = function (e) {
                                     ],
                                 }),
                                 (0, r.jsx)(I.S, {}),
-                                (0, r.jsx)("div", { className: N.LY }),
+                                (0, r.jsx)("div", {
+                                    className: N.LY,
+                                }),
                             ],
                         }),
                         (0, r.jsx)(s.L, {

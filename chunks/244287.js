@@ -1,7 +1,11 @@
-n.d(t, { A: () => o }), n(896048);
+n.d(t, {
+    A: () => o,
+}),
+    n(896048);
 var r = n(311907),
     i = n(384684),
     a = n(2242);
+
 function s() {
     let [e] = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [i.A],
         t = e.getGuildIdsWithPurchasableRoles(),
@@ -15,6 +19,7 @@ function s() {
           ? a.M_.NONE
           : a.M_.IN_SUBSCRIPTION_SERVER;
 }
+
 function o() {
     return (0, r.bG)([i.A], () => s([i.A]));
 }

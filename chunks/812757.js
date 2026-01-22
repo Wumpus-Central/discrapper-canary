@@ -1,4 +1,6 @@
-i.d(e, { t: () => g });
+i.d(e, {
+    t: () => g,
+});
 var n = i(627968),
     l = i(64700),
     s = i(284009),
@@ -47,7 +49,10 @@ let g = (0, A.E2)(E.X.CLIPS_KEYBIND, {
                         }
                         return t;
                     })({}, t)),
-                    (n = n = { shortcut: e }),
+                    (n = n =
+                        {
+                            shortcut: e,
+                        }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(n))
                         : (function (t, e) {

@@ -1,5 +1,6 @@
 var r = n(581006),
     i = "Expected a function";
+
 function a(e, t) {
     if ("function" != typeof e || (null != t && "function" != typeof t)) throw TypeError(i);
     var n = function () {

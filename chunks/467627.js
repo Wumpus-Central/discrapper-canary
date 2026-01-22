@@ -1,4 +1,7 @@
-n.d(t, { A: () => ec }), n(896048);
+n.d(t, {
+    A: () => ec,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -51,6 +54,7 @@ var r = n(627968),
     Z = n(652215),
     $ = n(985018),
     ee = n(216788);
+
 function et(e, t, n) {
     return (
         t in e
@@ -64,6 +68,7 @@ function et(e, t, n) {
         e
     );
 }
+
 function en(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -81,6 +86,7 @@ function en(e) {
     return e;
 }
 let er = (0, M.isWindows)() ? 4 : 12 * !(0, M.isMac)();
+
 function el(e) {
     return e.startsWith(Z.BVt.GUILD_DISCOVERY) || e.startsWith(Z.BVt.GLOBAL_DISCOVERY);
 }
@@ -225,23 +231,37 @@ class ei {
             (0, _.u9)(this.getVisibleGuildIds);
     }
 }
+
 function ea(e) {
     let { hideDms: t, scrollToTop: n, lurkingGuildIds: l } = e,
         i = (0, x.A)(),
         a = (0, f.yK)([R.A, w.Ay], () => R.A.getGuildIds().filter((e) => w.Ay.isCurrentUserGuest(e))),
         s = l.concat(a),
-        { entrypoint: o } = (0, S.X8)({ location: "GuildsBar" });
+        { entrypoint: o } = (0, S.X8)({
+            location: "GuildsBar",
+        });
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(W.C, {}),
             o === S.RK.SERVER_RAIL_TOP && (0, r.jsx)(I.A, {}),
             i ? (0, r.jsx)(E.A, {}) : null,
             !t && (0, r.jsx)(V.A, {}),
-            s.map((e) => (0, r.jsx)(Q.A, { guildId: e }, e)),
-            (0, r.jsx)(J.A, { onActivate: n }),
+            s.map((e) =>
+                (0, r.jsx)(
+                    Q.A,
+                    {
+                        guildId: e,
+                    },
+                    e,
+                ),
+            ),
+            (0, r.jsx)(J.A, {
+                onActivate: n,
+            }),
         ],
     });
 }
+
 function es(e) {
     let { guildDiscoveryButton: t, disableAppDownload: n, isOverlay: l, renderTreeNode: i, lurkingGuildIds: a } = e,
         [s] = (0, f.yK)([D.Ay], () => {
@@ -281,6 +301,7 @@ function es(e) {
         ],
     });
 }
+
 function eo(e) {
     let { disableAppDownload: t = M.isPlatformEmbedded, isOverlay: n = !1, className: i, themeOverride: s } = e,
         [o] = (0, f.yK)([D.Ay], () => {
@@ -334,7 +355,9 @@ function eo(e) {
         et = (0, g.rdh)(b.A.space.SPACE_XS),
         eo = (0, x.A)(),
         { pathname: ec } = (0, c.zy)(),
-        { entrypoint: eu } = (0, S.X8)({ location: "GuildsBar" }),
+        { entrypoint: eu } = (0, S.X8)({
+            location: "GuildsBar",
+        }),
         ed = +!!eo + +(eu === S.RK.SERVER_RAIL_TOP),
         ef = l.useMemo(() => {
             let e,
@@ -452,7 +475,9 @@ function eo(e) {
             children: (e) => {
                 var l, s;
                 return (0, r.jsxs)("nav", {
-                    className: a()(ee.iE, i, e, { [ee.R]: m }),
+                    className: a()(ee.iE, i, e, {
+                        [ee.R]: m,
+                    }),
                     "aria-label": $.intl.string($.t.PjnF2t),
                     children: [
                         (0, r.jsx)(U.A, {
@@ -464,7 +489,13 @@ function eo(e) {
                         }),
                         (0, r.jsx)(
                             "ul",
-                            ((l = en({ ref: H }, B, W)),
+                            ((l = en(
+                                {
+                                    ref: H,
+                                },
+                                B,
+                                W,
+                            )),
                             (s = s =
                                 {
                                     role: "tree",
@@ -499,7 +530,9 @@ function eo(e) {
                                             eA &&
                                                 (0, r.jsxs)("div", {
                                                     children: [
-                                                        (0, r.jsx)(z.A, { fullWidth: !0 }),
+                                                        (0, r.jsx)(z.A, {
+                                                            fullWidth: !0,
+                                                        }),
                                                         (0, r.jsx)("div", {
                                                             className: ee.JU,
                                                             children: (0, r.jsx)(I.A, {}),

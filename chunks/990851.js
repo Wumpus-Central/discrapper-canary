@@ -1,8 +1,12 @@
-n.d(t, { A: () => u }), n(896048);
+n.d(t, {
+    A: () => u,
+}),
+    n(896048);
 var r = n(439372),
     i = n(15285),
     a = n(760751),
     s = n(667269);
+
 function o(e, t, n) {
     return (
         t in e
@@ -16,6 +20,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     var t, n;
     let { game: r } = e,

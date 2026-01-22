@@ -18,6 +18,7 @@ var r,
     c = n(45143),
     u = n(870570),
     d = n(787925);
+
 function f(e, t, n) {
     return (
         t in e
@@ -31,6 +32,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -47,6 +49,7 @@ function p(e) {
     }
     return e;
 }
+
 function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -59,6 +62,7 @@ function _(e, t) {
     }
     return n;
 }
+
 function h(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -71,8 +75,8 @@ function h(e, t) {
     );
 }
 let m = new (n(863620).u)(),
-    g = 300000,
-    E = 3600000,
+    g = 3e5,
+    E = 36e5,
     b = () => ({
         candidates: new Map(),
         shownFatigableCandidate: null,
@@ -204,6 +208,7 @@ class V extends (r = s.Ay.Store) {
         O = (0, c.A)(l.A, u.A);
     }
 }
+
 function F(e, t) {
     return y(e, t);
 }

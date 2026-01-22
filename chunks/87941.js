@@ -1,8 +1,11 @@
-n.d(t, { q: () => s });
+n.d(t, {
+    q: () => s,
+});
 var r = n(960488),
     l = n(394953),
     i = n(366811),
     a = n(652215);
+
 function s() {
     let e = (0, i.A)((e) => e.guildId),
         { pathname: t } = (0, r.zy)(),

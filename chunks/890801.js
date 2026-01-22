@@ -1,4 +1,6 @@
-i.d(e, { $: () => d });
+i.d(e, {
+    $: () => d,
+});
 var n = i(934551),
     l = i(419954),
     s = i(780964),
@@ -7,7 +9,9 @@ var n = i(934551),
     a = i(635603),
     o = i(531525),
     T = i(985018);
-let A = (0, l.zZ)(s.X.KEYBINDS_CATEGORY, { buildLayout: () => [a.O] }),
+let A = (0, l.zZ)(s.X.KEYBINDS_CATEGORY, {
+        buildLayout: () => [a.O],
+    }),
     S = (0, l.t_)(s.X.KEYBINDS_PANEL, {
         usePredicate: () => !(0, r.dk)("LegacyKeybindsPanel"),
         useTitle: () => T.intl.string(T.t.T9DA2K),

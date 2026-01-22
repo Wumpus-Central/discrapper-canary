@@ -1,10 +1,14 @@
-n.d(e, { default: () => o }), n(896048);
+n.d(e, {
+    default: () => o,
+}),
+    n(896048);
 var i = n(627968),
     a = n(64700),
     r = n(189213),
     s = n(397927),
     l = n(917136),
     u = n(985018);
+
 function o(t) {
     let { transitionState: e, onClose: n, credential: o } = t,
         [c, d] = a.useState(!1),

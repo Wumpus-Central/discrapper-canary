@@ -1,4 +1,7 @@
-n.d(t, { A: () => g }), n(896048);
+n.d(t, {
+    A: () => g,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -10,6 +13,7 @@ var r = n(627968),
     d = n(222823),
     f = n(543465),
     p = n(531685);
+
 function h(e) {
     let t = u.A.getChannel(e);
     return (
@@ -19,6 +23,7 @@ function h(e) {
         (0, o.Y)(t)
     );
 }
+
 function b(e) {
     let t = u.A.getChannel(e);
     if (null == t) return !1;
@@ -64,7 +69,17 @@ let g = l.forwardRef(function (e, t) {
             return i;
         })(o, ["guildId", "guildChannels", "guildChannelsVersion"]),
         [m] = c,
-        A = (0, a.W)(u, d, f, { withVoiceChannels: !1 }, { ignoreRecents: !0 }),
+        A = (0, a.W)(
+            u,
+            d,
+            f,
+            {
+                withVoiceChannels: !1,
+            },
+            {
+                ignoreRecents: !0,
+            },
+        ),
         y = (0, i.bG)([p.A], () => p.A.isFocused());
     return (0, r.jsx)(
         s.A,
@@ -92,7 +107,12 @@ let g = l.forwardRef(function (e, t) {
                     });
             }
             return e;
-        })({ ref: m }, g)),
+        })(
+            {
+                ref: m,
+            },
+            g,
+        )),
         (l = l =
             {
                 isUnread: h,

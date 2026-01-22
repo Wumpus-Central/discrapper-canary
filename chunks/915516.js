@@ -9,21 +9,34 @@ var r = n(496431),
     i = n(773669),
     a = n(788868),
     s = n(985018);
-let o = 1000;
+let o = 1e3;
+
 function l(e, t) {
     switch (e) {
         case a.pe.TIER_0:
             return t.days > 0
-                ? s.intl.formatToPlainString(s.t.sP5OqC, { days: t.days })
+                ? s.intl.formatToPlainString(s.t.sP5OqC, {
+                      days: t.days,
+                  })
                 : t.hours > 0
-                  ? s.intl.formatToPlainString(s.t["7Lhfu7"], { hours: t.hours })
-                  : s.intl.formatToPlainString(s.t.coDiS0, { minutes: Math.max(t.minutes, 1) });
+                  ? s.intl.formatToPlainString(s.t["7Lhfu7"], {
+                        hours: t.hours,
+                    })
+                  : s.intl.formatToPlainString(s.t.coDiS0, {
+                        minutes: Math.max(t.minutes, 1),
+                    });
         case a.pe.TIER_2:
             return t.days > 0
-                ? s.intl.formatToPlainString(s.t["4prs5b"], { days: t.days })
+                ? s.intl.formatToPlainString(s.t["4prs5b"], {
+                      days: t.days,
+                  })
                 : t.hours > 0
-                  ? s.intl.formatToPlainString(s.t.OD5nIR, { hours: t.hours })
-                  : s.intl.formatToPlainString(s.t.rvyXjD, { minutes: Math.max(t.minutes, 1) });
+                  ? s.intl.formatToPlainString(s.t.OD5nIR, {
+                        hours: t.hours,
+                    })
+                  : s.intl.formatToPlainString(s.t.rvyXjD, {
+                        minutes: Math.max(t.minutes, 1),
+                    });
         default:
             throw Error("Unsupported subscription tier: ".concat(e));
     }
@@ -35,6 +48,7 @@ let c = (e) => {
         a = null == e || null == (t = e.subscription_trial) ? void 0 : t.sku_id;
     return null == n || null == a ? null : l(a, i);
 };
+
 function u(e, t) {
     let n = new Intl.NumberFormat(i.default.locale, {
         style: "percent",

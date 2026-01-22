@@ -1,4 +1,6 @@
-r.d(t, { A: () => f });
+r.d(t, {
+    A: () => f,
+});
 var n = r(627968);
 r(64700);
 var i = r(503698),
@@ -11,6 +13,7 @@ var i = r(503698),
     d = r(985018),
     m = r(299043),
     g = r(54208);
+
 function f(e) {
     let { user: t } = e;
     return (0, n.jsxs)("div", {
@@ -25,7 +28,9 @@ function f(e) {
                 className: m.DD,
                 color: "text-strong",
                 variant: "heading-xl/bold",
-                children: d.intl.format(d.t["au+lPv"], { n: t.tag }),
+                children: d.intl.format(d.t["au+lPv"], {
+                    n: t.tag,
+                }),
             }),
             (0, n.jsx)(a.Text, {
                 className: m.z$,
@@ -37,7 +42,9 @@ function f(e) {
                 className: m.J1,
                 color: "text-default",
                 variant: "text-sm/medium",
-                children: d.intl.format(d.t.i2vB8z, { helpdeskArticle: o.A.getArticleURL(u.MVz.POMELO_FAQ) }),
+                children: d.intl.format(d.t.i2vB8z, {
+                    helpdeskArticle: o.A.getArticleURL(u.MVz.POMELO_FAQ),
+                }),
             }),
             (0, n.jsxs)("div", {
                 className: s()([m.oU, m.P8]),
@@ -88,7 +95,9 @@ function f(e) {
                     (0, n.jsx)(a.Text, {
                         color: "text-default",
                         variant: "text-sm/medium",
-                        children: d.intl.format(d.t.okLjju, { username: t.tag }),
+                        children: d.intl.format(d.t.okLjju, {
+                            username: t.tag,
+                        }),
                     }),
                 ],
             }),

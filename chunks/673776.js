@@ -5,15 +5,19 @@ var r = n(868361),
     o = s && a.isBrowser("Firefox < 29"),
     l = r.hasCommandModifier,
     c = r.isCtrlKeyCommand;
+
 function u(e) {
     return (s && e.altKey) || c(e);
 }
+
 function d(e) {
     return l(e) ? (e.shiftKey ? "redo" : "undo") : null;
 }
+
 function f(e) {
     return !s && e.shiftKey ? null : u(e) ? "delete-word" : "delete";
 }
+
 function p(e) {
     return l(e) && s ? "backspace-to-start-of-line" : u(e) ? "backspace-word" : "backspace";
 }

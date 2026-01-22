@@ -1,4 +1,6 @@
-n.d(t, { A: () => I });
+n.d(t, {
+    A: () => I,
+});
 var r = n(627968);
 n(64700);
 var i = n(735438),
@@ -16,18 +18,27 @@ var i = n(735438),
     m = n(985018),
     g = n(570330),
     E = n(911385);
-let b = { results: { choices: [] } },
+let b = {
+        results: {
+            choices: [],
+        },
+    },
     y = {
         results: {
             choices: [],
             isLoading: !0,
         },
     },
-    O = Array.from({ length: 5 }, () => ({
-        name: "",
-        displayName: "",
-        value: "",
-    })),
+    O = Array.from(
+        {
+            length: 5,
+        },
+        () => ({
+            name: "",
+            displayName: "",
+            value: "",
+        }),
+    ),
     A = {
         results: {
             choices: [],
@@ -38,6 +49,7 @@ let b = { results: { choices: [] } },
         leading: !0,
         trailing: !0,
     });
+
 function S(e) {
     return e.displayName;
 }
@@ -77,7 +89,13 @@ let I = {
             )
                 return A;
             let a = l.A.getAutocompleteChoices(e.id, s.name, n);
-            return null == a ? y : { results: { choices: a } };
+            return null == a
+                ? y
+                : {
+                      results: {
+                          choices: a,
+                      },
+                  };
         }
         return {
             results: f.Ay.queryChoiceResults({
@@ -130,6 +148,11 @@ let I = {
                 options: r,
             } = e,
             i = t[n];
-        return r.insertText(S(i)), { type: _.kc.CHOICE };
+        return (
+            r.insertText(S(i)),
+            {
+                type: _.kc.CHOICE,
+            }
+        );
     },
 };

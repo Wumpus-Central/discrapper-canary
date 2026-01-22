@@ -1,4 +1,7 @@
-n.d(t, { A: () => f }), n(896048);
+n.d(t, {
+    A: () => f,
+}),
+    n(896048);
 var l = n(627968),
     r = n(64700),
     i = n(503698),
@@ -9,6 +12,7 @@ var l = n(627968),
     d = n(985018),
     u = n(851822),
     m = n(491510);
+
 function f(e) {
     let { entries: t, viewId: n, officialGuildId: i, onClose: f } = e,
         x = t.length > 7,
@@ -32,7 +36,9 @@ function f(e) {
                 : (0, l.jsxs)(l.Fragment, {
                       children: [
                           (0, l.jsx)("div", {
-                              className: a()(m.yz, { [m.T6]: x && !b }),
+                              className: a()(m.yz, {
+                                  [m.T6]: x && !b,
+                              }),
                               children: (0, l.jsx)("div", {
                                   className: u.fi,
                                   children: g.map((e) =>
@@ -60,7 +66,9 @@ function f(e) {
                                           color: "interactive-text-default",
                                           children: d.intl.string(d.t.yohc6E),
                                       }),
-                                      (0, l.jsx)(o.abt, { size: "xs" }),
+                                      (0, l.jsx)(o.abt, {
+                                          size: "xs",
+                                      }),
                                   ],
                               }),
                       ],

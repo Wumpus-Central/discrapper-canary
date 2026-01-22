@@ -1,4 +1,6 @@
-n.d(t, { A: () => T });
+n.d(t, {
+    A: () => T,
+});
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -18,6 +20,7 @@ var r = n(627968),
     b = n(993401),
     y = n(652215),
     O = n(985018);
+
 function A(e, t, n) {
     return (
         t in e
@@ -31,6 +34,7 @@ function A(e, t, n) {
         e
     );
 }
+
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -47,6 +51,7 @@ function v(e) {
     }
     return e;
 }
+
 function S(e, t) {
     if (null == e) return {};
     var n,
@@ -63,6 +68,7 @@ function S(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function I(e, t) {
     if (null == e) return {};
     var n,
@@ -73,6 +79,7 @@ function I(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function T(e) {
     let { user: t, closePopout: n } = e,
         A = S(e, ["user", "closePopout"]),
@@ -90,8 +97,17 @@ function T(e) {
                     ? ((0, l.hg)(T.id),
                       (0, s.OoC)((0, E.n)(R, null == C ? void 0 : C.guild_id)),
                       null == n || n(),
-                      p.default.track(y.HAw.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, { application_id: T.id }))
-                    : (0, m.o)(v({ applicationId: T.id }, T)));
+                      p.default.track(y.HAw.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, {
+                          application_id: T.id,
+                      }))
+                    : (0, m.o)(
+                          v(
+                              {
+                                  applicationId: T.id,
+                              },
+                              T,
+                          ),
+                      ));
         }, [T, N, R, null == C ? void 0 : C.guild_id, n]),
         P = N ? O.intl.string(O.t["Cia+A8"]) : O.intl.string(O.t.NgXl3C);
     if (null == T || !(0, u.Ie)(T)) return null;

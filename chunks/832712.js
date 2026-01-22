@@ -1,4 +1,8 @@
-n.d(t, { A: () => h }), n(896048), n(938796);
+n.d(t, {
+    A: () => h,
+}),
+    n(896048),
+    n(938796);
 var r = n(665260),
     i = n(562465),
     a = n(582754),
@@ -19,7 +23,9 @@ let h = {
         });
     },
     close() {
-        s.h.dispatch({ type: "NOTIFICATION_SETTINGS_MODAL_CLOSE" });
+        s.h.dispatch({
+            type: "NOTIFICATION_SETTINGS_MODAL_CLOSE",
+        });
     },
     updateGuildNotificationSettings(e, t, n, r) {
         let i = (0, c.CP)(e);
@@ -56,7 +62,11 @@ let h = {
     },
     updateChannelOverrideSettings(e, t, n, r, i) {
         let l = (0, c.ME)(e, t),
-            u = { channel_overrides: { [t]: n } };
+            u = {
+                channel_overrides: {
+                    [t]: n,
+                },
+            };
         o.A.saveUserGuildSettings(e, u),
             s.h.dispatch({
                 type: "USER_GUILD_SETTINGS_CHANNEL_UPDATE",
@@ -76,7 +86,9 @@ let h = {
     },
     updateChannelOverrideSettingsBulk(e, t, n, r) {
         let i = u.default.keys(t),
-            a = { channel_overrides: t },
+            a = {
+                channel_overrides: t,
+            },
             l = (0, c.Xh)(e, i);
         o.A.saveUserGuildSettings(e, a),
             s.h.dispatch({
@@ -97,7 +109,11 @@ let h = {
     },
     updateAppDMOverrideSettings(e, t, n, r, i) {
         let l = (0, c.ME)(e, t),
-            u = { channel_overrides: { [t]: r } };
+            u = {
+                channel_overrides: {
+                    [t]: r,
+                },
+            };
         o.A.saveUserGuildSettings(e, u),
             s.h.dispatch({
                 type: "USER_GUILD_SETTINGS_CHANNEL_UPDATE",
@@ -120,19 +136,30 @@ let h = {
         let n = t ? p.vv.NEW_FORUM_THREADS_ON : p.vv.NEW_FORUM_THREADS_OFF,
             r = t ? p.vv.NEW_FORUM_THREADS_OFF : p.vv.NEW_FORUM_THREADS_ON,
             i = (l.Ay.getChannelFlags(e) & ~r) | n;
-        this.updateChannelOverrideSettings(e.guild_id, e.id, { flags: i }, c.G_.forumThreadsCreated(t));
+        this.updateChannelOverrideSettings(
+            e.guild_id,
+            e.id,
+            {
+                flags: i,
+            },
+            c.G_.forumThreadsCreated(t),
+        );
     },
     async setAccountFlag(e, t) {
         let n = l.Ay.accountNotificationSettings.flags,
             a = (0, r.lA)(n, e, t);
         await i.Bo.patch({
             url: d.Rsh.ACCOUNT_NOTIFICATION_SETTINGS,
-            body: { flags: a },
+            body: {
+                flags: a,
+            },
             rejectWithError: !1,
         }),
             await s.h.dispatch({
                 type: "NOTIFICATION_SETTINGS_UPDATE",
-                settings: { flags: a },
+                settings: {
+                    flags: a,
+                },
             });
     },
 };

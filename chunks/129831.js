@@ -9,6 +9,7 @@ var i = n(503698),
     a = n(397927),
     s = n(297413),
     o = n(828043);
+
 function c(e) {
     let { user: t, status: n, isFocused: i, guildId: l } = e;
     return (0, r.jsxs)("div", {
@@ -29,10 +30,18 @@ function c(e) {
         ],
     });
 }
+
 function u(e) {
     let { label: t } = e;
     return (0, r.jsxs)("div", {
         className: o.Ku,
-        children: [(0, r.jsx)("div", { className: l()(o.my, o.L5) }), (0, r.jsx)("div", { children: t })],
+        children: [
+            (0, r.jsx)("div", {
+                className: l()(o.my, o.L5),
+            }),
+            (0, r.jsx)("div", {
+                children: t,
+            }),
+        ],
     });
 }

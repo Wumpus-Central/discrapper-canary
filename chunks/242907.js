@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var r = n(627968);
 n(64700);
 var i = n(158954),
@@ -14,6 +16,7 @@ var i = n(158954),
     _ = n(652215),
     h = n(985018),
     m = n(563111);
+
 function g(e) {
     let t,
         n,
@@ -33,9 +36,14 @@ function g(e) {
             }
             return d.A.can(_.xBc.SEND_MESSAGES, e);
         });
+
     function I() {
         let { id: e } = E,
-            t = "@".concat(p.Ay.getUserTag(E, { decoration: "never" })),
+            t = "@".concat(
+                p.Ay.getUserTag(E, {
+                    decoration: "never",
+                }),
+            ),
             n = "<@".concat(e, ">");
         f._.dispatchToLastSubscribed(_.jej.INSERT_TEXT, {
             plainText: t,
@@ -50,7 +58,9 @@ function g(e) {
               b
                   ? (t = h.intl.string(h.t["57nBty"]))
                   : null != A && S
-                    ? ((t = h.intl.formatToPlainString(h.t["9Akp1s"], { username: A })),
+                    ? ((t = h.intl.formatToPlainString(h.t["9Akp1s"], {
+                          username: A,
+                      })),
                       (n = (0, r.jsx)(i.$nd, {
                           onClick: I,
                           text: h.intl.string(h.t.P8tvKG),
@@ -58,13 +68,17 @@ function g(e) {
                     : (t = h.intl.string(h.t["SMJr+a"]))),
         (0, r.jsxs)(o.A, {
             children: [
-                (0, r.jsx)(o.A.Header, { text: g }),
+                (0, r.jsx)(o.A.Header, {
+                    text: g,
+                }),
                 (0, r.jsxs)(o.A.Body, {
                     children: [
                         (0, r.jsxs)("div", {
                             className: m.iH,
                             children: [
-                                (0, r.jsx)(o.A.Icon, { expired: !0 }),
+                                (0, r.jsx)(o.A.Icon, {
+                                    expired: !0,
+                                }),
                                 (0, r.jsx)(o.A.Info, {
                                     expired: !0,
                                     title: h.intl.string(h.t["Jhx/ud"]),

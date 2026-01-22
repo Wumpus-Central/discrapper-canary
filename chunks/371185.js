@@ -1,4 +1,6 @@
-a.d(e, { default: () => C });
+a.d(e, {
+    default: () => C,
+});
 var s = a(627968),
     l = a(64700),
     n = a(158954),
@@ -11,11 +13,14 @@ var s = a(627968),
     d = a(192311),
     p = a(327337),
     b = a(985018);
+
 function C(t) {
     let { userId: e, channelId: a, transitionState: C, onBlock: g, onBlockAndReport: h, onClose: v, onCancel: A } = t,
         f = (0, d.W)(a),
         m = l.useCallback(() => {
-            i.A.blockUser(e, { location: p.Rx }).then(() => {
+            i.A.blockUser(e, {
+                location: p.Rx,
+            }).then(() => {
                 u.A.showBlockSuccessToast(e, a);
             });
         }, [e, a]),
@@ -31,7 +36,9 @@ function C(t) {
     return (0, s.jsx)(n.Modal, {
         transitionState: C,
         onClose: U,
-        title: b.intl.formatToPlainString(b.t.x5pOn9, { name: w }),
+        title: b.intl.formatToPlainString(b.t.x5pOn9, {
+            name: w,
+        }),
         subtitle: b.intl.string(b.t.aedkso),
         actions: [
             {

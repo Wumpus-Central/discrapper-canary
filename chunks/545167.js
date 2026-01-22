@@ -40,15 +40,18 @@ let a = (0, r.C)({
         },
     ],
 });
+
 function s() {
     return {
         autoTrackExposure: !0,
         disable: !(0, i.isDesktop)(),
     };
 }
+
 function o(e) {
     return a.useExperiment(e, s());
 }
+
 function l(e) {
     let { backForwardButtons: t } = a.getCurrentConfig(e, s());
     return t;

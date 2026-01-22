@@ -7,6 +7,7 @@ n(64700);
 var i = n(503698),
     a = n.n(i),
     s = n(700744);
+
 function o(e) {
     let { keybind: t, className: n } = e;
     return (0, r.jsx)(r.Fragment, {
@@ -22,6 +23,7 @@ function o(e) {
         ),
     });
 }
+
 function l(e) {
     let { keybind: t, className: n } = e;
     return (0, r.jsx)(r.Fragment, {

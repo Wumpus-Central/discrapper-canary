@@ -1,4 +1,6 @@
-n.d(t, { default: () => R });
+n.d(t, {
+    default: () => R,
+});
 var a = n(627968);
 n(64700);
 var i = n(311907),
@@ -26,6 +28,7 @@ var i = n(311907),
     j = n(980504),
     P = n(985018),
     S = n(264572).Buffer;
+
 function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -51,6 +54,7 @@ function D(e) {
     }
     return e;
 }
+
 function C(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -69,6 +73,7 @@ function C(e, t) {
         e
     );
 }
+
 function R(e) {
     let {
             clips: t,
@@ -110,13 +115,17 @@ function R(e) {
                                 showGuildPicker: !0,
                                 guildId: l ? (null == e ? void 0 : e.guild_id) : void 0,
                                 sourceFile: {
-                                    file: new File([t], "".concat(o, ".mp4"), { type: "video/mp4" }),
+                                    file: new File([t], "".concat(o, ".mp4"), {
+                                        type: "video/mp4",
+                                    }),
                                     name: s,
                                 },
                             }),
                         );
                 },
-                { stackingBehavior: "stack" },
+                {
+                    stackingBehavior: "stack",
+                },
             );
         } catch (e) {
         } finally {
@@ -292,15 +301,25 @@ function R(e) {
                             return (n) =>
                                 (0, a.jsx)(
                                     e,
-                                    C(D({ clips: t }, n), {
-                                        onBeforeDelete: k,
-                                        onAfterDelete: async () => {
-                                            await n.onClose(), null == B || B();
+                                    C(
+                                        D(
+                                            {
+                                                clips: t,
+                                            },
+                                            n,
+                                        ),
+                                        {
+                                            onBeforeDelete: k,
+                                            onAfterDelete: async () => {
+                                                await n.onClose(), null == B || B();
+                                            },
                                         },
-                                    }),
+                                    ),
                                 );
                         },
-                        { stackingBehavior: "stack" },
+                        {
+                            stackingBehavior: "stack",
+                        },
                     );
                 },
             }),

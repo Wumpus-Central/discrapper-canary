@@ -1,4 +1,6 @@
-n.d(t, { A: () => x });
+n.d(t, {
+    A: () => x,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -29,6 +31,7 @@ var i = n(503698),
     R = n(455482);
 let w = E.A.getArticleURL(A.MVz.ORBS_REWARDS_FAQ),
     P = 720;
+
 function D(e, t, n) {
     let i = e.program_current_state,
         a =
@@ -47,7 +50,9 @@ function D(e, t, n) {
                     variant: t ? "overlay-primary" : "secondary",
                     onClick: () => (0, h.pX)(S.BV.COLLECTIBLES_SHOP_WITH_TAB(v.G2.ORBS)),
                 }),
-                headerText: T.intl.format(I.default.cfE8Oh, { days: Math.max(1, a) }),
+                headerText: T.intl.format(I.default.cfE8Oh, {
+                    days: Math.max(1, a),
+                }),
                 subheaderText: T.intl.format(I.default.JCLEQp, {
                     orbsCount: n,
                     helpdeskArticle: w,
@@ -60,10 +65,15 @@ function D(e, t, n) {
                 actionButton: (0, r.jsx)(c.$nd, {
                     text: T.intl.string(I.default.KVCfnE),
                     variant: t ? "overlay-primary" : "secondary",
-                    onClick: () => (0, g.openUserSettings)(m.X.BILLING_PANEL, { section: A.nc_.BILLING }),
+                    onClick: () =>
+                        (0, g.openUserSettings)(m.X.BILLING_PANEL, {
+                            section: A.nc_.BILLING,
+                        }),
                 }),
                 headerText: T.intl.string(I.default.uuZJXR),
-                subheaderText: T.intl.format(I.default.dkeEV7, { helpdeskArticle: w }),
+                subheaderText: T.intl.format(I.default.dkeEV7, {
+                    helpdeskArticle: w,
+                }),
             };
         case _.L.PAYMENT_ERROR:
             return {
@@ -72,10 +82,15 @@ function D(e, t, n) {
                 actionButton: (0, r.jsx)(c.$nd, {
                     text: T.intl.string(I.default.KVCfnE),
                     variant: "critical-secondary",
-                    onClick: () => (0, g.openUserSettings)(m.X.BILLING_PANEL, { section: A.nc_.BILLING }),
+                    onClick: () =>
+                        (0, g.openUserSettings)(m.X.BILLING_PANEL, {
+                            section: A.nc_.BILLING,
+                        }),
                 }),
                 headerText: T.intl.string(I.default["+O9Asn"]),
-                subheaderText: T.intl.format(I.default.nWKEBZ, { helpdeskArticle: w }),
+                subheaderText: T.intl.format(I.default.nWKEBZ, {
+                    helpdeskArticle: w,
+                }),
             };
         case _.L.PROGRAM_ROLLBACK:
             return {
@@ -87,7 +102,9 @@ function D(e, t, n) {
                     onClick: () => (0, h.pX)(S.BV.COLLECTIBLES_SHOP_WITH_TAB(v.G2.ORBS)),
                 }),
                 headerText: T.intl.string(I.default.zF0HnJ),
-                subheaderText: T.intl.format(I.default["5tzNTa"], { helpdeskArticle: w }),
+                subheaderText: T.intl.format(I.default["5tzNTa"], {
+                    helpdeskArticle: w,
+                }),
             };
         case _.L.PREMIUM_CHURNING:
             return {
@@ -97,7 +114,10 @@ function D(e, t, n) {
                     text: T.intl.string(I.default.FToh6D),
                     variant: t ? "overlay-primary" : "secondary",
                     icon: c.tvc,
-                    onClick: () => (0, g.openUserSettings)(m.X.BILLING_PANEL, { section: A.nc_.BILLING }),
+                    onClick: () =>
+                        (0, g.openUserSettings)(m.X.BILLING_PANEL, {
+                            section: A.nc_.BILLING,
+                        }),
                 }),
                 headerText: T.intl.string(I.default.ISnOet),
                 subheaderText: T.intl.format(I.default.agletO, {
@@ -152,7 +172,9 @@ let x = (e) => {
                                 alt: "",
                                 "aria-hidden": !0,
                             }),
-                            (0, r.jsx)("div", { className: C.mR }),
+                            (0, r.jsx)("div", {
+                                className: C.mR,
+                            }),
                         ],
                     }),
                     (0, r.jsxs)("div", {
@@ -168,7 +190,10 @@ let x = (e) => {
                                 className: C.G3,
                                 children: S,
                             }),
-                            E && (0, r.jsx)(O.A, { className: C.L$ }),
+                            E &&
+                                (0, r.jsx)(O.A, {
+                                    className: C.L$,
+                                }),
                             g &&
                                 (0, r.jsxs)("div", {
                                     className: C.fB,
@@ -191,7 +216,9 @@ let x = (e) => {
                                 }),
                             (0, r.jsx)("div", {
                                 className: C.WT,
-                                children: (0, r.jsx)(c.e2v, { children: A }),
+                                children: (0, r.jsx)(c.e2v, {
+                                    children: A,
+                                }),
                             }),
                         ],
                     }),

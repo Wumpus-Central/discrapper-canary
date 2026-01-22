@@ -14,6 +14,7 @@ var r = n(562465),
     c = n(723702),
     u = n(728458),
     d = n(652215);
+
 function f(e, t, n) {
     return (
         t in e
@@ -27,6 +28,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -59,10 +61,15 @@ async function h(e) {
         c = arguments.length > 3 ? arguments[3] : void 0,
         f = arguments.length > 4 ? arguments[4] : void 0;
     if (t) {
-        a.h.dispatch({ type: "BILLING_USER_OFFER_FETCH_START" });
+        a.h.dispatch({
+            type: "BILLING_USER_OFFER_FETCH_START",
+        });
         try {
             var h, m, g;
-            null != e && l.default.track(d.HAw.FETCH_USER_OFFER_STARTED, { call_location: e });
+            null != e &&
+                l.default.track(d.HAw.FETCH_USER_OFFER_STARTED, {
+                    call_location: e,
+                });
             let { offerId: t, paymentGatewayOverride: E } = n,
                 b = void 0 !== E ? E : _(),
                 y =
@@ -116,12 +123,16 @@ async function h(e) {
                 }
             );
         } catch (e) {
-            a.h.dispatch({ type: "BILLING_USER_OFFER_FETCH_FAIL" });
+            a.h.dispatch({
+                type: "BILLING_USER_OFFER_FETCH_FAIL",
+            });
         }
     }
 }
 async function m() {
-    a.h.dispatch({ type: "BILLING_USER_OFFER_FETCH_START" });
+    a.h.dispatch({
+        type: "BILLING_USER_OFFER_FETCH_START",
+    });
     try {
         var e;
         let t =
@@ -139,10 +150,14 @@ async function m() {
                 type: "BILLING_USER_OFFER_FETCH_SUCCESS",
                 userDiscountOffer: t,
             }),
-            { userDiscountOffer: t }
+            {
+                userDiscountOffer: t,
+            }
         );
     } catch (e) {
-        a.h.dispatch({ type: "BILLING_USER_OFFER_FETCH_FAIL" });
+        a.h.dispatch({
+            type: "BILLING_USER_OFFER_FETCH_FAIL",
+        });
     }
 }
 async function g() {
@@ -167,6 +182,7 @@ async function g() {
     } catch (e) {}
     return e;
 }
+
 function E(e, t) {
     let n = null != e && null == e.expires_at ? e.id : void 0,
         i = null != t && null == t.expires_at ? t.id : void 0;

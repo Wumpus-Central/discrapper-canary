@@ -11,6 +11,7 @@ var r = n(64700),
     o = n(961350),
     l = n(620733),
     c = n(985018);
+
 function u() {
     let e = (0, s.cf)([l.A], () => l.A.getSessions());
     return r.useMemo(() => {
@@ -30,6 +31,7 @@ function u() {
         );
     }, [e]);
 }
+
 function d(e) {
-    return (Date.now() - e.valueOf()) / 1000 / 60 / 60 < 1 ? c.intl.string(c.t.TXCmfL) : a()(e).fromNow();
+    return (Date.now() - e.valueOf()) / 1e3 / 60 / 60 < 1 ? c.intl.string(c.t.TXCmfL) : a()(e).fromNow();
 }

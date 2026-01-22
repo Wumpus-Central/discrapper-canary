@@ -1,4 +1,7 @@
-n.d(t, { A: () => d }), n(896048);
+n.d(t, {
+    A: () => d,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -7,10 +10,17 @@ var r = n(627968),
     l = n(946356),
     c = n(985018),
     u = n(598808);
+
 function d(e) {
     let { renderCards: t, heading: n, onExpand: a } = e,
         d = i.useId(),
-        f = i.useMemo(() => t({ className: u.Nr }), [t]),
+        f = i.useMemo(
+            () =>
+                t({
+                    className: u.Nr,
+                }),
+            [t],
+        ),
         [p] = f;
     return 0 === f.length
         ? null

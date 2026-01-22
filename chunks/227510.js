@@ -1,13 +1,17 @@
-n.d(t, { H: () => u });
+n.d(t, {
+    H: () => u,
+});
 var r = n(199407),
     i = n(217512),
     a = n(959462),
     s = n(98909),
     o = n(47276),
     l = n(64700);
+
 function c(e) {
     return e && e.__esModule ? e.default : e;
 }
+
 function u(e, t) {
     let {
             getRowText: n = (e) => {
@@ -36,19 +40,34 @@ function u(e, t) {
                 let e = t.selectionManager.selectedKeys.keys().next().value;
                 if (null != e && t.collection.getItem(e)) {
                     let t = n(e);
-                    t && o.push(u.format("selectedItem", { item: t }));
+                    t &&
+                        o.push(
+                            u.format("selectedItem", {
+                                item: t,
+                            }),
+                        );
                 }
             } else if (1 === r.size && 0 === a.size) {
                 let e = r.keys().next().value;
                 if (null != e) {
                     let t = n(e);
-                    t && o.push(u.format("selectedItem", { item: t }));
+                    t &&
+                        o.push(
+                            u.format("selectedItem", {
+                                item: t,
+                            }),
+                        );
                 }
             } else if (1 === a.size && 0 === r.size) {
                 let e = a.keys().next().value;
                 if (null != e && t.collection.getItem(e)) {
                     let t = n(e);
-                    t && o.push(u.format("deselectedItem", { item: t }));
+                    t &&
+                        o.push(
+                            u.format("deselectedItem", {
+                                item: t,
+                            }),
+                        );
                 }
             }
             "multiple" === t.selectionManager.selectionMode &&
@@ -57,7 +76,13 @@ function u(e, t) {
                     f.size > 1 ||
                     "all" === p.current ||
                     (null == (e = p.current) ? void 0 : e.size) > 1) &&
-                o.push("all" === f ? u.format("selectedAll") : u.format("selectedCount", { count: f.size })),
+                o.push(
+                    "all" === f
+                        ? u.format("selectedAll")
+                        : u.format("selectedCount", {
+                              count: f.size,
+                          }),
+                ),
                 o.length > 0 && (0, i.iP)(o.join(" ")),
                 (p.current = f);
         });
@@ -69,6 +94,7 @@ function u(e, t) {
         }
     }, [f, t.selectionManager.isFocused]);
 }
+
 function d(e, t) {
     let n = new Set();
     if ("all" === e || "all" === t) return n;

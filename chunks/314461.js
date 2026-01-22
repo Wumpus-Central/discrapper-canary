@@ -1,4 +1,6 @@
-l.d(t, { default: () => h });
+l.d(t, {
+    default: () => h,
+});
 var r = l(627968);
 l(64700);
 var n = l(158954),
@@ -14,6 +16,7 @@ var n = l(158954),
     m = l(294726),
     x = l(985018),
     j = l(8577);
+
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var l = null != arguments[t] ? arguments[t] : {},
@@ -39,6 +42,7 @@ function v(e) {
     }
     return e;
 }
+
 function g(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -57,6 +61,7 @@ function g(e, t) {
         e
     );
 }
+
 function p(e) {
     let { step: t, setFooterNode: l } = (0, f.bv)(),
         i = (0, c.U)("GameServerSetupModal"),
@@ -68,7 +73,9 @@ function p(e) {
                         subtitle: x.intl.string(m.default.Az5bjs),
                     };
                 case b.HS.SERVER_SETTINGS:
-                    return { title: x.intl.string(m.default.RLGW9z) };
+                    return {
+                        title: x.intl.string(m.default.RLGW9z),
+                    };
             }
         })(t);
     return (0, r.jsxs)(
@@ -90,9 +97,13 @@ function p(e) {
                     }),
                 (0, r.jsx)(s.IpV, {
                     className: j.j,
-                    style: { width: b.ST },
+                    style: {
+                        width: b.ST,
+                    },
                     children: (0, r.jsx)("div", {
-                        style: { padding: b.by },
+                        style: {
+                            padding: b.by,
+                        },
                         children: (0, r.jsxs)(s.tN_, {
                             width: b.U$,
                             activeSlide: t,
@@ -117,18 +128,26 @@ function p(e) {
                         }),
                     }),
                 }),
-                (0, r.jsx)("div", { ref: (e) => l(e) }),
+                (0, r.jsx)("div", {
+                    ref: (e) => l(e),
+                }),
             ],
         }),
     );
 }
+
 function h(e) {
     let { analyticsLocations: t } = (0, i.Ay)();
     return (
         (0, d.wN)(e.guildId, t, e.analyticsLocation),
         (0, r.jsx)(i.f5, {
             value: t,
-            children: (0, r.jsx)(f.mf, g(v({}, e), { children: (0, r.jsx)(p, v({}, e)) })),
+            children: (0, r.jsx)(
+                f.mf,
+                g(v({}, e), {
+                    children: (0, r.jsx)(p, v({}, e)),
+                }),
+            ),
         })
     );
 }

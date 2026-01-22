@@ -1,4 +1,6 @@
-n.d(t, { A: () => x });
+n.d(t, {
+    A: () => x,
+});
 var a = n(627968),
     l = n(64700),
     i = n(390544),
@@ -10,6 +12,7 @@ var a = n(627968),
     u = n(71393),
     m = n(967198),
     p = n(566381);
+
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,6 +38,7 @@ function h(e) {
     }
     return e;
 }
+
 function f(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -53,6 +57,7 @@ function f(e, t) {
         e
     );
 }
+
 function x() {
     let e = (0, r.bG)([m.A], () => m.A.getGuildId()),
         t = (0, r.bG)([u.A], () => {
@@ -71,7 +76,9 @@ function x() {
                     o.h.dispatch({
                         type: "GAME_SERVER_UPDATE_INSTANCE_SUCCESS",
                         guildId: e,
-                        instance: f(h({}, x), { status: t }),
+                        instance: f(h({}, x), {
+                            status: t,
+                        }),
                     });
             },
             [x, e],

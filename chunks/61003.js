@@ -1,4 +1,6 @@
-n.d(t, { e: () => r });
+n.d(t, {
+    e: () => r,
+});
 let r = {
     collections: [
         {

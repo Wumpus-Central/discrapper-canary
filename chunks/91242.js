@@ -1,10 +1,14 @@
-n.d(t, { A: () => N }), n(896048);
+n.d(t, {
+    A: () => N,
+}),
+    n(896048);
 var r,
     i = n(311907),
     a = n(73153),
     s = n(956518),
     o = n(165610),
     l = n(5867);
+
 function c(e, t, n) {
     return (
         t in e
@@ -18,6 +22,7 @@ function c(e, t, n) {
         e
     );
 }
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,6 +39,7 @@ function u(e) {
     }
     return e;
 }
+
 function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -46,6 +52,7 @@ function d(e, t) {
     }
     return n;
 }
+
 function f(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -62,10 +69,12 @@ let p = null,
     h = new Map(),
     m = new Map(),
     g = new Map();
+
 function E(e) {
     let { applicationId: t } = e;
     _.set(t, !0);
 }
+
 function b(e) {
     let { applicationId: t, proxyTicket: n } = e,
         r = (0, s.Ay)(t);
@@ -81,33 +90,49 @@ function b(e) {
               proxyTicket: n,
           }));
 }
+
 function y(e) {
     let { applicationId: t } = e;
     _.delete(t);
 }
+
 function O(e) {
     let { applicationId: t } = e;
     (null == p ? void 0 : p.applicationId) === t && (p = null);
 }
+
 function A(e) {
     let { applicationId: t, layoutMode: n } = e;
-    (null == p ? void 0 : p.applicationId) === t && (p = f(u({}, p), { layoutMode: n }));
+    (null == p ? void 0 : p.applicationId) === t &&
+        (p = f(u({}, p), {
+            layoutMode: n,
+        }));
 }
+
 function v(e) {
     let { activityPanelMode: t } = e;
-    null != p && (p = f(u({}, p), { activityPanelMode: t }));
+    null != p &&
+        (p = f(u({}, p), {
+            activityPanelMode: t,
+        }));
 }
+
 function S(e) {
     let { applicationId: t, lockState: n, pictureInPictureLockState: r } = e;
     null == n ? m.delete(t) : m.set(t, n), null === r ? g.delete(t) : void 0 !== r && g.set(t, r);
 }
+
 function I(e) {
     let { applicationId: t, refreshing: n } = e;
     n ? h.set(t, !0) : h.delete(t);
 }
+
 function T(e) {
     let { applicationId: t, proxyTicket: n } = e;
-    (null == p ? void 0 : p.applicationId) === t && (p = f(u({}, p), { proxyTicket: n }));
+    (null == p ? void 0 : p.applicationId) === t &&
+        (p = f(u({}, p), {
+            proxyTicket: n,
+        }));
 }
 class C extends (r = i.Ay.Store) {
     getConnectedFrame() {

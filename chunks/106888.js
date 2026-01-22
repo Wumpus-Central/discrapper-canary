@@ -6,7 +6,14 @@ e.exports = function (e) {
             e.HASH_COMMENT_MODE,
             {
                 className: "meta",
-                variants: [{ begin: "^TAP version (\\d+)$" }, { begin: "^1\\.\\.(\\d+)$" }],
+                variants: [
+                    {
+                        begin: "^TAP version (\\d+)$",
+                    },
+                    {
+                        begin: "^1\\.\\.(\\d+)$",
+                    },
+                ],
             },
             {
                 begin: /---$/,
@@ -20,7 +27,14 @@ e.exports = function (e) {
             },
             {
                 className: "symbol",
-                variants: [{ begin: "^ok" }, { begin: "^not ok" }],
+                variants: [
+                    {
+                        begin: "^ok",
+                    },
+                    {
+                        begin: "^not ok",
+                    },
+                ],
             },
         ],
     };

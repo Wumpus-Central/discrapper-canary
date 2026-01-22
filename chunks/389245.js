@@ -1,8 +1,11 @@
-n.d(e, { A: () => s });
+n.d(e, {
+    A: () => s,
+});
 var r = n(627968),
     i = n(397927),
     o = n(754302),
     l = n(985018);
+
 function s() {
     return (0, r.jsxs)(o.q, {
         children: [

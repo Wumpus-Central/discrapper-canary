@@ -9,6 +9,7 @@ n.d(t, {
 var r = n(287809),
     i = n(954571),
     a = n(652215);
+
 function s(e, t) {
     let { channelId: n, warningId: r, senderId: a, warningType: s } = t;
     i.default.track(e, {
@@ -27,6 +28,7 @@ var o = (function (e) {
         e
     );
 })({});
+
 function l(e) {
     let { channelId: t, warningId: n, senderId: r, warningType: s, viewName: o, isNudgeWarning: l } = e;
     i.default.track(a.HAw.SAFETY_WARNING_VIEWED, {
@@ -89,6 +91,7 @@ var c = (function (e) {
         e
     );
 })({});
+
 function u(e) {
     let { channelId: t, warningId: n, senderId: r, warningType: s, cta: o, isNudgeWarning: l } = e;
     i.default.track(a.HAw.SAFETY_WARNING_CTA_CLICKED, {
@@ -100,6 +103,7 @@ function u(e) {
         is_nudge_warning: l,
     });
 }
+
 function d() {
     var e;
     return !1 === (null == (e = r.default.getCurrentUser()) ? void 0 : e.nsfwAllowed);

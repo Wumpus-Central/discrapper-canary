@@ -1,4 +1,9 @@
-n.d(t, { A: () => C }), n(747238), n(896048), n(321073);
+n.d(t, {
+    A: () => C,
+}),
+    n(747238),
+    n(896048),
+    n(321073);
 var i = n(627968),
     r = n(64700),
     l = n(503698),
@@ -23,6 +28,7 @@ var i = n(627968),
     N = n(652215),
     E = n(985018),
     T = n(416337);
+
 function w(e, t) {
     return null != t && /^data:/.test(t)
         ? t
@@ -32,6 +38,7 @@ function w(e, t) {
               discriminator: N.h3J,
           });
 }
+
 function C(e) {
     let {
             id: t,
@@ -53,8 +60,12 @@ function C(e) {
         }, [n]),
         D = r.useCallback(() => {
             (0, c.A)({
-                title: E.intl.formatToPlainString(E.t.QVFjHh, { name: n.name }),
-                subtitle: E.intl.format(E.t["rIWe+5"], { name: n.name }),
+                title: E.intl.formatToPlainString(E.t.QVFjHh, {
+                    name: n.name,
+                }),
+                subtitle: E.intl.format(E.t["rIWe+5"], {
+                    name: n.name,
+                }),
                 confirmText: E.intl.string(E.t["W+K1Fs"]),
                 cancelText: E.intl.string(E.t.xNhj0O),
                 onConfirm: () => {
@@ -88,7 +99,9 @@ function C(e) {
           })
         : G.push({
               icon: u.O4,
-              text: E.intl.formatToPlainString(E.t["7mv59O"], { timestamp: y.default.extractTimestamp(n.id) }),
+              text: E.intl.formatToPlainString(E.t["7mv59O"], {
+                  timestamp: y.default.extractTimestamp(n.id),
+              }),
           });
     let U = null;
     return (
@@ -97,7 +110,9 @@ function C(e) {
             (U = (0, i.jsxs)("div", {
                 className: T.rf,
                 children: [
-                    (0, i.jsx)(u.cGx, { className: T.fV }),
+                    (0, i.jsx)(u.cGx, {
+                        className: T.fV,
+                    }),
                     (0, i.jsxs)(m.A, {
                         children: [
                             (0, i.jsx)(m.A.Child, {
@@ -110,7 +125,9 @@ function C(e) {
                                         (0, i.jsx)(g.A, {
                                             image: l.avatar,
                                             onChange: (e) => {
-                                                f.A.updateWebhook({ avatar: e });
+                                                f.A.updateWebhook({
+                                                    avatar: e,
+                                                });
                                             },
                                             makeURL: (e) => w(n, e),
                                             imageClassName: T.mr,
@@ -138,7 +155,9 @@ function C(e) {
                                                     label: E.intl.string(E.t.ukdxuo),
                                                     value: l.name,
                                                     onChange: (e) => {
-                                                        f.A.updateWebhook({ name: e });
+                                                        f.A.updateWebhook({
+                                                            name: e,
+                                                        });
                                                     },
                                                     maxLength: 80,
                                                     error: _.name,
@@ -160,7 +179,9 @@ function C(e) {
                                                             };
                                                         },
                                                         onSelectionChange: (e) => {
-                                                            f.A.updateWebhook({ channelId: e });
+                                                            f.A.updateWebhook({
+                                                                channelId: e,
+                                                            });
                                                         },
                                                         placeholder: E.intl.string(E.t.r2ptsz),
                                                         selectionMode: "single",
@@ -169,7 +190,9 @@ function C(e) {
                                             }),
                                         ],
                                     }),
-                                    (0, i.jsx)(u.cGx, { className: T.Bd }),
+                                    (0, i.jsx)(u.cGx, {
+                                        className: T.Bd,
+                                    }),
                                     (0, i.jsxs)(m.A, {
                                         children: [
                                             (0, i.jsx)(d.m_, {
@@ -186,7 +209,7 @@ function C(e) {
                                                         onClick: () => {
                                                             k(!0),
                                                                 u.ORC.announce(E.intl.string(E.t.wwdb3g)),
-                                                                R.start(1000, () => k(!1)),
+                                                                R.start(1e3, () => k(!1)),
                                                                 M();
                                                         },
                                                         disabled: null == n.token || "" === n.token,

@@ -1,4 +1,6 @@
-n.d(t, { A: () => R });
+n.d(t, {
+    A: () => R,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -56,7 +58,9 @@ let v = "#ffffff",
             theme: i,
             children: (e) =>
                 (0, r.jsxs)("div", {
-                    className: a()(A._B, e, { [A.N_]: !s }),
+                    className: a()(A._B, e, {
+                        [A.N_]: !s,
+                    }),
                     children: [
                         (0, r.jsx)("div", {
                             className: A.X1,
@@ -74,7 +78,9 @@ let v = "#ffffff",
             theme: s,
             children: (e) =>
                 (0, r.jsxs)(o.DUT, {
-                    className: a()(i ? A.zY : A.kE, t ? A.in : A.Vn, e, { [A.N_]: !l }),
+                    className: a()(i ? A.zY : A.kE, t ? A.in : A.Vn, e, {
+                        [A.N_]: !l,
+                    }),
                     onDoubleClick: () => y.Ay.maximize(n),
                     tabIndex: -1,
                     children: [
@@ -88,34 +94,43 @@ let v = "#ffffff",
                                           onClick: () => S(n),
                                           "aria-label": O.intl.string(O.t.ZdNUj2),
                                           tabIndex: -1,
-                                          children: (0, r.jsx)(_.A, { color: "#4c0000" }),
+                                          children: (0, r.jsx)(_.A, {
+                                              color: "#4c0000",
+                                          }),
                                       }),
                                       (0, r.jsx)(o.DUT, {
                                           className: A.wv,
                                           onClick: () => I(n),
                                           "aria-label": O.intl.string(O.t.CxOC4U),
                                           tabIndex: -1,
-                                          children: (0, r.jsx)(E.A, { color: "#975500" }),
+                                          children: (0, r.jsx)(E.A, {
+                                              color: "#975500",
+                                          }),
                                       }),
                                       (0, r.jsx)(o.DUT, {
                                           className: A.KH,
                                           onClick: (e) => T(n, e),
                                           "aria-label": O.intl.string(O.t["2nM3Pk"]),
                                           tabIndex: -1,
-                                          children: (0, r.jsx)(m.A, { color: "#006500" }),
+                                          children: (0, r.jsx)(m.A, {
+                                              color: "#006500",
+                                          }),
                                       }),
                                   ],
                               }),
                         i
                             ? (0, r.jsx)("div", {
                                   className: A.Th,
-                                  children: (0, r.jsx)(f.A, { color: v }),
+                                  children: (0, r.jsx)(f.A, {
+                                      color: v,
+                                  }),
                               })
                             : null,
                     ],
                 }),
         });
     };
+
 function R(e) {
     let { focused: t, type: n, windowKey: i, macOSFrame: a = !1, themeOverride: o } = e,
         c = (0, d.Us)(),

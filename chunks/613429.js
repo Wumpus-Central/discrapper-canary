@@ -1,10 +1,14 @@
-r.d(t, { default: () => s }), r(896048);
+r.d(t, {
+    default: () => s,
+}),
+    r(896048);
 var n = r(627968),
     l = r(64700),
     o = r(158954),
     i = r(684013),
     a = r(837921),
     c = r(985018);
+
 function s(e) {
     let { url: t, onClose: r } = e,
         s = (function (e, t) {

@@ -1,4 +1,8 @@
-n.d(t, { A: () => _ }), n(896048), n(638769);
+n.d(t, {
+    A: () => _,
+}),
+    n(896048),
+    n(638769);
 var a = n(627968),
     l = n(64700),
     i = n(503698),
@@ -74,6 +78,7 @@ let j = async () =>
             value: b.gD.PREMIUM_GROUP_MONTH,
         },
     ];
+
 function _() {
     let e = (0, s.bG)([h.A], () => h.A.getPremiumTypeSubscription()),
         t = (0, s.bG)([p.default], () => p.default.getCurrentUser()),
@@ -94,7 +99,9 @@ function _() {
         O = async () => {
             await o.Bo.post({
                 url: "/debug/subscription",
-                body: { plan_id: n },
+                body: {
+                    plan_id: n,
+                },
                 rejectWithError: !1,
             }),
                 await C();

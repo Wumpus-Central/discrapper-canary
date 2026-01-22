@@ -1,4 +1,8 @@
-n.d(t, { A: () => g }), n(896048), n(457529);
+n.d(t, {
+    A: () => g,
+}),
+    n(896048),
+    n(457529);
 var r = n(64700),
     i = n(635358),
     a = n(417597),
@@ -8,6 +12,7 @@ var r = n(64700),
     c = n(79387),
     u = n(67480),
     d = n(788868);
+
 function f(e, t, n) {
     return (
         t in e
@@ -21,6 +26,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,6 +43,7 @@ function p(e) {
     }
     return e;
 }
+
 function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -49,6 +56,7 @@ function _(e, t) {
     }
     return n;
 }
+
 function h(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -60,18 +68,24 @@ function h(e, t) {
         e
     );
 }
+
 function m() {
     let [e, t] = r.useState({});
     return {
         previewErrorsById: e,
         setErrorById: r.useCallback(
             (e, n) => {
-                t((t) => h(p({}, t), { [e]: n }));
+                t((t) =>
+                    h(p({}, t), {
+                        [e]: n,
+                    }),
+                );
             },
             [t],
         ),
     };
 }
+
 function g(e) {
     let { applicationId: t, skuIDs: n, currentPaymentSourceId: f, isGift: p, excludeSKUPurchasePreviews: _ = !1 } = e,
         h = r.useMemo(() => n.filter((e) => !d.oz.includes(e)), [JSON.stringify(n)]),
@@ -101,7 +115,9 @@ function g(e) {
             if (!_)
                 for (let e of h)
                     c.A.isFetchingSKU(e) ||
-                        (0, s.QX)(t, e, f, { isGift: p }).catch((t) => {
+                        (0, s.QX)(t, e, f, {
+                            isGift: p,
+                        }).catch((t) => {
                             t instanceof o.Ey &&
                                 (t.code === l.tG.BILLING_BUNDLE_ALREADY_PURCHASED ||
                                     t.code === l.tG.BILLING_BUNDLE_PARTIALLY_OWNED ||

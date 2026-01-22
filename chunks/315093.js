@@ -1,4 +1,6 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var r = n(681154),
     i = n(808380),
     a = n(429913),
@@ -9,6 +11,7 @@ var r = n(681154),
     u = n(158611),
     d = n(360469),
     f = n(985018);
+
 function p(e, t, n) {
     return (
         t in e
@@ -22,6 +25,7 @@ function p(e, t, n) {
         e
     );
 }
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -38,6 +42,7 @@ function _(e) {
     }
     return e;
 }
+
 function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -50,6 +55,7 @@ function h(e, t) {
     }
     return n;
 }
+
 function m(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -65,7 +71,10 @@ let g = {
         [i.Y.XBOX]: c.a4.XBOX,
         [i.Y.PLAYSTATION]: c.a4.PLAYSTATION,
     },
-    E = { [u.Z.EMBED]: s.Ob.Embed };
+    E = {
+        [u.Z.EMBED]: s.Ob.Embed,
+    };
+
 function b(e) {
     let t,
         n,
@@ -75,7 +84,10 @@ function b(e) {
         h = i.extra.game_name;
     if (null != i.extra.platform) {
         let e = g[i.extra.platform];
-        null != e && (t = { type: e });
+        null != e &&
+            (t = {
+                type: e,
+            });
     }
     n = i.content_type === r.I.PLAYED_GAME && (0, l.JM)(i) && !(0, l.I5)(i) ? f.t.vPg1JT : f.t.rPqqts;
     let b = E[s],
@@ -87,7 +99,9 @@ function b(e) {
                 trackEntryPointImpression: !0,
                 sourceUserId: i.author_id,
             }),
-            ariaDescription: f.intl.formatToPlainString(f.t["9sZWVp"], { gameName: h }),
+            ariaDescription: f.intl.formatToPlainString(f.t["9sZWVp"], {
+                gameName: h,
+            }),
         };
     return m(_({}, c), {
         thumbnailUrl: p,

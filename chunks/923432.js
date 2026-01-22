@@ -1,9 +1,11 @@
-n.d(t, { A: () => y });
+n.d(t, {
+    A: () => y,
+});
 var r = n(627968),
     l = n(64700),
     i = n(503698),
     a = n.n(i),
-    s = n(432022),
+    s = n(108531),
     o = n(311907),
     c = n(397927),
     u = n(250719),
@@ -17,6 +19,7 @@ let m = {
     friction: 30,
     tension: 300,
 };
+
 function A(e) {
     var t;
     let { guildChannels: n, jumpToVoiceChannels: i } = e,
@@ -49,7 +52,9 @@ function A(e) {
             (0, r.jsx)(c.Text, {
                 variant: "text-xs/semibold",
                 className: g.pM,
-                children: b.intl.format(b.t["fDlr+F"], { count: m.length }),
+                children: b.intl.format(b.t["fDlr+F"], {
+                    count: m.length,
+                }),
             }),
             (0, r.jsx)(d.A, {
                 guildId: n.id,
@@ -62,6 +67,7 @@ function A(e) {
         ],
     });
 }
+
 function y(e) {
     let { position: t, guildChannels: n, guildChannelsVersion: i, jumpToVoiceChannels: u, jumpToChannel: d } = e,
         { bottomBar: p, topBar: y } = (0, o.cf)([h.A], () => h.A.getUnreadStateForGuildId(n.id)),
@@ -70,7 +76,9 @@ function y(e) {
         E = j === h.k.HIDDEN,
         _ = (0, c.zhh)(
             {
-                to: { transform: E ? ("bottom" === t ? "translateY(180%)" : "translateY(-180%)") : "translateY(0%)" },
+                to: {
+                    transform: E ? ("bottom" === t ? "translateY(180%)" : "translateY(-180%)") : "translateY(0%)",
+                },
                 config: m,
             },
             O ? "respect-motion-settings" : "animate-never",
@@ -92,7 +100,9 @@ function y(e) {
             "aria-hidden": E,
             children:
                 j === h.k.HIDDEN
-                    ? (0, r.jsx)("div", { className: a()(g.M0, g.Te) })
+                    ? (0, r.jsx)("div", {
+                          className: a()(g.M0, g.Te),
+                      })
                     : j === h.k.UNREAD
                       ? (0, r.jsxs)(c.DUT, {
                             className: g.M0,
@@ -129,7 +139,9 @@ function y(e) {
                                   variant: "text-xs/semibold",
                                   color: "badge-text-brand",
                                   className: g.pM,
-                                  children: b.intl.format(b.t.EQcLyp, { count: v }),
+                                  children: b.intl.format(b.t.EQcLyp, {
+                                      count: v,
+                                  }),
                               }),
                           })
                         : j === h.k.VOICE_CHANNELS

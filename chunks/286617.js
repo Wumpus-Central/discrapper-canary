@@ -1,5 +1,8 @@
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 var r = n(981616);
+
 function i(e, t, n, i) {
     var a, s, o;
     let l = e.hasConnectedAccount(),

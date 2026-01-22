@@ -20,7 +20,9 @@ async function c(e) {
     return (
         await r.Bo.post({
             url: o.Rsh.VERIFY_AGE,
-            body: { method: e },
+            body: {
+                method: e,
+            },
             rejectWithError: !0,
         })
     ).body;
@@ -43,7 +45,9 @@ async function u(e) {
 async function d() {
     let e;
     return (
-        i.h.dispatch({ type: "AGE_VERIFICATION_METHODS_LOAD_START" }),
+        i.h.dispatch({
+            type: "AGE_VERIFICATION_METHODS_LOAD_START",
+        }),
         (e = (0, a.qn)() ? p() : f()),
         await (null == e
             ? void 0
@@ -55,21 +59,27 @@ async function d() {
                       });
                   })
                   .catch(() => {
-                      i.h.dispatch({ type: "AGE_VERIFICATION_METHODS_LOAD_FAILURE" });
+                      i.h.dispatch({
+                          type: "AGE_VERIFICATION_METHODS_LOAD_FAILURE",
+                      });
                   }))
     );
 }
+
 function f() {
     return r.Bo.get({
         url: o.Rsh.AGE_VERIFICATION_METHODS,
         rejectWithError: !0,
     });
 }
+
 function p() {
     let e = s.default.getSuspendedUserToken();
     return r.Bo.post({
         url: o.Rsh.SAFETY_HUB_GET_SUSPENDED_AGE_VERIFICATION_METHODS,
         rejectWithError: !0,
-        body: { token: e },
+        body: {
+            token: e,
+        },
     });
 }

@@ -1,3 +1,3 @@
 e.exports = JSON.parse(
-    '{"/cp93l":["Neste måned"],"raS6yf":["Forrige måned"],"JA5C7L":["Fjern"],"I8kUqR":["Åpne kalender"],"db85vU":["Ingenting å vise"],"bPKiId":["Ingen resultater for \xAB",[1,"query"],"\xBB"],"WfH9in":["Lukk"],"m3Vfcs":["Ikke vis på nytt"],"cgdAs2":["(Åpnes i en ny fane)"],"/Y7vRd":["Trykk på x for å fjerne."],"VMNfsY":["Valgt"],"A+pfVR":["Velg\xA0\u2026"],"v2YSk/":["Trinn ",[1,"stepNumber"]," av ",[1,"stepCount"]],"YpT3kk":["Forstørr og spill video"]}',
+    '{"/cp93l":["Neste m\xe5ned"],"raS6yf":["Forrige m\xe5ned"],"JA5C7L":["Fjern"],"I8kUqR":["\xc5pne kalender"],"db85vU":["Ingenting \xe5 vise"],"bPKiId":["Ingen resultater for \xab",[1,"query"],"\xbb"],"WfH9in":["Lukk"],"m3Vfcs":["Ikke vis p\xe5 nytt"],"cgdAs2":["(\xc5pnes i en ny fane)"],"/Y7vRd":["Trykk p\xe5 x for \xe5 fjerne."],"VMNfsY":["Valgt"],"A+pfVR":["Velg\xa0…"],"v2YSk/":["Trinn ",[1,"stepNumber"]," av ",[1,"stepCount"]],"YpT3kk":["Forst\xf8rr og spill video"]}',
 );

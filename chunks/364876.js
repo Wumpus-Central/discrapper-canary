@@ -1,4 +1,6 @@
-n.d(t, { _: () => f });
+n.d(t, {
+    _: () => f,
+});
 var l = n(627968),
     r = n(311907),
     i = n(582754),
@@ -10,6 +12,7 @@ var l = n(627968),
     d = n(810498),
     p = n(298305),
     m = n(686046);
+
 function f() {
     var e, t;
     let n = (0, r.bG)([o.A], () => o.A.useReducedMotion),

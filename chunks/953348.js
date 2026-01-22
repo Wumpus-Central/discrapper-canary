@@ -1,9 +1,12 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(627968),
     i = n(64700),
     l = n(397927),
     s = n(985018),
     a = n(872430);
+
 function c(e) {
     let { showSecondaryColor: t, palette: n, onPrimaryColorChange: c, onSecondaryColorChange: o } = e,
         d = i.useRef(null);
@@ -27,7 +30,9 @@ function c(e) {
                             children: [
                                 (0, r.jsx)("div", {
                                     className: a.oP,
-                                    style: { backgroundColor: n.primary },
+                                    style: {
+                                        backgroundColor: n.primary,
+                                    },
                                 }),
                                 (0, r.jsx)(l.Text, {
                                     variant: "text-xs/medium",
@@ -50,7 +55,9 @@ function c(e) {
                                 children: [
                                     (0, r.jsx)("div", {
                                         className: a.oP,
-                                        style: { backgroundColor: n.secondary },
+                                        style: {
+                                            backgroundColor: n.secondary,
+                                        },
                                     }),
                                     (0, r.jsx)(l.Text, {
                                         variant: "text-xs/medium",
@@ -73,6 +80,7 @@ function c(e) {
         })
     );
 }
+
 function o(e) {
     let {
         shouldShow: t,

@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var r = n(627968),
     i = n(64700),
     l = n(731738),
@@ -13,12 +15,15 @@ var r = n(627968),
     h = n(772659),
     A = n(985018),
     g = n(360830);
+
 function m(e) {
     let { active: t, user: n, channel: m } = e,
         b = (0, d.r)(),
         _ = i.useCallback(() => {
             (0, a.showToast)((0, a.createToast)(A.intl.string(A.t.pIQ3h4), a.ToastType.FAILURE)),
-                s.A.increment({ name: l.K.SPAM_MESSAGE_REQUEST_ERROR_VIEW });
+                s.A.increment({
+                    name: l.K.SPAM_MESSAGE_REQUEST_ERROR_VIEW,
+                });
         }, []),
         E = i.useCallback(() => {
             c.A.closeChannelSidebar(u.fe);
@@ -60,7 +65,9 @@ function m(e) {
                         disabled: N,
                         loading: C,
                     }),
-                    (0, r.jsx)(h.A, { channel: m }),
+                    (0, r.jsx)(h.A, {
+                        channel: m,
+                    }),
                 ],
             }),
         ],

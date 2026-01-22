@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -27,19 +29,31 @@ let g = function (e) {
                         e.tier === _.TVA.TIER_3 &&
                             (0, r.jsxs)(r.Fragment, {
                                 children: [
-                                    (0, r.jsx)("div", { className: a()(m.Bt, m.gP) }),
-                                    (0, r.jsx)("div", { className: a()(m.Bt, m.zV) }),
+                                    (0, r.jsx)("div", {
+                                        className: a()(m.Bt, m.gP),
+                                    }),
+                                    (0, r.jsx)("div", {
+                                        className: a()(m.Bt, m.zV),
+                                    }),
                                     (0, r.jsxs)("div", {
                                         className: a()(m.d0, m.OP),
                                         children: [
-                                            (0, r.jsx)(u.A, { className: m.qZ }),
-                                            (0, r.jsx)(u.A, { className: m.xB }),
-                                            (0, r.jsx)(c.A, { className: m.qi }),
+                                            (0, r.jsx)(u.A, {
+                                                className: m.qZ,
+                                            }),
+                                            (0, r.jsx)(u.A, {
+                                                className: m.xB,
+                                            }),
+                                            (0, r.jsx)(c.A, {
+                                                className: m.qi,
+                                            }),
                                         ],
                                     }),
                                     (0, r.jsx)("div", {
                                         className: a()(m.d0, m.FV),
-                                        children: (0, r.jsx)(u.A, { className: m.qZ }),
+                                        children: (0, r.jsx)(u.A, {
+                                            className: m.qZ,
+                                        }),
                                     }),
                                 ],
                             }),
@@ -58,13 +72,17 @@ let g = function (e) {
                                     className: m.Xk,
                                     variant: "heading-xxl/semibold",
                                     color: "always-white",
-                                    children: (0, d.gb)(e.tier, { useLevels: !1 }),
+                                    children: (0, d.gb)(e.tier, {
+                                        useLevels: !1,
+                                    }),
                                 }),
                                 (0, r.jsx)(o.Text, {
                                     className: m.$T,
                                     variant: "text-md/normal",
                                     color: "always-white",
-                                    children: h.intl.format(h.t.vbAsA7, { numBoostsRequired: _.M2T[e.tier] }),
+                                    children: h.intl.format(h.t.vbAsA7, {
+                                        numBoostsRequired: _.M2T[e.tier],
+                                    }),
                                 }),
                             ],
                         }),

@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -13,6 +15,7 @@ var r = n(627968),
     h = n(132860),
     b = n(508654),
     g = n(985018);
+
 function m(e) {
     let { channelId: t, onClick: n } = e,
         m = (0, s.Us)(),

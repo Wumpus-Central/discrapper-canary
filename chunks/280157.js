@@ -1,10 +1,13 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(47167),
     i = n(734057),
     a = n(994500),
     s = n(287809),
     o = n(926140),
     l = n(652215);
+
 function c(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.A,
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : s.default,

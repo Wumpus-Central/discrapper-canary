@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -41,7 +43,7 @@ let d = l.memo(function (e) {
                 color: "text-strong",
                 variant: "text-md/semibold",
                 className: u.Qq,
-                children: [t, " \u2014 ", n],
+                children: [t, " — ", n],
             }),
             d &&
                 null != p &&
@@ -61,7 +63,9 @@ let d = l.memo(function (e) {
                 color: "currentColor",
                 width: 20,
                 height: 20,
-                className: a()(u.mw, { [u.VU]: d }),
+                className: a()(u.mw, {
+                    [u.VU]: d,
+                }),
             }),
         ],
     });

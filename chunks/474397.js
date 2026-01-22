@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968),
     i = n(397927),
     a = n(531685),
@@ -6,6 +8,7 @@ var r = n(627968),
     o = n(837921),
     l = n(267102),
     c = n(652215);
+
 function u(e, t, n) {
     return (
         t in e
@@ -19,6 +22,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,6 +39,7 @@ function d(e) {
     }
     return e;
 }
+
 function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -47,6 +52,7 @@ function f(e, t) {
     }
     return n;
 }
+
 function p(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -58,17 +64,27 @@ function p(e, t) {
         e
     );
 }
+
 function _() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c.BRT.POPOUT;
     e !== c.BRT.APP &&
         (0, i.mMO)(
             async () => {
                 let { default: t } = await n.e("20570").then(n.bind(n, 368033));
-                return (n) => (0, r.jsx)(t, p(d({}, n), { contextKey: e }));
+                return (n) =>
+                    (0, r.jsx)(
+                        t,
+                        p(d({}, n), {
+                            contextKey: e,
+                        }),
+                    );
             },
-            { contextKey: (0, i.TId)(e) },
+            {
+                contextKey: (0, i.TId)(e),
+            },
         );
 }
+
 function h() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c.BRT.APP,
         t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],

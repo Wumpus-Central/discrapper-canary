@@ -41,6 +41,7 @@ var r = n(627968),
     M = n(818348),
     k = n(985018),
     U = n(490669);
+
 function G(e, t, n) {
     return (
         t in e
@@ -54,6 +55,7 @@ function G(e, t, n) {
         e
     );
 }
+
 function V(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -78,6 +80,7 @@ let F = {
         useBreadcrumbLabel: () => k.intl.string(k.t["W685+b"]),
     },
 };
+
 function B(e) {
     let t = (0, o.bG)([A.A], () => (A.A.isConnected() ? A.A.getChannelId() : null)),
         [n, r] = i.useState([]);
@@ -97,6 +100,7 @@ function B(e) {
         n
     );
 }
+
 function H(e, t, n) {
     let r = (0, d.A)(),
         a = B(e),
@@ -109,6 +113,7 @@ function H(e, t, n) {
         [t, l, a, r],
     );
 }
+
 function Y(e) {
     let { onStepChange: t, onBackClick: n, showBackButton: i = !1, disabled: a = !1, loading: s = !1 } = e,
         { hasPaymentSources: o } = (0, _.P5)(),
@@ -121,7 +126,11 @@ function Y(e) {
                 loading: s,
                 text: k.intl.string(k.t.XiOHRX),
             }),
-            i ? (0, r.jsx)(b.A, { onClick: n }) : null,
+            i
+                ? (0, r.jsx)(b.A, {
+                      onClick: n,
+                  })
+                : null,
         ],
     });
 }
@@ -144,7 +153,9 @@ let W = (e) => {
         x = (0, o.bG)([S.A], () => (null != A ? S.A.get(A) : null), [A]),
         L = (0, C.fq)(x),
         G = (0, C.xf)(x),
-        V = (0, P.j)(x, { shouldFetchIfMissing: !0 }),
+        V = (0, P.j)(x, {
+            shouldFetchIfMissing: !0,
+        }),
         F = async (e, t) => {},
         B = () =>
             (0, r.jsx)(g.A, {
@@ -157,7 +168,9 @@ let W = (e) => {
             }),
         Y = () =>
             null != s && (m === j.vQ.USER_PROFILE_WISHLIST || m === j.vQ.DM_CHANNEL_WISHLIST)
-                ? (0, r.jsx)(y.Z, { giftRecipient: s })
+                ? (0, r.jsx)(y.Z, {
+                      giftRecipient: s,
+                  })
                 : (0, r.jsx)(u.A, {
                       selectedSkuId: A,
                       validateSelectedGift: F,
@@ -228,7 +241,10 @@ let W = (e) => {
                             (0, r.jsxs)("div", {
                                 className: U.vz,
                                 children: [
-                                    null != I && (0, r.jsx)(w.Q, { application: I }),
+                                    null != I &&
+                                        (0, r.jsx)(w.Q, {
+                                            application: I,
+                                        }),
                                     (0, r.jsx)(l.Text, {
                                         variant: "text-sm/semibold",
                                         children: x.name,
@@ -273,6 +289,7 @@ let W = (e) => {
         disabled: null == s || s.id === (null == N ? void 0 : N.id) || i.length > j.Jo,
     };
 };
+
 function K(e) {
     let { handleStepChange: t, handleClose: n } = e,
         {
@@ -286,7 +303,9 @@ function K(e) {
         });
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(m.dZ, { children: i() }),
+            (0, r.jsx)(m.dZ, {
+                children: i(),
+            }),
             (0, r.jsx)(m.UX, {
                 children: (0, r.jsx)(l.jlY, {
                     "data-migration-pending": !0,
@@ -303,10 +322,13 @@ function K(e) {
         ],
     });
 }
+
 function z(e) {
     let { handleClose: t, guild: n, sku: a } = e,
         s = i.useCallback(() => {
-            (0, R.X)({ guildId: n.id });
+            (0, R.X)({
+                guildId: n.id,
+            });
         }, [n.id]),
         o = i.useCallback(() => {
             var e;

@@ -1,4 +1,6 @@
-r.d(t, { A: () => b });
+r.d(t, {
+    A: () => b,
+});
 var n = r(627968),
     i = r(64700),
     l = r(397927),
@@ -7,6 +9,7 @@ var n = r(627968),
     a = r(903093),
     u = r(652215),
     s = r(985018);
+
 function b(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         { shouldShowIncidentActions: b, isUnderLockdown: O, incidentData: p } = (0, o.Li)(e.id),

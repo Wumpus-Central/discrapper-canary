@@ -1,4 +1,8 @@
-n.r(t), n.d(t, { SubscriptionDetailsModal: () => g }), n(228524);
+n.r(t),
+    n.d(t, {
+        SubscriptionDetailsModal: () => g,
+    }),
+    n(228524);
 var r = n(627968),
     i = n(64700),
     a = n(885996),
@@ -13,6 +17,7 @@ var r = n(627968),
     _ = n(550732),
     h = n(376374),
     m = n(86889);
+
 function g(e) {
     var t, n;
     let {
@@ -84,7 +89,9 @@ function g(e) {
                   description: null != (t = T.description) ? t : void 0,
                   imgSrc: C,
                   title: null != (n = null == I ? void 0 : I.name) ? n : T.summary,
-                  tag: (0, r.jsx)(s.M, { type: E }),
+                  tag: (0, r.jsx)(s.M, {
+                      type: E,
+                  }),
                   FallbackIcon: o.bhD,
               }),
           });

@@ -23,6 +23,7 @@ let d =
     s.pr7.SUPPRESS_NOTIFICATIONS |
     s.pr7.URGENT |
     s.pr7.IS_COMPONENTS_V2;
+
 function u(e) {
     return (
         e.state !== s.cmJ.SEND_FAILED &&
@@ -36,12 +37,14 @@ function u(e) {
         !0
     );
 }
+
 function f(e) {
     var t;
     if (!u(e)) return !1;
     let n = null == (t = a.A.getChannel(e.channel_id)) ? void 0 : t.guild_id;
     return !(null != n && o.A.isChannelOrThreadParentGated(n, e.channel_id));
 }
+
 function g(e) {
     let t = (0, i.bG)([c.A, o.A, a.A], () => {
         var t, n, r;

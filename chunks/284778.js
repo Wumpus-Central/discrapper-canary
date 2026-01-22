@@ -1,4 +1,7 @@
-n.d(t, { default: () => y }), n(896048);
+n.d(t, {
+    default: () => y,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     o = n(110259),
@@ -14,6 +17,7 @@ var r = n(627968),
     _ = n(652215),
     m = n(315290),
     E = n(985018);
+
 function y(e) {
     let { transitionState: t, onClose: n } = e,
         [y, b] = l.useState(null),
@@ -23,7 +27,10 @@ function y(e) {
         N = (0, i.bG)([c.default], () => c.default.getCurrentUser()),
         h = l.useRef(null);
     l.useEffect(() => {
-        u.A.flowStep(m.do.ANY, m.Ot.AGE_GATE), s.default.track(_.HAw.OPEN_MODAL, { type: "Claim Age Gate" });
+        u.A.flowStep(m.do.ANY, m.Ot.AGE_GATE),
+            s.default.track(_.HAw.OPEN_MODAL, {
+                type: "Claim Age Gate",
+            });
     }, []),
         l.useEffect(() => {
             (null == N ? void 0 : N.nsfwAllowed) != null && n();
@@ -59,7 +66,9 @@ function y(e) {
             transitionState: t,
             onClose: n,
             title: E.intl.string(E.t.QpSKow),
-            subtitle: E.intl.format(E.t.EcJBEI, { helpURL: p.A.getArticleURL(_.MVz.AGE_GATE) }),
+            subtitle: E.intl.format(E.t.EcJBEI, {
+                helpURL: p.A.getArticleURL(_.MVz.AGE_GATE),
+            }),
             actions: [
                 {
                     text: E.intl.string(E.t.i4jeWR),
@@ -71,7 +80,9 @@ function y(e) {
             trackingProps: {
                 impression: {
                     impressionName: o.ImpressionNames.USER_AGE_GATE,
-                    impressionProperties: { existing_user: !1 },
+                    impressionProperties: {
+                        existing_user: !1,
+                    },
                 },
             },
             children: (0, r.jsx)(f.A, {

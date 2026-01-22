@@ -1,4 +1,8 @@
-n.d(t, { A: () => B }), n(896048), n(747238);
+n.d(t, {
+    A: () => B,
+}),
+    n(896048),
+    n(747238);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -98,6 +102,7 @@ class L extends l.Component {
             });
     }
 }
+
 function G(e) {
     let { children: t } = e;
     return (0, r.jsx)("div", {
@@ -108,6 +113,7 @@ function G(e) {
         }),
     });
 }
+
 function k(e) {
     let { searchContext: t, isFeedbackVisible: n, dismissFeedbackEntrypoint: l } = e;
     return n
@@ -117,6 +123,7 @@ function k(e) {
           })
         : null;
 }
+
 function U(e) {
     let {
             messages: t,
@@ -139,7 +146,9 @@ function U(e) {
     if (j)
         return (0, r.jsxs)(G, {
             children: [
-                (0, r.jsx)("div", { className: M.M6 }),
+                (0, r.jsx)("div", {
+                    className: M.M6,
+                }),
                 (0, r.jsx)("div", {
                     className: a()(M.pZ, M.gJ),
                     children: D.intl.string(D.t.uvDZBZ),
@@ -180,9 +189,15 @@ function U(e) {
         x = v ? D.intl.string(D.t["VrK/2R"]) : D.intl.string(D.t.V6nAfF);
     return (0, r.jsxs)(G, {
         children: [
-            (0, r.jsx)("div", { className: a()(M.$l, { [M.CC]: v }) }),
             (0, r.jsx)("div", {
-                className: a()(M.pZ, M.wV, { [M.CC]: v }),
+                className: a()(M.$l, {
+                    [M.CC]: v,
+                }),
+            }),
+            (0, r.jsx)("div", {
+                className: a()(M.pZ, M.wV, {
+                    [M.CC]: v,
+                }),
                 children: x,
             }),
         ],
@@ -252,7 +267,9 @@ let V = [],
                     let n = K + 1;
                     if (!W || e.targetPage !== n) return t;
                     {
-                        let e = D.intl.formatToPlainString(D.t["E+2azY"], { maxPages: n });
+                        let e = D.intl.formatToPlainString(D.t["E+2azY"], {
+                            maxPages: n,
+                        });
                         return (0, r.jsx)(c.m_, {
                             asContainer: !0,
                             text: e,
@@ -361,13 +378,17 @@ let V = [],
                             (0, r.jsx)(u.po8, {
                                 className: M.VC,
                                 messageType: u.YCn.WARNING,
-                                children: D.intl.formatToPlainString(D.t["E+2azY"], { maxPages: Z }),
+                                children: D.intl.formatToPlainString(D.t["E+2azY"], {
+                                    maxPages: Z,
+                                }),
                             }),
                         en &&
                             (0, r.jsx)(u.po8, {
                                 className: M.QR,
                                 messageType: u.YCn.INFO,
-                                children: D.intl.format(D.t["gQeg/R"], { handleClick: er }),
+                                children: D.intl.format(D.t["gQeg/R"], {
+                                    handleClick: er,
+                                }),
                             }),
                         (0, r.jsx)(U, {
                             messages: d,
@@ -396,11 +417,14 @@ let V = [],
             ],
         });
     });
+
 function H(e) {
     let { searchContext: t, selectedChannelId: n } = e,
         { isFeedbackVisible: i, dismissFeedbackEntrypoint: a } = (function () {
             let [e, t] = l.useState(!1),
-                n = (0, y.H)({ location: "SearchResults" });
+                n = (0, y.H)({
+                    location: "SearchResults",
+                });
             return (
                 (0, d.Ay)(() => {
                     n &&
@@ -434,7 +458,13 @@ function H(e) {
             };
         }),
         u = (0, s.bG)([m.A], () => m.A.getAnalyticsId(o)),
-        { renderedMessages: f, ignoreCount: b, blockCount: g } = (0, E.A)({ searchContext: t }),
+        {
+            renderedMessages: f,
+            ignoreCount: b,
+            blockCount: g,
+        } = (0, E.A)({
+            searchContext: t,
+        }),
         O = (0, s.bG)([C.A], () => {
             var e;
             return null != (e = C.A.getSearchMode(o)) ? e : w.BBH.NEWEST;
@@ -509,6 +539,7 @@ function H(e) {
         ],
     });
 }
+
 function B(e) {
     let { guildId: t, channelId: n } = e,
         l = (0, x.J)({

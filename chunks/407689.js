@@ -8,6 +8,7 @@ n.d(t, {
 var r = n(284009),
     i = n.n(r),
     a = n(73153);
+
 function s(e, t, n) {
     return (
         t in e
@@ -21,8 +22,8 @@ function s(e, t, n) {
         e
     );
 }
-let o = 60000,
-    l = 3000;
+let o = 6e4,
+    l = 3e3;
 var c = (function (e) {
         return (e.FORUM_CHANNEL = "forum_channel"), e;
     })({}),
@@ -37,7 +38,13 @@ var c = (function (e) {
 class d {
     maybeMarkSeen(e) {
         let t = this.seenIntervals[this.seenIntervals.length - 1];
-        return (null == t || null != t.endTimeMillis) && (this.seenIntervals.push({ startTimeMillis: e }), !0);
+        return (
+            (null == t || null != t.endTimeMillis) &&
+            (this.seenIntervals.push({
+                startTimeMillis: e,
+            }),
+            !0)
+        );
     }
     maybeMarkUnseen(e) {
         let t = this.seenIntervals[this.seenIntervals.length - 1];
@@ -57,7 +64,10 @@ class d {
             }
             if (e) {
                 let e = Date.now();
-                (t += e - r.startTimeMillis), n.push({ startTimeMillis: e });
+                (t += e - r.startTimeMillis),
+                    n.push({
+                        startTimeMillis: e,
+                    });
                 continue;
             }
             n.push(r);

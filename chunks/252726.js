@@ -1,4 +1,6 @@
-n.d(t, { A: () => v });
+n.d(t, {
+    A: () => v,
+});
 var r = n(627968);
 n(64700);
 var l = n(311907),
@@ -19,6 +21,7 @@ var l = n(311907),
     E = n(488926),
     j = n(652215),
     m = n(985018);
+
 function v(e, t) {
     let n = (0, l.bG)([d.Ay], () => d.Ay.getChannels(t)[d.vM], [t]),
         v = (0, l.bG)([y.A, s.A], () => {

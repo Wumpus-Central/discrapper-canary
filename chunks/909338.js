@@ -1,5 +1,8 @@
-n.d(t, { N: () => i });
+n.d(t, {
+    N: () => i,
+});
 var r = n(998218);
+
 function i(e) {
     var t, n, i;
     let a = r.A.toURLSafe(e),

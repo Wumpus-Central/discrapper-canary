@@ -1,8 +1,12 @@
-r.d(t, { e: () => l }), r(896048);
+r.d(t, {
+    e: () => l,
+}),
+    r(896048);
 var a = r(64700),
     n = r(716965),
     s = r(533553),
     i = r(985018);
+
 function l(e, t, r) {
     let [l, c] = a.useState(!1),
         [o, d] = a.useState(null),

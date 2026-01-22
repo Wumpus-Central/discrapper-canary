@@ -7,5 +7,7 @@ n(
         real: !0,
         forced: !e(962249)("symmetricDifference"),
     },
-    { symmetricDifference: o },
+    {
+        symmetricDifference: o,
+    },
 );

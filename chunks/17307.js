@@ -25,12 +25,26 @@ let d = (e, t, n) => ((0, i.Mw)(e) ? t : n),
                 t.length < s && t.push(n);
             };
         return (
-            i && o({ card: n.premiumGroup }),
-            r && o({ card: n.recurring3PPromotions }),
-            o({ card: n.displayNameStyles }),
-            o({ card: n.customThemes }),
-            o({ card: n.permadecos }),
-            o({ card: n.newAppStylesUpdateJune2024 }),
+            i &&
+                o({
+                    card: n.premiumGroup,
+                }),
+            r &&
+                o({
+                    card: n.recurring3PPromotions,
+                }),
+            o({
+                card: n.displayNameStyles,
+            }),
+            o({
+                card: n.customThemes,
+            }),
+            o({
+                card: n.permadecos,
+            }),
+            o({
+                card: n.newAppStylesUpdateJune2024,
+            }),
             t.push(...a),
             t
         );

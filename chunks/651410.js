@@ -1,4 +1,6 @@
-l.d(s, { default: () => f });
+l.d(s, {
+    default: () => f,
+});
 var t = l(627968),
     a = l(64700),
     i = l(789645),

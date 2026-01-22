@@ -14,6 +14,7 @@ var i,
     u = n(397927),
     h = n(652215),
     p = n(484932);
+
 function f(e, t, n) {
     return (
         t in e
@@ -99,7 +100,10 @@ let b = h.UVF.DEFAULT,
                                 },
                                 i,
                             )),
-                            (a = a = { children: t }),
+                            (a = a =
+                                {
+                                    children: t,
+                                }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(a))
                                 : (function (e, t) {
@@ -143,7 +147,9 @@ class O extends (i = s.PureComponent) {
         });
     }
 }
-f(O, "defaultProps", { disableScroll: !1 });
+f(O, "defaultProps", {
+    disableScroll: !1,
+});
 let v = (e) => {
         let { type: t = b, width: n, height: i, children: s, className: l, opacity: a = g, onClick: d } = e;
         return (0, r.jsx)(y.Provider, {
@@ -167,7 +173,13 @@ let v = (e) => {
         return (0, r.jsx)(A.Consumer, {
             children: (e) =>
                 (0, r.jsx)("div", {
-                    className: o()(p.content, { [p.staticSize]: !i }, n),
+                    className: o()(
+                        p.content,
+                        {
+                            [p.staticSize]: !i,
+                        },
+                        n,
+                    ),
                     style: e,
                     children: t,
                 }),
@@ -180,8 +192,13 @@ let v = (e) => {
     return (0, r.jsx)(y.Consumer, {
         children: (e) => {
             let { opacity: l } = e,
-                o = { backgroundColor: "rgba(54, 57, 63, ".concat("" + (null != n ? n : l), ")") };
-            if ("string" == typeof t.type) return s.cloneElement(t, { style: o });
+                o = {
+                    backgroundColor: "rgba(54, 57, 63, ".concat("" + (null != n ? n : l), ")"),
+                };
+            if ("string" == typeof t.type)
+                return s.cloneElement(t, {
+                    style: o,
+                });
             {
                 if (i.includes(t.type))
                     return (0, r.jsx)(A.Provider, {
@@ -223,7 +240,9 @@ let v = (e) => {
             forceOpen: a,
             children: (0, r.jsx)(u.DUT, {
                 onClick: s,
-                className: o()(p.icon, { [p.toggledIconOn]: c }),
+                className: o()(p.icon, {
+                    [p.toggledIconOn]: c,
+                }),
                 innerRef: t,
                 "aria-label": i,
                 children: (0, r.jsx)(n, {

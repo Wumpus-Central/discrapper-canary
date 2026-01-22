@@ -12,6 +12,7 @@ n(576705);
 var i = n(652215),
     a = n(985018);
 let s = "_role";
+
 function o(e) {
     if (!(e >= 0))
         switch (-e) {
@@ -22,9 +23,12 @@ function o(e) {
             case 1:
                 return a.intl.string(a.t.R0RpRX);
             default:
-                return a.intl.formatToPlainString(a.t.cYwlp9, { code: -e });
+                return a.intl.formatToPlainString(a.t.cYwlp9, {
+                    code: -e,
+                });
         }
 }
+
 function l(e, t) {
     let n = {
         message: "Invalid form body",
@@ -44,10 +48,12 @@ function l(e, t) {
         body: n,
     });
 }
+
 function c(e) {
     let { newRoleParams: t } = e;
     if (null != t && "" === t.name.trim()) return l(s, a.intl.string(a.t["V0B/k6"]));
 }
+
 function u(e) {
     var t;
     let {
@@ -78,6 +84,7 @@ function u(e) {
         canPublishOrUnpublish: !(null == n || f),
     };
 }
+
 function d(e, t) {
     return "".concat(location.protocol, "//").concat(location.host).concat(i.BVt.GUILD_PRODUCT(e, t));
 }

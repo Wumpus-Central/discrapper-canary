@@ -1,4 +1,6 @@
-n.d(t, { A: () => v });
+n.d(t, {
+    A: () => v,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -14,6 +16,7 @@ var i = n(311907),
     _ = n(234419),
     h = n(788868),
     m = n(652215);
+
 function g(e, t, n) {
     return (
         t in e
@@ -27,6 +30,7 @@ function g(e, t, n) {
         e
     );
 }
+
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -43,6 +47,7 @@ function E(e) {
     }
     return e;
 }
+
 function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -55,6 +60,7 @@ function b(e, t) {
     }
     return n;
 }
+
 function y(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -66,6 +72,7 @@ function y(e, t) {
         e
     );
 }
+
 function O(e, t) {
     if (null == e) return {};
     var n,
@@ -82,6 +89,7 @@ function O(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function A(e, t) {
     if (null == e) return {};
     var n,
@@ -92,6 +100,7 @@ function A(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function v(e) {
     let {
             onClick: t,
@@ -115,9 +124,15 @@ function v(e) {
         onClick: (e) => {
             var i;
             if ((e.preventDefault(), null == w))
-                return void (0, c.pX)(m.BVt.LOGIN, { source: "premium_subscribe_button" });
+                return void (0, c.pX)(m.BVt.LOGIN, {
+                    source: "premium_subscribe_button",
+                });
             if ((null == t || t(e), (null == P ? void 0 : P.status) === m.Dmq.ACCOUNT_HOLD)) {
-                (0, o.xf)(), (0, d.openUserSettings)(u.X.NITRO_PANEL, { section: m.nc_.PREMIUM }), null == A || A(!1);
+                (0, o.xf)(),
+                    (0, d.openUserSettings)(u.X.NITRO_PANEL, {
+                        section: m.nc_.PREMIUM,
+                    }),
+                    null == A || A(!1);
                 return;
             }
             if (!w.isClaimed())
@@ -128,7 +143,12 @@ function v(e) {
                     return (t) => {
                         let { onClose: n } = t,
                             i = O(t, ["onClose"]);
-                        return (0, r.jsx)(e, y(E({}, i), { onClose: n }));
+                        return (0, r.jsx)(
+                            e,
+                            y(E({}, i), {
+                                onClose: n,
+                            }),
+                        );
                     };
                 });
             if (!w.verified)
@@ -137,7 +157,12 @@ function v(e) {
                     return (t) => {
                         let { onClose: n } = t,
                             i = O(t, ["onClose"]);
-                        return (0, r.jsx)(e, y(E({}, i), { onClose: n }));
+                        return (0, r.jsx)(
+                            e,
+                            y(E({}, i), {
+                                onClose: n,
+                            }),
+                        );
                     };
                 });
             let s = L ? (null == (i = x.subscription_trial) ? void 0 : i.id) : null,

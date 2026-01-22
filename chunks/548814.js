@@ -12,7 +12,9 @@ e.exports = function (e) {
             begin: "\\b(\\d+(_\\d+)*#[a-fA-F0-9]+(_[a-fA-F0-9]+)*|\\d+(_\\d+)*(\\.\\d+(_\\d+)*)?([eE][-+]?\\d+)?)",
             relevance: 0,
         },
-        s = { begin: "fun\\s+" + t + "/\\d+" },
+        s = {
+            begin: "fun\\s+" + t + "/\\d+",
+        },
         o = {
             begin: n + "\\(",
             end: "\\)",
@@ -73,7 +75,9 @@ e.exports = function (e) {
             scope: "string",
             contains: [e.BACKSLASH_ESCAPE],
             variants: [
-                { match: /~\w?"""("*)(?!")[\s\S]*?"""\1/ },
+                {
+                    match: /~\w?"""("*)(?!")[\s\S]*?"""\1/,
+                },
                 {
                     begin: /~\w?\(/,
                     end: /\)/,
@@ -124,7 +128,9 @@ e.exports = function (e) {
     h.contains = [
         i,
         s,
-        e.inherit(e.APOS_STRING_MODE, { className: "" }),
+        e.inherit(e.APOS_STRING_MODE, {
+            className: "",
+        }),
         h,
         o,
         _,
@@ -183,7 +189,12 @@ e.exports = function (e) {
                 end: "->",
                 returnBegin: !0,
                 illegal: "\\(|#|//|/\\*|\\\\|:|;",
-                contains: [E, e.inherit(e.TITLE_MODE, { begin: t })],
+                contains: [
+                    E,
+                    e.inherit(e.TITLE_MODE, {
+                        begin: t,
+                    }),
+                ],
                 starts: {
                     end: ";|\\.",
                     keywords: r,
@@ -212,7 +223,9 @@ e.exports = function (e) {
             u,
             l,
             f,
-            { begin: /\.$/ },
+            {
+                begin: /\.$/,
+            },
         ],
     };
 };

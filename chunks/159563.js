@@ -14,9 +14,11 @@ function r(e) {
             ". Find the full error at: https://bit.ly/3cXEKWf",
     );
 }
+
 function i(e) {
     return !!e && !!e[K];
 }
+
 function a(e) {
     var t;
     return (
@@ -35,6 +37,7 @@ function a(e) {
             p(e))
     );
 }
+
 function s(e, t, n) {
     void 0 === n && (n = !1),
         0 === o(e)
@@ -45,32 +48,41 @@ function s(e, t, n) {
                   return t(r, n, e);
               });
 }
+
 function o(e) {
     var t = e[K];
     return t ? (t.i > 3 ? t.i - 4 : t.i) : Array.isArray(e) ? 1 : f(e) ? 2 : 3 * !!p(e);
 }
+
 function l(e, t) {
     return 2 === o(e) ? e.has(t) : Object.prototype.hasOwnProperty.call(e, t);
 }
+
 function c(e, t) {
     return 2 === o(e) ? e.get(t) : e[t];
 }
+
 function u(e, t, n) {
     var r = o(e);
     2 === r ? e.set(t, n) : 3 === r ? e.add(n) : (e[t] = n);
 }
+
 function d(e, t) {
     return e === t ? 0 !== e || 1 / e == 1 / t : e != e && t != t;
 }
+
 function f(e) {
     return F && e instanceof Map;
 }
+
 function p(e) {
     return B && e instanceof Set;
 }
+
 function _(e) {
     return e.o || e.t;
 }
+
 function h(e) {
     if (Array.isArray(e)) return Array.prototype.slice.call(e);
     var t = Z(e);
@@ -89,6 +101,7 @@ function h(e) {
     }
     return Object.create(Object.getPrototypeOf(e), t);
 }
+
 function m(e, t) {
     return (
         void 0 === t && (t = !1),
@@ -108,31 +121,40 @@ function m(e, t) {
         e
     );
 }
+
 function g() {
     r(2);
 }
+
 function E(e) {
     return null == e || "object" != typeof e || Object.isFrozen(e);
 }
+
 function b(e) {
     var t = Q[e];
     return t || r(18, e), t;
 }
+
 function y(e, t) {
     Q[e] || (Q[e] = t);
 }
+
 function O() {
     return G;
 }
+
 function A(e, t) {
     t && (b("Patches"), (e.u = []), (e.s = []), (e.v = t));
 }
+
 function v(e) {
     S(e), e.p.forEach(T), (e.p = null);
 }
+
 function S(e) {
     e === G && (G = e.l);
 }
+
 function I(e) {
     return (G = {
         p: [],
@@ -142,10 +164,12 @@ function I(e) {
         _: 0,
     });
 }
+
 function T(e) {
     var t = e[K];
     0 === t.i || 1 === t.i ? t.j() : (t.g = !0);
 }
+
 function C(e, t) {
     t._ = t.p.length;
     var n = t.p[0],
@@ -162,6 +186,7 @@ function C(e, t) {
         e !== Y ? e : void 0
     );
 }
+
 function N(e, t, n) {
     if (E(t)) return t;
     var r = t[K];
@@ -192,6 +217,7 @@ function N(e, t, n) {
     }
     return r.o;
 }
+
 function R(e, t, n, r, s, o, c) {
     if (i(s)) {
         var d = N(e, s, o && t && 3 !== t.i && !l(t.R, r) ? o.concat(r) : void 0);
@@ -203,13 +229,16 @@ function R(e, t, n, r, s, o, c) {
         N(e, s), (t && t.A.l) || w(e, s);
     }
 }
+
 function w(e, t, n) {
     void 0 === n && (n = !1), !e.l && e.h.D && e.m && m(t, n);
 }
+
 function P(e, t) {
     var n = e[K];
     return (n ? _(n) : e)[t];
 }
+
 function D(e, t) {
     if (t in e)
         for (var n = Object.getPrototypeOf(e); n; ) {
@@ -218,12 +247,15 @@ function D(e, t) {
             n = Object.getPrototypeOf(n);
         }
 }
+
 function x(e) {
     e.P || ((e.P = !0), e.l && x(e.l));
 }
+
 function L(e) {
     e.o || (e.o = h(e.t));
 }
+
 function j(e, t, n) {
     var r = f(t)
         ? b("MapSet").F(t, n)
@@ -256,6 +288,7 @@ function j(e, t, n) {
             : b("ES5").J(t, n);
     return (n ? n.A : O()).p.push(r), r;
 }
+
 function M(e) {
     return (
         i(e) || r(22, e),
@@ -277,6 +310,7 @@ function M(e) {
         })(e)
     );
 }
+
 function k(e, t) {
     switch (t) {
         case 2:

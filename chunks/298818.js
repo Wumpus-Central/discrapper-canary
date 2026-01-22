@@ -1,4 +1,9 @@
-n.d(t, { A: () => d }), n(896048), n(492834), n(638769);
+n.d(t, {
+    A: () => d,
+}),
+    n(896048),
+    n(492834),
+    n(638769);
 var r = n(627968),
     i = n(64700),
     l = n(397927),
@@ -6,6 +11,7 @@ var r = n(627968),
     a = n(308072),
     c = n(985018),
     o = n(194976);
+
 function d(e) {
     let { guildId: t, selectedGameApplicationIds: n, onUpdateGames: d, disabled: u } = e,
         { topGames: f, tryFetchTopGames: g } = (0, s.f)(),
@@ -38,7 +44,9 @@ function d(e) {
           ? null
           : (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, r.jsx)("div", { className: o.me }),
+                    (0, r.jsx)("div", {
+                        className: o.me,
+                    }),
                     (0, r.jsxs)("div", {
                         className: o.rS,
                         children: [

@@ -1,4 +1,8 @@
-n.d(t, { A: () => N }), n(896048), n(65821);
+n.d(t, {
+    A: () => N,
+}),
+    n(896048),
+    n(65821);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -15,6 +19,7 @@ var r = n(627968),
     m = n(690521),
     g = n(218394),
     E = n(732139);
+
 function b(e, t, n) {
     return (
         t in e
@@ -28,6 +33,7 @@ function b(e, t, n) {
         e
     );
 }
+
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -44,6 +50,7 @@ function y(e) {
     }
     return e;
 }
+
 function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -56,6 +63,7 @@ function O(e, t) {
     }
     return n;
 }
+
 function A(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -67,6 +75,7 @@ function A(e, t) {
         e
     );
 }
+
 function v(e, t) {
     if (null == e) return {};
     var n,
@@ -83,6 +92,7 @@ function v(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function S(e, t) {
     if (null == e) return {};
     var n,
@@ -94,6 +104,7 @@ function S(e, t) {
     return i;
 }
 let I = __OVERLAY__ ? () => (0, o.bG)([_.default], () => _.default.isInstanceFocused()) : g.j;
+
 function T(e) {
     var t, n;
     let {
@@ -177,10 +188,19 @@ function T(e) {
             [O, f, _, R, B],
         ),
         $ = i.useMemo(() => {
-            let e = null != f && "" !== f ? { "data-id": f } : { "data-name": _ };
+            let e =
+                null != f && "" !== f
+                    ? {
+                          "data-id": f,
+                      }
+                    : {
+                          "data-name": _,
+                      };
             return y(
                 A(y({}, j), {
-                    className: s()("emoji", c, { jumboable: "jumbo" === S }),
+                    className: s()("emoji", c, {
+                        jumboable: "jumbo" === S,
+                    }),
                     onError: X,
                     onMouseEnter: Z,
                     onMouseLeave: Q,
@@ -250,6 +270,7 @@ function T(e) {
               ],
           });
 }
+
 function C(e) {
     let { useThoughtfullyAnimated: t } = i.useContext(f.W),
         { animate: n, registerRef: a } = t(),
@@ -262,6 +283,7 @@ function C(e) {
         }),
     );
 }
+
 function N(e) {
     return null == e.emojiId && null == e.emojiName && null == e.src
         ? null

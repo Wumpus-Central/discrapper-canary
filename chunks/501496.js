@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(627968);
 n(64700);
 var i = n(417597),
@@ -10,6 +12,7 @@ var i = n(417597),
     u = n(731854),
     d = n(985018),
     f = n(835818);
+
 function p() {
     return (0, i.bG)([o.A], () => o.A.supports(u.O5.LOOPBACK))
         ? (0, r.jsx)("div", {

@@ -53,6 +53,7 @@ var l = n(627968),
     z = n(985018),
     Q = n(442875),
     X = n(336389);
+
 function q(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -78,6 +79,7 @@ function q(e) {
     }
     return e;
 }
+
 function K(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -113,6 +115,7 @@ let $ = u.Ay.connectStores([R.A, I.A], () => {
         },
     };
 })(h.A);
+
 function ee(e) {
     let { overwrite: t } = e,
         n = (0, u.bG)([R.A], () => R.A.channel),
@@ -209,12 +212,16 @@ function ee(e) {
                 ? null
                 : (0, l.jsx)(f.Button, {
                       variant: "critical-secondary",
-                      text: z.intl.format(z.t.txPV7k, { name: h() }),
+                      text: z.intl.format(z.t.txPV7k, {
+                          name: h(),
+                      }),
                       onClick: () => {
                           let e = h();
                           p.A.show({
                               title: z.intl.string(z.t.GuPYQB),
-                              body: z.intl.format(z.t.xERCnZ, { name: e }),
+                              body: z.intl.format(z.t.xERCnZ, {
+                                  name: e,
+                              }),
                               cancelText: z.intl.string(z.t["ETE/oC"]),
                               onConfirm: () => b.A.clearPermissionOverwrite(d, t.id),
                           });
@@ -223,6 +230,7 @@ function ee(e) {
         ],
     });
 }
+
 function et(e) {
     let { guildId: t, channelId: n, user: i } = e,
         r = i.getAvatarURL(t, 32),
@@ -275,9 +283,11 @@ function et(e) {
         })
     );
 }
+
 function en(e) {
     return "object" == typeof e && null != e && "colorString" in e && "name" in e;
 }
+
 function el(e) {
     let { guild: t, channel: n, permissionOverwrites: r, onClose: a, onSelect: c } = e,
         h = (0, u.bG)([P.A], () => P.A.getSortedRoles(t.id)),
@@ -326,7 +336,10 @@ function el(e) {
                         if (en(i)) {
                             let e;
                             return (
-                                null != i.colorString && (e = { color: i.colorString }),
+                                null != i.colorString &&
+                                    (e = {
+                                        color: i.colorString,
+                                    }),
                                 (0, l.jsxs)("div", {
                                     className: s()(X.uN, Q.xf),
                                     children: [
@@ -359,6 +372,7 @@ function el(e) {
         }),
     });
 }
+
 function ei() {
     let e,
         t = i.useRef(null),
@@ -394,7 +408,9 @@ function ei() {
                                     : () => {
                                           p.A.show({
                                               title: z.intl.string(z.t.GuPYQB),
-                                              body: z.intl.format(z.t.xERCnZ, { name: s }),
+                                              body: z.intl.format(z.t.xERCnZ, {
+                                                  name: s,
+                                              }),
                                               cancelText: z.intl.string(z.t["ETE/oC"]),
                                               onConfirm: () => b.A.clearPermissionOverwrite(r.id, e),
                                           });
@@ -453,7 +469,9 @@ function ei() {
                         guild: d,
                         theme: C,
                         roleStyle: E,
-                        "aria-label": W.Ay.getUserTag(e, { decoration: "never" }),
+                        "aria-label": W.Ay.getUserTag(e, {
+                            decoration: "never",
+                        }),
                         onContextMenu: (t) =>
                             S(t, {
                                 id: e.id,
@@ -507,21 +525,33 @@ function ei() {
                     children: (n) =>
                         (0, l.jsx)(
                             f.VQ0.Header,
-                            K(q({ ref: t }, n), {
-                                children: (0, l.jsxs)("div", {
-                                    className: Q.$M,
-                                    children: [
-                                        (0, l.jsxs)("span", {
-                                            children: [z.intl.string(z.t["LPJmL/"]), "/", z.intl.string(z.t["9Oq93m"])],
-                                        }),
-                                        (0, l.jsx)("img", {
-                                            alt: "",
-                                            className: Q.aN,
-                                            src: e,
-                                        }),
-                                    ],
-                                }),
-                            }),
+                            K(
+                                q(
+                                    {
+                                        ref: t,
+                                    },
+                                    n,
+                                ),
+                                {
+                                    children: (0, l.jsxs)("div", {
+                                        className: Q.$M,
+                                        children: [
+                                            (0, l.jsxs)("span", {
+                                                children: [
+                                                    z.intl.string(z.t["LPJmL/"]),
+                                                    "/",
+                                                    z.intl.string(z.t["9Oq93m"]),
+                                                ],
+                                            }),
+                                            (0, l.jsx)("img", {
+                                                alt: "",
+                                                className: Q.aN,
+                                                src: e,
+                                            }),
+                                        ],
+                                    }),
+                                },
+                            ),
                         ),
                 })),
                 M,
@@ -549,6 +579,7 @@ function ei() {
         }),
     });
 }
+
 function er() {
     let { channel: e, permissionOverwrites: t, selectedOverwriteId: n } = (0, u.cf)([R.A], () => R.A);
     if (
@@ -561,6 +592,11 @@ function er() {
     let i = t[n];
     return (0, l.jsxs)(N.Ay, {
         className: Q.kL,
-        children: [(0, l.jsx)(ei, {}), (0, l.jsx)(ee, { overwrite: i })],
+        children: [
+            (0, l.jsx)(ei, {}),
+            (0, l.jsx)(ee, {
+                overwrite: i,
+            }),
+        ],
     });
 }

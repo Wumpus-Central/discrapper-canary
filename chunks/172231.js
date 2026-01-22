@@ -1,4 +1,7 @@
-e.d(i, { default: () => E }), e(321073);
+e.d(i, {
+    default: () => E,
+}),
+    e(321073);
 var n = e(627968);
 e(64700);
 var a = e(158954),
@@ -13,6 +16,7 @@ var a = e(158954),
     c = e(788868),
     I = e(985018),
     g = e(98209);
+
 function E(t) {
     var i;
     let e,
@@ -64,7 +68,9 @@ function E(t) {
                           S(),
                               (0, l.K)({
                                   guildId: E.guild_id,
-                                  location: { section: _.JJy.STAGE_VIDEO_LIMIT },
+                                  location: {
+                                      section: _.JJy.STAGE_VIDEO_LIMIT,
+                                  },
                               }),
                               s.default.track(_.HAw.BOOSTING_UPSELL_CLICKED, {
                                   guild_id: E.guild_id,

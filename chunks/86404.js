@@ -1,4 +1,6 @@
-t.d(l, { A: () => x });
+t.d(l, {
+    A: () => x,
+});
 var n = t(627968),
     i = t(64700),
     r = t(397927),
@@ -11,6 +13,7 @@ var n = t(627968),
     f = t(503062),
     p = t(985018),
     m = t(781425);
+
 function x(e) {
     let { user: l, guildId: t, channelId: x, onClose: A } = e,
         { mutualFriends: j } = (0, d.A)(l),
@@ -34,7 +37,9 @@ function x(e) {
                       ? (0, n.jsxs)("div", {
                             className: m.Ie,
                             children: [
-                                (0, n.jsx)("div", { className: m.on }),
+                                (0, n.jsx)("div", {
+                                    className: m.on,
+                                }),
                                 (0, n.jsx)("div", {
                                     className: m.BI,
                                     children: p.intl.string(p.t["/5p4gx"]),
@@ -53,7 +58,9 @@ function x(e) {
                                     onSelect: () => {
                                         var e, l, t;
                                         null == A || A(),
-                                            v({ action: "PRESS_MUTUAL_FRIEND" }),
+                                            v({
+                                                action: "PRESS_MUTUAL_FRIEND",
+                                            }),
                                             (e = i.id),
                                             (0, u.openUserProfileModal)(
                                                 ((l = (function (e) {

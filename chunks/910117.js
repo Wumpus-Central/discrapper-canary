@@ -10,6 +10,7 @@ var r = n(33851),
     s = n(316031),
     o = n(661191),
     l = n(859126);
+
 function c(e, t, n) {
     return (
         t in e
@@ -23,6 +24,7 @@ function c(e, t, n) {
         e
     );
 }
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -39,6 +41,7 @@ function u(e) {
     }
     return e;
 }
+
 function d() {
     return {
         query: "",
@@ -63,9 +66,11 @@ function d() {
     };
 }
 let f = Object.freeze(d());
+
 function p(e, t) {
     return null != e && !!e.toLowerCase().includes(t.toLowerCase());
 }
+
 function _(e, t) {
     if ("" === t.trim()) return !1;
     let [n, r] = (0, l.H)(t);
@@ -77,6 +82,7 @@ function _(e, t) {
     for (let e of n) if (p(i, e)) return !0;
     return !1;
 }
+
 function h(e, t) {
     return 0 !== t.size && Array.from(t).every((t) => e.roles.includes(t));
 }

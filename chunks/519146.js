@@ -1,4 +1,7 @@
-n.d(t, { default: () => O }), n(228524);
+n.d(t, {
+    default: () => O,
+}),
+    n(228524);
 var r = n(627968);
 n(64700);
 var a = n(284009),
@@ -18,6 +21,7 @@ var a = n(284009),
     p = n(897518),
     g = n(985018),
     A = n(451144);
+
 function O(e) {
     var t, n;
     let { transitionState: a, guildProductListingId: O, analyticsLocation: v, guildId: _, onClose: y } = e,
@@ -67,16 +71,26 @@ function O(e) {
             (0, r.jsxs)("div", {
                 className: A.rf,
                 children: [
-                    (0, r.jsx)(j.A, { listing: N }),
-                    (0, r.jsx)(o.hKd, { size: 16 }),
-                    (0, r.jsx)("div", { className: A.OO }),
-                    (0, r.jsx)(o.hKd, { size: 16 }),
+                    (0, r.jsx)(j.A, {
+                        listing: N,
+                    }),
+                    (0, r.jsx)(o.hKd, {
+                        size: 16,
+                    }),
+                    (0, r.jsx)("div", {
+                        className: A.OO,
+                    }),
+                    (0, r.jsx)(o.hKd, {
+                        size: 16,
+                    }),
                     (0, r.jsx)(o.Heading, {
                         variant: "heading-lg/medium",
                         color: "text-strong",
                         children: g.intl.string(g.t.TNnDJs),
                     }),
-                    (0, r.jsx)(o.hKd, { size: 12 }),
+                    (0, r.jsx)(o.hKd, {
+                        size: 12,
+                    }),
                     (0, r.jsx)(x.A, {
                         className: A.h_,
                         variant: "text-md/normal",

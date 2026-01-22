@@ -1,7 +1,11 @@
-n.d(t, { A: () => d }), n(896048);
+n.d(t, {
+    A: () => d,
+}),
+    n(896048);
 var r,
     i = n(311907),
     a = n(73153);
+
 function s(e, t, n) {
     return (
         t in e
@@ -16,10 +20,12 @@ function s(e, t, n) {
     );
 }
 let o = new Map();
+
 function l(e) {
     let { channelId: t, enabled: n } = e;
     o.set(t, n);
 }
+
 function c(e) {
     let { channelId: t } = e;
     o.delete(t);

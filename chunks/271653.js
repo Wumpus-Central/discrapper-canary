@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968),
     i = n(732955),
     l = n(397927),
@@ -13,9 +15,12 @@ var r = n(627968),
     b = n(482711),
     m = n(985018),
     p = n(296217);
+
 function x(e) {
     let { guildId: t, handleCreateOrEditProduct: i } = e,
-        f = (0, d.fZ)(t, { publishedOnly: !1 }),
+        f = (0, d.fZ)(t, {
+            publishedOnly: !1,
+        }),
         { shouldRestrictUpdatingCreatorMonetizationSettings: x } = (0, a.nq)(t),
         h = f.length > 0;
     return (0, r.jsx)("div", {
@@ -37,7 +42,12 @@ function x(e) {
                                           onEditProduct: () => i(e.id),
                                           onUnpublishProduct: () => {
                                               var n;
-                                              return (n = e.id), void (0, o.Qm)(t, n, { published: !1 });
+                                              return (
+                                                  (n = e.id),
+                                                  void (0, o.Qm)(t, n, {
+                                                      published: !1,
+                                                  })
+                                              );
                                           },
                                           onDeleteProduct: () => {
                                               var i, s;
@@ -116,6 +126,7 @@ function x(e) {
         }),
     });
 }
+
 function h(e) {
     let { guildId: t } = e,
         { shouldRestrictUpdatingCreatorMonetizationSettings: n } = (0, a.nq)(t),
@@ -130,7 +141,9 @@ function h(e) {
                 onClick: () => s(null),
                 disabled: n,
             }),
-            (0, r.jsx)(l.hKd, { size: 24 }),
+            (0, r.jsx)(l.hKd, {
+                size: 24,
+            }),
             (0, r.jsx)(x, {
                 guildId: t,
                 handleCreateOrEditProduct: s,

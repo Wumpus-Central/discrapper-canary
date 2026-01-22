@@ -7,6 +7,7 @@ function r(e, t) {
         s = i[a];
     return null == s ? (console.warn('Unable to find element constructor "'.concat(a, '" in'), i), !1) : e instanceof s;
 }
+
 function i(e) {
     let t = parseInt(e, 10);
     return isNaN(t) ? 0 : t;
@@ -37,6 +38,7 @@ let a = /input/i,
         "tel",
         "url",
     ]);
+
 function l(e) {
     if (null == e) return !1;
     if ("true" === e.getAttribute("contenteditable") || s.test(e.tagName)) return !0;
@@ -47,6 +49,7 @@ function l(e) {
     }
     return !1;
 }
+
 function c(e) {
     let { target: t } = e;
     return null == t
@@ -57,6 +60,7 @@ function c(e) {
             ? t.document
             : (console.warn("Unable to get owner document from event", e.type), null);
 }
+
 function u(e, t) {
     let n = e.parentElement;
     for (; null != n; ) {
@@ -65,6 +69,7 @@ function u(e, t) {
     }
     return null;
 }
+
 function d(e, t) {
     let n = e.parentElement;
     for (; null != n; ) {

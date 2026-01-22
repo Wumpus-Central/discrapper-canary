@@ -1,4 +1,6 @@
-t.d(e, { default: () => u });
+t.d(e, {
+    default: () => u,
+});
 var r = t(627968);
 t(64700);
 var c = t(397927),
@@ -21,7 +23,14 @@ let u = (0, l.A)(
             onClose: a.Z_,
             "aria-label": A.intl.string(A.t.Xm41aV),
             onSelect: t,
-            children: [(0, r.jsx)(c.rXV, { children: l }), (0, r.jsx)(c.rXV, { children: i })],
+            children: [
+                (0, r.jsx)(c.rXV, {
+                    children: l,
+                }),
+                (0, r.jsx)(c.rXV, {
+                    children: i,
+                }),
+            ],
         });
     },
     [i.A.CONTEXT_MENU, i.A.CHANNEL_LIST_DIRECTORY_CHANNEL_MENU],

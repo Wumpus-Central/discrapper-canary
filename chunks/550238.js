@@ -54,13 +54,21 @@ let s = [a.hes.CARD, a.hes.PAYPAL],
     ]),
     c = new Map([[a.hes.PAYSAFE_CARD, new Set(["DE"])]]),
     u = ["city", "country", "line1"];
+
 function d(e) {
     let { ipCountryCode: t, location: n } = e,
         {
             enabledPaymentTypes: o,
             forceCountryCode: u,
             validCountryCodes: d,
-        } = i.Ay.getCurrentConfig({ location: n }, { autoTrackExposure: !1 }),
+        } = i.Ay.getCurrentConfig(
+            {
+                location: n,
+            },
+            {
+                autoTrackExposure: !1,
+            },
+        ),
         f = null != t ? t : "ALL";
     d.length > 0 && null != u && null != t && (f = d.includes(t) ? t : u);
     let p = new Set(),

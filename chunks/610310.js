@@ -166,10 +166,14 @@ e.exports = function (e) {
                         begin: "//[gim]{0,3}(?=\\W)",
                         relevance: 0,
                     },
-                    { begin: /\/(?![ *]).*?(?![\\]).\/[gim]{0,3}(?=\W)/ },
+                    {
+                        begin: /\/(?![ *]).*?(?![\\]).\/[gim]{0,3}(?=\W)/,
+                    },
                 ],
             },
-            { begin: "@" + u },
+            {
+                begin: "@" + u,
+            },
             {
                 subLanguage: "javascript",
                 excludeBegin: !0,
@@ -187,7 +191,9 @@ e.exports = function (e) {
             },
         ];
     d.contains = f;
-    let p = e.inherit(e.TITLE_MODE, { begin: u }),
+    let p = e.inherit(e.TITLE_MODE, {
+            begin: u,
+        }),
         _ = "(\\(.*\\)\\s*)?\\B[-=]>",
         h = {
             className: "params",

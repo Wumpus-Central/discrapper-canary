@@ -1,9 +1,13 @@
-n.d(t, { A: () => T }), n(896048);
+n.d(t, {
+    A: () => T,
+}),
+    n(896048);
 var r = n(73153),
     i = n(439372),
     a = n(498642),
     s = n(661191),
     o = n(266047);
+
 function l(e, t, n) {
     return (
         t in e
@@ -17,16 +21,18 @@ function l(e, t, n) {
         e
     );
 }
-let c = 75000,
+let c = 75e3,
     u = 10,
-    d = 5000,
+    d = 5e3,
     f = 2,
-    p = 2000,
-    _ = 10000;
+    p = 2e3,
+    _ = 1e4;
+
 function h(e) {
     var t;
     return (null != (t = a.A.getMemberCount(e)) ? t : 0) >= c ? u : f;
 }
+
 function m(e) {
     var t;
     return (null != (t = a.A.getMemberCount(e)) ? t : 0) >= c ? d : p;
@@ -34,6 +40,7 @@ function m(e) {
 let g = {},
     E = {},
     b = null;
+
 function y() {
     null == b &&
         (b = setInterval(() => {
@@ -45,6 +52,7 @@ function y() {
 async function O(e, t) {
     null == g[e] && (g[e] = new Set()), g[e].add(t), null == E[e] && (E[e] = Date.now()), v(e) && (await A(e));
 }
+
 function A(e) {
     if (null == g[e]) return;
     let t = Array.from(g[e]);
@@ -58,6 +66,7 @@ function A(e) {
             });
         });
 }
+
 function v(e) {
     let t = g[e];
     if (null == t) return !1;
@@ -68,6 +77,7 @@ function v(e) {
     let i = Date.now() - r;
     return null != r && i >= m(e);
 }
+
 function S(e) {
     (g[e] = new Set()), (E[e] = null);
 }

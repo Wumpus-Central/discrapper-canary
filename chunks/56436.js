@@ -14,6 +14,7 @@ var r = n(284009),
     c = n(404077),
     u = n(374803),
     d = n(307731);
+
 function f(e, t) {
     var n, r;
     let {
@@ -104,6 +105,7 @@ function f(e, t) {
         R
     );
 }
+
 function p(e) {
     let { type: t, channel: n, guild: r, query: i, isAtStart: a, options: s } = e,
         o = c.a[t];
@@ -113,6 +115,7 @@ function p(e) {
     }
     return null == o.matches || !!o.matches(n, r, i, a, s);
 }
+
 function _(e) {
     let {
             channel: t,
@@ -270,6 +273,7 @@ function _(e) {
     }
     return null == m ? null : ((m.query = m.query.toLocaleLowerCase()), m);
 }
+
 function h(e, t) {
     let n;
     if (null == t || null == e) return null;

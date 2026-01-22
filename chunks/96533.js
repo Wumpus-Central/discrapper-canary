@@ -1,4 +1,7 @@
-n.d(t, { A: () => C }), n(896048);
+n.d(t, {
+    A: () => C,
+}),
+    n(896048);
 var r = n(64700),
     i = n(745669),
     a = n(846857),
@@ -21,8 +24,9 @@ var r = n(64700),
     A = n(656122),
     v = n(416397),
     S = n(582165),
-    I = n(650000);
+    I = n(65e4);
 let T = [u.A, d.A, p.A, _.A, f.A, E.A, b.A, y.A, O.A, A.A, v.A, S.A, I.A, a.A, c.A, l.A, i.A, s.A, o.A];
+
 function C() {
     let e = r.useRef(0),
         t = r.useRef(!0),

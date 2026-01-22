@@ -1,9 +1,12 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(311907),
     i = n(97352),
     a = n(83617),
     s = n(788868),
     o = n(818348);
+
 function l(e, t, n) {
     return (
         t in e
@@ -17,6 +20,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -33,6 +37,7 @@ function c(e) {
     }
     return e;
 }
+
 function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -45,6 +50,7 @@ function u(e, t) {
     }
     return n;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -56,6 +62,7 @@ function d(e, t) {
         e
     );
 }
+
 function f(e) {
     var t, n;
     let { activeSubscription: l, skuIDs: u, paymentSourceId: f, isGift: p, excludeSubscriptionPlansBySKU: _ } = e;
@@ -81,6 +88,8 @@ function f(e) {
                 excludeSubscriptionPlansBySKU: _,
             }),
         ),
-        { currencies: m },
+        {
+            currencies: m,
+        },
     );
 }

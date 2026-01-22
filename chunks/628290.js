@@ -8,6 +8,7 @@ var r = n(954055),
     u = n(670200),
     d = s.isEngine("Gecko"),
     f = "\n\n";
+
 function p(e, t) {
     return "deleteContentBackward" === e ? c(t) : t;
 }

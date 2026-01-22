@@ -1,6 +1,9 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 var r = n(139675),
     i = n(360469);
+
 function a(e, t) {
     return null == e || null == e.assets || null == e.assets.large_image
         ? null

@@ -1,4 +1,6 @@
-t.d(n, { A: () => g });
+t.d(n, {
+    A: () => g,
+});
 var r = t(627968);
 t(64700);
 var l = t(311907),
@@ -10,6 +12,7 @@ var l = t(311907),
     u = t(652215),
     d = t(985018),
     m = t(563959);
+
 function g(e) {
     let { guildId: n, onClose: t } = e,
         g = (0, l.bG)([c.A, o.A], () => {

@@ -1,2 +1,4 @@
-n.d(t, { q: () => r });
+n.d(t, {
+    q: () => r,
+});
 let r = "https://dis.gd/appeal";

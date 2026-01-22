@@ -1,47 +1,49 @@
 !(function (e, t) {
     t(n(989349));
 })(0, function (e) {
-    var t = "vasárnap hétfőn kedden szerdán csütörtökön pénteken szombaton".split(" ");
+    var t = "vas\xe1rnap h\xe9tfőn kedden szerd\xe1n cs\xfct\xf6rt\xf6k\xf6n p\xe9nteken szombaton".split(" ");
+
     function n(e, t, n, r) {
         var i = e;
         switch (n) {
             case "s":
-                return r || t ? "néhány másodperc" : "néhány másodperce";
+                return r || t ? "n\xe9h\xe1ny m\xe1sodperc" : "n\xe9h\xe1ny m\xe1sodperce";
             case "ss":
-                return i + (r || t) ? " másodperc" : " másodperce";
+                return i + (r || t) ? " m\xe1sodperc" : " m\xe1sodperce";
             case "m":
                 return "egy" + (r || t ? " perc" : " perce");
             case "mm":
                 return i + (r || t ? " perc" : " perce");
             case "h":
-                return "egy" + (r || t ? " óra" : " órája");
+                return "egy" + (r || t ? " \xf3ra" : " \xf3r\xe1ja");
             case "hh":
-                return i + (r || t ? " óra" : " órája");
+                return i + (r || t ? " \xf3ra" : " \xf3r\xe1ja");
             case "d":
                 return "egy" + (r || t ? " nap" : " napja");
             case "dd":
                 return i + (r || t ? " nap" : " napja");
             case "M":
-                return "egy" + (r || t ? " hónap" : " hónapja");
+                return "egy" + (r || t ? " h\xf3nap" : " h\xf3napja");
             case "MM":
-                return i + (r || t ? " hónap" : " hónapja");
+                return i + (r || t ? " h\xf3nap" : " h\xf3napja");
             case "y":
-                return "egy" + (r || t ? " év" : " éve");
+                return "egy" + (r || t ? " \xe9v" : " \xe9ve");
             case "yy":
-                return i + (r || t ? " év" : " éve");
+                return i + (r || t ? " \xe9v" : " \xe9ve");
         }
         return "";
     }
+
     function r(e) {
-        return (e ? "" : "[múlt] ") + "[" + t[this.day()] + "] LT[-kor]";
+        return (e ? "" : "[m\xfalt] ") + "[" + t[this.day()] + "] LT[-kor]";
     }
     return e.defineLocale("hu", {
-        months: "január_február_március_április_május_június_július_augusztus_szeptember_október_november_december".split(
+        months: "janu\xe1r_febru\xe1r_m\xe1rcius_\xe1prilis_m\xe1jus_j\xfanius_j\xfalius_augusztus_szeptember_okt\xf3ber_november_december".split(
             "_",
         ),
-        monthsShort: "jan_feb_márc_ápr_máj_jún_júl_aug_szept_okt_nov_dec".split("_"),
-        weekdays: "vasárnap_hétfő_kedd_szerda_csütörtök_péntek_szombat".split("_"),
-        weekdaysShort: "vas_hét_kedd_sze_csüt_pén_szo".split("_"),
+        monthsShort: "jan_feb_m\xe1rc_\xe1pr_m\xe1j_j\xfan_j\xfal_aug_szept_okt_nov_dec".split("_"),
+        weekdays: "vas\xe1rnap_h\xe9tfő_kedd_szerda_cs\xfct\xf6rt\xf6k_p\xe9ntek_szombat".split("_"),
+        weekdaysShort: "vas_h\xe9t_kedd_sze_cs\xfct_p\xe9n_szo".split("_"),
         weekdaysMin: "v_h_k_sze_cs_p_szo".split("_"),
         longDateFormat: {
             LT: "H:mm",
@@ -71,7 +73,7 @@
             sameElse: "L",
         },
         relativeTime: {
-            future: "%s múlva",
+            future: "%s m\xfalva",
             past: "%s",
             s: n,
             ss: n,

@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -8,6 +10,7 @@ var i = n(503698),
     l = n(939496),
     c = n(996988),
     u = n(380297);
+
 function d(e) {
     let { text: t, textId: n, tags: i, platformIcon: d, contextMenu: f } = e,
         { themeType: p } = (0, l.E)();
@@ -27,7 +30,9 @@ function d(e) {
                         color: "text-strong",
                         id: n,
                         children: [
-                            (0, r.jsx)(s.A, { children: t }),
+                            (0, r.jsx)(s.A, {
+                                children: t,
+                            }),
                             null != d &&
                                 (0, r.jsx)("div", {
                                     className: u.tV,

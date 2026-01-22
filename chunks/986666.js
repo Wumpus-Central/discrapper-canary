@@ -1,4 +1,6 @@
-n.d(t, { z: () => p });
+n.d(t, {
+    z: () => p,
+});
 var r = n(627968);
 n(64700);
 var i = n(780964),
@@ -10,6 +12,7 @@ var i = n(780964),
     u = n(531525),
     d = n(652215),
     f = n(985018);
+
 function p() {
     return (0, r.jsx)(l.h, {
         setting: u.H.PRIVACY_DATA_BASIC_SERVICE_V2,

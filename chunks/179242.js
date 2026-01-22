@@ -1,4 +1,6 @@
-n.d(t, { A: () => y });
+n.d(t, {
+    A: () => y,
+});
 var r = n(627968);
 n(64700);
 var l = n(163126),
@@ -16,6 +18,7 @@ var l = n(163126),
     g = n(359656),
     m = n(985018),
     A = n(576968);
+
 function y(e) {
     let { user: t, channelId: n } = e,
         { analyticsLocations: y } = (0, i.Ay)(),
@@ -47,7 +50,11 @@ function y(e) {
                               );
                           }),
                       }),
-                  C && _ && (0, r.jsx)(f.A, { className: A.yF }),
+                  C &&
+                      _ &&
+                      (0, r.jsx)(f.A, {
+                          className: A.yF,
+                      }),
                   _ &&
                       (0, r.jsx)(g.A, {
                           section: "MUTUAL_FRIENDS",
@@ -56,7 +63,9 @@ function y(e) {
                           onExpand: () => (0, u.A)(t.id, j),
                           items:
                               null == x
-                                  ? Array.from({ length: v }).map((e, t) =>
+                                  ? Array.from({
+                                        length: v,
+                                    }).map((e, t) =>
                                         (0, r.jsxs)(
                                             "div",
                                             {

@@ -1,8 +1,12 @@
-n.d(t, { A: () => l }), n(896048);
+n.d(t, {
+    A: () => l,
+}),
+    n(896048);
 var r = n(439372),
     i = n(954571),
     a = n(91242),
     s = n(652215);
+
 function o(e, t, n) {
     return (
         t in e
@@ -30,7 +34,9 @@ class l extends r.A {
                 if (null == r || null == t) return;
                 let o = a.A.getConnectedFrame();
                 (null == o ? void 0 : o.applicationId) === r &&
-                    (this.leaveFrame({ applicationId: r }),
+                    (this.leaveFrame({
+                        applicationId: r,
+                    }),
                     t.code !== s.YI$.CLOSE_NORMAL &&
                         (i.default.track(s.HAw.ACTIVITY_CLOSED_RPC_ERROR, {
                             rpc_close_code: t.code,

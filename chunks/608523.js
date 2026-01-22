@@ -1,4 +1,10 @@
-n.d(t, { A: () => m }), n(896048), n(591487), n(727858), n(747238);
+n.d(t, {
+    A: () => m,
+}),
+    n(896048),
+    n(591487),
+    n(727858),
+    n(747238);
 var l = n(627968),
     r = n(64700),
     a = n(397927),
@@ -50,7 +56,10 @@ let u = (e) => {
                         }
                         return e;
                     })({}, i.A.defaultRules)),
-                    (t = t = { link: s.B }),
+                    (t = t =
+                        {
+                            link: s.B,
+                        }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
                         : (function (e, t) {
@@ -166,5 +175,7 @@ let u = (e) => {
                     a,
                 );
             });
-        return (0, l.jsx)("div", { children: a });
+        return (0, l.jsx)("div", {
+            children: a,
+        });
     };

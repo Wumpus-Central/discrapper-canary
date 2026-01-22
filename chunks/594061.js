@@ -48,6 +48,7 @@ var r = n(284009),
     y = n(761821),
     O = n(355097),
     A = n(652215);
+
 function v(e, t, n) {
     return (
         t in e
@@ -61,6 +62,7 @@ function v(e, t, n) {
         e
     );
 }
+
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -77,9 +79,10 @@ function S(e) {
     }
     return e;
 }
-let I = 5000,
+let I = 5e3,
     T = "UserSettingsProtoLastWriteTimes",
     C = Date.now();
+
 function N() {}
 u.h.subscribe("CONNECTION_OPEN", () => {
     C = Date.now();
@@ -130,7 +133,9 @@ class R {
         var n;
         i()(!__OVERLAY__, "this cannot run in the overlay");
         let { editInfo: r } = this.getEditInfo(),
-            a = { timeout: r.timeout };
+            a = {
+                timeout: r.timeout,
+            };
         if (!r.loaded)
             throw Error(
                 "Cannot edit user settings proto because we have not yet loaded the stored version from the DB",
@@ -190,7 +195,10 @@ class R {
             });
         let { editInfo: t } = this.getEditInfo();
         if (e || (!t.loaded && !t.loading)) {
-            this.logger.log("Loading proto"), this.dispatchChanges({ loading: !0 });
+            this.logger.log("Loading proto"),
+                this.dispatchChanges({
+                    loading: !0,
+                });
             try {
                 let {
                         body: { settings: t },
@@ -220,7 +228,12 @@ class R {
                     n
                 );
             } catch (e) {
-                throw (this.dispatchChanges({ loading: !1 }), e);
+                throw (
+                    (this.dispatchChanges({
+                        loading: !1,
+                    }),
+                    e)
+                );
             }
         }
     }
@@ -340,12 +353,15 @@ let w = new R(l.nT, O.oD.PRELOADED_USER_SETTINGS),
         [O.oD.PRELOADED_USER_SETTINGS]: w,
         [O.oD.FRECENCY_AND_FAVORITES_SETTINGS]: P,
     };
+
 function x(e, t, n) {
     return w.updateAsync("guilds", (n) => (0, y.$o)(n, e, t), n);
 }
+
 function L(e, t, n, r) {
     return x(e, (e) => (0, y.VB)(e, t, n), r);
 }
+
 function j(e) {
     return (
         M(e),
@@ -359,11 +375,15 @@ function j(e) {
         )
     );
 }
+
 function M(e) {
     E.A.hasLoaded(O.oD.PRELOADED_USER_SETTINGS) ||
         k(e) ||
-        _.default.track(A.HAw.DISMISSIBLE_CONTENT_DISMISSED_BEFORE_CONNECTION_OPEN, { content_type: s.M[e] });
+        _.default.track(A.HAw.DISMISSIBLE_CONTENT_DISMISSED_BEFORE_CONNECTION_OPEN, {
+            content_type: s.M[e],
+        });
 }
+
 function k(e) {
     var t;
     let n = null == (t = E.A.settings.userContent) ? void 0 : t.dismissedContents;
@@ -387,6 +407,7 @@ async function G(e, t, n) {
         O.Sb.INFREQUENT_USER_ACTION,
     );
 }
+
 function V(e) {
     return w.updateAsync(
         "userContent",
@@ -397,6 +418,7 @@ function V(e) {
         O.Sb.INFREQUENT_USER_ACTION,
     );
 }
+
 function F(e) {
     return U(e, {
         lastDismissedVersion: 0,
@@ -405,6 +427,7 @@ function F(e) {
         numTimesDismissed: 0,
     });
 }
+
 function B() {
     return w.updateAsync(
         "userContent",
@@ -414,6 +437,7 @@ function B() {
         O.Sb.INFREQUENT_USER_ACTION,
     );
 }
+
 function H() {
     return w.updateAsync(
         "userContent",

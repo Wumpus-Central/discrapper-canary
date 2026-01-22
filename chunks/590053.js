@@ -1,4 +1,6 @@
-r.d(t, { N: () => c });
+r.d(t, {
+    N: () => c,
+});
 var n,
     c =
         (((n = {})[(n.HANDOFF_AUTHORIZED = 0)] = "HANDOFF_AUTHORIZED"),

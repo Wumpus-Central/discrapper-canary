@@ -14,6 +14,7 @@ var r = n(627968),
     d = n(778712),
     f = n(985018),
     p = n(115640);
+
 function _(e, t, n) {
     return (
         t in e
@@ -27,6 +28,7 @@ function _(e, t, n) {
         e
     );
 }
+
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -43,6 +45,7 @@ function h(e) {
     }
     return e;
 }
+
 function m(e) {
     let { smallerText: t, className: n, textColor: a, isApplicationHome: c, enablePremiumBrandRefresh: _ } = e,
         h = (0, o.bG)([u.A], () => u.A.affinities.slice(0, 3).reverse()),
@@ -61,18 +64,23 @@ function m(e) {
         b = i.useMemo(
             () =>
                 3 === h.length
-                    ? f.intl.formatToPlainString(f.t.c7ETJH, { username: E(h[2]) })
+                    ? f.intl.formatToPlainString(f.t.c7ETJH, {
+                          username: E(h[2]),
+                      })
                     : 2 === h.length
                       ? f.intl.formatToPlainString(f.t["st8Rh/"], {
                             username: E(h[1]),
                             otherUsername: E(h[0]),
                         })
                       : 1 === h.length
-                        ? f.intl.formatToPlainString(f.t.dpjXPL, { username: E(h[0]) })
+                        ? f.intl.formatToPlainString(f.t.dpjXPL, {
+                              username: E(h[0]),
+                          })
                         : "",
             [h],
         );
     if (0 === h.length) return null;
+
     function y() {
         return _
             ? (0, r.jsx)(l.Text, {
@@ -93,7 +101,9 @@ function m(e) {
                 });
     }
     return (0, r.jsxs)("div", {
-        className: s()(_ ? p.bD : p.kL, n, { [p.gr]: !_ && c }),
+        className: s()(_ ? p.bD : p.kL, n, {
+            [p.gr]: !_ && c,
+        }),
         children: [
             (0, r.jsx)("div", {
                 className: p.zc,
@@ -106,6 +116,7 @@ function m(e) {
         ],
     });
 }
+
 function g(e) {
     let { affinity: t, applyMask: n, size: i } = e,
         { avatarSrc: a, eventHandlers: o } = (0, c.A)({
@@ -117,7 +128,9 @@ function g(e) {
         l.euF,
         h(
             {
-                className: s()(p.Kk, { [p.dK]: n }),
+                className: s()(p.Kk, {
+                    [p.dK]: n,
+                }),
                 src: a,
                 "aria-label": t.username,
                 size: i,

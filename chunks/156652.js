@@ -11,6 +11,7 @@ var r,
     c = n(235986),
     u = n(919706),
     d = n(985010);
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,6 +38,7 @@ function f(e) {
     return e;
 }
 var p = (((r = {})[(r.TOP = 0)] = "TOP"), (r[(r.BOTTOM = 1)] = "BOTTOM"), r);
+
 function h(e) {
     let {
             disableGradients: t = !1,
@@ -53,8 +55,16 @@ function h(e) {
             className: d._v,
             ref: f,
             children: [
-                0 !== t && !0 !== t && (0, l.jsx)("div", { className: d.aw }),
-                1 !== t && !0 !== t && (0, l.jsx)("div", { className: d.YA }),
+                0 !== t &&
+                    !0 !== t &&
+                    (0, l.jsx)("div", {
+                        className: d.aw,
+                    }),
+                1 !== t &&
+                    !0 !== t &&
+                    (0, l.jsx)("div", {
+                        className: d.YA,
+                    }),
                 (0, l.jsx)("div", {
                     className: d.K1,
                     children: null == n ? void 0 : n(),
@@ -88,6 +98,7 @@ function h(e) {
         }),
     });
 }
+
 function b(e) {
     let {
             screenMessage: t,
@@ -142,7 +153,9 @@ function b(e) {
             "style",
         ]);
     return (0, l.jsxs)("div", {
-        className: s()(d.zr, { [d.N7]: a }),
+        className: s()(d.zr, {
+            [d.N7]: a,
+        }),
         style: b,
         onMouseMove: r,
         onMouseDown: r,
@@ -150,7 +163,17 @@ function b(e) {
         onDoubleClick: n,
         children: [
             o,
-            null != t ? (0, l.jsx)(u.A, f({ size: "large" }, t)) : null,
+            null != t
+                ? (0, l.jsx)(
+                      u.A,
+                      f(
+                          {
+                              size: "large",
+                          },
+                          t,
+                      ),
+                  )
+                : null,
             (0, l.jsx)(h, f({}, g)),
             null == c ? void 0 : c(),
             null == p ? void 0 : p(),

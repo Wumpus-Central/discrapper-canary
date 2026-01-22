@@ -16,36 +16,44 @@ e.exports = function (e, t, n) {
         g = !1,
         E = !0;
     if ("function" != typeof e) throw TypeError(s);
+
     function b(t) {
         var n = c,
             r = u;
         return (c = u = void 0), (h = t), (f = e.apply(r, n));
     }
+
     function y(e) {
         return (h = e), (p = setTimeout(v, t)), m ? b(e) : f;
     }
+
     function O(e) {
         var n = e - _,
             r = e - h,
             i = t - n;
         return g ? l(i, d - r) : i;
     }
+
     function A(e) {
         var n = e - _,
             r = e - h;
         return void 0 === _ || n >= t || n < 0 || (g && r >= d);
     }
+
     function v() {
         var e = i();
         if (A(e)) return S(e);
         p = setTimeout(v, O(e));
     }
+
     function S(e) {
         return ((p = void 0), E && c) ? b(e) : ((c = u = void 0), f);
     }
+
     function I() {
         return void 0 === p ? f : S(i());
     }
+
     function T() {
         var e = i(),
             n = A(e);

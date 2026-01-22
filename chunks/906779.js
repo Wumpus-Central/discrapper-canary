@@ -1,4 +1,6 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -6,6 +8,7 @@ var i = n(397927),
     s = n(495063),
     a = n(652215),
     c = n(985018);
+
 function o(e) {
     let { team: t } = e,
         n = (function (e, t) {
@@ -42,7 +45,9 @@ function o(e) {
         o =
             (0, l.gN)() || null == t
                 ? null
-                : c.intl.format(c.t.d1sCiW, { url: a.X7G.DEVELOPER_PORTAL_PAYOUT_SETTINGS(t.id) });
+                : c.intl.format(c.t.d1sCiW, {
+                      url: a.X7G.DEVELOPER_PORTAL_PAYOUT_SETTINGS(t.id),
+                  });
     return 0 === n.payoutsByPeriod.length
         ? (0, r.jsxs)(i.Text, {
               variant: "text-sm/medium",
@@ -54,7 +59,9 @@ function o(e) {
                       variant: "text-sm/medium",
                       children: [c.intl.string(c.t["9Ub4KY"]), " ", o],
                   }),
-                  (0, r.jsx)(i.hKd, { size: 16 }),
+                  (0, r.jsx)(i.hKd, {
+                      size: 16,
+                  }),
                   (0, r.jsx)(
                       s.A,
                       (function (e) {

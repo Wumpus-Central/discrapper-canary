@@ -1,4 +1,7 @@
-n.d(t, { A: () => d }), n(896048);
+n.d(t, {
+    A: () => d,
+}),
+    n(896048);
 var r = n(627968);
 n(64700);
 var l = n(311907),
@@ -8,6 +11,7 @@ var l = n(311907),
     o = n(513963),
     c = n(951829),
     u = n(985018);
+
 function d(e, t) {
     let [n, d, f] = (0, s.A)(e, t),
         p = (0, l.bG)([a.Ay], () => a.Ay.disableHideSelfStreamAndVideoConfirmationAlert);

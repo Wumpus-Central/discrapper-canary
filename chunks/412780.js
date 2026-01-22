@@ -16,6 +16,7 @@ var r,
     c = n(287809),
     u = n(652215),
     d = n(731854);
+
 function f(e, t, n) {
     return (
         t in e
@@ -29,6 +30,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -75,9 +77,11 @@ let _ = T(d.x.DEFAULT, u.zWA.TRANSPORT, 0),
         audioLevel: !0,
     },
     b = 600;
+
 function y(e, t, n) {
     return "".concat(e, ":").concat(t, ":").concat(n);
 }
+
 function O(e, t) {
     return "".concat(e, ":").concat(t);
 }
@@ -90,7 +94,14 @@ class A {
             let r = p({}, this.state);
             return delete r[y(e, t, n)], new A(r);
         }
-        return new A(p({ [y(e, t, n)]: r }, this.state));
+        return new A(
+            p(
+                {
+                    [y(e, t, n)]: r,
+                },
+                this.state,
+            ),
+        );
     }
     get(e, t, n) {
         let r = this.state[y(e, t, n)];
@@ -103,9 +114,11 @@ class A {
 let v = A.empty(),
     S = !1,
     I = null;
+
 function T(e, t, n) {
     return "".concat(e, ":").concat(t, ":").concat(n);
 }
+
 function C(e) {
     let [t, n] = e.split(":");
     return {
@@ -113,33 +126,41 @@ function C(e) {
         section: n,
     };
 }
+
 function N() {
     Object.values(d.x).forEach((e) => {
         m[e] = {};
     });
 }
+
 function R() {
     null != I && (I.destroy(), (I = null));
 }
+
 function w(e) {
     var t;
     h = null != (t = e.section) ? t : _;
 }
+
 function P() {
     R();
 }
+
 function D(e) {
     null != e.channelId && (N(), g.clear());
 }
+
 function x(e) {
     if (null === e.streamId) {
         let t = O(e.userId, e.context);
         g.set(t, d.r8.NO_OVERRIDE);
     }
 }
+
 function L(e) {
     h = e.section;
 }
+
 function j(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now(),
@@ -170,6 +191,7 @@ function j(e) {
     }
     return r;
 }
+
 function M(e) {
     let { connectionStats: t } = e;
     Object.values(d.x).forEach((e) => {
@@ -185,6 +207,7 @@ function M(e) {
         });
     });
 }
+
 function k(e) {
     let { context: t, stats: n, index: r } = e,
         i = m[t];
@@ -199,9 +222,11 @@ function k(e) {
         i[r] = j(n, i[r]);
     } else delete i[r];
 }
+
 function U(e) {
     o._w();
 }
+
 function G(e) {
     let { path: t } = e,
         n = l.A.getMediaEngine();
@@ -220,13 +245,16 @@ function G(e) {
         }),
         s.h.wait(() => o.ho()));
 }
+
 function V(e) {
     v = v.put(e.mediaEngineConnectionId, e.userId, e.videoSsrc, e.streamId);
 }
+
 function F(e) {
     let { value: t } = e;
     S = t;
 }
+
 function B(e) {
     let { userId: t, context: n, quality: r } = e;
     g.set(O(t, n), r);

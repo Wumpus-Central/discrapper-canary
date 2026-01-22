@@ -1,4 +1,6 @@
-n.d(t, { A: () => E });
+n.d(t, {
+    A: () => E,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -14,6 +16,7 @@ let _ = [16, 8, 8, 8],
     h = 32,
     m = 4,
     g = 8;
+
 function E(e) {
     let {
             className: t,
@@ -80,7 +83,11 @@ function E(e) {
                                     children: _,
                                 }),
                             }),
-                            g ? (0, r.jsx)("hr", { className: p.zQ }) : null,
+                            g
+                                ? (0, r.jsx)("hr", {
+                                      className: p.zQ,
+                                  })
+                                : null,
                         ],
                     },
                     i.id,

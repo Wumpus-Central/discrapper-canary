@@ -11,6 +11,7 @@ var l = n(503698),
     o = n(397927),
     c = n(915089),
     u = n(457047);
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +37,7 @@ function d(e) {
     }
     return e;
 }
+
 function f(e, t) {
     if (null == e) return {};
     var n,
@@ -64,6 +66,7 @@ function f(e, t) {
             (r = n[l]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
     return i;
 }
+
 function p(e) {
     let { label: t, className: n, size: l = o._3J.SIZE_16, maxUsers: s = 4 } = e,
         p = f(e, ["label", "className", "size", "maxUsers"]),
@@ -92,6 +95,7 @@ function p(e) {
         ],
     });
 }
+
 function b(e) {
     let { label: t, className: n, overflowCountClassName: l, size: c = o._3J.SIZE_16, maxUsers: p = 4, onClick: b } = e,
         g = f(e, ["label", "className", "overflowCountClassName", "size", "maxUsers", "onClick"]);

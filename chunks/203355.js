@@ -44,13 +44,18 @@ var l = n(627968),
     H = n(985018),
     B = n(707511);
 let Y = new m.A("StreamTile");
+
 function W(e) {
     let { participant: t, selected: n, focused: r, idle: i, width: a, premiumIndicator: o } = e,
         c = (0, s.bG)([N.A], () => N.A.getActiveStreamForUser(t.user.id, t.stream.guildId)),
         u = (0, U.V)(a);
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            n || r ? null : (0, l.jsx)(M.A, { participant: t }),
+            n || r
+                ? null
+                : (0, l.jsx)(M.A, {
+                      participant: t,
+                  }),
             r || null == c || c.state === V.XYD.ENDED || c.state === V.XYD.FAILED
                 ? null
                 : (0, l.jsx)(v.A, {
@@ -64,6 +69,7 @@ function W(e) {
         ],
     });
 }
+
 function z(e) {
     let {
             participant: t,
@@ -84,7 +90,9 @@ function z(e) {
         { stream: q, user: Q, streamId: $ } = t,
         ee = (0, s.bG)([j.A], () => j.A.getChannel(q.channelId)),
         et = (0, s.bG)([N.A], () => N.A.getActiveStreamForUser(Q.id, q.guildId), [Q.id, q.guildId]),
-        { defaultWatchMultipleStreams: en } = (0, y.W)({ location: "StreamTile" }),
+        { defaultWatchMultipleStreams: en } = (0, y.W)({
+            location: "StreamTile",
+        }),
         el = (0, s.bG)([N.A], () => N.A.getAllActiveStreams().length > 0),
         er = (0, s.bG)([I.A], () => I.A.isFocused()),
         ei = (null == et ? void 0 : et.ownerId) === Z,
@@ -138,12 +146,16 @@ function z(e) {
         });
     if (!(null != et && !n && null != X && T.A.supports(G.O5.VIDEO)))
         return (0, l.jsxs)("div", {
-            className: a()(B.Qs, B.Rh, { [B.EX]: eo }),
+            className: a()(B.Qs, B.Rh, {
+                [B.EX]: eo,
+            }),
             children: [
                 (0, l.jsx)(E.A, {
                     noImage: !0,
                     noText: !0,
-                    className: a()(B.HL, { [B.gH]: null == et }),
+                    className: a()(B.HL, {
+                        [B.gH]: null == et,
+                    }),
                     stream: t.stream,
                 }),
                 n
@@ -169,7 +181,10 @@ function z(e) {
                                                 icon: c.vAm,
                                                 "aria-label": H.intl.string(H.t.wCrzut),
                                                 onClick: (e) => {
-                                                    e.stopPropagation(), (0, d.A9)(t.stream, { forceMultiple: !0 });
+                                                    e.stopPropagation(),
+                                                        (0, d.A9)(t.stream, {
+                                                            forceMultiple: !0,
+                                                        });
                                                 },
                                             }),
                                         }),
@@ -238,7 +253,12 @@ function z(e) {
                                       });
                               }
                               return e;
-                          })({ size: (0, w.J)(v) }, es),
+                          })(
+                              {
+                                  size: (0, w.J)(v),
+                              },
+                              es,
+                          ),
                       )
                     : null,
                 (0, l.jsx)(R.A, {

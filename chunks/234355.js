@@ -1,4 +1,8 @@
-n.d(t, { default: () => ep }), n(938796), n(896048);
+n.d(t, {
+    default: () => ep,
+}),
+    n(938796),
+    n(896048);
 var l,
     i = n(627968),
     s = n(64700),
@@ -55,6 +59,7 @@ var l,
     en = n(985018),
     el = n(912579),
     ei = n(176465);
+
 function es(e, t, n) {
     return (
         t in e
@@ -68,6 +73,7 @@ function es(e, t, n) {
         e
     );
 }
+
 function er(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -84,6 +90,7 @@ function er(e) {
     }
     return e;
 }
+
 function ea(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -126,7 +133,9 @@ class ec extends (l = s.PureComponent) {
         if (i) {
             let n = null == e ? void 0 : e.id;
             if (null == n) return;
-            p({ networkError: void 0 }),
+            p({
+                networkError: void 0,
+            }),
                 S.Ay.createInvite(
                     n,
                     {
@@ -140,7 +149,11 @@ class ec extends (l = s.PureComponent) {
                         flags: m,
                     },
                     l,
-                ).catch((e) => p({ networkError: e }));
+                ).catch((e) =>
+                    p({
+                        networkError: e,
+                    }),
+                );
         }
         if (
             (g &&
@@ -219,12 +232,16 @@ class ec extends (l = s.PureComponent) {
                 null != s
                     ? en.intl.string(en.t["6VQaqd"])
                     : null != r
-                      ? en.intl.formatToPlainString(en.t.ZdK3dW, { applicationName: r.name })
+                      ? en.intl.formatToPlainString(en.t.ZdK3dW, {
+                            applicationName: r.name,
+                        })
                       : null != l
                         ? en.intl.string(en.t.JKV4FL)
                         : (null == a ? void 0 : a.isGuildStageVoice())
                           ? en.intl.string(en.t.zTrsH0)
-                          : en.intl.formatToPlainString(en.t.NvVBJU, { name: n.name })),
+                          : en.intl.formatToPlainString(en.t.NvVBJU, {
+                                name: n.name,
+                            })),
             null != a)
         ) {
             let e = (0, C.gU)(a, n);
@@ -235,7 +252,12 @@ class ec extends (l = s.PureComponent) {
                         (0, i.jsxs)(
                             "span",
                             {
-                                children: [(0, i.jsx)(e, { className: el.p }), t],
+                                children: [
+                                    (0, i.jsx)(e, {
+                                        className: el.p,
+                                    }),
+                                    t,
+                                ],
                             },
                             n,
                         ),
@@ -284,7 +306,9 @@ class ec extends (l = s.PureComponent) {
                   renderRow: () =>
                       (0, i.jsx)("div", {
                           className: el.Iq,
-                          children: (0, i.jsx)(m.SGT, { children: en.intl.string(en.t.ojoWgX) }),
+                          children: (0, i.jsx)(m.SGT, {
+                              children: en.intl.string(en.t.ojoWgX),
+                          }),
                       }),
                   rowHeight: 200,
               }
@@ -295,7 +319,9 @@ class ec extends (l = s.PureComponent) {
                     renderRow: () =>
                         (0, i.jsx)("div", {
                             className: el.Iq,
-                            children: (0, i.jsx)(m.SGT, { children: en.intl.string(en.t.hzPwGG) }),
+                            children: (0, i.jsx)(m.SGT, {
+                                children: en.intl.string(en.t.hzPwGG),
+                            }),
                         }),
                     rowHeight: 200,
                 }
@@ -471,26 +497,37 @@ class ec extends (l = s.PureComponent) {
             }),
             es(this, "handleSelectMaxUses", (e) => {
                 let { setModalState: t } = this.props;
-                t({ maxUses: e });
+                t({
+                    maxUses: e,
+                });
             }),
             es(this, "handleToggleTemporary", (e) => {
                 let { setModalState: t } = this.props;
-                t({ temporary: e });
+                t({
+                    temporary: e,
+                });
             }),
             es(this, "handleSetInviteFlags", (e) => {
                 let { setModalState: t } = this.props;
-                t({ flags: e });
+                t({
+                    flags: e,
+                });
             }),
             es(this, "handleQueryChange", (e) => {
                 var t;
                 let { modalState: n, setModalState: l } = this.props,
-                    i = { query: e };
+                    i = {
+                        query: e,
+                    };
                 "" === e && "" !== n.query
                     ? ((i.sectionVisibility = er({}, n.defaultSectionVisibility)), (i.defaultSectionVisibility = {}))
                     : "" !== e &&
                       "" === n.query &&
                       ((i.defaultSectionVisibility = er({}, n.sectionVisibility)), (i.sectionVisibility = {})),
-                    null == (t = this._scroller) || t.scrollTo({ to: 0 }),
+                    null == (t = this._scroller) ||
+                        t.scrollTo({
+                            to: 0,
+                        }),
                     (0, x.B)(e),
                     l(i);
             }),
@@ -507,7 +544,11 @@ class ec extends (l = s.PureComponent) {
             }),
             es(this, "handleToggleSectionVisibility", (e) => {
                 let { modalState: t, setModalState: n } = this.props;
-                n({ sectionVisibility: ea(er({}, t.sectionVisibility), { [e]: !this.getSectionVisibility(e) }) });
+                n({
+                    sectionVisibility: ea(er({}, t.sectionVisibility), {
+                        [e]: !this.getSectionVisibility(e),
+                    }),
+                });
             }),
             es(this, "getRowHeight", (e, t) => {
                 let { sections: n, rows: l } = this.props,
@@ -578,6 +619,7 @@ class ec extends (l = s.PureComponent) {
             });
     }
 }
+
 function eg(e) {
     let { section: t, heading: n, isOpen: l, onToggleVisibility: s } = e;
     return (0, i.jsxs)(m.DUT, {
@@ -745,7 +787,9 @@ let eh = s.forwardRef(function (e, t) {
                 guildId: null == a ? void 0 : a.id,
                 location: "acc417_3",
             },
-            { autoTrackExposure: eN },
+            {
+                autoTrackExposure: eN,
+            },
         ),
         { maxAge: eO, maxUses: ej, temporary: ew, savedMaxAge: eR, flags: eV, roleIds: eU } = e_,
         { enabled: eG } = (0, q.E)(null == a ? void 0 : a.id, "InstantInviteModal"),
@@ -754,7 +798,10 @@ let eh = s.forwardRef(function (e, t) {
         eL = s.useCallback(
             (e) => {
                 let t = new Set(eU);
-                t.delete(e) || t.add(e), eC({ roleIds: t });
+                t.delete(e) || t.add(e),
+                    eC({
+                        roleIds: t,
+                    });
             },
             [eU, eC],
         ),
@@ -794,7 +841,11 @@ let eh = s.forwardRef(function (e, t) {
                           showVanityURL: ey,
                       }),
                   )),
-                eO !== eo.value && eR !== eo.value && eC({ savedMaxAge: eo.value });
+                eO !== eo.value &&
+                    eR !== eo.value &&
+                    eC({
+                        savedMaxAge: eo.value,
+                    });
         }, [ey, en, T, o, null == ep ? void 0 : ep.id, O, d, eO, ej, ew, eC, eR, eV, eU]),
         eF = (0, y.A)(T),
         eH = (0, y.A)((0, h.Lt)(eV, g.Q.IS_APPLICATION_BYPASS)),
@@ -843,6 +894,7 @@ let eh = s.forwardRef(function (e, t) {
         }),
     });
 });
+
 function ep(e) {
     return (0, i.jsx)(eh, er({}, e));
 }

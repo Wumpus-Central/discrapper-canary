@@ -1,4 +1,6 @@
-n.d(t, { w: () => _ });
+n.d(t, {
+    w: () => _,
+});
 var r = n(627968);
 n(64700);
 var i = n(192308),
@@ -8,6 +10,7 @@ var i = n(192308),
     l = n(457417),
     c = n(520650),
     u = n(985018);
+
 function d(e, t, n) {
     return (
         t in e
@@ -21,6 +24,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -45,7 +49,9 @@ let p = () => {
                 );
                 return (t) => (0, r.jsx)(e, f({}, t));
             },
-            { modalKey: l.dJ },
+            {
+                modalKey: l.dJ,
+            },
         );
     },
     _ = () =>

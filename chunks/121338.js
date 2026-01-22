@@ -12,6 +12,7 @@ var r = n(627968),
     c = n(520586),
     d = n(985018),
     u = n(308040);
+
 function f(e) {
     let { title: t, onClose: n, transitionState: f } = e,
         {
@@ -55,7 +56,9 @@ function f(e) {
                         (0, r.jsx)(i.po8, {
                             messageType: i.YCn.WARNING,
                             className: u.$Q,
-                            children: d.intl.format(d.t["dSTy/w"], { applicationName: x }),
+                            children: d.intl.format(d.t["dSTy/w"], {
+                                applicationName: x,
+                            }),
                         }),
                         (0, r.jsx)("div", {
                             className: u.dK,
@@ -89,6 +92,7 @@ function f(e) {
         }),
     });
 }
+
 function p(e) {
     (0, i.qfG)(
         (t) =>
@@ -120,6 +124,8 @@ function p(e) {
                     return e;
                 })({}, t, e),
             ),
-        { stackNextByDefault: !0 },
+        {
+            stackNextByDefault: !0,
+        },
     );
 }

@@ -62,6 +62,7 @@ var r = n(64700),
     F = n(652215),
     D = n(746080),
     x = n(37411);
+
 function L(e, t, n, l) {
     let u = (0, a.bG)([b.A], () => b.A.hasLoaded(e.guild_id));
     r.useEffect(() => {
@@ -83,6 +84,7 @@ function L(e, t, n, l) {
             });
     }, [e.id, e.guild_id, u, n, t, l]);
 }
+
 function H(e) {
     return (0, a.bG)([b.A, p.A], () => {
         let t = u()(b.A.getThreadsForParent(e.guild_id, e.parent_id))
@@ -96,6 +98,7 @@ function H(e) {
     });
 }
 let K = [];
+
 function B(e) {
     let t,
         n =
@@ -131,7 +134,10 @@ function B(e) {
                             }
                             return e;
                         })({}, e)),
-                        (r = r = { [t.id]: t }),
+                        (r = r =
+                            {
+                                [t.id]: t,
+                            }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
                             : (function (e, t) {
@@ -158,6 +164,7 @@ function B(e) {
         return (null == e ? void 0 : e.isModeratorReportChannel()) ? (0, h.Yj)(u) : u;
     }, [n, e]);
 }
+
 function Y(e, t) {
     let n = (0, a.yK)([S.default], () => t.map((e) => S.default.getUser(e)).filter(T.Vq));
     return (
@@ -169,6 +176,7 @@ function Y(e, t) {
         n
     );
 }
+
 function q(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : P.EG.DURATION_AGO,
         l = r.useMemo(() => I.default.extractTimestamp(e.id), [e.id]),
@@ -176,6 +184,7 @@ function q(e, t) {
         a = r.useMemo(() => (0, N.mf)(t, n), [t, n]);
     return r.useMemo(() => (t === i.T.CREATION_DATE ? (0, E.aK)(l, a) : (0, E.aK)(u, a)), [u, t, l, a]);
 }
+
 function z(e) {
     return r.useMemo(() => {
         var t;
@@ -184,6 +193,7 @@ function z(e) {
         );
     }, [null == e ? void 0 : e.reactions]);
 }
+
 function Q(e) {
     let t = null == e ? void 0 : e.defaultReactionEmoji,
         n = (0, a.bG)([c.Ay], () =>
@@ -205,6 +215,7 @@ function Q(e) {
               }
             : null;
 }
+
 function V(e) {
     let t = (0, a.bG)([v.A], () => {
             var t;
@@ -228,6 +239,7 @@ function V(e) {
         unreadCount: l,
     };
 }
+
 function J(e) {
     var t;
     let n = (0, a.bG)([S.default], () => S.default.getUser(e.ownerId)),
@@ -246,6 +258,7 @@ function J(e) {
         }
     );
 }
+
 function X(e) {
     var t, n;
     let r = S.default.getUser(e.ownerId),
@@ -256,9 +269,12 @@ function X(e) {
         author: u,
     };
 }
+
 function Z(e) {
     let { firstMessage: t, formatInline: n = !0, noStyleAndInteraction: l = !0, hasUnreads: u = !0 } = e,
-        i = A.m.useExperiment({ location: "modules/forums/ForumHooks" }).enabled,
+        i = A.m.useExperiment({
+            location: "modules/forums/ForumHooks",
+        }).enabled,
         a = u ? "text-default" : "text-muted",
         { hasSpoilerEmbeds: o, content: d } = r.useMemo(
             () =>
@@ -286,6 +302,7 @@ function Z(e) {
         firstMediaIsEmbed: c,
     };
 }
+
 function $(e) {
     return (0, a.bG)([C.A], () => C.A.can(F.xBc.MANAGE_CHANNELS, e));
 }
@@ -293,6 +310,7 @@ let W = {
     isNew: !1,
     hasUnreads: !1,
 };
+
 function ee(e) {
     return (0, a.cf)([M.A, O.Ay], () => {
         var t;
@@ -300,9 +318,11 @@ function ee(e) {
         return null == n ? W : (0, N.U1)(e, n, [O.Ay]);
     });
 }
+
 function et(e) {
     return r.useMemo(() => (null == e || null == e.template ? "" : e.template.trim()), [e]);
 }
+
 function en(e) {
     let t = (0, a.bG)([C.A], () => C.A.can(F.xBc.MANAGE_THREADS, e));
     return r.useMemo(() => {
@@ -311,6 +331,7 @@ function en(e) {
         return t || (r = r.filter((e) => !e.moderated)), r;
     }, [t, null == e ? void 0 : e.availableTags]);
 }
+
 function er(e, t) {
     let n = en((0, a.bG)([p.A], () => p.A.getChannel(null == e ? void 0 : e.parent_id), [e]));
     return r.useMemo(() => {
@@ -318,12 +339,15 @@ function er(e, t) {
         return (null == e ? void 0 : e.isModeratorReportChannel()) ? (0, h.Yj)(r) : r;
     }, [t, n, e]);
 }
+
 function el(e) {
     return (0, a.bG)([C.A], () => C.A.can(F.xBc.READ_MESSAGE_HISTORY, e));
 }
+
 function eu(e) {
     return (0, a.bG)([C.A], () => C.A.can(F.xBc.READ_MESSAGE_HISTORY, e));
 }
+
 function ei(e) {
     let { channelId: t } = e;
     return (0, a.cf)([k.A], () => ({
@@ -332,9 +356,12 @@ function ei(e) {
         searchResults: k.A.getSearchResults(t),
     }));
 }
+
 function ea(e, t, n) {
     let l = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        { isSearchLoading: u, searchQuery: i } = ei({ channelId: e.id }),
+        { isSearchLoading: u, searchQuery: i } = ei({
+            channelId: e.id,
+        }),
         a = el(e),
         o = r.useRef(null),
         d = r.useRef(new Set());
@@ -355,6 +382,7 @@ function ea(e, t, n) {
         return () => clearTimeout(r);
     }, [a, e.guild_id, e.id, l, u, i, t, n]);
 }
+
 function eo(e, t) {
     return (0, a.bG)([m.A, O.Ay, p.A], () => {
         let n = p.A.getChannel(t);
@@ -377,6 +405,7 @@ function eo(e, t) {
         return i;
     });
 }
+
 function ed(e) {
     let { channel: t, sortOrder: n, tagFilter: l, tagSetting: u, shouldAutomaticallyAck: i } = e,
         o = (0, a.yK)([R.A], () => R.A.getThreadIds(t.id, n, l, u)),

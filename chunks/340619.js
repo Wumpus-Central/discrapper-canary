@@ -1,6 +1,10 @@
-n.d(t, { A: () => c }), n(65821);
+n.d(t, {
+    A: () => c,
+}),
+    n(65821);
 var r = n(143236),
     i = n(201327);
+
 function a(e, t, n) {
     return (
         t in e
@@ -14,6 +18,7 @@ function a(e, t, n) {
         e
     );
 }
+
 function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -30,6 +35,7 @@ function s(e) {
     }
     return e;
 }
+
 function o(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -42,6 +48,7 @@ function o(e, t) {
     }
     return n;
 }
+
 function l(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -62,7 +69,9 @@ class c extends r.EventEmitter {
                 noiseSuppression: !1,
                 autoGainControl: !1,
             },
-            video: l(s({}, e), { frameRate: 30 }),
+            video: l(s({}, e), {
+                frameRate: 30,
+            }),
         };
         if ((null == (r = navigator.mediaDevices) ? void 0 : r.getDisplayMedia) != null)
             return new c(await navigator.mediaDevices.getDisplayMedia(i), n);

@@ -26,6 +26,7 @@ var a = n(627968),
     _ = n(985018),
     A = n(346858),
     C = n(661251);
+
 function S(e) {
     let { resizableNode: t, onResize: n, onResizeEnd: l } = e,
         i = (0, d.A)({
@@ -40,6 +41,7 @@ function S(e) {
         className: A.Di,
     });
 }
+
 function O() {
     (0, h.open)(
         y.MLl.DEVTOOLS_POPOUT,
@@ -59,6 +61,7 @@ function O() {
         },
     );
 }
+
 function E(e) {
     var t;
     let { isPopout: n = !1 } = e,
@@ -72,7 +75,9 @@ function E(e) {
                 tabs: l,
                 initialSelectedTabId: null != (t = b.A.lastOpenTabId) ? t : void 0,
                 onChangeTab: (e) => {
-                    (0, x.Jt)({ lastOpenTabId: e });
+                    (0, x.Jt)({
+                        lastOpenTabId: e,
+                    });
                 },
             },
             [l],
@@ -81,7 +86,9 @@ function E(e) {
         (0, u.A)({
             type: s.ImpressionTypes.PANE,
             name: s.ImpressionNames.VIEW_PANEL_DEVTOOLS,
-            properties: { panel: o },
+            properties: {
+                panel: o,
+            },
         }),
         (0, a.jsxs)(g.xG, {
             children: [
@@ -108,21 +115,32 @@ function E(e) {
                             icon: c.VaJ,
                             tooltip: "DevTools",
                         }),
-                        (0, a.jsx)(m.Ay.Title, { children: "DevTools" }),
+                        (0, a.jsx)(m.Ay.Title, {
+                            children: "DevTools",
+                        }),
                     ],
                 }),
                 (0, a.jsx)(i, {}),
                 r(),
-                (0, a.jsx)(g.jY, { className: A.n7 }),
+                (0, a.jsx)(g.jY, {
+                    className: A.n7,
+                }),
             ],
         })
     );
 }
+
 function N() {
     let e = l.useRef(null),
         t = (0, o.bG)([b.A], () => b.A.sidebarWidth),
         [n, i] = l.useState(null),
-        r = l.useCallback((e) => (0, x.Jt)({ sidebarWidth: e }), []);
+        r = l.useCallback(
+            (e) =>
+                (0, x.Jt)({
+                    sidebarWidth: e,
+                }),
+            [],
+        );
     return (l.useEffect(() => {
         null === n && null !== t && i(t);
     }, [t, n]),
@@ -149,6 +167,7 @@ function N() {
               ],
           });
 }
+
 function T() {
     return (0, o.bG)([b.A], () => b.A.displayTools)
         ? (0, a.jsx)("div", {
@@ -164,18 +183,23 @@ function T() {
                   onClick: x.pf,
                   children: (0, a.jsxs)(m.Ay, {
                       className: r()(C.jr, A.J$),
-                      toolbar: (0, a.jsx)(f.A, { direction: f.A.Directions.UP }),
+                      toolbar: (0, a.jsx)(f.A, {
+                          direction: f.A.Directions.UP,
+                      }),
                       children: [
                           (0, a.jsx)(m.Ay.Icon, {
                               icon: c.VaJ,
                               tooltip: "DevTools",
                           }),
-                          (0, a.jsx)(m.Ay.Title, { children: "DevTools" }),
+                          (0, a.jsx)(m.Ay.Title, {
+                              children: "DevTools",
+                          }),
                       ],
                   }),
               }),
           });
 }
+
 function I(e) {
     let { mobile: t, isPopout: n = !1 } = e;
     return t
@@ -183,7 +207,9 @@ function I(e) {
         : n
           ? (0, a.jsx)("div", {
                 className: A.jC,
-                children: (0, a.jsx)(E, { isPopout: !0 }),
+                children: (0, a.jsx)(E, {
+                    isPopout: !0,
+                }),
             })
           : (0, a.jsx)(N, {});
 }

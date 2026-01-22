@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(64700),
     i = n(311907),
     a = n(385612),
@@ -6,10 +8,13 @@ var r = n(64700),
     o = n(696451),
     l = n(352413),
     c = n(45837);
+
 function u(e) {
     let { user: t, guildId: n, size: u, showPending: d = !1, animateOnHover: f = !1, avatarOverride: p } = e,
         { onMouseEnter: _, onMouseLeave: h, shouldAnimate: m } = (0, c.A)(f),
-        { pendingAvatar: g } = (0, l.A)({ guildId: null === n ? void 0 : n }),
+        { pendingAvatar: g } = (0, l.A)({
+            guildId: null === n ? void 0 : n,
+        }),
         E =
             d && null != t
                 ? (0, s.V7)({

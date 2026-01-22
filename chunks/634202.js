@@ -1,4 +1,10 @@
-n.d(t, { A: () => Y }), n(228524), n(864466), n(443073), n(896048);
+n.d(t, {
+    A: () => Y,
+}),
+    n(228524),
+    n(864466),
+    n(443073),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(284009),
@@ -33,6 +39,7 @@ var r = n(627968),
     L = n(518477),
     j = n(985018),
     M = n(628972);
+
 function k(e, t, n) {
     return (
         t in e
@@ -46,6 +53,7 @@ function k(e, t, n) {
         e
     );
 }
+
 function U(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -62,6 +70,7 @@ function U(e) {
     }
     return e;
 }
+
 function G(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -74,6 +83,7 @@ function G(e, t) {
     }
     return n;
 }
+
 function V(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -85,6 +95,7 @@ function V(e, t) {
         e
     );
 }
+
 function F(e) {
     let t,
         { connectionType: n, connectionMetadataField: i, operator: a, value: s, description: o } = e;
@@ -130,6 +141,7 @@ function F(e) {
               ],
           });
 }
+
 function B(e) {
     let { eligibilityStates: t } = e,
         n = (0, g.Ay)(),
@@ -223,6 +235,7 @@ function B(e) {
         }),
     });
 }
+
 function H(e) {
     let t,
         {
@@ -272,7 +285,9 @@ function H(e) {
                 }),
                 (0, r.jsx)("div", {
                     className: M.jf,
-                    children: (0, r.jsx)(B, { eligibilityStates: s.flat() }),
+                    children: (0, r.jsx)(B, {
+                        eligibilityStates: s.flat(),
+                    }),
                 }),
                 (0, r.jsxs)("div", {
                     className: M.UD,
@@ -296,6 +311,7 @@ function H(e) {
         })
     );
 }
+
 function Y(e) {
     let { userId: t, messageId: n, guild: a, channel: o } = e,
         { analyticsLocations: l } = (0, y.Ay)(),
@@ -308,6 +324,7 @@ function Y(e) {
         s()(null != u, "visibleConnectionsRole is null"),
             p && null == f && (await h.A.fetchGuildRoleConnectionsEligibility(a.id, u.id), m(!1));
     }
+
     function b() {
         return Promise.resolve((e) => {
             let { closePopout: i } = e;

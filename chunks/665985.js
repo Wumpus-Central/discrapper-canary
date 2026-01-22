@@ -1,4 +1,7 @@
-n.d(t, { A: () => p }), n(896048);
+n.d(t, {
+    A: () => p,
+}),
+    n(896048);
 var i,
     r = n(627968),
     l = n(64700),
@@ -7,6 +10,7 @@ var i,
     o = n(781763),
     u = n(65204),
     c = n(985018);
+
 function h(e, t, n) {
     return (
         t in e
@@ -55,8 +59,12 @@ class d extends (i = l.Component) {
             });
     }
 }
-h(d, "defaultProps", { includeMaster: !1 });
+h(d, "defaultProps", {
+    includeMaster: !1,
+});
 let p = s.Ay.connectStores([u.A], (e) => {
     let { applicationId: t } = e;
-    return { branches: u.A.getBranches(t) };
+    return {
+        branches: u.A.getBranches(t),
+    };
 })(d);

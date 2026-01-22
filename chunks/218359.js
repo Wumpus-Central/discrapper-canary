@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968),
     i = n(871930),
     a = n(578746),
@@ -7,6 +9,7 @@ var r = n(627968),
     l = n(652215),
     c = n(842130),
     u = n(985018);
+
 function d() {
     let { hasConsented: e, updateConsent: t } = (0, o.lH)(l.YAq.PERSONALIZATION);
     return (0, r.jsx)(i.h, {

@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(627968),
     i = n(64700),
     l = n(311907),
@@ -8,6 +10,7 @@ var r = n(627968),
     c = n(399925),
     u = n(665039),
     d = n(985018);
+
 function p(e) {
     let { onOpenClipsGallery: t, clipIconRef: n, lastClipsSession: p } = e,
         f = (0, l.bG)([s.A], () => {
@@ -23,13 +26,19 @@ function p(e) {
         ? null
         : f.type !== o.nQ.SCREENSHOT && f.type !== o.nQ.VOICE_CLIP && null != h
           ? (0, r.jsx)(a.HZ, {
-                targetElementRef: { current: n },
+                targetElementRef: {
+                    current: n,
+                },
                 position: "bottom",
                 title: d.intl.string(d.t.JugHO7),
-                body: d.intl.format(d.t["+qxkzC"], { count: p.newClipIds.length }),
+                body: d.intl.format(d.t["+qxkzC"], {
+                    count: p.newClipIds.length,
+                }),
                 assetUrl: h,
                 disableMediaViewer: !0,
-                caretConfig: { align: "center" },
+                caretConfig: {
+                    align: "center",
+                },
                 action: {
                     text: d.intl.string(d.t.tQPBml),
                     onClick: t,
@@ -37,10 +46,14 @@ function p(e) {
                 onRequestClose: A,
             })
           : (0, r.jsx)(a.AM, {
-                targetElementRef: { current: n },
+                targetElementRef: {
+                    current: n,
+                },
                 position: "bottom",
                 title: d.intl.string(d.t.JugHO7),
-                body: d.intl.format(d.t["+qxkzC"], { count: p.newClipIds.length }),
+                body: d.intl.format(d.t["+qxkzC"], {
+                    count: p.newClipIds.length,
+                }),
                 graphic:
                     null != f.thumbnail
                         ? {
@@ -48,7 +61,9 @@ function p(e) {
                               src: f.thumbnail,
                           }
                         : void 0,
-                caretConfig: { align: "center" },
+                caretConfig: {
+                    align: "center",
+                },
                 actions: [
                     {
                         text: d.intl.string(d.t.tQPBml),

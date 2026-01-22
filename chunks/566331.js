@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -12,6 +14,7 @@ var i = n(503698),
     f = n(818348),
     p = n(985018),
     _ = n(814651);
+
 function h(e) {
     var t;
     let { stream: n, width: i } = e,
@@ -20,7 +23,7 @@ function h(e) {
         (null == h ? void 0 : h.isGuildStageVoice()) && (0, l.Xi)((0, u._z)(n), !1);
     });
     let m = () => (0, l.Xi)((0, u._z)(n)),
-        g = (t = i) < 550 ? "small" : t < 1000 ? "medium" : "large";
+        g = (t = i) < 550 ? "small" : t < 1e3 ? "medium" : "large";
     return (0, r.jsx)(o.NPJ, {
         disableAdaptiveTheme: !0,
         theme: f.NJ.MIDNIGHT,
@@ -32,7 +35,9 @@ function h(e) {
                     children: [
                         (0, r.jsx)("div", {
                             className: a()(_.artContainer, _[g]),
-                            children: (0, r.jsx)("div", { className: a()(_.art, _[g]) }),
+                            children: (0, r.jsx)("div", {
+                                className: a()(_.art, _[g]),
+                            }),
                         }),
                         (0, r.jsxs)("div", {
                             className: _.cta,

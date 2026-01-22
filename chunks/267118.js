@@ -1,4 +1,6 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(501459),
     i = n(1673);
 let a = RegExp("((?<prefix>前の|次の|今週))?(?<weekday>" + Object.keys(r.tS).join("|") + ")(?:曜日|曜)", "i");

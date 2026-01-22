@@ -39,6 +39,7 @@ var r,
     x = n(307731),
     L = n(985018),
     j = n(395410);
+
 function M(e, t, n) {
     return (
         t in e
@@ -52,6 +53,7 @@ function M(e, t, n) {
         e
     );
 }
+
 function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -68,6 +70,7 @@ function k(e) {
     }
     return e;
 }
+
 function U(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -80,6 +83,7 @@ function U(e, t) {
     }
     return n;
 }
+
 function G(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -91,6 +95,7 @@ function G(e, t) {
         e
     );
 }
+
 function V(e, t) {
     if (null == e) return {};
     var n,
@@ -107,6 +112,7 @@ function V(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function F(e, t) {
     if (null == e) return {};
     var n,
@@ -117,9 +123,11 @@ function F(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function B(e) {
     return null != e ? "autocomplete-".concat(e) : null;
 }
+
 function H(e) {
     return "autocomplete-".concat(e, "-title");
 }
@@ -146,10 +154,18 @@ class W extends a.PureComponent {
                 onClick: l ? this.handleClick : void 0,
                 onMouseMove: l
                     ? () => {
-                          this.setState({ hovered: !0 }), this.handleMouseEnter();
+                          this.setState({
+                              hovered: !0,
+                          }),
+                              this.handleMouseEnter();
                       }
                     : void 0,
-                onMouseLeave: l ? () => this.setState({ hovered: !1 }) : void 0,
+                onMouseLeave: l
+                    ? () =>
+                          this.setState({
+                              hovered: !1,
+                          })
+                    : void 0,
                 role: "option",
                 "aria-disabled": !l,
                 "aria-selected": l && s,
@@ -181,7 +197,9 @@ class W extends a.PureComponent {
                 let { onClick: t, index: n } = this.props;
                 null != t && "number" == typeof n && t(n, e);
             }),
-            (this.state = { hovered: !1 });
+            (this.state = {
+                hovered: !1,
+            });
     }
 }
 class K extends W {
@@ -191,14 +209,26 @@ class K extends W {
             children: [
                 (0, i.jsx)(P.oC, {
                     children: (0, i.jsxs)(P.dB, {
-                        children: [e, " ", null != n && (0, i.jsx)(d.E, { type: n })],
+                        children: [
+                            e,
+                            " ",
+                            null != n &&
+                                (0, i.jsx)(d.E, {
+                                    type: n,
+                                }),
+                        ],
                     }),
                 }),
-                null != t ? (0, i.jsx)(P.Aq, { children: t }) : null,
+                null != t
+                    ? (0, i.jsx)(P.Aq, {
+                          children: t,
+                      })
+                    : null,
             ],
         });
     }
 }
+
 function z(e) {
     let t = a.useMemo(() => c().random(60, 120), []);
     return (0, i.jsx)("div", {
@@ -209,13 +239,16 @@ function z(e) {
                 children: (0, i.jsx)(P.dB, {
                     children: (0, i.jsx)("div", {
                         className: j.M,
-                        style: { width: t },
+                        style: {
+                            width: t,
+                        },
                     }),
                 }),
             }),
         }),
     });
 }
+
 function q(e) {
     let { title: t, className: n, children: r } = e,
         s = a.useContext(Y);
@@ -232,7 +265,9 @@ function q(e) {
 class X extends W {
     renderContent() {
         let { className: e } = this.props;
-        return (0, i.jsx)("div", { className: o()(e, j.yF) });
+        return (0, i.jsx)("div", {
+            className: o()(e, j.yF),
+        });
     }
     constructor(...e) {
         super(...e), M(this, "layoutClass", j.fF), M(this, "selectable", !1);
@@ -254,7 +289,9 @@ class Z extends W {
                     }),
                 }),
                 (0, i.jsx)(P.oC, {
-                    children: (0, i.jsx)(P.dB, { children: null != (e = null != n ? n : o) ? e : w.Ay.getName(t) }),
+                    children: (0, i.jsx)(P.dB, {
+                        children: null != (e = null != n ? n : o) ? e : w.Ay.getName(t),
+                    }),
                 }),
                 (0, i.jsxs)(P.Aq, {
                     children: [
@@ -290,7 +327,9 @@ class Q extends W {
             d = null == l ? C.A.getNickname(t.id) : null,
             p = null != (e = null != n ? n : d) ? e : w.Ay.getName(t);
         return (0, i.jsxs)(P.Mr, {
-            className: o()({ [j.DH]: "vertical-suggestion" === u }),
+            className: o()({
+                [j.DH]: "vertical-suggestion" === u,
+            }),
             children: [
                 (0, i.jsx)(P.Ch, {
                     children: (0, i.jsx)(f.euF, {
@@ -302,7 +341,9 @@ class Q extends W {
                 }),
                 (0, i.jsxs)("div", {
                     className: j.H5,
-                    "aria-label": L.intl.formatToPlainString(L.t["9v/R+j"], { name: p }),
+                    "aria-label": L.intl.formatToPlainString(L.t["9v/R+j"], {
+                        name: p,
+                    }),
                     children: [
                         (0, i.jsx)(P.oC, {
                             children: (0, i.jsx)(f.Text, {
@@ -363,7 +404,16 @@ class $ extends W {
                 roleStyle: "username",
                 includeConvenienceGlow: !0,
             }),
-            h = l ? k({}, u ? d : { color: null != r ? r : void 0 }) : void 0;
+            h = l
+                ? k(
+                      {},
+                      u
+                          ? d
+                          : {
+                                color: null != r ? r : void 0,
+                            },
+                  )
+                : void 0;
         return (0, i.jsxs)(P.Mr, {
             children: [
                 (0, i.jsx)(P.oC, {
@@ -377,7 +427,9 @@ class $ extends W {
                                     tooltip: !1,
                                 }),
                             (0, i.jsxs)("span", {
-                                className: o()({ [_]: u }),
+                                className: o()({
+                                    [_]: u,
+                                }),
                                 style: h,
                                 "data-text": u ? "@".concat(e.name) : void 0,
                                 children: ["@", e.name],
@@ -385,7 +437,11 @@ class $ extends W {
                         ],
                     }),
                 }),
-                t ? null : (0, i.jsx)(P.Aq, { children: L.intl.string(L.t["/91tbr"]) }),
+                t
+                    ? null
+                    : (0, i.jsx)(P.Aq, {
+                          children: L.intl.string(L.t["/91tbr"]),
+                      }),
             ],
         });
     }
@@ -403,7 +459,11 @@ class J extends W {
                         }),
                     }),
                 }),
-                null != t ? (0, i.jsx)(P.Aq, { children: t }) : null,
+                null != t
+                    ? (0, i.jsx)(P.Aq, {
+                          children: t,
+                      })
+                    : null,
             ],
         });
     }
@@ -414,9 +474,22 @@ class ee extends W {
             n = e.type === D.rbe.GUILD_CATEGORY ? f.sjq : (0, E.gU)(e);
         return (0, i.jsxs)(P.Mr, {
             children: [
-                null != n && (0, i.jsx)(P.Ch, { children: (0, i.jsx)(n, { className: j.Kk }) }),
-                (0, i.jsx)(P.oC, { children: (0, i.jsx)(P.dB, { children: (0, g.m1)(e, N.default, C.A) }) }),
-                null != t ? (0, i.jsx)(P.Aq, { children: t.name }) : null,
+                null != n &&
+                    (0, i.jsx)(P.Ch, {
+                        children: (0, i.jsx)(n, {
+                            className: j.Kk,
+                        }),
+                    }),
+                (0, i.jsx)(P.oC, {
+                    children: (0, i.jsx)(P.dB, {
+                        children: (0, g.m1)(e, N.default, C.A),
+                    }),
+                }),
+                null != t
+                    ? (0, i.jsx)(P.Aq, {
+                          children: t.name,
+                      })
+                    : null,
             ],
         });
     }
@@ -434,8 +507,14 @@ class et extends W {
                         colorClass: j.t4,
                     }),
                 }),
-                (0, i.jsx)(P.oC, { children: (0, i.jsx)(P.dB, { children: e.displayName }) }),
-                (0, i.jsx)(P.Aq, { children: e.displayDescription }),
+                (0, i.jsx)(P.oC, {
+                    children: (0, i.jsx)(P.dB, {
+                        children: e.displayName,
+                    }),
+                }),
+                (0, i.jsx)(P.Aq, {
+                    children: e.displayDescription,
+                }),
             ],
         });
     }
@@ -482,10 +561,17 @@ class er extends W {
                           className: j.nT,
                           children: e.surrogates,
                       }),
-            s = null != n ? (0, i.jsx)(P.Aq, { children: n.name }) : null;
+            s =
+                null != n
+                    ? (0, i.jsx)(P.Aq, {
+                          children: n.name,
+                      })
+                    : null;
         return (0, i.jsxs)(P.Mr, {
             children: [
-                (0, i.jsx)(P.Ch, { children: a }),
+                (0, i.jsx)(P.Ch, {
+                    children: a,
+                }),
                 (0, i.jsx)(P.oC, {
                     children: (0, i.jsxs)(P.dB, {
                         children: [t, e.name, t],
@@ -511,14 +597,26 @@ class ei extends W {
                 : (0, S.Xw)(o) && (n = null == (t = T.A.getGuild(o.guild_id)) ? void 0 : t.name),
             (0, i.jsxs)(P.Mr, {
                 children: [
-                    (0, i.jsx)(P.Ch, { children: a(o, l || !0 === s) }),
+                    (0, i.jsx)(P.Ch, {
+                        children: a(o, l || !0 === s),
+                    }),
                     (0, i.jsxs)(P.oC, {
                         children: [
-                            (0, i.jsx)(P.dB, { children: o.name }),
-                            null != r && (0, i.jsx)(P.Nd, { children: L.intl.format(L.t.PAutaQ, { queryMatch: r }) }),
+                            (0, i.jsx)(P.dB, {
+                                children: o.name,
+                            }),
+                            null != r &&
+                                (0, i.jsx)(P.Nd, {
+                                    children: L.intl.format(L.t.PAutaQ, {
+                                        queryMatch: r,
+                                    }),
+                                }),
                         ],
                     }),
-                    null != n && (0, i.jsx)(P.Aq, { children: n }),
+                    null != n &&
+                        (0, i.jsx)(P.Aq, {
+                            children: n,
+                        }),
                 ],
             })
         );
@@ -543,7 +641,9 @@ class ea extends W {
 }
 class es extends W {
     renderContent() {
-        return (0, i.jsx)(b.A, { emojis: this.props.emojis });
+        return (0, i.jsx)(b.A, {
+            emojis: this.props.emojis,
+        });
     }
 }
 class eo extends W {
@@ -565,8 +665,14 @@ class el extends W {
             });
         return (0, i.jsxs)(P.Mr, {
             children: [
-                (0, i.jsx)(P.Ch, { children: t }),
-                (0, i.jsx)(P.oC, { children: (0, i.jsx)(P.dB, { children: e.name }) }),
+                (0, i.jsx)(P.Ch, {
+                    children: t,
+                }),
+                (0, i.jsx)(P.oC, {
+                    children: (0, i.jsx)(P.dB, {
+                        children: e.name,
+                    }),
+                }),
             ],
         });
     }
@@ -578,10 +684,25 @@ class ec extends (r = a.PureComponent) {
             l = V(e, ["children", "className", "innerClassName", "id"]);
         return a.Children.count(t) > 0
             ? (0, i.jsx)(Y.Provider, {
-                  value: { id: null != s ? s : "" },
+                  value: {
+                      id: null != s ? s : "",
+                  },
                   children: (0, i.jsx)("div", {
                       className: o()(j.nx, n),
-                      children: (0, i.jsx)("div", G(k({ className: o()(j.Fv, r) }, l), { children: t })),
+                      children: (0, i.jsx)(
+                          "div",
+                          G(
+                              k(
+                                  {
+                                      className: o()(j.Fv, r),
+                                  },
+                                  l,
+                              ),
+                              {
+                                  children: t,
+                              },
+                          ),
+                      ),
                   }),
               })
             : null;

@@ -25,6 +25,7 @@ var o = n(280230),
     d = n(998218),
     f = n(182490),
     p = n(417964);
+
 function _(e, t, n) {
     return (
         t in e
@@ -38,6 +39,7 @@ function _(e, t, n) {
         e
     );
 }
+
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -54,6 +56,7 @@ function h(e) {
     }
     return e;
 }
+
 function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -66,6 +69,7 @@ function m(e, t) {
     }
     return n;
 }
+
 function g(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -77,7 +81,10 @@ function g(e, t) {
         e
     );
 }
-let E = new (s())({ max: 50 });
+let E = new (s())({
+    max: 50,
+});
+
 function b(e) {
     let t = e,
         n = E.get(t);
@@ -121,6 +128,7 @@ let y = ["http:", "https:", "discord:", "tel:", "sms:", "mailto:"],
         f.D.BLOCK_QUOTE,
         f.D.SUBTEXT,
     ];
+
 function T(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
     for (let r of (Array.isArray(e) || (e = [e]), e)) {
@@ -133,6 +141,7 @@ function T(e, t) {
     }
     return e;
 }
+
 function C(e) {
     let t = "";
     for (let n of e)
@@ -171,6 +180,7 @@ function C(e) {
         }
     return t;
 }
+
 function N(e) {
     if ((0, c.rL)(e) || b(e).whitespaceSanitized !== e) return !0;
     let t = d.A.toURLSafe(e);
@@ -179,6 +189,7 @@ function N(e) {
     let n = e.split("/");
     return n.length < 3 || "" !== n[1] || d.A.safeDecodeURIComponent(n[2]) !== n[2];
 }
+
 function R(e) {
     try {
         var t;

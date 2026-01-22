@@ -1,4 +1,6 @@
-n.d(t, { A: () => O }),
+n.d(t, {
+    A: () => O,
+}),
     n(896048),
     n(114821),
     n(339614),
@@ -19,6 +21,7 @@ var r = n(735438),
     u = n(661191),
     d = n(636889),
     f = n(652215);
+
 function p(e, t, n) {
     return (
         t in e
@@ -32,6 +35,7 @@ function p(e, t, n) {
         e
     );
 }
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -50,6 +54,7 @@ function _(e) {
 }
 let h = new l.A("ChannelMessages"),
     m = !0;
+
 function g(e, t) {
     var n, r;
     let i = null != e.editedTimestamp ? +e.editedTimestamp : 0;
@@ -59,6 +64,7 @@ function g(e, t) {
         e.content !== t.content
     );
 }
+
 function E(e, t) {
     let n = e.get(t.id);
     return null == n || g(n, t) || e.cached ? (0, c.rh)(t) : n;
@@ -535,7 +541,14 @@ class y {
         }
         if (this.hasMoreAfter) this._after.wasAtEdge && (this._after.wasAtEdge = !1);
         else {
-            let t = a.A.getCurrentConfig({ location: "2ecb25_1" }, { autoTrackExposure: !1 }).enabled
+            let t = a.A.getCurrentConfig(
+                    {
+                        location: "2ecb25_1",
+                    },
+                    {
+                        autoTrackExposure: !1,
+                    },
+                ).enabled
                     ? (0, c.rh)(e)
                     : E(this, e),
                 n = this.merge([t]);
@@ -584,7 +597,14 @@ class y {
             N = i()(y)
                 .reverse()
                 .map(
-                    a.A.getCurrentConfig({ location: "2ecb25_2" }, { autoTrackExposure: !1 }).enabled
+                    a.A.getCurrentConfig(
+                        {
+                            location: "2ecb25_2",
+                        },
+                        {
+                            autoTrackExposure: !1,
+                        },
+                    ).enabled
                         ? (e) => (0, c.rh)(e)
                         : (e) => E(this, e),
                 )

@@ -1,4 +1,7 @@
-n.r(t), n.d(t, { default: () => j });
+n.r(t),
+    n.d(t, {
+        default: () => j,
+    });
 var i = n(627968),
     a = n(64700),
     s = n(311907),
@@ -21,7 +24,9 @@ var i = n(627968),
     _ = n(652215),
     m = n(985018);
 let k = a.forwardRef(function () {
-        f.A.trackExposure({ location: "cd25e4_1" });
+        f.A.trackExposure({
+            location: "cd25e4_1",
+        });
         let e = (0, s.bG)([y.A], () => y.A.theme),
             t = (0, h.NC)(),
             {

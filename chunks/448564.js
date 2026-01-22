@@ -1,7 +1,11 @@
-n.d(t, { A: () => o }), n(896048);
+n.d(t, {
+    A: () => o,
+}),
+    n(896048);
 var r,
     i = n(311907),
     l = n(73153);
+
 function s(e, t, n) {
     return (
         t in e
@@ -15,7 +19,9 @@ function s(e, t, n) {
         e
     );
 }
-let a = { canSeeEnableMonetizationForGuilds: new Set() };
+let a = {
+    canSeeEnableMonetizationForGuilds: new Set(),
+};
 class c extends (r = i.Ay.PersistedStore) {
     initialize(e) {
         null != e && (a.canSeeEnableMonetizationForGuilds = new Set(e.canSeeEnableMonetizationForGuilds));

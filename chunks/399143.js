@@ -1,4 +1,9 @@
-n.d(e, { GuildSubscriptionSelectionModal: () => p }), n(896048), n(667532), n(321073);
+n.d(e, {
+    GuildSubscriptionSelectionModal: () => p,
+}),
+    n(896048),
+    n(667532),
+    n(321073);
 var i = n(627968),
     l = n(64700),
     r = n(158954),
@@ -9,6 +14,7 @@ var i = n(627968),
     d = n(915043),
     c = n(985018),
     x = n(281819);
+
 function p(t) {
     let { transitionState: e, onClose: n, sku: p, onSelect: g, currentGuildId: h } = t,
         [b, m] = l.useState(),

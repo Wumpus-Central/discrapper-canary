@@ -1,7 +1,10 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 var r = n(627968);
 n(64700);
 var i = n(590089);
+
 function a(e) {
     let { node: t } = e,
         { useTitle: n, useSubtitle: a } = t,

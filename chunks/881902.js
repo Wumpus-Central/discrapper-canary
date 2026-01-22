@@ -1,6 +1,10 @@
-n.d(t, { A: () => l }), n(896048);
+n.d(t, {
+    A: () => l,
+}),
+    n(896048);
 var r = n(439372),
     i = n(201718);
+
 function a(e, t, n) {
     return (
         t in e
@@ -14,6 +18,7 @@ function a(e, t, n) {
         e
     );
 }
+
 function s(e) {
     i.P.refetch(e.user_id);
 }

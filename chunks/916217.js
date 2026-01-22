@@ -1,4 +1,7 @@
-t.d(l, { A: () => C }), t(896048);
+t.d(l, {
+    A: () => C,
+}),
+    t(896048);
 var n = t(627968),
     i = t(64700),
     r = t(397927),
@@ -27,6 +30,7 @@ var n = t(627968),
     T = t(763563),
     P = t(195723),
     S = t(368519);
+
 function C(e) {
     var l;
     let {
@@ -77,7 +81,9 @@ function C(e) {
                         component: (0, n.jsx)(r.AC4, {
                             children: (0, n.jsx)(r.H, {
                                 id: W,
-                                children: _.intl.format(_.t.KRe1Fk, { name: B }),
+                                children: _.intl.format(_.t.KRe1Fk, {
+                                    name: B,
+                                }),
                             }),
                         }),
                         children: (0, n.jsxs)(v.A, {
@@ -86,7 +92,11 @@ function C(e) {
                             themeType: E.d.MODAL,
                             ref: (null == V ? void 0 : V.profileEffect) != null ? H : void 0,
                             children: [
-                                (0, n.jsx)(y.A, { children: (0, n.jsx)(I.A, { user: t }) }),
+                                (0, n.jsx)(y.A, {
+                                    children: (0, n.jsx)(I.A, {
+                                        user: t,
+                                    }),
+                                }),
                                 (0, n.jsxs)("div", {
                                     children: [
                                         (0, n.jsx)(A.A, {

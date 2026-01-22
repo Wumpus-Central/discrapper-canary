@@ -1,4 +1,8 @@
-n.d(t, { A: () => O }), n(65821), n(938796);
+n.d(t, {
+    A: () => O,
+}),
+    n(65821),
+    n(938796);
 var r = n(136722),
     i = n(665260),
     a = n(988506),
@@ -13,6 +17,7 @@ var r = n(136722),
     _ = n(661191),
     h = n(652215),
     m = n(788868);
+
 function g(e, t, n) {
     return (
         t in e
@@ -26,6 +31,7 @@ function g(e, t, n) {
         e
     );
 }
+
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,6 +48,7 @@ function E(e) {
     }
     return e;
 }
+
 function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -54,6 +61,7 @@ function b(e, t) {
     }
     return n;
 }
+
 function y(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -88,13 +96,21 @@ class O extends s.A {
     }
     addGuildAvatarHash(e, t) {
         if (this.guildMemberAvatars[e] === t) return this;
-        let n = y(E({}, this.guildMemberAvatars), { [e]: t });
-        return this.merge({ guildMemberAvatars: n });
+        let n = y(E({}, this.guildMemberAvatars), {
+            [e]: t,
+        });
+        return this.merge({
+            guildMemberAvatars: n,
+        });
     }
     removeGuildAvatarHash(e) {
         if (void 0 === this.guildMemberAvatars[e]) return this;
-        let t = y(E({}, this.guildMemberAvatars), { [e]: void 0 });
-        return this.merge({ guildMemberAvatars: t });
+        let t = y(E({}, this.guildMemberAvatars), {
+            [e]: void 0,
+        });
+        return this.merge({
+            guildMemberAvatars: t,
+        });
     }
     getAvatarSource(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
@@ -305,7 +321,7 @@ class O extends s.A {
                     configurable: !1,
                     enumerable: !1,
                     value: (e) => {
-                        if (e <= 1073741824) return ((this.flags | this.publicFlags) & e) === e;
+                        if (e <= 0x40000000) return ((this.flags | this.publicFlags) & e) === e;
                         let t = r.iu(this.flags),
                             n = r.iu(this.publicFlags),
                             i = r.iu(e);
@@ -337,4 +353,6 @@ class O extends s.A {
             (null == (V = this.globalName) ? void 0 : V.length) === 0 && (this.globalName = null);
     }
 }
-new O({ id: "0" });
+new O({
+    id: "0",
+});

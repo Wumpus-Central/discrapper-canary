@@ -1,4 +1,6 @@
-n.d(t, { F: () => h });
+n.d(t, {
+    F: () => h,
+});
 var r = n(22299),
     i = n(861170),
     a = n(515702),
@@ -32,6 +34,7 @@ let f = {
         yearName: "literal",
         unknown: "literal",
     };
+
 function h(e) {
     var t, n, i;
     let {
@@ -82,7 +85,13 @@ function h(e) {
                     .reduce((e, t) => ((e[_[t.type] || t.type] = !0), e), {}),
             [H],
         ),
-        [K, z] = (0, d.useState)(() => (e.value || e.defaultValue ? { ...W } : {})),
+        [K, z] = (0, d.useState)(() =>
+            e.value || e.defaultValue
+                ? {
+                      ...W,
+                  }
+                : {},
+        ),
         q = (0, d.useRef)(null),
         X = (0, d.useRef)(D);
     (0, d.useEffect)(() => {
@@ -90,7 +99,13 @@ function h(e) {
             ((X.current = D),
             U((t) => (Object.keys(K).length > 0 ? (0, o.yP)(t, D) : (0, r.o_)(e.placeholderValue, N, D, R))));
     }, [D, N, K, R, e.placeholderValue]),
-        x && Object.keys(K).length < Object.keys(W).length && z((K = { ...W })),
+        x &&
+            Object.keys(K).length < Object.keys(W).length &&
+            z(
+                (K = {
+                    ...W,
+                }),
+            ),
         null == x &&
             Object.keys(K).length === Object.keys(W).length &&
             (z((K = {})), U((0, r.o_)(e.placeholderValue, N, D, R)));
@@ -104,16 +119,35 @@ function h(e) {
                 : (0 === n.length && null == q.current) ||
                     n.length >= i.length ||
                     (n.length === i.length - 1 && W.dayPeriod && !K.dayPeriod && "dayPeriod" !== q.current)
-                  ? (0 === n.length && z((K = { ...W })),
+                  ? (0 === n.length &&
+                        z(
+                            (K = {
+                                ...W,
+                            }),
+                        ),
                     L((t = (0, o.yP)(t, (null == C ? void 0 : C.calendar) || new (0, l.FG)()))))
                   : U(t),
                 (q.current = null);
         },
         $ = (0, d.useMemo)(() => Z.toDate(w), [Z, w]),
         J = (0, d.useMemo)(() => m($, K, H, Y, Z, D, h, N), [$, K, H, Y, Z, D, h, N]);
-    W.era && K.year && !K.era ? ((K.era = !0), z({ ...K })) : !W.era && K.era && (delete K.era, z({ ...K }));
+    W.era && K.year && !K.era
+        ? ((K.era = !0),
+          z({
+              ...K,
+          }))
+        : !W.era &&
+          K.era &&
+          (delete K.era,
+          z({
+              ...K,
+          }));
     let ee = (e) => {
-            (K[e] = !0), "year" === e && W.era && (K.era = !0), z({ ...K });
+            (K[e] = !0),
+                "year" === e && W.era && (K.era = !0),
+                z({
+                    ...K,
+                });
         },
         et = (e, t) => {
             if (K[e]) Q(E(Z, e, t, Y));
@@ -167,20 +201,45 @@ function h(e) {
             if (e.isDisabled || e.isReadOnly) return;
             let t = Object.keys(K),
                 n = Object.keys(W);
-            t.length === n.length - 1 && W.dayPeriod && !K.dayPeriod && (z((K = { ...W })), Q(Z.copy()));
+            t.length === n.length - 1 &&
+                W.dayPeriod &&
+                !K.dayPeriod &&
+                (z(
+                    (K = {
+                        ...W,
+                    }),
+                ),
+                Q(Z.copy()));
         },
         clearSegment(t) {
-            delete K[t], (q.current = t), z({ ...K });
+            delete K[t],
+                (q.current = t),
+                z({
+                    ...K,
+                });
             let n = (0, r.o_)(e.placeholderValue, N, D, R),
                 i = Z;
             if ("dayPeriod" === t && "hour" in Z && "hour" in n) {
                 let e = Z.hour >= 12,
                     t = n.hour >= 12;
-                e && !t ? (i = Z.set({ hour: Z.hour - 12 })) : !e && t && (i = Z.set({ hour: Z.hour + 12 }));
+                e && !t
+                    ? (i = Z.set({
+                          hour: Z.hour - 12,
+                      }))
+                    : !e &&
+                      t &&
+                      (i = Z.set({
+                          hour: Z.hour + 12,
+                      }));
             } else
                 "hour" === t && "hour" in Z && Z.hour >= 12 && K.dayPeriod
-                    ? (i = Z.set({ hour: n.hour + 12 }))
-                    : t in Z && (i = Z.set({ [t]: n[t] }));
+                    ? (i = Z.set({
+                          hour: n.hour + 12,
+                      }))
+                    : t in Z &&
+                      (i = Z.set({
+                          [t]: n[t],
+                      }));
             L(null), Q(i);
         },
         formatValue(e) {
@@ -198,6 +257,7 @@ function h(e) {
         },
     };
 }
+
 function m(e, t, n, r, a, s, o, l) {
     let c = ["hour", "minute", "second"],
         u = n.formatToParts(e),
@@ -219,7 +279,7 @@ function m(e, t, n, r, a, s, o, l) {
         "hour" === n
             ? (d.push({
                   type: "literal",
-                  text: "\u2066",
+                  text: "⁦",
                   ...g(a, "literal", r),
                   isPlaceholder: !1,
                   placeholder: "",
@@ -229,7 +289,7 @@ function m(e, t, n, r, a, s, o, l) {
               n === l &&
                   d.push({
                       type: "literal",
-                      text: "\u2069",
+                      text: "⁩",
                       ...g(a, "literal", r),
                       isPlaceholder: !1,
                       placeholder: "",
@@ -239,7 +299,7 @@ function m(e, t, n, r, a, s, o, l) {
               ? (d.push(m),
                 d.push({
                     type: "literal",
-                    text: "\u2069",
+                    text: "⁩",
                     ...g(a, "literal", r),
                     isPlaceholder: !1,
                     placeholder: "",
@@ -249,6 +309,7 @@ function m(e, t, n, r, a, s, o, l) {
     }
     return d;
 }
+
 function g(e, t, n) {
     switch (t) {
         case "era": {
@@ -315,20 +376,25 @@ function g(e, t, n) {
         }
     return {};
 }
+
 function E(e, t, n, r) {
     switch (t) {
         case "era":
         case "year":
         case "month":
         case "day":
-            return e.cycle(t, n, { round: "year" === t });
+            return e.cycle(t, n, {
+                round: "year" === t,
+            });
     }
     if ("hour" in e)
         switch (t) {
             case "dayPeriod": {
                 let t = e.hour,
                     n = t >= 12;
-                return e.set({ hour: n ? t - 12 : t + 12 });
+                return e.set({
+                    hour: n ? t - 12 : t + 12,
+                });
             }
             case "hour":
             case "minute":
@@ -340,13 +406,16 @@ function E(e, t, n, r) {
         }
     throw Error("Unknown segment: " + t);
 }
+
 function b(e, t, n, r) {
     switch (t) {
         case "day":
         case "month":
         case "year":
         case "era":
-            return e.set({ [t]: n });
+            return e.set({
+                [t]: n,
+            });
     }
     if ("hour" in e && "number" == typeof n)
         switch (t) {
@@ -354,7 +423,9 @@ function b(e, t, n, r) {
                 let t = e.hour,
                     r = t >= 12;
                 if (n >= 12 === r) return e;
-                return e.set({ hour: r ? t - 12 : t + 12 });
+                return e.set({
+                    hour: r ? t - 12 : t + 12,
+                });
             }
             case "hour":
                 if (r.hour12) {
@@ -363,7 +434,9 @@ function b(e, t, n, r) {
                 }
             case "minute":
             case "second":
-                return e.set({ [t]: n });
+                return e.set({
+                    [t]: n,
+                });
         }
     throw Error("Unknown segment: " + t);
 }

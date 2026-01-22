@@ -1,4 +1,6 @@
-n.d(t, { K: () => E });
+n.d(t, {
+    K: () => E,
+});
 var r = n(224507),
     i = n(825733),
     a = n(442058),
@@ -13,9 +15,11 @@ var r = n(224507),
     _ = n(853590),
     h = n(47276),
     m = n(64700);
+
 function g(e) {
     return e && e.__esModule ? e.default : e;
 }
+
 function E(e, t, n) {
     let { keyboardDelegate: E, isVirtualized: b, layoutDelegate: y, layout: O } = e,
         A = (0, p.Q)({
@@ -60,7 +64,11 @@ function E(e, t, n) {
                 null != (n = null == (e = t.collection.columns.find((e) => e.key === N)) ? void 0 : e.textValue)
                     ? n
                     : "";
-            return R && N ? w.format(`${R}Sort`, { columnName: r }) : void 0;
+            return R && N
+                ? w.format(`${R}Sort`, {
+                      columnName: r,
+                  })
+                : void 0;
         }, [R, N, t.collection.columns]),
         D = (0, c.I)(P);
     return (

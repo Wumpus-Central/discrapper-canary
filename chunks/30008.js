@@ -1,4 +1,7 @@
-n.d(t, { Q: () => y }), n(938796);
+n.d(t, {
+    Q: () => y,
+}),
+    n(938796);
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -59,6 +62,7 @@ let b = (0, a.UT)([d.A, u.A, f.A], {
                 });
     },
 });
+
 function y(e) {
     let { data: t } = b(e),
         n = null == t ? void 0 : t.parentSku,

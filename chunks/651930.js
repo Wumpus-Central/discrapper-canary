@@ -119,7 +119,9 @@ let O = a.memo(function (e) {
                     let n = t.game;
                     return (
                         n.name !== (null == i ? void 0 : i.name) && n.id === (null == i || i.id),
-                        (0, l.jsx)(O, { game: t.game })
+                        (0, l.jsx)(O, {
+                            game: t.game,
+                        })
                     );
                 },
                 [h, i],
@@ -174,6 +176,7 @@ let O = a.memo(function (e) {
             })
         );
     });
+
 function C(e) {
     var t, n;
     let { onClose: o, transitionState: d, onSubmitted: m, detectedActivity: p, defaultStep: h = "issue_selection" } = e,
@@ -270,7 +273,11 @@ function C(e) {
             {
                 transitionState: d,
                 onClose: o,
-                trackingProps: { impression: { impressionName: i.ImpressionNames.GAME_DETECTION_REPORT_MODAL } },
+                trackingProps: {
+                    impression: {
+                        impressionName: i.ImpressionNames.GAME_DETECTION_REPORT_MODAL,
+                    },
+                },
                 children: (() => {
                     switch (v) {
                         case "issue_selection":

@@ -1,4 +1,9 @@
-n.d(t, { A: () => m }), n(896048), n(228524), n(321073);
+n.d(t, {
+    A: () => m,
+}),
+    n(896048),
+    n(228524),
+    n(321073);
 var r = n(627968),
     i = n(64700),
     l = n(397927);
@@ -10,6 +15,7 @@ var s = n(11351),
     d = n(79143),
     u = n(2242),
     f = n(985018);
+
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,6 +41,7 @@ function g(e) {
     }
     return e;
 }
+
 function b(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -53,10 +60,12 @@ function b(e, t) {
         e
     );
 }
+
 function m() {
     let { editStateId: e, guildId: t } = (0, a.O)(),
         [n, m] = c.lZ(e),
         p = i.useMemo(() => new Set(n.map((e) => e.ref_id)), [n]);
+
     function x(e, t) {
         let { channelId: r, description: i, emojiId: l, emojiName: s } = e,
             a = [...n],
@@ -99,7 +108,10 @@ function m() {
                 },
                 guildId: t,
             }),
-            n.length > 0 && (0, r.jsx)(l.hKd, { size: 8 }),
+            n.length > 0 &&
+                (0, r.jsx)(l.hKd, {
+                    size: 8,
+                }),
             (0, r.jsx)(d.n, {
                 onClick: function () {
                     (0, l.qfG)((e) =>

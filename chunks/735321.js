@@ -32,6 +32,7 @@ var r = n(926675),
     d = n(61881),
     f = n(229231),
     p = n(985018);
+
 function _(e, t, n) {
     return (
         t in e
@@ -45,6 +46,7 @@ function _(e, t, n) {
         e
     );
 }
+
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -61,6 +63,7 @@ function h(e) {
     }
     return e;
 }
+
 function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -73,6 +76,7 @@ function m(e, t) {
     }
     return n;
 }
+
 function g(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -85,37 +89,47 @@ function g(e, t) {
     );
 }
 let E = (e) => f.Ok[e.type](e);
+
 function b(e, t) {
     let { isCurrentUser: n } = t,
         i = e.games.length > 0;
     if (n && i)
         return 1 === r.um[e.type]
             ? p.intl.string(p.t.wiXdEa)
-            : p.intl.format(p.t["zR1+0/"], { numGames: r.um[e.type] });
+            : p.intl.format(p.t["zR1+0/"], {
+                  numGames: r.um[e.type],
+              });
 }
+
 function y(e) {
     var t;
     return (null == e || null == (t = e.widgets) ? void 0 : t.some(l.fu)) === !0;
 }
+
 function O(e) {
     return f._u.includes(e);
 }
+
 function A(e) {
     return f.gk.includes(e);
 }
+
 function v(e) {
     return e in r.um ? r.um[e] : 0;
 }
+
 function S() {
     var e;
     let t = o.default.getCurrentUser(),
         n = null != t ? c.A.getUserProfile(t.id) : null;
     return null != (e = null == n ? void 0 : n.widgets) ? e : [];
 }
+
 function I() {
     var e;
     return d.A.hasPendingChanges() ? (null != (e = d.A.getPendingWidgets()) ? e : []) : S();
 }
+
 function T(e) {
     var t;
     return null !=
@@ -125,6 +139,7 @@ function T(e) {
         ? t
         : null;
 }
+
 function C(e) {
     let t = I(),
         n = t.findIndex((t) => t.getUniqueKey() === e.getUniqueKey());
@@ -134,14 +149,17 @@ function C(e) {
         return (r[n] = e), r;
     }
 }
+
 function N(e) {
     let t = I();
     null == t.find((t) => t.getUniqueKey() === e.getUniqueKey()) && u.A.setPendingWidgets([e, ...t]);
 }
+
 function R(e) {
     let t = I().filter((t) => t.getUniqueKey() !== e.getUniqueKey());
     u.A.setPendingWidgets(t);
 }
+
 function w(e, t, n) {
     let r = Object.values(i.X).length;
     if (n.length > r) return;
@@ -149,11 +167,20 @@ function w(e, t, n) {
     if (null == a) return;
     let s = a.games.find((e) => e.applicationId === t);
     if (null == s) return;
-    let o = g(h({}, s), { tags: n }),
+    let o = g(h({}, s), {
+            tags: n,
+        }),
         c = a.games.map((e) => (e.applicationId === t ? o : e)),
-        d = C(new l.Yy(g(h({}, a), { games: c })));
+        d = C(
+            new l.Yy(
+                g(h({}, a), {
+                    games: c,
+                }),
+            ),
+        );
     u.A.setPendingWidgets(d);
 }
+
 function P(e, t, n) {
     let r = T(e);
     if (null == r) return;
@@ -162,16 +189,26 @@ function P(e, t, n) {
     let a = i.tags.filter((e) => e !== n);
     w(r.type, t, a.length > 0 ? a : []);
 }
+
 function D(e, t, n) {
     let r = T(e);
     if (null == r) return;
     let i = r.games.find((e) => e.applicationId === t);
     if (null == i || n === i.comment) return;
-    let a = g(h({}, i), { comment: n }),
+    let a = g(h({}, i), {
+            comment: n,
+        }),
         s = r.games.map((e) => (e.applicationId === t ? a : e)),
-        o = C(new l.Yy(g(h({}, r), { games: s })));
+        o = C(
+            new l.Yy(
+                g(h({}, r), {
+                    games: s,
+                }),
+            ),
+        );
     u.A.setPendingWidgets(o);
 }
+
 function x(e) {
     var t, n, r, i;
     let s,
@@ -188,9 +225,26 @@ function x(e) {
         tags: c.tags,
     };
     s = null != f ? [_, ...(null != (i = f.games) ? i : [])] : [_];
-    let m = C(new l.Yy(g(h({}, null != f ? f : { type: o }), { games: s })));
+    let m = C(
+        new l.Yy(
+            g(
+                h(
+                    {},
+                    null != f
+                        ? f
+                        : {
+                              type: o,
+                          },
+                ),
+                {
+                    games: s,
+                },
+            ),
+        ),
+    );
     u.A.setPendingWidgets(m), a.A.getDetectableGamesSupplemental([c.applicationId]);
 }
+
 function L(e, t) {
     if (e === t) return;
     let n = I();
@@ -199,6 +253,7 @@ function L(e, t) {
         [i] = r.splice(e, 1);
     r.splice(t, 0, i), u.A.setPendingWidgets(r);
 }
+
 function j(e, t, n) {
     let r = T(e);
     if (null == r || null == r.games || t === n) return;
@@ -206,23 +261,39 @@ function j(e, t, n) {
     if (t < 0 || t >= i.length || n < 0 || n >= i.length) return;
     let [a] = i.splice(t, 1);
     i.splice(n, 0, a);
-    let s = C(new l.Yy(g(h({}, r), { games: i })));
+    let s = C(
+        new l.Yy(
+            g(h({}, r), {
+                games: i,
+            }),
+        ),
+    );
     u.A.setPendingWidgets(s);
 }
+
 function M(e, t) {
     let n = T(e);
     if (null == n) return;
     let r = (null != n.games ? n.games : []).filter((e) => e.applicationId !== t),
-        i = C(new l.Yy(g(h({}, n), { games: r })));
+        i = C(
+            new l.Yy(
+                g(h({}, n), {
+                    games: r,
+                }),
+            ),
+        );
     u.A.setPendingWidgets(i);
 }
+
 function k(e) {
     let t = v(e.type);
     return e.games.length >= t;
 }
+
 function U(e) {
     return null == e || "" === e || (Array.isArray(e) && 0 === e.length) ? null : e;
 }
+
 function G(e, t, n) {
     if (e.applicationId !== t.applicationId || (O(n) && U(e.comment) !== U(t.comment))) return !1;
     if (A(n)) {
@@ -236,12 +307,15 @@ function G(e, t, n) {
     }
     return !0;
 }
+
 function V(e, t, n) {
     return e.length === t.length && e.every((e, r) => G(e, t[r], n));
 }
+
 function F(e) {
     return (null == e ? void 0 : e.themes) != null && e.themes.includes(s.q0.EROTIC);
 }
+
 function B(e) {
     return !F(e) && !r.Zk.has(e.id);
 }

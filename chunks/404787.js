@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(64700),
     i = n(279194),
     a = n(506774),
@@ -7,10 +9,12 @@ var r = n(64700),
     l = n(837921),
     c = n(545459),
     u = n(652215);
+
 function d(e) {
     var t;
     return null == e || null == (t = e._state) ? void 0 : t.lastTestTimestamp;
 }
+
 function f() {
     return (
         r.useEffect(() => {
@@ -27,7 +31,9 @@ function f() {
                                     success: !1,
                                     has_data: !1,
                                 },
-                                { flush: !0 },
+                                {
+                                    flush: !0,
+                                },
                             );
                         return;
                     }
@@ -53,7 +59,9 @@ function f() {
                                 current_is_newer: f,
                                 has_data: n,
                             },
-                            { flush: !0 },
+                            {
+                                flush: !0,
+                            },
                         ),
                         a.w.set(i.qx, !0),
                         s.A.userDataCache.deleteCache(),

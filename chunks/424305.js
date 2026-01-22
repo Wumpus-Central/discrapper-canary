@@ -1,4 +1,6 @@
-i.d(e, { R: () => T });
+i.d(e, {
+    R: () => T,
+});
 var n = i(311907),
     l = i(274372),
     s = i(399925),
@@ -15,17 +17,23 @@ let T = (0, r.Hn)(u.X.CLIPS_LENGTH, {
         {
             id: "30s",
             value: a.LX.SECONDS_30,
-            label: o.intl.formatToPlainString(o.t["bTFv/3"], { count: 30 }),
+            label: o.intl.formatToPlainString(o.t["bTFv/3"], {
+                count: 30,
+            }),
         },
         {
             id: "1m",
             value: a.LX.MINUTES_1,
-            label: o.intl.formatToPlainString(o.t.ICo9Nk, { count: 1 }),
+            label: o.intl.formatToPlainString(o.t.ICo9Nk, {
+                count: 1,
+            }),
         },
         {
             id: "2m",
             value: a.LX.MINUTES_2,
-            label: o.intl.formatToPlainString(o.t.ICo9Nk, { count: 2 }),
+            label: o.intl.formatToPlainString(o.t.ICo9Nk, {
+                count: 2,
+            }),
         },
     ],
 });

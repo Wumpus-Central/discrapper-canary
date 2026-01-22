@@ -1,4 +1,7 @@
-n.d(t, { A: () => H }), n(896048);
+n.d(t, {
+    A: () => H,
+}),
+    n(896048);
 var r = n(73153),
     i = n(827343),
     l = n(684013),
@@ -34,6 +37,7 @@ n(509381);
 var R = n(731854);
 let D = !0,
     M = new Map();
+
 function k(e, t, n, r) {
     var i;
     let l = performance.now();
@@ -92,7 +96,10 @@ let U = {
     },
     [L.hCu.PUSH_TO_TALK_PRIORITY]: {
         onTrigger(e, t) {
-            (v.A.getMode() === L.TBI.PUSH_TO_TALK || w.A.getCurrentConfig({ location: "keybinds" }).onPTTKeybind) &&
+            (v.A.getMode() === L.TBI.PUSH_TO_TALK ||
+                w.A.getCurrentConfig({
+                    location: "keybinds",
+                }).onPTTKeybind) &&
                 ((U[L.hCu.PUSH_TO_TALK_PRIORITY].isPressed = e), k(e, !0, !1, t));
         },
         keyEvents: {
@@ -104,7 +111,9 @@ let U = {
     [L.hCu.VAD_PRIORITY]: {
         onTrigger(e, t) {
             v.A.getMode() === L.TBI.VOICE_ACTIVITY &&
-                w.A.getCurrentConfig({ location: "keybinds" }).separateKeybind &&
+                w.A.getCurrentConfig({
+                    location: "keybinds",
+                }).separateKeybind &&
                 ((U[L.hCu.VAD_PRIORITY].isPressed = e), k(e, !0, !0, t));
         },
         keyEvents: {
@@ -310,9 +319,11 @@ let U = {
         },
     },
 };
+
 function G() {
     M.clear(), (0, b.N)(!1, !1, !1);
 }
+
 function V(e) {
     let { hasLatchPermission: t } = e;
     if (t === D) return !1;

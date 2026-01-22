@@ -56,6 +56,7 @@ var i = n(627968),
     Z = n(818348),
     z = n(985018),
     J = n(812618);
+
 function Q(e, t, n) {
     return (
         t in e
@@ -69,6 +70,7 @@ function Q(e, t, n) {
         e
     );
 }
+
 function $(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -85,6 +87,7 @@ function $(e) {
     }
     return e;
 }
+
 function ee(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -103,6 +106,7 @@ function ee(e, t) {
         e
     );
 }
+
 function et(e) {
     let { isNew: t, isBeta: n } = e,
         r = null;
@@ -113,10 +117,14 @@ function et(e) {
                   className: J.Ad,
                   color: p.A.colors.BUTTON_OUTLINE_BRAND_BACKGROUND_HOVER.css,
               }))
-            : !0 === n && (r = (0, i.jsx)(T.A, { className: J.Ad })),
+            : !0 === n &&
+              (r = (0, i.jsx)(T.A, {
+                  className: J.Ad,
+              })),
         r
     );
 }
+
 function en(e) {
     let t,
         {
@@ -180,7 +188,9 @@ function en(e) {
                                     children: z.intl.string(z.t.f7VbhF),
                                 })
                               : void 0,
-                          (0, i.jsx)(y.A.SearchBox, { placeholderText: z.intl.string(z.t.iezLLn) }),
+                          (0, i.jsx)(y.A.SearchBox, {
+                              placeholderText: z.intl.string(z.t.iezLLn),
+                          }),
                           (0, i.jsx)(g.Text, {
                               className: J.pK,
                               variant: "text-xs/normal",
@@ -214,6 +224,7 @@ function en(e) {
               }),
           }));
 }
+
 function ei(e) {
     let { onEmojiPicked: t, guildId: n } = e,
         l = r.useRef(null),
@@ -280,16 +291,22 @@ class er extends r.PureComponent {
         null != e && e.select();
         let { guildId: t, applications: n, canCreateStoreChannel: i } = this.props;
         i && null == n && m.A.fetchApplications(t),
-            C.Ay.trackWithMetadata(K.HAw.OPEN_MODAL, { type: "Create Channel" });
+            C.Ay.trackWithMetadata(K.HAw.OPEN_MODAL, {
+                type: "Create Channel",
+            });
     }
     componentDidUpdate(e, t) {
         !t.isPrivate &&
             this.state.isPrivate &&
             this.state.channelType === K.rbe.GUILD_ANNOUNCEMENT &&
-            this.setState({ channelType: K.rbe.GUILD_TEXT }),
+            this.setState({
+                channelType: K.rbe.GUILD_TEXT,
+            }),
             !t.isPrivate &&
                 this.state.isPrivate &&
-                C.Ay.trackWithMetadata(K.HAw.OPEN_MODAL, { type: "Create Private Channel" });
+                C.Ay.trackWithMetadata(K.HAw.OPEN_MODAL, {
+                    type: "Create Private Channel",
+                });
     }
     getGuildId() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.props;
@@ -331,7 +348,9 @@ class er extends r.PureComponent {
     getHelperText() {
         let { cloneChannel: e, channelType: t, guildId: r } = this.props;
         return null != e
-            ? z.intl.format(z.t.s2ZzZZ, { name: (0, Y.m1)(e, B.default, H.A, !0) })
+            ? z.intl.format(z.t.s2ZzZZ, {
+                  name: (0, Y.m1)(e, B.default, H.A, !0),
+              })
             : t === K.rbe.GUILD_FORUM
               ? z.intl.format(z.t.tbVWyR, {
                     forumUpsellHook: (e, t) =>
@@ -341,7 +360,13 @@ class er extends r.PureComponent {
                                 onClick: () =>
                                     (0, g.mMO)(async () => {
                                         let { default: e } = await n.e("7937").then(n.bind(n, 420472));
-                                        return (t) => (0, i.jsx)(e, ee($({}, t), { guildId: r }));
+                                        return (t) =>
+                                            (0, i.jsx)(
+                                                e,
+                                                ee($({}, t), {
+                                                    guildId: r,
+                                                }),
+                                            );
                                     }),
                                 children: e,
                             },
@@ -386,7 +411,11 @@ class er extends r.PureComponent {
                 }),
             },
             autoFocus: !0,
-            focusProps: { offset: { right: -30 } },
+            focusProps: {
+                offset: {
+                    right: -30,
+                },
+            },
         });
     }
     renderType() {
@@ -564,7 +593,9 @@ class er extends r.PureComponent {
         } else r && !(0, I.n0)(n, o, a) && (t = (0, I.ld)(n));
         if (null != t)
             return (0, i.jsx)("div", {
-                className: s()(J.$5, { [J.SE]: e }),
+                className: s()(J.$5, {
+                    [J.SE]: e,
+                }),
                 children: (0, i.jsx)(g.po8, {
                     messageType: g.YCn.ERROR,
                     children: t,
@@ -572,7 +603,9 @@ class er extends r.PureComponent {
             });
     }
     handlePermissionOverwriteChange(e) {
-        this.setState({ pendingPermissionOverwrites: e });
+        this.setState({
+            pendingPermissionOverwrites: e,
+        });
     }
     renderCreateChannelModal() {
         var e;
@@ -588,7 +621,9 @@ class er extends r.PureComponent {
                       : z.intl.string(z.t["fUYU+j"]);
         if (null != u) {
             let n = R.A.getChannel(u);
-            t = z.intl.format(z.t.L1zJgb, { categoryName: null != (e = null == n ? void 0 : n.name) ? e : "" });
+            t = z.intl.format(z.t.L1zJgb, {
+                categoryName: null != (e = null == n ? void 0 : n.name) ? e : "",
+            });
         }
         n = d === K.rbe.GUILD_CATEGORY ? z.intl.string(z.t["ISN+NM"]) : z.intl.string(z.t["fUYU+j"]);
         let g = l || r === K.rbe.GUILD_STAGE_VOICE;
@@ -646,7 +681,9 @@ class er extends r.PureComponent {
         let { name: e, channelType: t, pendingPermissionOverwrites: n } = this.state,
             { guildId: r, onClose: l, transitionState: s } = this.props,
             a = () => {
-                this.setState({ slide: "CHANNEL_INFO" });
+                this.setState({
+                    slide: "CHANNEL_INFO",
+                });
             },
             o = this.canSubmit();
         return (0, i.jsx)("form", {
@@ -682,10 +719,15 @@ class er extends r.PureComponent {
                 let { channelType: i } = this.state;
                 L.ZE.has(i) && (e = (0, V.an)(e));
                 let r = null != (t = null == (n = this._input) ? void 0 : n.selectionStart) ? t : 0;
-                this.setState({ name: e }, () => {
-                    var e;
-                    null == (e = this._input) || e.setSelectionRange(r, r);
-                });
+                this.setState(
+                    {
+                        name: e,
+                    },
+                    () => {
+                        var e;
+                        null == (e = this._input) || e.setSelectionRange(r, r);
+                    },
+                );
             }),
             Q(this, "insertEmojiAtPosition", (e) => {
                 var t, n, i, r;
@@ -693,29 +735,43 @@ class er extends r.PureComponent {
                     s = null != (n = null == (r = this._input) ? void 0 : r.selectionEnd) ? n : 0,
                     a = this.state.name,
                     o = a.substring(0, l) + e + a.substring(s);
-                this.setState({ name: o }, () => {
-                    var t, n;
-                    let i = l + e.length;
-                    null == (t = this._input) || t.focus(), null == (n = this._input) || n.setSelectionRange(i, i);
-                });
+                this.setState(
+                    {
+                        name: o,
+                    },
+                    () => {
+                        var t, n;
+                        let i = l + e.length;
+                        null == (t = this._input) || t.focus(), null == (n = this._input) || n.setSelectionRange(i, i);
+                    },
+                );
             }),
             Q(this, "handleTypeChange", (e) => {
                 let { name: t } = this.state;
                 L.ZE.has(e) && (t = (0, V.an)(t)),
-                    e === K.rbe.GUILD_STAGE_VOICE && this.setState({ isPrivate: !1 }),
+                    e === K.rbe.GUILD_STAGE_VOICE &&
+                        this.setState({
+                            isPrivate: !1,
+                        }),
                     this.setState({
                         channelType: e,
                         name: t,
                     });
             }),
             Q(this, "handlePrivacyChange", (e) => {
-                this.setState({ isPrivate: e });
+                this.setState({
+                    isPrivate: e,
+                });
             }),
             Q(this, "handleApplicationChange", (e) => {
-                this.setState({ applicationId: e });
+                this.setState({
+                    applicationId: e,
+                });
             }),
             Q(this, "handleSKUChange", (e) => {
-                this.setState({ skuId: e });
+                this.setState({
+                    skuId: e,
+                });
             }),
             Q(this, "handleShowBranchesToggle", (e) => {
                 this.setState({
@@ -724,10 +780,14 @@ class er extends r.PureComponent {
                 });
             }),
             Q(this, "handleBranchChange", (e) => {
-                this.setState({ branchId: e });
+                this.setState({
+                    branchId: e,
+                });
             }),
             Q(this, "handleHasBranchesChange", (e) => {
-                this.setState({ hasBranches: e });
+                this.setState({
+                    hasBranches: e,
+                });
             }),
             Q(this, "handleSubmit", async (e) => {
                 let t, n, i;
@@ -788,9 +848,16 @@ class er extends r.PureComponent {
                             skuId: m,
                             branchId: f,
                         });
-                        if (null == e || 201 !== e.status) return void this.setState({ submitting: !1 });
+                        if (null == e || 201 !== e.status)
+                            return void this.setState({
+                                submitting: !1,
+                            });
                         let r = e.body;
-                        L.ZE.has(g) && (0, P.uh)(r.guild_id, r.id), this.setState({ submitting: !1 }), u();
+                        L.ZE.has(g) && (0, P.uh)(r.guild_id, r.id),
+                            this.setState({
+                                submitting: !1,
+                            }),
+                            u();
                     } catch (e) {
                         null != e.body && "object" == typeof e.body
                             ? this.setState({
@@ -798,7 +865,9 @@ class er extends r.PureComponent {
                                   submitting: !1,
                               })
                             : this.setState({
-                                  errors: { message: z.intl.string(z.t.fEptJP) },
+                                  errors: {
+                                      message: z.intl.string(z.t.fEptJP),
+                                  },
                                   submitting: !1,
                               });
                     }

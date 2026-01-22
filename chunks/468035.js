@@ -31,6 +31,7 @@ function r(e, t) {
             return !0;
     }
 }
+
 function i(e, t) {
     let n = [];
     for (let t in e) "Type" !== t && "object" == typeof e[t] && n.push(e[t]);
@@ -44,6 +45,7 @@ function i(e, t) {
     }
     return i;
 }
+
 function a(e, t) {
     if (null == e.DisplayLogic) return !0;
     let { DisplayLogic: n } = e;
@@ -56,6 +58,7 @@ function a(e, t) {
         }
     return !1;
 }
+
 function s(e, t) {
     if (null == e.SkipLogic || 0 === e.SkipLogic.length) return null;
     for (let i of e.SkipLogic) {
@@ -104,11 +107,13 @@ function s(e, t) {
     }
     return null;
 }
+
 function o(e) {
     let t = [];
     for (let n of e.SurveyFlow.Flow) ("Block" === n.Type || "Standard" === n.Type) && null != n.ID && t.push(n.ID);
     return t;
 }
+
 function l(e) {
     let t = [],
         n = [];
@@ -118,6 +123,7 @@ function l(e) {
             : "Question" === r.Type && null != r.QuestionID && n.push(r.QuestionID);
     return n.length > 0 && t.push(n), t;
 }
+
 function c(e) {
     for (let t of o(e)) {
         let n = l(e.Blocks[t]);
@@ -136,6 +142,7 @@ function c(e) {
         isComplete: !0,
     };
 }
+
 function u(e, t) {
     let { blockId: n, pageIndex: r, responses: i } = t,
         s = e.Blocks[n];
@@ -143,6 +150,7 @@ function u(e, t) {
     let o = l(s);
     return r >= o.length ? [] : o[r].filter((t) => a(e.Questions[t], i));
 }
+
 function d(e, t) {
     let { blockId: n, pageIndex: r, responses: i } = t,
         a = o(e),

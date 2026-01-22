@@ -21,7 +21,9 @@ var r =
         function (e, t) {
             for (var n in e) "default" === n || Object.prototype.hasOwnProperty.call(t, n) || r(t, e, n);
         };
-Object.defineProperty(t, "__esModule", { value: !0 }),
+Object.defineProperty(t, "__esModule", {
+    value: !0,
+}),
     (t.makeMessagesProxy =
         t.chainMessagesObjects =
         t.MessageLoader =

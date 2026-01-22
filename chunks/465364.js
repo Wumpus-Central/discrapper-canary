@@ -17,6 +17,7 @@ var a = n(46054),
     s = n(659674),
     o = n(728458),
     l = n(652215);
+
 function c(e, t, n) {
     return (
         t in e
@@ -30,6 +31,7 @@ function c(e, t, n) {
         e
     );
 }
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -46,6 +48,7 @@ function u(e) {
     }
     return e;
 }
+
 function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -58,6 +61,7 @@ function d(e, t) {
     }
     return n;
 }
+
 function f(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -72,6 +76,7 @@ function f(e, t) {
 let p = 30,
     _ = new Set([l.Auw.IMAGE, l.Auw.GIFV]),
     h = new Set(["strong", "em", "u", "text", "inlineCode", "s", "spoiler"]);
+
 function m(e, t) {
     var n;
     let r = g({
@@ -87,6 +92,7 @@ function m(e, t) {
         soundboardSounds: null != (n = e.soundboardSounds) ? n : [],
     });
 }
+
 function g(e) {
     let { channelId: t, messageId: n, renderOptions: r } = e;
     return {
@@ -114,6 +120,7 @@ function g(e) {
         textColor: r.textColor,
     };
 }
+
 function E(e, t, n) {
     let {
             toAST: i = !1,
@@ -158,6 +165,7 @@ function E(e, t, n) {
         hasBailedAst: u,
     };
 }
+
 function b(e) {
     let t = e.some((e) => "link" !== e.type);
     return e.filter((e) => {
@@ -166,10 +174,12 @@ function b(e) {
         return !(n && r && !t);
     });
 }
+
 function y(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
     return E(t.formatInline ? a.A.parseInlineReply : a.A.parse, e, t);
 }
+
 function O(e, t) {
     arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     let { content: n, guildId: r, channelId: i } = t;
@@ -199,10 +209,12 @@ function O(e, t) {
         (e) => (Array.isArray(e) || (e = [e]), e),
     );
 }
+
 function A(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
     return O(e, t, n);
 }
+
 function v(e, t, n, r) {
     return e(
         t,
@@ -228,14 +240,17 @@ function v(e, t, n, r) {
         (e) => (Array.isArray(e) || (e = [e]), e),
     );
 }
+
 function S(e, t, n) {
     return v(a.A.parseAutoModerationSystemMessage, e, t, n);
 }
+
 function I(e, t) {
     return t
         ? T(e)
         : ("paragraph" === e[0].type && e[0].content instanceof Array && (e[0].content = T(e[0].content)), e);
 }
+
 function T(e) {
     if (
         e.some(
@@ -260,9 +275,11 @@ function T(e) {
         e
     );
 }
+
 function C(e, t) {
     return t ? R(e) : "paragraph" === e[0].type && e[0].content instanceof Array && R(e[0].content);
 }
+
 function N(e, t) {
     if (e instanceof Array) return e.some((e) => N(e, t));
     let n = t(e);
@@ -272,17 +289,20 @@ function N(e, t) {
           ? N(e.content, t)
           : e.items instanceof Array && e.items.some((e) => N(e, t));
 }
+
 function R(e) {
     return N(e, (e) =>
         "spoiler" === e.type ? N(e, (e) => "link" === e.type || "attachmentLink" === e.type || null) : null,
     );
 }
+
 function w(e, t) {
     if (1 !== e.length || 1 !== t.length) return e;
     let n = e[0],
         r = t[0];
     return ("link" === n.type || "attachmentLink" === n.type) && _.has(r.type) && (0, s.NV)(r) ? [] : e;
 }
+
 function P(e) {
     return (
         e.forEach((e) => {

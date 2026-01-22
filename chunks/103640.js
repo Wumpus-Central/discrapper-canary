@@ -30,7 +30,7 @@ let a = function (e, t) {
     },
     s = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.fZ.LEVEL_3;
-        return a(e, [i.dw[t], i.MO[t]], 100000);
+        return a(e, [i.dw[t], i.MO[t]], 1e5);
     },
     o = [
         [1, 0.001],
@@ -52,9 +52,13 @@ let a = function (e, t) {
         }),
         (e) =>
             1 === e
-                ? { color: (0, r.dE)("BRAND_500") }
+                ? {
+                      color: (0, r.dE)("BRAND_500"),
+                  }
                 : 2 === e || 3 === e
-                  ? { color: (0, r.dE)("GREEN_360") }
+                  ? {
+                        color: (0, r.dE)("GREEN_360"),
+                    }
                   : 4 === e || 5 === e
                     ? {
                           color: (0, r.dE)("YELLOW_300"),
@@ -69,6 +73,7 @@ let a = function (e, t) {
                             color: (0, r.dE)("ORANGE_345"),
                             flair: !0,
                         });
+
 function c(e) {
     var t;
     return e.value * (null != (t = e.multiplier) ? t : 1);

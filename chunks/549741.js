@@ -773,7 +773,9 @@ if (
         function () {
             return I(this).serialize();
         },
-        { enumerable: !0 },
+        {
+            enumerable: !0,
+        },
     ),
     u(
         eY,
@@ -781,7 +783,9 @@ if (
         function () {
             return I(this).serialize();
         },
-        { enumerable: !0 },
+        {
+            enumerable: !0,
+        },
     ),
     N)
 ) {
@@ -797,5 +801,7 @@ y(eH, "URL"),
             forced: !s,
             sham: !a,
         },
-        { URL: eH },
+        {
+            URL: eH,
+        },
     );

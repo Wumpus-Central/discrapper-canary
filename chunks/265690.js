@@ -7,6 +7,7 @@ var r = n(64700),
     a = n(870844);
 let { useSyncExternalStoreWithSelector: s } = i,
     o = (e) => e;
+
 function l(e, t = o, n) {
     let i = s(e.subscribe, e.getState, e.getInitialState, t, n);
     return r.useDebugValue(i), i;

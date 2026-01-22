@@ -24,6 +24,7 @@ var r = n(562465),
     g = n(300703),
     E = n(652215),
     b = n(985018);
+
 function y(e, t, n) {
     return (
         t in e
@@ -37,6 +38,7 @@ function y(e, t, n) {
         e
     );
 }
+
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -53,6 +55,7 @@ function O(e) {
     }
     return e;
 }
+
 function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -65,6 +68,7 @@ function A(e, t) {
     }
     return n;
 }
+
 function v(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -90,6 +94,7 @@ var S = (function (e) {
         e
     );
 })({});
+
 function I(e, t, n) {
     let { headers: r, status: i, body: a } = e;
     if (429 === i) {
@@ -115,6 +120,7 @@ function I(e, t, n) {
     else if (!n.isRetry) return t(), !1;
     return !0;
 }
+
 function T(e, t, n, r, i) {
     var s, o;
     a.h.dispatch({
@@ -128,6 +134,7 @@ function T(e, t, n, r, i) {
         reactionType: (null == i ? void 0 : i.burst) ? l.v.BURST : l.v.NORMAL,
     });
 }
+
 function C(e) {
     let { channelId: t, messageId: n, emoji: r, userId: i, useTypeEndpoint: a = !1, type: s = l.v.NORMAL } = e,
         o = null != r.id ? "".concat(r.name, ":").concat(r.id) : r.name;
@@ -137,6 +144,7 @@ function C(e) {
           ? E.Rsh.REACTION_WITH_TYPE(t, n, o, i, s)
           : E.Rsh.REACTION(t, n, o, i);
 }
+
 function N(e, t, n) {
     var r;
     let i = null != (r = n.id) ? r : n.name;
@@ -227,13 +235,23 @@ async function w(e, t, n) {
                     );
                 }
                 f
-                    ? (i.OR.announce(b.intl.formatToPlainString(b.t["RJlG+R"], { name: n.name })),
+                    ? (i.OR.announce(
+                          b.intl.formatToPlainString(b.t["RJlG+R"], {
+                              name: n.name,
+                          }),
+                      ),
                       g.A.triggerFullscreenAnimation({
                           channelId: e,
                           messageId: t,
-                          emoji: v(O({}, n), { animated: !1 }),
+                          emoji: v(O({}, n), {
+                              animated: !1,
+                          }),
                       }))
-                    : i.OR.announce(b.intl.formatToPlainString(b.t.ol4acF, { name: n.name }));
+                    : i.OR.announce(
+                          b.intl.formatToPlainString(b.t.ol4acF, {
+                              name: n.name,
+                          }),
+                      );
             })
             .catch((r) => {
                 I(
@@ -243,15 +261,28 @@ async function w(e, t, n) {
                             burst: f,
                             isRetry: !0,
                         }),
-                    { isRetry: _ },
+                    {
+                        isRetry: _,
+                    },
                 ) &&
-                    (T("MESSAGE_REACTION_REMOVE", e, t, n, { burst: f }),
+                    (T("MESSAGE_REACTION_REMOVE", e, t, n, {
+                        burst: f,
+                    }),
                     f
-                        ? i.OR.announce(b.intl.formatToPlainString(b.t.fJeu87, { name: n.name }))
-                        : i.OR.announce(b.intl.formatToPlainString(b.t["UUn5V+"], { name: n.name })));
+                        ? i.OR.announce(
+                              b.intl.formatToPlainString(b.t.fJeu87, {
+                                  name: n.name,
+                              }),
+                          )
+                        : i.OR.announce(
+                              b.intl.formatToPlainString(b.t["UUn5V+"], {
+                                  name: n.name,
+                              }),
+                          ));
             })
     );
 }
+
 function P(e) {
     let { channelId: t, messageId: n, emoji: r, key: i } = e;
     a.h.dispatch({
@@ -270,7 +301,16 @@ async function D(e, t, n) {
             oldFormErrors: !0,
             rejectWithError: !1,
         }).catch((n) => {
-            I(n, () => D(e, t, { isRetry: !0 }), { isRetry: i });
+            I(
+                n,
+                () =>
+                    D(e, t, {
+                        isRetry: !0,
+                    }),
+                {
+                    isRetry: i,
+                },
+            );
         });
 }
 async function x(e, t, n, i) {
@@ -282,7 +322,16 @@ async function x(e, t, n, i) {
         oldFormErrors: !0,
         rejectWithError: !1,
     }).catch((r) => {
-        I(r, () => x(e, t, n, { isRetry: !0 }), { isRetry: a });
+        I(
+            r,
+            () =>
+                x(e, t, n, {
+                    isRetry: !0,
+                }),
+            {
+                isRetry: a,
+            },
+        );
     });
 }
 async function L(e) {
@@ -312,8 +361,16 @@ async function L(e) {
         })
             .then(() => {
                 (null == u ? void 0 : u.burst)
-                    ? i.OR.announce(b.intl.formatToPlainString(b.t["3l9f6u"], { name: a.name }))
-                    : i.OR.announce(b.intl.formatToPlainString(b.t["DQxi+7"], { name: a.name }));
+                    ? i.OR.announce(
+                          b.intl.formatToPlainString(b.t["3l9f6u"], {
+                              name: a.name,
+                          }),
+                      )
+                    : i.OR.announce(
+                          b.intl.formatToPlainString(b.t["DQxi+7"], {
+                              name: a.name,
+                          }),
+                      );
             })
             .catch(async (e) => {
                 if (
@@ -331,7 +388,9 @@ async function L(e) {
                                     isRetry: !0,
                                 },
                             }),
-                        { isRetry: f },
+                        {
+                            isRetry: f,
+                        },
                     )
                 ) {
                     let e = await j(a, d);
@@ -341,8 +400,16 @@ async function L(e) {
                         colors: e,
                     }),
                         (null == u ? void 0 : u.burst)
-                            ? i.OR.announce(b.intl.formatToPlainString(b.t.OamVbV, { name: a.name }))
-                            : i.OR.announce(b.intl.formatToPlainString(b.t["tD9+b+"], { name: a.name }));
+                            ? i.OR.announce(
+                                  b.intl.formatToPlainString(b.t.OamVbV, {
+                                      name: a.name,
+                                  }),
+                              )
+                            : i.OR.announce(
+                                  b.intl.formatToPlainString(b.t["tD9+b+"], {
+                                      name: a.name,
+                                  }),
+                              );
                 }
             });
 }
@@ -354,6 +421,7 @@ async function j(e, t) {
         } catch (e) {}
     return n;
 }
+
 function M(e, t, n, r) {
     let i = f.A.getMessage(e, t);
     return null != i && i.userHasReactedWithEmoji(n, r);

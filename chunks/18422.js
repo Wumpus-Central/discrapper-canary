@@ -1,4 +1,7 @@
-n.d(t, { A: () => d }), n(747238);
+n.d(t, {
+    A: () => d,
+}),
+    n(747238);
 var r = n(64700),
     i = n(607399),
     l = n(311907),
@@ -7,6 +10,7 @@ var r = n(64700),
     o = n(961350),
     c = n(652215);
 let u = i.Fr || i.v1;
+
 function d(e) {
     let { children: t, deepLinkType: n, path: i, paramsBuilder: d, search: p } = e,
         f = (0, l.bG)([o.default], () => {

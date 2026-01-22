@@ -1,4 +1,7 @@
-n.d(t, { A: () => F }), n(321073);
+n.d(t, {
+    A: () => F,
+}),
+    n(321073);
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -36,17 +39,33 @@ var r = n(627968),
     G = n(985018),
     k = n(82842),
     U = n(473169);
+
 function V(e) {
     let { canManageRoles: t, channel: n } = e,
         l = t && (0, f.Ae)(n),
         a = (0, i.bG)([O.Ay], () => null != n.guild_id && n === O.Ay.getDefaultChannel(n.guild_id), [n]);
     if ((0, p.A)(n.id)) return null;
-    if (n.isForumPost()) return (0, r.jsx)(C.A, { channel: n });
-    if (A.Le.has(n.type)) return (0, r.jsx)(R.A, { channel: n });
-    if (a) return (0, r.jsx)(D.A, { channel: n });
-    if (l) return (0, r.jsx)(P.A, { channel: n });
-    return (0, r.jsx)(w.A, { channel: n });
+    if (n.isForumPost())
+        return (0, r.jsx)(C.A, {
+            channel: n,
+        });
+    if (A.Le.has(n.type))
+        return (0, r.jsx)(R.A, {
+            channel: n,
+        });
+    if (a)
+        return (0, r.jsx)(D.A, {
+            channel: n,
+        });
+    if (l)
+        return (0, r.jsx)(P.A, {
+            channel: n,
+        });
+    return (0, r.jsx)(w.A, {
+        channel: n,
+    });
 }
+
 function F(e) {
     var t;
     let { channel: n, showingBanner: f } = e,
@@ -64,13 +83,19 @@ function F(e) {
             authorizedAppToken: y.default.getNewestTokenForApplication(null == D ? void 0 : D.id),
             authorizedAppsFetchState: y.default.getFetchState(),
         })),
-        B = c.A.useExperiment({ location: "EmptyMessages" }).enabledDesktop;
+        B = c.A.useExperiment({
+            location: "EmptyMessages",
+        }).enabledDesktop;
     if (
         (l.useEffect(() => {
             A === M.rbe.DM &&
                 null == R &&
                 null != O &&
-                s.h.wait(() => (0, m.A)(n.getRecipientId(), O.getAvatarURL(null, 80), { withMutualGuilds: !0 }));
+                s.h.wait(() =>
+                    (0, m.A)(n.getRecipientId(), O.getAvatarURL(null, 80), {
+                        withMutualGuilds: !0,
+                    }),
+                );
         }, [R, A, n, O]),
         l.useEffect(() => {
             (null == O ? void 0 : O.bot) && H === y.FetchState.NOT_FETCHED && o.A.fetch();
@@ -108,7 +133,16 @@ function F(e) {
                         "manage",
                     ),
                 )),
-                B && t.push((0, r.jsx)(h.A, { channel: n }, "report")),
+                B &&
+                    t.push(
+                        (0, r.jsx)(
+                            h.A,
+                            {
+                                channel: n,
+                            },
+                            "report",
+                        ),
+                    ),
                 t.length > 0 &&
                     (e = (0, r.jsx)("div", {
                         className: k.U,
@@ -131,8 +165,13 @@ function F(e) {
                         className: U.SX,
                         children: C,
                     }),
-                G.intl.format(G.t["Qvg+6+"], { username: p }),
-                (null == O ? void 0 : O.isProvisional) && (0, r.jsx)(b.Y, { userId: O.id }),
+                G.intl.format(G.t["Qvg+6+"], {
+                    username: p,
+                }),
+                (null == O ? void 0 : O.isProvisional) &&
+                    (0, r.jsx)(b.Y, {
+                        userId: O.id,
+                    }),
                 e,
             ],
         });
@@ -142,15 +181,26 @@ function F(e) {
             return (0, r.jsxs)(_.Ay, {
                 channelId: n.id,
                 children: [
-                    (0, r.jsx)(_.cr, { children: G.intl.format(G.t.I3R7Vn, { channelName: p }) }),
-                    (0, r.jsx)(_.j1, { children: G.intl.string(G.t.M8Ao6I) }),
+                    (0, r.jsx)(_.cr, {
+                        children: G.intl.format(G.t.I3R7Vn, {
+                            channelName: p,
+                        }),
+                    }),
+                    (0, r.jsx)(_.j1, {
+                        children: G.intl.string(G.t.M8Ao6I),
+                    }),
                 ],
             });
-        else if (n.hasFlag(L.lx.IS_JOIN_REQUEST_INTERVIEW_CHANNEL)) return (0, r.jsx)(S.A, { channel: n });
+        else if (n.hasFlag(L.lx.IS_JOIN_REQUEST_INTERVIEW_CHANNEL))
+            return (0, r.jsx)(S.A, {
+                channel: n,
+            });
         else
             return (0, r.jsx)(T.A, {
                 channel: n,
-                children: G.intl.format(G.t.MFwcqO, { name: p }),
+                children: G.intl.format(G.t.MFwcqO, {
+                    name: p,
+                }),
             });
     return w
         ? (0, r.jsx)(V, {
@@ -159,6 +209,10 @@ function F(e) {
           })
         : (0, r.jsx)(_.Ay, {
               channelId: n.id,
-              children: (0, r.jsx)(_.j1, { children: G.intl.format(G.t.hPVEQG, { channelName: p }) }),
+              children: (0, r.jsx)(_.j1, {
+                  children: G.intl.format(G.t.hPVEQG, {
+                      channelName: p,
+                  }),
+              }),
           });
 }

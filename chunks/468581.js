@@ -26,7 +26,9 @@ let u = [o.iq, o.Zc, o.Xy, o.$X, o.fg, o.MK],
                             channelId: n.id,
                             guildId: n.guild_id,
                         }),
-                        (0, r.jsx)(l.ZB, { children: t.extra.activity_name }),
+                        (0, r.jsx)(l.ZB, {
+                            children: t.extra.activity_name,
+                        }),
                         (0, r.jsx)(o.mG, {
                             location: o.N5.CARD,
                             children: u.map((e, n) =>

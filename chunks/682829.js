@@ -1,4 +1,6 @@
-n.d(t, { A: () => $ });
+n.d(t, {
+    A: () => $,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -44,6 +46,7 @@ var r = n(627968),
     W = n(531525),
     K = n(985018),
     z = n(547605);
+
 function q() {
     return (0, r.jsx)(l.ZpM, {
         className: z.wb,
@@ -64,6 +67,7 @@ function q() {
         }),
     });
 }
+
 function X() {
     let e = (0, o.bG)([x.A], () => x.A.getForApplication(B.tv));
     return (
@@ -83,6 +87,7 @@ function X() {
         })
     );
 }
+
 function Z(e, t) {
     return (0, r.jsxs)("section", {
         children: [
@@ -106,12 +111,17 @@ function Z(e, t) {
         ],
     });
 }
+
 function Q() {
-    return (0, r.jsx)("hr", { className: z.hr });
+    return (0, r.jsx)("hr", {
+        className: z.hr,
+    });
 }
 let $ = function () {
     let e = (0, o.bG)([D.A], () => D.A.getPremiumTypeSubscription()),
-        t = (0, g.A)({ subscriptionFilter: (e) => F.Hy.has(e.status) }),
+        t = (0, g.A)({
+            subscriptionFilter: (e) => F.Hy.has(e.status),
+        }),
         n = t.length > 1,
         a = (0, o.bG)(
             [P.A],
@@ -132,7 +142,9 @@ let $ = function () {
                 .filter((e) => e.type === H.rzx.GUILD)
                 .filter((e) => e.status !== H.Dmq.ENDED).length;
         }),
-        U = (0, m.A)({ forceFetch: !0 }),
+        U = (0, m.A)({
+            forceFetch: !0,
+        }),
         G = (0, k.d)(),
         K = null !== e ? e.currentPeriodEnd : void 0,
         q =
@@ -153,9 +165,13 @@ let $ = function () {
         ? (0, r.jsx)(h.A, {})
         : f && y
           ? x === Y.nR
-              ? (0, r.jsx)(A.A, { onGoBack: () => _.A.clearSubsection() })
+              ? (0, r.jsx)(A.A, {
+                    onGoBack: () => _.A.clearSubsection(),
+                })
               : x === Y.PZ
-                ? (0, r.jsx)(S.A, { onGoBack: () => _.A.clearSubsection() })
+                ? (0, r.jsx)(S.A, {
+                      onGoBack: () => _.A.clearSubsection(),
+                  })
                 : (0, r.jsx)("div", {
                       className: z.kL,
                       children: (0, r.jsxs)("div", {

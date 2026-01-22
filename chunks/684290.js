@@ -5,9 +5,11 @@ n.d(t, {
 var r = n(567243),
     i = n(652215);
 let a = "music.apple.com";
+
 function s(e) {
     return e === a;
 }
+
 function o(e) {
     var t;
     if (

@@ -1,4 +1,8 @@
-n.d(t, { A: () => b }), n(638769), n(896048);
+n.d(t, {
+    A: () => b,
+}),
+    n(638769),
+    n(896048);
 var a = n(627968),
     l = n(64700),
     i = n(397927),
@@ -8,6 +12,7 @@ var a = n(627968),
     c = n(522958),
     d = n(983078),
     u = n(159452);
+
 function m(e) {
     if (
         (e.type === s.Z6.PANEL && null != e.StronglyDiscouragedCustomComponent) ||
@@ -28,9 +33,11 @@ function m(e) {
     }
     return !1;
 }
+
 function p(e) {
     return !!m(e) || (!!(0, s.nW)(e) && e.layout.some((e) => p(e)));
 }
+
 function h(e) {
     var t;
     let { setting: n, depth: i, highlightMode: r } = e,
@@ -60,6 +67,7 @@ function h(e) {
         })
     );
 }
+
 function f(e) {
     let { setting: t, depth: n, inheritedHighlightMode: l } = e,
         i = (function (e, t) {
@@ -109,6 +117,7 @@ function f(e) {
     });
 }
 let x = l.createContext(null);
+
 function b() {
     let [e, t] = l.useState(!1),
         { legacySettingDirectory: n } = (0, d.B)(),

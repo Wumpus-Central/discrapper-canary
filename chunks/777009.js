@@ -11,6 +11,7 @@ function r(e, t, n) {
         e
     );
 }
+
 function i() {
     return {
         num_failed: 0,
@@ -24,10 +25,13 @@ function i() {
         background_install_ms_total: 0,
     };
 }
+
 function a(e) {
     return "host" === e;
 }
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 class s {
     handleDownloadingModule(e) {
         if (!a(e.name)) {
@@ -60,7 +64,7 @@ class s {
         let n = t.foreground ? "foreground" : "background",
             r = "".concat(n, "_download_ms_").concat(e.name),
             i = "".concat(n, "_bytes_").concat(e.name),
-            s = Number((BigInt(e.now) - t.startTime + BigInt(999999)) / BigInt(1000000)),
+            s = Number((BigInt(e.now) - t.startTime + BigInt(999999)) / BigInt(1e6)),
             o = !1 === e.receivedBytes ? 0 : e.receivedBytes;
         t.foreground
             ? ((this._report.foreground_download_ms_total += s), (this._report.foreground_bytes_total += o))
@@ -89,7 +93,7 @@ class s {
             r = "".concat(n, "_install_ms_").concat(e.name),
             i = "min_version_".concat(e.name),
             s = "max_version_".concat(e.name),
-            o = Number((BigInt(e.now) - t.startTime + BigInt(999999)) / BigInt(1000000));
+            o = Number((BigInt(e.now) - t.startTime + BigInt(999999)) / BigInt(1e6));
         t.foreground
             ? (this._report.foreground_install_ms_total += o)
             : (this._report.background_install_ms_total += o),

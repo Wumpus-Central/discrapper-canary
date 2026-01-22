@@ -1,8 +1,11 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(499979),
     i = n(451988),
     a = n(929921),
     s = n(652215);
+
 function o(e, t, n) {
     return (
         t in e
@@ -16,6 +19,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -32,6 +36,7 @@ function l(e) {
     }
     return e;
 }
+
 function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -44,6 +49,7 @@ function c(e, t) {
     }
     return n;
 }
+
 function u(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -55,7 +61,8 @@ function u(e, t) {
         e
     );
 }
-let d = 1000;
+let d = 1e3;
+
 function f(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
     return null != e ? Math.round(e) : t;
@@ -71,7 +78,7 @@ class p {
     stop() {
         this._statInterval.stop(),
             (this._streamEnd = (0, r.tB)()),
-            this._incrementLayout(this._lastLayout, (this._streamEnd - this._lastLayoutChanged) / 1000);
+            this._incrementLayout(this._lastLayout, (this._streamEnd - this._lastLayoutChanged) / 1e3);
     }
     autoQualityChange() {
         this._automaticQualityChanges += 1;
@@ -79,7 +86,7 @@ class p {
     layoutChange(e) {
         if (e === this._lastLayout || null != this._streamEnd) return;
         let t = (0, r.tB)();
-        this._incrementLayout(this._lastLayout, (t - this._lastLayoutChanged) / 1000),
+        this._incrementLayout(this._lastLayout, (t - this._lastLayoutChanged) / 1e3),
             this._layoutChanges++,
             (this._lastLayout = e),
             (this._lastLayoutChanged = t);

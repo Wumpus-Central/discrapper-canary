@@ -1,4 +1,7 @@
-n.d(t, { A: () => b }), n(896048);
+n.d(t, {
+    A: () => b,
+}),
+    n(896048);
 var r = n(439372),
     i = n(58149),
     a = n(627363),
@@ -10,6 +13,7 @@ var r = n(439372),
     d = n(461213),
     f = n(529020),
     p = n(652215);
+
 function _(e, t, n) {
     return (
         t in e
@@ -23,6 +27,7 @@ function _(e, t, n) {
         e
     );
 }
+
 function h(e) {
     return e.filter((e) => e.type === p.$pd.PLAYING && e.application_id).map((e) => e.application_id);
 }

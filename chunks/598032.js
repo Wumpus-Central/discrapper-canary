@@ -1,4 +1,7 @@
-r.d(t, { A: () => C }), r(896048);
+r.d(t, {
+    A: () => C,
+}),
+    r(896048);
 var n = r(627968);
 r(64700);
 var l = r(503698),
@@ -21,12 +24,14 @@ var l = r(503698),
     y = r(191850),
     S = r(985018),
     A = r(607186);
+
 function _() {
     return (0, n.jsx)("span", {
         className: A.gO,
-        children: "\u2022",
+        children: "•",
     });
 }
+
 function O(e) {
     let { source: t } = e,
         { data: r } = (0, o.YY)(null != t && (0, m.l)(t) ? t.id : void 0);
@@ -53,11 +58,14 @@ function O(e) {
                   className: A.pI,
               });
 }
+
 function C() {
     var e, t, r, l;
     let [{ preset: o, resolution: d, fps: m, muteStreamAudio: C, selectedSource: w, sourceType: E, audioSourceId: N }] =
             (0, p.tS)(),
-        [I, T] = (0, f.tR)(v.oh.AUDIO_INPUT, { location: "StreamSettingsSummary" }),
+        [I, T] = (0, f.tR)(v.oh.AUDIO_INPUT, {
+            location: "StreamSettingsSummary",
+        }),
         R = I.concat(T),
         [P, M] = null != (e = (0, g.A)(o)) ? e : [d, m],
         D = (0, x.K)(o),
@@ -79,7 +87,10 @@ function C() {
     return (0, n.jsxs)("div", {
         className: A.zr,
         children: [
-            G && (0, n.jsx)(O, { source: w }),
+            G &&
+                (0, n.jsx)(O, {
+                    source: w,
+                }),
             (0, n.jsxs)("div", {
                 className: A.z,
                 children: [
@@ -115,14 +126,21 @@ function C() {
                                         (0, n.jsx)(_, {}),
                                     ],
                                 }),
-                            null != Z && (0, n.jsx)("span", { children: Z }),
+                            null != Z &&
+                                (0, n.jsx)("span", {
+                                    children: Z,
+                                }),
                             !F &&
                                 (0, n.jsxs)(n.Fragment, {
                                     children: [
                                         (0, n.jsx)(_, {}),
-                                        (0, n.jsx)("span", { children: U }),
+                                        (0, n.jsx)("span", {
+                                            children: U,
+                                        }),
                                         (0, n.jsx)(_, {}),
-                                        (0, n.jsx)("span", { children: "".concat(M, "fps") }),
+                                        (0, n.jsx)("span", {
+                                            children: "".concat(M, "fps"),
+                                        }),
                                     ],
                                 }),
                             C &&

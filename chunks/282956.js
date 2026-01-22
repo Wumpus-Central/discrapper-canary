@@ -1,11 +1,15 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(73153),
     i = n(997509),
     a = n(542580),
     s = n(824953);
 let o = {
     init() {
-        r.h.dispatch({ type: "INTEGRATION_SETTINGS_INIT" });
+        r.h.dispatch({
+            type: "INTEGRATION_SETTINGS_INIT",
+        });
     },
     setSection(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
@@ -34,7 +38,9 @@ let o = {
         });
     },
     stopEditingIntegration() {
-        r.h.dispatch({ type: "INTEGRATION_SETTINGS_STOP_EDITING_INTEGRATION" });
+        r.h.dispatch({
+            type: "INTEGRATION_SETTINGS_STOP_EDITING_INTEGRATION",
+        });
     },
     updateIntegration(e) {
         r.h.dispatch({
@@ -49,7 +55,9 @@ let o = {
         });
     },
     stopEditingWebhook() {
-        r.h.dispatch({ type: "INTEGRATION_SETTINGS_STOP_EDITING_WEBHOOK" });
+        r.h.dispatch({
+            type: "INTEGRATION_SETTINGS_STOP_EDITING_WEBHOOK",
+        });
     },
     updateWebhook(e) {
         r.h.dispatch({
@@ -59,7 +67,9 @@ let o = {
     },
     async saveApplicationPermissions(e, t, n) {
         try {
-            r.h.dispatch({ type: "INTEGRATION_SETTINGS_SUBMITTING" }),
+            r.h.dispatch({
+                type: "INTEGRATION_SETTINGS_SUBMITTING",
+            }),
                 await a.Ni({
                     applicationId: e,
                     commandId: e,
@@ -68,7 +78,9 @@ let o = {
                     guildId: t,
                     permissions: n,
                 }),
-                r.h.dispatch({ type: "INTEGRATION_SETTINGS_SAVE_SUCCESS" });
+                r.h.dispatch({
+                    type: "INTEGRATION_SETTINGS_SAVE_SUCCESS",
+                });
         } catch (e) {
             r.h.dispatch({
                 type: "INTEGRATION_SETTINGS_SAVE_FAILURE",
@@ -78,9 +90,13 @@ let o = {
     },
     async saveIntegration(e, t) {
         try {
-            r.h.dispatch({ type: "INTEGRATION_SETTINGS_SUBMITTING" }),
+            r.h.dispatch({
+                type: "INTEGRATION_SETTINGS_SUBMITTING",
+            }),
                 await i.A.updateIntegration(e, t.id, t.expire_behavior, t.expire_grace_period, t.enable_emoticons),
-                r.h.dispatch({ type: "INTEGRATION_SETTINGS_SAVE_SUCCESS" });
+                r.h.dispatch({
+                    type: "INTEGRATION_SETTINGS_SAVE_SUCCESS",
+                });
         } catch (e) {
             r.h.dispatch({
                 type: "INTEGRATION_SETTINGS_SAVE_FAILURE",
@@ -90,9 +106,13 @@ let o = {
     },
     async saveWebhook(e, t) {
         try {
-            r.h.dispatch({ type: "INTEGRATION_SETTINGS_SUBMITTING" }),
+            r.h.dispatch({
+                type: "INTEGRATION_SETTINGS_SUBMITTING",
+            }),
                 await s.A.update(e, t.id, t),
-                r.h.dispatch({ type: "INTEGRATION_SETTINGS_SAVE_SUCCESS" });
+                r.h.dispatch({
+                    type: "INTEGRATION_SETTINGS_SAVE_SUCCESS",
+                });
         } catch (e) {
             r.h.dispatch({
                 type: "INTEGRATION_SETTINGS_SAVE_FAILURE",

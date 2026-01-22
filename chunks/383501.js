@@ -1,5 +1,9 @@
 let r, i;
-n.d(t, { A: () => Z }), n(65821), n(896048);
+n.d(t, {
+    A: () => Z,
+}),
+    n(65821),
+    n(896048);
 var a,
     s = n(311907),
     o = n(73153),
@@ -11,6 +15,7 @@ var a,
     p = n(607567),
     _ = n(652215),
     h = n(731854);
+
 function m(e, t, n) {
     return (
         t in e
@@ -24,6 +29,7 @@ function m(e, t, n) {
         e
     );
 }
+
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -50,6 +56,7 @@ let E = [],
     I = null,
     T = !1,
     C = null;
+
 function N(e, t) {
     if (null == i) throw Error("Creating RTCConnection without session.");
     let r = f.default.getId(),
@@ -162,7 +169,9 @@ function N(e, t) {
         }),
         a.on(l.q.SecureFramesUpdate, () => {
             o.h.wait(() => {
-                o.h.dispatch({ type: "RTC_CONNECTION_SECURE_FRAMES_UPDATE" });
+                o.h.dispatch({
+                    type: "RTC_CONNECTION_SECURE_FRAMES_UPDATE",
+                });
             });
         }),
         a.on(l.q.RosterMapUpdate, (e) => {
@@ -180,6 +189,7 @@ function N(e, t) {
         a
     );
 }
+
 function R() {
     var e;
     if (null == r) return !1;
@@ -201,12 +211,15 @@ function R() {
         (A = null),
         (T = !1);
 }
+
 function w(e) {
     return (i = e.sessionId), (b = null), (O = null), R(), !1;
 }
+
 function P() {
     (i = null), (b = null), (O = null), R();
 }
+
 function D(e) {
     let { voiceStates: t } = e;
     return t.reduce((e, t) => {
@@ -243,6 +256,7 @@ function D(e) {
         return !0;
     }, !1);
 }
+
 function x(e) {
     if (
         null == r ||
@@ -252,43 +266,54 @@ function x(e) {
         return !1;
     r.connect(e.endpoint, e.token);
 }
+
 function L() {
     b = null;
 }
+
 function j() {
     O = null;
 }
+
 function M(e) {
     let { guild: t } = e;
     if (null == r || r.guildId !== t.id) return !1;
     R();
 }
+
 function k(e) {
     let { channelId: t } = e;
     if (null == r || r.channelId !== t) return !1;
     R();
 }
+
 function U(e) {
     let { channel: t } = e;
     if (null == r || r.channelId !== t.id) return !1;
     R();
 }
+
 function G(e) {
     let { channelId: t, joinVoiceId: n } = e;
     null != r && (null == t || r.channelId !== t) && R(), (C = n);
 }
+
 function V(e) {
     return e.state === _.g6G.ACTIVE && null != r && r.resetBackoff("App state is active"), !1;
 }
+
 function F(e) {
     return e.state === _.S7L.RTC_CONNECTED && (S = !0), !0;
 }
+
 function B(e) {
     null == r || r.setNoiseCancellationEnabled(e.enabled);
 }
+
 function H() {
     return !0;
 }
+
 function Y(e) {
     let { context: t, wants: n } = e;
     if (
@@ -301,13 +326,16 @@ function Y(e) {
         return !1;
     I = performance.now();
 }
+
 function W(e) {
     return e.connection === r;
 }
+
 function K(e) {
     let { userId: t, context: n, quality: i } = e;
     null == r || r.setSimulcastDebugOverride(t, n, i);
 }
+
 function z(e) {
     let { streamId: t, dimensions: n, zoom: i } = e;
     null == r || r.setVideoSize(t, n, i);

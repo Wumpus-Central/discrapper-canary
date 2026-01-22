@@ -25,7 +25,13 @@ e.exports = function (e) {
                 className: "section",
                 begin: /<\/?/,
                 end: />/,
-                contains: [r, i, e.inherit(e.QUOTE_STRING_MODE, { relevance: 0 })],
+                contains: [
+                    r,
+                    i,
+                    e.inherit(e.QUOTE_STRING_MODE, {
+                        relevance: 0,
+                    }),
+                ],
             },
             {
                 className: "attribute",
@@ -54,7 +60,9 @@ e.exports = function (e) {
                 starts: {
                     end: /$/,
                     relevance: 0,
-                    keywords: { literal: "on off all deny allow" },
+                    keywords: {
+                        literal: "on off all deny allow",
+                    },
                     contains: [
                         {
                             scope: "punctuation",

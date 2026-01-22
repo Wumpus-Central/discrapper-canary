@@ -8,6 +8,7 @@ var r = n(64700),
     i = n(735438),
     a = n.n(i),
     s = n(894858);
+
 function o(e, t, n) {
     let i = r.useRef(null),
         a = r.useRef(new Set());
@@ -44,7 +45,10 @@ function o(e, t, n) {
                     )
                         return;
                     let n = t[0];
-                    s.A.getField("currentCategoryKey") !== n && s.A.setState({ currentCategoryKey: n });
+                    s.A.getField("currentCategoryKey") !== n &&
+                        s.A.setState({
+                            currentCategoryKey: n,
+                        });
                 },
                 {
                     root: e,
@@ -68,6 +72,7 @@ function o(e, t, n) {
         );
     }, [n, e, t]);
 }
+
 function l() {
     r.useEffect(() => {
         let e = document.querySelectorAll("[data-settings-panel-scroller]");
@@ -75,7 +80,9 @@ function l() {
         let t = e[0];
         if (null == t) return;
         let n = a().debounce(() => {
-            s.A.setState({ disableSidebarCategoryAutoSelect: !1 });
+            s.A.setState({
+                disableSidebarCategoryAutoSelect: !1,
+            });
         }, 50);
         return (
             t.addEventListener("scroll", n),
@@ -86,7 +93,9 @@ function l() {
     }, []),
         r.useEffect(
             () => () => {
-                s.A.setState({ disableSidebarCategoryAutoSelect: !1 });
+                s.A.setState({
+                    disableSidebarCategoryAutoSelect: !1,
+                });
             },
             [],
         );

@@ -1,7 +1,11 @@
-n.d(t, { A: () => l }), n(896048);
+n.d(t, {
+    A: () => l,
+}),
+    n(896048);
 var r = n(439372),
     i = n(177658),
     a = n(142120);
+
 function s(e, t, n) {
     return (
         t in e
@@ -17,7 +21,14 @@ function s(e, t, n) {
 }
 class o extends r.A {
     handleCheckExperiments() {
-        let { enabled: e } = i.P.getCurrentConfig({ location: "gateway" }, { autoTrackExposure: !0 });
+        let { enabled: e } = i.P.getCurrentConfig(
+            {
+                location: "gateway",
+            },
+            {
+                autoTrackExposure: !0,
+            },
+        );
         a.A.getSocket().dispatcher.toggleRequestIdleCallback(e);
     }
     constructor(...e) {

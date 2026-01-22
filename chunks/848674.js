@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -10,6 +12,7 @@ var i = n(311907),
     u = n(822775),
     d = n(784886),
     f = n(183959);
+
 function p(e) {
     let { user: t, guildId: n, channelId: p, onClose: _, appContext: h, disableAutoFocus: m = !1 } = e,
         g = (0, c.A)(t.id, n),
@@ -22,7 +25,10 @@ function p(e) {
             g &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
-                        y && (0, r.jsx)(l.O, { profileUserId: t.id }),
+                        y &&
+                            (0, r.jsx)(l.O, {
+                                profileUserId: t.id,
+                            }),
                         (0, r.jsx)(d.A, {
                             user: t,
                             guildId: n,

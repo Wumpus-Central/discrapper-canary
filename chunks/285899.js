@@ -17,6 +17,7 @@ var n = r(627968),
     m = r(333354),
     b = r(985018),
     k = r(438619);
+
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
@@ -42,6 +43,7 @@ function O(e) {
     }
     return e;
 }
+
 function g(e, t) {
     if (null == e) return {};
     var r,
@@ -70,6 +72,7 @@ function g(e, t) {
             (n = r[a]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
     return l;
 }
+
 function j(e) {
     var t, r;
     let {
@@ -90,8 +93,12 @@ function j(e) {
         (r = r =
             {
                 size: l,
-                title: b.intl.formatToPlainString(m.default.iEBw1M, { perk: i }),
-                subtitle: b.intl.formatToPlainString(m.default["7o0K+2"], { perk: i }),
+                title: b.intl.formatToPlainString(m.default.iEBw1M, {
+                    perk: i,
+                }),
+                subtitle: b.intl.formatToPlainString(m.default["7o0K+2"], {
+                    perk: i,
+                }),
                 actions: [
                     {
                         variant: "secondary",
@@ -158,6 +165,7 @@ function j(e) {
         t),
     );
 }
+
 function P(e) {
     let { guildId: t, powerup: r } = e,
         s = g(e, ["guildId", "powerup"]),
@@ -208,7 +216,9 @@ function P(e) {
                     body: (() => {
                         switch (r.type) {
                             case p.o9.LEVEL:
-                                return (0, n.jsx)(f.A, { powerup: r });
+                                return (0, n.jsx)(f.A, {
+                                    powerup: r,
+                                });
                             case p.o9.PERK:
                                 return (0, n.jsx)(d.l, {
                                     className: k.Sl,

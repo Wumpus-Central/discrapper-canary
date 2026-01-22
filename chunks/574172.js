@@ -8,6 +8,7 @@ n.r(t),
         setAlwaysOnTop: () => d,
     });
 var r = n(73153);
+
 function i(e, t, n) {
     return (
         t in e
@@ -21,6 +22,7 @@ function i(e, t, n) {
         e
     );
 }
+
 function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -43,6 +45,7 @@ let s = {
     location: !1,
     directories: !1,
 };
+
 function o(e, t, n) {
     return r.h.dispatch({
         type: "POPOUT_WINDOW_OPEN",
@@ -51,12 +54,14 @@ function o(e, t, n) {
         render: t,
     });
 }
+
 function l(e) {
     return r.h.dispatch({
         type: "CHANNEL_CALL_POPOUT_WINDOW_OPEN",
         channel: e,
     });
 }
+
 function c(e, t) {
     return r.h.dispatch({
         type: "CALL_TILE_POPOUT_WINDOW_OPEN",
@@ -64,12 +69,14 @@ function c(e, t) {
         participantId: t,
     });
 }
+
 function u(e) {
     return r.h.dispatch({
         type: "POPOUT_WINDOW_CLOSE",
         key: e,
     });
 }
+
 function d(e, t) {
     return r.h.dispatch({
         type: "POPOUT_WINDOW_SET_ALWAYS_ON_TOP",
@@ -77,6 +84,7 @@ function d(e, t) {
         key: e,
     });
 }
+
 function f(e, t) {
     return r.h.dispatch({
         type: "POPOUT_WINDOW_ADD_STYLESHEET",

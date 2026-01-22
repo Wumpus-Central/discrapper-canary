@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(627968);
 n(64700);
 var l = n(397927),
@@ -7,12 +9,15 @@ var l = n(397927),
     s = n(355097),
     o = n(985018),
     c = n(709994);
+
 function u(e) {
     let { channel: t, clearUnreadsNotice: n } = e;
     return (0, r.jsxs)("div", {
         className: c.l,
         children: [
-            (0, r.jsx)(i.A, { id: t.id }),
+            (0, r.jsx)(i.A, {
+                id: t.id,
+            }),
             (0, r.jsx)("div", {
                 className: c.p,
                 children: (0, r.jsx)(l.Text, {

@@ -1,8 +1,11 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r,
     l = n(311907),
     i = n(73153),
     a = n(988794);
+
 function s(e, t, n) {
     return (
         t in e
@@ -16,6 +19,7 @@ function s(e, t, n) {
         e
     );
 }
+
 function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -44,7 +48,9 @@ class u extends (r = l.Ay.PersistedStore) {
         return null != c[e];
     }
     getState() {
-        return { dismissedEventIds: c };
+        return {
+            dismissedEventIds: c,
+        };
     }
 }
 s(u, "displayName", "EventBannerStore"), s(u, "persistKey", "EventBanner");
@@ -53,7 +59,10 @@ let d = new u(i.h, {
         var t, n;
         let { eventId: r } = e;
         (t = o({}, c)),
-            (n = n = { [r]: !0 }),
+            (n = n =
+                {
+                    [r]: !0,
+                }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                 : (function (e, t) {

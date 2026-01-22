@@ -8,6 +8,7 @@ var r = n(860689),
     a = (function (e) {
         return (e.PUBLIC = "PUBLIC"), (e.INVITE_ONLY = "INVITE_ONLY"), (e.APPLY_TO_JOIN = "APPLY_TO_JOIN"), e;
     })({});
+
 function s(e) {
     let t = new Set(e.features),
         n = "INVITE_ONLY";
@@ -34,6 +35,7 @@ function s(e) {
         premiumTier: c,
     };
 }
+
 function o(e) {
     return (
         null != e &&

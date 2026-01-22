@@ -1,4 +1,7 @@
-n.d(t, { A: () => I }), n(896048);
+n.d(t, {
+    A: () => I,
+}),
+    n(896048);
 var l = n(627968),
     r = n(64700),
     i = n(503698),
@@ -79,6 +82,7 @@ let A = (e) => {
         }),
     });
 };
+
 function I(e) {
     let { applicationId: t, onClose: n, trackAction: i, similarGames: s, similarGamesError: d } = e,
         f = (0, c.bG)([p.A, x.A], () => {
@@ -99,12 +103,22 @@ function I(e) {
     f && null == d)
         ? (0, l.jsxs)("div", {
               children: [
-                  (0, l.jsx)("div", { className: a()(O.vM, y.bV) }),
+                  (0, l.jsx)("div", {
+                      className: a()(O.vM, y.bV),
+                  }),
                   (0, l.jsx)("div", {
                       className: a()(y.nM, y.iH),
                       children: o()
                           .range(0, 5)
-                          .map((e) => (0, l.jsx)("div", { className: O.nn }, e)),
+                          .map((e) =>
+                              (0, l.jsx)(
+                                  "div",
+                                  {
+                                      className: O.nn,
+                                  },
+                                  e,
+                              ),
+                          ),
                   }),
               ],
           })

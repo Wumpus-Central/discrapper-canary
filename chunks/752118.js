@@ -1,4 +1,7 @@
-e.d(t, { default: () => C }), e(896048);
+e.d(t, {
+    default: () => C,
+}),
+    e(896048);
 var n = e(627968),
     i = e(64700),
     r = e(311907),
@@ -17,6 +20,7 @@ var n = e(627968),
     h = e(652215),
     k = e(985018),
     p = e(940892);
+
 function f(l) {
     let { disabled: t = !1, user: e, setNickname: r, nickname: a, error: s, hasNick: c } = l,
         d = i.useRef(null),
@@ -128,7 +132,9 @@ let C = function (l) {
                               (null == (A = t.username) || null == (x = A._errors) || null == (c = x[0])
                                   ? void 0
                                   : c.message) || k.intl.string(k.t.xex86n)),
-                        I({ nick: l });
+                        I({
+                            nick: l,
+                        });
                 }
             },
             [o, j, m, u, E, S],

@@ -28,6 +28,7 @@ async function p(e) {
         });
     } catch (e) {}
 }
+
 function _(e) {
     let { user: t, activity: n, onAction: i } = e,
         { themeType: s } = (0, l.E)();
@@ -44,7 +45,9 @@ function _(e) {
                           onClick: (e) => {
                               e.stopPropagation(),
                                   null == i ||
-                                      i({ action: o ? "PRESS_WATCH_ON_CRUNCHYROLL_BUTTON" : "PRESS_CUSTOM_BUTTON" }),
+                                      i({
+                                          action: o ? "PRESS_WATCH_ON_CRUNCHYROLL_BUTTON" : "PRESS_CUSTOM_BUTTON",
+                                      }),
                                   p({
                                       user: t,
                                       activity: n,
@@ -67,7 +70,9 @@ function _(e) {
                           onClick: (e) => {
                               e.stopPropagation(),
                                   null == i ||
-                                      i({ action: o ? "PRESS_WATCH_ON_CRUNCHYROLL_BUTTON" : "PRESS_CUSTOM_BUTTON" }),
+                                      i({
+                                          action: o ? "PRESS_WATCH_ON_CRUNCHYROLL_BUTTON" : "PRESS_CUSTOM_BUTTON",
+                                      }),
                                   p({
                                       user: t,
                                       activity: n,

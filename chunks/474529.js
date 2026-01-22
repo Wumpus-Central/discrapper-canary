@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968);
 n(64700);
 var i = n(110259),
@@ -12,15 +14,21 @@ var i = n(110259),
     f = n(985018),
     p = n(61305),
     _ = n(114149);
+
 function h() {
     let { analyticsLocations: e } = (0, o.Ay)();
     (0, l.A)({
         name: i.ImpressionNames.CUSTOM_THEMES_PREVIEW_THEMES_BANNER,
         type: i.ImpressionTypes.VIEW,
-        properties: { location_stack: e },
+        properties: {
+            location_stack: e,
+        },
     });
     let t = () => {
-        (0, u.b0)(u.G8.PREVIEW_THEMES), (0, c.nf)(c.HP.CUSTOM_THEME, { from: c.xv.CLIENT_THEMES_EDITOR });
+        (0, u.b0)(u.G8.PREVIEW_THEMES),
+            (0, c.nf)(c.HP.CUSTOM_THEME, {
+                from: c.xv.CLIENT_THEMES_EDITOR,
+            });
     };
     return (0, r.jsxs)("div", {
         className: p.kL,

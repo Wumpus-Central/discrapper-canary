@@ -3,4 +3,4 @@ n.d(t, {
     z: () => i,
 });
 let r = "dmSettingsUpsellLastShown",
-    i = 604800000;
+    i = 6048e5;

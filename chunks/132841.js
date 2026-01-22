@@ -1,4 +1,7 @@
-n.d(t, { A: () => h }), n(896048);
+n.d(t, {
+    A: () => h,
+}),
+    n(896048);
 var i = n(627968),
     r = n(64700),
     l = n(311907),
@@ -53,5 +56,7 @@ class c extends r.Component {
 }
 let h = l.Ay.connectStores([o.A], (e) => {
     let { applicationId: t } = e;
-    return { skus: o.A.getForApplication(t) };
+    return {
+        skus: o.A.getForApplication(t),
+    };
 })(c);

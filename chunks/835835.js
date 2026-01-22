@@ -30,6 +30,7 @@ var r = n(627968),
     I = n(652215),
     T = n(985018),
     C = n(726195);
+
 function N(e, t, n) {
     return (
         t in e
@@ -43,6 +44,7 @@ function N(e, t, n) {
         e
     );
 }
+
 function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -59,6 +61,7 @@ function R(e) {
     }
     return e;
 }
+
 function w(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -71,6 +74,7 @@ function w(e, t) {
     }
     return n;
 }
+
 function P(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -82,6 +86,7 @@ function P(e, t) {
         e
     );
 }
+
 function D(e, t) {
     if (null == e) return {};
     var n,
@@ -98,6 +103,7 @@ function D(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function x(e, t) {
     if (null == e) return {};
     var n,
@@ -112,6 +118,7 @@ let L = 43,
     j = 25,
     M = 40,
     k = 250;
+
 function U(e) {
     e.stopPropagation();
 }
@@ -123,7 +130,11 @@ let G = (e) => {
                 (0, r.jsxs)("div", {
                     className: C.gn,
                     children: [
-                        null != n ? (0, r.jsx)(n, { color: d.LU0.colors.INTERACTIVE_TEXT_DEFAULT }) : null,
+                        null != n
+                            ? (0, r.jsx)(n, {
+                                  color: d.LU0.colors.INTERACTIVE_TEXT_DEFAULT,
+                              })
+                            : null,
                         null == t
                             ? null
                             : (0, r.jsx)(d.Text, {
@@ -144,7 +155,9 @@ let G = (e) => {
             children: [
                 (0, r.jsx)("div", {
                     className: C.Sl,
-                    style: { backgroundImage: "url(".concat(n, ")") },
+                    style: {
+                        backgroundImage: "url(".concat(n, ")"),
+                    },
                 }),
                 (0, r.jsx)("div", {
                     className: C.rf,
@@ -208,8 +221,11 @@ class F extends i.PureComponent {
 }
 let B = u.Ay.connectStores([E.A], (e) => {
     let { channel: t } = e;
-    return { canManageMessages: null != t && E.A.can(I.xBc.MANAGE_MESSAGES, t) };
+    return {
+        canManageMessages: null != t && E.A.can(I.xBc.MANAGE_MESSAGES, t),
+    };
 })(F);
+
 function H(e) {
     let {
             analyticsName: t,
@@ -230,16 +246,25 @@ function H(e) {
         G = (0, u.bG)([b.Ay], () => b.Ay.hasNotice()),
         V = (0, u.bG)([y.A], () => y.A.windowSize());
     i.useEffect(() => {
-        O.default.track(I.HAw.OPEN_POPOUT, { type: t });
+        O.default.track(I.HAw.OPEN_POPOUT, {
+            type: t,
+        });
     }, [t]),
         i.useEffect(() => {
             function e() {
                 var e;
-                null == (e = w.current) || e.scrollPageUp({ animate: !0 });
+                null == (e = w.current) ||
+                    e.scrollPageUp({
+                        animate: !0,
+                    });
             }
+
             function t() {
                 var e;
-                null == (e = w.current) || e.scrollPageDown({ animate: !0 });
+                null == (e = w.current) ||
+                    e.scrollPageDown({
+                        animate: !0,
+                    });
             }
             return (
                 A._.subscribe(I.jej.SCROLL_PAGE_DOWN, t),
@@ -268,7 +293,15 @@ function H(e) {
               ),
           ])
         : 0 === n.length
-          ? B.push((0, r.jsx)(i.Fragment, { children: m() }, "empty-state"))
+          ? B.push(
+                (0, r.jsx)(
+                    i.Fragment,
+                    {
+                        children: m(),
+                    },
+                    "empty-state",
+                ),
+            )
           : ((H = !1),
             (B = []),
             l().each(n, (e) => {
@@ -317,7 +350,9 @@ function H(e) {
                       }),
                   })
                 : null,
-        z = { maxHeight: V.height - L - j - 48 };
+        z = {
+            maxHeight: V.height - L - j - 48,
+        };
     G && (z.maxHeight -= M);
     let q = null != f && a;
     return (0, r.jsx)("div", {
@@ -340,7 +375,20 @@ function H(e) {
                                 children: (e) => {
                                     let { ref: t } = e,
                                         n = D(e, ["ref"]);
-                                    return (0, r.jsx)("div", P(R({ ref: t }, n), { children: B }));
+                                    return (0, r.jsx)(
+                                        "div",
+                                        P(
+                                            R(
+                                                {
+                                                    ref: t,
+                                                },
+                                                n,
+                                            ),
+                                            {
+                                                children: B,
+                                            },
+                                        ),
+                                    );
                                 },
                             }),
                         }),
@@ -352,6 +400,7 @@ function H(e) {
         }),
     });
 }
+
 function Y(e) {
     let {
             analyticsName: t,
@@ -377,6 +426,7 @@ function Y(e) {
             let e = null != a ? g.A.getMessages(a.id) : null;
             return null != e && null != e.jumpTargetId && e.loadingMore && null == e.get(e.jumpTargetId);
         });
+
     function P(e, n) {
         let r = () => {
             let { id: r, channel_id: i } = e,
@@ -385,6 +435,7 @@ function Y(e) {
         };
         (0, v.A)(e, r) && !w && r();
     }
+
     function D(e) {
         let { message: t, channel: n } = e;
         if (null == t) return [];

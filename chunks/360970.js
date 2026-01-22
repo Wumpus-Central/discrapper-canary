@@ -1,4 +1,6 @@
-n.d(t, { N: () => c });
+n.d(t, {
+    N: () => c,
+});
 var r = n(928231),
     i = n(64700),
     a = n(126031);
@@ -8,6 +10,7 @@ let s = ["day", "month", "year"],
         minute: 2,
         second: 3,
     };
+
 function l(e, t) {
     let { autoComplete: n, isDisabled: i, name: l } = e,
         { visuallyHiddenProps: c } = (0, a.B)({
@@ -56,9 +59,15 @@ function l(e, t) {
         }
     );
 }
+
 function c(e) {
     let { state: t } = e,
-        { containerProps: n, inputProps: r } = l({ ...e }, t);
+        { containerProps: n, inputProps: r } = l(
+            {
+                ...e,
+            },
+            t,
+        );
     return i.createElement(
         "div",
         {

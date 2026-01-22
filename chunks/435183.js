@@ -17,6 +17,7 @@ n(863036);
 var o = n(734057),
     l = n(398590),
     c = n(652215);
+
 function u(e, t, n) {
     i.h.dispatch({
         type: "CHANNEL_SETTINGS_INIT",
@@ -25,18 +26,24 @@ function u(e, t, n) {
         subsection: n,
     });
 }
+
 function d(e, t, n) {
     u(e, t, n), (0, l.id)(c.zgK.CHANNEL_SETTINGS);
 }
+
 function f() {
-    i.h.dispatch({ type: "CHANNEL_SETTINGS_CLOSE" });
+    i.h.dispatch({
+        type: "CHANNEL_SETTINGS_CLOSE",
+    });
 }
+
 function p(e) {
     i.h.dispatch({
         type: "CHANNEL_SETTINGS_SET_SECTION",
         section: e,
     });
 }
+
 function _(e) {
     let {
         name: t,
@@ -120,7 +127,9 @@ async function h(e, t) {
         } = t,
         x = o.A.getChannel(e);
     return (
-        i.h.dispatch({ type: "CHANNEL_SETTINGS_SUBMIT" }),
+        i.h.dispatch({
+            type: "CHANNEL_SETTINGS_SUBMIT",
+        }),
         await s.A.unarchiveThreadIfNecessary(e),
         r.Bo.patch({
             url: c.Rsh.CHANNEL(e),
@@ -224,7 +233,9 @@ let g = {
     updateVoiceChannelStatus: function (e, t) {
         return r.Bo.put({
             url: c.Rsh.UPDATE_VOICE_CHANNEL_STATUS(e),
-            body: { status: t },
+            body: {
+                status: t,
+            },
             rejectWithError: !1,
         });
     },

@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var l = n(627968),
     r = n(64700),
     a = n(311907),
@@ -31,7 +33,9 @@ let p = (e) => {
         }, [t, p, n]),
         j = r.useMemo(() => x || g, [x, g]);
     return (0, l.jsx)(o.PQ, {
-        title: b.intl.formatToPlainString(b.t.U3yyFs, { username: v }),
+        title: b.intl.formatToPlainString(b.t.U3yyFs, {
+            username: v,
+        }),
         description: b.intl.string(b.t.naWE6W),
         buttonText: j ? b.intl.string(b.t.nDdxOG) : b.intl.string(b.t.ICYEfY),
         buttonDisabled: j,

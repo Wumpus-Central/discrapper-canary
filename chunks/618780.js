@@ -1,6 +1,9 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(123245),
     a = n(299964);
+
 function o(e, t) {
     if ("object" != (0, r.A)(e) || !e) return e;
     var n = e[a];

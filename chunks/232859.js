@@ -3,12 +3,14 @@ var t = "[...]",
     n = "[Circular]",
     r = [],
     i = [];
+
 function a() {
     return {
         depthLimit: Number.MAX_SAFE_INTEGER,
         edgesLimit: Number.MAX_SAFE_INTEGER,
     };
 }
+
 function s(e, t, n, s) {
     void 0 === s && (s = a()), l(e, "", 0, [], void 0, 0, s);
     try {
@@ -24,14 +26,19 @@ function s(e, t, n, s) {
     }
     return o;
 }
+
 function o(e, t, n, a) {
     var s = Object.getOwnPropertyDescriptor(a, n);
     void 0 !== s.get
         ? s.configurable
-            ? (Object.defineProperty(a, n, { value: e }), r.push([a, n, t, s]))
+            ? (Object.defineProperty(a, n, {
+                  value: e,
+              }),
+              r.push([a, n, t, s]))
             : i.push([t, n, e])
         : ((a[n] = e), r.push([a, n, t]));
 }
+
 function l(e, r, i, a, s, c, u) {
     if (((c += 1), "object" == typeof e && null !== e)) {
         for (d = 0; d < a.length; d++) if (a[d] === e) return void o(n, e, r, s);
@@ -49,9 +56,11 @@ function l(e, r, i, a, s, c, u) {
         a.pop();
     }
 }
+
 function c(e, t) {
     return e < t ? -1 : +(e > t);
 }
+
 function u(e, t, n, s) {
     void 0 === s && (s = a());
     var o,
@@ -68,6 +77,7 @@ function u(e, t, n, s) {
     }
     return o;
 }
+
 function d(e, i, a, s, l, u, f) {
     if (((u += 1), "object" == typeof e && null !== e)) {
         for (p = 0; p < s.length; p++) if (s[p] === e) return void o(n, e, i, l);
@@ -93,6 +103,7 @@ function d(e, i, a, s, l, u, f) {
         s.pop();
     }
 }
+
 function f(e) {
     return (
         (e =

@@ -1,4 +1,6 @@
-n.d(t, { G4: () => E });
+n.d(t, {
+    G4: () => E,
+});
 var r = n(627968),
     i = n(64700),
     a = n(736843),
@@ -79,7 +81,9 @@ let f = (e) => {
             } = e,
             l = null != (t = o.rentalDuration) ? t : void 0,
             { handleClose: u } = r;
-        (0, c.e1)({ handleClose: u });
+        (0, c.e1)({
+            handleClose: u,
+        });
         let { orbProductContext: d, isRedeeming: p, orbRedemptionError: _, onRedeemVirtualCurrency: h } = g(),
             m = f({
                 skuId: i,
@@ -167,5 +171,9 @@ let f = (e) => {
             });
         },
         UnifiedCheckoutCustomHeader: _,
-        UnifiedCheckoutStepDefinitions: { [s.pn.REVIEW]: { StepController: p } },
+        UnifiedCheckoutStepDefinitions: {
+            [s.pn.REVIEW]: {
+                StepController: p,
+            },
+        },
     };

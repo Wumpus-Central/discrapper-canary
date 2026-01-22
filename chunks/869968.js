@@ -1,7 +1,10 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r,
     i = n(311907),
     a = n(73153);
+
 function s(e, t, n) {
     return (
         t in e
@@ -18,15 +21,19 @@ function s(e, t, n) {
 let o = !1,
     l = !1,
     c = !1;
+
 function u(e) {
     (l = !0), (o = !1), (c = e.isTargeted);
 }
+
 function d() {
     (l = !0), (o = !1);
 }
+
 function f() {
     o = !0;
 }
+
 function p() {
     (o = !1), (l = !1), (c = !1);
 }

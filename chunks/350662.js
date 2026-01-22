@@ -45,7 +45,9 @@ e.exports = function (e) {
                 excludeEnd: !0,
                 keywords: "rpc returns",
             },
-            { begin: /^\s*[A-Z_]+(?=\s*=[^\n]+;$)/ },
+            {
+                begin: /^\s*[A-Z_]+(?=\s*=[^\n]+;$)/,
+            },
         ],
     };
 };

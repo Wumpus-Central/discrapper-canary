@@ -1,4 +1,7 @@
-n.d(t, { A: () => w }), n(896048);
+n.d(t, {
+    A: () => w,
+}),
+    n(896048);
 var r,
     i = n(311907),
     a = n(73153),
@@ -8,6 +11,7 @@ var r,
     c = n(41984),
     u = n(680243),
     d = n(672396);
+
 function f(e, t, n) {
     return (
         t in e
@@ -25,15 +29,19 @@ let p = new o.A("OverlayV3NativeGPUBoostManager"),
     _ = new Set(),
     h = !1,
     m = !1;
+
 function g(e, t) {
     t ? _.add(e) : _.delete(e), O();
 }
+
 function E(e) {
     (m = e), O();
 }
+
 function b() {
     _.clear(), O();
 }
+
 function y() {
     return !m && _.size > 0;
 }
@@ -55,23 +63,29 @@ async function O() {
             p.error("Error during GPU boost request flush:", e);
     }
 }
+
 function A(e) {
     g(e.reason, e.enabled);
 }
+
 function v(e) {
     let { enabled: t, mode: n } = e;
     n === c.x7.DisabledGPUBoost && E(t), n === c.x7.ForceGPUBoost && g(c.y7.DEV_FORCED_GPU_BOOST, t);
 }
+
 function S() {
     b();
 }
+
 function I(e) {
     g(c.y7.OVERLAY_UNLOCKED, !e.locked);
 }
+
 function T() {
     l.Ay.IsHardwareAcceleratedGPUSchedulingEnabled() && g(c.y7.HARDWARE_ACCELERATED_GPU_SCHEDULING_ENABLED, !0),
         g(c.y7.OVERLAY_RENDERING, !0);
 }
+
 function C() {
     b();
 }

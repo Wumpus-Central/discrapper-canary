@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(64700),
     i = n(429913),
     a = n(139675),
@@ -7,6 +9,7 @@ var r = n(64700),
     l = n(424994),
     c = n(360469),
     u = n(985018);
+
 function d(e, t, n) {
     return (
         t in e
@@ -20,6 +23,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +40,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -48,6 +53,7 @@ function p(e, t) {
     }
     return n;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -59,6 +65,7 @@ function _(e, t) {
         e
     );
 }
+
 function h(e) {
     let t,
         { entry: n, baseEntryData: d } = e,
@@ -68,7 +75,9 @@ function h(e) {
         g = n.extra.media_title,
         E = n.extra.media_subtitle,
         b = (0, o.Hd)(n) ? u.t["LH+Z3y"] : u.t.YuKgml,
-        y = { type: l.a4.CRUNCHYROLL },
+        y = {
+            type: l.a4.CRUNCHYROLL,
+        },
         O = r.useMemo(() => {
             if (null == n.extra.url) return;
             let e = s.A.safeParseWithQuery(n.extra.url);
@@ -78,7 +87,9 @@ function h(e) {
         null != O &&
             (t = {
                 href: s.A.format(O),
-                ariaDescription: u.intl.formatToPlainString(u.t.aFFQ3g, { title: g }),
+                ariaDescription: u.intl.formatToPlainString(u.t.aFFQ3g, {
+                    title: g,
+                }),
             }),
         _(f({}, d), {
             thumbnailUrl: null != m ? m : h,

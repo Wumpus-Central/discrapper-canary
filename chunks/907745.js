@@ -42,6 +42,7 @@ var r = n(627968),
     U = n(652215),
     G = n(985018),
     V = n(607205);
+
 function F(e, t, n) {
     return (
         t in e
@@ -154,7 +155,9 @@ class W extends i.PureComponent {
                             [V.in]: a,
                         }),
                         children: (0, r.jsx)(d.vN3, {
-                            focusTarget: { current: null == (c = this._editorRef) ? void 0 : c.editor },
+                            focusTarget: {
+                                current: null == (c = this._editorRef) ? void 0 : c.editor,
+                            },
                             ringTarget: this._searchBarRef,
                             children: (0, r.jsxs)(
                                 "div",
@@ -225,7 +228,9 @@ class W extends i.PureComponent {
                 null == (n = this._editorRef) ||
                     null == (t = n.editor) ||
                     t.setAttribute("aria-activedescendant", null != e ? "".concat(H, "-").concat(e) : void 0),
-                    this.setState({ selectedIndex: e });
+                    this.setState({
+                        selectedIndex: e,
+                    });
             }),
             F(this, "renderPopout", () =>
                 (0, r.jsx)(j.A, {
@@ -266,7 +271,9 @@ class W extends i.PureComponent {
                     ? this.focusEditor()
                     : ((t = A.a4(t, 0)),
                       this.setEditorState(t),
-                      (0, L.iK)({ searchContext: n }),
+                      (0, L.iK)({
+                          searchContext: n,
+                      }),
                       r || Promise.resolve().then(() => this.blurEditor()));
             }),
             F(this, "handleFocusSearch", (e) => {
@@ -274,7 +281,9 @@ class W extends i.PureComponent {
                 if (!t) return void this.focusEditor();
                 let n = y.A.getChannelId(),
                     r = E.A.getChannel(n),
-                    i = C.A.getCurrentConfig({ location: "handleFocusSearch" }).enabled;
+                    i = C.A.getCurrentConfig({
+                        location: "handleFocusSearch",
+                    }).enabled;
                 if (
                     ((null == r ? void 0 : r.isThread()) &&
                         !i &&
@@ -287,7 +296,9 @@ class W extends i.PureComponent {
                 let s = (0, T.Rt)(r);
                 null == s
                     ? this.focusEditor()
-                    : ((0, L.Tf)({ searchContext: a }),
+                    : ((0, L.Tf)({
+                          searchContext: a,
+                      }),
                       Promise.resolve().then(() => {
                           let { _editorRef: e } = this;
                           null == e || e.focus(),
@@ -321,21 +332,34 @@ class W extends i.PureComponent {
             }),
             F(this, "onFocus", () => {
                 let { searchContext: e } = this.props;
-                this.setState({ focused: !0 }), N.A.setFocused(e, !0);
+                this.setState({
+                    focused: !0,
+                }),
+                    N.A.setFocused(e, !0);
             }),
             F(this, "handleBlur", () => {
                 let { searchContext: e } = this.props;
                 N.A.setFocused(e, !1),
-                    this.setState({ focused: !1 }, () => {
-                        A.Im(this.props.editorState) && this.clearSearch();
-                    });
+                    this.setState(
+                        {
+                            focused: !1,
+                        },
+                        () => {
+                            A.Im(this.props.editorState) && this.clearSearch();
+                        },
+                    );
             }),
             F(this, "onBlur", (e) => {
                 this.handleBlur();
             }),
             F(this, "handleOption", () => {
                 let { current: e } = this._searchPopoutRef;
-                return null != e && e.selectOption({ searchAutocompleteSelectAction: M.oi.KEY_PRESS });
+                return (
+                    null != e &&
+                    e.selectOption({
+                        searchAutocompleteSelectAction: M.oi.KEY_PRESS,
+                    })
+                );
             }),
             F(this, "handleReturn", (e) => {
                 let { shiftKey: t } = e;
@@ -347,7 +371,9 @@ class W extends i.PureComponent {
                                   searchEverywhere: !0,
                                   searchQuerySource: M.Q_.SEARCH_TEXT_INPUT,
                               })
-                            : this.search({ searchQuerySource: M.Q_.SEARCH_TEXT_INPUT })),
+                            : this.search({
+                                  searchQuerySource: M.Q_.SEARCH_TEXT_INPUT,
+                              })),
                     "handled"
                 );
             }),
@@ -360,7 +386,10 @@ class W extends i.PureComponent {
                         (t = A.a4(t, B)),
                         (t = this.tokenize(t)),
                         this.setEditorState(t),
-                        n || this.setState({ focused: !0 })),
+                        n ||
+                            this.setState({
+                                focused: !0,
+                            })),
                     "handled"
                 );
             }),
@@ -377,7 +406,10 @@ class W extends i.PureComponent {
                             (t = A.vE(e, t)),
                             (t = this.tokenize(t)),
                             this.setEditorState(t),
-                            n || this.setState({ focused: !0 }),
+                            n ||
+                                this.setState({
+                                    focused: !0,
+                                }),
                             "handled"
                         );
                     case "transpose-characters":
@@ -400,7 +432,10 @@ class W extends i.PureComponent {
                     (t = A.le(e, t)),
                     (t = A.a4(t, B)),
                     (t = this.tokenize(t)),
-                    n || this.setState({ focused: !0 }),
+                    n ||
+                        this.setState({
+                            focused: !0,
+                        }),
                     this.setEditorState(t),
                     "handled"
                 );
@@ -419,13 +454,22 @@ class W extends i.PureComponent {
                 if ((e.stopPropagation(), (n || i) && "a" === t.toLowerCase())) {
                     e.preventDefault();
                     let t = A.y8(a);
-                    return this.setEditorState(t), this.setState({ focused: !0 }), !0;
+                    return (
+                        this.setEditorState(t),
+                        this.setState({
+                            focused: !0,
+                        }),
+                        !0
+                    );
                 }
                 if ("Escape" === t) {
                     if ((e.preventDefault(), A.Im(a))) this.blurEditor();
                     else {
                         let e = A.Xq(a);
-                        w.A.updateSearchEditorState(s, e), this.setState({ focused: !0 });
+                        w.A.updateSearchEditorState(s, e),
+                            this.setState({
+                                focused: !0,
+                            });
                     }
                     return !0;
                 }
@@ -456,6 +500,7 @@ class W extends i.PureComponent {
             (0, T.Pe)();
     }
 }
+
 function K(e) {
     let { searchContext: t, className: n } = e,
         a = (0, T.bS)(t),
@@ -535,7 +580,9 @@ function K(e) {
                 case U.I4_.FAVORITES:
                     return G.intl.string(G.t["5h0QOP"]);
                 default:
-                    return G.intl.formatToPlainString(G.t.LDZtFO, { name: D });
+                    return G.intl.formatToPlainString(G.t.LDZtFO, {
+                        name: D,
+                    });
             }
         }, [t.type, D]);
     return (0, r.jsx)(W, {
@@ -549,6 +596,7 @@ function K(e) {
         placeholder: j,
     });
 }
+
 function z(e) {
     let { className: t, guildId: n, channelId: i } = e,
         a = (0, D.J)({

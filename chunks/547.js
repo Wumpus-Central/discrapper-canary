@@ -1,5 +1,8 @@
 let r, i;
-n.d(t, { A: () => Q }), n(896048);
+n.d(t, {
+    A: () => Q,
+}),
+    n(896048);
 var a = n(960488),
     s = n(506774),
     o = n(73153),
@@ -24,6 +27,7 @@ var a = n(960488),
     T = n(652215),
     C = n(746080),
     N = n(985018);
+
 function R(e, t, n) {
     return (
         t in e
@@ -38,6 +42,7 @@ function R(e, t, n) {
     );
 }
 let w = new _.A("MessageManager");
+
 function P(e) {
     let {
         guildId: t,
@@ -67,7 +72,12 @@ function P(e) {
                 jumpType: u.US.ANIMATED,
             })),
             f.A.commit(m)),
-        null != m.focusTargetId && null == r && ((m = m.mutate({ focusTargetId: null })), f.A.commit(m));
+        null != m.focusTargetId &&
+            null == r &&
+            ((m = m.mutate({
+                focusTargetId: null,
+            })),
+            f.A.commit(m));
     let g = i;
     if (
         (!a || h.A.isConnected() || m.loadingMore
@@ -78,7 +88,14 @@ function P(e) {
         (0, p.A)(n) && O.Ay.hasUnread(n) && (g = !0),
         g)
     )
-        if ((f.A.commit(m.mutate({ loadingMore: !0 })), null != r))
+        if (
+            (f.A.commit(
+                m.mutate({
+                    loadingMore: !0,
+                }),
+            ),
+            null != r)
+        )
             c.A.jumpToMessage({
                 channelId: n,
                 messageId: r,
@@ -111,7 +128,9 @@ function P(e) {
                     limit: T.EMb,
                     isPreload: a,
                     skipLocalFetch: o,
-                    jump: { jumpType: u.US.ANIMATED },
+                    jump: {
+                        jumpType: u.US.ANIMATED,
+                    },
                     avoidInitialScroll: l,
                     fetchKey: d,
                 });
@@ -136,6 +155,7 @@ function P(e) {
 }
 let D = 90 * S.A.Millis.DAY,
     x = "viewedThreadIds";
+
 function L(e) {
     if (O.Ay.hasOpenedThread(e)) return !1;
     if (null == i) {
@@ -148,6 +168,7 @@ function L(e) {
     for (let e in i) i[e] < n && delete i[e];
     return s.w.set(x, i), !0;
 }
+
 function j(e) {
     var t;
     if (null != r && r.channelId === e) return r;
@@ -160,6 +181,7 @@ function j(e) {
         messageId: null == n || null == (t = n.params) ? void 0 : t.message,
     };
 }
+
 function M() {
     let e = A.A.getChannelId();
     if (null == e) return;
@@ -176,6 +198,7 @@ function M() {
         }),
         F(t.getGuildId(), t.id);
 }
+
 function k() {
     let e = A.A.getChannelId();
     if (null == e) return;
@@ -190,6 +213,7 @@ function k() {
         }),
         F(t.getGuildId(), t.id);
 }
+
 function U(e) {
     let { guildId: t, channelId: n, messageId: i, jumpType: a, isInitialSetup: s } = e;
     if (s)
@@ -210,6 +234,7 @@ function U(e) {
     }),
         F(t, n);
 }
+
 function G(e) {
     let { guildId: t, channelId: n } = e;
     P({
@@ -217,6 +242,7 @@ function G(e) {
         channelId: n,
     });
 }
+
 function V(e) {
     let { guildId: t, channelId: n, messageId: r, jumpType: i } = e;
     P({
@@ -226,6 +252,7 @@ function V(e) {
         jumpType: i,
     });
 }
+
 function F(e, t) {
     let n = E.Ay.getCurrentSidebarChannelId(t);
     null == n ||
@@ -235,6 +262,7 @@ function F(e, t) {
             messageId: E.Ay.getCurrentSidebarMessageId(t),
         });
 }
+
 function B() {
     let e = A.A.getChannelId(),
         t = v.A.getGuildId();
@@ -242,6 +270,7 @@ function B() {
     let n = E.Ay.getSidebarState(e);
     (null == n ? void 0 : n.type) !== m.PE.VIEW_CHANNEL && F(t, e);
 }
+
 function H(e) {
     let { guildId: t, channelId: n, context: r } = e;
     r === T.QCW &&
@@ -251,6 +280,7 @@ function H(e) {
         }),
         F(t, n));
 }
+
 function Y(e) {
     let { channel: t, messageId: n } = e,
         r = t.guild_id;
@@ -262,6 +292,7 @@ function Y(e) {
             messageId: n,
         });
 }
+
 function W(e) {
     let { response: t } = e;
     if (null == t || null == t.body) return null;
@@ -270,11 +301,14 @@ function W(e) {
         null != e &&
             l.A.show({
                 title: N.intl.string(N.t.Whhv4w),
-                body: N.intl.formatToPlainString(N.t.qoxdQB, { retryAfterMinutes: Math.ceil(e / 60) }),
+                body: N.intl.formatToPlainString(N.t.qoxdQB, {
+                    retryAfterMinutes: Math.ceil(e / 60),
+                }),
             });
     }
 }
 let K = {};
+
 function z(e) {
     var t;
     let { channelId: n, jump: r, isStale: i, isPreview: a = !1 } = e;
@@ -294,6 +328,7 @@ function z(e) {
             jump: r,
         });
 }
+
 function q(e) {
     let { channelId: t, messageId: n, reason: r, noSendFailed: i, shouldSendNotification: a } = e;
     null == n ||
@@ -306,6 +341,7 @@ function q(e) {
                 shouldNotify: !1,
             }));
 }
+
 function X(e) {
     let { state: t } = e;
     if ("active" !== t) return !1;

@@ -1,4 +1,6 @@
-n.d(t, { A: () => G });
+n.d(t, {
+    A: () => G,
+});
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -31,10 +33,16 @@ var r = n(627968),
     w = n(652215),
     R = n(985018),
     D = n(361870);
+
 function G() {
     let e = (0, a.bG)([m.A], () => m.A.getGuildId());
-    return null == e ? null : (0, r.jsx)(L, { guildId: e });
+    return null == e
+        ? null
+        : (0, r.jsx)(L, {
+              guildId: e,
+          });
 }
+
 function L(e) {
     let t,
         { guildId: n } = e,
@@ -63,16 +71,24 @@ function L(e) {
             t = (0, r.jsx)(p.A, {});
             break;
         case E.Hy.DEFAULT_CHANNELS:
-            t = (0, r.jsx)(_.A, { saveOnClose: !v });
+            t = (0, r.jsx)(_.A, {
+                saveOnClose: !v,
+            });
             break;
         case E.Hy.CUSTOMIZATION_QUESTIONS:
-            t = (0, r.jsx)(C.Ay, { saveOnClose: !v });
+            t = (0, r.jsx)(C.Ay, {
+                saveOnClose: !v,
+            });
             break;
         case E.Hy.HOME_SETTINGS:
-            t = (0, r.jsx)(S.A, { saveOnClose: !v });
+            t = (0, r.jsx)(S.A, {
+                saveOnClose: !v,
+            });
             break;
         case E.Hy.CONNECTIONS:
-            t = (0, r.jsx)(T.A, { saveOnClose: !v });
+            t = (0, r.jsx)(T.A, {
+                saveOnClose: !v,
+            });
             break;
         case E.Hy.REVIEW:
             t = (0, r.jsx)(I.A, {
@@ -81,7 +97,9 @@ function L(e) {
             });
     }
     return (0, r.jsxs)("div", {
-        className: s()(D.Jp, { [D.Q3]: G }),
+        className: s()(D.Jp, {
+            [D.Q3]: G,
+        }),
         children: [
             !v &&
                 l !== E.Hy.LANDING &&
@@ -121,10 +139,13 @@ function L(e) {
                         ],
                     }),
                 }),
-            (0, r.jsx)("div", { children: t }),
+            (0, r.jsx)("div", {
+                children: t,
+            }),
         ],
     });
 }
+
 function k(e) {
     let { page: t, setOnboardingStep: n, homeSettingsEnabled: i } = e,
         l = (0, a.bG)([A.A], () => A.A.hasErrors()),
@@ -139,11 +160,17 @@ function k(e) {
                 className: s()(D.G9, D.zp),
                 onClick: c(E.Hy.SAFETY_CHECK),
                 children: [
-                    (0, r.jsx)("div", { className: s()(D.hr, { [D.Ou]: t === E.Hy.SAFETY_CHECK }) }),
+                    (0, r.jsx)("div", {
+                        className: s()(D.hr, {
+                            [D.Ou]: t === E.Hy.SAFETY_CHECK,
+                        }),
+                    }),
                     (0, r.jsx)(d.Text, {
                         color: t === E.Hy.SAFETY_CHECK ? "text-brand" : "text-muted",
                         variant: "text-xs/medium",
-                        children: R.intl.format(R.t.Me5Mma, { stepNumber: 1 }),
+                        children: R.intl.format(R.t.Me5Mma, {
+                            stepNumber: 1,
+                        }),
                     }),
                 ],
             }),
@@ -151,13 +178,21 @@ function k(e) {
                 className: s()(D.G9, D.zp),
                 onClick: c(E.Hy.DEFAULT_CHANNELS),
                 children: [
-                    (0, r.jsx)("div", { className: s()(D.hr, { [D.Ou]: t === E.Hy.DEFAULT_CHANNELS }) }),
+                    (0, r.jsx)("div", {
+                        className: s()(D.hr, {
+                            [D.Ou]: t === E.Hy.DEFAULT_CHANNELS,
+                        }),
+                    }),
                     (0, r.jsx)(d.Text, {
                         color: t === E.Hy.DEFAULT_CHANNELS ? "text-brand" : "text-muted",
                         variant: "text-xs/medium",
                         children: o
-                            ? R.intl.formatToPlainString(R.t["8mGhOy"], { stepNumber: 2 })
-                            : R.intl.formatToPlainString(R.t.vxpuTd, { stepNumber: 2 }),
+                            ? R.intl.formatToPlainString(R.t["8mGhOy"], {
+                                  stepNumber: 2,
+                              })
+                            : R.intl.formatToPlainString(R.t.vxpuTd, {
+                                  stepNumber: 2,
+                              }),
                     }),
                 ],
             }),
@@ -165,13 +200,21 @@ function k(e) {
                 className: s()(D.G9, D.zp),
                 onClick: c(E.Hy.CUSTOMIZATION_QUESTIONS),
                 children: [
-                    (0, r.jsx)("div", { className: s()(D.hr, { [D.Ou]: t === E.Hy.CUSTOMIZATION_QUESTIONS }) }),
+                    (0, r.jsx)("div", {
+                        className: s()(D.hr, {
+                            [D.Ou]: t === E.Hy.CUSTOMIZATION_QUESTIONS,
+                        }),
+                    }),
                     (0, r.jsx)(d.Text, {
                         color: t === E.Hy.CUSTOMIZATION_QUESTIONS ? "text-brand" : "text-muted",
                         variant: "text-xs/medium",
                         children: o
-                            ? R.intl.formatToPlainString(R.t.vb6J5g, { stepNumber: 3 })
-                            : R.intl.formatToPlainString(R.t.ZpdQqK, { stepNumber: 3 }),
+                            ? R.intl.formatToPlainString(R.t.vb6J5g, {
+                                  stepNumber: 3,
+                              })
+                            : R.intl.formatToPlainString(R.t.ZpdQqK, {
+                                  stepNumber: 3,
+                              }),
                     }),
                 ],
             }),
@@ -180,22 +223,34 @@ function k(e) {
                     className: s()(D.G9, D.zp),
                     onClick: c(E.Hy.HOME_SETTINGS),
                     children: [
-                        (0, r.jsx)("div", { className: s()(D.hr, { [D.Ou]: t === E.Hy.HOME_SETTINGS }) }),
+                        (0, r.jsx)("div", {
+                            className: s()(D.hr, {
+                                [D.Ou]: t === E.Hy.HOME_SETTINGS,
+                            }),
+                        }),
                         (0, r.jsx)(d.Text, {
                             color: t === E.Hy.HOME_SETTINGS ? "text-brand" : "text-muted",
                             variant: "text-xs/medium",
-                            children: R.intl.format(R.t.KVOukh, { stepNumber: 4 }),
+                            children: R.intl.format(R.t.KVOukh, {
+                                stepNumber: 4,
+                            }),
                         }),
                     ],
                 }),
             (0, r.jsxs)("div", {
                 className: D.G9,
                 children: [
-                    (0, r.jsx)("div", { className: s()(D.hr, { [D.Ou]: t === E.Hy.REVIEW }) }),
+                    (0, r.jsx)("div", {
+                        className: s()(D.hr, {
+                            [D.Ou]: t === E.Hy.REVIEW,
+                        }),
+                    }),
                     (0, r.jsx)(d.Text, {
                         color: t === E.Hy.REVIEW ? "text-brand" : "text-muted",
                         variant: "text-xs/medium",
-                        children: R.intl.format(R.t.oVzkiA, { stepNumber: 3 + +!!i + 1 }),
+                        children: R.intl.format(R.t.oVzkiA, {
+                            stepNumber: 3 + +!!i + 1,
+                        }),
                     }),
                 ],
             }),

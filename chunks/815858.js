@@ -26,7 +26,7 @@
         },
         relativeTime: {
             future: "mewn %s",
-            past: "%s yn ôl",
+            past: "%s yn \xf4l",
             s: "ychydig eiliadau",
             ss: "%d eiliad",
             m: "munud",

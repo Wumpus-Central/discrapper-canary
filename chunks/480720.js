@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(64700),
     l = n(734057),
     i = n(309010),
@@ -8,6 +10,7 @@ var r = n(64700),
     c = n(90804),
     u = n(748975),
     d = n(652215);
+
 function f(e) {
     let { onTransition: t } = e;
     r.useEffect(() => {
@@ -15,7 +18,10 @@ function f(e) {
             let { location: n } = e,
                 r = (0, s.H)(n);
             if (null == r || !(0, o.A)(r)) return;
-            i.A.getVoiceChannelId() !== r && (await (0, c.A)({ channelId: r }));
+            i.A.getVoiceChannelId() !== r &&
+                (await (0, c.A)({
+                    channelId: r,
+                }));
             let a = l.A.getChannel(r),
                 d = null == a ? void 0 : a.guild_id;
             setTimeout(() => {

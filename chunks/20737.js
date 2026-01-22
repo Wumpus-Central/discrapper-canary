@@ -1,4 +1,8 @@
-n.d(t, { A: () => z }), n(896048), n(65821);
+n.d(t, {
+    A: () => z,
+}),
+    n(896048),
+    n(65821);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -40,6 +44,7 @@ var r = n(627968),
     F = n(49999),
     H = n(985018),
     B = n(275825);
+
 function K(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -65,6 +70,7 @@ function K(e) {
     }
     return e;
 }
+
 function W(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -103,8 +109,12 @@ let z = l.memo(function (e) {
         ei = (0, s.yK)([g.A], () => g.A.getNewClipIds()),
         ea = (0, s.bG)([S.Ay], () => null == S.Ay.getCurrentSidebarChannelId(Y.id)),
         { showClipsHeaderEntrypoint: es } = b.L_.useExperiment(
-            { location: "ChannelAttachButton" },
-            { autoTrackExposure: !1 },
+            {
+                location: "ChannelAttachButton",
+            },
+            {
+                autoTrackExposure: !1,
+            },
         ),
         { onShareClick: eo } = (0, y.A)(Y.id),
         ec = (0, s.bG)([j.HP], () => j.HP.hasHotspot(j._2.CLIPS_CHANNEL_ATTACH_REMINDER)),
@@ -126,6 +136,7 @@ let z = l.memo(function (e) {
         !ed &&
         eh("recentClips");
     let ey = (0, s.bG)([N.A], () => N.A.hasCurrentUserSentMessageSinceAppStart());
+
     function eO() {
         (0, c.mMO)(
             async () => {
@@ -135,11 +146,16 @@ let z = l.memo(function (e) {
                         e,
                         W(K({}, t), {
                             channelId: Y.id,
-                            onClipClick: (e) => eo({ clips: [e] }),
+                            onClipClick: (e) =>
+                                eo({
+                                    clips: [e],
+                                }),
                         }),
                     );
             },
-            { modalKey: V.nm },
+            {
+                modalKey: V.nm,
+            },
         ),
             eh(null);
     }
@@ -167,7 +183,9 @@ let z = l.memo(function (e) {
         }),
         e_ = (0, x.I7)(null != Y ? Y : void 0),
         eC = (0, f.t8)(),
-        eS = (0, E.Sc)({ location: "ChannelAttachButton" }),
+        eS = (0, E.Sc)({
+            location: "ChannelAttachButton",
+        }),
         eI = (0, p.b)(),
         eN = null != (i = null == ei ? void 0 : ei.length) ? i : 0,
         eT = (0, k.A)({
@@ -200,12 +218,19 @@ let z = l.memo(function (e) {
             position: "top",
             positionKey: null != ep ? ep : "null",
             onRequestOpen: () => {
-                ey && (0, O.Dr)(o.M.ACTIVITIES_CHAT_BUTTON_NUX_V2, { dismissAction: F.i.TAKE_ACTION }),
+                ey &&
+                    (0, O.Dr)(o.M.ACTIVITIES_CHAT_BUTTON_NUX_V2, {
+                        dismissAction: F.i.TAKE_ACTION,
+                    }),
                     eh("attachMenu");
             },
             onRequestClose: () => {
                 (0, c.ueM)() ||
-                    (ey && (0, O.Dr)(o.M.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: F.i.TAKE_ACTION }), eh(null));
+                    (ey &&
+                        (0, O.Dr)(o.M.ACTIVITIES_CHAT_MENU_NEW_BADGE, {
+                            dismissAction: F.i.TAKE_ACTION,
+                        }),
+                    eh(null));
             },
             renderPopout: (e) => {
                 switch (ep) {
@@ -260,7 +285,9 @@ let z = l.memo(function (e) {
                             },
                             e,
                         ),
-                        { children: eP },
+                        {
+                            children: eP,
+                        },
                     ),
                 ),
         });

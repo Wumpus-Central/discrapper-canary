@@ -1,9 +1,14 @@
-n.d(t, { A: () => $ }), n(896048), n(228524), n(801541);
+n.d(t, {
+    A: () => $,
+}),
+    n(896048),
+    n(228524),
+    n(801541);
 var a = n(627968),
     l = n(64700),
     i = n(503698),
     r = n.n(i),
-    s = n(432022),
+    s = n(108531),
     o = n(889137),
     c = n(311907),
     d = n(827734),
@@ -70,6 +75,7 @@ let z = l.forwardRef(function (e, t) {
         })
     );
 });
+
 function q(e) {
     var t;
     let { onClick: n } = e,
@@ -112,7 +118,9 @@ function q(e) {
                               autoPlay: !1,
                               asset: p,
                               poster: null == f ? void 0 : f.url,
-                              className: r()(K.NM, { [K.Gc]: g }),
+                              className: r()(K.NM, {
+                                  [K.Gc]: g,
+                              }),
                           }),
                   })
                 : null,
@@ -131,6 +139,7 @@ function q(e) {
         ],
     });
 }
+
 function Q(e) {
     let { quest: t } = e;
     return (0, a.jsx)(I.A, {
@@ -141,6 +150,7 @@ function Q(e) {
         sourceQuestContent: v.uF.QUEST_BAR_V2,
     });
 }
+
 function Y(e) {
     let { isInteractable: t, containerRef: n, onAcceptQuest: i } = e,
         { quest: o, onGameSheetOpen: d, onGameSheetClose: h, taskDetails: f } = l.useContext(L.T),
@@ -148,12 +158,24 @@ function Y(e) {
         b = l.useRef(null),
         j = (0, c.bG)([g.A], () => g.A.isEnrolling(o.id), [o]),
         A = l.useMemo(() => (0, C.tW)(o, C.fY.QUEST_BAR_HERO), [o]),
-        S = (0, _.NA)({ quest: o }),
+        S = (0, _.NA)({
+            quest: o,
+        }),
         O = l.useMemo(() => (0, C.tW)(o, C.fY.HERO_IMAGE), [o]),
-        E = l.useMemo(() => (null == O ? {} : { backgroundImage: "url(".concat(O.url, ")") }), [O]),
+        E = l.useMemo(
+            () =>
+                null == O
+                    ? {}
+                    : {
+                          backgroundImage: "url(".concat(O.url, ")"),
+                      },
+            [O],
+        ),
         I = (0, p.Ay)(),
         P = (0, u.Mw)(I),
-        R = y.t$.useConfig({ location: V.rE.QUESTS_BAR }).enabled,
+        R = y.t$.useConfig({
+            location: V.rE.QUESTS_BAR,
+        }).enabled,
         D = (0, _.mU)({
             quest: o,
             location: V.rE.QUESTS_BAR,
@@ -175,12 +197,16 @@ function Y(e) {
                         (0, a.jsxs)("div", {
                             className: K.zH,
                             children: [
-                                (0, a.jsx)(Q, { quest: o }),
+                                (0, a.jsx)(Q, {
+                                    quest: o,
+                                }),
                                 (0, a.jsx)(m.Heading, {
                                     className: K.DD,
                                     color: "text-strong",
                                     variant: "heading-md/medium",
-                                    children: W.intl.format(W.t.EQa7os, { questName: o.config.messages.questName }),
+                                    children: W.intl.format(W.t.EQa7os, {
+                                        questName: o.config.messages.questName,
+                                    }),
                                 }),
                                 (0, a.jsx)(m.Text, {
                                     className: K.h_,
@@ -250,12 +276,17 @@ function Y(e) {
                                       src: A.url,
                                   }),
                           }),
-                    (0, a.jsx)("div", { className: r()(K.tV, { [K.tt]: P }) }),
+                    (0, a.jsx)("div", {
+                        className: r()(K.tV, {
+                            [K.tt]: P,
+                        }),
+                    }),
                 ],
             }),
         ],
     });
 }
+
 function J(e) {
     var t;
     let { overlayRef: n, containerRef: i } = e,
@@ -267,7 +298,9 @@ function J(e) {
         [f, x, g] = (0, A.Qo)(c, d),
         j = l.useRef(null),
         y = l.useRef(null),
-        _ = (0, A.RR)({ quest: c }),
+        _ = (0, A.RR)({
+            quest: c,
+        }),
         C = (0, O.vv)(c),
         E = (0, A.I3)(c),
         N = l.useCallback(() => {
@@ -298,7 +331,9 @@ function J(e) {
                 },
                 children: [
                     (0, a.jsx)(G.A, {}),
-                    (0, a.jsx)("div", { className: K.yF }),
+                    (0, a.jsx)("div", {
+                        className: K.yF,
+                    }),
                     (0, a.jsx)(R.A, {
                         overlayRef: n,
                         progressBarRef: j,
@@ -323,7 +358,11 @@ function J(e) {
                                         onDesktop: () => g(V.fO.DESKTOP),
                                     }),
                                 )
-                                .with(v.X0.DESKTOP, () => (0, a.jsx)(U.A, { quest: c }))
+                                .with(v.X0.DESKTOP, () =>
+                                    (0, a.jsx)(U.A, {
+                                        quest: c,
+                                    }),
+                                )
                                 .with(v.X0.CONSOLE, () =>
                                     (0, a.jsx)(D.A, {
                                         quest: c,
@@ -334,7 +373,10 @@ function J(e) {
                     }),
                     (0, a.jsxs)(M.T, {
                         children: [
-                            C && (0, a.jsx)(q, { onClick: N }),
+                            C &&
+                                (0, a.jsx)(q, {
+                                    onClick: N,
+                                }),
                             (0, a.jsx)(P.f, {
                                 awaitingConsoleConnections: _,
                                 hasMadeProgress: p,
@@ -350,7 +392,9 @@ function J(e) {
             }),
             (0, a.jsx)("div", {
                 className: r()(K.tv, K.Sx),
-                style: { backgroundImage: "linear-gradient(90deg, ".concat(H.V, ", ").concat(H.u, ")") },
+                style: {
+                    backgroundImage: "linear-gradient(90deg, ".concat(H.V, ", ").concat(H.u, ")"),
+                },
             }),
         ],
     });
@@ -412,7 +456,9 @@ let $ = l.forwardRef(function (e, t) {
         children: [
             i,
             (0, a.jsx)(s.animated.div, {
-                style: { opacity: 1 },
+                style: {
+                    opacity: 1,
+                },
                 children: j
                     ? (0, a.jsx)(J, {
                           overlayRef: c,

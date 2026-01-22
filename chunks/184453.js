@@ -1,4 +1,6 @@
-n.d(t, { A: () => S });
+n.d(t, {
+    A: () => S,
+});
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -20,6 +22,7 @@ var r = n(627968),
     O = n(654487),
     y = n(985018),
     I = n(169653);
+
 function v(e) {
     let { tab: t } = e,
         n = g.A.useField("selectedTab"),
@@ -28,11 +31,17 @@ function v(e) {
                 (function (e) {
                     switch (e) {
                         case _.GlobalDiscoveryTab.SERVERS:
-                            return (0, r.jsx)(o.RR9, { color: "currentColor" });
+                            return (0, r.jsx)(o.RR9, {
+                                color: "currentColor",
+                            });
                         case _.GlobalDiscoveryTab.APPS:
-                            return (0, r.jsx)(o.k9F, { color: "currentColor" });
+                            return (0, r.jsx)(o.k9F, {
+                                color: "currentColor",
+                            });
                         case _.GlobalDiscoveryTab.QUESTS:
-                            return (0, r.jsx)(o.r2v, { color: "currentColor" });
+                            return (0, r.jsx)(o.r2v, {
+                                color: "currentColor",
+                            });
                     }
                 })(t),
             [t],
@@ -44,7 +53,9 @@ function v(e) {
                 case _.GlobalDiscoveryTab.QUESTS:
                     return (
                         v && h.A.resetState(),
-                        A.default.track(E.HAw.DISCOVERY_QUEST_TAB_CLICKED, { client_ad_session_id: (0, c.sN)().uuid }),
+                        A.default.track(E.HAw.DISCOVERY_QUEST_TAB_CLICKED, {
+                            client_ad_session_id: (0, c.sN)().uuid,
+                        }),
                         (0, b.transitionToGlobalDiscovery)({
                             tab: _.GlobalDiscoveryTab.QUESTS,
                             location: O.rE.DISCOVERY_SIDEBAR,
@@ -56,23 +67,35 @@ function v(e) {
                         return (0, b.transitionToGlobalDiscovery)({
                             tab: t,
                             newSessionState: {
-                                entrypoint: { name: d.sW.GLOBAL_DISCOVERY_SIDEBAR },
+                                entrypoint: {
+                                    name: d.sW.GLOBAL_DISCOVERY_SIDEBAR,
+                                },
                                 restorePreviousView: !0,
                             },
                         });
-                    u.A.resetState(), (0, b.transitionToGlobalDiscovery)({ tab: t });
+                    u.A.resetState(),
+                        (0, b.transitionToGlobalDiscovery)({
+                            tab: t,
+                        });
                     return;
                 case _.GlobalDiscoveryTab.SERVERS:
-                    if (!v) return (0, b.transitionToGlobalDiscovery)({ tab: t });
+                    if (!v)
+                        return (0, b.transitionToGlobalDiscovery)({
+                            tab: t,
+                        });
                     p.A.resetState(), f.A.resetState();
                     return;
                 default:
-                    return (0, b.transitionToGlobalDiscovery)({ tab: t });
+                    return (0, b.transitionToGlobalDiscovery)({
+                        tab: t,
+                    });
             }
         }, [t, v]);
     return (0, r.jsxs)(o.DUT, {
         onClick: S,
-        className: a()(I.pc, { [I.wH]: v }),
+        className: a()(I.pc, {
+            [I.wH]: v,
+        }),
         children: [
             (0, r.jsx)("div", {
                 className: I.wz,
@@ -99,7 +122,15 @@ let S = function () {
             }),
             (0, r.jsx)("nav", {
                 className: I.C$,
-                children: _.GLOBAL_DISCOVERY_TABS.map((e) => (0, r.jsx)(v, { tab: e }, e)),
+                children: _.GLOBAL_DISCOVERY_TABS.map((e) =>
+                    (0, r.jsx)(
+                        v,
+                        {
+                            tab: e,
+                        },
+                        e,
+                    ),
+                ),
             }),
         ],
     });

@@ -1,4 +1,7 @@
-n.d(t, { Ay: () => E }), n(896048);
+n.d(t, {
+    Ay: () => E,
+}),
+    n(896048);
 var r = n(35033),
     i = n(626584),
     a = n(142120),
@@ -8,6 +11,7 @@ var r = n(35033),
     c = n(240525),
     u = n(552618),
     d = n(640631);
+
 function f(e, t, n) {
     return (
         t in e
@@ -21,6 +25,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -175,6 +180,7 @@ class m {
         });
     }
 }
+
 function g(e) {
     return null != e.author && null != e.content && null != e.mentions && null != e.timestamp;
 }

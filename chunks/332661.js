@@ -1,4 +1,6 @@
-n.d(t, { c: () => u });
+n.d(t, {
+    c: () => u,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -6,6 +8,7 @@ var r = n(627968),
     o = n(158954),
     l = n(683329),
     c = n(336389);
+
 function u(e) {
     let { label: t, onClick: n, "aria-hidden": i, leading: a, trailing: u, inInput: f = !1 } = e,
         p = null;
@@ -22,10 +25,14 @@ function u(e) {
         null != u &&
             (_ = (0, r.jsx)("div", {
                 className: l.ZY,
-                children: (0, r.jsx)(d, { accessory: u }),
+                children: (0, r.jsx)(d, {
+                    accessory: u,
+                }),
             })),
         (0, r.jsxs)("div", {
-            className: s()(c.uN, l.uK, { [c.MO]: f }),
+            className: s()(c.uN, l.uK, {
+                [c.MO]: f,
+            }),
             onClick: n,
             "aria-hidden": i,
             children: [
@@ -45,12 +52,15 @@ function u(e) {
         })
     );
 }
+
 function d(e) {
     let { accessory: t, leading: n } = e;
     if (null == t) return null;
     if (i.isValidElement(t))
         return (0, r.jsx)("div", {
-            className: s()({ [l.MG]: n }),
+            className: s()({
+                [l.MG]: n,
+            }),
             children: t,
         });
     if ("string" == typeof t)
@@ -73,7 +83,10 @@ function d(e) {
             src: t.src,
             className: l.CD,
         });
-    if ("object" == typeof t && "type" in t && "badge" === t.type) return (0, r.jsx)(o.Exy, { type: t.badgeType });
+    if ("object" == typeof t && "type" in t && "badge" === t.type)
+        return (0, r.jsx)(o.Exy, {
+            type: t.badgeType,
+        });
     let a = t;
     return (0, r.jsx)("div", {
         className: l.MG,

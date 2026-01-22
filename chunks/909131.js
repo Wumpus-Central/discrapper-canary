@@ -17,6 +17,7 @@ var r = n(473318),
     f = n(83774),
     p = n(731854),
     _ = n(396574);
+
 function h(e, t, n) {
     return (
         t in e
@@ -30,6 +31,7 @@ function h(e, t, n) {
         e
     );
 }
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -163,8 +165,12 @@ class E extends o.A {
                             .concat(i, " x ")
                             .concat(a),
                     ),
-                    (t.width = { max: i }),
-                    (t.height = { max: a }),
+                    (t.width = {
+                        max: i,
+                    }),
+                    (t.height = {
+                        max: a,
+                    }),
                     e.applyConstraints(t));
             }
     }

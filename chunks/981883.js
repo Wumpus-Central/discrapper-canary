@@ -1,7 +1,10 @@
-n.d(t, { V: () => s });
+n.d(t, {
+    V: () => s,
+});
 var r = n(426983),
     i = n(176128),
     a = n(985018);
+
 function s(e, t) {
     let n =
         t === i.qo.PUBLIC
@@ -45,6 +48,8 @@ function s(e, t) {
                 tooltipDescription: a.intl.string(a.t.op2cJ6),
             };
         default:
-            return { tooltipTitle: a.intl.string(a.t["iZRkC/"]) };
+            return {
+                tooltipTitle: a.intl.string(a.t["iZRkC/"]),
+            };
     }
 }

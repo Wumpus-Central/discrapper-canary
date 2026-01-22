@@ -1,7 +1,10 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(157559),
     i = n(240248),
     a = n(985018);
+
 function s(e, t, n, s) {
     var o;
     r.A.show({

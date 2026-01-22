@@ -1,4 +1,7 @@
-n.d(t, { A: () => v }), n(65821);
+n.d(t, {
+    A: () => v,
+}),
+    n(65821);
 var r,
     i = n(311907),
     a = n(73153),
@@ -9,6 +12,7 @@ var r,
     u = n(71532),
     d = n(652215),
     f = n(985018);
+
 function p(e, t, n) {
     return (
         t in e
@@ -25,9 +29,11 @@ function p(e, t, n) {
 let _ = !1,
     h = null,
     m = null;
+
 function g() {
     (_ = !1), (m = null), (h = null);
 }
+
 function E(e) {
     let { error: t } = e,
         { code: n, paymentId: r } = t;
@@ -40,13 +46,19 @@ async function b(e) {
     let { error: t } = await (0, u.ap)(e);
     if (null != t) {
         let e = Error(t);
-        (0, c.pM)(e, { extra: { authenticationError: t } });
+        (0, c.pM)(e, {
+            extra: {
+                authenticationError: t,
+            },
+        });
     }
 }
+
 function y(e) {
     let { error: t } = e;
     (m = t), (_ = !1);
 }
+
 function O(e) {
     let { payment: t } = e,
         n = [d.__0.COMPLETED, d.__0.FAILED, d.__0.CANCELED];

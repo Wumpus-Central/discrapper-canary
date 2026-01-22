@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -27,7 +29,9 @@ let h = function (e) {
     )
         return null;
     let g = () => {
-        s.Ay.trackWithMetadata(f.HAw.NEW_MEMBER_MENTION_CTA_CLICKED, { target_user_id: n.author.id }),
+        s.Ay.trackWithMetadata(f.HAw.NEW_MEMBER_MENTION_CTA_CLICKED, {
+            target_user_id: n.author.id,
+        }),
             h(),
             (0, l.C)(n.author, m.id);
     };
@@ -69,7 +73,9 @@ let h = function (e) {
                     children: (0, r.jsx)(i.Button, {
                         variant: "primary",
                         size: "sm",
-                        text: p.intl.format(p.t["+xsVS6"], { username: n.author.username }),
+                        text: p.intl.format(p.t["+xsVS6"], {
+                            username: n.author.username,
+                        }),
                         fullWidth: !0,
                         onClick: g,
                     }),

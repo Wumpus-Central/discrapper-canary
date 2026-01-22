@@ -1,4 +1,6 @@
-r.d(t, { A: () => d });
+r.d(t, {
+    A: () => d,
+});
 var n = r(627968),
     l = r(64700),
     s = r(503698),
@@ -9,9 +11,11 @@ var n = r(627968),
 let d = l.memo(function (e) {
     let { className: t, animated: r = !1 } = e,
         s = l.useId();
+
     function d(e) {
         return "".concat(s, "-").concat(e);
     }
+
     function f(e) {
         return "url(#".concat(d(e), ")");
     }
@@ -279,8 +283,12 @@ let d = l.memo(function (e) {
                                               values: "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0",
                                               result: "hardAlpha",
                                           }),
-                                          (0, n.jsx)("feOffset", { dy: "8.6" }),
-                                          (0, n.jsx)("feGaussianBlur", { stdDeviation: "10" }),
+                                          (0, n.jsx)("feOffset", {
+                                              dy: "8.6",
+                                          }),
+                                          (0, n.jsx)("feGaussianBlur", {
+                                              stdDeviation: "10",
+                                          }),
                                           (0, n.jsx)("feComposite", {
                                               in2: "hardAlpha",
                                               operator: "out",
@@ -310,7 +318,9 @@ let d = l.memo(function (e) {
                                       y2: "84",
                                       gradientUnits: "userSpaceOnUse",
                                       children: [
-                                          (0, n.jsx)("stop", { stopColor: "#4752C4" }),
+                                          (0, n.jsx)("stop", {
+                                              stopColor: "#4752C4",
+                                          }),
                                           (0, n.jsx)("stop", {
                                               offset: "1",
                                               stopColor: "#6571F3",
@@ -394,7 +404,9 @@ let d = l.memo(function (e) {
                                               dy: "8.6",
                                               result: "tmp",
                                           }),
-                                          (0, n.jsx)("feFlood", { floodColor: "rgba(22,29,100,0.2)" }),
+                                          (0, n.jsx)("feFlood", {
+                                              floodColor: "rgba(22,29,100,0.2)",
+                                          }),
                                           (0, n.jsx)("feComposite", {
                                               operator: "in",
                                               in2: "tmp",
@@ -403,7 +415,9 @@ let d = l.memo(function (e) {
                                               result: "result",
                                               children: [
                                                   (0, n.jsx)("feMergeNode", {}),
-                                                  (0, n.jsx)("feMergeNode", { in: "SourceGraphic" }),
+                                                  (0, n.jsx)("feMergeNode", {
+                                                      in: "SourceGraphic",
+                                                  }),
                                               ],
                                           }),
                                       ],
@@ -446,7 +460,9 @@ let d = l.memo(function (e) {
                                               dy: "16",
                                               result: "tmp",
                                           }),
-                                          (0, n.jsx)("feFlood", { floodColor: "rgba(19,25,93,0.23)" }),
+                                          (0, n.jsx)("feFlood", {
+                                              floodColor: "rgba(19,25,93,0.23)",
+                                          }),
                                           (0, n.jsx)("feComposite", {
                                               operator: "in",
                                               in2: "tmp",
@@ -455,7 +471,9 @@ let d = l.memo(function (e) {
                                               result: "result",
                                               children: [
                                                   (0, n.jsx)("feMergeNode", {}),
-                                                  (0, n.jsx)("feMergeNode", { in: "SourceGraphic" }),
+                                                  (0, n.jsx)("feMergeNode", {
+                                                      in: "SourceGraphic",
+                                                  }),
                                               ],
                                           }),
                                       ],
@@ -548,7 +566,9 @@ let d = l.memo(function (e) {
                                               dy: "16",
                                               result: "tmp",
                                           }),
-                                          (0, n.jsx)("feFlood", { floodColor: "rgba(19,25,93,0.23)" }),
+                                          (0, n.jsx)("feFlood", {
+                                              floodColor: "rgba(19,25,93,0.23)",
+                                          }),
                                           (0, n.jsx)("feComposite", {
                                               operator: "in",
                                               in2: "tmp",
@@ -557,7 +577,9 @@ let d = l.memo(function (e) {
                                               result: "result",
                                               children: [
                                                   (0, n.jsx)("feMergeNode", {}),
-                                                  (0, n.jsx)("feMergeNode", { in: "SourceGraphic" }),
+                                                  (0, n.jsx)("feMergeNode", {
+                                                      in: "SourceGraphic",
+                                                  }),
                                               ],
                                           }),
                                       ],

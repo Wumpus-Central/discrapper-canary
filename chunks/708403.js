@@ -11,6 +11,7 @@ var a = n(627968),
     s = n(397927),
     o = n(957565),
     c = n(661251);
+
 function d(e) {
     let { className: t, children: n } = e;
     return (0, a.jsx)("dl", {
@@ -24,7 +25,7 @@ let u = (e) => {
     return (
         l.useEffect(() => {
             if (r) {
-                let e = setTimeout(() => d(!1), 1000);
+                let e = setTimeout(() => d(!1), 1e3);
                 return () => clearTimeout(e);
             }
         }, [r]),
@@ -60,7 +61,10 @@ let u = (e) => {
         })
     );
 };
+
 function m(e) {
     let { value: t } = e;
-    return (0, a.jsx)(s.P7L, { checked: t });
+    return (0, a.jsx)(s.P7L, {
+        checked: t,
+    });
 }

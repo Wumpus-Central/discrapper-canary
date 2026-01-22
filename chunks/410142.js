@@ -1,4 +1,6 @@
-n.d(t, { f: () => m });
+n.d(t, {
+    f: () => m,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -8,6 +10,7 @@ var r = n(627968),
     c = n(397927),
     u = n(885621),
     d = n(658122);
+
 function f(e, t, n) {
     return (
         t in e
@@ -21,6 +24,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,6 +41,7 @@ function p(e) {
     }
     return e;
 }
+
 function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -49,6 +54,7 @@ function _(e, t) {
     }
     return n;
 }
+
 function h(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -60,6 +66,7 @@ function h(e, t) {
         e
     );
 }
+
 function m(e) {
     let {
             color: t = "default",
@@ -79,7 +86,11 @@ function m(e) {
     }, [_]);
     let A = i.useCallback(
         (e) => {
-            g(e), null == b || b({ type: o.Q.SWITCH });
+            g(e),
+                null == b ||
+                    b({
+                        type: o.Q.SWITCH,
+                    });
         },
         [g, b],
     );
@@ -89,7 +100,9 @@ function m(e) {
             p(
                 {
                     ref: y,
-                    className: s()(d.item, d.switchItem, d.hideInteraction, u.jV[t], E, { [d.disabled]: f }),
+                    className: s()(d.item, d.switchItem, d.hideInteraction, u.jV[t], E, {
+                        [d.disabled]: f,
+                    }),
                     "aria-checked": a,
                     "aria-disabled": f,
                 },

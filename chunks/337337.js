@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var l = n(627968);
 n(64700);
 var r = n(91871),
@@ -47,6 +49,7 @@ let h = (e) => {
         n,
     );
 };
+
 function f(e) {
     let { parentChannel: t, appliedTags: n, maxTagsApplied: r, onSelectTag: i, onClose: c } = e,
         o = (0, d.OT)(t);
@@ -58,6 +61,16 @@ function f(e) {
         placeholder: u.intl.string(u.t.MbhGm7),
         "aria-label": u.intl.string(u.t.MbhGm7),
         children: (e) =>
-            o.filter((t) => a()(e.toLowerCase(), t.name.toLowerCase())).map((e) => (0, l.jsx)(h, { tag: e }, e.id)),
+            o
+                .filter((t) => a()(e.toLowerCase(), t.name.toLowerCase()))
+                .map((e) =>
+                    (0, l.jsx)(
+                        h,
+                        {
+                            tag: e,
+                        },
+                        e.id,
+                    ),
+                ),
     });
 }

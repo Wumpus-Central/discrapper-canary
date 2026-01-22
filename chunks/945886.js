@@ -1,9 +1,13 @@
-n.d(t, { A: () => h }), n(896048);
+n.d(t, {
+    A: () => h,
+}),
+    n(896048);
 var r,
     i = n(311907),
     a = n(73153),
     s = n(661191),
     o = n(734057);
+
 function l(e, t, n) {
     return (
         t in e
@@ -17,6 +21,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,10 +40,12 @@ function c(e) {
 }
 let u = {},
     d = u;
+
 function f(e) {
     let { channelId: t } = e;
     d[t] ? delete d[t] : (d[t] = !0), (d = c({}, d));
 }
+
 function p() {
     s.default.keys(d).forEach((e) => {
         null == o.A.getChannel(e) && delete d[e];

@@ -92,7 +92,9 @@ r(
         constructor: !0,
         forced: V,
     },
-    { DOMException: V ? D : I },
+    {
+        DOMException: V ? D : I,
+    },
 );
 var F = i(A),
     B = F.prototype;

@@ -1,19 +1,21 @@
-r.d(t, { B: () => o });
-var n = r(627968),
-    i = r(503698),
-    s = r.n(i),
-    a = r(132198),
-    l = r(587301);
-let o = (e) => {
-    let { product: t, animationState: r, className: i } = e,
-        o = a.m[t.skuId];
-    return null != o
-        ? (0, n.jsx)("div", {
-              className: s()(l.W, i),
+n.d(t, {
+    B: () => s,
+});
+var r = n(627968),
+    l = n(503698),
+    a = n.n(l),
+    i = n(132198),
+    o = n(587301);
+let s = (e) => {
+    let { product: t, animationState: n, className: l } = e,
+        s = i.m[t.skuId];
+    return null != s
+        ? (0, r.jsx)("div", {
+              className: a()(o.W, l),
               children:
-                  null != o.render &&
-                  o.render({
-                      animationState: r,
+                  null != s.render &&
+                  s.render({
+                      animationState: n,
                       alt: t.name,
                   }),
           })

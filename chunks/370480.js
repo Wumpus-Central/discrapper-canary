@@ -38,9 +38,15 @@ let _ = [
 var h = (function (e) {
     return (e[(e.AND = 0)] = "AND"), (e[(e.OR = 1)] = "OR"), e;
 })({});
+
 function m(e) {
     var t;
-    let { searchParams: n } = null != (t = u.A.toURLSafe(e)) ? t : { searchParams: new URLSearchParams() },
+    let { searchParams: n } =
+            null != (t = u.A.toURLSafe(e))
+                ? t
+                : {
+                      searchParams: new URLSearchParams(),
+                  },
         { code: r, state: a, error: s, error_description: o } = Object.fromEntries(n);
     return (
         i()(!Array.isArray(r), "Received multiple query param values for code"),
@@ -55,6 +61,7 @@ function m(e) {
         }
     );
 }
+
 function g(e) {
     let { connectionType: t, connectionMetadataField: n, operator: r, operatorText: i, value: a } = e,
         s = null,
@@ -82,19 +89,29 @@ function g(e) {
                 switch (n) {
                     case d.pK.CREATED_AT:
                         s = p.intl.format(s, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t.TPbtEu, { days: o }),
+                            platformQuantityHook: () =>
+                                p.intl.formatToPlainString(p.t.TPbtEu, {
+                                    days: o,
+                                }),
                         });
                         break;
                     case d.pK.REDDIT_TOTAL_KARMA:
                         s = p.intl.format(s, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t.P2JAEc, { karma: o }),
+                            platformQuantityHook: () =>
+                                p.intl.formatToPlainString(p.t.P2JAEc, {
+                                    karma: o,
+                                }),
                         });
                         break;
                     case d.pK.REDDIT_GOLD:
-                        s = p.intl.format(s, { platformQuantityHook: () => p.intl.string(p.t["+/5TCx"]) });
+                        s = p.intl.format(s, {
+                            platformQuantityHook: () => p.intl.string(p.t["+/5TCx"]),
+                        });
                         break;
                     case d.pK.REDDIT_MOD:
-                        s = p.intl.format(s, { platformQuantityHook: () => p.intl.string(p.t["9rPbEs"]) });
+                        s = p.intl.format(s, {
+                            platformQuantityHook: () => p.intl.string(p.t["9rPbEs"]),
+                        });
                         break;
                     default:
                         return null;
@@ -104,22 +121,34 @@ function g(e) {
                 switch (n) {
                     case d.pK.CREATED_AT:
                         s = p.intl.format(s, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t.TPbtEu, { days: o }),
+                            platformQuantityHook: () =>
+                                p.intl.formatToPlainString(p.t.TPbtEu, {
+                                    days: o,
+                                }),
                         });
                         break;
                     case d.pK.STEAM_GAME_COUNT:
                         s = p.intl.format(s, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t.H9eLoe, { count: o }),
+                            platformQuantityHook: () =>
+                                p.intl.formatToPlainString(p.t.H9eLoe, {
+                                    count: o,
+                                }),
                         });
                         break;
                     case d.pK.STEAM_ITEM_COUNT_TF2:
                         s = p.intl.format(s, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t.MceZJ6, { count: o }),
+                            platformQuantityHook: () =>
+                                p.intl.formatToPlainString(p.t.MceZJ6, {
+                                    count: o,
+                                }),
                         });
                         break;
                     case d.pK.STEAM_ITEM_COUNT_DOTA2:
                         s = p.intl.format(s, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t.dMnRar, { count: o }),
+                            platformQuantityHook: () =>
+                                p.intl.formatToPlainString(p.t.dMnRar, {
+                                    count: o,
+                                }),
                         });
                         break;
                     default:
@@ -130,17 +159,26 @@ function g(e) {
                 switch (n) {
                     case d.pK.CREATED_AT:
                         s = p.intl.format(s, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t.TPbtEu, { days: o }),
+                            platformQuantityHook: () =>
+                                p.intl.formatToPlainString(p.t.TPbtEu, {
+                                    days: o,
+                                }),
                         });
                         break;
                     case d.pK.BLUESKY_FOLLOWERS_COUNT:
                         s = p.intl.format(s, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t.xIdKU8, { count: o }),
+                            platformQuantityHook: () =>
+                                p.intl.formatToPlainString(p.t.xIdKU8, {
+                                    count: o,
+                                }),
                         });
                         break;
                     case d.pK.BLUESKY_STATUSES_COUNT:
                         s = p.intl.format(s, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t["dy3+NR"], { count: o }),
+                            platformQuantityHook: () =>
+                                p.intl.formatToPlainString(p.t["dy3+NR"], {
+                                    count: o,
+                                }),
                         });
                         break;
                     default:
@@ -151,20 +189,31 @@ function g(e) {
                 switch (n) {
                     case d.pK.CREATED_AT:
                         s = p.intl.format(s, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t.TPbtEu, { days: o }),
+                            platformQuantityHook: () =>
+                                p.intl.formatToPlainString(p.t.TPbtEu, {
+                                    days: o,
+                                }),
                         });
                         break;
                     case d.pK.TWITTER_VERIFIED:
-                        s = p.intl.format(s, { platformQuantityHook: () => p.intl.string(p.t.xRygZL) });
+                        s = p.intl.format(s, {
+                            platformQuantityHook: () => p.intl.string(p.t.xRygZL),
+                        });
                         break;
                     case d.pK.TWITTER_FOLLOWERS_COUNT:
                         s = p.intl.format(s, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t.bkajar, { count: o }),
+                            platformQuantityHook: () =>
+                                p.intl.formatToPlainString(p.t.bkajar, {
+                                    count: o,
+                                }),
                         });
                         break;
                     case d.pK.TWITTER_STATUSES_COUNT:
                         s = p.intl.format(s, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t.MI7NKi, { count: o }),
+                            platformQuantityHook: () =>
+                                p.intl.formatToPlainString(p.t.MI7NKi, {
+                                    count: o,
+                                }),
                         });
                         break;
                     default:
@@ -175,11 +224,16 @@ function g(e) {
                 switch (n) {
                     case d.pK.CREATED_AT:
                         s = p.intl.format(s, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t.TPbtEu, { days: o }),
+                            platformQuantityHook: () =>
+                                p.intl.formatToPlainString(p.t.TPbtEu, {
+                                    days: o,
+                                }),
                         });
                         break;
                     case d.pK.PAYPAL_VERIFIED:
-                        s = p.intl.format(s, { platformQuantityHook: () => p.intl.string(p.t.slSQuB) });
+                        s = p.intl.format(s, {
+                            platformQuantityHook: () => p.intl.string(p.t.slSQuB),
+                        });
                         break;
                     default:
                         return null;
@@ -189,25 +243,39 @@ function g(e) {
                 switch (n) {
                     case d.pK.CREATED_AT:
                         s = p.intl.format(s, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t.TPbtEu, { days: o }),
+                            platformQuantityHook: () =>
+                                p.intl.formatToPlainString(p.t.TPbtEu, {
+                                    days: o,
+                                }),
                         });
                         break;
                     case d.pK.EBAY_TOP_RATED_SELLER:
-                        s = p.intl.format(s, { platformQuantityHook: () => p.intl.string(p.t.TEEYwa) });
+                        s = p.intl.format(s, {
+                            platformQuantityHook: () => p.intl.string(p.t.TEEYwa),
+                        });
                         break;
                     case d.pK.EBAY_POSITIVE_FEEDBACK_PERCENTAGE:
                         s = p.intl.format(s, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t.rl9Vgy, { value: o }),
+                            platformQuantityHook: () =>
+                                p.intl.formatToPlainString(p.t.rl9Vgy, {
+                                    value: o,
+                                }),
                         });
                         break;
                     case d.pK.EBAY_UNIQUE_POSITIVE_FEEDBACK_COUNT:
                         s = p.intl.format(s, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t.QP5W1R, { count: o }),
+                            platformQuantityHook: () =>
+                                p.intl.formatToPlainString(p.t.QP5W1R, {
+                                    count: o,
+                                }),
                         });
                         break;
                     case d.pK.EBAY_UNIQUE_NEGATIVE_FEEDBACK_COUNT:
                         s = p.intl.format(s, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t["6ZFYdK"], { count: o }),
+                            platformQuantityHook: () =>
+                                p.intl.formatToPlainString(p.t["6ZFYdK"], {
+                                    count: o,
+                                }),
                         });
                         break;
                     default:
@@ -217,21 +285,32 @@ function g(e) {
             case f.fg2.TIKTOK:
                 switch (n) {
                     case d.pK.TIKTOK_VERIFIED:
-                        s = p.intl.format(s, { platformQuantityHook: () => p.intl.string(p.t.uv7ety) });
+                        s = p.intl.format(s, {
+                            platformQuantityHook: () => p.intl.string(p.t.uv7ety),
+                        });
                         break;
                     case d.pK.TIKTOK_FOLLOWER_COUNT:
                         s = p.intl.format(s, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t.qIPDRy, { count: o }),
+                            platformQuantityHook: () =>
+                                p.intl.formatToPlainString(p.t.qIPDRy, {
+                                    count: o,
+                                }),
                         });
                         break;
                     case d.pK.TIKTOK_FOLLOWING_COUNT:
                         s = p.intl.format(s, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t.zRta4X, { count: o }),
+                            platformQuantityHook: () =>
+                                p.intl.formatToPlainString(p.t.zRta4X, {
+                                    count: o,
+                                }),
                         });
                         break;
                     case d.pK.TIKTOK_LIKES_COUNT:
                         s = p.intl.format(s, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t["ar0WW+"], { count: o }),
+                            platformQuantityHook: () =>
+                                p.intl.formatToPlainString(p.t["ar0WW+"], {
+                                    count: o,
+                                }),
                         });
                         break;
                     default:
@@ -243,9 +322,11 @@ function g(e) {
         }
     return s;
 }
+
 function E(e) {
     return e.some((e) => null === e.tags.guild_connections);
 }
+
 function b(e) {
     var t, n;
     let { guildMember: r, guild: i, sortedGuildRoles: a, channel: u, onlyChannelConnectionRoles: d = !1 } = e;
@@ -256,6 +337,7 @@ function b(e) {
         _ = s().intersection(p, (0, o.A)(u));
     return _.length > 0 ? (null != (n = _[0]) ? n : null) : d ? null : null != (t = p[0]) ? t : null;
 }
+
 function y(e, t) {
     if (null == e || "" === e) return null;
     let n = new Date(e);

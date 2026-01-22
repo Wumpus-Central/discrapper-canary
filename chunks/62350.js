@@ -1,4 +1,9 @@
-n.d(t, { A: () => B }), n(321073), n(114821), n(339614);
+n.d(t, {
+    A: () => B,
+}),
+    n(321073),
+    n(114821),
+    n(339614);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -32,6 +37,7 @@ var r = n(627968),
     x = n(172799),
     L = n(985018),
     j = n(320160);
+
 function M(e, t, n) {
     return (
         t in e
@@ -45,6 +51,7 @@ function M(e, t, n) {
         e
     );
 }
+
 function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -61,6 +68,7 @@ function k(e) {
     }
     return e;
 }
+
 function U(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -73,6 +81,7 @@ function U(e, t) {
     }
     return n;
 }
+
 function G(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -84,6 +93,7 @@ function G(e, t) {
         e
     );
 }
+
 function V(e) {
     let { members: t, membersOnline: n, textColor: i } = e,
         a = [];
@@ -96,12 +106,16 @@ function V(e) {
                     {
                         className: j.MY,
                         children: [
-                            (0, r.jsx)("i", { className: j.QD }),
+                            (0, r.jsx)("i", {
+                                className: j.QD,
+                            }),
                             (0, r.jsx)(d.Text, {
                                 variant: "text-xs/normal",
                                 className: j.U9,
                                 color: i,
-                                children: L.intl.format(L.t["LC+S+m"], { membersOnline: n }),
+                                children: L.intl.format(L.t["LC+S+m"], {
+                                    membersOnline: n,
+                                }),
                             }),
                         ],
                     },
@@ -115,12 +129,16 @@ function V(e) {
                     {
                         className: j.MY,
                         children: [
-                            (0, r.jsx)("i", { className: j.o6 }),
+                            (0, r.jsx)("i", {
+                                className: j.o6,
+                            }),
                             (0, r.jsx)(d.Text, {
                                 variant: "text-xs/normal",
                                 className: j.U9,
                                 color: i,
-                                children: L.intl.format(L.t.zRl6XR, { count: t }),
+                                children: L.intl.format(L.t.zRl6XR, {
+                                    count: t,
+                                }),
                             }),
                         ],
                     },
@@ -133,12 +151,15 @@ function V(e) {
         })
     );
 }
+
 function F(e) {
     let { channel: t, guild: n, hasEnded: i, textColor: a } = e;
     if (null != t && null != n) {
         let e = (0, A.gU)(t, n);
         return (0, r.jsxs)("div", {
-            className: s()(j.Ix, { [j.v6]: i }),
+            className: s()(j.Ix, {
+                [j.v6]: i,
+            }),
             children: [
                 null != e
                     ? (0, r.jsx)(e, {
@@ -162,17 +183,22 @@ function F(e) {
     }
     return null != n
         ? (0, r.jsx)("div", {
-              className: s()(j.Ix, { [j.v6]: i }),
+              className: s()(j.Ix, {
+                  [j.v6]: i,
+              }),
               children: (0, r.jsx)(u.A, {
                   children: (0, r.jsx)(d.Text, {
                       variant: "text-xs/normal",
                       color: a,
-                      children: L.intl.format(L.t.u0vaDE, { guildName: n.name }),
+                      children: L.intl.format(L.t.u0vaDE, {
+                          guildName: n.name,
+                      }),
                   }),
               }),
           })
         : null;
 }
+
 function B(e) {
     var t, n;
     let a,
@@ -274,6 +300,7 @@ function B(e) {
               }),
           });
 }
+
 function H(e) {
     let {
             app: t,
@@ -341,7 +368,9 @@ function H(e) {
                               (0, r.jsx)(g.$, {
                                   activityUsers: n,
                                   guildId: o.id,
-                                  activityText: L.intl.formatToPlainString(L.t.yJj035, { count: R }),
+                                  activityText: L.intl.formatToPlainString(L.t.yJj035, {
+                                      count: R,
+                                  }),
                               })
                             : (0, r.jsx)(V, {
                                   members: c,

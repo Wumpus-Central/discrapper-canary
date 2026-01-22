@@ -1,4 +1,7 @@
-r.d(t, { A: () => O }), r(896048);
+r.d(t, {
+    A: () => O,
+}),
+    r(896048);
 var n = r(627968),
     l = r(64700),
     i = r(735438),
@@ -25,7 +28,7 @@ let O = (e) => {
         }, [b, t, r, O]),
         h = o().throttle(() => {
             s.A.sendVerificationEmail(t, !0, r);
-        }, 1000),
+        }, 1e3),
         E = async (e) => {
             null != b && "" !== b && e.charCode === y.Ks6.ENTER && (await m());
         };

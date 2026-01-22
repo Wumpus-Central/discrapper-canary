@@ -1,12 +1,17 @@
-n.d(t, { R: () => l });
+n.d(t, {
+    R: () => l,
+});
 var r = n(89494),
     i = n(64700),
     a = n(114099),
     s = n(297987),
     o = n(241827);
+
 function l(e) {
     let { isDisabled: t, onBlurWithin: n, onFocusWithin: l, onFocusWithinChange: c } = e,
-        u = (0, i.useRef)({ isFocusWithin: !1 }),
+        u = (0, i.useRef)({
+            isFocusWithin: !1,
+        }),
         { addGlobalListener: d, removeAllGlobalListeners: f } = (0, a.A)(),
         p = (0, i.useCallback)(
             (e) => {
@@ -31,11 +36,15 @@ function l(e) {
                         "focus",
                         (e) => {
                             if (u.current.isFocusWithin && !(0, o.sD)(n, e.target)) {
-                                let i = new t.defaultView.FocusEvent("blur", { relatedTarget: e.target });
+                                let i = new t.defaultView.FocusEvent("blur", {
+                                    relatedTarget: e.target,
+                                });
                                 (0, r.o1)(i, n), p((0, r.eg)(i));
                             }
                         },
-                        { capture: !0 },
+                        {
+                            capture: !0,
+                        },
                     );
                 }
             },

@@ -790,7 +790,9 @@ let t = (e) => ({
 e.exports = function (e) {
     let o = e.regex,
         l = t(e),
-        c = { begin: /-(webkit|moz|ms|o)-(?=[a-z])/ },
+        c = {
+            begin: /-(webkit|moz|ms|o)-(?=[a-z])/,
+        },
         u = "and or not only",
         d = /@-?\w[\w]*(-\w+)*/,
         f = "[a-zA-Z-][a-zA-Z0-9_-]*",
@@ -799,8 +801,12 @@ e.exports = function (e) {
         name: "CSS",
         case_insensitive: !0,
         illegal: /[=|'\$]/,
-        keywords: { keyframePosition: "from to" },
-        classNameAliases: { keyframePosition: "selector-tag" },
+        keywords: {
+            keyframePosition: "from to",
+        },
+        classNameAliases: {
+            keyframePosition: "selector-tag",
+        },
         contains: [
             l.BLOCK_COMMENT,
             c,
@@ -818,7 +824,14 @@ e.exports = function (e) {
             l.ATTRIBUTE_SELECTOR_MODE,
             {
                 className: "selector-pseudo",
-                variants: [{ begin: ":(" + i.join("|") + ")" }, { begin: ":(:)?(" + a.join("|") + ")" }],
+                variants: [
+                    {
+                        begin: ":(" + i.join("|") + ")",
+                    },
+                    {
+                        begin: ":(:)?(" + a.join("|") + ")",
+                    },
+                ],
             },
             l.CSS_VARIABLE,
             {
@@ -838,7 +851,9 @@ e.exports = function (e) {
                         begin: /(url|data-uri)\(/,
                         end: /\)/,
                         relevance: 0,
-                        keywords: { built_in: "url data-uri" },
+                        keywords: {
+                            built_in: "url data-uri",
+                        },
                         contains: [
                             ...p,
                             {

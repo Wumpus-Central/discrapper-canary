@@ -13,8 +13,8 @@ var r = n(554146),
     })({});
 let u = {
     experiment: i.A,
-    startTimeMs: 1766163600000,
-    endTimeMs: 1767632400000,
+    startTimeMs: 17661636e5,
+    endTimeMs: 17676324e5,
     isDesktopOnly: !0,
     soundpack: a.i.WINTER_HOLIDAY,
     soundpackLabel: s.t.Z5OQNp,

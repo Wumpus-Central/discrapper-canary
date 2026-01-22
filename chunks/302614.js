@@ -1,4 +1,7 @@
-n.d(t, { A: () => I }), n(896048);
+n.d(t, {
+    A: () => I,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -17,6 +20,7 @@ var r = n(627968),
     E = n(545807),
     b = n(392164),
     y = n(722240);
+
 function O(e, t, n) {
     return (
         t in e
@@ -30,6 +34,7 @@ function O(e, t, n) {
         e
     );
 }
+
 function A(e, t) {
     return {
         name: e,
@@ -133,7 +138,7 @@ class v {
                     250,
                     {
                         trailing: !0,
-                        maxWait: 1000,
+                        maxWait: 1e3,
                     },
                 ),
             ),
@@ -141,6 +146,7 @@ class v {
     }
 }
 let S = i.createContext(new v((0, E.b)()));
+
 function I(e) {
     let { observe: t = !0, className: n, style: a, children: o } = e,
         l = i.useContext(S),

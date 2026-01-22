@@ -1,4 +1,7 @@
-n.d(t, { A: () => _ }), n(896048);
+n.d(t, {
+    A: () => _,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(342393),
@@ -104,6 +107,7 @@ let _ = function (e) {
     );
     let x = (0, c.rdh)(l.A.colors.TEXT_SUBTLE).hex(),
         L = (0, c.rdh)(l.A.colors.TEXT_STRONG).hex();
+
     function j() {
         return o()(f.vB, {
             [f.Tn]: null !== v,
@@ -111,6 +115,7 @@ let _ = function (e) {
             [f.yD]: "cardNumber" === n,
         });
     }
+
     function M() {
         switch (n) {
             case "cardNumber":
@@ -161,7 +166,9 @@ let _ = function (e) {
                     fontWeight: n.getPropertyValue("font-weight"),
                     color: L,
                     fontSize: n.getPropertyValue("font-size"),
-                    "::placeholder": { color: x },
+                    "::placeholder": {
+                        color: x,
+                    },
                 },
             });
         }, [t, x, L]),
@@ -174,7 +181,9 @@ let _ = function (e) {
                     className: o()(f.iw, p.hF),
                 }),
                 M(),
-                (0, r.jsx)(c.dzK, { error: v }),
+                (0, r.jsx)(c.dzK, {
+                    error: v,
+                }),
             ],
         })
     );

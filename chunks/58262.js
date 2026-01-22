@@ -1,4 +1,6 @@
-n.d(t, { A: () => y });
+n.d(t, {
+    A: () => y,
+});
 var r = n(627968),
     i = n(64700),
     a = n(158954),
@@ -16,6 +18,7 @@ var r = n(627968),
     g = n(652215),
     E = n(985018),
     b = n(563111);
+
 function y(e) {
     var t;
     let { invite: n, message: y, getAcceptInviteContext: O } = e,
@@ -31,7 +34,10 @@ function y(e) {
             let e = "noop";
             null != n.inviter &&
                 null != _.A.getDMFromUserId(n.inviter.id) &&
-                ((e = "transition"), o.A.openPrivateChannel({ recipientIds: [n.inviter.id] })),
+                ((e = "transition"),
+                o.A.openPrivateChannel({
+                    recipientIds: [n.inviter.id],
+                })),
                 (0, l.he)(
                     {
                         invite: n,
@@ -70,7 +76,9 @@ function y(e) {
         L = null != n.inviter ? m.Ay.getUserTag(n.inviter) : "";
     return (0, r.jsxs)(d.A, {
         children: [
-            (0, r.jsx)(d.A.Header, { text: D }),
+            (0, r.jsx)(d.A.Header, {
+                text: D,
+            }),
             (0, r.jsxs)(d.A.Body, {
                 children: [
                     (0, r.jsxs)("div", {

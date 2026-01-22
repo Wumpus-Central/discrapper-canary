@@ -7,6 +7,7 @@ var r = n(562465),
     i = n(73153),
     a = n(371794),
     s = n(652215);
+
 function o(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     return (
@@ -19,7 +20,9 @@ function o(e) {
         r.Bo.get({
             url: s.Rsh.ENTITLEMENTS_FOR_APPLICATION(e),
             oldFormErrors: !0,
-            query: { exclude_consumed: t },
+            query: {
+                exclude_consumed: t,
+            },
             rejectWithError: !0,
         })
             .then(
@@ -42,7 +45,9 @@ function o(e) {
 }
 async function l(e) {
     let { withSku: t = !1, withApplication: n = !1, excludeEnded: a = !0, entitlementType: o } = e;
-    i.h.dispatch({ type: "ENTITLEMENTS_FETCH_FOR_USER_START" });
+    i.h.dispatch({
+        type: "ENTITLEMENTS_FETCH_FOR_USER_START",
+    });
     try {
         let e = await r.Bo.get({
             url: s.Rsh.ENTITLEMENTS_FOR_USER,
@@ -60,11 +65,15 @@ async function l(e) {
             excludeEnded: a,
         });
     } catch (e) {
-        i.h.dispatch({ type: "ENTITLEMENTS_FETCH_FOR_USER_FAIL" });
+        i.h.dispatch({
+            type: "ENTITLEMENTS_FETCH_FOR_USER_FAIL",
+        });
     }
 }
 async function c() {
-    i.h.dispatch({ type: "ENTITLEMENTS_GIFTABLE_FETCH" });
+    i.h.dispatch({
+        type: "ENTITLEMENTS_GIFTABLE_FETCH",
+    });
     try {
         let e = await (0, a.aP)({
             url: s.Rsh.ENTITLEMENTS_GIFTABLE,
@@ -75,6 +84,8 @@ async function c() {
             entitlements: e.body,
         });
     } catch (e) {
-        i.h.dispatch({ type: "ENTITLEMENTS_GIFTABLE_FETCH_FAIL" });
+        i.h.dispatch({
+            type: "ENTITLEMENTS_GIFTABLE_FETCH_FAIL",
+        });
     }
 }

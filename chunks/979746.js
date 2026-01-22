@@ -1,4 +1,6 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(385987),
     i = {
         full: "EEEE, MMMM do, y",

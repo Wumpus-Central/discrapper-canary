@@ -16,6 +16,7 @@ var l = n(627968),
     m = n(652215),
     g = n(985018),
     C = n(550886);
+
 function j(e) {
     var t;
     let {
@@ -139,7 +140,9 @@ function j(e) {
                                     (0, l.jsx)(s.Text, {
                                         variant: "text-xs/normal",
                                         color: "text-muted",
-                                        children: g.intl.format(g.t["2bprXx"], { guidelinesURL: m.X7G.GUIDELINES }),
+                                        children: g.intl.format(g.t["2bprXx"], {
+                                            guidelinesURL: m.X7G.GUIDELINES,
+                                        }),
                                     }),
                                 ],
                             }),
@@ -164,6 +167,7 @@ function j(e) {
         footer: U,
     };
 }
+
 function b(e) {
     let { content: t } = j(e);
     return t;

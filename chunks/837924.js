@@ -1,4 +1,6 @@
-n.d(t, { A: () => O });
+n.d(t, {
+    A: () => O,
+});
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -15,6 +17,7 @@ var r = n(627968),
     m = n(712785),
     g = n(384481),
     E = n(652215);
+
 function b(e, t, n) {
     return (
         t in e
@@ -28,6 +31,7 @@ function b(e, t, n) {
         e
     );
 }
+
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -44,6 +48,7 @@ function y(e) {
     }
     return e;
 }
+
 function O(e) {
     let { user: t, currentUser: n, activity: b, className: O, onClose: A } = e,
         { voiceGuild: v, voiceChannel: S } = (0, a.cf)([p.A, _.A, f.A], () => {

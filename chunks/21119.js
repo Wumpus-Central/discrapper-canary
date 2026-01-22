@@ -1,9 +1,13 @@
-n.d(t, { A: () => O }), n(896048);
+n.d(t, {
+    A: () => O,
+}),
+    n(896048);
 var r,
     i = n(311907),
     a = n(73153),
     s = n(994500),
     o = n(755915);
+
 function l(e, t, n) {
     return (
         t in e
@@ -17,6 +21,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,19 +47,24 @@ let u = 0.5,
         lastFetched: 0,
     }),
     _ = c({}, p);
+
 function h() {
     d = new Map(_.userAffinities.filter((e) => !s.A.isBlockedOrIgnored(e.otherUserId)).map((e) => [e.otherUserId, e]));
 }
+
 function m() {
     f = !0;
 }
+
 function g(e) {
     let { affineUsers: t, userFlags: n } = e;
     (_.lastFetched = Date.now()), (f = !1), (_.userAffinities = t), (_.userFlags = n), h();
 }
+
 function E() {
     f = !1;
 }
+
 function b() {
     (_ = c({}, p)), (d = new Map()), (f = !1);
 }

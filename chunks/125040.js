@@ -1,10 +1,13 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968);
 n(64700);
 var i = n(421380),
     a = n(397927),
     s = n(631670),
     o = n(985018);
+
 function l(e) {
     let { onClose: t } = e;
     return (0, r.jsx)(a.MJ3, {
@@ -20,6 +23,7 @@ function l(e) {
         }),
     });
 }
+
 function c(e) {
     let { onClose: t } = e;
     return (0, r.jsx)(a.MJ3, {
@@ -35,6 +39,7 @@ function c(e) {
         }),
     });
 }
+
 function u(e) {
     let { onClose: t } = e;
     return (0, r.jsx)(a.MJ3, {
@@ -50,6 +55,7 @@ function u(e) {
         }),
     });
 }
+
 function d(e) {
     let { onClose: t, errorMessage: n } = e;
     return (0, r.jsx)(a.MJ3, {
@@ -65,6 +71,7 @@ function d(e) {
         }),
     });
 }
+
 function f(e) {
     let {
         shouldRenderOwnedTeamsModal: t,
@@ -78,11 +85,17 @@ function f(e) {
         onDisableAccountErrorModalClose: _,
     } = e;
     return t
-        ? (0, r.jsx)(l, { onClose: o })
+        ? (0, r.jsx)(l, {
+              onClose: o,
+          })
         : n
-          ? (0, r.jsx)(c, { onClose: f })
+          ? (0, r.jsx)(c, {
+                onClose: f,
+            })
           : i
-            ? (0, r.jsx)(u, { onClose: p })
+            ? (0, r.jsx)(u, {
+                  onClose: p,
+              })
             : a
               ? (0, r.jsx)(d, {
                     onClose: _,

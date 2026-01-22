@@ -29,6 +29,7 @@ let m = async (e) => {
         );
     return (i.assets[0].p = n.url), i;
 };
+
 function g(e) {
     let { className: t, effect: n, onComplete: a, emojiSize: o = 20 } = e,
         d = i.useRef(null),
@@ -42,7 +43,9 @@ function g(e) {
                 return (
                     !(async function () {
                         if (null != d.current) {
-                            let t = await m({ effect: n });
+                            let t = await m({
+                                effect: n,
+                            });
                             (e = l().loadAnimation({
                                 container: d.current,
                                 renderer: "svg",

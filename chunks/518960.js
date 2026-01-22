@@ -23,6 +23,7 @@ var r = n(367513),
     b = n(381941),
     y = n(788868),
     O = n(985018);
+
 function A(e, t, n) {
     return (
         t in e
@@ -36,6 +37,7 @@ function A(e, t, n) {
         e
     );
 }
+
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -52,6 +54,7 @@ function v(e) {
     }
     return e;
 }
+
 function S(e, t, n) {
     let r = p.default.getCurrentUser(),
         i = e.guild_id,
@@ -85,7 +88,9 @@ function S(e, t, n) {
     }
     (0, s.openUploadError)({
         title: O.intl.string(O.t["/tGlcj"]),
-        help: O.intl.formatToPlainString(O.t.tUOJdH, { maxSize: h.Hb(h.bB()) }),
+        help: O.intl.formatToPlainString(O.t.tUOJdH, {
+            maxSize: h.Hb(h.bB()),
+        }),
     });
 }
 async function I(e, t, n) {
@@ -107,7 +112,9 @@ async function I(e, t, n) {
     if (f.A.getUploadCount(t.id, n) + A.length > E.XgB) {
         (0, s.openUploadError)({
             title: O.intl.string(O.t.wOr6hB),
-            help: O.intl.formatToPlainString(O.t["qqyp/e"], { limit: E.XgB }),
+            help: O.intl.formatToPlainString(O.t["qqyp/e"], {
+                limit: E.XgB,
+            }),
         }),
             _.default.track(E.HAw.UPLOAD_FILE_LIMIT_ERROR, {
                 existing_count: f.A.getUploadCount(t.id, n),

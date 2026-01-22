@@ -15,7 +15,9 @@ var r = n(319135),
             for (var n = 0; n < e.length; n += 1) if (e[n] === t) return n;
             return -1;
         },
-    h = { __proto__: null };
+    h = {
+        __proto__: null,
+    };
 u && o && l
     ? r(f, function (e) {
           var t = new d[e]();

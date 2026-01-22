@@ -16,6 +16,7 @@ var r = n(627968),
     p = n(461888),
     _ = n(652215),
     h = n(985018);
+
 function m(e) {
     let {
             guildId: t,
@@ -32,7 +33,9 @@ function m(e) {
             (0, c.pX)(_.BVt.GUILD_MEMBER_VERIFICATION(t));
         }, [t]),
         O = i.useCallback(async () => {
-            await (0, d.Z2)(t, { object: _.ZSU.GUILD_PROFILE });
+            await (0, d.Z2)(t, {
+                object: _.ZSU.GUILD_PROFILE,
+            });
         }, [t]),
         { text: A, onClick: v } = i.useMemo(() => {
             switch (n) {
@@ -101,6 +104,7 @@ function m(e) {
               onClick: S,
           });
 }
+
 function g(e) {
     let { profile: t, onComplete: n } = e,
         { guildId: a, validInviteKey: l, ctaType: c } = (0, p.Ay)(t),
@@ -109,7 +113,9 @@ function g(e) {
             null != l &&
                 s.Ay.acceptInvite({
                     inviteKey: l,
-                    context: { location: "guild_profile" },
+                    context: {
+                        location: "guild_profile",
+                    },
                 });
         }, [l]),
         h = i.useCallback(() => {

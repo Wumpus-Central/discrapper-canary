@@ -1,4 +1,6 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(562465),
     i = n(73153),
     a = n(670492),
@@ -38,36 +40,64 @@ let o = {
         });
     },
     enableSMS: () => (
-        i.h.dispatch({ type: "MFA_SMS_TOGGLE" }),
+        i.h.dispatch({
+            type: "MFA_SMS_TOGGLE",
+        }),
         r.Bo.post({
             url: s.Rsh.MFA_SMS_ENABLE,
             oldFormErrors: !0,
             rejectWithError: !1,
         }).then(
-            (e) => (i.h.dispatch({ type: "MFA_SMS_TOGGLE_COMPLETE" }), e),
+            (e) => (
+                i.h.dispatch({
+                    type: "MFA_SMS_TOGGLE_COMPLETE",
+                }),
+                e
+            ),
             (e) => {
-                throw (i.h.dispatch({ type: "MFA_SMS_TOGGLE_COMPLETE" }), e);
+                throw (
+                    (i.h.dispatch({
+                        type: "MFA_SMS_TOGGLE_COMPLETE",
+                    }),
+                    e)
+                );
             },
         )
     ),
     disableSMS: (e) => (
-        i.h.dispatch({ type: "MFA_SMS_TOGGLE" }),
+        i.h.dispatch({
+            type: "MFA_SMS_TOGGLE",
+        }),
         r.Bo.post({
             url: s.Rsh.MFA_SMS_DISABLE,
-            body: { password: e },
+            body: {
+                password: e,
+            },
             oldFormErrors: !0,
             rejectWithError: !1,
         }).then(
-            (e) => (i.h.dispatch({ type: "MFA_SMS_TOGGLE_COMPLETE" }), e),
+            (e) => (
+                i.h.dispatch({
+                    type: "MFA_SMS_TOGGLE_COMPLETE",
+                }),
+                e
+            ),
             (e) => {
-                throw (i.h.dispatch({ type: "MFA_SMS_TOGGLE_COMPLETE" }), e);
+                throw (
+                    (i.h.dispatch({
+                        type: "MFA_SMS_TOGGLE_COMPLETE",
+                    }),
+                    e)
+                );
             },
         )
     ),
     sendMFABackupCodesVerificationKeyEmail: (e) =>
         r.Bo.post({
             url: s.Rsh.MFA_SEND_VERIFICATION_KEY,
-            body: { password: e },
+            body: {
+                password: e,
+            },
             oldFormErrors: !0,
             rejectWithError: !1,
         }).then(
@@ -108,6 +138,8 @@ let o = {
         );
     },
     clearBackupCodes() {
-        i.h.dispatch({ type: "MFA_CLEAR_BACKUP_CODES" });
+        i.h.dispatch({
+            type: "MFA_CLEAR_BACKUP_CODES",
+        });
     },
 };

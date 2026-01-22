@@ -8,7 +8,9 @@ var r = n(562465),
 async function s(e) {
     let { channelId: t, messageId: n, answerIds: s } = e;
     try {
-        let e = { answer_ids: s };
+        let e = {
+            answer_ids: s,
+        };
         await r.Bo.put({
             url: a.Rsh.POLL_ANSWERS(t, n),
             body: e,

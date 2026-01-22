@@ -1,4 +1,10 @@
-r.d(t, { default: () => b }), r(896048), r(321073), r(638769), r(733351);
+r.d(t, {
+    default: () => b,
+}),
+    r(896048),
+    r(321073),
+    r(638769),
+    r(733351);
 var l = r(627968),
     n = r(64700),
     i = r(91871),
@@ -10,6 +16,7 @@ var l = r(627968),
     d = r(661191),
     g = r(792852),
     p = r(985018);
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
@@ -35,6 +42,7 @@ function f(e) {
     }
     return e;
 }
+
 function h(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -53,6 +61,7 @@ function h(e, t) {
         e
     );
 }
+
 function b(e) {
     let { onSelect: t, allClips: r } = e,
         {

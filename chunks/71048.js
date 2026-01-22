@@ -20,7 +20,9 @@ e.exports = function (e) {
                         begin: "#\\s+",
                         relevance: 0,
                     },
-                    { begin: "#[a-zA-Z .]+" },
+                    {
+                        begin: "#[a-zA-Z .]+",
+                    },
                 ],
             },
         ],

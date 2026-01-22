@@ -1,7 +1,10 @@
-n.d(t, { A: () => H }), n(896048);
+n.d(t, {
+    A: () => H,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
-    a = n(432022),
+    a = n(108531),
     s = n(311907),
     o = n(397927),
     l = n(80682),
@@ -35,6 +38,7 @@ var r = n(627968),
     M = n(996988),
     k = n(985018),
     U = n(183959);
+
 function G(e, t, n) {
     return (
         t in e
@@ -48,6 +52,7 @@ function G(e, t, n) {
         e
     );
 }
+
 function V(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -64,6 +69,7 @@ function V(e) {
     }
     return e;
 }
+
 function F(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -76,6 +82,7 @@ function F(e, t) {
     }
     return n;
 }
+
 function B(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -87,6 +94,7 @@ function B(e, t) {
         e
     );
 }
+
 function H(e) {
     var t;
     let {
@@ -116,7 +124,15 @@ function H(e) {
             roleId: W,
         }),
         er = (0, s.bG)([g.A], () => (null != F ? g.A.getGuild(F) : null)),
-        ei = i.useMemo(() => (null != F ? { [F]: [n.id] } : {}), [F, n.id]);
+        ei = i.useMemo(
+            () =>
+                null != F
+                    ? {
+                          [F]: [n.id],
+                      }
+                    : {},
+            [F, n.id],
+        );
     (0, l.E)(ei, "UserProfilePopout");
     let ea = i.useRef(null),
         es = (0, O.Ay)(n.id, F),
@@ -124,14 +140,18 @@ function H(e) {
         ec = (0, A.fC)(),
         eu = (0, o.zhh)({
             opacity: +(null != ec.interactionType),
-            config: { duration: 150 },
+            config: {
+                duration: 150,
+            },
         });
     i.useEffect(() => {
         null == q || q(null == ea ? void 0 : ea.current);
     }, [ea, q]);
     let ed = i.useRef(null),
         ef = n.id === G.id,
-        ep = (0, p.h)({ location: "UserProfilePopout" }),
+        ep = (0, p.h)({
+            location: "UserProfilePopout",
+        }),
         e_ = i.useMemo(() => (0, _.A)(), []),
         eh = (e) => {
             null == z || z(),
@@ -147,7 +167,9 @@ function H(e) {
                             en,
                             e,
                         ),
-                        { appContext: Q },
+                        {
+                            appContext: Q,
+                        },
                     ),
                 );
         },
@@ -191,7 +213,9 @@ function H(e) {
                         (0, r.jsx)(o.AC4, {
                             children: (0, r.jsx)(o.H, {
                                 id: eE,
-                                children: k.intl.format(k.t.KRe1Fk, { name: eb }),
+                                children: k.intl.format(k.t.KRe1Fk, {
+                                    name: eb,
+                                }),
                             }),
                         }),
                         (0, r.jsxs)(C.A, {

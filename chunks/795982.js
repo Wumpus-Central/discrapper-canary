@@ -1,4 +1,6 @@
-n.d(t, { A: () => L });
+n.d(t, {
+    A: () => L,
+});
 var r = n(627968),
     i = n(64700),
     a = n(158954),
@@ -26,6 +28,7 @@ var r = n(627968),
     C = n(427209),
     N = n(985018),
     R = n(772004);
+
 function w() {
     return (0, r.jsxs)("div", {
         className: R.N1,
@@ -44,6 +47,7 @@ function w() {
         ],
     });
 }
+
 function P(e) {
     let { message: t, snapshot: n, index: u } = e,
         f = i.useMemo(() => new S.j(t, n, u), [t, n, u]),
@@ -74,12 +78,16 @@ function P(e) {
                             alt: "",
                         })
                       : null,
-                  null == p.originIconUrl && (null == _ ? void 0 : _.isThread()) ? (0, r.jsx)(D, { channel: _ }) : null,
+                  null == p.originIconUrl && (null == _ ? void 0 : _.isThread())
+                      ? (0, r.jsx)(D, {
+                            channel: _,
+                        })
+                      : null,
                   (0, r.jsx)(a.EYj, {
                       className: R.PJ,
                       variant: "text-sm/medium",
                       color: "none",
-                      children: "".concat(p.originLabel, "  \u2022  ").concat(p.timestampLabel),
+                      children: "".concat(p.originLabel, "  •  ").concat(p.timestampLabel),
                   }),
                   (0, r.jsx)(c._BQ, {
                       size: "xxs",
@@ -88,9 +96,12 @@ function P(e) {
               ],
           });
 }
+
 function D(e) {
     let { channel: t } = e,
-        n = (0, m.Vp)({ location: "ForwardFooter" }),
+        n = (0, m.Vp)({
+            location: "ForwardFooter",
+        }),
         a = i.useMemo(() => (0, u.gU)(t), [t]);
     return n.enabled && null != a
         ? (0, r.jsx)(a, {
@@ -100,6 +111,7 @@ function D(e) {
           })
         : null;
 }
+
 function x(e) {
     var t;
     let { message: n, snapshot: a, index: o } = e,
@@ -132,7 +144,9 @@ function x(e) {
               {
                   className: R.kL,
                   children: [
-                      (0, r.jsx)("div", { className: R.hD }),
+                      (0, r.jsx)("div", {
+                          className: R.hD,
+                      }),
                       (0, r.jsxs)("div", {
                           className: R.Qs,
                           children: [
@@ -166,6 +180,7 @@ function x(e) {
               o,
           );
 }
+
 function L(e) {
     let { message: t } = e;
     return (0, r.jsx)(r.Fragment, {

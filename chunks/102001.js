@@ -1,4 +1,6 @@
-n.d(t, { A: () => A });
+n.d(t, {
+    A: () => A,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -63,7 +65,9 @@ let A = (e) => {
                     color: "interactive-text-default",
                     className: O.rf,
                     variant: "text-sm/normal",
-                    children: y.intl.format(y.t.AXWla1, { count: (0, g.aG)(E.TVA.TIER_1) }),
+                    children: y.intl.format(y.t.AXWla1, {
+                        count: (0, g.aG)(E.TVA.TIER_1),
+                    }),
                 }),
                 (0, r.jsx)(l.QWc, {
                     variant: "primary",

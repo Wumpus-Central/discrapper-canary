@@ -1,4 +1,6 @@
-i.d(e, { d: () => T });
+i.d(e, {
+    d: () => T,
+});
 var n = i(627968);
 i(64700);
 var l = i(397927),
@@ -15,4 +17,6 @@ let o = (0, s.E2)(r.X.APPEARANCE_ACCESSIBILITY_LINK, {
                 children: (0, n.jsx)(u.$p, {}),
             }),
     }),
-    T = (0, s.zZ)(r.X.APPEARANCE_ACCESSIBILITY_LINK_CATEGORY, { buildLayout: () => [o] });
+    T = (0, s.zZ)(r.X.APPEARANCE_ACCESSIBILITY_LINK_CATEGORY, {
+        buildLayout: () => [o],
+    });

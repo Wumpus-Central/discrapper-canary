@@ -1,4 +1,8 @@
-a.d(t, { B: () => A }), a(638769), a(896048);
+a.d(t, {
+    B: () => A,
+}),
+    a(638769),
+    a(896048);
 var s = a(627968),
     l = a(64700),
     r = a(503698),
@@ -8,6 +12,7 @@ var s = a(627968),
     c = a(563853),
     d = a(855522),
     u = a(128262);
+
 function N(e, t, a) {
     return (
         t in e
@@ -75,7 +80,9 @@ class A extends l.PureComponent {
                         align: i.s.Align.CENTER,
                         className: (0, o.t)(u, "opener", e ? "Open" : null),
                         children: [
-                            (0, s.jsx)("span", { className: u.line }),
+                            (0, s.jsx)("span", {
+                                className: u.line,
+                            }),
                             (0, s.jsx)("img", {
                                 className: u.localeIcon,
                                 src: c.T.ICON_TRANSLATE,
@@ -111,14 +118,20 @@ class A extends l.PureComponent {
                 null != t && t(e);
             }),
             N(this, "open", () => {
-                this.setState({ isOpen: !0 });
+                this.setState({
+                    isOpen: !0,
+                });
             }),
             N(this, "close", () => {
-                this.setState({ isOpen: !1 });
+                this.setState({
+                    isOpen: !1,
+                });
             }),
             N(this, "toggle", () => {
                 let { isOpen: e } = this.state;
-                this.setState({ isOpen: !e });
+                this.setState({
+                    isOpen: !e,
+                });
             });
     }
 }

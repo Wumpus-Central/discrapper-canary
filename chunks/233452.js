@@ -32,7 +32,9 @@ var n = r(64700),
                                 width: t,
                                 height: r,
                             },
-                            hue: { radius: "2px" },
+                            hue: {
+                                radius: "2px",
+                            },
                         },
                     },
                     void 0 === d ? {} : d,
@@ -62,7 +64,9 @@ var n = r(64700),
             ),
         );
     };
-(p.propTypes = { styles: a().object }),
+(p.propTypes = {
+    styles: a().object,
+}),
     (p.defaultProps = {
         width: "316px",
         height: "16px",

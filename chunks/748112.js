@@ -1,4 +1,8 @@
-n.d(t, { A: () => u }), n(321073), n(638769);
+n.d(t, {
+    A: () => u,
+}),
+    n(321073),
+    n(638769);
 var r = n(64700),
     i = n(975807),
     l = n(258328),
@@ -7,6 +11,7 @@ var r = n(64700),
     c = n(192701),
     o = n(652215),
     d = n(985018);
+
 function u(e) {
     let {
             onEligibilityBecameStale: t,
@@ -21,7 +26,9 @@ function u(e) {
                 : await (null == n || null == (e = n.onEnableMFAClick) ? void 0 : e.call(n)),
                 null == t || t();
         }, [f, g, t, n]),
-        m = (0, a.S)({ onEnableMFAClick: b });
+        m = (0, a.S)({
+            onEnableMFAClick: b,
+        });
     return r.useMemo(() => {
         if (null == e) return null;
         let { minimumOwnerAgeInYears: t, minimumSize: r } = e,
@@ -46,7 +53,9 @@ function u(e) {
                     key: "owner_age_requirement",
                     checkedLabel: d.intl.string(d.t["+F8haD"]),
                     uncheckedLabel: d.intl.string(d.t["5BwC/O"]),
-                    description: d.intl.formatToPlainString(d.t.DW1Vae, { minimumOwnerAgeInYears: t }),
+                    description: d.intl.formatToPlainString(d.t.DW1Vae, {
+                        minimumOwnerAgeInYears: t,
+                    }),
                     checked: e.meetsOwnerAgeRequirement,
                 }),
             null != r &&
@@ -55,7 +64,9 @@ function u(e) {
                     key: "member_count_requirement",
                     checkedLabel: d.intl.string(d.t.j7wXWo),
                     uncheckedLabel: d.intl.string(d.t.W0suNz),
-                    description: d.intl.formatToPlainString(d.t.up53zR, { minimumSize: r }),
+                    description: d.intl.formatToPlainString(d.t.up53zR, {
+                        minimumSize: r,
+                    }),
                     checked: e.hasSufficientMembers,
                 }),
             null != e.minimumAgeInDays &&
@@ -64,7 +75,9 @@ function u(e) {
                     key: "server_age_requirement",
                     checkedLabel: d.intl.string(d.t.mjbvWw),
                     uncheckedLabel: d.intl.string(d.t["9BV6L6"]),
-                    description: d.intl.formatToPlainString(d.t.Zwv84O, { minimumAge: (0, l.A)(e.minimumAgeInDays) }),
+                    description: d.intl.formatToPlainString(d.t.Zwv84O, {
+                        minimumAge: (0, l.A)(e.minimumAgeInDays),
+                    }),
                     checked: e.meetsServerAgeRequirement,
                 }),
             null != e.weeklyCommunicators &&
@@ -99,7 +112,9 @@ function u(e) {
                 key: "2fa_requirement",
                 checkedLabel: d.intl.string(d.t.NqVyFk),
                 uncheckedLabel: d.intl.string(d.t.VcDNIV),
-                description: d.intl.format(d.t["7NzkfV"], { enableMFAHook: m }),
+                description: d.intl.format(d.t["7NzkfV"], {
+                    enableMFAHook: m,
+                }),
                 checked: e.hasEnabled2FA,
                 actionLabel: i ? d.intl.string(d.t.BU4Diu) : void 0,
                 actionHandler: i ? b : void 0,

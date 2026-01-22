@@ -1,8 +1,11 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(311907),
     l = n(401843),
     i = n(616356),
     a = n(961350);
+
 function s(e, t) {
     let n = (0, r.bG)([a.default], () => a.default.getId()),
         s = (0, r.bG)([i.A], () => {

@@ -1,10 +1,14 @@
-a.d(e, { A: () => x }), a(896048);
+a.d(e, {
+    A: () => x,
+}),
+    a(896048);
 var n = a(627968),
     r = a(64700),
     s = a(397927),
     i = a(439309),
     l = a(985018),
     c = a(256209);
+
 function o(t) {
     for (var e = 1; e < arguments.length; e++) {
         var a = null != arguments[e] ? arguments[e] : {},
@@ -30,6 +34,7 @@ function o(t) {
     }
     return t;
 }
+
 function d(t, e) {
     return (
         (e = null != e ? e : {}),
@@ -48,6 +53,7 @@ function d(t, e) {
         t
     );
 }
+
 function g(t) {
     let { user: e, tagId: a, title: r, messageCount: i, reactionCount: o, activeAgo: d, tags: g, attachment: m } = t,
         { name: u, avatarSrc: x } = e;
@@ -78,7 +84,7 @@ function g(t) {
                                     children: [
                                         (0, n.jsx)("span", {
                                             className: c.xE,
-                                            children: "\u2022",
+                                            children: "•",
                                         }),
                                         (0, n.jsx)(s.Text, {
                                             color: "text-strong",
@@ -117,7 +123,7 @@ function g(t) {
                                     children: [
                                         (0, n.jsx)("span", {
                                             className: c.xE,
-                                            children: "\u2022",
+                                            children: "•",
                                         }),
                                         (0, n.jsxs)(s.Text, {
                                             color: "text-default",
@@ -128,7 +134,7 @@ function g(t) {
                                                     role: "img",
                                                     "aria-label": l.intl.string(l.t.gHp0C4),
                                                     className: c.Kk,
-                                                    children: "\u2764️",
+                                                    children: "❤️",
                                                 }),
                                                 o,
                                             ],
@@ -137,7 +143,7 @@ function g(t) {
                                 }),
                             (0, n.jsx)("span", {
                                 className: c.xE,
-                                children: "\u2022",
+                                children: "•",
                             }),
                             (0, n.jsx)(s.Text, {
                                 color: "text-default",
@@ -151,12 +157,15 @@ function g(t) {
             null != m &&
                 (0, n.jsx)("img", {
                     src: m,
-                    alt: l.intl.formatToPlainString(l.t.MJHFt9, { name: r }),
+                    alt: l.intl.formatToPlainString(l.t.MJHFt9, {
+                        name: r,
+                    }),
                     className: c.oh,
                 }),
         ],
     });
 }
+
 function m(t) {
     let { author: e, content: a } = t,
         { name: r, isOP: i, avatarSrc: o } = e;
@@ -196,11 +205,14 @@ function m(t) {
         ],
     });
 }
+
 function u(t) {
     let { title: e, messages: a, maxHeight: r } = t;
     return (0, n.jsx)("div", {
         className: c.i1,
-        style: { maxHeight: r },
+        style: {
+            maxHeight: r,
+        },
         "aria-hidden": !0,
         children: (0, n.jsxs)("div", {
             className: c.VH,
@@ -225,7 +237,9 @@ function u(t) {
                                 0 === e &&
                                     (0, n.jsxs)("div", {
                                         children: [
-                                            (0, n.jsx)("hr", { className: c.lL }),
+                                            (0, n.jsx)("hr", {
+                                                className: c.lL,
+                                            }),
                                             (0, n.jsxs)("div", {
                                                 className: c.KY,
                                                 children: [
@@ -238,7 +252,7 @@ function u(t) {
                                                                 role: "img",
                                                                 "aria-label": l.intl.string(l.t.gHp0C4),
                                                                 className: c.Kk,
-                                                                children: "\u2764️",
+                                                                children: "❤️",
                                                             }),
                                                             "17",
                                                         ],
@@ -257,7 +271,9 @@ function u(t) {
                                                     }),
                                                 ],
                                             }),
-                                            (0, n.jsx)("hr", { className: c.N }),
+                                            (0, n.jsx)("hr", {
+                                                className: c.N,
+                                            }),
                                         ],
                                     }),
                             ],
@@ -276,6 +292,7 @@ function u(t) {
         }),
     });
 }
+
 function x(t) {
     let { id: e } = t,
         [a, l] = r.useState(0),
@@ -318,11 +335,24 @@ function x(t) {
                         }),
                         (0, n.jsx)("div", {
                             className: c.Yl,
-                            children: f.map((t, e) => (0, n.jsx)(g, d(o({}, t), { tags: x }), e)),
+                            children: f.map((t, e) =>
+                                (0, n.jsx)(
+                                    g,
+                                    d(o({}, t), {
+                                        tags: x,
+                                    }),
+                                    e,
+                                ),
+                            ),
                         }),
                     ],
                 }),
-                (0, n.jsx)(u, d(o({}, p), { maxHeight: a })),
+                (0, n.jsx)(
+                    u,
+                    d(o({}, p), {
+                        maxHeight: a,
+                    }),
+                ),
             ],
         })
     );

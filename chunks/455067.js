@@ -1,4 +1,6 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var r = n(627968);
 n(64700);
 var l = n(311907),
@@ -11,6 +13,7 @@ var l = n(311907),
     d = n(314307),
     f = n(985018),
     p = n(958404);
+
 function h(e) {
     var t;
     let { joinRequest: n, guild: o } = e,
@@ -42,7 +45,9 @@ function h(e) {
                         (0, r.jsx)(i.Heading, {
                             variant: "heading-xl/semibold",
                             color: "text-strong",
-                            children: f.intl.format(f.t.jDV3i6, { username: c.globalName }),
+                            children: f.intl.format(f.t.jDV3i6, {
+                                username: c.globalName,
+                            }),
                         }),
                 ],
             }),
@@ -57,7 +62,9 @@ function h(e) {
                                   : e.response;
                           return (0, r.jsxs)(r.Fragment, {
                               children: [
-                                  (0, r.jsx)("hr", { className: p.g2 }),
+                                  (0, r.jsx)("hr", {
+                                      className: p.g2,
+                                  }),
                                   (0, r.jsxs)("div", {
                                       className: p.fs,
                                       children: [
@@ -79,6 +86,7 @@ function h(e) {
         ],
     });
 }
+
 function b(e) {
     let { channel: t } = e,
         { loading: n, joinRequest: l, joinRequestGuild: a } = (0, o.A)(t.id);

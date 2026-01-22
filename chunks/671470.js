@@ -1,4 +1,8 @@
-n.d(t, { A: () => d }), n(321073), n(896048);
+n.d(t, {
+    A: () => d,
+}),
+    n(321073),
+    n(896048);
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -6,6 +10,7 @@ var i = n(397927),
     a = n(93055),
     o = n(616075),
     s = n(985018);
+
 function d(e) {
     let t = (0, a.Fe)(),
         n = (0, a.Af)(e.id),
@@ -18,6 +23,7 @@ function d(e) {
         for (let r of e) null == r.id ? (n = r) : t.push(r);
         return [n, t];
     })(d.filter((e) => e.id !== (null == n ? void 0 : n.parentId)));
+
     function f(e) {
         null != n && (0, l.JD)(n.id, e);
     }

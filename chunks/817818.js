@@ -18,6 +18,7 @@ var r = n(665260),
     f = n(539916),
     p = n(652215),
     _ = n(340837);
+
 function h(e, t, n) {
     return (
         t in e
@@ -31,6 +32,7 @@ function h(e, t, n) {
         e
     );
 }
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -47,6 +49,7 @@ function m(e) {
     }
     return e;
 }
+
 function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -59,6 +62,7 @@ function g(e, t) {
     }
     return n;
 }
+
 function E(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -70,6 +74,7 @@ function E(e, t) {
         e
     );
 }
+
 function b(e) {
     u.default.track(
         p.HAw.GUILD_ONBOARDING_LOADED,
@@ -79,6 +84,7 @@ function b(e) {
         }),
     );
 }
+
 function y(e) {
     return (
         a.h.dispatch({
@@ -129,6 +135,7 @@ async function O(e) {
     let h = await y(e);
     return Array.isArray(h) && h.every((e) => !e.inOnboarding) ? (I(e), Promise.resolve()) : (a || A(e), h);
 }
+
 function A(e) {
     a.h.dispatch({
         type: "GUILD_ONBOARDING_START",
@@ -137,6 +144,7 @@ function A(e) {
 }
 let v = -2,
     S = -3;
+
 function I(e) {
     u.default.track(
         p.HAw.GUILD_ONBOARDING_STEP_VIEWED,

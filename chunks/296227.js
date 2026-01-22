@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -8,6 +10,7 @@ var r = n(627968),
     c = n(928658),
     u = n(985018),
     d = n(418843);
+
 function f(e) {
     let { widget: t, userId: n, className: i, menuItems: f } = e,
         p = l.useRef(null),

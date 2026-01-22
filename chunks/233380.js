@@ -1,4 +1,10 @@
-n.d(t, { A: () => ee }), n(896048), n(747238), n(812715), n(733351);
+n.d(t, {
+    A: () => ee,
+}),
+    n(896048),
+    n(747238),
+    n(812715),
+    n(733351);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -37,7 +43,8 @@ var r = n(627968),
     U = n(985018),
     G = n(152290);
 let V = 0,
-    F = 5000;
+    F = 5e3;
+
 function B(e) {
     let [t, n] = i.useState(0),
         [r, a] = i.useState(!1),
@@ -52,6 +59,7 @@ function B(e) {
         }
     );
 }
+
 function H(e) {
     let { markAsDismissed: t } = e;
     return (0, r.jsx)("div", {
@@ -64,6 +72,7 @@ function H(e) {
         }),
     });
 }
+
 function Y() {
     return (0, r.jsxs)("div", {
         className: G.N1,
@@ -85,14 +94,20 @@ function Y() {
         ],
     });
 }
+
 function W(e) {
     let { markAsDismissed: t, isCoachmark: n } = e;
     return (0, E.JZ)(l.M.CUSTOM_THEME_COACHMARK)
         ? n
-            ? (0, r.jsx)(K, { markAsDismissed: t })
+            ? (0, r.jsx)(K, {
+                  markAsDismissed: t,
+              })
             : (0, r.jsx)(Y, {})
-        : (0, r.jsx)(K, { markAsDismissed: () => (0, E.Dr)(l.M.CUSTOM_THEME_COACHMARK) });
+        : (0, r.jsx)(K, {
+              markAsDismissed: () => (0, E.Dr)(l.M.CUSTOM_THEME_COACHMARK),
+          });
 }
+
 function K(e) {
     let { markAsDismissed: t } = e,
         n = (0, y.L)(M.PremiumTypes.TIER_2);
@@ -106,7 +121,9 @@ function K(e) {
                         variant: "heading-lg/extrabold",
                         children: U.intl.string(k.default["23QUzv"]),
                     }),
-                    (0, r.jsx)(H, { markAsDismissed: t }),
+                    (0, r.jsx)(H, {
+                        markAsDismissed: t,
+                    }),
                 ],
             }),
             (0, r.jsx)(f.Text, {
@@ -118,17 +135,19 @@ function K(e) {
         ],
     });
 }
+
 function z(e) {
     let t = 10;
     for (let n of [90, 180, 270]) if (Math.abs(e - n) <= t) return n;
     return e;
 }
+
 function q(e) {
     let { gradientAngle: t, setGradientAngle: n } = e,
         { key: a, handleInternalChange: o } = B(t),
-        [l, c] = i.useState("".concat(Math.round(t), "\xB0"));
+        [l, c] = i.useState("".concat(Math.round(t), "\xb0"));
     i.useEffect(() => {
-        c("".concat(Math.round(t), "\xB0"));
+        c("".concat(Math.round(t), "\xb0"));
     }, [t]);
     let u = (e) => {
         let t = e.replace(/°/g, "").trim();
@@ -136,7 +155,7 @@ function q(e) {
         let r = parseInt(t, 10);
         if (isNaN(r)) return;
         let i = Math.max(0, Math.min(360, r));
-        c("".concat(i, "\xB0")), (0, w.l6)(), n(i);
+        c("".concat(i, "\xb0")), (0, w.l6)(), n(i);
     };
     return (0, r.jsxs)("div", {
         className: s()(G.xJ, G.Gz),
@@ -152,7 +171,7 @@ function q(e) {
                         type: "text",
                         value: l,
                         onChange: (e) => u(e.target.value),
-                        placeholder: "".concat(V, "\xB0"),
+                        placeholder: "".concat(V, "\xb0"),
                         className: G.A9,
                     }),
                 ],
@@ -163,11 +182,21 @@ function q(e) {
                     (0, r.jsxs)("div", {
                         className: G.p1,
                         children: [
-                            (0, r.jsx)("div", { className: G.uu }),
-                            (0, r.jsx)("div", { className: G.uu }),
-                            (0, r.jsx)("div", { className: G.VD }),
-                            (0, r.jsx)("div", { className: G.uu }),
-                            (0, r.jsx)("div", { className: G.uu }),
+                            (0, r.jsx)("div", {
+                                className: G.uu,
+                            }),
+                            (0, r.jsx)("div", {
+                                className: G.uu,
+                            }),
+                            (0, r.jsx)("div", {
+                                className: G.VD,
+                            }),
+                            (0, r.jsx)("div", {
+                                className: G.uu,
+                            }),
+                            (0, r.jsx)("div", {
+                                className: G.uu,
+                            }),
                         ],
                     }),
                     (0, r.jsx)(
@@ -192,6 +221,7 @@ function q(e) {
         ],
     });
 }
+
 function X(e) {
     let { chassisMixAmount: t, setChassisMixAmount: n } = e,
         { key: a, handleInternalChange: s } = B(t),
@@ -244,6 +274,7 @@ function X(e) {
         ],
     });
 }
+
 function Z(e) {
     let { isCoachmark: t, isMobile: n } = e,
         [a, s] = i.useState(!1),
@@ -296,7 +327,9 @@ function Z(e) {
                           type: "rive",
                           asset: f.mdx,
                           riveProps: {
-                              dataBinding: { fill: f.LU0.colors.ICON_STRONG },
+                              dataBinding: {
+                                  fill: f.LU0.colors.ICON_STRONG,
+                              },
                               eventTargetRef: _,
                           },
                       },
@@ -317,6 +350,7 @@ function Z(e) {
               children: b(),
           });
 }
+
 function Q(e) {
     let { onApply: t, disabled: n, fullWidth: i } = e;
     return (0, r.jsx)(u.m, {
@@ -331,6 +365,7 @@ function Q(e) {
         }),
     });
 }
+
 function $(e) {
     let { onSaveTheme: t, canApply: n } = e,
         i = (0, y.L)(M.PremiumTypes.TIER_2);
@@ -356,6 +391,7 @@ function $(e) {
         })
     );
 }
+
 function J(e) {
     var t;
     let { onSaveTheme: n, canApply: i, metadata: a } = e,
@@ -366,12 +402,17 @@ function J(e) {
             (0, w.uk)(),
                 (0, E.Dr)(l.M.CUSTOM_THEME_COACHMARK),
                 (null == a ? void 0 : a.from) === g.xv.SETTING
-                    ? ((0, S.openUserSettings)(v.X.APPEARANCE_PANEL, { section: L.nc_.APPEARANCE }), (0, g.Jp)())
+                    ? ((0, S.openUserSettings)(v.X.APPEARANCE_PANEL, {
+                          section: L.nc_.APPEARANCE,
+                      }),
+                      (0, g.Jp)())
                     : (null == a ? void 0 : a.from) === g.xv.CLIENT_THEMES_EDITOR
                       ? (0, g.nf)(g.HP.CLIENT_THEMES)
                       : (0, g.Jp)();
         },
-        f = s()(G.xQ, { [G.NI]: !o });
+        f = s()(G.xQ, {
+            [G.NI]: !o,
+        });
     return (0, r.jsx)("div", {
         className: f,
         children: o
@@ -412,6 +453,7 @@ function J(e) {
               }),
     });
 }
+
 function ee(e) {
     var t;
     let { metadata: n, markAsDismissed: a, isCoachmark: s, isMobile: c } = e,

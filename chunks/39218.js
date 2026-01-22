@@ -1,4 +1,6 @@
-i.d(e, { x: () => S });
+i.d(e, {
+    x: () => S,
+});
 var n = i(64700),
     l = i(419954),
     s = i(975571),
@@ -10,7 +12,10 @@ var n = i(64700),
     A = i(985018);
 let S = (0, l.Qx)(a.X.CONTENT_AND_SOCIAL_DM_SPAM_SETTING, {
     useTitle: () => A.intl.string(A.t.tiCXaH),
-    useSubtitle: () => A.intl.format(A.t.RvjRRI, { appealLink: s.A.getArticleURL(T.MVz.SAFE_DIRECT_MESSAGING) }),
+    useSubtitle: () =>
+        A.intl.format(A.t.RvjRRI, {
+            appealLink: s.A.getArticleURL(T.MVz.SAFE_DIRECT_MESSAGING),
+        }),
     useValue: o.o,
     setValue: (t) => u.he.updateSetting(t),
     useOptions: function () {

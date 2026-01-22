@@ -1,4 +1,7 @@
-t.d(A, { F: () => C }), t(896048);
+t.d(A, {
+    F: () => C,
+}),
+    t(896048);
 var r = t(627968),
     n = t(64700),
     l = t(503698),
@@ -17,6 +20,7 @@ t(634654);
 var b = t(985018),
     v = t(9040);
 let q = (0, u.Ld)();
+
 function h(e) {
     var A;
     let { upload: t, progress: l = 0, onDeleteAttachment: d } = e,
@@ -58,7 +62,9 @@ function h(e) {
                     null != d &&
                     (0, r.jsx)(o.DUT, {
                         onClick: c,
-                        "aria-label": b.intl.formatToPlainString(b.t["1o5hyW"], { attachment: m }),
+                        "aria-label": b.intl.formatToPlainString(b.t["1o5hyW"], {
+                            attachment: m,
+                        }),
                         "aria-hidden": !1,
                         className: v.G5,
                         children: (0, r.jsx)(o.PGe, {
@@ -71,6 +77,7 @@ function h(e) {
         }),
     });
 }
+
 function C(e) {
     let { onFileAdded: A } = e,
         {
@@ -82,6 +89,7 @@ function C(e) {
             fileUploadProgresses: u,
         } = (0, f.Z)(),
         p = n.useRef(!1);
+
     function C(e) {
         try {
             for (let A of e)
@@ -131,19 +139,27 @@ function C(e) {
                         }),
                     ],
                 }),
-                (0, r.jsx)(o.hKd, { size: 12 }),
+                (0, r.jsx)(o.hKd, {
+                    size: 12,
+                }),
                 (0, r.jsx)(o.Text, {
                     id: q,
                     color: "text-muted",
                     variant: "text-xs/normal",
                     children: a
-                        ? b.intl.formatToPlainString(b.t.lvU6sr, { fileUploadLimit: "1 GB" })
-                        : b.intl.formatToPlainString(b.t.DOXzIU, { fileUploadLimit: "1 GB" }),
+                        ? b.intl.formatToPlainString(b.t.lvU6sr, {
+                              fileUploadLimit: "1 GB",
+                          })
+                        : b.intl.formatToPlainString(b.t.DOXzIU, {
+                              fileUploadLimit: "1 GB",
+                          }),
                 }),
                 t.length > 0 &&
                     (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, r.jsx)("div", { className: v.me }),
+                            (0, r.jsx)("div", {
+                                className: v.me,
+                            }),
                             (0, r.jsx)("ul", {
                                 className: v.$W,
                                 "aria-label": b.intl.string(b.t.YZ6cTW),

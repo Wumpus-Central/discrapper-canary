@@ -1,4 +1,7 @@
-n.d(e, { A: () => c }), n(228524);
+n.d(e, {
+    A: () => c,
+}),
+    n(228524);
 var a = n(627968);
 n(64700);
 var r = n(397927),
@@ -6,6 +9,7 @@ var r = n(397927),
     l = n(985018),
     s = n(297002),
     o = n(117816);
+
 function c(t) {
     let { onNext: e, onClose: n, transitionState: c } = t;
     return (0, a.jsxs)(r.kpP, {
@@ -32,7 +36,9 @@ function c(t) {
             (0, a.jsx)(r.Text, {
                 className: s.h_,
                 variant: "text-md/normal",
-                children: l.intl.format(l.t.rqWXUf, { hcArticle: i.kP }),
+                children: l.intl.format(l.t.rqWXUf, {
+                    hcArticle: i.kP,
+                }),
             }),
             (0, a.jsx)(r.Text, {
                 className: s.h_,

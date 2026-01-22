@@ -9,6 +9,7 @@ var n,
         (n.CONFUSING_LANGUAGE = "I found the language confusing"),
         (n.OTHER = "Other"),
         n);
+
 function l() {
     return [
         {

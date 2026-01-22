@@ -24,7 +24,7 @@ let s = {
             BILLING_TRIAL_FREE_TRIAL_TEXT: "Free Trial",
             MODAL_DONT_SHOW_AGAIN: "Don't show again",
             LISTBOX_EMPTY_STATE: "No items to show",
-            LISTBOX_EMPTY_STATE_WITH_QUERY: (e) => "No results for \u2018".concat(e, "\u2019"),
+            LISTBOX_EMPTY_STATE_WITH_QUERY: (e) => "No results for ‘".concat(e, "’"),
             KEY_CTRL_A11Y_LABEL: "Ctrl",
             KEY_CMD_A11Y_LABEL: "Cmd",
             KEY_ALT_A11Y_LABEL: "Alt",
@@ -61,16 +61,19 @@ let s = {
         dynamicGraphicComponents: void 0,
     },
     o = i.createContext(s);
+
 function l() {
     let e = i.useContext(o);
     return e === s && console.warn("useManaContext must be used within a ManaContext.Provider"), e;
 }
+
 function c(e) {
     var t, n;
     return (null != (t = null == (n = l().experiments) ? void 0 : n.enabledExperiments) ? t : []).includes(
         "mana-toggle-inputs",
     );
 }
+
 function u(e) {
     let { children: t, value: n } = e;
     return (0, r.jsx)(o.Provider, {

@@ -1,4 +1,7 @@
-t.d(l, { A: () => v }), t(896048);
+t.d(l, {
+    A: () => v,
+}),
+    t(896048);
 var n = t(627968),
     i = t(64700),
     r = t(311907),
@@ -15,6 +18,7 @@ var n = t(627968),
     A = t(985018),
     j = t(781425),
     h = t(368519);
+
 function g(e) {
     let { section: l, user: t, currentUser: i, displayProfile: r, guildId: s, channelId: a, onClose: o } = e;
     return l === x.RP.ACTIVITY
@@ -37,7 +41,9 @@ function g(e) {
                   onClose: o,
               })
             : l === x.RP.BOT_DATA_ACCESS
-              ? (0, n.jsx)(d.A, { user: t })
+              ? (0, n.jsx)(d.A, {
+                    user: t,
+                })
               : l === x.RP.BOT_INFO
                 ? (0, n.jsx)(c.A, {
                       user: t,
@@ -51,6 +57,7 @@ function g(e) {
                       onClose: o,
                   });
 }
+
 function v(e) {
     let {
             user: l,
@@ -98,7 +105,9 @@ function v(e) {
               children: (0, n.jsxs)("div", {
                   className: j.Ie,
                   children: [
-                      (0, n.jsx)("div", { className: j.hB }),
+                      (0, n.jsx)("div", {
+                          className: j.hB,
+                      }),
                       (0, n.jsx)("div", {
                           className: j.BI,
                           children: A.intl.string(A.t.Br1ls3),

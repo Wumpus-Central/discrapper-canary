@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var r = n(627968);
 n(64700);
 var l = n(793574),
@@ -13,6 +15,7 @@ var l = n(793574),
     p = n(319610),
     h = n(786515),
     b = n(878559);
+
 function g(e) {
     let { channel: t, hasActiveStream: n, showRightDivider: g = !1 } = e,
         { analyticsLocations: m } = (0, i.Ay)(l.A.VOICE_CONTROL_TRAY),
@@ -22,8 +25,12 @@ function g(e) {
             location: "b7309a_1",
         }),
         { enableViewerClipping: O } = o.A.useExperiment(
-            { location: "VoiceEffectsActionBar" },
-            { autoTrackExposure: !1 },
+            {
+                location: "VoiceEffectsActionBar",
+            },
+            {
+                autoTrackExposure: !1,
+            },
         ),
         j = (0, a.A)(u.A);
     if (null == t || null != A) return null;
@@ -36,13 +43,22 @@ function g(e) {
                   (0, r.jsxs)("div", {
                       className: b.w,
                       children: [
-                          v && (0, r.jsx)(d.A, { channel: t }),
+                          v &&
+                              (0, r.jsx)(d.A, {
+                                  channel: t,
+                              }),
                           x && (0, r.jsx)(f.A, {}),
-                          x && (0, r.jsx)(p.A, { channel: t }),
+                          x &&
+                              (0, r.jsx)(p.A, {
+                                  channel: t,
+                              }),
                           x && (0, r.jsx)(h.A, {}),
                       ],
                   }),
-                  g && (0, r.jsx)("div", { className: b.y }),
+                  g &&
+                      (0, r.jsx)("div", {
+                          className: b.y,
+                      }),
               ],
           })
         : null;

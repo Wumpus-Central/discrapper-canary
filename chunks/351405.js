@@ -1,4 +1,8 @@
-n.d(t, { P: () => N }), n(896048), n(321073);
+n.d(t, {
+    P: () => N,
+}),
+    n(896048),
+    n(321073);
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -22,6 +26,7 @@ var r = n(627968),
     v = n(272984),
     S = n(609653);
 let I = 8;
+
 function T(e) {
     let { partyMembers: t, partySize: n, maxPartySize: i, guildId: a, activityActionType: o } = e,
         l = Math.max(n, t.length),
@@ -52,10 +57,12 @@ function T(e) {
         ],
     });
 }
+
 function C(e) {
     var t;
     return (null == (t = e.activity) ? void 0 : t.type) === A.xL.STREAM_REQUEST;
 }
+
 function N(e) {
     var t, n;
     let { analyticsLocations: s, app: m, channel: S, message: I, hideParty: N, onView: R } = e,

@@ -27,11 +27,13 @@ var r = n(280230),
     I = n(954571),
     T = n(652215),
     C = n(985018);
+
 function N(e, t) {
     var n;
     let r = E.A.getChannel(S.A.getChannelId());
     return (null == r || r.type !== T.rbe.DM || !!v.A.isFriend(null != (n = r.getRecipientId()) ? n : "")) && e === t;
 }
+
 function R(e, t) {
     let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
         v = arguments.length > 3 ? arguments[3] : void 0,
@@ -41,7 +43,9 @@ function R(e, t) {
         null != t && t.preventDefault(),
             a.A.show({
                 title: C.intl.string(C.t.x87gan),
-                body: C.intl.format(C.t["9rqRwl"], { url: e.href }),
+                body: C.intl.format(C.t["9rqRwl"], {
+                    url: e.href,
+                }),
                 isDismissable: !0,
                 contextKey: v,
             });

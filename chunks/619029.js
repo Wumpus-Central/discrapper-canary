@@ -1,4 +1,7 @@
-n.d(t, { A: () => S }), n(896048);
+n.d(t, {
+    A: () => S,
+}),
+    n(896048);
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -13,6 +16,7 @@ var i = n(311907),
     p = n(340837),
     _ = n(355097),
     h = n(985018);
+
 function m(e, t, n) {
     return (
         t in e
@@ -26,6 +30,7 @@ function m(e, t, n) {
         e
     );
 }
+
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,6 +47,7 @@ function g(e) {
     }
     return e;
 }
+
 function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -54,6 +60,7 @@ function E(e, t) {
     }
     return n;
 }
+
 function b(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -65,6 +72,7 @@ function b(e, t) {
         e
     );
 }
+
 function y(e, t) {
     if (null == e) return {};
     var n,
@@ -81,6 +89,7 @@ function y(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function O(e, t) {
     if (null == e) return {};
     var n,
@@ -91,6 +100,7 @@ function O(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function A(e) {
     let { guildId: t, analyticsLocations: n } = e,
         [i, s] = (0, f.j8)({
@@ -110,8 +120,11 @@ function A(e) {
         ],
     });
 }
+
 function v() {
-    let e = (0, l.A)({ scrollPosition: _._F.GUILD_TAG });
+    let e = (0, l.A)({
+        scrollPosition: _._F.GUILD_TAG,
+    });
     return (0, r.jsxs)(a.$Td, {
         color: a.Hv$.DANGER,
         children: [
@@ -123,6 +136,7 @@ function v() {
         ],
     });
 }
+
 function S(e) {
     let { analyticsLocations: t } = e,
         n = y(e, ["analyticsLocations"]),
@@ -133,8 +147,18 @@ function S(e) {
             return (0, d.wj)(u.Ay.getMember(n.guildId, e));
         }, [n.guildId]);
     return l.has(p.D.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME) || l.has(p.D.AUTOMOD_QUARANTINED_BIO)
-        ? (0, r.jsx)(A, b(g({}, n), { analyticsLocations: a }))
+        ? (0, r.jsx)(
+              A,
+              b(g({}, n), {
+                  analyticsLocations: a,
+              }),
+          )
         : l.has(p.D.AUTOMOD_QUARANTINED_SERVER_TAG)
           ? (0, r.jsx)(v, {})
-          : (0, r.jsx)(A, b(g({}, n), { analyticsLocations: a }));
+          : (0, r.jsx)(
+                A,
+                b(g({}, n), {
+                    analyticsLocations: a,
+                }),
+            );
 }

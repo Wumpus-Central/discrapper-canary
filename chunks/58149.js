@@ -38,6 +38,7 @@ var r = n(735438),
     R = n(287146),
     w = n(652215),
     P = n(746080);
+
 function D(e, t, n) {
     return (
         t in e
@@ -51,6 +52,7 @@ function D(e, t, n) {
         e
     );
 }
+
 function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -67,11 +69,13 @@ function x(e) {
     }
     return e;
 }
+
 function L(e) {
     let t = 0;
     for (let n in e) t += 1;
     return t;
 }
+
 function j(e) {
     var t;
     if (null == e) return null;
@@ -98,17 +102,20 @@ function j(e) {
         num_voice_channels_active: L(u),
     };
 }
+
 function M(e, t) {
     return {
         channel_static_route: t,
         channel_hidden: !1,
     };
 }
+
 function k(e) {
     if (null == e) return null;
     let t = u.A.getChannel(e);
     return null == t ? null : U(t);
 }
+
 function U(e) {
     var t;
     if (null == e) return null;
@@ -130,6 +137,7 @@ function U(e) {
         channel_hidden: n,
     };
 }
+
 function G(e) {
     if (null == e) return null;
     let t = u.A.getChannel(e);
@@ -147,6 +155,7 @@ function G(e) {
         (0, R.V)(),
     );
 }
+
 function V(e, t) {
     var n, r;
     return null == e
@@ -159,6 +168,7 @@ function V(e, t) {
             ? n
             : null;
 }
+
 function F(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
@@ -168,12 +178,21 @@ function F(e) {
         a = "channel_id" in t ? t.channel_id : r ? O.A.getChannelId(i) : null,
         s = u.A.getChannel(a),
         o = x({}, t, j(V(s, i)), null != i && null != a && (0, P.jq)(a) ? M(i, a) : U(s));
-    T.default.track(e, o, { flush: n });
+    T.default.track(e, o, {
+        flush: n,
+    });
 }
+
 function B(e) {
-    if ((0, P.jq)(e)) return { channel_static_route: e };
+    if ((0, P.jq)(e))
+        return {
+            channel_static_route: e,
+        };
     let t = u.A.getChannel(e);
-    if (null == t) return { channel_id: e };
+    if (null == t)
+        return {
+            channel_id: e,
+        };
     let n = h.A.getGuild(t.guild_id);
     if (null == n) {
         let n = !1;
@@ -208,6 +227,7 @@ function B(e) {
         is_app_dm: !1,
     };
 }
+
 function H(e, t, n) {
     let r = {
         voice_state_count: 0,
@@ -224,8 +244,11 @@ function H(e, t, n) {
         r
     );
 }
+
 function Y(e, t) {
-    let n = { custom_status_count: 0 };
+    let n = {
+        custom_status_count: 0,
+    };
     return (
         i()(I.A.getVoiceStates(e)).forEach((e) => {
             e.channelId === t &&

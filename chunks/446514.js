@@ -1,4 +1,7 @@
-n.d(e, { default: () => x }), n(896048);
+n.d(e, {
+    default: () => x,
+}),
+    n(896048);
 var l = n(627968),
     r = n(64700),
     a = n(719442),
@@ -18,10 +21,13 @@ var l = n(627968),
     T = n(938746),
     S = n(652215),
     j = n(985018);
+
 function x(t) {
     var e, n, x, C, O, A, E, v, L, k, D, P;
     let { text: w, editor: G, target: M, onHeightUpdate: _, onSelect: I } = t,
-        N = (0, p.us)("SlateTextAreaContextMenu", { autoTrackExposure: !1 }).enabled,
+        N = (0, p.us)("SlateTextAreaContextMenu", {
+            autoTrackExposure: !1,
+        }).enabled,
         V = r.useCallback(
             (t) => {
                 i.rL.focus(G),
@@ -68,7 +74,7 @@ function x(t) {
                           {
                               id: "cut",
                               label: j.intl.string(j.t.pNPVhe),
-                              hint: (0, h.isMac)() ? "\u2318X" : "Ctrl+X",
+                              hint: (0, h.isMac)() ? "⌘X" : "Ctrl+X",
                               action: () => setTimeout(() => y.Ay.cut(), 0),
                           },
                           "cut",
@@ -78,7 +84,7 @@ function x(t) {
                           {
                               id: "copy",
                               label: j.intl.string(j.t.OpuAlK),
-                              hint: (0, h.isMac)() ? "\u2318C" : "Ctrl+C",
+                              hint: (0, h.isMac)() ? "⌘C" : "Ctrl+C",
                               action: () => setTimeout(() => y.Ay.copy(), 0),
                           },
                           "copy",
@@ -94,7 +100,9 @@ function x(t) {
                 g._3.updateSetting(t),
                     f.default.track(S.HAw.SLASH_COMMAND_SUGGESTIONS_TOGGLED, {
                         enabled: t,
-                        location: { object: S.ZSU.CONTEXT_MENU },
+                        location: {
+                            object: S.ZSU.CONTEXT_MENU,
+                        },
                     });
             },
         });
@@ -131,7 +139,9 @@ function x(t) {
                         (0, u.Xt)();
                     },
                 }),
-            (0, l.jsx)(o.rXV, { children: U }),
+            (0, l.jsx)(o.rXV, {
+                children: U,
+            }),
             (0, l.jsxs)(o.rXV, {
                 children: [X, K],
             }),
@@ -141,14 +151,14 @@ function x(t) {
                     (0, l.jsx)(o.Drp, {
                         id: "paste",
                         label: j.intl.string(j.t.lMUxVi),
-                        hint: (0, h.isMac)() ? "\u2318V" : "Ctrl+V",
+                        hint: (0, h.isMac)() ? "⌘V" : "Ctrl+V",
                         action: () => setTimeout(() => y.Ay.paste(), 0),
                     }),
                     J &&
                         (0, l.jsx)(o.Drp, {
                             id: "paste-as-plain-text",
                             label: j.intl.string(j.t.X92Qnr),
-                            hint: (0, h.isMac)() ? "\u2318\u21E7V" : "Ctrl+Shift+V",
+                            hint: (0, h.isMac)() ? "⌘⇧V" : "Ctrl+Shift+V",
                             action: R,
                         }),
                 ],

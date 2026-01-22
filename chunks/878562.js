@@ -1,6 +1,6 @@
 var r = n(428427),
-    i = "\u200B",
-    a = "\u180E";
+    i = "​",
+    a = "᠎";
 e.exports = function () {
     return String.prototype.trim &&
         i.trim() === i &&

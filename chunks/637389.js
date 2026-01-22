@@ -1,4 +1,7 @@
-n.d(t, { u: () => v }), n(896048);
+n.d(t, {
+    u: () => v,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -11,6 +14,7 @@ var r = n(627968),
     f = n(298063),
     p = n(885621),
     _ = n(658122);
+
 function h(e, t, n) {
     return (
         t in e
@@ -24,6 +28,7 @@ function h(e, t, n) {
         e
     );
 }
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -40,6 +45,7 @@ function m(e) {
     }
     return e;
 }
+
 function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -52,6 +58,7 @@ function g(e, t) {
     }
     return n;
 }
+
 function E(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -63,6 +70,7 @@ function E(e, t) {
         e
     );
 }
+
 function b(e, t) {
     if (null == e) return {};
     var n,
@@ -79,6 +87,7 @@ function b(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function y(e, t) {
     if (null == e) return {};
     var n,
@@ -91,6 +100,7 @@ function y(e, t) {
 }
 let O = "right-start",
     A = i.createContext(O);
+
 function v(e) {
     let t = i.useContext(A),
         { subMenuClassName: n, parentItem: a, isFocused: h, menuSubmenuProps: g, renderSubmenu: y } = e,
@@ -110,13 +120,21 @@ function v(e) {
             className: _.submenuPaddingContainer,
             children: (0, r.jsx)(
                 "div",
-                E(m({ className: s()(_.submenu, n) }, S), {
-                    ref: C,
-                    children: (0, r.jsx)(l.IpV, {
-                        className: _.scroller,
-                        children: y(),
-                    }),
-                }),
+                E(
+                    m(
+                        {
+                            className: s()(_.submenu, n),
+                        },
+                        S,
+                    ),
+                    {
+                        ref: C,
+                        children: (0, r.jsx)(l.IpV, {
+                            className: _.scroller,
+                            children: y(),
+                        }),
+                    },
+                ),
             ),
         }),
         P = (0, c.D)("MenuSubmenuItem"),
@@ -142,7 +160,20 @@ function v(e) {
             },
             children: (e) => {
                 let { ref: t, props: n } = e;
-                return (0, r.jsx)("div", E(m({ ref: t }, n), { children: a }));
+                return (0, r.jsx)(
+                    "div",
+                    E(
+                        m(
+                            {
+                                ref: t,
+                            },
+                            n,
+                        ),
+                        {
+                            children: a,
+                        },
+                    ),
+                );
             },
         });
     let j = (0, r.jsx)(d.QCO, {
@@ -157,6 +188,12 @@ function v(e) {
     });
     return (0, r.jsxs)("div", {
         ref: I,
-        children: [(0, r.jsx)("div", { ref: T }), a, h && N ? j : null],
+        children: [
+            (0, r.jsx)("div", {
+                ref: T,
+            }),
+            a,
+            h && N ? j : null,
+        ],
     });
 }

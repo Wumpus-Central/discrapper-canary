@@ -1,4 +1,7 @@
-n.d(t, { _: () => A }), n(896048);
+n.d(t, {
+    _: () => A,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(731738),
@@ -12,6 +15,7 @@ var r = n(627968),
     p = n(576045),
     h = n(327337),
     b = n(985018);
+
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,6 +41,7 @@ function g(e) {
     }
     return e;
 }
+
 function m(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -55,6 +60,7 @@ function m(e, t) {
         e
     );
 }
+
 function A(e) {
     let { channelId: t, warningId: A, senderId: y } = e,
         O = l.useCallback(() => {
@@ -71,12 +77,22 @@ function A(e) {
             [t, A, y],
         );
     l.useEffect(() => {
-        (0, f.QF)(m(g({}, v), { viewName: f.gN.SAFETY_WARNING_BANNER })),
-            o.A.increment({ name: i.K.SAFETY_WARNING_VIEW });
+        (0, f.QF)(
+            m(g({}, v), {
+                viewName: f.gN.SAFETY_WARNING_BANNER,
+            }),
+        ),
+            o.A.increment({
+                name: i.K.SAFETY_WARNING_VIEW,
+            });
     }, [v]);
     let x = l.useCallback(
             (e) => {
-                (0, f._$)(m(g({}, v), { cta: e }));
+                (0, f._$)(
+                    m(g({}, v), {
+                        cta: e,
+                    }),
+                );
             },
             [v],
         ),
@@ -98,7 +114,9 @@ function A(e) {
                         });
                     };
                 },
-                { modalKey: h.V },
+                {
+                    modalKey: h.V,
+                },
             ),
                 x(f.Wm.USER_BANNER_OPEN_SAFETY_TOOLS);
         }, [t, y, A, x]),

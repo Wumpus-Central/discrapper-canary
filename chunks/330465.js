@@ -1,10 +1,13 @@
-n.d(t, { A: () => G }), n(896048);
+n.d(t, {
+    A: () => G,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
     a = n.n(i),
     s = n(131346),
-    o = n(432022),
+    o = n(108531),
     c = n(837381),
     u = n(417597),
     d = n(451988),
@@ -29,6 +32,7 @@ var r = n(627968),
     T = n(652215),
     P = n(985018),
     w = n(837021);
+
 function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -54,6 +58,7 @@ function R(e) {
     }
     return e;
 }
+
 function D(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -79,6 +84,7 @@ let M = {
         object: T.ZSU.CHANNEL,
     },
 };
+
 function L(e, t) {
     (0, h.L3)(e, async () => {
         let { default: e } = await Promise.all([
@@ -99,7 +105,13 @@ function L(e, t) {
             n.e("54469"),
             n.e("91838"),
         ]).then(n.bind(n, 544676));
-        return (n) => (0, r.jsx)(e, D(R({}, n), { guild: t }));
+        return (n) =>
+            (0, r.jsx)(
+                e,
+                D(R({}, n), {
+                    guild: t,
+                }),
+            );
     });
 }
 let G = l.memo(function (e) {
@@ -139,8 +151,21 @@ let G = l.memo(function (e) {
               ))
                   ? h
                   : void 0)
-        : null == eo && null != et && (eo = null != (G = (0, N.eW)({ guildJoinRequestStatus: et })) ? G : void 0);
-    let ec = null != (i = e.lowerBadgeSize) ? i : { width: (0, f.o6S)(X) },
+        : null == eo &&
+          null != et &&
+          (eo =
+              null !=
+              (G = (0, N.eW)({
+                  guildJoinRequestStatus: et,
+              }))
+                  ? G
+                  : void 0);
+    let ec =
+            null != (i = e.lowerBadgeSize)
+                ? i
+                : {
+                      width: (0, f.o6S)(X),
+                  },
         [{ dragging: eu }, ed] = (0, s.i)({
             type: v.PJ.GUILD,
             item: () => (
@@ -155,7 +180,9 @@ let G = l.memo(function (e) {
             end() {
                 null == F || F(), (0, b.um)(j.Ay.getCompatibleGuildFolders());
             },
-            collect: (e) => ({ dragging: e.isDragging() }),
+            collect: (e) => ({
+                dragging: e.isDragging(),
+            }),
         }),
         ef = (0, c.Vd)(null != ei ? ei : T.dJq, null != ea ? 2 : 1),
         [ep, eh] = l.useState(!1),
@@ -165,7 +192,13 @@ let G = l.memo(function (e) {
         [eO] = l.useState(() => new d.J_(70, () => ey(!0)));
     l.useEffect(() => () => eO.cancel(), [eO]);
     let ej = l.useCallback(() => {
-            null != H ? (0, m.pX)(H, { state: M }) : (0, A.u)(ei, { state: M });
+            null != H
+                ? (0, m.pX)(H, {
+                      state: M,
+                  })
+                : (0, A.u)(ei, {
+                      state: M,
+                  });
         }, [ei, H]),
         ev = l.useCallback(() => {
             if (null != H || null == B || q || !ee) return;
@@ -260,9 +293,13 @@ let G = l.memo(function (e) {
                       }),
                   }),
         eT = eu
-            ? (0, r.jsx)(_.g4, { children: (0, r.jsx)(S.A, {}) })
+            ? (0, r.jsx)(_.g4, {
+                  children: (0, r.jsx)(S.A, {}),
+              })
             : (0, r.jsx)(o.animated.div, {
-                  style: { scale: null == en ? 1 : en },
+                  style: {
+                      scale: null == en ? 1 : en,
+                  },
                   className: a()(w.rN, {
                       [w.p9]: $,
                       [w.oR]: eA,

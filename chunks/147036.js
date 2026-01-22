@@ -36,9 +36,11 @@ var g = n(652215),
     E = n(788868),
     b = n(985018);
 let { GUILD_VOICE: y, GUILD_CATEGORY: O, GUILD_STAGE_VOICE: A } = g.rbe;
+
 function v(e, t) {
     return e === t || e === O;
 }
+
 function S(e, t, n) {
     let i = h.x3;
     return (
@@ -52,6 +54,7 @@ function S(e, t, n) {
         }
     );
 }
+
 function I(e, t, n) {
     let i = h.x3;
     return (
@@ -65,6 +68,7 @@ function I(e, t, n) {
         }
     );
 }
+
 function T(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         a = [];
@@ -76,12 +80,15 @@ function T(e, t, n) {
         a
     );
 }
+
 function C(e, t) {
     return I(e, t, i.r2.MEMBER);
 }
+
 function N(e, t) {
     return I(e, t, i.r2.ROLE);
 }
+
 function R(e) {
     return [
         {
@@ -92,6 +99,7 @@ function R(e) {
         },
     ];
 }
+
 function w(e, t, n) {
     var r, i;
     let a = e.getGuildId(),
@@ -109,6 +117,7 @@ function w(e, t, n) {
     let m = e.userLimit > 0 && u >= e.userLimit;
     return h || (m && !p);
 }
+
 function P(e, t) {
     return t.isGuildStageVoice()
         ? g.gp3
@@ -119,6 +128,7 @@ function P(e, t) {
                 E.TG[e.premiumTier].limits.bitrate,
             );
 }
+
 function D(e) {
     let { channels: t, selectedChannelId: n, selectedVoiceChannelId: r, voiceStates: i } = e,
         a = [];
@@ -136,6 +146,7 @@ function D(e) {
         a
     );
 }
+
 function x(e) {
     let { channels: t, selectedChannelId: n, selectedVoiceChannelId: r, voiceStates: i } = e;
     return D({
@@ -145,6 +156,7 @@ function x(e) {
         voiceStates: i,
     }).map((e) => e.user);
 }
+
 function L(e) {
     let { type: t } = e;
     switch (t) {
@@ -172,6 +184,7 @@ function L(e) {
             return null;
     }
 }
+
 function j(e) {
     if (null == e) return "text";
     let t = e.isMediaChannel();
@@ -182,6 +195,7 @@ function j(e) {
     if (e.type === g.rbe.GUILD_MEDIA) return "media";
     else if (c.k3.has(e.type)) return "text";
 }
+
 function M(e) {
     let t,
         n = u.A.getChannel(p.A.getLastSelectedChannelId());
@@ -192,6 +206,7 @@ function M(e) {
     }
     return g.BVt.CHANNEL(e, t);
 }
+
 function k(e, t, n, r) {
     let i = null == r ? "" : "?summaryId=".concat(r);
     return ""
@@ -200,6 +215,7 @@ function k(e, t, n, r) {
         .concat(g.BVt.CHANNEL(e, t, n))
         .concat(i);
 }
+
 function U(e, t, n, r) {
     return null == e || null == t || null == n
         ? k(e, t, r)
@@ -208,12 +224,14 @@ function U(e, t, n, r) {
               .concat(location.host)
               .concat(g.BVt.CHANNEL_THREAD_VIEW(e, t, n, r));
 }
+
 function G(e, t, n, r) {
     let i,
         a = e.getGuildId(),
         s = (0, o.$m)(a, t);
     return null != t && s ? U(a, t.id, e.id, m.default.castChannelIdAsMessageId(e.id)) : null != r ? r : k(a, e.id, n);
 }
+
 function V(e) {
     if (null == e) return null;
     switch (e.type) {

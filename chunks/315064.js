@@ -1,9 +1,16 @@
-n.d(t, { T: () => p }), n(896048), n(638769), n(747238), n(65821);
+n.d(t, {
+    T: () => p,
+}),
+    n(896048),
+    n(638769),
+    n(747238),
+    n(65821);
 var r = n(143236),
     i = n(424899),
     a = n.n(i),
     s = n(175259),
     o = n(463303);
+
 function l(e, t, n) {
     return (
         t in e
@@ -99,7 +106,12 @@ class f extends u {
             (t = this),
             l(this, "_createProxy", function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : t._context;
-                return new Proxy({}, { get: (n, r) => n[r] || (n[r] = t._getParsedMessages(e, r, t._createProxy)) });
+                return new Proxy(
+                    {},
+                    {
+                        get: (n, r) => n[r] || (n[r] = t._getParsedMessages(e, r, t._createProxy)),
+                    },
+                );
             }),
             (this._parsedMessages = this._createProxy(this._context));
     }

@@ -1,9 +1,13 @@
-n.d(t, { k: () => d }), n(321073);
+n.d(t, {
+    k: () => d,
+}),
+    n(321073);
 var r = n(681154),
     i = n(954571),
     l = n(883344),
     a = n(596720),
     s = n(652215);
+
 function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -203,7 +207,9 @@ let c = (e) => {
             });
         },
         trackFeedOnboardingScreenSkipped(e) {
-            i.default.track(s.HAw.ICYMI_ONBOARDING_SCREEN_SKIPPED, { location: e.location });
+            i.default.track(s.HAw.ICYMI_ONBOARDING_SCREEN_SKIPPED, {
+                location: e.location,
+            });
         },
         trackFeedOnboardingGuildToggled(e) {
             i.default.track(s.HAw.ICYMI_ONBOARDING_GUILD_TOGGLED, {

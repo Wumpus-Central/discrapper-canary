@@ -7,4 +7,7 @@ function t(e) {
     }
     return null;
 }
-l.d(n, { A: () => t }), l(896048);
+l.d(n, {
+    A: () => t,
+}),
+    l(896048);

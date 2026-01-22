@@ -1,4 +1,7 @@
-n.d(t, { A: () => p }), n(228524);
+n.d(t, {
+    A: () => p,
+}),
+    n(228524);
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -10,6 +13,7 @@ var i = n(503698),
     u = n(927018),
     d = n(906688),
     f = n(869295);
+
 function p(e) {
     let { achievementId: t, dateUnlocked: n } = e,
         i = (0, u.vM)(t);

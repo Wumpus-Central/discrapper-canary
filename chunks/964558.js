@@ -1,7 +1,9 @@
 function n(e, t) {
     return "string" == typeof (null == t ? void 0 : t.format) ? Object.assign(Object.assign({}, e[t.format]), t) : t;
 }
-Object.defineProperty(t, "__esModule", { value: !0 }),
+Object.defineProperty(t, "__esModule", {
+    value: !0,
+}),
     (t.DEFAULT_FORMAT_CONFIG = void 0),
     (t.resolveFormatConfigOptions = n),
     (t.DEFAULT_FORMAT_CONFIG = {
@@ -9,9 +11,15 @@ Object.defineProperty(t, "__esModule", { value: !0 }),
         list: {},
         relativeTime: {},
         number: {
-            integer: { maximumFractionDigits: 0 },
-            currency: { style: "currency" },
-            percent: { style: "percent" },
+            integer: {
+                maximumFractionDigits: 0,
+            },
+            currency: {
+                style: "currency",
+            },
+            percent: {
+                style: "percent",
+            },
         },
         date: {
             short: {

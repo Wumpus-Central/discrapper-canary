@@ -11,7 +11,9 @@ function r(e, t, n) {
         e
     );
 }
-n.d(t, { wN: () => s });
+n.d(t, {
+    wN: () => s,
+});
 class i {
     isFeatureTeenByDefault(e) {
         return (this.teenByDefault & e) != 0;

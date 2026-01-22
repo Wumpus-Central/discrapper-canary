@@ -1,4 +1,9 @@
-n.d(t, { A: () => f }), n(896048), n(321073), n(747238);
+n.d(t, {
+    A: () => f,
+}),
+    n(896048),
+    n(321073),
+    n(747238);
 var r = n(735438),
     i = n.n(r),
     l = n(311907),
@@ -9,6 +14,7 @@ var r = n(735438),
 n(355097);
 var u = n(652215);
 let d = "selectedChannelGuildFrecency";
+
 function p(e) {
     let { state: t } = l.Ay.PersistedStore.migrateAndReadStoreState("GIFFavoritesStore", [
         (e) =>
@@ -98,7 +104,9 @@ let f = [
         version: 4,
         run(e) {
             let { state: t } = l.Ay.PersistedStore.migrateAndReadStoreState("EmojiStore", [
-                () => ({ usageHistory: s.w.get("EmojiUsageHistory") || {} }),
+                () => ({
+                    usageHistory: s.w.get("EmojiUsageHistory") || {},
+                }),
             ]);
             if (null == t) return !1;
             let n = !1;

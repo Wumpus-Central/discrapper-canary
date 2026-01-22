@@ -1,10 +1,16 @@
-n.d(t, { A: () => _ }), n(747238), n(896048), n(321073);
+n.d(t, {
+    A: () => _,
+}),
+    n(747238),
+    n(896048),
+    n(321073);
 var r = n(627968);
 n(64700);
 var i = n(397927),
     a = n(597864),
     s = n(880652),
     o = n(710871);
+
 function l(e, t, n) {
     return (
         t in e
@@ -18,6 +24,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,6 +41,7 @@ function c(e) {
     }
     return e;
 }
+
 function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -46,6 +54,7 @@ function u(e, t) {
     }
     return n;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -57,6 +66,7 @@ function d(e, t) {
         e
     );
 }
+
 function f(e) {
     let { question: t, questionId: n, value: s, onValueChange: l } = e,
         { selectedChoice: c, textInputs: u } = ((e) => {
@@ -120,6 +130,7 @@ function f(e) {
               }),
           });
 }
+
 function p(e) {
     let { question: t, questionId: n, value: s, onValueChange: l } = e,
         { selectedChoices: u, textInputs: f } = ((e) => {
@@ -156,7 +167,15 @@ function p(e) {
             t.includes(e) || delete r[e], l(n, p(t, r));
         },
         h = (e, t) => {
-            l(n, p(u, d(c({}, f), { [e]: t })));
+            l(
+                n,
+                p(
+                    u,
+                    d(c({}, f), {
+                        [e]: t,
+                    }),
+                ),
+            );
         };
     return null == t.Choices || 0 === Object.keys(t.Choices).length
         ? (0, r.jsx)("div", {
@@ -190,6 +209,7 @@ function p(e) {
               }),
           });
 }
+
 function _(e) {
     let { question: t, questionId: n, value: i, onValueChange: a } = e;
     return t.Selector === s.BO.SINGLE_ANSWER

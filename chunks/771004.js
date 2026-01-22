@@ -1,4 +1,7 @@
-n.d(t, { A: () => g }), n(896048);
+n.d(t, {
+    A: () => g,
+}),
+    n(896048);
 var l = n(627968),
     r = n(64700),
     i = n(503698),
@@ -13,6 +16,7 @@ var l = n(627968),
     x = n(985018),
     b = n(851822),
     p = n(812254);
+
 function g(e) {
     let { detectedGame: t, trackAction: n } = e,
         [i, g] = r.useState((null == t ? void 0 : t.summaryLocalized) != null),
@@ -41,8 +45,12 @@ function g(e) {
                                   variant: "text-xs/medium",
                                   color: "text-default",
                                   children: i
-                                      ? x.intl.format(x.t.aZ2iIp, { onShowOriginal: () => g(!1) })
-                                      : x.intl.format(x.t["/2ylF4"], { onShowTranslated: () => g(!0) }),
+                                      ? x.intl.format(x.t.aZ2iIp, {
+                                            onShowOriginal: () => g(!1),
+                                        })
+                                      : x.intl.format(x.t["/2ylF4"], {
+                                            onShowTranslated: () => g(!0),
+                                        }),
                               }),
                           ],
                       }),

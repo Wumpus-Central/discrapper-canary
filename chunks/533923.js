@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var i = n(684013),
     r = n(334738),
     l = n(258585),
@@ -12,6 +14,7 @@ var i = n(684013),
     h = n(753070),
     f = n(985018),
     m = n(426127);
+
 function g(e, t, n, g) {
     if (s.A.isNotificationDisabled(d.KS.RequestToStream)) return null;
     let y = t.username,
@@ -38,10 +41,16 @@ function g(e, t, n, g) {
         onConfirmClick: (e, t) => {
             let n = o.A.getState().preset;
             if (n === h.jQ.PRESET_DOCUMENTS) {
-                let { allowAutoQuality: e } = (0, l.eO)({ location: "requestToStreamNotification" });
+                let { allowAutoQuality: e } = (0, l.eO)({
+                    location: "requestToStreamNotification",
+                });
                 n = e ? h.jQ.PRESET_AUTO : h.jQ.PRESET_VIDEO;
             }
-            (0, a.A)(c.A.getTargetPID(), { preset: n }), v("request-to-stream"), i.A.updateNotificationStatus(t);
+            (0, a.A)(c.A.getTargetPID(), {
+                preset: n,
+            }),
+                v("request-to-stream"),
+                i.A.updateNotificationStatus(t);
         },
         onCancelClick: (t, n) => {
             (0, r.ack)(

@@ -15,13 +15,23 @@ var r = n(64700),
     d = n(927813),
     f = n(652215),
     p = n(650583);
-let _ = { [f.fg2.INSTAGRAM]: ["1036753656588017764"] },
+let _ = {
+        [f.fg2.INSTAGRAM]: ["1036753656588017764"],
+    },
     h = new Map([[f.fg2.INSTAGRAM, new Date(2023, 1, 18).getTime()]]),
     m = 30 * d.A.Millis.DAY;
+
 function g(e) {
     let { forUserProfile: t } = e,
         n = (0, s.bG)([u.default], () => u.default.getCurrentUser()),
-        r = l.S.useExperiment({ location: "f2f7ef_1" }, { autoTrackExposure: !1 }).allowPlayStationStaging;
+        r = l.S.useExperiment(
+            {
+                location: "f2f7ef_1",
+            },
+            {
+                autoTrackExposure: !1,
+            },
+        ).allowPlayStationStaging;
     return (e) => {
         var i;
         return e.type === f.fg2.PLAYSTATION_STAGING
@@ -29,9 +39,12 @@ function g(e) {
             : !!(void 0 !== n && (null == (i = _[e.type]) ? void 0 : i.includes(n.id))) || !!t || e.enabled;
     };
 }
+
 function E() {
     let e = (0, s.bG)([c.A], () => c.A.getAccounts()),
-        t = g({ forUserProfile: !1 }),
+        t = g({
+            forUserProfile: !1,
+        }),
         n = r.useMemo(() => {
             let t = new Set();
             return e.forEach((e) => t.add(e.type)), t;
@@ -51,12 +64,15 @@ function E() {
         [n, t],
     );
 }
+
 function b(e) {
     let [t, n] = r.useState(!1);
+
     function i(e) {
         let { key: t } = e;
         t === p.dh.SHIFT && n(!0);
     }
+
     function a(e) {
         let { key: t } = e;
         t === p.dh.SHIFT && n(!1);

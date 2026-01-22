@@ -184,6 +184,7 @@ var s = (function (e) {
             e
         );
     })({});
+
 function d(e) {
     let { API_ENDPOINT: t, CDN_HOST: n } = window.GLOBAL_ENV;
     return null != n

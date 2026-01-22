@@ -1,9 +1,12 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r,
     i = n(311907),
     a = n(506774),
     s = n(73153),
     o = n(652215);
+
 function l(e, t, n) {
     return (
         t in e
@@ -23,10 +26,12 @@ let c = {
     },
     u = c,
     d = "LAST_VIEWED_PATH";
+
 function f(e) {
     let { path: t } = e;
     return (u.lastViewedPath = t), !0;
 }
+
 function p(e) {
     let { path: t } = e;
     return (u.lastViewedNonVoicePath = t), !0;
@@ -55,7 +60,12 @@ l(_, "displayName", "DefaultRouteStore"),
     l(_, "migrations", [
         () => {
             let e = a.w.get(d, null);
-            return a.w.remove(d), { lastViewedPath: e };
+            return (
+                a.w.remove(d),
+                {
+                    lastViewedPath: e,
+                }
+            );
         },
     ]);
 let h = new _(s.h, {

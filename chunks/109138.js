@@ -23,9 +23,12 @@ function r(e, t, n) {
         };
     }
 }
+
 function i(e, t, n) {
     let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
         { width: a, height: s, offsetX: o, offsetY: l } = r(e, t, i);
     n.drawImage(e, o, l, a, s);
 }
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});

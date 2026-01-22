@@ -19,6 +19,7 @@ var o,
     E = n(60821),
     b = n(708455),
     y = n(652215);
+
 function O(e, t, n) {
     return (
         t in e
@@ -32,6 +33,7 @@ function O(e, t, n) {
         e
     );
 }
+
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -48,6 +50,7 @@ function A(e) {
     }
     return e;
 }
+
 function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -60,6 +63,7 @@ function v(e, t) {
     }
     return n;
 }
+
 function S(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -74,6 +78,7 @@ function S(e, t) {
 let I = 6,
     T = 7,
     C = N();
+
 function N() {
     return {
         recentStatuses: b.UO,
@@ -81,9 +86,11 @@ function N() {
         currentDefaultStatus: null,
     };
 }
+
 function R() {
     C = N();
 }
+
 function w(e) {
     let { status: t, guildId: n, saveAsDefault: o } = e;
     if ((d()(t !== b.Kk.CUSTOM, "Hang Status cannot be custom"), (r = t), (i = null), (s = null), null != t)) {
@@ -107,6 +114,7 @@ function w(e) {
         state: "".concat(r, ":").concat(l),
     };
 }
+
 function P(e) {
     let { status: t, emoji: n, saveAsDefault: o } = e;
     (r = b.Kk.CUSTOM),
@@ -133,6 +141,7 @@ function P(e) {
             emoji: n,
         });
 }
+
 function D(e) {
     let { applicationId: t, saveAsDefault: n } = e;
     (s = t),
@@ -146,6 +155,7 @@ function D(e) {
                 gameActivityHangStatus: s,
             });
 }
+
 function x(e) {
     let { saveAsDefault: t } = e;
     (r = null),
@@ -159,6 +169,7 @@ function x(e) {
             }),
         (a = null);
 }
+
 function L(e) {
     let { status: t, emoji: n } = e,
         r = !1,
@@ -176,6 +187,7 @@ function L(e) {
         !!r && ((C.favoritedStatuses = i), !0)
     );
 }
+
 function j() {
     if (null == s) return !1;
     if (!m.Ay.getRunningVerifiedApplicationIds().includes(s)) {
@@ -189,6 +201,7 @@ function j() {
     }
     return !1;
 }
+
 function M(e) {
     let { statuses: t } = e,
         n = [...C.recentStatuses],
@@ -247,8 +260,12 @@ O(k, "displayName", "HangStatusStore"),
     O(k, "migrations", [
         (e) => {
             if (null != e.currentDefaultStatus && null == e.currentDefaultStatus.gameActivityHangStatus) {
-                let t = S(A({}, e.currentDefaultStatus), { gameActivityHangStatus: null });
-                return S(A({}, e), { currentDefaultStatus: t });
+                let t = S(A({}, e.currentDefaultStatus), {
+                    gameActivityHangStatus: null,
+                });
+                return S(A({}, e), {
+                    currentDefaultStatus: t,
+                });
             }
             return e;
         },

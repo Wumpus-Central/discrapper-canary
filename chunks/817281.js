@@ -15,18 +15,29 @@ var r = n(873298),
     f = n(594061),
     p = n(652215),
     _ = n(185928);
+
 function h(e) {
     return f.wc.updateAsync(
         "guildFolders",
         (t) => {
             t.folders = e.map((e) => {
-                let t = r.ak.create({ guildIds: e.guildIds });
+                let t = r.ak.create({
+                    guildIds: e.guildIds,
+                });
                 return (
-                    null != e.folderId && (t.id = i.j1.create({ value: String(e.folderId) })),
-                    null != e.folderColor && (t.color = i.ol.create({ value: String(e.folderColor) })),
+                    null != e.folderId &&
+                        (t.id = i.j1.create({
+                            value: String(e.folderId),
+                        })),
+                    null != e.folderColor &&
+                        (t.color = i.ol.create({
+                            value: String(e.folderColor),
+                        })),
                     null != e.folderName &&
                         "" !== e.folderName &&
-                        (t.name = i.hU.create({ value: String(e.folderName) })),
+                        (t.name = i.hU.create({
+                            value: String(e.folderName),
+                        })),
                     t
                 );
             });
@@ -34,6 +45,7 @@ function h(e) {
         f.Sb.FREQUENT_USER_ACTION,
     );
 }
+
 function m(e) {
     switch (e) {
         case p.NJ8.DARK:
@@ -48,10 +60,15 @@ function m(e) {
             return r.Sx.DARK;
     }
 }
+
 function g(e) {
     return {
         backgroundGradientPresetId:
-            null != e.backgroundGradientPresetId ? i.ZQ.create({ value: e.backgroundGradientPresetId }) : void 0,
+            null != e.backgroundGradientPresetId
+                ? i.ZQ.create({
+                      value: e.backgroundGradientPresetId,
+                  })
+                : void 0,
         customUserThemeSettings:
             null != e.customUserThemeSettings
                 ? {
@@ -63,6 +80,7 @@ function g(e) {
                 : void 0,
     };
 }
+
 function E(e) {
     let { backgroundGradientPresetId: t, customUserThemeSettings: n, theme: r, useSystemTheme: i } = e,
         o = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : f.Sb.INFREQUENT_USER_ACTION,
@@ -71,9 +89,16 @@ function E(e) {
     if (
         (s.h.dispatch({
             type: "UNSYNCED_USER_SETTINGS_UPDATE",
-            settings: { useSystemTheme: d },
+            settings: {
+                useSystemTheme: d,
+            },
         }),
-        null == t && "system" !== r && (0, a.Mw)(r) && (0, c.NA)({ [_.Fc.DARK]: r }),
+        null == t &&
+            "system" !== r &&
+            (0, a.Mw)(r) &&
+            (0, c.NA)({
+                [_.Fc.DARK]: r,
+            }),
         s.h.dispatch({
             type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE",
             changes: {
@@ -173,14 +198,22 @@ let b = {
         f.wc.updateAsync(
             "localization",
             (t) => {
-                t.locale = i.hU.create({ value: e });
+                t.locale = i.hU.create({
+                    value: e,
+                });
             },
             f.Sb.INFREQUENT_USER_ACTION,
         ),
     updateTheme(e) {
         s.h.dispatch({
             type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE",
-            changes: { appearance: { settings: { theme: e } } },
+            changes: {
+                appearance: {
+                    settings: {
+                        theme: e,
+                    },
+                },
+            },
         }),
             l.A.shouldSync("appearance") &&
                 f.wc.updateAsync(

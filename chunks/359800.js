@@ -1,4 +1,7 @@
-n.d(t, { z: () => p }), n(896048);
+n.d(t, {
+    z: () => p,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(397927),
@@ -6,6 +9,7 @@ var r = n(627968),
     o = n(362490),
     l = n(271469),
     c = n(985018);
+
 function u(e, t, n) {
     return (
         t in e
@@ -19,6 +23,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +41,7 @@ function d(e) {
     return e;
 }
 let f = "in-game-auth-check-modal";
+
 function p(e, t) {
     let { showInGameModal: u = !0, showToastOnSuccess: p = !0 } =
             arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
@@ -53,7 +59,9 @@ function p(e, t) {
                                 let { default: e } = await n.e("30724").then(n.bind(n, 272047));
                                 return (t) => (0, r.jsx)(e, d({}, t));
                             },
-                            { modalKey: f },
+                            {
+                                modalKey: f,
+                            },
                         ),
                     l
                 );

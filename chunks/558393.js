@@ -1,4 +1,7 @@
-n.d(i, { A: () => u }), n(896048);
+n.d(i, {
+    A: () => u,
+}),
+    n(896048);
 var e = n(386849),
     r = n(936555),
     E = n(853742),
@@ -17,11 +20,14 @@ var e = n(386849),
     d = n(652215),
     p = n(737045),
     c = n(985018);
+
 function M(t) {
     let i = (0, g.Y)(t),
         E = x.A.getGuild(t),
         l = null != E && (0, r.w)(E),
-        S = (0, a.K5)({ location: "getPermissionOptions" }),
+        S = (0, a.K5)({
+            location: "getPermissionOptions",
+        }),
         o = s.M.getCurrentConfig({
             guildId: t,
             location: "getPermissionOptions",
@@ -36,11 +42,15 @@ function M(t) {
             onClick: () => {
                 {
                     let { openUserSettings: t } = n(840065);
-                    t(B.X.KEYBINDS_PANEL, { section: d.nc_.KEYBINDS });
+                    t(B.X.KEYBINDS_PANEL, {
+                        section: d.nc_.KEYBINDS,
+                    });
                 }
             },
         }),
-        SOUNDBOARD_DESCRIPTION: c.intl.format(c.t.fVE8y8, { helpCenterArticle: T.A.getArticleURL(d.MVz.SOUNDBOARD) }),
+        SOUNDBOARD_DESCRIPTION: c.intl.format(c.t.fVE8y8, {
+            helpCenterArticle: T.A.getArticleURL(d.MVz.SOUNDBOARD),
+        }),
         showStageChannelPermissions: i,
         showExperimental: !0,
         showMembershipManualApprovalPermissions: !0,
@@ -84,7 +94,9 @@ let u = {
                 ];
             case d.rbe.GUILD_VOICE:
                 return [
-                    o.mL(B, c.intl.string(c.t.ouHggI), { showManageWebhooks: !0 }),
+                    o.mL(B, c.intl.string(c.t.ouHggI), {
+                        showManageWebhooks: !0,
+                    }),
                     o.m6(B, c.intl.string(c.t.Ny49TN)),
                     o.iG(B, c.intl.string(c.t["46Ra1b"])),
                     o.k6(B, c.intl.string(c.t.iqlsnD), {
@@ -102,7 +114,9 @@ let u = {
                 ];
             case d.rbe.GUILD_STAGE_VOICE:
                 return [
-                    o.mL(B, c.intl.string(c.t.ouHggI), { showManageWebhooks: !1 }),
+                    o.mL(B, c.intl.string(c.t.ouHggI), {
+                        showManageWebhooks: !1,
+                    }),
                     o.m6(B, c.intl.string(c.t.Ny49TN)),
                     o.od(B, c.intl.string(c.t["46Ra1b"]), u),
                     o.qI(B, c.intl.string(c.t.yniauk)),
@@ -117,7 +131,9 @@ let u = {
                             : void 0,
                         inSoundmojiExperiment: I,
                     }),
-                    o.Si(B, c.intl.string(c.t["rrh/W6"]), { showActivities: !1 }),
+                    o.Si(B, c.intl.string(c.t["rrh/W6"]), {
+                        showActivities: !1,
+                    }),
                 ];
             case d.rbe.GUILD_FORUM:
             case d.rbe.GUILD_MEDIA:
@@ -193,7 +209,10 @@ let u = {
                               }
                               return t;
                           })({}, t)),
-                          (e = e = { permissions: t.permissions.filter((t) => !n.has(t.flag.toString())) }),
+                          (e = e =
+                              {
+                                  permissions: t.permissions.filter((t) => !n.has(t.flag.toString())),
+                              }),
                           Object.getOwnPropertyDescriptors
                               ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(e))
                               : (function (t, i) {

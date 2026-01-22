@@ -1,9 +1,12 @@
 let r;
-n.d(t, { A: () => E });
+n.d(t, {
+    A: () => E,
+});
 var i,
     a = n(311907),
     s = n(73153),
     o = n(287809);
+
 function l(e, t, n) {
     return (
         t in e
@@ -17,6 +20,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -33,6 +37,7 @@ function c(e) {
     }
     return e;
 }
+
 function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -45,6 +50,7 @@ function u(e, t) {
     }
     return n;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -66,7 +72,13 @@ let f = {},
         if (e.userId === (null == t ? void 0 : t.id)) return void delete f[e.roomId];
         let n = c({}, f[e.roomId]);
         (n.participants = n.participants.filter((t) => t.userId !== e.userId)),
-            (n.seats = n.seats.map((t) => (t.claimedBy === e.userId ? d(c({}, t), { claimedBy: null }) : t))),
+            (n.seats = n.seats.map((t) =>
+                t.claimedBy === e.userId
+                    ? d(c({}, t), {
+                          claimedBy: null,
+                      })
+                    : t,
+            )),
             (f[e.roomId] = n);
     },
     h = (e) => {

@@ -1,4 +1,6 @@
-r.d(t, { R: () => b }),
+r.d(t, {
+    R: () => b,
+}),
     r(896048),
     r(927092),
     r(212978),
@@ -23,6 +25,7 @@ var n = r(64700),
     f = r(383501);
 r(603266);
 var d = r(731854);
+
 function b(e) {
     let { userId: t } = e,
         r = (0, i.bG)([s.default], () => s.default.getId());

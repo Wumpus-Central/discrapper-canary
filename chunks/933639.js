@@ -1,4 +1,7 @@
-n.d(t, { A: () => v }), n(896048);
+n.d(t, {
+    A: () => v,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -13,6 +16,7 @@ var r = n(627968),
     _ = n(183555),
     h = n(985018),
     m = n(940463);
+
 function g(e, t, n) {
     return (
         t in e
@@ -26,6 +30,7 @@ function g(e, t, n) {
         e
     );
 }
+
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,6 +47,7 @@ function E(e) {
     }
     return e;
 }
+
 function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -54,6 +60,7 @@ function b(e, t) {
     }
     return n;
 }
+
 function y(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -69,8 +76,15 @@ let O = 300,
     A = (e) =>
         (0, c.mMO)(async () => {
             let { default: t } = await n.e("41091").then(n.bind(n, 431374));
-            return (n) => (0, r.jsx)(t, y(E({}, n), { sourceAnalyticsLocations: e }));
+            return (n) =>
+                (0, r.jsx)(
+                    t,
+                    y(E({}, n), {
+                        sourceAnalyticsLocations: e,
+                    }),
+                );
         });
+
 function v(e) {
     let { isVisible: t, isExpandable: n, onCloseProfile: a } = e,
         { analyticsLocations: g } = (0, d.Ay)(),
@@ -80,10 +94,17 @@ function v(e) {
         [v, S] = (0, o.yK)([u.A], () => [u.A.useReducedMotion, u.A.keyboardModeEnabled]),
         I = !n || v || S ? 0 : O,
         T = () => {
-            E({ action: "PRESS_EDIT_CUSTOM_STATUS" }), A(g), null == a || a();
+            E({
+                action: "PRESS_EDIT_CUSTOM_STATUS",
+            }),
+                A(g),
+                null == a || a();
         },
         C = () => {
-            E({ action: "PRESS_CLEAR_CUSTOM_STATUS" }), p.G2.updateSetting(void 0);
+            E({
+                action: "PRESS_CLEAR_CUSTOM_STATUS",
+            }),
+                p.G2.updateSetting(void 0);
         };
     return (0, r.jsxs)(f.Ay, {
         className: s()(m.oO, {

@@ -18,10 +18,13 @@ var i,
               })
             : (e[t] = n),
     c = (e, t, n) => (l(e, "symbol" != typeof t ? t + "" : t, n), n),
-    u = { exports: {} };
+    u = {
+        exports: {},
+    };
 !(function (e) {
     !(function () {
         var t = {}.hasOwnProperty;
+
         function n() {
             for (var e = [], r = 0; r < arguments.length; r++) {
                 var i = arguments[r];
@@ -70,6 +73,7 @@ var f = function (e, t, n, r, i, a, s, o) {
         throw ((l.framesToPop = 1), l);
     }
 };
+
 function p(e, t, n) {
     if (/%$/.test(t)) return 3 === n ? parseFloat(t) / 100 : (255 * parseFloat(t)) / 100;
     if ("h" === e[n]) {
@@ -78,6 +82,7 @@ function p(e, t, n) {
     }
     return parseFloat(t);
 }
+
 function _({ hue: e, saturation: t, lightness: n, alpha: r }) {
     let i,
         a = (1 - Math.abs(2 * (n /= 255) - 1)) * (t /= 255),
@@ -102,6 +107,7 @@ function _({ hue: e, saturation: t, lightness: n, alpha: r }) {
         alpha: r,
     };
 }
+
 function h({ red: e, green: t, blue: n, alpha: r }) {
     let i = e / 255,
         a = t / 255,
@@ -210,6 +216,7 @@ class E {
         );
     }
 }
+
 function b(e, t) {
     let n = e.alpha;
     return new E(
@@ -219,6 +226,7 @@ function b(e, t) {
         e.alpha + t.alpha * (1 - e.alpha),
     );
 }
+
 function y(e, t) {
     if (null == e) return "var(--focus-primary)";
     let { saturation: n } = e.toHSL(),
@@ -231,6 +239,7 @@ function y(e, t) {
               : "var(--focus-dark, rgba(0, 0, 0, 0.85))"
           : "rgba(255,255,255,0.7)";
 }
+
 function O(e) {
     let t = [];
     for (let n of e.styles.slice(1)) {
@@ -244,9 +253,11 @@ function O(e) {
 }
 let A = "--__adaptive-focus-ring-color",
     v = "--__adaptive-focus-ring-radius";
+
 function S(e) {
     e !== r && (null == r || r.hide(), (r = e));
 }
+
 function I(e) {
     if (e) return parseInt(e) > 0 ? e : void 0;
 }
@@ -391,6 +402,7 @@ var R = function (e, t, n, r) {
 let w = !1,
     P,
     D = {};
+
 function x() {
     if (!w) return;
     let e = null == r ? void 0 : r.getStyle();
@@ -412,6 +424,7 @@ let L = !1,
             (w = !1), null != P && cancelAnimationFrame(P);
         },
     };
+
 function M(e) {
     let { containerRef: t, children: n, themeOptions: r } = e,
         i = a.useRef(new T());
@@ -425,6 +438,7 @@ function M(e) {
         })
     );
 }
+
 function k() {
     let e = a.useContext(N),
         [, t] = a.useState({});
@@ -450,6 +464,7 @@ let U =
     "u" > typeof window && (null == (i = window.document) ? void 0 : i.createElement) != null
         ? a.useLayoutEffect
         : a.useEffect;
+
 function G(e) {
     let {
         within: t = !1,
@@ -513,6 +528,7 @@ function G(e) {
                         e.removeEventListener("focusin", i, !0), e.removeEventListener("focusout", a, !0);
                     }
                 );
+
             function i(e) {
                 if (null != n) {
                     if (e.currentTarget === e.target) {
@@ -522,6 +538,7 @@ function G(e) {
                     m(!0), t && g.showElement(n, A);
                 }
             }
+
             function a() {
                 g.hide(), (_.current = !1), m(!1);
             }

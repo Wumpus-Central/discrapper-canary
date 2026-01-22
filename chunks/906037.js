@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(116657);
 let i = 2,
     a = 3,
@@ -6,7 +8,10 @@ let i = 2,
     o = 25.4,
     l = 10,
     c = 1,
-    u = { get: d };
+    u = {
+        get: d,
+    };
+
 function d(e, t) {
     let n = {},
         i = !1,
@@ -28,9 +33,11 @@ function d(e, t) {
     let g = h(d);
     if ((g && ((n.FieldOfView = g), (i = !0)), i)) return n;
 }
+
 function f(e, t, n, r) {
     return r && e[t] && e[t][n] ? e[t][n].value : !r && e[n] ? e[n].value : void 0;
 }
+
 function p(e, t, n, r, u, d) {
     let f = 43.27;
     if (e && t && n && r && u && d)
@@ -57,6 +64,7 @@ function p(e, t, n, r, u, d) {
             return (d[0] / d[1]) * (f / E);
         } catch (e) {}
 }
+
 function _(e, t) {
     if (e && t)
         try {
@@ -67,6 +75,7 @@ function _(e, t) {
             };
         } catch (e) {}
 }
+
 function h(e) {
     let t = 36;
     if (e)

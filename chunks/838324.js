@@ -1,4 +1,7 @@
-n.d(t, { A: () => g }), n(896048);
+n.d(t, {
+    A: () => g,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -12,12 +15,15 @@ var r = n(627968),
     p = n(698279),
     _ = n(985018),
     h = n(111314);
+
 function m(e, t) {
     let { disabled: n, type: a, channelId: m, pickerView: g = p.kx.EMOJI } = e,
         [E, b, y, O] = (0, u.RQ)((e) => [e.activeView, e.activeViewType, e.pickerId, e.activeChannelId], o.x),
         A = (0, d.p)(l.L),
         v = a === f.oU.NORMAL,
-        { tooltipsWithKeybinds: S, expressionsCombinedIntoEmojiButton: I } = d.C.useConfig({ location: "EmojiButton" }),
+        { tooltipsWithKeybinds: S, expressionsCombinedIntoEmojiButton: I } = d.C.useConfig({
+            location: "EmojiButton",
+        }),
         T = I ? void 0 : v ? A : void 0,
         C = S && I && v ? _.intl.string(_.t.DSBQ6F) : void 0,
         N = i.useCallback(() => {

@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var l = n(627968);
 n(64700);
 var r = n(311907),
@@ -8,6 +10,7 @@ var r = n(311907),
     o = n(723702),
     c = n(652215),
     u = n(985018);
+
 function d(e) {
     let t = !o.isPlatformEmbedded,
         n = (0, r.bG)([s.A], () => s.A.getMode()),
@@ -19,7 +22,10 @@ function d(e) {
                     group: "input-modes",
                     label: r,
                     checked: n === t,
-                    action: () => a.A.setMode(t, void 0, void 0, { analyticsLocations: e }),
+                    action: () =>
+                        a.A.setMode(t, void 0, void 0, {
+                            analyticsLocations: e,
+                        }),
                 },
                 t,
             );

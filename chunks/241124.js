@@ -19,6 +19,7 @@ let u = 3,
         hasError: !1,
         isLoading: !0,
     });
+
 function f(e) {
     return (0, s.vq)(e, HTMLImageElement)
         ? e.complete
@@ -26,6 +27,7 @@ function f(e) {
           ? e.readyState >= 2
           : !!(0, s.vq)(e, HTMLDivElement) || !0;
 }
+
 function p(e) {
     return (0, s.vq)(e, HTMLImageElement)
         ? "load"
@@ -33,6 +35,7 @@ function p(e) {
           ? "canplaythrough"
           : ((0, s.vq)(e, HTMLDivElement), "load");
 }
+
 function _(e) {
     var t, n;
     return (0, s.vq)(e, HTMLImageElement)
@@ -43,6 +46,7 @@ function _(e) {
               : "video"
           : ((0, s.vq)(e, HTMLDivElement), e.tagName);
 }
+
 function h(e) {
     let {
             children: t,
@@ -80,7 +84,11 @@ function h(e) {
                                 .concat(_(t), ", ")
                                 .concat(r),
                         ),
-                        { tags: { source: h } },
+                        {
+                            tags: {
+                                source: h,
+                            },
+                        },
                     ),
                     y(!0);
             },
@@ -98,9 +106,11 @@ function h(e) {
                 let n = p(e),
                     r = new AbortController(),
                     i = new a.A();
+
                 function o() {
                     i.succeed(), C(e), e.removeEventListener(n, o);
                 }
+
                 function l(n) {
                     d(),
                         C(e),
@@ -111,6 +121,7 @@ function h(e) {
                             errorMessage: "message" in n ? n.message : null,
                         });
                 }
+
                 function c(t) {
                     E && i.fails < u && (0, s.vq)(e, HTMLVideoElement)
                         ? i.fail(() => {
@@ -125,13 +136,19 @@ function h(e) {
                             return n.add(e), n;
                         }),
                         e.addEventListener(n, o)),
-                    e.addEventListener("error", l, { signal: r.signal }),
+                    e.addEventListener("error", l, {
+                        signal: r.signal,
+                    }),
                     g && (0, s.vq)(e, HTMLVideoElement))
                 ) {
                     let t = e.querySelectorAll("source"),
                         n = t[t.length - 1];
-                    null == n || n.addEventListener("error", c, { signal: r.signal });
+                    null == n ||
+                        n.addEventListener("error", c, {
+                            signal: r.signal,
+                        });
                 }
+
                 function d() {
                     if (
                         (i.cancel(),
@@ -167,6 +184,7 @@ function h(e) {
         children: t,
     });
 }
+
 function m(e) {
     let { id: t, children: n } = e,
         { registerAsset: r, unregisterAsset: a } = i.useContext(d),
@@ -185,6 +203,7 @@ function m(e) {
         n(s)
     );
 }
+
 function g() {
     let { hasError: e, isLoading: t } = i.useContext(d);
     return {

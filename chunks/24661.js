@@ -1,4 +1,6 @@
-n.d(e, { A: () => g });
+n.d(e, {
+    A: () => g,
+});
 var l = n(627968);
 n(64700);
 var r = n(311907),
@@ -9,6 +11,7 @@ var r = n(311907),
     c = n(496092),
     s = n(988794),
     d = n(985018);
+
 function g(t, e, g) {
     let { canManageGuildEvent: y } = (0, u.nr)(null != g ? g : e),
         f = (0, r.bG)([a.Ay], () => a.Ay.isActive(t)),

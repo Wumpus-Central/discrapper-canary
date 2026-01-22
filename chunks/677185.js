@@ -17,7 +17,9 @@ var r = n(284009),
     c = n(652215);
 let u = 10;
 async function d() {
-    s.h.dispatch({ type: "PREMIUM_GROUP_MEMBERSHIP_FETCH_START" });
+    s.h.dispatch({
+        type: "PREMIUM_GROUP_MEMBERSHIP_FETCH_START",
+    });
     try {
         let e = (
             await a.Bo.get({
@@ -36,11 +38,18 @@ async function d() {
                           currentPeriodEnd: new Date(e.current_period_end),
                       },
                   })
-                : s.h.dispatch({ type: "PREMIUM_GROUP_MEMBERSHIP_NOT_FOUND" }),
+                : s.h.dispatch({
+                      type: "PREMIUM_GROUP_MEMBERSHIP_NOT_FOUND",
+                  }),
             e
         );
     } catch (e) {
-        return s.h.dispatch({ type: "PREMIUM_GROUP_MEMBERSHIP_FETCH_FAILURE" }), null;
+        return (
+            s.h.dispatch({
+                type: "PREMIUM_GROUP_MEMBERSHIP_FETCH_FAILURE",
+            }),
+            null
+        );
     }
 }
 async function f(e, t, n, r) {
@@ -61,11 +70,15 @@ async function f(e, t, n, r) {
     };
 }
 async function p(e, t) {
-    s.h.dispatch({ type: "PREMIUM_GROUP_INVITE_USERS_START" });
+    s.h.dispatch({
+        type: "PREMIUM_GROUP_INVITE_USERS_START",
+    });
     try {
         let n = await a.Bo.post({
             url: c.Rsh.BILLING_SUBSCRIPTION_INVITES(e),
-            body: { user_ids: t },
+            body: {
+                user_ids: t,
+            },
             rejectWithError: !0,
         });
         return (
@@ -79,11 +92,18 @@ async function p(e, t) {
             }
         );
     } catch (e) {
-        return s.h.dispatch({ type: "PREMIUM_GROUP_INVITE_USERS_FAILURE" }), null;
+        return (
+            s.h.dispatch({
+                type: "PREMIUM_GROUP_INVITE_USERS_FAILURE",
+            }),
+            null
+        );
     }
 }
 async function _(e, t) {
-    s.h.dispatch({ type: "PREMIUM_GROUP_REMOVE_MEMBER_START" });
+    s.h.dispatch({
+        type: "PREMIUM_GROUP_REMOVE_MEMBER_START",
+    });
     try {
         let n = await a.Bo.del({
             url: c.Rsh.BILLING_SUBSCRIPTION_REMOVE_USER(e, t),
@@ -97,11 +117,18 @@ async function _(e, t) {
             n
         );
     } catch (e) {
-        return s.h.dispatch({ type: "PREMIUM_GROUP_REMOVE_MEMBER_FAILURE" }), e;
+        return (
+            s.h.dispatch({
+                type: "PREMIUM_GROUP_REMOVE_MEMBER_FAILURE",
+            }),
+            e
+        );
     }
 }
 async function h(e) {
-    s.h.dispatch({ type: "PREMIUM_GROUP_MEMBERS_FETCH_START" });
+    s.h.dispatch({
+        type: "PREMIUM_GROUP_MEMBERS_FETCH_START",
+    });
     try {
         let t = (
                 await a.Bo.get({
@@ -123,7 +150,12 @@ async function h(e) {
             t
         );
     } catch (e) {
-        return s.h.dispatch({ type: "PREMIUM_GROUP_MEMBERS_FETCH_FAILURE" }), [];
+        return (
+            s.h.dispatch({
+                type: "PREMIUM_GROUP_MEMBERS_FETCH_FAILURE",
+            }),
+            []
+        );
     }
 }
 async function m(e, t, n) {

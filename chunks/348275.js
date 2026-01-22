@@ -12,6 +12,7 @@ n.d(t, {
     n(896048),
     n(457529);
 var r = n(64700);
+
 function i(e, t, n) {
     return (
         t in e
@@ -25,6 +26,7 @@ function i(e, t, n) {
         e
     );
 }
+
 function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -41,12 +43,14 @@ function a(e) {
     }
     return e;
 }
+
 function s(e, t) {
     if (null != e) {
         if ("function" == typeof e) return void e(t);
         "object" == typeof e && "current" in e && (e.current = t);
     }
 }
+
 function o(e, t) {
     let n = (null != e ? e : "").trim(),
         r = (null != t ? t : "").trim();
@@ -61,6 +65,7 @@ function o(e, t) {
     }
     return 0 === s.length ? n : "".concat(n, " ").concat(s.join(" ")).trim();
 }
+
 function l(e, t) {
     if (null != e || null != t)
         return function () {
@@ -68,6 +73,7 @@ function l(e, t) {
             "function" == typeof e && e(...r), "function" == typeof t && t(...r);
         };
 }
+
 function c(e) {
     switch (e) {
         case "top":
@@ -81,6 +87,7 @@ function c(e) {
             return "left";
     }
 }
+
 function u(e) {
     let { tag: t, className: n, tabIndex: i, children: s, triggerHandlers: o, describedById: l, triggerRef: c } = e;
     return r.createElement(
@@ -97,11 +104,16 @@ function u(e) {
                 onContextMenu: o.onContextMenu,
                 onClick: o.onClick,
             },
-            null != l && "" !== l ? { "aria-describedby": l } : {},
+            null != l && "" !== l
+                ? {
+                      "aria-describedby": l,
+                  }
+                : {},
         ),
         s,
     );
 }
+
 function d(e) {
     if (null == e) return "";
     if ("string" == typeof e) return e;

@@ -1,6 +1,11 @@
-n.d(t, { A: () => a }), n(896048), n(321073);
+n.d(t, {
+    A: () => a,
+}),
+    n(896048),
+    n(321073);
 var r = n(711371);
 let i = "applicationCommand";
+
 function a(e, t) {
     if (r.VW.areStylesDisabled(e)) return [];
     let [n, a] = t,

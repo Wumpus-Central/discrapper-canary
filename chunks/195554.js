@@ -53,9 +53,11 @@ var r,
     et = 852,
     en = 592,
     er = 15;
+
 function ei(e) {
     return ((e >>> 24) & 255) + ((e >>> 8) & 65280) + ((65280 & e) << 8) + ((255 & e) << 24);
 }
+
 function ea() {
     (this.mode = 0),
         (this.last = !1),
@@ -93,6 +95,7 @@ function ea() {
         (this.back = 0),
         (this.was = 0);
 }
+
 function es(e) {
     var t;
     return e && e.state
@@ -114,10 +117,12 @@ function es(e) {
           m)
         : b;
 }
+
 function eo(e) {
     var t;
     return e && e.state ? (((t = e.state).wsize = 0), (t.whave = 0), (t.wnext = 0), es(e)) : b;
 }
+
 function el(e, t) {
     var n, r;
     return e && e.state
@@ -128,14 +133,17 @@ function el(e, t) {
             : (null !== r.window && r.wbits !== t && (r.window = null), (r.wrap = n), (r.wbits = t), eo(e))
         : b;
 }
+
 function ec(e, t) {
     var n, r;
     return e ? ((e.state = r = new ea()), (r.window = null), (n = el(e, t)) !== m && (e.state = null), n) : b;
 }
+
 function eu(e) {
     return ec(e, er);
 }
 var ed = !0;
+
 function ef(e) {
     if (ed) {
         var t;
@@ -143,11 +151,22 @@ function ef(e) {
         for (; t < 256; ) e.lens[t++] = 9;
         for (; t < 280; ) e.lens[t++] = 7;
         for (; t < 288; ) e.lens[t++] = 8;
-        for (c(d, e.lens, 0, 288, r, 0, e.work, { bits: 9 }), t = 0; t < 32; ) e.lens[t++] = 5;
-        c(f, e.lens, 0, 32, i, 0, e.work, { bits: 5 }), (ed = !1);
+        for (
+            c(d, e.lens, 0, 288, r, 0, e.work, {
+                bits: 9,
+            }),
+                t = 0;
+            t < 32;
+        )
+            e.lens[t++] = 5;
+        c(f, e.lens, 0, 32, i, 0, e.work, {
+            bits: 5,
+        }),
+            (ed = !1);
     }
     (e.lencode = r), (e.lenbits = 9), (e.distcode = i), (e.distbits = 5);
 }
+
 function ep(e, t, n, r) {
     var i,
         s = e.state;
@@ -163,6 +182,7 @@ function ep(e, t, n, r) {
         0
     );
 }
+
 function e_(e, t) {
     var n,
         r,
@@ -452,7 +472,9 @@ function e_(e, t) {
                 if (
                     ((n.lencode = n.lendyn),
                     (n.lenbits = 7),
-                    (ev = { bits: n.lenbits }),
+                    (ev = {
+                        bits: n.lenbits,
+                    }),
                     (eA = c(u, n.lens, 0, 19, n.lencode, 0, n.work, ev)),
                     (n.lenbits = ev.bits),
                     eA)
@@ -512,7 +534,9 @@ function e_(e, t) {
                 }
                 if (
                     ((n.lenbits = 9),
-                    (ev = { bits: n.lenbits }),
+                    (ev = {
+                        bits: n.lenbits,
+                    }),
                     (eA = c(d, n.lens, 0, n.nlen, n.lencode, 0, n.work, ev)),
                     (n.lenbits = ev.bits),
                     eA)
@@ -523,7 +547,9 @@ function e_(e, t) {
                 if (
                     ((n.distbits = 6),
                     (n.distcode = n.distdyn),
-                    (ev = { bits: n.distbits }),
+                    (ev = {
+                        bits: n.distbits,
+                    }),
                     (eA = c(f, n.lens, n.nlen, n.ndist, n.distcode, 0, n.work, ev)),
                     (n.distbits = ev.bits),
                     eA)
@@ -726,15 +752,18 @@ function e_(e, t) {
           ((0 === el && 0 === ec) || t === p) && eA === m && (eA = A),
           eA);
 }
+
 function eh(e) {
     if (!e || !e.state) return b;
     var t = e.state;
     return t.window && (t.window = null), (e.state = null), m;
 }
+
 function em(e, t) {
     var n;
     return e && e.state && (2 & (n = e.state).wrap) != 0 ? ((n.head = t), (t.done = !1), m) : b;
 }
+
 function eg(e, t) {
     var n,
         r,

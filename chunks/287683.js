@@ -1,4 +1,9 @@
-n.d(t, { m: () => O }), n(734808), n(896048), n(65821);
+n.d(t, {
+    m: () => O,
+}),
+    n(734808),
+    n(896048),
+    n(65821);
 var r = n(852015),
     i = n(144367),
     a = n(428420),
@@ -19,7 +24,9 @@ var r = n(852015),
 class y extends s.G {
     create(e) {
         let t = {
-            properties: { oneofKind: void 0 },
+            properties: {
+                oneofKind: void 0,
+            },
             contentIdentifier: "",
         };
         return (

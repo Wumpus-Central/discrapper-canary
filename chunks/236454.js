@@ -13,6 +13,7 @@ var r = n(627968),
     l = n(399925),
     c = n(696016),
     u = n(985018);
+
 function d(e, t, n) {
     return (
         t in e
@@ -26,6 +27,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,6 +44,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -54,6 +57,7 @@ function p(e, t) {
     }
     return n;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -65,6 +69,7 @@ function _(e, t) {
         e
     );
 }
+
 function h() {
     let e = (0, a.bG)([o.A], () => o.A.getSettings().autoClipPhrases),
         [t, n] = i.useState(""),
@@ -115,17 +120,26 @@ function h() {
                 : void 0,
     });
 }
+
 function m() {
     let { maxAutoClips: e, clipSignals: t } = (0, a.cf)([o.A], () => o.A.getSettings()),
         n = i.useCallback(
             (e) => {
-                l.PW(_(f({}, t), { enableGameSignals: e }));
+                l.PW(
+                    _(f({}, t), {
+                        enableGameSignals: e,
+                    }),
+                );
             },
             [t],
         ),
         d = i.useCallback(
             (e) => {
-                l.PW(_(f({}, t), { enablePhraseSignals: e }));
+                l.PW(
+                    _(f({}, t), {
+                        enablePhraseSignals: e,
+                    }),
+                );
             },
             [t],
         ),

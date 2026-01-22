@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(64700),
     i = n(311907),
     a = n(451988),
@@ -8,7 +10,8 @@ let l = 4,
     c = 4,
     u = 2,
     d = 30,
-    f = 1000;
+    f = 1e3;
+
 function p(e) {
     let { enabled: t } = e,
         n = (0, i.bG)([s.A], () => s.A.useReducedMotion),

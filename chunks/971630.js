@@ -4,6 +4,7 @@ n.d(t, {
 });
 var r = n(989349),
     i = n.n(r);
+
 function l(e, t) {
     let n = "",
         r = e >= 0;
@@ -16,6 +17,7 @@ function l(e, t) {
         }
     );
 }
+
 function s(e, t) {
     return null != e ? i()(e).format(t) : "-";
 }

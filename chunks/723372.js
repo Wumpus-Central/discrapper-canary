@@ -10,7 +10,9 @@ function r(e) {
         } else for (n in e) e[n] && (i && (i += " "), (i += n));
     return i;
 }
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 let i = function () {
     for (var e, t, n = 0, i = "", a = arguments.length; n < a; n++)
         (e = arguments[n]) && (t = r(e)) && (i && (i += " "), (i += t));

@@ -1,4 +1,6 @@
-n.d(t, { U: () => p });
+n.d(t, {
+    U: () => p,
+});
 var r = n(790525),
     i = n(726402),
     a = n(389704),
@@ -12,12 +14,14 @@ var r = n(790525),
         modifiers: [],
         strategy: "absolute",
     };
+
 function f() {
     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
     return !t.some(function (e) {
         return !(e && "function" == typeof e.getBoundingClientRect);
     });
 }
+
 function p(e) {
     void 0 === e && (e = {});
     var t = e,
@@ -107,6 +111,7 @@ function p(e) {
                 },
             };
         if (!f(e, t)) return E;
+
         function b() {
             _.orderedModifiers.forEach(function (e) {
                 var t = e.name,
@@ -125,6 +130,7 @@ function p(e) {
                 }
             });
         }
+
         function y() {
             m.forEach(function (e) {
                 return e();

@@ -1,5 +1,13 @@
 let r;
-n.d(t, { A: () => el }), n(321073), n(896048), n(264879), n(667532), n(733351), n(747238);
+n.d(t, {
+    A: () => el,
+}),
+    n(321073),
+    n(896048),
+    n(264879),
+    n(667532),
+    n(733351),
+    n(747238);
 var i,
     a = n(735438),
     s = n.n(a),
@@ -26,6 +34,7 @@ var i,
     C = n(403362),
     N = n(652215),
     R = n(985018);
+
 function w(e, t, n) {
     return (
         t in e
@@ -55,9 +64,11 @@ let P = "seenQSTutorial",
     Y = [],
     W = [],
     K = null;
+
 function z() {
     (G = y.A.getGuildCount() >= 3 || s().size(m.A.getMutablePrivateChannels()) >= 20), (Y = []);
 }
+
 function q(e) {
     let t = [];
     return (
@@ -76,10 +87,12 @@ function q(e) {
         t
     );
 }
+
 function X(e) {
     let t = (0, d.A)(e);
     return null == t || (null != V && V !== t.type) ? null : t;
 }
+
 function Z() {
     var e, t;
     let n = null != (e = S.A.getGuildId()) ? e : void 0,
@@ -170,13 +183,18 @@ function Z() {
     }
     return c.length > 0 && (i = [(0, u.jF)(R.intl.string(R.t["80lOZ1"])), ...c, ...i]), i;
 }
+
 function Q(e, t) {
     switch (V) {
         case u.rD.USER: {
             let t = y.A.getGuild(S.A.getGuildId());
             e.unshift(
                 (0, u.jF)(
-                    null != t ? R.intl.formatToPlainString(R.t.FREzQs, { name: t.name }) : R.intl.string(R.t.XFYW1o),
+                    null != t
+                        ? R.intl.formatToPlainString(R.t.FREzQs, {
+                              name: t.name,
+                          })
+                        : R.intl.string(R.t.XFYW1o),
                 ),
             ),
                 (F = e);
@@ -204,6 +222,7 @@ function Q(e, t) {
     }
     eo.emitChange();
 }
+
 function $(e) {
     var t;
     let { query: n, queryMode: i } = e,
@@ -231,11 +250,13 @@ function $(e) {
         (V = i),
         r.search(a);
 }
+
 function J(e) {
     let { channelId: t } = e;
     if (null == t) return !1;
     (W = W.filter((e) => e !== t)).unshift(t), W.length > x + 1 && (W.length = x + 1);
 }
+
 function ee(e, t) {
     if (e.length !== t.length) return !1;
     for (let n = 0; n < e.length; n++) {
@@ -245,12 +266,15 @@ function ee(e, t) {
     }
     return !0;
 }
+
 function et(e, t) {
     ee((e = "" === (t = t.trim()).trim() ? Z() : e), Y) || ((Y = e), Q(e, t));
 }
+
 function en() {
     (B = null), (H = 0), (Y = []), null != r && (r.destroy(), (r = null));
 }
+
 function er(e) {
     var t, n;
     let { query: i, queryMode: a } = e,
@@ -270,7 +294,12 @@ function er(e) {
                   !0,
               )
             : a === u.rD.VOICE_CHANNEL
-              ? r.setOptions({ voiceChannelGuildFilter: null }, !0)
+              ? r.setOptions(
+                    {
+                        voiceChannelGuildFilter: null,
+                    },
+                    !0,
+                )
               : r.setOptions(
                     {
                         userFilters: null,
@@ -284,9 +313,11 @@ function er(e) {
         r.search(s, e);
     } else r.search(s, void 0);
 }
+
 function ei(e) {
     k = e.selectedIndex;
 }
+
 function ea() {
     if (U) return !1;
     (U = !0), l.w.set(P, !0);
@@ -300,7 +331,9 @@ class es extends (i = o.Ay.PersistedStore) {
             (W = null != (t = null == e ? void 0 : e.channelHistory) ? t : []);
     }
     getState() {
-        return { channelHistory: W };
+        return {
+            channelHistory: W,
+        };
     }
     isOpen() {
         return null != r;

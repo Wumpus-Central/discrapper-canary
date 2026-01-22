@@ -1,4 +1,8 @@
-i.d(t, { default: () => $ }), i(321073), i(896048);
+i.d(t, {
+    default: () => $,
+}),
+    i(321073),
+    i(896048);
 var s = i(627968),
     l = i(64700),
     n = i(503698),
@@ -236,7 +240,9 @@ let V = (e) => {
                                     disabled: o,
                                     value: t.defaultMessageNotifications === k.orn.ONLY_MENTIONS,
                                     onChange: (e, t) => c(t),
-                                    className: a()({ [T.r9]: o }),
+                                    className: a()({
+                                        [T.r9]: o,
+                                    }),
                                     children: (0, s.jsx)(b.Text, {
                                         variant: "text-sm/normal",
                                         children: G.intl.format(G.t.K8Eg4P, {
@@ -265,7 +271,9 @@ let V = (e) => {
                                 disabled: f,
                                 value: n,
                                 onChange: (e, t) => d(t),
-                                className: a()({ [T.r9]: f }),
+                                className: a()({
+                                    [T.r9]: f,
+                                }),
                                 children: (0, s.jsx)(b.Text, {
                                     variant: "text-sm/normal",
                                     children: G.intl.format(G.t.v8qCoG, {
@@ -303,6 +311,7 @@ let V = (e) => {
             })
         );
     };
+
 function W(e) {
     let { guild: t } = e,
         { name: i, color: l } = (0, c.bG)([A.A], () => A.A.getEveryoneRole(t));
@@ -327,6 +336,7 @@ function W(e) {
         }),
     });
 }
+
 function Z(e) {
     let { enabledPermissions: t, onGetPermisisonName: i } = e;
     return (0, s.jsxs)("div", {
@@ -346,7 +356,9 @@ function Z(e) {
                         {
                             className: T.ce,
                             children: [
-                                (0, s.jsx)("div", { className: T.dT }),
+                                (0, s.jsx)("div", {
+                                    className: T.dT,
+                                }),
                                 (0, s.jsx)(b.Text, {
                                     variant: "text-sm/normal",
                                     color: "text-default",
@@ -361,6 +373,7 @@ function Z(e) {
         ],
     });
 }
+
 function J(e) {
     let { disabledPermissions: t, onGetPermisisonName: i } = e,
         l = G.intl.string(G.t.Yo5qlq);
@@ -383,7 +396,9 @@ function J(e) {
                             {
                                 className: T.ce,
                                 children: [
-                                    (0, s.jsx)("div", { className: T.xE }),
+                                    (0, s.jsx)("div", {
+                                        className: T.xE,
+                                    }),
                                     (0, s.jsx)(b.Text, {
                                         variant: "text-sm/normal",
                                         color: "text-muted",
@@ -399,6 +414,7 @@ function J(e) {
         })
     );
 }
+
 function K(e) {
     let { permissions: t } = e,
         i = (e) => {
@@ -516,10 +532,14 @@ let Q = (e) => {
                                         variant: "text-md/normal",
                                         children: G.intl.string(G.t.LfeFFr),
                                     }),
-                                    (0, s.jsx)(W, { guild: t }),
+                                    (0, s.jsx)(W, {
+                                        guild: t,
+                                    }),
                                 ],
                             }),
-                            (0, s.jsx)(K, { permissions: o }),
+                            (0, s.jsx)(K, {
+                                permissions: o,
+                            }),
                         ],
                     }),
                 }),
@@ -545,7 +565,9 @@ let Q = (e) => {
         var t;
         let { transitionState: i, onClose: n } = e;
         l.useEffect(() => {
-            M.default.track(k.HAw.OPEN_MODAL, { type: P.bK });
+            M.default.track(k.HAw.OPEN_MODAL, {
+                type: P.bK,
+            });
         }, []);
         let { guild: a } = (0, c.cf)([j.A], () => j.A.getProps()),
             d = (0, c.bG)([C.A], () => C.A.theme),
@@ -611,7 +633,10 @@ let Q = (e) => {
                             }
                             return e;
                         })({}, F)),
-                        (t = t = { permissions: s }),
+                        (t = t =
+                            {
+                                permissions: s,
+                            }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
                             : (function (e, t) {
@@ -649,13 +674,22 @@ let Q = (e) => {
                 disableContentFilter: K,
                 onAcceptVerificationLevel: (e) => {
                     e
-                        ? e && g.A.updateGuild({ verificationLevel: k.PvD.LOW })
-                        : g.A.updateGuild({ verificationLevel: D });
+                        ? e &&
+                          g.A.updateGuild({
+                              verificationLevel: k.PvD.LOW,
+                          })
+                        : g.A.updateGuild({
+                              verificationLevel: D,
+                          });
                 },
                 onAcceptContentFilter: (e) => {
                     e
-                        ? g.A.updateGuild({ explicitContentFilter: k.gh6.ALL_MEMBERS })
-                        : g.A.updateGuild({ explicitContentFilter: R });
+                        ? g.A.updateGuild({
+                              explicitContentFilter: k.gh6.ALL_MEMBERS,
+                          })
+                        : g.A.updateGuild({
+                              explicitContentFilter: R,
+                          });
                 },
                 headerId: H,
                 theme: d,
@@ -681,11 +715,19 @@ let Q = (e) => {
                       onAcceptPolicy: (e) => {
                           if (e) {
                               x(!0),
-                                  $ || g.A.updateGuild({ defaultMessageNotifications: k.orn.ONLY_MENTIONS }),
+                                  $ ||
+                                      g.A.updateGuild({
+                                          defaultMessageNotifications: k.orn.ONLY_MENTIONS,
+                                      }),
                                   u || null == F || m(!0);
                               return;
                           }
-                          x(!1), $ && g.A.updateGuild({ defaultMessageNotifications: O }), u && null != F && m(!1);
+                          x(!1),
+                              $ &&
+                                  g.A.updateGuild({
+                                      defaultMessageNotifications: O,
+                                  }),
+                              u && null != F && m(!1);
                       },
                       headerId: H,
                       theme: d,
@@ -701,8 +743,12 @@ let Q = (e) => {
                       },
                       onAcceptDefaultNotifications: (e) => {
                           e
-                              ? g.A.updateGuild({ defaultMessageNotifications: k.orn.ONLY_MENTIONS })
-                              : g.A.updateGuild({ defaultMessageNotifications: O });
+                              ? g.A.updateGuild({
+                                    defaultMessageNotifications: k.orn.ONLY_MENTIONS,
+                                })
+                              : g.A.updateGuild({
+                                    defaultMessageNotifications: O,
+                                });
                       },
                       onAcceptEveryoneRolePermissions: (e) => {
                           null != F && (e ? m(!0) : m(!1));
@@ -739,7 +785,10 @@ let Q = (e) => {
             title: G.intl.string(G.t["6U5XTu"]),
             transitionState: i,
             onClose: () => {
-                n(), M.default.track(k.HAw.MODAL_DISMISSED, { type: P.bK });
+                n(),
+                    M.default.track(k.HAw.MODAL_DISMISSED, {
+                        type: P.bK,
+                    });
             },
             completeButtonText: G.intl.string(G.t.XGl4ba),
             onComplete: X,

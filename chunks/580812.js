@@ -1,4 +1,7 @@
-n.d(t, { default: () => p }), n(896048);
+n.d(t, {
+    default: () => p,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     a = n(158954),
@@ -11,6 +14,7 @@ var r = n(627968),
     _ = n(835002),
     b = n(985018),
     O = n(383110);
+
 function p(e) {
     let { guildId: t, messageId: n, transitionState: p, onClose: A } = e,
         [f, I] = l.useState([]),

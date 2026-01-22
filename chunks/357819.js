@@ -1,4 +1,7 @@
-n.d(t, { A: () => O }), n(896048);
+n.d(t, {
+    A: () => O,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -15,6 +18,7 @@ var r = n(627968),
     g = n(763793),
     m = n(985018),
     A = n(827303);
+
 function y(e) {
     return e.type === u.wY.VOICE;
 }
@@ -154,7 +158,15 @@ let O = (0, a.A)((e) => {
         rowHeight: (e) => (null == U[e][0] ? 0 : 0 === e ? B / g.i + 8 : 1 === e ? (W ? 0 : H) : 98 * !Y),
         renderFooter: (e) => {
             let { section: t } = e;
-            return K(t) ? (0, r.jsx)("div", { className: A.jH }, "bottom-spacer") : null;
+            return K(t)
+                ? (0, r.jsx)(
+                      "div",
+                      {
+                          className: A.jH,
+                      },
+                      "bottom-spacer",
+                  )
+                : null;
         },
         footerHeight: (e) => (1 === e ? 8 : 0 === e ? 12 : 88 * !!K(e)),
         className: A.XG,

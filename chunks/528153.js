@@ -1,4 +1,7 @@
-n.d(t, { A: () => I }), n(896048);
+n.d(t, {
+    A: () => I,
+}),
+    n(896048);
 var r = n(110259),
     i = n(478437),
     a = n(451988),
@@ -17,6 +20,7 @@ var r = n(110259),
     E = n(45787),
     b = n(275759),
     y = n(788868);
+
 function O(e, t, n) {
     return (
         t in e
@@ -30,7 +34,7 @@ function O(e, t, n) {
         e
     );
 }
-let A = 1000,
+let A = 1e3,
     v = new u.A("PremiumGiftingIntentManager");
 class S extends l.A {
     isChannelEligible(e) {
@@ -66,7 +70,9 @@ class S extends l.A {
         }
     }
     sendGiftPromptMessageInSelectedChannelIfEligible(e) {
-        let { enabled: t } = g.u.getConfig({ location: "PremiumGiftingIntentManager handleChannelSelect" }),
+        let { enabled: t } = g.u.getConfig({
+                location: "PremiumGiftingIntentManager handleChannelSelect",
+            }),
             n = _.A.getChannel(e);
         if (t && null != n && this.isChannelEligible(n)) {
             let e = new Set(n.recipients),

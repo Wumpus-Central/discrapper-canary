@@ -1,7 +1,10 @@
-n.d(t, { s: () => s });
+n.d(t, {
+    s: () => s,
+});
 var r = n(966209),
     i = n(260431),
     a = n(404108);
+
 function s(e, t, n) {
     var s, o;
     let { node: l, isVirtualized: c, shouldSelectOnPressUp: u, onAction: d } = e,

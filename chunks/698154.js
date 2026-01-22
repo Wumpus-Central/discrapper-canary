@@ -1,4 +1,7 @@
-n.d(t, { A: () => A }), n(896048);
+n.d(t, {
+    A: () => A,
+}),
+    n(896048);
 var l = n(627968),
     i = n(64700),
     a = n(503698),
@@ -20,6 +23,7 @@ var l = n(627968),
     y = n(652215),
     w = n(985018),
     N = n(485516);
+
 function O(e) {
     let { availableSlots: t, className: n } = e;
     return (0, l.jsxs)(o.Text, {
@@ -32,10 +36,13 @@ function O(e) {
                 color: "currentColor",
                 className: N.Xk,
             }),
-            w.intl.format(w.t["8Dyg1C"], { slots: t }),
+            w.intl.format(w.t["8Dyg1C"], {
+                slots: t,
+            }),
         ],
     });
 }
+
 function A(e) {
     let t,
         { label: n, value: a, className: o, onChange: A } = e,
@@ -76,7 +83,9 @@ function A(e) {
                 null == e || "" === e.value
                     ? null
                     : (0, l.jsx)(c.A, {
-                          className: r()(N.cl, { [N.QJ]: e.disabled }),
+                          className: r()(N.cl, {
+                              [N.QJ]: e.disabled,
+                          }),
                           guild: C[e.value],
                           size: c.A.Sizes.SMOL,
                           active: !0,
@@ -89,7 +98,9 @@ function A(e) {
                 return null == t || "" === t
                     ? null
                     : (0, l.jsx)(O, {
-                          className: r()({ [N.QJ]: null == e ? void 0 : e.disabled }),
+                          className: r()({
+                              [N.QJ]: null == e ? void 0 : e.disabled,
+                          }),
                           availableSlots: S[t],
                       });
             },
@@ -98,7 +109,9 @@ function A(e) {
         k = i.useCallback(
             (e) =>
                 (0, l.jsx)("div", {
-                    className: r()({ [N.QJ]: e.disabled }),
+                    className: r()({
+                        [N.QJ]: e.disabled,
+                    }),
                     children: e.label,
                 }),
             [],

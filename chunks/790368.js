@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968);
 n(64700);
 var l = n(827734),
@@ -11,6 +13,7 @@ var l = n(827734),
     d = n(652215),
     f = n(985018),
     p = n(824426);
+
 function h(e) {
     let { closePopout: t } = e,
         n = (0, c.kX)();
@@ -21,8 +24,12 @@ function h(e) {
             "aria-label": "".concat(f.intl.string(f.t["lMR96+"]), ", ").concat(n),
             className: p.b,
             onClick: () => {
-                u.default.track(d.HAw.NOTIFICATION_CENTER_ACTION, { action_type: o.e1.FRIEND_REQUESTS_BUTTON_CLICK }),
-                    s.A.transitionToSection(d.m3P.PENDING, { explicit: !0 }),
+                u.default.track(d.HAw.NOTIFICATION_CENTER_ACTION, {
+                    action_type: o.e1.FRIEND_REQUESTS_BUTTON_CLICK,
+                }),
+                    s.A.transitionToSection(d.m3P.PENDING, {
+                        explicit: !0,
+                    }),
                     t();
             },
             children: [

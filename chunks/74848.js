@@ -19,6 +19,7 @@ var r = n(64700),
     d = n(835498),
     f = n(731854),
     p = n(985018);
+
 function _(e, t, n) {
     return (
         t in e
@@ -32,6 +33,7 @@ function _(e, t, n) {
         e
     );
 }
+
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -48,6 +50,7 @@ function h(e) {
     }
     return e;
 }
+
 function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -60,6 +63,7 @@ function m(e, t) {
     }
     return n;
 }
+
 function g(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -71,6 +75,7 @@ function g(e, t) {
         e
     );
 }
+
 function E(e) {
     return {
         [f.oh.AUDIO_INPUT]: {
@@ -96,6 +101,7 @@ function E(e) {
         },
     }[e];
 }
+
 function b() {
     return (0, u.isWindows)()
         ? p.intl.string(p.t.n4dQ2c)
@@ -103,28 +109,39 @@ function b() {
           ? p.intl.string(p.t.aYrsiB)
           : p.intl.string(p.t.Q3YKwS);
 }
+
 function y(e, t) {
     let { getNoDevicesMessage: n } = E(e);
     return t.disabled ? n() : t.name.replace(f.vt, b());
 }
+
 function O(e) {
     var t;
     return null == (t = new RegExp("^(?<prefix>".concat(b(), ") \\((?<subName>.+)\\)$")).exec(e)) ? void 0 : t.groups;
 }
+
 function A(e) {
     let { getRawDevices: t } = E(e),
         n = (0, a.bG)([l.A], () => t(l.A));
     return (0, r.useMemo)(() => {
         let t = h({}, n),
             r = t[f.dx];
-        return null != r && (t[f.dx] = g(h({}, r), { name: y(e, r) })), t;
+        return (
+            null != r &&
+                (t[f.dx] = g(h({}, r), {
+                    name: y(e, r),
+                })),
+            t
+        );
     }, [e, n]);
 }
+
 function v(e) {
     let t = A(e),
         { getCurrentDeviceId: n } = E(e);
     return t[(0, a.bG)([l.A], () => n(l.A))];
 }
+
 function S(e, t) {
     let {} = t,
         n = A(e),
@@ -143,6 +160,7 @@ function S(e, t) {
             : [(0, i.union)(a, [u], s), d].map(t);
     }, [n, e, l, u]);
 }
+
 function I(e) {
     var t, n;
     let { getCurrentDeviceId: r, getSelectedDeviceId: i } = E(e),

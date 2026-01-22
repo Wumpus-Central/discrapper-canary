@@ -1,10 +1,13 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(417597),
     l = n(524799),
     i = n(585958),
     a = n(760751),
     s = n(486020),
     o = n(985018);
+
 function c(e) {
     var t;
     let { coverImageUrl: n, localizedName: c, isFetching: u } = (0, i.n)(e),

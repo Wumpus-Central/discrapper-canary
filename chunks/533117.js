@@ -1,4 +1,8 @@
-n.d(t, { A: () => _ }), n(321073), n(896048);
+n.d(t, {
+    A: () => _,
+}),
+    n(321073),
+    n(896048);
 var l,
     r = n(311907),
     i = n(73153),
@@ -7,6 +11,7 @@ var l,
     o = n(690521),
     c = n(134753),
     u = n(666717);
+
 function d(e, t, n) {
     return (
         t in e
@@ -20,6 +25,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,6 +48,7 @@ let p = {},
     g = {},
     m = !0,
     h = null;
+
 function A(e) {
     if (null == b[e]) {
         let t = s.default.getUser(e);
@@ -103,7 +110,10 @@ let _ = new y(i.h, {
         let { emojiHose: s, streamerId: u, userId: d } = e,
             b =
                 ((r = f({}, s)),
-                (i = i = { type: c.Z.EMOJI_HOSE }),
+                (i = i =
+                    {
+                        type: c.Z.EMOJI_HOSE,
+                    }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
                     : (function (e, t) {

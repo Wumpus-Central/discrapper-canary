@@ -6,6 +6,7 @@ var r = n(195554),
     l = n(267795),
     c = n(236525),
     u = Object.prototype.toString;
+
 function d(e) {
     if (!(this instanceof d)) return new d(e);
     this.options = i.assign(
@@ -33,11 +34,13 @@ function d(e) {
     if (n !== s.Z_OK) throw Error(o[n]);
     (this.header = new c()), r.inflateGetHeader(this.strm, this.header);
 }
+
 function f(e, t) {
     var n = new d(t);
     if ((n.push(e, !0), n.err)) throw n.msg || o[n.err];
     return n.result;
 }
+
 function p(e, t) {
     return ((t = t || {}).raw = !0), f(e, t);
 }

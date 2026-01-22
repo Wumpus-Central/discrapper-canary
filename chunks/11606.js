@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968);
 n(64700);
 var l = n(503698),
@@ -7,6 +9,7 @@ var l = n(503698),
     s = n(397927),
     c = n(985018),
     o = n(837368);
+
 function d(e) {
     var t, n, l;
     let { product: d, isDarkText: u = !1, isOrbExclusive: m = !1, rentalDuration: f } = e,

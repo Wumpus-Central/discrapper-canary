@@ -23,6 +23,7 @@ var r = n(627968),
     h = n(307731),
     j = n(985018),
     O = n(790943);
+
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -48,6 +49,7 @@ function y(e) {
     }
     return e;
 }
+
 function v(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -66,6 +68,7 @@ function v(e, t) {
         e
     );
 }
+
 function A(e) {
     let { guildId: t, emojiData: n, onSelectEmoji: l } = e,
         s = i.useRef(null),
@@ -154,6 +157,7 @@ function A(e) {
         })
     );
 }
+
 function E(e) {
     var t;
     let {
@@ -174,6 +178,7 @@ function E(e) {
             name: null == l ? void 0 : l.emoji_name,
         })),
         v = d && "" !== x && (null != O.id || null != O.name);
+
     function E(e) {
         e.preventDefault(),
             v &&
@@ -241,6 +246,7 @@ function E(e) {
         })
     );
 }
+
 function N(e) {
     let { guildId: t, omitChannelIds: n, initialData: l, onSave: a, onDelete: c, transitionState: d, onClose: f } = e,
         [g, b] = i.useState(null == l ? void 0 : l.ref_id),
@@ -272,13 +278,19 @@ function N(e) {
         descriptionPlaceholder: j.intl.string(j.t.J8O1Lp),
         canSubmit: null != g,
         onSave: function (e) {
-            s()(null != g, "Cannot submit null channel"), a(v(y({}, e), { channelId: g }));
+            s()(null != g, "Cannot submit null channel"),
+                a(
+                    v(y({}, e), {
+                        channelId: g,
+                    }),
+                );
         },
         transitionState: d,
         onClose: f,
         onDelete: c,
     });
 }
+
 function _(e) {
     var t;
     let { initialData: n, onSave: l, transitionState: a, onClose: c, onDelete: d, guildId: f } = e,
@@ -301,7 +313,12 @@ function _(e) {
         descriptionPlaceholder: j.intl.string(j.t.ucP4Tt),
         canSubmit: "" !== g,
         onSave: function (e) {
-            s()("" !== g, "Cannot submit empty name"), l(v(y({}, e), { name: g }));
+            s()("" !== g, "Cannot submit empty name"),
+                l(
+                    v(y({}, e), {
+                        name: g,
+                    }),
+                );
         },
         transitionState: a,
         onClose: c,

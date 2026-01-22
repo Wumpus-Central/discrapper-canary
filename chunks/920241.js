@@ -9,10 +9,12 @@ var n = r(627968),
     i = r(311907),
     u = r(871109);
 let a = o.createContext(void 0);
+
 function s() {
     let e = o.useContext(a);
     return c()(null != e, "GuildProductPurchaseContext not found"), e;
 }
+
 function p(e) {
     let { children: t, guildProductListingId: r } = e,
         o = (function (e, t) {
@@ -74,7 +76,12 @@ function p(e) {
                         });
                 }
                 return e;
-            })({ guildProductListing: l }, o),
+            })(
+                {
+                    guildProductListing: l,
+                },
+                o,
+            ),
             children: t,
         })
     );

@@ -1,4 +1,6 @@
-t.d(l, { A: () => v });
+t.d(l, {
+    A: () => v,
+});
 var n = t(627968);
 t(64700);
 var i = t(503698),
@@ -16,6 +18,7 @@ var i = t(503698),
     A = t(488995),
     j = t(985018),
     h = t(882119);
+
 function g(e) {
     let { applicationRoleConnection: l, locale: t, onApplicationClicked: i, selectedGuildId: r } = e,
         s = (0, d.VW)(l, t);
@@ -45,7 +48,9 @@ function g(e) {
                                     tab: A.GlobalDiscoveryTab.APPS,
                                     applicationId: l.application.id,
                                     newSessionState: {
-                                        entrypoint: { name: u.sW.APPLICATION_DIRECTORY_URL },
+                                        entrypoint: {
+                                            name: u.sW.APPLICATION_DIRECTORY_URL,
+                                        },
                                         guildId: r,
                                     },
                                 });
@@ -69,7 +74,9 @@ function g(e) {
                                 variant: "text-xxs/normal",
                                 color: "text-default",
                                 className: h.nk,
-                                children: j.intl.format(j.t.zIT9YA, { applicationHook: () => l.application.name }),
+                                children: j.intl.format(j.t.zIT9YA, {
+                                    applicationHook: () => l.application.name,
+                                }),
                             }),
                         ],
                     }),
@@ -84,6 +91,7 @@ function g(e) {
         ],
     });
 }
+
 function v(e) {
     let { applicationRoleConnections: l, className: t, onClose: i } = e,
         { trackUserProfileAction: a } = (0, x.NJ)(),
@@ -102,7 +110,10 @@ function v(e) {
                               applicationRoleConnection: e,
                               locale: o,
                               onApplicationClicked: () => {
-                                  a({ action: "PRESS_APP_CONNECTION" }), i();
+                                  a({
+                                      action: "PRESS_APP_CONNECTION",
+                                  }),
+                                      i();
                               },
                               selectedGuildId: null != d ? d : void 0,
                           }),

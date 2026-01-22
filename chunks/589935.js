@@ -1,4 +1,7 @@
-n.d(t, { Ay: () => k }), n(733351);
+n.d(t, {
+    Ay: () => k,
+}),
+    n(733351);
 var l = n(627968),
     r = n(64700),
     a = n(503698),
@@ -24,6 +27,7 @@ var l = n(627968),
     b = n(11541),
     G = n(985018),
     R = n(745483);
+
 function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -49,6 +53,7 @@ function D(e) {
     }
     return e;
 }
+
 function L(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -167,7 +172,11 @@ let x = r.memo(function () {
         [b.UP.MANUAL_MEMBER_VERIFICATION]: {
             type: b.UP.MANUAL_MEMBER_VERIFICATION,
             getJoinTypeLabel: (e) =>
-                null != e ? G.intl.formatToPlainString(G.t["VHLp+u"], { code: e }) : G.intl.string(G.t.vdu7oS),
+                null != e
+                    ? G.intl.formatToPlainString(G.t["VHLp+u"], {
+                          code: e,
+                      })
+                    : G.intl.string(G.t.vdu7oS),
             icon: (0, l.jsx)(N.A, {
                 height: 12,
                 width: 12,
@@ -186,6 +195,7 @@ let x = r.memo(function () {
             hasTooltip: !0,
         },
     };
+
 function v(e) {
     var t, n;
     let { guildId: a, inviterUser: o, joinSourceType: u, className: d, onClickInviter: _ } = e,
@@ -231,6 +241,7 @@ function v(e) {
               ],
           });
 }
+
 function j(e) {
     let { channel: t, className: n } = e,
         r = (0, _.Ay)(t, !0);
@@ -238,10 +249,13 @@ function j(e) {
         className: i()(R.kp, n),
         children: (0, l.jsx)(c.Text, {
             variant: "text-xs/medium",
-            children: G.intl.format(G.t["2VQq2p"], { channelName: null != r ? r : G.intl.string(G.t.zLZPmk) }),
+            children: G.intl.format(G.t["2VQq2p"], {
+                channelName: null != r ? r : G.intl.string(G.t.zLZPmk),
+            }),
         }),
     });
 }
+
 function U(e) {
     let { children: t, hasTooltip: n, guildId: a, inviterUser: i, joinSourceType: c, joinSourceChannelId: u } = e,
         E = (0, s.bG)([f.A], () => f.A.getChannel(u)),
@@ -250,7 +264,9 @@ function U(e) {
         A = r.useMemo(
             () =>
                 c === b.UP.SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL
-                    ? (0, l.jsx)(j, { channel: E })
+                    ? (0, l.jsx)(j, {
+                          channel: E,
+                      })
                     : (0, l.jsx)(v, {
                           guildId: a,
                           inviterUser: i,
@@ -261,7 +277,9 @@ function U(e) {
     if (!g) return t;
     let T =
         c === b.UP.SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL
-            ? G.intl.formatToPlainString(G.t["2VQq2p"], { channelName: null != d ? d : G.intl.string(G.t.zLZPmk) })
+            ? G.intl.formatToPlainString(G.t["2VQq2p"], {
+                  channelName: null != d ? d : G.intl.string(G.t.zLZPmk),
+              })
             : c === b.UP.BOT
               ? G.intl.string(G.t["2ByN2n"])
               : G.intl.string(G.t.azhY2u);
@@ -271,6 +289,7 @@ function U(e) {
         children: t,
     });
 }
+
 function y(e) {
     let { type: t } = e,
         n = (0, b.eN)(t);
@@ -285,6 +304,7 @@ function y(e) {
               },
           });
 }
+
 function P(e) {
     let {
             sourceInviteCode: t,
@@ -372,19 +392,29 @@ function P(e) {
         case null != o && O:
             return (0, l.jsxs)(
                 c.DUT,
-                L(D({ className: R.B$ }, h), {
-                    "aria-label": (0, b.v8)(o),
-                    role: "button",
-                    tabIndex: 0,
-                    onClick: S,
-                    children: [
-                        (0, l.jsx)(y, { type: o }),
-                        (0, l.jsx)(c.Text, {
-                            variant: "text-sm/medium",
-                            children: (0, b.v8)(o),
-                        }),
-                    ],
-                }),
+                L(
+                    D(
+                        {
+                            className: R.B$,
+                        },
+                        h,
+                    ),
+                    {
+                        "aria-label": (0, b.v8)(o),
+                        role: "button",
+                        tabIndex: 0,
+                        onClick: S,
+                        children: [
+                            (0, l.jsx)(y, {
+                                type: o,
+                            }),
+                            (0, l.jsx)(c.Text, {
+                                variant: "text-sm/medium",
+                                children: (0, b.v8)(o),
+                            }),
+                        ],
+                    },
+                ),
             );
         case n === b.UP.SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL && null != N:
             return (0, l.jsxs)("div", {
@@ -392,25 +422,36 @@ function P(e) {
                 children: [
                     (0, l.jsxs)(
                         c.DUT,
-                        L(D({ className: R.SH }, h), {
-                            "aria-label": null == I ? void 0 : I.getJoinTypeLabel(null != t ? t : void 0),
-                            role: "button",
-                            tabIndex: 0,
-                            onClick: S,
-                            children: [
-                                (0, l.jsx)(g.A, {
-                                    game: N,
-                                    size: g.M.XXSMALL,
-                                }),
-                                (0, l.jsx)(c.Text, {
-                                    variant: "text-sm/medium",
-                                    className: R.YL,
-                                    children: N.name,
-                                }),
-                            ],
-                        }),
+                        L(
+                            D(
+                                {
+                                    className: R.SH,
+                                },
+                                h,
+                            ),
+                            {
+                                "aria-label": null == I ? void 0 : I.getJoinTypeLabel(null != t ? t : void 0),
+                                role: "button",
+                                tabIndex: 0,
+                                onClick: S,
+                                children: [
+                                    (0, l.jsx)(g.A, {
+                                        game: N,
+                                        size: g.M.XXSMALL,
+                                    }),
+                                    (0, l.jsx)(c.Text, {
+                                        variant: "text-sm/medium",
+                                        className: R.YL,
+                                        children: N.name,
+                                    }),
+                                ],
+                            },
+                        ),
                     ),
-                    E && (0, l.jsx)(j, { channel: m }),
+                    E &&
+                        (0, l.jsx)(j, {
+                            channel: m,
+                        }),
                 ],
             });
         case null != I:
@@ -419,19 +460,27 @@ function P(e) {
                 children: [
                     (0, l.jsxs)(
                         c.DUT,
-                        L(D({ className: R.B$ }, h), {
-                            "aria-label": null == I ? void 0 : I.getJoinTypeLabel(null != t ? t : void 0),
-                            role: "button",
-                            tabIndex: 0,
-                            onClick: S,
-                            children: [
-                                null == I ? void 0 : I.icon,
-                                (0, l.jsx)(c.Text, {
-                                    variant: "text-sm/medium",
-                                    children: null == I ? void 0 : I.getJoinTypeLabel(null != t ? t : void 0),
-                                }),
-                            ],
-                        }),
+                        L(
+                            D(
+                                {
+                                    className: R.B$,
+                                },
+                                h,
+                            ),
+                            {
+                                "aria-label": null == I ? void 0 : I.getJoinTypeLabel(null != t ? t : void 0),
+                                role: "button",
+                                tabIndex: 0,
+                                onClick: S,
+                                children: [
+                                    null == I ? void 0 : I.icon,
+                                    (0, l.jsx)(c.Text, {
+                                        variant: "text-sm/medium",
+                                        children: null == I ? void 0 : I.getJoinTypeLabel(null != t ? t : void 0),
+                                    }),
+                                ],
+                            },
+                        ),
                     ),
                     E &&
                         (0, l.jsx)(v, {
@@ -454,7 +503,11 @@ let k = r.memo(function (e) {
         d = null != (t = null == E ? void 0 : E.inviterId) ? t : null,
         _ = (0, s.bG)([O.default], () => O.default.getUser(d), [d]);
     r.useEffect(() => {
-        null != d && (u.A.requestMembersById(i, [d]), (0, T.A)(d, void 0, { guildId: i }));
+        null != d &&
+            (u.A.requestMembersById(i, [d]),
+            (0, T.A)(d, void 0, {
+                guildId: i,
+            }));
     }, [i, d]);
     let g = (0, s.bG)([I.A], () => I.A.hideInstantInvites, []);
     if (null == E) return (0, l.jsx)(x, {});

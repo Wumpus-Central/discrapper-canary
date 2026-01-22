@@ -1,4 +1,6 @@
-n.d(t, { p: () => i });
+n.d(t, {
+    p: () => i,
+});
 let r = new Map();
 class i {
     format(e) {
@@ -24,7 +26,7 @@ class i {
             })),
             {
                 type: "literal",
-                value: " \u2013 ",
+                value: " – ",
                 source: "shared",
             },
             ...r.map((e) => ({
@@ -49,12 +51,22 @@ class i {
     }
 }
 let a = {
-    true: { ja: "h11" },
+    true: {
+        ja: "h11",
+    },
     false: {},
 };
+
 function s(e, t = {}) {
     if ("boolean" == typeof t.hour12 && l()) {
-        let n = a[String((t = { ...t }).hour12)][e.split("-")[0]],
+        let n =
+                a[
+                    String(
+                        (t = {
+                            ...t,
+                        }).hour12,
+                    )
+                ][e.split("-")[0]],
             r = t.hour12 ? "h12" : "h23";
         (t.hourCycle = null != n ? n : r), delete t.hour12;
     }
@@ -70,6 +82,7 @@ function s(e, t = {}) {
     return r.set(n, i), i;
 }
 let o = null;
+
 function l() {
     return (
         null == o &&
@@ -83,6 +96,7 @@ function l() {
     );
 }
 let c = null;
+
 function u() {
     return (
         null == c &&
@@ -95,6 +109,7 @@ function u() {
         c
     );
 }
+
 function d(e, t) {
     if (!t.timeStyle && !t.hour) return;
     e = e.replace(/(-u-)?-nu-[a-zA-Z0-9]+/, "");

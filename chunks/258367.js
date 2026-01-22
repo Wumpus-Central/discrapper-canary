@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(64700),
     l = n(311907),
     i = n(256311),
@@ -9,6 +11,7 @@ var r = n(64700),
     u = n(942366),
     d = n(343328),
     f = n(652215);
+
 function p(e) {
     let t = (0, u.A)(e),
         n = (0, l.bG)([a.default], () => a.default.locale),
@@ -41,7 +44,7 @@ function p(e) {
                     null != p &&
                     null != e &&
                     (o.default.track(f.HAw.CHANGE_LOG_CLOSED, {
-                        seconds_open: Math.round((Date.now() - e) / 1000),
+                        seconds_open: Math.round((Date.now() - e) / 1e3),
                         change_log_id: "".concat(p.date, ":").concat(p.revision),
                         unread_count: m.current,
                     }),

@@ -1,4 +1,6 @@
-n.d(t, { A: () => y });
+n.d(t, {
+    A: () => y,
+});
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -15,6 +17,7 @@ var r = n(627968),
     g = n(333354),
     m = n(985018),
     A = n(294590);
+
 function y(e) {
     var t, n;
     let { guildId: i, powerup: y, compact: O, iconSize: j, size: v, grow: x, className: E, onError: _ } = e,
@@ -46,7 +49,9 @@ function y(e) {
                       return e.type === b.b_.POWERUP_ACTIVATED
                           ? {
                                 title: m.intl.string(g.default.TZsu1U),
-                                body: m.intl.formatToPlainString(g.default["5HQUzD"], { boostCount: t.cost }),
+                                body: m.intl.formatToPlainString(g.default["5HQUzD"], {
+                                    boostCount: t.cost,
+                                }),
                             }
                           : null;
                   })(w, y);
@@ -85,7 +90,7 @@ function y(e) {
                                       dotHook: () =>
                                           (0, r.jsx)("span", {
                                               className: A.Om,
-                                              children: "\u2022",
+                                              children: "•",
                                           }),
                                       boostIconHook: () =>
                                           (0, r.jsx)(s, {
@@ -141,7 +146,11 @@ function y(e) {
                                 text: e,
                                 minWidth: 0,
                             },
-                            O ? { icon: t } : {},
+                            O
+                                ? {
+                                      icon: t,
+                                  }
+                                : {},
                         ),
                     );
                 })(),

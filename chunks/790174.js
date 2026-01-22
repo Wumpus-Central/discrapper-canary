@@ -1,7 +1,10 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(627968),
     i = n(397927),
     a = n(790114);
+
 function s(e) {
     let { title: t, className: n, children: s } = e,
         o = (0, a.A)() ? void 0 : t;

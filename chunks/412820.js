@@ -1,4 +1,7 @@
-n.d(t, { A: () => _ }), n(896048);
+n.d(t, {
+    A: () => _,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -10,6 +13,7 @@ var r = n(627968),
     d = n(159001),
     f = n(833336),
     p = n(985018);
+
 function _() {
     let e = (0, a.bG)([f.A], () => f.A.getIsSubmitDisabled()),
         t = (0, a.bG)([f.A], () => f.A.getGuild()),

@@ -13,6 +13,7 @@ var i = n(158954),
     u = n(999784),
     d = n(985018),
     f = n(208555);
+
 function p(e, t, n) {
     return (
         t in e
@@ -26,6 +27,7 @@ function p(e, t, n) {
         e
     );
 }
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,6 +44,7 @@ function _(e) {
     }
     return e;
 }
+
 function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -54,6 +57,7 @@ function h(e, t) {
     }
     return n;
 }
+
 function m(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -94,8 +98,21 @@ let E = (e) => {
                 text: a,
             };
         return 2 === n
-            ? (0, r.jsx)(s.$nd, _({ variant: "expressive" }, u))
-            : (0, r.jsx)(s.$nd, m(_({}, u), { variant: 0 === n ? "primary" : "active" }));
+            ? (0, r.jsx)(
+                  s.$nd,
+                  _(
+                      {
+                          variant: "expressive",
+                      },
+                      u,
+                  ),
+              )
+            : (0, r.jsx)(
+                  s.$nd,
+                  m(_({}, u), {
+                      variant: 0 === n ? "primary" : "active",
+                  }),
+              );
     },
     b = (e) => {
         let {
@@ -128,7 +145,12 @@ let E = (e) => {
                           asContainer: !0,
                           children: (0, r.jsx)(E, _({}, e)),
                       })
-                    : (0, r.jsx)(E, m(_({}, e), { onPrimary: A }));
+                    : (0, r.jsx)(
+                          E,
+                          m(_({}, e), {
+                              onPrimary: A,
+                          }),
+                      );
             },
             I = () =>
                 null == t

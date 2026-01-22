@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var i = n(627968);
 n(64700);
 var r = n(684013),
@@ -10,6 +12,7 @@ var r = n(684013),
     d = n(672396),
     u = n(985018);
 let h = (e) => (0, s.sI)(e, (0, c.J)(), u.t["z8/sgJ"]);
+
 function p(e) {
     let { type: t } = e,
         {
@@ -40,7 +43,9 @@ function p(e) {
             },
             e,
         ),
-        { trackView: y, trackClick: A } = (0, c.Y)(g, { notif_type: g });
+        { trackView: y, trackClick: A } = (0, c.Y)(g, {
+            notif_type: g,
+        });
     return {
         icon: s,
         title: p,

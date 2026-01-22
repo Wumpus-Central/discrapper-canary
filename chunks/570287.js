@@ -19,6 +19,7 @@ let u = (e, t) => {
         (i.A.getGameFriendsForUser(e).length > 0 && s.Zk.getSetting())
     );
 };
+
 function d(e, t) {
     let n = (0, r.bG)([o.default], () => o.default.getId() === e),
         u = (0, r.bG)([a.A], () => null != t && a.A.isLurking(t)),

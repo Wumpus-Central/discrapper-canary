@@ -1,4 +1,7 @@
-n.d(t, { A: () => B }), n(896048);
+n.d(t, {
+    A: () => B,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -38,6 +41,7 @@ var r = n(627968),
     U = n(256366),
     V = n(233080),
     F = n(165180);
+
 function H(e) {
     let { channel: t } = e,
         i = t.isArchivedThread(),
@@ -75,12 +79,13 @@ function H(e) {
           })
         : null;
 }
+
 function B(e) {
     let { postId: t, isFirstMessage: n, isLastItem: i = !1, parentChannelId: o } = e,
         { ref: x, width: E } = (0, p.Ay)(),
         [C, k] = l.useState(3),
         [B, K] = l.useState(!n),
-        [W, z] = (0, h.A)(!1, 2000),
+        [W, z] = (0, h.A)(!1, 2e3),
         Y = (0, s.bG)([T.A], () => T.A.getChannel(t), [t]),
         { firstMessage: q } = (0, D.OA)(Y),
         X = (0, s.bG)([I.A], () => I.A.hasJoined(t)),
@@ -109,7 +114,9 @@ function B(e) {
     l.useLayoutEffect(() => {
         let e = x.current;
         if (null == e || !n) return;
-        let t = new IntersectionObserver(ei, { threshold: 1 });
+        let t = new IntersectionObserver(ei, {
+            threshold: 1,
+        });
         return (
             t.observe(e),
             () => {
@@ -129,7 +136,9 @@ function B(e) {
         ec = () => {
             (0, M.jC)({
                 postId: Y.id,
-                location: { section: L.JJy.CHANNEL_HEADER },
+                location: {
+                    section: L.JJy.CHANNEL_HEADER,
+                },
             }),
                 (0, w.C)((0, P.af)(Y, en), () => z(!0));
         },
@@ -137,7 +146,9 @@ function B(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)("div", {
-                className: a()(U.kL, { [U.wx]: B }),
+                className: a()(U.kL, {
+                    [U.wx]: B,
+                }),
                 ref: x,
                 children: [
                     et
@@ -149,7 +160,9 @@ function B(e) {
                               }),
                           })
                         : (0, r.jsxs)("div", {
-                              className: a()(U.hY, { [U.Lq]: ea }),
+                              className: a()(U.hY, {
+                                  [U.Lq]: ea,
+                              }),
                               children: [
                                   !eo &&
                                       !Q &&
@@ -192,7 +205,9 @@ function B(e) {
                                           message: q,
                                           channel: Y,
                                           useChatFontScaling: !1,
-                                          className: a()(F.secondary, U.vU, { [U.w$]: !eo }),
+                                          className: a()(F.secondary, U.vU, {
+                                              [U.w$]: !eo,
+                                          }),
                                           isForumToolbar: !0,
                                           children: !eo && G.intl.string(G.t.xpOyTO),
                                       }),
@@ -202,7 +217,9 @@ function B(e) {
                         className: U.Uo,
                         children: [
                             et
-                                ? (0, r.jsx)(H, { channel: Y })
+                                ? (0, r.jsx)(H, {
+                                      channel: Y,
+                                  })
                                 : !Z &&
                                   (0, r.jsx)(c.m, {
                                       text: G.intl.string(G.t.F7oeDv),
@@ -258,7 +275,10 @@ function B(e) {
                     }),
                 ],
             }),
-            el && (0, r.jsx)(g.A, { threadId: t }),
+            el &&
+                (0, r.jsx)(g.A, {
+                    threadId: t,
+                }),
             (0, r.jsx)(O.A, {
                 channel: Y,
                 isLastItem: i,

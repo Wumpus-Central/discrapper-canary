@@ -1,4 +1,6 @@
-l.d(n, { A: () => O });
+l.d(n, {
+    A: () => O,
+});
 var t = l(627968),
     a = l(64700),
     r = l(417597),
@@ -140,6 +142,14 @@ let v = a.memo(function (e) {
         let { guild: n, isNewMember: l } = e;
         return (0, t.jsxs)("aside", {
             className: p.pz,
-            children: [(0, t.jsx)(v, { guild: n }), l && (0, t.jsx)(N, { guild: n })],
+            children: [
+                (0, t.jsx)(v, {
+                    guild: n,
+                }),
+                l &&
+                    (0, t.jsx)(N, {
+                        guild: n,
+                    }),
+            ],
         });
     });

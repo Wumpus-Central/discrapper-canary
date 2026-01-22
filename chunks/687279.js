@@ -1,10 +1,13 @@
-t.d(l, { A: () => c });
+t.d(l, {
+    A: () => c,
+});
 var i = t(627968);
 t(64700);
 var e = t(397927),
     a = t(957565),
     r = t(886393),
     s = t(985018);
+
 function c(n, l, t) {
     return null != n
         ? (0, r.A)(n, t, l)

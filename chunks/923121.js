@@ -18,18 +18,21 @@ var r = n(73153),
     c = n(107795),
     o = n(539916),
     d = n(985018);
+
 function u(e) {
     r.h.dispatch({
         type: "GUILD_SETTINGS_ONBOARDING_CONNECTIONS_ADD",
         connection: e,
     });
 }
+
 function f(e) {
     r.h.dispatch({
         type: "GUILD_SETTINGS_ONBOARDING_CONNECTIONS_REMOVE",
         index: e,
     });
 }
+
 function g(e, t) {
     r.h.dispatch({
         type: "GUILD_SETTINGS_ONBOARDING_CONNECTIONS_UPDATE",
@@ -37,14 +40,18 @@ function g(e, t) {
         updates: t,
     });
 }
+
 function b(e) {
     r.h.dispatch({
         type: "GUILD_SETTINGS_ONBOARDING_CONNECTIONS_REORDER",
         connections: e,
     });
 }
+
 function m() {
-    r.h.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_CONNECTIONS_RESET" });
+    r.h.dispatch({
+        type: "GUILD_SETTINGS_ONBOARDING_CONNECTIONS_RESET",
+    });
 }
 async function p(e) {
     var t, n, u;
@@ -65,9 +72,13 @@ async function p(e) {
             }),
             Error("failed to validate connections"))
         );
-    r.h.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_CONNECTIONS_SUBMIT" });
+    r.h.dispatch({
+        type: "GUILD_SETTINGS_ONBOARDING_CONNECTIONS_SUBMIT",
+    });
     try {
-        await (0, c.YN)(e, { connections: f }),
+        await (0, c.YN)(e, {
+            connections: f,
+        }),
             (t = e),
             (n = f),
             r.h.dispatch({
@@ -88,12 +99,14 @@ async function p(e) {
         );
     }
 }
+
 function x(e) {
     r.h.dispatch({
         type: "GUILD_SETTINGS_ONBOARDING_CONNECTIONS_SAVE_FAILED",
         errors: e,
     });
 }
+
 function h(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return t || a.A.hasChanges() ? p(e) : Promise.resolve();

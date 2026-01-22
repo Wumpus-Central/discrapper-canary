@@ -13,6 +13,7 @@ var r = n(627968),
     d = n(652215);
 n(811233);
 var f = n(985018);
+
 function p(e, t, n) {
     return (
         t in e
@@ -26,6 +27,7 @@ function p(e, t, n) {
         e
     );
 }
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,6 +44,7 @@ function _(e) {
     }
     return e;
 }
+
 function h(e, t) {
     if (null == e) return {};
     var n,
@@ -58,6 +61,7 @@ function h(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function m(e, t) {
     if (null == e) return {};
     var n,
@@ -74,7 +78,16 @@ async function g(e) {
     if (null == c.A.getSavedMessage(p.channelId, p.messageId) && !(0, u.A)())
         return void (0, i.mMO)(async () => {
             let { default: e } = await n.e("22540").then(n.bind(n, 530951));
-            return (t) => (0, r.jsx)(e, _({ source: s.A.FOR_LATER_HELPERS }, t));
+            return (t) =>
+                (0, r.jsx)(
+                    e,
+                    _(
+                        {
+                            source: s.A.FOR_LATER_HELPERS,
+                        },
+                        t,
+                    ),
+                );
         });
     if (
         null !=
@@ -84,7 +97,9 @@ async function g(e) {
                     (null == e || null == (n = e.body) ? void 0 : n.code) === d.t02.TOO_MANY_SAVED_MESSAGES
                         ? a.A.show({
                               title: f.intl.string(f.t.mlbiZW),
-                              body: f.intl.formatToPlainString(f.t["1zVbEG"], { max: 200 }),
+                              body: f.intl.formatToPlainString(f.t["1zVbEG"], {
+                                  max: 200,
+                              }),
                               cancelText: f.intl.string(f.t.BddRzS),
                               confirmText: f.intl.string(f.t.ZGbTcy),
                               onConfirm: () => o._.dispatch(d.jej.TOGGLE_FOR_LATER),

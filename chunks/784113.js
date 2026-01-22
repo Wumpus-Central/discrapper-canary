@@ -1,4 +1,6 @@
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 class r {
     setActive(e) {
         return Promise.resolve();

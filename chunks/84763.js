@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968);
 n(64700);
 var i = n(417597),
@@ -9,6 +11,7 @@ var i = n(417597),
     o = n(831806),
     d = n(652215),
     u = n(705751);
+
 function f() {
     let e = (0, i.bG)([a.A], () => a.A.getGuild()),
         t = (0, c.w)(null == e ? void 0 : e.id, "guild_product_settings"),

@@ -1,7 +1,9 @@
 var r = n(744784);
+
 function i(e) {
     (this.data = e), (this.left = null), (this.right = null);
 }
+
 function a(e) {
     (this._root = null), (this._comparator = e), (this.size = 0);
 }

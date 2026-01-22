@@ -1,4 +1,8 @@
-i.d(t, { q: () => b }), i(896048), i(228524);
+i.d(t, {
+    q: () => b,
+}),
+    i(896048),
+    i(228524);
 var n = i(64700),
     l = i(311907),
     r = i(217238),
@@ -20,6 +24,7 @@ let u = {
         canCreateGuild: !0,
         useIsGuildSupported: () => (0, l.bG)([d.A], () => (e) => d.A.canAccessGuildSettings(e), [], l.My),
     };
+
 function b(e) {
     var t;
     let [i] = n.useState(null == e ? void 0 : u[e]),

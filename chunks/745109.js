@@ -1,4 +1,6 @@
-n.d(t, { A: () => w });
+n.d(t, {
+    A: () => w,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -26,6 +28,7 @@ var r = n(627968),
     C = n(531525),
     N = n(985018),
     R = n(298109);
+
 function w() {
     let e = (0, _.dk)("ProfileCustomizationSettingsPage"),
         t = (0, o.bG)([d.A], () => d.A.getGuild()),
@@ -36,6 +39,7 @@ function w() {
         { subsection: D, setSubsection: x } = (0, v.A)(),
         L = g.a.useField("hasSearchResults"),
         j = g.a.useField("searchResults");
+
     function M(e) {
         if (D !== e) {
             if (a) {
@@ -52,7 +56,9 @@ function w() {
     i.useEffect(() => {
         null != P &&
             (null == w ? void 0 : w.id) !== I.V &&
-            (0, p.A)(P.id, P.getAvatarURL(null == w ? void 0 : w.id, 80), { guildId: null == w ? void 0 : w.id });
+            (0, p.A)(P.id, P.getAvatarURL(null == w ? void 0 : w.id, 80), {
+                guildId: null == w ? void 0 : w.id,
+            });
     }, [null == w ? void 0 : w.id, P]);
     let k = !0,
         U = !0;
@@ -97,7 +103,11 @@ function w() {
                             : null,
                     ],
                 }),
-                D === T.Eq.GUILD ? (0, r.jsx)(f.A, { selectedGuild: w }) : (0, r.jsx)(m.A, {}),
+                D === T.Eq.GUILD
+                    ? (0, r.jsx)(f.A, {
+                          selectedGuild: w,
+                      })
+                    : (0, r.jsx)(m.A, {}),
             ],
         })
     );

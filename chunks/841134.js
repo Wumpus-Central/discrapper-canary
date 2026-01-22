@@ -1,4 +1,5 @@
 var r = n(724039);
+
 function i() {
     return (i =
         r ||
@@ -10,6 +11,7 @@ function i() {
             return e;
         }).apply(this, arguments);
 }
+
 function a(e, t) {
     (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
 }
@@ -82,7 +84,15 @@ e.exports = (function (e) {
                     },
                     S = (t.get(O.getType()) || t.get("unstyled")).wrapper;
                 y.push({
-                    block: l.createElement(s, i({ key: A }, v)),
+                    block: l.createElement(
+                        s,
+                        i(
+                            {
+                                key: A,
+                            },
+                            v,
+                        ),
+                    ),
                     wrapperTemplate: S,
                     key: A,
                     offsetKey: o.encode(A, 0, 0),
@@ -107,7 +117,13 @@ e.exports = (function (e) {
                     T.push(w);
                 } else T.push(N.block), C++;
             }
-            return l.createElement("div", { "data-contents": "true" }, T);
+            return l.createElement(
+                "div",
+                {
+                    "data-contents": "true",
+                },
+                T,
+            );
         }),
         t
     );

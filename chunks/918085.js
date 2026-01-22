@@ -1,4 +1,7 @@
-n.d(t, { A: () => v }), n(896048);
+n.d(t, {
+    A: () => v,
+}),
+    n(896048);
 var r,
     i = n(627968),
     a = n(64700),
@@ -16,6 +19,7 @@ var r,
     g = n(622413),
     E = n(652215),
     b = n(430317);
+
 function y(e, t, n) {
     return (
         t in e
@@ -73,7 +77,11 @@ class A extends (r = a.PureComponent) {
                                   systems: [E.uje.WINDOWS],
                                   className: b.iD,
                               }),
-                              s ? (0, i.jsx)("div", { children: "deprecated!" }) : null,
+                              s
+                                  ? (0, i.jsx)("div", {
+                                        children: "deprecated!",
+                                    })
+                                  : null,
                           ],
                       });
             }),
@@ -98,7 +106,9 @@ class A extends (r = a.PureComponent) {
                     : (0, i.jsxs)(a.Fragment, {
                           children: [
                               (0, i.jsx)(f.A, {
-                                  className: o()(b.H1, { [b.ZC]: l }),
+                                  className: o()(b.H1, {
+                                      [b.ZC]: l,
+                                  }),
                                   video: null != c.previewVideo ? (0, h.YE)(s.applicationId, c.previewVideo) : void 0,
                                   image: null != c.thumbnail ? (0, h.YE)(s.applicationId, c.thumbnail, O) : void 0,
                                   title: s.name,
@@ -110,9 +120,17 @@ class A extends (r = a.PureComponent) {
                                   splashPlaceholderClassName: b.NB,
                               }),
                               s.exclusive
-                                  ? (0, i.jsx)(d.A, { className: o()(b.LJ, { [b.V9]: e }) })
+                                  ? (0, i.jsx)(d.A, {
+                                        className: o()(b.LJ, {
+                                            [b.V9]: e,
+                                        }),
+                                    })
                                   : s.isTheGameAwardsWinner
-                                    ? (0, i.jsx)(u.A, { className: o()(b.LJ, { [b.V9]: e }) })
+                                    ? (0, i.jsx)(u.A, {
+                                          className: o()(b.LJ, {
+                                              [b.V9]: e,
+                                          }),
+                                      })
                                     : null,
                           ],
                       });

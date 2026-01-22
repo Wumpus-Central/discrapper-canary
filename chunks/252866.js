@@ -52,7 +52,9 @@ var n = r(64700),
                                     radius: "3px",
                                     shadow: "inset 0 0 0 1px rgba(0,0,0,.15), inset 0 0 4px rgba(0,0,0,.25)",
                                 },
-                                controls: { display: "flex" },
+                                controls: {
+                                    display: "flex",
+                                },
                                 sliders: {
                                     padding: "4px 0",
                                     flex: "1",
@@ -94,14 +96,22 @@ var n = r(64700),
                             y,
                         ),
                         disableAlpha: {
-                            color: { height: "10px" },
-                            hue: { height: "10px" },
-                            alpha: { display: "none" },
+                            color: {
+                                height: "10px",
+                            },
+                            hue: {
+                                height: "10px",
+                            },
+                            alpha: {
+                                display: "none",
+                            },
                         },
                     },
                     y,
                 ),
-                { disableAlpha: b },
+                {
+                    disableAlpha: b,
+                },
             );
         return n.createElement(
             "div",
@@ -111,7 +121,9 @@ var n = r(64700),
             },
             n.createElement(
                 "div",
-                { style: w.saturation },
+                {
+                    style: w.saturation,
+                },
                 n.createElement(s.VI, {
                     style: w.Saturation,
                     hsl: d,
@@ -127,10 +139,14 @@ var n = r(64700),
                 },
                 n.createElement(
                     "div",
-                    { style: w.sliders },
+                    {
+                        style: w.sliders,
+                    },
                     n.createElement(
                         "div",
-                        { style: w.hue },
+                        {
+                            style: w.hue,
+                        },
                         n.createElement(s.RG, {
                             style: w.Hue,
                             hsl: d,
@@ -139,7 +155,9 @@ var n = r(64700),
                     ),
                     n.createElement(
                         "div",
-                        { style: w.alpha },
+                        {
+                            style: w.alpha,
+                        },
                         n.createElement(s.ry, {
                             style: w.Alpha,
                             rgb: r,
@@ -151,9 +169,13 @@ var n = r(64700),
                 ),
                 n.createElement(
                     "div",
-                    { style: w.color },
+                    {
+                        style: w.color,
+                    },
                     n.createElement(s.xu, null),
-                    n.createElement("div", { style: w.activeColor }),
+                    n.createElement("div", {
+                        style: w.activeColor,
+                    }),
                 ),
             ),
             n.createElement(u.A, {

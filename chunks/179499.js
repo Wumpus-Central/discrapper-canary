@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(64700),
     i = n(284009),
     a = n.n(i),
@@ -8,6 +10,7 @@ var r = n(64700),
     c = n(666171),
     u = n(960427),
     d = n(985018);
+
 function f(e) {
     var t, n;
     let { guildId: i, productId: f } = e,

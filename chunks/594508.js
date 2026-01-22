@@ -55,6 +55,7 @@ let c = (e) => {
         ],
     });
 };
+
 function u(e) {
     let { onConfirm: t, tierName: n, subscription: c } = e;
     return (0, r.jsxs)("div", {
@@ -63,13 +64,17 @@ function u(e) {
             (0, r.jsx)(l.Heading, {
                 className: o.RS,
                 variant: "heading-lg/extrabold",
-                children: s.intl.format(s.t.wLFT6z, { tier: n }),
+                children: s.intl.format(s.t.wLFT6z, {
+                    tier: n,
+                }),
             }),
             (0, r.jsx)(l.Text, {
                 className: o.sT,
                 variant: "text-sm/normal",
                 color: "text-default",
-                children: s.intl.format(s.t.OsAK9h, { timestamp: null == c ? void 0 : c.currentPeriodEnd }),
+                children: s.intl.format(s.t.OsAK9h, {
+                    timestamp: null == c ? void 0 : c.currentPeriodEnd,
+                }),
             }),
             (0, r.jsxs)("div", {
                 className: o.UD,

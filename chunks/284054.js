@@ -1,8 +1,11 @@
-n.d(t, { s: () => o });
+n.d(t, {
+    s: () => o,
+});
 var r = n(803082),
     i = n(290424),
     a = n(8321),
     s = n(946020);
+
 function o(e, t) {
     let n,
         {
@@ -57,7 +60,13 @@ function o(e, t) {
         }),
         { focusableProps: v } = (0, s.Wc)(e, t);
     h && (v.tabIndex = l ? -1 : v.tabIndex);
-    let S = (0, r.v)(v, O, (0, i.$)(e, { labelable: !0 }));
+    let S = (0, r.v)(
+        v,
+        O,
+        (0, i.$)(e, {
+            labelable: !0,
+        }),
+    );
     return {
         isPressed: A,
         buttonProps: (0, r.v)(n, S, {

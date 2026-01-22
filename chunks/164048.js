@@ -1,9 +1,13 @@
-n.d(t, { A: () => y }), n(896048), n(228524);
+n.d(t, {
+    A: () => y,
+}),
+    n(896048),
+    n(228524);
 var l = n(627968),
     r = n(64700),
     i = n(503698),
     a = n.n(i),
-    o = n(432022),
+    o = n(108531),
     c = n(417597),
     s = n(827734),
     u = n(582754),
@@ -14,6 +18,7 @@ var l = n(627968),
     f = n(386784),
     g = n(985018),
     v = n(603414);
+
 function y(e) {
     let { guildId: t, option: n, selected: i, onSelect: y, hideMemberCount: j, canBeNew: x } = e,
         A = (0, u.Mw)((0, p.Ay)()),
@@ -33,14 +38,16 @@ function y(e) {
                 e
             );
         }),
-        P = (0, f.A)(t, 1000),
+        P = (0, f.A)(t, 1e3),
         E = null == P || null == n.roleIds ? 0 : Math.max(...n.roleIds.map((e) => P[e])),
         k = x && !i && n.isUnseen,
         I = (0, d.zhh)(
             {
                 transform: i || _.enabled ? "scale(1)" : "scale(0.7)",
                 opacity: +!!i,
-                config: { duration: 150 },
+                config: {
+                    duration: 150,
+                },
             },
             "animate-always",
         ),
@@ -48,9 +55,15 @@ function y(e) {
         M = (0, d.rdh)(s.A.unsafe_rawColors.BRAND_500),
         T = (0, d.zhh)(
             {
-                from: { color: M.spring() },
-                color: D.spring({ opacity: A ? 0.5 : 0.25 }),
-                config: { duration: 300 },
+                from: {
+                    color: M.spring(),
+                },
+                color: D.spring({
+                    opacity: A ? 0.5 : 0.25,
+                }),
+                config: {
+                    duration: 300,
+                },
                 delay: 500,
             },
             "animate-always",
@@ -66,9 +79,13 @@ function y(e) {
                     transform: "translateX(0)",
                     opacity: 1,
                 },
-                leave: { opacity: 0 },
+                leave: {
+                    opacity: 0,
+                },
                 trail: 400,
-                config: { duration: 150 },
+                config: {
+                    duration: 150,
+                },
             },
             "animate-always",
         ),
@@ -78,7 +95,7 @@ function y(e) {
             return (
                 (w.current = setTimeout(() => {
                     C(!1), (w.current = null);
-                }, 3000)),
+                }, 3e3)),
                 () => {
                     null != w.current && clearTimeout(w.current);
                 }
@@ -88,7 +105,11 @@ function y(e) {
             [v.wH]: i,
             [v.Vq]: S,
         }),
-        G = k ? { borderColor: T.color } : {};
+        G = k
+            ? {
+                  borderColor: T.color,
+              }
+            : {};
     return (0, l.jsx)(o.animated.div, {
         style: G,
         className: K,
@@ -145,7 +166,9 @@ function y(e) {
                             children: (0, l.jsx)(d.Text, {
                                 variant: "text-xs/normal",
                                 color: "always-white",
-                                children: g.intl.format(g.t.EgKsZA, { memberCount: E }),
+                                children: g.intl.format(g.t.EgKsZA, {
+                                    memberCount: E,
+                                }),
                             }),
                         }),
                 ),

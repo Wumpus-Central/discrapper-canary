@@ -1,4 +1,6 @@
-a.d(t, { r: () => u });
+a.d(t, {
+    r: () => u,
+});
 var s = a(627968);
 a(64700);
 var l = a(134402),
@@ -8,12 +10,21 @@ var l = a(134402),
     o = a(818348),
     c = a(705492);
 let d = o.sE.MAIN_NAVIGATION_MENU;
+
 function u(e) {
     let { isOpen: t, dropdownLinks: a, TrackClick: u, avoidRouter: N, id: A, "aria-label": p } = e,
-        h = (0, r.dI)({ history: (0, l.W6)() }),
+        h = (0, r.dI)({
+            history: (0, l.W6)(),
+        }),
         b = a.map((e, t) =>
             e.divider
-                ? (0, s.jsx)("hr", { className: c.divider }, "divider-".concat(t))
+                ? (0, s.jsx)(
+                      "hr",
+                      {
+                          className: c.divider,
+                      },
+                      "divider-".concat(t),
+                  )
                 : e.external
                   ? (0, s.jsx)(
                         "li",
@@ -22,7 +33,9 @@ function u(e) {
                             children: (0, s.jsx)(u, {
                                 className: c.moreListLink,
                                 eventName: d,
-                                data: { linkClicked: e.linkClicked },
+                                data: {
+                                    linkClicked: e.linkClicked,
+                                },
                                 href: e.route,
                                 rel: "me",
                                 children: (0, s.jsx)("span", {
@@ -47,7 +60,9 @@ function u(e) {
                                     tag: "span",
                                     className: c.moreListLinkCopy,
                                     eventName: d,
-                                    data: { linkClicked: e.linkClicked },
+                                    data: {
+                                        linkClicked: e.linkClicked,
+                                    },
                                     children: e.title,
                                 }),
                             }),

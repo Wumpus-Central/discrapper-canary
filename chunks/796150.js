@@ -1,4 +1,8 @@
-r.d(t, { default: () => S }), r(896048), r(142703);
+r.d(t, {
+    default: () => S,
+}),
+    r(896048),
+    r(142703);
 var n = r(627968),
     l = r(64700),
     o = r(340287),
@@ -18,6 +22,7 @@ var n = r(627968),
     h = r(652215),
     m = r(985018),
     v = r(249316);
+
 function x(e) {
     let { destinationPanel: t, originPanel: r } = e;
     (0, b.iY)({
@@ -28,6 +33,7 @@ function x(e) {
         locationStack: u.A.getAnalyticsLocations(),
     });
 }
+
 function S(e) {
     let { target: t } = e,
         r = (function (e, t) {
@@ -73,7 +79,9 @@ function S(e) {
             (b.current = e));
     });
     let m = l.useCallback((e) => {
-            y.A.setState({ query: e });
+            y.A.setState({
+                query: e,
+            });
         }, []),
         [v, S] = l.useState(!1);
     return (l.useEffect(() => {
@@ -143,6 +151,7 @@ function S(e) {
               ),
           );
 }
+
 function P() {
     return (0, n.jsxs)("div", {
         className: v.t,

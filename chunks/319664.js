@@ -1,4 +1,6 @@
-n.d(t, { A: () => x });
+n.d(t, {
+    A: () => x,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -13,6 +15,7 @@ var i = n(503698),
     g = n(652215),
     b = n(985018),
     m = n(587106);
+
 function p(e) {
     let { pills: t } = e;
     return (0, r.jsx)("div", {
@@ -32,6 +35,7 @@ function p(e) {
         ),
     });
 }
+
 function x(e) {
     let { guildId: t, showCTA: n, responsive: i = !0 } = e,
         x = [
@@ -41,7 +45,9 @@ function x(e) {
             [b.intl.string(b.t["0ItLmF"]), b.intl.string(b.t.yQHqsC)],
         ];
     return (0, r.jsx)("div", {
-        className: l()({ [m.no]: i }),
+        className: l()({
+            [m.no]: i,
+        }),
         children: (0, r.jsxs)("div", {
             className: m.kL,
             children: [
@@ -50,7 +56,15 @@ function x(e) {
                     children: [
                         (0, r.jsx)("div", {
                             className: m.V_,
-                            children: x.map((e, t) => (0, r.jsx)(p, { pills: e }, "pill-row-".concat(t))),
+                            children: x.map((e, t) =>
+                                (0, r.jsx)(
+                                    p,
+                                    {
+                                        pills: e,
+                                    },
+                                    "pill-row-".concat(t),
+                                ),
+                            ),
                         }),
                         (0, r.jsxs)("div", {
                             className: m.mv,
@@ -96,7 +110,10 @@ function x(e) {
                                                     }
                                                     return e;
                                                 })({}, (0, c.H$)(t))),
-                                                (n = n = { action_taken: f.hN.GET_STARTED_CLICK }),
+                                                (n = n =
+                                                    {
+                                                        action_taken: f.hN.GET_STARTED_CLICK,
+                                                    }),
                                                 Object.getOwnPropertyDescriptors
                                                     ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
                                                     : (function (e, t) {

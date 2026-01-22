@@ -1,4 +1,6 @@
-l.d(t, { A: () => N });
+l.d(t, {
+    A: () => N,
+});
 var n = l(627968),
     r = l(64700),
     s = l(503698),
@@ -18,7 +20,7 @@ var n = l(627968),
     v = l(379177),
     A = l(212407),
     x = l(333034),
-    S = l(521000),
+    S = l(521e3),
     C = l(938191),
     O = l(815280),
     _ = l(60140),
@@ -95,8 +97,12 @@ let I = {
                           ctaObject: j.ZSU.CTA_TO_QUEST_HOME,
                       }),
                       F
-                          ? (0, x.A)({ analyticsLocations: ee })
-                          : (0, b.navigateToQuestHome)({ fromContent: o.u.ORBS_SHOP_HERO_CTA }))
+                          ? (0, x.A)({
+                                analyticsLocations: ee,
+                            })
+                          : (0, b.navigateToQuestHome)({
+                                fromContent: o.u.ORBS_SHOP_HERO_CTA,
+                            }))
                     : (s({
                           sourceButton: "shop latest category hero",
                           categorySkuId: Q ? G.categorySkuId : void 0,
@@ -129,7 +135,12 @@ let I = {
                               [T.cN]: X,
                               [T.no]: q,
                           }),
-                          style: null != Z ? { background: Z } : void 0,
+                          style:
+                              null != Z
+                                  ? {
+                                        background: Z,
+                                    }
+                                  : void 0,
                           children:
                               null != K &&
                               (0, n.jsx)(O.A, {
@@ -155,10 +166,14 @@ let I = {
                                             }),
                                     })
                                   : (0, n.jsxs)("div", {
-                                        className: a()(T.bC, { [T.no]: q }),
+                                        className: a()(T.bC, {
+                                            [T.no]: q,
+                                        }),
                                         children: [
                                             l
-                                                ? (0, n.jsx)("div", { className: T.Hw })
+                                                ? (0, n.jsx)("div", {
+                                                      className: T.Hw,
+                                                  })
                                                 : (0, n.jsxs)("div", {
                                                       className: T.Hw,
                                                       children: [
@@ -193,7 +208,9 @@ let I = {
                                                                           className: J ? T.h4 : T.Tm,
                                                                           style:
                                                                               null != G.bannerTextColor
-                                                                                  ? { color: G.bannerTextColor }
+                                                                                  ? {
+                                                                                        color: G.bannerTextColor,
+                                                                                    }
                                                                                   : void 0,
                                                                           children: G.summary,
                                                                       }),

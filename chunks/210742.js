@@ -1,4 +1,6 @@
-n.d(t, { A: () => y });
+n.d(t, {
+    A: () => y,
+});
 var r = n(627968),
     i = n(64700),
     a = n(731738),
@@ -16,6 +18,7 @@ var r = n(627968),
     g = n(652215),
     E = n(985018),
     b = n(589896);
+
 function y() {
     let e = (0, _.A)(),
         t = (0, p.v)(),
@@ -30,8 +33,12 @@ function y() {
     }),
     i.useEffect(() => {
         t &&
-            (c.default.track(g.HAw.SAFETY_HUB_VIEWED, { account_standing: O.current.state }),
-            l.A.increment({ name: a.K.SAFETY_HUB_VIEW }));
+            (c.default.track(g.HAw.SAFETY_HUB_VIEWED, {
+                account_standing: O.current.state,
+            }),
+            l.A.increment({
+                name: a.K.SAFETY_HUB_VIEW,
+            }));
     }, [t]),
     e)
         ? (0, r.jsx)(s.y$y, {})

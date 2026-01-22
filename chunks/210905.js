@@ -13,8 +13,13 @@ var o =
     u = r(64700),
     s = f(u),
     l = f(r(505490));
+
 function f(t) {
-    return t && t.__esModule ? t : { default: t };
+    return t && t.__esModule
+        ? t
+        : {
+              default: t,
+          };
 }
 var h = {
         bgColor: a.default.oneOfType([a.default.object, a.default.string]),

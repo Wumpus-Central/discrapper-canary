@@ -12,6 +12,7 @@ var r = n(310784),
     i = n.n(r),
     a = n(508425),
     s = n(750656);
+
 function o(e) {
     let t = i()(e).alpha(1),
         n = t.get("hsl.l"),
@@ -27,6 +28,7 @@ function o(e) {
         neonStroke: t.set("hsl.s", r).set("hsl.l", a).hex(),
     };
 }
+
 function l(e) {
     return null == e
         ? null
@@ -36,6 +38,7 @@ function l(e) {
               colors: e.colors,
           };
 }
+
 function c() {
     let e,
         t = s.re[Math.floor(Math.random() * s.re.length)],
@@ -50,6 +53,7 @@ function c() {
         colors: e,
     };
 }
+
 function u(e) {
     if (null == e) return !1;
     let t = e.replace(RegExp("[^\\p{L}]", "gu"), "");

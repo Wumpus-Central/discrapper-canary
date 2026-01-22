@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var r = n(627968),
     i = n(64700),
     a = n(397927),
@@ -37,7 +39,9 @@ let m = () => {
     return (0, r.jsxs)("div", {
         ref: n,
         className: h.kL,
-        style: { backgroundImage: "url(".concat(m, ")") },
+        style: {
+            backgroundImage: "url(".concat(m, ")"),
+        },
         children: [
             (0, r.jsx)("div", {
                 className: h.JS,

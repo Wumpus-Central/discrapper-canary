@@ -24,12 +24,14 @@ let y = "ActivityTrackingStore",
     S = null != (r = s.w.get(y)) ? r : {},
     C = {},
     N = !1;
+
 function T(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     t && j(e, !0);
     let n = C[e.applicationId];
     null != n && (n.stop(), delete C[e.applicationId]), delete S[e.applicationId], s.w.set(y, S);
 }
+
 function j(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = Date.now(),
@@ -44,7 +46,7 @@ function j(e) {
         distributor: e.isDiscordApplication ? O.d3x.DISCORD : e.distributor,
         shareActivity: i,
         token: e.token,
-        duration: Math.floor(r / 1000),
+        duration: Math.floor(r / 1e3),
         closed: t,
         exePath: e.exePath,
         voiceChannelId: l,
@@ -56,6 +58,7 @@ function j(e) {
     null == d && (d = C[e.applicationId] = new o.IX()).start(I, () => j(e)),
         t || ((S[e.applicationId] = e), s.w.set(y, S));
 }
+
 function x() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         t = p.Ay.getVisibleRunningGames(),
@@ -74,6 +77,7 @@ function x() {
     }
     for (let t of Object.keys(S)) n.has(t) || T(S[t], e);
 }
+
 function P() {
     for (let e of Object.keys(S)) T(S[e]);
     N = !1;

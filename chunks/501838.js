@@ -12,6 +12,7 @@ var r = n(311907),
     s = n(15285),
     o = n(622543),
     l = n(290863);
+
 function c(e) {
     let { userIds: t, gameIds: n } = e;
     return (0, r.bG)(
@@ -26,6 +27,7 @@ function c(e) {
         [n, t],
     );
 }
+
 function u(e) {
     let { userIds: t, guildIdsWithGameStores: n } = e;
     return (0, r.bG)([o.A], () => {
@@ -38,6 +40,7 @@ function u(e) {
         return !1;
     }, [n, t]);
 }
+
 function d(e) {
     let { userIds: t, gameIds: n } = e;
     return (0, r.bG)([l.A], () => {
@@ -46,10 +49,12 @@ function d(e) {
         return !1;
     }, [n, t]);
 }
+
 function f(e) {
     let { gameIds: t } = e;
     return (0, r.bG)([s.Ay], () => s.Ay.getGamesSeen(!1, !1).some((e) => null != e.id && t.has(e.id)), [t]);
 }
+
 function p(e) {
     let { gameIds: t } = e;
     return (0, r.bG)(

@@ -1,4 +1,7 @@
-l.d(t, { A: () => h }), l(896048);
+l.d(t, {
+    A: () => h,
+}),
+    l(896048);
 var n = l(627968),
     r = l(64700),
     s = l(503698),
@@ -13,6 +16,7 @@ var n = l(627968),
     g = l(652215),
     p = l(985018),
     m = l(450331);
+
 function h(e) {
     let { handleTransition: t, selectedTab: l, isNarrow: s, hasText: h } = e,
         { searchQuery: E, onSetSearchQuery: v } = (0, f.v)(),
@@ -99,7 +103,9 @@ function h(e) {
             style: w,
             children: P,
         });
-    let B = a()(m.ON, { [m.Nz]: _ });
+    let B = a()(m.ON, {
+        [m.Nz]: _,
+    });
     return _
         ? (0, n.jsxs)(n.Fragment, {
               children: [

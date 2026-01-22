@@ -1,4 +1,7 @@
-n.d(t, { A: () => A }), n(896048);
+n.d(t, {
+    A: () => A,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -19,6 +22,7 @@ var r = n(627968),
     O = n(778526),
     y = n(985018),
     v = n(17149);
+
 function A(e) {
     var t, n;
     let {
@@ -55,7 +59,9 @@ function A(e) {
         className: v.kL,
         children: [
             (0, r.jsxs)("div", {
-                className: s()(v.wx, { [v.xo]: R }),
+                className: s()(v.wx, {
+                    [v.xo]: R,
+                }),
                 children: [
                     (0, r.jsx)("div", {
                         className: v.oZ,
@@ -79,7 +85,9 @@ function A(e) {
                                 color: "interactive-text-active",
                                 children: z,
                             }),
-                            (0, r.jsx)(u.hKd, { size: 2 }),
+                            (0, r.jsx)(u.hKd, {
+                                size: 2,
+                            }),
                             (0, r.jsxs)("div", {
                                 className: v.Hp,
                                 children: [

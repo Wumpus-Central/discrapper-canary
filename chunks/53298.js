@@ -1,4 +1,6 @@
-n.d(t, { O: () => r });
+n.d(t, {
+    O: () => r,
+});
 var r = (function (e) {
     return (
         (e[(e.NONE = 0)] = "NONE"),
@@ -26,9 +28,9 @@ var r = (function (e) {
         (e[(e.ROLE_STYLE_ADJUSTED = 1048576)] = "ROLE_STYLE_ADJUSTED"),
         (e[(e.SYNC_PROFILE_THEME_WITH_USER_THEME = 2097152)] = "SYNC_PROFILE_THEME_WITH_USER_THEME"),
         (e[(e.CONTRAST_LEVEL_INCREASED = 8388608)] = "CONTRAST_LEVEL_INCREASED"),
-        (e[(e.CONTRAST_LEVEL_DECREASED = 16777216)] = "CONTRAST_LEVEL_DECREASED"),
-        (e[(e.UI_DENSITY_COMPACT = 33554432)] = "UI_DENSITY_COMPACT"),
-        (e[(e.UI_DENSITY_SPACIOUS = 67108864)] = "UI_DENSITY_SPACIOUS"),
+        (e[(e.CONTRAST_LEVEL_DECREASED = 0x1000000)] = "CONTRAST_LEVEL_DECREASED"),
+        (e[(e.UI_DENSITY_COMPACT = 0x2000000)] = "UI_DENSITY_COMPACT"),
+        (e[(e.UI_DENSITY_SPACIOUS = 0x4000000)] = "UI_DENSITY_SPACIOUS"),
         e
     );
 })({});

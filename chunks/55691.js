@@ -1,4 +1,6 @@
-n.d(t, { U: () => d });
+n.d(t, {
+    U: () => d,
+});
 var r = n(627968),
     i = n(158954),
     a = n(311907),
@@ -19,9 +21,16 @@ let d = (e) => {
             (0, r.jsx)(i.EYj, {
                 variant: "text-sm/normal",
                 color: "text-strong",
-                children: p ? c.intl.string(c.t.E1ONHQ) : c.intl.format(c.t["43kZKL"], { days: d - n.getDate() }),
+                children: p
+                    ? c.intl.string(c.t.E1ONHQ)
+                    : c.intl.format(c.t["43kZKL"], {
+                          days: d - n.getDate(),
+                      }),
             }),
-            !1 === p && (0, r.jsx)(l.PR, { percentage: t }),
+            !1 === p &&
+                (0, r.jsx)(l.PR, {
+                    percentage: t,
+                }),
             (0, r.jsx)(o.G, {}),
         ],
     });

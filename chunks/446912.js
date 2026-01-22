@@ -15,7 +15,9 @@ r(
                     function (e, n) {
                         a(t, e, n);
                     },
-                    { AS_ENTRIES: !0 },
+                    {
+                        AS_ENTRIES: !0,
+                    },
                 ),
                 t
             );

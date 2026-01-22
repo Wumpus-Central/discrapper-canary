@@ -1,9 +1,13 @@
-t.d(e, { m: () => c }), t(896048);
+t.d(e, {
+    m: () => c,
+}),
+    t(896048);
 var n = t(64700),
     r = t(475743),
     s = t(954571),
     i = t(25765),
     l = t(652215);
+
 function c(a, e) {
     let [t, c] = n.useState(i.N.LANDING),
         o = (0, r.A)(t),

@@ -1,4 +1,6 @@
-i.d(e, { L: () => c });
+i.d(e, {
+    L: () => c,
+});
 var n = i(627968),
     l = i(64700),
     s = i(574381),
@@ -18,7 +20,10 @@ let I = (0, o.D)(() => ({
 }));
 async function g() {
     await (0, E.q5)({
-        onUploadStart: () => I.setState({ isUploading: !0 }),
+        onUploadStart: () =>
+            I.setState({
+                isUploading: !0,
+            }),
         onUploadFinish: () =>
             I.setState({
                 isUploading: !1,

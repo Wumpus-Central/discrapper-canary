@@ -21,6 +21,7 @@ var i = n(503698),
     h = n(652215),
     m = n(985018),
     g = n(941775);
+
 function E(e, t, n) {
     return (
         t in e
@@ -34,6 +35,7 @@ function E(e, t, n) {
         e
     );
 }
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -50,6 +52,7 @@ function b(e) {
     }
     return e;
 }
+
 function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -62,6 +65,7 @@ function y(e, t) {
     }
     return n;
 }
+
 function O(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -73,6 +77,7 @@ function O(e, t) {
         e
     );
 }
+
 function A() {
     return (0, r.jsx)("div", {
         className: g.BO,
@@ -85,6 +90,7 @@ function A() {
         }),
     });
 }
+
 function v(e) {
     let {
             name: t,
@@ -111,14 +117,24 @@ function v(e) {
                     f.DUT,
                     O(b({}, E), {
                         tabIndex: null != l ? l : E.tabIndex,
-                        className: a()(g.yM, { [g.wH]: o }, n),
+                        className: a()(
+                            g.yM,
+                            {
+                                [g.wH]: o,
+                            },
+                            n,
+                        ),
                         style: i,
                         onClick: o ? h.tEg : s,
                         children: u,
                     }),
                 ),
                 (o || m) && (0, r.jsx)(A, {}),
-                !o && p && (0, r.jsx)("div", { className: g.g3 }),
+                !o &&
+                    p &&
+                    (0, r.jsx)("div", {
+                        className: g.g3,
+                    }),
                 _ &&
                     (0, r.jsx)("div", {
                         className: g.RK,
@@ -131,6 +147,7 @@ function v(e) {
         }),
     });
 }
+
 function S(e) {
     let { theme: t, isSelected: n, onSelect: i } = e,
         l = (0, o.bG)([p.A], () => p.A.systemTheme),
@@ -167,10 +184,30 @@ function S(e) {
                 },
                 () => g.k$,
             )
-            .with({ theme: h.NJ8.LIGHT }, () => g.mT)
-            .with({ theme: h.NJ8.DARK }, () => g.eQ)
-            .with({ theme: h.NJ8.DARKER }, () => g.xl)
-            .with({ theme: h.NJ8.MIDNIGHT }, () => g.k$)
+            .with(
+                {
+                    theme: h.NJ8.LIGHT,
+                },
+                () => g.mT,
+            )
+            .with(
+                {
+                    theme: h.NJ8.DARK,
+                },
+                () => g.eQ,
+            )
+            .with(
+                {
+                    theme: h.NJ8.DARKER,
+                },
+                () => g.xl,
+            )
+            .with(
+                {
+                    theme: h.NJ8.MIDNIGHT,
+                },
+                () => g.k$,
+            )
             .otherwise(() => g.eQ),
         d = (0, s.YW)(t)
             .with(h.NJ8.LIGHT, () => m.intl.string(m.t.K2sFfo))
@@ -190,11 +227,15 @@ function S(e) {
                 className: g.P0,
                 children: (0, r.jsx)(f.NPJ, {
                     theme: c,
-                    children: (e) => (0, r.jsx)(f.fNY, { className: e }),
+                    children: (e) =>
+                        (0, r.jsx)(f.fNY, {
+                            className: e,
+                        }),
                 }),
             }),
     });
 }
+
 function I(e) {
     let { preset: t, isSelected: n, disabled: i, tabIndex: s, onSelect: o, showBadge: l, showLockedBadge: c } = e,
         { colors: d, angle: f, theme: p } = t,
@@ -207,7 +248,9 @@ function I(e) {
         isSelected: n,
         name: t.getName(),
         className: a()([i ? g.r9 : null, (0, u.Mw)(p) ? g.Xu : g.VO]),
-        style: { background: "var(--background-gradient), ".concat(h) },
+        style: {
+            background: "var(--background-gradient), ".concat(h),
+        },
         tabIndex: s,
         showBadge: l,
         showLockedBadge: c,

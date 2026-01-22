@@ -1,4 +1,9 @@
-n.d(t, { A: () => L }), n(896048), n(638769), n(321073);
+n.d(t, {
+    A: () => L,
+}),
+    n(896048),
+    n(638769),
+    n(321073);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -27,7 +32,8 @@ var r = n(627968),
     T = n(344917),
     j = n(652215),
     x = n(985018),
-    P = n(680000);
+    P = n(68e4);
+
 function w(e) {
     var t, n;
     let { user: i, index: l, isCompetitive: a } = e,
@@ -79,7 +85,10 @@ function w(e) {
                         }
                         return e;
                     })({}, (0, g.qL)(n))),
-                    (t = t = { location: "".concat(A.A.FREQUENT_FRIENDS_ROW, " ").concat(l + 1) }),
+                    (t = t =
+                        {
+                            location: "".concat(A.A.FREQUENT_FRIENDS_ROW, " ").concat(l + 1),
+                        }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
                         : (function (e, t) {
@@ -103,7 +112,9 @@ function w(e) {
         onClick: m,
         onMouseEnter: h.onMouseEnter,
         onMouseLeave: h.onMouseLeave,
-        "aria-label": x.intl.formatToPlainString(x.t.M5FjCr, { username: i.username }),
+        "aria-label": x.intl.formatToPlainString(x.t.M5FjCr, {
+            username: i.username,
+        }),
         children: (0, r.jsx)(u.euF, {
             src: f,
             "aria-label": null != (t = i.globalName) ? t : i.username,
@@ -112,7 +123,7 @@ function w(e) {
             isMobile: c && !d,
             size: u._3J.SIZE_32,
             CutoutIcon: O,
-            avatarTooltipAsset: b ? "\uD83D\uDD25" : a ? "\u2744️" : void 0,
+            avatarTooltipAsset: b ? "\uD83D\uDD25" : a ? "❄️" : void 0,
             avatarTooltipText: I,
             statusTooltip: !0,
             statusTooltipDelay: 50,
@@ -120,6 +131,7 @@ function w(e) {
         }),
     });
 }
+
 function L() {
     let e,
         t,
@@ -224,7 +236,9 @@ function L() {
                             }),
                             (0, r.jsx)(c.m_, {
                                 text: x.intl.string(x.t.tqCMcU),
-                                children: (0, r.jsx)(u.mir, { className: P.BK }),
+                                children: (0, r.jsx)(u.mir, {
+                                    className: P.BK,
+                                }),
                             }),
                         ],
                     }),

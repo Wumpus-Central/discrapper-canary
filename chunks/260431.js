@@ -3,4 +3,6 @@ function r(...e) {
         for (let n of e) "function" == typeof n && n(...t);
     };
 }
-n.d(t, { c: () => r });
+n.d(t, {
+    c: () => r,
+});

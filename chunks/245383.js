@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(311907),
     i = n(832946),
     a = n(287809),
@@ -8,6 +10,7 @@ var r = n(311907),
     c = n(788868),
     u = n(652215),
     d = n(985018);
+
 function f(e) {
     let { subscriptionTier: t, subscriptionPlanId: n, buttonTextOverride: f, defaultTextOverride: _ } = e,
         h = (0, r.bG)([a.default], () => a.default.getCurrentUser()),
@@ -21,7 +24,9 @@ function f(e) {
     (O || A) && (E = d.intl.string(d.t.IJI7yk));
     let v = null != m && (0, o.Nc)(m);
     if (!((null != m && m.status !== u.Dmq.ACCOUNT_HOLD && !(0, i.m1)(m.planId) && !O && !A && void 0 === g) || v))
-        return { buttonText: null != f ? f : E };
+        return {
+            buttonText: null != f ? f : E,
+        };
     {
         var S, I;
         let e = p({
@@ -37,6 +42,7 @@ function f(e) {
         };
     }
 }
+
 function p(e) {
     let t,
         n,

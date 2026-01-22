@@ -1,8 +1,11 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(627968);
 n(64700);
 var i = n(947270),
     l = n(953727);
+
 function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -28,6 +31,7 @@ function a(e) {
     }
     return e;
 }
+
 function s(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -46,9 +50,11 @@ function s(e, t) {
         e
     );
 }
+
 function o(e) {
     return "CloudDone-".concat(e);
 }
+
 function c(e) {
     let { width: t = 24, height: n = 24, color: c = "currentColor", foreground: u, gradientConfig: d } = e,
         p = (function (e, t) {
@@ -99,7 +105,9 @@ function c(e) {
                 height: n,
                 viewBox: "0 0 24 24",
                 children: [
-                    (0, r.jsx)("defs", { children: f }),
+                    (0, r.jsx)("defs", {
+                        children: f,
+                    }),
                     (0, r.jsx)("path", {
                         d: "M0 0h24v24H0z",
                         fill: "none",

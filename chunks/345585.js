@@ -1,4 +1,7 @@
-i.d(e, { default: () => j }), i(896048);
+i.d(e, {
+    default: () => j,
+}),
+    i(896048);
 var l = i(627968),
     n = i(64700),
     r = i(311907),
@@ -17,6 +20,7 @@ var l = i(627968),
     w = i(411335),
     x = i(652215),
     M = i(985018);
+
 function j(t) {
     let { rule: e, analyticsContext: i, onSelect: j } = t,
         A = (0, h.wC)(e),
@@ -88,7 +92,10 @@ function j(t) {
                 (0, l.jsxs)(s.rXV, {
                     children: [I, A && C],
                 }),
-                A && (0, l.jsx)(s.rXV, { children: m }),
+                A &&
+                    (0, l.jsx)(s.rXV, {
+                        children: m,
+                    }),
             ],
         }),
     });

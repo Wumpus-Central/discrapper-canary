@@ -1,4 +1,6 @@
-r.d(t, { A: () => O });
+r.d(t, {
+    A: () => O,
+});
 var n = r(627968),
     l = r(64700),
     o = r(503698),
@@ -11,6 +13,7 @@ var n = r(627968),
     b = r(641324),
     y = r(985018),
     d = r(379763);
+
 function p(e) {
     let { icon: t, label: r, onClick: l } = e;
     return (0, n.jsx)(i.K0, {
@@ -21,6 +24,7 @@ function p(e) {
         "aria-label": r,
     });
 }
+
 function g(e) {
     let { title: t, badge: r, onClose: l } = e,
         o = (0, u.NC)();
@@ -36,7 +40,10 @@ function g(e) {
                             c.Fr &&
                                 (0, n.jsx)(p, {
                                     icon: s.fEi,
-                                    onClick: () => f.A.setState({ showNavigationMobile: !0 }),
+                                    onClick: () =>
+                                        f.A.setState({
+                                            showNavigationMobile: !0,
+                                        }),
                                     label: y.intl.string(y.t["13/7kX"]),
                                 }),
                             (0, n.jsx)(s.Heading, {
@@ -75,7 +82,11 @@ let O = l.memo(function (e) {
             }),
             (0, n.jsx)("div", {
                 className: d.yp,
-                children: null != o && (0, n.jsx)(b.A, { node: o }),
+                children:
+                    null != o &&
+                    (0, n.jsx)(b.A, {
+                        node: o,
+                    }),
             }),
         ],
     });

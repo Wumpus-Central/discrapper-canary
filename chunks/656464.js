@@ -1,4 +1,6 @@
-r.d(t, { A: () => n });
+r.d(t, {
+    A: () => n,
+});
 let n = function (e, t) {
     var r = -1,
         n = e.length;

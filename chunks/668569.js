@@ -1,4 +1,6 @@
-n.d(t, { default: () => C });
+n.d(t, {
+    default: () => C,
+});
 var r = n(627968);
 n(64700);
 var l = n(397927),
@@ -41,21 +43,27 @@ let C = (0, a.A)(
                     appContext: I = _.BRT.APP,
                     friendGroupId: T,
                 } = e,
-                { enableTopNavButton: w } = (0, c.tR)({ location: "user-context-menu" }),
+                { enableTopNavButton: w } = (0, c.tR)({
+                    location: "user-context-menu",
+                }),
                 G = (0, P.A)({
                     userId: t.id,
                     guildId: n,
                     channelId: o,
                 }),
                 V = (0, y.A)(t.id, I),
-                k = (0, v.A)({ user: t }),
+                k = (0, v.A)({
+                    user: t,
+                }),
                 M = (0, p.A)({
                     user: t,
                     guildId: n,
                     channelId: o,
                     context: I,
                 }),
-                N = (0, f.A)({ user: t }),
+                N = (0, f.A)({
+                    user: t,
+                }),
                 R = (0, h.A)({
                     user: t,
                     groupId: T,
@@ -63,13 +71,25 @@ let C = (0, a.A)(
                 B = (0, S.A)(t.id),
                 F = (0, D.A)(t.id),
                 X = (0, E.A)(t.id, s),
-                K = (0, j.A)({ user: t }),
+                K = (0, j.A)({
+                    user: t,
+                }),
                 W = (0, d.A)(null, t),
-                H = (0, b.A)({ user: t }),
-                J = (0, g.A)({ user: t }),
-                Y = (0, x.A)({ user: t }),
-                q = (0, m.A)({ user: t }),
-                z = (0, O.A)({ user: t }),
+                H = (0, b.A)({
+                    user: t,
+                }),
+                J = (0, g.A)({
+                    user: t,
+                }),
+                Y = (0, x.A)({
+                    user: t,
+                }),
+                q = (0, m.A)({
+                    user: t,
+                }),
+                z = (0, O.A)({
+                    user: t,
+                }),
                 Z = (0, u.A)({
                     id: t.id,
                     label: U.intl.string(U.t["/AXYnE"]),
@@ -86,22 +106,33 @@ let C = (0, a.A)(
                     !$ &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
-                                (0, r.jsx)(l.rXV, { children: Q }),
+                                (0, r.jsx)(l.rXV, {
+                                    children: Q,
+                                }),
                                 (0, r.jsxs)(l.rXV, {
                                     children: [G, V, k, M, N, w ? R : null, B],
                                 }),
-                                a && (0, r.jsx)(l.rXV, { children: F }),
-                                (0, r.jsx)(l.rXV, { children: W }),
+                                a &&
+                                    (0, r.jsx)(l.rXV, {
+                                        children: F,
+                                    }),
+                                (0, r.jsx)(l.rXV, {
+                                    children: W,
+                                }),
                                 (0, r.jsxs)(l.rXV, {
                                     children: [a && X, K, H, J, Y, z, q],
                                 }),
                             ],
                         }),
-                    (0, r.jsx)(l.rXV, { children: Z }),
+                    (0, r.jsx)(l.rXV, {
+                        children: Z,
+                    }),
                 ],
             });
         },
-        { object: _.ZSU.CONTEXT_MENU },
+        {
+            object: _.ZSU.CONTEXT_MENU,
+        },
     ),
     [s.A.CONTEXT_MENU, s.A.USER_GENERIC_MENU],
 );

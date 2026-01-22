@@ -1,4 +1,6 @@
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 var a = n(303527);
 let i = {
     ordinalNumber: (0, n(722023).A)({
@@ -88,7 +90,9 @@ let i = {
         defaultParseWidth: "any",
     }),
     dayPeriod: (0, a.A)({
-        matchPatterns: { any: /^(上午?|下午?|午夜|[中正]午|早上?|下午|晚上?|凌晨|)/i },
+        matchPatterns: {
+            any: /^(上午?|下午?|午夜|[中正]午|早上?|下午|晚上?|凌晨|)/i,
+        },
         defaultMatchWidth: "any",
         parsePatterns: {
             any: {

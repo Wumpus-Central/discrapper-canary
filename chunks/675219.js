@@ -1,4 +1,9 @@
-n.d(t, { o: () => I }), n(896048), n(321073), n(65821);
+n.d(t, {
+    o: () => I,
+}),
+    n(896048),
+    n(321073),
+    n(65821);
 var r = n(627968),
     i = n(835245),
     a = n(397927),
@@ -15,6 +20,7 @@ var r = n(627968),
     m = n(69882),
     g = n(652215),
     E = n(985018);
+
 function b(e, t, n) {
     return (
         t in e
@@ -28,6 +34,7 @@ function b(e, t, n) {
         e
     );
 }
+
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -44,6 +51,7 @@ function y(e) {
     }
     return e;
 }
+
 function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -56,6 +64,7 @@ function O(e, t) {
     }
     return n;
 }
+
 function A(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -82,7 +91,9 @@ let v = (e, t) => null != t && t.implemented && t.flowType === e,
             allowGiftCustomization: !0,
             predicateStepType: "one_time_payment",
         },
-        [u.C.PREMIUM_CHECKOUT]: { allowGiftCustomization: !1 },
+        [u.C.PREMIUM_CHECKOUT]: {
+            allowGiftCustomization: !1,
+        },
     };
 class I {
     getUnifiedStepDefinition(e) {
@@ -128,7 +139,9 @@ class I {
                         returnStep: s.pn.REVIEW,
                         returnStepIfNoPaymentSources: t && n ? s.pn.GIFT_CUSTOMIZATION : void 0,
                     }),
-                options: { renderHeader: !0 },
+                options: {
+                    renderHeader: !0,
+                },
             };
     }
     getGiftCustomizationStepConfig(e) {
@@ -160,7 +173,9 @@ class I {
                           paymentModalStepProps: t,
                           unifiedStepDefinition: e,
                       }),
-                  options: { useBreadcrumbLabel: () => E.intl.string(E.t.QBnNHq) },
+                  options: {
+                      useBreadcrumbLabel: () => E.intl.string(E.t.QBnNHq),
+                  },
               };
     }
     createDefinedStepConfigsArray(e) {
@@ -171,8 +186,12 @@ class I {
             { CUSTOM_CONFIRM_STEP_CONFIG: n } = this.tenantCheckoutFlowConfig,
             { disablePaymentAuthSteps: r } = this.internalCheckoutFlowControls,
             i = this.getPredicateStepConfig(),
-            a = this.getGiftCustomizationStepConfig({ isGift: t }),
-            o = this.getAddPaymentStepConfig({ isGift: t }),
+            a = this.getGiftCustomizationStepConfig({
+                isGift: t,
+            }),
+            o = this.getAddPaymentStepConfig({
+                isGift: t,
+            }),
             c = this.getReviewStepConfig(),
             u = this.createDefinedStepConfigsArray([i, a, o, ...(r ? [] : l.hh), c]);
         return (
@@ -219,7 +238,9 @@ class I {
                         checkoutFlow: this.checkoutFlow,
                         checkoutFlowConfiguration: this.checkoutFlowConfiguration,
                         tenantCheckoutFlowConfig: this.tenantCheckoutFlowConfig,
-                        stepConfigs: this.generateCheckoutStepConfigs({ isGift: !!(null != o && o.isGift) }),
+                        stepConfigs: this.generateCheckoutStepConfigs({
+                            isGift: !!(null != o && o.isGift),
+                        }),
                         onComplete: (e) => {
                             null != l && l(e), (b = !0);
                         },

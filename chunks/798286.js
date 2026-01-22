@@ -15,6 +15,7 @@ var r = n(58149),
     a = n(734057),
     s = n(954571),
     o = n(652215);
+
 function l(e, t, n) {
     return (
         t in e
@@ -28,6 +29,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -44,10 +46,12 @@ function c(e) {
     }
     return e;
 }
+
 function u(e) {
     var t;
     return null == (t = a.A.getChannel(e)) ? void 0 : t.guild_id;
 }
+
 function d(e) {
     let { channelId: t, selectedTab: n } = e;
     r.Ay.trackWithMetadata(o.HAw.RTC_PANEL_VIEWED, {
@@ -56,6 +60,7 @@ function d(e) {
         selected_tab: n,
     });
 }
+
 function f(e) {
     let { channelId: t, userId: n } = e;
     r.Ay.trackWithMetadata(
@@ -65,10 +70,13 @@ function f(e) {
                 channel_id: t,
                 guild_id: u(t),
             },
-            (0, i.UI)({ userId: n }),
+            (0, i.UI)({
+                userId: n,
+            }),
         ),
     );
 }
+
 function p(e) {
     let { channelId: t, userId: n, analyticsLocation: a } = e;
     r.Ay.trackWithMetadata(
@@ -79,10 +87,13 @@ function p(e) {
                 guild_id: u(t),
                 location: a,
             },
-            (0, i.UI)({ userId: n }),
+            (0, i.UI)({
+                userId: n,
+            }),
         ),
     );
 }
+
 function _(e) {
     let { channelId: t, userId: n, keyVersion: a, reason: s } = e;
     r.Ay.trackWithMetadata(
@@ -94,10 +105,13 @@ function _(e) {
                 failure_reason: s,
                 key_version: "".concat(a),
             },
-            (0, i.UI)({ userId: n }),
+            (0, i.UI)({
+                userId: n,
+            }),
         ),
     );
 }
+
 function h(e) {
     let { channelId: t, userId: n } = e;
     r.Ay.trackWithMetadata(
@@ -107,10 +121,13 @@ function h(e) {
                 channel_id: t,
                 guild_id: u(t),
             },
-            (0, i.UI)({ userId: n }),
+            (0, i.UI)({
+                userId: n,
+            }),
         ),
     );
 }
+
 function m(e) {
     let { channelId: t } = e;
     r.Ay.trackWithMetadata(o.HAw.E2EE_CALL_VERIFICATION_CODE_COPIED, {
@@ -118,6 +135,7 @@ function m(e) {
         guild_id: u(t),
     });
 }
+
 function g(e) {
     let { channelId: t } = e;
     r.Ay.trackWithMetadata(o.HAw.E2EE_STREAM_VERIFICATION_CODE_COPIED, {
@@ -125,12 +143,17 @@ function g(e) {
         guild_id: u(t),
     });
 }
+
 function E() {
     s.default.track(o.HAw.E2EE_SETTINGS_USER_DELETE);
 }
+
 function b() {
     s.default.track(o.HAw.E2EE_SETTINGS_DEVICE_DELETE);
 }
+
 function y(e) {
-    s.default.track(o.HAw.E2EE_PUBLIC_KEY_MISMATCH, { key_version: "".concat(e) });
+    s.default.track(o.HAw.E2EE_PUBLIC_KEY_MISMATCH, {
+        key_version: "".concat(e),
+    });
 }

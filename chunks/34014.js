@@ -1,4 +1,6 @@
-i.d(e, { r: () => _ });
+i.d(e, {
+    r: () => _,
+});
 var n = i(311907),
     l = i(964486),
     s = i(839214),
@@ -16,13 +18,18 @@ let d = (0, s.D)(() => ({
     })),
     _ = (0, o.zD)(A.X.SYNC_FORCED_COLORS, {
         useTitle: () => E.intl.string(E.t.cguiec),
-        useSubtitle: () => E.intl.format(E.t.GwEVE2, { learnMoreLink: T.A.getArticleURL(S.MVz.FORCED_COLORS) }),
+        useSubtitle: () =>
+            E.intl.format(E.t.GwEVE2, {
+                learnMoreLink: T.A.getArticleURL(S.MVz.FORCED_COLORS),
+            }),
         useValue: () => {
             var t;
             let e = (0, n.bG)([u.A], () => u.A.syncForcedColors);
             return (
                 (0, l.Ay)(() => {
-                    d.setState({ syncEnabled: u.A.syncForcedColors });
+                    d.setState({
+                        syncEnabled: u.A.syncForcedColors,
+                    });
                 }),
                 null != (t = d.useState((t) => t.syncEnabled)) ? t : e
             );
@@ -37,9 +44,15 @@ let d = (0, s.D)(() => ({
                     });
                 return;
             }
-            if (t === u.A.syncForcedColors) return void d.setState({ syncEnabled: t });
+            if (t === u.A.syncForcedColors)
+                return void d.setState({
+                    syncEnabled: t,
+                });
             let i = setTimeout(() => {
-                (0, r.D3)(t), d.setState({ updateTimeout: null });
+                (0, r.D3)(t),
+                    d.setState({
+                        updateTimeout: null,
+                    });
             }, 150);
             d.setState({
                 syncEnabled: t,

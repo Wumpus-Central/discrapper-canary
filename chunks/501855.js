@@ -1,5 +1,8 @@
-a.d(t, { A: () => i });
+a.d(t, {
+    A: () => i,
+});
 var r = a(981737);
+
 function n(e, t, a, r, n) {
     return e + "-" + ("quarter" === t ? n : "year" === t || "week" === t || "minute" === t || "second" === t ? r : a);
 }
@@ -8,7 +11,7 @@ let i = {
         var a = Number(e),
             r = null == t ? void 0 : t.unit;
         if (0 === a) return n(0, r, "ев", "ева", "ево");
-        if (a % 1000 == 0) return n(a, r, "ен", "на", "но");
+        if (a % 1e3 == 0) return n(a, r, "ен", "на", "но");
         if (a % 100 == 0) return n(a, r, "тен", "тна", "тно");
         var i = a % 100;
         if (i > 20 || i < 10)

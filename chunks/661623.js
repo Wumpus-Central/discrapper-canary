@@ -1,4 +1,6 @@
-l.d(t, { A: () => y });
+l.d(t, {
+    A: () => y,
+});
 var n = l(627968),
     r = l(64700),
     s = l(503698),
@@ -35,8 +37,12 @@ let y = r.memo(function (e) {
         innerRef: y,
         children: (0, n.jsx)("div", {
             ref: y,
-            className: a()(x.ty, S.Q3, { [x.yo]: j }),
-            "aria-label": A.intl.formatToPlainString(A.t.Ez6aHE, { category: t.name }),
+            className: a()(x.ty, S.Q3, {
+                [x.yo]: j,
+            }),
+            "aria-label": A.intl.formatToPlainString(A.t.Ez6aHE, {
+                category: t.name,
+            }),
             children: (0, n.jsxs)("div", {
                 className: x.qt,
                 children: [
@@ -83,7 +89,9 @@ let y = r.memo(function (e) {
                                                 position: "top",
                                                 children: (0, n.jsx)("span", {
                                                     className: S.ZB,
-                                                    children: (0, n.jsx)(i.cBN, { size: "xs" }),
+                                                    children: (0, n.jsx)(i.cBN, {
+                                                        size: "xs",
+                                                    }),
                                                 }),
                                             }),
                                         ],
@@ -100,7 +108,9 @@ let y = r.memo(function (e) {
                                                     maximum: T.length,
                                                 }),
                                                 (0, n.jsxs)("div", {
-                                                    className: a()(S.__, { [S.gF]: L }),
+                                                    className: a()(S.__, {
+                                                        [S.gF]: L,
+                                                    }),
                                                     children: [
                                                         L
                                                             ? (0, n.jsx)(i.Uzd, {

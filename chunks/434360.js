@@ -5,5 +5,7 @@ e(834647)(
         name: "isWellKnownSymbol",
         forced: !0,
     },
-    { isWellKnown: e(923753) },
+    {
+        isWellKnown: e(923753),
+    },
 );

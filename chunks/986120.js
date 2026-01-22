@@ -14,10 +14,12 @@ var i = n(562465),
     d = n(723702),
     f = n(837921),
     p = n(652215);
+
 function _() {
     if (null == r) throw Error("Initialize cloud sync module before syncing.");
     return r;
 }
+
 function h() {
     return d.isPlatformEmbedded && ((0, d.isMac)() || ((0, d.isWindows)() && "arm64" !== f.Ay.architecture));
 }
@@ -33,10 +35,14 @@ async function m() {
               ))
             : new s.A("CloudSyncUtils").warn("CloudSync is not supported on this platform"));
 }
+
 function g(e, t) {
     var n;
     let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-    if (!c.A.supportsCloudSync(e, t)) return Promise.resolve({ type: p.R_U.NONE });
+    if (!c.A.supportsCloudSync(e, t))
+        return Promise.resolve({
+            type: p.R_U.NONE,
+        });
     let a = _(),
         s = c.A.getState(e, t);
     if (null == s) throw Error("No dispatch state for ".concat(e, ":").concat(t));

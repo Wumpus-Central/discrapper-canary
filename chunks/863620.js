@@ -11,7 +11,9 @@ function r(e, t, n) {
         e
     );
 }
-n.d(t, { u: () => i });
+n.d(t, {
+    u: () => i,
+});
 class i {
     schedule(e, t) {
         this.unschedule(),

@@ -11,6 +11,7 @@ var r = n(635377),
     a = n(439372),
     s = n(954571),
     o = n(652215);
+
 function l(e, t, n) {
     return (
         t in e
@@ -24,14 +25,15 @@ function l(e, t, n) {
         e
     );
 }
-let c = 60000,
-    u = 1000,
+let c = 6e4,
+    u = 1e3,
     d = 10,
-    f = 2000,
+    f = 2e3,
     p = 500;
 var _ = (function (e) {
     return (e.ANNOUNCEMENT = "announcement"), (e.APP_EMBED = "app_embed"), e;
 })({});
+
 function h(e) {
     if ("announcement" === e.type)
         return {
@@ -117,7 +119,9 @@ class m extends a.A {
             ),
             l(this, "batchBuffer", []),
             l(this, "batchTimerId", null),
-            l(this, "actions", { CHANNEL_SELECT: () => this.handleChannelSelect() });
+            l(this, "actions", {
+                CHANNEL_SELECT: () => this.handleChannelSelect(),
+            });
     }
 }
 let g = new m();

@@ -14,15 +14,19 @@
         y: "gada_gadiem_gads_gadi".split("_"),
         yy: "gada_gadiem_gads_gadi".split("_"),
     };
+
     function n(e, t, n) {
         return n ? (t % 10 == 1 && t % 100 != 11 ? e[2] : e[3]) : t % 10 == 1 && t % 100 != 11 ? e[0] : e[1];
     }
+
     function r(e, r, i) {
         return e + " " + n(t[i], e, r);
     }
+
     function i(e, r, i) {
         return n(t[i], e, r);
     }
+
     function a(e, t) {
         return t ? "dažas sekundes" : "dažām sekundēm";
     }

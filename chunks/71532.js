@@ -28,7 +28,7 @@ let l = new s.A("StripeUtils"),
                 );
             }),
             [i, a] = r[0] > 12 ? [r[1], r[0]] : [r[0], r[1]];
-        return i > 12 && t("Month must be a number 1-12, not ".concat(i, ".")), a < 100 && (a += 2000), [i, a];
+        return i > 12 && t("Month must be a number 1-12, not ".concat(i, ".")), a < 100 && (a += 2e3), [i, a];
     },
     u = (e) => {
         let t, n;
@@ -41,9 +41,11 @@ let l = new s.A("StripeUtils"),
             i = new Date();
         return r.setMonth(r.getMonth() - 1), r.setMonth(r.getMonth() + 1, 1), r > i;
     };
+
 function d() {
     return null != r ? Promise.resolve(r) : (0, i.loadStripe)(o.Gg3.STRIPE.KEY).then((e) => ((r = e), e));
 }
+
 function f() {
     return null == o.Gg3.STRIPE.KEY
         ? (l.warn("getStripeClientMode() called before PaymentSettings.STRIPE.KEY initialized: ", o.Gg3.STRIPE.KEY),
@@ -54,6 +56,7 @@ function f() {
             ? "test"
             : (l.warn("Unexpected value for Stripe public key: ", o.Gg3.STRIPE.KEY), "unknown");
 }
+
 function p(e) {
     var t, n, r, i, a, s, o, l;
     let { billing_details: c } = e,
@@ -72,6 +75,7 @@ function p(e) {
         billingAddressInfo: d,
     };
 }
+
 function _(e) {
     let { name: t, line1: n, line2: r, city: i, state: a, postalCode: s, country: o } = e;
     return {
@@ -96,10 +100,19 @@ async function h(e) {
                 })
             ).body,
             n = await d();
-        if (null == n) return { error: "unable to load stripe" };
+        if (null == n)
+            return {
+                error: "unable to load stripe",
+            };
         let { error: r, paymentIntent: i } = await n.retrievePaymentIntent(t);
-        if (null != r) return { error: r.message };
-        if (null == i) return { error: "payment intent does not exist" };
+        if (null != r)
+            return {
+                error: r.message,
+            };
+        if (null == i)
+            return {
+                error: "payment intent does not exist",
+            };
         let s = {};
         switch (
             ("requires_payment_method" === i.status &&
@@ -112,15 +125,22 @@ async function h(e) {
             case "requires_confirmation":
             case "requires_action":
                 let { error: l } = await n.confirmCardPayment(t, s);
-                if (null != l) return { error: l.message };
+                if (null != l)
+                    return {
+                        error: l.message,
+                    };
                 return {};
             case "succeeded":
             case "processing":
                 return {};
             default:
-                return { error: "Invalid Payment Intent status: ".concat(i.status) };
+                return {
+                    error: "Invalid Payment Intent status: ".concat(i.status),
+                };
         }
     } catch (e) {
-        return { error: e.message };
+        return {
+            error: e.message,
+        };
     }
 }

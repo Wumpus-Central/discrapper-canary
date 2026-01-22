@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var l = n(627968),
     a = n(64700),
     r = n(158954),
@@ -12,6 +14,7 @@ var l = n(627968),
     h = n(125862),
     m = n(985018),
     b = n(100669);
+
 function f(e) {
     let { application: t } = e,
         n = a.useMemo(() => {
@@ -32,16 +35,26 @@ function f(e) {
                         application: t,
                         carouselItems: n,
                     }),
-                    (0, l.jsx)(p.A, { application: t }),
-                    (0, l.jsx)(o.A, { application: t }),
-                    (0, l.jsx)(h.A, { application: t }),
-                    (0, l.jsx)(d.A, { application: t }),
+                    (0, l.jsx)(p.A, {
+                        application: t,
+                    }),
+                    (0, l.jsx)(o.A, {
+                        application: t,
+                    }),
+                    (0, l.jsx)(h.A, {
+                        application: t,
+                    }),
+                    (0, l.jsx)(d.A, {
+                        application: t,
+                    }),
                 ],
             }),
             (0, l.jsxs)("div", {
                 className: b.Q9,
                 children: [
-                    (0, l.jsx)("div", { className: b.yF }),
+                    (0, l.jsx)("div", {
+                        className: b.yF,
+                    }),
                     (0, l.jsx)(r.DZT, {
                         variant: "heading-lg/semibold",
                         color: "text-strong",

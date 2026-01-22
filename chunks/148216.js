@@ -1,4 +1,7 @@
-r.d(t, { default: () => u }), r(896048);
+r.d(t, {
+    default: () => u,
+}),
+    r(896048);
 var n = r(627968),
     o = r(64700),
     c = r(989349),
@@ -7,6 +10,7 @@ var n = r(627968),
     s = r(397927),
     a = r(985018),
     p = r(826063);
+
 function u(e) {
     var t, r;
     let { createReminder: c } = e,

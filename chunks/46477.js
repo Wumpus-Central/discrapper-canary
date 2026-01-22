@@ -31,6 +31,7 @@ var r = n(284009),
             e
         );
     })({});
+
 function g(e, t, n) {
     var r;
     let {
@@ -91,12 +92,15 @@ function g(e, t, n) {
         return 7;
     return 0;
 }
+
 function E(e) {
     return !0 === e;
 }
+
 function b(e) {
     return !1 === e;
 }
+
 function y(e, t, n) {
     if (null == e) return null;
     let r = t.id;
@@ -109,6 +113,7 @@ function y(e, t, n) {
     let s = e[(0, l.Eu)((0, f.Ap)(n), d.RA.CHANNEL)];
     return null != s ? s.permission : null;
 }
+
 function O(e, t, n, r, i) {
     if (null == e) return null;
     if (!i) {

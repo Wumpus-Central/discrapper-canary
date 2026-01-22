@@ -1,9 +1,12 @@
-n.d(t, { A: () => l });
+n.d(t, {
+    A: () => l,
+});
 var r = n(627968),
     i = n(64700),
     a = n(143413),
     s = n(643204);
 let o = i.memo(s.Ay);
+
 function l(e) {
     let {
         message: t,

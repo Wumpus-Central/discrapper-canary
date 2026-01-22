@@ -12,7 +12,10 @@ var r = n(397927),
 let c = [
         {
             Icon: r.$yI,
-            getText: () => l.intl.formatToPlainString(o.default.eP3Ar7, { totalSeats: s.aw }),
+            getText: () =>
+                l.intl.formatToPlainString(o.default.eP3Ar7, {
+                    totalSeats: s.aw,
+                }),
         },
         {
             Icon: r.tvc,
@@ -30,13 +33,18 @@ let c = [
     u = [
         {
             Icon: r.$yI,
-            getText: () => l.intl.formatToPlainString(o.default.eP3Ar7, { totalSeats: s.aw }),
+            getText: () =>
+                l.intl.formatToPlainString(o.default.eP3Ar7, {
+                    totalSeats: s.aw,
+                }),
         },
         {
             Icon: r.JMY,
             getText: () =>
                 l.intl.formatToPlainString(l.t.p8QVLT, {
-                    maxUploadPremium: (0, i.EJ)(a.PremiumTypes.TIER_2, { useSpace: !1 }),
+                    maxUploadPremium: (0, i.EJ)(a.PremiumTypes.TIER_2, {
+                        useSpace: !1,
+                    }),
                 }),
         },
         {
@@ -53,7 +61,10 @@ let c = [
         },
         {
             Icon: r._Jp,
-            getText: () => l.intl.formatToPlainString(o.default.HVCRVf, { numBoosts: a.M4 }),
+            getText: () =>
+                l.intl.formatToPlainString(o.default.HVCRVf, {
+                    numBoosts: a.M4,
+                }),
         },
         {
             Icon: r.clX,
@@ -65,7 +76,9 @@ let c = [
             Icon: r.JMY,
             getText: () =>
                 l.intl.formatToPlainString(l.t.p8QVLT, {
-                    maxUploadPremium: (0, i.EJ)(a.PremiumTypes.TIER_2, { useSpace: !1 }),
+                    maxUploadPremium: (0, i.EJ)(a.PremiumTypes.TIER_2, {
+                        useSpace: !1,
+                    }),
                 }),
         },
         {

@@ -1,4 +1,6 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 var r = n(619881),
     i = n(444746);
 let a = {
@@ -29,7 +31,9 @@ let a = {
                     top: "0",
                     margin: "0",
                 },
-                arrow: { position: "absolute" },
+                arrow: {
+                    position: "absolute",
+                },
                 reference: {},
             };
         return (

@@ -20,7 +20,9 @@ let l = [
             Icon: r.A9s,
             getText: () =>
                 o.intl.formatToPlainString(o.t.p8QVLT, {
-                    maxUploadPremium: (0, a.EJ)(s.PremiumTypes.TIER_2, { useSpace: !1 }),
+                    maxUploadPremium: (0, a.EJ)(s.PremiumTypes.TIER_2, {
+                        useSpace: !1,
+                    }),
                 }),
         },
         {
@@ -47,7 +49,9 @@ let l = [
             Icon: r.JMY,
             getText: () =>
                 o.intl.formatToPlainString(o.t.p8QVLT, {
-                    maxUploadPremium: (0, a.EJ)(s.PremiumTypes.TIER_2, { useSpace: !1 }),
+                    maxUploadPremium: (0, a.EJ)(s.PremiumTypes.TIER_2, {
+                        useSpace: !1,
+                    }),
                 }),
         },
         {
@@ -68,7 +72,9 @@ let l = [
             Icon: r.JMY,
             getText: () =>
                 o.intl.formatToPlainString(o.t.p8QVLT, {
-                    maxUploadPremium: (0, a.EJ)(s.PremiumTypes.TIER_2, { useSpace: !1 }),
+                    maxUploadPremium: (0, a.EJ)(s.PremiumTypes.TIER_2, {
+                        useSpace: !1,
+                    }),
                 }),
         },
         {
@@ -93,7 +99,9 @@ let l = [
             Icon: r.JMY,
             getText: () =>
                 o.intl.formatToPlainString(o.t.p8QVLT, {
-                    maxUploadPremium: (0, a.EJ)(s.PremiumTypes.TIER_2, { useSpace: !1 }),
+                    maxUploadPremium: (0, a.EJ)(s.PremiumTypes.TIER_2, {
+                        useSpace: !1,
+                    }),
                 }),
         },
         {
@@ -126,7 +134,9 @@ let l = [
             Icon: r.A9s,
             getText: () =>
                 o.intl.formatToPlainString(o.t.p8QVLT, {
-                    maxUploadPremium: (0, a.EJ)(s.PremiumTypes.TIER_0, { useSpace: !1 }),
+                    maxUploadPremium: (0, a.EJ)(s.PremiumTypes.TIER_0, {
+                        useSpace: !1,
+                    }),
                 }),
         },
         {
@@ -139,7 +149,9 @@ let l = [
             Icon: r.JMY,
             getText: () =>
                 o.intl.formatToPlainString(o.t.p8QVLT, {
-                    maxUploadPremium: (0, a.EJ)(s.PremiumTypes.TIER_0, { useSpace: !1 }),
+                    maxUploadPremium: (0, a.EJ)(s.PremiumTypes.TIER_0, {
+                        useSpace: !1,
+                    }),
                 }),
         },
         {

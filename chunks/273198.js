@@ -1,4 +1,9 @@
-n.d(t, { A: () => A }), n(747238), n(812715), n(866193);
+n.d(t, {
+    A: () => A,
+}),
+    n(747238),
+    n(812715),
+    n(866193);
 var r = n(627968),
     i = n(64700),
     a = n(56121),
@@ -15,6 +20,7 @@ var r = n(627968),
     m = n(18282),
     g = n(299846),
     E = n(985018);
+
 function b(e) {
     if (e === a.j.WEEK) return E.t["7TXfc6"];
 }
@@ -36,7 +42,9 @@ let y = (e, t, n, r) => {
         }),
     A = (e) => {
         let { channel: t, entry: n, disableGameProfileLinks: a, onReaction: o, onVoiceChannelPreview: b } = e,
-            { largeImage: A } = (0, l.nO)({ entry: n }),
+            { largeImage: A } = (0, l.nO)({
+                entry: n,
+            }),
             { user: v, details: S, appName: I } = (0, g.u)(n),
             { primaryColor: T, secondaryColor: C } = (0, d.A)(null == A ? void 0 : A.src),
             N = (0, c.ty)(n),
@@ -77,7 +85,15 @@ let y = (e, t, n, r) => {
                     subtitle: S,
                     badges: (0, r.jsx)(_.mG, {
                         location: _.N5.POPOUT,
-                        children: p.ac.map((e, t) => (0, r.jsx)(e, { entry: n }, t)),
+                        children: p.ac.map((e, t) =>
+                            (0, r.jsx)(
+                                e,
+                                {
+                                    entry: n,
+                                },
+                                t,
+                            ),
+                        ),
                     }),
                     disableGameProfileLinks: a,
                 }),

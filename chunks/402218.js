@@ -1,4 +1,7 @@
-n.d(t, { A: () => er }), n(896048);
+n.d(t, {
+    A: () => er,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -70,7 +73,9 @@ let K = l.memo(function (e) {
                         __unsupportedReactNodeAsText: (0, r.jsxs)("div", {
                             className: Y.CN,
                             children: [
-                                (0, r.jsx)("div", { children: q.intl.string(q.t["xfJP+u"]) }),
+                                (0, r.jsx)("div", {
+                                    children: q.intl.string(q.t["xfJP+u"]),
+                                }),
                                 (0, r.jsx)(j.A, {
                                     deadline: i,
                                     showUnits: !0,
@@ -172,7 +177,9 @@ let K = l.memo(function (e) {
                   children: [
                       (0, r.jsx)("div", {
                           className: Y.Wn,
-                          children: (0, r.jsx)(b.A, { user: i }),
+                          children: (0, r.jsx)(b.A, {
+                              user: i,
+                          }),
                       }),
                       (0, r.jsx)("div", {
                           className: Y.eg,
@@ -209,12 +216,14 @@ let K = l.memo(function (e) {
                   ],
               });
     });
+
 function J(e) {
     return {
         short: null == e ? null : (0, E.hL)(e, E.wN.JOINED_AT),
         long: new Date(null != e ? e : 0).toLocaleDateString(q.intl.currentLocale, E.wp),
     };
 }
+
 function W(e) {
     let { member: t, showLongDate: n, isSortedBy: i } = e,
         [o, a] = l.useState(null);
@@ -223,7 +232,7 @@ function W(e) {
     }, [t.joinedAtTimestamp]),
         (0, m.A)(() => {
             a(J(t.joinedAtTimestamp));
-        }, 10000);
+        }, 1e4);
     let s = i ? "text-brand" : "text-default";
     return (null == o ? void 0 : o.short) == null
         ? null
@@ -329,14 +338,18 @@ let $ = l.memo(function (e) {
                         }),
                     }),
                 (0, r.jsx)("td", {
-                    className: o()(Y.QB, { [Y.oE]: b }),
+                    className: o()(Y.QB, {
+                        [Y.oE]: b,
+                    }),
                     children: (0, r.jsx)(X, {
                         member: t,
                         user: n,
                     }),
                 }),
                 (0, r.jsx)("td", {
-                    className: o()(Y.qp, { [Y.oE]: b }),
+                    className: o()(Y.qp, {
+                        [Y.oE]: b,
+                    }),
                     children: (0, r.jsx)(W, {
                         showLongDate: a,
                         member: t,
@@ -344,7 +357,9 @@ let $ = l.memo(function (e) {
                     }),
                 }),
                 (0, r.jsx)("td", {
-                    className: o()(Y.qp, { [Y.oE]: b }),
+                    className: o()(Y.qp, {
+                        [Y.oE]: b,
+                    }),
                     children: (0, r.jsx)($, {
                         showLongDate: a,
                         member: t,
@@ -353,25 +368,35 @@ let $ = l.memo(function (e) {
                 }),
                 p &&
                     (0, r.jsx)("td", {
-                        className: o()(Y.qp, { [Y.oE]: b }),
+                        className: o()(Y.qp, {
+                            [Y.oE]: b,
+                        }),
                         children: (0, r.jsx)(Z.Ay, {
                             userId: t.userId,
                             guildId: t.guildId,
                         }),
                     }),
                 (0, r.jsx)("td", {
-                    className: o()(Y.QB, { [Y.oE]: b }),
+                    className: o()(Y.QB, {
+                        [Y.oE]: b,
+                    }),
                     children: (0, r.jsx)(Q, {
                         member: t,
                         highestRole: i,
                     }),
                 }),
                 (0, r.jsx)("td", {
-                    className: o()(Y.qp, { [Y.oE]: b }),
-                    children: (0, r.jsx)(K, { member: t }),
+                    className: o()(Y.qp, {
+                        [Y.oE]: b,
+                    }),
+                    children: (0, r.jsx)(K, {
+                        member: t,
+                    }),
                 }),
                 (0, r.jsx)("td", {
-                    className: o()(Y.OL, { [Y.oE]: b }),
+                    className: o()(Y.OL, {
+                        [Y.oE]: b,
+                    }),
                     children: (0, r.jsxs)("div", {
                         className: Y.$E,
                         children: [
@@ -452,7 +477,9 @@ let $ = l.memo(function (e) {
                         e.preventDefault(),
                         null != g &&
                             (v
-                                ? (0, x.z)(g.guildId, g.userId, G.VV.MEMBER_SAFETY, { modViewPanel: z.g.INFO })
+                                ? (0, x.z)(g.guildId, g.userId, G.VV.MEMBER_SAFETY, {
+                                      modViewPanel: z.g.INFO,
+                                  })
                                 : (0, U.Ko)(g, b));
                 },
                 [g, b, v],

@@ -1,4 +1,6 @@
-i.d(e, { w: () => b });
+i.d(e, {
+    w: () => b,
+});
 var n = i(421380),
     l = i(935649),
     s = i(847599),
@@ -29,8 +31,12 @@ let R = (t, e) => {
         useTitle: () => L.intl.string(L.t["3o2ojh"]),
         useSubtitle: () =>
             (0, g.q9)()
-                ? L.intl.format(L.t.WpnWLc, { helpdeskArticle: T.A.getArticleURL(C.MVz.MESSAGE_REQUESTS) })
-                : L.intl.format(L.t.wkm9a3, { helpdeskArticle: T.A.getArticleURL(C.MVz.MESSAGE_REQUESTS) }),
+                ? L.intl.format(L.t.WpnWLc, {
+                      helpdeskArticle: T.A.getArticleURL(C.MVz.MESSAGE_REQUESTS),
+                  })
+                : L.intl.format(L.t.wkm9a3, {
+                      helpdeskArticle: T.A.getArticleURL(C.MVz.MESSAGE_REQUESTS),
+                  }),
         useValue: () => {
             let t = (0, g.Tx)(),
                 e = (0, E.K)(),
@@ -49,7 +55,9 @@ let R = (t, e) => {
         setValue: (t) => {
             let e = I.xk.getState().selectedGuildId;
             if (!t && (0, S.w)())
-                return void l.A.showAgeVerificationGetStartedModal({ entryPoint: s.q1.MESSAGE_REQUESTS_SETTINGS });
+                return void l.A.showAgeVerificationGetStartedModal({
+                    entryPoint: s.q1.MESSAGE_REQUESTS_SETTINGS,
+                });
             if (e === I.YG) {
                 var i;
                 (i = !t),

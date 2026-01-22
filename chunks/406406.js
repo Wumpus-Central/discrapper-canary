@@ -1,4 +1,6 @@
-n.d(e, { default: () => O });
+n.d(e, {
+    default: () => O,
+});
 var l = n(627968);
 n(64700);
 var r = n(397927),
@@ -17,6 +19,7 @@ var r = n(397927),
     A = n(174966),
     v = n(652215),
     E = n(985018);
+
 function O(t) {
     let {
             guildEventId: e,
@@ -78,8 +81,14 @@ function O(t) {
                 (0, l.jsxs)(r.rXV, {
                     children: [U, !h && P, G, !h && S, N, w, x, h && V],
                 }),
-                !h && (0, l.jsx)(r.rXV, { children: C }),
-                null != T && (0, l.jsx)(r.rXV, { children: T }),
+                !h &&
+                    (0, l.jsx)(r.rXV, {
+                        children: C,
+                    }),
+                null != T &&
+                    (0, l.jsx)(r.rXV, {
+                        children: T,
+                    }),
                 (0, l.jsxs)(r.rXV, {
                     children: [I, L],
                 }),

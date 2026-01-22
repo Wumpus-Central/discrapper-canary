@@ -1,4 +1,11 @@
-n.d(t, { default: () => ed }), n(896048), n(321073), n(638769), n(142703), n(65821);
+n.d(t, {
+    default: () => ed,
+}),
+    n(896048),
+    n(321073),
+    n(638769),
+    n(142703),
+    n(65821);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -44,6 +51,7 @@ var r = n(627968),
     W = n(985018),
     K = n(882181),
     z = n(473169);
+
 function q(e, t, n) {
     return (
         t in e
@@ -57,6 +65,7 @@ function q(e, t, n) {
         e
     );
 }
+
 function X(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -73,6 +82,7 @@ function X(e) {
     }
     return e;
 }
+
 function Z(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -85,6 +95,7 @@ function Z(e, t) {
     }
     return n;
 }
+
 function Q(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -100,9 +111,11 @@ let $ = 52,
     J = 52,
     ee = 24,
     et = 0.025;
+
 function en(e) {
     return null == e.id ? y.Ay.convertSurrogateToName(e.name) : ":".concat(e.name, ":");
 }
+
 function er(e, t, n, i) {
     let a =
         null == e.id
@@ -159,7 +172,9 @@ let ei = (e) => {
                 children: [
                     d,
                     (0, r.jsx)(h.A, {
-                        className: s()(K.h_, { [K.bD]: o }),
+                        className: s()(K.h_, {
+                            [K.bD]: o,
+                        }),
                         emojiId: t.id,
                         emojiName: t.name,
                         animated: t.animated,
@@ -234,6 +249,7 @@ let ei = (e) => {
             }),
         });
     });
+
 function es(e) {
     let { emoji: t, user: n, message: i, channel: a, guildId: o, reactionType: l, onRemoveReactor: c } = e,
         d = (0, u.bG)([R.default], () => R.default.getId()),
@@ -241,6 +257,7 @@ function es(e) {
         h = (0, C.Id)(a),
         E = (0, u.bG)([L.A], () => L.A.can(Y.xBc.MANAGE_MESSAGES, a) && h) || d === n.id,
         y = (0, u.bG)([P.Ay, w.A, j.A], () => G.Ay.getName(o, a.id, n));
+
     function O() {
         B.et({
             channelId: a.id,
@@ -248,7 +265,9 @@ function es(e) {
             emoji: t,
             location: B.qN.MESSAGE,
             userId: n.id,
-            options: { burst: l === S.v.BURST },
+            options: {
+                burst: l === S.v.BURST,
+            },
         }),
             null == c || c();
     }
@@ -324,7 +343,9 @@ class eo extends i.PureComponent {
     loadMore() {
         let { message: e, reaction: t, reactionType: n } = this.props,
             { lastId: r } = this.state;
-        this.setState({ loadingMore: !0 }),
+        this.setState({
+            loadingMore: !0,
+        }),
             B.ao({
                 channelId: e.getChannelId(),
                 messageId: e.id,
@@ -403,10 +424,22 @@ class eo extends i.PureComponent {
                     u = l[n];
                 return 1 === t
                     ? 0 === n
-                        ? (0, r.jsx)(_.y$y, { className: K.u1 }, "hasMore")
+                        ? (0, r.jsx)(
+                              _.y$y,
+                              {
+                                  className: K.u1,
+                              },
+                              "hasMore",
+                          )
                         : null
                     : 0 === l.length && this.state.loadingMore
-                      ? (0, r.jsx)(_.y$y, { className: K.u1 }, "loadingMore")
+                      ? (0, r.jsx)(
+                            _.y$y,
+                            {
+                                className: K.u1,
+                            },
+                            "loadingMore",
+                        )
                       : null != u &&
                         (0, r.jsx)(
                             es,
@@ -439,13 +472,24 @@ let el = u.Ay.connectStores([D.A], (e) => {
         hasMore: s,
     };
 })(eo);
+
 function ec(e) {
     return i.useMemo(() => {
         let t = [];
         return (
             e.forEach((e) => {
-                e.burst_count > 0 && t.push(Q(X({}, e), { count: 0 })),
-                    e.count > 0 && t.push(Q(X({}, e), { burst_count: 0 }));
+                e.burst_count > 0 &&
+                    t.push(
+                        Q(X({}, e), {
+                            count: 0,
+                        }),
+                    ),
+                    e.count > 0 &&
+                        t.push(
+                            Q(X({}, e), {
+                                burst_count: 0,
+                            }),
+                        );
             }),
             t.sort((e, t) => {
                 let n = e.burst_count > 0 ? e.burst_count : e.count;
@@ -455,6 +499,7 @@ function ec(e) {
         );
     }, [e]);
 }
+
 function eu(e, t, n) {
     let [r, a] = i.useState(null != e ? e : t);
     return (
@@ -472,6 +517,7 @@ function eu(e, t, n) {
         [r, a]
     );
 }
+
 function ed(e) {
     let {
             message: t,
@@ -526,8 +572,12 @@ function ed(e) {
             onClose: a,
             "aria-label": o,
             children: [
-                (0, r.jsx)(f.rQ0, { title: W.intl.string(W.t.gHp0C4) }),
-                (0, r.jsx)("div", { className: K.jH }),
+                (0, r.jsx)(f.rQ0, {
+                    title: W.intl.string(W.t.gHp0C4),
+                }),
+                (0, r.jsx)("div", {
+                    className: K.jH,
+                }),
                 (0, r.jsxs)("div", {
                     className: K.kL,
                     children: [

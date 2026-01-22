@@ -1,4 +1,7 @@
-n.d(t, { A: () => h }), n(896048);
+n.d(t, {
+    A: () => h,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -11,6 +14,7 @@ var r = n(627968),
     f = n(652215),
     g = n(985018),
     b = n(389612);
+
 function m(e) {
     let { color: t, children: n } = e;
     return (0, r.jsxs)("div", {
@@ -28,10 +32,13 @@ function m(e) {
         ],
     });
 }
+
 function p(e) {
     let { guild: t, display: n } = e;
     return (0, r.jsxs)("div", {
-        className: s()(b.vK, t.backgroundClass, { [b.lK]: !n }),
+        className: s()(b.vK, t.backgroundClass, {
+            [b.lK]: !n,
+        }),
         children: [
             (0, r.jsx)("div", {
                 className: b.Ot,
@@ -78,6 +85,7 @@ function p(e) {
         ],
     });
 }
+
 function x() {
     let e = i.useMemo(
             () => [
@@ -216,6 +224,7 @@ function x() {
         })
     );
 }
+
 function h(e) {
     let { guild: t, everyoneRole: n, setEditRoleId: l } = e,
         [s, d] = i.useState(!1),
@@ -259,7 +268,9 @@ function h(e) {
                         }),
                     ],
                 }),
-                (0, r.jsx)(a.cGx, { className: b.yF }),
+                (0, r.jsx)(a.cGx, {
+                    className: b.yF,
+                }),
                 (0, r.jsx)(u.A, {
                     role: n,
                     onClick: m,

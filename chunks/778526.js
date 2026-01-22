@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968),
     i = n(64700),
     l = n(311907),
@@ -14,6 +16,7 @@ var r = n(627968),
     m = n(57731),
     p = n(985018),
     x = n(275316);
+
 function h(e) {
     var t, n;
     let {
@@ -81,11 +84,17 @@ function h(e) {
                         }),
                     ],
                 }),
-            (0, r.jsx)(f.A, { priceTiers: S }),
-            (0, r.jsx)(g.A, { allSubscriptionListings: h }),
+            (0, r.jsx)(f.A, {
+                priceTiers: S,
+            }),
+            (0, r.jsx)(g.A, {
+                allSubscriptionListings: h,
+            }),
             (0, r.jsx)(b.A, {}),
             (0, r.jsx)(m.A, {}),
-            (0, r.jsx)(u.A, { onDeleteEditState: A }),
+            (0, r.jsx)(u.A, {
+                onDeleteEditState: A,
+            }),
         ],
     });
 }

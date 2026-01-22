@@ -1,10 +1,14 @@
-n.d(t, { A: () => o }), n(896048);
+n.d(t, {
+    A: () => o,
+}),
+    n(896048);
 var r = n(627968);
 n(64700);
 var l = n(503698),
     i = n.n(l),
     a = n(376310),
     s = n(601051);
+
 function o(e) {
     let { appliedTags: t, setAppliedTags: n, wrap: l } = e,
         o =
@@ -14,7 +18,9 @@ function o(e) {
                   }
                 : void 0;
     return (0, r.jsx)("div", {
-        className: i()(s._, { [s.L]: l }),
+        className: i()(s._, {
+            [s.L]: l,
+        }),
         children: Array.from(t).map((e) =>
             (0, r.jsx)(
                 a.A,

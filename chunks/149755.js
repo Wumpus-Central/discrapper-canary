@@ -1,4 +1,7 @@
-a.r(t), a.d(t, { default: () => d });
+a.r(t),
+    a.d(t, {
+        default: () => d,
+    });
 var s = a(627968),
     p = a(64700),
     r = a(156828),
@@ -10,6 +13,7 @@ let n = p.lazy(() =>
         webpackId: 122204,
     }),
 );
+
 function d() {
     return (0, s.jsx)(c.A, {
         path: i.BVt.GLOBAL_DISCOVERY_APPS,

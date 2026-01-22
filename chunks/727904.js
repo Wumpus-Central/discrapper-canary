@@ -1,8 +1,12 @@
-n.d(t, { A: () => a }), n(896048);
+n.d(t, {
+    A: () => a,
+}),
+    n(896048);
 var r = n(64700),
     i = n(735438),
     l = n(627794),
     s = n(789821);
+
 function a(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
         n = arguments.length > 2 ? arguments[2] : void 0,

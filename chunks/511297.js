@@ -1,4 +1,7 @@
-n.d(t, { A: () => T }), n(896048);
+n.d(t, {
+    A: () => T,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(158954),
@@ -21,6 +24,7 @@ var r = n(627968),
     A = n(985018),
     v = n(308021),
     S = n(964801);
+
 function I(e) {
     let { onClick: t, emoji: n, index: i, reducedMotion: a, isActive: s } = e,
         o = (0, g.vy)();
@@ -45,6 +49,7 @@ function I(e) {
         }),
     });
 }
+
 function T() {
     let e = (0, s.bG)([c.A], () => c.A.useReducedMotion),
         t = i.useContext(u.P),
@@ -69,7 +74,9 @@ function T() {
         children: (0, r.jsxs)("div", {
             className: S.kL,
             children: [
-                (0, r.jsx)(E.A, { emoji: T }),
+                (0, r.jsx)(E.A, {
+                    emoji: T,
+                }),
                 (0, r.jsxs)("div", {
                     className: S.Qs,
                     children: [
@@ -87,7 +94,9 @@ function T() {
                                     className: v.UP,
                                     children: g
                                         ? A.intl.string(O.default.vnG9Sx)
-                                        : A.intl.format(O.default.JwFMdL, { numEmojis: l }),
+                                        : A.intl.format(O.default.JwFMdL, {
+                                              numEmojis: l,
+                                          }),
                                 }),
                             ],
                         }),
@@ -99,7 +108,9 @@ function T() {
                               })
                             : (0, r.jsxs)(r.Fragment, {
                                   children: [
-                                      (0, r.jsx)(m.A, { end: l }),
+                                      (0, r.jsx)(m.A, {
+                                          end: l,
+                                      }),
                                       (0, r.jsx)(h.A, {
                                           variant: "heading-xxl/medium",
                                           className: S.VA,
@@ -123,7 +134,9 @@ function T() {
                                       }),
                                   ],
                               }),
-                        (0, r.jsx)(p.e, { slide: y.P7.EMOJIS }),
+                        (0, r.jsx)(p.e, {
+                            slide: y.P7.EMOJIS,
+                        }),
                     ],
                 }),
             ],

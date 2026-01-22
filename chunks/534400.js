@@ -17,6 +17,7 @@ var r = n(627968),
     _ = n(985018),
     h = n(583970),
     m = n(478858);
+
 function g(e, t, n) {
     return (
         t in e
@@ -30,6 +31,7 @@ function g(e, t, n) {
         e
     );
 }
+
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -74,7 +76,9 @@ let b = i.memo(function (e) {
             inline: O = !0,
         } = e;
         return (0, r.jsx)(l.DUT, {
-            "aria-label": _.intl.formatToPlainString(h.default["fw2p/x"], { tag: n }),
+            "aria-label": _.intl.formatToPlainString(h.default["fw2p/x"], {
+                tag: n,
+            }),
             tag: "span",
             tabIndex: null == u ? -1 : void 0,
             onClick: u,

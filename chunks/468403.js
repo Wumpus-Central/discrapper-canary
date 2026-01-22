@@ -1,9 +1,12 @@
-r.d(t, { default: () => s });
+r.d(t, {
+    default: () => s,
+});
 var n = r(627968),
     o = r(64700),
     c = r(421380),
     i = r(397927),
     l = r(985018);
+
 function s(e) {
     var t, r;
     let { onConfirm: s } = e,
@@ -67,7 +70,12 @@ function s(e) {
                     });
             }
             return e;
-        })({ size: i.rIJ.SMALL }, a)),
+        })(
+            {
+                size: i.rIJ.SMALL,
+            },
+            a,
+        )),
         (r = r =
             {
                 parentComponent: "DisableLandingPageWarningModal",
@@ -75,7 +83,9 @@ function s(e) {
                     (0, n.jsx)(i.$mQ, {
                         children: (0, n.jsx)(i.Text, {
                             variant: "text-md/normal",
-                            style: { marginTop: 24 },
+                            style: {
+                                marginTop: 24,
+                            },
                             children: l.intl.string(l.t.nmBUv7),
                         }),
                     }),
@@ -89,7 +99,9 @@ function s(e) {
                             (0, n.jsx)(c.$n, {
                                 color: c.XD.RED,
                                 onClick: p,
-                                style: { marginRight: 8 },
+                                style: {
+                                    marginRight: 8,
+                                },
                                 children: l.intl.string(l.t.R9GHya),
                             }),
                         ],

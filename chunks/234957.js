@@ -1,4 +1,6 @@
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -12,7 +14,9 @@ var r = n(627968),
 let p = i.memo(function (e) {
     let { baseMessage: t, channel: n, referencedMessage: f, compact: p = !1 } = e,
         _ = f.state === o.a.LOADED ? f.message : void 0,
-        h = s.m.useExperiment({ location: "repliedMessage" }).enabled,
+        h = s.m.useExperiment({
+            location: "repliedMessage",
+        }).enabled,
         m = i.useMemo(
             () =>
                 (null == _ ? void 0 : _.content) != null && "" !== _.content
@@ -47,6 +51,7 @@ let p = i.memo(function (e) {
         showReplySpine: !0,
     });
 });
+
 function _(e, t, n, i, a) {
     return e.type !== f.lAJ.REPLY || null == n
         ? null

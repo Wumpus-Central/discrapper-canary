@@ -1,8 +1,12 @@
-n.d(t, { A: () => o }), n(896048);
+n.d(t, {
+    A: () => o,
+}),
+    n(896048);
 var r = n(64700),
     i = n(267102),
     a = n(652215);
 let s = ["Shift", "Alt", "Meta", "Control"];
+
 function o(e, t) {
     let [n, o] = r.useState(0),
         l = (0, i.aL)();

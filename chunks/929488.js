@@ -1,4 +1,7 @@
-r.d(t, { A: () => v }), r(896048);
+r.d(t, {
+    A: () => v,
+}),
+    r(896048);
 var n = r(627968),
     a = r(64700),
     i = r(435769),
@@ -11,6 +14,7 @@ var n = r(627968),
     u = r(577015),
     h = r(354949),
     f = r(652215);
+
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +40,7 @@ function y(e) {
     }
     return e;
 }
+
 function b(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -137,7 +142,13 @@ let v = (e) => {
         D = a.useCallback(() => {
             if (t === p.MS.HCAPTCHA) {
                 var e, r;
-                null != v && "" !== v && null != x.current && (null == (e = x.current) || e.setData({ rqdata: v })),
+                null != v &&
+                    "" !== v &&
+                    null != x.current &&
+                    (null == (e = x.current) ||
+                        e.setData({
+                            rqdata: v,
+                        })),
                     "invisible" === A && null != x.current && (null == (r = x.current) || r.execute());
             }
         }, [v, x, A, t]),
@@ -197,17 +208,25 @@ let v = (e) => {
           : t === p.MS.HCAPTCHA
             ? (0, n.jsx)(
                   i.A,
-                  b(y({ ref: x }, j), {
-                      sitekey: r,
-                      onLoad: L,
-                      onError: T,
-                      onVerify: N,
-                      onChalExpired: H,
-                      onOpen: K,
-                      onClose: V,
-                      size: A,
-                      reCaptchaCompat: !1,
-                  }),
+                  b(
+                      y(
+                          {
+                              ref: x,
+                          },
+                          j,
+                      ),
+                      {
+                          sitekey: r,
+                          onLoad: L,
+                          onError: T,
+                          onVerify: N,
+                          onChalExpired: H,
+                          onOpen: K,
+                          onClose: V,
+                          size: A,
+                          reCaptchaCompat: !1,
+                      },
+                  ),
               )
             : (0, n.jsx)(
                   o.A,

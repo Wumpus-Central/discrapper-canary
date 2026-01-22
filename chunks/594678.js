@@ -1,4 +1,6 @@
-n.d(t, { A: () => N });
+n.d(t, {
+    A: () => N,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -24,6 +26,7 @@ var r = n(627968),
     I = n(829252),
     T = n(416397),
     C = n(582165);
+
 function N() {
     let e = (0, i.useContext)(f.P),
         t = (0, c.rdh)(e.primaryColor).hex(),
@@ -50,7 +53,9 @@ function N() {
             (0, r.jsxs)("div", {
                 children: [
                     (0, r.jsxs)("div", {
-                        className: s()(S.DD, { [I.p$]: N }),
+                        className: s()(S.DD, {
+                            [I.p$]: N,
+                        }),
                         children: [
                             (0, r.jsx)(o.r2v, {
                                 size: "refresh_sm",
@@ -65,7 +70,10 @@ function N() {
                             }),
                         ],
                     }),
-                    !N && (0, r.jsx)(b.A, { end: a }),
+                    !N &&
+                        (0, r.jsx)(b.A, {
+                            end: a,
+                        }),
                     R &&
                         (0, r.jsx)(E.A, {
                             variant: "heading-xxl/medium",
@@ -106,7 +114,9 @@ function N() {
                                               ),
                                       }),
                         }),
-                    (0, r.jsx)(m.e, { slide: y.P7.QUESTS }),
+                    (0, r.jsx)(m.e, {
+                        slide: y.P7.QUESTS,
+                    }),
                 ],
             }),
         ],

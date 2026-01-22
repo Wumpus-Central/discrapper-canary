@@ -1,4 +1,7 @@
-n.d(t, { A: () => S }), n(896048);
+n.d(t, {
+    A: () => S,
+}),
+    n(896048);
 var a = n(627968),
     l = n(64700),
     i = n(503698),
@@ -42,6 +45,7 @@ let C = [
         value: o.fL.SLAYER_SDK_RECEIVE_IN_GAME_DMS_NONE,
     },
 ];
+
 function S() {
     var e;
     let t,
@@ -62,8 +66,12 @@ function S() {
                 ? e
                 : [];
         }),
-        w = (0, h.RD)(T, { allowedFlows: [h._M.RPC] }),
-        k = (0, h.RD)(T, { allowedFlows: [h._M.WEB] }),
+        w = (0, h.RD)(T, {
+            allowedFlows: [h._M.RPC],
+        }),
+        k = (0, h.RD)(T, {
+            allowedFlows: [h._M.WEB],
+        }),
         P = (0, h.RD)(T),
         { canDeauthorize: R, deauthorize: D } =
             ((e = null == T ? void 0 : T.id),
@@ -145,7 +153,10 @@ function S() {
                     }),
                     (0, a.jsx)(c.Button, {
                         disabled: !P.canStartAuthorization,
-                        onClick: () => P.startAuthorization({ analyticsLocations: o }),
+                        onClick: () =>
+                            P.startAuthorization({
+                                analyticsLocations: o,
+                            }),
                         variant: "primary",
                         text: "Start Authorization",
                     }),
@@ -157,13 +168,19 @@ function S() {
                     }),
                     (0, a.jsx)(c.Button, {
                         disabled: !w.canStartAuthorization,
-                        onClick: () => w.startAuthorization({ analyticsLocations: o }),
+                        onClick: () =>
+                            w.startAuthorization({
+                                analyticsLocations: o,
+                            }),
                         variant: "secondary",
                         text: "Start In-App Authorization",
                     }),
                     (0, a.jsx)(c.Button, {
                         disabled: !k.canStartAuthorization,
-                        onClick: () => k.startAuthorization({ analyticsLocations: o }),
+                        onClick: () =>
+                            k.startAuthorization({
+                                analyticsLocations: o,
+                            }),
                         variant: "secondary",
                         text: "Start Web Authorization",
                     }),

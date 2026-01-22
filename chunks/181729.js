@@ -1,2 +1,6 @@
-n.d(t, { A: () => r });
-let r = { disabled: !1 };
+n.d(t, {
+    A: () => r,
+});
+let r = {
+    disabled: !1,
+};

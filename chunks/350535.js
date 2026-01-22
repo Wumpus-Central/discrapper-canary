@@ -24,6 +24,7 @@ var r = n(695497),
     c = n(723702),
     u = n(316501),
     d = n(650583);
+
 function f(e, t, n) {
     return (
         t in e
@@ -37,6 +38,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -53,6 +55,7 @@ function p(e) {
     }
     return e;
 }
+
 function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -65,6 +68,7 @@ function _(e, t) {
     }
     return n;
 }
+
 function h(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -83,13 +87,16 @@ let E = Object.freeze(s().invert(d.V8)),
     b = s().invert(d.Nu);
 (b["223"] = "`"), Object.freeze(b);
 let y = s().invert(null != m ? m : {});
+
 function O(e) {
     return "+" === e ? "plus" : e;
 }
+
 function A(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S();
     return t === d.g$.BROWSER ? i()(e) : m[e];
 }
+
 function v(e, t, n) {
     if ((null != n && n !== d.g$.WINDOWS) || !u.Kh.has(e)) return t;
     let r = (0, u.Ze)().get("Backquote");
@@ -102,6 +109,7 @@ function v(e, t, n) {
         a = (0, u.sv)(i);
     return "\\" === t && "`" === r ? t : null == a ? O(null != r ? r : t) : O(a.key);
 }
+
 function S() {
     return (0, c.isLinux)()
         ? d.g$.LINUX
@@ -113,6 +121,7 @@ function S() {
               ? d.g$.WINDOWS
               : d.g$.BROWSER;
 }
+
 function I(e) {
     let t,
         [, n, r] = e;
@@ -137,6 +146,7 @@ function I(e) {
     }
     return null != t ? t : null;
 }
+
 function T(e) {
     let [, t, n] = e,
         r = I(e);
@@ -144,6 +154,7 @@ function T(e) {
     let i = (0, u.Pk)(t);
     return null != i ? v(i.keyCode, i.key, n) : null;
 }
+
 function C(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S(),
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.zY.KEYBOARD_KEY,
@@ -152,10 +163,12 @@ function C(e) {
     let i = (0, u.Q_)(e);
     return null != i ? i.keyCode : null;
 }
+
 function N(e) {
     let t = e.replace(/^(right|left) (shift|meta|ctrl|alt)$/, "$2").replace("meta", "command");
     return "pause" === t || "break" === t ? "pause/break" : t;
 }
+
 function R(e) {
     let t,
         n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S(),
@@ -191,30 +204,30 @@ function R(e) {
 }
 (0, c.isMac)() || (y["223"] = "`"), Object.freeze(y);
 let w = [
-        ["META", "\u2318"],
-        ["CMD", "\u2318"],
-        ["RIGHT META", "RIGHT \u2318"],
-        ["RIGHT CMD", "RIGHT \u2318"],
-        ["SHIFT", "\u21E7"],
-        ["RIGHT SHIFT", "RIGHT \u21E7"],
-        ["ALT", "\u2325"],
-        ["RIGHT ALT", "RIGHT \u2325"],
-        ["CTRL", "\u2303"],
-        ["RIGHT CTRL", "RIGHT \u2303"],
-        ["ENTER", "\u21B5"],
-        ["BACKSPACE", "\u232B"],
-        ["DEL", "\u2326"],
-        ["ESC", "\u238B"],
-        ["PAGEUP", "\u21DE"],
-        ["PAGEDOWN", "\u21DF"],
-        ["UP", "\u2191"],
-        ["DOWN", "\u2193"],
-        ["LEFT", "\u2190"],
-        ["RIGHT", "\u2192"],
-        ["HOME", "\u2196"],
-        ["END", "\u2198"],
-        ["TAB", "\u21E5"],
-        ["SPACE", "\u2423"],
+        ["META", "⌘"],
+        ["CMD", "⌘"],
+        ["RIGHT META", "RIGHT ⌘"],
+        ["RIGHT CMD", "RIGHT ⌘"],
+        ["SHIFT", "⇧"],
+        ["RIGHT SHIFT", "RIGHT ⇧"],
+        ["ALT", "⌥"],
+        ["RIGHT ALT", "RIGHT ⌥"],
+        ["CTRL", "⌃"],
+        ["RIGHT CTRL", "RIGHT ⌃"],
+        ["ENTER", "↵"],
+        ["BACKSPACE", "⌫"],
+        ["DEL", "⌦"],
+        ["ESC", "⎋"],
+        ["PAGEUP", "⇞"],
+        ["PAGEDOWN", "⇟"],
+        ["UP", "↑"],
+        ["DOWN", "↓"],
+        ["LEFT", "←"],
+        ["RIGHT", "→"],
+        ["HOME", "↖"],
+        ["END", "↘"],
+        ["TAB", "⇥"],
+        ["SPACE", "␣"],
     ],
     P = (e) => {
         for (let [t, n] of w) if (t === e.toUpperCase()) return n;
@@ -225,12 +238,15 @@ let w = [
         return e;
     },
     x = /shift|meta|ctrl|alt$/;
+
 function L(e) {
     return "meta" === e || "shift" === e || "alt" === e || "ctrl" === e;
 }
+
 function j(e) {
     return e + "Key";
 }
+
 function M(e) {
     let t = {
         keyCode: 0,
@@ -246,7 +262,15 @@ function M(e) {
         : e.reduce((e, n) => {
               let r = T(n),
                   i = p({}, t);
-              if (null == r) return e.push(h(p({}, i), { combo: n })), e;
+              if (null == r)
+                  return (
+                      e.push(
+                          h(p({}, i), {
+                              combo: n,
+                          }),
+                      ),
+                      e
+                  );
               if (x.test(r) && L(r)) return (t[j(r)] = !0), e.map((e) => ((e[j(r)] = !0), e));
               {
                   let t = C(r, d.g$.BROWSER);
@@ -254,6 +278,7 @@ function M(e) {
               }
           }, []);
 }
+
 function k(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S(),
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.zY.KEYBOARD_KEY;
@@ -268,6 +293,7 @@ function k(e) {
             return null != i && e.push([n, i, t]), e;
         }, []);
 }
+
 function U(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         r = e
@@ -289,6 +315,7 @@ function U(e) {
         ? (-1 !== n.g.navigator.appVersion.indexOf("Mac OS X") ? r.map(P) : r).join(" + ").toUpperCase()
         : r.join("+");
 }
+
 function G(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     return (
@@ -300,6 +327,7 @@ function G(e, t) {
         })
     );
 }
+
 function V(e) {
     return (
         null != e &&

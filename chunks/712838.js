@@ -1,4 +1,7 @@
-n.d(t, { A: () => A }), n(896048);
+n.d(t, {
+    A: () => A,
+}),
+    n(896048);
 var l = n(627968),
     r = n(64700),
     a = n(621466),
@@ -8,6 +11,7 @@ var l = n(627968),
     c = n(734057),
     u = n(985018),
     E = n(641548);
+
 function d(e, t, n) {
     return (
         t in e
@@ -21,6 +25,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,6 +42,7 @@ function _(e) {
     }
     return e;
 }
+
 function g(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -67,46 +73,56 @@ class A extends r.PureComponent {
             offset: 4,
             children: (0, l.jsxs)(
                 "li",
-                g(_({ className: E.kL }, t), {
-                    "aria-posinset": 1 + n + r,
-                    "aria-setsize": a,
-                    "aria-labelledby": d,
-                    children: [
-                        (0, l.jsx)(i.DUT, {
-                            tabIndex: -1,
-                            onClick: this.handleMessageClick,
-                            innerRef: this.containerRef,
-                            className: E.mk,
-                            focusProps: { enabled: !1 },
-                            children: (0, l.jsx)(
-                                "div",
-                                {
-                                    ref: this.hitRef,
-                                    className: E.iU,
-                                    children: (0, l.jsx)(o.A, {
-                                        id: d,
-                                        message: e,
-                                        channel: s,
-                                        onContextMenu: (t) => this.handleContextMenu(t, e),
-                                        animateAvatar: !1,
-                                        subscribeToComponentDispatch: !1,
-                                        trackAnnouncementViews: !0,
-                                    }),
+                g(
+                    _(
+                        {
+                            className: E.kL,
+                        },
+                        t,
+                    ),
+                    {
+                        "aria-posinset": 1 + n + r,
+                        "aria-setsize": a,
+                        "aria-labelledby": d,
+                        children: [
+                            (0, l.jsx)(i.DUT, {
+                                tabIndex: -1,
+                                onClick: this.handleMessageClick,
+                                innerRef: this.containerRef,
+                                className: E.mk,
+                                focusProps: {
+                                    enabled: !1,
                                 },
-                                e.id,
-                            ),
-                        }),
-                        (0, l.jsx)("div", {
-                            className: E.NC,
-                            "aria-hidden": !0,
-                            children: (0, l.jsx)(i.DUT, {
-                                className: E.x6,
-                                onClick: this.jumpTo,
-                                children: u.intl.string(u.t.k5WiPf),
+                                children: (0, l.jsx)(
+                                    "div",
+                                    {
+                                        ref: this.hitRef,
+                                        className: E.iU,
+                                        children: (0, l.jsx)(o.A, {
+                                            id: d,
+                                            message: e,
+                                            channel: s,
+                                            onContextMenu: (t) => this.handleContextMenu(t, e),
+                                            animateAvatar: !1,
+                                            subscribeToComponentDispatch: !1,
+                                            trackAnnouncementViews: !0,
+                                        }),
+                                    },
+                                    e.id,
+                                ),
                             }),
-                        }),
-                    ],
-                }),
+                            (0, l.jsx)("div", {
+                                className: E.NC,
+                                "aria-hidden": !0,
+                                children: (0, l.jsx)(i.DUT, {
+                                    className: E.x6,
+                                    onClick: this.jumpTo,
+                                    children: u.intl.string(u.t.k5WiPf),
+                                }),
+                            }),
+                        ],
+                    },
+                ),
             ),
         });
     }

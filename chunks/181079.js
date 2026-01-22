@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var r,
     i = n(311907),
     a = n(873298),
@@ -6,6 +8,7 @@ var r,
     o = n(617617),
     l = n(95701),
     c = n(652215);
+
 function u(e, t, n) {
     return (
         t in e
@@ -21,6 +24,7 @@ function u(e, t, n) {
 }
 let d = {},
     f = !1;
+
 function p(e) {
     var t;
     return (0, l.createChannelRecord)({
@@ -31,6 +35,7 @@ function p(e) {
         guild_id: c.YYv,
     });
 }
+
 function _() {
     var e, t, n;
     (f = null != (e = null == (t = o.A.settings.favorites) ? void 0 : t.muted) && e), (d = {});

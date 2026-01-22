@@ -1,4 +1,9 @@
-n.d(t, { A: () => b }), n(896048), n(747238), n(812715);
+n.d(t, {
+    A: () => b,
+}),
+    n(896048),
+    n(747238),
+    n(812715);
 var r = n(64700),
     i = n(284009),
     a = n.n(i),
@@ -148,7 +153,11 @@ let m = (e, t, n) => ({
                 d.b.insertNodes(e, [
                     {
                         type: t,
-                        children: [{ text: "" }],
+                        children: [
+                            {
+                                text: "",
+                            },
+                        ],
                     },
                 ]);
         });
@@ -157,7 +166,9 @@ let m = (e, t, n) => ({
         u.o.withSingleEntry(e, () => {
             let i = f.VW.getSelectedParentOfType(e, [t]);
             a()(null != i, "Cannot replace inline input of type ".concat(t, " when none is selected")),
-                d.b.removeNodes(e, { at: i[1] }),
+                d.b.removeNodes(e, {
+                    at: i[1],
+                }),
                 E(e, n, r, !0);
         });
     },
@@ -176,6 +187,7 @@ let m = (e, t, n) => ({
         });
     },
 });
+
 function g(e, t) {
     var n;
     let r = l.A.getActiveCommand(e.id),
@@ -185,12 +197,14 @@ function g(e, t) {
         (i.type !== o.n4.STRING || (null == i ? void 0 : i.choices) != null || (null == i ? void 0 : i.autocomplete))
     );
 }
+
 function E(e, t, n, r) {
     let i = f.VW.areStylesDisabled(e) || null == n ? t : n;
     u.o.withSingleEntry(e, () => {
         d.b.insertText(e, r ? i + " " : i);
     });
 }
+
 function b(e, t, n, i) {
     r.useImperativeHandle(e, () => m(t, n, i), [t, n, i]);
 }

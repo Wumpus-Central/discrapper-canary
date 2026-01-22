@@ -1,4 +1,7 @@
-n.d(i, { default: () => u }), n(896048);
+n.d(i, {
+    default: () => u,
+}),
+    n(896048);
 var t = n(627968),
     a = n(64700),
     s = n(110259),
@@ -11,7 +14,8 @@ var t = n(627968),
     m = n(885737),
     g = n(239093),
     p = n(652215),
-    N = n(277000);
+    N = n(277e3);
+
 function u(e) {
     let { classificationId: i, transitionState: n, initialSlide: u = g.yN.SPEED_BUMP, onClose: A } = e,
         [h, j] = a.useState(u),
@@ -87,7 +91,9 @@ function u(e) {
                         id: g.yN.REQUEST_SENT,
                         impressionName: s.ImpressionNames.APPEAL_INGESTION_REQUEST_SENT,
                         impressionProperties: g.nY,
-                        children: (0, t.jsx)(x.A, { onNext: T }),
+                        children: (0, t.jsx)(x.A, {
+                            onNext: T,
+                        }),
                     }),
                 ],
             }),

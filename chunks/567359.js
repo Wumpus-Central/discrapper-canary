@@ -11,6 +11,7 @@ var r = n(333903),
     c = n(744493),
     u = n(853590);
 let d = new WeakMap();
+
 function f(e, t, n) {
     let { direction: f } = (0, u.Y)(),
         p =
@@ -45,7 +46,9 @@ function f(e, t, n) {
             n,
         ),
         [b, y] = (0, o.useState)(!1),
-        { focusWithinProps: O } = (0, c.R)({ onFocusWithinChange: y }),
+        { focusWithinProps: O } = (0, c.R)({
+            onFocusWithinChange: y,
+        }),
         A = (0, i.$)(e),
         v = (0, o.useRef)(t.collection.size);
     return (
@@ -53,7 +56,9 @@ function f(e, t, n) {
             n.current && v.current > 0 && 0 === t.collection.size && b && n.current.focus(),
                 (v.current = t.collection.size);
         }, [t.collection.size, b, n]),
-        d.set(t, { onRemove: e.onRemove }),
+        d.set(t, {
+            onRemove: e.onRemove,
+        }),
         {
             gridProps: (0, a.v)(E, A, {
                 role: t.collection.size ? "grid" : "group",

@@ -43,31 +43,40 @@ let r = ["top", "right", "bottom", "left"],
         start: "end",
         end: "start",
     };
+
 function p(e, t, n) {
     return o(e, s(t, n));
 }
+
 function _(e, t) {
     return "function" == typeof e ? e(t) : e;
 }
+
 function h(e) {
     return e.split("-")[0];
 }
+
 function m(e) {
     return e.split("-")[1];
 }
+
 function g(e) {
     return "x" === e ? "y" : "x";
 }
+
 function E(e) {
     return "y" === e ? "height" : "width";
 }
 let b = new Set(["top", "bottom"]);
+
 function y(e) {
     return b.has(h(e)) ? "y" : "x";
 }
+
 function O(e) {
     return g(y(e));
 }
+
 function A(e, t, n) {
     void 0 === n && (n = !1);
     let r = m(e),
@@ -76,10 +85,12 @@ function A(e, t, n) {
         s = "x" === i ? (r === (n ? "end" : "start") ? "right" : "left") : "start" === r ? "bottom" : "top";
     return t.reference[a] > t.floating[a] && (s = P(s)), [s, P(s)];
 }
+
 function v(e) {
     let t = P(e);
     return [S(e), t, S(t)];
 }
+
 function S(e) {
     return e.replace(/start|end/g, (e) => f[e]);
 }
@@ -87,6 +98,7 @@ let I = ["left", "right"],
     T = ["right", "left"],
     C = ["top", "bottom"],
     N = ["bottom", "top"];
+
 function R(e, t, n) {
     switch (e) {
         case "top":
@@ -100,14 +112,17 @@ function R(e, t, n) {
             return [];
     }
 }
+
 function w(e, t, n, r) {
     let i = m(e),
         a = R(h(e), "start" === n, r);
     return i && ((a = a.map((e) => e + "-" + i)), t && (a = a.concat(a.map(S)))), a;
 }
+
 function P(e) {
     return e.replace(/left|right|bottom|top/g, (e) => d[e]);
 }
+
 function D(e) {
     return {
         top: 0,
@@ -117,6 +132,7 @@ function D(e) {
         ...e,
     };
 }
+
 function x(e) {
     return "number" != typeof e
         ? D(e)
@@ -127,6 +143,7 @@ function x(e) {
               left: e,
           };
 }
+
 function L(e) {
     let { x: t, y: n, width: r, height: i } = e;
     return {

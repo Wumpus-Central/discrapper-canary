@@ -4,6 +4,7 @@ n.d(t, {
 });
 var l = n(435220),
     a = n(985018);
+
 function r(e) {
     switch (e.id) {
         case 4:
@@ -19,6 +20,7 @@ function r(e) {
     }
     return "";
 }
+
 function i() {
     return {
         id: l.GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID,

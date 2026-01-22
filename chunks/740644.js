@@ -1,4 +1,6 @@
-n.d(t, { H: () => r });
+n.d(t, {
+    H: () => r,
+});
 class r {
     static mapDiscordToMuxMetadata(e, t) {
         var n, r, l, o;
@@ -9,7 +11,7 @@ class r {
             player_version: "1.0.0",
             video_id: e.contentMetadata.contentId,
             video_title: e.contentMetadata.title,
-            video_duration: null != (n = e.contentMetadata.durationMs) ? n : 1000 * e.contentMetadata.durationSec,
+            video_duration: null != (n = e.contentMetadata.durationMs) ? n : 1e3 * e.contentMetadata.durationSec,
             video_content_type: e.contentMetadata.contentType,
             video_series: e.contentMetadata.questId,
             video_producer: e.contentMetadata.gameId,
@@ -25,7 +27,7 @@ class r {
     static getAppVersion() {
         try {
             var e;
-            return ((e = "488133"), void 0 !== e) ? e : "unknown";
+            return ((e = "488230"), void 0 !== e) ? e : "unknown";
         } catch (e) {
             return "unknown";
         }

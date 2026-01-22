@@ -1,6 +1,9 @@
-n.d(t, { X: () => a });
+n.d(t, {
+    X: () => a,
+});
 var r = n(397927),
     i = n(473145);
+
 function a(e) {
     switch (e) {
         case i.TP.EMOJI:

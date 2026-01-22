@@ -1,4 +1,6 @@
-n.d(t, { _: () => r });
+n.d(t, {
+    _: () => r,
+});
 var r = (function (e) {
     return (
         (e.NO_GAME_ONLINE = "no_game_online"),

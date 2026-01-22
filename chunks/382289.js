@@ -15,10 +15,11 @@ let A = {},
     g = {},
     m = {},
     b = {};
+
 function _(e) {
     let t = g[e];
     if (null == t) return;
-    let n = f.default.fromTimestamp(Date.now() - 900000),
+    let n = f.default.fromTimestamp(Date.now() - 9e5),
         r = o().findIndex(t, (e) => f.default.compare(e.id, n) > 0);
     if (-1 === r) g[e] = [];
     else {
@@ -27,16 +28,18 @@ function _(e) {
     }
     m[e] = Date.now();
 }
+
 function E(e, t, n, r) {
     A[e].add(t);
     let i = m[t];
-    (null == i || i + 300000 > Date.now()) && _(t),
+    (null == i || i + 3e5 > Date.now()) && _(t),
         null == g[t] && (g[t] = []),
         g[t].push({
             id: n,
             userId: r,
         });
 }
+
 function O(e) {
     let { channel: t } = e;
     delete g[t.id], delete m[t.id];

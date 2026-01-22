@@ -44,16 +44,28 @@ let d = (e) => {
         className: s()(l.progressContainer, l[u], l[d]),
         style: b,
         children: (0, r.jsxs)("div", {
-            className: s()(l.progress, { [l.empty]: E }),
-            style: { width: "".concat(g, "%") },
+            className: s()(l.progress, {
+                [l.empty]: E,
+            }),
+            style: {
+                width: "".concat(g, "%"),
+            },
             role: "meter",
             "aria-valuenow": n,
             "aria-valuemin": a,
             "aria-valuemax": c,
             "aria-labelledby": p,
             children: [
-                (0, r.jsx)("div", { className: s()(l.glow, { [l.empty]: E }) }),
-                (0, r.jsx)("div", { className: s()(l.bar, l[d], { [l.empty]: E }) }),
+                (0, r.jsx)("div", {
+                    className: s()(l.glow, {
+                        [l.empty]: E,
+                    }),
+                }),
+                (0, r.jsx)("div", {
+                    className: s()(l.bar, l[d], {
+                        [l.empty]: E,
+                    }),
+                }),
             ],
         }),
     });

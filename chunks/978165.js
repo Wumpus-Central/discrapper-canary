@@ -9,6 +9,7 @@ var r = n(665260),
     s = n(696451),
     o = n(927813),
     l = n(340837);
+
 function c(e, t, n) {
     var i;
     if (n.isFullServerPreview(e)) return !0;
@@ -20,9 +21,11 @@ function c(e, t, n) {
         Date.now() - s.getTime() < o.A.Millis.WEEK
     );
 }
+
 function u(e) {
     return c(e, s.Ay, a.A);
 }
+
 function d(e) {
     return (0, i.bG)([s.Ay, a.A], () => c(e, s.Ay, a.A));
 }

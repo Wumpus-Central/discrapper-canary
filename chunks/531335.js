@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -7,6 +9,7 @@ var i = n(311907),
     c = n(576705),
     o = n(652215),
     u = n(985018);
+
 function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -32,6 +35,7 @@ function s(e) {
     }
     return e;
 }
+
 function d(e) {
     let { source: t, guild: n, channel: r, stageInstance: l } = e,
         o = (0, i.bG)([c.A], () => (0, a.K)(c.A, n, r, l)),
@@ -39,6 +43,7 @@ function d(e) {
         s = O(t, r);
     return o ? u : s;
 }
+
 function b(e, t) {
     return (null != t && [o.PE1.GUILD_HEADER, o.PE1.GUILD_CONTEXT_MENU].includes(t)) || null == e
         ? u.intl.string(u.t.Sd8Ixw)

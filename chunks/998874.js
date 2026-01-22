@@ -1,10 +1,13 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var i = n(627968),
     r = n(64700),
     l = n(503698),
     a = n.n(l),
     s = n(397927),
     o = n(175728);
+
 function c(e) {
     let { children: t, icon: n, title: l } = e;
     return (0, i.jsxs)("header", {

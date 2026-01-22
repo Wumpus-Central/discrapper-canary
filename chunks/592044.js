@@ -1,4 +1,6 @@
-n.d(t, { A: () => A });
+n.d(t, {
+    A: () => A,
+});
 var r = n(627968);
 n(64700);
 var l = n(503698),
@@ -63,7 +65,9 @@ let m = (e) => {
             T = !y && E;
         return (0, r.jsxs)("div", {
             ref: A,
-            className: i()(g.ZR, { [g.R]: !t }),
+            className: i()(g.ZR, {
+                [g.R]: !t,
+            }),
             style: l,
             children: [
                 (0, r.jsx)("div", {
@@ -91,7 +95,9 @@ let m = (e) => {
                                     (0, r.jsx)(s.Text, {
                                         variant: "text-sm/normal",
                                         color: "text-subtle",
-                                        children: b.intl.format(h.default.i22p4p, { artist: N.artist }),
+                                        children: b.intl.format(h.default.i22p4p, {
+                                            artist: N.artist,
+                                        }),
                                     }),
                                 ],
                             }),
@@ -142,7 +148,9 @@ let m = (e) => {
                                     align: "center",
                                     children: [
                                         (0, r.jsx)("div", {
-                                            className: i()(g.D$, { [g.wH]: e === j }),
+                                            className: i()(g.D$, {
+                                                [g.wH]: e === j,
+                                            }),
                                             style: {
                                                 backgroundImage: "url('".concat(
                                                     null == I || null == (n = I.genres) || null == (t = n[e])
@@ -159,9 +167,15 @@ let m = (e) => {
                                                     [g.Ft]: !T,
                                                 }),
                                                 children: [
-                                                    (0, r.jsx)("div", { className: g.Om }),
-                                                    (0, r.jsx)("div", { className: g.Om }),
-                                                    (0, r.jsx)("div", { className: g.Om }),
+                                                    (0, r.jsx)("div", {
+                                                        className: g.Om,
+                                                    }),
+                                                    (0, r.jsx)("div", {
+                                                        className: g.Om,
+                                                    }),
+                                                    (0, r.jsx)("div", {
+                                                        className: g.Om,
+                                                    }),
                                                 ],
                                             }),
                                         }),
@@ -188,7 +202,9 @@ let m = (e) => {
                             children: b.intl.string(h.default.IWSNp9),
                         }),
                         (0, r.jsx)("div", {
-                            className: i()({ [g.SU]: y }),
+                            className: i()({
+                                [g.SU]: y,
+                            }),
                             children: (0, r.jsx)(s.K0, {
                                 variant: "icon-only",
                                 "aria-label": b.intl.string(h.default.Tf8XqQ),

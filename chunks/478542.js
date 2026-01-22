@@ -1,10 +1,13 @@
-n.d(t, { p: () => d });
+n.d(t, {
+    p: () => d,
+});
 var r = n(627968),
     i = n(64700),
     a = n(158954),
     s = n(732955),
     o = n(985018),
     l = n(161222);
+
 function c(e, t, n) {
     return (
         t in e
@@ -18,6 +21,7 @@ function c(e, t, n) {
         e
     );
 }
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,6 +38,7 @@ function u(e) {
     }
     return e;
 }
+
 function d(e) {
     let { onClick: t, "aria-label": n = o.intl.string(o.t.cpT0Cq) } = e,
         { firstFocusableItemProps: c } = i.useContext(a.MVj);

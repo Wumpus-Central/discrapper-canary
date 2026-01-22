@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var r = n(627968),
     i = n(64700),
     a = n(397927),
@@ -9,6 +11,7 @@ var r = n(627968),
     u = n(788868),
     d = n(985018),
     f = n(245006);
+
 function p(e, t, n) {
     return (
         t in e
@@ -22,6 +25,7 @@ function p(e, t, n) {
         e
     );
 }
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -38,6 +42,7 @@ function _(e) {
     }
     return e;
 }
+
 function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -50,6 +55,7 @@ function h(e, t) {
     }
     return n;
 }
+
 function m(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -61,6 +67,7 @@ function m(e, t) {
         e
     );
 }
+
 function g(e) {
     let {
         guildBoostSlot: t,
@@ -70,6 +77,7 @@ function g(e) {
         onSelect: E,
         fractionalState: b,
     } = e;
+
     function y() {
         (0, a.mMO)(async () => {
             let { default: e } = await Promise.resolve().then(n.bind(n, 657516));
@@ -83,16 +91,30 @@ function g(e) {
                 );
         });
     }
+
     function O() {
         (0, a.mMO)(async () => {
             let { default: e } = await Promise.resolve().then(n.bind(n, 983511));
-            return (n) => (0, r.jsx)(e, m(_({}, n), { guildBoostSlot: t }));
+            return (n) =>
+                (0, r.jsx)(
+                    e,
+                    m(_({}, n), {
+                        guildBoostSlot: t,
+                    }),
+                );
         });
     }
+
     function A() {
         (0, a.mMO)(async () => {
             let { default: e } = await Promise.resolve().then(n.bind(n, 342744));
-            return (n) => (0, r.jsx)(e, m(_({}, n), { guildBoostSlotId: t.id }));
+            return (n) =>
+                (0, r.jsx)(
+                    e,
+                    m(_({}, n), {
+                        guildBoostSlotId: t.id,
+                    }),
+                );
         });
     }
     let v = {
@@ -131,7 +153,10 @@ function g(e) {
                 ? (0, r.jsx)(a.Drp, {
                       id: "manage-subscription",
                       label: d.intl.string(d.t.obRG6Y),
-                      action: () => (0, o.openUserSettings)(s.X.SUBSCRIPTIONS_PANEL, { section: c.nc_.SUBSCRIPTIONS }),
+                      action: () =>
+                          (0, o.openUserSettings)(s.X.SUBSCRIPTIONS_PANEL, {
+                              section: c.nc_.SUBSCRIPTIONS,
+                          }),
                       iconLeft: a.xmO,
                       className: f.v,
                   })

@@ -1,9 +1,12 @@
-n.d(t, { t: () => l });
+n.d(t, {
+    t: () => l,
+});
 var r = n(13163),
     i = n(3388),
     a = n(290424),
     s = n(64700),
     o = n(853590);
+
 function l(e, t) {
     let { "aria-label": n, "aria-labelledby": l, orientation: c = "horizontal" } = e,
         [u, d] = (0, s.useState)(!1);
@@ -43,7 +46,9 @@ function l(e, t) {
         };
     return {
         toolbarProps: {
-            ...(0, a.$)(e, { labelable: !0 }),
+            ...(0, a.$)(e, {
+                labelable: !0,
+            }),
             role: u ? "group" : "toolbar",
             "aria-orientation": c,
             "aria-label": n,

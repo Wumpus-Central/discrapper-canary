@@ -1,8 +1,11 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r,
     i = n(311907),
     a = n(73153),
     s = n(653741);
+
 function o(e, t, n) {
     return (
         t in e
@@ -17,6 +20,7 @@ function o(e, t, n) {
     );
 }
 let l = null;
+
 function c(e) {
     l = null != e.regionalFeatureConfig ? s.wN.fromConnectionOpen(e.regionalFeatureConfig) : null;
 }
@@ -42,4 +46,6 @@ class u extends (r = i.Ay.Store) {
     }
 }
 o(u, "displayName", "RegionalFeatureConfigStore");
-let d = new u(a.h, { CONNECTION_OPEN: c });
+let d = new u(a.h, {
+    CONNECTION_OPEN: c,
+});

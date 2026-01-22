@@ -47,8 +47,12 @@ let o = "shop-assets-preview-instructions-modal",
                     (0, a.jsxs)("ul", {
                         className: s.S,
                         children: [
-                            (0, a.jsx)("li", { children: "One or more image or video files (jpg, png, webm)" }),
-                            (0, a.jsx)("li", { children: "A folder containing image or video files" }),
+                            (0, a.jsx)("li", {
+                                children: "One or more image or video files (jpg, png, webm)",
+                            }),
+                            (0, a.jsx)("li", {
+                                children: "A folder containing image or video files",
+                            }),
                         ],
                     }),
                     (0, a.jsx)(i.Heading, {
@@ -57,7 +61,15 @@ let o = "shop-assets-preview-instructions-modal",
                     }),
                     (0, a.jsx)("ul", {
                         className: s.S,
-                        children: Array.from(r.Li).map((e) => (0, a.jsx)("li", { children: e }, e)),
+                        children: Array.from(r.Li).map((e) =>
+                            (0, a.jsx)(
+                                "li",
+                                {
+                                    children: e,
+                                },
+                                e,
+                            ),
+                        ),
                     }),
                 ],
             }),

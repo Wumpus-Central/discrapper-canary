@@ -23,6 +23,7 @@ var r = n(64700),
     g = n(194567),
     E = n(980504),
     b = n(788868);
+
 function y(e, t) {
     return (
         null != t && (e = t(e)),
@@ -33,6 +34,7 @@ function y(e, t) {
         }))
     );
 }
+
 function O(e) {
     let { sections: t, guildIds: n, allSounds: r, potentialSoundIdsForSection: i, sectionType: a, sortSoundsFn: s } = e,
         o = {};
@@ -49,10 +51,13 @@ function O(e) {
     u.length > 0 &&
         t.push({
             key: a,
-            categoryInfo: { type: a },
+            categoryInfo: {
+                type: a,
+            },
             items: u,
         });
 }
+
 function A(e) {
     let { sections: t, guilds: n, currentGuildId: r, allSounds: i, hasNitro: a, sortSoundsFn: s } = e;
     for (let e of n) {
@@ -71,6 +76,7 @@ function A(e) {
             });
     }
 }
+
 function v(e, t, n) {
     var r;
     let { currentGuildHasAddPermissions: i, allSounds: a, filterOutEmptyCurrentGuild: s, sortSoundsFn: o } = n,
@@ -95,15 +101,19 @@ function v(e, t, n) {
                 items: c,
             });
 }
+
 function S(e, t) {
     var n;
     let r = null != (n = t.get(E.mV)) ? n : E.pD;
     e.push({
         key: h.Cx.DEFAULTS,
-        categoryInfo: { type: h.Cx.DEFAULTS },
+        categoryInfo: {
+            type: h.Cx.DEFAULTS,
+        },
         items: y(r, g.U),
     });
 }
+
 function I(e) {
     let { filterOutEmptyCurrentGuild: t = !1, moveDefaultsToBottom: n = !1 } =
             arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
@@ -214,6 +224,7 @@ function I(e) {
         );
     }, [w, I, T, U, k, M, j, x, L, t, n, D, P, s, N, y, R]);
 }
+
 function T(e, t, n) {
     return r.useMemo(
         () =>
@@ -221,7 +232,9 @@ function T(e, t, n) {
                 ? [
                       {
                           key: h.Cx.SEARCH,
-                          categoryInfo: { type: h.Cx.SEARCH },
+                          categoryInfo: {
+                              type: h.Cx.SEARCH,
+                          },
                           items: y(t),
                       },
                   ]
@@ -229,6 +242,7 @@ function T(e, t, n) {
         [e, n.length, t],
     );
 }
+
 function C() {
     return (
         r.useEffect(() => {

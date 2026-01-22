@@ -1,7 +1,10 @@
-n.d(t, { A: () => V }), n(896048);
+n.d(t, {
+    A: () => V,
+}),
+    n(896048);
 var i = n(627968),
     r = n(64700),
-    s = n(432022),
+    s = n(108531),
     l = n(311907),
     o = n(397927),
     a = n(685399),
@@ -32,6 +35,7 @@ var i = n(627968),
     T = n(349828),
     R = n(985018),
     k = n(852388);
+
 function L(e, t, n) {
     return (
         t in e
@@ -45,6 +49,7 @@ function L(e, t, n) {
         e
     );
 }
+
 function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -85,7 +90,9 @@ class G extends r.PureComponent {
     }
     renderSettings(e) {
         let { closePopout: t } = e;
-        return (0, i.jsx)(N.A, { onClose: t });
+        return (0, i.jsx)(N.A, {
+            onClose: t,
+        });
     }
     setAnimatedValue(e) {
         let { guild: t } = this.props,
@@ -116,7 +123,10 @@ class G extends r.PureComponent {
     }
     setAnimatedValueForCommunityInfo(e) {
         let { communityInfoVisible: t, controller: n } = this.state;
-        ((e >= 20 && t) || (e < 20 && !t)) && this.setState({ communityInfoVisible: !t }),
+        ((e >= 20 && t) || (e < 20 && !t)) &&
+            this.setState({
+                communityInfoVisible: !t,
+            }),
             n
                 .update({
                     value: Math.min(1, Math.max(0, 1 - e / 20)),
@@ -224,13 +234,17 @@ class G extends r.PureComponent {
                                         }),
                                   e),
                               )
-                            : (0, i.jsx)(p.A, { withBannerPadding: !1 }),
+                            : (0, i.jsx)(p.A, {
+                                  withBannerPadding: !1,
+                              }),
                 }),
                 null != l &&
                     (0, i.jsx)("section", {
                         className: k.C3,
                         "aria-label": R.intl.string(R.t.StREWK),
-                        children: (0, i.jsx)(f.A, { guildId: l.id }),
+                        children: (0, i.jsx)(f.A, {
+                            guildId: l.id,
+                        }),
                     }),
             ],
         });
@@ -253,6 +267,7 @@ class G extends r.PureComponent {
             });
     }
 }
+
 function V(e) {
     var t;
     let { guildId: n } = e,

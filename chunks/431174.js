@@ -1,10 +1,14 @@
-n.d(t, { j: () => x }), n(896048), n(801541);
+n.d(t, {
+    j: () => x,
+}),
+    n(896048),
+    n(801541);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
     o = n(126031),
-    l = n(432022),
+    l = n(108531),
     c = n(889137),
     u = n(615300),
     d = n(990078),
@@ -18,6 +22,7 @@ var r = n(627968),
     b = n(290794),
     y = n(985018),
     O = n(121272);
+
 function A(e, t, n) {
     return (
         t in e
@@ -31,6 +36,7 @@ function A(e, t, n) {
         e
     );
 }
+
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -47,6 +53,7 @@ function v(e) {
     }
     return e;
 }
+
 function S(e, t) {
     if (null == e) return {};
     var n,
@@ -63,6 +70,7 @@ function S(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function I(e, t) {
     if (null == e) return {};
     var n,
@@ -76,6 +84,7 @@ function I(e, t) {
 let T = 24,
     C = 24,
     N = 20;
+
 function R(e) {
     let { percentage: t, label: n, canShowVoterDetails: a, answerId: s } = e,
         l = (0, p.GV)(),
@@ -170,12 +179,17 @@ function R(e) {
         })
     );
 }
+
 function w(e) {
     let { percentage: t, shouldAnimate: n } = e,
         i = (0, f.zhh)(
             {
-                from: { width: n ? "0%" : "".concat(t, "%") },
-                to: { width: "".concat(t, "%") },
+                from: {
+                    width: n ? "0%" : "".concat(t, "%"),
+                },
+                to: {
+                    width: "".concat(t, "%"),
+                },
                 config: {
                     duration: 1200,
                     easing: u.A.Easing.inOut(u.A.Easing.ease),
@@ -189,25 +203,34 @@ function w(e) {
         "aria-hidden": !0,
     });
 }
+
 function P(e) {
     let { answersInteraction: t, isSelected: n, didSelfVote: i, isVictor: a, isExpired: s, className: o } = e;
     return (0, c.YW)({
         answersInteraction: t,
         didSelfVote: i,
     })
-        .with({ answersInteraction: g.CQ.RADIO_BUTTONS }, () =>
-            (0, r.jsx)(E.k$, {
-                isSelected: n,
-                size: C,
-                className: o,
-            }),
+        .with(
+            {
+                answersInteraction: g.CQ.RADIO_BUTTONS,
+            },
+            () =>
+                (0, r.jsx)(E.k$, {
+                    isSelected: n,
+                    size: C,
+                    className: o,
+                }),
         )
-        .with({ answersInteraction: g.CQ.CHECKBOXES }, () =>
-            (0, r.jsx)(E.e5, {
-                isSelected: n,
-                size: N,
-                className: o,
-            }),
+        .with(
+            {
+                answersInteraction: g.CQ.CHECKBOXES,
+            },
+            () =>
+                (0, r.jsx)(E.e5, {
+                    isSelected: n,
+                    size: N,
+                    className: o,
+                }),
         )
         .with(
             {
@@ -224,6 +247,7 @@ function P(e) {
         )
         .otherwise(() => null);
 }
+
 function D(e) {
     let { answer: t, isExpired: n, answersInteraction: i, canShowVoteCounts: a, canShowVoterDetails: l } = e,
         c = !0 === t.isSelected,
@@ -254,7 +278,10 @@ function D(e) {
                 scaleFontToUserSetting: !0,
                 children: t.pollMedia.text,
             }),
-            t.didSelfVote && (0, r.jsx)(o.s, { children: y.intl.string(y.t["8DAM+5"]) }),
+            t.didSelfVote &&
+                (0, r.jsx)(o.s, {
+                    children: y.intl.string(y.t["8DAM+5"]),
+                }),
             a &&
                 (0, r.jsx)(R, {
                     percentage: t.votesPercentage,
@@ -273,6 +300,7 @@ function D(e) {
         ],
     });
 }
+
 function x(e) {
     let { isExpired: t, answersInteraction: n, canShowVoteCounts: i, canTapAnswers: a } = e,
         s = S(e, ["isExpired", "answersInteraction", "canShowVoteCounts", "canTapAnswers"]);

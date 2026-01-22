@@ -1,4 +1,10 @@
-n.d(t, { A: () => F }), n(896048), n(228524), n(733351), n(321073);
+n.d(t, {
+    A: () => F,
+}),
+    n(896048),
+    n(228524),
+    n(733351),
+    n(321073);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -32,6 +38,7 @@ var r = n(627968),
     R = n(650583),
     D = n(985018),
     G = n(134599);
+
 function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -57,6 +64,7 @@ function L(e) {
     }
     return e;
 }
+
 function k(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -101,7 +109,9 @@ let M = "WELCOME_CHANNEL",
                                 }),
                             );
                     },
-                    { onCloseRequest: () => w.FX },
+                    {
+                        onCloseRequest: () => w.FX,
+                    },
                 );
             },
             [, U] = (0, o.i)({
@@ -151,7 +161,9 @@ let M = "WELCOME_CHANNEL",
                       className: G.QW,
                   })),
             (0, r.jsxs)("div", {
-                className: s()(G.w8, { [G.cB]: O }),
+                className: s()(G.w8, {
+                    [G.cB]: O,
+                }),
                 ref: v,
                 "data-dnd-name": c.description,
                 onContextMenu: (e) => {
@@ -190,7 +202,9 @@ let M = "WELCOME_CHANNEL",
                                         size: "xxs",
                                         color: "currentColor",
                                     }),
-                                    (0, r.jsx)("span", { children: S ? C : D.intl.string(D.t.zFuCsF) }),
+                                    (0, r.jsx)("span", {
+                                        children: S ? C : D.intl.string(D.t.zFuCsF),
+                                    }),
                                 ],
                             }),
                         ],
@@ -214,16 +228,33 @@ let M = "WELCOME_CHANNEL",
             [x, h] = i.useState(!1),
             { description: j, channels: N, enabled: T } = l,
             w = (e) => {
-                null == t || c()(e, s.channels) || ((0, A.i4)(t.id, { channels: e }), b(!0));
+                null == t ||
+                    c()(e, s.channels) ||
+                    ((0, A.i4)(t.id, {
+                        channels: e,
+                    }),
+                    b(!0));
             },
             M = (e) => {
-                null == t || (e !== s.enabled && ((0, A.i4)(t.id, { enabled: e }), h(!a), b(!0)));
+                null == t ||
+                    (e !== s.enabled &&
+                        ((0, A.i4)(t.id, {
+                            enabled: e,
+                        }),
+                        h(!a),
+                        b(!0)));
             },
             F = (e, t, n) => {
                 if (null == N) return;
                 let r = N.indexOf(e),
                     i = [...N];
-                null != t && t !== r && (i.splice(r, 1), i.splice(t, 0, e), (0, A.Xx)({ channels: i })),
+                null != t &&
+                    t !== r &&
+                    (i.splice(r, 1),
+                    i.splice(t, 0, e),
+                    (0, A.Xx)({
+                        channels: i,
+                    })),
                     n ? (w(i), d(null)) : d(t);
             },
             B = i.useRef(!1);
@@ -269,7 +300,9 @@ let M = "WELCOME_CHANNEL",
                           children: (0, r.jsxs)(f.Text, {
                               variant: "text-md/normal",
                               children: [
-                                  (0, r.jsx)(_.A, { className: G.EP }),
+                                  (0, r.jsx)(_.A, {
+                                      className: G.EP,
+                                  }),
                                   D.intl.format(D.t["oj2vi+"], {
                                       onboardingLink: (e) =>
                                           (0, r.jsx)(v.A, {
@@ -341,7 +374,9 @@ let M = "WELCOME_CHANNEL",
                                                                   className: G.eZ,
                                                                   flowerStarClassName: G.mP,
                                                               }),
-                                                              (0, r.jsx)("strong", { children: e }),
+                                                              (0, r.jsx)("strong", {
+                                                                  children: e,
+                                                              }),
                                                           ],
                                                       },
                                                       n,
@@ -353,7 +388,9 @@ let M = "WELCOME_CHANNEL",
                                           children: (0, r.jsx)(f.fs1, {
                                               placeholder: D.intl.string(D.t.qzZHaX),
                                               onChange: (e) => {
-                                                  (0, A.Xx)({ description: e });
+                                                  (0, A.Xx)({
+                                                      description: e,
+                                                  });
                                               },
                                               onBlur: () => {
                                                   null == t ||
@@ -373,7 +410,9 @@ let M = "WELCOME_CHANNEL",
                                       }),
                                   ],
                               }),
-                              (0, r.jsx)(f.cGx, { className: G.yF }),
+                              (0, r.jsx)(f.cGx, {
+                                  className: G.yF,
+                              }),
                               (0, r.jsx)("div", {
                                   className: G.f6,
                                   children: (0, r.jsx)(f.D0$, {
@@ -391,11 +430,16 @@ let M = "WELCOME_CHANNEL",
                                                             onEdit: (e) => {
                                                                 let t = [...(null != N ? N : [])];
                                                                 null == e ? t.splice(n, 1) : (t[n] = e),
-                                                                    (0, A.Xx)({ channels: t }),
+                                                                    (0, A.Xx)({
+                                                                        channels: t,
+                                                                    }),
                                                                     w(t),
                                                                     0 === t.length &&
                                                                         T &&
-                                                                        ((0, A.Xx)({ enabled: !1 }), M(!1));
+                                                                        ((0, A.Xx)({
+                                                                            enabled: !1,
+                                                                        }),
+                                                                        M(!1));
                                                             },
                                                             onChannelReorder: F,
                                                             isDropHovered: n === o,

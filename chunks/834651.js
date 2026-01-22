@@ -1,4 +1,7 @@
-n.d(t, { j: () => g }), n(896048);
+n.d(t, {
+    j: () => g,
+}),
+    n(896048);
 var r = n(627968);
 n(64700);
 var l = n(311907),
@@ -13,6 +16,7 @@ var l = n(311907),
     p = n(200700),
     h = n(985018),
     b = n(719931);
+
 function g(e) {
     let { guild: t, disabledUntil: n } = e,
         [g, m] = (0, d.n)(t.id),
@@ -34,7 +38,9 @@ function g(e) {
                         className: b.q3,
                     }),
                     bannerHeader: h.intl.string(h.t["9UoK6Y"]),
-                    bannerSubtext: h.intl.format(h.t["4ZwD5G"], { link: p.MO }),
+                    bannerSubtext: h.intl.format(h.t["4ZwD5G"], {
+                        link: p.MO,
+                    }),
                     textStyles: b.cI,
                     headerStyles: b.U_,
                     children: (0, r.jsx)(i.Text, {

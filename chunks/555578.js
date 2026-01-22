@@ -1,6 +1,9 @@
-n.d(t, { G: () => a });
+n.d(t, {
+    G: () => a,
+});
 var r = n(530702),
     i = n(64700);
+
 function a(e, t, n) {
     let a = (0, i.useMemo)(() => new (0, r.G)(), []),
         { children: s, items: o, collection: l } = e;

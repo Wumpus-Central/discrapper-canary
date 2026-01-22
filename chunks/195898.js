@@ -1,4 +1,7 @@
-n.d(t, { A: () => y }), n(896048);
+n.d(t, {
+    A: () => y,
+}),
+    n(896048);
 var r = n(64700),
     i = n(503698),
     a = n.n(i),
@@ -11,6 +14,7 @@ var r = n(64700),
     f = n(543699),
     p = n(112847),
     _ = n(996988);
+
 function h(e, t, n) {
     return (
         t in e
@@ -24,6 +28,7 @@ function h(e, t, n) {
         e
     );
 }
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -55,6 +60,7 @@ let g = {
         "--profile-gradient-button-color": "var(--background-mod-subtle)",
         "--profile-gradient-modal-background-color": "var(--background-base-lower)",
     });
+
 function y(e) {
     let { theme: t, themeType: n, primaryColor: i, secondaryColor: _, forceUserTheme: h = !1 } = e,
         [y, O] = (0, o.yK)([c.A], () => [c.A.desaturateUserColors, c.A.syncProfileThemeWithUserTheme]),
@@ -81,9 +87,17 @@ function y(e) {
                 }),
             );
         }, [i, _, A, v, O, h, t, y]),
-        profileThemeClassName: a()((0, l.mo9)(t), null != n ? { [g[n]]: !0 } : void 0, {
-            [d.Gc]: null != i,
-            [E]: null != i,
-        }),
+        profileThemeClassName: a()(
+            (0, l.mo9)(t),
+            null != n
+                ? {
+                      [g[n]]: !0,
+                  }
+                : void 0,
+            {
+                [d.Gc]: null != i,
+                [E]: null != i,
+            },
+        ),
     };
 }

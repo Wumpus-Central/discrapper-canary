@@ -18,6 +18,7 @@ var r = n(665260),
     l = n(611010),
     c = n(587895),
     u = n(652215);
+
 function d(e, t, n) {
     return (
         t in e
@@ -31,6 +32,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -47,6 +49,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -59,6 +62,7 @@ function p(e, t) {
     }
     return n;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -70,6 +74,7 @@ function _(e, t) {
         e
     );
 }
+
 function h(e, t) {
     if (null == e) return {};
     var n,
@@ -86,6 +91,7 @@ function h(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function m(e, t) {
     if (null == e) return {};
     var n,
@@ -106,7 +112,9 @@ async function g(e) {
     try {
         let r = await a.Bo.get({
             url: u.Rsh.APPLICATION_PUBLIC(e),
-            query: { with_guild: t },
+            query: {
+                with_guild: t,
+            },
             oldFormErrors: !0,
             signal: n,
             rejectWithError: !1,
@@ -161,7 +169,9 @@ let E = {
                 o = (
                     await a.Bo.get({
                         url: u.Rsh.GUILD_APPLICATIONS(e),
-                        query: _(f({}, i), { include_team: r }),
+                        query: _(f({}, i), {
+                            include_team: r,
+                        }),
                         rejectWithError: !1,
                     })
                 ).body;
@@ -178,7 +188,9 @@ let E = {
                 r = (
                     await a.Bo.post({
                         url: u.Rsh.APPLICATION_OWNER_TRANSFER(t),
-                        body: { team_id: n },
+                        body: {
+                            team_id: n,
+                        },
                         rejectWithError: !1,
                     })
                 ).body;
@@ -254,6 +266,7 @@ let E = {
         load: (e) => (null != e ? g(e, !1).then(u.tEg) : Promise.resolve()),
         getIsLoading: (e) => null != e && c.A.isFetchingApplication(e),
     });
+
 function y(e) {
     let { data: t, isLoading: n, error: r } = b(e);
     return {

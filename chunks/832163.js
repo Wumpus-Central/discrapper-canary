@@ -1,9 +1,14 @@
 let r;
-n.d(t, { A: () => R }), n(65821), n(896048);
+n.d(t, {
+    A: () => R,
+}),
+    n(65821),
+    n(896048);
 var i,
     a = n(311907),
     s = n(73153),
     o = n(773669);
+
 function l(e, t, n) {
     return (
         t in e
@@ -17,6 +22,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -33,6 +39,7 @@ function c(e) {
     }
     return e;
 }
+
 function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -45,6 +52,7 @@ function u(e, t) {
     }
     return n;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -56,6 +64,7 @@ function d(e, t) {
         e
     );
 }
+
 function f(e) {
     if (0 === e.length) throw Error("No user IDs provided");
     return e.length > 1 ? [...e].join(",") : e[0];
@@ -64,15 +73,24 @@ let p = {},
     _ = {},
     h = {},
     m = {};
+
 function g() {
     h = {};
 }
+
 function E(e) {
     var t;
     let { applicationId: n, userIds: r } = e,
         i = f(r);
-    h = d(c({}, h), { [n]: d(c({}, null != (t = h[n]) ? t : {}), { [i]: { state: "loading" } }) });
+    h = d(c({}, h), {
+        [n]: d(c({}, null != (t = h[n]) ? t : {}), {
+            [i]: {
+                state: "loading",
+            },
+        }),
+    });
 }
+
 function b(e) {
     var t;
     let { skus: n, skusToRecommendationReasons: r, userIds: i, application: a, numItemsRequested: s } = e,
@@ -90,18 +108,30 @@ function b(e) {
         }),
     });
 }
+
 function y(e) {
     var t;
     let { applicationId: n, userIds: r } = e,
         i = f(r);
     if (null != h[n] && null != h[n][i] && "success" === h[n][i].state) return !1;
-    h = d(c({}, h), { [n]: d(c({}, null != (t = h[n]) ? t : {}), { [i]: { state: "error" } }) });
+    h = d(c({}, h), {
+        [n]: d(c({}, null != (t = h[n]) ? t : {}), {
+            [i]: {
+                state: "error",
+            },
+        }),
+    });
 }
+
 function O(e) {
     let { guildId: t } = e,
         n = _[t];
-    (_[t] = d(c({}, n), { state: "loading" })), (_ = c({}, _));
+    (_[t] = d(c({}, n), {
+        state: "loading",
+    })),
+        (_ = c({}, _));
 }
+
 function A(e) {
     let { guildId: t, storefront: n } = e;
     (_[t] = {
@@ -111,11 +141,16 @@ function A(e) {
     }),
         (_ = c({}, _));
 }
+
 function v(e) {
     let { guildId: t, storefront: n } = e,
         r = _[t];
     (null == r ? void 0 : r.storefront) != null
-        ? (_[t] = d(c({}, r), { storefront: d(c({}, r.storefront), { assets: c({}, r.storefront.assets, n.assets) }) }))
+        ? (_[t] = d(c({}, r), {
+              storefront: d(c({}, r.storefront), {
+                  assets: c({}, r.storefront.assets, n.assets),
+              }),
+          }))
         : (_[t] = {
               storefront: n,
               state: "partially-fetched",
@@ -123,12 +158,15 @@ function v(e) {
           }),
         (_ = c({}, _));
 }
+
 function S(e) {
     let { guildId: t, eager: n } = e;
     if (n) {
         let e = _[t];
         (null == e ? void 0 : e.state) === "loading" && (null == e ? void 0 : e.storefront) != null
-            ? (_[t] = d(c({}, e), { state: "fetched" }))
+            ? (_[t] = d(c({}, e), {
+                  state: "fetched",
+              }))
             : delete _[t];
     } else
         _[t] = {
@@ -138,6 +176,7 @@ function S(e) {
         };
     _ = c({}, _);
 }
+
 function I(e) {
     let { guildId: t, pageIndex: n, skuId: r } = e;
     (p[t] = {
@@ -146,10 +185,12 @@ function I(e) {
     }),
         (p = c({}, p));
 }
+
 function T(e) {
     let { guildId: t, announcement: n } = e;
     (m[t] = n), (m = c({}, m));
 }
+
 function C() {
     if (r === o.default.locale) return !1;
     (r = o.default.locale), (p = {}), (_ = {}), (h = {});

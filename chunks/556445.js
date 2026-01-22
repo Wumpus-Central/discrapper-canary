@@ -1,10 +1,13 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968);
 n(64700);
 var i = n(990078),
     a = n(397927),
     s = n(562153),
     o = n(353411);
+
 function l(e, t, n) {
     return (
         t in e
@@ -18,6 +21,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,6 +38,7 @@ function c(e) {
     }
     return e;
 }
+
 function u(e, t) {
     if (null == e) return {};
     var n,
@@ -50,6 +55,7 @@ function u(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function d(e, t) {
     if (null == e) return {};
     var n,
@@ -60,6 +66,7 @@ function d(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function f(e) {
     let {
             activity: t,

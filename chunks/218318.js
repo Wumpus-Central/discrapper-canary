@@ -1,4 +1,7 @@
-a.d(t, { default: () => U }), a(896048);
+a.d(t, {
+    default: () => U,
+}),
+    a(896048);
 var n = a(627968),
     l = a(64700),
     i = a(503698),
@@ -27,6 +30,7 @@ var n = a(627968),
     D = a(819638),
     I = a(985018),
     C = a(147732);
+
 function G(e) {
     for (var t = 1; t < arguments.length; t++) {
         var a = null != arguments[t] ? arguments[t] : {},
@@ -52,6 +56,7 @@ function G(e) {
     }
     return e;
 }
+
 function S(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -70,6 +75,7 @@ function S(e, t) {
         e
     );
 }
+
 function U(e) {
     let t = (0, f.GV)(),
         { onSlideChange: a } = e,
@@ -190,10 +196,14 @@ function U(e) {
                 className: s()(C.yl, C.so),
                 "aria-labelledby": t,
                 parentComponent: "NUFModal",
-                children: (0, n.jsx)(A.A, { onComplete: U }),
+                children: (0, n.jsx)(A.A, {
+                    onComplete: U,
+                }),
             }),
         );
-    let er = { impression_group: r.ImpressionGroups.GUILD_ADD_NUF };
+    let er = {
+        impression_group: r.ImpressionGroups.GUILD_ADD_NUF,
+    };
     return (0, n.jsxs)(
         o.EOs,
         S(G({}, i), {
@@ -205,7 +215,9 @@ function U(e) {
             children: [
                 (0, n.jsx)("div", {
                     className: C.pz,
-                    children: (0, n.jsx)(y.A, { step: M }),
+                    children: (0, n.jsx)(y.A, {
+                        step: M,
+                    }),
                 }),
                 (0, n.jsx)(o.NPJ, {
                     theme: g.NJ8.LIGHT,

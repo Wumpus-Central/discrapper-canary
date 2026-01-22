@@ -44,7 +44,11 @@ let g = () => {
         if (null == e) return null;
         let { goreContentNonFriendDm: n, goreContentFriendDm: r } = null != t ? t : {};
         return {
-            goreContentNonFriendDm: (0, p.ky)(n) ? n : (0, s.jj)({ isDm: !0 }),
+            goreContentNonFriendDm: (0, p.ky)(n)
+                ? n
+                : (0, s.jj)({
+                      isDm: !0,
+                  }),
             goreContentFriendDm: (0, p.ky)(r)
                 ? r
                 : (0, s.jj)({
@@ -60,21 +64,25 @@ let g = () => {
             n = l.yr.useControlledSetting(null == e ? void 0 : e.id);
         return null != n ? n : !!t || t;
     };
+
 function y() {
     let e = (0, _.x)(),
         t = l.up.useControlledSetting(null == e ? void 0 : e.id),
         n = r.useMemo(() => (0, u.Lx)(t), [t]);
     return n.mutualGuilds && !n.all;
 }
+
 function O() {
     let e = (0, i.bG)([c.default], () => c.default.getCurrentUser()),
         t = (0, h.Li)();
     return (null == e ? void 0 : e.nsfwAllowed) === !1 && t;
 }
+
 function A(e) {
     let t = (0, _.k)();
     return (0, i.bG)([f.A], () => f.A.hasConsented(t, e));
 }
+
 function v(e) {
     let t = (0, _.k)();
     return r.useCallback(
@@ -91,6 +99,7 @@ function v(e) {
         [t, e],
     );
 }
+
 function S(e) {
     return {
         hasConsented: A(e),

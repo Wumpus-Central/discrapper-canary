@@ -1,4 +1,6 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -51,5 +53,7 @@ let h = () =>
                       ],
                   })
                 : null
-            : (0, r.jsx)("div", { className: p.yF });
+            : (0, r.jsx)("div", {
+                  className: p.yF,
+              });
     });

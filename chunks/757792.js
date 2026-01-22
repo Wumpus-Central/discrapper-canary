@@ -43,6 +43,7 @@ let c = {
         [i.M.QUEST_HOME_ENTRYPOINT_ONBOARDING]: 0,
     },
     u = s.A.Millis.DAY;
+
 function d(e) {
     let { userId: t, newUserMinAgeRequiredOverridden: n } = (0, r.cf)([a.default, l.A], () => ({
         userId: a.default.getId(),
@@ -50,9 +51,11 @@ function d(e) {
     }));
     return n ? e : e.filter((e) => p(t, e));
 }
+
 function f(e) {
     return !l.A.newUserMinAgeRequiredOverridden && !p(a.default.getId(), e);
 }
+
 function p(e, t) {
     var n;
     return null != e && o.default.age(e) >= (null != (n = c[t]) ? n : u);

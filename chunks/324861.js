@@ -1,4 +1,6 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(64700),
     i = n(554146),
     a = n(73153),
@@ -13,7 +15,9 @@ let c = () => {
             e.isDismissed && e.handleToggleDismissState(),
                 t.isDismissed && t.handleToggleDismissState(),
                 n.isDismissed && n.handleToggleDismissState(),
-                a.h.dispatch({ type: "VIRTUAL_CURRENCY_ONBOARDING_MODAL_RESET" });
+                a.h.dispatch({
+                    type: "VIRTUAL_CURRENCY_ONBOARDING_MODAL_RESET",
+                });
         }, [t, n, e]),
         { handleResetStatusClick: u } = (0, o.j$)(l.Fw);
     return {

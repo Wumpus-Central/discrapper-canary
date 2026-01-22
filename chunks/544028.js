@@ -1,4 +1,6 @@
-n.d(t, { A: () => M });
+n.d(t, {
+    A: () => M,
+});
 var r,
     i = n(311907),
     a = n(582754),
@@ -12,6 +14,7 @@ var r,
     p = n(617617),
     _ = n(185928),
     h = n(652215);
+
 function m(e, t, n) {
     return (
         t in e
@@ -25,6 +28,7 @@ function m(e, t, n) {
         e
     );
 }
+
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -41,6 +45,7 @@ function g(e) {
     }
     return e;
 }
+
 function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -53,6 +58,7 @@ function E(e, t) {
     }
     return n;
 }
+
 function b(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -69,9 +75,11 @@ let y = 0,
     A = (0, l.A)(),
     v = O[A],
     S = null;
+
 function I() {
     return __OVERLAY__ || null == S ? (0, c.A)(A, O) : S;
 }
+
 function T() {
     let e = I();
     return e !== v && ((v = e), (0, u.A)(v), !0);
@@ -103,28 +111,43 @@ class C extends (r = i.Ay.PersistedStore) {
         return O[e];
     }
 }
+
 function N() {
-    return 0 === y && ((O = b(g({}, O), { [_.Fc.DARK]: h.NJ8.DARKER })), (y = 1)), T();
+    return (
+        0 === y &&
+            ((O = b(g({}, O), {
+                [_.Fc.DARK]: h.NJ8.DARKER,
+            })),
+            (y = 1)),
+        T()
+    );
 }
+
 function R() {
     return (0, a.qB)(I());
 }
+
 function w(e) {
     return (S = null), !e.isSwitchingAccount && v !== h.NJ8.DARK && ((v = h.NJ8.DARK), (0, u.A)(v), T());
 }
+
 function P(e) {
     let { systemTheme: t } = e;
     return (A = t), T();
 }
+
 function D(e) {
     return (O = g({}, O, e.preferences)), T();
 }
+
 function x(e) {
     return (S = e.theme), T();
 }
+
 function L() {
     return (S = null), T();
 }
+
 function j() {
     return T();
 }
@@ -133,7 +156,12 @@ m(C, "displayName", "ThemeStore"),
     m(C, "migrations", [
         (e) => {
             let t = e.theme;
-            return "amoled" === t && (t = "midnight"), b(g({}, e), { theme: t });
+            return (
+                "amoled" === t && (t = "midnight"),
+                b(g({}, e), {
+                    theme: t,
+                })
+            );
         },
         (e) => e,
     ]);

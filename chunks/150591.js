@@ -8,7 +8,7 @@ var r = n(64700),
     s = n(815390);
 let o = {
         mass: 1,
-        tension: 1000,
+        tension: 1e3,
         friction: 48,
     },
     l = {
@@ -17,6 +17,7 @@ let o = {
         friction: 80,
     },
     c = o;
+
 function u(e, t) {
     let n = e === s.i.ENTERING || e === s.i.ENTERED,
         { reducedMotion: c } = r.useContext(a.C),

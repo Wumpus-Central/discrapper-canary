@@ -15,4 +15,6 @@ function r(e) {
         return t[e];
     });
 }
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});

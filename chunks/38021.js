@@ -9,6 +9,7 @@ n.d(t, {
     n(65821);
 var r = n(627968),
     i = n(64700);
+
 function a(e, t, n) {
     return (
         t in e
@@ -22,6 +23,7 @@ function a(e, t, n) {
         e
     );
 }
+
 function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -38,6 +40,7 @@ function s(e) {
     }
     return e;
 }
+
 function o(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -50,6 +53,7 @@ function o(e, t) {
     }
     return n;
 }
+
 function l(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -61,10 +65,14 @@ function l(e, t) {
         e
     );
 }
+
 function c(e) {
     let t = JSON.stringify(e);
-    return l(s({}, e), { key: t });
+    return l(s({}, e), {
+        key: t,
+    });
 }
+
 function u() {
     let e = i.useContext(f);
     if (null == e) throw Error("useThemeContext must be used within a ThemeContext.Provider");
@@ -83,8 +91,11 @@ let d = c({
         reduceAdaptiveTheme: !1,
     }),
     f = i.createContext(d);
+
 function p(e) {
     let { children: t } = e,
         n = u();
-    return (0, r.jsx)(r.Fragment, { children: t(n) });
+    return (0, r.jsx)(r.Fragment, {
+        children: t(n),
+    });
 }

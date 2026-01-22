@@ -29,6 +29,7 @@ var r = n(562465),
     h = n(652215),
     m = n(985018);
 let g = 64;
+
 function E(e, t) {
     p.A.init({
         userToken: e,
@@ -49,9 +50,11 @@ function E(e, t) {
         },
     });
 }
+
 function b() {
     p.A.destroy();
 }
+
 function y(e) {
     let { application: t, branchId: n, buildId: r, manifestIds: a, installationPath: s, analyticsLocation: o } = e;
     p.A.setTargetManifest({
@@ -76,6 +79,7 @@ function y(e) {
             location: o,
         });
 }
+
 function O(e, t, n) {
     (0, _.n)(e.id, t).then(() => {
         i.h.dispatch({
@@ -91,6 +95,7 @@ function O(e, t, n) {
             location: n,
         });
 }
+
 function A(e, t, n, r) {
     if (s.Ay.getRunningDiscordApplicationIds().includes(e.id)) return;
     let i = c.A.getInstallationPath(e.id, t);
@@ -105,6 +110,7 @@ function A(e, t, n, r) {
         installationPath: i,
     });
 }
+
 function v(e, t, n, r) {
     let a = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
     A(e, t, n, r),
@@ -115,6 +121,7 @@ function v(e, t, n, r) {
             automatic: a,
         });
 }
+
 function S(e, t, n) {
     let r = a.A.getApplication(e);
     null != r &&
@@ -132,12 +139,15 @@ function S(e, t, n) {
             branchId: t,
         });
 }
+
 function I() {
     p.A.resume();
 }
+
 function T() {
     p.A.pause();
 }
+
 function C(e, t) {
     i.h.dispatch({
         type: "DISPATCH_APPLICATION_MOVE_UP",
@@ -145,6 +155,7 @@ function C(e, t) {
         branchId: t,
     });
 }
+
 function N(e, t) {
     p.A.cancel(e, t),
         i.h.dispatch({
@@ -153,6 +164,7 @@ function N(e, t) {
             branchId: t,
         });
 }
+
 function R(e, t) {
     i.h.dispatch({
         type: "DISPATCH_APPLICATION_REMOVE_FINISHED",
@@ -160,10 +172,12 @@ function R(e, t) {
         branchId: t,
     });
 }
+
 function w(e, t) {
     let n = a.A.getApplication(e);
     null != n && f.A.createShortcuts(l.uB.getSetting(), l.Pf.getSetting(), n.name, n.id, t.installPath);
 }
+
 function P(e, t) {
     let i = a.A.getApplication(e);
     r.Bo.post({
@@ -180,8 +194,12 @@ function P(e, t) {
                     t.showNotification(
                         i.getIconURL(g),
                         m.intl.string(m.t["1wR7yI"]),
-                        m.intl.formatToPlainString(m.t["89VAgW"], { name: i.name }),
-                        { notif_type: "Game Library Game Installed" },
+                        m.intl.formatToPlainString(m.t["89VAgW"], {
+                            name: i.name,
+                        }),
+                        {
+                            notif_type: "Game Library Game Installed",
+                        },
                         {
                             onClick: () => (0, o.pX)(h.BVt.APPLICATION_LIBRARY),
                             omitViewTracking: !0,

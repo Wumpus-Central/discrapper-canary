@@ -1,4 +1,6 @@
-i.d(e, { s: () => S });
+i.d(e, {
+    s: () => S,
+});
 var n = i(627968),
     l = i(311907),
     s = i(419954),
@@ -11,7 +13,9 @@ let A = (0, s.E2)(a.X.ACCOUNT_REMOVAL_SETTING, {
         useSearchTerms: () => [T.intl.string(T.t.ZKsIks), T.intl.string(T.t.jf5GGb), T.intl.string(T.t["8lQ2rR"])],
         Component: function () {
             let t = (0, l.bG)([u.default], () => u.default.getCurrentUser()),
-                { teams: e, loading: i } = (0, r.A)({ refreshOnDepChange: !0 });
+                { teams: e, loading: i } = (0, r.A)({
+                    refreshOnDepChange: !0,
+                });
             return null == t
                 ? null
                 : (0, n.jsx)(o.A, {
@@ -21,4 +25,6 @@ let A = (0, s.E2)(a.X.ACCOUNT_REMOVAL_SETTING, {
                   });
         },
     }),
-    S = (0, s.zZ)(a.X.ACCOUNT_REMOVAL_CATEGORY, { buildLayout: () => [A] });
+    S = (0, s.zZ)(a.X.ACCOUNT_REMOVAL_CATEGORY, {
+        buildLayout: () => [A],
+    });

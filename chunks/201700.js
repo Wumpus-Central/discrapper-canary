@@ -1,4 +1,8 @@
-a.d(e, { default: () => g }), a(896048), a(228524);
+a.d(e, {
+    default: () => g,
+}),
+    a(896048),
+    a(228524);
 var i = a(627968),
     n = a(64700),
     l = a(158954),
@@ -8,6 +12,7 @@ var i = a(627968),
     o = a(946116),
     c = a(985018),
     u = a(550886);
+
 function g(t) {
     var e, a;
     let { transitionState: g, onClose: b, entry: p } = t,
@@ -29,7 +34,9 @@ function g(t) {
         transitionState: g,
         "aria-label": c.intl.string(c.t.eQ2bLp),
         onClose: b,
-        title: c.intl.formatToPlainString(c.t.w9tsNk, { guildName: p.name }),
+        title: c.intl.formatToPlainString(c.t.w9tsNk, {
+            guildName: p.name,
+        }),
         subtitle: c.intl.string(c.t["vEkX/8"]),
         actions: [
             {

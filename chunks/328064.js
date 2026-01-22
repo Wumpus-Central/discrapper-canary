@@ -1,4 +1,7 @@
-s.d(t, { default: () => O }), s(896048);
+s.d(t, {
+    default: () => O,
+}),
+    s(896048);
 var r = s(627968),
     o = s(64700),
     n = s(106778),
@@ -51,7 +54,10 @@ let O = (e) => {
             onSuccess: O,
             onError: O,
         });
-    if (G) return (0, r.jsx)(a.y$y, { type: a.y$y.Type.SPINNING_CIRCLE });
+    if (G)
+        return (0, r.jsx)(a.y$y, {
+            type: a.y$y.Type.SPINNING_CIRCLE,
+        });
     let z = (0, I.$k)({
             product: g,
             overrideTitle: v,
@@ -102,7 +108,9 @@ let O = (e) => {
                     actions: Q,
                 }),
                 null != w
-                    ? (0, r.jsx)(f.K, { options: w })
+                    ? (0, r.jsx)(f.K, {
+                          options: w,
+                      })
                     : (0, r.jsx)(L.A, {
                           confettiTarget: N.current,
                           confettiCanvas: P,

@@ -12,6 +12,7 @@ var r = n(311907),
     d = n(477427),
     u = n(652215),
     c = n(985018);
+
 function g(t) {
     let e = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     switch (t.type) {
@@ -72,6 +73,7 @@ function g(t) {
             ];
     }
 }
+
 function _(t) {
     let e = t.getGuildId(),
         n = t.id,
@@ -136,7 +138,9 @@ function _(t) {
                                       a.A.updateChannelOverrideSettings(
                                           e,
                                           n,
-                                          { message_notifications: s },
+                                          {
+                                              message_notifications: s,
+                                          },
                                           d.G_.notifications(s),
                                       );
                               },
@@ -148,6 +152,7 @@ function _(t) {
               ],
           });
 }
+
 function A(t) {
     var e, n;
     let a = _(t),

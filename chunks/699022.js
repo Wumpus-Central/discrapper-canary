@@ -1,4 +1,6 @@
-n.d(t, { A: () => O });
+n.d(t, {
+    A: () => O,
+});
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -16,6 +18,7 @@ var r = n(627968),
     m = n(806931),
     A = n(985018),
     y = n(342910);
+
 function O(e) {
     let { channel: t } = e,
         { parentAnalyticsLocation: n } = (0, s.Ay)(),
@@ -23,8 +26,12 @@ function O(e) {
         j = (null == O ? void 0 : O.type) === m.lp.STREAM,
         v = (0, i.bG)([p.A], () => (j ? p.A.getActiveStreamForStreamKey(O.id) : null)),
         { ignoreSenderPreference: x } = d.A.useExperiment(
-            { location: "ActionBarClipsButton" },
-            { autoTrackExposure: !1 },
+            {
+                location: "ActionBarClipsButton",
+            },
+            {
+                autoTrackExposure: !1,
+            },
         ),
         { viewerClippingAllowed: E, isAtMaxSavingClipOperations: _ } = (0, i.cf)([o.A], () => ({
             viewerClippingAllowed: null != v && (o.A.isViewerClippingAllowedForUser(v.ownerId) || x),
@@ -62,7 +69,10 @@ function O(e) {
                     }
                     return e;
                 })({}, e)),
-                (n = n = { color: "currentColor" }),
+                (n = n =
+                    {
+                        color: "currentColor",
+                    }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                     : (function (e, t) {

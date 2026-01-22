@@ -1,4 +1,6 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 var r = n(64700);
 let i = Object.freeze({
     scrollTop: 0,
@@ -9,6 +11,7 @@ let i = Object.freeze({
     offsetWidth: 0,
     dirty: 0,
 });
+
 function a() {
     let e = (0, r.useRef)(null),
         t = (0, r.useCallback)(() => {

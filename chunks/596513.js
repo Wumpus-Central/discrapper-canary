@@ -1,4 +1,6 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(627968),
     i = n(607470),
     a = n(608416),
@@ -56,7 +58,9 @@ let c = (e) => {
                                 playsInline: !0,
                                 loop: !0,
                                 className: d,
-                                children: (0, r.jsx)("source", { src: o.A }),
+                                children: (0, r.jsx)("source", {
+                                    src: o.A,
+                                }),
                             },
                             o.A,
                         ),

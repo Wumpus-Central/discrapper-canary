@@ -1,4 +1,8 @@
-n.d(t, { A: () => x }), n(896048), n(228524);
+n.d(t, {
+    A: () => x,
+}),
+    n(896048),
+    n(228524);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -12,6 +16,7 @@ var r = n(627968),
     g = n(985018),
     b = n(256893);
 let m = c.A.getArticleURL(f.MVz.GUILD_AUTOMOD_REGEX);
+
 function p(e) {
     let { hasErrors: t, text: n, errorText: i } = e;
     return t
@@ -21,7 +26,12 @@ function p(e) {
                   className: b.F,
                   variant: "text-xs/medium",
                   color: "text-feedback-critical",
-                  children: null != i ? i : g.intl.format(g.t.jKYAPu, { helpArticle: m }),
+                  children:
+                      null != i
+                          ? i
+                          : g.intl.format(g.t.jKYAPu, {
+                                helpArticle: m,
+                            }),
               }),
           })
         : (0, r.jsx)(a.Text, {
@@ -31,6 +41,7 @@ function p(e) {
               children: n,
           });
 }
+
 function x(e) {
     var t, n;
     let { rule: l, onChangeText: a, className: c } = e,
@@ -94,7 +105,9 @@ function x(e) {
                 maxTags: u.qm,
             }),
             (0, r.jsx)(p, {
-                text: g.intl.format(g.t["PGC/AJ"], { helpArticle: m }),
+                text: g.intl.format(g.t["PGC/AJ"], {
+                    helpArticle: m,
+                }),
                 hasErrors: h.length > 0 || null != x,
                 errorText:
                     null !=

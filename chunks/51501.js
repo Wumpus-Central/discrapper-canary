@@ -10,6 +10,7 @@ let a = new Set([
     i.ThZ.FRIEND_ANNIVERSARIES_ACTION_BUTTON,
     i.ThZ.FRIEND_ANNIVERSARIES_ACTION_BUTTON_COACHMARK,
 ]);
+
 function s(e) {
     return e === r.np.FRIEND_ANNIVERSARY
         ? {
@@ -19,6 +20,7 @@ function s(e) {
           }
         : {};
 }
+
 function o(e) {
     return a.has(e);
 }

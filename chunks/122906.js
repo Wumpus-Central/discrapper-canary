@@ -1,9 +1,13 @@
-n.d(t, { A: () => S }), n(896048);
+n.d(t, {
+    A: () => S,
+}),
+    n(896048);
 var r,
     i = n(311907),
     a = n(73153),
     s = n(177773),
     o = n(401755);
+
 function l(e, t, n) {
     return (
         t in e
@@ -17,6 +21,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,6 +40,7 @@ function c(e) {
 }
 let u = new Map(),
     d = null;
+
 function f(e, t) {
     if (null == e) return;
     let n = u.get(e),
@@ -47,6 +53,7 @@ function f(e, t) {
                   };
     t(r), (u = new Map(u)).set(e, r);
 }
+
 function p(e) {
     let { code: t } = e;
     (u = new Map(u)).set(t, {
@@ -54,43 +61,52 @@ function p(e) {
         state: o.QB.RESOLVING,
     });
 }
+
 function _(e) {
     h(e.guildTemplate);
 }
+
 function h(e) {
     return f(e.code, (t) => {
         let n = (0, s.A)(e);
         for (let e in n) t[e] = n[e];
     });
 }
+
 function m(e) {
     let { guildTemplates: t } = e;
     t.forEach((e) => h(e));
 }
+
 function g(e) {
     return f(e.code, (e) => {
         e.state = o.QB.EXPIRED;
     });
 }
+
 function E(e) {
     return f(e.code, (e) => {
         e.state = o.QB.ACCEPTING;
     });
 }
+
 function b(e) {
     return f(e.code, (e) => {
         var t;
         (e.state = o.QB.ACCEPTED), (e.usageCount = (null != (t = e.usageCount) ? t : 0) + 1);
     });
 }
+
 function y(e) {
     return f(e.code, (e) => {
         e.state = o.QB.RESOLVED;
     });
 }
+
 function O(e) {
     d = e.code;
 }
+
 function A(e) {
     d = null;
 }

@@ -1,4 +1,7 @@
-n.d(t, { A: () => j }), n(896048);
+n.d(t, {
+    A: () => j,
+}),
+    n(896048);
 var a = n(627968),
     l = n(64700),
     i = n(397927),
@@ -18,6 +21,7 @@ let x = (0, s.D)(() => ({
     loading: !1,
     error: null,
 }));
+
 function b(e) {
     let { title: t, guildIds: n } = e;
     return (0, a.jsxs)(a.Fragment, {
@@ -67,6 +71,7 @@ function b(e) {
         ],
     });
 }
+
 function g(e) {
     var t;
     let { userState: n } = e,
@@ -89,7 +94,9 @@ function g(e) {
             (0, a.jsxs)("div", {
                 className: f.J1,
                 children: [
-                    g({ ok: null != r }),
+                    g({
+                        ok: null != r,
+                    }),
                     (0, a.jsx)(i.Text, {
                         variant: "text-sm/normal",
                         children: null != r ? "User exists in UserStore" : "User does not exist in UserStore",
@@ -110,7 +117,9 @@ function g(e) {
             (0, a.jsxs)("div", {
                 className: f.J1,
                 children: [
-                    g({ ok: null != s }),
+                    g({
+                        ok: null != s,
+                    }),
                     (0, a.jsx)(i.Text, {
                         variant: "text-sm/normal",
                         children:
@@ -135,7 +144,7 @@ function g(e) {
                             className: f.J1,
                             children: (0, a.jsx)(i.Text, {
                                 variant: "text-sm/normal",
-                                children: "global name: ".concat(null != (t = s.globalName) ? t : "\u2014"),
+                                children: "global name: ".concat(null != (t = s.globalName) ? t : "—"),
                             }),
                         }),
                         (0, a.jsx)("div", {
@@ -203,7 +212,9 @@ function g(e) {
             (0, a.jsxs)("div", {
                 className: f.J1,
                 children: [
-                    g({ ok: d.length > 0 }),
+                    g({
+                        ok: d.length > 0,
+                    }),
                     (0, a.jsx)(i.Text, {
                         variant: "text-sm/normal",
                         children: d.length > 0 ? "Guild members exist:" : "No guild members exist",
@@ -240,7 +251,9 @@ function g(e) {
             (0, a.jsxs)("div", {
                 className: f.J1,
                 children: [
-                    (0, a.jsx)(i.mir, { size: "sm" }),
+                    (0, a.jsx)(i.mir, {
+                        size: "sm",
+                    }),
                     (0, a.jsx)(i.Text, {
                         variant: "text-sm/normal",
                         children: "GuildMemberRequesterStore State",
@@ -268,6 +281,7 @@ function g(e) {
         ],
     });
 }
+
 function v() {
     let e = l.useCallback((e) => {
             x.setState({
@@ -295,7 +309,9 @@ function v() {
                         loading: !1,
                     });
                 } finally {
-                    x.setState({ loading: !1 });
+                    x.setState({
+                        loading: !1,
+                    });
                 }
             }
         }, []),
@@ -316,6 +332,7 @@ function v() {
         ],
     });
 }
+
 function j() {
     let e = x.useField("state"),
         t = x.useField("error");
@@ -332,7 +349,10 @@ function j() {
                     className: f.qS,
                     children: t,
                 }),
-            null != e && (0, a.jsx)(g, { userState: e }),
+            null != e &&
+                (0, a.jsx)(g, {
+                    userState: e,
+                }),
         ],
     });
 }

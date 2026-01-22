@@ -1,6 +1,10 @@
-n.d(t, { A: () => i }), n(896048);
+n.d(t, {
+    A: () => i,
+}),
+    n(896048);
 var r = n(64700),
     l = n(451988);
+
 function i(e, t) {
     let [n, i] = r.useState(!1),
         a = r.useRef(new l.J_(t, () => i(!1))),

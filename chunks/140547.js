@@ -64,6 +64,7 @@ let a = (0, r.C)({
         },
     ],
 });
+
 function s(e) {
     let { guildId: t, location: n } = e;
     return a.useExperiment(
@@ -71,9 +72,12 @@ function s(e) {
             guildId: t,
             location: n,
         },
-        { autoTrackExposure: !0 },
+        {
+            autoTrackExposure: !0,
+        },
     );
 }
+
 function o(e) {
     let { guildId: t, location: n } = e;
     return a.getCurrentConfig(
@@ -81,6 +85,8 @@ function o(e) {
             guildId: t,
             location: n,
         },
-        { autoTrackExposure: !0 },
+        {
+            autoTrackExposure: !0,
+        },
     );
 }

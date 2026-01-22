@@ -1,7 +1,11 @@
-n.d(t, { A: () => u }), n(896048);
+n.d(t, {
+    A: () => u,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(511347);
+
 function s(e, t, n) {
     return (
         t in e
@@ -15,6 +19,7 @@ function s(e, t, n) {
         e
     );
 }
+
 function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -31,6 +36,7 @@ function o(e) {
     }
     return e;
 }
+
 function l(e, t) {
     if (null == e) return {};
     var n,
@@ -47,6 +53,7 @@ function l(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function c(e, t) {
     if (null == e) return {};
     var n,
@@ -80,6 +87,14 @@ let u = i.forwardRef(function (e, t) {
             let e = h.current;
             null == e || (void 0 !== d && (d ? e.play() : e.pause()));
         }, [h, d]),
-        (0, r.jsx)("audio", o({ ref: m }, p))
+        (0, r.jsx)(
+            "audio",
+            o(
+                {
+                    ref: m,
+                },
+                p,
+            ),
+        )
     );
 });

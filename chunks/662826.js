@@ -1,4 +1,6 @@
-i.d(e, { g: () => E });
+i.d(e, {
+    g: () => E,
+});
 var n = i(311907),
     l = i(274372),
     s = i(915618),
@@ -22,7 +24,14 @@ let E = (0, a.zD)(T.X.CLIPS_VIEWERSIDE_CLIPS_SETTING, {
         }),
     usePredicate: function () {
         let t = (0, A.$m)("DataAndPrivacyPanel"),
-            { enableViewerClipping: e } = u.A.useExperiment({ location: "Data & Privacy" }, { autoTrackExposure: !1 }),
+            { enableViewerClipping: e } = u.A.useExperiment(
+                {
+                    location: "Data & Privacy",
+                },
+                {
+                    autoTrackExposure: !1,
+                },
+            ),
             i = (0, n.bG)([o.A], () => (0, s.A)(o.A));
         return t && e && i;
     },

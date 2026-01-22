@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var l = n(627968);
 n(64700);
 var a = n(503698),
@@ -6,6 +8,7 @@ var a = n(503698),
     c = n(397927),
     r = n(985018),
     s = n(928103);
+
 function d(e) {
     let { guild: t, speakers: n, speakerCount: a, className: d } = e,
         u = n.slice(0, 5),
@@ -57,7 +60,9 @@ function d(e) {
                             color: "text-default",
                             variant: "text-sm/normal",
                             className: s.br,
-                            children: r.intl.format(r.t["185ggO"], { count: f }),
+                            children: r.intl.format(r.t["185ggO"], {
+                                count: f,
+                            }),
                         }),
                     ],
                 }),

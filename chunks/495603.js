@@ -1,10 +1,13 @@
-i.d(l, { default: () => o });
+i.d(l, {
+    default: () => o,
+});
 var t = i(627968),
     s = i(64700),
     e = i(397927),
     r = i(442433),
     u = i(50268),
     d = i(985018);
+
 function o(n) {
     let { id: l, role: i, handleDeletePermission: o } = n,
         a = (0, u.A)({
@@ -31,7 +34,10 @@ function o(n) {
                             action: o,
                         }),
                     }),
-                null != a && (0, t.jsx)(e.rXV, { children: a }),
+                null != a &&
+                    (0, t.jsx)(e.rXV, {
+                        children: a,
+                    }),
             ],
         })
     );

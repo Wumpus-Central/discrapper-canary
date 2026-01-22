@@ -1,8 +1,14 @@
-n.d(t, { A: () => Z }), n(896048), n(638769), n(321073);
+n.d(t, {
+    A: () => Z,
+}),
+    n(896048),
+    n(638769),
+    n(321073);
 var r,
     i = n(311907),
     a = n(73153),
     s = n(611010);
+
 function o(e, t, n) {
     return (
         t in e
@@ -16,6 +22,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -32,6 +39,7 @@ function l(e) {
     }
     return e;
 }
+
 function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -44,6 +52,7 @@ function c(e, t) {
     }
     return n;
 }
+
 function u(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -61,8 +70,11 @@ let d = [],
     _ = new Map(),
     h = new Map(),
     m = new Map(),
-    g = { botUserIdToAppUsage: {} },
+    g = {
+        botUserIdToAppUsage: {},
+    },
     E = 10;
+
 function b(e) {
     let t = f.get(e.id);
     h.set(e.id, Date.now());
@@ -78,9 +90,11 @@ function b(e) {
                 b(t.application instanceof s.Ay ? t.application : s.Ay.createFromServer(t.application));
     m.delete(e.id);
 }
+
 function y() {
     f.clear(), p.clear(), _.clear(), h.clear(), m.clear();
 }
+
 function O(e) {
     let {
         wishlistData: { applications: t },
@@ -88,10 +102,12 @@ function O(e) {
     if (null == t || 0 === t.length) return !1;
     for (let e of t) b(e);
 }
+
 function A(e) {
     let { application: t } = e;
     b(t);
 }
+
 function v(e) {
     let {
         storefront: { application: t },
@@ -99,26 +115,32 @@ function v(e) {
     if (null == t) return !1;
     b(t);
 }
+
 function S(e) {
     let { applications: t } = e;
     for (let e of t) b(new s.Ay(e));
 }
+
 function I(e) {
     let { applicationId: t } = e,
         n = m.get(t);
     return m.set(t, !0), !0 !== n;
 }
+
 function T(e) {
     let { application: t } = e;
     N(t);
 }
+
 function C(e) {
     let { application: t } = e;
     N(t);
 }
+
 function N(e) {
     b(s.Ay.createFromServer(e));
 }
+
 function R(e) {
     let { userId: t, applicationId: n } = e,
         r = g.botUserIdToAppUsage[t];
@@ -140,11 +162,13 @@ function R(e) {
             delete g.botUserIdToAppUsage[t];
         }
 }
+
 function w(e) {
     let { applicationId: t } = e,
         n = m.get(t);
     return m.set(t, !1), !1 !== n;
 }
+
 function P(e) {
     let { applicationIds: t } = e,
         n = !1;
@@ -154,14 +178,17 @@ function P(e) {
     }
     return n;
 }
+
 function D(e) {
     let { libraryApplications: t } = e;
     for (let e of t) b(s.Ay.createFromServer(e.application));
 }
+
 function x(e) {
     let { applications: t } = e;
     for (let e of t) b(s.Ay.createFromServer(e));
 }
+
 function L(e) {
     let { userProfile: t } = e,
         { user: n, application: r } = t;
@@ -172,11 +199,16 @@ function L(e) {
             applicationId: r.id,
         });
 }
+
 function j(e) {
     let { botUserId: t } = e,
         n = g.botUserIdToAppUsage[t];
-    null != n && (g.botUserIdToAppUsage[t] = u(l({}, n), { lastUsedMs: Date.now() }));
+    null != n &&
+        (g.botUserIdToAppUsage[t] = u(l({}, n), {
+            lastUsedMs: Date.now(),
+        }));
 }
+
 function M(e) {
     let { applicationIds: t } = e,
         n = !1;
@@ -186,6 +218,7 @@ function M(e) {
     }
     return n;
 }
+
 function k(e) {
     let { entitlements: t } = e,
         n = !1;
@@ -193,12 +226,14 @@ function k(e) {
         (null == e ? void 0 : e.application) != null && (b(s.Ay.createFromServer(e.application)), (n = !0));
     return n;
 }
+
 function U(e) {
     let { guildId: t, applications: n } = e,
         r = [];
     for (let e of n) r.push(e.id), b(s.Ay.createFromServer(e));
     p.set(t, r);
 }
+
 function G(e) {
     let { payments: t } = e,
         n = new Set();
@@ -209,32 +244,38 @@ function G(e) {
     }
     return n.size > 0;
 }
+
 function V(e) {
     var t;
     let { payment: n } = e;
     if ((null == (t = n.sku) ? void 0 : t.application) == null) return !1;
     b(s.Ay.createFromServer(n.sku.application));
 }
+
 function F(e) {
     var t;
     let { giftCode: n } = e;
     if ((null == (t = n.store_listing) ? void 0 : t.sku.application) == null) return !1;
     b(s.Ay.createFromServer(n.store_listing.sku.application));
 }
+
 function B(e) {
     let { invite: t } = e;
     if (null == t.target_application) return !1;
     b(s.Ay.createFromServer(t.target_application));
 }
+
 function H(e) {
     let { storeListing: t } = e;
     if (null == t.sku.application) return !1;
     b(s.Ay.createFromServer(t.sku.application));
 }
+
 function Y(e) {
     let { messages: t } = e;
     t.forEach((e) => W(e));
 }
+
 function W(e) {
     var t;
     null == (t = e.attachments) ||
@@ -242,10 +283,12 @@ function W(e) {
             null != e.application && b(s.Ay.createFromServer(e.application));
         });
 }
+
 function K(e) {
     let { application: t } = e;
     b(s.Ay.createFromServer(t));
 }
+
 function z(e) {
     e.tokens.forEach((e) => {
         b(s.Ay.createFromServer(e.application));
@@ -257,6 +300,7 @@ function z(e) {
             });
     });
 }
+
 function q(e) {
     e.items.forEach((e) => {
         null != e.application && b(s.Ay.createFromServer(e.application));

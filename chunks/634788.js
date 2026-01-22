@@ -7,6 +7,7 @@ var r = n(627968),
     a = n(580424);
 n(148355);
 var s = n(985018);
+
 function o(e, t, n) {
     return (
         t in e
@@ -20,6 +21,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +38,7 @@ function l(e) {
     }
     return e;
 }
+
 function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -48,6 +51,7 @@ function c(e, t) {
     }
     return n;
 }
+
 function u(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -59,6 +63,7 @@ function u(e, t) {
         e
     );
 }
+
 function d(e) {
     let {
             titleWithQuery: t,
@@ -68,7 +73,12 @@ function d(e) {
             headerClassName: l,
             headerTrailingContent: c,
         } = e,
-        u = i.length > 0 ? s.intl.formatToPlainString(t, { prefix: o(i) }) : n;
+        u =
+            i.length > 0
+                ? s.intl.formatToPlainString(t, {
+                      prefix: o(i),
+                  })
+                : n;
     return (0, r.jsx)(
         a.Ay.Title,
         {
@@ -79,6 +89,7 @@ function d(e) {
         "autocomplete-title-".concat(u),
     );
 }
+
 function f(e) {
     let {
         query: t,
@@ -116,7 +127,9 @@ function f(e) {
                               },
                               a,
                           ),
-                          { key: a.key },
+                          {
+                              key: a.key,
+                          },
                       ),
                   );
               });

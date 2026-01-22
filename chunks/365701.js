@@ -29,6 +29,7 @@ var r,
     A = n(985018),
     E = n(776433),
     N = n(473169);
+
 function _(e, t, n) {
     return (
         t in e
@@ -94,6 +95,7 @@ class S extends (r = d.Ay.Store) {
 }
 _(S, "displayName", "GuildSettingsTemplateMetadataStore_");
 let T = new S(m.h);
+
 function I() {
     let [e, t] = l.useState(!1),
         n = async () => {
@@ -106,9 +108,11 @@ function I() {
         disabled: !C(T.name),
     });
 }
+
 function C(e) {
     return null != e && e.trim().length >= 2;
 }
+
 function P() {
     return (0, i.jsx)("div", {
         className: N.Q5,
@@ -124,12 +128,15 @@ function P() {
                     children: A.intl.format(A.t.c0m8bK, {}),
                 }),
                 (0, i.jsx)(R, {}),
-                (0, i.jsx)(b.cGx, { className: E.yF }),
+                (0, i.jsx)(b.cGx, {
+                    className: E.yF,
+                }),
                 (0, i.jsx)(w, {}),
             ],
         }),
     });
 }
+
 function w() {
     let { guild: e } = y.A.getProps();
     o()(null != e, "guild cannot be null");
@@ -178,7 +185,9 @@ function w() {
                   variant: "text-sm/normal",
                   children: t.message,
               })
-            : (0, i.jsx)(b.y$y, { className: N.eT });
+            : (0, i.jsx)(b.y$y, {
+                  className: N.eT,
+              });
     let c =
         null != t && null == t.getFirstFieldErrorMessage("name") && null == t.getFirstFieldErrorMessage("description");
     return (0, i.jsxs)(b.BJc, {
@@ -200,6 +209,7 @@ function w() {
         ],
     });
 }
+
 function R() {
     return (0, i.jsxs)("div", {
         className: E.qR,
@@ -297,6 +307,7 @@ function R() {
         ],
     });
 }
+
 function D(e) {
     let { cancel: t, confirm: n } = e;
     return (0, i.jsx)(b.MJ3, {
@@ -313,6 +324,7 @@ function D(e) {
         }),
     });
 }
+
 function G() {
     let e = (0, d.bG)([T], () => T.name),
         t = (0, d.bG)([T], () => T.description),
@@ -352,10 +364,13 @@ function G() {
         ],
     });
 }
+
 function L(e) {
     let { guild: t, guildTemplate: n } = e;
     return null == n
-        ? (0, i.jsx)(k, { guild: t })
+        ? (0, i.jsx)(k, {
+              guild: t,
+          })
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsx)(b.D0$, {
@@ -388,7 +403,9 @@ function L(e) {
                                       guild: t,
                                       guildTemplate: n,
                                   }),
-                                  (0, i.jsx)(F, { guildTemplate: n }),
+                                  (0, i.jsx)(F, {
+                                      guildTemplate: n,
+                                  }),
                               ],
                           }),
                       ],
@@ -396,11 +413,14 @@ function L(e) {
                   n.isDirty &&
                       (0, i.jsx)("div", {
                           className: E.U2,
-                          children: A.intl.format(A.t.v0AVum, { timestamp: new Date(n.updatedAt) }),
+                          children: A.intl.format(A.t.v0AVum, {
+                              timestamp: new Date(n.updatedAt),
+                          }),
                       }),
               ],
           });
 }
+
 function k(e) {
     let { guild: t } = e,
         n = (0, d.bG)([T], () => T.name),
@@ -422,6 +442,7 @@ function k(e) {
         onClick: a,
     });
 }
+
 function M(e) {
     let { guild: t, guildTemplate: n } = e,
         [r, s] = l.useState(!1),
@@ -445,6 +466,7 @@ function M(e) {
         }),
     });
 }
+
 function U(e) {
     let { guild: t, guildTemplate: n } = e,
         [r, s] = l.useState(!1),
@@ -477,6 +499,7 @@ function U(e) {
         ],
     });
 }
+
 function F(e) {
     let { guildTemplate: t } = e;
     return (0, i.jsx)("div", {
@@ -508,7 +531,10 @@ function F(e) {
                                 }
                                 return e;
                             })({}, n)),
-                            (l = l = { guildTemplate: t }),
+                            (l = l =
+                                {
+                                    guildTemplate: t,
+                                }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(l))
                                 : (function (e, t) {

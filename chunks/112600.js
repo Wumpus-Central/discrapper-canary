@@ -1,4 +1,7 @@
-Object.defineProperty(t, "__esModule", { value: !0 }), (t.dataFormatterCache = void 0);
+Object.defineProperty(t, "__esModule", {
+    value: !0,
+}),
+    (t.dataFormatterCache = void 0);
 class n {
     constructor() {
         (this.dateTime = new Map()),

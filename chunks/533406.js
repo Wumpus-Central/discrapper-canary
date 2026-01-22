@@ -11,6 +11,7 @@ var r = n(627968),
     c = n(589078),
     u = n(954571),
     d = n(652215);
+
 function f(e, t, n) {
     return (
         t in e
@@ -24,6 +25,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -40,6 +42,7 @@ function p(e) {
     }
     return e;
 }
+
 function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -52,6 +55,7 @@ function _(e, t) {
     }
     return n;
 }
+
 function h(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -64,12 +68,15 @@ function h(e, t) {
     );
 }
 let m = "slayer-payment-modal";
+
 function g(e, t) {
     let { isGift: n, giftRecipient: r, giftingOrigin: a, additionalUserIds: c } = t,
         { analyticsLocations: f } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         p = !1,
         _ = (0, i.A)(),
-        { enabled: h } = (0, l.ik)({ location: "openCollectiblesPaymentModal" }),
+        { enabled: h } = (0, l.ik)({
+            location: "openCollectiblesPaymentModal",
+        }),
         g = () => {
             p ||
                 u.default.track(d.HAw.PAYMENT_FLOW_CANCELED, {
@@ -171,12 +178,15 @@ let E = (e) => {
             },
         );
     };
+
 function y() {
     (0, a.mMO)(
         async () => {
             let { default: e } = await n.e("1218").then(n.bind(n, 839225));
             return (t) => (0, r.jsx)(e, p({}, t));
         },
-        { modalKey: "slayer-storefront-announcement-modal" },
+        {
+            modalKey: "slayer-storefront-announcement-modal",
+        },
     );
 }

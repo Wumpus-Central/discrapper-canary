@@ -1,4 +1,7 @@
-n.d(t, { A: () => b }), n(896048);
+n.d(t, {
+    A: () => b,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -8,6 +11,7 @@ var r = n(627968),
     c = n(48686),
     u = n(737613),
     d = n(985018);
+
 function f(e, t, n) {
     return (
         t in e
@@ -21,6 +25,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,6 +42,7 @@ function p(e) {
     }
     return e;
 }
+
 function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -49,6 +55,7 @@ function _(e, t) {
     }
     return n;
 }
+
 function h(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -60,6 +67,7 @@ function h(e, t) {
         e
     );
 }
+
 function m(e, t) {
     if (null == e) return {};
     var n,
@@ -76,6 +84,7 @@ function m(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function g(e, t) {
     if (null == e) return {};
     var n,
@@ -86,6 +95,7 @@ function g(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function E(e) {
     let t,
         n,
@@ -126,17 +136,34 @@ function E(e) {
 }
 let b = () => {
     let e = i.useRef(null);
+
     function t() {
         null !== e.current && ((0, o.OoC)(e.current), (e.current = null));
     }
     let [s, l] = (0, a.yK)([u.A], () => [u.A.shouldShowWarning(), u.A.isAFKChannel()], []),
         d = i.useCallback(() => {
-            e.current = (0, o.qfG)((e) => (0, r.jsx)(E, p({ afk: l }, e)));
+            e.current = (0, o.qfG)((e) =>
+                (0, r.jsx)(
+                    E,
+                    p(
+                        {
+                            afk: l,
+                        },
+                        e,
+                    ),
+                ),
+            );
         }, [l]),
         f = i.useCallback(() => {
             (0, o.mMO)(async () => {
                 let { default: e } = await n.e("9586").then(n.bind(n, 742089));
-                return (t) => (0, r.jsx)(e, h(p({}, t), { showHideSuppressWarning: !0 }));
+                return (t) =>
+                    (0, r.jsx)(
+                        e,
+                        h(p({}, t), {
+                            showHideSuppressWarning: !0,
+                        }),
+                    );
             }).then((t) => {
                 null != t && (e.current = t);
             });

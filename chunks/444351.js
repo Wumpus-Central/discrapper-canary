@@ -1,4 +1,6 @@
-r.d(t, { A: () => l });
+r.d(t, {
+    A: () => l,
+});
 var n = r(64700),
     o = r(205662),
     a = r(717519),
@@ -24,7 +26,9 @@ let l = function (e) {
                         flex: "1",
                         paddingLeft: "6px",
                     },
-                    double: { flex: "2" },
+                    double: {
+                        flex: "2",
+                    },
                     input: {
                         width: "80%",
                         padding: "4px 10% 3px",
@@ -42,9 +46,15 @@ let l = function (e) {
                         textTransform: "capitalize",
                     },
                 },
-                disableAlpha: { alpha: { display: "none" } },
+                disableAlpha: {
+                    alpha: {
+                        display: "none",
+                    },
+                },
             },
-            { disableAlpha: u },
+            {
+                disableAlpha: u,
+            },
         ),
         p = function (e, n) {
             e.hex
@@ -89,7 +99,9 @@ let l = function (e) {
         },
         n.createElement(
             "div",
-            { style: c.double },
+            {
+                style: c.double,
+            },
             n.createElement(i.jc, {
                 style: {
                     input: c.input,
@@ -102,7 +114,9 @@ let l = function (e) {
         ),
         n.createElement(
             "div",
-            { style: c.single },
+            {
+                style: c.single,
+            },
             n.createElement(i.jc, {
                 style: {
                     input: c.input,
@@ -117,7 +131,9 @@ let l = function (e) {
         ),
         n.createElement(
             "div",
-            { style: c.single },
+            {
+                style: c.single,
+            },
             n.createElement(i.jc, {
                 style: {
                     input: c.input,
@@ -132,7 +148,9 @@ let l = function (e) {
         ),
         n.createElement(
             "div",
-            { style: c.single },
+            {
+                style: c.single,
+            },
             n.createElement(i.jc, {
                 style: {
                     input: c.input,
@@ -147,7 +165,9 @@ let l = function (e) {
         ),
         n.createElement(
             "div",
-            { style: c.alpha },
+            {
+                style: c.alpha,
+            },
             n.createElement(i.jc, {
                 style: {
                     input: c.input,

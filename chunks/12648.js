@@ -1,4 +1,6 @@
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});
 var i = n(729675),
     a = {
         lessThanXSeconds: {

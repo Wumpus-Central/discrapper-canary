@@ -2,6 +2,7 @@ var r = n(1140),
     i = n(505122),
     a = n(586348),
     s = n(797686);
+
 function o(e) {
     var t = getComputedStyle(e),
         n = i(e),
@@ -18,6 +19,7 @@ function o(e) {
     var o = r.getBoundingClientRect();
     return a.removeChild(r), o.height;
 }
+
 function l(e, t) {
     for (var n = 1 / 0, r = 1 / 0, i = -1 / 0, a = -1 / 0, s = 0; s < e.length; s++) {
         var o = e[s];
@@ -30,6 +32,7 @@ function l(e, t) {
     }
     return i <= r && i - n < t && a - r < t;
 }
+
 function c(e) {
     switch (e.nodeType) {
         case Node.DOCUMENT_TYPE_NODE:

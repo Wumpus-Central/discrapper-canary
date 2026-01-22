@@ -1,4 +1,6 @@
-n.d(t, { m: () => r });
+n.d(t, {
+    m: () => r,
+});
 var r = (function (e) {
     return (
         (e.VIEW_SETTINGS_PAGE = "view_settings_page"),

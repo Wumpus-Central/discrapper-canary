@@ -11,6 +11,7 @@ let s = Object.freeze({
         activeDescendant: null,
     }),
     o = (0, i.v)(() => s);
+
 function l(e, t, n) {
     (0, r.useEffect)(() => {
         (0, a.r)(() => {
@@ -26,6 +27,7 @@ function l(e, t, n) {
         });
     }, [e, t, n]);
 }
+
 function c() {
     (0, a.r)(() => o.setState(() => s));
 }

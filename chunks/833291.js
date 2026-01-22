@@ -70,6 +70,7 @@ let C = 10,
         v.A.escape(null != (l = q.host) ? l : ""),
     ].filter(Boolean),
     Z = RegExp("((https?://[^ ]*)|^|[^/][^/.])(".concat(X.join("|"), ")"), "g");
+
 function Q(e) {
     if (null == e)
         return {
@@ -92,10 +93,12 @@ let $ = (e) => e.replaceAll(ee, " $2 "),
     J = null == (d = m().defaultRules.link) || null == (u = d.match) || null == (c = u.regex) ? void 0 : c.source;
 p()(J, "SimpleMarkdown link regex is not set."), "^" === J[0] && (J = J.substring(1));
 let ee = RegExp(J, "g");
+
 function et(e, t) {
     var n;
     return (null == (n = t.host) ? void 0 : n.replace(/^www[.]/i, "")) === e.host;
 }
+
 function en(e, t) {
     var n, r;
     if (!et(e, t)) return null;
@@ -105,12 +108,14 @@ function en(e, t) {
     let s = i.substring(a.length);
     return "" === s ? null : s;
 }
+
 function er(e) {
     var t, n, r, i;
     return null != (t = null != (n = null != (r = null != (i = en(Y, e)) ? i : en(W, e)) ? r : en(K, e)) ? n : en(z, e))
         ? t
         : en(q, e);
 }
+
 function ei(e) {
     if (null == e) return null;
     let t = e.match(P);
@@ -122,6 +127,7 @@ function ei(e) {
           }
         : null;
 }
+
 function ea(e) {
     var t, n, r, i;
     let a = ec(e);
@@ -146,6 +152,7 @@ function ea(e) {
         primaryHostRemainingPath: l,
     };
 }
+
 function es(e) {
     if (e.includes("\\")) {
         let r = ec(e);
@@ -158,6 +165,7 @@ function es(e) {
     }
     return !1;
 }
+
 function eo(e) {
     if (null == e) return [];
     let t = new Set(),
@@ -251,12 +259,14 @@ function eo(e) {
     }
     return n;
 }
+
 function el(e) {
     var t, n;
     let r = ea(e),
         i = null == r || null == (n = r.primaryHostRemainingPath) ? void 0 : n.match(U);
     return null != (t = null == i ? void 0 : i[1]) ? t : null;
 }
+
 function ec(e) {
     try {
         return (0, g.parse)(e);
@@ -264,6 +274,7 @@ function ec(e) {
         return null;
     }
 }
+
 function eu(e) {
     return eo(e)[0];
 }

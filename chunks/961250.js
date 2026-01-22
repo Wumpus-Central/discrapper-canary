@@ -7,7 +7,9 @@ var r = n(562465),
     a = n(895944),
     s = n(652215);
 async function o() {
-    i.h.dispatch({ type: "PROGRAM_REWARDS_FETCH" });
+    i.h.dispatch({
+        type: "PROGRAM_REWARDS_FETCH",
+    });
     try {
         var e;
         let t =
@@ -25,7 +27,9 @@ async function o() {
             programRewards: t,
         });
     } catch (e) {
-        i.h.dispatch({ type: "PROGRAM_REWARDS_FETCH_FAILURE" });
+        i.h.dispatch({
+            type: "PROGRAM_REWARDS_FETCH_FAILURE",
+        });
     }
 }
 async function l() {

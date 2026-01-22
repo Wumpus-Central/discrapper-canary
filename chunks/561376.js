@@ -1,4 +1,6 @@
-i.d(t, { default: () => C });
+i.d(t, {
+    default: () => C,
+});
 var a = i(627968),
     n = i(503698),
     s = i.n(n),
@@ -22,6 +24,7 @@ var a = i(627968),
     E = i(649178),
     h = i(793481),
     A = i(497451);
+
 function C(e) {
     let { analyticsLocations: t, transitionState: i, onClose: n, giftRecipient: s, analyticsObject: c } = e;
     return (
@@ -80,11 +83,16 @@ function C(e) {
     );
 }
 let v = () => ((0, j.A)(), null);
+
 function N(e) {
     let { giftRecipient: t, analyticsObject: i, onClose: n } = e,
         { showBothNitroSkusInCategorySelect: l } = O.P.useExperiment(
-            { location: "gift-button" },
-            { autoTrackExposure: !1 },
+            {
+                location: "gift-button",
+            },
+            {
+                autoTrackExposure: !1,
+            },
         ),
         { analyticsLocations: p } = (0, d.Ay)(o.A.GIFT_CATEGORY_SELECT_MODAL),
         b = (e) => {
@@ -164,7 +172,9 @@ function N(e) {
                             className: E._d,
                             children: x.intl.string(x.t.lG6a5x),
                         }),
-                        (0, a.jsx)(S, { imageType: 0 }),
+                        (0, a.jsx)(S, {
+                            imageType: 0,
+                        }),
                     ],
                 }),
             }),
@@ -180,7 +190,9 @@ function N(e) {
                                 className: E._d,
                                 children: x.intl.string(x.t["t9uG/o"]),
                             }),
-                            (0, a.jsx)(S, { imageType: 1 }),
+                            (0, a.jsx)(S, {
+                                imageType: 1,
+                            }),
                         ],
                     }),
                 }),
@@ -205,16 +217,21 @@ function N(e) {
                             className: E._d,
                             children: x.intl.string(x.t.gFlB9b),
                         }),
-                        (0, a.jsx)(S, { imageType: 2 }),
+                        (0, a.jsx)(S, {
+                            imageType: 2,
+                        }),
                     ],
                 }),
             }),
         ],
     });
 }
+
 function S(e) {
     let { imageType: t } = e,
-        { avatarPlaceholderSrc: i } = (0, _.A)({ size: (0, p.Te)(r._3J.SIZE_80) }),
+        { avatarPlaceholderSrc: i } = (0, _.A)({
+            size: (0, p.Te)(r._3J.SIZE_80),
+        }),
         n = (0, b.A)("a_c3cffc19e9784f7d0b005eecdf1b566e", r._3J.SIZE_80, !1);
     return 0 === t || 1 === t
         ? (0, a.jsx)("div", {

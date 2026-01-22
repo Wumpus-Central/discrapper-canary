@@ -1,4 +1,7 @@
-n.d(t, { A: () => I }), n(896048);
+n.d(t, {
+    A: () => I,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -18,6 +21,7 @@ var r = n(627968),
     y = n(652215),
     O = n(985018),
     j = n(471135);
+
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -43,6 +47,7 @@ function v(e) {
     }
     return e;
 }
+
 function x(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -68,6 +73,7 @@ let E = {
     [A.Th.ANNOUNCEMENT]: [A.kR.SETTINGS],
     [A.Th.MESSAGE]: [A.kR.SETTINGS],
 };
+
 function _(e) {
     let { label: t, onClick: n, message: i, Icon: o, interactionType: c } = e,
         [u, d] = (0, l.useState)(!1),
@@ -97,6 +103,7 @@ function _(e) {
         }),
     });
 }
+
 function C(e) {
     let { channel: t, message: n, label: i, Icon: o, Menu: c, interactionType: u, actionType: d } = e,
         f = (0, b.op)(),
@@ -264,6 +271,7 @@ let S = {
         },
     },
 };
+
 function I(e) {
     let t,
         { message: n, channel: i, isUnread: a } = e,

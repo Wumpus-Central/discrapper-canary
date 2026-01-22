@@ -1,4 +1,6 @@
-n.d(t, { q: () => r });
+n.d(t, {
+    q: () => r,
+});
 let r = Object.freeze({
     EMBED: (e, t, n) =>
         "https://embed.music.apple.com/"

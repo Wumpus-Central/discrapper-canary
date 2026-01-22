@@ -1,4 +1,8 @@
-e.d(n, { default: () => h }), e(896048), e(65821);
+e.d(n, {
+    default: () => h,
+}),
+    e(896048),
+    e(65821);
 var i = e(627968),
     l = e(64700),
     r = e(284009),
@@ -103,8 +107,12 @@ let h = (t) => {
           })
         : (0, i.jsx)(c.Modal, {
               title: tt
-                  ? M.intl.formatToPlainString(M.t.Sngnzg, { daysLeft: T })
-                  : M.intl.formatToPlainString(M.t.tdvIlU, { daysLeft: T }),
+                  ? M.intl.formatToPlainString(M.t.Sngnzg, {
+                        daysLeft: T,
+                    })
+                  : M.intl.formatToPlainString(M.t.tdvIlU, {
+                        daysLeft: T,
+                    }),
               subtitle: tt ? M.intl.format(M.t["6Su2Xb"], {}) : M.intl.format(M.t["lE+P8X"], {}),
               size: "md",
               onClose: R,
@@ -116,16 +124,26 @@ let h = (t) => {
                                 switch (V) {
                                     case U.WT.YEAR:
                                         return tt
-                                            ? M.intl.format(M.t.O7JRza, { price: t })
-                                            : M.intl.format(M.t["0y5kAG"], { price: t });
+                                            ? M.intl.format(M.t.O7JRza, {
+                                                  price: t,
+                                              })
+                                            : M.intl.format(M.t["0y5kAG"], {
+                                                  price: t,
+                                              });
                                     case U.WT.MONTH:
                                         if (null != Q)
                                             return M.intl.format(M.t["1/ucvu"], {
                                                 discountPrice: Q,
                                                 defaultPrice: t,
                                             });
-                                        if (tt) return M.intl.format(M.t.rbwRlf, { price: t });
-                                        if (1 === Y) return M.intl.format(M.t.C9oRCx, { price: t });
+                                        if (tt)
+                                            return M.intl.format(M.t.rbwRlf, {
+                                                price: t,
+                                            });
+                                        if (1 === Y)
+                                            return M.intl.format(M.t.C9oRCx, {
+                                                price: t,
+                                            });
                                         return M.intl.format(M.t.TmmTgl, {
                                             price: t,
                                             intervalCount: Y,
@@ -135,7 +153,9 @@ let h = (t) => {
                                 }
                             })(tn),
                         })
-                      : (0, i.jsx)(o.y$y, { type: o.tVU.SPINNING_CIRCLE }),
+                      : (0, i.jsx)(o.y$y, {
+                            type: o.tVU.SPINNING_CIRCLE,
+                        }),
               actions: [
                   {
                       text: M.intl.string(M.t.XDpS4K),

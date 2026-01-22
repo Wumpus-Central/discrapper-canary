@@ -8,6 +8,7 @@ function t(i, n) {
           ? i.singularGenitive.replace("{{count}}", String(n))
           : i.pluralGenitive.replace("{{count}}", String(n));
 }
+
 function a(i) {
     return function (n, e) {
         if (null == e || !e.addSuffix) return t(i.regular, n);
@@ -17,7 +18,9 @@ function a(i) {
         return i.past ? t(i.past, n) : t(i.regular, n) + " назад";
     };
 }
-e.d(n, { A: () => u });
+e.d(n, {
+    A: () => u,
+});
 var r = {
     lessThanXSeconds: a({
         regular: {

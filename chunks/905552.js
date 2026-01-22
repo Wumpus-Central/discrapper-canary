@@ -1,6 +1,9 @@
 let r;
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 var l = n(9302);
+
 function i(e, t) {
     if (__OVERLAY__) {
         let e = t.getGame(),

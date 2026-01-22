@@ -1,4 +1,6 @@
-t(697509)(r, "__esModule", { value: !0 }),
+t(697509)(r, "__esModule", {
+    value: !0,
+}),
     (r.default = void 0),
     (r.default = {
         abstract: !1,
@@ -34,7 +36,9 @@ t(697509)(r, "__esModule", { value: !0 }),
                 module: "HTML",
             },
             {
-                concept: { name: "imggroup" },
+                concept: {
+                    name: "imggroup",
+                },
                 module: "DTB",
             },
         ],

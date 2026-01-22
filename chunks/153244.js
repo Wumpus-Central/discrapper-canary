@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var r = n(627968),
     i = n(64700),
     l = n(960488),
@@ -11,6 +13,7 @@ var r = n(627968),
     p = n(652215),
     f = n(985018),
     h = n(509826);
+
 function A() {
     return (0, r.jsxs)(l.dO, {
         children: [
@@ -20,7 +23,12 @@ function A() {
                 children: (0, r.jsxs)(a.A, {
                     page: p.liQ.LIBRARY_SETTINGS,
                     root: !0,
-                    children: [(0, r.jsx)(o.HI, { subsection: f.intl.string(f.t["3D5yo/"]) }), (0, r.jsx)(d.A, {})],
+                    children: [
+                        (0, r.jsx)(o.HI, {
+                            subsection: f.intl.string(f.t["3D5yo/"]),
+                        }),
+                        (0, r.jsx)(d.A, {}),
+                    ],
                 }),
             }),
             (0, r.jsx)(s.A, {
@@ -28,7 +36,12 @@ function A() {
                 children: (0, r.jsxs)(a.A, {
                     page: p.liQ.LIBRARY,
                     root: !0,
-                    children: [(0, r.jsx)(o.HI, { subsection: f.intl.string(f.t.p7ARTB) }), (0, r.jsx)(u.A, {})],
+                    children: [
+                        (0, r.jsx)(o.HI, {
+                            subsection: f.intl.string(f.t.p7ARTB),
+                        }),
+                        (0, r.jsx)(u.A, {}),
+                    ],
                 }),
             }),
         ],
@@ -41,7 +54,12 @@ let g = i.memo(function () {
         }, []),
         (0, r.jsxs)("div", {
             className: h.k,
-            children: [(0, r.jsx)(o.HI, { location: f.intl.string(f.t.cw57ar) }), (0, r.jsx)(A, {})],
+            children: [
+                (0, r.jsx)(o.HI, {
+                    location: f.intl.string(f.t.cw57ar),
+                }),
+                (0, r.jsx)(A, {}),
+            ],
         })
     );
 });

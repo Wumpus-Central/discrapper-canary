@@ -1,1 +1,3 @@
-e.exports = { gy: "a8cd7d098790cf1b" };
+e.exports = {
+    gy: "a8cd7d098790cf1b",
+};

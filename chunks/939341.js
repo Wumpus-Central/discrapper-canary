@@ -20,18 +20,24 @@ var r = n(573648),
     _ = n(652215),
     h = n(360469),
     m = n(985018);
+
 function g(e) {
     return (0, f.Tq)(e) && e.extra.entries.length > 0
-        ? { src: e.extra.entries[0].media.image_url }
+        ? {
+              src: e.extra.entries[0].media.image_url,
+          }
         : (0, f.Lf)(e)
           ? {
                 src: (0, u.uD)(e.extra.application_id, e.extra.media_assets_large_image, h.iu.LARGE),
                 alt: e.extra.media_title,
             }
           : (0, f.p6)(e)
-            ? { src: e.extra.media.image_url }
+            ? {
+                  src: e.extra.media.image_url,
+              }
             : void 0;
 }
+
 function E(e) {
     let t = null == e ? void 0 : e.getIconURL(h.iu.LARGE),
         n = null == e ? void 0 : e.name;
@@ -41,9 +47,12 @@ function E(e) {
             alt:
                 null == n
                     ? m.intl.string(m.t["2B/phM"])
-                    : m.intl.formatToPlainString(m.t.tiKyYg, { applicationName: n }),
+                    : m.intl.formatToPlainString(m.t.tiKyYg, {
+                          applicationName: n,
+                      }),
         };
 }
+
 function b(e) {
     var t;
     let { entry: n, showCoverImage: r = !0 } = e,
@@ -64,7 +73,9 @@ function b(e) {
             }
           : null != d && r
             ? {
-                  largeImage: { src: d },
+                  largeImage: {
+                      src: d,
+                  },
                   smallImage: void 0,
               }
             : {
@@ -72,6 +83,7 @@ function b(e) {
                   smallImage: void 0,
               };
 }
+
 function y(e, t) {
     let { largeImage: n, smallImage: i } = O(e, t);
     if (null != n)
@@ -91,7 +103,12 @@ function y(e, t) {
                       })
                     : void 0;
         return {
-            largeImage: null != n ? { src: n } : void 0,
+            largeImage:
+                null != n
+                    ? {
+                          src: n,
+                      }
+                    : void 0,
             smallImage: void 0,
         };
     }
@@ -122,6 +139,7 @@ function y(e, t) {
               smallImage: void 0,
           };
 }
+
 function O(e, t) {
     var n, r, a, s, l, c, d, f;
     let p = (0, o.h)(null == e ? void 0 : e.application_id);

@@ -1,4 +1,7 @@
-n.d(t, { A: () => _ }), n(896048);
+n.d(t, {
+    A: () => _,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     s = n(311907),
@@ -48,7 +51,9 @@ let _ = (e) => {
             n
                 ? (N(!0),
                   o
-                      .rQ({ withAnalyticsToken: !0 })
+                      .rQ({
+                          withAnalyticsToken: !0,
+                      })
                       .then(() => N(!1))
                       .catch(() => N(!1)))
                 : N(!1);

@@ -1,4 +1,6 @@
-n.d(t, { m: () => A });
+n.d(t, {
+    m: () => A,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -18,6 +20,7 @@ var i = n(311907),
     E = n(355097),
     b = n(985018),
     y = n(956790);
+
 function O(e) {
     return e === g.PremiumTypes.TIER_2
         ? b.intl.string(b.t.jqO5Qn)
@@ -25,11 +28,13 @@ function O(e) {
           ? b.intl.string(b.t.f2qjw5)
           : b.intl.string(b.t.SblICW);
 }
+
 function A(e) {
     let { onClose: t, markAsDismissed: n } = e,
         A = (0, i.bG)([p.default], () => p.default.getCurrentUser()),
         v = O(null == A ? void 0 : A.premiumType),
         S = _.Ay.canUseCustomCallSounds(A);
+
     function I() {
         let e = (0, d.qz)("CustomCallSoundUpsell") ? u.X.SOUNDBOARD_CATEGORY : u.X.VOICE_AND_VIDEO_PANEL;
         (0, f.openUserSettings)(e, {
@@ -82,7 +87,9 @@ function A(e) {
                       fullWidth: !0,
                   })
                 : (0, r.jsx)(l.A, {
-                      textOptions: { textOverride: b.intl.string(b.t.pj0XBN) },
+                      textOptions: {
+                          textOverride: b.intl.string(b.t.pj0XBN),
+                      },
                       subscriptionTier: g.pe.TIER_2,
                       premiumModalAnalyticsLocation: {
                           section: h.JJy.SOUNDBOARD_SOUND_PICKER,

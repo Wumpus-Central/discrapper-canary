@@ -5,7 +5,8 @@ var r = n(797686),
         "text/html": !0,
         "text/rtf": !0,
     },
-    s = 5000;
+    s = 5e3;
+
 function o(e, t) {
     if (!n.g.FileReader || (e.type && !(e.type in a))) return void t("");
     if ("" === e.type) {

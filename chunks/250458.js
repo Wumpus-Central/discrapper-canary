@@ -1,4 +1,7 @@
-n.d(t, { A: () => _ }), n(896048);
+n.d(t, {
+    A: () => _,
+}),
+    n(896048);
 var r = n(73153),
     i = n(256311),
     a = n(439372),
@@ -7,6 +10,7 @@ var r = n(73153),
     l = n(883600),
     c = n(446023),
     u = n(212031);
+
 function d(e, t, n) {
     return (
         t in e
@@ -20,6 +24,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e, t) {
     let n = 0,
         r = null;
@@ -29,7 +34,9 @@ function f(e, t) {
 class p extends a.A {
     constructor(...e) {
         super(...e),
-            d(this, "actions", { POST_CONNECTION_OPEN: (e) => this.handleConnectionOpen(e) }),
+            d(this, "actions", {
+                POST_CONNECTION_OPEN: (e) => this.handleConnectionOpen(e),
+            }),
             d(this, "handleConnectionOpen", async (e) => {
                 try {
                     let e = await i.A.fetchChangelogConfig(),
@@ -55,7 +62,9 @@ class p extends a.A {
                     if (l.A.isLocked()) return;
                     new Date(_.date) > new Date(p) && (0, u.j)();
                 } finally {
-                    r.h.dispatch({ type: "CHANGE_LOG_RESOLVED" });
+                    r.h.dispatch({
+                        type: "CHANGE_LOG_RESOLVED",
+                    });
                 }
             });
     }

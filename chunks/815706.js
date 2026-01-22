@@ -14,6 +14,7 @@ var r = n(77729),
     f = n(954571),
     p = n(58149),
     _ = n(652215);
+
 function h(e, t, n) {
     return (
         t in e
@@ -27,6 +28,7 @@ function h(e, t, n) {
         e
     );
 }
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -43,6 +45,7 @@ function m(e) {
     }
     return e;
 }
+
 function g() {
     let e,
         t,
@@ -108,6 +111,8 @@ async function E(e, t) {
         case _.HAw.CHANNEL_OPENED:
             return (0, p.zV)(e, t, b);
         default:
-            return f.default.track(e, t, { flush: b });
+            return f.default.track(e, t, {
+                flush: b,
+            });
     }
 }

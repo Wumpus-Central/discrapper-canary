@@ -1,9 +1,13 @@
 let r;
-n.d(t, { A: () => O }), n(896048);
+n.d(t, {
+    A: () => O,
+}),
+    n(896048);
 var i,
     a = n(311907),
     s = n(73153),
     o = n(83971);
+
 function l(e, t, n) {
     return (
         t in e
@@ -21,29 +25,36 @@ let c = new Map(),
     u = new Map(),
     d = new Map(),
     f = !1;
+
 function p(e) {
     e(c), (c = new Map(c));
 }
+
 function _(e) {
     let { feedId: t, feed: n } = e;
     p((e) => e.set(t, n)), d.set(t, new Date());
 }
+
 function h(e) {
     let { feedId: t, state: n } = e;
     u.set(t, n);
 }
+
 function m() {
     c = new Map();
 }
+
 function g(e) {
     let { feedId: t } = e;
     if (!c.has(t)) return !1;
     p((e) => e.delete(t));
 }
+
 function E(e) {
     let { filters: t } = e;
     r = t;
 }
+
 function b() {
     f = !f;
 }

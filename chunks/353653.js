@@ -1,5 +1,8 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 var r = n(193155);
+
 function a() {
     try {
         var e = !Boolean.prototype.valueOf.call(r(Boolean, [], function () {}));

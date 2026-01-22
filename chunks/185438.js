@@ -1,4 +1,9 @@
-n.d(t, { A: () => y }), n(114821), n(339614), n(938796);
+n.d(t, {
+    A: () => y,
+}),
+    n(114821),
+    n(339614),
+    n(938796);
 var r = n(64700),
     i = n(284009),
     a = n.n(i),
@@ -16,6 +21,7 @@ var r = n(64700),
     g = n(607940),
     E = n(163437),
     b = n(638643);
+
 function y(e) {
     var t, n;
     let { initialSubscribeForGuild: i, analyticsLocation: y, skuId: O, onComplete: A, disableGuildSelector: v } = e,
@@ -44,7 +50,9 @@ function y(e) {
         G = null == k ? void 0 : k.subscriptionPlan,
         V = (0, m.Ko)(C, null != i ? i : void 0),
         F = null == V ? void 0 : V.subscriptionPlan,
-        { entitlementsLoaded: B } = (0, m.CZ)({ guildId: i });
+        { entitlementsLoaded: B } = (0, m.CZ)({
+            guildId: i,
+        });
     null == i && (B = !0);
     let H = (0, f.A)(),
         Y = null != U && (0, E.Uo)(U, S),

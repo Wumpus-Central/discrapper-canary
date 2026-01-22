@@ -36,7 +36,10 @@ let y = [
     j = [
         () => g.intl.string(g.t.AyMGXA),
         () => g.intl.string(g.t.aAFW7V),
-        (e) => g.intl.formatToPlainString(g.t.h2g0cM, { name: e }),
+        (e) =>
+            g.intl.formatToPlainString(g.t.h2g0cM, {
+                name: e,
+            }),
         () => g.intl.string(g.t.rrYh58),
         () => g.intl.string(g.t["HX3K+F"]),
         () => g.intl.string(g.t["/yW3aY"]),
@@ -66,6 +69,7 @@ let y = [
         b.fg2.CRUNCHYROLL,
         b.fg2.BUNGIE,
     ];
+
 function h(e) {
     let { heading: t, bodyText: n, children: l } = e;
     return (0, r.jsxs)("div", {
@@ -90,6 +94,7 @@ function h(e) {
         ],
     });
 }
+
 function v() {
     let e = g.intl.string(g.t.RnD2yZ),
         [t] = l.useState(() => {
@@ -101,6 +106,7 @@ function v() {
         bodyText: t,
     });
 }
+
 function A() {
     let e = g.intl.string(g.t.bFgqYJ),
         [t] = l.useState(() => {
@@ -112,16 +118,22 @@ function A() {
         bodyText: t,
     });
 }
+
 function w(e) {
     let { user: t, guildId: n, channelId: o, onClose: c } = e,
         u = f.Ay.getName(n, o, t),
-        d = g.intl.formatToPlainString(g.t.sjSitP, { name: u }),
+        d = g.intl.formatToPlainString(g.t.sjSitP, {
+            name: u,
+        }),
         [b] = l.useState(() => {
             var e;
             return (null != (e = (0, i.sample)(j)) ? e : j[0])(u);
         }),
         y = l.useCallback(() => {
-            s.A.openPrivateChannel({ recipientIds: t.id }), null == c || c();
+            s.A.openPrivateChannel({
+                recipientIds: t.id,
+            }),
+                null == c || c();
         }, [t.id, c]);
     return (0, r.jsx)(h, {
         heading: d,
@@ -136,6 +148,7 @@ function w(e) {
         }),
     });
 }
+
 function I() {
     let e = (0, o.Ay)();
     return (0, r.jsx)("div", {
@@ -156,10 +169,14 @@ function I() {
         }),
     });
 }
+
 function P(e) {
     let { onClose: t } = e,
         n = l.useCallback(() => {
-            null == t || t(), (0, d.openUserSettings)(u.X.CONNECTIONS_PANEL, { section: b.nc_.CONNECTIONS });
+            null == t || t(),
+                (0, d.openUserSettings)(u.X.CONNECTIONS_PANEL, {
+                    section: b.nc_.CONNECTIONS,
+                });
         }, [t]),
         i = l.useCallback(() => {
             null == t || t(),

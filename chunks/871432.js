@@ -1,7 +1,10 @@
-n.d(t, { A: () => C }), n(896048);
+n.d(t, {
+    A: () => C,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
-    l = n(432022),
+    l = n(108531),
     a = n(311907),
     s = n(397927),
     o = n(73153),
@@ -19,6 +22,7 @@ var r = n(627968),
     E = n(652215),
     O = n(985018),
     y = n(270430);
+
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -44,6 +48,7 @@ function I(e) {
     }
     return e;
 }
+
 function v(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -62,6 +67,7 @@ function v(e, t) {
         e
     );
 }
+
 function S(e) {
     let { className: t } = e,
         n = (0, a.bG)([A.A], () => A.A.getPendingCount() > 0),
@@ -140,7 +146,7 @@ function S(e) {
                                     t(b),
                                     (l.current = window.setTimeout(() => {
                                         t(null), (l.current = null);
-                                    }, 10000))),
+                                    }, 1e4))),
                                 y
                             );
                         },
@@ -270,8 +276,15 @@ function S(e) {
         ],
     });
 }
+
 function C(e) {
     let { className: t } = e,
-        { enableTopNavButton: n } = (0, m.tR)({ location: "friends-button" });
-    return n ? (0, r.jsx)(S, { className: t }) : null;
+        { enableTopNavButton: n } = (0, m.tR)({
+            location: "friends-button",
+        });
+    return n
+        ? (0, r.jsx)(S, {
+              className: t,
+          })
+        : null;
 }

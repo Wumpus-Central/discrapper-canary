@@ -20,12 +20,14 @@ var r = n(562465),
     d = n(488703),
     f = n(449585),
     p = n(652215);
+
 function _(e) {
     return {
         type: e.type,
         metadata: (0, d.A)(e.metadata),
     };
 }
+
 function h(e) {
     var t, n;
     let r = (0, d.A)(e.triggerMetadata);
@@ -47,12 +49,14 @@ function h(e) {
         }
     );
 }
+
 function m(e) {
     return {
         type: e.type,
         metadata: (0, d.W)(e.metadata),
     };
 }
+
 function g(e) {
     var t, n, r;
     let i = {
@@ -135,6 +139,7 @@ async function v(e, t, n) {
             rejectWithError: !1,
         }));
 }
+
 function S(e, t, n) {
     let i = s.A.getGuild(e);
     if (null == i || !o.A.can(p.xBc.MANAGE_GUILD, i)) return;
@@ -151,6 +156,7 @@ function S(e, t, n) {
     };
     (0, f.rI)(l);
 }
+
 function I(e) {
     i.h.dispatch({
         type: "AUTO_MODERATION_MENTION_RAID_NOTICE_DISMISS",

@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968),
     i = n(64700),
     s = n(397927),
@@ -7,6 +9,7 @@ var r = n(627968),
     o = n(515115),
     c = n(988794),
     u = n(888804);
+
 function d(e) {
     let { guildScheduledEvent: t, channel: n, onClose: d } = e,
         h = t.entity_type === c.Ps.EXTERNAL,

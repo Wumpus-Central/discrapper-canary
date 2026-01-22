@@ -1,4 +1,7 @@
-n.d(t, { A: () => g }), n(896048);
+n.d(t, {
+    A: () => g,
+}),
+    n(896048);
 var r = n(205693),
     i = n(439372),
     a = n(608960),
@@ -9,6 +12,7 @@ var r = n(205693),
     u = n(372684),
     d = n(572164),
     f = n(399925);
+
 function p(e, t, n) {
     return (
         t in e
@@ -22,8 +26,8 @@ function p(e, t, n) {
         e
     );
 }
-let _ = 10000,
-    h = 10000;
+let _ = 1e4,
+    h = 1e4;
 class m extends i.A {
     handleClipsSignalCreated(e, t) {
         this.isSignalEnabled(e.type) && this.process(e, t);

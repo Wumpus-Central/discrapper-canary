@@ -1,6 +1,9 @@
-n.d(t, { o: () => l });
+n.d(t, {
+    o: () => l,
+});
 var r = n(855511),
     i = n(682261);
+
 function l(e) {
     return {
         af_voice_chat: e.voiceChannels.length > 0,

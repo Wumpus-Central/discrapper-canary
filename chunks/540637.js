@@ -1,4 +1,7 @@
-n.d(t, { q: () => T }), n(896048);
+n.d(t, {
+    q: () => T,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -15,6 +18,7 @@ var r = n(627968),
     m = n(992251),
     g = n(801461),
     E = n(336389);
+
 function b(e, t, n) {
     return (
         t in e
@@ -28,6 +32,7 @@ function b(e, t, n) {
         e
     );
 }
+
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -44,6 +49,7 @@ function y(e) {
     }
     return e;
 }
+
 function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -56,6 +62,7 @@ function O(e, t) {
     }
     return n;
 }
+
 function A(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -67,6 +74,7 @@ function A(e, t) {
         e
     );
 }
+
 function v(e, t) {
     if (null == e) return {};
     var n,
@@ -83,6 +91,7 @@ function v(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function S(e, t) {
     if (null == e) return {};
     var n,
@@ -94,6 +103,7 @@ function S(e, t) {
     return i;
 }
 let I = u.A.modules.select.OPTION_HEIGHT.resolve();
+
 function T(e) {
     let t,
         {
@@ -119,7 +129,15 @@ function T(e) {
         U = i.useId(),
         G = null != n ? n : U,
         V = i.useRef(null),
-        F = i.useMemo(() => b.map((e, t) => A(y({}, e), { index: t })), [b]),
+        F = i.useMemo(
+            () =>
+                b.map((e, t) =>
+                    A(y({}, e), {
+                        index: t,
+                    }),
+                ),
+            [b],
+        ),
         [B, H] = i.useState(null != O ? O : []),
         Y = null != S,
         W = Y ? S : B,
@@ -186,7 +204,9 @@ function T(e) {
     else if (F.length > 0)
         t = (0, r.jsx)(p.Ei, {
             ref: V,
-            style: { height: null != x ? "".concat(Math.min(F.length, x) * I, "px") : "100%" },
+            style: {
+                height: null != x ? "".concat(Math.min(F.length, x) * I, "px") : "100%",
+            },
             role: void 0,
             tabIndex: a,
             rowHeight: I,
@@ -246,7 +266,9 @@ function T(e) {
                             role: "listbox",
                             tabIndex: a,
                             "aria-multiselectable": "multiple" === f,
-                            className: s()(E.cu, { [E.E1]: F.length > x }),
+                            className: s()(E.cu, {
+                                [E.E1]: F.length > x,
+                            }),
                             "data-mana-component": "listbox",
                             children: t,
                         },
@@ -256,12 +278,16 @@ function T(e) {
         }),
     });
 }
+
 function C(e) {
     let { children: t, id: n, tabIndex: i, selected: a, disabled: s, focused: o, selectionMode: l, onClick: u } = e,
         p = (0, c.rm)(n);
+
     function _() {
         return "multiple" === l
-            ? (0, r.jsx)(d.P, { checked: a })
+            ? (0, r.jsx)(d.P, {
+                  checked: a,
+              })
             : a
               ? (0, r.jsx)(f.B, {
                     color: "currentColor",
@@ -291,6 +317,7 @@ function C(e) {
         }),
     );
 }
+
 function N(e, t) {
     let [n, r] = i.useState(""),
         a = i.useMemo(

@@ -11,6 +11,7 @@ function r(e, t, n) {
         e
     );
 }
+
 function i(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -27,6 +28,7 @@ function i(e) {
     }
     return e;
 }
+
 function a(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -39,6 +41,7 @@ function a(e, t) {
     }
     return n;
 }
+
 function s(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -75,9 +78,15 @@ var o = (function (e) {
         );
     })({});
 let c = [7, 8, 9, 10],
-    u = [7, 8, 9, 10, 0, 1, 2, 3].reduce((e, t, n) => s(i({}, e), { [t]: n }), {}),
+    u = [7, 8, 9, 10, 0, 1, 2, 3].reduce(
+        (e, t, n) =>
+            s(i({}, e), {
+                [t]: n,
+            }),
+        {},
+    ),
     d = {
         width: 1280,
         height: 720,
     },
-    f = 10485760;
+    f = 0xa00000;

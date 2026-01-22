@@ -1,13 +1,21 @@
-n.d(t, { j: () => c });
+n.d(t, {
+    j: () => c,
+});
 var l = n(627968),
     r = n(64700),
     i = n(503698),
     a = n.n(i),
     s = n(397927),
     o = n(200063);
+
 function c(e) {
     let { chunks: t, columns: n, className: i } = e,
-        c = r.useMemo(() => ({ "--secure-frames-columns": n }), [n]);
+        c = r.useMemo(
+            () => ({
+                "--secure-frames-columns": n,
+            }),
+            [n],
+        );
     return null == t
         ? (0, l.jsx)("div", {
               className: o.Lq,
@@ -20,7 +28,9 @@ function c(e) {
                   (0, l.jsx)(
                       "div",
                       {
-                          className: a()(o.iv, { [o.yF]: t > n - 1 }),
+                          className: a()(o.iv, {
+                              [o.yF]: t > n - 1,
+                          }),
                           children: (0, l.jsx)(s.Text, {
                               className: o.ph,
                               variant: "code",

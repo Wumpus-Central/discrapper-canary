@@ -36,6 +36,7 @@ var i = n(503698),
     A = n(778712),
     v = n(985018),
     S = n(935606);
+
 function I(e, t, n) {
     return (
         t in e
@@ -49,6 +50,7 @@ function I(e, t, n) {
         e
     );
 }
+
 function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -65,6 +67,7 @@ function T(e) {
     }
     return e;
 }
+
 function C(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -77,6 +80,7 @@ function C(e, t) {
     }
     return n;
 }
+
 function N(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -88,6 +92,7 @@ function N(e, t) {
         e
     );
 }
+
 function R(e) {
     let { icon: t, label: n, sublabel: i, onSelect: a, navId: s, index: o, selected: c } = e,
         u = () => {
@@ -126,6 +131,7 @@ function R(e) {
         ),
     );
 }
+
 function w(e) {
     let { label: t, className: n } = e;
     return (0, r.jsx)(l.Text, {
@@ -135,6 +141,7 @@ function w(e) {
         children: t,
     });
 }
+
 function P(e) {
     var t, n;
     let { searchTokenType: i, answer: a } = e,
@@ -156,6 +163,7 @@ function P(e) {
         ],
     });
 }
+
 function D(e) {
     let t = (0, _.E3)(e);
     return (0, r.jsxs)("div", {
@@ -176,6 +184,7 @@ function D(e) {
         ],
     });
 }
+
 function x(e) {
     let { searchContext: t } = e;
     return (0, r.jsx)(o.m_, {
@@ -195,11 +204,15 @@ function x(e) {
         }),
     });
 }
+
 function L(e) {
     let { title: t, showDivider: n, children: i } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            n && (0, r.jsx)("div", { className: S.yF }),
+            n &&
+                (0, r.jsx)("div", {
+                    className: S.yF,
+                }),
             (0, r.jsx)(
                 "ul",
                 {
@@ -213,6 +226,7 @@ function L(e) {
         ],
     });
 }
+
 function j(e) {
     let { headerId: t, titleText: n, trailingIcon: i } = e;
     return (0, r.jsxs)("div", {
@@ -228,6 +242,7 @@ function j(e) {
         ],
     });
 }
+
 function M(e) {
     let { navId: t, item: n, startingIndex: i, selectedIndex: a } = e,
         s = i,
@@ -265,6 +280,7 @@ function M(e) {
         ],
     });
 }
+
 function k(e) {
     let { size: t, user: n, className: i } = e,
         a = (0, s.bG)([d.A], () => d.A.getGuildId()),
@@ -276,6 +292,7 @@ function k(e) {
         className: i,
     });
 }
+
 function U(e) {
     let { user: t } = e,
         { selectedGuildId: n, selectedChannelId: i } = (0, s.cf)([d.A, u.A], () => {
@@ -293,6 +310,7 @@ function U(e) {
         children: a,
     });
 }
+
 function G(e) {
     let { value: t, avatarSize: n, iconSize: i } = e,
         a = "",
@@ -352,6 +370,7 @@ function G(e) {
         ariaLabel: a,
     };
 }
+
 function V(e) {
     let { text: t, className: n } = e;
     return (0, r.jsx)(l.Text, {
@@ -361,6 +380,7 @@ function V(e) {
         children: t,
     });
 }
+
 function F(e) {
     let { token: t, avatarSize: n } = e,
         i = t.getFullMatch(),
@@ -386,6 +406,7 @@ function F(e) {
               ],
           });
 }
+
 function B(e) {
     var t;
     let { token: n, avatarSize: i, iconSize: o } = e,
@@ -415,6 +436,7 @@ function B(e) {
         ],
     });
 }
+
 function H(e) {
     let { result: t, group: n } = e;
     if (n === O.x2k.HISTORY)
@@ -444,6 +466,7 @@ function H(e) {
                 })
           : null;
 }
+
 function Y(e) {
     let { channel: t, user: n, text: i } = e;
     if (null != t) {
@@ -472,16 +495,21 @@ function Y(e) {
                           size: l._3J.SIZE_16,
                           user: n,
                       }),
-                      (0, r.jsx)(U, { user: n }),
+                      (0, r.jsx)(U, {
+                          user: n,
+                      }),
                   ],
               }),
               ariaLabel: n.username,
           }
         : {
-              label: (0, r.jsx)(w, { label: i }),
+              label: (0, r.jsx)(w, {
+                  label: i,
+              }),
               ariaLabel: i,
           };
 }
+
 function W(e) {
     let { text: t, className: n, size: i } = e,
         a = (0, E.KD)(t);
@@ -493,6 +521,7 @@ function W(e) {
           })
         : null;
 }
+
 function K(e) {
     let { text: t, className: n, size: i } = e,
         a = (0, E.Ht)(t);
@@ -504,6 +533,7 @@ function K(e) {
           })
         : null;
 }
+
 function z(e) {
     let { result: t, group: n } = e,
         { channel: i, user: a } = t;
@@ -534,6 +564,7 @@ function z(e) {
                 })
               : null;
 }
+
 function q(e) {
     let { channel: t, user: n, text: i } = e;
     if (null != t) {
@@ -552,7 +583,9 @@ function q(e) {
               label: (0, r.jsxs)("div", {
                   className: S.YL,
                   children: [
-                      (0, r.jsx)(U, { user: n }),
+                      (0, r.jsx)(U, {
+                          user: n,
+                      }),
                       (0, r.jsx)(l.Text, {
                           variant: "text-sm/medium",
                           color: "text-subtle",
@@ -563,7 +596,9 @@ function q(e) {
               ariaLabel: n.username,
           }
         : {
-              label: (0, r.jsx)(w, { label: i }),
+              label: (0, r.jsx)(w, {
+                  label: i,
+              }),
               ariaLabel: i,
           };
 }

@@ -1,4 +1,6 @@
-n.d(t, { y: () => C });
+n.d(t, {
+    y: () => C,
+});
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -22,6 +24,7 @@ var r = n(627968),
     x = n(985018),
     E = n(89996),
     _ = n(867010);
+
 function C(e) {
     let { channel: t, guild: n, width: l, inPopout: i, handleClose: a, userParticipantCount: s } = e;
     return l < 250
@@ -49,6 +52,7 @@ function C(e) {
                 inPopout: i,
             });
 }
+
 function S(e) {
     let { channel: t, inPopout: n, handleClose: l } = e,
         { analyticsLocations: i, newestAnalyticsLocation: s } = (0, b.Ay)(h.A.VC_TILE_ACTIVITY_SHELF_BUTTON);
@@ -69,7 +73,9 @@ function S(e) {
                                               type: "channel",
                                               channel: t,
                                           }
-                                        : { type: "contextless" },
+                                        : {
+                                              type: "contextless",
+                                          },
                                 openInPopout: n,
                                 analyticsLocation: s,
                             });
@@ -104,6 +110,7 @@ function S(e) {
         }),
     });
 }
+
 function I(e) {
     let { channel: t, guild: i, inPopout: s } = e;
     l.useEffect(() => {
@@ -113,6 +120,7 @@ function I(e) {
         });
     }, []);
     let { analyticsLocations: o, newestAnalyticsLocation: c } = (0, b.Ay)(h.A.VC_TILE_ACTIVITY_INVITE);
+
     function d() {
         (0, u.mMO)(
             async () => {
@@ -170,9 +178,12 @@ function I(e) {
                     );
                 };
             },
-            { contextKey: s ? u.KX8 : u.SYi },
+            {
+                contextKey: s ? u.KX8 : u.SYi,
+            },
         );
     }
+
     function f() {
         (0, g.A)({
             context:
@@ -181,7 +192,9 @@ function I(e) {
                           type: "channel",
                           channel: t,
                       }
-                    : { type: "contextless" },
+                    : {
+                          type: "contextless",
+                      },
             openInPopout: s,
             analyticsLocation: c,
         });
@@ -223,6 +236,7 @@ function I(e) {
         }),
     });
 }
+
 function N(e) {
     let { channel: t, guild: n, handleClose: i, width: o, userParticipantCount: c } = e;
     (0, d.Ay)(() => {
@@ -231,7 +245,9 @@ function N(e) {
             n_participants: c,
         });
     });
-    let g = (0, f.A)({ guildId: n.id }).slice(0, 3),
+    let g = (0, f.A)({
+            guildId: n.id,
+        }).slice(0, 3),
         { analyticsLocations: _ } = (0, b.Ay)(h.A.VC_TILE_ACTIVITY_SUGGESTION),
         C = l.useMemo(
             () => ({
@@ -253,7 +269,9 @@ function N(e) {
                       })
                     : null,
                 (0, r.jsx)("div", {
-                    className: a()(E.Di, { [E.qy]: o <= 300 }),
+                    className: a()(E.Di, {
+                        [E.qy]: o <= 300,
+                    }),
                     children: g.map((e) =>
                         (0, r.jsx)(
                             p.C,

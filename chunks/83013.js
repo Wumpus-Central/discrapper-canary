@@ -1,10 +1,13 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(627968);
 n(64700);
 var l = n(503698),
     i = n.n(l),
     a = n(900179),
     s = n(581885);
+
 function o(e) {
     let { className: t } = e,
         n = (function (e, t) {

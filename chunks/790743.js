@@ -1,8 +1,13 @@
-i.d(a, { default: () => r }), i(896048), i(321073);
+i.d(a, {
+    default: () => r,
+}),
+    i(896048),
+    i(321073);
 var n = i(627968),
     l = i(64700),
     s = i(158954),
     e = i(985018);
+
 function r(t) {
     let { transitionState: a, onClose: i, title: r, body: c, cta: o, closeLabel: u, onConfirm: d } = t,
         [p, h] = l.useState(!1),

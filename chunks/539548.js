@@ -1,4 +1,6 @@
-t.d(l, { A: () => y });
+t.d(l, {
+    A: () => y,
+});
 var n = t(627968);
 t(64700);
 var i = t(311907),
@@ -20,9 +22,12 @@ var i = t(311907),
     v = t(985018),
     b = t(78702),
     I = t(781425);
+
 function y(e) {
     let { user: l, currentUser: t, guildId: y, onClose: O } = e,
-        { voiceActivityStatusEnabled: N } = (0, s.G)({ location: "UserProfileModalActivity" }),
+        { voiceActivityStatusEnabled: N } = (0, s.G)({
+            location: "UserProfileModalActivity",
+        }),
         { live: E, recent: _, stream: T } = (0, u.A)(l.id),
         { voiceChannel: P, voiceActivity: S } = (0, f.A)({
             userId: l.id,

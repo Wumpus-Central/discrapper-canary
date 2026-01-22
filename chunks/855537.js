@@ -6,9 +6,10 @@ n.d(t, {
 var r = n(562465),
     i = n(73153),
     l = n(652215);
+
 function s(e, t) {
     let n = new Date(),
-        i = new Date(n.getTime() - (n.getDay() + 1) * 86400000 - 3628800000);
+        i = new Date(n.getTime() - (n.getDay() + 1) * 864e5 - 36288e5);
     return r.Bo.get({
         url: t(e),
         query: {
@@ -20,6 +21,7 @@ function s(e, t) {
         rejectWithError: !1,
     });
 }
+
 function a(e) {
     return s(e, l.Rsh.GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW).then(
         (t) => {
@@ -38,6 +40,7 @@ function a(e) {
         },
     );
 }
+
 function c(e) {
     return s(e, l.Rsh.GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW).then(
         (t) => {
@@ -56,6 +59,7 @@ function c(e) {
         },
     );
 }
+
 function o(e) {
     return s(e, l.Rsh.GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION).then(
         (t) => {

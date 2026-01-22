@@ -1,6 +1,9 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 var r = n(506774),
     i = n(652215);
+
 function a(e, t) {
     if (0 === e.length) return "No logs";
     let n = r.w.get(i.Xlh),

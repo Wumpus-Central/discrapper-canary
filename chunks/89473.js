@@ -1,4 +1,6 @@
-l.d(t, { default: () => p });
+l.d(t, {
+    default: () => p,
+});
 var n = l(627968),
     r = l(64700),
     s = l(158954),
@@ -49,7 +51,9 @@ let j = () =>
                           children: [
                               (0, n.jsx)("div", {
                                   className: g.b,
-                                  children: (0, n.jsx)(o.JnF, { onClick: () => a(!1) }),
+                                  children: (0, n.jsx)(o.JnF, {
+                                      onClick: () => a(!1),
+                                  }),
                               }),
                               (0, n.jsx)("div", {
                                   className: g.kL,

@@ -41,6 +41,7 @@ var l = n(627968),
     D = n(788868),
     L = n(985018),
     U = n(982571);
+
 function G(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -67,6 +68,7 @@ function G(e) {
     return e;
 }
 let H = [v.pn.PLAN_SELECT, v.pn.ADD_PAYMENT_STEPS, v.pn.REVIEW, v.pn.CONFIRM];
+
 function B(e) {
     let {
             analyticsLocation: t,
@@ -142,6 +144,7 @@ function B(e) {
         }),
     });
 }
+
 function F(e) {
     var t, n;
     let { initialPlanId: r, handleStepChange: i, referralTrialOfferId: s } = e,
@@ -165,7 +168,9 @@ function F(e) {
                         t = e.length < 1 && null == r ? v.pn.PLAN_SELECT : v.pn.REVIEW;
                     f && (t = v.pn.REVIEW),
                         g && e.length < 1 && (t = v.pn.SELECT_FREE_SKU),
-                        i(t, { trackedFromStep: v.pn.PAYMENT_TYPE });
+                        i(t, {
+                            trackedFromStep: v.pn.PAYMENT_TYPE,
+                        });
                 },
             }),
         Object.getOwnPropertyDescriptors
@@ -256,6 +261,7 @@ let W = function () {
         ];
     },
     z = W();
+
 function V(e) {
     let t = (0, i.bG)([g.A], () => g.A.getPremiumTypeSubscription()),
         n = (0, c.cg)() ? D.gD.PREMIUM_MONTH_TIER_2 : void 0,

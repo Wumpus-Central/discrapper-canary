@@ -1,5 +1,7 @@
 let r;
-n.d(t, { A: () => S });
+n.d(t, {
+    A: () => S,
+});
 var i = n(73153),
     l = n(31728),
     a = n(272355),
@@ -18,12 +20,14 @@ var i = n(73153),
     _ = n(977997),
     E = n(652215),
     O = n(731854);
+
 function y() {
     var e;
     let t = r;
     if (null == t || !A.A.isOpen(t)) return !1;
     i.h.wait(() => l.VN(t)), null == (e = g.A.getRTCConnection()) || e.setPipOpen(!1), (r = null);
 }
+
 function I() {
     var e;
     let t = g.A.getChannelId(),
@@ -54,7 +58,11 @@ function I() {
     let a = p.A.getChannel(t);
     return (
         !(null == a || A.A.isOpen(t)) &&
-        (i.h.wait(() => l.ho(a.id, E.o1q.VIDEO, { channel: a })),
+        (i.h.wait(() =>
+            l.ho(a.id, E.o1q.VIDEO, {
+                channel: a,
+            }),
+        ),
         null == (e = g.A.getRTCConnection()) || e.setPipOpen(!0),
         void (r = t))
     );

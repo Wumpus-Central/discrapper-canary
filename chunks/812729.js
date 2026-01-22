@@ -14,9 +14,11 @@ var r = Array.prototype.slice,
                         : e == t)
         );
     });
+
 function o(e) {
     return null == e;
 }
+
 function l(e) {
     return (
         !!e &&
@@ -27,6 +29,7 @@ function l(e) {
         (!(e.length > 0) || "number" == typeof e[0])
     );
 }
+
 function c(e, t, n) {
     var c, u;
     if (o(e) || o(t) || e.prototype !== t.prototype) return !1;

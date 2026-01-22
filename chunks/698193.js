@@ -1,4 +1,6 @@
-e.d(t, { default: () => z });
+e.d(t, {
+    default: () => z,
+});
 var i = e(627968);
 e(64700);
 var l = e(311907),
@@ -39,6 +41,7 @@ var l = e(311907),
     M = e(788408),
     B = e(652215),
     U = e(985018);
+
 function Z(n) {
     for (var t = 1; t < arguments.length; t++) {
         var e = null != arguments[t] ? arguments[t] : {},
@@ -64,6 +67,7 @@ function Z(n) {
     }
     return n;
 }
+
 function H(n) {
     let { channel: t, guild: e, onSelect: s } = n,
         c = t.isGuildStageVoice(),
@@ -96,25 +100,34 @@ function H(n) {
         "aria-label": U.intl.string(U.t.Xm41aV),
         onSelect: s,
         children: [
-            (0, i.jsx)(r.rXV, { children: null != v ? C : m }),
+            (0, i.jsx)(r.rXV, {
+                children: null != v ? C : m,
+            }),
             (0, i.jsxs)(r.rXV, {
                 children: [S, P, N, O],
             }),
             (0, i.jsxs)(r.rXV, {
                 children: [D, Q ? R : I, B],
             }),
-            (0, i.jsx)(r.rXV, { children: z }),
-            (0, i.jsx)(r.rXV, { children: X }),
+            (0, i.jsx)(r.rXV, {
+                children: z,
+            }),
+            (0, i.jsx)(r.rXV, {
+                children: X,
+            }),
             (0, i.jsxs)(r.rXV, {
                 children: [Z, A],
             }),
-            (0, i.jsx)(r.rXV, { children: Y }),
+            (0, i.jsx)(r.rXV, {
+                children: Y,
+            }),
             (0, i.jsxs)(r.rXV, {
                 children: [H, W],
             }),
         ],
     });
 }
+
 function Y(n) {
     let { channel: t, guild: e, onSelect: s } = n,
         c = t.isGuildStageVoice(),
@@ -154,7 +167,9 @@ function Y(n) {
         "aria-label": U.intl.string(U.t.Xm41aV),
         onSelect: s,
         children: [
-            (0, i.jsx)(r.rXV, { children: null != g ? j : B }),
+            (0, i.jsx)(r.rXV, {
+                children: null != g ? j : B,
+            }),
             (0, i.jsxs)(
                 r.rXV,
                 {
@@ -183,7 +198,9 @@ function Y(n) {
                 },
                 "notifications",
             ),
-            (0, i.jsx)(r.rXV, { children: H }),
+            (0, i.jsx)(r.rXV, {
+                children: H,
+            }),
             (0, i.jsxs)(
                 r.rXV,
                 {
@@ -206,7 +223,9 @@ let z = (0, c.A)(
         function (n) {
             return (0, A.A)() ? (0, i.jsx)(H, Z({}, n)) : (0, i.jsx)(Y, Z({}, n));
         },
-        { object: B.ZSU.CONTEXT_MENU },
+        {
+            object: B.ZSU.CONTEXT_MENU,
+        },
     ),
     [d.A.CONTEXT_MENU, d.A.CHANNEL_LIST_VOICE_CHANNEL_MENU],
 );

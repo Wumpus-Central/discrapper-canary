@@ -1,8 +1,9 @@
 !(function (e, t) {
     t(n(989349));
 })(0, function (e) {
-    var t = "nolla yksi kaksi kolme neljä viisi kuusi seitsemän kahdeksan yhdeksän".split(" "),
-        n = ["nolla", "yhden", "kahden", "kolmen", "neljän", "viiden", "kuuden", t[7], t[8], t[9]];
+    var t = "nolla yksi kaksi kolme nelj\xe4 viisi kuusi seitsem\xe4n kahdeksan yhdeks\xe4n".split(" "),
+        n = ["nolla", "yhden", "kahden", "kolmen", "nelj\xe4n", "viiden", "kuuden", t[7], t[8], t[9]];
+
     function r(e, t, n, r) {
         var a = "";
         switch (n) {
@@ -21,9 +22,9 @@
                 a = r ? "tunnin" : "tuntia";
                 break;
             case "d":
-                return r ? "päivän" : "päivä";
+                return r ? "p\xe4iv\xe4n" : "p\xe4iv\xe4";
             case "dd":
-                a = r ? "päivän" : "päivää";
+                a = r ? "p\xe4iv\xe4n" : "p\xe4iv\xe4\xe4";
                 break;
             case "M":
                 return r ? "kuukauden" : "kuukausi";
@@ -37,14 +38,15 @@
         }
         return i(e, r) + " " + a;
     }
+
     function i(e, r) {
         return e < 10 ? (r ? n[e] : t[e]) : e;
     }
     return e.defineLocale("fi", {
-        months: "tammikuu_helmikuu_maaliskuu_huhtikuu_toukokuu_kesäkuu_heinäkuu_elokuu_syyskuu_lokakuu_marraskuu_joulukuu".split(
+        months: "tammikuu_helmikuu_maaliskuu_huhtikuu_toukokuu_kes\xe4kuu_hein\xe4kuu_elokuu_syyskuu_lokakuu_marraskuu_joulukuu".split(
             "_",
         ),
-        monthsShort: "tammi_helmi_maalis_huhti_touko_kesä_heinä_elo_syys_loka_marras_joulu".split("_"),
+        monthsShort: "tammi_helmi_maalis_huhti_touko_kes\xe4_hein\xe4_elo_syys_loka_marras_joulu".split("_"),
         weekdays: "sunnuntai_maanantai_tiistai_keskiviikko_torstai_perjantai_lauantai".split("_"),
         weekdaysShort: "su_ma_ti_ke_to_pe_la".split("_"),
         weekdaysMin: "su_ma_ti_ke_to_pe_la".split("_"),
@@ -61,7 +63,7 @@
             llll: "ddd, Do MMM YYYY, [klo] HH.mm",
         },
         calendar: {
-            sameDay: "[tänään] [klo] LT",
+            sameDay: "[t\xe4n\xe4\xe4n] [klo] LT",
             nextDay: "[huomenna] [klo] LT",
             nextWeek: "dddd [klo] LT",
             lastDay: "[eilen] [klo] LT",
@@ -69,7 +71,7 @@
             sameElse: "L",
         },
         relativeTime: {
-            future: "%s päästä",
+            future: "%s p\xe4\xe4st\xe4",
             past: "%s sitten",
             s: r,
             ss: r,

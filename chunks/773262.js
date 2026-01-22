@@ -1,4 +1,7 @@
-r.r(t), r.d(t, { default: () => d });
+r.r(t),
+    r.d(t, {
+        default: () => d,
+    });
 var n = r(627968),
     c = r(64700),
     o = r(158954),
@@ -26,7 +29,9 @@ let d = function (e) {
             desiredLength: 30,
         }),
         x = c.useCallback(() => {
-            (0, i.y5)({ channelId: m });
+            (0, i.y5)({
+                channelId: m,
+            });
         }, [m]),
         w = {
             transitionState: d,
@@ -66,7 +71,9 @@ let d = function (e) {
                     className: O.qr,
                     variant: "text-sm/normal",
                     color: "text-muted",
-                    children: y.intl.format(y.t["H3+ktv"], { helpArticle: (0, u.aW)() }),
+                    children: y.intl.format(y.t["H3+ktv"], {
+                        helpArticle: (0, u.aW)(),
+                    }),
                 }),
             ],
         });

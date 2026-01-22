@@ -1,4 +1,8 @@
-n.d(t, { default: () => _ }), n(801541), n(896048);
+n.d(t, {
+    default: () => _,
+}),
+    n(801541),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     s = n(284009),
@@ -16,6 +20,7 @@ var r = n(627968),
     S = n(652215),
     v = n(985018),
     O = n(197266);
+
 function _(e) {
     var t, n;
     let { transitionState: s, onClose: _ } = e,
@@ -129,16 +134,26 @@ function _(e) {
                                                         type: c.q.ERROR,
                                                         message: o.P.select(),
                                                     },
-                                                    (e) => ({ error: e }),
+                                                    (e) => ({
+                                                        error: e,
+                                                    }),
                                                 )
                                                 .with(
                                                     {
                                                         type: c.q.AVAILABLE,
                                                         message: o.P.select(),
                                                     },
-                                                    (e) => ({ successMessage: e }),
+                                                    (e) => ({
+                                                        successMessage: e,
+                                                    }),
                                                 )
-                                                .otherwise(() => (n ? { helperText: v.intl.string(v.t.z7c4bP) } : {}))),
+                                                .otherwise(() =>
+                                                    n
+                                                        ? {
+                                                              helperText: v.intl.string(v.t.z7c4bP),
+                                                          }
+                                                        : {},
+                                                )),
                                         ),
                                     ),
                                     !y.hasUniqueUsername() &&

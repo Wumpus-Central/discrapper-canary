@@ -1,4 +1,7 @@
-r.d(t, { default: () => y }), r(896048);
+r.d(t, {
+    default: () => y,
+}),
+    r(896048);
 var n = r(627968),
     l = r(64700),
     o = r(158954),
@@ -11,6 +14,7 @@ var n = r(627968),
     d = r(559868),
     g = r(652215),
     p = r(985018);
+
 function f(e, t, r) {
     return (
         t in e
@@ -24,6 +28,7 @@ function f(e, t, r) {
         e
     );
 }
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
@@ -40,6 +45,7 @@ function b(e) {
     }
     return e;
 }
+
 function O(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -92,11 +98,16 @@ class m extends l.PureComponent {
                     n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                     { changeLog: l } = t.props,
                     { date: o, revision: i } = l,
-                    c = b({ change_log_id: "".concat(o, ":").concat(i) }, r);
+                    c = b(
+                        {
+                            change_log_id: "".concat(o, ":").concat(i),
+                        },
+                        r,
+                    );
                 n ||
                     (c = b(
                         {
-                            seconds_open: Math.round((Date.now() - t.mountedAt) / 1000),
+                            seconds_open: Math.round((Date.now() - t.mountedAt) / 1e3),
                             max_scrolled_percentage: 100 * parseInt(t.maxScrolledPercentage.toPrecision(4), 10),
                         },
                         c,
@@ -105,6 +116,7 @@ class m extends l.PureComponent {
             });
     }
 }
+
 function y(e) {
     let { changelog: t, loaded: r, clientTooOld: c } = (0, u.J)();
     if (
@@ -146,5 +158,10 @@ function y(e) {
                 ),
             );
         else return (0, i.A)(e);
-    return (0, n.jsx)(m, O(b({}, e), { changeLog: t }));
+    return (0, n.jsx)(
+        m,
+        O(b({}, e), {
+            changeLog: t,
+        }),
+    );
 }

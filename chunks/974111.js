@@ -15,12 +15,14 @@ var r = n(908909),
     f = n(744493),
     p = n(96441),
     _ = n(47276);
+
 function h(e) {
     return e && e.__esModule ? e.default : e;
 }
 let m = new WeakMap(),
     g = "__role_" + Date.now(),
     E = "__focusManager_" + Date.now();
+
 function b(e, t, n) {
     var b;
     let y,
@@ -54,7 +56,13 @@ function b(e, t, n) {
         w = (0, _.o)(h(r.A), "@react-aria/datepicker"),
         P = "hour" === t.maxGranularity ? "selectedTimeDescription" : "selectedDateDescription",
         D = "hour" === t.maxGranularity ? "time" : "date",
-        x = t.value ? w.format(P, { [D]: t.formatValue({ month: "long" }) }) : "",
+        x = t.value
+            ? w.format(P, {
+                  [D]: t.formatValue({
+                      month: "long",
+                  }),
+              })
+            : "",
         L = (0, s.I)(x),
         j =
             "presentation" === e[g]
@@ -72,7 +80,9 @@ function b(e, t, n) {
     let G = (0, u.useRef)(e.autoFocus);
     (y =
         "presentation" === e[g]
-            ? { role: "presentation" }
+            ? {
+                  role: "presentation",
+              }
             : (0, o.v)(I, {
                   role: "group",
                   "aria-disabled": e.isDisabled || void 0,
@@ -116,7 +126,9 @@ function b(e, t, n) {
             onKeyUp(t) {
                 e.onKeyUp && e.onKeyUp(t);
             },
-            style: { unicodeBidi: "isolate" },
+            style: {
+                unicodeBidi: "isolate",
+            },
         }),
         inputProps: V,
         descriptionProps: T,

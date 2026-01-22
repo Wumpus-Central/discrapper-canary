@@ -1,4 +1,8 @@
-n.d(t, { A: () => P }), n(896048), n(638769);
+n.d(t, {
+    A: () => P,
+}),
+    n(896048),
+    n(638769);
 var r = n(181370),
     i = n.n(r),
     a = n(311907),
@@ -13,6 +17,7 @@ var r = n(181370),
     _ = n(71393),
     h = n(661191),
     m = n(142120);
+
 function g(e, t, n) {
     return (
         t in e
@@ -26,7 +31,7 @@ function g(e, t, n) {
         e
     );
 }
-let E = 2000,
+let E = 2e3,
     b = new c.A("EntityVersionsManager");
 class y extends o.A {
     _initialize() {
@@ -43,6 +48,7 @@ class y extends o.A {
             });
     }
 }
+
 function O(e) {
     var t;
     let n = null == (t = _.A.getGuild(e.guild_id)) ? void 0 : t.name;
@@ -54,18 +60,22 @@ function O(e) {
                 null != e.stickers && w(e.guild_id, new Set(e.stickers));
         });
 }
+
 function A() {
     l.A.getAll().then((e) => {
         e.forEach((e) => S(e));
     });
 }
+
 function v(e) {
     let { guild: t } = e;
     t.unableToSyncDeletes && S(t.id);
 }
+
 function S(e) {
     setTimeout(() => I(e), Math.ceil(Math.random() * E));
 }
+
 function I(e) {
     var t, n, r;
     let i = null == (n = _.A.getGuild(e)) ? void 0 : n.name;
@@ -76,9 +86,11 @@ function I(e) {
         l = T(null != (t = null == (r = d.A.getStickersByGuildId(e)) ? void 0 : r.map((e) => e.id)) ? t : []);
     m.A.getSocket().getDeletedEntityIdsNotMatchingHash(e, a, s, o, l);
 }
+
 function T(e) {
     return i().v3(e.sort().join(",")).toString();
 }
+
 function C(e, t) {
     let n = h.default.keys(f.A.getMutableBasicGuildChannelsForGuild(e));
     b.fileOnly("syncChannels", {
@@ -97,6 +109,7 @@ function C(e, t) {
                 });
         });
 }
+
 function N(e, t) {
     h.default.keys(p.A.getUnsafeMutableRoles(e)).forEach((n) => {
         t.has(n) ||
@@ -107,6 +120,7 @@ function N(e, t) {
             });
     });
 }
+
 function R(e, t) {
     let n = u.Ay.getGuildEmoji(e),
         r = n.filter((e) => t.has(e.id));
@@ -117,6 +131,7 @@ function R(e, t) {
             emojis: r,
         });
 }
+
 function w(e, t) {
     var n;
     let r = null != (n = d.A.getStickersByGuildId(e)) ? n : [],

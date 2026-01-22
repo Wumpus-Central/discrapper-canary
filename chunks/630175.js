@@ -1,1 +1,3 @@
-Object.defineProperty(t, "__esModule", { value: !0 });
+Object.defineProperty(t, "__esModule", {
+    value: !0,
+});

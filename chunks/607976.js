@@ -1,10 +1,13 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(627968),
     i = n(64700),
     l = n(397927),
     a = n(886217),
     s = n(985018),
     o = n(104574);
+
 function c(e) {
     let { children: t, selectedSections: n = [], onSectionSelect: c, controls: u } = e,
         d = (0, a._B)(),

@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(627968),
     i = n(64700),
     a = n(594832),
@@ -6,10 +8,14 @@ var r = n(627968),
     o = n(968975),
     l = n(524380),
     c = n(518477);
+
 function u(e) {
     let { user: t, onOpenProfile: n } = e,
         u = i.useCallback(() => {
-            null == n || n({ tabSection: c.RP.WISHLIST });
+            null == n ||
+                n({
+                    tabSection: c.RP.WISHLIST,
+                });
         }, [n]),
         {
             displayedWishlistItems: d,

@@ -1,4 +1,7 @@
-n.d(t, { A: () => v }), n(896048);
+n.d(t, {
+    A: () => v,
+}),
+    n(896048);
 var r,
     i = n(311907),
     a = n(451988),
@@ -6,6 +9,7 @@ var r,
     o = n(375492),
     l = n(461213),
     c = n(652215);
+
 function u(e, t, n) {
     return (
         t in e
@@ -19,6 +23,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,14 +42,16 @@ function d(e) {
 }
 let f = {},
     p = {},
-    _ = 120000,
-    h = 15000;
+    _ = 12e4,
+    h = 15e3;
+
 function m(e) {
     let { applicationId: t, activityType: n } = e,
         r = f[t];
     if (null == r) return !1;
     delete r[n];
 }
+
 function g(e, t, n) {
     null != p[e] && p[e].stop();
     let r = new a.Ep();
@@ -57,6 +64,7 @@ function g(e, t, n) {
     ),
         (p[e] = r);
 }
+
 function E(e, t, n) {
     var r, i;
     let { applicationId: a, remotePartyId: s } = n;
@@ -72,13 +80,16 @@ function E(e, t, n) {
         (f[a] = o),
         __OVERLAY__ || e !== c.eAD.FAILED ? e === c.eAD.LOADING && null != s && g(a, t, h) : g(a, t, _);
 }
+
 function b(e) {
     let { activityLauncherStates: t } = e;
     f = d({}, t);
 }
+
 function y(e) {
     return E(c.eAD.COMPLETE, c.xL.JOIN, e);
 }
+
 function O() {
     let e = Object.entries(f)
             .map((e) => {

@@ -1,4 +1,7 @@
-r.d(t, { A: () => c }), r(801541);
+r.d(t, {
+    A: () => c,
+}),
+    r(801541);
 var n = r(627968);
 r(64700);
 var i = r(889137),
@@ -6,6 +9,7 @@ var i = r(889137),
     a = r(871210),
     o = r(565478),
     l = r(885168);
+
 function c(e) {
     let { username: t, oneClickFlow: r = !1 } = e,
         c = (0, o.W)((0, a.h_)(t), !0, !1, r);

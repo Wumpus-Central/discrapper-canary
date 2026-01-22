@@ -1,4 +1,6 @@
-r.d(t, { default: () => p });
+r.d(t, {
+    default: () => p,
+});
 var n = r(627968);
 r(64700);
 var c = r(311907),
@@ -28,5 +30,7 @@ let p = (0, a.A)(
             }),
         });
     },
-    { object: u.ZSU.CONTEXT_MENU },
+    {
+        object: u.ZSU.CONTEXT_MENU,
+    },
 );

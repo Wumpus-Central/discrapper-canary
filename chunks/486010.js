@@ -1,4 +1,7 @@
-s.d(t, { default: () => S }), s(896048);
+s.d(t, {
+    default: () => S,
+}),
+    s(896048);
 var r = s(627968),
     a = s(64700),
     n = s(503698),
@@ -22,6 +25,7 @@ var r = s(627968),
     N = s(652215),
     y = s(985018),
     C = s(904268);
+
 function E(e) {
     let { name: t, imageUrl: s, selected: a, onTap: n } = e;
     return (0, r.jsxs)(m.DUT, {
@@ -38,7 +42,9 @@ function E(e) {
                 children: [
                     (0, r.jsx)(m.Heading, {
                         variant: "heading-md/normal",
-                        className: l()({ [C.kE]: !a }),
+                        className: l()({
+                            [C.kE]: !a,
+                        }),
                         children: t,
                     }),
                     a &&
@@ -52,6 +58,7 @@ function E(e) {
         ],
     });
 }
+
 function O(e) {
     let { loading: t, error: s, templates: a, selectedTemplateIndex: n, handleTapTemplate: l } = e,
         i = (0, c.bG)([f.A], () => f.A.theme);
@@ -85,6 +92,7 @@ function O(e) {
                   ),
               });
 }
+
 function I(e) {
     var t, s;
     let {
@@ -121,6 +129,7 @@ function I(e) {
                 handleSelectTemplate: j,
             });
 }
+
 function S(e) {
     let {
             transitionState: t,
@@ -164,7 +173,12 @@ function S(e) {
                                 });
                         }
                         return e;
-                    })({ exit_reason: E.current }, (0, u.H$)(n)),
+                    })(
+                        {
+                            exit_reason: E.current,
+                        },
+                        (0, u.H$)(n),
+                    ),
                 );
         }, [t, n, E]);
     let [S, L] = a.useState(0),
@@ -183,7 +197,9 @@ function S(e) {
         (0, j.A)({
             type: i.ImpressionTypes.MODAL,
             name: i.ImpressionNames.ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR,
-            properties: { guild_id: n },
+            properties: {
+                guild_id: n,
+            },
         }),
         (0, r.jsxs)(m.EOs, {
             "data-migration-pending": !0,

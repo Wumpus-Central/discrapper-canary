@@ -1,4 +1,6 @@
-n.d(t, { default: () => U });
+n.d(t, {
+    default: () => U,
+});
 var r = n(627968);
 n(64700);
 var l = n(311907),
@@ -34,12 +36,14 @@ var l = n(311907),
     D = n(652215),
     M = n(731854),
     X = n(985018);
+
 function _(e) {
     return (0, l.bG)([P.A], () => {
         let t = P.A.getActiveStreamForApplicationStream(e);
         return null != t && (0, k._z)(t) === (0, k._z)(e);
     });
 }
+
 function U(e) {
     let t,
         n,
@@ -72,8 +76,12 @@ function U(e) {
                 a = (0, I.Et)(),
                 o = e.ownerId === E.default.getId(),
                 { enableViewerClipping: c, ignoreSenderPreference: s } = S.A.useExperiment(
-                    { location: "StreamContextMenu" },
-                    { autoTrackExposure: !1 },
+                    {
+                        location: "StreamContextMenu",
+                    },
+                    {
+                        autoTrackExposure: !1,
+                    },
                 ),
                 u = (0, l.bG)([O.A], () => O.A.getIsAtMaxSaveClipOperations()),
                 d = (0, l.bG)([O.A], () => O.A.isViewerClippingAllowedForUser(e.ownerId)) || s;
@@ -139,7 +147,10 @@ function U(e) {
                               id: "sidechain-compression",
                               label: X.intl.string(X.t["/jwMtn"]),
                               subtext: X.intl.string(X.t.zlA23F),
-                              action: () => a.A.setSidechainCompression(!c, { analyticsLocations: u }),
+                              action: () =>
+                                  a.A.setSidechainCompression(!c, {
+                                      analyticsLocations: u,
+                                  }),
                               checked: c,
                           }),
                           (0, r.jsx)(i.aK1, {
@@ -180,7 +191,9 @@ function U(e) {
                                               value: s,
                                               maxValue: 100,
                                               onChange: (e) =>
-                                                  a.A.setSidechainCompressionStrength(e, { analyticsLocations: u }),
+                                                  a.A.setSidechainCompressionStrength(e, {
+                                                      analyticsLocations: u,
+                                                  }),
                                               "aria-label": X.intl.string(X.t.fhEzfj),
                                           }),
                                       Object.getOwnPropertyDescriptors
@@ -236,11 +249,15 @@ function U(e) {
                   onSelect: K,
                   onInteraction: H,
                   children: [
-                      (0, r.jsx)(i.rXV, { children: ee ? eg : el }),
+                      (0, r.jsx)(i.rXV, {
+                          children: ee ? eg : el,
+                      }),
                       (0, r.jsxs)(i.rXV, {
                           children: [ei, er],
                       }),
-                      (0, r.jsx)(i.rXV, { children: eu }),
+                      (0, r.jsx)(i.rXV, {
+                          children: eu,
+                      }),
                       ea,
                       en
                           ? (0, r.jsxs)(r.Fragment, {
@@ -273,8 +290,12 @@ function U(e) {
                               children: [el, et, ei, ep, eb],
                           }),
                       }),
-                      (0, r.jsx)(i.rXV, { children: er }),
-                      (0, r.jsx)(i.rXV, { children: eu }),
+                      (0, r.jsx)(i.rXV, {
+                          children: er,
+                      }),
+                      (0, r.jsx)(i.rXV, {
+                          children: eu,
+                      }),
                       ea,
                       (0, r.jsxs)(i.rXV, {
                           children: [(null == ed ? void 0 : ed.isGuildStageVoice()) ? null : es, ec, en && eo],

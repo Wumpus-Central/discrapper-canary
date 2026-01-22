@@ -1,4 +1,6 @@
-n.d(t, { A: () => A });
+n.d(t, {
+    A: () => A,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -12,6 +14,7 @@ var r = n(627968),
     p = n(245383),
     _ = n(788868),
     h = n(328504);
+
 function m(e, t, n) {
     return (
         t in e
@@ -25,6 +28,7 @@ function m(e, t, n) {
         e
     );
 }
+
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -41,6 +45,7 @@ function g(e) {
     }
     return e;
 }
+
 function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -53,6 +58,7 @@ function E(e, t) {
     }
     return n;
 }
+
 function b(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -64,6 +70,7 @@ function b(e, t) {
         e
     );
 }
+
 function y(e, t) {
     if (null == e) return {};
     var n,
@@ -80,6 +87,7 @@ function y(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function O(e, t) {
     if (null == e) return {};
     var n,
@@ -194,7 +202,9 @@ let A = function (e) {
         b(g({}, M), {
             children: (e) => {
                 let { onClick: t } = e,
-                    n = i.cloneElement(U, { onClick: t });
+                    n = i.cloneElement(U, {
+                        onClick: t,
+                    });
                 return null != j.buttonTooltipText
                     ? (0, r.jsx)(l.m_, {
                           text: j.buttonTooltipText,

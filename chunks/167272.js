@@ -1,4 +1,6 @@
-n.d(t, { A: () => w });
+n.d(t, {
+    A: () => w,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -27,6 +29,7 @@ var i = n(311907),
     C = n(985629),
     N = n(652215),
     R = n(996988);
+
 function w(e) {
     var t;
     let { user: n, activity: w, onAction: P, onClose: D, application: x, containerClassName: L } = e,

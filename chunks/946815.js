@@ -1,4 +1,7 @@
-s.d(e, { default: () => f }), s(896048);
+s.d(e, {
+    default: () => f,
+}),
+    s(896048);
 var n = s(627968),
     i = s(64700),
     l = s(311907),
@@ -22,6 +25,7 @@ let f = (t) => {
         b = !c.A.isEmailReverification(E),
         [k, A] = i.useState(!0),
         w = y === m.XlH.SUBMITTING;
+
     function P(t) {
         var e, s;
         return null != (e = null == f || null == (s = f[t]) ? void 0 : s[0]) ? e : "";

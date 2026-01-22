@@ -1,4 +1,6 @@
-r.d(t, { A: () => s });
+r.d(t, {
+    A: () => s,
+});
 var n = r(64700),
     o = r(205662),
     a = r(655972),
@@ -16,7 +18,9 @@ var n = r(64700),
                 },
             },
         });
-        return n.createElement("div", { style: t.picker });
+        return n.createElement("div", {
+            style: t.picker,
+        });
     };
 (l.propTypes = {
     hsl: i().shape({

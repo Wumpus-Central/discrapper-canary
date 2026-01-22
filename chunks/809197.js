@@ -1,4 +1,6 @@
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});
 var r = {};
 r = {
     ascending: "stigende",
@@ -6,8 +8,8 @@ r = {
     columnSize: (e) => `${e.value} pixels`,
     descending: "faldende",
     descendingSort: (e) => `sorteret efter kolonne ${e.columnName} i faldende r\xe6kkef\xf8lge`,
-    resizerDescription: "Tryk på Enter for at ændre størrelse",
-    select: "Vælg",
-    selectAll: "Vælg alle",
+    resizerDescription: "Tryk p\xe5 Enter for at \xe6ndre st\xf8rrelse",
+    select: "V\xe6lg",
+    selectAll: "V\xe6lg alle",
     sortable: "sorterbar kolonne",
 };

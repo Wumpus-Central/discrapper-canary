@@ -1,4 +1,9 @@
-n.r(t), n.d(t, { default: () => eO }), n(896048), n(938796);
+n.r(t),
+    n.d(t, {
+        default: () => eO,
+    }),
+    n(896048),
+    n(938796);
 var r = n(735438),
     i = n.n(r);
 n(252431);
@@ -21,6 +26,7 @@ var a = n(395504),
     O = n(652215),
     A = n(746080),
     v = n(790782);
+
 function S(e, t, n) {
     return (
         t in e
@@ -34,6 +40,7 @@ function S(e, t, n) {
         e
     );
 }
+
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -54,6 +61,7 @@ let T = O.eGj,
     C = {},
     N = new Set(),
     R = 0;
+
 function w(e) {
     var t;
     let n = C[null != e ? e : T];
@@ -68,17 +76,21 @@ function w(e) {
         sentinel: null != (t = null == n ? void 0 : n.sentinel) ? t : 0,
     };
 }
+
 function P(e) {
     var t;
     return (C[null != e ? e : T] = null != (t = C[null != e ? e : T]) ? t : w(e));
 }
+
 function D(e) {
     let t = P(e);
     t.sentinel++, R++;
 }
+
 function x(e, t, n) {
     return null != e.guild_id && n && !((0, u.fT)(e.type) || b.Ay.isChannelRecordOrParentOptedIn(e)) && 0 === t;
 }
+
 function L(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
         n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
@@ -96,9 +108,11 @@ function L(e) {
         (t > 0 || b.Ay.resolveUnreadSetting(e) === v.e.ALL_MESSAGES)
     );
 }
+
 function j(e) {
     return "flags" in e;
 }
+
 function M(e, t, n) {
     return (
         !(
@@ -110,6 +124,7 @@ function M(e, t, n) {
         (t > 0 || b.Ay.resolveUnreadSetting(e) === v.e.ALL_MESSAGES)
     );
 }
+
 function k(e) {
     switch (e) {
         case T:
@@ -120,18 +135,23 @@ function k(e) {
             return e;
     }
 }
+
 function U(e, t) {
     let n = g.Ay.hasUnread(e, t);
     return t !== v.P.GUILD_EVENT ? n : !(b.Ay.isMuted(e) || b.Ay.isMuteScheduledEventsEnabled(e)) && n;
 }
+
 function G(e, t) {
     let n = w(e);
     return (n.mentionCounts = I({}, t.mentionCounts)), (n.unreadByType = I({}, t.unreadByType)), n;
 }
+
 function V(e) {
     return (e.unread = Object.values(e.unreadByType).some((e) => e)), e;
 }
+
 function F(e, t) {}
+
 function B(e, t, n) {
     return (
         V(t),
@@ -152,6 +172,7 @@ function B(e, t, n) {
             !0)
     );
 }
+
 function H(e, t) {
     let n = k(e),
         r = P(n),
@@ -180,12 +201,14 @@ function H(e, t) {
     }
     return B(n, i, r);
 }
+
 function Y(e, t) {
     if (null == e) return;
     let n = P(e),
         r = G(e, n);
     return (r.unreadByType[v.P.GUILD_EVENT] = U(e, t)), B(e, r, n);
 }
+
 function W(e, t) {
     let n = k(e),
         r = w(n);
@@ -264,6 +287,7 @@ function W(e, t) {
         !0)
     );
 }
+
 function K(e) {
     let { guilds: t } = e;
     (C = {}), (R = 0), (N = new Set()), W(null);
@@ -273,6 +297,7 @@ function K(e) {
         null != n && W(n.properties.id);
     }
 }
+
 function z(e) {
     let { guilds: t, readState: n } = e;
     (C = {}), (R = 0), (N = new Set());
@@ -290,36 +315,44 @@ function z(e) {
     t))
         W(e.id, r ? i.has(e.id) : void 0);
 }
+
 function q() {
     for (let e of ((C = {}), (N = new Set()), W(null), Object.values(_.A.getGuildIds()))) W(e);
 }
+
 function X(e) {
     let { guild: t } = e;
     return W(t.id);
 }
+
 function Z(e) {
     let { guild: t } = e;
     return null != C[t.id] && (delete C[t.id], N.delete(t.id), R++, !0);
 }
+
 function Q(e) {
     let {
         channel: { id: t, guild_id: n },
     } = e;
     return H(n, [t]);
 }
+
 function $() {
     let e = p.A.getChannel(E.A.getChannelId());
     return null != e && H(e.getGuildId(), [e.id]);
 }
+
 function J(e) {
     let { user: t, guildId: n } = e;
     return t.id === f.default.getId() && W(n);
 }
+
 function ee(e) {
     let { channelId: t } = e,
         n = p.A.getChannel(t);
     return null != n && H(n.getGuildId(), [n.id]);
 }
+
 function et(e) {
     let { channelId: t } = e,
         n = p.A.getChannel(t);
@@ -337,14 +370,17 @@ function et(e) {
     }
     return H(n.getGuildId(), [n.id]);
 }
+
 function en(e) {
     let { channelId: t, guildId: n } = e;
     return n !== O.YYv && null != t && H(n, [t]);
 }
+
 function er(e) {
     let { channel: t } = e;
     return H(t.getGuildId(), [t.id]);
 }
+
 function ei(e) {
     let { channels: t } = e;
     return i()(t)
@@ -358,6 +394,7 @@ function ei(e) {
             !1,
         );
 }
+
 function ea(e) {
     let { channels: t } = e;
     return i()(t)
@@ -372,29 +409,36 @@ function ea(e) {
         })
         .reduce((e, t, n) => H(n, t) || e, !1);
 }
+
 function es(e) {
     let { channel: t } = e;
     return H(t.getGuildId(), [t.id, t.parent_id]);
 }
+
 function eo(e) {
     let { guildScheduledEvent: t } = e;
     return Y(t.guild_id, v.P.GUILD_EVENT);
 }
+
 function el(e) {
     let { guildScheduledEvent: t } = e;
     return Y(t.guild_id, v.P.GUILD_EVENT);
 }
+
 function ec(e) {
     let { id: t, ackType: n } = e;
     return Y(t, n);
 }
+
 function eu(e) {
     let { id: t, guildId: n } = e;
     return H(n, [t]);
 }
+
 function ed(e) {
     return (0, c.k)(e) && H(e.guildId, [e.id]);
 }
+
 function ef(e) {
     let { threads: t, guildId: n } = e;
     return H(
@@ -402,6 +446,7 @@ function ef(e) {
         t.filter((e) => l.A.hasJoined(e.id)).map((e) => e.id),
     );
 }
+
 function ep(e) {
     return (
         e.channels.length > 0 &&
@@ -411,14 +456,17 @@ function ep(e) {
         )
     );
 }
+
 function e_(e) {
     let { guildId: t } = e;
     return W(t);
 }
+
 function eh(e) {
     let { guildId: t } = e;
     return W(t);
 }
+
 function em(e) {
     let { userGuildSettings: t } = e,
         n = new Set(
@@ -429,13 +477,16 @@ function em(e) {
         );
     return d.default.keys(C).reduce((e, t) => (n.has(t) && W(t)) || e, !1);
 }
+
 function eg() {
     for (let e in C) C[e].ncMentionCount = 0;
 }
+
 function eE(e) {
     let { guildId: t } = e;
     return W(t);
 }
+
 function eb(e) {
     let { messages: t } = e;
     new Set(t.map((e) => e.channel_id)).forEach((e) => {

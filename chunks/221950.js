@@ -14,6 +14,7 @@ var r = n(73153),
     l = n(11541),
     c = n(652215),
     u = n(746080);
+
 function d(e, t) {
     if (null == e) return {};
     var n,
@@ -30,6 +31,7 @@ function d(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function f(e, t) {
     if (null == e) return {};
     var n,
@@ -46,12 +48,14 @@ async function p(e) {
         guildId: e,
     });
 }
+
 function _(e) {
     r.h.dispatch({
         type: "MEMBER_SAFETY_NEW_MEMBER_TIMESTAMP_REFRESH",
         guildId: e,
     });
 }
+
 function h(e, t) {
     let { continuationToken: n } = t,
         i = d(t, ["continuationToken"]);
@@ -68,6 +72,7 @@ async function m(e, t) {
         searchState: t,
     });
 }
+
 function g(e) {
     let t = (0, o.Ml)(e),
         n = s.A.getGuild(e);

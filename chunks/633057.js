@@ -1,7 +1,10 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(311907),
     i = n(429913),
     a = n(800828);
+
 function s(e) {
     let t = (0, r.bG)([a.A], () => {
         let t = a.A.getGameRelationshipsForUser(e);

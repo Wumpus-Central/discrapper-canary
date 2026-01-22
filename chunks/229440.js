@@ -1,4 +1,7 @@
-n.d(t, { T: () => p }), n(321073);
+n.d(t, {
+    T: () => p,
+}),
+    n(321073);
 var r = n(652896),
     i = n(616356),
     a = n(961350),
@@ -6,6 +9,7 @@ var r = n(652896),
     o = n(487329),
     l = n(601900),
     c = n(548370);
+
 function u(e, t, n) {
     return (
         t in e
@@ -19,6 +23,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -48,7 +53,14 @@ let f = 10,
                       return (
                           null == u ||
                               ((100 * u.short.packetLossRate > f || 100 * u.long.packetLossRate > f) &&
-                                  e.push(d({ type: o.iy.STREAM_VIEW_HIGH_PACKET_LOSS }, (0, l.id)((0, r._z)(t))))),
+                                  e.push(
+                                      d(
+                                          {
+                                              type: o.iy.STREAM_VIEW_HIGH_PACKET_LOSS,
+                                          },
+                                          (0, l.id)((0, r._z)(t)),
+                                      ),
+                                  )),
                           e
                       );
                   }, [])

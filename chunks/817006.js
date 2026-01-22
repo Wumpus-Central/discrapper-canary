@@ -1,4 +1,6 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(627968),
     a = n(735438),
     i = n.n(a),
@@ -6,9 +8,13 @@ var r = n(627968),
     s = n(828904),
     o = n(974175),
     d = n(985018);
+
 function c(e) {
     let { camera: t } = e;
-    if (null == t) return (0, r.jsx)(l.y$y, { type: l.y$y.Type.SPINNING_CIRCLE });
+    if (null == t)
+        return (0, r.jsx)(l.y$y, {
+            type: l.y$y.Type.SPINNING_CIRCLE,
+        });
     let n = i().map(t, (e, t) => {
         if (!(o.R[t] || void 0 === e))
             return (0, r.jsx)(

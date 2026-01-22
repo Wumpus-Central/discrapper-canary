@@ -4,6 +4,7 @@ n.d(t, {
 }),
     n(65821);
 var r = n(696016);
+
 function i(e) {
     let t = document.createElement("canvas");
     (t.width = e.width), (t.height = e.height);

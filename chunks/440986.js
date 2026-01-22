@@ -22,13 +22,24 @@ e.exports = function (e) {
                     begin: r,
                     relevance: 0,
                 },
-                { begin: "#b[0-1]+(/[0-1]+)?" },
-                { begin: "#o[0-7]+(/[0-7]+)?" },
-                { begin: "#x[0-9a-f]+(/[0-9a-f]+)?" },
+                {
+                    begin: "#b[0-1]+(/[0-1]+)?",
+                },
+                {
+                    begin: "#o[0-7]+(/[0-7]+)?",
+                },
+                {
+                    begin: "#x[0-9a-f]+(/[0-9a-f]+)?",
+                },
             ],
         },
         o = e.QUOTE_STRING_MODE,
-        l = [e.COMMENT(";", "$", { relevance: 0 }), e.COMMENT("#\\|", "\\|#")],
+        l = [
+            e.COMMENT(";", "$", {
+                relevance: 0,
+            }),
+            e.COMMENT("#\\|", "\\|#"),
+        ],
         c = {
             begin: t,
             relevance: 0,
@@ -42,7 +53,14 @@ e.exports = function (e) {
             relevance: 0,
         },
         f = {
-            variants: [{ begin: /'/ }, { begin: "`" }],
+            variants: [
+                {
+                    begin: /'/,
+                },
+                {
+                    begin: "`",
+                },
+            ],
             contains: [
                 {
                     begin: "\\(",

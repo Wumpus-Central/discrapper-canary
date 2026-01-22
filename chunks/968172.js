@@ -52,7 +52,9 @@ let y = (0, b.createContext)(null),
                 },
                 defaultClassName: "react-aria-Calendar",
             }),
-            S = (0, E.$)(e, { global: !0 });
+            S = (0, E.$)(e, {
+                global: !0,
+            });
         return b.createElement(
             "div",
             {
@@ -85,7 +87,14 @@ let y = (0, b.createContext)(null),
                         ],
                         [A, d],
                         [y, e],
-                        [s.h, { slots: { errorMessage: m } }],
+                        [
+                            s.h,
+                            {
+                                slots: {
+                                    errorMessage: m,
+                                },
+                            },
+                        ],
                     ],
                 },
                 b.createElement(u.s, null, b.createElement("h2", null, f["aria-label"])),
@@ -128,7 +137,9 @@ let y = (0, b.createContext)(null),
                 },
                 u,
             ),
-            T = (0, E.$)(e, { global: !0 });
+            T = (0, E.$)(e, {
+                global: !0,
+            });
         return b.createElement(
             I.Provider,
             {
@@ -159,10 +170,13 @@ let y = (0, b.createContext)(null),
             ),
         );
     });
+
 function C(e, t) {
     let { children: n, style: r, className: i } = e,
         { headerProps: a, weekDays: s } = (0, b.useContext)(I),
-        o = (0, E.$)(e, { global: !0 });
+        o = (0, E.$)(e, {
+            global: !0,
+        });
     return b.createElement(
         "thead",
         {
@@ -174,14 +188,21 @@ function C(e, t) {
         b.createElement(
             "tr",
             null,
-            s.map((e, t) => b.cloneElement(n(e), { key: t })),
+            s.map((e, t) =>
+                b.cloneElement(n(e), {
+                    key: t,
+                }),
+            ),
         ),
     );
 }
 let N = (0, b.forwardRef)(C);
+
 function R(e, t) {
     let { children: n, style: r, className: i } = e,
-        a = (0, E.$)(e, { global: !0 });
+        a = (0, E.$)(e, {
+            global: !0,
+        });
     return b.createElement(
         "th",
         {
@@ -194,13 +215,16 @@ function R(e, t) {
     );
 }
 let w = (0, b.forwardRef)(R);
+
 function P(e, t) {
     let { children: n, style: r, className: i } = e,
         a = (0, b.useContext)(A),
         s = (0, b.useContext)(v),
         o = null != a ? a : s,
         { startDate: l, weeksInMonth: c } = (0, b.useContext)(I),
-        u = (0, E.$)(e, { global: !0 });
+        u = (0, E.$)(e, {
+            global: !0,
+        });
     return b.createElement(
         "tbody",
         {
@@ -212,10 +236,18 @@ function P(e, t) {
         [...Array(c).keys()].map((e) =>
             b.createElement(
                 "tr",
-                { key: e },
-                o
-                    .getDatesInWeek(e, l)
-                    .map((e, t) => (e ? b.cloneElement(n(e), { key: t }) : b.createElement("td", { key: t }))),
+                {
+                    key: e,
+                },
+                o.getDatesInWeek(e, l).map((e, t) =>
+                    e
+                        ? b.cloneElement(n(e), {
+                              key: t,
+                          })
+                        : b.createElement("td", {
+                              key: t,
+                          }),
+                ),
             ),
         ),
     );
@@ -226,7 +258,12 @@ let D = (0, b.forwardRef)(P),
         let a = (0, b.useContext)(A),
             s = (0, b.useContext)(v),
             o = null != a ? a : s,
-            { startDate: l } = null != (r = (0, b.useContext)(I)) ? r : { startDate: o.visibleRange.start },
+            { startDate: l } =
+                null != (r = (0, b.useContext)(I))
+                    ? r
+                    : {
+                          startDate: o.visibleRange.start,
+                      },
             u = !(0, m.tF)(l, e),
             d = (0, m.cK)(e, o.timeZone),
             h = (0, b.useRef)(null),
@@ -283,7 +320,9 @@ let D = (0, b.forwardRef)(P),
                 "data-invalid": O.isInvalid || void 0,
                 "data-today": d || void 0,
             },
-            x = (0, E.$)(t, { global: !0 });
+            x = (0, E.$)(t, {
+                global: !0,
+            });
         return b.createElement(
             "td",
             {

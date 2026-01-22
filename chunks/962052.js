@@ -1,5 +1,10 @@
 let r, i;
-n.d(t, { A: () => O }), n(896048), n(65821), n(457529);
+n.d(t, {
+    A: () => O,
+}),
+    n(896048),
+    n(65821),
+    n(457529);
 var a = n(73153),
     s = n(274593),
     o = n(626584),
@@ -11,6 +16,7 @@ var a = n(73153),
     p = n(652215),
     _ = n(613057);
 let h = new o.A("NativeDispatchUtils");
+
 function m() {
     return null != r
         ? Promise.resolve(r)
@@ -22,16 +28,20 @@ function m() {
             })
           : Promise.reject(Error("not desktop client"));
 }
+
 function g() {
     return null == i && h.warn("Tried getting Dispatch instance before instantiated"), i;
 }
+
 function E(e) {
     let t = JSON.parse(e);
     return h.log("Native Dispatch error", t), new s.A(t);
 }
+
 function b(e, t) {
     "" !== e && E(e);
 }
+
 function y(e) {
     let { properties: t } = e;
     switch ((null != t.stage && null != t.stage.type && (t.stage = t.stage.type), e.event_name)) {
@@ -52,7 +62,7 @@ let O = {
             m().then((e) => {
                 let c = {
                         environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                        build_number: "488133",
+                        build_number: "488230",
                     },
                     u = l.default.getCurrentUser();
                 null != u && ((c.user_id = u.id), (c.user_name = u.tag), null != u.email && (c.email = u.email));
@@ -186,11 +196,23 @@ let O = {
     },
     pause() {
         let e = g();
-        null != e && e.command(JSON.stringify({ command: "Pause" }), b);
+        null != e &&
+            e.command(
+                JSON.stringify({
+                    command: "Pause",
+                }),
+                b,
+            );
     },
     resume() {
         let e = g();
-        null != e && e.command(JSON.stringify({ command: "Resume" }), b);
+        null != e &&
+            e.command(
+                JSON.stringify({
+                    command: "Resume",
+                }),
+                b,
+            );
     },
     queryDirectory(e, t) {
         let n = g();
@@ -216,7 +238,9 @@ let O = {
     runLaunchSetup: (e, t) =>
         c.A.isRunning()
             ? Promise.reject(Error("Already running launch setup."))
-            : (a.h.dispatch({ type: "DISPATCH_APPLICATION_LAUNCH_SETUP_START" }),
+            : (a.h.dispatch({
+                  type: "DISPATCH_APPLICATION_LAUNCH_SETUP_START",
+              }),
               new Promise((n, r) => {
                   let i = g();
                   null == i
@@ -229,7 +253,9 @@ let O = {
                             }),
                             (e, t, i) => {
                                 if ("" !== e) {
-                                    a.h.dispatch({ type: "DISPATCH_APPLICATION_LAUNCH_SETUP_COMPLETE" });
+                                    a.h.dispatch({
+                                        type: "DISPATCH_APPLICATION_LAUNCH_SETUP_COMPLETE",
+                                    });
                                     let t = E(e);
                                     a.h.dispatch({
                                         type: "DISPATCH_APPLICATION_ERROR",
@@ -239,7 +265,10 @@ let O = {
                                     return;
                                 }
                                 if ("" !== t) {
-                                    a.h.dispatch({ type: "DISPATCH_APPLICATION_LAUNCH_SETUP_COMPLETE" }), n();
+                                    a.h.dispatch({
+                                        type: "DISPATCH_APPLICATION_LAUNCH_SETUP_COMPLETE",
+                                    }),
+                                        n();
                                     return;
                                 }
                                 if ("" !== i) {
@@ -258,6 +287,7 @@ let O = {
         new Promise((i, a) => {
             let s = g();
             if (null == s) return void a(Error("native dispatch instance not found"));
+
             function o(e, t) {
                 "" !== e ? a(E(e)) : i([JSON.parse(t).pid]);
             }

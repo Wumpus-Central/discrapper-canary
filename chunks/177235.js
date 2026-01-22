@@ -1,4 +1,7 @@
-n.d(t, { A: () => p }), n(896048);
+n.d(t, {
+    A: () => p,
+}),
+    n(896048);
 var r = n(179771),
     i = n(827343),
     l = n(430452),
@@ -31,7 +34,12 @@ let p = {
                 } = e,
                 c = a.default.getCurrentUser();
             if (null == a.default.getUser(t) || (null == c ? void 0 : c.id) === t)
-                throw new s.A({ errorCode: d.Lw6.INVALID_USER }, "Invalid user id: ".concat(t));
+                throw new s.A(
+                    {
+                        errorCode: d.Lw6.INVALID_USER,
+                    },
+                    "Invalid user id: ".concat(t),
+                );
             if ((null != n && i.A.setLocalPan(t, n.left, n.right), null != r && i.A.setLocalVolume(t, r), null != o)) {
                 let e = l.A.isLocalMute(t);
                 ((e && !o) || (!e && o)) && i.A.toggleLocalMute(t);
@@ -77,7 +85,7 @@ let p = {
                                 name: e.string(),
                             }),
                         ),
-                        delay: e.number().min(0).max(2000),
+                        delay: e.number().min(0).max(2e3),
                     }),
                     automatic_gain_control: e.boolean(),
                     echo_cancellation: e.boolean(),

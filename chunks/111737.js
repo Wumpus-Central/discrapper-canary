@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var l = n(627968);
 n(64700);
 var a = n(503698),
@@ -7,6 +9,7 @@ var a = n(503698),
     s = n(985018),
     c = n(775233),
     o = n(500226);
+
 function d(e) {
     let { heading: t = s.intl.string(s.t.NGw8v2), body: n = s.intl.string(s.t["1XZRY4"]), className: a } = e;
     return (0, l.jsxs)("div", {

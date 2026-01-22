@@ -1,10 +1,20 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(559751),
     i = n(140851);
+
 function a(e, t, n) {
     var a = (0, r.A)(e),
         s = [i.kb, i.Mn].indexOf(a) >= 0 ? -1 : 1,
-        o = "function" == typeof n ? n(Object.assign({}, t, { placement: e })) : n,
+        o =
+            "function" == typeof n
+                ? n(
+                      Object.assign({}, t, {
+                          placement: e,
+                      }),
+                  )
+                : n,
         l = o[0],
         c = o[1];
     return (

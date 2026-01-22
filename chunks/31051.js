@@ -1,4 +1,6 @@
-n.d(t, { A: () => x });
+n.d(t, {
+    A: () => x,
+});
 var r = n(627968),
     i = n(735438),
     a = n(158954),
@@ -22,6 +24,7 @@ var r = n(627968),
     v = n(985018),
     S = n(260171),
     I = n(421438);
+
 function T(e, t, n) {
     return (
         t in e
@@ -35,6 +38,7 @@ function T(e, t, n) {
         e
     );
 }
+
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -51,6 +55,7 @@ function C(e) {
     }
     return e;
 }
+
 function N(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -63,6 +68,7 @@ function N(e, t) {
     }
     return n;
 }
+
 function R(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -253,7 +259,10 @@ let w = (e) => {
         if (null == p) return null;
         let h = t.author,
             m = p.id === h.id;
-        if (c || o === y.xI.FETCHING || o === y.xI.UNKNOWN) return (0, r.jsx)(l.Wb, { isHorizontal: !0 });
+        if (c || o === y.xI.FETCHING || o === y.xI.UNKNOWN)
+            return (0, r.jsx)(l.Wb, {
+                isHorizontal: !0,
+            });
         let g = (0, b.o1)({
             sender: h,
             channel: n,

@@ -14,6 +14,7 @@ var i = n(64700),
     d = n(376708),
     u = n(272720),
     c = n(56595);
+
 function g(t) {
     return (0, r.bG)([s.A], () => {
         if (null == t) return !1;
@@ -21,12 +22,15 @@ function g(t) {
         return null != e && (0, c.A)(e) && null != (0, u.A)(e);
     });
 }
+
 function _(t) {
     return (0, d.uW)(t);
 }
+
 function A(t) {
     return (0, d.xJ)(t);
 }
+
 function S(t) {
     let { messageReference: e } = t,
         n = (0, r.bG)([o.A], () => (null != e ? o.A.getMessage(e.channel_id, e.message_id) : null));
@@ -35,11 +39,14 @@ function S(t) {
             null != e &&
             l.A.fetchMessages({
                 channelId: e.channel_id,
-                jump: { messageId: e.message_id },
+                jump: {
+                    messageId: e.message_id,
+                },
                 limit: 10,
             });
     }, [n, e]);
 }
+
 function f(t) {
     var e, n;
     let i =

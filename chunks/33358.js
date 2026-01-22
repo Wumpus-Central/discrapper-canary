@@ -1,4 +1,6 @@
-n.d(t, { P: () => g });
+n.d(t, {
+    P: () => g,
+});
 var r = n(64700),
     i = n(311907),
     a = n(617617),
@@ -8,6 +10,7 @@ var r = n(64700),
     c = n(811602),
     u = n(282108),
     d = n(975214);
+
 function f(e, t, n) {
     return (
         t in e
@@ -21,6 +24,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,6 +41,7 @@ function p(e) {
     }
     return e;
 }
+
 function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -49,6 +54,7 @@ function _(e, t) {
     }
     return n;
 }
+
 function h(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -60,13 +66,21 @@ function h(e, t) {
         e
     );
 }
+
 function m(e, t) {
     let n = (0, u.ku)(),
         f = (0, i.bG)([l.default], () => l.default.getCurrentUser()),
         _ = (0, i.bG)([s.A, o.A], () => (0, u.c2)(e, t, [s.A, o.A])),
         m = (0, i.bG)(
             [a.A],
-            () => n.reduce((e, t) => h(p({}, e), { [t.harmType]: t.getProtoUserSettings(a.A.settings) }), {}),
+            () =>
+                n.reduce(
+                    (e, t) =>
+                        h(p({}, e), {
+                            [t.harmType]: t.getProtoUserSettings(a.A.settings),
+                        }),
+                    {},
+                ),
             [n],
             d.M,
         ),
@@ -85,6 +99,7 @@ function m(e, t) {
         );
     return 0 === g.length ? c.LO.NONE : (0, u.LE)(g);
 }
+
 function g(e) {
     let { channelId: t, authorId: n } = null == e ? {} : (0, u.nx)(e);
     return m(t, n);

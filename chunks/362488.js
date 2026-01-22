@@ -29,9 +29,15 @@ let r = (0, n(600975).C)({
         },
     ],
 });
+
 function i() {
-    return r.getCurrentConfig({ location: "shouldLogConnectSkipped" }).logSkipped;
+    return r.getCurrentConfig({
+        location: "shouldLogConnectSkipped",
+    }).logSkipped;
 }
+
 function a() {
-    return r.getCurrentConfig({ location: "shouldLogPostConnectSkipped" }).logPostSkipped;
+    return r.getCurrentConfig({
+        location: "shouldLogPostConnectSkipped",
+    }).logPostSkipped;
 }

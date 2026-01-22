@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(64700),
     i = n(311907),
     a = n(488803),
@@ -8,6 +10,7 @@ var r = n(64700),
     c = n(294726),
     u = n(985018),
     d = n(390175);
+
 function f(e) {
     let t = (0, a.C$)(e, "useGameServerPerk"),
         n = (0, i.bG)([s.A], () => s.A.getLowestGameCostForGuild(e));

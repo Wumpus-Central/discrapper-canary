@@ -1,4 +1,8 @@
-Object.defineProperty(t, "__esModule", { value: !0 }), (t.markdownFormatter = void 0), (t.formatToMarkdownString = s);
+Object.defineProperty(t, "__esModule", {
+    value: !0,
+}),
+    (t.markdownFormatter = void 0),
+    (t.formatToMarkdownString = s);
 let r = n(860500),
     i = {
         $b: (e) => "**" + e.join("") + "**",
@@ -16,6 +20,7 @@ class a extends r.StringBuilder {
         this.result += i[e](t, "", n);
     }
 }
+
 function s(e, t, n = a) {
     return "string" == typeof e ? e : this.bindFormatValues(n, e, t)[0];
 }

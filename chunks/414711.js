@@ -1,4 +1,7 @@
-i.d(t, { A: () => y }), i(896048);
+i.d(t, {
+    A: () => y,
+}),
+    i(896048);
 var n = i(627968),
     s = i(64700),
     r = i(503698),
@@ -9,6 +12,7 @@ var n = i(627968),
     c = i(442433);
 i(646363);
 var h = i(254155);
+
 function p(e, t, i) {
     return (
         t in e
@@ -22,6 +26,7 @@ function p(e, t, i) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var i = null != arguments[t] ? arguments[t] : {},
@@ -38,6 +43,7 @@ function d(e) {
     }
     return e;
 }
+
 function m(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -100,7 +106,18 @@ class A extends s.PureComponent {
                         m(
                             d(
                                 {
-                                    className: a()(y, h.V, null != N ? { [N]: A || s } : null, { [h.v]: A || s }),
+                                    className: a()(
+                                        y,
+                                        h.V,
+                                        null != N
+                                            ? {
+                                                  [N]: A || s,
+                                              }
+                                            : null,
+                                        {
+                                            [h.v]: A || s,
+                                        },
+                                    ),
                                     onContextMenu: (e) => this.handleContextMenu(e, c),
                                     onMouseEnter: this.handleMouseEnter,
                                     onMouseLeave: this.handleMouseLeave,
@@ -112,7 +129,9 @@ class A extends s.PureComponent {
                                 },
                                 l,
                             ),
-                            { children: r(i || A || s) },
+                            {
+                                children: r(i || A || s),
+                            },
                         ),
                     ),
                 }),
@@ -130,24 +149,39 @@ class A extends s.PureComponent {
             p(this, "handleMouseEnter", () => {
                 let { isFocused: e, isActive: t, onOtherHover: i } = this.props,
                     { isContextMenuActive: n } = this.state;
-                this.setState({ hovered: e }), !e || t || n || null == i || i();
+                this.setState({
+                    hovered: e,
+                }),
+                    !e || t || n || null == i || i();
             }),
             p(this, "handleMouseLeave", () => {
-                this.setState({ hovered: !1 });
+                this.setState({
+                    hovered: !1,
+                });
             }),
             p(this, "handleContextMenu", (e, t) => {
-                this.setState({ isContextMenuActive: !0 }),
+                this.setState({
+                    isContextMenuActive: !0,
+                }),
                     (0, c.L3)(
                         e,
                         async () => {
                             let { default: e } = await Promise.all([i.e("97262"), i.e("32418"), i.e("8893")]).then(
                                 i.bind(i, 668569),
                             );
-                            return (i) => (0, n.jsx)(e, m(d({}, i), { user: t }));
+                            return (i) =>
+                                (0, n.jsx)(
+                                    e,
+                                    m(d({}, i), {
+                                        user: t,
+                                    }),
+                                );
                         },
                         {
                             onClose: () => {
-                                this.setState({ isContextMenuActive: !1 });
+                                this.setState({
+                                    isContextMenuActive: !1,
+                                });
                             },
                         },
                     );

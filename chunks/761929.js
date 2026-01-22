@@ -15,6 +15,7 @@ var s = (function (e) {
         e
     );
 })({});
+
 function o(e) {
     return +(2 === e || 3 === e);
 }
@@ -39,12 +40,14 @@ let l = (e) => {
     return (
         r.useLayoutEffect(() => {
             if (!m || null == n.current) return;
+
             function e(e) {
                 let t = 1 === o(p) ? e.screenX : e.screenY,
                     n = 0 === p || 2 === p,
                     r = (t - E.current) * (n ? -1 : 1);
                 return y.current + r;
             }
+
             function t(e) {
                 return h(e, null != l ? l : 0, null != s ? s : e);
             }

@@ -9,6 +9,7 @@ var r = n(64700),
     s = n(157550),
     o = n(411976),
     c = n(790499);
+
 function u() {
     let e = (0, o.W)(),
         t = r.useRef(e),
@@ -21,6 +22,7 @@ function u() {
         1 >= (0, l.A)(t) && 1 === e
     );
 }
+
 function d() {
     let e = (0, c.I)(),
         t = r.useRef(e),

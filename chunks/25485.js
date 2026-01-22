@@ -1,4 +1,7 @@
-i.d(e, { g: () => w }), i(896048);
+i.d(e, {
+    g: () => w,
+}),
+    i(896048);
 var s,
     n = i(627968),
     r = i(64700),
@@ -11,6 +14,7 @@ var s,
     u = i(338764),
     p = i(852431),
     f = i(117073);
+
 function m(t, e, i) {
     return (
         e in t
@@ -25,6 +29,7 @@ function m(t, e, i) {
     );
 }
 let g = (0, c.xI)(l.A.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE);
+
 function v(t, e) {
     let { innerWidth: i, innerHeight: s } = window;
     if (0 === t || 0 === e) return null;
@@ -41,6 +46,7 @@ function v(t, e) {
         }
     );
 }
+
 function w(t) {
     let { splash: e, children: i } = t,
         [{ width: s, height: a }, l] = r.useState({
@@ -75,7 +81,9 @@ function w(t) {
                     height: a,
                 }),
                 (0, n.jsx)("div", {
-                    className: h()(f.gh, { [f.$T]: !0 }),
+                    className: h()(f.gh, {
+                        [f.$T]: !0,
+                    }),
                     children: i,
                 }),
             ],
@@ -94,7 +102,9 @@ class b extends (s = r.PureComponent) {
             { width: i, height: s } = this.state;
         return null != t
             ? (0, n.jsx)(o.A, {
-                  className: h()(f.v_, { [f.F9]: e }),
+                  className: h()(f.v_, {
+                      [f.F9]: e,
+                  }),
                   src: t,
                   width: i,
                   height: s,
@@ -112,7 +122,9 @@ class b extends (s = r.PureComponent) {
                   updateWaveState: e,
                   hideFallback: !r,
               })
-            : (0, n.jsx)("div", { className: f.sC });
+            : (0, n.jsx)("div", {
+                  className: f.sC,
+              });
     }
     renderContent() {
         let { children: t, waveState: e, showLogo: i, logoClassName: s, embedded: a } = this.props,
@@ -121,7 +133,9 @@ class b extends (s = r.PureComponent) {
             children: [
                 this.renderWave(),
                 (0, n.jsxs)("div", {
-                    className: h()(f.gh, { [f.$T]: a }),
+                    className: h()(f.gh, {
+                        [f.$T]: a,
+                    }),
                     children: [
                         i
                             ? (0, n.jsx)(d.A, {
@@ -175,7 +189,10 @@ class b extends (s = r.PureComponent) {
                             }
                             return t;
                         })({}, i)),
-                        (r = r = { showWaveAnimation: s }),
+                        (r = r =
+                            {
+                                showWaveAnimation: s,
+                            }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
                             : (function (t, e) {
@@ -190,17 +207,24 @@ class b extends (s = r.PureComponent) {
                               }),
                         n),
                     );
-                } else this.setState({ showWaveAnimation: s });
+                } else
+                    this.setState({
+                        showWaveAnimation: s,
+                    });
             }),
             m(this, "handleLoad", (t) => {
                 let { currentTarget: e } = t,
                     { naturalWidth: i, naturalHeight: s } = e,
                     n = v(i, s);
                 null != n && this.setState(n),
-                    this.setState({ splashLoaded: !0 }),
+                    this.setState({
+                        splashLoaded: !0,
+                    }),
                     window.removeEventListener("resize", this.handleResize),
                     window.addEventListener("resize", this.handleResize);
             });
     }
 }
-m(b, "defaultProps", { embedded: !1 });
+m(b, "defaultProps", {
+    embedded: !1,
+});

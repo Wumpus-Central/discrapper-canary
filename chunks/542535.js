@@ -1,4 +1,7 @@
-n.d(t, { A: () => Y }), n(228524);
+n.d(t, {
+    A: () => Y,
+}),
+    n(228524);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -35,6 +38,7 @@ var r = n(627968),
     M = n(854232),
     k = n(985018),
     U = n(448263);
+
 function G(e, t, n) {
     return (
         t in e
@@ -48,6 +52,7 @@ function G(e, t, n) {
         e
     );
 }
+
 function V(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -64,6 +69,7 @@ function V(e) {
     }
     return e;
 }
+
 function F(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -76,6 +82,7 @@ function F(e, t) {
     }
     return n;
 }
+
 function B(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -90,7 +97,9 @@ function B(e, t) {
 let H = (e) => {
     let { badge: t, tieredTenureBadge: n, currentUserOwnsOrbBadge: i } = e;
     return t.id === A.A.ORB_PROFILE_BADGE
-        ? (0, r.jsx)(v.A, { showSubtext: !i && !t.isPreviewMode })
+        ? (0, r.jsx)(v.A, {
+              showSubtext: !i && !t.isPreviewMode,
+          })
         : void 0 !== n && t.id !== M.K
           ? (0, r.jsx)(g.A, {
                 profileBadge: t,
@@ -98,6 +107,7 @@ let H = (e) => {
             })
           : t.description;
 };
+
 function Y(e) {
     var t;
     let {
@@ -130,7 +140,9 @@ function Y(e) {
                 _ = (null == v ? void 0 : v.userId) === (null == X ? void 0 : X.id),
                 S = (t) => {
                     if (
-                        (q({ action: "PRESS_BADGE" }),
+                        (q({
+                            action: "PRESS_BADGE",
+                        }),
                         (0, R.R9)(
                             V(
                                 {
@@ -167,7 +179,12 @@ function Y(e) {
                             return;
                         }
                         if (_) {
-                            let n = null != e.link ? (0, c.default)(e.link, { analyticsLocations: K }) : null;
+                            let n =
+                                null != e.link
+                                    ? (0, c.default)(e.link, {
+                                          analyticsLocations: K,
+                                      })
+                                    : null;
                             if (null == n) return;
                             return null == G || G(), n(t);
                         }
@@ -179,16 +196,25 @@ function Y(e) {
                             void (null == G || G())
                         );
                     }
-                    let n = null != e.link ? (0, c.default)(e.link, { analyticsLocations: K }) : null;
+                    let n =
+                        null != e.link
+                            ? (0, c.default)(e.link, {
+                                  analyticsLocations: K,
+                              })
+                            : null;
                     if (null != n) return null == G || G(), n(t);
                 },
                 T = () => {
                     e.id === w.h &&
                         I.default.track(
                             x.HAw.QUEST_CONTENT_VIEWED,
-                            B(V({}, (0, b.fF)(y.uF.QUEST_BADGE)), { is_targeted: !1 }),
+                            B(V({}, (0, b.fF)(y.uF.QUEST_BADGE)), {
+                                is_targeted: !1,
+                            }),
                         ),
-                        q({ action: "HOVER_BADGE" }),
+                        q({
+                            action: "HOVER_BADGE",
+                        }),
                         (0, R.sQ)(
                             V(
                                 {
@@ -212,7 +238,9 @@ function Y(e) {
                     onMouseEnter: T,
                     href: e.link,
                     "aria-label": e.description,
-                    style: { filter: Y && null != a ? "drop-shadow(0 0 5px ".concat(a.glowColor, ")") : void 0 },
+                    style: {
+                        filter: Y && null != a ? "drop-shadow(0 0 5px ".concat(a.glowColor, ")") : void 0,
+                    },
                 };
             if (P) {
                 let n = (0, r.jsx)(
@@ -285,7 +313,12 @@ function Y(e) {
                     "".concat(e.id, "-").concat(t),
                 );
             }
-            let en = (0, r.jsx)(l.MzZ, B(V({}, et), { children: Q })),
+            let en = (0, r.jsx)(
+                    l.MzZ,
+                    B(V({}, et), {
+                        children: Q,
+                    }),
+                ),
                 er = H({
                     badge: e,
                     tieredTenureBadge: d && e.id !== M.K ? a : void 0,

@@ -1,4 +1,7 @@
-n.d(t, { default: () => C }), n(896048);
+n.d(t, {
+    default: () => C,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -21,6 +24,7 @@ var r = n(627968),
     A = n(788868),
     v = n(985018),
     P = n(347677);
+
 function E(e) {
     var t;
     let {
@@ -78,6 +82,7 @@ function E(e) {
         }),
     });
 }
+
 function _(e) {
     let {
             user: t,
@@ -191,6 +196,7 @@ function _(e) {
         ],
     });
 }
+
 function C(e) {
     let { transitionState: t, analyticsLocations: n, initialSelectedEffect: a, guild: u, onClose: d } = e,
         { isFetching: f, categories: m, purchases: x } = (0, p.Ay)(),

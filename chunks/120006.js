@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var r = n(627968),
     i = n(64700),
     l = n(397927),
@@ -11,6 +13,7 @@ var r = n(627968),
     p = n(652215),
     f = n(985018),
     h = n(605540);
+
 function A(e, t, n) {
     return (0, r.jsxs)(
         "button",
@@ -36,12 +39,15 @@ function A(e, t, n) {
                     variant: "text-md/medium",
                     children: t,
                 }),
-                (0, r.jsx)(d.A, { className: h.UE }),
+                (0, r.jsx)(d.A, {
+                    className: h.UE,
+                }),
             ],
         },
         t,
     );
 }
+
 function g() {
     let e = o.A.getGuildsArray().filter((e) => e.features.has(p.GuildFeatures.HUB));
     return (0, r.jsxs)(i.Fragment, {
@@ -75,7 +81,9 @@ function g() {
                             () => {
                                 var t;
                                 (t = e.id),
-                                    c.default.track(p.HAw.ADD_FRIEND_OTHER_PLACES_HUB_CLICKED, { guild_id: t }),
+                                    c.default.track(p.HAw.ADD_FRIEND_OTHER_PLACES_HUB_CLICKED, {
+                                        guild_id: t,
+                                    }),
                                     (0, s.u)(t);
                             },
                         ),

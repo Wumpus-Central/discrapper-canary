@@ -1,12 +1,16 @@
-n.d(i, { default: () => l });
+n.d(i, {
+    default: () => l,
+});
 var s = n(627968);
 n(64700);
 var a = n(158954),
     r = n(956793),
     c = n(849736),
     e = n(985018);
+
 function l(t) {
     let { channel: i, transitionState: n, onClose: l } = t;
+
     function o() {
         r.default.disconnect(), l();
     }

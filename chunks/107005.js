@@ -1,4 +1,6 @@
-n.d(t, { Z: () => d });
+n.d(t, {
+    Z: () => d,
+});
 var r = n(627968),
     i = n(64700),
     a = n(397927),
@@ -32,7 +34,11 @@ let u = (e) => {
                                     contentTypes: [o],
                                     children: (e) => {
                                         let { visibleContent: t, markAsDismissed: n } = e;
-                                        return t === o ? (0, r.jsx)(u, { markAsDismissed: n }) : null;
+                                        return t === o
+                                            ? (0, r.jsx)(u, {
+                                                  markAsDismissed: n,
+                                              })
+                                            : null;
                                     },
                                 }),
                                 (0, r.jsx)(a.Text, {

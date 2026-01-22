@@ -1,8 +1,12 @@
-n.d(t, { A: () => l }), n(896048);
+n.d(t, {
+    A: () => l,
+}),
+    n(896048);
 var r = n(64700),
     i = n(522579),
     a = n(77729),
     s = n(723702);
+
 function o(e, t, n) {
     return (
         t in e
@@ -25,13 +29,17 @@ class l extends r.Component {
         a.A.fileManager.saveWithDialog(e, t);
     }
     downloadHtml5(e, t) {
-        let n = new Blob([e], { type: this.props.contentType });
+        let n = new Blob([e], {
+            type: this.props.contentType,
+        });
         (0, i.saveAs)(n, t);
     }
     render() {
         let { children: e } = this.props,
             t = r.Children.only(e);
-        return r.cloneElement(t, { onClick: this.handleFileDownload });
+        return r.cloneElement(t, {
+            onClick: this.handleFileDownload,
+        });
     }
     constructor(...e) {
         super(...e),

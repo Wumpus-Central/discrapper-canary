@@ -1,4 +1,7 @@
-n.d(t, { A: () => ea }), n(896048);
+n.d(t, {
+    A: () => ea,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(111956),
@@ -35,6 +38,7 @@ var r = n(627968),
     M = n(823894),
     k = n(652215),
     U = n(654329);
+
 function G(e, t, n) {
     return (
         t in e
@@ -48,6 +52,7 @@ function G(e, t, n) {
         e
     );
 }
+
 function V(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -64,6 +69,7 @@ function V(e) {
     }
     return e;
 }
+
 function F(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -76,6 +82,7 @@ function F(e, t) {
     }
     return n;
 }
+
 function B(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -113,7 +120,9 @@ let H = (0, A.xI)(c.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             ei = (0, v.P)((e) => e.showPremiumUpsell),
             [ea, es] = (0, h.RQ)((e) => [e.searchQuery, e.isSearchSuggestion], o.x),
             eo = i.useRef("");
-        i.useImperativeHandle(t, () => ({ onPickerOpen: eL }));
+        i.useImperativeHandle(t, () => ({
+            onPickerOpen: eL,
+        }));
         let el = (0, T.pD)(c),
             ec = 0 === el.filter((e) => e.type !== N.Z2.EMPTY_GUILD_UPSELL).length,
             eu = (0, m.oV)({
@@ -167,7 +176,16 @@ let H = (0, A.xI)(c.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                     let { default: t } = await Promise.all([n.e("29143"), n.e("97010")]).then(
                                         n.bind(n, 445002),
                                     );
-                                    return (n) => (0, r.jsx)(t, V({ guildId: e.guild_id }, n));
+                                    return (n) =>
+                                        (0, r.jsx)(
+                                            t,
+                                            V(
+                                                {
+                                                    guildId: e.guild_id,
+                                                },
+                                                n,
+                                            ),
+                                        );
                                 });
                             break;
                         case N.op.STICKER:
@@ -224,7 +242,9 @@ let H = (0, A.xI)(c.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             }, []);
         let ej = i.useCallback(() => {
             G(),
-                O.default.track(k.HAw.PREMIUM_PROMOTION_OPENED, { location_section: k.JJy.STICKER_PICKER_UPSELL }),
+                O.default.track(k.HAw.PREMIUM_PROMOTION_OPENED, {
+                    location_section: k.JJy.STICKER_PICKER_UPSELL,
+                }),
                 (0, g.Z)();
         }, [G]);
         return (0, r.jsxs)(p.f5, {
@@ -287,7 +307,10 @@ let H = (0, A.xI)(c.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                               }),
                           ],
                       }),
-                ei && (0, r.jsx)(j.j, { onLearnMore: ej }),
+                ei &&
+                    (0, r.jsx)(j.j, {
+                        onLearnMore: ej,
+                    }),
             ],
         });
     }),
@@ -298,7 +321,16 @@ let H = (0, A.xI)(c.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             id: M.GX,
             "aria-labelledby": M.LD,
             role: "tabpanel",
-            children: e.isLoading ? (0, r.jsx)(u.y$y, { className: U.Mz }) : (0, r.jsx)(er, B(V({}, e), { ref: t })),
+            children: e.isLoading
+                ? (0, r.jsx)(u.y$y, {
+                      className: U.Mz,
+                  })
+                : (0, r.jsx)(
+                      er,
+                      B(V({}, e), {
+                          ref: t,
+                      }),
+                  ),
         })
     ),
     ea = i.forwardRef(ei);

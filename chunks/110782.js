@@ -50,6 +50,7 @@ async function c(e) {
         libraryApplications: n,
     });
 }
+
 function u(e, t, n) {
     i.h.dispatch({
         type: "LIBRARY_APPLICATION_ACTIVE_LAUNCH_OPTION_UPDATE",

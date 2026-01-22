@@ -12,10 +12,12 @@ let a = l.createContext(null),
         manageFocusOnReorder: i.tE,
         getManageButtonForWidget: () => null,
     };
+
 function o() {
     let e = l.useContext(a);
     return null != e ? e : s;
 }
+
 function c(e) {
     let { children: t } = e,
         n = l.useRef(new Map()),

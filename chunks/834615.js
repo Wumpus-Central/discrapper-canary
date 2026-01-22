@@ -1,4 +1,7 @@
-n.d(t, { A: () => R }), n(896048);
+n.d(t, {
+    A: () => R,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -27,6 +30,7 @@ var r = n(627968),
     T = n(652215),
     j = n(985018),
     x = n(502511);
+
 function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -52,6 +56,7 @@ function P(e) {
     }
     return e;
 }
+
 function w(e) {
     var t;
     let { quest: n } = e,
@@ -76,20 +81,27 @@ function w(e) {
                         color: "text-strong",
                         children: d
                             ? j.intl.string(j.t.XBboAK)
-                            : j.intl.formatToPlainString(j.t.EQa7os, { questName: n.config.messages.questName }),
+                            : j.intl.formatToPlainString(j.t.EQa7os, {
+                                  questName: n.config.messages.questName,
+                              }),
                     }),
                     (0, r.jsx)(o.Text, {
                         variant: "text-xs/normal",
                         color: "text-default",
                         children: d
-                            ? j.intl.formatToPlainString(j.t.APddvF, { expirationDate: l })
-                            : j.intl.formatToPlainString(j.t["pX+fmn"], { expirationDate: i }),
+                            ? j.intl.formatToPlainString(j.t.APddvF, {
+                                  expirationDate: l,
+                              })
+                            : j.intl.formatToPlainString(j.t["pX+fmn"], {
+                                  expirationDate: i,
+                              }),
                     }),
                 ],
             }),
         ],
     });
 }
+
 function L(e) {
     var t, n, l;
     let { nodeRef: c, quest: m } = e,
@@ -99,7 +111,9 @@ function L(e) {
         D = i.useCallback(() => R(!0), []),
         M = i.useCallback(() => R(!1), []),
         { launchInGameActivity: k } = (0, g.zW)(m),
-        U = h.t$.useConfig({ location: N.rE.ACTIVITY_PANEL }).enabled,
+        U = h.t$.useConfig({
+            location: N.rE.ACTIVITY_PANEL,
+        }).enabled,
         G = i.useCallback((e) => {
             e.stopPropagation();
         }, []),
@@ -152,13 +166,17 @@ function L(e) {
             sourceQuestContent: f.uF.ACTIVITY_PANEL,
         }),
         q = (0, _.vA)(m),
-        Q = (0, A.NA)({ quest: m }),
+        Q = (0, A.NA)({
+            quest: m,
+        }),
         X = q ? Q : j.intl.string(j.t.l7E81v);
     return (0, r.jsxs)("div", {
         ref: (e) => {
             c.current = e;
         },
-        className: a()(x.iE, { [x.tJ]: Y }),
+        className: a()(x.iE, {
+            [x.tJ]: Y,
+        }),
         onClick: G,
         onKeyPress: G,
         onFocus: D,
@@ -169,7 +187,11 @@ function L(e) {
             (0, r.jsxs)("div", {
                 className: x.Wp,
                 children: [
-                    Y ? (0, r.jsx)(w, { quest: m }) : (0, r.jsx)(v.A, {}),
+                    Y
+                        ? (0, r.jsx)(w, {
+                              quest: m,
+                          })
+                        : (0, r.jsx)(v.A, {}),
                     (0, r.jsx)(O.C, {
                         quest: m,
                         questContent: f.uF.ACTIVITY_PANEL,
@@ -211,7 +233,9 @@ function L(e) {
             !Y &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, r.jsx)(w, { quest: m }),
+                        (0, r.jsx)(w, {
+                            quest: m,
+                        }),
                         (0, r.jsx)("div", {
                             className: x.GA,
                             children: (0, r.jsx)(o.Text, {
@@ -290,6 +314,15 @@ let R = function (e) {
         questOrQuests: e.quest,
         questContent: f.uF.ACTIVITY_PANEL,
         sourceQuestContent: f.uF.ACTIVITY_PANEL,
-        children: (t) => (0, r.jsx)(L, P({ nodeRef: t }, e)),
+        children: (t) =>
+            (0, r.jsx)(
+                L,
+                P(
+                    {
+                        nodeRef: t,
+                    },
+                    e,
+                ),
+            ),
     });
 };

@@ -6,5 +6,7 @@ r(
         proto: !0,
         forced: /./.exec !== i,
     },
-    { exec: i },
+    {
+        exec: i,
+    },
 );

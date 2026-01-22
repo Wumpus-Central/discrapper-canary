@@ -1,4 +1,6 @@
-n.d(t, { E: () => b });
+n.d(t, {
+    E: () => b,
+});
 var r = n(627968),
     i = n(64700),
     l = n(732955),
@@ -10,6 +12,7 @@ var r = n(627968),
     u = n(339984),
     f = n(478644),
     g = n(985018);
+
 function b(e) {
     let { guild: t, canManageGuild: n, buttonClassName: b } = e,
         { analyticsLocations: m } = (0, s.Ay)(),
@@ -59,6 +62,8 @@ function b(e) {
           })
         : (0, r.jsx)("div", {
               className: b,
-              children: (0, r.jsx)(a.u, { onClick: h }),
+              children: (0, r.jsx)(a.u, {
+                  onClick: h,
+              }),
           });
 }

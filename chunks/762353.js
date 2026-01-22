@@ -1,4 +1,6 @@
-r.d(t, { A: () => u });
+r.d(t, {
+    A: () => u,
+});
 var n = r(627968);
 r(64700);
 var o = r(397927),
@@ -6,6 +8,7 @@ var o = r(397927),
     i = r(957316),
     a = r(652215),
     l = r(985018);
+
 function u(e, t) {
     return t === a.BRT.POPOUT
         ? null

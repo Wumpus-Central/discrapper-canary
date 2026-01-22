@@ -1,6 +1,9 @@
-t.d(r, { D: () => o });
+t.d(r, {
+    D: () => o,
+});
 var a = t(640038),
     l = t(101603);
+
 function o(e) {
     var r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
     return (0, l.NU)(e, [

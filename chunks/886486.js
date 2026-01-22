@@ -1,4 +1,6 @@
-l.d(t, { A: () => j });
+l.d(t, {
+    A: () => j,
+});
 var n = l(627968);
 l(64700);
 var r = l(311907),
@@ -27,13 +29,37 @@ let j = function (e) {
                       (function (e, t) {
                           switch (e.field_type) {
                               case a.rX.TERMS:
-                                  return (0, n.jsx)(u.LK, { formField: e }, t);
+                                  return (0, n.jsx)(
+                                      u.LK,
+                                      {
+                                          formField: e,
+                                      },
+                                      t,
+                                  );
                               case a.rX.TEXT_INPUT:
-                                  return (0, n.jsx)(x.aS, { formField: e }, t);
+                                  return (0, n.jsx)(
+                                      x.aS,
+                                      {
+                                          formField: e,
+                                      },
+                                      t,
+                                  );
                               case a.rX.PARAGRAPH:
-                                  return (0, n.jsx)(o.P1, { formField: e }, t);
+                                  return (0, n.jsx)(
+                                      o.P1,
+                                      {
+                                          formField: e,
+                                      },
+                                      t,
+                                  );
                               case a.rX.MULTIPLE_CHOICE:
-                                  return (0, n.jsx)(d.CI, { formField: e }, t);
+                                  return (0, n.jsx)(
+                                      d.CI,
+                                      {
+                                          formField: e,
+                                      },
+                                      t,
+                                  );
                           }
                       })(e, t),
                   ),

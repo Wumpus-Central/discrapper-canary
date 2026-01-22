@@ -39,9 +39,35 @@ let r = (0, n(600975).C)({
             },
         ],
     }),
-    i = (e) => r.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }).enabled,
-    a = (e) => r.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }).defaultTimeout,
-    s = (e) => r.useExperiment({ location: e }, { autoTrackExposure: !1 }).enabled,
+    i = (e) =>
+        r.getCurrentConfig(
+            {
+                location: e,
+            },
+            {
+                autoTrackExposure: !1,
+            },
+        ).enabled,
+    a = (e) =>
+        r.getCurrentConfig(
+            {
+                location: e,
+            },
+            {
+                autoTrackExposure: !1,
+            },
+        ).defaultTimeout,
+    s = (e) =>
+        r.useExperiment(
+            {
+                location: e,
+            },
+            {
+                autoTrackExposure: !1,
+            },
+        ).enabled,
     o = (e) => {
-        r.trackExposure({ location: e });
+        r.trackExposure({
+            location: e,
+        });
     };

@@ -762,7 +762,9 @@ if (
         function () {
             return S(this).serialize();
         },
-        { enumerable: !0 },
+        {
+            enumerable: !0,
+        },
     ),
     u(
         eU,
@@ -770,7 +772,9 @@ if (
         function () {
             return S(this).serialize();
         },
-        { enumerable: !0 },
+        {
+            enumerable: !0,
+        },
     ),
     P)
 ) {
@@ -786,5 +790,7 @@ A(ej, "URL"),
             forced: !i,
             sham: !o,
         },
-        { URL: ej },
+        {
+            URL: ej,
+        },
     );

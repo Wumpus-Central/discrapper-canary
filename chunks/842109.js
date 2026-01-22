@@ -71,11 +71,15 @@ e.exports = function (e) {
                 end: '"',
                 relevance: 0,
             },
-            e.COMMENT("#", "$", { relevance: 0 }),
+            e.COMMENT("#", "$", {
+                relevance: 0,
+            }),
             {
                 className: "keyword",
                 variants: [
-                    { begin: "\\s*\\.end\\s[a-zA-Z0-9]*" },
+                    {
+                        begin: "\\s*\\.end\\s[a-zA-Z0-9]*",
+                    },
                     {
                         begin: "^[ ]*\\.[a-zA-Z]*",
                         relevance: 0,
@@ -84,13 +88,17 @@ e.exports = function (e) {
                         begin: "\\s:[a-zA-Z_0-9]*",
                         relevance: 0,
                     },
-                    { begin: "\\s(" + r.join("|") + ")" },
+                    {
+                        begin: "\\s(" + r.join("|") + ")",
+                    },
                 ],
             },
             {
                 className: "built_in",
                 variants: [
-                    { begin: "\\s(" + t.join("|") + ")\\s" },
+                    {
+                        begin: "\\s(" + t.join("|") + ")\\s",
+                    },
                     {
                         begin: "\\s(" + t.join("|") + ")((-|/)[a-zA-Z0-9]+)+\\s",
                         relevance: 10,
@@ -106,7 +114,9 @@ e.exports = function (e) {
                 begin: "L[^(;:\n]*;",
                 relevance: 0,
             },
-            { begin: "[vp][0-9]+" },
+            {
+                begin: "[vp][0-9]+",
+            },
         ],
     };
 };

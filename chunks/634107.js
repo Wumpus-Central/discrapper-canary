@@ -10,6 +10,7 @@ let o = {
     ascending: "descending",
     descending: "ascending",
 };
+
 function l(e) {
     var t;
     let [n, l] = (0, a.useState)(!1),
@@ -56,6 +57,7 @@ function l(e) {
         },
     };
 }
+
 function c(e, t) {
     let n = (0, a.useMemo)(() => (t ? e.collection.filter(t) : e.collection), [e.collection, t]),
         r = e.selectionManager.withCollection(n);

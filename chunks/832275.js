@@ -12,10 +12,15 @@ var r = n(735438),
     c = n(181079),
     u = n(616075),
     d = n(818348);
+
 function f(e, t, n) {
     let { canShow: r, isFavoritesPerk: a } = u.A.getCurrentConfig(
-        { location: "isFavoritesGuildVisible" },
-        { autoTrackExposure: !1 },
+        {
+            location: "isFavoritesGuildVisible",
+        },
+        {
+            autoTrackExposure: !1,
+        },
     );
     if (a) return !0;
     if (!r) return !1;
@@ -27,6 +32,7 @@ function f(e, t, n) {
     });
     return !i().isEmpty(o);
 }
+
 function p() {
     let { canShow: e, isFavoritesPerk: t } = (0, u.l)("useIsFavoritesGuildVisible"),
         n = (0, a.bG)([c.A, s.A, o.A], () => e && f(c.A, s.A, o.A));

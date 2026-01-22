@@ -1,8 +1,14 @@
-Object.defineProperty(t, "__esModule", { value: !0 });
+Object.defineProperty(t, "__esModule", {
+    value: !0,
+});
 var r = n(64700),
     i = n(877508),
     a = (function (e) {
-        return e && "object" == typeof e && "default" in e ? e : { default: e };
+        return e && "object" == typeof e && "default" in e
+            ? e
+            : {
+                  default: e,
+              };
     })(r),
     s = function () {
         return (s =
@@ -13,6 +19,7 @@ var r = n(64700),
                 return e;
             }).apply(this, arguments);
     };
+
 function o(e, t) {
     var n = {};
     for (var r in e) Object.prototype.hasOwnProperty.call(e, r) && 0 > t.indexOf(r) && (n[r] = e[r]);
@@ -23,6 +30,7 @@ function o(e, t) {
     }
     return n;
 }
+
 function l(e, t, n, r) {
     return new (n || (n = Promise))(function (i, a) {
         function s(e) {
@@ -32,6 +40,7 @@ function l(e, t, n, r) {
                 a(e);
             }
         }
+
         function o(e) {
             try {
                 l(r.throw(e));
@@ -39,6 +48,7 @@ function l(e, t, n, r) {
                 a(e);
             }
         }
+
         function l(e) {
             var t;
             e.done
@@ -53,6 +63,7 @@ function l(e, t, n, r) {
         l((r = r.apply(e, t || [])).next());
     });
 }
+
 function c(e, t) {
     var n,
         r,
@@ -79,6 +90,7 @@ function c(e, t) {
             }),
         a
     );
+
     function o(a) {
         return function (o) {
             return (function (a) {
@@ -151,6 +163,7 @@ function c(e, t) {
         };
     }
 }
+
 function u(e) {
     var t = e || d(),
         n = r.useState(t),
@@ -179,6 +192,7 @@ function u(e) {
         i
     );
 }
+
 function d() {
     return Math.min(
         Math.max(1, "u" > typeof window && "number" == typeof window.devicePixelRatio ? window.devicePixelRatio : 1),
@@ -197,6 +211,7 @@ var f = (function () {
     p = globalThis.ResizeObserver || f,
     _ = void 0 !== globalThis.ResizeObserver,
     h = !_;
+
 function m(e, t) {
     void 0 === t && (t = !0);
     var n = r.useState({
@@ -270,9 +285,11 @@ var g = {
     useOffscreenRenderer: !0,
     shouldResizeCanvasToContainer: !0,
 };
+
 function E(e) {
     return Object.assign({}, g, e);
 }
+
 function b(e) {
     var t = e.riveLoaded,
         n = void 0 !== t && t,
@@ -422,6 +439,7 @@ var y,
     S = function () {
         return y || (y = new v()), y;
     };
+
 function I(e) {
     var t = e.setContainerRef,
         n = e.setCanvasRef,
@@ -444,7 +462,9 @@ function I(e) {
                 ref: t,
                 className: i,
             },
-            !i && { style: d },
+            !i && {
+                style: d,
+            },
         ),
         a.default.createElement(
             "canvas",
@@ -463,6 +483,7 @@ function I(e) {
         ),
     );
 }
+
 function T(e, t) {
     void 0 === t && (t = {});
     var n = r.useState(null),
@@ -510,7 +531,19 @@ function T(e, t) {
                     var r = g.useOffscreenRenderer,
                         a = e.onRiveReady,
                         c = o(e, ["onRiveReady"]);
-                    (t = new i.Rive(s(s({ useOffscreenRenderer: r }, c), { canvas: l }))),
+                    (t = new i.Rive(
+                        s(
+                            s(
+                                {
+                                    useOffscreenRenderer: r,
+                                },
+                                c,
+                            ),
+                            {
+                                canvas: l,
+                            },
+                        ),
+                    )),
                         null != f.current && f.current.cleanup(),
                         (f.current = t),
                         t.on(i.EventType.Load, function () {
@@ -617,6 +650,7 @@ function T(e, t) {
         RiveComponent: w,
     };
 }
+
 function C(e, t, n) {
     var i = r.useState(null),
         a = i[0],
@@ -684,7 +718,12 @@ function C(e, t, n) {
             },
             [E],
         ),
-        y = s({ value: c }, b);
+        y = s(
+            {
+                value: c,
+            },
+            b,
+        );
     return n.getExtendedData && (y.extendedData = f), y;
 }
 (t.default = function (e) {

@@ -17,6 +17,7 @@ var i,
     f = n(652215),
     p = n(985018),
     m = n(315628);
+
 function g(e, t, n) {
     return (
         t in e
@@ -30,6 +31,7 @@ function g(e, t, n) {
         e
     );
 }
+
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -46,6 +48,7 @@ function h(e) {
     }
     return e;
 }
+
 function x(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -64,6 +67,7 @@ function x(e, t) {
         e
     );
 }
+
 function j(e) {
     let { className: t, icon: n = null } = e;
     return (0, r.jsx)(d.NPJ, {
@@ -124,7 +128,9 @@ class O extends (i = l.PureComponent) {
                 className: s()(m.WY, m.r9, N),
                 children: (0, r.jsxs)("div", {
                     className: s()(m.Yp, E),
-                    style: x(h({}, _), { backgroundImage: n }),
+                    style: x(h({}, _), {
+                        backgroundImage: n,
+                    }),
                     children: [
                         i,
                         v &&
@@ -144,7 +150,9 @@ class O extends (i = l.PureComponent) {
             : S ||
               (l = (0, r.jsx)("small", {
                   className: m.UZ,
-                  children: p.intl.format(p.t.AH4c7Y, { size: f.eQT }),
+                  children: p.intl.format(p.t.AH4c7Y, {
+                      size: f.eQT,
+                  }),
               }));
         let M = null != (e = null != L ? L : o) ? e : p.intl.string(p.t["Ge+941"]);
         return (0, r.jsxs)("div", {
@@ -157,7 +165,9 @@ class O extends (i = l.PureComponent) {
                         children: [
                             (0, r.jsxs)("div", {
                                 className: s()(m.Yp, E),
-                                style: x(h({}, _), { backgroundImage: n }),
+                                style: x(h({}, _), {
+                                    backgroundImage: n,
+                                }),
                                 children: [
                                     (0, r.jsx)("span", {
                                         "aria-hidden": !0,

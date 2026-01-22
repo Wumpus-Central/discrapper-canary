@@ -1,4 +1,7 @@
-n.d(t, { A: () => j }), n(896048);
+n.d(t, {
+    A: () => j,
+}),
+    n(896048);
 var r = n(118356),
     i = n(506774),
     a = n(391973),
@@ -11,6 +14,7 @@ var r = n(118356),
     f = n(592598),
     p = n(644434),
     _ = n(652215);
+
 function h(e, t, n) {
     return (
         t in e
@@ -24,6 +28,7 @@ function h(e, t, n) {
         e
     );
 }
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -40,6 +45,7 @@ function m(e) {
     }
     return e;
 }
+
 function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -52,6 +58,7 @@ function g(e, t) {
     }
     return n;
 }
+
 function E(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -69,6 +76,7 @@ let b = "overlay-negative-experiment-notification-settings",
     A = !1,
     v = !0,
     S = new r.Vy("OverlayNegativeWidgetExperimentManager");
+
 function I(e) {
     switch (e) {
         case _.uss.VOICE:
@@ -86,6 +94,7 @@ let T = {
     [_.uss.VOICE]: !0,
     [_.uss.VOICE_V3]: !0,
 };
+
 function C(e) {
     let [t] = l.A.getWidgetsByTypeAndLayout(e, I(e));
     if (null != t || (([t] = l.A.getWidgetsByType(e)), null != t)) return t;
@@ -131,14 +140,22 @@ class R {
                 let n = l.A.getWidgetConfig(e);
                 null != n &&
                     (null == this._defaultWidgetPinned[e] && (this._defaultWidgetPinned[e] = n.defaultSettings.pinned),
-                    await (0, a.qH)(e, { defaultSettings: E(m({}, n.defaultSettings), { pinned: t }) }));
+                    await (0, a.qH)(e, {
+                        defaultSettings: E(m({}, n.defaultSettings), {
+                            pinned: t,
+                        }),
+                    }));
             }),
             h(this, "restoreDefaultWidgetPinned", async (e) => {
                 if (__OVERLAY__) return;
                 let t = l.A.getWidgetConfig(e);
                 if (null == t || null == this._defaultWidgetPinned[e]) return;
                 let n = this._defaultWidgetPinned[e];
-                await (0, a.qH)(e, { defaultSettings: E(m({}, t.defaultSettings), { pinned: n }) });
+                await (0, a.qH)(e, {
+                    defaultSettings: E(m({}, t.defaultSettings), {
+                        pinned: n,
+                    }),
+                });
             }),
             h(this, "getDefaultWidgetPinned", (e) => {
                 let t = this._defaultWidgetPinned[e];
@@ -151,7 +168,9 @@ class w {
         h(this, "_storage", new N()),
             h(this, "_config", new R()),
             h(this, "updateWidgetPinned", (e, t) => {
-                this._storage.setWidgetSetting(e, { pinned: t });
+                this._storage.setWidgetSetting(e, {
+                    pinned: t,
+                });
             }),
             h(this, "hasWidgetSetting", (e) => this._storage.hasWidgetSetting(e)),
             h(this, "initializeWidget", (e) => {
@@ -186,7 +205,9 @@ class w {
                         })));
             }),
             h(this, "updateNotificationSetting", (e, t) => {
-                this._storage.setNotificationSetting(e, { disabled: t });
+                this._storage.setNotificationSetting(e, {
+                    disabled: t,
+                });
             }),
             h(this, "hasNotificationSetting", (e) => this._storage.hasNotificationSetting(e)),
             h(this, "initializeNotification", (e) => {
@@ -206,6 +227,7 @@ class w {
             this._config.initializeAllDefaultWidgetConfigs();
     }
 }
+
 function P() {
     return Object.values(u.M);
 }
@@ -305,7 +327,9 @@ class L extends o.A {
                     try {
                         await this.processWidgetExperiment(e), await this.processNotificationExperiment(e);
                     } catch (e) {
-                        S.error("Experiments processing failed", { error: e });
+                        S.error("Experiments processing failed", {
+                            error: e,
+                        });
                     } finally {
                         (this._isProcessing = !1), this.setAppliedExperimentBucket(t);
                     }

@@ -1,4 +1,7 @@
-n.d(t, { A: () => _ }), n(896048);
+n.d(t, {
+    A: () => _,
+}),
+    n(896048);
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -32,7 +35,9 @@ async function _(e) {
     if (null != C && C.isPurchasedExternally && null != C.paymentGateway) {
         null != g && g(),
             a.A.show({
-                title: f.intl.formatToPlainString(f.t["rTk9v/"], { paymentGatewayName: d.qmC[C.paymentGateway] }),
+                title: f.intl.formatToPlainString(f.t["rTk9v/"], {
+                    paymentGatewayName: d.qmC[C.paymentGateway],
+                }),
                 body: f.intl.format(f.t.NY03WF, {
                     paymentGatewayName: d.qmC[C.paymentGateway],
                     subscriptionManagementLink: (0, u.tW)(C.paymentGateway, "SUBSCRIPTION_MANAGEMENT"),

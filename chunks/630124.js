@@ -1,4 +1,5 @@
 var r = n(64700);
+
 function i(e, t) {
     return (e === t && (0 !== e || 1 / e == 1 / t)) || (e != e && t != t);
 }
@@ -7,6 +8,7 @@ var a = "function" == typeof Object.is ? Object.is : i,
     o = r.useEffect,
     l = r.useLayoutEffect,
     c = r.useDebugValue;
+
 function u(e, t) {
     var n = t(),
         r = s({
@@ -20,16 +22,27 @@ function u(e, t) {
     return (
         l(
             function () {
-                (i.value = n), (i.getSnapshot = t), d(i) && a({ inst: i });
+                (i.value = n),
+                    (i.getSnapshot = t),
+                    d(i) &&
+                        a({
+                            inst: i,
+                        });
             },
             [e, n, t],
         ),
         o(
             function () {
                 return (
-                    d(i) && a({ inst: i }),
+                    d(i) &&
+                        a({
+                            inst: i,
+                        }),
                     e(function () {
-                        d(i) && a({ inst: i });
+                        d(i) &&
+                            a({
+                                inst: i,
+                            });
                     })
                 );
             },
@@ -39,6 +52,7 @@ function u(e, t) {
         n
     );
 }
+
 function d(e) {
     var t = e.getSnapshot;
     e = e.value;
@@ -49,6 +63,7 @@ function d(e) {
         return !0;
     }
 }
+
 function f(e, t) {
     return t();
 }

@@ -14,6 +14,7 @@ function r(e) {
     }
     return e;
 }
+
 function i(e, t, n) {
     return (
         t in e
@@ -50,7 +51,9 @@ e.exports = {
             p = c.splitBlock(l, f),
             _ = p.getSelectionAfter(),
             b = c.setBlockType(p, _, "atomic"),
-            y = s.create({ entity: t }),
+            y = s.create({
+                entity: t,
+            }),
             O = {
                 key: d(),
                 type: "atomic",
@@ -61,7 +64,13 @@ e.exports = {
                 key: d(),
                 type: "unstyled",
             };
-        h && ((O = r({}, O, { nextSibling: A.key })), (A = r({}, A, { prevSibling: O.key })));
+        h &&
+            ((O = r({}, O, {
+                nextSibling: A.key,
+            })),
+            (A = r({}, A, {
+                prevSibling: O.key,
+            })));
         var v = [new m(O), new m(A)],
             S = a.createFromArray(v),
             I = c.replaceWithFragment(b, _, S),

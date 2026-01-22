@@ -1,4 +1,7 @@
-n.d(t, { W: () => f }), n(896048);
+n.d(t, {
+    W: () => f,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -8,6 +11,7 @@ var r = n(627968),
     c = n(624458),
     u = n(513461),
     d = n(985018);
+
 function f(e, t, f, p) {
     let [h, b] = l.useState(!1),
         g = (0, i.bG)([o.A], () => o.A.getChannel(p)),

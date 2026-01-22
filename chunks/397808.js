@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968);
 n(64700);
 var i = n(23339),
@@ -21,7 +23,9 @@ let d = (e) => {
         (0, r.jsx)("div", {
             className: u.k,
             children: (0, r.jsxs)("div", {
-                style: { fontSize: _ },
+                style: {
+                    fontSize: _,
+                },
                 children: [
                     null != p
                         ? (0, r.jsx)("div", {

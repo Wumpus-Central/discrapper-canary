@@ -15,8 +15,11 @@ function r(...e) {
                   };
           };
 }
+
 function i(e, t) {
     if ("function" == typeof e) return e(t);
     null != e && (e.current = t);
 }
-n.d(t, { P: () => r });
+n.d(t, {
+    P: () => r,
+});

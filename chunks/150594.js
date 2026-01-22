@@ -13,13 +13,41 @@ var t = (e.exports = {
             format: "%s %s %d %s IP%d %s",
         },
     ],
-    s: [{ name: "name" }],
-    i: [{ name: "description" }],
-    u: [{ name: "uri" }],
-    e: [{ name: "email" }],
-    p: [{ name: "phone" }],
-    z: [{ name: "timezones" }],
-    r: [{ name: "repeats" }],
+    s: [
+        {
+            name: "name",
+        },
+    ],
+    i: [
+        {
+            name: "description",
+        },
+    ],
+    u: [
+        {
+            name: "uri",
+        },
+    ],
+    e: [
+        {
+            name: "email",
+        },
+    ],
+    p: [
+        {
+            name: "phone",
+        },
+    ],
+    z: [
+        {
+            name: "timezones",
+        },
+    ],
+    r: [
+        {
+            name: "repeats",
+        },
+    ],
     t: [
         {
             name: "timing",

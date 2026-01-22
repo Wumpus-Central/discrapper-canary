@@ -1,6 +1,10 @@
-a.d(n, { A: () => l }), a(896048);
+a.d(n, {
+    A: () => l,
+}),
+    a(896048);
 var e = a(64700),
     i = a(198982);
+
 function l(t) {
     let { onSubmit: n, onClose: a } = t,
         [l, r] = e.useState(!1),

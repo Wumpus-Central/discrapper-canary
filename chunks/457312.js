@@ -9,13 +9,16 @@ var r = n(701366),
     a = n(47276),
     s = n(849352),
     o = n(64700);
+
 function l(e) {
     return e && e.__esModule ? e.default : e;
 }
 let c = new WeakMap();
+
 function u(e) {
     return (null == e ? void 0 : e.calendar.identifier) === "gregory" && "BC" === e.era ? "short" : void 0;
 }
+
 function d(e) {
     var t;
     let n,
@@ -37,14 +40,19 @@ function d(e) {
         if (!_ && n && c)
             if ((0, i.ro)(n, c)) {
                 let t = f.format(n.toDate(e.timeZone));
-                return d.format("selectedDateDescription", { date: t });
+                return d.format("selectedDateDescription", {
+                    date: t,
+                });
             } else {
                 let t = p(f, d, n, c, e.timeZone);
-                return d.format("selectedRangeDescription", { dateRange: t });
+                return d.format("selectedRangeDescription", {
+                    dateRange: t,
+                });
             }
         return "";
     }, [n, c, _, e.timeZone, d, f]);
 }
+
 function f(e, t, n, c) {
     let d = (0, a.o)(l(r.A), "@react-aria/calendar"),
         f = u(e) || u(t),
@@ -78,6 +86,7 @@ function f(e, t, n, c) {
         return c ? p(h, d, e, t, n) : h.formatRange(e.toDate(n), t.toDate(n));
     }, [e, t, _, h, d, n, c]);
 }
+
 function p(e, t, n, r, i) {
     let a = e.formatRangeToParts(n.toDate(i), r.toDate(i)),
         s = -1;

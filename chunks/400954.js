@@ -1,4 +1,6 @@
-n.d(e, { default: () => h });
+n.d(e, {
+    default: () => h,
+});
 var i = n(627968),
     a = n(64700),
     r = n(732955),
@@ -7,6 +9,7 @@ var i = n(627968),
     c = n(747926),
     l = n(37411),
     d = n(985018);
+
 function h(t) {
     let { guildId: e, onClose: n, transitionState: h } = t,
         u = (0, s.Mu)(e),

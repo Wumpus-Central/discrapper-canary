@@ -1,4 +1,8 @@
-n.d(t, { _M: () => G }), n(896048), n(65821);
+n.d(t, {
+    _M: () => G,
+}),
+    n(896048),
+    n(65821);
 var r = n(627968),
     i = n(64700),
     a = n(284009),
@@ -32,6 +36,7 @@ var y = n(50956),
     D = n(818348),
     x = n(985018),
     L = n(763979);
+
 function j(e, t, n) {
     return (
         t in e
@@ -45,6 +50,7 @@ function j(e, t, n) {
         e
     );
 }
+
 function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -62,6 +68,7 @@ function M(e) {
     return e;
 }
 let k = 500;
+
 function U() {
     let {
             activeSubscription: e,
@@ -115,6 +122,7 @@ function U() {
         userTrialOffer: p,
     };
 }
+
 function G(e) {
     var t, n;
     let a,
@@ -132,7 +140,9 @@ function G(e) {
             subscriptionTier: W,
             handleClose: K,
         } = e,
-        { enabled: z } = (0, c.T0)({ location: "payment_modal_review_step" }),
+        { enabled: z } = (0, c.T0)({
+            location: "payment_modal_review_step",
+        }),
         {
             activeSubscription: q,
             setUpdatedSubscription: X,
@@ -170,9 +180,15 @@ function G(e) {
         { paymentSource: eR, isEligibleForTrial: ew, planGroup: eP, disablePurchase: eD, userTrialOffer: ex } = U(),
         eL = null != (t = null != m ? m : H) ? t : null,
         ej = null != eL && (!eu || P.TP[eL].skus.includes(er)) ? eL : null,
-        eM = { user_trial_offer_id: null == ex ? void 0 : ex.id };
+        eM = {
+            user_trial_offer_id: null == ex ? void 0 : ex.id,
+        };
     i.useEffect(() => {
-        null != ee && null != eT.current && eT.current.scrollIntoView({ behavior: "smooth" });
+        null != ee &&
+            null != eT.current &&
+            eT.current.scrollIntoView({
+                behavior: "smooth",
+            });
     }, [ee]);
     let ek = i.useCallback(
             (e, t, n) => {
@@ -278,11 +294,21 @@ function G(e) {
             }));
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(y.Z, { giftMessage: ev }),
-            !eY && (0, r.jsx)(N.A, { isEligibleForTrial: ew }),
+            (0, r.jsx)(y.Z, {
+                giftMessage: ev,
+            }),
+            !eY &&
+                (0, r.jsx)(N.A, {
+                    isEligibleForTrial: ew,
+                }),
             (0, r.jsxs)(w.dZ, {
                 children: [
-                    eg && eK && !eb && (0, r.jsx)("div", { className: L.AC }),
+                    eg &&
+                        eK &&
+                        !eb &&
+                        (0, r.jsx)("div", {
+                            className: L.AC,
+                        }),
                     (0, r.jsxs)(o.BJc, {
                         direction: "vertical",
                         gap: 8,

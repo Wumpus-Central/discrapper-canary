@@ -1,4 +1,6 @@
-n.d(t, { A: () => v });
+n.d(t, {
+    A: () => v,
+});
 var r = n(627968),
     a = n(64700),
     l = n(397927),
@@ -15,11 +17,16 @@ var r = n(627968),
 let j = {
     steps: {
         [f.HS.SERVER_SETTINGS]: {
-            onBack: { type: "close" },
-            onNext: { type: "save" },
+            onBack: {
+                type: "close",
+            },
+            onNext: {
+                type: "save",
+            },
         },
     },
 };
+
 function v(e) {
     let { guildId: t, instance: n } = e,
         f = a.useRef(null),
@@ -48,7 +55,9 @@ function v(e) {
                                       icon: l.oyn,
                                       label: m.intl.string(b.default.bBkeMs),
                                       action: () => {
-                                          (0, c.h)({ href: v });
+                                          (0, c.h)({
+                                              href: v,
+                                          });
                                       },
                                   }),
                               (0, r.jsx)(l.Drp, {

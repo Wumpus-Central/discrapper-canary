@@ -1,4 +1,6 @@
-n.d(t, { D: () => S });
+n.d(t, {
+    D: () => S,
+});
 var l = n(627968),
     r = n(64700),
     a = n(503698),
@@ -20,6 +22,7 @@ var l = n(627968),
     y = n(641131),
     A = n(985018),
     C = n(529349);
+
 function O(e) {
     let { className: t, sound: n, playSound: a, isPlaying: s, text: d } = e,
         u = (null == n ? void 0 : n.emojiId) != null || (null == n ? void 0 : n.emojiName) != null,
@@ -38,7 +41,14 @@ function O(e) {
         "aria-label": m,
         tag: "span",
         onClick: h,
-        className: i()(C.Ls, C.oR, { [C.he]: !0 === s }, t),
+        className: i()(
+            C.Ls,
+            C.oR,
+            {
+                [C.he]: !0 === s,
+            },
+            t,
+        ),
         children: [
             u &&
                 (0, l.jsx)(o.A, {
@@ -46,10 +56,13 @@ function O(e) {
                     emojiName: null == n ? void 0 : n.emojiName,
                     className: C.JS,
                 }),
-            (0, l.jsx)("span", { children: " ".concat(d, " ") }),
+            (0, l.jsx)("span", {
+                children: " ".concat(d, " "),
+            }),
         ],
     });
 }
+
 function N(e) {
     let { containerRef: t, text: n } = e,
         a = r.useRef(null),
@@ -90,7 +103,9 @@ function N(e) {
                         },
                     },
                     40,
-                    { sprite: l },
+                    {
+                        sprite: l,
+                    },
                 );
             }
         }
@@ -104,6 +119,7 @@ function N(e) {
               text: n,
           });
 }
+
 function S() {
     let e = r.useRef(null);
     return (0, l.jsxs)(c.BJc, {

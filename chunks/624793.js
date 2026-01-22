@@ -10,6 +10,7 @@ var r = n(357758),
     s = n(486020),
     o = n(860689),
     l = n(652215);
+
 function c(e, t, n) {
     return (
         t in e
@@ -23,6 +24,7 @@ function c(e, t, n) {
         e
     );
 }
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -39,6 +41,7 @@ function u(e) {
     }
     return e;
 }
+
 function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -51,6 +54,7 @@ function d(e, t) {
     }
     return n;
 }
+
 function f(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -72,7 +76,7 @@ let _ = async (e) => {
             await i.Bo.get({
                 url: l.Rsh.EMOJI_SOURCE_DATA(e),
                 oldFormErrors: !0,
-                timeout: 5000,
+                timeout: 5e3,
                 rejectWithError: !0,
             })
         ).body;

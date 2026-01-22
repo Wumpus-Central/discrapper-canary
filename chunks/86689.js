@@ -1,8 +1,12 @@
-n.d(t, { E: () => s }), n(228524);
+n.d(t, {
+    E: () => s,
+}),
+    n(228524);
 var r = n(627968);
 n(64700);
 var i = n(397927),
     a = n(871930);
+
 function s(e) {
     let { children: t, description: n, setting: s, scrollPosition: o } = e;
     return (0, r.jsxs)(a.h, {

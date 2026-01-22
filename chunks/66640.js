@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(627968),
     i = n(64700),
     l = n(858229),
@@ -10,6 +12,7 @@ var r = n(627968),
     u = n(411335),
     f = n(985018),
     g = n(578551);
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,6 +38,7 @@ function b(e) {
     }
     return e;
 }
+
 function m(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -53,12 +57,19 @@ function m(e, t) {
         e
     );
 }
+
 function p(e) {
     var t, n, p;
     let { rule: x, onChangeRule: h } = e,
         j = i.useCallback(
             (e) => {
-                h(m(b({}, x), { triggerMetadata: m(b({}, x.triggerMetadata), { allowList: e }) }));
+                h(
+                    m(b({}, x), {
+                        triggerMetadata: m(b({}, x.triggerMetadata), {
+                            allowList: e,
+                        }),
+                    }),
+                );
             },
             [h, x],
         );
@@ -83,7 +94,9 @@ function p(e) {
                     }),
                 ],
             }),
-            (0, r.jsx)(d.A, { type: d.A.Type.ARROW_DOWN }),
+            (0, r.jsx)(d.A, {
+                type: d.A.Type.ARROW_DOWN,
+            }),
             (0, r.jsx)(o.A, {
                 step: 2,
                 header: f.intl.string(f.t["18TOiQ"]),
@@ -92,7 +105,9 @@ function p(e) {
                     onChangeRule: h,
                 }),
             }),
-            (0, r.jsx)(d.A, { type: d.A.Type.CROSS }),
+            (0, r.jsx)(d.A, {
+                type: d.A.Type.CROSS,
+            }),
             (0, r.jsx)(o.A, {
                 step: 3,
                 header: f.intl.string(f.t.eq3gjh),

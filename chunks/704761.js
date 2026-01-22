@@ -1,4 +1,7 @@
-n.d(t, { A: () => p }), n(896048);
+n.d(t, {
+    A: () => p,
+}),
+    n(896048);
 var r = n(627968);
 n(64700);
 var l = n(311907),
@@ -10,6 +13,7 @@ var l = n(311907),
     u = n(677056),
     d = n(526162),
     f = n(635917);
+
 function p() {
     let [e, t] = (0, l.yK)([s.default, d.A], () => [
             d.A.getCurrentDesktopIcon(),

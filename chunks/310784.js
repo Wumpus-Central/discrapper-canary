@@ -734,7 +734,7 @@
                 a = n[2],
                 s = tD(i * i + a * a),
                 o = (tx(a, i) * tP + 360) % 360;
-            return 0 === tL(10000 * s) && (o = NaN), [r, s, o];
+            return 0 === tL(1e4 * s) && (o = NaN), [r, s, o];
         },
         tM = d.unpack,
         tk = tg,
@@ -993,7 +993,7 @@
         },
         nr = d.type,
         ni = function (e) {
-            if ("number" == nr(e) && e >= 0 && e <= 16777215) return [e >> 16, (e >> 8) & 255, 255 & e, 1];
+            if ("number" == nr(e) && e >= 0 && e <= 0xffffff) return [e >> 16, (e >> 8) & 255, 255 & e, 1];
             throw Error("unknown num color: " + e);
         },
         na = y,
@@ -1013,7 +1013,7 @@
             p: 5,
             test: function () {
                 for (var e = [], t = arguments.length; t--; ) e[t] = arguments[t];
-                if (1 === e.length && "number" === nl(e[0]) && e[0] >= 0 && e[0] <= 16777215) return "num";
+                if (1 === e.length && "number" === nl(e[0]) && e[0] >= 0 && e[0] <= 0xffffff) return "num";
             },
         });
     var nu = y,
@@ -1084,7 +1084,7 @@
         nv = f,
         nS = function () {
             for (var e, t = [], n = arguments.length; n--; ) t[n] = arguments[n];
-            for (var r = nb(t, "rgb"), i = r[0], a = r[2], s = 1000, o = 40000, l = 0.4; o - s > l; ) {
+            for (var r = nb(t, "rgb"), i = r[0], a = r[2], s = 1e3, o = 4e4, l = 0.4; o - s > l; ) {
                 var c = nE((e = (o + s) * 0.5));
                 c[2] / c[0] >= a / i ? (o = e) : (s = e);
             }
@@ -1127,6 +1127,7 @@
                 0.0259040371 * u + 0.7827717662 * d - 0.808675766 * f,
             ];
         };
+
     function nw(e) {
         var t = Math.abs(e);
         return t < 0.04045 ? e / 12.92 : (nN(e) || 1) * nC((t + 0.055) / 1.055, 2.4);
@@ -1149,6 +1150,7 @@
                 e.length > 3 ? e[3] : 1,
             ];
         };
+
     function nj(e) {
         var t = Math.abs(e);
         return t > 0.0031308 ? (nx(e) || 1) * (1.055 * nD(t, 1 / 2.4) - 0.055) : 12.92 * e;
@@ -1571,7 +1573,7 @@
                         c = g(e) / (o.length - 2);
                     } else c = d !== u ? (e - u) / (d - u) : 1;
                     (c = b(c)), r || (c = E(c)), 1 !== h && (c = rH(c, h));
-                    var f = Math.floor(10000 * (c = Math.min(1, Math.max(0, (c = s[0] + c * (1 - s[0] - s[1]))))));
+                    var f = Math.floor(1e4 * (c = Math.min(1, Math.max(0, (c = s[0] + c * (1 - s[0] - s[1]))))));
                     if (_ && p[f]) i = p[f];
                     else {
                         if ("array" === rB(l))
@@ -1731,6 +1733,7 @@
                 A
             );
         };
+
     function rW(e, t, n) {
         for (var r = [], i = e < t, a = n ? (i ? t + 1 : t - 1) : t, s = e; i ? s < a : s > a; i ? s++ : s--) r.push(s);
         return r;

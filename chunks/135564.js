@@ -1,10 +1,13 @@
-n.d(t, { F: () => p }), n(65821);
+n.d(t, {
+    F: () => p,
+}),
+    n(65821);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
     o = n(964892),
-    l = n(600000),
+    l = n(6e5),
     c = n(795127),
     u = n(887266);
 let d = 12,
@@ -13,6 +16,7 @@ let d = 12,
             n = t / 2 - d;
         return Math.max(-n, Math.min(n, e));
     };
+
 function p(e) {
     let { className: t } = e,
         n = i.useContext(o.e);

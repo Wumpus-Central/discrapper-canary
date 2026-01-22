@@ -1,6 +1,9 @@
-n.d(t, { C: () => a });
+n.d(t, {
+    C: () => a,
+});
 var r = n(652215),
     i = n(985018);
+
 function a(e) {
     switch (e) {
         case r.yTV.DESKTOP:

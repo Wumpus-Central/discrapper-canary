@@ -1,4 +1,6 @@
-s.d(e, { default: () => g });
+s.d(e, {
+    default: () => g,
+});
 var i = s(627968),
     n = s(64700),
     r = s(158954),
@@ -10,6 +12,7 @@ var i = s(627968),
     d = s(652215),
     x = s(985018),
     m = s(784787);
+
 function g(t) {
     let { transitionState: e, onClose: s, questContent: g, quest: T } = t,
         _ = ((t) => {
@@ -24,7 +27,9 @@ function g(t) {
                 case l.uF.ACTIVITY_PANEL:
                 case l.uF.QUESTS_EMBED:
                 case l.uF.QUEST_LIVE_STREAM:
-                    return { activity: !0 };
+                    return {
+                        activity: !0,
+                    };
                 default:
                     return;
             }
@@ -57,7 +62,9 @@ function g(t) {
                 className: m.gt,
                 children: f,
             }),
-            (0, i.jsx)(h, { targetedTraits: _ }),
+            (0, i.jsx)(h, {
+                targetedTraits: _,
+            }),
             (0, i.jsx)(a.Text, {
                 variant: "text-xs/medium",
                 color: "text-muted",
@@ -68,6 +75,7 @@ function g(t) {
         ],
     });
 }
+
 function h(t) {
     let { targetedTraits: e } = t;
     if (null == e) return null;
@@ -95,6 +103,7 @@ function h(t) {
         });
     }
 }
+
 function T(t) {
     let { icon: e, children: s } = t;
     return (0, i.jsxs)(a.Text, {

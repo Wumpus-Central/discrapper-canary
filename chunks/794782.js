@@ -10,9 +10,11 @@ var r = n(961350),
     i = n(9448),
     a = n(974930),
     s = n(988794);
+
 function o(e) {
     return !!(null == e ? void 0 : e.id);
 }
+
 function l(e) {
     var t, n;
     return null == e
@@ -31,6 +33,7 @@ function l(e) {
               count: e.count,
           };
 }
+
 function c(e) {
     return null == e
         ? null
@@ -47,6 +50,7 @@ function c(e) {
               count: e.count,
           };
 }
+
 function u(e) {
     return e.map((e) => ({
         event_exception_id: e.eventExceptionId,
@@ -57,6 +61,7 @@ function u(e) {
         is_canceled: e.isCanceled,
     }));
 }
+
 function d(e) {
     return e.map((e) => ({
         eventExceptionId: e.event_exception_id,
@@ -67,9 +72,11 @@ function d(e) {
         isCanceled: e.is_canceled,
     }));
 }
+
 function f(e) {
     return null != e && "id" in e;
 }
+
 function p(e, t, n) {
     let {
         name: i,
@@ -102,6 +109,7 @@ function p(e, t, n) {
         guild_scheduled_event_exceptions: u(g),
     };
 }
+
 function _(e, t) {
     var n, r, o, l, u, p, _;
     let h = {
@@ -120,7 +128,10 @@ function _(e, t) {
     };
     if (f(e) && (null == e ? void 0 : e.entity_type) === s.Ps.EXTERNAL) {
         let t = (0, i.oF)(e);
-        null != t && (h.entityMetadata = { location: t });
+        null != t &&
+            (h.entityMetadata = {
+                location: t,
+            });
     } else
         null == h.channelId &&
             null != t &&

@@ -1,4 +1,7 @@
-n.d(r, { default: () => d }), n(896048);
+n.d(r, {
+    default: () => d,
+}),
+    n(896048);
 var i = n(627968),
     a = n(64700),
     e = n(158954),
@@ -6,6 +9,7 @@ var i = n(627968),
     l = n(400492),
     o = n(985018),
     c = n(237905);
+
 function d(t) {
     let { transitionState: r, onClose: n } = t,
         d = () => (null == n || n(), Promise.resolve());

@@ -1,4 +1,8 @@
-n.d(t, { A: () => f }), n(896048), n(747238);
+n.d(t, {
+    A: () => f,
+}),
+    n(896048),
+    n(747238);
 var r = n(627968);
 n(64700);
 var i = n(110259),
@@ -9,6 +13,7 @@ var i = n(110259),
     c = n(250627),
     u = n(284605),
     d = n(412728);
+
 function f(e) {
     let { code: t } = e,
         [n, f] = t.split("-"),
@@ -23,7 +28,9 @@ function f(e) {
                 has_entitlement: (null == p ? void 0 : p.has_entitlement) === !0,
             },
         },
-        { disableTrack: null == p },
+        {
+            disableTrack: null == p,
+        },
     ),
     null == p || _ !== n)
         ? null

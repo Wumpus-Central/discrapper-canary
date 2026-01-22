@@ -1,4 +1,6 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -31,6 +33,8 @@ let s = (e, t) => {
     },
     o = {
         getForumChannelPermissionText: function () {
-            return a.intl.format(a.t.zlXUVY, { warningHook: s });
+            return a.intl.format(a.t.zlXUVY, {
+                warningHook: s,
+            });
         },
     };

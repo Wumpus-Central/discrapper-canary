@@ -1,9 +1,13 @@
-n.d(t, { A: () => p }), n(896048);
+n.d(t, {
+    A: () => p,
+}),
+    n(896048);
 var r = n(73153),
     i = n(439372),
     a = n(927813),
     s = n(966597),
     o = n(85109);
+
 function l(e, t, n) {
     return (
         t in e
@@ -18,10 +22,15 @@ function l(e, t, n) {
     );
 }
 let c = null;
+
 function u(e) {
     let { enabled: t } = s.A.getCurrentConfig(
-        { location: "MessageRemindersNotificationManager" },
-        { autoTrackExposure: !1 },
+        {
+            location: "MessageRemindersNotificationManager",
+        },
+        {
+            autoTrackExposure: !1,
+        },
     );
     t &&
         (r.h.dispatch({
@@ -30,11 +39,16 @@ function u(e) {
         }),
         d());
 }
+
 function d() {
     var e;
     let { enabled: t } = s.A.getCurrentConfig(
-        { location: "MessageRemindersNotificationManager" },
-        { autoTrackExposure: !1 },
+        {
+            location: "MessageRemindersNotificationManager",
+        },
+        {
+            autoTrackExposure: !1,
+        },
     );
     if (!t) return;
     null != c && clearTimeout(c);

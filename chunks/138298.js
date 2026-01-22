@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(73153),
     i = n(843472),
     a = n(56562),
@@ -25,7 +27,9 @@ let u = {
                       messageId: n,
                       flash: !0,
                   })
-                : o.A.fetchMessages({ channelId: t });
+                : o.A.fetchMessages({
+                      channelId: t,
+                  });
     },
     openChannelAsSidebar(e) {
         let { guildId: t, channelId: n, baseChannelId: s, flash: c = !0, details: u } = e;

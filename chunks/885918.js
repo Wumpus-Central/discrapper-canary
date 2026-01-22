@@ -1,4 +1,7 @@
-n.d(t, { A: () => _ }), n(65821);
+n.d(t, {
+    A: () => _,
+}),
+    n(65821);
 var r = n(975975),
     i = n.n(r),
     a = n(762230),
@@ -38,7 +41,9 @@ let p = {
             }),
                 (null == n ? void 0 : n.withMessage) == null ||
                     (0, d.lP)(r, u.A) ||
-                    (await s.A.sendMessage(r.id, l.Ay.parse(r, n.withMessage), !1, { location: f.Hx.FORWARDING }));
+                    (await s.A.sendMessage(r.id, l.Ay.parse(r, n.withMessage), !1, {
+                        location: f.Hx.FORWARDING,
+                    }));
         },
         sendForwards: (e, t, n) => i()(t.map((t) => p.sendForward(e, t, n))),
     },

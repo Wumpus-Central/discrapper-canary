@@ -1,4 +1,6 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var r = n(627968),
     i = n(64700),
     l = n(311907),
@@ -14,10 +16,18 @@ var r = n(627968),
     A = n(798817),
     g = n(696016),
     m = n(985018);
+
 function b(e) {
     let { canShowReminder: t = !1, className: b } = e,
         _ = (0, f.A)(u.A),
-        { showClipsHeaderEntrypoint: E } = d.L_.useExperiment({ location: "ClipsButton" }, { autoTrackExposure: !1 }),
+        { showClipsHeaderEntrypoint: E } = d.L_.useExperiment(
+            {
+                location: "ClipsButton",
+            },
+            {
+                autoTrackExposure: !1,
+            },
+        ),
         {
             hasNewClips: O,
             lastClipsSession: y,
@@ -34,6 +44,7 @@ function b(e) {
         N = (0, h.K)((e) => e.setClipsButtonRef),
         T = (0, l.bG)([c.A], () => c.A.hasLayers()),
         { preventIdle: j, allowIdle: x } = (0, o.o)("animation");
+
     function P() {
         (0, a.mMO)(
             async () => {
@@ -68,7 +79,9 @@ function b(e) {
                         })({}, t),
                     );
             },
-            { modalKey: g.nm },
+            {
+                modalKey: g.nm,
+            },
         );
     }
     return (i.useEffect(() => (v ? j() : x(), () => x()), [v, j, x]), E && _)

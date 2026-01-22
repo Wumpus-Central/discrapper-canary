@@ -1,4 +1,10 @@
-n.d(t, { m: () => s }), n(896048), n(591487), n(727858), n(747238);
+n.d(t, {
+    m: () => s,
+}),
+    n(896048),
+    n(591487),
+    n(727858),
+    n(747238);
 var r = n(998218);
 let i = new Set(n(468983)),
     a = {
@@ -6,6 +12,7 @@ let i = new Set(n(468983)),
         "bitbucket.org": RegExp("/downloads\\S*/[^/]*"),
         "gitlab.com": RegExp("/downloads\\S*/[^/]*"),
     };
+
 function s(e) {
     var t, n;
     let { pathname: s, hostname: o } = null != (t = r.A.toURLSafe(e)) ? t : {};

@@ -12,6 +12,7 @@ var r = n(627968),
     o = n(115063),
     l = n(652215);
 let c = i.createContext(void 0);
+
 function u(e) {
     let { children: t } = e,
         n = i.useRef(a.n3),
@@ -58,6 +59,7 @@ function u(e) {
         children: t,
     });
 }
+
 function d() {
     let e = i.useContext(c);
     if (null == e) throw Error("useNoticeContext must be used within a NoticeProvider");

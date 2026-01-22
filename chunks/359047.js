@@ -1,10 +1,13 @@
-r.d(t, { A: () => a });
+r.d(t, {
+    A: () => a,
+});
 var n = r(627968);
 r(64700);
 var i = r(397927),
     l = r(770666),
     o = r(823508),
     c = r(985018);
+
 function a(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         a = (0, l.A)(e),
@@ -48,7 +51,10 @@ function a(e) {
                                   }
                                   return e;
                               })({}, r)),
-                              (l = l = { guildId: e }),
+                              (l = l =
+                                  {
+                                      guildId: e,
+                                  }),
                               Object.getOwnPropertyDescriptors
                                   ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
                                   : (function (e, t) {

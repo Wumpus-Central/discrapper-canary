@@ -1,11 +1,15 @@
-n.d(t, { y: () => b }), n(896048);
+n.d(t, {
+    y: () => b,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
-    a = n(432022),
+    a = n(108531),
     s = n(397927),
     o = n(480504),
     l = n(652215),
     c = n(613568);
+
 function u(e, t, n) {
     return (
         t in e
@@ -19,6 +23,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,6 +40,7 @@ function d(e) {
     }
     return e;
 }
+
 function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -47,6 +53,7 @@ function f(e, t) {
     }
     return n;
 }
+
 function p(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -60,13 +67,35 @@ function p(e, t) {
 }
 let _ = 200,
     h = {
-        from: { opacity: 1 },
-        enter: { opacity: 1 },
-        leave: { opacity: 0 },
-        config: { duration: 200 },
+        from: {
+            opacity: 1,
+        },
+        enter: {
+            opacity: 1,
+        },
+        leave: {
+            opacity: 0,
+        },
+        config: {
+            duration: 200,
+        },
     },
-    m = p(d({}, h), { config: { duration: 50 } }),
-    g = p(d({}, h), { config: (e, t) => (t ? { duration: 800 } : { duration: 200 }) });
+    m = p(d({}, h), {
+        config: {
+            duration: 50,
+        },
+    }),
+    g = p(d({}, h), {
+        config: (e, t) =>
+            t
+                ? {
+                      duration: 800,
+                  }
+                : {
+                      duration: 200,
+                  },
+    });
+
 function E(e) {
     let { readyState: t, placeholderImg: n, placeholderStyle: o } = e,
         u = t === l.Rv1.LOADING,
@@ -86,6 +115,7 @@ function E(e) {
         ),
     });
 }
+
 function b(e) {
     let { readyState: t, aspectRatio: n, placeholder: u, placeholderVersion: d, placeholderStyle: f, children: p } = e,
         _ = t === l.Rv1.LOADING,
@@ -95,7 +125,7 @@ function b(e) {
     i.useEffect(() => {
         let e = setTimeout(() => {
             b(!0);
-        }, 2000);
+        }, 2e3);
         return () => {
             clearTimeout(e);
         };
@@ -103,7 +133,9 @@ function b(e) {
     let O = (0, s.pnh)(_ && m, g);
     return (0, r.jsxs)("div", {
         className: c.bX,
-        style: { aspectRatio: n },
+        style: {
+            aspectRatio: n,
+        },
         children: [
             p,
             null != y &&

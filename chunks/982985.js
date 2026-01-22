@@ -9,6 +9,7 @@ var n = t(627968),
     a = t(993401),
     o = t(518477),
     d = t(985018);
+
 function c(e) {
     for (var l = 1; l < arguments.length; l++) {
         var t = null != arguments[l] ? arguments[l] : {},
@@ -34,6 +35,7 @@ function c(e) {
     }
     return e;
 }
+
 function u(e, l) {
     if (null == e) return {};
     var t,
@@ -62,10 +64,15 @@ function u(e, l) {
             (n = t[i]), !(l.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
     return r;
 }
+
 function f(e) {
     let { userId: l, onClose: t } = e,
         n = i.useCallback(() => {
-            s.A.openPrivateChannel({ recipientIds: l }), null == t || t(), (0, r.s7G)();
+            s.A.openPrivateChannel({
+                recipientIds: l,
+            }),
+                null == t || t(),
+                (0, r.s7G)();
         }, [l, t]);
     return {
         action: o.pt.SEND_MESSAGE,
@@ -74,6 +81,7 @@ function f(e) {
         text: d.intl.string(d.t.zROXEV),
     };
 }
+
 function p(e) {
     let { userId: l, onClose: t, variant: i = "primary" } = e,
         r = u(e, ["userId", "onClose", "variant"]),
@@ -81,8 +89,18 @@ function p(e) {
             userId: l,
             onClose: t,
         });
-    return (0, n.jsx)(a.FD, c({ variant: i }, s, r));
+    return (0, n.jsx)(
+        a.FD,
+        c(
+            {
+                variant: i,
+            },
+            s,
+            r,
+        ),
+    );
 }
+
 function m(e) {
     let { userId: l, onClose: t, variant: i = "primary" } = e,
         r = u(e, ["userId", "onClose", "variant"]),

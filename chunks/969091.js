@@ -78,14 +78,24 @@ class l extends r.EventEmitter {
         a.default.keys(e).forEach((r) => {
             let i = e[r],
                 a = JSON.stringify([r, i]).length;
-            n + a > o && (this.send(s.p.GUILD_SUBSCRIPTIONS_BULK, { subscriptions: t }), (t = {}), (n = 0)),
+            n + a > o &&
+                (this.send(s.p.GUILD_SUBSCRIPTIONS_BULK, {
+                    subscriptions: t,
+                }),
+                (t = {}),
+                (n = 0)),
                 (t[r] = i),
                 (n += a);
         }),
-            n > 0 && this.send(s.p.GUILD_SUBSCRIPTIONS_BULK, { subscriptions: t });
+            n > 0 &&
+                this.send(s.p.GUILD_SUBSCRIPTIONS_BULK, {
+                    subscriptions: t,
+                });
     }
     callConnect(e) {
-        this.send(s.p.CALL_CONNECT, { channel_id: e });
+        this.send(s.p.CALL_CONNECT, {
+            channel_id: e,
+        });
     }
     streamCreate(e, t, n) {
         let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
@@ -97,13 +107,19 @@ class l extends r.EventEmitter {
         });
     }
     streamWatch(e) {
-        this.send(s.p.STREAM_WATCH, { stream_key: e });
+        this.send(s.p.STREAM_WATCH, {
+            stream_key: e,
+        });
     }
     streamPing(e) {
-        this.send(s.p.STREAM_PING, { stream_key: e });
+        this.send(s.p.STREAM_PING, {
+            stream_key: e,
+        });
     }
     streamDelete(e) {
-        this.send(s.p.STREAM_DELETE, { stream_key: e });
+        this.send(s.p.STREAM_DELETE, {
+            stream_key: e,
+        });
     }
     streamSetPaused(e, t) {
         this.send(s.p.STREAM_SET_PAUSED, {
@@ -122,7 +138,9 @@ class l extends r.EventEmitter {
         });
     }
     requestSoundboardSounds(e) {
-        this.send(s.p.REQUEST_SOUNDBOARD_SOUNDS, { guild_ids: e });
+        this.send(s.p.REQUEST_SOUNDBOARD_SOUNDS, {
+            guild_ids: e,
+        });
     }
     requestLastMessages(e, t) {
         this.send(s.p.REQUEST_LAST_MESSAGES, {
@@ -146,7 +164,9 @@ class l extends r.EventEmitter {
         });
     }
     requestChannelStatuses(e) {
-        this.send(s.p.REQUEST_CHANNEL_STATUSES, { guild_id: e });
+        this.send(s.p.REQUEST_CHANNEL_STATUSES, {
+            guild_id: e,
+        });
     }
     requestChannelInfo(e, t) {
         this.send(s.p.REQUEST_CHANNEL_INFO, {

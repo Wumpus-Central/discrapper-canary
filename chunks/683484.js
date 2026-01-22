@@ -1,4 +1,7 @@
-n.d(t, { A: () => _ }), n(896048);
+n.d(t, {
+    A: () => _,
+}),
+    n(896048);
 var i = n(627968),
     r = n(64700),
     s = n(503698),
@@ -20,6 +23,7 @@ var i = n(627968),
     v = n(855790),
     E = n(985018),
     x = n(803946);
+
 function S(e, t, n) {
     return (
         t in e
@@ -35,7 +39,11 @@ function S(e, t, n) {
 }
 class j extends r.Component {
     componentDidUpdate() {
-        this.props.locked && this.state.showOpacitySlider && this.setState({ showOpacitySlider: !1 });
+        this.props.locked &&
+            this.state.showOpacitySlider &&
+            this.setState({
+                showOpacitySlider: !1,
+            });
     }
     renderCallButton() {
         let e,
@@ -118,7 +126,9 @@ class j extends r.Component {
     }
     constructor(...e) {
         super(...e),
-            S(this, "state", { showOpacitySlider: !1 }),
+            S(this, "state", {
+                showOpacitySlider: !1,
+            }),
             S(this, "handleClickCall", (e) => {
                 let { channel: t, userIsInChannelCall: n, channelHasActiveCall: i } = this.props;
                 if (i) n ? d.default.selectVoiceChannel(null) : c.A.callPrivateChannel(t.id, !1);
@@ -129,11 +139,17 @@ class j extends r.Component {
             }),
             S(this, "handleOpenOpacitySettings", () => {
                 let { pinned: e } = this.props;
-                this.setState({ showOpacitySlider: !0 }), e && c.A.setPreviewInGameMode(!0);
+                this.setState({
+                    showOpacitySlider: !0,
+                }),
+                    e && c.A.setPreviewInGameMode(!0);
             }),
             S(this, "handleCloseOpacitySettings", () => {
                 let { pinned: e } = this.props;
-                this.setState({ showOpacitySlider: !1 }), e && c.A.setPreviewInGameMode(!1);
+                this.setState({
+                    showOpacitySlider: !1,
+                }),
+                    e && c.A.setPreviewInGameMode(!1);
             }),
             S(this, "handleMouseDown", (e) => {
                 let { onMouseDown: t } = this.props;
@@ -165,6 +181,7 @@ class j extends r.Component {
             });
     }
 }
+
 function _(e) {
     let { channel: t } = e,
         n = (function (e, t) {

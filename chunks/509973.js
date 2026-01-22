@@ -1,4 +1,5 @@
 var r = n(105953).RBTree;
+
 function i(e, t, n) {
     (this.discrete = !1 === e),
         (this.delta = e || 0.01),
@@ -8,22 +9,26 @@ function i(e, t, n) {
         (this.nreset = 0),
         this.reset();
 }
+
 function a(e, t) {
     return e.mean > t.mean ? 1 : e.mean < t.mean ? -1 : 0;
 }
+
 function s(e, t) {
     return e.mean_cumn - t.mean_cumn;
 }
+
 function o(e) {
     var t = Math.floor(Math.random() * e.length);
     return e.splice(t, 1)[0];
 }
+
 function l(e) {
     (this.config = e || {}),
         (this.mode = this.config.mode || "auto"),
         i.call(this, "cont" === this.mode && e.delta),
         (this.digest_ratio = this.config.ratio || 0.9),
-        (this.digest_thresh = this.config.thresh || 1000),
+        (this.digest_thresh = this.config.thresh || 1e3),
         (this.n_unique = 0);
 }
 (i.prototype.reset = function () {
@@ -79,7 +84,9 @@ function l(e) {
     }),
     (i.prototype.find_nearest = function (e) {
         if (0 === this.size()) return null;
-        var t = this.centroids.lowerBound({ mean: e }),
+        var t = this.centroids.lowerBound({
+                mean: e,
+            }),
             n = null === t.data() ? t.prev() : t.data();
         if (n.mean === e || this.discrete) return n;
         var r = t.prev();
@@ -117,7 +124,9 @@ function l(e) {
         this._cumulate(!1), !this.discrete && this.K && this.size() > this.K / this.delta && this.compress();
     }),
     (i.prototype.bound_mean = function (e) {
-        var t = this.centroids.upperBound({ mean: e }),
+        var t = this.centroids.upperBound({
+                mean: e,
+            }),
             n = t.prev(),
             r = n.mean === e ? n : t.next();
         return [n, r];
@@ -141,7 +150,9 @@ function l(e) {
     }),
     (i.prototype.bound_mean_cumn = function (e) {
         this.centroids._comparator = s;
-        var t = this.centroids.upperBound({ mean_cumn: e });
+        var t = this.centroids.upperBound({
+            mean_cumn: e,
+        });
         this.centroids._comparator = a;
         var n = t.prev(),
             r = n && n.mean_cumn === e ? n : t.next();

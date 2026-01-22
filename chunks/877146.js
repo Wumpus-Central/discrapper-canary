@@ -16,6 +16,7 @@ var r = n(627968),
     p = n(355622),
     _ = n(416379),
     h = n(111314);
+
 function m(e) {
     let {
             channel: t,
@@ -61,9 +62,19 @@ function m(e) {
                     }),
                 ),
             v && e.push((0, r.jsx)(c.X, {})),
-            null != E && e.push((0, r.jsx)(f.C, { pendingScheduledMessage: E })),
+            null != E &&
+                e.push(
+                    (0, r.jsx)(f.C, {
+                        pendingScheduledMessage: E,
+                    }),
+                ),
             "gameMentionInput" === b && i.push((0, r.jsx)(l.S, {})),
-            "timestampMentionInput" === b && i.push((0, r.jsx)(u.S, { error: null != y && y })),
+            "timestampMentionInput" === b &&
+                i.push(
+                    (0, r.jsx)(u.S, {
+                        error: null != y && y,
+                    }),
+                ),
             {
                 stacked: e,
                 floating: i,
@@ -71,10 +82,27 @@ function m(e) {
         );
     }, [m, O, A, t, g, v, n, E, b, y]);
 }
+
 function g(e) {
     let { bars: t } = e,
-        n = t.stacked.map((e, t) => (0, r.jsx)("div", { children: e }, t)),
-        a = t.floating.map((e, t) => (0, r.jsx)(i.Fragment, { children: e }, t));
+        n = t.stacked.map((e, t) =>
+            (0, r.jsx)(
+                "div",
+                {
+                    children: e,
+                },
+                t,
+            ),
+        ),
+        a = t.floating.map((e, t) =>
+            (0, r.jsx)(
+                i.Fragment,
+                {
+                    children: e,
+                },
+                t,
+            ),
+        );
     return 0 === n.length && 0 === a.length
         ? null
         : (0, r.jsxs)(i.Fragment, {

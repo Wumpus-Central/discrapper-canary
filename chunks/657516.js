@@ -1,4 +1,7 @@
-n.d(t, { default: () => v }), n(896048);
+n.d(t, {
+    default: () => v,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(284009),
@@ -166,8 +169,12 @@ let v = (e) => {
                         {
                             variant: "primary",
                             text: G
-                                ? O.intl.formatToPlainString(O.t.Oh6mxU, { slotCount: t })
-                                : O.intl.formatToPlainString(O.t.ZU5x5w, { slotCount: t }),
+                                ? O.intl.formatToPlainString(O.t.Oh6mxU, {
+                                      slotCount: t,
+                                  })
+                                : O.intl.formatToPlainString(O.t.ZU5x5w, {
+                                      slotCount: t,
+                                  }),
                             onClick: a,
                             loading: N,
                             disabled: N,

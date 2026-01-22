@@ -31,14 +31,17 @@ if (!t)
 e.exports = (function () {
     var e = 5,
         n = 3,
-        r = 1000,
+        r = 1e3,
         i = 0.75;
+
     function a(t, n, r) {
         return (t << (2 * e)) + (n << e) + r;
     }
+
     function s(e) {
         var t = [],
             n = !1;
+
         function r() {
             t.sort(e), (n = !0);
         }
@@ -63,15 +66,18 @@ e.exports = (function () {
             },
         };
     }
+
     function o(e, t, n, r, i, a, s) {
         var o = this;
         (o.r1 = e), (o.r2 = t), (o.g1 = n), (o.g2 = r), (o.b1 = i), (o.b2 = a), (o.histo = s);
     }
+
     function l() {
         this.vboxes = new s(function (e, n) {
             return t.naturalOrder(e.vbox.count() * e.vbox.volume(), n.vbox.count() * n.vbox.volume());
         });
     }
+
     function c(t) {
         var r,
             i,
@@ -83,15 +89,16 @@ e.exports = (function () {
             s
         );
     }
+
     function u(e, t) {
         var r,
             i,
             a,
-            s = 1000000,
+            s = 1e6,
             l = 0,
-            c = 1000000,
+            c = 1e6,
             u = 0,
-            d = 1000000,
+            d = 1e6,
             f = 0;
         return (
             e.forEach(function (e) {
@@ -105,6 +112,7 @@ e.exports = (function () {
             new o(s, l, c, u, d, f, t)
         );
     }
+
     function d(e, n) {
         if (n.count()) {
             var r = n.r2 - n.r1 + 1,
@@ -142,6 +150,7 @@ e.exports = (function () {
                 m(o == r ? "r" : o == i ? "g" : "b")
             );
         }
+
         function m(e) {
             var t,
                 r,
@@ -290,6 +299,7 @@ e.exports = (function () {
                     p = new s(function (e, n) {
                         return t.naturalOrder(e.count(), n.count());
                     });
+
                 function _(e, t) {
                     for (var n, i = 1, s = 0; s < r; ) {
                         if (!(n = e.pop()).count()) {

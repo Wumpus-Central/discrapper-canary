@@ -1,4 +1,5 @@
 let r;
+
 function i() {
     return null != r
         ? r
@@ -20,4 +21,6 @@ function i() {
               return await t.init(), t;
           })());
 }
-n.d(t, { e: () => i });
+n.d(t, {
+    e: () => i,
+});

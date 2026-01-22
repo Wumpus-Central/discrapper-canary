@@ -1,4 +1,8 @@
-n.d(t, { A: () => I }), n(896048), n(321073);
+n.d(t, {
+    A: () => I,
+}),
+    n(896048),
+    n(321073);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -13,6 +17,7 @@ var r = n(627968),
     _ = n(985018),
     h = n(233080),
     m = n(710504);
+
 function g(e, t, n) {
     return (
         t in e
@@ -26,6 +31,7 @@ function g(e, t, n) {
         e
     );
 }
+
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,6 +48,7 @@ function E(e) {
     }
     return e;
 }
+
 function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -54,6 +61,7 @@ function b(e, t) {
     }
     return n;
 }
+
 function y(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -82,7 +90,9 @@ class S extends i.PureComponent {
                   reactionsCount: n,
               }
             : t.reactionsCount !== n
-              ? { reactionsCount: n }
+              ? {
+                    reactionsCount: n,
+                }
               : null;
     }
     render() {
@@ -116,8 +126,14 @@ class S extends i.PureComponent {
             role: "group",
             transitionLeave: !1,
             id: (0, d.JH)(e),
-            onMouseEnter: () => this.setState({ isHovered: !0 }),
-            onMouseLeave: () => this.setState({ isHovered: !1 }),
+            onMouseEnter: () =>
+                this.setState({
+                    isHovered: !0,
+                }),
+            onMouseLeave: () =>
+                this.setState({
+                    isHovered: !1,
+                }),
             children: [
                 (0, r.jsx)(f.A, {
                     reactions: I,
@@ -151,7 +167,9 @@ class S extends i.PureComponent {
                         channel: E,
                         useChatFontScaling: A,
                         isHovered: this.state.isHovered,
-                        className: s()({ [N.forceShow]: w }),
+                        className: s()({
+                            [N.forceShow]: w,
+                        }),
                     }),
             ],
         });
@@ -179,8 +197,18 @@ let I = (e) => {
                 o = r.length;
             return (
                 i.forEach((t) => {
-                    t.burst_count > 0 && e.push(y(E({}, t), { type: c.v.BURST })),
-                        t.count > 0 && e.push(y(E({}, t), { type: c.v.NORMAL })),
+                    t.burst_count > 0 &&
+                        e.push(
+                            y(E({}, t), {
+                                type: c.v.BURST,
+                            }),
+                        ),
+                        t.count > 0 &&
+                            e.push(
+                                y(E({}, t), {
+                                    type: c.v.NORMAL,
+                                }),
+                            ),
                         null != t.me_vote && --o;
                 }),
                 {

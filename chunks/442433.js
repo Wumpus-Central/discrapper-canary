@@ -9,6 +9,7 @@ var r = n(73153),
     a = n(723702),
     s = n(454235),
     o = n(652215);
+
 function l(e, t, n) {
     return (
         t in e
@@ -22,6 +23,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -38,22 +40,29 @@ function c(e) {
     }
     return e;
 }
+
 function u(e) {
     r.h.dispatch({
         type: "CONTEXT_MENU_OPEN",
         contextMenu: e,
     });
 }
+
 function d(e) {
     {
         let { flushSync: t } = n(340287);
         t(() => {
             r.h.wait(() => {
-                r.h.dispatch({ type: "CONTEXT_MENU_CLOSE" }).finally(e);
+                r.h
+                    .dispatch({
+                        type: "CONTEXT_MENU_CLOSE",
+                    })
+                    .finally(e);
             });
         });
     }
 }
+
 function f(e, t, n, r) {
     var l, d, f;
     if ((e.stopPropagation(), null != e.currentTarget.contains && !e.currentTarget.contains(e.target))) return;
@@ -69,7 +78,12 @@ function f(e, t, n, r) {
         renderLazy: r,
         target: null != (l = e.target) ? l : e.currentTarget,
         rect: new DOMRect(p, _, 0, 0),
-        config: c({ context: __OVERLAY__ ? o.BRT.OVERLAY : null != (d = (0, i.zd)()) ? d : o.BRT.APP }, n),
+        config: c(
+            {
+                context: __OVERLAY__ ? o.BRT.OVERLAY : null != (d = (0, i.zd)()) ? d : o.BRT.APP,
+            },
+            n,
+        ),
     };
     if ((null == n ? void 0 : n.enableSpellCheck) && (0, a.isDesktop)()) {
         let e = () => {
@@ -78,6 +92,7 @@ function f(e, t, n, r) {
             t = (0, s.nL)(e);
     } else e.preventDefault(), u(h);
 }
+
 function p(e, t, n) {
     f(e, void 0, n, t);
 }

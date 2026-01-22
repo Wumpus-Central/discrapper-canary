@@ -1,4 +1,6 @@
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var r = n(243949),
     i = n(939496),
     a = n(667201),
@@ -10,6 +12,7 @@ var r = n(243949),
     d = n(518477),
     f = n(996988),
     p = n(985018);
+
 function _(e) {
     let { onAction: t } = e,
         { themeType: n } = (0, i.E)(),
@@ -17,7 +20,12 @@ function _(e) {
             userId: e.user.id,
             tabSection: d.RP.ACTIVITY,
             label: p.intl.string(p.t.pD1L1u),
-            onAction: () => (null == t ? void 0 : t({ action: "PRESS_VIEW_ALL_ACTIVITY_MENU_ITEM" })),
+            onAction: () =>
+                null == t
+                    ? void 0
+                    : t({
+                          action: "PRESS_VIEW_ALL_ACTIVITY_MENU_ITEM",
+                      }),
         });
     return [
         n === f.d.POPOUT ? _ : null,

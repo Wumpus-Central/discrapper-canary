@@ -1,4 +1,7 @@
-n.d(t, { A: () => g }), n(896048);
+n.d(t, {
+    A: () => g,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(554146),
@@ -11,6 +14,7 @@ var r = n(627968),
     p = n(249584),
     f = n(791295),
     h = n(49999);
+
 function A(e) {
     let { renderPopout: t, renderGuildHeaderDropdownButton: n } = e,
         l = i.useRef(null);
@@ -90,7 +94,9 @@ let g = i.memo(function (e) {
                     });
                 case l.M.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP:
                     return (0, r.jsx)(A, {
-                        renderPopout: (0, r.jsx)(u.A, { markAsDismissed: g }),
+                        renderPopout: (0, r.jsx)(u.A, {
+                            markAsDismissed: g,
+                        }),
                         renderGuildHeaderDropdownButton: i,
                     });
                 case l.M.MEDIA_CHANNEL_UPSELL:

@@ -1,4 +1,7 @@
-n.d(t, { A: () => d }), n(896048);
+n.d(t, {
+    A: () => d,
+}),
+    n(896048);
 var a = n(627968),
     l = n(64700),
     i = n(503698),
@@ -6,6 +9,7 @@ var a = n(627968),
     s = n(397927),
     o = n(147925),
     c = n(314516);
+
 function d(e) {
     let {
             icon: t,
@@ -33,12 +37,20 @@ function d(e) {
         }, [A, _, p, f]),
         S = l.useMemo(() => {
             if (A) {
-                if (null != x) return { maxHeight: "number" == typeof x ? "".concat(x, "px") : x };
-                if (null != j) return { maxHeight: "".concat(j, "px") };
+                if (null != x)
+                    return {
+                        maxHeight: "number" == typeof x ? "".concat(x, "px") : x,
+                    };
+                if (null != j)
+                    return {
+                        maxHeight: "".concat(j, "px"),
+                    };
             }
         }, [x, A, j]);
     return (0, a.jsxs)("div", {
-        className: r()(c.Yt, u, { [c.Sg]: A }),
+        className: r()(c.Yt, u, {
+            [c.Sg]: A,
+        }),
         children: [
             (0, a.jsxs)(s.DUT, {
                 className: c.wx,
@@ -67,7 +79,9 @@ function d(e) {
                         ],
                     }),
                     (0, a.jsx)("div", {
-                        className: r()(c.OW, { [c.Sg]: A }),
+                        className: r()(c.OW, {
+                            [c.Sg]: A,
+                        }),
                         children: (0, a.jsx)(o.A, {
                             width: 20,
                             height: 20,
@@ -78,7 +92,9 @@ function d(e) {
             }),
             (0, a.jsx)("div", {
                 ref: v,
-                className: r()(c.Qs, { [c.Sg]: A }),
+                className: r()(c.Qs, {
+                    [c.Sg]: A,
+                }),
                 style: S,
                 children: d,
             }),

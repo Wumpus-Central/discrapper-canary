@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var a = n(627968),
     l = n(64700),
     i = n(311907),
@@ -10,17 +12,25 @@ var a = n(627968),
     u = n(985018),
     m = n(876402);
 let p = l.lazy(() => n.e("24832").then(n.bind(n, 748579)));
+
 function h() {
     let e = (0, i.bG)([o.A], () => o.A.useReducedMotion),
         t = (0, c.A)((e) => e.shouldRenderTenureLevelUp),
         n = (0, d.A)();
-    return e || !t || null == n ? null : (0, a.jsx)(f, { levelUpData: n });
+    return e || !t || null == n
+        ? null
+        : (0, a.jsx)(f, {
+              levelUpData: n,
+          });
 }
+
 function f(e) {
     let { levelUpData: t } = e,
         n = l.useRef(null),
         i = l.useCallback(() => {
-            c.A.setState({ shouldRenderTenureLevelUp: !1 });
+            c.A.setState({
+                shouldRenderTenureLevelUp: !1,
+            });
         }, []);
     return (
         l.useEffect(() => i, [i]),
@@ -44,7 +54,9 @@ function f(e) {
                     }),
                     (0, a.jsx)(l.Suspense, {
                         fallback: null,
-                        children: (0, a.jsx)(p, { levelUpData: t }),
+                        children: (0, a.jsx)(p, {
+                            levelUpData: t,
+                        }),
                     }),
                 ],
             }),

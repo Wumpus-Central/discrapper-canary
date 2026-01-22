@@ -1,7 +1,10 @@
-Object.defineProperty(t, "__esModule", { value: !0 }),
+Object.defineProperty(t, "__esModule", {
+    value: !0,
+}),
     (t.isWAV = t.isMP3 = t.isM4A = t.isFLAC = t.isAMR = t.isAAC = void 0);
 let r = n(835986),
     i = n(817762);
+
 function a(e) {
     let t = (0, i.getFileChunk)(e);
     return r.FileTypes.checkByFileType(t, "m4a");

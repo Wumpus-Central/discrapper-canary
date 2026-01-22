@@ -1,4 +1,6 @@
-n.d(t, { A: () => S });
+n.d(t, {
+    A: () => S,
+});
 var r = n(627968);
 n(64700);
 var l = n(735438),
@@ -23,6 +25,7 @@ var l = n(735438),
     v = n(927578),
     P = n(985018),
     E = n(645052);
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -86,7 +89,9 @@ let C = (e) => {
                                             (0, r.jsx)(s.Text, {
                                                 variant: "text-xxs/normal",
                                                 color: "text-muted",
-                                                children: P.intl.format(P.t.Io7ozn, { days: j.days.toString() }),
+                                                children: P.intl.format(P.t.Io7ozn, {
+                                                    days: j.days.toString(),
+                                                }),
                                             }),
                                         (0, r.jsxs)(s.Text, {
                                             variant: "text-xxs/normal",

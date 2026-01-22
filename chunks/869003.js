@@ -1,4 +1,7 @@
-n.d(t, { A: () => I }), n(896048);
+n.d(t, {
+    A: () => I,
+}),
+    n(896048);
 var r = n(627968);
 n(64700);
 var i = n(158954),
@@ -17,6 +20,7 @@ var i = n(158954),
     g = n(5867),
     E = n(652215),
     b = n(985018);
+
 function y(e, t, n) {
     return (
         t in e
@@ -30,6 +34,7 @@ function y(e, t, n) {
         e
     );
 }
+
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -67,7 +72,9 @@ class S extends f.A {
                     i.Modal,
                     O(
                         {
-                            title: b.intl.formatToPlainString(b.t.hbiAO6, { code: t }),
+                            title: b.intl.formatToPlainString(b.t.hbiAO6, {
+                                code: t,
+                            }),
                             subtitle: n,
                             actions: [
                                 {

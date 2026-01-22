@@ -1,4 +1,6 @@
-n.d(t, { h: () => d });
+n.d(t, {
+    h: () => d,
+});
 var l = n(627968),
     r = n(64700),
     i = n(520586),
@@ -7,6 +9,7 @@ var l = n(627968),
     o = n(652176),
     u = n(253932),
     c = n(226303);
+
 function d(e) {
     let { previewMessage: t } = e,
         n = u.hH.useSetting(),
@@ -25,12 +28,20 @@ function d(e) {
                 maxWidth: 200,
                 analyticsSource: "ApplicationCommandSharePreview",
             });
-            return (0, l.jsx)(r.Fragment, { children: n }, t);
+            return (0, l.jsx)(
+                r.Fragment,
+                {
+                    children: n,
+                },
+                t,
+            );
         });
     return (0, l.jsxs)("div", {
         className: c.i1,
         children: [
-            (0, l.jsx)("div", { className: c.hD }),
+            (0, l.jsx)("div", {
+                className: c.hD,
+            }),
             (0, l.jsxs)("div", {
                 className: c.Qs,
                 children: [

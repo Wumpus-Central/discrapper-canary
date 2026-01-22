@@ -1,7 +1,10 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(729426),
     i = n(321034),
     a = n(687658);
+
 function s(e, t, n) {
     return (
         t in e
@@ -23,7 +26,7 @@ class o {
             r =
                 null == this.startCPU || null == n
                     ? void 0
-                    : ((n.usage - this.startCPU.usage) * 100) / ((n.sampleTime - this.startCPU.sampleTime) / 1000);
+                    : ((n.usage - this.startCPU.usage) * 100) / ((n.sampleTime - this.startCPU.sampleTime) / 1e3);
         return {
             client_performance_cpu_percentile25: e.percentiles[25],
             client_performance_cpu_percentile50: e.percentiles[50],
@@ -49,7 +52,7 @@ class o {
             if (null != this.lastCPU) {
                 let n = e.sampleTime - this.lastCPU.sampleTime;
                 if (n >= 1) {
-                    let t = ((e.usage - this.lastCPU.usage) / (n / 1000)) * 100;
+                    let t = ((e.usage - this.lastCPU.usage) / (n / 1e3)) * 100;
                     this.cpuHistogram.addSample(t, n);
                 } else t = !1;
             }
@@ -62,7 +65,9 @@ class o {
     }
     async getCurrentBattery() {
         try {
-            let { batteryLevel: e } = await (0, r.S9)({ fallback: !1 });
+            let { batteryLevel: e } = await (0, r.S9)({
+                fallback: !1,
+            });
             return e;
         } catch (e) {
             return null;
@@ -82,7 +87,7 @@ class o {
             : {
                   startBattery: this.lastBattery,
                   currentBattery: e,
-                  batteryUsageRounded: Math.round((e - this.lastBattery) * 1000) / 1000,
+                  batteryUsageRounded: Math.round((e - this.lastBattery) * 1e3) / 1e3,
               };
     }
     constructor() {

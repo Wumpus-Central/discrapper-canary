@@ -1,4 +1,6 @@
-i.d(t, { A: () => c });
+i.d(t, {
+    A: () => c,
+});
 var r = i(627968);
 i(64700);
 var s = i(397927),
@@ -6,6 +8,7 @@ var s = i(397927),
     l = i(957565),
     a = i(746080),
     o = i(985018);
+
 function c(n) {
     return (0, r.jsx)(s.Drp, {
         id: "role-subscription-copy-link",

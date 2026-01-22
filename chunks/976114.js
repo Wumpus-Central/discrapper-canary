@@ -1,5 +1,8 @@
-n.d(t, { Q: () => i });
+n.d(t, {
+    Q: () => i,
+});
 var r = n(985018);
+
 function i(e) {
     switch (e) {
         case "brl":

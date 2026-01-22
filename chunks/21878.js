@@ -11,11 +11,13 @@ var r = n(627968),
     c = n(320501),
     u = n(951727);
 let d = i.createContext(void 0);
+
 function f(e) {
     var t;
     let n = null != (t = i.useContext(d)) ? t : e;
     return s()(null != n, "Using PollReferenceMessageContext without a provider (or a fallback)"), n;
 }
+
 function p(e) {
     let { message: t, children: n } = e,
         a = (0, o.bG)([c.A], () => c.A.getMessage(t.channel_id, t.id), [t.channel_id, t.id]),
@@ -34,6 +36,7 @@ function p(e) {
         })
     );
 }
+
 function _(e) {
     let { message: t, children: n } = e;
     return (0, u.Ls)(t)

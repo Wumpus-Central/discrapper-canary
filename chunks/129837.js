@@ -1,4 +1,6 @@
-n.d(t, { z: () => p });
+n.d(t, {
+    z: () => p,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -13,6 +15,7 @@ let c = 8,
         let n = (t ? d : u) / 2 - c;
         return Math.max(-n, Math.min(n, e));
     };
+
 function p(e) {
     let { caretConfig: t } = e,
         { position: n, align: i, customOffset: c } = t,

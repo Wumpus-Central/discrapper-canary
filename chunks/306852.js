@@ -1,4 +1,7 @@
-n.d(t, { A: () => y }), n(896048);
+n.d(t, {
+    A: () => y,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -15,6 +18,7 @@ var r = n(627968),
     g = n(697166),
     m = n(976092);
 let A = "CameraPreviewPosition";
+
 function y(e) {
     let { width: t, onContextMenuParticipant: n, height: i, channel: y, participants: O, onSelectParticipant: j } = e,
         [v, x] = (function () {

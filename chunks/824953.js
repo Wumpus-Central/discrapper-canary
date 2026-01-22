@@ -1,4 +1,6 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(735438),
     i = n.n(r),
     a = n(562465),
@@ -66,7 +68,9 @@ let l = ["Spidey Bot", "Captain Hook"],
             null == n && (n = l[i().random(0, l.length - 1)]),
             a.Bo.post({
                 url: o.Rsh.CHANNEL_WEBHOOKS(t),
-                body: { name: n },
+                body: {
+                    name: n,
+                },
                 oldFormErrors: !0,
                 rejectWithError: !1,
             }).then((t) => {

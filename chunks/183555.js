@@ -8,6 +8,7 @@ var r = n(627968),
     a = n(835245),
     s = n(688810),
     o = n(672385);
+
 function l(e, t, n) {
     return (
         t in e
@@ -21,6 +22,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -120,25 +122,61 @@ let u = i.createContext(null),
             context: e,
             trackUserProfileAction: i.useCallback(
                 (n) => {
-                    null != e && (0, o.Wn)(c({ analyticsLocations: t }, e, n));
+                    null != e &&
+                        (0, o.Wn)(
+                            c(
+                                {
+                                    analyticsLocations: t,
+                                },
+                                e,
+                                n,
+                            ),
+                        );
                 },
                 [e, t],
             ),
             trackUserProfileEditAction: i.useCallback(
                 (n) => {
-                    null != e && (0, o.un)(c({ analyticsLocations: t }, e, n));
+                    null != e &&
+                        (0, o.un)(
+                            c(
+                                {
+                                    analyticsLocations: t,
+                                },
+                                e,
+                                n,
+                            ),
+                        );
                 },
                 [e, t],
             ),
             trackUserProfileEditSaved: i.useCallback(
                 (n) => {
-                    null != e && (0, o.pT)(c({ analyticsLocations: t }, e, n));
+                    null != e &&
+                        (0, o.pT)(
+                            c(
+                                {
+                                    analyticsLocations: t,
+                                },
+                                e,
+                                n,
+                            ),
+                        );
                 },
                 [e, t],
             ),
             trackUserProfileWishlistAction: i.useCallback(
                 (n) => {
-                    null != e && (0, o.nR)(c({ analyticsLocations: t }, e, n));
+                    null != e &&
+                        (0, o.nR)(
+                            c(
+                                {
+                                    analyticsLocations: t,
+                                },
+                                e,
+                                n,
+                            ),
+                        );
                 },
                 [e, t],
             ),

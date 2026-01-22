@@ -1,4 +1,10 @@
-n.d(t, { A: () => ej }), n(321073), n(896048), n(638769), n(667532);
+n.d(t, {
+    A: () => ej,
+}),
+    n(321073),
+    n(896048),
+    n(638769),
+    n(667532);
 var i,
     r = n(284009),
     l = n.n(r),
@@ -49,6 +55,7 @@ var i,
     Q = n(672396),
     J = n(652215),
     q = n(985018);
+
 function $(e, t, n) {
     return (
         t in e
@@ -62,6 +69,7 @@ function $(e, t, n) {
         e
     );
 }
+
 function ee(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -78,6 +86,7 @@ function ee(e) {
     }
     return e;
 }
+
 function et(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -111,16 +120,19 @@ let en = 5 * P.A.Millis.SECOND,
     es = !1,
     ec = [],
     eu = {};
+
 function ed(e, t, n) {
     null == eu[e] && (eu[e] = {}), (eu[e][t] = n);
 }
 let ep = 30 * P.A.Millis.MINUTE,
     eh = 2 * P.A.Millis.MINUTE;
+
 function ef() {
     if (es && null == eo.find((e) => e.status === J.yFH.FOCUSED))
         for (let e of ((es = !1), (eo = [...eo, ...ec]), (ec = []), eo.length > 40 && (eo.length = 40), eo))
             e.timer.start();
 }
+
 function em() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 3;
     eo.filter((e) => e.type === V.zb.TEXT && e.status === J.yFH.TIMED_OUT)
@@ -129,6 +141,7 @@ function em() {
             (n >= e || t.timestamp < Date.now() - er) && eg(t.id, J.yFH.DISMISSED);
         });
 }
+
 function eg(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : J.yFH.DISMISSED;
     if (null == e) return !1;
@@ -137,17 +150,33 @@ function eg(e) {
     let i = eo[n];
     if ((i.timer.stop(), (eo = [...eo]), t === J.yFH.FOCUSED)) {
         let [e] = eo.splice(n, 1);
-        (e = et(ee({}, e), { status: t })), eo.unshift(e), (es = !0);
+        (e = et(ee({}, e), {
+            status: t,
+        })),
+            eo.unshift(e),
+            (es = !0);
         return;
     }
-    t === J.yFH.DISMISSED ? eo.splice(n, 1) : (eo[n] = et(ee({}, i), { status: t })), ef();
+    t === J.yFH.DISMISSED
+        ? eo.splice(n, 1)
+        : (eo[n] = et(ee({}, i), {
+              status: t,
+          })),
+        ef();
 }
+
 function ey(e) {
     let t = eo.find((t) => t.type === V.zb.INCOMING_CALL && t.channelId === e);
     return null != t ? t.id : null;
 }
+
 function eA(e, t) {
-    let n = ee(et(ee({}, ea), { timestamp: Date.now() }), t),
+    let n = ee(
+            et(ee({}, ea), {
+                timestamp: Date.now(),
+            }),
+            t,
+        ),
         i = (0, a.A)(),
         r = !1,
         l = ee(
@@ -186,6 +215,7 @@ function eA(e, t) {
     }
     return es || ((eo = o), l.timer.start()), i;
 }
+
 function eO(e) {
     var t;
     let n = b.A.getUserGame(e);
@@ -193,6 +223,7 @@ function eO(e) {
     let i = null == (t = b.A.getNowPlaying(n.gameId)[e]) ? void 0 : t.activity;
     return null == i || i.type !== J.$pd.PLAYING ? null : i;
 }
+
 function eE() {
     if (k.A.isNotificationDisabled(Q.KS.NowPlayingNotification)) return !1;
     let e = b.A.usersPlaying,
@@ -277,6 +308,7 @@ function eE() {
         }
     return i;
 }
+
 function ev(e) {
     let { channelId: t, ringing: n } = e,
         i = ey(t);
@@ -305,6 +337,7 @@ function ev(e) {
         });
 }
 let eb = {};
+
 function eS(e, t) {
     return "".concat(e, "-").concat(t);
 }
@@ -426,7 +459,9 @@ let ej = new ex(s.h, {
                                 guildId: e.guild_id,
                                 location: "showActivityNotification",
                             },
-                            { autoTrackExposure: !1 },
+                            {
+                                autoTrackExposure: !1,
+                            },
                         );
                         if (!u || null == (r = N.A.getApplicationActivity(c)) || r.application_id !== c) return !1;
                         a = (0, W.A)(e, n, s, r);

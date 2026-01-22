@@ -1,4 +1,8 @@
-n.d(t, { A: () => h }), n(896048), n(321073);
+n.d(t, {
+    A: () => h,
+}),
+    n(896048),
+    n(321073);
 var r = n(627968),
     i = n(64700),
     a = n(695497),
@@ -8,6 +12,7 @@ var r = n(627968),
     c = n(723702),
     u = n(837921),
     d = n(650583);
+
 function f(e, t, n) {
     return (
         t in e
@@ -30,7 +35,10 @@ class _ extends i.PureComponent {
         (this._mounted = !1), this.cleanUp();
     }
     componentDidUpdate(e) {
-        this.props.defaultValue !== e.defaultValue && this.setState({ codes: this.props.defaultValue });
+        this.props.defaultValue !== e.defaultValue &&
+            this.setState({
+                codes: this.props.defaultValue,
+            });
     }
     cleanUp() {
         c.isPlatformEmbedded && null != this.gs && (this.gs.destroy(), (this.gs = null));
@@ -38,7 +46,11 @@ class _ extends i.PureComponent {
     handleComboChange(e) {
         let { mode: t } = this.state,
             { onChange: n } = this.props;
-        t === l.E.RECORDING && (null != n && n(e), this.setState({ codes: e }));
+        t === l.E.RECORDING &&
+            (null != n && n(e),
+            this.setState({
+                codes: e,
+            }));
     }
     render() {
         let e,
@@ -67,10 +79,15 @@ class _ extends i.PureComponent {
             f(this, "_mounted", !1),
             f(this, "recordStart", () => {
                 c.isPlatformEmbedded && !p && ((this.gs = new o.A()), this.gs.on("change", this.handleGSChange)),
-                    this.setState({ mode: l.E.RECORDING });
+                    this.setState({
+                        mode: l.E.RECORDING,
+                    });
             }),
             f(this, "recordEnd", () => {
-                this.cleanUp(), this.setState({ mode: l.E.DEFAULT });
+                this.cleanUp(),
+                    this.setState({
+                        mode: l.E.DEFAULT,
+                    });
             }),
             f(this, "toggleRecordMode", () => {
                 this.state.mode === l.E.DEFAULT ? this.recordStart() : this.recordEnd();

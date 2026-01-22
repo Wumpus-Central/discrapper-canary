@@ -30,6 +30,7 @@ var l = n(627968),
     j = n(652215),
     T = n(985018),
     b = n(986700);
+
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -55,6 +56,7 @@ function v(e) {
     }
     return e;
 }
+
 function D(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -73,6 +75,7 @@ function D(e, t) {
         e
     );
 }
+
 function y(e) {
     let t = (0, c.bG)([m.A], () => m.A.useReducedMotion),
         n = r.useRef(null);
@@ -96,6 +99,7 @@ function y(e) {
         n
     );
 }
+
 function G() {
     let e = y(A);
     return (0, l.jsx)("div", {
@@ -106,6 +110,7 @@ function G() {
         }),
     });
 }
+
 function P() {
     let e = y(_);
     return (0, l.jsx)("div", {
@@ -116,6 +121,7 @@ function P() {
         }),
     });
 }
+
 function C(e) {
     let { guild: t, mainIslandClassName: n, balloonDogClassName: i } = e,
         a = (0, c.bG)([m.A], () => m.A.useReducedMotion),
@@ -169,6 +175,7 @@ function C(e) {
         })
     );
 }
+
 function L(e) {
     let { guild: t, onStart: n, onboardingStatus: i, headerId: s, disableTracking: a } = e,
         o = (0, c.bG)([p.A], () => p.A.isLoading()),
@@ -201,7 +208,7 @@ function L(e) {
         (0, u.Ay)(() => {
             setTimeout(() => {
                 (m.current = !0), n();
-            }, 3000);
+            }, 3e3);
         }),
         (0, l.jsx)("div", {
             className: b.PY,
@@ -223,10 +230,14 @@ function L(e) {
                                 variant: "text-lg/normal",
                                 color: "always-white",
                                 id: s,
-                                children: T.intl.format(T.t["j59F/c"], { guildName: null == t ? void 0 : t.name }),
+                                children: T.intl.format(T.t["j59F/c"], {
+                                    guildName: null == t ? void 0 : t.name,
+                                }),
                             }),
                             o
-                                ? (0, l.jsx)(d.y$y, { className: b.__invalid_subtitle })
+                                ? (0, l.jsx)(d.y$y, {
+                                      className: b.__invalid_subtitle,
+                                  })
                                 : i === O.$o.NOT_APPLICABLE
                                   ? (0, l.jsx)(d.Heading, {
                                         className: b.__invalid_subtitle,

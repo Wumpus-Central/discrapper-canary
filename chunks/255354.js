@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968),
     i = n(64700),
     l = n(397927),
@@ -6,6 +8,7 @@ var r = n(627968),
     a = n(57222),
     c = n(985018),
     o = n(877228);
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -31,6 +34,7 @@ function d(e) {
     }
     return e;
 }
+
 function u(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -70,7 +74,12 @@ let f = i.memo(function (e) {
             (f = (0, r.jsx)(a.A, {
                 guildId: t.guildId,
                 selectedRoleIds: t.exemptRoles,
-                onChange: (e) => i(u(d({}, t), { exemptRoles: e })),
+                onChange: (e) =>
+                    i(
+                        u(d({}, t), {
+                            exemptRoles: e,
+                        }),
+                    ),
                 placeholder: c.intl.string(c.t.aFO1I6),
                 disableEveryoneRole: !0,
             })),

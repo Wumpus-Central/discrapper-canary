@@ -1,4 +1,6 @@
-n.d(t, { P: () => u });
+n.d(t, {
+    P: () => u,
+});
 var r = n(311907),
     i = n(562465),
     a = n(73153),
@@ -14,7 +16,9 @@ let c = {
             try {
                 let n = await i.Bo.get({
                     url: l.Rsh.USER_APPLICATION_IDENTITIES(e),
-                    query: { with_profiles: !0 },
+                    query: {
+                        with_profiles: !0,
+                    },
                     rejectWithError: !0,
                     signal: t,
                 });

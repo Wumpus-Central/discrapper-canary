@@ -48,6 +48,7 @@ var c = a(627968),
     Y = a(985018),
     H = a(936106);
 let $ = K.DN.SIZE_24;
+
 function B(e) {
     let t,
         a,
@@ -195,7 +196,9 @@ function B(e) {
                                     variant: "text-md/normal",
                                     color: "text-strong",
                                     className: H.SX,
-                                    children: (0, c.jsx)(o.A, { children: Z.name }),
+                                    children: (0, c.jsx)(o.A, {
+                                        children: Z.name,
+                                    }),
                                 }),
                                 ec.length > 0
                                     ? (0, c.jsxs)(c.Fragment, {
@@ -223,7 +226,9 @@ function B(e) {
                         (0, c.jsxs)("div", {
                             className: d()(H.ND, H.fU),
                             children: [
-                                (0, c.jsx)("div", { className: H.Rv }),
+                                (0, c.jsx)("div", {
+                                    className: H.Rv,
+                                }),
                                 (0, c.jsxs)("div", {
                                     className: H.fc,
                                     children: [
@@ -258,7 +263,9 @@ function B(e) {
                                                   onOpenPopout: () => {},
                                                   onClosePopout: () => {
                                                       (0, u.zV)(W.HAw.ACTIVITY_POPOUT_POP_IN_BUTTON_CLICKED),
-                                                          (0, M.A)({ onConfirm: q });
+                                                          (0, M.A)({
+                                                              onConfirm: q,
+                                                          });
                                                   },
                                               })
                                             : null,
@@ -357,6 +364,7 @@ function B(e) {
         })
     );
 }
+
 function J(e) {
     let { applicationId: t, channelId: a } = e,
         l = (0, r.bG)([U.Ay], () => U.Ay.getSelfEmbeddedActivities().get(t)),

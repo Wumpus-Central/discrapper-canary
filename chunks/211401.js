@@ -3,6 +3,7 @@ n.d(t, {
     k: () => a,
 });
 var r = n(73153);
+
 function i(e, t, n, i) {
     r.h.dispatch({
         type: "APP_LAUNCHER_SHOW",
@@ -12,6 +13,7 @@ function i(e, t, n, i) {
         activeChannelId: i,
     });
 }
+
 function a(e) {
     r.h.dispatch({
         type: "APP_LAUNCHER_DISMISS",

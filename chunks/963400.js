@@ -5,6 +5,7 @@ n.d(t, {
 }),
     n(896048);
 var r = n(602034);
+
 function i(e, t) {
     return new Promise((n) => {
         let i = new IntersectionObserver(
@@ -21,11 +22,14 @@ function i(e, t) {
                 }
                 i.disconnect(), n(a);
             },
-            { root: e },
+            {
+                root: e,
+            },
         );
         for (let e of t) i.observe(e);
     });
 }
+
 function a(e, t) {
     return new Promise((n) => {
         let i = new IntersectionObserver(
@@ -43,11 +47,14 @@ function a(e, t) {
                 }
                 i.disconnect(), n(a);
             },
-            { root: e },
+            {
+                root: e,
+            },
         );
         for (let e of t) i.observe(e);
     });
 }
+
 function s(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0.5;
     return new Promise((r) => {
@@ -56,7 +63,9 @@ function s(e, t) {
                 let t = e[0];
                 i.disconnect(), r(t.intersectionRatio >= n);
             },
-            { root: e },
+            {
+                root: e,
+            },
         );
         i.observe(t);
     });

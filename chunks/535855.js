@@ -1,4 +1,7 @@
-n.d(t, { A: () => ei }), n(896048);
+n.d(t, {
+    A: () => ei,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -47,6 +50,7 @@ var r = n(627968),
     q = n(985018),
     X = n(778007),
     Z = n(308021);
+
 function Q(e, t, n) {
     return (
         t in e
@@ -60,6 +64,7 @@ function Q(e, t, n) {
         e
     );
 }
+
 function $(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -76,6 +81,7 @@ function $(e) {
     }
     return e;
 }
+
 function J(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -88,6 +94,7 @@ function J(e, t) {
     }
     return n;
 }
+
 function ee(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -101,17 +108,31 @@ function ee(e, t) {
 }
 let et = async (e, t, n) => {
     let { withMessage: r } = t;
-    await (0, O.cJ)(e, { withMessage: r }, n), (0, g.Be)();
+    await (0, O.cJ)(
+        e,
+        {
+            withMessage: r,
+        },
+        n,
+    ),
+        (0, g.Be)();
 };
+
 function en(e, t) {
     return i.useMemo(() => {
         let n = v.f[null != t ? t : Y.c8.ONE];
-        return e === Y.P7.END ? n : ee($({}, v.g[e]), { backgroundOverlayColor: n.backgroundOverlayColor });
+        return e === Y.P7.END
+            ? n
+            : ee($({}, v.g[e]), {
+                  backgroundOverlayColor: n.backgroundOverlayColor,
+              });
     }, [t, e]);
 }
+
 function er(e) {
     return Y.Wf[e].toLowerCase();
 }
+
 function ei(e) {
     let { onClose: t } = e,
         n = (0, T.A)(),
@@ -139,7 +160,9 @@ function ei(e) {
             g >= a.length - 1 ? eu() : (ed(), b(g + 1));
         }, [eu, ed, g, a.length]);
     i.useEffect(() => {
-        y.default.track(W.HAw.CHECKPOINT_STEP_VIEWED, { step_name: er(v) }),
+        y.default.track(W.HAw.CHECKPOINT_STEP_VIEWED, {
+            step_name: er(v),
+        }),
             (ec.current = v),
             v === Y.Wf.END_SUMMARY && E.Ay.fireSurveyAction(f.w.CHECKPOINT_COMPLETED);
     }, [v]);
@@ -158,7 +181,9 @@ function ei(e) {
             () => (
                 et(),
                 () => {
-                    y.default.track(W.HAw.CHECKPOINT_CLOSED, { step_name: er(ec.current) });
+                    y.default.track(W.HAw.CHECKPOINT_CLOSED, {
+                        step_name: er(ec.current),
+                    });
                 }
             ),
             [],
@@ -199,13 +224,17 @@ function ei(e) {
                                 className: s()(X.kL, e),
                                 "aria-label": q.intl.string(z.default["CdU/PF"]),
                                 children: [
-                                    (0, r.jsx)(N.Ay, { slide: L }),
+                                    (0, r.jsx)(N.Ay, {
+                                        slide: L,
+                                    }),
                                     (0, r.jsxs)(x.Ay, {
                                         activeSlide: L,
                                         children: [
                                             (0, r.jsx)(m.q7S, {
                                                 id: Y.P7.WELCOME,
-                                                children: (0, r.jsx)(H.A, { onNextStep: ef }),
+                                                children: (0, r.jsx)(H.A, {
+                                                    onNextStep: ef,
+                                                }),
                                             }),
                                             (0, r.jsx)(m.q7S, {
                                                 id: Y.P7.MESSAGES,
@@ -262,7 +291,9 @@ function ei(e) {
                                                         (0, r.jsx)(m.Text, {
                                                             variant: "display-sm",
                                                             className: X.jF,
-                                                            style: { color: Q },
+                                                            style: {
+                                                                color: Q,
+                                                            },
                                                             children: q.intl.string(z.default["CdU/PF"]),
                                                         }),
                                                     ],
@@ -280,7 +311,9 @@ function ei(e) {
                                                     (0, r.jsx)(m.DUT, {
                                                         onClick: () => eu(),
                                                         className: X.b,
-                                                        style: { color: Q },
+                                                        style: {
+                                                            color: Q,
+                                                        },
                                                         children: (0, r.jsx)(m.d$L, {
                                                             colorClass: X.d7,
                                                             color: Q,
@@ -297,7 +330,9 @@ function ei(e) {
                                                 (0, r.jsx)(m.DUT, {
                                                     onClick: ep,
                                                     className: X.Gv,
-                                                    style: { borderColor: Q },
+                                                    style: {
+                                                        borderColor: Q,
+                                                    },
                                                     children: (0, r.jsx)(m.Zge, {
                                                         colorClass: X.d7,
                                                         color: Q,
@@ -315,7 +350,10 @@ function ei(e) {
                                                             color: Q,
                                                         }),
                                                     }),
-                                                v === Y.Wf.END_SUMMARY && (0, r.jsx)(ea, { primaryColor: Q }),
+                                                v === Y.Wf.END_SUMMARY &&
+                                                    (0, r.jsx)(ea, {
+                                                        primaryColor: Q,
+                                                    }),
                                             ],
                                         }),
                                 ],
@@ -327,6 +365,7 @@ function ei(e) {
         }),
     });
 }
+
 function ea(e) {
     let { primaryColor: t } = e,
         n = (0, h.bG)([S.A], () => S.A.getCheckpointData()),
@@ -336,7 +375,9 @@ function ea(e) {
                 components: [
                     {
                         type: 20,
-                        checkpointData: { cardId: n.cardId },
+                        checkpointData: {
+                            cardId: n.cardId,
+                        },
                     },
                 ],
             });
@@ -353,7 +394,9 @@ function ea(e) {
             (0, r.jsx)(L.A, {
                 variant: "eyebrow",
                 className: X.HL,
-                style: { color: t },
+                style: {
+                    color: t,
+                },
                 children: q.intl.string(q.t.RDE0Sc),
             }),
             (0, r.jsx)(m.I9m, {

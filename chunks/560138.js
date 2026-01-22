@@ -1,18 +1,23 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(311907),
     i = n(73153);
 let a = {
     fetched: !1,
     affinities: [],
 };
+
 function s(e) {
     let {} = e;
     a.fetched = !0;
 }
+
 function o(e) {
     let { res: t } = e;
     a.affinities = t;
 }
+
 function l() {
     (a.fetched = !1), (a.affinities = []);
 }

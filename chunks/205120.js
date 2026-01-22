@@ -1,4 +1,7 @@
-n.d(t, { A: () => g }), n(896048);
+n.d(t, {
+    A: () => g,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(155718),
@@ -8,6 +11,7 @@ var r = n(627968),
     c = n(650583),
     u = n(985018),
     d = n(921522);
+
 function f(e, t, n) {
     return (
         t in e
@@ -21,9 +25,11 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     e.stopPropagation();
 }
+
 function h() {
     let e = window.getSelection();
     if (null == e)
@@ -39,6 +45,7 @@ function h() {
         rangeStartOffset: t.startOffset,
     };
 }
+
 function b(e, t, n) {
     let r = document.createRange();
     r.setStart(t, n), r.collapse(!0), e.removeAllRanges(), e.addRange(r);

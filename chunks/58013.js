@@ -1,4 +1,7 @@
-n.d(t, { A: () => d }), n(896048);
+n.d(t, {
+    A: () => d,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     s = n(110259),
@@ -7,14 +10,19 @@ var r = n(627968),
     o = n(163698),
     c = n(528685),
     u = n(524832);
+
 function d(e) {
     let { transitionTo: t, token: n, width: d } = e,
         [h, f] = i.useState(u.k.START),
         [p, g] = i.useState(null),
         [m, A] = i.useState(""),
-        x = { impression_group: s.ImpressionGroups.ACCOUNT_REVERT_FLOW };
+        x = {
+            impression_group: s.ImpressionGroups.ACCOUNT_REVERT_FLOW,
+        };
     return (0, r.jsx)("div", {
-        style: { margin: "8px" },
+        style: {
+            margin: "8px",
+        },
         children: (0, r.jsxs)(l.tN_, {
             activeSlide: h,
             width: d,
@@ -45,7 +53,9 @@ function d(e) {
                     id: u.k.SUCCESS,
                     impressionProperties: x,
                     impressionName: s.ImpressionNames.ACCOUNT_REVERT_SUCCESS,
-                    children: (0, r.jsx)(c.A, { email: m }),
+                    children: (0, r.jsx)(c.A, {
+                        email: m,
+                    }),
                 }),
             ],
         }),

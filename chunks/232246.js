@@ -1,8 +1,12 @@
-n.d(t, { A: () => a }), n(321073);
+n.d(t, {
+    A: () => a,
+}),
+    n(321073);
 var l = n(311907),
     r = n(233993),
     i = n(808728),
     s = n(576705);
+
 function a(e) {
     var t;
     let n = null != (t = null == e ? void 0 : e.id) ? t : null;

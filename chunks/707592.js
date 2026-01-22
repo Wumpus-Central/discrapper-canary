@@ -9,6 +9,7 @@ var i = n(192308),
     a = n(686956),
     s = n(652215),
     o = n(231723);
+
 function l(e, t, n) {
     return (
         t in e
@@ -22,6 +23,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -38,6 +40,7 @@ function c(e) {
     }
     return e;
 }
+
 function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -50,6 +53,7 @@ function u(e, t) {
     }
     return n;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -61,6 +65,7 @@ function d(e, t) {
         e
     );
 }
+
 function f(e) {
     let { eventId: t, recurrenceId: a } = e;
     (0, i.openModalLazy)(async () => {
@@ -86,12 +91,21 @@ async function p(e, t) {
             event: e,
         });
 }
+
 function _(e, t) {
     (0, i.openModalLazy)(
         async () => {
             let { default: t } = await n.e("34526").then(n.bind(n, 521549));
-            return (n) => (0, r.jsx)(t, d(c({}, n), { channel: e }));
+            return (n) =>
+                (0, r.jsx)(
+                    t,
+                    d(c({}, n), {
+                        channel: e,
+                    }),
+                );
         },
-        { contextKey: t === s.BRT.POPOUT ? o.KX : o.SY },
+        {
+            contextKey: t === s.BRT.POPOUT ? o.KX : o.SY,
+        },
     );
 }

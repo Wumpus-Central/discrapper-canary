@@ -1,8 +1,11 @@
-n.d(t, { q: () => r });
+n.d(t, {
+    q: () => r,
+});
 var a = n(627968);
 n(64700);
 var l = n(397927),
     i = n(520657);
+
 function r(e) {
     let { isUploading: t, isSuccess: n, errorMessage: r, onClick: s, title: o } = e;
     return (0, a.jsxs)(a.Fragment, {
@@ -12,7 +15,7 @@ function r(e) {
                 onClick: s,
                 loading: t,
                 disabled: t,
-                text: t ? "Uploading\u2026" : o,
+                text: t ? "Uploading…" : o,
             }),
             null != r &&
                 (0, a.jsx)(l.Text, {

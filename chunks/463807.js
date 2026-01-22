@@ -1,1 +1,3 @@
-e.exports = { G: "_120085d589fcebc1" };
+e.exports = {
+    G: "_120085d589fcebc1",
+};

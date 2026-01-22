@@ -1,8 +1,11 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(439372),
     i = n(832286),
     a = n(128391),
     s = n(652215);
+
 function o(e) {
     var t;
     if ((null == (t = e.message_reference) ? void 0 : t.type) !== s.SH7.FORWARD) return;

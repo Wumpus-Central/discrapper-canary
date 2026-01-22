@@ -1,6 +1,7 @@
 function r(e, t) {
     if (!(e instanceof t)) throw TypeError("Cannot call a class as a function");
 }
+
 function i(e, t) {
     for (var n = 0; n < t.length; n++) {
         var r = t[n];
@@ -10,9 +11,11 @@ function i(e, t) {
             Object.defineProperty(e, r.key, r);
     }
 }
+
 function a(e, t, n) {
     return t && i(e.prototype, t), n && i(e, n), e;
 }
+
 function s(e, t, n) {
     return (
         t in e
@@ -26,7 +29,9 @@ function s(e, t, n) {
         e
     );
 }
-n.d(t, { f: () => o });
+n.d(t, {
+    f: () => o,
+});
 var o = (function () {
     function e(t, n) {
         r(this, e),

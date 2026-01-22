@@ -12,6 +12,7 @@ var r = n(723702),
     u = n(659051),
     d = n(702631),
     f = n(652215);
+
 function p(e) {
     var t;
     let {
@@ -58,6 +59,7 @@ function p(e) {
               remoteJoinPlatform: null,
           };
 }
+
 function _(e, t, n, i) {
     return !(null == e || !(0, u.A)(e, n, i.id) || !(0, l.A)(e, f.jUm.SYNC) || !r.isPlatformEmbedded || (0, a.w)(t, e));
 }

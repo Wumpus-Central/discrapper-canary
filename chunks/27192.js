@@ -18,6 +18,7 @@ var r = n(627968),
     f = n(934551),
     p = n(818348),
     _ = n(127650);
+
 function h(e, t, n) {
     return (
         t in e
@@ -31,6 +32,7 @@ function h(e, t, n) {
         e
     );
 }
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -90,7 +92,9 @@ let b = {
                 null != E
                     ? (0, r.jsx)("div", {
                           className: s()(_.Pf, t ? _.fR : _.ru, O ? _.dT : _.a5),
-                          style: { lineHeight: "".concat(l, "px") },
+                          style: {
+                              lineHeight: "".concat(l, "px"),
+                          },
                           children: E,
                       })
                     : null,
@@ -129,6 +133,7 @@ let b = {
             ],
         });
     };
+
 function A(e) {
     var t;
     let { value: n, type: r, color: i } = e,
@@ -154,6 +159,7 @@ function A(e) {
         }
     return a;
 }
+
 function v(e) {
     let { indicatorClassName: t, value: n, size: a, shape: o, checkboxColor: l, disabled: c } = e,
         d = A(e),

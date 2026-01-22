@@ -1,4 +1,7 @@
-n.d(e, { default: () => p }), n(896048);
+n.d(e, {
+    default: () => p,
+}),
+    n(896048);
 var r = n(627968),
     a = n(64700),
     i = n(417597),
@@ -10,6 +13,7 @@ var r = n(627968),
     _ = n(652215),
     d = n(985018),
     I = n(236103);
+
 function p(t) {
     let { onClose: e, source: n = o.y.KEYBIND, transitionState: p } = t,
         f = (0, i.bG)([u.A], () => u.A.useReducedMotion),
@@ -23,7 +27,9 @@ function p(t) {
         a.useEffect(() => {
             let t = new Date();
             return (
-                s.default.track(_.HAw.VIBING_WUMPUS_VIEWED, { source: n }),
+                s.default.track(_.HAw.VIBING_WUMPUS_VIEWED, {
+                    source: n,
+                }),
                 f || (0, l.q0)(),
                 () => {
                     s.default.track(_.HAw.VIBING_WUMPUS_CLOSED, {
@@ -60,7 +66,10 @@ function p(t) {
                         {
                             text: d.intl.string(d.t["8eKkaf"]),
                             onClick: () => {
-                                e(), s.default.track(_.HAw.VIBING_WUMPUS_ACTION, { action: o.r.BACK_TO_CONVERSATION });
+                                e(),
+                                    s.default.track(_.HAw.VIBING_WUMPUS_ACTION, {
+                                        action: o.r.BACK_TO_CONVERSATION,
+                                    });
                             },
                             variant: "secondary",
                         },
@@ -70,11 +79,15 @@ function p(t) {
                                 var t, e, n, r;
                                 S
                                     ? ((0, l.q0)(),
-                                      s.default.track(_.HAw.VIBING_WUMPUS_ACTION, { action: o.r.PLAY }),
+                                      s.default.track(_.HAw.VIBING_WUMPUS_ACTION, {
+                                          action: o.r.PLAY,
+                                      }),
                                       null == (t = h.current) || t.play(),
                                       null == (e = A.current) || e.play())
                                     : ((0, l.O$)(),
-                                      s.default.track(_.HAw.VIBING_WUMPUS_ACTION, { action: o.r.PAUSE }),
+                                      s.default.track(_.HAw.VIBING_WUMPUS_ACTION, {
+                                          action: o.r.PAUSE,
+                                      }),
                                       null == (n = h.current) || n.pause(),
                                       null == (r = A.current) || r.pause()),
                                     U(!S);

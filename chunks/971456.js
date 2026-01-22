@@ -1,10 +1,13 @@
-n.d(t, { p: () => f });
+n.d(t, {
+    p: () => f,
+});
 var r = n(627968);
 n(64700);
 var i = n(295405),
     a = n(937008),
     s = n(166532),
     o = n(735305);
+
 function l(e, t, n) {
     return (
         t in e
@@ -18,6 +21,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,6 +38,7 @@ function c(e) {
     }
     return e;
 }
+
 function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -46,6 +51,7 @@ function u(e, t) {
     }
     return n;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -60,14 +66,20 @@ function d(e, t) {
 let f = {
         key: s.pn.ADD_PAYMENT_STEPS,
         renderStep: (e) => (0, r.jsx)(_, c({}, e)),
-        options: { renderHeader: !0 },
+        options: {
+            renderHeader: !0,
+        },
     },
     p = (e, t) => {
         if (0 === Object.keys(i.A.paymentSources).length) {
             if (t) return void e.handleStepChange(s.pn.GIFT_CUSTOMIZATION);
             e.handleClose();
-        } else e.handleStepChange(s.pn.REVIEW, { trackedFromStep: s.pn.ADD_PAYMENT_STEPS });
+        } else
+            e.handleStepChange(s.pn.REVIEW, {
+                trackedFromStep: s.pn.ADD_PAYMENT_STEPS,
+            });
     };
+
 function _(e) {
     let { isGift: t } = (0, a.Pv)();
     return (0, r.jsx)(

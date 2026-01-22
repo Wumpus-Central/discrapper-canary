@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -7,6 +9,7 @@ var i = n(397927),
     o = n(888675),
     l = n(985018);
 let c = 20;
+
 function u(e) {
     var t;
     let { message: n, channel: u, playingActivity: d, onJoinStream: f, usernameHook: p, compact: _ } = e,
@@ -36,7 +39,9 @@ function u(e) {
                           width: c,
                           height: c,
                       })
-                    : (0, r.jsx)(a.Ay, { size: a.Ay.Sizes.SMALL }),
+                    : (0, r.jsx)(a.Ay, {
+                          size: a.Ay.Sizes.SMALL,
+                      }),
             timestamp: n.timestamp,
             compact: _,
             children: E,

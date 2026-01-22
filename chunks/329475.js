@@ -1,4 +1,6 @@
-n.d(t, { d: () => r });
+n.d(t, {
+    d: () => r,
+});
 var r = (function (e) {
     return (
         (e.BIO = "bio"),

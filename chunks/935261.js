@@ -1,4 +1,9 @@
-n.d(t, { A: () => b }), n(896048), n(65821), n(457529);
+n.d(t, {
+    A: () => b,
+}),
+    n(896048),
+    n(65821),
+    n(457529);
 var r = n(627968),
     i = n(64700),
     a = n(484030),
@@ -50,7 +55,7 @@ let E = () => {
                 if (![p.Lk.INSTALLED, p.Lk.WAITING_FOR_TERMS].includes(e)) return;
                 let n = setInterval(async () => {
                     (await a()) === p.Lk.NOT_INSTALLED && t(p.Lk.NOT_INSTALLED);
-                }, 1000);
+                }, 1e3);
                 return () => clearInterval(n);
             }, [e, t, a]),
             (0, i.useEffect)(() => {
@@ -80,7 +85,9 @@ let E = () => {
                         })
                         .catch((e) => {
                             u.A.captureException(e, {
-                                tags: { source: f.q.PRIVATE_BROWSING_PERK_LICENSE_FINISH_SETUP },
+                                tags: {
+                                    source: f.q.PRIVATE_BROWSING_PERK_LICENSE_FINISH_SETUP,
+                                },
                             }),
                                 c.default.track(g.HAw.PREMIUM_FEATURE_ERROR, {
                                     error_message: e instanceof Error ? e.message : JSON.stringify(e),
@@ -122,7 +129,7 @@ let E = () => {
                         default:
                             t(n);
                     }
-                }, 1000);
+                }, 1e3);
                 return () => {
                     clearInterval(n);
                 };

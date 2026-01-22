@@ -1,4 +1,7 @@
-n.d(t, { A: () => b }), n(321073);
+n.d(t, {
+    A: () => b,
+}),
+    n(321073);
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -12,6 +15,7 @@ var i = n(311907),
     f = n(652215),
     p = n(985018),
     _ = n(927961);
+
 function h(e, t, n) {
     return (
         t in e
@@ -25,6 +29,7 @@ function h(e, t, n) {
         e
     );
 }
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -41,6 +46,7 @@ function m(e) {
     }
     return e;
 }
+
 function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -53,6 +59,7 @@ function g(e, t) {
     }
     return n;
 }
+
 function E(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -64,6 +71,7 @@ function E(e, t) {
         e
     );
 }
+
 function b() {
     let {
             saturation: e,
@@ -106,8 +114,12 @@ function b() {
                 value: "hidden",
             },
         ];
+
     function I() {
-        u.default.track(f.HAw.DISPLAY_NAME_STYLES_ACCESSIBILITY_TOGGLE, { enabled: !b }), (0, s.Dm)(!b);
+        u.default.track(f.HAw.DISPLAY_NAME_STYLES_ACCESSIBILITY_TOGGLE, {
+            enabled: !b,
+        }),
+            (0, s.Dm)(!b);
     }
     let T = [
         (0, r.jsx)(

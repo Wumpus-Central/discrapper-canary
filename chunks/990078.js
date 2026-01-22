@@ -1,4 +1,8 @@
-n.d(t, { m: () => g }), n(896048), n(65821);
+n.d(t, {
+    m: () => g,
+}),
+    n(896048),
+    n(65821);
 var r = n(627968),
     i = n(64700),
     a = n(140735),
@@ -9,6 +13,7 @@ var r = n(627968),
     u = n(505679),
     d = n(747781),
     f = n(894524);
+
 function p(e, t, n) {
     return (
         t in e
@@ -22,6 +27,7 @@ function p(e, t, n) {
         e
     );
 }
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -38,6 +44,7 @@ function _(e) {
     }
     return e;
 }
+
 function h(e, t) {
     if (null == e) return {};
     var n,
@@ -54,6 +61,7 @@ function h(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function m(e, t) {
     if (null == e) return {};
     var n,
@@ -64,6 +72,7 @@ function m(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function g(e) {
     let {
             children: t,
@@ -142,7 +151,9 @@ function g(e) {
                                       variant: "text-sm/medium",
                                       children: n,
                                   }),
-                                  (0, r.jsx)(o.e7I, { shortcut: p }),
+                                  (0, r.jsx)(o.e7I, {
+                                      shortcut: p,
+                                  }),
                               ],
                           })
                         : n,

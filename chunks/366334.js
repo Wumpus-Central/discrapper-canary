@@ -1,4 +1,7 @@
-n.d(t, { A: () => d }), n(228524);
+n.d(t, {
+    A: () => d,
+}),
+    n(228524);
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -8,6 +11,7 @@ var i = n(503698),
     l = n(898612),
     c = n(232492),
     u = n(53605);
+
 function d(e) {
     let { benefit: t, guildId: n } = e,
         i = (0, c.A)(n, t.ref_id),

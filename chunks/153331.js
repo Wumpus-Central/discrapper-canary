@@ -44,6 +44,7 @@ var r,
     V = n(652215),
     F = n(985018),
     B = n(609535);
+
 function H(e, t, n) {
     return (
         t in e
@@ -57,6 +58,7 @@ function H(e, t, n) {
         e
     );
 }
+
 function Y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -73,6 +75,7 @@ function Y(e) {
     }
     return e;
 }
+
 function W(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -85,6 +88,7 @@ function W(e, t) {
     }
     return n;
 }
+
 function K(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -117,6 +121,7 @@ let X = {
             }
         },
     );
+
 function Q(e) {
     let { activity: t } = e,
         n = null;
@@ -126,10 +131,13 @@ function Q(e) {
         n
     );
 }
+
 function $(e) {
     let { activity: t } = e,
         n = (0, h.Ay)(),
-        r = Q({ activity: t });
+        r = Q({
+            activity: t,
+        });
     if (null == r) return null;
     let a = m.A.get(r);
     return (0, i.jsx)("img", {
@@ -171,24 +179,36 @@ class J extends (r = a.PureComponent) {
                 });
                 break;
             case V.$pd.LISTENING:
-                t = F.intl.formatToPlainString(F.t["5sYPnr"], { name: c });
+                t = F.intl.formatToPlainString(F.t["5sYPnr"], {
+                    name: c,
+                });
                 break;
             case V.$pd.WATCHING:
-                t = F.intl.formatToPlainString(F.t.Ge29Zy, { name: c });
+                t = F.intl.formatToPlainString(F.t.Ge29Zy, {
+                    name: c,
+                });
                 break;
             case V.$pd.PLAYING:
                 t = (0, D.A)(l);
                 break;
             case V.$pd.COMPETING:
-                t = F.intl.formatToPlainString(F.t.SQCo6D, { name: c });
+                t = F.intl.formatToPlainString(F.t.SQCo6D, {
+                    name: c,
+                });
         }
         if (null != r) {
             var f;
             t = (0, u.Lt)(null != (f = null == l ? void 0 : l.flags) ? f : 0, V.jUm.EMBEDDED)
                 ? l.type === V.$pd.WATCHING
-                    ? F.intl.formatToPlainString(F.t["M/L8ot"], { guildName: r.name })
-                    : F.intl.formatToPlainString(F.t["4chKQu"], { guildName: r.name })
-                : F.intl.formatToPlainString(F.t.sddlGK, { server: r.name });
+                    ? F.intl.formatToPlainString(F.t["M/L8ot"], {
+                          guildName: r.name,
+                      })
+                    : F.intl.formatToPlainString(F.t["4chKQu"], {
+                          guildName: r.name,
+                      })
+                : F.intl.formatToPlainString(F.t.sddlGK, {
+                      server: r.name,
+                  });
         }
         return (
             (null == l ? void 0 : l.type) === V.$pd.HANG_STATUS && (t = F.intl.string(F.t["74vS/x"])),
@@ -198,7 +218,9 @@ class J extends (r = a.PureComponent) {
                     (0, i.jsx)(p.Heading, {
                         className: o()((0, P.t)(B, "headerText", e ? "EmptyBody" : "Normal")),
                         variant: a ? "text-xs/semibold" : "eyebrow",
-                        children: (0, i.jsx)(d.A, { children: t }),
+                        children: (0, i.jsx)(d.A, {
+                            children: t,
+                        }),
                     }),
                     null == s ? void 0 : s(),
                 ],
@@ -294,7 +316,9 @@ class J extends (r = a.PureComponent) {
                             }),
                             (0, i.jsx)("div", {
                                 className: B.streamGame,
-                                children: F.intl.format(F.t.gmCZRY, { game: e.details }),
+                                children: F.intl.format(F.t.gmCZRY, {
+                                    game: e.details,
+                                }),
                             }),
                         ],
                     }),
@@ -358,7 +382,9 @@ class J extends (r = a.PureComponent) {
         return null != e.assets || (0, x.A)(e) || e.type !== V.$pd.PLAYING || "ActivityFeed" === n || t.bot
             ? null
             : null == r && null != a
-              ? (0, i.jsx)("div", { className: o()(B.gameIcon, B.screenshareIcon) })
+              ? (0, i.jsx)("div", {
+                    className: o()(B.gameIcon, B.screenshareIcon),
+                })
               : (0, i.jsx)(b.A, {
                     className: B.gameIcon,
                     game: r,
@@ -406,7 +432,9 @@ class J extends (r = a.PureComponent) {
             o = n;
         if (e.type === V.$pd.CUSTOM_STATUS) s = r;
         else if (e.type === V.$pd.HANG_STATUS && null != a)
-            (s = F.intl.formatToPlainString(F.t.IAZiW2, { guildName: a.name })),
+            (s = F.intl.formatToPlainString(F.t.IAZiW2, {
+                guildName: a.name,
+            })),
                 (t = () => {
                     (0, T.u)(a.id);
                 });
@@ -434,7 +462,11 @@ class J extends (r = a.PureComponent) {
         }
         return null == s || "" === s
             ? null
-            : ((0, k.A)(e) && (s = F.intl.formatToPlainString(F.t.gmCZRY, { game: s })), null != t)
+            : ((0, k.A)(e) &&
+                    (s = F.intl.formatToPlainString(F.t.gmCZRY, {
+                        game: s,
+                    })),
+                null != t)
               ? (0, i.jsx)(p.DUT, {
                     onClick: t,
                     title: null != o ? o : void 0,
@@ -453,7 +485,9 @@ class J extends (r = a.PureComponent) {
             ? null == r
                 ? (0, i.jsx)("div", {
                       className: (0, k.A)(e) || (0, j.A)(e) ? B.detailsWrap : B.details,
-                      children: F.intl.format(F.t["hq/Qze"], { guildName: t.name }),
+                      children: F.intl.format(F.t["hq/Qze"], {
+                          guildName: t.name,
+                      }),
                   })
                 : (0, i.jsxs)("div", {
                       className: o()((0, k.A)(e) || (0, j.A)(e) ? B.detailsWrap : B.details, B.guildDetails),
@@ -491,7 +525,9 @@ class J extends (r = a.PureComponent) {
         return null == n
             ? null
             : (0, x.A)(e)
-              ? (0, i.jsx)(Z, { timestamps: n })
+              ? (0, i.jsx)(Z, {
+                    timestamps: n,
+                })
               : (0, i.jsx)(I.Ay, {
                     start: n.start,
                     location: I.Ay.Locations.USER_ACTIVITY,
@@ -555,7 +591,9 @@ class J extends (r = a.PureComponent) {
                       o.size.length >= 2 &&
                       (a =
                           0 === o.size[1]
-                              ? F.intl.formatToPlainString(F.t.IM4J4e, { count: o.size[0] })
+                              ? F.intl.formatToPlainString(F.t.IM4J4e, {
+                                    count: o.size[0],
+                                })
                               : F.intl.formatToPlainString(F.t["u//9By"], {
                                     count: o.size[0],
                                     max: o.size[1],
@@ -643,7 +681,9 @@ class J extends (r = a.PureComponent) {
                     }),
                 }),
                 d ? y : null,
-                (0, i.jsx)($, { activity: c }),
+                (0, i.jsx)($, {
+                    activity: c,
+                }),
             ],
         });
     }
@@ -678,7 +718,12 @@ let ee = (e) => {
         sourceUserId: e.user.id,
         trackEntryPointImpression: !0,
     });
-    return (0, i.jsx)(J, K(Y({}, e), { onOpenGameProfileModal: a }));
+    return (0, i.jsx)(
+        J,
+        K(Y({}, e), {
+            onOpenGameProfileModal: a,
+        }),
+    );
 };
 ee.Types = q;
 let et = ee;

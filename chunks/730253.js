@@ -1,4 +1,8 @@
-n.d(t, { A: () => D }), n(896048), n(321073);
+n.d(t, {
+    A: () => D,
+}),
+    n(896048),
+    n(321073);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -28,6 +32,7 @@ var r = n(627968),
     N = n(652215),
     T = n(985018),
     P = n(299446);
+
 function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -60,6 +65,7 @@ let R = {
         object: N.ZSU.CHANNEL,
     },
 };
+
 function D() {
     var e, t;
     let i,
@@ -164,7 +170,9 @@ function D() {
                                         });
                                     },
                                     children: (0, r.jsx)("div", {
-                                        className: a()(P.hN, { [P.b1]: z }),
+                                        className: a()(P.hN, {
+                                            [P.b1]: z,
+                                        }),
                                         children: (0, r.jsx)(c.Gg5, {
                                             size: "custom",
                                             color: "currentColor",

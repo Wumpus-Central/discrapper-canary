@@ -41,8 +41,12 @@ var n = r(64700),
                             },
                         },
                         "hide-triangle": {
-                            triangle: { display: "none" },
-                            triangleShadow: { display: "none" },
+                            triangle: {
+                                display: "none",
+                            },
+                            triangleShadow: {
+                                display: "none",
+                            },
                         },
                         "top-left-triangle": {
                             triangle: {
@@ -114,8 +118,12 @@ var n = r(64700),
                 style: f.card,
                 className: "github-picker " + (void 0 === d ? "" : d),
             },
-            n.createElement("div", { style: f.triangleShadow }),
-            n.createElement("div", { style: f.triangle }),
+            n.createElement("div", {
+                style: f.triangleShadow,
+            }),
+            n.createElement("div", {
+                style: f.triangle,
+            }),
             (0, l.A)(r, function (e) {
                 return n.createElement(c.A, {
                     color: e,

@@ -1,4 +1,7 @@
-n.d(t, { A: () => T }), n(896048);
+n.d(t, {
+    A: () => T,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -20,6 +23,7 @@ var r = n(627968),
     y = n(920852),
     v = n(266332),
     A = n(386528);
+
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -117,7 +121,9 @@ let N = [
                 top: c[1] + i[1],
             };
         return (0, r.jsxs)("div", {
-            className: s()(h.gI, { [h.zj]: l }),
+            className: s()(h.gI, {
+                [h.zj]: l,
+            }),
             style: o,
             children: [
                 (0, r.jsx)("div", {
@@ -224,7 +230,9 @@ let N = [
                             }),
                         }),
                     }),
-                    (0, r.jsx)("hr", { className: h.me }),
+                    (0, r.jsx)("hr", {
+                        className: h.me,
+                    }),
                     (0, r.jsx)(d.Text, {
                         color: "text-default",
                         variant: "text-sm/normal",

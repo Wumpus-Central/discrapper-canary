@@ -1,4 +1,6 @@
-n.d(t, { a: () => i });
+n.d(t, {
+    a: () => i,
+});
 var r = n(47361),
     i = (function () {
         return function (e, t) {

@@ -1,4 +1,8 @@
-n.d(t, { A: () => Z }), n(938796), n(896048);
+n.d(t, {
+    A: () => Z,
+}),
+    n(938796),
+    n(896048);
 var i = n(627968),
     r = n(64700),
     l = n(503698),
@@ -42,6 +46,7 @@ var i = n(627968),
     V = n(928128),
     z = n(506823),
     K = n(473169);
+
 function F(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -67,6 +72,7 @@ function F(e) {
     }
     return e;
 }
+
 function Y(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -85,6 +91,7 @@ function Y(e, t) {
         e
     );
 }
+
 function q(e) {
     let {
         isDisabled: t,
@@ -101,7 +108,9 @@ function q(e) {
         onRevokeInvite: p,
     } = e;
     return (0, i.jsxs)(w.A, {
-        className: a()(V._O, z.N, { [V.Gg]: t }),
+        className: a()(V._O, z.N, {
+            [V.Gg]: t,
+        }),
         children: [
             (0, i.jsxs)(w.A, {
                 grow: 3,
@@ -185,6 +194,7 @@ function q(e) {
         ],
     });
 }
+
 function Q(e) {
     var t, n;
     let { invite: r, showChannel: l = !1, inviteDisabled: a = !1, hide: s = !1, showRolesColumn: o } = e,
@@ -229,7 +239,9 @@ function Q(e) {
                   })
                 : null,
         uses: d,
-        expiresAt: (0, i.jsx)(T.A, { deadline: r.getExpiresAt() }),
+        expiresAt: (0, i.jsx)(T.A, {
+            deadline: r.getExpiresAt(),
+        }),
         roles: p,
         guildId: c,
         showRolesColumn: o,
@@ -238,6 +250,7 @@ function Q(e) {
         },
     });
 }
+
 function J(e) {
     let { applicationId: t, channel: r, showChannel: l = !1, inviteDisabled: a = !1, showRolesColumn: s } = e,
         o = (0, N.h)(t),
@@ -290,6 +303,7 @@ function J(e) {
         },
     });
 }
+
 function Z(e) {
     let {
         invites: t,
@@ -352,7 +366,9 @@ function Z(e) {
         },
         [C, k] = r.useState(62),
         R = () => {
-            let e = { source: S.Eo.GUILD_SETTINGS };
+            let e = {
+                source: S.Eo.GUILD_SETTINGS,
+            };
             (0, g.mMO)(
                 async () => (t) =>
                     (0, i.jsx)(
@@ -464,7 +480,9 @@ function Z(e) {
                             color: "text-subtle",
                             children:
                                 !0 === s
-                                    ? H.intl.format(H.t["97VdNm"], { onCreateInvite: T })
+                                    ? H.intl.format(H.t["97VdNm"], {
+                                          onCreateInvite: T,
+                                      })
                                     : H.intl.string(H.t.WDw38H),
                         }),
                         (0, i.jsxs)("div", {
@@ -495,7 +513,9 @@ function Z(e) {
                                     }),
                             ],
                         }),
-                        (0, i.jsx)(g.cGx, { className: V.zN }),
+                        (0, i.jsx)(g.cGx, {
+                            className: V.zN,
+                        }),
                     ],
                 });
             if (2 === t)

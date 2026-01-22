@@ -16,6 +16,7 @@ var r = n(627968),
     _ = n(993401),
     h = n(518477),
     m = n(985018);
+
 function g(e, t, n) {
     return (
         t in e
@@ -29,6 +30,7 @@ function g(e, t, n) {
         e
     );
 }
+
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -45,6 +47,7 @@ function E(e) {
     }
     return e;
 }
+
 function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -57,6 +60,7 @@ function b(e, t) {
     }
     return n;
 }
+
 function y(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -68,6 +72,7 @@ function y(e, t) {
         e
     );
 }
+
 function O(e) {
     let { user: t, guildId: n, viewProfileItem: i, appContext: _, popoutTargetRef: g, children: b } = e,
         { trackUserProfileAction: y, context: O } = (0, p.NJ)(),
@@ -185,30 +190,58 @@ function O(e) {
                           onSelect: void 0,
                           onClose: t,
                           "aria-label": m.intl.string(m.t.AXIHpV),
-                          children: N.map((e, t) => (0, r.jsx)(a.rXV, { children: e.map((e) => e) }, t)),
+                          children: N.map((e, t) =>
+                              (0, r.jsx)(
+                                  a.rXV,
+                                  {
+                                      children: e.map((e) => e),
+                                  },
+                                  t,
+                              ),
+                          ),
                       });
                   },
                   children: (e) => b(E({}, e, I)),
               }),
           });
 }
+
 function A(e) {
     let t = i.useRef(null);
     return (0, r.jsx)(
         O,
         y(E({}, e), {
             popoutTargetRef: t,
-            children: (e) => (0, r.jsx)(_.q3, E({ buttonRef: t }, e)),
+            children: (e) =>
+                (0, r.jsx)(
+                    _.q3,
+                    E(
+                        {
+                            buttonRef: t,
+                        },
+                        e,
+                    ),
+                ),
         }),
     );
 }
+
 function v(e) {
     let t = i.useRef(null);
     return (0, r.jsx)(
         O,
         y(E({}, e), {
             popoutTargetRef: t,
-            children: (e) => (0, r.jsx)(_.br, E({ buttonRef: t }, e)),
+            children: (e) =>
+                (0, r.jsx)(
+                    _.br,
+                    E(
+                        {
+                            buttonRef: t,
+                        },
+                        e,
+                    ),
+                ),
         }),
     );
 }

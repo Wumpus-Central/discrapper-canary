@@ -25,6 +25,7 @@ var s = n(118356),
 n(1880);
 var c = n(335713),
     u = n(264572).Buffer;
+
 function d(e, t, n) {
     return (
         t in e
@@ -38,6 +39,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -54,6 +56,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -66,6 +69,7 @@ function p(e, t) {
     }
     return n;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -100,6 +104,7 @@ class g extends Error {
             (this.headers = s);
     }
 }
+
 function E(e, t, n, r, s) {
     var c, u, d, p, h;
     let b = i()[e](t.url);
@@ -201,7 +206,15 @@ function E(e, t, n, r, s) {
                               )
                             : r(d);
                     }
-                    null != s && s(f({ hasErr: !1 }, d));
+                    null != s &&
+                        s(
+                            f(
+                                {
+                                    hasErr: !1,
+                                },
+                                d,
+                            ),
+                        );
                 }
             },
             (e) => {
@@ -219,9 +232,13 @@ function E(e, t, n, r, s) {
         ),
         (null == (p = t.signal) ? void 0 : p.aborted)
             ? b.abort()
-            : null == (h = t.signal) || h.addEventListener("abort", () => b.abort(), { once: !0 });
+            : null == (h = t.signal) ||
+              h.addEventListener("abort", () => b.abort(), {
+                  once: !0,
+              });
 }
 let b = new Map();
+
 function y(e) {
     let t = b.get(e);
     if (null == t)
@@ -237,18 +254,19 @@ function y(e) {
     }
     h.verbose("rateLimitExpirationHandler: moving to next record for ", e), n();
 }
+
 function O(e, t) {
     let n = b.get(e.url);
     if (null != t && 429 === t.status) {
         var r, i, a;
         let s = (null == (i = t.body) ? void 0 : i.retry_after) || 5,
-            o = Date.now() + 1000 * s;
+            o = Date.now() + 1e3 * s;
         if (null != n)
             if (!(n.retryAfterTimestamp < o))
                 return void h.verbose("cleanupRequestEntry: already has rate limit for ", e.url);
             else h.verbose("cleanupRequestEntry: extending rate limit for ", e.url), clearTimeout(n.timeoutId);
         h.verbose("cleanupRequestEntry: rate limit for ".concat(e.url, " retry after ").concat(s, " seconds"));
-        let l = setTimeout(() => y(e.url), 1000 * s);
+        let l = setTimeout(() => y(e.url), 1e3 * s);
         b.set(e.url, {
             queue: null != (r = null == n ? void 0 : n.queue) ? r : [],
             retryAfterTimestamp: o,
@@ -261,7 +279,7 @@ function O(e, t) {
             (h.verbose("cleanupRequestEntry: rate limit for ", e.url, "expired"), y(e.url));
 }
 let A = (e, t, n) => {
-    let r = Math.round((t.retryAfterTimestamp - Date.now()) / 1000);
+    let r = Math.round((t.retryAfterTimestamp - Date.now()) / 1e3);
     e({
         status: 429,
         body: {
@@ -282,6 +300,7 @@ let A = (e, t, n) => {
                 headers: {},
             });
 };
+
 function v(e, t, n) {
     return new Promise((r, i) => {
         "string" == typeof t &&
@@ -319,18 +338,22 @@ if (n.g.isServerRendering) {
         });
     (S = e), (I = e), (T = e), (C = e), (N = e);
 }
+
 function w() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     return "https:" + window.GLOBAL_ENV.API_ENDPOINT + (e ? "/v".concat(window.GLOBAL_ENV.API_VERSION) : "");
 }
 let P = null;
+
 function D(e) {
     P = e;
 }
 let x = () => Promise.resolve();
+
 function L(e) {
     x = e;
 }
+
 function j(e) {
     try {
         return u.from(JSON.stringify(e)).toString("base64");

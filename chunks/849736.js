@@ -29,6 +29,7 @@ var l = n(155718),
     E = n(418208),
     b = n(652215),
     y = n(835002);
+
 function O(e, t, n) {
     return (
         t in e
@@ -42,6 +43,7 @@ function O(e, t, n) {
         e
     );
 }
+
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -58,6 +60,7 @@ function A(e) {
     }
     return e;
 }
+
 function v(e, t) {
     let n = e.getGuildId();
     return (
@@ -73,6 +76,7 @@ function v(e, t) {
         })
     );
 }
+
 function S(e, t) {
     let n = e.getGuildId();
     return (
@@ -92,6 +96,7 @@ function S(e, t) {
         )
     );
 }
+
 function I(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = null == e ? void 0 : e.getGuildId();
@@ -111,11 +116,16 @@ function I(e, t) {
                       request_to_speak_timestamp: null,
                       channel_id: e.id,
                   },
-                  n ? { silent: n } : {},
+                  n
+                      ? {
+                            silent: n,
+                        }
+                      : {},
               ),
               rejectWithError: !1,
           }));
 }
+
 function T(e) {
     let t = null == e ? void 0 : e.getGuildId();
     return (
@@ -132,6 +142,7 @@ function T(e) {
         })
     );
 }
+
 function C(e, t, n) {
     let r = e.getGuildId();
     return (
@@ -150,6 +161,7 @@ function C(e, t, n) {
         )
     );
 }
+
 function N(e, t) {
     if (null == t || null == e) return;
     let n = t.getGuildId();
@@ -168,6 +180,7 @@ function N(e, t) {
         })
     );
 }
+
 function R(e, t, n) {
     let r = e.getGuildId();
     i()(null != r, "Channel cannot be guildless");

@@ -1,4 +1,6 @@
-n.d(t, { P: () => d });
+n.d(t, {
+    P: () => d,
+});
 var r = n(627968);
 n(64700);
 var i = n(877624),
@@ -8,6 +10,7 @@ var i = n(877624),
     l = n(585061),
     c = n(937008),
     u = n(788868);
+
 function d(e) {
     let { planSkuId: t, referralTrialOfferId: n } = e,
         { isGift: d } = (0, c.Pv)(),

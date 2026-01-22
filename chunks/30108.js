@@ -16,6 +16,7 @@ var r = n(311907),
     f = n(69407),
     p = n(446600),
     _ = n(39938);
+
 function h(e, t, n) {
     return (
         t in e
@@ -32,6 +33,7 @@ function h(e, t, n) {
 let m = (e) => e / 400,
     g = !1,
     E = (0, a.Qh)("stage_waiting", "stage_waiting", m(o.A.getOutputVolume()));
+
 function b() {
     let e = l.A.getVoiceChannelId();
     if (null == e) {
@@ -58,12 +60,14 @@ function b() {
     let n = null != Object.values(c.A.getVoiceStatesForChannel(e)).find((e) => !e.suppress && !e.isVoiceMuted());
     n || g ? n && (E.pause(), (g = !1)) : ((E.volume = m(o.A.getOutputVolume())), E.loop(), (g = !0));
 }
+
 function y(e) {
     let t = (0, r.bG)([l.A], () => l.A.getVoiceChannelId() === e),
         n = null != (0, d.E5)(e, f.ip.SPEAKER).find((e) => !e.voiceState.isVoiceMuted()),
         i = (0, r.bG)([p.A], () => p.A.getStageInstanceByChannel(e));
     return t && null == i && !n;
 }
+
 function O(e) {
     let t = l.A.getVoiceChannelId() === e,
         n = null != u.A.getMutableParticipants(e, f.ip.SPEAKER).find((e) => !e.voiceState.isVoiceMuted()),

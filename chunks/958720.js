@@ -1,4 +1,6 @@
-n.d(t, { A: () => E });
+n.d(t, {
+    A: () => E,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -15,6 +17,7 @@ var i = n(503698),
     h = n(788868),
     m = n(985018),
     g = n(371894);
+
 function E(e) {
     let {
             userLocale: t,
@@ -65,7 +68,9 @@ function E(e) {
                 variant: "eyebrow",
                 color: "always-white",
                 className: g.kP,
-                children: m.intl.format(m.t.IAybsG, { discount: (0, f.l9)(t, x / 100) }),
+                children: m.intl.format(m.t.IAybsG, {
+                    discount: (0, f.l9)(t, x / 100),
+                }),
             }),
         G = () =>
             C
@@ -93,7 +98,9 @@ function E(e) {
                     O &&
                         (0, r.jsx)("div", {
                             className: g._R,
-                            children: m.intl.format(m.t.ori2Jm, { currencyAmount: (0, _.$g)(L.amount, L.currency) }),
+                            children: m.intl.format(m.t.ori2Jm, {
+                                currencyAmount: (0, _.$g)(L.amount, L.currency),
+                            }),
                         }),
                 ],
             }),
@@ -116,9 +123,13 @@ function E(e) {
                 });
             }
             return N
-                ? m.intl.format(M, { price: (0, _.$g)(L.amount, L.currency) })
+                ? m.intl.format(M, {
+                      price: (0, _.$g)(L.amount, L.currency),
+                  })
                 : w.interval === h.WT.YEAR
-                  ? m.intl.formatToPlainString(m.t.rtLTJP, { percent: x })
+                  ? m.intl.formatToPlainString(m.t.rtLTJP, {
+                        percent: x,
+                    })
                   : null;
         },
         H = () => {
@@ -143,7 +154,9 @@ function E(e) {
         }),
         children: [
             (0, r.jsxs)("div", {
-                className: a()(g.XM, { [g.PA]: D }),
+                className: a()(g.XM, {
+                    [g.PA]: D,
+                }),
                 children: [
                     (0, r.jsxs)("div", {
                         className: g.l,
@@ -170,11 +183,17 @@ function E(e) {
                     }),
                     v
                         ? (0, r.jsx)("div", {
-                              className: a()({ [g.kb]: E }),
-                              children: m.intl.format(m.t.hXcaLT, { price: F() }),
+                              className: a()({
+                                  [g.kb]: E,
+                              }),
+                              children: m.intl.format(m.t.hXcaLT, {
+                                  price: F(),
+                              }),
                           })
                         : (0, r.jsx)("div", {
-                              className: a()({ [g.h4]: E || O }),
+                              className: a()({
+                                  [g.h4]: E || O,
+                              }),
                               children: (0, _.$g)(L.amount, L.currency),
                           }),
                 ],
@@ -185,7 +204,9 @@ function E(e) {
                     children: (0, r.jsx)(c.Text, {
                         variant: "text-md/normal",
                         color: E ? "text-default" : "interactive-text-default",
-                        className: a()(g.Ub, { [g.sw]: T || N }),
+                        className: a()(g.Ub, {
+                            [g.sw]: T || N,
+                        }),
                         children: B(),
                     }),
                 }),

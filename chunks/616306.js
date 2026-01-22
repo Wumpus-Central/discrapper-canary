@@ -16,7 +16,9 @@ e.exports = function (e) {
                         begin: t.either(/Index: /, /^index/, /={3,}/, /^-{3}/, /^\*{3} /, /^\+{3}/, /^diff --git/),
                         end: /$/,
                     },
-                    { match: /^\*{15}$/ },
+                    {
+                        match: /^\*{15}$/,
+                    },
                 ],
             },
             {

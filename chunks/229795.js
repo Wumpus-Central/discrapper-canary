@@ -1,4 +1,7 @@
-n.d(t, { A: () => o }), n(896048);
+n.d(t, {
+    A: () => o,
+}),
+    n(896048);
 var r = n(73153),
     i = n(636401),
     l = n(629471),
@@ -42,7 +45,13 @@ let o = {
                         pictureInPictureLockState: l,
                         gridLockState: a,
                     });
-            else throw new i.A({ errorCode: s.Lw.INVALID_COMMAND }, "No application.");
+            else
+                throw new i.A(
+                    {
+                        errorCode: s.Lw.INVALID_COMMAND,
+                    },
+                    "No application.",
+                );
         },
     },
 };

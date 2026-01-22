@@ -1,4 +1,7 @@
-n.d(e, { A: () => A }), n(896048);
+n.d(e, {
+    A: () => A,
+}),
+    n(896048);
 var a = n(627968),
     r = n(64700),
     i = n(311907),
@@ -8,6 +11,7 @@ var a = n(627968),
     c = n(592074),
     u = n(985018),
     E = n(222872);
+
 function A(t) {
     var e, n;
     let { emailToken: A, onClose: _, onBack: C, onNext: d, transitionState: g } = t,

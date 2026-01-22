@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(64700),
     i = n(311907),
     a = n(401843),
@@ -7,6 +9,7 @@ var r = n(64700),
     l = n(576705),
     c = n(309010),
     u = n(818348);
+
 function d(e, t, n) {
     let d = null == t || null == n,
         f = (0, i.bG)([o.A], () => o.A.getChannel(t)),

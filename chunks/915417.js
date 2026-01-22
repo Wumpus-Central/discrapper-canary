@@ -1,4 +1,6 @@
-n.d(t, { g: () => O });
+n.d(t, {
+    g: () => O,
+});
 var r = n(627968),
     i = n(64700),
     l = n(280513),
@@ -34,6 +36,7 @@ let j = {
     badgeColorPrimary: null,
     badgeColorSecondary: null,
 };
+
 function O(e) {
     let { pendingFields: t } = e,
         { guild: n, guildProfile: O } = (0, a.cf)([g.A], () => ({
@@ -52,8 +55,12 @@ function O(e) {
         S = i.useCallback(() => {
             (null == n ? void 0 : n.id) != null &&
                 (N
-                    ? f.A.updateGuildProfile(n.id, { visibility: l.n.PUBLIC })
-                    : f.A.updateGuildProfile(n.id, { visibility: l.n.PUBLIC_WITH_RECRUITMENT }));
+                    ? f.A.updateGuildProfile(n.id, {
+                          visibility: l.n.PUBLIC,
+                      })
+                    : f.A.updateGuildProfile(n.id, {
+                          visibility: l.n.PUBLIC_WITH_RECRUITMENT,
+                      }));
         }, [null == n ? void 0 : n.id, N]),
         T = i.useCallback(() => {
             f.A.setSection(p.BEX.PROFILE);
@@ -74,7 +81,9 @@ function O(e) {
                 className: h.nB,
                 children: x.intl.string(x.t.Z7TCtd),
             }),
-            (0, r.jsx)(m.o, { guildId: n.id }),
+            (0, r.jsx)(m.o, {
+                guildId: n.id,
+            }),
             (0, r.jsx)("div", {
                 className: h.Zd,
                 children:
@@ -85,7 +94,9 @@ function O(e) {
                           })
                         : (0, r.jsx)(c.y$y, {}),
             }),
-            (0, r.jsx)("div", { className: h.yF }),
+            (0, r.jsx)("div", {
+                className: h.yF,
+            }),
             (0, r.jsxs)("div", {
                 className: h.Im,
                 children: [
@@ -126,7 +137,9 @@ function O(e) {
                         children: (0, r.jsxs)("div", {
                             className: h.cK,
                             children: [
-                                (0, r.jsx)("div", { className: h.D7 }),
+                                (0, r.jsx)("div", {
+                                    className: h.D7,
+                                }),
                                 (0, r.jsx)(u.Ay, {
                                     className: h.VH,
                                     profile: _,

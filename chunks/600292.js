@@ -13,6 +13,7 @@ var i = n(503698),
     d = n(11351),
     u = n(985018),
     f = n(100634);
+
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -38,6 +39,7 @@ function g(e) {
     }
     return e;
 }
+
 function b(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -56,6 +58,7 @@ function b(e, t) {
         e
     );
 }
+
 function m(e) {
     let { channelBenefits: t, intangibleBenefits: i, subscriptionListings: a, onImport: m } = e,
         p = (0, d.gN)();
@@ -120,10 +123,13 @@ function m(e) {
         ),
     });
 }
+
 function p(e) {
     let { guildId: t, onImport: i, disabled: c = !1 } = e;
     return (0, r.jsxs)(s.DUT, {
-        className: l()(f.eZ, { [f.r9]: c }),
+        className: l()(f.eZ, {
+            [f.r9]: c,
+        }),
         onClick: c
             ? void 0
             : function () {

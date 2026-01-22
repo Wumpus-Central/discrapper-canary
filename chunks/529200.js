@@ -1,4 +1,8 @@
-n.d(t, { A: () => w }), n(321073), n(896048);
+n.d(t, {
+    A: () => w,
+}),
+    n(321073),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -34,11 +38,15 @@ let y = (e) => {
                       children: [
                           (0, r.jsx)("div", {
                               className: b.resolving,
-                              children: (0, r.jsx)("div", { className: b.resolvingBackground }),
+                              children: (0, r.jsx)("div", {
+                                  className: b.resolvingBackground,
+                              }),
                           }),
                           (0, r.jsx)("div", {
                               className: b.resolvingFakeButton,
-                              children: (0, r.jsx)("div", { className: b.resolvingBackground }),
+                              children: (0, r.jsx)("div", {
+                                  className: b.resolvingBackground,
+                              }),
                           }),
                       ],
                   })
@@ -50,7 +58,10 @@ let y = (e) => {
         let { application: n, guild: i, channel: a, onClick: u, expired: d = !1, user: _, className: m } = e,
             E = null != (t = (0, c.Ay)(a)) ? t : "",
             y = h.kt.useSetting();
-        if (d) return (0, r.jsx)("div", { className: b.guildIconExpired });
+        if (d)
+            return (0, r.jsx)("div", {
+                className: b.guildIconExpired,
+            });
         let O = null == i || null != i.icon,
             A = s()((0, g.t)(b, "guildIcon", O ? "Image" : "", null != u ? "Joined" : ""), m);
         return null != n
@@ -125,10 +136,14 @@ let y = (e) => {
                         {
                             className: b.statusWrapper,
                             children: [
-                                (0, r.jsx)("i", { className: b.statusOnline }),
+                                (0, r.jsx)("i", {
+                                    className: b.statusOnline,
+                                }),
                                 (0, r.jsx)("span", {
                                     className: b.count,
-                                    children: E.intl.format(E.t["LC+S+m"], { membersOnline: t }),
+                                    children: E.intl.format(E.t["LC+S+m"], {
+                                        membersOnline: t,
+                                    }),
                                 }),
                             ],
                         },
@@ -142,10 +157,14 @@ let y = (e) => {
                         {
                             className: b.statusWrapper,
                             children: [
-                                (0, r.jsx)("i", { className: b.statusOffline }),
+                                (0, r.jsx)("i", {
+                                    className: b.statusOffline,
+                                }),
                                 (0, r.jsx)("span", {
                                     className: b.count,
-                                    children: E.intl.format(E.t.zRl6XR, { count: n }),
+                                    children: E.intl.format(E.t.zRl6XR, {
+                                        count: n,
+                                    }),
                                 }),
                             ],
                         },
@@ -203,7 +222,9 @@ let y = (e) => {
                   children: (0, r.jsx)("img", {
                       src: o,
                       alt: "",
-                      className: s()(b.inviteSplashImage, { [b.inviteSplashImageLoaded]: n }),
+                      className: s()(b.inviteSplashImage, {
+                          [b.inviteSplashImageLoaded]: n,
+                      }),
                       onLoad: () => a(!0),
                   }),
               });

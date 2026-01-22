@@ -1,4 +1,7 @@
-n.d(t, { A: () => h }), n(896048);
+n.d(t, {
+    A: () => h,
+}),
+    n(896048);
 var l = n(627968),
     i = n(64700),
     s = n(503698),
@@ -13,6 +16,7 @@ var l = n(627968),
     g = n(891674),
     C = n(853552),
     j = n(906471);
+
 function b(e) {
     let { guild: t, onClick: n } = e;
     return (0, l.jsxs)(d.DUT, {
@@ -36,6 +40,7 @@ function b(e) {
         ],
     });
 }
+
 function f(e) {
     let { directoryChannelId: t, guild: n } = e,
         s = (0, c.bG)([u.A], () => u.A.getDirectoryEntry(t, n.id)),
@@ -92,7 +97,10 @@ function f(e) {
                             },
                             e,
                         )),
-                        (n = n = { className: g.IQ }),
+                        (n = n =
+                            {
+                                className: g.IQ,
+                            }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                             : (function (e, t) {
@@ -112,6 +120,7 @@ function f(e) {
         ],
     });
 }
+
 function h(e) {
     let t,
         {
@@ -188,7 +197,9 @@ function h(e) {
         (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)(r.rQ0, {
-                    title: m.intl.formatToPlainString(m.t["9SKJdF"], { guildName: o }),
+                    title: m.intl.formatToPlainString(m.t["9SKJdF"], {
+                        guildName: o,
+                    }),
                     subtitle: m.intl.string(m.t.pYFZ9p),
                 }),
                 (0, l.jsx)(r.cwr, {
@@ -200,12 +211,16 @@ function h(e) {
                         look: "brand",
                         children: [
                             (0, l.jsx)(d.VQ0.Item, {
-                                className: a()(g.YU, { [g.xR]: 0 === h }),
+                                className: a()(g.YU, {
+                                    [g.xR]: 0 === h,
+                                }),
                                 id: 0,
                                 children: m.intl.string(m.t.FTe8HS),
                             }),
                             (0, l.jsx)(d.VQ0.Item, {
-                                className: a()(g.YU, { [g.xR]: 1 === h }),
+                                className: a()(g.YU, {
+                                    [g.xR]: 1 === h,
+                                }),
                                 id: 1,
                                 children: m.intl.string(m.t.epOumr),
                             }),

@@ -31,7 +31,12 @@ let c = (e) => {
         children: [
             (0, r.jsxs)("span", {
                 className: a()(l.Xh, d),
-                style: null != o ? { color: o } : void 0,
+                style:
+                    null != o
+                        ? {
+                              color: o,
+                          }
+                        : void 0,
                 children: [g, t],
             }),
             null != n

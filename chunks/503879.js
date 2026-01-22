@@ -22,6 +22,7 @@ var l,
     v = n(203982),
     j = n(652215),
     A = n(709992);
+
 function _(e, t, n) {
     return (
         t in e
@@ -35,6 +36,7 @@ function _(e, t, n) {
         e
     );
 }
+
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -51,12 +53,19 @@ function y(e) {
     }
     return e;
 }
+
 function O() {
     var e, t;
     let n =
         ((e = ["grayscale(", ")"]),
         t || (t = e.slice(0)),
-        Object.freeze(Object.defineProperties(e, { raw: { value: Object.freeze(t) } })));
+        Object.freeze(
+            Object.defineProperties(e, {
+                raw: {
+                    value: Object.freeze(t),
+                },
+            }),
+        ));
     return (
         (O = function () {
             return n;
@@ -126,7 +135,12 @@ let S = {
                 onMute: g,
             } = e;
         if (r.type === j.geh.YOUTUBE_VIDEO)
-            (t = y({ url: (0, j.PE$)(r.youtubeVideoId) }, C)),
+            (t = y(
+                {
+                    url: (0, j.PE$)(r.youtubeVideoId),
+                },
+                C,
+            )),
                 (n = y(
                     {
                         url: ""
@@ -214,11 +228,21 @@ class T extends (l = r.PureComponent) {
     }
     handleCurrentItemClick(e, t) {
         let { onCurrentItemClick: n } = this.props;
-        null != n && n(e, t), this.setState({ hasInteracted: !0 });
+        null != n && n(e, t),
+            this.setState({
+                hasInteracted: !0,
+            });
     }
     handleEdgeItemMouseEnter(e) {
         let { currentIndex: t } = this.state;
-        e < t ? this.setState({ hoveringPreviousItem: !0 }) : e > t && this.setState({ hoveringNextItem: !0 });
+        e < t
+            ? this.setState({
+                  hoveringPreviousItem: !0,
+              })
+            : e > t &&
+              this.setState({
+                  hoveringNextItem: !0,
+              });
     }
     renderCarousel() {
         let { items: e } = this.props,
@@ -239,11 +263,15 @@ class T extends (l = r.PureComponent) {
                       i,
                       (0, a.jsx)(m.Q8, {
                           onClick: this.manualPrevious,
-                          className: s()(A.UE, { [A.h_]: l }),
+                          className: s()(A.UE, {
+                              [A.h_]: l,
+                          }),
                       }),
                       (0, a.jsx)(m.Oj, {
                           onClick: this.manualNext,
-                          className: s()(A.UE, { [A.h_]: r }),
+                          className: s()(A.UE, {
+                              [A.h_]: r,
+                          }),
                       }),
                   ],
               });
@@ -381,7 +409,9 @@ class T extends (l = r.PureComponent) {
                 let { currentIndex: l, volume: r, isMuted: i } = this.state,
                     o = t === (0, b.U3)(l, this.props.items.length);
                 return (0, a.jsx)(c.A.div, {
-                    className: s()(A.AS, { [A.Xt]: o }),
+                    className: s()(A.AS, {
+                        [A.Xt]: o,
+                    }),
                     style: null != n ? this.getStyle(t, n) : null,
                     onMouseEnter: o ? null : () => this.handleEdgeItemMouseEnter(t),
                     onMouseLeave: o ? null : this.handleEdgeItemMouseLeave,
@@ -417,7 +447,11 @@ class T extends (l = r.PureComponent) {
                                 draggable: !1,
                             }),
                             e.type === j.geh.YOUTUBE_VIDEO || e.type === j.geh.VIDEO ? (0, a.jsx)(R, {}) : null,
-                            l ? (0, a.jsx)("div", { className: A.SD }) : null,
+                            l
+                                ? (0, a.jsx)("div", {
+                                      className: A.SD,
+                                  })
+                                : null,
                         ],
                     },
                     "page-".concat(t),
@@ -426,7 +460,7 @@ class T extends (l = r.PureComponent) {
     }
 }
 _(T, "defaultProps", {
-    autoplayInterval: 8000,
+    autoplayInterval: 8e3,
     paused: !1,
 });
 let L = (0, d.A)(T);

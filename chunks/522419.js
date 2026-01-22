@@ -1,4 +1,6 @@
-n.d(t, { y: () => c });
+n.d(t, {
+    y: () => c,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -6,6 +8,7 @@ var i = n(397927),
     s = n(105600),
     o = n(64175),
     l = n(652215);
+
 function c(e) {
     let { channelId: t, blockedUserIds: c, ignoredUserIds: u } = e;
     (0, i.mMO)(

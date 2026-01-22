@@ -1,8 +1,11 @@
-n.d(t, { _: () => o });
+n.d(t, {
+    _: () => o,
+});
 var r = n(627968),
     i = n(158954),
     a = n(397927),
     s = n(50900);
+
 function o(e) {
     let { title: t, titleTrailingIcon: n, subtitle: o, type: l = "primary" } = e;
     return "secondary" === l

@@ -1,12 +1,14 @@
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});
 var a = n(981737),
     i = {
         narrow: ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"],
-        abbreviated: ["Jan", "Feb", "Mär", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"],
+        abbreviated: ["Jan", "Feb", "M\xe4r", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"],
         wide: [
             "Januar",
             "Februar",
-            "März",
+            "M\xe4rz",
             "April",
             "Mai",
             "Juni",
@@ -20,7 +22,7 @@ var a = n(981737),
     },
     o = {
         narrow: i.narrow,
-        abbreviated: ["Jan.", "Feb.", "März", "Apr.", "Mai", "Juni", "Juli", "Aug.", "Sep.", "Okt.", "Nov.", "Dez."],
+        abbreviated: ["Jan.", "Feb.", "M\xe4rz", "Apr.", "Mai", "Juni", "Juli", "Aug.", "Sep.", "Okt.", "Nov.", "Dez."],
         wide: i.wide,
     };
 let r = {

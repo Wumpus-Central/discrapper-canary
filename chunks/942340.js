@@ -12,6 +12,7 @@ var r = n(64700),
     c = n(219538),
     u = n(550238),
     d = n(648335);
+
 function f(e, t, n) {
     return (
         t in e
@@ -25,6 +26,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -62,8 +64,12 @@ let _ = new s.A("useStripePaymentElementOptions"),
                         colorBackground: p,
                     },
                     rules: {
-                        ".Input": { backgroundColor: _ },
-                        ".Tab": { backgroundColor: h },
+                        ".Input": {
+                            backgroundColor: _,
+                        },
+                        ".Tab": {
+                            backgroundColor: h,
+                        },
                     },
                 }),
                 [d, f, p, _, h],
@@ -99,7 +105,11 @@ let _ = new s.A("useStripePaymentElementOptions"),
                     m(e),
                         null != t && t(e),
                         _.error("there was an error on setup for Payment Elements: ", e),
-                        (0, l.pM)(e, { tags: { source: "payment_elements" } });
+                        (0, l.pM)(e, {
+                            tags: {
+                                source: "payment_elements",
+                            },
+                        });
                 }
                 E(!1);
             }, [t]);
@@ -114,7 +124,9 @@ let _ = new s.A("useStripePaymentElementOptions"),
                     g
                         ? null
                         : p(
-                              { clientSecret: i },
+                              {
+                                  clientSecret: i,
+                              },
                               {
                                   appearance: S,
                                   customPaymentMethods: b,

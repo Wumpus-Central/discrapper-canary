@@ -26,6 +26,7 @@ var n = r(627968),
     S = r(985018),
     C = r(538644);
 let b = null != window.opener;
+
 function w() {
     var e, t;
     let r = (0, l.W6)(),
@@ -48,6 +49,7 @@ function w() {
         let t = (0, y.mw)(j);
         !(async function () {
             if (null == t || !p.A.isSupported(t)) return;
+
             function n(e) {
                 let { status: n, body: c } = e;
                 if (null != t) {
@@ -115,7 +117,7 @@ function w() {
                 if (c === o.N.HANDOFF_ERROR || t >= 10) return r.replace(m.BVt.CONNECTIONS_ERROR(A));
                 e = setTimeout(() => {
                     I() && ((t += 1), n());
-                }, 1000);
+                }, 1e3);
             }
             return (
                 n(),
@@ -136,9 +138,12 @@ function w() {
                       D(!1), T(!0);
                   },
               })
-            : (0, n.jsx)(E, { platformType: A })
+            : (0, n.jsx)(E, {
+                  platformType: A,
+              })
         : null;
 }
+
 function E(e) {
     let { platformType: t } = e,
         r = p.A.get(t);
@@ -147,19 +152,24 @@ function E(e) {
         children: [
             (0, n.jsx)("div", {
                 className: C.iU,
-                children: S.intl.format(S.t.AOKOe7, { name: r.name }),
+                children: S.intl.format(S.t.AOKOe7, {
+                    name: r.name,
+                }),
             }),
             (0, n.jsx)("div", {
                 className: C.UD,
                 children: (0, n.jsx)(i.$n, {
                     className: C.HM,
                     disabled: !0,
-                    children: (0, n.jsx)(u.y$y, { itemClassName: C.$N }),
+                    children: (0, n.jsx)(u.y$y, {
+                        itemClassName: C.$N,
+                    }),
                 }),
             }),
         ],
     });
 }
+
 function g(e) {
     let { deeplink: t, onClick: r, platformType: c } = e,
         l = p.A.get(c);
@@ -170,7 +180,9 @@ function g(e) {
             children: [
                 (0, n.jsx)("div", {
                     className: C.iU,
-                    children: S.intl.format(S.t["6ig6i5"], { connectionName: l.name }),
+                    children: S.intl.format(S.t["6ig6i5"], {
+                        connectionName: l.name,
+                    }),
                 }),
                 (0, n.jsx)(u.DUT, {
                     tag: "a",
@@ -227,7 +239,9 @@ async function h(e) {
                         state: n,
                     },
                 )),
-                (u = { providerType: t }),
+                (u = {
+                    providerType: t,
+                }),
                 (u = null != u ? u : {}),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(u))

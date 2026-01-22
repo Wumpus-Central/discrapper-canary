@@ -13,13 +13,19 @@ var n,
     o = l(638242),
     u = l(985018),
     d = (((n = {}).PURCHASE = "purchase"), (n.PREMIUM_PURCHASE = "premium_purchase"), (n.PREVIEW = "preview"), n);
-let m = { skuId: "None" },
-    p = { skuId: "Shop" },
+let m = {
+        skuId: "None",
+    },
+    p = {
+        skuId: "Shop",
+    },
     x = () => {
         let e = (0, i.bG)([a.A], () => a.A.purchases),
             [t, l] = (0, i.yK)([s.A], () => [s.A.categories, s.A.products]);
         return (
-            o.A.useConfig({ location: "use nameplate sections" }),
+            o.A.useConfig({
+                location: "use nameplate sections",
+            }),
             (0, r.useMemo)(() => {
                 let n = (0, c.zd)(e, t).reduce(
                     (t, n) => {

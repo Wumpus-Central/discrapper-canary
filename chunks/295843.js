@@ -27,6 +27,7 @@ var r,
     v = n(652215),
     S = n(985018),
     I = n(187663);
+
 function T(e, t, n) {
     return (
         t in e
@@ -40,6 +41,7 @@ function T(e, t, n) {
         e
     );
 }
+
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -56,6 +58,7 @@ function C(e) {
     }
     return e;
 }
+
 function N(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -68,6 +71,7 @@ function N(e, t) {
     }
     return n;
 }
+
 function R(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -109,7 +113,9 @@ class w extends (r = a.Component) {
         return null == e || null == t
             ? r
                 ? a()
-                : (0, i.jsx)(_.Wb, { isHorizontal: o })
+                : (0, i.jsx)(_.Wb, {
+                      isHorizontal: o,
+                  })
             : e.productLine === v.EZt.COLLECTIBLES
               ? (0, i.jsx)(u.A, {
                     section: v.JJy.APPLICATION_EMBED,
@@ -133,13 +139,19 @@ class w extends (r = a.Component) {
                 muted: !0,
             }),
             T(this, "handleToggleMute", () => {
-                this.setState({ muted: !this.state.muted });
+                this.setState({
+                    muted: !this.state.muted,
+                });
             }),
             T(this, "handleMouseEnter", () => {
-                this.setState({ playing: !0 });
+                this.setState({
+                    playing: !0,
+                });
             }),
             T(this, "handleMouseLeave", () => {
-                this.setState({ playing: !1 });
+                this.setState({
+                    playing: !1,
+                });
             }),
             T(this, "getStoreListingLocation", () => {
                 let { sku: e } = this.props;
@@ -221,8 +233,11 @@ class w extends (r = a.Component) {
             });
     }
 }
-T(w, "defaultProps", { renderFallback: v.tEg });
+T(w, "defaultProps", {
+    renderFallback: v.tEg,
+});
 let P = [y.A, b.A, E.A, O.A];
+
 function D(e) {
     let { skuId: t } = e,
         n = y.A.get(t),

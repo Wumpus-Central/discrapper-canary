@@ -1,4 +1,7 @@
-r.d(t, { default: () => j }), r(896048);
+r.d(t, {
+    default: () => j,
+}),
+    r(896048);
 var n = r(627968),
     l = r(64700),
     a = r(284009),
@@ -51,12 +54,16 @@ let j = (e) => {
                         }),
                         (0, n.jsxs)(d.A.Content, {
                             children: [
-                                (0, n.jsx)(u.A, { inModal: !0 }),
+                                (0, n.jsx)(u.A, {
+                                    inModal: !0,
+                                }),
                                 (0, n.jsx)(o.Text, {
                                     className: b.ed,
                                     variant: "text-xs/normal",
                                     color: "text-default",
-                                    children: f.intl.format(p.default.snlFqR, { username: c.Ay.getName(r) }),
+                                    children: f.intl.format(p.default.snlFqR, {
+                                        username: c.Ay.getName(r),
+                                    }),
                                 }),
                             ],
                         }),

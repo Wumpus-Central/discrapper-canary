@@ -1,4 +1,7 @@
-n.d(t, { A: () => E }), n(896048);
+n.d(t, {
+    A: () => E,
+}),
+    n(896048);
 var r,
     i,
     l = n(311907),
@@ -18,6 +21,7 @@ var r,
 let j = new Set(),
     O = p.Hy.LANDING,
     y = null;
+
 function v(e) {
     let { subsection: t } = e;
     if (o.A.getGuildId() === y) return !1;

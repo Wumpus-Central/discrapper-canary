@@ -5,5 +5,7 @@ r(
         global: !0,
         forced: parseInt !== a,
     },
-    { parseInt: a },
+    {
+        parseInt: a,
+    },
 );

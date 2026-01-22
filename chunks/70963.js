@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -13,6 +15,7 @@ var i = n(311907),
     p = n(652215),
     _ = n(996988),
     h = n(985018);
+
 function m(e) {
     let { channel: t, onAction: n, onClose: m } = e,
         { themeType: g } = (0, d.E)(),
@@ -43,7 +46,10 @@ function m(e) {
                     : h.intl.string(h.t["96ANUN"]),
         A = (e) => {
             e.stopPropagation(),
-                null == n || n({ action: "PRESS_JOIN_CALL_BUTTON" }),
+                null == n ||
+                    n({
+                        action: "PRESS_JOIN_CALL_BUTTON",
+                    }),
                 t.isGuildStageVoice() ? (0, l.av)(t) : (a.default.selectVoiceChannel(t.id), (0, o.iN)(t.id)),
                 null == m || m();
         };

@@ -4,6 +4,7 @@ n.d(t, {
 });
 var l,
     r = n(741918);
+
 function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -29,6 +30,7 @@ function a(e) {
     }
     return e;
 }
+
 function i(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -48,16 +50,25 @@ function i(e, t) {
     );
 }
 var s = (((l = {}).UPDATE_ITEM_COUNT = "UPDATE_ITEM_COUNT"), (l.SET_FOCUSED_INDEX = "SET_FOCUSED_INDEX"), l);
+
 function o(e, t) {
     switch (t.type) {
         case r.X2.NAVIGATE_UP:
-            return i(a({}, e), { focusedIndex: Math.max(0, e.focusedIndex - 1) });
+            return i(a({}, e), {
+                focusedIndex: Math.max(0, e.focusedIndex - 1),
+            });
         case r.X2.NAVIGATE_DOWN:
-            return i(a({}, e), { focusedIndex: Math.min(e.focusedIndex + 1, e.itemCount - 1) });
+            return i(a({}, e), {
+                focusedIndex: Math.min(e.focusedIndex + 1, e.itemCount - 1),
+            });
         case r.X2.NAVIGATE_START:
-            return i(a({}, e), { focusedIndex: 0 });
+            return i(a({}, e), {
+                focusedIndex: 0,
+            });
         case r.X2.NAVIGATE_END:
-            return i(a({}, e), { focusedIndex: e.itemCount - 1 });
+            return i(a({}, e), {
+                focusedIndex: e.itemCount - 1,
+            });
         case "UPDATE_ITEM_COUNT":
             return (function (e, t) {
                 let { itemCount: n } = t;
@@ -69,7 +80,9 @@ function o(e, t) {
         case "SET_FOCUSED_INDEX":
             return (function (e, t) {
                 let { index: n } = t;
-                return i(a({}, e), { focusedIndex: Math.max(0, Math.min(n, e.itemCount - 1)) });
+                return i(a({}, e), {
+                    focusedIndex: Math.max(0, Math.min(n, e.itemCount - 1)),
+                });
             })(e, t);
         case r.X2.SELECT_FOCUSED_ITEM:
             break;

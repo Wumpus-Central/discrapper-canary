@@ -16,6 +16,7 @@ var l = r(503698),
     C = r(985018),
     m = r(346349),
     L = r(473169);
+
 function h() {
     return (0, s.jsx)(d.A, {
         className: m.w$,
@@ -29,6 +30,7 @@ function h() {
         }),
     });
 }
+
 function x(e) {
     let { verified: t, text: r } = e;
     return t
@@ -38,6 +40,7 @@ function x(e) {
           })
         : r;
 }
+
 function g(e) {
     let { className: t, count: r, creator: l, verifiedName: i } = e;
     return (0, s.jsx)("div", {
@@ -57,16 +60,26 @@ function g(e) {
                               t,
                           ),
                   })
-                : C.intl.format(C.t.cGXXHL, { usageCount: r }),
+                : C.intl.format(C.t.cGXXHL, {
+                      usageCount: r,
+                  }),
     });
 }
+
 function p(e) {
     var t;
     let { guildTemplate: r, error: l, tall: d, pillClassName: h } = e;
     if (null != l && "" !== l)
         return (0, s.jsxs)("div", {
             className: m.kL,
-            children: [(0, s.jsx)(a.hE, { children: C.intl.string(C.t.mDFGFj) }), (0, s.jsx)(a.tK, { children: l })],
+            children: [
+                (0, s.jsx)(a.hE, {
+                    children: C.intl.string(C.t.mDFGFj),
+                }),
+                (0, s.jsx)(a.tK, {
+                    children: l,
+                }),
+            ],
         });
     if (r.state === o.QB.RESOLVING)
         return (0, s.jsx)("div", {

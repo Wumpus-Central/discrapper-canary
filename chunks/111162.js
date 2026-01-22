@@ -1,4 +1,8 @@
-n.r(t), n.d(t, { default: () => I }), n(938796);
+n.r(t),
+    n.d(t, {
+        default: () => I,
+    }),
+    n(938796);
 var r,
     i = n(158390),
     a = n(247775),
@@ -10,6 +14,7 @@ var r,
     d = n(927813),
     f = n(728458),
     p = n(652215);
+
 function _(e, t, n) {
     return (
         t in e
@@ -23,6 +28,7 @@ function _(e, t, n) {
         e
     );
 }
+
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -46,13 +52,18 @@ let m = (() => {
             r = () => {
                 o.Bo.put({
                     url: e,
-                    headers: { Authorization: a.getToken() },
+                    headers: {
+                        Authorization: a.getToken(),
+                    },
                     oldFormErrors: !0,
                     rejectWithError: !0,
                 }).then(
                     (e) => {
                         401 === e.status || 403 === e.status
-                            ? ((t = null), (0, u.x)({ sourceMapsEnabled: !1 }))
+                            ? ((t = null),
+                              (0, u.x)({
+                                  sourceMapsEnabled: !1,
+                              }))
                             : 200 !== e.status
                               ? (t = setTimeout(r, n.fail()))
                               : (n.succeed(),
@@ -72,7 +83,9 @@ let m = (() => {
                           (t = null),
                           o.Bo.del({
                               url: e,
-                              headers: { Authorization: a.getToken() },
+                              headers: {
+                                  Authorization: a.getToken(),
+                              },
                               oldFormErrors: !0,
                               rejectWithError: !0,
                           })));
@@ -104,21 +117,28 @@ let m = (() => {
         personaDisableModularPilotTestTemplate: !1,
     },
     b = h({}, E);
+
 function y(e) {
     (b = h({}, E, b, e)), m.set(b.sourceMapsEnabled), l.w.set(g, b);
 }
+
 function O(e) {
     let { settings: t } = e;
     y(t);
 }
+
 function A(e) {
     y(E);
 }
+
 function v(e) {
     var t;
     let n = ((null != (t = e.user.flags) ? t : 0) & p.nhx.STAFF) === p.nhx.STAFF,
         r = n || null != e.user.personal_connection_id;
-    n && m.set(b.sourceMapsEnabled), f.A.setTags({ isStaff: r.toString() });
+    n && m.set(b.sourceMapsEnabled),
+        f.A.setTags({
+            isStaff: r.toString(),
+        });
 }
 class S extends (r = s.Ay.Store) {
     initialize() {

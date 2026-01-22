@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(64700),
     l = n(884362),
     i = n(765548),
@@ -7,6 +9,7 @@ var r = n(64700),
     o = n(375901),
     c = n(381941),
     u = n(652215);
+
 function d(e) {
     let { scrollerRef: t } = e,
         n = (function (e, t) {
@@ -45,7 +48,9 @@ function d(e) {
             return null == e
                 ? Promise.resolve()
                 : new Promise((t) => {
-                      e.scrollToBottom({ callback: () => requestAnimationFrame(t) });
+                      e.scrollToBottom({
+                          callback: () => requestAnimationFrame(t),
+                      });
                   });
         }),
         f = (0, i.A)(() => {
@@ -53,7 +58,9 @@ function d(e) {
             return null == e
                 ? Promise.resolve()
                 : new Promise((t) => {
-                      e.scrollToTop({ callback: () => requestAnimationFrame(t) });
+                      e.scrollToTop({
+                          callback: () => requestAnimationFrame(t),
+                      });
                   });
         }),
         p = r.useCallback(

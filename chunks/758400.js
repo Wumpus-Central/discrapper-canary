@@ -54,6 +54,7 @@ var r = n(627968),
     X = n(985018),
     Z = n(595654);
 let Q = "app";
+
 function $(e) {
     let t,
         {
@@ -90,12 +91,20 @@ function $(e) {
             (0, r.jsxs)("div", {
                 className: s()(t, c),
                 children: [
-                    (0, r.jsx)("div", { className: Z.Kq }),
-                    (0, r.jsx)("div", { className: Z.OL }),
+                    (0, r.jsx)("div", {
+                        className: Z.Kq,
+                    }),
+                    (0, r.jsx)("div", {
+                        className: Z.OL,
+                    }),
                     (0, r.jsxs)("div", {
                         className: Z.eC,
                         children: [
-                            (0, r.jsx)("div", { className: s()(Z.Ab, { [Z.aD]: _ }) }),
+                            (0, r.jsx)("div", {
+                                className: s()(Z.Ab, {
+                                    [Z.aD]: _,
+                                }),
+                            }),
                             (0, r.jsx)("div", {
                                 children: (0, P.Uf)({
                                     subscription: n,
@@ -120,15 +129,20 @@ function $(e) {
                 (0, r.jsx)(h.Text, {
                     className: Z.yW,
                     variant: "text-sm/normal",
-                    children: X.intl.format(d.Fr ? X.t.uxYBEa : X.t.k6haR9, { openAppHook: () => (0, b.A)(Q) }),
+                    children: X.intl.format(d.Fr ? X.t.uxYBEa : X.t.k6haR9, {
+                        openAppHook: () => (0, b.A)(Q),
+                    }),
                 }),
         ],
     });
 }
+
 function J() {
     return (
         i.useEffect(() => {
-            R.default.track(K.HAw.TOOLTIP_VIEWED, { type: "subscription_settings_missing_payment_method" });
+            R.default.track(K.HAw.TOOLTIP_VIEWED, {
+                type: "subscription_settings_missing_payment_method",
+            });
         }, []),
         (0, r.jsxs)("div", {
             className: Z.Zz,
@@ -149,10 +163,13 @@ function J() {
         })
     );
 }
+
 function ee() {
     return (
         i.useEffect(() => {
-            R.default.track(K.HAw.TOOLTIP_VIEWED, { type: "subscription_settings_invalid_payment_method" });
+            R.default.track(K.HAw.TOOLTIP_VIEWED, {
+                type: "subscription_settings_invalid_payment_method",
+            });
         }, []),
         (0, r.jsxs)("div", {
             className: Z.Zz,
@@ -173,12 +190,15 @@ function ee() {
         })
     );
 }
+
 function et(e) {
     let { daysPastDue: t, subscription: n, openInvoiceId: a } = e,
         { analyticsLocations: s } = (0, E.Ay)(g.A.PAST_DUE_ONE_TIME_PAYMENT_METHOD_BANNER);
     return (
         i.useEffect(() => {
-            R.default.track(K.HAw.TOOLTIP_VIEWED, { type: "subscription_settings_invalid_payment_method" });
+            R.default.track(K.HAw.TOOLTIP_VIEWED, {
+                type: "subscription_settings_invalid_payment_method",
+            });
         }, []),
         (0, r.jsxs)("div", {
             className: Z.Zz,
@@ -208,6 +228,7 @@ function et(e) {
         })
     );
 }
+
 function en(e) {
     let { subscription: t, renewalInvoicePreview: n, openInvoice: i, className: a, fractionalPremiumInfo: o } = e;
     return (0, r.jsxs)("div", {
@@ -218,10 +239,13 @@ function en(e) {
                 className: Z.QL,
                 children: X.intl.string(X.t.KXQjfc),
             }),
-            (0, r.jsx)("div", { children: P.Ay.getBillingInformationString(t, n, i, !1, o) }),
+            (0, r.jsx)("div", {
+                children: P.Ay.getBillingInformationString(t, n, i, !1, o),
+            }),
         ],
     });
 }
+
 function er() {
     let e = (0, f.bG)([N.default], () => N.default.getCurrentUser()),
         t = null != e && e.isPremiumGroupMember();
@@ -255,10 +279,14 @@ function er() {
                         ],
                     }),
                 }),
-            t && (0, r.jsx)(k.i, { currentUser: e }),
+            t &&
+                (0, r.jsx)(k.i, {
+                    currentUser: e,
+                }),
         ],
     });
 }
+
 function ei(e) {
     let {
             subscription: t,
@@ -354,7 +382,9 @@ function ei(e) {
                                 openInvoice: f,
                             }),
                             (0, r.jsx)("div", {
-                                className: s()(Z.g4, { [Z.sE]: l }),
+                                className: s()(Z.g4, {
+                                    [Z.sE]: l,
+                                }),
                                 children: (0, r.jsx)(h.D0$, {
                                     label:
                                         t.isPurchasedExternally && null != t.paymentGateway
@@ -380,10 +410,13 @@ function ei(e) {
     });
 }
 let ea = new Set([K.Dmq.ACTIVE, K.Dmq.PAST_DUE, K.Dmq.CANCELED, K.Dmq.PAUSE_PENDING, K.Dmq.PAUSED]);
+
 function es() {
     return (
         i.useEffect(() => {
-            R.default.track(K.HAw.TOOLTIP_VIEWED, { type: "subscription_settings_duplicate_subscriptions" });
+            R.default.track(K.HAw.TOOLTIP_VIEWED, {
+                type: "subscription_settings_duplicate_subscriptions",
+            });
         }, []),
         (0, r.jsxs)("div", {
             className: Z.oU,
@@ -397,12 +430,15 @@ function es() {
                 (0, r.jsx)(h.Text, {
                     className: Z.dk,
                     variant: "text-sm/normal",
-                    children: X.intl.format(X.t["6eXiiC"], { helpCenterLink: w.A.getArticleURL(K.MVz.NITRO) }),
+                    children: X.intl.format(X.t["6eXiiC"], {
+                        helpCenterLink: w.A.getArticleURL(K.MVz.NITRO),
+                    }),
                 }),
             ],
         })
     );
 }
+
 function eo(e) {
     var t;
     let n,
@@ -521,7 +557,9 @@ function eo(e) {
                                   color: _.A.colors.ICON_STRONG,
                               }),
                           }),
-                          children: X.intl.format(X.t.K4QorK, { helpdeskArticle: w.A.getArticleURL(K.MVz.BILLING) }),
+                          children: X.intl.format(X.t.K4QorK, {
+                              helpdeskArticle: w.A.getArticleURL(K.MVz.BILLING),
+                          }),
                       }),
                   (0, r.jsxs)("div", {
                       children: [

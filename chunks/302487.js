@@ -7,7 +7,7 @@ var l = n(627968),
     r = n(64700),
     a = n(284009),
     i = n.n(a),
-    s = n(432022),
+    s = n(108531),
     c = n(311907),
     o = n(397927),
     d = n(817363),
@@ -39,6 +39,7 @@ let C = {
         tension: 2400,
         friction: 52,
     };
+
 function T(e) {
     let { channelId: t, onClick: n, onClose: a, onMouseEnter: s } = e,
         u = r.useRef(null),
@@ -49,12 +50,18 @@ function T(e) {
             className: A.EJ,
             onMouseEnter: s,
             onClick: () => {
-                (0, v.ri)({ isMobile: !1 }), null == n || n();
+                (0, v.ri)({
+                    isMobile: !1,
+                }),
+                    null == n || n();
             },
             onKeyPress: (e) => {
                 if ("Enter" === e.key) {
                     var t;
-                    null == (t = u.current) || t.activateUploadDialogue(), (0, v.ri)({ isMobile: !1 });
+                    null == (t = u.current) || t.activateUploadDialogue(),
+                        (0, v.ri)({
+                            isMobile: !1,
+                        });
                 }
             },
             children: [
@@ -85,6 +92,7 @@ function T(e) {
         })
     );
 }
+
 function _(e) {
     let { channelId: t, closePopout: n } = e,
         [a, i] = r.useState(!1),
@@ -141,6 +149,7 @@ function _(e) {
         }),
     });
 }
+
 function E(e) {
     let { channelId: t } = e,
         [n, a] = r.useState(!1),

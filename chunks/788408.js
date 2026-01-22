@@ -1,4 +1,6 @@
-e.d(t, { A: () => u });
+e.d(t, {
+    A: () => u,
+});
 var i = e(627968);
 e(64700);
 var l = e(311907),
@@ -8,6 +10,7 @@ var l = e(311907),
     c = e(576705),
     o = e(652215),
     d = e(985018);
+
 function u(n, t) {
     return (0, l.bG)([c.A], () => c.A.can(o.xBc.CONNECT, n), [n]) && n.isGuildVocal()
         ? (0, i.jsx)(r.Drp, {

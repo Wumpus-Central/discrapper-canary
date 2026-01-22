@@ -1,7 +1,9 @@
 function r(e) {
     return e && "object" == typeof e && "default" in e ? e.default : e;
 }
-Object.defineProperty(t, "__esModule", { value: !0 });
+Object.defineProperty(t, "__esModule", {
+    value: !0,
+});
 var i = n(131981),
     a = n(843455),
     s = r(n(42539)),
@@ -19,8 +21,9 @@ var i = n(131981),
     E = r(n(681334)),
     b = n(111806),
     y = n(269270);
+
 function O(e, t, n) {
-    void 0 === n && (n = 1000),
+    void 0 === n && (n = 1e3),
         i.useLayoutEffect(function () {
             if (t) {
                 var r = 0;
@@ -121,6 +124,7 @@ var A = {
             (this.round = void 0),
             Object.assign(this, S);
     };
+
 function T(e, t, n) {
     for (var r in (n && (C((n = s({}, n)), t), (t = s(s({}, n), t))), C(e, t), Object.assign(e, t), S))
         null == e[r] && (e[r] = S[r]);
@@ -136,6 +140,7 @@ function T(e, t, n) {
         e
     );
 }
+
 function C(e, t) {
     if (a.is.und(t.decay)) {
         var n = !a.is.und(t.tension) || !a.is.und(t.friction);
@@ -158,13 +163,16 @@ var N = [],
             (this.onChange = void 0),
             (this.onRest = []);
     };
+
 function w(e) {
     var t = 0;
     if ("u" < typeof Symbol || null == e[Symbol.iterator]) {
         if (Array.isArray(e) || (e = P(e)))
             return function () {
                 return t >= e.length
-                    ? { done: !0 }
+                    ? {
+                          done: !0,
+                      }
                     : {
                           done: !1,
                           value: e[t++],
@@ -176,6 +184,7 @@ function w(e) {
     }
     return (t = e[Symbol.iterator]()).next.bind(t);
 }
+
 function P(e, t) {
     if (e) {
         if ("string" == typeof e) return D(e, t);
@@ -185,6 +194,7 @@ function P(e, t) {
         if ("Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return D(e, t);
     }
 }
+
 function D(e, t) {
     (null == t || t > e.length) && (t = e.length);
     for (var n = 0, r = Array(t); n < t; n++) r[n] = e[n];
@@ -193,6 +203,7 @@ function D(e, t) {
 var x = function (e, t) {
     return _.useMemoOne(e, t || [{}]);
 };
+
 function L(e) {
     for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
     return a.is.fun(e) ? e.apply(void 0, n) : e;
@@ -256,6 +267,7 @@ var j = function (e, t) {
         callId: 1,
         parentId: 1,
     };
+
 function H(e) {
     var t = {},
         n = 0;
@@ -267,10 +279,13 @@ function H(e) {
     )
         return t;
 }
+
 function Y(e) {
     var t = H(e);
     if (t) {
-        var n = { to: t };
+        var n = {
+            to: t,
+        };
         return (
             a.each(e, function (e, r) {
                 return r in t || (n[r] = e);
@@ -280,6 +295,7 @@ function Y(e) {
     }
     return s({}, e);
 }
+
 function W(e) {
     var t = a.getFluidConfig(e);
     return t
@@ -293,6 +309,7 @@ function W(e) {
               })(1)
             : e;
 }
+
 function K(e, t) {
     var n = t.key,
         r = t.props,
@@ -303,12 +320,15 @@ function K(e, t) {
             u,
             d = !1,
             f = j(r.cancel, n);
+
         function p() {
             i.resumeQueue.add(_), u.cancel(), (c = u.time - a.Globals.now());
         }
+
         function _() {
             c > 0 ? (i.pauseQueue.add(p), (u = a.Globals.frameLoop.setTimeout(h, c))) : h();
         }
+
         function h() {
             i.pauseQueue.delete(p), e <= (i.cancelId || 0) && (f = !0);
             try {
@@ -383,13 +403,16 @@ var z = function (e, t) {
             }
         );
     };
+
 function Q(e) {
     var t = 0;
     if ("u" < typeof Symbol || null == e[Symbol.iterator]) {
         if (Array.isArray(e) || (e = $(e)))
             return function () {
                 return t >= e.length
-                    ? { done: !0 }
+                    ? {
+                          done: !0,
+                      }
                     : {
                           done: !1,
                           value: e[t++],
@@ -401,6 +424,7 @@ function Q(e) {
     }
     return (t = e[Symbol.iterator]()).next.bind(t);
 }
+
 function $(e, t) {
     if (e) {
         if ("string" == typeof e) return J(e, t);
@@ -410,14 +434,17 @@ function $(e, t) {
         if ("Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return J(e, t);
     }
 }
+
 function J(e, t) {
     (null == t || t > e.length) && (t = e.length);
     for (var n = 0, r = Array(t); n < t; n++) r[n] = e[n];
     return r;
 }
+
 function ee(e, t, n, r) {
     return et.apply(this, arguments);
 }
+
 function et() {
     return (et = c(
         l.mark(function e(t, n, r, i) {
@@ -490,7 +517,13 @@ function et() {
                                                                     y(n);
                                                                     var u = a.is.obj(e)
                                                                         ? s({}, e)
-                                                                        : s(s({}, t), {}, { to: e });
+                                                                        : s(
+                                                                              s({}, t),
+                                                                              {},
+                                                                              {
+                                                                                  to: e,
+                                                                              },
+                                                                          );
                                                                     return (
                                                                         (u.parentId = o),
                                                                         a.each(h, function (e, t) {
@@ -639,6 +672,7 @@ function et() {
         }),
     )).apply(this, arguments);
 }
+
 function en(e, t) {
     (e.cancelId = t), (e.asyncId = e.asyncTo = e.promise = void 0);
 }
@@ -769,7 +803,15 @@ var er = (function (e) {
                 (r._lastToId = 0),
                 !a.is.und(t) || !a.is.und(n))
             ) {
-                var i = a.is.obj(t) ? s({}, t) : s(s({}, n), {}, { from: t });
+                var i = a.is.obj(t)
+                    ? s({}, t)
+                    : s(
+                          s({}, n),
+                          {},
+                          {
+                              from: t,
+                          },
+                      );
                 (i.default = !0), r.start(i);
             }
             return r;
@@ -832,8 +874,7 @@ var er = (function (e) {
                                         ) {
                                             v && (I = p == d || p > d == S) && ((b = -b * A), (p = d));
                                             var R =
-                                                (-(0.000001 * s.tension) * (p - d) + -(0.001 * s.friction) * b) /
-                                                s.mass;
+                                                (-(1e-6 * s.tension) * (p - d) + -(0.001 * s.friction) * b) / s.mass;
                                             (b += R * T), (p += b * T);
                                         }
                                 else {
@@ -913,7 +954,17 @@ var er = (function (e) {
                                                 ep(this, "start"),
                                                 a.is.und(t)
                                                     ? ((r = this.queue || []), (this.queue = []))
-                                                    : (r = [a.is.obj(t) ? t : s(s({}, n), {}, { to: t })]),
+                                                    : (r = [
+                                                          a.is.obj(t)
+                                                              ? t
+                                                              : s(
+                                                                    s({}, n),
+                                                                    {},
+                                                                    {
+                                                                        to: t,
+                                                                    },
+                                                                ),
+                                                      ]),
                                                 (e.next = 4),
                                                 Promise.all(
                                                     r.map(function (e) {
@@ -950,7 +1001,9 @@ var er = (function (e) {
                 );
             }),
             (n.reset = function () {
-                this._update({ reset: !0 });
+                this._update({
+                    reset: !0,
+                });
             }),
             (n.dispose = function () {
                 this.is(ed) || (this.animation && (this.animation.onRest = []), this.stop(), (this._phase = ed));
@@ -1202,9 +1255,11 @@ var er = (function (e) {
             t
         );
     })(es);
+
 function ep(e, t) {
     if (e.is(ed)) throw Error('Cannot call "' + t + '" of disposed "' + e.constructor.name + '" object');
 }
+
 function e_(e, t) {
     return a.is.fun(e) ? e : t && e ? e[t] : void 0;
 }
@@ -1221,6 +1276,7 @@ var eh = function (e, t) {
           }
         : a.noop;
 };
+
 function em(e, t, n) {
     void 0 === t && (t = e.loop), void 0 === n && (n = e.to);
     var r = L(t);
@@ -1244,6 +1300,7 @@ function em(e, t, n) {
         );
     }
 }
+
 function eg(e) {
     var t = (e = Y(e)),
         n = t.to,
@@ -1256,10 +1313,12 @@ function eg(e) {
         e
     );
 }
+
 function eE(e) {
     var t = eg(e);
     return a.is.und(t.default) && (t.default = G(t, [!0 === t.immediate && "immediate"])), t;
 }
+
 function eb(e, t) {
     a.each(e, function (e, n) {
         return null != e && t.add(n);
@@ -1414,6 +1473,7 @@ var ey = ["onStart", "onChange", "onRest"],
             e
         );
     })();
+
 function ev(e, t) {
     return Promise.all(
         t.map(function (t) {
@@ -1423,6 +1483,7 @@ function ev(e, t) {
         return z(e, t);
     });
 }
+
 function eS(e, t, n) {
     var r = t.to,
         i = t.loop,
@@ -1483,13 +1544,21 @@ function eS(e, t, n) {
         })
     );
 }
+
 function eI(e, t) {
     var n = s({}, e.springs);
     return (
         t &&
             a.each(a.toArray(t), function (e) {
                 a.is.und(e.keys) && (e = eg(e)),
-                    a.is.obj(e.to) || (e = s(s({}, e), {}, { to: void 0 })),
+                    a.is.obj(e.to) ||
+                        (e = s(
+                            s({}, e),
+                            {},
+                            {
+                                to: void 0,
+                            },
+                        )),
                     eN(n, e, function (e) {
                         return eC(e);
                     });
@@ -1497,21 +1566,25 @@ function eI(e, t) {
         n
     );
 }
+
 function eT(e, t) {
     a.each(t, function (t, n) {
         e.springs[n] || ((e.springs[n] = t), t.addChild(e));
     });
 }
+
 function eC(e, t) {
     var n = new ef();
     return (n.key = e), t && n.addChild(t), n;
 }
+
 function eN(e, t, n) {
     t.keys &&
         a.each(t.keys, function (r) {
             (e[r] || (e[r] = n(r)))._prepareNode(t);
         });
 }
+
 function eR(e, t) {
     a.each(t, function (t) {
         eN(e.springs, t, function (t) {
@@ -1531,7 +1604,13 @@ var ew = o.createContext({}),
             [r, n.pause, n.cancel, n.immediate, n.config],
         );
         var i = ew.Provider;
-        return o.createElement(i, { value: n }, t);
+        return o.createElement(
+            i,
+            {
+                value: n,
+            },
+            t,
+        );
     };
 (eP.Provider = ew.Provider), (eP.Consumer = ew.Consumer);
 var eD = function () {
@@ -1606,6 +1685,7 @@ var eD = function () {
             };
         },
     };
+
 function eL(e, t, n) {
     var r = a.is.fun(t) && t;
     r && !n && (n = []);
@@ -1638,6 +1718,7 @@ function eL(e, t, n) {
         p = [],
         _ = a.usePrev(e) || 0,
         h = f.slice(e, _);
+
     function m(e, n) {
         for (var i = e; i < n; i++) {
             var a = f[i] || (f[i] = new eA(null, u.flush)),
@@ -1675,7 +1756,10 @@ function eL(e, t, n) {
                 return e.dispose();
             }),
             a.each(f, function (e, t) {
-                eT(e, E[t]), e.start({ default: b });
+                eT(e, E[t]),
+                    e.start({
+                        default: b,
+                    });
                 var n = p[t];
                 n && (d.current ? e.queue.push(n) : e.start(n));
             });
@@ -1692,6 +1776,7 @@ function eL(e, t, n) {
     });
     return r || 3 == arguments.length ? [y, g.start, g.stop] : y;
 }
+
 function ej(e, t) {
     var n = a.is.fun(e),
         r = eL(1, n ? e : [e], n ? t || [] : t),
@@ -1700,6 +1785,7 @@ function ej(e, t) {
         o = r[2];
     return n || 2 == arguments.length ? [i, s, o] : i;
 }
+
 function eM(e, t, n) {
     var r = a.is.fun(t) && t;
     r && !n && (n = []);
@@ -1715,7 +1801,12 @@ function eM(e, t, n) {
         (i.useLayoutEffect(function () {
             for (var e = a.is.obj(t) && t.reverse, n = 0; n < s.length; n++) {
                 var r = s[n + (e ? 1 : -1)];
-                r && s[n].update({ to: r.springs }).start();
+                r &&
+                    s[n]
+                        .update({
+                            to: r.springs,
+                        })
+                        .start();
             }
         }, n),
         r || 3 == arguments.length)
@@ -1739,6 +1830,7 @@ var ek = "mount",
     eU = "enter",
     eG = "update",
     eV = "leave";
+
 function eF(e, t, n) {
     var r = t.ref,
         l = t.reset,
@@ -1782,7 +1874,16 @@ function eF(e, t, n) {
         var y = -1;
         a.each(b, function (e, n) {
             var r = E[n];
-            ~e ? ((y = h.indexOf(r)), (h[y] = s(s({}, r), {}, { item: _[e] }))) : t.leave && h.splice(++y, 0, r);
+            ~e
+                ? ((y = h.indexOf(r)),
+                  (h[y] = s(
+                      s({}, r),
+                      {},
+                      {
+                          item: _[e],
+                      },
+                  )))
+                : t.leave && h.splice(++y, 0, r);
         });
     }
     a.is.fun(c) &&
@@ -1812,7 +1913,14 @@ function eF(e, t, n) {
                 (r = t.enter), (i = eU);
             }
         }
-        if (((r = L(r, e.item, n)), !(r = a.is.obj(r) ? Y(r) : { to: r }).config)) {
+        if (
+            ((r = L(r, e.item, n)),
+            !(r = a.is.obj(r)
+                ? Y(r)
+                : {
+                      to: r,
+                  }).config)
+        ) {
             var u = t.config || v.config;
             r.config = L(u, e.item, n);
         }
@@ -1846,7 +1954,7 @@ function eF(e, t, n) {
                         if (!1 !== i) {
                             var s = !0 === i ? 0 : i;
                             if (((n.expired = !0), !r && s > 0)) {
-                                s <= 2147483647 && (n.expirationId = setTimeout(A, s));
+                                s <= 0x7fffffff && (n.expirationId = setTimeout(A, s));
                                 return;
                             }
                         }
@@ -1870,7 +1978,9 @@ function eF(e, t, n) {
     i.useLayoutEffect(
         function () {
             a.each(h, function (e) {
-                e.ctrl.start({ default: I });
+                e.ctrl.start({
+                    default: I,
+                });
             });
         },
         [I],
@@ -1893,7 +2003,12 @@ function eF(e, t, n) {
                         a = e.payload;
                     eT(t.ctrl, i),
                         I.cancel ||
-                            ((t.phase = n), n == eU && t.ctrl.start({ default: I }), t.ctrl[r ? "update" : "start"](a));
+                            ((t.phase = n),
+                            n == eU &&
+                                t.ctrl.start({
+                                    default: I,
+                                }),
+                            t.ctrl[r ? "update" : "start"](a));
                 });
             },
             l ? void 0 : n,
@@ -1918,15 +2033,18 @@ function eF(e, t, n) {
     };
     return 3 == arguments.length ? [C, T.start, T.stop] : C;
 }
+
 function eB(e, t) {
     var n = t.key,
         r = t.keys,
         i = void 0 === r ? n : r;
     return a.is.und(i) ? e : a.is.fun(i) ? e.map(i) : a.toArray(i);
 }
+
 function eH(e) {
     return (0, e.children)(ej(g(e, ["children"])));
 }
+
 function eY(e) {
     var t = e.items,
         n = e.children,
@@ -1937,6 +2055,7 @@ function eY(e) {
         return a.is.fun(r) ? r(i[t]) : r;
     });
 }
+
 function eW(e) {
     var t = e.items,
         n = e.children,

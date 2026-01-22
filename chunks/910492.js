@@ -12,7 +12,9 @@ var r = n(735438),
     u = n(203982),
     d = n(652215);
 let f = () => {
-        let { notificationCenterVariant: e } = (0, s.GE)({ location: "TOGGLE_INBOX" });
+        let { notificationCenterVariant: e } = (0, s.GE)({
+            location: "TOGGLE_INBOX",
+        });
         if ("sidebar" !== e) return;
         let t = c.A.getChannelId(),
             n = o.A.getChannel(t);
@@ -34,6 +36,8 @@ let f = () => {
                     return u._.dispatch(d.jej.MARK_TOP_INBOX_CHANNEL_READ), !1;
             },
             100,
-            { leading: !0 },
+            {
+                leading: !0,
+            },
         ),
     };

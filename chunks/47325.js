@@ -1,6 +1,7 @@
 var r,
     i = n(311907),
     a = n(73153);
+
 function s(e, t, n) {
     return (
         t in e
@@ -19,6 +20,7 @@ let o = 10 * n(927813).A.Millis.MINUTE,
         lastUsedCommandId: null,
         lastUsedTimeMs: null,
     };
+
 function c(e) {
     let { command: t } = e;
     (l.lastUsedCommandId = t.id), (l.lastUsedTimeMs = Date.now());
@@ -40,4 +42,6 @@ class u extends (r = i.Ay.PersistedStore) {
 }
 s(u, "displayName", "AppLauncherLastUsedCommandStore"),
     s(u, "persistKey", "AppLauncherLastUsedCommandStore"),
-    new u(a.h, { APPLICATION_COMMAND_USED: c });
+    new u(a.h, {
+        APPLICATION_COMMAND_USED: c,
+    });

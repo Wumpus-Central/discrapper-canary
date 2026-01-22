@@ -1,7 +1,9 @@
-n.d(t, { A: () => E });
+n.d(t, {
+    A: () => E,
+});
 var l = n(627968),
     r = n(64700),
-    i = n(432022),
+    i = n(108531),
     a = n(311907),
     s = n(582754),
     o = n(397927),
@@ -12,6 +14,7 @@ var l = n(627968),
     p = n(652896),
     b = n(750506),
     g = n(353839);
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,18 +40,23 @@ function m(e) {
     }
     return e;
 }
-let h = { visibility: "hidden" },
+let h = {
+        visibility: "hidden",
+    },
     A = {
-        precision: 0.0001,
+        precision: 1e-4,
         duration: 300,
     },
     y = {
         tension: 150,
         friction: 20,
-        precision: 0.0001,
+        precision: 1e-4,
         bounce: 0,
     },
-    _ = { duration: 1000 };
+    _ = {
+        duration: 1e3,
+    };
+
 function E(e) {
     let { stream: t, popoutType: n } = e,
         { reducedMotion: E } = r.useContext(s.CZ),
@@ -82,8 +90,12 @@ function E(e) {
             {
                 keys: (e) => e.timestamp,
                 ref: T,
-                from: { opacity: 0.2 },
-                enter: { opacity: 0 },
+                from: {
+                    opacity: 0.2,
+                },
+                enter: {
+                    opacity: 0,
+                },
                 config: A,
             },
             "animate-always",
@@ -127,7 +139,9 @@ function E(e) {
                     ),
                 ],
                 leave: m(
-                    { opacity: 0 },
+                    {
+                        opacity: 0,
+                    },
                     !E.enabled &&
                         m(
                             {
@@ -153,7 +167,7 @@ function E(e) {
             "animate-always",
         );
     return (
-        (0, i.useChain)([T, w], [0, 0.1], 3000),
+        (0, i.useChain)([T, w], [0, 0.1], 3e3),
         (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)("div", {

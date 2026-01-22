@@ -1,7 +1,11 @@
-n.d(t, { A: () => l }), n(896048);
+n.d(t, {
+    A: () => l,
+}),
+    n(896048);
 var r = n(439372),
     i = n(510398),
     a = n(587952);
+
 function s(e, t, n) {
     return (
         t in e
@@ -18,7 +22,10 @@ function s(e, t, n) {
 class o extends r.A {
     handleVoiceChannelSelect(e) {
         let { guildId: t, channelId: n } = e;
-        null != n && a.$.trigger({ guildId: null != t ? t : void 0 });
+        null != n &&
+            a.$.trigger({
+                guildId: null != t ? t : void 0,
+            });
     }
     handleCallCreate() {
         a.$.trigger();

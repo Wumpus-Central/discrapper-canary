@@ -1,4 +1,8 @@
-n.d(t, { A: () => B }), n(65821), n(896048);
+n.d(t, {
+    A: () => B,
+}),
+    n(65821),
+    n(896048);
 var r,
     i = n(627968),
     l = n(64700),
@@ -27,6 +31,7 @@ var r,
     T = n(652215),
     j = n(985018),
     x = n(630086);
+
 function P(e, t, n) {
     return (
         t in e
@@ -40,6 +45,7 @@ function P(e, t, n) {
         e
     );
 }
+
 function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -56,6 +62,7 @@ function w(e) {
     }
     return e;
 }
+
 function L(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -86,7 +93,11 @@ let R = (0, C.xI)(p.A.GAME_LIST_ROW_MIN_HEIGHT),
             a = r.libraryApplication.hasFlag(t);
         return (0, i.jsx)(d.m, {
             text: l,
-            children: (0, i.jsx)(n, { className: s()(x.up, { [x.R]: !a }) }),
+            children: (0, i.jsx)(n, {
+                className: s()(x.up, {
+                    [x.R]: !a,
+                }),
+            }),
         });
     },
     U = [
@@ -162,7 +173,9 @@ let R = (0, C.xI)(p.A.GAME_LIST_ROW_MIN_HEIGHT),
                             : j.intl.string(j.t.EoWLru)),
                     (0, i.jsx)(b.A, {
                         align: b.A.Align.CENTER,
-                        className: s()({ [x.g3]: e.isNew }),
+                        className: s()({
+                            [x.g3]: e.isNew,
+                        }),
                         children: t,
                     })
                 );
@@ -194,7 +207,9 @@ let R = (0, C.xI)(p.A.GAME_LIST_ROW_MIN_HEIGHT),
                                     tooltip: j.intl.string(j.t.Az9eqn),
                                 }),
                                 (0, i.jsx)(N.A, {
-                                    className: s()(x.up, { [x.R]: !e.supportsCloudSync }),
+                                    className: s()(x.up, {
+                                        [x.R]: !e.supportsCloudSync,
+                                    }),
                                     libraryApplication: e.libraryApplication,
                                 }),
                             ],
@@ -214,7 +229,9 @@ let R = (0, C.xI)(p.A.GAME_LIST_ROW_MIN_HEIGHT),
                                   onDropdownOpen: () => null != t && t.setActiveRowKey(e),
                                   onDropdownClose: () => null != t && t.clearActiveRowKey(),
                               })
-                            : (0, i.jsx)("div", { children: "deprecated!" }),
+                            : (0, i.jsx)("div", {
+                                  children: "deprecated!",
+                              }),
                     ],
                 });
             },
@@ -311,7 +328,10 @@ class V extends (r = l.PureComponent) {
             null != this._rowRefs[e] &&
             (this.props.scrollToRow(this._rowRefs[e], R),
             new u.Ep().start(D, () => {
-                this._didUnmount || this.setState({ highlightedApplicationKey: null });
+                this._didUnmount ||
+                    this.setState({
+                        highlightedApplicationKey: null,
+                    });
             }));
     }
     trackViewed() {
@@ -355,7 +375,12 @@ class V extends (r = l.PureComponent) {
             }
             e.num_applications_total++;
         }
-        v.default.track(T.HAw.LIBRARY_VIEWED, L(w({}, e), { load_id: t.loadId }));
+        v.default.track(
+            T.HAw.LIBRARY_VIEWED,
+            L(w({}, e), {
+                load_id: t.loadId,
+            }),
+        );
     }
     handleSort(e, t) {
         g.vt(e, t);
@@ -366,11 +391,18 @@ class V extends (r = l.PureComponent) {
             r = t.length > 0;
         return r
             ? null
-            : ((e = "" !== n ? j.intl.format(j.t["4Q1TAr"], { query: n }) : j.intl.string(j.t["0Y+0PY"])),
+            : ((e =
+                  "" !== n
+                      ? j.intl.format(j.t["4Q1TAr"], {
+                            query: n,
+                        })
+                      : j.intl.string(j.t["0Y+0PY"])),
               (0, i.jsxs)("div", {
                   className: r ? x.MG : x.mv,
                   children: [
-                      (0, i.jsx)("div", { className: x.Zd }),
+                      (0, i.jsx)("div", {
+                          className: x.Zd,
+                      }),
                       (0, i.jsx)(b.A, {
                           grow: 0,
                           shrink: +!!r,
@@ -445,10 +477,15 @@ class V extends (r = l.PureComponent) {
                     null != this.props.location.state ? this.props.location.state.applicationId : null,
             }),
             P(this, "setActiveRowKey", (e) => {
-                this.setState({ overflowMenuRowKey: e.key });
+                this.setState({
+                    overflowMenuRowKey: e.key,
+                });
             }),
             P(this, "clearActiveRowKey", () => {
-                this._didUnmount || this.setState({ overflowMenuRowKey: null });
+                this._didUnmount ||
+                    this.setState({
+                        overflowMenuRowKey: null,
+                    });
             }),
             P(this, "handleRowMouseEnter", (e) => {
                 this.props.isNavigatingByKeyboard || g.pU(e.key);
@@ -476,11 +513,14 @@ class V extends (r = l.PureComponent) {
                                 }),
                             );
                     },
-                    { onClose: this.clearActiveRowKey },
+                    {
+                        onClose: this.clearActiveRowKey,
+                    },
                 );
             });
     }
 }
+
 function B(e) {
     let t = l.useContext(v.AnalyticsContext),
         n = (0, o.zy)(),
@@ -519,4 +559,6 @@ function B(e) {
         }),
     );
 }
-P(V, "defaultProps", { stickyHeader: !1 });
+P(V, "defaultProps", {
+    stickyHeader: !1,
+});

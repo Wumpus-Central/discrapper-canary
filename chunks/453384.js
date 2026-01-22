@@ -1,9 +1,11 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var a = n(627968),
     l = n(64700),
     i = n(503698),
     r = n.n(i),
-    s = n(432022),
+    s = n(108531),
     o = n(397927),
     c = n(772244),
     d = n(419367),
@@ -32,7 +34,9 @@ let m = l.forwardRef((e, t) => {
             strokeDasharray: "".concat(j, " ").concat(j),
             strokeDashoffset: -l * j,
         },
-        C = { boxShadow: "0 0 20px 0px ".concat(b.glow) },
+        C = {
+            boxShadow: "0 0 20px 0px ".concat(b.glow),
+        },
         { progressTextAnimation: S } = (0, o.zhh)({
             progressTextAnimation: +(null != h && 1 !== l),
             config: d.N,
@@ -47,10 +51,14 @@ let m = l.forwardRef((e, t) => {
                 children: [
                     x,
                     (0, a.jsxs)(s.animated.div, {
-                        style: { opacity: S },
+                        style: {
+                            opacity: S,
+                        },
                         className: r()(u.rD, u.qk),
                         children: [
-                            (0, a.jsx)("div", { className: r()(u.rD, u.LU) }),
+                            (0, a.jsx)("div", {
+                                className: r()(u.rD, u.LU),
+                            }),
                             (0, a.jsx)(o.Text, {
                                 variant: f,
                                 color: "text-strong",
@@ -77,10 +85,18 @@ let m = l.forwardRef((e, t) => {
                                     }),
                                     (0, a.jsxs)("feMerge", {
                                         children: [
-                                            (0, a.jsx)("feMergeNode", { in: "coloredBlur" }),
-                                            (0, a.jsx)("feMergeNode", { in: "coloredBlur" }),
-                                            (0, a.jsx)("feMergeNode", { in: "coloredBlur" }),
-                                            (0, a.jsx)("feMergeNode", { in: "SourceGraphic" }),
+                                            (0, a.jsx)("feMergeNode", {
+                                                in: "coloredBlur",
+                                            }),
+                                            (0, a.jsx)("feMergeNode", {
+                                                in: "coloredBlur",
+                                            }),
+                                            (0, a.jsx)("feMergeNode", {
+                                                in: "coloredBlur",
+                                            }),
+                                            (0, a.jsx)("feMergeNode", {
+                                                in: "SourceGraphic",
+                                            }),
                                         ],
                                     }),
                                 ],

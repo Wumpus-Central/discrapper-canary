@@ -1,4 +1,7 @@
-n.d(t, { A: () => E }), n(896048);
+n.d(t, {
+    A: () => E,
+}),
+    n(896048);
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -39,7 +42,12 @@ let _ = new u.A("RPCCommandsOverlay"),
                     }),
                     null == r.id)
                 )
-                    throw new f.A({ errorCode: b.Lw6.INVALID_COMMAND }, "No application.");
+                    throw new f.A(
+                        {
+                            errorCode: b.Lw6.INVALID_COMMAND,
+                        },
+                        "No application.",
+                    );
                 o.A.setInputLocked(t, n);
             },
         },
@@ -58,11 +66,19 @@ let _ = new u.A("RPCCommandsOverlay"),
                         args: { type: n, pid: r },
                     } = e,
                     i = t.application.id;
-                if (null == i) throw new f.A({ errorCode: b.Lw6.INVALID_COMMAND }, "No application.");
+                if (null == i)
+                    throw new f.A(
+                        {
+                            errorCode: b.Lw6.INVALID_COMMAND,
+                        },
+                        "No application.",
+                    );
                 let l = d.A.getApplicationActivity(i);
                 if (null == l || null == l.secrets || !(0, h.px)(n, l.party, l.secrets))
                     throw new f.A(
-                        { errorCode: b.Lw6.NO_ELIGIBLE_ACTIVITY },
+                        {
+                            errorCode: b.Lw6.NO_ELIGIBLE_ACTIVITY,
+                        },
                         "No eligible activity for application. Ensure an activity includes a party and appropriate secret.",
                     );
                 let { lock: s, context: o } = (0, g.d5)(r),
@@ -70,7 +86,9 @@ let _ = new u.A("RPCCommandsOverlay"),
                 return (0, a.qf)(l, u, o).then(() => {
                     if ((s(), u))
                         throw new f.A(
-                            { errorCode: b.Lw6.NO_ELIGIBLE_ACTIVITY },
+                            {
+                                errorCode: b.Lw6.NO_ELIGIBLE_ACTIVITY,
+                            },
                             "No eligible activity for application. Ensure user does have have privacy enabled.",
                         );
                 });
@@ -90,10 +108,22 @@ let _ = new u.A("RPCCommandsOverlay"),
                     args: { code: t, pid: n },
                     socket: r,
                 } = e;
-                if (null == r.application.id) throw new f.A({ errorCode: b.Lw6.INVALID_COMMAND }, "No application.");
+                if (null == r.application.id)
+                    throw new f.A(
+                        {
+                            errorCode: b.Lw6.INVALID_COMMAND,
+                        },
+                        "No application.",
+                    );
                 return s.Ay.resolveInvite(t, "Game SDK").then((e) => {
                     let { invite: t, code: r } = e;
-                    if (null == t) throw new f.A({ errorCode: b.Lw6.INVALID_INVITE }, "Invalid invite id: ".concat(r));
+                    if (null == t)
+                        throw new f.A(
+                            {
+                                errorCode: b.Lw6.INVALID_INVITE,
+                            },
+                            "Invalid invite id: ".concat(r),
+                        );
                     let { context: i, lock: a } = (0, g.d5)(n);
                     return new Promise((e) => {
                         l.h.dispatch({
@@ -112,14 +142,22 @@ let _ = new u.A("RPCCommandsOverlay"),
             validation: (e) =>
                 (0, A.A)(e)
                     .required()
-                    .keys({ pid: e.number().min(0).required() }),
+                    .keys({
+                        pid: e.number().min(0).required(),
+                    }),
             handler(e) {
                 let {
                         args: { pid: t },
                         socket: l,
                     } = e,
                     a = l.application.id;
-                if (null == a) throw new f.A({ errorCode: b.Lw6.INVALID_COMMAND }, "No application.");
+                if (null == a)
+                    throw new f.A(
+                        {
+                            errorCode: b.Lw6.INVALID_COMMAND,
+                        },
+                        "No application.",
+                    );
                 let { lock: s, context: o } = (0, g.d5)(t);
                 return new Promise((e) => {
                     (0, i.mMO)(

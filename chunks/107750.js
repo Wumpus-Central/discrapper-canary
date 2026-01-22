@@ -19,6 +19,7 @@ var r = n(562465),
     c = n(210528),
     u = n(272984),
     d = n(652215);
+
 function f(e, t, n) {
     return (
         t in e
@@ -32,6 +33,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -48,6 +50,7 @@ function p(e) {
     }
     return e;
 }
+
 function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -60,6 +63,7 @@ function _(e, t) {
     }
     return n;
 }
+
 function h(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -71,11 +75,18 @@ function h(e, t) {
         e
     );
 }
-let m = 5000,
-    g = 5000;
+let m = 5e3,
+    g = 5e3;
+
 function E(e, t, n, r) {
     let a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 1;
-    return e((r = h(p({}, r), { headers: { authorization: "Bearer ".concat(n) } })))
+    return e(
+        (r = h(p({}, r), {
+            headers: {
+                authorization: "Bearer ".concat(n),
+            },
+        })),
+    )
         .then((e) => (202 === e.status ? Promise.reject(e) : e))
         .catch((n) => {
             let s = !0 !== r.onlyRetryOnAuthorizationErrors && 202 === n.status;
@@ -96,6 +107,7 @@ let b = {
     get: E.bind(null, r.Bo.get),
     put: E.bind(null, r.Bo.put),
 };
+
 function y(e) {
     return r.Bo.get({
         url: d.Rsh.CONNECTION_ACCESS_TOKEN(d.fg2.SPOTIFY, e),
@@ -128,40 +140,54 @@ function y(e) {
             );
         });
 }
+
 function O(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 2;
     return b
         .put(e, t, {
             url: u.RQ.NOTIFICATIONS_PLAYER,
-            query: { connection_id: n },
+            query: {
+                connection_id: n,
+            },
         })
         .catch((a) => (r <= 0 ? Promise.reject(a) : (0, i.BK)(m).then(() => O(e, t, n, r - 1))));
 }
+
 function A(e, t) {
-    return b.get(e, t, { url: u.RQ.PROFILE }).then(
-        (t) => (
-            a.h.dispatch({
-                type: "SPOTIFY_PROFILE_UPDATE",
-                accountId: e,
-                isPremium: "premium" === t.body.product,
-            }),
-            t
-        ),
-    );
-}
-function v(e, t) {
-    return b.get(e, t, { url: u.RQ.PLAYER_DEVICES }).then(
-        (t) => (
-            t.body &&
+    return b
+        .get(e, t, {
+            url: u.RQ.PROFILE,
+        })
+        .then(
+            (t) => (
                 a.h.dispatch({
-                    type: "SPOTIFY_SET_DEVICES",
+                    type: "SPOTIFY_PROFILE_UPDATE",
                     accountId: e,
-                    devices: t.body.devices,
+                    isPremium: "premium" === t.body.product,
                 }),
-            t
-        ),
-    );
+                t
+            ),
+        );
 }
+
+function v(e, t) {
+    return b
+        .get(e, t, {
+            url: u.RQ.PLAYER_DEVICES,
+        })
+        .then(
+            (t) => (
+                t.body &&
+                    a.h.dispatch({
+                        type: "SPOTIFY_SET_DEVICES",
+                        accountId: e,
+                        devices: t.body.devices,
+                    }),
+                t
+            ),
+        );
+}
+
 function S(e, t, n, r) {
     let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
         s = u.RQ.PLAYER_OPEN(r, n, !1),
@@ -169,11 +195,18 @@ function S(e, t, n, r) {
     return b
         .put(e, t, {
             url: u.RQ.PLAYER_PLAY,
-            query: { device_id: o },
+            query: {
+                device_id: o,
+            },
             body: {
                 context_uri: null != c ? c : void 0,
                 uris: null == c ? [s] : void 0,
-                offset: null != c ? { uri: s } : void 0,
+                offset:
+                    null != c
+                        ? {
+                              uri: s,
+                          }
+                        : void 0,
                 position_ms: null != l ? l : 0,
             },
         })
@@ -199,9 +232,22 @@ function S(e, t, n, r) {
             ),
         );
 }
+
 function I(e, t) {
-    return b.put(e, t, { url: u.RQ.PLAYER_PAUSE }).then((e) => (a.h.dispatch({ type: "SPOTIFY_PLAYER_PAUSE" }), e));
+    return b
+        .put(e, t, {
+            url: u.RQ.PLAYER_PAUSE,
+        })
+        .then(
+            (e) => (
+                a.h.dispatch({
+                    type: "SPOTIFY_PLAYER_PAUSE",
+                }),
+                e
+            ),
+        );
 }
+
 function T() {
     !c.A.isProtocolRegistered() &&
         (0, l.isDesktop)() &&
@@ -212,6 +258,7 @@ function T() {
             });
         });
 }
+
 function C(e, t) {
     a.h.dispatch({
         type: "SPOTIFY_SET_ACTIVE_DEVICE",

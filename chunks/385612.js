@@ -19,6 +19,7 @@ var l = n(427262),
     u = n(478644),
     d = n(339984),
     f = n(985018);
+
 function p(e, t, n) {
     return (
         t in e
@@ -32,6 +33,7 @@ function p(e, t, n) {
         e
     );
 }
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -48,6 +50,7 @@ function _(e) {
     }
     return e;
 }
+
 function h(e) {
     let { uploadType: t, guildId: i, analyticsSource: o, filters: l, isTryItOut: p = !1 } = e;
     (0, a.mMO)(async () => {
@@ -90,6 +93,7 @@ function h(e) {
             );
     });
 }
+
 function m(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
     if (null != e) return e;
@@ -101,6 +105,7 @@ function m(e, t, n) {
           ? n.getAvatarURL(void 0, i, a)
           : n.getAvatarURL(null == t ? void 0 : t.guildId, i, a);
 }
+
 function g(e) {
     var t;
     let { pendingNickname: n, pendingGlobalName: r, user: i, guildMember: a } = e,
@@ -108,6 +113,7 @@ function g(e) {
         o = "" === r ? i.username : r;
     return null != (t = null != s ? s : o) ? t : l.Ay.getName(i);
 }
+
 function E(e) {
     return (null != e ? (0, i.OK)(e) : 1) > 0.25;
 }

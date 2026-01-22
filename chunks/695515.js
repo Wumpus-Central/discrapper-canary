@@ -1,4 +1,9 @@
-n.d(t, { A: () => ea }), n(896048), n(321073), n(747238);
+n.d(t, {
+    A: () => ea,
+}),
+    n(896048),
+    n(321073),
+    n(747238);
 var r = n(518977),
     i = n(536802),
     a = n(287809),
@@ -7,6 +12,7 @@ var r = n(518977),
     l = n(899847),
     c = n(923531),
     u = n(191627);
+
 function d(e, t, n) {
     return (
         t in e
@@ -20,6 +26,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +43,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -48,6 +56,7 @@ function p(e, t) {
     }
     return n;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -77,6 +86,7 @@ let h = null,
     w = null,
     P = {},
     D = {};
+
 function x() {
     var e, t, n, r;
     return (null == (t = window) || null == (e = t.location) ? void 0 : e.pathname) === u.he.FAMILY_CENTER_MY_FAMILY
@@ -85,6 +95,7 @@ function x() {
           ? u.u9.SETTINGS
           : u.u9.ACTIVITY;
 }
+
 function L() {
     let e = new Map();
     return (
@@ -98,6 +109,7 @@ function L() {
         e
     );
 }
+
 function j() {
     return {
         [u.NV.USER_ADD]: 0,
@@ -109,18 +121,30 @@ function j() {
         [u.NV.PURCHASES]: 0,
     };
 }
+
 function M() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
     return (
         arguments.length > 1 && arguments[1],
-        (g = e.length > 0 ? e.reduce((e, t) => _(f({}, e), { [t.user_id]: t }), {}) : {}),
+        (g =
+            e.length > 0
+                ? e.reduce(
+                      (e, t) =>
+                          _(f({}, e), {
+                              [t.user_id]: t,
+                          }),
+                      {},
+                  )
+                : {}),
         (E = !0),
         g
     );
 }
+
 function k(e) {
     void 0 !== e && (y = e);
 }
+
 function U(e, t) {
     let n = t ? b : L();
     return (
@@ -132,6 +156,7 @@ function U(e, t) {
         (b = n)
     );
 }
+
 function G(e) {
     D = e.reduce((e, t) => {
         var n;
@@ -142,6 +167,7 @@ function G(e) {
         });
     }, D);
 }
+
 function V(e) {
     P = e.reduce((e, t) => {
         if (null != t.invoice_items && t.invoice_items.length > 0) {
@@ -159,9 +185,11 @@ function V(e) {
         return e;
     }, {});
 }
+
 function F() {
     S = !0;
 }
+
 function B(e) {
     let { linkedUsers: t, familyCenterTeenActivity: n } = e,
         {
@@ -191,14 +219,17 @@ function B(e) {
         (I = o.default.fromTimestamp(Date.now())),
         (v = !0);
 }
+
 function H(e) {
     let { linkedUsers: t } = e;
     M(t);
 }
+
 function Y(e) {
     let { linkedUsers: t } = e;
     M(t);
 }
+
 function W(e) {
     let { familyCenterTeenActivity: t } = e;
     if (void 0 === t) return !1;
@@ -227,27 +258,33 @@ function W(e) {
         (R = u),
         (w = d);
 }
+
 function K(e) {
     let { familyCenterTeenActivity: t } = e,
         { actions: n, guilds: r } = t;
     U(n, !0), G(r);
 }
+
 function z(e) {
     let { linkedUsers: t } = e;
     M(t);
 }
+
 function q(e) {
     let { linkedUsers: t } = e;
     M(t, !0);
 }
+
 function X(e) {
     let { linkCode: t } = e;
     O = t;
 }
+
 function Z(e) {
     let { tab: t } = e;
     A = t;
 }
+
 function Q(e) {
     let { user: t } = e;
     if (void 0 === t.linked_users) return !1;
@@ -259,16 +296,19 @@ function Q(e) {
         ? l.Ay.fetchLinkedUsers()
         : M(t.linked_users);
 }
+
 function $(e) {
     let { linkedUsers: t } = e;
     if (null == t) return !1;
     M(t);
 }
+
 function J(e) {
     var t;
     let { countryCode: n } = e;
     null != n && (T = null != (t = (0, r.XF)(n)) ? t : null);
 }
+
 function ee() {
     let e = [];
     return (
@@ -278,19 +318,26 @@ function ee() {
         e
     );
 }
+
 function et() {
     return Object.entries(y).map((e) => {
         let [t, n] = e;
         return "".concat(t, ":").concat(n);
     });
 }
+
 function en(e) {
     y = e.reduce((e, t) => {
         let [n, r] = t.split(":"),
             i = (0, c.k5)(n);
-        return void 0 === i ? e : _(f({}, e), { [i]: parseInt(r, 10) });
+        return void 0 === i
+            ? e
+            : _(f({}, e), {
+                  [i]: parseInt(r, 10),
+              });
     }, j());
 }
+
 function er() {
     (h = null),
         (m = null),

@@ -1,4 +1,7 @@
-n.d(t, { A: () => k }), n(321073);
+n.d(t, {
+    A: () => k,
+}),
+    n(321073);
 var r = n(627968),
     i = n(64700),
     a = n(379834),
@@ -32,6 +35,7 @@ var r = n(627968),
     x = n(768349),
     L = n(985018),
     j = n(609653);
+
 function M(e) {
     let { presenceActivity: t, remoteJoinPlatform: n } = e,
         a = (0, R.z4)({
@@ -108,6 +112,7 @@ function M(e) {
         ],
     });
 }
+
 function k(e) {
     var t, n, s;
     let {
@@ -297,7 +302,9 @@ function k(e) {
                             label: L.intl.string(L.t.lw71Nf),
                             trackingArea: _.kY.CONNECT_ACCOUNT,
                             onClick: () => {
-                                Q({ analyticsLocations: X });
+                                Q({
+                                    analyticsLocations: X,
+                                });
                             },
                             icon: c.A5T,
                             iconButton: !0,

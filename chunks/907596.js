@@ -8,6 +8,7 @@ var r = n(408713),
 let s = "default",
     o = "",
     l = new WeakMap();
+
 function c(e) {
     if ((0, r.un)()) {
         if ("default" === s) {
@@ -20,6 +21,7 @@ function c(e) {
         l.set(e, e.style[t]), (e.style[t] = "none");
     }
 }
+
 function u(e) {
     if ((0, r.un)())
         "disabled" === s &&

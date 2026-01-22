@@ -1,4 +1,7 @@
-n.d(t, { A: () => v }), n(896048);
+n.d(t, {
+    A: () => v,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -14,6 +17,7 @@ var r = n(627968),
     m = n(583970),
     p = n(985018),
     x = n(175820);
+
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -39,6 +43,7 @@ function h(e) {
     }
     return e;
 }
+
 function j(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -57,6 +62,7 @@ function j(e, t) {
         e
     );
 }
+
 function O(e) {
     let { palette: t, badge: n, isSelected: i, onClick: l } = e,
         a = (0, c.Gx)({
@@ -66,7 +72,9 @@ function O(e) {
     return (0, r.jsx)(
         o.DUT,
         j(h({}, a), {
-            className: s()(x.Uh, { [x.fT]: i }),
+            className: s()(x.Uh, {
+                [x.fT]: i,
+            }),
             onClick: l,
             children: (0, r.jsx)(f.J, {
                 badge: n,
@@ -78,6 +86,7 @@ function O(e) {
         }),
     );
 }
+
 function y(e) {
     let {
             badge: t,
@@ -104,10 +113,14 @@ function y(e) {
             secondary: i,
         },
         onPrimaryColorChange: (e) => {
-            m({ primary: (0, a.Hl)(e) });
+            m({
+                primary: (0, a.Hl)(e),
+            });
         },
         onSecondaryColorChange: (e) => {
-            m({ secondary: (0, a.Hl)(e) });
+            m({
+                secondary: (0, a.Hl)(e),
+            });
         },
         shouldShow: d,
         onRequestClose: () => f(!1),
@@ -119,7 +132,9 @@ function y(e) {
                     onClick: () => {
                         f((e) => !e);
                     },
-                    className: s()(x.Uh, { [x.fT]: l }),
+                    className: s()(x.Uh, {
+                        [x.fT]: l,
+                    }),
                     children: (0, r.jsx)(o.dDg, {
                         size: "custom",
                         width: 20,
@@ -141,6 +156,7 @@ let v = function (e) {
             isDisabled: !1,
             labelledBy: v,
         });
+
     function _(e) {
         let t = {};
         void 0 !== e.primary && (t.badgeColorPrimary = e.primary),

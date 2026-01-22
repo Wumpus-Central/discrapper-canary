@@ -14,6 +14,7 @@ var i = n(665260),
     d = n(815968),
     u = n(355097),
     c = n(985018);
+
 function g() {
     return [
         {
@@ -53,6 +54,7 @@ let _ = {
     ignoreUnreadSetting: !0,
     ignoreNotificationSetting: !1,
 };
+
 function A(t) {
     let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _;
     return s.default.keys(t).filter((n) => {
@@ -66,6 +68,7 @@ function A(t) {
         );
     });
 }
+
 function S(t) {
     return (0, r.bG)([a.Ay], () => a.Ay.useNewNotifications);
 }

@@ -1,4 +1,7 @@
-n.d(t, { A: () => z }), n(896048);
+n.d(t, {
+    A: () => z,
+}),
+    n(896048);
 var l = n(627968),
     i = n(64700),
     r = n(503698),
@@ -38,6 +41,7 @@ var l = n(627968),
     B = n(818348),
     U = n(985018),
     V = n(807484);
+
 function H(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -63,6 +67,7 @@ function H(e) {
     }
     return e;
 }
+
 function F(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -81,6 +86,7 @@ function F(e, t) {
         e
     );
 }
+
 function W(e) {
     let { channel: t, roles: n, members: i, disabledReason: r, getRemoveTooltipHint: a } = e;
     return (0, l.jsx)(d.B8B, {
@@ -193,7 +199,9 @@ function W(e) {
                                             (l = g.rowType),
                                             void u.A.show({
                                                 title: U.intl.string(U.t.GuPYQB),
-                                                body: U.intl.format(U.t.xERCnZ, { name: n }),
+                                                body: U.intl.format(U.t.xERCnZ, {
+                                                    name: n,
+                                                }),
                                                 cancelText: U.intl.string(U.t["ETE/oC"]),
                                                 onConfirm: () =>
                                                     (function (e, n) {
@@ -216,7 +224,9 @@ function W(e) {
                                     children: (0, l.jsx)(d.aXh, {
                                         size: "md",
                                         color: "currentColor",
-                                        className: s()(V.Yz, { [V._2]: O || r }),
+                                        className: s()(V.Yz, {
+                                            [V._2]: O || r,
+                                        }),
                                     }),
                                 }),
                             }),
@@ -230,14 +240,27 @@ function W(e) {
             let { section: t } = e;
             switch (t) {
                 case k.oO.ROLES:
-                    return (0, l.jsx)(J, { title: U.intl.string(U.t["LPJmL/"]) }, "roles-title");
+                    return (0, l.jsx)(
+                        J,
+                        {
+                            title: U.intl.string(U.t["LPJmL/"]),
+                        },
+                        "roles-title",
+                    );
                 case k.oO.MEMBERS:
-                    return (0, l.jsx)(J, { title: U.intl.string(U.t["9Oq93m"]) }, "members-title");
+                    return (0, l.jsx)(
+                        J,
+                        {
+                            title: U.intl.string(U.t["9Oq93m"]),
+                        },
+                        "members-title",
+                    );
             }
         },
         sectionHeight: 49,
     });
 }
+
 function Z(e) {
     let { guild: t, channel: i, permissionUpdates: r } = e,
         c = (0, a.bG)([S.A], () => S.A.getSortedRoles(t.id)),
@@ -281,7 +304,13 @@ function Z(e) {
                                     onClick: function () {
                                         (0, d.mMO)(async () => {
                                             let { default: e } = await n.e("58608").then(n.bind(n, 841811));
-                                            return (t) => (0, l.jsx)(e, F(H({}, t), { channelId: i.id }));
+                                            return (t) =>
+                                                (0, l.jsx)(
+                                                    e,
+                                                    F(H({}, t), {
+                                                        channelId: i.id,
+                                                    }),
+                                                );
                                         });
                                     },
                                     disabled: !g,
@@ -301,6 +330,7 @@ function Z(e) {
         ],
     });
 }
+
 function Y(e) {
     let { guild: t, channel: i, isPrivateGuildChannel: r, roles: o, members: u } = e,
         h = (0, a.bG)([w.A], () => w.A.can(B.xB.ADMINISTRATOR, t)),
@@ -344,7 +374,9 @@ function Y(e) {
               (p.formLabel = U.intl.string(U.t["8VIxJu"])))
             : i.type === G.rbe.GUILD_VOICE && (p.subtitle = U.intl.string(U.t.cLjvKg)),
         (0, l.jsxs)("div", {
-            className: s()(V.j1, { [V.vu]: r }),
+            className: s()(V.j1, {
+                [V.vu]: r,
+            }),
             children: [
                 (0, l.jsx)(_.A, {
                     description: p.subtitle,
@@ -430,11 +462,14 @@ function Y(e) {
         })
     );
 }
+
 function J(e) {
     let { title: t } = e;
     return (0, l.jsxs)("div", {
         children: [
-            (0, l.jsx)(d.cGx, { className: V.yF }),
+            (0, l.jsx)(d.cGx, {
+                className: V.yF,
+            }),
             (0, l.jsx)(d.Heading, {
                 variant: "heading-sm/semibold",
                 className: s()(V.DH, V.Gf),
@@ -511,13 +546,17 @@ let z = a.Ay.connectStores([N.A, w.A, E.Ay, T.A, S.A], () => {
                         ? (0, l.jsx)(D.A, {
                               canSync: !1,
                               icon: d.fNY,
-                              noticeText: U.intl.format(U.t.ETJqLl, { categoryName: r.name }),
+                              noticeText: U.intl.format(U.t.ETJqLl, {
+                                  categoryName: r.name,
+                              }),
                           })
                         : (0, l.jsx)(D.A, {
                               buttonText: U.intl.string(U.t.NVwuHq),
                               canSync: !0,
                               icon: (0, d.kHD)(R.A),
-                              noticeText: U.intl.format(U.t.OIhm0M, { categoryName: r.name }),
+                              noticeText: U.intl.format(U.t.OIhm0M, {
+                                  categoryName: r.name,
+                              }),
                               onClick: function () {
                                   null != r &&
                                       (0, d.mMO)(async () => {

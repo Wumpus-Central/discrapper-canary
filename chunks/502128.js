@@ -1,4 +1,7 @@
-n.d(t, { A: () => b }), n(896048);
+n.d(t, {
+    A: () => b,
+}),
+    n(896048);
 var a = n(627968),
     l = n(503698),
     i = n.n(l),
@@ -70,6 +73,7 @@ let f = [
             },
         },
     ];
+
 function b() {
     let { unreadRecentMentionsCount: e, unreadChannelIds: t } = (0, m.U4)(),
         {
@@ -153,7 +157,9 @@ function b() {
                             variant: "heading-lg/semibold",
                             children: "Unreads and Badging",
                         }),
-                        (0, a.jsx)(s.hKd, { size: 8 }),
+                        (0, a.jsx)(s.hKd, {
+                            size: 8,
+                        }),
                         (0, a.jsxs)("div", {
                             children: ["Unread Recent Mentions Count: ", e],
                         }),
@@ -181,19 +187,19 @@ function b() {
                             children: "Store State",
                         }),
                         (0, a.jsxs)("div", {
-                            children: ["Is Loading: ", n ? "\u2705" : "\u274C"],
+                            children: ["Is Loading: ", n ? "✅" : "❌"],
                         }),
                         (0, a.jsxs)("div", {
-                            children: ["Has Preloaded: ", i ? "\u2705" : "\u274C"],
+                            children: ["Has Preloaded: ", i ? "✅" : "❌"],
                         }),
                         (0, a.jsxs)("div", {
-                            children: ["Has Loaded Ever: ", l ? "\u2705" : "\u274C"],
+                            children: ["Has Loaded Ever: ", l ? "✅" : "❌"],
                         }),
                         (0, a.jsxs)("div", {
-                            children: ["Has More To Load: ", b ? "\u2705" : "\u274C"],
+                            children: ["Has More To Load: ", b ? "✅" : "❌"],
                         }),
                         (0, a.jsxs)("div", {
-                            children: ["Is Loading Complete: ", g ? "\u2705" : "\u274C"],
+                            children: ["Is Loading Complete: ", g ? "✅" : "❌"],
                         }),
                         (0, a.jsxs)("div", {
                             children: ["Last Loading Trigger: ", null == v ? void 0 : v.loadingTrigger],

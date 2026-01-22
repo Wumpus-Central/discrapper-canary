@@ -1,5 +1,8 @@
-n.d(t, { X: () => i });
+n.d(t, {
+    X: () => i,
+});
 var r = n(73153);
+
 function i(e) {
     let { emojiId: t, userImage: n } = e;
     r.h.dispatch({

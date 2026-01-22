@@ -26,6 +26,7 @@ var r = n(989349),
 n(763754);
 var b = n(381941),
     y = n(652215);
+
 function O(e, t, n) {
     return (
         t in e
@@ -39,6 +40,7 @@ function O(e, t, n) {
         e
     );
 }
+
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -55,6 +57,7 @@ function A(e) {
     }
     return e;
 }
+
 function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -67,6 +70,7 @@ function v(e, t) {
     }
     return n;
 }
+
 function S(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -82,6 +86,7 @@ let I = new d.A({
     id: "???",
     username: "???",
 });
+
 function T(e) {
     var t;
     return null == e.author
@@ -92,9 +97,11 @@ function T(e) {
             ? t
             : new d.A(e.author);
 }
+
 function C(e) {
     return !1;
 }
+
 function N(e) {
     var t;
     return new u.go(
@@ -108,6 +115,7 @@ function N(e) {
         }),
     );
 }
+
 function R(e) {
     var t, n, r, i, a, s, l, d;
     let _,
@@ -183,6 +191,7 @@ function R(e) {
               }),
     );
 }
+
 function w(e, t) {
     return null != t.edited_timestamp
         ? S(A({}, t), {
@@ -191,6 +200,7 @@ function w(e, t) {
           })
         : A({}, e, t);
 }
+
 function P(e, t) {
     if (null != t.edited_timestamp)
         return R(t, {
@@ -239,9 +249,17 @@ function P(e, t) {
         n
     );
 }
+
 function D(e) {
-    return null == e.attachments ? [] : e.attachments.map((e) => S(A({}, e), { spoiler: e.filename.startsWith(b._W) }));
+    return null == e.attachments
+        ? []
+        : e.attachments.map((e) =>
+              S(A({}, e), {
+                  spoiler: e.filename.startsWith(b._W),
+              }),
+          );
 }
+
 function x(e, t) {
     if (null != e) {
         let n = null != e.ended_timestamp ? i()(new Date(e.ended_timestamp)) : null,
@@ -254,11 +272,13 @@ function x(e, t) {
     }
     return null;
 }
+
 function L(e) {
     if (null == e.embeds) return [];
     let t = e.embeds.map((t) => (0, h.fK)(e.channel_id, e.id, t));
     return (0, h.nh)(t);
 }
+
 function j(e, t) {
     var n;
     if (null == e && (null == t ? void 0 : t.results) == null) return [];
@@ -266,7 +286,9 @@ function j(e, t) {
         null == t || null == (n = t.results)
             ? void 0
             : n.answer_counts.map((e) => ({
-                  count_details: { vote: e.count },
+                  count_details: {
+                      vote: e.count,
+                  },
                   me_vote: e.me_voted,
                   emoji: {
                       id: e.id.toString(),
@@ -288,6 +310,7 @@ function j(e, t) {
         return t.count < 0 && (t.count = 0), t.burst_count < 0 && (t.burst_count = 0), t;
     });
 }
+
 function M(e) {
     return null == e.message_snapshots
         ? []
@@ -300,6 +323,7 @@ function M(e) {
           });
 }
 let k = (e) => 0 === (0, l.o6)(e).length || "" !== e.content;
+
 function U(e) {
     return e.hasFlag(y.pr7.EPHEMERAL) && e.type !== y.lAJ.IN_GAME_MESSAGE_NUX;
 }

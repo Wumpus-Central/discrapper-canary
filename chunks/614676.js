@@ -1,4 +1,7 @@
-n.d(t, { A: () => o }), n(896048);
+n.d(t, {
+    A: () => o,
+}),
+    n(896048);
 var r = n(626584),
     i = n(90924),
     l = n(629471),
@@ -11,7 +14,7 @@ let s = new r.A(a.meB),
                     .required()
                     .keys({
                         level: e.string().max(10).required(),
-                        message: e.string().max(1000).required(),
+                        message: e.string().max(1e3).required(),
                     }),
             handler(e) {
                 let {

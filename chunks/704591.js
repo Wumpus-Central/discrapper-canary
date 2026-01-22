@@ -34,15 +34,39 @@ let a = (0, r.C)({
         },
     ],
 });
+
 function s(e) {
     let { location: t } = e;
-    return a.getCurrentConfig({ location: t }, { autoTrackExposure: !1 }).enabled;
+    return a.getCurrentConfig(
+        {
+            location: t,
+        },
+        {
+            autoTrackExposure: !1,
+        },
+    ).enabled;
 }
+
 function o(e) {
     let { location: t } = e;
-    return a.useExperiment({ location: t }, { autoTrackExposure: !1 }).enabled;
+    return a.useExperiment(
+        {
+            location: t,
+        },
+        {
+            autoTrackExposure: !1,
+        },
+    ).enabled;
 }
+
 function l(e) {
     let { location: t } = e;
-    return a.useExperiment({ location: t }, { autoTrackExposure: !1 }).showSoundmojiInEmojiPicker;
+    return a.useExperiment(
+        {
+            location: t,
+        },
+        {
+            autoTrackExposure: !1,
+        },
+    ).showSoundmojiInEmojiPicker;
 }

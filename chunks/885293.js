@@ -1,4 +1,8 @@
-n.d(t, { default: () => f }), n(747238), n(812715);
+n.d(t, {
+    default: () => f,
+}),
+    n(747238),
+    n(812715);
 var a = n(627968);
 n(64700);
 var l = n(484030),
@@ -12,6 +16,7 @@ var l = n(484030),
     m = n(652215),
     p = n(985018),
     h = n(589049);
+
 function f(e) {
     let { url: t, trustUrl: n, isProtocol: f, onConfirm: x, onCancel: b, onClose: g, transitionState: v } = e,
         {
@@ -95,14 +100,20 @@ function f(e) {
                         checked: C,
                         onChange: (e) => S(e),
                         label: f
-                            ? p.intl.format(p.t["haA+Xw"], { protocol: j.replace(":", "") })
-                            : p.intl.format(p.t.ZgXDsI, { domain: _ }),
+                            ? p.intl.format(p.t["haA+Xw"], {
+                                  protocol: j.replace(":", ""),
+                              })
+                            : p.intl.format(p.t.ZgXDsI, {
+                                  domain: _,
+                              }),
                         labelType: "secondary",
                     }),
                 }),
                 (0, a.jsx)(l.tH, {
                     fallback: null,
-                    children: (0, a.jsx)(c.l, { onClose: g }),
+                    children: (0, a.jsx)(c.l, {
+                        onClose: g,
+                    }),
                 }),
             ],
         })

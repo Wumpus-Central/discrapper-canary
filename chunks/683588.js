@@ -11,7 +11,9 @@ function r(e, t, n) {
         e
     );
 }
-n.d(t, { K: () => i });
+n.d(t, {
+    K: () => i,
+});
 class i {
     constructor() {
         r(this, "promise", void 0),

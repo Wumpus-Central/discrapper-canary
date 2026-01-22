@@ -1,7 +1,10 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r,
     i = n(311907),
     a = n(73153);
+
 function s(e, t, n) {
     return (
         t in e
@@ -17,6 +20,7 @@ function s(e, t, n) {
 }
 let o = [],
     l = null;
+
 function c(e) {
     let { categories: t } = e;
     (o = t), (l = Date.now());
@@ -33,4 +37,6 @@ class u extends (r = i.Ay.Store) {
     }
 }
 s(u, "displayName", "ApplicationDirectoryCategoriesStore");
-let d = new u(a.h, { APPLICATION_DIRECTORY_FETCH_CATEGORIES_SUCCESS: c });
+let d = new u(a.h, {
+    APPLICATION_DIRECTORY_FETCH_CATEGORIES_SUCCESS: c,
+});

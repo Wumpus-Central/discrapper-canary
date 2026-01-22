@@ -1,9 +1,12 @@
-e.d(t, { default: () => c });
+e.d(t, {
+    default: () => c,
+});
 var i = e(627968);
 e(64700);
 var l = e(397927),
     r = e(442433),
     o = e(985018);
+
 function c(n) {
     let { roleId: t, onLeaveRole: e, onSelect: c } = n;
     return (0, i.jsx)(

@@ -1,7 +1,10 @@
-n.d(t, { P: () => s });
+n.d(t, {
+    P: () => s,
+});
 var r = n(627968),
     i = n(236620),
     l = n(985018);
+
 function s(e) {
     let { guildId: t, defaultSettings: n, canManageGuild: s } = e;
     return (0, r.jsx)(i.y, {

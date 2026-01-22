@@ -1,4 +1,6 @@
-n.d(t, { default: () => x });
+n.d(t, {
+    default: () => x,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -22,6 +24,7 @@ var i = n(397927),
     P = n(969128),
     _ = n(90509),
     m = n(985018);
+
 function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -47,6 +50,7 @@ function w(e) {
     }
     return e;
 }
+
 function C(e) {
     let { channel: t, onSelect: n } = e,
         a = (0, A.A)(t),
@@ -78,11 +82,16 @@ function C(e) {
             (0, r.jsxs)(i.rXV, {
                 children: [y, f],
             }),
-            (0, r.jsx)(i.rXV, { children: w }),
-            (0, r.jsx)(i.rXV, { children: C }),
+            (0, r.jsx)(i.rXV, {
+                children: w,
+            }),
+            (0, r.jsx)(i.rXV, {
+                children: C,
+            }),
         ],
     });
 }
+
 function E(e) {
     let { channel: t, guild: n, onSelect: a } = e,
         c = (0, A.A)(t),
@@ -107,7 +116,13 @@ function E(e) {
         "aria-label": m.intl.string(m.t.Xm41aV),
         onSelect: a,
         children: [
-            (0, r.jsx)(i.rXV, { children: c }, "mark-as-read"),
+            (0, r.jsx)(
+                i.rXV,
+                {
+                    children: c,
+                },
+                "mark-as-read",
+            ),
             (0, r.jsxs)(
                 i.rXV,
                 {
@@ -129,7 +144,13 @@ function E(e) {
                 },
                 "admin-actions",
             ),
-            (0, r.jsx)(i.rXV, { children: S }, "developer-actions"),
+            (0, r.jsx)(
+                i.rXV,
+                {
+                    children: S,
+                },
+                "developer-actions",
+            ),
         ],
     });
 }

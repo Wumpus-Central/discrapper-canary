@@ -1,4 +1,6 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var a = n(627968),
     l = n(397927),
     i = n(817281),
@@ -18,12 +20,18 @@ let c = function () {
                 (0, a.jsx)(s.zy, {
                     theme: o.NJ.LIGHT,
                     isSelected: e === o.NJ.LIGHT,
-                    onSelect: () => (0, i.u_)({ theme: o.NJ.LIGHT }),
+                    onSelect: () =>
+                        (0, i.u_)({
+                            theme: o.NJ.LIGHT,
+                        }),
                 }),
                 (0, a.jsx)(s.zy, {
                     theme: o.NJ.DARK,
                     isSelected: e === o.NJ.DARK,
-                    onSelect: () => (0, i.u_)({ theme: o.NJ.DARK }),
+                    onSelect: () =>
+                        (0, i.u_)({
+                            theme: o.NJ.DARK,
+                        }),
                 }),
             ],
         }),

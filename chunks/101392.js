@@ -11,6 +11,7 @@ var r,
     l = n(927813),
     c = n(734057),
     u = n(576705);
+
 function d(e, t, n) {
     return (
         t in e
@@ -32,6 +33,7 @@ let _ = {
     0: {},
     1: {},
 };
+
 function h(e, t, n) {
     if ((m(e, t), (0, o.F)(e, t) || n <= 0)) return;
     let r = n + Date.now();
@@ -42,7 +44,7 @@ function h(e, t, n) {
         timer: new a.Ep(),
     }),
         _[t][e.id].timer.start(
-            1000,
+            1e3,
             () => {
                 s.h.dispatch({
                     type: "SLOWMODE_SET_COOLDOWN",
@@ -54,33 +56,40 @@ function h(e, t, n) {
             !0,
         );
 }
+
 function m(e, t) {
     null != _[t][e.id] && (_[t][e.id].timer.stop(), delete _[t][e.id]);
 }
+
 function g(e, t) {
     let n = c.A.getChannel(e);
     if (null == n) return !1;
     h(n, t, 0 === n.rateLimitPerUser ? 0 : n.rateLimitPerUser * l.A.Millis.SECOND + f);
 }
+
 function E(e) {
     let { channelId: t } = e;
     return g(t, 0);
 }
+
 function b(e) {
     let { channelId: t } = e,
         n = c.A.getChannel(t);
     return null != n && h(n, 0, 0);
 }
+
 function y(e) {
     let { channelId: t, slowmodeType: n } = e;
     return g(t, n);
 }
+
 function O(e) {
     let { channelId: t, slowmodeType: n, cooldownMs: r } = e,
         i = c.A.getChannel(t);
     if (null == i) return !1;
     h(i, n, 0 === r ? 0 : r + f);
 }
+
 function A(e) {
     let { channels: t } = e;
     [0, 1].forEach((e) => {
@@ -94,6 +103,7 @@ function A(e) {
         }
     });
 }
+
 function v() {
     [0, 1].forEach((e) => {
         Object.keys(_[e]).forEach((t) => _[e][t].timer.stop()), (_[e] = {});

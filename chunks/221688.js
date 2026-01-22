@@ -11,8 +11,12 @@ var r = n(554146),
 let l = (e) => {
         let { hasSentAll: t, hasSentAtLeastOne: n, helpdeskArticle: r } = e;
         return t
-            ? o.intl.format(o.t["TYu+MH"], { helpdeskArticle: r })
-            : o.intl.format(o.t["omMr+V"], { helpdeskArticle: r });
+            ? o.intl.format(o.t["TYu+MH"], {
+                  helpdeskArticle: r,
+              })
+            : o.intl.format(o.t["omMr+V"], {
+                  helpdeskArticle: r,
+              });
     },
     c = () => {
         let e = (0, a.m)(),

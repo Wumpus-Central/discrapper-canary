@@ -1,11 +1,15 @@
 let r;
-n.d(t, { A: () => y }), n(896048);
+n.d(t, {
+    A: () => y,
+}),
+    n(896048);
 var i,
     a = n(735438),
     s = n.n(a),
     o = n(311907),
     l = n(73153),
     c = n(824953);
+
 function u(e, t, n) {
     return (
         t in e
@@ -21,12 +25,15 @@ function u(e, t, n) {
 }
 let d = {},
     f = {};
+
 function p(e, t) {
     return null == t && (t = "guild"), "".concat(e, ":").concat(t);
 }
+
 function _(e) {
     return null != d[e] || (d[e] = {}), d[e];
 }
+
 function h(e) {
     let { guildId: t, channelId: n, webhooks: i, error: a } = e;
     if (null == i)
@@ -43,14 +50,17 @@ function h(e) {
     let l = (d[t] = {});
     o.concat(i).forEach((e) => (l[e.id] = e)), delete f[p(t, n)];
 }
+
 function m(e) {
     let { guildId: t, channelId: n } = e;
     f[p(t, n)] = !0;
 }
+
 function g(e) {
     let { guildId: t, webhook: n } = e;
     _(t)[n.id] = n;
 }
+
 function E(e) {
     let { guildId: t, webhookId: n } = e;
     delete _(t)[n];

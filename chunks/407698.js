@@ -1,4 +1,6 @@
-n.d(t, { Q: () => f });
+n.d(t, {
+    Q: () => f,
+});
 var r = n(627968),
     i = n(64700),
     a = n(435371),
@@ -8,6 +10,7 @@ var r = n(627968),
     c = n(714991),
     u = n(57991),
     d = n(652215);
+
 function f(e) {
     let { guild: t, children: n } = e,
         f = (0, l.A)(t);

@@ -1,4 +1,7 @@
-n.d(e, { A: () => A }), n(896048);
+n.d(e, {
+    A: () => A,
+}),
+    n(896048);
 var i = n(627968),
     a = n(64700),
     l = n(158954),
@@ -30,6 +33,7 @@ let C = [
         nameGetter: () => u.intl.string(u.t.wZLu3Y),
     },
 ];
+
 function A(t) {
     let { application: e, subscriptionId: n, onClose: A, transitionState: d } = t,
         [N, O] = a.useState(!1),
@@ -47,7 +51,9 @@ function A(t) {
         }, [e.id, n, I, A, S]);
     return (
         a.useEffect(() => {
-            r.Ay.updatedUnsyncedSettings({ disableApplicationSubscriptionCancellationSurvey: N });
+            r.Ay.updatedUnsyncedSettings({
+                disableApplicationSubscriptionCancellationSurvey: N,
+            });
         }, [N]),
         (0, i.jsxs)(l.Modal, {
             title: u.intl.string(u.t.zPxMdQ),

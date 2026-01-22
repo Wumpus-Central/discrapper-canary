@@ -1,4 +1,7 @@
-n.d(t, { A: () => j }), n(896048);
+n.d(t, {
+    A: () => j,
+}),
+    n(896048);
 var a = n(627968),
     l = n(64700),
     i = n(503698),
@@ -15,6 +18,7 @@ var a = n(627968),
     x = n(515038),
     b = n(652215),
     g = n(348655);
+
 function v(e) {
     var t, n;
     let {
@@ -109,6 +113,7 @@ function v(e) {
         ],
     });
 }
+
 function j(e) {
     return (0, a.jsx)(u.R, {
         questOrQuests: e.quest,
@@ -146,7 +151,10 @@ function j(e) {
                     }
                     return e;
                 })({}, e)),
-                (l = l = { impressionRef: t }),
+                (l = l =
+                    {
+                        impressionRef: t,
+                    }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
                     : (function (e, t) {

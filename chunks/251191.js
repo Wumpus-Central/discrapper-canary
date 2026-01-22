@@ -1,4 +1,6 @@
-l.d(t, { A: () => E });
+l.d(t, {
+    A: () => E,
+});
 var n = l(627968),
     r = l(64700),
     s = l(503698),
@@ -35,7 +37,9 @@ let E = (e) => {
                           }),
                           (0, n.jsx)(o.Button, {
                               variant: "secondary",
-                              text: m.intl.formatToPlainString(m.t.bc9RBE, { category_name: t.name }),
+                              text: m.intl.formatToPlainString(m.t.bc9RBE, {
+                                  category_name: t.name,
+                              }),
                               onClick: () => {
                                   l({
                                       sourceButton: "shelf block see all",

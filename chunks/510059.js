@@ -1,4 +1,6 @@
-t.d(l, { A: () => I });
+t.d(l, {
+    A: () => I,
+});
 var n = t(627968);
 t(64700);
 var i = t(503698),
@@ -18,6 +20,7 @@ var i = t(503698),
     h = t(783419),
     g = t(985018),
     v = t(882119);
+
 function b(e) {
     var l, t;
     let i,
@@ -33,7 +36,9 @@ function b(e) {
                 children: (0, n.jsx)("div", {
                     className: v.k_,
                     children: (0, n.jsx)("img", {
-                        alt: g.intl.formatToPlainString(g.t.rtm15P, { name: null == y ? void 0 : y.name }),
+                        alt: g.intl.formatToPlainString(g.t.rtm15P, {
+                            name: null == y ? void 0 : y.name,
+                        }),
                         className: v.tV,
                         src: null == y ? void 0 : y.icon.lightPNG,
                     }),
@@ -100,7 +105,9 @@ function b(e) {
                             null != I &&
                                 (0, n.jsx)(o.Text, {
                                     variant: "text-xs/normal",
-                                    children: g.intl.format(g.t["9rfonh"], { date: I }),
+                                    children: g.intl.format(g.t["9rfonh"], {
+                                        date: I,
+                                    }),
                                 }),
                         ],
                     }),
@@ -126,6 +133,7 @@ function b(e) {
         ],
     });
 }
+
 function I(e) {
     let { connections: l, userId: t, className: i } = e,
         a = (0, s.bG)([x.default], () => x.default.locale);

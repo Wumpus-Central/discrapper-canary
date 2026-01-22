@@ -12,6 +12,7 @@ var r,
     s = n(503698),
     o = n.n(s),
     l = n(666817);
+
 function c(e, t, n) {
     return (
         t in e
@@ -57,6 +58,7 @@ var u = (function (e) {
         e
     );
 })({});
+
 function d(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "dark";
     if ("light" === t) {
@@ -127,7 +129,9 @@ class p extends (r = a.PureComponent) {
     render() {
         let { flipped: e, type: t, className: n, size: r } = this.props;
         return (0, i.jsx)("div", {
-            className: o()(r, l[t], n, { [l.flipped]: e }),
+            className: o()(r, l[t], n, {
+                [l.flipped]: e,
+            }),
             children: t,
         });
     }

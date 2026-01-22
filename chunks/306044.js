@@ -15,14 +15,17 @@ var i = n(735438),
     c = n(837921);
 let u = [],
     d = "dosbox.exe";
+
 function f(e) {
     return (e = e.toLowerCase()), (0, l.isWindows)() && (e = (e = e.replace(/^[a-z]:/, "")).replace(/\\/g, "/")), e;
 }
+
 function p(e) {
     null != e &&
         "" !== e &&
         ((e = f(e)).endsWith("/") || (e += "/"), u.push(e), (0, l.isLinux)() && u.push("/var" + e));
 }
+
 function _(e) {
     e = f(e);
     let t = !1;

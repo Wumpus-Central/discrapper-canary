@@ -1,4 +1,7 @@
-r.d(t, { default: () => b }), r(896048);
+r.d(t, {
+    default: () => b,
+}),
+    r(896048);
 var n = r(627968),
     o = r(64700),
     l = r(158954),
@@ -9,6 +12,7 @@ var n = r(627968),
     u = r(624160),
     p = r(985018),
     f = r(480676);
+
 function b(e) {
     var t, r;
     let { onClose: b, trackUserProfileEditAction: O } = e,
@@ -45,7 +49,9 @@ function b(e) {
         })(e, ["onClose", "trackUserProfileEditAction"]),
         y = (0, i.bG)([s.default], () => s.default.getCurrentUser()),
         g = (function () {
-            let e = (0, a.A)({ location: "UserProfileWidgetAddModal" }),
+            let e = (0, a.A)({
+                    location: "UserProfileWidgetAddModal",
+                }),
                 [t, r] = o.useState(e);
             return (
                 o.useEffect(() => {

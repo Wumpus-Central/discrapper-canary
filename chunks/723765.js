@@ -1,4 +1,6 @@
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var r = n(803306),
     i = n(439372),
     a = n(734057),
@@ -6,6 +8,7 @@ var r = n(803306),
     o = n(287809),
     l = n(716371),
     c = n(652215);
+
 function u(e, t, n) {
     return (
         t in e
@@ -20,15 +23,20 @@ function u(e, t, n) {
     );
 }
 let d = !1;
+
 function f(e) {
     if (__OVERLAY__) return;
     let t = o.default.getCurrentUser();
     if (null == t) return;
     let n = s.A.getChannelId(),
         r = a.A.getDMFromUserId(l.K);
-    if (!t.hasUrgentMessages() || r === n) return p({ channelId: n });
+    if (!t.hasUrgentMessages() || r === n)
+        return p({
+            channelId: n,
+        });
     d || ((d = !0), e());
 }
+
 function p(e) {
     let { channelId: t } = e,
         n = o.default.getCurrentUser(),

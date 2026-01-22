@@ -1,4 +1,10 @@
-n.d(t, { A: () => V }), n(896048), n(321073), n(864466), n(443073);
+n.d(t, {
+    A: () => V,
+}),
+    n(896048),
+    n(321073),
+    n(864466),
+    n(443073);
 var l = n(627968),
     r = n(64700),
     i = n(503698),
@@ -30,6 +36,7 @@ var l = n(627968),
     P = n(985018),
     D = n(282627),
     R = n(206314);
+
 function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -55,6 +62,7 @@ function L(e) {
     }
     return e;
 }
+
 function T(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -75,12 +83,15 @@ function T(e, t) {
 }
 let G = new Set([E.rbe.GUILD_FORUM, E.rbe.GUILD_MEDIA]),
     H = new Set([E.rbe.GUILD_VOICE, E.rbe.GUILD_STAGE_VOICE]);
+
 function M(e) {
     let { guild: t, channel: r, onCategoryClick: i } = e,
         s = (0, N.Rg)(t.id, r.id, r.id),
         c = (0, N.eK)(t.id, r.id, r.id);
     return (0, l.jsxs)("div", {
-        className: a()(D.Fv, { [D.d0]: "null" === r.id }),
+        className: a()(D.Fv, {
+            [D.d0]: "null" === r.id,
+        }),
         onContextMenu: (e) => {
             (0, b.L3)(e, async () => {
                 let { default: e } = await Promise.all([n.e("75149"), n.e("30997")]).then(n.bind(n, 725756));
@@ -115,7 +126,9 @@ function M(e) {
     });
 }
 let k = r.memo(function () {
-        return (0, l.jsx)("div", { className: D.me });
+        return (0, l.jsx)("div", {
+            className: D.me,
+        });
     }),
     U = r.memo(function (e) {
         let { index: t } = e;
@@ -124,7 +137,7 @@ let k = r.memo(function () {
             {
                 variant: "text-xs/normal",
                 className: D.Ks,
-                children: "\xB7",
+                children: "\xb7",
             },
             "separator-".concat(t),
         );
@@ -156,7 +169,9 @@ let k = r.memo(function () {
                             {
                                 variant: "text-xs/normal",
                                 className: D.qy,
-                                children: P.intl.format(P.t.z0qML2, { count: q }),
+                                children: P.intl.format(P.t.z0qML2, {
+                                    count: q,
+                                }),
                             },
                             "thread-count",
                         ),
@@ -183,13 +198,26 @@ let k = r.memo(function () {
                                 children: (0, l.jsx)(f.Text, {
                                     className: D.At,
                                     variant: "text-xs/normal",
-                                    children: x.A.parseTopic(r.topic, !0, { channelId: r.id }),
+                                    children: x.A.parseTopic(r.topic, !0, {
+                                        channelId: r.id,
+                                    }),
                                 }),
                             },
                             "topic",
                         ),
                     ),
-                [t.map((e, t) => [e, (0, l.jsx)(U, { index: t }, "subtitle-separator-".concat(t))])]
+                [
+                    t.map((e, t) => [
+                        e,
+                        (0, l.jsx)(
+                            U,
+                            {
+                                index: t,
+                            },
+                            "subtitle-separator-".concat(t),
+                        ),
+                    ]),
+                ]
                     .flat(2)
                     .slice(0, -1)),
             Y = (e) => (
@@ -330,6 +358,7 @@ let k = r.memo(function () {
             ],
         });
     });
+
 function V(e) {
     let { categories: t, guild: n, className: i, innerClassName: s, hasSidebar: d } = e,
         { onChannelClick: o } = (0, _.A)(n.id),
@@ -354,7 +383,10 @@ function V(e) {
         p = r.useCallback(
             (e) => {
                 let { section: r, row: i } = e;
-                if (0 === r && -1 === u) return (0, l.jsx)(w.A, { guild: n });
+                if (0 === r && -1 === u)
+                    return (0, l.jsx)(w.A, {
+                        guild: n,
+                    });
                 let a = t._categories[r + u],
                     s = t[a.channel.id][i];
                 return null == s

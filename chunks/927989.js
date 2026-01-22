@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -6,6 +8,7 @@ var r = n(627968),
     o = n(397927),
     l = n(854987),
     c = n(960849);
+
 function u(e) {
     let { children: t, useTopRightClipPath: n = !1, innerClassName: a } = e,
         u = i.useContext(l.P),
@@ -15,23 +18,33 @@ function u(e) {
         children: [
             (0, r.jsx)("div", {
                 className: c.an,
-                style: { borderColor: d },
+                style: {
+                    borderColor: d,
+                },
             }),
             (0, r.jsx)("div", {
                 className: c.Gn,
-                style: { backgroundColor: d },
+                style: {
+                    backgroundColor: d,
+                },
             }),
             (0, r.jsx)("div", {
                 className: c.Z5,
-                style: { backgroundColor: d },
+                style: {
+                    backgroundColor: d,
+                },
             }),
             (0, r.jsx)("div", {
                 className: c.qE,
-                style: { backgroundColor: d },
+                style: {
+                    backgroundColor: d,
+                },
             }),
             (0, r.jsx)("div", {
                 className: s()(c.T5, a),
-                style: { borderColor: d },
+                style: {
+                    borderColor: d,
+                },
                 children: t,
             }),
         ],

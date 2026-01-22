@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -9,6 +11,7 @@ var i = n(311907),
     c = n(181180),
     u = n(317017),
     d = n(826223);
+
 function p(e) {
     let { section: t } = e,
         n = (0, i.bG)([a.A], () => a.A.theme);
@@ -22,7 +25,9 @@ function p(e) {
                 lightSrc: d,
                 darkSrc: u,
             }),
-            (0, r.jsx)(l.SGT, { note: t === s.zz.SPAM ? o.intl.string(o.t.hasFPQ) : o.intl.string(o.t.SXrqTf) }),
+            (0, r.jsx)(l.SGT, {
+                note: t === s.zz.SPAM ? o.intl.string(o.t.hasFPQ) : o.intl.string(o.t.SXrqTf),
+            }),
         ],
     });
 }

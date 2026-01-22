@@ -1,4 +1,6 @@
-r.d(t, { A: () => f });
+r.d(t, {
+    A: () => f,
+});
 var a = r(1139),
     n = r(106526),
     s = r(64700),
@@ -6,6 +8,7 @@ var a = r(1139),
     i = r.n(o),
     c = r(431384),
     l = ["data"];
+
 function u(e) {
     return "".concat(e.length, " ").concat(1 !== e.length ? "items" : "item");
 }
@@ -23,5 +26,7 @@ var b = function (e) {
         }),
     );
 };
-b.propTypes = { data: i().array };
+b.propTypes = {
+    data: i().array,
+};
 let f = b;

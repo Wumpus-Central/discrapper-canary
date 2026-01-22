@@ -1,4 +1,6 @@
-t.d(l, { A: () => f });
+t.d(l, {
+    A: () => f,
+});
 var n = t(627968);
 t(64700);
 var i = t(311907),
@@ -9,6 +11,7 @@ var i = t(311907),
     d = t(61881),
     c = t(993401),
     u = t(985018);
+
 function f(e) {
     let { onClose: l } = e,
         t = (function (e, l) {

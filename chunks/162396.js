@@ -1,4 +1,6 @@
-r.d(t, { A: () => g });
+r.d(t, {
+    A: () => g,
+});
 var n = r(627968),
     l = r(64700),
     o = r(503698),
@@ -11,6 +13,7 @@ var n = r(627968),
     b = r(652215),
     y = r(985018),
     d = r(535790);
+
 function p(e) {
     let { onClose: t } = e;
     return (0, n.jsx)(c.W1t, {
@@ -39,11 +42,14 @@ function p(e) {
         }),
     });
 }
+
 function g() {
     let e = l.useRef(null);
     return (0, n.jsxs)("div", {
         children: [
-            (0, n.jsx)(f.A, { compact: !0 }),
+            (0, n.jsx)(f.A, {
+                compact: !0,
+            }),
             (0, n.jsxs)("div", {
                 className: d.yJ,
                 children: [
@@ -59,7 +65,7 @@ function g() {
                     (0, n.jsx)("span", {
                         className: d.xE,
                         "aria-hidden": "true",
-                        children: "\u2022",
+                        children: "•",
                     }),
                     (0, n.jsx)(c.MzZ, {
                         href: b.X7G.TERMS,
@@ -73,7 +79,7 @@ function g() {
                     (0, n.jsx)("span", {
                         className: d.xE,
                         "aria-hidden": "true",
-                        children: "\u2022",
+                        children: "•",
                     }),
                     (0, n.jsx)(c.YNO, {
                         targetElementRef: e,
@@ -83,7 +89,9 @@ function g() {
                         animation: c.YNO.Animation.NONE,
                         renderPopout: (e) => {
                             let { closePopout: t } = e;
-                            return (0, n.jsx)(p, { onClose: t });
+                            return (0, n.jsx)(p, {
+                                onClose: t,
+                            });
                         },
                         children: (t, r) => {
                             var l, o;
@@ -118,7 +126,9 @@ function g() {
                                     {
                                         ref: e,
                                         useDefaultUnderlineStyles: !1,
-                                        className: a()(d.Mj, { [d.vu]: r.isShown }),
+                                        className: a()(d.Mj, {
+                                            [d.vu]: r.isShown,
+                                        }),
                                         children: (0, n.jsx)(c.Text, {
                                             tag: "span",
                                             variant: "text-xxs/normal",

@@ -34,7 +34,7 @@ let i = {
         "jan.": 1,
         février: 2,
         fév: 2,
-        "fév.": 2,
+        "f\xe9v.": 2,
         fevrier: 2,
         fev: 2,
         "fev.": 2,
@@ -109,6 +109,7 @@ let i = {
         années: "year",
     },
     l = `(?:${(0, r.uJ)(s)}|[0-9]+|[0-9]+\\.[0-9]+|une?\\b|quelques?|demi-?)`;
+
 function c(e) {
     let t = e.toLowerCase();
     return void 0 !== s[t]
@@ -122,20 +123,23 @@ function c(e) {
               : parseFloat(t);
 }
 let u = "(?:[0-9]{1,2}(?:er)?)";
+
 function d(e) {
     let t = e.toLowerCase();
     return parseInt((t = t.replace(/(?:er)$/i, "")));
 }
 let f = "(?:[1-9][0-9]{0,3}\\s*(?:AC|AD|p\\.\\s*C(?:hr?)?\\.\\s*n\\.)|[1-2][0-9]{3}|[5-9][0-9])";
+
 function p(e) {
     if (/AC/i.test(e)) return -parseInt((e = e.replace(/BC/i, "")));
     if (/AD/i.test(e) || /C/i.test(e)) return parseInt((e = e.replace(/[^\d]+/i, "")));
     let t = parseInt(e);
-    return t < 100 && (t > 50 ? (t += 1900) : (t += 2000)), t;
+    return t < 100 && (t > 50 ? (t += 1900) : (t += 2e3)), t;
 }
 let _ = `(${l})\\s{0,5}(${(0, r.uJ)(o)})\\s{0,5}`,
     h = RegExp(_, "i"),
     m = (0, r.mb)("", _);
+
 function g(e) {
     let t = {},
         n = e,
@@ -143,6 +147,7 @@ function g(e) {
     for (; r; ) E(t, r), (n = n.substring(r[0].length)), (r = h.exec(n));
     return t;
 }
+
 function E(e, t) {
     let n = c(t[1]);
     e[o[t[2].toLowerCase()]] = n;

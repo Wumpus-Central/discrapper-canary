@@ -1,20 +1,22 @@
-t.d(n, { A: () => o });
+t.d(n, {
+    A: () => o,
+});
 var r = {
     lessThanXSeconds: {
         one: {
-            regular: "méně než sekunda",
-            past: "před méně než sekundou",
-            future: "za méně než sekundu",
+            regular: "m\xe9ně než sekunda",
+            past: "před m\xe9ně než sekundou",
+            future: "za m\xe9ně než sekundu",
         },
         few: {
-            regular: "méně než {{count}} sekundy",
-            past: "před méně než {{count}} sekundami",
-            future: "za méně než {{count}} sekundy",
+            regular: "m\xe9ně než {{count}} sekundy",
+            past: "před m\xe9ně než {{count}} sekundami",
+            future: "za m\xe9ně než {{count}} sekundy",
         },
         many: {
-            regular: "méně než {{count}} sekund",
-            past: "před méně než {{count}} sekundami",
-            future: "za méně než {{count}} sekund",
+            regular: "m\xe9ně než {{count}} sekund",
+            past: "před m\xe9ně než {{count}} sekundami",
+            future: "za m\xe9ně než {{count}} sekund",
         },
     },
     xSeconds: {
@@ -44,19 +46,19 @@ var r = {
     },
     lessThanXMinutes: {
         one: {
-            regular: "méně než minuta",
-            past: "před méně než minutou",
-            future: "za méně než minutu",
+            regular: "m\xe9ně než minuta",
+            past: "před m\xe9ně než minutou",
+            future: "za m\xe9ně než minutu",
         },
         few: {
-            regular: "méně než {{count}} minuty",
-            past: "před méně než {{count}} minutami",
-            future: "za méně než {{count}} minuty",
+            regular: "m\xe9ně než {{count}} minuty",
+            past: "před m\xe9ně než {{count}} minutami",
+            future: "za m\xe9ně než {{count}} minuty",
         },
         many: {
-            regular: "méně než {{count}} minut",
-            past: "před méně než {{count}} minutami",
-            future: "za méně než {{count}} minut",
+            regular: "m\xe9ně než {{count}} minut",
+            past: "před m\xe9ně než {{count}} minutami",
+            future: "za m\xe9ně než {{count}} minut",
         },
     },
     xMinutes: {
@@ -122,77 +124,77 @@ var r = {
             future: "za {{count}} dny",
         },
         many: {
-            regular: "{{count}} dní",
+            regular: "{{count}} dn\xed",
             past: "před {{count}} dny",
-            future: "za {{count}} dní",
+            future: "za {{count}} dn\xed",
         },
     },
     aboutXWeeks: {
         one: {
-            regular: "přibližně týden",
-            past: "přibližně před týdnem",
-            future: "přibližně za týden",
+            regular: "přibližně t\xfdden",
+            past: "přibližně před t\xfddnem",
+            future: "přibližně za t\xfdden",
         },
         few: {
-            regular: "přibližně {{count}} týdny",
-            past: "přibližně před {{count}} týdny",
-            future: "přibližně za {{count}} týdny",
+            regular: "přibližně {{count}} t\xfddny",
+            past: "přibližně před {{count}} t\xfddny",
+            future: "přibližně za {{count}} t\xfddny",
         },
         many: {
-            regular: "přibližně {{count}} týdnů",
-            past: "přibližně před {{count}} týdny",
-            future: "přibližně za {{count}} týdnů",
+            regular: "přibližně {{count}} t\xfddnů",
+            past: "přibližně před {{count}} t\xfddny",
+            future: "přibližně za {{count}} t\xfddnů",
         },
     },
     xWeeks: {
         one: {
-            regular: "týden",
-            past: "před týdnem",
-            future: "za týden",
+            regular: "t\xfdden",
+            past: "před t\xfddnem",
+            future: "za t\xfdden",
         },
         few: {
-            regular: "{{count}} týdny",
-            past: "před {{count}} týdny",
-            future: "za {{count}} týdny",
+            regular: "{{count}} t\xfddny",
+            past: "před {{count}} t\xfddny",
+            future: "za {{count}} t\xfddny",
         },
         many: {
-            regular: "{{count}} týdnů",
-            past: "před {{count}} týdny",
-            future: "za {{count}} týdnů",
+            regular: "{{count}} t\xfddnů",
+            past: "před {{count}} t\xfddny",
+            future: "za {{count}} t\xfddnů",
         },
     },
     aboutXMonths: {
         one: {
-            regular: "přibližně měsíc",
-            past: "přibližně před měsícem",
-            future: "přibližně za měsíc",
+            regular: "přibližně měs\xedc",
+            past: "přibližně před měs\xedcem",
+            future: "přibližně za měs\xedc",
         },
         few: {
-            regular: "přibližně {{count}} měsíce",
-            past: "přibližně před {{count}} měsíci",
-            future: "přibližně za {{count}} měsíce",
+            regular: "přibližně {{count}} měs\xedce",
+            past: "přibližně před {{count}} měs\xedci",
+            future: "přibližně za {{count}} měs\xedce",
         },
         many: {
-            regular: "přibližně {{count}} měsíců",
-            past: "přibližně před {{count}} měsíci",
-            future: "přibližně za {{count}} měsíců",
+            regular: "přibližně {{count}} měs\xedců",
+            past: "přibližně před {{count}} měs\xedci",
+            future: "přibližně za {{count}} měs\xedců",
         },
     },
     xMonths: {
         one: {
-            regular: "měsíc",
-            past: "před měsícem",
-            future: "za měsíc",
+            regular: "měs\xedc",
+            past: "před měs\xedcem",
+            future: "za měs\xedc",
         },
         few: {
-            regular: "{{count}} měsíce",
-            past: "před {{count}} měsíci",
-            future: "za {{count}} měsíce",
+            regular: "{{count}} měs\xedce",
+            past: "před {{count}} měs\xedci",
+            future: "za {{count}} měs\xedce",
         },
         many: {
-            regular: "{{count}} měsíců",
-            past: "před {{count}} měsíci",
-            future: "za {{count}} měsíců",
+            regular: "{{count}} měs\xedců",
+            past: "před {{count}} měs\xedci",
+            future: "za {{count}} měs\xedců",
         },
     },
     aboutXYears: {
@@ -231,19 +233,19 @@ var r = {
     },
     overXYears: {
         one: {
-            regular: "více než rok",
-            past: "před více než rokem",
-            future: "za více než rok",
+            regular: "v\xedce než rok",
+            past: "před v\xedce než rokem",
+            future: "za v\xedce než rok",
         },
         few: {
-            regular: "více než {{count}} roky",
-            past: "před více než {{count}} roky",
-            future: "za více než {{count}} roky",
+            regular: "v\xedce než {{count}} roky",
+            past: "před v\xedce než {{count}} roky",
+            future: "za v\xedce než {{count}} roky",
         },
         many: {
-            regular: "více než {{count}} roků",
-            past: "před více než {{count}} roky",
-            future: "za více než {{count}} roků",
+            regular: "v\xedce než {{count}} roků",
+            past: "před v\xedce než {{count}} roky",
+            future: "za v\xedce než {{count}} roků",
         },
     },
     almostXYears: {

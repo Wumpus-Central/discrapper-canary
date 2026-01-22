@@ -1,4 +1,7 @@
-n.d(t, { A: () => P }), n(228524);
+n.d(t, {
+    A: () => P,
+}),
+    n(228524);
 var r = n(110259),
     i = n(349941),
     a = n(562465),
@@ -19,6 +22,7 @@ var r = n(110259),
     y = n(555337),
     O = n(652215),
     A = n(985018);
+
 function v(e, t, n) {
     return (
         t in e
@@ -32,6 +36,7 @@ function v(e, t, n) {
         e
     );
 }
+
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -48,6 +53,7 @@ function S(e) {
     }
     return e;
 }
+
 function I(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -60,6 +66,7 @@ function I(e, t) {
     }
     return n;
 }
+
 function T(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -71,6 +78,7 @@ function T(e, t) {
         e
     );
 }
+
 function C(e, t) {
     if (null == e) return {};
     var n,
@@ -87,6 +95,7 @@ function C(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function N(e, t) {
     if (null == e) return {};
     var n,
@@ -143,7 +152,9 @@ let R = new l.A("GuildSettingsActionCreators"),
                 (0, o.id)(O.zgK.GUILD_SETTINGS);
         },
         close() {
-            s.h.dispatch({ type: "GUILD_SETTINGS_CLOSE" });
+            s.h.dispatch({
+                type: "GUILD_SETTINGS_CLOSE",
+            });
         },
         saveRouteStack(e) {
             s.h.dispatch({
@@ -197,7 +208,9 @@ let R = new l.A("GuildSettingsActionCreators"),
             let { guildId: t, level: n } = e;
             return a.Bo.post({
                 url: O.Rsh.GUILD_MFA(t),
-                body: { level: n },
+                body: {
+                    level: n,
+                },
                 oldFormErrors: !0,
                 rejectWithError: !1,
             }).then((e) =>
@@ -210,7 +223,9 @@ let R = new l.A("GuildSettingsActionCreators"),
         updateIcon(e, t) {
             a.Bo.patch({
                 url: O.Rsh.GUILD(e),
-                body: { icon: t },
+                body: {
+                    icon: t,
+                },
                 oldFormErrors: !0,
                 rejectWithError: !1,
             }).then(
@@ -242,7 +257,14 @@ let R = new l.A("GuildSettingsActionCreators"),
                 r.profile = S({}, null != (i = r.profile) ? i : {}, n);
             }
             null != y.A.getGuildId() && null != t && (r.safetyAlertsChannelId = t),
-                s.h.dispatch(S({ type: "GUILD_SETTINGS_UPDATE" }, r));
+                s.h.dispatch(
+                    S(
+                        {
+                            type: "GUILD_SETTINGS_UPDATE",
+                        },
+                        r,
+                    ),
+                );
         },
         updateGuildProfile(e, t) {
             s.h.dispatch(
@@ -306,7 +328,11 @@ let R = new l.A("GuildSettingsActionCreators"),
                             public_updates_channel_id: N,
                             safety_alerts_channel_id: v,
                         },
-                        null != w ? { premium_progress_bar_enabled: w } : null,
+                        null != w
+                            ? {
+                                  premium_progress_bar_enabled: w,
+                              }
+                            : null,
                     ),
                     {
                         profile: null != P ? (0, c.N)(P) : P,
@@ -314,10 +340,14 @@ let R = new l.A("GuildSettingsActionCreators"),
                     },
                 );
             return (
-                s.h.dispatch({ type: "GUILD_SETTINGS_SUBMIT" }),
+                s.h.dispatch({
+                    type: "GUILD_SETTINGS_SUBMIT",
+                }),
                 a.Bo.patch({
                     url: O.Rsh.GUILD(e),
-                    query: { for_discovery: x.isForDiscovery },
+                    query: {
+                        for_discovery: x.isForDiscovery,
+                    },
                     body: L,
                     oldFormErrors: !0,
                     rejectWithError: !1,
@@ -335,7 +365,9 @@ let R = new l.A("GuildSettingsActionCreators"),
                                 type: "GUILD_SETTINGS_SUBMIT_FAILURE",
                                 errors: e.body,
                             }),
-                            R.error("Failed to save guild settings", { errors: e.body }),
+                            R.error("Failed to save guild settings", {
+                                errors: e.body,
+                            }),
                             x.throwErr)
                         )
                             throw e.body;
@@ -401,7 +433,9 @@ let R = new l.A("GuildSettingsActionCreators"),
                 n = p.A.isLurking(e);
             await a.Bo.del({
                 url: O.Rsh.GUILD_LEAVE(e),
-                body: { lurking: n || g.Ay.isCurrentUserGuest(e) },
+                body: {
+                    lurking: n || g.Ay.isCurrentUserGuest(e),
+                },
                 oldFormErrors: !0,
                 rejectWithError: !1,
             }).then(() => {
@@ -415,7 +449,9 @@ let R = new l.A("GuildSettingsActionCreators"),
                 ? (0, d.ID)(e, n)
                 : (await a.Bo.patch({
                       url: O.Rsh.GUILD_MEMBER(e, t),
-                      body: { roles: n },
+                      body: {
+                          roles: n,
+                      },
                       oldFormErrors: !0,
                       rejectWithError: !1,
                   }),
@@ -439,7 +475,9 @@ let R = new l.A("GuildSettingsActionCreators"),
         bulkAddMemberRoles: (e, t, n) =>
             a.Bo.patch({
                 url: O.Rsh.GUILD_ROLE_MEMBERS(e, t),
-                body: { member_ids: n },
+                body: {
+                    member_ids: n,
+                },
                 rejectWithError: !1,
             }).then((n) => {
                 s.h.dispatch({

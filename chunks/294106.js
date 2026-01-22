@@ -1,5 +1,7 @@
 for (
-    var n = { value: !0 },
+    var n = {
+            value: !0,
+        },
         r = "u" > typeof window && /Mac|iPod|iPhone|iPad/.test(window.navigator.platform),
         i = {
             alt: "altKey",
@@ -71,6 +73,7 @@ for (
     o++
 )
     s["f" + o] = 111 + o;
+
 function l(e, t, n) {
     !t || "byKey" in t || ((n = t), (t = null)), Array.isArray(e) || (e = [e]);
     var r = e.map(function (e) {
@@ -83,12 +86,21 @@ function l(e, t, n) {
         };
     return null == n ? i : i(n);
 }
+
 function c(e, t) {
     return l(e, t);
 }
+
 function u(e, t) {
-    return l(e, { byKey: !0 }, t);
+    return l(
+        e,
+        {
+            byKey: !0,
+        },
+        t,
+    );
 }
+
 function d(e, t) {
     var n = t && t.byKey,
         r = {},
@@ -118,6 +130,7 @@ function d(e, t) {
     }
     return r;
 }
+
 function f(e, t) {
     for (var n in e) {
         var r = e[n],
@@ -140,9 +153,11 @@ function f(e, t) {
     }
     return !0;
 }
+
 function p(e) {
     return s[(e = _(e))] || e.toUpperCase().charCodeAt(0);
 }
+
 function _(e) {
     return a[(e = e.toLowerCase())] || e;
 }

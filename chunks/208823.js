@@ -1,4 +1,6 @@
-n.d(t, { t: () => r });
+n.d(t, {
+    t: () => r,
+});
 let r = (0, n(945810).mj)({
     name: "2025-12-desktop-message-previews",
     kind: "user",

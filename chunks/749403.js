@@ -1,6 +1,9 @@
-n.d(t, { p: () => i });
+n.d(t, {
+    p: () => i,
+});
 var l = n(64700),
     r = n(456647);
+
 function i(e) {
     let { loading: t, hasConnection: n, canConnect: i, startConnection: a, account: o } = (0, r.X)(e);
     return {
@@ -13,13 +16,17 @@ function i(e) {
                 if (t.success && null != t.url) {
                     let e = window.open(t.url, "_blank");
                     return null == e
-                        ? { success: !1 }
+                        ? {
+                              success: !1,
+                          }
                         : {
                               success: !0,
                               popup: e,
                           };
                 }
-                return { success: !1 };
+                return {
+                    success: !1,
+                };
             },
             [a],
         ),

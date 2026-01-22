@@ -1,4 +1,8 @@
-n.d(t, { A: () => O }), n(896048), n(938796);
+n.d(t, {
+    A: () => O,
+}),
+    n(896048),
+    n(938796);
 var i = n(627968),
     l = n(64700),
     s = n(503698),
@@ -20,6 +24,7 @@ var i = n(627968),
     v = n(985018),
     f = n(549146),
     S = n(626149);
+
 function O(e) {
     let { guildId: t } = e,
         n = (0, a.bG)([g.Ay], () => g.Ay.getGuildFlags(t)),
@@ -63,13 +68,22 @@ function O(e) {
                     look: "pill",
                 }),
             }),
-            (0, i.jsx)("div", { className: f.zV }),
+            (0, i.jsx)("div", {
+                className: f.zV,
+            }),
             (0, i.jsxs)("div", {
                 className: f.xE,
                 children: [
                     (0, i.jsxs)("div", {
                         className: f.Vg,
-                        children: [(0, i.jsx)(_, { unreadSetting: s }), (0, i.jsx)(E, { notificationSetting: r })],
+                        children: [
+                            (0, i.jsx)(_, {
+                                unreadSetting: s,
+                            }),
+                            (0, i.jsx)(E, {
+                                notificationSetting: r,
+                            }),
+                        ],
                     }),
                     (0, i.jsxs)("div", {
                         className: f.Vg,
@@ -125,7 +139,9 @@ function O(e) {
                                             h.G_.unreads(e),
                                         );
                                 },
-                                options: (0, j.Q)({ notificationSetting: r }),
+                                options: (0, j.Q)({
+                                    notificationSetting: r,
+                                }),
                                 renderOptionLabel: (e) => {
                                     let t = e.disabled && e.value === N.e.ONLY_MENTIONS && s !== N.e.ONLY_MENTIONS;
                                     return (0, i.jsxs)(i.Fragment, {
@@ -157,13 +173,17 @@ function O(e) {
                                 value: r,
                                 onChange: (e) => {
                                     O(!1);
-                                    let n = { message_notifications: e };
+                                    let n = {
+                                        message_notifications: e,
+                                    };
                                     e === b.orn.ALL_MESSAGES &&
                                         s !== N.e.ALL_MESSAGES &&
                                         (n.flags = (0, m.md)(g.Ay.getGuildFlags(t), A.n3.UNREADS_ALL_MESSAGES)),
                                         u.A.updateGuildNotificationSettings(t, n, h.G_.notifications(e));
                                 },
-                                options: (0, j._)({ notificationSetting: r }),
+                                options: (0, j._)({
+                                    notificationSetting: r,
+                                }),
                                 renderOptionLabel: (e) => {
                                     let t =
                                         e.value === b.orn.ALL_MESSAGES &&
@@ -197,6 +217,7 @@ function O(e) {
         ],
     });
 }
+
 function _(e) {
     let { unreadSetting: t } = e,
         n = [
@@ -241,7 +262,9 @@ function _(e) {
                                     (0, i.jsx)(c.N$i, {
                                         size: "xxs",
                                         color: "currentColor",
-                                        className: r()(f.Uk, { [f.SU]: e.muted }),
+                                        className: r()(f.Uk, {
+                                            [f.SU]: e.muted,
+                                        }),
                                     }),
                                     (0, i.jsx)(c.Text, {
                                         variant: "text-xs/normal",
@@ -251,8 +274,12 @@ function _(e) {
                                 ],
                             }),
                             (0, i.jsx)("div", {
-                                className: r()(f.qS, { [f.R]: !e.badged }),
-                                children: (0, i.jsx)(c.hVq, { count: 1 }),
+                                className: r()(f.qS, {
+                                    [f.R]: !e.badged,
+                                }),
+                                children: (0, i.jsx)(c.hVq, {
+                                    count: 1,
+                                }),
                             }),
                         ],
                     },
@@ -262,11 +289,15 @@ function _(e) {
         })
     );
 }
+
 function E(e) {
     return (0, i.jsxs)("div", {
         className: f.G5,
         children: [
-            e.notificationSetting === b.orn.NO_MESSAGES && (0, i.jsx)("div", { className: f._N }),
+            e.notificationSetting === b.orn.NO_MESSAGES &&
+                (0, i.jsx)("div", {
+                    className: f._N,
+                }),
             (0, i.jsx)("div", {
                 children: (0, i.jsx)("img", {
                     className: f.p3,

@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var a = n(627968);
 n(64700);
 var l = n(311907),
@@ -22,9 +24,14 @@ let m = function (e) {
                     (null == n ? void 0 : n.ageVerificationStatus) === r.Tk.UNVERIFIED
                         ? s.A.showAgeVerificationGetStartedModal({
                               entryPoint: o.q1.SAFETY_FLOWS,
-                              onClose: () => t({ type: d.Ij.Empty }),
+                              onClose: () =>
+                                  t({
+                                      type: d.Ij.Empty,
+                                  }),
                           })
-                        : t({ type: d.Ij.Empty });
+                        : t({
+                              type: d.Ij.Empty,
+                          });
                 },
             },
         ],

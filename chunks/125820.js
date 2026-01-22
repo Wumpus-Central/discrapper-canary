@@ -1,4 +1,9 @@
-a.r(s), a.d(s, { default: () => k }), a(896048), a(747238);
+a.r(s),
+    a.d(s, {
+        default: () => k,
+    }),
+    a(896048),
+    a(747238);
 var t = a(627968),
     l = a(64700),
     r = a(607399),
@@ -22,6 +27,7 @@ var t = a(627968),
     v = a(318808);
 c.Ay.initialize();
 let A = r.Fr || r.v1;
+
 function k(e) {
     let { match: s } = e,
         a = (0, c.bG)([h.A], () => h.A.getState("quests")),
@@ -37,7 +43,11 @@ function k(e) {
                                 value: e,
                             }),
                         )
-                        .catch(() => a({ status: "error" }));
+                        .catch(() =>
+                            a({
+                                status: "error",
+                            }),
+                        );
                 }, [a, e]),
                 s
             );
@@ -53,7 +63,9 @@ function k(e) {
                   }),
                   u.A.openNativeAppModal("quests", _.e$_.DEEP_LINK, {
                       type: g.XK.QUEST_HOME,
-                      params: { questId: r },
+                      params: {
+                          questId: r,
+                      },
                   }))
                 : a === _.fAW.OPEN_FAIL &&
                   (0, m.bG)({
@@ -132,7 +144,9 @@ function k(e) {
                     children: I
                         ? (0, t.jsxs)(t.Fragment, {
                               children: [
-                                  (0, t.jsx)(d.hE, { children: j.intl.string(j.t["Z+hCVU"]) }),
+                                  (0, t.jsx)(d.hE, {
+                                      children: j.intl.string(j.t["Z+hCVU"]),
+                                  }),
                                   (0, t.jsx)(d.CK, {}),
                               ],
                           })
@@ -142,7 +156,9 @@ function k(e) {
                                       className: p.Ns,
                                       children: j.intl.string(j.t.csrAMJ),
                                   }),
-                                  (0, t.jsx)(d.tK, { children: j.intl.string(j.t.ghBJz9) }),
+                                  (0, t.jsx)(d.tK, {
+                                      children: j.intl.string(j.t.ghBJz9),
+                                  }),
                               ],
                           }),
                 }),

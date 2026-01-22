@@ -16,6 +16,7 @@ var r = n(627968),
 let p = 500;
 class _ extends EventTarget {}
 let h = i.createContext(new _());
+
 function m(e) {
     var t;
     let { slide: n } = e,

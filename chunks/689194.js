@@ -1,4 +1,9 @@
-n.d(t, { A: () => y }), n(896048), n(65821), n(457529);
+n.d(t, {
+    A: () => y,
+}),
+    n(896048),
+    n(65821),
+    n(457529);
 var r,
     i = n(574381),
     a = n(311907),
@@ -10,6 +15,7 @@ var r,
     d = n(837921),
     f = n(410109),
     p = n(652215);
+
 function _(e, t, n) {
     return (
         t in e
@@ -24,7 +30,9 @@ function _(e, t, n) {
     );
 }
 let h = 10,
-    m = { status: "" },
+    m = {
+        status: "",
+    },
     g = [],
     E = [
         "discord.com",
@@ -74,7 +82,12 @@ class b extends (r = a.Ay.Store) {
         try {
             return await d.Ay.getDiscordUtils().runWarpCommand(e, ...n);
         } catch (e) {
-            throw (this.logEvent({ commandError: e.message }), e);
+            throw (
+                (this.logEvent({
+                    commandError: e.message,
+                }),
+                e)
+            );
         }
     }
     async configureLicense(e) {
@@ -83,7 +96,11 @@ class b extends (r = a.Ay.Store) {
         if ((null == n ? void 0 : n.code) === "MissingRegistration")
             throw Error("MissingRegistration when configuring license");
         try {
-            if (l.S.getConfig({ location: "configureLicense" }).enabled) {
+            if (
+                l.S.getConfig({
+                    location: "configureLicense",
+                }).enabled
+            ) {
                 let e = n,
                     i = await (0, f.R)(null == e ? void 0 : e.id, t);
                 if (null != i && "" !== i) {
@@ -94,7 +111,11 @@ class b extends (r = a.Ay.Store) {
             }
         } catch (e) {
             if (
-                (u.A.captureException(e, { tags: { source: "PRIVATE_BROWSING_PERK_CONFIGURE_LICENSE" } }),
+                (u.A.captureException(e, {
+                    tags: {
+                        source: "PRIVATE_BROWSING_PERK_CONFIGURE_LICENSE",
+                    },
+                }),
                 c.default.track(p.HAw.PREMIUM_FEATURE_ERROR, {
                     error_message: e instanceof Error ? e.message : JSON.stringify(e),
                     error_source: o.q.PRIVATE_BROWSING_PERK_CONFIGURE_LICENSE,
@@ -127,7 +148,12 @@ class b extends (r = a.Ay.Store) {
         return g;
     }
     get clientEnabled() {
-        return (0, i.xl)() && l.S.getConfig({ location: "WarpClientStore" }).enabled;
+        return (
+            (0, i.xl)() &&
+            l.S.getConfig({
+                location: "WarpClientStore",
+            }).enabled
+        );
     }
     get enabled() {
         return "Connected" === m.status || this.connecting;
@@ -144,11 +170,17 @@ class b extends (r = a.Ay.Store) {
     async connect() {
         return (
             this.clientEnabled &&
-                (this.logEvent({ status: "Configuring" }),
-                this.configureLicense({ ignoreAPIError: !0 }).catch(() => {}),
+                (this.logEvent({
+                    status: "Configuring",
+                }),
+                this.configureLicense({
+                    ignoreAPIError: !0,
+                }).catch(() => {}),
                 await this.configureExceptions(),
                 await this.configureMode(),
-                this.logEvent({ status: "ConnectCommandSent" }),
+                this.logEvent({
+                    status: "ConnectCommandSent",
+                }),
                 await this.runCommand("connect")),
             this.clientEnabled
         );
@@ -156,7 +188,12 @@ class b extends (r = a.Ay.Store) {
     async disconnect() {
         if (this.clientEnabled) {
             let e = this.runCommand("disconnect");
-            return (m = { status: "DisconnectCommandSent" }), await e;
+            return (
+                (m = {
+                    status: "DisconnectCommandSent",
+                }),
+                await e
+            );
         }
         return this.clientEnabled;
     }
@@ -164,7 +201,9 @@ class b extends (r = a.Ay.Store) {
         return (
             await this.configureExceptions(),
             await this.configureMode(),
-            await this.configureLicense({ ignoreAPIError: !0 }),
+            await this.configureLicense({
+                ignoreAPIError: !0,
+            }),
             await this.updateState(),
             !0
         );

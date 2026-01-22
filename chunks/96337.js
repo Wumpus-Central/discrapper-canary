@@ -1,4 +1,6 @@
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});
 let r = [
     {
         name: "Afghanistan",
@@ -1153,7 +1155,7 @@ let r = [
         phoneCountryCodes: ["+250"],
     },
     {
-        name: "Saint Barthélemy",
+        name: "Saint Barth\xe9lemy",
         alpha2: "BL",
         phoneCountryCode: "+590",
         phoneCountryCodes: ["+590"],

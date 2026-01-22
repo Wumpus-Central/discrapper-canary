@@ -18,6 +18,7 @@ n.d(t, {
     n(896048);
 var r = n(927813),
     i = n(985018);
+
 function a(e, t, n) {
     return (
         t in e
@@ -31,6 +32,7 @@ function a(e, t, n) {
         e
     );
 }
+
 function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -47,6 +49,7 @@ function s(e) {
     }
     return e;
 }
+
 function o(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -59,6 +62,7 @@ function o(e, t) {
     }
     return n;
 }
+
 function l(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -119,8 +123,15 @@ var A = (function (e) {
 })({});
 let v = [1, 2, 3, 5, 6],
     S = ["en-GB"];
+
 function I() {
     return (0, i.getLanguages)()
         .filter((e) => !S.includes(e.code))
-        .map((e) => ("en-US" === e.code ? l(s({}, e), { name: i.intl.string(i.t.LQLMGP) }) : e));
+        .map((e) =>
+            "en-US" === e.code
+                ? l(s({}, e), {
+                      name: i.intl.string(i.t.LQLMGP),
+                  })
+                : e,
+        );
 }

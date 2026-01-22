@@ -1,10 +1,15 @@
-n.d(t, { v: () => c }), n(65821), n(896048);
+n.d(t, {
+    v: () => c,
+}),
+    n(65821),
+    n(896048);
 var r = n(284009),
     i = n.n(r),
     a = n(97352),
     s = n(927578),
     o = n(788868),
     l = n(652215);
+
 function c(e, t) {
     let n = a.A.get(e.planId);
     i()(null != n, "missing premium subscription plan");

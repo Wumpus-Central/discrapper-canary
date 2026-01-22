@@ -13,10 +13,11 @@ var r,
     l = n(64700),
     c = n(503698),
     u = n.n(c),
-    d = n(432022),
+    d = n(108531),
     f = n(615300),
     p = n(397927),
     _ = n(531726);
+
 function h(e, t, n) {
     return (
         t in e
@@ -267,18 +268,18 @@ let I = Object.freeze({
         },
         IDLE_LOOP: {
             toValue: 1,
-            duration: 6000,
+            duration: 6e3,
             easing: f.A.Easing.linear,
         },
         BOOST_START: {
             toValue: 0,
-            duration: 2000,
+            duration: 2e3,
             delay: 500,
         },
         ERROR: {
             toValue: 1,
             duration: 1500,
-            delay: 1000,
+            delay: 1e3,
         },
     }),
     T = 1.2;
@@ -356,7 +357,14 @@ class C extends (a = l.PureComponent) {
                 n
                     ? (0, o.jsxs)("div", {
                           className: _.I5,
-                          children: [(0, o.jsx)("div", { className: _.RK }), (0, o.jsx)("div", { className: _.aM })],
+                          children: [
+                              (0, o.jsx)("div", {
+                                  className: _.RK,
+                              }),
+                              (0, o.jsx)("div", {
+                                  className: _.aM,
+                              }),
+                          ],
                       })
                     : (0, o.jsxs)(o.Fragment, {
                           children: [
@@ -517,6 +525,7 @@ let R = {
         EASING_MIDDLE: f.A.Easing.bezier(0.3, 0.01, 0, 0.99),
         EASING_END: f.A.Easing.bezier(0, -0.01, 0.99, 0),
     });
+
 function x(e) {
     let { animate: t } = e,
         [n, r] = l.useState(0),
@@ -629,7 +638,9 @@ class L extends (s = l.PureComponent) {
                     pauseWhileUnfocused: a,
                     pause: n,
                 }),
-                (0, o.jsx)(x, { animate: !n && "stars" === t }),
+                (0, o.jsx)(x, {
+                    animate: !n && "stars" === t,
+                }),
             ],
         });
     }

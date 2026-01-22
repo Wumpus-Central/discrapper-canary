@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -9,6 +11,7 @@ var i = n(311907),
     c = n(102951),
     u = n(652215),
     d = n(996988);
+
 function f(e) {
     let { user: t, themeType: n } = e,
         { newestAnalyticsLocation: f } = (0, a.Ay)(),
@@ -18,7 +21,9 @@ function f(e) {
             gameFriends: h,
             hasOutgoingPendingGameFriends: m,
             hasIncomingPendingGameFriends: g,
-        } = (0, c.J)({ userId: t.id }),
+        } = (0, c.J)({
+            userId: t.id,
+        }),
         E = h.length > 0 || m || g;
     if (null == t || t.bot || p || _ === u.eA$.BLOCKED) return null;
     if (_ === u.eA$.NONE && E)

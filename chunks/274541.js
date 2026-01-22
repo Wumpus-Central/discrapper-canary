@@ -1,4 +1,7 @@
-n.d(t, { A: () => L }), n(321073);
+n.d(t, {
+    A: () => L,
+}),
+    n(321073);
 var l = n(627968),
     r = n(64700),
     i = n(311907),
@@ -28,6 +31,7 @@ var l = n(627968),
     S = n(652215),
     I = n(985018),
     P = n(305585);
+
 function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -53,6 +57,7 @@ function D(e) {
     }
     return e;
 }
+
 function R(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -71,6 +76,7 @@ function R(e, t) {
         e
     );
 }
+
 function L(e) {
     let { channelId: t, baseChannelId: L, channelViewSource: T = "Split View", isResourceChannelView: G } = e,
         H = (0, i.bG)([y.A], () => y.A.getChannel(t)),
@@ -89,14 +95,30 @@ function L(e) {
             null == H ||
                 W.current ||
                 ((W.current = !0),
-                (0, o.zV)(S.HAw.CHANNEL_OPENED, R(D({}, (0, o.qL)(H.id)), { channel_view: T })),
-                (0, u.k)(S.HAw.CHANNEL_OPENED_CLICKSTREAM, { channelId: H.id }));
+                (0, o.zV)(
+                    S.HAw.CHANNEL_OPENED,
+                    R(D({}, (0, o.qL)(H.id)), {
+                        channel_view: T,
+                    }),
+                ),
+                (0, u.k)(S.HAw.CHANNEL_OPENED_CLICKSTREAM, {
+                    channelId: H.id,
+                }));
         }, [H, T]),
         null == H || null == M)
     )
         return null;
     let q = [];
-    return (U || q.push((0, l.jsx)(m.A, { channel: H }, "notifications")),
+    return (U ||
+        q.push(
+            (0, l.jsx)(
+                m.A,
+                {
+                    channel: H,
+                },
+                "notifications",
+            ),
+        ),
     q.push(
         (0, l.jsx)(
             g.Ay.Icon,

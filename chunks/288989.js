@@ -40,6 +40,7 @@ let E = {
     },
     C = {},
     S = {};
+
 function I(e) {
     let t = h.A.getChannel(e);
     return (
@@ -48,6 +49,7 @@ function I(e) {
         (0, u.Y)(t)
     );
 }
+
 function N(e) {
     let t = h.A.getChannel(e);
     if (null == t) return !1;
@@ -57,6 +59,7 @@ function N(e) {
         l = A.Ay.isChannelMuted(n, t.id);
     return (!r || !l) && g.Ay.getMentionCount(e) > 0;
 }
+
 function T(e) {
     return (
         !A.Ay.isChannelMuted(e.guild_id, e.id) &&
@@ -65,6 +68,7 @@ function T(e) {
             : y.Ay.getVoiceStatesForChannel(e).length > 0)
     );
 }
+
 function P(e) {
     var t, n, r;
     let { guildChannels: l } = j.A.getGuildWithoutChangingGuildActionRows(e),
@@ -159,11 +163,13 @@ function P(e) {
     );
 }
 let w = s().throttle(P, 200);
+
 function R(e) {
     let { guildId: t } = e,
         n = b.A.getGuild(t);
     return null != n && !!n.features.has(v.GuildFeatures.COMMUNITY) && w(t);
 }
+
 function D(e) {
     let { id: t } = e,
         n = h.A.getChannel(t);
@@ -171,6 +177,7 @@ function D(e) {
     let r = b.A.getGuild(n.guild_id);
     return null != r && !!r.features.has(v.GuildFeatures.COMMUNITY) && w(n.guild_id);
 }
+
 function M(e) {
     let { channel: t } = e,
         n = h.A.getChannel(t.id);
@@ -178,6 +185,7 @@ function M(e) {
     let r = b.A.getGuild(t.guild_id);
     return null != r && !!r.features.has(v.GuildFeatures.COMMUNITY) && w(n.guild_id);
 }
+
 function L(e) {
     let { channelId: t } = e,
         n = h.A.getChannel(t);
@@ -185,6 +193,7 @@ function L(e) {
     let r = b.A.getGuild(n.guild_id);
     return null != r && !!r.features.has(v.GuildFeatures.COMMUNITY) && m.A.getGuildId() === n.guild_id && w(n.guild_id);
 }
+
 function G(e) {
     let { guildId: t } = e;
     return null != t && w(t);

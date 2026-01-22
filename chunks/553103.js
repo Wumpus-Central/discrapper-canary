@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(512750),
     l = n(311907),
     i = n(71393),
@@ -10,6 +12,7 @@ var r = n(512750),
     d = n(652215),
     f = n(333354),
     p = n(985018);
+
 function h(e, t) {
     var n;
     let h = (0, l.bG)([i.A], () => {
@@ -25,8 +28,12 @@ function h(e, t) {
         j = A && null != y && !O && m.type === u.b_.POWERUP_ACTIVATED,
         v = j
             ? {
-                  title: p.intl.formatToPlainString(f.default.mgoPkU, { perkName: null == g ? void 0 : g.title }),
-                  description: p.intl.formatToPlainString(f.default.UT9pkI, { dateString: (0, o.A)(y) }),
+                  title: p.intl.formatToPlainString(f.default.mgoPkU, {
+                      perkName: null == g ? void 0 : g.title,
+                  }),
+                  description: p.intl.formatToPlainString(f.default.UT9pkI, {
+                      dateString: (0, o.A)(y),
+                  }),
               }
             : null;
     return {

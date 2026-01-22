@@ -1,4 +1,7 @@
-n.d(t, { A: () => x }), n(896048);
+n.d(t, {
+    A: () => x,
+}),
+    n(896048);
 var a = n(627968),
     l = n(64700),
     i = n(932433),
@@ -12,6 +15,7 @@ var a = n(627968),
     p = n(231545),
     h = n(708403),
     f = n(985018);
+
 function x() {
     let e = (0, c.bG)([m.default], () => m.default.locale),
         [t, n] = l.useState(),
@@ -25,7 +29,9 @@ function x() {
                         icon: d.UaP,
                         tooltip: "Locale",
                     }),
-                    (0, a.jsx)(u.Ay.Title, { children: "Locale" }),
+                    (0, a.jsx)(u.Ay.Title, {
+                        children: "Locale",
+                    }),
                 ],
             }),
             (0, a.jsxs)(h.OA, {
@@ -62,7 +68,9 @@ function x() {
                         icon: d.UaP,
                         tooltip: "Messages",
                     }),
-                    (0, a.jsx)(u.Ay.Title, { children: "New System Messages" }),
+                    (0, a.jsx)(u.Ay.Title, {
+                        children: "New System Messages",
+                    }),
                 ],
             }),
             (0, a.jsx)(h.OA, {
@@ -72,7 +80,9 @@ function x() {
                 }),
             }),
             (0, a.jsx)("div", {
-                style: { margin: 16 },
+                style: {
+                    margin: 16,
+                },
                 children: (0, a.jsx)(d.ksK, {
                     onChange: function (e) {
                         n(e);
@@ -93,7 +103,9 @@ function x() {
                     }),
                 ],
             }),
-            (0, a.jsx)(p.A, { data: null == x ? void 0 : x(e) }),
+            (0, a.jsx)(p.A, {
+                data: null == x ? void 0 : x(e),
+            }),
         ],
     });
 }

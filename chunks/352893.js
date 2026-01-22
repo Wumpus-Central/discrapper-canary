@@ -99,7 +99,7 @@ var r = n(834647),
                 if (0 === i) a = W(o);
                 else {
                     if (1 === i || i > 4) {
-                        (n += "\uFFFD"), r++;
+                        (n += "�"), r++;
                         continue;
                     }
                     for (var s = [o], l = 1; l < i && !(++r + 3 > t) && "%" === Y(e, r); ) {
@@ -112,11 +112,11 @@ var r = n(834647),
                         Z(s, c), (r += 2), l++;
                     }
                     if (s.length !== i) {
-                        n += "\uFFFD";
+                        n += "�";
                         continue;
                     }
                     var u = el(s);
-                    null === u ? (n += "\uFFFD") : (a = G(u));
+                    null === u ? (n += "�") : (a = G(u));
                 }
             }
             (n += a), r++;
@@ -328,16 +328,22 @@ if (
                 return new ef(this, "entries");
             },
         },
-        { enumerable: !0 },
+        {
+            enumerable: !0,
+        },
     ),
-    d(ev, I, ev.entries, { name: "entries" }),
+    d(ev, I, ev.entries, {
+        name: "entries",
+    }),
     d(
         ev,
         "toString",
         function () {
             return D(this).serialize();
         },
-        { enumerable: !0 },
+        {
+            enumerable: !0,
+        },
     ),
     c &&
         p(ev, "size", {
@@ -354,7 +360,9 @@ if (
             constructor: !0,
             forced: !u,
         },
-        { URLSearchParams: ey },
+        {
+            URLSearchParams: ey,
+        },
     ),
     !u && g(U))
 ) {
@@ -405,7 +413,9 @@ if (
                     dontCallGetSet: !0,
                     forced: !0,
                 },
-                { Request: e_ },
+                {
+                    Request: e_,
+                },
             );
     }
 }

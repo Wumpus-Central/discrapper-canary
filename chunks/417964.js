@@ -14,9 +14,11 @@ let i = RegExp("\\p{Cf}|\\p{Zl}|\\p{Zp}|[^\\P{Cc}\\n]|[^\\P{Zs} ]", "gu"),
     s = ["͏", "឴", "឵", "ᅠ", "ㅤ", "ﾠ"],
     o = RegExp("".concat(i.source, "|").concat(s.join("|")), "gu"),
     l = RegExp("".concat(a.source, "|").concat(s.join("|")), "gu");
+
 function c(e) {
     return e.replace(o, "");
 }
+
 function u(e) {
     return e.replace(l, "");
 }
@@ -70,7 +72,7 @@ let d = [
             "ρ",
             "ϱ",
             "р",
-            "\u2374",
+            "⍴",
             "ⲣ",
             "\uD835\uDC29",
             "\uD835\uDC5D",
@@ -127,51 +129,18 @@ let d = [
     },
     {
         character: ":",
-        matcher: f([
-            "ː",
-            "\u02F8",
-            "\u0589",
-            "\u05C3",
-            "\u0703",
-            "\u0704",
-            "ः",
-            "ઃ",
-            "\u16EC",
-            "\u1803",
-            "\u1809",
-            "\u205A",
-            "\u2236",
-            "ꓽ",
-            "\uA789",
-            "\uFE30",
-            "\uFF1A",
-            ";",
-            "\u037E",
-        ]),
+        matcher: f(["ː", "˸", "։", "׃", "܃", "܄", "ः", "ઃ", "᛬", "᠃", "᠉", "⁚", "∶", "ꓽ", "꞉", "︰", "：", ";", ";"]),
     },
     {
         character: "/",
-        matcher: f([
-            "\u1735",
-            "\u2041",
-            "\u2044",
-            "\u2215",
-            "\u2571",
-            "\u27CB",
-            "\u29F8",
-            "Ⳇ",
-            "\u2F03",
-            "〳",
-            "ノ",
-            "\u31D3",
-            "丿",
-            "\uD834\uDE3A",
-        ]),
+        matcher: f(["᜵", "⁁", "⁄", "∕", "╱", "⟋", "⧸", "Ⳇ", "⼃", "〳", "ノ", "㇓", "丿", "\uD834\uDE3A"]),
     },
 ];
+
 function f(e) {
     return RegExp(e.join("|"), "gu");
 }
+
 function p(e) {
     let t = e;
     return (
@@ -187,6 +156,7 @@ let _ = [
     1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
     1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0,
 ];
+
 function h(e) {
     return e >= 0 && e < 128
         ? 1 === _[e]
@@ -267,10 +237,12 @@ function h(e) {
               (e >= 917504 && e <= 921599)
           );
 }
+
 function m(e) {
     let t = E(e);
     return (t += g(e.pathname)), (t += g(e.search)), (t += g(e.hash));
 }
+
 function g(e) {
     let t = r.A.safeDecodeURIComponent(e);
     if (null == t) return e;
@@ -292,6 +264,7 @@ function g(e) {
     }
     return n;
 }
+
 function E(e) {
     if ("null" === e.origin && e.pathname.startsWith("//")) return e.protocol;
     let t = "";

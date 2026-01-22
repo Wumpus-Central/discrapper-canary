@@ -1,4 +1,7 @@
-n.d(t, { A: () => c }), n(228524);
+n.d(t, {
+    A: () => c,
+}),
+    n(228524);
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -6,6 +9,7 @@ var i = n(311907),
     s = n(961350),
     o = n(4274),
     l = n(985018);
+
 function c(e) {
     var t, n;
     let { author: c, inviteError: u } = e,
@@ -16,10 +20,14 @@ function c(e) {
         f = (0, o.g)(null == u ? void 0 : u.code);
     return (0, r.jsxs)(a.A, {
         children: [
-            (0, r.jsx)(a.A.Header, { text: d }),
+            (0, r.jsx)(a.A.Header, {
+                text: d,
+            }),
             (0, r.jsxs)(a.A.Body, {
                 children: [
-                    (0, r.jsx)(a.A.Icon, { expired: !0 }),
+                    (0, r.jsx)(a.A.Icon, {
+                        expired: !0,
+                    }),
                     (0, r.jsx)(a.A.Info, {
                         expired: !0,
                         title: null != (t = null == f ? void 0 : f.title) ? t : l.intl.string(l.t["Jhx/ud"]),

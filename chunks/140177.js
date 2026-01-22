@@ -1,4 +1,9 @@
-n.d(t, { A: () => R }), n(896048), n(747238), n(812715);
+n.d(t, {
+    A: () => R,
+}),
+    n(896048),
+    n(747238),
+    n(812715);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -18,6 +23,7 @@ var r = n(627968),
     b = n(652215),
     y = n(618273),
     O = n(206314);
+
 function A(e, t, n) {
     return (
         t in e
@@ -31,6 +37,7 @@ function A(e, t, n) {
         e
     );
 }
+
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -47,6 +54,7 @@ function v(e) {
     }
     return e;
 }
+
 function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -59,6 +67,7 @@ function S(e, t) {
     }
     return n;
 }
+
 function I(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -70,6 +79,7 @@ function I(e, t) {
         e
     );
 }
+
 function T(e, t) {
     if (null == e) return {};
     var n,
@@ -86,6 +96,7 @@ function T(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function C(e, t) {
     if (null == e) return {};
     var n,
@@ -109,29 +120,54 @@ class N extends i.PureComponent {
         this.props.editor.events.removeListener("onChange", this.handleOnChange);
     }
     componentDidCatch(e, t) {
-        d.A.captureException(e, { extra: t }), this.setState({ initialValue: [...this.props.editor.children] });
+        d.A.captureException(e, {
+            extra: t,
+        }),
+            this.setState({
+                initialValue: [...this.props.editor.children],
+            });
     }
     renderElement(e) {
         var t;
         let { guildId: n, channelId: i, renderExtraElement: a } = this.props,
             { attributes: s, children: o } = e;
-        "rtl" === s.dir && (s.style = I(v({}, s.style), { textAlign: "right" }));
+        "rtl" === s.dir &&
+            (s.style = I(v({}, s.style), {
+                textAlign: "right",
+            }));
         let l = null != (t = null == a ? void 0 : a(e)) ? t : (0, g.A)(e, n, i);
-        return null != l ? l : (0, r.jsx)("div", I(v({}, s), { children: o }));
+        return null != l
+            ? l
+            : (0, r.jsx)(
+                  "div",
+                  I(v({}, s), {
+                      children: o,
+                  }),
+              );
     }
     renderLeaf(e) {
         var t;
         let { editor: n, renderExtraLeaf: i } = this.props,
             { attributes: a, children: s } = e,
             o = null != (t = null == i ? void 0 : i(e)) ? t : (0, E.A)(n, e);
-        return null != o ? o : (0, r.jsx)("span", I(v({}, a), { children: s }));
+        return null != o
+            ? o
+            : (0, r.jsx)(
+                  "span",
+                  I(v({}, a), {
+                      children: s,
+                  }),
+              );
     }
     handleOnChange() {
         var e, t;
         let { editor: n } = this.props,
             r = m.VW.isEditorEmpty(n) && null == n.composition;
         if (
-            (r !== this.state.showPlaceholder && this.setState({ showPlaceholder: r }),
+            (r !== this.state.showPlaceholder &&
+                this.setState({
+                    showPlaceholder: r,
+                }),
             null == (e = (t = this.props).onChange) || e.call(t, m.VW.richValue(n)),
             !1 === this.props.canFocus)
         ) {
@@ -198,7 +234,10 @@ class N extends i.PureComponent {
                 insertedPrefix: !1,
                 startedInsideInline: !1,
             };
-        this.state.showPlaceholder && this.setState({ showPlaceholder: !1 });
+        this.state.showPlaceholder &&
+            this.setState({
+                showPlaceholder: !1,
+            });
         let i = null != n.selection && m.ZF.isCollapsed(n.selection) ? m.VW.leaf(n, n.selection.anchor.path) : null;
         if (null == i) {
             n.composition = r;
@@ -215,7 +254,17 @@ class N extends i.PureComponent {
                     : null) && (r.startedInsideInline = !0),
             m.VW.isEditorEmpty(n))
         ) {
-            h.b.insertNodes(n, { text: "\uFEFF" }, { select: !0 }), (r.insertedPrefix = !0), (n.composition = r);
+            h.b.insertNodes(
+                n,
+                {
+                    text: "\uFEFF",
+                },
+                {
+                    select: !0,
+                },
+            ),
+                (r.insertedPrefix = !0),
+                (n.composition = r);
             return;
         }
         let a = o.rL.findDocumentOrShadowRoot(this.props.editor).getSelection(),

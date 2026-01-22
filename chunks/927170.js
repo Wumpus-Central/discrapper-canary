@@ -1,4 +1,6 @@
-n.d(t, { $: () => s });
+n.d(t, {
+    $: () => s,
+});
 var r = n(945810),
     i = n(128319);
 let a = (0, r.mj)({
@@ -23,14 +25,21 @@ let a = (0, r.mj)({
         },
     },
 });
+
 function s(e) {
     let { location: t, disable: n = !1 } = e,
         { isInHoldout: r } = i.p.getCurrentConfig(
-            { location: t },
+            {
+                location: t,
+            },
             {
                 disable: n,
                 autoTrackExposure: !0,
             },
         );
-    return r || n ? a.definition.defaultConfig : a.getConfig({ location: t });
+    return r || n
+        ? a.definition.defaultConfig
+        : a.getConfig({
+              location: t,
+          });
 }

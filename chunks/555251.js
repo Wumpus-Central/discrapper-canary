@@ -1,4 +1,7 @@
-r.d(t, { default: () => p }), r(896048);
+r.d(t, {
+    default: () => p,
+}),
+    r(896048);
 var n = r(627968),
     o = r(64700),
     i = r(732955),
@@ -6,6 +9,7 @@ var n = r(627968),
     c = r(656925),
     l = r(985018),
     s = r(856367);
+
 function p(e) {
     var t, r;
     let { avatarId: p, storageHash: b, avatarDescription: f, onConfirmDelete: u, onClose: y } = e,

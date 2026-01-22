@@ -10,4 +10,6 @@ function r(e) {
             timestamp: Date.now(),
         });
 }
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});

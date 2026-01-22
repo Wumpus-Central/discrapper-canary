@@ -1,4 +1,6 @@
-i.d(e, { L: () => T });
+i.d(e, {
+    L: () => T,
+});
 var n = i(753806),
     l = i(145331),
     s = i(419954),
@@ -22,7 +24,11 @@ let T = (0, s.Qx)(u.X.CHAT_MESSAGE_SEARCH_DEFAULT_DM_SEARCH_BEHAVIOR, {
     useValue: () => +!!r.Hu.useSetting(),
     setValue: (t) => {
         let e = 1 === t;
-        e ? n.A.cleanUpPrivateChannelSearchState() : n.A.cleanUpSearchState({ type: a.I4_.DMS }),
+        e
+            ? n.A.cleanUpPrivateChannelSearchState()
+            : n.A.cleanUpSearchState({
+                  type: a.I4_.DMS,
+              }),
             (0, l._k)({
                 prevIsCrossDMSettingEnabled: r.Hu.getSetting(),
                 isCrossDMSettingEnabled: e,

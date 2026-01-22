@@ -1,4 +1,6 @@
-n.d(t, { J: () => r });
+n.d(t, {
+    J: () => r,
+});
 class r {
     *[Symbol.iterator]() {
         yield* this.iterable;

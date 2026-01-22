@@ -23,7 +23,14 @@ var n = e(834647),
         !v ||
         c(function () {
             var t = o("Symbol")("stringify detection");
-            return "[null]" !== h([t]) || "{}" !== h({ a: t }) || "{}" !== h(Object(t));
+            return (
+                "[null]" !== h([t]) ||
+                "{}" !==
+                    h({
+                        a: t,
+                    }) ||
+                "{}" !== h(Object(t))
+            );
         }),
     A = c(function () {
         return '"\\udf06\\ud834"' !== h("\uDF06\uD834") || '"\\udead"' !== h("\uDEAD");

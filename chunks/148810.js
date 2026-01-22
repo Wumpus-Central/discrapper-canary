@@ -21,7 +21,9 @@ async function d(e) {
                 overrides: e,
                 version: o.hl,
             },
-            headers: { Authorization: null != (t = a.default.getToken()) ? t : "" },
+            headers: {
+                Authorization: null != (t = a.default.getToken()) ? t : "",
+            },
             oldFormErrors: !0,
             rejectWithError: !1,
         });
@@ -55,12 +57,15 @@ async function p() {
     });
     return await r(e), e;
 }
+
 function _(e) {
     var t;
     return i.Bo.post({
         url: (0, o.i_)(c),
         body: e,
-        headers: { Authorization: null != (t = a.default.getToken()) ? t : "" },
+        headers: {
+            Authorization: null != (t = a.default.getToken()) ? t : "",
+        },
         oldFormErrors: !0,
         rejectWithError: !1,
     }).then(

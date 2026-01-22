@@ -10,6 +10,7 @@ var r = n(64700),
     l = n(198982),
     s = n(137207),
     a = n(985018);
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,6 +36,7 @@ function c(e) {
     }
     return e;
 }
+
 function o(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -53,6 +55,7 @@ function o(e, t) {
         e
     );
 }
+
 function d(e) {
     return e && "u" > typeof Symbol && e.constructor === Symbol ? "symbol" : typeof e;
 }
@@ -161,7 +164,10 @@ async function g(e, t) {
         s.length > 0 && t(s);
     }
 }
-let b = (0, i.throttle)(g, 1000, { leading: !1 });
+let b = (0, i.throttle)(g, 1e3, {
+    leading: !1,
+});
+
 function m(e, t) {
     var n, l;
     let [s, a] = r.useState([]),
@@ -172,10 +178,17 @@ function m(e, t) {
         p = r.useCallback(
             (t) => {
                 t.length < 3 ||
-                    b(o(c({}, e), { triggerMetadata: o(c({}, e.triggerMetadata), { regexPatterns: [t] }) }), (e) => {
-                        var t;
-                        return u(null != (t = e[0]) ? t : null);
-                    });
+                    b(
+                        o(c({}, e), {
+                            triggerMetadata: o(c({}, e.triggerMetadata), {
+                                regexPatterns: [t],
+                            }),
+                        }),
+                        (e) => {
+                            var t;
+                            return u(null != (t = e[0]) ? t : null);
+                        },
+                    );
             },
             [e],
         );
@@ -187,9 +200,16 @@ function m(e, t) {
             (n, r) => {
                 (0, i.isEqual)(n, r) ||
                     (b.cancel(),
-                    g(o(c({}, e), { triggerMetadata: o(c({}, e.triggerMetadata), { regexPatterns: n }) }), (e) => {
-                        a(e), 0 === e.length && u(null);
-                    }),
+                    g(
+                        o(c({}, e), {
+                            triggerMetadata: o(c({}, e.triggerMetadata), {
+                                regexPatterns: n,
+                            }),
+                        }),
+                        (e) => {
+                            a(e), 0 === e.length && u(null);
+                        },
+                    ),
                     m(n),
                     null == t || t(n));
             },

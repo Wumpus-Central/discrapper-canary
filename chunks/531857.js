@@ -1,8 +1,11 @@
-n.d(t, { N: () => o });
+n.d(t, {
+    N: () => o,
+});
 var r = n(56636),
     i = n(222367),
     a = n(391898),
     s = n(760162);
+
 function o(e, t) {
     var n,
         s,
@@ -21,7 +24,9 @@ function o(e, t) {
                 },
                 l(e),
             ),
-            { wnomask: null },
+            {
+                wnomask: null,
+            },
         );
     if ((0, a.Ie)(t.byweekno)) return p;
     p.wnomask = (0, a.ux)(0, c + 7);
@@ -55,6 +60,7 @@ function o(e, t) {
     }
     return p;
 }
+
 function l(e) {
     var t = (0, i.U_)(e) ? 366 : 365,
         n = (0, i.w$)(e, 1, 1),

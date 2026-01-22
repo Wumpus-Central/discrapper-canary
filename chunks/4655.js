@@ -16,9 +16,11 @@ n.d(t, {
     n(65162);
 var r = n(837921);
 let i = null;
+
 function a() {
     return null == i && (i = s()), i;
 }
+
 function s() {
     if (null == window.DiscordNative || void 0 === window.Uint8Array || void 0 === window.TextDecoder) return !1;
     try {
@@ -30,6 +32,7 @@ function s() {
         throw e;
     }
 }
+
 function o() {
     if (!a()) return;
     let { createContext: e } = r.Ay.requireModule("discord_zstd");

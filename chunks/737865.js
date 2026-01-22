@@ -1,7 +1,10 @@
-r.d(t, { default: () => c });
+r.d(t, {
+    default: () => c,
+});
 var n = r(627968);
 r(64700);
 var o = r(397927);
+
 function c(e) {
     var t, r;
     let { body: c } = e,

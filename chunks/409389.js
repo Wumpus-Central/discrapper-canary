@@ -1,4 +1,9 @@
-n.d(t, { A: () => E }), n(747238), n(896048), n(812715);
+n.d(t, {
+    A: () => E,
+}),
+    n(747238),
+    n(896048),
+    n(812715);
 var r = n(627968),
     i = n(64700),
     l = n(960488),
@@ -42,7 +47,9 @@ let m = [],
             }, [n]),
             I = i.useCallback(
                 (e) => {
-                    E({ [b]: e });
+                    E({
+                        [b]: e,
+                    });
                 },
                 [E],
             ),
@@ -115,7 +122,10 @@ let m = [],
                                 }
                                 return e;
                             })({}, w)),
-                            (t = t = { hash: void 0 }),
+                            (t = t =
+                                {
+                                    hash: void 0,
+                                }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
                                 : (function (e, t) {

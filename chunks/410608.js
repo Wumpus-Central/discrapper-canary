@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var l = n(627968);
 n(64700);
 var a = n(984516),
@@ -22,7 +24,14 @@ let p = function (e) {
             (0, l.jsx)(s.A, {
                 children: (0, l.jsxs)("div", {
                     className: u.h,
-                    children: [(0, l.jsx)(o.A, { onSelectApplication: n }), (0, l.jsx)(a.A, { padding: !0 })],
+                    children: [
+                        (0, l.jsx)(o.A, {
+                            onSelectApplication: n,
+                        }),
+                        (0, l.jsx)(a.A, {
+                            padding: !0,
+                        }),
+                    ],
                 }),
             }),
         ],

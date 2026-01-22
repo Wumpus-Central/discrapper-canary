@@ -1,4 +1,11 @@
-n.d(t, { A: () => P }), n(114821), n(339614), n(896048), n(321073), n(228524);
+n.d(t, {
+    A: () => P,
+}),
+    n(114821),
+    n(339614),
+    n(896048),
+    n(321073),
+    n(228524);
 var r = n(627968),
     i = n(64700),
     a = n(59892),
@@ -60,6 +67,7 @@ let T = [
     ],
     C = ["h:mm:ssa", "h:mm:ss a", "H:mm:ss", "h:mma", "h:mm a", "H:mm", "HHmm", "ha", "h a", "H", "LT", "LTS"],
     N = [b().ISO_8601, ...T.flatMap((e) => [...C.map((t) => "".concat(e, " ").concat(t)), ...C])];
+
 function R() {
     let e = A.default.locale;
     if ("en-US" === e) return a;
@@ -78,6 +86,7 @@ function R() {
     else if (e.startsWith("es-")) return g;
     else return null;
 }
+
 function w(e, t, n) {
     let r, i, a;
     if (null == n) return {};
@@ -116,7 +125,7 @@ let P = {
         ) {
             let e;
             if (o && !s.start.isCertain("hour")) {
-                let e = 900000,
+                let e = 9e5,
                     t = Math.round(l.valueOf() / e) * e;
                 l = b()(t);
             }
@@ -213,7 +222,11 @@ let P = {
                     },
                 });
         }
-        return { results: { mentions: c } };
+        return {
+            results: {
+                mentions: c,
+            },
+        };
     },
     renderResults(e) {
         let {
@@ -271,6 +284,11 @@ let P = {
         if (null == s) return null;
         let o = (0, O.tf)(s.timestamp, s.format),
             l = null == (n = (0, O.WA)(s)) ? void 0 : n.formatted;
-        return null == l ? null : (a.replaceInlineInput("timestampMentionInput", l, o), { type: S.kc.TIMESTAMP });
+        return null == l
+            ? null
+            : (a.replaceInlineInput("timestampMentionInput", l, o),
+              {
+                  type: S.kc.TIMESTAMP,
+              });
     },
 };

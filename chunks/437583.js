@@ -1,7 +1,10 @@
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 var r = n(143733),
     a = n(560041),
     o = n(552292);
+
 function i(e, t) {
     var n = null == e ? null : (void 0 !== r && a(e)) || e["@@iterator"];
     if (null != n) {

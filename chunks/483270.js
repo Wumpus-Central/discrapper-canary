@@ -1,4 +1,8 @@
-n.d(t, { A: () => Q }), n(896048), n(264879);
+n.d(t, {
+    A: () => Q,
+}),
+    n(896048),
+    n(264879);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -41,6 +45,7 @@ var r = n(627968),
     H = n(985018),
     B = n(767952),
     K = n(701939);
+
 function W(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -133,9 +138,15 @@ let z = U.Ay.getEnableHardwareAcceleration(),
             ),
             K = l.useCallback(() => {
                 if (null == m) return;
-                let e = "@".concat(k.Ay.getUserTag(m, { decoration: "never" })),
+                let e = "@".concat(
+                        k.Ay.getUserTag(m, {
+                            decoration: "never",
+                        }),
+                    ),
                     n = "<@".concat(m.id, ">");
-                L._.dispatch(F.jej.TEXTAREA_FOCUS, { channelId: t.id }),
+                L._.dispatch(F.jej.TEXTAREA_FOCUS, {
+                    channelId: t.id,
+                }),
                     L._.dispatchToLastSubscribed(F.jej.INSERT_TEXT, {
                         plainText: e,
                         rawText: n,
@@ -261,7 +272,9 @@ let z = U.Ay.getEnableHardwareAcceleration(),
         return t === F.clD.UNKNOWN
             ? (0, r.jsx)("div", {
                   className: K.lL,
-                  children: (0, r.jsx)("div", { className: K.k1 }),
+                  children: (0, r.jsx)("div", {
+                      className: K.k1,
+                  }),
               })
             : (0, r.jsxs)(y.A, {
                   className: K.lL,
@@ -270,10 +283,20 @@ let z = U.Ay.getEnableHardwareAcceleration(),
                       count: l,
                   }),
                   children: [
-                      null != a ? (0, r.jsx)(x.A, W({ className: K.UT }, a)) : null,
+                      null != a
+                          ? (0, r.jsx)(
+                                x.A,
+                                W(
+                                    {
+                                        className: K.UT,
+                                    },
+                                    a,
+                                ),
+                            )
+                          : null,
                       (0, r.jsxs)("span", {
                           "aria-hidden": !0,
-                          children: [n, " \u2014 ", l],
+                          children: [n, " — ", l],
                       }),
                   ],
               });
@@ -283,7 +306,9 @@ let z = U.Ay.getEnableHardwareAcceleration(),
         return t.type === F.rbe.PRIVATE_THREAD
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
-                      (0, r.jsx)("div", { className: B.yF }),
+                      (0, r.jsx)("div", {
+                          className: B.yF,
+                      }),
                       (0, r.jsxs)(p.Text, {
                           variant: "text-xs/bold",
                           color: "text-default",
@@ -293,7 +318,7 @@ let z = U.Ay.getEnableHardwareAcceleration(),
                                   size: "xxs",
                                   color: "currentColor",
                               }),
-                              "\xA0",
+                              "\xa0",
                               H.intl.string(H.t.BTLTAs),
                           ],
                       }),
@@ -307,6 +332,7 @@ let z = U.Ay.getEnableHardwareAcceleration(),
               })
             : null;
     });
+
 function Q(e) {
     var t, n;
     let i,
@@ -340,7 +366,9 @@ function Q(e) {
                                 var t;
                                 return null == (t = document.querySelector(e))
                                     ? void 0
-                                    : t.focus({ preventScroll: !0 });
+                                    : t.focus({
+                                          preventScroll: !0,
+                                      });
                             });
                         },
                     });
@@ -352,7 +380,9 @@ function Q(e) {
                     new Promise((e) => {
                         let t = s.current;
                         if (null == t) return e();
-                        t.scrollToTop({ callback: () => requestAnimationFrame(() => e()) });
+                        t.scrollToTop({
+                            callback: () => requestAnimationFrame(() => e()),
+                        });
                     }),
                 [],
             )),
@@ -390,7 +420,9 @@ function Q(e) {
         }, [y.guild_id, y.id, y.type]),
         I)
     )
-        return (0, r.jsx)(Z, { channel: y });
+        return (0, r.jsx)(Z, {
+            channel: y,
+        });
     let N = o().omit(C.containerProps, ["ref"]),
         T = G.wT(O);
     return (0, r.jsx)(A.f5, {
@@ -440,7 +472,15 @@ function Q(e) {
                                     },
                                     footerHeight: (e) => 80 * (x[e] === _ && y.type === F.rbe.PRIVATE_THREAD),
                                     renderFooter: (e) =>
-                                        x[e.section] === _ ? (0, r.jsx)(J, { channel: y }, "footer") : null,
+                                        x[e.section] === _
+                                            ? (0, r.jsx)(
+                                                  J,
+                                                  {
+                                                      channel: y,
+                                                  },
+                                                  "footer",
+                                              )
+                                            : null,
                                     innerAriaLabel: H.intl.string(H.t["9Oq93m"]),
                                     innerTag: "ul",
                                     sections: x.map((e) => e.userIds.length),
@@ -456,6 +496,7 @@ function Q(e) {
         }),
     });
 }
+
 function Z(e) {
     let { channel: t } = e;
     return (0, r.jsxs)("div", {
@@ -477,7 +518,9 @@ function Z(e) {
                             color: "currentColor",
                         }),
                     }),
-                    (0, r.jsx)(D.A, { className: B.WA }),
+                    (0, r.jsx)(D.A, {
+                        className: B.WA,
+                    }),
                 ],
             }),
             (0, r.jsx)(p.Heading, {

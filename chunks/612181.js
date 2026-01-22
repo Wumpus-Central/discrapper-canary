@@ -5,9 +5,11 @@ n.d(t, {
 }),
     n(747238);
 var r = n(247775);
+
 function i() {
     return r.getToken();
 }
+
 function a() {
     return null != i();
 }

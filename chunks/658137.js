@@ -1,4 +1,6 @@
-n.d(t, { A: () => P });
+n.d(t, {
+    A: () => P,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -66,7 +68,9 @@ let w = (e, t) => {
                                     children: F,
                                 }),
                                 U
-                                    ? (0, r.jsx)(O.A, { referrer: k })
+                                    ? (0, r.jsx)(O.A, {
+                                          referrer: k,
+                                      })
                                     : V &&
                                       (0, r.jsx)("div", {
                                           className: T.kb,
@@ -78,7 +82,9 @@ let w = (e, t) => {
                                       }),
                                 L
                                     ? (0, r.jsx)("div", {
-                                          className: s()(T.UD, T.$F, { [T.In]: !(V || U) }),
+                                          className: s()(T.UD, T.$F, {
+                                              [T.In]: !(V || U),
+                                          }),
                                           children: (0, r.jsx)(b.A, {
                                               className: s()(T.x6, i),
                                               color: G,
@@ -87,7 +93,9 @@ let w = (e, t) => {
                                     : (0, r.jsx)(A.KN, {
                                           subscriptionTier: a,
                                           inOfferExperience: j,
-                                          containerClassName: s()(T.$F, { [T.In]: !(V || U) }),
+                                          containerClassName: s()(T.$F, {
+                                              [T.In]: !(V || U),
+                                          }),
                                           buttonClassName: i,
                                           isApplicationHome: !0,
                                           isDarkMode: w,

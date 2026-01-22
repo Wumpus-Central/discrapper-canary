@@ -1,4 +1,6 @@
-l.d(t, { I: () => r });
+l.d(t, {
+    I: () => r,
+});
 var n,
     r =
         (((n = {}).BLUE = "COLLECTIBLES_COLOR_BLUE"),

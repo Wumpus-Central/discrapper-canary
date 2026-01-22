@@ -18,6 +18,7 @@ var i = n(417597),
     c = n(652215),
     g = n(790782),
     _ = n(355097);
+
 function A(t) {
     let e = (0, i.bG)([a.Ay], () => a.Ay.resolveUnreadSetting(t)),
         n = (0, i.bG)([a.Ay], () => a.Ay.resolvedMessageNotifications(t));
@@ -27,6 +28,7 @@ function A(t) {
         preset: (0, u.jU)(e, n),
     };
 }
+
 function S(t) {
     let e = (0, i.yK)([a.Ay], () =>
             (0, o.ct)(a.Ay.getChannelOverrides(t.guild_id), {
@@ -52,6 +54,7 @@ function S(t) {
         inheritedPreset: r,
     };
 }
+
 function f(t, e, n) {
     let i = a.Ay.getChannelIdFlags(t, e);
     n === u.N9.ALL_MESSAGES
@@ -85,6 +88,7 @@ function f(t, e, n) {
                 s.fd.PresetNothing,
             );
 }
+
 function N(t, e) {
     r.A.updateChannelOverrideSettings(
         t,
@@ -96,15 +100,26 @@ function N(t, e) {
         s.fd.PresetDefault,
     );
 }
+
 function E(t, e, n) {
     let i = a.Ay.getChannelIdFlags(t, e);
     r.A.updateChannelOverrideSettings(
         t,
         e,
-        { flags: (0, d.mD)(i, n === g.e.ALL_MESSAGES ? _.vv.UNREADS_ALL_MESSAGES : _.vv.UNREADS_ONLY_MENTIONS) },
+        {
+            flags: (0, d.mD)(i, n === g.e.ALL_MESSAGES ? _.vv.UNREADS_ALL_MESSAGES : _.vv.UNREADS_ONLY_MENTIONS),
+        },
         s.G_.unreads(n),
     );
 }
+
 function h(t, e, n) {
-    r.A.updateChannelOverrideSettings(t, e, { message_notifications: n }, s.G_.notifications(n));
+    r.A.updateChannelOverrideSettings(
+        t,
+        e,
+        {
+            message_notifications: n,
+        },
+        s.G_.notifications(n),
+    );
 }

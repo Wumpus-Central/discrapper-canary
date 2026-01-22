@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968),
     i = n(64700),
     a = n(397927),
@@ -6,6 +8,7 @@ var r = n(627968),
     o = n(46373),
     l = n(112715),
     c = n(702421);
+
 function u(e) {
     let { node: t } = e,
         { useTitle: n, useSubtitle: u, variant: d = "default", layout: f, initialize: p } = t,
@@ -52,7 +55,9 @@ function u(e) {
                             i.Fragment,
                             {
                                 children: [
-                                    (0, r.jsx)(s.A, { node: e }),
+                                    (0, r.jsx)(s.A, {
+                                        node: e,
+                                    }),
                                     "separators" === d && t !== f.length - 1 && (0, r.jsx)(o.A, {}),
                                 ],
                             },

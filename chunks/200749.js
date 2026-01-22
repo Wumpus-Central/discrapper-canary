@@ -10,9 +10,11 @@ var i = n(503698),
     s = n(397927),
     o = n(235986),
     l = n(427133);
+
 function c(e) {
-    return e < 400 ? "small" : e < 1000 ? "medium" : "large";
+    return e < 400 ? "small" : e < 1e3 ? "medium" : "large";
 }
+
 function u(e) {
     let {
         onCTAClick: t,
@@ -31,13 +33,17 @@ function u(e) {
         justify: o.A.Justify.CENTER,
         align: o.A.Align.CENTER,
         direction: o.A.Direction.VERTICAL,
-        style: { padding: 4 },
+        style: {
+            padding: 4,
+        },
         children: [
             !_ &&
                 null != p &&
                 (0, r.jsx)("div", {
                     className: a()(l.art, l[d]),
-                    style: { backgroundImage: "url(".concat(p, ")") },
+                    style: {
+                        backgroundImage: "url(".concat(p, ")"),
+                    },
                 }),
             null != i
                 ? (0, r.jsx)(s.Text, {

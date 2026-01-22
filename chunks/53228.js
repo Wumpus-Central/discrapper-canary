@@ -1,7 +1,10 @@
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 var l = n(311907),
     r = n(576705),
     a = n(659674);
+
 function i(e) {
     var t, n, i;
     let { message: s, channel: o, forwardOptions: u } = e,

@@ -1,8 +1,11 @@
-l.d(t, { A: () => i });
+l.d(t, {
+    A: () => i,
+});
 var n = l(627968),
     r = l(397927),
     s = l(985018),
     a = l(620312);
+
 function i() {
     return (0, n.jsxs)("div", {
         className: a.k,

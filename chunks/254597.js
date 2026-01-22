@@ -1,3 +1,3 @@
 u.exports = JSON.parse(
-    '{"yfwZuy":["Xem Huy Hiệu Của Tôi"],"UnPGii":["Huy hiệu đã được thêm vào hồ sơ của bạn."],"nvaTQq":["Bạn Đã Thu Thập Huy Hiệu Hồ Sơ Orbs!"]}',
+    '{"yfwZuy":["Xem Huy Hiệu Của T\xf4i"],"UnPGii":["Huy hiệu đ\xe3 được th\xeam v\xe0o hồ sơ của bạn."],"nvaTQq":["Bạn Đ\xe3 Thu Thập Huy Hiệu Hồ Sơ Orbs!"]}',
 );

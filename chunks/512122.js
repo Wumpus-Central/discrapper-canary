@@ -1,4 +1,7 @@
-n.d(t, { p: () => m }), n(896048);
+n.d(t, {
+    p: () => m,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(311907),
@@ -11,8 +14,11 @@ var r = n(627968),
     f = n(641131),
     g = n(841541);
 async function b(e, t) {
-    return await o.A.saveGuild(e.id, { moderatorReportingEnabled: t });
+    return await o.A.saveGuild(e.id, {
+        moderatorReportingEnabled: t,
+    });
 }
+
 function m(e) {
     let { guild: t } = e,
         n = (0, l.bG)([c.A], () => null != t && c.A.can(d.xBc.MANAGE_GUILD, t), [t]),
@@ -38,7 +44,9 @@ function m(e) {
                           disabled: !n,
                       }),
                   }),
-                  (0, r.jsx)(s.cGx, { className: g.yF }),
+                  (0, r.jsx)(s.cGx, {
+                      className: g.yF,
+                  }),
               ],
           })
         : null;

@@ -1,4 +1,7 @@
-l.d(t, { A: () => C }), l(896048);
+l.d(t, {
+    A: () => C,
+}),
+    l(896048);
 var n = l(627968),
     r = l(64700),
     i = l(503698),
@@ -29,7 +32,9 @@ let O = r.memo(function (e) {
                     null != e.selectedYear,
             ),
             O = r.useCallback(() => {
-                (0, m.A)(j.J.CLIPS, { stackingBehavior: "stack" });
+                (0, m.A)(j.J.CLIPS, {
+                    stackingBehavior: "stack",
+                });
             }, []),
             x = r.useCallback(
                 (e) => {
@@ -64,7 +69,10 @@ let O = r.memo(function (e) {
                                     }
                                     return e;
                                 })({}, l)),
-                                (i = i = { allClips: t }),
+                                (i = i =
+                                    {
+                                        allClips: t,
+                                    }),
                                 Object.getOwnPropertyDescriptors
                                     ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
                                     : (function (e, t) {
@@ -150,7 +158,9 @@ let O = r.memo(function (e) {
     x = r.memo(function (e) {
         let { name: t, count: l, icon: r, isSelected: i, onClick: s } = e;
         return (0, n.jsxs)(o.DUT, {
-            className: a()(g.MV, { [g.wH]: i }),
+            className: a()(g.MV, {
+                [g.wH]: i,
+            }),
             onClick: s,
             children: [
                 (0, n.jsxs)("div", {
@@ -176,6 +186,7 @@ let O = r.memo(function (e) {
             ],
         });
     });
+
 function C(e) {
     let { clipsByGame: t, filteredClips: l, favoriteClips: i, allClips: a } = e,
         s = (0, b.P)((e) => e.selectedGameId),
@@ -188,7 +199,9 @@ function C(e) {
     return (0, n.jsxs)("div", {
         className: g.pz,
         children: [
-            (0, n.jsx)(O, { allClips: a }),
+            (0, n.jsx)(O, {
+                allClips: a,
+            }),
             (0, n.jsxs)(o.IpV, {
                 className: g.wp,
                 fade: !0,

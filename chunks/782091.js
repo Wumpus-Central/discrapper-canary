@@ -27,6 +27,7 @@ var r = n(311907),
             e
         );
     })({});
+
 function p(e) {
     let { channelId: t, ChannelStore: n, GuildStore: r, PermissionStore: i, VoiceStateStore: a } = e,
         s = n.getChannel(t);
@@ -45,6 +46,7 @@ function p(e) {
     }
     return 0;
 }
+
 function _(e) {
     return p({
         channelId: e,
@@ -54,6 +56,7 @@ function _(e) {
         VoiceStateStore: o.A,
     });
 }
+
 function h(e) {
     return (0, r.bG)(
         [i.A, a.A, s.A, o.A],
@@ -68,6 +71,7 @@ function h(e) {
         [e],
     );
 }
+
 function m(e) {
     switch (e) {
         case 0:

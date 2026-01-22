@@ -1,5 +1,8 @@
-r.d(t, { A: () => c });
+r.d(t, {
+    A: () => c,
+});
 var a = r(64700);
+
 function n(e, t) {
     return (n =
         Object.setPrototypeOf ||
@@ -44,9 +47,14 @@ var s = function (e) {
                         r = e.explicit,
                         a = e.onLoad;
                     window.grecaptcha.ready(function () {
-                        t.setState({ ready: !0 }, function () {
-                            r || t.renderExplicitly(), a && a();
-                        });
+                        t.setState(
+                            {
+                                ready: !0,
+                            },
+                            function () {
+                                r || t.renderExplicitly(), a && a();
+                            },
+                        );
                     });
                 }),
                 (t._renderRecaptcha = function (e, t) {
@@ -160,7 +168,11 @@ var s = function (e) {
             n(t, e),
             (t.getDerivedStateFromProps = function (e, t) {
                 var r = "invisible" === e.size;
-                return r !== t.invisible ? { invisible: r } : null;
+                return r !== t.invisible
+                    ? {
+                          invisible: r,
+                      }
+                    : null;
             }),
             (t.prototype.componentDidUpdate = function (e) {
                 var t = this;

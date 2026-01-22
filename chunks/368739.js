@@ -13,25 +13,34 @@ let o = r.Ay.INVITE_OPTIONS_7_DAYS.value,
         kind: "guild",
         id: "2025-08_default_invite_expiration_guild",
         label: "Default Invite Expiration Guild",
-        defaultConfig: { defaultMaxAge: 604800 },
+        defaultConfig: {
+            defaultMaxAge: 604800,
+        },
         treatments: [
             {
                 id: 1,
                 label: "14 days",
-                config: { defaultMaxAge: 1209600 },
+                config: {
+                    defaultMaxAge: 1209600,
+                },
             },
             {
                 id: 2,
                 label: "30 days",
-                config: { defaultMaxAge: 2592000 },
+                config: {
+                    defaultMaxAge: 2592e3,
+                },
             },
             {
                 id: 3,
                 label: "60 days",
-                config: { defaultMaxAge: 5184000 },
+                config: {
+                    defaultMaxAge: 5184e3,
+                },
             },
         ],
     });
+
 function d(e) {
     let { guildId: t, location: n } = e,
         i = u.useExperiment({
@@ -58,11 +67,14 @@ function d(e) {
               experimentConfig: i,
           });
 }
+
 function c(e) {
     let { guildId: t, location: n } = e,
         l = u.useExperiment({
             guildId: null != t ? t : a.dJq,
             location: n,
         });
-    return r.Ay.getMaxAgeOptions({ includeExperimentalValues: [null == l ? void 0 : l.defaultMaxAge] });
+    return r.Ay.getMaxAgeOptions({
+        includeExperimentalValues: [null == l ? void 0 : l.defaultMaxAge],
+    });
 }

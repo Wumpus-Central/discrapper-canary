@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var l = n(627968);
 n(64700);
 var a = n(397927),
@@ -10,6 +12,7 @@ var a = n(397927),
     u = n(418208),
     o = n(652215),
     f = n(985018);
+
 function b() {
     return (0, s.yM)()
         ? f.intl.format(f.t.iWGjcg, {
@@ -30,13 +33,16 @@ function b() {
                       onClick: (e) => {
                           e.preventDefault(),
                               e.stopPropagation(),
-                              c.A.showAgeVerificationGetStartedModal({ entryPoint: r.q1.START_STAGE_PROMPT });
+                              c.A.showAgeVerificationGetStartedModal({
+                                  entryPoint: r.q1.START_STAGE_PROMPT,
+                              });
                       },
                       useDefaultUnderlineStyles: !1,
                       children: e.join(""),
                   }),
           });
 }
+
 function h(e) {
     let { className: t } = e,
         n = (0, s.yM)();
@@ -48,6 +54,7 @@ function h(e) {
         }),
     });
 }
+
 function _(e) {
     let { className: t } = e,
         n = (0, s.yM)();
@@ -76,6 +83,7 @@ function _(e) {
         }),
     });
 }
+
 function m(e) {
     let { className: t, noBackground: n, divider: i } = e;
     return (0, u.Vv)()
@@ -85,7 +93,10 @@ function m(e) {
                       className: t,
                       children: n ? (0, l.jsx)(_, {}) : (0, l.jsx)(h, {}),
                   }),
-                  i && (0, l.jsx)(a.cGx, { gap: 16 }),
+                  i &&
+                      (0, l.jsx)(a.cGx, {
+                          gap: 16,
+                      }),
               ],
           })
         : null;

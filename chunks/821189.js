@@ -6,6 +6,7 @@ var r = n(627968);
 n(64700);
 var i = n(397927),
     a = n(976114);
+
 function s(e) {
     let { currencies: t, className: n, children: i } = e;
     return t.length < 2

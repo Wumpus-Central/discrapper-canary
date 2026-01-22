@@ -22,6 +22,7 @@ var a = n(397927),
     u = n(652215),
     f = n(985018),
     g = n(201662);
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -47,6 +48,7 @@ function b(e) {
     }
     return e;
 }
+
 function m(e, t) {
     if (null == e) return {};
     var n,
@@ -75,6 +77,7 @@ function m(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
     return l;
 }
+
 function p(e) {
     return (t, n, r) => {
         let i = e(t),
@@ -82,6 +85,7 @@ function p(e) {
         return null != i && null != l ? (i === l ? 0 : i < l ? -1 : 1) : 0;
     };
 }
+
 function x(e) {
     let { key: t, cellClassName: n, renderHeader: r, renderContent: i } = e,
         l = m(e, ["key", "cellClassName", "renderHeader", "renderContent"]);
@@ -96,6 +100,7 @@ function x(e) {
         l,
     );
 }
+
 function h() {
     return (0, r.jsx)(a.Text, {
         variant: "text-xs/medium",
@@ -103,6 +108,7 @@ function h() {
         children: f.intl.string(f.t.TJ4CCy),
     });
 }
+
 function j(e) {
     let { cellClassName: t, key: n, renderHeader: i } = e,
         l = m(e, ["cellClassName", "key", "renderHeader"]);
@@ -144,6 +150,7 @@ function j(e) {
         ),
     );
 }
+
 function O(e) {
     let { cellClassName: t, getAmount: n, key: i, renderHeader: l } = e,
         s = m(e, ["cellClassName", "getAmount", "key", "renderHeader"]);
@@ -155,13 +162,16 @@ function O(e) {
                 renderHeader: l,
                 renderContent(e) {
                     let t = n(e);
-                    return (0, r.jsx)(N, { children: t });
+                    return (0, r.jsx)(N, {
+                        children: t,
+                    });
                 },
             },
             s,
         ),
     );
 }
+
 function y(e) {
     let { cellClassName: t, getCount: n, key: i, renderHeader: l } = e,
         s = m(e, ["cellClassName", "getCount", "key", "renderHeader"]);
@@ -173,13 +183,16 @@ function y(e) {
                 renderHeader: l,
                 renderContent(e) {
                     let t = n(e);
-                    return (0, r.jsx)(_, { children: t });
+                    return (0, r.jsx)(_, {
+                        children: t,
+                    });
                 },
             },
             s,
         ),
     );
 }
+
 function v(e) {
     let t = [...e];
     for (let n = 1; n < e.length; ++n) {
@@ -201,7 +214,9 @@ function v(e) {
                       }),
                 e
             );
-        })(b({}, r), { cellClassName: s()(r.cellClassName, g.WI) });
+        })(b({}, r), {
+            cellClassName: s()(r.cellClassName, g.WI),
+        });
     }
     return t;
 }
@@ -226,7 +241,9 @@ let A = (e) => {
     },
     N = (e) => {
         let { children: t } = e;
-        return (0, r.jsx)(E, { children: (0, o.$g)(null != t ? t : 0, u.Yri.USD) });
+        return (0, r.jsx)(E, {
+            children: (0, o.$g)(null != t ? t : 0, u.Yri.USD),
+        });
     },
     _ = (e) => {
         let { children: t } = e;
@@ -244,6 +261,7 @@ let A = (e) => {
             ],
         });
     };
+
 function S(e) {
     let {
             className: t,
@@ -269,9 +287,25 @@ function S(e) {
             c.A,
             b(
                 {
-                    className: s()({ [g.FQ]: !a }, g.tp),
-                    rowClassName: s()({ [g.Fr]: a }, l),
-                    headerClassName: s()(g.wx, { [g.O8]: !a }, n),
+                    className: s()(
+                        {
+                            [g.FQ]: !a,
+                        },
+                        g.tp,
+                    ),
+                    rowClassName: s()(
+                        {
+                            [g.Fr]: a,
+                        },
+                        l,
+                    ),
+                    headerClassName: s()(
+                        g.wx,
+                        {
+                            [g.O8]: !a,
+                        },
+                        n,
+                    ),
                     sortKey: p,
                     sortDirection: h,
                     onSort: (e, t) => {

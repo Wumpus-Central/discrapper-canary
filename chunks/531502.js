@@ -1,9 +1,12 @@
-n.d(t, { A: () => z }), n(896048);
+n.d(t, {
+    A: () => z,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(735438),
     s = n.n(a),
-    o = n(432022),
+    o = n(108531),
     l = n(158954),
     c = n(311907),
     u = n(499979),
@@ -32,6 +35,7 @@ var r = n(627968),
     x = n(985018),
     L = n(308021),
     j = n(597260);
+
 function M(e, t, n) {
     return (
         t in e
@@ -45,6 +49,7 @@ function M(e, t, n) {
         e
     );
 }
+
 function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -87,6 +92,7 @@ let U = {
     },
     V = 429 / 462,
     F = 200;
+
 function B(e) {
     var t;
     let { step: n, onNext: a } = e,
@@ -113,7 +119,9 @@ function B(e) {
         B = (0, i.useCallback)(() => (n <= P.Wf.END_REWARD ? "100%" : n === P.Wf.END_CLAIM ? "50%" : "30%"), [n]),
         H = (0, l.zhh)({
             onChange: k,
-            to: { width: B() },
+            to: {
+                width: B(),
+            },
         }),
         Y = (0, l.zhh)({
             to: {
@@ -219,6 +227,7 @@ function B(e) {
         })
     );
 }
+
 function H() {
     let e = (0, c.bG)([E.default], () => E.default.getCurrentUser()),
         { avatarDecoration: t } = (0, c.bG)([A.A], () => A.A.getCheckpointData());
@@ -240,7 +249,9 @@ function H() {
                     guildId: null,
                     avatarDecorationOverride: t,
                 }),
-            (0, r.jsx)(T.A, { className: j.Hk }),
+            (0, r.jsx)(T.A, {
+                className: j.Hk,
+            }),
             (0, r.jsx)(R.A, {
                 variant: "heading-sm/medium",
                 children: x.intl.format(x.t.eZSTa5, {
@@ -255,17 +266,26 @@ function H() {
         ],
     });
 }
+
 function Y(e) {
     let { primaryColor: t } = e,
         {
-            messages: { numMessagesSent: n } = { numMessagesSent: 0 },
-            voice: { totalVoiceMinutes: a } = { totalVoiceMinutes: 0 },
+            messages: { numMessagesSent: n } = {
+                numMessagesSent: 0,
+            },
+            voice: { totalVoiceMinutes: a } = {
+                totalVoiceMinutes: 0,
+            },
             emojis: { numEmojisSent: s, emojis: o } = {
                 numEmojisSent: 0,
                 emojis: [],
             },
-            guilds: { guilds: d } = { guilds: [] },
-            applications: { applications: _ } = { applications: [] },
+            guilds: { guilds: d } = {
+                guilds: [],
+            },
+            applications: { applications: _ } = {
+                applications: [],
+            },
         } = (0, c.bG)([A.A], () => A.A.getCheckpointData()),
         E = (0, c.bG)([p.A], () => p.A.useReducedMotion),
         y = o.length > 0 ? o[0] : null,
@@ -296,7 +316,9 @@ function Y(e) {
                     icon: l.cNw,
                     title:
                         I === u.pJ.HOURS
-                            ? x.intl.formatToPlainString(D.default.Xu0QsX, { numHours: T })
+                            ? x.intl.formatToPlainString(D.default.Xu0QsX, {
+                                  numHours: T,
+                              })
                             : x.intl.string(D.default.RmVTph),
                     content: (0, r.jsx)(R.A, {
                         variant: "heading-xxl/medium",
@@ -438,6 +460,7 @@ function Y(e) {
         }),
     });
 }
+
 function W(e) {
     let { step: t } = e,
         n = (0, i.useContext)(O.P),
@@ -445,7 +468,9 @@ function W(e) {
         s = (0, d.rdh)(n.backgroundOverlayColor).hex();
     return (0, r.jsx)("div", {
         className: t === P.Wf.END_CLAIM ? j.Ly : j.jK,
-        style: { backgroundColor: s },
+        style: {
+            backgroundColor: s,
+        },
         children: (0, r.jsxs)(N.Ay, {
             activeSlide: t,
             children: [
@@ -455,12 +480,15 @@ function W(e) {
                 }),
                 (0, r.jsx)(d.q7S, {
                     id: P.Wf.END_SUMMARY,
-                    children: (0, r.jsx)(Y, { primaryColor: a }),
+                    children: (0, r.jsx)(Y, {
+                        primaryColor: a,
+                    }),
                 }),
             ],
         }),
     });
 }
+
 function K(e) {
     let { icon: t, title: n, content: a } = e,
         s = (0, i.useContext)(O.P),
@@ -496,6 +524,7 @@ function K(e) {
         ],
     });
 }
+
 function z(e) {
     let { step: t, onNext: n } = e;
     return (0, r.jsxs)(C.A, {
@@ -507,7 +536,9 @@ function z(e) {
                 step: t,
                 onNext: n,
             }),
-            (0, r.jsx)(W, { step: t }),
+            (0, r.jsx)(W, {
+                step: t,
+            }),
         ],
     });
 }

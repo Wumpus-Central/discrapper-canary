@@ -1,4 +1,6 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 let { createLoader: r } = n(932433),
     i = r(
         {

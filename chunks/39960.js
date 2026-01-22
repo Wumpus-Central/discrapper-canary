@@ -1,4 +1,7 @@
-a.r(t), a.d(t, { default: () => i });
+a.r(t),
+    a.d(t, {
+        default: () => i,
+    });
 var s = a(627968);
 a(64700);
 var c = a(549711),
@@ -8,6 +11,7 @@ var c = a(549711),
     b = a(612181),
     r = a(603647),
     o = a(652215);
+
 function i() {
     return (0, s.jsxs)(r.A, {
         splash: (0, b.u8)(),

@@ -1,4 +1,6 @@
-n.d(t, { p: () => I });
+n.d(t, {
+    p: () => I,
+});
 var r = n(627968),
     i = n(64700),
     a = n(158954),
@@ -46,10 +48,15 @@ let A = (e) => {
     v = () => {
         let e = (0, m.vx)(),
             t = () => {
-                (0, d.default)(), o.A.openPrivateChannel({ recipientIds: e });
+                (0, d.default)(),
+                    o.A.openPrivateChannel({
+                        recipientIds: e,
+                    });
             },
             n = () => {
-                (0, f.openUserSettings)(u.X.CONTENT_AND_SOCIAL_PANEL, { section: E.nc_.CONTENT_AND_SOCIAL });
+                (0, f.openUserSettings)(u.X.CONTENT_AND_SOCIAL_PANEL, {
+                    section: E.nc_.CONTENT_AND_SOCIAL,
+                });
             };
         return (0, r.jsxs)(a.BJc, {
             justify: "space-between",
@@ -83,7 +90,9 @@ let A = (e) => {
                     ],
                 }),
                 (0, r.jsx)(s.Button, {
-                    text: y.intl.formatToPlainString(b.default.ggcjPR, { count: e.length }),
+                    text: y.intl.formatToPlainString(b.default.ggcjPR, {
+                        count: e.length,
+                    }),
                     onClick: t,
                     variant: "secondary",
                     size: "sm",
@@ -123,7 +132,9 @@ let A = (e) => {
                     buttonText: y.intl.string(y.t.bt75uw),
                     onButtonPress: () => s(g.u9.CONTENT_AND_SOCIAL),
                 }),
-                (0, r.jsx)(l.A, { className: O.yF }),
+                (0, r.jsx)(l.A, {
+                    className: O.yF,
+                }),
                 (0, r.jsx)(A, {
                     title: y.intl.string(y.t.OAuOHD),
                     buttonText: y.intl.string(y.t.bt75uw),

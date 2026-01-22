@@ -15,6 +15,7 @@ var r = n(607399),
     s = n(954571),
     o = n(307600),
     l = n(652215);
+
 function c(e) {
     let {
         applicationId: t,
@@ -35,7 +36,9 @@ function c(e) {
             source: _,
             device_platform: r.Fr ? "mobile_web" : "desktop_web",
         }),
-            (0, o.h)({ href: n });
+            (0, o.h)({
+                href: n,
+            });
         return;
     }
     if (
@@ -80,6 +83,7 @@ function c(e) {
             callback: h,
         }));
 }
+
 function u(e) {
     let { applicationId: t, customInstallUrl: n, installParams: r, integrationTypesConfig: i } = e;
     if (null != n) return null;

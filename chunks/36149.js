@@ -49,26 +49,32 @@ let v = new Set([h.q1.STAGE_CHANNEL_AGE_VERIFICATION_PROMPT, h.q1.START_STAGE_PR
         b.w_.ACCESS_LARGE_GUILD_UNDERAGE,
     ]),
     I = (e) => S.has(e);
+
 function T() {
     let e = p.default.getCurrentUser();
     return (null == e ? void 0 : e.ageVerificationStatus) !== s.Tk.VERIFIED_ADULT;
 }
+
 function C() {
     let e = (0, i.bG)([p.default], () => p.default.getCurrentUser());
     return (null == e ? void 0 : e.ageVerificationStatus) !== s.Tk.VERIFIED_ADULT;
 }
+
 function N() {
     let e = p.default.getCurrentUser();
     return (null == e ? void 0 : e.ageVerificationStatus) === s.Tk.VERIFIED_TEEN;
 }
+
 function R() {
     let e = (0, i.bG)([p.default], () => p.default.getCurrentUser());
     return (null == e ? void 0 : e.ageVerificationStatus) === s.Tk.VERIFIED_TEEN;
 }
+
 function w() {
     let e = p.default.getCurrentUser();
     return (null == e ? void 0 : e.ageVerificationStatus) === s.Tk.VERIFIED_ADULT;
 }
+
 function P() {
     let e = (0, i.bG)([p.default], () => p.default.getCurrentUser());
     return (null == e ? void 0 : e.ageVerificationStatus) === s.Tk.VERIFIED_ADULT;
@@ -79,6 +85,7 @@ var D = (function (e) {
     x = (function (e) {
         return (e.VERIFIED_ADULT = "verified_adult"), (e.VERIFIED_TEEN = "verified_teen"), (e.ERROR = "error"), e;
     })({});
+
 function L(e, t) {
     let n = f.A.getMessage(e, t);
     if (
@@ -92,6 +99,7 @@ function L(e, t) {
     let r = n.embeds[0].fields.find((e) => "ctas" === e.rawName);
     return null == r ? void 0 : r.rawValue.split(",").includes("retry");
 }
+
 function j() {
     let e = p.default.getCurrentUser();
     return (
@@ -99,6 +107,7 @@ function j() {
         (null == e ? void 0 : e.ageVerificationStatus) !== s.Tk.CLIENT_ONLY_PENDING
     );
 }
+
 function M() {
     let e = (0, i.bG)([p.default], () => p.default.getCurrentUser());
     return (
@@ -106,6 +115,7 @@ function M() {
         (null == e ? void 0 : e.ageVerificationStatus) !== s.Tk.CLIENT_ONLY_PENDING
     );
 }
+
 function k(e) {
     let {
             onComplete: t,
@@ -135,7 +145,9 @@ function k(e) {
             async (e) => {
                 g(!0);
                 try {
-                    a.h.dispatch({ type: "INITIATE_AGE_VERIFICATION" });
+                    a.h.dispatch({
+                        type: "INITIATE_AGE_VERIFICATION",
+                    });
                     let r = await (0, m.uf)({
                         method: e,
                         classificationId: null != f ? f : void 0,
@@ -163,6 +175,7 @@ function k(e) {
         initiateAgeVerification: v,
     };
 }
+
 function U(e) {
     let t = (0, i.bG)([p.default], () => {
             var e;
@@ -177,12 +190,15 @@ function U(e) {
         (l || c) && e();
     }, [e, l, c]);
 }
+
 function G(e) {
     return null != e && g.zn.has(e);
 }
+
 function V(e) {
     return v.has(e) ? A.intl.string(A.t.lSWVTM) : A.intl.string(A.t.JHNunj);
 }
+
 function F(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     return v.has(e)
@@ -190,6 +206,8 @@ function F(e, t) {
         : n
           ? A.intl.string(O.default["1/6wta"])
           : null != t
-            ? A.intl.format(O.default.RpMIT0, { handleOnHelpUrlHook: t })
+            ? A.intl.format(O.default.RpMIT0, {
+                  handleOnHelpUrlHook: t,
+              })
             : A.intl.string(A.t["+BLIGh"]);
 }

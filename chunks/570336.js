@@ -1,4 +1,7 @@
-n.d(t, { A: () => f }), n(896048);
+n.d(t, {
+    A: () => f,
+}),
+    n(896048);
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -10,6 +13,7 @@ var i = n(311907),
     s = n(203982),
     b = n(652215),
     d = n(985018);
+
 function f(e, t, n) {
     let [f, p] = (0, i.yK)([u.A, a.A, l.A], () => {
             let e = u.A.getChannelId(t),

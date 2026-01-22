@@ -11,6 +11,7 @@ var r,
     l = n(615300),
     c = n(827734),
     u = n(399374);
+
 function d(e, t, n) {
     return (
         t in e
@@ -41,7 +42,10 @@ class _ extends a.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e), d(this, "state", { backgroundColor: o().sample(p) });
+        super(...e),
+            d(this, "state", {
+                backgroundColor: o().sample(p),
+            });
     }
 }
 class h extends (r = a.Component) {
@@ -71,8 +75,24 @@ class h extends (r = a.Component) {
             className: u.fi,
             style: this.getAnimatedStyle(),
             children: [
-                e.map((e, t) => (0, i.jsx)(_, { height: e }, t)),
-                e.map((e, t) => (0, i.jsx)(_, { height: e }, "alt".concat(t))),
+                e.map((e, t) =>
+                    (0, i.jsx)(
+                        _,
+                        {
+                            height: e,
+                        },
+                        t,
+                    ),
+                ),
+                e.map((e, t) =>
+                    (0, i.jsx)(
+                        _,
+                        {
+                            height: e,
+                        },
+                        "alt".concat(t),
+                    ),
+                ),
             ],
         });
     }
@@ -102,13 +122,25 @@ class h extends (r = a.Component) {
         };
     }
 }
-d(h, "defaultProps", { direction: -1 });
+d(h, "defaultProps", {
+    direction: -1,
+});
 let m = (e) => {
     let { columns: t } = e;
     return (0, i.jsx)("div", {
         className: u.fi,
-        style: { width: "".concat(100 / t, "%") },
-        children: [, , , ,].fill(null).map((e, t) => (0, i.jsx)("div", { className: u.c8 }, t)),
+        style: {
+            width: "".concat(100 / t, "%"),
+        },
+        children: [, , , ,].fill(null).map((e, t) =>
+            (0, i.jsx)(
+                "div",
+                {
+                    className: u.c8,
+                },
+                t,
+            ),
+        ),
     });
 };
 class g extends a.PureComponent {

@@ -1,4 +1,6 @@
-r.d(t, { A: () => d });
+r.d(t, {
+    A: () => d,
+});
 var n = r(627968);
 r(64700);
 var s = r(397927),
@@ -8,6 +10,7 @@ var s = r(397927),
     o = r(985018),
     c = r(930774),
     u = r(473169);
+
 function d(e) {
     let { title: t, subtitle: r, error: d, onSubmit: h, onCancel: p } = e;
     return (0, n.jsxs)(i.A, {

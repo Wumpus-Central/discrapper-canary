@@ -1,4 +1,6 @@
-i.d(e, { d: () => A });
+i.d(e, {
+    d: () => A,
+});
 var n = i(64700),
     l = i(814278),
     s = i(419954),
@@ -14,7 +16,10 @@ let A = (0, s.zZ)(u.X.VOICE_SECURITY_CATEGORY, {
             () => ({
                 type: r.W.INLINE_NOTICE,
                 noticeType: "info",
-                useText: () => T.intl.format(T.t["/6sFWa"], { helpArticle: (0, l.aW)() }),
+                useText: () =>
+                    T.intl.format(T.t["/6sFWa"], {
+                        helpArticle: (0, l.aW)(),
+                    }),
             }),
             [],
         );

@@ -21,7 +21,9 @@ var r = n(954055),
             return e.getCurrentContent().getBlockForKey(t.getStartKey()).getType();
         },
         getDataObjectForLinkURL: function (e) {
-            return { url: e.toString() };
+            return {
+                url: e.toString(),
+            };
         },
         handleKeyCommand: function (e, t, n) {
             switch (t) {

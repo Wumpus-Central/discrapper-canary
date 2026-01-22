@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968),
     i = n(64700),
     l = n(311907),
@@ -13,6 +15,7 @@ let p = (e, t) => {
         (0, s.I_)(e, t);
     });
 };
+
 function f(e) {
     let { embedId: t, className: n, style: a, currentWindow: s } = e,
         f = (0, l.bG)([c.A], () => c.A.getConnectedFrame()),

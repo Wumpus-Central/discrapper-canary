@@ -29,10 +29,13 @@ let l = (0, n(600975).C)({
         },
     ],
 });
+
 function r(e) {
     let { location: t, autoTrackExposure: n } = e,
         { isPrefetchEnabled: r } = l.useExperiment(
-            { location: t },
+            {
+                location: t,
+            },
             {
                 autoTrackExposure: n,
                 disable: __OVERLAY__,
@@ -40,10 +43,13 @@ function r(e) {
         );
     return r;
 }
+
 function i(e) {
     let { location: t, autoTrackExposure: n, disable: r } = e,
         { isDownloadIconEnabled: i } = l.useExperiment(
-            { location: t },
+            {
+                location: t,
+            },
             {
                 autoTrackExposure: n,
                 disable: __OVERLAY__ || r,

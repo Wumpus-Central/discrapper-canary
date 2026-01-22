@@ -1,4 +1,8 @@
-n.d(t, { A: () => v }), n(896048), n(733351);
+n.d(t, {
+    A: () => v,
+}),
+    n(896048),
+    n(733351);
 var r = n(627968),
     l = n(64700),
     i = n(111956),
@@ -17,6 +21,7 @@ var r = n(627968),
     g = n(818348),
     h = n(985018),
     x = n(985911);
+
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,6 +47,7 @@ function y(e) {
     }
     return e;
 }
+
 function O(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -66,7 +72,17 @@ let v = l.forwardRef(function (e, t) {
         a = (0, d.bG)([b.A], () => b.A.hasDefaultSearchStateByGuildId(n.id), [n.id]),
         v = (0, d.bG)([C.A], () => C.A.can(c.kg(g.xB.MANAGE_GUILD, g.xB.KICK_MEMBERS), n)),
         H = l.useCallback(() => {
-            null != n && v && (0, u.mMO)(async () => (e) => (0, r.jsx)(p.A, O(y({}, e), { guild: n })));
+            null != n &&
+                v &&
+                (0, u.mMO)(
+                    async () => (e) =>
+                        (0, r.jsx)(
+                            p.A,
+                            O(y({}, e), {
+                                guild: n,
+                            }),
+                        ),
+                );
         }, [n, v]),
         w = (0, d.bG)([b.A], () => b.A.getSearchStateByGuildId(n.id), [n.id], s()),
         A = (0, f.Ks)(n.id),
@@ -74,7 +90,10 @@ let v = l.forwardRef(function (e, t) {
         _ = l.useCallback(
             (e) => {
                 let t = e.trim();
-                t.length > 0 && A(), (0, m.Ld)(n.id, { query: t });
+                t.length > 0 && A(),
+                    (0, m.Ld)(n.id, {
+                        query: t,
+                    });
             },
             [n.id, A],
         ),

@@ -63,6 +63,7 @@ var i = n(627968),
     et = n(652215),
     en = n(985018),
     ei = n(991256);
+
 function er(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -88,6 +89,7 @@ function er(e) {
     }
     return e;
 }
+
 function el(e) {
     let t = r.useRef(null);
     return (
@@ -100,6 +102,7 @@ function el(e) {
         (e) => ((t.current = e), e)
     );
 }
+
 function ea(e) {
     let {
             ref: t,
@@ -194,6 +197,7 @@ function ea(e) {
         "aria-label": O["aria-label"],
     });
 }
+
 function eo(e) {
     var t;
     let { voiceChannel: n, locked: a } = e,
@@ -275,6 +279,7 @@ function eo(e) {
         },
     });
 }
+
 function es(e) {
     let { voiceChannel: t, locked: n } = e,
         l = r.useRef(null),
@@ -340,6 +345,7 @@ function es(e) {
         },
     });
 }
+
 function ec(e) {
     var t;
     let { voiceChannel: n, locked: a } = e,
@@ -418,6 +424,7 @@ function ec(e) {
         },
     });
 }
+
 function eu(e) {
     let t,
         { voiceChannel: n, locked: a } = e,
@@ -446,7 +453,9 @@ function eu(e) {
         let e = (0, ee.qv)();
         t = u
             ? null != e
-                ? en.intl.format(en.t.AB5gTy, { game: e.name })
+                ? en.intl.format(en.t.AB5gTy, {
+                      game: e.name,
+                  })
                 : en.intl.string(en.t.FeUKeA)
             : en.intl.string(en.t.uQn9B8);
     }
@@ -517,6 +526,7 @@ function eu(e) {
         },
     });
 }
+
 function ed(e) {
     var t;
     let { voiceChannel: a, locked: o } = e,
@@ -526,6 +536,7 @@ function ed(e) {
         m = (0, l.bG)([K.A], () => K.A.isDeaf()),
         y = null == a || p || f || m,
         { analyticsLocations: A } = (0, g.Ay)();
+
     function O(e) {
         null != u &&
             ((0, Q.YX)(et.uss.QUICK_ACTIONS, {
@@ -605,6 +616,7 @@ function ed(e) {
         },
     });
 }
+
 function ep(e) {
     let { voiceChannel: t, locked: n } = e,
         o = r.useRef(null),
@@ -676,6 +688,7 @@ function ep(e) {
         },
     });
 }
+
 function eh(e) {
     let { voiceChannel: t } = e,
         n = (0, l.bG)([F.A], () => F.A.getGuild(t.getGuildId()), [t]);
@@ -686,7 +699,9 @@ function eh(e) {
         case null != n:
             return (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)("div", { className: ei.rK }),
+                    (0, i.jsx)("div", {
+                        className: ei.rK,
+                    }),
                     (0, i.jsxs)("div", {
                         className: ei._C,
                         children: [
@@ -710,6 +725,7 @@ function eh(e) {
             return null;
     }
 }
+
 function ef(e) {
     let { voiceChannel: t } = e,
         n = (0, x.gU)(t),
@@ -738,6 +754,7 @@ function ef(e) {
         ],
     });
 }
+
 function em(e) {
     var t, n;
     let { voiceChannel: r } = e,
@@ -776,9 +793,15 @@ function em(e) {
                           }),
                     t),
                 ),
-                (0, i.jsx)(eh, { voiceChannel: r }),
-                (0, i.jsx)("div", { className: ei.rK }),
-                (0, i.jsx)(ef, { voiceChannel: r }),
+                (0, i.jsx)(eh, {
+                    voiceChannel: r,
+                }),
+                (0, i.jsx)("div", {
+                    className: ei.rK,
+                }),
+                (0, i.jsx)(ef, {
+                    voiceChannel: r,
+                }),
             ],
         })
     );

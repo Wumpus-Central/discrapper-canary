@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var l,
     r,
     i = n(311907),
@@ -10,12 +12,16 @@ let c = {},
         kind: "user",
         id: "2025-03_slayer_notif_supression_killswitch",
         label: "Disable suppressing notifications with slayer game active",
-        defaultConfig: { enabled: !1 },
+        defaultConfig: {
+            enabled: !1,
+        },
         treatments: [
             {
                 id: 1,
                 label: "Disable suppressing",
-                config: { enabled: !0 },
+                config: {
+                    enabled: !0,
+                },
             },
         ],
     });
@@ -24,7 +30,17 @@ class d extends (r = i.Ay.Store) {
         this.waitFor(o.default);
     }
     areSlayerNotificationsSuppressed() {
-        if (u.getCurrentConfig({ location: "Store" }, { autoTrackExposure: !1 }).enabled) return !1;
+        if (
+            u.getCurrentConfig(
+                {
+                    location: "Store",
+                },
+                {
+                    autoTrackExposure: !1,
+                },
+            ).enabled
+        )
+            return !1;
         for (let e in c) if (c[e] === o.default.getId()) return !0;
         return !1;
     }

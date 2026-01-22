@@ -16,7 +16,7 @@ var i,
     o = a(64700),
     d = a(503698),
     s = a.n(d),
-    M = a(432022),
+    M = a(108531),
     l = a(311907),
     m = a(562465),
     u = a(397927),
@@ -40,7 +40,9 @@ var i,
     F = (((i = {}).WUMPUS_FLIGHT = "wumpus_flight"), (i.GRADIENT_HIGHLIGHT = "gradient_highlight"), i);
 async function O(e, t) {
     try {
-        _.h.dispatch({ type: "PURCHASED_ITEMS_FESTIVITY_IS_FETCHING_WOW_MOMENT_MEDIA" });
+        _.h.dispatch({
+            type: "PURCHASED_ITEMS_FESTIVITY_IS_FETCHING_WOW_MOMENT_MEDIA",
+        });
         let a = e ? b.A : S.A;
         window.matchMedia("(min-width: 1012px) and (max-width: 1980px)").matches ||
         window.matchMedia("(min-height: 720px) and (max-height: 1408px)").matches
@@ -59,9 +61,13 @@ async function O(e, t) {
                 wumpusMedia: i,
             });
     } catch (e) {
-        f.A.captureException(e), _.h.dispatch({ type: "PURCHASED_ITEMS_FESTIVITY_FETCH_WOW_MOMENT_MEDIA_FAILURE" });
+        f.A.captureException(e),
+            _.h.dispatch({
+                type: "PURCHASED_ITEMS_FESTIVITY_FETCH_WOW_MOMENT_MEDIA_FAILURE",
+            });
     }
 }
+
 function C() {
     let e = (0, l.bG)([r.A], () => r.A.useReducedMotion),
         [t, a] = o.useState(null),
@@ -86,9 +92,11 @@ function C() {
                     (n = setTimeout(() => {
                         _(!1),
                             U(!0),
-                            E.default.track(A.HAw.PREMIUM_WOW_MOMENT_VIEWED, { wow_moment_type: "gradient_highlight" }),
+                            E.default.track(A.HAw.PREMIUM_WOW_MOMENT_VIEWED, {
+                                wow_moment_type: "gradient_highlight",
+                            }),
                             (0, T.o)(!1);
-                    }, 2000)));
+                    }, 2e3)));
             }
             return (
                 p._.subscribe(A.jej.PREMIUM_SUBSCRIPTION_CREATED, t),
@@ -101,12 +109,16 @@ function C() {
         [F, C] = o.useState(!1),
         H = (0, u.zhh)({
             opacity: 0.2 * !!P,
-            config: { duration: 100 },
+            config: {
+                duration: 100,
+            },
         }),
         N = (0, u.zhh)(
             {
                 x: F ? "100%" : "-100%",
-                config: { duration: 500 },
+                config: {
+                    duration: 500,
+                },
             },
             F ? "respect-motion-settings" : "animate-never",
         );
@@ -116,7 +128,7 @@ function C() {
             P &&
                 (e = window.setTimeout(() => {
                     C(!0);
-                }, 1000)),
+                }, 1e3)),
             () => {
                 window.clearTimeout(e);
             }
@@ -128,7 +140,7 @@ function C() {
                 F &&
                     (e = window.setTimeout(() => {
                         C(!1), U(!1);
-                    }, 1000)),
+                    }, 1e3)),
                 () => {
                     window.clearTimeout(e);
                 }
@@ -148,7 +160,9 @@ function C() {
                     className: W.tN,
                     onPlay: () => {
                         clearTimeout(n),
-                            E.default.track(A.HAw.PREMIUM_WOW_MOMENT_VIEWED, { wow_moment_type: "wumpus_flight" });
+                            E.default.track(A.HAw.PREMIUM_WOW_MOMENT_VIEWED, {
+                                wow_moment_type: "wumpus_flight",
+                            });
                     },
                     onEnded: () => {
                         _(!1), (0, T.o)(!1), window.URL.revokeObjectURL(t), a(null);

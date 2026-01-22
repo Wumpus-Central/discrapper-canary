@@ -1,11 +1,16 @@
-n.d(t, { F: () => s }), n(311907);
+n.d(t, {
+    F: () => s,
+}),
+    n(311907);
 var r = n(812808),
     i = n(943577),
     a = n(954571);
+
 function s() {
     let e = (0, r.B)();
     return o(i.A.nowPlayingCards, e);
 }
+
 function o(e, t) {
     let n = e.reduce((e, t) => {
         var n;

@@ -1,4 +1,6 @@
-n.d(t, { i: () => b });
+n.d(t, {
+    i: () => b,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -11,6 +13,7 @@ var r = n(627968),
     f = n(112378),
     p = n(885621),
     _ = n(658122);
+
 function h(e, t, n) {
     return (
         t in e
@@ -24,6 +27,7 @@ function h(e, t, n) {
         e
     );
 }
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -40,6 +44,7 @@ function m(e) {
     }
     return e;
 }
+
 function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -52,6 +57,7 @@ function g(e, t) {
     }
     return n;
 }
+
 function E(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -63,6 +69,7 @@ function E(e, t) {
         e
     );
 }
+
 function b(e) {
     let {
             color: t = "default",
@@ -81,7 +88,11 @@ function b(e) {
     }, [b]);
     let S = i.useCallback(
         (e) => {
-            O(e), null == A || A({ type: c.Q.RADIO });
+            O(e),
+                null == A ||
+                    A({
+                        type: c.Q.RADIO,
+                    });
         },
         [O, A],
     );
@@ -106,7 +117,9 @@ function b(e) {
                     (0, r.jsxs)("div", {
                         className: _.label,
                         children: [
-                            (0, r.jsx)(f.V, { children: (0, l.J)(n, e) }),
+                            (0, r.jsx)(f.V, {
+                                children: (0, l.J)(n, e),
+                            }),
                             null != h &&
                                 (0, r.jsx)("div", {
                                     className: _.subtext,

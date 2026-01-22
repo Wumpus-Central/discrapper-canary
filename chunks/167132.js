@@ -1,4 +1,7 @@
-n.d(t, { A: () => E }), n(896048);
+n.d(t, {
+    A: () => E,
+}),
+    n(896048);
 var r = n(451988),
     i = n(843472),
     a = n(956793),
@@ -8,6 +11,7 @@ var r = n(451988),
     c = n(977997),
     u = n(607567),
     d = n(985018);
+
 function f(e, t, n) {
     return (
         t in e
@@ -22,7 +26,8 @@ function f(e, t, n) {
     );
 }
 let p = 3,
-    _ = 180000;
+    _ = 18e4;
+
 function h() {
     let e = c.A.getCurrentClientVoiceChannelId(null);
     if (null == e) return !1;
@@ -32,11 +37,17 @@ function h() {
         null == o.Ay.getSelfEmbeddedActivityForChannel(e)
     );
 }
+
 function m() {
     if (!h()) return;
     let e = c.A.getCurrentClientVoiceChannelId(null);
     null != e &&
-        (i.A.sendBotMessage(e, d.intl.formatToPlainString(d.t.XYof5G, { number: p })),
+        (i.A.sendBotMessage(
+            e,
+            d.intl.formatToPlainString(d.t.XYof5G, {
+                number: p,
+            }),
+        ),
         a.default.selectVoiceChannel(null));
 }
 class g extends s.A {

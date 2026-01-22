@@ -11,6 +11,7 @@ var r = n(64700),
     i = n(647307),
     a = n(931239),
     s = n(167789);
+
 function o(e, t, n) {
     return (
         t in e
@@ -24,6 +25,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -40,6 +42,7 @@ function l(e) {
     }
     return e;
 }
+
 function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -52,6 +55,7 @@ function c(e, t) {
     }
     return n;
 }
+
 function u(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -70,12 +74,15 @@ let f = (0, a.v)(() => ({
     riveAssetCache: new Map(),
     riveOverrideCache: {},
 }));
+
 function p(e) {
     let t = h(e),
         n = f((t) => (null == e ? null : t.riveAssetCache.get(e)));
     return ((0, r.useEffect)(() => {
         if (null == e || null != t || f.getState().riveAssetCache.has(e)) return;
-        let n = new i.RiveFile({ src: e }),
+        let n = new i.RiveFile({
+                src: e,
+            }),
             r = () => {
                 n.init(),
                     n.on(i.EventType.Load, () => {
@@ -83,7 +90,9 @@ function p(e) {
                             status: "loaded",
                             buffer: n.buffer,
                         };
-                        f.setState((n) => ({ riveAssetCache: n.riveAssetCache.set(e, t) }));
+                        f.setState((n) => ({
+                            riveAssetCache: n.riveAssetCache.set(e, t),
+                        }));
                     }),
                     n.on(i.EventType.LoadError, (t) => {
                         console.error("Rive file load error", e, t);
@@ -103,14 +112,21 @@ function p(e) {
                 buffer: null,
             };
 }
+
 function _(e, t) {
     let n = f.getState().riveOverrideCache;
-    f.setState({ riveOverrideCache: u(l({}, n), { [e]: t }) });
+    f.setState({
+        riveOverrideCache: u(l({}, n), {
+            [e]: t,
+        }),
+    });
 }
+
 function h(e) {
     let t = f((e) => e.riveOverrideCache);
     return null == e ? null : t[e];
 }
+
 function m(e) {
     return null != f((e) => e.riveOverrideCache)[e];
 }

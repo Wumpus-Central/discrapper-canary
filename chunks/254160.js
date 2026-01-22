@@ -1,11 +1,14 @@
-n.d(t, { f: () => s });
+n.d(t, {
+    f: () => s,
+});
 var r = n(887924);
 let i = new (n(626584).A)("codedLinkQueue"),
     a = new r.default({
         concurrency: 5,
         intervalCap: 10,
-        interval: 2000,
+        interval: 2e3,
     });
+
 function s(e) {
     a.add(e);
 }

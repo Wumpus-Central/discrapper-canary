@@ -14,6 +14,7 @@ var r = n(627968),
     f = n(511274),
     p = n(985018),
     _ = n(100624);
+
 function h(e, t, n) {
     return (
         t in e
@@ -27,6 +28,7 @@ function h(e, t, n) {
         e
     );
 }
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -43,6 +45,7 @@ function m(e) {
     }
     return e;
 }
+
 function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -55,6 +58,7 @@ function g(e, t) {
     }
     return n;
 }
+
 function E(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -66,6 +70,7 @@ function E(e, t) {
         e
     );
 }
+
 function b(e, t) {
     if (null == e) return {};
     var n,
@@ -82,6 +87,7 @@ function b(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function y(e, t) {
     if (null == e) return {};
     var n,
@@ -92,6 +98,7 @@ function y(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function O(e, t) {
     let n = i.useContext(c.cK);
     return (
@@ -109,6 +116,7 @@ function O(e, t) {
         n
     );
 }
+
 function A(e) {
     let { accessory: t, inputSize: n, disabled: i } = e;
     if ("string" == typeof t)
@@ -146,7 +154,12 @@ function A(e) {
     if ("type" in t && "tags" === t.type) {
         let { type: e } = t,
             n = b(t, ["type"]);
-        return (0, r.jsx)(o.CR_, E(m({}, n), { layout: "inline" }));
+        return (0, r.jsx)(
+            o.CR_,
+            E(m({}, n), {
+                layout: "inline",
+            }),
+        );
     }
     if ("type" in t && "image" === t.type)
         return (0, r.jsx)("img", {
@@ -165,6 +178,7 @@ function A(e) {
         }),
     });
 }
+
 function v(e) {
     let { inputSize: t, onClick: n } = e,
         i = "md" === t ? "xs" : "xxs";
@@ -178,6 +192,7 @@ function v(e) {
         }),
     });
 }
+
 function S(e) {
     var t;
     let {
@@ -302,36 +317,44 @@ function S(e) {
                     X,
                     (0, r.jsx)(
                         o.vN3,
-                        E(m({ ringTarget: K }, c), {
-                            children: (0, r.jsx)(
-                                I,
-                                E(
-                                    m(
-                                        {
-                                            name: u,
-                                            className: _.input,
-                                            disabled: n,
-                                            readOnly: z,
-                                            "aria-required": k.required,
-                                            type: p,
-                                            placeholder: h,
-                                            maxLength: g,
-                                            minLength: T,
-                                            value: y,
-                                            defaultValue: S,
-                                            "data-mana-component": "text-input",
-                                        },
-                                        M,
-                                    ),
-                                    {
-                                        onChange: B,
-                                        onBlur: Y,
-                                        onFocus: H,
-                                        ref: l,
-                                    },
-                                ),
+                        E(
+                            m(
+                                {
+                                    ringTarget: K,
+                                },
+                                c,
                             ),
-                        }),
+                            {
+                                children: (0, r.jsx)(
+                                    I,
+                                    E(
+                                        m(
+                                            {
+                                                name: u,
+                                                className: _.input,
+                                                disabled: n,
+                                                readOnly: z,
+                                                "aria-required": k.required,
+                                                type: p,
+                                                placeholder: h,
+                                                maxLength: g,
+                                                minLength: T,
+                                                value: y,
+                                                defaultValue: S,
+                                                "data-mana-component": "text-input",
+                                            },
+                                            M,
+                                        ),
+                                        {
+                                            onChange: B,
+                                            onBlur: Y,
+                                            onFocus: H,
+                                            ref: l,
+                                        },
+                                    ),
+                                ),
+                            },
+                        ),
                     ),
                     q,
                 ],
@@ -339,6 +362,7 @@ function S(e) {
         }),
     );
 }
+
 function I(e) {
     let { value: t, defaultValue: n, "aria-labelledby": a } = e,
         s = b(e, ["value", "defaultValue", "aria-labelledby"]),

@@ -16,8 +16,11 @@ var r = n(627968),
     g = n(49678),
     p = n(927813),
     b = n(985018);
+
 function m(e) {
-    let { enabled: t } = c.A.useExperiment({ location: "LongPressMessageActionSheet" }),
+    let { enabled: t } = c.A.useExperiment({
+            location: "LongPressMessageActionSheet",
+        }),
         n = (0, i.bG)([u.A], () => u.A.getSavedMessage(e.channel_id, e.id)),
         l = y({
             message: e,
@@ -74,7 +77,9 @@ function m(e) {
                   id: "save-for-later-upsell",
                   label: b.intl.string(b.t.tpxJto),
                   icon: o.tvc,
-                  iconProps: { color: a.k0.PREMIUM_TIER_2 },
+                  iconProps: {
+                      color: a.k0.PREMIUM_TIER_2,
+                  },
                   action: () =>
                       (0, s.Y)({
                           channelId: e.channel_id,
@@ -84,6 +89,7 @@ function m(e) {
               })
         : null;
 }
+
 function y(e) {
     let { message: t, savedMessage: n } = e,
         [i, a] = l.useState(new Date());
@@ -103,7 +109,9 @@ function y(e) {
                 }),
             [t.channel_id, t.id],
         ),
-        u = (0, g.S)({ createReminder: c }),
+        u = (0, g.S)({
+            createReminder: c,
+        }),
         { dueInText: f } = (0, d.Ce)({
             dueAt: null == n ? void 0 : n.saveData.dueAt,
             now: i,

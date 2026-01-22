@@ -1,4 +1,7 @@
-n.d(t, { A: () => N }), n(896048);
+n.d(t, {
+    A: () => N,
+}),
+    n(896048);
 var r = n(687123),
     i = n(508602),
     a = n(843472),
@@ -18,6 +21,7 @@ var r = n(687123),
     b = n(36149),
     y = n(652215),
     O = n(835002);
+
 function A(e, t, n) {
     return (
         t in e
@@ -32,6 +36,7 @@ function A(e, t, n) {
     );
 }
 let v = new c.A("AgeVerificationManager");
+
 function S(e) {
     var t, n, r;
     let { channelId: a, message: s } = e,
@@ -49,12 +54,14 @@ function S(e) {
                 (f.A.showSuccessToast(O.OB.TIGGER_PAWTECT_VERIFIED), (0, E.Vh)(E.oQ.VERIFIED_TEEN));
     }
 }
+
 function I(e) {
     a.A.fetchMessages({
         channelId: e,
         limit: y.EMb,
     });
 }
+
 function T(e) {
     let t = _.A.getChannel(e);
     ((null == t ? void 0 : t.type) === y.rbe.GUILD_FORUM || (null == t ? void 0 : t.type) === y.rbe.GUILD_MEDIA) &&

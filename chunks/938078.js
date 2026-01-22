@@ -1,9 +1,12 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 var r = n(627968);
 n(64700);
 var i = n(64749),
     l = n(508595),
     s = n(57222);
+
 function a(e) {
     let {
             guildId: t,

@@ -1,4 +1,7 @@
-n.d(t, { A: () => j }), n(896048);
+n.d(t, {
+    A: () => j,
+}),
+    n(896048);
 var i = n(627968),
     r = n(64700),
     l = n(582754),
@@ -15,6 +18,7 @@ var i = n(627968),
     g = n(851121),
     h = n(734087),
     x = n(609621);
+
 function j(e) {
     let t,
         n,
@@ -74,7 +78,9 @@ function j(e) {
                     developersArticle: p.X7G.API_DOCS_WEBHOOKS,
                 }),
             }),
-            (0, i.jsx)(a.cGx, { className: g.zN }),
+            (0, i.jsx)(a.cGx, {
+                className: g.zN,
+            }),
             y.length > 0
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [

@@ -1,4 +1,7 @@
-n.d(t, { A: () => f }), n(896048);
+n.d(t, {
+    A: () => f,
+}),
+    n(896048);
 var r = n(73153),
     l = n(846293),
     i = n(159001),
@@ -42,7 +45,11 @@ let f = {
                         let t = new Set((0, u.Kk)());
                         t.add(e.guild.id), s.JG.updateSetting(Array.from(t));
                     }
-                    null != n && n.length > 0 && (0, i.GL)(e.guild.id, { nick: n });
+                    null != n &&
+                        n.length > 0 &&
+                        (0, i.GL)(e.guild.id, {
+                            nick: n,
+                        });
                 }
                 this.close();
             },
@@ -71,6 +78,9 @@ let f = {
                 changed_from_default: i,
             });
         }
-        (0, a.xP)(), r.h.dispatch({ type: "INVITE_MODAL_CLOSE" });
+        (0, a.xP)(),
+            r.h.dispatch({
+                type: "INVITE_MODAL_CLOSE",
+            });
     },
 };

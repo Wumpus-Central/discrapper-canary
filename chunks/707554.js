@@ -5,6 +5,7 @@ n.d(t, {
 });
 var r = n(627968),
     i = n(64700);
+
 function a(e, t, n) {
     return (
         t in e
@@ -18,6 +19,7 @@ function a(e, t, n) {
         e
     );
 }
+
 function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,6 +36,7 @@ function s(e) {
     }
     return e;
 }
+
 function o(e, t) {
     return {
         getLevelAndMarkUsed: () => ((t.current = !0), e),
@@ -41,7 +44,12 @@ function o(e, t) {
         level: e,
     };
 }
-let l = i.createContext(o(2, { current: !1 }));
+let l = i.createContext(
+    o(2, {
+        current: !1,
+    }),
+);
+
 function c(e) {
     let { component: t, children: n, forceLevel: a } = e,
         s = i.useContext(l),
@@ -67,11 +75,24 @@ function c(e) {
         ],
     });
 }
+
 function u(e) {
     let t = d(),
         n = "h".concat(Math.min(t, 6));
-    return (0, r.jsx)(n, s({}, t > 6 ? { "data-excessive-heading-level": t } : {}, e));
+    return (0, r.jsx)(
+        n,
+        s(
+            {},
+            t > 6
+                ? {
+                      "data-excessive-heading-level": t,
+                  }
+                : {},
+            e,
+        ),
+    );
 }
+
 function d() {
     let { getLevelAndMarkUsed: e } = i.useContext(l);
     return e();

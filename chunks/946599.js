@@ -1,4 +1,7 @@
-n.d(t, { A: () => y }), n(896048);
+n.d(t, {
+    A: () => y,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -13,6 +16,7 @@ var r = n(627968),
     b = n(394245),
     g = n(985018),
     m = n(542467);
+
 function y(e) {
     var t;
     let { tags: n, isCurrentUser: i, widgetType: o, applicationId: c, className: u, disableInteraction: y = !1 } = e,
@@ -74,10 +78,16 @@ function y(e) {
                                 isExpanded: N,
                                 numberOfOverflowingTags: T,
                                 onExpandTags: () => {
-                                    D(!0), I({ action: "EXPAND_GAME_TAGS" });
+                                    D(!0),
+                                        I({
+                                            action: "EXPAND_GAME_TAGS",
+                                        });
                                 },
                                 onCollapseTags: () => {
-                                    D(!1), I({ action: "COLLAPSE_GAME_TAGS" });
+                                    D(!1),
+                                        I({
+                                            action: "COLLAPSE_GAME_TAGS",
+                                        });
                                 },
                                 disableInteraction: y,
                             }),
@@ -103,7 +113,9 @@ let O = (e) => {
         className: m.Tc,
         ref: s,
         children: [
-            (0, r.jsx)(O, { size: "xxs" }),
+            (0, r.jsx)(O, {
+                size: "xxs",
+            }),
             (0, r.jsx)(c.Text, {
                 variant: "text-xxs/medium",
                 color: "text-subtle",
@@ -124,7 +136,9 @@ let O = (e) => {
                                 });
                         },
                         className: m.DT,
-                        "aria-label": g.intl.formatToPlainString(g.t.GCn1ne, { tag: y() }),
+                        "aria-label": g.intl.formatToPlainString(g.t.GCn1ne, {
+                            tag: y(),
+                        }),
                         children: (0, r.jsx)(c.PGe, {
                             size: "xxs",
                             color: "currentColor",
@@ -134,6 +148,7 @@ let O = (e) => {
         ],
     });
 };
+
 function j(e) {
     let { numberOfOverflowingTags: t } = e;
     return (0, r.jsx)(c.Text, {
@@ -142,6 +157,7 @@ function j(e) {
         children: "+".concat(t),
     });
 }
+
 function x() {
     return (0, r.jsx)(u.A, {
         direction: u.A.Directions.LEFT,
@@ -150,6 +166,7 @@ function x() {
         className: m.OW,
     });
 }
+
 function h(e) {
     let {
             isExpanded: t,
@@ -160,12 +177,18 @@ function h(e) {
             buttonRef: s,
         } = e,
         u = t ? g.intl.string(g.t.z9VPrQ) : g.intl.string(g.t.mriLXL),
-        d = t ? g.intl.string(g.t.z9VPrQ) : g.intl.formatToPlainString(g.t.F6iMs4, { count: n });
+        d = t
+            ? g.intl.string(g.t.z9VPrQ)
+            : g.intl.formatToPlainString(g.t.F6iMs4, {
+                  count: n,
+              });
     return a
         ? (0, r.jsx)("div", {
               className: m.X1,
               ref: s,
-              children: (0, r.jsx)(j, { numberOfOverflowingTags: n }),
+              children: (0, r.jsx)(j, {
+                  numberOfOverflowingTags: n,
+              }),
           })
         : (0, r.jsx)(o.m, {
               text: u,
@@ -175,7 +198,11 @@ function h(e) {
                   onClick: t ? i : l,
                   "aria-label": d,
                   className: t ? m.cS : m.X1,
-                  children: t ? (0, r.jsx)(x, {}) : (0, r.jsx)(j, { numberOfOverflowingTags: n }),
+                  children: t
+                      ? (0, r.jsx)(x, {})
+                      : (0, r.jsx)(j, {
+                            numberOfOverflowingTags: n,
+                        }),
               }),
           });
 }

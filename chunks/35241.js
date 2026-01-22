@@ -1,4 +1,6 @@
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var r = n(627968),
     i = n(64700),
     a = n(397927),
@@ -8,6 +10,7 @@ var r = n(627968),
     c = n(183555),
     u = n(993401),
     d = n(985018);
+
 function f(e, t, n) {
     return (
         t in e
@@ -21,6 +24,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,6 +41,7 @@ function p(e) {
     }
     return e;
 }
+
 function _(e) {
     let { user: t, viewProfileItem: n } = e,
         f = i.useRef(null),
@@ -67,7 +72,15 @@ function _(e) {
                       onSelect: void 0,
                       onClose: t,
                       "aria-label": d.intl.string(d.t.AXIHpV),
-                      children: m.map((e, t) => (0, r.jsx)(a.rXV, { children: e.map((e) => e) }, t)),
+                      children: m.map((e, t) =>
+                          (0, r.jsx)(
+                              a.rXV,
+                              {
+                                  children: e.map((e) => e),
+                              },
+                              t,
+                          ),
+                      ),
                   });
               },
               children: (e) =>

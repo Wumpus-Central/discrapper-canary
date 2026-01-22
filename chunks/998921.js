@@ -1,4 +1,9 @@
-n.d(t, { A: () => I }), n(896048), n(65821), n(457529);
+n.d(t, {
+    A: () => I,
+}),
+    n(896048),
+    n(65821),
+    n(457529);
 var r = n(264572),
     i = n(143236),
     l = n(735438),
@@ -9,6 +14,7 @@ var r = n(264572),
     u = n(313731),
     d = n(546983),
     p = n(652215);
+
 function f(e, t, n) {
     return (
         t in e
@@ -31,12 +37,15 @@ let h = o.Ay.requireModule("discord_rpc").RPCIPC,
         PING: 3,
         PONG: 4,
     };
+
 function m(e, t) {
     null != e.setHandshakeComplete ? e.setHandshakeComplete(t) : (e._didHandshake = t);
 }
+
 function b(e) {
     return null != e.getHandshakeComplete ? e.getHandshakeComplete() : e._didHandshake;
 }
+
 function _(e) {
     return new Promise((t, n) => {
         "string" == typeof e && (e = h.net.createConnection(e));
@@ -71,7 +80,7 @@ function _(e) {
                     e.on("pong", () => n(Error("socket responded with pong")));
                 }),
                 new Promise((e, t) => {
-                    setTimeout(() => t(Error("socket alive timeout")), 1000);
+                    setTimeout(() => t(Error("socket alive timeout")), 1e3);
                 }),
             ]).then(
                 () => {
@@ -84,6 +93,7 @@ function _(e) {
         return e.write(E(g.PING, a().uniqueId())), l.then(t, n);
     });
 }
+
 function E(e, t) {
     t = JSON.stringify(t);
     let n = r.Buffer.byteLength(t),
@@ -204,7 +214,7 @@ class y extends i.EventEmitter {
                     );
                 } catch (e) {}
                 e.destroy();
-            }, 10000);
+            }, 1e4);
         e.on("readable", () => {
             let n = e.read();
             null != n && t.read(r.Buffer.from(n));

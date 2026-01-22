@@ -1,4 +1,6 @@
-n.d(t, { j: () => y });
+n.d(t, {
+    j: () => y,
+});
 var r = n(64700),
     i = n(731738),
     a = n(417597),
@@ -16,6 +18,7 @@ var r = n(64700),
     g = n(191627),
     E = n(652215),
     b = n(204925);
+
 function y(e) {
     let { location: t, onMountEffect: n } = e,
         y = (0, h.A)(),
@@ -53,7 +56,9 @@ function y(e) {
                     initial_page: g.zu[r],
                     source: g.iN[t],
                 }),
-                    l.A.increment({ name: i.K.FAMILY_CENTER_VIEW });
+                    l.A.increment({
+                        name: i.K.FAMILY_CENTER_VIEW,
+                    });
             }
         }, [A, N, t]),
         r.useEffect(() => {

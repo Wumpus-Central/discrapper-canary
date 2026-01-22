@@ -1,4 +1,8 @@
-r.d(t, { Ay: () => w }), r(896048), r(65821);
+r.d(t, {
+    Ay: () => w,
+}),
+    r(896048),
+    r(65821);
 var n = r(627968);
 r(64700);
 var l = r(141931),
@@ -23,7 +27,11 @@ var l = r(141931),
 let A = [
         {
             value: g.jQ.PRESET_AUTO,
-            canUse: (e) => e !== l.fS.CAMERA && (0, o.eO)({ location: "StreamOptionsMenu" }).allowAutoQuality,
+            canUse: (e) =>
+                e !== l.fS.CAMERA &&
+                (0, o.eO)({
+                    location: "StreamOptionsMenu",
+                }).allowAutoQuality,
         },
         {
             value: g.jQ.PRESET_VIDEO,
@@ -57,6 +65,7 @@ let A = [
         },
     ],
     O = [g.kn.FPS_15, g.kn.FPS_30, g.kn.FPS_60];
+
 function C(e) {
     let { label: t } = e;
     return (0, n.jsxs)("div", {
@@ -70,6 +79,7 @@ function C(e) {
         ],
     });
 }
+
 function w(e) {
     var t, r;
     let { onClose: o, onSelect: S } = e,
@@ -183,7 +193,9 @@ function w(e) {
                                         checked: R === t,
                                         label:
                                             t !== g.on.RESOLUTION_720
-                                                ? (0, n.jsx)(C, { label: (0, p.b)(t) })
+                                                ? (0, n.jsx)(C, {
+                                                      label: (0, p.b)(t),
+                                                  })
                                                 : (0, p.b)(t),
                                         action: () =>
                                             (function (e) {
@@ -216,7 +228,9 @@ function w(e) {
                                         checked: P === e,
                                         label:
                                             e === g.kn.FPS_60
-                                                ? (0, n.jsx)(C, { label: "".concat(e, "fps") })
+                                                ? (0, n.jsx)(C, {
+                                                      label: "".concat(e, "fps"),
+                                                  })
                                                 : "".concat(e, "fps"),
                                         action: () =>
                                             (function (e) {

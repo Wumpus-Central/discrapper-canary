@@ -24,7 +24,7 @@ var r = n(56636),
                 return this.millisecond;
             }),
             (e.prototype.getTime = function () {
-                return (60 * this.hour * 60 + 60 * this.minute + this.second) * 1000 + this.millisecond;
+                return (60 * this.hour * 60 + 60 * this.minute + this.second) * 1e3 + this.millisecond;
             }),
             e
         );
@@ -44,7 +44,7 @@ var r = n(56636),
                     e.getUTCHours(),
                     e.getUTCMinutes(),
                     e.getUTCSeconds(),
-                    e.valueOf() % 1000,
+                    e.valueOf() % 1e3,
                 );
             }),
             (t.prototype.getWeekday = function () {

@@ -1,4 +1,6 @@
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var r = n(562465),
     i = n(73153),
     a = n(803306),
@@ -20,7 +22,9 @@ let _ = {
             var a;
             let s = await r.Bo.get({
                 url: p.Rsh.USER_WISHLIST(e),
-                query: { source: null != n ? n : d.B5.USER_PROFILE },
+                query: {
+                    source: null != n ? n : d.B5.USER_PROFILE,
+                },
                 rejectWithError: !0,
             });
             (null == (a = s.body) ? void 0 : a.wishlist_items) == null &&
@@ -46,7 +50,9 @@ let _ = {
         try {
             n = await r.Bo.post({
                 url: p.Rsh.USER_WISHLIST_ITEMS,
-                body: { sku_id: e },
+                body: {
+                    sku_id: e,
+                },
                 rejectWithError: !0,
             });
             let a = f.A.fromServer(n.body);
@@ -130,7 +136,9 @@ let _ = {
             try {
                 await r.Bo.patch({
                     url: p.Rsh.USER_WISHLIST_PATCH(e),
-                    body: { visibility: t },
+                    body: {
+                        visibility: t,
+                    },
                     rejectWithError: !0,
                 }),
                     i.h.dispatch({

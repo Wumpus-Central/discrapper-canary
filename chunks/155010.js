@@ -5,11 +5,21 @@ e.exports = function (e) {
             relevance: 10,
         },
         r = [
-            { begin: /\\[*_`]/ },
-            { begin: /\\\\\*{2}[^\n]*?\*{2}/ },
-            { begin: /\\\\_{2}[^\n]*_{2}/ },
-            { begin: /\\\\`{2}[^\n]*`{2}/ },
-            { begin: /[:;}][*_`](?![*_`])/ },
+            {
+                begin: /\\[*_`]/,
+            },
+            {
+                begin: /\\\\\*{2}[^\n]*?\*{2}/,
+            },
+            {
+                begin: /\\\\_{2}[^\n]*_{2}/,
+            },
+            {
+                begin: /\\\\`{2}[^\n]*`{2}/,
+            },
+            {
+                begin: /[:;}][*_`](?![*_`])/,
+            },
         ],
         i = [
             {
@@ -74,8 +84,12 @@ e.exports = function (e) {
         name: "AsciiDoc",
         aliases: ["adoc"],
         contains: [
-            e.COMMENT("^/{4,}\\n", "\\n/{4,}$", { relevance: 10 }),
-            e.COMMENT("^//", "$", { relevance: 0 }),
+            e.COMMENT("^/{4,}\\n", "\\n/{4,}$", {
+                relevance: 10,
+            }),
+            e.COMMENT("^//", "$", {
+                relevance: 0,
+            }),
             {
                 className: "title",
                 begin: "^\\.\\w.*$",
@@ -89,8 +103,12 @@ e.exports = function (e) {
                 className: "section",
                 relevance: 10,
                 variants: [
-                    { begin: "^(={1,6})[ \t].+?([ \t]\\1)?$" },
-                    { begin: "^[^\\[\\]\\n]+?\\n[=\\-~\\^\\+]{2,}$" },
+                    {
+                        begin: "^(={1,6})[ 	].+?([ 	]\\1)?$",
+                    },
+                    {
+                        begin: "^[^\\[\\]\\n]+?\\n[=\\-~\\^\\+]{2,}$",
+                    },
                 ],
             },
             {
@@ -137,7 +155,14 @@ e.exports = function (e) {
             ...a,
             {
                 className: "string",
-                variants: [{ begin: "``.+?''" }, { begin: "`.+?'" }],
+                variants: [
+                    {
+                        begin: "``.+?''",
+                    },
+                    {
+                        begin: "`.+?'",
+                    },
+                ],
             },
             {
                 className: "code",

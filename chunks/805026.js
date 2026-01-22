@@ -41,6 +41,7 @@ var r = n(961358),
     G = n(689969),
     V = n(11358),
     F = n(812892);
+
 function B(e, t, n) {
     return (
         t in e
@@ -54,6 +55,7 @@ function B(e, t, n) {
         e
     );
 }
+
 function H(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -70,6 +72,7 @@ function H(e) {
     }
     return e;
 }
+
 function Y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -82,6 +85,7 @@ function Y(e, t) {
     }
     return n;
 }
+
 function W(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -240,15 +244,34 @@ let K = {
             t,
         );
     };
+
 function q(e) {
     return "".concat(e, ".onnx");
 }
-(K["robot-synthetic"] = z(K.robot, { name: T.default["Ur/62B"] })),
-    (K["chords-2part"] = z(K.tunes, { name: T.default.TYbrfK })),
-    (K["chords-choir"] = z(K.tunes, { name: T.default.OnZ6g9 })),
-    (K["chords-dev"] = z(K.tunes, { name: T.default["2XH8tr"] })),
-    (K["robot-dev"] = z(K.robot, { name: T.default.XhhSOi })),
-    (K["ghost-dev"] = z(K.ghost, { name: T.default.KmHwvD })),
-    (K["wobble-dev"] = z(K.ghost, { name: T.default["6PDpse"] })),
-    (K["fan-dev"] = z(K.robot, { name: T.default["87aX+2"] })),
-    (K["autotune-dev"] = z(K.tunes, { name: T.default.EYDrRx }));
+(K["robot-synthetic"] = z(K.robot, {
+    name: T.default["Ur/62B"],
+})),
+    (K["chords-2part"] = z(K.tunes, {
+        name: T.default.TYbrfK,
+    })),
+    (K["chords-choir"] = z(K.tunes, {
+        name: T.default.OnZ6g9,
+    })),
+    (K["chords-dev"] = z(K.tunes, {
+        name: T.default["2XH8tr"],
+    })),
+    (K["robot-dev"] = z(K.robot, {
+        name: T.default.XhhSOi,
+    })),
+    (K["ghost-dev"] = z(K.ghost, {
+        name: T.default.KmHwvD,
+    })),
+    (K["wobble-dev"] = z(K.ghost, {
+        name: T.default["6PDpse"],
+    })),
+    (K["fan-dev"] = z(K.robot, {
+        name: T.default["87aX+2"],
+    })),
+    (K["autotune-dev"] = z(K.tunes, {
+        name: T.default.EYDrRx,
+    }));

@@ -21,9 +21,13 @@ var r =
         function (e, t) {
             for (var n in e) "default" === n || Object.prototype.hasOwnProperty.call(t, n) || r(t, e, n);
         };
-Object.defineProperty(t, "__esModule", { value: !0 }), (t.validateFileType = void 0);
+Object.defineProperty(t, "__esModule", {
+    value: !0,
+}),
+    (t.validateFileType = void 0);
 let a = n(835986),
     s = n(817762);
+
 function o(e) {
     return e.some((e) => "MP4" === e) ? ["M4V"] : e.some((e) => "AAC" === e) ? ["M4A"] : [];
 }

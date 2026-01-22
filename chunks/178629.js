@@ -1,6 +1,9 @@
-n.d(t, { G: () => r });
+n.d(t, {
+    G: () => r,
+});
 var l = n(64700),
     a = n(664336);
+
 function r() {
     let e = l.useRef(new a.A()),
         t = l.useCallback((t) => {

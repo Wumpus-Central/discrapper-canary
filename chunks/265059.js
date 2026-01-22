@@ -6,6 +6,7 @@ var r,
     i = n(311907),
     a = n(73153),
     s = n(540999);
+
 function o(e, t, n) {
     return (
         t in e
@@ -19,6 +20,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -47,6 +49,7 @@ let c = 460,
         },
         sortedScreenKeys: [],
     };
+
 function d(e) {
     s.A.isDeveloper && (u = l({}, u, e.settings));
 }
@@ -78,4 +81,6 @@ class f extends (r = i.Ay.DeviceSettingsStore) {
     }
 }
 o(f, "displayName", "DevToolsSettingsStore"), o(f, "persistKey", "DevToolsSettingsStore");
-let p = new f(a.h, { DEV_TOOLS_SETTINGS_UPDATE: d });
+let p = new f(a.h, {
+    DEV_TOOLS_SETTINGS_UPDATE: d,
+});

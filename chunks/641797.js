@@ -84,7 +84,12 @@ var r = n(788409),
         var D = [];
         if (void 0 === C) return D;
         if ("comma" === a && l(C))
-            v && m && (C = i.maybeMap(C, m)), (T = [{ value: C.length > 0 ? C.join(",") || null : void 0 }]);
+            v && m && (C = i.maybeMap(C, m)),
+                (T = [
+                    {
+                        value: C.length > 0 ? C.join(",") || null : void 0,
+                    },
+                ]);
         else if (l(g)) T = g;
         else {
             var x = Object.keys(C);

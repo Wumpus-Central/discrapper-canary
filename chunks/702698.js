@@ -1,4 +1,6 @@
-a.d(n, { default: () => m });
+a.d(n, {
+    default: () => m,
+});
 var i = a(627968);
 a(64700);
 var e = a(284009),
@@ -12,6 +14,7 @@ var e = a(284009),
     u = a(927578),
     y = a(580630),
     g = a(985018);
+
 function m(t) {
     let { subscription: n, renewalMutations: a, transitionState: e, onClose: m, analyticsLocation: C } = t,
         { analyticsLocations: I } = (0, o.Ay)(c.A.SUBSCRIPTION_CANCEL_DOWNGRADE_MODAL),

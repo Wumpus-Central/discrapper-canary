@@ -1,4 +1,7 @@
-n.d(t, { U: () => P }), n(896048);
+n.d(t, {
+    U: () => P,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -19,6 +22,7 @@ var r = n(627968),
     y = n(731854),
     O = n(985018),
     A = n(534393);
+
 function v(e, t, n) {
     return (
         t in e
@@ -32,6 +36,7 @@ function v(e, t, n) {
         e
     );
 }
+
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -48,6 +53,7 @@ function S(e) {
     }
     return e;
 }
+
 function I(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -60,6 +66,7 @@ function I(e, t) {
     }
     return n;
 }
+
 function T(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -71,6 +78,7 @@ function T(e, t) {
         e
     );
 }
+
 function C(e, t) {
     if (null == e) return {};
     var n,
@@ -87,6 +95,7 @@ function C(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function N(e, t) {
     if (null == e) return {};
     var n,
@@ -98,6 +107,7 @@ function N(e, t) {
     return i;
 }
 let R = "SHOW_MORE";
+
 function w(e) {
     return {
         [y.oh.AUDIO_INPUT]: {
@@ -105,7 +115,9 @@ function w(e) {
             Icon: u.cNw,
             getCanSetDevice: (e) => e.supports(y.O5.AUDIO_INPUT_DEVICE),
             getWarningMessage: () =>
-                O.intl.format(O.t["1iK6UW"], { onDownloadClick: () => (0, _._)("Help Text Input Devices") }),
+                O.intl.format(O.t["1iK6UW"], {
+                    onDownloadClick: () => (0, _._)("Help Text Input Devices"),
+                }),
             getLocation: (e) => "".concat(e, ".SingleSelectInputDevices"),
         },
         [y.oh.AUDIO_OUTPUT]: {
@@ -113,7 +125,9 @@ function w(e) {
             Icon: u.LoC,
             getCanSetDevice: (e) => e.supports(y.O5.AUDIO_OUTPUT_DEVICE),
             getWarningMessage: () =>
-                O.intl.format(O.t.Ow0dbF, { onDownloadClick: () => (0, _._)("Help Text Output Devices") }),
+                O.intl.format(O.t.Ow0dbF, {
+                    onDownloadClick: () => (0, _._)("Help Text Output Devices"),
+                }),
             getLocation: (e) => "".concat(e, ".SingleSelectOutputDevices"),
         },
         [y.oh.VIDEO_INPUT]: {
@@ -121,11 +135,14 @@ function w(e) {
             Icon: u.xpe,
             getCanSetDevice: (e) => e.isVideoAvailable(),
             getWarningMessage: () =>
-                O.intl.format(O.t["1iK6UW"], { onDownloadClick: () => (0, _._)("Help Text Video Devices") }),
+                O.intl.format(O.t["1iK6UW"], {
+                    onDownloadClick: () => (0, _._)("Help Text Video Devices"),
+                }),
             getLocation: (e) => "".concat(e, ".SingleSelectVideoDevices"),
         },
     }[e];
 }
+
 function P(e) {
     let {
             deviceType: t,
@@ -150,7 +167,9 @@ function P(e) {
         k = (0, o.bG)([p.A], () => p.A.theme),
         [U, G] = i.useState(d),
         V = j(a),
-        [F, B] = (0, E.tR)(t, { location: V }),
+        [F, B] = (0, E.tR)(t, {
+            location: V,
+        }),
         { id: H } = (0, E.x5)(t),
         Y = null != _ ? _ : H,
         W = (0, o.bG)([m.A], () => x(m.A)),
@@ -180,6 +199,7 @@ function P(e) {
             },
             [t, V, F.length, B.length, M, y, P],
         );
+
     function q(e) {
         let t,
             i,
@@ -235,6 +255,7 @@ function P(e) {
             ],
         });
     }
+
     function X() {
         let e = (e) => {
                 let { id: t, name: n } = e;
@@ -279,7 +300,9 @@ function P(e) {
                         },
                         N,
                     ),
-                    { "data-migration-pending": !0 },
+                    {
+                        "data-migration-pending": !0,
+                    },
                 ),
             ),
             !W && K,

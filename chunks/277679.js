@@ -1,7 +1,9 @@
-a.d(i, { A: () => n });
+a.d(i, {
+    A: () => n,
+});
 var t = {
     lessThanXSeconds: {
-        one: "moins d\u2019une seconde",
+        one: "moins d’une seconde",
         other: "moins de {{count}} secondes",
     },
     xSeconds: {
@@ -10,7 +12,7 @@ var t = {
     },
     halfAMinute: "30 secondes",
     lessThanXMinutes: {
-        one: "moins d\u2019une minute",
+        one: "moins d’une minute",
         other: "moins de {{count}} minutes",
     },
     xMinutes: {
@@ -54,11 +56,11 @@ var t = {
         other: "{{count}} ans",
     },
     overXYears: {
-        one: "plus d\u2019un an",
+        one: "plus d’un an",
         other: "plus de {{count}} ans",
     },
     almostXYears: {
-        one: "presqu\u2019un an",
+        one: "presqu’un an",
         other: "presque {{count}} ans",
     },
 };

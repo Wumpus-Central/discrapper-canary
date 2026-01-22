@@ -1,10 +1,13 @@
-n.d(t, { v: () => _ });
+n.d(t, {
+    v: () => _,
+});
 var r = n(627968),
     i = n(64700),
     a = n(442433),
     s = n(71393),
     o = n(287809),
     l = n(927578);
+
 function c(e, t, n) {
     return (
         t in e
@@ -18,6 +21,7 @@ function c(e, t, n) {
         e
     );
 }
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,6 +38,7 @@ function u(e) {
     }
     return e;
 }
+
 function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -46,6 +51,7 @@ function d(e, t) {
     }
     return n;
 }
+
 function f(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -57,6 +63,7 @@ function f(e, t) {
         e
     );
 }
+
 function p(e, t, i, s) {
     let c = o.default.getCurrentUser();
     (null != t || l.Ay.canUseCustomCallSounds(c)) &&
@@ -73,6 +80,7 @@ function p(e, t, i, s) {
                 );
         });
 }
+
 function _(e, t) {
     return i.useCallback(
         (n) => {

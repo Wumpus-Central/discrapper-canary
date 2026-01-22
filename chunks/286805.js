@@ -1,7 +1,10 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r,
     i = n(311907),
     a = n(73153);
+
 function s(e, t, n) {
     return (
         t in e
@@ -15,7 +18,10 @@ function s(e, t, n) {
         e
     );
 }
-let o = { matureAgree: !1 };
+let o = {
+    matureAgree: !1,
+};
+
 function l() {
     o.matureAgree = !0;
 }
@@ -25,4 +31,6 @@ class c extends (r = i.Ay.Store) {
     }
 }
 s(c, "displayName", "ApplicationStoreSettingsStore");
-let u = new c(a.h, { APPLICATION_STORE_MATURE_AGREE: l });
+let u = new c(a.h, {
+    APPLICATION_STORE_MATURE_AGREE: l,
+});

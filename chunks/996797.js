@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var i = n(308368),
     r = n(684013),
     s = n(334738),
@@ -8,6 +10,7 @@ var i = n(308368),
     c = n(652215),
     d = n(672396),
     u = n(985018);
+
 function h(e, t, n, h) {
     let p = t.username,
         f = u.intl.format(u.t.VDODnv, {

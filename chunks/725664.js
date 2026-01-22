@@ -1,4 +1,7 @@
-e.d(n, { A: () => r });
+e.d(n, {
+    A: () => r,
+});
+
 function r(t, n) {
     if (null == t) return {};
     var e = {};

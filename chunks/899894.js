@@ -1,4 +1,6 @@
-n.d(t, { V: () => f });
+n.d(t, {
+    V: () => f,
+});
 var r = n(627968);
 n(64700);
 var i = n(989349),
@@ -9,6 +11,7 @@ var i = n(989349),
     c = n(985018),
     u = n(153400);
 let d = (e) => a()().diff(a().unix(e), "days");
+
 function f(e) {
     var t, i, a, f, p;
     if (null == e.message.embeds || null == e.message.embeds[0].fields) return null;
@@ -60,7 +63,9 @@ function f(e) {
                         className: u.VU,
                         children: (0, r.jsx)(o.Text, {
                             variant: "text-xs/medium",
-                            children: c.intl.format(c.t.eevFb6, { daysAgo: d(E) }),
+                            children: c.intl.format(c.t.eevFb6, {
+                                daysAgo: d(E),
+                            }),
                         }),
                     }),
                     (0, r.jsx)("div", {

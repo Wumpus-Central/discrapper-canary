@@ -1,10 +1,13 @@
-n.d(t, { q: () => d });
+n.d(t, {
+    q: () => d,
+});
 var i = n(627968),
     r = n(64700),
     l = n(397927),
     a = n(514810),
     s = n(486020),
     o = n(517765);
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -30,6 +33,7 @@ function c(e) {
     }
     return e;
 }
+
 function d(e) {
     var t;
     let { channel: d, application: u, showApplicationImage: b } = e,
@@ -104,7 +108,14 @@ function d(e) {
             {
                 imageSrc: g,
                 onButtonClick: m,
-                details: null != p ? [{ text: p }] : void 0,
+                details:
+                    null != p
+                        ? [
+                              {
+                                  text: p,
+                              },
+                          ]
+                        : void 0,
             },
             f,
         ),

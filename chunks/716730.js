@@ -1,4 +1,7 @@
-n.d(t, { A: () => y }), n(321073);
+n.d(t, {
+    A: () => y,
+}),
+    n(321073);
 var r = n(627968),
     l = n(64700),
     i = n(735438),
@@ -15,6 +18,7 @@ var r = n(627968),
     g = n(652215),
     m = n(985018),
     A = n(766924);
+
 function y(e) {
     let { channelId: t, className: n } = e,
         y = (function (e, t) {
@@ -80,7 +84,12 @@ function y(e) {
     });
     let C = j ? m.intl.string(m.t["5MstTl"]) : m.intl.string(m.t.kkKapG),
         S = [C];
-    E > 0 && S.push(m.intl.formatToPlainString(m.t["3l1GOx"], { mentionCount: E })),
+    E > 0 &&
+        S.push(
+            m.intl.formatToPlainString(m.t["3l1GOx"], {
+                mentionCount: E,
+            }),
+        ),
         x > 0 && S.push(m.intl.string(m.t.x5zAGZ));
     let I = (0, a.bG)([h.Ay], () => h.Ay.getFocusedLayout()),
         N = E > 0 ? E : x,

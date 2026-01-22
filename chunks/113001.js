@@ -13,6 +13,7 @@ var r = n(877413),
     u = n(711371),
     d = n(652215);
 let f = "  ";
+
 function p(e, t) {
     let { cmd: n = !1, ctrl: r = !1, alt: i = !1, shift: a = !1 } = t;
     return (
@@ -22,6 +23,7 @@ function p(e, t) {
         (null == a || e.shiftKey === a)
     );
 }
+
 function _(e) {
     return (
         (e.onKeyDown = (t) => {
@@ -70,7 +72,12 @@ function _(e) {
                         return (0, l.Px)(e, "strikethrough"), !0;
                     break;
                 case d.Ks6.TAB:
-                    if (null != e.selection && p(t, { shift: null })) {
+                    if (
+                        null != e.selection &&
+                        p(t, {
+                            shift: null,
+                        })
+                    ) {
                         let [r, i] = u.ZF.edges(e.selection),
                             a = u.VW.blocks(e).slice(r.path[0], i.path[0] + 1),
                             s = !0;
@@ -102,7 +109,9 @@ function _(e) {
                                                 offset: 0,
                                             };
                                         if (n)
-                                            c.b.insertText(e, f, { at: s }),
+                                            c.b.insertText(e, f, {
+                                                at: s,
+                                            }),
                                                 u.PW.equals(o.path, a) &&
                                                     0 !== o.offset &&
                                                     (o = {
@@ -151,7 +160,12 @@ function _(e) {
                 case d.Ks6.ARROW_LEFT:
                 case d.Ks6.ARROW_RIGHT: {
                     let n;
-                    if (p(t, { shift: null })) n = "character";
+                    if (
+                        p(t, {
+                            shift: null,
+                        })
+                    )
+                        n = "character";
                     else if (
                         p(t, {
                             ctrl: !h,
@@ -187,7 +201,12 @@ function _(e) {
                     );
                 }
                 case d.Ks6.A:
-                    if (h && p(t, { ctrl: !0 })) {
+                    if (
+                        h &&
+                        p(t, {
+                            ctrl: !0,
+                        })
+                    ) {
                         let t = u.VW.getCurrentBlock(e);
                         if (null != t) {
                             let n = u.VW.start(e, t[1]);
@@ -202,7 +221,12 @@ function _(e) {
                     }
                     break;
                 case d.Ks6.E:
-                    if (h && p(t, { ctrl: !0 })) {
+                    if (
+                        h &&
+                        p(t, {
+                            ctrl: !0,
+                        })
+                    ) {
                         let t = u.VW.getCurrentBlock(e);
                         if (null != t) {
                             let n = u.VW.end(e, t[1]);
@@ -227,8 +251,16 @@ function _(e) {
                                 ctrl: !0,
                                 shift: !0,
                             })) ||
-                            (h && t.which !== d.Ks6.K && p(t, { cmd: !0 })) ||
-                            (h && t.which === d.Ks6.K && p(t, { ctrl: !0 }))) &&
+                            (h &&
+                                t.which !== d.Ks6.K &&
+                                p(t, {
+                                    cmd: !0,
+                                })) ||
+                            (h &&
+                                t.which === d.Ks6.K &&
+                                p(t, {
+                                    ctrl: !0,
+                                }))) &&
                         null != e.selection
                     ) {
                         let [t, n] = u.ZF.edges(e.selection),

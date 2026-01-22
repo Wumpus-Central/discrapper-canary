@@ -19,6 +19,7 @@ var r = n(627968),
     h = n(997994);
 let m = 0.2,
     g = 41;
+
 function E() {
     let e = (0, o.bG)([d.A], () => d.A.useReducedMotion),
         [t, a] = (0, f.kn)([l.M.TRIAL_NUX_EMOJI_PICKER]),
@@ -33,12 +34,20 @@ function E() {
         (0, r.jsxs)("div", {
             className: h.gg,
             children: [
-                (0, r.jsx)("div", { className: h.d6 }),
-                (0, r.jsx)("div", { className: s()(h.FV, h.ys, { [h.VN]: e || !u }) }),
+                (0, r.jsx)("div", {
+                    className: h.d6,
+                }),
+                (0, r.jsx)("div", {
+                    className: s()(h.FV, h.ys, {
+                        [h.VN]: e || !u,
+                    }),
+                }),
                 (0, r.jsxs)("div", {
                     className: h.tP,
                     children: [
-                        (0, r.jsx)("div", { className: h.Mq }),
+                        (0, r.jsx)("div", {
+                            className: h.Mq,
+                        }),
                         !e &&
                             u &&
                             (0, r.jsx)(c.akl, {
@@ -47,7 +56,9 @@ function E() {
                                 importData: () => n.e("31838").then(n.t.bind(n, 650125, 19)),
                             }),
                         (0, r.jsxs)("div", {
-                            className: s()(h.bl, { [h.VN]: e || !u }),
+                            className: s()(h.bl, {
+                                [h.VN]: e || !u,
+                            }),
                             children: [
                                 (0, r.jsx)(c.tvc, {
                                     size: "xs",
@@ -61,10 +72,14 @@ function E() {
                                 }),
                             ],
                         }),
-                        (0, r.jsx)("div", { className: h.Ss }),
+                        (0, r.jsx)("div", {
+                            className: h.Ss,
+                        }),
                     ],
                 }),
-                (0, r.jsx)("div", { className: h.EL }),
+                (0, r.jsx)("div", {
+                    className: h.EL,
+                }),
             ],
         })
     );
@@ -76,28 +91,46 @@ let b = function (e) {
     return (0, r.jsxs)("div", {
         className: s()(h.gg, n),
         children: [
-            (0, r.jsx)("div", { className: h.d6 }),
             (0, r.jsx)("div", {
-                style: { opacity: a ? 0 : t },
+                className: h.d6,
+            }),
+            (0, r.jsx)("div", {
+                style: {
+                    opacity: a ? 0 : t,
+                },
                 className: h.FV,
             }),
             (0, r.jsxs)("div", {
                 className: h.tP,
                 children: [
-                    (0, r.jsx)("div", { className: s()(h.Mq, { [h.N4]: a }) }),
                     (0, r.jsx)("div", {
-                        className: s()(h._Y, { [h.N4]: a }),
+                        className: s()(h.Mq, {
+                            [h.N4]: a,
+                        }),
+                    }),
+                    (0, r.jsx)("div", {
+                        className: s()(h._Y, {
+                            [h.N4]: a,
+                        }),
                         children: (0, r.jsx)(c.XAi, {
                             size: "xs",
                             color: a && l ? "black" : "white",
                         }),
                     }),
-                    (0, r.jsx)("div", { className: s()(h.Ss, { [h.N4]: a }) }),
+                    (0, r.jsx)("div", {
+                        className: s()(h.Ss, {
+                            [h.N4]: a,
+                        }),
+                    }),
                 ],
             }),
             (0, r.jsx)("div", {
-                style: { opacity: a ? 1 : i },
-                className: s()(h.KI, { [h.N4]: a }),
+                style: {
+                    opacity: a ? 1 : i,
+                },
+                className: s()(h.KI, {
+                    [h.N4]: a,
+                }),
             }),
         ],
     });

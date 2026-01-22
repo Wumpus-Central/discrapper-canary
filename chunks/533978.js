@@ -1,4 +1,7 @@
-n.d(t, { A: () => E }), n(896048);
+n.d(t, {
+    A: () => E,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -20,6 +23,7 @@ var r = n(627968),
     j = n(709562),
     v = n(376086),
     x = n(985018);
+
 function E(e) {
     let { channel: t, themeable: E, whichPopoutIsOpen: _, setWhichPopoutIsOpen: C } = e,
         { parentAnalyticsLocation: S } = (0, u.Ay)(),
@@ -32,10 +36,13 @@ function E(e) {
         { mute: R, suppress: D } = (0, A.A)(t),
         M = (0, i.bG)([y.A], () => y.A.isDeaf()),
         L = R || D || M,
-        G = (0, b.VE)({ isSoundboardButtonDisabled: L }),
+        G = (0, b.VE)({
+            isSoundboardButtonDisabled: L,
+        }),
         [k, U] = (0, p.DP)(G),
         { analyticsLocations: V } = (0, u.Ay)(),
         { isHovered: F, setIsHovered: H, onMouseEnter: B, onMouseLeave: K } = (0, h.A)(200, 300);
+
     function W(e) {
         null != w &&
             (0, c.L3)(e, async () => {
@@ -75,7 +82,10 @@ function E(e) {
                             },
                             t,
                         )),
-                        (l = l = { onInteraction: (0, f.s)("SoundboardContextMenu", S) }),
+                        (l = l =
+                            {
+                                onInteraction: (0, f.s)("SoundboardContextMenu", S),
+                            }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
                             : (function (e, t) {
@@ -93,6 +103,7 @@ function E(e) {
                 };
             });
     }
+
     function z() {
         (0, d.X)(S, d.O.SOUNDBOARD),
             _ === v.P.SOUNDBOARD

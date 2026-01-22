@@ -1,4 +1,6 @@
-l.d(t, { A: () => f });
+l.d(t, {
+    A: () => f,
+});
 var n = l(627968);
 l(64700);
 var r = l(503698),
@@ -22,13 +24,27 @@ let f = (e) => {
           })
         : m
           ? (0, n.jsx)(c.A, {
-                className: s()({ [d.no]: f }, d.BW, d.ud),
+                className: s()(
+                    {
+                        [d.no]: f,
+                    },
+                    d.BW,
+                    d.ud,
+                ),
                 src: l,
                 autoPlay: !0,
                 loop: !0,
             })
           : (0, n.jsx)("div", {
-                className: s()({ [d.no]: f }, d.BW, d._e),
-                style: { backgroundImage: "url(".concat(t, ")") },
+                className: s()(
+                    {
+                        [d.no]: f,
+                    },
+                    d.BW,
+                    d._e,
+                ),
+                style: {
+                    backgroundImage: "url(".concat(t, ")"),
+                },
             });
 };

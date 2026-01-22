@@ -1,4 +1,6 @@
-n.d(t, { A: () => A });
+n.d(t, {
+    A: () => A,
+});
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -14,6 +16,7 @@ var r = n(627968),
     b = n(221950),
     g = n(652215),
     m = n(985018);
+
 function A(e) {
     let { guild: t, selected: n } = e,
         A = (0, i.bG)([h.A], () => h.A.can(g.xBc.KICK_MEMBERS, t)),
@@ -46,7 +49,12 @@ function A(e) {
             text: m.intl.string(m.t.oclz3Z),
             selected: n,
             onClick: j,
-            trailing: O > 0 ? (0, r.jsx)(s.hVq, { count: O }) : null,
+            trailing:
+                O > 0
+                    ? (0, r.jsx)(s.hVq, {
+                          count: O,
+                      })
+                    : null,
         }),
     });
 }

@@ -7,6 +7,7 @@ var r = n(311907),
     a = n(696451),
     s = n(543465),
     o = n(287809);
+
 function l(e, t) {
     var n;
     let r = null == (n = o.default.getCurrentUser()) ? void 0 : n.id,
@@ -31,14 +32,16 @@ let c = null,
     _ = {},
     h = {},
     m = {};
+
 function g() {
-    let e = (e) => null != e && Date.now() - e < 60000;
+    let e = (e) => null != e && Date.now() - e < 6e4;
     for (let t in (e(c) || (c = null), e(u) || (u = null), e(d) || (d = null), e(f) || (f = null), p))
         e(p[t]) || delete p[t];
     for (let t in _) e(_[t]) || delete _[t];
     for (let t in m) e(m[t]) || delete m[t];
     for (let t in h) e(h[t]) || delete h[t];
 }
+
 function E(e) {
     let { guildId: t, mentioned: n, roleMentioned: r, everyoneMentioned: i } = e,
         a = Date.now();
@@ -53,7 +56,7 @@ class b extends r.Ay.Store {
         this.waitFor(a.Ay, s.Ay, o.default);
     }
     getGlobalStats() {
-        let e = (e) => (null == e ? null : Math.floor((Date.now() - e) / 1000));
+        let e = (e) => (null == e ? null : Math.floor((Date.now() - e) / 1e3));
         return {
             approx_seconds_since_last_notification: e(c),
             approx_seconds_since_last_mention: e(u),
@@ -62,7 +65,7 @@ class b extends r.Ay.Store {
         };
     }
     getStats(e) {
-        let t = (e) => (null == e ? null : Math.floor((Date.now() - e) / 1000));
+        let t = (e) => (null == e ? null : Math.floor((Date.now() - e) / 1e3));
         return {
             approx_seconds_since_last_notification: t(c),
             approx_seconds_since_last_mention: t(u),

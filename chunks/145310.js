@@ -1,4 +1,6 @@
-n.d(t, { s: () => d });
+n.d(t, {
+    s: () => d,
+});
 var r = n(927578),
     i = n(422936),
     a = n(234419),
@@ -22,14 +24,18 @@ let c = (e) => {
                     intervalCount: null == c ? void 0 : c.interval_count,
                 })
               : t
-                ? l.intl.formatToPlainString(l.t.nTmm2v, { freeTrialText: i })
+                ? l.intl.formatToPlainString(l.t.nTmm2v, {
+                      freeTrialText: i,
+                  })
                 : void 0;
     },
     u = (e, t, n, r) =>
         t || n
             ? l.intl.string(l.t.fkPGat)
             : e === o.pe.TIER_2
-              ? l.intl.formatToPlainString(l.t.bkQ4bH, { percent: r })
+              ? l.intl.formatToPlainString(l.t.bkQ4bH, {
+                    percent: r,
+                })
               : void 0,
     d = (e) => {
         var t, n;

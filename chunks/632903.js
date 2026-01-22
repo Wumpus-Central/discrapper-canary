@@ -1,4 +1,6 @@
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 var r = {
     lessThanXSeconds: {
         one: "less than a second",

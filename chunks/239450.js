@@ -1,9 +1,13 @@
-n.d(t, { A: () => o }), n(264879);
+n.d(t, {
+    A: () => o,
+}),
+    n(264879);
 var r = n(627968);
 n(64700);
 var i = n(503698),
     a = n.n(i),
     s = n(610145);
+
 function o(e) {
     let { thumbnails: t, variant: n = "gallery", className: i } = e;
     if ("stacked" === n) {

@@ -18,6 +18,7 @@ var r = n(627968),
     h = n(652215),
     b = n(985018),
     g = n(581277);
+
 function m(e) {
     let t = l.useRef(null),
         n = e.map((e) => e[0]);
@@ -32,6 +33,7 @@ function m(e) {
         t
     );
 }
+
 function A(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
@@ -54,6 +56,7 @@ function A(e, t) {
         }
     );
 }
+
 function y(e) {
     let { name: t, targetNode: n, combine: i, below: a } = e,
         s = l.useMemo(() => A([f.PJ.GUILD, f.PJ.FOLDER], n, a, i), [n, a, i]),
@@ -66,10 +69,13 @@ function y(e) {
         ref: (e) => {
             (p.current = e), d(e);
         },
-        "data-dnd-name": b.intl.formatToPlainString(b.t["A5aDw+"], { itemName: t }),
+        "data-dnd-name": b.intl.formatToPlainString(b.t["A5aDw+"], {
+            itemName: t,
+        }),
         className: g.aC,
     });
 }
+
 function O(e) {
     let { name: t, targetNode: n, onDragOverChanged: i } = e,
         [{ canDrop: s, isOver: o }, u] = (0, c.H)(() => A([f.PJ.GUILD], n, !0, !0));
@@ -89,7 +95,9 @@ function O(e) {
             ref: (e) => {
                 (d.current = e), u(e);
             },
-            "data-dnd-name": b.intl.formatToPlainString(b.t.qiQ0QI, { itemName: t }),
+            "data-dnd-name": b.intl.formatToPlainString(b.t.qiQ0QI, {
+                itemName: t,
+            }),
             className: a()(g.dw, {}),
         }),
     });
@@ -116,6 +124,7 @@ let j = l.memo(function (e) {
         ],
     });
 });
+
 function v(e) {
     let { name: t, targetNode: n } = e,
         [{ canDrop: l, isOver: i }, a] = (0, c.H)(() => A([f.PJ.GUILD], n, !0, !0)),
@@ -140,9 +149,12 @@ function v(e) {
         }),
     });
 }
+
 function x(e) {
     let { children: t } = e,
-        [, n] = (0, c.H)({ accept: [] });
+        [, n] = (0, c.H)({
+            accept: [],
+        });
     return (0, r.jsx)("div", {
         ref: (e) => {
             n(e);

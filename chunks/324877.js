@@ -1,4 +1,9 @@
-n.d(t, { A: () => E }), n(228524), n(938796), n(896048);
+n.d(t, {
+    A: () => E,
+}),
+    n(228524),
+    n(938796),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -14,6 +19,7 @@ var r = n(627968),
     h = n(838541),
     m = n(913941);
 let g = 85;
+
 function E(e) {
     let { media: t, spoiler: n, description: a } = e,
         E = (0, u.wz)(t),
@@ -35,7 +41,9 @@ function E(e) {
                   hiddenSpoilers: e,
               })
             : (0, r.jsx)(f.LL, {
-                  containerClassName: s()(m.Dg, { [m.rP]: e }),
+                  containerClassName: s()(m.Dg, {
+                      [m.rP]: e,
+                  }),
                   imageClassName: m._8,
                   src: t.proxyUrl,
                   alt: a,

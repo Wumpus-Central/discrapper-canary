@@ -17,6 +17,7 @@ var i = n(503698),
     p = n(649640),
     _ = n(339984),
     h = n(838934);
+
 function m(e, t, n) {
     return (
         t in e
@@ -30,6 +31,7 @@ function m(e, t, n) {
         e
     );
 }
+
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -46,19 +48,23 @@ function g(e) {
     }
     return e;
 }
+
 function E(e) {
     let { profile: t, className: n } = e,
         i = (0, p._3)(t);
     return null != i
         ? (0, r.jsx)("div", {
               className: a()(n, h.vK),
-              style: { background: i },
+              style: {
+                  background: i,
+              },
           })
         : (0, r.jsx)(b, {
               profile: t,
               className: n,
           });
 }
+
 function b(e) {
     var t;
     let { profile: n, className: i } = e,
@@ -71,9 +77,12 @@ function b(e) {
         l = null != (t = n.brandColorPrimary) ? t : o;
     return (0, r.jsx)("div", {
         className: a()(i, h.vK),
-        style: { background: (0, p.n6)(l) },
+        style: {
+            background: (0, p.n6)(l),
+        },
     });
 }
+
 function y(e) {
     let { profile: t, onIconChange: i } = e;
     if (null == i)
@@ -94,6 +103,7 @@ function y(e) {
                 }),
             }),
         });
+
     function u(e, t) {
         null != i &&
             (0, s.mMO)(async () => {
@@ -135,7 +145,9 @@ function y(e) {
                             guildIcon: t.icon,
                             iconSize: 64,
                         }),
-                        (0, r.jsx)("div", { className: h.Lw }),
+                        (0, r.jsx)("div", {
+                            className: h.Lw,
+                        }),
                         (0, r.jsx)(s.R2l, {
                             size: "custom",
                             className: h.QY,
@@ -153,6 +165,7 @@ function y(e) {
         }),
     });
 }
+
 function O(e) {
     let {
             profile: t,
@@ -175,7 +188,9 @@ function O(e) {
         (0, r.jsxs)("div", {
             className: a()(h.kL, i),
             children: [
-                (0, r.jsx)(E, { profile: t }),
+                (0, r.jsx)(E, {
+                    profile: t,
+                }),
                 (0, r.jsx)(y, {
                     onIconChange: n,
                     profile: t,
@@ -184,7 +199,9 @@ function O(e) {
                     profile: t,
                     disableGuildNameClick: c,
                 }),
-                (0, r.jsx)(u.P, { profile: t }),
+                (0, r.jsx)(u.P, {
+                    profile: t,
+                }),
                 null != p &&
                     (0, r.jsx)("div", {
                         className: h.UD,

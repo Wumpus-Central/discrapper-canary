@@ -1,4 +1,6 @@
-n.d(t, { x: () => O });
+n.d(t, {
+    x: () => O,
+});
 var r = n(835245),
     i = n(192308),
     a = n(73153),
@@ -15,6 +17,7 @@ var r = n(835245),
     m = n(309010),
     g = n(977997),
     E = n(147036);
+
 function b(e, t, n) {
     return (
         t in e
@@ -28,6 +31,7 @@ function b(e, t, n) {
         e
     );
 }
+
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -57,7 +61,15 @@ let O = function (e, t) {
             if (e && v.isGuildStageVoice() && (0, c.xn)(v.id))
                 return void (0, i.openModalLazy)(async () => {
                     let { default: e } = await n.e("21900").then(n.bind(n, 172231));
-                    return (t) => e(y({ channel: v }, t));
+                    return (t) =>
+                        e(
+                            y(
+                                {
+                                    channel: v,
+                                },
+                                t,
+                            ),
+                        );
                 });
             if (e)
                 return void (0, i.openModalLazy)(async () => {
@@ -68,6 +80,7 @@ let O = function (e, t) {
         }
         b && (0, u.PX)(), (0, d.A)(T, e, O, b);
     }
+
     function T() {
         let n = (0, r.A)();
         a.h.dispatch({

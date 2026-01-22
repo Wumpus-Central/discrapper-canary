@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -9,6 +11,7 @@ var i = n(311907),
     c = n(985018),
     u = n(641131),
     d = n(968747);
+
 function f(e) {
     let t = e.isArchivedThread(),
         n = (0, s.uW)(e),

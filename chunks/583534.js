@@ -1,10 +1,14 @@
-n.d(t, { A: () => g }), n(896048);
+n.d(t, {
+    A: () => g,
+}),
+    n(896048);
 var r = n(141931),
     i = n(205693),
     a = n(439372),
     s = n(961350),
     o = n(837921),
     l = n(652215);
+
 function c(e, t, n) {
     return (
         t in e
@@ -19,6 +23,7 @@ function c(e, t, n) {
     );
 }
 let u = new Set();
+
 function d() {
     for (let e of [
         r.du.HasRTCConnection,
@@ -29,6 +34,7 @@ function d() {
     ])
         o.Ay.setCrashInformation(e, 0);
 }
+
 function f(e) {
     switch (e) {
         case i.x.DEFAULT:
@@ -37,10 +43,12 @@ function f(e) {
             return r.du.StreamMediaSessionId;
     }
 }
+
 function p(e) {
     var t;
     o.Ay.setCrashInformation(f(e.context), null != (t = e.mediaSessionId) ? t : null);
 }
+
 function _(e) {
     var t;
     let n = (null != (t = e.channelId) ? t : "unknown") + e.context;
@@ -52,6 +60,7 @@ function _(e) {
             o.Ay.setCrashInformation(f(e.context), null), u.delete(n), 0 === u.size && d();
     }
 }
+
 function h(e) {
     let t = e.userId === s.default.getId(),
         n = null != e.streamId,

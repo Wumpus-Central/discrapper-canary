@@ -34,6 +34,7 @@ var i = n(311907),
     P = n(985018),
     D = n(931854),
     x = n(120459);
+
 function L(e, t, n) {
     return (
         t in e
@@ -47,6 +48,7 @@ function L(e, t, n) {
         e
     );
 }
+
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -71,6 +73,7 @@ let M = {
         useBreadcrumbLabel: () => P.intl.string(P.t["W685+b"]),
     },
 };
+
 function k(e) {
     let { onStepChange: t, onBackClick: n, showBackButton: i = !1, disabled: s = !1, loading: o = !1 } = e,
         { hasPaymentSources: l } = (0, T.P5)(),
@@ -83,7 +86,11 @@ function k(e) {
                 loading: o,
                 text: P.intl.string(P.t.XiOHRX),
             }),
-            i ? (0, r.jsx)(E.A, { onClick: n }) : null,
+            i
+                ? (0, r.jsx)(E.A, {
+                      onClick: n,
+                  })
+                : null,
         ],
     });
 }
@@ -110,8 +117,12 @@ let U = (e) => {
         } = (0, T.P5)(),
         Y = (0, i.bG)([O.default], () => O.default.getCurrentUser()),
         { enabled: W, giftRecommendationAlgorithm: K } = h.P.useExperiment(
-            { location: "CollectiblesPaymentModalGiftCustomizationStep" },
-            { autoTrackExposure: !1 },
+            {
+                location: "CollectiblesPaymentModalGiftCustomizationStep",
+            },
+            {
+                autoTrackExposure: !1,
+            },
         ),
         z = (0, p.A)(),
         q = W && L === w.vQ.DM_CHANNEL,
@@ -123,12 +134,16 @@ let U = (e) => {
         null != M &&
             null != C &&
             (L !== w.vQ.DM_CHANNEL_WISHLIST &&
-                v.default.track(R.HAw.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED, { sku_id: M }),
+                v.default.track(R.HAw.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED, {
+                    sku_id: M,
+                }),
             Z(C, M));
     });
     let Q = (e) => {
             L !== w.vQ.DM_CHANNEL_WISHLIST &&
-                v.default.track(R.HAw.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED, { sku_id: e }),
+                v.default.track(R.HAw.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED, {
+                    sku_id: e,
+                }),
                 null != C && Z(C, e),
                 k(e);
         },
@@ -175,19 +190,25 @@ let U = (e) => {
                               children: X.toLocaleUpperCase(),
                           }),
                           N.map((e) => $(e)),
-                          (0, r.jsx)(V, { handleClose: n }),
+                          (0, r.jsx)(V, {
+                              handleClose: n,
+                          }),
                       ],
                   })
                 : (0, r.jsx)("div", {
                       className: D.qL,
-                      children: (0, r.jsx)(g.t, { isShopGift: !0 }),
+                      children: (0, r.jsx)(g.t, {
+                          isShopGift: !0,
+                      }),
                   }),
         renderRightColumn: () => {
             if (q)
                 return (0, r.jsxs)("div", {
                     className: D.Tc,
                     children: [
-                        (0, r.jsx)(b.Z, { giftRecipient: C }),
+                        (0, r.jsx)(b.Z, {
+                            giftRecipient: C,
+                        }),
                         (0, r.jsx)(g.t, {
                             isShopGift: !0,
                             className: x.mx,
@@ -208,7 +229,9 @@ let U = (e) => {
                 ? (0, r.jsxs)("div", {
                       className: D.Tc,
                       children: [
-                          (0, r.jsx)(b.Z, { giftRecipient: C }),
+                          (0, r.jsx)(b.Z, {
+                              giftRecipient: C,
+                          }),
                           J(),
                           null != e &&
                               null != M &&
@@ -257,6 +280,7 @@ let U = (e) => {
         loading: y,
     };
 };
+
 function G(e) {
     let { handleStepChange: t, handleClose: n } = e,
         {
@@ -294,9 +318,11 @@ function G(e) {
         ],
     });
 }
+
 function V(e) {
     let { handleClose: t } = e,
         { analyticsLocations: n } = (0, l.Ay)(o.A.COLLECTIBLES_GIFT_CUSTOMIZATION_MODAL);
+
     function i() {
         t(),
             (0, a.s7G)(),
@@ -351,9 +377,11 @@ function V(e) {
         }),
     });
 }
+
 function F(e) {
     let { handleClose: t, selectedSkuId: n } = e,
         { analyticsLocations: i } = (0, l.Ay)(o.A.COLLECTIBLES_GIFT_CUSTOMIZATION_MODAL);
+
     function s() {
         t(),
             (0, a.s7G)(),

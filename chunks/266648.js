@@ -1,8 +1,11 @@
-n.d(t, { P: () => a });
+n.d(t, {
+    P: () => a,
+});
 var i = n(887501),
     r = n(684407),
     s = n(576705),
     l = n(110807);
+
 function a(e) {
     var t, n;
     let a = s.A.getGuildPermissionProps(e),
@@ -32,7 +35,12 @@ function a(e) {
                     });
             }
             return e;
-        })({ showDirtyGuildTemplateIndicator: !1 }, a)),
+        })(
+            {
+                showDirtyGuildTemplateIndicator: !1,
+            },
+            a,
+        )),
         (n = n =
             {
                 canUnlinkChannels: o,

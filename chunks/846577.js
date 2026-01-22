@@ -1,4 +1,6 @@
-n.d(t, { P: () => d });
+n.d(t, {
+    P: () => d,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -6,6 +8,7 @@ var i = n(311907),
     a = n(966107),
     o = n(287809),
     s = n(985018);
+
 function d(e) {
     let t = (0, i.bG)([o.default], () => o.default.getCurrentUser());
     return (null == t ? void 0 : t.isStaff()) !== !0

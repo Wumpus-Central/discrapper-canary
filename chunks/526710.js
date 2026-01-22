@@ -1,17 +1,20 @@
-r.d(t, { default: () => y });
+r.d(t, {
+    default: () => g,
+});
 var n = r(627968),
     i = r(158954),
     o = r(975807),
     c = r(975571),
     a = r(783420),
     l = r(938973),
-    p = r(788868),
-    s = r(88001),
+    s = r(788868),
+    p = r(88001),
     u = r(652215),
     b = r(519412),
     O = r(985018),
-    P = r(438705);
-function f(e) {
+    f = r(438705);
+
+function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -36,6 +39,7 @@ function f(e) {
     }
     return e;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -54,32 +58,34 @@ function d(e, t) {
         e
     );
 }
-let y = (e) => {
+let g = (e) => {
     let { subscribeButtonProps: t } = (0, l.B)({
-        subscriptionTier: p.pe.TIER_2,
-        subscriptionPlanId: p.gD.PREMIUM_GROUP_MONTH,
+        subscriptionTier: s.pe.TIER_2,
+        subscriptionPlanId: s.gD.PREMIUM_GROUP_MONTH,
     });
     return (0, n.jsx)(a.A, {
-        subscriptionTier: p.pe.TIER_2,
-        initialPlanId: p.gD.PREMIUM_GROUP_MONTH,
+        subscriptionTier: s.pe.TIER_2,
+        initialPlanId: s.gD.PREMIUM_GROUP_MONTH,
         children: (r) => {
             let { onClick: a } = r;
             return (0, n.jsx)(
                 i.ExpressiveModal,
-                d(f({}, e), {
+                d(P({}, e), {
                     graphic: {
-                        src: P,
+                        src: f,
                         type: "image",
                     },
                     gradientColor: "nitro-pink",
-                    title: O.intl.formatToPlainString(b.default.tJbHtN, { premiumGroupProductName: (0, s.DP)() }),
+                    title: O.intl.formatToPlainString(b.default.tJbHtN, {
+                        premiumGroupProductName: (0, p.DP)(),
+                    }),
                     badge: {
                         type: "beta",
                         variant: "expressive",
                     },
                     subtitle: O.intl.formatToPlainString(b.default.csDq8A, {
-                        premiumGroupProductName: (0, s.DP)(),
-                        totalSeats: s.aw,
+                        premiumGroupProductName: (0, p.DP)(),
+                        totalSeats: p.aw,
                     }),
                     actions: [
                         {
@@ -87,7 +93,7 @@ let y = (e) => {
                             variant: "secondary",
                             onClick: () => void (0, o.A)(c.A.getArticleURL(u.MVz.PREMIUM_GROUP_ABOUT)),
                         },
-                        d(f({}, t), {
+                        d(P({}, t), {
                             onClick: (t) => {
                                 var r;
                                 null == a || a(t), null == (r = e.onClose) || r.call(e);

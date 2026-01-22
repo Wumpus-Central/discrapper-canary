@@ -1,4 +1,6 @@
-n.d(t, { A: () => y });
+n.d(t, {
+    A: () => y,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -16,6 +18,7 @@ var r = n(627968),
     g = n(788868),
     E = n(985018),
     b = n(97671);
+
 function y(e) {
     let {
             user: t,
@@ -67,7 +70,9 @@ function y(e) {
                 (0, r.jsx)(x, {
                     size: o.$n.Sizes.SMALL,
                     onClick: P,
-                    className: s()({ [b.yj]: v }),
+                    className: s()({
+                        [b.yj]: v,
+                    }),
                     children: E.intl.string(E.t["/dRfCf"]),
                 }),
                 w &&

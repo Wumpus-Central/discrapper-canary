@@ -20,12 +20,16 @@ let s = (0, r.C)({
             {
                 id: -1,
                 label: "Not in experiment",
-                config: { enabled: !1 },
+                config: {
+                    enabled: !1,
+                },
             },
             {
                 id: 0,
                 label: "Holdout",
-                config: { enabled: !1 },
+                config: {
+                    enabled: !1,
+                },
             },
         ],
     }),
@@ -67,28 +71,56 @@ let s = (0, r.C)({
             },
         ],
     });
+
 function c(e) {
-    let { enabled: t } = s.getCurrentConfig({ location: e }, { autoTrackExposure: !0 }),
+    let { enabled: t } = s.getCurrentConfig(
+            {
+                location: e,
+            },
+            {
+                autoTrackExposure: !0,
+            },
+        ),
         n = (0, i.HF)(e, !1);
     return t || n;
 }
+
 function u(e) {
-    let { enabled: t, impressionCappingEnabled: n } = s.getCurrentConfig({ location: e }, { autoTrackExposure: !1 });
+    let { enabled: t, impressionCappingEnabled: n } = s.getCurrentConfig(
+        {
+            location: e,
+        },
+        {
+            autoTrackExposure: !1,
+        },
+    );
     return t && !0 === n;
 }
 let d = (0, r.C)({
     kind: "user",
     id: "2024-08_content_inventory_analytics_sampling",
     label: "Content Inventory Analytics Sampling",
-    defaultConfig: { trackingEnabled: !0 },
+    defaultConfig: {
+        trackingEnabled: !0,
+    },
     treatments: [
         {
             id: 1,
             label: "Tracking disabled",
-            config: { trackingEnabled: !1 },
+            config: {
+                trackingEnabled: !1,
+            },
         },
     ],
 });
+
 function f(e) {
-    return d.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
+    return d.getCurrentConfig(
+        {
+            location: e,
+        },
+        {
+            autoTrackExposure: !0,
+        },
+    );
 }

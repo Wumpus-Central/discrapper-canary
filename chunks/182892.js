@@ -8,6 +8,7 @@ var r = n(665260),
     a = n(253932),
     s = n(765379),
     o = n(652215);
+
 function l(e) {
     let t = a.e.getSetting(),
         n = a.UM.getSetting();
@@ -17,6 +18,7 @@ function l(e) {
         e
     );
 }
+
 function c(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
@@ -31,6 +33,7 @@ function c(e) {
         ? ((c |= o.jUm.EMBEDDED), (c |= l(c)))
         : ((a === o.KIY.PUBLIC || i.w.get("ACTIVITIES_FORCE_PUBLIC")) && (c |= l(c)), c);
 }
+
 function u(e) {
     var t;
     return (0, r.Lt)(null != (t = null == e ? void 0 : e.flags) ? t : 0, o.jUm.CONTEXTLESS) && (0, s.A)(e);

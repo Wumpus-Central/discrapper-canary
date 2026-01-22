@@ -1,9 +1,12 @@
-n.d(t, { A: () => l });
+n.d(t, {
+    A: () => l,
+});
 var r = n(110259),
     i = n(311907),
     a = n(139286),
     s = n(989837),
     o = n(520117);
+
 function l(e) {
     let { applicationId: t, commandId: n, searchResultsPosition: l, query: c } = e,
         u = (0, i.bG)([s.A], () => s.A.entrypoint()),

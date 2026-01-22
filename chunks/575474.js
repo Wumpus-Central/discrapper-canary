@@ -1,4 +1,7 @@
-n.d(t, { g: () => b }), n(896048);
+n.d(t, {
+    g: () => b,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(554146),
@@ -14,6 +17,7 @@ var r = n(627968),
     A = n(531525),
     g = n(985018),
     m = n(91492);
+
 function b() {
     let [e, t] = (0, a.kn)([l.M.RESTRICTED_ACCOUNTS_SETTING_NOTICE]);
     return i.useMemo(() => e === l.M.RESTRICTED_ACCOUNTS_SETTING_NOTICE, [e])

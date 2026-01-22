@@ -1,4 +1,6 @@
-n.d(t, { default: () => c });
+n.d(t, {
+    default: () => c,
+});
 var l = n(627968);
 n(64700);
 var r = n(397927),
@@ -8,6 +10,7 @@ var r = n(397927),
     u = n(36942),
     d = n(652215),
     o = n(985018);
+
 function c(e) {
     let { guild: t, onSelect: n } = e,
         c = (0, u.A)(t.id),

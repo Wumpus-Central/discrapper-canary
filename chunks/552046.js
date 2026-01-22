@@ -1,9 +1,13 @@
-n.d(t, { A: () => l }), n(896048);
+n.d(t, {
+    A: () => l,
+}),
+    n(896048);
 var r = n(719442),
     i = n(694403),
     a = n(323350),
     s = n(35277),
     o = n(711371);
+
 function l(e) {
     return (
         (e.setFragmentData = (t) => {
@@ -34,14 +38,26 @@ function l(e) {
                             s.b.select(e, t),
                                 e.insertText("["),
                                 s.b.select(e, n),
-                                0 === o.PW.compare(t.path, n.path) && s.b.move(e, { distance: 1 }),
+                                0 === o.PW.compare(t.path, n.path) &&
+                                    s.b.move(e, {
+                                        distance: 1,
+                                    }),
                                 e.insertText("](".concat(a.target, ")"));
                         }),
                         !0
                     );
                 }
-                if (null != a && null != l) return s.b.delete(e, { at: e.selection }), e.insertText(a.target), !0;
-                s.b.delete(e, { at: e.selection });
+                if (null != a && null != l)
+                    return (
+                        s.b.delete(e, {
+                            at: e.selection,
+                        }),
+                        e.insertText(a.target),
+                        !0
+                    );
+                s.b.delete(e, {
+                    at: e.selection,
+                });
             }
             return e.insertText(n), !0;
         }),

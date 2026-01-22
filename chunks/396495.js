@@ -1,4 +1,6 @@
-n.d(t, { b: () => A });
+n.d(t, {
+    b: () => A,
+});
 var r = n(627968);
 n(64700);
 var l = n(503698),
@@ -12,6 +14,7 @@ var l = n(503698),
     f = n(652215),
     p = n(985018),
     h = n(792427);
+
 function b() {
     return (b =
         Object.assign ||
@@ -23,6 +26,7 @@ function b() {
             return e;
         }).apply(this, arguments);
 }
+
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -48,6 +52,7 @@ function g(e) {
     }
     return e;
 }
+
 function m(e) {
     let { hidden: t, onDismiss: n } = e;
     return (
@@ -56,11 +61,15 @@ function m(e) {
                 type: a.ImpressionTypes.VIEW,
                 name: a.ImpressionNames.HD_STREAMING_POPOUT,
             },
-            { disableTrack: t },
+            {
+                disableTrack: t,
+            },
             [t],
         ),
         (0, r.jsxs)("div", {
-            className: i()(h.jC, { [h.R]: t }),
+            className: i()(h.jC, {
+                [h.R]: t,
+            }),
             children: [
                 (0, r.jsx)("img", {
                     className: h.Sl,
@@ -95,7 +104,9 @@ function m(e) {
                             (0, r.jsxs)("div", {
                                 className: h.vX,
                                 children: [
-                                    (0, r.jsx)(o.tvc, { size: "xs" }),
+                                    (0, r.jsx)(o.tvc, {
+                                        size: "xs",
+                                    }),
                                     (0, r.jsx)(o.Text, {
                                         className: h.aV,
                                         variant: "text-sm/medium",
@@ -110,6 +121,7 @@ function m(e) {
         })
     );
 }
+
 function A(e) {
     var t, n;
     let {} = e,
@@ -117,7 +129,10 @@ function A(e) {
     return (0, r.jsx)(
         d.x,
         ((t = g({}, l)),
-        (n = n = { renderComponent: (e) => (0, r.jsx)(m, g({}, e)) }),
+        (n = n =
+            {
+                renderComponent: (e) => (0, r.jsx)(m, g({}, e)),
+            }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
             : (function (e, t) {

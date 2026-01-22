@@ -1,4 +1,7 @@
-n.d(t, { A: () => g }), n(228524);
+n.d(t, {
+    A: () => g,
+}),
+    n(228524);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -13,6 +16,7 @@ var r = n(627968),
     _ = n(237218),
     h = n(689296),
     m = n(542858);
+
 function g(e) {
     let { cta: t, storeListing: n, className: a } = e,
         { applicationId: g, benefits: E, description: b } = n,

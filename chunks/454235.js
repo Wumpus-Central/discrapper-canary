@@ -11,9 +11,11 @@ n.d(t, {
 var r = n(77729),
     i = n(9858),
     a = n(723702);
+
 function s() {
     return (null === r.A || void 0 === r.A ? void 0 : r.A.spellCheck) != null;
 }
+
 function o() {
     return (0, a.isDesktop)() && s();
 }
@@ -45,6 +47,7 @@ async function _(e) {
     let t = await l;
     null != t && t.setAppLocale(e);
 }
+
 function h(e) {
     if (!s()) return () => {};
     let t = r.A.spellCheck.on("spellcheck-result", e);

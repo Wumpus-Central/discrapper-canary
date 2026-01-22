@@ -13,13 +13,16 @@ var r = n(311907),
     o = n(287809),
     l = n(743981),
     c = n(652215);
+
 function u(e) {
     var t;
     return (null == e || null == (t = e.profile) ? void 0 : t.tag) != null;
 }
+
 function d(e) {
     return e.features.has(c.GuildFeatures.GUILD_TAGS);
 }
+
 function f(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : l.Sl.SIZE_12;
     if (null == t) return;
@@ -28,6 +31,7 @@ function f(e, t) {
     let i = l.lv[n];
     return "https://".concat(r, "/clan-badges/").concat(e, "/").concat(t, ".png?size=").concat(i);
 }
+
 function p(e) {
     return null != e && e.identityEnabled
         ? {
@@ -37,6 +41,7 @@ function p(e) {
           }
         : {};
 }
+
 function _(e) {
     var t, n, i, a;
     let o = (0, r.bG)([s.A], () => s.A.getGuild(e), [e]);
@@ -51,6 +56,7 @@ function _(e) {
                 badge: null != (n = null == (a = o.profile) ? void 0 : a.badge) ? n : void 0,
             };
 }
+
 function h(e, t, n) {
     let s = (0, r.bG)([o.default], () => o.default.getUser(e), [e]),
         l = (0, r.bG)([a.Ay], () => {

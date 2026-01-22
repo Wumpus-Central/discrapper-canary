@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(64700),
     i = n(311907),
     a = n(224771),
@@ -6,21 +8,27 @@ var r = n(64700),
     o = n(573582),
     l = n(224949),
     c = n(818348);
+
 function u(e) {
     return !d(e);
 }
+
 function d(e) {
     var t;
     return (null == e || null == (t = e.billing_facet) ? void 0 : t.payment_gateway) === c.kM.VIRTUAL_CURRENCY;
 }
+
 function f(e) {
     return null != e.paymentSourceId || null != e.paymentGateway;
 }
+
 function p(e, t) {
     let n = (0, i.bG)([l.A], () => l.A.currentOrder),
         d = (0, i.bG)([l.A], () => l.A.currentOrderId),
         p = (0, i.bG)([l.A], () => l.A.isCreatingOrder),
-        _ = o.A.useExperiment({ location: "payment_modal" }).enabled,
+        _ = o.A.useExperiment({
+            location: "payment_modal",
+        }).enabled,
         h = (0, r.useRef)(null),
         m = (0, r.useRef)(""),
         g = (0, r.useRef)(!1),

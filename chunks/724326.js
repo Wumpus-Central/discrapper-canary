@@ -1,16 +1,20 @@
 function t(e) {
     return e ? ("string" == typeof e ? e : e.source) : null;
 }
+
 function n(e) {
     return r("(?=", e, ")");
 }
+
 function r(...e) {
     return e.map((e) => t(e)).join("");
 }
+
 function i(e) {
     let t = e[e.length - 1];
     return "object" == typeof t && t.constructor === Object ? (e.splice(e.length - 1, 1), t) : {};
 }
+
 function a(...e) {
     return "(" + (i(e).capture ? "" : "?:") + e.map((e) => t(e)).join("|") + ")";
 }
@@ -265,11 +269,15 @@ e.exports = function (e) {
             match: /\s+/,
             relevance: 0,
         },
-        i = e.COMMENT("/\\*", "\\*/", { contains: ["self"] }),
+        i = e.COMMENT("/\\*", "\\*/", {
+            contains: ["self"],
+        }),
         h = [e.C_LINE_COMMENT_MODE, i],
         E = {
             match: [/\./, a(...o, ...l)],
-            className: { 2: "keyword" },
+            className: {
+                2: "keyword",
+            },
         },
         S = {
             match: r(/\./, a(...u)),
@@ -315,7 +323,14 @@ e.exports = function (e) {
             {
                 className: "operator",
                 relevance: 0,
-                variants: [{ match: g }, { match: `\\.(\\.|${m})+` }],
+                variants: [
+                    {
+                        match: g,
+                    },
+                    {
+                        match: `\\.(\\.|${m})+`,
+                    },
+                ],
             },
         ],
         D = "([0-9]_*)+",
@@ -324,15 +339,30 @@ e.exports = function (e) {
             className: "number",
             relevance: 0,
             variants: [
-                { match: `\\b(${D})(\\.(${D}))?([eE][+-]?(${D}))?\\b` },
-                { match: `\\b0x(${x})(\\.(${x}))?([pP][+-]?(${D}))?\\b` },
-                { match: /\b0o([0-7]_*)+\b/ },
-                { match: /\b0b([01]_*)+\b/ },
+                {
+                    match: `\\b(${D})(\\.(${D}))?([eE][+-]?(${D}))?\\b`,
+                },
+                {
+                    match: `\\b0x(${x})(\\.(${x}))?([pP][+-]?(${D}))?\\b`,
+                },
+                {
+                    match: /\b0o([0-7]_*)+\b/,
+                },
+                {
+                    match: /\b0b([01]_*)+\b/,
+                },
             ],
         },
         j = (e = "") => ({
             className: "subst",
-            variants: [{ match: r(/\\/, e, /[0\\tnr"']/) }, { match: r(/\\/, e, /u\{[0-9a-fA-F]{1,8}\}/) }],
+            variants: [
+                {
+                    match: r(/\\/, e, /[0\\tnr"']/),
+                },
+                {
+                    match: r(/\\/, e, /u\{[0-9a-fA-F]{1,8}\}/),
+                },
+            ],
         }),
         M = (e = "") => ({
             className: "subst",
@@ -392,7 +422,9 @@ e.exports = function (e) {
             scope: "regexp",
             variants: [H("###"), H("##"), H("#"), B],
         },
-        W = { match: r(/`/, y, /`/) },
+        W = {
+            match: r(/`/, y, /`/),
+        },
         K = [
             W,
             {
@@ -535,7 +567,9 @@ e.exports = function (e) {
         },
         ee = {
             match: [/\b(?:subscript|init[?!]?)/, /\s*(?=[<(])/],
-            className: { 1: "keyword" },
+            className: {
+                1: "keyword",
+            },
             contains: [Q, $, t],
             illegal: /\[|%/,
         },

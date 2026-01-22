@@ -1,4 +1,6 @@
-n.d(t, { A: () => A });
+n.d(t, {
+    A: () => A,
+});
 var r = n(627968),
     i = n(64700),
     l = n(311907),
@@ -48,7 +50,9 @@ let A = function () {
                     analyticsLocations: e,
                     themeName: "default ".concat(t),
                 }),
-                    (0, o.u_)({ theme: t });
+                    (0, o.u_)({
+                        theme: t,
+                    });
             },
             [e],
         ),
@@ -71,7 +75,9 @@ let A = function () {
                             children: [
                                 (0, r.jsx)("div", {
                                     className: "".concat(h.WT, " ").concat(t === e.theme ? h.TA : ""),
-                                    style: { backgroundColor: e.color },
+                                    style: {
+                                        backgroundColor: e.color,
+                                    },
                                 }),
                                 (0, r.jsx)("span", {
                                     className: h.i,

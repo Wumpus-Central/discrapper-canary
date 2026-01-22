@@ -1,5 +1,9 @@
-n.d(t, { R: () => i }), n(896048);
+n.d(t, {
+    R: () => i,
+}),
+    n(896048);
 var r = n(64700);
+
 function i() {
     let e = window,
         [t, n] = r.useState(e.document.hasFocus());

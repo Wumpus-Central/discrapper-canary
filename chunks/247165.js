@@ -1,4 +1,8 @@
-n.d(t, { A: () => _ }), n(747238), n(938796);
+n.d(t, {
+    A: () => _,
+}),
+    n(747238),
+    n(938796);
 var l = n(627968),
     a = n(64700),
     r = n(158954),
@@ -17,6 +21,7 @@ var l = n(627968),
     x = n(652215),
     v = n(985018),
     j = n(70345);
+
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,13 +47,22 @@ function A(e) {
     }
     return e;
 }
+
 function _(e) {
     let { application: t } = e;
     return (0, l.jsxs)("div", {
         className: j.ZM,
-        children: [(0, l.jsx)(y, { application: t }), (0, l.jsx)(S, { application: t })],
+        children: [
+            (0, l.jsx)(y, {
+                application: t,
+            }),
+            (0, l.jsx)(S, {
+                application: t,
+            }),
+        ],
     });
 }
+
 function y(e) {
     let { application: t } = e,
         { subscriptions: n, otps: a } = (0, d.C)(t.id);
@@ -116,6 +130,7 @@ function y(e) {
         ],
     });
 }
+
 function O(e) {
     let {
             match: {
@@ -209,6 +224,7 @@ function O(e) {
         null
     );
 }
+
 function S(e) {
     let { application: t } = e,
         n = (0, b.DB)(),
@@ -233,13 +249,18 @@ function S(e) {
                           privacyHook: (e) => s(e, i),
                       })
                     : null != a
-                      ? v.intl.format(v.t["0cPyDz"], { termsHook: (e) => s(e, a) })
+                      ? v.intl.format(v.t["0cPyDz"], {
+                            termsHook: (e) => s(e, a),
+                        })
                       : null != i
-                        ? v.intl.format(v.t["loYGC/"], { privacyHook: (e) => s(e, i) })
+                        ? v.intl.format(v.t["loYGC/"], {
+                              privacyHook: (e) => s(e, i),
+                          })
                         : null,
         }),
     });
 }
+
 function C() {
     return window.location.pathname.startsWith("/login");
 }

@@ -1,4 +1,6 @@
-i.d(e, { z: () => a });
+i.d(e, {
+    z: () => a,
+});
 var n = i(735438),
     l = i(419954),
     s = i(253932),
@@ -14,6 +16,8 @@ let a = (0, l.Hn)(r.X.MOBILE_NOTIFICATION_DELAY, {
         n.range(1, 11).map((t) => ({
             id: t.toString(),
             value: 60 * t,
-            label: u.intl.formatToPlainString(u.t.iXLF9W, { minutes: t }),
+            label: u.intl.formatToPlainString(u.t.iXLF9W, {
+                minutes: t,
+            }),
         })),
 });

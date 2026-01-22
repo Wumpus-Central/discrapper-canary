@@ -1,4 +1,7 @@
-n.d(t, { y: () => A }), n(896048);
+n.d(t, {
+    y: () => A,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -15,6 +18,7 @@ var r = n(627968),
     p = n(985018),
     x = n(690552),
     h = n(175820);
+
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -40,6 +44,7 @@ function j(e) {
     }
     return e;
 }
+
 function O(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -58,6 +63,7 @@ function O(e, t) {
         e
     );
 }
+
 function y(e) {
     let { badge: t, isSelected: n, onClick: i } = e,
         l = (0, o.Gx)({
@@ -71,6 +77,7 @@ function y(e) {
         radioProps: l,
     });
 }
+
 function v(e) {
     let { badge: t, locked: n = !1, preview: i = !1, selected: l = !1, onClick: o, radioProps: u } = e,
         g = s()(h.Uh, {
@@ -90,7 +97,9 @@ function v(e) {
                     !i &&
                     (0, r.jsx)("div", {
                         className: x.py,
-                        children: (0, r.jsx)(a.LockIcon, { size: "md" }),
+                        children: (0, r.jsx)(a.LockIcon, {
+                            size: "md",
+                        }),
                     }),
             ],
         });
@@ -100,7 +109,9 @@ function v(e) {
             children: y,
         });
     if (n && null != t.packName && "" !== t.packName) {
-        let e = p.intl.formatToPlainString(m.default.ECl8SQ, { packName: t.packName });
+        let e = p.intl.formatToPlainString(m.default.ECl8SQ, {
+            packName: t.packName,
+        });
         return (0, r.jsx)(c.m, {
             delay: 100,
             text: e,
@@ -123,6 +134,7 @@ function v(e) {
         }),
     );
 }
+
 function A(e) {
     let { badgeCollection: t, handleBoostUpsellClick: n, selectedBadge: l, onBadgeClicked: c, headingId: u } = e,
         [f, b] = i.useState(!1),
@@ -201,7 +213,9 @@ function A(e) {
                                     color: "text-subtle",
                                     children: p.intl.string(m.default["2tkPDy"]),
                                 }),
-                                (0, r.jsx)(a.ChevronSmallDownIcon, { size: "sm" }),
+                                (0, r.jsx)(a.ChevronSmallDownIcon, {
+                                    size: "sm",
+                                }),
                             ],
                         }),
                     ],
@@ -221,7 +235,9 @@ function A(e) {
                                     }),
                                     (0, r.jsx)("div", {
                                         className: x.WM,
-                                        children: (0, r.jsx)(g.u, { onClick: n }),
+                                        children: (0, r.jsx)(g.u, {
+                                            onClick: n,
+                                        }),
                                     }),
                                 ],
                             }),
@@ -234,7 +250,9 @@ function A(e) {
                                     color: "text-subtle",
                                     children: p.intl.string(m.default.idxnf7),
                                 }),
-                                (0, r.jsx)(a.ChevronSmallUpIcon, { size: "sm" }),
+                                (0, r.jsx)(a.ChevronSmallUpIcon, {
+                                    size: "sm",
+                                }),
                             ],
                         }),
                     ],

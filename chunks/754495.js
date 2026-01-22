@@ -10,6 +10,7 @@ var i = n(311907),
     o = n(287809),
     l = n(301736),
     c = n(985018);
+
 function u(e, t, n) {
     return (
         t in e
@@ -23,6 +24,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -39,6 +41,7 @@ function d(e) {
     }
     return e;
 }
+
 function f(e) {
     return (0, s.zD)(e)
         ? c.intl.string(c.t["4f8iut"])
@@ -48,6 +51,7 @@ function f(e) {
             ? c.intl.string(c.t.oSs8eg)
             : c.intl.string(c.t.bK9GT1);
 }
+
 function p(e) {
     let { user: t, entry: c, display: u, onAction: p } = e,
         _ = (0, l.A)(),
@@ -75,7 +79,11 @@ function p(e) {
         id: "delete-entry-history",
         label: f(c),
         action: () => {
-            null == p || p({ action: "PRESS_DELETE_HISTORY_MENU_ITEM" }), m();
+            null == p ||
+                p({
+                    action: "PRESS_DELETE_HISTORY_MENU_ITEM",
+                }),
+                m();
         },
         color: "danger",
     });

@@ -9,6 +9,7 @@ var r = n(73153),
     a = n(3137),
     s = n(559908),
     o = n(862570);
+
 function l(e, t, n) {
     return (
         t in e
@@ -22,6 +23,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -38,6 +40,7 @@ function c(e) {
     }
     return e;
 }
+
 function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -50,6 +53,7 @@ function u(e, t) {
     }
     return n;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -61,6 +65,7 @@ function d(e, t) {
         e
     );
 }
+
 function f(e) {
     r.h.dispatch({
         type: "POGGERMODE_SETTINGS_UPDATE",
@@ -69,15 +74,27 @@ function f(e) {
     let t = c({}, a.A.getState(), e);
     (0, o.A)(t);
 }
+
 function p(e) {
-    r.h.dispatch(c({ type: "POGGERMODE_UPDATE_COMBO" }, e));
+    r.h.dispatch(
+        c(
+            {
+                type: "POGGERMODE_UPDATE_COMBO",
+            },
+            e,
+        ),
+    );
 }
+
 function _(e) {
     r.h.dispatch({
         type: "POGGERMODE_UPDATE_MESSAGE_COMBO",
-        comboMessage: d(c({}, e), { displayed: !0 }),
+        comboMessage: d(c({}, e), {
+            displayed: !0,
+        }),
     });
 }
+
 function h(e, t) {
     var n;
     let a = i.default.getId(),

@@ -1,9 +1,12 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(205327),
     i = n(261020),
     a = n(424994),
     s = n(272984),
     o = n(985018);
+
 function l(e, t, n) {
     return (
         t in e
@@ -17,6 +20,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -33,6 +37,7 @@ function c(e) {
     }
     return e;
 }
+
 function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -45,6 +50,7 @@ function u(e, t) {
     }
     return n;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -56,6 +62,7 @@ function d(e, t) {
         e
     );
 }
+
 function f(e) {
     let t,
         { entry: n, baseEntryData: l } = e,
@@ -63,14 +70,21 @@ function f(e) {
         p = n.extra.artist.name,
         _ = {
             onClick: () => (0, i.n)(s.M0.ALBUM, n.extra.media.external_parent_id),
-            ariaDescription: o.intl.formatToPlainString(o.t.xTsar2, { itemName: n.extra.media.parent_title }),
+            ariaDescription: o.intl.formatToPlainString(o.t.xTsar2, {
+                itemName: n.extra.media.parent_title,
+            }),
         },
         h = {
             onClick: () => (0, i.n)(s.M0.ARTIST, n.extra.artist.external_id),
-            ariaDescription: o.intl.formatToPlainString(o.t.xTsar2, { itemName: p }),
+            ariaDescription: o.intl.formatToPlainString(o.t.xTsar2, {
+                itemName: p,
+            }),
         };
     return (
-        u === r.X.SPOTIFY && (t = { type: a.a4.SPOTIFY }),
+        u === r.X.SPOTIFY &&
+            (t = {
+                type: a.a4.SPOTIFY,
+            }),
         d(c({}, l), {
             title: p,
             thumbnailUrl: f,

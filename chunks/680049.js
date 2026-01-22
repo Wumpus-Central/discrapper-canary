@@ -11,4 +11,6 @@ let r = {
     },
     i = r;
 r.MIDNIGHT, r.DARK, r.DARKER, r.DARK;
-let a = { Themes: r };
+let a = {
+    Themes: r,
+};

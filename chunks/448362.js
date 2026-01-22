@@ -13,6 +13,7 @@ var l = n(305003),
     c = n(626031),
     u = n(339763),
     d = n(796688);
+
 function f(e, t, n) {
     return (
         t in e
@@ -26,6 +27,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -100,7 +102,9 @@ let _ = () =>
             };
         return (0, r.jsx)(o.DUT, {
             onClick: x ? void 0 : E,
-            className: s()(d.vk, { [d.r9]: y }),
+            className: s()(d.vk, {
+                [d.r9]: y,
+            }),
             id: null != n ? n : h,
             children: (0, r.jsxs)("span", {
                 onMouseDown: b,

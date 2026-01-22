@@ -1,4 +1,8 @@
-n.d(t, { A: () => x }), n(896048), n(228524);
+n.d(t, {
+    A: () => x,
+}),
+    n(896048),
+    n(228524);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -25,6 +29,7 @@ var r = n(627968),
     T = n(985018),
     C = n(516995),
     N = n(206314);
+
 function R(e, t, n) {
     return (
         t in e
@@ -38,6 +43,7 @@ function R(e, t, n) {
         e
     );
 }
+
 function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -55,7 +61,8 @@ function w(e) {
     return e;
 }
 let P = 2,
-    D = 2000;
+    D = 2e3;
+
 function x(e) {
     let { context: t, application: n, videoUrl: a, imageCoverUrl: l, sectionName: u, hasCommands: f } = e,
         p = i.useMemo(() => {
@@ -99,9 +106,17 @@ function x(e) {
                     (0, r.jsxs)("div", {
                         className: b ? C.iw : C.bH,
                         children: [
-                            (0, r.jsx)(j, { application: n }),
-                            (0, r.jsx)(M, { application: n }),
-                            p.length > 0 ? (0, r.jsx)(G, { description: p }) : null,
+                            (0, r.jsx)(j, {
+                                application: n,
+                            }),
+                            (0, r.jsx)(M, {
+                                application: n,
+                            }),
+                            p.length > 0
+                                ? (0, r.jsx)(G, {
+                                      description: p,
+                                  })
+                                : null,
                             _
                                 ? (0, r.jsx)("div", {
                                       className: C.G,
@@ -122,10 +137,13 @@ function x(e) {
                     }),
                 ],
             }),
-            (0, r.jsx)(L, { application: n }),
+            (0, r.jsx)(L, {
+                application: n,
+            }),
         ],
     });
 }
+
 function L(e) {
     let { application: t } = e,
         n = (0, y.K4)(t),
@@ -170,6 +188,7 @@ function L(e) {
           })
         : null;
 }
+
 function j(e) {
     var t;
     let { application: n } = e,
@@ -196,6 +215,7 @@ function j(e) {
         ],
     });
 }
+
 function M(e) {
     let { application: t } = e,
         n = i.useMemo(() => {
@@ -206,7 +226,9 @@ function M(e) {
         ? (0, r.jsxs)("div", {
               className: C.Pc,
               children: [
-                  (0, r.jsx)(k, { application: t }),
+                  (0, r.jsx)(k, {
+                      application: t,
+                  }),
                   n.map((e, t) =>
                       (0, r.jsx)(
                           "div",
@@ -225,6 +247,7 @@ function M(e) {
           })
         : null;
 }
+
 function k(e) {
     var t;
     let { application: n } = e;
@@ -245,6 +268,7 @@ function k(e) {
         ],
     });
 }
+
 function U(e) {
     var t;
     let { context: n, application: a, sectionName: s, hasCommands: o, isDeveloperOfThisApp: c } = e,
@@ -299,6 +323,7 @@ function U(e) {
               : null
         : null;
 }
+
 function G(e) {
     let { description: t } = e,
         [n, a] = i.useState(!0);
@@ -306,7 +331,10 @@ function G(e) {
     let s = i.useMemo(() => (0, g.parseBioReact)(t), [t]),
         { ref: o, lineHeight: c, lineCount: u } = V(),
         d = i.useMemo(() => {
-            if (null == c || null == u) return { key: 0 };
+            if (null == c || null == u)
+                return {
+                    key: 0,
+                };
             let e = c * u;
             return {
                 key: 1,
@@ -314,7 +342,18 @@ function G(e) {
                 maxHeightOverride: e,
             };
         }, [u, c]),
-        { ref: f, isTransitioning: p, onTransitionEnd: _ } = (0, A.A)(w({ isExpanded: n }, d)),
+        {
+            ref: f,
+            isTransitioning: p,
+            onTransitionEnd: _,
+        } = (0, A.A)(
+            w(
+                {
+                    isExpanded: n,
+                },
+                d,
+            ),
+        ),
         h = n || p;
     return (0, r.jsxs)("div", {
         className: C.iQ,
@@ -328,7 +367,9 @@ function G(e) {
                     className: N.PT,
                     variant: "text-sm/medium",
                     lineClamp: h ? void 0 : P,
-                    style: { maxHeight: h ? void 0 : d.minHeightOverride },
+                    style: {
+                        maxHeight: h ? void 0 : d.minHeightOverride,
+                    },
                     children: s,
                 }),
             }),
@@ -357,6 +398,7 @@ function G(e) {
         ],
     });
 }
+
 function V() {
     let e = i.useRef(null),
         [t, n] = i.useState(null),

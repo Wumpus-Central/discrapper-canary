@@ -1,8 +1,13 @@
-n.d(t, { A: () => l }), n(638769), n(896048);
+n.d(t, {
+    A: () => l,
+}),
+    n(638769),
+    n(896048);
 var r = n(64700),
     i = n(354138),
     a = n(927813),
     s = n(60809);
+
 function o(e) {
     let { alphabeticalSortedCommands: t } = e;
     return r.useMemo(() => {
@@ -44,6 +49,7 @@ function o(e) {
               };
     }, [t]);
 }
+
 function l(e) {
     let { sectionId: t, commandsByActiveSection: n } = e,
         [l, c] = r.useState(s.Ug.ALPHABETICAL),
@@ -51,10 +57,14 @@ function l(e) {
             var e, r;
             return null != (e = null == (r = n.find((e) => e.section.id === t)) ? void 0 : r.data) ? e : [];
         }, [n, t]),
-        { popularSortedCommands: d, canSort: f } = o({ alphabeticalSortedCommands: u });
+        { popularSortedCommands: d, canSort: f } = o({
+            alphabeticalSortedCommands: u,
+        });
     r.useEffect(() => {
         let e = t;
-        i.Di(e, { dontRefetchMs: a.A.Millis.DAY });
+        i.Di(e, {
+            dontRefetchMs: a.A.Millis.DAY,
+        });
     }, [t]),
         r.useLayoutEffect(() => {
             f && c(s.Ug.POPULAR);

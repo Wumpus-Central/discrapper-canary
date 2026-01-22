@@ -1,4 +1,6 @@
-r.d(t, { A: () => c });
+r.d(t, {
+    A: () => c,
+});
 var n = r(64700),
     o = r(655972),
     a = r.n(o),
@@ -39,9 +41,15 @@ var n = r(64700),
                             boxShadow: "inset 0 0 0 1px rgba(0,0,0,.15)",
                         },
                     },
-                    "no-presets": { colors: { display: "none" } },
+                    "no-presets": {
+                        colors: {
+                            display: "none",
+                        },
+                    },
                 },
-                { "no-presets": !t || !t.length },
+                {
+                    "no-presets": !t || !t.length,
+                },
             ),
             c = function (e, t) {
                 o(
@@ -59,7 +67,12 @@ var n = r(64700),
                 className: "flexbox-fix",
             },
             t.map(function (e) {
-                var t = "string" == typeof e ? { color: e } : e,
+                var t =
+                        "string" == typeof e
+                            ? {
+                                  color: e,
+                              }
+                            : e,
                     r = "" + t.color + (t.title || "");
                 return n.createElement(
                     "div",
@@ -73,7 +86,9 @@ var n = r(64700),
                             style: u.swatch,
                             onClick: c,
                             onHover: a,
-                            focusStyle: { boxShadow: "inset 0 0 0 1px rgba(0,0,0,.15), 0 0 4px " + t.color },
+                            focusStyle: {
+                                boxShadow: "inset 0 0 0 1px rgba(0,0,0,.15), 0 0 4px " + t.color,
+                            },
                         }),
                     ),
                 );

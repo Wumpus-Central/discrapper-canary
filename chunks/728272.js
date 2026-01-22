@@ -1,4 +1,6 @@
-r.d(t, { A: () => o });
+r.d(t, {
+    A: () => o,
+});
 var n = Object.prototype;
 let o = function (e) {
     var t = e && e.constructor;

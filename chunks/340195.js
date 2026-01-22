@@ -1,4 +1,6 @@
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -11,6 +13,7 @@ var i = n(311907),
     d = n(236806),
     f = n(988297),
     p = n(613702);
+
 function _(e) {
     let { className: t } = e,
         n = (0, i.bG)([o.A], () => o.A.useReducedMotion),
@@ -21,7 +24,9 @@ function _(e) {
         return (0, r.jsxs)("div", {
             className: t,
             children: [
-                (0, r.jsx)("div", { className: c.YL }),
+                (0, r.jsx)("div", {
+                    className: c.YL,
+                }),
                 (0, r.jsx)("img", {
                     src: e,
                     alt: "",
@@ -33,7 +38,9 @@ function _(e) {
     return (0, r.jsxs)("div", {
         className: t,
         children: [
-            (0, r.jsx)("div", { className: c.YL }),
+            (0, r.jsx)("div", {
+                className: c.YL,
+            }),
             (0, r.jsx)(
                 l.A,
                 {
@@ -41,7 +48,9 @@ function _(e) {
                     autoPlay: !0,
                     playsInline: !0,
                     loop: !0,
-                    children: (0, r.jsx)("source", { src: m }),
+                    children: (0, r.jsx)("source", {
+                        src: m,
+                    }),
                 },
                 m,
             ),

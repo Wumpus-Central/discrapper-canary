@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var r = n(627968),
     i = n(64700),
     a = n(827734),
@@ -8,6 +10,7 @@ var r = n(627968),
     c = n(149757),
     u = n(788868),
     d = n(985018);
+
 function f(e, t, n) {
     return (
         t in e
@@ -21,6 +24,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,6 +41,7 @@ function p(e) {
     }
     return e;
 }
+
 function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -49,6 +54,7 @@ function _(e, t) {
     }
     return n;
 }
+
 function h(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -199,23 +205,39 @@ let m = {
                     children: [
                         (0, r.jsx)(
                             l.L,
-                            h(p({ targetElementRef: I }, P), {
-                                children: (0, r.jsx)(o.Button, {
-                                    buttonRef: I,
-                                    variant: "primary",
-                                    text: "Left",
-                                }),
-                            }),
+                            h(
+                                p(
+                                    {
+                                        targetElementRef: I,
+                                    },
+                                    P,
+                                ),
+                                {
+                                    children: (0, r.jsx)(o.Button, {
+                                        buttonRef: I,
+                                        variant: "primary",
+                                        text: "Left",
+                                    }),
+                                },
+                            ),
                         ),
                         (0, r.jsx)(
                             l.L,
-                            h(p({ targetElementRef: T }, P), {
-                                children: (0, r.jsx)(o.Button, {
-                                    buttonRef: T,
-                                    variant: "primary",
-                                    text: "Right",
-                                }),
-                            }),
+                            h(
+                                p(
+                                    {
+                                        targetElementRef: T,
+                                    },
+                                    P,
+                                ),
+                                {
+                                    children: (0, r.jsx)(o.Button, {
+                                        buttonRef: T,
+                                        variant: "primary",
+                                        text: "Right",
+                                    }),
+                                },
+                            ),
                         ),
                     ],
                 }),

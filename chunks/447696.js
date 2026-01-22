@@ -19,7 +19,9 @@ let i = function (e) {
         });
     },
     s = async (e) => {
-        r.h.dispatch({ type: "WELCOME_SCREEN_FETCH_START" });
+        r.h.dispatch({
+            type: "WELCOME_SCREEN_FETCH_START",
+        });
         try {
             let t = await l.Bo.get({
                 url: a.Rsh.GUILD_WELCOME_SCREEN(e),
@@ -35,14 +37,20 @@ let i = function (e) {
                 t.body
             );
         } catch (e) {
-            r.h.dispatch({ type: "WELCOME_SCREEN_FETCH_FAIL" });
+            r.h.dispatch({
+                type: "WELCOME_SCREEN_FETCH_FAIL",
+            });
         }
     },
     o = () => {
-        r.h.dispatch({ type: "WELCOME_SCREEN_SETTINGS_RESET" });
+        r.h.dispatch({
+            type: "WELCOME_SCREEN_SETTINGS_RESET",
+        });
     },
     c = () => {
-        r.h.dispatch({ type: "WELCOME_SCREEN_SETTINGS_CLEAR" });
+        r.h.dispatch({
+            type: "WELCOME_SCREEN_SETTINGS_CLEAR",
+        });
     },
     u = (e) => {
         r.h.dispatch({
@@ -51,7 +59,9 @@ let i = function (e) {
         });
     },
     E = async (e, t) => {
-        r.h.dispatch({ type: "WELCOME_SCREEN_SUBMIT" });
+        r.h.dispatch({
+            type: "WELCOME_SCREEN_SUBMIT",
+        });
         try {
             let n = await l.Bo.patch({
                 url: a.Rsh.GUILD_WELCOME_SCREEN(e),
@@ -69,6 +79,8 @@ let i = function (e) {
                 welcomeScreen: n.body,
             });
         } catch (e) {
-            r.h.dispatch({ type: "WELCOME_SCREEN_SUBMIT_FAILURE" });
+            r.h.dispatch({
+                type: "WELCOME_SCREEN_SUBMIT_FAILURE",
+            });
         }
     };

@@ -18,6 +18,7 @@ var r = n(284009),
     u = n(166862),
     d = n(392054),
     f = n(652215);
+
 function p(e) {
     let {
         channelId: t,
@@ -50,6 +51,7 @@ function p(e) {
             commandOrigin: h,
         });
 }
+
 function _(e, t) {
     s.h.dispatch({
         type: "APPLICATION_COMMAND_SET_PREFERRED_COMMAND",
@@ -57,6 +59,7 @@ function _(e, t) {
         commandId: t,
     });
 }
+
 function h(e, t) {
     s.h.dispatch({
         type: "APPLICATION_COMMAND_UPDATE_OPTIONS",
@@ -64,24 +67,34 @@ function h(e, t) {
         changedOptionStates: t,
     });
 }
+
 function m(e, t) {
     h(
         e,
         Object.fromEntries(
             Object.entries(t).map((e) => {
                 let [t, n] = e;
-                return [t, { lastValidationResult: n }];
+                return [
+                    t,
+                    {
+                        lastValidationResult: n,
+                    },
+                ];
             }),
         ),
     );
 }
+
 function g(e, t, n, r) {
     return a.Bo.put({
-        body: { permissions: r },
+        body: {
+            permissions: r,
+        },
         url: f.Rsh.APPLICATION_BOT_GUILD_COMMAND_PERMISSIONS(e, t, n),
         rejectWithError: !1,
     });
 }
+
 function E(e, t, n) {
     var r;
     i()(null != t.autocomplete, "Missing autocomplete context");
@@ -107,7 +120,7 @@ function E(e, t, n) {
                     data: n,
                     nonce: _,
                 },
-                timeout: 3000,
+                timeout: 3e3,
                 rejectWithError: !0,
             }).catch(() => {
                 s.h.dispatch({

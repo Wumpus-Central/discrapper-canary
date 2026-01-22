@@ -118,6 +118,10 @@ if (s("RegExp", V)) {
         Y.length > W;
     )
         m(H, T, Y[W++]);
-    (C.constructor = H), (H.prototype = C), g(i, "RegExp", H, { constructor: !0 });
+    (C.constructor = H),
+        (H.prototype = C),
+        g(i, "RegExp", H, {
+            constructor: !0,
+        });
 }
 O("RegExp");

@@ -27,6 +27,7 @@ var r = n(627968),
     E = n(652215),
     N = n(985018),
     _ = n(690450);
+
 function S(e) {
     let { guild: t, isExpanded: n, selectedChannelId: l, className: a } = e,
         p = (0, g.w)(t),
@@ -95,6 +96,7 @@ function S(e) {
         ],
     });
 }
+
 function T(e) {
     var t;
     let { guild: n, selectedChannelId: i, setSelectedChannelId: l, className: f } = e,
@@ -120,8 +122,18 @@ function T(e) {
             try {
                 if (
                     (e !== g &&
-                        (await v.A.saveGuild(n.id, { safetyAlertsChannelId: e }, { throwErr: !0 }),
-                        v.A.updateGuild({ safetyAlertsChannelId: e })),
+                        (await v.A.saveGuild(
+                            n.id,
+                            {
+                                safetyAlertsChannelId: e,
+                            },
+                            {
+                                throwErr: !0,
+                            },
+                        ),
+                        v.A.updateGuild({
+                            safetyAlertsChannelId: e,
+                        })),
                     null != e)
                 ) {
                     let t = {
@@ -153,6 +165,7 @@ function T(e) {
         }),
     });
 }
+
 function I(e) {
     var t, n;
     let { guild: l } = e,
@@ -174,6 +187,7 @@ function I(e) {
         }),
     });
 }
+
 function C(e) {
     var t, n;
     let { guild: l } = e,

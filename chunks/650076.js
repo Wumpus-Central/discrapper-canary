@@ -1,4 +1,7 @@
-n.d(t, { A: () => d }), n(228524);
+n.d(t, {
+    A: () => d,
+}),
+    n(228524);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -7,6 +10,7 @@ var r = n(627968),
     l = n(207963),
     c = n(985018),
     u = n(141482);
+
 function d(e) {
     let { type: t, options: n, required: a } = e,
         d = i.useMemo(() => {
@@ -49,7 +53,9 @@ function d(e) {
             }),
             !a &&
                 (0, r.jsx)("div", {
-                    className: s()(u.H, { [u.d]: !h }),
+                    className: s()(u.H, {
+                        [u.d]: !h,
+                    }),
                     "aria-hidden": !h,
                     children: (0, r.jsx)(o.Button, {
                         text: c.intl.string(c.t["5uAtZN"]),

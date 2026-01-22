@@ -1,8 +1,11 @@
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 var l = n(627968);
 n(64700);
 var a = n(397927),
     r = n(985018);
+
 function i(e) {
     let { tabs: t, selectedTab: n, onTabSelect: i, onClose: s } = e;
     return (0, l.jsx)(a.W1t, {

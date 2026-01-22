@@ -1,7 +1,10 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r,
     i = n(311907),
     a = n(73153);
+
 function s(e, t, n) {
     return (
         t in e
@@ -16,6 +19,7 @@ function s(e, t, n) {
     );
 }
 let o = !1;
+
 function l(e) {
     let { isRegistered: t } = e;
     o = t;
@@ -26,4 +30,6 @@ class c extends (r = i.Ay.Store) {
     }
 }
 s(c, "displayName", "SpotifyProtocolStore");
-let u = new c(a.h, { SPOTIFY_SET_PROTOCOL_REGISTERED: l });
+let u = new c(a.h, {
+    SPOTIFY_SET_PROTOCOL_REGISTERED: l,
+});

@@ -1,10 +1,14 @@
-n.d(t, { A: () => d }), n(896048);
+n.d(t, {
+    A: () => d,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
     s = n.n(i),
     a = n(397927),
     o = n(230296);
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -30,6 +34,7 @@ function u(e) {
     }
     return e;
 }
+
 function c(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -85,6 +90,21 @@ let d = l.forwardRef(function (e, t) {
         [m] = l;
     return (0, r.jsx)(
         a.vN3,
-        c(u({}, d), { children: (0, r.jsx)("li", c(u({ className: s()(i, o.k) }, p), { ref: m })) }),
+        c(u({}, d), {
+            children: (0, r.jsx)(
+                "li",
+                c(
+                    u(
+                        {
+                            className: s()(i, o.k),
+                        },
+                        p,
+                    ),
+                    {
+                        ref: m,
+                    },
+                ),
+            ),
+        }),
     );
 });

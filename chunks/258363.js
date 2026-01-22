@@ -16,12 +16,14 @@ n.d(t, {
 var s = n(155718),
     o = n(25662),
     l = n(257120);
+
 function c(e) {
     return null == e
         ? []
         : e.filter((t, n) => "text" !== t.type || (n > 0 && n < e.length - 1 ? "" !== t.text : "" !== t.text.trim()));
 }
 n(73510);
+
 function u(e, t) {
     let n = e[t],
         r = "";
@@ -51,9 +53,11 @@ function u(e, t) {
         }
     return r;
 }
+
 function d(e, t) {
     return null == e[t] ? null : u(e, t);
 }
+
 function f(e, t) {
     if (e !== a) {
         var n;
@@ -63,6 +67,7 @@ function f(e, t) {
     }
     return t.replace(r, "").replace(i, ".");
 }
+
 function p(e, t) {
     let n = {};
     for (let i of t) {

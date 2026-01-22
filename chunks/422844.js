@@ -13,6 +13,7 @@ var i = n(284009),
     d = n(311907),
     u = n(734057),
     h = n(679804);
+
 function g(e, t, n) {
     return (
         t in e
@@ -26,6 +27,7 @@ function g(e, t, n) {
         e
     );
 }
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -70,7 +72,12 @@ class v {
                 let n = this.get(),
                     i = this.getChannelState(e),
                     s = m({}, n.channelStates);
-                (s[e] = m({}, i, t)), (0, c.r)(() => this.set({ channelStates: s }));
+                (s[e] = m({}, i, t)),
+                    (0, c.r)(() =>
+                        this.set({
+                            channelStates: s,
+                        }),
+                    );
             }),
             (this.getChannelState = (e) => {
                 if (null == e) return f;
@@ -94,19 +101,33 @@ class v {
                 n.has(t) ? n.delete(t) : n.add(t), this.setTagFilter(e, n);
             }),
             (this.setTagFilter = (e, t) => {
-                this.setChannelState(e, { tagFilter: t }), h.A.setFilterTagIds(t);
+                this.setChannelState(e, {
+                    tagFilter: t,
+                }),
+                    h.A.setFilterTagIds(t);
             }),
             (this.setSortOrder = (e, t) => {
-                this.setChannelState(e, { sortOrder: t }), h.A.setSortOrder(t);
+                this.setChannelState(e, {
+                    sortOrder: t,
+                }),
+                    h.A.setSortOrder(t);
             }),
             (this.setLayoutType = (e, t) => {
-                this.setChannelState(e, { layoutType: t }), h.A.setLayout(t);
+                this.setChannelState(e, {
+                    layoutType: t,
+                }),
+                    h.A.setLayout(t);
             }),
             (this.setTagSetting = (e, t) => {
-                this.setChannelState(e, { tagSetting: t }), h.A.setTagSetting(t);
+                this.setChannelState(e, {
+                    tagSetting: t,
+                }),
+                    h.A.setTagSetting(t);
             }),
             (this.setScrollPosition = (e, t) => {
-                this.setChannelState(e, { scrollPosition: t });
+                this.setChannelState(e, {
+                    scrollPosition: t,
+                });
             });
     }
 }

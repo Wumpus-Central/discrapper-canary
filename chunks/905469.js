@@ -1,7 +1,10 @@
-n.d(t, { l: () => o });
+n.d(t, {
+    l: () => o,
+});
 var r = n(236705),
     i = n(607399),
     a = n(855522);
+
 function s() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
     if (null != a.A.Messages.SELF_XSS_HEADER)
@@ -19,8 +22,9 @@ function s() {
                 url: "".concat(location.protocol).concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, "/jobs"),
             });
             console.log("%c".concat(e), "font-size: 16px;");
-        } else setTimeout(() => s(e + 1), 1000);
+        } else setTimeout(() => s(e + 1), 1e3);
 }
+
 function o(e, t) {
     if (null != t && "0.0.0" === t.remoteApp.getVersion()) return;
     let n = new r.$();

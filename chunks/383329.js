@@ -1,4 +1,7 @@
-n.d(t, { R: () => u }), n(264879);
+n.d(t, {
+    R: () => u,
+}),
+    n(264879);
 var r = n(64700),
     i = n(735438),
     l = n.n(i),
@@ -6,10 +9,12 @@ var r = n(64700),
     a = n(735321),
     c = n(760751),
     o = n(282435);
+
 function d(e) {
     var t;
     return null != (t = o.Bf.get(e)) ? t : 0;
 }
+
 function u() {
     let e = (0, s.bG)([c.A], () => c.A.games),
         t = r.useMemo(

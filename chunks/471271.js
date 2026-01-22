@@ -1,4 +1,7 @@
-n.d(t, { t: () => m }), n(896048);
+n.d(t, {
+    t: () => m,
+}),
+    n(896048);
 var r = n(64700),
     l = n(424266),
     i = n.n(l),
@@ -13,6 +16,7 @@ var r = n(64700),
     h = n(209079),
     b = n(687599),
     g = n(652215);
+
 function m(e) {
     let { user: t, onAcceptSuccess: n, onRejectSuccess: l, onError: m } = e,
         A = (0, h.A)(),

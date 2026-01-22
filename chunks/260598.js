@@ -1,4 +1,6 @@
-n.d(t, { f: () => A });
+n.d(t, {
+    f: () => A,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -10,6 +12,7 @@ var r = n(627968),
     d = n(189812),
     f = n(688564),
     p = n(829681);
+
 function _(e, t, n) {
     return (
         t in e
@@ -23,6 +26,7 @@ function _(e, t, n) {
         e
     );
 }
+
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -39,6 +43,7 @@ function h(e) {
     }
     return e;
 }
+
 function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -51,6 +56,7 @@ function m(e, t) {
     }
     return n;
 }
+
 function g(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -62,6 +68,7 @@ function g(e, t) {
         e
     );
 }
+
 function E(e, t) {
     if (null == e) return {};
     var n,
@@ -78,6 +85,7 @@ function E(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function b(e, t) {
     if (null == e) return {};
     var n,
@@ -90,6 +98,7 @@ function b(e, t) {
 }
 let y = 10,
     O = 7.23;
+
 function A(e) {
     var t;
     let {
@@ -161,7 +170,9 @@ function A(e) {
                                 {
                                     autosize: d,
                                     className: s()(f.Tg, p.qD),
-                                    style: { paddingRight: x },
+                                    style: {
+                                        paddingRight: x,
+                                    },
                                     placeholder: a,
                                     value: n,
                                     autoFocus: l,
@@ -184,6 +195,7 @@ function A(e) {
         }),
     );
 }
+
 function v(e) {
     let { "aria-labelledby": t, autosize: n } = e,
         a = E(e, ["aria-labelledby", "autosize"]),

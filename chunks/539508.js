@@ -10,7 +10,14 @@ e.exports = function (e) {
                 className: "string",
                 end: /$/,
                 relevance: 0,
-                contains: [{ begin: "\\\\\\\\" }, { begin: "\\\\\\n" }],
+                contains: [
+                    {
+                        begin: "\\\\\\\\",
+                    },
+                    {
+                        begin: "\\\\\\n",
+                    },
+                ],
             },
         };
     return {
@@ -22,7 +29,14 @@ e.exports = function (e) {
             e.COMMENT("^\\s*[!#]", "$"),
             {
                 returnBegin: !0,
-                variants: [{ begin: i + n }, { begin: i + r }],
+                variants: [
+                    {
+                        begin: i + n,
+                    },
+                    {
+                        begin: i + r,
+                    },
+                ],
                 contains: [
                     {
                         className: "attr",

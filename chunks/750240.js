@@ -8,7 +8,9 @@ e.exports = function (e) {
             var t = e.props.editorState.getSelection();
             r.logBlockedSelectionEvent({
                 anonymizedDom: "N/A",
-                extraParams: JSON.stringify({ stacktrace: Error().stack }),
+                extraParams: JSON.stringify({
+                    stacktrace: Error().stack,
+                }),
                 selectionState: JSON.stringify(t.toJS()),
             });
         }

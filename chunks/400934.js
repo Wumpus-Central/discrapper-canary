@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968);
 n(64700);
 var i = n(990078),
@@ -7,6 +9,7 @@ var i = n(990078),
     a = n(818348),
     c = n(985018),
     o = n(690450);
+
 function d(e) {
     let { title: t, details: n } = e;
     return (0, r.jsxs)("div", {

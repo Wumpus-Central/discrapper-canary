@@ -36,9 +36,11 @@ let s = (0, r.C)({
         },
     ],
 });
+
 function o(e) {
     return null != e && e !== a.V && e !== i.YYv;
 }
+
 function l(e, t) {
     let n = o(e);
     return s.useExperiment(
@@ -52,6 +54,7 @@ function l(e, t) {
         },
     ).enabled;
 }
+
 function c(e, t) {
     let n = o(e),
         r = s.useExperiment(
@@ -66,6 +69,7 @@ function c(e, t) {
         );
     return r.enabled && !r.rollbackEnabled;
 }
+
 function u(e, t) {
     let n = o(e);
     return s.useExperiment(
@@ -79,6 +83,7 @@ function u(e, t) {
         },
     ).rollbackEnabled;
 }
+
 function d(e, t) {
     return (
         !!o(e) &&
@@ -87,10 +92,13 @@ function d(e, t) {
                 guildId: e,
                 location: t,
             },
-            { autoTrackExposure: !1 },
+            {
+                autoTrackExposure: !1,
+            },
         ).rollbackEnabled
     );
 }
+
 function f(e, t) {
     return (
         !!o(e) &&
@@ -99,7 +107,9 @@ function f(e, t) {
                 guildId: e,
                 location: t,
             },
-            { autoTrackExposure: !1 },
+            {
+                autoTrackExposure: !1,
+            },
         ).enabled
     );
 }

@@ -17,7 +17,8 @@ var r = n(665260),
     c = n(661191),
     u = n(340837),
     d = n(652215);
-let f = 86400000;
+let f = 864e5;
+
 function p(e, t, n) {
     let { maxDaysOld: r, minDaysOld: i = 0 } = t,
         o = s.A.getGuild(e),
@@ -32,13 +33,15 @@ function p(e, t, n) {
         d = c >= f * i;
     return u && d;
 }
+
 function _(e, t, n) {
     return (0, i.bG)([], () => p(e, t, n), [t, e, n]);
 }
+
 function h(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 7,
         n = c.default.extractTimestamp(e.id);
-    return Date.now() - n < 86400000 * t;
+    return Date.now() - n < 864e5 * t;
 }
 let m = (e, t) => {
     let n = (0, i.bG)([a.Ay], () => {
@@ -56,24 +59,40 @@ let m = (e, t) => {
             var e;
             return null == (e = l.default.getUser(t)) ? void 0 : e.bot;
         });
-    return _(e, { maxDaysOld: 7 }, t) && !o && !c && !n;
+    return (
+        _(
+            e,
+            {
+                maxDaysOld: 7,
+            },
+            t,
+        ) &&
+        !o &&
+        !c &&
+        !n
+    );
 };
+
 function g(e, t) {
     let [n] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [o.A];
     return null != t && E(e, t, [n]) && !e.isProvisional;
 }
+
 function E(e, t) {
     let [n] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [o.A];
     return null != t && n.canManageUser(d.xBc.KICK_MEMBERS, e, t) && !e.isNonUserBot();
 }
+
 function b(e, t) {
     let [n] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [o.A];
     return null != t && y(e, t, [n]) && !e.isProvisional;
 }
+
 function y(e, t) {
     let [n] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [o.A];
     return null != t && n.canManageUser(d.xBc.BAN_MEMBERS, e, t) && !e.isNonUserBot() && !e.bot;
 }
+
 function O(e, t) {
     let [n] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [o.A];
     return null != e && null != t && n.canManageUser(d.xBc.MANAGE_MESSAGES, e, t) && !e.isNonUserBot();

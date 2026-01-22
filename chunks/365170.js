@@ -5,6 +5,7 @@ n.d(t, {
     n(896048);
 var r = n(583954),
     i = n(241678);
+
 function a(e) {
     let t,
         { canvas: n, badges: a, startPosition: s, maxWidth: o } = e;
@@ -37,6 +38,7 @@ function a(e) {
             ));
     }
 }
+
 function s(e) {
     let {
         canvas: t,
@@ -67,7 +69,9 @@ function s(e) {
                     h: s,
                 },
                 50,
-                { fillMode: r.VZ.Cover },
+                {
+                    fillMode: r.VZ.Cover,
+                },
             ),
             t.restoreContext();
 }

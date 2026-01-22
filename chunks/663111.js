@@ -1,4 +1,6 @@
-n.d(t, { M: () => T });
+n.d(t, {
+    M: () => T,
+});
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -24,6 +26,7 @@ var r = n(627968),
     S = n(985018),
     C = n(842130),
     N = n(878251);
+
 function T(e) {
     var t, n;
     let l,
@@ -36,7 +39,9 @@ function T(e) {
         D = (0, o.bG)([_.A], () => _.A.getGuild(R), [R]),
         M = (0, f.A)(),
         k = (0, g.lI)(),
-        { guildTitleIconSize: U, guildIconSize: G } = (0, p.p)({ location: "GuildTitle" }),
+        { guildTitleIconSize: U, guildIconSize: G } = (0, p.p)({
+            location: "GuildTitle",
+        }),
         { application: V, isFrameInFocusedMode: B } = (0, o.cf)([d.A, h.A], () => {
             let e = h.A.getConnectedFrame();
             return {
@@ -63,10 +68,15 @@ function T(e) {
               draggable: !1,
           })))
         : k
-          ? ((l = S.intl.string(S.t.HcoRu0)), (F = (0, r.jsx)(u.XFE, { size: U })))
+          ? ((l = S.intl.string(S.t.HcoRu0)),
+            (F = (0, r.jsx)(u.XFE, {
+                size: U,
+            })))
           : null != D
             ? ((F = M
-                  ? (0, r.jsx)(u.Gg5, { size: U })
+                  ? (0, r.jsx)(u.Gg5, {
+                        size: U,
+                    })
                   : (0, r.jsx)(A.A, {
                         guild: D,
                         size: G,
@@ -75,21 +85,45 @@ function T(e) {
                     })),
               (l = D.name))
             : null != L && (L.isDM() || L.isGroupDM())
-              ? ((l = S.intl.string(S.t.YUU0RF)), (F = (0, r.jsx)(u.pVd, { size: U })))
+              ? ((l = S.intl.string(S.t.YUU0RF)),
+                (F = (0, r.jsx)(u.pVd, {
+                    size: U,
+                })))
               : x.pathname.startsWith(I.BVt.ICYMI)
-                ? ((l = S.intl.string(S.t["jnXV/V"])), (F = (0, r.jsx)(u.gXB, { size: U })))
+                ? ((l = S.intl.string(S.t["jnXV/V"])),
+                  (F = (0, r.jsx)(u.gXB, {
+                      size: U,
+                  })))
                 : x.pathname.startsWith(I.BVt.GLOBAL_DISCOVERY)
-                  ? ((l = S.intl.string(S.t["4nEZLk"])), (F = (0, r.jsx)(u.QGJ, { size: U })))
+                  ? ((l = S.intl.string(S.t["4nEZLk"])),
+                    (F = (0, r.jsx)(u.QGJ, {
+                        size: U,
+                    })))
                   : x.pathname.startsWith(I.BVt.NITRO_HOME)
-                    ? ((l = S.intl.string(S.t.Ipxkog)), (F = (0, r.jsx)(u.tvc, { size: U })))
+                    ? ((l = S.intl.string(S.t.Ipxkog)),
+                      (F = (0, r.jsx)(u.tvc, {
+                          size: U,
+                      })))
                     : x.pathname.startsWith(I.BVt.COLLECTIBLES_SHOP)
-                      ? ((l = S.intl.string(S.t.pWG4ze)), (F = (0, r.jsx)(u.U1X, { size: U })))
+                      ? ((l = S.intl.string(S.t.pWG4ze)),
+                        (F = (0, r.jsx)(u.U1X, {
+                            size: U,
+                        })))
                       : x.pathname.startsWith(I.BVt.FRIENDS)
-                        ? ((l = S.intl.string(S.t.TdEu5X)), (F = (0, r.jsx)(u.$yI, { size: U })))
+                        ? ((l = S.intl.string(S.t.TdEu5X)),
+                          (F = (0, r.jsx)(u.$yI, {
+                              size: U,
+                          })))
                         : x.pathname.startsWith(I.BVt.FAMILY_CENTER)
-                          ? ((l = S.intl.string(C.default.RZqaJn)), (F = (0, r.jsx)(u.nFg, { size: U })))
+                          ? ((l = S.intl.string(C.default.RZqaJn)),
+                            (F = (0, r.jsx)(u.nFg, {
+                                size: U,
+                            })))
                           : x.pathname.startsWith(I.BVt.QUEST_HOME_V2) &&
-                            ((l = S.intl.string(S.t.JALI2K)), (F = (0, r.jsx)(u.r2v, { size: U })));
+                            ((l = S.intl.string(S.t.JALI2K)),
+                            (F = (0, r.jsx)(u.r2v, {
+                                size: U,
+                            })));
     let Y = i.useCallback((e) => {
             (0, m.L$)("fast-travel");
         }, []),
@@ -129,7 +163,9 @@ function T(e) {
                       return e;
                   })(
                       {
-                          className: a()(N.DD, { [N.Nt]: T }),
+                          className: a()(N.DD, {
+                              [N.Nt]: T,
+                          }),
                           "aria-label": S.intl.string(S.t["7P/+qz"]),
                       },
                       j,

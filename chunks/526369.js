@@ -1,4 +1,7 @@
-n.d(t, { A: () => C }), n(321073);
+n.d(t, {
+    A: () => C,
+}),
+    n(321073);
 var r = n(627968),
     l = n(64700),
     i = n(110259),
@@ -22,6 +25,7 @@ var r = n(627968),
     x = n(794927),
     E = n(652215),
     _ = n(439197);
+
 function C(e) {
     let {
             participants: t,
@@ -41,14 +45,18 @@ function C(e) {
         G = (0, m.vp)(I.id, t),
         k = l.useCallback(() => {
             (0, a.r)(() => {
-                v.P.setState({ dismissedActivityEntryPointTileChannel: I.id });
+                v.P.setState({
+                    dismissedActivityEntryPointTileChannel: I.id,
+                });
             });
         }, [I.id]);
     l.useEffect(() => {
         null != M &&
             I.id !== M &&
             (0, a.r)(() => {
-                v.P.setState({ dismissedActivityEntryPointTileChannel: null });
+                v.P.setState({
+                    dismissedActivityEntryPointTileChannel: null,
+                });
             });
     }, [I.id, M]);
     let U = (0, s.bG)([y.A], () => I.isPrivate() || (0, h.K)(y.A, D, I), [D, I]),
@@ -87,7 +95,9 @@ function C(e) {
                 channel_user_limit: I.userLimit,
             },
         },
-        { trackOnInitialLoad: !0 },
+        {
+            trackOnInitialLoad: !0,
+        },
         [],
     ),
         null != D &&

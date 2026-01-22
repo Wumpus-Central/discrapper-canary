@@ -18,6 +18,7 @@ var r = n(735438),
     d = n(998218),
     f = n(835517),
     p = n(652215);
+
 function _(e, t, n) {
     return (
         t in e
@@ -31,6 +32,7 @@ function _(e, t, n) {
         e
     );
 }
+
 function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -50,7 +52,10 @@ let m = 5,
         16, 20, 22, 24, 28, 32, 40, 44, 48, 56, 60, 64, 80, 96, 100, 128, 160, 240, 256, 300, 320, 480, 512, 600, 640,
         1024, 1280, 1536, 2048, 3072, 4096,
     ],
-    y = new (s())({ max: 1000 });
+    y = new (s())({
+        max: 1e3,
+    });
+
 function O(e, t) {
     null == e.backoff && (e.backoff = new l.A());
     let { backoff: n } = e;
@@ -63,6 +68,7 @@ function O(e, t) {
                 : v(!0, e, t);
     };
 }
+
 function A(e) {
     let t = new Image();
     (t.onerror = O(e, t)),
@@ -72,6 +78,7 @@ function A(e) {
         }),
         (t.src = e.url);
 }
+
 function v(e, t, n) {
     let { callbacks: r, url: i } = t;
     if (e) y.del(i);
@@ -87,10 +94,12 @@ function v(e, t, n) {
     }
     null != r && r.forEach((n) => n(e, t));
 }
+
 function S(e) {
     let t = y.get(e);
     return null != t && t.loaded;
 }
+
 function I(e, t) {
     let n = y.get(e);
     if (null != n && n.loaded)
@@ -129,6 +138,7 @@ function I(e, t) {
         );
     }
 }
+
 function T(e) {
     var t;
     let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
@@ -138,10 +148,12 @@ function T(e) {
     }
     return null != (t = b.find((t) => e <= t)) ? t : b[b.length - 1];
 }
+
 function C(e) {
     let [t, n] = e.split("?");
     return [t, o.parse(n)];
 }
+
 function N(e) {
     let {
         src: t,
@@ -174,6 +186,7 @@ function N(e) {
         h
     );
 }
+
 function R(e) {
     let {
             src: t,

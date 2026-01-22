@@ -1,4 +1,9 @@
-n.d(t, { A: () => z }), n(747238), n(812715), n(667532);
+n.d(t, {
+    A: () => z,
+}),
+    n(747238),
+    n(812715),
+    n(667532);
 var r = n(989349),
     i = n.n(r),
     l = n(73153),
@@ -32,6 +37,7 @@ let x = [],
     w = null,
     L = null,
     R = /\|\|([\s\S]+?)\|\|/g;
+
 function D(e, t, n, r) {
     let l = b.A.getGuild(n),
         a = e
@@ -53,7 +59,7 @@ function D(e, t, n, r) {
             .replace(/<\/([^\s]+?):(\d+)>/g, (e, t) => "/".concat(t))
             .replace(/<t:(\d+):([A-Z]|[a-z])>/g, (e, t, n) => {
                 let r = c.kx[n],
-                    l = 1000 * parseInt(t, 10),
+                    l = 1e3 * parseInt(t, 10),
                     a = i()(l);
                 return null != r ? r(a) : a.format();
             });
@@ -68,6 +74,7 @@ function D(e, t, n, r) {
               replyUsername: r,
           });
 }
+
 function M() {
     if (!s.$j) return !1;
     let e = d.default.locale;
@@ -89,18 +96,22 @@ async function k(e, t, n, r, i) {
         (P = l),
         s.wz(l, w));
 }
+
 function U(e, t, n, r, i) {
     k(e, t, i, () => {
         (0, C.kC)(n, r);
     });
 }
+
 function G(e) {
     let { text: t, interrupt: n, maxLength: r, onStart: i, onEnd: l } = e;
     k(t, n, r, i, l);
 }
+
 function V() {
     return null !== P && P.removeEventListener("end", C.pr), s._X(), (P = null), !0;
 }
+
 function B(e) {
     var t, n, r;
     let { message: i, channel: l } = e,
@@ -121,6 +132,7 @@ function B(e) {
         d = null != (n = g.Ay.getNick(c, i.author.id)) ? n : S.Ay.getName(i.author);
     return U(D(i.content, d, c, o), !0, l.id, i.id), !0;
 }
+
 function H(e) {
     var t, n, r, i, l, a;
     let { channelId: s, message: o, optimistic: c } = e;
@@ -151,14 +163,17 @@ function H(e) {
     }
     return !1;
 }
+
 function F(e) {
     let { id: t, channelId: n } = e,
         r = N.A.currentMessage;
     return null != r && t === r.messageId && n === r.channelId && ((0, C.pr)(), !0);
 }
+
 function Y() {
     _.A.isSelfDeaf() && s._X();
 }
+
 function K(e) {
     let { channelId: t } = e,
         n = N.A.currentMessage;

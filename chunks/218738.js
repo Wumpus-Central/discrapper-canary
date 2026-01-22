@@ -1,4 +1,6 @@
-a.d(n, { default: () => p });
+a.d(n, {
+    default: () => p,
+});
 var t = a(627968),
     r = a(64700),
     i = a(110259),
@@ -11,6 +13,7 @@ var t = a(627968),
     s = a(670455),
     b = a(985018),
     _ = a(716829);
+
 function p(e) {
     let { isStreamer: n, stream: p, streamApplication: m, onClose: g, transitionState: O, analyticsData: y } = e;
     r.useEffect(() => {
@@ -38,7 +41,9 @@ function p(e) {
             value: n ? s.Eq.STREAMING : s.Eq.STREAM_WATCHING,
             label: b.intl.string(n ? _.default["0ZBLiZ"] : _.default.TVTIT1),
             problemsHeader: b.intl.string(b.t["6Y1t5P"]),
-            problemOptions: (0, o.wq)({ isStreamer: n }),
+            problemOptions: (0, o.wq)({
+                isStreamer: n,
+            }),
             freeformConfig: {
                 value: s.j6.FREEFORM,
                 label: b.intl.string(b.t.emlT91),
@@ -95,7 +100,12 @@ function p(e) {
                                                 });
                                         }
                                         return e;
-                                    })({ body: b.intl.string(b.t.mMTVnv) }, n),
+                                    })(
+                                        {
+                                            body: b.intl.string(b.t.mMTVnv),
+                                        },
+                                        n,
+                                    ),
                                 );
                         }));
         },

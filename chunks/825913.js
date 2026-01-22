@@ -13,10 +13,19 @@ var r = n(533715),
     s = n(3388),
     o = n(64700);
 let l = Symbol("default");
+
 function c({ values: e, children: t }) {
-    for (let [n, r] of e) t = o.createElement(n.Provider, { value: r }, t);
+    for (let [n, r] of e)
+        t = o.createElement(
+            n.Provider,
+            {
+                value: r,
+            },
+            t,
+        );
     return t;
 }
+
 function u(e) {
     let {
         className: t,
@@ -68,6 +77,7 @@ function u(e) {
         );
     }, [t, n, r, i, a, s, l]);
 }
+
 function d(e, t) {
     let n = (0, o.useContext)(e);
     if (null === t) return null;
@@ -82,6 +92,7 @@ function d(e, t) {
     }
     return n;
 }
+
 function f(e, t, n) {
     let { ref: s, ...l } = d(n, e.slot) || {},
         c = (0, r.U)((0, o.useMemo)(() => (0, i.P)(t, s), [t, s])),
@@ -117,6 +128,7 @@ function f(e, t, n) {
         [u, c]
     );
 }
+
 function p(e = !0) {
     let [t, n] = (0, o.useState)(e),
         r = (0, o.useRef)(!1),
@@ -130,6 +142,7 @@ function p(e = !0) {
         [i, t]
     );
 }
+
 function _(e) {
     let t = /^(data-.*)$/,
         n = {};

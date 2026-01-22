@@ -1,4 +1,6 @@
-n.d(t, { Z: () => _ }),
+n.d(t, {
+    Z: () => _,
+}),
     n(321073),
     n(65821),
     n(927092),
@@ -18,6 +20,7 @@ var r = n(626584),
     i = n(723702),
     a = n(536194),
     s = n(4655);
+
 function o(e, t, n) {
     return (
         t in e
@@ -161,7 +164,9 @@ d.push(
                 if (
                     (e instanceof ArrayBuffer &&
                         this._gatewayEncoding.wantsString() &&
-                        (e = t.inflate(e, { to: "string" })),
+                        (e = t.inflate(e, {
+                            to: "string",
+                        })),
                     null == this._onDataReady)
                 )
                     throw Error("Cannot feed unless a data ready callback is registered.");
@@ -228,6 +233,7 @@ class p extends f {
     }
     close() {}
 }
+
 function _(e) {
     if (a.P.isDiscordGatewayPlaintextSet()) return new p(e);
     for (var t of d) if (t.canUse()) return new t(e);

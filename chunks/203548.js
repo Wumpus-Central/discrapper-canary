@@ -1,7 +1,10 @@
-n.d(t, { A: () => d }), n(896048);
+n.d(t, {
+    A: () => d,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
-    i = n(432022),
+    i = n(108531),
     a = n(397927),
     s = n(770178),
     o = n(180686);
@@ -13,9 +16,13 @@ let c = Math.ceil(Math.sqrt(115200)),
             p = l.useCallback((e) => {
                 f(e.contentRect.width);
             }, []),
-            h = (0, s.w)(p, [], { fireOnMount: !0 }),
+            h = (0, s.w)(p, [], {
+                fireOnMount: !0,
+            }),
             [{ shineSpring: b }, g] = (0, a.zhh)(() => ({
-                from: { shineSpring: 0 },
+                from: {
+                    shineSpring: 0,
+                },
                 config: {
                     clamp: !0,
                     mass: 1,

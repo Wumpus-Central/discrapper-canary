@@ -1,4 +1,7 @@
-n.d(t, { T: () => u }), n(228524);
+n.d(t, {
+    T: () => u,
+}),
+    n(228524);
 var r = n(627968),
     i = n(64700),
     l = n(311907),
@@ -7,6 +10,7 @@ var r = n(627968),
     c = n(997590),
     o = n(324580),
     d = n(985018);
+
 function u(e) {
     let { label: t, description: n, guildId: u, guildMetadata: f, isDisabled: g, clearable: b = !0 } = e,
         m = (0, l.yK)([c.A], () => c.A.getPrimaryCategories()),

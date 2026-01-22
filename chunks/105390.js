@@ -19,7 +19,8 @@ var r = n(627968),
     m = n(915516),
     g = n(985018),
     E = n(271300);
-let b = 60000;
+let b = 6e4;
+
 function y(e) {
     let {
             isTabSelected: t,
@@ -47,7 +48,9 @@ function y(e) {
                         }),
               position: null != h ? h : "top",
               children: (0, r.jsxs)("div", {
-                  className: s()(E.Fg, v ? E.AT : E.C8, p, { [E.WO]: t }),
+                  className: s()(E.Fg, v ? E.AT : E.C8, p, {
+                      [E.WO]: t,
+                  }),
                   children: [
                       (0, r.jsx)(c.O4, {
                           size: "custom",
@@ -65,6 +68,7 @@ function y(e) {
               }),
           });
 }
+
 function O(e) {
     var t;
     let { isTabSelected: n, trialOffer: i, shouldShowOfferReminder: a } = e,
@@ -84,9 +88,12 @@ function O(e) {
         shouldShowOfferReminder: a,
     });
 }
+
 function A(e) {
     let { isTabSelected: t, userDiscount: n, includesAmountOff: i, shouldShowOfferReminder: a } = e,
-        s = g.intl.formatToPlainString(g.t.iiLbvu, { percent: n.discount.amount }),
+        s = g.intl.formatToPlainString(g.t.iiLbvu, {
+            percent: n.discount.amount,
+        }),
         o = (0, m.__)(n),
         { hasExperimentalTooltip: l } = (0, _.Ay)("PremiumOfferTabBadge");
     return (0, r.jsx)(v, {
@@ -98,6 +105,7 @@ function A(e) {
         shouldShowOfferReminder: a,
     });
 }
+
 function v(e) {
     let {
         isTabSelected: t,

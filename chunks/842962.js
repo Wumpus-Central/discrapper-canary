@@ -1,12 +1,17 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(643479),
     i = n(668459),
     a = n(420897);
-let s = { read: d },
+let s = {
+        read: d,
+    },
     o = "8BIM",
     l = 2,
     c = 4,
     u = o.length;
+
 function d(e, t) {
     let n = (0, r.MS)(new Uint8Array(e).buffer),
         s = {},
@@ -37,6 +42,7 @@ function d(e, t) {
     }
     return s;
 }
+
 function f(e, t) {
     let [n, i] = (0, r.z6)(e, t);
     return {

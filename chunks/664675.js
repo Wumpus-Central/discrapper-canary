@@ -1,4 +1,9 @@
-n.d(t, { A: () => P }), n(172879), n(896048), n(638769);
+n.d(t, {
+    A: () => P,
+}),
+    n(172879),
+    n(896048),
+    n(638769);
 var i = n(627968),
     r = n(64700),
     l = n(284009),
@@ -28,6 +33,7 @@ var i = n(627968),
     S = n(652215),
     _ = n(985018),
     I = n(809719);
+
 function P(e) {
     let {
             commandId: t,
@@ -140,6 +146,7 @@ function P(e) {
               }),
           });
 }
+
 function k(e) {
     var t, n, l;
     let a,
@@ -241,7 +248,9 @@ function k(e) {
                 link: "https://discord.com/blog/welcome-to-the-new-era-of-discord-apps/",
             }),
             position: "bottom",
-            caretConfig: { align: "center" },
+            caretConfig: {
+                align: "center",
+            },
             onRequestClose: () => {
                 m.A.dismissToggleTooltip(s.id, j);
             },
@@ -279,6 +288,7 @@ function k(e) {
         x.id,
     );
 }
+
 function R(e) {
     let { commandId: t, isSentinel: n, isDisabled: r, onRemove: l } = e;
     return r

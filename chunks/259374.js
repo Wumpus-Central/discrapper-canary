@@ -1,7 +1,11 @@
-t.d(a, { k: () => n }), t(896048);
+t.d(a, {
+    k: () => n,
+}),
+    t(896048);
 var d = t(311907),
     c = t(734057),
     l = t(383501);
+
 function n(e) {
     let { channelId: a } = e;
     return (0, d.bG)(

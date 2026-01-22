@@ -17,6 +17,7 @@ var i = n(627968),
     h = n(31717),
     g = n(919577),
     m = n(853742);
+
 function p(e, t, n) {
     return (
         t in e
@@ -99,59 +100,102 @@ class f {
                 (0, o.r)(() => this._set(e));
             }),
             (this.setEditorHeight = (e) => {
-                this.set({ editorHeight: e });
+                this.set({
+                    editorHeight: e,
+                });
             }),
             (this.setEditorAdditionRowHeight = (e) => {
-                this.set({ editorAdditionRowHeight: e });
+                this.set({
+                    editorAdditionRowHeight: e,
+                });
             }),
             (this.setCardHeight = (e, t) => {
                 let { listViewCardHeights: n, cardHeightVersion: i } = this.get();
-                n[e] !== t && ((n[e] = t), this.set({ cardHeightVersion: i + 1 }));
+                n[e] !== t &&
+                    ((n[e] = t),
+                    this.set({
+                        cardHeightVersion: i + 1,
+                    }));
             }),
             (this.setNameError = (e) => {
-                this.set({ nameError: e });
+                this.set({
+                    nameError: e,
+                });
             }),
             (this.setMessageError = (e) => {
-                this.set({ messageError: e });
+                this.set({
+                    messageError: e,
+                });
             }),
             (this.toggleAppliedTag = (e) => {
                 let { appliedTags: t } = this.get();
                 (t = new Set(t)).has(e) ? t.delete(e) : t.add(e),
-                    this.set({ appliedTags: t }),
-                    c.A.changeThreadSettings(this.channelId, { appliedTags: t });
+                    this.set({
+                        appliedTags: t,
+                    }),
+                    c.A.changeThreadSettings(this.channelId, {
+                        appliedTags: t,
+                    });
             }),
             (this.setPopoutOpen = (e) => {
-                this.set({ popoutOpen: e });
+                this.set({
+                    popoutOpen: e,
+                });
             }),
             (this.setGuidelinesOpen = (e) => {
-                this.set({ guidelinesOpen: e });
+                this.set({
+                    guidelinesOpen: e,
+                });
             }),
             (this.setPreviewing = (e) => {
-                this.set({ previewing: e });
+                this.set({
+                    previewing: e,
+                });
             }),
             (this.setSubmitting = (e) => {
-                this.set({ submitting: e });
+                this.set({
+                    submitting: e,
+                });
             }),
             (this.setFormOpen = (e) => {
-                this.set({ formOpen: e }), g.A.clearForumSearch(this.channelId);
+                this.set({
+                    formOpen: e,
+                }),
+                    g.A.clearForumSearch(this.channelId);
             }),
             (this.setOnboardingExpanded = (e) => {
-                this.set({ onboardingExpanded: e });
+                this.set({
+                    onboardingExpanded: e,
+                });
             }),
             (this.setTitleFocused = (e) => {
-                this.set({ titleFocused: e });
+                this.set({
+                    titleFocused: e,
+                });
             }),
             (this.setBodyFocused = (e) => {
-                this.set({ bodyFocused: e });
+                this.set({
+                    bodyFocused: e,
+                });
             }),
             (this.setName = (e) => {
-                this.set({ name: e }), c.A.changeThreadSettings(this.channelId, { name: e });
+                this.set({
+                    name: e,
+                }),
+                    c.A.changeThreadSettings(this.channelId, {
+                        name: e,
+                    });
             }),
             (this.setTextAreaState = (e) => {
-                this.set({ textAreaState: e }), c.A.saveDraft(this.channelId, e.textValue, h.C.FirstThreadMessage);
+                this.set({
+                    textAreaState: e,
+                }),
+                    c.A.saveDraft(this.channelId, e.textValue, h.C.FirstThreadMessage);
             }),
             (this.setHasClickedForm = (e) => {
-                this.set({ hasClickedForm: e });
+                this.set({
+                    hasClickedForm: e,
+                });
             }),
             (this.resetFormState = () => {
                 let e = u.A.getChannel(this.channelId),
@@ -192,6 +236,7 @@ class f {
     }
 }
 let v = s.createContext(null);
+
 function b(e) {
     let { children: t, channel: n } = e,
         r = s.useMemo(() => (0, a.h)((e, t) => new f(n.id, e, t)), [n]);
@@ -200,10 +245,12 @@ function b(e) {
         children: t,
     });
 }
+
 function A(e, t) {
     let n = s.useContext(v);
     return l()(null != n, "[useForumPostComposerStore] Context should not be null"), n(e, t);
 }
+
 function O() {
     let e = s.useContext(v);
     return l()(null != e, "[useForumPostComposerStore] Context should not be null"), e;

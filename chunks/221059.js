@@ -1,4 +1,7 @@
-n.d(t, { e: () => j }), n(896048);
+n.d(t, {
+    e: () => j,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(731738),
@@ -16,9 +19,16 @@ var r = n(627968),
     m = n(327337),
     A = n(652215),
     y = n(985018);
+
 function O(e) {
     let { senderId: t, channelId: n, warningId: i } = e,
-        { isIgnored: s } = (0, a.cf)([f.A], () => ({ isIgnored: f.A.isIgnored(t) }), [t]),
+        { isIgnored: s } = (0, a.cf)(
+            [f.A],
+            () => ({
+                isIgnored: f.A.isIgnored(t),
+            }),
+            [t],
+        ),
         c = l.useCallback(() => {
             (0, b._$)({
                 channelId: n,
@@ -46,16 +56,25 @@ function O(e) {
         onButtonPress: s ? u : c,
     });
 }
+
 function j(e) {
     let { channelId: t, warningId: j, senderId: v } = e,
-        { isBlocked: x } = (0, a.cf)([f.A], () => ({ isBlocked: f.A.isBlocked(v) }), [v]),
+        { isBlocked: x } = (0, a.cf)(
+            [f.A],
+            () => ({
+                isBlocked: f.A.isBlocked(v),
+            }),
+            [v],
+        ),
         E = l.useCallback(() => {
             (0, p.xi)(t, [j]);
         }, [t, j]),
         _ = (0, m.eT)(),
         C = l.useCallback(
             (e) => () => {
-                o.A.blockUser(v, { location: m.Rx }).then(() => {
+                o.A.blockUser(v, {
+                    location: m.Rx,
+                }).then(() => {
                     E();
                 }),
                     (0, b._$)({
@@ -75,7 +94,9 @@ function j(e) {
             senderId: v,
             warningType: h._j.STRANGER_DANGER,
         }),
-            c.A.increment({ name: i.K.SAFETY_WARNING_VIEW });
+            c.A.increment({
+                name: i.K.SAFETY_WARNING_VIEW,
+            });
     }, [t, j, v]);
     let S = () => {
             (0, s.mMO)(async () => {

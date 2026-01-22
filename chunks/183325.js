@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var l = n(64700),
     r = n(205693),
     i = n(451988),
@@ -7,6 +9,7 @@ var l = n(64700),
     o = n(927813),
     c = n(37965);
 let u = 20 * o.A.Millis.SECOND;
+
 function d(e) {
     let { streamId: t, userId: n, videoSpinnerContext: o, streamKey: d, loading: f, paused: p = !1 } = e,
         b = l.useRef(new i.Ep()),

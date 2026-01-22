@@ -14,6 +14,10 @@ let a = (0, r.v)(() => ({
         (0, i.r)(() => a.setState(e));
     },
     o = (e) => {
-        (0, i.r)(() => a.setState({ checked: e }));
+        (0, i.r)(() =>
+            a.setState({
+                checked: e,
+            }),
+        );
     },
     l = a;

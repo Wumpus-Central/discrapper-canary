@@ -1,4 +1,6 @@
-n.d(t, { c: () => p });
+n.d(t, {
+    c: () => p,
+});
 var r = n(627968),
     i = n(64700),
     s = n(397927),
@@ -28,7 +30,9 @@ let h = {
                 }),
                 (0, r.jsx)(s.n2b, {
                     size: "sm",
-                    style: { transform: "rotate(180deg)" },
+                    style: {
+                        transform: "rotate(180deg)",
+                    },
                 }),
             ],
         });

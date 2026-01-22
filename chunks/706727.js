@@ -7,6 +7,7 @@ n.d(t, {
 var r = n(562465),
     i = n(73153),
     a = n(652215);
+
 function s(e, t, n, r) {
     i.h.dispatch({
         type: "QUEUE_INTERACTION_COMPONENT_STATE",
@@ -16,6 +17,7 @@ function s(e, t, n, r) {
         componentId: r,
     });
 }
+
 function o(e, t) {
     let { data: n, messageId: r, preflight: a, onCreate: s, onSuccess: o, onFailure: l } = t;
     i.h.dispatch({
@@ -29,6 +31,7 @@ function o(e, t) {
         onFailure: l,
     });
 }
+
 function l(e, t, n, r) {
     i.h.dispatch({
         type: "INTERACTION_FAILURE",

@@ -1,4 +1,8 @@
-n.d(t, { f: () => R }), n(938796), n(228524);
+n.d(t, {
+    f: () => R,
+}),
+    n(938796),
+    n(228524);
 var r = n(627968),
     l = n(64700),
     i = n(835245),
@@ -28,6 +32,7 @@ var r = n(627968),
     N = n(176187);
 let T = s.K.APP_LAUNCHER_IN_VOICE_BANNER,
     P = "vc-activities-".concat((0, i.A)());
+
 function w(e) {
     var t;
     let n,
@@ -89,7 +94,9 @@ function w(e) {
                           },
                           openInPopout: f,
                           analyticsLocation: d.A.APP_LAUNCHER_IN_VOICE_BANNER,
-                          initialState: { applicationId: E.application.id },
+                          initialState: {
+                              applicationId: E.application.id,
+                          },
                       });
               },
               children: [
@@ -98,7 +105,9 @@ function w(e) {
                       src: i,
                       className: N.W_,
                   }),
-                  (0, r.jsx)("div", { className: N.LV }),
+                  (0, r.jsx)("div", {
+                      className: N.LV,
+                  }),
               ],
           }));
 }
@@ -118,9 +127,13 @@ let R = l.forwardRef(function (e, t) {
     let y = (0, O.Us)(),
         { analyticsLocations: v, newestAnalyticsLocation: T } = (0, f.Ay)(d.A.ACTIVITIES_MINI_SHELF),
         R = y === S.BRT.POPOUT,
-        D = ((n = i.getGuildId()), (0, _.A)({ guildId: n }).slice(0, 5));
+        D =
+            ((n = i.getGuildId()),
+            (0, _.A)({
+                guildId: n,
+            }).slice(0, 5));
     l.useEffect(() => {
-        let e = setTimeout(() => E.LK(), 1000);
+        let e = setTimeout(() => E.LK(), 1e3);
         return () => clearTimeout(e);
     }, []);
     let M = l.useCallback(() => {
@@ -131,7 +144,9 @@ let R = l.forwardRef(function (e, t) {
                               type: "channel",
                               channel: i,
                           }
-                        : { type: "contextless" },
+                        : {
+                              type: "contextless",
+                          },
                 openInPopout: R,
                 analyticsLocation: T,
             }),

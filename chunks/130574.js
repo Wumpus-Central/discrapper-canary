@@ -1,9 +1,12 @@
-n.d(e, { default: () => s });
+n.d(e, {
+    default: () => s,
+});
 var r = n(627968),
     i = n(158954),
     l = n(397927),
     o = n(360469),
     a = n(985018);
+
 function s(t) {
     let { application: e, onCancel: n, onClose: s, onConfirm: c } = t,
         p = (function (t, e) {
@@ -61,7 +64,12 @@ function s(t) {
             children: [
                 (0, r.jsxs)(l.Text, {
                     variant: "text-sm/normal",
-                    children: [a.intl.format(a.t["s+WDGz"], { activityName: e.name }), " "],
+                    children: [
+                        a.intl.format(a.t["s+WDGz"], {
+                            activityName: e.name,
+                        }),
+                        " ",
+                    ],
                 }),
                 (0, r.jsx)(l.Text, {
                     variant: "text-sm/normal",

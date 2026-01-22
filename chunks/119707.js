@@ -1,9 +1,14 @@
-n.d(t, { A: () => l }), n(747238), n(896048);
+n.d(t, {
+    A: () => l,
+}),
+    n(747238),
+    n(896048);
 var r = n(186306),
     i = n(35277),
     a = n(711371);
 let s = ["applicationCommand"],
     o = ["gameMentionInput", "timestampMentionInput"];
+
 function l(e) {
     let { insertBreak: t, insertText: n } = e;
     return (
@@ -19,13 +24,20 @@ function l(e) {
             c(e)
                 ? r.o.withSingleEntry(e, () => {
                       let t = !1;
-                      for (let r of a) t && i.b.splitNodes(e, { always: !0 }), n(r), (t = !0);
+                      for (let r of a)
+                          t &&
+                              i.b.splitNodes(e, {
+                                  always: !0,
+                              }),
+                              n(r),
+                              (t = !0);
                   })
                 : n(a.join(" "));
         }),
         e
     );
 }
+
 function c(e) {
     var t;
     let n = a.VW.getCurrentBlock(e),

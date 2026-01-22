@@ -1,4 +1,7 @@
-n.d(t, { p: () => O }), n(896048);
+n.d(t, {
+    p: () => O,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -11,6 +14,7 @@ var r = n(627968),
     f = n(627330),
     p = n(985018),
     _ = n(248789);
+
 function h(e, t, n) {
     return (
         t in e
@@ -24,6 +28,7 @@ function h(e, t, n) {
         e
     );
 }
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -40,6 +45,7 @@ function m(e) {
     }
     return e;
 }
+
 function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -52,6 +58,7 @@ function g(e, t) {
     }
     return n;
 }
+
 function E(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -63,6 +70,7 @@ function E(e, t) {
         e
     );
 }
+
 function b(e, t) {
     if (null == e) return {};
     var n,
@@ -79,6 +87,7 @@ function b(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function y(e, t) {
     if (null == e) return {};
     var n,
@@ -89,11 +98,14 @@ function y(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function O(e) {
     var t, n, a, h, g;
     let {
             steps: y,
-            caretConfig: O = { align: "center" },
+            caretConfig: O = {
+                align: "center",
+            },
             size: A = "md",
             onStepChange: v,
             onRequestClose: S,
@@ -160,7 +172,9 @@ function O(e) {
                       alignmentStrategy: "edge",
                       align: N.align,
                   }
-                : { alignmentStrategy: "trigger-center" },
+                : {
+                      alignmentStrategy: "trigger-center",
+                  },
         );
     return (0, r.jsx)(
         c.x,
@@ -174,7 +188,9 @@ function O(e) {
                     }),
                     null != P.graphic &&
                         (0, r.jsx)("div", {
-                            className: s()(_.graphic, { [_["graphic--".concat(A)]]: null != A }),
+                            className: s()(_.graphic, {
+                                [_["graphic--".concat(A)]]: null != A,
+                            }),
                             children: (0, r.jsx)(
                                 o.vYh,
                                 E(m({}, P.graphic), {
@@ -201,7 +217,15 @@ function O(e) {
                                         totalSteps: y.length,
                                     }),
                                 }),
-                                (0, r.jsx)(l.$nd, m({ size: "sm" }, M)),
+                                (0, r.jsx)(
+                                    l.$nd,
+                                    m(
+                                        {
+                                            size: "sm",
+                                        },
+                                        M,
+                                    ),
+                                ),
                             ],
                         }),
                     }),

@@ -1,4 +1,6 @@
-n.d(t, { w: () => s });
+n.d(t, {
+    w: () => s,
+});
 var r = n(294946),
     i = n(15020);
 class a extends i.Vw {

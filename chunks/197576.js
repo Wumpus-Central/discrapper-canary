@@ -1,4 +1,5 @@
 var r = n(611122).notEmptyKey;
+
 function i(e, t) {
     return r(t) && "MUTABLE" === e.__get(t).getMutability() ? t : null;
 }

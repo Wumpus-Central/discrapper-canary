@@ -36,7 +36,9 @@ async function S(t) {
             r(!1),
             await (0, c.nV)(
                 e,
-                { pauseDuration: n },
+                {
+                    pauseDuration: n,
+                },
                 {
                     amount: 0,
                     currency: e.currency,
@@ -50,6 +52,7 @@ async function S(t) {
         r(!0), i(!1);
     }
 }
+
 function O() {
     let {
             transitionState: t,
@@ -74,7 +77,9 @@ function O() {
             for (let t of n) {
                 let n = s.V[t];
                 r.push({
-                    name: p.intl.formatToPlainString(e, { days: n - a }),
+                    name: p.intl.formatToPlainString(e, {
+                        days: n - a,
+                    }),
                     value: n,
                     radioItemIconClassName: C.hO,
                 });
@@ -125,6 +130,7 @@ function O() {
         })
     );
 }
+
 function D() {
     let {
             transitionState: t,
@@ -149,7 +155,9 @@ function D() {
             });
             break;
         case y.Dmq.PAUSED:
-            D = p.intl.format(p.t.Vur3Fc, { resumeDate: P });
+            D = p.intl.format(p.t.Vur3Fc, {
+                resumeDate: P,
+            });
             break;
         default:
             D = p.intl.format(p.t.W85vFA, {

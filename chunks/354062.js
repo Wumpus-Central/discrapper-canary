@@ -1,4 +1,9 @@
-r.d(t, { A: () => M }), r(747238), r(896048), r(638769);
+r.d(t, {
+    A: () => M,
+}),
+    r(747238),
+    r(896048),
+    r(638769);
 var n = r(627968),
     l = r(64700),
     s = r(503698),
@@ -27,6 +32,7 @@ var n = r(627968),
     E = r(191850),
     N = r(985018),
     I = r(146896);
+
 function T(e, t, r, n) {
     let l = (0, b.isWindows)() ? (0, A.A)(h.Ay, m.A) : null,
         s = h.Ay.getRunningGames(),
@@ -39,10 +45,13 @@ function T(e, t, r, n) {
     let c = null == n ? void 0 : n[a];
     return null != c && C.F2.has(c) ? 2 : 1;
 }
+
 function R(e) {
     let { source: t } = e;
     return t.id.startsWith(o.fS.SCREEN)
-        ? (0, n.jsx)(f.kN9, { size: "xs" })
+        ? (0, n.jsx)(f.kN9, {
+              size: "xs",
+          })
         : t.id.startsWith(o.fS.WINDOW)
           ? null != t.icon && "" !== t.icon
               ? (0, n.jsx)("img", {
@@ -50,15 +59,22 @@ function R(e) {
                     className: I.pI,
                     alt: "",
                 })
-              : (0, n.jsx)(f.WxK, { size: "xs" })
-          : (0, n.jsx)(f.npA, { size: "xs" });
+              : (0, n.jsx)(f.WxK, {
+                    size: "xs",
+                })
+          : (0, n.jsx)(f.npA, {
+                size: "xs",
+            });
 }
+
 function P(e) {
     let { source: t, selected: r, onClick: l } = e,
         { url: s, name: a } = t;
     return (0, n.jsxs)(f.DUT, {
         onClick: () => l(t),
-        className: i()(I.sP, { [I.Lv]: r }),
+        className: i()(I.sP, {
+            [I.Lv]: r,
+        }),
         children: [
             (0, n.jsx)("div", {
                 className: I.ji,
@@ -87,7 +103,9 @@ function P(e) {
             (0, n.jsxs)("div", {
                 className: I.Uw,
                 children: [
-                    (0, n.jsx)(R, { source: t }),
+                    (0, n.jsx)(R, {
+                        source: t,
+                    }),
                     (0, n.jsx)(f.Text, {
                         variant: "text-sm/medium",
                         className: I.VZ,
@@ -98,6 +116,7 @@ function P(e) {
         ],
     });
 }
+
 function M(e) {
     let { onClick: t } = e,
         [
@@ -112,7 +131,9 @@ function M(e) {
                 hasPermission: C,
             },
         ] = (0, _.tS)(),
-        { smarterSourceOrdering: E } = (0, y.s)({ location: "GoLiveSourceGrid" }),
+        { smarterSourceOrdering: E } = (0, y.s)({
+            location: "GoLiveSourceGrid",
+        }),
         R = (0, d.bG)([h.Ay], () => h.Ay.getRunningGames()),
         M = (0, d.cf)([h.Ay], () => {
             let e = h.Ay.getCandidateGames(),
@@ -189,6 +210,7 @@ function M(e) {
               ),
           });
 }
+
 function D() {
     return (0, n.jsxs)("div", {
         className: I.p$,
@@ -212,7 +234,9 @@ function D() {
             }),
             (0, n.jsx)(f.Text, {
                 variant: "text-sm/semibold",
-                children: N.intl.format(E.default.xpVzr3, { helpdeskURL: g.A.getArticleURL(360040816151) }),
+                children: N.intl.format(E.default.xpVzr3, {
+                    helpdeskURL: g.A.getArticleURL(0x53d41ade17),
+                }),
             }),
         ],
     });

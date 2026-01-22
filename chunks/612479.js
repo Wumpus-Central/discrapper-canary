@@ -1,4 +1,7 @@
-l.d(t, { A: () => A }), l(896048);
+l.d(t, {
+    A: () => A,
+}),
+    l(896048);
 var n = l(627968),
     a = l(64700),
     i = l(503698),
@@ -20,6 +23,7 @@ var n = l(627968),
     g = l(652215),
     j = l(985018),
     p = l(768919);
+
 function A(e) {
     var t;
     let {
@@ -141,7 +145,9 @@ function A(e) {
                             label: null != (t = null == M ? void 0 : M(X)) ? t : j.intl.string(j.t.h95hcn),
                             helperText: x
                                 ? void 0
-                                : j.intl.format(j.t.ybi2tD, { helpdeskURL: N.A.getSubmitRequestURL() }),
+                                : j.intl.format(j.t.ybi2tD, {
+                                      helpdeskURL: N.A.getSubmitRequestURL(),
+                                  }),
                             value: Q,
                             maxLength: U.u0,
                             onChange: z,

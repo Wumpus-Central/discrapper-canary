@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -8,6 +10,7 @@ var r = n(627968),
     u = n(397927),
     c = n(573435),
     d = n(310945);
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -33,6 +36,7 @@ function p(e) {
     }
     return e;
 }
+
 function m(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -51,6 +55,7 @@ function m(e, t) {
         e
     );
 }
+
 function f(e, t) {
     if (null == e) return {};
     var n,
@@ -163,7 +168,12 @@ let y = l.forwardRef(function (e, t) {
                 forceOpen: l,
                 shouldShow: i,
                 positionKey: s,
-                children: (0, r.jsx)(y, m(p({}, o), { ref: t })),
+                children: (0, r.jsx)(
+                    y,
+                    m(p({}, o), {
+                        ref: t,
+                    }),
+                ),
             });
         }
         {
@@ -240,7 +250,9 @@ let y = l.forwardRef(function (e, t) {
                                 },
                                 v,
                             ),
-                            { ref: t },
+                            {
+                                ref: t,
+                            },
                         ),
                     );
                 },

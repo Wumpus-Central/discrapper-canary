@@ -15,11 +15,14 @@ var i = n(503698),
     h = n(413700),
     f = n(20976),
     p = n(473169);
+
 function g(e) {
     let { text: t, buttonCta: i, onClick: u } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(o._V, { src: n(431979) }),
+            (0, r.jsx)(o._V, {
+                src: n(431979),
+            }),
             (0, r.jsx)(o.hE, {
                 className: s()(p.QX, p.QB, f.tR),
                 children: d.intl.string(d.t.eL5z0i),
@@ -52,7 +55,9 @@ function g(e) {
                                 tag: "strong",
                                 className: h.p8,
                                 variant: "text-md/normal",
-                                style: { color: l.A.unsafe_rawColors.PRIMARY_300.css },
+                                style: {
+                                    color: l.A.unsafe_rawColors.PRIMARY_300.css,
+                                },
                                 children: t,
                             }),
                             (0, r.jsx)("div", {
@@ -70,6 +75,7 @@ function g(e) {
         ],
     });
 }
+
 function m(e) {
     let { text: t, buttonCta: n, theme: i = u.NJ8.DARK, onClick: s } = e;
     return (0, r.jsx)(o.Ay, {

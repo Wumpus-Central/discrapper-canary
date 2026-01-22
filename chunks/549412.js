@@ -1,4 +1,5 @@
 var n = "u" > typeof Uint8Array && "u" > typeof Uint16Array && "u" > typeof Int32Array;
+
 function r(e, t) {
     return Object.prototype.hasOwnProperty.call(e, t);
 }

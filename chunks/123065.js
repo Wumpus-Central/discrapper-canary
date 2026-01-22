@@ -1,4 +1,6 @@
-n.d(e, { A: () => p });
+n.d(e, {
+    A: () => p,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -10,6 +12,7 @@ var i = n(311907),
     d = n(715671),
     b = n(652215),
     s = n(985018);
+
 function p(t) {
     let e = (0, i.bG)([c.Ay], () => c.Ay.getRunningVerifiedApplicationIds().includes(t.id), [t.id]),
         n = (0, i.bG)([u.A], () => u.A.isInstalled(t.id, t.branchId), [t.branchId, t.id]),

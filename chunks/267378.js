@@ -66,6 +66,12 @@ let a = (0, r.C)({
     o = (0, i.mj)({
         kind: "user",
         name: "2025-11-dave-opt-in",
-        defaultConfig: { allowOptIn: !1 },
-        variations: { 1: { allowOptIn: !0 } },
+        defaultConfig: {
+            allowOptIn: !1,
+        },
+        variations: {
+            1: {
+                allowOptIn: !0,
+            },
+        },
     });

@@ -6,6 +6,7 @@ var t = n(91871),
     i = n(257120),
     s = n(240248),
     c = n(989133);
+
 function u(e) {
     for (var r = 1; r < arguments.length; r++) {
         var n = null != arguments[r] ? arguments[r] : {},
@@ -49,9 +50,11 @@ let f = new Map(),
             trailing: !0,
         },
     );
+
 function b(e, r, n) {
     return e * (null != r ? r : n);
 }
+
 function v(e, r) {
     var n;
     let { query: t, limit: o, filters: a, blacklist: p, whitelist: d, boosters: m, boosterFallback: v } = r,
@@ -148,6 +151,7 @@ function v(e, r) {
         S.length > o && (S.length = o),
         g(t, S, e);
 }
+
 function g(e, r, n) {
     self.postMessage({
         type: "USER_RESULTS",
@@ -216,7 +220,9 @@ self.addEventListener("message", (e) => {
                     n = {
                         type: "DEBUG_STATE",
                         uuid: r,
-                        payload: { users: JSON.stringify(Object.fromEntries(f)) },
+                        payload: {
+                            users: JSON.stringify(Object.fromEntries(f)),
+                        },
                     };
                 self.postMessage(n);
             })(r);

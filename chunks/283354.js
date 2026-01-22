@@ -1,4 +1,6 @@
-n.d(t, { default: () => p });
+n.d(t, {
+    default: () => p,
+});
 var r = n(627968),
     l = n(64700),
     i = n(314116),
@@ -9,6 +11,7 @@ var r = n(627968),
     u = n(208882),
     d = n(352123),
     f = n(985018);
+
 function p(e) {
     let { entry: t, onSelect: p, closePopout: h, hideEditButton: b = !1 } = e,
         { isEntryAdmin: g, canEdit: m, canRemove: A } = (0, d.A)(t),
@@ -23,6 +26,7 @@ function p(e) {
     let O = () => {
         u.ZM(t.channelId, t.guildId);
     };
+
     function j() {
         (0, s.Z_)(), null == h || h();
     }
@@ -71,7 +75,10 @@ function p(e) {
                                                   }
                                                   return e;
                                               })({}, n)),
-                                              (i = i = { entry: t }),
+                                              (i = i =
+                                                  {
+                                                      entry: t,
+                                                  }),
                                               Object.getOwnPropertyDescriptors
                                                   ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(i))
                                                   : (function (e, t) {
@@ -103,7 +110,9 @@ function p(e) {
                               action: function () {
                                   (0, i.A)({
                                       title: f.intl.string(f.t.KUxYWH),
-                                      subtitle: f.intl.format(f.t["/5y0uV"], { guildName: t.name }),
+                                      subtitle: f.intl.format(f.t["/5y0uV"], {
+                                          guildName: t.name,
+                                      }),
                                       confirmText: f.intl.string(f.t.N86XcP),
                                       onConfirm: O,
                                   }),
@@ -125,7 +134,9 @@ function p(e) {
                           }),
                 ],
             }),
-            (0, r.jsx)(a.rXV, { children: y }),
+            (0, r.jsx)(a.rXV, {
+                children: y,
+            }),
         ],
     });
 }

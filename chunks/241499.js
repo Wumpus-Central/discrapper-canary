@@ -1,4 +1,7 @@
-n.d(t, { _: () => T }), n(896048);
+n.d(t, {
+    _: () => T,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -20,6 +23,7 @@ var r = n(627968),
     y = n(652215),
     v = n(985018),
     A = n(828771);
+
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -45,6 +49,7 @@ function E(e) {
     }
     return e;
 }
+
 function N(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -64,6 +69,7 @@ function N(e, t) {
     );
 }
 let _ = "RULE";
+
 function S(e) {
     let {
             rule: t,
@@ -129,7 +135,9 @@ function S(e) {
     let G = "" !== t.value ? t.value : t.id;
     return (0, r.jsx)("div", {
         ref: S,
-        className: s()(A.XQ, { [A.cB]: x }),
+        className: s()(A.XQ, {
+            [A.cB]: x,
+        }),
         "data-dnd-name": G,
         children: (0, r.jsxs)("div", {
             className: A.I6,
@@ -191,6 +199,7 @@ function S(e) {
         }),
     });
 }
+
 function T(e) {
     let { rules: t, setRules: n, guild: l, disabled: s } = e,
         a = l.rulesChannelId,
@@ -204,7 +213,11 @@ function T(e) {
                 if (!s && t.length !== O.yN)
                     if (null != e && "" === t[t.length - 1].value) {
                         let r = [...t];
-                        (r[t.length - 1] = N(E({}, r[t.length - 1]), { value: e })), n(r), T(r.length - 1);
+                        (r[t.length - 1] = N(E({}, r[t.length - 1]), {
+                            value: e,
+                        })),
+                            n(r),
+                            T(r.length - 1);
                     } else
                         n([
                             ...t,
@@ -224,7 +237,10 @@ function T(e) {
             (e, r) => {
                 if (s) return;
                 let i = [...t];
-                (i[r] = N(E({}, i[r]), { value: e })), n(i);
+                (i[r] = N(E({}, i[r]), {
+                    value: e,
+                })),
+                    n(i);
             },
             [s, t, n],
         ),
@@ -242,7 +258,11 @@ function T(e) {
         ),
         R = t.length === O.yN,
         D = i.useMemo(() => {
-            let e = R ? v.intl.formatToPlainString(v.t.tU718E, { number: O.yN }) : void 0;
+            let e = R
+                ? v.intl.formatToPlainString(v.t.tU718E, {
+                      number: O.yN,
+                  })
+                : void 0;
             return [
                 {
                     text: v.intl.string(v.t.DXq2od),

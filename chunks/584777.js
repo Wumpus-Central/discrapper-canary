@@ -1,5 +1,11 @@
 let r;
-n.d(t, { A: () => U }), n(896048), n(733351), n(321073), n(638769);
+n.d(t, {
+    A: () => U,
+}),
+    n(896048),
+    n(733351),
+    n(321073),
+    n(638769);
 var l,
     i,
     a = n(311907),
@@ -23,12 +29,15 @@ let O = !1,
     E = !1,
     _ = new Set(),
     C = null;
+
 function S() {
     (j = ""), (v = 0), (x = []), (_ = new Set()), (O = !1), (C = null);
 }
+
 function I(e) {
     (j = e), (v = 0), N();
 }
+
 function N() {
     var e, t;
     if (!O) return !1;
@@ -98,11 +107,13 @@ function N() {
     }
     return !1;
 }
+
 function T() {
     if (!O) return !1;
     let e = E;
     return (E = m.A.getFriendCount() > 0) !== e;
 }
+
 function P(e, t) {
     if (b.A.hasConsented(y.YAq.PERSONALIZATION)) {
         var n, r, l, i;
@@ -120,6 +131,7 @@ function P(e, t) {
         (0, f.sS)(p.Ay.getName(t.user).toLocaleLowerCase()),
     );
 }
+
 function w(e) {
     let { results: t } = e;
     if (!O || "" === j) return;
@@ -134,17 +146,21 @@ function w(e) {
     }
     (x = n), k.emitChange();
 }
+
 function R() {
-    return null != r && (r.destroy(), (r = null)), o.A.getUserSearchContext(w, 1000);
+    return null != r && (r.destroy(), (r = null)), o.A.getUserSearchContext(w, 1e3);
 }
+
 function D(e) {
     if (e.key !== y.TLS) return !1;
     (O = !0), T(), (r = R()), (C = null), I("");
 }
+
 function M(e) {
     if (e.key !== y.TLS) return !1;
     L();
 }
+
 function L() {
     null != r && (r.destroy(), (r = null)), S();
 }

@@ -1,4 +1,5 @@
 var r;
+
 function i(e) {
     return e < r.HOURLY;
 }

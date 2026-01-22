@@ -1,4 +1,7 @@
-n.d(t, { A: () => d }), n(896048);
+n.d(t, {
+    A: () => d,
+}),
+    n(896048);
 var r = n(719442),
     i = n(374803),
     a = n(968011),
@@ -7,9 +10,12 @@ var r = n(719442),
     l = n(711371);
 let c = "line",
     u = [];
+
 function d(e, t, n, d) {
     var f;
-    let { enabled: p, highlightDesign: _ } = (0, a.sA)("decorateMentionSuggestion", { autoTrackExposure: !1 }),
+    let { enabled: p, highlightDesign: _ } = (0, a.sA)("decorateMentionSuggestion", {
+            autoTrackExposure: !1,
+        }),
         h = e.selection,
         { currentAutocompleteType: m } = d,
         g = null !== m && m !== i.DB.MENTION_SUGGESTIONS;

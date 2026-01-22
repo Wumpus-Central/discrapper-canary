@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968),
     i = n(64700),
     a = n(665260),
@@ -11,6 +13,7 @@ var r = n(627968),
     f = n(652215),
     p = n(985018),
     _ = n(842130);
+
 function h() {
     let e = l.FA.useSetting(),
         t = i.useMemo(() => (0, o.Lx)(e), [e]),

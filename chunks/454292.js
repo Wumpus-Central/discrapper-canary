@@ -1,4 +1,8 @@
-n.d(t, { A: () => q }), n(228524), n(896048);
+n.d(t, {
+    A: () => q,
+}),
+    n(228524),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(735438),
@@ -20,6 +24,7 @@ var r = n(627968),
     O = n(31408),
     A = n(985018),
     v = n(829054);
+
 function S(e, t, n) {
     return (
         t in e
@@ -33,6 +38,7 @@ function S(e, t, n) {
         e
     );
 }
+
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -49,6 +55,7 @@ function I(e) {
     }
     return e;
 }
+
 function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -61,6 +68,7 @@ function T(e, t) {
     }
     return n;
 }
+
 function C(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -121,6 +129,7 @@ let N = {
             description: A.intl.string(A.t["mqfw/H"]),
         },
     ];
+
 function j(e) {
     let { disabled: t, locations: n, settingsLocations: i, onChange: a } = e,
         s = n.map((e) =>
@@ -131,7 +140,12 @@ function j(e) {
                     description: e.description,
                     checked: i[e.location],
                     disabled: t,
-                    onChange: (t) => a(C(I({}, i), { [e.location]: t })),
+                    onChange: (t) =>
+                        a(
+                            C(I({}, i), {
+                                [e.location]: t,
+                            }),
+                        ),
                 },
                 e.location,
             ),
@@ -141,6 +155,7 @@ function j(e) {
         children: s,
     });
 }
+
 function M(e) {
     let { children: t } = e;
     return (0, r.jsx)(c.Text, {
@@ -150,6 +165,7 @@ function M(e) {
         children: t,
     });
 }
+
 function k(e) {
     let {
             settings: { enabled: t, warningSeen: n },
@@ -173,7 +189,9 @@ function k(e) {
                                         },
                               ),
                       })
-                    : i({ enabled: e });
+                    : i({
+                          enabled: e,
+                      });
         };
     return (0, r.jsx)(c.dOG, {
         label: A.intl.string(A.t.vuiXm9),
@@ -182,6 +200,7 @@ function k(e) {
         onChange: o,
     });
 }
+
 function U(e) {
     let {
             settings: {
@@ -202,7 +221,13 @@ function U(e) {
                 description: A.intl.string(A.t.O1Vflg),
                 checked: n,
                 disabled: !t,
-                onChange: (e) => o({ confettiEnabled: e }, 0),
+                onChange: (e) =>
+                    o(
+                        {
+                            confettiEnabled: e,
+                        },
+                        0,
+                    ),
             }),
             (0, r.jsxs)("div", {
                 children: [
@@ -212,7 +237,9 @@ function U(e) {
                         className: v.KF,
                         children: A.intl.string(A.t.vd0D81),
                     }),
-                    (0, r.jsx)(M, { children: A.intl.string(A.t.a18Sug) }),
+                    (0, r.jsx)(M, {
+                        children: A.intl.string(A.t.a18Sug),
+                    }),
                     (0, r.jsx)(c.Apm, {
                         disabled: l,
                         markers: P,
@@ -220,7 +247,13 @@ function U(e) {
                         minValue: P[0],
                         maxValue: P[P.length - 1],
                         initialValue: i,
-                        onValueChange: (e) => o({ confettiCount: e }, 0),
+                        onValueChange: (e) =>
+                            o(
+                                {
+                                    confettiCount: e,
+                                },
+                                0,
+                            ),
                         onValueRender: (e) => "".concat(e),
                     }),
                 ],
@@ -233,7 +266,9 @@ function U(e) {
                         className: v.KF,
                         children: A.intl.string(A.t.sPO3ij),
                     }),
-                    (0, r.jsx)(M, { children: A.intl.string(A.t.xoldVn) }),
+                    (0, r.jsx)(M, {
+                        children: A.intl.string(A.t.xoldVn),
+                    }),
                     (0, r.jsx)(c.Apm, {
                         disabled: l,
                         markers: D,
@@ -241,7 +276,13 @@ function U(e) {
                         minValue: D[0],
                         maxValue: D[D.length - 1],
                         initialValue: a,
-                        onValueChange: (e) => o({ confettiSize: e }, 0),
+                        onValueChange: (e) =>
+                            o(
+                                {
+                                    confettiSize: e,
+                                },
+                                0,
+                            ),
                         onValueRender: (e) => "".concat(e),
                     }),
                 ],
@@ -250,11 +291,18 @@ function U(e) {
                 disabled: l,
                 locations: x(),
                 settingsLocations: s,
-                onChange: (e) => o({ confettiEnabledLocations: e }, 0),
+                onChange: (e) =>
+                    o(
+                        {
+                            confettiEnabledLocations: e,
+                        },
+                        0,
+                    ),
             }),
         ],
     });
 }
+
 function G(e) {
     let {
             settings: { enabled: t, combosEnabled: n, comboSoundsEnabled: i, combosRequiredCount: a },
@@ -269,14 +317,20 @@ function G(e) {
                 description: A.intl.string(A.t["31Z8Ee"]),
                 checked: n,
                 disabled: !t,
-                onChange: (e) => s({ combosEnabled: e }),
+                onChange: (e) =>
+                    s({
+                        combosEnabled: e,
+                    }),
             }),
             (0, r.jsx)(c.dOG, {
                 label: A.intl.string(A.t["Ax+IoW"]),
                 description: A.intl.string(A.t["9rgQEr"]),
                 checked: i,
                 disabled: !t,
-                onChange: (e) => s({ comboSoundsEnabled: e }),
+                onChange: (e) =>
+                    s({
+                        comboSoundsEnabled: e,
+                    }),
             }),
             (0, r.jsxs)("div", {
                 children: [
@@ -286,7 +340,9 @@ function G(e) {
                         className: v.KF,
                         children: A.intl.string(A.t.L0oQuh),
                     }),
-                    (0, r.jsx)(M, { children: A.intl.string(A.t["/OOFpL"]) }),
+                    (0, r.jsx)(M, {
+                        children: A.intl.string(A.t["/OOFpL"]),
+                    }),
                     (0, r.jsx)(c.Apm, {
                         disabled: o,
                         markers: R,
@@ -294,7 +350,10 @@ function G(e) {
                         minValue: R[0],
                         maxValue: R[R.length - 1],
                         initialValue: a,
-                        onValueChange: (e) => s({ combosRequiredCount: e }),
+                        onValueChange: (e) =>
+                            s({
+                                combosRequiredCount: e,
+                            }),
                         onValueRender: (e) => "".concat(e),
                     }),
                 ],
@@ -302,6 +361,7 @@ function G(e) {
         ],
     });
 }
+
 function V(e) {
     let {
             settings: { enabled: t, screenshakeEnabled: n, shakeIntensity: i, screenshakeEnabledLocations: a },
@@ -320,7 +380,13 @@ function V(e) {
                 description: l ? A.intl.string(A.t.GckHGw) : A.intl.string(A.t.Qq5W3v),
                 checked: n && !l,
                 disabled: !t || l,
-                onChange: (e) => o({ screenshakeEnabled: e }, 1),
+                onChange: (e) =>
+                    o(
+                        {
+                            screenshakeEnabled: e,
+                        },
+                        1,
+                    ),
             }),
             (0, r.jsxs)("div", {
                 children: [
@@ -330,7 +396,9 @@ function V(e) {
                         className: v.KF,
                         children: A.intl.string(A.t.UxnnC4),
                     }),
-                    (0, r.jsx)(M, { children: A.intl.string(A.t.CEOEOb) }),
+                    (0, r.jsx)(M, {
+                        children: A.intl.string(A.t.CEOEOb),
+                    }),
                     (0, r.jsx)(c.Apm, {
                         disabled: d,
                         markers: w,
@@ -339,7 +407,13 @@ function V(e) {
                         minValue: w[0],
                         maxValue: w[w.length - 1],
                         initialValue: i,
-                        onValueChange: (e) => f({ shakeIntensity: e }, 1),
+                        onValueChange: (e) =>
+                            f(
+                                {
+                                    shakeIntensity: e,
+                                },
+                                1,
+                            ),
                         onMarkerRender: (e) =>
                             e === w[w.length - 1] ? A.intl.string(A.t["4rbMWc"]) : "".concat(100 * e, "%"),
                     }),
@@ -349,11 +423,18 @@ function V(e) {
                 disabled: d,
                 locations: L(),
                 settingsLocations: a,
-                onChange: (e) => o({ screenshakeEnabledLocations: e }, 1),
+                onChange: (e) =>
+                    o(
+                        {
+                            screenshakeEnabledLocations: e,
+                        },
+                        1,
+                    ),
             }),
         ],
     });
 }
+
 function F(e) {
     let { updateSettings: t } = e,
         n = () => {
@@ -368,7 +449,9 @@ function F(e) {
         children: (0, r.jsxs)(c.BJc, {
             gap: 16,
             children: [
-                (0, r.jsx)("div", { children: A.intl.string(A.t["1SLnki"]) }),
+                (0, r.jsx)("div", {
+                    children: A.intl.string(A.t["1SLnki"]),
+                }),
                 (0, r.jsx)("div", {
                     "data-button-hoisted-classname-wrapper": !0,
                     className: v.hw,
@@ -383,6 +466,7 @@ function F(e) {
         }),
     });
 }
+
 function B(e) {
     let { onChangePage: t } = e,
         n = () => t(1);
@@ -429,6 +513,7 @@ let H = () =>
             let { default: t } = e;
             return t;
         });
+
 function Y(e) {
     let { onChangePage: t, setShowEnableAnimation: n } = e,
         a = (0, s.cf)([E.A], () => E.A.getState()),
@@ -437,6 +522,7 @@ function Y(e) {
             y: 0,
         }),
         u = (0, y.A)();
+
     function d(e, t, n, r) {
         let i = null != r ? r : n;
         return (null != t ? t : e) && i;
@@ -447,7 +533,7 @@ function Y(e) {
                 n(!0),
                     (0, f.Ak)("poggermode_enabled"),
                     (0, _.fO)({
-                        duration: 2000,
+                        duration: 2e3,
                         intensity: null != (t = e.shakeIntensity) ? t : a.shakeIntensity,
                     });
             }
@@ -456,13 +542,17 @@ function Y(e) {
             if ((p(e), (0, g.O9)(e), null == t)) return;
             let n = 0 === t,
                 r = d(a.confettiEnabled, e.confettiEnabled, a.enabled, e.enabled);
-            n && r && u.fire(o.x, o.y, { settings: e });
+            n &&
+                r &&
+                u.fire(o.x, o.y, {
+                    settings: e,
+                });
             let i = 1 === t,
                 s = d(a.screenshakeEnabled, e.screenshakeEnabled, a.enabled, e.enabled);
             if (i && s) {
                 var l;
                 (0, _.fO)({
-                    duration: 1000,
+                    duration: 1e3,
                     intensity: null != (l = e.shakeIntensity) ? l : a.shakeIntensity,
                 });
             }
@@ -485,7 +575,9 @@ function Y(e) {
                     settings: a,
                     updateSettings: h,
                 }),
-                (0, r.jsx)(B, { onChangePage: t }),
+                (0, r.jsx)(B, {
+                    onChangePage: t,
+                }),
                 (0, r.jsx)(G, {
                     settings: a,
                     updateSettings: h,
@@ -498,7 +590,9 @@ function Y(e) {
                     settings: a,
                     updateSettings: h,
                 }),
-                (0, r.jsx)(F, { updateSettings: h }),
+                (0, r.jsx)(F, {
+                    updateSettings: h,
+                }),
             ],
         })
     );
@@ -514,13 +608,16 @@ let W = (e, t, n) => {
                     setShowEnableAnimation: n,
                 });
             case 1:
-                return (0, r.jsx)(b.A, { onBackClick: i(0) });
+                return (0, r.jsx)(b.A, {
+                    onBackClick: i(0),
+                });
             default:
                 return null;
         }
     },
     K = 500,
     z = (e) => (0 === e ? d.f.LEFT : d.f.RIGHT);
+
 function q() {
     let [e, t] = i.useState(0),
         [n, a] = i.useState(z(e)),

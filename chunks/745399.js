@@ -1,4 +1,7 @@
-n.d(t, { A: () => h }), n(747238);
+n.d(t, {
+    A: () => h,
+}),
+    n(747238);
 var r,
     i = n(627968),
     s = n(64700),
@@ -7,6 +10,7 @@ var r,
     o = n(976860),
     c = n(210714),
     u = n(58013);
+
 function d(e, t, n) {
     return (
         t in e
@@ -28,7 +32,9 @@ class h extends (r = s.PureComponent) {
     render() {
         let { token: e } = this.props.match.params;
         return (0, i.jsx)(a.Ay, {
-            style: { padding: 0 },
+            style: {
+                padding: 0,
+            },
             children: (0, i.jsx)(
                 u.A,
                 (function (e) {

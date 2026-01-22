@@ -1,4 +1,6 @@
-n.d(t, { n: () => g });
+n.d(t, {
+    n: () => g,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -14,6 +16,7 @@ var i = n(311907),
     _ = n(985018),
     h = n(111314);
 let m = [d.oU.NORMAL, d.oU.SIDEBAR, d.oU.CREATE_FORUM_POST];
+
 function g(e) {
     let { disabled: t, channel: n, inputType: d } = e,
         g = (0, u.p)(o.T);
@@ -31,7 +34,9 @@ function g(e) {
                   className: h.x6,
                   "aria-label": _.intl.string(_.t.nzoF5p),
                   onClick: () => {
-                      c._.dispatch(p.jej.UPLOAD_FILE, { channelId: n.id });
+                      c._.dispatch(p.jej.UPLOAD_FILE, {
+                          channelId: n.id,
+                      });
                   },
                   children: (0, r.jsx)(s.xfq, {
                       size: "refresh_sm",

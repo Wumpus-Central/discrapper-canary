@@ -1,4 +1,6 @@
-n.d(t, { A: () => N });
+n.d(t, {
+    A: () => N,
+});
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -23,6 +25,7 @@ var r = n(627968),
     v = n(652215),
     S = n(985018),
     C = n(843284);
+
 function N() {
     let e = i.useRef(null),
         t = (0, _.A)(),
@@ -34,13 +37,19 @@ function N() {
         x = i.useCallback(() => {
             (0, c.showToast)((0, c.createToast)(S.intl.string(S.t["EDYbS+"]), c.ToastType.FAILURE));
         }, []),
-        { rejectAll: P } = (0, m.t)({ onError: x }),
+        { rejectAll: P } = (0, m.t)({
+            onError: x,
+        }),
         w = i.useCallback(() => {
             P(t.map((e) => e.channel.id));
         }, [t, P]);
     (0, d.Ay)(() => {
-        A.default.track(v.HAw.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: n }),
-            h.A.increment({ name: o.K.SPAM_MESSAGE_REQUEST_VIEW });
+        A.default.track(v.HAw.SPAM_MESSAGE_REQUESTS_VIEWED, {
+            num_spam_message_requests: n,
+        }),
+            h.A.increment({
+                name: o.K.SPAM_MESSAGE_REQUEST_VIEW,
+            });
     });
     let L = i.useCallback(
             (e) => {
@@ -73,7 +82,9 @@ function N() {
                     {
                         className: C.Gf,
                         children: [
-                            S.intl.format(S.t.C79Edh, { count: n }),
+                            S.intl.format(S.t.C79Edh, {
+                                count: n,
+                            }),
                             N && n > 0
                                 ? (0, r.jsxs)(r.Fragment, {
                                       children: [
@@ -82,7 +93,7 @@ function N() {
                                               variant: "eyebrow",
                                               color: "text-default",
                                               tag: "span",
-                                              children: "\u2022",
+                                              children: "•",
                                           }),
                                           (0, r.jsx)(c.QWc, {
                                               textVariant: "text-sm/normal",
@@ -100,7 +111,9 @@ function N() {
             [n, w, N],
         );
     return 0 === t.length
-        ? (0, r.jsx)(O.A, { section: I.zz.SPAM })
+        ? (0, r.jsx)(O.A, {
+              section: I.zz.SPAM,
+          })
         : (0, r.jsx)(s.hD, {
               navigator: T,
               children: (0, r.jsx)(s.PR, {

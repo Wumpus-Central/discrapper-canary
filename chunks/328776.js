@@ -1,4 +1,7 @@
-n.d(t, { A: () => m }), n(896048);
+n.d(t, {
+    A: () => m,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -12,6 +15,7 @@ var r = n(627968),
     p = n(318162),
     h = n(762561),
     b = n(985018);
+
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,6 +41,7 @@ function g(e) {
     }
     return e;
 }
+
 function m(e) {
     let { channel: t } = e,
         [n] = t.recipients,
@@ -65,7 +70,9 @@ function m(e) {
             component: (0, r.jsx)(a.AC4, {
                 children: (0, r.jsx)(a.H, {
                     id: v,
-                    children: b.intl.format(b.t.KRe1Fk, { name: x }),
+                    children: b.intl.format(b.t.KRe1Fk, {
+                        name: x,
+                    }),
                 }),
             }),
             children: O

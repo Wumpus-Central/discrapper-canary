@@ -1,10 +1,13 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var a = n(627968),
     l = n(311907),
     i = n(935154),
     r = n(748319),
     s = n(287809),
     o = n(427262);
+
 function c(e) {
     var t;
     let { nameplate: n } = e,

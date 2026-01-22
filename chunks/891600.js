@@ -1,7 +1,10 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(280230),
     i = n.n(r),
     a = n(919535);
+
 function s(e, t, n) {
     return (
         t in e
@@ -15,6 +18,7 @@ function s(e, t, n) {
         e
     );
 }
+
 function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -31,11 +35,20 @@ function o(e) {
     }
     return e;
 }
+
 function l(e, t, n, r, i) {
     let s;
     return (
         n || (t += "\n\n"),
-        (s = e(t, o({ inline: n }, r))),
+        (s = e(
+            t,
+            o(
+                {
+                    inline: n,
+                },
+                r,
+            ),
+        )),
         (s = (0, a.rI)(r, s)),
         (s = (0, a.Ae)(s)),
         null != i && (s = i(s, n)),

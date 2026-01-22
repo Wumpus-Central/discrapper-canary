@@ -1,4 +1,6 @@
-n.d(t, { A: () => w });
+n.d(t, {
+    A: () => w,
+});
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -28,6 +30,7 @@ var r = n(627968),
     I = n(985018),
     C = n(503377),
     P = n(63135);
+
 function w(e) {
     let { guildId: t } = e,
         n = (0, a.bG)([x.A], () => x.A.getGuild(t)),
@@ -92,8 +95,12 @@ function w(e) {
                                             children: (0, r.jsxs)("div", {
                                                 className: C.CZ,
                                                 children: [
-                                                    (0, r.jsx)(y.A, { guild: n }),
-                                                    (0, r.jsx)(O.A, { guild: n }),
+                                                    (0, r.jsx)(y.A, {
+                                                        guild: n,
+                                                    }),
+                                                    (0, r.jsx)(O.A, {
+                                                        guild: n,
+                                                    }),
                                                     G
                                                         ? (0, r.jsxs)("div", {
                                                               className: C.FV,
@@ -110,7 +117,9 @@ function w(e) {
                                                                       onResetForNewMembers: U,
                                                                   }),
                                                                   F !== A.IY.SUCCESS_STILL_INDEXING &&
-                                                                      (0, r.jsx)(N.A, { guildId: n.id }),
+                                                                      (0, r.jsx)(N.A, {
+                                                                          guildId: n.id,
+                                                                      }),
                                                               ],
                                                           })
                                                         : (0, r.jsx)("div", {
@@ -141,7 +150,9 @@ function w(e) {
                                         },
                                         "body",
                                     ),
-                                    (0, r.jsx)(v.A, { guildId: n.id }),
+                                    (0, r.jsx)(v.A, {
+                                        guildId: n.id,
+                                    }),
                                 ],
                             }),
                         }),
@@ -158,7 +169,9 @@ function w(e) {
                         }),
                         (0, r.jsx)("div", {
                             className: C.zd,
-                            style: { width: T.da6 },
+                            style: {
+                                width: T.da6,
+                            },
                             children: (0, r.jsx)(f.A, {
                                 userId: R.details.userId,
                                 guildId: R.details.guildId,

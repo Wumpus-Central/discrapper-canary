@@ -1,6 +1,11 @@
-n.d(t, { y: () => v }), n(896048), n(747238);
+n.d(t, {
+    y: () => v,
+}),
+    n(896048),
+    n(747238);
 var a = n(64700),
     l = n(559474);
+
 function i(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -26,6 +31,7 @@ function i(e) {
     }
     return e;
 }
+
 function r(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -54,24 +60,24 @@ let s = new Set([
     ]),
     o = ["intro", "idle", "reduced_motion", "static", "thumbnail"],
     c = {
-        max: 5000000,
-        warn: 2000000,
+        max: 5e6,
+        warn: 2e6,
     },
     d = {
-        max: 3000000,
-        warn: 1000000,
+        max: 3e6,
+        warn: 1e6,
     },
     u = {
-        max: 2000000,
-        warn: 1000000,
+        max: 2e6,
+        warn: 1e6,
     },
     m = {
-        max: 1000000,
-        warn: 500000,
+        max: 1e6,
+        warn: 5e5,
     },
     p = {
-        max: 250000,
-        warn: 50000,
+        max: 25e4,
+        warn: 5e4,
     },
     h = {
         [l.Jn.PROFILE_EFFECT]: c,
@@ -110,13 +116,10 @@ let s = new Set([
     },
     b = (e, t, n, a) => {
         let l = t.size,
-            i = l > 1000000 ? "".concat((l / 1000000).toFixed(2), "MB") : "".concat((l / 1000).toFixed(2), "KB"),
+            i = l > 1e6 ? "".concat((l / 1e6).toFixed(2), "MB") : "".concat((l / 1e3).toFixed(2), "KB"),
             r = "".concat(t.name, " - ").concat(i);
         if (l > e.max) {
-            let t =
-                e.max > 1000000
-                    ? "".concat(Math.round(e.max / 1000000), "MB")
-                    : "".concat(Math.round(e.max / 1000), "KB");
+            let t = e.max > 1e6 ? "".concat(Math.round(e.max / 1e6), "MB") : "".concat(Math.round(e.max / 1e3), "KB");
             n("Files exceed the recommended size limit - make sure they are optimized!", [
                 "".concat(r, " (max: ").concat(t, ")"),
             ]);

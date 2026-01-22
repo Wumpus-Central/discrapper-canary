@@ -1,9 +1,12 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(627968);
 n(64700);
 var l = n(503698),
     o = n.n(l),
     i = n(438655);
+
 function s(e) {
     let { className: t, color: n } = e;
     return (0, r.jsx)("svg", {

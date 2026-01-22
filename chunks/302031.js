@@ -18,6 +18,7 @@ var r = n(627968),
     h = n(403362),
     m = n(985018),
     g = n(388963);
+
 function E(e, t, n) {
     return (
         t in e
@@ -31,6 +32,7 @@ function E(e, t, n) {
         e
     );
 }
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -47,6 +49,7 @@ function b(e) {
     }
     return e;
 }
+
 function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -59,6 +62,7 @@ function y(e, t) {
     }
     return n;
 }
+
 function O(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -107,7 +111,9 @@ let v = (e) => {
         let { reason: t = _.Oc.SPOILER, className: n, isSingleMosaicItem: i = !1 } = e;
         switch (t) {
             case _.Oc.SPOILER:
-                return (0, r.jsx)(v, { className: n });
+                return (0, r.jsx)(v, {
+                    className: n,
+                });
             case _.Oc.EXPLICIT_CONTENT:
             case _.Oc.GORE_CONTENT:
             case _.Oc.SELF_HARM_CONTENT:
@@ -255,7 +261,9 @@ class N extends i.PureComponent {
                           "aria-label": u ? void 0 : this.ariaLabel,
                           "aria-expanded": f,
                           style: n,
-                          className: s()(t, g.ur, g.q2, g.x, g.OZ, { [g.R]: !f }),
+                          className: s()(t, g.ur, g.q2, g.x, g.OZ, {
+                              [g.R]: !f,
+                          }),
                           role: f ? "presentation" : "button",
                           tabIndex: f ? -1 : 0,
                           children: [
@@ -283,7 +291,9 @@ class N extends i.PureComponent {
                     : (0, r.jsxs)(c.DUT, {
                           "aria-label": this.ariaLabel,
                           "aria-expanded": f,
-                          className: s()(t, g.ur, g.q2, g.x, { [g.R]: !f }),
+                          className: s()(t, g.ur, g.q2, g.x, {
+                              [g.R]: !f,
+                          }),
                           onClick: f ? void 0 : this.removeObscurity,
                           style: n,
                           role: f ? "presentation" : "button",
@@ -319,7 +329,9 @@ class N extends i.PureComponent {
                         "aria-expanded": l,
                         tabIndex: l ? -1 : 0,
                         role: l ? "presentation" : "button",
-                        className: s()("obscured", n, g.ur, g.F0, { [g.R]: !l }),
+                        className: s()("obscured", n, g.ur, g.F0, {
+                            [g.R]: !l,
+                        }),
                         children: (0, r.jsx)("span", {
                             className: g.kx,
                             children: (0, r.jsx)("span", {
@@ -378,11 +390,16 @@ class N extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            E(this, "state", { visible: !1 }),
+            E(this, "state", {
+                visible: !1,
+            }),
             E(this, "removeObscurity", (e) => {
                 let { visible: t } = this.state;
                 if (t) return;
-                t || (e.preventDefault(), e.stopPropagation()), this.setState({ visible: !0 });
+                t || (e.preventDefault(), e.stopPropagation()),
+                    this.setState({
+                        visible: !0,
+                    });
                 let { onReveal: n } = this.props;
                 null != n && n();
             }),
@@ -390,16 +407,26 @@ class N extends i.PureComponent {
                 if (
                     (e.stopPropagation(),
                     e.nativeEvent.stopPropagation(),
-                    (0, p.Wi)({ obscure: this.state.visible }),
+                    (0, p.Wi)({
+                        obscure: this.state.visible,
+                    }),
                     this.props.shouldAgeVerify)
                 )
-                    return void u.A.showAgeVerificationGetStartedModal({ entryPoint: d.q1.OBSCURED_MEDIA });
+                    return void u.A.showAgeVerificationGetStartedModal({
+                        entryPoint: d.q1.OBSCURED_MEDIA,
+                    });
                 let { onToggleObscurity: t } = this.props;
-                null != t && t(e), this.setState((e) => ({ visible: !e.visible }));
+                null != t && t(e),
+                    this.setState((e) => ({
+                        visible: !e.visible,
+                    }));
             }),
             E(this, "obscure", () => {
                 let { visible: e } = this.state;
-                e && this.setState({ visible: !1 });
+                e &&
+                    this.setState({
+                        visible: !1,
+                    });
             });
     }
 }

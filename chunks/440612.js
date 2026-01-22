@@ -27,6 +27,7 @@ var r = n(627968),
     v = n(324384),
     S = n(652215),
     I = n(985018);
+
 function T(e, t, n) {
     return (
         t in e
@@ -40,6 +41,7 @@ function T(e, t, n) {
         e
     );
 }
+
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -56,6 +58,7 @@ function C(e) {
     }
     return e;
 }
+
 function N(e, t) {
     if (null == e) return {};
     var n,
@@ -72,6 +75,7 @@ function N(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function R(e, t) {
     if (null == e) return {};
     var n,
@@ -89,7 +93,9 @@ let w = (e) => {
             a || n(p.pn.REVIEW);
         }, [a, n]),
         a)
-            ? (0, r.jsx)(l.oO, { onClose: t })
+            ? (0, r.jsx)(l.oO, {
+                  onClose: t,
+              })
             : null;
     },
     P = (e) => {
@@ -170,7 +176,9 @@ let w = (e) => {
                 analyticsSourceLocation: u,
                 rentalDuration: d,
             } = (0, O.rp)();
-        P({ handleClose: t });
+        P({
+            handleClose: t,
+        });
         let {
             orbPriceAmount: f,
             orbBalanceToDisplay: p,
@@ -187,7 +195,9 @@ let w = (e) => {
             analyticsSourceLocation: u,
         });
         return h
-            ? (0, r.jsx)(a.y$y, { type: a.y$y.Type.WANDERING_CUBES })
+            ? (0, r.jsx)(a.y$y, {
+                  type: a.y$y.Type.WANDERING_CUBES,
+              })
             : (0, r.jsxs)(r.Fragment, {
                   children: [
                       (0, r.jsx)(g.A, {}),
@@ -234,7 +244,9 @@ let w = (e) => {
         {
             key: p.pn.REVIEW,
             renderStep: (e) => (0, r.jsx)(x, C({}, e)),
-            options: { useBreadcrumbLabel: () => I.intl.string(I.t.QBnNHq) },
+            options: {
+                useBreadcrumbLabel: () => I.intl.string(I.t.QBnNHq),
+            },
         },
     ],
     j = (e, t, n) =>

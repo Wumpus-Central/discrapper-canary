@@ -1,4 +1,6 @@
-i.d(t, { A: () => u });
+i.d(t, {
+    A: () => u,
+});
 var n = i(64700),
     l = i(284009),
     r = i.n(l),
@@ -6,6 +8,7 @@ var n = i(64700),
     s = i(71393),
     d = i(711014),
     o = i(287809);
+
 function u(e) {
     let { isGuildIncluded: t, selectedGuildId: i } = e,
         l = (0, a.bG)([d.Ay], () => d.Ay.getFlattenedGuildIds()),

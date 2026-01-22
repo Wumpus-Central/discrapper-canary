@@ -25,4 +25,6 @@ function a(e, t) {
         return i;
     }
 }
-r.d(t, { A: () => a });
+r.d(t, {
+    A: () => a,
+});

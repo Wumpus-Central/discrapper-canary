@@ -1,4 +1,4 @@
-var r = n(367000).off;
+var r = n(367e3).off;
 e.exports = function () {
     var e = this,
         t = e.element;

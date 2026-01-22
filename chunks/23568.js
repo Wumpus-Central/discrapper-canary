@@ -1,4 +1,6 @@
-n.d(t, { A: () => A });
+n.d(t, {
+    A: () => A,
+});
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -22,16 +24,22 @@ let O = (e) => {
         a = ":".concat(t.name, ":");
     switch (r) {
         case h.dS.ACTIVITY:
-            let s = b.intl.formatToPlainString(b.t.EUFEJt, { username: n }),
+            let s = b.intl.formatToPlainString(b.t.EUFEJt, {
+                    username: n,
+                }),
                 o = "\n> ".concat(i);
             return null != i
                 ? "".concat(p.c5).concat(s, "*").concat(o, "\n").concat(a)
                 : "".concat(p.c5).concat(s, "*\n").concat(a);
         case h.dS.AVATAR:
-            let l = b.intl.formatToPlainString(b.t.E6H15q, { username: n });
+            let l = b.intl.formatToPlainString(b.t.E6H15q, {
+                username: n,
+            });
             return "".concat(p.c5).concat(l, "*\n").concat(a);
         case h.dS.STATUS:
-            let u = b.intl.formatToPlainString(b.t.XPQgL2, { username: n }),
+            let u = b.intl.formatToPlainString(b.t.XPQgL2, {
+                    username: n,
+                }),
                 d = "\n> ".concat(i);
             return null != i
                 ? "".concat(p.c5).concat(u, "*").concat(d, "\n").concat(a)
@@ -40,6 +48,7 @@ let O = (e) => {
             (0, c.xb)(r);
     }
 };
+
 function A(e) {
     let {
             user: t,
@@ -73,10 +82,16 @@ function A(e) {
     let P = async (e) => {
         if (null == e) return;
         p === h.dS.AVATAR
-            ? v({ action: "SEND_REACT_AVATAR" })
+            ? v({
+                  action: "SEND_REACT_AVATAR",
+              })
             : p === h.dS.STATUS
-              ? v({ action: "SEND_REACT_CUSTOM_STATUS" })
-              : v({ action: "SEND_REACT_ACTIVITY" });
+              ? v({
+                    action: "SEND_REACT_CUSTOM_STATUS",
+                })
+              : v({
+                    action: "SEND_REACT_ACTIVITY",
+                });
         let n = O({
             emoji: e,
             username: u.Ay.getName(t),

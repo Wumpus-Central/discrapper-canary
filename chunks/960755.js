@@ -1,4 +1,7 @@
-n.d(t, { A: () => eu }), n(896048);
+n.d(t, {
+    A: () => eu,
+}),
+    n(896048);
 var r,
     i = n(735438),
     a = n.n(i),
@@ -24,6 +27,7 @@ var r,
     I = n(661191),
     T = n(32603),
     C = n(355097);
+
 function N(e, t, n) {
     return (
         t in e
@@ -40,23 +44,27 @@ function N(e, t, n) {
 let R = null,
     w = null,
     P = new T.Ay();
+
 function D() {
     let e = A.A.getChannelId(),
         t = A.A.getVoiceChannelId();
     return (R = e), (w = t), P.clear();
 }
+
 function x(e) {
     let {
         guild: { id: t },
     } = e;
     return P.clearGuildId(t);
 }
+
 function L(e) {
     let {
         channel: { guild_id: t },
     } = e;
     return P.clearGuildId(t);
 }
+
 function j(e) {
     let { channels: t } = e,
         n = !1;
@@ -70,16 +78,20 @@ function j(e) {
         n
     );
 }
+
 function M(e) {
     return P.nonPositionalChannelIdUpdate(e.id);
 }
+
 function k(e) {
     return P.clearGuildId(e.guildId);
 }
+
 function U(e) {
     let { guildId: t, user: n } = e;
     return h.default.getId() === n.id && P.clearGuildId(t);
 }
+
 function G(e) {
     let { userGuildSettings: t } = e;
     t.forEach((e) => {
@@ -87,36 +99,44 @@ function G(e) {
         return P.clearGuildId(t);
     });
 }
+
 function V(e) {
     let { guildId: t } = e;
     return P.clearGuildId(t);
 }
+
 function F(e) {
     e.channels.forEach((e) => {
         let { guildId: t } = e;
         return P.clearGuildId(t);
     });
 }
+
 function B(e) {
     var t;
     let { channelId: n } = e;
     return P.clearGuildId(null == (t = g.A.getChannel(n)) ? void 0 : t.guild_id);
 }
+
 function H(e) {
     let { channelId: t } = e;
     return P.nonPositionalChannelIdUpdate(t);
 }
+
 function Y(e) {
     let { channelId: t } = e;
     return P.nonPositionalChannelIdUpdate(t);
 }
+
 function W(e) {
     let { channelId: t } = e;
     return P.nonPositionalChannelIdUpdate(t);
 }
+
 function K() {
     return null != R && P.nonPositionalChannelIdUpdate(R);
 }
+
 function z(e) {
     let { channels: t } = e,
         n = !1;
@@ -134,21 +154,26 @@ function z(e) {
         n
     );
 }
+
 function q(e) {
     return P.clearGuildId(e.guildId);
 }
+
 function X(e) {
     let { channel: t } = e;
     return P.nonPositionalChannelIdUpdate(t.id);
 }
+
 function Z(e) {
     let { channel: t } = e;
     return P.nonPositionalChannelUpdate(t);
 }
+
 function Q(e) {
     let { id: t } = e;
     return P.nonPositionalChannelIdUpdate(t);
 }
+
 function $() {
     let e = A.A.getChannelId(),
         t = A.A.getVoiceChannelId(),
@@ -165,6 +190,7 @@ function $() {
         !0)
     );
 }
+
 function J(e) {
     let { voiceStates: t } = e,
         n = $(),
@@ -174,37 +200,46 @@ function J(e) {
             null == e || r.has(e) || (P.nonPositionalChannelIdUpdate(e) && (n = !0), r.add(e));
     return n;
 }
+
 function ee(e) {
     let { id: t } = e,
         n = g.A.getChannel(t);
     return null == n ? P.clearGuildId(t) : P.clearGuildId(n.guild_id);
 }
+
 function et(e) {
     let { guildId: t } = e;
     return P.clearGuildId(t);
 }
+
 function en(e) {
     let { location: t } = e;
     return P.updateSubtitles((0, c.D)(t), (0, c.H)(t));
 }
+
 function er(e) {
     ei();
 }
+
 function ei() {
     return P.updateSubtitles();
 }
+
 function ea(e) {
     let { guildId: t } = e;
     return P.updateSubtitles(t);
 }
+
 function es(e) {
     let { guildScheduledEvent: t } = e;
     return P.updateSubtitles(t.guild_id);
 }
+
 function eo(e) {
     let { guildId: t } = e;
     P.updateSubtitles(t);
 }
+
 function el(e) {
     var t;
     let { settings: n } = e;

@@ -18,12 +18,12 @@
             return e;
         }),
         (i.time = function () {
-            return new Date().getTime() / 1000;
+            return new Date().getTime() / 1e3;
         });
     var a = [0, 0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334],
         s = [0, 0, 31, 60, 91, 121, 152, 182, 213, 244, 274, 305, 335];
     (i.date = function (e, t) {
-        var n = void 0 === t ? new Date() : new Date(t instanceof Date ? t : 1000 * t),
+        var n = void 0 === t ? new Date() : new Date(t instanceof Date ? t : 1e3 * t),
             r = /\\?([a-z])/gi,
             o = function (e, t) {
                 return u[e] ? u[e]() : t;
@@ -115,10 +115,10 @@
                     return u.a().toUpperCase();
                 },
                 B: function () {
-                    var e = n.getTime() / 1000,
+                    var e = n.getTime() / 1e3,
                         t = (e % 86400) + 3600;
                     t < 0 && (t += 86400);
-                    var r = (t / 86.4) % 1000;
+                    var r = (t / 86.4) % 1e3;
                     return e < 0 ? Math.ceil(r) : Math.floor(r);
                 },
                 g: function () {
@@ -140,7 +140,7 @@
                     return i.pad(n.getSeconds(), 2, "0");
                 },
                 u: function () {
-                    return i.pad(1000 * n.getMilliseconds(), 6, "0");
+                    return i.pad(1e3 * n.getMilliseconds(), 6, "0");
                 },
                 O: function () {
                     var e = n.getTimezoneOffset(),
@@ -161,7 +161,7 @@
                     return "D, d M Y H:i:s O".replace(r, o);
                 },
                 U: function () {
-                    return n.getTime() / 1000 || 0;
+                    return n.getTime() / 1e3 || 0;
                 },
             };
         return e.replace(r, o);
@@ -187,7 +187,7 @@
             (e = void 0 === e ? i.time() : e), (t = void 0 === t ? "Y-m-d" : t);
             var n = 86400,
                 r = new Date(),
-                a = new Date(r.getFullYear(), r.getMonth(), r.getDate()).getTime() / 1000;
+                a = new Date(r.getFullYear(), r.getMonth(), r.getDate()).getTime() / 1e3;
             return e < a && e >= a - n
                 ? "yesterday"
                 : e >= a && e < a + n
@@ -213,8 +213,8 @@
             var a = 2505600;
             if (n < 2505600 && n > -a)
                 return n >= 0 ? Math.floor(n / 86400) + " days ago" : "in " + Math.floor(-n / 86400) + " days";
-            var s = 5184000;
-            if (n < 5184000 && n > -s) return n >= 0 ? "about a month ago" : "in about a month";
+            var s = 5184e3;
+            if (n < 5184e3 && n > -s) return n >= 0 ? "about a month ago" : "in about a month";
             var o = parseInt(i.date("Y", t), 10),
                 l = parseInt(i.date("Y", e), 10),
                 c = 12 * o + parseInt(i.date("n", t), 10) - (12 * l + parseInt(i.date("n", e), 10));
@@ -252,7 +252,7 @@
         }),
         (i.intword = function (e, t, n, r, a, s, o) {
             (c = (t = t || ["", "K", "M", "B", "T"]).length - 1),
-                (n = n || 1000),
+                (n = n || 1e3),
                 (r = isNaN(r) ? 2 : Math.abs(r)),
                 (a = a || "."),
                 (s = s || ","),
@@ -280,10 +280,10 @@
             return e.replace(/(\r\n|\n|\r)/g, "<br />");
         }),
         (i.truncatechars = function (e, t) {
-            return e.length <= t ? e : e.substr(0, t) + "\u2026";
+            return e.length <= t ? e : e.substr(0, t) + "…";
         }),
         (i.truncatewords = function (e, t) {
             var n = e.split(" ");
-            return n.length < t ? e : n.slice(0, t).join(" ") + "\u2026";
+            return n.length < t ? e : n.slice(0, t).join(" ") + "…";
         });
 }).call(this);

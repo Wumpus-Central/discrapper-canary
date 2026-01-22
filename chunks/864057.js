@@ -1,4 +1,7 @@
-r.d(t, { A: () => S }), r(896048);
+r.d(t, {
+    A: () => S,
+}),
+    r(896048);
 var n = r(627968);
 r(64700);
 var l = r(503698),
@@ -18,6 +21,7 @@ var l = r(503698),
     g = r(818348),
     b = r(985018),
     v = r(687637);
+
 function y(e) {
     let { id: t, text: r, icon: l, selected: i, onClick: a } = e;
     return (0, n.jsx)(o.DUT, {
@@ -25,11 +29,15 @@ function y(e) {
         "aria-checked": i,
         onClick: () => a(t),
         tabIndex: 0,
-        className: s()(v.tp, v.ey, { [v.wH]: i }),
+        className: s()(v.tp, v.ey, {
+            [v.wH]: i,
+        }),
         children: (0, n.jsxs)("div", {
             className: v.DD,
             children: [
-                (0, n.jsx)(l, { size: "lg" }),
+                (0, n.jsx)(l, {
+                    size: "lg",
+                }),
                 (0, n.jsx)(c.EYj, {
                     variant: "text-sm/medium",
                     color: "none",
@@ -39,6 +47,7 @@ function y(e) {
         }),
     });
 }
+
 function S(e) {
     let { onSourceSelect: t } = e;
     (0, h.jd)(), (0, p.A)(t, g.FX);
@@ -62,7 +71,9 @@ function S(e) {
                               className: v.rf,
                               variant: "text-sm/medium",
                               color: "text-subtle",
-                              children: b.intl.format(b.t.sbbPhW, { buttonName: b.intl.string(b.t.FiBjwU) }),
+                              children: b.intl.format(b.t.sbbPhW, {
+                                  buttonName: b.intl.string(b.t.FiBjwU),
+                              }),
                           }),
                           (0, n.jsx)(j.A, {}),
                       ],

@@ -1,4 +1,7 @@
-n.d(t, { default: () => p }), n(896048);
+n.d(t, {
+    default: () => p,
+}),
+    n(896048);
 var i = n(627968),
     a = n(64700),
     l = n(311907),
@@ -12,6 +15,7 @@ var i = n(627968),
     g = n(664531),
     f = n(652215),
     b = n(985018);
+
 function p(e) {
     let { guildId: t } = e,
         n = (0, l.bG)([h.A], () => h.A.getGuild(t)),
@@ -23,7 +27,10 @@ function p(e) {
             let { onClose: n, guildId: i } = e;
             t.preventDefault(), k(null);
             try {
-                await (0, c.T)(i, { nick: C }), null == n || n();
+                await (0, c.T)(i, {
+                    nick: C,
+                }),
+                    null == n || n();
             } catch (e) {
                 k(new s.LG(e));
             }
@@ -36,7 +43,9 @@ function p(e) {
             y && x(window.innerWidth / 2, window.innerHeight / 2);
         }, [x, y]),
         (0, i.jsx)(r.aFV, {
-            title: b.intl.formatToPlainString(b.t["d+6kzl"], { guildName: null == n ? void 0 : n.name }),
+            title: b.intl.formatToPlainString(b.t["d+6kzl"], {
+                guildName: null == n ? void 0 : n.name,
+            }),
             actions: [
                 {
                     variant: "secondary",

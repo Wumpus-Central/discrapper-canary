@@ -16,6 +16,7 @@ var r = n(627968),
     u = n(467181),
     f = n(365126),
     h = n(985018);
+
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -41,6 +42,7 @@ function g(e) {
     }
     return e;
 }
+
 function p(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -59,6 +61,7 @@ function p(e, t) {
         e
     );
 }
+
 function m(e) {
     var t, n;
     let { mfaChallenge: h, mfaFinish: m, onEarlyClose: b, onClose: j, headerAlignStart: y, width: S = 440 } = e,
@@ -95,11 +98,21 @@ function m(e) {
             }),
             (0, r.jsx)(i.q7S, {
                 id: "totp",
-                children: (0, r.jsx)(u.A, p(g({}, w), { isSlideReady: "totp" === A })),
+                children: (0, r.jsx)(
+                    u.A,
+                    p(g({}, w), {
+                        isSlideReady: "totp" === A,
+                    }),
+                ),
             }),
             (0, r.jsx)(i.q7S, {
                 id: "sms",
-                children: (0, r.jsx)(c.A, p(g({}, w), { isSlideReady: "sms" === A })),
+                children: (0, r.jsx)(
+                    c.A,
+                    p(g({}, w), {
+                        isSlideReady: "sms" === A,
+                    }),
+                ),
             }),
             (0, r.jsx)(i.q7S, {
                 id: "backup",
@@ -107,15 +120,26 @@ function m(e) {
             }),
             (0, r.jsx)(i.q7S, {
                 id: "backup_ack",
-                children: (0, r.jsx)(a.A, p(g({}, w), { isSlideReady: "backup_ack" === A })),
+                children: (0, r.jsx)(
+                    a.A,
+                    p(g({}, w), {
+                        isSlideReady: "backup_ack" === A,
+                    }),
+                ),
             }),
             (0, r.jsx)(i.q7S, {
                 id: "password",
-                children: (0, r.jsx)(o.A, p(g({}, w), { isSlideReady: "password" === A })),
+                children: (0, r.jsx)(
+                    o.A,
+                    p(g({}, w), {
+                        isSlideReady: "password" === A,
+                    }),
+                ),
             }),
         ],
     });
 }
+
 function b(e) {
     let { mfaChallenge: t, finish: n, transitionState: l, onClose: s } = e;
     return (0, r.jsx)(i.EOs, {
@@ -132,6 +156,7 @@ function b(e) {
         }),
     });
 }
+
 function j(e, t, n) {
     (0, i.qfG)(
         (n) =>

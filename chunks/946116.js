@@ -39,6 +39,7 @@ var r,
         (a[(a.STUDY_SOCIAL = 3)] = "STUDY_SOCIAL"),
         (a[(a.MISC = 5)] = "MISC"),
         a);
+
 function b(e) {
     return "883060064561299456" === e
         ? [
@@ -88,6 +89,7 @@ function b(e) {
               },
           ];
 }
+
 function g() {
     return {
         CREATE: {
@@ -264,13 +266,17 @@ function g() {
                 {
                     id: "22",
                     parent_id: "20",
-                    name: u.intl.formatToPlainString(u.t.LuNsNf, { number: 1 }),
+                    name: u.intl.formatToPlainString(u.t.LuNsNf, {
+                        number: 1,
+                    }),
                     type: c.rbe.GUILD_VOICE,
                 },
                 {
                     id: "23",
                     parent_id: "20",
-                    name: u.intl.formatToPlainString(u.t.LuNsNf, { number: 2 }),
+                    name: u.intl.formatToPlainString(u.t.LuNsNf, {
+                        number: 2,
+                    }),
                     type: c.rbe.GUILD_VOICE,
                 },
             ],
@@ -338,13 +344,17 @@ function g() {
                 {
                     id: "22",
                     parent_id: "20",
-                    name: u.intl.formatToPlainString(u.t.LuNsNf, { number: 1 }),
+                    name: u.intl.formatToPlainString(u.t.LuNsNf, {
+                        number: 1,
+                    }),
                     type: c.rbe.GUILD_VOICE,
                 },
                 {
                     id: "23",
                     parent_id: "20",
-                    name: u.intl.formatToPlainString(u.t.LuNsNf, { number: 2 }),
+                    name: u.intl.formatToPlainString(u.t.LuNsNf, {
+                        number: 2,
+                    }),
                     type: c.rbe.GUILD_VOICE,
                 },
             ],
@@ -474,13 +484,17 @@ function g() {
                 {
                     id: "22",
                     parent_id: "20",
-                    name: u.intl.formatToPlainString(u.t.LuNsNf, { number: 1 }),
+                    name: u.intl.formatToPlainString(u.t.LuNsNf, {
+                        number: 1,
+                    }),
                     type: c.rbe.GUILD_VOICE,
                 },
                 {
                     id: "23",
                     parent_id: "20",
-                    name: u.intl.formatToPlainString(u.t.LuNsNf, { number: 2 }),
+                    name: u.intl.formatToPlainString(u.t.LuNsNf, {
+                        number: 2,
+                    }),
                     type: c.rbe.GUILD_VOICE,
                 },
             ],

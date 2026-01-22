@@ -11,6 +11,7 @@ var r = n(72290),
     p = Symbol.for("react.memo"),
     _ = Symbol.for("react.lazy"),
     h = Symbol.iterator;
+
 function m(e) {
     return null === e || "object" != typeof e
         ? null
@@ -28,10 +29,13 @@ var g = {
     },
     E = Object.assign,
     b = {};
+
 function y(e, t, n) {
     (this.props = e), (this.context = t), (this.refs = b), (this.updater = n || g);
 }
+
 function O() {}
+
 function A(e, t, n) {
     (this.props = e), (this.context = t), (this.refs = b), (this.updater = n || g);
 }
@@ -58,6 +62,7 @@ var S = Array.isArray,
         V: null,
     },
     T = Object.prototype.hasOwnProperty;
+
 function C(e, t, n, r, a, s) {
     return {
         $$typeof: i,
@@ -67,12 +72,15 @@ function C(e, t, n, r, a, s) {
         props: s,
     };
 }
+
 function N(e, t) {
     return C(e.type, t, void 0, void 0, void 0, e.props);
 }
+
 function R(e) {
     return "object" == typeof e && null !== e && e.$$typeof === i;
 }
+
 function w(e) {
     var t = {
         "=": "=0",
@@ -86,10 +94,13 @@ function w(e) {
     );
 }
 var P = /\/+/g;
+
 function D(e, t) {
     return "object" == typeof e && null !== e && null != e.key ? w("" + e.key) : t.toString(36);
 }
+
 function x() {}
+
 function L(e) {
     switch (e.status) {
         case "fulfilled":
@@ -119,6 +130,7 @@ function L(e) {
     }
     throw e;
 }
+
 function j(e, t, n, r, s) {
     var o = typeof e;
     ("undefined" === o || "boolean" === o) && (e = null);
@@ -175,6 +187,7 @@ function j(e, t, n, r, s) {
     }
     return l;
 }
+
 function M(e, t, n) {
     if (null == e) return e;
     var r = [],
@@ -186,6 +199,7 @@ function M(e, t, n) {
         r
     );
 }
+
 function k(e) {
     if (-1 === e._status) {
         var t = e._result;
@@ -221,6 +235,7 @@ var U =
                   return void r.emit("uncaughtException", e);
               console.error(e);
           };
+
 function G() {}
 (t.Children = {
     map: M,
@@ -327,7 +342,9 @@ function G() {}
         return C(e, a, void 0, void 0, null, i);
     }),
     (t.createRef = function () {
-        return { current: null };
+        return {
+            current: null,
+        };
     }),
     (t.forwardRef = function (e) {
         return {

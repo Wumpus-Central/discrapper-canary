@@ -1,4 +1,6 @@
-n.d(t, { D: () => T });
+n.d(t, {
+    D: () => T,
+});
 var r = n(367513),
     i = n(843472),
     a = n(334738),
@@ -63,6 +65,7 @@ let T = {
         );
     },
 };
+
 function C(e) {
     if (null != e) {
         if (g.A.isEditingAny(e)) return i.A.endEditMessage(e), !1;
@@ -70,6 +73,7 @@ function C(e) {
         if (null != f.A.getStickerPreview(e, m.C.ChannelMessage)) return (0, p.x5)(e, m.C.ChannelMessage), !1;
     }
 }
+
 function N(e) {
     if (null == e) return !1;
     let t = !1;

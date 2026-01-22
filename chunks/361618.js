@@ -1,4 +1,6 @@
-n.d(t, { A: () => I });
+n.d(t, {
+    A: () => I,
+});
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -16,6 +18,7 @@ var r = n(627968),
     g = n(753070),
     E = n(731854),
     b = n(985018);
+
 function y(e, t, n) {
     return (
         t in e
@@ -29,6 +32,7 @@ function y(e, t, n) {
         e
     );
 }
+
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -45,6 +49,7 @@ function O(e) {
     }
     return e;
 }
+
 function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -57,6 +62,7 @@ function A(e, t) {
     }
     return n;
 }
+
 function v(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -68,15 +74,25 @@ function v(e, t) {
         e
     );
 }
+
 function S(e, t) {
     (0, s.mMO)(
         async () => {
             let { default: e } = await n.e("18630").then(n.bind(n, 826789));
-            return (n) => (0, r.jsx)(e, v(O({}, n), { analyticsSource: t }));
+            return (n) =>
+                (0, r.jsx)(
+                    e,
+                    v(O({}, n), {
+                        analyticsSource: t,
+                    }),
+                );
         },
-        { contextKey: e === m.BRT.POPOUT ? s.KX8 : s.SYi },
+        {
+            contextKey: e === m.BRT.POPOUT ? s.KX8 : s.SYi,
+        },
     );
 }
+
 function I(e, t) {
     let { preset: n, resolution: y, fps: A, soundshareEnabled: I } = (0, a.cf)([u.A], () => u.A.getState()),
         T = (0, a.bG)([p.A], () => p.A.getGoLiveSource()),

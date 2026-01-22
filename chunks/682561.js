@@ -1,4 +1,12 @@
-n.d(t, { A: () => S }), n(321073), n(65821), n(896048), n(457529), n(667532), n(747238);
+n.d(t, {
+    A: () => S,
+}),
+    n(321073),
+    n(65821),
+    n(896048),
+    n(457529),
+    n(667532),
+    n(747238);
 var r,
     i = n(837385),
     a = n.n(i),
@@ -15,6 +23,7 @@ var r,
     m = n(400976),
     g = n(731854),
     E = n(396574);
+
 function b(e, t, n) {
     return (
         t in e
@@ -31,6 +40,7 @@ function b(e, t, n) {
 let y = 10,
     O = 10,
     A = null == (r = c().name) ? void 0 : r.toLowerCase().includes("firefox");
+
 function v(e, t) {
     e.sender.replaceTrack(t), (e.direction = null != t ? "sendrecv" : "recvonly");
 }
@@ -224,7 +234,9 @@ class S extends f.A {
             .catch((e) => a(e));
     }
     setAudioEncoderParameters(e) {
-        let t = { [f.k.AUDIO_BITRATE]: "maxBitrate" },
+        let t = {
+                [f.k.AUDIO_BITRATE]: "maxBitrate",
+            },
             n = [];
         for (let { parameter: r, value: i } of e) {
             let e = t[r];
@@ -263,7 +275,9 @@ class S extends f.A {
         return this.pc.getStats();
     }
     makeOfferAnswerOptions() {
-        return { iceRestart: !1 };
+        return {
+            iceRestart: !1,
+        };
     }
     parseLocalDescription() {
         let e = this.pc.localDescription;
@@ -292,7 +306,9 @@ class S extends f.A {
             a = i.getTransceivers().length;
         for (let o = a; o < a + n; o++) {
             var s;
-            let n = { direction: t };
+            let n = {
+                direction: t,
+            };
             "video" === e && null != r && (n.streams = [r]);
             let a = i.addTransceiver(e, n);
             null == (s = this.daveSessionManager) || s.setupEncodedTransformsForTransceiver(a),
@@ -597,7 +613,11 @@ class S extends f.A {
             (r.ontrack = this.handleTrack),
             (this.audioTransceiver = r.addTransceiver("audio", {
                 direction: "recvonly",
-                sendEncodings: [{ maxBitrate: this.voiceBitrate }],
+                sendEncodings: [
+                    {
+                        maxBitrate: this.voiceBitrate,
+                    },
+                ],
             })),
             null == (t = this.daveSessionManager) || t.setupEncodedTransformsForTransceiver(this.audioTransceiver),
             this.videoSupported &&

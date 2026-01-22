@@ -1,10 +1,13 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var l = n(627968);
 n(64700);
 var r = n(397927),
     i = n(710265),
     s = n(985018),
     a = n(624019);
+
 function o(e) {
     var t, n;
     let { isSlideReady: o } = e,
@@ -86,7 +89,10 @@ function o(e) {
                     }
                     return e;
                 })({}, c)),
-                (n = n = { canSetFocus: o }),
+                (n = n =
+                    {
+                        canSetFocus: o,
+                    }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                     : (function (e, t) {

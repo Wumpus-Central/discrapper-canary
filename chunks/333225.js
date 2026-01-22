@@ -26,25 +26,16 @@
             "༠": "0",
         };
     return e.defineLocale("bo", {
-        months: "ཟླ\u0F0Bབ\u0F0Bདང\u0F0Bཔོ_ཟླ\u0F0Bབ\u0F0Bགཉིས\u0F0Bཔ_ཟླ\u0F0Bབ\u0F0Bགསུམ\u0F0Bཔ_ཟླ\u0F0Bབ\u0F0Bབཞི\u0F0Bཔ_ཟླ\u0F0Bབ\u0F0Bལྔ\u0F0Bཔ_ཟླ\u0F0Bབ\u0F0Bདྲུག\u0F0Bཔ_ཟླ\u0F0Bབ\u0F0Bབདུན\u0F0Bཔ_ཟླ\u0F0Bབ\u0F0Bབརྒྱད\u0F0Bཔ_ཟླ\u0F0Bབ\u0F0Bདགུ\u0F0Bཔ_ཟླ\u0F0Bབ\u0F0Bབཅུ\u0F0Bཔ_ཟླ\u0F0Bབ\u0F0Bབཅུ\u0F0Bགཅིག\u0F0Bཔ_ཟླ\u0F0Bབ\u0F0Bབཅུ\u0F0Bགཉིས\u0F0Bཔ".split(
+        months: "ཟླ་བ་དང་པོ_ཟླ་བ་གཉིས་པ_ཟླ་བ་གསུམ་པ_ཟླ་བ་བཞི་པ_ཟླ་བ་ལྔ་པ_ཟླ་བ་དྲུག་པ_ཟླ་བ་བདུན་པ_ཟླ་བ་བརྒྱད་པ_ཟླ་བ་དགུ་པ_ཟླ་བ་བཅུ་པ_ཟླ་བ་བཅུ་གཅིག་པ_ཟླ་བ་བཅུ་གཉིས་པ".split(
             "_",
         ),
         monthsShort:
-            "ཟླ\u0F0Bབ\u0F0Bདང\u0F0Bཔོ_ཟླ\u0F0Bབ\u0F0Bགཉིས\u0F0Bཔ_ཟླ\u0F0Bབ\u0F0Bགསུམ\u0F0Bཔ_ཟླ\u0F0Bབ\u0F0Bབཞི\u0F0Bཔ_ཟླ\u0F0Bབ\u0F0Bལྔ\u0F0Bཔ_ཟླ\u0F0Bབ\u0F0Bདྲུག\u0F0Bཔ_ཟླ\u0F0Bབ\u0F0Bབདུན\u0F0Bཔ_ཟླ\u0F0Bབ\u0F0Bབརྒྱད\u0F0Bཔ_ཟླ\u0F0Bབ\u0F0Bདགུ\u0F0Bཔ_ཟླ\u0F0Bབ\u0F0Bབཅུ\u0F0Bཔ_ཟླ\u0F0Bབ\u0F0Bབཅུ\u0F0Bགཅིག\u0F0Bཔ_ཟླ\u0F0Bབ\u0F0Bབཅུ\u0F0Bགཉིས\u0F0Bཔ".split(
+            "ཟླ་བ་དང་པོ_ཟླ་བ་གཉིས་པ_ཟླ་བ་གསུམ་པ_ཟླ་བ་བཞི་པ_ཟླ་བ་ལྔ་པ_ཟླ་བ་དྲུག་པ_ཟླ་བ་བདུན་པ_ཟླ་བ་བརྒྱད་པ_ཟླ་བ་དགུ་པ_ཟླ་བ་བཅུ་པ_ཟླ་བ་བཅུ་གཅིག་པ_ཟླ་བ་བཅུ་གཉིས་པ".split(
                 "_",
             ),
-        weekdays:
-            "གཟའ\u0F0Bཉི\u0F0Bམ\u0F0B_གཟའ\u0F0Bཟླ\u0F0Bབ\u0F0B_གཟའ\u0F0Bམིག\u0F0Bདམར\u0F0B_གཟའ\u0F0Bལྷག\u0F0Bཔ\u0F0B_གཟའ\u0F0Bཕུར\u0F0Bབུ_གཟའ\u0F0Bཔ\u0F0Bསངས\u0F0B_གཟའ\u0F0Bསྤེན\u0F0Bཔ\u0F0B".split(
-                "_",
-            ),
-        weekdaysShort:
-            "ཉི\u0F0Bམ\u0F0B_ཟླ\u0F0Bབ\u0F0B_མིག\u0F0Bདམར\u0F0B_ལྷག\u0F0Bཔ\u0F0B_ཕུར\u0F0Bབུ_པ\u0F0Bསངས\u0F0B_སྤེན\u0F0Bཔ\u0F0B".split(
-                "_",
-            ),
-        weekdaysMin:
-            "ཉི\u0F0Bམ\u0F0B_ཟླ\u0F0Bབ\u0F0B_མིག\u0F0Bདམར\u0F0B_ལྷག\u0F0Bཔ\u0F0B_ཕུར\u0F0Bབུ_པ\u0F0Bསངས\u0F0B_སྤེན\u0F0Bཔ\u0F0B".split(
-                "_",
-            ),
+        weekdays: "གཟའ་ཉི་མ་_གཟའ་ཟླ་བ་_གཟའ་མིག་དམར་_གཟའ་ལྷག་པ་_གཟའ་ཕུར་བུ_གཟའ་པ་སངས་_གཟའ་སྤེན་པ་".split("_"),
+        weekdaysShort: "ཉི་མ་_ཟླ་བ་_མིག་དམར་_ལྷག་པ་_ཕུར་བུ_པ་སངས་_སྤེན་པ་".split("_"),
+        weekdaysMin: "ཉི་མ་_ཟླ་བ་_མིག་དམར་_ལྷག་པ་_ཕུར་བུ_པ་སངས་_སྤེན་པ་".split("_"),
         longDateFormat: {
             LT: "A h:mm",
             LTS: "A h:mm:ss",
@@ -54,27 +45,27 @@
             LLLL: "dddd, D MMMM YYYY, A h:mm",
         },
         calendar: {
-            sameDay: "[དི\u0F0Bརིང] LT",
-            nextDay: "[སང\u0F0Bཉིན] LT",
-            nextWeek: "[བདུན\u0F0Bཕྲག\u0F0Bརྗེས\u0F0Bམ], LT",
-            lastDay: "[ཁ\u0F0Bསང] LT",
-            lastWeek: "[བདུན\u0F0Bཕྲག\u0F0Bམཐའ\u0F0Bམ] dddd, LT",
+            sameDay: "[དི་རིང] LT",
+            nextDay: "[སང་ཉིན] LT",
+            nextWeek: "[བདུན་ཕྲག་རྗེས་མ], LT",
+            lastDay: "[ཁ་སང] LT",
+            lastWeek: "[བདུན་ཕྲག་མཐའ་མ] dddd, LT",
             sameElse: "L",
         },
         relativeTime: {
-            future: "%s ལ\u0F0B",
-            past: "%s སྔན\u0F0Bལ",
-            s: "ལམ\u0F0Bསང",
-            ss: "%d སྐར\u0F0Bཆ\u0F0D",
-            m: "སྐར\u0F0Bམ\u0F0Bགཅིག",
-            mm: "%d སྐར\u0F0Bམ",
-            h: "ཆུ\u0F0Bཚོད\u0F0Bགཅིག",
-            hh: "%d ཆུ\u0F0Bཚོད",
-            d: "ཉིན\u0F0Bགཅིག",
-            dd: "%d ཉིན\u0F0B",
-            M: "ཟླ\u0F0Bབ\u0F0Bགཅིག",
-            MM: "%d ཟླ\u0F0Bབ",
-            y: "ལོ\u0F0Bགཅིག",
+            future: "%s ལ་",
+            past: "%s སྔན་ལ",
+            s: "ལམ་སང",
+            ss: "%d སྐར་ཆ།",
+            m: "སྐར་མ་གཅིག",
+            mm: "%d སྐར་མ",
+            h: "ཆུ་ཚོད་གཅིག",
+            hh: "%d ཆུ་ཚོད",
+            d: "ཉིན་གཅིག",
+            dd: "%d ཉིན་",
+            M: "ཟླ་བ་གཅིག",
+            MM: "%d ཟླ་བ",
+            y: "ལོ་གཅིག",
             yy: "%d ལོ",
         },
         preparse: function (e) {
@@ -89,21 +80,12 @@
         },
         meridiemParse: /མཚན་མོ|ཞོགས་ཀས|ཉིན་གུང|དགོང་དག|མཚན་མོ/,
         meridiemHour: function (e, t) {
-            return (12 === e && (e = 0),
-            ("མཚན\u0F0Bམོ" === t && e >= 4) || ("ཉིན\u0F0Bགུང" === t && e < 5) || "དགོང\u0F0Bདག" === t)
+            return (12 === e && (e = 0), ("མཚན་མོ" === t && e >= 4) || ("ཉིན་གུང" === t && e < 5) || "དགོང་དག" === t)
                 ? e + 12
                 : e;
         },
         meridiem: function (e, t, n) {
-            return e < 4
-                ? "མཚན\u0F0Bམོ"
-                : e < 10
-                  ? "ཞོགས\u0F0Bཀས"
-                  : e < 17
-                    ? "ཉིན\u0F0Bགུང"
-                    : e < 20
-                      ? "དགོང\u0F0Bདག"
-                      : "མཚན\u0F0Bམོ";
+            return e < 4 ? "མཚན་མོ" : e < 10 ? "ཞོགས་ཀས" : e < 17 ? "ཉིན་གུང" : e < 20 ? "དགོང་དག" : "མཚན་མོ";
         },
         week: {
             dow: 0,

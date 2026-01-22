@@ -1,8 +1,11 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(64700),
     i = n(884362),
     a = n(311907),
     s = n(775602);
+
 function o(e, t, n) {
     let o = (0, a.bG)([s.A], () => s.A.keyboardModeEnabled),
         l = r.useCallback(

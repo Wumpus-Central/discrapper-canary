@@ -1,4 +1,9 @@
-r.d(t, { default: () => U }), r(457529), r(747238), r(812715);
+r.d(t, {
+    default: () => U,
+}),
+    r(457529),
+    r(747238),
+    r(812715);
 var s,
     n = r(627968),
     o = r(64700),
@@ -31,6 +36,7 @@ var s,
     T = r(985018),
     D = r(31669),
     F = r(473169);
+
 function N(e, t, r) {
     return (
         t in e
@@ -44,6 +50,7 @@ function N(e, t, r) {
         e
     );
 }
+
 function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
@@ -60,6 +67,7 @@ function L(e) {
     }
     return e;
 }
+
 function M(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -138,7 +146,10 @@ class I extends (s = o.PureComponent) {
                     (0, n.jsx)(w.pd, {
                         label: T.intl.string(T.t["CIGa+7"]),
                         error: this.renderError("password"),
-                        onChange: (e) => this.setState({ password: e }),
+                        onChange: (e) =>
+                            this.setState({
+                                password: e,
+                            }),
                         name: "password",
                         type: "password",
                         setRef: this.setPasswordRef,
@@ -192,7 +203,9 @@ class I extends (s = o.PureComponent) {
                     title: T.intl.string(T.t.bPP34Q),
                     subtitle: T.intl.string(T.t.rvx0T4),
                 }),
-                (0, n.jsx)(d.cwr, { children: this.renderDefaultForm() }),
+                (0, n.jsx)(d.cwr, {
+                    children: this.renderDefaultForm(),
+                }),
                 (0, n.jsx)(d.H7u, {
                     leading: (0, n.jsx)(u.QWc, {
                         variant: "secondary",
@@ -242,7 +255,9 @@ class I extends (s = o.PureComponent) {
                     leading: (0, n.jsx)(u.Text, {
                         variant: "text-md/normal",
                         color: "text-subtle",
-                        children: T.intl.format(T.t.js2rr5, { onClick: this.handleCancelAccountDeletion }),
+                        children: T.intl.format(T.t.js2rr5, {
+                            onClick: this.handleCancelAccountDeletion,
+                        }),
                     }),
                     actions: [
                         {
@@ -263,7 +278,10 @@ class I extends (s = o.PureComponent) {
                 {
                     resetToken: e,
                     onLoginSuccess: (e) => {
-                        this.setState({ errors: {} }), f.A.switchAccountToken(e);
+                        this.setState({
+                            errors: {},
+                        }),
+                            f.A.switchAccountToken(e);
                     },
                     width: "100%",
                 },
@@ -276,7 +294,9 @@ class I extends (s = o.PureComponent) {
         return (0, n.jsx)(d.cwr, {
             children: (0, n.jsx)(y.A, {
                 title: T.intl.string(T.t["+xqy3d"]),
-                subtitle: T.intl.format(T.t.ef4uZ7, { onResendClick: this.handleResendCode }),
+                subtitle: T.intl.format(T.t.ef4uZ7, {
+                    onResendClick: this.handleResendCode,
+                }),
                 error: e,
                 onSubmit: this.handlePasswordReset,
                 onCancel: void 0,
@@ -309,7 +329,10 @@ class I extends (s = o.PureComponent) {
             N(this, "passwordRef", void 0),
             N(this, "codeRef", void 0),
             N(this, "handleAuthToken", async (e) => {
-                this.setState({ errors: {} }), await f.A.loginToken(e, !1);
+                this.setState({
+                    errors: {},
+                }),
+                    await f.A.loginToken(e, !1);
             }),
             N(this, "handleTabOrEnter", (e) => {
                 if ("Tab" === e.key && !e.shiftKey && e.target === this.loginRef) {
@@ -345,7 +368,9 @@ class I extends (s = o.PureComponent) {
                 var t;
                 null == e || e.preventDefault(), null == (t = this.loginRef) || t.focus();
                 let r = this.getFullLogin();
-                this.setState({ errors: {} });
+                this.setState({
+                    errors: {},
+                });
                 try {
                     R._.dispatch(_.jej.WAVE_EMPHASIZE);
                     let e = await f.A.forgotPassword(r);
@@ -381,16 +406,23 @@ class I extends (s = o.PureComponent) {
                           })
                         : (0, h.A)({
                               title: T.intl.string(T.t.f5Pi7A),
-                              subtitle: T.intl.format(T.t["6u5hQ9"], { email: r }),
+                              subtitle: T.intl.format(T.t["6u5hQ9"], {
+                                  email: r,
+                              }),
                           });
                 } catch (t) {
                     let e = (0, b.p)(t);
-                    this.setState({ errors: e });
+                    this.setState({
+                        errors: e,
+                    });
                 }
             }),
             N(this, "handleLogin", async (e) => {
                 let { password: t, undelete: r } = this.state;
-                null == e || e.preventDefault(), this.setState({ errors: {} });
+                null == e || e.preventDefault(),
+                    this.setState({
+                        errors: {},
+                    });
                 try {
                     await f.A.login({
                         login: this.getFullLogin(),
@@ -400,7 +432,9 @@ class I extends (s = o.PureComponent) {
                     });
                 } catch (t) {
                     let e = (0, b.p)(t);
-                    this.setState({ errors: e });
+                    this.setState({
+                        errors: e,
+                    });
                 }
             }),
             N(this, "handlePasswordReset", async (e) => {
@@ -410,9 +444,15 @@ class I extends (s = o.PureComponent) {
                 });
                 try {
                     let { token: t } = await A.A.verifyPhone(this.getFullLogin(), e, !1, !0);
-                    this.setState({ resetPasswordPhoneToken: t });
+                    this.setState({
+                        resetPasswordPhoneToken: t,
+                    });
                 } catch (e) {
-                    null != e.body && null != e.body.message && this.setState({ phoneVerifyError: e.body.message });
+                    null != e.body &&
+                        null != e.body.message &&
+                        this.setState({
+                            phoneVerifyError: e.body.message,
+                        });
                 }
             }),
             N(this, "handleTokenSubmitMFA", (e) => {
@@ -442,7 +482,12 @@ class I extends (s = o.PureComponent) {
                     });
             }),
             N(this, "handleCancelAccountDeletion", () => {
-                this.setState({ undelete: !0 }, this.handleLogin);
+                this.setState(
+                    {
+                        undelete: !0,
+                    },
+                    this.handleLogin,
+                );
             }),
             (this.state = {
                 loginPrefix: "",

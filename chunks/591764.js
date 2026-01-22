@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var a = n(627968),
     l = n(64700),
     i = n(397927),
@@ -14,6 +16,7 @@ let u = (0, r.D)(() => ({
     errorMessage: null,
     lastRunAt: null,
 }));
+
 function m() {
     let e = u.useField("userIds"),
         t = u.useField("isLoading"),
@@ -40,7 +43,9 @@ function m() {
                     isSuccess: !1,
                 });
             } finally {
-                u.setState({ isLoading: !1 });
+                u.setState({
+                    isLoading: !1,
+                });
             }
         }, []),
         h = l.useMemo(

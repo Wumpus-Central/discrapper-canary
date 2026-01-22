@@ -12,6 +12,7 @@ var r = n(627968),
     u = n(486020),
     d = n(552691),
     f = n(652215);
+
 function p(e, t, n) {
     return (
         t in e
@@ -25,6 +26,7 @@ function p(e, t, n) {
         e
     );
 }
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -41,6 +43,7 @@ function _(e) {
     }
     return e;
 }
+
 function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -53,6 +56,7 @@ function h(e, t) {
     }
     return n;
 }
+
 function m(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -64,6 +68,7 @@ function m(e, t) {
         e
     );
 }
+
 function g(e, t) {
     let n = i.useRef(null);
     return i.useCallback(
@@ -102,6 +107,7 @@ function g(e, t) {
         [e, t.id],
     );
 }
+
 function E(e) {
     let { message: t, channel: i, compact: a } = e,
         c = (0, s.Ay)(t),
@@ -125,6 +131,7 @@ function E(e) {
         }),
     });
 }
+
 function b(e) {
     let { message: t, channel: i, compact: a } = e,
         c = (0, s.Ay)(t),

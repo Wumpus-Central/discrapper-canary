@@ -11,18 +11,21 @@ var r = n(448761),
     c = n(287809),
     s = n(652215),
     d = n(818348);
+
 function u(e, t, n) {
     return (
         (e.isPrivate() ? !e.isSystemDM() : n.can(d.xB.SEND_MESSAGES, e) && n.can(d.xB.READ_MESSAGE_HISTORY, e)) &&
         r.M.REPLYABLE.has(t.type)
     );
 }
+
 function f(e, t, n, r, l) {
     let i = t.hasFlag(s.pr7.EPHEMERAL),
         o = t.state === s.cmJ.SENT,
         a = !e.isArchivedThread() || l;
     return n && o && !i && !r && a;
 }
+
 function g(e, t) {
     var n;
     let r = (0, o.lK)(e),
@@ -30,6 +33,7 @@ function g(e, t) {
         s = (0, l.bG)([a.A], () => null != e && null != t && u(e, t, a.A));
     return null != e && null != t && f(e, t, s, c, r);
 }
+
 function p(e, t) {
     var n;
     let r = (0, o.Et)(e),

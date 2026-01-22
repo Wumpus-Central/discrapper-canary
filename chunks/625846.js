@@ -1,4 +1,10 @@
-n.r(t), n.d(t, { default: () => eA }), n(747238), n(896048), n(733351);
+n.r(t),
+    n.d(t, {
+        default: () => eA,
+    }),
+    n(747238),
+    n(896048),
+    n(733351);
 var l = n(627968),
     r = n(64700),
     a = n(503698),
@@ -69,6 +75,7 @@ var l = n(627968),
     ex = n(37411),
     eb = n(985018),
     ep = n(1004);
+
 function ej(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -94,6 +101,7 @@ function ej(e) {
     }
     return e;
 }
+
 function ev(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -112,6 +120,7 @@ function ev(e, t) {
         e
     );
 }
+
 function ey(e, t) {
     if (null == e) return {};
     var n,
@@ -140,6 +149,7 @@ function ey(e, t) {
             (l = n[r]), !(t.indexOf(l) >= 0) && Object.prototype.propertyIsEnumerable.call(e, l) && (a[l] = e[l]);
     return a;
 }
+
 function eA(e) {
     let { channel: t, guild: n, sidebarState: r } = e;
     return (0, l.jsx)(
@@ -160,9 +170,11 @@ let eC = new ed.JT({
     maxWidth: 450,
     gap: 16,
 });
+
 function eO(e) {
     return "forum-grid-header-section-".concat(e);
 }
+
 function eN(e) {
     let { itemRole: t, coords: n, section: r } = e;
     return (0, l.jsx)(
@@ -184,6 +196,7 @@ function eN(e) {
         "section-divider",
     );
 }
+
 function eS(e) {
     let { section: t, coords: n, key: r, isShowingSearchResult: a, hasActiveThreads: i } = e;
     return () =>
@@ -192,16 +205,23 @@ function eS(e) {
                   eN,
                   {
                       section: t,
-                      coords: null == n ? void 0 : ev(ej({}, n), { position: "absolute" }),
+                      coords:
+                          null == n
+                              ? void 0
+                              : ev(ej({}, n), {
+                                    position: "absolute",
+                                }),
                       itemRole: "section",
                   },
                   r,
               )
             : null;
 }
+
 function eT(e, t) {
     return "card-".concat(e, "-").concat(t);
 }
+
 function e_(e) {
     if ("string" == typeof e) {
         let t = e.match(/card-{\d+}-({\d+})$/);
@@ -209,6 +229,7 @@ function e_(e) {
     }
     return null;
 }
+
 function eE(e) {
     let { channel: t, sidebarState: n } = e,
         {
@@ -261,7 +282,9 @@ function eE(e) {
                     return !t && !n;
                 }),
                 { threadIds: s, canLoadMore: c, loadMore: o, loading: d } = (0, D.Fr)(e, t, n, r),
-                { searchResults: u, isSearchLoading: m } = (0, Y.cA)({ channelId: e.id });
+                { searchResults: u, isSearchLoading: m } = (0, Y.cA)({
+                    channelId: e.id,
+                });
             return (
                 (0, Y.yz)(e, t, n, r),
                 {
@@ -337,7 +360,9 @@ function eE(e) {
             guildId: t.guild_id,
         }),
         eu = H === h.C.GRID,
-        { searchQuery: eA } = (0, Y.cA)({ channelId: t.id }),
+        { searchQuery: eA } = (0, Y.cA)({
+            channelId: t.id,
+        }),
         eN = null != j && null != eA && eA.length > 0,
         eE = r.useRef(null),
         { containerRef: eP, containerWidth: eM } = (0, em.A)();
@@ -400,7 +425,11 @@ function eE(e) {
                         section: eg.JJy.FORUM_CHANNEL_POST,
                     },
                 }),
-                    n ? (0, P.N9)(e, { source: ex.H9.BROWSER }) : ((eE.current = e.id), (0, U.JA)(e));
+                    n
+                        ? (0, P.N9)(e, {
+                              source: ex.H9.BROWSER,
+                          })
+                        : ((eE.current = e.id), (0, U.JA)(e));
             },
             [t.guild_id, t.id, eE],
         ),
@@ -466,7 +495,13 @@ function eE(e) {
             let { editorHeight: n, isGridLayout: l } = eY.current,
                 r = l ? e2 : ec,
                 a = null == (e = r.current) ? void 0 : e.getScrollerState();
-            null != a && !eX && a.scrollTop > n && (null == (t = r.current) || t.scrollTo({ to: 0 }));
+            null != a &&
+                !eX &&
+                a.scrollTop > n &&
+                (null == (t = r.current) ||
+                    t.scrollTo({
+                        to: 0,
+                    }));
         }, [eX]);
     let {
             updateListScrollerRef: eZ,
@@ -611,7 +646,10 @@ function eE(e) {
                             callback() {
                                 requestAnimationFrame(() => {
                                     var t;
-                                    null == (t = document.querySelector(e)) || t.focus({ preventScroll: !0 });
+                                    null == (t = document.querySelector(e)) ||
+                                        t.focus({
+                                            preventScroll: !0,
+                                        });
                                 });
                             },
                         }),
@@ -823,12 +861,20 @@ function eE(e) {
                                             : 0,
                                 },
                             }),
-                        (0, l.jsx)(ek, { channel: t }),
-                        (0, l.jsx)(b.AC4, { children: (0, l.jsx)(b.H, { children: eb.intl.string(eb.t.B2panI) }) }),
+                        (0, l.jsx)(ek, {
+                            channel: t,
+                        }),
+                        (0, l.jsx)(b.AC4, {
+                            children: (0, l.jsx)(b.H, {
+                                children: eb.intl.string(eb.t.B2panI),
+                            }),
+                        }),
                         W
                             ? (0, l.jsx)("div", {
                                   className: ep.optInNotice,
-                                  children: (0, l.jsx)(_.A, { channel: t }),
+                                  children: (0, l.jsx)(_.A, {
+                                      channel: t,
+                                  }),
                               })
                             : null,
                         eu
@@ -891,7 +937,9 @@ function eE(e) {
                                                       r,
                                                       e,
                                                   ),
-                                                  { innerRole: "list" },
+                                                  {
+                                                      innerRole: "list",
+                                                  },
                                               ),
                                               H,
                                           );
@@ -903,6 +951,7 @@ function eE(e) {
         }),
     });
 }
+
 function ew(e) {
     let { channel: t, coords: n } = e,
         r = (0, A.Ay)(t);
@@ -912,10 +961,13 @@ function ew(e) {
         children: (0, l.jsx)(b.Text, {
             color: "text-muted",
             variant: "text-md/normal",
-            children: eb.intl.format(eb.t.TycmzM, { channelName: r }),
+            children: eb.intl.format(eb.t.TycmzM, {
+                channelName: r,
+            }),
         }),
     });
 }
+
 function eR(e) {
     let { channel: t, coords: n } = e,
         r = (0, A.Ay)(t);
@@ -925,10 +977,13 @@ function eR(e) {
         children: (0, l.jsx)(b.Text, {
             color: "text-muted",
             variant: "text-md/normal",
-            children: eb.intl.format(eb.t.OWZJdS, { channelName: r }),
+            children: eb.intl.format(eb.t.OWZJdS, {
+                channelName: r,
+            }),
         }),
     });
 }
+
 function ek(e) {
     let { channel: t } = e,
         n = r.useCallback(() => {
@@ -943,13 +998,17 @@ function ek(e) {
               children: (0, l.jsx)(b.Text, {
                   color: "text-brand",
                   variant: "text-md/medium",
-                  children: eb.intl.format(eb.t.ue1qfM, { count: a }),
+                  children: eb.intl.format(eb.t.ue1qfM, {
+                      count: a,
+                  }),
               }),
           });
 }
+
 function eP() {
     return Promise.resolve();
 }
+
 function eI(e) {
     var t, n, a;
     let s,
@@ -1109,13 +1168,17 @@ function eI(e) {
                     children: [
                         null != A.guild_id
                             ? (0, l.jsx)(N.A, {
-                                  className: i()(ep.newMemberBanner, { [ep.gridViewBanner]: X === h.C.GRID }),
+                                  className: i()(ep.newMemberBanner, {
+                                      [ep.gridViewBanner]: X === h.C.GRID,
+                                  }),
                                   guildId: A.guild_id,
                                   channel: A,
                               })
                             : null,
                         (0, l.jsx)("div", {
-                            className: i()(ep.mainCard, ep.header, { [ep.headerWithMatchingPosts]: eL || eU }),
+                            className: i()(ep.mainCard, ep.header, {
+                                [ep.headerWithMatchingPosts]: eL || eU,
+                            }),
                             children: (0, l.jsx)(ei.A, {
                                 parentChannel: A,
                                 onChange: eO,
@@ -1165,7 +1228,9 @@ function eI(e) {
                                                     }),
                                             ],
                                         }),
-                                    (0, l.jsx)("div", { className: ep.tagsSpacer }),
+                                    (0, l.jsx)("div", {
+                                        className: ep.tagsSpacer,
+                                    }),
                                     eU
                                         ? ef
                                             ? (0, l.jsxs)("div", {
@@ -1219,11 +1284,15 @@ function eI(e) {
                             className: ep.tagsContainer,
                             ref: eT,
                             children: [
-                                (0, l.jsx)(eM, { channel: A }),
+                                (0, l.jsx)(eM, {
+                                    channel: A,
+                                }),
                                 eq.length > 0
                                     ? (0, l.jsxs)(l.Fragment, {
                                           children: [
-                                              (0, l.jsx)("div", { className: ep.divider }),
+                                              (0, l.jsx)("div", {
+                                                  className: ep.divider,
+                                              }),
                                               (0, l.jsx)("div", {
                                                   className: ep.tagList,
                                                   ref: e_,
@@ -1312,7 +1381,9 @@ function eI(e) {
                                                               className: i()(ep.tagsButton, {
                                                                   [ep.tagsButtonWithCount]: q.size > 0,
                                                               }),
-                                                              style: { left: eE },
+                                                              style: {
+                                                                  left: eE,
+                                                              },
                                                               innerClassName: ep.tagsButtonInner,
                                                               "aria-label":
                                                                   q.size > 0
@@ -1386,7 +1457,9 @@ function eI(e) {
                                 children: (e) => {
                                     let { visibleContent: t, markAsDismissed: n } = e;
                                     return t === g.M.FORUM_CHANNEL_HELPER_CARD
-                                        ? (0, l.jsx)(el.A, { onDismiss: n })
+                                        ? (0, l.jsx)(el.A, {
+                                              onDismiss: n,
+                                          })
                                         : null;
                                 },
                             }),
@@ -1397,6 +1470,7 @@ function eI(e) {
         "create-form",
     );
 }
+
 function eM(e) {
     let { channel: t } = e,
         n = t.isMediaChannel(),

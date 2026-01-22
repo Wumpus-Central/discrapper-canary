@@ -17,6 +17,7 @@ var l = n(503698),
     h = n(652215),
     b = n(985018),
     g = n(669486);
+
 function m(e) {
     let {
         guild: t,
@@ -95,6 +96,7 @@ function m(e) {
             },
         );
 }
+
 function A(e) {
     let {
             stream: t,

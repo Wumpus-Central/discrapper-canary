@@ -35,6 +35,7 @@ var i = n(824120),
     d = n(661191),
     f = n(652215),
     p = n(532406);
+
 function _(e, t, n) {
     return (
         t in e
@@ -48,6 +49,7 @@ function _(e, t, n) {
         e
     );
 }
+
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -64,6 +66,7 @@ function h(e) {
     }
     return e;
 }
+
 function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -76,6 +79,7 @@ function m(e, t) {
     }
     return n;
 }
+
 function g(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -96,6 +100,7 @@ let O = r.canUseWebp(),
     v = 360,
     S = 1096,
     I = (0, u.isAndroid)();
+
 function T(e) {
     let t,
         {
@@ -131,6 +136,7 @@ function T(e) {
         t + "?".concat(s.stringify(m))
     );
 }
+
 function C(e) {
     let { id: t, animated: r, size: i, forcePNG: a = !1 } = e,
         s = O ? "webp" : "png",
@@ -141,7 +147,9 @@ function C(e) {
         p = !1;
     try {
         let { getForceSdrEmojisStickersConfig: e } = n(796272);
-        p = e({ location: "getEmojiURL" }).enabled;
+        p = e({
+            location: "getEmojiURL",
+        }).enabled;
     } catch (e) {}
     let _ = p ? "&force_sdr=true" : "";
     if (null != window.GLOBAL_ENV.CDN_HOST)
@@ -154,6 +162,7 @@ function C(e) {
         return p ? "".concat(e, "?force_sdr=true") : e;
     }
 }
+
 function N(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = n ? y : b;
@@ -161,6 +170,7 @@ function N(e, t) {
     let i = (0, c.cG)(t, 0);
     return i > 0 ? r[i % A] : null != e ? r[a()(e).shiftRight(22).mod(r.length).toJSNumber()] : r[0];
 }
+
 function R(e) {
     let { id: t, avatar: n, discriminator: i, bot: a } = e,
         s = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
@@ -183,6 +193,7 @@ function R(e) {
         canWebP: c,
     });
 }
+
 function w(e) {
     var t;
     let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
@@ -191,6 +202,7 @@ function w(e) {
         a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : O;
     return null != (t = R(e, n, r, i, a)) ? t : N(e.id, e.discriminator, e.isProvisional);
 }
+
 function P(e) {
     let t,
         { guildId: n, userId: r, avatar: i, canAnimate: a = !1, size: o = f.eQT, canWebP: c = O } = e,
@@ -200,9 +212,12 @@ function P(e) {
         ? ("jpg" === u && (u = c ? "webp" : "png"),
           (t = "https://".concat(d).concat(f.Rsh.GUILD_MEMBER_AVATAR(n, r, i, u))))
         : (t = location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.Rsh.GUILD_MEMBER_AVATAR(n, r, i, u));
-    let p = { size: (0, l.kr)(o * (0, l.mZ)()) };
+    let p = {
+        size: (0, l.kr)(o * (0, l.mZ)()),
+    };
     return "webp" === u && a && Z(i) && (p.animated = !0), (t += "?".concat(s.stringify(p)));
 }
+
 function D(e) {
     let { userId: t, avatar: n, guildId: r } = e,
         i = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
@@ -215,11 +230,13 @@ function D(e) {
               canAnimate: i,
           });
 }
+
 function x(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = D(e, n);
     return null != r ? ee(r) : t.getAvatarSource(e.guildId, n);
 }
+
 function L(e) {
     let t,
         { id: n, banner: r, canAnimate: i, size: a } = e;
@@ -230,9 +247,12 @@ function L(e) {
         null != o
             ? "https://".concat(o, "/banners/").concat(n, "/").concat(r, ".").concat(c)
             : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.Rsh.USER_BANNER(n, r, c);
-    let u = { size: (0, l.kr)(a * (0, l.mZ)()) };
+    let u = {
+        size: (0, l.kr)(a * (0, l.mZ)()),
+    };
     return "webp" === c && i && Z(r) && (u.animated = !0), (t += "?".concat(s.stringify(u)));
 }
+
 function j(e) {
     let { avatarDecoration: t, size: n, canAnimate: r = !1 } = e;
     if (null == t || (0, o.bS)(t)) return;
@@ -249,6 +269,7 @@ function j(e) {
         u.toString()
     );
 }
+
 function M(e) {
     let t,
         { id: n, guildId: r, banner: i, canAnimate: a, size: o } = e;
@@ -257,9 +278,12 @@ function M(e) {
         u = a && Z(i) ? er(O) : "png",
         d = f.Rsh.GUILD_MEMBER_BANNER(r, n, i, u);
     t = null != c ? "https://".concat(c).concat(d) : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + d;
-    let p = { size: (0, l.kr)(o * (0, l.mZ)()) };
+    let p = {
+        size: (0, l.kr)(o * (0, l.mZ)()),
+    };
     return "webp" === u && a && Z(i) && (p.animated = !0), (t += "?".concat(s.stringify(p)));
 }
+
 function k(e) {
     let t,
         { id: n, splash: r, size: i } = e;
@@ -272,9 +296,11 @@ function k(e) {
             : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.Rsh.GUILD_SPLASH(n, r)) + "?size=".concat(i)
     );
 }
+
 function U(e) {
     return ee(k(e));
 }
+
 function G(e) {
     let t,
         { id: n, banner: r } = e,
@@ -288,13 +314,16 @@ function G(e) {
         null != u
             ? "https://".concat(u, "/banners/").concat(n, "/").concat(r, ".").concat(c)
             : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.Rsh.GUILD_BANNER(n, r, c);
-    let d = { size: a };
+    let d = {
+        size: a,
+    };
     return (
         "jpg" === c && (d.quality = "lossless"),
         "webp" === c && i && Z(r) && (d.animated = !0),
         (t += "?".concat(s.stringify(d)))
     );
 }
+
 function V(e) {
     let t,
         { id: n, homeHeader: r } = e;
@@ -307,6 +336,7 @@ function V(e) {
             : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.Rsh.GUILD_HOME_HEADER(n, r)) + "?size=".concat(i)
     );
 }
+
 function F(e) {
     let t,
         { id: n, splash: r, size: i } = e;
@@ -320,9 +350,11 @@ function F(e) {
         "?size=".concat(i)
     );
 }
+
 function B(e) {
     return ee(F(e));
 }
+
 function H(e) {
     let { id: t, icon: n, size: r, canAnimate: i = !1, lossless: a = !1 } = e;
     return T({
@@ -336,6 +368,7 @@ function H(e) {
         canWebP: O,
     });
 }
+
 function Y(e) {
     let { id: t, icon: n, size: r = f.eQT, canAnimate: i = !1 } = e;
     return T({
@@ -348,6 +381,7 @@ function Y(e) {
         canWebP: !1,
     });
 }
+
 function W(e) {
     let {
         id: t,
@@ -392,6 +426,7 @@ function W(e) {
     }
     if (s) return p;
 }
+
 function K(e) {
     let { id: t, hash: n, size: r = f.eQT, keepAspectRatio: i = !1, format: a } = e;
     return T({
@@ -406,6 +441,7 @@ function K(e) {
         canWebP: !1,
     });
 }
+
 function z(e) {
     let { userId: t, assetId: n, assetHash: r, size: i, canAnimate: a = !0 } = e;
     return T({
@@ -418,9 +454,11 @@ function z(e) {
         canWebP: !1,
     });
 }
+
 function q(e) {
     return r.DEFAULT_GROUP_DM_AVATARS[d.default.extractTimestamp(e) % r.DEFAULT_GROUP_DM_AVATARS.length];
 }
+
 function X(e) {
     var t, n;
     let { id: i, icon: a, applicationId: s, size: o } = e;
@@ -446,12 +484,15 @@ function X(e) {
           ? t
           : q(i);
 }
+
 function Z(e) {
     return null != e && e.startsWith("a_");
 }
+
 function Q(e) {
     return null != e && e.startsWith("v_");
 }
+
 function $(e) {
     let t;
     try {
@@ -460,11 +501,17 @@ function $(e) {
         return null;
     }
 }
+
 function J(e) {
     return null != e && Z($(e));
 }
+
 function ee(e) {
-    return "number" == typeof e ? e : { uri: null != e ? e : void 0 };
+    return "number" == typeof e
+        ? e
+        : {
+              uri: null != e ? e : void 0,
+          };
 }
 let et = {
     getUserAvatarURL: w,
@@ -537,13 +584,22 @@ let et = {
         if (!(0, u.isAndroid)() || !e || "number" == typeof n) return n;
         {
             let e = t(!1);
-            return "number" != typeof e && e.uri === n.uri ? e : [n, g(h({}, e), { isForceCached: !0 })];
+            return "number" != typeof e && e.uri === n.uri
+                ? e
+                : [
+                      n,
+                      g(h({}, e), {
+                          isForceCached: !0,
+                      }),
+                  ];
         }
     },
 };
+
 function en(e) {
     return null != e && E.test(e);
 }
+
 function er(e) {
     return e ? "webp" : "gif";
 }

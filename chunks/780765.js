@@ -1,4 +1,15 @@
-n.d(t, { A: () => L }), n(896048), n(638769), n(693327), n(554719), n(680155), n(323874), n(14289), n(35956), n(228524);
+n.d(t, {
+    A: () => L,
+}),
+    n(896048),
+    n(638769),
+    n(693327),
+    n(554719),
+    n(680155),
+    n(323874),
+    n(14289),
+    n(35956),
+    n(228524);
 var i = n(627968),
     r = n(64700),
     l = n(503698),
@@ -29,6 +40,7 @@ var i = n(627968),
     _ = n(985018),
     I = n(86789),
     P = n(473169);
+
 function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -54,6 +66,7 @@ function k(e) {
     }
     return e;
 }
+
 function R(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -72,6 +85,7 @@ function R(e, t) {
         e
     );
 }
+
 function L(e) {
     let t,
         {
@@ -194,7 +208,9 @@ function L(e) {
                               user: l.user,
                               platformName: t.name,
                           })
-                        : _.intl.formatToPlainString(_.t.unl3AP, { datetime: o()(l.synced_at).calendar() }),
+                        : _.intl.formatToPlainString(_.t.unl3AP, {
+                              datetime: o()(l.synced_at).calendar(),
+                          }),
             };
         }, [X, F, l.revoked, l.synced_at, l.type, l.user]),
         et = (0, b.bG)([A.A], () => A.A.getSortedRoles(n.id)),
@@ -217,7 +233,9 @@ function L(e) {
             {
                 icon: m.O4,
                 text: W
-                    ? _.intl.formatToPlainString(_.t.gcdJ8J, { timestamp: w.default.extractTimestamp(l.id) })
+                    ? _.intl.formatToPlainString(_.t.gcdJ8J, {
+                          timestamp: w.default.extractTimestamp(l.id),
+                      })
                     : _.intl.formatToPlainString(_.t.Nu9sat, {
                           user: null != l.user ? new y.A(l.user).tag : null,
                           timestamp: w.default.extractTimestamp(l.id),
@@ -284,7 +302,9 @@ function L(e) {
                 className: I.rf,
                 direction: x.A.Direction.VERTICAL,
                 children: [
-                    (0, i.jsx)(m.cGx, { className: I.fV }),
+                    (0, i.jsx)(m.cGx, {
+                        className: I.fV,
+                    }),
                     (function (e) {
                         let {
                             integration: t,
@@ -367,7 +387,9 @@ function L(e) {
                         roleLink: $,
                         onSync: K,
                     }),
-                    (0, i.jsx)(m.cGx, { className: I.W7 }),
+                    (0, i.jsx)(m.cGx, {
+                        className: I.W7,
+                    }),
                     (function (e) {
                         let { integration: t, labelText: n, onBehaviorChange: r, onGracePeriodChange: l } = e;
                         return (0, i.jsxs)(x.A, {
@@ -408,7 +430,9 @@ function L(e) {
                                             .map((e) => ({
                                                 id: "".concat(e),
                                                 value: "".concat(e),
-                                                label: _.intl.formatToPlainString(_.t.eGjmy5, { days: e }),
+                                                label: _.intl.formatToPlainString(_.t.eGjmy5, {
+                                                    days: e,
+                                                }),
                                             })),
                                         onSelectionChange: (e) => l(parseInt(e)),
                                         disabled: t.syncing,
@@ -420,10 +444,14 @@ function L(e) {
                         integration: s,
                         labelText: Q,
                         onBehaviorChange: function (e) {
-                            g.A.updateIntegration({ expireBehavior: e });
+                            g.A.updateIntegration({
+                                expireBehavior: e,
+                            });
                         },
                         onGracePeriodChange: function (e) {
-                            g.A.updateIntegration({ expireGracePeriod: e });
+                            g.A.updateIntegration({
+                                expireGracePeriod: e,
+                            });
                         },
                     }),
                     !H &&
@@ -484,11 +512,15 @@ function L(e) {
                               integration: s,
                               emojis: en,
                               onToggle: function (e) {
-                                  g.A.updateIntegration({ enableEmoticons: e });
+                                  g.A.updateIntegration({
+                                      enableEmoticons: e,
+                                  });
                               },
                           })
                         : null,
-                    (0, i.jsx)(m.cGx, { className: I.Bd }),
+                    (0, i.jsx)(m.cGx, {
+                        className: I.Bd,
+                    }),
                     (0, i.jsx)(x.A, {
                         children: (0, i.jsx)(m.Button, {
                             size: "sm",

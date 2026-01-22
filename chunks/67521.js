@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var i = n(627968);
 n(64700);
 var a = n(397927),
@@ -6,6 +8,7 @@ var a = n(397927),
     r = n(847599),
     o = n(308645),
     s = n(239093);
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -31,6 +34,7 @@ function c(e) {
     }
     return e;
 }
+
 function d() {
     u.success(), u.start_verification_check();
 }
@@ -38,17 +42,32 @@ let u = {
         open(e, t) {
             (0, a.mMO)(
                 async () => {
-                    l.h.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN" });
+                    l.h.dispatch({
+                        type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN",
+                    });
                     let { default: t } = await n.e("9018").then(n.bind(n, 244321));
-                    return (n) => (0, i.jsx)(t, c({ classificationId: e }, n));
+                    return (n) =>
+                        (0, i.jsx)(
+                            t,
+                            c(
+                                {
+                                    classificationId: e,
+                                },
+                                n,
+                            ),
+                        );
                 },
-                { onCloseCallback: t },
+                {
+                    onCloseCallback: t,
+                },
             );
         },
         openV2(e, t) {
             (0, a.mMO)(
                 async () => {
-                    l.h.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN" });
+                    l.h.dispatch({
+                        type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN",
+                    });
                     let { default: t } = await n.e("18128").then(n.bind(n, 767379));
                     return (n) =>
                         (0, i.jsx)(
@@ -63,17 +82,25 @@ let u = {
                             ),
                         );
                 },
-                { onCloseCallback: t },
+                {
+                    onCloseCallback: t,
+                },
             );
         },
         close() {
-            l.h.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_CLOSE" });
+            l.h.dispatch({
+                type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_CLOSE",
+            });
         },
         success() {
-            l.h.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_SUBMIT_SUCCESS" });
+            l.h.dispatch({
+                type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_SUBMIT_SUCCESS",
+            });
         },
         start_verification_check() {
-            l.h.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_START_POLL" }),
+            l.h.dispatch({
+                type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_START_POLL",
+            }),
                 setTimeout(() => (0, o.d)(), s.wQ);
         },
     },

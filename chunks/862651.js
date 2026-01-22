@@ -1,4 +1,7 @@
-n.d(t, { A: () => h }), n(896048);
+n.d(t, {
+    A: () => h,
+}),
+    n(896048);
 var r = n(627968),
     i = n(311907),
     l = n(397927),
@@ -12,6 +15,7 @@ var r = n(627968),
     g = n(127757),
     b = n(700458),
     m = n(985018);
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,6 +41,7 @@ function p(e) {
     }
     return e;
 }
+
 function x(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -55,6 +60,7 @@ function x(e, t) {
         e
     );
 }
+
 function h() {
     let { editStateId: e, guildId: t } = (0, c.O)(),
         [h, j] = o.UN(e, t),
@@ -63,9 +69,11 @@ function h() {
         v = () => y(b.Oi.EMOJIS),
         A = (0, i.bG)([s.A], () => s.A.getGuild(t)),
         E = null != A ? (0, d.A)(A) : void 0;
+
     function N(e) {
         null == h ? j(new Set(e)) : j(new Set([...h, ...e]));
     }
+
     function _(e) {
         let t = new Set(h);
         t.delete(e), j(t);
@@ -73,8 +81,12 @@ function h() {
     let S = (0, a.gN)();
     return (0, r.jsxs)(l.D0$, {
         label: m.intl.string(m.t["D0qeO+"]),
-        description: m.intl.format(m.t.zuwely, { premiumEmojiMaximum: E }),
-        helperText: m.intl.format(m.t.sEkgBk, { handleTransitionToManageEmoji: v }),
+        description: m.intl.format(m.t.zuwely, {
+            premiumEmojiMaximum: E,
+        }),
+        helperText: m.intl.format(m.t.sEkgBk, {
+            handleTransitionToManageEmoji: v,
+        }),
         disabled: S,
         children: [
             (0, r.jsx)(g.d, {
@@ -97,7 +109,11 @@ function h() {
                           });
                 },
             }),
-            null != h && h.size > 0 ? (0, r.jsx)(l.hKd, { size: 8 }) : null,
+            null != h && h.size > 0
+                ? (0, r.jsx)(l.hKd, {
+                      size: 8,
+                  })
+                : null,
             (0, r.jsx)(f.n, {
                 onClick: function () {
                     (0, l.mMO)(async () => {

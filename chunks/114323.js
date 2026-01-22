@@ -29,6 +29,7 @@ n(827669);
 var O = n(73510),
     A = n(985018),
     v = n(31639);
+
 function S(e, t, n) {
     return (
         t in e
@@ -42,6 +43,7 @@ function S(e, t, n) {
         e
     );
 }
+
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -58,13 +60,19 @@ function I(e) {
     }
     return e;
 }
-let T = { results: { entries: [] } };
+let T = {
+    results: {
+        entries: [],
+    },
+};
+
 function C() {
     (0, a.openModalLazy)(async () => {
         let { default: e } = await n.e("76429").then(n.bind(n, 717020));
         return (t) => (0, r.jsx)(e, I({}, t));
     });
 }
+
 function N(e) {
     return "".concat("/").concat(e.displayName);
 }
@@ -202,6 +210,8 @@ let R = {
                     queryLength: null == r ? void 0 : r.length,
                 });
         }
-        return { type: y.kc.COMMAND };
+        return {
+            type: y.kc.COMMAND,
+        };
     },
 };

@@ -1,4 +1,7 @@
-n.d(t, { A: () => m }), n(65821);
+n.d(t, {
+    A: () => m,
+}),
+    n(65821);
 var r = n(627968);
 n(64700);
 var l = n(397927),
@@ -11,6 +14,7 @@ var l = n(397927),
     u = n(179581),
     f = n(652215),
     g = n(985018);
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,9 +40,11 @@ function p(e) {
     }
     return e;
 }
+
 function b(e, t) {
     (0, l.showToast)((0, l.createToast)(e, l.ToastType.FAILURE)), s.A.captureException(t);
 }
+
 function m(e, t, n) {
     if (
         (0, o.A)(null == t ? void 0 : t.getChannelId()) ||

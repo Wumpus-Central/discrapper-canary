@@ -4,6 +4,7 @@ n.d(t, {
     mk: () => l,
 });
 var a = n(73153);
+
 function i(e, t, n) {
     a.h.dispatch({
         type: "CONNECTED_DEVICE_SWITCH",
@@ -12,12 +13,14 @@ function i(e, t, n) {
         location: n,
     });
 }
+
 function l(e) {
     a.h.dispatch({
         type: "CONNECTED_DEVICE_DONT_SWITCH",
         displayName: e,
     });
 }
+
 function r(e) {
     a.h.dispatch({
         type: "CONNECTED_DEVICE_IGNORE",

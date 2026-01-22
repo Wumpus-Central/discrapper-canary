@@ -1,4 +1,6 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var r = n(923457),
     i = n(73153),
     a = n(49229),
@@ -8,6 +10,7 @@ var r = n(923457),
     c = n(994500),
     u = n(623605),
     d = n(652215);
+
 function f(e, t, n) {
     return (
         t in e
@@ -21,6 +24,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,6 +41,7 @@ function p(e) {
     }
     return e;
 }
+
 function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -49,6 +54,7 @@ function _(e, t) {
     }
     return n;
 }
+
 function h(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -60,6 +66,7 @@ function h(e, t) {
         e
     );
 }
+
 function m(e) {
     let { userId: t, applicationId: n, location: r, confirmStrangerRequest: i = !1 } = e;
     return null != n
@@ -70,9 +77,12 @@ function m(e) {
         : a.A.acceptFriendRequest({
               userId: t,
               confirmStrangerRequest: i,
-              context: { location: r },
+              context: {
+                  location: r,
+              },
           });
 }
+
 function g(e) {
     let { userId: t, applicationId: n, location: i, onConfirm: a, onCancel: s } = e,
         d = (0, o.To)(r.p.FRIEND_REQUEST_STRANGER_CONFIRMATION),
@@ -131,6 +141,7 @@ function g(e) {
               null == a || a();
           });
 }
+
 function E(e, t) {
     var n;
     return (null == (n = e.body) ? void 0 : n.code) === d.t02.RELATIONSHIP_INVALID_NO_CONFIRMATION
@@ -142,7 +153,12 @@ function E(e, t) {
           (0, u.B)({
               onConfirm: () => {
                   var e;
-                  m(h(p({}, t), { confirmStrangerRequest: !0 })), null == (e = t.onConfirm) || e.call(t);
+                  m(
+                      h(p({}, t), {
+                          confirmStrangerRequest: !0,
+                      }),
+                  ),
+                      null == (e = t.onConfirm) || e.call(t);
               },
               onCancel: () => {
                   var e;
@@ -166,7 +182,9 @@ let b = {
                   userId: t,
                   applicationId: n,
               })
-            : a.A.removeFriend(t, { location: r });
+            : a.A.removeFriend(t, {
+                  location: r,
+              });
     },
     cancelFriendRequest: function (e) {
         let { userId: t, applicationId: n, location: r } = e;
@@ -175,7 +193,9 @@ let b = {
                   userId: t,
                   applicationId: n,
               })
-            : a.A.cancelFriendRequest(t, { location: r });
+            : a.A.cancelFriendRequest(t, {
+                  location: r,
+              });
     },
     acceptFriendRequest: m,
     maybeConfirmFriendRequestAccept: g,

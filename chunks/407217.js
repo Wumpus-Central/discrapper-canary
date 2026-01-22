@@ -13,6 +13,7 @@ var i = n(397927),
     u = n(652215),
     d = n(985018),
     f = n(698290);
+
 function p(e, t, n) {
     return (
         t in e
@@ -26,6 +27,7 @@ function p(e, t, n) {
         e
     );
 }
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,6 +44,7 @@ function _(e) {
     }
     return e;
 }
+
 function h(e, t) {
     if (null == e) return {};
     var n,
@@ -58,6 +61,7 @@ function h(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function m(e, t) {
     if (null == e) return {};
     var n,
@@ -68,6 +72,7 @@ function m(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function g(e) {
     let { analyticsSource: t, onSubscribeFinish: a } = e,
         o = s.default.getCurrentUser();
@@ -92,6 +97,7 @@ function g(e) {
                 );
         });
 }
+
 function E(e) {
     let { user: t, onClose: n } = e,
         i = h(e, ["user", "onClose"]);

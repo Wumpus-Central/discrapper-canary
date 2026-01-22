@@ -9,6 +9,7 @@ var r = n(627968),
     s = n(397927),
     o = n(297689),
     l = n(861175);
+
 function c(e) {
     let {
             label: t,
@@ -50,6 +51,7 @@ function c(e) {
         ],
     });
 }
+
 function u(e) {
     let { label: t, value: n, color: i = "text-muted", valueColor: o = "text-muted", icon: c, tooltip: u } = e;
     return (0, r.jsxs)("div", {

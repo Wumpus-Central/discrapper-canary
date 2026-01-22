@@ -34,6 +34,7 @@ let p =
     h = new Set(["gameMentionInput", "timestampMentionInput"]),
     m = new Set(["line", "blockQuote"]),
     g = new Set(["applicationCommandOption"]);
+
 function E(e, t, n) {
     let { isInline: r, isVoid: i, onChange: a } = e;
     (e.isVoid = (e) => !!_.has(e.type) || i(e)), (e.isInline = (e) => !!(_.has(e.type) || h.has(e.type)) || r(e));
@@ -53,6 +54,7 @@ function E(e, t, n) {
         e
     );
 }
+
 function b(e, t, n) {
     let r = f.VW.areStylesDisabled(e);
     for (let i of f.VW.blocks(e))
@@ -68,6 +70,7 @@ function b(e, t, n) {
             }
         }
 }
+
 function y(e, t, n, r) {
     var i;
     let a = "line" === t[0].type && (null == (i = t[0].codeBlockState) ? void 0 : i.isInCodeBlock) === !0,
@@ -75,6 +78,7 @@ function y(e, t, n, r) {
     O(e, t, a, s) && ((t = f.cv.updateElement(e, t)), (s = f.cv.markdown(t[0], n))),
         a || (A(e, t, r, s) && ((t = f.cv.updateElement(e, t)), (s = f.cv.markdown(t[0], n))), v(e, t, n, r, s));
 }
+
 function O(e, t, n, r) {
     let [i, a] = t,
         s = !1;
@@ -126,6 +130,7 @@ function O(e, t, n, r) {
     }
     return s;
 }
+
 function A(e, t, n, r) {
     let i = t[1],
         a = !1,
@@ -145,7 +150,11 @@ function A(e, t, n, r) {
                         surrogate: u.data.surrogate,
                         jumboable: !0 === u.data.jumboable,
                     },
-                    children: [{ text: "" }],
+                    children: [
+                        {
+                            text: "",
+                        },
+                    ],
                 };
                 break;
             case "customEmoji":
@@ -157,35 +166,55 @@ function A(e, t, n, r) {
                         animated: u.data.animated,
                         jumboable: !0 === u.data.jumboable,
                     },
-                    children: [{ text: "" }],
+                    children: [
+                        {
+                            text: "",
+                        },
+                    ],
                 };
                 break;
             case "textMention":
                 l = {
                     type: "textMention",
                     name: u.data.text,
-                    children: [{ text: "" }],
+                    children: [
+                        {
+                            text: "",
+                        },
+                    ],
                 };
                 break;
             case "mention":
                 l = {
                     type: "userMention",
                     userId: u.data.id,
-                    children: [{ text: "" }],
+                    children: [
+                        {
+                            text: "",
+                        },
+                    ],
                 };
                 break;
             case "roleMention":
                 l = {
                     type: "roleMention",
                     roleId: u.data.id,
-                    children: [{ text: "" }],
+                    children: [
+                        {
+                            text: "",
+                        },
+                    ],
                 };
                 break;
             case "channelMention":
                 l = {
                     type: "channelMention",
                     channelId: u.data.id,
-                    children: [{ text: "" }],
+                    children: [
+                        {
+                            text: "",
+                        },
+                    ],
                 };
                 break;
             case "staticRouteLink":
@@ -193,7 +222,11 @@ function A(e, t, n, r) {
                     type: "staticRouteLink",
                     id: u.data.id,
                     itemId: u.data.itemId,
-                    children: [{ text: "" }],
+                    children: [
+                        {
+                            text: "",
+                        },
+                    ],
                 };
                 break;
             case "soundboard":
@@ -201,27 +234,43 @@ function A(e, t, n, r) {
                     type: "soundboard",
                     guildId: u.data.guildId,
                     soundId: u.data.soundId,
-                    children: [{ text: "" }],
+                    children: [
+                        {
+                            text: "",
+                        },
+                    ],
                 };
                 break;
             case "timestamp":
                 l = {
                     type: "timestamp",
                     parsed: u.data,
-                    children: [{ text: "" }],
+                    children: [
+                        {
+                            text: "",
+                        },
+                    ],
                 };
                 break;
             case "gameMention":
                 l = {
                     type: "gameMention",
                     applicationId: u.data.id,
-                    children: [{ text: "" }],
+                    children: [
+                        {
+                            text: "",
+                        },
+                    ],
                 };
                 break;
             case "timestampMentionInput":
                 l = {
                     type: "timestampMentionInput",
-                    children: [{ text: u.data.content }],
+                    children: [
+                        {
+                            text: u.data.content,
+                        },
+                    ],
                 };
                 break;
             default:
@@ -238,6 +287,7 @@ function A(e, t, n, r) {
     }
     return a;
 }
+
 function v(e, t, n, r, i) {
     let [a, s] = t,
         l = !1;
@@ -277,6 +327,7 @@ function v(e, t, n, r, i) {
     }
     return l;
 }
+
 function S(e, t, n, r, a) {
     let [s, o] = t,
         l = {
@@ -294,6 +345,7 @@ function S(e, t, n, r, a) {
             focus: c,
         });
 }
+
 function I(e, t, n, r) {
     let i = 0;
     for (let [r, a] of f.VW.nodes(e, {
@@ -312,6 +364,7 @@ function I(e, t, n, r) {
     }
     return !1;
 }
+
 function T(e, t, n) {
     if ("applicationCommandOption" !== t.type) return !0;
     switch (t.optionType) {

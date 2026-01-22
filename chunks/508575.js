@@ -1,10 +1,15 @@
-n.d(t, { A: () => m }), n(446912), n(896048);
+n.d(t, {
+    A: () => m,
+}),
+    n(446912),
+    n(896048);
 var a = n(627968),
     l = n(412703),
     i = n(843282),
     r = n(397927),
     s = n(927813),
     o = n(93587);
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -30,6 +35,7 @@ function c(e) {
     }
     return e;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -84,8 +90,20 @@ let u = [
                     className: o.Z,
                     placeholder: "Select Task Preset",
                     options: u,
-                    renderOptionValue: (e) => e.map((e) => (0, a.jsx)("div", { children: e.label }, e.value)),
-                    renderOptionLabel: (e) => (0, a.jsx)("div", { children: e.label }),
+                    renderOptionValue: (e) =>
+                        e.map((e) =>
+                            (0, a.jsx)(
+                                "div",
+                                {
+                                    children: e.label,
+                                },
+                                e.value,
+                            ),
+                        ),
+                    renderOptionLabel: (e) =>
+                        (0, a.jsx)("div", {
+                            children: e.label,
+                        }),
                     isSelected: (e) => {
                         var t;
                         let n, a, i, r, s;
@@ -150,8 +168,14 @@ let u = [
                                             n[l.n.WATCH_VIDEO] = {
                                                 type: l.n.WATCH_VIDEO,
                                                 target: t,
-                                                assets: { video: { url: "" } },
-                                                messages: { videoTitle: "" },
+                                                assets: {
+                                                    video: {
+                                                        url: "",
+                                                    },
+                                                },
+                                                messages: {
+                                                    videoTitle: "",
+                                                },
                                             };
                                             break;
                                         case 5:
@@ -178,10 +202,19 @@ let u = [
                         let a = Object.fromEntries(
                             Object.entries(m.tasks).map((e) => {
                                 let [t, a] = e;
-                                return [t, d(c({}, a), { target: n })];
+                                return [
+                                    t,
+                                    d(c({}, a), {
+                                        target: n,
+                                    }),
+                                ];
                             }),
                         );
-                        t(d(c({}, m), { tasks: a }));
+                        t(
+                            d(c({}, m), {
+                                tasks: a,
+                            }),
+                        );
                     },
                 }),
             ],

@@ -1,5 +1,9 @@
 let r, i, l;
-n.d(t, { A: () => P }), n(321073), n(896048);
+n.d(t, {
+    A: () => P,
+}),
+    n(321073),
+    n(896048);
 var a,
     s = n(735438),
     o = n.n(s),
@@ -11,6 +15,7 @@ var a,
     h = n(576705),
     A = n(718116),
     g = n(652215);
+
 function m(e, t, n) {
     return (
         t in e
@@ -24,6 +29,7 @@ function m(e, t, n) {
         e
     );
 }
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -47,6 +53,7 @@ let _ = [],
     I = {},
     v = !1,
     S = null;
+
 function C() {
     if (
         ((r = null != (i = p.A.getChannel()) ? f.A.getGuild(i.guild_id) : null),
@@ -61,6 +68,7 @@ function C() {
 let N = o().debounce(() => {
     v && ((null == E || o().isEqual(E, T(E.id))) && (v = !1), v || x.emitChange());
 }, 500);
+
 function T(e) {
     return _.find((t) => {
         let { id: n } = t;

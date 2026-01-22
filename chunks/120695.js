@@ -6,5 +6,7 @@ r(
         proto: !0,
         forced: Function.bind !== a,
     },
-    { bind: a },
+    {
+        bind: a,
+    },
 );

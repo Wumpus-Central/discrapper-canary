@@ -1,7 +1,11 @@
-n.d(t, { A: () => O }), n(896048), n(264879);
+n.d(t, {
+    A: () => O,
+}),
+    n(896048),
+    n(264879);
 var r = n(627968),
     i = n(64700),
-    a = n(432022),
+    a = n(108531),
     s = n(311907),
     o = n(397927),
     l = n(775602),
@@ -16,12 +20,14 @@ let h = 200,
     g = 36,
     E = 660,
     b = [f.TVA.NONE, f.TVA.TIER_1, f.TVA.TIER_2, f.TVA.TIER_3];
+
 function y(e) {
     let { fillFactor: t, guildBoostCount: n, premiumTier: r, isRevealed: a, useReducedMotion: s } = e,
         [l, c] = i.useState(s ? r : -1),
         [u, p] = i.useState(0 === n),
         [_, m] = i.useState(!1),
         b = i.useRef(!0);
+
     function y(e) {
         let { widthFactor: t } = e;
         for (let [e, n] of Object.entries(d.p).reverse())
@@ -31,8 +37,12 @@ function y(e) {
             }
     }
     let { widthFactor: O } = (0, o.zhh)({
-        from: { widthFactor: 0 },
-        to: { widthFactor: a ? t : 0 },
+        from: {
+            widthFactor: 0,
+        },
+        to: {
+            widthFactor: a ? t : 0,
+        },
         config: {
             tension: 15,
             friction: 7,
@@ -67,6 +77,7 @@ function y(e) {
         }
     );
 }
+
 function O(e) {
     let { guild: t } = e,
         n = (0, s.bG)([l.A], () => l.A.useReducedMotion),
@@ -103,10 +114,14 @@ function O(e) {
             "aria-valuenow": S,
             "aria-valuetext":
                 t.premiumTier === f.TVA.NONE
-                    ? p.intl.formatToPlainString(p.t.Ukqm9v, { numSubscriptionsApplied: S })
+                    ? p.intl.formatToPlainString(p.t.Ukqm9v, {
+                          numSubscriptionsApplied: S,
+                      })
                     : p.intl.formatToPlainString(p.t.qWunaU, {
                           numSubscriptionsApplied: S,
-                          tierName: (0, c.gb)(t.premiumTier, { useLevels: !1 }),
+                          tierName: (0, c.gb)(t.premiumTier, {
+                              useLevels: !1,
+                          }),
                       }),
             children: [
                 (0, r.jsxs)("div", {
@@ -121,7 +136,9 @@ function O(e) {
                                 }).to((e) => "".concat(e, "%")),
                             },
                         }),
-                        (0, r.jsx)("div", { className: _.mv }),
+                        (0, r.jsx)("div", {
+                            className: _.mv,
+                        }),
                     ],
                 }),
                 b.map((e) =>

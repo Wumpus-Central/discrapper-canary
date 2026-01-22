@@ -7,14 +7,17 @@ var n =
     s = ["short", "short", "short", "long", "narrow"],
     o = ["weekday", "era", "year", "month", "day"],
     l = ["hour", "minute", "second", "timeZoneName"];
+
 function c(e) {
     for (var t = 0; t < l.length; t += 1) if (e.hasOwnProperty(l[t])) return !1;
     return !0;
 }
+
 function u(e) {
     for (var t = 0; t < o.length; t += 1) if (e.hasOwnProperty(o[t])) return !1;
     return !0;
 }
+
 function d(e) {
     if (!r.test(e)) {
         var t = {};
@@ -63,6 +66,7 @@ function d(e) {
         );
     }
 }
+
 function f(e) {
     var t,
         n,
@@ -76,6 +80,7 @@ function f(e) {
         p = [],
         _ = [],
         h = [];
+
     function m(e, t) {
         var n = Array((e.match(/M/g) || []).length + 1),
             r = Array((e.match(/E/g) || []).length + 1);

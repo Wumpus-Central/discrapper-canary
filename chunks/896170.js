@@ -1,4 +1,6 @@
-n.d(t, { Ht: () => l });
+n.d(t, {
+    Ht: () => l,
+});
 var r = n(1139),
     i = n(404555),
     a = n.n(i),
@@ -16,6 +18,7 @@ l.rankings = s;
 var o = function (e, t) {
     return String(e.rankedValue).localeCompare(String(t.rankedValue));
 };
+
 function l(e, t, n) {
     void 0 === n && (n = {});
     var i = n,
@@ -36,6 +39,7 @@ function l(e, t, n) {
     )(e.reduce(h, [])).map(function (e) {
         return e.item;
     });
+
     function h(e, i, s) {
         var o = c(i, a, t, n),
             l = o.rank,
@@ -52,6 +56,7 @@ function l(e, t, n) {
         );
     }
 }
+
 function c(e, t, n, r) {
     if (!t) {
         var i = e;
@@ -94,6 +99,7 @@ function c(e, t, n, r) {
         },
     );
 }
+
 function u(e, t, n) {
     return ((e = _(e, n)), (t = _(t, n)).length > e.length)
         ? s.NO_MATCH
@@ -113,6 +119,7 @@ function u(e, t, n) {
                       ? s.ACRONYM
                       : f(e, t);
 }
+
 function d(e) {
     var t = "";
     return (
@@ -124,13 +131,16 @@ function d(e) {
         t
     );
 }
+
 function f(e, t) {
     var n = 0,
         r = 0;
+
     function i(e, t, r) {
         for (var i = r, a = t.length; i < a; i++) if (t[i] === e) return (n += 1), i + 1;
         return -1;
     }
+
     function a(e) {
         var r = 1 / e,
             i = n / t.length;
@@ -142,6 +152,7 @@ function f(e, t) {
     for (var l = 1, c = t.length; l < c; l++) if (!((r = i(t[l], e, r)) > -1)) return s.NO_MATCH;
     return a(r - o);
 }
+
 function p(e, t, n) {
     var r = -1,
         i = 1,
@@ -151,9 +162,11 @@ function p(e, t, n) {
         l = t.keyIndex;
     return a !== o ? (a > o ? r : i) : s === l ? n(e, t) : s < l ? r : i;
 }
+
 function _(e, t) {
     return (e = "" + e), t.keepDiacritics || (e = a()(e)), e;
 }
+
 function h(e, t) {
     var n;
     if (("object" == typeof t && (t = t.key), "function" == typeof t)) n = t(e);
@@ -165,6 +178,7 @@ function h(e, t) {
     }
     return null == n ? [] : Array.isArray(n) ? n : [String(n)];
 }
+
 function m(e, t) {
     for (var n = e.split("."), r = [t], i = 0, a = n.length; i < a; i++) {
         for (var s = n[i], o = [], l = 0, c = r.length; l < c; l++) {
@@ -183,6 +197,7 @@ function m(e, t) {
     }
     return r;
 }
+
 function g(e, t) {
     for (var n = [], r = 0, i = t.length; r < i; r++)
         for (var a = t[r], s = b(a), o = h(e, a), l = 0, c = o.length; l < c; l++)
@@ -196,6 +211,7 @@ var E = {
     maxRanking: 1 / 0,
     minRanking: -1 / 0,
 };
+
 function b(e) {
     return "string" == typeof e ? E : (0, r.A)({}, E, e);
 }

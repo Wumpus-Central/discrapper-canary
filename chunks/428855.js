@@ -1,9 +1,12 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
     a = n(880652),
     s = n(474071);
+
 function o(e) {
     let { question: t, questionId: n, value: o, onValueChange: l } = e,
         c = t.Selector !== a.BO.SINGLE_LINE;

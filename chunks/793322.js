@@ -39,6 +39,7 @@ var r = n(397927),
     C = n(652215),
     N = n(746080),
     R = n(758836);
+
 function w(e, t, n) {
     return (
         t in e
@@ -52,6 +53,7 @@ function w(e, t, n) {
         e
     );
 }
+
 function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -85,11 +87,13 @@ let x = Object.freeze({
             .concat(d.AT.GUILD, "|\\")
             .concat(d.AT.APPLICATION),
     );
+
 function j(e) {
     var t;
     let n = null != (t = x[e.charAt(0)]) ? t : null;
     return [e.replace(L, ""), n];
 }
+
 function M(e) {
     let [t, n] = j(e);
     return {
@@ -97,6 +101,7 @@ function M(e) {
         queryMode: n,
     };
 }
+
 function k(e) {
     let t;
     if (T.A.isOpen()) return;
@@ -113,6 +118,7 @@ function k(e) {
         current_channel_type: t,
     });
 }
+
 function U(e, t) {
     let { results: n, queryMode: r, query: i, maxQueryLength: a } = T.A.getProps(),
         s = A.A.getGuildId(),
@@ -167,44 +173,74 @@ function U(e, t) {
     }
     v.default.track(e, h);
 }
+
 function G() {
-    i.h.dispatch({ type: "QUICKSWITCHER_HIDE" });
+    i.h.dispatch({
+        type: "QUICKSWITCHER_HIDE",
+    });
 }
+
 function V() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "KEYBIND",
         t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-    k(e), i.h.dispatch(P({ type: "QUICKSWITCHER_SHOW" }, M(t)));
+    k(e),
+        i.h.dispatch(
+            P(
+                {
+                    type: "QUICKSWITCHER_SHOW",
+                },
+                M(t),
+            ),
+        );
 }
+
 function F() {
     U(C.HAw.QUICKSWITCHER_CLOSED), G();
 }
+
 function B() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "KEYBIND";
     T.A.isOpen() ? F() : V(e);
 }
+
 function H(e) {
-    i.h.dispatch(P({ type: "QUICKSWITCHER_SEARCH" }, M(e)));
+    i.h.dispatch(
+        P(
+            {
+                type: "QUICKSWITCHER_SEARCH",
+            },
+            M(e),
+        ),
+    );
 }
+
 function Y(e) {
     i.h.dispatch({
         type: "QUICKSWITCHER_SELECT",
         selectedIndex: e,
     });
 }
+
 function W(e) {
     let t,
         E = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     G(), (0, r.s7G)(), U(C.HAw.QUICKSWITCHER_RESULT_SELECTED, e);
     let { type: O, record: A } = e,
-        v = { page: C.liQ.QUICK_SWITCHER };
+        v = {
+            page: C.liQ.QUICK_SWITCHER,
+        };
     switch (O) {
         case d.rD.GUILD:
-            (0, m.u)(A.id, { navigationReplace: !0 });
+            (0, m.u)(A.id, {
+                navigationReplace: !0,
+            });
             break;
         case d.rD.TEXT_CHANNEL:
             null != (t = b.A.getChannel(A.id)) &&
                 (0, h.iN)(t.id, {
-                    state: { analyticsSource: v },
+                    state: {
+                        analyticsSource: v,
+                    },
                     navigationReplace: !0,
                 });
             break;
@@ -212,7 +248,9 @@ function W(e) {
             null != (t = b.A.getChannel(A.id)) &&
                 (E ? s.A.updateChatOpen(A.id, !0) : c.default.selectVoiceChannel(A.id),
                 (0, h.iN)(t.id, {
-                    state: { analyticsSource: v },
+                    state: {
+                        analyticsSource: v,
+                    },
                     navigationReplace: !0,
                 }));
             break;
@@ -224,7 +262,10 @@ function W(e) {
                 o.A.channelListScrollTo(C.ME, b.A.getDMFromUserId(A.id));
             break;
         case d.rD.GROUP_DM:
-            (0, h.iN)(A.id, { navigationReplace: !0 }), o.A.channelListScrollTo(C.ME, A.id);
+            (0, h.iN)(A.id, {
+                navigationReplace: !0,
+            }),
+                o.A.channelListScrollTo(C.ME, A.id);
             break;
         case d.rD.APPLICATION:
             let I = y.A.getActiveLibraryApplication(A.id);
@@ -236,7 +277,9 @@ function W(e) {
             });
             break;
         case d.rD.LINK:
-            (0, _.A)(A.path, { navigationReplace: !0 });
+            (0, _.A)(A.path, {
+                navigationReplace: !0,
+            });
             break;
         case d.rD.IN_APP_NAVIGATION:
             if (e.record.type === f.t1.SETTINGS) {
@@ -267,7 +310,9 @@ function W(e) {
                           analyticsLocations: [u.A.QUICK_SWITCHER],
                           analyticsSource: u.A.QUICK_SWITCHER,
                       })
-                    : (0, _.A)(A.path, { navigationReplace: !0 });
+                    : (0, _.A)(A.path, {
+                          navigationReplace: !0,
+                      });
     }
     i.h.dispatch({
         type: "QUICKSWITCHER_SWITCH_TO",

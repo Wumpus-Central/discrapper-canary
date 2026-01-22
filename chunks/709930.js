@@ -2,6 +2,7 @@ var r = n(626800),
     i = n(133491),
     a = n(356681),
     s = n(634587);
+
 function o(e) {
     return e.call.bind(e);
 }
@@ -13,6 +14,7 @@ var l = "u" > typeof BigInt,
     p = o(Boolean.prototype.valueOf);
 if (l) var _ = o(BigInt.prototype.valueOf);
 if (c) var h = o(Symbol.prototype.valueOf);
+
 function m(e, t) {
     if ("object" != typeof e) return !1;
     try {
@@ -21,27 +23,35 @@ function m(e, t) {
         return !1;
     }
 }
+
 function g(e) {
     return "[object Map]" === u(e);
 }
+
 function E(e) {
     return "[object Set]" === u(e);
 }
+
 function b(e) {
     return "[object WeakMap]" === u(e);
 }
+
 function y(e) {
     return "[object WeakSet]" === u(e);
 }
+
 function O(e) {
     return "[object ArrayBuffer]" === u(e);
 }
+
 function A(e) {
     return !("u" < typeof ArrayBuffer) && (O.working ? O(e) : e instanceof ArrayBuffer);
 }
+
 function v(e) {
     return "[object DataView]" === u(e);
 }
+
 function S(e) {
     return !("u" < typeof DataView) && (v.working ? v(e) : e instanceof DataView);
 }
@@ -111,24 +121,31 @@ function S(e) {
     (v.working = "u" > typeof ArrayBuffer && "u" > typeof DataView && v(new DataView(new ArrayBuffer(1), 0, 1))),
     (t.isDataView = S);
 var I = "u" > typeof SharedArrayBuffer ? SharedArrayBuffer : void 0;
+
 function T(e) {
     return "[object SharedArrayBuffer]" === u(e);
 }
+
 function C(e) {
     return void 0 !== I && (void 0 === T.working && (T.working = T(new I())), T.working ? T(e) : e instanceof I);
 }
+
 function N(e) {
     return m(e, d);
 }
+
 function R(e) {
     return m(e, f);
 }
+
 function w(e) {
     return m(e, p);
 }
+
 function P(e) {
     return l && m(e, _);
 }
+
 function D(e) {
     return c && m(e, h);
 }

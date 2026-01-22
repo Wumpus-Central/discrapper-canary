@@ -1,5 +1,9 @@
 let n;
-t.d(i, { A: () => V }), t(896048), t(733351);
+t.d(i, {
+    A: () => V,
+}),
+    t(896048),
+    t(733351);
 var l,
     r = t(735438),
     s = t.n(r),
@@ -14,6 +18,7 @@ var l,
     _ = t(716610),
     S = t(652215),
     A = t(985018);
+
 function g(e, i, t) {
     return (
         i in e
@@ -27,6 +32,7 @@ function g(e, i, t) {
         e
     );
 }
+
 function h(e) {
     for (var i = 1; i < arguments.length; i++) {
         var t = null != arguments[i] ? arguments[i] : {},
@@ -43,6 +49,7 @@ function h(e) {
     }
     return e;
 }
+
 function T(e, i) {
     return (
         (i = null != i ? i : {}),
@@ -68,17 +75,20 @@ let m = {
         isAgeRestrictedDirty: !1,
     },
     v = m;
+
 function y() {
     let e = E.A.getGuild();
     if (null == e) return;
     let i = f.Ay.getDiscoveryChecklist(e.id);
     if (null != i) return (0, _.l)(e, i);
 }
+
 function p() {
     var e;
     let i = E.A.getGuildId();
     return null == i ? null : null == (e = o.A.get(i)) ? void 0 : e.formFields;
 }
+
 function C() {
     let e = p();
     if (null == e) return;
@@ -95,6 +105,7 @@ function C() {
               value: e,
           }));
 }
+
 function D() {
     let e = p();
     if (null == e) return;
@@ -109,6 +120,7 @@ function D() {
     }
     return [...e];
 }
+
 function N(e) {
     return e.features.has(S.GuildFeatures.DISCOVERABLE)
         ? I.J.DISCOVERABLE
@@ -117,6 +129,7 @@ function N(e) {
           ? I.J.APPLY
           : I.J.INVITE;
 }
+
 function O(e, i) {
     let t = e.features.has(S.GuildFeatures.MEMBER_VERIFICATION_GATE_ENABLED),
         n = e.ownerConfiguredContentLevel === S.ftr.AGE_RESTRICTED;
@@ -144,6 +157,7 @@ function O(e, i) {
             };
     }
 }
+
 function R(e, i) {
     var t, n, l, r;
     let { requireTerms: u, termRules: a } = i;
@@ -158,6 +172,7 @@ function R(e, i) {
         E = null != (l = null == a ? void 0 : a.map((e) => e.value.trim()).filter((e) => "" !== e)) ? l : [];
     return !s().isEqual(c, E);
 }
+
 function L() {
     let e = E.A.getGuild();
     if (null == e || null == n) {
@@ -202,11 +217,20 @@ function L() {
             };
     }
 }
+
 function b() {
     if (null == E.A.getGuildId() || null == n) return !1;
-    (n = n.joinType === I.J.APPLY ? T(h({}, n), { pendingVerificationFields: D() }) : T(h({}, n), { termRules: C() })),
+    (n =
+        n.joinType === I.J.APPLY
+            ? T(h({}, n), {
+                  pendingVerificationFields: D(),
+              })
+            : T(h({}, n), {
+                  termRules: C(),
+              })),
         L();
 }
+
 function P(e) {
     let { section: i, subsection: t } = e;
     if (i !== S.BEX.ACCESS) return j();
@@ -215,12 +239,17 @@ function P(e) {
     let r = t === S.nd0.ACCESS_DISCOVERABLE && l.features.has(S.GuildFeatures.COMMUNITY) ? I.J.DISCOVERABLE : N(l);
     (n = O(l, r)), L();
 }
+
 function j() {
     (n = void 0), (v = m);
 }
+
 function G() {
     if ((null == n ? void 0 : n.joinType) !== I.J.DISCOVERABLE) return !1;
-    (n = T(h({}, n), { settingsView: y() })), L();
+    (n = T(h({}, n), {
+        settingsView: y(),
+    })),
+        L();
 }
 class F extends (l = u.Ay.Store) {
     initialize() {
@@ -257,7 +286,10 @@ let V = new F(a.h, {
     GUILD_SETTINGS_JOIN_RULES_APPLY_SET_PENDING_FORM_FIELDS: function (e) {
         let { guildId: i, formFields: t } = e;
         if (i !== E.A.getGuildId() || (null == n ? void 0 : n.joinType) !== I.J.APPLY) return !1;
-        (n = T(h({}, n), { pendingVerificationFields: t })), L();
+        (n = T(h({}, n), {
+            pendingVerificationFields: t,
+        })),
+            L();
     },
     GUILD_SETTINGS_JOIN_RULES_SET_SELECTED_TYPE: function (e) {
         let { guildId: i, joinType: t } = e,
@@ -269,7 +301,10 @@ let V = new F(a.h, {
         let { guildId: i, isAgeRestricted: t } = e,
             l = E.A.getGuild();
         if (i !== (null == l ? void 0 : l.id)) return !1;
-        (n = T(h({}, null != n ? n : O(l, N(l))), { isAgeRestricted: t })), L();
+        (n = T(h({}, null != n ? n : O(l, N(l))), {
+            isAgeRestricted: t,
+        })),
+            L();
     },
     MEMBER_VERIFICATION_FORM_UPDATE: b,
     MEMBER_VERIFICATION_FORM_FETCH_FAIL: b,

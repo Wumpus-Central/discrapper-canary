@@ -8,4 +8,6 @@ function r() {
               .join(" ")
         : navigator.userAgent;
 }
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});

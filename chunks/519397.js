@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -9,6 +11,7 @@ var r = n(627968),
     u = n(994500),
     d = n(838541),
     f = n(679740);
+
 function p(e) {
     let { message: t, channel: n } = e,
         { isBlocked: l, isIgnored: d } = (0, a.cf)(
@@ -19,10 +22,20 @@ function p(e) {
             }),
             [t],
         ),
-        p = i.useMemo(() => ({ [n.guild_id]: [t.author.id] }), [n.guild_id, t.author.id]);
+        p = i.useMemo(
+            () => ({
+                [n.guild_id]: [t.author.id],
+            }),
+            [n.guild_id, t.author.id],
+        );
     (0, s.E)(p, "ThreadMessageAccessoryMessage");
     let h = i.useMemo(
-        () => (null != t.content && "" !== t.content ? (0, o.Ay)(t, { formatInline: !0 }).content : null),
+        () =>
+            null != t.content && "" !== t.content
+                ? (0, o.Ay)(t, {
+                      formatInline: !0,
+                  }).content
+                : null,
         [t],
     );
     return (0, r.jsxs)("div", {
@@ -45,6 +58,7 @@ function p(e) {
         ],
     });
 }
+
 function _(e, t, n, i) {
     let {
         contentPlaceholder: a,

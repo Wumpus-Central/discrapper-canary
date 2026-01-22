@@ -1,4 +1,9 @@
-n.d(e, { default: () => m }), n(896048), n(733351), n(321073);
+n.d(e, {
+    default: () => m,
+}),
+    n(896048),
+    n(733351),
+    n(321073);
 var l = n(627968),
     i = n(64700),
     r = n(503698),
@@ -16,6 +21,7 @@ var l = n(627968),
     f = n(641131),
     E = n(985018),
     p = n(533503);
+
 function h() {
     return [
         {
@@ -57,6 +63,7 @@ function h() {
 }
 let S = h()[1].value,
     M = h()[0].value;
+
 function m(t) {
     let e,
         {
@@ -134,10 +141,14 @@ function m(t) {
         ],
         X = (() => {
             if (null != C && null != m)
-                return E.intl.formatToPlainString(E.t.HVJexf, { count: null == m ? void 0 : m.size });
+                return E.intl.formatToPlainString(E.t.HVJexf, {
+                    count: null == m ? void 0 : m.size,
+                });
             if (null == r) return "";
             let t = _.Ay.getName(n, null, r);
-            return E.intl.formatToPlainString(null != j ? E.t.WDR8Xd : E.t.jeKpok, { username: "@".concat(t) });
+            return E.intl.formatToPlainString(null != j ? E.t.WDR8Xd : E.t.jeKpok, {
+                username: "@".concat(t),
+            });
         })(),
         z = null == j ? null : E.intl.string(E.t.pQjhIK);
     return (0, l.jsx)(u.Modal, {
@@ -213,7 +224,9 @@ function m(t) {
                             onChange: V,
                         }),
                         (0, l.jsx)("div", {
-                            className: a()(p.Ar, { [p.R]: "other" !== D }),
+                            className: a()(p.Ar, {
+                                [p.R]: "other" !== D,
+                            }),
                             children: (0, l.jsx)(s.fs1, {
                                 maxLength: v.hlA,
                                 onChange: W,

@@ -1,4 +1,7 @@
-n.d(e, { default: () => p }), n(896048);
+n.d(e, {
+    default: () => p,
+}),
+    n(896048);
 var i = n(627968),
     a = n(64700),
     l = n(158954),
@@ -14,6 +17,7 @@ var i = n(627968),
     N = n(652215),
     O = n(985018),
     I = n(508025);
+
 function p(t) {
     let { transitionState: e, application: n, storeListing: p, subscription: S, guild: E, onClose: b } = t,
         { analyticsLocations: T } = (0, o.Ay)(c.A.APPLICATION_SUBSCRIPTION_CANCELLATION_MODAL),
@@ -84,7 +88,9 @@ function p(t) {
                       ));
         };
     a.useEffect(() => {
-        _.default.track(N.HAw.CANCELLATION_FLOW_STARTED, { location_stack: T });
+        _.default.track(N.HAw.CANCELLATION_FLOW_STARTED, {
+            location_stack: T,
+        });
     }, [T]);
     let L = (0, C.bg)(p.skuFlags);
     return (0, i.jsx)(l.ExpressiveModal, {

@@ -1,4 +1,8 @@
-i.d(t, { Ay: () => V }), i(321073), i(896048);
+i.d(t, {
+    Ay: () => V,
+}),
+    i(321073),
+    i(896048);
 var n,
     s = i(735438),
     r = i.n(s),
@@ -19,6 +23,7 @@ var n,
     O = i(287809),
     I = i(652215),
     v = i(788868);
+
 function E(e, t, i) {
     return (
         t in e
@@ -32,6 +37,7 @@ function E(e, t, i) {
         e
     );
 }
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var i = null != arguments[t] ? arguments[t] : {},
@@ -48,6 +54,7 @@ function b(e) {
     }
     return e;
 }
+
 function w(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -66,6 +73,7 @@ function w(e, t) {
         e
     );
 }
+
 function P(e) {
     let t = O.default.getUser(e);
     return {
@@ -73,6 +81,7 @@ function P(e) {
         usernameLower: null != t ? t.username.toLowerCase() : null,
     };
 }
+
 function D(e) {
     return {
         status: f.A.getStatus(e),
@@ -81,6 +90,7 @@ function D(e) {
         applicationStream: A.A.getAnyStreamForUser(e),
     };
 }
+
 function S(e) {
     let t = [];
     return (
@@ -307,18 +317,22 @@ let L = !0,
     _ = new j(),
     R = !0,
     M = !1;
+
 function F() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     L && (e || (k !== I.m3P.ONLINE && k !== I.m3P.ADD_FRIEND)) && !G && ((L = !1), (G = !0), l.A.fetchRelationships());
 }
+
 function x() {
     if (((L = !0), R ? (G = !1) : F(), (_ = _.reset()), M)) return;
     let e = _.getRelationshipCounts();
     k = 0 === e[I.eA$.FRIEND] ? (0 !== e[I.eA$.PENDING_INCOMING] ? I.m3P.PENDING : I.m3P.ADD_FRIEND) : I.m3P.ONLINE;
 }
+
 function T() {
     _ = R ? new j() : _.reset();
 }
+
 function U(e) {
     return function () {
         return !R && !!_.update(e) && ((_ = _.clone()), !0);

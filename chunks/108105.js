@@ -1,4 +1,9 @@
-l.d(t, { default: () => X }), l(896048), l(321073), l(228524);
+l.d(t, {
+    default: () => X,
+}),
+    l(896048),
+    l(321073),
+    l(228524);
 var n = l(627968),
     a = l(64700),
     r = l(310784),
@@ -34,6 +39,7 @@ var n = l(627968),
     L = l(818348),
     D = l(985018),
     w = l(88465);
+
 function M(e) {
     var t, l, r, s;
     let { sku: c, guildId: i, shouldShowShopLink: o, onClose: d, trackPDPClick: b } = e,
@@ -42,23 +48,37 @@ function M(e) {
                 (b(U.Jq.BUY_BUTTON),
                 (0, T.a)(
                     c,
-                    { isGift: !1 },
-                    { analyticsLocations: [h.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_PURCHASE_BUTTON] },
+                    {
+                        isGift: !1,
+                    },
+                    {
+                        analyticsLocations: [h.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_PURCHASE_BUTTON],
+                    },
                 ));
         }, [c, b]),
         p = a.useCallback(() => {
-            (0, S.X)({ guildId: i });
+            (0, S.X)({
+                guildId: i,
+            });
         }, [i]),
         m = a.useCallback(() => {
-            b(U.Jq.VISIT_SHOP), (0, S.default)({ guildId: i }), d();
+            b(U.Jq.VISIT_SHOP),
+                (0, S.default)({
+                    guildId: i,
+                }),
+                d();
         }, [i, d, b]),
         g = a.useCallback(() => {
             null != c &&
                 (b(U.Jq.GIFT_BUTTON),
                 (0, T.a)(
                     c,
-                    { isGift: !0 },
-                    { analyticsLocations: [h.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_GIFT_BUTTON] },
+                    {
+                        isGift: !0,
+                    },
+                    {
+                        analyticsLocations: [h.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_GIFT_BUTTON],
+                    },
                 ));
         }, [c, b]);
     if (null == c) return null;
@@ -126,6 +146,7 @@ function M(e) {
         ],
     });
 }
+
 function Y(e) {
     let { sku: t, applicationId: l, storefront: r, onSelectedCarouselItemChange: s, isMuted: c, trackPDPClick: i } = e,
         [o, u] = a.useState([]),
@@ -191,6 +212,7 @@ function Y(e) {
               onTrackClick: i,
           });
 }
+
 function B(e) {
     let { selectedCarouselItem: t, applicationId: l } = e;
     if (null == t) return null;
@@ -216,6 +238,7 @@ function B(e) {
         ],
     });
 }
+
 function H(e) {
     let { onClick: t, children: l, ariaLabel: a } = e;
     return (0, n.jsx)(u.DUT, {
@@ -226,6 +249,7 @@ function H(e) {
         children: l,
     });
 }
+
 function X(e) {
     var t;
     let {
@@ -330,7 +354,9 @@ function X(e) {
                 children: [
                     (0, n.jsxs)("div", {
                         className: w.op,
-                        style: { background: $ },
+                        style: {
+                            background: $,
+                        },
                         children: [
                             (0, n.jsx)("div", {
                                 className: w.r$,

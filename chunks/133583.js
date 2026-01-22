@@ -1,4 +1,7 @@
-n.d(t, { A: () => G }), n(896048);
+n.d(t, {
+    A: () => G,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(777480),
@@ -30,6 +33,7 @@ var r = n(627968),
     N = n(188275),
     D = n(985018),
     R = n(39427);
+
 function C(e) {
     let { isSocialLayerStorefrontEnabled: t, handleOpenShop: n, handleOpenGameShop: l } = e;
     return t
@@ -47,6 +51,7 @@ function C(e) {
               onClick: n,
           });
 }
+
 function k(e) {
     let {
         isSocialLayerStorefrontEnabled: t,
@@ -81,6 +86,7 @@ function k(e) {
         ],
     });
 }
+
 function G(e) {
     var t;
     let { profileOwner: n } = e,
@@ -118,7 +124,9 @@ function G(e) {
             location: "user-profile-modal-v2-wishlist",
             wishlist: K,
         }),
-        Y = (0, b.X)({ location: "user-profile-modal-v2-wishlist" }),
+        Y = (0, b.X)({
+            location: "user-profile-modal-v2-wishlist",
+        }),
         q = V && Y,
         J = l.useCallback(
             (e) => {
@@ -156,10 +164,15 @@ function G(e) {
                 });
         }, [U]),
         ee = l.useCallback(() => {
-            (0, m.X)({ guildId: (0, p.zf)() });
+            (0, m.X)({
+                guildId: (0, p.zf)(),
+            });
         }, []),
         et = l.useCallback(() => {
-            (0, s.closeAllModals)(), (0, m.default)({ guildId: (0, p.zf)() });
+            (0, s.closeAllModals)(),
+                (0, m.default)({
+                    guildId: (0, p.zf)(),
+                });
         }, []);
     return null != z
         ? null
@@ -224,7 +237,9 @@ function G(e) {
                 className: R.XG,
                 fade: !0,
                 children: [
-                    (0, r.jsx)(I.A, { scrollerRef: S }),
+                    (0, r.jsx)(I.A, {
+                        scrollerRef: S,
+                    }),
                     (0, r.jsxs)("div", {
                         ref: Q,
                         className: R.U1,
@@ -235,7 +250,9 @@ function G(e) {
                                     (0, r.jsx)(c.Text, {
                                         variant: "text-xs/semibold",
                                         color: "text-subtle",
-                                        children: D.intl.format(D.t.r6Y1Lg, { count: K.items.length }),
+                                        children: D.intl.format(D.t.r6Y1Lg, {
+                                            count: K.items.length,
+                                        }),
                                     }),
                                     !B &&
                                         (0, r.jsx)(o.m, {

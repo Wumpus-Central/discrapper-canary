@@ -1,4 +1,5 @@
 var r;
+
 function i(e, t, n) {
     return (
         t in e
@@ -12,7 +13,12 @@ function i(e, t, n) {
         e
     );
 }
-n.d(t, { A: () => l }), n(734808), n(667532), n(321073);
+n.d(t, {
+    A: () => l,
+}),
+    n(734808),
+    n(667532),
+    n(321073);
 let a = null != (r = globalThis.__getTotalRequireTime) ? r : () => 0,
     s = "u" > typeof performance;
 class o {
@@ -34,7 +40,7 @@ class o {
                 nativeLogs: [],
             }),
             (this.logs = this.logGroups[0].logs)),
-            (this.endTime = Date.now() + 10000);
+            (this.endTime = Date.now() + 1e4);
     }
     mark(e, t, n) {
         this.isTracing &&
@@ -88,7 +94,7 @@ class o {
             this.logs.push({
                 emoji: this.logs[this.logs.length - 1].emoji,
                 prefix: this.prefix,
-                log: "  \u21AA ".concat(e, " ").concat(t),
+                log: "  ↪ ".concat(e, " ").concat(t),
             });
     }
     time(e, t, n) {
@@ -113,7 +119,7 @@ class o {
     }
     constructor() {
         i(this, "isTracing_", !0),
-            i(this, "endTime_", Date.now() + 15000),
+            i(this, "endTime_", Date.now() + 15e3),
             i(this, "lastImportDuration", 0),
             i(this, "logGroups", [
                 {

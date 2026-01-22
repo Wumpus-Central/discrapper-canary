@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(627968),
     i = n(503698),
     a = n.n(i),
@@ -6,6 +8,7 @@ var r = n(627968),
     o = n(827734),
     l = n(123511);
 let c = 14;
+
 function u(e) {
     let { className: t } = e;
     return (0, r.jsx)(s.QuestsIcon, {

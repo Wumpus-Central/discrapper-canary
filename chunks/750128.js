@@ -12,6 +12,7 @@ var l,
     _ = n(155718),
     h = n(706727),
     m = n(927813);
+
 function g(e, t, n) {
     return (
         t in e
@@ -30,9 +31,11 @@ var E = (function (e) {
         (e[(e.IN_FLIGHT = 0)] = "IN_FLIGHT"), (e[(e.ERRORED = 1)] = "ERRORED"), (e[(e.SUCCEEDED = 2)] = "SUCCEEDED"), e
     );
 })({});
+
 function b() {
     return (r = null), (i = null), (a = null), (s = null), (o = null), !0;
 }
+
 function y(e) {
     let { messageId: t, nonce: n, data: l, preflight: c } = e;
     switch (l.interactionType) {
@@ -55,18 +58,22 @@ function y(e) {
             return !1;
     }
 }
+
 function O(e) {
     let { nonce: t } = e;
     return t === o && (p.A.deleteMessage(s, a, !0), (a = null), (s = null), (o = null)), !1;
 }
+
 function A(e) {
     let { nonce: t } = e;
     return t === o && (p.A.deleteMessage(s, a, !0), (a = null), (s = null), (o = null)), !1;
 }
+
 function v(e) {
     let { nonce: t } = e;
     return null != t && t === r && ((i = 2), !0);
 }
+
 function S(e) {
     let { nonce: t } = e;
     return null != t && t === r && ((i = 1), !0);

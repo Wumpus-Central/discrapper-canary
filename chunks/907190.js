@@ -1,4 +1,6 @@
-r.d(t, { default: () => u });
+r.d(t, {
+    default: () => u,
+});
 var n = r(627968);
 r(64700);
 var o = r(397927),
@@ -6,6 +8,7 @@ var o = r(397927),
     l = r(975571),
     c = r(652215),
     a = r(985018);
+
 function u(e) {
     var t, r;
     let { listing: u, transitionState: s, onClose: f } = e,
@@ -71,7 +74,9 @@ function u(e) {
                 sku_id: u.id,
                 sku_name: u.name,
                 guild_id: u.guild_id,
-                header: a.intl.format(a.t.avKMZo, { listingName: u.name }),
+                header: a.intl.format(a.t.avKMZo, {
+                    listingName: u.name,
+                }),
                 transitionState: s,
                 onClose: f,
             },

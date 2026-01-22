@@ -1,7 +1,9 @@
-n.d(t, { A: () => I });
+n.d(t, {
+    A: () => I,
+});
 var l = n(627968),
     r = n(64700),
-    a = n(432022),
+    a = n(108531),
     i = n(66455),
     s = n(311907),
     o = n(397927),
@@ -14,6 +16,7 @@ var l = n(627968),
     A = n(684968),
     T = n(486974),
     f = n(652215);
+
 function h(e, t) {
     return (n) => {
         if (0 === n) return "auto";
@@ -29,6 +32,7 @@ function h(e, t) {
         );
     };
 }
+
 function I(e) {
     var t;
     let { userId: n, guildId: I, onClose: O, analyticsLocation: N, className: m } = e,
@@ -40,7 +44,10 @@ function I(e) {
         { reducedMotion: D } = r.useContext(o.CZY),
         L = r.useCallback(
             (e) => {
-                null != S && (0, d.z)(I, n, S.baseChannelId, { modViewPanel: e });
+                null != S &&
+                    (0, d.z)(I, n, S.baseChannelId, {
+                        modViewPanel: e,
+                    });
             },
             [S, I, n],
         ),
@@ -59,9 +66,15 @@ function I(e) {
         p,
         {
             value: 0,
-            from: { value: 1 },
-            enter: { value: 0 },
-            leave: { value: -1 },
+            from: {
+                value: 1,
+            },
+            enter: {
+                value: 0,
+            },
+            leave: {
+                value: -1,
+            },
         },
         b !== n ? "animate-never" : "animate-always",
     );
@@ -112,7 +125,9 @@ function I(e) {
                             height: "100%",
                         },
                         D.enabled
-                            ? { opacity: null == (i = e.value) ? void 0 : i.to((e) => 1 - Math.abs(e)) }
+                            ? {
+                                  opacity: null == (i = e.value) ? void 0 : i.to((e) => 1 - Math.abs(e)),
+                              }
                             : {
                                   left: null == (s = e.value) ? void 0 : s.to(h("left", R)),
                                   right: null == (o = e.value) ? void 0 : o.to(h("right", R)),

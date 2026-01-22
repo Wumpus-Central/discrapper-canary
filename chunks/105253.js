@@ -1,4 +1,7 @@
-n.d(t, { A: () => w }), n(896048);
+n.d(t, {
+    A: () => w,
+}),
+    n(896048);
 var l = n(627968),
     r = n(64700),
     i = n(989349),
@@ -69,6 +72,7 @@ let C = (e) => {
         }
         e(l);
     };
+
 function S(e) {
     let { guildId: t, guildEvent: n, onChange: i, isFocusReady: s } = e,
         { entityType: c, channelId: d } = n,
@@ -82,7 +86,9 @@ function S(e) {
     }, [s, c]);
     let m = (e) => {
             var t;
-            i({ channelId: null != (t = null == e ? void 0 : e.id) ? t : null });
+            i({
+                channelId: null != (t = null == e ? void 0 : e.id) ? t : null,
+            });
         },
         j = (0, b.k5)(n),
         v = (0, b.dy)(c),
@@ -94,7 +100,11 @@ function S(e) {
                 label: N.intl.string(N.t.yx785A),
                 required: !0,
                 onChange: (e) => {
-                    i({ entityMetadata: { location: e } });
+                    i({
+                        entityMetadata: {
+                            location: e,
+                        },
+                    });
                 },
                 placeholder: N.intl.string(N.t.mkCMia),
                 maxLength: O.vj,
@@ -112,6 +122,7 @@ function S(e) {
                   disabled: p,
               });
 }
+
 function T(e) {
     let { guildId: t, guildEvent: n, onChange: i } = e,
         s = (0, a.bG)([d.A], () => d.A.getGuild(t), [t]),
@@ -166,6 +177,7 @@ function T(e) {
         helperText: b ? N.intl.string(N.t.yutP5U) : void 0,
     });
 }
+
 function w(e) {
     let { guildId: t, guildEvent: r, validationErrorMessage: i, onChange: s, isSlideReady: c = !1 } = e,
         { entityType: u } = r,

@@ -1,4 +1,8 @@
-n.d(e, { default: () => p }), n(896048), n(492834);
+n.d(e, {
+    default: () => p,
+}),
+    n(896048),
+    n(492834);
 var r = n(627968),
     l = n(64700),
     a = n(284009),
@@ -87,7 +91,9 @@ let p = function (t) {
         onClose: g,
         actions: h,
         children: [
-            (0, r.jsx)("div", { className: f.p }),
+            (0, r.jsx)("div", {
+                className: f.p,
+            }),
             (0, r.jsx)(o.Text, {
                 variant: "text-md/normal",
                 className: f.i,

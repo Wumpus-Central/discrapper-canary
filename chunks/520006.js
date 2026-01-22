@@ -1,4 +1,6 @@
-n.d(t, { A: () => y });
+n.d(t, {
+    A: () => y,
+});
 var r = n(627968);
 n(64700);
 var l = n(284009),
@@ -15,6 +17,7 @@ var l = n(284009),
     b = n(709562),
     g = n(652215),
     m = n(985018);
+
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -40,6 +43,7 @@ function A(e) {
     }
     return e;
 }
+
 function y(e) {
     let {
             applicationId: t,

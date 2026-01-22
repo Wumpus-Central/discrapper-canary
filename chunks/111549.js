@@ -1,4 +1,8 @@
-n.d(t, { A: () => z }), n(938796), n(896048);
+n.d(t, {
+    A: () => z,
+}),
+    n(938796),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -38,6 +42,7 @@ var B = n(771016),
     U = n(396574),
     G = n(985018),
     M = n(473169);
+
 function F(e, t, n) {
     return (
         t in e
@@ -62,7 +67,19 @@ async function K(e) {
 class Q extends i.PureComponent {
     componentDidMount() {
         let { isUnderage: e, login: t, inviteKey: n } = this.props;
-        if ((T.default.track(D.HAw.INVITE_VIEWED, { invite_code: n }, { flush: !0 }), (0, S.d)("invite"), !U.VP)) {
+        if (
+            (T.default.track(
+                D.HAw.INVITE_VIEWED,
+                {
+                    invite_code: n,
+                },
+                {
+                    flush: !0,
+                },
+            ),
+            (0, S.d)("invite"),
+            !U.VP)
+        ) {
             let e = this.getInviteKey();
             w.A.launch("discord://" + D.BVt.INVITE(e), () => void 0);
         }
@@ -81,7 +98,9 @@ class Q extends i.PureComponent {
             let e = N.default.getFingerprint();
             if (null != e) {
                 let t = (0, c.d)(e);
-                this.track(D.HAw.INVITE_LOGIN_SUCCESSFUL, !0, { prev_user_id: t });
+                this.track(D.HAw.INVITE_LOGIN_SUCCESSFUL, !0, {
+                    prev_user_id: t,
+                });
             }
             f.Ay.acceptInvite({
                 inviteKey: s,
@@ -133,7 +152,9 @@ class Q extends i.PureComponent {
                       inviter_id: null != r.inviter ? r.inviter.id : null,
                       invite_code: s,
                   }
-                : { invite_code: s };
+                : {
+                      invite_code: s,
+                  };
         T.default.track(
             e,
             (function (e) {
@@ -156,7 +177,12 @@ class Q extends i.PureComponent {
     }
     renderSpinner(e) {
         return (0, r.jsxs)(A.Ay, {
-            children: [(0, r.jsx)(A.hE, { children: e }), (0, r.jsx)(A.CK, {})],
+            children: [
+                (0, r.jsx)(A.hE, {
+                    children: e,
+                }),
+                (0, r.jsx)(A.CK, {}),
+            ],
         });
     }
     renderInvalidInvite() {
@@ -171,11 +197,15 @@ class Q extends i.PureComponent {
                     className: l()(M.Ot, M.QB),
                     children: G.intl.string(G.t.kux01N),
                 }),
-                (0, r.jsx)(A.tK, { children: e ? G.intl.string(G.t["5AkWAd"]) : G.intl.string(G.t["+qUJAj"]) }),
+                (0, r.jsx)(A.tK, {
+                    children: e ? G.intl.string(G.t["5AkWAd"]) : G.intl.string(G.t["+qUJAj"]),
+                }),
                 this.renderButton(G.intl.string(G.t.fIv16B)),
                 (0, r.jsx)("div", {
                     className: M.Ot,
-                    style: { textAlign: "left" },
+                    style: {
+                        textAlign: "left",
+                    },
                     children: (0, r.jsx)(h.QWc, {
                         size: "sm",
                         textVariant: "text-sm/medium",
@@ -218,7 +248,9 @@ class Q extends i.PureComponent {
                     className: M.QB,
                     children: G.intl.string(G.t.csrAMJ),
                 }),
-                (0, r.jsx)(A.tK, { children: G.intl.string(G.t["m1+IBn"]) }),
+                (0, r.jsx)(A.tK, {
+                    children: G.intl.string(G.t["m1+IBn"]),
+                }),
                 this.renderButton(G.intl.string(G.t.fIv16B), () => t()),
             ],
         });
@@ -232,7 +264,9 @@ class Q extends i.PureComponent {
               })
             : (0, r.jsx)("div", {
                   className: M.S3,
-                  children: (0, r.jsx)(P.A, { invite: e }),
+                  children: (0, r.jsx)(P.A, {
+                      invite: e,
+                  }),
               });
     }
     renderAuthenicatedFooter() {
@@ -263,7 +297,9 @@ class Q extends i.PureComponent {
     renderContinue() {
         return (0, r.jsxs)(A.Ay, {
             children: [
-                (0, r.jsx)(A.hE, { children: G.intl.string(G.t.fOc4gn) }),
+                (0, r.jsx)(A.hE, {
+                    children: G.intl.string(G.t.fOc4gn),
+                }),
                 this.renderButton(G.intl.string(G.t.fIv16B)),
             ],
         });
@@ -314,7 +350,9 @@ class Q extends i.PureComponent {
         var t;
         super(...e),
             (t = this),
-            F(this, "state", { error: null }),
+            F(this, "state", {
+                error: null,
+            }),
             F(this, "getAcceptInviteContext", (e) => f.Ay.getInviteContext(e, this.props.invite)),
             F(this, "handleContinue", (e) => {
                 let { invite: t, transitionTo: n } = this.props;
@@ -326,7 +364,9 @@ class Q extends i.PureComponent {
                 }
             }),
             F(this, "handleAccept", () => {
-                this.setState({ error: null });
+                this.setState({
+                    error: null,
+                });
                 let e = this.getInviteKey();
                 f.Ay.acceptInvite({
                     inviteKey: e,
@@ -371,7 +411,9 @@ class Q extends i.PureComponent {
                               fullWidth: !0,
                           }),
                       })
-                    : (0, r.jsx)(A.KE, { className: M.eT });
+                    : (0, r.jsx)(A.KE, {
+                          className: M.eT,
+                      });
             });
     }
 }

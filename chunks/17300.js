@@ -1,4 +1,6 @@
-n.d(t, { F: () => c });
+n.d(t, {
+    F: () => c,
+});
 var r = n(945810),
     i = n(128319);
 let a = {
@@ -17,12 +19,16 @@ let a = {
         name: "2025-09-agc2-v2",
         defaultConfig: {
             noiseCancellationDuringProcessing: !1,
-            noiseCancellationConfig: { useAGC2: !1 },
+            noiseCancellationConfig: {
+                useAGC2: !1,
+            },
         },
         variations: {
             1: {
                 noiseCancellationDuringProcessing: !0,
-                noiseCancellationConfig: { useAGC2: !1 },
+                noiseCancellationConfig: {
+                    useAGC2: !1,
+                },
             },
             2: {
                 noiseCancellationDuringProcessing: !0,
@@ -56,12 +62,16 @@ let a = {
         name: "2025-12-agc2-v2--mirror",
         defaultConfig: {
             noiseCancellationDuringProcessing: !1,
-            noiseCancellationConfig: { useAGC2: !1 },
+            noiseCancellationConfig: {
+                useAGC2: !1,
+            },
         },
         variations: {
             1: {
                 noiseCancellationDuringProcessing: !0,
-                noiseCancellationConfig: { useAGC2: !1 },
+                noiseCancellationConfig: {
+                    useAGC2: !1,
+                },
             },
             2: {
                 noiseCancellationDuringProcessing: !0,
@@ -95,12 +105,16 @@ let a = {
         name: "2025-12-agc2-v2--shadow",
         defaultConfig: {
             noiseCancellationDuringProcessing: !1,
-            noiseCancellationConfig: { useAGC2: !1 },
+            noiseCancellationConfig: {
+                useAGC2: !1,
+            },
         },
         variations: {
             1: {
                 noiseCancellationDuringProcessing: !0,
-                noiseCancellationConfig: { useAGC2: !1 },
+                noiseCancellationConfig: {
+                    useAGC2: !1,
+                },
             },
             2: {
                 noiseCancellationDuringProcessing: !0,
@@ -129,6 +143,7 @@ let a = {
             },
         },
     });
+
 function c(e) {
     let { location: t, disable: n = !1 } = e;
     u({
@@ -136,22 +151,38 @@ function c(e) {
         disable: n,
     });
     let { isInHoldout: r } = i.p.getCurrentConfig(
-        { location: t },
+        {
+            location: t,
+        },
         {
             disable: n,
             autoTrackExposure: !0,
         },
     );
-    return r || n ? s.definition.defaultConfig : s.getConfig({ location: t });
+    return r || n
+        ? s.definition.defaultConfig
+        : s.getConfig({
+              location: t,
+          });
 }
+
 function u(e) {
     let { location: t, disable: n = !1 } = e,
         { isInHoldout: r } = i.A.getCurrentConfig(
-            { location: t },
+            {
+                location: t,
+            },
             {
                 disable: n,
                 autoTrackExposure: !0,
             },
         );
-    l.getConfig({ location: t }), r || n || o.getConfig({ location: t });
+    l.getConfig({
+        location: t,
+    }),
+        r ||
+            n ||
+            o.getConfig({
+                location: t,
+            });
 }

@@ -1,4 +1,6 @@
 function r() {
     return Promise.resolve([]);
 }
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});

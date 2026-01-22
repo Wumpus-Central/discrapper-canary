@@ -33,11 +33,27 @@ let a = (0, r.C)({
         },
     ],
 });
+
 function s(e) {
     let { location: t } = e;
-    return a.useExperiment({ location: t }, { autoTrackExposure: !0 });
+    return a.useExperiment(
+        {
+            location: t,
+        },
+        {
+            autoTrackExposure: !0,
+        },
+    );
 }
+
 function o(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return a.getCurrentConfig({ location: e }, { autoTrackExposure: t });
+    return a.getCurrentConfig(
+        {
+            location: e,
+        },
+        {
+            autoTrackExposure: t,
+        },
+    );
 }

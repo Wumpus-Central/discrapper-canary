@@ -1,8 +1,12 @@
-n.d(t, { A: () => A }), n(896048);
+n.d(t, {
+    A: () => A,
+}),
+    n(896048);
 var r = n(982520),
     i = n.n(r),
     a = n(439372),
     s = n(400492);
+
 function o(e, t, n) {
     return (
         t in e
@@ -23,6 +27,7 @@ let l = 100,
     f = 0,
     p = 0,
     _ = null;
+
 function h(e, t) {
     let n = Math.round(100 * e),
         r = Math.round(100 * p),
@@ -31,6 +36,7 @@ function h(e, t) {
         ? (clearInterval(_), 0 === r && null != t && t())
         : ((a += n), (f = a / 100), (d.volume = i()(f, 0, c)));
 }
+
 function m(e) {
     null != _ && clearInterval(_), (p = 0);
     let t = y();
@@ -38,17 +44,21 @@ function m(e) {
         h(t, e);
     }, l);
 }
+
 function g() {
     null != _ && clearInterval(_), d.loop(), (p = c);
     let e = y();
     _ = setInterval(() => h(e), l);
 }
+
 function E() {
     m(d.pause.bind(d));
 }
+
 function b() {
     m(d.stop.bind(d));
 }
+
 function y() {
     return (l / u) * (p - f);
 }

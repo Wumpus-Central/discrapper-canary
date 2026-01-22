@@ -1,4 +1,7 @@
-a.d(n, { default: () => p }), a(896048);
+a.d(n, {
+    default: () => p,
+}),
+    a(896048);
 var e = a(627968),
     i = a(64700),
     l = a(158954),
@@ -11,6 +14,7 @@ var e = a(627968),
     h = a(381941),
     g = a(985018),
     j = a(787790);
+
 function p(t) {
     let {
             transitionState: n,
@@ -44,7 +48,9 @@ function p(t) {
                                 validNonShortcutEmojis: [],
                             },
                             !0,
-                            { location: h.Hx.GIFTING },
+                            {
+                                location: h.Hx.GIFTING,
+                            },
                         )),
                     await o.A.sendMessage(
                         t,
@@ -55,7 +61,9 @@ function p(t) {
                             validNonShortcutEmojis: [],
                         },
                         !0,
-                        { location: h.Hx.GIFTING },
+                        {
+                            location: h.Hx.GIFTING,
+                        },
                     ),
                     null != N &&
                         d.default.track(u.HAw.GIFT_INTENT_MESSAGE_SENT, {

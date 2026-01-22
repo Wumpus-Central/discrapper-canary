@@ -1,7 +1,13 @@
-r.d(t, { A: () => i }), r(896048), r(747238), r(733351);
+r.d(t, {
+    A: () => i,
+}),
+    r(896048),
+    r(747238),
+    r(733351);
 var n = r(64700),
     l = r(444927),
     s = r(629357);
+
 function i(e) {
     let { searchOptions: t } = e,
         [r, i] = n.useState({

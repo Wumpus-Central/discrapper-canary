@@ -32,7 +32,11 @@ e.exports = function (e) {
                 returnBegin: !0,
                 end: /\|/,
                 illegal: /\S/,
-                contains: [{ begin: "(\\|[ ]*)?" + t }],
+                contains: [
+                    {
+                        begin: "(\\|[ ]*)?" + t,
+                    },
+                ],
             },
             {
                 begin: "#\\(",

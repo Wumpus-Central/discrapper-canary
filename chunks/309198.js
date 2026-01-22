@@ -1,4 +1,7 @@
-n.d(t, { A: () => b }), n(896048);
+n.d(t, {
+    A: () => b,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(397927),
@@ -11,6 +14,7 @@ var r = n(627968),
     f = n(53516),
     p = n(985018),
     _ = n(139674);
+
 function h(e, t, n) {
     return (
         t in e
@@ -24,6 +28,7 @@ function h(e, t, n) {
         e
     );
 }
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -40,6 +45,7 @@ function m(e) {
     }
     return e;
 }
+
 function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -52,6 +58,7 @@ function g(e, t) {
     }
     return n;
 }
+
 function E(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -63,6 +70,7 @@ function E(e, t) {
         e
     );
 }
+
 function b(e) {
     let t,
         n,
@@ -76,13 +84,32 @@ function b(e) {
         ),
         A = i.useCallback(function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-            (0, a.qfG)((t) => (0, r.jsx)(c.default, m({ reason: o.d.USER_SETTINGS_UPDATE }, t, e)), { modalKey: f.V });
+            (0, a.qfG)(
+                (t) =>
+                    (0, r.jsx)(
+                        c.default,
+                        m(
+                            {
+                                reason: o.d.USER_SETTINGS_UPDATE,
+                            },
+                            t,
+                            e,
+                        ),
+                    ),
+                {
+                    modalKey: f.V,
+                },
+            );
         }, []),
         v = i.useCallback(() => {
             A();
         }, [A]),
         S = i.useCallback(() => {
-            null == h.phone ? A({ onAddedPhone: s.A.enableSMS }) : s.A.enableSMS();
+            null == h.phone
+                ? A({
+                      onAddedPhone: s.A.enableSMS,
+                  })
+                : s.A.enableSMS();
         }, [h, A]),
         I = i.useCallback(() => {
             (0, a.qfG)((e) =>
@@ -104,7 +131,9 @@ function b(e) {
         n = (0, r.jsxs)(a.Text, {
             variant: "text-sm/normal",
             children: [
-                p.intl.format(p.t.PXVoEO, { phoneNumber: e }),
+                p.intl.format(p.t.PXVoEO, {
+                    phoneNumber: e,
+                }),
                 (0, r.jsx)(a.MzZ, {
                     onClick: O,
                     className: _.vN,

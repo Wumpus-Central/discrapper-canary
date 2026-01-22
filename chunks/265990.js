@@ -1,4 +1,10 @@
-n.d(t, { A: () => k }), n(65821), n(896048), n(321073), n(638769);
+n.d(t, {
+    A: () => k,
+}),
+    n(65821),
+    n(896048),
+    n(321073),
+    n(638769);
 var r = n(627968),
     i = n(64700),
     l = n(311907),
@@ -28,6 +34,7 @@ var N = n(652215),
     T = n(788868),
     j = n(985018),
     x = n(520936);
+
 function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -53,6 +60,7 @@ function P(e) {
     }
     return e;
 }
+
 function w(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -72,15 +80,20 @@ function w(e, t) {
     );
 }
 let L = [];
+
 function R() {
-    s.A.transitionToSection(N.m3P.ADD_FRIEND, { explicit: !0 });
+    s.A.transitionToSection(N.m3P.ADD_FRIEND, {
+        explicit: !0,
+    });
 }
+
 function D() {
     (0, a.mMO)(async () => {
         let { default: e } = await n.e("73152").then(n.bind(n, 516259));
         return (t) => (0, r.jsx)(e, P({}, t));
     });
 }
+
 function M(e) {
     let { section: t, showSpamCta: n } = e,
         l = i.useMemo(() => (n ? D : t !== N.m3P.PENDING ? R : void 0), [n, t]);
@@ -154,9 +167,21 @@ let k = function (e) {
                     })(e, ["key"]);
                 switch (R) {
                     case N.m3P.PENDING:
-                        return (0, r.jsx)(y.A, w(P({}, i), { isFocused: k }), n);
+                        return (0, r.jsx)(
+                            y.A,
+                            w(P({}, i), {
+                                isFocused: k,
+                            }),
+                            n,
+                        );
                     case N.m3P.SUGGESTIONS:
-                        return (0, r.jsx)(C.A, w(P({}, i), { isFocused: k }), n);
+                        return (0, r.jsx)(
+                            C.A,
+                            w(P({}, i), {
+                                isFocused: k,
+                            }),
+                            n,
+                        );
                     case N.m3P.ALL:
                         return (0, r.jsx)(
                             E.A,
@@ -169,19 +194,33 @@ let k = function (e) {
                         );
                     case N.m3P.ONLINE:
                     default:
-                        return (0, r.jsx)(E.A, w(P({}, i), { isFocused: k }), n);
+                        return (0, r.jsx)(
+                            E.A,
+                            w(P({}, i), {
+                                isFocused: k,
+                            }),
+                            n,
+                        );
                 }
             },
             [k, R, H],
         ),
         z = i.useCallback(
             (e) => {
-                B(w(P({}, V), { [R]: e }));
+                B(
+                    w(P({}, V), {
+                        [R]: e,
+                    }),
+                );
             },
             [V, R],
         ),
         W = i.useCallback(() => {
-            B(w(P({}, V), { [R]: "" }));
+            B(
+                w(P({}, V), {
+                    [R]: "",
+                }),
+            );
         }, [V, R]),
         q = i.useMemo(
             () =>
@@ -255,19 +294,34 @@ let k = function (e) {
                     i = (function (e, t, n, r) {
                         switch (e) {
                             case N.m3P.ONLINE:
-                                return j.intl.formatToPlainString(j.t.BagU2U, { online: t.toString() });
+                                return j.intl.formatToPlainString(j.t.BagU2U, {
+                                    online: t.toString(),
+                                });
                             case N.m3P.PENDING:
-                                if (0 === n) return j.intl.formatToPlainString(j.t["g+3FIa"], { count: t.toString() });
-                                if (1 === n) return j.intl.formatToPlainString(j.t.npJsRl, { count: t.toString() });
+                                if (0 === n)
+                                    return j.intl.formatToPlainString(j.t["g+3FIa"], {
+                                        count: t.toString(),
+                                    });
+                                if (1 === n)
+                                    return j.intl.formatToPlainString(j.t.npJsRl, {
+                                        count: t.toString(),
+                                    });
                                 throw Error("Unexpected pending friend requests section index: ".concat(n));
                             case N.m3P.SUGGESTIONS:
-                                return j.intl.formatToPlainString(j.t["DYMZ/p"], { count: t.toString() });
+                                return j.intl.formatToPlainString(j.t["DYMZ/p"], {
+                                    count: t.toString(),
+                                });
                             default:
                                 if ((0, f.p)(u.A.FRIENDS_LIST) && r)
-                                    if (0 === n) return j.intl.formatToPlainString(j.t.rrZTqK, { count: t.toString() });
+                                    if (0 === n)
+                                        return j.intl.formatToPlainString(j.t.rrZTqK, {
+                                            count: t.toString(),
+                                        });
                                     else if (1 === n);
                                     else throw Error("Unexpected friends all section index: ".concat(n));
-                                return j.intl.formatToPlainString(j.t.rHRrhC, { count: t.toString() });
+                                return j.intl.formatToPlainString(j.t.rHRrhC, {
+                                    count: t.toString(),
+                                });
                         }
                     })(
                         R,
@@ -383,7 +437,13 @@ let k = function (e) {
                 es &&
                     (0, r.jsx)("div", {
                         className: x.y7,
-                        children: (0, r.jsx)(O.A, { type: O.a.SECTION_NO_RESULTS }, R),
+                        children: (0, r.jsx)(
+                            O.A,
+                            {
+                                type: O.a.SECTION_NO_RESULTS,
+                            },
+                            R,
+                        ),
                     }),
             ],
         }),

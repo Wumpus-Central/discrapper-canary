@@ -8,6 +8,7 @@ var r,
     s = n(994369),
     o = n(311907),
     l = n(73153);
+
 function c(e, t, n) {
     return (
         t in e
@@ -21,6 +22,7 @@ function c(e, t, n) {
         e
     );
 }
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,6 +39,7 @@ function u(e) {
     }
     return e;
 }
+
 function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -49,6 +52,7 @@ function d(e, t) {
     }
     return n;
 }
+
 function f(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -64,6 +68,7 @@ let p = 20;
 var _ = (function (e) {
     return (e[(e.FETCHING = 0)] = "FETCHING"), (e[(e.FETCHED = 1)] = "FETCHED"), (e[(e.ERROR = 2)] = "ERROR"), e;
 })({});
+
 function h(e) {
     let {
         query: t,
@@ -91,8 +96,11 @@ function h(e) {
         .concat(d, " source:")
         .concat(f);
 }
-let m = new (a())({ max: p }),
+let m = new (a())({
+        max: p,
+    }),
     g = {};
+
 function E(e) {
     let {
             query: t,
@@ -120,8 +128,11 @@ function E(e) {
             excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: d,
             source: p,
         });
-    g = f(u({}, g), { [_]: 0 });
+    g = f(u({}, g), {
+        [_]: 0,
+    });
 }
+
 function b(e) {
     let {
             query: t,
@@ -150,8 +161,20 @@ function b(e) {
             excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: p,
             source: _,
         });
-    m.set(E, u({ lastFetchTimeMs: Date.now() }, s)), (g = f(u({}, g), { [E]: 1 }));
+    m.set(
+        E,
+        u(
+            {
+                lastFetchTimeMs: Date.now(),
+            },
+            s,
+        ),
+    ),
+        (g = f(u({}, g), {
+            [E]: 1,
+        }));
 }
+
 function y(e) {
     let {
             query: t,
@@ -179,7 +202,9 @@ function y(e) {
             excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: d,
             source: p,
         });
-    g = f(u({}, g), { [_]: 2 });
+    g = f(u({}, g), {
+        [_]: 2,
+    });
 }
 class O extends (r = o.Ay.Store) {
     getSearchResults(e) {

@@ -8,9 +8,11 @@ var l = n(311907),
     c = n(698441),
     r = n(988794),
     s = n(652215);
+
 function d(e, t) {
     return i.MJ(s.xBc.VIEW_CHANNEL, e) || t === r.Ps.EXTERNAL;
 }
+
 function u(e, t) {
     return (0, l.bG)([a.A, c.Ay], () => {
         let n = a.A.getChannel(e),

@@ -1,4 +1,7 @@
-n.d(t, { A: () => M }), n(896048);
+n.d(t, {
+    A: () => M,
+}),
+    n(896048);
 var r = n(412703),
     i = n(902173),
     a = n(439372),
@@ -22,6 +25,7 @@ var r = n(412703),
     v = n(792620),
     S = n(814793),
     I = n(654487);
+
 function T(e, t, n) {
     return (
         t in e
@@ -38,10 +42,14 @@ function T(e, t, n) {
 let C = +_.A.Millis.MINUTE,
     N = 2,
     R = +_.A.Millis.SECOND,
-    w = (0, y.L)({ location: I.rE.QUESTS_MANAGER });
+    w = (0, y.L)({
+        location: I.rE.QUESTS_MANAGER,
+    });
+
 function P(e) {
     return !(0, O.Ic)(e) && null != e.userStatus && null != e.userStatus.enrolledAt && null == e.userStatus.completedAt;
 }
+
 function D(e) {
     let t = E.A.quests;
     for (let n of (0, A.jm)(t, e))
@@ -52,9 +60,11 @@ function D(e) {
                 sourceQuestContent: b.uF.RUNNING_ACTIVITY,
             });
 }
+
 function x(e, t) {
     return null != t && e.some((e) => e === c.a7) && (0, u.n1)(t);
 }
+
 function L(e) {
     return null != e && e.config.features.includes(i.L.MANUAL_HEARTBEAT_INITIALIZATION);
 }
@@ -115,7 +125,14 @@ class j extends a.A {
                 let r = (0, v.pU)(i);
                 if (!P(i) || null == r) continue;
                 let a = r.find((e) => e === t);
-                null != a ? e.set(i.id, { applicationId: a }) : x(r, n) && e.set(i.id, { applicationId: c.a7 });
+                null != a
+                    ? e.set(i.id, {
+                          applicationId: a,
+                      })
+                    : x(r, n) &&
+                      e.set(i.id, {
+                          applicationId: c.a7,
+                      });
             }
         }
         return (
@@ -137,7 +154,12 @@ class j extends a.A {
         if (null == r) return e;
         for (let t of E.A.quests.values()) {
             let n = (0, v.a2)(t);
-            P(t) && null != n && n === r && e.set(t.id, { applicationId: r });
+            P(t) &&
+                null != n &&
+                n === r &&
+                e.set(t.id, {
+                    applicationId: r,
+                });
         }
         return (
             w.log(
@@ -156,9 +178,20 @@ class j extends a.A {
         for (let n of t.keys())
             for (let t of r.values()) {
                 let r = (0, v.vS)(t);
-                P(t) && null != r && r === n && e.set(t.id, { applicationId: n });
+                P(t) &&
+                    null != r &&
+                    r === n &&
+                    e.set(t.id, {
+                        applicationId: n,
+                    });
             }
-        for (let t of r.values()) P(t) && (0, S._e)(t) && n && e.set(t.id, { applicationId: I.ej });
+        for (let t of r.values())
+            P(t) &&
+                (0, S._e)(t) &&
+                n &&
+                e.set(t.id, {
+                    applicationId: I.ej,
+                });
         return (
             w.log("~ getActivelyProgressingActivityQuestIds -> Actively progressing questIds: ", Array.from(e.keys())),
             e

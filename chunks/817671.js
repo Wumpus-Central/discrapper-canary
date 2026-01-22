@@ -1,9 +1,11 @@
-e.d(a, { A: () => t });
+e.d(a, {
+    A: () => t,
+});
 var n = {
     lastWeek: "eeee 'trecută la' p",
     yesterday: "'ieri la' p",
     today: "'astăzi la' p",
-    tomorrow: "'mâine la' p",
+    tomorrow: "'m\xe2ine la' p",
     nextWeek: "eeee 'viitoare la' p",
     other: "P",
 };

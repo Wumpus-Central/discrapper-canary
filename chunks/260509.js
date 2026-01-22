@@ -58,6 +58,7 @@ let c = "Guild",
         premiumFeatures: null,
         moderatorReporting: null,
     });
+
 function f(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
@@ -69,25 +70,32 @@ function f(e, t) {
         lossless: r,
     });
 }
+
 function p(e) {
     return (0, o.oN)(e.name);
 }
+
 function _(e, t) {
     let n = "string" == typeof t ? t : null != t ? t.id : null;
     return e.ownerId === n;
 }
+
 function h(e, t) {
     return (!!t.mfaEnabled || e.mfaLevel !== l.EkJ.ELEVATED) && _(e, t);
 }
+
 function m(e) {
     return null == e.joinedAt;
 }
+
 function g(e) {
     return s.default.castGuildIdAsEveryoneGuildRoleId(e.id);
 }
+
 function E(e, t) {
     return (0, r.hZ)(e, "joinedAt", "string" == typeof t ? new Date(t) : t);
 }
+
 function b(e) {
     var t;
     return (

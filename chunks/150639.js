@@ -1,4 +1,8 @@
-n.d(t, { v: () => O }), n(446912), n(896048);
+n.d(t, {
+    v: () => O,
+}),
+    n(446912),
+    n(896048);
 var l = n(627968),
     r = n(64700),
     i = n(311907),
@@ -86,7 +90,11 @@ let x = (e) => ({
                                   });
                         })(e),
                         trailing:
-                            null == e.value ? null : j.intl.formatToPlainString(j.t.WkK72v, { count: _[e.value] }),
+                            null == e.value
+                                ? null
+                                : j.intl.formatToPlainString(j.t.WkK72v, {
+                                      count: _[e.value],
+                                  }),
                     };
                 },
                 [_, I],

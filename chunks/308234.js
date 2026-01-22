@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -7,6 +9,7 @@ var r = n(627968),
     l = n(415350),
     c = n(366468),
     u = n(206314);
+
 function d(e) {
     let { color: t, className: n, variant: a, text: d, lineClamp: f } = e,
         p = (0, o.$Il)(),

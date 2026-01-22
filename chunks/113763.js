@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var r = n(627968),
     l = n(64700),
     i = n(163126),
@@ -12,6 +14,7 @@ var r = n(627968),
     p = n(782505),
     b = n(515054),
     g = n(828151);
+
 function m(e) {
     let { user: t, guildId: n, channelId: m, onClose: y } = e,
         { analyticsLocations: O } = (0, a.Ay)(),
@@ -26,7 +29,9 @@ function m(e) {
             className: g.XG,
             children:
                 null == h
-                    ? Array.from({ length: null != v ? v : 10 }).map((e, t) =>
+                    ? Array.from({
+                          length: null != v ? v : 10,
+                      }).map((e, t) =>
                           (0, r.jsxs)(
                               "div",
                               {
@@ -59,7 +64,9 @@ function m(e) {
                                     onSelect: () => {
                                         var e, t;
                                         null == y || y(),
-                                            x({ action: "PRESS_MUTUAL_FRIEND" }),
+                                            x({
+                                                action: "PRESS_MUTUAL_FRIEND",
+                                            }),
                                             (0, d.openUserProfileModal)(
                                                 ((e = (function (e) {
                                                     for (var t = 1; t < arguments.length; t++) {

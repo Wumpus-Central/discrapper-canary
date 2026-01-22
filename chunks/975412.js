@@ -1,4 +1,6 @@
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -9,6 +11,7 @@ var i = n(397927),
     c = n(500049),
     u = n(60809),
     d = n(652215);
+
 function f(e, t, n) {
     return (
         t in e
@@ -22,6 +25,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -38,6 +42,7 @@ function p(e) {
     }
     return e;
 }
+
 function _(e) {
     let { context: t, openInPopout: f, analyticsLocation: _ = "open-activity-shelf", initialState: h } = e;
     f && (0, a.A)(d.MLl.CHANNEL_CALL_POPOUT);
@@ -54,7 +59,16 @@ function _(e) {
         (0, i.mMO)(
             async () => {
                 let { default: e } = await n.e("12313").then(n.bind(n, 126784));
-                return (n) => (0, r.jsx)(e, p({ context: t }, n));
+                return (n) =>
+                    (0, r.jsx)(
+                        e,
+                        p(
+                            {
+                                context: t,
+                            },
+                            n,
+                        ),
+                    );
             },
             {
                 modalKey: u.gS,

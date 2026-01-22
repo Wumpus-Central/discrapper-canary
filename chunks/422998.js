@@ -11,6 +11,7 @@ var r = n(64700),
     c = n.n(l),
     u = n(859141),
     d = n.n(u);
+
 function f() {
     return (f =
         Object.assign ||
@@ -22,9 +23,11 @@ function f() {
             return e;
         }).apply(this, arguments);
 }
+
 function p(e, t) {
     (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), _(e, t);
 }
+
 function _(e, t) {
     return (_ =
         Object.setPrototypeOf ||
@@ -32,6 +35,7 @@ function _(e, t) {
             return (e.__proto__ = t), e;
         })(e, t);
 }
+
 function h(e, t) {
     if (null == e) return {};
     var n,
@@ -57,7 +61,9 @@ var m = {
     g = {
         rel: ["amphtml", "canonical", "alternate"],
     },
-    E = { type: ["application/ld+json"] },
+    E = {
+        type: ["application/ld+json"],
+    },
     b = {
         charset: "",
         name: ["robots", "description"],
@@ -222,7 +228,9 @@ var m = {
                       default: [],
                   },
               )
-            : { default: e };
+            : {
+                  default: e,
+              };
     },
     D = function (e, t) {
         var n;
@@ -259,12 +267,18 @@ var m = {
     k = function (e, t) {
         return t.map(function (t, n) {
             var i,
-                a = (((i = { key: n })["data-rh"] = !0), i);
+                a =
+                    (((i = {
+                        key: n,
+                    })["data-rh"] = !0),
+                    i);
             return (
                 Object.keys(t).forEach(function (e) {
                     var n = O[e] || e;
                     "innerHTML" === n || "cssText" === n
-                        ? (a.dangerouslySetInnerHTML = { __html: t.innerHTML || t.cssText })
+                        ? (a.dangerouslySetInnerHTML = {
+                              __html: t.innerHTML || t.cssText,
+                          })
                         : (a[n] = t[e]);
                 }),
                 r.createElement(e, a)
@@ -279,7 +293,9 @@ var m = {
                         var e, n, i, a;
                         return (
                             (n = t.titleAttributes),
-                            ((i = { key: (e = t.title) })["data-rh"] = !0),
+                            ((i = {
+                                key: (e = t.title),
+                            })["data-rh"] = !0),
                             (a = M(n, i)),
                             [r.createElement(m.TITLE, a, e)]
                         );
@@ -455,17 +471,27 @@ var m = {
         return (
             p(t, e),
             (t.prototype.render = function () {
-                return r.createElement(B.Provider, { value: this.helmetData.value }, this.props.children);
+                return r.createElement(
+                    B.Provider,
+                    {
+                        value: this.helmetData.value,
+                    },
+                    this.props.children,
+                );
             }),
             t
         );
     })(r.Component);
 (W.canUseDOM = Y),
     (W.propTypes = {
-        context: a().shape({ helmet: a().shape() }),
+        context: a().shape({
+            helmet: a().shape(),
+        }),
         children: a().node.isRequired,
     }),
-    (W.defaultProps = { context: {} }),
+    (W.defaultProps = {
+        context: {},
+    }),
     (W.displayName = "HelmetProvider");
 var K = function (e, t) {
         var n,
@@ -634,7 +660,10 @@ var K = function (e, t) {
             t
         );
     })(r.Component);
-(Z.propTypes = { context: H.isRequired }), (Z.displayName = "HelmetDispatcher");
+(Z.propTypes = {
+    context: H.isRequired,
+}),
+    (Z.displayName = "HelmetDispatcher");
 var Q = ["children"],
     $ = ["children"],
     J = (function (e) {
@@ -652,9 +681,13 @@ var Q = ["children"],
                 switch (e.type) {
                     case m.SCRIPT:
                     case m.NOSCRIPT:
-                        return { innerHTML: t };
+                        return {
+                            innerHTML: t,
+                        };
                     case m.STYLE:
-                        return { cssText: t };
+                        return {
+                            cssText: t,
+                        };
                     default:
                         throw Error(
                             "<" +
@@ -687,9 +720,13 @@ var Q = ["children"],
                     case m.TITLE:
                         return f({}, i, (((t = {})[r.type] = s), (t.titleAttributes = f({}, a)), t));
                     case m.BODY:
-                        return f({}, i, { bodyAttributes: f({}, a) });
+                        return f({}, i, {
+                            bodyAttributes: f({}, a),
+                        });
                     case m.HTML:
-                        return f({}, i, { htmlAttributes: f({}, a) });
+                        return f({}, i, {
+                            htmlAttributes: f({}, a),
+                        });
                     default:
                         return f({}, i, (((n = {})[r.type] = f({}, a)), n));
                 }
@@ -796,7 +833,12 @@ var Q = ["children"],
                               }),
                           )
                         : r.createElement(B.Consumer, null, function (e) {
-                              return r.createElement(Z, f({}, i, { context: e }));
+                              return r.createElement(
+                                  Z,
+                                  f({}, i, {
+                                      context: e,
+                                  }),
+                              );
                           })
                 );
             }),

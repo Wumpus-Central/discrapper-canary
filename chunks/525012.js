@@ -1,7 +1,9 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(402256),
     i = n(177487);
-let a = 943868237,
+let a = 0x3842494d,
     s = 4,
     o = 2,
     l = 1,
@@ -9,16 +11,28 @@ let a = 943868237,
     u = 12,
     d = 1028,
     f = 5,
-    p = { read: _ };
+    p = {
+        read: _,
+    };
+
 function _(e, t, n) {
     try {
-        if (Array.isArray(e)) return b(new DataView(Uint8Array.from(e).buffer), { size: e.length }, 0, n);
+        if (Array.isArray(e))
+            return b(
+                new DataView(Uint8Array.from(e).buffer),
+                {
+                    size: e.length,
+                },
+                0,
+                n,
+            );
         let { naaBlock: r, dataOffset: i } = h(e, t);
         return b(e, r, i, n);
     } catch (e) {
         return {};
     }
 }
+
 function h(e, t) {
     for (; t + u <= e.byteLength; ) {
         let n = m(e, t);
@@ -31,6 +45,7 @@ function h(e, t) {
     }
     throw Error("No IPTC NAA resource block.");
 }
+
 function m(e, t) {
     if (e.getUint32(t, !1) !== a) throw Error("Not an IPTC resource block.");
     let n = e.getUint8(t + s + o),
@@ -41,12 +56,15 @@ function m(e, t) {
         size: e.getUint32(t + s + o + r),
     };
 }
+
 function g(e) {
     return e.type === d;
 }
+
 function E(e) {
     return +(e.size % 2 != 0);
 }
+
 function b(e, t, n, r) {
     let i,
         a = {},
@@ -79,6 +97,7 @@ function b(e, t, n, r) {
     }
     return a;
 }
+
 function y(e, t, n, i, a) {
     let s = 1,
         o = 3;
@@ -110,24 +129,30 @@ function y(e, t, n, i, a) {
         }
     );
 }
+
 function O(e, t) {
     let n = 28;
     return e.getUint8(t) !== n;
 }
+
 function A(e, t, n) {
     let r = [];
     for (let i = 0; i < n; i++) r.push(e.getUint8(t + i));
     return r;
 }
+
 function v(e, t, n) {
     return e ? (S(e) ? e : I(e) ? e.name(n) : e.name) : `undefined-${t}`;
 }
+
 function S(e) {
     return "string" == typeof e;
 }
+
 function I(e) {
     return "function" == typeof e.name;
 }
+
 function T(e, t, n, r) {
     if (N(e))
         try {
@@ -135,15 +160,19 @@ function T(e, t, n, r) {
         } catch (e) {}
     return C(e, t) ? i.A.decode(r, t) : t;
 }
+
 function C(e, t) {
     return e && t instanceof Array;
 }
+
 function N(e) {
     return e && void 0 !== e.description;
 }
+
 function R(e) {
     return r.A.iptc[e] && r.A.iptc[e].repeatable;
 }
+
 function w(e) {
     return r.A.iptc[e] && void 0 !== r.A.iptc[e].encoding_name;
 }

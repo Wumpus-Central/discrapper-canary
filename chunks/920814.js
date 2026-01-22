@@ -1,4 +1,6 @@
-n.d(t, { B: () => r });
+n.d(t, {
+    B: () => r,
+});
 var r = (function (e) {
     return (
         (e.GUILD_PRODUCTS = "guild_products"),

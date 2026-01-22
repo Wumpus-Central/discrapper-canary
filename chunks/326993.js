@@ -1,4 +1,7 @@
-t.d(i, { default: () => E }), t(896048);
+t.d(i, {
+    default: () => E,
+}),
+    t(896048);
 var n = t(627968),
     r = t(64700),
     l = t(735438),
@@ -19,6 +22,7 @@ var n = t(627968),
     j = t(825453),
     x = t(2655),
     A = t(985018);
+
 function E(e) {
     var i;
     let {
@@ -179,6 +183,7 @@ function E(e) {
         }),
     });
 }
+
 function O(e) {
     let { icon: i, id: t, guildMember: r, bot: l } = e,
         s = v.Ay.getApplicationIconURL({

@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -9,6 +11,7 @@ var i = n(503698),
     c = n(880652),
     u = n(106181),
     d = n(206314);
+
 function f(e) {
     var t;
     let { question: n, questionId: i, responses: f, onResponseChange: p } = e,
@@ -44,7 +47,9 @@ function f(e) {
                       variant: "text-lg/normal",
                       color: "text-strong",
                       children: (0, r.jsx)("div", {
-                          dangerouslySetInnerHTML: { __html: null != (t = n.QuestionText_Unsafe) ? t : "" },
+                          dangerouslySetInnerHTML: {
+                              __html: null != (t = n.QuestionText_Unsafe) ? t : "",
+                          },
                       }),
                   }),
                   _,

@@ -1,4 +1,14 @@
-n.d(t, { default: () => N }), n(896048), n(693327), n(554719), n(680155), n(323874), n(14289), n(35956), n(228524);
+n.d(t, {
+    default: () => N,
+}),
+    n(896048),
+    n(693327),
+    n(554719),
+    n(680155),
+    n(323874),
+    n(14289),
+    n(35956),
+    n(228524);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -15,6 +25,7 @@ var r = n(627968),
     m = n(652215),
     g = n(985018),
     E = n(893221);
+
 function b(e, t, n) {
     return (
         t in e
@@ -28,6 +39,7 @@ function b(e, t, n) {
         e
     );
 }
+
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -44,6 +56,7 @@ function y(e) {
     }
     return e;
 }
+
 function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -56,6 +69,7 @@ function O(e, t) {
     }
     return n;
 }
+
 function A(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -69,6 +83,7 @@ function A(e, t) {
 }
 let v = 104,
     S = 16;
+
 function I(e) {
     var t, n, a;
     let { file: o } = e,
@@ -113,7 +128,9 @@ function I(e) {
     return (0, r.jsx)("img", {
         ref: h,
         src: l,
-        className: s()(E.fileIcon, { [E.image]: !d }),
+        className: s()(E.fileIcon, {
+            [E.image]: !d,
+        }),
         "aria-hidden": !0,
         alt: "",
         style: {
@@ -132,9 +149,13 @@ class T extends i.Component {
         return this.props.upload.item.platform !== d.xz.WEB
             ? null
             : this.props.upload.isImage
-              ? (0, r.jsx)(I, { file: this.props.upload.item.file })
+              ? (0, r.jsx)(I, {
+                    file: this.props.upload.item.file,
+                })
               : (0, r.jsx)("div", {
-                    className: s()(E.fileIcon, { [E[null != (e = this.props.upload.classification) ? e : ""]]: !0 }),
+                    className: s()(E.fileIcon, {
+                        [E[null != (e = this.props.upload.classification) ? e : ""]]: !0,
+                    }),
                 });
     }
 }
@@ -148,7 +169,9 @@ class C extends i.Component {
     componentDidUpdate(e) {
         var t, n, r, i;
         (null == (t = e.upload) ? void 0 : t.filename) !== (null == (n = this.props.upload) ? void 0 : n.filename) &&
-            this.setState({ filename: null != (r = null == (i = this.props.upload) ? void 0 : i.filename) ? r : "" });
+            this.setState({
+                filename: null != (r = null == (i = this.props.upload) ? void 0 : i.filename) ? r : "",
+            });
     }
     render() {
         let { upload: e, transitionState: t, disableSpoiler: n, onClose: i } = this.props,
@@ -170,7 +193,9 @@ class C extends i.Component {
                 },
             ],
             children: [
-                (0, r.jsx)(T, { upload: e }),
+                (0, r.jsx)(T, {
+                    upload: e,
+                }),
                 (0, r.jsxs)(l.BJc, {
                     gap: 24,
                     children: [
@@ -180,7 +205,10 @@ class C extends i.Component {
                                 (0, r.jsx)(l.ksK, {
                                     label: g.intl.string(g.t.ILJuBq),
                                     value: this.state.filename,
-                                    onChange: (e) => this.setState({ filename: e }),
+                                    onChange: (e) =>
+                                        this.setState({
+                                            filename: e,
+                                        }),
                                     onKeyDown: (e) => {
                                         if (e.which === m.Ks6.ENTER) return this.handleSubmit();
                                     },
@@ -190,7 +218,10 @@ class C extends i.Component {
                                           label: g.intl.string(g.t.eOB2eR),
                                           placeholder: g.intl.string(g.t.RNH1jn),
                                           value: this.state.description,
-                                          onChange: (e) => this.setState({ description: e }),
+                                          onChange: (e) =>
+                                              this.setState({
+                                                  description: e,
+                                              }),
                                           onKeyDown: (e) => {
                                               if (e.which === m.Ks6.ENTER) return this.handleSubmit();
                                           },
@@ -201,7 +232,10 @@ class C extends i.Component {
                         !0 !== n &&
                             (0, r.jsx)(l.Checkbox, {
                                 checked: a,
-                                onChange: (e) => this.setState({ hasSpoiler: e }),
+                                onChange: (e) =>
+                                    this.setState({
+                                        hasSpoiler: e,
+                                    }),
                                 label: g.intl.string(g.t["gsI+xC"]),
                             }),
                     ],
@@ -245,6 +279,14 @@ class C extends i.Component {
         });
     }
 }
+
 function N(e) {
-    return e.upload.item.platform !== d.xz.WEB ? null : (0, r.jsx)(C, A(y({}, e), { file: e.upload.item.file }));
+    return e.upload.item.platform !== d.xz.WEB
+        ? null
+        : (0, r.jsx)(
+              C,
+              A(y({}, e), {
+                  file: e.upload.item.file,
+              }),
+          );
 }

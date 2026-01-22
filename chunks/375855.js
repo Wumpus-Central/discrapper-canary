@@ -1,4 +1,8 @@
-n.d(t, { A: () => I }), n(114821), n(339614);
+n.d(t, {
+    A: () => I,
+}),
+    n(114821),
+    n(339614);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -20,6 +24,7 @@ var r = n(627968),
     j = n(607567),
     v = n(985018),
     x = n(653750);
+
 function E(e) {
     let { icon: t, users: n } = e;
     return 0 === n.length
@@ -38,6 +43,7 @@ function E(e) {
               ],
           });
 }
+
 function _(e) {
     let { muteConfig: t, className: n } = e;
     return (null == t ? void 0 : t.end_time) == null
@@ -52,6 +58,7 @@ function _(e) {
               className: n,
           });
 }
+
 function C(e) {
     let t,
         n,
@@ -139,12 +146,15 @@ function C(e) {
             U
                 ? (0, r.jsx)(_, {
                       muteConfig: V,
-                      className: a()(x.LM, { [x.Sx]: null != L || null != G }),
+                      className: a()(x.LM, {
+                          [x.Sx]: null != L || null != G,
+                      }),
                   })
                 : null,
         ],
     });
 }
+
 function S(e) {
     let { channel: t } = e,
         n = (0, p.Ay)(t);
@@ -157,10 +167,13 @@ function S(e) {
                     children: n,
                 }),
             }),
-            (0, r.jsx)(C, { channel: t }),
+            (0, r.jsx)(C, {
+                channel: t,
+            }),
         ],
     });
 }
+
 function I(e) {
     let { channel: t, children: n } = e,
         i = (0, p.Ay)(t),
@@ -168,7 +181,9 @@ function I(e) {
             () =>
                 (0, r.jsx)("div", {
                     className: x.A_,
-                    children: (0, r.jsx)(S, { channel: t }),
+                    children: (0, r.jsx)(S, {
+                        channel: t,
+                    }),
                 }),
             [t],
         );

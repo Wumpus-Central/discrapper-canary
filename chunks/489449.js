@@ -1,4 +1,7 @@
-n.d(t, { default: () => w }), n(896048);
+n.d(t, {
+    default: () => w,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     a = n(239947),
@@ -16,6 +19,7 @@ var r = n(627968),
     O = n(412728),
     j = n(985018),
     y = n(826701);
+
 function h(e) {
     let { question: t, onChange: n, error: l, inputRef: a } = e;
     return (0, r.jsx)(o.fs1, {
@@ -32,6 +36,7 @@ function h(e) {
         showCharacterCount: !0,
     });
 }
+
 function v(e) {
     let { selectedDuration: t, onSelect: n } = e,
         l = (0, b.A)(),
@@ -40,7 +45,9 @@ function v(e) {
         className: y.p0,
         children: (0, r.jsx)(o.l6P, {
             label: j.intl.string(j.t.bGHzxb),
-            "aria-label": j.intl.formatToPlainString(j.t.nXNHNJ, { duration: a }),
+            "aria-label": j.intl.formatToPlainString(j.t.nXNHNJ, {
+                duration: a,
+            }),
             options: Object.entries(l).map((e) => {
                 let [t, n] = e;
                 return {
@@ -56,6 +63,7 @@ function v(e) {
         }),
     });
 }
+
 function w(e) {
     let { channel: t, transitionState: n, onClose: b, initialQuestion: P, initialAnswers: A, initialDuration: C } = e;
     (0, s.A)({
@@ -149,7 +157,10 @@ function w(e) {
                         }
                         return e;
                     })({}, e)),
-                    (l = l = { channel: t }),
+                    (l = l =
+                        {
+                            channel: t,
+                        }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
                         : (function (e, t) {
@@ -229,7 +240,9 @@ function w(e) {
                     error: null == M ? void 0 : M.question,
                     inputRef: R,
                 }),
-                (0, r.jsx)(o.hKd, { size: 26 }),
+                (0, r.jsx)(o.hKd, {
+                    size: 26,
+                }),
                 (0, r.jsxs)(o.D0$, {
                     role: "group",
                     label: j.intl.string(j.t.oMBfeS),
@@ -272,7 +285,9 @@ function w(e) {
                             }),
                     ],
                 }),
-                (0, r.jsx)(o.hKd, { size: 18 }),
+                (0, r.jsx)(o.hKd, {
+                    size: 18,
+                }),
                 (0, r.jsx)(v, {
                     selectedDuration: _,
                     onSelect: T,

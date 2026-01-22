@@ -3,7 +3,7 @@ n.d(t, {
     lE: () => r,
     o: () => s,
 });
-let r = 21600000;
+let r = 216e5;
 var l,
     i,
     a = (((l = {}).WARNING = "warning"), (l.UNREAD = "unread"), l),

@@ -1,4 +1,9 @@
-n.d(t, { A: () => k }), n(733351), n(867070), n(896048);
+n.d(t, {
+    A: () => k,
+}),
+    n(733351),
+    n(867070),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -30,6 +35,7 @@ var r = n(627968),
     P = n(985018),
     w = n(819644),
     R = n(107550);
+
 function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -55,6 +61,7 @@ function D(e) {
     }
     return e;
 }
+
 function G(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -74,6 +81,7 @@ function G(e, t) {
     );
 }
 let L = "DRAGGABLE_ROLE";
+
 function k(e) {
     let {
             setEditRoleId: t,
@@ -95,7 +103,10 @@ function k(e) {
     i.useEffect(() => {
         p.current ||
             "" === u.trimStart() ||
-            (A.default.track(C.HAw.SEARCH_STARTED, { search_type: "Roles" }), (p.current = !0));
+            (A.default.track(C.HAw.SEARCH_STARTED, {
+                search_type: "Roles",
+            }),
+            (p.current = !0));
     }, [u]);
     let x = i.useMemo(() => s.filter((e) => (0, _.Vh)(e, m)), [s, m]),
         h = i.useMemo(() => [...s, l], [s, l]),
@@ -135,11 +146,14 @@ function k(e) {
         renderRow: I,
     });
 }
+
 function M() {
     return (0, r.jsxs)("div", {
         className: w.tp,
         children: [
-            (0, r.jsx)("div", { className: R._M }),
+            (0, r.jsx)("div", {
+                className: R._M,
+            }),
             (0, r.jsx)(f.nFg, {
                 size: "md",
                 color: "currentColor",
@@ -153,6 +167,7 @@ function M() {
         ],
     });
 }
+
 function U(e) {
     var t, l, o;
     let {
@@ -183,7 +198,9 @@ function U(e) {
                     }
                 ),
                 canDrag: () => U && !M,
-                collect: (e) => ({ isDragging: e.isDragging() }),
+                collect: (e) => ({
+                    isDragging: e.isDragging(),
+                }),
                 end: (e, t) => {
                     let n = t.getDropResult();
                     null == n ? A() : E(n.roleId);
@@ -199,10 +216,16 @@ function U(e) {
                 collect: (e) => {
                     let t = e.getItem();
                     return null != t && e.isOver() && e.canDrop()
-                        ? { dragSourcePosition: t.position }
-                        : { dragSourcePosition: null };
+                        ? {
+                              dragSourcePosition: t.position,
+                          }
+                        : {
+                              dragSourcePosition: null,
+                          };
                 },
-                drop: () => ({ roleId: d.id }),
+                drop: () => ({
+                    roleId: d.id,
+                }),
             }),
             [M, d],
         ),
@@ -231,6 +254,7 @@ function U(e) {
             },
             className: s()(w.xf, w.Ao),
         });
+
     function Z() {
         T(d.id);
     }
@@ -252,7 +276,9 @@ function U(e) {
         }),
         children: [
             (0, r.jsx)("div", {
-                className: s()(w.co, R._M, { [w.Y6]: M || _ }),
+                className: s()(w.co, R._M, {
+                    [w.Y6]: M || _,
+                }),
                 onMouseEnter: () => B(!0),
                 onMouseLeave: () => B(!1),
                 children: (0, r.jsx)(f.WP0, {
@@ -298,7 +324,9 @@ function U(e) {
             }),
             (0, r.jsx)(u.m, {
                 text: P.intl.string(P.t.CW75t0),
-                "aria-label": P.intl.formatToPlainString(P.t.Fgs8fD, { count: "".concat(y) }),
+                "aria-label": P.intl.formatToPlainString(P.t.Fgs8fD, {
+                    count: "".concat(y),
+                }),
                 position: "right",
                 children: (0, r.jsxs)(f.DUT, {
                     className: s()(w.Tb, R.Hp),
@@ -349,6 +377,7 @@ function U(e) {
         ],
     });
 }
+
 function F(e) {
     var t, n, i, l;
     let { guildId: a, role: c, size: o, enableTooltip: u, className: g, defaultIconClassName: b } = e,
@@ -385,7 +414,9 @@ function F(e) {
                     (0, r.jsx)("svg", {
                         width: "0",
                         height: "0",
-                        style: { position: "absolute" },
+                        style: {
+                            position: "absolute",
+                        },
                         children: (0, r.jsx)("linearGradient", {
                             id: x,
                             x1: "0%",

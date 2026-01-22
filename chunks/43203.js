@@ -12,7 +12,13 @@ var r = n(73153),
     u = n(652215);
 async function d(e, t) {
     let { invite: n } = await i.Ay.resolveInvite(e, t);
-    if (null == n) throw new o.A({ errorCode: u.Lw6.INVALID_INVITE }, "Invalid invite id: ".concat(e));
+    if (null == n)
+        throw new o.A(
+            {
+                errorCode: u.Lw6.INVALID_INVITE,
+            },
+            "Invalid invite id: ".concat(e),
+        );
     return (
         a.default.isAuthenticated()
             ? r.h.dispatch({

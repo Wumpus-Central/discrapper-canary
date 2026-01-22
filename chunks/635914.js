@@ -1,4 +1,9 @@
-n.d(t, { A: () => m }), n(321073), n(896048), n(228524);
+n.d(t, {
+    A: () => m,
+}),
+    n(321073),
+    n(896048),
+    n(228524);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -9,6 +14,7 @@ var r = n(627968),
     u = n(203982),
     d = n(652215),
     f = n(549756);
+
 function p(e, t, n) {
     return (
         t in e
@@ -28,7 +34,9 @@ let h = () =>
         {
             className: f.HR,
             children: [
-                (0, r.jsx)("div", { className: f.tW }),
+                (0, r.jsx)("div", {
+                    className: f.tW,
+                }),
                 (0, r.jsx)("img", {
                     alt: "",
                     src: n(24160),
@@ -39,11 +47,15 @@ let h = () =>
     );
 class b extends l.PureComponent {
     componentDidMount() {
-        this.setState({ animating: !0 }),
+        this.setState({
+            animating: !0,
+        }),
             (this._renderSecondaryTimeout = setTimeout(() => {
-                this.setState({ renderSecondary: !0 });
+                this.setState({
+                    renderSecondary: !0,
+                });
             }, 120)),
-            (this._doneTimeout = setTimeout(this.done, 1000));
+            (this._doneTimeout = setTimeout(this.done, 1e3));
     }
     componentDidUpdate(e, t) {
         this.state.renderSecondary && t.renderSecondary;
@@ -155,7 +167,9 @@ class b extends l.PureComponent {
         return (
             e && s.push(this.renderSecondary(t, n)),
             (0, r.jsx)("div", {
-                className: a()(f.kL, { [f.i0]: l }),
+                className: a()(f.kL, {
+                    [f.i0]: l,
+                }),
                 style: {
                     top: this.props.top,
                     left: this.props.left,
@@ -184,7 +198,12 @@ class b extends l.PureComponent {
 class g extends l.PureComponent {
     componentDidMount() {
         this.setTimeout(() => {
-            this.setState({ visible: !0 }), u._.dispatch(d.jej.SHAKE_APP, { duration: 2400 });
+            this.setState({
+                visible: !0,
+            }),
+                u._.dispatch(d.jej.SHAKE_APP, {
+                    duration: 2400,
+                });
         }, 1800),
             this.setTimeout(this.createExplosion, 1800);
     }
@@ -193,7 +212,9 @@ class g extends l.PureComponent {
     }
     render() {
         return (0, r.jsx)("div", {
-            className: a()(f.QO, { [f.RK]: this.state.visible }),
+            className: a()(f.QO, {
+                [f.RK]: this.state.visible,
+            }),
             children: this.children,
         });
     }
@@ -237,13 +258,15 @@ class g extends l.PureComponent {
                         ),
                     ),
                         this.setTimeout(this.createExplosion, 240),
-                        this.setState({ explosions: this.state.explosions + 1 });
+                        this.setState({
+                            explosions: this.state.explosions + 1,
+                        });
                 } else this.setTimeout(this.addSymbol, 750);
             }),
             p(this, "addSymbol", () => {
                 (this.children = [(0, r.jsx)(h, {}, "symbol")]),
                     this.forceUpdate(),
-                    this.setTimeout(this.delayedClose, 3000);
+                    this.setTimeout(this.delayedClose, 3e3);
             }),
             p(this, "delayedClose", () => {
                 this.props.handleDemonClose();

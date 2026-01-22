@@ -50,6 +50,7 @@ var r = n(627968),
     Y = n(985018),
     W = n(679740),
     K = n(814803);
+
 function z(e, t, n) {
     return (
         t in e
@@ -63,6 +64,7 @@ function z(e, t, n) {
         e
     );
 }
+
 function q(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -79,6 +81,7 @@ function q(e) {
     }
     return e;
 }
+
 function X(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -91,6 +94,7 @@ function X(e, t) {
     }
     return n;
 }
+
 function Z(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -104,6 +108,7 @@ function Z(e, t) {
 }
 let Q = 32,
     $ = 80;
+
 function J(e) {
     let {
         avatarSrc: t,
@@ -206,17 +211,31 @@ let ee = i.memo(function (e) {
                                     let { onClick: t } = e;
                                     return (0, r.jsx)(
                                         O.A,
-                                        Z(q({ ref: I }, l), {
-                                            className: W.UT,
-                                            onClick: t,
-                                        }),
+                                        Z(
+                                            q(
+                                                {
+                                                    ref: I,
+                                                },
+                                                l,
+                                            ),
+                                            {
+                                                className: W.UT,
+                                                onClick: t,
+                                            },
+                                        ),
                                     );
                                 },
                             },
                             "role-icon-children",
                         )
                       : 2 === C
-                        ? (0, r.jsx)(O.A, Z(q({}, l), { className: W.UT }), "role-icon-children")
+                        ? (0, r.jsx)(
+                              O.A,
+                              Z(q({}, l), {
+                                  className: W.UT,
+                              }),
+                              "role-icon-children",
+                          )
                         : null,
             [C, l, T],
         ),
@@ -307,6 +326,7 @@ let ee = i.memo(function (e) {
               ],
           });
 });
+
 function et(e, t, n) {
     let {
         message: i,
@@ -348,6 +368,7 @@ function et(e, t, n) {
         ],
     });
 }
+
 function en(e) {
     var t, n, a;
     let { props: s, guildId: l, handleRenderPopout: u, showCommunicationDisabledStyles: d = !1, className: _ } = e,
@@ -372,7 +393,9 @@ function en(e) {
         }),
         U = (0, B.A)(h),
         G = g ? Q : $,
-        { pendingAvatarDecoration: V } = (0, S.A)({ guildId: l }),
+        { pendingAvatarDecoration: V } = (0, S.A)({
+            guildId: l,
+        }),
         F = (0, b.lw)({
             pendingValue: h.author.id === (null == M ? void 0 : M.id) ? V : void 0,
             userValue: null == (t = h.author) ? void 0 : t.avatarDecoration,
@@ -491,6 +514,7 @@ function en(e) {
                   ),
               });
 }
+
 function er(e) {
     let {
             message: t,
@@ -556,6 +580,7 @@ function er(e) {
 let ei = (e) => {
     e || (0, E.Z)();
 };
+
 function ea(e, t, n, r) {
     return (!e || t) && null != n && null != r ? 1 : (!e || t) && null != n ? 2 : 0;
 }
@@ -568,12 +593,16 @@ let es = i.memo(function (e) {
         return (0, r.jsx)(u.m, {
             asContainer: !0,
             shouldShow: null != i,
-            text: Y.intl.formatToPlainString(Y.t["8zbGNR"], { date: i }),
+            text: Y.intl.formatToPlainString(Y.t["8zbGNR"], {
+                date: i,
+            }),
             onTooltipShow: () => (0, T.A)(n.id),
             children: (0, r.jsx)(d.DUT, {
                 className: W.vu,
                 onClick: () => ei(t),
-                "aria-label": Y.intl.formatToPlainString(Y.t["8zbGNR"], { date: i }),
+                "aria-label": Y.intl.formatToPlainString(Y.t["8zbGNR"], {
+                    date: i,
+                }),
                 children: (0, r.jsx)("img", {
                     alt: "",
                     className: W.MP,
@@ -654,7 +683,9 @@ let es = i.memo(function (e) {
                                         color: "currentColor",
                                         className: a ? W.EI : W.bu,
                                     }),
-                                    (0, r.jsx)(d.AC4, { children: Y.intl.string(Y.t.AmHag5) }),
+                                    (0, r.jsx)(d.AC4, {
+                                        children: Y.intl.string(Y.t.AmHag5),
+                                    }),
                                 ],
                             }),
                         }),

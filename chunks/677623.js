@@ -133,16 +133,19 @@ function t(e) {
         }
     });
 var n = Array.isArray;
+
 function r(e, t, n, r, i) {
     for (var a = 0; a < i; ++a) n[a + r] = e[a + t];
 }
+
 function i(e) {
     return (e >>>= 0), (e -= 1), (e |= e >> 1), (e |= e >> 2), (e |= e >> 4), (e |= e >> 8), (e |= e >> 16) + 1;
 }
+
 function a(e) {
     if ("number" != typeof e)
         if (!n(e)) return 16;
         else e = e.length;
-    return i(Math.min(Math.max(16, e), 1073741824));
+    return i(Math.min(Math.max(16, e), 0x40000000));
 }
 e.exports = t;

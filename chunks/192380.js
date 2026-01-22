@@ -1,4 +1,8 @@
-n.d(t, { A: () => h }), n(896048), n(492834);
+n.d(t, {
+    A: () => h,
+}),
+    n(896048),
+    n(492834);
 var r = n(627968),
     i = n(64700),
     l = n(311907),
@@ -84,7 +88,9 @@ let h = function (e) {
                                   padding: "32px",
                                   textAlign: "center",
                               },
-                              children: (0, r.jsx)("div", { children: "Loading ICYMI feed..." }),
+                              children: (0, r.jsx)("div", {
+                                  children: "Loading ICYMI feed...",
+                              }),
                           },
                           e.id,
                       )
@@ -96,7 +102,9 @@ let h = function (e) {
                                     padding: "16px",
                                     textAlign: "center",
                                 },
-                                children: (0, r.jsx)("div", { children: "Loading more..." }),
+                                children: (0, r.jsx)("div", {
+                                    children: "Loading more...",
+                                }),
                             },
                             e.id,
                         )
@@ -109,7 +117,9 @@ let h = function (e) {
                                       textAlign: "center",
                                       color: "#949ba4",
                                   },
-                                  children: (0, r.jsx)("div", { children: "You're all caught up!" }),
+                                  children: (0, r.jsx)("div", {
+                                      children: "You're all caught up!",
+                                  }),
                               },
                               e.id,
                           )
@@ -118,7 +128,9 @@ let h = function (e) {
                               {
                                   ref: (t) => N(e.id, t),
                                   "data-item-id": e.id,
-                                  children: (0, r.jsx)(d.A, { item: e }),
+                                  children: (0, r.jsx)(d.A, {
+                                      item: e,
+                                  }),
                               },
                               e.id,
                           ),
@@ -130,7 +142,9 @@ let h = function (e) {
                   padding: "32px",
                   textAlign: "center",
               },
-              children: (0, r.jsx)("div", { children: "Loading ICYMI feed..." }),
+              children: (0, r.jsx)("div", {
+                  children: "Loading ICYMI feed...",
+              }),
           })
         : (0, r.jsxs)("div", {
               className: f.k,
@@ -173,7 +187,9 @@ let h = function (e) {
                                       textAlign: "center",
                                   },
                                   children: (0, r.jsx)("div", {
-                                      style: { color: "#949ba4" },
+                                      style: {
+                                          color: "#949ba4",
+                                      },
                                       children: "Loading more...",
                                   }),
                               }),

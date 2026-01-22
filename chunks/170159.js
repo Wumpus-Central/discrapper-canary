@@ -1,4 +1,9 @@
-n.d(t, { A: () => L }), n(747238), n(896048), n(65821);
+n.d(t, {
+    A: () => L,
+}),
+    n(747238),
+    n(896048),
+    n(65821);
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -28,6 +33,7 @@ var r = n(627968),
     T = n(652215),
     C = n(985018),
     R = n(473169);
+
 function w(e, t, n) {
     return (
         t in e
@@ -54,7 +60,11 @@ class P extends i.PureComponent {
                 this.resolveGiftCode();
             }),
             t && !e.authenticated && this.handleAuthenticated(),
-            !t && e.authenticated && this.setState({ currentUser: null });
+            !t &&
+                e.authenticated &&
+                this.setState({
+                    currentUser: null,
+                });
     }
     handleAuthenticated() {
         let { currentUser: e } = this.state;
@@ -81,7 +91,9 @@ class P extends i.PureComponent {
             : i === T.t02.INVALID_GIFT_REDEMPTION_OWNED && (null == n ? void 0 : n.productLine) === T.EZt.COLLECTIBLES
               ? C.intl.string(C.t.mdLtb5)
               : null != t || i === T.t02.INVALID_GIFT_REDEMPTION_OWNED
-                ? C.intl.format(C.t.PIdmg3, { libraryLink: T.BVt.APPLICATION_LIBRARY })
+                ? C.intl.format(C.t.PIdmg3, {
+                      libraryLink: T.BVt.APPLICATION_LIBRARY,
+                  })
                 : e.isClaimed || i === T.t02.INVALID_GIFT_REDEMPTION_EXHAUSTED
                   ? C.intl.string(C.t.ilcBeX)
                   : i === T.t02.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED
@@ -90,7 +102,12 @@ class P extends i.PureComponent {
     }
     renderSpinner(e) {
         return (0, r.jsxs)(p.Ay, {
-            children: [(0, r.jsx)(p.hE, { children: e }), (0, r.jsx)(p.CK, {})],
+            children: [
+                (0, r.jsx)(p.hE, {
+                    children: e,
+                }),
+                (0, r.jsx)(p.CK, {}),
+            ],
         });
     }
     renderExpiredInvite() {
@@ -105,7 +122,9 @@ class P extends i.PureComponent {
                     className: l()(R.Ot, R.QB),
                     children: C.intl.string(C.t.KPowgn),
                 }),
-                (0, r.jsx)(p.tK, { children: C.intl.string(C.t.j8734b) }),
+                (0, r.jsx)(p.tK, {
+                    children: C.intl.string(C.t.j8734b),
+                }),
                 (0, r.jsx)("div", {
                     className: l()(R.eT, R.QB),
                     children: (0, r.jsx)(o.Button, {
@@ -129,13 +148,18 @@ class P extends i.PureComponent {
                     className: R.QB,
                     children: C.intl.string(C.t.csrAMJ),
                 }),
-                (0, r.jsx)(p.tK, { children: C.intl.string(C.t["m1+IBn"]) }),
+                (0, r.jsx)(p.tK, {
+                    children: C.intl.string(C.t["m1+IBn"]),
+                }),
                 (0, r.jsx)("div", {
                     className: R.eT,
                     children: (0, r.jsx)(o.Button, {
                         text: C.intl.string(C.t["qsI+EH"]),
                         fullWidth: !0,
-                        onClick: () => this.setState({ continueOnWeb: !0 }),
+                        onClick: () =>
+                            this.setState({
+                                continueOnWeb: !0,
+                            }),
                     }),
                 }),
             ],
@@ -149,7 +173,11 @@ class P extends i.PureComponent {
                     src: n(792525),
                     className: R.QB,
                 }),
-                (0, r.jsx)(p.hE, { children: C.intl.format(C.t["ivLUf/"], { username: e.username }) }),
+                (0, r.jsx)(p.hE, {
+                    children: C.intl.format(C.t["ivLUf/"], {
+                        username: e.username,
+                    }),
+                }),
                 (0, r.jsx)(p.tK, {
                     className: R.QX,
                     children: C.intl.string(C.t["8Su18+"]),
@@ -183,7 +211,9 @@ class P extends i.PureComponent {
             transitionTo: i,
             children: (0, r.jsxs)(p.Ay, {
                 children: [
-                    (0, r.jsx)(N.A, { giftCode: e }),
+                    (0, r.jsx)(N.A, {
+                        giftCode: e,
+                    }),
                     (0, r.jsx)("div", {
                         className: R.eT,
                         children: (0, r.jsx)(o.Button, {
@@ -260,32 +290,51 @@ class P extends i.PureComponent {
                 fetchingUser: !1,
             }),
             w(this, "refreshUser", () => {
-                this.setState({ fetchingUser: !0 }),
+                this.setState({
+                    fetchingUser: !0,
+                }),
                     f
-                        .rQ({ withAnalyticsToken: !0 })
+                        .rQ({
+                            withAnalyticsToken: !0,
+                        })
                         .then((e) =>
                             this.setState({
                                 currentUser: e,
                                 fetchingUser: !1,
                             }),
                         )
-                        .catch(() => this.setState({ fetchingUser: !1 }));
+                        .catch(() =>
+                            this.setState({
+                                fetchingUser: !1,
+                            }),
+                        );
             }),
             w(this, "handleLogout", () => {
                 let e = this.props.match.params.giftCode;
                 u.A.logout("gift_code", T.BVt.GIFT_CODE_LOGIN(e));
             }),
             w(this, "handleResendVerification", () => {
-                u.A.verifyResend(), this.setState({ sentVerification: !0 });
+                u.A.verifyResend(),
+                    this.setState({
+                        sentVerification: !0,
+                    });
             }),
             w(this, "handleAccept", async () => {
                 let { transitionTo: e, giftCode: t } = this.props;
                 if (null == t) throw Error("Trying to accept gift before resolve");
                 let n = this.getCode();
                 try {
-                    this.setState({ error: null }), await d.A.redeemGiftCode({ code: n }), e(T.BVt.APP);
+                    this.setState({
+                        error: null,
+                    }),
+                        await d.A.redeemGiftCode({
+                            code: n,
+                        }),
+                        e(T.BVt.APP);
                 } catch (e) {
-                    this.setState({ error: e });
+                    this.setState({
+                        error: e,
+                    });
                 }
             }),
             w(this, "resolveGiftCode", () => {
@@ -324,7 +373,12 @@ let L = a.Ay.connectStores([E.A, b.A, x.default, v.A, _.A, g.A], (e) => {
         }, [a, s, l]),
         a)
             ? (0, r.jsxs)(p.Ay, {
-                  children: [(0, r.jsx)(p.hE, { children: C.intl.string(C.t.b3lf1c) }), (0, r.jsx)(p.CK, {})],
+                  children: [
+                      (0, r.jsx)(p.hE, {
+                          children: C.intl.string(C.t.b3lf1c),
+                      }),
+                      (0, r.jsx)(p.CK, {}),
+                  ],
               })
             : n;
     };

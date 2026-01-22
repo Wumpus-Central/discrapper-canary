@@ -1,4 +1,7 @@
-i.d(e, { U: () => _ }), i(896048);
+i.d(e, {
+    U: () => _,
+}),
+    i(896048);
 var n = i(419954),
     l = i(954571),
     s = i(975571),
@@ -14,7 +17,9 @@ var n = i(419954),
 let _ = (0, n.zD)(a.X.CONTENT_AND_SOCIAL_PERMISSIONS_ACTIVITY_JOIN_SETTING, {
     useTitle: () => d.intl.string(d.t["T+nevN"]),
     useSubtitle: () =>
-        d.intl.format(d.t.jXKQCu, { helpdeskArticle: s.A.getArticleURL(E.MVz.ACTIVITY_STATUS_SETTINGS) }),
+        d.intl.format(d.t.jXKQCu, {
+            helpdeskArticle: s.A.getArticleURL(E.MVz.ACTIVITY_STATUS_SETTINGS),
+        }),
     useValue: () => {
         let t = (0, T.Tx)();
         return !u.pE.useSetting().includes(t);

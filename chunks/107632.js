@@ -1,4 +1,6 @@
-l.d(t, { default: () => Y });
+l.d(t, {
+    default: () => Y,
+});
 var n = l(627968);
 l(64700);
 var i = l(311907),
@@ -85,7 +87,9 @@ let Y = (0, s.A)(
                     channelId: z,
                     context: W,
                 }),
-                ed = (0, N.A)({ user: t }),
+                ed = (0, N.A)({
+                    user: t,
+                }),
                 es = (0, w.A)(t.id),
                 ec = (0, B.A)(t.id),
                 eo = (0, h.u)({
@@ -104,7 +108,9 @@ let Y = (0, s.A)(
                     guildId: l,
                 }),
                 eg = (0, o.A)(null, t),
-                ep = (0, x.A)({ user: t }),
+                ep = (0, x.A)({
+                    user: t,
+                }),
                 eb = (0, P.A)({
                     user: t,
                     guildId: l,
@@ -160,8 +166,13 @@ let Y = (0, s.A)(
                                 (0, n.jsxs)(r.rXV, {
                                     children: [F && et, u && el, en, er, eU, F && ea, F && ed, ei],
                                 }),
-                                s && (0, n.jsx)(r.rXV, { children: es }),
-                                (0, n.jsx)(r.rXV, { children: F && eg }),
+                                s &&
+                                    (0, n.jsx)(r.rXV, {
+                                        children: es,
+                                    }),
+                                (0, n.jsx)(r.rXV, {
+                                    children: F && eg,
+                                }),
                                 (0, n.jsxs)(r.rXV, {
                                     children: [
                                         s && ec,
@@ -176,7 +187,9 @@ let Y = (0, s.A)(
                                         Y && eP,
                                     ],
                                 }),
-                                (0, n.jsx)(r.rXV, { children: ef }),
+                                (0, n.jsx)(r.rXV, {
+                                    children: ef,
+                                }),
                                 (0, n.jsxs)(r.rXV, {
                                     children: [eO, ej],
                                 }),
@@ -186,11 +199,15 @@ let Y = (0, s.A)(
                                     }),
                             ],
                         }),
-                    (0, n.jsx)(r.rXV, { children: em }),
+                    (0, n.jsx)(r.rXV, {
+                        children: em,
+                    }),
                 ],
             });
         },
-        { object: H.ZSU.CONTEXT_MENU },
+        {
+            object: H.ZSU.CONTEXT_MENU,
+        },
     ),
     [u.A.CONTEXT_MENU, u.A.GUILD_CHANNEL_USER_MENU],
 );

@@ -3,4 +3,6 @@ function a() {
         "Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
     );
 }
-r.d(t, { A: () => a });
+r.d(t, {
+    A: () => a,
+});

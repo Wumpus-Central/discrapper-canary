@@ -1,4 +1,7 @@
-s.d(e, { default: () => A }), s(896048);
+s.d(e, {
+    default: () => A,
+}),
+    s(896048);
 var a = s(627968),
     n = s(64700),
     i = s(877227),
@@ -12,6 +15,7 @@ var a = s(627968),
     u = s(985018),
     S = s(123568),
     f = s(888283);
+
 function A(t) {
     let { upsellType: e, onClose: s, transitionState: A } = t,
         [C, E] = (0, l.kn)([r.M.Q2_2025_MARKETING_MOMENT_FOLLOW_UP_MODAL]);

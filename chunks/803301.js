@@ -1,9 +1,13 @@
-n.d(t, { A: () => T }), n(896048);
+n.d(t, {
+    A: () => T,
+}),
+    n(896048);
 var r,
     i = n(311907),
     a = n(73153),
     s = n(652215),
     o = n(731854);
+
 function l(e, t, n) {
     return (
         t in e
@@ -17,6 +21,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -33,6 +38,7 @@ function c(e) {
     }
     return e;
 }
+
 function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -45,6 +51,7 @@ function u(e, t) {
     }
     return n;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -60,9 +67,11 @@ let f = null,
     p = null,
     _ = {},
     h = {};
+
 function m(e, t) {
     return "".concat(e, ":").concat(t);
 }
+
 function g(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
         r = _[e];
@@ -73,24 +82,34 @@ function g(e, t) {
         _[e][null != t ? t : s.eGj] = i;
     }
 }
+
 function E(e, t, n, r) {
     var i;
     e in _ || (_[e] = {});
     let a = null != (i = _[e][null != t ? t : s.eGj]) ? i : {};
-    (_[e][null != t ? t : s.eGj] = d(c({}, a), { [r]: { streamId: n } })), delete h[m(r, e)];
+    (_[e][null != t ? t : s.eGj] = d(c({}, a), {
+        [r]: {
+            streamId: n,
+        },
+    })),
+        delete h[m(r, e)];
 }
+
 function b(e) {
     let { user: t, sessionId: n } = e;
     (f = t.id), (p = n);
 }
+
 function y(e) {
     let { user: t, sessionId: n } = e;
     (f = t.id), (p = n);
 }
+
 function O(e) {
     let { userId: t, guildId: n, streamId: r, context: i } = e;
     null != r ? E(t, n, r, i) : g(t, n, i);
 }
+
 function A(e) {
     let { voiceStates: t } = e;
     return t.reduce((e, t) => {
@@ -106,6 +125,7 @@ function A(e) {
         return !0;
     }, !1);
 }
+
 function v(e) {
     let { videoStreamId: t, userId: n, streamKey: r, mediaContext: i } = e;
     h[m(i, n)] = {
@@ -115,6 +135,7 @@ function v(e) {
         mediaContext: i,
     };
 }
+
 function S(e) {
     let { mediaContext: t, userId: n } = e,
         r = m(t, n);

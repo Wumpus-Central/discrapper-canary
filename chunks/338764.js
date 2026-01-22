@@ -1,4 +1,6 @@
-i.d(e, { A: () => O });
+i.d(e, {
+    A: () => O,
+});
 var s,
     n = i(627968),
     r = i(64700),
@@ -15,6 +17,7 @@ var s,
     g = i(852431),
     v = i(652215),
     w = i(917686);
+
 function b(t, e, i) {
     return (
         e in t
@@ -93,7 +96,9 @@ class E extends (s = r.Component) {
                           }),
                       })
                     : (0, n.jsx)("canvas", {
-                          className: h()(w.Ji, { [w.F9]: i }),
+                          className: h()(w.Ji, {
+                              [w.F9]: i,
+                          }),
                           ref: this.setCanvas,
                       });
             },
@@ -154,7 +159,7 @@ class E extends (s = r.Component) {
                     this.advanceTransitionalState();
             }),
             b(this, "delayedPause", () => {
-                clearTimeout(this._pauseTimeout), (this._pauseTimeout = setTimeout(this.pause, 4000));
+                clearTimeout(this._pauseTimeout), (this._pauseTimeout = setTimeout(this.pause, 4e3));
             }),
             b(this, "updateWaveState", (t) => {
                 let { updateWaveState: e } = this.props;
@@ -170,7 +175,7 @@ class E extends (s = r.Component) {
                     return;
                 }
                 let t = Date.now(),
-                    e = Math.min((t - this._lastTick) / 1000, 8 * x);
+                    e = Math.min((t - this._lastTick) / 1e3, 8 * x);
                 for (; e > 0; ) {
                     let t = e < x ? e : x;
                     this.updateAnimation(t), (e -= t);
@@ -181,7 +186,9 @@ class E extends (s = r.Component) {
             (this.children = [new p.A(), new f.A(), this.wave]);
     }
 }
-b(E, "defaultProps", { embedded: !1 });
+b(E, "defaultProps", {
+    embedded: !1,
+});
 let O = (t) => {
     let e = (0, c.rdh)(l.A.unsafe_rawColors.PRIMARY_630).hex();
     return (0, n.jsx)(
@@ -201,6 +208,11 @@ let O = (t) => {
                     });
             }
             return t;
-        })({ canvasFillStyle: e }, t),
+        })(
+            {
+                canvasFillStyle: e,
+            },
+            t,
+        ),
     );
 };

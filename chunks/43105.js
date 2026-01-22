@@ -13,6 +13,7 @@ var r = n(627968),
     d = n(916845),
     f = n(627330),
     p = n(248789);
+
 function _(e, t, n) {
     return (
         t in e
@@ -26,6 +27,7 @@ function _(e, t, n) {
         e
     );
 }
+
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,6 +44,7 @@ function h(e) {
     }
     return e;
 }
+
 function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -54,6 +57,7 @@ function m(e, t) {
     }
     return n;
 }
+
 function g(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -65,6 +69,7 @@ function g(e, t) {
         e
     );
 }
+
 function E(e, t) {
     if (null == e) return {};
     var n,
@@ -81,6 +86,7 @@ function E(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function b(e, t) {
     if (null == e) return {};
     var n,
@@ -91,6 +97,7 @@ function b(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function y(e) {
     var t;
     let {
@@ -148,7 +155,9 @@ function y(e) {
                       alignmentStrategy: "edge",
                       align: N.align,
                   }
-                : { alignmentStrategy: "trigger-center" },
+                : {
+                      alignmentStrategy: "trigger-center",
+                  },
         );
     return (0, r.jsx)(
         l.x,
@@ -163,7 +172,9 @@ function y(e) {
                     }),
                     null != m &&
                         (0, r.jsx)("div", {
-                            className: s()(p.graphic, { [p["graphic--".concat(b)]]: null != b }),
+                            className: s()(p.graphic, {
+                                [p["graphic--".concat(b)]]: null != b,
+                            }),
                             children: (0, r.jsx)(
                                 o.vYh,
                                 g(h({}, m), {
@@ -177,7 +188,11 @@ function y(e) {
                         badge: _,
                         textLink: O,
                     }),
-                    null != y && y.length > 0 ? (0, r.jsx)(c.Z, { actions: y }) : null,
+                    null != y && y.length > 0
+                        ? (0, r.jsx)(c.Z, {
+                              actions: y,
+                          })
+                        : null,
                     (0, r.jsx)(u.F, {}),
                 ],
             }),

@@ -1,6 +1,9 @@
-n.d(t, { J: () => a });
+n.d(t, {
+    J: () => a,
+});
 var r = n(157559),
     i = n(985018);
+
 function a(e) {
     let { onConfirm: t } = e;
     return r.A.show({

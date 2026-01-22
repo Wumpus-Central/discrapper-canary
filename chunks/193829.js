@@ -79,7 +79,9 @@ e.exports = function (e) {
                     contains: a,
                 },
             },
-            e.inherit(i, { relevance: 0 }),
+            e.inherit(i, {
+                relevance: 0,
+            }),
         ],
     };
 };

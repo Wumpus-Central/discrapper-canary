@@ -1,4 +1,7 @@
-n.d(t, { A: () => c }), n(896048);
+n.d(t, {
+    A: () => c,
+}),
+    n(896048);
 var r = n(179771),
     i = n(260509),
     l = n(71393),
@@ -24,11 +27,22 @@ let c = {
             return n
                 .storeWait(t, () => l.A.getGuild(r), s)
                 .catch(() => {
-                    throw new a.A({ errorCode: o.Lw6.GET_GUILD_TIMED_OUT }, "Request to get guild timed out.");
+                    throw new a.A(
+                        {
+                            errorCode: o.Lw6.GET_GUILD_TIMED_OUT,
+                        },
+                        "Request to get guild timed out.",
+                    );
                 })
                 .then((e) => {
                     var t;
-                    if (null == e) throw new a.A({ errorCode: o.Lw6.INVALID_GUILD }, "Invalid guild id: ".concat(r));
+                    if (null == e)
+                        throw new a.A(
+                            {
+                                errorCode: o.Lw6.INVALID_GUILD,
+                            },
+                            "Invalid guild id: ".concat(r),
+                        );
                     return {
                         id: e.id,
                         name: e.name,

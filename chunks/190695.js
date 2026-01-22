@@ -1,4 +1,6 @@
-n.d(t, { A: () => j });
+n.d(t, {
+    A: () => j,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -16,6 +18,7 @@ var i = n(503698),
     p = n(583970),
     x = n(985018),
     h = n(908742);
+
 function j(e) {
     var t, n;
     let { guildId: i } = e,
@@ -35,7 +38,9 @@ function j(e) {
                     color: "text-muted",
                     children: A ? x.intl.string(p.default["6xBCpG"]) : x.intl.string(p.default.eSRKez),
                 }),
-                (0, r.jsx)("div", { className: h.yF }),
+                (0, r.jsx)("div", {
+                    className: h.yF,
+                }),
                 (0, r.jsxs)("div", {
                     className: l()(h.uW, h.rf),
                     children: [

@@ -31,14 +31,22 @@ e.exports = function (e) {
         r = "false true",
         i = [
             e.C_LINE_COMMENT_MODE,
-            e.COMMENT(/\{/, /\}/, { relevance: 0 }),
-            e.COMMENT(/\(\*/, /\*\)/, { relevance: 10 }),
+            e.COMMENT(/\{/, /\}/, {
+                relevance: 0,
+            }),
+            e.COMMENT(/\(\*/, /\*\)/, {
+                relevance: 10,
+            }),
         ],
         a = {
             className: "string",
             begin: /'/,
             end: /'/,
-            contains: [{ begin: /''/ }],
+            contains: [
+                {
+                    begin: /''/,
+                },
+            ],
         },
         s = {
             className: "string",

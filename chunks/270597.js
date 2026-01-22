@@ -1,4 +1,6 @@
-n.d(t, { J: () => o }),
+n.d(t, {
+    J: () => o,
+}),
     n(896048),
     n(927092),
     n(212978),
@@ -17,6 +19,7 @@ var r = n(64700),
     i = n(647307),
     a = n(844222),
     s = n(460890);
+
 function o(e) {
     let {
             rive: t,
@@ -128,13 +131,16 @@ function o(e) {
             );
         }, [y, p, t, n, o, h, null == t ? void 0 : t.viewModelInstance, m, g, b]);
 }
+
 function l() {
     let e = r.useRef({});
     return r.useCallback(async (t, n) => {
         if ("string" != typeof t) return Promise.resolve(t);
         {
             if (null != e.current[t]) return Promise.resolve(e.current[t]);
-            let r = await fetch(t, { signal: n }).catch((e) => {
+            let r = await fetch(t, {
+                signal: n,
+            }).catch((e) => {
                 if (null == n ? void 0 : n.aborted) return Promise.resolve(null);
                 throw e;
             });
@@ -145,6 +151,7 @@ function l() {
         }
     }, []);
 }
+
 function c(e) {
     let { rive: t, artboard: n, artboardProperties: i, dynamicDataBinding: a, onDataBindingChange: s } = e,
         o = null != a,

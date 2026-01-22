@@ -1,4 +1,6 @@
-i.d(e, { H: () => o });
+i.d(e, {
+    H: () => o,
+});
 var n = i(864145),
     l = i(419954),
     s = i(824744),
@@ -22,6 +24,8 @@ let o = (0, l.sN)(u.X.SOUNDMOJI_VOLUME_SETTING, {
         return "".concat(t.toFixed(0), "%");
     },
     usePredicate: function () {
-        return (0, n.X9)({ location: "SoundmojiVolumeSetting" });
+        return (0, n.X9)({
+            location: "SoundmojiVolumeSetting",
+        });
     },
 });

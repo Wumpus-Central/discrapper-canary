@@ -1,4 +1,6 @@
-n.d(e, { A: () => s });
+n.d(e, {
+    A: () => s,
+});
 var l = n(627968);
 n(64700);
 var r = n(311907),
@@ -7,9 +9,11 @@ var r = n(311907),
     o = n(957565),
     a = n(652215),
     c = n(985018);
+
 function s(t, e, n) {
     let s = null != n;
     if (null == (0, r.bG)([u.A], () => u.A.getGuild(e), [e])) return null;
+
     function d() {
         let l = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
             r = ""

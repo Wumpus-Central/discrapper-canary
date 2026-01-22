@@ -1,4 +1,6 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -8,6 +10,7 @@ var i = n(503698),
     c = n(736653),
     o = n(342298),
     d = n(458091);
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,6 +38,7 @@ function u(e) {
 }
 let f = s.A.unsafe_rawColors.PRIMARY_400.css,
     g = s.A.unsafe_rawColors.PRIMARY_500.css;
+
 function b(e) {
     let { enabled: t, imageClassName: n, iconWrapperClassName: i } = e,
         s = (function (e, t) {
@@ -82,11 +86,29 @@ function b(e) {
                     [d.MY]: t,
                     [d.O7]: !t,
                 }),
-                imageClassName: l()(n, d.f3, { [d.Hn]: !t }),
+                imageClassName: l()(n, d.f3, {
+                    [d.Hn]: !t,
+                }),
                 icon:
                     null != s.image && "" !== s.image
-                        ? (0, r.jsx)(a.R2l, u({ size: "custom" }, m))
-                        : (0, r.jsx)(a.XGR, u({ size: "custom" }, m)),
+                        ? (0, r.jsx)(
+                              a.R2l,
+                              u(
+                                  {
+                                      size: "custom",
+                                  },
+                                  m,
+                              ),
+                          )
+                        : (0, r.jsx)(
+                              a.XGR,
+                              u(
+                                  {
+                                      size: "custom",
+                                  },
+                                  m,
+                              ),
+                          ),
                 iconClassName: l()(d.oB, d.BD),
                 iconWrapperClassName: i,
                 showIcon: !0,

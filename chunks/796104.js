@@ -35,6 +35,7 @@ var r = n(284009),
     v = n(661191),
     S = n(532294),
     I = n(652215);
+
 function T(e, t, n) {
     return (
         t in e
@@ -48,6 +49,7 @@ function T(e, t, n) {
         e
     );
 }
+
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -64,6 +66,7 @@ function C(e) {
     }
     return e;
 }
+
 function N(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -76,6 +79,7 @@ function N(e, t) {
     }
     return n;
 }
+
 function R(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -87,6 +91,7 @@ function R(e, t) {
         e
     );
 }
+
 function w() {
     let e = p.A.getUserAffinities()
             .slice(0, 4)
@@ -97,8 +102,12 @@ function w() {
             return (
                 i()(null != t, "Guild must exist"),
                 {
-                    guild: (0, A.yF)(R(C({}, t), { features: [...t.features] })),
-                    numMessagesSent: 10382504,
+                    guild: (0, A.yF)(
+                        R(C({}, t), {
+                            features: [...t.features],
+                        }),
+                    ),
+                    numMessagesSent: 0x9e6ca8,
                     numVoiceMinutes: 409516.21576666617,
                 }
             );
@@ -121,14 +130,14 @@ function w() {
             }));
     return {
         cardId: 1,
-        powerLevel: 10400246,
+        powerLevel: 0x9eb1f6,
         powerLevelPercentile: 5,
         messages: {
-            numMessagesSent: 10400246,
+            numMessagesSent: 0x9eb1f6,
             numMessagesSentPercentile: 99.99,
             topMonth: {
                 month: 8,
-                numMessagesSent: 10400246,
+                numMessagesSent: 0x9eb1f6,
             },
         },
         voice: {
@@ -146,7 +155,7 @@ function w() {
         users: e.slice(1, 4),
         sidekick: {
             user: e[0],
-            numMessagesSent: 10400246,
+            numMessagesSent: 0x9eb1f6,
             numVoiceMinutes: 2741198.975133333,
         },
         guilds: {
@@ -155,7 +164,7 @@ function w() {
         },
         emojis: {
             emojis: n,
-            numEmojisSent: 557927580,
+            numEmojisSent: 0x21414c9c,
         },
         applications: {
             applications: r,
@@ -165,7 +174,12 @@ function w() {
 }
 async function P() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    if ((s.h.dispatch({ type: "CHECKPOINT_FETCH_START" }), e)) {
+    if (
+        (s.h.dispatch({
+            type: "CHECKPOINT_FETCH_START",
+        }),
+        e)
+    ) {
         let {
             users: e,
             guilds: t,
@@ -239,7 +253,9 @@ async function P() {
                     null != g
                         ? {
                               emojis: g.emojis.map((e) =>
-                                  R(C({}, e), { id: v.default.isProbablyAValidSnowflake(e.id) ? e.id : void 0 }),
+                                  R(C({}, e), {
+                                      id: v.default.isProbablyAValidSnowflake(e.id) ? e.id : void 0,
+                                  }),
                               ),
                               numEmojisSent: g.num_emojis_sent,
                           }
@@ -278,7 +294,9 @@ async function P() {
                     null != I
                         ? {
                               applications: I.applications.map((e) => ({
-                                  game: R(C({}, (0, m.M)(e.game)), { coverImageHash: e.game.cover_image_hash }),
+                                  game: R(C({}, (0, m.M)(e.game)), {
+                                      coverImageHash: e.game.cover_image_hash,
+                                  }),
                                   numDaysPlayed: e.num_sessions,
                               })),
                               totalGamesPlayed: I.total_games_played,
@@ -311,7 +329,9 @@ async function P() {
             },
         });
     } catch (e) {
-        s.h.dispatch({ type: "CHECKPOINT_FETCH_FAILED" });
+        s.h.dispatch({
+            type: "CHECKPOINT_FETCH_FAILED",
+        });
     }
 }
 let D = async (e, t, n) => {
@@ -341,7 +361,9 @@ async function x(e, t) {
         message_variant: i.toString(),
     });
     let a = d.Ay.parse(r, e);
-    return l.A.sendMessage(r.id, a, !1, { location: "checkpoint-sidekick" });
+    return l.A.sendMessage(r.id, a, !1, {
+        location: "checkpoint-sidekick",
+    });
 }
 async function L() {
     try {
@@ -351,24 +373,35 @@ async function L() {
         });
     } catch (e) {}
 }
+
 function j(e) {
     return s.h.dispatch({
         type: "CHECKPOINT_SET_VOLUME",
         volume: e,
     });
 }
+
 function M() {
-    return s.h.dispatch({ type: "CHECKPOINT_TOGGLE_MUTE" });
+    return s.h.dispatch({
+        type: "CHECKPOINT_TOGGLE_MUTE",
+    });
 }
+
 function k(e) {
     return s.h.dispatch({
         type: "CHECKPOINT_SET_HIGHEST_SLIDE_SEEN",
         slide: e,
     });
 }
+
 function U() {
-    return s.h.dispatch({ type: "CHECKPOINT_AFTER_CLOSED" });
+    return s.h.dispatch({
+        type: "CHECKPOINT_AFTER_CLOSED",
+    });
 }
+
 function G() {
-    return s.h.dispatch({ type: "CHECKPOINT_SET_HAS_SEEN_REWATCH_POPOVER" });
+    return s.h.dispatch({
+        type: "CHECKPOINT_SET_HAS_SEEN_REWATCH_POPOVER",
+    });
 }

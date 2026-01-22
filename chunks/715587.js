@@ -1,10 +1,13 @@
-r.d(t, { A: () => o });
+r.d(t, {
+    A: () => o,
+});
 var n = r(627968),
     l = r(64700),
     s = r(505312),
     i = r(397927),
     a = r(744086),
     c = r(985018);
+
 function o(e) {
     let { align: t = "left" } = e,
         r = l.useRef(null),

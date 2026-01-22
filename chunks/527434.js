@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(627968),
     i = n(64700),
     a = n(580424),
@@ -8,9 +10,11 @@ var r = n(627968),
     c = n(374803);
 n(827669);
 var u = n(985018);
+
 function d(e) {
     return "".concat("@").concat(e.name);
 }
+
 function f(e) {
     return "<@$".concat(e.id, ">");
 }
@@ -18,7 +22,11 @@ let p = {
     autocompleteInputElementType: "gameMentionInput",
     stores: [s.A],
     matches: (e, t, n, r, i) => !0,
-    queryResults: (e, t, n) => ({ results: { games: o.Ay.queryGames(n).slice(0, 10) } }),
+    queryResults: (e, t, n) => ({
+        results: {
+            games: o.Ay.queryGames(n).slice(0, 10),
+        },
+    }),
     renderResults(e) {
         let {
                 results: { games: t },
@@ -69,7 +77,9 @@ let p = {
             r.replaceInlineInput("gameMentionInput", d(i), f(i)),
             {
                 type: c.kc.GAME_MENTION,
-                metadata: { applicationId: i.id },
+                metadata: {
+                    applicationId: i.id,
+                },
             }
         );
     },

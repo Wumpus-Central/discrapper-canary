@@ -1,8 +1,11 @@
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var r,
     i = n(311907),
     a = n(73153),
     s = n(500049);
+
 function o(e, t, n) {
     return (
         t in e
@@ -25,6 +28,7 @@ let l = {
     closeReason: s.Se.DISMISSED,
     initialState: void 0,
 };
+
 function c(e) {
     let { entrypoint: t, activeViewType: n, initialState: r, activeChannelId: i } = e;
     return (
@@ -38,6 +42,7 @@ function c(e) {
         !0
     );
 }
+
 function u(e) {
     let { closeReason: t = s.Se.DISMISSED } = e;
     return (
@@ -77,11 +82,17 @@ class d extends (r = i.Ay.Store) {
         return l.initialState;
     }
 }
+
 function f() {
-    u({ closeReason: s.Se.DISMISSED });
+    u({
+        closeReason: s.Se.DISMISSED,
+    });
 }
+
 function p() {
-    u({ closeReason: s.Se.COMMAND });
+    u({
+        closeReason: s.Se.COMMAND,
+    });
 }
 o(d, "displayName", "AppLauncherStore");
 let _ = new d(a.h, {

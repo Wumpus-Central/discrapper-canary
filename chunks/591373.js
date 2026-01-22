@@ -16,7 +16,14 @@ e.exports = function (e) {
         },
         i = {
             className: "symbol",
-            variants: [{ begin: /=[lgenxc]=/ }, { begin: /\$/ }],
+            variants: [
+                {
+                    begin: /=[lgenxc]=/,
+                },
+                {
+                    begin: /\$/,
+                },
+            ],
         },
         a = {
             className: "comment",

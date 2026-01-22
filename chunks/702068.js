@@ -1,4 +1,6 @@
-r.d(t, { A: () => a });
+r.d(t, {
+    A: () => a,
+});
 var n = r(64700),
     o = r(205662);
 let a = function (e) {
@@ -18,8 +20,16 @@ let a = function (e) {
                         cursor: "pointer",
                     },
                 },
-                first: { swatch: { borderRadius: "2px 0 0 2px" } },
-                last: { swatch: { borderRadius: "0 2px 2px 0" } },
+                first: {
+                    swatch: {
+                        borderRadius: "2px 0 0 2px",
+                    },
+                },
+                last: {
+                    swatch: {
+                        borderRadius: "0 2px 2px 0",
+                    },
+                },
                 active: {
                     swatch: {
                         transform: "scaleY(1.8)",

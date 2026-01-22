@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -6,6 +8,7 @@ var i = n(503698),
     s = n(397927),
     o = n(854627),
     l = n(429974);
+
 function c(e, t, n) {
     return (
         t in e
@@ -19,6 +22,7 @@ function c(e, t, n) {
         e
     );
 }
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,6 +39,7 @@ function u(e) {
     }
     return e;
 }
+
 function d(e) {
     var t;
     let { user: n, checked: i, onChange: c, disabled: d } = e,
@@ -52,7 +57,9 @@ function d(e) {
                     s.euF,
                     u(
                         {
-                            className: a()({ [l.SU]: d }),
+                            className: a()({
+                                [l.SU]: d,
+                            }),
                             src: f,
                             "aria-label": _,
                             size: s._3J.SIZE_32,

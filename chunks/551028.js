@@ -1,4 +1,6 @@
-r.d(t, { default: () => V });
+r.d(t, {
+    default: () => V,
+});
 var n = r(627968),
     l = r(64700),
     a = r(503698),
@@ -29,6 +31,7 @@ var n = r(627968),
     S = r(693591),
     P = r(985018),
     _ = r(341078);
+
 function F(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
@@ -72,6 +75,7 @@ let L = [
         png: r(891814),
     },
 ];
+
 function I(e) {
     let { shouldAnimate: t = !0 } = e;
     return (0, n.jsx)("div", {
@@ -81,13 +85,16 @@ function I(e) {
                 "div",
                 {
                     className: _.nX,
-                    style: { backgroundImage: "url(".concat(t ? e.gif : e.png, ")") },
+                    style: {
+                        backgroundImage: "url(".concat(t ? e.gif : e.png, ")"),
+                    },
                 },
                 e.gif,
             ),
         ),
     });
 }
+
 function H(e) {
     let { guildFeature: t, guild: r } = e;
     if (null == t || null == r) return;
@@ -96,9 +103,14 @@ function H(e) {
     if (null == n) return;
     let a = (0, C.gb)(n);
     return l
-        ? P.intl.formatToPlainString(P.t.u3L3TX, { levelName: a })
-        : P.intl.formatToPlainString(P.t["r/v25U"], { levelName: a });
+        ? P.intl.formatToPlainString(P.t.u3L3TX, {
+              levelName: a,
+          })
+        : P.intl.formatToPlainString(P.t["r/v25U"], {
+              levelName: a,
+          });
 }
+
 function k(e) {
     let { guildFeature: t, guild: r } = e;
     return (0, n.jsx)("div", {
@@ -110,11 +122,14 @@ function k(e) {
         }),
     });
 }
+
 function D(e) {
     let { icon: t, label: r, guildFeature: l, guild: a, shouldShowPremiumIcon: s } = e,
         c = null != a && null != l;
     return (0, n.jsxs)("div", {
-        className: i()(_.q3, { [_.j5]: c }),
+        className: i()(_.q3, {
+            [_.j5]: c,
+        }),
         "aria-hidden": !0,
         children: [
             (0, n.jsxs)("div", {
@@ -123,7 +138,9 @@ function D(e) {
                     t,
                     (0, n.jsxs)(u.Text, {
                         variant: "text-sm/semibold",
-                        className: i()(_.xo, { [_.Fy]: s }),
+                        className: i()(_.xo, {
+                            [_.Fy]: s,
+                        }),
                         children: [
                             s &&
                                 (0, n.jsx)(o.m, {
@@ -148,6 +165,7 @@ function D(e) {
         ],
     });
 }
+
 function U(e) {
     let {
             label: t,
@@ -159,7 +177,9 @@ function U(e) {
             handleFileSizeError: c,
         } = e,
         f = (0, R.CK)(r),
-        d = (0, R.VS)(r, { isGIF: !1 }),
+        d = (0, R.VS)(r, {
+            isGIF: !1,
+        }),
         p = H({
             guildFeature: d,
             guild: l,
@@ -193,15 +213,21 @@ function U(e) {
                     ],
                 }),
             }),
-            null != p && (0, n.jsx)(u.AC4, { children: p }),
+            null != p &&
+                (0, n.jsx)(u.AC4, {
+                    children: p,
+                }),
         ],
     });
 }
+
 function M(e) {
     let { uploadType: t, guild: r, handleOpenGIFPickerModal: l } = e,
         { shouldAnimate: a, onMouseEnter: i, onMouseLeave: s } = (0, m.A)(),
         o = (0, R.xc)(t),
-        c = (0, R.VS)(t, { isGIF: !0 }),
+        c = (0, R.VS)(t, {
+            isGIF: !0,
+        }),
         f = H({
             guildFeature: c,
             guild: r,
@@ -215,7 +241,9 @@ function M(e) {
                 onMouseEnter: i,
                 onMouseLeave: s,
                 children: [
-                    (0, n.jsx)(I, { shouldAnimate: a }),
+                    (0, n.jsx)(I, {
+                        shouldAnimate: a,
+                    }),
                     (0, n.jsx)(D, {
                         icon: (0, n.jsx)(u.Osp, {
                             size: "md",
@@ -228,10 +256,14 @@ function M(e) {
                     }),
                 ],
             }),
-            null != f && (0, n.jsx)(u.AC4, { children: f }),
+            null != f &&
+                (0, n.jsx)(u.AC4, {
+                    children: f,
+                }),
         ],
     });
 }
+
 function V(e) {
     let {
             transitionState: t,
@@ -298,7 +330,9 @@ function V(e) {
                                 ),
                             );
                     },
-                    { contextKey: B },
+                    {
+                        contextKey: B,
+                    },
                 );
             },
             [null == C ? void 0 : C.page, B, X, g, o],
@@ -331,7 +365,9 @@ function V(e) {
                             ),
                         );
                 },
-                { contextKey: B },
+                {
+                    contextKey: B,
+                },
             );
         }, [null == C ? void 0 : C.page, B, X, g, o]);
     l.useEffect(() => {
@@ -395,7 +431,10 @@ function V(e) {
                             : null,
                     ],
                 }),
-                ee && (0, n.jsx)(h.A, { onComplete: X }),
+                ee &&
+                    (0, n.jsx)(h.A, {
+                        onComplete: X,
+                    }),
                 Q &&
                     (0, n.jsx)(y.A, {
                         uploadType: o,

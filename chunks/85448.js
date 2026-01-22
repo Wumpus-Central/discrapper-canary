@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -9,6 +11,7 @@ var i = n(503698),
     c = n(430452),
     u = n(659974),
     d = n(503434);
+
 function f(e, t, n) {
     return (
         t in e
@@ -22,6 +25,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -41,6 +45,7 @@ function p(e) {
 var _ = (function (e) {
     return (e[(e.OUTGOING = 0)] = "OUTGOING"), (e[(e.INCOMING = 1)] = "INCOMING"), e;
 })(_ || {});
+
 function h(e) {
     let {
             userId: t,
@@ -98,14 +103,20 @@ function h(e) {
                       children: [w(), R()],
                   })
                 : h || m || C
-                  ? (0, r.jsx)(r.Fragment, { children: R() })
-                  : (0, r.jsx)(r.Fragment, { children: w() }),
+                  ? (0, r.jsx)(r.Fragment, {
+                        children: R(),
+                    })
+                  : (0, r.jsx)(r.Fragment, {
+                        children: w(),
+                    }),
         D = () => {
             let e = (0, o.FT9)(n),
                 t = (0, r.jsx)("img", {
                     src: g,
                     alt: " ",
-                    className: a()(d.sb, O, { [d.tb]: b && 0 === y }),
+                    className: a()(d.sb, O, {
+                        [d.tb]: b && 0 === y,
+                    }),
                 });
             if (E) return t;
             let i = l.hW.AVATAR_DEFAULT;

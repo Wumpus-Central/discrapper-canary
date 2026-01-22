@@ -1,9 +1,12 @@
-n.d(t, { default: () => s });
+n.d(t, {
+    default: () => s,
+});
 var r = n(627968),
     i = n(64700),
     c = n(397927),
     o = n(348417),
     a = n(985018);
+
 function s(e) {
     let { onClose: t } = e,
         { showSuggestions: s, showActivityTicker: l, setShowSuggestions: u, setShowActivityTicker: b } = (0, o.A)(),

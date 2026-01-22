@@ -30,6 +30,7 @@ let m = [u.A, c.A, s.A, f.A, d.A, b.A, h.A],
     },
     I = () => {},
     N = document.body;
+
 function E() {
     (w = 0),
         (y = 0),
@@ -39,12 +40,15 @@ function E() {
             violations: new Map(),
         });
 }
+
 function M() {
     A = requestIdleCallback(L);
 }
+
 function _() {
     (x = null), (y = 0), w < m.length - 1 ? ((w += 1), M()) : (I(k), E());
 }
+
 function L() {
     let e = m[w];
     if (
@@ -53,7 +57,9 @@ function L() {
     )
         return _();
     let t = performance.now() + 16,
-        n = { includeContinuous: !0 };
+        n = {
+            includeContinuous: !0,
+        };
     for (; y < x.length && !(navigator.scheduling.isInputPending(n) || performance.now() >= t); ) {
         let t = x[y++],
             n = e.check(t);
@@ -105,6 +111,7 @@ let S = (e) => {
         null != A && (clearTimeout(A), (A = null)),
         (v = setTimeout(M, 250)));
 };
+
 function T(e, t) {
     let n = (0, l.useRef)(t);
     (0, l.useLayoutEffect)(() => {
@@ -127,15 +134,16 @@ function T(e, t) {
             }
         }, [e]);
 }
+
 function C(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        n = 3735928559 ^ t,
-        r = 1103547991 ^ t;
+        n = 0xdeadbeef ^ t,
+        r = 0x41c6ce57 ^ t;
     for (let t = 0, a; t < e.length; t++)
-        (n = Math.imul(n ^ (a = e.charCodeAt(t)), 2654435761)), (r = Math.imul(r ^ a, 1597334677));
+        (n = Math.imul(n ^ (a = e.charCodeAt(t)), 0x9e3779b1)), (r = Math.imul(r ^ a, 0x5f356495));
     return (
-        (n = Math.imul(n ^ (n >>> 16), 2246822507) ^ Math.imul(r ^ (r >>> 13), 3266489909)),
-        4294967296 * (2097151 & (r = Math.imul(r ^ (r >>> 16), 2246822507) ^ Math.imul(n ^ (n >>> 13), 3266489909))) +
+        (n = Math.imul(n ^ (n >>> 16), 0x85ebca6b) ^ Math.imul(r ^ (r >>> 13), 0xc2b2ae35)),
+        0x100000000 * (2097151 & (r = Math.imul(r ^ (r >>> 16), 0x85ebca6b) ^ Math.imul(n ^ (n >>> 13), 0xc2b2ae35))) +
             (n >>> 0)
     );
 }

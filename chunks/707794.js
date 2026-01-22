@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(541806),
     i = n(765379),
     a = n(672979),
@@ -7,6 +9,7 @@ var r = n(541806),
     l = n(934173),
     c = n(534465),
     u = n(695311);
+
 function d(e, t, n) {
     return (
         t in e
@@ -20,6 +23,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +40,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e) {
     let { location: t, user: n, currentUser: d, activity: p, application: _, entry: h, onClose: m } = e,
         g = (0, o.A)(

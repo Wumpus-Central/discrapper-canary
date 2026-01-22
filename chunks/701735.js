@@ -192,8 +192,12 @@ e.exports = function (e) {
                 end: /"|$/,
                 contains: [e.BACKSLASH_ESCAPE],
             },
-            e.COMMENT("REM", "$", { relevance: 10 }),
-            e.COMMENT("'", "$", { relevance: 0 }),
+            e.COMMENT("REM", "$", {
+                relevance: 10,
+            }),
+            e.COMMENT("'", "$", {
+                relevance: 0,
+            }),
             {
                 className: "symbol",
                 begin: "^[0-9]+ ",

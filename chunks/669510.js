@@ -1,4 +1,7 @@
-n.d(t, { _: () => d }), n(896048);
+n.d(t, {
+    _: () => d,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -7,6 +10,7 @@ var r = n(627968),
     l = n(580630),
     c = n(381247),
     u = n(361728);
+
 function d(e) {
     let {
             label: t,
@@ -47,7 +51,9 @@ function d(e) {
                         t,
                     );
                 }),
-                (0, r.jsx)("div", { className: u.m }),
+                (0, r.jsx)("div", {
+                    className: u.m,
+                }),
                 (0, r.jsx)(c.i, {
                     label: null != n ? n : t,
                     value: b,
@@ -56,7 +62,9 @@ function d(e) {
             ],
         });
     return (0, r.jsx)("div", {
-        className: s()({ [u.k]: h }),
+        className: s()({
+            [u.k]: h,
+        }),
         children: y,
     });
 }

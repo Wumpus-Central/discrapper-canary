@@ -1,4 +1,7 @@
-n.d(t, { A: () => b }), n(938796);
+n.d(t, {
+    A: () => b,
+}),
+    n(938796);
 var r = n(627968),
     i = n(64700),
     a = n(665260),
@@ -14,6 +17,7 @@ var r = n(627968),
     h = n(652215),
     m = n(985018),
     g = n(633232);
+
 function E(e) {
     let t = "__CLIP_METADATA__",
         n = e.indexOf(t);
@@ -30,6 +34,7 @@ function E(e) {
         return {};
     }
 }
+
 function b(e) {
     let { message: t, compact: n } = e,
         b = t.channel_id,

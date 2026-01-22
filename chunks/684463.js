@@ -1,4 +1,7 @@
-Object.defineProperty(t, "__esModule", { value: !0 }), (t.handleFocus = void 0);
+Object.defineProperty(t, "__esModule", {
+    value: !0,
+}),
+    (t.handleFocus = void 0);
 var n,
     o =
         Object.assign ||
@@ -23,7 +26,13 @@ var n,
             return r && e(t.prototype, r), n && e(t, n), t;
         };
     })(),
-    i = (n = r(64700)) && n.__esModule ? n : { default: n };
+    i =
+        (n = r(64700)) && n.__esModule
+            ? n
+            : {
+                  default: n,
+              };
+
 function l(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return t && ("object" == typeof t || "function" == typeof t) ? t : e;
@@ -33,17 +42,24 @@ t.handleFocus = function (e) {
         r = i.default.Component;
     if ("function" != typeof r && null !== r)
         throw TypeError("Super expression must either be null or a function, not " + typeof r);
+
     function n() {
         if (!(this instanceof n)) throw TypeError("Cannot call a class as a function");
         for (var e, t, r, o = arguments.length, a = Array(o), i = 0; i < o; i++) a[i] = arguments[i];
         return (
             (t = r = l(this, (e = n.__proto__ || Object.getPrototypeOf(n)).call.apply(e, [this].concat(a)))),
-            (r.state = { focus: !1 }),
+            (r.state = {
+                focus: !1,
+            }),
             (r.handleFocus = function () {
-                return r.setState({ focus: !0 });
+                return r.setState({
+                    focus: !0,
+                });
             }),
             (r.handleBlur = function () {
-                return r.setState({ focus: !1 });
+                return r.setState({
+                    focus: !1,
+                });
             }),
             l(r, t)
         );

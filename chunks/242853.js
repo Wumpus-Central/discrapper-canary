@@ -1,4 +1,6 @@
-l.d(t, { A: () => x });
+l.d(t, {
+    A: () => x,
+});
 var n = l(627968);
 l(64700);
 var a = l(503698),
@@ -13,6 +15,7 @@ var a = l(503698),
     m = l(985018),
     b = l(880203),
     p = l(317857);
+
 function x(e) {
     let { selectedEffectId: t, setSelectedEffectId: l, className: a } = e;
     return (0, n.jsxs)("div", {
@@ -49,13 +52,16 @@ function x(e) {
         ],
     });
 }
+
 function g(e) {
     let { effectId: t, selected: l, onClick: a } = e,
         r = (0, o._)(t);
     return (0, n.jsx)(
         i.DUT,
         {
-            className: s()(p.Tw, { [p.wH]: l }),
+            className: s()(p.Tw, {
+                [p.wH]: l,
+            }),
             onClick: a,
             children: (0, n.jsx)(d.A, {
                 userName: r.name,

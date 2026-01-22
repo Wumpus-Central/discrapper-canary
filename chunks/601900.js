@@ -8,6 +8,7 @@ var r = n(205693),
     s = n(383501),
     o = n(309010),
     l = n(162605);
+
 function c(e, t, n) {
     return (
         t in e
@@ -21,6 +22,7 @@ function c(e, t, n) {
         e
     );
 }
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,6 +39,7 @@ function u(e) {
     }
     return e;
 }
+
 function d() {
     var e;
     let t = o.A.getVoiceChannelId();
@@ -50,6 +53,7 @@ function d() {
         p(),
     );
 }
+
 function f(e) {
     var t;
     let { channelId: n, ownerId: a } = (0, i.Iy)(e),
@@ -66,6 +70,7 @@ function f(e) {
         p(),
     );
 }
+
 function p() {
     var e, t, n;
     return {

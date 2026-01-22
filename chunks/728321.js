@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var r,
     i = n(627968),
     a = n(64700),
@@ -8,6 +10,7 @@ var r,
     c = n(531685),
     u = n(575486),
     d = n(482361);
+
 function f(e, t, n) {
     return (
         t in e
@@ -21,6 +24,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,6 +41,7 @@ function p(e) {
     }
     return e;
 }
+
 function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -49,6 +54,7 @@ function _(e, t) {
     }
     return n;
 }
+
 function h(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -145,6 +151,7 @@ class m extends (r = a.Component) {
             : a.Children.only(n);
     }
 }
+
 function g(e) {
     let { tutorialId: t } = e,
         n = (0, o.bG)([d.A], () => d.A.shouldShow(t), [t]),

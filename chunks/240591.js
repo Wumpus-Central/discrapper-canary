@@ -17,6 +17,7 @@ var r = n(64700),
     p = n(576705),
     _ = n(287809),
     h = n(652215);
+
 function m(e, t) {
     var n, r, i, a, s;
     let p,
@@ -46,6 +47,7 @@ function m(e, t) {
         allowNsfw: E(p, y, m),
     };
 }
+
 function g(e, t) {
     let n = r.useMemo(() => {
             if (e instanceof c.YB && e.isThread()) {
@@ -85,9 +87,11 @@ function g(e, t) {
         };
     }, [t, n, g, m, p, h, s, e]);
 }
+
 function E(e, t, n) {
     return !!t && (!(e instanceof c.YB) || (null != e.guild_id ? e.nsfw : n));
 }
+
 function b(e, t) {
     let n, r;
     if ((e instanceof c.YB && e.isPrivate()) || null == e)
@@ -111,6 +115,7 @@ function b(e, t) {
         }
     );
 }
+
 function y(e, t) {
     return e instanceof c.YB && (null == e ? void 0 : e.guild_id) == null
         ? (null == e ? void 0 : e.type) === h.rbe.DM && (null == e ? void 0 : e.getRecipientId()) === t
@@ -118,6 +123,7 @@ function y(e, t) {
             : s.OL.PRIVATE_CHANNEL
         : s.OL.GUILD;
 }
+
 function O(e) {
     return e instanceof c.YB ? e.guild_id : e.id;
 }

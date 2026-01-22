@@ -7,11 +7,13 @@ var r = n(934886),
     c = n(797686),
     u = n(494277),
     d = a.isBrowser("IE");
+
 function f(e, t) {
     if (!e) return "[empty]";
     var n = p(e, t);
     return n.nodeType === Node.TEXT_NODE ? n.textContent : (u(n) || c(!1), n.outerHTML);
 }
+
 function p(e, t) {
     var n = void 0 !== t ? t(e) : [];
     if (e.nodeType === Node.TEXT_NODE) {
@@ -23,22 +25,27 @@ function p(e, t) {
     for (var a = e.childNodes, s = 0; s < a.length; s++) i.appendChild(p(a[s], t));
     return i;
 }
+
 function _(e, t) {
     for (var n = e, r = n; n; )
         if (u(n) && r.hasAttribute("contenteditable")) return f(n, t);
         else r = n = n.parentNode;
     return "Could not find contentEditable parent of node";
 }
+
 function h(e) {
     return null === e.nodeValue ? e.childNodes.length : e.nodeValue.length;
 }
+
 function m(e, t, n, r) {
     var a = o();
     if (e.extend && s(a, t)) {
         n > h(t) &&
             i.logSelectionStateFailure({
                 anonymizedDom: _(t),
-                extraParams: JSON.stringify({ offset: n }),
+                extraParams: JSON.stringify({
+                    offset: n,
+                }),
                 selectionState: JSON.stringify(r.toJS()),
             });
         var l = t === e.focusNode;
@@ -82,13 +89,16 @@ function m(e, t, n, r) {
         c.setEnd(t, n), e.addRange(c.cloneRange());
     }
 }
+
 function g(e, t, n, a) {
     var s = l(t).createRange();
     if (
         (n > h(t) &&
             (i.logSelectionStateFailure({
                 anonymizedDom: _(t),
-                extraParams: JSON.stringify({ offset: n }),
+                extraParams: JSON.stringify({
+                    offset: n,
+                }),
                 selectionState: JSON.stringify(a.toJS()),
             }),
             r.handleExtensionCausedError()),

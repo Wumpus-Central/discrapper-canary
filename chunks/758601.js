@@ -1,4 +1,7 @@
-n.d(e, { A: () => E }), n(896048);
+n.d(e, {
+    A: () => E,
+}),
+    n(896048);
 var s = n(627968),
     i = n(64700),
     l = n(397927),
@@ -48,7 +51,9 @@ let E = function (t) {
             (0, s.jsx)(l.Text, {
                 variant: "text-md/normal",
                 color: "text-default",
-                children: _.intl.format(_.t["njJ/Cg"], { learnMoreLink: c.A.getArticleURL(u.MVz.SAFETY_ALERTS) }),
+                children: _.intl.format(_.t["njJ/Cg"], {
+                    learnMoreLink: c.A.getArticleURL(u.MVz.SAFETY_ALERTS),
+                }),
             }),
             (0, s.jsxs)("div", {
                 children: [

@@ -1,4 +1,6 @@
-i.d(e, { m: () => Y });
+i.d(e, {
+    m: () => Y,
+});
 var n = i(627968),
     l = i(64700),
     s = i(517846),
@@ -58,8 +60,12 @@ let Y = () => {
                                         (0, n.jsxs)("div", {
                                             className: h.QF,
                                             children: [
-                                                (0, n.jsx)(R.A, { color: t ? "black" : "white" }),
-                                                (0, n.jsx)("div", { className: h.zN }),
+                                                (0, n.jsx)(R.A, {
+                                                    color: t ? "black" : "white",
+                                                }),
+                                                (0, n.jsx)("div", {
+                                                    className: h.zN,
+                                                }),
                                                 (0, n.jsx)("img", {
                                                     src: t ? X : M,
                                                     alt: "Cloudflare",
@@ -84,7 +90,9 @@ let Y = () => {
                                         className: h.Qs,
                                         children: [(0, n.jsx)(p.F, {}), (0, n.jsx)(P.q, {})],
                                     }),
-                                    (0, n.jsx)("div", { className: h.yP }),
+                                    (0, n.jsx)("div", {
+                                        className: h.yP,
+                                    }),
                                     (0, n.jsx)("div", {
                                         className: h.OQ,
                                         children: (0, n.jsx)(k, {}),
@@ -128,7 +136,9 @@ let Y = () => {
                         subscriptionTier: y.pe.TIER_2,
                         fullWidth: !0,
                         size: "sm",
-                        premiumModalAnalyticsLocation: { page: S.A.CF_WARP_SETTINGS },
+                        premiumModalAnalyticsLocation: {
+                            page: S.A.CF_WARP_SETTINGS,
+                        },
                         onClick: () => {
                             A.current = !0;
                         },
@@ -148,7 +158,9 @@ let Y = () => {
         switch (t) {
             case I.Lk.ERROR:
             case I.Lk.NOT_INSTALLED:
-                return (0, n.jsx)(m.y, { onClick: () => (A.current = !0) });
+                return (0, n.jsx)(m.y, {
+                    onClick: () => (A.current = !0),
+                });
             case I.Lk.INSTALLED:
                 return (0, n.jsx)(O.X, {});
             case I.Lk.ZERO_TRUST:
@@ -157,7 +169,9 @@ let Y = () => {
                 return (0, n.jsx)(a.$nd, {
                     variant: "primary",
                     onClick: () => {
-                        (0, T.u)(V.HAw.NITRO_WARP_CTA_CLICKED, { is_enable_warp: !0 }),
+                        (0, T.u)(V.HAw.NITRO_WARP_CTA_CLICKED, {
+                            is_enable_warp: !0,
+                        }),
                             i(I.Lk.READY_FOR_LICENSE),
                             (A.current = !0);
                     },
@@ -169,7 +183,9 @@ let Y = () => {
             case I.Lk.INSTALLING_TIMEOUT:
                 return (0, n.jsx)("div", {
                     className: h.u1,
-                    children: (0, n.jsx)(r.y$y, { type: r.tVU.SPINNING_CIRCLE }),
+                    children: (0, n.jsx)(r.y$y, {
+                        type: r.tVU.SPINNING_CIRCLE,
+                    }),
                 });
         }
         return null;

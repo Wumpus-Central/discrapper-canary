@@ -7,7 +7,7 @@ var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
-    o = n(432022),
+    o = n(108531),
     l = n(397927),
     c = n(964486),
     u = n(235986),
@@ -19,6 +19,7 @@ var r = n(627968),
     m = n(985018),
     g = n(627574),
     E = n(295171);
+
 function b(e, t, n) {
     return (
         t in e
@@ -32,6 +33,7 @@ function b(e, t, n) {
         e
     );
 }
+
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -48,6 +50,7 @@ function y(e) {
     }
     return e;
 }
+
 function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -60,6 +63,7 @@ function O(e, t) {
     }
     return n;
 }
+
 function A(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -73,13 +77,18 @@ function A(e, t) {
 }
 let v = 2500,
     S = 467;
+
 function I(e) {
     let { questId: t, survey: n, transitionState: a, onClose: s, onSubmit: f } = e,
         p = (0, _.C5)(t),
         [b, O] = i.useState(0),
         [I, C] = (0, l.zhh)(() => ({
-            from: { width: "0%" },
-            config: { duration: v },
+            from: {
+                width: "0%",
+            },
+            config: {
+                duration: v,
+            },
         })),
         R = (e) => {
             f(),
@@ -94,7 +103,11 @@ function I(e) {
                     );
         },
         w = async (e) => {
-            1 === e && (await C({ width: "100%" }), s());
+            1 === e &&
+                (await C({
+                    width: "100%",
+                }),
+                s());
         };
     return (
         (0, c.Ay)(() => {
@@ -205,6 +218,7 @@ function I(e) {
         })
     );
 }
+
 function T(e) {
     let { className: t, choice: n, onClick: i } = e;
     return (0, r.jsxs)(l.DUT, {
@@ -219,6 +233,7 @@ function T(e) {
         ],
     });
 }
+
 function C(e) {
     let t = !1;
     (0, l.mMO)(
@@ -237,11 +252,18 @@ function C(e) {
         {
             onCloseCallback: () => {
                 let n = p.A.getQuest(e.questId);
-                null != n && d.default.track(h.HAw.QUEST_SURVEY_DISMISSED, A(y({}, N(n, e.survey)), { submitted: t }));
+                null != n &&
+                    d.default.track(
+                        h.HAw.QUEST_SURVEY_DISMISSED,
+                        A(y({}, N(n, e.survey)), {
+                            submitted: t,
+                        }),
+                    );
             },
         },
     );
 }
+
 function N(e, t) {
     return {
         quest_id: e.id,

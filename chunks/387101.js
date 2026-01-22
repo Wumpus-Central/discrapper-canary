@@ -1,4 +1,7 @@
-a.d(e, { default: () => x }), a(896048);
+a.d(e, {
+    default: () => x,
+}),
+    a(896048);
 var n = a(627968),
     l = a(64700),
     i = a(158954),
@@ -15,6 +18,7 @@ var n = a(627968),
     y = a(652215),
     g = a(985018),
     p = a(521797);
+
 function x(t) {
     let { onClose: e, transitionState: a, clientSettingType: x, gameId: b } = t,
         [f, k] = l.useState("unreported"),
@@ -78,14 +82,16 @@ function x(t) {
                             ? t
                             : null,
                 }),
-                await (0, s.yy)(1000),
+                await (0, s.yy)(1e3),
                 S(!1),
                 M(!0),
                 await (0, s.yy)(1500),
                 e();
         }, [f, w, x, null == D ? void 0 : D.id, null == D ? void 0 : D.name, E, e]);
     (0, d.Ay)(() => {
-        _.default.track(y.HAw.OPEN_MODAL, { type: "overlay_disabled_questionnaire_modal" });
+        _.default.track(y.HAw.OPEN_MODAL, {
+            type: "overlay_disabled_questionnaire_modal",
+        });
     });
     let O = l.useMemo(
         () => [
@@ -146,7 +152,7 @@ function x(t) {
                     (0, n.jsx)(o.fs1, {
                         autosize: !0,
                         value: w,
-                        maxLength: 1000,
+                        maxLength: 1e3,
                         showRemainingCharacterCount: !1,
                         placeholder: g.intl.string(g.t["gU+bVJ"]),
                         onChange: A,

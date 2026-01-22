@@ -1,4 +1,6 @@
-n.d(t, { default: () => P });
+n.d(t, {
+    default: () => P,
+});
 var r = n(627968);
 n(64700);
 var l = n(397927),
@@ -22,6 +24,7 @@ var l = n(397927),
     v = n(77544),
     _ = n(652215),
     h = n(985018);
+
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -47,6 +50,7 @@ function S(e) {
     }
     return e;
 }
+
 function I(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -65,6 +69,7 @@ function I(e, t) {
         e
     );
 }
+
 function D(e) {
     let {
             user: t,
@@ -92,7 +97,9 @@ function D(e) {
         M = (0, v.A)(t.id, S),
         C = (0, E.A)(t.id),
         w = (0, j.A)(t.id, o),
-        T = (0, y.A)({ user: t }),
+        T = (0, y.A)({
+            user: t,
+        }),
         N = (0, u.A)(null, t),
         U = (0, A.A)({
             user: t,
@@ -122,22 +129,33 @@ function D(e) {
             !B &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, r.jsx)(l.rXV, { children: k }),
+                        (0, r.jsx)(l.rXV, {
+                            children: k,
+                        }),
                         (0, r.jsxs)(l.rXV, {
                             children: [D, x, P, M],
                         }),
-                        (0, r.jsx)(l.rXV, { children: C }),
-                        (0, r.jsx)(l.rXV, { children: N }),
+                        (0, r.jsx)(l.rXV, {
+                            children: C,
+                        }),
+                        (0, r.jsx)(l.rXV, {
+                            children: N,
+                        }),
                         (0, r.jsxs)(l.rXV, {
                             children: [w, T, U, V, L],
                         }),
-                        (0, r.jsx)(l.rXV, { children: G }),
+                        (0, r.jsx)(l.rXV, {
+                            children: G,
+                        }),
                     ],
                 }),
-            (0, r.jsx)(l.rXV, { children: R }),
+            (0, r.jsx)(l.rXV, {
+                children: R,
+            }),
         ],
     });
 }
+
 function x(e) {
     let { user: t, mediaEngineContext: n, onSelect: a, onShowProfile: o, onWatchStream: c, appContext: f } = e,
         _ = (0, m.A)({
@@ -156,7 +174,9 @@ function x(e) {
         D = (0, v.A)(t.id, c),
         x = (0, E.A)(t.id),
         P = (0, j.A)(t.id, n),
-        M = (0, y.A)({ user: t }),
+        M = (0, y.A)({
+            user: t,
+        }),
         C = (0, u.A)(null, t),
         w = (0, A.A)({
             user: t,
@@ -185,18 +205,26 @@ function x(e) {
             !V &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, r.jsx)(l.rXV, { children: L }),
+                        (0, r.jsx)(l.rXV, {
+                            children: L,
+                        }),
                         (0, r.jsxs)(l.rXV, {
                             children: [_, S, I, D],
                         }),
-                        (0, r.jsx)(l.rXV, { children: x }),
-                        (0, r.jsx)(l.rXV, { children: C }),
+                        (0, r.jsx)(l.rXV, {
+                            children: x,
+                        }),
+                        (0, r.jsx)(l.rXV, {
+                            children: C,
+                        }),
                         (0, r.jsxs)(l.rXV, {
                             children: [P, M, w, N, T],
                         }),
                     ],
                 }),
-            (0, r.jsx)(l.rXV, { children: U }),
+            (0, r.jsx)(l.rXV, {
+                children: U,
+            }),
         ],
     });
 }
@@ -257,7 +285,9 @@ let P = (0, o.A)(
                       }),
                   );
         },
-        { object: _.ZSU.CONTEXT_MENU },
+        {
+            object: _.ZSU.CONTEXT_MENU,
+        },
     ),
     [c.A.CONTEXT_MENU, c.A.USER_OVERLAY_CONTEXT_MENU],
 );

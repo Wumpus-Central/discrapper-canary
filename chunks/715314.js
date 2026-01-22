@@ -1,7 +1,10 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var r,
     i = n(311907),
     a = n(73153);
+
 function s(e, t, n) {
     return (
         t in e
@@ -18,25 +21,31 @@ function s(e, t, n) {
 let o = {},
     l = null,
     c = null;
+
 function u(e, t) {
     null == t ? e in o && delete o[e] : null != e && (o[e] = t);
 }
+
 function d(e) {
     let { required_actions: t, user_id: n } = e;
     u((l = n), t);
 }
+
 function f(e) {
     let { user: t } = e;
     c = t.id;
 }
+
 function p(e) {
     let { userId: t } = e;
     u(t, null);
 }
+
 function _(e) {
     let { isSwitchingAccount: t } = e;
     t || null == c || u(c, null);
 }
+
 function h(e) {
     let { userId: t } = e;
     u(t, null);

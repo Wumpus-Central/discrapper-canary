@@ -1,5 +1,7 @@
 var r;
-Object.defineProperty(t, "__esModule", { value: !0 }),
+Object.defineProperty(t, "__esModule", {
+    value: !0,
+}),
     (t.astFormatter = t.RichTextNodeType = void 0),
     (t.formatToAst = o);
 let i = n(941242);
@@ -64,6 +66,7 @@ class s extends i.FormatBuilder {
         return this.result;
     }
 }
+
 function o(e, t) {
     return "string" == typeof e
         ? [

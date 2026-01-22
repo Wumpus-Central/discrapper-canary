@@ -1,4 +1,8 @@
-a.d(t, { A: () => i }), a(896048), a(747238);
+a.d(t, {
+    A: () => i,
+}),
+    a(896048),
+    a(747238);
 var s = a(627968),
     c = a(64700),
     d = a(492462),
@@ -7,6 +11,7 @@ var s = a(627968),
     b = a(321987),
     r = a(595244),
     o = a(985018);
+
 function i() {
     let e,
         t = (0, n.zy)(),
@@ -38,6 +43,8 @@ function i() {
                     message: o.intl.string(o.t.BAcf6a),
                     spinner: !0,
                 })),
-        (0, s.jsx)(b.$, { children: e })
+        (0, s.jsx)(b.$, {
+            children: e,
+        })
     );
 }

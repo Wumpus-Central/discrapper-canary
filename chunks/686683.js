@@ -1,35 +1,57 @@
-n.d(t, { G: () => i });
+n.d(t, {
+    G: () => i,
+});
 let r = (0, n(600975).C)({
         kind: "user",
         label: "Pomelo Debounce Delay",
         id: "2023-03_pomelo_debounce_delay",
-        defaultConfig: { delay: 600 },
+        defaultConfig: {
+            delay: 600,
+        },
         treatments: [
             {
                 id: 1,
                 label: "600ms",
-                config: { delay: 600 },
+                config: {
+                    delay: 600,
+                },
             },
             {
                 id: 2,
                 label: "700ms",
-                config: { delay: 700 },
+                config: {
+                    delay: 700,
+                },
             },
             {
                 id: 3,
                 label: "800ms",
-                config: { delay: 800 },
+                config: {
+                    delay: 800,
+                },
             },
             {
                 id: 4,
                 label: "900ms",
-                config: { delay: 900 },
+                config: {
+                    delay: 900,
+                },
             },
             {
                 id: 5,
                 label: "1000ms",
-                config: { delay: 1000 },
+                config: {
+                    delay: 1e3,
+                },
             },
         ],
     }),
-    i = () => r.useExperiment({ location: "52560d_1" }, { autoTrackExposure: !1 }).delay;
+    i = () =>
+        r.useExperiment(
+            {
+                location: "52560d_1",
+            },
+            {
+                autoTrackExposure: !1,
+            },
+        ).delay;

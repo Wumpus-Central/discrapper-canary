@@ -1,7 +1,10 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 var r = n(627968),
     l = n(64700),
     i = n(397927);
+
 function a(e, t) {
     return l.useCallback(() => {
         (0, i.mMO)(async () => {

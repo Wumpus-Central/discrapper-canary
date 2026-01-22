@@ -1,8 +1,11 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r,
     i = n(311907),
     a = n(73153),
     s = n(469036);
+
 function o(e, t, n) {
     return (
         t in e
@@ -17,10 +20,12 @@ function o(e, t, n) {
     );
 }
 let l = {};
+
 function c(e) {
     let { applicationId: t, link: n } = e;
     null == l[t] && (l[t] = Object.create(null)), (l[t][n.link_id] = new s.A(n));
 }
+
 function u() {
     l = {};
 }

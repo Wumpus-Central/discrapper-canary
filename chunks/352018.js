@@ -1,4 +1,6 @@
-n.d(t, { A: () => P });
+n.d(t, {
+    A: () => P,
+});
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -19,6 +21,7 @@ var r = n(627968),
     y = n(788868),
     O = n(985018),
     A = n(849148);
+
 function v(e, t, n) {
     return (
         t in e
@@ -32,6 +35,7 @@ function v(e, t, n) {
         e
     );
 }
+
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -48,6 +52,7 @@ function S(e) {
     }
     return e;
 }
+
 function I(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -60,6 +65,7 @@ function I(e, t) {
     }
     return n;
 }
+
 function T(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -71,6 +77,7 @@ function T(e, t) {
         e
     );
 }
+
 function C(e, t) {
     if (null == e) return {};
     var n,
@@ -87,6 +94,7 @@ function C(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function N(e, t) {
     if (null == e) return {};
     var n,
@@ -97,6 +105,7 @@ function N(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function R(e) {
     let { className: t } = e;
     return (0, r.jsx)(s.Zes, {
@@ -105,6 +114,7 @@ function R(e) {
         className: t,
     });
 }
+
 function w(e) {
     let { className: t } = e;
     return (0, r.jsxs)(i.Fragment, {
@@ -114,10 +124,13 @@ function w(e) {
                 mask: u.Ay.Masks.HEADER_BAR_BADGE_BOTTOM,
                 children: (0, r.jsx)(R, {}),
             }),
-            (0, r.jsx)(h.A, { className: A.s }),
+            (0, r.jsx)(h.A, {
+                className: A.s,
+            }),
         ],
     });
 }
+
 function P(e) {
     let { hideBadges: t = !1, stream: n, location: u } = e,
         h = C(e, ["hideBadges", "stream", "location"]),

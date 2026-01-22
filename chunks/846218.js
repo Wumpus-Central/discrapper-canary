@@ -1,7 +1,10 @@
-n.d(t, { n: () => s });
+n.d(t, {
+    n: () => s,
+});
 var r = n(508675),
     i = n(690521),
     a = n(307731);
+
 function s(e, t) {
     if (null == e.id) return !0;
     let n = r.Ay.getCustomEmojiById(e.id);

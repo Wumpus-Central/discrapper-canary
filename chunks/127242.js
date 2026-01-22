@@ -1,5 +1,10 @@
 let r;
-n.d(t, { A: () => Q }), n(896048), n(321073), n(65821);
+n.d(t, {
+    A: () => Q,
+}),
+    n(896048),
+    n(321073),
+    n(65821);
 var i,
     a = n(812729),
     s = n.n(a),
@@ -11,6 +16,7 @@ var i,
     f = n(181435),
     p = n(680243),
     _ = n(672396);
+
 function h(e, t, n) {
     return (
         t in e
@@ -28,20 +34,24 @@ let m = null,
     g = new Set(),
     E = null,
     b = null,
-    y = 3000,
+    y = 3e3,
     O = new u.SnowflakeSequence();
+
 function A(e) {
     return (0, f.Vx)(e) ? "native-".concat(e.id) : null != e.nativeId ? "native-".concat(e.nativeId) : null;
 }
+
 function v(e) {
     var t, n;
     let r = [e.type, null != (t = null == (n = e.pid) ? void 0 : n.toString()) ? t : "null-pid"],
         i = A(e);
     return null != i && r.push(i), r;
 }
+
 function S(e) {
     return -e.timestamp;
 }
+
 function I(e) {
     let t = Math.floor(e);
     try {
@@ -50,6 +60,7 @@ function I(e) {
         return O.reset(), u.default.fromTimestampWithSequence(t, O);
     }
 }
+
 function T(e, t, n) {
     var r;
     let i = I(e.timestamp);
@@ -66,22 +77,27 @@ function T(e, t, n) {
         stack: null != (r = Error().stack) ? r : "",
     };
 }
+
 function C() {
     return performance.timeOrigin + performance.now();
 }
 let N = new l.J(v, S),
     R = 0;
+
 function w(e) {
     return N.set(e.id, e);
 }
+
 function P() {
     return R;
 }
+
 function D(e, t, n) {
     let r = A(e);
     if (null == r) throw Error("Native breadcrumb has no native id");
     return !(N.size(r) > 0) && ((R = Math.max(R, Number(e.id))), w(T(e, t, n)));
 }
+
 function x(e, t, n, r) {
     let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : f.QJ.Info,
         a = C(),
@@ -99,39 +115,52 @@ function x(e, t, n, r) {
         stack: void 0,
     });
 }
+
 function L(e) {
     return [N.values(e, !0), N.version];
 }
+
 function j() {
     null == b &&
         (b = setInterval(() => {
             var e;
             let t = null != (e = null == m ? void 0 : m.getLastAssociatedPID()) ? e : null;
             null == m ||
-                m.getNativeBreadcrumbs({ minBreadcrumbId: P() }, (e) => {
-                    let { breadcrumbs: n } = e;
-                    for (let e of n) D(e, f.ON.NativeOOP, null != t ? t : d.UNSET_PID);
-                    Z.emitChange();
-                });
+                m.getNativeBreadcrumbs(
+                    {
+                        minBreadcrumbId: P(),
+                    },
+                    (e) => {
+                        let { breadcrumbs: n } = e;
+                        for (let e of n) D(e, f.ON.NativeOOP, null != t ? t : d.UNSET_PID);
+                        Z.emitChange();
+                    },
+                );
         }, y));
 }
+
 function M(e) {
     return e ? j() : U(), !0;
 }
+
 function k() {
     return null != b;
 }
+
 function U() {
     null != b && (clearInterval(b), (b = null));
 }
+
 function G() {
     null != E && (clearInterval(E), (E = null));
 }
+
 function V(e) {
     let { enabled: t, mode: n } = e;
     t ? g.add(n) : g.delete(n), (g = new Set(g));
 }
 let F = 300;
+
 function B() {
     null == E &&
         (E = setInterval(() => {
@@ -143,27 +172,33 @@ function B() {
                 });
         }, F));
 }
+
 function H(e) {
     let { enabled: t } = e;
     return t ? B() : G(), !0;
 }
+
 function Y(e) {
     var t;
     let { enabled: n } = e;
     null == m || null == (t = m.setDetailedLogging) || t.call(m, n);
 }
+
 function W() {
     m = p.A.getNativeModule();
 }
+
 function K() {
     m = null;
 }
+
 function z(e) {
     let {
         breadcrumb: { pid: t, name: n, data: r, type: i, logType: a },
     } = e;
     return x(n, null != r ? r : {}, i, t, a), !0;
 }
+
 function q(e) {
     let { enabled: t } = e;
     return M(t), !0;

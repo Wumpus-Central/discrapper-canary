@@ -1,4 +1,6 @@
-r.d(t, { A: () => l });
+r.d(t, {
+    A: () => l,
+});
 var n = r(64700),
     o = r(205662),
     a = r(717519),
@@ -37,7 +39,7 @@ let l = function (e) {
                 a.Zk(e.hsv, "hsv") &&
                     ((o[2] = o[2].replace("%", "")),
                     (o[1] = o[1].replace("%", "")),
-                    (o[0] = o[0].replace("\xB0", "")),
+                    (o[0] = o[0].replace("\xb0", "")),
                     1 == o[1] ? (o[1] = 0.01) : 1 == o[2] && (o[2] = 0.01),
                     t(
                         {
@@ -53,7 +55,7 @@ let l = function (e) {
                 a.Zk(e.hsl, "hsl") &&
                     ((i[2] = i[2].replace("%", "")),
                     (i[1] = i[1].replace("%", "")),
-                    (i[0] = i[0].replace("\xB0", "")),
+                    (i[0] = i[0].replace("\xb0", "")),
                     1 == h[1] ? (h[1] = 0.01) : 1 == h[2] && (h[2] = 0.01),
                     t(
                         {
@@ -73,7 +75,9 @@ let l = function (e) {
                     height: "100px",
                     marginTop: "4px",
                 },
-                fields: { width: "100%" },
+                fields: {
+                    width: "100%",
+                },
                 column: {
                     paddingTop: "10px",
                     display: "flex",
@@ -142,8 +146,8 @@ let l = function (e) {
             },
         }),
         d = r.r + ", " + r.g + ", " + r.b,
-        f = Math.round(l.h) + "\xB0, " + Math.round(100 * l.s) + "%, " + Math.round(100 * l.l) + "%",
-        h = Math.round(u.h) + "\xB0, " + Math.round(100 * u.s) + "%, " + Math.round(100 * u.v) + "%";
+        f = Math.round(l.h) + "\xb0, " + Math.round(100 * l.s) + "%, " + Math.round(100 * l.l) + "%",
+        h = Math.round(u.h) + "\xb0, " + Math.round(100 * u.s) + "%, " + Math.round(100 * u.v) + "%";
     return n.createElement(
         "div",
         {
@@ -152,10 +156,14 @@ let l = function (e) {
         },
         n.createElement(
             "div",
-            { style: p.fields },
+            {
+                style: p.fields,
+            },
             n.createElement(
                 "div",
-                { style: p.double },
+                {
+                    style: p.double,
+                },
                 n.createElement(i.jc, {
                     style: {
                         input: p.input,
@@ -168,10 +176,14 @@ let l = function (e) {
             ),
             n.createElement(
                 "div",
-                { style: p.column },
+                {
+                    style: p.column,
+                },
                 n.createElement(
                     "div",
-                    { style: p.single },
+                    {
+                        style: p.single,
+                    },
                     n.createElement(i.jc, {
                         style: {
                             input: p.input2,
@@ -184,7 +196,9 @@ let l = function (e) {
                 ),
                 n.createElement(
                     "div",
-                    { style: p.single },
+                    {
+                        style: p.single,
+                    },
                     n.createElement(i.jc, {
                         style: {
                             input: p.input2,
@@ -197,7 +211,9 @@ let l = function (e) {
                 ),
                 n.createElement(
                     "div",
-                    { style: p.single },
+                    {
+                        style: p.single,
+                    },
                     n.createElement(i.jc, {
                         style: {
                             input: p.input2,

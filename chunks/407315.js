@@ -19,6 +19,7 @@ var r = n(28728),
     f = n(551483);
 let p = new Set(["line"]),
     _ = /^[a-z0-9_+\-.#]+$/i;
+
 function h(e) {
     let { onChange: t } = e,
         n = null;
@@ -34,11 +35,13 @@ function h(e) {
         e
     );
 }
+
 function m(e) {
     let t = E(e);
     y(e, t);
 }
 let g = /(?:<span class="([^"]*)">)|(?:<\/span>)/g;
+
 function E(e) {
     let t = [],
         n = null;
@@ -53,6 +56,7 @@ function E(e) {
             t.push(n);
     return A(t), t;
 }
+
 function b(e, t, n, r, i) {
     var a;
     let s = T(t),
@@ -81,13 +85,24 @@ function b(e, t, n, r, i) {
         opensCodeBlockOnOwnLine: g,
     };
 }
+
 function y(e, t) {
     for (let n of t) {
         let [t, r] = n.blockEntry,
             i = O(n);
-        (null == t ? void 0 : t.codeBlockState) != i && u.b.setNodes(e, { codeBlockState: i }, { at: r });
+        (null == t ? void 0 : t.codeBlockState) != i &&
+            u.b.setNodes(
+                e,
+                {
+                    codeBlockState: i,
+                },
+                {
+                    at: r,
+                },
+            );
     }
 }
+
 function O(e) {
     return e.isStyledCodeBlockLine || e.wasInCodeBlock
         ? {
@@ -99,6 +114,7 @@ function O(e) {
           }
         : null;
 }
+
 function A(e) {
     let t = [],
         n = !1;
@@ -159,6 +175,7 @@ let v = {
         updateAgeOnGet: !0,
     },
     S = new (a())(v);
+
 function I(e, t) {
     let n = "".concat(e, "-").concat(t),
         r = S.get(n);
@@ -168,6 +185,7 @@ function I(e, t) {
     let a = i.value.split("\n");
     return S.set(n, a), a;
 }
+
 function T(e) {
     let t,
         [n, r] = e;
@@ -190,6 +208,7 @@ function T(e) {
     }
     return i;
 }
+
 function C(e, t) {
     let n = 0;
     for (let i of d.VW.nodes(e, {
@@ -211,6 +230,7 @@ function C(e, t) {
     }
     return n % 2 != 0;
 }
+
 function N(e) {
     if (null == e.selection) return !1;
     let t = d.ZF.start(e.selection);

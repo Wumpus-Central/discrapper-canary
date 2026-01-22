@@ -1,4 +1,10 @@
-n.d(t, { A: () => eE }), n(228524), n(896048), n(938796), n(321073);
+n.d(t, {
+    A: () => eE,
+}),
+    n(228524),
+    n(896048),
+    n(938796),
+    n(321073);
 var r = n(735438),
     i = n.n(r),
     a = n(540185),
@@ -17,6 +23,7 @@ var r = n(735438),
     E = n(633075),
     b = n(289173),
     y = n(985018);
+
 function O(e, t, n) {
     return (
         t in e
@@ -30,6 +37,7 @@ function O(e, t, n) {
         e
     );
 }
+
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -46,6 +54,7 @@ function A(e) {
     }
     return e;
 }
+
 function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -58,6 +67,7 @@ function v(e, t) {
     }
     return n;
 }
+
 function S(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -74,7 +84,7 @@ let I = Symbol("NO GUILD ID"),
     C = new Set(),
     N = "premium",
     R = "guild_booster_lvl",
-    w = 2147483647,
+    w = 0x7fffffff,
     P = new Map(),
     D = new Map(),
     x = new Map(),
@@ -86,6 +96,7 @@ let I = Symbol("NO GUILD ID"),
     G = [],
     V = null,
     F = new Map();
+
 function B(e) {
     let t = e.data.type;
     switch (t) {
@@ -113,12 +124,13 @@ function B(e) {
 }
 let H = !1,
     Y = null;
+
 function W(e) {
     let t = P.get(e);
     if (null == t) return;
     let n = t.profileEffect;
     if ((null == n ? void 0 : n.expiresAt) == null) return;
-    let r = 1000 * n.expiresAt - Date.now();
+    let r = 1e3 * n.expiresAt - Date.now();
     if (r <= 0) {
         (t.profileEffect = void 0), x.delete(e), eg.emitChange();
         return;
@@ -126,6 +138,7 @@ function W(e) {
     let i = x.get(e);
     null != i && i.start(Math.min(w, r), () => W(e));
 }
+
 function K(e, t) {
     var n, r;
     let i = D.get(e);
@@ -134,25 +147,36 @@ function K(e, t) {
     if (null == a) return;
     let s = a.profileEffect;
     if ((null == s ? void 0 : s.expiresAt) == null) return;
-    let o = 1000 * s.expiresAt - Date.now();
+    let o = 1e3 * s.expiresAt - Date.now();
     if (o <= 0) {
-        i.set(t, S(A({}, a), { profileEffect: void 0 })), null == (r = L.get(e)) || r.delete(t), eg.emitChange();
+        i.set(
+            t,
+            S(A({}, a), {
+                profileEffect: void 0,
+            }),
+        ),
+            null == (r = L.get(e)) || r.delete(t),
+            eg.emitChange();
         return;
     }
     let l = null == (n = L.get(e)) ? void 0 : n.get(t);
     null != l && l.start(Math.min(w, o), () => K(e, t));
 }
+
 function z() {
     T.clear(), C.clear(), P.clear(), D.clear(), j.clear(), M.clear(), k.clear(), (H = !1);
 }
+
 function q(e) {
     let { userId: t } = e;
     C.add(t);
 }
+
 function X(e) {
     let { userId: t } = e;
     C.delete(t);
 }
+
 function Z(e) {
     return i()(e)
         .map((e) => ({
@@ -166,9 +190,11 @@ function Z(e) {
         })
         .value();
 }
+
 function Q(e) {
     C.delete(e.userId), j.set(e.userId, Z(e.mutualFriends)), M.set(e.userId, e.mutualFriends.length);
 }
+
 function $(e) {
     var t, n, r, i, a, l, c, u, d, p, _, E, b, O, v, w, G, V, F, H, z;
     let { userProfile: q, fetchStartedAt: X } = e,
@@ -208,14 +234,25 @@ function $(e) {
                 ? q.badges.map((e) => {
                       let t = (0, g.e0)(e.id);
                       if ((e.id === N || null != t) && null != $) {
-                          let n = y.intl.formatToPlainString(y.t["8zbGNR"], { date: $ });
+                          let n = y.intl.formatToPlainString(y.t["8zbGNR"], {
+                              date: $,
+                          });
                           return (
-                              null != t && (n = y.intl.formatToPlainString(y.t.Hu4jfi, { date: $ })),
-                              S(A({}, e), { description: n })
+                              null != t &&
+                                  (n = y.intl.formatToPlainString(y.t.Hu4jfi, {
+                                      date: $,
+                                  })),
+                              S(A({}, e), {
+                                  description: n,
+                              })
                           );
                       }
                       return e.id.startsWith(R) && null != ee
-                          ? S(A({}, e), { description: y.intl.formatToPlainString(y.t.IWkAq7, { date: ee }) })
+                          ? S(A({}, e), {
+                                description: y.intl.formatToPlainString(y.t.IWkAq7, {
+                                    date: ee,
+                                }),
+                            })
                           : e;
                   })
                 : [];
@@ -306,12 +343,14 @@ function $(e) {
         }
     }
 }
+
 function J(e, t) {
     if (null == e) return;
     let n = new Set(e.map((e) => e.id)),
         r = null == t ? void 0 : t.badges.filter((e) => !n.has(e.id));
     return r.length > 0 && e.push(...r), e;
 }
+
 function ee(e) {
     let { userId: t, guildId: n, withMutualFriends: r } = e,
         i = null != n ? n : I,
@@ -323,6 +362,7 @@ function ee(e) {
     }
     r && C.add(t);
 }
+
 function et(e) {
     var t, n;
     let { userId: r, guildId: i, apiError: a, fetchStartedAt: s } = e;
@@ -353,6 +393,7 @@ function et(e) {
         P.set(r, o),
         (null == a ? void 0 : a.status) === 404 && (M.set(r, 0), j.set(r, U), k.set(r, G));
 }
+
 function en(e) {
     let {
             userId: t,
@@ -391,6 +432,7 @@ function en(e) {
         x.set(t, e), W(t);
     }
 }
+
 function er(e) {
     let {
             userId: t,
@@ -438,58 +480,81 @@ function er(e) {
         K(t, n);
     }
 }
+
 function ei(e) {
     H = !0;
 }
+
 function ea(e) {
     (H = !1), null != e.guild_id ? er(e) : en(e);
 }
+
 function es(e) {
     H = !1;
 }
+
 function eo(e) {
     let { userId: t, widgets: n } = e,
         r = P.get(t);
     if (null == r) return !1;
-    P.set(t, S(A({}, r), { widgets: n.map(B).filter(m.Vq) }));
+    P.set(
+        t,
+        S(A({}, r), {
+            widgets: n.map(B).filter(m.Vq),
+        }),
+    );
 }
+
 function el(e) {
     let { badges: t, ttlInSeconds: n, userId: r } = e;
     Y = {
         userId: r,
         badges: t,
-        expiresAtMs: Date.now() + 1000 * n,
+        expiresAtMs: Date.now() + 1e3 * n,
     };
     let i = P.get(r);
     if (null != i) {
         var a;
         let e = null != (a = i.badges) ? a : [];
-        J(e, Y), P.set(r, S(A({}, i), { badges: e }));
+        J(e, Y),
+            P.set(
+                r,
+                S(A({}, i), {
+                    badges: e,
+                }),
+            );
     }
 }
+
 function ec(e) {
     var t, n;
     let r = e.user.id;
     return !((null != (t = null == (n = T.get(r)) ? void 0 : n.size) ? t : 0) > 0) && e_(r);
 }
+
 function eu(e) {
     return [...P.keys()].reduce((e, t) => e_(t) || e, !1);
 }
+
 function ed(e) {
     return e_(e.user.id);
 }
+
 function ef(e) {
     return e_(e.relationship.id);
 }
+
 function ep() {
     T.clear(), C.clear(), P.clear(), D.clear();
 }
+
 function e_(e) {
     if (null == e) return !1;
     let t = P.get(e);
     if (null == t) return !1;
     (t.fetchStartedAt = 0), (t.fetchEndedAt = 0), (t.fetchError = void 0);
 }
+
 function eh(e) {
     for (let t of ((V = e.applicationConfigs.map((e) => new l.V(e))), F.clear(), V)) F.set(t.applicationId, t);
 }

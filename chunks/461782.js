@@ -7,6 +7,7 @@ n.d(t, {
 var r = n(627968),
     i = n(64700),
     a = n(451988);
+
 function s(e, t, n) {
     return (
         t in e
@@ -20,6 +21,7 @@ function s(e, t, n) {
         e
     );
 }
+
 function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -43,6 +45,7 @@ let l = i.createContext({
         onActive: () => null,
     }),
     c = i.createContext(!1);
+
 function u(e) {
     let { children: t, timeout: n } = e,
         [s, u] = i.useState(!1),
@@ -98,7 +101,14 @@ function u(e) {
         value: s,
         children: (0, r.jsx)(l.Provider, {
             value: g,
-            children: t(o({ idle: s }, g)),
+            children: t(
+                o(
+                    {
+                        idle: s,
+                    },
+                    g,
+                ),
+            ),
         }),
     });
 }

@@ -1,10 +1,13 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(627968);
 n(64700);
 var l = n(503698),
     i = n.n(l),
     a = n(397927),
     s = n(122581);
+
 function o(e) {
     let { className: t, color: n } = e,
         l = (function (e, t) {
@@ -66,7 +69,12 @@ function o(e) {
             return e;
         })(
             {
-                className: i()({ [s.Q]: null == n }, t),
+                className: i()(
+                    {
+                        [s.Q]: null == n,
+                    },
+                    t,
+                ),
                 color: n,
             },
             l,

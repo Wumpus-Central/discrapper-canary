@@ -1,4 +1,6 @@
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var r,
     i = n(627968),
     a = n(64700),
@@ -6,6 +8,7 @@ var r,
     o = n.n(s),
     l = n(235986),
     c = n(683754);
+
 function u(e, t, n) {
     return (
         t in e
@@ -27,7 +30,12 @@ let d = (e) => {
             children: [
                 (0, i.jsx)("div", {
                     className: c.Bn,
-                    style: null != r ? { backgroundImage: "url(".concat(r, ")") } : void 0,
+                    style:
+                        null != r
+                            ? {
+                                  backgroundImage: "url(".concat(r, ")"),
+                              }
+                            : void 0,
                 }),
                 t,
             ],

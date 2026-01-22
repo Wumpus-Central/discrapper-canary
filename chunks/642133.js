@@ -1,7 +1,10 @@
-n.d(t, { A: () => E });
+n.d(t, {
+    A: () => E,
+});
 var r,
     i = n(311907),
     a = n(73153);
+
 function s(e, t, n) {
     return (
         t in e
@@ -15,19 +18,22 @@ function s(e, t, n) {
         e
     );
 }
-let o = 120000,
+let o = 12e4,
     l = {},
     c = {};
+
 function u(e) {
     let { guildId: t, roleMemberCount: n } = e;
     (l[t] = n), (c[t] = Date.now());
 }
+
 function d(e) {
     let { guildId: t, roleId: n, count: r } = e,
         i = l[t];
     if (null == i) return !1;
     i[n] = r;
 }
+
 function f(e) {
     let { guildId: t, roleId: n, added: r } = e,
         i = l[t];
@@ -35,22 +41,26 @@ function f(e) {
     let a = Object.keys(r).length;
     i[n] += a;
 }
+
 function p(e) {
     let { guildId: t, roleId: n } = e,
         r = l[t];
     if (null == r || null == r[n]) return !1;
     r[n] = r[n] + 1;
 }
+
 function _(e) {
     let { guildId: t, roleId: n } = e,
         r = l[t];
     if (null == r || null == r[n]) return !1;
     r[n] = Math.max(r[n] - 1, 0);
 }
+
 function h(e) {
     let { guildId: t, role: n } = e;
     null == l[t] && (l[t] = {}), (l[t][n.id] = 0);
 }
+
 function m(e) {
     let { guild: t } = e;
     delete l[t.id], delete c[t.id];

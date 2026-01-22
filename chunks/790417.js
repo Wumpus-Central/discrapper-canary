@@ -1,4 +1,6 @@
-n.d(t, { A: () => I });
+n.d(t, {
+    A: () => I,
+});
 var r = n(627968);
 n(64700);
 var l = n(311907),
@@ -22,9 +24,12 @@ var l = n(311907),
     v = n(652215),
     A = n(985018),
     w = n(897757);
+
 function I(e) {
     let { user: t, currentUser: n, displayProfile: I, guildId: P, channelId: E, onClose: S } = e,
-        { voiceActivityStatusEnabled: T } = (0, a.G)({ location: "UserProfileModalV2Activity" }),
+        { voiceActivityStatusEnabled: T } = (0, a.G)({
+            location: "UserProfileModalV2Activity",
+        }),
         { live: _, recent: N, stream: D } = (0, f.A)(t.id),
         { voiceChannel: R, voiceActivity: C } = (0, p.A)({
             userId: t.id,
@@ -43,7 +48,9 @@ function I(e) {
     if (!F && !X && k)
         return (0, r.jsx)("div", {
             className: w.kR,
-            children: Array.from({ length: 8 }).map((e, t) =>
+            children: Array.from({
+                length: 8,
+            }).map((e, t) =>
                 (0, r.jsxs)(
                     "div",
                     {
@@ -66,7 +73,9 @@ function I(e) {
     if (!F && !X && !k) {
         var W;
         return G
-            ? (0, r.jsx)(O.qv, { onClose: S })
+            ? (0, r.jsx)(O.qv, {
+                  onClose: S,
+              })
             : (0, r.jsx)(O.zf, {
                   user: t,
                   guildId: null != (W = null == I ? void 0 : I.guildId) ? W : P,

@@ -6,6 +6,7 @@ n.d(t, {
 }),
     n(228524);
 var r = n(392107);
+
 function i(e) {
     let t = {};
     if (
@@ -21,6 +22,7 @@ function i(e) {
     }
     return t;
 }
+
 function a(e) {
     let t = {};
     if (
@@ -41,6 +43,7 @@ function a(e) {
         t
     );
 }
+
 function s(e) {
     let t = {};
     if (void 0 !== e.pendingAvatar) {
@@ -62,6 +65,7 @@ function s(e) {
         t
     );
 }
+
 function o(e) {
     let t = {};
     return void 0 !== e.pendingPrimaryGuildId && (t.primaryGuildId = e.pendingPrimaryGuildId), t;

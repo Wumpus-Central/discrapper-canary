@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968),
     i = n(64700),
     l = n(242564),
@@ -9,13 +11,19 @@ let o = (0, l.IE)([
     (0, l.mP)({
         key: "LISTING_NAME",
         cellClassName: c.Qy,
-        renderHeader: () => (0, r.jsx)(l.A3, { children: a.intl.string(a.t.OGpGqO) }),
+        renderHeader: () =>
+            (0, r.jsx)(l.A3, {
+                children: a.intl.string(a.t.OGpGqO),
+            }),
         sort: (0, l.vc)((e) => e.listing.name.toLowerCase()),
     }),
     (0, l.b1)({
         key: "PAYMENTS_COUNT",
         cellClassName: c.bw,
-        renderHeader: () => (0, r.jsx)(l.A3, { children: a.intl.string(a.t.vpHXJ0) }),
+        renderHeader: () =>
+            (0, r.jsx)(l.A3, {
+                children: a.intl.string(a.t.vpHXJ0),
+            }),
         getCount: (e) => e.paymentsCount,
         sort: (0, l.vc)((e) => {
             var t;
@@ -25,7 +33,10 @@ let o = (0, l.IE)([
     (0, l.CU)({
         key: "PRICE",
         cellClassName: c.k1,
-        renderHeader: () => (0, r.jsx)(l.A3, { children: a.intl.string(a.t.VodAGZ) }),
+        renderHeader: () =>
+            (0, r.jsx)(l.A3, {
+                children: a.intl.string(a.t.VodAGZ),
+            }),
         getAmount(e) {
             let { listing: t } = e;
             return t.price_tier;
@@ -36,9 +47,12 @@ let o = (0, l.IE)([
         }),
     }),
 ]);
+
 function d(e) {
     let { earningsData: t, guildId: n } = e,
-        a = (0, s.fZ)(n, { publishedOnly: !1 }),
+        a = (0, s.fZ)(n, {
+            publishedOnly: !1,
+        }),
         c = t.currentPeriod,
         d = i.useMemo(
             () =>

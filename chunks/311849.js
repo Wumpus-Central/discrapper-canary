@@ -1,4 +1,11 @@
-n.d(t, { A: () => z }), n(638769), n(896048), n(321073), n(114821), n(339614);
+n.d(t, {
+    A: () => z,
+}),
+    n(638769),
+    n(896048),
+    n(321073),
+    n(114821),
+    n(339614);
 var r = n(141931),
     i = n(506774),
     a = n(439372),
@@ -15,6 +22,7 @@ var r = n(141931),
     m = n(837921),
     g = n(664335),
     E = n(652215);
+
 function b(e, t, n) {
     return (
         t in e
@@ -53,6 +61,7 @@ let y = 1048576,
     B = "lastMemoryUsageRestart",
     H = +f.A.Millis.DAY,
     Y = +f.A.Millis.MINUTE;
+
 function W() {
     return p.isPlatformEmbedded && (0, p.isWindows)();
 }
@@ -186,7 +195,9 @@ class K extends a.A {
         if (t < F) return;
         let n = i.w.get(B);
         if (null != n && n.timestamp >= Date.now() - H) return;
-        let { enable: a, enableForce: s } = g.A.getConfig({ location: "DesktopPerfAnalyticsManager" });
+        let { enable: a, enableForce: s } = g.A.getConfig({
+            location: "DesktopPerfAnalyticsManager",
+        });
         a &&
             setTimeout(() => {
                 let n = !0;
@@ -258,7 +269,11 @@ class K extends a.A {
                 let e = l.slice(0, 3).map((e) => e[0]),
                     t = 3;
                 for (let n of e
-                    .map((e) => _.A.getPerfAttributedPAMemoryCallstacks({ typeName: e }))
+                    .map((e) =>
+                        _.A.getPerfAttributedPAMemoryCallstacks({
+                            typeName: e,
+                        }),
+                    )
                     .filter((e) => null != e)
                     .flatMap((e) => e)
                     .sort((e, t) => {
@@ -359,7 +374,9 @@ class K extends a.A {
             b(this, "_pushedNativeDeadlockMinidumpCount", 0),
             b(this, "_startupTime", performance.now()),
             b(this, "_supportedNativeChannel", !0),
-            b(this, "actions", { POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen() });
+            b(this, "actions", {
+                POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen(),
+            });
     }
 }
 let z = new K();

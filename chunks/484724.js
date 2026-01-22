@@ -1,4 +1,8 @@
-n.d(t, { A: () => O }), n(896048), n(747238);
+n.d(t, {
+    A: () => O,
+}),
+    n(896048),
+    n(747238);
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -17,6 +21,7 @@ var r = n(627968),
     E = n(496092),
     b = n(427080),
     y = n(652215);
+
 function O(e) {
     let { code: t } = e,
         [n, O, A] = t.split("-"),
@@ -47,9 +52,12 @@ function O(e) {
                 }) === u.W.PROCEED
             ) {
                 if ((0, c.V)(n)) return void (0, l.Ze)(n);
-                s.A.joinGuild(n, { source: y.Q4z.GUILD_EVENT_EMBED }).catch(() => {});
+                s.A.joinGuild(n, {
+                    source: y.Q4z.GUILD_EVENT_EMBED,
+                }).catch(() => {});
             }
         };
+
     function R() {
         (0, c.V)(n)
             ? (0, l.Ze)(n)

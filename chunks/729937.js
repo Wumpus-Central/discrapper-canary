@@ -9,6 +9,7 @@ var r = n(562465),
     a = n(981616),
     s = n(290863),
     o = n(652215);
+
 function l(e, t) {
     i.h.dispatch({
         type: "ACTIVITY_SYNC",
@@ -16,6 +17,7 @@ function l(e, t) {
         userId: t,
     });
 }
+
 function c(e, t) {
     (0, a.LI)(e, t)
         .then((n) =>

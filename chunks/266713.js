@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968),
     l = n(64700),
     i = n(397927),
@@ -7,13 +9,20 @@ var r = n(627968),
     o = n(624160),
     c = n(985018),
     u = n(190401);
+
 function d() {
     let { trackUserProfileAction: e, trackUserProfileEditAction: t } = (0, a.NJ)(),
         n = l.useRef(!1),
-        d = (0, s.A)({ location: "UserProfileModalV2WidgetsEmptyState" });
+        d = (0, s.A)({
+            location: "UserProfileModalV2WidgetsEmptyState",
+        });
     return (
         l.useEffect(() => {
-            n.current || (e({ action: "VIEW_WIDGETS_EMPTY_STATE" }), (n.current = !0));
+            n.current ||
+                (e({
+                    action: "VIEW_WIDGETS_EMPTY_STATE",
+                }),
+                (n.current = !0));
         }, [e]),
         (0, r.jsxs)("div", {
             className: u.Ie,

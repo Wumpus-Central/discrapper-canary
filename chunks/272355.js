@@ -11,7 +11,11 @@ function r(e, t, n) {
         e
     );
 }
-n.d(t, { A: () => i }), n(896048), n(423034);
+n.d(t, {
+    A: () => i,
+}),
+    n(896048),
+    n(423034);
 class i {
     initialize() {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];

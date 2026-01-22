@@ -1,4 +1,7 @@
-n.d(t, { A: () => h }), n(896048);
+n.d(t, {
+    A: () => h,
+}),
+    n(896048);
 var r = n(64700),
     i = n(311907),
     a = n(946261),
@@ -11,6 +14,7 @@ var r = n(64700),
     f = n(102597),
     p = n(904054),
     _ = n(257645);
+
 function h(e, t) {
     let n =
             arguments.length > 2 && void 0 !== arguments[2]
@@ -43,7 +47,9 @@ function h(e, t) {
                 (r.volume = (0, p.A)(e.volume, n)),
                 r.play(),
                 E(!0),
-                r.addEventListener("pause", () => E(!1), { once: !0 });
+                r.addEventListener("pause", () => E(!1), {
+                    once: !0,
+                });
         }, [e, n, m, h]),
         isPreviewingSound: g,
     };

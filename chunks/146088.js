@@ -1,4 +1,8 @@
-s.r(e), s.d(e, { default: () => C }), s(747238);
+s.r(e),
+    s.d(e, {
+        default: () => C,
+    }),
+    s(747238);
 var n = s(627968),
     i = s(64700),
     r = s(492462),
@@ -14,6 +18,7 @@ var n = s(627968),
     x = s(985018),
     j = s(922730),
     g = s(473169);
+
 function A(t, e, s) {
     return (
         e in t
@@ -30,6 +35,7 @@ function A(t, e, s) {
 a.Ay.initialize();
 let m = "done",
     y = "failed";
+
 function B() {
     try {
         window.close();
@@ -43,7 +49,9 @@ class C extends i.PureComponent {
             : u.default.isAuthenticated()
               ? l.Bo.post({
                     url: p.Rsh.HANDOFF,
-                    body: { key: e },
+                    body: {
+                        key: e,
+                    },
                     oldFormErrors: !0,
                     rejectWithError: !0,
                 }).then(
@@ -114,7 +122,9 @@ class C extends i.PureComponent {
                     className: g.QB,
                     children: x.intl.string(x.t.ctWa65),
                 }),
-                (0, n.jsx)(o.tK, { children: x.intl.string(x.t["53IHoo"]) }),
+                (0, n.jsx)(o.tK, {
+                    children: x.intl.string(x.t["53IHoo"]),
+                }),
             ],
         });
     }
@@ -142,10 +152,16 @@ class C extends i.PureComponent {
         var e;
         super(t),
             A(this, "done", () => {
-                B(), this.setState({ stage: m });
+                B(),
+                    this.setState({
+                        stage: m,
+                    });
             }),
             A(this, "failed", () => {
-                this.setState({ stage: y }), B();
+                this.setState({
+                    stage: y,
+                }),
+                    B();
             }),
             A(this, "handleOpenApp", () => {
                 (0, f.pX)(p.BVt.ME);

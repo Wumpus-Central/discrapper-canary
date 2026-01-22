@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(627968);
 n(64700);
 var l = n(503698),
@@ -8,6 +10,7 @@ var l = n(503698),
     c = n(219103),
     o = n(652215),
     d = n(258470);
+
 function u(e) {
     var t, n;
     let {
@@ -25,7 +28,9 @@ function u(e) {
     if (g.amount <= 0)
         return (0, r.jsx)("div", {
             className: a()(d.kG, f),
-            children: (0, r.jsx)(c.x, { price: g }),
+            children: (0, r.jsx)(c.x, {
+                price: g,
+            }),
         });
     let j = (0, i.yt)(l, o.lid.PREMIUM_TIER_2),
         v =
@@ -55,7 +60,10 @@ function u(e) {
                       }
                       return e;
                   })({}, g)),
-                  (n = n = { amount: m.original }),
+                  (n = n =
+                      {
+                          amount: m.original,
+                      }),
                   Object.getOwnPropertyDescriptors
                       ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                       : (function (e, t) {
@@ -83,7 +91,9 @@ function u(e) {
             (0, r.jsx)(c.x, {
                 price: O ? j : v,
                 discount: m,
-                className: a()({ [d.q9]: null == b }),
+                className: a()({
+                    [d.q9]: null == b,
+                }),
                 nitroIconType: O ? x : void 0,
                 nitroIconSize: h,
                 discountOfferAmount: b,

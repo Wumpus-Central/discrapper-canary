@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var r = n(627968),
     i = n(64700),
     a = n(417597),
@@ -12,7 +14,8 @@ var r = n(627968),
     p = n(652215),
     _ = n(731875);
 let h = 6,
-    m = 1000;
+    m = 1e3;
+
 function g(e) {
     let { giftIntentType: t, recipientUser: n, channel: g } = e,
         E = (0, a.bG)([l.A], () => l.A.useReducedMotion),
@@ -45,7 +48,9 @@ function g(e) {
             if (E) return;
             let t = null == (e = b.current) ? void 0 : e.getBoundingClientRect();
             if (null == t) return;
-            let n = O({ confettiSize: 8 }),
+            let n = O({
+                    confettiSize: 8,
+                }),
                 r = new s.J_(m, () => {
                     y(t.left + t.width / 2, t.top + t.height / 2, n, 60);
                 });
@@ -59,7 +64,9 @@ function g(e) {
         (0, r.jsx)(f.A, {
             contentClassName: _.o9,
             iconContainerClassName: _.zc,
-            iconNode: (0, r.jsx)(o.XFE, { colorClass: _.Kk }),
+            iconNode: (0, r.jsx)(o.XFE, {
+                colorClass: _.Kk,
+            }),
             children: (0, r.jsx)(u.A, {
                 innerRef: b,
                 giftIntentType: t,

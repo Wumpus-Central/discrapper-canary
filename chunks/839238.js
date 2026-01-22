@@ -1,7 +1,11 @@
-r.r(t), r.d(t, { default: () => c });
+r.r(t),
+    r.d(t, {
+        default: () => c,
+    });
 var n = r(627968),
     o = r(573435),
     l = r(138869);
+
 function c(e) {
     let { application: t, asset: r, className: c } = e,
         a = (function (e, t) {
@@ -39,7 +43,9 @@ function c(e) {
         mask: o.Ay.Masks.SQUIRCLE,
         width: 128,
         height: 128,
-        style: { display: "block" },
+        style: {
+            display: "block",
+        },
         children: (0, n.jsx)(
             l.A,
             (function (e) {

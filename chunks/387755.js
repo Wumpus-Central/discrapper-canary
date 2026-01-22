@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(562465),
     i = n(73153),
     a = n(325909),
@@ -34,13 +36,17 @@ let h = {
                     }),
                         u.A.show({
                             title: _.intl.string(_.t.My50nf),
-                            body: _.intl.format(_.t.IdKo2z, { username: null != t ? t.username : "" }),
+                            body: _.intl.format(_.t.IdKo2z, {
+                                username: null != t ? t.username : "",
+                            }),
                             confirmText: _.intl.string(_.t["PMsq/b"]),
                             cancelText: _.intl.string(_.t.BddRzS),
                             onConfirm() {
                                 d.A.addRelationship({
                                     userId: i,
-                                    context: { location: "Call" },
+                                    context: {
+                                        location: "Call",
+                                    },
                                 });
                             },
                         });
@@ -82,7 +88,9 @@ let h = {
     stopRinging: (e, t) =>
         r.Bo.post({
             url: p.Rsh.CALL_STOP_RINGING(e),
-            body: { recipients: t },
+            body: {
+                recipients: t,
+            },
             oldFormErrors: !0,
             rejectWithError: !0,
         }),

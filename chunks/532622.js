@@ -8,6 +8,7 @@ var r = n(311907),
     s = n(818348);
 let o = [s.xB.SET_VOICE_CHANNEL_STATUS, s.xB.CONNECT, s.xB.VIEW_CHANNEL],
     l = [s.xB.SET_VOICE_CHANNEL_STATUS];
+
 function c(e, t, n, r) {
     return (n ? l : o).every((n) =>
         null == r
@@ -19,11 +20,13 @@ function c(e, t, n, r) {
               }),
     );
 }
+
 function u(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = arguments.length > 2 ? arguments[2] : void 0;
     return c(e, i.A, t, n);
 }
+
 function d(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = arguments.length > 2 ? arguments[2] : void 0;

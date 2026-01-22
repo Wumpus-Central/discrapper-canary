@@ -1,6 +1,8 @@
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});
 var r = {};
 r = {
     removeButtonLabel: "Entfernen",
-    removeDescription: "Auf \u201ELöschen\u201C drücken, um das Tag zu entfernen.",
+    removeDescription: "Auf „L\xf6schen“ dr\xfccken, um das Tag zu entfernen.",
 };

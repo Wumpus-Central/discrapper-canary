@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -13,6 +15,7 @@ var i = n(311907),
     p = n(993401),
     _ = n(996988),
     h = n(985018);
+
 function m(e) {
     let { activity: t, onAction: n, onClose: m } = e,
         { themeType: g } = (0, f.E)(),
@@ -25,7 +28,10 @@ function m(e) {
     if (!(0, l.Cy)(t) || !S || null == O || null == y) return null;
     let I = (e) => {
         e.stopPropagation(),
-            null == n || n({ action: "PRESS_STAGE_CHANNEL_LISTEN_BUTTON" }),
+            null == n ||
+                n({
+                    action: "PRESS_STAGE_CHANNEL_LISTEN_BUTTON",
+                }),
             s.CH(O, y),
             (0, a.iN)(y),
             null == m || m();

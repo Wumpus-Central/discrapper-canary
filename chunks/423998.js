@@ -1,4 +1,6 @@
-n.d(t, { O: () => g });
+n.d(t, {
+    O: () => g,
+});
 var r = n(627968),
     i = n(64700),
     a = n(110259),
@@ -13,6 +15,7 @@ var r = n(627968),
     _ = n(778712),
     h = n(985018),
     m = n(357776);
+
 function g(e) {
     let { profileUserId: t } = e,
         n = (0, s.bG)([u.default], () => u.default.getUser(t), [t]),
@@ -23,7 +26,9 @@ function g(e) {
             (0, c.x)({
                 name: a.ImpressionNames.GIFT_INTENT_USER_PROFILE_POPOUT,
                 type: a.ImpressionTypes.VIEW,
-                properties: { gift_intent_type: p.np.FRIEND_ANNIVERSARY },
+                properties: {
+                    gift_intent_type: p.np.FRIEND_ANNIVERSARY,
+                },
             });
         }, []),
         (0, r.jsxs)("div", {
@@ -61,7 +66,9 @@ function g(e) {
                         (0, r.jsx)(o.Text, {
                             variant: "text-xs/normal",
                             color: "text-strong",
-                            children: h.intl.formatToPlainString(h.t.PpG27s, { numberOfYears: E }),
+                            children: h.intl.formatToPlainString(h.t.PpG27s, {
+                                numberOfYears: E,
+                            }),
                         }),
                     ],
                 }),

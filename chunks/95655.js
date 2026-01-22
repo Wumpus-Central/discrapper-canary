@@ -1,4 +1,6 @@
-n.d(t, { n: () => A });
+n.d(t, {
+    n: () => A,
+});
 var r = n(627968),
     l = n(64700),
     i = n(990078),
@@ -15,7 +17,9 @@ var r = n(627968),
     g = n(202115);
 let m = (e) => {
         let { channel: t } = e;
-        return (0, f.bG)({ channelId: t.id })
+        return (0, f.bG)({
+            channelId: t.id,
+        })
             ? (0, r.jsx)(i.m, {
                   text: b.intl.string(b.t.QyZ4Td),
                   children: (0, r.jsx)(a.m5V, {
@@ -109,7 +113,9 @@ let m = (e) => {
                                                 );
                                             };
                                         }),
-                                { noBlurEvent: !0 },
+                                {
+                                    noBlurEvent: !0,
+                                },
                             ),
                         onDoubleClick: (e) => e.stopPropagation(),
                         onMouseEnter: () => {
@@ -141,7 +147,9 @@ let m = (e) => {
                         ],
                     }),
                 }),
-                (0, r.jsx)(m, { channel: t }),
+                (0, r.jsx)(m, {
+                    channel: t,
+                }),
             ],
         });
     });

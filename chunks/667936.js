@@ -1,4 +1,6 @@
-n.d(t, { A: () => x });
+n.d(t, {
+    A: () => x,
+});
 var r = n(627968);
 n(64700);
 var l = n(503698),
@@ -18,6 +20,7 @@ var l = n(503698),
     A = n(427262),
     y = n(43950),
     O = n(185186);
+
 function j(e) {
     var t;
     let { guildId: n, member: l, className: a } = e,
@@ -33,6 +36,7 @@ function j(e) {
         }),
     });
 }
+
 function v(e) {
     let { members: t, guildId: n } = e;
     return (0, r.jsx)(p.A, {

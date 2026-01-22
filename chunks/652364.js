@@ -1,4 +1,14 @@
-n.d(t, { A: () => h }), n(896048), n(693327), n(554719), n(680155), n(323874), n(14289), n(35956), n(321073);
+n.d(t, {
+    A: () => h,
+}),
+    n(896048),
+    n(693327),
+    n(554719),
+    n(680155),
+    n(323874),
+    n(14289),
+    n(35956),
+    n(321073);
 var r = n(439372),
     i = n(508675),
     a = n(734057),
@@ -6,6 +16,7 @@ var r = n(439372),
     o = n(690521),
     l = n(746080),
     c = n(732139);
+
 function u(e, t, n) {
     return (
         t in e
@@ -20,6 +31,7 @@ function u(e, t, n) {
     );
 }
 let d = new Worker(new URL("/assets/" + n.u("79908"), n.b));
+
 function f(e) {
     return new Promise((t) => {
         let n = (r) => {
@@ -28,9 +40,14 @@ function f(e) {
             } = r;
             null == d || d.removeEventListener("message", n), e === i && t();
         };
-        null == d || d.addEventListener("message", n), null == d || d.postMessage({ url: e });
+        null == d || d.addEventListener("message", n),
+            null == d ||
+                d.postMessage({
+                    url: e,
+                });
     });
 }
+
 function p(e) {
     let t = [],
         n = e.defaultReactionEmoji;
@@ -72,7 +89,10 @@ class _ extends r.A {
             });
     }
     constructor(...e) {
-        super(...e), u(this, "actions", { CHANNEL_PRELOAD: this.handleChannelPreload });
+        super(...e),
+            u(this, "actions", {
+                CHANNEL_PRELOAD: this.handleChannelPreload,
+            });
     }
 }
 let h = new _();

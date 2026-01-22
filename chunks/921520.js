@@ -4,15 +4,33 @@ var t = "[0-9](_*[0-9])*",
     i = {
         className: "number",
         variants: [
-            { begin: `(\\b(${t})((${n})|\\.)?|(${n}))[eE][+-]?(${t})[fFdD]?\\b` },
-            { begin: `\\b(${t})((${n})[fFdD]?\\b|\\.([fFdD]\\b)?)` },
-            { begin: `(${n})[fFdD]?\\b` },
-            { begin: `\\b(${t})[fFdD]\\b` },
-            { begin: `\\b0[xX]((${r})\\.?|(${r})?\\.(${r}))[pP][+-]?(${t})[fFdD]?\\b` },
-            { begin: "\\b(0|[1-9](_*[0-9])*)[lL]?\\b" },
-            { begin: `\\b0[xX](${r})[lL]?\\b` },
-            { begin: "\\b0(_*[0-7])*[lL]?\\b" },
-            { begin: "\\b0[bB][01](_*[01])*[lL]?\\b" },
+            {
+                begin: `(\\b(${t})((${n})|\\.)?|(${n}))[eE][+-]?(${t})[fFdD]?\\b`,
+            },
+            {
+                begin: `\\b(${t})((${n})[fFdD]?\\b|\\.([fFdD]\\b)?)`,
+            },
+            {
+                begin: `(${n})[fFdD]?\\b`,
+            },
+            {
+                begin: `\\b(${t})[fFdD]\\b`,
+            },
+            {
+                begin: `\\b0[xX]((${r})\\.?|(${r})?\\.(${r}))[pP][+-]?(${t})[fFdD]?\\b`,
+            },
+            {
+                begin: "\\b(0|[1-9](_*[0-9])*)[lL]?\\b",
+            },
+            {
+                begin: `\\b0[xX](${r})[lL]?\\b`,
+            },
+            {
+                begin: "\\b0(_*[0-7])*[lL]?\\b",
+            },
+            {
+                begin: "\\b0[bB][01](_*[01])*[lL]?\\b",
+            },
         ],
         relevance: 0,
     };
@@ -86,12 +104,19 @@ e.exports = function (e) {
                 {
                     begin: /\(/,
                     end: /\)/,
-                    contains: [e.inherit(o, { className: "string" }), "self"],
+                    contains: [
+                        e.inherit(o, {
+                            className: "string",
+                        }),
+                        "self",
+                    ],
                 },
             ],
         },
         u = i,
-        d = e.COMMENT("/\\*", "\\*/", { contains: [e.C_BLOCK_COMMENT_MODE] }),
+        d = e.COMMENT("/\\*", "\\*/", {
+            contains: [e.C_BLOCK_COMMENT_MODE],
+        }),
         f = {
             variants: [
                 {
@@ -179,13 +204,17 @@ e.exports = function (e) {
                 },
                 {
                     begin: [/class|interface|trait/, /\s+/, e.UNDERSCORE_IDENT_RE],
-                    beginScope: { 3: "title.class" },
+                    beginScope: {
+                        3: "title.class",
+                    },
                     keywords: "class interface trait",
                     end: /[:\{(]|$/,
                     excludeEnd: !0,
                     illegal: "extends implements",
                     contains: [
-                        { beginKeywords: "public protected internal private constructor" },
+                        {
+                            beginKeywords: "public protected internal private constructor",
+                        },
                         e.UNDERSCORE_TITLE_MODE,
                         {
                             className: "type",

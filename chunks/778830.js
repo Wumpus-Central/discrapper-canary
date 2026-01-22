@@ -1,4 +1,6 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(148803),
     i = n(73153),
     l = n(272355),
@@ -13,7 +15,9 @@ class o extends l.A {
     }
     handlePostConnectionOpen() {
         let e = a.A.get("shop_include_unpublished");
-        (0, s.LX)({ release: e ? r.P.BETA : r.P.PROD });
+        (0, s.LX)({
+            release: e ? r.P.BETA : r.P.PROD,
+        });
     }
 }
 let c = new o();

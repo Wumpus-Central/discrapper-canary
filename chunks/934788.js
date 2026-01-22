@@ -1,4 +1,6 @@
-t(697509)(r, "__esModule", { value: !0 }),
+t(697509)(r, "__esModule", {
+    value: !0,
+}),
     (r.default = void 0),
     (r.default = {
         abstract: !1,
@@ -10,7 +12,9 @@ t(697509)(r, "__esModule", { value: !0 }),
         props: {},
         relatedConcepts: [
             {
-                concept: { name: "aside" },
+                concept: {
+                    name: "aside",
+                },
                 module: "HTML",
             },
         ],

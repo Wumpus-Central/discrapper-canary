@@ -1,4 +1,7 @@
-t.d(i, { A: () => B }), t(896048);
+t.d(i, {
+    A: () => B,
+}),
+    t(896048);
 var n = t(627968),
     s = t(64700),
     l = t(503698),
@@ -34,25 +37,38 @@ var n = t(627968),
 let R = {
     FULL_WISHLIST: {
         title: k.intl.string(k.t["7lZ31J"]),
-        getSubtitle: (e) => k.intl.formatToPlainString(k.t.BjEX38, { username: e }),
+        getSubtitle: (e) =>
+            k.intl.formatToPlainString(k.t.BjEX38, {
+                username: e,
+            }),
         showIcons: !1,
     },
     MIXED: {
         title: k.intl.string(k.t.SK5rmi),
-        getSubtitle: (e) => k.intl.formatToPlainString(k.t.dIDKgi, { username: e }),
+        getSubtitle: (e) =>
+            k.intl.formatToPlainString(k.t.dIDKgi, {
+                username: e,
+            }),
         showIcons: !0,
     },
     SHOP_ONLY: {
         title: k.intl.string(k.t.SK5rmi),
-        getSubtitle: (e) => k.intl.formatToPlainString(k.t.wyMp1j, { username: e }),
+        getSubtitle: (e) =>
+            k.intl.formatToPlainString(k.t.wyMp1j, {
+                username: e,
+            }),
         showIcons: !1,
     },
     SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_ONLY: {
         title: k.intl.string(k.t.BCi1gT),
-        getSubtitle: (e) => k.intl.formatToPlainString(k.t.BjEX38, { username: e }),
+        getSubtitle: (e) =>
+            k.intl.formatToPlainString(k.t.BjEX38, {
+                username: e,
+            }),
         showIcons: !1,
     },
 };
+
 function H(e) {
     let { title: i, subtitle: t, themeClass: s } = e;
     return (0, n.jsx)("div", {
@@ -72,19 +88,33 @@ function H(e) {
         }),
     });
 }
+
 function P() {
     return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, n.jsx)(d.AC4, { children: k.intl.string(k.t.pfChQr) }),
+            (0, n.jsx)(d.AC4, {
+                children: k.intl.string(k.t.pfChQr),
+            }),
             (0, n.jsx)("div", {
                 className: M.Md,
-                children: Array.from({ length: _.pl }, (e, i) =>
-                    (0, n.jsx)(A.A, { cardSize: N.Y.SMALL }, "placeholder-".concat(i)),
+                children: Array.from(
+                    {
+                        length: _.pl,
+                    },
+                    (e, i) =>
+                        (0, n.jsx)(
+                            A.A,
+                            {
+                                cardSize: N.Y.SMALL,
+                            },
+                            "placeholder-".concat(i),
+                        ),
                 ),
             }),
         ],
     });
 }
+
 function D(e) {
     let { lastItem: i, remainingCount: t, giftRecipient: s, onOpenWishlist: l } = e;
     return null == i
@@ -101,7 +131,9 @@ function D(e) {
                       renderItemPreview: (e) => {
                           if ((0, L.L)(i.item)) {
                               if (null != i.item.bundleItems && i.item.bundleItems.length > 0) {
-                                  let t = { items: i.item.bundleItems };
+                                  let t = {
+                                      items: i.item.bundleItems,
+                                  };
                                   return (0, n.jsx)("div", {
                                       className: M.Tz,
                                       children: (0, n.jsx)(p.X, {
@@ -125,6 +157,7 @@ function D(e) {
               "overflow-".concat(i.item.skuId),
           );
 }
+
 function G(e) {
     let {
         items: i,
@@ -311,7 +344,9 @@ let B = function (e) {
                   null != U &&
                       (0, n.jsx)("div", {
                           className: M.iL,
-                          style: { backgroundImage: "url(".concat(U, ")") },
+                          style: {
+                              backgroundImage: "url(".concat(U, ")"),
+                          },
                       }),
                   (0, n.jsx)(d.NPJ, {
                       disableAdaptiveTheme: !0,

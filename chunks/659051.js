@@ -1,7 +1,10 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(927813),
     i = n(661191);
 let a = 2 * r.A.Millis.HOUR;
+
 function s(e, t, n) {
     var r;
     if (null == e) return !1;

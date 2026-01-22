@@ -21,7 +21,9 @@ let i = (e, t) => {
         });
     },
     s = () => {
-        r.h.dispatch({ type: "DCF_RESET" });
+        r.h.dispatch({
+            type: "DCF_RESET",
+        });
     },
     o = (e) => {
         r.h.dispatch({

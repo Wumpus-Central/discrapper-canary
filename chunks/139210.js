@@ -1,9 +1,11 @@
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var a = n(627968),
     l = n(64700),
     i = n(503698),
     r = n.n(i),
-    s = n(432022),
+    s = n(108531),
     o = n(397927),
     c = n(216456),
     d = n(906822),
@@ -47,7 +49,9 @@ let y = (0, s.animated)(h.Ay),
             E = _ && A,
             N = (0, a.jsx)(o.DUT, {
                 onClick: O,
-                className: r()(j.vk, { [j.wm]: E }),
+                className: r()(j.vk, {
+                    [j.wm]: E,
+                }),
                 children: (0, a.jsx)(y, {
                     quest: C,
                     withGameTile: !1,
@@ -68,7 +72,9 @@ let y = (0, s.animated)(h.Ay),
                 }),
             });
         return (0, a.jsxs)(s.animated.div, {
-            className: r()(j.iE, j.Ht, { [j.tT]: E }),
+            className: r()(j.iE, j.Ht, {
+                [j.tT]: E,
+            }),
             style: {
                 transform: (0, s.to)(
                     [

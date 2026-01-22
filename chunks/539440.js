@@ -7,4 +7,6 @@ function r() {
         .concat(n)
         .concat("/".concat(e));
 }
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});

@@ -1,4 +1,7 @@
-n.d(t, { A: () => g }), n(747238);
+n.d(t, {
+    A: () => g,
+}),
+    n(747238);
 var l,
     a,
     r = n(627968);
@@ -12,6 +15,7 @@ var i = n(280230),
     p = n(833291),
     h = n(365526),
     m = n(558179);
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -66,7 +70,9 @@ let f = /^discord.gg\/[a-zA-Z0-9-]+/,
                                       var e;
                                       o.Ay.acceptInviteAndTransitionToInviteChannel({
                                           inviteKey: l.code,
-                                          context: { location: "Application Directory" },
+                                          context: {
+                                              location: "Application Directory",
+                                          },
                                       }),
                                           null == (e = n.closeModal) || e.call(n);
                                   },

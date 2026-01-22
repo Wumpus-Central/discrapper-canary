@@ -1,10 +1,13 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
     l = n.n(i),
     a = n(397927),
     s = n(60747);
+
 function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -30,6 +33,7 @@ function o(e) {
     }
     return e;
 }
+
 function c(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -48,6 +52,7 @@ function c(e, t) {
         e
     );
 }
+
 function u(e) {
     let {
             padded: t = !0,
@@ -110,7 +115,9 @@ function u(e) {
                       },
                       A,
                   ),
-                  { children: d },
+                  {
+                      children: d,
+                  },
               ),
           )
         : (0, r.jsx)(
@@ -129,7 +136,9 @@ function u(e) {
                       },
                       A,
                   ),
-                  { children: d },
+                  {
+                      children: d,
+                  },
               ),
           );
 }

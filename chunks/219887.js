@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var r,
     i = n(627968),
     a = n(64700),
@@ -11,6 +13,7 @@ var r,
     f = n(240248),
     p = n(985018),
     _ = n(789863);
+
 function h(e, t, n) {
     return (
         t in e
@@ -79,9 +82,13 @@ class m extends (r = a.PureComponent) {
                                     : e instanceof u.EE
                                       ? null == e.bank
                                           ? p.intl.string(p.t.nSbwqC)
-                                          : p.intl.format(p.t["9kUlRU"], { bank: (0, o.o0)(e.bank) })
+                                          : p.intl.format(p.t["9kUlRU"], {
+                                                bank: (0, o.o0)(e.bank),
+                                            })
                                       : e instanceof u.rJ
-                                        ? p.intl.format(p.t.hSPoZw, { bank: (0, o.jK)(e.bank) })
+                                        ? p.intl.format(p.t.hSPoZw, {
+                                              bank: (0, o.jK)(e.bank),
+                                          })
                                         : e instanceof u.FQ
                                           ? p.intl.string(p.t["+rbTmL"])
                                           : e instanceof u.Pw
@@ -125,7 +132,10 @@ class m extends (r = a.PureComponent) {
             u = this.renderSubText();
         return (0, i.jsxs)(l.A, {
             children: [
-                a && (0, i.jsx)(c.Ay, { type: this.typeString }),
+                a &&
+                    (0, i.jsx)(c.Ay, {
+                        type: this.typeString,
+                    }),
                 (0, i.jsxs)(l.A, {
                     direction: l.A.Direction.VERTICAL,
                     className: _.Wi,

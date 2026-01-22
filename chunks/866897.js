@@ -1,4 +1,6 @@
-n.d(t, { A: () => T });
+n.d(t, {
+    A: () => T,
+});
 var r = n(64700),
     l = n(843472),
     i = n(843626),
@@ -74,7 +76,9 @@ let T = function (e, t, n) {
                                 return !r && n;
                             })(L) &&
                             (n.preventDefault(),
-                            v._.dispatchKeyed(N.zOV.TOGGLE_REACTION_POPOUT, M.id, { emojiPicker: !0 }));
+                            v._.dispatchKeyed(N.zOV.TOGGLE_REACTION_POPOUT, M.id, {
+                                emojiPicker: !0,
+                            }));
                         break;
                     case "r":
                         (r || D) && (0, o.r)(L, M) && (n.preventDefault(), (0, I.$b)(L, M, n));

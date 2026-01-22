@@ -1,4 +1,8 @@
-n.d(t, { A: () => T }), n(896048), n(321073);
+n.d(t, {
+    A: () => T,
+}),
+    n(896048),
+    n(321073);
 var r = n(735438),
     i = n.n(r),
     a = n(311907),
@@ -15,6 +19,7 @@ let c = null,
     p = !1,
     _ = !1,
     h = !1;
+
 function m(e) {
     let { widgets: t } = e;
     if (((c = t), null === u)) {
@@ -26,28 +31,36 @@ function m(e) {
         }
     }
 }
+
 function g() {
     (c = null), (u = null);
 }
+
 function E(e) {
     let { suggestedGamesIds: t, suggestedWishlistGamesIds: n } = e;
     (f.suggestedGamesIds = t), (f.suggestedWishlistGamesIds = n), (_ = !1), (p = !1);
 }
+
 function b() {
     (p = !0), (_ = !1);
 }
+
 function y() {
     (_ = !0), (p = !1), (h = !0);
 }
+
 function O(e) {
     d = !0;
 }
+
 function A(e) {
     (d = !1), null !== c && ((u = null), (c = null));
 }
+
 function v(e) {
     d = !1;
 }
+
 function S(e) {
     let { applicationId: t } = e;
     (f.suggestedGamesIds = f.suggestedGamesIds.filter((e) => e !== t)),

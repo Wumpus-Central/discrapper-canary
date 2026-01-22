@@ -1,4 +1,6 @@
-n.d(t, { k: () => r });
+n.d(t, {
+    k: () => r,
+});
 var r = (function (e) {
     return (
         (e.HOME = "home"),

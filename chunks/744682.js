@@ -1,4 +1,7 @@
-n.d(t, { P: () => E }), n(896048);
+n.d(t, {
+    P: () => E,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -11,6 +14,7 @@ var r = n(627968),
     f = n(964486),
     p = n(354328),
     _ = n(533832);
+
 function h(e, t, n) {
     return (
         t in e
@@ -24,6 +28,7 @@ function h(e, t, n) {
         e
     );
 }
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -40,6 +45,7 @@ function m(e) {
     }
     return e;
 }
+
 function g(e, t) {
     let {
             color: a,
@@ -67,13 +73,18 @@ function g(e, t) {
                 : (0, u.J)(g),
         P = !(0, p.A)("lottie_hover_multiple_loop"),
         D = i.useContext(c.CZY).reducedMotion.enabled,
-        { enabled: x } = d.A.useExperiment({ location: "LottieIcon web entry point" }),
+        { enabled: x } = d.A.useExperiment({
+            location: "LottieIcon web entry point",
+        }),
         L = D || !x,
         j = i.useRef(O);
     return (
         (0, f.l0)(() => {
             var e, t;
-            null == S || S({ finalFrame: null != (e = null == (t = R.current) ? void 0 : t.currentFrame) ? e : null });
+            null == S ||
+                S({
+                    finalFrame: null != (e = null == (t = R.current) ? void 0 : t.currentFrame) ? e : null,
+                });
         }),
         i.useImperativeHandle(
             t,

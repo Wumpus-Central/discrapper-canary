@@ -1,9 +1,14 @@
-l.d(t, { b: () => d }), l(65821), l(321073);
+l.d(t, {
+    b: () => d,
+}),
+    l(65821),
+    l(321073);
 var r = l(64700),
     n = l(311907),
     s = l(665171),
     i = l(588591),
     a = l(513246);
+
 function d(e) {
     let t = (0, n.bG)([i.A], () => i.A.getRegionStateForPingUrl(e)),
         l = r.useRef(null),
@@ -20,7 +25,7 @@ function d(e) {
                                 },
                                 i = setTimeout(() => {
                                     n || ((n = !0), s(), l(Error("WebSocket timeout")));
-                                }, 5000);
+                                }, 5e3);
                             (t.onopen = () => {
                                 if (t.readyState === WebSocket.OPEN)
                                     for (let e = 0; e < 3; e++) {
@@ -88,13 +93,7 @@ function d(e) {
         {
             pingText: r.useMemo(
                 () =>
-                    null == t || t.loading
-                        ? "\u2014"
-                        : t.error
-                          ? "Error"
-                          : null !== t.rtt
-                            ? "".concat(t.rtt, "ms")
-                            : "\u2014",
+                    null == t || t.loading ? "—" : t.error ? "Error" : null !== t.rtt ? "".concat(t.rtt, "ms") : "—",
                 [t],
             ),
             pingCircleStyle: r.useMemo(() => {

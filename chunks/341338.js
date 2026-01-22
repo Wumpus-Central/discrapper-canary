@@ -1,4 +1,12 @@
-n.d(t, { A: () => eh }), n(65821), n(228524), n(321073), n(667532), n(896048), n(938796);
+n.d(t, {
+    A: () => eh,
+}),
+    n(65821),
+    n(228524),
+    n(321073),
+    n(667532),
+    n(896048),
+    n(938796);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -60,6 +68,7 @@ var r = n(627968),
     es = n(613057),
     eo = n(985018),
     ec = n(185468);
+
 function eu(e, t, n) {
     return (
         t in e
@@ -73,6 +82,7 @@ function eu(e, t, n) {
         e
     );
 }
+
 function ed(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -89,6 +99,7 @@ function ed(e) {
     }
     return e;
 }
+
 function ep(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -208,7 +219,9 @@ class ef extends i.PureComponent {
                                   icon: f.gqV,
                                   "aria-label": eo.intl.string(eo.t["P1/Erq"]),
                               }),
-                              (0, r.jsx)(x.A.Title, { children: n.name }),
+                              (0, r.jsx)(x.A.Title, {
+                                  children: n.name,
+                              }),
                           ],
                       })
                     : null != t && t.premium
@@ -218,7 +231,9 @@ class ef extends i.PureComponent {
                                     icon: f.tvc,
                                     "aria-label": eo.intl.string(eo.t.Ipxkog),
                                 }),
-                                (0, r.jsx)(et.A, { sku: t }),
+                                (0, r.jsx)(et.A, {
+                                    sku: t,
+                                }),
                             ],
                         })
                       : null != t
@@ -228,7 +243,9 @@ class ef extends i.PureComponent {
                                       icon: f.gqV,
                                       "aria-label": eo.intl.string(eo.t["P1/Erq"]),
                                   }),
-                                  (0, r.jsx)(x.A.Title, { children: t.name }),
+                                  (0, r.jsx)(x.A.Title, {
+                                      children: t.name,
+                                  }),
                               ],
                           })
                         : null,
@@ -272,13 +289,17 @@ class ef extends i.PureComponent {
             l = t.headerBackground,
             a = (0, d.qB)(i) ? t.headerLogoLightTheme : t.headerLogoDarkTheme;
         return null == l || null == a
-            ? (0, r.jsx)("div", { className: ec.Zt })
+            ? (0, r.jsx)("div", {
+                  className: ec.Zt,
+              })
             : (0, r.jsxs)("div", {
                   className: ec.nT,
                   children: [
                       (0, r.jsx)("div", {
                           className: ec.y2,
-                          style: { backgroundImage: "url(".concat((0, K.YE)(e.id, l, 1024, "png"), ")") },
+                          style: {
+                              backgroundImage: "url(".concat((0, K.YE)(e.id, l, 1024, "png"), ")"),
+                          },
                       }),
                       (0, r.jsx)("img", {
                           className: ec.nu,
@@ -307,7 +328,9 @@ class ef extends i.PureComponent {
         });
     }
     renderFeatures(e) {
-        return (0, r.jsx)(Q.A, { sku: e });
+        return (0, r.jsx)(Q.A, {
+            sku: e,
+        });
     }
     renderSystemRequirements(e) {
         return null == e.systemRequirements || 0 === Object.keys(e.systemRequirements).length
@@ -325,7 +348,9 @@ class ef extends i.PureComponent {
             children: [
                 (0, r.jsx)(v.A, {
                     tag: "h1",
-                    children: eo.intl.format(eo.t.tluX4B, { name: n.name }),
+                    children: eo.intl.format(eo.t.tluX4B, {
+                        name: n.name,
+                    }),
                 }),
                 (0, r.jsx)(_.A, {}),
                 (0, r.jsx)(q.A, {
@@ -368,11 +393,17 @@ class ef extends i.PureComponent {
             let { amount: e, currency: t } = s;
             a.offers = C.A.Offer({
                 priceCurrency: t.toUpperCase(),
-                price: (0, Y.$g)(e, t, { style: "decimal" }),
+                price: (0, Y.$g)(e, t, {
+                    style: "decimal",
+                }),
             });
         }
-        let o = C.A.ItemPage({ mainEntity: a });
-        return (0, r.jsx)(C.A, { data: o });
+        let o = C.A.ItemPage({
+            mainEntity: a,
+        });
+        return (0, r.jsx)(C.A, {
+            data: o,
+        });
     }
     renderSmall(e, t, n) {
         return (0, r.jsxs)("div", {
@@ -430,7 +461,9 @@ class ef extends i.PureComponent {
                     (0, r.jsx)(S.A, {
                         align: S.A.Align.CENTER,
                         justify: S.A.Justify.CENTER,
-                        children: (0, r.jsx)(f.y$y, { className: ec.u1 }),
+                        children: (0, r.jsx)(f.y$y, {
+                            className: ec.u1,
+                        }),
                     }),
                 ],
             });
@@ -443,10 +476,14 @@ class ef extends i.PureComponent {
                   });
             return (0, r.jsxs)(i.Fragment, {
                 children: [
-                    (0, r.jsx)(N.HI, { location: e.name }),
+                    (0, r.jsx)(N.HI, {
+                        location: e.name,
+                    }),
                     this.renderJsonLD(),
                     this.renderHeader(e, t),
-                    (0, r.jsx)(J.A, { game: e }),
+                    (0, r.jsx)(J.A, {
+                        game: e,
+                    }),
                     n,
                 ],
             });
@@ -455,7 +492,9 @@ class ef extends i.PureComponent {
             ? (0, r.jsxs)("div", {
                   className: ec.I,
                   children: [
-                      (0, r.jsx)(N.HI, { location: e.name }),
+                      (0, r.jsx)(N.HI, {
+                          location: e.name,
+                      }),
                       this.renderJsonLD(),
                       (0, r.jsx)(b.A, {
                           section: ea.JJy.NAVIGATION,
@@ -469,7 +508,9 @@ class ef extends i.PureComponent {
               })
             : (0, r.jsxs)("div", {
                   children: [
-                      (0, r.jsx)(N.HI, { location: e.name }),
+                      (0, r.jsx)(N.HI, {
+                          location: e.name,
+                      }),
                       this.renderJsonLD(),
                       this.renderHeader(e, t),
                       this.renderListing(),
@@ -502,11 +543,18 @@ class ef extends i.PureComponent {
                 let { location: t } = this.props,
                     n = ((e = t.pathname), "".concat(location.protocol, "//").concat(location.host).concat(e));
                 (0, F.C)(n, () =>
-                    this.setState({ showLinkCopied: !0 }, () => {
-                        this.showCopyLinkTextTimeout.start(1500, () => {
-                            this.setState({ showLinkCopied: !1 });
-                        });
-                    }),
+                    this.setState(
+                        {
+                            showLinkCopied: !0,
+                        },
+                        () => {
+                            this.showCopyLinkTextTimeout.start(1500, () => {
+                                this.setState({
+                                    showLinkCopied: !1,
+                                });
+                            });
+                        },
+                    ),
                 );
             }),
             eu(this, "handleCreateInstantInvite", () => {
@@ -606,10 +654,16 @@ class ef extends i.PureComponent {
                         (0, r.jsx)("div", {
                             className: ec.ND,
                             children: (0, r.jsxs)("div", {
-                                className: a()(ec.x3, { [ec.vu]: o }),
+                                className: a()(ec.x3, {
+                                    [ec.vu]: o,
+                                }),
                                 children: [
                                     null != t ? (0, j.A)(t) : null,
-                                    null != e && null != t ? (0, r.jsx)("div", { children: "deprecated!" }) : null,
+                                    null != e && null != t
+                                        ? (0, r.jsx)("div", {
+                                              children: "deprecated!",
+                                          })
+                                        : null,
                                     (0, r.jsx)($.A, {
                                         messageStyle: $.g.SHORT,
                                         className: ec.Mb,
@@ -629,7 +683,7 @@ class ef extends i.PureComponent {
                     children: (0, r.jsx)(Z.A, {
                         pageSize: n,
                         items: t.carouselItems.map((n) => this.parseMediaItems(e, n, t.assets)),
-                        autoplayInterval: 8000,
+                        autoplayInterval: 8e3,
                         paused: !i,
                         onIntentionalChange: this.trackCarouselScroll,
                     }),

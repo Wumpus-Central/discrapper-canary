@@ -1,4 +1,6 @@
-n.d(t, { R: () => o });
+n.d(t, {
+    R: () => o,
+});
 var r = n(627968),
     i = n(397927),
     a = n(790114),
@@ -18,7 +20,9 @@ let o = (e) => {
                         children: n,
                     }),
                 }),
-            (0, r.jsx)("div", { children: t }),
+            (0, r.jsx)("div", {
+                children: t,
+            }),
         ],
     });
 };

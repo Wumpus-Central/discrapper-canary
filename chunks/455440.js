@@ -1,8 +1,12 @@
-n.d(t, { A: () => o }), n(638769);
+n.d(t, {
+    A: () => o,
+}),
+    n(638769);
 var r = n(64700),
     i = n(56494),
     a = n(26909),
     s = n(555045);
+
 function o(e) {
     let { context: t, commands: n, limit: o = n.length } = e,
         l = (0, s.e)(t),

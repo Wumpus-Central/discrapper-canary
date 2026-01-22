@@ -11,6 +11,7 @@ var n = l(627968),
     o = l(31457),
     c = l(985018),
     d = l(712104);
+
 function u() {
     let [e, t] = r.useState(!1),
         [l, s] = r.useState(!1),
@@ -21,7 +22,7 @@ function u() {
             l &&
                 (e = setTimeout(() => {
                     s(!1);
-                }, 2000)),
+                }, 2e3)),
             () => {
                 null != e && clearTimeout(e);
             }
@@ -53,6 +54,7 @@ function u() {
               onClick: f,
           });
 }
+
 function f() {
     return (0, n.jsx)(o.ZK, {
         className: d.jm,
@@ -72,6 +74,7 @@ function f() {
         }),
     });
 }
+
 function m(e) {
     let { isUserVerified: t } = e,
         l = t ? c.intl.string(c.t.qY1jHN) : c.intl.string(c.t.c6EUJI);

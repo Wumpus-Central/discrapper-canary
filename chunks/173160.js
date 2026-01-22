@@ -1,4 +1,6 @@
-n.d(i, { A: () => t });
+n.d(i, {
+    A: () => t,
+});
 var o = n(981737);
 let t = {
     ordinalNumber: function (e, i) {
@@ -84,7 +86,7 @@ let t = {
             narrow: {
                 am: "a",
                 pm: "p",
-                midnight: "półn.",
+                midnight: "p\xf3łn.",
                 noon: "poł",
                 morning: "rano",
                 afternoon: "popoł.",
@@ -94,21 +96,21 @@ let t = {
             abbreviated: {
                 am: "AM",
                 pm: "PM",
-                midnight: "północ",
+                midnight: "p\xf3łnoc",
                 noon: "południe",
                 morning: "rano",
                 afternoon: "popołudnie",
-                evening: "wieczór",
+                evening: "wiecz\xf3r",
                 night: "noc",
             },
             wide: {
                 am: "AM",
                 pm: "PM",
-                midnight: "północ",
+                midnight: "p\xf3łnoc",
                 noon: "południe",
                 morning: "rano",
                 afternoon: "popołudnie",
-                evening: "wieczór",
+                evening: "wiecz\xf3r",
                 night: "noc",
             },
         },
@@ -117,7 +119,7 @@ let t = {
             narrow: {
                 am: "a",
                 pm: "p",
-                midnight: "o półn.",
+                midnight: "o p\xf3łn.",
                 noon: "w poł.",
                 morning: "rano",
                 afternoon: "po poł.",
@@ -127,7 +129,7 @@ let t = {
             abbreviated: {
                 am: "AM",
                 pm: "PM",
-                midnight: "o północy",
+                midnight: "o p\xf3łnocy",
                 noon: "w południe",
                 morning: "rano",
                 afternoon: "po południu",
@@ -137,7 +139,7 @@ let t = {
             wide: {
                 am: "AM",
                 pm: "PM",
-                midnight: "o północy",
+                midnight: "o p\xf3łnocy",
                 noon: "w południe",
                 morning: "rano",
                 afternoon: "po południu",

@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(627968);
 n(64700);
 var i = n(64983),
@@ -7,6 +9,7 @@ var i = n(64983),
     s = n(652215),
     o = n(985018),
     c = n(693248);
+
 function u(e) {
     let { guild: t } = e,
         n = () => a.A.dismissNotice(t.id);

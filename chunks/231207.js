@@ -1,4 +1,7 @@
-n.d(t, { A: () => M }), n(896048);
+n.d(t, {
+    A: () => M,
+}),
+    n(896048);
 var a = n(627968),
     l = n(64700),
     i = n(488428),
@@ -29,6 +32,7 @@ var a = n(627968),
     I = n(652215),
     w = n(788868),
     k = n(734399);
+
 function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -54,6 +58,7 @@ function P(e) {
     }
     return e;
 }
+
 function R(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -72,6 +77,7 @@ function R(e, t) {
         e
     );
 }
+
 function D(e) {
     let { selectedGuildForGuildSub: t } = e,
         n = (0, j.uk)(null == t ? void 0 : t.id)[0];
@@ -232,7 +238,9 @@ let M = function () {
                                       guild: U,
                                       analyticsLocation: {},
                                   })
-                                : (0, a.jsx)("div", { children: "No Guild to boost" }),
+                                : (0, a.jsx)("div", {
+                                      children: "No Guild to boost",
+                                  }),
                         ],
                     }),
                     (0, a.jsx)(u.cGx, {}),
@@ -296,7 +304,11 @@ let M = function () {
                                     },
                                 ],
                                 onSelectionChange: (e) => {
-                                    H((t) => R(P({}, t), { plan_id: e }));
+                                    H((t) =>
+                                        R(P({}, t), {
+                                            plan_id: e,
+                                        }),
+                                    );
                                 },
                                 selectionMode: "single",
                                 fullWidth: !0,
@@ -317,7 +329,11 @@ let M = function () {
                                     },
                                 ],
                                 onSelectionChange: (e) => {
-                                    H((t) => R(P({}, t), { gift: e }));
+                                    H((t) =>
+                                        R(P({}, t), {
+                                            gift: e,
+                                        }),
+                                    );
                                 },
                                 selectionMode: "single",
                                 fullWidth: !0,
@@ -352,7 +368,9 @@ let M = function () {
                                     Z
                                         ? (0, a.jsx)("div", {
                                               className: k.wG,
-                                              children: (0, a.jsx)(u.y$y, { type: u.tVU.SPINNING_CIRCLE }),
+                                              children: (0, a.jsx)(u.y$y, {
+                                                  type: u.tVU.SPINNING_CIRCLE,
+                                              }),
                                           })
                                         : (0, a.jsxs)("div", {
                                               className: k.dB,
@@ -406,7 +424,9 @@ let M = function () {
                             }),
                             (0, a.jsx)(v.H, {
                                 guildId: null == K ? void 0 : K.id,
-                                children: (0, a.jsx)(D, { selectedGuildForGuildSub: K }),
+                                children: (0, a.jsx)(D, {
+                                    selectedGuildForGuildSub: K,
+                                }),
                             }),
                         ],
                     }),
@@ -441,7 +461,9 @@ let M = function () {
                                         skuId: J,
                                         openPremiumPaymentModal: () => !0,
                                         analyticsLocations: [],
-                                        analyticsLocationObject: { page: I.liQ.IN_APP },
+                                        analyticsLocationObject: {
+                                            page: I.liQ.IN_APP,
+                                        },
                                         context: I.BRT.APP,
                                     }),
                             }),

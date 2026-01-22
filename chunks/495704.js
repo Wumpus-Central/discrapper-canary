@@ -1,5 +1,8 @@
-n.d(t, { V: () => s });
+n.d(t, {
+    V: () => s,
+});
 var r = n(945810);
+
 function i(e, t, n) {
     return (
         t in e
@@ -13,15 +16,22 @@ function i(e, t, n) {
         e
     );
 }
+
 function a(e) {
     return (0, r.mj)({
         name: e,
         kind: "user",
         variations: {
-            0: { enabled: !1 },
-            1: { enabled: !0 },
+            0: {
+                enabled: !1,
+            },
+            1: {
+                enabled: !0,
+            },
         },
-        defaultConfig: { enabled: !1 },
+        defaultConfig: {
+            enabled: !1,
+        },
     });
 }
 class s {

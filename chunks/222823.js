@@ -64,6 +64,7 @@ var h = n(313961),
     er = n(988794),
     ei = n(790782),
     ea = n(37411);
+
 function es(e, t, n) {
     return (
         t in e
@@ -128,25 +129,31 @@ class eb {
 }
 let ey = new eb(),
     eO = 30 * M.A.Millis.DAY;
+
 function eA() {
     return G.default.fromTimestamp(Date.now() - eO);
 }
 let ev = 0,
     eS = 0,
     eI = null;
+
 function eT() {
     (ev = Date.now() - 7 * M.A.Millis.DAY),
         (eS = Date.now() - 3 * M.A.Millis.DAY),
         clearTimeout(eI),
         (eI = setTimeout(() => {
-            p.h.dispatch({ type: "DECAY_READ_STATES" });
+            p.h.dispatch({
+                type: "DECAY_READ_STATES",
+            });
         }, +M.A.Millis.HOUR));
 }
+
 function eC(e) {
     if (null == e) return 0;
     let t = Date.parse(e);
     return isNaN(t) ? 0 : t;
 }
+
 function eN(e) {
     return {
         id: e.id,
@@ -155,6 +162,7 @@ function eN(e) {
         last_message_id: e.last_acked_id,
     };
 }
+
 function eR(e, t) {
     let n = B.A.getChannel(e.channel_id);
     return (
@@ -169,6 +177,7 @@ function eR(e, t) {
         )
     );
 }
+
 function ew(e) {
     return null != e && e.isPrivate() && !Q.Ay.isGuildOrCategoryOrChannelMuted(e.guild_id, e.id);
 }
@@ -182,12 +191,14 @@ async function eP(e) {
     await ex(() =>
         u.Bo.post({
             url: ee.Rsh.BULK_ACK,
-            body: { read_states: t },
+            body: {
+                read_states: t,
+            },
             oldFormErrors: !0,
             rejectWithError: !1,
         }),
     ),
-        await (0, d.BK)(1000 * ed),
+        await (0, d.BK)(1e3 * ed),
         eP(e);
 }
 let eD = 3;
@@ -199,16 +210,18 @@ async function ex(e) {
         } catch (e) {
             if (
                 (eo.error("", e),
-                n + 1 < eD && (await (0, d.BK)((n + 1) * 2000), await U.A.awaitOnline(), t !== V.default.getId()))
+                n + 1 < eD && (await (0, d.BK)((n + 1) * 2e3), await U.A.awaitOnline(), t !== V.default.getId()))
             )
                 return Promise.reject(Error("User changed."));
         }
 }
+
 function eL(e, t) {
     var n;
     (null == (n = $.default.getCurrentUser()) ? void 0 : n.hasAnyStaffLevel()) &&
         eo.log("STAFF-ACK-LOG:", t, e.channelId);
 }
+
 function ej(e) {
     if ((eL(e, "shouldAutomaticallyAck called"), e.type !== ei.P.CHANNEL)) return eL(e, "not channel read state"), !1;
     let t = B.A.getChannel(e.channelId),
@@ -258,7 +271,10 @@ class eM {
     }
     static getGuildSentinels(e) {
         return (
-            null == this._guildReadStateSentinels[e] && (this._guildReadStateSentinels[e] = { unreadsSentinel: 0 }),
+            null == this._guildReadStateSentinels[e] &&
+                (this._guildReadStateSentinels[e] = {
+                    unreadsSentinel: 0,
+                }),
             this._guildReadStateSentinels[e]
         );
     }
@@ -690,7 +706,7 @@ class eM {
                                       (this.outgoingAck = null),
                                       (this.outgoingAckTimer = null);
                               },
-                              l || a ? 0 : 3000,
+                              l || a ? 0 : 3e3,
                           )),
                       (this.outgoingAck = t)),
                 !0)
@@ -745,7 +761,9 @@ class eM {
         ).then((r) => {
             null != r &&
                 (e_ === a && i === V.default.getId() && (e_ = r.body.token),
-                p.h.dispatch({ type: "MESSAGE_ACKED" }),
+                p.h.dispatch({
+                    type: "MESSAGE_ACKED",
+                }),
                 t &&
                     n
                         .e("16137")
@@ -944,6 +962,7 @@ class eM {
             (this.outgoingAck = null);
     }
 }
+
 function ek(e) {
     e.forEach((e) => {
         if ((0, L.Z_)(e.type)) {
@@ -956,6 +975,7 @@ function ek(e) {
         }
     });
 }
+
 function eU(e) {
     e.forEach((e) => {
         if ((0, L.Z_)(e.type)) {
@@ -968,12 +988,15 @@ function eU(e) {
         }
     });
 }
+
 function eG(e) {
     eH(e), eY(e), eB(e), eW(e);
 }
+
 function eV(e) {
     eF(e);
 }
+
 function eF(e) {
     let t = $.default.getCurrentUser();
     if (null == t) return !1;
@@ -985,10 +1008,12 @@ function eF(e) {
             (n.mentionCount++, (n.lastMessageId = G.default.fromTimestamp(t)));
     });
 }
+
 function eB(e) {
     let t = 24;
     eM.get(e.id, ei.P.GUILD_HOME).lastMessageId = G.default.fromTimestamp(o()(Date.now()).subtract(t, "h").valueOf());
 }
+
 function eH(e) {
     var t;
     null == (t = e.threads) ||
@@ -1004,6 +1029,7 @@ function eH(e) {
                 null == n.ackPinTimestamp && (n.ackPinTimestamp = eK(e.id, t.id));
         });
 }
+
 function eY(e) {
     var t, n;
     if (
@@ -1022,6 +1048,7 @@ function eY(e) {
         (r.lastMessageId = a),
         (r.mentionCount = i);
 }
+
 function eW(e) {
     let t = W.A.getGuild(e.id);
     if (null == t) return;
@@ -1030,13 +1057,14 @@ function eW(e) {
     let r = eM.get(t.id, ei.P.GUILD_ONBOARDING_QUESTION);
     (r._guildId = t.id), (r.lastMessageId = n);
 }
+
 function eK(e, t) {
     var n, r, i;
     let a = B.A.getChannel(t),
         s = W.A.getGuild(null != e ? e : null == a ? void 0 : a.guild_id),
         o = (null == a ? void 0 : a.isForumPost()) ? 0 : ez(s),
-        l = (null != (n = null == (r = w.A.joinTimestamp(t)) ? void 0 : r.getTime()) ? n : 0) - 5000;
-    isNaN(l) && (l = -5000);
+        l = (null != (n = null == (r = w.A.joinTimestamp(t)) ? void 0 : r.getTime()) ? n : 0) - 5e3;
+    isNaN(l) && (l = -5e3);
     let c = null == a || null == (i = a.threadMetadata) ? void 0 : i.archiveTimestamp,
         u = null != c ? new Date(c).getTime() - 1 : 0;
     isNaN(u) && (u = 0);
@@ -1047,6 +1075,7 @@ function eK(e, t) {
         isNaN(o) ? d : Math.max(o, d)
     );
 }
+
 function ez(e) {
     if (null != e && null != e.joinedAt) {
         if (e.joinedAt instanceof Date) {
@@ -1059,10 +1088,12 @@ function ez(e) {
     }
     return Date.now();
 }
+
 function eq(e, t, n) {
     let r = e.guildId;
     return !(null != r && R.A.isActive(r, t.parent_id, e.channelId)) && eX(e, n);
 }
+
 function eX(e, t) {
     return (
         e.mentionCount > 0 ||
@@ -1073,6 +1104,7 @@ function eX(e, t) {
         )
     );
 }
+
 function eZ(e) {
     switch (e.type) {
         case ei.P.GUILD_HOME:
@@ -1086,6 +1118,7 @@ function eZ(e) {
             return !0;
     }
 }
+
 function eQ(e, t) {
     if (null == t) return !1;
     let n = eM.get(t);
@@ -1097,6 +1130,7 @@ function eQ(e, t) {
         })
     );
 }
+
 function e$(e) {
     if (null == e) return;
     let t = eM.get(e);
@@ -1118,6 +1152,7 @@ function e$(e) {
             },
         });
 }
+
 function eJ(e) {
     var t;
     let { guilds: n, relationships: r, initialPrivateChannels: i, readState: a } = e;
@@ -1157,6 +1192,7 @@ function eJ(e) {
             eG(e);
     e0(), (eE = setTimeout(() => e2(a.entries), 10 * M.A.Millis.SECOND));
 }
+
 function e0() {
     null != eE && clearTimeout(eE);
 }
@@ -1164,6 +1200,7 @@ es(eM, "_guildReadStateSentinels", {}), es(eM, "_readStates", new Map()), es(eM,
 let e1 = (0, a.throttle)((e) => {
     e.delete();
 }, 100);
+
 function e2(e) {
     let t = eA();
     for (let r of e) {
@@ -1173,6 +1210,7 @@ function e2(e) {
         i.shouldDeleteReadState(t) && e1(i);
     }
 }
+
 function e3(e) {
     for (let t of e) {
         let e = eM.get(t.id);
@@ -1180,10 +1218,12 @@ function e3(e) {
             null != t.last_pin_timestamp && (e.lastPinTimestamp = eC(t.last_pin_timestamp));
     }
 }
+
 function e6(e) {
     let { lazyPrivateChannels: t } = e;
     ek(t);
 }
+
 function e4(e) {
     let { readStates: t, selectedChannelId: n } = e;
     eT(),
@@ -1196,6 +1236,7 @@ function e4(e) {
             t.deserializeForOverlay(e), t.type === ei.P.CHANNEL && t.rebuildChannelState();
         });
 }
+
 function e5(e) {
     let { guild: t } = e,
         n = eA();
@@ -1206,6 +1247,7 @@ function e5(e) {
         null != t.channelTimestampUpdates && e3(t.channelTimestampUpdates),
         eG(t);
 }
+
 function e7(e) {
     let { channelId: t, isAfter: n, messages: r } = e,
         i = eM.get(t);
@@ -1222,10 +1264,12 @@ function e7(e) {
               ((i.unreadCount += r.length), null == i.oldestUnreadMessageId && i.rebuildChannelState())),
         eU(r.map((e) => e.thread).filter(k.Vq));
 }
+
 function e8(e) {
     let { channelId: t } = e;
     eM.get(t).rebuildChannelState();
 }
+
 function e9(e) {
     let t,
         n,
@@ -1290,6 +1334,7 @@ function e9(e) {
         e && ((o.isMentionLowImportance = t), o.mentionCount++);
     }
 }
+
 function te(e, t, n) {
     if (
         null != t &&
@@ -1332,16 +1377,19 @@ function te(e, t, n) {
         isMentionLowImportance: !1,
     };
 }
+
 function tt(e) {
     let { channel: t } = e;
     if (!(0, L.Z_)(t.type)) return !1;
     let n = eM.get(t.id);
     (n.lastMessageId = t.lastMessageId), (n.lastPinTimestamp = eC(t.lastPinTimestamp));
 }
+
 function tn(e) {
     let { channel: t } = e;
     tr(t), ti(t);
 }
+
 function tr(e) {
     if (!L.A_.has(e.type)) return !1;
     let t = eM.get(e.id);
@@ -1350,6 +1398,7 @@ function tr(e) {
         t.syncThreadSettings(),
         e.ownerId === V.default.getId() && (t.loadedMessages = !0);
 }
+
 function ti(e) {
     let t = e.parent_id;
     eM.get(t).lastMessageId = e.id;
@@ -1364,17 +1413,21 @@ function ti(e) {
             })
         );
 }
+
 function ta(e) {
     let { channel: t } = e;
     return !!L.A_.has(t.type) && eM.get(t.id).syncThreadSettings();
 }
+
 function ts(e) {
     let { id: t } = e;
     return eM.get(t).syncThreadSettings();
 }
+
 function to(e) {
     return (0, P.k)(e) && eM.get(e.id).syncThreadSettings();
 }
+
 function tl(e) {
     let { threads: t } = e;
     t.forEach((e) => {
@@ -1393,10 +1446,12 @@ function tl(e) {
         }
     });
 }
+
 function tc(e) {
     let { threads: t } = e;
     eU(t);
 }
+
 function tu(e) {
     let { channelId: t } = e;
     return eQ(
@@ -1408,6 +1463,7 @@ function tu(e) {
         t,
     );
 }
+
 function td(e) {
     let { data: t } = e;
     t.forEach((e) => {
@@ -1425,10 +1481,12 @@ function td(e) {
             eU(n);
     });
 }
+
 function tf(e) {
     let t = $.default.getCurrentUser();
     return null != e.creator_id && null != t && e.creator_id === t.id;
 }
+
 function tp(e) {
     let { guildScheduledEvent: t } = e,
         n = t.guild_id,
@@ -1443,18 +1501,21 @@ function tp(e) {
           })
         : !Q.Ay.isMuteScheduledEventsEnabled(n) && r.mentionCount++;
 }
+
 function t_(e) {
     let { guildScheduledEvent: t } = e,
         n = t.guild_id;
     if (tf(t) || ![er.XG.CANCELED, er.XG.COMPLETED].includes(t.status)) return !1;
     eM.get(n, ei.P.GUILD_EVENT).handleGuildEventRemoval(n, t.id);
 }
+
 function th(e) {
     let { guildScheduledEvent: t } = e,
         n = t.guild_id;
     if (tf(t)) return !1;
     eM.get(t.guild_id, ei.P.GUILD_EVENT).handleGuildEventRemoval(n, t.id);
 }
+
 function tm(e) {
     let t = $.default.getCurrentUser();
     if (
@@ -1470,6 +1531,7 @@ function tm(e) {
         ((n.lastMessageId = G.default.fromTimestamp(i)),
         T.A.active ? tk(t.id, ei.P.NOTIFICATION_CENTER, void 0, !1) : r ? n.mentionCount-- : n.mentionCount++);
 }
+
 function tg(e) {
     let t = $.default.getCurrentUser();
     if (null == t || null == e.relationship.since || e.relationship.type !== ee.eA$.PENDING_INCOMING) return !1;
@@ -1478,6 +1540,7 @@ function tg(e) {
     (null != n.ackMessageId ? G.default.extractTimestamp(n.ackMessageId) : 0) <= r &&
         (n.mentionCount = Math.max(0, n.mentionCount - 1));
 }
+
 function tE(e) {
     var t;
     let { item: n } = e,
@@ -1486,6 +1549,7 @@ function tE(e) {
     let i = eM.get(r, ei.P.NOTIFICATION_CENTER);
     ((i.lastMessageId = n.id), T.A.active || 0) ? tk(r, ei.P.NOTIFICATION_CENTER, n.id, !1) : i.mentionCount++;
 }
+
 function tb(e) {
     var t;
     let { ids: n, optimistic: r } = e;
@@ -1497,10 +1561,12 @@ function tb(e) {
         0 > G.default.compare(a.ackMessageId, e) && (a.mentionCount = Math.max(a.mentionCount - 1, 0));
     });
 }
+
 function ty(e) {
     let { guild: t } = e;
     return eM.clear(t.id, ei.P.GUILD_EVENT);
 }
+
 function tO(e) {
     let { guild: t } = e,
         n = t.latest_onboarding_question_id;
@@ -1508,10 +1574,12 @@ function tO(e) {
     let r = eM.get(t.id, ei.P.GUILD_ONBOARDING_QUESTION);
     (r._guildId = t.id), (r.lastMessageId = n);
 }
+
 function tA(e) {
     let { channel: t } = e;
     return eM.clear(t.id);
 }
+
 function tv(e) {
     let { channelId: t } = e,
         n = F.Ay.getCurrentSidebarChannelId(t),
@@ -1552,6 +1620,7 @@ function tv(e) {
         a
     );
 }
+
 function tS() {
     let e = F.Ay.getCurrentSidebarChannelId(ef),
         t = !1;
@@ -1570,6 +1639,7 @@ function tS() {
         t
     );
 }
+
 function tI(e) {
     let { channelId: t } = e;
     if (null == t) return;
@@ -1588,14 +1658,17 @@ function tI(e) {
             })
         );
 }
+
 function tT(e) {
     null == e || (eM.get(e).isManualAck = !1);
 }
+
 function tC(e) {
     if (null == e) return !1;
     let t = eM.get(e);
     return !t.hasUnread() && ((t.oldestUnreadMessageId = null), !0);
 }
+
 function tN(e) {
     let t = !1;
     return (
@@ -1605,6 +1678,7 @@ function tN(e) {
         t
     );
 }
+
 function tR(e, t) {
     if (null == e) return !1;
     let n = eM.get(e);
@@ -1620,6 +1694,7 @@ function tR(e, t) {
         )
     );
 }
+
 function tw(e) {
     let { channelId: t } = e;
     return eQ(
@@ -1631,6 +1706,7 @@ function tw(e) {
         t,
     );
 }
+
 function tP(e) {
     let { channelId: t, messageId: n, immediate: r = !1, force: i = !1, context: a, location: s } = e,
         o = eM.get(t),
@@ -1645,10 +1721,12 @@ function tP(e) {
         });
     return null != n ? (o.rebuildChannelState(), !0) : l;
 }
+
 function tD(e) {
     let { channelId: t, timestamp: n } = e;
     return eM.get(t).ackPins(n);
 }
+
 function tx(e) {
     let { channelId: t, messageId: n, manual: r, newMentionCount: i } = e,
         a = eM.get(t);
@@ -1661,6 +1739,7 @@ function tx(e) {
                   trackAnalytics: !1,
               });
 }
+
 function tL(e) {
     let { channelId: t } = e;
     return eM.get(t).ack({
@@ -1672,16 +1751,19 @@ function tL(e) {
         trackAnalytics: !1,
     });
 }
+
 function tj(e) {
     let { id: t, ackType: n, ackedId: r, local: i } = e;
     return tk(t, n, r, i);
 }
+
 function tM(e) {
     var t;
     let { ackType: n, ackedId: r, local: i } = e,
         a = null == (t = $.default.getCurrentUser()) ? void 0 : t.id;
     return null != a && tk(a, n, r, i);
 }
+
 function tk(e, t, n, r) {
     var i;
     let a = eM.get(e, t);
@@ -1697,12 +1779,14 @@ function tk(e, t, n, r) {
         }))
     );
 }
+
 function tU(e) {
     let { channelId: t, lastPinTimestamp: n } = e,
         r = eM.get(t),
         i = eC(n);
     return r.lastPinTimestamp !== i && ((r.lastPinTimestamp = i), !0);
 }
+
 function tG(e) {
     let t = !1;
     for (let n of e.channels) {
@@ -1713,9 +1797,11 @@ function tG(e) {
     }
     return t;
 }
+
 function tV() {
     e_ = null;
 }
+
 function tF(e) {
     let { readStates: t } = e;
     (eh = !0),
@@ -1728,9 +1814,11 @@ function tF(e) {
             i.set(e.channelId, (0, f.pp)(e, eM)), eM._readStates.has(r) || eM._readStates.set(r, i);
         });
 }
+
 function tB(e) {
     let { channelId: t, chatOpen: n } = e;
 }
+
 function tH(e, t, n) {
     e.forEach((e) => {
         let { channelId: t, messageId: n, readStateType: r } = e;
@@ -1753,6 +1841,7 @@ function tH(e, t, n) {
             ),
             eg || eP(n));
 }
+
 function tY(e) {
     let { channels: t, context: n, onFinished: r } = e;
     tH(
@@ -1761,6 +1850,7 @@ function tY(e) {
         r,
     );
 }
+
 function tW(e) {
     let { channelId: t, windowId: n } = e;
     return (
@@ -1776,18 +1866,22 @@ function tW(e) {
         ))
     );
 }
+
 function tK(e) {
     let { channelId: t, windowId: n } = e;
     return ey.removeWindowId(t, n), !1;
 }
+
 function tz(e) {
     let { channelId: t } = e;
     return tC(t);
 }
+
 function tq(e) {
     let { channelId: t, location: n } = e;
     return eQ(n, t);
 }
+
 function tX(e) {
     let { changesByChannelId: t } = e;
     for (let e in t) {
@@ -1801,6 +1895,7 @@ function tX(e) {
                 1 === G.default.compare(e.id, a.lastMessageId) && (a.lastMessageId = e.id);
     }
 }
+
 function tZ(e) {
     var t;
     let { ackedId: n } = e,
@@ -1815,6 +1910,7 @@ function tZ(e) {
             trackAnalytics: !1,
         });
 }
+
 function tQ(e) {
     var t;
     let n = null == (t = $.default.getCurrentUser()) ? void 0 : t.id;
@@ -1823,6 +1919,7 @@ function tQ(e) {
     if (null == r.ackMessageId) return !1;
     r.ackMessageId = void 0;
 }
+
 function t$(e) {
     let { state: t } = e;
     return (

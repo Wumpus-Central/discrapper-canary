@@ -1,4 +1,11 @@
-n.d(t, { D: () => u }), n(65821), n(747238), n(812715), n(734808), n(896048);
+n.d(t, {
+    D: () => u,
+}),
+    n(65821),
+    n(747238),
+    n(812715),
+    n(734808),
+    n(896048);
 var r = n(852015),
     i = n(144367),
     a = n(428420),
@@ -9,18 +16,18 @@ class c extends l.G {
     now() {
         let e = this.create(),
             t = Date.now();
-        return (e.seconds = o.h.from(Math.floor(t / 1000)).toString()), (e.nanos = (t % 1000) * 1000000), e;
+        return (e.seconds = o.h.from(Math.floor(t / 1e3)).toString()), (e.nanos = (t % 1e3) * 1e6), e;
     }
     toDate(e) {
-        return new Date(1000 * o.h.from(e.seconds).toNumber() + Math.ceil(e.nanos / 1000000));
+        return new Date(1e3 * o.h.from(e.seconds).toNumber() + Math.ceil(e.nanos / 1e6));
     }
     fromDate(e) {
         let t = this.create(),
             n = e.getTime();
-        return (t.seconds = o.h.from(Math.floor(n / 1000)).toString()), (t.nanos = (n % 1000) * 1000000), t;
+        return (t.seconds = o.h.from(Math.floor(n / 1e3)).toString()), (t.nanos = (n % 1e3) * 1e6), t;
     }
     internalJsonWrite(e, t) {
-        let n = 1000 * o.h.from(e.seconds).toNumber();
+        let n = 1e3 * o.h.from(e.seconds).toNumber();
         if (n < Date.parse("0001-01-01T00:00:00Z") || n > Date.parse("9999-12-31T23:59:59Z"))
             throw Error(
                 "Unable to encode Timestamp to JSON. Must be from 0001-01-01T00:00:00Z to 9999-12-31T23:59:59Z inclusive.",
@@ -28,7 +35,7 @@ class c extends l.G {
         if (e.nanos < 0) throw Error("Unable to encode invalid Timestamp to JSON. Nanos must not be negative.");
         let r = "Z";
         if (e.nanos > 0) {
-            let t = (e.nanos + 1000000000).toString().substring(1);
+            let t = (e.nanos + 1e9).toString().substring(1);
             r =
                 "000000" === t.substring(3)
                     ? "." + t.substring(0, 3) + "Z"
@@ -52,9 +59,9 @@ class c extends l.G {
             );
         return (
             n || (n = this.create()),
-            (n.seconds = o.h.from(i / 1000).toString()),
+            (n.seconds = o.h.from(i / 1e3).toString()),
             (n.nanos = 0),
-            r[7] && (n.nanos = parseInt("1" + r[7] + "0".repeat(9 - r[7].length)) - 1000000000),
+            r[7] && (n.nanos = parseInt("1" + r[7] + "0".repeat(9 - r[7].length)) - 1e9),
             n
         );
     }

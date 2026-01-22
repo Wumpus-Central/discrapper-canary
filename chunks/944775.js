@@ -25,6 +25,7 @@ let s = {
     backgroundColor: "#00000000",
     titleBarStyle: null,
 };
+
 function o(e, t) {
     let n = r.A.isOverlayV3EnabledForPID(t),
         a = i.default.disableClickableRegions;
@@ -42,6 +43,7 @@ function o(e, t) {
             keepOpen: e,
         });
 }
+
 function c(e) {
     l.h.dispatch({
         type: "SOUNDBOARD_SET_OVERLAY_ENABLED",

@@ -27,17 +27,26 @@ var r = n(562465),
     c = n(652215),
     u = n(516780),
     d = n(985018);
+
 function f() {
-    s.h.dispatch({ type: "USER_SETTINGS_ACCOUNT_INIT" });
+    s.h.dispatch({
+        type: "USER_SETTINGS_ACCOUNT_INIT",
+    });
 }
+
 function p() {
-    s.h.dispatch({ type: "USER_SETTINGS_ACCOUNT_CLOSE" });
+    s.h.dispatch({
+        type: "USER_SETTINGS_ACCOUNT_CLOSE",
+    });
 }
+
 function _(e, t) {
     let n = t ? c.Rsh.DELETE_ACCOUNT : c.Rsh.DISABLE_ACCOUNT;
     return r.Bo.post({
         url: n,
-        body: { password: e },
+        body: {
+            password: e,
+        },
         oldFormErrors: !0,
         rejectWithError: !1,
     }).then(() => {
@@ -75,6 +84,7 @@ async function h(e) {
         t
     );
 }
+
 function m(e) {
     var t, n;
     let {
@@ -94,7 +104,9 @@ function m(e) {
         primaryGuildId: O,
         displayNameStyles: A,
     } = e;
-    s.h.dispatch({ type: "USER_SETTINGS_ACCOUNT_SUBMIT" });
+    s.h.dispatch({
+        type: "USER_SETTINGS_ACCOUNT_SUBMIT",
+    });
     let v = {
         username: r,
         email: o,
@@ -125,8 +137,13 @@ function m(e) {
         null != u.vz && null != T && ((v.push_voip_provider = u.vz), (v.push_voip_token = T)),
         h(v).then(
             (e) => (
-                s.h.dispatch({ type: "USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS" }),
-                (null != f || null != _) && s.h.dispatch({ type: "RECENT_AVATARS_UPDATE" }),
+                s.h.dispatch({
+                    type: "USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS",
+                }),
+                (null != f || null != _) &&
+                    s.h.dispatch({
+                        type: "RECENT_AVATARS_UPDATE",
+                    }),
                 e
             ),
             (e) => (
@@ -139,14 +156,18 @@ function m(e) {
         )
     );
 }
+
 function g(e) {
     return r.Bo.post({
         url: c.Rsh.USER_HARVEST,
-        body: { backends: e },
+        body: {
+            backends: e,
+        },
         oldFormErrors: !0,
         rejectWithError: !1,
     });
 }
+
 function E(e) {
     s.h.dispatch({
         type: "USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR",
@@ -154,51 +175,74 @@ function E(e) {
     }),
         null == e ? a.OR.announce(d.intl.string(d.t["f1+oNk"])) : a.OR.announce(d.intl.string(d.t.NstziV));
 }
+
 function b(e) {
     s.h.dispatch({
         type: "USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME",
         globalName: e,
     });
 }
+
 function y(e) {
     s.h.dispatch({
         type: "USER_SETTINGS_ACCOUNT_SET_PENDING_LEGACY_USERNAME_DISABLED",
         legacyUsernameDisabled: e,
     });
 }
+
 function O(e) {
     s.h.dispatch({
         type: "USER_SETTINGS_ACCOUNT_SET_PENDING_COLLECTIBLES_ITEM",
         item: e,
     });
 }
+
 function A(e) {
     s.h.dispatch({
         type: "USER_SETTINGS_SET_PENDING_PRIMARY_GUILD_ID",
         primaryGuildId: e,
     });
 }
+
 function v(e) {
     s.h.dispatch({
         type: "USER_SETTINGS_ACCOUNT_SET_PENDING_DISPLAY_NAME_STYLES",
         displayNameStyles: e,
     });
 }
+
 function S() {
-    s.h.dispatch({ type: "USER_SETTINGS_CLEAR_ERRORS" });
+    s.h.dispatch({
+        type: "USER_SETTINGS_CLEAR_ERRORS",
+    });
 }
+
 function I() {
-    s.h.dispatch({ type: "USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES" });
+    s.h.dispatch({
+        type: "USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES",
+    });
 }
+
 function T() {
-    s.h.dispatch({ type: "USER_SETTINGS_RESET_ALL_PENDING" });
+    s.h.dispatch({
+        type: "USER_SETTINGS_RESET_ALL_PENDING",
+    });
 }
+
 function C() {
-    s.h.dispatch({ type: "USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM" });
+    s.h.dispatch({
+        type: "USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM",
+    });
 }
+
 function N() {
-    s.h.dispatch({ type: "USER_SETTINGS_ACCOUNT_RESET_PENDING_LEGACY_USERNAME_DISABLED" });
+    s.h.dispatch({
+        type: "USER_SETTINGS_ACCOUNT_RESET_PENDING_LEGACY_USERNAME_DISABLED",
+    });
 }
+
 function R() {
-    s.h.dispatch({ type: "USER_SETTINGS_RESET_PENDING_PRIMARY_GUILD_CHANGES" });
+    s.h.dispatch({
+        type: "USER_SETTINGS_RESET_PENDING_PRIMARY_GUILD_CHANGES",
+    });
 }

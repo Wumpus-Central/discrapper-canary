@@ -11,17 +11,20 @@ var i = n(626584),
     l = n(257645);
 r = n(946261).WebAudioSound;
 let c = new i.A("SoundUtils");
+
 function u(e, t) {
     var n;
     let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
         i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : l.a.DEFAULT;
     return d(null != (n = (0, s.A)(t)[e]) ? n : e, e, r, i);
 }
+
 function d(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
         i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : l.a.DEFAULT;
     return new r(e, t, n, i);
 }
+
 function f(e) {
     var t;
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,

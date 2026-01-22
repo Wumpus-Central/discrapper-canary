@@ -11,6 +11,7 @@ var r = n(627968),
     o = n(641131),
     c = n(985018);
 let u = "report_to_mod_dont_show_resolve_confirm";
+
 function d(e) {
     let { transitionState: t, onClose: n, handleResolveFlag: d } = e,
         [f, p] = l.useState(!1);

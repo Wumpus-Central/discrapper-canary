@@ -18,6 +18,7 @@ var i = n(788373),
     m = n(803378),
     p = n(652215),
     x = n(985018);
+
 function h(e) {
     let { refToScroller: t } = e,
         n = (0, l.bG)([f.A], () => f.A.getGuild()),
@@ -56,6 +57,7 @@ function h(e) {
               refToScroller: t,
           });
 }
+
 function j() {
     var e;
     let { guild: t, submitting: n } = (0, l.cf)([f.A], () => ({
@@ -91,7 +93,10 @@ function j() {
                         if (null == e || null == n) return;
                         c.A.saveApplicationPermissions(e, t.id, Object.values(n));
                     }
-                    f.A.hasChanges() && u.A.saveGuild(t.id, { features: t.features });
+                    f.A.hasChanges() &&
+                        u.A.saveGuild(t.id, {
+                            features: t.features,
+                        });
                 }
             },
         })

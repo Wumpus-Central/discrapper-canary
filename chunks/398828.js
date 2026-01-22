@@ -1,4 +1,6 @@
-r.d(t, { A: () => h });
+r.d(t, {
+    A: () => h,
+});
 var n = r(627968);
 r(64700);
 var i = r(417597),
@@ -14,6 +16,7 @@ var i = r(417597),
     b = r(652215),
     C = r(985018),
     j = r(721746);
+
 function O() {
     let e = a.kt.useSetting(),
         t = (0, u.j)(),
@@ -53,6 +56,7 @@ function O() {
         ],
     });
 }
+
 function g() {
     return (0, n.jsxs)("div", {
         className: j.od,
@@ -65,11 +69,14 @@ function g() {
             (0, n.jsx)(o.Text, {
                 variant: "text-sm/normal",
                 color: "text-muted",
-                children: C.intl.format(C.t.umfZ8q, { learnMoreLink: f.rv }),
+                children: C.intl.format(C.t.umfZ8q, {
+                    learnMoreLink: f.rv,
+                }),
             }),
         ],
     });
 }
+
 function h(e) {
     let { guildId: t } = e;
     return (0, n.jsxs)("div", {

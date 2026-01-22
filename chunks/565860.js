@@ -1,11 +1,18 @@
-n.d(t, { jP: () => s }), n(733351), n(747238), n(346084);
+n.d(t, {
+    jP: () => s,
+}),
+    n(733351),
+    n(747238),
+    n(346084);
 var i = n(696451),
     r = n(994500),
     l = n(240248),
     a = n(427262);
+
 function o(e) {
     return (0, l.sS)(e.toLocaleLowerCase()).trim();
 }
+
 function s(e) {
     let t = {},
         n = r.A.getNickname(e.id);

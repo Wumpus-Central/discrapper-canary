@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(627968),
     l = n(64700),
     i = n(342494),
@@ -6,6 +8,7 @@ var r = n(627968),
     s = n(985018),
     o = n(549724),
     c = n(585048);
+
 function u(e) {
     let {
         targetElementRef: t,
@@ -15,7 +18,9 @@ function u(e) {
         onActionMouseDown: f,
         position: p = "right",
         align: h = "top",
-        caretConfig: b = { align: "start" },
+        caretConfig: b = {
+            align: "start",
+        },
         skuImageDetails: g,
         title: m,
         body: A,

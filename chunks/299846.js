@@ -1,8 +1,11 @@
-n.d(t, { u: () => o });
+n.d(t, {
+    u: () => o,
+});
 var r = n(311907),
     i = n(287809),
     a = n(20805),
     s = n(327098);
+
 function o(e) {
     var t, n, o, l, c;
     let u = (0, r.bG)([i.default], () => i.default.getUser(e.author_id)),

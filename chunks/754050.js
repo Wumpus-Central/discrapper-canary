@@ -1,9 +1,12 @@
-n.d(t, { O: () => l });
+n.d(t, {
+    O: () => l,
+});
 var r = n(64700),
     i = n(916822),
     a = n.n(i),
     s = n(554352),
     o = n(418034);
+
 function l(e) {
     var t = e.children,
         n = e.innerRef,
@@ -26,6 +29,8 @@ function l(e) {
             },
             [i],
         ),
-        (0, o.vq)(t)({ ref: l })
+        (0, o.vq)(t)({
+            ref: l,
+        })
     );
 }

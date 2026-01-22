@@ -140,9 +140,11 @@ let u = Object.freeze({
         offset: 0,
     }),
 });
+
 function d(e) {
     return u[e];
 }
+
 function f(e) {
     return "number" != typeof e ? d(e).size : e;
 }

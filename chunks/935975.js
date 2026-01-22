@@ -1,4 +1,6 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var i = n(627968);
 n(64700);
 var r = n(503698),
@@ -6,6 +8,7 @@ var r = n(503698),
     a = n(397927),
     o = n(994322),
     s = n(584111);
+
 function c(e) {
     let { onClick: t, keybind: n, className: r, IconComponent: c } = e,
         u = (0, o.F)();

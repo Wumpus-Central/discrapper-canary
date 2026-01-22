@@ -1,4 +1,6 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -6,6 +8,7 @@ var i = n(397927),
     a = n(401843),
     s = n(427262),
     o = n(985018);
+
 function c(e) {
     let { applicationStreams: t } = e;
     return t.map((e) => {
@@ -17,7 +20,9 @@ function c(e) {
                 action: () => {
                     l.default.selectVoiceChannel(t.channelId), (0, a.Nl)(t);
                 },
-                label: o.intl.formatToPlainString(o.t.m09d0T, { streamerName: s.Ay.getName(n) }),
+                label: o.intl.formatToPlainString(o.t.m09d0T, {
+                    streamerName: s.Ay.getName(n),
+                }),
             },
             "spectate-".concat(t.ownerId),
         );

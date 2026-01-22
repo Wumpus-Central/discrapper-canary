@@ -45,6 +45,7 @@ var r,
     G = n(985018),
     V = n(802571),
     F = n(206314);
+
 function B(e, t, n) {
     return (
         t in e
@@ -58,6 +59,7 @@ function B(e, t, n) {
         e
     );
 }
+
 function H(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -74,6 +76,7 @@ function H(e) {
     }
     return e;
 }
+
 function Y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -86,6 +89,7 @@ function Y(e, t) {
     }
     return n;
 }
+
 function W(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -104,15 +108,18 @@ let K = 32,
     Z = 520,
     Q = 5,
     $ = 150;
+
 function J(e, t) {
     let n = z / t,
         r = e * n;
     return "".concat(r + 1, " / ").concat(r + n + 1);
 }
+
 function ee(e) {
     let t = x.A.toURLSafe(e);
     return null == t ? e : (t.searchParams.set("format", "png"), t.toString());
 }
+
 function et(e) {
     var t, n;
     let {
@@ -251,7 +258,9 @@ function et(e) {
     return (0, i.jsxs)("div", {
         className: o()(V.pu, r),
         style: _
-            ? { maxWidth: W }
+            ? {
+                  maxWidth: W,
+              }
             : {
                   width: W,
                   height: K,
@@ -290,6 +299,7 @@ function et(e) {
         ],
     });
 }
+
 function en(e) {
     let {
         className: t,
@@ -364,7 +374,9 @@ class er extends (r = a.PureComponent) {
                                   messageId: null == r ? void 0 : r.id,
                                   channelId: null == r ? void 0 : r.channel_id,
                               })
-                            : (0, i.jsx)("span", { children: t.name }),
+                            : (0, i.jsx)("span", {
+                                  children: t.name,
+                              }),
                 });
     }
     renderAuthor() {
@@ -532,7 +544,9 @@ class er extends (r = a.PureComponent) {
                             "div",
                             {
                                 className: V.Me,
-                                style: { gridColumn: J(r, n) },
+                                style: {
+                                    gridColumn: J(r, n),
+                                },
                                 children: [
                                     (0, i.jsx)("div", {
                                         className: V.$L,
@@ -571,7 +585,9 @@ class er extends (r = a.PureComponent) {
             ? null
             : (0, i.jsxs)("div", {
                   className: V.$B,
-                  style: { height: l },
+                  style: {
+                      height: l,
+                  },
                   children: [
                       (0, i.jsxs)("div", {
                           className: V.Zf,
@@ -771,10 +787,14 @@ class er extends (r = a.PureComponent) {
                       },
                   });
         let g = () => {
-                this.setState({ videoControlsShown: !0 });
+                this.setState({
+                    videoControlsShown: !0,
+                });
             },
             E = () => {
-                this.setState({ videoControlsShown: !1 });
+                this.setState({
+                    videoControlsShown: !1,
+                });
             };
         return (0, i.jsx)(et, {
             className: V.W$,
@@ -821,7 +841,7 @@ class er extends (r = a.PureComponent) {
                                       null != t.text && null != n
                                           ? (0, i.jsx)("span", {
                                                 className: V.i8,
-                                                children: "\u2022",
+                                                children: "•",
                                             })
                                           : null,
                                       null != n ? (0, R.mk)(n) : null,
@@ -978,7 +998,11 @@ class er extends (r = a.PureComponent) {
     }
     renderSuppressButton(e) {
         return (0, i.jsx)(l.DUT, {
-            focusProps: { offset: { bottom: 4 } },
+            focusProps: {
+                offset: {
+                    bottom: 4,
+                },
+            },
             className: V.PP,
             onClick: e,
             "aria-label": G.intl.string(G.t.GT3fNz),
@@ -1114,10 +1138,14 @@ class er extends (r = a.PureComponent) {
                 ),
             ),
             B(this, "onReveal", () => {
-                this.setState({ isVisible: !0 });
+                this.setState({
+                    isVisible: !0,
+                });
             }),
             B(this, "onToggleObscurity", () => {
-                this.setState({ isVisible: !this.state.isVisible });
+                this.setState({
+                    isVisible: !this.state.isVisible,
+                });
             }),
             B(this, "renderInlineMediaEmbed", function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
@@ -1131,7 +1159,9 @@ class er extends (r = a.PureComponent) {
                         [V.dK]: e,
                         [V.qU]: t.usesJustifiedAutoStyle(),
                     }),
-                    style: { maxWidth: a },
+                    style: {
+                        maxWidth: a,
+                    },
                     children: t.renderMedia(e),
                 });
             }),

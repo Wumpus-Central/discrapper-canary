@@ -19,6 +19,7 @@ var r = n(64700),
     _ = n(287809),
     h = n(977997),
     m = n(403362);
+
 function g(e, t, n) {
     if ((null == e || 0 === e.length) && 0 === n.length) return t;
     let r = [],
@@ -51,6 +52,7 @@ function g(e, t, n) {
         r
     );
 }
+
 function E(e, t) {
     let n = (0, a.bG)([f.A, p.A], () => (e === p.A.getChannelId() ? f.A.getDesyncedVoiceStates() : null)),
         i = (0, a.yK)([o.A], () => (null == e ? [] : [...o.A.getGuildRingingUsers(e)])),
@@ -73,6 +75,7 @@ function E(e, t) {
         );
     return r.useMemo(() => g(n, t, h), [n, t, h]);
 }
+
 function b(e, t) {
     if (null == e || 0 === e.length) return t;
     let n = [...t];
@@ -87,13 +90,16 @@ function b(e, t) {
         n
     );
 }
+
 function y(e) {
     return (0, a.bG)([f.A, p.A], () => (e === p.A.getChannelId() ? f.A.getDesyncedParticipants() : null));
 }
+
 function O(e, t) {
     let n = y(e);
     return r.useMemo(() => b(n, t), [n, t]);
 }
+
 function A(e, t) {
     let n = (0, a.bG)([c.default], () => c.default.getId() === t),
         i = (0, a.bG)([p.A], () => p.A.getChannelId()),

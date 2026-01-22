@@ -1,4 +1,7 @@
-n.d(a, { A: () => F }), n(896048);
+n.d(a, {
+    A: () => F,
+}),
+    n(896048);
 var t = n(627968);
 n(64700);
 var s = n(503698),
@@ -34,6 +37,7 @@ var s = n(503698),
     k = n(272984),
     w = n(996988),
     L = n(380297);
+
 function U(e) {
     for (var a = 1; a < arguments.length; a++) {
         var n = null != arguments[a] ? arguments[a] : {},
@@ -59,6 +63,7 @@ function U(e) {
     }
     return e;
 }
+
 function V(e) {
     let { user: a, entry: n, header: s, className: x, onClose: p } = e,
         j = (0, E.GV)(),
@@ -145,7 +150,9 @@ function V(e) {
                                           className: L.mM,
                                           onClick: (e) => {
                                               e.stopPropagation(),
-                                                  z({ action: "PRESS_IMAGE" }),
+                                                  z({
+                                                      action: "PRESS_IMAGE",
+                                                  }),
                                                   U(e),
                                                   y !== w.d.MODAL && y !== w.d.MODAL_V2 && (null == p || p());
                                           },
@@ -157,7 +164,9 @@ function V(e) {
                                                   className: L.sd,
                                                   onClick: (e) => {
                                                       e.stopPropagation(),
-                                                          z({ action: "PRESS_TEXT" }),
+                                                          z({
+                                                              action: "PRESS_TEXT",
+                                                          }),
                                                           U(e),
                                                           y !== w.d.MODAL && y !== w.d.MODAL_V2 && (null == p || p());
                                                   },
@@ -173,10 +182,22 @@ function V(e) {
                                                   children:
                                                       n.content_type === l.I.TOP_GAME
                                                           ? A.ac.map((e, a) =>
-                                                                (0, t.jsx)(e, { entry: n }, "entry-".concat(a)),
+                                                                (0, t.jsx)(
+                                                                    e,
+                                                                    {
+                                                                        entry: n,
+                                                                    },
+                                                                    "entry-".concat(a),
+                                                                ),
                                                             )
                                                           : u.n.map((e, a) =>
-                                                                (0, t.jsx)(e, { entry: n }, "entry-".concat(a)),
+                                                                (0, t.jsx)(
+                                                                    e,
+                                                                    {
+                                                                        entry: n,
+                                                                    },
+                                                                    "entry-".concat(a),
+                                                                ),
                                                             ),
                                               }),
                                           ],
@@ -194,10 +215,13 @@ function V(e) {
               ],
           });
 }
+
 function z(e) {
     let { user: a, entry: n, header: s, className: i, onClose: l } = e,
         r = (0, E.GV)(),
-        { largeImage: x } = (0, d.nO)({ entry: n }),
+        { largeImage: x } = (0, d.nO)({
+            entry: n,
+        }),
         { url: j } = n.extra,
         { analyticsLocations: u } = (0, o.Ay)(),
         y = (0, N.A)({
@@ -237,7 +261,11 @@ function z(e) {
                                   size: m.w.SIZE_60,
                                   className: L.mM,
                                   onClick: (e) => {
-                                      e.stopPropagation(), y({ action: "PRESS_IMAGE" }), (0, p.C)(j);
+                                      e.stopPropagation(),
+                                          y({
+                                              action: "PRESS_IMAGE",
+                                          }),
+                                          (0, p.C)(j);
                                   },
                               }),
                         (0, t.jsxs)("div", {
@@ -260,7 +288,11 @@ function z(e) {
                                     : (0, t.jsxs)(c.DUT, {
                                           className: L.sd,
                                           onClick: (e) => {
-                                              e.stopPropagation(), y({ action: "PRESS_TEXT" }), (0, p.C)(j);
+                                              e.stopPropagation(),
+                                                  y({
+                                                      action: "PRESS_TEXT",
+                                                  }),
+                                                  (0, p.C)(j);
                                           },
                                           children: [
                                               (0, t.jsx)(P.Q, {
@@ -277,7 +309,15 @@ function z(e) {
                                 (0, t.jsx)(_.mG, {
                                     location: _.N5.USER_PROFILE,
                                     className: L.jp,
-                                    children: h.R.map((e, a) => (0, t.jsx)(e, { entry: n }, "entry-".concat(a))),
+                                    children: h.R.map((e, a) =>
+                                        (0, t.jsx)(
+                                            e,
+                                            {
+                                                entry: n,
+                                            },
+                                            "entry-".concat(a),
+                                        ),
+                                    ),
                                 }),
                             ],
                         }),
@@ -287,11 +327,14 @@ function z(e) {
         ],
     });
 }
+
 function G(e) {
     var a, n;
     let { user: s, entry: i, header: l, className: r, onClose: c } = e,
         x = (0, E.GV)(),
-        { largeImage: j } = (0, d.nO)({ entry: i }),
+        { largeImage: j } = (0, d.nO)({
+            entry: i,
+        }),
         { analyticsLocations: u } = (0, o.Ay)(),
         A = (0, N.A)({
             display: "recent",
@@ -326,7 +369,9 @@ function G(e) {
                                   className: L.mM,
                                   onClick: (e) => {
                                       e.stopPropagation(),
-                                          A({ action: "OPEN_SPOTIFY_ALBUM" }),
+                                          A({
+                                              action: "OPEN_SPOTIFY_ALBUM",
+                                          }),
                                           (0, p.n)(k.M0.ALBUM, f.external_parent_id);
                                   },
                               }),
@@ -339,7 +384,9 @@ function G(e) {
                                                   variant: "heading-sm/semibold",
                                                   text: f.title,
                                                   onClick: () => {
-                                                      A({ action: "OPEN_SPOTIFY_TRACK" }),
+                                                      A({
+                                                          action: "OPEN_SPOTIFY_TRACK",
+                                                      }),
                                                           (0, p.n)(k.M0.TRACK, f.external_id);
                                                   },
                                                   id: x,
@@ -349,7 +396,9 @@ function G(e) {
                                                   text: null == (n = f.artists[0]) ? void 0 : n.name,
                                                   onClick: () => {
                                                       var e;
-                                                      A({ action: "OPEN_SPOTIFY_ARTIST" }),
+                                                      A({
+                                                          action: "OPEN_SPOTIFY_ARTIST",
+                                                      }),
                                                           (0, p.n)(
                                                               k.M0.ARTIST,
                                                               null == (e = f.artists[0]) ? void 0 : e.external_id,
@@ -361,7 +410,15 @@ function G(e) {
                                       (0, t.jsx)(_.mG, {
                                           location: _.N5.USER_PROFILE,
                                           className: L.jp,
-                                          children: y.hh.map((e, a) => (0, t.jsx)(e, { entry: i }, "entry-".concat(a))),
+                                          children: y.hh.map((e, a) =>
+                                              (0, t.jsx)(
+                                                  e,
+                                                  {
+                                                      entry: i,
+                                                  },
+                                                  "entry-".concat(a),
+                                              ),
+                                          ),
                                       }),
                                   ],
                               }),
@@ -371,6 +428,7 @@ function G(e) {
               ],
           });
 }
+
 function Q(e) {
     let { user: a, entry: n, header: s, className: i, onClose: l } = e,
         c = (0, E.GV)(),
@@ -417,7 +475,11 @@ function Q(e) {
                                     size: m.w.SIZE_60,
                                     className: L.mM,
                                     onClick: (e) => {
-                                        e.stopPropagation(), u({ action: "PRESS_IMAGE" }), A();
+                                        e.stopPropagation(),
+                                            u({
+                                                action: "PRESS_IMAGE",
+                                            }),
+                                            A();
                                     },
                                 }),
                                 (0, t.jsxs)("div", {
@@ -428,7 +490,10 @@ function Q(e) {
                                                 variant: "heading-sm/semibold",
                                                 text: n.extra.activity_name,
                                                 onClick: () => {
-                                                    u({ action: "PRESS_TEXT" }), A();
+                                                    u({
+                                                        action: "PRESS_TEXT",
+                                                    }),
+                                                        A();
                                                 },
                                                 id: c,
                                             }),
@@ -437,7 +502,13 @@ function Q(e) {
                                             location: _.N5.USER_PROFILE,
                                             className: L.jp,
                                             children: j.$.map((e, a) =>
-                                                (0, t.jsx)(e, { entry: n }, "entry-".concat(a)),
+                                                (0, t.jsx)(
+                                                    e,
+                                                    {
+                                                        entry: n,
+                                                    },
+                                                    "entry-".concat(a),
+                                                ),
                                             ),
                                         }),
                                     ],
@@ -449,6 +520,7 @@ function Q(e) {
         ],
     });
 }
+
 function F(e) {
     let { entry: a } = e,
         n = (function (e, a) {
@@ -483,12 +555,44 @@ function F(e) {
             return i;
         })(e, ["entry"]);
     return (0, x.zD)(a)
-        ? (0, t.jsx)(V, U({ entry: a }, n))
+        ? (0, t.jsx)(
+              V,
+              U(
+                  {
+                      entry: a,
+                  },
+                  n,
+              ),
+          )
         : (0, x.Lf)(a)
-          ? (0, t.jsx)(z, U({ entry: a }, n))
+          ? (0, t.jsx)(
+                z,
+                U(
+                    {
+                        entry: a,
+                    },
+                    n,
+                ),
+            )
           : (0, x.Tq)(a)
-            ? (0, t.jsx)(G, U({ entry: a }, n))
+            ? (0, t.jsx)(
+                  G,
+                  U(
+                      {
+                          entry: a,
+                      },
+                      n,
+                  ),
+              )
             : (0, x.yl)(a)
-              ? (0, t.jsx)(Q, U({ entry: a }, n))
+              ? (0, t.jsx)(
+                    Q,
+                    U(
+                        {
+                            entry: a,
+                        },
+                        n,
+                    ),
+                )
               : null;
 }

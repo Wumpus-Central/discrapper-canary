@@ -40,6 +40,7 @@ var i = n(503698),
     j = n(232266),
     M = n(243002),
     k = n(241988);
+
 function U(e, t, n) {
     return (
         t in e
@@ -53,6 +54,7 @@ function U(e, t, n) {
         e
     );
 }
+
 function G(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -69,6 +71,7 @@ function G(e) {
     }
     return e;
 }
+
 function V(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -81,6 +84,7 @@ function V(e, t) {
     }
     return n;
 }
+
 function F(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -92,6 +96,7 @@ function F(e, t) {
         e
     );
 }
+
 function B(e) {
     var t;
     let {
@@ -111,7 +116,9 @@ function B(e) {
         I = (0, N.Lj)(S, v),
         C = null != I,
         D = (0, c.qB)((0, d.Ay)()),
-        j = (0, E.xD)({ location: "PremiumBrandRefreshTierCards" }),
+        j = (0, E.xD)({
+            location: "PremiumBrandRefreshTierCards",
+        }),
         M = g ? x.intl.string(x.t.tUbSDK) : x.intl.string(x.t["t9uG/o"]),
         k = (0, r.jsxs)(r.Fragment, {
             children: [
@@ -138,7 +145,9 @@ function B(e) {
                     headingColor: "text-strong",
                     headerClassName: L.priceHeader,
                 }),
-                (0, r.jsx)("hr", { className: L.divider }),
+                (0, r.jsx)("hr", {
+                    className: L.divider,
+                }),
                 (0, r.jsx)(R.nH, {
                     enablePremiumBrandRefresh: !0,
                     isApplicationHome: _,
@@ -149,14 +158,19 @@ function B(e) {
     return j
         ? (0, r.jsx)(u.hLv, {
               color: "nitro-green",
-              className: a()(L.card, L.tier0, l, { [L.pillMargin]: !_ && C }),
+              className: a()(L.card, L.tier0, l, {
+                  [L.pillMargin]: !_ && C,
+              }),
               children: k,
           })
         : (0, r.jsx)("div", {
-              className: a()(L.card, L.tier0, l, { [L.pillMargin]: !_ && C }),
+              className: a()(L.card, L.tier0, l, {
+                  [L.pillMargin]: !_ && C,
+              }),
               children: k,
           });
 }
+
 function H(e) {
     var t;
     let {
@@ -205,7 +219,9 @@ function H(e) {
             });
     return (0, r.jsxs)(u.hLv, {
         color: "nitro-pink",
-        className: a()(L.card, f, { [L.withGiftBanner]: A }),
+        className: a()(L.card, f, {
+            [L.withGiftBanner]: A,
+        }),
         children: [
             C && (0, r.jsx)(q, {}),
             D &&
@@ -231,7 +247,9 @@ function H(e) {
                 headingColor: "text-strong",
                 headerClassName: L.priceHeader,
             }),
-            (0, r.jsx)("hr", { className: L.divider }),
+            (0, r.jsx)("hr", {
+                className: L.divider,
+            }),
             (0, r.jsx)(R.ZP, {
                 featureSet: l,
                 isModal: _,
@@ -245,6 +263,7 @@ function H(e) {
         ],
     });
 }
+
 function Y(e) {
     let { className: t, ctaButton: n, isApplicationHome: i, priceOptions: o } = e,
         l = (0, c.qB)((0, d.Ay)());
@@ -266,14 +285,20 @@ function Y(e) {
                     }),
                 ],
             }),
-            (0, r.jsx)(C.A, { priceOptions: o }),
+            (0, r.jsx)(C.A, {
+                priceOptions: o,
+            }),
             (0, r.jsx)(s.D, {
                 variant: "heading-md/semibold",
                 color: "text-muted",
                 children: x.intl.string(D.default["R+dzZw"]),
             }),
-            (0, r.jsx)("hr", { className: L.divider }),
-            (0, r.jsx)(R.Lg, { isApplicationHome: i }),
+            (0, r.jsx)("hr", {
+                className: L.divider,
+            }),
+            (0, r.jsx)(R.Lg, {
+                isApplicationHome: i,
+            }),
             n,
         ],
     });
@@ -299,17 +324,23 @@ let W = (e) => {
                             },
                             f,
                         ),
-                        { disabled: _ },
+                        {
+                            disabled: _,
+                        },
                     ),
                 ),
             }),
             m = (0, r.jsx)("div", {
-                className: a()({ [L.premiumCardHover]: !n }),
+                className: a()({
+                    [L.premiumCardHover]: !n,
+                }),
                 children: (0, r.jsx)(
                     d,
                     G(
                         {
-                            className: a()(L.applicationHomeCard, { [L.narrow]: o }),
+                            className: a()(L.applicationHomeCard, {
+                                [L.narrow]: o,
+                            }),
                             ctaButton: h,
                             showYearlyPrice: !0,
                             isApplicationHome: !0,
@@ -328,7 +359,9 @@ let W = (e) => {
                           let { onClick: t } = e;
                           return (0, r.jsx)(u.DUT, {
                               onClick: t,
-                              style: { cursor: "pointer" },
+                              style: {
+                                  cursor: "pointer",
+                              },
                               children: m,
                           });
                       },
@@ -348,7 +381,9 @@ let W = (e) => {
                 }),
             }),
             s = (0, r.jsx)("div", {
-                className: a()({ [L.premiumCardHover]: !t }),
+                className: a()({
+                    [L.premiumCardHover]: !t,
+                }),
                 children: (0, r.jsx)(Y, {
                     className: a()(L.applicationHomeCard, L.narrow),
                     ctaButton: i,
@@ -364,13 +399,16 @@ let W = (e) => {
                     className: n,
                     children: (0, r.jsx)(u.DUT, {
                         onClick: t,
-                        style: { cursor: "pointer" },
+                        style: {
+                            cursor: "pointer",
+                        },
                         children: s,
                     }),
                 });
             },
         });
     };
+
 function z(e) {
     let { innerRef: t, className: n } = e,
         { analyticsLocations: i } = (0, _.Ay)(p.A.PREMIUM_MARKETING_TIER_CARD),

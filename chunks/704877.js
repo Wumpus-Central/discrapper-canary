@@ -1,4 +1,7 @@
-n.d(t, { A: () => d }), n(638769);
+n.d(t, {
+    A: () => d,
+}),
+    n(638769);
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -47,7 +50,10 @@ let u = (e) => Object.values(e).sort((e, t) => e.order - t.order),
                                                     color: "text-strong",
                                                     children: a,
                                                 }),
-                                                t && (0, r.jsx)("div", { className: c.W0 }),
+                                                t &&
+                                                    (0, r.jsx)("div", {
+                                                        className: c.W0,
+                                                    }),
                                             ],
                                         },
                                         a,

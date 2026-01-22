@@ -1,4 +1,8 @@
-l.d(t, { A: () => A }), l(321073), l(896048);
+l.d(t, {
+    A: () => A,
+}),
+    l(321073),
+    l(896048);
 var r = l(627968),
     n = l(64700),
     i = l(512750),
@@ -12,6 +16,7 @@ var r = l(627968),
     p = l(49999),
     m = l(333354),
     v = l(985018);
+
 function A(e) {
     let { powerup: t, targetRef: l, isCardVisible: A } = e,
         g = (0, s.bG)([c.A], () => c.A.hasLayers()),
@@ -43,7 +48,9 @@ function A(e) {
               position: "right",
               align: "top",
               size: "sm",
-              caretConfig: { align: "start" },
+              caretConfig: {
+                  align: "start",
+              },
               title: b.title,
               body: b.body,
               onRequestClose: () => {

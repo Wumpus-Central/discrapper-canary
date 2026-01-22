@@ -1,10 +1,14 @@
-n.d(t, { A: () => f }), n(896048);
+n.d(t, {
+    A: () => f,
+}),
+    n(896048);
 var r = n(735438),
     i = n.n(r),
     a = n(954571),
     s = n(31408),
     o = n(652215);
-let l = 5000;
+let l = 5e3;
+
 function c(e) {
     switch (e) {
         case s.uD.CHAT_INPUT:
@@ -15,6 +19,7 @@ function c(e) {
             return "voice_user";
     }
 }
+
 function u(e) {
     switch (e) {
         case s.k.CHAT_INPUT:
@@ -27,6 +32,7 @@ function u(e) {
             return "call_tile";
     }
 }
+
 function d(e, t) {
     return Object.entries(e)
         .filter((e) => {

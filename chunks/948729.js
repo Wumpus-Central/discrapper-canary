@@ -1,4 +1,7 @@
-n.d(t, { A: () => _ }), n(896048);
+n.d(t, {
+    A: () => _,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(110259),
@@ -10,6 +13,7 @@ var r = n(627968),
     d = n(587895),
     f = n(485724),
     p = n(204776);
+
 function _(e) {
     let { applicationId: t, message: n } = e,
         [a, o, l] = (0, s.yK)(
@@ -32,13 +36,16 @@ function _(e) {
           })
         : null;
 }
+
 function h(e) {
     let { application: t, message: n } = e,
         s = i.useCallback(() => {
             (0, c.x)({
                 type: a.ImpressionTypes.VIEW,
                 name: a.ImpressionNames.APP_OAUTH2_LINK_EMBED,
-                properties: { application_id: t.id },
+                properties: {
+                    application_id: t.id,
+                },
             });
         }, [t.id]),
         { analyticsLocations: u } = (0, l.Ay)(o.A.APP_OAUTH2_LINK_EMBED);

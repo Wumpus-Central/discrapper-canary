@@ -1,10 +1,13 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(627968),
     l = n(64700),
     i = n(503698),
     a = n.n(i),
     s = n(435371),
     o = n(354071);
+
 function c(e) {
     let {
             children: t,
@@ -29,7 +32,9 @@ function c(e) {
         b = i
             ? t
             : (0, r.jsx)("div", {
-                  className: a()(o.pm, { [o.wH]: p }),
+                  className: a()(o.pm, {
+                      [o.wH]: p,
+                  }),
                   children: t,
               });
     return (0, r.jsx)(s.m_, {

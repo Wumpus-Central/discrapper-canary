@@ -1,4 +1,8 @@
-n.d(t, { A: () => A }), n(896048), n(321073);
+n.d(t, {
+    A: () => A,
+}),
+    n(896048),
+    n(321073);
 var r,
     l,
     i = n(311907),
@@ -7,20 +11,23 @@ var r,
     o = n(308368),
     c = n(290863),
     u = n(360469);
+
 function d(e, t) {
     return "".concat(e, ":").concat(t);
 }
 let f = {},
     p = {},
-    h = new a.J_(3000, function () {
+    h = new a.J_(3e3, function () {
         let e = [];
         for (let [t, n] of Object.entries(p)) e.push(n), (f[t] = n), delete p[t];
         0 !== e.length && o.A.subscribeActivities(e);
     });
+
 function b(e) {
     let t = d(e.applicationId, e.partyId);
     return t in f || t in p;
 }
+
 function g() {
     (f = {}), (p = {});
 }

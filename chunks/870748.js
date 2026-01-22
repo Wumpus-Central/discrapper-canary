@@ -34,6 +34,7 @@ n(827669);
 let v = new Set(["applicationCommandOption"]),
     S = new Set([i.n4.ATTACHMENT]),
     I = new Set(["line", "applicationCommand"]);
+
 function T(e, t, n, r) {
     let {
         insertData: i,
@@ -137,6 +138,7 @@ function T(e, t, n, r) {
         e
     );
 }
+
 function C(e) {
     var t, n;
     let {
@@ -234,6 +236,7 @@ function C(e) {
     }
     return null;
 }
+
 function N(e, t, n) {
     var r, i, a, s, o;
     let l,
@@ -266,7 +269,11 @@ function N(e, t, n) {
                         optionName: r.name,
                         optionDisplayName: r.displayName,
                         optionType: r.type,
-                        children: [{ text: i }],
+                        children: [
+                            {
+                                text: i,
+                            },
+                        ],
                     };
                 A.push(a), 0 === r.text.length && null == v && (v = a);
             }
@@ -279,7 +286,11 @@ function N(e, t, n) {
                     optionName: r.name,
                     optionDisplayName: r.displayName,
                     optionType: r.type,
-                    children: [{ text: e }],
+                    children: [
+                        {
+                            text: e,
+                        },
+                    ],
                 };
                 A.push(a), 0 === e.length && null == v && (v = a), null == i && (I = a);
             }
@@ -290,7 +301,9 @@ function N(e, t, n) {
             : 0 === A.length
               ? "".concat("/").concat(u.displayName, " ")
               : "".concat("/").concat(u.displayName)),
-        A.unshift({ text: l });
+        A.unshift({
+            text: l,
+        });
     let T = {
         type: "applicationCommand",
         children: A,
@@ -301,7 +314,10 @@ function N(e, t, n) {
         },
     };
     y.VW.withoutNormalizing(e, () => {
-        for (let [, t] of (b.b.insertNodes(e, [T], { at: O.Xg }), y.VW.blocks(e).reverse()))
+        for (let [, t] of (b.b.insertNodes(e, [T], {
+            at: O.Xg,
+        }),
+        y.VW.blocks(e).reverse()))
             y.PW.isAfter(t, O.Xg) &&
                 b.b.removeNodes(e, {
                     at: t,
@@ -319,14 +335,30 @@ function N(e, t, n) {
         C
     );
 }
+
 function R(e, t, n, r) {
     let [i] = y.VW.blocks(e)[0],
-        s = (r ? (0, E.IQ)(i, { mode: "plain" }).trimEnd() : "").split("\n").map((e) => ({
-            type: "line",
-            children: [{ text: e }],
-        })),
+        s = (
+            r
+                ? (0, E.IQ)(i, {
+                      mode: "plain",
+                  }).trimEnd()
+                : ""
+        )
+            .split("\n")
+            .map((e) => ({
+                type: "line",
+                children: [
+                    {
+                        text: e,
+                    },
+                ],
+            })),
         o = [s.length - 1];
-    for (let [, t] of (b.b.insertNodes(e, s, { at: O.Xg }), y.VW.blocks(e).reverse()))
+    for (let [, t] of (b.b.insertNodes(e, s, {
+        at: O.Xg,
+    }),
+    y.VW.blocks(e).reverse()))
         y.PW.isAfter(t, o) &&
             b.b.removeNodes(e, {
                 at: t,
@@ -339,6 +371,7 @@ function R(e, t, n, r) {
             section: null,
         });
 }
+
 function w(e, t) {
     if (null == t.options || 0 === t.options.length) return !1;
     let n = m.pY(e, t);
@@ -354,7 +387,11 @@ function w(e, t) {
                         optionName: r.name,
                         optionDisplayName: r.displayName,
                         optionType: r.type,
-                        children: [{ text: r.text }],
+                        children: [
+                            {
+                                text: r.text,
+                            },
+                        ],
                     },
                     {
                         anchor: r.keyRange.anchor,
@@ -380,6 +417,7 @@ function w(e, t) {
         !0)
     );
 }
+
 function P(e, t) {
     if (
         null == t.options ||
@@ -410,7 +448,11 @@ function P(e, t) {
                 optionName: r.name,
                 optionDisplayName: r.displayName,
                 optionType: r.type,
-                children: [{ text: n.text.substring(t.displayName.length + 2) }],
+                children: [
+                    {
+                        text: n.text.substring(t.displayName.length + 2),
+                    },
+                ],
             },
             {
                 anchor: i,
@@ -420,6 +462,7 @@ function P(e, t) {
         !0)
     );
 }
+
 function D(e) {
     let {
         guildId: t,
@@ -467,6 +510,7 @@ function D(e) {
     }
     h && a.H2(n, p);
 }
+
 function x(e) {
     let t = m.n$(e);
     if (null == t)
@@ -486,6 +530,7 @@ function x(e) {
               commandText: null,
           };
 }
+
 function L(e, t) {
     let n = m.O7(e)[0];
     t();
@@ -499,6 +544,7 @@ function L(e, t) {
         }) &&
         b.b.insertText(e, " ");
 }
+
 function j(e, t) {
     if (!e.startsWith("/")) return null;
     let n = (0, f.Yn)(t, e.substring(1));
@@ -528,6 +574,7 @@ function j(e, t) {
     }
     return null;
 }
+
 function M(e, t, n) {
     var r, a, s, o;
     let l = null == (a = e.activeCommand) || null == (r = a.options) ? void 0 : r.find((e) => e.name === n),
@@ -536,7 +583,7 @@ function M(e, t, n) {
     if (null != l.choices) return null == (o = l.choices.find((e) => e.value === c.value)) ? void 0 : o.displayName;
     let u = null == (s = c.value) ? void 0 : s.toString();
     return l.type === i.n4.CHANNEL || (l.type === i.n4.MENTIONABLE && null != p.A.getChannel(u))
-        ? "<#".concat(u, ">\t")
+        ? "<#".concat(u, ">	")
         : l.type === i.n4.USER || (l.type === i.n4.MENTIONABLE && null != h.default.getUser(u))
           ? "<@".concat(u, ">")
           : l.type === i.n4.ROLE ||

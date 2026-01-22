@@ -1,4 +1,8 @@
-n.d(t, { A: () => S }), n(896048), n(228524);
+n.d(t, {
+    A: () => S,
+}),
+    n(896048),
+    n(228524);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -15,6 +19,7 @@ var r = n(627968),
     m = n(652215),
     g = n(985018),
     E = n(657989);
+
 function b(e, t, n) {
     return (
         t in e
@@ -28,6 +33,7 @@ function b(e, t, n) {
         e
     );
 }
+
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -90,7 +96,11 @@ let O = (e) => (e ? g.intl.string(g.t.QX14gI) : g.intl.string(g.t.RGadQR)),
                               shouldInheritTextColor: !0,
                           })
                         : null,
-                    h ? (0, r.jsx)(f.A, { className: E.perkCardEarlyAccessBadge }) : null,
+                    h
+                        ? (0, r.jsx)(f.A, {
+                              className: E.perkCardEarlyAccessBadge,
+                          })
+                        : null,
                     (0, r.jsx)("img", {
                         src: a,
                         alt: "",
@@ -117,7 +127,9 @@ let O = (e) => (e ? g.intl.string(g.t.QX14gI) : g.intl.string(g.t.RGadQR)),
     S = (e) => {
         let { className: t, isSubscriberNitroHome: n = !1 } = e,
             [a, u] = i.useState(!1),
-            f = (0, h.d)({ styles: E }),
+            f = (0, h.d)({
+                styles: E,
+            }),
             p = (0, o.bG)([c.A], () => c.A.useReducedMotion),
             { analyticsLocations: g } = (0, d.Ay)(),
             b = () => {
@@ -151,7 +163,9 @@ let O = (e) => (e ? g.intl.string(g.t.QX14gI) : g.intl.string(g.t.RGadQR)),
                     children: O(n),
                 }),
                 (0, r.jsx)("div", {
-                    className: s()(E.perkCardContainer, { [E.perkCardContainerExpanded]: a }),
+                    className: s()(E.perkCardContainer, {
+                        [E.perkCardContainerExpanded]: a,
+                    }),
                     children: S.map((e) => null != e && (0, r.jsx)(v, y({}, e), e.title)),
                 }),
                 n &&
@@ -167,7 +181,11 @@ let O = (e) => (e ? g.intl.string(g.t.QX14gI) : g.intl.string(g.t.RGadQR)),
                                     isShowingAll: a,
                                 }),
                             }),
-                            (0, r.jsx)("div", { className: s()(E.cover, { [E.hidden]: a }) }),
+                            (0, r.jsx)("div", {
+                                className: s()(E.cover, {
+                                    [E.hidden]: a,
+                                }),
+                            }),
                         ],
                     }),
             ],

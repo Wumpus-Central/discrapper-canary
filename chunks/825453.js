@@ -1,4 +1,9 @@
-n.d(t, { A: () => A }), n(321073), n(896048), n(446912);
+n.d(t, {
+    A: () => A,
+}),
+    n(321073),
+    n(896048),
+    n(446912);
 var i = n(64700),
     r = n(284009),
     l = n.n(r),
@@ -17,6 +22,7 @@ var i = n(64700),
     x = n(803378),
     j = n(200662),
     O = n(652215);
+
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,6 +48,7 @@ function y(e) {
     }
     return e;
 }
+
 function A(e, t, n) {
     let r = (0, o.bG)([x.A], () => x.A.getApplicationPermissions()),
         a = i.useMemo(() => {

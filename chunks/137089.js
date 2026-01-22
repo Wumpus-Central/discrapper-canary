@@ -25,8 +25,13 @@ var m = n(728444),
 let y = l.memo(function (e) {
     let { guildChannels: t, guildChannelsVersion: n } = e,
         i = l.useMemo(() => t.getCategoryFromSection(t.voiceChannelsSectionNumber), [t, n]);
-    return null == i ? null : (0, r.jsx)(g.AV, { category: i });
+    return null == i
+        ? null
+        : (0, r.jsx)(g.AV, {
+              category: i,
+          });
 });
+
 function O(e) {
     let {
         sectionIndex: t,
@@ -54,6 +59,7 @@ function O(e) {
           ? (s && "cozy" === o ? 42 : 34) + d
           : d;
 }
+
 function j(e, t, n) {
     if (e === t.voiceChannelsSectionNumber) return "voice-channels-button";
     let { hasDivider: r, canHaveVoiceSummary: l } = (0, b.B3)(t, n, e);
@@ -103,7 +109,11 @@ let v = l.memo(function (e) {
             guildChannels: n,
             guildChannelsVersion: i,
         });
-    let P = E ? (0, r.jsx)("div", { className: A.ts }) : null;
+    let P = E
+        ? (0, r.jsx)("div", {
+              className: A.ts,
+          })
+        : null;
     return _ && 0 !== T.length
         ? (0, r.jsxs)(r.Fragment, {
               children: [

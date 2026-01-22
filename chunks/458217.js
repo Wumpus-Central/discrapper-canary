@@ -14,10 +14,12 @@ let a = 3,
         Text: 4.5,
         HighContrastText: 7,
     };
+
 function l(e) {
     let [t, n, r, i] = e.rgba();
     return "rgba(".concat(t, ", ").concat(n, ", ").concat(r, ", ").concat(i, ")");
 }
+
 function c(e) {
     var t, n, r;
     let c = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
@@ -40,6 +42,7 @@ function c(e) {
     }
     return l(h);
 }
+
 function u(e, t) {
     return l(i()(e).brighten(t));
 }

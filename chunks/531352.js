@@ -1,4 +1,6 @@
-a.d(t, { A: () => r });
+a.d(t, {
+    A: () => r,
+});
 var n = a(981737);
 let r = {
     ordinalNumber: function (e, t) {
@@ -8,7 +10,7 @@ let r = {
         values: {
             narrow: ["f.Kr.", "e.Kr."],
             abbreviated: ["f.Kr.", "e.Kr."],
-            wide: ["før Kristus", "etter Kristus"],
+            wide: ["f\xf8r Kristus", "etter Kristus"],
         },
         defaultWidth: "wide",
     }),
@@ -60,9 +62,9 @@ let r = {
     day: (0, n.A)({
         values: {
             narrow: ["S", "M", "T", "O", "T", "F", "L"],
-            short: ["sø", "ma", "ti", "on", "to", "fr", "lø"],
-            abbreviated: ["søn", "man", "tir", "ons", "tor", "fre", "lør"],
-            wide: ["søndag", "mandag", "tirsdag", "onsdag", "torsdag", "fredag", "lørdag"],
+            short: ["s\xf8", "ma", "ti", "on", "to", "fr", "l\xf8"],
+            abbreviated: ["s\xf8n", "man", "tir", "ons", "tor", "fre", "l\xf8r"],
+            wide: ["s\xf8ndag", "mandag", "tirsdag", "onsdag", "torsdag", "fredag", "l\xf8rdag"],
         },
         defaultWidth: "wide",
     }),
@@ -73,30 +75,30 @@ let r = {
                 pm: "p",
                 midnight: "midnatt",
                 noon: "middag",
-                morning: "på morg.",
-                afternoon: "på etterm.",
-                evening: "på kvelden",
-                night: "på natten",
+                morning: "p\xe5 morg.",
+                afternoon: "p\xe5 etterm.",
+                evening: "p\xe5 kvelden",
+                night: "p\xe5 natten",
             },
             abbreviated: {
                 am: "a.m.",
                 pm: "p.m.",
                 midnight: "midnatt",
                 noon: "middag",
-                morning: "på morg.",
-                afternoon: "på etterm.",
-                evening: "på kvelden",
-                night: "på natten",
+                morning: "p\xe5 morg.",
+                afternoon: "p\xe5 etterm.",
+                evening: "p\xe5 kvelden",
+                night: "p\xe5 natten",
             },
             wide: {
                 am: "a.m.",
                 pm: "p.m.",
                 midnight: "midnatt",
                 noon: "middag",
-                morning: "på morgenen",
-                afternoon: "på ettermiddagen",
-                evening: "på kvelden",
-                night: "på natten",
+                morning: "p\xe5 morgenen",
+                afternoon: "p\xe5 ettermiddagen",
+                evening: "p\xe5 kvelden",
+                night: "p\xe5 natten",
             },
         },
         defaultWidth: "wide",

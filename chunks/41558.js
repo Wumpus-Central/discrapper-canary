@@ -1,4 +1,6 @@
-n.d(t, { S: () => x });
+n.d(t, {
+    S: () => x,
+});
 var r = n(627968),
     i = n(64700),
     l = n(397927),
@@ -13,13 +15,16 @@ var r = n(627968),
     b = n(478644),
     m = n(985018),
     p = n(340736);
+
 function x(e) {
     let { guild: t, canManageGuild: n } = e,
         x = t.features.has(f.GuildFeatures.INVITE_SPLASH),
         h = n && x,
         { analyticsLocations: j } = (0, s.Ay)(),
         O = i.useCallback((e) => {
-            d.A.updateGuild({ splash: e });
+            d.A.updateGuild({
+                splash: e,
+            });
         }, []),
         y = i.useCallback(
             (e) => {

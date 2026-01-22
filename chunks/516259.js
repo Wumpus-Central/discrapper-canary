@@ -1,4 +1,7 @@
-n.d(t, { default: () => E }), n(321073);
+n.d(t, {
+    default: () => E,
+}),
+    n(321073);
 var r = n(627968),
     s = n(64700),
     i = n(110259),
@@ -15,6 +18,7 @@ var r = n(627968),
     O = n(652215),
     y = n(985018),
     S = n(142371);
+
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -40,6 +44,7 @@ function h(e) {
     }
     return e;
 }
+
 function m(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -58,17 +63,23 @@ function m(e, t) {
         e
     );
 }
+
 function _(e) {
     let { user: t, status: n, ignoredUser: s } = e,
         { analyticsLocations: i } = (0, u.Ay)(),
         o = (e) => {
-            e.stopPropagation(), l.A.cancelFriendRequest(t.id, { location: "Spam requests modal" });
+            e.stopPropagation(),
+                l.A.cancelFriendRequest(t.id, {
+                    location: "Spam requests modal",
+                });
         },
         a = (e) => {
             e.stopPropagation(),
                 l.A.addRelationship({
                     userId: t.id,
-                    context: { location: "Spam requests modal" },
+                    context: {
+                        location: "Spam requests modal",
+                    },
                 });
         },
         g = n === O.clD.OFFLINE ? O.clD.UNKNOWN : n,
@@ -120,6 +131,7 @@ function _(e) {
         }),
     });
 }
+
 function E(e) {
     let { transitionState: t, onClose: n } = e,
         { rows: c } = (0, a.cf)([g.Ay], () => g.Ay.getState()),
@@ -148,7 +160,11 @@ function E(e) {
         title: y.intl.string(y.t.kaYqnm),
         subtitle: y.intl.string(y.t.tRxb4H),
         actions: p,
-        trackingProps: { impression: { impressionName: i.ImpressionNames.FRIEND_REQUESTS_SPAM_INBOX } },
+        trackingProps: {
+            impression: {
+                impressionName: i.ImpressionNames.FRIEND_REQUESTS_SPAM_INBOX,
+            },
+        },
         onClose: n,
         transitionState: t,
         children: (0, r.jsxs)("div", {

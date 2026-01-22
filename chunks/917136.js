@@ -14,6 +14,7 @@ var r = n(239947),
     a = n(73153),
     s = n(499785),
     o = n(652215);
+
 function l(e, t, n) {
     return (
         t in e
@@ -27,6 +28,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -43,6 +45,7 @@ function c(e) {
     }
     return e;
 }
+
 function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -55,6 +58,7 @@ function u(e, t) {
     }
     return n;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -70,7 +74,9 @@ async function f() {
     return (
         await i.Bo.post({
             url: o.Rsh.WEBAUTHN_CONDITIONAL_UI_CHALLENGE,
-            headers: { authorization: "" },
+            headers: {
+                authorization: "",
+            },
             rejectWithError: !1,
         })
     ).body;
@@ -87,6 +93,7 @@ async function p() {
         ticket: t,
     };
 }
+
 function _() {
     i.Bo.get({
         url: o.Rsh.MFA_WEBAUTHN_CREDENTIALS,
@@ -95,7 +102,9 @@ function _() {
         if (null != e.body) {
             let t = e.body.map((e) => {
                 let t = null == e.last_used ? null : new Date(e.last_used);
-                return d(c({}, e), { last_used: t });
+                return d(c({}, e), {
+                    last_used: t,
+                });
             });
             a.h.dispatch({
                 type: "MFA_WEBAUTHN_CREDENTIALS_LOADED",
@@ -104,6 +113,7 @@ function _() {
         }
     });
 }
+
 function h(e) {
     i.Bo.del({
         url: o.Rsh.MFA_WEBAUTHN_CREDENTIAL(e.id),
@@ -118,13 +128,17 @@ function h(e) {
 async function m(e, t) {
     let n = await i.Bo.patch({
         url: o.Rsh.MFA_WEBAUTHN_CREDENTIAL(e),
-        body: { name: t },
+        body: {
+            name: t,
+        },
         rejectWithError: !1,
     });
     if (null != n.body) {
         let e = n.body,
             t = null == e.last_used ? null : new Date(e.last_used),
-            r = d(c({}, e), { last_used: t });
+            r = d(c({}, e), {
+                last_used: t,
+            });
         a.h.dispatch({
             type: "AUTHENTICATOR_UPDATE",
             credential: r,
@@ -152,7 +166,9 @@ async function E(e, t, n) {
             ticket: t,
             credential: n,
         },
-        trackedActionData: { event: r.D.WEBAUTHN_REGISTER },
+        trackedActionData: {
+            event: r.D.WEBAUTHN_REGISTER,
+        },
         rejectWithError: !1,
     });
     a.h.dispatch({
@@ -164,9 +180,15 @@ async function E(e, t, n) {
             codes: i.body.backup_codes,
         });
 }
+
 function b() {
-    a.h.dispatch({ type: "WEBAUTHN_TRIGGER_REGISTER" });
+    a.h.dispatch({
+        type: "WEBAUTHN_TRIGGER_REGISTER",
+    });
 }
+
 function y() {
-    a.h.dispatch({ type: "WEBAUTHN_CLEAR_REGISTER_TRIGGER" });
+    a.h.dispatch({
+        type: "WEBAUTHN_CLEAR_REGISTER_TRIGGER",
+    });
 }

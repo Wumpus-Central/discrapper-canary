@@ -1,4 +1,7 @@
-n.d(t, { A: () => I }), n(896048);
+n.d(t, {
+    A: () => I,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(835245),
@@ -21,6 +24,7 @@ var r = n(627968),
     v = n(897513),
     A = n(985018),
     E = n(381929);
+
 function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -52,7 +56,9 @@ let _ = function (e, t, n) {
         return (
             null == t || Number.isNaN(t)
                 ? (null == t || Number.isNaN(t)) && null != e && (i = A.intl.string(A.t.xO2msf))
-                : (i = A.intl.formatToPlainString(A.t.nskeMw, { percentage: (0, s.s)(Math.abs(t), n) })),
+                : (i = A.intl.formatToPlainString(A.t.nskeMw, {
+                      percentage: (0, s.s)(Math.abs(t), n),
+                  })),
             {
                 localizedNumber: null != e ? "".concat((0, s.s)(e, n)).concat(r ? "%" : "") : A.intl.string(A.t.jHpxwo),
                 subtext: i,
@@ -90,12 +96,16 @@ let _ = function (e, t, n) {
                 onClick: () => {
                     let e, r;
                     t(!0),
-                        (p.default.track(y.HAw.GUILD_INSIGHTS_SETTINGS_CTA_CLICKED, { guild_id: n }),
+                        (p.default.track(y.HAw.GUILD_INSIGHTS_SETTINGS_CTA_CLICKED, {
+                            guild_id: n,
+                        }),
                         (e = null == n ? y.dSh.DEVELOPER_PORTAL : y.dSh.DEVELOPER_PORTAL_GUILD_ANALYTICS(n)),
                         (r = (0, l.A)()),
                         c.Bo.post({
                             url: y.Rsh.HANDOFF,
-                            body: { key: r },
+                            body: {
+                                key: r,
+                            },
                             oldFormErrors: !0,
                             rejectWithError: !0,
                         }).then(
@@ -167,7 +177,12 @@ let _ = function (e, t, n) {
                               ),
                               (0, r.jsx)(
                                   O.A,
-                                  N({ title: A.intl.string(A.t.hYeOqC) }, _(s.newMembers, s.newMembersChange, l)),
+                                  N(
+                                      {
+                                          title: A.intl.string(A.t.hYeOqC),
+                                      },
+                                      _(s.newMembers, s.newMembersChange, l),
+                                  ),
                               ),
                               (0, r.jsx)(
                                   O.A,
@@ -197,7 +212,9 @@ let _ = function (e, t, n) {
                 (0, r.jsxs)("div", {
                     className: E.Pg,
                     children: [
-                        (0, r.jsx)("div", { className: E.jM }),
+                        (0, r.jsx)("div", {
+                            className: E.jM,
+                        }),
                         (0, r.jsx)(o.Text, {
                             className: E.WO,
                             variant: "text-sm/normal",

@@ -1,4 +1,6 @@
-n.d(t, { A: () => E });
+n.d(t, {
+    A: () => E,
+});
 var r = n(627968),
     i = n(64700),
     a = n(665260),
@@ -14,6 +16,7 @@ var r = n(627968),
     h = n(778712),
     m = n(985018),
     g = n(21998);
+
 function E(e) {
     let { user: t, application: n, bot: E, accountScopes: b, showLogout: y, location: O, scopes: A } = e,
         v = (0, p.i)(),
@@ -87,9 +90,15 @@ function E(e) {
                     (0, r.jsxs)("div", {
                         className: g.I5,
                         children: [
-                            (0, r.jsx)("div", { className: g.pw }),
-                            (0, r.jsx)("div", { className: g.pw }),
-                            (0, r.jsx)("div", { className: g.pw }),
+                            (0, r.jsx)("div", {
+                                className: g.pw,
+                            }),
+                            (0, r.jsx)("div", {
+                                className: g.pw,
+                            }),
+                            (0, r.jsx)("div", {
+                                className: g.pw,
+                            }),
                         ],
                     }),
                     (0, r.jsx)(o.eu, {

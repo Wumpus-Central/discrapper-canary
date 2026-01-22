@@ -38,6 +38,7 @@ var i = n(503698),
     L = n(601107),
     j = n(985018),
     M = n(282151);
+
 function k(e, t, n) {
     return (
         t in e
@@ -51,6 +52,7 @@ function k(e, t, n) {
         e
     );
 }
+
 function U(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -67,6 +69,7 @@ function U(e) {
     }
     return e;
 }
+
 function G(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -79,6 +82,7 @@ function G(e, t) {
     }
     return n;
 }
+
 function V(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -97,6 +101,7 @@ let F = new _.A("SubscriptionHeader.tsx"),
         object: x.ZSU.CARD,
     },
     H = [x.Dmq.PAUSED, x.Dmq.PAUSE_PENDING, x.Dmq.BILLING_RETRY];
+
 function Y(e) {
     let {
         wordMark: t,
@@ -109,11 +114,15 @@ function Y(e) {
     return (0, r.jsxs)("div", {
         className: a()(M.vK, s),
         children: [
-            (0, r.jsx)("div", { className: M.aK }),
+            (0, r.jsx)("div", {
+                className: M.aK,
+            }),
             (0, r.jsxs)("div", {
                 className: M.wt,
                 children: [
-                    (0, r.jsx)("div", { className: M.Sl }),
+                    (0, r.jsx)("div", {
+                        className: M.Sl,
+                    }),
                     (0, r.jsxs)("div", {
                         className: M.zH,
                         children: [
@@ -124,7 +133,9 @@ function Y(e) {
                                     o &&
                                         null != l &&
                                         (0, r.jsx)(R.ir, {
-                                            text: j.intl.formatToPlainString(j.t.iiLbvu, { percent: l }),
+                                            text: j.intl.formatToPlainString(j.t.iiLbvu, {
+                                                percent: l,
+                                            }),
                                             className: M.NM,
                                             colorOptions: R.at.PREMIUM_TIER_2_WHITE_FILL,
                                             isPillOnBorder: !1,
@@ -143,6 +154,7 @@ function Y(e) {
         ],
     });
 }
+
 function W(e) {
     let {
         wordMark: t,
@@ -155,7 +167,9 @@ function W(e) {
     return (0, r.jsxs)("div", {
         className: a()(M.vK, s, M.uR),
         children: [
-            (0, r.jsx)("div", { className: M.aK }),
+            (0, r.jsx)("div", {
+                className: M.aK,
+            }),
             (0, r.jsx)("div", {
                 className: M.wt,
                 children: (0, r.jsx)("div", {
@@ -163,7 +177,9 @@ function W(e) {
                     children: (0, r.jsxs)("div", {
                         className: M.Gp,
                         children: [
-                            (0, r.jsx)("div", { className: M.Sl }),
+                            (0, r.jsx)("div", {
+                                className: M.Sl,
+                            }),
                             (0, r.jsxs)("div", {
                                 className: M.Ck,
                                 children: [
@@ -171,7 +187,9 @@ function W(e) {
                                     o &&
                                         null != l &&
                                         (0, r.jsx)(R.ir, {
-                                            text: j.intl.formatToPlainString(j.t.iiLbvu, { percent: l }),
+                                            text: j.intl.formatToPlainString(j.t.iiLbvu, {
+                                                percent: l,
+                                            }),
                                             className: M.NM,
                                             colorOptions: R.at.PREMIUM_TIER_2_WHITE_FILL,
                                             isPillOnBorder: !1,
@@ -190,6 +208,7 @@ function W(e) {
         ],
     });
 }
+
 function K() {
     return (0, r.jsxs)("div", {
         className: M.Up,
@@ -198,10 +217,13 @@ function K() {
                 className: M.sq,
                 "aria-label": j.intl.string(j.t.FSOz78),
             }),
-            (0, r.jsx)("div", { className: M.CJ }),
+            (0, r.jsx)("div", {
+                className: M.CJ,
+            }),
         ],
     });
 }
+
 function z() {
     let { analyticsLocations: e } = (0, f.Ay)(d.A.ACCOUNT_CREDIT_BANNER);
     return (0, r.jsx)(Y, {
@@ -220,7 +242,9 @@ function z() {
                 }),
             text: j.intl.string(j.t["/ygMUY"]),
         }),
-        statusClasses: { [M.aS]: !0 },
+        statusClasses: {
+            [M.aS]: !0,
+        },
     });
 }
 let q = function (e) {
@@ -235,10 +259,14 @@ let q = function (e) {
         } = e,
         z = "subscription_header",
         { analyticsLocations: q } = (0, f.Ay)(d.A.SUBSCRIPTION_HEADER),
-        X = (0, p.A)({ forceFetch: !1 }),
+        X = (0, p.A)({
+            forceFetch: !1,
+        }),
         { fractionalState: Z } = X,
         Q = Z === D.xc.FP_SUB_PAUSED,
-        { enabled: $ } = (0, T.Ay)({ location: z }),
+        { enabled: $ } = (0, T.Ay)({
+            location: z,
+        }),
         J = (0, C.g)(z);
     (D.QV.has(i.planId) && x.Uyk.ALL_PAUSEABLE.has(i.status) && !Q) || ($ = !1);
     let ee = (0, N.O)(),
@@ -351,7 +379,9 @@ let q = function (e) {
             (0, r.jsx)("div", {
                 className: M.MS,
                 children: ei
-                    ? j.intl.format(j.t["/SfHwl"], { weeks: 1 })
+                    ? j.intl.format(j.t["/SfHwl"], {
+                          weeks: 1,
+                      })
                     : (0, O.nB)({
                           planId: e,
                           subscription: i,
@@ -377,6 +407,7 @@ let q = function (e) {
                     }),
                 });
             }
+
             function t() {
                 let e = O.Ay.isSwitchingPlansDisabled(i),
                     t = O.Ay.getSwitchingPlansDisabledMessage(i);
@@ -538,7 +569,9 @@ let q = function (e) {
                         className: M.sq,
                         "aria-label": j.intl.string(j.t["t9uG/o"]),
                     }),
-                    (0, r.jsx)("div", { className: M.sT }),
+                    (0, r.jsx)("div", {
+                        className: M.sT,
+                    }),
                 ],
             });
             break;

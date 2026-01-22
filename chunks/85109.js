@@ -1,4 +1,8 @@
-n.d(t, { A: () => F }), n(65821), n(896048);
+n.d(t, {
+    A: () => F,
+}),
+    n(65821),
+    n(896048);
 var r,
     i = n(311907),
     a = n(713402),
@@ -6,6 +10,7 @@ var r,
     o = n(141468),
     l = n(287809),
     c = n(756377);
+
 function u(e, t, n) {
     return (
         t in e
@@ -19,6 +24,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,7 +41,8 @@ function d(e) {
     }
     return e;
 }
-let f = 10000000000000;
+let f = 1e13;
+
 function p(e) {
     if (null == e) return f;
     try {
@@ -44,6 +51,7 @@ function p(e) {
         throw Error("Invalid date given (".concat(e, ")"));
     }
 }
+
 function _(e) {
     return null != e.dueAt ? p(e.dueAt) : f - p(e.savedAt);
 }
@@ -62,14 +70,17 @@ let h = new a.J(
     E = new Set(),
     b = new Set(),
     y = new Map();
+
 function O(e) {
     let t = y.get(e);
     return null != t && t.size > 0;
 }
+
 function A(e) {
     let { channelId: t, messageId: n } = e;
     return "".concat(t, "-").concat(n);
 }
+
 function v(e) {
     var t;
     let n = A(e.saveData);
@@ -82,6 +93,7 @@ function v(e) {
         null == e.message && b.add(r),
         null != e.saveData.dueAt && new Date() > e.saveData.dueAt ? E.add(r) : E.delete(r);
 }
+
 function S(e) {
     var t;
     let n = A(e),
@@ -91,24 +103,30 @@ function S(e) {
     let i = e.messageId;
     null == (t = y.get(r.saveData.channelId)) || t.delete(i), b.delete(i), E.delete(i), (g = Date.now());
 }
+
 function I() {
     m = !0;
 }
+
 function T() {
     (m = !0), h.clear(), y.clear(), b.clear();
 }
+
 function C(e) {
     let { savedMessages: t } = e;
     for (let e of ((m = !1), h.clear(), y.clear(), b.clear(), t)) v(e);
 }
+
 function N(e) {
     let { savedMessage: t } = e;
     v(t);
 }
+
 function R(e) {
     let { savedMessageData: t } = e;
     return S(t);
 }
+
 function w(e) {
     let { messageId: t, channelId: n } = e,
         r = A({
@@ -120,6 +138,7 @@ function w(e) {
     let a = d({}, i);
     return (a.message = null), h.set(r, a), !0;
 }
+
 function P(e) {
     let { id: t, channelId: n } = e;
     return w({
@@ -127,6 +146,7 @@ function P(e) {
         channelId: n,
     });
 }
+
 function D(e) {
     let { ids: t, channelId: n } = e;
     for (let e of t)
@@ -135,6 +155,7 @@ function D(e) {
             channelId: n,
         });
 }
+
 function x(e) {
     let { message: t } = e;
     if (null == t.id || null == t.channel_id) return !1;
@@ -147,15 +168,18 @@ function x(e) {
     let i = d({}, r);
     (i.message = (0, o.IU)(r.message, t)), h.set(n, i);
 }
+
 function L() {
     if (0 === b.size || m) return !1;
     m = !0;
 }
+
 function j(e) {
     let { channel: t } = e;
     if (0 === b.size || m || !O(t.id)) return !1;
     m = !0;
 }
+
 function M(e) {
     let { channels: t } = e;
     if (0 === b.size || m) return !1;
@@ -163,17 +187,20 @@ function M(e) {
     for (let e of t) O(e.id) && ((m = !0), (n = !0));
     return n;
 }
+
 function k(e) {
     let { channel: t } = e;
     if (0 === b.size || m || !O(t.id)) return !1;
     m = !0;
 }
+
 function U(e) {
     var t;
     let { user: n } = e;
     if (0 === b.size || m || n.id !== (null == (t = l.default.getCurrentUser()) ? void 0 : t.id)) return !1;
     m = !0;
 }
+
 function G(e) {
     let { savedMessage: t } = e;
     E.add(t.saveData.messageId);

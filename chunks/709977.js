@@ -25,9 +25,11 @@ let o = (e) => {
             return (0, r.xb)(a);
     }
 };
+
 function l(e) {
     return a.AI.has(null == e ? void 0 : e.field_type);
 }
+
 function c(e) {
     return null != e && e.features.has(s.GuildFeatures.MEMBER_VERIFICATION_GATE_ENABLED);
 }

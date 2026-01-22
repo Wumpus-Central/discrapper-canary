@@ -1,6 +1,9 @@
-n.d(t, { G: () => a });
+n.d(t, {
+    G: () => a,
+});
 var r = n(64700),
     i = n(158954);
+
 function a() {
     let { reducedMotion: e } = r.useContext(i.CZY),
         {
@@ -17,7 +20,9 @@ function a() {
             transform: e.enabled,
         }),
         { styles: u } = (0, i.DLI)(c, {
-            common: { transformOrigin: "top center" },
+            common: {
+                transformOrigin: "top center",
+            },
             initial: {
                 opacity: 0.5,
                 transform: "scaleY(0.96)",

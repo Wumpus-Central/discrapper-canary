@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -19,6 +21,7 @@ let u = {
         [l.TVA.TIER_2]: c.kO,
         [l.TVA.TIER_3]: c.uq,
     };
+
 function f(e) {
     let { premiumTier: t, iconBackgroundClassName: n, iconClassName: i, size: l } = e;
     return (0, r.jsx)(s.A, {

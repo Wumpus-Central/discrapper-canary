@@ -1,4 +1,6 @@
-n.d(t, { z: () => q });
+n.d(t, {
+    z: () => q,
+});
 var l = n(627968),
     r = n(64700),
     i = n(503698),
@@ -30,6 +32,7 @@ var l = n(627968),
     D = n(790782),
     _ = n(985018),
     L = n(116106);
+
 function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -55,6 +58,7 @@ function k(e) {
     }
     return e;
 }
+
 function M(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -73,6 +77,7 @@ function M(e, t) {
         e
     );
 }
+
 function I(e, t) {
     if (null == e) return {};
     var n,
@@ -101,6 +106,7 @@ function I(e, t) {
             (l = n[r]), !(t.indexOf(l) >= 0) && Object.prototype.propertyIsEnumerable.call(e, l) && (i[l] = e[l]);
     return i;
 }
+
 function R(e) {
     let {
             destination: t,
@@ -128,7 +134,9 @@ function R(e) {
                     }));
         }),
         (0, l.jsxs)(c.DUT, {
-            className: a()(L.HP, { [L.r9]: u }),
+            className: a()(L.HP, {
+                [L.r9]: u,
+            }),
             onClick: h,
             "aria-selected": o,
             "aria-setsize": b,
@@ -163,17 +171,22 @@ function R(e) {
                 }),
                 (0, l.jsx)("div", {
                     className: L.kv,
-                    children: (0, l.jsx)(c.P7L, { checked: o }),
+                    children: (0, l.jsx)(c.P7L, {
+                        checked: o,
+                    }),
                 }),
             ],
         })
     );
 }
+
 function F(e) {
     let { user: t, subLabel: n } = e,
         r = I(e, ["user", "subLabel"]),
         i = T.Ay.useName(t),
-        a = T.Ay.useUserTag(t, { decoration: "never" }),
+        a = T.Ay.useUserTag(t, {
+            decoration: "never",
+        }),
         s = (0, u.bG)([w.A], () => w.A.getNickname(t.id)),
         o = (0, u.bG)([O.A], () => O.A.getStatus(t.id));
     return (0, l.jsx)(
@@ -190,6 +203,7 @@ function F(e) {
         }),
     );
 }
+
 function z(e) {
     let { channel: t, subLabel: n } = e,
         r = I(e, ["channel", "subLabel"]),
@@ -208,6 +222,7 @@ function z(e) {
         }),
     );
 }
+
 function G(e) {
     let { channel: t, subLabel: n } = e,
         r = I(e, ["channel", "subLabel"]),
@@ -241,7 +256,7 @@ function G(e) {
                                   className: L.Ql,
                                   variant: "text-xs/medium",
                                   color: "text-subtle",
-                                  children: "\u2022",
+                                  children: "•",
                               }),
                               (0, l.jsx)(c.Text, {
                                   variant: "text-xs/medium",
@@ -267,6 +282,7 @@ function G(e) {
         }),
     );
 }
+
 function q(e) {
     let {
             rowData: t,
@@ -303,11 +319,18 @@ function q(e) {
                                       t.rateLimitPerUser > 0 &&
                                       !(A.A.can(E.xBc.MANAGE_CHANNELS, t) || A.A.can(E.xBc.MANAGE_MESSAGES, t))
                                   )
-                                      return { label: _.intl.string(_.t.Icu3bf) };
+                                      return {
+                                          label: _.intl.string(_.t.Icu3bf),
+                                      };
                                   if (t.isThread() || t.isForumPost() || !A.A.can(E.xBc.USE_APPLICATION_COMMANDS, t))
-                                      return { label: _.intl.string(_.t.v8MLqz) };
+                                      return {
+                                          label: _.intl.string(_.t.v8MLqz),
+                                      };
                                   let n = (0, y._5)(t.id);
-                                  if (e.id === n.id) return { label: _.intl.string(_.t.mD4gqe) };
+                                  if (e.id === n.id)
+                                      return {
+                                          label: _.intl.string(_.t.mD4gqe),
+                                      };
                               }
                           })(s, u)
                         : null,
@@ -322,11 +345,38 @@ function q(e) {
                     "aria-setsize": e.length,
                 };
             return r === b.rD.USER
-                ? (0, l.jsx)(F, k({ user: u }, m), d)
+                ? (0, l.jsx)(
+                      F,
+                      k(
+                          {
+                              user: u,
+                          },
+                          m,
+                      ),
+                      d,
+                  )
                 : r === b.rD.GROUP_DM
-                  ? (0, l.jsx)(z, k({ channel: u }, m), d)
+                  ? (0, l.jsx)(
+                        z,
+                        k(
+                            {
+                                channel: u,
+                            },
+                            m,
+                        ),
+                        d,
+                    )
                   : r === b.rD.TEXT_CHANNEL || r === b.rD.VOICE_CHANNEL
-                    ? (0, l.jsx)(G, k({ channel: u }, m), d)
+                    ? (0, l.jsx)(
+                          G,
+                          k(
+                              {
+                                  channel: u,
+                              },
+                              m,
+                          ),
+                          d,
+                      )
                     : void (0, N.xb)(r);
         });
     }, [a, i, s, t, o]);

@@ -1,4 +1,6 @@
-n.d(t, { W: () => r });
+n.d(t, {
+    W: () => r,
+});
 let r = {
     bg: () => Promise.resolve().then(n.t.bind(n, 33393, 23)),
     cs: () => Promise.resolve().then(n.t.bind(n, 285056, 23)),

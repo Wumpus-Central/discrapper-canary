@@ -1,7 +1,9 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(501459),
     i = n(1673);
-let a = RegExp("(?:\\(|\\\uFF08)(?<weekday>" + Object.keys(r.tS).join("|") + ")(?:\\)|\\\uFF09)", "i");
+let a = RegExp("(?:\\(|\\（)(?<weekday>" + Object.keys(r.tS).join("|") + ")(?:\\)|\\）)", "i");
 class s {
     pattern() {
         return a;

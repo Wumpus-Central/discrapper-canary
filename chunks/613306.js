@@ -37,6 +37,7 @@ var g = n(734057),
     I = n(427262),
     T = n(985018),
     C = n(790704);
+
 function N(e) {
     let { emoji: t } = e;
     return (0, r.jsx)(a.m, {
@@ -51,6 +52,7 @@ function N(e) {
         }),
     });
 }
+
 function R(e) {
     let { emoji: t } = e;
     return (0, r.jsx)(a.m, {
@@ -64,16 +66,22 @@ function R(e) {
         }),
     });
 }
+
 function w(e) {
     let { text: t } = e;
-    return (0, r.jsx)(_.A, { children: t });
+    return (0, r.jsx)(_.A, {
+        children: t,
+    });
 }
+
 function P(e) {
     let { id: t, guildId: n, channelId: o } = e,
         c = (0, i.bG)([O.default], () => O.default.getUser(t)),
         u = (0, i.bG)([y.A], () => y.A.hidePersonalInformation),
         d = S.Ay.useName(n, o, c),
-        f = (0, r.jsx)(_.A, { children: null == d ? "<@".concat(t, ">") : "@".concat(d) });
+        f = (0, r.jsx)(_.A, {
+            children: null == d ? "<@".concat(t, ">") : "@".concat(d),
+        });
     if (null != c) {
         let e = u || c.hasUniqueUsername() ? null : "#".concat(c.discriminator);
         return (0, r.jsx)(a.m, {
@@ -98,7 +106,9 @@ function P(e) {
             }),
             delay: 750,
             position: "top",
-            "aria-label": I.Ay.getUserTag(c, { decoration: "never" }),
+            "aria-label": I.Ay.getUserTag(c, {
+                decoration: "never",
+            }),
             asContainer: !0,
             children: (0, r.jsx)(s.DUT, {
                 tag: "span",
@@ -108,6 +118,7 @@ function P(e) {
     }
     return f;
 }
+
 function D(e) {
     let { id: t, guildId: n } = e,
         a = (0, i.bG)([b.A], () => (null != n ? b.A.getRole(n, t) : void 0)),
@@ -136,6 +147,7 @@ function D(e) {
         ],
     });
 }
+
 function x(e) {
     let { id: t } = e,
         n = (0, i.bG)([g.A], () => g.A.getChannel(t)),
@@ -153,8 +165,11 @@ function x(e) {
               iconType: s,
               children: a,
           })
-        : (0, r.jsx)("span", { children: "#" + a });
+        : (0, r.jsx)("span", {
+              children: "#" + a,
+          });
 }
+
 function L(e) {
     let { id: t, itemId: n, guildId: i } = e,
         a = (0, f.Q)(t),
@@ -164,12 +179,14 @@ function L(e) {
         children: [a, null != s && (0, r.jsx)(h.A, {}), s],
     });
 }
+
 function j(e) {
     let { text: t, id: n } = e;
     return (0, r.jsxs)(_.A, {
         children: [t, "(", n, ")"],
     });
 }
+
 function M(e) {
     let { timestamp: t } = e;
     return (0, r.jsx)(p.A, {
@@ -177,6 +194,7 @@ function M(e) {
         className: "R" === t.format ? C.gS : null,
     });
 }
+
 function k(e) {
     var t;
     let { id: n } = e,

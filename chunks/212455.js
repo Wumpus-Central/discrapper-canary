@@ -8,6 +8,7 @@ var r,
     s = n(287809),
     o = n(860689),
     l = n(821124);
+
 function c(e, t, n) {
     return (
         t in e
@@ -26,6 +27,7 @@ let u = null,
     f = !1,
     p = {},
     _ = {};
+
 function h(e) {
     return {
         joinRequestId: e.join_request_id,
@@ -42,9 +44,11 @@ function h(e) {
         interviewChannelId: e.interview_channel_id,
     };
 }
+
 function m(e) {
     delete d[e], u === e && (u = null);
 }
+
 function g(e) {
     let { guildJoinRequests: t } = e;
     (f = !1),
@@ -55,12 +59,14 @@ function g(e) {
             null != t && (d[t] = h(e));
         });
 }
+
 function E(e) {
     let { request: t, guildId: n } = e;
     if (null == t) return void m(n);
     let r = h(t);
     (0, l.NK)(r) ? m(n) : (d[n] = r);
 }
+
 function b(e) {
     let { guildId: t, request: n } = e;
     if (null == n) return;
@@ -69,14 +75,17 @@ function b(e) {
     if (null != i && r.userId !== i.id) return !1;
     (0, l.NK)(r) ? m(t) : (d[t] = r);
 }
+
 function y(e) {
     let { guildId: t } = e;
     m(t);
 }
+
 function O(e) {
     let { guild: t } = e;
     m(t.id);
 }
+
 function A(e) {
     let { invite: t } = e,
         { guild: n, join_request: r } = t;
@@ -93,6 +102,7 @@ function A(e) {
         };
     }
 }
+
 function v(e) {
     let { guilds: t } = e;
     (f = !0),
@@ -107,10 +117,12 @@ function v(e) {
             };
         });
 }
+
 function S(e) {
     let { guildId: t, cooldown: n } = e;
     _[t] = null != n ? n : 0;
 }
+
 function I(e) {
     let { form: t, guildId: n } = e;
     if ((null == t ? void 0 : t.guild) != null) {
@@ -124,14 +136,17 @@ function I(e) {
         };
     }
 }
+
 function T(e) {
     let { guildId: t } = e;
     m(t);
 }
+
 function C(e) {
     let { guildId: t } = e;
     u = t;
 }
+
 function N() {
     u = null;
 }

@@ -1,4 +1,9 @@
-n.d(t, { default: () => x }), n(896048), n(228524), n(321073);
+n.d(t, {
+    default: () => x,
+}),
+    n(896048),
+    n(228524),
+    n(321073);
 var r = n(627968),
     l = n(64700),
     i = n(158954),
@@ -17,6 +22,7 @@ var r = n(627968),
     A = n(652215),
     y = n(985018),
     O = n(695244);
+
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,6 +48,7 @@ function j(e) {
     }
     return e;
 }
+
 function v(e, t) {
     if (null == e) return {};
     var n,
@@ -70,13 +77,16 @@ function v(e, t) {
             (r = n[l]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
     return i;
 }
+
 function x(e) {
     let { channelId: t } = e,
         n = v(e, ["channelId"]),
         i = (0, a.bG)([d.A], () => d.A.getChannel(t), [t]),
         s = (0, a.bG)([f.A], () => f.A.getGuild(null == i ? void 0 : i.getGuildId()));
     return (l.useEffect(() => {
-        p.default.track(A.HAw.OPEN_MODAL, { type: "Grant Channel Access" });
+        p.default.track(A.HAw.OPEN_MODAL, {
+            type: "Grant Channel Access",
+        });
     }, []),
     null == i || null == s)
         ? null
@@ -91,6 +101,7 @@ function x(e) {
               ),
           );
 }
+
 function E(e) {
     var t, n;
     let { guild: a, channel: d, onClose: f, newChannel: p, inSettings: A } = e,
@@ -171,7 +182,9 @@ function E(e) {
                                     variant: "text-sm/normal",
                                     children: y.intl.string(y.t.f7VbhF),
                                 }),
-                            (0, r.jsx)(b.A.SearchBox, { placeholderText: y.intl.string(y.t.iezLLn) }),
+                            (0, r.jsx)(b.A.SearchBox, {
+                                placeholderText: y.intl.string(y.t.iezLLn),
+                            }),
                             (0, r.jsx)(s.Text, {
                                 className: O.W$,
                                 variant: "text-xs/normal",

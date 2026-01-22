@@ -1,1 +1,3 @@
-t.exports = { L: "e68ed9069fe67afa" };
+t.exports = {
+    L: "e68ed9069fe67afa",
+};

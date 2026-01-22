@@ -1,1 +1,3 @@
-e.exports = { sp: "_9cded61be31722d4" };
+e.exports = {
+    sp: "_9cded61be31722d4",
+};

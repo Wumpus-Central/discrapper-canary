@@ -13,6 +13,7 @@ var r = n(627968),
     u = n(397927),
     d = n(985018),
     f = n(414834);
+
 function p(e, t, n) {
     return (
         t in e
@@ -26,6 +27,7 @@ function p(e, t, n) {
         e
     );
 }
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,6 +44,7 @@ function _(e) {
     }
     return e;
 }
+
 function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -54,6 +57,7 @@ function h(e, t) {
     }
     return n;
 }
+
 function m(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -65,6 +69,7 @@ function m(e, t) {
         e
     );
 }
+
 function g(e, t) {
     if (null == e) return {};
     var n,
@@ -81,6 +86,7 @@ function g(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function E(e, t) {
     if (null == e) return {};
     var n,
@@ -97,6 +103,7 @@ let b = "data-listbox-item-id",
         STANDARD: f.wH,
         BRAND: f.hE,
     });
+
 function A(e) {
     return String(e);
 }
@@ -106,6 +113,7 @@ let v = i.createContext({
     setSelected: () => null,
     itemToString: A,
 });
+
 function S(e) {
     let {
             placeholder: t,
@@ -153,7 +161,9 @@ function S(e) {
                 new Promise((e) => {
                     let t = U.current;
                     if (null == t) return e();
-                    t.scrollToTop({ callback: () => requestAnimationFrame(() => e()) });
+                    t.scrollToTop({
+                        callback: () => requestAnimationFrame(() => e()),
+                    });
                 }),
             [],
         ),
@@ -162,7 +172,9 @@ function S(e) {
                 new Promise((e) => {
                     let t = U.current;
                     if (null == t) return e();
-                    t.scrollToTop({ callback: () => requestAnimationFrame(() => e()) });
+                    t.scrollToTop({
+                        callback: () => requestAnimationFrame(() => e()),
+                    });
                 }),
             [],
         ),
@@ -170,7 +182,11 @@ function S(e) {
             M(t);
             let n = document.querySelector(e),
                 r = U.current;
-            null != r && null != n && r.scrollIntoViewNode({ node: n });
+            null != r &&
+                null != n &&
+                r.scrollIntoViewNode({
+                    node: n,
+                });
         }, []),
         K = (0, o.Ay)({
             id: B,
@@ -241,7 +257,9 @@ function S(e) {
                                           children: (0, r.jsx)(
                                               u.OZj,
                                               m(_({}, o), {
-                                                  style: { maxHeight: T * (y + 6) },
+                                                  style: {
+                                                      maxHeight: T * (y + 6),
+                                                  },
                                                   "aria-multiselectable": S,
                                                   id: k,
                                                   ref: U,
@@ -265,6 +283,7 @@ function S(e) {
     });
 }
 let I = i.createContext(null);
+
 function T(e) {
     var t;
     let { value: n, children: a, disabled: o = !1, selectedColor: c = O.STANDARD } = e,
@@ -324,7 +343,9 @@ function T(e) {
             a = i.useContext(I);
         return (0, r.jsx)("span", {
             className: f.pp,
-            children: (0, r.jsx)(u.P7L, { checked: null != t ? t : null != a && n.has(a) }),
+            children: (0, r.jsx)(u.P7L, {
+                checked: null != t ? t : null != a && n.has(a),
+            }),
         });
     }),
     (T.Checkmark = function () {

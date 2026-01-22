@@ -1,8 +1,12 @@
-n.d(t, { A: () => p }), n(896048);
+n.d(t, {
+    A: () => p,
+}),
+    n(896048);
 var r = n(284009),
     i = n.n(r),
     a = n(155718),
     s = n(985018);
+
 function o(e) {
     return null == e ? 0 : e.type === a.I5.STRING_SELECT ? e.values.length : e.selectedOptions.length;
 }
@@ -14,9 +18,13 @@ let l = (e, t, n) => {
                 ? s.intl.string(s.t.eJEUvD)
                 : null
             : l < r
-              ? s.intl.formatToPlainString(s.t.Jmwzdx, { count: r })
+              ? s.intl.formatToPlainString(s.t.Jmwzdx, {
+                    count: r,
+                })
               : l > i
-                ? s.intl.formatToPlainString(s.t.LDvfRP, { count: i })
+                ? s.intl.formatToPlainString(s.t.LDvfRP, {
+                      count: i,
+                  })
                 : null;
     },
     c = (e, t) => {
@@ -41,9 +49,13 @@ let l = (e, t, n) => {
                 ? s.intl.string(s.t.eJEUvD)
                 : null
             : o < r
-              ? s.intl.formatToPlainString(s.t.pmAt62, { minValues: r })
+              ? s.intl.formatToPlainString(s.t.pmAt62, {
+                    minValues: r,
+                })
               : o > i
-                ? s.intl.formatToPlainString(s.t.dy6viJ, { maxValues: i })
+                ? s.intl.formatToPlainString(s.t.dy6viJ, {
+                      maxValues: i,
+                  })
                 : null;
     },
     d = (e, t) => {
@@ -59,11 +71,16 @@ let l = (e, t, n) => {
                 ? s.intl.string(s.t.eJEUvD)
                 : null
             : o < r
-              ? s.intl.formatToPlainString(s.t.Jmwzdx, { count: r })
+              ? s.intl.formatToPlainString(s.t.Jmwzdx, {
+                    count: r,
+                })
               : o > i
-                ? s.intl.formatToPlainString(s.t.LDvfRP, { count: i })
+                ? s.intl.formatToPlainString(s.t.LDvfRP, {
+                      count: i,
+                  })
                 : null;
     };
+
 function p(e, t, n) {
     switch ((null != t && i()(t.type === e.type, "component type matches state"), e.type)) {
         case a.I5.BUTTON:

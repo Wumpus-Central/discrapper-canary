@@ -1,4 +1,7 @@
-n.d(t, { A: () => m }), n(896048);
+n.d(t, {
+    A: () => m,
+}),
+    n(896048);
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -9,11 +12,13 @@ var i = n(503698),
     c = n(496431),
     u = n(985018),
     d = n(338422);
-let f = 1000;
+let f = 1e3;
+
 function p(e) {
     let t = e.toString();
     return 1 === t.length ? ["0", t[0]] : [t[0], t[1]];
 }
+
 function _(e) {
     switch (e) {
         case "days":
@@ -28,6 +33,7 @@ function _(e) {
             return "";
     }
 }
+
 function h(e, t) {
     let [n, i] = p(e.unitValue);
     return (0, r.jsxs)(r.Fragment, {

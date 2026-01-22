@@ -1,4 +1,6 @@
-n.d(t, { Z: () => u });
+n.d(t, {
+    Z: () => u,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -7,6 +9,7 @@ var i = n(397927),
     o = n(937008),
     l = n(985018),
     c = n(389118);
+
 function u(e) {
     let { giftMessage: t = l.intl.string(l.t["DrgnS+"]) } = e,
         { isGift: n, giftRecipient: u } = (0, o.Pv)();

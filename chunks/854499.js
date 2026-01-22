@@ -1,4 +1,6 @@
-n.d(t, { H: () => d });
+n.d(t, {
+    H: () => d,
+});
 var r = n(8321),
     i = n(114099),
     a = n(297987),
@@ -7,6 +9,7 @@ var r = n(8321),
     l = n(803082),
     c = n(64700);
 let u = 500;
+
 function d(e) {
     let {
             isDisabled: t,
@@ -30,7 +33,11 @@ function d(e) {
                                 type: "longpressstart",
                             }),
                         (h.current = setTimeout(() => {
-                            e.target.dispatchEvent(new PointerEvent("pointercancel", { bubbles: !0 })),
+                            e.target.dispatchEvent(
+                                new PointerEvent("pointercancel", {
+                                    bubbles: !0,
+                                }),
+                            ),
                                 (0, a.TW)(e.target).activeElement !== e.target && (0, s.e)(e.target),
                                 f &&
                                     f({
@@ -44,7 +51,9 @@ function d(e) {
                     let t = (e) => {
                         e.preventDefault();
                     };
-                    m(e.target, "contextmenu", t, { once: !0 }),
+                    m(e.target, "contextmenu", t, {
+                        once: !0,
+                    }),
                         m(
                             window,
                             "pointerup",
@@ -53,7 +62,9 @@ function d(e) {
                                     g(e.target, "contextmenu", t);
                                 }, 30);
                             },
-                            { once: !0 },
+                            {
+                                once: !0,
+                            },
                         );
                 }
             },
@@ -68,5 +79,7 @@ function d(e) {
             },
         }),
         b = (0, o.I)(f && !t ? _ : void 0);
-    return { longPressProps: (0, l.v)(E, b) };
+    return {
+        longPressProps: (0, l.v)(E, b),
+    };
 }

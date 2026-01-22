@@ -1,4 +1,8 @@
-n.d(t, { A: () => d }), n(134528), n(947204);
+n.d(t, {
+    A: () => d,
+}),
+    n(134528),
+    n(947204);
 var r = n(627968);
 n(64700);
 var l = n(503698),
@@ -13,10 +17,14 @@ let d = function (e) {
         p = (0, o.aC)(e.quest),
         { percentComplete: m, completedRatioDisplay: f } = (0, o.O9)(l);
     return !d && p.length > 0
-        ? (0, r.jsx)(u.A, { children: p.at(0) })
+        ? (0, r.jsx)(u.A, {
+              children: p.at(0),
+          })
         : (0, r.jsxs)("div", {
               className: i()(c.iE, t),
-              style: { color: n.css },
+              style: {
+                  color: n.css,
+              },
               children: [
                   (0, r.jsxs)("div", {
                       className: c.O,
@@ -29,7 +37,9 @@ let d = function (e) {
                           }),
                           (0, r.jsx)("div", {
                               className: c.Cj,
-                              style: { width: "".concat(100 - m, "%") },
+                              style: {
+                                  width: "".concat(100 - m, "%"),
+                              },
                           }),
                       ],
                   }),
@@ -39,7 +49,9 @@ let d = function (e) {
                       "aria-valuenow": m,
                       children: (0, r.jsx)("div", {
                           className: c.SX,
-                          style: { width: "".concat(m, "%") },
+                          style: {
+                              width: "".concat(m, "%"),
+                          },
                       }),
                   }),
                   p.length > 0 &&

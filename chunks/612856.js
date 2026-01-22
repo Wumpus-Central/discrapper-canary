@@ -1,4 +1,6 @@
-t.d(l, { default: () => o });
+t.d(l, {
+    default: () => o,
+});
 var i = t(627968);
 t(64700);
 var e = t(397927),
@@ -6,6 +8,7 @@ var e = t(397927),
     r = t(50268),
     s = t(687279),
     c = t(985018);
+
 function o(n) {
     let { channel: l, channelId: t, originalLink: o, messageId: d, onSelect: u } = n,
         h = (0, s.A)(l, o, d),
@@ -19,8 +22,20 @@ function o(n) {
         onSelect: u,
         "aria-label": c.intl.string(c.t.feGACE),
         children: [
-            (0, i.jsx)(e.rXV, { children: h }, "channel-mention-actions"),
-            (0, i.jsx)(e.rXV, { children: p }, "developer-actions"),
+            (0, i.jsx)(
+                e.rXV,
+                {
+                    children: h,
+                },
+                "channel-mention-actions",
+            ),
+            (0, i.jsx)(
+                e.rXV,
+                {
+                    children: p,
+                },
+                "developer-actions",
+            ),
         ],
     });
 }

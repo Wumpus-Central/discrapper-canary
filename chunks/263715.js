@@ -10,6 +10,7 @@ n.d(t, {
 var r = n(284009),
     i = n.n(r),
     a = n(735438);
+
 function s(e, t, n) {
     return (
         t in e
@@ -23,6 +24,7 @@ function s(e, t, n) {
         e
     );
 }
+
 function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -39,6 +41,7 @@ function o(e) {
     }
     return e;
 }
+
 function l(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -51,6 +54,7 @@ function l(e, t) {
     }
     return n;
 }
+
 function c(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -65,8 +69,9 @@ function c(e, t) {
 var u = (function (e) {
     return (e.ROOT = "root"), (e.FOLDER = "folder"), (e.GUILD = "guild"), e;
 })({});
+
 function d() {
-    return Math.floor(4294967296 * Math.random());
+    return Math.floor(0x100000000 * Math.random());
 }
 class f {
     getSnapshot() {
@@ -224,6 +229,7 @@ class f {
             (this.version = 0);
     }
 }
+
 function p(e, t) {
     return {
         type: "guild",
@@ -233,6 +239,7 @@ function p(e, t) {
         unavailable: !1,
     };
 }
+
 function _(e, t, n) {
     var r, i, a;
     return {

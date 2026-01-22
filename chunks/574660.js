@@ -18,6 +18,7 @@ var r = n(64700),
     m = n(652215),
     g = n(488995),
     E = n(985018);
+
 function b(e) {
     let { isDiscoverable: t, customInstallUrl: n, installParams: r, integrationTypesConfig: s } = e,
         o = (0, _.Ie)({
@@ -46,6 +47,7 @@ function b(e) {
         selectedGuildId: l,
     };
 }
+
 function y(e, t) {
     let {
         canViewApp: n,
@@ -65,7 +67,11 @@ function y(e, t) {
                           : (0, o.transitionToGlobalDiscovery)({
                                 tab: g.GlobalDiscoveryTab.APPS,
                                 applicationId: e.id,
-                                newSessionState: { entrypoint: { name: l.sW.APPLICATION_MESSAGE_EMBED } },
+                                newSessionState: {
+                                    entrypoint: {
+                                        name: l.sW.APPLICATION_MESSAGE_EMBED,
+                                    },
+                                },
                             });
                   }
                 : a
@@ -84,6 +90,7 @@ function y(e, t) {
         [e.id, i, n, c, u, d, a, t, f],
     );
 }
+
 function O(e) {
     let { canViewApp: t, isInstallable: n } = b(e),
         i = y(e);

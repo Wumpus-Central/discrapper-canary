@@ -1,4 +1,6 @@
-n.d(t, { default: () => A });
+n.d(t, {
+    default: () => A,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -67,7 +69,12 @@ let A = (0, o.A)(
                                                       });
                                               }
                                               return e;
-                                          })({ channelId: t.id }, n),
+                                          })(
+                                              {
+                                                  channelId: t.id,
+                                              },
+                                              n,
+                                          ),
                                       );
                               }),
                       })
@@ -93,16 +100,24 @@ let A = (0, o.A)(
                                   }),
                               ],
                           }),
-                          (0, r.jsx)(i.rXV, { children: w }),
-                          (0, r.jsx)(i.rXV, { children: m }),
+                          (0, r.jsx)(i.rXV, {
+                              children: w,
+                          }),
+                          (0, r.jsx)(i.rXV, {
+                              children: m,
+                          }),
                           (0, r.jsxs)(i.rXV, {
                               children: [D, v],
                           }),
-                          (0, r.jsx)(i.rXV, { children: P }),
+                          (0, r.jsx)(i.rXV, {
+                              children: P,
+                          }),
                       ],
                   });
         },
-        { object: h.ZSU.CONTEXT_MENU },
+        {
+            object: h.ZSU.CONTEXT_MENU,
+        },
     ),
     [s.A.CONTEXT_MENU, s.A.GROUP_DM_MENU],
 );

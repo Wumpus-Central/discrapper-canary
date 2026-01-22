@@ -293,7 +293,17 @@ e.exports = function (e) {
         },
         s = {
             className: "number",
-            variants: [{ begin: "\\b(0[bB][01]+)" }, { begin: "\\b(0[oO][0-7]+)" }, { begin: e.C_NUMBER_RE }],
+            variants: [
+                {
+                    begin: "\\b(0[bB][01]+)",
+                },
+                {
+                    begin: "\\b(0[oO][0-7]+)",
+                },
+                {
+                    begin: e.C_NUMBER_RE,
+                },
+            ],
             relevance: 0,
         },
         o = {
@@ -357,8 +367,12 @@ e.exports = function (e) {
                             {
                                 className: "params",
                                 variants: [
-                                    { begin: n },
-                                    { begin: /\(\s*\)/ },
+                                    {
+                                        begin: n,
+                                    },
+                                    {
+                                        begin: /\(\s*\)/,
+                                    },
                                     {
                                         begin: /\(/,
                                         end: /\)/,
@@ -394,7 +408,9 @@ e.exports = function (e) {
                 ],
                 illegal: /\[|%/,
             },
-            { begin: /\$[(.]/ },
+            {
+                begin: /\$[(.]/,
+            },
         ],
         illegal: /#(?!!)/,
     };

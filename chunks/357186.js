@@ -1,4 +1,6 @@
-n.d(t, { c: () => p });
+n.d(t, {
+    c: () => p,
+});
 var r = n(379197),
     i = n(554146),
     a = n(933681),
@@ -9,6 +11,7 @@ var r = n(379197),
     u = n(514190),
     d = n(173834),
     f = n(188275);
+
 function p(e) {
     switch (e) {
         case i.M.COLLECTIBLES_SHOP_ENTRY_MARKETING:
@@ -33,6 +36,11 @@ function p(e) {
         case i.M.GAME_SHOP_ANNOUNCEMENT_MODAL:
             return f.Lo;
         default:
-            return (0, a.dr)(e, { andFail: !1 }), 0;
+            return (
+                (0, a.dr)(e, {
+                    andFail: !1,
+                }),
+                0
+            );
     }
 }

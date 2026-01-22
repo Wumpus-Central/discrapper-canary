@@ -1,9 +1,12 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(73153),
     i = n(58149),
     a = n(954571),
     s = n(203982),
     o = n(652215);
+
 function l(e, t, n) {
     return (
         t in e
@@ -17,6 +20,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,7 +39,9 @@ function c(e) {
 }
 let u = {
     rebuildRTCActiveChannels() {
-        r.h.dispatch({ type: "CHANNEL_RTC_ACTIVE_CHANNELS" });
+        r.h.dispatch({
+            type: "CHANNEL_RTC_ACTIVE_CHANNELS",
+        });
     },
     selectParticipant(e, t) {
         r.h.dispatch({
@@ -60,7 +66,15 @@ let u = {
     },
     updateLayout(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.BRT.APP;
-        a.default.track(o.HAw.VIDEO_LAYOUT_TOGGLED, c({ video_layout: t }, (0, i.QS)(e))),
+        a.default.track(
+            o.HAw.VIDEO_LAYOUT_TOGGLED,
+            c(
+                {
+                    video_layout: t,
+                },
+                (0, i.QS)(e),
+            ),
+        ),
             r.h.dispatch({
                 type: "CHANNEL_RTC_UPDATE_LAYOUT",
                 channelId: e,
@@ -111,7 +125,9 @@ let u = {
         }),
             t
                 ? setTimeout(() => {
-                      s._.dispatch(o.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: e });
+                      s._.dispatch(o.jej.FOCUS_CHANNEL_TEXT_AREA, {
+                          channelId: e,
+                      });
                   }, 0)
                 : s._.dispatch(o.jej.FOCUS_CHAT_BUTTON);
     },

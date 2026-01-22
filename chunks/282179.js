@@ -1,4 +1,6 @@
-n.d(t, { H: () => f });
+n.d(t, {
+    H: () => f,
+});
 var r = n(159744),
     i = n(587993),
     a = n(745768),
@@ -25,9 +27,15 @@ class d {
         let e = new d();
         return (
             (e._breadcrumbs = [...this._breadcrumbs]),
-            (e._tags = { ...this._tags }),
-            (e._extra = { ...this._extra }),
-            (e._contexts = { ...this._contexts }),
+            (e._tags = {
+                ...this._tags,
+            }),
+            (e._extra = {
+                ...this._extra,
+            }),
+            (e._contexts = {
+                ...this._contexts,
+            }),
             (e._user = this._user),
             (e._level = this._level),
             (e._session = this._session),
@@ -36,8 +44,12 @@ class d {
             (e._eventProcessors = [...this._eventProcessors]),
             (e._requestSession = this._requestSession),
             (e._attachments = [...this._attachments]),
-            (e._sdkProcessingMetadata = { ...this._sdkProcessingMetadata }),
-            (e._propagationContext = { ...this._propagationContext }),
+            (e._sdkProcessingMetadata = {
+                ...this._sdkProcessingMetadata,
+            }),
+            (e._propagationContext = {
+                ...this._propagationContext,
+            }),
             (e._client = this._client),
             (e._lastEventId = this._lastEventId),
             (0, c.r)(e, (0, c.f)(this)),
@@ -70,7 +82,10 @@ class d {
                 ip_address: void 0,
                 username: void 0,
             }),
-            this._session && (0, l.qO)(this._session, { user: e }),
+            this._session &&
+                (0, l.qO)(this._session, {
+                    user: e,
+                }),
             this._notifyScopeListeners(),
             this
         );

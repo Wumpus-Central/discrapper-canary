@@ -3,8 +3,12 @@ e.exports = function (e) {
             className: "string",
             contains: [e.BACKSLASH_ESCAPE],
             variants: [
-                e.inherit(e.APOS_STRING_MODE, { illegal: null }),
-                e.inherit(e.QUOTE_STRING_MODE, { illegal: null }),
+                e.inherit(e.APOS_STRING_MODE, {
+                    illegal: null,
+                }),
+                e.inherit(e.QUOTE_STRING_MODE, {
+                    illegal: null,
+                }),
             ],
         },
         n = e.UNDERSCORE_TITLE_MODE,
@@ -33,7 +37,9 @@ e.exports = function (e) {
                 end: /^\w+;/,
                 contains: [e.BACKSLASH_ESCAPE],
             },
-            { begin: /(::|->)+[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*/ },
+            {
+                begin: /(::|->)+[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*/,
+            },
             {
                 className: "function",
                 beginKeywords: "function fn",
@@ -57,7 +63,12 @@ e.exports = function (e) {
                 end: /\{/,
                 excludeEnd: !0,
                 illegal: /[:($"]/,
-                contains: [{ beginKeywords: "extends implements" }, n],
+                contains: [
+                    {
+                        beginKeywords: "extends implements",
+                    },
+                    n,
+                ],
             },
             {
                 beginKeywords: "namespace",
@@ -70,7 +81,9 @@ e.exports = function (e) {
                 end: /;/,
                 contains: [n],
             },
-            { begin: /=>/ },
+            {
+                begin: /=>/,
+            },
             t,
             r,
         ],

@@ -1,4 +1,7 @@
-n.d(t, { A: () => q }), n(896048);
+n.d(t, {
+    A: () => q,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -27,6 +30,7 @@ var r = n(627968),
     N = n(652215),
     R = n(985018),
     w = n(72011);
+
 function P(e, t, n) {
     return (
         t in e
@@ -40,6 +44,7 @@ function P(e, t, n) {
         e
     );
 }
+
 function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -56,6 +61,7 @@ function D(e) {
     }
     return e;
 }
+
 function x(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -68,6 +74,7 @@ function x(e, t) {
     }
     return n;
 }
+
 function L(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -86,6 +93,7 @@ let j = 10,
     G = 5,
     V = 8,
     F = 10;
+
 function B(e) {
     var t;
     let n = {
@@ -184,7 +192,9 @@ let H = (e) => {
                                     ),
                                 );
                         },
-                        { onCloseCallback: p },
+                        {
+                            onCloseCallback: p,
+                        },
                     ),
                     u());
             },
@@ -267,6 +277,7 @@ let H = (e) => {
                 }),
             ],
         });
+
 function K(e) {
     let {
         quest: t,
@@ -366,7 +377,15 @@ function K(e) {
                 }),
                 (0, r.jsx)("div", {
                     className: w.LA,
-                    children: s.slice(0, e).map((e) => (0, r.jsx)("div", { className: w.Vj }, e)),
+                    children: s.slice(0, e).map((e) =>
+                        (0, r.jsx)(
+                            "div",
+                            {
+                                className: w.Vj,
+                            },
+                            e,
+                        ),
+                    ),
                 }),
             ],
         });
@@ -399,12 +418,18 @@ function K(e) {
                                   e.applicationId,
                               ),
                           ),
-                          Array.from({ length: I }, (e, t) => (0, r.jsx)(W, {}, "placeholder-".concat(t))),
+                          Array.from(
+                              {
+                                  length: I,
+                              },
+                              (e, t) => (0, r.jsx)(W, {}, "placeholder-".concat(t)),
+                          ),
                       ],
                   }),
               ],
           });
 }
+
 function z(e) {
     let {
             targetElementRef: t,
@@ -474,6 +499,12 @@ let q = function (e) {
               questOrQuests: e.quest,
               questContent: v.uF.SPONSORED_QUEST_SHEET,
               sourceQuestContent: e.sourceQuestContent,
-              children: (t) => (0, r.jsx)(z, L(D({}, e), { impressionRef: t })),
+              children: (t) =>
+                  (0, r.jsx)(
+                      z,
+                      L(D({}, e), {
+                          impressionRef: t,
+                      }),
+                  ),
           });
 };

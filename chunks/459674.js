@@ -4,6 +4,7 @@ var r = n(954055),
     s = n(812415),
     o = n(423856),
     l = n(291691);
+
 function c(e) {
     var t = r.removeRange(e.getCurrentContent(), e.getSelection(), "forward");
     return i.push(e, t, "remove-range");

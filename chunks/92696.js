@@ -1,8 +1,11 @@
-r.d(t, { default: () => l });
+r.d(t, {
+    default: () => l,
+});
 var n = r(627968);
 r(64700);
 var o = r(158954),
     c = r(985018);
+
 function l(e) {
     var t, r;
     let { ruleName: l, keyword: i } = e,

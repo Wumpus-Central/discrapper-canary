@@ -1,6 +1,9 @@
-n.d(e, { A: () => r });
+n.d(e, {
+    A: () => r,
+});
 var i = n(502075),
     l = n(985018);
+
 function r(t) {
     let { isEndStream: e } = t;
     return [

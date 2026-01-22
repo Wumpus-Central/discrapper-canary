@@ -1,4 +1,7 @@
-n.d(t, { A: () => B }), n(896048);
+n.d(t, {
+    A: () => B,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -30,6 +33,7 @@ var r = n(627968),
     P = n(985018),
     w = n(688661),
     R = n(63135);
+
 function D(e, t, n) {
     return (
         t in e
@@ -43,6 +47,7 @@ function D(e, t, n) {
         e
     );
 }
+
 function G(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -59,6 +64,7 @@ function G(e) {
     }
     return e;
 }
+
 function L(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -77,6 +83,7 @@ function L(e, t) {
         e
     );
 }
+
 function k(e, t) {
     if (null == e) return {};
     var n,
@@ -114,87 +121,107 @@ let M = i.forwardRef((e, t) => {
         ? null
         : (0, r.jsx)(
               I.A,
-              L(G({ ref: d }, o), {
-                  guildId: a,
-                  guild: c,
-                  onHeaderClick: () => {
-                      let { log: e } = o;
-                      null == s || s(e);
-                  },
-                  onUserContextMenu: (e) => {
-                      let { log: t } = o,
-                          { user: i } = t;
-                      null != i &&
-                          null != a &&
-                          (0, g.L3)(e, async () => {
-                              let { default: e } = await n.e("76926").then(n.bind(n, 422189));
-                              return (t) =>
-                                  (0, r.jsx)(
-                                      e,
-                                      L(G({}, t), {
-                                          guildId: a,
-                                          user: i,
-                                      }),
-                                  );
-                          });
-                  },
-                  onChannelContextMenu: (e) => {
-                      let { log: t } = o,
-                          i = O.A.getGuild(a);
-                      null != t.options.channel &&
-                          "string" != typeof t.options.channel &&
+              L(
+                  G(
+                      {
+                          ref: d,
+                      },
+                      o,
+                  ),
+                  {
+                      guildId: a,
+                      guild: c,
+                      onHeaderClick: () => {
+                          let { log: e } = o;
+                          null == s || s(e);
+                      },
+                      onUserContextMenu: (e) => {
+                          let { log: t } = o,
+                              { user: i } = t;
                           null != i &&
-                          (0, g.L3)(e, async () => {
-                              let { default: e } = await n.e("23440").then(n.bind(n, 194195));
-                              return (n) =>
-                                  null != t.options.channel
-                                      ? (0, r.jsx)(e, L(G({}, n), { channel: t.options.channel }))
-                                      : null;
-                          });
-                  },
-                  onTargetContextMenu: (e) => {
-                      let { log: t } = o;
-                      switch (t.targetType) {
-                          case C.GaG.CHANNEL:
-                          case C.GaG.CHANNEL_OVERWRITE:
-                              let i = j.A.getChannel(t.targetId),
-                                  l = O.A.getGuild(a);
-                              if (null != i && null != l)
-                                  return (0, g.L3)(e, async () => {
-                                      let { default: e } = await n.e("23440").then(n.bind(n, 194195));
-                                      return (t) => (0, r.jsx)(e, L(G({}, t), { channel: i }));
-                                  });
-                              return (0, g.L3)(e, async () => {
-                                  let { default: e } = await n.e("15687").then(n.bind(n, 646938));
-                                  return (n) =>
+                              null != a &&
+                              (0, g.L3)(e, async () => {
+                                  let { default: e } = await n.e("76926").then(n.bind(n, 422189));
+                                  return (t) =>
                                       (0, r.jsx)(
                                           e,
-                                          L(G({}, n), {
-                                              id: t.targetId,
-                                              label: P.intl.string(P.t.rCazna),
+                                          L(G({}, t), {
+                                              guildId: a,
+                                              user: i,
                                           }),
                                       );
                               });
-                          case C.GaG.USER:
-                              let s = v.default.getUser(t.targetId);
-                              if (null != s && null != a)
+                      },
+                      onChannelContextMenu: (e) => {
+                          let { log: t } = o,
+                              i = O.A.getGuild(a);
+                          null != t.options.channel &&
+                              "string" != typeof t.options.channel &&
+                              null != i &&
+                              (0, g.L3)(e, async () => {
+                                  let { default: e } = await n.e("23440").then(n.bind(n, 194195));
+                                  return (n) =>
+                                      null != t.options.channel
+                                          ? (0, r.jsx)(
+                                                e,
+                                                L(G({}, n), {
+                                                    channel: t.options.channel,
+                                                }),
+                                            )
+                                          : null;
+                              });
+                      },
+                      onTargetContextMenu: (e) => {
+                          let { log: t } = o;
+                          switch (t.targetType) {
+                              case C.GaG.CHANNEL:
+                              case C.GaG.CHANNEL_OVERWRITE:
+                                  let i = j.A.getChannel(t.targetId),
+                                      l = O.A.getGuild(a);
+                                  if (null != i && null != l)
+                                      return (0, g.L3)(e, async () => {
+                                          let { default: e } = await n.e("23440").then(n.bind(n, 194195));
+                                          return (t) =>
+                                              (0, r.jsx)(
+                                                  e,
+                                                  L(G({}, t), {
+                                                      channel: i,
+                                                  }),
+                                              );
+                                      });
                                   return (0, g.L3)(e, async () => {
-                                      let { default: e } = await n.e("76926").then(n.bind(n, 422189));
-                                      return (t) =>
+                                      let { default: e } = await n.e("15687").then(n.bind(n, 646938));
+                                      return (n) =>
                                           (0, r.jsx)(
                                               e,
-                                              L(G({}, t), {
-                                                  guildId: a,
-                                                  user: s,
+                                              L(G({}, n), {
+                                                  id: t.targetId,
+                                                  label: P.intl.string(P.t.rCazna),
                                               }),
                                           );
                                   });
-                      }
-                      return null;
+                              case C.GaG.USER:
+                                  let s = v.default.getUser(t.targetId);
+                                  if (null != s && null != a)
+                                      return (0, g.L3)(e, async () => {
+                                          let { default: e } = await n.e("76926").then(n.bind(n, 422189));
+                                          return (t) =>
+                                              (0, r.jsx)(
+                                                  e,
+                                                  L(G({}, t), {
+                                                      guildId: a,
+                                                      user: s,
+                                                  }),
+                                              );
+                                      });
+                          }
+                          return null;
+                      },
                   },
-              }),
+              ),
           );
 });
+
 function U(e) {
     let {
             logs: t,
@@ -221,30 +248,38 @@ function U(e) {
                     a = k(e, ["ref"]);
                 return (0, r.jsx)(
                     "div",
-                    L(G({ ref: i }, a), {
-                        className: w.p_,
-                        children: t.map((e) => {
-                            let t = s === e.id,
-                                i = c === e.id,
-                                a = t ? d : i ? u : null;
-                            return (0, r.jsx)(
-                                M,
-                                {
-                                    guildId: n,
-                                    guild: l,
-                                    ref: (e) => {
-                                        null == a || a(e);
+                    L(
+                        G(
+                            {
+                                ref: i,
+                            },
+                            a,
+                        ),
+                        {
+                            className: w.p_,
+                            children: t.map((e) => {
+                                let t = s === e.id,
+                                    i = c === e.id,
+                                    a = t ? d : i ? u : null;
+                                return (0, r.jsx)(
+                                    M,
+                                    {
+                                        guildId: n,
+                                        guild: l,
+                                        ref: (e) => {
+                                            null == a || a(e);
+                                        },
+                                        className: w.nM,
+                                        onHeaderClick: f,
+                                        onContentClick: g,
+                                        log: e,
+                                        expanded: t,
                                     },
-                                    className: w.nM,
-                                    onHeaderClick: f,
-                                    onContentClick: g,
-                                    log: e,
-                                    expanded: t,
-                                },
-                                e.id,
-                            );
-                        }),
-                    }),
+                                    e.id,
+                                );
+                            }),
+                        },
+                    ),
                 );
             },
         }),
@@ -279,7 +314,9 @@ class F extends i.PureComponent {
             return;
         let r = n.expanded.height - t.lastExpanded.height,
             i = e.getScrollerState().scrollTop - r;
-        e.scrollTo({ to: i });
+        e.scrollTo({
+            to: i,
+        });
     }
     getRects() {
         let e = {
@@ -309,12 +346,16 @@ class F extends i.PureComponent {
                         this.renderHeaderDropdowns(),
                     ],
                 }),
-                (0, r.jsx)(u.cGx, { className: w.yF }),
+                (0, r.jsx)(u.cGx, {
+                    className: w.yF,
+                }),
             ],
         });
     }
     renderSpinner() {
-        return (0, r.jsx)(u.y$y, { type: u.y$y.Type.SPINNING_CIRCLE });
+        return (0, r.jsx)(u.y$y, {
+            type: u.y$y.Type.SPINNING_CIRCLE,
+        });
     }
     renderContent() {
         let { expandedId: e, lastExpandedId: t } = this.state,
@@ -345,7 +386,9 @@ class F extends i.PureComponent {
                     }),
                     (0, r.jsx)(u.SGT, {
                         note: e,
-                        style: { maxWidth: 300 },
+                        style: {
+                            maxWidth: 300,
+                        },
                         children: t,
                     }),
                 ],
@@ -437,7 +480,9 @@ class F extends i.PureComponent {
                     return {
                         id: t.id,
                         value: t.id,
-                        label: E.Ay.getUserTag(t, { mode: "username" }),
+                        label: E.Ay.getUserTag(t, {
+                            mode: "username",
+                        }),
                         leading: (0, r.jsx)(u.euF, {
                             size: u._3J.SIZE_24,
                             src: t.getAvatarURL(this.props.guildId, 32),
@@ -573,10 +618,14 @@ class F extends i.PureComponent {
                 (0, f.jS)(this.props.guildId);
             }),
             D(this, "handleActionFilterQueryChange", (e) => {
-                this.setState({ actionFilterQuery: e });
+                this.setState({
+                    actionFilterQuery: e,
+                });
             }),
             D(this, "handleActionFilterQueryClear", () => {
-                this.setState({ actionFilterQuery: "" });
+                this.setState({
+                    actionFilterQuery: "",
+                });
             }),
             D(this, "handleSetExpandedRef", (e) => {
                 this._expandedRef = e;

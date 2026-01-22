@@ -1,4 +1,6 @@
-n.d(t, { x: () => y });
+n.d(t, {
+    x: () => y,
+});
 var r = n(627968);
 n(64700);
 var i = n(110259),
@@ -72,7 +74,7 @@ let y = (e) => {
                             "" !== S.helpArticleId &&
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
-                                        "\xA0",
+                                        "\xa0",
                                         (0, r.jsx)(u.MzZ, {
                                             className: b.$T,
                                             href: _.A.getArticleURL(S.helpArticleId),

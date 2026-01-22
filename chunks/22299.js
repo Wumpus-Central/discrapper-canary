@@ -14,10 +14,12 @@ var r = n(233957),
     l = n(731692),
     c = n(944490),
     u = n(64700);
+
 function d(e) {
     return e && e.__esModule ? e.default : e;
 }
 let f = new (0, l.B)(d(r.A));
+
 function p() {
     let e = ("u" > typeof navigator && (navigator.language || navigator.userLanguage)) || "en-US";
     try {
@@ -27,6 +29,7 @@ function p() {
     }
     return e;
 }
+
 function _(e, t, n, r, a) {
     let s = null != e && null != n && e.compare(n) > 0,
         o = null != e && null != t && 0 > e.compare(t),
@@ -39,8 +42,20 @@ function _(e, t, n, r, a) {
             d = new (0, c.J)(e, r),
             h = new (0, i.p)(e, g({}, a)),
             m = h.resolvedOptions().timeZone;
-        o && null != t && _.push(d.format("rangeUnderflow", { minValue: h.format(t.toDate(m)) })),
-            s && null != n && _.push(d.format("rangeOverflow", { maxValue: h.format(n.toDate(m)) })),
+        o &&
+            null != t &&
+            _.push(
+                d.format("rangeUnderflow", {
+                    minValue: h.format(t.toDate(m)),
+                }),
+            ),
+            s &&
+                null != n &&
+                _.push(
+                    d.format("rangeOverflow", {
+                        maxValue: h.format(n.toDate(m)),
+                    }),
+                ),
             u && _.push(d.format("unavailableDate"));
     }
     return {
@@ -77,6 +92,7 @@ let h = {
         minute: "2-digit",
         second: "2-digit",
     };
+
 function g(e, t) {
     var n;
     e = {
@@ -101,12 +117,15 @@ function g(e, t) {
         o
     );
 }
+
 function E(e) {
     return e && "hour" in e ? e : new (0, a.gX)();
 }
+
 function b(e, t) {
     return null === e ? null : e ? (0, s.yP)(e, t) : void 0;
 }
+
 function y(e, t, n, r) {
     if (e) return b(e, n);
     let i = (0, s.yP)(
@@ -120,6 +139,7 @@ function y(e, t, n, r) {
     );
     return "year" === t || "month" === t || "day" === t ? (0, s.gw)(i) : r ? i : (0, s.tR)(i);
 }
+
 function O(e, t) {
     let n = e && "timeZone" in e ? e.timeZone : void 0,
         r = e && "minute" in e ? "minute" : "day";

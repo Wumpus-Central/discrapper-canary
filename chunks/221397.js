@@ -67,7 +67,7 @@
         longDateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
-            L: "D/\u200FM/\u200FYYYY",
+            L: "D/‏M/‏YYYY",
             LL: "D MMMM YYYY",
             LLL: "D MMMM YYYY HH:mm",
             LLLL: "dddd D MMMM YYYY HH:mm",
@@ -115,7 +115,7 @@
                 .replace(/\d/g, function (e) {
                     return t[e];
                 })
-                .replace(/,/g, "\u060C");
+                .replace(/,/g, "،");
         },
         week: {
             dow: 6,

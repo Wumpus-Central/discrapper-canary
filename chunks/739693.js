@@ -1,4 +1,7 @@
-n.d(t, { default: () => p }), n(896048);
+n.d(t, {
+    default: () => p,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(158954),
@@ -9,6 +12,7 @@ var r = n(627968),
     u = n(592074),
     d = n(652215),
     f = n(985018);
+
 function p(e) {
     var t, n, p, _;
     let { transitionState: h, onSuccess: m, onClose: g, requirementsUpdated: E } = e,

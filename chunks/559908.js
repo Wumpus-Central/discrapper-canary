@@ -15,6 +15,7 @@ var r,
     f = n(103640),
     p = n(31408),
     _ = n(652215);
+
 function h(e, t, n) {
     return (
         t in e
@@ -28,6 +29,7 @@ function h(e, t, n) {
         e
     );
 }
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -44,6 +46,7 @@ function m(e) {
     }
     return e;
 }
+
 function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -56,6 +59,7 @@ function g(e, t) {
     }
     return n;
 }
+
 function E(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -67,6 +71,7 @@ function E(e, t) {
         e
     );
 }
+
 function b(e, t) {
     if (null == e) return {};
     var n,
@@ -83,6 +88,7 @@ function b(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function y(e, t) {
     if (null == e) return {};
     var n,
@@ -94,7 +100,7 @@ function y(e, t) {
     return i;
 }
 let O = 7,
-    A = 1000,
+    A = 1e3,
     v = new Set(),
     S = new a.J(
         function (e) {
@@ -106,6 +112,7 @@ let O = 7,
             return "".concat(n, "-").concat(t);
         },
     );
+
 function I(e) {
     return null != e && (e.value > 0 || (null == e ? void 0 : e.multiplier) > 1);
 }
@@ -131,6 +138,7 @@ let T = new a.J(
         let { userId: t, channelId: n } = e;
         return "".concat(t, "-").concat(n);
     };
+
 function N(e) {
     var t, n, r, i, a, o;
     let l = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
@@ -161,27 +169,38 @@ function N(e) {
                                         }),
                                     ),
                                     j.emitChange());
-                        } else N(E(m({}, e), { value: e.value - 1 })), j.emitChange();
+                        } else
+                            N(
+                                E(m({}, e), {
+                                    value: e.value - 1,
+                                }),
+                            ),
+                                j.emitChange();
                     }
                 }));
 }
+
 function R(e) {
     T.set(e.messageId, e);
 }
+
 function w(e) {
     let { type: t } = e,
         n = b(e, ["type"]);
     if (!d.A.isEnabled()) return !1;
     N(n);
 }
+
 function P(e) {
     let { comboMessage: t } = e;
     if (!d.A.isEnabled()) return !1;
     R(t);
 }
+
 function D(e, t, n, r) {
     return !(e !== t || null == n || r.has(n)) && (r.add(n), !0);
 }
+
 function x(e) {
     var t, n;
     let {
@@ -206,7 +225,7 @@ function x(e) {
         let e = null != c ? (null != (n = (0, f.U$)(c, p.fZ.LEVEL_4)) ? n : 0.001) : 4 * Math.random();
         return (
             u._.dispatch(_.jej.SHAKE_APP, {
-                duration: 1000,
+                duration: 1e3,
                 intensity: e,
             }),
             !0

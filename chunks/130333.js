@@ -1,13 +1,17 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(403362),
     i = n(743981),
     l = n(985018);
+
 function s(e, t) {
     return l.intl.formatToPlainString(l.t.g79C8T, {
         primaryColor: a(e),
         secondaryColor: a(t),
     });
 }
+
 function a(e) {
     switch (e) {
         case i.xj.HOT_PINK:

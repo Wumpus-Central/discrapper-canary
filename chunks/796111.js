@@ -1,4 +1,8 @@
-n.d(t, { A: () => g }), n(896048), n(938796);
+n.d(t, {
+    A: () => g,
+}),
+    n(896048),
+    n(938796);
 var r = n(665260),
     i = n(562465),
     l = n(10716),
@@ -33,7 +37,12 @@ let g = {
                 h = null == p ? void 0 : p.getGuildId(),
                 g = s.A.getApplication(o);
             if (!(0, r.Lt)(null != (t = null == g ? void 0 : g.flags) ? t : 0, A.gfo.EMBEDDED_FIRST_PARTY))
-                throw new u.A({ errorCode: A.Lw6.INVALID_COMMAND }, "This application cannot access this API");
+                throw new u.A(
+                    {
+                        errorCode: A.Lw6.INVALID_COMMAND,
+                    },
+                    "This application cannot access this API",
+                );
             let m = (0, a.D)(o),
                 b = {
                     activity_application_id: o,
@@ -76,10 +85,18 @@ let g = {
         handler(e) {
             let { socket: t } = e,
                 n = t.application.id;
-            if (null == n) throw new u.A({ errorCode: A.Lw6.INVALID_COMMAND }, "No application.");
+            if (null == n)
+                throw new u.A(
+                    {
+                        errorCode: A.Lw6.INVALID_COMMAND,
+                    },
+                    "No application.",
+                );
             return i.Bo.post({
                 url: A.Rsh.APPLICATION_TICKET(n),
-                body: { test_mode: o.A.inTestModeForApplication(n) || l.A.inDevModeForApplication(n) },
+                body: {
+                    test_mode: o.A.inTestModeForApplication(n) || l.A.inDevModeForApplication(n),
+                },
                 retries: 3,
                 oldFormErrors: !0,
                 rejectWithError: !1,

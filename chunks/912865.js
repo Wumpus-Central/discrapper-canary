@@ -1,4 +1,7 @@
-n.d(t, { A: () => G }), n(65821);
+n.d(t, {
+    A: () => G,
+}),
+    n(65821);
 var r,
     i = n(311907),
     a = n(73153),
@@ -12,6 +15,7 @@ var r,
     p = n(680243),
     _ = n(672396),
     h = n(652215);
+
 function m(e, t, n) {
     return (
         t in e
@@ -25,6 +29,7 @@ function m(e, t, n) {
         e
     );
 }
+
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -41,6 +46,7 @@ function g(e) {
     }
     return e;
 }
+
 function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -53,6 +59,7 @@ function E(e, t) {
     }
     return n;
 }
+
 function b(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -65,14 +72,19 @@ function b(e, t) {
     );
 }
 let y = {};
+
 function O(e) {
     var t, n;
     return null != (t = null == (n = d.default.getTrackedGameByPid(e)) ? void 0 : n.overlayMethod) ? t : null;
 }
+
 function A(e) {
     let t = O(e);
-    y[e] = b(g({}, y[e]), { overlay_method: null != t ? u.Ue[t] : u.Ue[u.Ue.OutOfProcess] });
+    y[e] = b(g({}, y[e]), {
+        overlay_method: null != t ? u.Ue[t] : u.Ue[u.Ue.OutOfProcess],
+    });
 }
+
 function v(e) {
     var t, n;
     if (null != y[e]) return;
@@ -95,19 +107,23 @@ function v(e) {
         host_crash_count: 0,
     };
 }
+
 function S(e) {
     var t;
     return null != (t = y[e]) ? t : {};
 }
+
 function I(e, t) {
     var n, r;
     let i = null == (n = y[e]) ? void 0 : n.error,
         a = null == (r = y[e]) ? void 0 : r.error_description;
     (y[e] = g({}, y[e], t)), null != i && (y[e].error = i), null != a && (y[e].error_description = a);
 }
+
 function T(e) {
     o.default.track(h.HAw.OVERLAY_HOOK_RESULT, S(e));
 }
+
 function C(e, t) {
     e !== l.UNSET_PID &&
         I(e, {
@@ -116,6 +132,7 @@ function C(e, t) {
             error_description: t.stack,
         });
 }
+
 function N(e, t) {
     e !== l.UNSET_PID &&
         I(e, {
@@ -124,9 +141,11 @@ function N(e, t) {
             error_description: t.stack,
         });
 }
+
 function R() {
     y = {};
 }
+
 function w(e, t) {
     let n = s.Ay.getGameOrTransformedSubgameForPID(e);
     return {
@@ -134,20 +153,34 @@ function w(e, t) {
         gameName: null == n ? void 0 : n.name,
     };
 }
+
 function P(e) {
     let { pid: t, error: n, crashType: r } = e,
         i = n instanceof Error ? n : Error(null != n ? n : "Unknown error");
     return (
         "native" === r
-            ? (C(t, i), (0, c.St)(i, u.Ue.OutOfProcess, { extra: w(t, "host") }))
-            : (N(t, i), (0, c.St)(i, u.Ue.OutOfProcess, { extra: w(t, "renderer") })),
+            ? (C(t, i),
+              (0, c.St)(i, u.Ue.OutOfProcess, {
+                  extra: w(t, "host"),
+              }))
+            : (N(t, i),
+              (0, c.St)(i, u.Ue.OutOfProcess, {
+                  extra: w(t, "renderer"),
+              })),
         !0
     );
 }
+
 function D(e) {
     let { createWindowTriggeringPID: t } = e;
-    return I(t, { mounting_started_at: new Date().getTime() }), !0;
+    return (
+        I(t, {
+            mounting_started_at: new Date().getTime(),
+        }),
+        !0
+    );
 }
+
 function x(e) {
     var t, n;
     let { createWindowTriggeringPID: r } = e,
@@ -159,20 +192,29 @@ function x(e) {
         };
     return I(r, a), !0;
 }
+
 function L(e) {
     var t, n;
     let { createWindowTriggeringPID: r } = e,
         i = null != (t = null == (n = S(r)) ? void 0 : n.mounting_started_at) ? t : new Date().getTime();
-    return I(r, { renderer_started_after: new Date().getTime() - i }), !0;
+    return (
+        I(r, {
+            renderer_started_after: new Date().getTime() - i,
+        }),
+        !0
+    );
 }
+
 function j(e) {
     let { pid: t } = e;
     return v(t), !0;
 }
+
 function M(e) {
     let { lastAssociatedPID: t } = e;
     if (t !== l.UNSET_PID) return T(t), R(), !0;
 }
+
 function k(e) {
     var t, n;
     let { pid: r } = e,

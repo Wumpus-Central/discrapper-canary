@@ -1,4 +1,8 @@
-n.d(t, { A: () => g }), n(228524), n(896048);
+n.d(t, {
+    A: () => g,
+}),
+    n(228524),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -9,6 +13,7 @@ var r = n(627968),
     d = n(710144),
     u = n(985018),
     f = n(238803);
+
 function g(e) {
     let { intiallyExpanded: t = !1, title: n, description: l, children: g } = e,
         [b, m] = i.useState(t),
@@ -18,7 +23,9 @@ function g(e) {
         className: f.kL,
         children: [
             (0, r.jsx)(d.A, {
-                className: s()(f.wx, { [f.OD]: b && null != l }),
+                className: s()(f.wx, {
+                    [f.OD]: b && null != l,
+                }),
                 onClick: p,
                 children: (e) => {
                     let { areaRef: t, handleStopPropagation: i } = e;
@@ -33,7 +40,9 @@ function g(e) {
                                 "aria-label": u.intl.string(u.t.e5eQOy),
                                 "aria-controls": x,
                                 "aria-expanded": b,
-                                focusProps: { ringTarget: t },
+                                focusProps: {
+                                    ringTarget: t,
+                                },
                                 children: (0, r.jsx)(o.A, {
                                     className: f.OW,
                                     direction: b ? o.A.Directions.UP : o.A.Directions.DOWN,
@@ -53,7 +62,9 @@ function g(e) {
                                 className: f.h_,
                                 children: l,
                             }),
-                        (0, r.jsx)("div", { className: f.yF }),
+                        (0, r.jsx)("div", {
+                            className: f.yF,
+                        }),
                         (0, r.jsx)("div", {
                             className: f.Qs,
                             children: g,

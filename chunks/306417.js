@@ -29,6 +29,7 @@ var r = n(627968),
     O = n(789646),
     A = n(985018),
     v = n(846537);
+
 function S(e, t, n) {
     return (
         t in e
@@ -42,6 +43,7 @@ function S(e, t, n) {
         e
     );
 }
+
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -58,6 +60,7 @@ function I(e) {
     }
     return e;
 }
+
 function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -70,6 +73,7 @@ function T(e, t) {
     }
     return n;
 }
+
 function C(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -81,6 +85,7 @@ function C(e, t) {
         e
     );
 }
+
 function N(e, t) {
     if (null == e) return {};
     var n,
@@ -97,6 +102,7 @@ function N(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function R(e, t) {
     if (null == e) return {};
     var n,
@@ -107,6 +113,7 @@ function R(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function w(e) {
     let { className: t, children: n } = e;
     return (0, r.jsx)("ul", {
@@ -115,6 +122,7 @@ function w(e) {
         children: n,
     });
 }
+
 function P(e) {
     let { className: t, children: n } = e;
     return (0, r.jsx)("div", {
@@ -124,9 +132,12 @@ function P(e) {
         children: n,
     });
 }
+
 function D(e) {
     let { className: t, children: n } = e,
-        i = (0, c._u)({ orientation: "vertical" }),
+        i = (0, c._u)({
+            orientation: "vertical",
+        }),
         { ref: a } = i,
         s = N(i, ["ref"]);
     return (0, r.jsx)(
@@ -146,6 +157,7 @@ function D(e) {
         ),
     );
 }
+
 function x(e) {
     let { className: t, onClick: n, isSelected: i, isFirstAnswer: a, children: o } = e,
         { pollAnswerRef: l } = (0, O.Mg)();
@@ -158,6 +170,7 @@ function x(e) {
         children: o,
     });
 }
+
 function L(e) {
     let t,
         { className: n, children: i, onClick: a, isSelected: o, hasSelectedAnyAnswer: l, isFirstAnswer: c } = e;
@@ -173,6 +186,7 @@ function L(e) {
         children: i,
     });
 }
+
 function j(e) {
     let {
             answers: t,
@@ -188,14 +202,24 @@ function j(e) {
             canTapAnswers: a,
             answersInteraction: n,
         })
-            .with({ answersInteraction: b.CQ.RADIO_BUTTONS }, () => ({
-                ContainerComponent: D,
-                answerElementType: 1,
-            }))
-            .with({ answersInteraction: b.CQ.CHECKBOXES }, () => ({
-                ContainerComponent: P,
-                answerElementType: 2,
-            }))
+            .with(
+                {
+                    answersInteraction: b.CQ.RADIO_BUTTONS,
+                },
+                () => ({
+                    ContainerComponent: D,
+                    answerElementType: 1,
+                }),
+            )
+            .with(
+                {
+                    answersInteraction: b.CQ.CHECKBOXES,
+                },
+                () => ({
+                    ContainerComponent: P,
+                    answerElementType: 2,
+                }),
+            )
             .with(
                 {
                     canTapAnswers: !0,
@@ -229,6 +253,7 @@ function j(e) {
         ),
     });
 }
+
 function M(e) {
     let { className: t, answer: n, children: a, hasSelectedAnyAnswer: o, isFirstAnswer: l, elementType: c } = e,
         { channelId: u, messageId: d } = (0, y.Tu)(),
@@ -267,6 +292,7 @@ function M(e) {
             });
     }
 }
+
 function k(e) {
     var t;
     let { attachment: n, className: i } = e,
@@ -286,6 +312,7 @@ function k(e) {
         shouldRenderAccessory: !1,
     });
 }
+
 function U(e) {
     let { className: t, emoji: n } = e;
     return (0, r.jsx)(d.A, {
@@ -295,6 +322,7 @@ function U(e) {
         animated: n.animated,
     });
 }
+
 function G(e, t) {
     return null != e
         ? (0, r.jsx)("div", {
@@ -303,6 +331,7 @@ function G(e, t) {
           })
         : t;
 }
+
 function V(e) {
     let { media: t, containerClassName: n, attachmentClassName: i, emojiClassName: a, fallback: s } = e,
         { message: o } = (0, y.y0)();
@@ -332,6 +361,7 @@ function V(e) {
           ? s
           : null;
 }
+
 function F(e) {
     let { isVictor: t, isExpired: n, size: i, className: a } = e,
         { color: s, backgroundColor: c } = (0, o.YW)({
@@ -372,6 +402,7 @@ function F(e) {
         "aria-hidden": !0,
     });
 }
+
 function B(e) {
     let { isSelected: t, size: n, className: i } = e,
         a = {
@@ -388,13 +419,25 @@ function B(e) {
                   className: i,
               }),
           )
-        : (0, r.jsx)(_.A, C(I({}, a), { className: i }));
+        : (0, r.jsx)(
+              _.A,
+              C(I({}, a), {
+                  className: i,
+              }),
+          );
 }
+
 function H(e) {
     let { isSelected: t, size: n, className: i } = e,
         a = 0.85 * n;
     return (0, r.jsx)("div", {
-        className: s()(v.kv, { [v.H7]: t }, i),
+        className: s()(
+            v.kv,
+            {
+                [v.H7]: t,
+            },
+            i,
+        ),
         style: {
             width: n,
             height: n,

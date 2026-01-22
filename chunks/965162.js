@@ -16,18 +16,23 @@ var r = n(58149),
     o = n(486020),
     l = n(577718),
     c = n(652215);
+
 function u(e) {
     return null != e && "object" == typeof e && "id" in e && e.type === l.yZ.BACKGROUND;
 }
+
 function d(e) {
     return "number" == typeof e && e in l.ZQ;
 }
+
 function f(e) {
     return d(e) ? l.wJ.includes(e) : !!u(e) && ((0, o.VI)(e.asset) || (0, o.q6)(e.asset));
 }
+
 function p(e) {
     return null != e ? "Video Background" : "None";
 }
+
 function _(e) {
     switch (e) {
         case l.ZQ.OPTION_1:
@@ -48,9 +53,11 @@ function _(e) {
             return "Wumpice";
     }
 }
+
 function h(e) {
     return null == e ? "None" : u(e) ? "Custom" : "blur" === e ? "Blur" : "Preset - ".concat(_(e));
 }
+
 function m(e, t, n) {
     let o = a.A.getGuildId(),
         l = a.A.getChannelId(),
@@ -71,6 +78,7 @@ function m(e, t, n) {
         is_animated: f(e),
     });
 }
+
 function g(e, t, n) {
     s.default.track(c.HAw.VIDEO_BACKGROUND_ADDED, {
         is_animated: f(e),
@@ -78,12 +86,18 @@ function g(e, t, n) {
         is_from_tenor: n,
     });
 }
+
 function E(e) {
-    s.default.track(c.HAw.VIDEO_BACKGROUND_DELETED, { is_animated: f(e) });
+    s.default.track(c.HAw.VIDEO_BACKGROUND_DELETED, {
+        is_animated: f(e),
+    });
 }
+
 function b(e) {
     return null == e
-        ? { oneofKind: void 0 }
+        ? {
+              oneofKind: void 0,
+          }
         : u(e)
           ? {
                 oneofKind: "customAsset",
@@ -95,13 +109,16 @@ function b(e) {
           : "blur" === e
             ? {
                   oneofKind: "blur",
-                  blur: { useBlur: !0 },
+                  blur: {
+                      useBlur: !0,
+                  },
               }
             : {
                   oneofKind: "presetOption",
                   presetOption: e,
               };
 }
+
 function y(e, t) {
     if (null == e || void 0 === e.oneofKind) return null;
     switch (e.oneofKind) {

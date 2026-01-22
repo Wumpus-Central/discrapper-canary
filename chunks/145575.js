@@ -17,6 +17,7 @@ var n = "function" == typeof Symbol && Symbol.for,
     E = n ? Symbol.for("react.fundamental") : 60117,
     b = n ? Symbol.for("react.responder") : 60118,
     y = n ? Symbol.for("react.scope") : 60119;
+
 function O(e) {
     if ("object" == typeof e && null !== e) {
         var t = e.$$typeof;
@@ -47,6 +48,7 @@ function O(e) {
         }
     }
 }
+
 function A(e) {
     return O(e) === d;
 }

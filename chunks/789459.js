@@ -1,4 +1,8 @@
-n.d(t, { A: () => k }), n(896048), n(446912);
+n.d(t, {
+    A: () => k,
+}),
+    n(896048),
+    n(446912);
 var r,
     i = n(181370),
     a = n.n(i),
@@ -7,6 +11,7 @@ var r,
     l = n(506774),
     c = n(445397),
     u = n(818348);
+
 function d(e, t, n) {
     return (
         t in e
@@ -20,6 +25,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +42,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -48,6 +55,7 @@ function p(e, t) {
     }
     return n;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -59,6 +67,7 @@ function _(e, t) {
         e
     );
 }
+
 function h(e, t) {
     if (null == e) return {};
     var n,
@@ -75,6 +84,7 @@ function h(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function m(e, t) {
     if (null == e) return {};
     var n,
@@ -85,6 +95,7 @@ function m(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function g(e, t) {
     if ("object" !== b(e) || null === e) return e;
     var n = e[Symbol.toPrimitive];
@@ -95,10 +106,12 @@ function g(e, t) {
     }
     return ("string" === t ? String : Number)(e);
 }
+
 function E(e) {
     var t = g(e, "string");
     return "symbol" === b(t) ? t : String(t);
 }
+
 function b(e) {
     return e && "u" > typeof Symbol && e.constructor === Symbol ? "symbol" : typeof e;
 }
@@ -119,10 +132,11 @@ let O = [c.ni.User, c.ni.Installation],
     R = new Set(),
     w = "apexTrackedExposures",
     P = 2,
-    D = 604800000,
+    D = 6048e5,
     x = {},
     L = 3,
     j = {};
+
 function M(e) {
     let t = j[e];
     return null == t && ((t = a().v3(e)), (j[e] = t)), t;
@@ -133,7 +147,10 @@ class k extends (r = s.Ay.PersistedStore) {
             ? ((S = e.clientOverrides), (A = e.evaluatedExperiments))
             : null != e &&
               2 === e.version &&
-              ((S = e.clientOverrides), (A = _(f({}, e.evaluatedExperiments), { installation: {} }))),
+              ((S = e.clientOverrides),
+              (A = _(f({}, e.evaluatedExperiments), {
+                  installation: {},
+              }))),
         (T = {}),
         t)) {
             let e = M(n),
@@ -272,7 +289,9 @@ class k extends (r = s.Ay.PersistedStore) {
                           unit_type: r,
                           tracked_variation_id: a,
                       },
-                      { flush: !0 },
+                      {
+                          flush: !0,
+                      },
                   )
                 : "installation" === r &&
                   this.track(
@@ -285,7 +304,9 @@ class k extends (r = s.Ay.PersistedStore) {
                           unit_type: r,
                           tracked_variation_id: a,
                       },
-                      { flush: !0 },
+                      {
+                          flush: !0,
+                      },
                   ),
             (x[o] = Date.now()),
             this.saveTrackedExposures(x));
@@ -303,7 +324,9 @@ class k extends (r = s.Ay.PersistedStore) {
                                   exposure_location: e,
                                   unit_type: t,
                               },
-                              { flush: !0 },
+                              {
+                                  flush: !0,
+                              },
                           )
                         : this.track(
                               u.sE.EXPERIMENT_INSTALLATION_EVALUATION_EXPOSED,
@@ -313,7 +336,9 @@ class k extends (r = s.Ay.PersistedStore) {
                                   unit_type: t,
                                   installation_id: r,
                               },
-                              { flush: !0 },
+                              {
+                                  flush: !0,
+                              },
                           ),
                     (x[i] = Date.now()),
                     this.saveTrackedExposures(x));
@@ -330,7 +355,9 @@ class k extends (r = s.Ay.PersistedStore) {
                         unit_type: n.kind,
                         suppression_source: t,
                     },
-                    { flush: !0 },
+                    {
+                        flush: !0,
+                    },
                 );
             else if ("installation" === n.kind) {
                 let r = Object.keys(A.installation)[0];
@@ -343,7 +370,9 @@ class k extends (r = s.Ay.PersistedStore) {
                             suppression_source: t,
                             installation_id: r,
                         },
-                        { flush: !0 },
+                        {
+                            flush: !0,
+                        },
                     );
             }
         }
@@ -394,7 +423,9 @@ class k extends (r = s.Ay.PersistedStore) {
                         module: this.surface,
                         call: "ApexExperimentStore.saveTrackedExposures",
                     },
-                    { flush: !0 },
+                    {
+                        flush: !0,
+                    },
                 );
         }
     }

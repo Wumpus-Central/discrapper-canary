@@ -1,4 +1,7 @@
-r.d(t, { B: () => x }), r(228524);
+r.d(t, {
+    B: () => x,
+}),
+    r(228524);
 var a = r(627968),
     n = r(64700),
     c = r(397927),
@@ -13,6 +16,7 @@ var a = r(627968),
     p = r(652215),
     _ = r(985018),
     m = r(401517);
+
 function y(e) {
     let { onClose: t } = e,
         r = (0, a.jsx)(c.Text, {
@@ -28,6 +32,7 @@ function y(e) {
         onClose: t,
     });
 }
+
 function g(e) {
     let { onClose: t } = e;
     return (0, a.jsx)(b.Ay, {
@@ -58,7 +63,9 @@ let x = (e) => {
             }),
             (0, a.jsx)(c.$mQ, {
                 "data-migration-pending": !0,
-                children: (0, a.jsx)(l ? g : y, { onClose: b }),
+                children: (0, a.jsx)(l ? g : y, {
+                    onClose: b,
+                }),
             }),
         ],
     });

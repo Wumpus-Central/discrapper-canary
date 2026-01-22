@@ -16,6 +16,7 @@ var r = n(64700),
     u = n(927578),
     d = n(652215),
     f = n(788868);
+
 function p(e, t, n) {
     return (
         t in e
@@ -29,6 +30,7 @@ function p(e, t, n) {
         e
     );
 }
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -46,6 +48,7 @@ function _(e) {
     return e;
 }
 let h = 10027;
+
 function m(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [...f.oz];
     return null == e || c.A.hasPaymentSourceForSKUIds(e, t)
@@ -60,11 +63,14 @@ function m(e) {
               });
           });
 }
+
 function g(e, t, n) {
     let r,
         i = [],
         s = [],
-        o = { purchaseType: n ? d.lid.GIFT : d.lid.DEFAULT };
+        o = {
+            purchaseType: n ? d.lid.GIFT : d.lid.DEFAULT,
+        };
     return (
         (r = "string" == typeof e ? c.A.get(e) : e),
         a()(r, "subscription plan not loaded"),
@@ -73,10 +79,12 @@ function g(e, t, n) {
         i
     );
 }
+
 function E(e, t, n) {
     let r = c.A.get(e);
     return a()(null != r, "plan is undefined"), g(r, n, !1).includes(t);
 }
+
 function b(e) {
     let {
             initialCurrency: t,
@@ -132,7 +140,9 @@ function b(e) {
         hasFetchedSubscriptionPlans: f,
         priceOptions: u,
         setCurrency: (e) => {
-            d({ currency: e });
+            d({
+                currency: e,
+            });
         },
         currencyLoading: b,
     };

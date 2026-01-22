@@ -30,6 +30,7 @@ let d = {
     m = 200,
     g = /\w/,
     E = /[^\w\s]/;
+
 function b(e, t) {
     if (t < 0 || t > e.length) return d;
     let n = t;
@@ -46,6 +47,7 @@ function b(e, t) {
         suffix: e.substring(r, e.length),
     };
 }
+
 function y(e, t, n, r) {
     var d, g;
     let { isIdle: E, currentAutocompleteType: y } = r;
@@ -54,7 +56,9 @@ function y(e, t, n, r) {
             onlyExactMatch: O,
             eagerRecentSenders: A,
             largeGuildExactMatchRecentSenders: v,
-        } = (0, c.sA)("getMentionSuggestions", { autoTrackExposure: !1 }),
+        } = (0, c.sA)("getMentionSuggestions", {
+            autoTrackExposure: !1,
+        }),
         S = b(t, n),
         { query: I } = S;
     if (I.length < p || u.A.getMaxWordCount() < h || u.A.isFrequentlyUsedWord(I)) return f;
@@ -92,6 +96,7 @@ let O = (0, r.memoize)(y, (e, t, n, r) =>
         "".concat(e.id, "-").concat(r.isIdle, "-").concat(r.currentAutocompleteType, "-").concat(t, "-").concat(n),
     ),
     A = null;
+
 function v(e, t, n, r) {
     return (
         null == A &&

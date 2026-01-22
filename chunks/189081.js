@@ -1,4 +1,9 @@
-n.d(t, { A: () => H }), n(896048), n(938796), n(142703);
+n.d(t, {
+    A: () => H,
+}),
+    n(896048),
+    n(938796),
+    n(142703);
 var r,
     i = n(735438),
     a = n.n(i),
@@ -10,6 +15,7 @@ var r,
     d = n(674378),
     f = n(961350),
     p = n(652215);
+
 function _(e, t, n) {
     return (
         t in e
@@ -23,6 +29,7 @@ function _(e, t, n) {
         e
     );
 }
+
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -39,6 +46,7 @@ function h(e) {
     }
     return e;
 }
+
 function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -51,6 +59,7 @@ function m(e, t) {
     }
     return n;
 }
+
 function g(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -63,6 +72,7 @@ function g(e, t) {
     );
 }
 let E = "LibraryApplicationStore";
+
 function b() {
     var e;
     return null != (e = l.w.get(E)) ? e : {};
@@ -74,57 +84,80 @@ let y = !1,
     S = {},
     I = {},
     T = !1;
+
 function C() {
-    l.w.set(E, g(h({}, b()), { activeLaunchOptionIds: I }));
+    l.w.set(
+        E,
+        g(h({}, b()), {
+            activeLaunchOptionIds: I,
+        }),
+    );
 }
+
 function N() {
-    l.w.set(E, g(h({}, b()), { activeLibraryApplicationBranchIds: S }));
+    l.w.set(
+        E,
+        g(h({}, b()), {
+            activeLibraryApplicationBranchIds: S,
+        }),
+    );
 }
+
 function R(e) {
     for (let t of e) {
         let e = u.A.createFromServer(t);
         O[(0, d.gW)(e.id, e.branchId)] = e;
     }
 }
+
 function w() {
     y = !1;
 }
+
 function P(e) {
     let { libraryApplications: t } = e;
     (O = {}), R(t), (y = !0);
 }
+
 function D(e) {
     let { libraryApplications: t } = e;
     R(t);
 }
+
 function x(e) {
     let { applicationId: t, branchId: n, flags: r } = e,
         i = (0, d.gW)(t, n),
         a = V(t, n);
     null != a && !a.isHidden() && s.Lt(r, p.hM6.HIDDEN) && (T = !0), v.add(i);
 }
+
 function L(e) {
     let { libraryApplication: t } = e,
         n = u.A.createFromServer(t),
         r = (0, d.gW)(n.id, n.branchId);
     (O[r] = n), v.delete(r);
 }
+
 function j(e) {
     let { applicationId: t, branchId: n, launchOptionId: r } = e;
     (I[(0, d.gW)(t, n)] = r), C();
 }
+
 function M(e) {
     let { applicationId: t, branchId: n } = e;
     if (S[t] === n) return !1;
     (S[t] = n), N();
 }
+
 function k(e) {
     let { libraryApplications: t } = e;
     for (let e of t) A[(0, d.gW)(e.id, e.branchId)] = e;
 }
+
 function U() {
     A = {};
 }
+
 function G(e) {
     let t = F();
     return (
@@ -134,11 +167,13 @@ function G(e) {
         t
     );
 }
+
 function V(e, t) {
     var n;
     let r = (0, d.gW)(e, t);
     return null != (n = O[r]) ? n : A[r];
 }
+
 function F() {
     return h({}, A, O);
 }

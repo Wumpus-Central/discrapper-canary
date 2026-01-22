@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -9,6 +11,7 @@ var i = n(311907),
     o = n(287809),
     d = n(985018),
     u = n(552873);
+
 function f(e) {
     let { guild: t } = e,
         n = (0, i.bG)([o.default], () => {
@@ -38,7 +41,9 @@ function f(e) {
                         text: d.intl.string(d.t.ZXeJbS),
                         disabled: !n,
                         onClick: () => {
-                            (0, a.h)(t.id, { demonetized: !0 });
+                            (0, a.h)(t.id, {
+                                demonetized: !0,
+                            });
                         },
                     }),
                 }),

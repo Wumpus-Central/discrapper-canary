@@ -67,6 +67,7 @@ var r = n(627968),
     ec = n(985018),
     eu = n(842130),
     ed = n(870463);
+
 function ep(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -92,6 +93,7 @@ function ep(e) {
     }
     return e;
 }
+
 function ef(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -110,6 +112,7 @@ function ef(e, t) {
         e
     );
 }
+
 function eh(e, t) {
     if (null == e) return {};
     var n,
@@ -177,15 +180,21 @@ let eA = (e) => {
             a = (0, k.kX)(),
             s = (0, d.bG)([G.Ay], () => G.Ay.canShowFriendsTabBadge()),
             u = (0, d.bG)([v.A], () => v.A.useReducedMotion),
-            { enabled: f } = U.u.useConfig({ location: "Friends Tab" }),
-            [A, g] = (0, j.Wl)(s && f ? p.M.GIFTING_INTENT_FRIENDS_TAB_BADGE : null, { cooldownDurationMs: G.hb }),
+            { enabled: f } = U.u.useConfig({
+                location: "Friends Tab",
+            }),
+            [A, g] = (0, j.Wl)(s && f ? p.M.GIFTING_INTENT_FRIENDS_TAB_BADGE : null, {
+                cooldownDurationMs: G.hb,
+            }),
             _ = A === p.M.GIFTING_INTENT_FRIENDS_TAB_BADGE;
         i.useEffect(() => {
             _ &&
                 (0, C.x)({
                     name: o.ImpressionNames.GIFT_INTENT_BADGE,
                     type: o.ImpressionTypes.VIEW,
-                    properties: { gift_intent_type: eo.np.FRIEND_ANNIVERSARY },
+                    properties: {
+                        gift_intent_type: eo.np.FRIEND_ANNIVERSARY,
+                    },
                 });
         }, [_]);
         let y = () => {
@@ -198,7 +207,9 @@ let eA = (e) => {
                       E.A.setSection(el.m3P.ALL),
                       g(es.i.TAKE_ACTION))
                     : (e = en.Ay.getState().section),
-                    (0, S.A)({ tab_opened: e });
+                    (0, S.A)({
+                        tab_opened: e,
+                    });
             },
             [I, N] = i.useState(!1),
             T = () => {
@@ -225,7 +236,14 @@ let eA = (e) => {
                             n,
                             l,
                         ),
-                        { children: a > 0 ? (0, r.jsx)(b.hVq, { count: a }) : null },
+                        {
+                            children:
+                                a > 0
+                                    ? (0, r.jsx)(b.hVq, {
+                                          count: a,
+                                      })
+                                    : null,
+                        },
                     ),
                 );
         return (0, r.jsx)("div", {
@@ -286,13 +304,23 @@ let eA = (e) => {
                     i,
                     l,
                 ),
-                { children: (0, r.jsx)(I.A, { className: a()(ed.Qw, { [ed.QI]: n }) }) },
+                {
+                    children: (0, r.jsx)(I.A, {
+                        className: a()(ed.Qw, {
+                            [ed.QI]: n,
+                        }),
+                    }),
+                },
             ),
         );
     },
     eb = () => {
         let e = (0, L.W)();
-        return e > 0 ? (0, r.jsx)(b.hVq, { count: e }) : null;
+        return e > 0
+            ? (0, r.jsx)(b.hVq, {
+                  count: e,
+              })
+            : null;
     },
     e_ = (e) => {
         let { selected: t } = e,
@@ -313,7 +341,9 @@ let eA = (e) => {
                     },
                     n,
                 ),
-                { children: (0, r.jsx)(eb, {}) },
+                {
+                    children: (0, r.jsx)(eb, {}),
+                },
             ),
         );
     },
@@ -341,7 +371,11 @@ let eA = (e) => {
                     },
                     l,
                 ),
-                { children: (0, r.jsx)(eO, { isParentHovered: a }) },
+                {
+                    children: (0, r.jsx)(eO, {
+                        isParentHovered: a,
+                    }),
+                },
             ),
         );
     },
@@ -365,7 +399,9 @@ let eA = (e) => {
             : i > 0
               ? (0, r.jsx)("div", {
                     className: a()(ed.lL, ed.iL),
-                    children: (0, r.jsx)(b.hVq, { count: i }),
+                    children: (0, r.jsx)(b.hVq, {
+                        count: i,
+                    }),
                 })
               : (0, r.jsx)("div", {
                     className: ed.lL,
@@ -384,6 +420,7 @@ let eA = (e) => {
                 });
     },
     ey = () => (0, W.WU)("DM_SEARCH");
+
 function eI(e) {
     switch (e) {
         case el.BVt.APPLICATION_LIBRARY:
@@ -422,7 +459,14 @@ let ev = i.memo(function (e) {
         I = (0, P.c)("PrivateChannels"),
         v = null;
     return (
-        c ? (v = (0, r.jsx)(F.V, { targetElementRef: O })) : d && (v = (0, r.jsx)(V.A, { targetElementRef: O })),
+        c
+            ? (v = (0, r.jsx)(F.V, {
+                  targetElementRef: O,
+              }))
+            : d &&
+              (v = (0, r.jsx)(V.A, {
+                  targetElementRef: O,
+              })),
         (0, r.jsxs)("nav", {
             className: ed.AB,
             "aria-label": ec.intl.string(ec.t.ZH9aP4),
@@ -434,14 +478,23 @@ let ev = i.memo(function (e) {
                     offsetX: -52,
                     children: (0, r.jsx)("div", {
                         ref: m,
-                        className: a()(ed.ON, { [ed.jD]: u.Fr }),
+                        className: a()(ed.ON, {
+                            [ed.jD]: u.Fr,
+                        }),
                         children: (0, r.jsx)(b.Button, {
                             fullWidth: !0,
                             variant: "secondary",
                             size: "sm",
                             onClick: ey,
                             text: ec.intl.format(ec.t.fH9FBy, {
-                                tooltipHook: (e, t) => (0, r.jsx)(g.A, { children: e }, t),
+                                tooltipHook: (e, t) =>
+                                    (0, r.jsx)(
+                                        g.A,
+                                        {
+                                            children: e,
+                                        },
+                                        t,
+                                    ),
                             }),
                         }),
                     }),
@@ -455,13 +508,17 @@ let ev = i.memo(function (e) {
                         children: [
                             (0, r.jsx)(
                                 eg,
-                                { selected: null != A ? A === el.BVt.FRIENDS : l === el.BVt.FRIENDS },
+                                {
+                                    selected: null != A ? A === el.BVt.FRIENDS : l === el.BVt.FRIENDS,
+                                },
                                 "friends",
                             ),
                             I
                                 ? (0, r.jsx)(
                                       eA,
-                                      { selected: null != A ? A === el.BVt.ICYMI : l === el.BVt.ICYMI },
+                                      {
+                                          selected: null != A ? A === el.BVt.ICYMI : l === el.BVt.ICYMI,
+                                      },
                                       "icymi",
                                   )
                                 : null,
@@ -560,9 +617,13 @@ let ev = i.memo(function (e) {
         })
     );
 });
+
 function eS() {
-    return (0, r.jsx)("div", { className: ed.ts });
+    return (0, r.jsx)("div", {
+        className: ed.ts,
+    });
 }
+
 function eC() {
     let e,
         t,
@@ -577,14 +638,18 @@ function eC() {
             return !1;
         }, [n]),
         l = !Z.l_.useSetting(),
-        { theme: a } = (0, d.cf)([X.A], () => ({ theme: X.A.theme })),
+        { theme: a } = (0, d.cf)([X.A], () => ({
+            theme: X.A.theme,
+        })),
         o = (0, d.bG)([J.A], () => J.A.hasLibraryApplication()),
         c = (0, d.bG)([$.A], () => $.A.getCurrentPath()),
         [u, f] = (0, q.A)((e) => {
             let { channelId: t, path: n } = e;
             return [t, n];
         }, s.x),
-        h = (0, Y.P)({ selected: null == f ? i : f.startsWith(el.BVt.APPLICATION_STORE) }),
+        h = (0, Y.P)({
+            selected: null == f ? i : f.startsWith(el.BVt.APPLICATION_STORE),
+        }),
         A = (0, H.Tp)(),
         g = (0, B.c7)(),
         m = [];

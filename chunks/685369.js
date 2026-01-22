@@ -1,8 +1,14 @@
-n.d(t, { K: () => o });
+n.d(t, {
+    K: () => o,
+});
 let r = new Map(),
     i = !1;
 try {
-    i = "exceptZero" === new Intl.NumberFormat("de-DE", { signDisplay: "exceptZero" }).resolvedOptions().signDisplay;
+    i =
+        "exceptZero" ===
+        new Intl.NumberFormat("de-DE", {
+            signDisplay: "exceptZero",
+        }).resolvedOptions().signDisplay;
 } catch {}
 let a = !1;
 try {
@@ -16,10 +22,10 @@ try {
 let s = {
     degree: {
         narrow: {
-            default: "\xB0",
+            default: "\xb0",
             "ja-JP": " 度",
             "zh-TW": "度",
-            "sl-SI": " \xB0",
+            "sl-SI": " \xb0",
         },
     },
 };
@@ -62,7 +68,7 @@ class o {
             })),
             {
                 type: "literal",
-                value: " \u2013 ",
+                value: " – ",
                 source: "shared",
             },
             ...r.map((e) => ({
@@ -95,6 +101,7 @@ class o {
         (this.numberFormatter = l(e, t)), (this.options = t);
     }
 }
+
 function l(e, t = {}) {
     let { numberingSystem: n } = t;
     if ((n && e.includes("-nu-") && (e.includes("-u-") || (e += "-u-"), (e += `-nu-${n}`)), "unit" === t.style && !a)) {
@@ -118,6 +125,7 @@ function l(e, t = {}) {
     let c = new Intl.NumberFormat(e, t);
     return r.set(o, c), c;
 }
+
 function c(e, t, n) {
     if ("auto" === t) return e.format(n);
     {

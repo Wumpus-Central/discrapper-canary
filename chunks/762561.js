@@ -1,7 +1,10 @@
-n.d(t, { A: () => k }), n(896048);
+n.d(t, {
+    A: () => k,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
-    i = n(432022),
+    i = n(108531),
     a = n(158954),
     s = n(397927),
     o = n(736653),
@@ -33,6 +36,7 @@ var r = n(627968),
     D = n(996988),
     M = n(985018),
     L = n(743789);
+
 function G(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -58,6 +62,7 @@ function G(e) {
     }
     return e;
 }
+
 function k(e) {
     var t;
     let { user: n, currentUser: g, channel: M } = e,
@@ -76,7 +81,9 @@ function k(e) {
         q = (0, A.fC)(),
         X = (0, s.zhh)({
             opacity: +(null != q.interactionType),
-            config: { duration: 150 },
+            config: {
+                duration: 150,
+            },
         }),
         J = (e) => {
             (0, y.openUserProfileModal)(
@@ -132,7 +139,13 @@ function k(e) {
                                             user: n,
                                             themeType: D.d.SIDEBAR,
                                         }),
-                                        n.bot ? (0, r.jsx)(_.A, { user: n }) : (0, r.jsx)(I.yo, { user: n }),
+                                        n.bot
+                                            ? (0, r.jsx)(_.A, {
+                                                  user: n,
+                                              })
+                                            : (0, r.jsx)(I.yo, {
+                                                  user: n,
+                                              }),
                                     ],
                                 }),
                                 (0, r.jsxs)("div", {
@@ -190,7 +203,10 @@ function k(e) {
                                             wishlistId: $,
                                             title: ee,
                                             onClick: () => {
-                                                null == J || J({ tabSection: R.RP.WISHLIST });
+                                                null == J ||
+                                                    J({
+                                                        tabSection: R.RP.WISHLIST,
+                                                    });
                                             },
                                         }),
                                     }),

@@ -160,7 +160,9 @@ let S = (e) => {
             direction: c.A.Direction.VERTICAL,
             align: c.A.Align.CENTER,
             className: t,
-            children: (0, r.jsx)(l.A, { className: m.$$ }),
+            children: (0, r.jsx)(l.A, {
+                className: m.$$,
+            }),
         });
     },
     N = (e) =>
@@ -181,10 +183,14 @@ let S = (e) => {
                   (t = (0, r.jsxs)("div", {
                       className: a()(m.Io, m.L1, o && m.Z6),
                       children: [
-                          (0, r.jsx)("i", { className: m._o }),
+                          (0, r.jsx)("i", {
+                              className: m._o,
+                          }),
                           u({
                               className: l,
-                              children: h.intl.format(h.t["LC+S+m"], { membersOnline: n }),
+                              children: h.intl.format(h.t["LC+S+m"], {
+                                  membersOnline: n,
+                              }),
                           }),
                       ],
                   })),
@@ -196,10 +202,14 @@ let S = (e) => {
                       (0, r.jsxs)("div", {
                           className: a()(m.Io, o && m.Z6),
                           children: [
-                              (0, r.jsx)("i", { className: m.jk }),
+                              (0, r.jsx)("i", {
+                                  className: m.jk,
+                              }),
                               u({
                                   className: l,
-                                  children: h.intl.format(h.t.zRl6XR, { count: i }),
+                                  children: h.intl.format(h.t.zRl6XR, {
+                                      count: i,
+                                  }),
                               }),
                           ],
                       }),
@@ -241,7 +251,9 @@ let S = (e) => {
             className: t,
             children: [
                 (0, r.jsx)(s.Button, {
-                    text: h.intl.format(h.t.JoS1i3, { platform: (0, f.Vf)() }),
+                    text: h.intl.format(h.t.JoS1i3, {
+                        platform: (0, f.Vf)(),
+                    }),
                     variant: "secondary",
                     fullWidth: !0,
                     onClick: () => window.open((0, f.SU)()),
@@ -276,7 +288,9 @@ let S = (e) => {
                     style: d,
                     className: a()(c ? m.PR : m.sL, e, t),
                     children: [
-                        (0, r.jsx)("div", { className: m.ie }),
+                        (0, r.jsx)("div", {
+                            className: m.ie,
+                        }),
                         (0, r.jsx)("div", {
                             className: a()(m.f4, n),
                             children: l,

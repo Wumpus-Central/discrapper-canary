@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -8,6 +10,7 @@ var i = n(503698),
     l = n(206547),
     c = n(35275),
     u = n(299434);
+
 function d(e) {
     var t;
     let { guildId: n, emojiId: i, emojiName: d, className: f } = e,

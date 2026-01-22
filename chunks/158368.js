@@ -6,12 +6,15 @@ n.d(t, {
 });
 let r = ["click", "mousedown", "mouseup", "keydown", "keyup", "keypress", "contextmenu"],
     i = null;
+
 function a() {
     return i;
 }
+
 function s(e) {
     i = e;
 }
+
 function o(e) {
     i === e && (i = null);
 }

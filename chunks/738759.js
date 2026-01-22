@@ -1,4 +1,6 @@
-t.d(l, { A: () => f });
+t.d(l, {
+    A: () => f,
+});
 var n = t(627968);
 t(64700);
 var i = t(397927),
@@ -9,6 +11,7 @@ var i = t(397927),
     d = t(51943),
     c = t(985018),
     u = t(781425);
+
 function f(e) {
     let { user: l, onClose: t } = e,
         { trackUserProfileAction: f } = (0, a.NJ)(),
@@ -35,7 +38,13 @@ function f(e) {
                                     nick: a,
                                     onSelect: () => {
                                         var e;
-                                        f({ action: "PRESS_MUTUAL_GUILD" }), (e = i.id), (0, s.u)(e), t(), (0, r.jH)();
+                                        f({
+                                            action: "PRESS_MUTUAL_GUILD",
+                                        }),
+                                            (e = i.id),
+                                            (0, s.u)(e),
+                                            t(),
+                                            (0, r.jH)();
                                     },
                                 },
                                 i.id,
@@ -44,7 +53,9 @@ function f(e) {
                   : (0, n.jsxs)("div", {
                         className: u.Ie,
                         children: [
-                            (0, n.jsx)("div", { className: u.vC }),
+                            (0, n.jsx)("div", {
+                                className: u.vC,
+                            }),
                             (0, n.jsx)("div", {
                                 className: u.BI,
                                 children: c.intl.string(c.t.zjVh8h),

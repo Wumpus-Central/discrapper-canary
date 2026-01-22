@@ -1,9 +1,12 @@
-n.d(t, { A: () => l });
+n.d(t, {
+    A: () => l,
+});
 var r = n(311907),
     i = n(765379),
     a = n(714114),
     s = n(290863),
     o = n(977997);
+
 function l(e) {
     let { userId: t, guildId: n } = e,
         { voiceState: l, voiceChannel: c } = (0, a.A)({

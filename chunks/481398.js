@@ -1,4 +1,7 @@
-r.d(t, { default: () => d }), r(896048);
+r.d(t, {
+    default: () => d,
+}),
+    r(896048);
 var n = r(627968),
     c = r(64700),
     l = r(158954),
@@ -6,6 +9,7 @@ var n = r(627968),
     s = r(975571),
     a = r(652215),
     o = r(985018);
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
@@ -31,6 +35,7 @@ function u(e) {
     }
     return e;
 }
+
 function b(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -49,6 +54,7 @@ function b(e, t) {
         e
     );
 }
+
 function d(e) {
     let { modalProps: t, onConfirm: r } = e,
         [d, p] = c.useState({
@@ -92,7 +98,9 @@ function d(e) {
         f = Object.values(d).some((e) => e.checked);
     return (0, n.jsx)(l.Modal, {
         title: o.intl.string(o.t.jxXMEz),
-        subtitle: o.intl.format(o.t.fSv59b, { helpdeskArticle: s.A.getArticleURL(a.MVz.GDPR_PACKAGE_CONTENTS) }),
+        subtitle: o.intl.format(o.t.fSv59b, {
+            helpdeskArticle: s.A.getArticleURL(a.MVz.GDPR_PACKAGE_CONTENTS),
+        }),
         transitionState: t.transitionState,
         onClose: t.onClose,
         actions: [
@@ -129,10 +137,14 @@ function d(e) {
                     let r = u({}, t);
                     return (
                         Object.keys(r).forEach((e) => {
-                            r[e] = b(u({}, r[e]), { checked: !1 });
+                            r[e] = b(u({}, r[e]), {
+                                checked: !1,
+                            });
                         }),
                         e.forEach((e) => {
-                            r[e] = b(u({}, r[e]), { checked: !0 });
+                            r[e] = b(u({}, r[e]), {
+                                checked: !0,
+                            });
                         }),
                         r
                     );

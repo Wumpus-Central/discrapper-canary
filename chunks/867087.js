@@ -1,4 +1,8 @@
-s.d(e, { default: () => L }), s(896048), s(65821);
+s.d(e, {
+    default: () => L,
+}),
+    s(896048),
+    s(65821);
 var l = s(627968),
     a = s(64700),
     n = s(311907),
@@ -21,6 +25,7 @@ var l = s(627968),
     b = s(652215),
     _ = s(985018),
     S = s(25327);
+
 function y(t, e, s) {
     return (
         e in t
@@ -77,7 +82,9 @@ class E extends a.Component {
                 null != r
                     ? (0, l.jsx)("div", {
                           className: S.Yi,
-                          style: { backgroundImage: "url(".concat(r, ")") },
+                          style: {
+                              backgroundImage: "url(".concat(r, ")"),
+                          },
                       })
                     : null,
                 (0, l.jsxs)(i.rQ0, {
@@ -92,7 +99,9 @@ class E extends a.Component {
                         }),
                         (0, l.jsx)(A.A.Child, {
                             grow: 0,
-                            children: (0, l.jsx)(i.s_y, { onClick: this.close }),
+                            children: (0, l.jsx)(i.s_y, {
+                                onClick: this.close,
+                            }),
                         }),
                     ],
                 }),
@@ -113,12 +122,16 @@ class E extends a.Component {
                                 null != e
                                     ? (0, l.jsx)("div", {
                                           className: S.hc,
-                                          children: (0, C.Xq)(e, { useKibibytes: !0 }),
+                                          children: (0, C.Xq)(e, {
+                                              useKibibytes: !0,
+                                          }),
                                       })
                                     : null,
                             ],
                         }),
-                        (0, l.jsx)("div", { className: S.yF }),
+                        (0, l.jsx)("div", {
+                            className: S.yF,
+                        }),
                         (0, l.jsx)(T.A, {
                             autoFocus: !0,
                             className: S.gD,
@@ -135,7 +148,9 @@ class E extends a.Component {
                         }),
                     ],
                 }),
-                (0, l.jsx)(i.jlY, { children: this.renderButton() }),
+                (0, l.jsx)(i.jlY, {
+                    children: this.renderButton(),
+                }),
             ],
         });
     }
@@ -175,7 +190,9 @@ class E extends a.Component {
                 else throw Error("Unexpected missing build info for non-premium product");
             }),
             y(this, "handlePurchaseTermsChange", (t) => {
-                this.setState({ hasAcceptedNeccessaryTerms: t });
+                this.setState({
+                    hasAcceptedNeccessaryTerms: t,
+                });
             }),
             y(this, "close", () => {
                 this.props.onClose();

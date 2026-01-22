@@ -1,4 +1,6 @@
-n.d(t, { A: () => A });
+n.d(t, {
+    A: () => A,
+});
 var a = n(627968);
 n(64700);
 var r = n(311907),
@@ -12,6 +14,7 @@ var r = n(311907),
     b = n(874864),
     f = n(985018),
     h = n(234518);
+
 function A(e) {
     let { analyticsSection: t, analyticsPage: n, isGIF: A, banner: m } = e,
         _ = (0, r.bG)([d.A], () => d.A.getGuildId()),

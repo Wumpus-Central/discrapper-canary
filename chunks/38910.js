@@ -1,4 +1,6 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(562465),
     i = n(73153),
     l = n(652215);
@@ -14,7 +16,9 @@ let s = {
                 suggestions: e.body,
             });
         } catch (e) {
-            i.h.dispatch({ type: "LOAD_FRIEND_SUGGESTIONS_FAILURE" });
+            i.h.dispatch({
+                type: "LOAD_FRIEND_SUGGESTIONS_FAILURE",
+            });
         }
     },
     ignore(e) {

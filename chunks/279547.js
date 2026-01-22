@@ -1,6 +1,10 @@
-n.d(t, { d: () => a }), n(896048);
+n.d(t, {
+    d: () => a,
+}),
+    n(896048);
 var r = n(64700),
     i = n(198982);
+
 function a(e) {
     let { onError: t, onSuccess: n, report: a } = e,
         [s, o] = r.useState(!1),

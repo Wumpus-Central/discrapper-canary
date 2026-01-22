@@ -29,7 +29,9 @@ e.exports = function (e) {
                 beginKeywords: "function",
                 end: "\\)",
                 contains: [
-                    e.inherit(e.TITLE_MODE, { begin: "([_a-zA-Z]\\w*\\.)*([_a-zA-Z]\\w*:)?[_a-zA-Z]\\w*" }),
+                    e.inherit(e.TITLE_MODE, {
+                        begin: "([_a-zA-Z]\\w*\\.)*([_a-zA-Z]\\w*:)?[_a-zA-Z]\\w*",
+                    }),
                     {
                         className: "params",
                         begin: "\\(",

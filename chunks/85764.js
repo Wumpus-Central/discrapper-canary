@@ -1,4 +1,5 @@
 var r = n(724039);
+
 function i() {
     return (i =
         r ||
@@ -10,6 +11,7 @@ function i() {
             return e;
         }).apply(this, arguments);
 }
+
 function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -26,6 +28,7 @@ function a(e) {
     }
     return e;
 }
+
 function s(e, t, n) {
     return (
         t in e
@@ -39,6 +42,7 @@ function s(e, t, n) {
         e
     );
 }
+
 function o(e, t) {
     (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
 }
@@ -159,7 +163,16 @@ e.exports = (function (e) {
                         contentEditable: L,
                         suppressContentEditableWarning: !0,
                     }));
-                var K = u.createElement(V, W, u.createElement(Y, i({}, k, { key: R })));
+                var K = u.createElement(
+                    V,
+                    W,
+                    u.createElement(
+                        Y,
+                        i({}, k, {
+                            key: R,
+                        }),
+                    ),
+                );
                 S.push({
                     block: K,
                     wrapperTemplate: G,
@@ -186,7 +199,13 @@ e.exports = (function (e) {
                     z.push(Q);
                 } else z.push(X.block), q++;
             }
-            return u.createElement("div", { "data-contents": "true" }, z);
+            return u.createElement(
+                "div",
+                {
+                    "data-contents": "true",
+                },
+                z,
+            );
         }),
         t
     );

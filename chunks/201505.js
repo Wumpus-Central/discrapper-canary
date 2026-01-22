@@ -1,4 +1,10 @@
-n.d(t, { A: () => _ }), n(896048), n(747238), n(638769), n(321073);
+n.d(t, {
+    A: () => _,
+}),
+    n(896048),
+    n(747238),
+    n(638769),
+    n(321073);
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -19,12 +25,13 @@ let f = o()().localeData().months(),
         label: f[e],
     })),
     m = /[a-zA-Z0-9]/;
+
 function A(e) {
     let { options: t, selectOption: n, children: s } = e,
         [l, a] = i.useState("");
     i.useEffect(() => {
         if ("" !== l) {
-            let e = setTimeout(() => a(""), 1000);
+            let e = setTimeout(() => a(""), 1e3);
             return () => clearTimeout(e);
         }
     }, [l, a]);
@@ -43,6 +50,7 @@ function A(e) {
         children: s,
     });
 }
+
 function x() {
     let e = o()().localeData().longDateFormat("L"),
         t = e.indexOf("D"),

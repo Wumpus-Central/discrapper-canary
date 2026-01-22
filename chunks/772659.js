@@ -1,4 +1,6 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(627968);
 n(64700);
 var l = n(397927),
@@ -6,6 +8,7 @@ var l = n(397927),
     a = n(928658),
     s = n(978914),
     o = n(985018);
+
 function c(e) {
     let { channel: t, onReportClick: n, onReportSubmit: c, onMouseEnter: u, onMouseLeave: d } = e,
         { error: f, loaded: p, message: h } = (0, s.I)(t);

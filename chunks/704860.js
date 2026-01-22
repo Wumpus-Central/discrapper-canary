@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -9,6 +11,7 @@ var r = n(627968),
     u = n(778983),
     d = n(841362),
     f = n(285745);
+
 function p(e) {
     let { channel: t, message: n, snapshot: p } = e,
         { moderatorReport: h } = p,
@@ -42,9 +45,20 @@ function p(e) {
             }),
         ].filter((e) => null != e);
     return t.isModeratorReportChannel() && 0 !== O.length
-        ? (0, r.jsx)(r.Fragment, { children: O.map((e, t) => (0, r.jsx)(l.Fragment, { children: e }, t)) })
+        ? (0, r.jsx)(r.Fragment, {
+              children: O.map((e, t) =>
+                  (0, r.jsx)(
+                      l.Fragment,
+                      {
+                          children: e,
+                      },
+                      t,
+                  ),
+              ),
+          })
         : null;
 }
+
 function h(e) {
     let { message: t, channel: n } = e;
     return (0, r.jsx)(r.Fragment, {

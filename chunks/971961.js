@@ -1,4 +1,6 @@
-n.d(e, { A: () => y });
+n.d(e, {
+    A: () => y,
+});
 var l = n(627968),
     r = n(64700),
     i = n(311907),
@@ -9,11 +11,16 @@ var l = n(627968),
     s = n(698441),
     d = n(691012),
     g = n(985018);
+
 function y(t, e) {
     let n = a.Q_.useSetting(),
         { tidaWebformEnabled: y } = o.A.useExperiment(
-            { location: "useCopyEventImageLinkItem" },
-            { autoTrackExposure: !1 },
+            {
+                location: "useCopyEventImageLinkItem",
+            },
+            {
+                autoTrackExposure: !1,
+            },
         ),
         f = (0, i.bG)([s.Ay], () => s.Ay.getGuildScheduledEvent(t)),
         b = null != f ? (0, d.A)(f) : null,

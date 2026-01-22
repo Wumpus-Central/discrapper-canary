@@ -16,6 +16,7 @@ var r,
     p = n(83971),
     _ = n(583846),
     h = n(652215);
+
 function m(e, t, n) {
     return (
         t in e
@@ -31,9 +32,11 @@ function m(e, t, n) {
 }
 let g = new Set([o.I.LISTENED_SESSION]),
     E = new Map();
+
 function b(e) {
     return "".concat(e.author_id, ":").concat(e.id);
 }
+
 function y(e) {
     return (0, _.I5)(e)
         ? null
@@ -45,6 +48,7 @@ function y(e) {
             )
           : void 0;
 }
+
 function O(e) {
     let t = new Set(),
         n = new Set();
@@ -60,14 +64,17 @@ function O(e) {
         matchedKeys: n,
     };
 }
+
 function A(e) {
     let { feed: t } = e,
         { updatedKeys: n } = O(t.entries);
     return n.size > 0;
 }
+
 function v() {
     E.clear();
 }
+
 function S() {
     let e = !1,
         t = Array.from(E.keys()),

@@ -1,4 +1,7 @@
-n.d(t, { A: () => m }), n(896048);
+n.d(t, {
+    A: () => m,
+}),
+    n(896048);
 var l = n(627968),
     a = n(64700),
     r = n(503698),
@@ -9,6 +12,7 @@ var l = n(627968),
     d = n(124589),
     u = n(985018),
     p = n(55092);
+
 function h(e) {
     let { onTabSelect: t, tabs: n, selectedTab: r } = e,
         s = a.useMemo(
@@ -86,7 +90,9 @@ function h(e) {
                         id: "more",
                         look: "brand",
                         selectedItem: s ? "more" : void 0,
-                        className: i()(p.Mf, { [p.wH]: !1 }),
+                        className: i()(p.Mf, {
+                            [p.wH]: !1,
+                        }),
                         clickableRef: (e) => {
                             null != e && null != e.ref && (x.current = e.ref);
                         },
@@ -130,6 +136,7 @@ function h(e) {
         },
     });
 }
+
 function m(e) {
     let { className: t, selectedTab: n, tabs: r, onTabSelect: d, onAvailableWidthChange: u } = e,
         [m, b] = a.useState(0),

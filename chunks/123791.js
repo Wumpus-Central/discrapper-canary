@@ -12,6 +12,7 @@ var r = n(64700),
     u = n(97352),
     d = n(31455),
     f = n(67480);
+
 function p(e) {
     r.useEffect(() => {
         _(e);
@@ -29,6 +30,7 @@ function p(e) {
         [t, n],
     );
 }
+
 function _(e) {
     (0, a.V)(e), (0, o.JI)(e), c.default.isAuthenticated() && (0, s.LM)(e, !1);
 }

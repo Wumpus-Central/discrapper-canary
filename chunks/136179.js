@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(627968);
 n(64700);
 var l = n(503698),
@@ -7,6 +9,7 @@ var l = n(503698),
     s = n(397927),
     o = n(772577),
     c = n(216042);
+
 function u(e) {
     let { guildId: t, children: n, className: l } = e,
         { horizontalScrollNotice: u, handleScroll: d, handleSetScrollerRef: f, handleSetContainerRef: p } = (0, o.A)(t),

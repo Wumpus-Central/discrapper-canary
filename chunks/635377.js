@@ -4,16 +4,23 @@ var r,
     a = n(41835),
     s = n(971882),
     o = {};
+
 function l(e, t, n) {
     var i;
     return (o[t] ? (i = o[t]) : ((i = r(t)), (o[t] = i)), 2 == arguments.length) ? e[i] : ((e[i] = n), n);
 }
+
 function c() {
     return 1;
 }
+
 function u(e) {
     if (!(this instanceof u)) return new u(e);
-    "number" == typeof e && (e = { max: e }), e || (e = {});
+    "number" == typeof e &&
+        (e = {
+            max: e,
+        }),
+        e || (e = {});
     var t = l(this, "max", e.max);
     (!t || "number" != typeof t || t <= 0) && l(this, "max", 1 / 0);
     var n = e.length || c;
@@ -24,10 +31,12 @@ function u(e) {
         l(this, "dispose", e.dispose),
         this.reset();
 }
+
 function d(e, t, n, r) {
     var i = n.value;
     p(e, i) && (h(e, n), l(e, "allowStale") || (i = void 0)), i && t.call(r, i.value, i.key, e);
 }
+
 function f(e, t, n) {
     var r = l(e, "cache").get(t);
     if (r) {
@@ -37,12 +46,14 @@ function f(e, t, n) {
     }
     return i;
 }
+
 function p(e, t) {
     if (!t || (!t.maxAge && !l(e, "maxAge"))) return !1;
     var n = !1,
         r = Date.now() - t.now;
     return t.maxAge ? r > t.maxAge : l(e, "maxAge") && r > l(e, "maxAge");
 }
+
 function _(e) {
     if (l(e, "length") > l(e, "max"))
         for (var t = l(e, "lruList").tail; l(e, "length") > l(e, "max") && null !== t; ) {
@@ -50,6 +61,7 @@ function _(e) {
             h(e, t), (t = n);
         }
 }
+
 function h(e, t) {
     if (t) {
         var n = t.value;
@@ -59,6 +71,7 @@ function h(e, t) {
             l(e, "lruList").removeNode(t);
     }
 }
+
 function m(e, t, n, r, i) {
     (this.key = e), (this.value = t), (this.length = n), (this.now = r), (this.maxAge = i || 0);
 }
@@ -198,7 +211,9 @@ function m(e, t, n, r, i) {
             l(this, "lruList").forEach(function (e) {
                 u ? (n += ",\n  ") : (r && (n += ",\n"), (u = !0), (n += "\n  "));
                 var i = a.inspect(e.key).split("\n").join("\n  "),
-                    l = { value: e.value };
+                    l = {
+                        value: e.value,
+                    };
                 e.maxAge !== s && (l.maxAge = e.maxAge),
                     o !== c && (l.length = e.length),
                     p(this, e) && (l.stale = !0),

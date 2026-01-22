@@ -1,4 +1,10 @@
-n.d(t, { A: () => _ }), n(896048), n(938796), n(65821), n(747238);
+n.d(t, {
+    A: () => _,
+}),
+    n(896048),
+    n(938796),
+    n(65821),
+    n(747238);
 var r = n(735438),
     i = n.n(r),
     l = n(179771),
@@ -85,11 +91,18 @@ let b = ["1402418171662569542"],
                     } = e;
                 if (![g.z4.IPC, g.z4.WEBSOCKET, g.z4.POST_MESSAGE].includes(a.transport))
                     throw new h.A(
-                        { errorCode: m.Lw6.INVALID_COMMAND },
+                        {
+                            errorCode: m.Lw6.INVALID_COMMAND,
+                        },
                         'command not available from "'.concat(a.transport, '" transport'),
                     );
                 if (null == A && g.z4.IPC === a.transport)
-                    throw new h.A({ errorCode: m.Lw6.INVALID_COMMAND }, "nonzero pid required");
+                    throw new h.A(
+                        {
+                            errorCode: m.Lw6.INVALID_COMMAND,
+                        },
+                        "nonzero pid required",
+                    );
                 if (null == _)
                     return (
                         s.h.dispatch({
@@ -119,14 +132,23 @@ let b = ["1402418171662569542"],
                         .filter((e) => !!e);
                     if (null != j && i().intersection(e, [j.id]).length > 0 && !b.includes(a.application.id))
                         throw new h.A(
-                            { errorCode: m.Lw6.INVALID_ACTIVITY_SECRET },
+                            {
+                                errorCode: m.Lw6.INVALID_ACTIVITY_SECRET,
+                            },
                             "secrets cannot match the party id",
                         );
                     if (i().uniq(e).length < e.length)
-                        throw new h.A({ errorCode: m.Lw6.INVALID_ACTIVITY_SECRET }, "secrets must be unique");
+                        throw new h.A(
+                            {
+                                errorCode: m.Lw6.INVALID_ACTIVITY_SECRET,
+                            },
+                            "secrets must be unique",
+                        );
                     if (null != w)
                         throw new h.A(
-                            { errorCode: m.Lw6.INVALID_ACTIVITY_SECRET },
+                            {
+                                errorCode: m.Lw6.INVALID_ACTIVITY_SECRET,
+                            },
                             "secrets cannot currently be sent with buttons",
                         );
                 }

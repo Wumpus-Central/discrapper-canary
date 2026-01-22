@@ -426,7 +426,9 @@ e.exports = function (e) {
                 begin: "\\|\\s*",
                 end: "\\w+",
             },
-            { begin: /[-=]>/ },
+            {
+                begin: /[-=]>/,
+            },
         ],
     };
 };

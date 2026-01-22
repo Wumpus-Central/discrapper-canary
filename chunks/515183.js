@@ -23,13 +23,16 @@ var r = n(56562),
     c = n(41984),
     u = n(589051);
 let d = new i.A("OverlayRenderUtils"),
-    f = 5000;
+    f = 5e3;
+
 function p(e) {
     return (0, u.Yz)(e).longTimeout;
 }
+
 function _(e) {
     return (0, u.Yz)(e).shortTimeout;
 }
+
 function h(e) {
     let [t] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [a.Ay],
         n = t.getGameOrTransformedSubgameForPID(e);
@@ -46,6 +49,7 @@ function h(e) {
         );
     }
 }
+
 function m(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
         [n] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [a.Ay];
@@ -55,6 +59,7 @@ function m(e) {
         }, t);
     });
 }
+
 function g(e) {
     switch (e) {
         case r.aI.BORDERLESS_FULLSCREEN:
@@ -71,6 +76,7 @@ function g(e) {
             return "Unknown";
     }
 }
+
 function E(e) {
     switch (e) {
         case c.Ue.OutOfProcess:
@@ -83,11 +89,14 @@ function E(e) {
             return "Disabled";
     }
 }
+
 function b(e, t) {
     let { quns: n } = o.Ay.GetWindowFullscreenTypeExtraByPid(e, t.name);
     return d.info("QUNS for ".concat(t.name, ": ").concat(n)), n === r.YL.QUNS_RUNNING_D3D_FULL_SCREEN;
 }
-let y = { "1314682894106497096": (e, t, n) => (b(e, t) ? r.aI.FULLSCREEN : n) },
+let y = {
+        "1314682894106497096": (e, t, n) => (b(e, t) ? r.aI.FULLSCREEN : n),
+    },
     O = new Set(["762434991303950386", "1402418239342120960", "1124351860376096858"]),
     A = 16,
     v = !0;
@@ -102,22 +111,26 @@ async function S(e) {
     let l = y[o];
     return null != l ? l(e, i, r) : r;
 }
+
 function I(e) {
     var t;
     let n = null == (t = s.A.getGameByName(e.name)) ? void 0 : t.id;
     return null != n && O.has(n);
 }
+
 function T(e) {
     let t = a.Ay.getGameOrTransformedSubgameForPID(e);
     return null != t && null != t.name && I(t);
 }
 let C = new Set([r.aI.UNKNOWN, r.aI.FULLSCREEN]);
+
 function N(e) {
     let t = Object.keys(e)
         .map(Number)
         .sort((e, t) => t - e);
     return 0 === t.length ? r.aI.UNKNOWN : e[t.length > 1 ? t[1] : t[0]];
 }
+
 function R(e, t, n) {
     if (e.overlayMethod !== c.Ue.OutOfProcess && e.overlayMethod !== c.Ue.OutOfProcessLimitedInteraction) return !1;
     if (!n) return !0;
@@ -129,6 +142,7 @@ function R(e, t, n) {
     }
     return !1;
 }
+
 function w(e, t) {
     if (!t) return !1;
     switch (e) {
@@ -139,6 +153,7 @@ function w(e, t) {
     }
     return !0;
 }
+
 function P(e) {
     return null == e
         ? {

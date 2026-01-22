@@ -1,9 +1,12 @@
-n.d(i, { A: () => r });
+n.d(i, {
+    A: () => r,
+});
 var t = n(627968);
 n(64700);
 var a = n(397927),
     s = n(147925),
     l = n(357905);
+
 function r(e) {
     let { url: i, text: n, onClick: r } = e;
     return (0, t.jsx)(a.MzZ, {

@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var i = n(627968),
     r = n(64700),
     s = n(284009),
@@ -12,9 +14,17 @@ var i = n(627968),
     p = n(486503),
     b = n(652215),
     A = n(985018);
+
 function h(e) {
     let t = c.Q_.useSetting(),
-        { tidaWebformEnabled: n } = p.A.useExperiment({ location: "useCopyServerInfoItem" }, { autoTrackExposure: !1 }),
+        { tidaWebformEnabled: n } = p.A.useExperiment(
+            {
+                location: "useCopyServerInfoItem",
+            },
+            {
+                autoTrackExposure: !1,
+            },
+        ),
         s = (0, o.A)({
             id: e.id,
             label: A.intl.string(A.t["94lLD7"]),

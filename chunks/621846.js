@@ -1,4 +1,8 @@
-r.d(t, { H: () => p }), r(896048), r(747238);
+r.d(t, {
+    H: () => p,
+}),
+    r(896048),
+    r(747238);
 var a = r(627968),
     n = r(64700),
     s = r(492462),
@@ -9,6 +13,7 @@ var a = r(627968),
     d = r(533553),
     u = r(985018),
     f = r(694900);
+
 function p(e) {
     let { onUserCodeAccepted: t, usePrefilledCode: r } = e,
         [p, h] = n.useState(() => {

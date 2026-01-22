@@ -1,4 +1,7 @@
-n.d(t, { A: () => d }), n(321073);
+n.d(t, {
+    A: () => d,
+}),
+    n(321073);
 var i = n(627968),
     r = n(64700),
     l = n(280513),
@@ -8,6 +11,7 @@ var i = n(627968),
     u = n(975571),
     c = n(652215),
     h = n(985018);
+
 function d(e) {
     let { guildId: t, channelType: n, className: d } = e,
         { guildProfile: p, fetchGuildProfile: g, fetchStatus: b } = (0, o.u)(t),
@@ -19,7 +23,11 @@ function d(e) {
     let O = [];
     if (
         n === c.rbe.GUILD_ANNOUNCEMENT &&
-        (O.push(h.intl.format(h.t.tI7KNX, { documentationLink: u.A.getArticleURL(c.MVz.ANNOUNCEMENT_CHANNELS) })),
+        (O.push(
+            h.intl.format(h.t.tI7KNX, {
+                documentationLink: u.A.getArticleURL(c.MVz.ANNOUNCEMENT_CHANNELS),
+            }),
+        ),
         !m && !f)
     ) {
         let e = h.intl.string(h.t["2Ab4Id"]);

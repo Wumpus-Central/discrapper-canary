@@ -11,6 +11,7 @@ var r = n(64700),
     o = n(451988),
     l = n(544420),
     c = n(524799);
+
 function u(e, t, n) {
     return (
         t in e
@@ -48,14 +49,24 @@ class f {
     }
 }
 let p = new f();
+
 function _(e) {
     r.useEffect(() => {
         null != e && p.request(e);
     }, [e]);
 }
+
 function h(e, t) {
     _(e);
-    let n = r.useMemo(() => (null != t ? { size: t.coverImageSize } : void 0), [t]);
+    let n = r.useMemo(
+        () =>
+            null != t
+                ? {
+                      size: t.coverImageSize,
+                  }
+                : void 0,
+        [t],
+    );
     return (0, s.cf)([c.A], () =>
         null == e
             ? {

@@ -1,4 +1,6 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 var r = n(325639);
 class i extends r.V {
     requestPermissionCore(e, t) {

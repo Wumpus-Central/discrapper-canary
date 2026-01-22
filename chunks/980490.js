@@ -1,4 +1,6 @@
-n.d(t, { q: () => w });
+n.d(t, {
+    q: () => w,
+});
 var l = n(627968),
     r = n(64700),
     a = n(503698),
@@ -19,6 +21,7 @@ var l = n(627968),
     v = n(985018),
     C = n(622865),
     j = n(312396);
+
 function w(e) {
     var t, n, a, w, O, A;
     let { message: S, forwardOptions: T, channel: P } = e,
@@ -39,7 +42,9 @@ function w(e) {
                 : null,
         I = c.f[null != (t = null == N ? void 0 : N.cardId) ? t : 0],
         _ = (0, o.rdh)(I.primaryColor).hex(),
-        F = m.m.useExperiment({ location: "forward_preview" }).enabled,
+        F = m.m.useExperiment({
+            location: "forward_preview",
+        }).enabled,
         V = r.useMemo(
             () =>
                 E
@@ -70,10 +75,19 @@ function w(e) {
               })),
               (G = o.sYc))
             : n > 0
-              ? ((U = v.intl.formatToPlainString(v.t.SJ6pPX, { count: n })), (G = o.SfG))
+              ? ((U = v.intl.formatToPlainString(v.t.SJ6pPX, {
+                    count: n,
+                })),
+                (G = o.SfG))
               : t > 0
-                ? ((U = v.intl.formatToPlainString(v.t.h4pFfU, { count: t })), (G = 1 === t ? o.xfq : o.sYc))
-                : ((U = v.intl.formatToPlainString(v.t["89ihS8"], { count: L })), (G = o.PtA)),
+                ? ((U = v.intl.formatToPlainString(v.t.h4pFfU, {
+                      count: t,
+                  })),
+                  (G = 1 === t ? o.xfq : o.sYc))
+                : ((U = v.intl.formatToPlainString(v.t["89ihS8"], {
+                      count: L,
+                  })),
+                  (G = o.PtA)),
             n > 0 && L === n
                 ? (B = (0, l.jsxs)("div", {
                       className: i()(j.cR, j.JZ),
@@ -174,7 +188,9 @@ function w(e) {
                         className: j.cR,
                         children: (0, l.jsx)("img", {
                             alt: "",
-                            style: { backgroundColor: _ },
+                            style: {
+                                backgroundColor: _,
+                            },
                             width: 56,
                             height: 56,
                             src: (0, d.OW)(null != (n = N.cardId) ? n : 0),

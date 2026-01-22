@@ -1,4 +1,11 @@
-n.d(t, { A: () => x }), n(864466), n(443073), n(65821), n(896048), n(938796);
+n.d(t, {
+    A: () => x,
+}),
+    n(864466),
+    n(443073),
+    n(65821),
+    n(896048),
+    n(938796);
 var r = n(735438),
     i = n.n(r),
     a = n(665260),
@@ -23,6 +30,7 @@ var r = n(735438),
     S = n(652215),
     I = n(340837),
     T = n(790782);
+
 function C(e, t, n) {
     return (
         t in e
@@ -36,6 +44,7 @@ function C(e, t, n) {
         e
     );
 }
+
 function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -52,6 +61,7 @@ function N(e) {
     }
     return e;
 }
+
 function R(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -64,6 +74,7 @@ function R(e, t) {
     }
     return n;
 }
+
 function w(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -75,6 +86,7 @@ function w(e, t) {
         e
     );
 }
+
 function P(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     if (f.A.isFullServerPreview(e)) return;
@@ -134,6 +146,7 @@ function P(e) {
                   );
               });
 }
+
 function D(e, t, n) {
     var r, a;
     let s = null != (r = null == (a = h.Ay.getSelfMember(e)) ? void 0 : a.roles) ? r : [];
@@ -162,7 +175,7 @@ let x = {
             removedOptionIds: s,
         });
     },
-    updateOnboardingResponses: i().debounce(P, 1000),
+    updateOnboardingResponses: i().debounce(P, 1e3),
     updateRolesLocal: D,
     completeOnboarding(e, t) {
         let n = t.length > 0 ? t[t.length - 1] : null,
@@ -202,19 +215,30 @@ let x = {
             P(e, !0),
             f.A.isFullServerPreview(e))
         ) {
-            (0, d.$u)(e, b, []), (0, d.Z$)(e, { optInEnabled: !0 }), (0, d.ID)(e, Array.from(i));
+            (0, d.$u)(e, b, []),
+                (0, d.Z$)(e, {
+                    optInEnabled: !0,
+                }),
+                (0, d.ID)(e, Array.from(i));
             let t = m.default.getCurrentUser();
             if (null != t) {
                 var M, k;
                 let n = null != (M = null == (k = h.Ay.getMember(e, t.id)) ? void 0 : k.flags) ? M : 0;
-                (0, d.Z$)(e, { memberOptions: { flags: (0, a.lA)(n, I.D.COMPLETED_ONBOARDING, !0) } });
+                (0, d.Z$)(e, {
+                    memberOptions: {
+                        flags: (0, a.lA)(n, I.D.COMPLETED_ONBOARDING, !0),
+                    },
+                });
             }
         }
     },
     onboardExistingMember(e, t) {
         let n = new Set(t);
         (O.A.getEnabled(e) ? O.A.getDefaultChannelIds(e) : []).forEach((e) => n.add(e)),
-            n.size > 0 && (0, p.Hb)(e, Array.from(n), !0, { page: S.liQ.GUILD_ONBOARDING });
+            n.size > 0 &&
+                (0, p.Hb)(e, Array.from(n), !0, {
+                    page: S.liQ.GUILD_ONBOARDING,
+                });
     },
     finishOnboarding(e) {
         o.h.dispatch({
@@ -234,7 +258,9 @@ let x = {
         if (null != t) {
             var n, r;
             let i = null != (n = null == (r = h.Ay.getMember(e, t.id)) ? void 0 : r.flags) ? n : 0;
-            await (0, u.T)(e, { flags: (0, a.lA)(i, I.D.COMPLETED_ONBOARDING, !1) });
+            await (0, u.T)(e, {
+                flags: (0, a.lA)(i, I.D.COMPLETED_ONBOARDING, !1),
+            });
         }
     },
 };

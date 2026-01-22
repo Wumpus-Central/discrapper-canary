@@ -13,6 +13,7 @@ let s = (e) => String(e).padStart(2, "0"),
             r = Math.floor(e / a.A.Seconds.HOUR);
         return 0 === r ? "".concat(s(n), ":").concat(s(t)) : "".concat(s(r), ":").concat(s(n), ":").concat(s(t));
     };
+
 function l(e) {
     let { start: t, end: n } = e,
         [s] = (0, r.useState)(new i.IX()),

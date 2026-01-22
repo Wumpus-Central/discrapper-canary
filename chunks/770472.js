@@ -1,9 +1,12 @@
-n.d(t, { p: () => c });
+n.d(t, {
+    p: () => c,
+});
 var l = n(64700),
     a = n(488995),
     r = n(982339);
 let i = 20 + a.GLOBAL_DISCOVERY_SEARCH_BAR_WIDTH_PX - a.GLOBAL_DISCOVERY_SEARCH_BAR_ICON_WIDTH_PX,
     s = 20 + a.GLOBAL_DISCOVERY_SEARCH_BAR_WIDTH_PX + a.GLOBAL_DISCOVERY_SEARCH_BAR_ICON_WIDTH_PX;
+
 function c(e) {
     let { isSearchBarVisible: t, isSearchBarEmpty: n, searchBarState: c, setSearchBarState: o } = e,
         d = l.useCallback(

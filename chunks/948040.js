@@ -1,4 +1,6 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var i = n(627968),
     r = n(64700),
     l = n(397927),
@@ -7,6 +9,7 @@ var i = n(627968),
     o = n(200662),
     c = n(985018),
     d = n(48778);
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -32,6 +35,7 @@ function u(e) {
     }
     return e;
 }
+
 function b(e) {
     let { applicationIcon: t, applicationName: b, canNavigate: f, command: p, guildId: m } = e,
         g = r.useMemo(() => {

@@ -1,6 +1,12 @@
-n.d(t, { A: () => a }), n(896048), n(114821), n(339614);
+n.d(t, {
+    A: () => a,
+}),
+    n(896048),
+    n(114821),
+    n(339614);
 var l = n(64700),
     r = n(68545);
+
 function i(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -26,6 +32,7 @@ function i(e) {
     }
     return e;
 }
+
 function s(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -44,6 +51,7 @@ function s(e, t) {
         e
     );
 }
+
 function a(e) {
     var t;
     let {
@@ -58,7 +66,15 @@ function a(e) {
         f = l.useRef(p),
         g = l.useMemo(
             () =>
-                d ? n.flatMap((e) => (e.variants.length < r.PN ? [] : s(i({}, e.variants[p]), { name: e.name }))) : [],
+                d
+                    ? n.flatMap((e) =>
+                          e.variants.length < r.PN
+                              ? []
+                              : s(i({}, e.variants[p]), {
+                                    name: e.name,
+                                }),
+                      )
+                    : [],
             [n, p, d],
         ),
         j = l.useMemo(() => null != o && g.some((e) => e.skuId === o.skuId), [g, o]);
@@ -73,5 +89,18 @@ function a(e) {
     )
         return null;
     let y = n.length > 1;
-    return s(i({}, y && { selectedCategory: p }, y && { setSelectedCategory: m }), { shouldRenderCategoryControl: y });
+    return s(
+        i(
+            {},
+            y && {
+                selectedCategory: p,
+            },
+            y && {
+                setSelectedCategory: m,
+            },
+        ),
+        {
+            shouldRenderCategoryControl: y,
+        },
+    );
 }

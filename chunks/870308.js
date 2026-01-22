@@ -1,4 +1,7 @@
-n.d(t, { A: () => h }), n(896048);
+n.d(t, {
+    A: () => h,
+}),
+    n(896048);
 var r = n(64700),
     i = n(379197),
     l = n(488430),
@@ -64,7 +67,12 @@ let h = () => {
                                           });
                                   }
                                   return e;
-                              })({ type: p.FF.COACHTIP }, i)),
+                              })(
+                                  {
+                                      type: p.FF.COACHTIP,
+                                  },
+                                  i,
+                              )),
                               (u = u =
                                   {
                                       imageSrc: null != (n = e.coachtipAvatar) ? n : "",

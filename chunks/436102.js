@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var a = n(627968);
 n(64700);
 var l = n(397927),
@@ -9,6 +11,7 @@ var l = n(397927),
     c = n(87404),
     d = n(815907),
     u = n(661251);
+
 function m() {
     return (0, a.jsx)(l.IpV, {
         className: u.nd,
@@ -53,7 +56,9 @@ function m() {
                                     (0, i.B8)(
                                         (e) => {
                                             let { closeLayer: t } = e;
-                                            return (0, a.jsx)(s.A, { onClose: t });
+                                            return (0, a.jsx)(s.A, {
+                                                onClose: t,
+                                            });
                                         },
                                         {
                                             layerKey: c._s,
@@ -78,7 +83,9 @@ function m() {
                                 variant: "primary",
                                 text: "Close All Layers",
                                 onClick: () => {
-                                    i.xr.setState({ fullScreenLayers: [] });
+                                    i.xr.setState({
+                                        fullScreenLayers: [],
+                                    });
                                 },
                             }),
                         }),

@@ -1,4 +1,7 @@
-n.d(t, { A: () => T }), n(321073);
+n.d(t, {
+    A: () => T,
+}),
+    n(321073);
 var r,
     i = n(735438),
     a = n.n(i),
@@ -9,6 +12,7 @@ var r,
     u = n(927813),
     d = n(679382),
     f = n(355097);
+
 function p(e, t, n) {
     return (
         t in e
@@ -22,6 +26,7 @@ function p(e, t, n) {
         e
     );
 }
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -38,6 +43,7 @@ function _(e) {
     }
     return e;
 }
+
 function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -50,6 +56,7 @@ function h(e, t) {
     }
     return n;
 }
+
 function m(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -61,7 +68,9 @@ function m(e, t) {
         e
     );
 }
-let g = { pendingUsages: [] };
+let g = {
+    pendingUsages: [],
+};
 u.A.Millis.DAY;
 let E = 20,
     b = new l.A({
@@ -88,15 +97,21 @@ let E = 20,
     A = () => {
         y();
     };
+
 function v() {
     var e;
     let t = null == (e = c.A.frecencyWithoutFetchingLatest.stickerFrecency) ? void 0 : e.stickers;
     if (null == t) return !1;
     b.overwriteHistory(
-        a().mapValues(t, (e) => m(_({}, e), { recentUses: e.recentUses.map(Number).filter((e) => e > 0) })),
+        a().mapValues(t, (e) =>
+            m(_({}, e), {
+                recentUses: e.recentUses.map(Number).filter((e) => e > 0),
+            }),
+        ),
         g.pendingUsages,
     );
 }
+
 function S(e) {
     let {
         settings: { type: t },

@@ -1,4 +1,6 @@
-n.d(t, { A: () => y });
+n.d(t, {
+    A: () => y,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -9,6 +11,7 @@ var r = n(627968),
     u = n(943815),
     d = n(985018),
     f = n(679740);
+
 function p(e, t, n) {
     return (
         t in e
@@ -22,6 +25,7 @@ function p(e, t, n) {
         e
     );
 }
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -38,6 +42,7 @@ function _(e) {
     }
     return e;
 }
+
 function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -50,6 +55,7 @@ function h(e, t) {
     }
     return n;
 }
+
 function m(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -61,6 +67,7 @@ function m(e, t) {
         e
     );
 }
+
 function g(e) {
     return new Date(e);
 }
@@ -83,7 +90,15 @@ let E = i.memo(function (e) {
             I = i.useMemo(() => (0, l.K7)(S), [S]),
             T = i.useMemo(() => (null != _ ? (0, l.i$)(S, _) : a ? (0, l.i$)(S, "LT") : (0, l.mk)(S, !0)), [S, _, a]),
             C = i.useMemo(() => (a ? (0, u.A)(T) : null), [a, T]),
-            N = i.useMemo(() => (O ? d.intl.formatToPlainString(d.t.CDzOFd, { timeFormatted: I }) : I), [O, I]);
+            N = i.useMemo(
+                () =>
+                    O
+                        ? d.intl.formatToPlainString(d.t.CDzOFd, {
+                              timeFormatted: I,
+                          })
+                        : I,
+                [O, I],
+            );
         return (0, r.jsx)("span", {
             className: s()(n, C, {
                 [f.vE]: !0,
@@ -135,7 +150,7 @@ let E = i.memo(function (e) {
                                   (0, r.jsx)("i", {
                                       className: f.me,
                                       "aria-hidden": !0,
-                                      children: a ? "[" : " \u2014 ",
+                                      children: a ? "[" : " — ",
                                   }),
                                   n,
                                   a &&

@@ -155,7 +155,9 @@ let v = "1333839522189938740",
         i.n.PLAY_ON_DESKTOP_V2,
         i.n.PLAY_ACTIVITY,
     ]),
-    P = { is_targeted: !1 };
+    P = {
+        is_targeted: !1,
+    };
 var D = (function (e) {
         return (
             (e.SUGGESTED = "suggested"),
@@ -198,6 +200,7 @@ let j = [
         filter: "reward_in_game",
     },
 ];
+
 function M(e) {
     return Object.values(x).includes(e)
         ? {

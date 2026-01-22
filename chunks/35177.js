@@ -1,4 +1,6 @@
-n.d(t, { A: () => m }),
+n.d(t, {
+    A: () => m,
+}),
     n(927092),
     n(212978),
     n(201528),
@@ -23,6 +25,7 @@ var r = n(311907),
     p = n(761821),
     f = n(652215),
     h = n(573879);
+
 function A(e, t) {
     let n = !1;
     return (
@@ -38,6 +41,7 @@ function A(e, t) {
         n
     );
 }
+
 function g(e, t, n) {
     return !!c.HP.hasHiddenHotspot(t) && A(e, n);
 }
@@ -74,7 +78,9 @@ let m = [
         version: 3,
         run(e) {
             let { state: t } = r.Ay.PersistedStore.migrateAndReadStoreState("EmojiStore", [
-                () => ({ diversitySurrogate: s.w.get("EmojiDiversitySurrogate") || "" }),
+                () => ({
+                    diversitySurrogate: s.w.get("EmojiDiversitySurrogate") || "",
+                }),
             ]);
             if (null == t) return !1;
             let n = !1;
@@ -119,34 +125,58 @@ let m = [
             let p = null != (u = s.w.get("UserSettingsStore")) ? u : {};
             return (
                 "boolean" == typeof p.useRichChatTextBox &&
-                    ((e.textAndImages.useRichChatInput = a._t.create({ value: p.useRichChatTextBox })), (d = !0)),
+                    ((e.textAndImages.useRichChatInput = a._t.create({
+                        value: p.useRichChatTextBox,
+                    })),
+                    (d = !0)),
                 "string" == typeof p.renderSpoilers &&
-                    ((e.textAndImages.renderSpoilers = a.hU.create({ value: p.renderSpoilers })), (d = !0)),
+                    ((e.textAndImages.renderSpoilers = a.hU.create({
+                        value: p.renderSpoilers,
+                    })),
+                    (d = !0)),
                 "boolean" == typeof p.useThreadSidebar &&
-                    ((e.textAndImages.useThreadSidebar = a._t.create({ value: p.useThreadSidebar })), (d = !0)),
+                    ((e.textAndImages.useThreadSidebar = a._t.create({
+                        value: p.useThreadSidebar,
+                    })),
+                    (d = !0)),
                 "boolean" == typeof p.showInAppNotifications &&
-                    ((e.notifications.showInAppNotifications = a._t.create({ value: p.showInAppNotifications })),
+                    ((e.notifications.showInAppNotifications = a._t.create({
+                        value: p.showInAppNotifications,
+                    })),
                     (d = !0)),
                 p.emojiPickerCollapsedSections instanceof Array &&
                     ((e.textAndImages.emojiPickerCollapsedSections = p.emojiPickerCollapsedSections), (d = !0)),
                 p.stickerPickerCollapsedSections instanceof Array &&
                     ((e.textAndImages.stickerPickerCollapsedSections = p.stickerPickerCollapsedSections), (d = !0)),
                 "boolean" == typeof p.viewImageDescriptions &&
-                    ((e.textAndImages.viewImageDescriptions = a._t.create({ value: p.viewImageDescriptions })),
+                    ((e.textAndImages.viewImageDescriptions = a._t.create({
+                        value: p.viewImageDescriptions,
+                    })),
                     (d = !0)),
                 "boolean" == typeof p.showCommandSuggestions &&
-                    ((e.textAndImages.showCommandSuggestions = a._t.create({ value: p.showCommandSuggestions })),
+                    ((e.textAndImages.showCommandSuggestions = a._t.create({
+                        value: p.showCommandSuggestions,
+                    })),
                     (d = !0)),
                 "boolean" == typeof p.alwaysPreviewVideo &&
-                    ((e.voiceAndVideo.alwaysPreviewVideo = a._t.create({ value: p.alwaysPreviewVideo })), (d = !0)),
+                    ((e.voiceAndVideo.alwaysPreviewVideo = a._t.create({
+                        value: p.alwaysPreviewVideo,
+                    })),
+                    (d = !0)),
                 "boolean" == typeof p.notifyFriendsOnGoLive &&
-                    ((e.notifications.notifyFriendsOnGoLive = a._t.create({ value: p.notifyFriendsOnGoLive })),
+                    ((e.notifications.notifyFriendsOnGoLive = a._t.create({
+                        value: p.notifyFriendsOnGoLive,
+                    })),
                     (d = !0)),
                 "boolean" == typeof p.installShortcutDesktop &&
-                    ((e.gameLibrary.installShortcutDesktop = a._t.create({ value: p.installShortcutDesktop })),
+                    ((e.gameLibrary.installShortcutDesktop = a._t.create({
+                        value: p.installShortcutDesktop,
+                    })),
                     (d = !0)),
                 "boolean" == typeof p.installShortcutStartMenu &&
-                    ((e.gameLibrary.installShortcutStartMenu = a._t.create({ value: p.installShortcutStartMenu })),
+                    ((e.gameLibrary.installShortcutStartMenu = a._t.create({
+                        value: p.installShortcutStartMenu,
+                    })),
                     (d = !0)),
                 "boolean" == typeof p.allowActivityPartyPrivacyFriends &&
                     ((e.privacy.allowActivityPartyPrivacyFriends = a._t.create({
@@ -159,7 +189,10 @@ let m = [
                     })),
                     (d = !0)),
                 "boolean" == typeof p.rtcPanelShowVoiceStates &&
-                    ((e.debug.rtcPanelShowVoiceStates = a._t.create({ value: p.rtcPanelShowVoiceStates })), (d = !0)),
+                    ((e.debug.rtcPanelShowVoiceStates = a._t.create({
+                        value: p.rtcPanelShowVoiceStates,
+                    })),
+                    (d = !0)),
                 d
             );
         },
@@ -267,7 +300,10 @@ let m = [
                 null != n &&
                 (null == e.userContent && (e.userContent = l.YW.create()),
                 null == e.userContent.lastDismissedOutboundPromotionStartDate) &&
-                ((e.userContent.lastDismissedOutboundPromotionStartDate = a.hU.create({ value: n })), !0)
+                ((e.userContent.lastDismissedOutboundPromotionStartDate = a.hU.create({
+                    value: n,
+                })),
+                !0)
             );
         },
         cleanup() {},
@@ -285,7 +321,10 @@ let m = [
                 null != n &&
                 (null == e.textAndImages && (e.textAndImages = l.oJ.create()),
                 null == e.textAndImages.expressionSuggestionsEnabled) &&
-                ((e.textAndImages.expressionSuggestionsEnabled = a._t.create({ value: n })), !0)
+                ((e.textAndImages.expressionSuggestionsEnabled = a._t.create({
+                    value: n,
+                })),
+                !0)
             );
         },
         cleanup() {

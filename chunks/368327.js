@@ -1,4 +1,7 @@
-n.d(t, { A: () => p }), n(896048);
+n.d(t, {
+    A: () => p,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -9,6 +12,7 @@ var r = n(627968),
     u = n(771273),
     d = n(182417),
     f = n(958315);
+
 function p(e) {
     let { className: t, slide: n, videoEntrySrc: a, videoLoopSrc: p } = e,
         _ = i.useRef(null),
@@ -53,7 +57,9 @@ function p(e) {
                 (0, r.jsx)(o.A, {
                     ref: _,
                     className: f.yt,
-                    style: { opacity: 0 },
+                    style: {
+                        opacity: 0,
+                    },
                     autoPlay: !m,
                     muted: !0,
                     playsInline: !0,
@@ -66,7 +72,9 @@ function p(e) {
                 (0, r.jsx)(o.A, {
                     ref: h,
                     className: f.YV,
-                    style: { opacity: 0 },
+                    style: {
+                        opacity: 0,
+                    },
                     muted: !0,
                     playsInline: !0,
                     loop: !0,

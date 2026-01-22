@@ -1,4 +1,6 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -14,6 +16,7 @@ var i = n(311907),
     _ = n(652215),
     h = n(985018),
     m = n(884269);
+
 function g(e, t, n) {
     return (
         t in e
@@ -27,6 +30,7 @@ function g(e, t, n) {
         e
     );
 }
+
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -43,6 +47,7 @@ function E(e) {
     }
     return e;
 }
+
 function b() {
     let {
             enabled: e,
@@ -66,7 +71,9 @@ function b() {
                             }),
                             (0, r.jsx)(a.Text, {
                                 variant: "text-sm/normal",
-                                children: h.intl.format(h.t["4rmZnx"], { streamkitURL: _.X7G.STREAMKIT }),
+                                children: h.intl.format(h.t["4rmZnx"], {
+                                    streamkitURL: _.X7G.STREAMKIT,
+                                }),
                             }),
                         ],
                     }),
@@ -89,10 +96,14 @@ function b() {
                 });
         },
         I = (e, t) => {
-            s.A.update({ [e]: t });
+            s.A.update({
+                [e]: t,
+            });
         },
         T = () => {
-            (0, f.openUserSettings)(u.X.KEYBINDS_PANEL, { section: _.nc_.KEYBINDS });
+            (0, f.openUserSettings)(u.X.KEYBINDS_PANEL, {
+                section: _.nc_.KEYBINDS,
+            });
         };
     return (0, r.jsx)(d.A, {
         title: h.intl.string(h.t.S5GfOW),
@@ -110,7 +121,9 @@ function b() {
                         children: [
                             (0, r.jsx)(a.dOG, {
                                 label: h.intl.string(h.t.p9ZAJZ),
-                                description: h.intl.format(h.t.MLVL2M, { onClick: T }),
+                                description: h.intl.format(h.t.MLVL2M, {
+                                    onClick: T,
+                                }),
                                 checked: e,
                                 onChange: (e) => I("enabled", e),
                             }),

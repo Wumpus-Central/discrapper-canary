@@ -7,4 +7,8 @@ var r = n(611256),
         n = e.length - (arguments.length - 1);
     return r(t, 1 + (n > 0 ? n : 0), !0);
 }),
-    i ? i(e.exports, "apply", { value: s }) : (e.exports.apply = s);
+    i
+        ? i(e.exports, "apply", {
+              value: s,
+          })
+        : (e.exports.apply = s);

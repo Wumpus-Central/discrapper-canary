@@ -1,4 +1,8 @@
-n.d(t, { A: () => k }), n(321073), n(896048);
+n.d(t, {
+    A: () => k,
+}),
+    n(321073),
+    n(896048);
 var r,
     i = n(735438),
     a = n.n(i),
@@ -15,6 +19,7 @@ var r,
     m = n(766864),
     g = n(980504),
     E = n(355097);
+
 function b(e, t, n) {
     return (
         t in e
@@ -28,6 +33,7 @@ function b(e, t, n) {
         e
     );
 }
+
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -44,6 +50,7 @@ function y(e) {
     }
     return e;
 }
+
 function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -56,6 +63,7 @@ function O(e, t) {
     }
     return n;
 }
+
 function A(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -68,19 +76,23 @@ function A(e, t) {
     );
 }
 let v = [],
-    S = new (o())({ max: g.E7 }),
+    S = new (o())({
+        max: g.E7,
+    }),
     I = new u.A({
         computeBonus: () => 100,
         lookupKey: (e) => _.A.getSoundById(e),
         afterCompute: () => {},
         numFrequentlyItems: g.SC,
     });
+
 function T(e) {
     let { sound: t, trigger: n } = e;
     if (!j()) return;
     let r = t.soundId.toString();
     n === h.Zm.SOUNDBOARD && R(r);
 }
+
 function C(e) {
     var t;
     let { soundId: n, userId: r } = e;
@@ -88,9 +100,11 @@ function C(e) {
     let i = n.toString();
     r !== (null == (t = f.default.getCurrentUser()) ? void 0 : t.id) && w(i) && N(i);
 }
+
 function N(e) {
     S.set(e, e);
 }
+
 function R(e) {
     I.track(e),
         v.push({
@@ -99,19 +113,27 @@ function R(e) {
         }),
         I.compute();
 }
+
 function w(e) {
     for (let t of _.A.getSounds().values()) if (null != t.find((t) => t.soundId.toString() === e)) return !0;
     return !1;
 }
+
 function P(e) {
-    return a().mapValues(e, (e) => A(y({}, e), { recentUses: e.recentUses.map(Number).filter((e) => e > 0) }));
+    return a().mapValues(e, (e) =>
+        A(y({}, e), {
+            recentUses: e.recentUses.map(Number).filter((e) => e > 0),
+        }),
+    );
 }
+
 function D() {
     var e;
     if (!j()) return;
     let t = null == (e = d.A.frecencyWithoutFetchingLatest.playedSoundFrecency) ? void 0 : e.playedSounds;
     I.overwriteHistory(P(null != t ? t : {}), v);
 }
+
 function x(e) {
     let {
         settings: { type: t },
@@ -119,12 +141,14 @@ function x(e) {
     } = e;
     j() && t === E.oD.FRECENCY_AND_FAVORITES_SETTINGS && n && (v = []);
 }
+
 function L() {
     return (0, p._)({
         location: "soundboard_event_store",
         autoTrackExposure: !1,
     }).canSeeRecentlyHeard;
 }
+
 function j() {
     return (0, m.YK)("soundboard_event_store");
 }

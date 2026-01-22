@@ -1,4 +1,6 @@
-n.d(t, { L: () => b });
+n.d(t, {
+    L: () => b,
+});
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -15,6 +17,7 @@ var f = n(657331),
     _ = n(427262),
     h = n(985018),
     m = n(32086);
+
 function g(e) {
     let { userId: t, count: n } = e,
         { analyticsLocations: d } = (0, c.Ay)(),
@@ -59,19 +62,24 @@ function g(e) {
                         (0, r.jsx)(s.Text, {
                             variant: "text-md/medium",
                             color: "text-default",
-                            children: h.intl.format(h.t["/MBjYF"], { count: n }),
+                            children: h.intl.format(h.t["/MBjYF"], {
+                                count: n,
+                            }),
                         }),
                     ],
                 }),
                 (0, r.jsx)(s.DUT, {
                     onClick: b,
                     className: m.Qz,
-                    children: (0, r.jsx)(s.ucK, { size: "xs" }),
+                    children: (0, r.jsx)(s.ucK, {
+                        size: "xs",
+                    }),
                 }),
             ],
         })
     );
 }
+
 function E(e) {
     let { className: t, userId: n, verification: a, index: o } = e,
         l = (0, u.tC)(a.timestamp),
@@ -87,7 +95,9 @@ function E(e) {
                     (0, r.jsx)(s.Text, {
                         variant: "text-sm/semibold",
                         color: "interactive-text-active",
-                        children: h.intl.format(h.t.N4qBBO, { index: o + 1 }),
+                        children: h.intl.format(h.t.N4qBBO, {
+                            index: o + 1,
+                        }),
                     }),
                     (0, r.jsx)(s.Text, {
                         variant: "text-sm/medium",
@@ -107,6 +117,7 @@ function E(e) {
         ],
     });
 }
+
 function b(e) {
     let { userId: t } = e,
         n = (0, d.k)(t);
@@ -127,7 +138,10 @@ function b(e) {
                                 index: a,
                                 verification: e,
                             }),
-                            a !== n.length - 1 && (0, r.jsx)("div", { className: m.yF }),
+                            a !== n.length - 1 &&
+                                (0, r.jsx)("div", {
+                                    className: m.yF,
+                                }),
                         ],
                     },
                     "".concat(a, "-").concat(e.timestamp),

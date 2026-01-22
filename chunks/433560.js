@@ -36,6 +36,7 @@ var i = n(627968),
     D = n(652215),
     R = n(985018),
     L = n(444638);
+
 function k(e) {
     let { participant: t } = e;
     return (0, i.jsx)(c.m_, {
@@ -58,6 +59,7 @@ function k(e) {
         }),
     });
 }
+
 function M(e) {
     let { participant: t } = e,
         n = t.user.id,
@@ -96,6 +98,7 @@ function M(e) {
         }),
     });
 }
+
 function V(e, t) {
     return (r) => {
         (0, C.YX)(D.uss.GO_LIVE, {
@@ -159,6 +162,7 @@ function V(e, t) {
             });
     };
 }
+
 function U(e) {
     let { hasActiveStream: t, participant: n, onEnablePin: r } = e,
         l = (0, v.Us)(),
@@ -171,7 +175,11 @@ function U(e) {
         { enabled: h } = (0, _.QC)("GoLiveTile");
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)("div", { className: a()(L.MI, { [L.te]: t }) }),
+            (0, i.jsx)("div", {
+                className: a()(L.MI, {
+                    [L.te]: t,
+                }),
+            }),
             !t &&
                 (0, i.jsx)("div", {
                     className: L.TP,
@@ -241,8 +249,13 @@ function U(e) {
                             t &&
                             (0, i.jsxs)(i.Fragment, {
                                 children: [
-                                    h && (0, i.jsx)(k, { participant: n }),
-                                    (0, i.jsx)(M, { participant: n }),
+                                    h &&
+                                        (0, i.jsx)(k, {
+                                            participant: n,
+                                        }),
+                                    (0, i.jsx)(M, {
+                                        participant: n,
+                                    }),
                                     (0, i.jsx)(c.m_, {
                                         text: R.intl.string(R.t["3D5yo/"]),
                                         children: (0, i.jsx)(u.DUT, {
@@ -295,7 +308,9 @@ let z = new Set([D.XYD.ENDED, D.XYD.FAILED, D.XYD.PAUSED]),
                                     onClick: () => {},
                                     onContextMenu: V(t, c),
                                     className: L.X$,
-                                    style: { transform: "scale(".concat(f, ")") },
+                                    style: {
+                                        transform: "scale(".concat(f, ")"),
+                                    },
                                     children: (0, i.jsx)(S.A, {
                                         participant: t,
                                         width: n,

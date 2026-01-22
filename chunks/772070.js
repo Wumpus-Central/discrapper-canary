@@ -12,10 +12,14 @@ e.exports = function (e) {
             begin: "\\b\\d+(\\.\\d+)?(e-?\\d+)?",
             relevance: 0,
         },
-        i = e.inherit(e.QUOTE_STRING_MODE, { illegal: null }),
+        i = e.inherit(e.QUOTE_STRING_MODE, {
+            illegal: null,
+        }),
         a = {
             className: "meta",
-            keywords: { keyword: "include use" },
+            keywords: {
+                keyword: "include use",
+            },
             begin: "include|use <",
             end: ">",
         },

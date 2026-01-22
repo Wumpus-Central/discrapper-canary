@@ -7,6 +7,7 @@ n.d(t, {
 var r = n(265690),
     i = n(121894),
     a = n(52133);
+
 function s(e, t, n) {
     return (
         t in e
@@ -20,6 +21,7 @@ function s(e, t, n) {
         e
     );
 }
+
 function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +38,7 @@ function o(e) {
     }
     return e;
 }
+
 function l(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -48,6 +51,7 @@ function l(e, t) {
     }
     return n;
 }
+
 function c(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -71,23 +75,30 @@ let u = {},
                     let a = r(null == (i = e.pollsByChannelId[t]) ? void 0 : i[n]);
                     return {
                         pollsByChannelId: c(o({}, e.pollsByChannelId), {
-                            [t]: c(o({}, e.pollsByChannelId[t]), { [n]: a }),
+                            [t]: c(o({}, e.pollsByChannelId[t]), {
+                                [n]: a,
+                            }),
                         }),
-                        pollsByMessageId: c(o({}, e.pollsByMessageId), { [n]: a }),
+                        pollsByMessageId: c(o({}, e.pollsByMessageId), {
+                            [n]: a,
+                        }),
                     };
                 });
             });
         },
     }));
+
 function f(e) {
     return d((t) => {
         var n;
         return null != (n = t.pollsByChannelId[e]) ? n : u;
     }, a.A);
 }
+
 function p(e, t, n) {
     d.getState().updatePollState(e, t, n);
 }
+
 function _(e, t) {
     var n;
     return null == (n = d.getState().pollsByChannelId[e]) ? void 0 : n[t];

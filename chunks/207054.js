@@ -1,4 +1,13 @@
-n.d(t, { A: () => u }), n(896048), n(693327), n(554719), n(680155), n(323874), n(14289), n(35956);
+n.d(t, {
+    A: () => u,
+}),
+    n(896048),
+    n(693327),
+    n(554719),
+    n(680155),
+    n(323874),
+    n(14289),
+    n(35956);
 var r = n(627968),
     i = n(64700),
     a = n(854284),
@@ -33,7 +42,9 @@ let u = (e) => {
             (async () => {
                 try {
                     let t = R.current,
-                        n = await fetch(t, { signal: e.signal }),
+                        n = await fetch(t, {
+                            signal: e.signal,
+                        }),
                         r = await n.blob();
                     if (e.signal.aborted) return;
                     t !== (null == v ? void 0 : v.src) && URL.revokeObjectURL(t),

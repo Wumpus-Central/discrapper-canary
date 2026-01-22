@@ -1,4 +1,7 @@
-n.d(t, { A: () => h }), n(938796);
+n.d(t, {
+    A: () => h,
+}),
+    n(938796);
 var r = n(627968),
     i = n(64700),
     l = n(241524),
@@ -15,6 +18,7 @@ var r = n(627968),
     g = n(921925),
     x = n(376747),
     j = n(985018);
+
 function h(e) {
     var t, n;
     let h,
@@ -37,16 +41,22 @@ function h(e) {
         I = (0, o.bg)(null != (n = null == E ? void 0 : E.flags) ? n : 0),
         R =
             null != T && T.benefits.length > 0
-                ? j.intl.formatToPlainString(j.t["+IQQVM"], { benefitCount: T.benefits.length })
+                ? j.intl.formatToPlainString(j.t["+IQQVM"], {
+                      benefitCount: T.benefits.length,
+                  })
                 : null;
     return (
         y
             ? C
                 ? (h = (0, r.jsx)(u.E, {
-                      title: j.intl.format(j.t.ea6tZr, { tierName: k }),
+                      title: j.intl.format(j.t.ea6tZr, {
+                          tierName: k,
+                      }),
                       subtitle:
                           null != T && T.benefits.length > 0
-                              ? j.intl.formatToPlainString(j.t.HNepft, { benefits: R })
+                              ? j.intl.formatToPlainString(j.t.HNepft, {
+                                    benefits: R,
+                                })
                               : null,
                       onConfirm: _,
                       confirmCta: j.intl.string(j.t.nlkywz),
@@ -57,11 +67,17 @@ function h(e) {
                                 icon: T.thumbnail,
                                 storeListingBenefits: T.benefits,
                                 application: N,
-                                title: j.intl.format(j.t["Q+qktS"], { tier: k }),
+                                title: j.intl.format(j.t["Q+qktS"], {
+                                    tier: k,
+                                }),
                                 subtitle: j.intl.string(j.t.ECKxXU),
                                 description: I
-                                    ? j.intl.format(j.t["MAtQk/"], { applicationName: null == N ? void 0 : N.name })
-                                    : j.intl.format(j.t.vHkMF4, { tier: k }),
+                                    ? j.intl.format(j.t["MAtQk/"], {
+                                          applicationName: null == N ? void 0 : N.name,
+                                      })
+                                    : j.intl.format(j.t.vHkMF4, {
+                                          tier: k,
+                                      }),
                             })
                           : (0, r.jsx)(f.A, {})),
                   (v = (0, r.jsx)(m.A, {
@@ -88,7 +104,10 @@ function h(e) {
                 (0, r.jsxs)(b.dZ, {
                     children: [(0, r.jsx)(g.A, {}), h],
                 }),
-                null != v && (0, r.jsx)(b.UX, { children: v }),
+                null != v &&
+                    (0, r.jsx)(b.UX, {
+                        children: v,
+                    }),
             ],
         })
     );

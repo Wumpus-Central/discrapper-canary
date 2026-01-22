@@ -1,4 +1,7 @@
-n.d(t, { Y: () => E }), n(896048);
+n.d(t, {
+    Y: () => E,
+}),
+    n(896048);
 var r,
     i,
     a = n(627968),
@@ -9,6 +12,7 @@ var r,
     u = n(158954),
     d = n(73939),
     f = n(539020);
+
 function p(e, t, n) {
     return (
         t in e
@@ -22,6 +26,7 @@ function p(e, t, n) {
         e
     );
 }
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -38,6 +43,7 @@ function _(e) {
     }
     return e;
 }
+
 function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -50,6 +56,7 @@ function h(e, t) {
     }
     return n;
 }
+
 function m(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -75,7 +82,10 @@ class g extends (r = s.PureComponent) {
         t.targetHeight !== this.state.targetHeight && this.props.setHeight(this.state.targetHeight);
     }
     componentWillAppear(e) {
-        this.setState({ animationState: 2 }), e();
+        this.setState({
+            animationState: 2,
+        }),
+            e();
     }
     componentDidAppear() {
         let { animationProgress: e, targetHeight: t } = this.state;
@@ -88,7 +98,9 @@ class g extends (r = s.PureComponent) {
     componentWillEnter(e) {
         let { duration: t } = this.props,
             { animationProgress: n } = this.state;
-        this.setState({ animationState: 0 }),
+        this.setState({
+            animationState: 0,
+        }),
             this.props.setHeight(this.state.targetHeight),
             c.A.timing(n, {
                 toValue: 2,
@@ -97,20 +109,26 @@ class g extends (r = s.PureComponent) {
             }).start(e);
     }
     componentDidEnter() {
-        this.setState({ animationState: 3 });
+        this.setState({
+            animationState: 3,
+        });
     }
     componentWillLeave(e) {
         let { animationProgress: t } = this.state,
             { duration: n, getDirection: r } = this.props;
         (this.direction = r()),
-            this.setState({ animationState: 1 }),
+            this.setState({
+                animationState: 1,
+            }),
             c.A.timing(t, {
                 toValue: 0,
                 duration: n,
             }).start(e);
     }
     componentDidLeave() {
-        this.setState({ animationState: 3 });
+        this.setState({
+            animationState: 3,
+        });
     }
     getMotionAnimation() {
         let { reducedMotion: e } = this.context;
@@ -196,7 +214,9 @@ class g extends (r = s.PureComponent) {
         return e
             ? (0, a.jsx)("div", {
                   ref: this._measureRef,
-                  className: l()(f.OD, t, { [l()(f.Mh, r)]: 3 === i }),
+                  className: l()(f.OD, t, {
+                      [l()(f.Mh, r)]: 3 === i,
+                  }),
                   children: (0, a.jsx)(c.A.div, {
                       className: l()(f.sP, n),
                       style: this.getAnimatedStyle(),
@@ -225,7 +245,10 @@ class g extends (r = s.PureComponent) {
             p(this, "_measureRef", s.createRef());
     }
 }
-p(g, "contextType", u.CZY), p(g, "defaultProps", { duration: 300 });
+p(g, "contextType", u.CZY),
+    p(g, "defaultProps", {
+        duration: 300,
+    });
 class E extends (i = s.Component) {
     componentDidMount() {
         this.setPrevSteps();

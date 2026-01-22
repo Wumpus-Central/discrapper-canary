@@ -20,10 +20,13 @@ let _ = (e) => {
     return (0, r.jsx)("img", {
         className: p.Kk,
         src: a,
-        alt: f.intl.formatToPlainString(f.t.g6KdFv, { fileType: i }),
+        alt: f.intl.formatToPlainString(f.t.g6KdFv, {
+            fileType: i,
+        }),
         title: i,
     });
 };
+
 function h(e) {
     let { channelId: t, file: n } = e,
         a = i.useMemo(() => {
@@ -32,7 +35,9 @@ function h(e) {
                 ? f.intl.string(f.t.jfKTes)
                 : 1 === e.length && null != e[0].filename
                   ? e[0].filename
-                  : f.intl.formatToPlainString(f.t.D0noUt, { count: e.length });
+                  : f.intl.formatToPlainString(f.t.D0noUt, {
+                        count: e.length,
+                    });
         }, [n.items]),
         s = i.useCallback(() => {
             u.A.cancel(t, n);
@@ -44,7 +49,9 @@ function h(e) {
         children: (0, r.jsxs)("div", {
             className: p.NJ,
             children: [
-                (0, r.jsx)(_, { filename: a }),
+                (0, r.jsx)(_, {
+                    filename: a,
+                }),
                 (0, r.jsxs)("div", {
                     className: p.Jg,
                     children: [
@@ -58,7 +65,7 @@ function h(e) {
                                 d
                                     ? (0, r.jsx)("div", {
                                           className: p.Ej,
-                                          children: "\u2014 ".concat(l().filesize(n.currentSize)),
+                                          children: "— ".concat(l().filesize(n.currentSize)),
                                       })
                                     : null,
                             ],
@@ -96,7 +103,9 @@ let m = (e) => {
             (0, r.jsxs)("div", {
                 className: p.NJ,
                 children: [
-                    (0, r.jsx)(_, { filename: i }),
+                    (0, r.jsx)(_, {
+                        filename: i,
+                    }),
                     (0, r.jsxs)("div", {
                         className: p.Jg,
                         children: [

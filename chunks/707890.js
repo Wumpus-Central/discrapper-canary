@@ -1,4 +1,6 @@
-n.d(t, { A: () => S }),
+n.d(t, {
+    A: () => S,
+}),
     n(896048),
     n(927092),
     n(212978),
@@ -29,6 +31,7 @@ let m = new Map(),
     h = new Map(),
     A = !1,
     y = null;
+
 function _() {
     return d.A.getAllActiveStreamKeys().reduce((e, t) => {
         let { ownerId: n } = (0, o.Iy)(t),
@@ -37,6 +40,7 @@ function _() {
         return h.set(t, l), !!r || e;
     }, !1);
 }
+
 function E() {
     var e;
     let t = null != (e = u.A.getUserIds()) ? e : new Set(),
@@ -50,6 +54,7 @@ function E() {
     let r = l !== A;
     return (A = l), r;
 }
+
 function v(e) {
     let { userId: t } = e;
     if (c.default.getId() === t) return !1;
@@ -67,6 +72,7 @@ function v(e) {
         r = E();
     return n || l || r;
 }
+
 function O() {
     m.clear(), h.clear(), (A = !1);
 }
@@ -113,7 +119,15 @@ let S = new x(s.h, {
     RTC_CONNECTION_ROSTER_MAP_UPDATE: function (e) {
         let { userIds: t } = e,
             n = c.default.getId(),
-            l = t.reduce((e, t) => (n === t ? e : !!v({ userId: t }) || e), !1),
+            l = t.reduce(
+                (e, t) =>
+                    n === t
+                        ? e
+                        : !!v({
+                              userId: t,
+                          }) || e,
+                !1,
+            ),
             r = _(),
             i = E();
         return l || r || i;

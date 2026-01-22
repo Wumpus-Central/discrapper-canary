@@ -1,4 +1,9 @@
-n.d(t, { A: () => x }), n(896048), n(638769), n(264879);
+n.d(t, {
+    A: () => x,
+}),
+    n(896048),
+    n(638769),
+    n(264879);
 var r = n(627968),
     l = n(64700),
     i = n(735438),
@@ -19,6 +24,7 @@ var r = n(627968),
     O = n(37411),
     j = n(985018),
     v = n(533848);
+
 function x(e) {
     let { channel: t } = e,
         i = (0, s.yK)([d.A, b.Ay, h.A], () => {
@@ -52,7 +58,15 @@ function x(e) {
                 }),
                 i
                     .slice(0, t.isForumLikeChannel() ? i.length : c)
-                    .map((e) => (0, r.jsx)(E, { thread: e }, e.id))
+                    .map((e) =>
+                        (0, r.jsx)(
+                            E,
+                            {
+                                thread: e,
+                            },
+                            e.id,
+                        ),
+                    )
                     .filter((e) => l.isValidElement(e))
                     .slice(0, c),
                 (0, r.jsx)(o.DUT, {
@@ -89,7 +103,12 @@ function x(e) {
                                                       });
                                               }
                                               return e;
-                                          })({ channel: t }, n),
+                                          })(
+                                              {
+                                                  channel: t,
+                                              },
+                                              n,
+                                          ),
                                       );
                               });
                     },
@@ -103,6 +122,7 @@ function x(e) {
         })
     );
 }
+
 function E(e) {
     let { thread: t } = e,
         n = (0, s.bG)([g.default], () => g.default.getUser(t.ownerId)),
@@ -137,7 +157,7 @@ function E(e) {
                 children: [
                     (0, r.jsx)("span", {
                         className: v.xE,
-                        children: "\u2022",
+                        children: "•",
                     }),
                     (0, f.aK)(l),
                 ],

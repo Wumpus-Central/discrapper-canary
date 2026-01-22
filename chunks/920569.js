@@ -1,4 +1,6 @@
-n.d(t, { z: () => s });
+n.d(t, {
+    z: () => s,
+});
 var r = n(242874),
     i = n(170887),
     a = n(788868);
@@ -36,7 +38,11 @@ let s = (e, t) => {
                     });
             break;
         case a.o2.STANDARD_BOX:
-            if ((0, i.R)({ location: "GiftAnimationData" }))
+            if (
+                (0, i.R)({
+                    location: "GiftAnimationData",
+                })
+            )
                 switch (t) {
                     case r.oA.IDLE:
                         s = () =>

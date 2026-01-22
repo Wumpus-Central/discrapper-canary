@@ -58,30 +58,39 @@ let i = [
         r.M.GUILD_TAG_AVAILABLE_COACHMARK_V2,
     ],
     c = [];
+
 function u(e) {
     return a.includes(e);
 }
+
 function d(e) {
     return i.includes(e);
 }
+
 function f(e) {
     return s.includes(e);
 }
+
 function p(e) {
     return u(e) || d(e) || f(e);
 }
+
 function _(e) {
     return !p(e);
 }
+
 function h(e) {
     return l.includes(e);
 }
+
 function m(e) {
     return c.includes(e);
 }
+
 function g(e) {
     return o.includes(e);
 }
+
 function E(e) {
     return h(e) || m(e) || g(e);
 }

@@ -1,4 +1,8 @@
-n.d(t, { Y: () => d }), n(228524), n(896048);
+n.d(t, {
+    Y: () => d,
+}),
+    n(228524),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(933832),
@@ -28,12 +32,17 @@ let d = {
                     } = e,
                     [b, y] = i.useState("option1"),
                     O = [a.A, s.x, o.q, l.Z, c.d],
-                    A = Array.from({ length: t }, (e, t) => ({
-                        value: "option".concat(t + 1),
-                        name: "Option ".concat(t + 1),
-                        description: g ? "This is a description for option ".concat(t + 1) : void 0,
-                        icon: E ? O[t % O.length] : void 0,
-                    }));
+                    A = Array.from(
+                        {
+                            length: t,
+                        },
+                        (e, t) => ({
+                            value: "option".concat(t + 1),
+                            name: "Option ".concat(t + 1),
+                            description: g ? "This is a description for option ".concat(t + 1) : void 0,
+                            icon: E ? O[t % O.length] : void 0,
+                        }),
+                    );
                 return (0, r.jsx)(u.$d, {
                     value: b,
                     onChange: (e) => {

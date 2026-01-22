@@ -1,10 +1,13 @@
-n.d(t, { G: () => c });
+n.d(t, {
+    G: () => c,
+});
 var r = n(311907),
     i = n(166403),
     a = n(927578),
     s = n(422936),
     o = n(234419),
     l = n(788868);
+
 function c(e) {
     let {
             defaultResponse: t,

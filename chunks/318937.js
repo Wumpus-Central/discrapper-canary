@@ -15,6 +15,7 @@ var l = n(158390),
     i = n(73153),
     a = n(134753),
     s = n(652215);
+
 function o(e, t, n, l, r) {
     i.h.dispatch({
         type: "SHARED_CANVAS_DRAW_LINE_POINT",
@@ -25,6 +26,7 @@ function o(e, t, n, l, r) {
         point: r,
     });
 }
+
 function c(e, t, n, l) {
     return r.Bo.post({
         url: s.Rsh.SHARED_CANVAS_LINES(e, n),
@@ -35,6 +37,7 @@ function c(e, t, n, l) {
         rejectWithError: !1,
     });
 }
+
 function u(e, t, n, l) {
     i.h.dispatch({
         type: "SHARED_CANVAS_UPDATE_LINE_POINTS",
@@ -44,13 +47,17 @@ function u(e, t, n, l) {
         streamerId: n,
     });
 }
+
 function d(e, t, n) {
     return r.Bo.post({
         url: s.Rsh.SHARED_CANVAS_EMOJI_HOSES(e, t),
-        body: { emoji_hose: n },
+        body: {
+            emoji_hose: n,
+        },
         rejectWithError: !1,
     });
 }
+
 function f(e, t, n) {
     r.Bo.del({
         url: s.Rsh.SHARED_CANVAS_EMOJI_HOSE(e, t, n),
@@ -58,6 +65,7 @@ function f(e, t, n) {
         rejectWithError: !0,
     });
 }
+
 function p(e, t) {
     (t.state = a.B.STOP),
         i.h.dispatch({
@@ -67,6 +75,7 @@ function p(e, t) {
             streamerId: e,
         });
 }
+
 function b(e, t, n) {
     i.h.dispatch({
         type: "SHARED_CANVAS_UPDATE_EMOJI_HOSE",
@@ -75,6 +84,7 @@ function b(e, t, n) {
         streamerId: n,
     });
 }
+
 function g(e, t) {
     i.h.dispatch({
         type: "SHARED_CANVAS_CLEAR_DRAWABLES",
@@ -82,12 +92,16 @@ function g(e, t) {
         streamerId: t,
     });
 }
+
 function m(e) {
     i.h.dispatch({
         type: "SHARED_CANVAS_SET_DRAW_MODE",
         drawMode: e,
     });
 }
+
 function h() {
-    i.h.dispatch({ type: "TOGGLE_OVERLAY_CANVAS" });
+    i.h.dispatch({
+        type: "TOGGLE_OVERLAY_CANVAS",
+    });
 }

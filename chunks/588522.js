@@ -3,6 +3,7 @@ n.d(t, {
     O: () => r,
 });
 let r = globalThis;
+
 function i(e, t, n) {
     let i = n || r,
         a = (i.__SENTRY__ = i.__SENTRY__ || {}),

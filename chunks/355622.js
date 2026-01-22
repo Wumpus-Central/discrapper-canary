@@ -5,6 +5,7 @@ n.d(t, {
 });
 var r = n(607399),
     i = n(31717);
+
 function a(e, t, n) {
     return (
         t in e
@@ -18,6 +19,7 @@ function a(e, t, n) {
         e
     );
 }
+
 function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,6 +36,7 @@ function s(e) {
     }
     return e;
 }
+
 function o(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -46,6 +49,7 @@ function o(e, t) {
     }
     return n;
 }
+
 function l(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -72,28 +76,42 @@ let d = {
             reactions: !0,
             mentionSuggestions: !0,
         },
-        commands: { enabled: !0 },
-        confetti: { button: !0 },
+        commands: {
+            enabled: !0,
+        },
+        confetti: {
+            button: !0,
+        },
         drafts: {
             type: i.C.ChannelMessage,
             commandType: i.C.SlashCommand,
             autoSave: !0,
         },
-        emojis: { button: !0 },
+        emojis: {
+            button: !0,
+        },
         gifs: {
             button: !0,
             allowSending: !0,
         },
-        gifts: { button: !0 },
-        permissions: { requireSendMessages: !0 },
+        gifts: {
+            button: !0,
+        },
+        permissions: {
+            requireSendMessages: !0,
+        },
         showThreadPromptOnReply: !0,
         stickers: {
             button: !0,
             allowSending: !0,
             autoSuggest: !0,
         },
-        soundmoji: { allowSending: !0 },
-        users: { allowMentioning: !0 },
+        soundmoji: {
+            allowSending: !0,
+        },
+        users: {
+            allowMentioning: !0,
+        },
         submit: {
             button: !0,
             ignorePreference: r.Fr,
@@ -102,7 +120,9 @@ let d = {
             useDisabledStylesOnSubmit: !0,
         },
         uploadLongMessages: !0,
-        upsellLongMessages: { iconOnly: !1 },
+        upsellLongMessages: {
+            iconOnly: !1,
+        },
         showCharacterCount: !0,
         sedReplace: !0,
         showSlowmodeIndicator: !0,
@@ -115,24 +135,34 @@ let d = {
             forceChatLayer: !0,
             mentionSuggestions: !0,
         },
-        confetti: { button: !0 },
+        confetti: {
+            button: !0,
+        },
         drafts: {
             type: i.C.ChannelMessage,
             autoSave: !0,
         },
-        emojis: { button: !0 },
+        emojis: {
+            button: !0,
+        },
         gifs: {
             button: !0,
             allowSending: !0,
         },
-        gifts: { button: !0 },
-        permissions: { requireSendMessages: !0 },
+        gifts: {
+            button: !0,
+        },
+        permissions: {
+            requireSendMessages: !0,
+        },
         showThreadPromptOnReply: !0,
         stickers: {
             button: !0,
             allowSending: !0,
         },
-        users: { allowMentioning: !0 },
+        users: {
+            allowMentioning: !0,
+        },
         submit: {
             button: !0,
             ignorePreference: r.Fr,
@@ -140,7 +170,9 @@ let d = {
             clearOnSubmit: !0,
             useDisabledStylesOnSubmit: !0,
         },
-        upsellLongMessages: { iconOnly: !1 },
+        upsellLongMessages: {
+            iconOnly: !1,
+        },
         showCharacterCount: !0,
         showSlowmodeIndicator: !0,
         showTypingIndicator: !0,
@@ -152,22 +184,36 @@ let d = {
             addReactionShortcut: !0,
             mentionSuggestions: !0,
         },
-        commands: { enabled: !0 },
-        confetti: { button: !0 },
+        commands: {
+            enabled: !0,
+        },
+        confetti: {
+            button: !0,
+        },
         disableAutoFocus: !0,
         drafts: {
             type: i.C.ChannelMessage,
             commandType: i.C.SlashCommand,
         },
-        emojis: { button: !0 },
-        gifs: { allowSending: !0 },
-        permissions: { requireSendMessages: !0 },
+        emojis: {
+            button: !0,
+        },
+        gifs: {
+            allowSending: !0,
+        },
+        permissions: {
+            requireSendMessages: !0,
+        },
         stickers: {
             allowSending: !0,
             autoSuggest: !0,
         },
-        soundmoji: { allowSending: !0 },
-        users: { allowMentioning: !0 },
+        soundmoji: {
+            allowSending: !0,
+        },
+        users: {
+            allowMentioning: !0,
+        },
         submit: {
             button: !0,
             ignorePreference: r.Fr,
@@ -177,28 +223,54 @@ let d = {
         },
         uploadLongMessages: !0,
         showCharacterCount: !0,
-        upsellLongMessages: { iconOnly: !0 },
+        upsellLongMessages: {
+            iconOnly: !0,
+        },
         showSlowmodeIndicator: !0,
         showTypingIndicator: !0,
     },
     _ = {
         analyticsName: "edit",
-        autocomplete: { mentionSuggestions: !0 },
-        drafts: { type: i.C.ChannelMessage },
-        emojis: { button: !0 },
-        soundmoji: { allowSending: !0 },
-        users: { allowMentioning: !0 },
-        expressionPicker: { onlyEmojis: !0 },
-        permissions: { requireSendMessages: !0 },
-        submit: { useDisabledStylesOnSubmit: !0 },
+        autocomplete: {
+            mentionSuggestions: !0,
+        },
+        drafts: {
+            type: i.C.ChannelMessage,
+        },
+        emojis: {
+            button: !0,
+        },
+        soundmoji: {
+            allowSending: !0,
+        },
+        users: {
+            allowMentioning: !0,
+        },
+        expressionPicker: {
+            onlyEmojis: !0,
+        },
+        permissions: {
+            requireSendMessages: !0,
+        },
+        submit: {
+            useDisabledStylesOnSubmit: !0,
+        },
         showCharacterCount: !0,
     },
     h = {
         analyticsName: "forum",
-        drafts: { type: i.C.ChannelMessage },
-        emojis: { button: !0 },
-        gifs: { allowSending: !0 },
-        permissions: { requireSendMessages: !0 },
+        drafts: {
+            type: i.C.ChannelMessage,
+        },
+        emojis: {
+            button: !0,
+        },
+        gifs: {
+            allowSending: !0,
+        },
+        permissions: {
+            requireSendMessages: !0,
+        },
         submit: {
             useDisabledStylesOnSubmit: !0,
             allowEmptyMessage: !0,
@@ -213,10 +285,18 @@ let d = {
     },
     m = {
         analyticsName: "voice_channel_status",
-        drafts: { type: i.C.ChannelMessage },
-        emojis: { button: !0 },
-        expressionPicker: { onlyEmojis: !0 },
-        permissions: { requireSendMessages: !1 },
+        drafts: {
+            type: i.C.ChannelMessage,
+        },
+        emojis: {
+            button: !0,
+        },
+        expressionPicker: {
+            onlyEmojis: !0,
+        },
+        permissions: {
+            requireSendMessages: !1,
+        },
         submit: {
             useDisabledStylesOnSubmit: !0,
             allowEmptyMessage: !0,
@@ -235,14 +315,30 @@ let d = {
     g = {
         analyticsName: "thread_creation",
         attachments: !0,
-        autocomplete: { mentionSuggestions: !0 },
-        drafts: { type: i.C.FirstThreadMessage },
-        emojis: { button: !0 },
-        gifs: { allowSending: !0 },
-        stickers: { allowSending: !0 },
-        soundmoji: { allowSending: !0 },
-        users: { allowMentioning: !0 },
-        permissions: { requireCreateTherads: !0 },
+        autocomplete: {
+            mentionSuggestions: !0,
+        },
+        drafts: {
+            type: i.C.FirstThreadMessage,
+        },
+        emojis: {
+            button: !0,
+        },
+        gifs: {
+            allowSending: !0,
+        },
+        stickers: {
+            allowSending: !0,
+        },
+        soundmoji: {
+            allowSending: !0,
+        },
+        users: {
+            allowMentioning: !0,
+        },
+        permissions: {
+            requireCreateTherads: !0,
+        },
         submit: {
             useDisabledStylesOnSubmit: !0,
             button: !0,
@@ -250,27 +346,51 @@ let d = {
         disableAutoFocus: !0,
         showCharacterCount: !0,
         hideAttachmentArea: !0,
-        upsellLongMessages: { iconOnly: !0 },
+        upsellLongMessages: {
+            iconOnly: !0,
+        },
     },
     E = l(s({}, d), {
         analyticsName: "create_announcement_post",
-        stickers: { allowSending: !1 },
+        stickers: {
+            allowSending: !1,
+        },
         gifts: {},
-        commands: { enabled: !1 },
-        submit: { disableEnterToSubmit: !0 },
+        commands: {
+            enabled: !1,
+        },
+        submit: {
+            disableEnterToSubmit: !0,
+        },
         disableAutoFocus: !0,
-        permissions: { requireSendMessages: !0 },
+        permissions: {
+            requireSendMessages: !0,
+        },
     }),
     b = {
         analyticsName: "create_forum_post",
         attachments: !0,
-        autocomplete: { mentionSuggestions: !0 },
-        drafts: { type: i.C.FirstThreadMessage },
-        gifs: { allowSending: !0 },
-        stickers: { allowSending: !0 },
-        soundmoji: { allowSending: !0 },
-        users: { allowMentioning: !0 },
-        permissions: { requireSendMessages: !0 },
+        autocomplete: {
+            mentionSuggestions: !0,
+        },
+        drafts: {
+            type: i.C.FirstThreadMessage,
+        },
+        gifs: {
+            allowSending: !0,
+        },
+        stickers: {
+            allowSending: !0,
+        },
+        soundmoji: {
+            allowSending: !0,
+        },
+        users: {
+            allowMentioning: !0,
+        },
+        permissions: {
+            requireSendMessages: !0,
+        },
         submit: {
             useDisabledStylesOnSubmit: !0,
             disableEnterToSubmit: !0,
@@ -284,10 +404,18 @@ let d = {
     y = {
         analyticsName: "create_poll",
         attachments: !0,
-        drafts: { type: i.C.ChannelMessage },
-        emojis: { button: !0 },
-        gifs: { allowSending: !0 },
-        permissions: { requireSendMessages: !0 },
+        drafts: {
+            type: i.C.ChannelMessage,
+        },
+        emojis: {
+            button: !0,
+        },
+        gifs: {
+            allowSending: !0,
+        },
+        permissions: {
+            requireSendMessages: !0,
+        },
         submit: {
             useDisabledStylesOnSubmit: !0,
             disableEnterToSubmit: !0,
@@ -295,10 +423,18 @@ let d = {
     },
     O = {
         analyticsName: "user_profile",
-        drafts: { type: i.C.ChannelMessage },
-        emojis: { button: !0 },
-        permissions: { requireSendMessages: !1 },
-        users: { allowMentioning: !0 },
+        drafts: {
+            type: i.C.ChannelMessage,
+        },
+        emojis: {
+            button: !0,
+        },
+        permissions: {
+            requireSendMessages: !1,
+        },
+        users: {
+            allowMentioning: !0,
+        },
         autocomplete: {
             alwaysUseLayer: !0,
             small: !0,
@@ -315,9 +451,15 @@ let d = {
         OVERLAY: f,
         OVERLAY_INLINE_REPLY: {
             analyticsName: "overlay_inline_reply",
-            drafts: { type: i.C.ChannelMessage },
-            permissions: { requireSendMessages: !0 },
-            users: { allowMentioning: !0 },
+            drafts: {
+                type: i.C.ChannelMessage,
+            },
+            permissions: {
+                requireSendMessages: !0,
+            },
+            users: {
+                allowMentioning: !0,
+            },
             autocomplete: {
                 alwaysUseLayer: !0,
                 small: !0,
@@ -338,10 +480,18 @@ let d = {
         USER_PROFILE: O,
         USER_PROFILE_REPLY: {
             analyticsName: "user_profile_reply",
-            drafts: { type: i.C.ChannelMessage },
-            emojis: { button: !0 },
-            permissions: { requireSendMessages: !1 },
-            users: { allowMentioning: !0 },
+            drafts: {
+                type: i.C.ChannelMessage,
+            },
+            emojis: {
+                button: !0,
+            },
+            permissions: {
+                requireSendMessages: !1,
+            },
+            users: {
+                allowMentioning: !0,
+            },
             autocomplete: {
                 alwaysUseLayer: !0,
                 small: !0,
@@ -354,9 +504,15 @@ let d = {
         },
         PROFILE_BIO_INPUT: {
             analyticsName: "profile_bio_input",
-            drafts: { type: i.C.ChannelMessage },
-            emojis: { button: !0 },
-            permissions: { requireSendMessages: !0 },
+            drafts: {
+                type: i.C.ChannelMessage,
+            },
+            emojis: {
+                button: !0,
+            },
+            permissions: {
+                requireSendMessages: !0,
+            },
             submit: {
                 useDisabledStylesOnSubmit: !0,
                 disableEnterToSubmit: !0,
@@ -366,9 +522,13 @@ let d = {
         },
         CUSTOM_GIFT: {
             analyticsName: "custom_gift_type",
-            drafts: { type: i.C.ChannelMessage },
+            drafts: {
+                type: i.C.ChannelMessage,
+            },
             emojis: {},
-            permissions: { requireSendMessages: !0 },
+            permissions: {
+                requireSendMessages: !0,
+            },
             submit: {
                 useDisabledStylesOnSubmit: !0,
                 disableEnterToSubmit: !0,
@@ -378,8 +538,12 @@ let d = {
         },
         RULES_INPUT: {
             analyticsName: "rules_input",
-            drafts: { type: i.C.ChannelMessage },
-            permissions: { requireSendMessages: !1 },
+            drafts: {
+                type: i.C.ChannelMessage,
+            },
+            permissions: {
+                requireSendMessages: !1,
+            },
             autocomplete: {
                 alwaysUseLayer: !0,
                 small: !0,
@@ -393,8 +557,12 @@ let d = {
         CREATE_POLL: y,
         FORUM_CHANNEL_GUIDELINES: {
             analyticsName: "forum_channel_guidelines",
-            drafts: { type: i.C.ChannelMessage },
-            permissions: { requireSendMessages: !1 },
+            drafts: {
+                type: i.C.ChannelMessage,
+            },
+            permissions: {
+                requireSendMessages: !1,
+            },
             submit: {
                 useDisabledStylesOnSubmit: !0,
                 disableEnterToSubmit: !0,
@@ -408,8 +576,12 @@ let d = {
         },
         CHANNEL_TOPIC: {
             analyticsName: "channel_topic",
-            drafts: { type: i.C.ChannelMessage },
-            permissions: { requireSendMessages: !1 },
+            drafts: {
+                type: i.C.ChannelMessage,
+            },
+            permissions: {
+                requireSendMessages: !1,
+            },
             submit: {
                 useDisabledStylesOnSubmit: !0,
                 disableEnterToSubmit: !0,
@@ -428,9 +600,15 @@ let d = {
         },
         ATOMIC_REACTOR_REPLY_INPUT: {
             analyticsName: "atomic_reator_reply_input",
-            drafts: { type: i.C.ChannelMessage },
-            permissions: { requireSendMessages: !0 },
-            users: { allowMentioning: !0 },
+            drafts: {
+                type: i.C.ChannelMessage,
+            },
+            permissions: {
+                requireSendMessages: !0,
+            },
+            users: {
+                allowMentioning: !0,
+            },
             submit: {
                 useDisabledStylesOnSubmit: !0,
                 disableEnterToSubmit: !0,
@@ -441,12 +619,24 @@ let d = {
         },
         FORWARD_MESSAGE_INPUT: {
             analyticsName: "forward_message_input",
-            drafts: { type: i.C.ChannelMessage },
-            emojis: { button: !0 },
-            soundmoji: { allowSending: !0 },
-            permissions: { requireSendMessages: !0 },
-            submit: { useDisabledStylesOnSubmit: !0 },
-            users: { allowMentioning: !0 },
+            drafts: {
+                type: i.C.ChannelMessage,
+            },
+            emojis: {
+                button: !0,
+            },
+            soundmoji: {
+                allowSending: !0,
+            },
+            permissions: {
+                requireSendMessages: !0,
+            },
+            submit: {
+                useDisabledStylesOnSubmit: !0,
+            },
+            users: {
+                allowMentioning: !0,
+            },
             autocomplete: {
                 alwaysUseLayer: !0,
                 small: !0,
@@ -458,12 +648,24 @@ let d = {
         },
         SHARE_CUSTOM_CLIENT_THEME_INPUT: {
             analyticsName: "share_custom_client_theme_input",
-            drafts: { type: i.C.ChannelMessage },
-            emojis: { button: !0 },
-            soundmoji: { allowSending: !0 },
-            permissions: { requireSendMessages: !0 },
-            submit: { useDisabledStylesOnSubmit: !0 },
-            users: { allowMentioning: !0 },
+            drafts: {
+                type: i.C.ChannelMessage,
+            },
+            emojis: {
+                button: !0,
+            },
+            soundmoji: {
+                allowSending: !0,
+            },
+            permissions: {
+                requireSendMessages: !0,
+            },
+            submit: {
+                useDisabledStylesOnSubmit: !0,
+            },
+            users: {
+                allowMentioning: !0,
+            },
             autocomplete: {
                 alwaysUseLayer: !0,
                 small: !0,
@@ -480,21 +682,33 @@ let d = {
                 forceChatLayer: !0,
                 reactions: !0,
             },
-            commands: { enabled: !1 },
-            confetti: { button: !1 },
+            commands: {
+                enabled: !1,
+            },
+            confetti: {
+                button: !1,
+            },
             drafts: {
                 type: i.C.ChannelMessage,
                 commandType: i.C.SlashCommand,
                 autoSave: !1,
             },
-            emojis: { button: !0 },
+            emojis: {
+                button: !0,
+            },
             gifs: void 0,
             gifts: void 0,
-            permissions: { requireSendMessages: !0 },
+            permissions: {
+                requireSendMessages: !0,
+            },
             showThreadPromptOnReply: !1,
             stickers: void 0,
-            soundmoji: { allowSending: !1 },
-            users: { allowMentioning: !0 },
+            soundmoji: {
+                allowSending: !1,
+            },
+            users: {
+                allowMentioning: !0,
+            },
             submit: {
                 button: !0,
                 ignorePreference: r.Fr,
@@ -503,7 +717,9 @@ let d = {
                 useDisabledStylesOnSubmit: !0,
             },
             uploadLongMessages: !0,
-            upsellLongMessages: { iconOnly: !1 },
+            upsellLongMessages: {
+                iconOnly: !1,
+            },
             showCharacterCount: !0,
             sedReplace: !1,
             showSlowmodeIndicator: !0,

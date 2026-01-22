@@ -1,4 +1,6 @@
-e.d(n, { A: () => a });
+e.d(n, {
+    A: () => a,
+});
 var t = e(385987);
 let a = {
     date: (0, t.A)({
@@ -20,7 +22,9 @@ let a = {
         defaultWidth: "full",
     }),
     dateTime: (0, t.A)({
-        formats: { any: "{{date}}, {{time}}" },
+        formats: {
+            any: "{{date}}, {{time}}",
+        },
         defaultWidth: "any",
     }),
 };

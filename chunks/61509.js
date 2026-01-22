@@ -1,4 +1,10 @@
-n.d(t, { A: () => eS }), n(228524), n(896048), n(321073), n(938796);
+n.d(t, {
+    A: () => eS,
+}),
+    n(228524),
+    n(896048),
+    n(321073),
+    n(938796);
 var r,
     i = n(627968),
     a = n(64700),
@@ -56,6 +62,7 @@ var r,
     er = n(818348),
     ei = n(985018),
     ea = n(124953);
+
 function es(e, t, n) {
     return (
         t in e
@@ -69,6 +76,7 @@ function es(e, t, n) {
         e
     );
 }
+
 function eo(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -85,6 +93,7 @@ function eo(e) {
     }
     return e;
 }
+
 function el(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -97,6 +106,7 @@ function el(e, t) {
     }
     return n;
 }
+
 function ec(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -122,10 +132,18 @@ let eu = 14,
             className: ea.mg,
             children: (0, i.jsxs)(v.A, {
                 justify: v.A.Justify.BETWEEN,
-                children: [(0, i.jsx)("div", { children: t }), (0, i.jsx)("div", { children: n })],
+                children: [
+                    (0, i.jsx)("div", {
+                        children: t,
+                    }),
+                    (0, i.jsx)("div", {
+                        children: n,
+                    }),
+                ],
             }),
         });
     };
+
 function eb(e) {
     let { value: t, copyText: n, copyFeedbackText: r } = e,
         [s, o] = a.useState(!1),
@@ -159,13 +177,23 @@ let ey = (e) => {
         className: ea.Iu,
         children: (0, i.jsxs)(v.A, {
             justify: v.A.Justify.BETWEEN,
-            children: [(0, i.jsx)("div", { children: t }), (0, i.jsx)("div", { children: n })],
+            children: [
+                (0, i.jsx)("div", {
+                    children: t,
+                }),
+                (0, i.jsx)("div", {
+                    children: n,
+                }),
+            ],
         }),
     });
 };
+
 function eO(e) {
     let { guildId: t, guildProductListingId: n } = e,
-        r = (0, I.Qi)(t, n, { requireCurrentGuild: !1 }),
+        r = (0, I.Qi)(t, n, {
+            requireCurrentGuild: !1,
+        }),
         s = (0, C.z)(r),
         o = (0, p.bG)([B.A], () => B.A.getGuild(t)),
         l =
@@ -196,10 +224,13 @@ function eO(e) {
         ],
     });
 }
+
 function eA(e) {
     var t, n;
     let { guildId: r, guildProductListingId: a } = e,
-        s = (0, I.Qi)(r, a, { requireCurrentGuild: !1 }),
+        s = (0, I.Qi)(r, a, {
+            requireCurrentGuild: !1,
+        }),
         o = (0, p.bG)([T.A], () => T.A.getGuildProductFetchState(a) === T.e.FETCHING),
         l = null == s ? void 0 : s.role_id,
         c = (0, p.bG)([F.A], () => (null != l ? F.A.getRole(r, l) : void 0), [r, l]),
@@ -233,14 +264,19 @@ function eA(e) {
                     f &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [
-                                d && (0, i.jsx)("div", { className: ea.yF }),
+                                d &&
+                                    (0, i.jsx)("div", {
+                                        className: ea.yF,
+                                    }),
                                 (0, i.jsx)(m.Text, {
                                     variant: "text-xs/semibold",
                                     color: "text-default",
                                     className: ea.yE,
                                     children: ei.intl.string(ei.t.gWBNet),
                                 }),
-                                (0, i.jsx)(N.A, { role: c }),
+                                (0, i.jsx)(N.A, {
+                                    role: c,
+                                }),
                             ],
                         }),
                 ],
@@ -354,7 +390,9 @@ class ev extends (r = a.PureComponent) {
             children: (0, i.jsxs)("div", {
                 className: ea.bx,
                 children: [
-                    (0, i.jsx)("div", { children: ei.intl.string(ei.t["UQim+r"]) }),
+                    (0, i.jsx)("div", {
+                        children: ei.intl.string(ei.t["UQim+r"]),
+                    }),
                     (0, i.jsx)(eb, {
                         value: e.id,
                         copyText: ei.intl.string(ei.t["Mdk9+A"]),
@@ -436,7 +474,9 @@ class ev extends (r = a.PureComponent) {
     }
     renderInvoiceDownload() {
         let { payment: e } = this.props;
-        return (0, i.jsx)(A.A, { payment: e });
+        return (0, i.jsx)(A.A, {
+            payment: e,
+        });
     }
     renderAdditionalGameItemDetails() {
         var e, t, n;
@@ -460,8 +500,12 @@ class ev extends (r = a.PureComponent) {
                           className: ea.iL,
                           children:
                               null != r
-                                  ? ei.intl.format(ei.t.Q1K9eg, { username: J.Ay.getName(r) })
-                                  : ei.intl.format(ei.t.IBtGwC, { applicationName: null == l ? void 0 : l.name }),
+                                  ? ei.intl.format(ei.t.Q1K9eg, {
+                                        username: J.Ay.getName(r),
+                                    })
+                                  : ei.intl.format(ei.t.IBtGwC, {
+                                        applicationName: null == l ? void 0 : l.name,
+                                    }),
                       }),
                   ],
               })
@@ -476,7 +520,9 @@ class ev extends (r = a.PureComponent) {
                             className: ea.iL,
                             children:
                                 null != r
-                                    ? ei.intl.format(ei.t.vfUW65, { username: J.Ay.getName(r) })
+                                    ? ei.intl.format(ei.t.vfUW65, {
+                                          username: J.Ay.getName(r),
+                                      })
                                     : ei.intl.string(ei.t["18wIqp"]),
                         }),
                         null == r &&
@@ -486,7 +532,9 @@ class ev extends (r = a.PureComponent) {
                                     variant: "primary",
                                     text: ei.intl.string(ei.t["jcSP+g"]),
                                     onClick: () =>
-                                        (0, G.openUserSettings)(k.X.GIFT_PANEL, { section: et.nc_.INVENTORY }),
+                                        (0, G.openUserSettings)(k.X.GIFT_PANEL, {
+                                            section: et.nc_.INVENTORY,
+                                        }),
                                 }),
                             }),
                     ],
@@ -566,7 +614,9 @@ class ev extends (r = a.PureComponent) {
             l = this.isPremium ? ed : eu;
         return (
             (e = r.includes("SKU_TYPE")
-                ? ei.intl.format(ei.t["5lvoVS"], { supportURL: o })
+                ? ei.intl.format(ei.t["5lvoVS"], {
+                      supportURL: o,
+                  })
                 : s
                   ? n.isPremiumSubscription || n.isPremiumGuildSubscription
                       ? ei.intl.format(ei.t.EPYteX, {
@@ -586,9 +636,13 @@ class ev extends (r = a.PureComponent) {
                   : n.isCollectible
                     ? ei.intl.string(ei.t.s9TZM1)
                     : n.isGift
-                      ? ei.intl.formatToPlainString(ei.t.owlOWc, { dateLimit: l })
+                      ? ei.intl.formatToPlainString(ei.t.owlOWc, {
+                            dateLimit: l,
+                        })
                       : n.isPremiumSubscription || n.isPremiumGuildSubscription
-                        ? ei.intl.formatToPlainString(ei.t.dk7vyL, { dateLimit: l })
+                        ? ei.intl.formatToPlainString(ei.t.dk7vyL, {
+                              dateLimit: l,
+                          })
                         : ei.intl.formatToPlainString(ei.t.s4Kk0C, {
                               dateLimit: l,
                               playtimeLimit: ef,
@@ -601,7 +655,12 @@ class ev extends (r = a.PureComponent) {
                     }),
                     (0, i.jsxs)("div", {
                         className: ea.iL,
-                        children: [(0, i.jsx)("div", { children: e }), this.renderRefundActions(r)],
+                        children: [
+                            (0, i.jsx)("div", {
+                                children: e,
+                            }),
+                            this.renderRefundActions(r),
+                        ],
                     }),
                 ],
             })
@@ -624,7 +683,10 @@ class ev extends (r = a.PureComponent) {
                                 className: ea.xb,
                                 color: "currentColor",
                             }),
-                            null != n && (0, i.jsx)("div", { children: n }),
+                            null != n &&
+                                (0, i.jsx)("div", {
+                                    children: n,
+                                }),
                         ],
                     }),
                 ],
@@ -646,7 +708,9 @@ class ev extends (r = a.PureComponent) {
                         this.renderRefundCriteria(
                             ei.intl.string(ei.t.H0RNz4),
                             r,
-                            ei.intl.formatToPlainString(ei.t["7dtXa/"], { daysSincePurchase: this.daysSincePurchase }),
+                            ei.intl.formatToPlainString(ei.t["7dtXa/"], {
+                                daysSincePurchase: this.daysSincePurchase,
+                            }),
                         ),
                 }),
                 (0, i.jsx)(m.MzZ, {
@@ -678,13 +742,22 @@ class ev extends (r = a.PureComponent) {
             else if (p.type === et.rzx.GUILD) {
                 if (null != u) {
                     let e = u.interval === en.WT.YEAR ? ei.t.V6UFQM : ei.t["6oq128"];
-                    n.push(ei.intl.format(e, { planName: u.name })), (a = u.skuId);
+                    n.push(
+                        ei.intl.format(e, {
+                            planName: u.name,
+                        }),
+                    ),
+                        (a = u.skuId);
                 }
             } else
                 p.type === et.rzx.APPLICATION &&
                     (null != u && (a = u.skuId),
                     null != s
-                        ? n.push(ei.intl.formatToPlainString(ei.t["0wL/VI"], { tier: null == f ? void 0 : f.name }))
+                        ? n.push(
+                              ei.intl.formatToPlainString(ei.t["0wL/VI"], {
+                                  tier: null == f ? void 0 : f.name,
+                              }),
+                          )
                         : n.push(ei.intl.string(ei.t["9czSYu"])));
             (t = 0 !== n.length ? n.join(", ") : r.description),
                 (e = (0, i.jsx)(S.A, {
@@ -765,7 +838,13 @@ class ev extends (r = a.PureComponent) {
                       E,
                       (0, i.jsxs)("div", {
                           className: ea.h_,
-                          children: [e, (0, i.jsx)("div", { children: t }), b],
+                          children: [
+                              e,
+                              (0, i.jsx)("div", {
+                                  children: t,
+                              }),
+                              b,
+                          ],
                       }),
                   ],
               });
@@ -776,7 +855,9 @@ class ev extends (r = a.PureComponent) {
         return e.isGuildProductPurchase
             ? (0, i.jsxs)(i.Fragment, {
                   children: [
-                      (0, i.jsx)("div", { className: ea.ts }),
+                      (0, i.jsx)("div", {
+                          className: ea.ts,
+                      }),
                       e.isSoftDeletedProduct
                           ? (0, i.jsx)(m.po8, {
                                 messageType: m.YCn.WARNING,
@@ -829,8 +910,12 @@ class ev extends (r = a.PureComponent) {
                             {
                                 onClick: this.handleExpandInfo,
                                 "data-expanded": r,
-                                className: o()(ea.Ji, t, { [ea.oE]: n }),
-                                focusProps: { offset: 4 },
+                                className: o()(ea.Ji, t, {
+                                    [ea.oE]: n,
+                                }),
+                                focusProps: {
+                                    offset: 4,
+                                },
                             },
                             e,
                         ),
@@ -861,7 +946,9 @@ class ev extends (r = a.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            es(this, "state", { expanded: !1 }),
+            es(this, "state", {
+                expanded: !1,
+            }),
             es(this, "refundRules", [
                 {
                     rule: "PURCHASE_DATE",
@@ -933,10 +1020,13 @@ class ev extends (r = a.PureComponent) {
                 },
             ]),
             es(this, "handleExpandInfo", () => {
-                this.setState({ expanded: !this.state.expanded });
+                this.setState({
+                    expanded: !this.state.expanded,
+                });
             });
     }
 }
+
 function eS(e) {
     var t, n;
     let { payment: r, locale: s, compactMode: o, className: l } = e,
@@ -1006,4 +1096,6 @@ function eS(e) {
         hasLinkedToApplication: g,
     });
 }
-es(ev, "defaultProps", { compactMode: !1 });
+es(ev, "defaultProps", {
+    compactMode: !1,
+});

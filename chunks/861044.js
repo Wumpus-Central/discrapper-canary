@@ -1,4 +1,6 @@
-n.d(t, { A: () => E });
+n.d(t, {
+    A: () => E,
+});
 var r = n(627968);
 n(64700);
 var i = n(299619),
@@ -17,6 +19,7 @@ var i = n(299619),
     m = n(123406),
     b = n(844636),
     _ = n(966508);
+
 function E(e) {
     var t, n;
     let { markAsDismissed: E } = e,
@@ -50,7 +53,10 @@ function E(e) {
                 }
                 return e;
             })({}, O)),
-            (n = n = { backgroundOverlayColor: O.primaryColor }),
+            (n = n =
+                {
+                    backgroundOverlayColor: O.primaryColor,
+                }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                 : (function (e, t) {
@@ -89,22 +95,30 @@ function E(e) {
                         children: [
                             (0, r.jsx)(a.Text, {
                                 variant: "display-sm",
-                                style: { color: y },
+                                style: {
+                                    color: y,
+                                },
                                 className: m.Vy,
                                 children: g.intl.string(A.default["CdU/PF"]),
                             }),
                             (0, r.jsx)(a.Text, {
                                 variant: "text-md/medium",
-                                style: { color: y },
+                                style: {
+                                    color: y,
+                                },
                                 children: g.intl.string(A.default["M/LvW0"]),
                             }),
                             (0, r.jsx)(a.DUT, {
                                 className: m.r,
                                 onClick: () => E(h.i.DISMISS),
-                                style: { color: y },
+                                style: {
+                                    color: y,
+                                },
                                 children: (0, r.jsx)(a.Text, {
                                     variant: "text-xxs/normal",
-                                    style: { color: y },
+                                    style: {
+                                        color: y,
+                                    },
                                     children: g.intl.string(g.t.WAI6xu),
                                 }),
                             }),

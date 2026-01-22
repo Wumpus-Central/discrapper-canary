@@ -1,5 +1,8 @@
-l.d(t, { S: () => i });
+l.d(t, {
+    S: () => i,
+});
 var n = l(353640);
+
 function r(e) {
     for (var t = 1; t < arguments.length; t++) {
         var l = null != arguments[t] ? arguments[t] : {},
@@ -25,6 +28,7 @@ function r(e) {
     }
     return e;
 }
+
 function s(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -55,16 +59,28 @@ let a = {
         s(r({}, a), {
             onSetResponse: (t) => {
                 let l = Math.floor(t.pageOffset / t.pageLimit) + 1;
-                e(s(r({}, t), { currentPage: l }));
+                e(
+                    s(r({}, t), {
+                        currentPage: l,
+                    }),
+                );
             },
             setSearchError: (t) => {
-                e(s(r({}, a), { searchError: t }));
+                e(
+                    s(r({}, a), {
+                        searchError: t,
+                    }),
+                );
             },
             setIsFetchingResults: (t) => {
-                e({ isFetchingResults: t });
+                e({
+                    isFetchingResults: t,
+                });
             },
             clearError: () => {
-                e({ searchError: null });
+                e({
+                    searchError: null,
+                });
             },
             clear: () => {
                 e(r({}, a));

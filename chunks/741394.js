@@ -3,6 +3,7 @@ function r(e, t) {
         r = "" !== n[n.length - 1] ? n[n.length - 1] : e;
     return null != t && r.endsWith(t) && (r = r.slice(0, -t.length)), r;
 }
+
 function i(e) {
     let t = r(e),
         n = t.lastIndexOf(".");

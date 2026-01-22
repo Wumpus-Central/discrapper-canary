@@ -1,8 +1,12 @@
-s.r(e), s.d(e, { default: () => u });
+s.r(e),
+    s.d(e, {
+        default: () => u,
+    });
 var l = s(627968);
 s(64700);
 var r = s(366523),
     n = s(706522);
+
 function u(a) {
     var e;
     let { imageUrl: s, backgroundImageUrl: u, altText: d, customClassNames: o } = a;

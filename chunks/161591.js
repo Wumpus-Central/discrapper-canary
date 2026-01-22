@@ -3,4 +3,6 @@ function r(e, t) {
     for (let n = 0; n < t.length && n < e.length; n++) if (!Object.is(e[n], t[n])) return !1;
     return !0;
 }
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});

@@ -1,4 +1,6 @@
-r.d(e, { default: () => b });
+r.d(e, {
+    default: () => b,
+});
 var n = r(627968);
 r(64700);
 var o = r(158954),
@@ -9,6 +11,7 @@ var o = r(158954),
     a = r(341915),
     u = r(73473),
     p = r(985018);
+
 function O(t) {
     let { transitionState: e, onClose: r, questEnrollmentBlockedUntil: l } = t,
         { hours: s, minutes: a, seconds: u } = (0, i.A)(l),
@@ -36,12 +39,15 @@ function O(t) {
                 }),
                 (0, n.jsx)(c.Text, {
                     variant: "text-md/normal",
-                    children: p.intl.formatToPlainString(p.t["+5XVH+"], { countdownString: y }),
+                    children: p.intl.formatToPlainString(p.t["+5XVH+"], {
+                        countdownString: y,
+                    }),
                 }),
             ],
         }),
     });
 }
+
 function b(t) {
     let { onClose: e, quest: r, sourceQuestContent: o } = t,
         c = (function (t, e) {

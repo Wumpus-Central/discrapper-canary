@@ -1,7 +1,10 @@
-n.d(t, { V: () => s });
+n.d(t, {
+    V: () => s,
+});
 var r = n(562465),
     i = n(73153),
     a = n(652215);
+
 function s(e) {
     return (
         i.h.dispatch({

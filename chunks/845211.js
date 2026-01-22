@@ -1,4 +1,7 @@
-n.d(t, { A: () => p }), n(667532);
+n.d(t, {
+    A: () => p,
+}),
+    n(667532);
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -9,6 +12,7 @@ var r = n(627968),
     u = n(383501),
     d = n(50400),
     f = n(985018);
+
 function p() {
     (0, i.bG)([o.A], () => o.A.getPrivateChannelsVersion());
     let e = o.A.getMutablePrivateChannels(),
@@ -19,11 +23,28 @@ function p() {
         })),
         h = t.map((t) => {
             let n = e[t];
-            return null == n || n.id === p ? null : (0, r.jsx)(d.A, { channel: n }, n.id);
+            return null == n || n.id === p
+                ? null
+                : (0, r.jsx)(
+                      d.A,
+                      {
+                          channel: n,
+                      },
+                      n.id,
+                  );
         }),
         b = null == n && null != p ? e[p] : null;
     return (
-        null != b && h.unshift((0, r.jsx)(d.A, { channel: b }, b.id)),
+        null != b &&
+            h.unshift(
+                (0, r.jsx)(
+                    d.A,
+                    {
+                        channel: b,
+                    },
+                    b.id,
+                ),
+            ),
         (0, r.jsx)(s.BJc, {
             id: "guild-list-unread-dms",
             role: "group",

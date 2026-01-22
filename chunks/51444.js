@@ -1,4 +1,6 @@
-a.d(t, { default: () => f });
+a.d(t, {
+    default: () => f,
+});
 var n = a(627968),
     l = a(64700),
     r = a(311907),
@@ -13,6 +15,7 @@ var n = a(627968),
 a(392164);
 var g = a(652215),
     m = a(985018);
+
 function f(e) {
     var t, a;
     let { onSelect: f, onClose: b } = e,
@@ -43,11 +46,16 @@ function f(e) {
             return null != t && (0, v.ZO)(t) ? t : null;
         }),
         S = null != (t = null == A || null == (a = A.meta) ? void 0 : a.voiceStatesMaxShown) ? t : 8;
+
     function w(e) {
         null != A &&
             (e < 1
-                ? (0, s.cC)(A.id, { voiceStatesMaxShown: -1 })
-                : (0, s.cC)(A.id, { voiceStatesMaxShown: Math.floor(e) }));
+                ? (0, s.cC)(A.id, {
+                      voiceStatesMaxShown: -1,
+                  })
+                : (0, s.cC)(A.id, {
+                      voiceStatesMaxShown: Math.floor(e),
+                  }));
     }
     return (0, n.jsxs)(i.W1t, {
         navId: "overlay-voice-widget-context-menu",

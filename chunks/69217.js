@@ -35,6 +35,7 @@ var r = n(627968),
     D = n(257645),
     x = n(985018),
     L = n(125049);
+
 function j(e, t, n) {
     return (
         t in e
@@ -48,6 +49,7 @@ function j(e, t, n) {
         e
     );
 }
+
 function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -64,6 +66,7 @@ function M(e) {
     }
     return e;
 }
+
 function k(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -76,6 +79,7 @@ function k(e, t) {
     }
     return n;
 }
+
 function U(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -87,6 +91,7 @@ function U(e, t) {
         e
     );
 }
+
 function G(e, t) {
     if (null == e) return {};
     var n,
@@ -103,6 +108,7 @@ function G(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function V(e, t) {
     if (null == e) return {};
     var n,
@@ -117,7 +123,8 @@ let F = "1",
     B = 0.01,
     H = 0.1,
     Y = 0.01,
-    W = 1000;
+    W = 1e3;
+
 function K(e) {
     let { disabled: t = !1, onClick: n, text: i, children: a, tooltipPosition: o = "top", ref: l } = e;
     return (0, r.jsx)(d.m, {
@@ -126,15 +133,19 @@ function K(e) {
         children: (0, r.jsx)(f.DUT, {
             innerRef: l,
             "aria-label": i,
-            className: s()(L.zr, { [L.$9]: t }),
+            className: s()(L.zr, {
+                [L.$9]: t,
+            }),
             onClick: n,
             children: a,
         }),
     });
 }
+
 function z(e) {
     let { sound: t, previewSound: n, disabled: i = !1, tooltipPosition: a = "top" } = e,
         s = (0, l.bG)([O.A], () => O.A.getGuildId());
+
     function o(e) {
         v.default.track(w.HAw.EXPRESSION_PICKER_SOUNDBOARD_SOUND_PREVIEWED, {
             sound_id: t.soundId,
@@ -161,6 +172,7 @@ function z(e) {
         }),
     });
 }
+
 function q(e) {
     let { sound: t, disabled: n = !1 } = e,
         { analyticsLocations: a } = (0, h.Ay)(),
@@ -173,7 +185,9 @@ function q(e) {
                         ? (0, S.eS)(t.soundId)
                         : ((0, C.Ni)({
                               sound: t,
-                              location: U(M({}, a), { object: w.ZSU.SOUNDBOARD_SOUND }),
+                              location: U(M({}, a), {
+                                  object: w.ZSU.SOUNDBOARD_SOUND,
+                              }),
                           }),
                           (0, S.Rp)(t.soundId));
             },
@@ -199,6 +213,7 @@ function q(e) {
               }),
     });
 }
+
 function X(e, t) {
     return i.useMemo(() => {
         if (null == t || e !== F)
@@ -299,14 +314,19 @@ let Z = i.forwardRef(function (e, t) {
             eM(!1);
         }, []),
         eG = eP && ei;
+
     function eV() {
         J || eE(en);
     }
+
     function eF(e) {
         (eC &&
             !eS &&
             ((eI.current = Math.min(eI.current + Y, H)),
-            Math.random() < eI.current && eO(ev.x, ev.y, void 0, void 0, { sprite: P.dR })),
+            Math.random() < eI.current &&
+                eO(ev.x, ev.y, void 0, void 0, {
+                    sprite: P.dR,
+                })),
         null != et)
             ? et(e)
             : eV();
@@ -326,7 +346,9 @@ let Z = i.forwardRef(function (e, t) {
                     ? (0, r.jsx)(f.XAi, {
                           size: "xs",
                           color: "currentColor",
-                          className: s()(L.C4, L.hz, e, { [L.hn]: ew }),
+                          className: s()(L.C4, L.hz, e, {
+                              [L.hn]: ew,
+                          }),
                       })
                     : null
                 : (0, r.jsx)(f.udU, {
@@ -346,7 +368,9 @@ let Z = i.forwardRef(function (e, t) {
             eG && !ea
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, r.jsx)("div", { className: L.LQ }),
+                          (0, r.jsx)("div", {
+                              className: L.LQ,
+                          }),
                           eH(L.B3),
                           (0, r.jsx)("div", {
                               className: L.d7,
@@ -360,7 +384,11 @@ let Z = i.forwardRef(function (e, t) {
                 : (0, r.jsxs)("div", {
                       className: L.d7,
                       children: [
-                          (0, r.jsx)("div", { className: s()({ [L.LQ]: !J }) }),
+                          (0, r.jsx)("div", {
+                              className: s()({
+                                  [L.LQ]: !J,
+                              }),
+                          }),
                           (0, r.jsx)("div", {
                               className: L.O5,
                               children:
@@ -376,13 +404,16 @@ let Z = i.forwardRef(function (e, t) {
                           }),
                       ],
                   });
+
     function eK() {
         switch (er) {
             case T.If.ADD:
                 return (0, r.jsxs)("div", {
                     className: L.ec,
                     children: [
-                        (0, r.jsx)("div", { className: L.LQ }),
+                        (0, r.jsx)("div", {
+                            className: L.LQ,
+                        }),
                         (0, r.jsxs)("div", {
                             className: L.O5,
                             children: [
@@ -468,7 +499,9 @@ let Z = i.forwardRef(function (e, t) {
                         onContextMenu: $ && !eP ? eg : void 0,
                         children: [
                             (0, r.jsxs)("div", {
-                                className: s()(L.KM, { [L.hn]: ew }),
+                                className: s()(L.KM, {
+                                    [L.hn]: ew,
+                                }),
                                 "aria-hidden": !0,
                                 ref: eA,
                                 children: [
@@ -481,7 +514,9 @@ let Z = i.forwardRef(function (e, t) {
                                     (0, r.jsx)(f.Text, {
                                         variant: "text-xs/medium",
                                         color: Q ? void 0 : "text-muted",
-                                        className: s()(L.TW, { [L.hn]: ew }),
+                                        className: s()(L.TW, {
+                                            [L.hn]: ew,
+                                        }),
                                         children: ep,
                                     }),
                                 ],

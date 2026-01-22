@@ -1,4 +1,7 @@
-n.d(t, { A: () => X }), n(896048);
+n.d(t, {
+    A: () => X,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -42,6 +45,7 @@ var r = n(627968),
     q = n(806931),
     V = n(985018),
     B = n(470699);
+
 function z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -67,6 +71,7 @@ function z(e) {
     }
     return e;
 }
+
 function K(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -85,6 +90,7 @@ function K(e, t) {
         e
     );
 }
+
 function W(e) {
     var t, n, i, f, E;
     let { channelId: w, quest: W, previewQuest: Y, isParticipatingOverride: X } = e,
@@ -178,7 +184,9 @@ function W(e) {
                 }),
             [W],
         ),
-        eE = (0, j.NA)({ quest: W }),
+        eE = (0, j.NA)({
+            quest: W,
+        }),
         eO = (0, I.vA)(W),
         ej = (0, S.LS)(W),
         eS = (null == (n = W.userStatus) ? void 0 : n.enrolledAt) != null,
@@ -186,7 +194,9 @@ function W(e) {
         eT = null != W.userStatus && (0, _.gO)(W.userStatus, v.uF.QUEST_LIVE_STREAM),
         e_ = null != W.userStatus && (0, _.gO)(W.userStatus, v.uF.QUEST_BAR),
         eC = eo && !e_,
-        eP = h.t$.useConfig({ location: F.rE.QUEST_CHANNEL_CALL_HEADER }).enabled;
+        eP = h.t$.useConfig({
+            location: F.rE.QUEST_CHANNEL_CALL_HEADER,
+        }).enabled;
     eh.info({
         isQuestCallHeaderDismissed: eT,
         isQuestExpired: ej,
@@ -204,7 +214,9 @@ function W(e) {
             sourceQuestContent: v.uF.QUEST_LIVE_STREAM,
         });
     return (0, r.jsxs)("div", {
-        className: s()(B.iE, { [B.rH]: eS }),
+        className: s()(B.iE, {
+            [B.rH]: eS,
+        }),
         onFocus: ee,
         onMouseEnter: ee,
         onBlur: et,
@@ -279,8 +291,12 @@ function W(e) {
                                         color: "text-default",
                                         variant: "text-xs/medium",
                                         children: eN
-                                            ? V.intl.formatToPlainString(V.t.APddvF, { expirationDate: eg })
-                                            : V.intl.formatToPlainString(V.t["pX+fmn"], { expirationDate: ey }),
+                                            ? V.intl.formatToPlainString(V.t.APddvF, {
+                                                  expirationDate: eg,
+                                              })
+                                            : V.intl.formatToPlainString(V.t["pX+fmn"], {
+                                                  expirationDate: ey,
+                                              }),
                                     }),
                                 ],
                             }),
@@ -360,11 +376,14 @@ function W(e) {
         ],
     });
 }
+
 function Y(e) {
     var t;
     let n = l.useContext(f.vG),
         i = (0, a.bG)([x.A], () => null != x.A.questEnrollmentBlockedUntil, []),
-        { use_api_call: s } = E.Y.getConfig({ location: "QuestChannelCallHeader" }),
+        { use_api_call: s } = E.Y.getConfig({
+            location: "QuestChannelCallHeader",
+        }),
         o = (0, a.bG)([x.A], () => x.A.quests),
         u = (0, S.oH)(Array.from(o.values())),
         d = l.useMemo(() => (0, I.$e)(o, F.Ls), [o]),
@@ -420,7 +439,13 @@ function Y(e) {
               overrideVisibility: !n,
               questContent: v.uF.QUEST_LIVE_STREAM,
               sourceQuestContent: v.uF.QUEST_LIVE_STREAM,
-              children: () => (0, r.jsx)(W, K(z({}, e), { quest: T })),
+              children: () =>
+                  (0, r.jsx)(
+                      W,
+                      K(z({}, e), {
+                          quest: T,
+                      }),
+                  ),
           });
 }
 let X = function (e) {

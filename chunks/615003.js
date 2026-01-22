@@ -70,7 +70,7 @@ let er = (e) => {
             u = (0, s.bG)([v.A], () => v.A.getCreatedAtOverride()),
             d = t || null != i || null != l || a || null != o || c,
             p = null != u ? u : null == n ? void 0 : n.createdAt;
-        return d || (null != n && null != p && Date.now() - p.getTime() > 1209600000);
+        return d || (null != n && null != p && Date.now() - p.getTime() > 12096e5);
     },
     ei = (e) => {
         var t, n, v;
@@ -122,7 +122,9 @@ let er = (e) => {
             eO = (0, x.p)(),
             ey = (0, C.d)(),
             eI = (0, S.cg)(),
-            ev = (0, G.NF)({ trialOffer: e_ }),
+            ev = (0, G.NF)({
+                trialOffer: e_,
+            }),
             eS = (0, R.bf)(),
             eC = (0, X.H)(),
             eN = (0, G.Tp)(),
@@ -138,12 +140,20 @@ let er = (e) => {
             ek = O.A.getAlmostExpiringDiscountOffers([$.pe.TIER_2]),
             eU = eA && ek.length > 0 && null != eE && null != eE.expires_at,
             eG = null != eO && null != ef && ef.status === ee.Dmq.CANCELED,
-            { fractionalState: eV, startsAt: eB, endsAt: eH } = (0, f.A)({ forceFetch: !0 }),
+            {
+                fractionalState: eV,
+                startsAt: eB,
+                endsAt: eH,
+            } = (0, f.A)({
+                forceFetch: !0,
+            }),
             [eF, eY] = (0, g.Wl)(eV !== $.xc.NONE ? o.M.FRACTIONAL_NITRO_DURATION_LEFT_PILL : null, {
                 showAfterTimestamp: eB.valueOf(),
                 cooldownDurationMs: 0,
             }),
-            eK = (0, T.A)({ location: "NitroTabButton" }),
+            eK = (0, T.A)({
+                location: "NitroTabButton",
+            }),
             ez = (null == e_ ? void 0 : e_.trial_id) === $.Dw,
             eW = [],
             eq = [];
@@ -180,7 +190,9 @@ let er = (e) => {
                     !0 === es && null != e1 && e6(et.i.AUTO_DISMISS),
                     !0 === es && null != e9 && e7(et.i.AUTO_DISMISS);
             }, [eX, es, eQ, eJ, eZ, e1, e6, e9, e7]),
-            !er({ selected: es }))
+            !er({
+                selected: es,
+            }))
         )
             return null;
         let e5 = () => {
@@ -249,7 +261,10 @@ let er = (e) => {
                     })),
                     (ea = 2))
                   : ey
-                    ? ((el = (0, r.jsx)(Q.d, { expiresAt: eH })), (ea = 4))
+                    ? ((el = (0, r.jsx)(Q.d, {
+                          expiresAt: eH,
+                      })),
+                      (ea = 4))
                     : null != eC
                       ? ((el = (0, r.jsx)(J.A, {
                             copy: eC,
@@ -259,7 +274,9 @@ let er = (e) => {
                       : null != eE
                         ? ((el =
                               eh === N.CJ.OFFER_COUNTDOWN && eU
-                                  ? (0, r.jsx)(z.D, { discountOffer: eE })
+                                  ? (0, r.jsx)(z.D, {
+                                        discountOffer: eE,
+                                    })
                                   : (0, r.jsx)(K.fY, {
                                         userDiscount: eE,
                                         isTabSelected: es,
@@ -298,7 +315,9 @@ let er = (e) => {
                                     (ea = 2))
                           : ((el =
                                 eh === N.CJ.OFFER_COUNTDOWN && eM
-                                    ? (0, r.jsx)(z.s, { trialOffer: e_ })
+                                    ? (0, r.jsx)(z.s, {
+                                          trialOffer: e_,
+                                      })
                                     : (0, r.jsx)(K.Ag, {
                                           trialOffer: e_,
                                           isTabSelected: es,
@@ -380,7 +399,9 @@ let er = (e) => {
             n),
         );
         return eR
-            ? (0, r.jsx)(W.T, { children: e3 })
+            ? (0, r.jsx)(W.T, {
+                  children: e3,
+              })
             : eG && eZ === o.M.CHURN_DISCOUNT_PREMIUM_TAB_COACHMARK && 8 === ea
               ? (0, r.jsx)(F.A, {
                     targetElementRef: eo,
@@ -408,6 +429,8 @@ let er = (e) => {
                           children: e3,
                       })
                     : e8
-                      ? (0, r.jsx)(q.A, { children: e3 })
+                      ? (0, r.jsx)(q.A, {
+                            children: e3,
+                        })
                       : e3;
     };

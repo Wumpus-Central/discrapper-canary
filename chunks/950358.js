@@ -1,4 +1,7 @@
-n.d(t, { A: () => _ }), n(321073);
+n.d(t, {
+    A: () => _,
+}),
+    n(321073);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -16,6 +19,7 @@ var r = n(627968),
     x = n(652215),
     h = n(985018),
     j = n(959132);
+
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -41,6 +45,7 @@ function O(e) {
     }
     return e;
 }
+
 function y(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -59,6 +64,7 @@ function y(e, t) {
         e
     );
 }
+
 function v(e) {
     let { guild: t, channel: i } = e,
         l = (0, m.Rg)(i.id);
@@ -74,7 +80,9 @@ function v(e) {
               }),
           })
         : (0, r.jsxs)(o.DUT, {
-              className: s()(j.Fv, { [j.d0]: "null" === i.id }),
+              className: s()(j.Fv, {
+                  [j.d0]: "null" === i.id,
+              }),
               onContextMenu: (e) => {
                   (0, d.L3)(e, async () => {
                       let { default: e } = await Promise.all([
@@ -118,12 +126,16 @@ function v(e) {
                       lineClamp: 1,
                       children: i.name,
                   }),
-                  (0, r.jsx)(o.P7L, { checked: l }),
+                  (0, r.jsx)(o.P7L, {
+                      checked: l,
+                  }),
               ],
           });
 }
 let A = i.memo(function () {
-        return (0, r.jsx)("div", { className: j.me });
+        return (0, r.jsx)("div", {
+            className: j.me,
+        });
     }),
     E = i.memo(function (e) {
         let { index: t } = e;
@@ -132,7 +144,7 @@ let A = i.memo(function () {
             {
                 variant: "text-xs/normal",
                 className: j.Ks,
-                children: "\xB7",
+                children: "\xb7",
             },
             "separator-".concat(t),
         );
@@ -245,7 +257,9 @@ let A = i.memo(function () {
                                         C
                                             ? (0, r.jsxs)(r.Fragment, {
                                                   children: [
-                                                      (0, r.jsx)(E, { index: 0 }),
+                                                      (0, r.jsx)(E, {
+                                                          index: 0,
+                                                      }),
                                                       (0, r.jsx)(o.Text, {
                                                           variant: "text-xs/medium",
                                                           className: j.qy,
@@ -280,6 +294,7 @@ let A = i.memo(function () {
             ],
         });
     });
+
 function _(e) {
     let { categories: t, guild: n, className: l, hasSidebar: s } = e,
         a = i.useCallback(

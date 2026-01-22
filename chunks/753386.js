@@ -18,6 +18,7 @@ var r = n(412703),
     u = n(792620),
     d = n(652215),
     f = n(985018);
+
 function p(e, t) {
     var n, r;
     (0, c.Ic)(e) ||
@@ -26,23 +27,31 @@ function p(e, t) {
         (0, a.uI)(e.id, t);
 }
 let _ = "landscape";
+
 function h(e) {
     let t = e.assets.video;
     return null == t || null == t.width || null == t.height ? _ : t.width > t.height ? "landscape" : "portrait";
 }
 let m = (e) =>
     e.percentComplete > 0
-        ? f.intl.formatToPlainString(f.t["c59/Tp"], { remainTime: (0, u.xm)(e) })
-        : f.intl.formatToPlainString(f.t.GNsKiW, { remainTime: (0, u.xm)(e) });
+        ? f.intl.formatToPlainString(f.t["c59/Tp"], {
+              remainTime: (0, u.xm)(e),
+          })
+        : f.intl.formatToPlainString(f.t.GNsKiW, {
+              remainTime: (0, u.xm)(e),
+          });
+
 function g(e, t) {
     return e <= 0 || t <= 0 ? 0 : e >= t ? 1 : Math.min(1, Math.round((e / t) * 100) / 100);
 }
+
 function E(e) {
     var t;
     let n = e.taskConfigV2.tasks[r.n.WATCH_VIDEO],
         i = e.taskConfigV2.tasks[r.n.WATCH_VIDEO_ON_MOBILE];
     return null != n && null != i ? n : null != (t = null != i ? i : n) ? t : null;
 }
+
 function b(e) {
     var t, n;
     let { questId: r, sourceQuestContent: a, videoSessionId: c } = e,
@@ -75,9 +84,11 @@ function b(e) {
             sourceQuestContent: a,
         });
 }
+
 function y(e) {
     return "VIDEO-QUEST-".concat(e);
 }
+
 function O(e) {
     return !!(0, u.vv)(e) && (0, n(192308).hasModalOpen)(y(e.id));
 }

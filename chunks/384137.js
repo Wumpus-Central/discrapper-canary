@@ -1,4 +1,6 @@
-n.d(t, { A: () => S });
+n.d(t, {
+    A: () => S,
+});
 var r = n(627968),
     i = n(64700),
     a = n(158954),
@@ -20,6 +22,7 @@ var r = n(627968),
     O = n(881493),
     A = n(485508),
     v = n(656122);
+
 function S() {
     let {
             messages: {
@@ -29,7 +32,9 @@ function S() {
             } = {
                 numMessagesSent: 0,
                 numMessagesSentPercentile: 0,
-                topMonth: { month: 0 },
+                topMonth: {
+                    month: 0,
+                },
             },
         } = (0, s.bG)([c.A], () => c.A.getCheckpointData()),
         S = i.useContext(l.P),
@@ -59,25 +64,45 @@ function S() {
                             (0, r.jsx)(h.A, {
                                 variant: "eyebrow",
                                 className: y.UP,
-                                children: b.intl.format(E.default.nPTMHj, { numMessages: e }),
+                                children: b.intl.format(E.default.nPTMHj, {
+                                    numMessages: e,
+                                }),
                             }),
                         ],
                     }),
-                    (0, r.jsx)(m.A, { end: e }),
+                    (0, r.jsx)(m.A, {
+                        end: e,
+                    }),
                     (0, r.jsx)(h.A, {
                         variant: "heading-xxl/medium",
                         className: O.VA,
                         children: C
                             ? b.intl.format(E.default.ixvOza, {
                                   percent: 100 - t,
-                                  percentHook: (e, t) => (0, r.jsx)(f.A, { children: e }, t),
+                                  percentHook: (e, t) =>
+                                      (0, r.jsx)(
+                                          f.A,
+                                          {
+                                              children: e,
+                                          },
+                                          t,
+                                      ),
                               })
                             : b.intl.format(E.default["Zd+Ej+"], {
                                   month: T,
-                                  monthHook: (e, t) => (0, r.jsx)(f.A, { children: e }, t),
+                                  monthHook: (e, t) =>
+                                      (0, r.jsx)(
+                                          f.A,
+                                          {
+                                              children: e,
+                                          },
+                                          t,
+                                      ),
                               }),
                     }),
-                    (0, r.jsx)(p.e, { slide: g.P7.MESSAGES }),
+                    (0, r.jsx)(p.e, {
+                        slide: g.P7.MESSAGES,
+                    }),
                 ],
             }),
         ],

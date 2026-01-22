@@ -1,10 +1,14 @@
-n.d(t, { A: () => h }), n(896048);
+n.d(t, {
+    A: () => h,
+}),
+    n(896048);
 var r = n(506774),
     i = n(439372),
     a = n(287809),
     s = n(951122),
     o = n(542599),
     l = n(789622);
+
 function c(e, t, n) {
     return (
         t in e
@@ -18,13 +22,25 @@ function c(e, t, n) {
         e
     );
 }
-let u = 604800000,
+let u = 6048e5,
     d = "lastSawPomelo";
+
 function f() {
     r.w.set(d, Date.now());
 }
+
 function p() {
-    if (!s.y1.getCurrentConfig({ location: "b9eb97_1" }, { autoTrackExposure: !1 }).enabled) return !1;
+    if (
+        !s.y1.getCurrentConfig(
+            {
+                location: "b9eb97_1",
+            },
+            {
+                autoTrackExposure: !1,
+            },
+        ).enabled
+    )
+        return !1;
     let e = a.default.getCurrentUser();
     if (null == e || e.hasUniqueUsername() || !e.hasVerifiedEmailOrPhone()) return !1;
     let t = d,
@@ -34,7 +50,9 @@ function p() {
 class _ extends i.A {
     constructor(...e) {
         super(...e),
-            c(this, "actions", { POST_CONNECTION_OPEN: () => this.onPostConnectionOpen() }),
+            c(this, "actions", {
+                POST_CONNECTION_OPEN: () => this.onPostConnectionOpen(),
+            }),
             c(this, "onPostConnectionOpen", () => {
                 p() && (0, o.U)(l.gg.APP_START, !0, !1) && f();
             });

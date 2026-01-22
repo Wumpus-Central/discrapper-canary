@@ -21,7 +21,9 @@ async function f() {
                 (
                     await a.Bo.post({
                         url: u.Rsh.APPLICATION_BRANCHES,
-                        body: { branch_ids: e },
+                        body: {
+                            branch_ids: e,
+                        },
                         oldFormErrors: !0,
                         rejectWithError: !0,
                     })

@@ -1,4 +1,7 @@
-n.d(t, { A: () => p }), n(896048);
+n.d(t, {
+    A: () => p,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(735438),
@@ -41,7 +44,7 @@ let p = (e) => {
                 .value();
         }, [t]);
     return (0, r.jsx)(s.aFV, {
-        title: "".concat(b.intl.string(b.t.zbyz7p), "\u2014").concat(null != t ? t.name : ""),
+        title: "".concat(b.intl.string(b.t.zbyz7p), "—").concat(null != t ? t.name : ""),
         actions: [
             {
                 text: b.intl.string(b.t["ETE/oC"]),
@@ -65,11 +68,15 @@ let p = (e) => {
                     value: String(p),
                     options: [
                         {
-                            name: b.intl.formatToPlainString(b.t.FM1dHS, { days: 7 }),
+                            name: b.intl.formatToPlainString(b.t.FM1dHS, {
+                                days: 7,
+                            }),
                             value: "7",
                         },
                         {
-                            name: b.intl.formatToPlainString(b.t.FM1dHS, { days: 30 }),
+                            name: b.intl.formatToPlainString(b.t.FM1dHS, {
+                                days: 30,
+                            }),
                             value: "30",
                         },
                     ],

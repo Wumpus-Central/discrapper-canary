@@ -1,4 +1,9 @@
-n.d(t, { A: () => w }), n(896048), n(321073), n(228524);
+n.d(t, {
+    A: () => w,
+}),
+    n(896048),
+    n(321073),
+    n(228524);
 var i = n(627968),
     r = n(64700),
     l = n(179771),
@@ -21,6 +26,7 @@ var i = n(627968),
     A = n(652215),
     v = n(985018),
     N = n(882441);
+
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -46,6 +52,7 @@ function E(e) {
     }
     return e;
 }
+
 function T(e) {
     var t, n;
     let { application: r, guild: l, integration: s } = e,
@@ -85,8 +92,12 @@ function T(e) {
         ((t = E({}, o)),
         (n = n =
             {
-                title: v.intl.formatToPlainString(v.t["rL9d/1"], { applicationName: r.name }),
-                subtitle: v.intl.format(v.t.FGE8ya, { applicationName: r.name }),
+                title: v.intl.formatToPlainString(v.t["rL9d/1"], {
+                    applicationName: r.name,
+                }),
+                subtitle: v.intl.format(v.t.FGE8ya, {
+                    applicationName: r.name,
+                }),
                 confirmText: v.intl.string(v.t.ebGf4m),
                 onConfirm: () => {
                     u.A.disableIntegration(l.id, s.id).catch(() => {
@@ -112,6 +123,7 @@ function T(e) {
         t),
     );
 }
+
 function w(e) {
     let {
             guild: t,
@@ -148,14 +160,18 @@ function w(e) {
             let e = [
                 {
                     icon: o.O4,
-                    text: v.intl.formatToPlainString(v.t.gcdJ8J, { timestamp: g.default.extractTimestamp(S.id) }),
+                    text: v.intl.formatToPlainString(v.t.gcdJ8J, {
+                        timestamp: g.default.extractTimestamp(S.id),
+                    }),
                 },
             ];
             return (
                 null != S.user &&
                     e.push({
                         icon: o.nys,
-                        text: v.intl.formatToPlainString(v.t.qE7oqs, { user: h.Ay.getUserTag(S.user) }),
+                        text: v.intl.formatToPlainString(v.t.qE7oqs, {
+                            user: h.Ay.getUserTag(S.user),
+                        }),
                     }),
                 e
             );
@@ -202,7 +218,9 @@ function w(e) {
                       guildId: t.id,
                   })
                 : null,
-            (0, i.jsx)(o.cGx, { className: N.zN }),
+            (0, i.jsx)(o.cGx, {
+                className: N.zN,
+            }),
             null != C.bot
                 ? (0, i.jsxs)("div", {
                       className: N.uW,
@@ -247,7 +265,9 @@ function w(e) {
                           }),
                 ],
             }),
-            (0, i.jsx)(o.cGx, { className: N.zN }),
+            (0, i.jsx)(o.cGx, {
+                className: N.zN,
+            }),
             (0, i.jsxs)(d.A, {
                 className: N.uW,
                 justify: d.A.Justify.BETWEEN,

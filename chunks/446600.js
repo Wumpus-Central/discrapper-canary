@@ -1,8 +1,11 @@
-n.d(t, { A: () => O });
+n.d(t, {
+    A: () => O,
+});
 var r,
     i = n(311907),
     a = n(73153),
     s = n(988794);
+
 function o(e, t, n) {
     return (
         t in e
@@ -16,6 +19,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,6 +38,7 @@ function l(e) {
 }
 let c = {},
     u = {};
+
 function d(e, t) {
     var n;
     let r = l({}, null != (n = c[e]) ? n : {});
@@ -43,14 +48,17 @@ function d(e, t) {
         }),
         (c[e] = r);
 }
+
 function f(e) {
     let { guilds: t } = e;
     (c = {}), (u = {}), t.forEach((e) => d(e.id, e.stage_instances));
 }
+
 function p(e) {
     let { guild: t } = e;
     d(t.id, t.stage_instances);
 }
+
 function _(e) {
     var t;
     let { guild: n } = e,
@@ -60,24 +68,29 @@ function _(e) {
             delete u[e];
         });
 }
+
 function h(e) {
     let { instance: t } = e;
     d(t.guild_id, [t]);
 }
+
 function m(e, t) {
     var n;
     if ((delete u[t], null == e)) return;
     let r = l({}, null != (n = c[e]) ? n : {});
     delete r[t], (c[e] = r);
 }
+
 function g(e) {
     let { instance: t } = e;
     m(t.guild_id, t.channel_id);
 }
+
 function E(e) {
     let { channel: t } = e;
     m(t.guild_id, t.id);
 }
+
 function b() {
     (u = {}), (c = {});
 }

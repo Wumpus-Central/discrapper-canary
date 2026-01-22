@@ -1,4 +1,6 @@
-n.d(t, { E: () => u });
+n.d(t, {
+    E: () => u,
+});
 var r = n(64700),
     i = n(340287),
     a = n(669507),
@@ -22,7 +24,9 @@ var r = n(64700),
                         left: "0",
                         top: "0",
                     },
-                    arrow: { position: "absolute" },
+                    arrow: {
+                        position: "absolute",
+                    },
                 },
                 attributes: {},
             }),

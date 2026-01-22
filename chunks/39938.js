@@ -1,7 +1,10 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r,
     i = n(311907),
     a = n(73153);
+
 function s(e, t, n) {
     return (
         t in e
@@ -17,14 +20,17 @@ function s(e, t, n) {
 }
 let o = !1,
     l = !1;
+
 function c(e) {
     let { muted: t } = e;
     (o = t), (l = !1);
 }
+
 function u(e) {
     let { play: t } = e;
     l = t;
 }
+
 function d() {
     l = !1;
 }

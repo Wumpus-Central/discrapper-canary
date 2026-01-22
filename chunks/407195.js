@@ -1,4 +1,7 @@
-n.d(t, { A: () => ec }), n(896048);
+n.d(t, {
+    A: () => ec,
+}),
+    n(896048);
 var i = n(627968),
     r = n(64700),
     s = n(503698),
@@ -52,6 +55,7 @@ var i = n(627968),
     $ = n(381941),
     ee = n(985018),
     et = n(520555);
+
 function en(e, t, n) {
     return (
         t in e
@@ -65,6 +69,7 @@ function en(e, t, n) {
         e
     );
 }
+
 function ei(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -81,6 +86,7 @@ function ei(e) {
     }
     return e;
 }
+
 function er(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -99,6 +105,7 @@ function er(e, t) {
         e
     );
 }
+
 function es(e, t) {
     if (null == e) return {};
     var n,
@@ -132,7 +139,9 @@ class eo extends r.Component {
     componentDidUpdate(e) {
         e.channel.id !== this.props.channel.id && this.draftDidChange(this.props),
             (this.props.channel !== e.channel || (this.props.isTemporarilyActive && !e.isTemporarilyActive)) &&
-                this.setState({ focused: !0 });
+                this.setState({
+                    focused: !0,
+                });
     }
     componentWillUnmount() {
         k.A.removeChangeListener(this.draftDidChange),
@@ -149,7 +158,10 @@ class eo extends r.Component {
                 position: "top",
                 onRequestClose: () => {
                     var e;
-                    null == o || null == (e = o.onCancel) || e.call(o), this.setState({ contentWarningProps: null });
+                    null == o || null == (e = o.onCancel) || e.call(o),
+                        this.setState({
+                            contentWarningProps: null,
+                        });
                 },
                 shouldShow: null != o,
                 renderPopout: (e) => {
@@ -159,7 +171,15 @@ class eo extends r.Component {
                             null != o,
                             "ConnectedChannelTextArea.render - renderPopout: contentWarningProps cannot be null",
                         ),
-                        (0, i.jsx)(w.A, ei({ onClose: t }, o))
+                        (0, i.jsx)(
+                            w.A,
+                            ei(
+                                {
+                                    onClose: t,
+                                },
+                                o,
+                            ),
+                        )
                     );
                 },
                 children: () =>
@@ -170,8 +190,14 @@ class eo extends r.Component {
                             renderAttachButton: this.renderAttachButton,
                             channel: t,
                             type: E.oU.OVERLAY,
-                            onFocus: () => this.setState({ focused: !0 }),
-                            onBlur: () => this.setState({ focused: !1 }),
+                            onFocus: () =>
+                                this.setState({
+                                    focused: !0,
+                                }),
+                            onBlur: () =>
+                                this.setState({
+                                    focused: !1,
+                                }),
                             placeholder: n,
                             textValue: l,
                             richValue: c,
@@ -246,7 +272,10 @@ class eo extends r.Component {
                           shouldRefocus: !0,
                       })
                     : (0, B.i)({
-                          openWarningPopout: (e) => this.setState({ contentWarningProps: e }),
+                          openWarningPopout: (e) =>
+                              this.setState({
+                                  contentWarningProps: e,
+                              }),
                           type: E.oU.OVERLAY,
                           content: t,
                           channel: n,
@@ -268,7 +297,9 @@ class eo extends r.Component {
                               n.id,
                               C.Ay.parse(n, t),
                               !0,
-                              er(ei({}, o), { location: $.Hx.OVERLAY }),
+                              er(ei({}, o), {
+                                  location: $.Hx.OVERLAY,
+                              }),
                           ),
                           this.setState((0, x.N3)()),
                           (0, P.Jx)(n.id),
@@ -285,10 +316,14 @@ class eo extends r.Component {
                       });
             }),
             en(this, "focusInput", () => {
-                this.setState({ focused: !0 });
+                this.setState({
+                    focused: !0,
+                });
             }),
             en(this, "blurInput", () => {
-                this.setState({ focused: !1 });
+                this.setState({
+                    focused: !1,
+                });
             }),
             en(this, "renderAttachButton", (e, t) =>
                 (0, i.jsx)(S.A, {
@@ -556,6 +591,7 @@ class ea extends r.PureComponent {
             });
     }
 }
+
 function ec(e) {
     let { contained: t = !1 } = e,
         n = es(e, ["contained"]),
@@ -574,7 +610,9 @@ function ec(e) {
         b = null != l && l.isPrivate() ? l.getRecipientId() : null,
         g = (0, c.bG)([D.A], () => (null != s ? D.A.getPendingReply(s) : void 0)),
         m = (0, c.bG)([z.default], () => (null != b ? z.default.getUser(b) : null)),
-        { placeholder: O } = (0, y.A)({ channel: l });
+        { placeholder: O } = (0, y.A)({
+            channel: l,
+        });
     return null != l && null != p && q.kvI.GUILD_THREADS_ONLY.has(l.type)
         ? (0, i.jsx)(A.A, {})
         : (0, i.jsx)(

@@ -1,4 +1,8 @@
-l.d(a, { default: () => T }), l(228524), l(321073);
+l.d(a, {
+    default: () => T,
+}),
+    l(228524),
+    l(321073);
 var i = l(627968),
     n = l(64700),
     s = l(158954),
@@ -50,7 +54,9 @@ let S = (e) => {
                                 autoplay: !0,
                                 className: I.oK,
                             })
-                          : (0, i.jsx)(b, { className: I.p }),
+                          : (0, i.jsx)(b, {
+                                className: I.p,
+                            }),
                       (0, i.jsxs)("div", {
                           className: I.uP,
                           children: [
@@ -68,7 +74,9 @@ let S = (e) => {
                                           size: "xxs",
                                           color: "currentColor",
                                       }),
-                                      (0, i.jsx)("span", { children: r.name }),
+                                      (0, i.jsx)("span", {
+                                          children: r.name,
+                                      }),
                                   ],
                               }),
                           ],
@@ -142,7 +150,9 @@ let S = (e) => {
                     title: k.intl.string(k.t.ZTNur7),
                     onClose: () => Promise.resolve(l()),
                     actions: [],
-                    children: (0, i.jsx)(c.y$y, { type: c.y$y.Type.SPINNING_CIRCLE }),
+                    children: (0, i.jsx)(c.y$y, {
+                        type: c.y$y.Type.SPINNING_CIRCLE,
+                    }),
                 })
               : (0, i.jsx)(s.Modal, {
                     transitionState: d,

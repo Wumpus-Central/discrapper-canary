@@ -85,6 +85,7 @@ var r = n(954571),
             e
         );
     })({});
+
 function d(e, t, n) {
     r.default.track(i.HAw.AGE_VERIFICATION_MODAL_VIEWED, {
         modal_session_id: e,
@@ -92,6 +93,7 @@ function d(e, t, n) {
         entry_point: n,
     });
 }
+
 function f(e, t, n, a) {
     r.default.track(i.HAw.AGE_VERIFICATION_MODAL_CLICKED, {
         modal_session_id: e,
@@ -100,12 +102,14 @@ function f(e, t, n, a) {
         method: a,
     });
 }
+
 function p(e, t) {
     r.default.track(i.HAw.AGE_VERIFICATION_DM_CLICKED, {
         cta: e,
         channel_id: t,
     });
 }
+
 function _(e, t, n) {
     r.default.track(i.HAw.NSFW_SPACE_WARNING_MODAL_VIEWED, {
         channel_id: t,
@@ -113,6 +117,7 @@ function _(e, t, n) {
         modal_type: e,
     });
 }
+
 function h(e, t, n, a) {
     r.default.track(i.HAw.NSFW_SPACE_WARNING_MODAL_CLICKED, {
         cta: e,
@@ -124,6 +129,9 @@ function h(e, t, n, a) {
 var m = (function (e) {
     return (e.VERIFIED_TEEN = "verified_teen"), (e.VERIFIED_ADULT = "verified_adult"), (e.ERROR = "error"), e;
 })({});
+
 function g(e) {
-    r.default.track(i.HAw.AGE_VERIFICATION_TOAST_VIEWED, { toast_type: e });
+    r.default.track(i.HAw.AGE_VERIFICATION_TOAST_VIEWED, {
+        toast_type: e,
+    });
 }

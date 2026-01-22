@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var a = n(627968),
     l = n(64700),
     i = n(503698),
@@ -6,6 +8,7 @@ var a = n(627968),
     s = n(397927),
     o = n(817363),
     c = n(93064);
+
 function d(e) {
     let { filename: t, className: n, filters: i, buttonText: d, placeholder: u, onFileSelect: m } = e,
         p = l.useRef(null),
@@ -17,7 +20,9 @@ function d(e) {
             ref: p,
             className: r()(n, c.U),
             children: [
-                (0, a.jsx)(s.JMY, { size: "sm" }),
+                (0, a.jsx)(s.JMY, {
+                    size: "sm",
+                }),
                 (0, a.jsx)(s.Text, {
                     variant: "text-md/normal",
                     color: "" !== t ? "text-default" : "text-muted",

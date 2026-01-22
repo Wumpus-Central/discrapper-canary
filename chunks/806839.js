@@ -1,4 +1,7 @@
-n.d(t, { A: () => u }), n(65821);
+n.d(t, {
+    A: () => u,
+}),
+    n(65821);
 var r = n(64700),
     i = n(253018),
     a = n(770178),
@@ -9,6 +12,7 @@ let l = {
     fireOnMount: !0,
     fireOnDepsChange: !0,
 };
+
 function c(e) {
     try {
         return o.VW.toDOMNode(e, e);
@@ -17,6 +21,7 @@ function c(e) {
         return (e.stack = t.stack), s.A.captureException(e), null;
     }
 }
+
 function u(e, t, n) {
     let s = r.useRef(null),
         o = r.useRef(null),

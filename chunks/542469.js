@@ -1,4 +1,7 @@
-Object.defineProperty(t, "__esModule", { value: !0 }), (t.ColorWrap = void 0);
+Object.defineProperty(t, "__esModule", {
+    value: !0,
+}),
+    (t.ColorWrap = void 0);
 var n =
         Object.assign ||
         function (e) {
@@ -31,13 +34,19 @@ var n =
         if (null != e) for (var r in e) Object.prototype.hasOwnProperty.call(e, r) && (t[r] = e[r]);
         return (t.default = e), t;
     })(r(309252));
+
 function u(e) {
-    return e && e.__esModule ? e : { default: e };
+    return e && e.__esModule
+        ? e
+        : {
+              default: e,
+          };
 }
 var c = (t.ColorWrap = function (e) {
     var t = (function (t) {
         if ("function" != typeof t && null !== t)
             throw TypeError("Super expression must either be null or a function, not " + typeof t);
+
         function r(e) {
             if (!(this instanceof r)) throw TypeError("Cannot call a class as a function");
             var t = (function (e, t) {
@@ -87,7 +96,15 @@ var c = (t.ColorWrap = function (e) {
                                 this.props.onSwatchHover && (t.onSwatchHover = this.handleSwatchHover),
                                 i.default.createElement(
                                     e,
-                                    n({}, this.props, this.state, { onChange: this.handleChange }, t),
+                                    n(
+                                        {},
+                                        this.props,
+                                        this.state,
+                                        {
+                                            onChange: this.handleChange,
+                                        },
+                                        t,
+                                    ),
                                 )
                             );
                         },

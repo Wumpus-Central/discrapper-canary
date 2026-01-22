@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var i = n(627968);
 n(64700);
 var r = n(311907),
@@ -10,6 +12,7 @@ var r = n(311907),
     c = n(287809),
     u = n(985018),
     A = n(792595);
+
 function b(e) {
     let { color: t, className: n } = e;
     return (0, i.jsx)("svg", {
@@ -23,26 +26,35 @@ function b(e) {
             fillRule: "evenodd",
             opacity: ".6",
             children: [
-                (0, i.jsx)("path", { d: "m0 0h80v16h-80z" }),
+                (0, i.jsx)("path", {
+                    d: "m0 0h80v16h-80z",
+                }),
                 (0, i.jsxs)("g", {
                     stroke: t,
                     strokeLinecap: "round",
                     strokeLinejoin: "round",
                     strokeWidth: "2",
                     children: [
-                        (0, i.jsx)("path", { d: "m71 1h4v4.16" }),
+                        (0, i.jsx)("path", {
+                            d: "m71 1h4v4.16",
+                        }),
                         (0, i.jsx)("path", {
                             d: "m2 1h4v4.16",
                             transform: "matrix(-1 0 0 1 8 0)",
                         }),
-                        (0, i.jsx)("path", { d: "m51 1h4m6 0h4m-24 0h4m-14 0h4m-14 0h4m-23 11v-2m9-9h4" }),
-                        (0, i.jsx)("path", { d: "m72.13 10.474 2.869 3.12 2.631-3.12" }),
+                        (0, i.jsx)("path", {
+                            d: "m51 1h4m6 0h4m-24 0h4m-14 0h4m-14 0h4m-23 11v-2m9-9h4",
+                        }),
+                        (0, i.jsx)("path", {
+                            d: "m72.13 10.474 2.869 3.12 2.631-3.12",
+                        }),
                     ],
                 }),
             ],
         }),
     });
 }
+
 function g(e, t) {
     let n = (0, r.bG)([c.default], () => c.default.getCurrentUser());
     return null == n || t.ownerId !== n.id || e.id === n.id
@@ -93,7 +105,9 @@ function g(e, t) {
                           (g = g =
                               {
                                   children: [
-                                      (0, i.jsx)(b, { color: l.A.unsafe_rawColors.PRIMARY_300.css }),
+                                      (0, i.jsx)(b, {
+                                          color: l.A.unsafe_rawColors.PRIMARY_300.css,
+                                      }),
                                       (0, i.jsxs)("div", {
                                           className: A.nS,
                                           children: [

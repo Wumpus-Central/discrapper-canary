@@ -1,4 +1,6 @@
-n.d(t, { G: () => u });
+n.d(t, {
+    G: () => u,
+});
 var r = n(627968),
     i = n(397927),
     l = n(529942),
@@ -7,6 +9,7 @@ var r = n(627968),
     c = n(652215),
     o = n(985018),
     d = n(51527);
+
 function u(e) {
     let { guildId: t, role: n } = e;
     return (0, r.jsx)("div", {
@@ -21,7 +24,9 @@ function u(e) {
                     a.A.close(),
                         (0, l.Tk)(t, {
                             type: s._.ROLES,
-                            roles: { [n.id]: n },
+                            roles: {
+                                [n.id]: n,
+                            },
                             returnToSection: c.BEX.ROLES,
                         });
                 },

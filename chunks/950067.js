@@ -1,5 +1,9 @@
 let r;
-n.d(t, { A: () => w }), n(896048), n(264879);
+n.d(t, {
+    A: () => w,
+}),
+    n(896048),
+    n(264879);
 var i = n(627968);
 n(64700);
 var l = n(397927),
@@ -26,6 +30,7 @@ var l = n(397927),
     C = n(652215);
 n(436317);
 var N = n(315290);
+
 function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -51,6 +56,7 @@ function T(e) {
     }
     return e;
 }
+
 function j(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -69,6 +75,7 @@ function j(e, t) {
         e
     );
 }
+
 function x() {
     null != r && (0, l.OoC)(r);
 }
@@ -140,7 +147,13 @@ class P extends s.A {
                             let { default: e } = await Promise.all([n.e("86746"), n.e("81890")]).then(
                                 n.bind(n, 218318),
                             );
-                            return (n) => (0, i.jsx)(e, j(T({}, n), { onSlideChange: t }));
+                            return (n) =>
+                                (0, i.jsx)(
+                                    e,
+                                    j(T({}, n), {
+                                        onSlideChange: t,
+                                    }),
+                                );
                         },
                         {
                             onCloseRequest: C.tEg,
@@ -183,9 +196,17 @@ class P extends s.A {
                     (0, l.mMO)(
                         async () => {
                             let { default: e } = await n.e("98063").then(n.bind(n, 143154));
-                            return (t) => (0, i.jsx)(e, j(T({}, t), { guildId: x }));
+                            return (t) =>
+                                (0, i.jsx)(
+                                    e,
+                                    j(T({}, t), {
+                                        guildId: x,
+                                    }),
+                                );
                         },
-                        { onCloseCallback: e },
+                        {
+                            onCloseCallback: e,
+                        },
                     ),
                 predicate: () => null != x && null != A.A.get(x) && A.A.get(x) !== A.E,
             },

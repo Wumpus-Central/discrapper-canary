@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968),
     l = n(311907),
     i = n(397927),
@@ -8,6 +10,7 @@ var r = n(627968),
     c = n(102817),
     u = n(641131),
     d = n(985018);
+
 function f(e) {
     let { channel: t, user: f, guild: p } = e,
         h = (0, l.bG)([o.A], () => null != f && null != p && (0, a.KX)(f, p, [o.A])),

@@ -1,15 +1,22 @@
-n.d(t, { A: () => m }), n(896048), n(114821), n(339614), n(228524);
+n.d(t, {
+    A: () => m,
+}),
+    n(896048),
+    n(114821),
+    n(339614),
+    n(228524);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
     s = n.n(l),
-    a = n(432022),
+    a = n(108531),
     c = n(827734),
     o = n(397927),
     d = n(147925),
     u = n(2242),
     f = n(985018),
     g = n(106467);
+
 function b(e) {
     let { checked: t, children: n } = e;
     return (0, r.jsxs)("div", {
@@ -28,22 +35,35 @@ function b(e) {
                       secondaryColor: c.A.unsafe_rawColors.WHITE.css,
                       className: s()(g.aL, g.xp),
                   })
-                : (0, r.jsx)("div", { className: s()(g.aL, g.VL) }),
+                : (0, r.jsx)("div", {
+                      className: s()(g.aL, g.VL),
+                  }),
         ],
     });
 }
+
 function m(e) {
     let { children: t } = e,
         [n, l] = i.useState(!1),
         s = t.flatMap((e) => e.items.map((e) => e.completed)),
         c = s.filter((e) => e).length / s.length,
         m = 1 === c,
-        p = (0, o.zhh)({ width: "".concat(100 * c, "%") }),
+        p = (0, o.zhh)({
+            width: "".concat(100 * c, "%"),
+        }),
         x = [
-            f.intl.format(f.t.wtQtXs, { promoPageGuideUrl: u.P7.PROMO_PAGE_GUIDE }),
-            f.intl.format(f.t["0Fo0wf"], { caseStudiesUrl: u.P7.CASE_STUDIES }),
-            f.intl.format(f.t["7JdzjA"], { subscriptionOfferingGuideUrl: u.P7.SUBSCRIPTION_OFFERING_GUIDE }),
-            f.intl.format(f.t.zkXN6I, { tierStructureGuideUrl: u.P7.TIER_STRUCTURE_GUIDE }),
+            f.intl.format(f.t.wtQtXs, {
+                promoPageGuideUrl: u.P7.PROMO_PAGE_GUIDE,
+            }),
+            f.intl.format(f.t["0Fo0wf"], {
+                caseStudiesUrl: u.P7.CASE_STUDIES,
+            }),
+            f.intl.format(f.t["7JdzjA"], {
+                subscriptionOfferingGuideUrl: u.P7.SUBSCRIPTION_OFFERING_GUIDE,
+            }),
+            f.intl.format(f.t.zkXN6I, {
+                tierStructureGuideUrl: u.P7.TIER_STRUCTURE_GUIDE,
+            }),
         ],
         h = n
             ? null

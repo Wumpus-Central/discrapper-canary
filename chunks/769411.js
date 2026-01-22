@@ -1,4 +1,7 @@
-n.d(t, { A: () => E }), n(896048);
+n.d(t, {
+    A: () => E,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(582754),
@@ -91,7 +94,9 @@ let c = "0.3",
                             strokeLinecap: "round",
                             strokeDasharray: "".concat(E, " ").concat(E),
                             className: c,
-                            style: { strokeDashoffset: v },
+                            style: {
+                                strokeDashoffset: v,
+                            },
                             r: "".concat(_),
                             cx: "50%",
                             cy: "50%",
@@ -111,11 +116,15 @@ let c = "0.3",
                             children: [
                                 (0, r.jsx)("stop", {
                                     offset: "0%",
-                                    style: { stopColor: "#FFBDF2" },
+                                    style: {
+                                        stopColor: "#FFBDF2",
+                                    },
                                 }),
                                 (0, r.jsx)("stop", {
                                     offset: "100%",
-                                    style: { stopColor: "#E742E1" },
+                                    style: {
+                                        stopColor: "#E742E1",
+                                    },
                                 }),
                             ],
                         }),
@@ -127,7 +136,9 @@ let c = "0.3",
                             y2: "67.6298",
                             gradientUnits: "userSpaceOnUse",
                             children: [
-                                (0, r.jsx)("stop", { stopColor: "#F9A0E8" }),
+                                (0, r.jsx)("stop", {
+                                    stopColor: "#F9A0E8",
+                                }),
                                 (0, r.jsx)("stop", {
                                     offset: "1",
                                     stopColor: "#E742E1",

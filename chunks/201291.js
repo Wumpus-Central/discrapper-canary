@@ -1,4 +1,7 @@
-l.d(i, { default: () => h }), l(896048);
+l.d(i, {
+    default: () => h,
+}),
+    l(896048);
 var a = l(627968);
 l(64700);
 var n = l(284009),
@@ -10,6 +13,7 @@ var n = l(284009),
     u = l(493540),
     o = l(652215),
     p = l(985018);
+
 function h(t) {
     let { transitionState: i, guild: l, onClose: n } = t,
         h = (0, d.GV)(),
@@ -42,7 +46,9 @@ function h(t) {
                               type: "critical",
                               children: x.message,
                           }),
-                          (0, a.jsx)(s.hKd, { size: 24 }),
+                          (0, a.jsx)(s.hKd, {
+                              size: 24,
+                          }),
                       ],
                   })
                 : null,

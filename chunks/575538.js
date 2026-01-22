@@ -1,4 +1,6 @@
-i.d(l, { default: () => h });
+i.d(l, {
+    default: () => h,
+});
 var n = i(627968);
 i(64700);
 var e = i(311907),
@@ -10,6 +12,7 @@ var e = i(311907),
     u = i(399925),
     d = i(857266),
     p = i(985018);
+
 function h(t) {
     let { onSelect: l } = t,
         { clipsLength: i } = (0, e.cf)([o.A], () => o.A.getSettings()),

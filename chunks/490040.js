@@ -22,6 +22,7 @@ var r = n(627968),
     y = n(734057),
     O = n(985018),
     A = n(543218);
+
 function v(e) {
     let { playSound: t } = e;
     return (0, r.jsxs)(c.DUT, {
@@ -35,14 +36,19 @@ function v(e) {
                 color: "currentColor",
                 className: A.uA,
             }),
-            (0, r.jsx)("span", { children: "Unknown" }),
+            (0, r.jsx)("span", {
+                children: "Unknown",
+            }),
         ],
     });
 }
+
 function S(e) {
     let { soundId: t } = e,
         n = (0, o.bG)([m.A], () => m.A.getSoundById(t)),
-        i = (0, f.tj)({ location: "SoundboardMentionInline" }),
+        i = (0, f.tj)({
+            location: "SoundboardMentionInline",
+        }),
         { isPlaying: a, playSound: s } = (0, h.A)(n);
     return i
         ? null == n
@@ -55,6 +61,7 @@ function S(e) {
               })
         : null;
 }
+
 function I(e) {
     let { className: t, sound: n, playSound: i, isPlaying: a } = e,
         o = (null == n ? void 0 : n.emojiId) != null || (null == n ? void 0 : n.emojiName) != null,
@@ -62,12 +69,21 @@ function I(e) {
             emojiName: null == n ? void 0 : n.emojiName,
             soundName: null == n ? void 0 : n.name,
         });
-    return (0, d.X9)({ location: "SoundboardMentionInline" })
+    return (0, d.X9)({
+        location: "SoundboardMentionInline",
+    })
         ? (0, r.jsxs)(c.DUT, {
               "aria-label": l,
               tag: "span",
               onClick: i,
-              className: s()(A.Ls, A.oR, { [A.he]: !0 === a }, t),
+              className: s()(
+                  A.Ls,
+                  A.oR,
+                  {
+                      [A.he]: !0 === a,
+                  },
+                  t,
+              ),
               children: [
                   o &&
                       (0, r.jsx)(u.A, {
@@ -75,7 +91,9 @@ function I(e) {
                           emojiName: null == n ? void 0 : n.emojiName,
                           className: A.JS,
                       }),
-                  (0, r.jsx)("span", { children: " ".concat(null == n ? void 0 : n.name, " ") }),
+                  (0, r.jsx)("span", {
+                      children: " ".concat(null == n ? void 0 : n.name, " "),
+                  }),
               ],
           })
         : null;
@@ -89,7 +107,9 @@ let T = function (e) {
             return null != (e = (0, p.A)(t, n, a, s)) ? e : f;
         }, [t, n, a, s, f]),
         S = (0, o.bG)([y.A], () => y.A.getChannel(t)),
-        T = (0, d.X9)({ location: "SoundboardMention" }),
+        T = (0, d.X9)({
+            location: "SoundboardMention",
+        }),
         C = i.useRef(null),
         { isPlaying: N, playSound: R } = (0, h.A)(O, S),
         w = i.useCallback(async () => {
@@ -100,7 +120,9 @@ let T = function (e) {
         }, [R]);
     return T
         ? null == O
-            ? (0, r.jsx)(v, { playSound: w })
+            ? (0, r.jsx)(v, {
+                  playSound: w,
+              })
             : c && !u
               ? (0, r.jsx)(
                     E.Ay,
@@ -115,7 +137,9 @@ let T = function (e) {
                         buttonOverlay: g.If.SOUNDMOJI,
                         tooltipClassName: A.YL,
                         tooltipContentClassName: A.R3,
-                        tooltipOverride: (0, r.jsx)(_.WE, { sound: O }),
+                        tooltipOverride: (0, r.jsx)(_.WE, {
+                            sound: O,
+                        }),
                         soundmojiVisualEffectRef: C,
                     },
                     "".concat(O.soundId),
@@ -123,7 +147,9 @@ let T = function (e) {
               : (0, r.jsx)(l.m, {
                     "aria-label": O.name,
                     "data-pending-richtooltip-migration": !0,
-                    __unsupportedReactNodeAsText: (0, r.jsx)(_.WE, { sound: O }),
+                    __unsupportedReactNodeAsText: (0, r.jsx)(_.WE, {
+                        sound: O,
+                    }),
                     position: "top",
                     delay: 500,
                     children: (0, r.jsx)("span", {

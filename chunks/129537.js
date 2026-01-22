@@ -10,12 +10,13 @@ var i,
     a = n(64700),
     o = n(503698),
     s = n.n(o),
-    c = n(432022),
+    c = n(108531),
     u = n(52133),
     d = n(203982),
     p = n(5463),
     h = n(652215),
     f = n(18337);
+
 function m(e, t, n) {
     return (
         t in e
@@ -29,6 +30,7 @@ function m(e, t, n) {
         e
     );
 }
+
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -45,6 +47,7 @@ function g(e) {
     }
     return e;
 }
+
 function y(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -84,6 +87,7 @@ let O = new Set([
     "RESIZE_SOUTH_WEST",
     "RESIZE_SOUTH_EAST",
 ]);
+
 function E(e, t, n) {
     let { width: i, height: r, fixed: l } = e;
     return {
@@ -92,6 +96,7 @@ function E(e, t, n) {
         fixed: l,
     };
 }
+
 function v(e) {
     let { top: t, left: n, bottom: i, right: r } = e;
     return (
@@ -107,9 +112,11 @@ function v(e) {
         }
     );
 }
+
 function b(e) {
     return "auto" === e || null == e ? "auto" : "".concat(e, "px");
 }
+
 function S(e, t) {
     let n = 0;
     return {
@@ -117,6 +124,7 @@ function S(e, t) {
         height: "auto" === t.height ? (null != e ? e.clientHeight : 0) : t.height,
     };
 }
+
 function x(e, t) {
     let { top: n, left: i, bottom: r, right: l } = t;
     switch (e) {
@@ -156,6 +164,7 @@ function x(e, t) {
             throw Error("getOrientedCoords: Invalid orientation: ".concat(e));
     }
 }
+
 function j(e) {
     let { computedSize: t } = e;
     return t;
@@ -291,10 +300,19 @@ class I extends (i = a.Component) {
                 (0, p.fh)((0, p.Ly)(this.dragState.dragOrientedCoords, r, l, v.width, v.height)),
                 this.dragState.dragOrientedCoords,
             );
-        this.setDOMSize(y(g({}, v), { fixed: this.size.fixed }), !0),
+        this.setDOMSize(
+            y(g({}, v), {
+                fixed: this.size.fixed,
+            }),
+            !0,
+        ),
             (0, u.A)(b, this.dragState.dragOrientedCoords) ||
                 ((this.dragState.dragOrientedCoords = b), this.setDOMPositions(this.dragState.dragOrientedCoords)),
-            f || (null != s && s(), this.setState({ operationStarted: !0 })),
+            f ||
+                (null != s && s(),
+                this.setState({
+                    operationStarted: !0,
+                })),
             null != c && c(n, h, this.anchor, this.size);
     }
     setDOMPositions(e) {
@@ -329,11 +347,15 @@ class I extends (i = a.Component) {
                     ? (0, l.jsxs)(l.Fragment, {
                           children: [
                               (0, l.jsx)("div", {
-                                  className: s()(f.M$, { [f.An]: n }),
+                                  className: s()(f.M$, {
+                                      [f.An]: n,
+                                  }),
                                   onMouseDown: (e) => this.handleResizeMouseDown(e, "RESIZE_NORTH"),
                               }),
                               (0, l.jsx)("div", {
-                                  className: s()(f.Q8, { [f.An]: n }),
+                                  className: s()(f.Q8, {
+                                      [f.An]: n,
+                                  }),
                                   onMouseDown: (e) => this.handleResizeMouseDown(e, "RESIZE_SOUTH"),
                               }),
                           ],
@@ -343,11 +365,15 @@ class I extends (i = a.Component) {
                     ? (0, l.jsxs)(l.Fragment, {
                           children: [
                               (0, l.jsx)("div", {
-                                  className: s()(f.cz, { [f.zC]: n }),
+                                  className: s()(f.cz, {
+                                      [f.zC]: n,
+                                  }),
                                   onMouseDown: (e) => this.handleResizeMouseDown(e, "RESIZE_EAST"),
                               }),
                               (0, l.jsx)("div", {
-                                  className: s()(f._J, { [f.zC]: n }),
+                                  className: s()(f._J, {
+                                      [f.zC]: n,
+                                  }),
                                   onMouseDown: (e) => this.handleResizeMouseDown(e, "RESIZE_WEST"),
                               }),
                           ],
@@ -357,19 +383,27 @@ class I extends (i = a.Component) {
                     ? (0, l.jsxs)(l.Fragment, {
                           children: [
                               (0, l.jsx)("div", {
-                                  className: s()(f.DS, { [f.Ke]: n }),
+                                  className: s()(f.DS, {
+                                      [f.Ke]: n,
+                                  }),
                                   onMouseDown: (e) => this.handleResizeMouseDown(e, "RESIZE_NORTH_WEST"),
                               }),
                               (0, l.jsx)("div", {
-                                  className: s()(f.Bc, { [f.UJ]: n }),
+                                  className: s()(f.Bc, {
+                                      [f.UJ]: n,
+                                  }),
                                   onMouseDown: (e) => this.handleResizeMouseDown(e, "RESIZE_NORTH_EAST"),
                               }),
                               (0, l.jsx)("div", {
-                                  className: s()(f.rL, { [f.UJ]: n }),
+                                  className: s()(f.rL, {
+                                      [f.UJ]: n,
+                                  }),
                                   onMouseDown: (e) => this.handleResizeMouseDown(e, "RESIZE_SOUTH_WEST"),
                               }),
                               (0, l.jsx)("div", {
-                                  className: s()(f.Rl, { [f.Ke]: n }),
+                                  className: s()(f.Rl, {
+                                      [f.Ke]: n,
+                                  }),
                                   onMouseDown: (e) => this.handleResizeMouseDown(e, "RESIZE_SOUTH_EAST"),
                               }),
                           ],
@@ -406,7 +440,7 @@ class I extends (i = a.Component) {
             borderWidth: r,
             padding: i,
             borderRadius: l + r + i,
-            zIndex: null != a ? 1000 : void 0,
+            zIndex: null != a ? 1e3 : void 0,
             visibility: e ? "hidden" : void 0,
         });
     }
@@ -580,7 +614,9 @@ class I extends (i = a.Component) {
                 );
             }),
             m(this, "setLockExtras", (e) => {
-                this.setState({ lockExtras: e });
+                this.setState({
+                    lockExtras: e,
+                });
             }),
             (this.anchor = v(e.anchor)),
             (this.size = E(e.size, e.minSize.width, e.minSize.height));

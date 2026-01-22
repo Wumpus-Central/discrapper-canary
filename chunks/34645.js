@@ -1,4 +1,8 @@
-t.d(n, { default: () => ep }), t(896048), t(457529);
+t.d(n, {
+    default: () => ep,
+}),
+    t(896048),
+    t(457529);
 var l = t(627968),
     i = t(64700),
     r = t(503698),
@@ -55,6 +59,7 @@ var l = t(627968),
     et = t(818348),
     el = t(985018),
     ei = t(314121);
+
 function er(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
@@ -80,6 +85,7 @@ function er(e) {
     }
     return e;
 }
+
 function es(e, n) {
     return (
         (n = null != n ? n : {}),
@@ -110,6 +116,7 @@ async function eu(e, n) {
         n,
     );
 }
+
 function ed(e) {
     let n,
         {
@@ -353,7 +360,10 @@ function ed(e) {
             );
         },
     });
-    if (eg) n = (0, l.jsx)(I.oO, { onClose: ns });
+    if (eg)
+        n = (0, l.jsx)(I.oO, {
+            onClose: ns,
+        });
     else if (eO && ej && eQ && null != nd && "" !== nd)
         if ((null == ef ? void 0 : ef.isPausedOrPausePending) && !ef.isPausedAllowsUpdatesButNotResume)
             n = (0, l.jsx)(_.$mQ, {
@@ -379,7 +389,9 @@ function ed(e) {
                           paymentSourceId: ek,
                           currency: nd,
                       }
-                    : { currency: nd };
+                    : {
+                          currency: nd,
+                      };
             n = (0, l.jsx)(Z.A, {
                 premiumSubscriptionPlan: eL,
                 analyticsLocation: ed,
@@ -399,7 +411,9 @@ function ed(e) {
                               paymentSourceId: ek,
                               currency: nd,
                           }
-                        : { currency: nd },
+                        : {
+                              currency: nd,
+                          },
                 c = F.A.getGuild(em),
                 u = null == ex && null == c;
             switch (e2) {
@@ -469,7 +483,9 @@ function ed(e) {
                 case T.pn.ADD_PAYMENT_STEPS:
                     break;
                 case T.pn.AWAITING_AUTHENTICATION:
-                    e = (0, l.jsx)(P.N, { className: ei.__invalid_body });
+                    e = (0, l.jsx)(P.N, {
+                        className: ei.__invalid_body,
+                    });
                     break;
                 case T.pn.REVIEW:
                     o()(null != eL, "Missing nextPremiumSubscriptionPlan"),
@@ -532,7 +548,9 @@ function ed(e) {
                                               });
                                               if (l.redirectConfirmation) return void nb(null != l.redirectURL);
                                           } else {
-                                              let l = { items: (0, K.aE)(ef, eX) };
+                                              let l = {
+                                                  items: (0, K.aE)(ef, eX),
+                                              };
                                               (l.currency = ef.currency),
                                                   null == l.currency && (l.currency = s.currency),
                                                   (l.paymentSource = null != eM ? ew[eM] : void 0),
@@ -577,7 +595,10 @@ function ed(e) {
                                       text: el.intl.string(el.t.eUEeCt),
                                       onClick: () => {
                                           null != no.current &&
-                                              (no.current.scrollIntoView({ behavior: "smooth" }), nu(!0));
+                                              (no.current.scrollIntoView({
+                                                  behavior: "smooth",
+                                              }),
+                                              nu(!0));
                                       },
                                       type: "submit",
                                   }),
@@ -662,12 +683,15 @@ function ed(e) {
         (0, l.jsxs)(_.EOs, {
             "data-migration-pending": !0,
             transitionState: t,
-            className: s()({ [ei.MZ]: e2 === T.pn.PLAN_SELECT }),
+            className: s()({
+                [ei.MZ]: e2 === T.pn.PLAN_SELECT,
+            }),
             parentComponent: "GuildBoostPurchaseModal",
             children: [nf, n],
         })
     );
 }
+
 function ep(e) {
     let n = (0, u.bG)([V.A], () => V.A.getPremiumTypeSubscription()),
         { analyticsLocations: t } = (0, S.Ay)(g.A.GUILD_BOOST_PURCHASE_MODAL);

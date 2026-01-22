@@ -1,4 +1,6 @@
-t(697509)(r, "__esModule", { value: !0 }),
+t(697509)(r, "__esModule", {
+    value: !0,
+}),
     (r.default = void 0),
     (r.default = {
         abstract: !0,
@@ -28,15 +30,21 @@ t(697509)(r, "__esModule", { value: !0 }),
         },
         relatedConcepts: [
             {
-                concept: { name: "rel" },
+                concept: {
+                    name: "rel",
+                },
                 module: "HTML",
             },
             {
-                concept: { name: "role" },
+                concept: {
+                    name: "role",
+                },
                 module: "XHTML",
             },
             {
-                concept: { name: "type" },
+                concept: {
+                    name: "type",
+                },
                 module: "Dublin Core",
             },
         ],

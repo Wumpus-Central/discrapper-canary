@@ -1,4 +1,6 @@
-n.d(t, { A: () => E });
+n.d(t, {
+    A: () => E,
+});
 var l = n(627968),
     r = n(64700),
     i = n(503698),
@@ -12,6 +14,7 @@ var l = n(627968),
     p = n(167155),
     b = n(652215),
     g = n(56668);
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -54,6 +57,7 @@ let h = {
         [b.bFR.BAD]: o.RIK,
         [b.bFR.UNKNOWN]: o.esW,
     };
+
 function _(e) {
     let { quality: t, largePing: n } = e,
         r = (function (e, t) {
@@ -88,8 +92,19 @@ function _(e) {
             return i;
         })(e, ["quality", "largePing"]),
         i = y[t];
-    return (0, l.jsx)(i, m({ className: a()(g.hU, { [g.kV]: n }) }, r));
+    return (0, l.jsx)(
+        i,
+        m(
+            {
+                className: a()(g.hU, {
+                    [g.kV]: n,
+                }),
+            },
+            r,
+        ),
+    );
 }
+
 function E(e) {
     let {
             quality: t,
@@ -110,7 +125,10 @@ function E(e) {
                 return (0, l.jsx)(
                     f.A,
                     ((t = m({}, e)),
-                    (n = n = { channelId: v }),
+                    (n = n =
+                        {
+                            channelId: v,
+                        }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                         : (function (e, t) {

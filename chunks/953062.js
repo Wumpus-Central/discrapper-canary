@@ -1,4 +1,7 @@
-n.d(t, { A: () => h }), n(896048);
+n.d(t, {
+    A: () => h,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -18,7 +21,11 @@ let h = (e) => {
     }, [t, h, l]),
     l === s.M.CHURN_DISCOUNT_PREMIUM_TAB_BADGE)
         ? (0, r.jsx)(u.MA, {
-              badgeCopy: p.intl.format(p.t.AYcXGW, { discountOfferAmount: n.discount.amount }).toString(),
+              badgeCopy: p.intl
+                  .format(p.t.AYcXGW, {
+                      discountOfferAmount: n.discount.amount,
+                  })
+                  .toString(),
               isTabSelected: t,
               offerExpiresAt: null,
           })
@@ -35,7 +42,9 @@ let h = (e) => {
                   (0, r.jsx)(o.Text, {
                       variant: "eyebrow",
                       color: "text-subtle",
-                      children: p.intl.format(p.t.AYcXGW, { discountOfferAmount: n.discount.amount }),
+                      children: p.intl.format(p.t.AYcXGW, {
+                          discountOfferAmount: n.discount.amount,
+                      }),
                   }),
               ],
           });

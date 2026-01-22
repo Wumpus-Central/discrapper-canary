@@ -1,4 +1,6 @@
-n.d(t, { default: () => a });
+n.d(t, {
+    default: () => a,
+});
 var l = n(627968);
 n(64700);
 var r = n(158954),
@@ -6,6 +8,7 @@ var r = n(158954),
     u = n(496092),
     c = n(508654),
     s = n(985018);
+
 function a(e) {
     let { channel: t, transitionState: n, onClose: a } = e,
         o = (0, c.Qs)(t.id);

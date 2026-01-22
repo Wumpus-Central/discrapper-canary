@@ -30,6 +30,7 @@ var r,
     y = n(427262),
     O = n(985018),
     A = n(649134);
+
 function v(e, t, n) {
     return (
         t in e
@@ -61,7 +62,9 @@ class S extends a.PureComponent {
             id: a,
             "aria-label": o,
             "aria-selected": e,
-            focusProps: { enabled: !1 },
+            focusProps: {
+                enabled: !1,
+            },
             tabIndex: -1,
             innerRef: this.setRef,
             className: A.Ke,
@@ -137,7 +140,9 @@ class I extends a.Component {
     }
     getAccessibilityLabel() {
         let { guild: e } = this.props;
-        return O.intl.formatToPlainString(O.t.WVq3Lr, { name: e.name });
+        return O.intl.formatToPlainString(O.t.WVq3Lr, {
+            name: e.name,
+        });
     }
     render() {
         let { onMouseEnter: e, onClick: t, onFocus: n, onContextMenu: r, focused: a, score: s, id: o } = this.props;
@@ -212,7 +217,9 @@ class T extends (r = a.Component) {
                   guildId: t.guild_id,
                   users: e.map((e) => {
                       let { user: t } = e;
-                      return { user: t };
+                      return {
+                          user: t,
+                      };
                   }),
                   max: 4,
               });
@@ -259,7 +266,9 @@ class T extends (r = a.Component) {
         });
     }
 }
-v(T, "defaultProps", { unread: !1 });
+v(T, "defaultProps", {
+    unread: !1,
+});
 class C extends a.Component {
     renderIcon() {
         let { channel: e, status: t } = this.props;
@@ -317,7 +326,9 @@ class C extends a.Component {
                   name: n,
                   mentions: t,
               })
-            : O.intl.formatToPlainString(O.t.lLSbno, { name: n });
+            : O.intl.formatToPlainString(O.t.lLSbno, {
+                  name: n,
+              });
     }
     render() {
         let { onMouseEnter: e, onClick: t, onFocus: n, onContextMenu: r, focused: a, score: s, id: o } = this.props;

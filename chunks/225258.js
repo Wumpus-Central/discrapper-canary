@@ -1,4 +1,7 @@
-a.r(r), a.d(r, { default: () => t });
+a.r(r),
+    a.d(r, {
+        default: () => t,
+    });
 var t = {
     payButton: "결제",
     "payButton.redirecting": "리디렉션 중...",
@@ -41,7 +44,7 @@ var t = {
     "idealIssuer.selectField.title": "은행",
     "idealIssuer.selectField.placeholder": "은행 선택",
     "creditCard.success": "결제 성공",
-    loading: "로드 중\u2026",
+    loading: "로드 중…",
     continue: "계속",
     continueTo: "다음으로 계속:",
     "wechatpay.timetopay": "남은 결제 시한: %@",

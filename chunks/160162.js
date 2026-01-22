@@ -1,4 +1,7 @@
-n.d(t, { A: () => p }), n(747238);
+n.d(t, {
+    A: () => p,
+}),
+    n(747238);
 var i = n(627968),
     r = n(64700),
     s = n(960488),
@@ -45,9 +48,17 @@ let p = () =>
     (0, i.jsxs)(s.dO, {
         children: [
             (0, i.jsx)(a.A, {
-                path: u.BVt.CHANNEL(c.pv.guildId(), c.pv.channelId({ optional: !0 }), ":messageId?"),
+                path: u.BVt.CHANNEL(
+                    c.pv.guildId(),
+                    c.pv.channelId({
+                        optional: !0,
+                    }),
+                    ":messageId?",
+                ),
                 component: h,
             }),
-            (0, i.jsx)(a.A, { component: h }),
+            (0, i.jsx)(a.A, {
+                component: h,
+            }),
         ],
     });

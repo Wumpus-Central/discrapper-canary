@@ -27,7 +27,9 @@ var n = r(64700),
                                 borderRadius: "4px",
                                 position: "relative",
                             },
-                            body: { padding: "15px 9px 9px 15px" },
+                            body: {
+                                padding: "15px 9px 9px 15px",
+                            },
                             label: {
                                 fontSize: "18px",
                                 color: "#fff",
@@ -79,11 +81,17 @@ var n = r(64700),
                                 borderRadius: "4px",
                                 margin: "0 6px 6px 0",
                             },
-                            clear: { clear: "both" },
+                            clear: {
+                                clear: "both",
+                            },
                         },
                         "hide-triangle": {
-                            triangle: { display: "none" },
-                            triangleShadow: { display: "none" },
+                            triangle: {
+                                display: "none",
+                            },
+                            triangleShadow: {
+                                display: "none",
+                            },
                         },
                         "top-left-triangle": {
                             triangle: {
@@ -130,11 +138,17 @@ var n = r(64700),
                 style: b.card,
                 className: "twitter-picker " + (void 0 === h ? "" : h),
             },
-            n.createElement("div", { style: b.triangleShadow }),
-            n.createElement("div", { style: b.triangle }),
+            n.createElement("div", {
+                style: b.triangleShadow,
+            }),
+            n.createElement("div", {
+                style: b.triangle,
+            }),
             n.createElement(
                 "div",
-                { style: b.body },
+                {
+                    style: b.body,
+                },
                 (0, l.A)(a, function (e, t) {
                     return n.createElement(c.rp, {
                         key: t,
@@ -143,17 +157,29 @@ var n = r(64700),
                         style: b.swatch,
                         onClick: v,
                         onHover: r,
-                        focusStyle: { boxShadow: "0 0 4px " + e },
+                        focusStyle: {
+                            boxShadow: "0 0 4px " + e,
+                        },
                     });
                 }),
-                n.createElement("div", { style: b.hash }, "#"),
+                n.createElement(
+                    "div",
+                    {
+                        style: b.hash,
+                    },
+                    "#",
+                ),
                 n.createElement(c.jc, {
                     label: null,
-                    style: { input: b.input },
+                    style: {
+                        input: b.input,
+                    },
                     value: o.replace("#", ""),
                     onChange: v,
                 }),
-                n.createElement("div", { style: b.clear }),
+                n.createElement("div", {
+                    style: b.clear,
+                }),
             ),
         );
     };

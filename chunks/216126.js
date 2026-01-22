@@ -1,10 +1,13 @@
-n.d(t, { r: () => l });
+n.d(t, {
+    r: () => l,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
     a = n.n(i),
     s = n(885621),
     o = n(658122);
+
 function l(e) {
     let { contents: t, label: n, className: i, color: l = "default" } = e;
     return 0 === t.length

@@ -1,4 +1,6 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -32,7 +34,12 @@ let s = (e) => {
                     });
             }
             return e;
-        })({ paddingTop: "".concat((1 / t) * 100, "%") }, n),
+        })(
+            {
+                paddingTop: "".concat((1 / t) * 100, "%"),
+            },
+            n,
+        ),
         children: (0, r.jsx)("div", {
             className: a.v,
             children: s,

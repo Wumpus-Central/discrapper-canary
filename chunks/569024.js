@@ -1,4 +1,9 @@
-n.d(t, { T: () => M }), n(896048), n(446912), n(457529);
+n.d(t, {
+    T: () => M,
+}),
+    n(896048),
+    n(446912),
+    n(457529);
 var r,
     i = n(61090);
 n(237751);
@@ -31,6 +36,7 @@ var a = n(311907),
     P = n(736400),
     D = n(424234),
     x = n(652215);
+
 function L(e, t, n) {
     return (
         t in e
@@ -52,21 +58,27 @@ let j = new y.A("CacheStore"),
     V = !1,
     F = !1,
     B = !1;
+
 function H() {
     return (F = !0), (B = !0), !1;
 }
+
 function Y() {
     return (F = !1), (B = !0), !1;
 }
+
 function W() {
     V = !0;
 }
+
 function K() {
     (V = !0), (U = "cache-loaded");
 }
+
 function z() {
     U = "no-cache";
 }
+
 function q(e) {
     j.log("Clearing cache store"),
         (G = Date.now()),
@@ -76,9 +88,11 @@ function q(e) {
         (U = "no-cache"),
         "CLEAR_CACHES" === e.type && e.preventWritingCachesAgainThisSession && (k = !0);
 }
+
 function X() {
     j.verbose("Writing cache now"), (G = Date.now()), (V = !0), s.w.remove(x.j_2), s.w.remove(x.XYq), s.w.remove(x.CT4);
 }
+
 function Z(e) {
     null != e.channels && (0, P.Ay)(e.channels),
         null != e.privateChannels && (0, P.Ay)(e.privateChannels),
@@ -158,8 +172,18 @@ async function $(e, t, n) {
                         privateChannels: x,
                         initialGuildChannels: null != (e = P.channels) ? e : [],
                         users: [...R.users],
-                        messages: null == R.channelId ? {} : { [R.channelId]: R.messages },
-                        guildMembers: null == R.guildId ? {} : { [R.guildId]: r },
+                        messages:
+                            null == R.channelId
+                                ? {}
+                                : {
+                                      [R.channelId]: R.messages,
+                                  },
+                        guildMembers:
+                            null == R.guildId
+                                ? {}
+                                : {
+                                      [R.guildId]: r,
+                                  },
                         userSettings: L,
                         userGuildSettings: k,
                         readStates: M,
@@ -197,8 +221,16 @@ async function $(e, t, n) {
         );
     }
 }
+
 function J() {
-    return ea(() => o.h.dispatch({ type: "CACHE_LOADED_LAZY_NO_CACHE" })), Promise.resolve();
+    return (
+        ea(() =>
+            o.h.dispatch({
+                type: "CACHE_LOADED_LAZY_NO_CACHE",
+            }),
+        ),
+        Promise.resolve()
+    );
 }
 let ee = !1;
 async function et(e, t) {
@@ -243,6 +275,7 @@ async function en(e, t) {
         guildId: n,
     };
 }
+
 function er(e, t) {
     return (
         j.verbose("loading stale guild channels (count: ".concat(t.length, ", ids: ").concat(t.join(", "), ")")),
@@ -306,7 +339,9 @@ async function ei(e, t, n, r) {
                     type: "CLEAR_CACHES",
                     reason: "database:not_ok",
                 }),
-                o.h.dispatch({ type: "CACHE_LOADED_LAZY_NO_CACHE" });
+                o.h.dispatch({
+                    type: "CACHE_LOADED_LAZY_NO_CACHE",
+                });
             return;
         }
         if (null == s || null == f || null == p) {
@@ -322,7 +357,9 @@ async function ei(e, t, n, r) {
                     type: "CLEAR_CACHES",
                     reason: "database:load_failed",
                 }),
-                o.h.dispatch({ type: "CACHE_LOADED_LAZY_NO_CACHE" });
+                o.h.dispatch({
+                    type: "CACHE_LOADED_LAZY_NO_CACHE",
+                });
             return;
         }
         if (null == a && (s.length > 0 || f.all.length > 0)) {
@@ -332,16 +369,22 @@ async function ei(e, t, n, r) {
                     type: "CLEAR_CACHES",
                     reason: "database:versionless",
                 }),
-                o.h.dispatch({ type: "CACHE_LOADED_LAZY_NO_CACHE" });
+                o.h.dispatch({
+                    type: "CACHE_LOADED_LAZY_NO_CACHE",
+                });
             return;
         }
         if (F) {
             (0, D.A)("already_connected"),
                 j.log("Skipping lazy cache; already connected."),
-                o.h.dispatch({ type: "CACHE_LOADED_LAZY_NO_CACHE" });
+                o.h.dispatch({
+                    type: "CACHE_LOADED_LAZY_NO_CACHE",
+                });
             return;
         }
-        h.addAnalytics({ hadCacheAtStartup: !0 });
+        h.addAnalytics({
+            hadCacheAtStartup: !0,
+        });
         let l = {
             type: "CACHE_LOADED_LAZY",
             guilds: s,
@@ -352,7 +395,9 @@ async function ei(e, t, n, r) {
         S.A.deserializeCache.measure(() => Z(l)),
             S.A.dispatchLazyCache.measure(() => o.h.dispatch(l)),
             j.verbose("late lazy cache loaded (ok: true, took: ".concat(performance.now() - i, "ms)")),
-            h.addAnalytics({ usedCacheAtStartup: !0 });
+            h.addAnalytics({
+                usedCacheAtStartup: !0,
+            });
         let c = p.reduce((e, t) => {
                 let [n, r] = t;
                 return e + r.length;
@@ -367,7 +412,7 @@ async function ei(e, t, n, r) {
                 return e + r.length;
             }, 0),
             m = d - _,
-            g = 0 === f.stale.length ? "" : " \xB7 ".concat(f.stale.join(", "));
+            g = 0 === f.stale.length ? "" : " \xb7 ".concat(f.stale.join(", "));
         j.verbose(
             "lazy_cache_summary: (\n        ok: true\n        meta:\n          auth_user_id: "
                 .concat(t, "\n          initial_guild: ")
@@ -395,6 +440,7 @@ async function ei(e, t, n, r) {
             });
     });
 }
+
 function ea(e) {
     let t = O.A.getSocket(),
         n = !1;

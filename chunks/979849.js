@@ -1,4 +1,6 @@
-n.d(t, { A: () => A });
+n.d(t, {
+    A: () => A,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -13,6 +15,7 @@ var r = n(627968),
     _ = n(385612),
     h = n(339984),
     m = n(577401);
+
 function g(e, t, n) {
     return (
         t in e
@@ -26,6 +29,7 @@ function g(e, t, n) {
         e
     );
 }
+
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,6 +46,7 @@ function E(e) {
     }
     return e;
 }
+
 function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -54,6 +59,7 @@ function b(e, t) {
     }
     return n;
 }
+
 function y(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -66,6 +72,7 @@ function y(e, t) {
     );
 }
 let O = f.Ay.getEnableHardwareAcceleration() ? l.JsQ : l.euF;
+
 function A(e) {
     let {
             user: t,
@@ -88,7 +95,9 @@ function A(e) {
         x = (0, r.jsx)(O, {
             src: g,
             avatarDecoration: b,
-            imageClassName: s()(S, { [m.Lw]: !I }),
+            imageClassName: s()(S, {
+                [m.Lw]: !I,
+            }),
             size: l._3J.SIZE_80,
             "aria-label": t.username,
             status: P,

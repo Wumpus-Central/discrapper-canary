@@ -1,4 +1,8 @@
-n.d(t, { A: () => h }), n(896048), n(321073);
+n.d(t, {
+    A: () => h,
+}),
+    n(896048),
+    n(321073);
 var r = n(627968),
     i = n(64700),
     l = n(311907),
@@ -10,6 +14,7 @@ var r = n(627968),
     d = n(652215),
     p = n(985018),
     f = n(298525);
+
 function h(e) {
     let t,
         { guild: n } = e,
@@ -28,7 +33,9 @@ function h(e) {
         ? null
         : ((t =
               1 === m.length
-                  ? p.intl.formatToPlainString(p.t["Egq+G/"], { a: m[0].name })
+                  ? p.intl.formatToPlainString(p.t["Egq+G/"], {
+                        a: m[0].name,
+                    })
                   : 2 === m.length
                     ? p.intl.formatToPlainString(p.t.LxU9R3, {
                           a: m[0].name,

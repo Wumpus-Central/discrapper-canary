@@ -24,6 +24,7 @@ var r = n(652215),
             e
         );
     })({});
+
 function o(e) {
     switch (e) {
         case 480:
@@ -58,6 +59,7 @@ var l = (function (e) {
             e
         );
     })({});
+
 function u(e) {
     switch (e) {
         case 5:
@@ -198,6 +200,7 @@ let d = {
             fps: 5,
         },
     ];
+
 function p(e, t) {
     return {
         value: e,
@@ -207,11 +210,28 @@ function p(e, t) {
     };
 }
 p(720), p(1080), p(1440), p(0, () => a.intl.string(a.t.XjXqzh)), p(720), p(1080), p(1440);
-let _ = (e) => (0 === e ? a.intl.string(a.t.XjXqzh) : a.intl.formatToPlainString(a.t.TEOC0I, { resolution: e })),
+let _ = (e) =>
+        0 === e
+            ? a.intl.string(a.t.XjXqzh)
+            : a.intl.formatToPlainString(a.t.TEOC0I, {
+                  resolution: e,
+              }),
     h = [p(480, () => _(480)), p(720, () => _(720)), p(1080, () => _(1080)), p(1440, () => _(1440)), p(0, () => _(0))];
 p(15), p(30), p(60);
 let m = [
-    p(15, () => a.intl.formatToPlainString(a.t["bW+JCW"], { value: 15 })),
-    p(30, () => a.intl.formatToPlainString(a.t["bW+JCW"], { value: 30 })),
-    p(60, () => a.intl.formatToPlainString(a.t["bW+JCW"], { value: 60 })),
+    p(15, () =>
+        a.intl.formatToPlainString(a.t["bW+JCW"], {
+            value: 15,
+        }),
+    ),
+    p(30, () =>
+        a.intl.formatToPlainString(a.t["bW+JCW"], {
+            value: 30,
+        }),
+    ),
+    p(60, () =>
+        a.intl.formatToPlainString(a.t["bW+JCW"], {
+            value: 60,
+        }),
+    ),
 ];

@@ -35,7 +35,9 @@ class l extends o.G {
         return n || (n = this.create()), (n.value = this.refJsonReader.scalar(e, 1, void 0, "value")), n;
     }
     create(e) {
-        let t = { value: 0 };
+        let t = {
+            value: 0,
+        };
         return (
             globalThis.Object.defineProperty(t, s.$, {
                 enumerable: !1,
@@ -88,7 +90,9 @@ class c extends o.G {
         return n || (n = this.create()), (n.value = this.refJsonReader.scalar(e, 1, void 0, "value")), n;
     }
     create(e) {
-        let t = { value: 0 };
+        let t = {
+            value: 0,
+        };
         return (
             globalThis.Object.defineProperty(t, s.$, {
                 enumerable: !1,
@@ -141,7 +145,9 @@ class d extends o.G {
         return n || (n = this.create()), (n.value = this.refJsonReader.scalar(e, r.LN.INT64, r.rO.STRING, "value")), n;
     }
     create(e) {
-        let t = { value: "0" };
+        let t = {
+            value: "0",
+        };
         return (
             globalThis.Object.defineProperty(t, s.$, {
                 enumerable: !1,
@@ -194,7 +200,9 @@ class p extends o.G {
         return n || (n = this.create()), (n.value = this.refJsonReader.scalar(e, r.LN.UINT64, r.rO.STRING, "value")), n;
     }
     create(e) {
-        let t = { value: "0" };
+        let t = {
+            value: "0",
+        };
         return (
             globalThis.Object.defineProperty(t, s.$, {
                 enumerable: !1,
@@ -247,7 +255,9 @@ class h extends o.G {
         return n || (n = this.create()), (n.value = this.refJsonReader.scalar(e, 5, void 0, "value")), n;
     }
     create(e) {
-        let t = { value: 0 };
+        let t = {
+            value: 0,
+        };
         return (
             globalThis.Object.defineProperty(t, s.$, {
                 enumerable: !1,
@@ -300,7 +310,9 @@ class g extends o.G {
         return n || (n = this.create()), (n.value = this.refJsonReader.scalar(e, 13, void 0, "value")), n;
     }
     create(e) {
-        let t = { value: 0 };
+        let t = {
+            value: 0,
+        };
         return (
             globalThis.Object.defineProperty(t, s.$, {
                 enumerable: !1,
@@ -353,7 +365,9 @@ class b extends o.G {
         return n || (n = this.create()), (n.value = this.refJsonReader.scalar(e, 8, void 0, "value")), n;
     }
     create(e) {
-        let t = { value: !1 };
+        let t = {
+            value: !1,
+        };
         return (
             globalThis.Object.defineProperty(t, s.$, {
                 enumerable: !1,
@@ -406,7 +420,9 @@ class O extends o.G {
         return n || (n = this.create()), (n.value = this.refJsonReader.scalar(e, 9, void 0, "value")), n;
     }
     create(e) {
-        let t = { value: "" };
+        let t = {
+            value: "",
+        };
         return (
             globalThis.Object.defineProperty(t, s.$, {
                 enumerable: !1,
@@ -459,7 +475,9 @@ class v extends o.G {
         return n || (n = this.create()), (n.value = this.refJsonReader.scalar(e, 12, void 0, "value")), n;
     }
     create(e) {
-        let t = { value: new Uint8Array(0) };
+        let t = {
+            value: new Uint8Array(0),
+        };
         return (
             globalThis.Object.defineProperty(t, s.$, {
                 enumerable: !1,

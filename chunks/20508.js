@@ -1,10 +1,13 @@
-r.d(t, { default: () => c });
+r.d(t, {
+    default: () => c,
+});
 var n = r(627968),
     l = r(64700),
     o = r(158954),
     a = r(997509),
     i = r(652215),
     u = r(985018);
+
 function c(e) {
     let { guild: t } = e,
         r = (function (e, t) {
@@ -70,10 +73,16 @@ function c(e) {
             return e;
         })(
             {
-                title: u.intl.formatToPlainString(u.t["1GX6P/"], { name: t.name }),
+                title: u.intl.formatToPlainString(u.t["1GX6P/"], {
+                    name: t.name,
+                }),
                 subtitle: t.features.has(i.GuildFeatures.HUB)
-                    ? u.intl.format(u.t.ZHTXVD, { name: t.name })
-                    : u.intl.format(u.t.ZEXC0r, { name: t.name }),
+                    ? u.intl.format(u.t.ZHTXVD, {
+                          name: t.name,
+                      })
+                    : u.intl.format(u.t.ZEXC0r, {
+                          name: t.name,
+                      }),
                 confirmText: t.features.has(i.GuildFeatures.HUB)
                     ? u.intl.string(u.t.Dv8gFT)
                     : u.intl.string(u.t.J2TBi3),

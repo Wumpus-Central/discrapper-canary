@@ -1,8 +1,12 @@
-n.d(t, { a: () => u }), n(896048);
+n.d(t, {
+    a: () => u,
+}),
+    n(896048);
 var r,
     i = n(627968),
     a = n(64700),
     s = n(451988);
+
 function o(e, t, n) {
     return (
         t in e
@@ -16,6 +20,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -87,8 +92,12 @@ class u extends (r = a.Component) {
                 if (null == this.animationRef.current) return;
                 let f =
                     "object" == typeof u && null != u && "default" in u && "string" == typeof u.default
-                        ? { path: u.default }
-                        : { animationData: u };
+                        ? {
+                              path: u.default,
+                          }
+                        : {
+                              animationData: u,
+                          };
                 (this.animation = d.loadAnimation(
                     l(
                         {

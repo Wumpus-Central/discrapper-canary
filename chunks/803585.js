@@ -1,5 +1,10 @@
 let r, l;
-n.d(t, { A: () => g }), n(896048), n(733351), n(747238);
+n.d(t, {
+    A: () => g,
+}),
+    n(896048),
+    n(733351),
+    n(747238);
 var a = n(627968),
     o = n(64700),
     i = n(421380),
@@ -58,6 +63,7 @@ let I = "hTKzmak",
             ],
         });
     };
+
 function g(e) {
     let { onBack: t, onClose: n, isSlideReady: r } = e,
         [l, p] = o.useState(""),
@@ -75,7 +81,9 @@ function g(e) {
         g(null), S(!0);
         let r = t.split("/"),
             a = r[r.length - 1];
-        s.Ay.resolveInvite(a, "Join Guild", { inputValue: t }).then(
+        s.Ay.resolveInvite(a, "Join Guild", {
+            inputValue: t,
+        }).then(
             (e) => {
                 let { invite: t } = e;
                 if ((S(!1), null == t)) return void g(_.intl.string(_.t["GEYI+Z"]));
@@ -163,7 +171,9 @@ function g(e) {
                             ),
                         ),
                     }),
-                    (0, a.jsx)(E, { onClick: n }),
+                    (0, a.jsx)(E, {
+                        onClick: n,
+                    }),
                 ],
             }),
             (0, a.jsxs)(c.jlY, {

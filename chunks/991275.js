@@ -49,6 +49,7 @@ var r = n(627968),
     K = n(652215),
     z = n(985018),
     q = n(701939);
+
 function X(e, t, n) {
     return (
         t in e
@@ -62,6 +63,7 @@ function X(e, t, n) {
         e
     );
 }
+
 function Z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -78,6 +80,7 @@ function Z(e) {
     }
     return e;
 }
+
 function Q(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -90,6 +93,7 @@ function Q(e, t) {
     }
     return n;
 }
+
 function $(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -101,6 +105,7 @@ function $(e, t) {
         e
     );
 }
+
 function J(e, t) {
     if (null == e) return {};
     var n,
@@ -117,6 +122,7 @@ function J(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function ee(e, t) {
     if (null == e) return {};
     var n,
@@ -211,9 +217,15 @@ let et = W.Ay.getEnableHardwareAcceleration(),
                 [u, y, b],
             ),
             D = i.useCallback(() => {
-                let e = "@".concat(Y.Ay.getUserTag(u, { decoration: "never" })),
+                let e = "@".concat(
+                        Y.Ay.getUserTag(u, {
+                            decoration: "never",
+                        }),
+                    ),
                     t = "<@".concat(u.id, ">");
-                B._.dispatch(K.jej.TEXTAREA_FOCUS, { channelId: b.id }),
+                B._.dispatch(K.jej.TEXTAREA_FOCUS, {
+                    channelId: b.id,
+                }),
                     B._.dispatchToLastSubscribed(K.jej.INSERT_TEXT, {
                         plainText: e,
                         rawText: t,
@@ -330,7 +342,13 @@ let et = W.Ay.getEnableHardwareAcceleration(),
                     (null == c ? void 0 : c.src) != null &&
                         (0, _.L3)(e, async () => {
                             let { default: e } = await n.e("33743").then(n.bind(n, 455538));
-                            return (t) => (0, r.jsx)(e, $(Z({}, t), { imageUrl: c.src }));
+                            return (t) =>
+                                (0, r.jsx)(
+                                    e,
+                                    $(Z({}, t), {
+                                        imageUrl: c.src,
+                                    }),
+                                );
                         });
                 },
                 [null == c ? void 0 : c.src],
@@ -338,7 +356,9 @@ let et = W.Ay.getEnableHardwareAcceleration(),
         return t === K.clD.UNKNOWN
             ? (0, r.jsx)("div", {
                   className: l,
-                  children: (0, r.jsx)("div", { className: q.k1 }),
+                  children: (0, r.jsx)("div", {
+                      className: q.k1,
+                  }),
               })
             : (0, r.jsxs)(C.A, {
                   className: l,
@@ -359,7 +379,15 @@ let et = W.Ay.getEnableHardwareAcceleration(),
                               null != c
                                   ? (0, r.jsx)("span", {
                                         onContextMenu: d,
-                                        children: (0, r.jsx)(D.A, Z({ className: q.UT }, c)),
+                                        children: (0, r.jsx)(
+                                            D.A,
+                                            Z(
+                                                {
+                                                    className: q.UT,
+                                                },
+                                                c,
+                                            ),
+                                        ),
                                     })
                                   : null,
                               (0, r.jsx)("span", {
@@ -369,17 +397,20 @@ let et = W.Ay.getEnableHardwareAcceleration(),
                               null == u
                                   ? null
                                   : (0, r.jsxs)("span", {
-                                        children: ["\xA0\u2014 ", u],
+                                        children: ["\xa0— ", u],
                                     }),
                           ],
                       }),
                   ],
               });
     });
+
 function el(e) {
     let { index: t } = e,
         n = (0, c.rm)("".concat(t));
-    return (0, r.jsx)(g.A, { itemProps: n });
+    return (0, r.jsx)(g.A, {
+        itemProps: n,
+    });
 }
 class ec extends i.Component {
     shouldComponentUpdate(e) {
@@ -442,7 +473,9 @@ class ec extends i.Component {
                                 component: (0, r.jsx)(p.AC4, {
                                     children: (0, r.jsx)(p.H, {
                                         id: o,
-                                        children: z.intl.format(z.t.JBQxV6, { channel: n.name }),
+                                        children: z.intl.format(z.t.JBQxV6, {
+                                            channel: n.name,
+                                        }),
                                     }),
                                 }),
                                 children: (0, r.jsx)(c.PR, {
@@ -464,7 +497,9 @@ class ec extends i.Component {
                                                                     ? t
                                                                     : null);
                                                     },
-                                                    className: s()(q.ol, { [q.Ij]: d.Fr }),
+                                                    className: s()(q.ol, {
+                                                        [q.Ij]: d.Fr,
+                                                    }),
                                                     paddingTop: 0,
                                                     sectionHeight: i,
                                                     rowHeight: this.getRowHeightComputer(),
@@ -500,7 +535,13 @@ class ec extends i.Component {
                 let { section: t } = e,
                     { groups: n, channel: a } = this.props,
                     s = n[t];
-                if ((0, v.l)(s)) return (0, i.createElement)(v.A, $(Z({}, s), { key: "section-".concat(t) }));
+                if ((0, v.l)(s))
+                    return (0, i.createElement)(
+                        v.A,
+                        $(Z({}, s), {
+                            key: "section-".concat(t),
+                        }),
+                    );
                 if (0 === t) {
                     let { key: e } = s;
                     return (0, r.jsx)(
@@ -610,7 +651,13 @@ class ec extends i.Component {
                     if (s.type === M.S9.HIDDEN_CONTENT_INVENTORY)
                         return (0, r.jsx)(S.A, {}, "content-inventory-hidden-entry");
                 }
-                return (0, r.jsx)(el, { index: i }, "placeholder-".concat(t, ":").concat(n));
+                return (0, r.jsx)(
+                    el,
+                    {
+                        index: i,
+                    },
+                    "placeholder-".concat(t, ":").concat(n),
+                );
             }),
             X(this, "handleScroll", () => {
                 this.updateSubscription(), this.updateMaxContentFeedRowSeen();
@@ -711,6 +758,7 @@ class ec extends i.Component {
             });
     }
 }
+
 function eu(e) {
     let { channel: t, className: n } = e,
         { analyticsLocations: a } = (0, O.Ay)(b.A.MEMBER_LIST),
@@ -743,7 +791,11 @@ function eu(e) {
                     callback: () => {
                         requestAnimationFrame(() => {
                             var t;
-                            return null == (t = document.querySelector(e)) ? void 0 : t.focus({ preventScroll: !0 });
+                            return null == (t = document.querySelector(e))
+                                ? void 0
+                                : t.focus({
+                                      preventScroll: !0,
+                                  });
                         });
                     },
                 });
@@ -755,7 +807,9 @@ function eu(e) {
                 new Promise((e) => {
                     let t = g.current;
                     if (null == t) return e();
-                    t.scrollToTop({ callback: () => requestAnimationFrame(() => e()) });
+                    t.scrollToTop({
+                        callback: () => requestAnimationFrame(() => e()),
+                    });
                 }),
             [],
         ),
@@ -801,6 +855,7 @@ function eu(e) {
         }),
     });
 }
+
 function ed(e) {
     let { channel: t, className: n } = e,
         a = i.useDeferredValue(t);

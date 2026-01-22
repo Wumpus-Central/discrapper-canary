@@ -1,4 +1,7 @@
-n.d(t, { default: () => R }), n(896048);
+n.d(t, {
+    default: () => R,
+}),
+    n(896048);
 var l = n(627968),
     r = n(64700),
     s = n(158954),
@@ -30,6 +33,7 @@ var l = n(627968),
     w = n(988794),
     P = n(652215),
     T = n(5818);
+
 function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -55,6 +59,7 @@ function D(e) {
     }
     return e;
 }
+
 function L(e) {
     let { guildEvent: t, guild: n, channel: r, onActionTaken: a, recurrenceId: c } = e,
         d = (0, v.Fd)(t),
@@ -87,7 +92,9 @@ function L(e) {
             null != h.onContextMenu
                 ? (0, l.jsx)("div", {
                       className: T.Zv,
-                      children: (0, l.jsx)(O.jD, { onClick: h.onContextMenu }),
+                      children: (0, l.jsx)(O.jD, {
+                          onClick: h.onContextMenu,
+                      }),
                   })
                 : void 0;
     return (0, l.jsx)(s.H7u, {
@@ -119,7 +126,10 @@ let R = (e) => {
                             return (0, l.jsx)(
                                 e,
                                 ((n = D({}, t)),
-                                (r = r = { imageUrl: X }),
+                                (r = r =
+                                    {
+                                        imageUrl: X,
+                                    }),
                                 Object.getOwnPropertyDescriptors
                                     ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
                                     : (function (e, t) {
@@ -179,7 +189,9 @@ let R = (e) => {
             size: "lg",
             onClose: y,
             children: [
-                (0, l.jsx)(s.rQ0, { title: U.name }),
+                (0, l.jsx)(s.rQ0, {
+                    title: U.name,
+                }),
                 (null == U ? void 0 : U.image) != null &&
                     null != X &&
                     (0, l.jsx)("div", {

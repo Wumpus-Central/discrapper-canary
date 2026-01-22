@@ -1,4 +1,14 @@
-n.d(t, { A: () => k }), n(896048), n(321073), n(693327), n(554719), n(680155), n(323874), n(14289), n(35956);
+n.d(t, {
+    A: () => k,
+}),
+    n(896048),
+    n(321073),
+    n(693327),
+    n(554719),
+    n(680155),
+    n(323874),
+    n(14289),
+    n(35956);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -27,6 +37,7 @@ var r = n(627968),
     N = n(652215),
     R = n(985018),
     w = n(111314);
+
 function P(e, t, n) {
     return (
         t in e
@@ -40,6 +51,7 @@ function P(e, t, n) {
         e
     );
 }
+
 function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -56,6 +68,7 @@ function D(e) {
     }
     return e;
 }
+
 function x(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -68,6 +81,7 @@ function x(e, t) {
     }
     return n;
 }
+
 function L(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -83,7 +97,7 @@ new m.A("ChannelEditor.tsx");
 let j = function () {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
     },
-    M = 1000;
+    M = 1e3;
 class k extends i.Component {
     _getEditorWindow() {
         var e, t, n, r, i;
@@ -111,7 +125,11 @@ class k extends i.Component {
         if ((this.fixFocus(e), this.props.useSlate !== e.useSlate)) {
             var t, n;
             let e;
-            (e = this.props.useSlate ? this.props.textValue : (0, C.WO)(this.props.richValue, { mode: "plain" })),
+            (e = this.props.useSlate
+                ? this.props.textValue
+                : (0, C.WO)(this.props.richValue, {
+                      mode: "plain",
+                  })),
                 null == (t = (n = this.props).onChange) || t.call(n, null, e, (0, A.x7)(e));
         } else this.props.textValue !== e.textValue && this.saveCurrentTextThrottled();
     }
@@ -308,15 +326,36 @@ class k extends i.Component {
             K = y
                 ? (0, r.jsx)(
                       T.A,
-                      L(D({ ref: this.ref }, W), {
-                          type: b,
-                          value: d && !B ? (0, A.x7)("") : u,
-                          canUseCommands: null == (o = b.commands) ? void 0 : o.enabled,
-                          canOnlyUseTextCommands: C,
-                          onSubmitFailure: m,
-                      }),
+                      L(
+                          D(
+                              {
+                                  ref: this.ref,
+                              },
+                              W,
+                          ),
+                          {
+                              type: b,
+                              value: d && !B ? (0, A.x7)("") : u,
+                              canUseCommands: null == (o = b.commands) ? void 0 : o.enabled,
+                              canOnlyUseTextCommands: C,
+                              onSubmitFailure: m,
+                          },
+                      ),
                   )
-                : (0, r.jsx)(I.A, L(D({ ref: this.ref }, W), { value: d && !B ? "" : l }));
+                : (0, r.jsx)(
+                      I.A,
+                      L(
+                          D(
+                              {
+                                  ref: this.ref,
+                              },
+                              W,
+                          ),
+                          {
+                              value: d && !B ? "" : l,
+                          },
+                      ),
+                  );
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(E.EG, {
@@ -352,10 +391,15 @@ class k extends i.Component {
                 var e;
                 null == (e = this._focusBlurQueue) ||
                     e.then(() => {
-                        this.setState({ focused: !0 }, () => {
-                            let e = this.ref.current;
-                            null != e && e.focus();
-                        });
+                        this.setState(
+                            {
+                                focused: !0,
+                            },
+                            () => {
+                                let e = this.ref.current;
+                                null != e && e.focus();
+                            },
+                        );
                     });
             }),
             P(this, "saveCurrentText", function () {
@@ -399,12 +443,20 @@ class k extends i.Component {
             P(this, "handleFocus", (e) => {
                 let { onFocus: t } = this.props,
                     { focused: n } = this.state;
-                null == t || t(e), n || this.setState({ focused: !0 });
+                null == t || t(e),
+                    n ||
+                        this.setState({
+                            focused: !0,
+                        });
             }),
             P(this, "handleBlur", (e) => {
                 let { onBlur: t } = this.props,
                     { focused: n } = this.state;
-                null == t || t(e), n && this.setState({ focused: !1 });
+                null == t || t(e),
+                    n &&
+                        this.setState({
+                            focused: !1,
+                        });
             }),
             P(this, "handlePaste", (e) => {
                 var t, n, r;
@@ -491,7 +543,9 @@ class k extends i.Component {
             }),
             (this._unsubscribe = v.Y0.subscribe((e) => {
                 requestAnimationFrame(() => {
-                    this.setState({ popup: e });
+                    this.setState({
+                        popup: e,
+                    });
                 });
             })),
             (this.state = {
@@ -501,6 +555,7 @@ class k extends i.Component {
             });
     }
 }
+
 function U(e, t) {
     var n, r, i, a, s;
     let o = [],
@@ -555,7 +610,9 @@ function U(e, t) {
     if (null != c && null != t) {
         let n = e.getData(c.type);
         if (n.length > t) {
-            let e = new Blob([n], { type: "text/plain" });
+            let e = new Blob([n], {
+                type: "text/plain",
+            });
             return {
                 files: [(0, b.VE)(e, "message.txt", "text/plain")],
                 convertedStringToFile: !0,
@@ -568,6 +625,7 @@ function U(e, t) {
         errors: d,
     };
 }
+
 function G(e) {
     let t = new DOMParser().parseFromString(e, "text/html").querySelector("img");
     if (null != t) {

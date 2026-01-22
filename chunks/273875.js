@@ -1,4 +1,8 @@
-n.d(t, { A: () => m }), n(896048), n(733351);
+n.d(t, {
+    A: () => m,
+}),
+    n(896048),
+    n(733351);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -53,12 +57,16 @@ let b = i.forwardRef(function (e, t) {
                         [g.fR]: null != f && !d,
                     }),
                     children: [
-                        (0, r.jsx)("span", { children: b }),
+                        (0, r.jsx)("span", {
+                            children: b,
+                        }),
                         (0, r.jsx)("span", {
                             className: g.SD,
                             children: m,
                         }),
-                        (0, r.jsx)("span", { children: p }),
+                        (0, r.jsx)("span", {
+                            children: p,
+                        }),
                     ],
                 }),
             })
@@ -69,7 +77,9 @@ let b = i.forwardRef(function (e, t) {
                     [g.bJ]: null != f && !d,
                 }),
                 children: [
-                    (0, r.jsx)("span", { children: b }),
+                    (0, r.jsx)("span", {
+                        children: b,
+                    }),
                     (0, r.jsx)(c.m, {
                         text: f.message,
                         position: "top",
@@ -79,10 +89,13 @@ let b = i.forwardRef(function (e, t) {
                             children: m,
                         }),
                     }),
-                    (0, r.jsx)("span", { children: p }),
+                    (0, r.jsx)("span", {
+                        children: p,
+                    }),
                 ],
             });
 });
+
 function m(e) {
     let {
             value: t,
@@ -195,7 +208,9 @@ function m(e) {
                             onChange: R,
                             onKeyDownCapture: G,
                             value: t,
-                            style: { width: w > 0 ? w : "calc(".concat(t.length, "ch + 10px)") },
+                            style: {
+                                width: w > 0 ? w : "calc(".concat(t.length, "ch + 10px)"),
+                            },
                         }),
                         (0, r.jsx)(b, {
                             ref: E,

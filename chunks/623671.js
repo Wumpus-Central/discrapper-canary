@@ -38,6 +38,7 @@ let h = {
         mask: l.hW.CONTENT_IMAGE_100,
     },
 };
+
 function m(e) {
     let { children: t, onClick: n } = e;
     return null == n
@@ -48,6 +49,7 @@ function m(e) {
               children: t,
           });
 }
+
 function g(e) {
     var t, n, i;
     let { image: o, smallImage: _, aspectRatio: g, onClick: E, size: b, className: y } = e,

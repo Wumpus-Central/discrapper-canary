@@ -1,4 +1,6 @@
-n.d(t, { j: () => b });
+n.d(t, {
+    j: () => b,
+});
 var r = n(627968);
 n(64700);
 var i = n(284009),
@@ -15,8 +17,11 @@ var i = n(284009),
     h = n(490744),
     m = n(67480),
     g = n(652215);
+
 function E(e) {
-    let t = (0, c.LU)({ applicationId: e }),
+    let t = (0, c.LU)({
+            applicationId: e,
+        }),
         n = null != t ? p.A.getWindow(t) : void 0;
     return null == n || n.closed ? s.SYi : s.KX8;
 }
@@ -53,6 +58,7 @@ async function b(e) {
         });
     await y(t, n, r, s, i);
 }
+
 function y(e, t, n, i, a) {
     let s = (e, t, n) =>
         (0, r.jsx)(h.fs, {

@@ -1,4 +1,5 @@
 let r;
+
 function i(e, t, n) {
     return (
         t in e
@@ -24,6 +25,7 @@ try {
 try {
     null != window.localStorage && null != a && (window[a] = window.localStorage), delete window.localStorage;
 } catch (e) {}
+
 function s() {
     let e = "test";
     try {

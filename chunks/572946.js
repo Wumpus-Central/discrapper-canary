@@ -1,9 +1,12 @@
-n.d(t, { g: () => s });
+n.d(t, {
+    g: () => s,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
     l = n(587895),
     a = n(851907);
+
 function s(e) {
     let { applicationId: t, channelId: s, mediaUrl: o } = e,
         c = l.A.getApplication(t),

@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var a = n(627968),
     l = n(158954),
     i = n(793574),
@@ -9,9 +11,13 @@ var a = n(627968),
     d = n(228053),
     u = n(985018),
     m = n(248710);
+
 function p() {
-    (0, c.default)({ guildId: (0, o.zf)() });
+    (0, c.default)({
+        guildId: (0, o.zf)(),
+    });
 }
+
 function h(e) {
     let { handleOpenUserProfileModal: t, markAsDismissed: n } = e,
         { analyticsLocations: o } = (0, r.Ay)([i.A.WISHLIST_ACCOUNT_POPOUT_UPSSELL]);

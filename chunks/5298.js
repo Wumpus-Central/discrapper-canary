@@ -1,7 +1,10 @@
-n.d(t, { A: () => l });
+n.d(t, {
+    A: () => l,
+});
 var i = n(311907),
     r = n(576705),
     s = n(652215);
+
 function l(e) {
     let {
         canManageGuild: t,

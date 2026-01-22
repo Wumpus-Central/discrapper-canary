@@ -1,4 +1,7 @@
-n.d(t, { A: () => O }), n(896048);
+n.d(t, {
+    A: () => O,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(310784),
@@ -14,12 +17,15 @@ var r = n(627968),
     h = n(645725),
     m = n(541781);
 let g = 20;
+
 function E(e, t, n) {
     return t === n ? 1 : (0, o.clamp)((e - t) / (n - t), 0, 1);
 }
+
 function b(e, t, n) {
     return e + (t - e) * n;
 }
+
 function y(e) {
     let [t, n] = i.useState(void 0);
     return (
@@ -29,6 +35,7 @@ function y(e) {
         t
     );
 }
+
 function O(e) {
     let { application: t, context: n, name: a, iconURL: O, scrollerRef: A, sectionName: v } = e,
         S = (0, l.qB)((0, u.Ay)()),
@@ -111,7 +118,9 @@ function O(e) {
                         }),
                         (0, r.jsx)("div", {
                             className: m.FY,
-                            children: (0, r.jsx)(_.A, { className: m.aY }),
+                            children: (0, r.jsx)(_.A, {
+                                className: m.aY,
+                            }),
                         }),
                         (0, r.jsx)("div", {
                             className: m.VW,
@@ -139,7 +148,9 @@ function O(e) {
                 (0, r.jsx)("div", {
                     ref: T,
                     className: m.b8,
-                    style: { backgroundColor: w },
+                    style: {
+                        backgroundColor: w,
+                    },
                 }),
             ],
         })

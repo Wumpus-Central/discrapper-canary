@@ -1,4 +1,6 @@
-t(697509)(r, "__esModule", { value: !0 }),
+t(697509)(r, "__esModule", {
+    value: !0,
+}),
     (r.default = void 0),
     (r.default = {
         abstract: !1,
@@ -16,7 +18,9 @@ t(697509)(r, "__esModule", { value: !0 }),
         },
         relatedConcepts: [
             {
-                concept: { name: "chapter [EPUB-SSV]" },
+                concept: {
+                    name: "chapter [EPUB-SSV]",
+                },
                 module: "EPUB",
             },
         ],

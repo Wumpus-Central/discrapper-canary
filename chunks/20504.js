@@ -1,4 +1,7 @@
-n.d(t, { A: () => h }), n(896048);
+n.d(t, {
+    A: () => h,
+}),
+    n(896048);
 var r,
     i = n(627968),
     a = n(64700),
@@ -8,6 +11,7 @@ var r,
     c = n(122641),
     u = n(985018),
     d = n(573810);
+
 function f(e, t, n) {
     return (
         t in e
@@ -56,25 +60,46 @@ class _ extends (r = a.PureComponent) {
             (0, i.jsxs)("div", {
                 className: o()(n, d.kL),
                 onMouseEnter: () => {
-                    clearTimeout(this._hoverTimeout), this.setState({ hovered: !0 }), null == g || g();
+                    clearTimeout(this._hoverTimeout),
+                        this.setState({
+                            hovered: !0,
+                        }),
+                        null == g || g();
                 },
                 onMouseLeave: () => {
                     clearTimeout(this._hoverTimeout),
                         (this._hoverTimeout = setTimeout(() => {
-                            this.setState({ hovered: !1 }), null == E || E();
+                            this.setState({
+                                hovered: !1,
+                            }),
+                                null == E || E();
                         }, p));
                 },
-                onBlur: () => this.setState({ focused: !1 }),
+                onBlur: () =>
+                    this.setState({
+                        focused: !1,
+                    }),
                 onKeyDown: this.handleKeyDown,
                 children: [
                     (0, i.jsx)("div", {
-                        className: o()(d.QS, r, { [d.OZ]: b || y || O }),
+                        className: o()(d.QS, r, {
+                            [d.OZ]: b || y || O,
+                        }),
                         onMouseEnter: () => {
-                            clearTimeout(this._hoverTimeout), this.setState({ hovered: !0 });
+                            clearTimeout(this._hoverTimeout),
+                                this.setState({
+                                    hovered: !0,
+                                });
                         },
                         onMouseLeave: () => {
                             clearTimeout(this._hoverTimeout),
-                                (this._hoverTimeout = setTimeout(() => this.setState({ hovered: !1 }), p));
+                                (this._hoverTimeout = setTimeout(
+                                    () =>
+                                        this.setState({
+                                            hovered: !1,
+                                        }),
+                                    p,
+                                ));
                         },
                         children: (0, i.jsx)(c.A, {
                             sliderClassName: a,
@@ -124,30 +149,44 @@ class _ extends (r = a.PureComponent) {
                 switch (e.key) {
                     case "ArrowUp":
                         if ((e.stopPropagation(), e.preventDefault(), !this.state.focused)) {
-                            this.setState({ focused: !0 });
+                            this.setState({
+                                focused: !0,
+                            });
                             break;
                         }
                         null == i || i(Math.min(r, n + a));
                         break;
                     case "ArrowDown":
                         if ((e.stopPropagation(), e.preventDefault(), !this.state.focused)) {
-                            this.setState({ focused: !0 });
+                            this.setState({
+                                focused: !0,
+                            });
                             break;
                         }
                         null == i || i(Math.max(t, n - a));
                         break;
                     case "Escape":
-                        this.setState({ focused: !1 }), e.stopPropagation(), e.preventDefault();
+                        this.setState({
+                            focused: !1,
+                        }),
+                            e.stopPropagation(),
+                            e.preventDefault();
                 }
             }),
             f(this, "handleDragStart", () => {
-                this.setState({ dragging: !0 });
+                this.setState({
+                    dragging: !0,
+                });
             }),
             f(this, "handleDragEnd", () => {
-                this.setState({ dragging: !1 });
+                this.setState({
+                    dragging: !1,
+                });
             }),
             f(this, "blur", () => {
-                this.setState({ focused: !1 });
+                this.setState({
+                    focused: !1,
+                });
             });
     }
 }

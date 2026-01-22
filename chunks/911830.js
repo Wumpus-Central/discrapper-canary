@@ -1,8 +1,10 @@
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 var a = {
         lessThanXSeconds: {
-            one: "mindre än en sekund",
-            other: "mindre än {{count}} sekunder",
+            one: "mindre \xe4n en sekund",
+            other: "mindre \xe4n {{count}} sekunder",
         },
         xSeconds: {
             one: "en sekund",
@@ -10,16 +12,16 @@ var a = {
         },
         halfAMinute: "en halv minut",
         lessThanXMinutes: {
-            one: "mindre än en minut",
-            other: "mindre än {{count}} minuter",
+            one: "mindre \xe4n en minut",
+            other: "mindre \xe4n {{count}} minuter",
         },
         xMinutes: {
             one: "en minut",
             other: "{{count}} minuter",
         },
         aboutXHours: {
-            one: "ungefär en timme",
-            other: "ungefär {{count}} timmar",
+            one: "ungef\xe4r en timme",
+            other: "ungef\xe4r {{count}} timmar",
         },
         xHours: {
             one: "en timme",
@@ -30,39 +32,39 @@ var a = {
             other: "{{count}} dagar",
         },
         aboutXWeeks: {
-            one: "ungefär en vecka",
-            other: "ungefär {{count}} vecka",
+            one: "ungef\xe4r en vecka",
+            other: "ungef\xe4r {{count}} vecka",
         },
         xWeeks: {
             one: "en vecka",
             other: "{{count}} vecka",
         },
         aboutXMonths: {
-            one: "ungefär en månad",
-            other: "ungefär {{count}} månader",
+            one: "ungef\xe4r en m\xe5nad",
+            other: "ungef\xe4r {{count}} m\xe5nader",
         },
         xMonths: {
-            one: "en månad",
-            other: "{{count}} månader",
+            one: "en m\xe5nad",
+            other: "{{count}} m\xe5nader",
         },
         aboutXYears: {
-            one: "ungefär ett år",
-            other: "ungefär {{count}} år",
+            one: "ungef\xe4r ett \xe5r",
+            other: "ungef\xe4r {{count}} \xe5r",
         },
         xYears: {
-            one: "ett år",
-            other: "{{count}} år",
+            one: "ett \xe5r",
+            other: "{{count}} \xe5r",
         },
         overXYears: {
-            one: "över ett år",
-            other: "över {{count}} år",
+            one: "\xf6ver ett \xe5r",
+            other: "\xf6ver {{count}} \xe5r",
         },
         almostXYears: {
-            one: "nästan ett år",
-            other: "nästan {{count}} år",
+            one: "n\xe4stan ett \xe5r",
+            other: "n\xe4stan {{count}} \xe5r",
         },
     },
-    r = ["noll", "en", "två", "tre", "fyra", "fem", "sex", "sju", "åtta", "nio", "tio", "elva", "tolv"];
+    r = ["noll", "en", "tv\xe5", "tre", "fyra", "fem", "sex", "sju", "\xe5tta", "nio", "tio", "elva", "tolv"];
 let i = function (e, t, n) {
     var i,
         o = a[e];

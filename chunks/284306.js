@@ -1,10 +1,13 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(64700),
     i = n(311907),
     l = n(734057),
     a = n(287809),
     s = n(180232),
     o = n(157550);
+
 function c() {
     let e = (0, i.bG)([l.A], () => l.A.getPrivateChannelsVersion()),
         t = (0, i.yK)([l.A, o.A], () => {

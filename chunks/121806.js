@@ -41,6 +41,7 @@ var r = n(627968),
     S = n(315059),
     I = n(652215),
     T = n(985018);
+
 function C(e, t, n) {
     return (
         t in e
@@ -54,6 +55,7 @@ function C(e, t, n) {
         e
     );
 }
+
 function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -70,6 +72,7 @@ function N(e) {
     }
     return e;
 }
+
 function R(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -82,6 +85,7 @@ function R(e, t) {
     }
     return n;
 }
+
 function w(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -93,6 +97,7 @@ function w(e, t) {
         e
     );
 }
+
 function P(e) {
     let { searchContext: t, filter: n, queryString: r } = e,
         a = (0, c.bG)([b.A], () => b.A.getState(t), [t], c.My),
@@ -128,6 +133,7 @@ function P(e) {
         }
     );
 }
+
 function D(e) {
     let { user: t, guildId: n, channelId: r } = e,
         i = m.Ay.getName(n, r, t),
@@ -144,6 +150,7 @@ function D(e) {
         trailing: t.username,
     };
 }
+
 function x(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
         r = i.useMemo(() => (0, y.mt)(e), [e]),
@@ -241,6 +248,7 @@ function x(e, t) {
         handleBlurFilter: E,
     };
 }
+
 function L(e) {
     let t,
         { channel: n } = e;
@@ -268,6 +276,7 @@ function L(e) {
         leading: t,
     };
 }
+
 function j(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
         [n, r] = i.useState(t),
@@ -287,7 +296,9 @@ function j(e) {
             if (o.length > 0)
                 o.forEach((e) => {
                     let n = e.channel,
-                        i = L({ channel: n });
+                        i = L({
+                            channel: n,
+                        });
                     r.add(n.id), t.push(i);
                 });
             else {
@@ -300,7 +311,9 @@ function j(e) {
                         e.forEach((e) => {
                             let n = p.A.getChannel(e);
                             if (null != n) {
-                                let e = L({ channel: n });
+                                let e = L({
+                                    channel: n,
+                                });
                                 r.add(n.id), t.push(e);
                             }
                         });
@@ -312,7 +325,9 @@ function j(e) {
                         if (r.has(e)) return;
                         let n = p.A.getChannel(e);
                         if (null == n) return;
-                        let i = L({ channel: n });
+                        let i = L({
+                            channel: n,
+                        });
                         r.add(e), t.unshift(i);
                     }),
                 t
@@ -351,6 +366,7 @@ function j(e) {
         handleBlurFilter: f,
     };
 }
+
 function M(e) {
     switch (e) {
         case T.intl.string(T.t.ZNR2fi):
@@ -375,6 +391,7 @@ function M(e) {
             return null;
     }
 }
+
 function k(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
         [n, r] = i.useState(t),
@@ -447,6 +464,7 @@ let U = () =>
             duringFilter: null != (n = null == a ? void 0 : a.key) ? n : "".concat(T.intl.string(T.t.h2NzSd), ":"),
         };
     }, []);
+
 function G() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
         [t, n] = i.useState(e),
@@ -486,14 +504,24 @@ function G() {
             let { query: t, index: r } = e;
             n((e) => {
                 let n = [...e];
-                return (n[r] = w(N({}, n[r]), { query: t })), n;
+                return (
+                    (n[r] = w(N({}, n[r]), {
+                        query: t,
+                    })),
+                    n
+                );
             });
         }, []),
         h = i.useCallback((e) => {
             let { date: t, index: r } = e;
             n((e) => {
                 let n = [...e];
-                return (n[r] = w(N({}, n[r]), { date: t })), n;
+                return (
+                    (n[r] = w(N({}, n[r]), {
+                        date: t,
+                    })),
+                    n
+                );
             });
         }, []),
         m = i.useCallback(() => {
@@ -533,6 +561,7 @@ function G() {
         getDateQueryString: b,
     };
 }
+
 function V(e) {
     switch (e) {
         case T.intl.string(T.t.tPZo4p):
@@ -543,6 +572,7 @@ function V(e) {
             return u.XC7;
     }
 }
+
 function F(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
         [n, r] = i.useState(t),
@@ -603,6 +633,7 @@ function F(e) {
         handleFocusFilter: s,
     };
 }
+
 function B(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         [n, r] = i.useState(t),
@@ -654,6 +685,7 @@ function B(e) {
         getApplyQueryString: o,
     };
 }
+
 function H(e, t) {
     let { beforeFilter: n, afterFilter: r, duringFilter: a } = U(),
         s = (0, O.R)(t);
@@ -763,9 +795,11 @@ function H(e, t) {
         };
     }, [e, n, r, a, s]);
 }
+
 function Y(e, t) {
     return e === t || (0, a.isEqual)(e, t);
 }
+
 function W(e, t) {
     var n, r;
     if (e.length !== t.length) return !1;
@@ -784,6 +818,7 @@ function W(e, t) {
     for (let e of i.values()) if (0 !== e) return !1;
     return !0;
 }
+
 function K(e, t) {
     let n,
         r = A.Ay[e];
@@ -809,6 +844,7 @@ function K(e, t) {
     }
     return r.key + " " + n;
 }
+
 function z(e) {
     let { nonFilterQueryString: t, filterQueryString: n } = e,
         r = +(n.length > 0),
@@ -833,7 +869,13 @@ function z(e) {
             });
         }, []);
     return {
-        validateFilter: i.useCallback((e, t) => !o({ newFilterString: K(e, t) }) || (c(), !1), [o, c]),
+        validateFilter: i.useCallback(
+            (e, t) =>
+                !o({
+                    newFilterString: K(e, t),
+                }) || (c(), !1),
+            [o, c],
+        ),
         validateDateFilter: i.useCallback(() => !l || (c(), !1), [l, c]),
     };
 }

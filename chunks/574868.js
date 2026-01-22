@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -9,6 +11,7 @@ var i = n(311907),
     c = n(698723),
     u = n(531525),
     d = n(985018);
+
 function f() {
     let e = (0, i.bG)([l.Ay], () => l.Ay.disableVoiceChannelChangeAlert);
     return (0, r.jsx)(o.x, {
@@ -19,7 +22,9 @@ function f() {
             checked: !e,
             onChange: (t) => {
                 (0, c.A)("switch_channel_warning_enabled", t, !e),
-                    s.Ay.updatedUnsyncedSettings({ disableVoiceChannelChangeAlert: !t });
+                    s.Ay.updatedUnsyncedSettings({
+                        disableVoiceChannelChangeAlert: !t,
+                    });
             },
         }),
     });

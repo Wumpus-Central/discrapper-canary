@@ -1,4 +1,8 @@
-n.d(t, { A: () => x }), n(896048), n(321073);
+n.d(t, {
+    A: () => x,
+}),
+    n(896048),
+    n(321073);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -20,6 +24,7 @@ var r = n(627968),
     O = n(652215),
     A = n(896189),
     v = n(829681);
+
 function S(e, t, n) {
     return (
         t in e
@@ -33,6 +38,7 @@ function S(e, t, n) {
         e
     );
 }
+
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -49,6 +55,7 @@ function I(e) {
     }
     return e;
 }
+
 function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -61,6 +68,7 @@ function T(e, t) {
     }
     return n;
 }
+
 function C(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -72,6 +80,7 @@ function C(e, t) {
         e
     );
 }
+
 function N(e, t) {
     if (null == e) return {};
     var n,
@@ -88,6 +97,7 @@ function N(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function R(e, t) {
     if (null == e) return {};
     var n,
@@ -99,6 +109,7 @@ function R(e, t) {
     return i;
 }
 let w = [];
+
 function P(e) {
     let { channelId: t, type: n, ignoreFile: a, smallAttachments: S = !1 } = e,
         T = (0, c.bG)([p.A], () => p.A.keyboardModeEnabled),
@@ -189,40 +200,49 @@ function P(e) {
                           a = N(e, ["ref"]);
                       return (0, r.jsx)(
                           "ul",
-                          C(I({ ref: i }, a), {
-                              className: s()(A.I, v.KK),
-                              children: D
-                                  ? j.map((e) =>
-                                        (0, r.jsx)(
-                                            b.A,
-                                            {
-                                                channelId: t,
-                                                keyboardModeEnabled: T,
-                                                option: e,
-                                            },
-                                            e.name,
+                          C(
+                              I(
+                                  {
+                                      ref: i,
+                                  },
+                                  a,
+                              ),
+                              {
+                                  className: s()(A.I, v.KK),
+                                  children: D
+                                      ? j.map((e) =>
+                                            (0, r.jsx)(
+                                                b.A,
+                                                {
+                                                    channelId: t,
+                                                    keyboardModeEnabled: T,
+                                                    option: e,
+                                                },
+                                                e.name,
+                                            ),
+                                        )
+                                      : F.map((e) =>
+                                            (0, r.jsx)(
+                                                y.A,
+                                                {
+                                                    channelId: t,
+                                                    draftType: n.drafts.type,
+                                                    upload: e,
+                                                    keyboardModeEnabled: T,
+                                                    clip: e.clip,
+                                                    size: S ? E.L.SMALL : E.L.MEDIUM,
+                                                },
+                                                e.id,
+                                            ),
                                         ),
-                                    )
-                                  : F.map((e) =>
-                                        (0, r.jsx)(
-                                            y.A,
-                                            {
-                                                channelId: t,
-                                                draftType: n.drafts.type,
-                                                upload: e,
-                                                keyboardModeEnabled: T,
-                                                clip: e.clip,
-                                                size: S ? E.L.SMALL : E.L.MEDIUM,
-                                            },
-                                            e.id,
-                                        ),
-                                    ),
-                          }),
+                              },
+                          ),
                       );
                   },
               }),
           });
 }
+
 function D(e) {
     let { channelId: t, type: n, canAttachFiles: i, ignoreFile: a, smallAttachments: s = !1 } = e;
     return i

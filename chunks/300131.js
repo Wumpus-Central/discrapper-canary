@@ -1,4 +1,6 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var r = n(627968),
     l = n(64700),
     i = n(397927),
@@ -10,6 +12,7 @@ var r = n(627968),
     d = n(985018),
     f = n(998855);
 let p = o.A.getArticleURL(u.MVz.CUSTOM_PROFILES_WISHLIST);
+
 function b(e) {
     let { isOwner: t, isWishlistPublic: n, onToggleVisibility: o } = e,
         u = l.useRef(null),

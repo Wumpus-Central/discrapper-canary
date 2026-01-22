@@ -1,4 +1,8 @@
-a.d(t, { Q: () => O }), a(896048), a(321073);
+a.d(t, {
+    Q: () => O,
+}),
+    a(896048),
+    a(321073);
 var s = a(627968),
     l = a(64700),
     r = a(503698),
@@ -14,6 +18,7 @@ var s = a(627968),
     h = a(563853),
     b = a(855522),
     f = a(33221);
+
 function k(e, t, a) {
     return (
         t in e
@@ -30,7 +35,9 @@ function k(e, t, a) {
 let I = A.sE.MAIN_NAVIGATION_MENU;
 class O extends l.PureComponent {
     componentDidMount() {
-        this.setState({ isAppCompatible: p.VP });
+        this.setState({
+            isAppCompatible: p.VP,
+        });
     }
     render() {
         let {
@@ -53,7 +60,9 @@ class O extends l.PureComponent {
                                 (0, s.jsx)(r, {
                                     tag: "div",
                                     eventName: I,
-                                    data: { linkClicked: "logo" },
+                                    data: {
+                                        linkClicked: "logo",
+                                    },
                                     children: (0, s.jsx)(c.A, {
                                         avoidRouter: i,
                                         to: A.Tk.INDEX,
@@ -80,7 +89,12 @@ class O extends l.PureComponent {
                         }),
                         (0, s.jsxs)("ul", {
                             className: f.headerNavRight,
-                            children: [this.renderSocialMediaNav(), (0, s.jsx)(u.B, { onChange: l })],
+                            children: [
+                                this.renderSocialMediaNav(),
+                                (0, s.jsx)(u.B, {
+                                    onChange: l,
+                                }),
+                            ],
                         }),
                     ],
                 }),
@@ -94,7 +108,9 @@ class O extends l.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            k(this, "state", { isAppCompatible: !0 }),
+            k(this, "state", {
+                isAppCompatible: !0,
+            }),
             k(this, "getAppButton", () => {
                 let { token: e, TrackClick: t, authRedirectTo: a } = this.props,
                     { isAppCompatible: l } = this.state,
@@ -152,7 +168,9 @@ class O extends l.PureComponent {
                                 children: (0, s.jsx)(e, {
                                     eventName: I,
                                     className: f.rightNavLink,
-                                    data: { linkClicked: t.linkClicked },
+                                    data: {
+                                        linkClicked: t.linkClicked,
+                                    },
                                     href: t.route,
                                     rel: "me",
                                     target: "_blank",

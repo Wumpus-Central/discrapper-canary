@@ -8,6 +8,7 @@ n(64700);
 var i = n(397927),
     a = n(195043),
     s = n(645022);
+
 function o(e) {
     let { children: t, title: n, description: a } = e;
     return (0, r.jsxs)("div", {
@@ -35,10 +36,13 @@ function o(e) {
                 className: s.Yq,
                 children: t,
             }),
-            (0, r.jsx)(i.cGx, { className: s.yj }),
+            (0, r.jsx)(i.cGx, {
+                className: s.yj,
+            }),
         ],
     });
 }
+
 function l(e) {
     let { children: t, title: n, description: i, webSetting: s } = e;
     return (0, r.jsx)(a.x, {

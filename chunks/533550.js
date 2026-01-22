@@ -6,6 +6,7 @@ var r = n(64700),
     l = n(942381),
     i = n(265690),
     a = n(121894);
+
 function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -31,6 +32,7 @@ function s(e) {
     }
     return e;
 }
+
 function o(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -49,7 +51,10 @@ function o(e, t) {
         e
     );
 }
-let c = (0, i.h)((e) => ({ upsellsByGuildId: {} }));
+let c = (0, i.h)((e) => ({
+    upsellsByGuildId: {},
+}));
+
 function u(e) {
     return c((t) => {
         var n;
@@ -57,6 +62,7 @@ function u(e) {
         return null == e ? r : null != (n = t.upsellsByGuildId[e]) ? n : r;
     }, l.x);
 }
+
 function d(e) {
     if (null == e) return !1;
     try {
@@ -65,6 +71,7 @@ function d(e) {
         return !1;
     }
 }
+
 function f(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         l = r.useRef(null);
@@ -88,7 +95,9 @@ function f(e, t) {
                                         upsellsByGuildId: o(s({}, null != (t = e.upsellsByGuildId) ? t : {}), {
                                             [u.guildId]: o(
                                                 s({}, null != (n = e.upsellsByGuildId[u.guildId]) ? n : {}),
-                                                { [u.name]: u },
+                                                {
+                                                    [u.name]: u,
+                                                },
                                             ),
                                         }),
                                     };
@@ -104,7 +113,10 @@ function f(e, t) {
             })(r);
             return (
                 i(),
-                null == u || u.addEventListener("scroll", i, { passive: !0 }),
+                null == u ||
+                    u.addEventListener("scroll", i, {
+                        passive: !0,
+                    }),
                 () => {
                     null == u || u.removeEventListener("scroll", i);
                 }

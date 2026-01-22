@@ -17,6 +17,7 @@ var r = n(627968),
     _ = n(833336),
     h = n(985018),
     m = n(306505);
+
 function g(e) {
     let { guildId: t, className: n, globalOption: i, hideDivider: a = !1, onChange: o, renderOptionSuffix: l } = e;
     return (0, r.jsx)(u.A, {
@@ -32,6 +33,7 @@ function g(e) {
         }),
     });
 }
+
 function E(e) {
     let { guildId: t, globalOption: n, onChange: a, renderOptionSuffix: s } = e,
         u = (0, o.bG)([_.A], () => _.A.showNotice()),

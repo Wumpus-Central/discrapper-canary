@@ -1,4 +1,6 @@
-n.d(t, { d: () => g });
+n.d(t, {
+    d: () => g,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -9,6 +11,7 @@ var i = n(503698),
     o = n(320137),
     d = n(985018),
     u = n(86045);
+
 function f(e) {
     let { emoji: t, onRemoveEmoji: n, disabled: i = !1 } = e,
         c = a.Ay.getEmojiURL({
@@ -17,7 +20,9 @@ function f(e) {
             size: 32,
         });
     return (0, r.jsxs)("div", {
-        className: l()(u.nI, { [u.r9]: i }),
+        className: l()(u.nI, {
+            [u.r9]: i,
+        }),
         children: [
             (0, r.jsx)("img", {
                 className: u.mp,
@@ -43,6 +48,7 @@ function f(e) {
         ],
     });
 }
+
 function g(e) {
     let { tierEmojiIds: t, guildId: n, onRemoveEmoji: i } = e,
         l = (0, o.A)(n),

@@ -1,4 +1,8 @@
-a.d(t, { default: () => i }), a(896048), a(492834);
+a.d(t, {
+    default: () => i,
+}),
+    a(896048),
+    a(492834);
 var r = a(627968),
     n = a(64700),
     c = a(285899),
@@ -7,6 +11,7 @@ var r = a(627968),
     b = a(294726),
     f = a(985018),
     d = a(669979);
+
 function i(e) {
     let { guildId: t, gameInstance: a } = e,
         i = (function (e, t) {

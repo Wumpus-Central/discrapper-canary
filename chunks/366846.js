@@ -1,4 +1,7 @@
-n.d(t, { D: () => p }), n(896048);
+n.d(t, {
+    D: () => p,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -12,6 +15,7 @@ var r = n(627968),
     g = n(501381),
     b = n(985018),
     m = n(82196);
+
 function p(e) {
     let { requireTerms: t, rules: n } = e,
         l = (0, c.bG)([u.A], () => u.A.getProps().guild),
@@ -42,9 +46,14 @@ function p(e) {
                         onChange: x,
                         checked: t,
                     }),
-                    t && (0, r.jsx)(g.o, { guildId: l.id }),
+                    t &&
+                        (0, r.jsx)(g.o, {
+                            guildId: l.id,
+                        }),
                     (0, r.jsx)("div", {
-                        className: s()(m.aO, { [m.r9]: !t }),
+                        className: s()(m.aO, {
+                            [m.r9]: !t,
+                        }),
                         children: (0, r.jsxs)("div", {
                             inert: t ? void 0 : "",
                             children: [

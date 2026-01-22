@@ -10,6 +10,7 @@ n.d(t, {
     n(14289),
     n(35956);
 var r = n(652215);
+
 function i(e) {
     let { applicationId: t, customId: n, referrerId: i, linkId: a } = e,
         s = new URL(r.BVt.ACTIVITY_DETAILS(t), "".concat(location.protocol, "//").concat(location.host)),
@@ -21,6 +22,7 @@ function i(e) {
         s.toString()
     );
 }
+
 function a(e) {
     let { id: t, customInstallUrl: n, installParams: i, integrationTypesConfig: a } = e;
     if (null != n) return n;

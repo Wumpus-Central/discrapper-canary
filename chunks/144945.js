@@ -1,4 +1,7 @@
-n.d(t, { A: () => A }), n(896048);
+n.d(t, {
+    A: () => A,
+}),
+    n(896048);
 var i = n(627968),
     s = n(64700),
     r = n(989349),
@@ -14,6 +17,7 @@ var i = n(627968),
     p = n(652215),
     f = n(985018),
     v = n(244317);
+
 function b(e) {
     let t,
         { isEnabled: n, rateLimitPerUser: r, isBypassSlowmode: a, slowmodeCooldownGuess: u } = e,
@@ -24,7 +28,7 @@ function b(e) {
                 b(!0),
                     setTimeout(() => {
                         b(!1);
-                    }, 1000);
+                    }, 1e3);
             }
             return (
                 h._.subscribe(p.jej.EMPHASIZE_SLOWMODE_COOLDOWN, e),
@@ -70,6 +74,7 @@ function b(e) {
         }),
     });
 }
+
 function A(e) {
     let { channel: t, isThreadCreation: n = !1 } = e,
         s = (0, a.bG)([u.A], () => u.A.getSlowmodeCooldownGuess(t.id, n ? u.R.CreateThread : u.R.SendMessage)),

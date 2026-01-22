@@ -23,6 +23,7 @@ var i,
     b = n(997630),
     y = n(731854),
     O = n(985018);
+
 function A(e, t, n) {
     return (
         t in e
@@ -50,12 +51,15 @@ let S = !1,
     T = 0,
     C = !1,
     N = {};
+
 function R() {
     return f.A.supports(y.O5.NATIVE_SCREENSHARE_PICKER);
 }
+
 function w() {
     return f.A.getUseSystemScreensharePicker();
 }
+
 function P() {
     let e = w() && (T > 0 || (S && 0 === I));
     if (e !== C) {
@@ -66,6 +70,7 @@ function P() {
                 t.call(n, C);
     }
 }
+
 function D() {
     return (0, a.useEffect)(
         () => (
@@ -78,6 +83,7 @@ function D() {
         [],
     );
 }
+
 function x() {
     return (0, a.useEffect)(
         () => (
@@ -90,16 +96,20 @@ function x() {
         [],
     );
 }
+
 function L() {
     let e = u.A.getChannel(_.A.getVoiceChannelId());
     return (S = null != e && (0, m.A)(f.A) && (0, h.vz)(e, d.A, p.A, !1)), P(), !1;
 }
+
 function j() {
     return null != r ? (0, E.A)(r) : null;
 }
+
 function M() {
     return null != r ? (0, g.A)(r) : null;
 }
+
 function k() {
     var e;
     let { soundshareEnabled: t } = c.A.getState();
@@ -139,16 +149,27 @@ class U extends (i = s.Ay.Store) {
         return k();
     }
 }
+
 function G(e) {
     let { existing: t, content: n } = e;
-    if (((N = { lastPickerAction: 1 }), (r = n), 0 === I && !t)) {
+    if (
+        ((N = {
+            lastPickerAction: 1,
+        }),
+        (r = n),
+        0 === I && !t)
+    ) {
         let e = u.A.getChannel(_.A.getVoiceChannelId());
         null != e && (0, m.A)(f.A) && (0, h.vz)(e, d.A, p.A, !1) && (0, l.XI)(e.getGuildId(), e.id, k());
     }
 }
+
 function V() {
-    N = { lastPickerAction: 2 };
+    N = {
+        lastPickerAction: 2,
+    };
 }
+
 function F(e) {
     let { error: t } = e;
     N = {
@@ -156,6 +177,7 @@ function F(e) {
         lastPickerError: t,
     };
 }
+
 function B(e) {
     let { style: t } = e;
     N = {
@@ -163,6 +185,7 @@ function B(e) {
         lastPresentedPickerStyle: t,
     };
 }
+
 function H() {
     N = {};
 }

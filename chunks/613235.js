@@ -1,5 +1,8 @@
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 var r = n(985018);
+
 function i(e) {
     return e.windows.length > 0
         ? e.windows.map((e) => e.title).join(", ")

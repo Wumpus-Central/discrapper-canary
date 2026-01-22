@@ -1,4 +1,7 @@
-l.d(t, { A: () => P }), l(896048);
+l.d(t, {
+    A: () => P,
+}),
+    l(896048);
 var n = l(627968),
     a = l(64700),
     s = l(503698),
@@ -27,6 +30,7 @@ var n = l(627968),
     E = l(927961),
     T = l(985018),
     w = l(635249);
+
 function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var l = null != arguments[t] ? arguments[t] : {},
@@ -52,6 +56,7 @@ function D(e) {
     }
     return e;
 }
+
 function I(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -70,6 +75,7 @@ function I(e, t) {
         e
     );
 }
+
 function P(e) {
     let {
             user: t,
@@ -101,7 +107,10 @@ function P(e) {
             _.default.track(O.HAw.DISPLAY_NAME_STYLES_CLOSED), G();
         }, [G]),
         Z = (0, a.useCallback)((e) => {
-            H(e === O.NJ8.DARK), _.default.track(O.HAw.DISPLAY_NAME_STYLES_THEME_TOGGLE, { dark: e === O.NJ8.DARK });
+            H(e === O.NJ8.DARK),
+                _.default.track(O.HAw.DISPLAY_NAME_STYLES_THEME_TOGGLE, {
+                    dark: e === O.NJ8.DARK,
+                });
         }, []),
         W = (0, a.useMemo)(
             () =>
@@ -137,7 +146,9 @@ function P(e) {
                     forceUserTheme: !0,
                     children: (0, n.jsx)("div", {
                         className: w.b8,
-                        style: { backgroundImage: "url(".concat(J, ")") },
+                        style: {
+                            backgroundImage: "url(".concat(J, ")"),
+                        },
                     }),
                 }),
             (0, n.jsx)(o.NPJ, {
@@ -226,6 +237,7 @@ function P(e) {
         ],
     });
 }
+
 function L(e) {
     let { darkPreview: t, onToggleTheme: l } = e,
         a = t ? O.NJ8.DARK : O.NJ8.LIGHT;

@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var r = n(627968);
 n(64700);
 var l = n(311907),
@@ -13,6 +15,7 @@ var l = n(311907),
     p = n(652215),
     h = n(559868),
     b = n(985018);
+
 function g(e) {
     var t, g;
     let { channel: m, children: A } = e,
@@ -74,7 +77,10 @@ function g(e) {
             }
             return e;
         })({}, x)),
-        (g = g = { children: A }),
+        (g = g =
+            {
+                children: A,
+            }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(g))
             : (function (e, t) {

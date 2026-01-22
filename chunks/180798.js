@@ -1,4 +1,6 @@
-n.d(t, { A: () => j });
+n.d(t, {
+    A: () => j,
+});
 var r = n(627968);
 n(64700);
 var l = n(311907),
@@ -16,6 +18,7 @@ var l = n(311907),
     g = n(652215),
     y = n(985018),
     p = n(721779);
+
 function E(e, t, n) {
     var l, a;
     return (0, r.jsxs)("div", {
@@ -34,10 +37,13 @@ function E(e, t, n) {
                       color: null != (a = e.colorString) ? a : g.TpD,
                       colors: n ? e.colorStrings : null,
                   }),
-            (0, r.jsx)("div", { children: e.name }),
+            (0, r.jsx)("div", {
+                children: e.name,
+            }),
         ],
     });
 }
+
 function j(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         p = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
@@ -114,7 +120,9 @@ function j(e, t) {
           ? D
           : (0, r.jsx)(i.Drp, {
                 id: "roles",
-                label: y.intl.formatToPlainString(y.t.PCs0oo, { numRoles: D.length }),
+                label: y.intl.formatToPlainString(y.t.PCs0oo, {
+                    numRoles: D.length,
+                }),
                 children: D,
             });
 }

@@ -1,4 +1,7 @@
-n.d(t, { A: () => g }), n(896048);
+n.d(t, {
+    A: () => g,
+}),
+    n(896048);
 var l = n(627968),
     r = n(64700),
     a = n(311907),
@@ -26,11 +29,20 @@ let g = (e) => {
                     other_user_id: t.id,
                     report_id: g,
                 }),
-                i.A.updateChannelOverrideSettings(null, f, { muted: !0 }, b.fd.Muted),
+                i.A.updateChannelOverrideSettings(
+                    null,
+                    f,
+                    {
+                        muted: !0,
+                    },
+                    b.fd.Muted,
+                ),
                 o.A.showMuteSuccessToast(t.id, n));
         }, [f, n, t, g]);
     return (0, l.jsx)(c.PQ, {
-        title: x.intl.formatToPlainString(x.t.TRp5wR, { username: h }),
+        title: x.intl.formatToPlainString(x.t.TRp5wR, {
+            username: h,
+        }),
         description: x.intl.string(x.t["yM/+AJ"]),
         buttonText: _ ? x.intl.string(x.t.E8x4Nj) : x.intl.string(x.t.HITUcR),
         buttonDisabled: _,

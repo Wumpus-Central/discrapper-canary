@@ -29,6 +29,7 @@ var i = n(503698),
             e
         );
     })({});
+
 function _(e) {
     let { text: t, className: n, colorOptions: i = 2, icon: s, gap: l = !0 } = e;
     return (0, r.jsxs)("div", {
@@ -56,6 +57,7 @@ function _(e) {
         ],
     });
 }
+
 function h(e) {
     let t,
         { text: n, className: i, colorOptions: o = 2, isPillOnBorder: l = !0 } = e;
@@ -125,6 +127,7 @@ function h(e) {
               ],
           });
 }
+
 function m(e, t) {
     return t === u.pe.TIER_0
         ? d.intl.string(d.t.IBYG5U)
@@ -132,9 +135,14 @@ function m(e, t) {
           ? d.intl.string(d.t.qYKftX)
           : null;
 }
+
 function g(e, t, n, r, i) {
     if (null != n && (0, l.U9)(n, u.pe.TIER_2) && void 0 !== n.discount.amount)
-        return e ? d.intl.string(d.t.EyjDRE) : d.intl.formatToPlainString(d.t.iiLbvu, { percent: n.discount.amount });
+        return e
+            ? d.intl.string(d.t.EyjDRE)
+            : d.intl.formatToPlainString(d.t.iiLbvu, {
+                  percent: n.discount.amount,
+              });
     if (i === u.pe.TIER_2) {
         let e = d.intl.string(d.t.IBYG5U);
         return (null == r ? void 0 : r.trial_id) === u.Dw && (e = d.intl.string(d.t.gtNqJQ)), e;

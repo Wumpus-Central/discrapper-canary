@@ -1,4 +1,7 @@
-n.d(t, { A: () => d }), n(896048);
+n.d(t, {
+    A: () => d,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -10,6 +13,7 @@ let u = i.createContext({
     isOpen: !1,
     toggleOpen: () => {},
 });
+
 function d(e) {
     let { children: t } = e,
         [n, a] = i.useReducer((e) => !e, !1),

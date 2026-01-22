@@ -26,6 +26,7 @@ let g = {
     LARGE: m.as,
     XLARGE: m.AQ,
 };
+
 function E(e) {
     switch (e) {
         case g.XXSMALL:
@@ -44,6 +45,7 @@ function E(e) {
             return 80;
     }
 }
+
 function b(e) {
     if (null == e) return null;
     switch (e) {
@@ -60,6 +62,7 @@ function b(e) {
             return null;
     }
 }
+
 function y(e) {
     switch (e) {
         case g.XSMALL:
@@ -148,20 +151,30 @@ let O = i.forwardRef(function (e, t) {
     let L = null == a ? void 0 : a.name,
         j =
             null != L && "" !== L
-                ? h.intl.formatToPlainString(h.t.tiKyYg, { applicationName: L })
+                ? h.intl.formatToPlainString(h.t.tiKyYg, {
+                      applicationName: L,
+                  })
                 : h.intl.string(h.t["2B/phM"]),
         M = (0, p.V0)(n),
         k = (0, d.LE)(n),
         U = C === n || M || k;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            U ? null : (0, r.jsx)("div", { className: s()(m.qD, I, v) }),
+            U
+                ? null
+                : (0, r.jsx)("div", {
+                      className: s()(m.qD, I, v),
+                  }),
             (0, r.jsx)("img", {
                 ref: t,
                 alt: j,
                 src: n,
                 className: s()(m.Gt, I, v),
-                style: U ? void 0 : { display: "none" },
+                style: U
+                    ? void 0
+                    : {
+                          display: "none",
+                      },
             }),
             (0, r.jsx)("div", {
                 className: m.Xc,

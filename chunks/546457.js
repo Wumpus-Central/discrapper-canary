@@ -1,4 +1,8 @@
-n.d(t, { A: () => p }), n(896048), n(142703);
+n.d(t, {
+    A: () => p,
+}),
+    n(896048),
+    n(142703);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -10,6 +14,7 @@ var r = n(627968),
     u = n(530552),
     f = n(330299),
     g = n(698085);
+
 function b(e) {
     let { resizableNode: t, onResize: n, onResizeEnd: i } = e,
         l = (0, o.A)({
@@ -36,11 +41,15 @@ let m = i.forwardRef(function (e, t) {
         onClick: c,
         innerRef: o,
         ignoreKeyPress: !0,
-        style: { minHeight: d },
+        style: {
+            minHeight: d,
+        },
         children: [
             (0, r.jsx)(a.T7Y, {
                 className: g.Fg,
-                style: { minHeight: d - 2 },
+                style: {
+                    minHeight: d - 2,
+                },
                 ref: t,
                 children: n,
             }),
@@ -54,6 +63,7 @@ let m = i.forwardRef(function (e, t) {
         ],
     });
 });
+
 function p(e) {
     var t;
     let {
@@ -92,7 +102,12 @@ function p(e) {
         [k, M] = i.useState(!1),
         U = i.useCallback(() => {
             var e;
-            M(!1), C(), null == (e = h.current) || e.focus({ preventScroll: !0 });
+            M(!1),
+                C(),
+                null == (e = h.current) ||
+                    e.focus({
+                        preventScroll: !0,
+                    });
         }, [C]);
     i.useEffect(() => {
         L !== R && l(R);
@@ -156,7 +171,9 @@ function p(e) {
                         ),
                     ),
                     (0, r.jsx)("input", {
-                        className: s()(g.tM, { [g.kD]: k }),
+                        className: s()(g.tM, {
+                            [g.kD]: k,
+                        }),
                         ref: h,
                         onChange: A,
                         onKeyDownCapture: E,

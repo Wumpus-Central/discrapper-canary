@@ -4,5 +4,8 @@ var n = e(452162),
     i = e(164336).f;
 t.exports = function (t) {
     var r = n.Symbol || (n.Symbol = {});
-    o(r, t) || i(r, t, { value: s.f(t) });
+    o(r, t) ||
+        i(r, t, {
+            value: s.f(t),
+        });
 };

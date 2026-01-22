@@ -1,4 +1,6 @@
-a.d(n, { default: () => o });
+a.d(n, {
+    default: () => o,
+});
 var i = a(627968);
 a(64700);
 var l = a(397927),
@@ -6,6 +8,7 @@ var l = a(397927),
     c = a(202803),
     s = a(957565),
     r = a(985018);
+
 function o(t) {
     let { attachmentUrl: n, attachmentName: a, onSelect: o } = t;
     return (0, i.jsx)(l.W1t, {

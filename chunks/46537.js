@@ -12,6 +12,7 @@ var n = r(64700),
     c = r(594832),
     a = r(652215),
     d = r(985018);
+
 function f(e, t) {
     return n.useMemo(() => {
         let r = e.map((e) => {
@@ -41,7 +42,9 @@ function f(e, t) {
                       ? {
                             title:
                                 e.source === c.uS.WISHLIST
-                                    ? d.intl.formatToPlainString(d.t.p3RmJF, { username: n })
+                                    ? d.intl.formatToPlainString(d.t.p3RmJF, {
+                                          username: n,
+                                      })
                                     : d.intl.string(d.t.Ig6VDH),
                             renderIcon: e.productLine !== a.EZt.COLLECTIBLES ? e.renderIcon : void 0,
                             shouldShow: !0,
@@ -62,15 +65,20 @@ function f(e, t) {
                                       : d.intl.string(d.t.HFhcqh),
                               body:
                                   e.source === c.uS.WISHLIST
-                                      ? d.intl.formatToPlainString(d.t.p3RmJF, { username: n })
+                                      ? d.intl.formatToPlainString(d.t.p3RmJF, {
+                                            username: n,
+                                        })
                                       : d.intl.string(d.t.Ig6VDH),
                               renderIcon: e.renderIcon,
                               shouldShow: !0,
                           },
               )
-            : r.map(() => ({ shouldShow: !1 }));
+            : r.map(() => ({
+                  shouldShow: !1,
+              }));
     }, [e, t]);
 }
+
 function p(e, t) {
     let r = (0, i.yK)([o.default], () => e.map((e) => o.default.getUser(e.gifterUserId)).filter(s.Vq), [e]),
         u = n.useMemo(() => r.reduce((e, t) => ((e[t.id] = t), e), {}), [r]);
@@ -88,7 +96,9 @@ function p(e, t) {
                           shouldShow: !r,
                       };
                   })
-                : e.map(() => ({ shouldShow: !1 })),
+                : e.map(() => ({
+                      shouldShow: !1,
+                  })),
         [e, t, u],
     );
 }

@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -9,6 +11,7 @@ var i = n(397927),
     c = n(845187),
     u = n(652215);
 let d = "activity-hardware-acceleration-modal";
+
 function p(e) {
     l.Ay.disableActivityHardwareAccelerationPrompt ||
         !s.isPlatformEmbedded ||
@@ -43,13 +46,21 @@ function p(e) {
                                     });
                             }
                             return e;
-                        })({ applicationId: e }, n),
+                        })(
+                            {
+                                applicationId: e,
+                            },
+                            n,
+                        ),
                     );
             },
             {
                 modalKey: d,
                 onCloseRequest: () => {
-                    a.default.track(u.HAw.MODAL_DISMISSED, { type: c.a }), (0, i.OoC)(d);
+                    a.default.track(u.HAw.MODAL_DISMISSED, {
+                        type: c.a,
+                    }),
+                        (0, i.OoC)(d);
                 },
             },
         );

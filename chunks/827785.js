@@ -32,6 +32,7 @@ var r = n(284009),
     C = n(200700),
     N = n(381941),
     R = n(985018);
+
 function w(e, t, n) {
     return (
         t in e
@@ -45,6 +46,7 @@ function w(e, t, n) {
         e
     );
 }
+
 function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -61,6 +63,7 @@ function P(e) {
     }
     return e;
 }
+
 function D(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -73,6 +76,7 @@ function D(e, t) {
     }
     return n;
 }
+
 function x(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -136,7 +140,9 @@ let L = n(743361).A,
             execute: (e) => {
                 var t;
                 let n = null != (t = j(e, "message")) ? t : "";
-                return { content: "".concat(n, " \xAF\\_(ツ)_/\xAF").trim() };
+                return {
+                    content: "".concat(n, " \xaf\\_(ツ)_/\xaf").trim(),
+                };
             },
         },
         {
@@ -168,7 +174,9 @@ let L = n(743361).A,
             execute: (e) => {
                 var t;
                 let n = null != (t = j(e, "message")) ? t : "";
-                return { content: "".concat(n, " (\u256F\xB0\u25A1\xB0)\u256F\uFE35 \u253B\u2501\u253B").trim() };
+                return {
+                    content: "".concat(n, " (╯\xb0□\xb0)╯︵ ┻━┻").trim(),
+                };
             },
         },
         {
@@ -200,7 +208,9 @@ let L = n(743361).A,
             execute: (e) => {
                 var t;
                 let n = null != (t = j(e, "message")) ? t : "";
-                return { content: "".concat(n, " \u252C\u2500\u252Cノ( º _ ºノ)").trim() };
+                return {
+                    content: "".concat(n, " ┬─┬ノ( \xba _ \xbaノ)").trim(),
+                };
             },
         },
         {
@@ -272,7 +282,9 @@ let L = n(743361).A,
             execute: (e) => {
                 var t;
                 let n = null != (t = j(e, "message")) ? t : "";
-                return { content: "_".concat(n, "_") };
+                return {
+                    content: "_".concat(n, "_"),
+                };
             },
         },
         {
@@ -305,7 +317,9 @@ let L = n(743361).A,
             execute: (e) => {
                 var t;
                 let n = null != (t = j(e, "message")) ? t : "";
-                return { content: (0, T.ZGg)(n).trim() };
+                return {
+                    content: (0, T.ZGg)(n).trim(),
+                };
             },
         },
         {
@@ -399,7 +413,9 @@ let L = n(743361).A,
                     a = null != (n = j(e, "name")) ? n : "",
                     s = null != (r = j(e, "message")) ? r : "",
                     l = await (0, m.Nw)(i, a, o.r.PUBLIC_THREAD, (0, h.Gl)(i, null), "Slash Command");
-                d.A.sendMessage(l.id, _.Ay.parse(l, s), !0, { location: N.Hx.THREAD_CREATION });
+                d.A.sendMessage(l.id, _.Ay.parse(l, s), !0, {
+                    location: N.Hx.THREAD_CREATION,
+                });
             },
         },
         {
@@ -458,7 +474,9 @@ let L = n(743361).A,
                           await u.A.kickUser(r.id, a, null != (t = j(e, "reason")) ? t : ""),
                               d.A.sendBotMessage(
                                   i.id,
-                                  R.intl.formatToPlainString(R.t["9wzHDV"], { user: v.Ay.getUserTag(n) }),
+                                  R.intl.formatToPlainString(R.t["9wzHDV"], {
+                                      user: v.Ay.getUserTag(n),
+                                  }),
                               );
                       })().catch(() => {
                           d.A.sendBotMessage(i.id, R.intl.string(R.t.l0gNlp));
@@ -575,7 +593,9 @@ let L = n(743361).A,
                           await u.A.banUser(r.id, a, s, o),
                               d.A.sendBotMessage(
                                   i.id,
-                                  R.intl.formatToPlainString(R.t.YflWdM, { user: null != l ? v.Ay.getUserTag(l) : a }),
+                                  R.intl.formatToPlainString(R.t.YflWdM, {
+                                      user: null != l ? v.Ay.getUserTag(l) : a,
+                                  }),
                               );
                       })().catch(() => {
                           d.A.sendBotMessage(i.id, R.intl.string(R.t.w2J6Qs));
@@ -727,10 +747,14 @@ let L = n(743361).A,
                 let a = j(e, "user"),
                     s = null != (n = j(e, "message")) ? n : "";
                 (async () => {
-                    await c.A.openPrivateChannel({ recipientIds: a }).then((e) => {
+                    await c.A.openPrivateChannel({
+                        recipientIds: a,
+                    }).then((e) => {
                         let t = b.A.getChannel(e);
                         i()(null != t, "Newly created PrivateChannel is null"),
-                            d.A.sendMessage(t.id, _.Ay.parse(t, s), !0, { location: N.Hx.PRIVATE_MESSAGE_COMMAND });
+                            d.A.sendMessage(t.id, _.Ay.parse(t, s), !0, {
+                                location: N.Hx.PRIVATE_MESSAGE_COMMAND,
+                            });
                     });
                 })().catch(() => {
                     d.A.sendBotMessage(r.id, R.intl.string(R.t["3XaE95"]));

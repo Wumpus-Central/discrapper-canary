@@ -30,6 +30,7 @@ var r = n(735438),
     m = n(652215),
     g = n(355097),
     E = n(985018);
+
 function b(e, t, n) {
     return (
         t in e
@@ -43,6 +44,7 @@ function b(e, t, n) {
         e
     );
 }
+
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -59,6 +61,7 @@ function y(e) {
     }
     return e;
 }
+
 function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -71,6 +74,7 @@ function O(e, t) {
     }
     return n;
 }
+
 function A(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -101,13 +105,17 @@ let v = async (e, t) => {
         let { locale: e = c.default.locale } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
         if (_.A.isFetchingStickerPacks || _.A.hasLoadedStickerPacks) return;
         s.h.wait(() => {
-            s.h.dispatch({ type: "STICKER_PACKS_FETCH_START" });
+            s.h.dispatch({
+                type: "STICKER_PACKS_FETCH_START",
+            });
         });
         let {
             body: { sticker_packs: t },
         } = await a.Bo.get({
             url: m.Rsh.STICKER_PACKS,
-            query: { locale: e },
+            query: {
+                locale: e,
+            },
             rejectWithError: !1,
         });
         s.h.dispatch({
@@ -199,7 +207,9 @@ let v = async (e, t) => {
             s.h.dispatch({
                 type: "GUILD_STICKERS_CREATE_SUCCESS",
                 guildId: n,
-                sticker: A(y({}, r.body), { user_id: null == (t = f.default.getCurrentUser()) ? void 0 : t.id }),
+                sticker: A(y({}, r.body), {
+                    user_id: null == (t = f.default.getCurrentUser()) ? void 0 : t.id,
+                }),
             }),
             r.body
         );
@@ -212,6 +222,7 @@ let v = async (e, t) => {
                 rejectWithError: !1,
             })
         ).body;
+
 function w(e, t, n) {
     s.h.dispatch({
         type: "ADD_STICKER_PREVIEW",
@@ -220,6 +231,7 @@ function w(e, t, n) {
         draftType: n,
     });
 }
+
 function P(e, t) {
     s.h.dispatch({
         type: "CLEAR_STICKER_PREVIEW",
@@ -227,9 +239,11 @@ function P(e, t) {
         draftType: t,
     });
 }
+
 function D(e) {
     return d.A.totalUnavailableGuilds > 0 || !l.A.isConnected() ? e : e.filter((e) => null != _.A.getStickerById(e));
 }
+
 function x(e) {
     u.bW.updateAsync(
         "favoriteStickers",
@@ -237,13 +251,16 @@ function x(e) {
             ((t.stickerIds = D(t.stickerIds)), i().size(t.stickerIds) >= 250)
                 ? (o.A.show({
                       title: E.intl.string(E.t["+XYXtZ"]),
-                      body: E.intl.formatToPlainString(E.t.JaIyFi, { count: 250 }),
+                      body: E.intl.formatToPlainString(E.t.JaIyFi, {
+                          count: 250,
+                      }),
                   }),
                   !1)
                 : !t.stickerIds.includes(e) && void t.stickerIds.push(e),
         g.Sb.INFREQUENT_USER_ACTION,
     );
 }
+
 function L(e) {
     u.bW.updateAsync(
         "favoriteStickers",

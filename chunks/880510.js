@@ -1,4 +1,7 @@
-n.d(t, { default: () => b }), n(896048);
+n.d(t, {
+    default: () => b,
+}),
+    n(896048);
 var l = n(627968),
     i = n(64700),
     s = n(311907),
@@ -14,6 +17,7 @@ var l = n(627968),
     A = n(731854),
     V = n(985018),
     x = n(473169);
+
 function T(e, t, n) {
     return (
         t in e
@@ -72,6 +76,7 @@ class m extends i.PureComponent {
             });
     }
 }
+
 function C(e) {
     let t,
         { mediaEngineContext: n, speaking: i = !1 } = e,
@@ -112,17 +117,29 @@ function C(e) {
                               label: V.intl.string(V.t.YkDjVM),
                               children: (0, l.jsx)(u.A, {
                                   defaultValue: T,
-                                  onChange: (e) => r.A.setMode(x, { shortcut: e }, n),
+                                  onChange: (e) =>
+                                      r.A.setMode(
+                                          x,
+                                          {
+                                              shortcut: e,
+                                          },
+                                          n,
+                                      ),
                               }),
                           }),
                           (0, l.jsx)(o.Apm, {
                               label: V.intl.string(V.t.y0ShVt),
                               initialValue: j,
-                              onValueChange: (e) => r.A.setMode(x, { delay: e }, n),
+                              onValueChange: (e) =>
+                                  r.A.setMode(
+                                      x,
+                                      {
+                                          delay: e,
+                                      },
+                                      n,
+                                  ),
                               onValueRender: (e) =>
-                                  e >= 1000
-                                      ? ((e /= 1000), "".concat(e.toFixed(2), "s"))
-                                      : "".concat(e.toFixed(0), "ms"),
+                                  e >= 1e3 ? ((e /= 1e3), "".concat(e.toFixed(2), "s")) : "".concat(e.toFixed(0), "ms"),
                               maxValue: p.IjB,
                           }),
                       ],
@@ -177,6 +194,7 @@ function C(e) {
         })
     );
 }
+
 function b(e) {
     var t;
     return (
@@ -189,7 +207,9 @@ function b(e) {
             actions: void 0,
             transitionState: e.transitionState,
             onClose: e.onClose,
-            children: (0, l.jsx)(C, { mediaEngineContext: null != (t = e.mediaEngineContext) ? t : A.x.DEFAULT }),
+            children: (0, l.jsx)(C, {
+                mediaEngineContext: null != (t = e.mediaEngineContext) ? t : A.x.DEFAULT,
+            }),
         })
     );
 }

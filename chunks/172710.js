@@ -9,6 +9,7 @@ var r = n(723702),
     i = n(210528),
     a = n(981616),
     s = n(272984);
+
 function o(e, t, n) {
     let o;
     (0, r.isDesktop)() || (o = window.open("", "_blank")),
@@ -23,9 +24,11 @@ function o(e, t, n) {
                 null != o && o.close();
             });
 }
+
 function l() {
     window.open(s.RQ.PREMIUM_SITE);
 }
+
 function c(e) {
     var t;
     let { sync_id: n, metadata: r } = e;
@@ -35,6 +38,7 @@ function c(e) {
     let o = i.A.isProtocolRegistered() ? s.RQ.PLAYER_OPEN(a, n) : s.RQ.WEB_OPEN(a, n);
     window.open(o);
 }
+
 function u(e, t) {
     o(e, t, (t) => {
         var n;
@@ -46,6 +50,7 @@ function u(e, t) {
         };
     });
 }
+
 function d(e, t, n) {
     o(e, t, (e) => {
         let { artist_ids: t } = e;

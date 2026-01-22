@@ -12,6 +12,7 @@ var i = n(280230),
     o = n(683412),
     l = n(704726),
     c = n(46054);
+
 function u(e, t, n) {
     return (
         t in e
@@ -25,6 +26,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -41,6 +43,7 @@ function d(e) {
     }
     return e;
 }
+
 function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -53,6 +56,7 @@ function f(e, t) {
     }
     return n;
 }
+
 function p(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -112,7 +116,11 @@ let v = (e) => {
                 react: (e) => e.renderer(),
             },
             lheading: d(
-                p(d({}, _), { parse: v({ transformUpperCase: !0 }) }),
+                p(d({}, _), {
+                    parse: v({
+                        transformUpperCase: !0,
+                    }),
+                }),
                 "function" == typeof r.customRules.lheading ? r.customRules.lheading(e) : r.customRules.lheading,
             ),
             heading: d(
@@ -133,7 +141,11 @@ let v = (e) => {
         }),
     I = (e) => ({
         lheading: d(
-            p(d({}, _), { parse: v({ transformUpperCase: !1 }) }),
+            p(d({}, _), {
+                parse: v({
+                    transformUpperCase: !1,
+                }),
+            }),
             "function" == typeof r.customRules.lheading ? r.customRules.lheading(e) : r.customRules.lheading,
         ),
     }),
@@ -144,6 +156,7 @@ let v = (e) => {
             list: s.A,
             subtext: o.A,
         });
+
 function C(e) {
     return d({}, S(e));
 }
@@ -152,10 +165,19 @@ let N = {
     getSpecialRules: (e) => d({}, S(e), I(e)),
     getMessageRules: (e) => d({}, T(e)),
 };
+
 function R(e, t, n) {
     return {
         hasSpoilerEmbeds: !1,
         hasBailedAst: !1,
-        content: c.A.reactParserFor(C(t))(e.content, !1, null != n ? { changeLog: n } : {}),
+        content: c.A.reactParserFor(C(t))(
+            e.content,
+            !1,
+            null != n
+                ? {
+                      changeLog: n,
+                  }
+                : {},
+        ),
     };
 }

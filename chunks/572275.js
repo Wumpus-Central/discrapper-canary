@@ -1,4 +1,7 @@
-n.d(t, { A: () => m }), n(896048);
+n.d(t, {
+    A: () => m,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     a = n(392421),
@@ -10,6 +13,7 @@ var r = n(627968),
     d = n(985018),
     h = n(340399);
 let g = new Set();
+
 function m(e) {
     let { channel: t, startThread: n, goToThread: m } = e,
         { joinedThreadIds: j, unjoinedThreadIds: x } = (0, i.jO)(t),
@@ -38,10 +42,32 @@ function m(e) {
         O = l.useCallback(
             (e) =>
                 0 === e.section
-                    ? (0, r.jsx)(f, { text: d.intl.formatToPlainString(d.t["4E27fz"], { count: j.length }) }, e.section)
+                    ? (0, r.jsx)(
+                          f,
+                          {
+                              text: d.intl.formatToPlainString(d.t["4E27fz"], {
+                                  count: j.length,
+                              }),
+                          },
+                          e.section,
+                      )
                     : 1 === e.section
-                      ? (0, r.jsx)(f, { text: d.intl.formatToPlainString(d.t.csPc4D, { count: x.length }) }, e.section)
-                      : (0, r.jsx)(f, { text: d.intl.string(d.t["wUNQ+w"]) }, e.section),
+                      ? (0, r.jsx)(
+                            f,
+                            {
+                                text: d.intl.formatToPlainString(d.t.csPc4D, {
+                                    count: x.length,
+                                }),
+                            },
+                            e.section,
+                        )
+                      : (0, r.jsx)(
+                            f,
+                            {
+                                text: d.intl.string(d.t["wUNQ+w"]),
+                            },
+                            e.section,
+                        ),
             [j.length, x.length],
         ),
         S = l.useCallback(
@@ -59,7 +85,9 @@ function m(e) {
         if (A)
             return (0, r.jsx)("div", {
                 className: h.p_,
-                children: (0, r.jsx)(o.y$y, { className: h.u1 }),
+                children: (0, r.jsx)(o.y$y, {
+                    className: h.u1,
+                }),
             });
         else
             return (0, r.jsx)("div", {
@@ -83,6 +111,7 @@ function m(e) {
         onScroll: b ? T : void 0,
     });
 }
+
 function f(e) {
     let { text: t } = e;
     return (0, r.jsx)(o.Text, {

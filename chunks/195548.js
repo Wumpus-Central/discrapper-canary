@@ -1,4 +1,6 @@
-n.d(t, { A: () => C });
+n.d(t, {
+    A: () => C,
+});
 var r = n(627968),
     i = n(397927),
     a = n(290595),
@@ -20,14 +22,18 @@ var r = n(627968),
     O = n(259274),
     A = n(531525),
     v = n(985018);
+
 function S() {
     return (0, r.jsxs)(b.A, {
         title: v.intl.string(v.t.WWaFn5),
-        description: v.intl.format(v.t["/6sFWa"], { helpArticle: (0, l.aW)() }),
+        description: v.intl.format(v.t["/6sFWa"], {
+            helpArticle: (0, l.aW)(),
+        }),
         webSetting: A.H.PRIVACY_AND_SAFETY_VOICE_SECURITY,
         children: [(0, r.jsx)(E.A, {}), (0, r.jsx)(O.A, {})],
     });
 }
+
 function I() {
     return (0, r.jsx)(b.A, {
         title: v.intl.string(v.t.BG7QsQ),
@@ -35,6 +41,7 @@ function I() {
         children: (0, r.jsx)(f.A, {}),
     });
 }
+
 function T() {
     let e = (0, u.$m)("UserSettingsDataAndPrivacy");
     return (0, r.jsxs)(b.A, {
@@ -50,6 +57,7 @@ function T() {
         ],
     });
 }
+
 function C() {
     return (
         (0, s.Ay)(() => {
@@ -57,7 +65,9 @@ function C() {
         }),
         (0, r.jsx)(d.R, {
             header: v.intl.string(v.t.OAuOHD),
-            notice: (0, r.jsx)(y.A, { page: y.R.DATA_AND_PRIVACY }),
+            notice: (0, r.jsx)(y.A, {
+                page: y.R.DATA_AND_PRIVACY,
+            }),
             children: (0, r.jsxs)(i.lVW, {
                 children: [(0, r.jsx)(T, {}), (0, r.jsx)(I, {}), (0, r.jsx)(S, {})],
             }),

@@ -15,25 +15,33 @@ e.exports = function (e) {
                     begin: /<\?php/,
                     relevance: 10,
                 },
-                { begin: /<\?=/ },
+                {
+                    begin: /<\?=/,
+                },
                 {
                     begin: /<\?/,
                     relevance: 0.1,
                 },
-                { begin: /\?>/ },
+                {
+                    begin: /\?>/,
+                },
             ],
         },
         l = {
             scope: "subst",
             variants: [
-                { begin: /\$\w+/ },
+                {
+                    begin: /\$\w+/,
+                },
                 {
                     begin: /\{\$/,
                     end: /\}/,
                 },
             ],
         },
-        c = e.inherit(e.APOS_STRING_MODE, { illegal: null }),
+        c = e.inherit(e.APOS_STRING_MODE, {
+            illegal: null,
+        }),
         u = e.inherit(e.QUOTE_STRING_MODE, {
             illegal: null,
             contains: e.QUOTE_STRING_MODE.contains.concat(l),
@@ -53,7 +61,7 @@ e.exports = function (e) {
             begin: /<<<[ \t]*'(\w+)'\n/,
             end: /[ \t]*(\w+)\b/,
         }),
-        p = "[ \t\n]",
+        p = "[ 	\n]",
         _ = {
             scope: "string",
             variants: [u, c, d, f],
@@ -61,10 +69,18 @@ e.exports = function (e) {
         h = {
             scope: "number",
             variants: [
-                { begin: "\\b0[bB][01]+(?:_[01]+)*\\b" },
-                { begin: "\\b0[oO][0-7]+(?:_[0-7]+)*\\b" },
-                { begin: "\\b0[xX][\\da-fA-F]+(?:_[\\da-fA-F]+)*\\b" },
-                { begin: "(?:\\b\\d+(?:_\\d+)*(\\.(?:\\d+(?:_\\d+)*))?|\\B\\.\\d+)(?:[eE][+-]?\\d+)?" },
+                {
+                    begin: "\\b0[bB][01]+(?:_[01]+)*\\b",
+                },
+                {
+                    begin: "\\b0[oO][0-7]+(?:_[0-7]+)*\\b",
+                },
+                {
+                    begin: "\\b0[xX][\\da-fA-F]+(?:_[\\da-fA-F]+)*\\b",
+                },
+                {
+                    begin: "(?:\\b\\d+(?:_\\d+)*(\\.(?:\\d+(?:_\\d+)*))?|\\B\\.\\d+)(?:[eE][+-]?\\d+)?",
+                },
             ],
             relevance: 0,
         },
@@ -281,11 +297,15 @@ e.exports = function (e) {
             variants: [
                 {
                     match: [t.concat(/::/, t.lookahead(/(?!class\b)/)), A],
-                    scope: { 2: "variable.constant" },
+                    scope: {
+                        2: "variable.constant",
+                    },
                 },
                 {
                     match: [/::/, /class/],
-                    scope: { 2: "variable.language" },
+                    scope: {
+                        2: "variable.language",
+                    },
                 },
                 {
                     match: [i, t.concat(/::/, t.lookahead(/(?!class\b)/)), A],
@@ -296,7 +316,9 @@ e.exports = function (e) {
                 },
                 {
                     match: [i, t.concat("::", t.lookahead(/(?!class\b)/))],
-                    scope: { 1: "title.class" },
+                    scope: {
+                        1: "title.class",
+                    },
                 },
                 {
                     match: [i, /::/, /class/],
@@ -327,7 +349,9 @@ e.exports = function (e) {
                 t.concat(p, "*"),
                 t.lookahead(/(?=\()/),
             ],
-            scope: { 3: "title.function.invoke" },
+            scope: {
+                3: "title.function.invoke",
+            },
             contains: [I],
         };
     I.contains.push(T);
@@ -354,7 +378,14 @@ e.exports = function (e) {
                 ...C,
                 {
                     scope: "meta",
-                    variants: [{ match: i }, { match: a }],
+                    variants: [
+                        {
+                            match: i,
+                        },
+                        {
+                            match: a,
+                        },
+                    ],
                 },
             ],
         };
@@ -412,7 +443,9 @@ e.exports = function (e) {
                 excludeEnd: !0,
                 illegal: "[$%\\[]",
                 contains: [
-                    { beginKeywords: "use" },
+                    {
+                        beginKeywords: "use",
+                    },
                     e.UNDERSCORE_TITLE_MODE,
                     {
                         begin: "=>",
@@ -444,14 +477,23 @@ e.exports = function (e) {
                 relevance: 0,
                 end: /\{/,
                 excludeEnd: !0,
-                contains: [{ beginKeywords: "extends implements" }, e.UNDERSCORE_TITLE_MODE],
+                contains: [
+                    {
+                        beginKeywords: "extends implements",
+                    },
+                    e.UNDERSCORE_TITLE_MODE,
+                ],
             },
             {
                 beginKeywords: "namespace",
                 relevance: 0,
                 end: ";",
                 illegal: /[.']/,
-                contains: [e.inherit(e.UNDERSCORE_TITLE_MODE, { scope: "title.class" })],
+                contains: [
+                    e.inherit(e.UNDERSCORE_TITLE_MODE, {
+                        scope: "title.class",
+                    }),
+                ],
             },
             {
                 beginKeywords: "use",

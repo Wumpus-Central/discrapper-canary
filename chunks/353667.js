@@ -1,4 +1,8 @@
-n.d(t, { j: () => T }), n(896048), n(65821);
+n.d(t, {
+    j: () => T,
+}),
+    n(896048),
+    n(65821);
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -16,6 +20,7 @@ var r = n(627968),
     g = n(112715),
     E = n(49999),
     b = n(872175);
+
 function y(e) {
     let { notice: t, children: n } = e,
         { showNotice: l, handleStoreUpdate: c } = (0, d.L_)(),
@@ -52,6 +57,7 @@ function y(e) {
         ],
     });
 }
+
 function O(e) {
     let { scrollerRef: t, panelKey: n, notice: a, children: s } = e,
         l = i.useRef(null);
@@ -76,6 +82,7 @@ function O(e) {
         ),
     });
 }
+
 function A(e) {
     let { layout: t } = e;
     return (0, r.jsx)("div", {
@@ -85,8 +92,13 @@ function A(e) {
                 i.Fragment,
                 {
                     children: [
-                        (0, r.jsx)(_.A, { node: e }),
-                        n !== t.length - 1 && (0, r.jsx)(h.A, { className: b.yF }),
+                        (0, r.jsx)(_.A, {
+                            node: e,
+                        }),
+                        n !== t.length - 1 &&
+                            (0, r.jsx)(h.A, {
+                                className: b.yF,
+                            }),
                     ],
                 },
                 e.key,
@@ -94,6 +106,7 @@ function A(e) {
         ),
     });
 }
+
 function v(e) {
     var t, n;
     let { panelKey: a, layout: s, notice: l } = e,
@@ -110,14 +123,20 @@ function v(e) {
         let e = p.A.getField("currentTabKeys");
         if (s.some((t) => t.key === e.get(a))) return;
         let t = new Map(e);
-        t.set(a, s[0].key), p.A.setState({ currentTabKeys: t });
+        t.set(a, s[0].key),
+            p.A.setState({
+                currentTabKeys: t,
+            });
     }, [s, a]);
     let f = (e) => {
             u(() => {
                 var t;
                 if (e === c) return;
                 let n = new Map(p.A.getField("currentTabKeys"));
-                n.set(a, e), p.A.setState({ currentTabKeys: n });
+                n.set(a, e),
+                    p.A.setState({
+                        currentTabKeys: n,
+                    });
                 let r = s.find((t) => t.key === e);
                 null == r || null == (t = r.onItemSelect) || t.call(r);
             });
@@ -151,11 +170,14 @@ function v(e) {
                 children:
                     null != _.StronglyDiscouragedCustomComponent
                         ? (0, r.jsx)(_.StronglyDiscouragedCustomComponent, {})
-                        : (0, r.jsx)(A, { layout: _.layout }),
+                        : (0, r.jsx)(A, {
+                              layout: _.layout,
+                          }),
             }),
         ],
     });
 }
+
 function S(e) {
     let { panelKey: t, notice: n, layout: a } = e,
         s = i.useRef(null);
@@ -165,10 +187,13 @@ function S(e) {
             scrollerRef: s,
             panelKey: t,
             notice: n,
-            children: (0, r.jsx)(A, { layout: a }),
+            children: (0, r.jsx)(A, {
+                layout: a,
+            }),
         })
     );
 }
+
 function I(e) {
     let { component: t, panelKey: n, notice: i } = e;
     return (0, r.jsx)(O, {
@@ -177,6 +202,7 @@ function I(e) {
         children: (0, r.jsx)(t, {}),
     });
 }
+
 function T(e) {
     let { node: t } = e,
         { layout: n, initialize: s } = t;

@@ -1,4 +1,7 @@
-r.d(t, { default: () => f }), r(228524);
+r.d(t, {
+    default: () => f,
+}),
+    r(228524);
 var n = r(627968),
     i = r(64700),
     l = r(158954),
@@ -10,6 +13,7 @@ var n = r(627968),
     u = r(584508),
     b = r(652215),
     p = r(985018);
+
 function h(e) {
     let { eligibility: t, eligibilityLoading: r, eligibilityError: l, guildId: p, onEligibilityBecameStale: h } = e,
         f = i.useMemo(
@@ -34,7 +38,9 @@ function h(e) {
               }),
           })
         : null == y || r
-          ? (0, n.jsx)("div", { children: (0, n.jsx)(c.y$y, {}) })
+          ? (0, n.jsx)("div", {
+                children: (0, n.jsx)(c.y$y, {}),
+            })
           : (0, n.jsx)("div", {
                 children: y.map((e, t) =>
                     (0, n.jsxs)(
@@ -56,6 +62,7 @@ function h(e) {
                 ),
             });
 }
+
 function f(e) {
     let {
         eligibility: t,

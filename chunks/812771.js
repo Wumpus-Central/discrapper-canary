@@ -24,6 +24,7 @@ var r,
         (r[(r.HomeSidebar = 4)] = "HomeSidebar"),
         (r[(r.ParticipantsSidebar = 5)] = "ParticipantsSidebar"),
         r);
+
 function m(e) {
     let { resizableNode: t, onResize: n, onResizeEnd: r, maxWidth: i, minWidth: a } = e,
         s = (0, f.A)({
@@ -40,6 +41,7 @@ function m(e) {
         className: b.Di,
     });
 }
+
 function A(e) {
     let { sidebarType: t, maxWidth: n, onWidthChange: r, children: a, floatingLayer: f } = e,
         g = i.useRef(null),
@@ -62,7 +64,9 @@ function A(e) {
         [y, O] = i.useState(p.Ay[A]),
         j = i.useCallback(
             (e) => {
-                d.Ay.updatedUnsyncedSettings({ [A]: e });
+                d.Ay.updatedUnsyncedSettings({
+                    [A]: e,
+                });
             },
             [A],
         ),
@@ -80,17 +84,26 @@ function A(e) {
     let S = null != f ? f : i.Fragment;
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            !x && (0, l.jsx)("div", { style: { minWidth: C } }),
+            !x &&
+                (0, l.jsx)("div", {
+                    style: {
+                        minWidth: C,
+                    },
+                }),
             (0, l.jsx)(S, {
                 children: (0, l.jsxs)("div", {
-                    className: s()(b.PA, { [b.R]: !1 }),
+                    className: s()(b.PA, {
+                        [b.R]: !1,
+                    }),
                     children: [
                         (0, l.jsx)("div", {
                             className: s()(b.Uc, {
                                 [b.DU]: x,
                                 [b.iK]: !x,
                             }),
-                            style: { width: C },
+                            style: {
+                                width: C,
+                            },
                         }),
                         !x &&
                             (0, l.jsx)(m, {
@@ -102,8 +115,12 @@ function A(e) {
                             }),
                         (0, l.jsx)("div", {
                             ref: g,
-                            className: s()(b.kL, { [b.DU]: x }),
-                            style: { width: _ },
+                            className: s()(b.kL, {
+                                [b.DU]: x,
+                            }),
+                            style: {
+                                width: _,
+                            },
                             children: a,
                         }),
                     ],

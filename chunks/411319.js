@@ -1,4 +1,7 @@
-i.d(t, { A: () => m }), i(896048);
+i.d(t, {
+    A: () => m,
+}),
+    i(896048);
 var s = i(627968),
     l = i(64700),
     n = i(503698),
@@ -11,7 +14,9 @@ var s = i(627968),
 let u = (e) => {
         let { index: t, title: i, selected: l } = e;
         return (0, s.jsxs)("div", {
-            className: a()(x.wJ, { [x.wH]: l }),
+            className: a()(x.wJ, {
+                [x.wH]: l,
+            }),
             children: [
                 (0, s.jsx)(c.Text, {
                     className: x.BM,

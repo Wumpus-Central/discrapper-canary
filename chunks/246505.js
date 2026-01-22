@@ -1,4 +1,6 @@
-n.d(t, { U: () => s });
+n.d(t, {
+    U: () => s,
+});
 var i = n(627968);
 n(64700);
 var a = n(397927),
@@ -17,7 +19,9 @@ let s = (e) => {
                       color: "text-muted",
                       children: r.intl.string(r.t.s64CMg),
                   }),
-                  (0, i.jsx)(l.A, { flaggedContent: t }),
+                  (0, i.jsx)(l.A, {
+                      flaggedContent: t,
+                  }),
               ],
           });
 };

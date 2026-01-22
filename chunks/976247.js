@@ -17,6 +17,7 @@ let f = 24,
     _ = 76,
     h = 88,
     m = 272;
+
 function g(e, t) {
     let n = window.innerWidth - (e ? _ : f) * 2,
         r = window.innerHeight - 2 * h;
@@ -42,6 +43,7 @@ function g(e, t) {
         });
     return c.width >= u.width ? c : u;
 }
+
 function E(e) {
     let { items: t, currentIndex: n, children: a } = e,
         l = t[n],

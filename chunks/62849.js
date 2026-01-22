@@ -63,21 +63,34 @@ async function T(e, n, t) {
         ? s.default.selectVoiceChannel(r.id)
         : (0, m.A)(E.BVt.CHANNEL(e, n, t));
 }
+
 function _(e) {
     let { type: n, value: t } = e;
     switch (n) {
         case "channel":
-            return (0, r.jsx)(L, { channelId: t });
+            return (0, r.jsx)(L, {
+                channelId: t,
+            });
         case "user":
-            return (0, r.jsx)(G, { id: t });
+            return (0, r.jsx)(G, {
+                id: t,
+            });
         case "role":
-            return (0, r.jsx)(M, { id: t });
+            return (0, r.jsx)(M, {
+                id: t,
+            });
         case "everyone":
-            return (0, r.jsx)(F, { roleName: "@everyone" });
+            return (0, r.jsx)(F, {
+                roleName: "@everyone",
+            });
         case "here":
-            return (0, r.jsx)(F, { roleName: "@here" });
+            return (0, r.jsx)(F, {
+                roleName: "@here",
+            });
         case "game":
-            return (0, r.jsx)(H, { id: t });
+            return (0, r.jsx)(H, {
+                id: t,
+            });
         case "command":
             return (0, r.jsx)(U, {
                 id: t.id,
@@ -86,6 +99,7 @@ function _(e) {
     }
     (0, N.xb)(n);
 }
+
 function L(e) {
     let { channelId: n, guildId: l, messageId: s } = e,
         o = (0, u.A)(n),
@@ -111,7 +125,12 @@ function L(e) {
                 ? y || null == d
                     ? (0, r.jsx)(p.A, {
                           iconType: m,
-                          children: null != d ? d : (0, r.jsx)("em", { children: D.intl.string(D.t.J90oLW) }),
+                          children:
+                              null != d
+                                  ? d
+                                  : (0, r.jsx)("em", {
+                                        children: D.intl.string(D.t.J90oLW),
+                                    }),
                       })
                     : (0, r.jsx)(z, {
                           guildId: l,
@@ -125,7 +144,12 @@ function L(e) {
     return (
         null != s &&
             (A = (0, r.jsxs)(r.Fragment, {
-                children: [(0, r.jsx)(v.A, {}), (0, r.jsx)(p.A, { iconType: j ? "post" : "message" })],
+                children: [
+                    (0, r.jsx)(v.A, {}),
+                    (0, r.jsx)(p.A, {
+                        iconType: j ? "post" : "message",
+                    }),
+                ],
             })),
         (0, r.jsxs)(g.A, {
             role: "link",
@@ -194,6 +218,7 @@ function L(e) {
         })
     );
 }
+
 function z(e) {
     let { guildId: n, children: t } = e,
         l = (0, c.bG)([w.A], () => w.A.getGuild(n), [n]);
@@ -202,6 +227,7 @@ function z(e) {
         children: [null == l ? void 0 : l.name, null != l ? (0, r.jsx)(v.A, {}) : null, t],
     });
 }
+
 function G(e) {
     let { id: n } = e,
         t = (0, I.p)();
@@ -214,6 +240,7 @@ function G(e) {
         content: "<@".concat(n, ">"),
     });
 }
+
 function M(e) {
     let { id: n } = e,
         t = (0, I.p)(),
@@ -231,16 +258,22 @@ function M(e) {
         children: "@".concat(a),
     });
 }
+
 function H(e) {
     let { id: n } = e,
         t = (0, I.p)();
-    return o.m.useExperiment({ location: "native markdown" }).enabled
+    return o.m.useExperiment({
+        location: "native markdown",
+    }).enabled
         ? (0, r.jsx)(f.A, {
               gameId: n,
               channelId: null == t ? void 0 : t.channelId,
           })
-        : (0, r.jsx)("span", { children: "<@$".concat(n, ">") });
+        : (0, r.jsx)("span", {
+              children: "<@$".concat(n, ">"),
+          });
 }
+
 function F(e) {
     let { roleName: n } = e,
         t = (0, I.p)();
@@ -251,6 +284,7 @@ function F(e) {
         children: n,
     });
 }
+
 function U(e) {
     let { id: n, name: t } = e,
         c = (0, I.p)(),

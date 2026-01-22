@@ -15,6 +15,7 @@ var r = n(627968),
     f = n(927573),
     g = n(985018),
     b = n(286420);
+
 function m() {
     let [e, t] = i.useState(!0);
     return {
@@ -24,6 +25,7 @@ function m() {
         },
     };
 }
+
 function p(e) {
     let { guild: t, role: m, selectedSection: p, setSelectedSection: x } = e,
         h = i.useCallback(
@@ -51,7 +53,9 @@ function p(e) {
                         className: b.Qw,
                         color: "text-strong",
                         variant: "text-md/semibold",
-                        children: g.intl.format(g.t.BUdGkE, { roleName: m.name }),
+                        children: g.intl.format(g.t.BUdGkE, {
+                            roleName: m.name,
+                        }),
                     }),
                     v
                         ? (0, r.jsx)(s.DUT, {
@@ -161,7 +165,9 @@ function p(e) {
                         disabled: O,
                         children: O
                             ? g.intl.string(g.t["kg//+7"])
-                            : g.intl.formatToPlainString(g.t.bHnZWW, { numMembers: String(j) }),
+                            : g.intl.formatToPlainString(g.t.bHnZWW, {
+                                  numMembers: String(j),
+                              }),
                     }),
                 ],
             }),

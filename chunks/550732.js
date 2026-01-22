@@ -1,4 +1,6 @@
-n.d(t, { C: () => b });
+n.d(t, {
+    C: () => b,
+});
 var r = n(627968);
 n(64700);
 var i = n(991660),
@@ -16,6 +18,7 @@ var i = n(991660),
     m = n(985018),
     g = n(356426),
     E = n(22789);
+
 function b(e) {
     let { appId: t, skuId: n, transitionState: b, onClose: y, children: O, footer: A } = e,
         v = (0, s.bG)([l.A, c.A], () => {

@@ -1,4 +1,8 @@
-n.d(t, { A: () => m }), n(896048), n(321073);
+n.d(t, {
+    A: () => m,
+}),
+    n(896048),
+    n(321073);
 var r = n(627968),
     i = n(64700),
     l = n(311907),
@@ -79,7 +83,9 @@ let b = (e) => {
                 onChange: (e) => {
                     g(e);
                 },
-                clearable: { show: (null != (t = null == n ? void 0 : n.length) ? t : 0) > 0 || null != d },
+                clearable: {
+                    show: (null != (t = null == n ? void 0 : n.length) ? t : 0) > 0 || null != d,
+                },
                 onClear: m,
             },
             "text-input-".concat(j, "-").concat(A),
@@ -150,12 +156,16 @@ let b = (e) => {
                         {
                             onSetReason: (t) => {
                                 let n = [...l],
-                                    r = Object.assign({}, l[e], { reason: t });
+                                    r = Object.assign({}, l[e], {
+                                        reason: t,
+                                    });
                                 (n[e] = r), (0, d.MA)(i, n);
                             },
                             onSelectEmoji: (t) => {
                                 let n = [...l],
-                                    r = Object.assign({}, l[e], { emoji_name: t.optionallyDiverseSequence });
+                                    r = Object.assign({}, l[e], {
+                                        emoji_name: t.optionallyDiverseSequence,
+                                    });
                                 (n[e] = r), (0, d.MA)(i, n);
                             },
                             onClearPressed: () => {

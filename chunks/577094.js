@@ -486,10 +486,14 @@ e.exports = function (e) {
         contains: [
             e.HASH_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
-            e.COMMENT(";", "$", { relevance: 0 }),
+            e.COMMENT(";", "$", {
+                relevance: 0,
+            }),
             m,
             h,
-            { beginKeywords: "Function PageEx Section SectionGroup FunctionEnd SectionEnd" },
+            {
+                beginKeywords: "Function PageEx Section SectionGroup FunctionEnd SectionEnd",
+            },
             f,
             u,
             s,

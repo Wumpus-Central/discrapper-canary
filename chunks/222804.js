@@ -1,4 +1,7 @@
-n.d(t, { A: () => g }), n(896048);
+n.d(t, {
+    A: () => g,
+}),
+    n(896048);
 var r = n(197094),
     i = n(439372),
     a = n(626584),
@@ -7,6 +10,7 @@ var r = n(197094),
     l = n(927813),
     c = n(723702),
     u = n(731854);
+
 function d(e, t, n) {
     return (
         t in e
@@ -32,7 +36,9 @@ class m extends i.A {
     constructor(...e) {
         super(...e),
             d(this, "refetchTimeout", void 0),
-            d(this, "actions", { POST_CONNECTION_OPEN: () => this._handleConnectionOpen() }),
+            d(this, "actions", {
+                POST_CONNECTION_OPEN: () => this._handleConnectionOpen(),
+            }),
             d(this, "_handleTestRegionsResponse", (e) => {
                 let t = e.map((e) => e.region);
                 o.A.shouldPerformLatencyTest(t)

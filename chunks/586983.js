@@ -1,6 +1,9 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 var r = n(64700),
     i = n(27867);
+
 function a(e) {
     let { delay: t, disable: n = !1 } = e,
         a = (0, i.A)();

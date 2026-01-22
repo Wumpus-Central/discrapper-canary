@@ -138,31 +138,40 @@ let c = {
     videohookBackend: "Videohook Backend",
     videohookFrames: "Videohook Frames",
 };
+
 function u(e) {
-    return "".concat((e / 1000).toFixed(2), " Kbps");
+    return "".concat((e / 1e3).toFixed(2), " Kbps");
 }
+
 function m(e) {
     return l().filesize(e);
 }
+
 function p(e) {
     return e;
 }
+
 function y(e) {
     return "".concat(e, " ms");
 }
+
 function h(e) {
     return "".concat(e.toFixed(0), "%");
 }
+
 function g(e) {
     return e ? "Yes" : "No";
 }
+
 function A(e) {
     return 20 * Math.log(e);
 }
+
 function f(e) {
     let { last: t } = e;
     return "".concat(t, " ms");
 }
+
 function v(e) {
     return e.toFixed(2);
 }
@@ -200,7 +209,7 @@ let b = {
         accelerateRate: h,
         audioDetected: g,
         audioLevel: function (e) {
-            return e <= 0 ? "-\u221E dB" : "".concat(A(e).toFixed(2), " dB");
+            return e <= 0 ? "-∞ dB" : "".concat(A(e).toFixed(2), " dB");
         },
         availableOutgoingBitrate: u,
         averageDecodeTime: y,
@@ -220,7 +229,7 @@ let b = {
         },
         cpuLimitedResolution: g,
         currentSampleRate: function (e) {
-            return e % 100 == 0 ? "".concat(e / 1000, " kHz") : "".concat(e, " Hz");
+            return e % 100 == 0 ? "".concat(e / 1e3, " kHz") : "".concat(e, " Hz");
         },
         currentDelay: y,
         decoderImplementationName: p,
@@ -287,6 +296,7 @@ let b = {
             })
         );
     };
+
 function R(e) {
     var t, n, a;
     let { label: i, value: l, section: u } = e,

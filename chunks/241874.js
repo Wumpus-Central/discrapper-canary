@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968),
     l = n(64700),
     i = n(143413),
@@ -52,6 +54,7 @@ let f = l.memo(function (e) {
         });
     }),
     p = l.memo(o.A);
+
 function h(e) {
     let {
             messageProps: t,

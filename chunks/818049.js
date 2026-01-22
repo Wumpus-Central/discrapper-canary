@@ -1,4 +1,7 @@
-n.d(t, { A: () => N }), n(896048);
+n.d(t, {
+    A: () => N,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     o = n(503698),
@@ -20,6 +23,7 @@ var r = n(627968),
     O = n(654487),
     S = n(985018),
     _ = n(438655);
+
 function C(e) {
     let { quest: t, sourceQuestContent: n } = e,
         o = l.useMemo(() => (0, v.tW)(t, v.fY.VIDEO_PLAYER_THUMBNAIL, void 0, !1), [t]);
@@ -40,6 +44,7 @@ function C(e) {
                   }),
           });
 }
+
 function x(e) {
     let { title: t, subtitle: n, icon: o, onClick: a, className: c } = e,
         [u, d] = l.useState(!1),
@@ -74,7 +79,9 @@ function x(e) {
                         }),
                     ],
                 }),
-                (0, r.jsx)(b.A, { color: "#747783" }),
+                (0, r.jsx)(b.A, {
+                    color: "#747783",
+                }),
                 (0, r.jsx)(o, {
                     size: "md",
                     color: u ? "#FFFFFF" : "#B5BAC1",
@@ -84,6 +91,7 @@ function x(e) {
         }),
     });
 }
+
 function A(e) {
     let { asset: t } = e;
     return null == t
@@ -94,6 +102,7 @@ function A(e) {
               className: _.bU,
           });
 }
+
 function j(e) {
     let { quest: t, asset: n, sourceQuestContent: l, orientation: o } = e;
     return null == n
@@ -109,14 +118,19 @@ function j(e) {
                       },
                       src: n.url,
                       alt: "Video thumbnail",
-                      className: i()(_.C, { [_.TW]: "portrait" === o }),
+                      className: i()(_.C, {
+                          [_.TW]: "portrait" === o,
+                      }),
                   }),
           });
 }
+
 function T(e) {
     let { ctaBtnLabel: t, title: n, subtitle: l, onCTAClick: o, orientation: a } = e;
     return (0, r.jsxs)("div", {
-        className: i()(_.pP, { [_.iC]: "portrait" === a }),
+        className: i()(_.pP, {
+            [_.iC]: "portrait" === a,
+        }),
         children: [
             (0, r.jsx)(D, {
                 title: n,
@@ -130,6 +144,7 @@ function T(e) {
         ],
     });
 }
+
 function D(e) {
     let { title: t, subtitle: n } = e;
     return (0, r.jsxs)("div", {
@@ -148,6 +163,7 @@ function D(e) {
         ],
     });
 }
+
 function w(e) {
     let { label: t, icon: n, onClick: o, className: c } = e,
         [u, d] = l.useState(!1),
@@ -178,6 +194,7 @@ function w(e) {
         ],
     });
 }
+
 function N(e) {
     var t;
     let {
@@ -212,15 +229,23 @@ function N(e) {
             title: (0, E.wr)(N),
             subtitle: null != (t = N.config.ctaConfig.subtitle) ? t : S.intl.string(S.t.mxaHfx),
         },
-        { enabled: Q } = p.uK.useConfig({ location: O.rE.VIDEO_MODAL }),
+        { enabled: Q } = p.uK.useConfig({
+            location: O.rE.VIDEO_MODAL,
+        }),
         U = l.useMemo(() => (0, v.tW)(N, v.fY.VIDEO_PLAYER_THUMBNAIL, void 0, !1), [N]);
     return Q
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(A, { asset: U }),
-                  (0, r.jsx)("div", { className: _.MM }),
+                  (0, r.jsx)(A, {
+                      asset: U,
+                  }),
+                  (0, r.jsx)("div", {
+                      className: _.MM,
+                  }),
                   (0, r.jsxs)("div", {
-                      className: i()(_.Pb, { [_.II]: "portrait" === b }),
+                      className: i()(_.Pb, {
+                          [_.II]: "portrait" === b,
+                      }),
                       children: [
                           (0, r.jsx)(j, {
                               quest: N,
@@ -245,7 +270,9 @@ function N(e) {
                       quest: N,
                       sourceQuestContent: w,
                   }),
-                  (0, r.jsx)("div", { className: _.MT }),
+                  (0, r.jsx)("div", {
+                      className: _.MT,
+                  }),
                   (0, r.jsx)(x, {
                       title: M,
                       subtitle: V,

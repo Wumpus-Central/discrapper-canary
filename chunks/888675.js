@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -6,6 +8,7 @@ var i = n(503698),
     s = n(397927),
     o = n(449859),
     l = n(256883);
+
 function c(e) {
     let {
         icon: t,
@@ -39,7 +42,9 @@ function c(e) {
                     children: (0, r.jsx)("div", {
                         "data-accessibility": "desaturate",
                         className: a()(l.Kk, l.RK, f),
-                        style: { backgroundImage: "url('".concat(t, "')") },
+                        style: {
+                            backgroundImage: "url('".concat(t, "')"),
+                        },
                     }),
                 }),
             (0, r.jsxs)("div", {
@@ -67,7 +72,7 @@ c.Action = (e) => {
     return (0, r.jsxs)("span", {
         className: l.XI,
         children: [
-            "\u2014",
+            "—",
             (0, r.jsx)(s.MzZ, {
                 onClick: t,
                 className: l.si,

@@ -1,9 +1,11 @@
-l.d(t, { S: () => b });
+l.d(t, {
+    S: () => b,
+});
 var n = l(627968),
     r = l(64700),
     s = l(503698),
     a = l.n(s),
-    i = l(432022),
+    i = l(108531),
     o = l(607399),
     c = l(946015),
     u = l(397927),
@@ -63,7 +65,12 @@ let b = r.memo(function (e) {
                     (0, n.jsx)(u.Text, {
                         variant: "text-md/medium",
                         className: f.Wx,
-                        style: null != t.textColor && "" !== t.textColor ? { color: t.textColor } : void 0,
+                        style:
+                            null != t.textColor && "" !== t.textColor
+                                ? {
+                                      color: t.textColor,
+                                  }
+                                : void 0,
                         children: t.title,
                     }),
                     null != t.body &&
@@ -71,12 +78,19 @@ let b = r.memo(function (e) {
                         (0, n.jsx)(u.Text, {
                             variant: "text-sm/medium",
                             className: f.w9,
-                            style: null != t.textColor && "" !== t.textColor ? { color: t.textColor } : void 0,
+                            style:
+                                null != t.textColor && "" !== t.textColor
+                                    ? {
+                                          color: t.textColor,
+                                      }
+                                    : void 0,
                             children: t.body,
                         }),
                 ],
             }),
-            (0, n.jsx)(d.e, { endDate: t.endTime }),
+            (0, n.jsx)(d.e, {
+                endDate: t.endTime,
+            }),
         ],
     });
 });

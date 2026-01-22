@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var i = n(627968);
 n(64700);
 var r = n(311907),
@@ -13,6 +15,7 @@ let d = {
         default: s.cNw,
     },
 };
+
 function u(e) {
     let { value: t, action: n, shouldShow: a } = e,
         u = (0, r.bG)([l.Ay], () => l.Ay.getKeybindForAction(n, !1, !0));

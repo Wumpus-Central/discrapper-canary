@@ -1,4 +1,6 @@
-l.d(t, { A: () => U });
+l.d(t, {
+    A: () => U,
+});
 var n = l(627968),
     r = l(64700),
     i = l(503698),
@@ -29,6 +31,7 @@ var n = l(627968),
     R = l(663282),
     D = l(236671),
     P = l(918372);
+
 function C(e) {
     let t,
         l,
@@ -63,6 +66,7 @@ function C(e) {
         ],
     });
 }
+
 function M(e) {
     let { sortOrder: t, onSortChange: l } = e;
     return (0, n.jsx)("thead", {
@@ -134,7 +138,9 @@ let w = r.memo(function (e) {
                 (0, n.jsx)(u.DUT, {
                     className: P.Wn,
                     onClick: c,
-                    children: (0, n.jsx)(m.A, { user: l }),
+                    children: (0, n.jsx)(m.A, {
+                        user: l,
+                    }),
                 }),
                 (0, n.jsx)("div", {
                     className: P.eg,
@@ -175,14 +181,18 @@ let w = r.memo(function (e) {
         let { joinRequest: t, onSelect: i } = e,
             { guildId: a, createdAt: m, applicationStatus: j } = t,
             b = r.useMemo(() => new y.A(t.user), [t.user]),
-            f = (0, v.R)({ guildId: a }),
+            f = (0, v.R)({
+                guildId: a,
+            }),
             g = (0, d.bG)([_.A], () => _.A.getGuild(a)),
             A = j === h.B5.SUBMITTED;
         return null == b
             ? null
             : (0, n.jsxs)("tr", {
                   onClick: i,
-                  className: s()(P.yF, P.iA, { [P.wH]: (null == f ? void 0 : f.joinRequestId) === t.joinRequestId }),
+                  className: s()(P.yF, P.iA, {
+                      [P.wH]: (null == f ? void 0 : f.joinRequestId) === t.joinRequestId,
+                  }),
                   children: [
                       (0, n.jsx)("td", {
                           children: (0, n.jsx)(w, {
@@ -302,19 +312,25 @@ let w = r.memo(function (e) {
                     children: (0, n.jsxs)("div", {
                         className: P.FD,
                         children: [
-                            (0, n.jsx)("div", { className: s()(I.RH, P.Wn) }),
+                            (0, n.jsx)("div", {
+                                className: s()(I.RH, P.Wn),
+                            }),
                             (0, n.jsx)("div", {
                                 className: P.eg,
                                 children: (0, n.jsx)("div", {
                                     className: I.RC,
-                                    style: { width: e },
+                                    style: {
+                                        width: e,
+                                    },
                                 }),
                             }),
                             (0, n.jsx)("div", {
                                 className: P.Br,
                                 children: (0, n.jsx)("div", {
                                     className: I.w7,
-                                    style: { width: t },
+                                    style: {
+                                        width: t,
+                                    },
                                 }),
                             }),
                         ],
@@ -324,18 +340,25 @@ let w = r.memo(function (e) {
                     className: P.QB,
                     children: (0, n.jsx)("div", {
                         className: I.RC,
-                        style: { width: l },
+                        style: {
+                            width: l,
+                        },
                     }),
                 }),
-                (0, n.jsx)("td", { className: I.UX }),
+                (0, n.jsx)("td", {
+                    className: I.UX,
+                }),
             ],
         });
     };
+
 function U(e) {
     let { guildId: t, currentTab: l } = e,
         i = r.useRef(null),
         s = (0, d.bG)([_.A], () => _.A.getGuild(t)),
-        a = (0, A.n)({ guildId: t }),
+        a = (0, A.n)({
+            guildId: t,
+        }),
         c = (0, d.bG)([f.A], () => f.A.isFetching()),
         { guildJoinRequests: o } = (0, p.K)({
             guildId: t,
@@ -371,7 +394,9 @@ function U(e) {
                                   : 0 === o.length
                                     ? (0, n.jsx)("td", {
                                           colSpan: 3,
-                                          children: (0, n.jsx)(C, { status: l }),
+                                          children: (0, n.jsx)(C, {
+                                              status: l,
+                                          }),
                                       })
                                     : o.map((e) =>
                                           (0, n.jsx)(

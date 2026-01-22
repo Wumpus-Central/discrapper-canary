@@ -1,4 +1,6 @@
-n.d(t, { A: () => o }),
+n.d(t, {
+    A: () => o,
+}),
     n(114821),
     n(339614),
     n(896048),
@@ -16,6 +18,7 @@ var l = n(64700),
     i = n(522602),
     s = n(304162),
     c = n(835134);
+
 function o(e, t) {
     var n, o;
     let { mediaAttachments: d, hasThumbnail: u } = (function (e) {

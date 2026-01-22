@@ -1,6 +1,9 @@
-n.d(t, { Q: () => u });
+n.d(t, {
+    Q: () => u,
+});
 var r = n(39304),
     i = n(73153);
+
 function a(e, t, n) {
     return (
         t in e
@@ -14,6 +17,7 @@ function a(e, t, n) {
         e
     );
 }
+
 function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -30,6 +34,7 @@ function s(e) {
     }
     return e;
 }
+
 function o(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -42,6 +47,7 @@ function o(e, t) {
     }
     return n;
 }
+
 function l(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -53,11 +59,25 @@ function l(e, t) {
         e
     );
 }
+
 function c() {
-    return l(s({}, null != i.h._currentDispatchActionType ? { currentAction: i.h._currentDispatchActionType } : {}), {
-        lastFewActions: (0, r.lK)(),
-    });
+    return l(
+        s(
+            {},
+            null != i.h._currentDispatchActionType
+                ? {
+                      currentAction: i.h._currentDispatchActionType,
+                  }
+                : {},
+        ),
+        {
+            lastFewActions: (0, r.lK)(),
+        },
+    );
 }
+
 function u(e) {
-    return l(s({}, e), { extra: s({}, null == e ? void 0 : e.extra, c()) });
+    return l(s({}, e), {
+        extra: s({}, null == e ? void 0 : e.extra, c()),
+    });
 }

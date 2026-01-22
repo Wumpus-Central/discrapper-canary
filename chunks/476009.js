@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(627968),
     i = n(546140),
     a = n(776038),
@@ -9,6 +11,7 @@ var r = n(627968),
     u = n(531525),
     d = n(652215),
     f = n(985018);
+
 function p() {
     let e = (0, i.L)();
     return (0, r.jsx)(o.h, {
@@ -18,7 +21,9 @@ function p() {
             value: e,
             onChange: a.a,
             title: f.intl.string(f.t.qFsx5q),
-            note: f.intl.format(f.t.lunaRv, { learnMoreLink: s.A.getArticleURL(d.MVz.SAFETY_ALERTS) }),
+            note: f.intl.format(f.t.lunaRv, {
+                learnMoreLink: s.A.getArticleURL(d.MVz.SAFETY_ALERTS),
+            }),
         }),
     });
 }

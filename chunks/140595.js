@@ -36,10 +36,12 @@ var E = n(652215);
     c.Ay.initialize(),
     n.e("65430").then(n.t.bind(n, 306613, 19));
 let b = window.GLOBAL_ENV.RELEASE_CHANNEL,
-    y = "488133",
-    O = "4e1818290817afb4d92f289508416cc4e8e00823";
+    y = "488230",
+    O = "61528d3e3435ecbee37bf641aa64b9de561b202c";
 new g.A().log("[BUILD INFO] Release Channel: ".concat(b, ", Build Number: ").concat(y, ", Version Hash: ").concat(O)),
-    a.A.setTags({ appContext: E.QCW }),
+    a.A.setTags({
+        appContext: E.QCW,
+    }),
     _.A.initBasic(),
     h.A.init(),
     d.oPN.init(),

@@ -29,6 +29,7 @@ var r = n(627968),
     v = n(937495),
     S = n(517061),
     C = n(970890);
+
 function N(e) {
     let { guild: t, onClick: l, onView: s } = e,
         [h, A] = i.useState(!1),
@@ -82,7 +83,10 @@ function N(e) {
                                 }
                                 return e;
                             })({}, n)),
-                            (l = l = { guild: t }),
+                            (l = l =
+                                {
+                                    guild: t,
+                                }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
                                 : (function (e, t) {
@@ -156,7 +160,9 @@ function N(e) {
                             className: I.wx,
                             children: [
                                 (0, r.jsx)("div", {
-                                    className: a()(I.vK, { [I.Kc]: T }),
+                                    className: a()(I.vK, {
+                                        [I.Kc]: T,
+                                    }),
                                     children: (0, r.jsx)("img", {
                                         src: M,
                                         alt: "",
@@ -222,7 +228,9 @@ function N(e) {
                                             (0, r.jsxs)("div", {
                                                 className: I.CV,
                                                 children: [
-                                                    (0, r.jsx)("div", { className: I.SP }),
+                                                    (0, r.jsx)("div", {
+                                                        className: I.SP,
+                                                    }),
                                                     (0, r.jsx)(c.Text, {
                                                         className: I.ac,
                                                         variant: "text-xs/normal",
@@ -237,12 +245,16 @@ function N(e) {
                                             (0, r.jsxs)("div", {
                                                 className: I.CV,
                                                 children: [
-                                                    (0, r.jsx)("div", { className: I.PB }),
+                                                    (0, r.jsx)("div", {
+                                                        className: I.PB,
+                                                    }),
                                                     (0, r.jsx)(c.Text, {
                                                         className: I.ac,
                                                         variant: "text-xs/normal",
                                                         color: "text-default",
-                                                        children: y.intl.format(y.t.zRl6XR, { count: t.memberCount }),
+                                                        children: y.intl.format(y.t.zRl6XR, {
+                                                            count: t.memberCount,
+                                                        }),
                                                     }),
                                                 ],
                                             }),
@@ -256,6 +268,7 @@ function N(e) {
         ],
     });
 }
+
 function T(e) {
     let { guildId: t, onClick: n, onView: i } = e,
         l = (0, s.bG)([_.A], () => _.A.getGuild(t));
@@ -267,6 +280,7 @@ function T(e) {
               onView: i,
           });
 }
+
 function j(e) {
     let { guildId: t, index: n, onClick: l, onView: a } = e,
         s = i.useRef(null == t),
@@ -278,7 +292,9 @@ function j(e) {
                           {
                               state: n,
                               cleanUp: i,
-                              children: (0, r.jsx)(h.A, { className: I.qf }),
+                              children: (0, r.jsx)(h.A, {
+                                  className: I.qf,
+                              }),
                           },
                           e,
                       )

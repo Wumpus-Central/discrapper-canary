@@ -24,6 +24,7 @@ var r = n(310784),
     })({});
 let s = 50,
     o = 38;
+
 function l(e) {
     let { primaryColor: t, secondaryColor: n, isDarkTheme: r } = e,
         a = i()(t),
@@ -42,6 +43,7 @@ function l(e) {
         }
     );
 }
+
 function c(e) {
     let { enabled: t, primaryColor: n, secondaryColor: r, baseMixAmount: i = s, textMixAmount: a = o } = e,
         { base: c, text: d } = l({
@@ -65,6 +67,7 @@ function c(e) {
         "--custom-theme-text-color-dark": d.css(),
     };
 }
+
 function u(e) {
     let [t, n, r] = e.hsl();
     return ""

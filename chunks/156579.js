@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(627968);
 n(64700);
 var l = n(417597),
@@ -10,6 +12,7 @@ var l = n(417597),
     u = n(829861),
     d = n(5867),
     f = n(652215);
+
 function p(e) {
     let { maxHeight: t, renderExternalHeader: n } = e,
         {

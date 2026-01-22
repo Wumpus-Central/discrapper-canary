@@ -1,4 +1,6 @@
-n.d(t, { a: () => C });
+n.d(t, {
+    a: () => C,
+});
 var r = n(627968);
 n(64700);
 var l = n(205369),
@@ -20,6 +22,7 @@ var l = n(205369),
     O = n(343360),
     j = n(488926),
     v = n(652215);
+
 function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -46,6 +49,7 @@ function x(e) {
     return e;
 }
 let E = "DRAGGABLE_GUILD_CHANNEL";
+
 function _(e, t) {
     var n, r;
     if (null == e || null == t) return null;
@@ -58,6 +62,7 @@ function _(e, t) {
                 : l[v.rbe.GUILD_CATEGORY].find((e) => e.channel.id === t);
     return null == i ? void 0 : i.channel;
 }
+
 function C(e) {
     return (0, l.T)(
         E,

@@ -1,9 +1,12 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(627968);
 n(64700);
 var i = n(201275),
     l = n(657048),
     a = n(63104);
+
 function s(e) {
     let { guildId: t, role: n, size: s, className: o } = e,
         c = (0, i.$7)({
@@ -38,7 +41,12 @@ function s(e) {
                           });
                   }
                   return e;
-              })({ className: o }, c),
+              })(
+                  {
+                      className: o,
+                  },
+                  c,
+              ),
           )
         : (0, r.jsx)(a.A, {
               color: n.colorString,

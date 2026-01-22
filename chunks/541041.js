@@ -1,4 +1,7 @@
-n.d(t, { A: () => h }), n(896048);
+n.d(t, {
+    A: () => h,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(311907),
@@ -49,5 +52,7 @@ class f extends i.PureComponent {
 }
 let h = l.Ay.connectStores([o.A], (e) => {
     let { guild: t } = e;
-    return { memberCount: o.A.getMemberCount(t.id) };
+    return {
+        memberCount: o.A.getMemberCount(t.id),
+    };
 })(f);

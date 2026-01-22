@@ -1,10 +1,13 @@
-n.d(t, { L: () => c });
+n.d(t, {
+    L: () => c,
+});
 var r = n(64700),
     i = n(554146),
     a = n(771781),
     s = n(826673),
     o = n(367727),
     l = n(49999);
+
 function c() {
     let e = (0, s.JZ)(i.M.CUSTOM_THEME_ENTRYPOINT_NEW_BADGE);
     return (
@@ -13,14 +16,21 @@ function c() {
                 return (
                     (0, o.Vh)(i.M.CUSTOM_THEME_ENTRYPOINT_NEW_BADGE),
                     () => {
-                        (0, a.pd)({ content: i.M.CUSTOM_THEME_ENTRYPOINT_NEW_BADGE }, !1);
+                        (0, a.pd)(
+                            {
+                                content: i.M.CUSTOM_THEME_ENTRYPOINT_NEW_BADGE,
+                            },
+                            !1,
+                        );
                     }
                 );
         }, [e]),
         {
             shouldShowNewBadge: !e,
             markNewBadgeAsDismissed: r.useCallback(() => {
-                (0, s.Dr)(i.M.CUSTOM_THEME_ENTRYPOINT_NEW_BADGE, { dismissAction: l.i.TAKE_ACTION });
+                (0, s.Dr)(i.M.CUSTOM_THEME_ENTRYPOINT_NEW_BADGE, {
+                    dismissAction: l.i.TAKE_ACTION,
+                });
             }, []),
         }
     );

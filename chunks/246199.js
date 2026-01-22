@@ -1,4 +1,7 @@
-n.d(t, { A: () => g }), n(896048);
+n.d(t, {
+    A: () => g,
+}),
+    n(896048);
 var l,
     i = n(627968),
     r = n(64700),
@@ -6,6 +9,7 @@ var l,
     a = n.n(s),
     o = n(821589),
     c = n(765163);
+
 function d(e, t, n) {
     return (
         t in e
@@ -84,7 +88,9 @@ class h extends (l = r.PureComponent) {
             })(
                 {
                     className: a()((0, o.t)(c, "iconButton", h), r, t),
-                    style: { backgroundImage: "url('".concat(u && null != l ? l : n, "')") },
+                    style: {
+                        backgroundImage: "url('".concat(u && null != l ? l : n, "')"),
+                    },
                     onMouseEnter: this.handleHover,
                     onFocus: this.handleHover,
                     onMouseLeave: this.handleBlur,
@@ -96,15 +102,25 @@ class h extends (l = r.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            d(this, "state", { hovered: !1 }),
+            d(this, "state", {
+                hovered: !1,
+            }),
             d(this, "getMode", () => (null != this.props.srcHover ? "static" : "default")),
             d(this, "handleHover", (e) => {
                 let { onMouseEnter: t } = this.props;
-                null == t || t(e), this.state.hovered || this.setState({ hovered: !0 });
+                null == t || t(e),
+                    this.state.hovered ||
+                        this.setState({
+                            hovered: !0,
+                        });
             }),
             d(this, "handleBlur", (e) => {
                 let { onMouseLeave: t } = this.props;
-                null == t || t(e), this.state.hovered && this.setState({ hovered: !1 });
+                null == t || t(e),
+                    this.state.hovered &&
+                        this.setState({
+                            hovered: !1,
+                        });
             });
     }
 }

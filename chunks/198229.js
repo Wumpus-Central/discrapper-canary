@@ -1,4 +1,6 @@
-n.d(t, { A: () => j });
+n.d(t, {
+    A: () => j,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -15,6 +17,7 @@ var i = n(311907),
     g = n(731854),
     p = n(985018),
     h = n(946818);
+
 function j(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : g.x.DEFAULT,
         n = (0, i.bG)([A.default], () => {

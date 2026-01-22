@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(311907),
     i = n(688810),
     a = n(211401),
@@ -9,6 +11,7 @@ var r = n(311907),
     u = n(734057),
     d = n(309010),
     f = n(652215);
+
 function p(e) {
     let { applicationId: t, onClose: n } = e,
         { newestAnalyticsLocation: p } = (0, i.Ay)(),
@@ -24,11 +27,17 @@ function p(e) {
                                     type: "channel",
                                     channel: _,
                                 }
-                              : { type: "contextless" },
+                              : {
+                                    type: "contextless",
+                                },
                       analyticsLocation: p,
                       openInPopout: h,
-                      initialState: { applicationId: t },
+                      initialState: {
+                          applicationId: t,
+                      },
                   })
-                : (0, a.R)(s.s4.TEXT, l.oU.NORMAL, { applicationId: t });
+                : (0, a.R)(s.s4.TEXT, l.oU.NORMAL, {
+                      applicationId: t,
+                  });
     };
 }

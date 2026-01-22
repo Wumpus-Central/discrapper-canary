@@ -1,8 +1,11 @@
-r.d(t, { A: () => a });
+r.d(t, {
+    A: () => a,
+});
 var n = r(627968);
 r(64700);
 var i = r(827734),
     s = r(953727);
+
 function a(e) {
     var t, r;
     let {

@@ -6,5 +6,7 @@ r(
         proto: !0,
         forced: a !== [].lastIndexOf,
     },
-    { lastIndexOf: a },
+    {
+        lastIndexOf: a,
+    },
 );

@@ -1,4 +1,8 @@
-n.d(t, { A: () => f }), n(896048), n(264879);
+n.d(t, {
+    A: () => f,
+}),
+    n(896048),
+    n(264879);
 var a = n(627968),
     l = n(64700),
     i = n(311907),
@@ -11,6 +15,7 @@ var a = n(627968),
     m = n(821052),
     p = n(594061),
     h = n(304932);
+
 function f() {
     let {
             dailyCapReached: e,
@@ -98,7 +103,9 @@ function f() {
                             onChange: x,
                             onClear: () => x(""),
                         }),
-                        (0, a.jsx)(d.A, { items: v.slice(0, b) }),
+                        (0, a.jsx)(d.A, {
+                            items: v.slice(0, b),
+                        }),
                     ],
                 }),
             ],

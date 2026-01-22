@@ -1,4 +1,8 @@
-n.d(t, { A: () => I }), n(896048), n(638769);
+n.d(t, {
+    A: () => I,
+}),
+    n(896048),
+    n(638769);
 var i = n(627968),
     r = n(64700),
     l = n(311907),
@@ -22,6 +26,7 @@ var i = n(627968),
     S = n(392164),
     x = n(985018),
     j = n(780682);
+
 function I(e) {
     var t, n, I, N;
     let w,
@@ -63,6 +68,7 @@ function I(e) {
         {
             streamParticipants: (0, l.yK)([c.A, p.A], () => {
                 if (null == Z) return [];
+
                 function e(e) {
                     return T.has((0, u._z)(e.stream));
                 }
@@ -151,7 +157,9 @@ function I(e) {
               : null
           : (0, i.jsx)("div", {
                 className: j.u,
-                style: { opacity: M },
+                style: {
+                    opacity: M,
+                },
                 ref: er,
                 children: (0, i.jsx)(O.A, {
                     widgetId: _,

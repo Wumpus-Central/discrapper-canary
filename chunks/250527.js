@@ -13,10 +13,12 @@ var r = n(562465),
     c = n(9994),
     u = n(837011),
     d = n(652215);
-let f = 60000;
+let f = 6e4;
+
 function p(e) {
     return Date.now() - (null != e ? e : 0) > f;
 }
+
 function _(e, t) {
     if (null == e) return Promise.resolve(null);
     let n = u.A.getFetchStatus(e) === u.X.FETCHING,
@@ -58,6 +60,7 @@ function _(e, t) {
                 }))
           : Promise.resolve(o);
 }
+
 function h(e, t) {
     return u.A.getIsUpdating(e)
         ? Promise.resolve(null)
@@ -101,6 +104,7 @@ async function m(e) {
     });
     return (0, c.MU)(t.body.top_games);
 }
+
 function g(e, t) {
     let n = null != o.Ay.getSelfMember(e),
         r = null != s.A.getRequest(e);

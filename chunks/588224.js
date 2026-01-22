@@ -1,4 +1,9 @@
-n.d(t, { A: () => F }), n(896048), n(667532), n(321073);
+n.d(t, {
+    A: () => F,
+}),
+    n(896048),
+    n(667532),
+    n(321073);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -91,7 +96,9 @@ let U = l.memo((e) => {
                 guildId: y.guild_id,
                 location: "VoiceUsers",
             },
-            { autoTrackExposure: (null == Q ? void 0 : Q.session_id) != null },
+            {
+                autoTrackExposure: (null == Q ? void 0 : Q.session_id) != null,
+            },
         );
     return (0, r.jsx)(O.A, {
         shakeLocation: G.uD.VOICE_USER,
@@ -187,7 +194,9 @@ let V = [],
             [I, P] = l.useState(!1),
             w = l.useRef(null),
             R = (0, x.$n)(i.id, null != c ? c : V),
-            { shouldShow: D, dismiss: G } = (0, y.Z0)(i, { collapsed: u }),
+            { shouldShow: D, dismiss: G } = (0, y.Z0)(i, {
+                collapsed: u,
+            }),
             F = l.useRef(
                 new o.J_(50, () => {
                     S(w.current), (w.current = null);
@@ -277,7 +286,13 @@ let V = [],
                               numAudience: g,
                           }),
                       )
-                    : u && R.length > d + 1 && l.push((0, r.jsx)(M.LR, { numUsers: R.length - d })),
+                    : u &&
+                      R.length > d + 1 &&
+                      l.push(
+                          (0, r.jsx)(M.LR, {
+                              numUsers: R.length - d,
+                          }),
+                      ),
                 l
             );
         })();

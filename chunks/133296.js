@@ -1,8 +1,12 @@
-n.d(t, { A: () => f }), n(896048);
+n.d(t, {
+    A: () => f,
+}),
+    n(896048);
 var r,
     i = n(627968),
     a = n(64700),
     s = n(451988);
+
 function o(e, t, n) {
     return (
         t in e
@@ -16,6 +20,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -32,6 +37,7 @@ function l(e) {
     }
     return e;
 }
+
 function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -44,6 +50,7 @@ function c(e, t) {
     }
     return n;
 }
+
 function u(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -57,7 +64,11 @@ function u(e, t) {
 }
 class d extends (r = a.Component) {
     static getDerivedStateFromProps(e) {
-        return e.disable ? { hovered: !1 } : null;
+        return e.disable
+            ? {
+                  hovered: !1,
+              }
+            : null;
     }
     componentDidMount() {
         let { pauseOnHover: e, disable: t } = this.props,
@@ -105,12 +116,19 @@ class d extends (r = a.Component) {
     constructor(...e) {
         super(...e),
             o(this, "timer", new s.IX()),
-            o(this, "state", { hovered: !1 }),
+            o(this, "state", {
+                hovered: !1,
+            }),
             o(this, "handlePause", () => {
-                this.state.hovered || this.setState({ hovered: !0 });
+                this.state.hovered ||
+                    this.setState({
+                        hovered: !0,
+                    });
             }),
             o(this, "handleResume", () => {
-                this.setState({ hovered: !1 });
+                this.setState({
+                    hovered: !1,
+                });
             });
     }
 }

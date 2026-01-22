@@ -1,4 +1,6 @@
-e.d(t, { J: () => m });
+e.d(t, {
+    J: () => m,
+});
 var g = e(627968);
 e(64700);
 var r = e(602877),
@@ -33,6 +35,7 @@ var r = e(602877),
     u = e(947043),
     x = e(32719),
     L = e(743981);
+
 function X(A) {
     for (var t = 1; t < arguments.length; t++) {
         var e = null != arguments[t] ? arguments[t] : {},
@@ -104,9 +107,25 @@ let m = (A) => {
                 ),
             );
         case L.bl.WATER_DROP:
-            return (0, g.jsx)(u.l, X({ primaryTintColor: e }, G));
+            return (0, g.jsx)(
+                u.l,
+                X(
+                    {
+                        primaryTintColor: e,
+                    },
+                    G,
+                ),
+            );
         case L.bl.SKULL:
-            return (0, g.jsx)(E.I, X({ primaryTintColor: e }, G));
+            return (0, g.jsx)(
+                E.I,
+                X(
+                    {
+                        primaryTintColor: e,
+                    },
+                    G,
+                ),
+            );
         case L.bl.TOADSTOOL:
             return (0, g.jsx)(
                 O.Y,
@@ -119,15 +138,55 @@ let m = (A) => {
                 ),
             );
         case L.bl.MOON:
-            return (0, g.jsx)(b.o, X({ primaryTintColor: e }, G));
+            return (0, g.jsx)(
+                b.o,
+                X(
+                    {
+                        primaryTintColor: e,
+                    },
+                    G,
+                ),
+            );
         case L.bl.LIGHTNING:
-            return (0, g.jsx)(M.v, X({ primaryTintColor: e }, G));
+            return (0, g.jsx)(
+                M.v,
+                X(
+                    {
+                        primaryTintColor: e,
+                    },
+                    G,
+                ),
+            );
         case L.bl.LEAF:
-            return (0, g.jsx)(c.V, X({ primaryTintColor: e }, G));
+            return (0, g.jsx)(
+                c.V,
+                X(
+                    {
+                        primaryTintColor: e,
+                    },
+                    G,
+                ),
+            );
         case L.bl.HEART:
-            return (0, g.jsx)(a.b, X({ primaryTintColor: e }, G));
+            return (0, g.jsx)(
+                a.b,
+                X(
+                    {
+                        primaryTintColor: e,
+                    },
+                    G,
+                ),
+            );
         case L.bl.FIRE:
-            return (0, g.jsx)(w.f, X({ primaryTintColor: e }, G));
+            return (0, g.jsx)(
+                w.f,
+                X(
+                    {
+                        primaryTintColor: e,
+                    },
+                    G,
+                ),
+            );
         case L.bl.COMPASS:
             return (0, g.jsx)(
                 f.L,
@@ -261,7 +320,15 @@ let m = (A) => {
                 ),
             );
         case L.bl.BUNNY:
-            return (0, g.jsx)(r.J, X({ primaryTintColor: e }, G));
+            return (0, g.jsx)(
+                r.J,
+                X(
+                    {
+                        primaryTintColor: e,
+                    },
+                    G,
+                ),
+            );
         case L.bl.DOG:
             return (0, g.jsx)(
                 l.R,
@@ -285,11 +352,35 @@ let m = (A) => {
                 ),
             );
         case L.bl.GOAT:
-            return (0, g.jsx)(s.A, X({ primaryTintColor: e }, G));
+            return (0, g.jsx)(
+                s.A,
+                X(
+                    {
+                        primaryTintColor: e,
+                    },
+                    G,
+                ),
+            );
         case L.bl.CAT:
-            return (0, g.jsx)(v.r, X({ primaryTintColor: e }, G));
+            return (0, g.jsx)(
+                v.r,
+                X(
+                    {
+                        primaryTintColor: e,
+                    },
+                    G,
+                ),
+            );
         case L.bl.DIAMOND:
-            return (0, g.jsx)(n.$, X({ primaryTintColor: e }, G));
+            return (0, g.jsx)(
+                n.$,
+                X(
+                    {
+                        primaryTintColor: e,
+                    },
+                    G,
+                ),
+            );
         case L.bl.CROWN:
             return (0, g.jsx)(
                 h.i,
@@ -302,11 +393,35 @@ let m = (A) => {
                 ),
             );
         case L.bl.TROPHY:
-            return (0, g.jsx)(Z.r, X({ primaryTintColor: e }, G));
+            return (0, g.jsx)(
+                Z.r,
+                X(
+                    {
+                        primaryTintColor: e,
+                    },
+                    G,
+                ),
+            );
         case L.bl.MONEY_BAG:
-            return (0, g.jsx)(p.x, X({ primaryTintColor: e }, G));
+            return (0, g.jsx)(
+                p.x,
+                X(
+                    {
+                        primaryTintColor: e,
+                    },
+                    G,
+                ),
+            );
         case L.bl.DOLLAR_SIGN:
-            return (0, g.jsx)(C.u, X({ primaryTintColor: e }, G));
+            return (0, g.jsx)(
+                C.u,
+                X(
+                    {
+                        primaryTintColor: e,
+                    },
+                    G,
+                ),
+            );
     }
     return null;
 };

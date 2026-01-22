@@ -1,4 +1,6 @@
-l.d(t, { A: () => d });
+l.d(t, {
+    A: () => d,
+});
 var r = l(627968);
 l(64700);
 var n = l(934551),
@@ -7,6 +9,7 @@ var n = l(934551),
     o = l(379512),
     a = l(568065),
     u = l(924190);
+
 function d(e) {
     let { count: t, type: l } = e;
     return (0, r.jsxs)("div", {

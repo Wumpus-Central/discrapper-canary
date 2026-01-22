@@ -1,4 +1,6 @@
-n.d(t, { A: () => A });
+n.d(t, {
+    A: () => A,
+});
 var i = n(627968);
 n(64700);
 var r = n(684013),
@@ -15,6 +17,7 @@ var r = n(684013),
     b = n(652215),
     g = n(672396),
     y = n(985018);
+
 function A(e, t, n, A) {
     var m;
     let { icon: O, title: v, body: E } = (0, s.TB)(e, t, n),
@@ -34,7 +37,9 @@ function A(e, t, n, A) {
         renderFooter: (e) =>
             e
                 ? (0, i.jsx)("div", {
-                      style: { textAlign: "center" },
+                      style: {
+                          textAlign: "center",
+                      },
                       children: y.intl.string(y.t["+MJm3w"]),
                   })
                 : null,

@@ -9,9 +9,11 @@ var l = n(136722),
     a = n(34457),
     i = n(488926),
     s = n(652215);
+
 function c(e) {
     return [...e].sort(r.uh).map((e) => (0, r.B4)(e));
 }
+
 function o(e, t, n) {
     return e.filter(
         (e) =>
@@ -19,7 +21,9 @@ function o(e, t, n) {
             ((e, t, n) => {
                 if (null == e.id) return !1;
                 let r = i.aH({
-                    forceRoles: { [e.id]: e },
+                    forceRoles: {
+                        [e.id]: e,
+                    },
                     context: n,
                 });
                 return l.zy(r, t);

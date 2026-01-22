@@ -1,4 +1,7 @@
-n.d(t, { A: () => b }), n(747238);
+n.d(t, {
+    A: () => b,
+}),
+    n(747238);
 var r = n(627968);
 n(64700);
 var l = n(503698),
@@ -12,6 +15,7 @@ var l = n(503698),
     f = n(290863),
     p = n(427262),
     h = n(318880);
+
 function b(e) {
     var t, n;
     let {
@@ -58,7 +62,9 @@ function b(e) {
         })(
             {
                 id: "user-row-".concat(b),
-                className: i()(h.Se, { [h.r9]: O }),
+                className: i()(h.Se, {
+                    [h.r9]: O,
+                }),
                 onClick: () => {
                     null != j && j(l.id);
                 },
@@ -77,7 +83,9 @@ function b(e) {
                 "aria-posinset": E,
                 children: (0, r.jsxs)(d.A, {
                     align: d.A.Align.CENTER,
-                    className: i()(h.Bc, { [h.oz]: A }),
+                    className: i()(h.Bc, {
+                        [h.oz]: A,
+                    }),
                     children: [
                         (0, r.jsx)(u.A, {
                             user: l,

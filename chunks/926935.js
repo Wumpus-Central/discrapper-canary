@@ -1,7 +1,11 @@
-n.d(t, { A: () => u }), n(896048);
+n.d(t, {
+    A: () => u,
+}),
+    n(896048);
 var r = n(439372),
     i = n(77729),
     a = n(351906);
+
 function s(e, t, n) {
     return (
         t in e
@@ -16,6 +20,7 @@ function s(e, t, n) {
     );
 }
 let o = !1;
+
 function l() {
     var e;
     let t = null === i.A || void 0 === i.A || null == (e = i.A.window) ? void 0 : e.setContentProtection;

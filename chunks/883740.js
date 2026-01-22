@@ -3,9 +3,11 @@ var r = {
     "./spritesheet-emoji-40.png": "787658",
     "./spritesheet-emoji-48.png": "860002",
 };
+
 function i(e) {
     return n(a(e));
 }
+
 function a(e) {
     if (!n.o(r, e)) {
         var t = Error("Cannot find module '" + e + "'");

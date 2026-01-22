@@ -1,4 +1,7 @@
-n.d(t, { A: () => i }), n(896048);
+n.d(t, {
+    A: () => i,
+}),
+    n(896048);
 var r = n(64700);
 let i = function () {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 5,
@@ -11,14 +14,14 @@ let i = function () {
             i >= e && (o(!0), c(Math.floor(i / e)));
             let t = setTimeout(() => {
                 a(0);
-            }, 1000);
+            }, 1e3);
             return () => clearTimeout(t);
         }, [i, e]),
         r.useEffect(() => {
             if (!t) {
                 let e = setTimeout(() => {
                     o(!1), c(0);
-                }, 1000);
+                }, 1e3);
                 return () => clearTimeout(e);
             }
             a((e) => e + 1);

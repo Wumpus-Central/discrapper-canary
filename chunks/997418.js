@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var r = n(627968),
     i = n(64700),
     l = n(311907),
@@ -9,6 +11,7 @@ var r = n(627968),
     d = n(555337),
     u = n(583970),
     f = n(985018);
+
 function g() {
     let e = (0, l.bG)([d.A], () => d.A.getGuild()),
         t = null == e ? void 0 : e.id,

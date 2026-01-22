@@ -1,5 +1,13 @@
 let r, i, a;
-n.d(t, { A: () => eF }), n(896048), n(457529), n(747238), n(321073), n(812715), n(938796);
+n.d(t, {
+    A: () => eF,
+}),
+    n(896048),
+    n(457529),
+    n(747238),
+    n(321073),
+    n(812715),
+    n(938796);
 var s,
     o = n(735438),
     l = n.n(o),
@@ -26,6 +34,7 @@ var s,
     R = n(107750),
     w = n(272984),
     P = n(652215);
+
 function D(e, t, n) {
     return (
         t in e
@@ -39,6 +48,7 @@ function D(e, t, n) {
         e
     );
 }
+
 function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -55,6 +65,7 @@ function x(e) {
     }
     return e;
 }
+
 function L(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -67,6 +78,7 @@ function L(e, t) {
     }
     return n;
 }
+
 function j(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -106,6 +118,7 @@ let M = h.A.get(P.fg2.SPOTIFY),
     eo = {},
     el = !1,
     ec = null;
+
 function eu() {
     for (let e in ea) {
         let t = ea[e];
@@ -118,12 +131,14 @@ function eu() {
             };
     }
 }
+
 function ed(e, t) {
     let n = Date.now(),
         r = null != e ? e.startTime : 0,
         i = n - t;
     return Math.abs(i - r) > Y ? i : r;
 }
+
 function ef(e) {
     p.h.dispatch({
         type: "SPOTIFY_PLAYER_STATE",
@@ -136,6 +151,7 @@ function ef(e) {
         context: null,
     });
 }
+
 function ep(e) {
     return A.A.findActivity(e, (e) => null != e.party && null != e.party.id && (0, w.pH)(e.party.id));
 }
@@ -171,7 +187,13 @@ class eh {
     }
     ping() {
         var e;
-        this.connected && (null == (e = this.socket) || e.send(JSON.stringify({ type: Q })));
+        this.connected &&
+            (null == (e = this.socket) ||
+                e.send(
+                    JSON.stringify({
+                        type: Q,
+                    }),
+                ));
     }
     handleOpen() {
         J.info("WS Connected"),
@@ -236,11 +258,13 @@ class eh {
             this.connect();
     }
 }
+
 function em(e, t) {
     e in ea
         ? ((ea[e].accessToken = t), J.info("Updated account access token: ".concat(e)))
         : ((ea[e] = new eh(e, t)), J.info("Added account: ".concat(e)));
 }
+
 function eg(e) {
     if (!(e in ea)) return;
     ea[e].disconnect(), delete ea[e];
@@ -249,9 +273,11 @@ function eg(e) {
         delete eo[e],
         J.info("Removed account: ".concat(e));
 }
+
 function eE(e, t) {
     for (let n of es[e]) n.is_active = n.id === t;
 }
+
 function eb(e, t, n) {
     var r, a;
     let s = eu();
@@ -293,6 +319,7 @@ function eb(e, t, n) {
                 .concat(l.name),
         );
 }
+
 function ey() {
     I.default.track(P.HAw.SPOTIFY_LISTEN_ALONG_ENDED, {
         party_id: null != i ? i.partyId : null,
@@ -306,6 +333,7 @@ function ey() {
         r = eo[n.accountId];
     null != r && r.track.id === e && (0, R.v7)(n.accountId, n.accessToken);
 }
+
 function eO() {
     let e = Object.keys(ea),
         t = y.A.getAccounts().filter((e) => {
@@ -329,14 +357,17 @@ function eO() {
         }
     return i;
 }
+
 function eA(e) {
     let { accountId: t, accessToken: n } = e;
     return em(t, n), !1;
 }
+
 function ev(e) {
     let { accountId: t } = e;
     eg(t);
 }
+
 function eS(e) {
     let { accountId: t, isPlaying: n, repeat: a, track: s, position: o, device: c, context: u } = e,
         f = !1;
@@ -404,18 +435,22 @@ function eS(e) {
             author_names: s.artists.map((e) => e.name),
         }));
 }
+
 function eI(e) {
     let { id: t } = e;
     a = t;
 }
+
 function eT(e) {
     let { accountId: t, devices: n } = e;
     (es[t] = n), J.info("Devices updated for ".concat(t, ":"), n);
 }
+
 function eC(e) {
     let { accountId: t, deviceId: n } = e;
     eE(t, n);
 }
+
 function eN(e) {
     var t;
     let n,
@@ -439,10 +474,12 @@ function eN(e) {
             J.info("Play started: ".concat(o.accountId, " playing ").concat(c, " on ").concat(l.name))))
     );
 }
+
 function eR(e) {
     let { activity: t, userId: n } = e;
     return eb(n, t, !0);
 }
+
 function ew() {
     if (null == i || null == eu()) return !1;
     let { userId: e } = i,
@@ -460,6 +497,7 @@ function ew() {
         o = null != r && i.startTime !== r.start;
     return s || o ? eb(e, t, !1) : null != a && a.id !== i.partyId && ((i.partyId = a.id), !0);
 }
+
 function eP() {
     if (null == r) return;
     let e = eu();
@@ -470,6 +508,7 @@ function eP() {
         I.default.track(P.HAw.SPOTIFY_AUTO_PAUSED),
         J.info("Playback auto paused");
 }
+
 function eD(e) {
     if (e === b.default.getId()) {
         let t = S.A.isCurrentClientInVoiceChannel(),
@@ -482,10 +521,12 @@ function eD(e) {
     }
     return !1;
 }
+
 function ex(e) {
     let { userId: t } = e;
     return eD(t);
 }
+
 function eL(e) {
     let { voiceStates: t } = e;
     return t.reduce((e, t) => {
@@ -493,12 +534,14 @@ function eL(e) {
         return eD(n) || e;
     }, !1);
 }
+
 function ej(e) {
     let { accountId: t, isPremium: n } = e,
         r = ea[t];
     if (null == r) return !1;
     (r.isPremium = n), J.info("Profile updated for ".concat(t, ": isPremium = ").concat(n));
 }
+
 function eM(e) {
     let { settings: t } = e;
     if ((null == t ? void 0 : t.desktopSettings) != null) {
@@ -509,6 +552,7 @@ function eM(e) {
             : (null == ec || ec.stop(), (ec = null));
     } else null == t && (null == ec || ec.stop(), (ec = null));
 }
+
 function ek(e, t, n) {
     var r, i, a, s, o, l, c, u, d, f, _, h, m, g;
     let E,
@@ -549,7 +593,11 @@ function ek(e, t, n) {
                 isLocal: !1,
             });
     if (
-        (null != y && !0 !== y.is_active && (y = j(x({}, y), { is_active: !0 })),
+        (null != y &&
+            !0 !== y.is_active &&
+            (y = j(x({}, y), {
+                is_active: !0,
+            })),
         null != I && [w.M0.PLAYLIST, w.M0.ALBUM].includes(I.type))
     ) {
         let n = eV.getPlayerState(e);
@@ -559,7 +607,9 @@ function ek(e, t, n) {
                 : I.type === w.M0.ALBUM
                   ? Promise.resolve(I)
                   : R.tB
-                        .get(e, t, { url: I.href })
+                        .get(e, t, {
+                            url: I.href,
+                        })
                         .then((e) => {
                             let { body: t } = e;
                             return t;
@@ -584,11 +634,14 @@ function ek(e, t, n) {
             });
     });
 }
+
 function eU(e, t) {
     return R.tB
         .get(e, t, {
             url: w.RQ.PLAYER,
-            query: { additional_types: "".concat(w.M0.TRACK, ",").concat(w.M0.EPISODE) },
+            query: {
+                additional_types: "".concat(w.M0.TRACK, ",").concat(w.M0.EPISODE),
+            },
             onlyRetryOnAuthorizationErrors: !0,
         })
         .then((n) => {
@@ -683,7 +736,9 @@ class eG extends (s = u.Ay.Store) {
                     start: f,
                     end: f + c,
                 },
-                party: { id: n },
+                party: {
+                    id: n,
+                },
             };
         return u || ((y.sync_id = l), (y.flags = P.jUm.PLAY | P.jUm.SYNC), (y.metadata = E)), y;
     }

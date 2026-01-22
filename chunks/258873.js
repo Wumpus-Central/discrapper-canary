@@ -1,4 +1,7 @@
-n.d(t, { J: () => r }), n(896048);
+n.d(t, {
+    J: () => r,
+}),
+    n(896048);
 var r = (function (e) {
     return (
         (e.UNHANDLED_NATIVE_ERROR = "unhandled_native_error"),

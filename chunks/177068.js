@@ -8,6 +8,7 @@ var r = n(488428),
     a = n(626584),
     s = n(927813),
     o = n(652215);
+
 function l(e, t, n) {
     return (
         t in e
@@ -21,13 +22,15 @@ function l(e, t, n) {
         e
     );
 }
-let c = 5000,
+let c = 5e3,
     u = 5;
 class d {
     async fetch(e, t, n) {
         if (!this.isCanceled)
             try {
-                let i = await this.makeRequest({ rejectWithError: !1 });
+                let i = await this.makeRequest({
+                    rejectWithError: !1,
+                });
                 if (null == i || this.isCanceled) return;
                 if (200 === i.status) e(i);
                 else if (202 === i.status) {

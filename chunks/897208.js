@@ -1,4 +1,6 @@
-i.d(e, { p: () => _ });
+i.d(e, {
+    p: () => _,
+});
 var n = i(311907),
     l = i(55619),
     s = i(77729),
@@ -14,7 +16,10 @@ let T = (0, r.zD)(a.X.STREAMER_MODE_HIDE_PERSONAL_INFORMATION, {
                 let { hidePersonalInformation: t } = u.A.getSettings();
                 return t;
             }),
-        setValue: (t) => l.A.update({ hidePersonalInformation: t }),
+        setValue: (t) =>
+            l.A.update({
+                hidePersonalInformation: t,
+            }),
     }),
     A = (0, r.zD)(a.X.STREAMER_MODE_HIDE_INVITE_LINKS, {
         useTitle: () => o.intl.string(o.t.uWBOri),
@@ -23,7 +28,10 @@ let T = (0, r.zD)(a.X.STREAMER_MODE_HIDE_PERSONAL_INFORMATION, {
                 let { hideInstantInvites: t } = u.A.getSettings();
                 return t;
             }),
-        setValue: (t) => l.A.update({ hideInstantInvites: t }),
+        setValue: (t) =>
+            l.A.update({
+                hideInstantInvites: t,
+            }),
     }),
     S = (0, r.zD)(a.X.STREAMER_MODE_DISABLE_SOUNDS, {
         useTitle: () => o.intl.string(o.t.OrqYDP),
@@ -32,7 +40,10 @@ let T = (0, r.zD)(a.X.STREAMER_MODE_HIDE_PERSONAL_INFORMATION, {
                 let { disableSounds: t } = u.A.getSettings();
                 return t;
             }),
-        setValue: (t) => l.A.update({ disableSounds: t }),
+        setValue: (t) =>
+            l.A.update({
+                disableSounds: t,
+            }),
     }),
     E = (0, r.zD)(a.X.STREAMER_MODE_DISABLE_NOTIFICATIONS, {
         useTitle: () => o.intl.string(o.t.sUAbLd),
@@ -41,7 +52,10 @@ let T = (0, r.zD)(a.X.STREAMER_MODE_HIDE_PERSONAL_INFORMATION, {
                 let { disableNotifications: t } = u.A.getSettings();
                 return t;
             }),
-        setValue: (t) => l.A.update({ disableNotifications: t }),
+        setValue: (t) =>
+            l.A.update({
+                disableNotifications: t,
+            }),
     }),
     d = (0, r.zD)(a.X.STREAMER_MODE_HIDE_DISCORD_WINDOW_FROM_SCREEN_CAPTURE, {
         useTitle: () => o.intl.string(o.t["iA81+a"]),
@@ -51,7 +65,10 @@ let T = (0, r.zD)(a.X.STREAMER_MODE_HIDE_PERSONAL_INFORMATION, {
                 let { enableContentProtection: t } = u.A.getSettings();
                 return t;
             }),
-        setValue: (t) => l.A.update({ enableContentProtection: t }),
+        setValue: (t) =>
+            l.A.update({
+                enableContentProtection: t,
+            }),
         usePredicate: () => {
             var t, e, i;
             return (

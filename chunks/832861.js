@@ -5,7 +5,12 @@ e.exports = function (e) {
             className: "string",
             begin: "'|\"",
             end: "'|\"",
-            contains: [e.BACKSLASH_ESCAPE, { begin: "''" }],
+            contains: [
+                e.BACKSLASH_ESCAPE,
+                {
+                    begin: "''",
+                },
+            ],
         },
     ];
     return {

@@ -1,4 +1,6 @@
-n.d(t, { A: () => N });
+n.d(t, {
+    A: () => N,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -20,6 +22,7 @@ var i = n(311907),
     O = n(652215),
     y = n(985018),
     v = n(117689);
+
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -45,6 +48,7 @@ function A(e) {
     }
     return e;
 }
+
 function E(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -63,6 +67,7 @@ function E(e, t) {
         e
     );
 }
+
 function N(e) {
     let { guildId: t, completed: n } = e,
         l = (0, i.bG)([c.A], () => c.A.getEnabled(t)),
@@ -125,7 +130,9 @@ function N(e) {
                     },
                     disableGoodStatus: n,
                 }),
-                (0, r.jsx)(d.A, { className: v.yF }),
+                (0, r.jsx)(d.A, {
+                    className: v.yF,
+                }),
                 (0, r.jsx)(j.aV, {
                     guildId: t,
                     onEdit: () => {
@@ -140,7 +147,9 @@ function N(e) {
                     },
                     disableGoodStatus: n,
                 }),
-                (0, r.jsx)(d.A, { className: v.yF }),
+                (0, r.jsx)(d.A, {
+                    className: v.yF,
+                }),
                 (0, r.jsx)(j.$i, {
                     guildId: t,
                     onEdit: () => {
@@ -155,7 +164,9 @@ function N(e) {
                     },
                     disableGoodStatus: n,
                 }),
-                (0, r.jsx)(d.A, { className: v.yF }),
+                (0, r.jsx)(d.A, {
+                    className: v.yF,
+                }),
                 (0, r.jsx)(j.bW, {
                     guildId: t,
                     onEdit: () => {
@@ -205,10 +216,13 @@ function N(e) {
                           h,
                       ],
                   }),
-                  (0, r.jsx)(C, { guildId: t }),
+                  (0, r.jsx)(C, {
+                      guildId: t,
+                  }),
               ],
           });
 }
+
 function _(e) {
     let { guildId: t, handlePreview: n } = e;
     return (0, r.jsxs)(r.Fragment, {
@@ -237,7 +251,9 @@ function _(e) {
                             children: y.intl.string(y.t.Ok55Kh),
                         }),
                     }),
-                    (0, r.jsx)("div", { className: v.RY }),
+                    (0, r.jsx)("div", {
+                        className: v.RY,
+                    }),
                     (0, r.jsx)(l.MzZ, {
                         onClick: n,
                         children: (0, r.jsx)(l.Text, {
@@ -246,15 +262,20 @@ function _(e) {
                             children: y.intl.string(y.t["6gsjdM"]),
                         }),
                     }),
-                    (0, r.jsx)("div", { className: v.RY }),
-                    (0, r.jsx)(h.mU, { guildId: t }),
+                    (0, r.jsx)("div", {
+                        className: v.RY,
+                    }),
+                    (0, r.jsx)(h.mU, {
+                        guildId: t,
+                    }),
                 ],
             }),
         ],
     });
 }
+
 function S() {
-    let e = "\u2022 ";
+    let e = "• ";
     return (0, r.jsxs)("div", {
         className: v.lm,
         children: [
@@ -286,6 +307,7 @@ function S() {
         ],
     });
 }
+
 function T(e) {
     let { guildId: t, handleOnboardingToggle: n } = e,
         s = (0, j.n5)(t),
@@ -301,6 +323,7 @@ function T(e) {
         }),
     });
 }
+
 function I(e) {
     let { guildId: t, handleOnboardingToggle: n, handlePreview: s } = e,
         a = (0, j.n5)(t),
@@ -343,6 +366,7 @@ function I(e) {
         ],
     });
 }
+
 function C(e) {
     let { guildId: t } = e,
         n = (0, i.bG)([u.A], () => u.A.getGuild(t));

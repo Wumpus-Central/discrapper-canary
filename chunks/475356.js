@@ -1,4 +1,6 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var l = n(627968);
 n(64700);
 var a = n(503698),
@@ -12,10 +14,13 @@ var a = n(503698),
     p = n(559607),
     h = n(985018),
     m = n(534114);
+
 function b(e) {
     let { className: t, view: n, application: a } = e,
         b = "embedded" === n,
-        f = (0, c.A)({ application: a });
+        f = (0, c.A)({
+            application: a,
+        });
     return (0, l.jsxs)("div", {
         className: r()(t, {
             [m.PD]: !b,
@@ -23,7 +28,9 @@ function b(e) {
         }),
         children: [
             (0, l.jsxs)("div", {
-                className: r()(m.hd, { [m.d5]: b }),
+                className: r()(m.hd, {
+                    [m.d5]: b,
+                }),
                 children: [
                     (0, l.jsx)("div", {
                         className: m.iY,
@@ -53,7 +60,9 @@ function b(e) {
                 ],
             }),
             (0, l.jsxs)("div", {
-                className: r()(m.hd, { [m.d5]: b }),
+                className: r()(m.hd, {
+                    [m.d5]: b,
+                }),
                 children: [
                     (0, l.jsx)(d.A, {
                         application: a,

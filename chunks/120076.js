@@ -1,11 +1,15 @@
-n.d(t, { e: () => d }), n(896048);
+n.d(t, {
+    e: () => d,
+}),
+    n(896048);
 var l = n(627968),
     r = n(64700);
 n(503698);
-var i = n(432022),
+var i = n(108531),
     s = n(397927),
     a = n(985018),
     o = n(301450);
+
 function c(e) {
     let { testimonial: t, className: n } = e,
         { message: r, profilePic: i, adminTitle: c, emphasisColor: d = "interactive-text-default" } = t;
@@ -47,6 +51,7 @@ function c(e) {
         ],
     });
 }
+
 function d(e) {
     let { testimonials: t } = e,
         [[n, i], c] = r.useState([0, "right"]),
@@ -91,7 +96,7 @@ function d(e) {
             (0, l.jsx)(s.Text, {
                 variant: "text-lg/bold",
                 className: o.wV,
-                children: "\u201C",
+                children: "“",
             }),
             (0, l.jsxs)("div", {
                 className: o.Jv,
@@ -115,6 +120,7 @@ function d(e) {
         ],
     });
 }
+
 function u(e) {
     let { item: t, state: n, cleanup: r, direction: a } = e,
         [d] = (0, s.zhh)(
@@ -122,13 +128,21 @@ function u(e) {
                 switch (n) {
                     case s.wLy.ENTERED:
                         return {
-                            from: { transform: "right" === a ? "translateX(150%)" : "translate(-150%)" },
-                            to: { transform: "translateX(0%)" },
+                            from: {
+                                transform: "right" === a ? "translateX(150%)" : "translate(-150%)",
+                            },
+                            to: {
+                                transform: "translateX(0%)",
+                            },
                         };
                     case s.wLy.YEETED:
                         return {
-                            from: { transform: "translateX(0%)" },
-                            to: { transform: "right" === a ? "translateX(-150%)" : "translate(150%)" },
+                            from: {
+                                transform: "translateX(0%)",
+                            },
+                            to: {
+                                transform: "right" === a ? "translateX(-150%)" : "translate(150%)",
+                            },
                             onRest: r,
                         };
                     default:

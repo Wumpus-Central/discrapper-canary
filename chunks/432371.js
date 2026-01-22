@@ -9,6 +9,7 @@ var r = n(417597),
     a = n(71393),
     s = n(652215),
     o = n(746080);
+
 function l(e) {
     var t;
     if (null == e) return !1;
@@ -17,17 +18,21 @@ function l(e) {
         o = (0, i.wh)(n);
     return s.kvI.SUMMARIZEABLE.has(e.type) && !e.isNSFW() && !r && !o;
 }
+
 function c(e) {
     return null != e && (e === s.ME || e === s.YYv);
 }
+
 function u(e) {
     return d(e, !0, !1);
 }
+
 function d(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
     return !(null == e || !l(e) || (!1 === t && e.hasFlag(o.lx.SUMMARIES_DISABLED))) && f(a.A.getGuild(e.guild_id), n);
 }
+
 function f(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     return (
@@ -36,11 +41,13 @@ function f(e) {
         (!t || e.features.has(s.GuildFeatures.SUMMARIES_ENABLED_BY_USER))
     );
 }
+
 function p(e) {
     arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     let t = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     return d(e, t);
 }
+
 function _(e) {
     return (
         arguments.length > 1 && void 0 !== arguments[1] && arguments[1],

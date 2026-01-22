@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(562465),
     i = n(582754),
     a = n(73153),
@@ -18,12 +20,16 @@ let d = {
         var t;
         let n = null == (t = s.default.getCurrentUser()) ? void 0 : t.id;
         if (null == n) return;
-        a.h.dispatch({ type: "WIDGET_PENDING_SAVE_START" });
+        a.h.dispatch({
+            type: "WIDGET_PENDING_SAVE_START",
+        });
         let i = e.map((e) => e.toSubmission());
         try {
             let e = await r.Bo.put({
                 url: c.Rsh.USER_PROFILE_WIDGETS,
-                body: { widgets: i },
+                body: {
+                    widgets: i,
+                },
                 oldFormErrors: !0,
                 rejectWithError: !0,
             });
@@ -36,14 +42,23 @@ let d = {
                 e.body
             );
         } catch (e) {
-            throw (a.h.dispatch({ type: "WIDGET_PENDING_SAVE_FAILURE" }), e);
+            throw (
+                (a.h.dispatch({
+                    type: "WIDGET_PENDING_SAVE_FAILURE",
+                }),
+                e)
+            );
         }
     },
     clearPendingWidgets() {
-        a.h.dispatch({ type: "WIDGET_PENDING_CLEAR" });
+        a.h.dispatch({
+            type: "WIDGET_PENDING_CLEAR",
+        });
     },
     async fetchSuggestedGames() {
-        a.h.dispatch({ type: "WIDGET_SUGGESTED_FETCH_START" });
+        a.h.dispatch({
+            type: "WIDGET_SUGGESTED_FETCH_START",
+        });
         try {
             var e, t, n, i, s, o;
             let u = await r.Bo.get({
@@ -60,7 +75,13 @@ let d = {
                         null != (t = null == (o = u.body) ? void 0 : o.suggested_wishlist_games) ? t : [],
                 });
         } catch (e) {
-            throw (a.h.dispatch({ type: "WIDGET_SUGGESTED_FETCH_FAILURE" }), l.A.captureException(e), e);
+            throw (
+                (a.h.dispatch({
+                    type: "WIDGET_SUGGESTED_FETCH_FAILURE",
+                }),
+                l.A.captureException(e),
+                e)
+            );
         }
     },
     removeGameFromSuggestedGames(e) {

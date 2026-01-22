@@ -18,6 +18,7 @@ var r = n(136722),
     _ = n(903093),
     h = n(610136),
     m = n(218113);
+
 function g(e) {
     let t = u.default.getCurrentUser(),
         n = h.A.getIncidentsByGuild();
@@ -39,6 +40,7 @@ function g(e) {
     }
     return null;
 }
+
 function E(e) {
     let t = (0, i.bG)([o.A, l.A], () => {
             let t = o.A.getGuild(e);
@@ -54,6 +56,7 @@ function E(e) {
         isUnderLockdown: a,
     };
 }
+
 function b() {
     var e;
     let t = g(c.A.getGuildId()),
@@ -65,6 +68,7 @@ function b() {
         guildId: t,
     };
 }
+
 function y(e) {
     let t = (0, s.t0)("useShowAntiRaidInGuildNotifSettings"),
         n = (0, i.bG)([l.A, o.A], () => {

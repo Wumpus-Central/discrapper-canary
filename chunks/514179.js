@@ -1,8 +1,11 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 var r = n(627968);
 n(64700);
 var l = n(827734),
     i = n(953727);
+
 function a(e) {
     var t, n;
     let { width: a = 24, height: s = 24 } = e,
@@ -87,7 +90,9 @@ function a(e) {
                             y2: "1.98749",
                             gradientUnits: "userSpaceOnUse",
                             children: [
-                                (0, r.jsx)("stop", { stopColor: l.A.colors.CREATOR_REVENUE_ICON_GRADIENT_START.css }),
+                                (0, r.jsx)("stop", {
+                                    stopColor: l.A.colors.CREATOR_REVENUE_ICON_GRADIENT_START.css,
+                                }),
                                 (0, r.jsx)("stop", {
                                     offset: "1",
                                     stopColor: l.A.colors.CREATOR_REVENUE_ICON_GRADIENT_END.css,

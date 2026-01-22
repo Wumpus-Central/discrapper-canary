@@ -20,6 +20,7 @@ var r = n(627968),
     p = n(997509),
     x = n(985018);
 let h = "NO_CHANNEL";
+
 function j(e) {
     return {
         value: e.id,
@@ -28,6 +29,7 @@ function j(e) {
         category: f.A.getChannel(e.parent_id),
     };
 }
+
 function O(e) {
     let { option: t } = e,
         { label: n, channel: l, category: s } = t,
@@ -39,6 +41,7 @@ function O(e) {
         subtitle: null != s ? o : null,
     });
 }
+
 function y(e) {
     let { canManageGuild: t, guildId: n, afkChannelId: a, label: c } = e,
         d = (0, s.bG)([g.A], () => g.A.getCategories(n)),
@@ -62,7 +65,9 @@ function y(e) {
         }, [d]),
         f = i.useCallback((e) => {
             let t = e === h ? null : e;
-            p.A.updateGuild({ afkChannelId: t });
+            p.A.updateGuild({
+                afkChannelId: t,
+            });
         }, []);
     return (0, r.jsx)(A, {
         label: c,
@@ -72,6 +77,7 @@ function y(e) {
         onChange: f,
     });
 }
+
 function v(e) {
     let { canManageGuild: t, guildId: n, systemChannelId: a, label: c, description: d, layout: u } = e,
         f = (0, s.bG)([g.A], () => g.A.getCategories(n)),
@@ -95,7 +101,9 @@ function v(e) {
         }, [f]),
         m = i.useCallback((e) => {
             let t = e === h ? null : e;
-            p.A.updateGuild({ systemChannelId: t });
+            p.A.updateGuild({
+                systemChannelId: t,
+            });
         }, []);
     return (0, r.jsx)(A, {
         label: c,
@@ -107,10 +115,14 @@ function v(e) {
         onChange: m,
     });
 }
+
 function A(e) {
     let { value: t, options: n, canManageGuild: l, onChange: s, label: a, description: o, layout: d } = e,
         u = i.useCallback((e) => {
-            if (null != e) return (0, r.jsx)(O, { option: e });
+            if (null != e)
+                return (0, r.jsx)(O, {
+                    option: e,
+                });
         }, []),
         f = i.useCallback((e) => u(e[0]), [u]);
     return (0, r.jsx)(c.Te, {

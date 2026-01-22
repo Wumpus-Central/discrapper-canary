@@ -1,7 +1,11 @@
-n.d(t, { A: () => s }), n(896048);
+n.d(t, {
+    A: () => s,
+}),
+    n(896048);
 var r = n(64700),
     i = n(253932),
     a = n(486020);
+
 function s(e) {
     let { displayProfile: t, size: n, canAnimate: s, pendingBanner: o } = e,
         l = i.kt.getSetting(),

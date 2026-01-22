@@ -1,4 +1,6 @@
-n.d(t, { r: () => w });
+n.d(t, {
+    r: () => w,
+});
 var r = n(627968);
 n(64700);
 var i = n(554146),
@@ -23,6 +25,7 @@ var i = n(554146),
     v = n(788868),
     S = n(985018),
     I = n(237082);
+
 function T(e, t, n) {
     return (
         t in e
@@ -36,6 +39,7 @@ function T(e, t, n) {
         e
     );
 }
+
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -52,6 +56,7 @@ function C(e) {
     }
     return e;
 }
+
 function N(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -64,6 +69,7 @@ function N(e, t) {
     }
     return n;
 }
+
 function R(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -93,9 +99,15 @@ let w = (e) => {
                                 noticeType: T,
                             }),
                             S.intl.string(S.t["+xn1o5"]),
-                            (0, r.jsx)("i", { className: I.c9 }),
-                            (0, r.jsx)("i", { className: I.Vz }),
-                            (0, r.jsx)("i", { className: I.p0 }),
+                            (0, r.jsx)("i", {
+                                className: I.c9,
+                            }),
+                            (0, r.jsx)("i", {
+                                className: I.Vz,
+                            }),
+                            (0, r.jsx)("i", {
+                                className: I.p0,
+                            }),
                             (0, r.jsx)(a.Z_L, {
                                 noticeType: T,
                                 onClick: () => {
@@ -103,7 +115,16 @@ let w = (e) => {
                                         let { default: e } = await Promise.all([n.e("56423"), n.e("25280")]).then(
                                             n.bind(n, 987482),
                                         );
-                                        return (t) => (0, r.jsx)(e, C({ source: "Top Bar Nag" }, t));
+                                        return (t) =>
+                                            (0, r.jsx)(
+                                                e,
+                                                C(
+                                                    {
+                                                        source: "Top Bar Nag",
+                                                    },
+                                                    t,
+                                                ),
+                                            );
                                     });
                                 },
                                 children: S.intl.string(S.t["1WjMbC"]),
@@ -118,7 +139,9 @@ let w = (e) => {
                                 onClick: () => b(y.i.UNKNOWN),
                                 noticeType: T,
                             }),
-                            (0, r.jsx)(g.A, { className: I.tV }),
+                            (0, r.jsx)(g.A, {
+                                className: I.tV,
+                            }),
                             S.intl.string(S.t["5NUVHH"]),
                             (0, r.jsx)(a.Z_L, {
                                 onClick: () =>
@@ -201,7 +224,9 @@ let w = (e) => {
                     return (0, r.jsxs)(a.$Td, {
                         color: a.Hv$.PREMIUM_TIER_2,
                         children: [
-                            (0, r.jsx)("span", { className: I.lK }),
+                            (0, r.jsx)("span", {
+                                className: I.lK,
+                            }),
                             (0, r.jsx)("span", {
                                 className: I.$t,
                                 children: S.intl.string(S.t["+urf75"]),
@@ -214,7 +239,9 @@ let w = (e) => {
                                         location_section: O.JJy.NOTIFICATION_BAR,
                                         location_object: O.ZSU.BUTTON_CTA,
                                     }),
-                                        (0, m.openUserSettings)(h.X.NITRO_PANEL, { section: O.nc_.PREMIUM });
+                                        (0, m.openUserSettings)(h.X.NITRO_PANEL, {
+                                            section: O.nc_.PREMIUM,
+                                        });
                                 },
                                 children: S.intl.string(S.t["8JC5e/"]),
                             }),
@@ -249,7 +276,9 @@ let w = (e) => {
                                 noticeType: T,
                                 onClick: () => {
                                     b(y.i.UNKNOWN),
-                                        (0, m.openUserSettings)(h.X.NITRO_PANEL, { section: O.nc_.PREMIUM });
+                                        (0, m.openUserSettings)(h.X.NITRO_PANEL, {
+                                            section: O.nc_.PREMIUM,
+                                        });
                                 },
                                 children: S.intl.string(S.t.pyYSiO),
                             }),

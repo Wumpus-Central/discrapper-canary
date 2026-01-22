@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(627968),
     l = n(64700),
     i = n(110259),
@@ -9,6 +11,7 @@ var r = n(627968),
     u = n(237607),
     d = n(985018),
     f = n(305711);
+
 function p(e) {
     let { onOpenClips: t, lastClipsSession: n, closePopout: p } = e;
     return (l.useEffect(
@@ -20,7 +23,9 @@ function p(e) {
     (0, s.A)({
         type: i.ImpressionTypes.VIEW,
         name: i.ImpressionNames.HOTSPOT,
-        properties: { hotspot_location: o._2.CLIPS_CHANNEL_ATTACH_REMINDER },
+        properties: {
+            hotspot_location: o._2.CLIPS_CHANNEL_ATTACH_REMINDER,
+        },
     }),
     null == n)
         ? null
@@ -35,13 +40,17 @@ function p(e) {
                       className: f.wx,
                       color: "text-strong",
                       variant: "heading-md/extrabold",
-                      children: d.intl.format(d.t["+qxkzC"], { count: n.newClipIds.length }),
+                      children: d.intl.format(d.t["+qxkzC"], {
+                          count: n.newClipIds.length,
+                      }),
                   }),
                   (0, r.jsx)(a.Text, {
                       color: "text-default",
                       className: f.__invalid_content,
                       variant: "text-sm/medium",
-                      children: d.intl.format(d.t["7XX0/X"], { applicationName: n.applicationName }),
+                      children: d.intl.format(d.t["7XX0/X"], {
+                          applicationName: n.applicationName,
+                      }),
                   }),
                   (0, r.jsx)("div", {
                       className: f.NC,

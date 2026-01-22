@@ -1,4 +1,6 @@
-s.d(e, { default: () => _ });
+s.d(e, {
+    default: () => _,
+});
 var a = s(627968),
     i = s(64700),
     c = s(158954),
@@ -14,6 +16,7 @@ var a = s(627968),
     C = s(488995),
     A = s(985018),
     h = s(449488);
+
 function _(t) {
     let { guildId: e, transitionState: _, onClose: b, analyticsType: f = r.M.APP_DIRECTORY_UPSELL_MODAL } = t;
     return (
@@ -61,7 +64,9 @@ function _(t) {
                                 tab: C.GlobalDiscoveryTab.APPS,
                                 newSessionState: {
                                     guildId: e,
-                                    entrypoint: { name: m.sW.APPLICATION_DIRECTORY_UPSELL_MODAL },
+                                    entrypoint: {
+                                        name: m.sW.APPLICATION_DIRECTORY_UPSELL_MODAL,
+                                    },
                                 },
                             });
                     },
@@ -84,7 +89,9 @@ function _(t) {
                             }),
                         ],
                     }),
-                    (0, a.jsx)(o.A, { className: h.yF }),
+                    (0, a.jsx)(o.A, {
+                        className: h.yF,
+                    }),
                     (0, a.jsxs)("li", {
                         className: h.Aw,
                         children: [
@@ -99,7 +106,9 @@ function _(t) {
                             }),
                         ],
                     }),
-                    (0, a.jsx)(o.A, { className: h.yF }),
+                    (0, a.jsx)(o.A, {
+                        className: h.yF,
+                    }),
                     (0, a.jsxs)("li", {
                         className: h.Aw,
                         children: [

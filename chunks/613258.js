@@ -1,4 +1,7 @@
-l.d(t, { A: () => p }), l(896048);
+l.d(t, {
+    A: () => p,
+}),
+    l(896048);
 var n = l(627968),
     r = l(64700),
     s = l(503698),
@@ -140,7 +143,11 @@ let b = {
                                 transitionDuration: "".concat(d.H1 - 200 * Math.random(), "ms"),
                             },
                             children: [
-                                null != E && v === i.R.AVATAR_DECORATION && (0, n.jsx)(u.i, { item: E }),
+                                null != E &&
+                                    v === i.R.AVATAR_DECORATION &&
+                                    (0, n.jsx)(u.i, {
+                                        item: E,
+                                    }),
                                 null != E &&
                                     v === i.R.PROFILE_EFFECT &&
                                     (0, n.jsx)(o.A, {

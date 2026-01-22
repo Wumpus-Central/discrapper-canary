@@ -18,7 +18,9 @@ let i = () =>
                     children: [
                         (0, r.jsx)("mask", {
                             id: "mask0_5398_22750",
-                            style: { maskType: "luminance" },
+                            style: {
+                                maskType: "luminance",
+                            },
                             maskUnits: "userSpaceOnUse",
                             x: "0",
                             y: "0",
@@ -73,7 +75,9 @@ let i = () =>
                     children: [
                         (0, r.jsx)("mask", {
                             id: "mask0_5398_22756",
-                            style: { maskType: "luminance" },
+                            style: {
+                                maskType: "luminance",
+                            },
                             maskUnits: "userSpaceOnUse",
                             x: "0",
                             y: "0",

@@ -1,4 +1,6 @@
-n.d(t, { X: () => r });
+n.d(t, {
+    X: () => r,
+});
 var r = (function (e) {
     return (
         (e.BETTER_THAN_YOU = "better_than_you"),

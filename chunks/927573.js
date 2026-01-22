@@ -23,6 +23,7 @@ let o = {
     safety_alerts_channel_id: () => i.intl.string(i.t.sMkYE8),
     system_channel_id: () => i.intl.string(i.t.NASFnq),
 };
+
 function d(e) {
     var t;
     if (0 === Object.keys(e).length) return null;

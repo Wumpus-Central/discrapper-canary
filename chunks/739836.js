@@ -1,4 +1,7 @@
-n.d(t, { A: () => f }), n(228524);
+n.d(t, {
+    A: () => f,
+}),
+    n(228524);
 var l = n(627968),
     r = n(64700),
     i = n(582754),
@@ -11,6 +14,7 @@ var l = n(627968),
     m = n(184952),
     p = n(652215),
     h = n(985018);
+
 function f(e) {
     var t, n;
     let { connection: f, guildId: g, location: v } = e,

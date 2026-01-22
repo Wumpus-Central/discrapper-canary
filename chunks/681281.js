@@ -1,4 +1,7 @@
-n.d(t, { A: () => B }), n(896048);
+n.d(t, {
+    A: () => B,
+}),
+    n(896048);
 var r = n(627968);
 n(64700);
 var l = n(503698),
@@ -37,6 +40,7 @@ var l = n(503698),
     G = n(985018),
     k = n(597217),
     U = n(206314);
+
 function V(e) {
     let { focusedParticipant: t, channel: n } = e,
         l = (0, v.Us)(),
@@ -51,6 +55,7 @@ function V(e) {
         }),
     });
 }
+
 function F(e) {
     let { user: t, channel: n, stream: l, color: i } = e,
         a = (0, C.A)(n, t, l);
@@ -73,6 +78,7 @@ function F(e) {
               ],
           });
 }
+
 function H(e) {
     let t,
         { focusedApplication: n, focusedParticipant: l, channel: i } = e,
@@ -84,7 +90,9 @@ function H(e) {
         null != n &&
             (t = (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, r.jsx)(y.Ay.Divider, { className: k.yF }),
+                    (0, r.jsx)(y.Ay.Divider, {
+                        className: k.yF,
+                    }),
                     (0, r.jsx)(b.A, {
                         game: n,
                         className: k.RI,
@@ -107,7 +115,9 @@ function H(e) {
             n = l.stream;
         t = (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(y.Ay.Divider, { className: k.yF }),
+                (0, r.jsx)(y.Ay.Divider, {
+                    className: k.yF,
+                }),
                 (0, r.jsx)(F, {
                     user: e,
                     channel: i,
@@ -132,6 +142,7 @@ function H(e) {
         children: t,
     });
 }
+
 function B(e) {
     let { channel: t, guild: l, appContext: c, inCall: u, isChatOpen: b, exitFullScreen: g } = e,
         { focusedParticipant: m } = (0, a.cf)(
@@ -158,7 +169,9 @@ function B(e) {
                   position: "bottom",
                   shouldShow: M,
                   children: (0, r.jsxs)(o.DUT, {
-                      className: i()(k.WH, { [k.BI]: M }),
+                      className: i()(k.WH, {
+                          [k.BI]: M,
+                      }),
                       onClick: M
                           ? function () {
                                 (0, o.mMO)(
@@ -192,18 +205,29 @@ function B(e) {
                                                             });
                                                     }
                                                     return e;
-                                                })({ channel: t }, n),
+                                                })(
+                                                    {
+                                                        channel: t,
+                                                    },
+                                                    n,
+                                                ),
                                             );
                                     },
-                                    { modalKey: R.m },
+                                    {
+                                        modalKey: R.m,
+                                    },
                                 );
                             }
                           : void 0,
                       children: [
                           (0, r.jsx)(o.Text, {
                               variant: "text-xs/normal",
-                              className: i()(k.Gh, U.PT, { [k.BI]: M }),
-                              children: x.A.parseVoiceChannelStatus(T, !0, { channelId: t.id }),
+                              className: i()(k.Gh, U.PT, {
+                                  [k.BI]: M,
+                              }),
+                              children: x.A.parseVoiceChannelStatus(T, !0, {
+                                  channelId: t.id,
+                              }),
                           }),
                           M &&
                               (0, r.jsx)(o.R2l, {
@@ -217,7 +241,9 @@ function B(e) {
                   }),
               })
             : null,
-        F = (0, _.bG)({ channelId: t.id });
+        F = (0, _.bG)({
+            channelId: t.id,
+        });
     return (0, r.jsxs)("div", {
         className: k.SC,
         children: [
@@ -275,7 +301,9 @@ function B(e) {
                         ],
                     }),
             }),
-            (0, r.jsx)(E.A, { channelId: t.id }),
+            (0, r.jsx)(E.A, {
+                channelId: t.id,
+            }),
         ],
     });
 }

@@ -39,7 +39,9 @@ let p = 3 * o.A.Millis.DAY,
     E = () => {
         let { enabled: e, shouldGetShorterIgnoreDuration: t } = (0, u.MA)("ignore_user_feedback_utils");
         if (!e) return !1;
-        let { isDismissed: n } = (0, i.FZ)(r.M.NAGBAR_NOTICE_IGNORE_USER_FEEDBACK, { cooldownDurationMs: d.aH });
+        let { isDismissed: n } = (0, i.FZ)(r.M.NAGBAR_NOTICE_IGNORE_USER_FEEDBACK, {
+            cooldownDurationMs: d.aH,
+        });
         if (n) return !1;
         let s = t ? p : _,
             o = c.A.getIgnoreTimestamps();

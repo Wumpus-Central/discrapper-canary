@@ -16,6 +16,7 @@ var r = n(627968),
     f = n(304937),
     p = n(985018),
     _ = n(158677);
+
 function h(e, t, n) {
     return (
         t in e
@@ -29,6 +30,7 @@ function h(e, t, n) {
         e
     );
 }
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -45,6 +47,7 @@ function m(e) {
     }
     return e;
 }
+
 function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -57,6 +60,7 @@ function g(e, t) {
     }
     return n;
 }
+
 function E(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -68,6 +72,7 @@ function E(e, t) {
         e
     );
 }
+
 function b(e) {
     let { surveyId: t, survey: n, onClose: s, transitionState: u } = e,
         { getSurveyResponses: h, setResponse: g, trackDisplayedQuestions: b } = (0, c.i)(),
@@ -217,7 +222,9 @@ function b(e) {
                   },
               ],
               children: (0, r.jsx)("div", {
-                  style: { width: "100%" },
+                  style: {
+                      width: "100%",
+                  },
                   children: D(n),
               }),
           });
@@ -228,13 +235,20 @@ async function y(e) {
         (0, o.mMO)(
             async () => {
                 let { default: t } = await Promise.resolve().then(n.bind(n, 814249));
-                return (n) => (0, r.jsx)(t, E(m({}, n), { surveyId: e }));
+                return (n) =>
+                    (0, r.jsx)(
+                        t,
+                        E(m({}, n), {
+                            surveyId: e,
+                        }),
+                    );
             },
             {
                 onCloseRequest: () => {},
             },
         ));
 }
+
 function O(e) {
     let { surveyId: t, onClose: n, transitionState: i } = e,
         a = (0, s.bG)([u.A], () => u.A.getSurvey(t));

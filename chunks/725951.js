@@ -9,6 +9,7 @@ var r = n(627968),
     o = n(615300),
     l = n(73939),
     c = n(752327);
+
 function u(e, t, n) {
     return (
         t in e
@@ -22,6 +23,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -49,13 +51,29 @@ let p = {
 class _ extends i.PureComponent {
     componentWillEnter(e) {
         this._animated.setValue(-this.props.direction),
-            o.A.spring(this._animated, d({ toValue: 0 }, this.props.springSettings)).start(e);
+            o.A.spring(
+                this._animated,
+                d(
+                    {
+                        toValue: 0,
+                    },
+                    this.props.springSettings,
+                ),
+            ).start(e);
     }
     componentDidAppear() {
         this._animated.setValue(0);
     }
     componentWillLeave(e) {
-        o.A.spring(this._animated, d({ toValue: this.props.direction }, this.props.springSettings)).start(e);
+        o.A.spring(
+            this._animated,
+            d(
+                {
+                    toValue: this.props.direction,
+                },
+                this.props.springSettings,
+            ),
+        ).start(e);
     }
     getStyle() {
         let e = o.A.accelerate({

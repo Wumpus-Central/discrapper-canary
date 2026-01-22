@@ -1,4 +1,8 @@
-n.d(t, { A: () => E }), n(896048), n(938796);
+n.d(t, {
+    A: () => E,
+}),
+    n(896048),
+    n(938796);
 var i = n(627968),
     r = n(64700),
     s = n(311907),
@@ -16,6 +20,7 @@ var i = n(627968),
     O = n(790782),
     y = n(355097),
     f = n(985018);
+
 function E(e) {
     var t;
     let E, S;
@@ -54,7 +59,10 @@ function E(e) {
                             }
                             return e;
                         })({}, n)),
-                        (s = s = { guildId: e }),
+                        (s = s =
+                            {
+                                guildId: e,
+                            }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(s))
                             : (function (e, t) {
@@ -81,7 +89,9 @@ function E(e) {
                     N = E ? g.N9.CUSTOM : (0, g.jU)(_, j),
                     v = (t) => {
                         S(!1);
-                        let n = { message_notifications: t };
+                        let n = {
+                            message_notifications: t,
+                        };
                         t === h.orn.ALL_MESSAGES &&
                             _ !== O.e.ALL_MESSAGES &&
                             (n.flags = (0, u.md)(b.Ay.getGuildFlags(e), y.n3.UNREADS_ALL_MESSAGES)),
@@ -265,7 +275,9 @@ function E(e) {
                                 action: () =>
                                     S(
                                         t,
-                                        { suppress_everyone: !E.suppressEveryone },
+                                        {
+                                            suppress_everyone: !E.suppressEveryone,
+                                        },
                                         A.G_.suppressEveryone(!E.suppressEveryone),
                                     ),
                             }),
@@ -274,7 +286,13 @@ function E(e) {
                                 checked: E.suppressRoles,
                                 label: f.intl.string(f.t["O/QdoD"]),
                                 action: () =>
-                                    S(t, { suppress_roles: !E.suppressRoles }, A.G_.suppressRoles(!E.suppressRoles)),
+                                    S(
+                                        t,
+                                        {
+                                            suppress_roles: !E.suppressRoles,
+                                        },
+                                        A.G_.suppressRoles(!E.suppressRoles),
+                                    ),
                             }),
                             (0, i.jsx)(l.sLh, {
                                 id: "hightlight",
@@ -301,7 +319,9 @@ function E(e) {
                                 action: () =>
                                     S(
                                         t,
-                                        { mute_scheduled_events: !E.muteScheduledEvents },
+                                        {
+                                            mute_scheduled_events: !E.muteScheduledEvents,
+                                        },
                                         A.G_.mutedEvents(!E.muteScheduledEvents),
                                     ),
                             }),
@@ -309,7 +329,14 @@ function E(e) {
                                 id: "mobile_push",
                                 checked: E.mobilePush,
                                 label: f.intl.string(f.t.h1DL66),
-                                action: () => S(t, { mobile_push: !E.mobilePush }, A.G_.mobilePush(!E.mobilePush)),
+                                action: () =>
+                                    S(
+                                        t,
+                                        {
+                                            mobile_push: !E.mobilePush,
+                                        },
+                                        A.G_.mobilePush(!E.mobilePush),
+                                    ),
                             }),
                         ],
                     }),

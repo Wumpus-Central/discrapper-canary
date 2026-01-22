@@ -1,4 +1,6 @@
-i.d(a, { A: () => n });
+i.d(a, {
+    A: () => n,
+});
 var t = i(981737);
 let n = {
     ordinalNumber: function (e, a) {
@@ -16,7 +18,7 @@ let n = {
         values: {
             narrow: ["1", "2", "3", "4"],
             abbreviated: ["T1", "T2", "T3", "T4"],
-            wide: ["1º trimestre", "2º trimestre", "3º trimestre", "4º trimestre"],
+            wide: ["1\xba trimestre", "2\xba trimestre", "3\xba trimestre", "4\xba trimestre"],
         },
         defaultWidth: "wide",
         argumentCallback: function (e) {
@@ -49,7 +51,7 @@ let n = {
             narrow: ["D", "L", "M", "M", "G", "V", "S"],
             short: ["dom", "lun", "mar", "mer", "gio", "ven", "sab"],
             abbreviated: ["dom", "lun", "mar", "mer", "gio", "ven", "sab"],
-            wide: ["domenica", "lunedì", "martedì", "mercoledì", "giovedì", "venerdì", "sabato"],
+            wide: ["domenica", "luned\xec", "marted\xec", "mercoled\xec", "gioved\xec", "venerd\xec", "sabato"],
         },
         defaultWidth: "wide",
     }),

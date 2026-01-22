@@ -1,4 +1,6 @@
-n.d(e, { A: () => d });
+n.d(e, {
+    A: () => d,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -7,6 +9,7 @@ var i = n(311907),
     c = n(25171),
     o = n(723702),
     u = n(985018);
+
 function d(t, e) {
     let n = t.getBranchedName(e),
         d = (0, i.bG)([a.A], () => {

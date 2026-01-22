@@ -71,6 +71,7 @@ let d = new Set([
         "premium_upsell",
         "przelewy24_information",
     ]);
+
 function p(e) {
     switch (e) {
         case "plan_select":
@@ -102,6 +103,7 @@ function p(e) {
     }
     throw Error("Unexpected step: ".concat(e));
 }
+
 function _(e) {
     if (null != e) {
         if (!(e instanceof i.Ey)) throw (c.error(e), (0, s.pM)(e), Error("Unexpected error type"));
@@ -110,6 +112,7 @@ function _(e) {
     }
     return null;
 }
+
 function h(e, t, n) {
     r.useEffect(() => {
         null != e && "review" !== e && t !== o.h.WAITING && t !== o.h.COMPLETED && n(o.h.WAITING);

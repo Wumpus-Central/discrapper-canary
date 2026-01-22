@@ -11,7 +11,9 @@ function a(e, t, n) {
         e
     );
 }
-n.d(t, { A: () => o }),
+n.d(t, {
+    A: () => o,
+}),
     n(927092),
     n(212978),
     n(201528),
@@ -108,6 +110,7 @@ class r {
         a(this, "_buffer", new Uint8Array(4096)), a(this, "_pageSequenceNumber", 0), a(this, "_offset", 0);
     }
 }
+
 function o(e, t) {
     let n = new Uint8Array([
             79,
@@ -167,7 +170,7 @@ let s = (function () {
     let e = new Uint32Array(256);
     for (let t = 256; t > 0; t--) {
         let n = t << 24;
-        for (let e = 8; e > 0; e--) n = 2147483648 & n ? 79764919 ^ (n << 1) : n << 1;
+        for (let e = 8; e > 0; e--) n = 0x80000000 & n ? 0x4c11db7 ^ (n << 1) : n << 1;
         e[t] = n;
     }
     return e;

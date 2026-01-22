@@ -1,4 +1,6 @@
-r.d(t, { A: () => a });
+r.d(t, {
+    A: () => a,
+});
 let a = {
     scheme: "solarized",
     author: "ethan schoonover (http://ethanschoonover.com/solarized)",

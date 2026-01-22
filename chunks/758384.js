@@ -1,5 +1,10 @@
 let n, l;
-a.d(t, { A: () => h }), a(896048), a(733351), a(747238);
+a.d(t, {
+    A: () => h,
+}),
+    a(896048),
+    a(733351),
+    a(747238);
 var i = a(627968),
     s = a(64700),
     r = a(421380),
@@ -18,6 +23,7 @@ let N =
     (l = ""),
     null == n && ((n = location.host), (l = m.BVt.INVITE(""))),
     "".concat(location.protocol, "//").concat(n).concat(l, "/"));
+
 function h(e) {
     let { onBack: t, onComplete: a, onConnect: n, isSlideReady: l } = e,
         [h, x] = s.useState(""),
@@ -36,7 +42,9 @@ function h(e) {
             j(null), T(!0);
             let n = t.split("/"),
                 l = n[n.length - 1];
-            o.Ay.resolveInvite(l, "Join Guild", { inputValue: t }).then(
+            o.Ay.resolveInvite(l, "Join Guild", {
+                inputValue: t,
+            }).then(
                 (e) => {
                     let { invite: t } = e;
                     if ((T(!1), null == t)) return void j(p.intl.string(p.t["GEYI+Z"]));
@@ -111,7 +119,10 @@ function h(e) {
                             className: E.LR,
                             children: p.intl.format(p.t["8F/who"], {
                                 onClick: () => {
-                                    n(), (0, b.openUserSettings)(f.X.CONNECTIONS_PANEL, { section: m.nc_.CONNECTIONS });
+                                    n(),
+                                        (0, b.openUserSettings)(f.X.CONNECTIONS_PANEL, {
+                                            section: m.nc_.CONNECTIONS,
+                                        });
                                 },
                             }),
                         }),

@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var r = n(627968),
     i = n(64700),
     a = n(935649),
@@ -12,6 +14,7 @@ var r = n(627968),
     p = n(578746),
     _ = n(531525),
     h = n(985018);
+
 function m() {
     var e;
     let t = (0, c.hT)(),
@@ -22,7 +25,9 @@ function m() {
         b = i.useCallback(
             (e) => {
                 m && e
-                    ? a.A.showAgeVerificationGetStartedModal({ entryPoint: s.q1.AGE_RESTRICTED_DM_COMMANDS_SETTINGS })
+                    ? a.A.showAgeVerificationGetStartedModal({
+                          entryPoint: s.q1.AGE_RESTRICTED_DM_COMMANDS_SETTINGS,
+                      })
                     : u.Qe.updateSetting(e);
             },
             [m],

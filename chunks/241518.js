@@ -10,4 +10,6 @@ function r(e) {
             return !1;
     }
 }
-n.d(t, { Zs: () => r });
+n.d(t, {
+    Zs: () => r,
+});

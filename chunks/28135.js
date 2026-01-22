@@ -22,9 +22,11 @@ var r = {
     "./spritesheet-emoji-48.png": "860002",
     "./spritesheet-picker-22.png": "208514",
 };
+
 function i(e) {
     return n(a(e));
 }
+
 function a(e) {
     if (!n.o(r, e)) {
         var t = Error("Cannot find module '" + e + "'");

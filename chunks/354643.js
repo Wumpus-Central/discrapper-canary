@@ -1,10 +1,14 @@
-r.d(t, { default: () => a }), r(896048);
+r.d(t, {
+    default: () => a,
+}),
+    r(896048);
 var n = r(627968),
     o = r(64700),
     c = r(397927),
     i = r(72152),
     l = r(770376),
     s = r(985018);
+
 function a(e) {
     var t, r;
     let [a, u] = o.useState(!1);

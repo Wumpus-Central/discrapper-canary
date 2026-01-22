@@ -1,4 +1,6 @@
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var r = n(580424),
     i = n(71393),
     a = n(576705),
@@ -10,6 +12,7 @@ var c = n(652215),
     u = n(307731),
     d = n(985018);
 let f = 50;
+
 function p(e) {
     return "".concat("+:").concat(e.name).concat(":");
 }
@@ -31,7 +34,11 @@ let _ = {
             intention: u.b_.REACTION,
             maxCount: f,
         });
-        return { results: { emojis: a.unlocked } };
+        return {
+            results: {
+                emojis: a.unlocked,
+            },
+        };
     },
     renderResults(e) {
         let {
@@ -67,6 +74,11 @@ let _ = {
                 options: r,
             } = e,
             i = t[n];
-        return r.sendMessage(p(i)), { type: l.kc.REACTION };
+        return (
+            r.sendMessage(p(i)),
+            {
+                type: l.kc.REACTION,
+            }
+        );
     },
 };

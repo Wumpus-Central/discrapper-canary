@@ -4,11 +4,13 @@ a.d(n, {
 }),
     a(747238);
 var e = a(652215);
+
 function i(t, n) {
     return (
         n === e.fg2.MASTODON && /^@?[a-z0-9_]+([.-]+[a-z0-9_]+)*@[^@]+\.[^.@]{2,}$/i.test(t), /^.+\.[^.@]{2,}$/.test(t)
     );
 }
+
 function l(t) {
     return t === e.fg2.MASTODON
         ? "@example@mastodon.social"

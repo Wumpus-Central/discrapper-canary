@@ -1,4 +1,6 @@
-t.d(n, { default: () => p });
+t.d(n, {
+    default: () => p,
+});
 var i = t(627968),
     o = t(64700),
     l = t(397927),
@@ -7,10 +9,18 @@ var i = t(627968),
     r = t(253932),
     s = t(957565),
     u = t(985018);
+
 function p(e) {
     let { imageUrl: n, onSelect: t } = e,
         p = r.Q_.useSetting(),
-        { tidaWebformEnabled: d } = c.A.useExperiment({ location: "RoleIconContextMenu" }, { autoTrackExposure: !1 }),
+        { tidaWebformEnabled: d } = c.A.useExperiment(
+            {
+                location: "RoleIconContextMenu",
+            },
+            {
+                autoTrackExposure: !1,
+            },
+        ),
         x = o.useCallback(() => {
             (0, s.C)(n);
         }, [n]);

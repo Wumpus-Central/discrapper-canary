@@ -1,9 +1,13 @@
-n.d(t, { default: () => a }), n(896048);
+n.d(t, {
+    default: () => a,
+}),
+    n(896048);
 var r = n(627968),
     o = n(64700),
     l = n(397927),
     i = n(817281),
     c = n(985018);
+
 function a(e) {
     let { onSubmit: t, onClose: n } = e,
         a = (function (e, t) {
@@ -72,7 +76,13 @@ function a(e) {
                 confirmText: c.intl.string(c.t.rimG2R),
                 cancelText: c.intl.string(c.t["ETE/oC"]),
                 onConfirm: t,
-                onClose: () => (u && i.Ay.updatedUnsyncedSettings({ disableCallUserConfirmationPrompt: !0 }), n()),
+                onClose: () => (
+                    u &&
+                        i.Ay.updatedUnsyncedSettings({
+                            disableCallUserConfirmationPrompt: !0,
+                        }),
+                    n()
+                ),
                 checkboxProps: {
                     checked: u,
                     onChange: (e) => s(e),

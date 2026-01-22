@@ -13,7 +13,7 @@ var r = n(311907),
     d = n(694080),
     f = n(788868),
     p = n(652215);
-let _ = 259200000;
+let _ = 2592e5;
 async function h(e) {
     let t = s.default.getCurrentUser(),
         n = (0, u.ki)(t);
@@ -35,6 +35,7 @@ async function h(e) {
         !1
     );
 }
+
 function m() {
     let e = (0, r.bG)([s.default], () => s.default.getCurrentUser()),
         t = o.A.getPremiumTypeSubscription(),
@@ -47,11 +48,14 @@ function m() {
                 !n &&
                 (c.A.fetchedAllEntitlements ||
                     c.A.fetchingAllEntitlements ||
-                    (0, i.qw)({ entitlementType: p.zF_.FRACTIONAL_REDEMPTION }));
+                    (0, i.qw)({
+                        entitlementType: p.zF_.FRACTIONAL_REDEMPTION,
+                    }));
         }),
         n ? null : l
     );
 }
+
 function g() {
     return null != m();
 }

@@ -12,6 +12,7 @@ var r = n(627968),
     o = n(946274),
     l = n(563863),
     c = n(693591);
+
 function u(e, t, n) {
     return (
         t in e
@@ -25,6 +26,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -41,6 +43,7 @@ function d(e) {
     }
     return e;
 }
+
 function f(e) {
     return new Promise((t, n) => {
         if (null != e) {
@@ -95,7 +98,16 @@ async function _(e, t) {
 let h = (e) => {
         (0, a.mMO)(async () => {
             let { default: t } = await n.e("84981").then(n.bind(n, 940372));
-            return (n) => (0, r.jsx)(t, d({ errors: e }, n));
+            return (n) =>
+                (0, r.jsx)(
+                    t,
+                    d(
+                        {
+                            errors: e,
+                        },
+                        n,
+                    ),
+                );
         });
     },
     m = i.forwardRef((e, t) => {
@@ -133,7 +145,16 @@ let h = (e) => {
                 let o = e.currentTarget.files;
                 b.current = await (0, a.mMO)(async () => {
                     let { default: e } = await n.e("17259").then(n.bind(n, 897126));
-                    return (t) => (0, r.jsx)(e, d({ processFiles: () => v(o) }, t));
+                    return (t) =>
+                        (0, r.jsx)(
+                            e,
+                            d(
+                                {
+                                    processFiles: () => v(o),
+                                },
+                                t,
+                            ),
+                        );
                 });
             };
         return (0, r.jsx)(s.A, {

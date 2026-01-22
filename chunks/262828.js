@@ -1,9 +1,13 @@
-n.d(t, { A: () => c }), n(896048);
+n.d(t, {
+    A: () => c,
+}),
+    n(896048);
 var r = n(64700),
     i = n(311907),
     l = n(198982),
     s = n(627363),
     a = n(587895);
+
 function c(e, t) {
     let n = (0, i.bG)([a.A], () => a.A.getGuildApplication(e, t)),
         [c, o] = r.useState(null == n),

@@ -11,7 +11,10 @@ function r(e, t, n) {
         e
     );
 }
-n.d(t, { A: () => i }), n(228524);
+n.d(t, {
+    A: () => i,
+}),
+    n(228524);
 class i {
     constructor(e, t, n) {
         r(this, "name", void 0),

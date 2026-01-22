@@ -8,6 +8,7 @@ var r = n(627968),
     i = n(158954),
     o = n(31457),
     a = n(453016);
+
 function s(e) {
     let { disabled: t, field: n, value: o, onChange: a } = e,
         { choices: s } = n,
@@ -22,10 +23,16 @@ function s(e) {
     return (0, r.jsx)(i.z6M, {
         options: c,
         value: o,
-        onChange: (e) => (null == a ? void 0 : a({ value: e })),
+        onChange: (e) =>
+            null == a
+                ? void 0
+                : a({
+                      value: e,
+                  }),
         disabled: t,
     });
 }
+
 function c(e) {
     let { formField: t } = e,
         n = null != t.response ? t.choices[t.response] : "";
@@ -37,6 +44,7 @@ function c(e) {
         }),
     });
 }
+
 function d(e) {
     let { formField: t, onChange: n } = e;
     return (0, r.jsx)(o.cS, {

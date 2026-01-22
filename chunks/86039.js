@@ -1,6 +1,9 @@
-a.d(t, { A: () => l });
+a.d(t, {
+    A: () => l,
+});
 var i = a(954571),
     n = a(652215);
+
 function l(e) {
     let {
         problem: t,

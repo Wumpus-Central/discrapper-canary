@@ -1,6 +1,9 @@
-r.d(t, { A: () => o });
+r.d(t, {
+    A: () => o,
+});
 var n = r(64700),
     i = r(988772);
+
 function o(e, t) {
     var r = (0, n.useMemo)(
         function () {

@@ -1,4 +1,6 @@
-n.d(t, { E: () => E });
+n.d(t, {
+    E: () => E,
+});
 var r = n(157559),
     i = n(627363),
     a = n(192552),
@@ -13,6 +15,7 @@ var r = n(157559),
     _ = n(170148),
     h = n(550151),
     m = n(985018);
+
 function g(e) {
     let { embeddedActivityJoinability: t, handleCanJoin: n } = e;
     switch (t) {

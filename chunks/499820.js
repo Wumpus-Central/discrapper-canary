@@ -1,4 +1,7 @@
-n.d(t, { A: () => g }), n(896048);
+n.d(t, {
+    A: () => g,
+}),
+    n(896048);
 var i = n(627968),
     r = n(64700),
     s = n(503698),
@@ -24,20 +27,25 @@ let h = 0,
         }
     },
     f = [a.G6Q.DISABLED, a.G6Q.TOP_LEFT, a.G6Q.TOP_RIGHT, a.G6Q.BOTTOM_LEFT, a.G6Q.BOTTOM_RIGHT];
+
 function b(e) {
     let { position: t, onChange: n } = e,
         [s] = r.useState(() => "notification-position-selector-".concat(h++)),
         b =
             t === a.G6Q.DISABLED
                 ? c.intl.string(c.t.R6LxVf)
-                : c.intl.formatToPlainString(c.t["XXHDM/"], { position: p(t) });
+                : c.intl.formatToPlainString(c.t["XXHDM/"], {
+                      position: p(t),
+                  });
     return (0, i.jsxs)("div", {
         children: [
             (0, i.jsx)(o.vN3, {
                 within: !0,
                 offset: -2,
                 children: (0, i.jsx)("div", {
-                    className: l()(d.iE, { [d.wX]: t === a.G6Q.DISABLED }),
+                    className: l()(d.iE, {
+                        [d.wX]: t === a.G6Q.DISABLED,
+                    }),
                     children: f.map((e) =>
                         (0, i.jsxs)(
                             "label",

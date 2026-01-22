@@ -51,6 +51,7 @@ var r = n(627968),
     z = n(649455),
     Y = n(652215),
     Z = n(985018);
+
 function $(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -76,6 +77,7 @@ function $(e) {
     }
     return e;
 }
+
 function Q(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -94,6 +96,7 @@ function Q(e, t) {
         e
     );
 }
+
 function ee(e) {
     var t, n;
     let l,
@@ -154,6 +157,7 @@ function ee(e) {
         }),
     });
 }
+
 function et(e) {
     let {
             message: t,
@@ -208,7 +212,14 @@ function et(e) {
             null == ea || ea();
         }, [ea, n, t]),
         { forceIconsLeft: ep, reorderMessageMenuItems: eb } = (0, u.P)("MessageContextMenu"),
-        { tidaWebformEnabled: em } = g.A.useExperiment({ location: "MessageContextMenu" }, { autoTrackExposure: !1 }),
+        { tidaWebformEnabled: em } = g.A.useExperiment(
+            {
+                location: "MessageContextMenu",
+            },
+            {
+                autoTrackExposure: !1,
+            },
+        ),
         ey = (e, t) => {
             var n;
             return (function e(t, n, r, i) {
@@ -289,21 +300,39 @@ function et(e) {
             })(e, null == t ? void 0 : t.iconToAdd, null != (n = null == t ? void 0 : t.removeIcon) ? n : eb, ep);
         },
         eO = (0, R.A)(t, n),
-        eA = ey((0, p.A)(a), { iconToAdd: o.TdU }),
-        ev = ey((0, _.A)(t, n, a), { iconToAdd: o.TdU }),
-        ej = ey((0, y.A)(a), { iconToAdd: o.$p$ }),
+        eA = ey((0, p.A)(a), {
+            iconToAdd: o.TdU,
+        }),
+        ev = ey((0, _.A)(t, n, a), {
+            iconToAdd: o.TdU,
+        }),
+        ej = ey((0, y.A)(a), {
+            iconToAdd: o.$p$,
+        }),
         eh = ey((0, E.A)(t, n), {
             iconToAdd: o.xVQ,
             removeIcon: !1,
         }),
-        eE = ey((0, w.A)(t, n), { removeIcon: !1 }),
-        eS = ey((0, F.A)(t, n), { removeIcon: !1 }),
-        e_ = ey((0, M.A)(t, n), { removeIcon: !1 }),
-        eD = ey((0, K.A)(t, n), { removeIcon: !1 }),
+        eE = ey((0, w.A)(t, n), {
+            removeIcon: !1,
+        }),
+        eS = ey((0, F.A)(t, n), {
+            removeIcon: !1,
+        }),
+        e_ = ey((0, M.A)(t, n), {
+            removeIcon: !1,
+        }),
+        eD = ey((0, K.A)(t, n), {
+            removeIcon: !1,
+        }),
         eI = ey((0, I.A)(t)),
-        eP = ey((0, H.A)(t, n), { iconToAdd: o.UaP }),
+        eP = ey((0, H.A)(t, n), {
+            iconToAdd: o.UaP,
+        }),
         eT = ey((0, N.A)(t, n)),
-        ew = ey((0, h.A)(t), { iconToAdd: o.cFy }),
+        ew = ey((0, h.A)(t), {
+            iconToAdd: o.cFy,
+        }),
         ex = ey(
             (0, A.A)({
                 commandType: c.kc.MESSAGE,
@@ -312,16 +341,24 @@ function et(e) {
                 guildId: void 0,
                 onHeightUpdate: eo,
             }),
-            { iconToAdd: o.k9F },
+            {
+                iconToAdd: o.k9F,
+            },
         ),
-        eM = ey((0, V.A)(t, n), { iconToAdd: o.fNY }),
+        eM = ey((0, V.A)(t, n), {
+            iconToAdd: o.fNY,
+        }),
         eC = ey((0, C.A)(t, n)),
         eN = ey((0, S.A)(t, n)),
         eR = ey((0, D.A)(t, n)),
         eG = ey((0, B.A)(t, n)),
-        eL = ey((0, G.A)(t), { removeIcon: !1 }),
+        eL = ey((0, G.A)(t), {
+            removeIcon: !1,
+        }),
         ek = ey((0, O.A)(t)),
-        eU = ey((0, q.A)(t), { iconToAdd: o.O4 }),
+        eU = ey((0, q.A)(t), {
+            iconToAdd: o.O4,
+        }),
         eF = ey((0, U.A)(t, n), {
             iconToAdd: o.tjR,
             removeIcon: !1,
@@ -330,9 +367,15 @@ function et(e) {
             iconToAdd: o.tjR,
             removeIcon: !1,
         }),
-        eV = ey((0, P.A)(t, n), { removeIcon: !1 }),
-        eB = ey((0, X.Ay)(t), { removeIcon: !1 }),
-        eK = ey((0, X.S_)(t), { removeIcon: !1 }),
+        eV = ey((0, P.A)(t, n), {
+            removeIcon: !1,
+        }),
+        eB = ey((0, X.Ay)(t), {
+            removeIcon: !1,
+        }),
+        eK = ey((0, X.S_)(t), {
+            removeIcon: !1,
+        }),
         eH = ey((0, X.zo)(t), {
             iconToAdd: o.iFK,
             removeIcon: !1,
@@ -343,21 +386,41 @@ function et(e) {
                 id: d,
                 name: ee,
             }),
-            { iconToAdd: o.Gg5 },
+            {
+                iconToAdd: o.Gg5,
+            },
         ),
-        eJ = ey((0, j.A)(a, n.getGuildId()), { iconToAdd: o.lmn }),
+        eJ = ey((0, j.A)(a, n.getGuildId()), {
+            iconToAdd: o.lmn,
+        }),
         eW = ey(
             (0, b.A)(er, t, {
                 shouldHideMediaOptions: eu,
                 contentType: null == i ? void 0 : i.contentType,
                 originalContentType: null == i ? void 0 : i.originalContentType,
             }),
-            { iconToAdd: o.xfq },
+            {
+                iconToAdd: o.xfq,
+            },
         ),
         ez = ey((0, J.A)(t, i)),
         eY = ey((0, W.A)(t)),
-        eZ = ey((0, z.A)(i, { shouldHideMediaOptions: eu }), { iconToAdd: o.mir }),
-        e$ = ey((0, m.A)(null != et ? et : en, el, t, { shouldHideMediaOptions: eu }), { iconToAdd: o.qYV }),
+        eZ = ey(
+            (0, z.A)(i, {
+                shouldHideMediaOptions: eu,
+            }),
+            {
+                iconToAdd: o.mir,
+            },
+        ),
+        e$ = ey(
+            (0, m.A)(null != et ? et : en, el, t, {
+                shouldHideMediaOptions: eu,
+            }),
+            {
+                iconToAdd: o.qYV,
+            },
+        ),
         eQ = ey(
             (0, f.A)({
                 id: t.id,
@@ -377,7 +440,9 @@ function et(e) {
             iconToAdd: o.tjR,
             removeIcon: !1,
         }),
-        e9 = (0, r.jsx)(o.rXV, { children: null != e0 ? e0 : eQ }),
+        e9 = (0, r.jsx)(o.rXV, {
+            children: null != e0 ? e0 : eQ,
+        }),
         e1 = (e) => {
             let { includeLinks: t } = e;
             return (0, r.jsxs)(o.rXV, {
@@ -397,13 +462,25 @@ function et(e) {
                   (0, r.jsxs)(o.rXV, {
                       children: [ej, eP, eT, ew, ex, eM, eC, eN, eG, ek, eU],
                   }),
-                  (0, r.jsx)(o.rXV, { children: ev }),
+                  (0, r.jsx)(o.rXV, {
+                      children: ev,
+                  }),
                   em
                       ? (0, r.jsxs)(r.Fragment, {
-                            children: [e9, e1({ includeLinks: !0 })],
+                            children: [
+                                e9,
+                                e1({
+                                    includeLinks: !0,
+                                }),
+                            ],
                         })
                       : (0, r.jsxs)(r.Fragment, {
-                            children: [e1({ includeLinks: !0 }), e9],
+                            children: [
+                                e1({
+                                    includeLinks: !0,
+                                }),
+                                e9,
+                            ],
                         }),
                   (0, r.jsxs)(o.rXV, {
                       children: [e7, eV, ei && eB, ei && eK, eH],
@@ -416,8 +493,12 @@ function et(e) {
               "aria-label": ed,
               onSelect: eg,
               children: [
-                  (0, r.jsx)(o.rXV, { children: eA }),
-                  (0, r.jsx)(o.rXV, { children: ej }),
+                  (0, r.jsx)(o.rXV, {
+                      children: eA,
+                  }),
+                  (0, r.jsx)(o.rXV, {
+                      children: ej,
+                  }),
                   (0, r.jsxs)(o.rXV, {
                       children: ["" === a ? eO : null, eh, eL],
                   }),
@@ -432,10 +513,26 @@ function et(e) {
                   }),
                   em
                       ? (0, r.jsxs)(r.Fragment, {
-                            children: [e9, e1({ includeLinks: !1 }), (0, r.jsx)(o.rXV, { children: e$ })],
+                            children: [
+                                e9,
+                                e1({
+                                    includeLinks: !1,
+                                }),
+                                (0, r.jsx)(o.rXV, {
+                                    children: e$,
+                                }),
+                            ],
                         })
                       : (0, r.jsxs)(r.Fragment, {
-                            children: [e1({ includeLinks: !1 }), (0, r.jsx)(o.rXV, { children: e$ }), e9],
+                            children: [
+                                e1({
+                                    includeLinks: !1,
+                                }),
+                                (0, r.jsx)(o.rXV, {
+                                    children: e$,
+                                }),
+                                e9,
+                            ],
                         }),
               ],
           });

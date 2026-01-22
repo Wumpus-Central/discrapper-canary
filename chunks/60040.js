@@ -1,4 +1,6 @@
-n.d(t, { A: () => E });
+n.d(t, {
+    A: () => E,
+});
 var r = n(627968),
     l = n(64700),
     o = n(311907),
@@ -12,6 +14,7 @@ var r = n(627968),
     m = n(793683),
     p = n(717415),
     v = n(985018);
+
 function E() {
     var e, t, n;
     let { quest: E, sourceQuestContent: g, onClose: h } = l.useContext(p.VideoQuestModalContext),

@@ -21,9 +21,19 @@ var r = n(834647),
             p(n, g, n.stack, 1),
             arguments.length > 2 && d(n, arguments[2]);
         var s = [];
-        return h(e, v, { that: s }), c(n, "errors", s), n;
+        return (
+            h(e, v, {
+                that: s,
+            }),
+            c(n, "errors", s),
+            n
+        );
     };
-i ? i(g, y) : s(g, y, { name: !0 });
+i
+    ? i(g, y)
+    : s(g, y, {
+          name: !0,
+      });
 var b = (g.prototype = l(y.prototype, {
     constructor: u(1, g),
     message: u(1, ""),
@@ -35,5 +45,7 @@ r(
         constructor: !0,
         arity: 2,
     },
-    { AggregateError: g },
+    {
+        AggregateError: g,
+    },
 );

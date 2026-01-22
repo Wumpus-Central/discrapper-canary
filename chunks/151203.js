@@ -1,4 +1,6 @@
-r.d(t, { default: () => I });
+r.d(t, {
+    default: () => I,
+});
 var n = r(627968),
     i = r(64700),
     s = r(735438),
@@ -15,6 +17,7 @@ var n = r(627968),
     m = r(542986),
     O = r(985018),
     y = r(275167);
+
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
@@ -40,6 +43,7 @@ function j(e) {
     }
     return e;
 }
+
 function w(e) {
     let { guildId: t, guildOwnerId: s, member: u } = e,
         l = g.default.getUser(u.userId),
@@ -117,6 +121,7 @@ function w(e) {
         l.id,
     );
 }
+
 function I(e) {
     let { guild: t, transitionState: r, onClose: s } = e,
         d = i.useMemo(() => b.A.getFriendIDs(), []);

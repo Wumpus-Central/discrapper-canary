@@ -1,8 +1,11 @@
-n.d(t, { D: () => d });
+n.d(t, {
+    D: () => d,
+});
 var r = n(627968),
     i = n(397927),
     a = n(954571),
     s = n(652215);
+
 function o(e, t, n) {
     return (
         t in e
@@ -16,6 +19,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -32,6 +36,7 @@ function l(e) {
     }
     return e;
 }
+
 function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -44,6 +49,7 @@ function c(e, t) {
     }
     return n;
 }
+
 function u(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -66,6 +72,12 @@ let d = (e) => {
         }),
         (0, i.mMO)(async () => {
             let { default: e } = await n.e("77641").then(n.bind(n, 384048));
-            return (t) => (0, r.jsx)(e, u(l({}, t), { displayProfile: o }));
+            return (t) =>
+                (0, r.jsx)(
+                    e,
+                    u(l({}, t), {
+                        displayProfile: o,
+                    }),
+                );
         });
 };

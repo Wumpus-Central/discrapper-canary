@@ -1,4 +1,9 @@
-n.d(t, { A: () => y }), n(896048), n(264879), n(228524);
+n.d(t, {
+    A: () => y,
+}),
+    n(896048),
+    n(264879),
+    n(228524);
 var r = n(627968),
     i = n(64700),
     a = n(108531),
@@ -11,6 +16,7 @@ var r = n(627968),
     f = n(985018),
     p = n(333354),
     _ = n(159118);
+
 function h(e, t, n) {
     return (
         t in e
@@ -24,6 +30,7 @@ function h(e, t, n) {
         e
     );
 }
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -40,6 +47,7 @@ function m(e) {
     }
     return e;
 }
+
 function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -52,6 +60,7 @@ function g(e, t) {
     }
     return n;
 }
+
 function E(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -63,6 +72,7 @@ function E(e, t) {
         e
     );
 }
+
 function b(e) {
     let { powerup: t } = e;
     return (0, r.jsx)(s.EYj, {
@@ -72,6 +82,7 @@ function b(e) {
         children: t.title,
     });
 }
+
 function y(e) {
     let { guildId: t, onButtonClick: n } = e,
         h = (0, d.A)(t),
@@ -89,33 +100,51 @@ function y(e) {
     i.useEffect(() => {
         if (O) return;
         let e = setTimeout(() => {
-            I({ scale: 1 }), v(!0);
+            I({
+                scale: 1,
+            }),
+                v(!0);
         }, 300);
         return () => clearTimeout(e);
     }, [I, O]);
     let T = i.useMemo(() => {
         let e;
         if (null == h || 0 === h.length) return "";
-        if (1 === h.length) e = (0, r.jsx)(b, { powerup: h[0] });
+        if (1 === h.length)
+            e = (0, r.jsx)(b, {
+                powerup: h[0],
+            });
         else if (2 === h.length)
             e = f.intl.format(p.default.MNO3sG, {
-                perk1: (0, r.jsx)(b, { powerup: h[0] }),
-                perk2: (0, r.jsx)(b, { powerup: h[1] }),
+                perk1: (0, r.jsx)(b, {
+                    powerup: h[0],
+                }),
+                perk2: (0, r.jsx)(b, {
+                    powerup: h[1],
+                }),
             });
         else {
             let t = Array.from(h).reverse();
             e = f.intl.format(p.default.GmN3Vf, {
-                perk1: (0, r.jsx)(b, { powerup: t[0] }),
-                perk2: (0, r.jsx)(b, { powerup: t[1] }),
+                perk1: (0, r.jsx)(b, {
+                    powerup: t[0],
+                }),
+                perk2: (0, r.jsx)(b, {
+                    powerup: t[1],
+                }),
             });
         }
-        return f.intl.format(p.default["/6GgQq"], { perks: e });
+        return f.intl.format(p.default["/6GgQq"], {
+            perks: e,
+        });
     }, [h]);
     return null == h || 0 === h.length
         ? null
         : (0, r.jsxs)(a.animated.div, {
               className: _.kL,
-              style: E(m({}, S), { opacity: +!!A }),
+              style: E(m({}, S), {
+                  opacity: +!!A,
+              }),
               children: [
                   (0, r.jsx)(s.EYj, {
                       tag: "span",

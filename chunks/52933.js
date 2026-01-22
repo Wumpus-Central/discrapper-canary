@@ -16,6 +16,7 @@ var s = n(503698),
     g = n(985018),
     m = n(558997),
     p = n(902049);
+
 function f(e) {
     let { channel: t, isNew: n } = e,
         i = (0, d.kt)(t),
@@ -33,6 +34,7 @@ function f(e) {
         forumPostContainsTags: i.length > 0,
     };
 }
+
 function v(e) {
     let { channel: t, isNew: n, tagsClassName: s, className: d } = e,
         {
@@ -76,7 +78,9 @@ function v(e) {
                           {
                               tag: e,
                               size: u.A.Sizes.SMALL,
-                              className: r()(s, { [p.At]: x.has(e.id) }),
+                              className: r()(s, {
+                                  [p.At]: x.has(e.id),
+                              }),
                           },
                           e.id,
                       ),

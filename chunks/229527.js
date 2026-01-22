@@ -16,12 +16,15 @@ let o = [
     s.D.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME,
     s.D.AUTOMOD_QUARANTINED_SERVER_TAG,
 ];
+
 function l(e) {
     return null == e ? new Set() : new Set(o.reduce((t, n) => ((0, r.Lt)(null != e ? e : 0, n) && t.push(n), t), []));
 }
+
 function c(e) {
     return null == e ? new Set() : l(e.flags);
 }
+
 function u(e) {
     return (
         null != e &&
@@ -32,6 +35,7 @@ function u(e) {
         })
     );
 }
+
 function d(e) {
     return (0, i.bG)([a.Ay], () => null != e && u(a.Ay.getSelfMember(e)), [e]);
 }

@@ -13,16 +13,21 @@ var r = n(492462),
     l = n(488926),
     c = n(647053),
     u = n(652215);
+
 function d(e) {
     let t = e.filter((e) => !c.A8.includes(e));
     return t.includes(i.F.BOT) && !t.includes(i.F.APPLICATIONS_COMMANDS) && t.push(i.F.APPLICATIONS_COMMANDS), t;
 }
+
 function f(e) {
     if (![u.ME, u.YYv, u.c$g].includes(e)) return null != e ? e : void 0;
 }
+
 function p(e) {
     var t, n, i, c, u;
-    let d = (0, r.parse)(e, { arrayFormat: "bracket" }),
+    let d = (0, r.parse)(e, {
+            arrayFormat: "bracket",
+        }),
         p = l.x3;
     try {
         p = a.iu(null != d.permissions && "" !== d.permissions ? d.permissions : "0");

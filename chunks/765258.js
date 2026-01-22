@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968),
     i = n(64700),
     l = n(397927),
@@ -22,7 +24,9 @@ let f = (0, c.S)() || !1,
                     icon: l._z,
                     "aria-hidden": !0,
                 }),
-                (0, r.jsx)(a.A.Title, { children: d.intl.string(d.t.cw57ar) }),
+                (0, r.jsx)(a.A.Title, {
+                    children: d.intl.string(d.t.cw57ar),
+                }),
                 (0, r.jsx)(a.A.Divider, {}),
                 (0, r.jsxs)(l.VQ0, {
                     type: "top-pill",

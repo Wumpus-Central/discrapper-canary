@@ -7,5 +7,7 @@ n(
         real: !0,
         forced: !e(962249)("union"),
     },
-    { union: o },
+    {
+        union: o,
+    },
 );

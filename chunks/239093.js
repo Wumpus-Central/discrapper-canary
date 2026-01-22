@@ -20,6 +20,7 @@ n.d(t, {
 });
 var r = n(110259),
     i = n(652215);
+
 function a(e, t, n) {
     return (
         t in e
@@ -101,7 +102,9 @@ var f = (function (e) {
 let p = [0, 1, 2, 3],
     _ = 372,
     h = 279,
-    m = { impression_group: r.ImpressionGroups.APPEAL_INGESTION };
+    m = {
+        impression_group: r.ImpressionGroups.APPEAL_INGESTION,
+    };
 var g = (function (e) {
     return (
         (e.SPEED_BUMP = "speed-bump"),
@@ -148,6 +151,6 @@ var b = (function (e) {
             e
         );
     })({});
-let O = 2000,
-    A = 15000,
+let O = 2e3,
+    A = 15e3,
     v = 5;

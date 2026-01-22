@@ -1,4 +1,7 @@
-n.d(t, { A: () => x }), n(896048);
+n.d(t, {
+    A: () => x,
+}),
+    n(896048);
 var a = n(627968);
 n(64700);
 var l = n(554146),
@@ -13,13 +16,22 @@ var l = n(554146),
     p = n(523620),
     h = n(49999),
     f = n(654487);
+
 function x(e) {
     var t, n, x;
-    let { isQuestBarEmpty: b, hasLoadedQuestBar: g } = (0, m.c9)({ location: f.rE.CONFLICT_CHECKS }),
+    let { isQuestBarEmpty: b, hasLoadedQuestBar: g } = (0, m.c9)({
+            location: f.rE.CONFLICT_CHECKS,
+        }),
         v = null != e.targetElementRef.current && b && g,
-        [j, y] = (0, o.r)(e.guildId, { shouldShow: v }),
-        [_, A] = (0, o.L)(e.currentUser, { shouldShow: v }),
-        [C, S] = (0, i.l)({ shouldShow: v });
+        [j, y] = (0, o.r)(e.guildId, {
+            shouldShow: v,
+        }),
+        [_, A] = (0, o.L)(e.currentUser, {
+            shouldShow: v,
+        }),
+        [C, S] = (0, i.l)({
+            shouldShow: v,
+        });
     return v
         ? j === l.M.GUILD_TAG_AVAILABLE_COACHMARK_V2
             ? (0, a.jsx)(c.w, {

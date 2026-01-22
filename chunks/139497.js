@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968),
     i = n(64700),
     l = n(397927),
@@ -24,7 +26,9 @@ let d = function (e) {
             (0, r.jsxs)("div", {
                 className: o.TG,
                 children: [
-                    (0, r.jsx)(f, { className: o.cC }),
+                    (0, r.jsx)(f, {
+                        className: o.cC,
+                    }),
                     (0, r.jsx)(l.Text, {
                         className: o.g7,
                         variant: "text-sm/normal",
@@ -38,7 +42,10 @@ let d = function (e) {
                     }),
                 ],
             }),
-            d && (0, r.jsx)("div", { className: o.p3 }),
+            d &&
+                (0, r.jsx)("div", {
+                    className: o.p3,
+                }),
         ],
     });
 };

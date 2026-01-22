@@ -1,4 +1,7 @@
-n.d(t, { A: () => P }), n(896048);
+n.d(t, {
+    A: () => P,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -20,6 +23,7 @@ var r = n(627968),
     O = n(652215),
     A = n(985018),
     v = n(17697);
+
 function S(e, t, n) {
     return (
         t in e
@@ -33,6 +37,7 @@ function S(e, t, n) {
         e
     );
 }
+
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -49,6 +54,7 @@ function I(e) {
     }
     return e;
 }
+
 function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -61,6 +67,7 @@ function T(e, t) {
     }
     return n;
 }
+
 function C(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -72,7 +79,15 @@ function C(e, t) {
         e
     );
 }
-let N = (e, t) => (0, r.jsx)(b.XW, { columns: e }, t);
+let N = (e, t) =>
+    (0, r.jsx)(
+        b.XW,
+        {
+            columns: e,
+        },
+        t,
+    );
+
 function R(e) {
     var t;
     let n = l().sample(l().values(e));
@@ -95,7 +110,9 @@ class w extends i.PureComponent {
         let { name: t, type: n } = e;
         return (0, r.jsxs)(i.Fragment, {
             children: [
-                (0, r.jsx)("div", { className: n === O.dD.FAVORITES ? v.H7 : v.FP }),
+                (0, r.jsx)("div", {
+                    className: n === O.dD.FAVORITES ? v.H7 : v.FP,
+                }),
                 (0, r.jsxs)("div", {
                     className: v.O1,
                     children: [
@@ -147,7 +164,9 @@ class w extends i.PureComponent {
                         start: n.top - 10,
                         end: n.top + n.height + 10,
                     }),
-                    this.setState({ focusedId: e }));
+                    this.setState({
+                        focusedId: e,
+                    }));
             }),
             S(this, "handleSelect", (e) => {
                 let { onSelectItem: t } = this.props,
@@ -222,6 +241,7 @@ class w extends i.PureComponent {
             });
     }
 }
+
 function P(e) {
     let t = (0, c.bG)([h.A], () => h.A.getTrendingCategories()),
         n = (0, g.rM)(),

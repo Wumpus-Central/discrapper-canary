@@ -1,4 +1,6 @@
-n.d(t, { c: () => o });
+n.d(t, {
+    c: () => o,
+});
 var r = n(562465),
     l = n(73153),
     i = n(384904),
@@ -6,7 +8,9 @@ var r = n(562465),
     s = n(652215);
 async function o() {
     try {
-        l.h.dispatch({ type: "CHECKOUT_RECOVERY_STATUS_FETCH" });
+        l.h.dispatch({
+            type: "CHECKOUT_RECOVERY_STATUS_FETCH",
+        });
         let { body: e } = await r.Bo.get({
                 url: s.Rsh.CHECKOUT_RECOVERY,
                 rejectWithError: !0,
@@ -18,6 +22,8 @@ async function o() {
                 isTargeted: t,
             });
     } catch (e) {
-        l.h.dispatch({ type: "CHECKOUT_RECOVERY_STATUS_FETCH_FAILURE" });
+        l.h.dispatch({
+            type: "CHECKOUT_RECOVERY_STATUS_FETCH_FAILURE",
+        });
     }
 }

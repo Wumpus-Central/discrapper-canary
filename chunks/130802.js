@@ -17,6 +17,7 @@ var r,
     h = n(985018),
     b = n(761960),
     g = n(233732);
+
 function m(e) {
     let { closePopout: t } = e;
     return (0, l.jsx)("div", {
@@ -27,12 +28,16 @@ function m(e) {
             size: "sm",
             text: h.intl.string(p.default.Poezn1),
             onClick: () => {
-                t(), (0, c.A)({ nextStatus: o.clD.ONLINE });
+                t(),
+                    (0, c.A)({
+                        nextStatus: o.clD.ONLINE,
+                    });
             },
             fullWidth: !0,
         }),
     });
 }
+
 function A(e) {
     let { showCurrentGame: t, shouldShowStatus: n = !1 } = e,
         r = (0, a.bG)([d.A], () => d.A.getStatus());
@@ -69,13 +74,18 @@ function A(e) {
             }),
             (0, l.jsx)(o.dOG, {
                 onChange: (e) => {
-                    u.tz.updateSetting(e), n && (0, c.A)({ nextStatus: e ? o.clD.ONLINE : o.clD.INVISIBLE });
+                    u.tz.updateSetting(e),
+                        n &&
+                            (0, c.A)({
+                                nextStatus: e ? o.clD.ONLINE : o.clD.INVISIBLE,
+                            });
                 },
                 checked: t,
             }),
         ],
     });
 }
+
 function y(e) {
     let { children: t } = e,
         n = (0, i.useRef)(null);
@@ -91,22 +101,30 @@ function y(e) {
         })
     );
 }
+
 function O(e) {
     let { closePopout: t } = e,
         n = u.tz.useSetting();
     return (0, l.jsxs)(y, {
         children: [
-            (0, l.jsx)(A, { showCurrentGame: n }),
+            (0, l.jsx)(A, {
+                showCurrentGame: n,
+            }),
             (0, l.jsx)(o.Text, {
                 variant: "text-sm/normal",
                 color: "text-subtle",
                 children: h.intl.string(p.default["7cfFob"]),
             }),
-            (0, l.jsx)(o.cGx, { className: b.yF }),
-            (0, l.jsx)(f.qA, { onClosePopout: t }),
+            (0, l.jsx)(o.cGx, {
+                className: b.yF,
+            }),
+            (0, l.jsx)(f.qA, {
+                onClosePopout: t,
+            }),
         ],
     });
 }
+
 function j(e) {
     let { closePopout: t } = e;
     return (0, l.jsxs)(y, {
@@ -114,7 +132,9 @@ function j(e) {
             (0, l.jsxs)(o.BJc, {
                 align: "start",
                 gap: 0,
-                style: { marginBottom: 8 },
+                style: {
+                    marginBottom: 8,
+                },
                 children: [
                     (0, l.jsx)(o.Heading, {
                         variant: "heading-sm/semibold",
@@ -143,10 +163,13 @@ function j(e) {
                 color: "text-subtle",
                 children: h.intl.string(p.default.Yl0mh4),
             }),
-            (0, l.jsx)(m, { closePopout: t }),
+            (0, l.jsx)(m, {
+                closePopout: t,
+            }),
         ],
     });
 }
+
 function v(e) {
     let { closePopout: t } = e,
         n = u.tz.useSetting();
@@ -161,8 +184,12 @@ function v(e) {
                 color: "text-subtle",
                 children: h.intl.string(p.default["7cfFob"]),
             }),
-            (0, l.jsx)(o.cGx, { className: b.yF }),
-            (0, l.jsx)(f.qA, { onClosePopout: t }),
+            (0, l.jsx)(o.cGx, {
+                className: b.yF,
+            }),
+            (0, l.jsx)(f.qA, {
+                onClosePopout: t,
+            }),
         ],
     });
 }
@@ -174,6 +201,7 @@ var x =
     (r[(r.Status = 4)] = "Status"),
     (r[(r.ActivityAndStatus = 5)] = "ActivityAndStatus"),
     r);
+
 function E(e) {
     let { showPopout: t, popoutState: n, handleClose: r, popoutTargetRef: a, children: d } = e,
         [b, m] = (0, i.useState)(n),
@@ -205,7 +233,9 @@ function E(e) {
                         action: {
                             text: h.intl.string(p.default.Poezn1),
                             onClick: () => {
-                                (0, c.A)({ nextStatus: o.clD.ONLINE });
+                                (0, c.A)({
+                                    nextStatus: o.clD.ONLINE,
+                                });
                             },
                         },
                     };
@@ -217,7 +247,10 @@ function E(e) {
                         action: {
                             text: h.intl.string(p.default.k4tCg2),
                             onClick: () => {
-                                u.tz.updateSetting(!0), (0, c.A)({ nextStatus: o.clD.ONLINE });
+                                u.tz.updateSetting(!0),
+                                    (0, c.A)({
+                                        nextStatus: o.clD.ONLINE,
+                                    });
                             },
                         },
                         textLink: {
@@ -332,7 +365,9 @@ function E(e) {
         align: "left",
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, l.jsx)(C, { closePopout: t });
+            return (0, l.jsx)(C, {
+                closePopout: t,
+            });
         },
         onRequestClose: r,
         children: () =>

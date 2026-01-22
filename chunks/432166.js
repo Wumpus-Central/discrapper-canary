@@ -1,4 +1,7 @@
-n.d(t, { A: () => m }), n(896048);
+n.d(t, {
+    A: () => m,
+}),
+    n(896048);
 var r,
     i = n(627968),
     a = n(64700),
@@ -7,6 +10,7 @@ var r,
     l = n(451988),
     c = n(235986),
     u = n(703740);
+
 function d(e, t, n) {
     return (
         t in e
@@ -20,6 +24,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     let { percentage: t, isSingleLine: n } = e;
     return (0, i.jsx)("div", {
@@ -29,13 +34,17 @@ function f(e) {
         }),
         children: (0, i.jsx)("div", {
             className: u.qT,
-            style: { width: "".concat(100 * Math.max(Math.min(t, 1), 0), "%") },
+            style: {
+                width: "".concat(100 * Math.max(Math.min(t, 1), 0), "%"),
+            },
         }),
     });
 }
+
 function p(e) {
     return String(e).padStart(2, "0");
 }
+
 function _(e) {
     let { time: t, padLargestUnit: n } = e,
         r = Math.floor(t) % 60,
@@ -52,7 +61,9 @@ function _(e) {
 class h extends (r = a.PureComponent) {
     componentDidMount() {
         this.timer.start(500, () => {
-            this.setState({ now: Date.now() });
+            this.setState({
+                now: Date.now(),
+            });
         });
     }
     componentWillUnmount() {
@@ -61,11 +72,17 @@ class h extends (r = a.PureComponent) {
     render() {
         let { start: e, end: t, className: n, themed: r, singleLine: a = !1 } = this.props,
             { now: s } = this.state,
-            l = (t - e) / 1000,
-            d = Math.max(Math.min((s - e) / 1000, l), 0);
+            l = (t - e) / 1e3,
+            d = Math.max(Math.min((s - e) / 1e3, l), 0);
         return a
             ? (0, i.jsxs)("div", {
-                  className: o()(n, { [u.Sp]: r }, u.Od),
+                  className: o()(
+                      n,
+                      {
+                          [u.Sp]: r,
+                      },
+                      u.Od,
+                  ),
                   children: [
                       (0, i.jsx)("div", {
                           className: u.Iq,
@@ -91,7 +108,9 @@ class h extends (r = a.PureComponent) {
                   ],
               })
             : (0, i.jsxs)("div", {
-                  className: o()(n, { [u.Sp]: r }),
+                  className: o()(n, {
+                      [u.Sp]: r,
+                  }),
                   children: [
                       (0, i.jsx)(f, {
                           percentage: d / l,
@@ -121,8 +140,14 @@ class h extends (r = a.PureComponent) {
               });
     }
     constructor(...e) {
-        super(...e), d(this, "timer", new l.IX()), d(this, "state", { now: Date.now() });
+        super(...e),
+            d(this, "timer", new l.IX()),
+            d(this, "state", {
+                now: Date.now(),
+            });
     }
 }
-d(h, "defaultProps", { themed: !1 });
+d(h, "defaultProps", {
+    themed: !1,
+});
 let m = h;

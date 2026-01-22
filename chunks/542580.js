@@ -12,9 +12,13 @@ var r = n(562465),
     a = n(721768),
     s = n(168186),
     o = n(652215);
+
 function l() {
-    i.h.dispatch({ type: "INTEGRATION_PERMISSION_SETTINGS_CLEAR" });
+    i.h.dispatch({
+        type: "INTEGRATION_PERMISSION_SETTINGS_CLEAR",
+    });
 }
+
 function c(e, t, n) {
     i.h.dispatch({
         applicationId: e,
@@ -23,6 +27,7 @@ function c(e, t, n) {
         type: "INTEGRATION_PERMISSION_SETTINGS_EDIT",
     });
 }
+
 function u(e, t) {
     r.Bo.get({
         url: o.Rsh.GUILD_COMMANDS_FOR_APPLICATION(e, t),
@@ -70,12 +75,14 @@ async function d(e, t, n) {
         permissions: a,
     });
 }
+
 function f(e) {
     i.h.dispatch({
         applicationId: e,
         type: "INTEGRATION_PERMISSION_SETTINGS_INIT",
     });
 }
+
 function p(e) {
     i.h.dispatch({
         commandId: e,
@@ -102,6 +109,7 @@ async function _(e) {
             permissions: u.body.permissions,
         });
 }
+
 function h(e, t, n, r) {
     if (!n || !r) return t;
     let i = {

@@ -1,4 +1,8 @@
-n.d(e, { PlaygroundEmbed: () => S }), n(896048), n(747238);
+n.d(e, {
+    PlaygroundEmbed: () => S,
+}),
+    n(896048),
+    n(747238);
 var t = n(627968),
     o = n(64700),
     u = n(934551),
@@ -32,6 +36,7 @@ let v = {
         },
     },
     b = null;
+
 function S(l) {
     var e, n;
     let S = (0, r.bG)([f.default], () => {
@@ -104,7 +109,9 @@ function S(l) {
                         align: "start",
                         gap: 8,
                         children: [
-                            (0, t.jsx)(k, { size: "lg" }),
+                            (0, t.jsx)(k, {
+                                size: "lg",
+                            }),
                             (0, t.jsxs)(i.BJc, {
                                 direction: "vertical",
                                 gap: 0,

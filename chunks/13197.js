@@ -1,4 +1,7 @@
-i.d(n, { default: () => u }), i(228524);
+i.d(n, {
+    default: () => u,
+}),
+    i(228524);
 var a = i(627968);
 i(64700);
 var e = i(284009),
@@ -8,6 +11,7 @@ var e = i(284009),
     o = i(599941),
     c = i(985018),
     d = i(257529);
+
 function u(t) {
     let { onClose: n, guildId: i, transitionState: e } = t,
         u = (0, o.Tq)(i);

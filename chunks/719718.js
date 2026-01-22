@@ -6,6 +6,7 @@ var r,
     i = n(311907),
     a = n(73153),
     s = n(532294);
+
 function o(e, t, n) {
     return (
         t in e
@@ -19,6 +20,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -54,33 +56,43 @@ let u = {},
         hasSeenRewatchPopover: !1,
     },
     _ = l({}, p);
+
 function h() {
     (u = {}), (d = 0), (f = !1);
 }
+
 function m() {
     h(), (_ = l({}, p));
 }
+
 function g() {
     d = 1;
 }
+
 function E(e) {
     (u = e.data), (d = 2);
 }
+
 function b() {
     d = 3;
 }
+
 function y(e) {
     _.volume = e.volume;
 }
+
 function O() {
     _.isMuted = !_.isMuted;
 }
+
 function A(e) {
     _.highestSlideSeen = e.slide;
 }
+
 function v() {
     f = !0;
 }
+
 function S() {
     _.hasSeenRewatchPopover = !0;
 }

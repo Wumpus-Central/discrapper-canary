@@ -4,4 +4,6 @@ function r(e, t) {
         r = /(auto|scroll)/.test(n.overflow + n.overflowX + n.overflowY);
     return r && t && (r = e.scrollHeight !== e.clientHeight || e.scrollWidth !== e.clientWidth), r;
 }
-n.d(t, { o: () => r });
+n.d(t, {
+    o: () => r,
+});

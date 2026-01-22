@@ -11,7 +11,14 @@ e.exports = function (e) {
                         subLanguage: "javascript",
                     },
                 },
-                variants: [{ begin: /^>(?=[ ]|$)/ }, { begin: /^\.\.\.(?=[ ]|$)/ }],
+                variants: [
+                    {
+                        begin: /^>(?=[ ]|$)/,
+                    },
+                    {
+                        begin: /^\.\.\.(?=[ ]|$)/,
+                    },
+                ],
             },
         ],
     };

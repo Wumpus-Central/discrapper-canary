@@ -1,4 +1,6 @@
-s.d(t, { A: () => a });
+s.d(t, {
+    A: () => a,
+});
 var i = s(627968);
 s(64700);
 let a = (e) => {
@@ -134,8 +136,12 @@ let a = (e) => {
                                 values: "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0",
                                 result: "hardAlpha",
                             }),
-                            (0, i.jsx)("feOffset", { dy: "4" }),
-                            (0, i.jsx)("feGaussianBlur", { stdDeviation: "5" }),
+                            (0, i.jsx)("feOffset", {
+                                dy: "4",
+                            }),
+                            (0, i.jsx)("feGaussianBlur", {
+                                stdDeviation: "5",
+                            }),
                             (0, i.jsx)("feComposite", {
                                 in2: "hardAlpha",
                                 operator: "out",
@@ -165,7 +171,9 @@ let a = (e) => {
                         y2: "150.78",
                         gradientUnits: "userSpaceOnUse",
                         children: [
-                            (0, i.jsx)("stop", { stopColor: "#FFBDF2" }),
+                            (0, i.jsx)("stop", {
+                                stopColor: "#FFBDF2",
+                            }),
                             (0, i.jsx)("stop", {
                                 offset: "1",
                                 stopColor: "#E742E1",
@@ -180,7 +188,9 @@ let a = (e) => {
                         y2: "150.12",
                         gradientUnits: "userSpaceOnUse",
                         children: [
-                            (0, i.jsx)("stop", { stopColor: "#FFBDF2" }),
+                            (0, i.jsx)("stop", {
+                                stopColor: "#FFBDF2",
+                            }),
                             (0, i.jsx)("stop", {
                                 offset: "1",
                                 stopColor: "#E742E1",
@@ -195,7 +205,9 @@ let a = (e) => {
                         y2: "82.0188",
                         gradientUnits: "userSpaceOnUse",
                         children: [
-                            (0, i.jsx)("stop", { stopColor: "#B473F5" }),
+                            (0, i.jsx)("stop", {
+                                stopColor: "#B473F5",
+                            }),
                             (0, i.jsx)("stop", {
                                 offset: "1",
                                 stopColor: "#E292AA",
@@ -210,7 +222,9 @@ let a = (e) => {
                         y2: "82.0188",
                         gradientUnits: "userSpaceOnUse",
                         children: [
-                            (0, i.jsx)("stop", { stopColor: "#B473F5" }),
+                            (0, i.jsx)("stop", {
+                                stopColor: "#B473F5",
+                            }),
                             (0, i.jsx)("stop", {
                                 offset: "1",
                                 stopColor: "#E292AA",
@@ -225,7 +239,9 @@ let a = (e) => {
                         y2: "82.0188",
                         gradientUnits: "userSpaceOnUse",
                         children: [
-                            (0, i.jsx)("stop", { stopColor: "#B473F5" }),
+                            (0, i.jsx)("stop", {
+                                stopColor: "#B473F5",
+                            }),
                             (0, i.jsx)("stop", {
                                 offset: "1",
                                 stopColor: "#E292AA",

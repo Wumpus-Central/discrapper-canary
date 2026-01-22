@@ -1,9 +1,12 @@
-n.d(t, { A: () => l });
+n.d(t, {
+    A: () => l,
+});
 var r = n(311907),
     i = n(734057),
     a = n(576705),
     s = n(977997),
     o = n(818348);
+
 function l(e) {
     let { userId: t, guildId: n } = e,
         l = (0, r.bG)([s.A], () =>

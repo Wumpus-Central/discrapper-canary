@@ -30,6 +30,7 @@ var r,
         (r[(r.SWITCHED = 1)] = "SWITCHED"),
         (r[(r.REMOVED = 2)] = "REMOVED"),
         r);
+
 function N(e) {
     let { actionText: t, user: n, onAction: r } = e,
         {
@@ -47,7 +48,9 @@ function N(e) {
         I = l || S.hasUniqueUsername() ? null : "#".concat(S.discriminator),
         T = null;
     return (
-        h.A.useConfig({ location: "Account card load" }),
+        h.A.useConfig({
+            location: "Account card load",
+        }),
         N
             ? (T = (0, i.jsx)(c.Text, {
                   variant: "text-sm/semibold",
@@ -73,7 +76,9 @@ function N(e) {
                         "aria-label": n.username,
                     }),
                     (0, i.jsxs)("div", {
-                        className: a()(y.K_, { [y.zU]: !N }),
+                        className: a()(y.K_, {
+                            [y.zU]: !N,
+                        }),
                         children: [
                             (0, i.jsxs)("div", {
                                 className: y.Xh,
@@ -108,7 +113,9 @@ function N(e) {
                                         O
                                             ? r(0, n.id)
                                             : (A.default.track(v.HAw.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
-                                                  location: { section: v.JJy.MANAGE_ACCOUNTS_MODAL },
+                                                  location: {
+                                                      section: v.JJy.MANAGE_ACCOUNTS_MODAL,
+                                                  },
                                               }),
                                               _.Mx(n.id),
                                               r(1, n.id));
@@ -157,13 +164,16 @@ function N(e) {
         })
     );
 }
+
 function O(e) {
     let { actionText: t, onAction: n } = e,
         { isLoading: r, multiAccountUsers: l } = (0, b.K)();
     return (0, i.jsx)("div", {
         className: y.p_,
         children: r
-            ? (0, i.jsx)(c.y$y, { className: y.u1 })
+            ? (0, i.jsx)(c.y$y, {
+                  className: y.u1,
+              })
             : l.map((e, r) =>
                   (0, i.jsxs)(
                       s.Fragment,

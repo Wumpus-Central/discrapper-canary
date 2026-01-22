@@ -5,6 +5,7 @@ n.d(t, {
     n(896048);
 var r = n(310784),
     i = n.n(r);
+
 function a(e, t, n) {
     let [r, i] = e,
         [a, s] = t,
@@ -12,12 +13,14 @@ function a(e, t, n) {
         l = o;
     return n === o ? l : n < o ? a + ((n - r) / (o - r)) * (l - a) : l + ((n - o) / (i - o)) * (s - l);
 }
+
 function s(e, t, n) {
     let [r, i] = e,
         [a, s] = t;
     return a + ((n - r) / (i - r)) * (s - a);
 }
 let o = [0, 2];
+
 function l(e, t, n) {
     let r = i()(e);
     if ("background" !== t) return r.set("hsl.s", "*".concat(n)).hex();
@@ -30,6 +33,7 @@ let c = [1.3, 0.7],
     u = [0.98, 1],
     d = [0.75, 1.5],
     f = [1.45, 0.45];
+
 function p(e, t, n, r) {
     switch (t) {
         case "background":

@@ -1,5 +1,16 @@
 let r, i;
-n.d(t, { A: () => w }), n(457529), n(896048), n(747238), n(680155), n(323874), n(14289), n(35956), n(321073), n(65821);
+n.d(t, {
+    A: () => w,
+}),
+    n(457529),
+    n(896048),
+    n(747238),
+    n(680155),
+    n(323874),
+    n(14289),
+    n(35956),
+    n(321073),
+    n(65821);
 var l = n(143236),
     a = n(735438),
     s = n.n(a),
@@ -15,6 +26,7 @@ var l = n(143236),
     m = n(613057),
     b = n(652215),
     _ = n(264572).Buffer;
+
 function E(e, t, n) {
     return (
         t in e
@@ -39,9 +51,11 @@ let O = p.Ay.requireModule("discord_rpc").RPCWebSocket,
     y = window.GLOBAL_ENV.MARKETING_ENDPOINT,
     I = new c.A("RPCServer:WSS"),
     v = [];
+
 function S(e) {
     return "function" == typeof e ? e() : e;
 }
+
 function C() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
         t =
@@ -58,6 +72,7 @@ function C() {
                   };
     i.listen(b.xEi + (e % b.sJq), "127.0.0.1", t);
 }
+
 function N(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 200,
         i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
@@ -95,6 +110,7 @@ function N(e, t, n) {
         ),
         t.end(n);
 }
+
 function T(e, t, n, r) {
     let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
     N(
@@ -112,7 +128,9 @@ class j extends A.A {
         (u.default.isLoggingOverlayEvents || (e.cmd !== b.e$_.OVERLAY && e.evt !== b.ZE4.OVERLAY)) &&
             I.info("Socket Emit: ".concat(this.id), (0, h.A)(e)),
             null != r && "etf" === this.encoding
-                ? this._socket.send(r.pack(e), { binary: !0 })
+                ? this._socket.send(r.pack(e), {
+                      binary: !0,
+                  })
                 : this._socket.send(JSON.stringify(e));
     }
     close(e, t) {
@@ -120,9 +138,19 @@ class j extends A.A {
     }
     constructor(e, t, n) {
         if ((super("ws", t, n), E(this, "_socket", void 0), -1 === ["etf", "json"].indexOf(n)))
-            throw new f.A({ closeCode: b.YI$.INVALID_ENCODING }, "Invalid Encoding: ".concat(n));
+            throw new f.A(
+                {
+                    closeCode: b.YI$.INVALID_ENCODING,
+                },
+                "Invalid Encoding: ".concat(n),
+            );
         if ("etf" === n && null == r)
-            throw new f.A({ closeCode: b.YI$.INVALID_ENCODING }, "Erlpack cannot be used on this client");
+            throw new f.A(
+                {
+                    closeCode: b.YI$.INVALID_ENCODING,
+                },
+                "Erlpack cannot be used on this client",
+            );
         this._socket = e;
     }
 }
@@ -136,7 +164,12 @@ class x extends A.A {
     }
     constructor(e, t, n, r) {
         if ((super("http", n, r), E(this, "_sendCallback", void 0), E(this, "_closeCallback", void 0), "json" !== r))
-            throw new f.A({ closeCode: b.YI$.INVALID_ENCODING }, "Invalid Encoding: ".concat(r));
+            throw new f.A(
+                {
+                    closeCode: b.YI$.INVALID_ENCODING,
+                },
+                "Invalid Encoding: ".concat(r),
+            );
         (this._sendCallback = e), (this._closeCallback = t);
     }
 }
@@ -144,7 +177,10 @@ class P extends l.EventEmitter {
     handleRequest(e, t) {
         let [n, r] = S(e.url).split("?"),
             i = S(e.method);
-        if ("/rpc" === n && "OPTIONS" === i) return void N(e, t, { body: "" });
+        if ("/rpc" === n && "OPTIONS" === i)
+            return void N(e, t, {
+                body: "",
+            });
         let l = "POST" === i;
         if ("/rpc" === n && ("GET" === i || l)) {
             let n = new URLSearchParams(r),
@@ -228,7 +264,7 @@ class P extends l.EventEmitter {
         let t = 0;
         (i = O.http.createServer()).on("error", (e) => {
             I.error("Error: ".concat(e.message)),
-                ("EADDRINUSE" === e.code || e.message.includes("EADDRINUSE")) && setTimeout(() => C(++t), 1000);
+                ("EADDRINUSE" === e.code || e.message.includes("EADDRINUSE")) && setTimeout(() => C(++t), 1e3);
         }),
             i.on("request", this.handleRequest.bind(this)),
             C(t);

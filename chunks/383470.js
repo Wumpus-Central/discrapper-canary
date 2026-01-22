@@ -1,4 +1,7 @@
-n.d(t, { A: () => A }), n(321073);
+n.d(t, {
+    A: () => A,
+}),
+    n(321073);
 var r = n(627968),
     i = n(64700),
     l = n(397927),
@@ -15,6 +18,7 @@ let h = {
     object: p.ZSU.CARD,
     section: p.JJy.DISCOVER_POPULAR,
 };
+
 function A(e) {
     let { tab: t, guildIds: n, loading: p, onScroll: A, onGuildCardClick: g, onGuildCardSeen: m } = e,
         b = (0, u.kc)(t),

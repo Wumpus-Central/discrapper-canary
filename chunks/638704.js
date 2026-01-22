@@ -1,8 +1,11 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(559751),
     i = n(499702),
     a = n(264816),
     s = n(140851);
+
 function o(e) {
     var t,
         n = e.reference,

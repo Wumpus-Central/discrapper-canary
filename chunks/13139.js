@@ -1,4 +1,6 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var r = n(397927),
     i = n(73153),
     a = n(15285),
@@ -21,7 +23,9 @@ class E extends c.A {
             id: g,
             message: m.intl.string(m.t["d+41qJ"]),
             type: r.ToastType.CLIP,
-            options: { duration: h.Vi },
+            options: {
+                duration: h.Vi,
+            },
         });
     }
     applyNativeClipsSettings(e) {
@@ -30,9 +34,17 @@ class E extends c.A {
             n = (0, p.TD)(),
             r = o.A.getMediaEngine();
         if (
-            (r.setClipBufferLength(n ? t.clipsLength / 1000 : 0),
-            r.setClipsMaxPendingTasks(u.A.getConfig({ location: "applyNativeClipsSettings" }).count),
-            r.setClipsBufferSize(l.A.getConfig({ location: "applyNativeClipsSettings" }).size),
+            (r.setClipBufferLength(n ? t.clipsLength / 1e3 : 0),
+            r.setClipsMaxPendingTasks(
+                u.A.getConfig({
+                    location: "applyNativeClipsSettings",
+                }).count,
+            ),
+            r.setClipsBufferSize(
+                l.A.getConfig({
+                    location: "applyNativeClipsSettings",
+                }).size,
+            ),
             (null == e ? void 0 : e.settings.decoupledClipsEnabled) === !0 && this.fireClipsInitEvent(),
             null == e || (null == e ? void 0 : e.settings.clipsQuality) != null)
         ) {

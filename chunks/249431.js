@@ -14,6 +14,7 @@ var i = n(503698),
     o = n(675841),
     l = n(562650),
     c = n(388963);
+
 function u(e, t, n) {
     return (
         t in e
@@ -27,6 +28,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -43,6 +45,7 @@ function d(e) {
     }
     return e;
 }
+
 function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -55,6 +58,7 @@ function f(e, t) {
     }
     return n;
 }
+
 function p(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -87,6 +91,7 @@ let _ = {
     mentionSuggestion: l.Z2,
     mentionSuggestionSimpleColorVariant: l.xD,
 };
+
 function h(e, t) {
     let n,
         { attributes: i, children: c, leaf: u, text: f } = t,
@@ -116,11 +121,15 @@ function h(e, t) {
                 })
                 .filter((e) => null != e)
                 .join(" ");
-            n = a()(e, { [o.syntaxOverride]: "||" === u.text || "\\" === u.text });
+            n = a()(e, {
+                [o.syntaxOverride]: "||" === u.text || "\\" === u.text,
+            });
         }
     }
     return (
-        (n = a()(n, { [l.BI]: "" === f.text })),
+        (n = a()(n, {
+            [l.BI]: "" === f.text,
+        })),
         (0, r.jsx)(
             "span",
             p(d({}, i), {

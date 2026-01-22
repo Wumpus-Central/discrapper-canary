@@ -1,9 +1,13 @@
-n.d(t, { A: () => y }), n(896048);
+n.d(t, {
+    A: () => y,
+}),
+    n(896048);
 var r,
     l = n(311907),
     i = n(73153),
     a = n(370876),
     s = n(946116);
+
 function o(e, t, n) {
     return (
         t in e
@@ -17,6 +21,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -33,6 +38,7 @@ function c(e) {
     }
     return e;
 }
+
 function u(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -101,7 +107,9 @@ let y = new A(i.h, {
             (r[t.guildId] = t),
                 null != l[t.primaryCategoryId]
                     ? (l[t.primaryCategoryId][t.guildId] = t)
-                    : (l[t.primaryCategoryId] = { [t.guildId]: t });
+                    : (l[t.primaryCategoryId] = {
+                          [t.guildId]: t,
+                      });
         }),
             (p[t] = r),
             (b[t] = l);
@@ -114,14 +122,22 @@ let y = new A(i.h, {
         let { channelId: o, entry: d } = e,
             f = (0, a.mR)(d);
         if (null == f || (null == (n = p[o]) ? void 0 : n[f.guildId]) != null) return;
-        p[o] = u(c({}, p[o]), { [f.guildId]: f });
+        p[o] = u(c({}, p[o]), {
+            [f.guildId]: f,
+        });
         let h = null != (t = f.primaryCategoryId) ? t : s.mU.UNCATEGORIZED;
         if (
-            ((b[o] = u(c({}, b[o]), { [h]: u(c({}, null == (r = b[o]) ? void 0 : r[h]), { [f.guildId]: f }) })),
+            ((b[o] = u(c({}, b[o]), {
+                [h]: u(c({}, null == (r = b[o]) ? void 0 : r[h]), {
+                    [f.guildId]: f,
+                }),
+            })),
             null != g[o])
         ) {
             let e = null != (l = null == (i = g[o]) ? void 0 : i[h]) ? l : 0;
-            g[o] = u(c({}, g[o]), { [h]: e + 1 });
+            g[o] = u(c({}, g[o]), {
+                [h]: e + 1,
+            });
         }
     },
     GUILD_DIRECTORY_ENTRY_DELETE: function (e) {
@@ -133,9 +149,17 @@ let y = new A(i.h, {
             s = Object.assign({}, p[r]);
         delete s[l], null == (n = m[r]) || n.delete(l), (m[r] = new Set(m[r])), (p[r] = s);
         let o = Object.assign({}, b[r][a]);
-        if ((delete o[l], (b[r] = u(c({}, b[r]), { [a]: o })), null != g[r])) {
+        if (
+            (delete o[l],
+            (b[r] = u(c({}, b[r]), {
+                [a]: o,
+            })),
+            null != g[r])
+        ) {
             let e = g[r][a] - 1;
-            g[r] = u(c({}, g[r]), { [a]: e >= 0 ? e : 0 });
+            g[r] = u(c({}, g[r]), {
+                [a]: e >= 0 ? e : 0,
+            });
         }
     },
     GUILD_DIRECTORY_ENTRY_UPDATE: function (e) {
@@ -143,14 +167,18 @@ let y = new A(i.h, {
         let { channelId: m, entry: A } = e,
             y = (0, a.mR)(A),
             O = null == (r = p[m]) ? void 0 : r[y.guildId];
-        p[m] = u(c({}, p[m]), { [y.guildId]: c({}, O, y) });
+        p[m] = u(c({}, p[m]), {
+            [y.guildId]: c({}, O, y),
+        });
         let j = null != (t = null == O ? void 0 : O.primaryCategoryId) ? t : s.mU.UNCATEGORIZED,
             v = null != (n = y.primaryCategoryId) ? n : s.mU.UNCATEGORIZED,
             x = Object.assign({}, null == (l = b[m]) ? void 0 : l[j]);
         null != O && j !== v && delete x[y.guildId],
             (b[m] = u(c({}, b[m]), {
                 [j]: x,
-                [v]: u(c({}, null == (i = b[m]) ? void 0 : i[v]), { [y.guildId]: c({}, O, y) }),
+                [v]: u(c({}, null == (i = b[m]) ? void 0 : i[v]), {
+                    [y.guildId]: c({}, O, y),
+                }),
             })),
             v !== j &&
                 null != g[m] &&

@@ -1,6 +1,9 @@
-n.d(t, { A: () => l });
+n.d(t, {
+    A: () => l,
+});
 var i = n(627968),
     r = n(397927);
+
 function l(e) {
     (0, r.mMO)(async () => {
         let { default: t } = await Promise.all([n.e("63379"), n.e("72668")]).then(n.bind(n, 404128));
@@ -31,7 +34,12 @@ function l(e) {
                             });
                     }
                     return e;
-                })({ guildId: e }, n),
+                })(
+                    {
+                        guildId: e,
+                    },
+                    n,
+                ),
             );
     });
 }

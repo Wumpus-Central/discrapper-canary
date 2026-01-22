@@ -1,4 +1,6 @@
-i.d(e, { default: () => D });
+i.d(e, {
+    default: () => D,
+});
 var n = i(627968),
     s = i(64700),
     a = i(731738),
@@ -14,12 +16,17 @@ var n = i(627968),
     f = i(386936),
     h = i(985018),
     p = i(818639);
+
 function D(t) {
     let { transitionState: e, guildId: i, onClose: D } = t,
         b = (0, r.bG)([m.A], () => m.A.getGuild(i));
     if (
         (s.useEffect(() => {
-            (0, S.Q)(i), (0, f.$)(f.s.MODAL_VIEWED, i), o.A.increment({ name: a.K.DM_SETTINGS_UPSELL_VIEW });
+            (0, S.Q)(i),
+                (0, f.$)(f.s.MODAL_VIEWED, i),
+                o.A.increment({
+                    name: a.K.DM_SETTINGS_UPSELL_VIEW,
+                });
         }, [i]),
         null == b)
     )
@@ -40,7 +47,9 @@ function D(t) {
             transitionState: e,
             onClose: D,
             title: h.intl.string(h.t.w2BvnL),
-            subtitle: h.intl.format(h.t.Depjkv, { guild_name: b.name }),
+            subtitle: h.intl.format(h.t.Depjkv, {
+                guild_name: b.name,
+            }),
             actions: [
                 {
                     text: h.intl.string(h.t.PsWbcp),

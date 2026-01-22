@@ -1,4 +1,7 @@
-a.r(r), a.d(r, { default: () => t });
+a.r(r),
+    a.d(r, {
+        default: () => t,
+    });
 var t = {
     payButton: "Заплатить",
     "payButton.redirecting": "Перенаправление...",
@@ -23,7 +26,7 @@ var t = {
     "creditCard.cvcField.placeholder.3digits": "3 цифры",
     "creditCard.taxNumber.placeholder": "ГГММДД / 0123456789",
     installments: "Количество платежей",
-    installmentOption: "%{times}\xD7 %{partialValue}",
+    installmentOption: "%{times}\xd7 %{partialValue}",
     installmentOptionMonths: "%{times} мес.",
     "installments.oneTime": "Одноразовый платеж",
     "installments.installments": "Рассрочка",
@@ -41,7 +44,7 @@ var t = {
     "idealIssuer.selectField.title": "Банк",
     "idealIssuer.selectField.placeholder": "Выберите банк",
     "creditCard.success": "Платеж успешно завершен",
-    loading: "Загрузка\u2026",
+    loading: "Загрузка…",
     continue: "Продолжить",
     continueTo: "Перейти к",
     "wechatpay.timetopay": "У вас %@ на оплату",
@@ -151,10 +154,10 @@ var t = {
     "select.provinceOrTerritory": "Выберите провинцию или территорию",
     "select.country": "Выберите страну",
     "select.noOptionsFound": "Вариантов не найдено",
-    "select.filter.placeholder": "Поиск\u2026",
+    "select.filter.placeholder": "Поиск…",
     "telephoneNumber.invalid": "Недействительный номер телефона",
     qrCodeOrApp: "или",
-    "paypal.processingPayment": "Платеж обрабатывается\u2026",
+    "paypal.processingPayment": "Платеж обрабатывается…",
     generateQRCode: "Создать QR-код",
     "await.waitForConfirmation": "Ожидание подтверждения",
     "mbway.confirmPayment": "Подтвердите оплату в приложении MB WAY",
@@ -211,7 +214,7 @@ var t = {
     "bacs.bankLocationId.invalid": "Неверный код банка",
     "bacs.consent.amount": "Выражаю согласие на списание вышеуказанной суммы с моего банковского счета.",
     "bacs.consent.account":
-        "Подтверждаю, что счет оформлен на мое имя и что я \u2013 единственное лицо, имеющее право подписи, разрешающей прямое дебетование средств со счета.",
+        "Подтверждаю, что счет оформлен на мое имя и что я – единственное лицо, имеющее право подписи, разрешающей прямое дебетование средств со счета.",
     edit: "Изменить",
     "bacs.confirm": "Подтвердить и оплатить",
     "bacs.result.introduction": "Загрузить распоряжение прямого дебетования (DDI / поручение)",
@@ -247,7 +250,7 @@ var t = {
     "onlineBankingPL.termsAndConditions":
         "Продолжая, вы соглашаетесь с %#правилами%# и %#обязательствами в отношении данных%# Przelewy24",
     "ctp.loading.poweredByCtp": "На платформе Click to Pay",
-    "ctp.loading.intro": "Проверка наличия сохраненных карт Click to Pay\u2026",
+    "ctp.loading.intro": "Проверка наличия сохраненных карт Click to Pay…",
     "ctp.login.title": "Перейти на Click to Pay",
     "ctp.login.subtitle": "Для продолжения введите адрес эл. почты, связанный с Click to Pay.",
     "ctp.login.inputLabel": "Эл. почта",
@@ -267,12 +270,12 @@ var t = {
     "ctp.cards.expiredCard": "Просрочена",
     "ctp.manualCardEntry": "Ввод данных карты вручную",
     "ctp.aria.infoModalButton": "Что такое Click to Pay",
-    "ctp.infoPopup.title": "Click to Pay \u2013 удобная бесконтактная оплата онлайн",
+    "ctp.infoPopup.title": "Click to Pay – удобная бесконтактная оплата онлайн",
     "ctp.infoPopup.subtitle":
         "Быстрый безопасный способ оплаты, поддерживаемый Mastercard, Visa и другими платежными картами.",
     "ctp.infoPopup.benefit1": "Для обеспечения безопасности ваших данных Click to Pay использует шифрование",
     "ctp.infoPopup.benefit2": "Используйте его в магазинах по всему миру",
-    "ctp.infoPopup.benefit3": "Беспроблемные платежи в будущем \u2014 настройка требуется только один раз",
+    "ctp.infoPopup.benefit3": "Беспроблемные платежи в будущем — настройка требуется только один раз",
     "ctp.errors.AUTH_INVALID": "Аутентификация недействительна",
     "ctp.errors.NOT_FOUND":
         "Учетная запись не найдена. Введите действительный адрес эл. почты или продолжите ввод карты вручную",

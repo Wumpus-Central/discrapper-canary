@@ -70,7 +70,9 @@ e.exports = function (e) {
             end: ">",
         },
         l = [
-            e.COMMENT("#", "$", { contains: [s] }),
+            e.COMMENT("#", "$", {
+                contains: [s],
+            }),
             e.COMMENT("^=begin", "^=end", {
                 contains: [s],
                 relevance: 10,
@@ -131,12 +133,24 @@ e.exports = function (e) {
                     begin: /%[qQwWx]?\|/,
                     end: /\|/,
                 },
-                { begin: /\B\?(\\\d{1,3})/ },
-                { begin: /\B\?(\\x[A-Fa-f0-9]{1,2})/ },
-                { begin: /\B\?(\\u\{?[A-Fa-f0-9]{1,6}\}?)/ },
-                { begin: /\B\?(\\M-\\C-|\\M-\\c|\\c\\M-|\\M-|\\C-\\M-)[\x20-\x7e]/ },
-                { begin: /\B\?\\(c|C-)[\x20-\x7e]/ },
-                { begin: /\B\?\\?\S/ },
+                {
+                    begin: /\B\?(\\\d{1,3})/,
+                },
+                {
+                    begin: /\B\?(\\x[A-Fa-f0-9]{1,2})/,
+                },
+                {
+                    begin: /\B\?(\\u\{?[A-Fa-f0-9]{1,6}\}?)/,
+                },
+                {
+                    begin: /\B\?(\\M-\\C-|\\M-\\c|\\c\\M-|\\M-|\\C-\\M-)[\x20-\x7e]/,
+                },
+                {
+                    begin: /\B\?\\(c|C-)[\x20-\x7e]/,
+                },
+                {
+                    begin: /\B\?\\?\S/,
+                },
                 {
                     begin: t.concat(/<<[-~]?'?/, t.lookahead(/(\w+)(?=\W)[^\n]*\n(?:[^\n]*\n)*?\s*\1\b/)),
                     contains: [
@@ -155,17 +169,31 @@ e.exports = function (e) {
             className: "number",
             relevance: 0,
             variants: [
-                { begin: `\\b(${d})(\\.(${f}))?([eE][+-]?(${f})|r)?i?\\b` },
-                { begin: "\\b0[dD][0-9](_?[0-9])*r?i?\\b" },
-                { begin: "\\b0[bB][0-1](_?[0-1])*r?i?\\b" },
-                { begin: "\\b0[oO][0-7](_?[0-7])*r?i?\\b" },
-                { begin: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*r?i?\\b" },
-                { begin: "\\b0(_?[0-7])+r?i?\\b" },
+                {
+                    begin: `\\b(${d})(\\.(${f}))?([eE][+-]?(${f})|r)?i?\\b`,
+                },
+                {
+                    begin: "\\b0[dD][0-9](_?[0-9])*r?i?\\b",
+                },
+                {
+                    begin: "\\b0[bB][0-1](_?[0-1])*r?i?\\b",
+                },
+                {
+                    begin: "\\b0[oO][0-7](_?[0-7])*r?i?\\b",
+                },
+                {
+                    begin: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*r?i?\\b",
+                },
+                {
+                    begin: "\\b0(_?[0-7])+r?i?\\b",
+                },
             ],
         },
         _ = {
             variants: [
-                { match: /\(\)/ },
+                {
+                    match: /\(\)/,
+                },
                 {
                     className: "params",
                     begin: /\(/,
@@ -178,7 +206,9 @@ e.exports = function (e) {
         },
         h = {
             match: [/(include|extend)\s+/, i],
-            scope: { 2: "title.class" },
+            scope: {
+                2: "title.class",
+            },
             keywords: a,
         },
         m = [
@@ -202,7 +232,9 @@ e.exports = function (e) {
             {
                 relevance: 0,
                 match: [i, /\.new[. (]/],
-                scope: { 1: "title.class" },
+                scope: {
+                    1: "title.class",
+                },
             },
             {
                 relevance: 0,
@@ -222,7 +254,9 @@ e.exports = function (e) {
                 },
                 contains: [_],
             },
-            { begin: e.IDENT_RE + "::" },
+            {
+                begin: e.IDENT_RE + "::",
+            },
             {
                 className: "symbol",
                 begin: e.UNDERSCORE_IDENT_RE + "(!|\\?)?:",
@@ -231,7 +265,12 @@ e.exports = function (e) {
             {
                 className: "symbol",
                 begin: ":(?!\\s)",
-                contains: [u, { begin: n }],
+                contains: [
+                    u,
+                    {
+                        begin: n,
+                    },
+                ],
                 relevance: 0,
             },
             p,
@@ -309,7 +348,14 @@ e.exports = function (e) {
             aliases: ["rb", "gemspec", "podspec", "thor", "irb"],
             keywords: a,
             illegal: /\/\*/,
-            contains: [e.SHEBANG({ binary: "ruby" })].concat(g).concat(l).concat(m),
+            contains: [
+                e.SHEBANG({
+                    binary: "ruby",
+                }),
+            ]
+                .concat(g)
+                .concat(l)
+                .concat(m),
         }
     );
 };

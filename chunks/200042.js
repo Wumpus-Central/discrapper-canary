@@ -1,4 +1,8 @@
-n.d(t, { A: () => er }), n(321073), n(896048);
+n.d(t, {
+    A: () => er,
+}),
+    n(321073),
+    n(896048);
 var i = n(627968),
     r = n(64700),
     l = n(503698),
@@ -55,9 +59,11 @@ let X = !I.isPlatformEmbedded && !1,
               muted: !0,
           })
         : null;
+
 function J(e) {
     e.preventDefault();
 }
+
 function q(e) {
     (0, u.L3)(e, async () => {
         let { default: e } = await n.e("86437").then(n.bind(n, 171300));
@@ -157,22 +163,33 @@ let $ = r.memo(function (e) {
               })
             : null;
     });
+
 function et() {
     d.A.setInputLocked(!0, V.A.getTargetPID());
 }
+
 function en(e) {
     let t = U.A.isInputLocked(V.A.getTargetPID());
     "alt" !== e.key.toLowerCase() ||
         t ||
         ("keyup" === e.type.toLowerCase()
-            ? j._.dispatch(W.jej.OVERLAY_V3_SHOW_WIDGETS, { show: !0 })
-            : "keydown" === e.type.toLowerCase() && j._.dispatch(W.jej.OVERLAY_V3_SHOW_WIDGETS, { show: !1 }));
+            ? j._.dispatch(W.jej.OVERLAY_V3_SHOW_WIDGETS, {
+                  show: !0,
+              })
+            : "keydown" === e.type.toLowerCase() &&
+              j._.dispatch(W.jej.OVERLAY_V3_SHOW_WIDGETS, {
+                  show: !1,
+              }));
 }
+
 function ei() {
     return (0, o.bG)([z.A], () => z.A.hasRenderDebugMode(T.x7.WindowContainer))
-        ? (0, i.jsx)("div", { className: B.N1 })
+        ? (0, i.jsx)("div", {
+              className: B.N1,
+          })
         : null;
 }
+
 function er(e) {
     var t, n;
     let l,
@@ -244,7 +261,9 @@ function er(e) {
                 h = M.A.isNotificationDisabled(K.KS.ActivityInvite),
                 f = [];
             !c &&
-                (f.push({ type: K.Jr.WELCOME }),
+                (f.push({
+                    type: K.Jr.WELCOME,
+                }),
                 !p &&
                     (a && o
                         ? f.push({
@@ -266,13 +285,18 @@ function er(e) {
                 null != u.current && clearTimeout(u.current),
                 (u.current = setTimeout(() => {
                     d.A.overlayMounted(...f);
-                }, 1000));
+                }, 1e3));
         }),
         (0, p.l0)(() => {
             null != u.current && (clearTimeout(u.current), (u.current = null));
         }),
         r.useEffect(() => {
-            if ((j._.dispatch(W.jej.OVERLAY_V3_SHOW_WIDGETS, { show: !0 }), P))
+            if (
+                (j._.dispatch(W.jej.OVERLAY_V3_SHOW_WIDGETS, {
+                    show: !0,
+                }),
+                P)
+            )
                 return (
                     (0, s.closeAllModalsInContext)(c.KX8),
                     I.addEventListener("contextmenu", J, !1),
@@ -311,8 +335,12 @@ function er(e) {
                                       focused: L,
                                   }),
                               (0, i.jsx)(_.A, {}),
-                              (0, i.jsx)(D.A, { locked: P }),
-                              (0, i.jsx)(c.N9M, { appContext: W.BRT.OVERLAY }),
+                              (0, i.jsx)(D.A, {
+                                  locked: P,
+                              }),
+                              (0, i.jsx)(c.N9M, {
+                                  appContext: W.BRT.OVERLAY,
+                              }),
                               (0, i.jsx)(ei, {}),
                           ],
                       }),

@@ -1,4 +1,7 @@
-n.d(t, { A: () => g }), n(896048);
+n.d(t, {
+    A: () => g,
+}),
+    n(896048);
 var r = n(554146),
     i = n(439372),
     a = n(826673),
@@ -11,6 +14,7 @@ var r = n(554146),
     f = n(533406),
     p = n(188275),
     _ = n(355097);
+
 function h(e, t, n) {
     return (
         t in e
@@ -31,7 +35,9 @@ class m extends i.A {
             h(this, "_didConnectionOpen", !1),
             h(this, "_didUserSettingsProtoLoad", !1),
             h(this, "_didGamesSeenLoad", !1),
-            h(this, "actions", { POST_CONNECTION_OPEN: () => this._handlePostConnectionOpen() }),
+            h(this, "actions", {
+                POST_CONNECTION_OPEN: () => this._handlePostConnectionOpen(),
+            }),
             h(
                 this,
                 "stores",
@@ -59,7 +65,9 @@ class m extends i.A {
                     this._didConnectionOpen &&
                     this._didUserSettingsProtoLoad &&
                     this._didGamesSeenLoad &&
-                    (0, d.xD)({ location: "social-layer-storefront-announcement-modal" }) &&
+                    (0, d.xD)({
+                        location: "social-layer-storefront-announcement-modal",
+                    }) &&
                     ((this._didAttemptToOpenModal = !0), !(0, a.k8)(r.M.GAME_SHOP_ANNOUNCEMENT_MODAL))
                 ) {
                     if (null != c.A.getGuild((0, u.zf)())) return void (0, f.B)();

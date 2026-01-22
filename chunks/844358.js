@@ -1,4 +1,7 @@
-n.d(t, { A: () => A }), n(896048);
+n.d(t, {
+    A: () => A,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(835245),
@@ -11,6 +14,7 @@ var r = n(627968),
     p = n(613057),
     f = n(985018),
     h = n(742249);
+
 function A(e) {
     let { applicationId: t } = e,
         [A, g] = i.useState(null),

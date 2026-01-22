@@ -1,10 +1,13 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r,
     i = n(311907),
     a = n(73153),
     s = n(954571),
     o = n(765682),
     l = n(652215);
+
 function c(e, t, n) {
     return (
         t in e
@@ -18,7 +21,9 @@ function c(e, t, n) {
         e
     );
 }
-let u = { permissionStates: {} };
+let u = {
+    permissionStates: {},
+};
 class d extends (r = i.Ay.DeviceSettingsStore) {
     initialize(e) {
         u = null != e ? e : u;
@@ -43,7 +48,9 @@ class d extends (r = i.Ay.DeviceSettingsStore) {
                 });
     }
     constructor() {
-        super(a.h, { SET_NATIVE_PERMISSION: (e) => this.handleSetNativePermission(e) });
+        super(a.h, {
+            SET_NATIVE_PERMISSION: (e) => this.handleSetNativePermission(e),
+        });
     }
 }
 c(d, "displayName", "NativePermissionStore"), c(d, "persistKey", "NativePermissionsStore");

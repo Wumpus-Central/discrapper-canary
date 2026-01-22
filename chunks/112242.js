@@ -1,4 +1,7 @@
-n.d(t, { A: () => G }), n(938796);
+n.d(t, {
+    A: () => G,
+}),
+    n(938796);
 var r = n(627968),
     i = n(64700),
     a = n(284009),
@@ -34,6 +37,7 @@ var r = n(627968),
     j = n(652215),
     M = n(985018),
     k = n(342444);
+
 function U(e) {
     let { application: t, sku: n, isEmbeddedIAP: i } = e;
     return !0 !== i
@@ -41,7 +45,9 @@ function U(e) {
         : (0, r.jsxs)("div", {
               className: k.qY,
               children: [
-                  (0, r.jsx)(E.A, { game: t }),
+                  (0, r.jsx)(E.A, {
+                      game: t,
+                  }),
                   (0, r.jsx)(u.Heading, {
                       variant: "heading-lg/bold",
                       className: k.nI,
@@ -50,6 +56,7 @@ function U(e) {
               ],
           });
 }
+
 function G(e) {
     let { hasLegalTermsFlash: t, legalTermsNodeRef: n, onPaymentSourceChange: a, handlePaymentSourceAdd: E } = e,
         {
@@ -95,7 +102,9 @@ function G(e) {
             B === ei &&
             ei !== I.B &&
             null == eu &&
-            (0, d.QX)(es.applicationId, es.id, ei, { isGift: J })
+            (0, d.QX)(es.applicationId, es.id, ei, {
+                isGift: J,
+            })
                 .then(() => {
                     Q(null);
                 })
@@ -109,7 +118,9 @@ function G(e) {
     return (0, r.jsxs)("div", {
         className: k.Du,
         children: [
-            (0, r.jsx)(y.j, { paymentRestrictionBannerType: eg }),
+            (0, r.jsx)(y.j, {
+                paymentRestrictionBannerType: eg,
+            }),
             ed
                 ? (0, r.jsx)(
                       p.A,
@@ -141,8 +152,15 @@ function G(e) {
                 sku: es,
                 isEmbeddedIAP: z,
             }),
-            eb && (0, r.jsx)(x.A, { sku: es }),
-            null != ee ? (0, r.jsx)(O.Z, { giftRecipient: ee }) : null,
+            eb &&
+                (0, r.jsx)(x.A, {
+                    sku: es,
+                }),
+            null != ee
+                ? (0, r.jsx)(O.Z, {
+                      giftRecipient: ee,
+                  })
+                : null,
             (0, r.jsx)(u.D0$, {
                 label: J ? M.intl.string(M.t.PEjaCx) : M.intl.string(M.t.sail9P),
                 children:

@@ -1,4 +1,6 @@
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -11,6 +13,7 @@ var i = n(311907),
     d = n(652215),
     f = n(996988),
     p = n(985018);
+
 function _(e) {
     let { platformType: t, icon: n, onAction: _ } = e,
         { newestAnalyticsLocation: h } = (0, s.Ay)(),
@@ -20,7 +23,10 @@ function _(e) {
     let E = (e) => {
         e.stopPropagation();
         let n = t === d.fg2.XBOX;
-        null == _ || _({ action: n ? "PRESS_CONNECT_XBOX_BUTTON" : "PRESS_CONNECT_PLAYSTATION_BUTTON" }),
+        null == _ ||
+            _({
+                action: n ? "PRESS_CONNECT_XBOX_BUTTON" : "PRESS_CONNECT_PLAYSTATION_BUTTON",
+            }),
             (0, o.A)({
                 platformType: t,
                 location: h,
@@ -28,7 +34,9 @@ function _(e) {
     };
     return (0, r.jsx)(u.FD, {
         icon: n,
-        text: p.intl.formatToPlainString(p.t.XWSHTb, { platform: a.A.get(t).name }),
+        text: p.intl.formatToPlainString(p.t.XWSHTb, {
+            platform: a.A.get(t).name,
+        }),
         fullWidth: !g,
         onClick: E,
     });

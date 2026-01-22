@@ -1,4 +1,7 @@
-n.d(t, { A: () => f }), n(183875);
+n.d(t, {
+    A: () => f,
+}),
+    n(183875);
 var r = n(627968),
     i = n(64700),
     a = n(436857),
@@ -8,11 +11,24 @@ var r = n(627968),
     c = n(307600),
     u = n(637557);
 let d = 1024;
+
 function f(e) {
     return {
         react(t, n, f) {
             if (e.enableBuildOverrides && (0, o.vS)(t.target))
-                return (0, r.jsx)(i.Fragment, { children: (0, r.jsx)(l.A, { url: t.target }, t.target) }, f.key);
+                return (0, r.jsx)(
+                    i.Fragment,
+                    {
+                        children: (0, r.jsx)(
+                            l.A,
+                            {
+                                url: t.target,
+                            },
+                            t.target,
+                        ),
+                    },
+                    f.key,
+                );
             let p = n(t.content, f),
                 _ = "string" == typeof t.title && 0 !== t.title.length ? t.title : (0, a.$)(t.content),
                 h = () => (0, u.m)(t),

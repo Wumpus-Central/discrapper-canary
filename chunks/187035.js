@@ -1,4 +1,7 @@
-n.d(t, { A: () => B }), n(896048);
+n.d(t, {
+    A: () => B,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -31,6 +34,7 @@ var r = n(627968),
     w = n(985018),
     P = n(256651),
     L = n(473169);
+
 function k(e, t, n) {
     return (
         t in e
@@ -63,11 +67,18 @@ class D extends i.PureComponent {
                       onClick: t,
                   }),
               })
-            : (0, r.jsx)(d.KE, { className: L.eT });
+            : (0, r.jsx)(d.KE, {
+                  className: L.eT,
+              });
     }
     renderSpinner(e) {
         return (0, r.jsxs)(d.Ay, {
-            children: [(0, r.jsx)(d.hE, { children: e }), (0, r.jsx)(d.CK, {})],
+            children: [
+                (0, r.jsx)(d.hE, {
+                    children: e,
+                }),
+                (0, r.jsx)(d.CK, {}),
+            ],
         });
     }
     renderInvalidGuildTemplate() {
@@ -81,7 +92,9 @@ class D extends i.PureComponent {
                     className: l()(L.Ot, L.QB),
                     children: w.intl.string(w.t.C7ZRNw),
                 }),
-                (0, r.jsx)(d.tK, { children: w.intl.string(w.t.A6MwXE) }),
+                (0, r.jsx)(d.tK, {
+                    children: w.intl.string(w.t.A6MwXE),
+                }),
                 this.renderButton(w.intl.string(w.t.fIv16B), this.handleContinue),
             ],
         });
@@ -93,7 +106,9 @@ class D extends i.PureComponent {
                     className: L.QB,
                     children: w.intl.string(w.t.csrAMJ),
                 }),
-                (0, r.jsx)(d.tK, { children: w.intl.string(w.t["m1+IBn"]) }),
+                (0, r.jsx)(d.tK, {
+                    children: w.intl.string(w.t["m1+IBn"]),
+                }),
                 this.renderButton(w.intl.string(w.t.fIv16B), this.handleContinue),
             ],
         });
@@ -103,14 +118,20 @@ class D extends i.PureComponent {
         return (o()(null != e, "guild template must not be null"), e.state === I.QB.RESOLVING)
             ? (0, r.jsx)(d.Ay, {
                   className: P.sL,
-                  children: (0, r.jsx)(A.A, { guildTemplate: e }),
+                  children: (0, r.jsx)(A.A, {
+                      guildTemplate: e,
+                  }),
               })
-            : (0, r.jsx)(U, { guildTemplate: e });
+            : (0, r.jsx)(U, {
+                  guildTemplate: e,
+              });
     }
     renderContinue() {
         return (0, r.jsxs)(d.Ay, {
             children: [
-                (0, r.jsx)(d.hE, { children: w.intl.string(w.t.fOc4gn) }),
+                (0, r.jsx)(d.hE, {
+                    children: w.intl.string(w.t.fOc4gn),
+                }),
                 this.renderButton(w.intl.string(w.t.fIv16B), this.handleContinue),
             ],
         });
@@ -154,6 +175,7 @@ class D extends i.PureComponent {
             });
     }
 }
+
 function B(e) {
     let t = {
         guildTemplate: (0, c.bG)([f.A], () => f.A.getGuildTemplate(e.code)),
@@ -181,6 +203,7 @@ function B(e) {
         })({}, e, t),
     );
 }
+
 function U(e) {
     let { guildTemplate: t } = e,
         { form: n, handleSubmit: i } = (0, p.A)(t, !1);
@@ -205,7 +228,13 @@ function U(e) {
     return (0, r.jsx)(S.A, {
         className: P.sL,
         children: () => [
-            (0, r.jsx)(m.A, { guildTemplate: t }, "template"),
+            (0, r.jsx)(
+                m.A,
+                {
+                    guildTemplate: t,
+                },
+                "template",
+            ),
             (0, r.jsx)(
                 "div",
                 {

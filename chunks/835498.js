@@ -1,4 +1,7 @@
-n.d(t, { A: () => I }), n(896048);
+n.d(t, {
+    A: () => I,
+}),
+    n(896048);
 var r,
     i = n(735438),
     a = n.n(i),
@@ -9,6 +12,7 @@ var r,
     u = n(430452),
     d = n(287809),
     f = n(731854);
+
 function p(e, t, n) {
     return (
         t in e
@@ -34,18 +38,27 @@ let _ = {
         maxSamples: 256,
         numFrequentlyItems: 1 / 0,
     };
+
 function m(e) {
     return {
-        [f.oh.AUDIO_INPUT]: { getCurrentDeviceId: (e) => e.getInputDeviceId() },
-        [f.oh.AUDIO_OUTPUT]: { getCurrentDeviceId: (e) => e.getOutputDeviceId() },
-        [f.oh.VIDEO_INPUT]: { getCurrentDeviceId: (e) => e.getVideoDeviceId() },
+        [f.oh.AUDIO_INPUT]: {
+            getCurrentDeviceId: (e) => e.getInputDeviceId(),
+        },
+        [f.oh.AUDIO_OUTPUT]: {
+            getCurrentDeviceId: (e) => e.getOutputDeviceId(),
+        },
+        [f.oh.VIDEO_INPUT]: {
+            getCurrentDeviceId: (e) => e.getVideoDeviceId(),
+        },
     }[e];
 }
+
 function g(e, t) {
     let { oldId: n } = t;
     if (!S.isSampling(e)) return !1;
     S.stopSampling(e, n), S.startSampling(e);
 }
+
 function E(e) {
     var t;
     let { context: n, userId: r, speakingFlags: i } = e;
@@ -59,6 +72,7 @@ function E(e) {
         S.startSampling(s);
     }
 }
+
 function b() {
     S.reset();
 }
@@ -90,7 +104,11 @@ class v extends (r = s.Ay.PersistedStore) {
         });
     }
     track(e, t, n) {
-        null == O[e][t] && (O[e][t] = 0), (O[e][t] += n), A[e].track(t, { usesSinceLastTrack: n });
+        null == O[e][t] && (O[e][t] = 0),
+            (O[e][t] += n),
+            A[e].track(t, {
+                usesSinceLastTrack: n,
+            });
     }
     isSampling(e) {
         return y[e].isRunning();

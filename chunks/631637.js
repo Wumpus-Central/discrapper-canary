@@ -1,4 +1,6 @@
-n.d(t, { A: () => A });
+n.d(t, {
+    A: () => A,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -9,6 +11,7 @@ var i = n(311907),
     d = n(695192),
     c = n(87746),
     u = n(287809);
+
 function A(e) {
     let { channel: t } = e,
         n = (0, i.bG)([u.default], () => u.default.getCurrentUser()),
@@ -23,11 +26,21 @@ function A(e) {
               id: "dev tools",
               label: "Dev Tools",
               children: [
-                  (0, r.jsx)(l.rXV, { children: A }),
-                  (0, r.jsx)(l.rXV, { children: g }),
-                  (0, r.jsx)(l.rXV, { children: b }),
-                  (0, r.jsx)(l.rXV, { children: f }),
-                  (0, r.jsx)(l.rXV, { children: p }),
+                  (0, r.jsx)(l.rXV, {
+                      children: A,
+                  }),
+                  (0, r.jsx)(l.rXV, {
+                      children: g,
+                  }),
+                  (0, r.jsx)(l.rXV, {
+                      children: b,
+                  }),
+                  (0, r.jsx)(l.rXV, {
+                      children: f,
+                  }),
+                  (0, r.jsx)(l.rXV, {
+                      children: p,
+                  }),
               ],
           });
 }

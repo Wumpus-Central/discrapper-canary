@@ -22,6 +22,6 @@ let i = new Set([r.rX.MULTIPLE_CHOICE, r.rX.TEXT_INPUT, r.rX.PARAGRAPH]),
     c = 8,
     u = 150,
     d = 150,
-    f = 1000,
+    f = 1e3,
     p = "Membership Gating",
     _ = "in-app-member-verification";

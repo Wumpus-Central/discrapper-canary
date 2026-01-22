@@ -1,10 +1,14 @@
-n.d(t, { D: () => h }), n(896048);
+n.d(t, {
+    D: () => h,
+}),
+    n(896048);
 var r,
     i = n(627968),
     a = n(64700),
     s = n(531142),
     o = n(426333),
     l = n(650583);
+
 function c(e, t, n) {
     return (
         t in e
@@ -18,6 +22,7 @@ function c(e, t, n) {
         e
     );
 }
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,6 +39,7 @@ function u(e) {
     }
     return e;
 }
+
 function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -46,6 +52,7 @@ function d(e, t) {
     }
     return n;
 }
+
 function f(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -57,6 +64,7 @@ function f(e, t) {
         e
     );
 }
+
 function p(e, t) {
     if (null == e) return {};
     var n,
@@ -73,6 +81,7 @@ function p(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function _(e, t) {
     if (null == e) return {};
     var n,
@@ -88,7 +97,15 @@ class h extends (r = a.Component) {
         let e = this.props,
             { tag: t, focusProps: n, innerRef: r, onClick: i, role: s, tabIndex: o, ignoreKeyPress: l } = e,
             c = p(e, ["tag", "focusProps", "innerRef", "onClick", "role", "tabIndex", "ignoreKeyPress"]);
-        return a.createElement(t, u({ ref: this.setRef }, c));
+        return a.createElement(
+            t,
+            u(
+                {
+                    ref: this.setRef,
+                },
+                c,
+            ),
+        );
     }
     renderInner() {
         let e = this.props,
@@ -123,7 +140,12 @@ class h extends (r = a.Component) {
     render() {
         return this.context
             ? this.renderNonInteractive()
-            : (0, i.jsx)(o.vN, f(u({}, this.props.focusProps), { children: this.renderInner() }));
+            : (0, i.jsx)(
+                  o.vN,
+                  f(u({}, this.props.focusProps), {
+                      children: this.renderInner(),
+                  }),
+              );
     }
     constructor(...e) {
         super(...e),

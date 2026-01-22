@@ -1,4 +1,13 @@
-n.d(t, { A: () => e_ }), n(896048), n(680155), n(323874), n(14289), n(35956), n(747238), n(812715);
+n.d(t, {
+    A: () => e_,
+}),
+    n(896048),
+    n(680155),
+    n(323874),
+    n(14289),
+    n(35956),
+    n(747238),
+    n(812715);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -64,6 +73,7 @@ var r = n(627968),
     ed = n(522303),
     ep = n(595411),
     ef = n(602557);
+
 function eh(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -90,9 +100,12 @@ function eh(e) {
     return e;
 }
 let eA = i.createContext({});
+
 function eg(e) {
     let { onLoadComplete: t } = e,
-        { enabled: n } = (0, w.Z)({ location: en.rE.QUEST_HOME_DESKTOP }),
+        { enabled: n } = (0, w.Z)({
+            location: en.rE.QUEST_HOME_DESKTOP,
+        }),
         l = (0, u.bG)([h.A], () => h.A.useReducedMotion),
         s = (0, u.bG)([R.A], () => R.A.isFocused()),
         { ref: o, inViewport: c } = (0, q.p)(),
@@ -131,6 +144,7 @@ function eg(e) {
         onLoad: t,
     });
 }
+
 function em(e) {
     let { onLoadComplete: t } = e;
     return (0, r.jsxs)(r.Fragment, {
@@ -154,12 +168,17 @@ function em(e) {
         ],
     });
 }
+
 function eb(e) {
     let { renderBanner: t, children: n, header: l, withQuestsGrid: s = !0 } = e,
         { isInDiscoverQuestHomeTab: o, onScroll: c, onSelectTab: u, scrollerRef: d, selectedTab: p } = i.useContext(eA),
         { takeover: f, isLoading: h } = (0, Y._b)(),
-        { enabled: A } = (0, w.Z)({ location: en.rE.QUEST_HOME_DESKTOP }),
-        { enabled: g } = H.XM.useConfig({ location: en.rE.QUEST_HOME_DESKTOP }),
+        { enabled: A } = (0, w.Z)({
+            location: en.rE.QUEST_HOME_DESKTOP,
+        }),
+        { enabled: g } = H.XM.useConfig({
+            location: en.rE.QUEST_HOME_DESKTOP,
+        }),
         m = i.useRef(null),
         b = i.useCallback(() => {
             var e;
@@ -187,15 +206,21 @@ function eb(e) {
                     })(),
                     (0, r.jsx)(C.A, {
                         children: (0, r.jsxs)("div", {
-                            className: a()(es.Qs, { [es.HR]: g && !A && p !== Y.NC.ALL }),
+                            className: a()(es.Qs, {
+                                [es.HR]: g && !A && p !== Y.NC.ALL,
+                            }),
                             children: [
                                 n,
                                 s
                                     ? p === Y.NC.CLAIMED
-                                        ? (0, r.jsx)(X.A, { onSelectTab: u })
+                                        ? (0, r.jsx)(X.A, {
+                                              onSelectTab: u,
+                                          })
                                         : p === Y.NC.PREVIEW_TOOL
                                           ? (0, r.jsx)(K.A, {})
-                                          : (0, r.jsx)(Q.A, { ref: m })
+                                          : (0, r.jsx)(Q.A, {
+                                                ref: m,
+                                            })
                                     : null,
                             ],
                         }),
@@ -214,9 +239,19 @@ let e_ = function (e) {
             return (null == (e = (0, s.B6)(n.pathname, er.BVt.QUEST_HOME)) ? void 0 : e.isExact) === !0;
         }, [n.pathname]),
         O = (0, u.bG)([b.A], () => b.A.getState("quests")),
-        { selectedTab: C, onSelectTab: x, tabs: R } = (0, et.J)({ withClaimedQuestsTab: !h });
+        {
+            selectedTab: C,
+            onSelectTab: x,
+            tabs: R,
+        } = (0, et.J)({
+            withClaimedQuestsTab: !h,
+        });
     i.useLayoutEffect(() => {
-        h && C === Y.NC.CLAIMED && B.A.setState({ tab: Y.NC.ALL });
+        h &&
+            C === Y.NC.CLAIMED &&
+            B.A.setState({
+                tab: Y.NC.ALL,
+            });
     }, [h, C]);
     let { onScroll: M, scrollPosition: H } = (0, v.G)(),
         K = W.A.getState().getUtmCurrentContext(),
@@ -239,11 +274,15 @@ let e_ = function (e) {
                 },
             });
         }, [C]);
-    let { enabled: X } = (0, w.Z)({ location: en.rE.QUEST_HOME_DESKTOP }),
+    let { enabled: X } = (0, w.Z)({
+            location: en.rE.QUEST_HOME_DESKTOP,
+        }),
         $ = i.useCallback(() => {
             X ? window.open(er.X7G.PAID_TERMS_ORBS) : window.open(k.A.getArticleURL(er.MVz.QUESTS_LEARN_MORE));
         }, [X]);
-    (0, E.HU)({ location: ea.intl.string(ea.t.JALI2K) });
+    (0, E.HU)({
+        location: ea.intl.string(ea.t.JALI2K),
+    });
     let ee = X ? ea.intl.format(ea.t.BCBIlp, {}) : ea.intl.format(ea.t.lmMBfy, {}),
         eo = X ? ea.intl.format(ea.t.U9FY0J, {}) : ea.intl.string(ea.t.oWCrBq),
         ec = i.useRef(null),
@@ -265,7 +304,9 @@ let e_ = function (e) {
         i.useEffect(() => {
             I.g.trigger();
         }, []);
-    let ed = (0, F.U)({ location: en.rE.QUEST_PREVIEW_TOOL_2 });
+    let ed = (0, F.U)({
+        location: en.rE.QUEST_PREVIEW_TOOL_2,
+    });
     i.useEffect(() => {
         if (null != O) return;
         let e = new URLSearchParams(n.search),
@@ -301,7 +342,9 @@ let e_ = function (e) {
             t && (0, y.Dr)(d.M.QUEST_HOME_ENTRYPOINT_ONBOARDING);
         }, [t]);
     let ep = i.useCallback(() => {
-            (0, z.navigateToQuestHome)({ fromContent: V.uF.QUEST_HOME_MOVE_CALLOUT_DISCOVER }),
+            (0, z.navigateToQuestHome)({
+                fromContent: V.uF.QUEST_HOME_MOVE_CALLOUT_DISCOVER,
+            }),
                 D.default.track(
                     er.HAw.QUEST_CONTENT_CLICKED,
                     eh(
@@ -319,7 +362,10 @@ let e_ = function (e) {
                 var t, n, r;
                 l.replace(
                     ((n = eh({}, l.location)),
-                    (r = r = { hash: void 0 }),
+                    (r = r =
+                        {
+                            hash: void 0,
+                        }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
                         : (function (e, t) {
@@ -334,13 +380,18 @@ let e_ = function (e) {
                           }),
                     n),
                 ),
-                    null == (t = ec.current) || t.scrollToTop({ animate: !1 }),
+                    null == (t = ec.current) ||
+                        t.scrollToTop({
+                            animate: !1,
+                        }),
                     x(e);
             },
             [l, x],
         );
     return (0, r.jsx)(J.M.Provider, {
-        value: { onAssetLoadComplete: q },
+        value: {
+            onAssetLoadComplete: q,
+        },
         children: (0, r.jsx)(eA.Provider, {
             value: i.useMemo(
                 () => ({
@@ -353,7 +404,9 @@ let e_ = function (e) {
                 [h, M, ef, ec, C],
             ),
             children: (0, r.jsx)("div", {
-                className: a()(es.kL, { [es.KY]: !t }),
+                className: a()(es.kL, {
+                    [es.KY]: !t,
+                }),
                 children: h
                     ? (0, r.jsx)(eb, {
                           renderBanner: () =>
@@ -366,7 +419,9 @@ let e_ = function (e) {
                                       onClick: ep,
                                   }),
                                   className: es.Gj,
-                                  children: (0, r.jsx)(em, { onLoadComplete: q }),
+                                  children: (0, r.jsx)(em, {
+                                      onLoadComplete: q,
+                                  }),
                               }),
                           header: (0, r.jsx)(j.S, {
                               selectedTabId: C,
@@ -424,8 +479,12 @@ let e_ = function (e) {
                                     }),
                                     className: a()(es.cI, es.GF),
                                     children: [
-                                        (0, r.jsx)("div", { className: a()(es.nY, es.vu) }),
-                                        (0, r.jsx)(eg, { onLoadComplete: q }),
+                                        (0, r.jsx)("div", {
+                                            className: a()(es.nY, es.vu),
+                                        }),
+                                        (0, r.jsx)(eg, {
+                                            onLoadComplete: q,
+                                        }),
                                     ],
                                 }),
                             header: (0, r.jsx)(j.S, {
@@ -455,16 +514,26 @@ let e_ = function (e) {
                                     }),
                                     className: es.cI,
                                     children: [
-                                        (0, r.jsx)("div", { className: es.nY }),
-                                        (0, r.jsx)(eg, { onLoadComplete: q }),
+                                        (0, r.jsx)("div", {
+                                            className: es.nY,
+                                        }),
+                                        (0, r.jsx)(eg, {
+                                            onLoadComplete: q,
+                                        }),
                                     ],
                                 }),
                             header: (0, r.jsxs)(T.Ay, {
                                 variant: T.Z5.OVERLAY,
                                 children: [
-                                    (0, r.jsx)("div", { className: es.T_ }),
-                                    (0, r.jsx)(T.ns, { scrollPosition: H }),
-                                    (0, r.jsx)(T.T4, { icon: p.r2v }),
+                                    (0, r.jsx)("div", {
+                                        className: es.T_,
+                                    }),
+                                    (0, r.jsx)(T.ns, {
+                                        scrollPosition: H,
+                                    }),
+                                    (0, r.jsx)(T.T4, {
+                                        icon: p.r2v,
+                                    }),
                                 ],
                             }),
                             children: (0, r.jsx)("div", {

@@ -1,4 +1,6 @@
-r.d(t, { A: () => l });
+r.d(t, {
+    A: () => l,
+});
 var n = r(251781),
     o = r(757728),
     a = Object.prototype.propertyIsEnumerable,

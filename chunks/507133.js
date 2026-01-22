@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968),
     i = n(64700),
     l = n(397927),
@@ -39,7 +41,10 @@ class u extends i.PureComponent {
                         }
                         return e;
                     })({}, n)),
-                    (l = l = { user: t }),
+                    (l = l =
+                        {
+                            user: t,
+                        }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
                         : (function (e, t) {

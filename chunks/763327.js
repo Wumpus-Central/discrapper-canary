@@ -1,4 +1,7 @@
-n.d(t, { A: () => m }), n(896048);
+n.d(t, {
+    A: () => m,
+}),
+    n(896048);
 var l = n(627968),
     r = n(64700),
     i = n(503698),
@@ -9,6 +12,7 @@ var l = n(627968),
     c = n(218093),
     d = n(985018),
     p = n(150211);
+
 function m(e) {
     var t, n, i, m;
     let { defaultCategory: f, onCategoryChange: g, className: j } = e,

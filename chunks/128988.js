@@ -1,4 +1,6 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var r = n(627968),
     l = n(64700),
     i = n(688807),
@@ -10,6 +12,7 @@ var r = n(627968),
     d = n(463259),
     f = n(18983),
     p = n(330966);
+
 function b(e) {
     var t;
     let { scrollerRef: n } = e,
@@ -115,7 +118,9 @@ function b(e) {
         I = m.y - A;
     return (0, r.jsx)("div", {
         className: p.kL,
-        style: { transform: "translate3d(".concat(w, "px, ").concat(I, "px, 0)") },
+        style: {
+            transform: "translate3d(".concat(w, "px, ").concat(I, "px, 0)"),
+        },
         children: j,
     });
 }

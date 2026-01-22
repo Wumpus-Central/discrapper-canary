@@ -6,9 +6,11 @@ n.r(t),
 var r,
     i = n(64700),
     a = n(340287);
+
 function s(e, t) {
     (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), o(e, t);
 }
+
 function o(e, t) {
     return (o =
         Object.setPrototypeOf ||
@@ -16,6 +18,7 @@ function o(e, t) {
             return (e.__proto__ = t), e;
         })(e, t);
 }
+
 function l(e, t) {
     if (null == e) return {};
     var n,
@@ -25,13 +28,16 @@ function l(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
+
 function c(e) {
     if (void 0 === e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return e;
 }
+
 function u(e, t, n) {
     return e === t || (e.correspondingElement ? e.correspondingElement.classList.contains(n) : e.classList.contains(n));
 }
+
 function d(e, t, n) {
     if (e === t) return !0;
     for (; e.parentNode || e.host; ) {
@@ -40,6 +46,7 @@ function d(e, t, n) {
     }
     return e;
 }
+
 function f(e) {
     return document.documentElement.clientWidth <= e.clientX || document.documentElement.clientHeight <= e.clientY;
 }
@@ -71,6 +78,7 @@ var p = function () {
     m = {},
     g = ["touchstart", "touchmove"],
     E = "ignore-react-onclickoutside";
+
 function b(e, t) {
     var n = {};
     return -1 !== g.indexOf(t) && r && (n.passive = !e.props.preventDefault), n;

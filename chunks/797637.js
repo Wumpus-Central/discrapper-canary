@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -12,10 +14,13 @@ let c = () => {
         target: s.Do,
     });
 };
+
 function u() {
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)("span", { children: l.intl.string(l.t.OJmNR9) }),
+            (0, r.jsx)("span", {
+                children: l.intl.string(l.t.OJmNR9),
+            }),
             (0, r.jsx)("br", {}),
             (0, r.jsx)("br", {}),
             (0, r.jsx)("span", {

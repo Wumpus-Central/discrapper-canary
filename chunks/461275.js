@@ -3,40 +3,48 @@ var r = n(118356);
 n(506774);
 let i = new r.Vy("useStateFromStores"),
     a = s();
+
 function s() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 60000;
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 6e4;
     return e;
 }
 let o = l();
+
 function l() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
     return e;
 }
 let c = u();
+
 function u() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1000;
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1e3;
     return e;
 }
 let d = f();
+
 function f() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
     return e;
 }
 let p = h(),
     _ = null;
+
 function h() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     return e;
 }
 p && (_ = setInterval(b, a));
 let m = new Map();
+
 function g(e) {
     return "anonymous" !== e.name && ("" === d || e.name === d) && (e.execCount > c || e.execTime > o);
 }
+
 function E() {
     for (let [e, t] of m) if (g(t)) return !0;
     return !1;
 }
+
 function b() {
     for (let [e, t] of (E() || "" !== d ? y() : i.log("No violators found"), m))
         (t.warned = !1), (t.execTime = 0), (t.execCount = 0);

@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(627968),
     l = n(64700),
     i = n(110259),
@@ -9,6 +11,7 @@ var r = n(627968),
     u = n(688895),
     d = n(456425),
     f = n(1347);
+
 function p(e) {
     let { initialized: t, items: n, loading: p, loadMore: h } = e,
         b = l.useRef(null),
@@ -17,9 +20,13 @@ function p(e) {
         {
             type: i.ImpressionTypes.VIEW,
             name: i.ImpressionNames.NOTIFICATION_CENTER_LANDING,
-            properties: { empty: 0 === n.length },
+            properties: {
+                empty: 0 === n.length,
+            },
         },
-        { disableTrack: !t },
+        {
+            disableTrack: !t,
+        },
         [t],
     );
     let m = () => {
@@ -115,8 +122,14 @@ function p(e) {
                                   {
                                       onScroll: m,
                                       children: [
-                                          (0, r.jsx)(d.$, { items: n }),
-                                          p ? (0, r.jsx)(s.y$y, { className: f.u1 }) : null,
+                                          (0, r.jsx)(d.$, {
+                                              items: n,
+                                          }),
+                                          p
+                                              ? (0, r.jsx)(s.y$y, {
+                                                    className: f.u1,
+                                                })
+                                              : null,
                                       ],
                                   }),
                               Object.getOwnPropertyDescriptors
@@ -136,5 +149,7 @@ function p(e) {
                       },
                   }),
               })
-        : (0, r.jsx)(s.y$y, { className: f.k$ });
+        : (0, r.jsx)(s.y$y, {
+              className: f.k$,
+          });
 }

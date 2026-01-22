@@ -1,4 +1,7 @@
-n.d(t, { A: () => I }), n(896048);
+n.d(t, {
+    A: () => I,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     a = n(284009),
@@ -15,6 +18,7 @@ var r = n(627968),
     m = n(819638),
     S = n(652215),
     N = n(534093);
+
 function I(e) {
     let {
             transitionState: t,
@@ -60,7 +64,9 @@ function I(e) {
         R = l.useCallback(() => {
             o()(null != j, "handleSuccess called before onGuildCreated"), a(j);
         }, [a, j]),
-        M = { impression_group: i.ImpressionGroups.GUILD_ADD_FLOW },
+        M = {
+            impression_group: i.ImpressionGroups.GUILD_ADD_FLOW,
+        },
         q = (0, c.rdh)(c.LU0.modules.modal.WIDTH_SMALL);
     return (0, r.jsx)("div", {
         children: (0, r.jsx)(c.EOs, {

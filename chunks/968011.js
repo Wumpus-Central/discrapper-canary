@@ -89,9 +89,21 @@ let r = (0, n(600975).C)({
         },
     ],
 });
+
 function i(e, t) {
-    return r.getCurrentConfig({ location: e }, t);
+    return r.getCurrentConfig(
+        {
+            location: e,
+        },
+        t,
+    );
 }
+
 function a(e, t) {
-    return r.useExperiment({ location: e }, t);
+    return r.useExperiment(
+        {
+            location: e,
+        },
+        t,
+    );
 }

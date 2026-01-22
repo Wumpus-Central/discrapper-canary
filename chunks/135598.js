@@ -6,6 +6,7 @@ n.d(t, {
 });
 var r = n(562465),
     i = n(652215);
+
 function a(e, t, n, a) {
     return r.Bo.post({
         url: i.Rsh.EXPLICIT_MEDIA_REPORT_FALSE_POSITIVE,
@@ -18,6 +19,7 @@ function a(e, t, n, a) {
         rejectWithError: !1,
     });
 }
+
 function s(e, t, n, a) {
     return r.Bo.post({
         url: i.Rsh.EXPLICIT_MEDIA_SENDER_REPORT_FALSE_POSITIVE,
@@ -30,13 +32,17 @@ function s(e, t, n, a) {
         rejectWithError: !1,
     });
 }
+
 function o(e, t) {
     return r.Bo.patch({
         url: i.Rsh.EXPLICIT_MEDIA_SCAN_MESSAGES(e),
-        body: { message_ids: t },
+        body: {
+            message_ids: t,
+        },
         rejectWithError: !1,
     });
 }
+
 function l(e) {
     let t = e.map((e) => ({
         channel_id: e.channel_id,
@@ -44,7 +50,9 @@ function l(e) {
     }));
     return r.Bo.patch({
         url: i.Rsh.EXPLICIT_MEDIA_SCAN_MULTI_CHANNEL_MESSAGES,
-        body: { messages: t },
+        body: {
+            messages: t,
+        },
         rejectWithError: !1,
     });
 }

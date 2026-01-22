@@ -1,9 +1,12 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
     a = n.n(i),
     s = n(808020);
+
 function o(e, t, n) {
     return (
         t in e
@@ -17,6 +20,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -33,6 +37,7 @@ function l(e) {
     }
     return e;
 }
+
 function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -45,6 +50,7 @@ function c(e, t) {
     }
     return n;
 }
+
 function u(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -56,6 +62,7 @@ function u(e, t) {
         e
     );
 }
+
 function d(e, t) {
     if (null == e) return {};
     var n,
@@ -72,6 +79,7 @@ function d(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function f(e, t) {
     if (null == e) return {};
     var n,
@@ -86,8 +94,34 @@ let p = (e) => {
     let { value: t = 0, text: n, className: i, lowImportance: o } = e,
         c = d(e, ["value", "text", "className", "lowImportance"]);
     return null != n
-        ? (0, r.jsx)("div", u(l({ className: a()(s.i, i, o && s.H) }, c), { children: n }))
+        ? (0, r.jsx)(
+              "div",
+              u(
+                  l(
+                      {
+                          className: a()(s.i, i, o && s.H),
+                      },
+                      c,
+                  ),
+                  {
+                      children: n,
+                  },
+              ),
+          )
         : t > 0
-          ? (0, r.jsx)("div", u(l({ className: a()(s.i, i, o && s.H) }, c), { children: t }))
+          ? (0, r.jsx)(
+                "div",
+                u(
+                    l(
+                        {
+                            className: a()(s.i, i, o && s.H),
+                        },
+                        c,
+                    ),
+                    {
+                        children: t,
+                    },
+                ),
+            )
           : null;
 };

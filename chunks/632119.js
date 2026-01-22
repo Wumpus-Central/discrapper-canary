@@ -13,6 +13,7 @@ var r = n(923457),
     l = n(287809);
 n(975214);
 var c = n(656402);
+
 function u(e, t, n) {
     return (
         t in e
@@ -26,6 +27,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -101,7 +103,9 @@ let f = {
     y = (e) => {
         let t = null != e ? e : o.Vd.getSetting();
         return {
-            explicitContentGuilds: m({ setting: null == t ? void 0 : t.explicitContentGuilds }),
+            explicitContentGuilds: m({
+                setting: null == t ? void 0 : t.explicitContentGuilds,
+            }),
             explicitContentNonFriendDm: m({
                 setting: null == t ? void 0 : t.explicitContentNonFriendDm,
                 isDm: !0,

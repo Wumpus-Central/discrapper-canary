@@ -1,6 +1,9 @@
-n.d(e, { A: () => r });
+n.d(e, {
+    A: () => r,
+});
 var i = n(954571),
     l = n(652215);
+
 function r(t) {
     let {
         problem: e,

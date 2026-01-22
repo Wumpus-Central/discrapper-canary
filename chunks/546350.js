@@ -1,9 +1,13 @@
-n.d(t, { w: () => o }), n(896048);
+n.d(t, {
+    w: () => o,
+}),
+    n(896048);
 var a = n(64700),
     l = n(311907),
     i = n(397927),
     r = n(775602),
     s = n(654487);
+
 function o(e) {
     let { isQuestAccepted: t, isQuestCompleted: n, isQuestBarVisible: o } = e,
         c = (0, l.bG)([r.A], () => r.A.useReducedMotion),
@@ -25,7 +29,9 @@ function o(e) {
         }, [b]),
         j = t ? s.ZV : s.Ko,
         [{ expansionSpring: y }, _] = (0, i.zhh)(() => ({
-            from: { expansionSpring: 0 },
+            from: {
+                expansionSpring: 0,
+            },
             config: j,
             onRest: () => {
                 p(!0);
@@ -41,8 +47,12 @@ function o(e) {
         });
     }, [d, _, c]);
     let { visibilitySpring: A } = (0, i.zhh)({
-        from: { visibilitySpring: 0 },
-        to: { visibilitySpring: +!!o },
+        from: {
+            visibilitySpring: 0,
+        },
+        to: {
+            visibilitySpring: +!!o,
+        },
         config: {
             tension: 250,
             friction: 10,

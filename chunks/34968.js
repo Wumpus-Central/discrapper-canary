@@ -23,6 +23,7 @@ var r = n(774603),
     y = n(801796),
     O = n(652215),
     j = n(985018);
+
 function v() {
     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
     return t.map((e) => {
@@ -61,7 +62,10 @@ let x = {
         [O.IWg.CALL_START]: r.OX,
         [O.IWg.QUICKSWITCHER_SHOW]: c.R,
     },
-    E = { [O.IWg.QUICKSWITCHER_SHOW]: c.R };
+    E = {
+        [O.IWg.QUICKSWITCHER_SHOW]: c.R,
+    };
+
 function _() {
     return [
         {

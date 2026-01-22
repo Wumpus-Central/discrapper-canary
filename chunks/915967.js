@@ -57,6 +57,7 @@ var r = n(966597),
             e
         );
     })({});
+
 function B(e) {
     switch (e) {
         case "NAVIGATION":
@@ -73,6 +74,7 @@ function B(e) {
             return V.intl.string(V.t["69j6+4"]);
     }
 }
+
 function H(e) {
     switch (e) {
         case "MESSAGE":
@@ -83,6 +85,7 @@ function H(e) {
             return;
     }
 }
+
 function Y() {
     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
     return t.map((e) => {
@@ -142,6 +145,7 @@ let W = {
     [G.IWg.BROWSER_DEVTOOLS]: l.i,
     [G.IWg.OPEN_CONTEXT_MENU]: m.b,
 };
+
 function K() {
     let e = [
             {
@@ -391,7 +395,14 @@ function K() {
                 group: "MISCELLANEOUS",
             },
         ],
-        { enabled: t, inInbox: n } = r.A.getCurrentConfig({ location: "keybinds" }, { autoTrackExposure: !1 });
+        { enabled: t, inInbox: n } = r.A.getCurrentConfig(
+            {
+                location: "keybinds",
+            },
+            {
+                autoTrackExposure: !1,
+            },
+        );
     return (
         t &&
             !n &&

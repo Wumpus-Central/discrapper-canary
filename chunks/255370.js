@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var l = n(627968);
 n(64700);
 var r = n(417597),
@@ -10,6 +12,7 @@ var r = n(417597),
     d = n(522602),
     u = n(985018),
     m = n(941448);
+
 function h(e) {
     let { parentChannel: t } = e,
         n = (0, r.yK)([d.A], () => {
@@ -52,7 +55,9 @@ function h(e) {
                                     e.id,
                                 ),
                             ),
-                            (0, l.jsx)(o.A, { channelId: t.id }),
+                            (0, l.jsx)(o.A, {
+                                channelId: t.id,
+                            }),
                         ],
                     }),
                 }),

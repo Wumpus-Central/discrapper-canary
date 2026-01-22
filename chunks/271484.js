@@ -17,6 +17,7 @@ var r = l(627968),
     m = l(985018),
     v = l(870166),
     A = l(849630);
+
 function g(e, t) {
     var g;
     let x = null != (g = (0, d.A)(t)) && g,
@@ -107,7 +108,9 @@ function g(e, t) {
                                                   ),
                                               );
                                       },
-                                      { onCloseCallback: null == i ? void 0 : i.onModalClose },
+                                      {
+                                          onCloseCallback: null == i ? void 0 : i.onModalClose,
+                                      },
                                   );
                               },
                               viewCta: h,
@@ -132,6 +135,7 @@ function g(e, t) {
         return s;
     }, [e, t, x, b, h]);
 }
+
 function x(e, t) {
     return g([e], t)[e];
 }

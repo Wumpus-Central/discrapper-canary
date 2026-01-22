@@ -1,4 +1,8 @@
-r.d(t, { A: () => b }), r(114821), r(339614);
+r.d(t, {
+    A: () => b,
+}),
+    r(114821),
+    r(339614);
 var n = r(627968),
     s = r(64700),
     i = r(503698),
@@ -14,6 +18,7 @@ var n = r(627968),
     y = r(985018),
     m = r(492933),
     g = r(976092);
+
 function O(e, t, r) {
     return (
         t in e
@@ -110,7 +115,9 @@ class b extends s.PureComponent {
                 })
                 .value();
         return 0 === r.length
-            ? (0, n.jsx)(h.i6n.Empty, { children: y.intl.string(y.t.PoWNfe) })
+            ? (0, n.jsx)(h.i6n.Empty, {
+                  children: y.intl.string(y.t.PoWNfe),
+              })
             : (0, n.jsx)(h.ArX, {
                   className: m.Dm,
                   children: r,
@@ -136,15 +143,21 @@ class b extends s.PureComponent {
     constructor(e) {
         super(e),
             O(this, "onChangeQuery", (e) => {
-                this.setState({ query: e });
+                this.setState({
+                    query: e,
+                });
             }),
             O(this, "onClearQuery", () => {
-                this.setState({ query: "" });
+                this.setState({
+                    query: "",
+                });
             }),
             O(this, "onClick", (e) => {
                 var t, r;
                 null == (t = (r = this.props).onClick) || t.call(r, e);
             }),
-            (this.state = { query: "" });
+            (this.state = {
+                query: "",
+            });
     }
 }

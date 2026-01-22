@@ -1,4 +1,8 @@
-n.d(t, { o: () => P }), n(896048), n(801541);
+n.d(t, {
+    o: () => P,
+}),
+    n(896048),
+    n(801541);
 var r = n(627968),
     i = n(64700),
     l = n(889137),
@@ -27,6 +31,7 @@ var r = n(627968),
     T = n(746080),
     I = n(985018),
     C = n(289);
+
 function P(e) {
     let { guildId: t, hasValidApplication: n } = e,
         { listingsLoaded: P } = (0, A.bb)(t),
@@ -40,7 +45,9 @@ function P(e) {
         if (null == w) return;
         let e = j.A.getEveryoneRole(w);
         b.A.close();
-        let t = { [e.id]: e };
+        let t = {
+            [e.id]: e,
+        };
         (0, m.Tk)(w.id, {
             type: p._.SERVER_SHOP,
             roles: t,
@@ -107,9 +114,21 @@ function P(e) {
             ],
         }),
         B = (0, l.YW)(L)
-            .with("basic_info", () => (0, r.jsx)(E.A, { guildId: t }))
-            .with("manage_listings", () => (0, r.jsx)(N.A, { guildId: t }))
-            .with("payment", () => (0, r.jsx)(_.A, { guildId: t }))
+            .with("basic_info", () =>
+                (0, r.jsx)(E.A, {
+                    guildId: t,
+                }),
+            )
+            .with("manage_listings", () =>
+                (0, r.jsx)(N.A, {
+                    guildId: t,
+                }),
+            )
+            .with("payment", () =>
+                (0, r.jsx)(_.A, {
+                    guildId: t,
+                }),
+            )
             .exhaustive(),
         H = P
             ? (0, r.jsx)(c.VQ0.Panel, {
@@ -121,7 +140,9 @@ function P(e) {
         guildId: t,
         children: [
             U,
-            (0, r.jsx)(g.A, { guild: w }),
+            (0, r.jsx)(g.A, {
+                guild: w,
+            }),
             (0, r.jsx)("div", {
                 className: C.Mv,
                 children: F,

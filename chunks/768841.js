@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(627968);
 n(64700);
 var l = n(397927),
@@ -46,7 +48,9 @@ class c extends a.A {
                         return e;
                     })({}, e),
                 ),
-            { modalKey: o.P },
+            {
+                modalKey: o.P,
+            },
         );
     }
     hideKeyboardShortcuts() {

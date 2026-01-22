@@ -1,4 +1,7 @@
-n.d(t, { A: () => O }), n(896048);
+n.d(t, {
+    A: () => O,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -64,8 +67,12 @@ let y = (e, t) => {
                                 }),
                             }),
                         }),
-                        (0, r.jsx)("div", { className: m.es }),
-                        (0, r.jsx)("div", { className: m.fF }),
+                        (0, r.jsx)("div", {
+                            className: m.es,
+                        }),
+                        (0, r.jsx)("div", {
+                            className: m.fF,
+                        }),
                     ],
                 }),
             })

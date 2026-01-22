@@ -1,5 +1,8 @@
-r.d(t, { A: () => n });
+r.d(t, {
+    A: () => n,
+});
 var a = r(43264);
+
 function n(e, t, r) {
     return (
         (t = (0, a.A)(t)) in e

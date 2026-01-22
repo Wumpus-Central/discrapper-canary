@@ -12,6 +12,7 @@ var r = n(378555),
     _ = !1,
     h = !1,
     m = null;
+
 function g(e) {
     m || (m = new r(c(e))).start();
 }
@@ -41,7 +42,9 @@ var E = {
         if (!h) {
             var t = f(m).stopAndFlushMutations();
             (m = null), (_ = !0);
-            var n = s.set(e._latestEditorState, { inCompositionMode: !1 });
+            var n = s.set(e._latestEditorState, {
+                inCompositionMode: !1,
+            });
             if ((e.exitCurrentMode(), !t.size)) return void e.update(n);
             var r = n.getCurrentContent();
             t.forEach(function (e, t) {
@@ -61,7 +64,10 @@ var E = {
                     }),
                     m = d(r, h),
                     g = r.getBlockForKey(l).getInlineStyleAt(p);
-                (r = i.replaceText(r, h, e, g, m)), (n = s.set(n, { currentContent: r }));
+                (r = i.replaceText(r, h, e, g, m)),
+                    (n = s.set(n, {
+                        currentContent: r,
+                    }));
             });
             var o = u(n, c(e)),
                 l = o.selectionState;

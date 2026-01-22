@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var r = n(627968),
     l = n(64700),
     i = n(397927),
@@ -26,7 +28,9 @@ let g = function (e) {
             (0, r.jsx)(f.A, {}),
             (0, r.jsx)("div", {
                 className: b.os,
-                style: { maxWidth: 168 * O },
+                style: {
+                    maxWidth: 168 * O,
+                },
                 children: m.slice(0, 5).map((e) =>
                     (0, r.jsx)(
                         d.Ay,
@@ -57,7 +61,9 @@ let g = function (e) {
                         0 === m.length
                             ? h.intl.string(h.t.zSqdrS)
                             : 1 === m.length
-                              ? h.intl.formatToPlainString(h.t.BUyJIG, { a: (0, u.A)(n, m[0]) })
+                              ? h.intl.formatToPlainString(h.t.BUyJIG, {
+                                    a: (0, u.A)(n, m[0]),
+                                })
                               : 2 === m.length
                                 ? h.intl.formatToPlainString(h.t["dcyZf/"], {
                                       a: (0, u.A)(n, m[0]),

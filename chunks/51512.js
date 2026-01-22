@@ -1,4 +1,6 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(627968);
 n(64700);
 var l = n(397927),
@@ -17,10 +19,17 @@ let c = {
                     messageId: e.id,
                 });
             },
-            iconProps: { color: "currentColor" },
+            iconProps: {
+                color: "currentColor",
+            },
         }),
 };
+
 function s(e) {
     let t = (0, o.A)(e);
-    return 0 === t.length ? null : (0, r.jsx)(r.Fragment, { children: t.map((t) => c[t](e)) });
+    return 0 === t.length
+        ? null
+        : (0, r.jsx)(r.Fragment, {
+              children: t.map((t) => c[t](e)),
+          });
 }

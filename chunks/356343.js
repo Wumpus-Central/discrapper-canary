@@ -1,10 +1,13 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var l = n(627968);
 n(64700);
 var i = n(397927),
     s = n(946274),
     a = n(985018),
     r = n(941095);
+
 function c(e) {
     let { icon: t, onChange: n } = e;
     return (0, l.jsx)(i.vN3, {

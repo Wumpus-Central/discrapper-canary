@@ -1,4 +1,7 @@
-n.d(t, { A: () => C }), n(896048);
+n.d(t, {
+    A: () => C,
+}),
+    n(896048);
 var r = n(627968);
 n(64700);
 var i = n(835245),
@@ -15,6 +18,7 @@ var i = n(835245),
     h = n(301518),
     m = n(165823),
     g = n(652215);
+
 function E(e, t, n) {
     return (
         t in e
@@ -28,6 +32,7 @@ function E(e, t, n) {
         e
     );
 }
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -44,6 +49,7 @@ function b(e) {
     }
     return e;
 }
+
 function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -56,6 +62,7 @@ function y(e, t) {
     }
     return n;
 }
+
 function O(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -67,6 +74,7 @@ function O(e, t) {
         e
     );
 }
+
 function A(e, t) {
     if (null == e) return {};
     var n,
@@ -83,6 +91,7 @@ function A(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function v(e, t) {
     if (null == e) return {};
     var n,
@@ -96,6 +105,7 @@ function v(e, t) {
 let S = "payment-modal",
     I = "gift-payment-modal",
     T = new Set([_.pn.REVIEW, _.pn.CONFIRM, _.pn.GIFT_CUSTOMIZATION]);
+
 function C(e) {
     let t,
         {
@@ -134,11 +144,17 @@ function C(e) {
             };
         });
     s.h.wait(() => {
-        s.h.dispatch({ type: "PAYMENT_MODAL_OPEN" });
+        s.h.dispatch({
+            type: "PAYMENT_MODAL_OPEN",
+        });
     });
-    let { enabled: U } = (0, c.ik)({ location: "openCollectiblesPaymentModal" }),
+    let { enabled: U } = (0, c.ik)({
+            location: "openCollectiblesPaymentModal",
+        }),
         G = () => {
-            (0, h.S)({ checkoutSucceeded: x }),
+            (0, h.S)({
+                checkoutSucceeded: x,
+            }),
                 x ||
                     p.default.track(g.HAw.PAYMENT_FLOW_CANCELED, {
                         load_id: L,
@@ -151,7 +167,10 @@ function C(e) {
                 (0, o.ET)(),
                 (0, l.z)(),
                 null == w || w(x),
-                x && (0, d.gB)({ variantsReturnStyle: D });
+                x &&
+                    (0, d.gB)({
+                        variantsReturnStyle: D,
+                    });
         },
         V = () => {
             null != t && T.has(t) && (0, a.OoC)(M);
@@ -203,7 +222,9 @@ let N = (e) => {
             },
             onClose: d,
             onComplete: _,
-            flowSpecificOptions: { onStepChange: i },
+            flowSpecificOptions: {
+                onStepChange: i,
+            },
             openModalOptions: {
                 modalKey: a,
                 onCloseCallback: f,

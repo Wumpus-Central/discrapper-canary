@@ -1,4 +1,6 @@
-n.d(t, { A: () => N });
+n.d(t, {
+    A: () => N,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -20,6 +22,7 @@ var i = n(311907),
     y = n(746080),
     O = n(985018),
     A = n(530358);
+
 function v(e, t, n) {
     return (
         t in e
@@ -33,6 +36,7 @@ function v(e, t, n) {
         e
     );
 }
+
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -49,6 +53,7 @@ function S(e) {
     }
     return e;
 }
+
 function I(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -61,6 +66,7 @@ function I(e, t) {
     }
     return n;
 }
+
 function T(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -91,8 +97,12 @@ let C = 40,
         let I = (0, i.bG)([h.A], () => (null != t.roleId ? h.A.getRole(n.id, t.roleId) : void 0)),
             N = (0, d.U)(I),
             R = N
-                ? O.intl.formatToPlainString(O.t.t0928V, { name: v })
-                : O.intl.formatToPlainString(O.t.UDDkGy, { name: v }),
+                ? O.intl.formatToPlainString(O.t.t0928V, {
+                      name: v,
+                  })
+                : O.intl.formatToPlainString(O.t.UDDkGy, {
+                      name: v,
+                  }),
             w = T(S({}, t), {
                 src: null == t.src ? t.src : (0, c.ux)(t.src, C),
                 size: C,
@@ -100,7 +110,9 @@ let C = 40,
             P = () => {
                 (0, u.K)({
                     guildId: n.id,
-                    location: { section: b.JJy.ROLE_ICON_POPOUT },
+                    location: {
+                        section: b.JJy.ROLE_ICON_POPOUT,
+                    },
                 });
             },
             D = () => {
@@ -132,7 +144,9 @@ let C = 40,
                                         (0, r.jsx)(s.Heading, {
                                             variant: "heading-md/semibold",
                                             className: A.S3,
-                                            children: (0, r.jsx)(a.A, { children: v }),
+                                            children: (0, r.jsx)(a.A, {
+                                                children: v,
+                                            }),
                                         }),
                                         (0, r.jsx)(s.Text, {
                                             variant: "text-sm/normal",

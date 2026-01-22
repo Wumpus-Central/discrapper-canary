@@ -1,4 +1,7 @@
-n.d(t, { A: () => U }), n(896048);
+n.d(t, {
+    A: () => U,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -160,7 +163,15 @@ let C = (0, g.xI)(l.A.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                                         }),
                                     }),
                                 }),
-                                M ? (0, r.jsx)("hr", { className: T.ny }, "separator") : null,
+                                M
+                                    ? (0, r.jsx)(
+                                          "hr",
+                                          {
+                                              className: T.ny,
+                                          },
+                                          "separator",
+                                      )
+                                    : null,
                             ],
                         },
                         L.id,
@@ -252,7 +263,9 @@ let C = (0, g.xI)(l.A.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                 g &&
                 o &&
                 (0, r.jsx)(c.DUT, {
-                    className: s()(T.Fe, { [T.Q6]: !o }),
+                    className: s()(T.Fe, {
+                        [T.Q6]: !o,
+                    }),
                     onClick: () => v(e),
                     children: (0, r.jsx)(c.tEP, {
                         size: "md",

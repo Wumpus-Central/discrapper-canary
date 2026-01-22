@@ -1,4 +1,6 @@
-n.d(t, { A: () => y }),
+n.d(t, {
+    A: () => y,
+}),
     n(896048),
     n(693327),
     n(554719),
@@ -35,6 +37,7 @@ var a = n(627968),
     x = n(731854),
     b = n(442456),
     g = n(661251);
+
 function v(e) {
     let { recording: t } = e;
     return (0, a.jsxs)(a.Fragment, {
@@ -66,10 +69,13 @@ function v(e) {
         ],
     });
 }
+
 function j(e) {
     let { recording: t, playing: n, onPlay: l, onStop: i } = e;
     return (0, a.jsx)(c.Nt8, {
-        collapsibleContent: (0, a.jsx)(v, { recording: t }),
+        collapsibleContent: (0, a.jsx)(v, {
+            recording: t,
+        }),
         children: (e) => {
             let { onClick: s } = e;
             return (0, a.jsxs)(c.DUT, {
@@ -85,14 +91,22 @@ function j(e) {
                         onClick: (e) => {
                             e.stopPropagation(), n ? i() : l(t);
                         },
-                        children: n ? (0, a.jsx)(c.E$n, { size: "xxs" }) : (0, a.jsx)(c.udU, { size: "xxs" }),
+                        children: n
+                            ? (0, a.jsx)(c.E$n, {
+                                  size: "xxs",
+                              })
+                            : (0, a.jsx)(c.udU, {
+                                  size: "xxs",
+                              }),
                     }),
                     (0, a.jsx)(c.DUT, {
                         tag: "span",
                         onClick: (e) => {
                             let n, a, l;
                             e.stopPropagation(),
-                                (n = new Blob([r()(t.audioBuffer)], { type: "audio/wav" })),
+                                (n = new Blob([r()(t.audioBuffer)], {
+                                    type: "audio/wav",
+                                })),
                                 (a = URL.createObjectURL(n)),
                                 ((l = document.createElement("a")).href = a),
                                 (l.download = ""
@@ -101,13 +115,16 @@ function j(e) {
                                 l.click(),
                                 URL.revokeObjectURL(a);
                         },
-                        children: (0, a.jsx)(c.s3U, { size: "xxs" }),
+                        children: (0, a.jsx)(c.s3U, {
+                            size: "xxs",
+                        }),
                     }),
                 ],
             });
         },
     });
 }
+
 function y() {
     let { name: e } = (0, h.x5)(x.oh.AUDIO_INPUT),
         [t, n] = l.useState(!1),
@@ -152,9 +169,11 @@ function y() {
             var e;
             null == (e = A.current) || e.stop(), (A.current = null), _(null);
         }, []);
+
     function H() {
         f.A.getMediaEngine().stopRecordingRawSamples();
     }
+
     function W(e) {
         if ((t && H(), V(), null == F)) return;
         let n = F.createBufferSource();
@@ -258,7 +277,10 @@ function y() {
                                 (0, a.jsx)(c.dOG, {
                                     label: "Auto Threshold",
                                     checked: w,
-                                    onChange: (e) => d.A.setMode(x.TB.VOICE_ACTIVITY, { autoThreshold: e }),
+                                    onChange: (e) =>
+                                        d.A.setMode(x.TB.VOICE_ACTIVITY, {
+                                            autoThreshold: e,
+                                        }),
                                 }),
                                 w &&
                                     (0, a.jsxs)(a.Fragment, {
@@ -266,7 +288,10 @@ function y() {
                                             (0, a.jsx)(c.dOG, {
                                                 label: "Use Krisp VAD",
                                                 checked: k,
-                                                onChange: (e) => d.A.setMode(x.TB.VOICE_ACTIVITY, { vadUseKrisp: e }),
+                                                onChange: (e) =>
+                                                    d.A.setMode(x.TB.VOICE_ACTIVITY, {
+                                                        vadUseKrisp: e,
+                                                    }),
                                             }),
                                             k &&
                                                 (0, a.jsx)(c.Apm, {
@@ -284,7 +309,10 @@ function y() {
                                 (0, a.jsx)(c.dOG, {
                                     label: "Run Before Processing",
                                     checked: null != B && B,
-                                    onChange: (e) => d.A.setMode(x.TB.VOICE_ACTIVITY, { vadDuringPreProcess: e }),
+                                    onChange: (e) =>
+                                        d.A.setMode(x.TB.VOICE_ACTIVITY, {
+                                            vadDuringPreProcess: e,
+                                        }),
                                 }),
                             ],
                         }),

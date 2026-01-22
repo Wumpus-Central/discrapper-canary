@@ -1,4 +1,6 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -14,7 +16,9 @@ let o = (e) => {
             (0, r.jsx)(i.Heading, {
                 variant: "heading-xxl/medium",
                 color: o,
-                children: (0, r.jsx)(i.Fmo, { children: l }),
+                children: (0, r.jsx)(i.Fmo, {
+                    children: l,
+                }),
             }),
             (0, r.jsx)(i.Text, {
                 variant: "text-sm/semibold",

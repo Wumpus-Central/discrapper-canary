@@ -1,4 +1,7 @@
-n.d(t, { A: () => h }), n(896048);
+n.d(t, {
+    A: () => h,
+}),
+    n(896048);
 var r,
     i = n(627968),
     a = n(64700),
@@ -7,6 +10,7 @@ var r,
     l = n(397927),
     c = n(235986),
     u = n(31582);
+
 function d(e, t, n) {
     return (
         t in e
@@ -36,26 +40,38 @@ class _ extends (r = a.Component) {
                   children: [
                       (0, i.jsxs)(c.A, {
                           children: [
-                              (0, i.jsx)("div", { className: o()(u.RH, p[t], u.hC) }),
-                              (0, i.jsx)("div", { className: o()(u.RH, p[t], u.hC) }),
-                              (0, i.jsx)("div", { className: o()(u.RH, p[t]) }),
+                              (0, i.jsx)("div", {
+                                  className: o()(u.RH, p[t], u.hC),
+                              }),
+                              (0, i.jsx)("div", {
+                                  className: o()(u.RH, p[t], u.hC),
+                              }),
+                              (0, i.jsx)("div", {
+                                  className: o()(u.RH, p[t]),
+                              }),
                           ],
                       }),
                       (0, i.jsx)(c.A, {
                           grow: 1,
                           className: u.eC,
-                          style: { maxWidth: this.placeholderMaxWidth },
+                          style: {
+                              maxWidth: this.placeholderMaxWidth,
+                          },
                       }),
                   ],
               })
             : (0, i.jsxs)(c.A, {
                   className: o()(u.qf, !a && u.lN, n),
                   children: [
-                      (0, i.jsx)("div", { className: o()(u.RH, p[t], r) }),
+                      (0, i.jsx)("div", {
+                          className: o()(u.RH, p[t], r),
+                      }),
                       (0, i.jsx)(c.A, {
                           grow: 1,
                           className: o()(u.gM, r),
-                          style: { maxWidth: this.placeholderMaxWidth },
+                          style: {
+                              maxWidth: this.placeholderMaxWidth,
+                          },
                       }),
                   ],
               });
@@ -64,5 +80,8 @@ class _ extends (r = a.Component) {
         super(...e), d(this, "placeholderMaxWidth", "".concat(Math.floor(40 * Math.random()) + 40, "%"));
     }
 }
-d(_, "defaultProps", { type: "1" }), d(_, "Types", f);
+d(_, "defaultProps", {
+    type: "1",
+}),
+    d(_, "Types", f);
 let h = _;

@@ -1,4 +1,6 @@
-n.d(t, { k: () => f });
+n.d(t, {
+    k: () => f,
+});
 var r = n(627968),
     i = n(64700),
     l = n(835245),
@@ -8,6 +10,7 @@ var r = n(627968),
     o = n(767143),
     d = n(498642),
     u = n(818348);
+
 function f(e) {
     let { guild: t, discoverableGuild: n } = e,
         f = null == t ? void 0 : t.id,

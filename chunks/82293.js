@@ -7,6 +7,7 @@ var r,
     a = n.n(i),
     s = n(311907),
     o = n(73153);
+
 function l(e, t, n) {
     return (
         t in e
@@ -20,6 +21,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +38,7 @@ function c(e) {
     }
     return e;
 }
+
 function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -48,6 +51,7 @@ function u(e, t) {
     }
     return n;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -69,12 +73,16 @@ var p = (function (e) {
         e
     );
 })({});
+
 function _(e) {
     let { applicationId: t, guildId: n, page: r } = e;
     return "applicationId:".concat(t, " guildId:").concat(n, " page:").concat(r);
 }
-let h = new (a())({ max: f }),
+let h = new (a())({
+        max: f,
+    }),
     m = {};
+
 function g(e) {
     let { applicationId: t, guildId: n, page: r } = e,
         i = _({
@@ -82,8 +90,11 @@ function g(e) {
             guildId: n,
             page: r,
         });
-    m = d(c({}, m), { [i]: 1 });
+    m = d(c({}, m), {
+        [i]: 1,
+    });
 }
+
 function E(e) {
     let { applicationId: t, guildId: n, similarApplications: r, loadId: i, page: a, totalPages: s } = e,
         o = _({
@@ -98,8 +109,11 @@ function E(e) {
         page: a,
         totalPages: s,
     }),
-        (m = d(c({}, m), { [o]: 2 }));
+        (m = d(c({}, m), {
+            [o]: 2,
+        }));
 }
+
 function b(e) {
     let { applicationId: t, guildId: n, page: r } = e,
         i = _({
@@ -107,7 +121,9 @@ function b(e) {
             guildId: n,
             page: r,
         });
-    m = d(c({}, m), { [i]: 3 });
+    m = d(c({}, m), {
+        [i]: 3,
+    });
 }
 class y extends (r = s.Ay.Store) {
     getSimilarApplications(e) {

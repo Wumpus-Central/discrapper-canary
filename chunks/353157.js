@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(627968);
 n(64700);
 var i = n(575593),
@@ -10,6 +12,7 @@ var i = n(575593),
     u = n(752276);
 let d = 136,
     f = 200;
+
 function p(e) {
     let { item: t, profileOwner: n, isHighlighted: p, cardSize: _ = c.Y.MEDIUM } = e,
         h = t.collectiblesItem;

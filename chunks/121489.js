@@ -5,6 +5,7 @@ n.d(t, {
 });
 var r = n(954571),
     i = n(652215);
+
 function a(e, t, n, a) {
     r.default.track(i.HAw.VOICE_MESSAGE_PLAYBACK_STARTED, {
         message_id: e,
@@ -13,6 +14,7 @@ function a(e, t, n, a) {
         sender_user_id: a,
     });
 }
+
 function s(e, t, n, a, s) {
     r.default.track(i.HAw.VOICE_MESSAGE_PLAYBACK_ENDED, {
         message_id: e,
@@ -22,6 +24,7 @@ function s(e, t, n, a, s) {
         duration_listening_secs: s,
     });
 }
+
 function o(e, t) {
     r.default.track(i.HAw.VOICE_MESSAGE_PLAYBACK_FAILED, {
         message_id: e,

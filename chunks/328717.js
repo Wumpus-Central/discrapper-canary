@@ -1,4 +1,6 @@
-n.d(t, { A: () => A });
+n.d(t, {
+    A: () => A,
+});
 var r = n(627968);
 n(64700);
 var i = n(43105),
@@ -21,8 +23,14 @@ let A = (e) => {
             position: "right",
             align: "top",
             size: "md",
-            caretConfig: { align: "start" },
-            title: f.intl.format(f.t["3yZP0G"], { percent: A.discount.amount }).toString(),
+            caretConfig: {
+                align: "start",
+            },
+            title: f.intl
+                .format(f.t["3yZP0G"], {
+                    percent: A.discount.amount,
+                })
+                .toString(),
             body: f.intl.format(f.t["3Q4wCy"], {
                 discountedPrice: E,
                 billingPeriod: (0, o.Ke)(A.discount.user_usage_limit_interval),
@@ -103,6 +111,11 @@ let A = (e) => {
             },
         });
     return (0, r.jsxs)(r.Fragment, {
-        children: [(0, r.jsx)("div", { children: b }), O],
+        children: [
+            (0, r.jsx)("div", {
+                children: b,
+            }),
+            O,
+        ],
     });
 };

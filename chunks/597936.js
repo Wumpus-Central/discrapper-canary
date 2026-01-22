@@ -16,10 +16,17 @@ let c = (e) => {
             s = null != r ? i()().diff(r, "days") : null,
             c = null != s && s > 30;
         if (null != n && !c) return !1;
-        let { isEligible: u } = l.O.getCurrentConfig({ location: "657a81_1" }, { autoTrackExposure: !0 });
+        let { isEligible: u } = l.O.getCurrentConfig(
+            {
+                location: "657a81_1",
+            },
+            {
+                autoTrackExposure: !0,
+            },
+        );
         return u;
     },
-    u = 2592000000,
+    u = 2592e6,
     d = (e) => null != e && Date.now() - e.createdAt.getTime() > u,
     f = () => {
         let e = a.D.now();

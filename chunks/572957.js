@@ -1,4 +1,8 @@
-n.d(t, { A: () => S }), n(896048), n(938796);
+n.d(t, {
+    A: () => S,
+}),
+    n(896048),
+    n(938796);
 var r,
     i = n(665260),
     a = n(311907),
@@ -10,6 +14,7 @@ var r,
     d = n(287809),
     f = n(812930),
     p = n(652215);
+
 function _(e, t, n) {
     return (
         t in e
@@ -26,6 +31,7 @@ function _(e, t, n) {
 let h = "ChannelFollowingBumpChannels",
     m = new Set(),
     g = new Set();
+
 function E(e) {
     var t;
     let { channelId: n, message: r, optimistic: a } = e;
@@ -46,18 +52,22 @@ function E(e) {
         return !1;
     g.add(r.id);
 }
+
 function b(e) {
     let { message: t } = e;
     g.has(t.id) && i.Lt(Number(t.flags), p.pr7.CROSSPOSTED) && g.delete(t.id);
 }
+
 function y(e) {
     let { messageId: t } = e;
     g.delete(t);
 }
+
 function O(e) {
     let { channelId: t } = e;
     m.add(t), s.w.set(h, m), g.clear();
 }
+
 function A(e) {
     g.clear();
 }

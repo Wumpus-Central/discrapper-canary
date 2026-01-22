@@ -58,6 +58,7 @@ var r = n(627968),
     J = n(818348),
     ee = n(985018),
     et = n(843010);
+
 function en(e, t, n) {
     return (
         t in e
@@ -71,6 +72,7 @@ function en(e, t, n) {
         e
     );
 }
+
 function er(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -87,6 +89,7 @@ function er(e) {
     }
     return e;
 }
+
 function ei(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -99,6 +102,7 @@ function ei(e, t) {
     }
     return n;
 }
+
 function ea(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -112,17 +116,25 @@ function ea(e, t) {
 }
 let es = 1,
     eo = 30;
+
 function el(e) {
     let { amount: t, currency: n, intervalType: r, intervalCount: i = 1 } = e,
         a = (0, q.$g)(t, n);
     return r === $.WT.YEAR
-        ? ee.intl.formatToPlainString(ee.t["8M04YJ"], { price: a })
+        ? ee.intl.formatToPlainString(ee.t["8M04YJ"], {
+              price: a,
+          })
         : r === $.WT.MONTH && 1 === i
-          ? ee.intl.formatToPlainString(ee.t.VStWCR, { price: a })
+          ? ee.intl.formatToPlainString(ee.t.VStWCR, {
+                price: a,
+            })
           : r === $.WT.MONTH && i > 1
-            ? ee.intl.formatToPlainString(ee.t.xJvAFU, { price: a })
+            ? ee.intl.formatToPlainString(ee.t.xJvAFU, {
+                  price: a,
+              })
             : null;
 }
+
 function ec(e) {
     let { intervalType: t, intervalCount: n = 1 } = e;
     return t === $.WT.YEAR
@@ -131,21 +143,29 @@ function ec(e) {
           ? ee.intl.string(ee.t["6ZR3By"])
           : null;
 }
+
 function eu(e) {
     let { endDate: t, className: n } = e;
     return (0, r.jsxs)("div", {
         className: n,
         children: [
-            (0, r.jsx)("div", { className: et.bU }),
+            (0, r.jsx)("div", {
+                className: et.bU,
+            }),
             (0, r.jsx)(p.Text, {
                 variant: "text-sm/normal",
                 className: et.b7,
-                children: ee.intl.format(ee.t.IeaYqg, { endDate: t }),
+                children: ee.intl.format(ee.t.IeaYqg, {
+                    endDate: t,
+                }),
             }),
-            (0, r.jsx)("div", { className: et.bU }),
+            (0, r.jsx)("div", {
+                className: et.bU,
+            }),
         ],
     });
 }
+
 function ed(e) {
     var t, n;
     let {
@@ -164,7 +184,9 @@ function ed(e) {
         L = a.intervalCount,
         j = (0, u.bG)([B.A], () => B.A.getForSkuAndInterval((0, z.mH)($.pe.GUILD), D, L)),
         U = (0, u.bG)([G.default], () => G.default.getCurrentUser()),
-        V = (0, y.A)({ forceFetch: !1 });
+        V = (0, y.A)({
+            forceFetch: !1,
+        });
     l()(null != j, "Missing guildBoostingSubscriptionPlan");
     let F = [
             {
@@ -181,7 +203,9 @@ function ed(e) {
             null == m
                 ? void 0
                 : m.items.find((e) => e.planId === $.gD.PREMIUM_MONTH_GUILD || e.planId === $.gD.PREMIUM_YEAR_GUILD),
-        { enabled: er } = X.A.useExperiment({ location: "32b64a_1" }),
+        { enabled: er } = X.A.useExperiment({
+            location: "32b64a_1",
+        }),
         ei = !er || null == w || !$.uJ.has(w) || null == en,
         { analyticsLocations: ea } = (0, b.Ay)(),
         [ed, ef] = (0, S.Kq)({
@@ -216,7 +240,9 @@ function ed(e) {
             z.Ay.hasBoostDiscount(U) &&
             null != m &&
             z.Ay.isPremiumAtLeast(z.Ay.getPremiumType(m.planId), $.PremiumTypes.TIER_1)
-                ? ee.intl.format(ee.t.hf6YOY, { planName: z.Ay.getTierDisplayNameByPlanId(m.planId) })
+                ? ee.intl.format(ee.t.hf6YOY, {
+                      planName: z.Ay.getTierDisplayNameByPlanId(m.planId),
+                  })
                 : ee.intl.format(e_ ? ee.t.ba1L74 : ee.t.fkffDT, {
                       onPremiumSubscriptionClick: g,
                       discountPercentage: (0, K.l9)(k.default.locale, $.oX / 100),
@@ -231,9 +257,14 @@ function ed(e) {
         _(ep),
         (0, r.jsxs)("div", {
             children: [
-                eI && (0, r.jsx)(x.v, { fractionalPremiumInfo: V }),
+                eI &&
+                    (0, r.jsx)(x.v, {
+                        fractionalPremiumInfo: V,
+                    }),
                 eb && null != m
-                    ? (0, r.jsx)(eu, { endDate: m.currentPeriodEnd })
+                    ? (0, r.jsx)(eu, {
+                          endDate: m.currentPeriodEnd,
+                      })
                     : (0, r.jsx)("div", {
                           className: s()(et.hA, et.G3),
                           children: ee.intl.string(ee.t.jNY1FO),
@@ -248,7 +279,9 @@ function ed(e) {
                               }),
                               (0, r.jsxs)("div", {
                                   children: [
-                                      ee.intl.format(ee.t.F8xlhr, { slotCount: v.length }),
+                                      ee.intl.format(ee.t.F8xlhr, {
+                                          slotCount: v.length,
+                                      }),
                                       eO > 0 && null != m
                                           ? (0, r.jsx)(f.m, {
                                                 text: ee.intl.formatToPlainString(ee.t.SFpsCH, {
@@ -294,7 +327,9 @@ function ed(e) {
                             ],
                         }),
                         (0, r.jsx)("div", {
-                            className: s()(et.QK, { [et.S]: ep }),
+                            className: s()(et.QK, {
+                                [et.S]: ep,
+                            }),
                             children: ep
                                 ? (0, r.jsx)(p.y$y, {})
                                 : eA
@@ -308,7 +343,9 @@ function ed(e) {
                         }),
                     ],
                 }),
-                (0, r.jsx)("div", { className: et.J3 }),
+                (0, r.jsx)("div", {
+                    className: et.J3,
+                }),
                 (0, r.jsxs)("div", {
                     className: et.mP,
                     children: [
@@ -317,7 +354,9 @@ function ed(e) {
                             children: ee.intl.string(ee.t.RtA7nR),
                         }),
                         (0, r.jsx)("div", {
-                            className: s()(et.__invalid_planSelectorSubtotalPrice, { [et.S]: ep }),
+                            className: s()(et.__invalid_planSelectorSubtotalPrice, {
+                                [et.S]: ep,
+                            }),
                             children: ep
                                 ? (0, r.jsx)(p.y$y, {})
                                 : (0, r.jsx)(P.A, {
@@ -351,6 +390,7 @@ function ed(e) {
         })
     );
 }
+
 function ef(e) {
     let {
             premiumSubscription: t,
@@ -377,7 +417,9 @@ function ef(e) {
         A = i.total - E - g,
         v = p.discounts.map((e) => {
             let t = e.amount / p.quantity;
-            return ea(er({}, e), { amount: t * h });
+            return ea(er({}, e), {
+                amount: t * h,
+            });
         }),
         T = (0, z.J$)(s.paymentSourceId),
         C = (0, u.bG)([H.A], () => H.A.inReverseTrial());
@@ -396,7 +438,9 @@ function ef(e) {
                     }),
             (0, r.jsxs)(R.Yx, {
                 children: [
-                    (0, r.jsx)(R.Xd, { children: ee.intl.string(ee.t.CWIwms) }),
+                    (0, r.jsx)(R.Xd, {
+                        children: ee.intl.string(ee.t.CWIwms),
+                    }),
                     (0, r.jsx)(R.f0, {
                         label: ee.intl.formatToPlainString(ee.t.a3cAOg, {
                             numGuildSubscriptions: h,
@@ -453,6 +497,7 @@ function ef(e) {
         ],
     });
 }
+
 function ep(e) {
     var t;
     let n,
@@ -536,7 +581,9 @@ function ep(e) {
                                           disabled: !0,
                                       }),
                                   })
-                                : (0, r.jsx)("div", { children: (0, r.jsx)(p.y$y, {}) })
+                                : (0, r.jsx)("div", {
+                                      children: (0, r.jsx)(p.y$y, {}),
+                                  })
                             : (0, r.jsx)(m.Ay, {
                                   label: ee.intl.string(ee.t["mmDvV+"]),
                                   paymentSources: Object.values(s),
@@ -571,6 +618,7 @@ function ep(e) {
         })
     );
 }
+
 function e_(e) {
     var t;
     let n,
@@ -593,11 +641,17 @@ function e_(e) {
         (n = l
             ? null == y
                 ? ee.intl.format(ee.t.P52e1r, {})
-                : ee.intl.format(ee.t["4UnIk9"], { guildName: y })
+                : ee.intl.format(ee.t["4UnIk9"], {
+                      guildName: y,
+                  })
             : d
-              ? ee.intl.format(ee.t.gFaKd1, { helpCenterLink: W.A.getArticleURL(Z.MVz.FRACTIONAL_PREMIUM_ABOUT) })
+              ? ee.intl.format(ee.t.gFaKd1, {
+                    helpCenterLink: W.A.getArticleURL(Z.MVz.FRACTIONAL_PREMIUM_ABOUT),
+                })
               : null == y
-                ? ee.intl.format(ee.t.SZ5ohR, { guildSubscriptionQuantity: o })
+                ? ee.intl.format(ee.t.SZ5ohR, {
+                      guildSubscriptionQuantity: o,
+                  })
                 : ee.intl.format(ee.t.GxK3Mv, {
                       guildName: y,
                       guildSubscriptionQuantity: o,

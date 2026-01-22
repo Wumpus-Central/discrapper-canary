@@ -17,6 +17,7 @@ var i,
         (i.LOCAL_COMMUNITY = "LOCAL_COMMUNITY"),
         (i.SCHOOL_CLUB = "SCHOOL_CLUB"),
         i);
+
 function c() {
     return {
         CREATE: {
@@ -188,13 +189,17 @@ function c() {
                 {
                     id: "22",
                     parent_id: "20",
-                    name: s.intl.formatToPlainString(s.t.LuNsNf, { number: 1 }),
+                    name: s.intl.formatToPlainString(s.t.LuNsNf, {
+                        number: 1,
+                    }),
                     type: r.rbe.GUILD_VOICE,
                 },
                 {
                     id: "23",
                     parent_id: "20",
-                    name: s.intl.formatToPlainString(s.t.LuNsNf, { number: 2 }),
+                    name: s.intl.formatToPlainString(s.t.LuNsNf, {
+                        number: 2,
+                    }),
                     type: r.rbe.GUILD_VOICE,
                 },
             ],

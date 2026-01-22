@@ -1,4 +1,6 @@
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var r = n(562465),
     i = n(73153),
     a = n(157559),
@@ -69,7 +71,9 @@ let _ = {
         await s.A.unarchiveThreadIfNecessary(e),
         r.Bo.patch({
             url: d.Rsh.CHANNEL(e),
-            body: { applied_tags: t },
+            body: {
+                applied_tags: t,
+            },
             rejectWithError: !1,
         })
     ),

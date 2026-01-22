@@ -13,6 +13,7 @@ var r = n(64700),
     d = n(652215),
     f = n(307731),
     p = n(698279);
+
 function _(e, t, n) {
     return (
         t in e
@@ -26,6 +27,7 @@ function _(e, t, n) {
         e
     );
 }
+
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,12 +44,14 @@ function h(e) {
     }
     return e;
 }
+
 function m(e) {
     let t = r.useRef(e);
     r.useEffect(() => {
         t.current.intention === f.b_.REACTION && g(t.current);
     }, []);
 }
+
 function g(e) {
     var t;
     let { intention: n, containerWidth: r, rowSize: _, isBurstReaction: m, analyticsObject: g } = e,
@@ -100,8 +104,12 @@ function g(e) {
                 num_expressions_newly_added: R.length,
                 num_animated_expressions_newly_added: R.filter((e) => e.animated).length,
             },
-            n === f.b_.REACTION && { is_burst: m },
-            null != g && { location_object: g },
+            n === f.b_.REACTION && {
+                is_burst: m,
+            },
+            null != g && {
+                location_object: g,
+            },
         ),
     );
 }

@@ -1,4 +1,7 @@
-n.d(t, { A: () => Z }), n(896048);
+n.d(t, {
+    A: () => Z,
+}),
+    n(896048);
 var r,
     i = n(989349),
     a = n.n(i),
@@ -9,6 +12,7 @@ var r,
     u = n(7133),
     d = n(45938),
     f = n(652215);
+
 function p(e, t, n) {
     return (
         t in e
@@ -22,7 +26,7 @@ function p(e, t, n) {
         e
     );
 }
-let _ = 2147483647,
+let _ = 0x7fffffff,
     h = {},
     m = new Map(),
     g = [],
@@ -32,6 +36,7 @@ let _ = 2147483647,
     O = {},
     A = {},
     v = new Set();
+
 function S(e) {
     let t = u.A.createFromServer(e),
         n = t.code;
@@ -41,6 +46,7 @@ function S(e) {
         (h[n] = e), I(n);
     }
 }
+
 function I(e) {
     let t = m.get(e);
     if (null == t || null == t.expiresAt) return;
@@ -52,6 +58,7 @@ function I(e) {
         t.start(Math.min(_, n), () => I(e));
     }
 }
+
 function T(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     if (t && !v.has(e.channel_id)) return !1;
@@ -63,63 +70,79 @@ function T(e) {
         (n.forEach((e) => {
             g.includes(e) ||
                 b.includes(e) ||
-                (R({ code: e }), l.h.wait(() => c.A.resolveGiftCode(e, !1, !0).catch(f.FXj)));
+                (R({
+                    code: e,
+                }),
+                l.h.wait(() => c.A.resolveGiftCode(e, !1, !0).catch(f.FXj)));
         }),
         !1)
     );
 }
+
 function C() {
     return v.clear(), !1;
 }
+
 function N(e) {
     let { channelId: t } = e;
     return null != t && v.add(t), !1;
 }
+
 function R(e) {
     let { code: t } = e;
     g.includes(t) || (g = [...g, t]);
 }
+
 function w(e) {
     let { giftCode: t } = e;
     return (g = g.filter((e) => e !== t.code)), b.includes(t.code) || (b = [...b, t.code]), S(t);
 }
+
 function P(e) {
     let { code: t } = e;
     (g = g.filter((e) => e !== t)), b.includes(t) || (b = [...b, t]);
 }
+
 function D(e) {
     let { code: t } = e;
     m.delete(t);
     let n = h[t];
     null != n && (n.stop(), delete h[t]), b.includes(t) || (b = [...b, t]);
 }
+
 function x(e) {
     let { code: t } = e;
     E.includes(t) || (E = [...E, t]);
 }
+
 function L(e) {
     let { giftCode: t } = e;
     S(t);
 }
+
 function j(e) {
     let { uses: t, code: n } = e,
         r = m.get(n);
     null != r && m.set(n, r.set("uses", Math.max(r.uses, t)));
 }
+
 function M(e) {
     let { skuId: t, subscriptionPlanId: n } = e;
     y.add((0, d.Kx)(t, n));
 }
+
 function k(e) {
     let { skuId: t, subscriptionPlanId: n } = e;
     y.delete((0, d.Kx)(t, n));
 }
+
 function U(e) {
     let { giftCodes: t, skuId: n, subscriptionPlanId: r } = e;
     t.forEach(S);
     let i = (0, d.Kx)(n, r);
     (O[i] = Date.now()), y.delete(i);
 }
+
 function G(e) {
     let { code: t } = e;
     E = E.filter((e) => e !== t);
@@ -133,6 +156,7 @@ function G(e) {
             }),
         );
 }
+
 function V(e) {
     let { code: t, error: n } = e;
     E = E.filter((e) => e !== t);
@@ -146,18 +170,22 @@ function V(e) {
                 m.set(t, r.set("uses", r.maxUses));
         }
 }
+
 function F(e) {
     let { message: t } = e;
     return T(t, !0);
 }
+
 function B(e) {
     let { channelId: t, messages: n } = e;
     v.add(t), n.forEach((e) => T(e, !0));
 }
+
 function H(e) {
     let { messages: t } = e;
     t.forEach((e) => T(e));
 }
+
 function Y(e) {
     let { pins: t } = e;
     t.forEach((e) => {
@@ -165,6 +193,7 @@ function Y(e) {
         return T(t);
     });
 }
+
 function W(e) {
     let { data: t } = e;
     t.forEach((e) => {
@@ -174,11 +203,13 @@ function W(e) {
         });
     });
 }
+
 function K(e) {
     let { firstMessages: t } = e;
     if (null == t) return !1;
     null == t || t.forEach((e) => T(e));
 }
+
 function z(e) {
     let { threads: t } = e;
     Object.values(t).map((e) => {

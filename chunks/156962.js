@@ -13,6 +13,7 @@ var i = n(397927),
     u = (function (e) {
         return (e.TRIAL = "trial"), (e.DEFAULT = "default"), e;
     })({});
+
 function d(e) {
     let {
             fractionalPremiumInfo: t,
@@ -67,7 +68,9 @@ function d(e) {
                           className: l.OK,
                           children: m,
                       }),
-                      (0, r.jsx)("hr", { className: l.oz }),
+                      (0, r.jsx)("hr", {
+                          className: l.oz,
+                      }),
                   ],
               })
         : (h.days > 0 && h.hours > 0
@@ -76,8 +79,13 @@ function d(e) {
                       hours: h.hours,
                   }))
                 : h.days > 0
-                  ? (m = o.intl.format(g.default.days, { days: h.days }))
-                  : h.hours > 0 && (m = o.intl.format(g.default.hours, { hours: h.hours })),
+                  ? (m = o.intl.format(g.default.days, {
+                        days: h.days,
+                    }))
+                  : h.hours > 0 &&
+                    (m = o.intl.format(g.default.hours, {
+                        hours: h.hours,
+                    })),
             "" === m)
           ? null
           : u
@@ -119,7 +127,9 @@ function d(e) {
                           variant: "text-sm/normal",
                           children: m,
                       }),
-                      (0, r.jsx)("div", { className: l.WW }),
+                      (0, r.jsx)("div", {
+                          className: l.WW,
+                      }),
                   ],
               });
 }

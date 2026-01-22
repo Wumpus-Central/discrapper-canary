@@ -1,4 +1,7 @@
-n.d(t, { A: () => b }), n(896048);
+n.d(t, {
+    A: () => b,
+}),
+    n(896048);
 var r = n(626584),
     i = n(260509),
     a = n(961350),
@@ -9,6 +12,7 @@ var r = n(626584),
     u = n(9865),
     d = n(7864),
     f = n(723176);
+
 function p(e, t, n) {
     return (
         t in e
@@ -22,6 +26,7 @@ function p(e, t, n) {
         e
     );
 }
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -38,6 +43,7 @@ function _(e) {
     }
     return e;
 }
+
 function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -50,6 +56,7 @@ function h(e, t) {
     }
     return n;
 }
+
 function m(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -105,7 +112,15 @@ class E {
             r = o.A.getUnsafeMutableRoles(e.guildId);
         null != n &&
             this.put(
-                c.Me(n, u.cH(m(_({}, r), { [e.role.id]: u.Wj(e.guildId, e.role) })), s.Ay.getSelfMember(e.guildId)),
+                c.Me(
+                    n,
+                    u.cH(
+                        m(_({}, r), {
+                            [e.role.id]: u.Wj(e.guildId, e.role),
+                        }),
+                    ),
+                    s.Ay.getSelfMember(e.guildId),
+                ),
                 t,
             );
     }
@@ -115,7 +130,10 @@ class E {
             let r = _({}, o.A.getUnsafeMutableRoles(e.guildId));
             delete r[e.roleId];
             let i = s.Ay.getSelfMember(e.guildId);
-            null != i && (i = m(_({}, i), { roles: i.roles.filter((t) => t !== e.roleId) })),
+            null != i &&
+                (i = m(_({}, i), {
+                    roles: i.roles.filter((t) => t !== e.roleId),
+                })),
                 this.put(c.Me(n, u.cH(r), i), t);
         }
     }

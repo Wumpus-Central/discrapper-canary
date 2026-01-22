@@ -1,4 +1,8 @@
-n.d(t, { A: () => v }), n(896048), n(747238);
+n.d(t, {
+    A: () => v,
+}),
+    n(896048),
+    n(747238);
 var l = n(627968),
     r = n(64700),
     i = n(503698),
@@ -16,6 +20,7 @@ var l = n(627968),
     g = n(985018),
     j = n(851822),
     h = n(921380);
+
 function v(e) {
     let { detectedGame: t, trackClick: n, onInviteResolved: i, closeModal: v } = e,
         [y, O] = r.useState(),
@@ -70,7 +75,9 @@ function v(e) {
                     (0, l.jsx)("img", {
                         className: h.$f,
                         src: N,
-                        alt: g.intl.formatToPlainString(g.t.xm6W9D, { guildName: y.guild.name }),
+                        alt: g.intl.formatToPlainString(g.t.xm6W9D, {
+                            guildName: y.guild.name,
+                        }),
                     }),
                     (0, l.jsxs)("div", {
                         className: h.U5,
@@ -92,7 +99,9 @@ function v(e) {
                                 (0, l.jsx)(c.Text, {
                                     variant: "text-xxs/normal",
                                     color: "text-muted",
-                                    children: g.intl.format(g.t.zRl6XR, { count: y.approximate_member_count }),
+                                    children: g.intl.format(g.t.zRl6XR, {
+                                        count: y.approximate_member_count,
+                                    }),
                                 }),
                         ],
                     }),

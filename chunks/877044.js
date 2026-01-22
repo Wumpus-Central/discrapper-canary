@@ -1,4 +1,6 @@
-n.d(t, { x: () => i });
+n.d(t, {
+    x: () => i,
+});
 var r = n(627968);
 let i = (e) => {
     let { width: t, height: n, color: i } = e;

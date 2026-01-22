@@ -36,12 +36,17 @@ async function o(e) {
 async function d(e, t) {
     let { token: n } = await o(e);
     return new Promise((e, r) => {
-        t({ "X-Discord-MFA-Authorization": n }, (t) => {
-            var n, l;
-            return (null == (n = t.body) ? void 0 : n.code) === 60008 ||
-                (null == (l = t.body) ? void 0 : l.code) === 60003
-                ? (r(Error(t.body.message)), !0)
-                : (e(), !1);
-        });
+        t(
+            {
+                "X-Discord-MFA-Authorization": n,
+            },
+            (t) => {
+                var n, l;
+                return (null == (n = t.body) ? void 0 : n.code) === 60008 ||
+                    (null == (l = t.body) ? void 0 : l.code) === 60003
+                    ? (r(Error(t.body.message)), !0)
+                    : (e(), !1);
+            },
+        );
     });
 }

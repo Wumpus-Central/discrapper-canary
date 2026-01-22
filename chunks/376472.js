@@ -13,23 +13,27 @@ var r = n(99478),
     i = n(440491),
     a = n(142922),
     s = n(352404);
+
 function o(e) {
     return (
         (e = y(e, new (0, a.FG)())),
         l((0, a.LA)(e.era, e.year), e.month, e.day, e.hour, e.minute, e.second, e.millisecond)
     );
 }
+
 function l(e, t, n, r, i, a, s) {
     let o = new Date();
     return o.setUTCHours(r, i, a, s), o.setUTCFullYear(e, t - 1, n), o.getTime();
 }
+
 function c(e, t) {
     if ("UTC" === t) return 0;
-    if (e > 0 && t === (0, s.Xj)()) return -60000 * new Date(e).getTimezoneOffset();
+    if (e > 0 && t === (0, s.Xj)()) return -6e4 * new Date(e).getTimezoneOffset();
     let { year: n, month: r, day: i, hour: a, minute: o, second: c } = d(e, t);
-    return l(n, r, i, a, o, c, 0) - 1000 * Math.floor(e / 1000);
+    return l(n, r, i, a, o, c, 0) - 1e3 * Math.floor(e / 1e3);
 }
 let u = new Map();
+
 function d(e, t) {
     let n = u.get(t);
     n ||
@@ -57,10 +61,12 @@ function d(e, t) {
         second: +i.second,
     };
 }
-let f = 86400000;
+let f = 864e5;
+
 function p(e, t, n, r) {
     return (n === r ? [n] : [n, r]).filter((n) => _(e, t, n));
 }
+
 function _(e, t, n) {
     let r = d(n, t);
     return (
@@ -72,6 +78,7 @@ function _(e, t, n) {
         e.second === r.second
     );
 }
+
 function h(e, t, n = "compatible") {
     let r = b(e);
     if ("UTC" === t) return o(r);
@@ -106,9 +113,11 @@ function h(e, t, n = "compatible") {
             throw RangeError("No such absolute time found");
     }
 }
+
 function m(e, t, n = "compatible") {
     return new Date(h(e, t, n));
 }
+
 function g(e, t) {
     let n = c(e, t),
         i = new Date(e + n),
@@ -121,9 +130,11 @@ function g(e, t) {
         f = i.getUTCMilliseconds();
     return new (0, r.Ip)(a < 1 ? "BC" : "AD", a < 1 ? -a + 1 : a, s, o, t, n, l, u, d, f);
 }
+
 function E(e) {
     return new (0, r.ng)(e.calendar, e.era, e.year, e.month, e.day);
 }
+
 function b(e, t) {
     let n = 0,
         i = 0,
@@ -136,18 +147,22 @@ function b(e, t) {
         new (0, r._l)(e.calendar, e.era, e.year, e.month, e.day, n, i, a, s)
     );
 }
+
 function y(e, t) {
     if ((0, s.Jg)(e.calendar, t)) return e;
     let n = t.fromJulianDay(e.calendar.toJulianDay(e)),
         r = e.copy();
     return (r.calendar = t), (r.era = n.era), (r.year = n.year), (r.month = n.month), (r.day = n.day), (0, i.AU)(r), r;
 }
+
 function O(e, t, n) {
     return e instanceof r.Ip ? (e.timeZone === t ? e : v(e, t)) : g(h(e, t, n), t);
 }
+
 function A(e) {
     return new Date(o(e) - e.offset);
 }
+
 function v(e, t) {
     return y(g(o(e) - e.offset, t), e.calendar);
 }

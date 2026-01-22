@@ -1,4 +1,7 @@
-n.d(t, { A: () => h }), n(896048);
+n.d(t, {
+    A: () => h,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -11,12 +14,16 @@ var r = n(627968),
     f = n(985018),
     p = n(879254);
 let _ = [54, 8, 8, 8];
+
 function h(e) {
     let { onSelect: t, sound: n } = e,
         [a, h] = i.useState(!1),
         m = i.useRef(null),
-        g = (0, c.A)({ location: "GiftSoundboard" }),
+        g = (0, c.A)({
+            location: "GiftSoundboard",
+        }),
         E = s()(p.Qq, g && p.Ow);
+
     function b(e) {
         h(!1), null == t || t(e);
     }

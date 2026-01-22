@@ -1,4 +1,6 @@
-n.d(t, { w: () => i });
+n.d(t, {
+    w: () => i,
+});
 var r = n(600975);
 (0, r.C)({
     kind: "user",
@@ -31,12 +33,16 @@ let i = (0, r.C)({
     kind: "user",
     id: "2022-11_mobile_account_switcher_notifications",
     label: "Mobile Account Switcher: Notifications",
-    defaultConfig: { isMultiAccountMobileNotificationsEnabled: !1 },
+    defaultConfig: {
+        isMultiAccountMobileNotificationsEnabled: !1,
+    },
     treatments: [
         {
             id: 1,
             label: "Enable notifications for multiple accounts",
-            config: { isMultiAccountMobileNotificationsEnabled: !0 },
+            config: {
+                isMultiAccountMobileNotificationsEnabled: !0,
+            },
         },
     ],
 });

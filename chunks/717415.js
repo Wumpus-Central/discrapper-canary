@@ -32,6 +32,7 @@ var r = n(627968),
     j = n(583235),
     T = n(985018),
     D = n(438655);
+
 function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -57,6 +58,7 @@ function w(e) {
     }
     return e;
 }
+
 function N(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -82,7 +84,10 @@ let P = l.createContext({
         isPortrait: !1,
         onClose: () => {},
     }),
-    I = l.createContext({ questConfig: null });
+    I = l.createContext({
+        questConfig: null,
+    });
+
 function L(e) {
     var t, n;
     let {
@@ -143,7 +148,9 @@ function L(e) {
                         icon: (e) =>
                             (0, r.jsx)(
                                 d.PGe,
-                                N(w({}, e), { color: d.LU0.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT }),
+                                N(w({}, e), {
+                                    color: d.LU0.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT,
+                                }),
                             ),
                         "aria-label": T.intl.string(T.t.cpT0Cq),
                         onClick: s,
@@ -153,8 +160,14 @@ function L(e) {
                     ref: (e) => {
                         y.current = e;
                     },
-                    className: i()(D.NE, { [D.en]: K }),
-                    style: K ? { "--custom-portrait-footer-height": "".concat(Q, "px") } : void 0,
+                    className: i()(D.NE, {
+                        [D.en]: K,
+                    }),
+                    style: K
+                        ? {
+                              "--custom-portrait-footer-height": "".concat(Q, "px"),
+                          }
+                        : void 0,
                     children: (0, r.jsx)("div", {
                         className: D.S3,
                         children: (0, r.jsxs)("div", {
@@ -176,7 +189,11 @@ function L(e) {
                                               (0, r.jsxs)("div", {
                                                   className: D.Df,
                                                   children: [
-                                                      R ? null : (0, r.jsx)(C.A, { tooltipPosition: "top" }),
+                                                      R
+                                                          ? null
+                                                          : (0, r.jsx)(C.A, {
+                                                                tooltipPosition: "top",
+                                                            }),
                                                       (0, r.jsx)(_.A, {}),
                                                   ],
                                               }),
@@ -190,7 +207,9 @@ function L(e) {
                                                               children: (0, r.jsx)(S.A, {}),
                                                           }),
                                                       }),
-                                                      (0, r.jsx)(O.A, { handlePrimaryCtaClick: Y }),
+                                                      (0, r.jsx)(O.A, {
+                                                          handlePrimaryCtaClick: Y,
+                                                      }),
                                                   ],
                                               }),
                                           ],
@@ -201,7 +220,11 @@ function L(e) {
                                               (0, r.jsxs)("div", {
                                                   className: D.uu,
                                                   children: [
-                                                      R ? null : (0, r.jsx)(C.A, { tooltipPosition: "top" }),
+                                                      R
+                                                          ? null
+                                                          : (0, r.jsx)(C.A, {
+                                                                tooltipPosition: "top",
+                                                            }),
                                                       (0, r.jsx)(_.A, {}),
                                                   ],
                                               }),
@@ -209,7 +232,9 @@ function L(e) {
                                                   className: D.NY,
                                                   children: [
                                                       (0, r.jsx)(S.A, {}),
-                                                      (0, r.jsx)(O.A, { handlePrimaryCtaClick: Y }),
+                                                      (0, r.jsx)(O.A, {
+                                                          handlePrimaryCtaClick: Y,
+                                                      }),
                                                   ],
                                               }),
                                           ],
@@ -222,6 +247,7 @@ function L(e) {
         }),
     });
 }
+
 function R(e) {
     let { questId: t, overrideQuest: n, autoplay: o, openStartClockTime: i } = e,
         s = (function (e, t) {
@@ -259,7 +285,15 @@ function R(e) {
         c = (0, u.bG)([v.A], () => v.A.getQuestConfig(t)),
         d = null != n ? n : a,
         f = null != n ? n.config : c,
-        m = l.useMemo(() => (null != f ? { questConfig: f } : null), [f]);
+        m = l.useMemo(
+            () =>
+                null != f
+                    ? {
+                          questConfig: f,
+                      }
+                    : null,
+            [f],
+        );
     return null != d && null != f && null != m
         ? (0, r.jsx)(I.Provider, {
               value: m,

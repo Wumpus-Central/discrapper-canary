@@ -1,4 +1,6 @@
-n.d(t, { x: () => y });
+n.d(t, {
+    x: () => y,
+});
 var r = n(284009),
     i = n.n(r),
     a = n(330140),
@@ -11,6 +13,7 @@ var r = n(284009),
     f = n(566980),
     p = n(652215),
     _ = n(788868);
+
 function h(e, t, n) {
     return (
         t in e
@@ -24,6 +27,7 @@ function h(e, t, n) {
         e
     );
 }
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -40,6 +44,7 @@ function m(e) {
     }
     return e;
 }
+
 function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -52,6 +57,7 @@ function g(e, t) {
     }
     return n;
 }
+
 function E(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -63,9 +69,11 @@ function E(e, t) {
         e
     );
 }
+
 function b(e, t, n) {
     return (0, l.isDesktop)() && null != e && [_.pe.TIER_0, _.pe.TIER_2].includes(e) && !t && null == n;
 }
+
 function y(e) {
     let {
             analyticsData: t,
@@ -136,8 +144,13 @@ function y(e) {
         onReturn: x ? void 0 : U,
         onComplete: (e) => {
             d.l_.has(e)
-                ? (P(f.h.COMPLETED), l(d.pn.CONFIRM, { trackedFromStep: e }))
-                : l(d.pn.REVIEW, { trackedFromStep: e });
+                ? (P(f.h.COMPLETED),
+                  l(d.pn.CONFIRM, {
+                      trackedFromStep: e,
+                  }))
+                : l(d.pn.REVIEW, {
+                      trackedFromStep: e,
+                  });
         },
         onStepChange: (e) => {
             let { currentStep: n, toStep: r } = e,

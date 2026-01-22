@@ -1,4 +1,8 @@
-r.d(t, { default: () => j }), r(896048), r(492834);
+r.d(t, {
+    default: () => j,
+}),
+    r(896048),
+    r(492834);
 var n = r(627968),
     l = r(64700),
     i = r(158954),
@@ -13,6 +17,7 @@ var n = r(627968),
     O = r(760322),
     b = r(330936),
     d = r(634580);
+
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
@@ -38,6 +43,7 @@ function g(e) {
     }
     return e;
 }
+
 function j(e) {
     let { inviteCode: t } = e,
         r = (function (e, t) {
@@ -93,7 +99,12 @@ function j(e) {
         return (0, n.jsx)(
             i.dWK,
             ((D = g({}, r)),
-            (T = T = { children: (0, n.jsx)(i.y$y, { className: d.u }) }),
+            (T = T =
+                {
+                    children: (0, n.jsx)(i.y$y, {
+                        className: d.u,
+                    }),
+                }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(D, Object.getOwnPropertyDescriptors(T))
                 : (function (e, t) {

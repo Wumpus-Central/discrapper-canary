@@ -6,4 +6,6 @@ function a(e) {
           ? "Object"
           : t;
 }
-r.d(t, { A: () => a });
+r.d(t, {
+    A: () => a,
+});

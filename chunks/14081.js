@@ -1,4 +1,7 @@
-l.d(t, { A: () => j }), l(228524);
+l.d(t, {
+    A: () => j,
+}),
+    l(228524);
 var r = l(627968),
     n = l(503698),
     i = l.n(n),
@@ -17,6 +20,7 @@ var r = l(627968),
     x = l(291305),
     b = l(561797),
     h = l(390175);
+
 function j(e) {
     let { guildId: t } = e,
         { state: l, lowestGameServerCost: n } = (0, o.cf)([f.A], () => ({
@@ -46,7 +50,9 @@ function j(e) {
                               src: h.A,
                               alt: "",
                           }),
-                          (0, r.jsx)("div", { className: i()(g.Sl, b.D7) }),
+                          (0, r.jsx)("div", {
+                              className: i()(g.Sl, b.D7),
+                          }),
                       ],
                   }),
                   (0, r.jsx)(d.Ft, {

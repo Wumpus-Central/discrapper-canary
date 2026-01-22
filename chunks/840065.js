@@ -17,6 +17,7 @@ var r = n(627968),
     c = n(780964),
     u = n(358776),
     d = n(652215);
+
 function f(e, t, n) {
     return (
         t in e
@@ -30,6 +31,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -46,6 +48,7 @@ function p(e) {
     }
     return e;
 }
+
 function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -58,6 +61,7 @@ function _(e, t) {
     }
     return n;
 }
+
 function h(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -69,6 +73,7 @@ function h(e, t) {
         e
     );
 }
+
 function m(e, t) {
     if (null == e) return {};
     var n,
@@ -85,6 +90,7 @@ function m(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function g(e, t) {
     if (null == e) return {};
     var n,
@@ -99,7 +105,12 @@ let E = "USER_SETTINGS_MODAL_MODAL_KEY";
 async function b(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
         s = arguments.length > 2 ? arguments[2] : void 0,
-        [l = { section: d.nc_.ACCOUNT }, ...c] = [t, s],
+        [
+            l = {
+                section: d.nc_.ACCOUNT,
+            },
+            ...c
+        ] = [t, s],
         { subsection: u, stackingBehavior: f = "replaceAll" } = l,
         _ = m(l, ["subsection", "stackingBehavior"]),
         [g] = c;
@@ -113,11 +124,19 @@ async function b(e) {
         ),
     ),
         (0, i.kBI)(E)
-            ? o.A.setState({ requestedTargetKey: e })
+            ? o.A.setState({
+                  requestedTargetKey: e,
+              })
             : await (0, i.mMO)(
                   async () => {
                       let { default: t } = await Promise.all([n.e("28979"), n.e("48666")]).then(n.bind(n, 796150));
-                      return (n) => (0, r.jsx)(t, h(p({}, n), { target: e }));
+                      return (n) =>
+                          (0, r.jsx)(
+                              t,
+                              h(p({}, n), {
+                                  target: e,
+                              }),
+                          );
                   },
                   {
                       modalKey: E,
@@ -128,6 +147,7 @@ async function b(e) {
               ),
         null == g || g();
 }
+
 function y(e) {
     let { section: t, subsection: n, urlOrigin: r } = e;
     l.default.track(d.HAw.USER_SETTINGS_URL_PARSED, {
@@ -136,6 +156,7 @@ function y(e) {
         user_settings_url_origin: r,
     });
 }
+
 function O(e) {
     let { section: t, subsection: n, urlOrigin: r } = e;
     l.default.track(d.HAw.USER_SETTINGS_URL_PARSING_FAILED, {
@@ -144,6 +165,7 @@ function O(e) {
         user_settings_url_origin: r,
     });
 }
+
 function A() {
     let e = (0, u.E7)("getWebUserSettingFromSection"),
         t = (0, u.WJ)("getWebUserSettingFromSection"),
@@ -186,12 +208,14 @@ function A() {
         ]);
     return e && !(0, s.Pm)() && n.delete(d.nc_.CLIPS), t || n.delete(d.nc_.CONNECTED_GAMES), n;
 }
+
 function v() {
     let e = A(),
         t = new Map();
     for (let [n, r] of e.entries()) t.set(r, n);
     return t;
 }
+
 function S(e) {
     let { match: t, urlOrigin: n, analyticsLocations: r } = e;
     y({

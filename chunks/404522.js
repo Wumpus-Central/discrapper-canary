@@ -1,4 +1,6 @@
-n.d(t, { b: () => o });
+n.d(t, {
+    b: () => o,
+});
 var r = n(64700),
     l = n(311907),
     i = n(476370),
@@ -10,9 +12,11 @@ let o = (e) => {
     return (
         (0, r.useEffect)(() => {
             var e;
-            (null == (e = o.lastCheckedForBadgeableActivities) || new Date(e).getTime() < Date.now() - 43200000) &&
+            (null == (e = o.lastCheckedForBadgeableActivities) || new Date(e).getTime() < Date.now() - 432e5) &&
                 !n &&
-                (0, a.LV)({ guildId: null });
+                (0, a.LV)({
+                    guildId: null,
+                });
         }, [o.lastCheckedForBadgeableActivities, n]),
         (0, r.useMemo)(
             () =>

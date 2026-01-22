@@ -1,7 +1,10 @@
-n.d(t, { p: () => s });
+n.d(t, {
+    p: () => s,
+});
 var r = n(73153),
     i = n(661191),
     a = n(652215);
+
 function s(e, t, n) {
     r.h.dispatch({
         type: "MESSAGE_CREATE",
@@ -16,6 +19,7 @@ function s(e, t, n) {
         isPushNotification: !1,
     });
 }
+
 function o(e) {
     let { channelId: t, requesterUser: n, requestToSpeakTimestamp: r } = e;
     return {

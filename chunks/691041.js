@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968);
 n(64700);
 var i = n(990078),
@@ -12,6 +14,7 @@ var i = n(990078),
     f = n(695311),
     p = n(996988),
     _ = n(985018);
+
 function h(e) {
     let { user: t, activity: n, onAction: h, onClose: m } = e,
         { themeType: g } = (0, u.E)(),
@@ -34,8 +37,14 @@ function h(e) {
             onClick: (e) => {
                 e.stopPropagation(),
                     null != y
-                        ? s.A.launch({ applicationId: y })
-                        : (null == h || h({ action: "PRESS_PLAY_BUTTON" }), E());
+                        ? s.A.launch({
+                              applicationId: y,
+                          })
+                        : (null == h ||
+                              h({
+                                  action: "PRESS_PLAY_BUTTON",
+                              }),
+                          E());
             },
         });
     if (null == b) return null;
@@ -51,7 +60,10 @@ function h(e) {
             fullWidth: g !== p.d.MODAL_V2,
             onClick: (e) => {
                 e.stopPropagation(),
-                    null == h || h({ action: T ? "PRESS_JOIN_BUTTON" : "PRESS_ASK_TO_JOIN_BUTTON" }),
+                    null == h ||
+                        h({
+                            action: T ? "PRESS_JOIN_BUTTON" : "PRESS_ASK_TO_JOIN_BUTTON",
+                        }),
                     A();
             },
         }),

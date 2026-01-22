@@ -1,5 +1,7 @@
 let r;
-n.d(t, { A: () => P });
+n.d(t, {
+    A: () => P,
+});
 var i,
     a = n(311907),
     s = n(562465),
@@ -9,6 +11,7 @@ var i,
     u = n(961350),
     d = n(101392),
     f = n(652215);
+
 function p(e, t, n) {
     return (
         t in e
@@ -22,6 +25,7 @@ function p(e, t, n) {
         e
     );
 }
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -43,10 +47,12 @@ let h = 10 * c.A.Millis.SECOND,
     g = 5,
     E = {},
     b = Object.freeze({});
+
 function y(e) {
     var t;
     return null != (t = E[e]) ? t : b;
 }
+
 function O(e) {
     let { channelId: t } = e,
         n = u.default.getId();
@@ -103,10 +109,12 @@ function O(e) {
         })
     );
 }
+
 function A(e) {
     if (null == r || r.channelId !== e) return !1;
     null != r.timeout && clearTimeout(r.timeout), (r = null);
 }
+
 function v(e) {
     let { channelId: t } = e,
         n = u.default.getId();
@@ -123,6 +131,7 @@ function v(e) {
         }))
     );
 }
+
 function S(e, t) {
     return setTimeout(() => {
         o.h.dispatch({
@@ -132,11 +141,13 @@ function S(e, t) {
         });
     }, h);
 }
+
 function I(e) {
     let { channelId: t, userId: n } = e,
         r = _({}, y(t));
     clearTimeout(r[n]), (r[n] = S(t, n)), (E[t] = r);
 }
+
 function T(e) {
     let { channelId: t, userId: n } = e,
         r = E[t];
@@ -144,6 +155,7 @@ function T(e) {
     let i = _({}, r);
     clearTimeout(i[n]), delete i[n], (E[t] = i);
 }
+
 function C(e) {
     let {
         channelId: t,
@@ -159,9 +171,11 @@ function C(e) {
             })
     );
 }
+
 function N() {
     E = {};
 }
+
 function R(e) {
     let t = y(e);
     return t === b ? 0 : Object.keys(t).length;

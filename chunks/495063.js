@@ -1,4 +1,6 @@
-n.d(t, { A: () => T });
+n.d(t, {
+    A: () => T,
+});
 var r,
     i,
     l = n(627968),
@@ -19,6 +21,7 @@ var r,
     O = n(311750),
     y = n(985018),
     v = n(473711);
+
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -52,6 +55,7 @@ let E = (e) => {
         children: d()(t).utc().format("MMMM YYYY"),
     });
 };
+
 function N(e) {
     let { item: t } = e,
         { ppgStatus: n, payoutStatus: r, ppgDeferralReasons: i, periodEndDate: s } = (0, x.Rs)(t),
@@ -61,8 +65,14 @@ function N(e) {
         case O.U1.OPEN:
             return (0, l.jsxs)(l.Fragment, {
                 children: [
-                    null != c ? y.intl.formatToPlainString(y.t.I6YOjS, { payoutDate: c }) : y.intl.string(y.t.G5ATX6),
-                    (0, l.jsx)(m.A, { className: v.$A }),
+                    null != c
+                        ? y.intl.formatToPlainString(y.t.I6YOjS, {
+                              payoutDate: c,
+                          })
+                        : y.intl.string(y.t.G5ATX6),
+                    (0, l.jsx)(m.A, {
+                        className: v.$A,
+                    }),
                 ],
             });
         case O.U1.CANCELED:
@@ -89,7 +99,12 @@ function N(e) {
                     ],
                 });
             return (0, l.jsxs)(l.Fragment, {
-                children: [y.intl.string(y.t.OtZ5kz), (0, l.jsx)(p.A, { className: v.tK })],
+                children: [
+                    y.intl.string(y.t.OtZ5kz),
+                    (0, l.jsx)(p.A, {
+                        className: v.tK,
+                    }),
+                ],
             });
     }
     switch (r) {
@@ -103,8 +118,14 @@ function N(e) {
         case O.bp.ERROR:
             return (0, l.jsxs)(l.Fragment, {
                 children: [
-                    null != c ? y.intl.formatToPlainString(y.t.I6YOjS, { payoutDate: c }) : y.intl.string(y.t.ubdQTt),
-                    (0, l.jsx)(m.A, { className: v.$A }),
+                    null != c
+                        ? y.intl.formatToPlainString(y.t.I6YOjS, {
+                              payoutDate: c,
+                          })
+                        : y.intl.string(y.t.ubdQTt),
+                    (0, l.jsx)(m.A, {
+                        className: v.$A,
+                    }),
                 ],
             });
         case O.bp.PAID:
@@ -158,12 +179,20 @@ let _ = (0, h.CU)({
             (0, j.N7)({
                 key: "PERIOD",
                 cellClassName: v.Ii,
-                renderHeader: () => (0, l.jsx)(h.A3, { children: y.intl.string(y.t.fThnXa) }),
-                renderContent: (e) => (0, l.jsx)(E, { dateUtc: e.periodStartingAt }),
+                renderHeader: () =>
+                    (0, l.jsx)(h.A3, {
+                        children: y.intl.string(y.t.fThnXa),
+                    }),
+                renderContent: (e) =>
+                    (0, l.jsx)(E, {
+                        dateUtc: e.periodStartingAt,
+                    }),
                 renderExpandedContent(e, t) {
                     c()(null != t, "CellProps should always be provided");
                     let { ListingIdLabel: n } = t;
-                    return (0, l.jsx)(n, { listingId: e.listingId });
+                    return (0, l.jsx)(n, {
+                        listingId: e.listingId,
+                    });
                 },
             }),
             (0, j.N7)(
@@ -206,12 +235,17 @@ let _ = (0, h.CU)({
                 renderContent: (e) =>
                     (0, l.jsx)(h.fh, {
                         className: v.fo,
-                        children: (0, l.jsx)(N, { item: e }),
+                        children: (0, l.jsx)(N, {
+                            item: e,
+                        }),
                     }),
             }),
         ],
-        { expandableToggleColumnKey: "DROPDOWN" },
+        {
+            expandableToggleColumnKey: "DROPDOWN",
+        },
     );
+
 function T(e) {
     let { ListingIdLabel: t, payoutsByPeriod: n } = e,
         { cellProps: r, data: i } = (0, j.vL)(n, {
@@ -225,7 +259,16 @@ function T(e) {
                     };
                 }),
         }),
-        a = s.useMemo(() => A({ ListingIdLabel: t }, r), [r, t]);
+        a = s.useMemo(
+            () =>
+                A(
+                    {
+                        ListingIdLabel: t,
+                    },
+                    r,
+                ),
+            [r, t],
+        );
     return (0, l.jsx)(h.Ay, {
         columns: S,
         data: i,

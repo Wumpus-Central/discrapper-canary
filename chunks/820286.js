@@ -1,4 +1,6 @@
-n.d(t, { X: () => g });
+n.d(t, {
+    X: () => g,
+});
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -8,6 +10,7 @@ var r = n(627968),
     u = n(190012),
     c = n(465364),
     d = n(640912);
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -33,6 +36,7 @@ function p(e) {
     }
     return e;
 }
+
 function m(e) {
     let { icon: t } = e,
         n = (function (e, t) {
@@ -99,6 +103,7 @@ let f = l.memo(function (e) {
             channelId: n,
         });
     });
+
 function g(e) {
     let t,
         { channel: n, message: l } = e,
@@ -113,9 +118,14 @@ function g(e) {
                     markup: i.markup,
                     channelId: l.channel_id,
                 }))
-              : "message" === i.type && (t = (0, r.jsx)(f, { message: i.message })),
+              : "message" === i.type &&
+                (t = (0, r.jsx)(f, {
+                    message: i.message,
+                })),
         (0, r.jsxs)("div", {
-            className: s()(d.Sl, { [d.Vz]: "text-feedback-positive" === o }),
+            className: s()(d.Sl, {
+                [d.Vz]: "text-feedback-positive" === o,
+            }),
             children: [
                 (0, r.jsxs)("span", {
                     className: d.BK,

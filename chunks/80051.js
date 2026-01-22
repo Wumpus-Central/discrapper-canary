@@ -1,4 +1,6 @@
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -8,6 +10,7 @@ var r = n(627968),
     c = n(709562),
     u = n(985018),
     d = n(232163);
+
 function f(e) {
     let { className: t, isVertical: n } = e;
     return (0, r.jsxs)("div", {
@@ -26,6 +29,7 @@ function f(e) {
         ],
     });
 }
+
 function p(e) {
     let { className: t, isVertical: n } = e;
     return (0, r.jsxs)("div", {
@@ -45,8 +49,10 @@ function p(e) {
         ],
     });
 }
+
 function _(e) {
     let { channelId: t, className: n, isParticipantsOpen: a, isVertical: o = !1, hideTooltip: _ = !1 } = e;
+
     function h() {
         l.A.toggleParticipants(t, !a);
     }

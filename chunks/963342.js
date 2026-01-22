@@ -1,4 +1,6 @@
-n.d(t, { j: () => l });
+n.d(t, {
+    j: () => l,
+});
 var r = n(311907),
     i = n(73825),
     a = n(97352),
@@ -12,7 +14,10 @@ let l = (0, r.UT)(a.A, {
         return 0 === t.length ? null : t;
     },
     load: (e) => (
-        null == e && s.A.addBreadcrumb({ message: "Error loading subscription plans: skuId is null" }),
+        null == e &&
+            s.A.addBreadcrumb({
+                message: "Error loading subscription plans: skuId is null",
+            }),
         null != e ? (0, i.ur)(e) : Promise.reject()
     ),
 });

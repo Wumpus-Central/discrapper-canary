@@ -1,4 +1,7 @@
-n.d(t, { A: () => m }), n(321073);
+n.d(t, {
+    A: () => m,
+}),
+    n(321073);
 var l = n(64700),
     r = n(451988),
     i = n(827734),
@@ -12,7 +15,8 @@ var l = n(64700),
     p = n(921652),
     b = n(139831);
 n(824217);
-let g = 1000 / 60;
+let g = 1e3 / 60;
+
 function m(e, t, n, m) {
     let h = (0, a.rdh)(i.A.unsafe_rawColors.BRAND_500).hex(),
         A = (0, a.rdh)(i.A.unsafe_rawColors.BLACK).hex(),

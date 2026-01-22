@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -9,6 +11,7 @@ var r = n(627968),
     u = n(237496),
     d = n(652215),
     f = n(985018);
+
 function p(e, t, n) {
     return (
         t in e
@@ -22,6 +25,7 @@ function p(e, t, n) {
         e
     );
 }
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -38,6 +42,7 @@ function _(e) {
     }
     return e;
 }
+
 function h(e) {
     return (0, r.jsx)(
         s.aFV,
@@ -67,9 +72,11 @@ function h(e) {
         ),
     );
 }
+
 function m() {
     let e = (0, a.bG)([u.A], () => u.A.shouldShowWarning(), []),
         t = i.useRef(null);
+
     function n() {
         null !== t.current && ((0, o.OoC)(t.current), (t.current = null));
     }

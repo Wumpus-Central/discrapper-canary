@@ -5,7 +5,7 @@ async function r(e) {
             let r = new FileReader(),
                 i = setTimeout(() => {
                     n(Error("File read timeout"));
-                }, 10000);
+                }, 1e4);
             (r.onload = (e) => {
                 var r;
                 clearTimeout(i);
@@ -21,4 +21,9 @@ async function r(e) {
         return 0;
     }
 }
-n.d(t, { _: () => r }), n(65821), n(927092), n(212978);
+n.d(t, {
+    _: () => r,
+}),
+    n(65821),
+    n(927092),
+    n(212978);

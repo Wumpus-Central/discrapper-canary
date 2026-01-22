@@ -26,6 +26,7 @@ var r = n(627968),
     b = n(652215),
     y = n(818348),
     O = n(571882);
+
 function A(e, t, n) {
     return (
         t in e
@@ -39,6 +40,7 @@ function A(e, t, n) {
         e
     );
 }
+
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -55,6 +57,7 @@ function v(e) {
     }
     return e;
 }
+
 function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -67,6 +70,7 @@ function S(e, t) {
     }
     return n;
 }
+
 function I(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -78,6 +82,7 @@ function I(e, t) {
         e
     );
 }
+
 function T(e, t) {
     if (null == e) return {};
     var n,
@@ -94,6 +99,7 @@ function T(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function C(e, t) {
     if (null == e) return {};
     var n,
@@ -158,7 +164,17 @@ let N = [f.pn.PAYMENT_ELEMENT],
                 }),
                 [t],
             ),
-            A = { billingDetails: v({}, null != h && { email: h }, null != m && { name: m }) };
+            A = {
+                billingDetails: v(
+                    {},
+                    null != h && {
+                        email: h,
+                    },
+                    null != m && {
+                        name: m,
+                    },
+                ),
+            };
         return (0, r.jsx)(
             a.PaymentElement,
             v(
@@ -166,7 +182,9 @@ let N = [f.pn.PAYMENT_ELEMENT],
                     id: "stripe-payment-element",
                     options: v(
                         {
-                            layout: { type: "tabs" },
+                            layout: {
+                                type: "tabs",
+                            },
                             wallets: O,
                             defaultValues: A,
                         },
@@ -198,7 +216,9 @@ let N = [f.pn.PAYMENT_ELEMENT],
             c = i.useMemo(() => {
                 let { name: e, address: t } = (0, h._Z)(s);
                 return v(
-                    { name: null != e ? e : null },
+                    {
+                        name: null != e ? e : null,
+                    },
                     null != t && {
                         address: Object.fromEntries(
                             Object.entries(t).filter((e) => {
@@ -234,7 +254,9 @@ let N = [f.pn.PAYMENT_ELEMENT],
                   children: [
                       (0, r.jsx)("div", {
                           className: O.R,
-                          children: (0, r.jsx)(a.PaymentElement, { id: "stripe-payment-element" }),
+                          children: (0, r.jsx)(a.PaymentElement, {
+                              id: "stripe-payment-element",
+                          }),
                       }),
                       u,
                   ],
@@ -294,7 +316,9 @@ let N = [f.pn.PAYMENT_ELEMENT],
     x = () =>
         (0, r.jsx)("div", {
             className: O.g4,
-            children: (0, r.jsx)(c.y$y, { type: c.y$y.Type.PULSING_ELLIPSIS }),
+            children: (0, r.jsx)(c.y$y, {
+                type: c.y$y.Type.PULSING_ELLIPSIS,
+            }),
         }),
     L = (e) => {
         let { onSetupError: t } = e,
@@ -304,14 +328,21 @@ let N = [f.pn.PAYMENT_ELEMENT],
                 isLoading: s,
                 setupError: o,
                 customPaymentMethodIdsToSourceTypes: l,
-            } = (0, m.p)({ onSetupError: t }),
+            } = (0, m.p)({
+                onSetupError: t,
+            }),
             { stripe: c } = (0, d.P5)();
         return s || null != o || null == c
             ? (0, r.jsx)(x, {})
             : (0, r.jsx)(a.Elements, {
                   stripe: c,
                   options: v({}, i),
-                  children: (0, r.jsx)(D, I(v({}, n), { customPaymentMethodIdsToSourceTypes: l })),
+                  children: (0, r.jsx)(
+                      D,
+                      I(v({}, n), {
+                          customPaymentMethodIdsToSourceTypes: l,
+                      }),
+                  ),
               });
     },
     j = ["applePay", "googlePay", "link"],

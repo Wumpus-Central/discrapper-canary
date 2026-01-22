@@ -1,4 +1,7 @@
-n.d(t, { A: () => K }), n(896048);
+n.d(t, {
+    A: () => K,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -43,6 +46,7 @@ let H = R.DN.SIZE_32,
         [k.E8.NO_CHAT]: F.Oo,
         [k.E8.RESIZABLE]: F.Ig,
     };
+
 function K(e) {
     var t, n, i;
     let { maxHeight: K, connectedLocation: W, renderExternalHeader: z } = e,
@@ -60,7 +64,9 @@ function K(e) {
         en = et !== k.E8.NO_CHAT,
         [er, el] = l.useState(null != (t = null != (n = g.Ay.activityPanelHeight) ? n : K) ? t : null),
         ei = l.useCallback((e) => {
-            d.Ay.updatedUnsyncedSettings({ activityPanelHeight: e });
+            d.Ay.updatedUnsyncedSettings({
+                activityPanelHeight: e,
+            });
         }, []),
         ea = l.useRef(null),
         [es, eo] = l.useState({
@@ -230,7 +236,9 @@ function K(e) {
                                       }),
                                   }),
                             (0, r.jsx)("div", {
-                                className: a()(F.ht, { [F.kK]: ef }),
+                                className: a()(F.ht, {
+                                    [F.kK]: ef,
+                                }),
                                 style: {
                                     paddingLeft: eu,
                                     paddingRight: eu,
@@ -260,7 +268,9 @@ function K(e) {
                                                   (0, r.jsxs)("div", {
                                                       className: F.qi,
                                                       children: [
-                                                          (0, r.jsx)(G.A, { channelId: eh }),
+                                                          (0, r.jsx)(G.A, {
+                                                              channelId: eh,
+                                                          }),
                                                           (0, r.jsx)(m.l, {
                                                               isTrayButton: !0,
                                                               label: V.intl.string(V.t.brPQ5U),
@@ -309,10 +319,16 @@ function K(e) {
                               maxHeight: K,
                               resizableNode: ee,
                               onResize: (e) => {
-                                  E._.dispatch(U.jej.MANUAL_IFRAME_RESIZING, { resizing: !0 }), el(e);
+                                  E._.dispatch(U.jej.MANUAL_IFRAME_RESIZING, {
+                                      resizing: !0,
+                                  }),
+                                      el(e);
                               },
                               onResizeEnd: (e) => {
-                                  E._.dispatch(U.jej.MANUAL_IFRAME_RESIZING, { resizing: !1 }), ei(e);
+                                  E._.dispatch(U.jej.MANUAL_IFRAME_RESIZING, {
+                                      resizing: !1,
+                                  }),
+                                      ei(e);
                               },
                           })
                         : null,

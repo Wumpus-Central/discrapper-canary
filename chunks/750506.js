@@ -9,6 +9,7 @@ var r = n(627968),
     i = n(64700),
     a = n(158954),
     s = n(397927);
+
 function o(e, t, n) {
     return (
         t in e
@@ -22,6 +23,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -43,6 +45,16 @@ let { Layer: c, LayerContainer: u, LayerProvider: d, layerContext: f } = (0, a.A
     _ = d,
     h = f,
     m = i.forwardRef(function (e, t) {
-        return (0, r.jsx)(c, { children: (0, r.jsx)(s.QCO, l({ ref: t }, e)) });
+        return (0, r.jsx)(c, {
+            children: (0, r.jsx)(
+                s.QCO,
+                l(
+                    {
+                        ref: t,
+                    },
+                    e,
+                ),
+            ),
+        });
     }),
     g = c;

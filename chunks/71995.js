@@ -1,4 +1,6 @@
-n.d(t, { A: () => E });
+n.d(t, {
+    A: () => E,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -15,6 +17,7 @@ var i = n(311907),
     h = n(531525),
     m = n(652215),
     g = n(985018);
+
 function E() {
     let { analyticsLocations: e } = (0, s.Ay)([a.A.USER_SETTINGS_VOICE_AND_VIDEO]),
         t = (0, i.bG)([o.A], () => o.A.getSubsection()),

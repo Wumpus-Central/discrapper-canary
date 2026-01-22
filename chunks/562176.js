@@ -24,7 +24,9 @@ e.exports = function (e) {
                 {
                     beginKeywords: "include",
                     end: "$",
-                    keywords: { keyword: "include" },
+                    keywords: {
+                        keyword: "include",
+                    },
                     contains: [
                         {
                             className: "string",
@@ -113,7 +115,9 @@ e.exports = function (e) {
             keywords: t,
             relevance: 0,
             contains: [
-                { beginKeywords: t.keyword },
+                {
+                    beginKeywords: t.keyword,
+                },
                 l,
                 {
                     className: "built_in",
@@ -161,8 +165,12 @@ e.exports = function (e) {
                 },
                 {
                     variants: [
-                        { begin: e.UNDERSCORE_IDENT_RE + "\\." + e.UNDERSCORE_IDENT_RE },
-                        { begin: e.UNDERSCORE_IDENT_RE + "\\s*=" },
+                        {
+                            begin: e.UNDERSCORE_IDENT_RE + "\\." + e.UNDERSCORE_IDENT_RE,
+                        },
+                        {
+                            begin: e.UNDERSCORE_IDENT_RE + "\\s*=",
+                        },
                     ],
                     relevance: 0,
                 },

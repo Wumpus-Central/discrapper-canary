@@ -10,8 +10,9 @@ n.d(t, {
     n(264879);
 var r = n(677623),
     i = n.n(r);
-let a = 5000,
+let a = 5e3,
     s = new (i())(a);
+
 function o(e) {
     for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
     let i = c(n);
@@ -32,9 +33,11 @@ function o(e) {
     )
         s.shift();
 }
+
 function l() {
     s.clear();
 }
+
 function c(e) {
     let t = "";
     for (let n of e) {
@@ -47,6 +50,7 @@ function c(e) {
     }
     return t;
 }
+
 function u(e) {
     return s
         .toArray()

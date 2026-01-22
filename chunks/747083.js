@@ -208,13 +208,27 @@ e.exports = function (e) {
             className: "number",
             relevance: 0,
             variants: [
-                { begin: `(\\b(${c})|(${u}))[eE][+-]?(${c})[jJ]?(?=${d})` },
-                { begin: `(${u})[jJ]?` },
-                { begin: `\\b([1-9](_?[0-9])*|0+(_?0)*)[lLjJ]?(?=${d})` },
-                { begin: `\\b0[bB](_?[01])+[lL]?(?=${d})` },
-                { begin: `\\b0[oO](_?[0-7])+[lL]?(?=${d})` },
-                { begin: `\\b0[xX](_?[0-9a-fA-F])+[lL]?(?=${d})` },
-                { begin: `\\b(${c})[jJ](?=${d})` },
+                {
+                    begin: `(\\b(${c})|(${u}))[eE][+-]?(${c})[jJ]?(?=${d})`,
+                },
+                {
+                    begin: `(${u})[jJ]?`,
+                },
+                {
+                    begin: `\\b([1-9](_?[0-9])*|0+(_?0)*)[lLjJ]?(?=${d})`,
+                },
+                {
+                    begin: `\\b0[bB](_?[01])+[lL]?(?=${d})`,
+                },
+                {
+                    begin: `\\b0[oO](_?[0-7])+[lL]?(?=${d})`,
+                },
+                {
+                    begin: `\\b0[xX](_?[0-9a-fA-F])+[lL]?(?=${d})`,
+                },
+                {
+                    begin: `\\b(${c})[jJ](?=${d})`,
+                },
             ],
         },
         p = {
@@ -223,7 +237,9 @@ e.exports = function (e) {
             end: /$/,
             keywords: i,
             contains: [
-                { begin: /# type:/ },
+                {
+                    begin: /# type:/,
+                },
                 {
                     begin: /#/,
                     end: /\b\B/,

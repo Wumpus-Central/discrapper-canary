@@ -1,8 +1,11 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(759790),
     a = n(862699),
     o = n(778139),
     i = n(986649);
+
 function s() {
     return (s =
         "u" > typeof Reflect && r

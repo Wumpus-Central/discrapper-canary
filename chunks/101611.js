@@ -11,6 +11,7 @@ var r = n(665260),
     o = n(65995),
     l = n(978165),
     c = n(340837);
+
 function u(e, t) {
     var n;
     let r = (0, l.A)(e),
@@ -25,11 +26,13 @@ function u(e, t) {
         completed: f,
     };
 }
+
 function d(e, t) {
     let n = (0, i.bG)([s.h], () => s.h.getNewMemberActions(e)),
         r = (0, i.bG)([o.A], () => o.A.getCompletedActions(e));
     return null == n ? void 0 : n.find((e) => (null == r ? void 0 : r[e.channelId]) !== !0 && e.channelId !== t);
 }
+
 function f(e) {
     var t;
     let n = (0, i.bG)([a.Ay], () => a.Ay.getSelfMember(e));

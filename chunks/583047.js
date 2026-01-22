@@ -1,4 +1,7 @@
-n.d(t, { a: () => m }), n(896048);
+n.d(t, {
+    a: () => m,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(158954),
@@ -11,12 +14,19 @@ var r = n(627968),
     f = n(260197),
     g = n(985018),
     b = n(35407);
+
 function m(e) {
     var t;
     let { guild: n, formFields: o } = e,
         [m, x] = i.useState(o);
     i.useEffect(() => x(o), [o]);
-    let h = null != (t = (0, a.H)({ guildId: n.id })) ? t : 0,
+    let h =
+            null !=
+            (t = (0, a.H)({
+                guildId: n.id,
+            }))
+                ? t
+                : 0,
         [j, O] = i.useState(null),
         y = i.useMemo(() => (null == m ? void 0 : m.some((e) => (0, s.i7)(e))), [m]),
         v = i.useMemo(() => m.length === f.OK, [m]),
@@ -91,10 +101,14 @@ function m(e) {
                         allowTerms: !y,
                     }),
                 }),
-            !v && (0, r.jsx)(p, { addFormField: E }),
+            !v &&
+                (0, r.jsx)(p, {
+                    addFormField: E,
+                }),
         ],
     });
 }
+
 function p(e) {
     let { addFormField: t } = e,
         n = i.useMemo(
@@ -140,7 +154,9 @@ function p(e) {
                 className: b.hD,
                 children: g.intl.string(g.t.ID04cA),
             }),
-            (0, r.jsx)(o.z, { pills: n }),
+            (0, r.jsx)(o.z, {
+                pills: n,
+            }),
         ],
     });
 }

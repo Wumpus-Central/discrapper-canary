@@ -1,4 +1,5 @@
 let r;
+
 function i(e, t, n) {
     return (
         t in e
@@ -12,6 +13,7 @@ function i(e, t, n) {
         e
     );
 }
+
 function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -28,6 +30,7 @@ function a(e) {
     }
     return e;
 }
+
 function s(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -40,6 +43,7 @@ function s(e, t) {
     }
     return n;
 }
+
 function o(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -51,7 +55,11 @@ function o(e, t) {
         e
     );
 }
-n.d(t, { A: () => u }), n(321073), (r = n(4472).A);
+n.d(t, {
+    A: () => u,
+}),
+    n(321073),
+    (r = n(4472).A);
 let l = [],
     c = !1,
     u = o(a({}, r), {

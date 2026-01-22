@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(963027),
     i = n(47167),
     l = n(734057),
@@ -7,6 +9,7 @@ var r = n(963027),
     c = n(2242),
     o = n(652215),
     d = n(985018);
+
 function u(e) {
     switch (e.ref_type) {
         case c.bN.CHANNEL: {
@@ -16,11 +19,17 @@ function u(e) {
                       let t = (0, i.m1)(e, a.default, s.A);
                       switch (e.type) {
                           case o.rbe.GUILD_VOICE:
-                              return d.intl.formatToPlainString(d.t.bkpadO, { channelName: t });
+                              return d.intl.formatToPlainString(d.t.bkpadO, {
+                                  channelName: t,
+                              });
                           case o.rbe.GUILD_STAGE_VOICE:
-                              return d.intl.formatToPlainString(d.t.TPPk2T, { channelName: t });
+                              return d.intl.formatToPlainString(d.t.TPPk2T, {
+                                  channelName: t,
+                              });
                           default:
-                              return (0, r.Ay)({ channel: e });
+                              return (0, r.Ay)({
+                                  channel: e,
+                              });
                       }
                   })(t)
                 : "";

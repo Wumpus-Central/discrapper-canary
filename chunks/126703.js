@@ -1,4 +1,6 @@
-n.d(t, { default: () => p });
+n.d(t, {
+    default: () => p,
+});
 var r = n(627968);
 n(64700);
 var s = n(397927),
@@ -11,6 +13,7 @@ var s = n(397927),
     f = n(25765),
     b = n(652215),
     u = n(689588);
+
 function p(e) {
     let { transitionState: t, onClose: n, analyticsLocation: p } = e,
         {
@@ -77,7 +80,9 @@ function p(e) {
                 }),
                 (0, r.jsx)(s.q7S, {
                     id: f.N.SUCCESS,
-                    children: (0, r.jsx)(d.A, { onClose: n }),
+                    children: (0, r.jsx)(d.A, {
+                        onClose: n,
+                    }),
                 }),
             ],
         }),

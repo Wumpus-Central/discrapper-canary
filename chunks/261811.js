@@ -1,7 +1,10 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(173618),
     i = n(952335),
     a = n(461213);
+
 function s(e, t, n) {
     return (
         t in e
@@ -43,6 +46,6 @@ class o extends r.A {
             s(this, "didCommit", void 0),
             (this.socket = e),
             (this.switchingAccounts = !1),
-            (this.didCommit = (0, i.A)(5, 20000, this.emitPresenceUpdate.bind(this)));
+            (this.didCommit = (0, i.A)(5, 2e4, this.emitPresenceUpdate.bind(this)));
     }
 }

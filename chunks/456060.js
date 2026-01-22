@@ -10,12 +10,17 @@ var r = n(287809),
     a = n(652215),
     s = n(985018),
     o = n(426127);
+
 function l(e, t, n) {
     switch (t) {
         case a.xL.LISTEN:
-            return s.intl.formatToPlainString(s.t["/8czH4"], { name: e });
+            return s.intl.formatToPlainString(s.t["/8czH4"], {
+                name: e,
+            });
         case a.xL.WATCH:
-            return s.intl.formatToPlainString(s.t.BBJXVk, { name: e });
+            return s.intl.formatToPlainString(s.t.BBJXVk, {
+                name: e,
+            });
         case a.xL.JOIN:
             return n ? void 0 : s.intl.string(s.t.pkq6Vq);
         case a.xL.STREAM_REQUEST:
@@ -25,11 +30,15 @@ function l(e, t, n) {
             return s.intl.string(s.t.Ckxb6j);
     }
 }
+
 function c(e, t, n) {
     return e.author.id === n
         ? s.intl.string(o.default["8B3U5O"])
-        : s.intl.formatToPlainString(o.default["d/qbC0"], { username: (0, i.mG)(t.guild_id, t.id, e.author) });
+        : s.intl.formatToPlainString(o.default["d/qbC0"], {
+              username: (0, i.mG)(t.guild_id, t.id, e.author),
+          });
 }
+
 function u(e, t, n, i, a) {
     if (e.author.id === i) {
         if (n.isPrivate()) {
@@ -46,8 +55,12 @@ function u(e, t, n, i, a) {
                       });
         }
         return a
-            ? s.intl.formatToPlainString(s.t["2N1kNS"], { appName: t })
-            : s.intl.formatToPlainString(s.t.IA6uDV, { appName: t });
+            ? s.intl.formatToPlainString(s.t["2N1kNS"], {
+                  appName: t,
+              })
+            : s.intl.formatToPlainString(s.t.IA6uDV, {
+                  appName: t,
+              });
     }
     return a
         ? s.intl.formatToPlainString(s.t.XE8axA, {
@@ -59,6 +72,7 @@ function u(e, t, n, i, a) {
               appName: t,
           });
 }
+
 function d(e, t, n, r, i) {
     var o;
     switch (null == (o = e.activity) ? void 0 : o.type) {
@@ -73,6 +87,7 @@ function d(e, t, n, r, i) {
             return u(e, t, n, r, !0);
     }
 }
+
 function f(e) {
     let t,
         { activityActionType: n, maxPartySize: r, partySize: i } = e;
@@ -85,11 +100,15 @@ function f(e) {
                             partySize: i,
                             maxPartySize: r,
                         })
-                      : s.intl.formatToPlainString(s.t.UGei0j, { partySize: i })
+                      : s.intl.formatToPlainString(s.t.UGei0j, {
+                            partySize: i,
+                        })
                   : r > 0
                     ? s.intl.formatToPlainString(s.t.gLu7NU, {
                           partySize: i,
                           maxPartySize: r,
                       })
-                    : s.intl.formatToPlainString(s.t["65JnWC"], { partySize: i }));
+                    : s.intl.formatToPlainString(s.t["65JnWC"], {
+                          partySize: i,
+                      }));
 }

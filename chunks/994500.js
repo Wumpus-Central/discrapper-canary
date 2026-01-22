@@ -1,10 +1,14 @@
-n.d(t, { A: () => V }), n(896048);
+n.d(t, {
+    A: () => V,
+}),
+    n(896048);
 var r,
     i = n(311907),
     a = n(73153),
     s = n(383233),
     o = n(287809),
     l = n(652215);
+
 function c(e, t, n) {
     return (
         t in e
@@ -18,6 +22,7 @@ function c(e, t, n) {
         e
     );
 }
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,6 +39,7 @@ function u(e) {
     }
     return e;
 }
+
 function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -46,6 +52,7 @@ function d(e, t) {
     }
     return n;
 }
+
 function f(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -57,7 +64,7 @@ function f(e, t) {
         e
     );
 }
-let p = 300000,
+let p = 3e5,
     _ = new Map(),
     h = {},
     m = {},
@@ -76,10 +83,12 @@ let p = 300000,
         ignored: void 0,
         blockedOrIgnored: void 0,
     };
+
 function C() {
     (T.friends = void 0), (T.blocked = void 0), (T.ignored = void 0), (T.blockedOrIgnored = void 0);
 }
 let N = new Map();
+
 function R(e, t) {
     let n = _.get(e);
     if (n === t) return;
@@ -91,11 +100,13 @@ function R(e, t) {
     let i = N.get(t);
     null != i ? i.add(e) : N.set(t, new Set([e])), C();
 }
+
 function w(e) {
     var t;
     let n = _.get(e);
     null != n && (_.delete(e), null == (t = N.get(n)) || t.delete(e), C());
 }
+
 function P() {
     var e, t;
     (S = g.size),
@@ -106,6 +117,7 @@ function P() {
         )),
         O++;
 }
+
 function D(e) {
     _.clear(),
         N.clear(),
@@ -127,17 +139,27 @@ function D(e) {
         }),
         P();
 }
+
 function x(e) {
     for (let [t, n] of (_.clear(), N.clear(), e.relationships)) R(t, n);
     P();
 }
+
 function L(e) {
     let t = _.get(e.relationship.id);
     R(e.relationship.id, e.relationship.type),
-        null != e.relationship.nickname && (h = f(u({}, h), { [e.relationship.id]: e.relationship.nickname })),
-        null != e.relationship.since && (m = f(u({}, m), { [e.relationship.id]: e.relationship.since })),
+        null != e.relationship.nickname &&
+            (h = f(u({}, h), {
+                [e.relationship.id]: e.relationship.nickname,
+            })),
+        null != e.relationship.since &&
+            (m = f(u({}, m), {
+                [e.relationship.id]: e.relationship.since,
+            })),
         null != e.relationship.originApplicationId &&
-            (y = f(u({}, y), { [e.relationship.id]: e.relationship.originApplicationId })),
+            (y = f(u({}, y), {
+                [e.relationship.id]: e.relationship.originApplicationId,
+            })),
         e.relationship.isSpamRequest ? g.add(e.relationship.id) : g.delete(e.relationship.id),
         e.relationship.userIgnored
             ? (E.add(e.relationship.id),
@@ -153,6 +175,7 @@ function L(e) {
                 user: e.relationship.user,
             });
 }
+
 function j(e) {
     w(e.relationship.id),
         null != h[e.relationship.id] && ((h = u({}, h)), delete h[e.relationship.id]),
@@ -163,6 +186,7 @@ function j(e) {
         g.delete(e.relationship.id),
         P();
 }
+
 function M(e) {
     let { relationship: t } = e;
     R(t.id, t.type),
@@ -176,10 +200,12 @@ function M(e) {
             : (E.delete(t.id), b.delete(t.id)),
         P();
 }
+
 function k(e) {
     for (let e of _.keys()) _.get(e) === l.eA$.PENDING_INCOMING && (w(e), g.delete(e), b.delete(e), delete A[e]);
     P();
 }
+
 function U(e) {
     A[e.userId] = {
         expiry: Date.now() + p,

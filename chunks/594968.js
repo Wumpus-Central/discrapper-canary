@@ -1,4 +1,6 @@
-n.d(t, { A: () => C });
+n.d(t, {
+    A: () => C,
+});
 var r = n(627968),
     i = n(64700),
     l = n(311907),
@@ -18,6 +20,7 @@ var r = n(627968),
     _ = n(652215),
     E = n(985018),
     O = n(615078);
+
 function y(e) {
     var t;
     let { user: n, applicationId: l, isGameRelationship: o, active: c } = e,
@@ -67,6 +70,7 @@ function y(e) {
         ],
     });
 }
+
 function I(e) {
     let { userId: t, applicationId: n, isGameRelationship: l, active: a } = e,
         { cancelFriendRequest: o } = (0, A.I)({
@@ -89,6 +93,7 @@ function I(e) {
         shouldHighlight: a,
     });
 }
+
 function v(e) {
     let { isGameRelationship: t, applicationId: n, userTag: a, isProvisional: o } = e,
         p = i.useMemo(() => (t ? E.intl.string(E.t["Uv/eTx"]) : a), [t, a]),
@@ -124,6 +129,7 @@ function v(e) {
         ],
     });
 }
+
 function S(e) {
     let { user: t, hovered: n, status: i, isGameRelationship: l, applicationId: a } = e,
         s = h.Ay.useUserTag(t);
@@ -140,6 +146,7 @@ function S(e) {
         }),
     });
 }
+
 function C(e) {
     let { user: t, type: n, status: l, isFocused: a, applicationId: s, isGameRelationship: c } = e,
         { analyticsLocations: u } = (0, o.Ay)(),

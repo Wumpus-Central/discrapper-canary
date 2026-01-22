@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -9,6 +11,7 @@ var i = n(397927),
     c = n(2242),
     u = n(985018),
     d = n(758382);
+
 function f(e) {
     let { channelId: t } = e,
         n = (0, l.fE)(t);
@@ -16,7 +19,11 @@ function f(e) {
     let o = n.isMediaChannel() ? i.xfq : (0, s._U)(n.type);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(i.AC4, { children: (0, a.Ay)({ channel: n }) }),
+            (0, r.jsx)(i.AC4, {
+                children: (0, a.Ay)({
+                    channel: n,
+                }),
+            }),
             (0, r.jsxs)("div", {
                 "aria-hidden": !0,
                 children: [
@@ -31,10 +38,13 @@ function f(e) {
         ],
     });
 }
+
 function p(e) {
     switch (e.ref_type) {
         case c.bN.CHANNEL:
-            return (0, r.jsx)(f, { channelId: e.ref_id });
+            return (0, r.jsx)(f, {
+                channelId: e.ref_id,
+            });
         case c.bN.INTANGIBLE:
             return e.name;
         default:

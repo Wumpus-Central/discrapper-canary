@@ -24,10 +24,16 @@ let s = "SearchStore",
         1: {
             has: ["image", "video"],
         },
-        3: { has: ["file"] },
+        3: {
+            has: ["file"],
+        },
         0: {},
-        2: { has: ["link"] },
-        4: { pinned: !0 },
+        2: {
+            has: ["link"],
+        },
+        4: {
+            pinned: !0,
+        },
     };
 var u = (function (e) {
     return (

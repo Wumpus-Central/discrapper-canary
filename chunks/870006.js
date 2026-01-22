@@ -1,4 +1,7 @@
-n.d(t, { u: () => j }), n(896048);
+n.d(t, {
+    u: () => j,
+}),
+    n(896048);
 var r = n(627968);
 n(64700);
 var l = n(311907),
@@ -16,10 +19,13 @@ var l = n(311907),
     g = n(355097),
     m = n(985018),
     A = n(169880);
+
 function y(e) {
     var t;
     let { guild: n } = e,
-        l = (0, c.A)({ scrollPosition: g._F.GUILD_TAG });
+        l = (0, c.A)({
+            scrollPosition: g._F.GUILD_TAG,
+        });
     return (0, r.jsx)("div", {
         children: (0, r.jsx)(o._, {
             bannerIcon: (0, r.jsx)(i._mZ, {
@@ -27,7 +33,9 @@ function y(e) {
                 color: "currentColor",
                 className: A.q3,
             }),
-            bannerHeader: m.intl.format(m.t.GgMwjk, { guildName: null != (t = null == n ? void 0 : n.name) ? t : "" }),
+            bannerHeader: m.intl.format(m.t.GgMwjk, {
+                guildName: null != (t = null == n ? void 0 : n.name) ? t : "",
+            }),
             bannerSubtext: m.intl.string(m.t.ONjwD5),
             textStyles: A.cI,
             headerStyles: A.U_,
@@ -40,6 +48,7 @@ function y(e) {
         }),
     });
 }
+
 function O(e) {
     var t, n;
     let { guild: l } = e,
@@ -57,7 +66,9 @@ function O(e) {
                 color: "currentColor",
                 className: A.q3,
             }),
-            bannerHeader: m.intl.format(m.t.kcYdTq, { guildName: null != (n = null == l ? void 0 : l.name) ? n : "" }),
+            bannerHeader: m.intl.format(m.t.kcYdTq, {
+                guildName: null != (n = null == l ? void 0 : l.name) ? n : "",
+            }),
             bannerSubtext: f,
             textStyles: A.cI,
             headerStyles: A.U_,
@@ -72,6 +83,7 @@ function O(e) {
         }),
     });
 }
+
 function j(e) {
     let { guild: t } = e,
         n = (0, l.bG)([u.default, d.Ay], () => {
@@ -80,8 +92,14 @@ function j(e) {
             return (0, f.wj)(d.Ay.getMember(t.id, e));
         }, [t]);
     return n.has(b.D.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME) || n.has(b.D.AUTOMOD_QUARANTINED_BIO)
-        ? (0, r.jsx)(O, { guild: t })
+        ? (0, r.jsx)(O, {
+              guild: t,
+          })
         : n.has(b.D.AUTOMOD_QUARANTINED_SERVER_TAG)
-          ? (0, r.jsx)(y, { guild: t })
-          : (0, r.jsx)(O, { guild: t });
+          ? (0, r.jsx)(y, {
+                guild: t,
+            })
+          : (0, r.jsx)(O, {
+                guild: t,
+            });
 }

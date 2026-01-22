@@ -1,4 +1,8 @@
-n.d(t, { A: () => A }), n(896048), n(747238);
+n.d(t, {
+    A: () => A,
+}),
+    n(896048),
+    n(747238);
 var l = n(627968),
     a = n(64700),
     r = n(935573),
@@ -96,7 +100,9 @@ let j = {
         return E === d.e.ERROR
             ? (0, l.jsx)("div", {
                   className: v.Un,
-                  children: (0, l.jsx)(b.A, { className: v.z3 }),
+                  children: (0, l.jsx)(b.A, {
+                      className: v.z3,
+                  }),
               })
             : (0, l.jsxs)(h.A, {
                   loading: E === d.e.FETCHING,

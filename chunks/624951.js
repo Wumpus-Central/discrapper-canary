@@ -1,4 +1,7 @@
-n.d(t, { A: () => b }), n(896048);
+n.d(t, {
+    A: () => b,
+}),
+    n(896048);
 var r = n(627968),
     i = n(554146),
     a = n(827734),
@@ -15,6 +18,7 @@ var r = n(627968),
     m = n(996988),
     g = n(985018),
     E = n(468115);
+
 function b(e) {
     var t;
     let { applicationId: n, onAction: b, onClose: y, activity: O } = e,
@@ -30,7 +34,9 @@ function b(e) {
     return N
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(p.A, { className: E.Xl }),
+                  (0, r.jsx)(p.A, {
+                      className: E.Xl,
+                  }),
                   (0, r.jsxs)("div", {
                       className: E.DK,
                       children: [

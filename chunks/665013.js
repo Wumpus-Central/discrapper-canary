@@ -8,9 +8,11 @@ var r = n(397927),
     l = n(442433),
     a = n(484740),
     s = n(985018);
+
 function o(e, t) {
     return (0, a.A)(e, t).length > 0;
 }
+
 function c(e) {
     let { role: t, guild: n, onSelect: o } = e,
         c = (0, a.A)(n, t);

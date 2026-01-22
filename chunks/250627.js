@@ -28,12 +28,18 @@ let f = (e) => {
                     c.GI(e),
                     o(!n);
             }, [e, n, t, s]),
-            { listingsLoaded: t === u.e.FETCHED && !s }
+            {
+                listingsLoaded: t === u.e.FETCHED && !s,
+            }
         );
     },
     p = function (e, t) {
         let { requireCurrentGuild: n } =
-                arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : { requireCurrentGuild: !0 },
+                arguments.length > 2 && void 0 !== arguments[2]
+                    ? arguments[2]
+                    : {
+                          requireCurrentGuild: !0,
+                      },
             s = (0, i.bG)([a.A], () => a.A.isConnected()),
             o = (0, i.bG)([l.A], () => l.A.getGuildId());
         return (
@@ -50,7 +56,9 @@ let f = (e) => {
     _ = function (e) {
         let { publishedOnly: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
         return (0, i.bG)([u.A, s.A], () =>
-            u.A.getGuildProductsForGuild(e, { publishedOnly: null != t ? t : !s.A.isViewingServerShop(e) }),
+            u.A.getGuildProductsForGuild(e, {
+                publishedOnly: null != t ? t : !s.A.isViewingServerShop(e),
+            }),
         );
     },
     h = (e) => (0, i.bG)([u.A], () => (null == e ? void 0 : u.A.getGuildProduct(e))),

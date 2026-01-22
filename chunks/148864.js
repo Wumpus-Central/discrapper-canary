@@ -1,9 +1,12 @@
 let r;
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var i,
     l = n(311907),
     a = n(73153),
     s = n(518977);
+
 function o(e, t, n) {
     return (
         t in e
@@ -18,6 +21,7 @@ function o(e, t, n) {
     );
 }
 let c = (0, s.rE)();
+
 function u(e) {
     var t;
     let { countryCode: n } = e;
@@ -28,7 +32,9 @@ class d extends (i = l.Ay.DeviceSettingsStore) {
         null != e && (r = e.selectedCountryCode);
     }
     getUserAgnosticState() {
-        return { selectedCountryCode: r };
+        return {
+            selectedCountryCode: r,
+        };
     }
     getCountryCode() {
         return null != r ? r : c;

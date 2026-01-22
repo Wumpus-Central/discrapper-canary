@@ -11,7 +11,10 @@ var i = n(503698),
     a = n.n(i),
     s = n(397927),
     o = n(798233);
-let l = () => (0, r.jsx)("hr", { className: o.ts }),
+let l = () =>
+        (0, r.jsx)("hr", {
+            className: o.ts,
+        }),
     c = (e) => {
         let { label: t, children: n, direction: i = "horizontal", className: c } = e;
         return (0, r.jsxs)(r.Fragment, {
@@ -23,7 +26,9 @@ let l = () => (0, r.jsx)("hr", { className: o.ts }),
                     children: t,
                 }),
                 (0, r.jsx)("div", {
-                    className: a()(o.kL, c, { [o.YG]: "vertical" === i }),
+                    className: a()(o.kL, c, {
+                        [o.YG]: "vertical" === i,
+                    }),
                     children: n,
                 }),
             ],

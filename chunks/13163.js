@@ -15,13 +15,20 @@ var r = n(3388),
 let f = d.createContext(null),
     p = "react-aria-focus-scope-restore",
     _ = null;
+
 function h(e) {
     let { children: t, contain: n, restoreFocus: s, autoFocus: o } = e,
         l = (0, d.useRef)(null),
         c = (0, d.useRef)(null),
         u = (0, d.useRef)([]),
         { parentNode: h } = (0, d.useContext)(f) || {},
-        g = (0, d.useMemo)(() => new k({ scopeRef: u }), [u]);
+        g = (0, d.useMemo)(
+            () =>
+                new k({
+                    scopeRef: u,
+                }),
+            [u],
+        );
     (0, r.N)(() => {
         let e = h || U.root;
         if (U.getTreeNode(e.scopeRef) && _ && !S(_, e.scopeRef)) {
@@ -80,7 +87,9 @@ function h(e) {
         );
     return d.createElement(
         f.Provider,
-        { value: b },
+        {
+            value: b,
+        },
         d.createElement("span", {
             "data-focus-scope-start": !0,
             hidden: !0,
@@ -94,6 +103,7 @@ function h(e) {
         }),
     );
 }
+
 function m(e) {
     return {
         focusNext(t = {}) {
@@ -164,9 +174,11 @@ function m(e) {
         },
     };
 }
+
 function g(e) {
     return e[0].parentElement;
 }
+
 function E(e) {
     let t = U.getTreeNode(_);
     for (; t && t.scopeRef !== e; ) {
@@ -175,6 +187,7 @@ function E(e) {
     }
     return !0;
 }
+
 function b(e) {
     if (e.checked) return !0;
     let t = [];
@@ -188,6 +201,7 @@ function b(e) {
         );
     return !!t && !t.some((e) => e.checked);
 }
+
 function y(e, t) {
     let n = (0, d.useRef)(void 0),
         o = (0, d.useRef)(void 0);
@@ -203,7 +217,13 @@ function y(e, t) {
                 let n = (0, i.bq)(l),
                     r = e.current;
                 if (!r || !A(n, r)) return;
-                let a = x(g(r), { tabbable: !0 }, r);
+                let a = x(
+                    g(r),
+                    {
+                        tabbable: !0,
+                    },
+                    r,
+                );
                 if (!n) return;
                 a.currentNode = n;
                 let s = t.shiftKey ? a.previousNode() : a.nextNode();
@@ -258,17 +278,21 @@ function y(e, t) {
             [o],
         );
 }
+
 function O(e) {
     return v(e);
 }
+
 function A(e, t) {
     return !!e && !!t && t.some((t) => t.contains(e));
 }
+
 function v(e, t = null) {
     if (e instanceof Element && e.closest("[data-react-aria-top-layer]")) return !0;
     for (let { scopeRef: n } of U.traverse(U.getTreeNode(t))) if (n && A(e, n.current)) return !0;
     return !1;
 }
+
 function S(e, t) {
     var n;
     let r = null == (n = U.getTreeNode(t)) ? void 0 : n.parent;
@@ -278,6 +302,7 @@ function S(e, t) {
     }
     return !1;
 }
+
 function I(e, t = !1) {
     if (null == e || t) {
         if (null != e)
@@ -289,17 +314,38 @@ function I(e, t = !1) {
             (0, u.l)(e);
         } catch {}
 }
+
 function T(e, t = !0) {
     let n = e[0].previousElementSibling,
         r = g(e),
-        i = x(r, { tabbable: t }, e);
+        i = x(
+            r,
+            {
+                tabbable: t,
+            },
+            e,
+        );
     i.currentNode = n;
     let a = i.nextNode();
-    return t && !a && (((i = x((r = g(e)), { tabbable: !1 }, e)).currentNode = n), (a = i.nextNode())), a;
+    return (
+        t &&
+            !a &&
+            (((i = x(
+                (r = g(e)),
+                {
+                    tabbable: !1,
+                },
+                e,
+            )).currentNode = n),
+            (a = i.nextNode())),
+        a
+    );
 }
+
 function C(e, t = !0) {
     I(T(e, t));
 }
+
 function N(e, t) {
     let n = d.useRef(t);
     (0, d.useEffect)(() => {
@@ -311,6 +357,7 @@ function N(e, t) {
         n.current = !1;
     }, [e]);
 }
+
 function R(e, t, n) {
     (0, r.N)(() => {
         if (t || n) return;
@@ -330,6 +377,7 @@ function R(e, t, n) {
         );
     }, [e, t, n]);
 }
+
 function w(e) {
     let t = U.getTreeNode(_);
     for (; t && t.scopeRef !== e; ) {
@@ -338,6 +386,7 @@ function w(e) {
     }
     return (null == t ? void 0 : t.scopeRef) === e;
 }
+
 function P(e, t, n) {
     let s = (0, d.useRef)("u" > typeof document ? (0, i.bq)((0, a.TW)(e.current ? e.current[0] : void 0)) : null);
     (0, r.N)(() => {
@@ -366,7 +415,9 @@ function P(e, t, n) {
                 let i = U.getTreeNode(e);
                 if (!i) return;
                 let a = i.nodeToRestore,
-                    s = x(r.body, { tabbable: !0 });
+                    s = x(r.body, {
+                        tabbable: !0,
+                    });
                 s.currentNode = n;
                 let o = t.shiftKey ? s.previousNode() : s.nextNode();
                 if (
@@ -421,6 +472,7 @@ function P(e, t, n) {
                 );
         }, [e, t]);
 }
+
 function D(e) {
     e.dispatchEvent(
         new CustomEvent(p, {
@@ -429,6 +481,7 @@ function D(e) {
         }),
     ) && I(e);
 }
+
 function x(e, t, n) {
     let r = (null == t ? void 0 : t.tabbable) ? o.A : o.t,
         i = (null == e ? void 0 : e.nodeType) === Node.ELEMENT_NODE ? e : null,
@@ -452,6 +505,7 @@ function x(e, t, n) {
         });
     return (null == t ? void 0 : t.from) && (c.currentNode = t.from), c;
 }
+
 function L(e, t = {}) {
     return {
         focusNext(n = {}) {
@@ -514,6 +568,7 @@ function L(e, t = {}) {
         },
     };
 }
+
 function j(e) {
     let t, n;
     do (t = e.lastChild()) && (n = t);
@@ -530,7 +585,9 @@ class M {
     addTreeNode(e, t, n) {
         let r = this.fastMap.get(null != t ? t : null);
         if (!r) return;
-        let i = new k({ scopeRef: e });
+        let i = new k({
+            scopeRef: e,
+        });
         r.addChild(i), (i.parent = r), this.fastMap.set(e, i), n && (i.nodeToRestore = n);
     }
     addNode(e) {
@@ -567,7 +624,11 @@ class M {
         return n;
     }
     constructor() {
-        (this.fastMap = new Map()), (this.root = new k({ scopeRef: null })), this.fastMap.set(null, this.root);
+        (this.fastMap = new Map()),
+            (this.root = new k({
+                scopeRef: null,
+            })),
+            this.fastMap.set(null, this.root);
     }
 }
 class k {

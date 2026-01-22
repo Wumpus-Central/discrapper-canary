@@ -14,6 +14,7 @@ function r(e) {
     }
     return e;
 }
+
 function i(e, t, n) {
     return (
         t in e
@@ -72,17 +73,23 @@ var u = n(225758),
                         return t.hasOwnProperty(e.key);
                     })
                     .map(function (e) {
-                        return r({}, e, { key: t[e.key] });
+                        return r({}, e, {
+                            key: t[e.key],
+                        });
                     }),
             ),
         );
     },
     S = function (e) {
-        return r({}, e, { key: e.key || _() });
+        return r({}, e, {
+            key: e.key || _(),
+        });
     },
     I = function (e, t, n) {
         var i = t.map(function (e) {
-            return r({}, e, { parentRef: n });
+            return r({}, e, {
+                parentRef: n,
+            });
         });
         return e.concat(i.reverse());
     },

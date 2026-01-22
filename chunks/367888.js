@@ -3,6 +3,7 @@ n.d(t, {
     a9: () => s,
 });
 var r = n(788868);
+
 function i(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
         n = Object.keys(r.hd).find((n) => {
@@ -11,12 +12,14 @@ function i(e) {
         });
     return null != n ? n : r.gD.NONE_MONTH;
 }
+
 function a(e) {
     return e.find((e) => {
         let t = r.hd[e.planId];
         return null != t && null != t.premiumType;
     });
 }
+
 function s(e, t, n) {
     let s = a(e);
     if (null == s) {

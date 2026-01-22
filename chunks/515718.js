@@ -38,6 +38,7 @@ var r = n(284009),
     s = n.n(a),
     o = n(531325),
     l = n.n(o);
+
 function c(e) {
     let { width: t, height: n, maxWidth: r, maxHeight: i, minWidth: a = 0, minHeight: s = 0 } = e;
     if (t !== r || n !== i) {
@@ -51,7 +52,8 @@ function c(e) {
         height: n,
     };
 }
-let u = 2000;
+let u = 2e3;
+
 function d(e, t) {
     let n = Math.min(Math.round(0.65 * window.innerHeight), Math.round(window.innerHeight)),
         r = Math.min(Math.round(0.75 * window.innerWidth), Math.round(window.innerWidth)),
@@ -63,6 +65,7 @@ function d(e, t) {
         maxHeight: i,
     });
 }
+
 function f(e) {
     let { width: t, height: n, maxWidth: r, maxHeight: i } = e,
         a = 1;
@@ -70,17 +73,21 @@ function f(e) {
     let s = 1;
     return (n = Math.round(n * a)) > i && (s = i / n), Math.min(a * s, 1);
 }
+
 function p(e) {
     let { width: t, height: n, maxWidth: r, maxHeight: i } = e;
     return t === n ? 1 : Math.min(Math.max(r / t, i / n), 1);
 }
+
 function _(e) {
     let { width: t, height: n } = e;
     return null != t && 0 !== t && null != n && 0 !== n;
 }
+
 function h(e) {
     return null == e || "" === e ? "none" : "url(".concat(e, ")");
 }
+
 function m(e, t, n) {
     let r = [];
     for (let i = 0, a, s, o, l, c; i < t; i += n)
@@ -92,6 +99,7 @@ function m(e, t, n) {
 }
 let g = [[0, 0, 0]],
     E = 128;
+
 function b(e, t, n) {
     let r = document.createElement("canvas"),
         i = r.getContext("2d");
@@ -118,6 +126,7 @@ let y = (e) => ("number" == typeof e ? null : O(e)),
                     (r.src = e);
             }),
     );
+
 function A(e) {
     return new Promise((t, n) => {
         let r = new FileReader();
@@ -128,21 +137,27 @@ function A(e) {
             (r.onerror = (e) => n(e));
     });
 }
+
 function v(e) {
     let t = e.split(";base64,");
     return i()(2 === t.length, "Input data is not a valid image."), atob(t[1]).length;
 }
 async function S(e, t, n) {
     let r = I(e);
-    return new File([await r.arrayBuffer()], t, { type: n });
+    return new File([await r.arrayBuffer()], t, {
+        type: n,
+    });
 }
+
 function I(e) {
     let t;
     t = e.split(",")[0].indexOf("base64") >= 0 ? atob(e.split(",")[1]) : btoa(e.split(",")[1]);
     let n = e.split(",")[0].split(":")[1].split(";")[0],
         r = new Uint8Array(t.length);
     for (var i = 0; i < t.length; i++) r[i] = t.charCodeAt(i);
-    return new Blob([r], { type: n });
+    return new Blob([r], {
+        type: n,
+    });
 }
 async function T(e) {
     var t;
@@ -151,6 +166,7 @@ async function T(e) {
         r = n.indexOf("IDAT");
     return !!(r > 0) && -1 !== n.substring(0, r).indexOf("acTL");
 }
+
 function C(e) {
     return new Promise((t, n) => {
         let r = new Image();

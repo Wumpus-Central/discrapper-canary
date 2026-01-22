@@ -18,7 +18,10 @@ var r = n(110259),
     TRACKING_URL: c.Rsh.TRACK,
     waitFor: [l.default],
     getFingerprint: l.default.getFingerprint,
-    getSessionId: () => (0, s.Ht)().then((e) => ({ sessionId: null == e ? void 0 : e.uuid })),
+    getSessionId: () =>
+        (0, s.Ht)().then((e) => ({
+            sessionId: null == e ? void 0 : e.uuid,
+        })),
     getLaunchSignature: () => o.launchSignature,
     scheduleWhenIdle: i.O,
 });

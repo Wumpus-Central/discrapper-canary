@@ -1,4 +1,6 @@
-t.d(n, { A: () => p });
+t.d(n, {
+    A: () => p,
+});
 var r = t(627968);
 t(64700);
 var l = t(665260),
@@ -6,6 +8,7 @@ var l = t(665260),
     s = t(652215),
     o = t(985018),
     u = t(638329);
+
 function a(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
@@ -31,6 +34,7 @@ function a(e) {
     }
     return e;
 }
+
 function c(e, n) {
     return (
         (n = null != n ? n : {}),
@@ -53,6 +57,7 @@ let d = {
     size: "md",
     color: i.LU0.colors.INTERACTIVE_TEXT_DEFAULT,
 };
+
 function p(e) {
     let { subscriptions: n, color: t = "text-default" } = e,
         p = n.some((e) => (0, l.Lt)(e.skuFlags, s.d68.APPLICATION_GUILD_SUBSCRIPTION));
@@ -62,10 +67,26 @@ function p(e) {
         className: u.R,
         children: p
             ? (0, r.jsxs)(r.Fragment, {
-                  children: [(0, r.jsx)(i.RR9, c(a({}, d), { color: "currentColor" })), o.intl.string(o.t.XIhSoj)],
+                  children: [
+                      (0, r.jsx)(
+                          i.RR9,
+                          c(a({}, d), {
+                              color: "currentColor",
+                          }),
+                      ),
+                      o.intl.string(o.t.XIhSoj),
+                  ],
               })
             : (0, r.jsxs)(r.Fragment, {
-                  children: [(0, r.jsx)(i.nys, c(a({}, d), { color: "currentColor" })), o.intl.string(o.t.dxfZph)],
+                  children: [
+                      (0, r.jsx)(
+                          i.nys,
+                          c(a({}, d), {
+                              color: "currentColor",
+                          }),
+                      ),
+                      o.intl.string(o.t.dxfZph),
+                  ],
               }),
     });
 }

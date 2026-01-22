@@ -1,4 +1,8 @@
-i.d(e, { A: () => K }), i(896048), i(321073);
+i.d(e, {
+    A: () => K,
+}),
+    i(896048),
+    i(321073);
 var n = i(627968);
 i(64700);
 var l = i(311907),
@@ -41,6 +45,7 @@ var l = i(311907),
     R = i(652215),
     J = i(272984),
     $ = i(985018);
+
 function K(t, e) {
     let { analyticsLocations: K } = (0, c.Ay)(),
         Q = (0, l.bG)([_.default], () => _.default.getCurrentUser()),
@@ -211,7 +216,9 @@ function K(t, e) {
                                                     applicationId: o,
                                                     userId: e.id,
                                                     location: R.PE1.CONTEXT_MENU,
-                                                    inviteAnalyticsMetadata: { source: R.PE1.ACTIVITY_INVITE },
+                                                    inviteAnalyticsMetadata: {
+                                                        source: R.PE1.ACTIVITY_INVITE,
+                                                    },
                                                 });
                                             if (null != t && t.type === R.rbe.GUILD_VOICE)
                                                 return (0, a.mMO)(
@@ -293,7 +300,9 @@ function K(t, e) {
                                                             );
                                                         };
                                                     },
-                                                    { modalKey: "use-activity-items-embedded-invite-modal" },
+                                                    {
+                                                        modalKey: "use-activity-items-embedded-invite-modal",
+                                                    },
                                                 );
                                             if ((null == t ? void 0 : t.id) != null)
                                                 return P.tk({
@@ -301,7 +310,9 @@ function K(t, e) {
                                                     invitedChannelId: t.id,
                                                     applicationId: o,
                                                     location: R.PE1.CONTEXT_MENU,
-                                                    inviteAnalyticsMetadata: { source: R.PE1.ACTIVITY_INVITE },
+                                                    inviteAnalyticsMetadata: {
+                                                        source: R.PE1.ACTIVITY_INVITE,
+                                                    },
                                                 });
                                         }
                                     })((0, G.H)(l.location), l.applicationId);
@@ -361,7 +372,11 @@ function K(t, e) {
                                 id: "join",
                                 label: t ? $.intl.string($.t.bf6Ci7) : $.intl.string($.t.VJlc0S),
                                 disabled: t,
-                                hint: t ? (0, n.jsx)(a.y$y, { type: a.y$y.Type.PULSING_ELLIPSIS }) : null,
+                                hint: t
+                                    ? (0, n.jsx)(a.y$y, {
+                                          type: a.y$y.Type.PULSING_ELLIPSIS,
+                                      })
+                                    : null,
                                 subtext: i.name,
                                 action: () => tl(i),
                             },
@@ -439,7 +454,11 @@ function K(t, e) {
                             id: "embedded-activity-join-".concat(t.applicationId),
                             label: d,
                             disabled: r,
-                            hint: Z[o] ? (0, n.jsx)(a.y$y, { type: a.y$y.Type.PULSING_ELLIPSIS }) : null,
+                            hint: Z[o]
+                                ? (0, n.jsx)(a.y$y, {
+                                      type: a.y$y.Type.PULSING_ELLIPSIS,
+                                  })
+                                : null,
                             subtext: c.name,
                             action: () => ta(t),
                         },

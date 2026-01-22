@@ -7,6 +7,7 @@ n.d(t, {
 var r = n(64700),
     i = n(870844),
     a = n(353640);
+
 function s(e, t, n) {
     return (
         t in e
@@ -20,6 +21,7 @@ function s(e, t, n) {
         e
     );
 }
+
 function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +38,7 @@ function o(e) {
     }
     return e;
 }
+
 function l(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -48,6 +51,7 @@ function l(e, t) {
     }
     return n;
 }
+
 function c(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -75,13 +79,34 @@ let u = "custom-themes-share-modal",
         (0, i.y)()((e, t) =>
             c(o({}, d), {
                 canSend: () => !t().sending && t().selectedDestinations.length > 0,
-                updateSearchText: (t) => e({ searchText: t }),
-                updateSelectShareDestinations: (t) => e({ selectedDestinations: t }),
-                updateMessage: (t) => e({ message: t }),
-                updateChannel: (t) => e({ channel: t }),
-                updateSending: (t) => e({ sending: t }),
-                updateMessageText: (t) => e({ messageText: t }),
-                setSend: (t) => e({ send: t }),
+                updateSearchText: (t) =>
+                    e({
+                        searchText: t,
+                    }),
+                updateSelectShareDestinations: (t) =>
+                    e({
+                        selectedDestinations: t,
+                    }),
+                updateMessage: (t) =>
+                    e({
+                        message: t,
+                    }),
+                updateChannel: (t) =>
+                    e({
+                        channel: t,
+                    }),
+                updateSending: (t) =>
+                    e({
+                        sending: t,
+                    }),
+                updateMessageText: (t) =>
+                    e({
+                        messageText: t,
+                    }),
+                setSend: (t) =>
+                    e({
+                        send: t,
+                    }),
             }),
         ),
     p = (0, r.createContext)(null),

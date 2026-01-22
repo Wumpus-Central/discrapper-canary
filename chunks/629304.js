@@ -1,4 +1,7 @@
-n.d(e, { default: () => p }), n(896048);
+n.d(e, {
+    default: () => p,
+}),
+    n(896048);
 var i = n(627968),
     l = n(64700),
     r = n(732955),
@@ -7,6 +10,7 @@ var i = n(627968),
     o = n(835806),
     u = n(104890),
     c = n(985018);
+
 function d(t, e, n) {
     return (
         e in t
@@ -61,9 +65,13 @@ class b extends l.PureComponent {
     }
     constructor(...t) {
         super(...t),
-            d(this, "state", { problem: null }),
+            d(this, "state", {
+                problem: null,
+            }),
             d(this, "handleChanged", (t) => {
-                this.setState({ problem: null != t ? t : null });
+                this.setState({
+                    problem: null != t ? t : null,
+                });
             }),
             d(this, "handleSubmit", () => {
                 let { stream: t, streamApplication: e, analyticsData: l, onClose: r } = this.props,
@@ -97,7 +105,12 @@ class b extends l.PureComponent {
                                             });
                                     }
                                     return t;
-                                })({ body: c.intl.string(c.t.mMTVnv) }, e),
+                                })(
+                                    {
+                                        body: c.intl.string(c.t.mMTVnv),
+                                    },
+                                    e,
+                                ),
                             );
                     });
             });

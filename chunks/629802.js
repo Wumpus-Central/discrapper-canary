@@ -31,6 +31,7 @@ let f = (0, i(795521).u)(async () => {
         (n = e),
         (r = u(409600));
 });
+
 function v(t, e) {
     return new Uint8ClampedArray(n.HEAPU8.buffer, r, t * e * 4);
 }

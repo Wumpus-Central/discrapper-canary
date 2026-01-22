@@ -19,6 +19,7 @@ let s = [
         decode: !0,
     },
 ];
+
 function o(e, t) {
     let n = t.concat(s),
         r = [];
@@ -35,6 +36,7 @@ function o(e, t) {
         r
     );
 }
+
 function l(e) {
     var t, n, r, s, o, l;
     let c = [];
@@ -65,6 +67,7 @@ function l(e) {
         c
     );
 }
+
 function c(e, t) {
     return o(
         JSON.parse(e).map((e) => ({
@@ -75,9 +78,11 @@ function c(e, t) {
         t,
     );
 }
+
 function u(e) {
     return "AV1X" === e ? "AV1" : e;
 }
+
 function d(e) {
     return "AV1" === e ? "AV1X" : e;
 }

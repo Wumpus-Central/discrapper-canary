@@ -1,4 +1,7 @@
-r.d(t, { default: () => u }), r(896048);
+r.d(t, {
+    default: () => u,
+}),
+    r(896048);
 var n = r(627968),
     l = r(64700),
     c = r(397927),
@@ -36,7 +39,9 @@ let u = (e) => {
                     (0, n.jsx)(a.A.Header, {
                         currentUser: t,
                         otherUser: r,
-                        header: o.intl.formatToPlainString(i.default["NMSTb/"], { isAdult: String(p) }),
+                        header: o.intl.formatToPlainString(i.default["NMSTb/"], {
+                            isAdult: String(p),
+                        }),
                         icon: (0, n.jsx)(c.PGe, {
                             size: "md",
                             color: "currentColor",

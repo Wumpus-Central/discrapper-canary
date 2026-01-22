@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(64700),
     i = n(417597),
     a = n(727170),
@@ -7,6 +9,7 @@ var r = n(64700),
     l = n(752319),
     c = n(287809),
     u = n(207803);
+
 function d(e) {
     let { isTryItOut: t, analyticsLocations: n, guildId: d } = e,
         f = (0, i.bG)([c.default], () => c.default.getCurrentUser()),

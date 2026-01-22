@@ -15,4 +15,6 @@ var r = n(64700),
             e
         );
     })({});
-let a = r.createContext({ onSelect: void 0 });
+let a = r.createContext({
+    onSelect: void 0,
+});

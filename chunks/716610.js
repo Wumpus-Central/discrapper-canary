@@ -10,6 +10,7 @@ var n,
         (n.ELIGIBLE_DISABLED = "eligible_disabled"),
         (n.ELIGIBLE_ENABLED = "eligible_enabled"),
         n);
+
 function s(e, i) {
     let t = e.features.has(l.GuildFeatures.VERIFIED),
         n = e.features.has(l.GuildFeatures.DISCOVERABLE);

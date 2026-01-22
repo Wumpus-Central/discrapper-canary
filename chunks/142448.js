@@ -1,4 +1,6 @@
-e.d(l, { A: () => c });
+e.d(l, {
+    A: () => c,
+});
 var o = e(627968);
 e(64700);
 var s = e(311907),
@@ -6,6 +8,7 @@ var s = e(311907),
     i = e(775602),
     t = e(652215),
     a = e(790826);
+
 function c(r) {
     var l, e;
     let { role: c } = r,
@@ -26,7 +29,9 @@ function c(r) {
                       color: null != (e = c.colorString) ? e : t.TpD,
                       colors: c.colorStrings,
                   }),
-            (0, o.jsx)("div", { children: c.name }),
+            (0, o.jsx)("div", {
+                children: c.name,
+            }),
         ],
     });
 }

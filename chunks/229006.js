@@ -16,10 +16,16 @@ var r = n(889137),
     i = n(440703),
     a = n(341915),
     s = n(229695);
+
 function o(e) {
     try {
         return (0, r.YW)(e.config)
-            .with({ config_version: 2 }, () => !0)
+            .with(
+                {
+                    config_version: 2,
+                },
+                () => !0,
+            )
             .exhaustive();
     } catch (n) {
         var t;
@@ -32,11 +38,18 @@ function o(e) {
         );
     }
 }
+
 function l(e) {
     return (0, r.YW)(e)
-        .with({ config_version: 2 }, (e) => (0, s.k)(e))
+        .with(
+            {
+                config_version: 2,
+            },
+            (e) => (0, s.k)(e),
+        )
         .exhaustive();
 }
+
 function c(e) {
     return null == e
         ? null
@@ -45,6 +58,7 @@ function c(e) {
               expiresAt: e.expires_at,
           };
 }
+
 function u(e) {
     let t = {};
     for (let [n, r] of Object.entries(e))
@@ -57,6 +71,7 @@ function u(e) {
         };
     return t;
 }
+
 function d(e) {
     var t;
     return {
@@ -72,6 +87,7 @@ function d(e) {
         progress: u(e.progress),
     };
 }
+
 function f(e) {
     return {
         id: e.id,
@@ -83,12 +99,14 @@ function f(e) {
         trafficMetadataSealed: e.traffic_metadata_sealed,
     };
 }
+
 function p(e) {
     return {
         id: e.id,
         replacementId: e.replacement_id,
     };
 }
+
 function _(e) {
     return e.type === i.l.VIRTUAL_CURRENCY
         ? {
@@ -109,6 +127,7 @@ function _(e) {
               collectibleProduct: e.collectible_product,
           };
 }
+
 function h(e) {
     return {
         id: e.id,
@@ -140,6 +159,7 @@ function h(e) {
         cosponsorMetadata: (0, s.j)(e.cosponsor_metadata),
     };
 }
+
 function m(e) {
     return {
         id: e.id,
@@ -147,6 +167,7 @@ function m(e) {
         userStatus: null == e.user_status ? null : d(e.user_status),
     };
 }
+
 function g(e) {
     var t;
     return {
@@ -158,12 +179,19 @@ function g(e) {
         tier: null != (t = e.tier) ? t : null,
     };
 }
+
 function E(e) {
     if ((null == e ? void 0 : e.quest_rewards) == null) return null;
     let t = e.quest_rewards;
     switch (t.reward.tag) {
         case i.l.IN_GAME:
-            return { questRewards: { reward: { tag: t.reward.tag } } };
+            return {
+                questRewards: {
+                    reward: {
+                        tag: t.reward.tag,
+                    },
+                },
+            };
         case i.l.REWARD_CODE:
             return {
                 questRewards: {
@@ -175,6 +203,7 @@ function E(e) {
             };
     }
 }
+
 function b(e) {
     return {
         eventName: e.event_name,
@@ -183,6 +212,7 @@ function b(e) {
         target: e.target,
     };
 }
+
 function y(e) {
     return {
         skuId: e.sku_id,
@@ -190,6 +220,7 @@ function y(e) {
         consumed: e.consumed,
     };
 }
+
 function O(e) {
     return {
         claimedAt: e.claimed_at,
@@ -197,6 +228,7 @@ function O(e) {
         errors: e.errors,
     };
 }
+
 function A(e) {
     return {
         altText: e.alt_text,
@@ -204,6 +236,7 @@ function A(e) {
         url: e.url,
     };
 }
+
 function v(e) {
     return {
         ctaType: e.cta_type,
@@ -211,6 +244,7 @@ function v(e) {
         url: e.url,
     };
 }
+
 function S(e) {
     return {
         ctaType: e.cta_type,
@@ -218,6 +252,7 @@ function S(e) {
         questId: e.quest_id,
     };
 }
+
 function I(e) {
     if (1 !== e.version || !(a.gh.QUEST_HOME_BANNER in e.placements)) return null;
     let t = e.placements[a.gh.QUEST_HOME_BANNER];

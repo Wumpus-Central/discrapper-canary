@@ -1,10 +1,14 @@
-l.d(i, { A: () => g }), l(896048);
+l.d(i, {
+    A: () => g,
+}),
+    l(896048);
 var t = l(439372),
     r = l(15285),
     a = l(961350),
     n = l(461213),
     s = l(734066),
     c = l(652215);
+
 function u(e, i, l) {
     return (
         i in e
@@ -45,7 +49,9 @@ class d extends t.A {
     constructor(...e) {
         super(...e),
             u(this, "callback", null),
-            u(this, "actions", { CLIPS_REMOTE_TRIGGER: (e) => this.handleRemoteClipTrigger(e) });
+            u(this, "actions", {
+                CLIPS_REMOTE_TRIGGER: (e) => this.handleRemoteClipTrigger(e),
+            });
     }
 }
 let g = new d();

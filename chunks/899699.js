@@ -10,6 +10,7 @@ var i = n(626584),
     s = n(672396);
 let o = new i.A("OverlayModuleUtils"),
     l = null;
+
 function c() {
     function e(e) {
         for (let t of ["createHostProcess", "connectProcess", "disconnectProcess", "destroyHostProcess"])
@@ -33,6 +34,7 @@ function c() {
     }
     return null != r ? Promise.resolve(r) : (null == l && (l = t()), l);
 }
+
 function u() {
     if (null == r)
         try {

@@ -1,4 +1,10 @@
-l.d(t, { a: () => m }), l(733351), l(638769), l(896048), l(321073);
+l.d(t, {
+    a: () => m,
+}),
+    l(733351),
+    l(638769),
+    l(896048),
+    l(321073);
 var n = l(64700),
     r = l(91871),
     i = l.n(r),
@@ -8,6 +14,7 @@ var n = l(64700),
     o = l(661191),
     u = l(274372),
     d = l(792852);
+
 function p(e, t) {
     return "ascending" === t
         ? e.sort((e, t) => e.id.localeCompare(t.id))
@@ -15,6 +22,7 @@ function p(e, t) {
           ? e.sort((e, t) => t.id.localeCompare(e.id))
           : e;
 }
+
 function m() {
     let e = (0, c.bG)([u.A], () => u.A.getClips()),
         t = (0, c.bG)([u.A], () => u.A.getPendingClips()),

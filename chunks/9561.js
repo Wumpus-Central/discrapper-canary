@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(709943),
     i = n(559751),
     a = n(482786),
@@ -6,6 +8,7 @@ var r = n(709943),
     o = n(683834),
     l = n(140851),
     c = n(499702);
+
 function u(e) {
     if ((0, i.A)(e) === l.qZ) return [];
     var t = (0, r.A)(e);
@@ -109,5 +112,7 @@ let d = {
         }
     },
     requiresIfExists: ["offset"],
-    data: { _skip: !1 },
+    data: {
+        _skip: !1,
+    },
 };

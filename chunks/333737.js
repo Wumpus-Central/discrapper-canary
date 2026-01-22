@@ -1,4 +1,7 @@
-r.d(t, { default: () => g }), r(896048);
+r.d(t, {
+    default: () => g,
+}),
+    r(896048);
 var s = r(627968),
     n = r(64700),
     a = r(189213),
@@ -9,6 +12,7 @@ var s = r(627968),
     d = r(464477),
     u = r(985018),
     f = r(954469);
+
 function p(e, t, r) {
     return (
         t in e
@@ -102,9 +106,13 @@ class b extends n.PureComponent {
                         authyURL: "https://www.authy.com/",
                     }),
                 }),
-                (0, s.jsx)(i.cGx, { className: f.yF }),
+                (0, s.jsx)(i.cGx, {
+                    className: f.yF,
+                }),
                 (0, s.jsx)(h, {
-                    image: (0, s.jsx)(o.Ay, { text: m }),
+                    image: (0, s.jsx)(o.Ay, {
+                        text: m,
+                    }),
                     label: u.intl.string(u.t["91InF1"]),
                     text: u.intl.string(u.t.hFeBkl),
                     children: (0, s.jsxs)("div", {
@@ -124,7 +132,9 @@ class b extends n.PureComponent {
                         ],
                     }),
                 }),
-                (0, s.jsx)(i.cGx, { className: f.yF }),
+                (0, s.jsx)(i.cGx, {
+                    className: f.yF,
+                }),
                 (0, s.jsx)(h, {
                     image: (0, s.jsx)("img", {
                         alt: "",
@@ -146,12 +156,16 @@ class b extends n.PureComponent {
                 isVerifying: !1,
             }),
             p(this, "handleCodeChange", (e) => {
-                this.setState({ code: e });
+                this.setState({
+                    code: e,
+                });
             }),
             p(this, "handleActivate", (e) => {
                 e.preventDefault();
                 let { totpSecret: t, code: r } = this.state;
-                this.setState({ isVerifying: !0 }),
+                this.setState({
+                    isVerifying: !0,
+                }),
                     l.A.enable({
                         code: r,
                         secret: (0, d.cC)(t),
@@ -164,7 +178,11 @@ class b extends n.PureComponent {
             }),
             p(this, "handleActivateSuccess", () => {
                 let { onClose: e, handleEnableMFASuccess: t } = this.props;
-                this.setState({ isVerifying: !1 }), t(), null == e || e();
+                this.setState({
+                    isVerifying: !1,
+                }),
+                    t(),
+                    null == e || e();
             });
     }
 }

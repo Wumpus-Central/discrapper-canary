@@ -1,4 +1,6 @@
-l.d(n, { default: () => b });
+l.d(n, {
+    default: () => b,
+});
 var t = l(627968);
 l(64700);
 var r = l(621466),
@@ -13,6 +15,7 @@ var r = l(621466),
     f = l(20883),
     A = l(979766),
     p = l(985018);
+
 function b(e) {
     var n;
     let l,
@@ -49,12 +52,18 @@ function b(e) {
         "aria-label": p.intl.string(p.t.ChPNkN),
         onSelect: V,
         children: [
-            (0, t.jsx)(i.rXV, { children: X }),
-            (0, t.jsx)(i.rXV, { children: _ }),
+            (0, t.jsx)(i.rXV, {
+                children: X,
+            }),
+            (0, t.jsx)(i.rXV, {
+                children: _,
+            }),
             (0, t.jsxs)(i.rXV, {
                 children: [w, q, H, I],
             }),
-            (0, t.jsx)(i.rXV, { children: M }),
+            (0, t.jsx)(i.rXV, {
+                children: M,
+            }),
             (0, t.jsxs)(i.rXV, {
                 children: [N, S],
             }),

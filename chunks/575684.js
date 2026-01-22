@@ -1,4 +1,7 @@
-n.d(t, { A: () => m }), n(896048);
+n.d(t, {
+    A: () => m,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -12,6 +15,7 @@ var r = n(627968),
     p = n(287809),
     _ = n(531525),
     h = n(652215);
+
 function m(e) {
     let { isRedesign: t = !1 } = e,
         n = (0, s.p)(),
@@ -26,7 +30,12 @@ function m(e) {
         [],
     );
     let O = (e) => {
-        (m.current = !0), (y.current = e), b(e), (0, u.gB)(e, { location: n.location }).catch(h.tEg);
+        (m.current = !0),
+            (y.current = e),
+            b(e),
+            (0, u.gB)(e, {
+                location: n.location,
+            }).catch(h.tEg);
     };
     return (0, r.jsx)(o.x, {
         setting: _.H.VOICE_AND_VIDEO_VIDEO_BACKGROUND,

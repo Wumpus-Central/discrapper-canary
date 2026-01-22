@@ -1,4 +1,6 @@
-n.d(t, { f: () => h });
+n.d(t, {
+    f: () => h,
+});
 var r = n(825913),
     i = n(123375),
     a = n(912687),
@@ -62,7 +64,9 @@ let _ = (0, f.createContext)({}),
                 },
                 defaultClassName: "react-aria-ToggleButton",
             }),
-            T = (0, d.$)(e, { global: !0 });
+            T = (0, d.$)(e, {
+                global: !0,
+            });
         return (
             delete T.id,
             delete T.onClick,
@@ -79,7 +83,15 @@ let _ = (0, f.createContext)({}),
                     "data-hovered": S || void 0,
                     "data-focus-visible": A || void 0,
                 },
-                f.createElement(i.r.Provider, { value: { isSelected: E } }, I.children),
+                f.createElement(
+                    i.r.Provider,
+                    {
+                        value: {
+                            isSelected: E,
+                        },
+                    },
+                    I.children,
+                ),
             )
         );
     });

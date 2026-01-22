@@ -1,10 +1,13 @@
-n.d(t, { A: () => l });
+n.d(t, {
+    A: () => l,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
     a = n(303727),
     s = n(985018),
     o = n(117333);
+
 function l() {
     return (0, r.jsxs)("div", {
         className: o.kL,
@@ -22,7 +25,9 @@ function l() {
                             height: 28,
                         }),
                     }),
-                    (0, r.jsx)(a.A, { className: o.uf }),
+                    (0, r.jsx)(a.A, {
+                        className: o.uf,
+                    }),
                 ],
             }),
             (0, r.jsx)(i.Heading, {

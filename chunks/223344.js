@@ -1,9 +1,12 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var a = n(627968),
     l = n(64700),
     i = n(317097),
     r = n(397927),
     s = n(350246);
+
 function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -29,6 +32,7 @@ function o(e) {
     }
     return e;
 }
+
 function c(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -70,7 +74,9 @@ let d = function (e) {
                         tag: "span",
                         "aria-label": "Select a color",
                         className: s.O6,
-                        style: { backgroundColor: n },
+                        style: {
+                            backgroundColor: n,
+                        },
                         children: (0, a.jsx)(r.dDg, {
                             size: "xs",
                             color: "currentColor",

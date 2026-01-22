@@ -1,4 +1,7 @@
-n.d(t, { n: () => f }), n(896048);
+n.d(t, {
+    n: () => f,
+}),
+    n(896048);
 var r = n(64700),
     i = n(311907),
     a = n(429913),
@@ -8,6 +11,7 @@ var r = n(64700),
     c = n(723702),
     u = n(933958),
     d = n(847381);
+
 function f(e) {
     let t = (0, i.bG)([s.default], s.default.getCurrentUser),
         n = (0, i.yK)([u.Ay], () => u.Ay.getShelfActivities(e)),

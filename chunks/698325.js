@@ -1,4 +1,8 @@
-l.d(t, { default: () => g }), l(896048), l(321073);
+l.d(t, {
+    default: () => g,
+}),
+    l(896048),
+    l(321073);
 var n = l(627968),
     i = l(64700),
     r = l(136722),
@@ -14,6 +18,7 @@ var n = l(627968),
     f = l(387255),
     y = l(985018),
     m = l(811221);
+
 function v(e) {
     return (t) => null != t && !(0, u.N8)(e, t);
 }
@@ -22,7 +27,9 @@ let x = (e) => {
         return (0, n.jsx)("div", {
             "aria-hidden": !0,
             className: m.Ni,
-            style: { backgroundColor: null == t ? void 0 : t.colorString },
+            style: {
+                backgroundColor: null == t ? void 0 : t.colorString,
+            },
         });
     },
     g = (e) => {
@@ -43,7 +50,9 @@ let x = (e) => {
                 id: e.id,
                 label: e.name,
                 value: e.id,
-                leading: (0, n.jsx)(x, { rolesRow: e }),
+                leading: (0, n.jsx)(x, {
+                    rolesRow: e,
+                }),
             })),
             [M, P] = i.useState(O.map((e) => e.id).filter(v(g.id))),
             [R, T] = i.useState(!1),

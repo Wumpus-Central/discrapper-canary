@@ -1,4 +1,7 @@
-n.d(t, { A: () => b }), n(896048);
+n.d(t, {
+    A: () => b,
+}),
+    n(896048);
 var l = n(627968),
     r = n(64700),
     a = n(503698),
@@ -21,6 +24,7 @@ var l = n(627968),
     m = n(295191),
     S = n(586387),
     p = n(12999);
+
 function b(e) {
     let { userId: t, guildId: n, onClose: a, className: b, infoPanelClassName: G, style: R, moderatorReportId: D } = e,
         L = (0, N.q)(n),
@@ -50,7 +54,12 @@ function b(e) {
             }
         );
     }, [M, C, a]),
-    (0, d.E)({ [n]: [t] }, "GuildMemberModViewSidebar"),
+    (0, d.E)(
+        {
+            [n]: [t],
+        },
+        "GuildMemberModViewSidebar",
+    ),
     r.useEffect(() => {
         !(async function () {
             let e = [

@@ -1,4 +1,6 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -6,6 +8,7 @@ var i = n(397927),
     s = n(652215),
     o = n(985018),
     l = n(144365);
+
 function c(e) {
     var t;
     let n,
@@ -24,7 +27,9 @@ function c(e) {
     } else
         n =
             c.type === s.lAJ.STAGE_RAISE_HAND
-                ? o.intl.format(o.t["qDAX++"], { handleDelete: p })
+                ? o.intl.format(o.t["qDAX++"], {
+                      handleDelete: p,
+                  })
                 : o.intl.format(o.t.uX3ecL, {
                       count: 1,
                       countMessages: 1,

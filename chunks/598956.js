@@ -1,6 +1,8 @@
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});
 var r = {};
 r = {
-    removeButtonLabel: "Eltávolítás",
-    removeDescription: "Nyomja meg a Delete billentyűt a címke eltávolításához.",
+    removeButtonLabel: "Elt\xe1vol\xedt\xe1s",
+    removeDescription: "Nyomja meg a Delete billentyűt a c\xedmke elt\xe1vol\xedt\xe1s\xe1hoz.",
 };

@@ -24,10 +24,14 @@ function r(e) {
         );
     };
 }
+
 function i(e, t) {
     for (var n in e) if (e.hasOwnProperty(n) && t(e[n])) return n;
 }
+
 function a(e, t) {
     for (var n = 0; n < e.length; n++) if (t(e[n])) return n;
 }
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});

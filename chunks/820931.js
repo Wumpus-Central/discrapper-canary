@@ -1,4 +1,6 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(627968);
 n(64700);
 var a = n(311907),
@@ -8,7 +10,9 @@ var a = n(311907),
 let o = a.Ay.connectStores([i.Ay], (e) => {
     let { context: t, index: n } = e,
         r = i.Ay.getAllStats(t)[n];
-    return { outbound: null != r ? r.rtp.outbound : null };
+    return {
+        outbound: null != r ? r.rtp.outbound : null,
+    };
 })(function (e) {
     let { outbound: t, context: n, index: a } = e;
     return (0, r.jsx)(l.HI, {

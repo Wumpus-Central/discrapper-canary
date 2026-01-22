@@ -1,4 +1,8 @@
-n.d(t, { A: () => L }), n(65821), n(896048);
+n.d(t, {
+    A: () => L,
+}),
+    n(65821),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -21,6 +25,7 @@ var r = n(627968),
     A = n(652215),
     v = n(985018),
     S = n(405434);
+
 function I(e, t, n) {
     return (
         t in e
@@ -34,6 +39,7 @@ function I(e, t, n) {
         e
     );
 }
+
 function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -50,6 +56,7 @@ function T(e) {
     }
     return e;
 }
+
 function C(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -62,6 +69,7 @@ function C(e, t) {
     }
     return n;
 }
+
 function N(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -74,16 +82,22 @@ function N(e, t) {
     );
 }
 let R = 150;
+
 function w(e, t) {
     switch (e) {
         case O.lp.ACTIVITY:
-            return v.intl.formatToPlainString(v.t.TCM94S, { numUsers: t });
+            return v.intl.formatToPlainString(v.t.TCM94S, {
+                numUsers: t,
+            });
         case O.lp.STREAM:
-            return v.intl.formatToPlainString(v.t.BR7Tno, { numViewers: t });
+            return v.intl.formatToPlainString(v.t.BR7Tno, {
+                numViewers: t,
+            });
         default:
             throw Error("Unknown participant type.");
     }
 }
+
 function P(e) {
     let { users: t, disableInteraction: n, guildId: i, participantType: a, channelId: o, handleUserContextMenu: l } = e,
         c = w(a, t.length);
@@ -107,7 +121,9 @@ function P(e) {
                                 guildId: null != i ? i : void 0,
                                 channelId: o,
                                 nick: y.Ay.getNickname(i, o, e),
-                                className: s()(S.kp, { [S.YR]: n }),
+                                className: s()(S.kp, {
+                                    [S.YR]: n,
+                                }),
                                 textClassName: S.vc,
                                 disablePopout: n,
                                 onContextMenu: (t) => (n ? null : l(t, e)),
@@ -120,6 +136,7 @@ function P(e) {
         }),
     });
 }
+
 function D(e) {
     let { users: t, guildId: n, channelId: i, maxVisibleUsers: a = 3, className: o, participantType: l } = e,
         c = w(l, t.length),
@@ -155,6 +172,7 @@ function D(e) {
     });
 }
 let x = [];
+
 function L(e) {
     let {
             channelId: t,
@@ -198,9 +216,17 @@ function L(e) {
                             let { default: e } = await Promise.all([n.e("97262"), n.e("32418"), n.e("8893")]).then(
                                 n.bind(n, 668569),
                             );
-                            return (n) => (0, r.jsx)(e, N(T({}, n), { user: t }));
+                            return (n) =>
+                                (0, r.jsx)(
+                                    e,
+                                    N(T({}, n), {
+                                        user: t,
+                                    }),
+                                );
                         },
-                        { onClose: U },
+                        {
+                            onClose: U,
+                        },
                     );
             },
             [U, k],

@@ -55,6 +55,7 @@ var a = n(988665),
 n(768570);
 var b = n(652215),
     y = n(985018);
+
 function O(e, t, n) {
     return (
         t in e
@@ -68,6 +69,7 @@ function O(e, t, n) {
         e
     );
 }
+
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -84,6 +86,7 @@ function A(e) {
     }
     return e;
 }
+
 function v(e) {
     switch (e.type) {
         case b.I4_.GUILD:
@@ -98,6 +101,7 @@ function v(e) {
             return b.YYv;
     }
 }
+
 function S(e) {
     if (e.type === b.I4_.DMS) {
         var t;
@@ -105,6 +109,7 @@ function S(e) {
     }
     return v(e);
 }
+
 function I(e) {
     switch (e.type) {
         case b.I4_.GUILD_CHANNEL:
@@ -121,9 +126,11 @@ function I(e) {
             return null;
     }
 }
+
 function T(e) {
     return e.type === b.I4_.GUILD || e.type === b.I4_.GUILD_CHANNEL || e.type === b.I4_.THREAD;
 }
+
 function C(e) {
     switch (e.type) {
         case b.I4_.GUILD_CHANNEL:
@@ -134,6 +141,7 @@ function C(e) {
             return null;
     }
 }
+
 function N(e) {
     switch (e) {
         case b.BBH.MOST_RELEVANT:
@@ -154,6 +162,7 @@ function N(e) {
             };
     }
 }
+
 function R(e) {
     return null == e.sort_by || null == e.sort_order
         ? b.BBH.NEWEST
@@ -163,6 +172,7 @@ function R(e) {
             ? b.BBH.OLDEST
             : b.BBH.NEWEST;
 }
+
 function w(e) {
     switch (e) {
         case b.LWr.FILTER_FROM:
@@ -192,17 +202,20 @@ let P = {
     [b.LWr.FILTER_AFTER]: !0,
     [b.LWr.FILTER_ON]: !0,
 };
+
 function D(e) {
     let t = E.Ay[e],
         n = null != t ? t.queryKey : null;
     return null == n && (n = "content"), n;
 }
+
 function x(e, t) {
     if (c.A.didAgree(t)) {
         let t = p.default.getCurrentUser();
         null != t && (e.include_nsfw = null == t.nsfwAllowed || t.nsfwAllowed);
     }
 }
+
 function L(e) {
     let t = {};
     for (let [n, r] of (e.forEach((e) => {
@@ -250,7 +263,9 @@ function L(e) {
         r instanceof Set && (t[n] = Array.from(r));
     if (t.content) {
         delete t.contents;
-        let e = g.A.getCurrentConfig({ location: "getSearchQueryFromTokens" });
+        let e = g.A.getCurrentConfig({
+            location: "getSearchQueryFromTokens",
+        });
         if (e.enabled) {
             let n = [],
                 r = e.brackets
@@ -274,6 +289,7 @@ function L(e) {
     }
     return t;
 }
+
 function j(e) {
     var t;
     return (null == e ? void 0 : e.contents) != null && e.contents.length > 0
@@ -284,12 +300,14 @@ function j(e) {
           ? void 0
           : e.content;
 }
+
 function M(e) {
     return e
         .map((e) => (e.type === a.Ay.NON_TOKEN_TYPE ? e.getFullMatch() : ""))
         .join(" ")
         .trim();
 }
+
 function k(e, t, n) {
     let r,
         i,
@@ -308,6 +326,7 @@ function k(e, t, n) {
               anchorOffset: n,
           };
 }
+
 function U(e, t) {
     let n,
         { currentToken: r, nextToken: i, previousToken: s } = (e = null != e ? e : {});
@@ -350,6 +369,7 @@ function U(e, t) {
               token: n,
           });
 }
+
 function G(e) {
     if (null == e.match(/([\\" ])/g)) return e;
     {
@@ -357,35 +377,66 @@ function G(e) {
         return '"'.concat(t, '"');
     }
 }
+
 function V(e) {
     return e.reduce((e, t) => (null == t ? e : t.results.length + e), 0);
 }
+
 function F(e) {
     return null == e ? "" : e.map((e) => e.getFullMatch()).join("");
 }
 let B = new a.Ay(),
     H = new a.Ay();
+
 function Y(e) {
     return B.tokenize(e);
 }
+
 function W() {
     B.clearCache(), H.clearCache();
 }
+
 function K(e) {
     return null != e ? P[e] : null;
 }
+
 function z(e, t) {
     let n = b.l90.test(e.type);
     return (null != t || !n) && (null == t || !n || !!b.T2E.test(t.type));
 }
+
 function q() {
-    (0, E.G0)(), B.reset(), i()(E.Ay).forOwn((e, t) => B.addRule(A({ type: t }, e))), H.reset();
+    (0, E.G0)(),
+        B.reset(),
+        i()(E.Ay).forOwn((e, t) =>
+            B.addRule(
+                A(
+                    {
+                        type: t,
+                    },
+                    e,
+                ),
+            ),
+        ),
+        H.reset();
     let e = (0, E.gU)();
-    i()(e).forOwn((e, t) => H.addRule(A({ type: t }, e))), m.A.markSearchTokensRefreshed();
+    i()(e).forOwn((e, t) =>
+        H.addRule(
+            A(
+                {
+                    type: t,
+                },
+                e,
+            ),
+        ),
+    ),
+        m.A.markSearchTokensRefreshed();
 }
+
 function X(e) {
     return !!T(e) || (e.type === b.I4_.DMS && !f.A.hidePersonalInformation);
 }
+
 function Z(e) {
     let t = e.name,
         n = !1;
@@ -403,6 +454,7 @@ function Z(e) {
     }
     return ((t = G(t)), n) ? "#".concat(t) : t;
 }
+
 function Q(e) {
     var t;
     if (e.isGroupDM()) return (0, s.m1)(e, p.default, u.A);
@@ -414,10 +466,12 @@ function Q(e) {
     let n = l.Ay.getTextChannelNameDisambiguations(e.getGuildId())[e.id];
     return null != (t = null == n ? void 0 : n.name) ? t : e.name;
 }
+
 function $() {
     var e, t;
     return null != (e = null == (t = p.default.getCurrentUser()) ? void 0 : t.isStaff()) && e;
 }
+
 function J(e) {
     let t = H.tokenize(e),
         n = [];

@@ -1,4 +1,6 @@
-n.d(t, { A: () => S });
+n.d(t, {
+    A: () => S,
+});
 var r = n(627968),
     i = n(64700),
     l = n(284009),
@@ -23,6 +25,7 @@ var r = n(627968),
     E = n(927573),
     N = n(652215),
     _ = n(326028);
+
 function S(e) {
     let t,
         { editRoleId: n, setEditRoleId: l, selectedSection: S, setSelectedSection: T } = e,

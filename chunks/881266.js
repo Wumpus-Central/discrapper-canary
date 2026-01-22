@@ -1,7 +1,10 @@
-r.d(t, { U: () => l });
+r.d(t, {
+    U: () => l,
+});
 var n = r(627968);
 r(64700);
 var o = r(397927);
+
 function l(e) {
     (0, o.mMO)(async () => {
         let { default: t } = await r.e("28090").then(r.bind(r, 779457));

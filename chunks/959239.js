@@ -1,9 +1,12 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 var r = n(627968);
 n(64700);
 var l = n(397927),
     i = n(969632),
     o = n(985018);
+
 function a(e) {
     return null == e.reactions || 0 === e.reactions.length || (e.isPoll() && !(0, i.Gh)(e))
         ? null
@@ -43,7 +46,10 @@ function a(e) {
                                   }
                                   return e;
                               })({}, n)),
-                              (i = i = { message: e }),
+                              (i = i =
+                                  {
+                                      message: e,
+                                  }),
                               Object.getOwnPropertyDescriptors
                                   ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(i))
                                   : (function (e, t) {

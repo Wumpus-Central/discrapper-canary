@@ -1,4 +1,7 @@
-n.d(t, { H: () => g }), n(896048);
+n.d(t, {
+    H: () => g,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(397927),
@@ -8,6 +11,7 @@ var r = n(627968),
     c = n(652215),
     u = n(731854),
     d = n(985018);
+
 function f(e, t, n) {
     return (
         t in e
@@ -21,6 +25,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,6 +42,7 @@ function p(e) {
     }
     return e;
 }
+
 function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -49,6 +55,7 @@ function _(e, t) {
     }
     return n;
 }
+
 function h(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -60,6 +67,7 @@ function h(e, t) {
         e
     );
 }
+
 function m(e) {
     return {
         [u.oh.AUDIO_INPUT]: {
@@ -79,6 +87,7 @@ function m(e) {
         },
     }[e];
 }
+
 function g(e) {
     var t;
     let {
@@ -95,7 +104,9 @@ function g(e) {
         { setDevice: O, getLabel: A, getLocation: v } = m(n),
         [S, I] = i.useState(_),
         T = v(s[s.length - 1]),
-        [C, N] = (0, l.tR)(n, { location: T }),
+        [C, N] = (0, l.tR)(n, {
+            location: T,
+        }),
         R = S ? C.concat(N) : C,
         { id: w, name: P } = (0, l.x5)(n),
         D = null != g ? g : w,
@@ -131,7 +142,10 @@ function g(e) {
                             checked: i === D,
                             action: () => {
                                 var e;
-                                (null == (e = null == f ? void 0 : f(i)) || e) && O(i, { analyticsLocations: s });
+                                (null == (e = null == f ? void 0 : f(i)) || e) &&
+                                    O(i, {
+                                        analyticsLocations: s,
+                                    });
                             },
                         },
                         null == y ? void 0 : y(i),
@@ -175,8 +189,16 @@ function g(e) {
           )
         : (0, r.jsxs)(
               a.rXV,
-              h(p({ label: A() }, E), {
-                  children: [L, M && j],
-              }),
+              h(
+                  p(
+                      {
+                          label: A(),
+                      },
+                      E,
+                  ),
+                  {
+                      children: [L, M && j],
+                  },
+              ),
           );
 }

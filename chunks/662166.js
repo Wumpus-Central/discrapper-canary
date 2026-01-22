@@ -1,4 +1,6 @@
-l.d(t, { A: () => S });
+l.d(t, {
+    A: () => S,
+});
 var n = l(627968),
     r = l(64700),
     s = l(503698),
@@ -18,10 +20,13 @@ var n = l(627968),
     v = l(818348),
     A = l(985018),
     x = l(849660);
+
 function S() {
     let { onToggleOrbEligible: e, orbEligible: t, reset: l, hasFilters: s } = (0, m.v)(),
         i = s(),
-        { enabled: o } = (0, b.Z)({ location: "Shop" }),
+        { enabled: o } = (0, b.Z)({
+            location: "Shop",
+        }),
         c = (0, p.uM)(),
         u = r.useCallback(
             (e) => {
@@ -68,8 +73,12 @@ function S() {
                         }),
                 ],
             }),
-            (0, n.jsx)(O, { trackFilterAction: u }),
-            (0, n.jsx)(j, { trackFilterAction: u }),
+            (0, n.jsx)(O, {
+                trackFilterAction: u,
+            }),
+            (0, n.jsx)(j, {
+                trackFilterAction: u,
+            }),
             i &&
                 (0, n.jsx)(d.Button, {
                     variant: "secondary",
@@ -215,8 +224,12 @@ let C = (e) => {
                 children: (0, n.jsx)(
                     d.DUT,
                     {
-                        className: a()(x.n1, { [x.lx]: s }),
-                        style: { backgroundColor: t },
+                        className: a()(x.n1, {
+                            [x.lx]: s,
+                        }),
+                        style: {
+                            backgroundColor: t,
+                        },
                         "aria-label": l,
                         onClick: () => {
                             o("filter color ".concat(l.toLowerCase(), " ").concat(s ? "off" : "on")), i(r);
@@ -351,7 +364,9 @@ let C = (e) => {
                         return (0, n.jsxs)(
                             d.DUT,
                             {
-                                className: a()(x.w4, { [x.C7]: l.has(c) }),
+                                className: a()(x.w4, {
+                                    [x.C7]: l.has(c),
+                                }),
                                 onClick: () => {
                                     let e = l.has(c);
                                     t("filter theme ".concat(r.toLowerCase(), " ").concat(e ? "off" : "on")), s(c);

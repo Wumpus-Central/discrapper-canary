@@ -1,4 +1,7 @@
-n.d(t, { A: () => ee }), n(896048);
+n.d(t, {
+    A: () => ee,
+}),
+    n(896048);
 var r,
     i = n(735438),
     a = n.n(i),
@@ -22,6 +25,7 @@ var r,
     v = n(287809),
     S = n(652215),
     I = n(402655);
+
 function T(e, t, n) {
     return (
         t in e
@@ -39,6 +43,7 @@ let C = {},
     N = {},
     R = {},
     w = 0;
+
 function P(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         n = C[e];
@@ -54,6 +59,7 @@ function P(e) {
               checkElevated: t,
           }));
 }
+
 function D(e) {
     var t;
     let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
@@ -71,36 +77,44 @@ function D(e) {
               checkElevated: n,
           });
 }
+
 function x(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         n = N[e];
     return null != n ? n : (N[e] = D(e, t));
 }
+
 function L(e) {
     if (null != e) {
         var t;
         R[e] = (null != (t = R[e]) ? t : 0) + 1;
     }
 }
+
 function j() {
     for (let e in ((C = {}), (N = {}), R)) R[e] += 1;
     w += 1;
 }
+
 function M() {
     j();
 }
+
 function k() {
     J();
 }
+
 function U() {
     j();
 }
+
 function G(e) {
     var t;
     let { user: n } = e;
     if (n.id !== (null == (t = v.default.getCurrentUser()) ? void 0 : t.id)) return !1;
     j();
 }
+
 function V(e) {
     let {
             channel: { id: t },
@@ -115,6 +129,7 @@ function V(e) {
     if (N[n.id] === i) return !1;
     (N[n.id] = i), (w += 1), L(n.getGuildId());
 }
+
 function F(e) {
     let { channels: t } = e,
         n = !1;
@@ -130,20 +145,25 @@ function F(e) {
     }
     return !!n && ((w += 1), n);
 }
+
 function B() {
     return !0;
 }
+
 function H(e) {
     var t;
     return (null == (t = v.default.getCurrentUser()) ? void 0 : t.id) === e.userId && (L(e.guildId), !0);
 }
+
 function Y(e) {
     return !!(0, p.k)(e) && (L(e.guildId), !0);
 }
+
 function W(e) {
     let { messages: t } = e;
     return t.some((e) => null != e.thread);
 }
+
 function K(e) {
     let { data: t } = e;
     return t.some((e) => {
@@ -151,10 +171,12 @@ function K(e) {
         return n.length > 0 || t.some((e) => e.some((e) => null != e.thread));
     });
 }
+
 function z(e) {
     let { channel: t } = e;
     return delete N[t.id], (w += 1), L(t.guild_id), !1;
 }
+
 function q(e) {
     let { guildId: t } = e;
     delete C[t];
@@ -165,6 +187,7 @@ function q(e) {
         (w += 1),
         L(t);
 }
+
 function X(e) {
     let { instance: t } = e,
         n = y.A.getChannel(t.channel_id);
@@ -177,6 +200,7 @@ function X(e) {
     if (i === N[n.id]) return !1;
     (N[n.id] = i), (w += 1);
 }
+
 function Z(e) {
     let { guildId: t } = e;
     delete C[t];
@@ -187,6 +211,7 @@ function Z(e) {
         (w += 1),
         L(t);
 }
+
 function Q(e, t, n, r) {
     let i = b.x3;
     if (e instanceof _.YB) {
@@ -294,6 +319,7 @@ class $ extends (r = o.Ay.Store) {
         return w;
     }
 }
+
 function J() {
     (N = {}), (C = {}), (R = {}), (w = 0);
 }

@@ -1,4 +1,6 @@
-n.d(t, { A: () => z });
+n.d(t, {
+    A: () => z,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -31,6 +33,7 @@ var r = n(627968),
     D = n(652215),
     x = n(985018),
     L = n(679740);
+
 function j(e, t, n) {
     return (
         t in e
@@ -44,6 +47,7 @@ function j(e, t, n) {
         e
     );
 }
+
 function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -60,6 +64,7 @@ function M(e) {
     }
     return e;
 }
+
 function k(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -72,6 +77,7 @@ function k(e, t) {
     }
     return n;
 }
+
 function U(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -83,6 +89,7 @@ function U(e, t) {
         e
     );
 }
+
 function G(e, t) {
     if (null == e) return {};
     var n,
@@ -99,6 +106,7 @@ function G(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function V(e, t) {
     if (null == e) return {};
     var n,
@@ -109,6 +117,7 @@ function V(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function F(e) {
     let { width: t = 6, height: n = 10, color: i = "currentColor", className: a, foreground: s } = e;
     return (0, r.jsx)("svg", {
@@ -125,6 +134,7 @@ function F(e) {
         }),
     });
 }
+
 function B(e) {
     let { user: t, guildId: n, guildAvatar: i, onClick: a, onContextMenu: o, onMouseDown: l, ref: c } = e;
     return (0, r.jsx)("img", {
@@ -140,6 +150,7 @@ function B(e) {
         ref: c,
     });
 }
+
 function H(e, t, n, i, a, s) {
     var o, l, c;
     let {
@@ -160,7 +171,9 @@ function H(e, t, n, i, a, s) {
     if ((d && null == u.activityInstance) || _ || h)
         return (0, r.jsx)("div", {
             className: L.Cz,
-            children: (0, r.jsx)(F, { className: L.Jx }),
+            children: (0, r.jsx)(F, {
+                className: L.Jx,
+            }),
         });
     let v =
             null !=
@@ -192,6 +205,7 @@ function H(e, t, n, i, a, s) {
           })
         : S();
 }
+
 function Y(e, t, n, i, a) {
     let {
         message: s,
@@ -218,6 +232,7 @@ function Y(e, t, n, i, a) {
         onPopoutRequestClose: _,
     });
 }
+
 function W(e, t, n) {
     let { showDataPopout: i, message: a, onClickCommand: o, onPopoutRequestClose: l } = e,
         c = a.interaction.displayName;
@@ -263,7 +278,9 @@ function W(e, t, n) {
                 });
             {
                 let e = () => {
-                        T._.dispatchToLastSubscribed(D.jej.OPEN_APP_LAUNCHER, { applicationId: a.applicationId });
+                        T._.dispatchToLastSubscribed(D.jej.OPEN_APP_LAUNCHER, {
+                            applicationId: a.applicationId,
+                        });
                     },
                     t = (0, E.kF)(c);
                 return (0, r.jsx)(
@@ -297,6 +314,7 @@ let K = () =>
         color: "currentColor",
         className: L.M5,
     });
+
 function z(e) {
     var t;
     let n,
@@ -379,7 +397,13 @@ function z(e) {
     if ((null == a ? void 0 : a.activityInstance) === null || (0, O.V)(a)) {
         let t = () => {
             let t = W(e, j, R);
-            return (0, r.jsx)(i.Fragment, { children: t }, "command");
+            return (0, r.jsx)(
+                i.Fragment,
+                {
+                    children: t,
+                },
+                "command",
+            );
         };
         (n = x.intl.format(x.t["rg7U+C"], {
             userHook: Z,
@@ -402,11 +426,15 @@ function z(e) {
                                   type: "channel",
                                   channel: o,
                               }
-                            : { type: "contextless" },
+                            : {
+                                  type: "contextless",
+                              },
                     openInPopout: !1,
                     analyticsLocation: E,
                 }),
-                    (0, h.LV)({ guildId: o.guild_id });
+                    (0, h.LV)({
+                        guildId: o.guild_id,
+                    });
             },
             t = () =>
                 (0, r.jsx)(f.DUT, {
@@ -422,7 +450,9 @@ function z(e) {
                   userHook: Z,
                   activityHook: t,
               })
-            : x.intl.format(x.t["6FeSyT"], { userHook: Z });
+            : x.intl.format(x.t["6FeSyT"], {
+                  userHook: Z,
+              });
     }
     return (0, r.jsx)(g.f5, {
         value: c,

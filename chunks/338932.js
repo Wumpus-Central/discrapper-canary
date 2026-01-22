@@ -1,9 +1,12 @@
-n.d(t, { T: () => l }), n(896048);
+n.d(t, {
+    T: () => l,
+}),
+    n(896048);
 var r = n(64700),
     i = n(311907),
     a = n(775602),
     s = n(531685);
-let o = 1000,
+let o = 1e3,
     l = (e, t) => {
         let n = (0, i.bG)([a.A], () => a.A.useReducedMotion),
             l = (0, i.bG)([s.A], () => s.A.isFocused()),
@@ -21,6 +24,8 @@ let o = 1000,
                     : u(i);
             }, [l, e, n, t]),
             r.useEffect(() => () => clearTimeout(d.current), []),
-            { canAnimate: c }
+            {
+                canAnimate: c,
+            }
         );
     };

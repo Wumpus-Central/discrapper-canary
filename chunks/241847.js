@@ -1,4 +1,7 @@
-n.d(t, { A: () => S }), n(896048);
+n.d(t, {
+    A: () => S,
+}),
+    n(896048);
 var l = n(627968),
     r = n(64700),
     i = n(311907),
@@ -15,6 +18,7 @@ var l = n(627968),
     m = n(603266),
     h = n(985018),
     A = n(78875);
+
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -40,6 +44,7 @@ function y(e) {
     }
     return e;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -58,6 +63,7 @@ function _(e, t) {
         e
     );
 }
+
 function E(e) {
     let { lobbyId: t, connectionTypeText: n, closePopout: r } = e,
         a = (0, i.cf)([u.A], () => ({
@@ -76,6 +82,7 @@ function E(e) {
         }),
     );
 }
+
 function v(e) {
     let { closePopout: t, connectionTypeText: n } = e,
         r = (0, i.cf)([o.A], () => ({
@@ -94,9 +101,14 @@ function v(e) {
         }),
     );
 }
+
 function O(e) {
     let { channelId: t, isOverlay: n, lobbyId: r, closePopout: i } = e,
-        a = (0, p.k)({ channelId: t }) ? h.intl.string(h.t["3BogKe"]) : h.intl.string(h.t.ETIVvg);
+        a = (0, p.k)({
+            channelId: t,
+        })
+            ? h.intl.string(h.t["3BogKe"])
+            : h.intl.string(h.t.ETIVvg);
     return n
         ? (0, l.jsx)(E, {
               lobbyId: r,
@@ -108,6 +120,7 @@ function O(e) {
               connectionTypeText: a,
           });
 }
+
 function x(e) {
     let t = (0, i.bG)([c.A], () => c.A.hasVideo(e.channelId)),
         [n, o] = r.useState(m.Rj.RTC_DEBUG_PANEL),
@@ -117,7 +130,9 @@ function x(e) {
                 case m.Rj.RTC_DEBUG_PANEL:
                     return (0, l.jsx)(O, y({}, e));
                 case m.Rj.RTC_SECURE_FRAMES:
-                    return (0, l.jsx)(g.A, { channelId: e.channelId });
+                    return (0, l.jsx)(g.A, {
+                        channelId: e.channelId,
+                    });
             }
         }, [e, n]);
     r.useEffect(() => {
@@ -170,8 +185,11 @@ function x(e) {
         })
     );
 }
+
 function S(e) {
-    return (0, p.k)({ channelId: e.channelId })
+    return (0, p.k)({
+        channelId: e.channelId,
+    })
         ? (0, l.jsx)(x, y({}, e))
         : (0, l.jsx)("div", {
               className: A.L3,

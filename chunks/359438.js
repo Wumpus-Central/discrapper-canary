@@ -1,10 +1,14 @@
-n.d(t, { X: () => c }), n(228524);
+n.d(t, {
+    X: () => c,
+}),
+    n(228524);
 var r = n(627968);
 n(64700);
 var i = n(397927),
     s = n(713654),
     l = n(557582),
     a = n(88860);
+
 function o(e) {
     let { channel: t } = e,
         n = (0, s._U)(t.type);
@@ -28,6 +32,7 @@ function o(e) {
         ],
     });
 }
+
 function c(e) {
     let { channel: t, guildScheduledEvent: n } = e;
     return (0, r.jsxs)("div", {
@@ -44,7 +49,11 @@ function c(e) {
                 description: n.description,
                 guildId: n.guild_id,
             }),
-            null != t && n.channel_id === t.id ? (0, r.jsx)(o, { channel: t }) : null,
+            null != t && n.channel_id === t.id
+                ? (0, r.jsx)(o, {
+                      channel: t,
+                  })
+                : null,
         ],
     });
 }

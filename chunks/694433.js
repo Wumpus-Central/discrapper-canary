@@ -1,4 +1,7 @@
-n.d(t, { A: () => d }), n(896048);
+n.d(t, {
+    A: () => d,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -6,6 +9,7 @@ var r = n(627968),
     a = n(397927),
     c = n(441442),
     o = n(239385);
+
 function d(e) {
     let { action: t, children: n, className: l, onExpandChange: d, loading: u } = e,
         f = (function (e, t) {
@@ -45,7 +49,13 @@ function d(e) {
         isExpanded: g,
         collapsibleContent: (0, r.jsxs)("div", {
             className: o.oV,
-            children: [g && (0, r.jsx)("div", { className: o.Wn }), n],
+            children: [
+                g &&
+                    (0, r.jsx)("div", {
+                        className: o.Wn,
+                    }),
+                n,
+            ],
         }),
         children: (e) => {
             var n, i;
@@ -80,7 +90,11 @@ function d(e) {
                 (i = i =
                     {
                         className: o.ro,
-                        action: u ? (0, r.jsx)(a.y$y, { type: a.y$y.Type.PULSING_ELLIPSIS }) : t,
+                        action: u
+                            ? (0, r.jsx)(a.y$y, {
+                                  type: a.y$y.Type.PULSING_ELLIPSIS,
+                              })
+                            : t,
                         onClick: (e) => {
                             var t;
                             b((t = !g)), null == d || d(t), l(e);

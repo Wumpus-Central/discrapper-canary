@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(627968),
     i = n(110259),
     a = n(435371),
@@ -9,6 +11,7 @@ var r = n(627968),
     u = n(993401),
     d = n(996988),
     f = n(985018);
+
 function p(e) {
     let { application: t, analyticsLocations: n, onAction: p, onClose: _ } = e,
         { themeType: h } = (0, c.E)(),
@@ -20,9 +23,13 @@ function p(e) {
         {
             name: i.ImpressionNames.CLOUD_PLAY_CTA,
             type: i.ImpressionTypes.VIEW,
-            properties: { location_stack: n },
+            properties: {
+                location_stack: n,
+            },
         },
-        { disableTrack: null == m },
+        {
+            disableTrack: null == m,
+        },
         [m],
     ),
     null == m)
@@ -35,7 +42,13 @@ function p(e) {
                   text: f.intl.string(f.t["jaYS/h"]),
                   size: "sm",
                   onClick: (e) => {
-                      e.stopPropagation(), null == p || p({ action: "PRESS_CLOUD_PLAY_BUTTON" }), m(), null == _ || _();
+                      e.stopPropagation(),
+                          null == p ||
+                              p({
+                                  action: "PRESS_CLOUD_PLAY_BUTTON",
+                              }),
+                          m(),
+                          null == _ || _();
                   },
                   fullWidth: h !== d.d.MODAL_V2,
               }),

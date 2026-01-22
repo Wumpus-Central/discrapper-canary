@@ -1,4 +1,6 @@
-n.d(e, { default: () => O });
+n.d(e, {
+    default: () => O,
+});
 var r = n(627968);
 n(64700);
 var o = n(827734),
@@ -12,6 +14,7 @@ var o = n(827734),
     p = n(915865),
     d = n(953239),
     b = n(929103);
+
 function y(t, e) {
     return (0, r.jsx)(
         l.LpS,
@@ -23,6 +26,7 @@ function y(t, e) {
         e,
     );
 }
+
 function O(t) {
     let { guildCount: e, onClose: n, analyticsLocations: o } = t,
         d = (function (t, e) {
@@ -118,9 +122,13 @@ function O(t) {
                               }),
                     context:
                         e < f.qlD
-                            ? u.intl.formatToPlainString(u.t["C+Hqzs"], { guildCount: e })
+                            ? u.intl.formatToPlainString(u.t["C+Hqzs"], {
+                                  guildCount: e,
+                              })
                             : u.intl.string(u.t.m0xavd),
-                    glowUp: u.intl.format(u.t["6Dl5X1"], { onAndMore: O }),
+                    glowUp: u.intl.format(u.t["6Dl5X1"], {
+                        onAndMore: O,
+                    }),
                 },
                 d,
             ),

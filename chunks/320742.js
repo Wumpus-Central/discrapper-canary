@@ -1,8 +1,11 @@
-r.d(t, { default: () => j }), r(896048);
-var n = r(627968),
-    s = r(64700),
-    o = r(503698),
-    l = r.n(o),
+r.d(t, {
+    default: () => v,
+}),
+    r(896048);
+var l = r(627968),
+    n = r(64700),
+    s = r(503698),
+    o = r.n(s),
     a = r(284009),
     c = r.n(a),
     i = r(397927),
@@ -11,104 +14,109 @@ var n = r(627968),
     u = r(954571),
     p = r(10005),
     b = r(945276),
-    y = r(834981),
-    x = r(191627),
-    m = r(652215),
-    h = r(842130),
-    C = r(985018),
-    g = r(482064),
-    O = r(473169);
-let j = (e) => {
+    x = r(834981),
+    m = r(191627),
+    y = r(652215),
+    C = r(842130),
+    g = r(985018),
+    h = r(482064),
+    j = r(473169);
+let v = (e) => {
     let { transitionState: t, onClose: r } = e,
-        o = (0, b.A)(),
-        [a, j] = s.useState(!1),
-        { getLinkCode: v, isGetLinkCodeLoading: _ } = (0, p.A)({}),
-        E = (0, y.VE)(),
-        T = (0, y.VT)(),
-        S = s.useRef(T);
-    c()(!o, "FamilyCenterQRCodeModal should only be rendered for teens.");
-    let N = () => {
-        j(
+        s = (0, b.A)(),
+        [a, v] = n.useState(!1),
+        { getLinkCode: O, isGetLinkCodeLoading: _ } = (0, p.A)({}),
+        E = (0, x.VE)(),
+        N = (0, x.VT)(),
+        w = n.useRef(N);
+    c()(!s, "FamilyCenterQRCodeModal should only be rendered for teens.");
+    let z = () => {
+        v(
             (e) => (
-                u.default.track(m.HAw.FAMILY_CENTER_ACTION, { action: a ? x.qb.HideQRCode : x.qb.RevealQRCode }), !e
+                u.default.track(y.HAw.FAMILY_CENTER_ACTION, {
+                    action: a ? m.qb.HideQRCode : m.qb.RevealQRCode,
+                }),
+                !e
             ),
         ),
             a ||
                 setTimeout(() => {
                     r();
-                }, x.nz);
+                }, m.nz);
     };
     (0, d.Ay)(() => {
-        v();
+        O();
     }),
-        s.useEffect(() => {
-            T > S.current && r();
-        }, [S, T, r]);
-    let R = a && !_ && null != E;
-    return (0, n.jsxs)(i.dWK, {
+        n.useEffect(() => {
+            N > w.current && r();
+        }, [w, N, r]);
+    let S = a && !_ && null != E;
+    return (0, l.jsxs)(i.dWK, {
         transitionState: t,
         onClose: r,
         children: [
-            (0, n.jsxs)(i.$Td, {
-                className: g.lm,
+            (0, l.jsxs)(i.$Td, {
+                className: h.lm,
                 color: i.Hv$.WARNING,
                 children: [
-                    (0, n.jsx)(i.mir, {
+                    (0, l.jsx)(i.mir, {
                         size: "sm",
                         color: "currentColor",
                     }),
-                    C.intl.string(h.default.iHYMAz),
+                    g.intl.string(C.default.iHYMAz),
                 ],
             }),
-            (0, n.jsxs)(i.cwr, {
+            (0, l.jsxs)(i.cwr, {
                 children: [
-                    (0, n.jsx)(i.Text, {
-                        className: O.QB,
+                    (0, l.jsx)(i.Text, {
+                        className: j.QB,
                         variant: "text-lg/bold",
                         color: "text-strong",
-                        children: C.intl.string(h.default.AVTZaN),
+                        children: g.intl.string(C.default.AVTZaN),
                     }),
-                    (0, n.jsx)(i.Text, {
-                        className: O.SX,
+                    (0, l.jsx)(i.Text, {
+                        className: j.SX,
                         variant: "text-sm/normal",
                         color: "text-default",
-                        children: C.intl.format(h.default.LyyCsE, {
+                        children: g.intl.format(C.default.LyyCsE, {
                             link: "https://support.discord.com/hc/articles/14155060633623",
                         }),
                     }),
-                    (0, n.jsx)("div", {
-                        className: g.Ac,
-                        children: (0, n.jsx)(i.DUT, {
-                            className: l()(g.u3, { [g.RK]: R }),
-                            onClick: N,
-                            children: (0, n.jsx)(f.Lx, {
+                    (0, l.jsx)("div", {
+                        className: h.Ac,
+                        children: (0, l.jsx)(i.DUT, {
+                            className: o()(h.u3, {
+                                [h.RK]: S,
+                            }),
+                            onClick: z,
+                            children: (0, l.jsx)(f.Lx, {
                                 size: 272,
-                                text: R ? E : x.EC,
+                                text: S ? E : m.EC,
                                 overlaySize: f.Zs.SIZE_60,
-                                className: g.R6,
+                                className: h.R6,
                             }),
                         }),
                     }),
-                    (0, n.jsx)(i.Text, {
-                        className: g.z_,
+                    (0, l.jsx)(i.Text, {
+                        className: h.z_,
                         variant: "text-xs/semibold",
                         color: "text-default",
-                        children: C.intl.string(h.default.goDyoe),
+                        children: g.intl.string(C.default.goDyoe),
                     }),
                 ],
             }),
-            (0, n.jsx)(i.H7u, {
+            (0, l.jsx)(i.H7u, {
                 actionsFullWidth: !0,
                 actions: [
                     {
                         variant: "secondary",
-                        text: C.intl.string(C.t.cpT0Cq),
+                        text: g.intl.string(g.t.cpT0Cq),
                         onClick: r,
                     },
                     {
                         variant: "primary",
-                        text: a ? C.intl.string(h.default.wg2xwQ) : C.intl.string(h.default["10dX6U"]),
-                        onClick: N,
+                        text: a ? g.intl.string(C.default.wg2xwQ) : g.intl.string(C.default["10dX6U"]),
+                        onClick: z,
                         loading: a && _,
                     },
                 ],

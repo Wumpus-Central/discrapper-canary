@@ -1,5 +1,9 @@
-n.d(t, { t: () => a }), n(896048);
+n.d(t, {
+    t: () => a,
+}),
+    n(896048);
 var r = n(64700);
+
 function i(e, t, n) {
     return (
         t in e
@@ -15,7 +19,9 @@ function i(e, t, n) {
 }
 class a extends r.PureComponent {
     static getDerivedStateFromError(e) {
-        return { error: e };
+        return {
+            error: e,
+        };
     }
     componentDidCatch(e, t) {
         console.error("ErrorBoundary caught an error", e, t);
@@ -24,6 +30,9 @@ class a extends r.PureComponent {
         return null != this.state.error ? this.props.fallback : this.props.children;
     }
     constructor(...e) {
-        super(...e), i(this, "state", { error: null });
+        super(...e),
+            i(this, "state", {
+                error: null,
+            });
     }
 }

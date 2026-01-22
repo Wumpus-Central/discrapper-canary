@@ -1,7 +1,11 @@
-n.d(t, { A: () => c }), n(896048);
+n.d(t, {
+    A: () => c,
+}),
+    n(896048);
 var r = n(451988),
     i = n(73153),
     a = n(439372);
+
 function s(e, t, n) {
     return (
         t in e
@@ -15,7 +19,7 @@ function s(e, t, n) {
         e
     );
 }
-let o = 3000;
+let o = 3e3;
 class l extends a.A {
     _terminate() {
         this.clearErrorTimeout.stop();
@@ -23,10 +27,14 @@ class l extends a.A {
     constructor(...e) {
         super(...e),
             s(this, "clearErrorTimeout", new r.Ep()),
-            s(this, "actions", { MEDIA_ENGINE_NOISE_CANCELLATION_ERROR: () => this.handleNoiseCancellationError() }),
+            s(this, "actions", {
+                MEDIA_ENGINE_NOISE_CANCELLATION_ERROR: () => this.handleNoiseCancellationError(),
+            }),
             s(this, "handleNoiseCancellationError", () => {
                 this.clearErrorTimeout.start(o, () =>
-                    i.h.dispatch({ type: "MEDIA_ENGINE_NOISE_CANCELLATION_ERROR_RESET" }),
+                    i.h.dispatch({
+                        type: "MEDIA_ENGINE_NOISE_CANCELLATION_ERROR_RESET",
+                    }),
                 );
             });
     }

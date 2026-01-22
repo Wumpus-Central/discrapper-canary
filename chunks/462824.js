@@ -6,14 +6,16 @@ var r = n(627968);
 n(64700);
 var i = n(503698),
     a = n.n(i),
-    s = n(432022),
+    s = n(108531),
     o = n(866323),
     l = n(892491),
     c = n(150591),
     u = n(894198);
+
 function d(e) {
     return e !== l.F.TOP_RADIAL && e !== l.F.SUBTLE && e !== l.F.BLUR;
 }
+
 function f(e) {
     let {
         variant: t = "default",
@@ -28,9 +30,15 @@ function f(e) {
         {
             keys: (e) => (e ? "scrim" : "empty"),
             config: c.hP,
-            from: { opacity: 0 },
-            enter: { opacity: 1 },
-            leave: { opacity: 0 },
+            from: {
+                opacity: 0,
+            },
+            enter: {
+                opacity: 1,
+            },
+            leave: {
+                opacity: 0,
+            },
         },
         "instant" === n ? "animate-never" : "animate-always",
     )((e, n) =>

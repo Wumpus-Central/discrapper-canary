@@ -63,7 +63,9 @@ let o = [a.pn.PAYMENT_TYPE],
                                 sharedStepsKey: "SHARED_ADD_PAYMENT_STEPS",
                                 methodType: s.he.PAYMENT_REQUEST,
                             },
-                            { sharedStepsKey: "SHARED_ADD_PAYMENT_STEPS" },
+                            {
+                                sharedStepsKey: "SHARED_ADD_PAYMENT_STEPS",
+                            },
                             {
                                 sharedStepsKey: "SHARED_CREDIT_CARD_STEPS",
                                 methodType: s.he.CARD,

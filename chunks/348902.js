@@ -1,4 +1,6 @@
-n.d(t, { default: () => A });
+n.d(t, {
+    default: () => A,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -32,11 +34,15 @@ let A = (0, a.A)(
                     (0, r.jsxs)(i.rXV, {
                         children: [l, f, A],
                     }),
-                    (0, r.jsx)(i.rXV, { children: j }),
+                    (0, r.jsx)(i.rXV, {
+                        children: j,
+                    }),
                 ],
             });
         },
-        { object: f.ZSU.CONTEXT_MENU },
+        {
+            object: f.ZSU.CONTEXT_MENU,
+        },
     ),
     [l.A.CONTEXT_MENU, l.A.GAME_MENU],
 );

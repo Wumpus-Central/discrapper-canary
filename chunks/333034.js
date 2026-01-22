@@ -1,4 +1,7 @@
-l.d(t, { A: () => a }), l(896048);
+l.d(t, {
+    A: () => a,
+}),
+    l(896048);
 var n = l(627968),
     r = l(397927),
     s = l(793574);
@@ -42,6 +45,8 @@ let a = (e) => {
                     ),
                 );
         },
-        { onCloseCallback: a },
+        {
+            onCloseCallback: a,
+        },
     );
 };

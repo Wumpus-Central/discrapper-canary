@@ -1,4 +1,7 @@
-n.d(t, { default: () => E }), n(896048);
+n.d(t, {
+    default: () => E,
+}),
+    n(896048);
 var l = n(627968),
     s = n(64700),
     r = n(503698),
@@ -23,6 +26,7 @@ var l = n(627968),
     v = n(652215),
     w = n(985018),
     N = n(183759);
+
 function S(e, t, n) {
     return (
         t in e
@@ -155,7 +159,9 @@ class _ extends s.PureComponent {
                 }),
                 (0, l.jsx)(d.Text, {
                     color: "text-muted",
-                    className: a()(N.O1, { [N.lK]: !e }),
+                    className: a()(N.O1, {
+                        [N.lK]: !e,
+                    }),
                     variant: "text-sm/normal",
                     children: w.intl.string(w.t.kbpkxJ),
                 }),
@@ -216,7 +222,9 @@ class _ extends s.PureComponent {
                     className: N.Qs,
                     children: [this.renderBody(), this.renderForm()],
                 }),
-                (0, l.jsx)(d.jlY, { children: this.renderFooter() }),
+                (0, l.jsx)(d.jlY, {
+                    children: this.renderFooter(),
+                }),
             ],
         });
     }
@@ -235,13 +243,17 @@ class _ extends s.PureComponent {
                     });
             }),
             S(this, "handleChannelSelect", (e) => {
-                this.setState({ selectedChannelId: e });
+                this.setState({
+                    selectedChannelId: e,
+                });
             }),
             S(this, "handleFollow", () => {
                 let { channel: e, onClose: t } = this.props,
                     { selectedChannelId: s, selectedGuildId: r } = this.state;
                 null != s &&
-                    (this.setState({ submitting: !0 }),
+                    (this.setState({
+                        submitting: !0,
+                    }),
                     c.A.createChannelFollower(s, e.id)
                         .then(() => {
                             o.h.dispatch({
@@ -331,5 +343,7 @@ let E = i.Ay.connectStores(
             lastChannelFollowingDestination: null != s ? s : {},
         };
     },
-    { forwardRef: !0 },
+    {
+        forwardRef: !0,
+    },
 )(_);

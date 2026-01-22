@@ -17,6 +17,7 @@ var i = n(323125),
     p = n(56754),
     _ = n(652215),
     h = n(985018);
+
 function m(e, t, n) {
     return (
         t in e
@@ -30,6 +31,7 @@ function m(e, t, n) {
         e
     );
 }
+
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -46,6 +48,7 @@ function g(e) {
     }
     return e;
 }
+
 function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -58,6 +61,7 @@ function E(e, t) {
     }
     return n;
 }
+
 function b(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -69,6 +73,7 @@ function b(e, t) {
         e
     );
 }
+
 function y(e, t) {
     if (null == e) return {};
     var n,
@@ -85,6 +90,7 @@ function y(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function O(e, t) {
     if (null == e) return {};
     var n,
@@ -105,16 +111,22 @@ var A = (function (e) {
         e
     );
 })({});
+
 function v(e, t) {
     switch (e) {
         case 2:
-            return h.intl.formatToPlainString(h.t.k1ew5N, { rate: t });
+            return h.intl.formatToPlainString(h.t.k1ew5N, {
+                rate: t,
+            });
         case 3:
-            return h.intl.formatToPlainString(h.t["Hs3Y+I"], { rate: t });
+            return h.intl.formatToPlainString(h.t["Hs3Y+I"], {
+                rate: t,
+            });
         case 4:
             return h.intl.string(h.t.DLAKbi);
     }
 }
+
 function S(e) {
     let { appId: t, onClick: n, onHasClicked: i, skuId: a, subscriptionPlan: s, icon: o, state: l = 0 } = e,
         c = (e) => {
@@ -129,10 +141,18 @@ function S(e) {
               onClick: c,
               loading: d,
               icon: o,
-              text: null != u ? h.intl.formatToPlainString(h.t.i4T8vz, { rate: u }) : h.intl.string(h.t.uuzaAK),
+              text:
+                  null != u
+                      ? h.intl.formatToPlainString(h.t.i4T8vz, {
+                            rate: u,
+                        })
+                      : h.intl.string(h.t.uuzaAK),
           })
-        : (0, r.jsx)(C, { text: v(l, null != u ? u : "") });
+        : (0, r.jsx)(C, {
+              text: v(l, null != u ? u : ""),
+          });
 }
+
 function I(e) {
     let { appId: t, onClick: n, onHasClicked: i, sku: a, icon: l } = e,
         { analyticsLocations: u } = (0, o.Ay)(s.A.APP_STOREFRONT),
@@ -151,15 +171,20 @@ function I(e) {
         (null != n ? n : d)(e), null == i || i();
     };
     return g
-        ? (0, r.jsx)(C, { text: h.intl.string(h.t["6cfuDj"]) })
+        ? (0, r.jsx)(C, {
+              text: h.intl.string(h.t["6cfuDj"]),
+          })
         : (0, r.jsx)(T, {
               appId: t,
               skuId: a.id,
               onClick: b,
-              text: h.intl.format(h.t.Xp5WTn, { price: (0, f.$g)(E.amount, E.currency) }),
+              text: h.intl.format(h.t.Xp5WTn, {
+                  price: (0, f.$g)(E.amount, E.currency),
+              }),
               icon: l,
           });
 }
+
 function T(e) {
     let { appId: t, skuId: n, onClick: s } = e,
         o = y(e, ["appId", "skuId", "onClick"]),
@@ -180,8 +205,14 @@ function T(e) {
             }
             null == s || s(e);
         };
-    return (0, r.jsx)(a.Button, b(g({}, o), { onClick: f }));
+    return (0, r.jsx)(
+        a.Button,
+        b(g({}, o), {
+            onClick: f,
+        }),
+    );
 }
+
 function C(e) {
     let { text: t } = e;
     return (0, r.jsx)(a.Button, {

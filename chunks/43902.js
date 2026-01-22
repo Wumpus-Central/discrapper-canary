@@ -37,7 +37,9 @@ e.exports = function (e, t, n, m) {
             "Error" !== y
                 ? o
                     ? o(S, v)
-                    : l(S, v, { name: !0 })
+                    : l(S, v, {
+                          name: !0,
+                      })
                 : _ && g in O && (c(S, O, g), c(S, O, "prepareStackTrace")),
             l(S, O),
             !h)

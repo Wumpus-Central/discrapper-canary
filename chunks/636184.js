@@ -1,4 +1,6 @@
-n.d(t, { h: () => C });
+n.d(t, {
+    h: () => C,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -19,6 +21,7 @@ var r = n(627968),
     y = n(985018),
     O = n(185914),
     A = n(299148);
+
 function v(e, t, n) {
     return (
         t in e
@@ -32,6 +35,7 @@ function v(e, t, n) {
         e
     );
 }
+
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -49,7 +53,11 @@ function S(e) {
     return e;
 }
 let I = (e, t) => {
-        (0, p.default)(), d.A.openPrivateChannel({ recipientIds: e }), t();
+        (0, p.default)(),
+            d.A.openPrivateChannel({
+                recipientIds: e,
+            }),
+            t();
     },
     T = (e) => {
         let { recipient: t, status: n, onClose: i } = e,
@@ -66,7 +74,9 @@ let I = (e, t) => {
                     u.euF,
                     S(
                         {
-                            imageClassName: s()({ [O.jN]: c }),
+                            imageClassName: s()({
+                                [O.jN]: c,
+                            }),
                             src: a,
                             "aria-label": l,
                             size: u._3J.SIZE_32,
@@ -87,7 +97,9 @@ let I = (e, t) => {
                                   variant: "text-md/medium",
                                   className: O.nT,
                                   color: "text-strong",
-                                  children: y.intl.format(y.t.RO3T4B, { userName: l }),
+                                  children: y.intl.format(y.t.RO3T4B, {
+                                      userName: l,
+                                  }),
                               }),
                           ],
                       })
@@ -131,8 +143,12 @@ let I = (e, t) => {
                       : y.intl.string(y.t.tKCltd),
             m = () =>
                 !0 === a
-                    ? y.intl.format(y.t["4gJJfD"], { helpdeskArticle: h.A.getArticleURL(b.MVz.REFERRAL_PROGRAM) })
-                    : y.intl.format(y.t.AwGSWl, { helpdeskArticle: h.A.getArticleURL(b.MVz.REFERRAL_PROGRAM) }),
+                    ? y.intl.format(y.t["4gJJfD"], {
+                          helpdeskArticle: h.A.getArticleURL(b.MVz.REFERRAL_PROGRAM),
+                      })
+                    : y.intl.format(y.t.AwGSWl, {
+                          helpdeskArticle: h.A.getArticleURL(b.MVz.REFERRAL_PROGRAM),
+                      }),
             v = () =>
                 (0, r.jsx)("div", {
                     className: O.Hz,

@@ -1,4 +1,6 @@
-r.d(t, { X: () => p });
+r.d(t, {
+    X: () => p,
+});
 var n = r(627968),
     l = r(64700),
     o = r(503698),
@@ -10,6 +12,7 @@ var n = r(627968),
     f = r(942596),
     b = r(362205),
     y = r(71862);
+
 function d(e) {
     var t, r;
     let { tag: l, onClick: o, active: c, node: s, visibleContent: u, panelKey: b, listItemProps: d, children: p } = e,
@@ -48,7 +51,9 @@ function d(e) {
                 })({}, d)),
                 (r = r =
                     {
-                        className: a()(y.AS, { [y.vu]: c }),
+                        className: a()(y.AS, {
+                            [y.vu]: c,
+                        }),
                         onClick: o,
                         children: [
                             null != O
@@ -97,6 +102,7 @@ function d(e) {
         ],
     });
 }
+
 function p(e) {
     let { node: t, visibleContent: r, hoisted: o = !1 } = e,
         a = l.useMemo(() => t.layout[0], [t]),
@@ -113,7 +119,11 @@ function p(e) {
         p = l.useMemo(() => {
             if (!f || null == a || !(0, s.Iu)(a.layout)) return null;
             let e = a.layout.filter((e) => null != e.useTitle || null != e.useSubnavLabel);
-            return e.length > 1 ? (0, n.jsx)(b.A, { categories: e }) : null;
+            return e.length > 1
+                ? (0, n.jsx)(b.A, {
+                      categories: e,
+                  })
+                : null;
         }, [f, a]),
         g = o ? "li" : "div";
     return o

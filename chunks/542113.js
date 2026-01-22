@@ -1,4 +1,7 @@
-e.d(n, { A: () => r });
+e.d(n, {
+    A: () => r,
+});
+
 function r() {
     return (r = Object.assign
         ? Object.assign.bind()

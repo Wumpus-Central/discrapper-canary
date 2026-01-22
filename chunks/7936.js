@@ -1,4 +1,8 @@
-n.d(t, { A: () => A }), n(896048), n(747238);
+n.d(t, {
+    A: () => A,
+}),
+    n(896048),
+    n(747238);
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -43,7 +47,9 @@ let A = () => {
         },
         C = (0, r.jsxs)(f.Ay, {
             children: [
-                (0, r.jsx)(f._V, { src: n(142041) }),
+                (0, r.jsx)(f._V, {
+                    src: n(142041),
+                }),
                 (0, r.jsxs)(f.hE, {
                     className: l()(m.QX, g.Uu, g.wq, g.Hu),
                     children: [
@@ -61,7 +67,9 @@ let A = () => {
         ? C
         : (0, r.jsxs)(f.Ay, {
               children: [
-                  (0, r.jsx)(f.hE, { children: p.intl.string(p.t.o4JNrO) }),
+                  (0, r.jsx)(f.hE, {
+                      children: p.intl.string(p.t.o4JNrO),
+                  }),
                   (0, r.jsx)(f.tK, {
                       className: m.Ot,
                       children: p.intl.string(p.t.y0tVbq),

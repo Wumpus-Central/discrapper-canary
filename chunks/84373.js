@@ -1,10 +1,13 @@
-n.d(t, { o: () => c });
+n.d(t, {
+    o: () => c,
+});
 var r = n(311907),
     i = n(873298),
     a = n(287809),
     s = n(64313),
     o = n(253932),
     l = n(656402);
+
 function c() {
     var e;
     let t = o.he.useSetting(),

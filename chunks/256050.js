@@ -1,4 +1,6 @@
-n.d(t, { default: () => a });
+n.d(t, {
+    default: () => a,
+});
 var r = n(627968);
 n(64700);
 var o = n(397927);
@@ -33,7 +35,12 @@ let a = {
                                 });
                         }
                         return e;
-                    })({ onConfirm: e }, n),
+                    })(
+                        {
+                            onConfirm: e,
+                        },
+                        n,
+                    ),
                 );
         });
     },

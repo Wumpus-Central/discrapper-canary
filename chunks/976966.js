@@ -1,4 +1,7 @@
-n.d(t, { A: () => _ }), n(896048);
+n.d(t, {
+    A: () => _,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -19,6 +22,7 @@ var r = n(627968),
     O = n(49999),
     j = n(985018),
     v = n(620168);
+
 function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -44,6 +48,7 @@ function x(e) {
     }
     return e;
 }
+
 function E(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -62,6 +67,7 @@ function E(e, t) {
         e
     );
 }
+
 function _(e) {
     let {
             searchContext: t,
@@ -79,7 +85,11 @@ function _(e) {
             if (t.type === y.I4_.DMS) {
                 var e, n;
                 let t = null != (e = null == (n = (0, h.Zf)(x).channel_id) ? void 0 : n.length) ? e : 0;
-                return t > 0 ? j.intl.format(j.t.A2dqWG, { filterCount: t }) : j.intl.string(j.t.tc619d);
+                return t > 0
+                    ? j.intl.format(j.t.A2dqWG, {
+                          filterCount: t,
+                      })
+                    : j.intl.string(j.t.tc619d);
             }
             return null;
         }, [t.type, x]),
@@ -102,10 +112,20 @@ function _(e) {
         G = l.useCallback(() => {
             M(null), b.A.openSearchFiltersModal(t);
         }, [M, t]),
-        k = l.useMemo(() => (E > 0 ? j.intl.format(j.t.uaR4sI, { filterCount: E }) : j.intl.string(j.t.UdhTtk)), [E]),
+        k = l.useMemo(
+            () =>
+                E > 0
+                    ? j.intl.format(j.t.uaR4sI, {
+                          filterCount: E,
+                      })
+                    : j.intl.string(j.t.UdhTtk),
+            [E],
+        ),
         U = t.type === y.I4_.DMS || t.type === y.I4_.CHANNEL;
     return (0, r.jsxs)("header", {
-        className: a()(v.wL, { [v.g$]: null != _ }),
+        className: a()(v.wL, {
+            [v.g$]: null != _,
+        }),
         children: [
             (0, r.jsx)("div", {
                 className: v.TN,
@@ -148,10 +168,13 @@ function _(e) {
         ],
     });
 }
+
 function C(e) {
     let { totalResults: t, subtitle: n, isSearching: l, isIndexing: i, documentsIndexed: a } = e;
     return i
-        ? (0, r.jsx)(I, { documentsIndexed: a })
+        ? (0, r.jsx)(I, {
+              documentsIndexed: a,
+          })
         : l
           ? (0, r.jsx)(N, {})
           : (0, r.jsx)(T, {
@@ -159,6 +182,7 @@ function C(e) {
                 subtitle: n,
             });
 }
+
 function S() {
     return (0, r.jsx)("div", {
         className: v.zp,
@@ -169,11 +193,14 @@ function S() {
         }),
     });
 }
+
 function I(e) {
     let { documentsIndexed: t } = e;
     return (0, r.jsx)(c.m, {
         asContainer: !0,
-        text: j.intl.formatToPlainString(j.t["4Y3O+O"], { count: null != t ? t : "" }),
+        text: j.intl.formatToPlainString(j.t["4Y3O+O"], {
+            count: null != t ? t : "",
+        }),
         children: (0, r.jsxs)("div", {
             className: v.q_,
             children: [
@@ -191,6 +218,7 @@ function I(e) {
         }),
     });
 }
+
 function N() {
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -203,12 +231,15 @@ function N() {
         ],
     });
 }
+
 function T(e) {
     let { totalResults: t, subtitle: n } = e,
         l = (0, r.jsx)(u.Text, {
             variant: "text-md/medium",
             color: "text-strong",
-            children: j.intl.format(j.t.ZGVL3g, { count: t }),
+            children: j.intl.format(j.t.ZGVL3g, {
+                count: t,
+            }),
         });
     return null != n
         ? (0, r.jsxs)("div", {
@@ -224,6 +255,7 @@ function T(e) {
           })
         : l;
 }
+
 function P(e) {
     let {
             searchContext: t,
@@ -247,7 +279,9 @@ function P(e) {
                         }),
                         e)
                     ) {
-                        let e = { type: y.I4_.DMS };
+                        let e = {
+                            type: y.I4_.DMS,
+                        };
                         b.A.transitionStateToSearchContext(t, e, b.A.cleanUpPrivateChannelSearchState);
                     } else {
                         let e = {
@@ -268,7 +302,12 @@ function P(e) {
             ],
             [p],
         ),
-        O = l.useMemo(() => ({ align: "end" }), []);
+        O = l.useMemo(
+            () => ({
+                align: "end",
+            }),
+            [],
+        );
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(u.YNO, {
@@ -337,6 +376,7 @@ function P(e) {
         ],
     });
 }
+
 function w(e) {
     let { searchMode: t, onSearchModeChange: n, isPopoutOpen: i, setOpenPopout: a } = e,
         s = l.useRef(null),

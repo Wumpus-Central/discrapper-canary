@@ -77,7 +77,12 @@ s(
         return (
             (e.exec = function () {
                 var e = [];
-                return (e.groups = { a: "7" }), e;
+                return (
+                    (e.groups = {
+                        a: "7",
+                    }),
+                    e
+                );
             }),
             "7" !== "".replace(e, "$<a>")
         );

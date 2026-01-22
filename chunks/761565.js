@@ -11,9 +11,9 @@
         7: "-nci",
         20: "-nci",
         50: "-nci",
-        3: "-üncü",
-        4: "-üncü",
-        100: "-üncü",
+        3: "-\xfcnc\xfc",
+        4: "-\xfcnc\xfc",
+        100: "-\xfcnc\xfc",
         6: "-ncı",
         9: "-uncu",
         10: "-uncu",
@@ -24,9 +24,9 @@
     return e.defineLocale("az", {
         months: "yanvar_fevral_mart_aprel_may_iyun_iyul_avqust_sentyabr_oktyabr_noyabr_dekabr".split("_"),
         monthsShort: "yan_fev_mar_apr_may_iyn_iyl_avq_sen_okt_noy_dek".split("_"),
-        weekdays: "Bazar_Bazar ertəsi_Çərşənbə axşamı_Çərşənbə_Cümə axşamı_Cümə_Şənbə".split("_"),
-        weekdaysShort: "Baz_BzE_ÇAx_Çər_CAx_Cüm_Şən".split("_"),
-        weekdaysMin: "Bz_BE_ÇA_Çə_CA_Cü_Şə".split("_"),
+        weekdays: "Bazar_Bazar ertəsi_\xc7ərşənbə axşamı_\xc7ərşənbə_C\xfcmə axşamı_C\xfcmə_Şənbə".split("_"),
+        weekdaysShort: "Baz_BzE_\xc7Ax_\xc7ər_CAx_C\xfcm_Şən".split("_"),
+        weekdaysMin: "Bz_BE_\xc7A_\xc7ə_CA_C\xfc_Şə".split("_"),
         weekdaysParseExact: !0,
         longDateFormat: {
             LT: "HH:mm",
@@ -37,24 +37,24 @@
             LLLL: "dddd, D MMMM YYYY HH:mm",
         },
         calendar: {
-            sameDay: "[bugün saat] LT",
+            sameDay: "[bug\xfcn saat] LT",
             nextDay: "[sabah saat] LT",
             nextWeek: "[gələn həftə] dddd [saat] LT",
-            lastDay: "[dünən] LT",
-            lastWeek: "[keçən həftə] dddd [saat] LT",
+            lastDay: "[d\xfcnən] LT",
+            lastWeek: "[ke\xe7ən həftə] dddd [saat] LT",
             sameElse: "L",
         },
         relativeTime: {
             future: "%s sonra",
             past: "%s əvvəl",
-            s: "birneçə saniyə",
+            s: "birne\xe7ə saniyə",
             ss: "%d saniyə",
             m: "bir dəqiqə",
             mm: "%d dəqiqə",
             h: "bir saat",
             hh: "%d saat",
-            d: "bir gün",
-            dd: "%d gün",
+            d: "bir g\xfcn",
+            dd: "%d g\xfcn",
             M: "bir ay",
             MM: "%d ay",
             y: "bir il",
@@ -65,7 +65,7 @@
             return /^(gündüz|axşam)$/.test(e);
         },
         meridiem: function (e, t, n) {
-            return e < 4 ? "gecə" : e < 12 ? "səhər" : e < 17 ? "gündüz" : "axşam";
+            return e < 4 ? "gecə" : e < 12 ? "səhər" : e < 17 ? "g\xfcnd\xfcz" : "axşam";
         },
         dayOfMonthOrdinalParse: /\d{1,2}-(ıncı|inci|nci|üncü|ncı|uncu)/,
         ordinal: function (e) {

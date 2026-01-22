@@ -1,4 +1,6 @@
-r.d(t, { A: () => s });
+r.d(t, {
+    A: () => s,
+});
 var n = r(64700),
     o = r(205662),
     a = r(891253),
@@ -20,6 +22,7 @@ var n = r(64700),
 let s = (function (e) {
     if ("function" != typeof e && null !== e)
         throw TypeError("Super expression must either be null or a function, not " + typeof e);
+
     function t(e) {
         if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
         var r = (function (e, t) {
@@ -128,7 +131,9 @@ let s = (function (e) {
                                     circle: s,
                                 },
                             },
-                            { custom: !!this.props.style },
+                            {
+                                custom: !!this.props.style,
+                            },
                         );
                     return n.createElement(
                         "div",
@@ -158,10 +163,14 @@ let s = (function (e) {
                             }),
                             n.createElement(
                                 "div",
-                                { style: u.pointer },
+                                {
+                                    style: u.pointer,
+                                },
                                 this.props.pointer
                                     ? n.createElement(this.props.pointer, this.props)
-                                    : n.createElement("div", { style: u.circle }),
+                                    : n.createElement("div", {
+                                          style: u.circle,
+                                      }),
                             ),
                         ),
                     );

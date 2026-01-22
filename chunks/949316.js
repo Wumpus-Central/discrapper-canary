@@ -6,6 +6,8 @@ r(
         target: "Array",
         proto: !0,
     },
-    { fill: a },
+    {
+        fill: a,
+    },
 ),
     o("fill");

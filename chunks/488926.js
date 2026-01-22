@@ -37,6 +37,7 @@ var r = n(735438),
     O = n(7864),
     A = n(661191),
     v = n(652215);
+
 function S(e, t, n) {
     return (
         t in e
@@ -50,6 +51,7 @@ function S(e, t, n) {
         e
     );
 }
+
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -125,6 +127,7 @@ let T = a.iu(0),
         v.xBc.MANAGE_WEBHOOKS,
         v.xBc.VIEW_AUDIT_LOG,
     );
+
 function L(e, t, n) {
     let r = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
     if (r && t.mfaLevel === v.EkJ.ELEVATED && n === h.default.getId()) {
@@ -133,6 +136,7 @@ function L(e, t, n) {
     }
     return e;
 }
+
 function j(e, t, n, r) {
     let i = r[e];
     if ((null != i && ((n = a.TF(n, i.deny)), (n = a.WQ(n, i.allow))), null != t)) {
@@ -150,6 +154,7 @@ function j(e, t, n, r) {
     }
     return n;
 }
+
 function M(e) {
     let {
         userId: t,
@@ -176,6 +181,7 @@ function M(e) {
         L(f, r, t, o)
     );
 }
+
 function k(e) {
     let t,
         { forceRoles: n, context: r, overwrites: i, roles: a, checkElevated: s = !0, excludeGuildPermissions: o } = e,
@@ -232,6 +238,7 @@ function k(e) {
         lurkerPermissionsMask: l,
     });
 }
+
 function U(e) {
     var t, n, r;
     let i,
@@ -282,6 +289,7 @@ function U(e) {
         lurkerPermissionsMask: E,
     });
 }
+
 function G(e, t, n, r) {
     return e.type !== v.rbe.PRIVATE_THREAD || n || r || a.zy(t, v.xBc.MANAGE_THREADS)
         ? a.zy(t, v.xBc.SEND_MESSAGES_IN_THREADS)
@@ -291,6 +299,7 @@ function G(e, t, n, r) {
             : a.TF(t, v.xBc.SEND_MESSAGES)
         : T;
 }
+
 function V(e, t) {
     if (f.Le.has(e.type)) return !0;
     let { guild_id: n } = e;
@@ -308,6 +317,7 @@ function V(e, t) {
             })
     );
 }
+
 function F(e) {
     var t;
     return i().some(E.A.getUnsafeMutableRoles(e.id), (e) => e.hoist && (0, _._m)(e, v.xBc.ADMINISTRATOR))
@@ -316,16 +326,20 @@ function F(e) {
           ? t
           : void 0;
 }
+
 function B(e, t, n, r) {
     return !!(null != t && (0, p.bM)(e, t)) || (null != n && (null == r || (0, O.zA)(n, r)));
 }
+
 function H(e, t) {
     let n = g.Ay.getMember(e.id, t);
     if (null != n) return E.A.getSortedRoles(e.id).find((e) => n.roles.includes(e.id));
 }
+
 function Y(e, t) {
     return null == t.hoistRoleId ? null : E.A.getRole(e.id, t.hoistRoleId);
 }
+
 function W(e) {
     return {
         id: e,
@@ -334,6 +348,7 @@ function W(e) {
         deny: T,
     };
 }
+
 function K(e) {
     let { permission: t, user: n, context: r, overwrites: i, roles: s, excludeGuildPermissions: o } = e;
     return a.zy(
@@ -348,6 +363,7 @@ function K(e) {
         t,
     );
 }
+
 function z(e, t) {
     let n,
         r = {};
@@ -363,6 +379,7 @@ function z(e, t) {
         s = r[n.id];
     return null != s && ((i = a.TF(i, s.deny)), (i = a.WQ(i, s.allow))), a.zy(i, e);
 }
+
 function q(e, t) {
     let n,
         r = {};

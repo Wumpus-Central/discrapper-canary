@@ -1,4 +1,10 @@
-n.d(t, { K: () => h }), n(733351), n(591487), n(727858), n(747238);
+n.d(t, {
+    K: () => h,
+}),
+    n(733351),
+    n(591487),
+    n(727858),
+    n(747238);
 var r = n(64700),
     l = n(311907),
     i = n(39255),
@@ -8,14 +14,17 @@ var r = n(64700),
     c = n(257120),
     u = n(495273),
     d = n(737045);
+
 function f(e) {
     let t = e.trim();
     return "@" === t[0] ? t.slice(1) : t;
 }
+
 function p(e, t) {
     let n = f(e);
     return RegExp("".concat(c.A.escape(n)), "i").test(t);
 }
+
 function h(e, t, n, c) {
     let h = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null != t && t.isGuildStageVoice(),
         b = (0, l.bG)([s.A], () => (null != e ? s.A.getSortedRoles(e.id) : [])),

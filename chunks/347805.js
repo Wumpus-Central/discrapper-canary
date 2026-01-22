@@ -1,4 +1,7 @@
-t.d(l, { A: () => p }), t(747238);
+t.d(l, {
+    A: () => p,
+}),
+    t(747238);
 var n = t(627968),
     i = t(64700),
     r = t(311907),
@@ -9,6 +12,7 @@ var n = t(627968),
     c = t(652215),
     u = t(985018),
     f = t(75945);
+
 function p(e) {
     let { autoFocus: l = !1, className: t, userId: p, onUpdate: m } = e,
         x = (0, r.bG)([d.A], () => d.A.hidePersonalInformation),

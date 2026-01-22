@@ -22,6 +22,7 @@ var r = n(627968),
     E = n(652215),
     b = n(985018),
     y = n(696007);
+
 function O(e) {
     let { message: t, rendered: n } = e;
     return null == (0, g.Ys)(t.content)
@@ -36,6 +37,7 @@ function O(e) {
               usernameHook: () => null,
           });
 }
+
 function A(e) {
     let { message: t, className: n } = e,
         [a, o] = i.useState(!1),
@@ -96,6 +98,7 @@ function A(e) {
               }),
           });
 }
+
 function v(e) {
     let { message: t, compact: n, usernameHook: a } = e,
         s = t.content,

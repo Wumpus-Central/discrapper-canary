@@ -114,7 +114,10 @@ let E = (0, d.c$)(
             var t;
             return null != (t = null == e ? void 0 : e.value) && t;
         },
-        (e) => s._t.create({ value: e }),
+        (e) =>
+            s._t.create({
+                value: e,
+            }),
     ),
     b = (0, d.c$)(
         "textAndImages",
@@ -123,7 +126,10 @@ let E = (0, d.c$)(
             var t;
             return null == (t = null == e ? void 0 : e.value) || t;
         },
-        (e) => s._t.create({ value: e }),
+        (e) =>
+            s._t.create({
+                value: e,
+            }),
     ),
     y = (0, d.c$)(
         "textAndImages",
@@ -132,7 +138,10 @@ let E = (0, d.c$)(
             var t;
             return null != (t = null == e ? void 0 : e.value) && t;
         },
-        (e) => s._t.create({ value: e }),
+        (e) =>
+            s._t.create({
+                value: e,
+            }),
     ),
     O = (0, d.c$)(
         "textAndImages",
@@ -141,7 +150,10 @@ let E = (0, d.c$)(
             var t;
             return null == (t = null == e ? void 0 : e.value) || t;
         },
-        (e) => s._t.create({ value: e }),
+        (e) =>
+            s._t.create({
+                value: e,
+            }),
     ),
     A = (0, d.c$)(
         "textAndImages",
@@ -150,7 +162,10 @@ let E = (0, d.c$)(
             var t;
             return null != (t = null == e ? void 0 : e.value) ? t : h.P6Q.ON_CLICK;
         },
-        (e) => s.hU.create({ value: e }),
+        (e) =>
+            s.hU.create({
+                value: e,
+            }),
     ),
     v = (0, d.c$)(
         "textAndImages",
@@ -159,7 +174,10 @@ let E = (0, d.c$)(
             var t;
             return null == (t = null == e ? void 0 : e.value) || t;
         },
-        (e) => s._t.create({ value: e }),
+        (e) =>
+            s._t.create({
+                value: e,
+            }),
     );
 (0, d.c$)(
     "notifications",
@@ -168,7 +186,10 @@ let E = (0, d.c$)(
         var t;
         return null == (t = null == e ? void 0 : e.value) || t;
     },
-    (e) => s._t.create({ value: e }),
+    (e) =>
+        s._t.create({
+            value: e,
+        }),
 );
 let S = (0, d.c$)(
     "notifications",
@@ -189,7 +210,10 @@ let I = (0, d.c$)(
             var t;
             return null == (t = null == e ? void 0 : e.value) || t;
         },
-        (e) => s._t.create({ value: !!e }),
+        (e) =>
+            s._t.create({
+                value: !!e,
+            }),
     ),
     T = (0, d.c$)(
         "notifications",
@@ -198,7 +222,10 @@ let I = (0, d.c$)(
             var t;
             return null == (t = null == e ? void 0 : e.value) || t;
         },
-        (e) => s._t.create({ value: !!e }),
+        (e) =>
+            s._t.create({
+                value: !!e,
+            }),
     ),
     C = (0, d.c$)(
         "notifications",
@@ -207,7 +234,10 @@ let I = (0, d.c$)(
             var t;
             return null == (t = null == e ? void 0 : e.value) || t;
         },
-        (e) => s._t.create({ value: !!e }),
+        (e) =>
+            s._t.create({
+                value: !!e,
+            }),
     ),
     N = (0, d.c$)(
         "notifications",
@@ -216,7 +246,10 @@ let I = (0, d.c$)(
             var t;
             return null == (t = null == e ? void 0 : e.value) || t;
         },
-        (e) => s._t.create({ value: !!e }),
+        (e) =>
+            s._t.create({
+                value: !!e,
+            }),
     ),
     R = (0, d.c$)(
         "notifications",
@@ -225,7 +258,10 @@ let I = (0, d.c$)(
             var t;
             return null == (t = null == e ? void 0 : e.value) || t;
         },
-        (e) => s._t.create({ value: !!e }),
+        (e) =>
+            s._t.create({
+                value: !!e,
+            }),
     ),
     w = (0, d.c$)(
         "notifications",
@@ -234,7 +270,10 @@ let I = (0, d.c$)(
             var t;
             return null == (t = null == e ? void 0 : e.value) || t;
         },
-        (e) => s._t.create({ value: !!e }),
+        (e) =>
+            s._t.create({
+                value: !!e,
+            }),
     ),
     P = (0, d.c$)(
         "notifications",
@@ -243,7 +282,10 @@ let I = (0, d.c$)(
             var t;
             return null != (t = null == e ? void 0 : e.value) && t;
         },
-        (e) => s._t.create({ value: !!e }),
+        (e) =>
+            s._t.create({
+                value: !!e,
+            }),
     ),
     D = (0, d.c$)(
         "notifications",
@@ -277,7 +319,10 @@ let I = (0, d.c$)(
             var t;
             return null != (t = null == e ? void 0 : e.value) && t;
         },
-        (e) => s._t.create({ value: e }),
+        (e) =>
+            s._t.create({
+                value: e,
+            }),
     ),
     U = (0, d.c$)(
         "textAndImages",
@@ -286,7 +331,10 @@ let I = (0, d.c$)(
             var t;
             return null == (t = null == e ? void 0 : e.value) || t;
         },
-        (e) => s._t.create({ value: e }),
+        (e) =>
+            s._t.create({
+                value: e,
+            }),
     ),
     G = (0, d.c$)(
         "voiceAndVideo",
@@ -295,19 +343,28 @@ let I = (0, d.c$)(
             var t;
             return null != (t = null == e ? void 0 : e.value) && t;
         },
-        (e) => s._t.create({ value: e }),
+        (e) =>
+            s._t.create({
+                value: e,
+            }),
     ),
     V = (0, d.c$)(
         "voiceAndVideo",
         "disableStreamPreviews",
         (e) => (null == e ? void 0 : e.value),
-        (e) => s._t.create({ value: e }),
+        (e) =>
+            s._t.create({
+                value: e,
+            }),
     ),
     F = (0, d.c$)(
         "notifications",
         "notifyFriendsOnGoLive",
         (e) => (null == e ? void 0 : e.value),
-        (e) => s._t.create({ value: e }),
+        (e) =>
+            s._t.create({
+                value: e,
+            }),
     ),
     B = "0",
     H = (0, d.c$)(
@@ -323,7 +380,10 @@ let I = (0, d.c$)(
             var t;
             return null != (t = null == e ? void 0 : e.value) && t;
         },
-        (e) => s._t.create({ value: e }),
+        (e) =>
+            s._t.create({
+                value: e,
+            }),
     ),
     W = (0, d.c$)(
         "gameLibrary",
@@ -332,7 +392,10 @@ let I = (0, d.c$)(
             var t;
             return null == (t = null == e ? void 0 : e.value) || t;
         },
-        (e) => s._t.create({ value: e }),
+        (e) =>
+            s._t.create({
+                value: e,
+            }),
     ),
     K = (0, d.c$)(
         "privacy",
@@ -341,7 +404,10 @@ let I = (0, d.c$)(
             var t;
             return null == (t = null == e ? void 0 : e.value) || t;
         },
-        (e) => s._t.create({ value: e }),
+        (e) =>
+            s._t.create({
+                value: e,
+            }),
     ),
     z = (0, d.c$)(
         "privacy",
@@ -350,7 +416,10 @@ let I = (0, d.c$)(
             var t;
             return null == (t = null == e ? void 0 : e.value) || t;
         },
-        (e) => s._t.create({ value: e }),
+        (e) =>
+            s._t.create({
+                value: e,
+            }),
     ),
     q = [],
     X = (0, d.c$)(
@@ -363,13 +432,21 @@ let I = (0, d.c$)(
         "privacy",
         "defaultMessageRequestRestricted",
         (e) => (null == e ? void 0 : e.value),
-        (e) => s._t.create({ value: e }),
+        (e) =>
+            s._t.create({
+                value: e,
+            }),
     ),
     Q = (0, d.c$)(
         "privacy",
         "nonSpamRetrainingOptIn",
         (e) => (null == e ? void 0 : e.value),
-        (e) => (null == e ? void 0 : s._t.create({ value: e })),
+        (e) =>
+            null == e
+                ? void 0
+                : s._t.create({
+                      value: e,
+                  }),
     );
 (0, d.c$)(
     "privacy",
@@ -378,7 +455,10 @@ let I = (0, d.c$)(
         var t;
         return null != (t = null == e ? void 0 : e.value) && t;
     },
-    (e) => s._t.create({ value: e }),
+    (e) =>
+        s._t.create({
+            value: e,
+        }),
 );
 let $ = (0, d.c$)(
         "privacy",
@@ -390,7 +470,10 @@ let $ = (0, d.c$)(
         "privacy",
         "defaultGuildsRestrictedV2",
         (e) => (null == e ? void 0 : e.value),
-        (e) => s._t.create({ value: e }),
+        (e) =>
+            s._t.create({
+                value: e,
+            }),
     ),
     ee = (0, d.c$)(
         "privacy",
@@ -405,7 +488,10 @@ let $ = (0, d.c$)(
         var t;
         return null != (t = null == e ? void 0 : e.value) ? t : 0;
     },
-    (e) => s.ZQ.create({ value: e }),
+    (e) =>
+        s.ZQ.create({
+            value: e,
+        }),
 );
 let et = (0, d.c$)(
         "privacy",
@@ -414,7 +500,10 @@ let et = (0, d.c$)(
             var t;
             return null != (t = null == e ? void 0 : e.value) ? t : h.yKI;
         },
-        (e) => s.ZQ.create({ value: e }),
+        (e) =>
+            s.ZQ.create({
+                value: e,
+            }),
     ),
     en = (0, d.c$)(
         "debug",
@@ -423,7 +512,10 @@ let et = (0, d.c$)(
             var t;
             return null != (t = null == e ? void 0 : e.value) && t;
         },
-        (e) => s._t.create({ value: e }),
+        (e) =>
+            s._t.create({
+                value: e,
+            }),
     ),
     er = (0, d.c$)(
         "textAndImages",
@@ -432,7 +524,10 @@ let et = (0, d.c$)(
             var t;
             return null == (t = null == e ? void 0 : e.value) || t;
         },
-        (e) => s._t.create({ value: e }),
+        (e) =>
+            s._t.create({
+                value: e,
+            }),
     ),
     ei = (0, d.c$)(
         "textAndImages",
@@ -441,7 +536,10 @@ let et = (0, d.c$)(
             var t;
             return null != (t = null == e ? void 0 : e.value) && t;
         },
-        (e) => s._t.create({ value: e }),
+        (e) =>
+            s._t.create({
+                value: e,
+            }),
     ),
     ea = (0, d.c$)(
         "voiceAndVideo",
@@ -456,7 +554,10 @@ let et = (0, d.c$)(
             var t;
             return null != (t = null == e ? void 0 : e.value) ? t : 100;
         },
-        (e) => s.uN.create({ value: e }),
+        (e) =>
+            s.uN.create({
+                value: e,
+            }),
     ),
     eo = (0, d.c$)(
         "voiceAndVideo",
@@ -465,7 +566,10 @@ let et = (0, d.c$)(
             var t;
             return null == (t = null == e ? void 0 : e.value) || t;
         },
-        (e) => s._t.create({ value: e }),
+        (e) =>
+            s._t.create({
+                value: e,
+            }),
     ),
     el = (0, d.c$)(
         "privacy",
@@ -474,7 +578,10 @@ let et = (0, d.c$)(
             var t;
             return null != (t = null == e ? void 0 : e.value) && t;
         },
-        (e) => s._t.create({ value: e }),
+        (e) =>
+            s._t.create({
+                value: e,
+            }),
     ),
     ec = (0, d.c$)(
         "privacy",
@@ -483,7 +590,10 @@ let et = (0, d.c$)(
             var t;
             return null != (t = null == e ? void 0 : e.value) && t;
         },
-        (e) => s._t.create({ value: e }),
+        (e) =>
+            s._t.create({
+                value: e,
+            }),
     );
 (0, d.c$)(
     "voiceAndVideo",
@@ -492,14 +602,20 @@ let et = (0, d.c$)(
         var t;
         return null == (t = null == e ? void 0 : e.value) || t;
     },
-    (e) => s._t.create({ value: e }),
+    (e) =>
+        s._t.create({
+            value: e,
+        }),
 );
 let eu = (0, d.c6)({
         baseSetting: (0, d.c$)(
             "voiceAndVideo",
             "afkTimeout",
             (e) => (null == e ? void 0 : e.value),
-            (e) => s.ZQ.create({ value: e }),
+            (e) =>
+                s.ZQ.create({
+                    value: e,
+                }),
         ),
         isEligible: () => (0, c.Do)("user_settings"),
         useIsEligible: () => (0, c.cv)("user_settings"),
@@ -514,7 +630,10 @@ let eu = (0, d.c6)({
             var t;
             return null != (t = null == e ? void 0 : e.value) && t;
         },
-        (e) => s._t.create({ value: e }),
+        (e) =>
+            s._t.create({
+                value: e,
+            }),
     ),
     ef = (0, d.c$)(
         "textAndImages",
@@ -523,7 +642,10 @@ let eu = (0, d.c6)({
             var t;
             return null != (t = null == e ? void 0 : e.value) && t;
         },
-        (e) => s._t.create({ value: e }),
+        (e) =>
+            s._t.create({
+                value: e,
+            }),
     );
 (0, d.c$)(
     "privacy",
@@ -532,7 +654,10 @@ let eu = (0, d.c6)({
         var t;
         return null == (t = null == e ? void 0 : e.value) || t;
     },
-    (e) => s._t.create({ value: e }),
+    (e) =>
+        s._t.create({
+            value: e,
+        }),
 );
 let ep = (0, d.c$)(
         "gameLibrary",
@@ -541,7 +666,10 @@ let ep = (0, d.c$)(
             var t;
             return null != (t = null == e ? void 0 : e.value) && t;
         },
-        (e) => s._t.create({ value: e }),
+        (e) =>
+            s._t.create({
+                value: e,
+            }),
     ),
     e_ = (0, d.c$)(
         "textAndImages",
@@ -550,7 +678,10 @@ let ep = (0, d.c$)(
             var t;
             return null == (t = null == e ? void 0 : e.value) || t;
         },
-        (e) => s._t.create({ value: e }),
+        (e) =>
+            s._t.create({
+                value: e,
+            }),
     ),
     eh = (0, d.c$)(
         "textAndImages",
@@ -559,7 +690,10 @@ let ep = (0, d.c$)(
             var t;
             return null != (t = null == e ? void 0 : e.value) ? t : p.Je.NON_FRIENDS;
         },
-        (e) => s.ZQ.create({ value: e }),
+        (e) =>
+            s.ZQ.create({
+                value: e,
+            }),
     );
 (0, d.c$)(
     "textAndImages",
@@ -568,7 +702,10 @@ let ep = (0, d.c$)(
         var t;
         return null != (t = null == e ? void 0 : e.value) ? t : p.uH.NON_FRIENDS;
     },
-    (e) => s.ZQ.create({ value: e }),
+    (e) =>
+        s.ZQ.create({
+            value: e,
+        }),
 );
 let em = (0, d.c$)(
         "textAndImages",
@@ -583,7 +720,10 @@ let em = (0, d.c$)(
             var t;
             return null == (t = null == e ? void 0 : e.value) || t;
         },
-        (e) => s._t.create({ value: e }),
+        (e) =>
+            s._t.create({
+                value: e,
+            }),
     );
 (0, d.c$)(
     "privacy",
@@ -592,14 +732,20 @@ let em = (0, d.c$)(
         var t;
         return null == (t = null == e ? void 0 : e.value) || t;
     },
-    (e) => s._t.create({ value: e }),
+    (e) =>
+        s._t.create({
+            value: e,
+        }),
 );
 let eE = new Set(Object.values(h.clD)),
     eb = (0, d.c$)(
         "status",
         "status",
         (e) => (null != e && eE.has(e.value) ? e.value : h.clD.UNKNOWN),
-        (e) => s.hU.create({ value: e }),
+        (e) =>
+            s.hU.create({
+                value: e,
+            }),
     ),
     ey = (0, d.c$)(
         "status",
@@ -626,7 +772,10 @@ let eE = new Set(Object.values(h.clD)),
             var t;
             return null == (t = null == e ? void 0 : e.value) || t;
         },
-        (e) => s._t.create({ value: e }),
+        (e) =>
+            s._t.create({
+                value: e,
+            }),
     ),
     eS = (0, d.Mt)(
         (0, d.c$)(
@@ -636,7 +785,10 @@ let eE = new Set(Object.values(h.clD)),
                 var t;
                 return null == (t = null == e ? void 0 : e.value) || t;
             },
-            (e) => s._t.create({ value: e }),
+            (e) =>
+                s._t.create({
+                    value: e,
+                }),
         ),
         "text",
         "inlineAttachmentMedia",
@@ -649,7 +801,10 @@ let eE = new Set(Object.values(h.clD)),
                 var t;
                 return null == (t = null == e ? void 0 : e.value) || t;
             },
-            (e) => s._t.create({ value: e }),
+            (e) =>
+                s._t.create({
+                    value: e,
+                }),
         ),
         "text",
         "inlineEmbedMedia",
@@ -662,7 +817,10 @@ let eE = new Set(Object.values(h.clD)),
                 var t;
                 return null == (t = null == e ? void 0 : e.value) || t;
             },
-            (e) => s._t.create({ value: e }),
+            (e) =>
+                s._t.create({
+                    value: e,
+                }),
         ),
         "text",
         "renderEmbeds",
@@ -675,7 +833,10 @@ let eE = new Set(Object.values(h.clD)),
                 var t;
                 return null == (t = null == e ? void 0 : e.value) || t;
             },
-            (e) => s._t.create({ value: e }),
+            (e) =>
+                s._t.create({
+                    value: e,
+                }),
         ),
         "text",
         "renderReactions",
@@ -697,13 +858,23 @@ let eE = new Set(Object.values(h.clD)),
         (e) => {
             let { emojiId: t, emojiName: n, animated: r, disableDoubleTap: i } = e;
             return {
-                emojiId: s.ol.create({ value: t }),
-                emojiName: s.hU.create({ value: n }),
-                animated: s._t.create({ value: r }),
-                disableDoubleTap: s._t.create({ value: i }),
+                emojiId: s.ol.create({
+                    value: t,
+                }),
+                emojiName: s.hU.create({
+                    value: n,
+                }),
+                animated: s._t.create({
+                    value: r,
+                }),
+                disableDoubleTap: s._t.create({
+                    value: i,
+                }),
             };
         },
-        { comparator: o.A },
+        {
+            comparator: o.A,
+        },
     ),
     "text",
     "defaultReactionEmoji",
@@ -715,21 +886,30 @@ let eN = (0, d.c$)(
             var t;
             return null != (t = null == e ? void 0 : e.value) ? t : null;
         },
-        (e) => s.as.create({ value: null != e ? e : 0 }),
+        (e) =>
+            s.as.create({
+                value: null != e ? e : 0,
+            }),
     ),
     eR = new Set([m.YP.AUTO, l.b.COZY, l.b.COMPACT]);
 (0, d.c$)(
     "appearance",
     "channelListLayout",
     (e) => (null != e && eR.has(e.value) ? e.value : l.b.COZY),
-    (e) => s.hU.create({ value: e }),
+    (e) =>
+        s.hU.create({
+            value: e,
+        }),
 );
 let ew = new Set([l.P.ALL, l.P.UNREADS, l.P.NONE]),
     eP = (0, d.c$)(
         "appearance",
         "messagePreviews",
         (e) => (null != e && ew.has(e.value) ? e.value : l.P.ALL),
-        (e) => s.hU.create({ value: e }),
+        (e) =>
+            s.hU.create({
+                value: e,
+            }),
     ),
     eD = (0, d.Mt)(
         (0, d.c$)(
@@ -761,7 +941,11 @@ let ew = new Set([l.P.ALL, l.P.UNREADS, l.P.NONE]),
         },
         (e) => ({
             backgroundGradientPresetId:
-                null != e.backgroundGradientPresetId ? s.ZQ.create({ value: e.backgroundGradientPresetId }) : void 0,
+                null != e.backgroundGradientPresetId
+                    ? s.ZQ.create({
+                          value: e.backgroundGradientPresetId,
+                      })
+                    : void 0,
             customUserThemeSettings:
                 null != e.customUserThemeSettings
                     ? {
@@ -772,7 +956,9 @@ let ew = new Set([l.P.ALL, l.P.UNREADS, l.P.NONE]),
                       }
                     : void 0,
         }),
-        { comparator: r.isEqual },
+        {
+            comparator: r.isEqual,
+        },
     ),
     eL = (0, d.Tg)(
         (0, d.Mt)(
@@ -783,7 +969,10 @@ let ew = new Set([l.P.ALL, l.P.UNREADS, l.P.NONE]),
                     var t;
                     return null == (t = null == e ? void 0 : e.value) || t;
                 },
-                (e) => s._t.create({ value: e }),
+                (e) =>
+                    s._t.create({
+                        value: e,
+                    }),
             ),
             "text",
             "gifAutoPlay",
@@ -808,7 +997,10 @@ let ew = new Set([l.P.ALL, l.P.UNREADS, l.P.NONE]),
                     var t;
                     return null == (t = null == e ? void 0 : e.value) || t;
                 },
-                (e) => s._t.create({ value: e }),
+                (e) =>
+                    s._t.create({
+                        value: e,
+                    }),
             ),
             "text",
             "animateEmoji",
@@ -833,7 +1025,10 @@ let ew = new Set([l.P.ALL, l.P.UNREADS, l.P.NONE]),
                     var t;
                     return null != (t = null == e ? void 0 : e.value) ? t : g.BJ.ALWAYS_ANIMATE;
                 },
-                (e) => s.ZQ.create({ value: e }),
+                (e) =>
+                    s.ZQ.create({
+                        value: e,
+                    }),
             ),
             "text",
             "animateStickers",
@@ -861,7 +1056,9 @@ let ew = new Set([l.P.ALL, l.P.UNREADS, l.P.NONE]),
         "activityRestrictedGuildIds",
         (e) => (null != e ? e : ek),
         (e) => e,
-        { delay: _.Sb.FREQUENT_USER_ACTION },
+        {
+            delay: _.Sb.FREQUENT_USER_ACTION,
+        },
     ),
     eV = [],
     eF = (0, d.c$)(
@@ -898,7 +1095,10 @@ let eB = (0, d.c6)({
         "privacy",
         "familyCenterEnabledV2",
         (e) => (null == e ? void 0 : e.value),
-        (e) => s._t.create({ value: e }),
+        (e) =>
+            s._t.create({
+                value: e,
+            }),
     ),
     eY = (0, d.c$)(
         "privacy",
@@ -907,7 +1107,10 @@ let eB = (0, d.c6)({
             var t;
             return null != (t = null == e ? void 0 : e.value) && t;
         },
-        (e) => s._t.create({ value: e }),
+        (e) =>
+            s._t.create({
+                value: e,
+            }),
     ),
     eW = (0, d.c$)(
         "privacy",
@@ -916,7 +1119,10 @@ let eB = (0, d.c6)({
             var t;
             return null == (t = null == e ? void 0 : e.value) || t;
         },
-        (e) => s._t.create({ value: e }),
+        (e) =>
+            s._t.create({
+                value: e,
+            }),
     ),
     eK = (0, d.c$)(
         "privacy",
@@ -975,7 +1181,10 @@ let eB = (0, d.c6)({
         var t;
         return null != (t = null == e ? void 0 : e.value) && t;
     },
-    (e) => s._t.create({ value: e }),
+    (e) =>
+        s._t.create({
+            value: e,
+        }),
 ),
     (0, d.c$)(
         "appearance",
@@ -984,7 +1193,10 @@ let eB = (0, d.c6)({
             var t;
             return null != (t = null == e ? void 0 : e.value) && t;
         },
-        (e) => s._t.create({ value: e }),
+        (e) =>
+            s._t.create({
+                value: e,
+            }),
     );
 let e0 = (0, d.c$)(
     "appearance",
@@ -1031,9 +1243,15 @@ let e1 = (0, d.c$)(
             ),
         (e) =>
             (0, r.mapValues)(e, (e) =>
-                (0, r.mapValues)(e, (e) => s.ol.create({ value: null != e ? String(e) : void 0 })),
+                (0, r.mapValues)(e, (e) =>
+                    s.ol.create({
+                        value: null != e ? String(e) : void 0,
+                    }),
+                ),
             ),
-        { delay: _.Sb.AUTOMATED },
+        {
+            delay: _.Sb.AUTOMATED,
+        },
     ),
     e4 = (0, d.c$)(
         "textAndImages",
@@ -1042,7 +1260,10 @@ let e1 = (0, d.c$)(
             var t;
             return null == (t = null == e ? void 0 : e.value) || t;
         },
-        (e) => s._t.create({ value: e }),
+        (e) =>
+            s._t.create({
+                value: e,
+            }),
     ),
     e5 = (0, d.c$)(
         "textAndImages",
@@ -1051,5 +1272,8 @@ let e1 = (0, d.c$)(
             var t;
             return null != (t = null == e ? void 0 : e.value) && t;
         },
-        (e) => s._t.create({ value: e }),
+        (e) =>
+            s._t.create({
+                value: e,
+            }),
     );

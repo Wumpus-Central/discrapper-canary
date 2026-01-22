@@ -1,9 +1,11 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
     a = n.n(i),
-    s = n(432022),
+    s = n(108531),
     o = n(397927),
     l = n(793574),
     c = n(688810),
@@ -12,6 +14,7 @@ var i = n(503698),
     f = n(985018),
     p = n(677300),
     _ = n(67423);
+
 function h(e, t, n) {
     return (
         t in e
@@ -25,6 +28,7 @@ function h(e, t, n) {
         e
     );
 }
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -41,6 +45,7 @@ function m(e) {
     }
     return e;
 }
+
 function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -53,6 +58,7 @@ function g(e, t) {
     }
     return n;
 }
+
 function E(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -92,7 +98,9 @@ let b = function (e) {
             });
         };
     return (0, r.jsx)(s.animated.div, {
-        className: a()(p.iE, { [p.q4]: !t }),
+        className: a()(p.iE, {
+            [p.q4]: !t,
+        }),
         style: y,
         children: (0, r.jsxs)("div", {
             className: p.iJ,
@@ -108,7 +116,9 @@ let b = function (e) {
                         (0, r.jsx)(o.Heading, {
                             variant: "heading-md/semibold",
                             color: "text-strong",
-                            children: f.intl.format(f.t["3yZP0G"], { percent: h.discount.amount }),
+                            children: f.intl.format(f.t["3yZP0G"], {
+                                percent: h.discount.amount,
+                            }),
                         }),
                         (0, r.jsx)(o.Text, {
                             variant: "text-sm/medium",

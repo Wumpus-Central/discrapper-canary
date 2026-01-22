@@ -1,4 +1,7 @@
-n.d(t, { A: () => A }), n(896048);
+n.d(t, {
+    A: () => A,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -11,6 +14,7 @@ var r = n(627968),
     p = n(439075),
     f = n(985018),
     h = n(142011);
+
 function A(e) {
     let {
             quests: t,
@@ -58,7 +62,9 @@ function A(e) {
     }, []);
     let v = y >= 1610 ? 3 : y >= 1340 ? 2 : 1;
     return l && 0 === t.length
-        ? (0, r.jsx)(c.y$y, { className: h.u1 })
+        ? (0, r.jsx)(c.y$y, {
+              className: h.u1,
+          })
         : 0 === t.length
           ? (0, r.jsxs)("div", {
                 className: h.y7,
@@ -70,7 +76,11 @@ function A(e) {
                     (0, r.jsx)(c.Text, {
                         variant: "text-md/normal",
                         color: "text-subtle",
-                        children: g ? f.intl.format(f.t.LdYS1H, { onClick: m }) : f.intl.string(f.t.LhD4yH),
+                        children: g
+                            ? f.intl.format(f.t.LdYS1H, {
+                                  onClick: m,
+                              })
+                            : f.intl.string(f.t.LhD4yH),
                     }),
                 ],
             })

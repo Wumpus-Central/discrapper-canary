@@ -1,5 +1,6 @@
 var r = n(64700),
     i = n(524519);
+
 function a(e, t) {
     return (e === t && (0 !== e || 1 / e == 1 / t)) || (e != e && t != t);
 }

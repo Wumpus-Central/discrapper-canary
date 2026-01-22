@@ -183,10 +183,12 @@ let A = (e) => {
         }, [t, n, s, e]);
     },
     N = [];
+
 function R() {
     var e, t;
     return null != (e = null == (t = (0, o.k)().favoriteStickers) ? void 0 : t.stickerIds) ? e : N;
 }
+
 function w() {
     let e = R();
     return (0, i.yK)(
@@ -195,6 +197,7 @@ function w() {
         [e],
     );
 }
+
 function P() {
     var e, t;
     let n = (0, o.k)(),
@@ -205,6 +208,7 @@ function P() {
         r
     );
 }
+
 function D() {
     let e = P();
     return (0, i.yK)([g.A], () => e.map((e) => g.A.getStickerById(e)).filter((e) => void 0 !== e), [e]);

@@ -28,6 +28,7 @@ var r,
     O = n(71393),
     A = n(287809),
     v = n(652215);
+
 function S(e, t, n) {
     return (
         t in e
@@ -41,6 +42,7 @@ function S(e, t, n) {
         e
     );
 }
+
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -57,6 +59,7 @@ function I(e) {
     }
     return e;
 }
+
 function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -69,6 +72,7 @@ function T(e, t) {
     }
     return n;
 }
+
 function C(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -157,6 +161,7 @@ class z {
         });
     }
 }
+
 function q(e, t, n) {
     if (null == e || "null" === e || V.has(e) || (0 === t && f.A.hasGuild(e))) return;
     let r = c.A.database();
@@ -174,19 +179,21 @@ function q(e, t, n) {
     0 !== t && (W += 1),
     V.add(e),
     f.A.restored(e),
-    s.A.mark("\u2757", "loaded guild channels (guild: ".concat(e, ")"), o),
+    s.A.mark("❗", "loaded guild channels (guild: ".concat(e, ")"), o),
     a))
         Object.hasOwn(w, n.id) || en((0, g.oh)(n));
     N.verbose(
         "hydration complete (guild: ".concat(e, ", channels: ").concat(a.length, ", guilds_loaded: ").concat(W, ")"),
     );
 }
+
 function X(e, t, n) {
     if (!Object.hasOwn(w, e) && !Object.hasOwn(D, e) && !Object.hasOwn(L, e) && !Object.hasOwn(G, e) && 1 === t) {
         let r = f.A.getBasicChannel(e);
         (null == r ? void 0 : r.guild_id) != null && q(r.guild_id, t, n);
     }
 }
+
 function Z(e) {
     if ((N.fileOnly("Deleting guild channels for ".concat(e)), null != P[e])) {
         for (let t of b.default.keys(P[e])) delete w[t];
@@ -194,6 +201,7 @@ function Z(e) {
     }
     null != j[e] && delete j[e];
 }
+
 function Q(e) {
     var t, n, r, i;
     return (
@@ -203,6 +211,7 @@ function Q(e) {
             : f.A.getBasicChannel(e)
     );
 }
+
 function $(e) {
     var t, n, r, i;
     return (
@@ -210,13 +219,16 @@ function $(e) {
         null != (t = null != (n = null != (r = null != (i = w[e]) ? i : D[e]) ? r : L[e]) ? n : G[e]) ? t : H[e]
     );
 }
+
 function J(e) {
     e.isPrivate() ? (delete H[e.id], ee(e)) : e.isThread() ? et(e) : g.uL.has(e.type) && er(e);
 }
+
 function ee(e) {
     if (null != e.recipients.find((e) => (0, _.A)(e))) return !1;
     (D[e.id] = e), e.type === v.rbe.DM && (M[e.getRecipientId()] = e.id), (k += 1);
 }
+
 function et(e) {
     let t = w[e.parent_id];
     (L[e.id] = e.merge({
@@ -229,6 +241,7 @@ function et(e) {
                 channel: e,
             });
 }
+
 function en(e) {
     var t, n, r, i;
     let { id: a, guild_id: s } = e;
@@ -240,9 +253,11 @@ function en(e) {
             ? ((j[s] = null != (r = j[s]) ? r : {}), (j[s][a] = e))
             : null == (i = j[s]) || delete i[a];
 }
+
 function er(e) {
     en(e);
 }
+
 function ei(e) {
     if (null == e.guild_id || g.Le.has(e.type)) (0, g.Gw)(e.type) && (k += 1);
     else {
@@ -250,6 +265,7 @@ function ei(e) {
         U[e.guild_id] = (null != (t = U[e.guild_id]) ? t : 0) + 1;
     }
 }
+
 function ea(e) {
     let t = P;
     for (let n of ((M = {}),
@@ -270,6 +286,7 @@ function ea(e) {
             es(n);
     eP();
 }
+
 function es(e) {
     let { id: t, channels: n, threads: r } = e;
     switch (n.op) {
@@ -289,10 +306,12 @@ function es(e) {
     }
     if (null != r) for (let e of r) et(e);
 }
+
 function eo(e) {
     let { lazyPrivateChannels: t } = e;
     null != x && ((D = {}), x.forEach(ee)), t.forEach(ee);
 }
+
 function el(e) {
     let { guilds: t } = e,
         n = P;
@@ -323,6 +342,7 @@ function el(e) {
                     e.channels.forEach((t) => en((0, g.UE)(t, e.id)));
         });
 }
+
 function ec(e) {
     for (let { guildId: t, channels: n } of e.channels)
         for (let e of (N.fileOnly("Lazy loaded guild channels for ".concat(t)),
@@ -333,6 +353,7 @@ function ec(e) {
             Object.hasOwn(w, e.id) || en((0, g.oh)(e));
     return !1;
 }
+
 function eu() {
     N.fileOnly("initializeClear()"),
         (M = {}),
@@ -347,6 +368,7 @@ function eu() {
         (F = {}),
         (B = Date.now());
 }
+
 function ed(e) {
     var t;
     Y = e.guilds.length;
@@ -355,9 +377,11 @@ function ed(e) {
     let i = null == (t = r[0]) ? void 0 : t.guild_id;
     null != i && (N.fileOnly("Early cache contained full guild channels for ".concat(i)), V.add(i));
 }
+
 function ef(e) {
     for (let t of ((Y = e.guilds.length), e.channels)) J((0, p.n2)((0, g.oh)(t)));
 }
+
 function ep(e) {
     for (let [t, n] of ((K = !0), e.guildChannels))
         for (let e of (N.fileOnly("Lazy cache contained full guild channels for ".concat(t, " #:").concat(n.length)),
@@ -365,25 +389,40 @@ function ep(e) {
         n))
             J((0, g.oh)(e));
 }
+
 function e_(e) {
     J(e.channel);
 }
+
 function eh(e) {
     if (!g.A_.has(e.channel.type)) return !1;
     let t = $(e.channel.id);
     if (null == t) t = e.channel;
     else {
         var n;
-        t = t.merge(C(I({}, e.channel.toJS()), { bitrate: null != (n = e.channel.bitrate) ? n : t.bitrate }));
+        t = t.merge(
+            C(I({}, e.channel.toJS()), {
+                bitrate: null != (n = e.channel.bitrate) ? n : t.bitrate,
+            }),
+        );
     }
     J(t);
 }
+
 function em(e) {
     let { channelId: t, overwrite: n } = e,
         r = $(t);
     if (null == r) return !1;
-    J(r.set("permissionOverwrites", C(I({}, r.permissionOverwrites), { [n.id]: n })));
+    J(
+        r.set(
+            "permissionOverwrites",
+            C(I({}, r.permissionOverwrites), {
+                [n.id]: n,
+            }),
+        ),
+    );
 }
+
 function eg(e) {
     let { channelId: t, overwriteId: n } = e,
         r = $(t);
@@ -391,6 +430,7 @@ function eg(e) {
     let i = I({}, r.permissionOverwrites);
     delete i[n], J(r.set("permissionOverwrites", i));
 }
+
 function eE(e) {
     let t = e.channels.some((e) => {
         let t = e,
@@ -400,23 +440,27 @@ function eE(e) {
     for (let t of e.channels) J(t);
     t && Object.values(L).forEach((e) => J(e));
 }
+
 function eb(e) {
     let { threads: t } = e;
     t.forEach((e) => {
         g.A_.has(e.type) && J(e);
     });
 }
+
 function ey(e) {
     let { threads: t } = e;
     t.forEach((e) => {
         g.A_.has(e.type) && J((0, g.UE)(e));
     });
 }
+
 function eO(e) {
     if ("basicPermissions" in e || e.type !== v.rbe.DM) return;
     let t = e.getRecipientId();
     M[t] === e.id && delete M[t];
 }
+
 function eA(e) {
     if (null == e) return;
     let t = e.guild_id;
@@ -427,6 +471,7 @@ function eA(e) {
             (null != P[t] && e.id in P[t] && delete P[t][e.id], null != j[t] && e.id in j[t] && delete j[t][e.id]),
         ei(e);
 }
+
 function ev(e) {
     var t, n;
     let { channel: r } = e,
@@ -434,25 +479,31 @@ function ev(e) {
     if (null == i) return !1;
     eA(i), eO(i);
 }
+
 function eS(e) {
     es(e.guild);
 }
+
 function eI(e) {
     N.fileOnly("GuildDelete of ".concat(e.guild.id)), Z(e.guild.id), V.delete(e.guild.id), f.A.invalidate(e.guild.id);
 }
+
 function eT(e) {
     let t = $(e.channelId),
         n = y.default.getId();
     return null != t && !!t.isPrivate() && (J(t.addRecipient(e.user.id, e.nick, n)), !0);
 }
+
 function eC(e) {
     let t = $(e.channelId);
     return null != t && !!t.isPrivate() && (J(t.removeRecipient(e.user.id)), !0);
 }
+
 function eN(e) {
     let { messages: t } = e;
     for (let e of t) null != e.thread && !(e.thread.id in L) && g.A_.has(e.thread.type) && et((0, g.UE)(e.thread));
 }
+
 function eR(e) {
     let { data: t } = e;
     t.forEach((e) => {
@@ -471,15 +522,18 @@ function eR(e) {
             });
     });
 }
+
 function ew(e) {
     null != e && !(e.id in L) && g.A_.has(e.type) && et((0, g.UE)(e));
 }
+
 function eP() {
     for (let e in ((G = {}), m.A.getFavoriteChannels())) {
         let t = m.A.getCategoryRecord(e);
         null != t && (G[e] = t);
     }
 }
+
 function eD() {
     eu();
 }
@@ -575,6 +629,7 @@ class ex extends (r = o.Ay.Store) {
         };
     }
 }
+
 function eL(e) {
     return null == P[e] ? null : Object.keys(P[e]).length;
 }

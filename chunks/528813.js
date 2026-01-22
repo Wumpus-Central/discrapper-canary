@@ -7,6 +7,7 @@ var r = n(56636),
     a = n(734481),
     s = n(222367),
     o = n(90727);
+
 function l(e) {
     var t = e
         .split("\n")
@@ -16,6 +17,7 @@ function l(e) {
         });
     return (0, r.Cl)((0, r.Cl)({}, t[0]), t[1]);
 }
+
 function c(e) {
     var t = {},
         n = /DTSTART(?:;TZID=([^:=]+?))?(?::|=)([^;\s]+)/i.exec(e);
@@ -24,6 +26,7 @@ function c(e) {
         i = n[2];
     return r && (t.tzid = r), (t.dtstart = (0, s.lP)(i)), t;
 }
+
 function u(e) {
     if (!(e = e.replace(/^\s+|\s+$/, "")).length) return null;
     var t = /^([A-Z]+?)[:;]/.exec(e.toUpperCase());
@@ -39,6 +42,7 @@ function u(e) {
             throw Error("Unsupported RFC prop ".concat(n, " in ").concat(e));
     }
 }
+
 function d(e) {
     var t = c(e.replace(/^RRULE:/i, ""));
     return (
@@ -91,12 +95,15 @@ function d(e) {
         t
     );
 }
+
 function f(e) {
     return -1 !== e.indexOf(",") ? e.split(",").map(p) : p(e);
 }
+
 function p(e) {
     return /^[+-]?\d+$/.test(e) ? Number(e) : e;
 }
+
 function _(e) {
     return e.split(",").map(function (e) {
         if (2 === e.length) return o.Wn[e];

@@ -1,11 +1,14 @@
-n.d(t, { A: () => y }), n(896048);
+n.d(t, {
+    A: () => y,
+}),
+    n(896048);
 var a = n(627968),
     l = n(64700),
     i = n(503698),
     r = n.n(i),
     s = n(106778),
     o = n(340287),
-    c = n(432022),
+    c = n(108531),
     d = n(311907),
     u = n(475743),
     m = n(775602),
@@ -159,11 +162,15 @@ let j = ["#51BC9D"],
                   children: [
                       (0, a.jsx)(c.animated.div, {
                           className: g.Tp,
-                          style: { opacity: S },
+                          style: {
+                              opacity: S,
+                          },
                       }),
                       (0, a.jsx)(c.animated.div, {
                           className: r()(g.sJ, g.ix),
-                          style: { opacity: S },
+                          style: {
+                              opacity: S,
+                          },
                       }),
                       (0, a.jsxs)(c.animated.div, {
                           className: g.KG,
@@ -190,7 +197,9 @@ let j = ["#51BC9D"],
                                   (0, o.createPortal)(
                                       (0, a.jsx)(c.animated.div, {
                                           className: r()(g.sJ, g.d7),
-                                          style: { opacity: S },
+                                          style: {
+                                              opacity: S,
+                                          },
                                       }),
                                       n.current,
                                   ),

@@ -20,6 +20,7 @@ var r = n(627968),
     E = n(821589),
     b = n(652215),
     y = n(654471);
+
 function O(e, t, n) {
     return (
         t in e
@@ -33,6 +34,7 @@ function O(e, t, n) {
         e
     );
 }
+
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -49,6 +51,7 @@ function A(e) {
     }
     return e;
 }
+
 function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -61,6 +64,7 @@ function v(e, t) {
     }
     return n;
 }
+
 function S(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -72,6 +76,7 @@ function S(e, t) {
         e
     );
 }
+
 function I(e, t) {
     if (null == e) return {};
     var n,
@@ -88,6 +93,7 @@ function I(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function T(e, t) {
     if (null == e) return {};
     var n,
@@ -98,6 +104,7 @@ function T(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function C(e) {
     let { type: t, source: n, activity: i, applicationStream: a, user: s, guildId: o, channelId: c, onAction: u } = e;
     return (0, r.jsx)(l.A, {
@@ -113,6 +120,7 @@ function C(e) {
         onAction: u,
     });
 }
+
 function N(e) {
     let {
             activity: t,

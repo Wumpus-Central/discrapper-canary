@@ -1,7 +1,9 @@
 function r(e) {
     return e && "object" == typeof e && "default" in e ? e.default : e;
 }
-Object.defineProperty(t, "__esModule", { value: !0 });
+Object.defineProperty(t, "__esModule", {
+    value: !0,
+});
 var i = n(843455),
     a = r(n(678456)),
     s = r(n(681334)),
@@ -121,7 +123,9 @@ var i = n(843455),
             t
         );
     })(g),
-    b = { current: null },
+    b = {
+        current: null,
+    },
     y = (function (e) {
         function t(t) {
             var n;
@@ -224,7 +228,13 @@ var i = n(843455),
                 if (t) {
                     if (n && ((b.current = n), t.style)) {
                         var r = n.host.createAnimatedStyle;
-                        t = o(o({}, t), {}, { style: r(t.style) });
+                        t = o(
+                            o({}, t),
+                            {},
+                            {
+                                style: r(t.style),
+                            },
+                        );
                     }
                     e.prototype.setValue.call(this, t), (b.current = null);
                 }
@@ -285,6 +295,7 @@ var i = n(843455),
             );
         });
     };
+
 function S(e, t) {
     return e && (i.is.fun(e) ? e(t) : (e.current = t)), t;
 }
@@ -324,7 +335,9 @@ var I = Symbol.for("AnimatedComponent"),
             i.each(e, function (e, t) {
                 i.is.str(t) || (t = C(e)), (u[t] = u(e));
             }),
-            { animated: u }
+            {
+                animated: u,
+            }
         );
     },
     C = function (e) {

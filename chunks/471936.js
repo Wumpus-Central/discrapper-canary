@@ -1,4 +1,10 @@
-n.d(t, { t: () => T }), n(747238), n(321073), n(65821), n(896048);
+n.d(t, {
+    t: () => T,
+}),
+    n(747238),
+    n(321073),
+    n(65821),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(18051),
@@ -10,6 +16,7 @@ var r = n(627968),
     d = n(314116),
     f = n(67576),
     p = n(293804);
+
 function _(e, t, n) {
     return (
         t in e
@@ -23,6 +30,7 @@ function _(e, t, n) {
         e
     );
 }
+
 function h() {
     return (h =
         Object.assign ||
@@ -34,6 +42,7 @@ function h() {
             return e;
         }).apply(this, arguments);
 }
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -50,6 +59,7 @@ function m(e) {
     }
     return e;
 }
+
 function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -62,6 +72,7 @@ function g(e, t) {
     }
     return n;
 }
+
 function E(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -73,6 +84,7 @@ function E(e, t) {
         e
     );
 }
+
 function b(e, t) {
     if (null == e) return {};
     var n,
@@ -89,6 +101,7 @@ function b(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function y(e, t) {
     if (null == e) return {};
     var n,
@@ -99,6 +112,7 @@ function y(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function O(e) {
     let t,
         n = [],
@@ -107,10 +121,19 @@ function O(e) {
         s = 0;
     for (; null !== (t = a.exec(e)); )
         t.index > i && n.push(e.substring(i, t.index)),
-            n.push((0, r.jsx)("strong", { children: t[1] }, s++)),
+            n.push(
+                (0, r.jsx)(
+                    "strong",
+                    {
+                        children: t[1],
+                    },
+                    s++,
+                ),
+            ),
             (i = a.lastIndex);
     return i < e.length && n.push(e.substring(i)), n.length > 0 ? n : e;
 }
+
 function A() {
     return (0, r.jsx)(u.Text, {
         variant: "text-sm/normal",
@@ -118,6 +141,7 @@ function A() {
         children: "Lost access to your radness? Talk to your radness provider to refresh your aura.",
     });
 }
+
 function v(e) {
     let { setIsSafetyAccepted: t } = e,
         [n, a] = i.useState([]),
@@ -147,6 +171,7 @@ function v(e) {
         })
     );
 }
+
 function S(e) {
     let { setIsPasscodeValid: t } = e,
         [n, a] = i.useState(""),
@@ -159,6 +184,7 @@ function S(e) {
         onChange: s,
     });
 }
+
 function I(e) {
     let {} = e,
         t = h({}, e),
@@ -173,7 +199,9 @@ function I(e) {
                     subtitle: "To verify your radness, we need to ask you a few deep and personal questions.",
                 },
                 body: (0, r.jsx)(A, {}),
-                nextButtonProps: { text: "Verify" },
+                nextButtonProps: {
+                    text: "Verify",
+                },
             },
             {
                 stepKey: "safety",
@@ -182,7 +210,9 @@ function I(e) {
                     subtitle:
                         "Before we get started verifying your radness, we need to make sure you're safe and sound.",
                 },
-                body: (0, r.jsx)(v, { setIsSafetyAccepted: l }),
+                body: (0, r.jsx)(v, {
+                    setIsSafetyAccepted: l,
+                }),
                 nextEnabled: o,
             },
             {
@@ -191,8 +221,12 @@ function I(e) {
                     title: "Enter passcode",
                     subtitle: "Enter your passcode to complete the radness verification process.",
                 },
-                body: (0, r.jsx)(S, { setIsPasscodeValid: u }),
-                nextButtonProps: { text: "Verify passcode" },
+                body: (0, r.jsx)(S, {
+                    setIsPasscodeValid: u,
+                }),
+                nextButtonProps: {
+                    text: "Verify passcode",
+                },
                 nextEnabled: c,
             },
         ],
@@ -346,7 +380,9 @@ let T = {
                                                 }),
                                             }),
                                         ),
-                                    { dismissable: o.dismissable },
+                                    {
+                                        dismissable: o.dismissable,
+                                    },
                                 ),
                         }),
                     ],
@@ -425,7 +461,7 @@ let T = {
                                         cancelText: "" === t ? void 0 : t,
                                         onConfirm: async (e) => {
                                             try {
-                                                if ((await new Promise((e) => setTimeout(e, 1000 * n)), a))
+                                                if ((await new Promise((e) => setTimeout(e, 1e3 * n)), a))
                                                     throw Error("Confirm error");
                                             } catch (t) {
                                                 throw (
@@ -540,7 +576,9 @@ let T = {
                                               type: "dynamic",
                                               component: o.DynamicGraphicComponent.DEMO,
                                               aspectRatio: "6/4",
-                                              props: { text: "Dynamic Content" },
+                                              props: {
+                                                  text: "Dynamic Content",
+                                              },
                                           }
                                         : void 0,
                         [l],
@@ -587,7 +625,9 @@ let T = {
                                                 }),
                                             }),
                                         ),
-                                    { dismissable: d.dismissable },
+                                    {
+                                        dismissable: d.dismissable,
+                                    },
                                 ),
                         }),
                     ],
@@ -695,7 +735,9 @@ let T = {
                         type: "dynamic",
                         component: o.DynamicGraphicComponent.DEMO,
                         aspectRatio: "6/4",
-                        props: { text: t },
+                        props: {
+                            text: t,
+                        },
                     };
                 return (0, r.jsxs)(u.BJc, {
                     gap: 16,
@@ -743,7 +785,9 @@ let T = {
                                                 }),
                                             );
                                     },
-                                    { dismissable: i.dismissable },
+                                    {
+                                        dismissable: i.dismissable,
+                                    },
                                 ),
                         }),
                     ],
@@ -868,7 +912,10 @@ let T = {
                         (0, r.jsx)(u.Button, {
                             variant: "primary",
                             text: "Open MultiStepModal",
-                            onClick: () => (0, u.qfG)((e) => (0, r.jsx)(I, m({}, e)), { dismissable: t.dismissable }),
+                            onClick: () =>
+                                (0, u.qfG)((e) => (0, r.jsx)(I, m({}, e)), {
+                                    dismissable: t.dismissable,
+                                }),
                         }),
                     ],
                 });

@@ -1,4 +1,8 @@
-n.d(t, { A: () => h }), n(896048), n(638769);
+n.d(t, {
+    A: () => h,
+}),
+    n(896048),
+    n(638769);
 var l = n(627968),
     a = n(64700),
     r = n(503698),
@@ -9,6 +13,7 @@ var l = n(627968),
     d = n(985018),
     u = n(873523);
 let p = (0, d.getAvailableLocales)();
+
 function h(e) {
     let { application: t, className: n } = e,
         r = (0, s.bG)([o.default], () => o.default.locale),

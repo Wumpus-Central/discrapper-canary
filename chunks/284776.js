@@ -1,6 +1,11 @@
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 var r = n(668459);
-let i = { read: a };
+let i = {
+    read: a,
+};
+
 function a(e, t) {
     return {
         "Image Width": s(e, t),
@@ -12,6 +17,7 @@ function a(e, t) {
         Interlace: f(e, t),
     };
 }
+
 function s(e, t) {
     if (t + 0 + 4 > e.byteLength) return;
     let n = r.A.getLongAt(e, t);
@@ -20,6 +26,7 @@ function s(e, t) {
         description: `${n}px`,
     };
 }
+
 function o(e, t) {
     let n = 4;
     if (t + 4 + 4 > e.byteLength) return;
@@ -29,6 +36,7 @@ function o(e, t) {
         description: `${i}px`,
     };
 }
+
 function l(e, t) {
     let n = 8;
     if (t + 8 + 1 > e.byteLength) return;
@@ -38,6 +46,7 @@ function l(e, t) {
         description: `${i}`,
     };
 }
+
 function c(e, t) {
     let n = 9,
         i = {
@@ -54,6 +63,7 @@ function c(e, t) {
         description: i[a] || "Unknown",
     };
 }
+
 function u(e, t) {
     let n = 10;
     if (t + 10 + 1 > e.byteLength) return;
@@ -63,6 +73,7 @@ function u(e, t) {
         description: 0 === i ? "Deflate/Inflate" : "Unknown",
     };
 }
+
 function d(e, t) {
     let n = 11;
     if (t + 11 + 1 > e.byteLength) return;
@@ -72,6 +83,7 @@ function d(e, t) {
         description: 0 === i ? "Adaptive" : "Unknown",
     };
 }
+
 function f(e, t) {
     let n = 12,
         i = {

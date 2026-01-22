@@ -1,4 +1,6 @@
-r.d(t, { A: () => p });
+r.d(t, {
+    A: () => p,
+});
 var n = r(64700),
     a = r(512750),
     l = r(311907),
@@ -9,6 +11,7 @@ var n = r(64700),
     u = r(840120),
     d = r(333354),
     f = r(985018);
+
 function p(e, t) {
     let r = (0, l.bG)([s.A], () => s.A.getMemberCount(e)),
         p = (0, o.A)(e),
@@ -40,7 +43,9 @@ function p(e, t) {
                               perk: t.title,
                               memberCount: k,
                           })
-                        : f.intl.formatToPlainString(d.default.cavtEo, { perk: t.title });
+                        : f.intl.formatToPlainString(d.default.cavtEo, {
+                              perk: t.title,
+                          });
                 break;
             case a.FB:
                 e = m ? f.intl.string(d.default.hN75yb) : f.intl.string(d.default.Du91Rb);

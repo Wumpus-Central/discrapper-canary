@@ -1,4 +1,8 @@
-n.d(t, { A: () => U }), n(896048), n(65821);
+n.d(t, {
+    A: () => U,
+}),
+    n(896048),
+    n(65821);
 var l = n(627968),
     i = n(64700),
     r = n(503698),
@@ -24,6 +28,7 @@ var l = n(627968),
     A = n(256905),
     v = n(985018),
     C = n(256863);
+
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -49,9 +54,11 @@ function I(e) {
     }
     return e;
 }
+
 function x() {
     (0, c.OoC)(A.K);
 }
+
 function N(e) {
     let { tooltipText: t } = e,
         n = (function (e, t) {
@@ -102,6 +109,7 @@ function N(e) {
         ),
     });
 }
+
 function D() {
     let { zoomed: e, setZoomed: t } = (0, _.Q)();
     return (0, l.jsx)(N, {
@@ -112,6 +120,7 @@ function D() {
         icon: e ? c.V0_ : c.r1u,
     });
 }
+
 function R(e) {
     var t, n;
     let { item: r } = e,
@@ -123,13 +132,17 @@ function R(e) {
                     return void (0, f.fO)({
                         message: a,
                         source: "media-viewer",
-                        forwardOptions: { onlyEmbedIndices: [o.embedIndex] },
+                        forwardOptions: {
+                            onlyEmbedIndices: [o.embedIndex],
+                        },
                         onRequestSent: x,
                     });
                 (0, f.fO)({
                     message: a,
                     source: "media-viewer",
-                    forwardOptions: { onlyAttachmentIds: [o.attachmentId] },
+                    forwardOptions: {
+                        onlyAttachmentIds: [o.attachmentId],
+                    },
                     onRequestSent: x,
                 });
             }
@@ -142,6 +155,7 @@ function R(e) {
           })
         : null;
 }
+
 function P(e) {
     let { item: t } = e,
         [n, r] = i.useState(!1),
@@ -152,7 +166,14 @@ function P(e) {
     if (!(a || (S.isPlatformEmbedded && !s && o && u))) return null;
     let d = (0, b.XW)((0, b.bc)(t.original, t.url), t.contentType, t.originalContentType, b.N7);
     async function p() {
-        if (((0, T.Yq)(T.NJ.SAVE_MEDIA_PRESSED), "VIDEO" === t.type && (0, g.h)({ href: d }), "IMAGE" === t.type)) {
+        if (
+            ((0, T.Yq)(T.NJ.SAVE_MEDIA_PRESSED),
+            "VIDEO" === t.type &&
+                (0, g.h)({
+                    href: d,
+                }),
+            "IMAGE" === t.type)
+        ) {
             r(!0);
             try {
                 let e = await h.Ay.saveImage(d, t.contentType, b.N7);
@@ -175,18 +196,24 @@ function P(e) {
         icon: c.s3U,
     });
 }
+
 function w(e) {
     let { item: t } = e;
     if (!(0, b.fW)(t.url)) return null;
     let n = (0, b.XW)((0, b.bc)(t.original, t.url), t.contentType, t.originalContentType);
     return (0, l.jsx)(N, {
         onClick: () => {
-            (0, T.Yq)(T.NJ.OPEN_LINK_PRESSED), (0, T.RH)(n), (0, g.h)({ href: n });
+            (0, T.Yq)(T.NJ.OPEN_LINK_PRESSED),
+                (0, T.RH)(n),
+                (0, g.h)({
+                    href: n,
+                });
         },
         tooltipText: v.intl.string(v.t.q5jLJB),
         icon: c.tfB,
     });
 }
+
 function M(e) {
     var t, n;
     let { item: i, canCopyImage: r, canCopyLink: a, onClose: o, onSelect: s } = e,
@@ -201,12 +228,16 @@ function M(e) {
         f = (function (e) {
             var t;
             let { alt: n, sourceMetadata: i, width: r, height: a } = e,
-                o = L(v.intl.string(v.t.ILJuBq), "name", { subtextLineClamp: 1 }),
+                o = L(v.intl.string(v.t.ILJuBq), "name", {
+                    subtextLineClamp: 1,
+                }),
                 s = L(v.intl.string(v.t["3Nf9u2"]), "size"),
-                u = L(v.intl.string(v.t.eOB2eR), "alt", { subtextLineClamp: 2 });
+                u = L(v.intl.string(v.t.eOB2eR), "alt", {
+                    subtextLineClamp: 2,
+                });
             if ((null == i || null == (t = i.identifier) ? void 0 : t.type) !== "attachment") return null;
             let d = (0, O.A)(i.identifier),
-                p = (0, E.Xq)(i.identifier.size / 1000);
+                p = (0, E.Xq)(i.identifier.size / 1e3);
             return (0, l.jsxs)(
                 c.Drp,
                 {
@@ -301,6 +332,7 @@ function M(e) {
         ],
     });
 }
+
 function L(e, t, n) {
     let r = i.useCallback((e) => {
         (0, y.C)(e, () =>
@@ -328,6 +360,7 @@ function L(e, t, n) {
               )
             : null;
 }
+
 function G(e) {
     var t, n;
     let { item: r } = e,
@@ -398,10 +431,18 @@ let U = i.memo(function (e) {
                         !n &&
                             (0, l.jsxs)(l.Fragment, {
                                 children: [
-                                    (0, l.jsx)(R, { item: t }),
-                                    (0, l.jsx)(P, { item: t }),
-                                    (0, l.jsx)(w, { item: t }),
-                                    (0, l.jsx)(G, { item: t }),
+                                    (0, l.jsx)(R, {
+                                        item: t,
+                                    }),
+                                    (0, l.jsx)(P, {
+                                        item: t,
+                                    }),
+                                    (0, l.jsx)(w, {
+                                        item: t,
+                                    }),
+                                    (0, l.jsx)(G, {
+                                        item: t,
+                                    }),
                                 ],
                             }),
                     ],

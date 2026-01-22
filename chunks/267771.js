@@ -1,7 +1,10 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 var r = n(64700),
     l = n(568065),
     i = n(652215);
+
 function a(e) {
     return (0, r.useMemo)(() => {
         if (null == e) return 0;

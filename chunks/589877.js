@@ -1,4 +1,13 @@
-a.r(s), a.d(s, { default: () => A }), a(896048), a(747238), a(680155), a(323874), a(14289), a(35956);
+a.r(s),
+    a.d(s, {
+        default: () => A,
+    }),
+    a(896048),
+    a(747238),
+    a(680155),
+    a(323874),
+    a(14289),
+    a(35956);
 var t = a(627968),
     l = a(64700),
     r = a(607399),
@@ -21,6 +30,7 @@ var t = a(627968),
     _ = a(318808);
 i.Ay.initialize();
 let E = r.Fr || r.v1;
+
 function A(e) {
     let { match: s } = e,
         a = (0, i.bG)([m.A], () => m.A.getState("quest-preview")),
@@ -36,7 +46,11 @@ function A(e) {
                                 value: e,
                             }),
                         )
-                        .catch(() => a({ status: "error" }));
+                        .catch(() =>
+                            a({
+                                status: "error",
+                            }),
+                        );
                 }, [a, e]),
                 s
             );
@@ -46,7 +60,9 @@ function A(e) {
             if (null == a)
                 h.A.openNativeAppModal("quest-preview", N.e$_.DEEP_LINK, {
                     type: j.XK.QUEST_PREVIEW_TOOL,
-                    params: { questId: r },
+                    params: {
+                        questId: r,
+                    },
                 });
             else if (a === N.fAW.OPEN_FAIL) {
                 let e = new URLSearchParams();
@@ -144,7 +160,9 @@ function A(e) {
                     children: L
                         ? (0, t.jsxs)(t.Fragment, {
                               children: [
-                                  (0, t.jsx)(d.hE, { children: b.intl.string(b.t["Z+hCVU"]) }),
+                                  (0, t.jsx)(d.hE, {
+                                      children: b.intl.string(b.t["Z+hCVU"]),
+                                  }),
                                   (0, t.jsx)(d.CK, {}),
                               ],
                           })
@@ -154,7 +172,9 @@ function A(e) {
                                       className: p.Ns,
                                       children: b.intl.string(b.t.csrAMJ),
                                   }),
-                                  (0, t.jsx)(d.tK, { children: b.intl.string(b.t.ghBJz9) }),
+                                  (0, t.jsx)(d.tK, {
+                                      children: b.intl.string(b.t.ghBJz9),
+                                  }),
                               ],
                           }),
                 }),

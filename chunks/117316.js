@@ -1,4 +1,8 @@
-n.d(t, { r: () => h }), n(896048), n(938796);
+n.d(t, {
+    r: () => h,
+}),
+    n(896048),
+    n(938796);
 var r = n(253506),
     l = n(665260),
     i = n(734066),
@@ -9,6 +13,7 @@ var r = n(253506),
     u = n(963852),
     d = n(652215);
 let f = new Map();
+
 function p(e, t) {
     let n = (0, u.Ay)({
             channelId: t,
@@ -21,6 +26,7 @@ function p(e, t) {
         r = (0, c.rh)(n);
     return (r.applicationId = e.applicationId), (r.timestamp = e.timestamp), r;
 }
+
 function h(e, t) {
     let n = (function (e, t) {
         var n, i;

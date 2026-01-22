@@ -1,4 +1,6 @@
-n.d(t, { d: () => _ });
+n.d(t, {
+    d: () => _,
+});
 var r = n(627968),
     i = n(64700),
     a = n(417597),
@@ -8,6 +10,7 @@ var r = n(627968),
     c = n(82149),
     u = n(446600),
     d = n(985018);
+
 function f(e, t, n) {
     return (
         t in e
@@ -21,6 +24,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     var t, n;
     let { activity: f } = e,
@@ -32,12 +36,16 @@ function p(e) {
             null != e && l.av(e);
         }, [p]),
         g = null != (n = null == _ ? void 0 : _.topic) ? n : f.name,
-        E = d.intl.formatToPlainString(d.t["T+DNAA"], { channel: g });
+        E = d.intl.formatToPlainString(d.t["T+DNAA"], {
+            channel: g,
+        });
     return (0, r.jsx)("div", {
         ref: h,
         children: (0, r.jsx)(s.DUT, {
             onClick: m,
-            focusProps: { ringTarget: h },
+            focusProps: {
+                ringTarget: h,
+            },
             children: (0, r.jsx)(s.Heading, {
                 variant: "heading-sm/semibold",
                 children: E,

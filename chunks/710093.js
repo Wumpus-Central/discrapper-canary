@@ -1,6 +1,9 @@
-n.d(t, { R: () => o });
+n.d(t, {
+    R: () => o,
+});
 var r = n(506774),
     i = n(56562);
+
 function a(e, t, n) {
     return (
         t in e
@@ -14,6 +17,7 @@ function a(e, t, n) {
         e
     );
 }
+
 function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -32,7 +36,9 @@ function s(e) {
 }
 class o {
     save() {
-        let e = { games: this.games };
+        let e = {
+            games: this.games,
+        };
         r.w.set(o.storageKey, e);
     }
     static load() {
@@ -76,19 +82,23 @@ class o {
         return null != (t = null == (n = o.getGameSettings(e)) ? void 0 : n.disabled) && t;
     }
     static setPromptingForGameDisable(e, t) {
-        o.updateGameSettings(e, { disabled: t });
+        o.updateGameSettings(e, {
+            disabled: t,
+        });
     }
     static getGameDisplayMode(e) {
         var t, n;
         return null == e ? null : null != (t = null == (n = o.getGameSettings(e)) ? void 0 : n.screen) ? t : null;
     }
     static setGameDisplayMode(e, t) {
-        o.updateGameSettings(e, { screen: t });
+        o.updateGameSettings(e, {
+            screen: t,
+        });
     }
     static clearOldGameSettings() {
         let e = o.load();
         if (null == e.games) return;
-        let t = Date.now() - 31536000000;
+        let t = Date.now() - 31536e6;
         for (let n in e.games) e.games[n].date < t && delete e.games[n];
         e.save();
     }
@@ -106,4 +116,4 @@ class o {
         a(this, "games", void 0), (this.games = e);
     }
 }
-a(o, "_loaded", null), a(o, "storageKey", "GameDisplayModeStorage"), setTimeout(() => o.clearOldGameSettings(), 60000);
+a(o, "_loaded", null), a(o, "storageKey", "GameDisplayModeStorage"), setTimeout(() => o.clearOldGameSettings(), 6e4);

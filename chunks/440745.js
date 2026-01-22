@@ -6,6 +6,7 @@
         s = t.min,
         o = t.max,
         l = t.random;
+
     function c(e, t) {
         if (((t = t || {}), (e = e || "") instanceof c)) return e;
         if (!(this instanceof c)) return new c(e, t);
@@ -24,6 +25,7 @@
             (this._ok = n.ok),
             (this._tc_id = i++);
     }
+
     function u(e) {
         var t = {
                 r: 0,
@@ -59,6 +61,7 @@
             }
         );
     }
+
     function d(e, t, n) {
         return {
             r: 255 * M(e, 255),
@@ -66,6 +69,7 @@
             b: 255 * M(n, 255),
         };
     }
+
     function f(e, t, n) {
         e = M(e, 255);
         var r,
@@ -94,8 +98,10 @@
             l: c,
         };
     }
+
     function p(e, t, n) {
         var r, i, a;
+
         function s(e, t, n) {
             return (n < 0 && (n += 1), n > 1 && (n -= 1), n < 1 / 6)
                 ? e + (t - e) * 6 * n
@@ -117,6 +123,7 @@
             b: 255 * a,
         };
     }
+
     function _(e, t, n) {
         e = M(e, 255);
         var r,
@@ -145,6 +152,7 @@
             v: c,
         };
     }
+
     function h(e, n, r) {
         (e = 6 * M(e, 360)), (n = M(n, 100)), (r = M(r, 100));
         var i = t.floor(e),
@@ -159,6 +167,7 @@
             b: 255 * [s, s, l, r, r, o][c],
         };
     }
+
     function m(e, t, n, r) {
         var i = [F(a(e).toString(16)), F(a(t).toString(16)), F(a(n).toString(16))];
         return r &&
@@ -168,6 +177,7 @@
             ? i[0].charAt(0) + i[1].charAt(0) + i[2].charAt(0)
             : i.join("");
     }
+
     function g(e, t, n, r, i) {
         var s = [F(a(e).toString(16)), F(a(t).toString(16)), F(a(n).toString(16)), F(H(r))];
         return i &&
@@ -178,27 +188,33 @@
             ? s[0].charAt(0) + s[1].charAt(0) + s[2].charAt(0) + s[3].charAt(0)
             : s.join("");
     }
+
     function E(e, t, n, r) {
         return [F(H(r)), F(a(e).toString(16)), F(a(t).toString(16)), F(a(n).toString(16))].join("");
     }
+
     function b(e, t) {
         t = 0 === t ? 0 : t || 10;
         var n = c(e).toHsl();
         return (n.s -= t / 100), (n.s = k(n.s)), c(n);
     }
+
     function y(e, t) {
         t = 0 === t ? 0 : t || 10;
         var n = c(e).toHsl();
         return (n.s += t / 100), (n.s = k(n.s)), c(n);
     }
+
     function O(e) {
         return c(e).desaturate(100);
     }
+
     function A(e, t) {
         t = 0 === t ? 0 : t || 10;
         var n = c(e).toHsl();
         return (n.l += t / 100), (n.l = k(n.l)), c(n);
     }
+
     function v(e, t) {
         t = 0 === t ? 0 : t || 10;
         var n = c(e).toRgb();
@@ -209,20 +225,24 @@
             c(n)
         );
     }
+
     function S(e, t) {
         t = 0 === t ? 0 : t || 10;
         var n = c(e).toHsl();
         return (n.l -= t / 100), (n.l = k(n.l)), c(n);
     }
+
     function I(e, t) {
         var n = c(e).toHsl(),
             r = (n.h + t) % 360;
         return (n.h = r < 0 ? 360 + r : r), c(n);
     }
+
     function T(e) {
         var t = c(e).toHsl();
         return (t.h = (t.h + 180) % 360), c(t);
     }
+
     function C(e) {
         var t = c(e).toHsl(),
             n = t.h;
@@ -240,6 +260,7 @@
             }),
         ];
     }
+
     function N(e) {
         var t = c(e).toHsl(),
             n = t.h;
@@ -262,6 +283,7 @@
             }),
         ];
     }
+
     function R(e) {
         var t = c(e).toHsl(),
             n = t.h;
@@ -279,6 +301,7 @@
             }),
         ];
     }
+
     function w(e, t, n) {
         (t = t || 6), (n = n || 30);
         var r = c(e).toHsl(),
@@ -287,6 +310,7 @@
         for (r.h = (r.h - ((i * t) >> 1) + 720) % 360; --t; ) (r.h = (r.h + i) % 360), a.push(c(r));
         return a;
     }
+
     function P(e, t) {
         t = t || 6;
         for (var n = c(e).toHsv(), r = n.h, i = n.s, a = n.v, s = [], o = 1 / t; t--; )
@@ -321,7 +345,7 @@
         },
         getBrightness: function () {
             var e = this.toRgb();
-            return (299 * e.r + 587 * e.g + 114 * e.b) / 1000;
+            return (299 * e.r + 587 * e.g + 114 * e.b) / 1e3;
         },
         getLuminance: function () {
             var e,
@@ -738,42 +762,53 @@
             yellowgreen: "9acd32",
         }),
         x = (c.hexNames = L(D));
+
     function L(e) {
         var t = {};
         for (var n in e) e.hasOwnProperty(n) && (t[e[n]] = n);
         return t;
     }
+
     function j(e) {
         return (isNaN((e = parseFloat(e))) || e < 0 || e > 1) && (e = 1), e;
     }
+
     function M(e, n) {
         G(e) && (e = "100%");
         var r = V(e);
-        return ((e = s(n, o(0, parseFloat(e)))), r && (e = parseInt(e * n, 10) / 100), 0.000001 > t.abs(e - n))
+        return ((e = s(n, o(0, parseFloat(e)))), r && (e = parseInt(e * n, 10) / 100), 1e-6 > t.abs(e - n))
             ? 1
             : (e % n) / parseFloat(n);
     }
+
     function k(e) {
         return s(1, o(0, e));
     }
+
     function U(e) {
         return parseInt(e, 16);
     }
+
     function G(e) {
         return "string" == typeof e && -1 != e.indexOf(".") && 1 === parseFloat(e);
     }
+
     function V(e) {
         return "string" == typeof e && -1 != e.indexOf("%");
     }
+
     function F(e) {
         return 1 == e.length ? "0" + e : "" + e;
     }
+
     function B(e) {
         return e <= 1 && (e = 100 * e + "%"), e;
     }
+
     function H(e) {
         return t.round(255 * parseFloat(e)).toString(16);
     }
+
     function Y(e) {
         return U(e) / 255;
     }
@@ -795,9 +830,11 @@
             hex8: /^#?([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})$/,
         };
     })();
+
     function K(e) {
         return !!W.CSS_UNIT.exec(e);
     }
+
     function z(e) {
         e = e.replace(n, "").replace(r, "").toLowerCase();
         var t,
@@ -880,6 +917,7 @@
                                   format: i ? "name" : "hex",
                               };
     }
+
     function q(e) {
         var t, n;
         return (

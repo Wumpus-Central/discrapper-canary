@@ -13,6 +13,7 @@ var r = n(846293),
     s = n(711014),
     a = n(998218);
 let c = (e) => null != e.text;
+
 function u(e) {
     let t = 0 | e,
         n = Math.floor(t / 3600),
@@ -48,6 +49,7 @@ async function f(e) {
         return !1;
     }
 }
+
 function m(e, t, n) {
     return e ? (t.timestampSec >= t.duration ? 0 : t.timestampSec) : Math.max(t.timestampSec, n.progressSeconds);
 }

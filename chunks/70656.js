@@ -7,5 +7,7 @@ n(
         arity: 2,
         forced: Object.assign !== o,
     },
-    { assign: o },
+    {
+        assign: o,
+    },
 );

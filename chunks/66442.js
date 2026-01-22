@@ -22,6 +22,7 @@ var r = n(627968),
     y = n(652215),
     O = n(985018),
     j = n(353528);
+
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -47,6 +48,7 @@ function v(e) {
     }
     return e;
 }
+
 function x(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -65,6 +67,7 @@ function x(e, t) {
         e
     );
 }
+
 function E(e) {
     let {
             channel: t,
@@ -83,7 +86,9 @@ function E(e) {
         className: a()(j.r2, u),
         children: [
             (0, r.jsxs)(c.DUT, {
-                className: a()(j.zc, { [j.ud]: o }),
+                className: a()(j.zc, {
+                    [j.ud]: o,
+                }),
                 "aria-label": O.intl.string(O.t["0qPSMV"]),
                 onClick: () => (0, A.F5)(l, g),
                 children: [
@@ -155,9 +160,19 @@ let _ = function (e) {
     }, [N, S, R, a]),
     (0, d.Ay)(
         () => (
-            m.default.track(y.HAw.GDM_EDIT_INTERACTED, x(v({}, M), { action: "opened" })),
+            m.default.track(
+                y.HAw.GDM_EDIT_INTERACTED,
+                x(v({}, M), {
+                    action: "opened",
+                }),
+            ),
             () => {
-                m.default.track(y.HAw.GDM_EDIT_INTERACTED, x(v({}, M), { action: "dismissed" }));
+                m.default.track(
+                    y.HAw.GDM_EDIT_INTERACTED,
+                    x(v({}, M), {
+                        action: "dismissed",
+                    }),
+                );
             }
         ),
     ),

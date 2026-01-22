@@ -1,9 +1,14 @@
-n.d(t, { A: () => b }), n(733351), n(667532);
+n.d(t, {
+    A: () => b,
+}),
+    n(733351),
+    n(667532);
 var r,
     i = n(311907),
     a = n(506774),
     s = n(73153),
     o = n(768570);
+
 function l(e, t, n) {
     return (
         t in e
@@ -21,6 +26,7 @@ let c = o.nC,
     u = "tokenized",
     d = !1,
     f = {};
+
 function p(e) {
     var t;
     let { id: n, query: r } = e;
@@ -33,16 +39,28 @@ function p(e) {
           ? (i[0] = r)
           : s < 0 && i.unshift(r),
         i.length > 5 && i.splice(5, i.length),
-        a.w.set(o.nC, { history: f });
+        a.w.set(o.nC, {
+            history: f,
+        });
 }
+
 function _(e) {
     let { id: t } = e;
-    delete f[t], a.w.set(o.nC, { history: f });
+    delete f[t],
+        a.w.set(o.nC, {
+            history: f,
+        });
 }
+
 function h(e) {
     let { id: t, query: n } = e;
-    null != f[t] && ((f[t] = f[t].filter((e) => e !== n)), a.w.set(o.nC, { history: f }));
+    null != f[t] &&
+        ((f[t] = f[t].filter((e) => e !== n)),
+        a.w.set(o.nC, {
+            history: f,
+        }));
 }
+
 function m(e) {
     return (
         Object.keys(e).forEach((t) => {
@@ -52,6 +70,7 @@ function m(e) {
         e
     );
 }
+
 function g() {
     a.w.remove(o.nC), (f = {});
 }

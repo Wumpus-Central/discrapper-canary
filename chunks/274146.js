@@ -1,4 +1,8 @@
-n.d(t, { A: () => x }), n(896048), n(733351);
+n.d(t, {
+    A: () => x,
+}),
+    n(896048),
+    n(733351);
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -73,7 +77,9 @@ let x = (e) => {
         }),
         [R, D] = l.useState(T),
         M = "" !== T,
-        L = { mostRecentQuery: T },
+        L = {
+            mostRecentQuery: T,
+        },
         G = l.useRef(L);
     l.useEffect(() => {
         G.current = L;
@@ -178,7 +184,9 @@ let x = (e) => {
         : null == N && null == E
           ? (0, r.jsx)("div", {
                 className: v.$$,
-                children: (0, r.jsx)(a.y$y, { className: v.u1 }),
+                children: (0, r.jsx)(a.y$y, {
+                    className: v.u1,
+                }),
             })
           : (null == N ? void 0 : N.length) === 0 && null == E
             ? (0, r.jsx)("div", {

@@ -1,4 +1,7 @@
-n.d(t, { S: () => C }), n(896048);
+n.d(t, {
+    S: () => C,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -14,6 +17,7 @@ var r = n(627968),
     h = n(289873),
     m = n(834730),
     g = n(165180);
+
 function E(e, t, n) {
     return (
         t in e
@@ -27,6 +31,7 @@ function E(e, t, n) {
         e
     );
 }
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -43,6 +48,7 @@ function b(e) {
     }
     return e;
 }
+
 function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -55,6 +61,7 @@ function y(e, t) {
     }
     return n;
 }
+
 function O(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -66,6 +73,7 @@ function O(e, t) {
         e
     );
 }
+
 function A(e, t) {
     if (null == e) return {};
     var n,
@@ -82,6 +90,7 @@ function A(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function v(e, t) {
     if (null == e) return {};
     var n,
@@ -107,6 +116,7 @@ let S = {
         sm: "sm",
         md: "md",
     };
+
 function C(e) {
     var t, n;
     let {
@@ -193,7 +203,9 @@ function C(e) {
                 (l.O.announce(null != D ? D : ea.BUTTON_LOADING_FINISHED_LABEL), (eo.current = !1));
     }, [C, P, D, ea.BUTTON_LOADING_STARTED_LABEL, ea.BUTTON_LOADING_FINISHED_LABEL]);
     let el = (0, r.jsxs)("div", {
-            className: s()(g.buttonChildren, { [g.loading]: C }),
+            className: s()(g.buttonChildren, {
+                [g.loading]: C,
+            }),
             children: [
                 null != et && "start" === y && et,
                 $ &&
@@ -237,7 +249,9 @@ function C(e) {
                             onMouseEnter: ec ? void 0 : U,
                             onMouseLeave: ec ? void 0 : G,
                             disabled: H,
-                            style: { "--__button-min-width": eu },
+                            style: {
+                                "--__button-min-width": eu,
+                            },
                         },
                         q,
                     ),
@@ -276,6 +290,7 @@ function C(e) {
           })
         : ed;
 }
+
 function N(e) {
     let { children: t, loading: n, size: a } = e,
         o = i.useRef(null),
@@ -315,6 +330,7 @@ function N(e) {
         })
     );
 }
+
 function R(e) {
     let { hasReducedMotion: t, buttonRef: n, isLightMode: a, disabled: o } = e,
         l = i.useRef(null);
@@ -358,21 +374,29 @@ function R(e) {
                         fit: "layout",
                         artboard: a ? "HoverLightmode" : "HoverDarkmode",
                     }),
-                (0, r.jsx)("div", { className: s()(g.expressiveRive, g.expressiveFill) }),
+                (0, r.jsx)("div", {
+                    className: s()(g.expressiveRive, g.expressiveFill),
+                }),
             ],
         })
     );
 }
+
 function w(e) {
     let { icon: t, iconOpticalOffsetMargin: n, iconPosition: a, size: s, ref: o, disabled: l } = e,
         c = null;
+
     function u() {
         if (0 === n) return {};
         switch (a) {
             case "start":
-                return { marginLeft: n };
+                return {
+                    marginLeft: n,
+                };
             case "end":
-                return { marginRight: n };
+                return {
+                    marginRight: n,
+                };
         }
         return {};
     }

@@ -1,4 +1,7 @@
-n.d(t, { A: () => O }), n(896048);
+n.d(t, {
+    A: () => O,
+}),
+    n(896048);
 var r = n(562465),
     i = n(73153),
     a = n(439372),
@@ -9,6 +12,7 @@ var r = n(562465),
     u = n(31369),
     d = n(652215),
     f = n(818348);
+
 function p(e, t, n) {
     return (
         t in e
@@ -24,11 +28,19 @@ function p(e, t, n) {
 }
 let _ = 5 * o.A.Millis.MINUTE,
     h = 0.5 * o.A.Millis.MINUTE;
+
 function m() {
-    return c.A.getCurrentConfig({ location: "FriendOnlineTimer" }).useOnlineTimer;
+    return c.A.getCurrentConfig({
+        location: "FriendOnlineTimer",
+    }).useOnlineTimer;
 }
+
 function g() {
-    return c.A.getCurrentConfig({ location: "FriendOnlineTimer" }).useTestTimerDuration ? h : _;
+    return c.A.getCurrentConfig({
+        location: "FriendOnlineTimer",
+    }).useTestTimerDuration
+        ? h
+        : _;
 }
 async function E() {
     if (m())
@@ -42,9 +54,14 @@ async function E() {
                     timestampMs: Date.now(),
                 });
         } catch (e) {
-            l.A.captureException(e, { tags: { app_context: "session_timer" } });
+            l.A.captureException(e, {
+                tags: {
+                    app_context: "session_timer",
+                },
+            });
         }
 }
+
 function b(e) {
     return [f.cl.ONLINE, f.cl.STREAMING].includes(e);
 }

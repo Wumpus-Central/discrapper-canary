@@ -24,6 +24,7 @@ var r = n(627968),
     y = n(652215),
     O = n(985018),
     A = n(265891);
+
 function v(e, t, n) {
     return (
         t in e
@@ -37,6 +38,7 @@ function v(e, t, n) {
         e
     );
 }
+
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -53,11 +55,11 @@ function S(e) {
     }
     return e;
 }
-let I = 2000,
+let I = 2e3,
     T = -100;
 class C extends i.PureComponent {
     componentDidMount() {
-        this._initTimeout.start(1000, this.setupVoiceActivity);
+        this._initTimeout.start(1e3, this.setupVoiceActivity);
     }
     componentWillUnmount() {
         this._initTimeout.stop(),
@@ -110,7 +112,7 @@ class C extends i.PureComponent {
             }),
             null != this._micTestStartTime &&
                 b.default.track(y.HAw.MIC_TESTING_STOPPED, {
-                    testing_duration: Math.round((Date.now() - this._micTestStartTime) / 1000),
+                    testing_duration: Math.round((Date.now() - this._micTestStartTime) / 1e3),
                 }));
     }
     renderCaption() {
@@ -164,14 +166,23 @@ class C extends i.PureComponent {
                                                 variant: l,
                                                 text: y,
                                             }),
-                                            (0, r.jsx)("div", { className: A.qB }),
+                                            (0, r.jsx)("div", {
+                                                className: A.qB,
+                                            }),
                                         ],
                                     }),
                                     (0, r.jsx)(f.m, {
                                         text: b,
                                         children: (0, r.jsx)("div", {
                                             className: A._o,
-                                            style: null != u ? { minWidth: u } : { visibility: "hidden" },
+                                            style:
+                                                null != u
+                                                    ? {
+                                                          minWidth: u,
+                                                      }
+                                                    : {
+                                                          visibility: "hidden",
+                                                      },
                                             children: (0, r.jsx)(p.Button, {
                                                 size: "sm",
                                                 variant: l,
@@ -214,9 +225,13 @@ class C extends i.PureComponent {
                 if (t && e <= T) {
                     this._silenceTimeout.isStarted() ||
                         this._silenceTimeout.start(I, () => {
-                            this.setState({ isDetectingInput: !1 });
+                            this.setState({
+                                isDetectingInput: !1,
+                            });
                         }),
-                        this.setState({ volume: T });
+                        this.setState({
+                            volume: T,
+                        });
                     return;
                 }
                 this._silenceTimeout.stop(),
@@ -230,6 +245,7 @@ class C extends i.PureComponent {
             });
     }
 }
+
 function N(e) {
     var t, n;
     let {

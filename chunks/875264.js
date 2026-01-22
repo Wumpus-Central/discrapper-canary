@@ -1,4 +1,8 @@
-n.d(t, { A: () => S }), n(896048), n(321073);
+n.d(t, {
+    A: () => S,
+}),
+    n(896048),
+    n(321073);
 var i = n(627968),
     r = n(64700),
     l = n(735438),
@@ -24,6 +28,7 @@ var i = n(627968),
     E = n(652215),
     T = n(985018),
     w = n(874090);
+
 function C(e, t) {
     switch (e) {
         case E.wLn.APPLICATION:
@@ -188,7 +193,10 @@ let S = r.memo(function (e) {
                     platformType: E.fg2.YOUTUBE,
                     descriptionText: T.intl.string(T.t["7Tv7JK"]),
                     helpText: T.intl.format(T.t["4OSAQ9"], {
-                        connectAction: () => (0, u.A)({ platformType: E.fg2.YOUTUBE }),
+                        connectAction: () =>
+                            (0, u.A)({
+                                platformType: E.fg2.YOUTUBE,
+                            }),
                         helpdeskArticle: x.A.getArticleURL(E.MVz.YOUTUBE_INTEGRATION),
                     }),
                     errors: M,
@@ -254,7 +262,9 @@ let S = r.memo(function (e) {
             });
             break;
         case E.wLn.LOBBIES_LINKED:
-            $ = (0, i.jsx)(A.A, { guild: l });
+            $ = (0, i.jsx)(A.A, {
+                guild: l,
+            });
             break;
         default:
             $ = (0, i.jsx)(v.A, {

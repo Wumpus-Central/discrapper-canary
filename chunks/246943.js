@@ -6,6 +6,7 @@ var r,
     l = n(287809),
     c = n(403362),
     u = n(661191);
+
 function d(e, t, n) {
     return (
         t in e
@@ -19,6 +20,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,6 +37,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -47,6 +50,7 @@ function p(e, t) {
     }
     return n;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -59,6 +63,7 @@ function _(e, t) {
     );
 }
 let h = {};
+
 function m(e) {
     var t;
     let n = o.A.getChannel(null == e ? void 0 : e.channel_id);
@@ -66,6 +71,7 @@ function m(e) {
     let r = h[n.id];
     return u.default.compare(null == e ? void 0 : e.id, null == r || null == (t = r.message) ? void 0 : t.id) > -1;
 }
+
 function g(e, t) {
     let n = null == t ? null : (0, s.rh)(t);
     return (
@@ -76,42 +82,59 @@ function g(e, t) {
         !0
     );
 }
+
 function E(e, t) {
     let n = y(e),
         r = O(e);
-    return null != n && null != r && ((h[e] = _(f({}, n), { message: (0, s.IU)(r, t) })), !0);
+    return (
+        null != n &&
+        null != r &&
+        ((h[e] = _(f({}, n), {
+            message: (0, s.IU)(r, t),
+        })),
+        !0)
+    );
 }
+
 function b(e, t) {
     let n = O(e);
     return (null == n ? void 0 : n.id) === t && (delete h[e], !0);
 }
+
 function y(e) {
     return h[e];
 }
+
 function O(e) {
     var t;
     return null == (t = y(e)) ? void 0 : t.message;
 }
+
 function A() {
     h = {};
 }
+
 function v(e) {
     let { threads: t } = e;
     for (let e in t) g(e, t[e].most_recent_message);
 }
+
 function S(e) {
     if (e.isPushNotification || !m(e.message)) return !1;
     e.message.channel_id === u.default.castMessageIdAsChannelId(e.message.id)
         ? g(e.message.channel_id, null)
         : g(e.message.channel_id, e.message);
 }
+
 function I(e) {
     if (!m(e.message) || e.message.channel_id === e.message.id) return !1;
     E(e.message.channel_id, e.message);
 }
+
 function T(e) {
     return b(e.channelId, e.id);
 }
+
 function C(e) {
     let { threads: t, mostRecentMessages: n } = e;
     t.forEach((e) => g(e.id, null)),

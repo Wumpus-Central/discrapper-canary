@@ -1,9 +1,12 @@
-n.d(t, { c: () => p });
+n.d(t, {
+    c: () => p,
+});
 var r = n(627968),
     i = n(64700),
     a = n(166532),
     s = n(735305),
     o = n(295405);
+
 function l(e, t, n) {
     return (
         t in e
@@ -17,6 +20,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -33,6 +37,7 @@ function c(e) {
     }
     return e;
 }
+
 function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -45,6 +50,7 @@ function u(e, t) {
     }
     return n;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -61,7 +67,10 @@ let f = (e) => {
         if (0 === Object.keys(o.A.paymentSources).length) {
             if (null != r) return void t.handleStepChange(r);
             t.handleClose();
-        } else t.handleStepChange(n, { trackedFromStep: a.pn.ADD_PAYMENT_STEPS });
+        } else
+            t.handleStepChange(n, {
+                trackedFromStep: a.pn.ADD_PAYMENT_STEPS,
+            });
     },
     p = (e) => {
         let { returnStep: t = a.pn.REVIEW, returnStepIfNoPaymentSources: n, paymentModalStepProps: o } = e,
@@ -74,5 +83,10 @@ let f = (e) => {
                     }),
                 [t, n, o],
             );
-        return (0, r.jsx)(s.x, d(c({}, o), { onReturn: l }));
+        return (0, r.jsx)(
+            s.x,
+            d(c({}, o), {
+                onReturn: l,
+            }),
+        );
     };

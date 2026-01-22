@@ -1,6 +1,9 @@
-n.d(t, { I: () => a });
+n.d(t, {
+    I: () => a,
+});
 var r = n(64700),
     i = n(607272);
+
 function a(e) {
     let { userId: t, applicationId: n, isGameRelationship: a, location: s, onConfirm: o, onCancel: l } = e,
         c = r.useCallback(() => {

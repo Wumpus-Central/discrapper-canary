@@ -12,6 +12,7 @@ async function a(e) {
         return i.log("database load failed.", e), null;
     }
 }
+
 function s(e, t, n) {
     try {
         return t();

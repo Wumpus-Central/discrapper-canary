@@ -1,4 +1,6 @@
-n.d(t, { default: () => d });
+n.d(t, {
+    default: () => d,
+});
 var i = n(627968),
     a = n(64700),
     l = n(397927),
@@ -7,12 +9,17 @@ var i = n(627968),
     c = n(253932),
     r = n(957565),
     u = n(985018);
+
 function d(e) {
     let { imageUrl: t, onSelect: n } = e,
         d = c.Q_.useSetting(),
         { tidaWebformEnabled: p } = s.A.useExperiment(
-            { location: "GuildEventImageContextMenu" },
-            { autoTrackExposure: !1 },
+            {
+                location: "GuildEventImageContextMenu",
+            },
+            {
+                autoTrackExposure: !1,
+            },
         ),
         x = a.useCallback(() => {
             (0, r.C)(t);

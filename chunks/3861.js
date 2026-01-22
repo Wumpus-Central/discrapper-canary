@@ -1,7 +1,10 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(95701),
     i = n(734057),
     a = n(977997);
+
 function s(e) {
     var t;
     let { channelId: n, userId: s, activity: o } = e,

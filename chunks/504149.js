@@ -1,11 +1,15 @@
-n.d(t, { A: () => f }), n(896048);
+n.d(t, {
+    A: () => f,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
-    a = n(432022),
+    a = n(108531),
     s = n(765671),
     o = n(793367),
     l = n(454290);
 let c = 400;
+
 function u(e) {
     let { width: t, height: n, offset: r, delta: i } = e,
         a = t > window.innerWidth,
@@ -30,6 +34,7 @@ function u(e) {
         }
     );
 }
+
 function d(e) {
     let { children: t } = e,
         { scale: n, x: d, y: f, setOffset: p, zoomed: _, setZoomed: h } = (0, l.Q)(),
@@ -53,7 +58,9 @@ function d(e) {
                     y: t,
                 },
             });
-            p(r.x, r.y, { immediate: !0 });
+            p(r.x, r.y, {
+                immediate: !0,
+            });
         },
         I = (e) => {
             _ &&

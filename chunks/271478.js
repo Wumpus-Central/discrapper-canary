@@ -1,9 +1,13 @@
-n.d(t, { g: () => o }), n(228524);
+n.d(t, {
+    g: () => o,
+}),
+    n(228524);
 var r = n(627968);
 n(64700);
 var i = n(397927),
     a = n(100392),
     s = n(102609);
+
 function o(e) {
     let { label: t, description: n, experiment: o, experimentId: l, overrideInfo: c } = e;
     return (0, r.jsx)(i.l6P, {

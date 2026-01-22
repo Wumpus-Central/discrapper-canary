@@ -1,4 +1,6 @@
-n.d(t, { W: () => r });
+n.d(t, {
+    W: () => r,
+});
 var r = (function (e) {
     return (
         (e[(e.THRILLER = 0)] = "THRILLER"),

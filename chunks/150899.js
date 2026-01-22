@@ -1,4 +1,6 @@
-t(697509)(r, "__esModule", { value: !0 }),
+t(697509)(r, "__esModule", {
+    value: !0,
+}),
     (r.default = void 0),
     (r.default = {
         abstract: !1,
@@ -7,22 +9,32 @@ t(697509)(r, "__esModule", { value: !0 }),
         childrenPresentational: !1,
         nameFrom: ["author"],
         prohibitedProps: [],
-        props: { "aria-orientation": "vertical" },
+        props: {
+            "aria-orientation": "vertical",
+        },
         relatedConcepts: [
             {
-                concept: { name: "MENU" },
+                concept: {
+                    name: "MENU",
+                },
                 module: "JAPI",
             },
             {
-                concept: { name: "list" },
+                concept: {
+                    name: "list",
+                },
                 module: "ARIA",
             },
             {
-                concept: { name: "select" },
+                concept: {
+                    name: "select",
+                },
                 module: "XForms",
             },
             {
-                concept: { name: "sidebar" },
+                concept: {
+                    name: "sidebar",
+                },
                 module: "DTB",
             },
         ],

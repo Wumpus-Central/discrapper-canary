@@ -1,4 +1,8 @@
-n.d(t, { A: () => d }), n(321073), n(896048);
+n.d(t, {
+    A: () => d,
+}),
+    n(321073),
+    n(896048);
 var r = n(448761),
     l = n(559149),
     i = n(405269),
@@ -7,6 +11,7 @@ var r = n(448761),
     o = n(694318),
     c = n(117316),
     u = n(652215);
+
 function d(e) {
     let t,
         n,
@@ -124,7 +129,10 @@ function d(e) {
                         isSummaryDivider: !0,
                     }),
                 null !== I ? (I.content.push(R), R.jumpTarget && (I.hasJumpTarget = !0)) : A.push(R),
-                e.isFirstMessageInForumPost(f) && A.push({ type: u.TZK.FORUM_POST_ACTION_BAR }),
+                e.isFirstMessageInForumPost(f) &&
+                    A.push({
+                        type: u.TZK.FORUM_POST_ACTION_BAR,
+                    }),
                 null != P &&
                     "after" === P.position &&
                     A.push({
@@ -141,7 +149,11 @@ function d(e) {
                         isSummaryDivider: !0,
                     });
         }),
-        y && (0, o.iJ)(f) && l.A.trackExposure({ location: "416cc9_1" }),
+        y &&
+            (0, o.iJ)(f) &&
+            l.A.trackExposure({
+                location: "416cc9_1",
+            }),
         A
     );
 }

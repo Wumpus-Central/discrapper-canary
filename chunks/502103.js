@@ -1,4 +1,6 @@
-n.d(t, { A: () => A });
+n.d(t, {
+    A: () => A,
+});
 var r = n(627968),
     i = n(64700),
     l = n(554146),
@@ -11,6 +13,7 @@ var r = n(627968),
     p = n(49999),
     f = n(349828),
     h = n(124759);
+
 function A(e) {
     var t;
     let A = (0, s.TZ)(e),
@@ -74,7 +77,9 @@ function A(e) {
                             ),
                         );
                 },
-                { onCloseCallback: E },
+                {
+                    onCloseCallback: E,
+                },
             ),
                 o.default.track(d.HAw.DISMISSIBLE_CONTENT_SHOWN, {
                     type: l.V[l.V.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE],

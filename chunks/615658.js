@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -60,7 +62,9 @@ let p = () => {
                       ref: O,
                       onEnded: A,
                       volume: m ? 0 : y.radio,
-                      children: (0, r.jsx)("source", { src: null == x ? void 0 : x.src }),
+                      children: (0, r.jsx)("source", {
+                          src: null == x ? void 0 : x.src,
+                      }),
                   }),
                   (0, r.jsx)(a.A, {
                       ref: j,

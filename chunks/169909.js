@@ -51,6 +51,7 @@ var r = n(627968),
     H = n(880445),
     Y = n(291071),
     W = n(3697);
+
 function K(e, t, n) {
     return (
         t in e
@@ -64,6 +65,7 @@ function K(e, t, n) {
         e
     );
 }
+
 function z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -80,6 +82,7 @@ function z(e) {
     }
     return e;
 }
+
 function q(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -92,6 +95,7 @@ function q(e, t) {
     }
     return n;
 }
+
 function X(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -103,6 +107,7 @@ function X(e, t) {
         e
     );
 }
+
 function Z(e, t) {
     if (null == e) return {};
     var n,
@@ -119,6 +124,7 @@ function Z(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function Q(e, t) {
     if (null == e) return {};
     var n,
@@ -139,6 +145,7 @@ var $ = (function (e) {
         e
     );
 })({});
+
 function J(e) {
     var t;
     let {
@@ -193,6 +200,7 @@ function J(e) {
         }),
     });
 }
+
 function ee(e) {
     let {
             application: t,
@@ -210,12 +218,28 @@ function ee(e) {
             (e) => {
                 if ((0, L.$B)(t)) {
                     let n = t instanceof N.Ay ? t : N.Ay.createFromServer(t);
-                    (0, d.jA)(e, (e) => (0, r.jsx)(U.A, z({ application: n }, e)));
+                    (0, d.jA)(e, (e) =>
+                        (0, r.jsx)(
+                            U.A,
+                            z(
+                                {
+                                    application: n,
+                                },
+                                e,
+                            ),
+                        ),
+                    );
                 }
             },
             [t],
         ),
-        { name: g, description: E } = i.useMemo(() => (0, L.X2)(t, { fakeAppIconURL: Y }), [t]),
+        { name: g, description: E } = i.useMemo(
+            () =>
+                (0, L.X2)(t, {
+                    fakeAppIconURL: Y,
+                }),
+            [t],
+        ),
         { trackItemImpressionRef: b } = (0, k.A)({
             applicationId: t.id,
             applicationFlags: (0, L.$B)(t) ? t.flags : void 0,
@@ -251,12 +275,21 @@ function ee(e) {
                   applicationName: g,
                   applicationDescription: E,
               }),
-              children: (0, r.jsx)(u.M1G, { children: a }),
+              children: (0, r.jsx)(u.M1G, {
+                  children: a,
+              }),
           });
 }
+
 function et(e) {
     let { application: t, imageStyle: n, children: a } = e,
-        { name: o, iconURL: l } = i.useMemo(() => (0, L.X2)(t, { fakeAppIconURL: Y }), [t]);
+        { name: o, iconURL: l } = i.useMemo(
+            () =>
+                (0, L.X2)(t, {
+                    fakeAppIconURL: Y,
+                }),
+            [t],
+        );
     return (0, r.jsx)(c.m, {
         __unsupportedReactNodeAsText: o,
         children: (0, r.jsxs)("div", {
@@ -273,6 +306,7 @@ function et(e) {
         }),
     });
 }
+
 function en(e) {
     let {
             application: t,
@@ -284,7 +318,17 @@ function en(e) {
             overrideImageUrl: p,
             showsPromoted: _,
         } = e,
-        { iconURL: m, name: g, description: E } = i.useMemo(() => (0, L.X2)(t, { fakeAppIconURL: Y }), [t]),
+        {
+            iconURL: m,
+            name: g,
+            description: E,
+        } = i.useMemo(
+            () =>
+                (0, L.X2)(t, {
+                    fakeAppIconURL: Y,
+                }),
+            [t],
+        ),
         b = i.useMemo(() => (null == E ? null : (0, M.SD)(E)), [E]),
         y = (0, S.Ay)(m, ""),
         [O, v] = i.useState(!1),
@@ -335,7 +379,10 @@ function en(e) {
                                                 }),
                                             }),
                                         R && (0, r.jsx)(er, {}),
-                                        P !== f.Hr.NONE && (0, r.jsx)(A.A, { labelType: P }),
+                                        P !== f.Hr.NONE &&
+                                            (0, r.jsx)(A.A, {
+                                                labelType: P,
+                                            }),
                                     ],
                                 })
                               : null,
@@ -347,11 +394,15 @@ function en(e) {
                   })
                 : null,
             (0, r.jsxs)("div", {
-                className: s()(H.TD, { [H.Ne]: "row" === n }),
+                className: s()(H.TD, {
+                    [H.Ne]: "row" === n,
+                }),
                 children: [
                     (0, r.jsx)(G.A, {
                         src: m,
-                        className: s()(H.Kk, { [H.aL]: "row" === n }),
+                        className: s()(H.Kk, {
+                            [H.aL]: "row" === n,
+                        }),
                         "aria-hidden": !0,
                         rendersPlaceholder: !0,
                     }),
@@ -377,7 +428,9 @@ function en(e) {
                                               }),
                                           })
                                         : null,
-                                    (0, r.jsx)(ei, { application: t }),
+                                    (0, r.jsx)(ei, {
+                                        application: t,
+                                    }),
                                 ],
                             }),
                             (0, r.jsx)(u.Text, {
@@ -388,21 +441,29 @@ function en(e) {
                             }),
                         ],
                     }),
-                    "row" === n ? (0, r.jsx)("div", { className: H.ek }) : null,
+                    "row" === n
+                        ? (0, r.jsx)("div", {
+                              className: H.ek,
+                          })
+                        : null,
                 ],
             }),
         ],
     });
 }
+
 function er() {
     return (0, r.jsx)(c.m, {
         text: B.intl.string(B.t.CfTySQ),
         children: (0, r.jsx)("div", {
             className: H.hh,
-            children: (0, r.jsx)(P.A, { className: H.bB }),
+            children: (0, r.jsx)(P.A, {
+                className: H.bB,
+            }),
         }),
     });
 }
+
 function ei(e) {
     let { application: t } = e,
         n = R.default.getCurrentUser();
@@ -421,13 +482,16 @@ function ei(e) {
               }),
           });
 }
+
 function ea(e) {
     let { application: t, fallbackColor: n, showVideo: i, disableFadeIn: a, overrideImageUrl: o } = e;
     if (null != o)
         return (0, r.jsx)("img", {
             src: o,
             alt: (0, L.$B)(t) ? t.name : "",
-            className: s()(H._e, { [H.cG]: a }),
+            className: s()(H._e, {
+                [H.cG]: a,
+            }),
         });
     if ((0, L.$B)(t)) {
         if ((0, L.Ag)(t))
@@ -448,6 +512,7 @@ function ea(e) {
         disableFadeIn: a,
     });
 }
+
 function es(e) {
     let { application: t, showVideo: n, disableFadeIn: a } = e,
         o = (0, y.A)({
@@ -466,14 +531,18 @@ function es(e) {
     i.useEffect(() => {
         n && u(!0);
     }, [n]);
-    let d = s()(H._e, { [H.cG]: a });
+    let d = s()(H._e, {
+        [H.cG]: a,
+    });
     return (0, r.jsxs)(r.Fragment, {
         children: [
             null != l && c
                 ? (0, r.jsx)("div", {
                       className: H.SF,
                       children: (0, r.jsx)("div", {
-                          className: s()(H.T0, { [H.Q]: !n }),
+                          className: s()(H.T0, {
+                              [H.Q]: !n,
+                          }),
                           onAnimationEnd: () => (n ? null : u(!1)),
                           children: (0, r.jsx)(I.A, {
                               src: l,
@@ -494,6 +563,7 @@ function es(e) {
         ],
     });
 }
+
 function eo(e) {
     let { bot: t, fallbackColor: n, disableFadeIn: i } = e,
         a = (0, l.bG)([_.A], () => _.A.useReducedMotion),
@@ -511,16 +581,24 @@ function eo(e) {
         : (0, r.jsx)("img", {
               src: o,
               alt: "",
-              className: s()(H._e, { [H.cG]: i }),
+              className: s()(H._e, {
+                  [H.cG]: i,
+              }),
           });
 }
+
 function el(e) {
     let { fallbackColor: t, disableFadeIn: n } = e;
     return (0, r.jsx)("div", {
-        className: s()(H._e, { [H.cG]: n }),
-        style: { backgroundColor: t },
+        className: s()(H._e, {
+            [H.cG]: n,
+        }),
+        style: {
+            backgroundColor: t,
+        },
     });
 }
+
 function ec(e) {
     let { application: t, sectionName: n, resultsPosition: r, query: a, installOnDemand: s, location: o } = e,
         { pushHistory: l } = (0, j.uM)(),
@@ -550,10 +628,17 @@ function ec(e) {
         ),
     };
 }
+
 function eu(e) {
     let { onClickAppCard: t } = ec(e);
-    return (0, r.jsx)(J, X(z({}, e), { onClick: t }));
+    return (0, r.jsx)(
+        J,
+        X(z({}, e), {
+            onClick: t,
+        }),
+    );
 }
+
 function ed(e) {
     let { context: t, application: n, location: a, sectionName: s, isOneClickCTA: o, fetchesApplication: c = !0 } = e,
         d = Z(e, ["context", "application", "location", "sectionName", "isOneClickCTA", "fetchesApplication"]);

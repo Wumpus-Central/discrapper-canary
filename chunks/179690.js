@@ -7,6 +7,7 @@ var r = n(627968);
 n(64700);
 var i = n(397927),
     a = n(652215);
+
 function s(e, t, n) {
     return (
         t in e
@@ -20,6 +21,7 @@ function s(e, t, n) {
         e
     );
 }
+
 function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +38,7 @@ function o(e) {
     }
     return e;
 }
+
 function l(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -48,6 +51,7 @@ function l(e, t) {
     }
     return n;
 }
+
 function c(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -59,21 +63,35 @@ function c(e, t) {
         e
     );
 }
+
 function u() {
     return new Promise((e) => {
         (0, i.mMO)(async () => {
-            let { default: t } = await Promise.all([n.e("43887"), n.e("78811")]).then(n.bind(n, 333737));
-            return (n) => (0, r.jsx)(t, c(o({}, n), { handleEnableMFASuccess: e }));
+            let { default: t } = await Promise.all([n.e("14882"), n.e("78811")]).then(n.bind(n, 333737));
+            return (n) =>
+                (0, r.jsx)(
+                    t,
+                    c(o({}, n), {
+                        handleEnableMFASuccess: e,
+                    }),
+                );
         });
     });
 }
+
 function d() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     return new Promise((t) => {
         (0, i.mMO)(
             async () => {
                 let { default: t } = await n.e("28429").then(n.bind(n, 549404));
-                return (n) => (0, r.jsx)(t, c(o({}, n), { isTotp: e }));
+                return (n) =>
+                    (0, r.jsx)(
+                        t,
+                        c(o({}, n), {
+                            isTotp: e,
+                        }),
+                    );
             },
             {
                 onCloseCallback: t,

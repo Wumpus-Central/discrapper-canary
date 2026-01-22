@@ -38,7 +38,9 @@ let T = () =>
                     size: u._3J.DEPRECATED_SIZE_100,
                     className: I.my,
                 }),
-                (0, r.jsx)(h.tK, { children: O.intl.string(O.t["3rE1P8"]) }),
+                (0, r.jsx)(h.tK, {
+                    children: O.intl.string(O.t["3rE1P8"]),
+                }),
                 (0, r.jsx)(h.hE, {
                     className: I.RG,
                     children: O.intl.string(O.t.ZTNur7),
@@ -97,7 +99,9 @@ let T = () =>
                 showInvitedByHeader: B = !0,
                 className: U,
             } = e,
-            { currentUser: G } = (0, c.cf)([b.default], () => ({ currentUser: b.default.getCurrentUser() }));
+            { currentUser: G } = (0, c.cf)([b.default], () => ({
+                currentUser: b.default.getCurrentUser(),
+            }));
         if (null == p) return null;
         let M = null != D && D.length > 0,
             F = null != p.guild ? (v.fh(p.guild) ? p.guild : v.DY(p.guild)) : null,
@@ -117,15 +121,21 @@ let T = () =>
                 ((Q =
                     null == H
                         ? O.intl.string(O.t["3rE1P8"])
-                        : O.intl.formatToPlainString(O.t["5u47va"], { username: j.Ay.getFormattedName(H) })),
+                        : O.intl.formatToPlainString(O.t["5u47va"], {
+                              username: j.Ay.getFormattedName(H),
+                          })),
                 p.target_type === N.yV.STREAM &&
                     null != p.target_user &&
-                    (Q = O.intl.formatToPlainString(O.t.x2L32Q, { username: j.Ay.getFormattedName(p.target_user) })),
+                    (Q = O.intl.formatToPlainString(O.t.x2L32Q, {
+                        username: j.Ay.getFormattedName(p.target_user),
+                    })),
                 p.target_type === N.yV.EMBEDDED_APPLICATION &&
                     null != p.target_application &&
                     (Q =
                         null != H
-                            ? O.intl.formatToPlainString(O.t.UW1Cav, { username: j.Ay.getFormattedName(H) })
+                            ? O.intl.formatToPlainString(O.t.UW1Cav, {
+                                  username: j.Ay.getFormattedName(H),
+                              })
                             : O.intl.string(O.t.ENSuN3))),
                 K &&
                     null == W &&
@@ -165,7 +175,9 @@ let T = () =>
             if (null == H) throw Error("no inviter in group DM invite");
             let e = j.Ay.getFormattedName(H);
             null != V.name && "" !== V.name
-                ? ((Q = O.intl.formatToPlainString(O.t["5u47va"], { username: e })),
+                ? ((Q = O.intl.formatToPlainString(O.t["5u47va"], {
+                      username: e,
+                  })),
                   (s = V.name),
                   null != V.icon &&
                       (i = (0, r.jsx)(h.F4, {
@@ -175,7 +187,9 @@ let T = () =>
                 : ((Q = O.intl.string(O.t.OsdY8B)), (s = e));
         } else if (null != H) {
             let e = j.Ay.getFormattedName(H, !0);
-            (s = O.intl.formatToPlainString(O.t["4aF92R"], { username: e })),
+            (s = O.intl.formatToPlainString(O.t["4aF92R"], {
+                username: e,
+            })),
                 (q = !0),
                 (f =
                     null != w
@@ -183,8 +197,12 @@ let T = () =>
                         : (0, r.jsx)(h.tK, {
                               className: I.b$,
                               children: L
-                                  ? O.intl.format(O.t["6r4JiR"], { username: e })
-                                  : O.intl.format(O.t.Quj7HX, { username: e }),
+                                  ? O.intl.format(O.t["6r4JiR"], {
+                                        username: e,
+                                    })
+                                  : O.intl.format(O.t.Quj7HX, {
+                                        username: e,
+                                    }),
                           }));
         }
         return (0, r.jsxs)(u.BJc, {
@@ -203,13 +221,21 @@ let T = () =>
                 null != w
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(h.tK, { children: O.intl.string(O.t.mDFGFj) }),
-                              (0, r.jsx)(h.hE, { children: w }),
+                              (0, r.jsx)(h.tK, {
+                                  children: O.intl.string(O.t.mDFGFj),
+                              }),
+                              (0, r.jsx)(h.hE, {
+                                  children: w,
+                              }),
                           ],
                       })
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
-                              null != Q ? (0, r.jsx)(h.tK, { children: Q }) : null,
+                              null != Q
+                                  ? (0, r.jsx)(h.tK, {
+                                        children: Q,
+                                    })
+                                  : null,
                               (0, r.jsxs)(h.hE, {
                                   className: I.DD,
                                   children: [
@@ -243,7 +269,10 @@ let T = () =>
                                           flat: P,
                                           renderText: M ? R : void 0,
                                       }),
-                                M && (0, r.jsx)(d.A, { friendMemberIds: D }),
+                                M &&
+                                    (0, r.jsx)(d.A, {
+                                        friendMemberIds: D,
+                                    }),
                             ],
                         }),
                         (0, r.jsx)(A.A, {
@@ -251,7 +280,11 @@ let T = () =>
                             roles: p.roles,
                             className: I.Ei,
                         }),
-                        k || z || null == G ? (0, r.jsx)(h.xt, { user: G }) : (0, r.jsx)(m.L, {}),
+                        k || z || null == G
+                            ? (0, r.jsx)(h.xt, {
+                                  user: G,
+                              })
+                            : (0, r.jsx)(m.L, {}),
                     ],
                 }),
             ],

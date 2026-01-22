@@ -1,4 +1,7 @@
-a.r(r), a.d(r, { default: () => t });
+a.r(r),
+    a.d(r, {
+        default: () => t,
+    });
 var t = {
     payButton: "Betaal",
     "payButton.redirecting": "U wordt doorverwezen...",
@@ -112,7 +115,7 @@ var t = {
     "voucher.econtext.telephoneNumber.invalid": "Het telefoonnummer moet uit 10 of 11 cijfers bestaan",
     "boletobancario.btnLabel": "Boleto genereren",
     "boleto.sendCopyToEmail": "Stuur een kopie naar mijn e-mailadres",
-    "button.copy": "Kopiëren",
+    "button.copy": "Kopi\xebren",
     "button.download": "Downloaden",
     "boleto.socialSecurityNumber.invalid": "Veld niet geldig",
     "creditCard.storedCard.description.ariaLabel": "Opgeslagen kaart eindigt op %@",
@@ -262,7 +265,7 @@ var t = {
     "ctp.otp.resendCode": "Code opnieuw verzenden",
     "ctp.otp.codeResent": "Code opnieuw verzonden",
     "ctp.otp.title": "Ga naar uw Click to Pay-kaarten",
-    "ctp.otp.subtitle": "Voer de code %@ in die naar %@ is gestuurd, zodat we kunnen verifiëren dat u het bent.",
+    "ctp.otp.subtitle": "Voer de code %@ in die naar %@ is gestuurd, zodat we kunnen verifi\xebren dat u het bent.",
     "ctp.emptyProfile.message": "Geen kaarten geregistreerd voor dit Click to Pay-profiel",
     "ctp.separatorText": "of gebruik",
     "ctp.cards.title": "Voltooi de betaling met Click to Pay",
@@ -275,7 +278,7 @@ var t = {
         "Een snelle en veilige betaalmethode, ondersteund door Mastercard, Visa en andere betaalkaarten.",
     "ctp.infoPopup.benefit1": "Click to Pay maakt gebruik van versleuteling om uw informatie veilig te houden",
     "ctp.infoPopup.benefit2": "Gebruik het bij winkeliers over de hele wereld",
-    "ctp.infoPopup.benefit3": "Eén keer instellen voor probleemloze betalingen",
+    "ctp.infoPopup.benefit3": "E\xe9n keer instellen voor probleemloze betalingen",
     "ctp.errors.AUTH_INVALID": "Authenticatie ongeldig",
     "ctp.errors.NOT_FOUND":
         "Geen account gevonden, voer een geldig e-mailadres in of ga door met het handmatig invoeren van kaarten",

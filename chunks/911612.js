@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var i = n(627968);
 n(64700);
 var r = n(311907),
@@ -7,6 +9,7 @@ var r = n(311907),
     a = n(652215),
     o = n(349828),
     c = n(985018);
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -32,6 +35,7 @@ function u(e) {
     }
     return e;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -50,6 +54,7 @@ function d(e, t) {
         e
     );
 }
+
 function g(e) {
     let t = (0, r.bG)([l.A], () => l.A.can(a.xBc.MANAGE_CHANNELS, e));
     return __OVERLAY__

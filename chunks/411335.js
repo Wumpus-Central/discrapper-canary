@@ -30,9 +30,9 @@ var r = n(185348),
         );
     })({});
 a.u.USER_PROFILE, a.u.SERVER_POLICY, a.u.MENTION_SPAM, a.u.ML_SPAM, a.u.DEFAULT_KEYWORD_LIST, a.u.KEYWORD;
-let o = 1000,
+let o = 1e3,
     l = 100,
-    c = 1000,
+    c = 1e3,
     u = 10,
     d = 60,
     f = 1,

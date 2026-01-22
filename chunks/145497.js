@@ -13,6 +13,7 @@ var r = n(627968),
     u = n(486020),
     d = n(240248),
     f = n(265225);
+
 function p(e) {
     let { guildName: t, iconSize: n, className: i } = e,
         a = (0, d.oN)(t);
@@ -27,6 +28,7 @@ function p(e) {
         }),
     });
 }
+
 function _(e) {
     let { guildId: t, guildName: n, guildIcon: i, iconSize: a, className: p, acronymClassName: _, animate: h } = e,
         m = (0, o.bG)([c.A], () => c.A.isFocused()),

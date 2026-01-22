@@ -1,4 +1,6 @@
-r.d(t, { A: () => a });
+r.d(t, {
+    A: () => a,
+});
 var n = r(64700),
     o = r(205662);
 let a = function () {
@@ -13,5 +15,7 @@ let a = function () {
             },
         },
     });
-    return n.createElement("div", { style: e.picker });
+    return n.createElement("div", {
+        style: e.picker,
+    });
 };

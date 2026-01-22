@@ -1,4 +1,6 @@
-i.d(e, { default: () => C });
+i.d(e, {
+    default: () => C,
+});
 var s = i(627968),
     n = i(64700),
     a = i(503698),
@@ -11,6 +13,7 @@ var s = i(627968),
     u = i(985018),
     h = i(303982),
     x = i(206314);
+
 function C(t) {
     let { channel: e, isFromComposer: i, transitionState: a, onClose: C } = t;
     return (

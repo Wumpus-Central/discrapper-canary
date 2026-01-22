@@ -14,18 +14,24 @@ var r = n(110259),
     c = n(252431),
     u = n(995273),
     d = n(652215);
+
 function f(e) {
     a.h.dispatch({
         type: "NOTIFICATION_CENTER_SET_ACTIVE",
         active: e,
     });
 }
+
 function p() {
-    a.h.dispatch({ type: "RESET_NOTIFICATION_CENTER" });
+    a.h.dispatch({
+        type: "RESET_NOTIFICATION_CENTER",
+    });
 }
 async function h(e, t) {
     if (c.A.loading) return;
-    await a.h.dispatch({ type: "LOAD_NOTIFICATION_CENTER_ITEMS" });
+    await a.h.dispatch({
+        type: "LOAD_NOTIFICATION_CENTER_ITEMS",
+    });
     let n = Math.ceil(c.A.items.length / e.limit);
     try {
         let l = await o.A.get({
@@ -77,9 +83,13 @@ async function h(e, t) {
                 hasMore: l.body.has_more,
             });
     } catch (e) {
-        null == t || t(), await a.h.dispatch({ type: "LOAD_NOTIFICATION_CENTER_ITEMS_FAILURE" });
+        null == t || t(),
+            await a.h.dispatch({
+                type: "LOAD_NOTIFICATION_CENTER_ITEMS_FAILURE",
+            });
     }
 }
+
 function b(e) {
     var t, n;
     null != e.local_id
@@ -124,7 +134,9 @@ async function m(e) {
         }),
             await o.A.delete({
                 url: d.Rsh.NOTIF_CENTER_ITEMS(e.id),
-                body: { item_type: (0, u.gk)(e) ? "mention" : "regular" },
+                body: {
+                    item_type: (0, u.gk)(e) ? "mention" : "regular",
+                },
                 trackedActionData: {
                     event: r.NetworkActionNames.NOTIFICATION_CENTER_ITEM_DELETE,
                     properties: {

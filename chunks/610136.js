@@ -1,4 +1,7 @@
-n.d(t, { A: () => v }), n(896048);
+n.d(t, {
+    A: () => v,
+}),
+    n(896048);
 var r,
     i = n(311907),
     a = n(73153),
@@ -7,6 +10,7 @@ var r,
     l = n(71393),
     c = n(576705),
     u = n(903093);
+
 function d(e, t, n) {
     return (
         t in e
@@ -20,6 +24,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -38,6 +43,7 @@ function f(e) {
 }
 let p = {},
     _ = {};
+
 function h() {
     var e;
     let t = null != (e = o.A.getGuildsProto()) ? e : {},
@@ -51,6 +57,7 @@ function h() {
             t[e.id],
         );
 }
+
 function m(e) {
     return null != e && Object.keys(e).length > 0
         ? {
@@ -61,6 +68,7 @@ function m(e) {
           }
         : null;
 }
+
 function g(e) {
     for (let n of ((p = {}), e.guilds)) {
         var t;
@@ -68,21 +76,25 @@ function g(e) {
         null != e && ((0, u.k$)(e) || (0, u._J)(e)) && (p[n.id] = e);
     }
 }
+
 function E(e) {
     var t;
     let { guild: n } = e,
         r = m(null == (t = n.properties) ? void 0 : t.incidents_data);
     null != r && ((0, u.k$)(r) || (0, u._J)(r)) && (p[n.id] = r);
 }
+
 function b(e) {
     let { guild: t } = e,
         n = m(t.incidents_data);
     null != n && ((0, u.k$)(n) || (0, u._J)(n)) ? (p[t.id] = n) : delete p[t.id];
 }
+
 function y(e) {
     let { guild: t } = e;
     delete p[t.id];
 }
+
 function O(e) {
     p = {};
 }

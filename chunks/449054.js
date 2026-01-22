@@ -24,6 +24,7 @@ var r = n(686956),
     c = n(71393),
     u = n(954571),
     d = n(652215);
+
 function f(e, t, n) {
     return (
         t in e
@@ -37,6 +38,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -53,6 +55,7 @@ function p(e) {
     }
     return e;
 }
+
 function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -65,6 +68,7 @@ function _(e, t) {
     }
     return n;
 }
+
 function h(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -81,7 +85,11 @@ async function m(e, t) {
         { channelId: a, onSuccess: l, joinSource: u, loadId: f, shouldNavigate: _ = !0 } = n,
         m = (0, s.JK)(),
         g = c.A.getGuild(e),
-        E = { state: { analyticsSource: t } };
+        E = {
+            state: {
+                analyticsSource: t,
+            },
+        };
     null != g && null != g.joinedAt
         ? _ &&
           (null == a
@@ -113,6 +121,7 @@ async function m(e, t) {
               ))),
         null == l || l();
 }
+
 function g(e) {
     return {
         id: e.id,
@@ -134,6 +143,7 @@ function g(e) {
         keywords: e.keywords,
     };
 }
+
 function E(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
     u.default.track(d.HAw.GUILD_DISCOVERY_EXITED, {
@@ -142,9 +152,13 @@ function E(e, t) {
         recommendations_source: n,
     });
 }
+
 function b(e) {
-    u.default.track(d.HAw.SEARCH_CLOSED, { load_id: e });
+    u.default.track(d.HAw.SEARCH_CLOSED, {
+        load_id: e,
+    });
 }
+
 function y(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
     u.default.track(d.HAw.SEARCH_STARTED, {
@@ -154,6 +168,7 @@ function y(e, t) {
         category_id: t,
     });
 }
+
 function O(e) {
     let { withCounts: t, offset: n } = e;
     u.default.track(d.HAw.GUILD_DISCOVERY_SEARCH_START, {
@@ -161,6 +176,7 @@ function O(e) {
         offset: n,
     });
 }
+
 function A(e) {
     let { categoryId: t, error: n, willRequestRetry: r, isRequestRetry: i } = e;
     u.default.track(d.HAw.GUILD_DISCOVERY_SEARCH_FAILED, {
@@ -171,10 +187,14 @@ function A(e) {
         is_request_retry: i,
     });
 }
+
 function v(e) {
     let { categoryId: t } = e;
-    u.default.track(d.HAw.GUILD_DISCOVERY_GET_FEATURED_GUILDS_FAILED, { category_id: t });
+    u.default.track(d.HAw.GUILD_DISCOVERY_GET_FEATURED_GUILDS_FAILED, {
+        category_id: t,
+    });
 }
+
 function S(e) {
     let { loadId: t, searchId: n, query: r, guildResults: i, analyticsContext: a, categoryId: s, isTagSearch: o } = e;
     u.default.track(d.HAw.SEARCH_RESULT_VIEWED, {
@@ -188,6 +208,7 @@ function S(e) {
         category_id: s,
     });
 }
+
 function I(e) {
     let t = a.A.getLoadId(e);
     u.default.track(d.HAw.GUILD_DISCOVERY_GUILD_JOIN_CLICKED, {

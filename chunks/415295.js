@@ -8,6 +8,7 @@ var i = n(827734),
     a = n(397927),
     s = n(985018),
     o = n(530611);
+
 function l(e) {
     let {
         label: t,
@@ -17,7 +18,9 @@ function l(e) {
     } = e;
     return (0, r.jsxs)("div", {
         className: o.q,
-        style: { backgroundColor: n },
+        style: {
+            backgroundColor: n,
+        },
         children: [
             (0, r.jsx)(a.Text, {
                 variant: "text-sm/normal",
@@ -33,6 +36,7 @@ function l(e) {
         ],
     });
 }
+
 function c() {
     return (0, r.jsx)(l, {
         label: s.intl.string(s.t["I+02Gs"]),
@@ -40,6 +44,7 @@ function c() {
         icon: a.BZI,
     });
 }
+
 function u() {
     return (0, r.jsx)(l, {
         label: s.intl.string(s.t.TgsPaP),

@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968);
 n(64700);
 var l = n(417597),
@@ -9,6 +11,7 @@ var l = n(417597),
     c = n(957565),
     d = n(652215),
     s = n(985018);
+
 function f(e, t, n) {
     let f = (0, l.bG)([a.A], () => (null != e ? a.A.getChannel(e.parent_id) : null));
     return null == e
@@ -20,7 +23,9 @@ function f(e, t, n) {
                   e.isForumPost() &&
                       (0, u.jC)({
                           postId: e.id,
-                          location: { section: d.JJy.CONTEXT_MENU },
+                          location: {
+                              section: d.JJy.CONTEXT_MENU,
+                          },
                       }),
                       (0, c.C)((0, o.af)(e, f, t, n));
               },

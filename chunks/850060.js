@@ -1,4 +1,6 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var i = n(627968);
 n(64700);
 var l = n(397927),
@@ -6,6 +8,7 @@ var l = n(397927),
     a = n(253932),
     s = n(652215),
     o = n(985018);
+
 function c() {
     let e = a.D_.useSetting(),
         t = a.SI.useSetting();
@@ -18,7 +21,9 @@ function c() {
                   let e = !t;
                   r.default.track(s.HAw.PREVIEW_MARKDOWN_TOGGLED, {
                       enabled: e,
-                      location: { section: s.JJy.SETTINGS_CONTEXT_MENU },
+                      location: {
+                          section: s.JJy.SETTINGS_CONTEXT_MENU,
+                      },
                   }),
                       a.SI.updateSetting(e);
               },

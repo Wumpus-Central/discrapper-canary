@@ -28,6 +28,7 @@ var a,
     A = "object" == typeof r.g && r.g && r.g.Object === Object && r.g,
     w = "object" == typeof self && self && self.Object === Object && self,
     O = A || w || Function("return this")();
+
 function k(e, t, r) {
     switch (r.length) {
         case 0:
@@ -41,9 +42,11 @@ function k(e, t, r) {
     }
     return e.apply(t, r);
 }
+
 function E(e) {
     return e != e;
 }
+
 function x(e, t) {
     for (var r = -1, a = e.length, n = 0, s = []; ++r < a; ) {
         var i = e[r];
@@ -69,6 +72,7 @@ var j = Function.prototype,
     F = Math.max,
     B = Math.min,
     I = ((n = z(Object, "defineProperty")), (s = z.name) && s.length > 2 ? n : void 0);
+
 function N(e) {
     return function () {
         var t,
@@ -96,6 +100,7 @@ function N(e) {
         return G(n) ? n : a;
     };
 }
+
 function L(e, t, r, a, n, s, o, i, c, l) {
     var u = 128 & t,
         b = 1 & t,
@@ -103,6 +108,7 @@ function L(e, t, r, a, n, s, o, i, c, l) {
         d = 24 & t,
         h = 512 & t,
         p = f ? void 0 : N(e);
+
     function y() {
         for (var g = arguments.length, m = Array(g), A = g; A--; ) m[A] = arguments[A];
         if (d)
@@ -175,7 +181,7 @@ function L(e, t, r, a, n, s, o, i, c, l) {
                           var s,
                               o = t[a];
                           e[a] =
-                              (s = null == (s = r) ? 9007199254740991 : s) &&
+                              (s = null == (s = r) ? 0x1fffffffffffff : s) &&
                               ("number" == typeof o || v.test(o)) &&
                               o > -1 &&
                               o % 1 == 0 &&
@@ -193,15 +199,18 @@ function L(e, t, r, a, n, s, o, i, c, l) {
     }
     return y;
 }
+
 function q(e, t, r, a, n, s, o, i, c, l) {
     var u = 8 & t;
     (t |= u ? 32 : 64), 4 & (t &= ~(u ? 64 : 32)) || (t &= -4);
     var b = r(e, t, n, u ? s : void 0, u ? o : void 0, u ? void 0 : s, u ? void 0 : o, i, c, l);
     return (b.placeholder = a), $(b, e, t);
 }
+
 function U(e) {
     return e.placeholder;
 }
+
 function z(e, t) {
     var r,
         a,
@@ -284,6 +293,7 @@ var $ = I
     : function (e) {
           return e;
       };
+
 function W(e, t, r) {
     var a = (function (e, t, r, a, n, s, o, i) {
         var c = 2 & t;
@@ -313,6 +323,7 @@ function W(e, t, r) {
             8 == t || 16 == t
                 ? (C = (function (e, t, r) {
                       var a = N(e);
+
                       function n() {
                           for (var s = arguments.length, o = Array(s), i = s, c = U(n); i--; ) o[i] = arguments[i];
                           var l = s < 3 && o[0] !== c && o[s - 1] !== c ? [] : x(o, c);
@@ -369,10 +380,12 @@ function W(e, t, r) {
     })(e, 8, void 0, void 0, void 0, void 0, void 0, (t = r ? void 0 : t));
     return (a.placeholder = W.placeholder), a;
 }
+
 function G(e) {
     var t = typeof e;
     return !!e && ("object" == t || "function" == t);
 }
+
 function V(e) {
     var t,
         r = (t = e)
@@ -390,7 +403,7 @@ function V(e) {
                   var a = p.test(e);
                   return a || g.test(e) ? m(e.slice(2), a ? 2 : 8) : h.test(e) ? c : +e;
               })(t)) === i || t === -i
-                ? (t < 0 ? -1 : 1) * 1.7976931348623157e308
+                ? (t < 0 ? -1 : 1) * 17976931348623157e292
                 : t == t
                   ? t
                   : 0

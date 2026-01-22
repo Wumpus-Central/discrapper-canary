@@ -1,4 +1,8 @@
-n.d(t, { A: () => A }), n(134528), n(947204);
+n.d(t, {
+    A: () => A,
+}),
+    n(134528),
+    n(947204);
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -14,6 +18,7 @@ var r = n(627968),
     b = n(222823),
     g = n(985018);
 let m = [];
+
 function A(e) {
     let { channel: t, onJump: A } = e,
         { items: y, state: O } = (0, i.cf)([h.A], () => {
@@ -30,14 +35,19 @@ function A(e) {
         v && o.A.ackPins(t.id);
     }, [v, t.id]),
         (0, c.Ay)(() => {
-            j.some(u.$r) && o.A.fetchPins(t.id, { reset: !0 });
+            j.some(u.$r) &&
+                o.A.fetchPins(t.id, {
+                    reset: !0,
+                });
         });
     let x = l.useCallback(() => {
             o.A.fetchPins(t.id);
         }, [t.id]),
         E = l.useCallback(() => {
             var e;
-            o.A.fetchPins(t.id, { before: null == (e = y.at(-1)) ? void 0 : e.pinnedAt });
+            o.A.fetchPins(t.id, {
+                before: null == (e = y.at(-1)) ? void 0 : e.pinnedAt,
+            });
         }, [t.id, y]),
         _ = (0, i.bG)([p.A], () => (0, a.qB)(p.A.theme));
     return (0, r.jsx)(s.lGe, {

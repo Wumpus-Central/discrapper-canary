@@ -1,4 +1,6 @@
-n.d(t, { l: () => S });
+n.d(t, {
+    l: () => S,
+});
 var r = n(627968),
     i = n(503698),
     a = n.n(i),
@@ -14,6 +16,7 @@ var r = n(627968),
     h = n(862301),
     m = n(460890),
     g = n(25181);
+
 function E(e, t, n) {
     return (
         t in e
@@ -27,6 +30,7 @@ function E(e, t, n) {
         e
     );
 }
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -43,6 +47,7 @@ function b(e) {
     }
     return e;
 }
+
 function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -55,6 +60,7 @@ function y(e, t) {
     }
     return n;
 }
+
 function O(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -66,6 +72,7 @@ function O(e, t) {
         e
     );
 }
+
 function A(e, t) {
     if (null == e) return {};
     var n,
@@ -82,6 +89,7 @@ function A(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function v(e, t) {
     if (null == e) return {};
     var n,
@@ -92,6 +100,7 @@ function v(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function S(e) {
     let {
             value: t,
@@ -116,7 +125,9 @@ function S(e) {
         { i18n: C } = (0, m.G9)(),
         { fieldProps: N } = (0, p.n)(T),
         { disabled: R, errorMessage: w, required: P = !1 } = N,
-        D = { hasError: null != w && "" !== w },
+        D = {
+            hasError: null != w && "" !== w,
+        },
         {
             refs: x,
             floatingStyles: L,
@@ -132,7 +143,9 @@ function S(e) {
         { isMounted: V, styles: F } = (0, d.D)(k, {
             common: (e) => {
                 let { side: t } = e;
-                return { transformOrigin: "".concat("top" === t ? "bottom" : "top", " center") };
+                return {
+                    transformOrigin: "".concat("top" === t ? "bottom" : "top", " center"),
+                };
             },
             initial: {
                 opacity: 0.5,

@@ -1,4 +1,6 @@
-n.d(t, { A: () => A });
+n.d(t, {
+    A: () => A,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -17,6 +19,7 @@ var i = n(503698),
     g = n(652215),
     E = n(985018),
     b = n(868320);
+
 function y(e, t, n) {
     return (
         t in e
@@ -30,6 +33,7 @@ function y(e, t, n) {
         e
     );
 }
+
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -46,6 +50,7 @@ function O(e) {
     }
     return e;
 }
+
 function A(e) {
     let { message: t, compact: n } = e,
         i = (0, s.bG)([u.A], () => u.A.getChannel(d.default.castMessageIdAsChannelId(t.id)));
@@ -57,21 +62,34 @@ function A(e) {
               isSystemMessage: (0, c.A)(t),
           });
 }
+
 function v(e) {
     let { channel: t, compact: i, isSystemMessage: c } = e;
+
     function u(e) {
         e.stopPropagation(), (0, m.JA)(t, e.shiftKey);
     }
+
     function d(e) {
         e.stopPropagation();
         let n = !e.altKey && !e.ctrlKey && !e.metaKey && !e.shiftKey,
             r = e.shiftKey && !(e.altKey || e.ctrlKey || e.metaKey);
         (e.which === g.Ks6.SPACE || e.which === g.Ks6.ENTER) && (e.preventDefault(), (n || r) && (0, m.JA)(t, r));
     }
+
     function _(e) {
         (0, l.L3)(e, async () => {
             let { default: e } = await Promise.all([n.e("99011"), n.e("88974"), n.e("98865")]).then(n.bind(n, 44536));
-            return (n) => (0, r.jsx)(e, O({ channel: t }, n));
+            return (n) =>
+                (0, r.jsx)(
+                    e,
+                    O(
+                        {
+                            channel: t,
+                        },
+                        n,
+                    ),
+                );
         });
     }
     let h = (0, s.bG)([p.A], () => p.A.getCount(t.id)),
@@ -90,13 +108,17 @@ function v(e) {
                 onKeyDown: d,
                 onContextMenu: _,
                 "aria-roledescription": E.intl.string(E.t["8ipxiY"]),
-                className: a()(b.kL, { [b.og]: c }),
+                className: a()(b.kL, {
+                    [b.og]: c,
+                }),
                 children: (0, r.jsxs)(o.RDc, {
                     children: [
                         (0, r.jsxs)("div", {
                             className: b.kq,
                             children: [
-                                (0, r.jsx)(o.AC4, { children: E.intl.string(E.t["7Xm5QI"]) }),
+                                (0, r.jsx)(o.AC4, {
+                                    children: E.intl.string(E.t["7Xm5QI"]),
+                                }),
                                 (0, r.jsx)("span", {
                                     className: b.UU,
                                     children: t.name,
@@ -122,6 +144,7 @@ function v(e) {
         ],
     });
 }
+
 function S(e) {
     var t;
     let n = (0, s.bG)([p.A], () => p.A.getMostRecentMessage(e.id)),
@@ -134,7 +157,9 @@ function S(e) {
           : null == n
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
-                      (0, r.jsx)("span", { children: E.intl.string(E.t.ZTo4HS) }),
+                      (0, r.jsx)("span", {
+                          children: E.intl.string(E.t.ZTo4HS),
+                      }),
                       (0, r.jsx)("span", {
                           className: b.vE,
                           children: (0, _.aK)(a),

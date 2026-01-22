@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968);
 n(64700);
 var l = n(503698),
@@ -9,6 +11,7 @@ var l = n(503698),
     c = n(108713),
     u = n(985018),
     d = n(177432);
+
 function f(e) {
     let { height: t } = e,
         l = (0, a.bG)([o.A], () => o.A.useReducedMotion);
@@ -25,7 +28,9 @@ function f(e) {
                             return t;
                         }),
                 shouldAnimate: !l,
-                className: i()(d.Qw, { [d.R]: t <= 280 }),
+                className: i()(d.Qw, {
+                    [d.R]: t <= 280,
+                }),
             }),
             (0, r.jsx)(s.Heading, {
                 className: d.wx,
@@ -35,7 +40,9 @@ function f(e) {
             (0, r.jsx)(s.Text, {
                 variant: "text-md/normal",
                 color: "text-default",
-                children: u.intl.format(u.t["nNHd/y"], { onCancel: c.ZG }),
+                children: u.intl.format(u.t["nNHd/y"], {
+                    onCancel: c.ZG,
+                }),
             }),
         ],
     });

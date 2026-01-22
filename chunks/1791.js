@@ -1,4 +1,6 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(73153),
     i = n(976860),
     l = n(837921),
@@ -19,7 +21,10 @@ let c = {
                       channelId: n,
                       messageId: s,
                   })
-                : ((0, i.bG)({ pathname: o.BVt.CHANNEL(t, n, s) }), l.Ay.focus());
+                : ((0, i.bG)({
+                      pathname: o.BVt.CHANNEL(t, n, s),
+                  }),
+                  l.Ay.focus());
         },
     },
 };

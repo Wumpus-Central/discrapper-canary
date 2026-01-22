@@ -1,4 +1,6 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 let r = 18761,
     i = 19789,
     a = {
@@ -6,6 +8,7 @@ let r = 18761,
         LITTLE_ENDIAN: 18761,
         getByteOrder: s,
     };
+
 function s(e, t) {
     if (e.getUint16(t) === r) return r;
     if (e.getUint16(t) === i) return i;

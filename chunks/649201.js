@@ -1,4 +1,6 @@
-n.d(t, { t: () => r });
+n.d(t, {
+    t: () => r,
+});
 var r = (function (e) {
     return (
         (e.BLOCK_PROFILE_UPDATE = "block_profile_update"),

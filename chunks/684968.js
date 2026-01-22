@@ -1,4 +1,9 @@
-n.d(t, { A: () => C }), n(228524), n(896048), n(321073);
+n.d(t, {
+    A: () => C,
+}),
+    n(228524),
+    n(896048),
+    n(321073);
 var l = n(627968),
     r = n(64700),
     a = n(503698),
@@ -25,6 +30,7 @@ var l = n(627968),
     G = n(985018),
     R = n(438536),
     D = n(890865);
+
 function L(e) {
     var t, n, a, s;
     let { permission: o, roleIds: f, guild: I, specMap: N, categoryTitle: m, userId: S } = e,
@@ -43,7 +49,9 @@ function L(e) {
             [U, I.id],
         );
     return (0, l.jsxs)("div", {
-        className: i()(D.wT, { [D.aE]: M }),
+        className: i()(D.wT, {
+            [D.aE]: M,
+        }),
         children: [
             (0, l.jsxs)("div", {
                 className: D.iY,
@@ -122,7 +130,9 @@ function L(e) {
                     (0, l.jsx)(E.Text, {
                         variant: "text-sm/medium",
                         color: "text-default",
-                        children: G.intl.format(G.t.KmJI4A, { roleCount: j }),
+                        children: G.intl.format(G.t.KmJI4A, {
+                            roleCount: j,
+                        }),
                     }),
                 ],
             }),
@@ -157,7 +167,9 @@ function L(e) {
                         : (0, l.jsx)(
                               E.DUT,
                               {
-                                  className: i()(D.Zf, { [D.LL]: U && !(0, T.Oy)(e) }),
+                                  className: i()(D.Zf, {
+                                      [D.LL]: U && !(0, T.Oy)(e),
+                                  }),
                                   onClick: () => y(e.id),
                                   children: (0, l.jsx)(_.A, {
                                       role: e,
@@ -172,9 +184,11 @@ function L(e) {
         ],
     });
 }
+
 function x(e, t) {
     return t.toLowerCase().includes(e.toLowerCase());
 }
+
 function C(e) {
     let { userId: t, guildId: n, location: a, className: s, onNavigate: u } = e,
         d = (0, c.bG)([N.default], () => N.default.getUser(t), [t]),

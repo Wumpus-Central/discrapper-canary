@@ -1,4 +1,7 @@
-n.r(t), n.d(t, { default: () => m });
+n.r(t),
+    n.d(t, {
+        default: () => m,
+    });
 var r = n(627968),
     l = n(64700),
     i = n(417597),
@@ -21,6 +24,7 @@ var r = n(627968),
     A = n(985018),
     P = n(732154);
 let L = [o.z];
+
 function m(e) {
     let { windowKey: t, channelId: n, participantId: o } = e,
         m = (0, i.bG)([b.A], () => b.A.getChannel(n)),
@@ -37,9 +41,14 @@ function m(e) {
             },
             [n, o],
         ),
-        j = (0, y.E)({ channel: m }),
+        j = (0, y.E)({
+            channel: m,
+        }),
         M = l.useCallback(() => {
-            (0, T.Ay)(E) && (0, a.A9)(E.stream, { forceMultiple: !0 });
+            (0, T.Ay)(E) &&
+                (0, a.A9)(E.stream, {
+                    forceMultiple: !0,
+                });
         }, [E]),
         v = l.useMemo(
             () =>
@@ -48,7 +57,9 @@ function m(e) {
                     : E.type === T.lp.USER
                       ? E.user.username
                       : E.type === T.lp.STREAM
-                        ? A.intl.formatToPlainString(A.t["/DC1y9"], { username: E.user.username })
+                        ? A.intl.formatToPlainString(A.t["/DC1y9"], {
+                              username: E.user.username,
+                          })
                         : A.intl.string(A.t["8vlBo7"]),
             [E],
         ),
@@ -66,7 +77,7 @@ function m(e) {
             ? (0, r.jsx)(u.A.Provider, {
                   value: m.guild_id,
                   children: (0, r.jsx)(w.Ay, {
-                      timeout: 2000,
+                      timeout: 2e3,
                       children: () =>
                           (0, r.jsx)(p.Ay, {
                               className: P.V,

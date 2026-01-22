@@ -1,9 +1,12 @@
-n.d(t, { A: () => f }), n(896048);
+n.d(t, {
+    A: () => f,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
     s = n.n(l),
-    a = n(432022),
+    a = n(108531),
     c = n(397927),
     o = n(765671),
     d = n(985018),
@@ -53,7 +56,10 @@ let f = i.memo(function (e) {
                         }
                         return e;
                     })({}, a.config.stiff)),
-                    (n = n = { clamp: !0 }),
+                    (n = n =
+                        {
+                            clamp: !0,
+                        }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                         : (function (e, t) {
@@ -92,13 +98,17 @@ let f = i.memo(function (e) {
                 [u._$]: x,
             }),
             children: (0, r.jsxs)(a.animated.div, {
-                className: s()(u.N0, { [u.Mm]: g && O }),
+                className: s()(u.N0, {
+                    [u.Mm]: g && O,
+                }),
                 style: T,
                 children: [
                     (0, r.jsx)(c.DUT, {
                         innerRef: v,
                         onClick: b ? void 0 : m,
-                        className: s()(u.MU, { [u.$M]: g && b }),
+                        className: s()(u.MU, {
+                            [u.$M]: g && b,
+                        }),
                         "aria-label": d.intl.string(d.t.dcl9MQ),
                         children: l,
                     }),

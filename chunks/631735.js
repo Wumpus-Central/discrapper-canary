@@ -3,11 +3,19 @@ e.exports = function (e, t, n) {
     var i = r.undo(t);
     if ("spellcheck-change" === t.getLastChangeType()) {
         var a = i.getCurrentContent();
-        n(r.set(i, { nativelyRenderedContent: a }));
+        n(
+            r.set(i, {
+                nativelyRenderedContent: a,
+            }),
+        );
         return;
     }
     (e.preventDefault(), t.getNativelyRenderedContent())
-        ? (n(r.set(t, { nativelyRenderedContent: null })),
+        ? (n(
+              r.set(t, {
+                  nativelyRenderedContent: null,
+              }),
+          ),
           setTimeout(function () {
               n(i);
           }, 0))

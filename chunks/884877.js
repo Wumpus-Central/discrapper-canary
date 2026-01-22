@@ -1,4 +1,8 @@
-n.d(t, { xM: () => c }), n(114821), n(339614);
+n.d(t, {
+    xM: () => c,
+}),
+    n(114821),
+    n(339614);
 var r = n(440703),
     i = n(405269),
     a = n(927813),
@@ -14,5 +18,7 @@ let l = (e) => e.rewardsConfig.rewards.filter((e) => e.type === r.l.FRACTIONAL_P
                 minutes: o.t.r77oHc,
             },
             c = (0, i.Tf)(0, n * a.A.Millis.HOUR);
-        return o.intl.formatToPlainString(o.t["4SqnVD"], { time: (0, i.uN)(c, r) });
+        return o.intl.formatToPlainString(o.t["4SqnVD"], {
+            time: (0, i.uN)(c, r),
+        });
     };

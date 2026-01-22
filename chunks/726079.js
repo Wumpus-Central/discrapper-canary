@@ -56,6 +56,7 @@ var r,
     $ = n(652215),
     W = n(985018),
     J = n(760799);
+
 function Z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -81,6 +82,7 @@ function Z(e) {
     }
     return e;
 }
+
 function X(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -99,6 +101,7 @@ function X(e, t) {
         e
     );
 }
+
 function ee(e, t) {
     if (null == e) return {};
     var n,
@@ -191,8 +194,12 @@ let ei = l.memo((e) => {
         eg = (0, d.yK)([q.A], () =>
             q.A.getActivities().filter((e) => e.type === $.$pd.PLAYING && (0, A.A)(e, $.jUm.JOIN)),
         ),
-        { voiceChannel: ef } = (0, v.A)({ userId: t.id }),
-        eh = (0, C.r)({ user: t }),
+        { voiceChannel: ef } = (0, v.A)({
+            userId: t.id,
+        }),
+        eh = (0, C.r)({
+            user: t,
+        }),
         {
             status: em,
             applicationStream: eO,
@@ -227,11 +234,21 @@ let ei = l.memo((e) => {
         eb = l.useCallback(() => {
             if (null != s) {
                 let e = s.traits,
-                    t = X(Z({}, s), { traits: e.slice(0, 3) });
+                    t = X(Z({}, s), {
+                        traits: e.slice(0, 3),
+                    });
                 return (0, i.jsx)(S.mG, {
                     location: S.N5.FRIENDS_POPOUT,
                     className: J.cV,
-                    children: en.map((e, n) => (0, i.jsx)(e, { entry: t }, n)),
+                    children: en.map((e, n) =>
+                        (0, i.jsx)(
+                            e,
+                            {
+                                entry: t,
+                            },
+                            n,
+                        ),
+                    ),
                 });
             }
             if (
@@ -289,7 +306,9 @@ let ei = l.memo((e) => {
                     e.stopPropagation(),
                     null == j || j("open_direct_message", t.id),
                     (0, P.A)(b, !0),
-                    h.A.openPrivateChannel({ recipientIds: t.id }),
+                    h.A.openPrivateChannel({
+                        recipientIds: t.id,
+                    }),
                     null != a && a();
             },
             [t.id, a, b, j],
@@ -301,7 +320,9 @@ let ei = l.memo((e) => {
                     null == j || j("send_friend_request", t.id),
                     O.A.addRelationship({
                         userId: t.id,
-                        context: { location: "friends-popout" },
+                        context: {
+                            location: "friends-popout",
+                        },
                     });
             },
             [t.id, j],
@@ -314,7 +335,11 @@ let ei = l.memo((e) => {
                     null != n.application_id && "" !== n.application_id && !ei[n.application_id])
                 )
                     try {
-                        el((e) => X(Z({}, e), { [n.application_id]: !0 })),
+                        el((e) =>
+                            X(Z({}, e), {
+                                [n.application_id]: !0,
+                            }),
+                        ),
                             await f.A.sendActivityInviteUser({
                                 type: $.xL.JOIN,
                                 userId: t.id,
@@ -322,9 +347,17 @@ let ei = l.memo((e) => {
                                 location: $.ThZ.FRIENDS_POPOUT,
                             }),
                             null == j || j("send_activity_invite", t.id),
-                            el((e) => X(Z({}, e), { [n.application_id]: !1 }));
+                            el((e) =>
+                                X(Z({}, e), {
+                                    [n.application_id]: !1,
+                                }),
+                            );
                     } finally {
-                        el((e) => X(Z({}, e), { [n.application_id]: !1 }));
+                        el((e) =>
+                            X(Z({}, e), {
+                                [n.application_id]: !1,
+                            }),
+                        );
                     }
             },
             [j, ei, t.id],
@@ -337,7 +370,11 @@ let ei = l.memo((e) => {
                     null != n.application_id && "" !== n.application_id && !ei[n.application_id])
                 )
                     try {
-                        el((e) => X(Z({}, e), { [n.application_id]: !0 })),
+                        el((e) =>
+                            X(Z({}, e), {
+                                [n.application_id]: !0,
+                            }),
+                        ),
                             await f.A.sendActivityInviteUser({
                                 type: $.xL.JOIN_REQUEST,
                                 userId: t.id,
@@ -345,9 +382,17 @@ let ei = l.memo((e) => {
                                 location: $.ThZ.FRIENDS_POPOUT,
                             }),
                             null == j || j("ask_to_join", t.id),
-                            el((e) => X(Z({}, e), { [n.application_id]: !1 }));
+                            el((e) =>
+                                X(Z({}, e), {
+                                    [n.application_id]: !1,
+                                }),
+                            );
                     } finally {
-                        el((e) => X(Z({}, e), { [n.application_id]: !1 }));
+                        el((e) =>
+                            X(Z({}, e), {
+                                [n.application_id]: !1,
+                            }),
+                        );
                     }
             },
             [j, ei, t.id],
@@ -365,7 +410,9 @@ let ei = l.memo((e) => {
                 ref: (e) => {
                     (ev.current = e), eu && null != ea && ea(e), eu || null == ed || ed(e);
                 },
-                style: { opacity: es ? 0.5 : 1 },
+                style: {
+                    opacity: es ? 0.5 : 1,
+                },
                 children: [
                     (0, i.jsx)("div", {
                         ref: (e) => eo(e),
@@ -419,7 +466,9 @@ let ei = l.memo((e) => {
                                                       e.stopPropagation(),
                                                       O.A.addRelationship({
                                                           userId: t.id,
-                                                          context: { location: "friends-popout" },
+                                                          context: {
+                                                              location: "friends-popout",
+                                                          },
                                                       }),
                                                       null == j || j("accept_friend_request", t.id);
                                               },
@@ -430,7 +479,9 @@ let ei = l.memo((e) => {
                                               onClick: (e) => {
                                                   e.preventDefault(),
                                                       e.stopPropagation(),
-                                                      O.A.removeRelationship(t.id, { location: "friends-popout" }),
+                                                      O.A.removeRelationship(t.id, {
+                                                          location: "friends-popout",
+                                                      }),
                                                       null == j || j("decline_friend_request", t.id);
                                               },
                                           }),
@@ -443,7 +494,9 @@ let ei = l.memo((e) => {
                                         onClick: (e) => {
                                             e.preventDefault(),
                                                 e.stopPropagation(),
-                                                O.A.cancelFriendRequest(t.id, { location: "friends-popout" }),
+                                                O.A.cancelFriendRequest(t.id, {
+                                                    location: "friends-popout",
+                                                }),
                                                 null == j || j("cancel_friend_request", t.id);
                                         },
                                     })
@@ -507,6 +560,7 @@ let ei = l.memo((e) => {
         },
     });
 });
+
 function el(e) {
     let {
             groupId: t,
@@ -576,6 +630,7 @@ function el(e) {
         }),
     });
 }
+
 function es(e) {
     let { displayText: t, isCollapsed: n, canCollapse: r, onToggle: l } = e,
         { isOver: s, drop: o } = (0, H.dx)();
@@ -611,6 +666,7 @@ function es(e) {
         }),
     });
 }
+
 function eo(e) {
     let { user: t, activities: n, nickname: r } = e;
     return [t.username, t.globalName, r, ...n.map((e) => e.name)].filter(Q.Vq);
@@ -622,6 +678,7 @@ let ea = {
     sortType: w.r.JARO_WINKLER,
     throttleMs: 100,
 };
+
 function eu(e, t) {
     let [n, r] = l.useState(t),
         i = l.useCallback(() => r(t), [t]);
@@ -694,8 +751,8 @@ let ec = l.memo(function (e) {
                     }
                 }
                 return t.sort((e, t) => {
-                    let n = 1000 * !!e.hasActivity + e.affinity;
-                    return 1000 * !!t.hasActivity + t.affinity - n;
+                    let n = 1e3 * !!e.hasActivity + e.affinity;
+                    return 1e3 * !!t.hasActivity + t.affinity - n;
                 });
             }, [])),
             (c = null == (o = (0, d.bG)([q.A], () => q.A.getPrimaryActivity())) ? void 0 : o.application_id),
@@ -752,7 +809,11 @@ let ec = l.memo(function (e) {
                         : d.length > 0
                           ? t.activities.push(f)
                           : u
-                            ? t.activities.push(X(Z({}, f), { activities: s }))
+                            ? t.activities.push(
+                                  X(Z({}, f), {
+                                      activities: s,
+                                  }),
+                              )
                             : l === $.clD.ONLINE || l === $.clD.IDLE || l === $.clD.DND
                               ? t.online.push(f)
                               : t.offline.push(f);
@@ -797,7 +858,9 @@ let ec = l.memo(function (e) {
                     return e.groups
                         .map((e) => {
                             let t = e.users.filter((e) => eo(e).some((e) => null != e && e.toLowerCase().includes(n)));
-                            return X(Z({}, e), { users: t });
+                            return X(Z({}, e), {
+                                users: t,
+                            });
                         })
                         .filter((e) => e.users.length > 0);
                 }, [t, e.groups]),
@@ -835,7 +898,12 @@ let ec = l.memo(function (e) {
         [F, Q] = l.useState([k.FRIEND_REQUESTS]),
         { hoveredGroupId: H, handleGroupHover: et, handleGroupHoverRemove: en } = (0, Y.p)();
     l.useEffect(() => {
-        let e = Array.from({ length: G.groups.length }, (e, t) => t + 1);
+        let e = Array.from(
+            {
+                length: G.groups.length,
+            },
+            (e, t) => t + 1,
+        );
         Q((t) => [...t, ...e]);
     }, []);
     let er = l.useRef(null),
@@ -861,7 +929,7 @@ let ec = l.memo(function (e) {
                 () => {
                     null == I || I("search_friends");
                 },
-                1000,
+                1e3,
                 {
                     leading: !0,
                     trailing: !1,
@@ -884,7 +952,13 @@ let ec = l.memo(function (e) {
             (e) => {
                 (0, m.L3)(e, async () => {
                     let { default: e } = await n.e("83253").then(n.bind(n, 337588));
-                    return (t) => (0, i.jsx)(e, X(Z({}, t), { onClose: N }));
+                    return (t) =>
+                        (0, i.jsx)(
+                            e,
+                            X(Z({}, t), {
+                                onClose: N,
+                            }),
+                        );
                 }),
                     null == I || I("open_settings_modal");
             },
@@ -915,8 +989,8 @@ let ec = l.memo(function (e) {
                             t = a.users.length;
                         (r = a.name),
                             (l = t),
-                            (o = "".concat(r, " \u2014 ").concat(e, "/").concat(t, " online")),
-                            0 === e && 0 === t && (o = "".concat(r, " \u2014 0 online")),
+                            (o = "".concat(r, " — ").concat(e, "/").concat(t, " online")),
+                            0 === e && 0 === t && (o = "".concat(r, " — 0 online")),
                             (s = !0);
                     }
                 } else
@@ -924,32 +998,30 @@ let ec = l.memo(function (e) {
                         case k.FRIEND_REQUESTS:
                             (r = W.intl.string(W.t.fyA115)),
                                 (l = G.friendRequests.length),
-                                (o = "".concat(r, " \u2014 ").concat(l));
+                                (o = "".concat(r, " — ").concat(l));
                             break;
                         case k.SAME_ACTIVITY:
                             (r = D.currentActivityName),
                                 (l = G.sameActivity.length),
-                                (o = "".concat(r, " \u2014 ").concat(l));
+                                (o = "".concat(r, " — ").concat(l));
                             break;
                         case k.SUGGESTIONS:
                             (r = W.intl.string(W.t.qm9dSj)),
                                 (l = G.suggestions.length),
-                                (o = "".concat(r, " \u2014 ").concat(l));
+                                (o = "".concat(r, " — ").concat(l));
                             break;
                         case k.ACTIVITIES:
                             (r = W.intl.string(W.t.TxqPQR)),
                                 (l = G.activities.length),
-                                (o = "".concat(r, " \u2014 ").concat(l));
+                                (o = "".concat(r, " — ").concat(l));
                             break;
                         case k.ONLINE:
-                            (r = W.intl.string(W.t.WbGtnH)),
-                                (l = G.online.length),
-                                (o = "".concat(r, " \u2014 ").concat(l));
+                            (r = W.intl.string(W.t.WbGtnH)), (l = G.online.length), (o = "".concat(r, " — ").concat(l));
                             break;
                         case k.OFFLINE:
                             (r = W.intl.string(W.t.Vv0abJ)),
                                 (l = G.offline.length),
-                                (o = "".concat(r, " \u2014 ").concat(l));
+                                (o = "".concat(r, " — ").concat(l));
                     }
                 let u = s || ((n === k.SUGGESTIONS || n === k.FRIEND_REQUESTS) && l > 3),
                     c = F.includes(n);
@@ -1172,6 +1244,7 @@ let ec = l.memo(function (e) {
         ],
     });
 });
+
 function ed(e) {
     let { onOpen: t, onClose: n, children: r, popoutPosition: s, popoutAlign: o } = e,
         [a, u] = l.useState(!1),

@@ -1,7 +1,10 @@
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 var r = n(627968);
 n(64700);
 var l = n(688810);
+
 function i(e, t) {
     return function (n) {
         let { analyticsLocations: i } = (0, l.Ay)(t);

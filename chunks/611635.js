@@ -23,11 +23,13 @@ let g = i.createContext({
     className: "",
     focused: !1,
 });
+
 function E() {
     let e = i.useContext(g);
     if (void 0 === e) throw Error("useRootElementContext must be used within a RootElementContextProvider");
     return e;
 }
+
 function b(e) {
     let {
             rootClassName: t,

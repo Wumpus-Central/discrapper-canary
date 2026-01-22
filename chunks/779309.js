@@ -1,4 +1,9 @@
-n.d(t, { A: () => ei }), n(896048), n(321073), n(938796);
+n.d(t, {
+    A: () => ei,
+}),
+    n(896048),
+    n(321073),
+    n(938796);
 var r = n(627968),
     i = n(64700),
     a = n(735438),
@@ -68,6 +73,7 @@ let Z = [],
         },
     ],
     er = u.K.APP_LAUNCHER_IN_TEXT;
+
 function ei(e) {
     let { context: t, entrypoint: n, searchQuery: a, setSearchQuery: s, setScroller: o, isScrollCloseToBottom: l } = e,
         c = (0, _.bG)([g.A], () => g.A.getIsEnabled(), []),
@@ -151,6 +157,7 @@ function ei(e) {
         ],
     });
 }
+
 function ea() {
     return (0, r.jsxs)("div", {
         className: X.G,
@@ -160,10 +167,13 @@ function ea() {
                 variant: "text-sm/normal",
                 children: q.intl.string(q.t.tZ3FNs),
             }),
-            (0, r.jsx)(O.F, { hideSearch: !0 }),
+            (0, r.jsx)(O.F, {
+                hideSearch: !0,
+            }),
         ],
     });
 }
+
 function es(e) {
     let { searchQuery: t, setSearchQuery: n, placeholder: a } = e,
         o = i.useRef(null),
@@ -231,6 +241,7 @@ function es(e) {
         })
     );
 }
+
 function eo(e) {
     let { apps: t, onlyActivityApps: n } = e,
         r = i.useMemo(
@@ -245,6 +256,7 @@ function eo(e) {
         );
     (0, I.A)(r);
 }
+
 function el(e) {
     let { context: t, entrypoint: n, onEmptyState: a } = e,
         s = n === x.s4.VOICE,
@@ -256,7 +268,11 @@ function el(e) {
         }),
         c = i.useMemo(() => {
             let e = [];
-            for (let t of o) null != t.application && e.push({ application: t.application });
+            for (let t of o)
+                null != t.application &&
+                    e.push({
+                        application: t.application,
+                    });
             return e;
         }, [o]),
         u = q.intl.string(q.t["s+UQpc"]),
@@ -335,11 +351,14 @@ function el(e) {
               ],
           });
 }
+
 function ec(e) {
     var t;
     let { context: n, onEmptyState: a } = e;
     (0, y.D)();
-    let s = (0, b.A)({ guildId: "channel" === n.type ? (null == (t = n.channel) ? void 0 : t.getGuildId()) : void 0 }),
+    let s = (0, b.A)({
+            guildId: "channel" === n.type ? (null == (t = n.channel) ? void 0 : t.getGuildId()) : void 0,
+        }),
         o = G.r0.LARGE_BANNER,
         { trackSectionImpressionRef: l } = (0, F.A)({
             sectionName: x.yK.ACTIVITIES,
@@ -359,7 +378,9 @@ function ec(e) {
                       ref: (e) => {
                           l.current = e;
                       },
-                      children: (0, r.jsx)(H.A, { title: q.intl.string(q.t.shUONg) }),
+                      children: (0, r.jsx)(H.A, {
+                          title: q.intl.string(q.t.shUONg),
+                      }),
                   }),
                   (0, r.jsx)("div", {
                       className: X.a2,
@@ -385,10 +406,13 @@ function ec(e) {
               ],
           });
 }
+
 function eu(e) {
     let { context: t, onEmptyState: n } = e,
         a = x.yK.APPS_IN_THIS_SERVER,
-        { appsInThisServer: s, isLoading: o } = (0, j.A)({ context: t }),
+        { appsInThisServer: s, isLoading: o } = (0, j.A)({
+            context: t,
+        }),
         { items: l, handleViewMore: c } = eg({
             title: q.intl.string(q.t.KfkuGc),
             look: G.r0.ROW,
@@ -422,7 +446,15 @@ function eu(e) {
                   (0, r.jsx)("div", {
                       className: X.l2,
                       children: o
-                          ? et.map((e) => (0, r.jsx)(V.A, { look: G.r0.ROW }, e))
+                          ? et.map((e) =>
+                                (0, r.jsx)(
+                                    V.A,
+                                    {
+                                        look: G.r0.ROW,
+                                    },
+                                    e,
+                                ),
+                            )
                           : l.map((e, n) => {
                                 let { application: i } = e;
                                 return null != i
@@ -444,6 +476,7 @@ function eu(e) {
               ],
           });
 }
+
 function ed(e) {
     let { context: t, entrypoint: n, onEmptyState: a } = e,
         {
@@ -475,7 +508,15 @@ function ed(e) {
                             (0, r.jsx)(H.A.Loading, {}),
                             (0, r.jsx)("div", {
                                 className: i === G.r0.ROW ? X.l2 : X.a2,
-                                children: n.map((e) => (0, r.jsx)(V.A, { look: i }, e)),
+                                children: n.map((e) =>
+                                    (0, r.jsx)(
+                                        V.A,
+                                        {
+                                            look: i,
+                                        },
+                                        e,
+                                    ),
+                                ),
                             }),
                         ],
                     },
@@ -496,6 +537,7 @@ function ed(e) {
                 ),
             );
 }
+
 function ef(e) {
     let t,
         n,
@@ -619,6 +661,7 @@ function ef(e) {
         ],
     });
 }
+
 function ep(e) {
     let [t, n] = i.useState(!e);
     return [
@@ -629,11 +672,20 @@ function ep(e) {
         }, []),
     ];
 }
+
 function e_() {
     let e = (0, _.bG)([w.default], () => w.default.onlyShowPreviewAppCollections),
-        t = T.A.getCurrentConfig({ location: "App Launcher Home (Web)" }, { autoTrackExposure: !1 }).enabled;
+        t = T.A.getCurrentConfig(
+            {
+                location: "App Launcher Home (Web)",
+            },
+            {
+                autoTrackExposure: !1,
+            },
+        ).enabled;
     return e ? o.W.PREVIEW : t ? o.W.NON_STAFF_PREVIEW : o.W.ACTIVE;
 }
+
 function eh(e) {
     let { context: t, entrypoint: n } = e,
         r = e_();
@@ -645,7 +697,9 @@ function eh(e) {
     }, [r]);
     let { sectionDescriptors: a } = v.cu({
             context: t,
-            filters: { commandTypes: [m.kc.CHAT] },
+            filters: {
+                commandTypes: [m.kc.CHAT],
+            },
             options: {
                 placeholderCount: 0,
                 limit: z.Hi,
@@ -673,11 +727,14 @@ function eh(e) {
         isInstallOnDemand: s,
     };
 }
+
 function em(e) {
     var t;
     let { context: n, recommendationsSections: r } = e;
     (0, y.D)();
-    let a = (0, b.A)({ guildId: "channel" === n.type ? (null == (t = n.channel) ? void 0 : t.getGuildId()) : void 0 });
+    let a = (0, b.A)({
+        guildId: "channel" === n.type ? (null == (t = n.channel) ? void 0 : t.getGuildId()) : void 0,
+    });
     return i.useMemo(() => {
         if (!r.some((e) => (0, p.Lt)(e.flags, l.s.APPENDS_REMAINING_ACTIVITIES))) return Z;
         let e = new Set();
@@ -691,6 +748,7 @@ function em(e) {
         );
     }, [r, a]);
 }
+
 function eg(e) {
     let { title: t, look: n, items: r, limit: a, sectionName: s, sectionOverallPosition: o } = e,
         { pushHistory: l } = (0, U.uM)();

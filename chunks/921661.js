@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var r = n(627968),
     i = n(64700),
     a = n(688810),
@@ -59,9 +61,15 @@ let h = 3,
             className: _.UX,
             children: [
                 (0, r.jsx)(s.oC, {
-                    children: (0, r.jsx)(s.dB, { children: p.intl.format(p.t.uEky42, { count: t.length }) }),
+                    children: (0, r.jsx)(s.dB, {
+                        children: p.intl.format(p.t.uEky42, {
+                            count: t.length,
+                        }),
+                    }),
                 }),
-                (0, r.jsx)(s.Aq, { children: m }),
+                (0, r.jsx)(s.Aq, {
+                    children: m,
+                }),
             ],
         });
     };

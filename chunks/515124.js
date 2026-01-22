@@ -1,4 +1,6 @@
-n.d(t, { h: () => u });
+n.d(t, {
+    h: () => u,
+});
 var a = n(627968);
 n(64700);
 var l = n(397927),
@@ -13,7 +15,9 @@ let u = () =>
         children: (0, a.jsxs)("div", {
             className: d.Lm,
             children: [
-                (0, a.jsx)(o.p, { className: d._l }),
+                (0, a.jsx)(o.p, {
+                    className: d._l,
+                }),
                 (0, a.jsxs)("div", {
                     className: d._l,
                     children: [
@@ -22,9 +26,13 @@ let u = () =>
                             children: "Shop Overrides",
                         }),
                         (0, a.jsx)(s.R, {}),
-                        (0, a.jsx)(c.A, { className: d.yF }),
+                        (0, a.jsx)(c.A, {
+                            className: d.yF,
+                        }),
                         (0, a.jsx)(r.N, {}),
-                        (0, a.jsx)(c.A, { className: d.yF }),
+                        (0, a.jsx)(c.A, {
+                            className: d.yF,
+                        }),
                         (0, a.jsx)(i.G, {}),
                     ],
                 }),

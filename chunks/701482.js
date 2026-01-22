@@ -3,5 +3,5 @@ e.exports = function () {
     clearTimeout(e.resetTimer),
         (e.resetTimer = setTimeout(function () {
             e.resetSequences();
-        }, 1000));
+        }, 1e3));
 };

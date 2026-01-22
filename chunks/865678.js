@@ -67,6 +67,7 @@ var ea = n(37411),
     eo = n(985018),
     ec = n(935456),
     ed = n(473169);
+
 function eu(e, t, n) {
     return (
         t in e
@@ -80,6 +81,7 @@ function eu(e, t, n) {
         e
     );
 }
+
 function eh(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -96,6 +98,7 @@ function eh(e) {
     }
     return e;
 }
+
 function eg(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -198,6 +201,7 @@ let em = (0, w.Ld)(),
             },
         };
     })(m.A);
+
 function eO(e) {
     let { onEmojiPicked: t, channel: n, guildId: r } = e,
         s = i.useRef(null),
@@ -308,8 +312,12 @@ class eC extends i.PureComponent {
                 ? (0, l.jsx)(p.D0$, {
                       label: R ? eo.intl.string(eo.t.yR6HwZ) : eo.intl.string(eo.t.X8jMDh),
                       children: (0, l.jsx)(E.Ay, {
-                          className: s()(ec.zm, { [ec.r9]: !b }),
-                          innerClassName: s()(ec.At, { [ec.r9]: !b }),
+                          className: s()(ec.zm, {
+                              [ec.r9]: !b,
+                          }),
+                          innerClassName: s()(ec.At, {
+                              [ec.r9]: !b,
+                          }),
                           characterCountClassName: ec.IQ,
                           maxCharacterCount: R ? er.U9 : er.s4,
                           onChange: this.handleChangeRichTopic,
@@ -319,10 +327,14 @@ class eC extends i.PureComponent {
                           richValue: this.state.richTopicValue,
                           type: R ? C.oU.FORUM_CHANNEL_GUIDELINES : C.oU.CHANNEL_TOPIC,
                           onFocus: () => {
-                              this.setState({ topicFocused: !0 });
+                              this.setState({
+                                  topicFocused: !0,
+                              });
                           },
                           onBlur: () => {
-                              this.setState({ topicFocused: !1 });
+                              this.setState({
+                                  topicFocused: !1,
+                              });
                           },
                           focused: this.state.topicFocused,
                           onSubmit: this.handleSubmit,
@@ -356,7 +368,9 @@ class eC extends i.PureComponent {
                               description: eo.intl.string(eo.t["/oQQ3y"]),
                               errorMessage: this.getError("available_tags"),
                               id: em,
-                              children: (0, l.jsx)(_.A, { channel: e }),
+                              children: (0, l.jsx)(_.A, {
+                                  channel: e,
+                              }),
                           }),
                           (0, l.jsx)(p.Checkbox, {
                               disabled: !b || I,
@@ -412,7 +426,9 @@ class eC extends i.PureComponent {
                                               ],
                                           }),
                                       }),
-                                      (0, l.jsx)(D.A, { reactionEmoji: e.defaultReactionEmoji }),
+                                      (0, l.jsx)(D.A, {
+                                          reactionEmoji: e.defaultReactionEmoji,
+                                      }),
                                   ],
                               }),
                           }),
@@ -449,8 +465,12 @@ class eC extends i.PureComponent {
                                       }),
                                   }),
                                   e.defaultForumLayout === c.C.GRID
-                                      ? (0, l.jsx)(en.A, { className: ec.Kf })
-                                      : (0, l.jsx)(el.A, { className: ec.Kf }),
+                                      ? (0, l.jsx)(en.A, {
+                                            className: ec.Kf,
+                                        })
+                                      : (0, l.jsx)(el.A, {
+                                            className: ec.Kf,
+                                        }),
                               ],
                           }),
                           (0, l.jsx)(p.cGx, {}),
@@ -717,7 +737,7 @@ class eC extends i.PureComponent {
         });
     }
     renderBitrate(e) {
-        return "".concat(Math.round(e / 1000), "kbps");
+        return "".concat(Math.round(e / 1e3), "kbps");
     }
     renderVoiceBitrate(e, t) {
         let { canManageChannels: n } = this.props;
@@ -727,7 +747,12 @@ class eC extends i.PureComponent {
         return (0, l.jsx)(p.Apm, {
             label: eo.intl.string(eo.t.w2d0vU),
             errorMessage: "" !== r ? r : void 0,
-            helperText: i > ei.gp3 ? eo.intl.format(eo.t.SbQJk5, { bitrate: ei.gp3 / 1000 }) : void 0,
+            helperText:
+                i > ei.gp3
+                    ? eo.intl.format(eo.t.SbQJk5, {
+                          bitrate: ei.gp3 / 1e3,
+                      })
+                    : void 0,
             initialValue: Math.min(e.bitrate, i),
             onValueChange: this.handleChangeBitrate,
             onValueRender: this.renderBitrate,
@@ -778,7 +803,9 @@ class eC extends i.PureComponent {
     onRenderUserLimit(e) {
         return 0 === (e = Math.round(e))
             ? eo.intl.string(eo.t.XX5ciX)
-            : eo.intl.formatToPlainString(eo.t["3uHFUR"], { num: e });
+            : eo.intl.formatToPlainString(eo.t["3uHFUR"], {
+                  num: e,
+              });
     }
     renderUserLimit(e) {
         let { canManageChannels: t } = this.props;
@@ -792,7 +819,7 @@ class eC extends i.PureComponent {
             initialValue: Math.min(e.userLimit, i),
             onValueChange: this.handleUserLimitChange,
             onValueRender: this.onRenderUserLimit,
-            onMarkerRender: (e) => (0 === Math.round(e) ? "\u221E" : e),
+            onMarkerRender: (e) => (0 === Math.round(e) ? "∞" : e),
             markers: [0, i],
             minValue: 0,
             maxValue: i,
@@ -859,7 +886,11 @@ class eC extends i.PureComponent {
                   label: eo.intl.string(eo.t["/dp6yY"]),
                   children: [
                       this.renderChannelInfo(e, t),
-                      this.showVoiceSettings() ? (0, l.jsx)(p.cGx, { gap: 24 }) : null,
+                      this.showVoiceSettings()
+                          ? (0, l.jsx)(p.cGx, {
+                                gap: 24,
+                            })
+                          : null,
                       this.renderVoiceBitrate(e, n),
                       this.renderVideoQualityMode(e),
                       this.renderUserLimit(e),
@@ -901,7 +932,9 @@ class eC extends i.PureComponent {
                 let { channel: t } = this.props;
                 if (null == t) return null;
                 let n = (0, h.lA)(t.flags, er.lx.REQUIRE_TAG, e);
-                (0, b.fy)({ flags: n });
+                (0, b.fy)({
+                    flags: n,
+                });
             }),
             eu(this, "handleChangeName", (e) => {
                 var t, n;
@@ -909,7 +942,9 @@ class eC extends i.PureComponent {
                 if (null == l) return;
                 l.isThread() ? (e = (0, B.A)(e, !1)) : ei.kvI.LIMITED_CHANNEL_NAME.has(l.type) && (e = (0, X.an)(e));
                 let i = null != (t = null == (n = this.nameInputRef.current) ? void 0 : n.selectionStart) ? t : 0;
-                (0, b.fy)({ name: e }),
+                (0, b.fy)({
+                    name: e,
+                }),
                     setTimeout(() => {
                         var e;
                         null == (e = this.nameInputRef.current) || e.setSelectionRange(i, i);
@@ -919,7 +954,10 @@ class eC extends i.PureComponent {
                 let { channel: e, channelName: t } = this.props;
                 if ((null == e ? void 0 : e.isThread()) && null != t) {
                     let e = (0, B.A)(t, !0);
-                    e !== t && (0, b.fy)({ name: e });
+                    e !== t &&
+                        (0, b.fy)({
+                            name: e,
+                        });
                 }
             }),
             eu(this, "insertEmojiAtPosition", (e) => {
@@ -929,14 +967,18 @@ class eC extends i.PureComponent {
                     r = null != (n = null == l ? void 0 : l.selectionEnd) ? n : 0,
                     s = this.props.channelName,
                     a = (null == s ? void 0 : s.substring(0, i)) + e + (null == s ? void 0 : s.substring(r));
-                (0, b.fy)({ name: a }),
+                (0, b.fy)({
+                    name: a,
+                }),
                     setTimeout(() => {
                         let t = i + e.length;
                         null == l || l.focus(), null == l || l.setSelectionRange(t, t);
                     }, 0);
             }),
             eu(this, "handleChangeTopic", (e) => {
-                (0, b.fy)({ topic: L.Ay.translateInlineEmojiToSurrogates(e) });
+                (0, b.fy)({
+                    topic: L.Ay.translateInlineEmojiToSurrogates(e),
+                });
             }),
             eu(this, "handleChangeRichTopic", (e, t, n) => {
                 this.setState({
@@ -946,7 +988,9 @@ class eC extends i.PureComponent {
                     this.handleChangeTopic(t);
             }),
             eu(this, "handleChangeTemplate", (e) => {
-                (0, b.fy)({ template: L.Ay.translateInlineEmojiToSurrogates(e) });
+                (0, b.fy)({
+                    template: L.Ay.translateInlineEmojiToSurrogates(e),
+                });
             }),
             eu(this, "handleChangeDefaultReactionEmoji", (e) => {
                 let t =
@@ -961,73 +1005,110 @@ class eC extends i.PureComponent {
                                 emojiId: void 0,
                                 emojiName: e.optionallyDiverseSequence,
                             };
-                (0, b.fy)({ defaultReactionEmoji: t });
+                (0, b.fy)({
+                    defaultReactionEmoji: t,
+                });
             }),
             eu(this, "handleChangeDefaultForumLayout", (e) => {
                 let { channel: t } = this.props;
                 if (null == t) return null;
-                (0, b.fy)({ defaultForumLayout: e }), this.props.handleSetDefaultLayout(e);
+                (0, b.fy)({
+                    defaultForumLayout: e,
+                }),
+                    this.props.handleSetDefaultLayout(e);
             }),
             eu(this, "handleChangeDefaultSortOrder", (e) => {
                 let { channel: t } = this.props;
                 if (null == t) return null;
-                (0, b.fy)({ defaultSortOrder: e });
+                (0, b.fy)({
+                    defaultSortOrder: e,
+                });
             }),
             eu(this, "handleChangeDefaultTagSetting", (e) => {
                 let { channel: t } = this.props;
                 if (null == t) return null;
-                (0, b.fy)({ defaultTagSetting: e });
+                (0, b.fy)({
+                    defaultTagSetting: e,
+                });
             }),
             eu(this, "handleChangeBitrate", (e) => {
-                (0, b.fy)({ bitrate: 1000 * Math.round(e / 1000) });
+                (0, b.fy)({
+                    bitrate: 1e3 * Math.round(e / 1e3),
+                });
             }),
             eu(this, "handleUserLimitChange", (e) => {
-                (0, b.fy)({ userLimit: Math.round(e) });
+                (0, b.fy)({
+                    userLimit: Math.round(e),
+                });
             }),
             eu(this, "handleNSFWChange", (e) => {
-                (0, b.fy)({ nsfw: e });
+                (0, b.fy)({
+                    nsfw: e,
+                });
             }),
             eu(this, "handleActiveChannelsRemovedChange", (e) => {
                 let { channel: t } = this.props;
                 if (null == t) return null;
                 let n = (0, h.lA)(t.flags, er.lx.ACTIVE_CHANNELS_REMOVED, !e);
-                (0, b.fy)({ flags: n });
+                (0, b.fy)({
+                    flags: n,
+                });
             }),
             eu(this, "handleNewsChange", (e) => {
-                (0, b.fy)({ type: e ? ei.rbe.GUILD_ANNOUNCEMENT : ei.rbe.GUILD_TEXT });
+                (0, b.fy)({
+                    type: e ? ei.rbe.GUILD_ANNOUNCEMENT : ei.rbe.GUILD_TEXT,
+                });
             }),
             eu(this, "handleChangeSlowmode", (e) => {
-                (0, b.fy)({ rateLimitPerUser: e });
+                (0, b.fy)({
+                    rateLimitPerUser: e,
+                });
             }),
             eu(this, "handleChangeThreadMessageSlowmode", (e) => {
-                (0, b.fy)({ defaultThreadRateLimitPerUser: e });
+                (0, b.fy)({
+                    defaultThreadRateLimitPerUser: e,
+                });
             }),
             eu(this, "handleChangeDefaultAutoArchiveDuration", (e) => {
-                (0, b.fy)({ defaultAutoArchiveDuration: e });
+                (0, b.fy)({
+                    defaultAutoArchiveDuration: e,
+                });
             }),
             eu(this, "handleRegionChange", (e) => {
-                (0, b.fy)({ rtcRegion: e === eA ? null : e });
+                (0, b.fy)({
+                    rtcRegion: e === eA ? null : e,
+                });
             }),
             eu(this, "handleVideoQualityModeChange", (e) => {
-                (0, b.fy)({ videoQualityMode: e });
+                (0, b.fy)({
+                    videoQualityMode: e,
+                });
             }),
             eu(this, "handleAutoArchiveDurationChanged", (e) => {
-                (0, b.fy)({ autoArchiveDuration: e });
+                (0, b.fy)({
+                    autoArchiveDuration: e,
+                });
             }),
             eu(this, "handleInvitableChanged", (e) => {
-                (0, b.fy)({ invitable: e });
+                (0, b.fy)({
+                    invitable: e,
+                });
             }),
             eu(this, "handleChannelSummariesToggled", (e) => {
                 let { channel: t } = this.props;
                 if (null == t) return null;
                 let n = (0, h.lA)(t.flags, er.lx.SUMMARIES_DISABLED, !e);
-                (0, b.fy)({ flags: n });
+                (0, b.fy)({
+                    flags: n,
+                });
             }),
             eu(this, "handleShowMediaOptionsToggled", (e) => {
                 let { channel: t } = this.props;
                 if (null == t) return null;
                 let n = (0, h.lA)(t.flags, er.lx.HIDE_MEDIA_DOWNLOAD_OPTIONS, !e);
-                (0, b.fy)({ flags: n });
+                (0, b.fy)({
+                    flags: n,
+                });
             });
         const r = null != (t = null == (n = this.props.channel) ? void 0 : n.topic) ? t : "";
         this.state = {
@@ -1038,6 +1119,7 @@ class eC extends i.PureComponent {
         };
     }
 }
+
 function eN() {
     let { errors: e, channel: t, submitting: n, subsection: r } = (0, g.cf)([Z.A], () => Z.A.getProps()),
         s = (0, g.bG)([z.A], () => {

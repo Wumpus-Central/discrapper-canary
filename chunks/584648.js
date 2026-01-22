@@ -1,5 +1,8 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(621466);
+
 function i(e, t, n) {
     let i = "horizontal" === t ? e.offsetWidth : e.offsetHeight,
         a = "horizontal" === t ? e.offsetLeft : e.offsetTop,
@@ -14,6 +17,7 @@ function i(e, t, n) {
         offsetSize: i,
     };
 }
+
 function a(e, t) {
     if ("horizontal" === t) {
         let { scrollLeft: t, scrollWidth: n, offsetWidth: r } = e;
@@ -30,10 +34,12 @@ function a(e, t) {
         offsetSize: i,
     };
 }
+
 function s(e, t, n) {
     let r = t - n + 1;
     return e >= r - 1 ? r : Math.max(0, e);
 }
+
 function o(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "vertical",
         o = (e) => {

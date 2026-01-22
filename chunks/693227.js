@@ -1,4 +1,8 @@
-n.d(t, { A: () => s }), n(896048), n(321073);
+n.d(t, {
+    A: () => s,
+}),
+    n(896048),
+    n(321073);
 var r = n(627968);
 n(64700);
 var l = n(311907),
@@ -6,6 +10,7 @@ var l = n(311907),
     o = n(545059),
     a = n(870391),
     d = n(994500);
+
 function s(e) {
     let { user: t, onAction: n, groupId: s } = e,
         u = t.id,

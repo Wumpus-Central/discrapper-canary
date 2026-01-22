@@ -30,6 +30,7 @@ let v = {
         [x.SMALL]: g.Bx,
         [x.LARGE]: g.J3,
     };
+
 function A(e) {
     var t, n, l;
     let {
@@ -66,7 +67,10 @@ function A(e) {
         D = L.length,
         w = (function (e, t, n, l, a) {
             if (0 === t && 0 === e) return null;
-            if (t > 0 && 0 === n) return f.intl.formatToPlainString(f.t.pnzE1t, { mutualGuildCount: t });
+            if (t > 0 && 0 === n)
+                return f.intl.formatToPlainString(f.t.pnzE1t, {
+                    mutualGuildCount: t,
+                });
             let r = t > 0 ? f.t.YR8PSL : f.t.GQjq6c,
                 i = new Intl.NumberFormat(l, {
                     notation: a ? "compact" : "standard",
@@ -110,7 +114,13 @@ function A(e) {
                                                             }),
                                                         });
                                                     return n
-                                                        ? (0, a.jsx)(r.Fragment, { children: i }, e.id)
+                                                        ? (0, a.jsx)(
+                                                              r.Fragment,
+                                                              {
+                                                                  children: i,
+                                                              },
+                                                              e.id,
+                                                          )
                                                         : (0, a.jsx)(
                                                               p.Ay,
                                                               {

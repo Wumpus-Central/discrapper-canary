@@ -1,6 +1,12 @@
-n.d(t, { A: () => g }), n(896048), n(638769), n(264879);
+n.d(t, {
+    A: () => g,
+}),
+    n(896048),
+    n(638769),
+    n(264879);
 var r = n(61090),
     i = n(100245);
+
 function a(e, t, n) {
     return (
         t in e
@@ -14,6 +20,7 @@ function a(e, t, n) {
         e
     );
 }
+
 function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -30,6 +37,7 @@ function s(e) {
     }
     return e;
 }
+
 function o(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -42,6 +50,7 @@ function o(e, t) {
     }
     return n;
 }
+
 function l(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -56,10 +65,11 @@ function l(e, t) {
 let c = () => {};
 n.g.__timingFunction = () => performance.now();
 let u = null == n.g.__getTotalRequireTime ? () => 0 : () => n.g.__getTotalRequireTime();
+
 function d(e, t) {
     if (0 === t || null == t) return null;
     let n = t - e;
-    return n < 0 || n > 1000000 ? null : n;
+    return n < 0 || n > 1e6 ? null : n;
 }
 class f {
     get start() {
@@ -195,7 +205,7 @@ class _ {
 }
 class h {
     constructor() {
-        a(this, "loadIndex", new f("\u2757", "Load index.tsx")),
+        a(this, "loadIndex", new f("❗", "Load index.tsx")),
             a(this, "loadFastConnectNativeModule", new f("\uD83D\uDCBE", "Load fast_connect native module")),
             a(this, "beginFastConnect", new f("\uD83C\uDF10", "Fast Connect IDENTIFY")),
             a(this, "loadImports", new f("\uD83C\uDFC3", "Load Imports")),
@@ -300,7 +310,7 @@ class m extends h {
                     var s;
                     let n = this.cachedMessageIds.sort(a.compare).reverse()[0],
                         r = t.sort(a.compare).reverse()[0];
-                    this.messageCacheAgeSeconds = Math.floor((a.extractTimestamp(r) - a.extractTimestamp(n)) / 1000);
+                    this.messageCacheAgeSeconds = Math.floor((a.extractTimestamp(r) - a.extractTimestamp(n)) / 1e3);
                     let o = t.filter((e) => {
                         var t;
                         return null == (t = this.cachedMessageIds) ? void 0 : t.includes(e);

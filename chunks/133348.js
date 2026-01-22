@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var l = n(627968);
 n(64700);
 var r = n(371444),
@@ -11,6 +13,7 @@ var r = n(371444),
     u = n(985018),
     m = n(641131),
     h = n(384474);
+
 function f(e) {
     let { channel: t, closePopout: n } = e,
         { sortOrder: f, layoutType: g, tagSetting: x } = (0, o.R)(t.id),

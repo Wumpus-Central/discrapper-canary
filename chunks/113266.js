@@ -1,4 +1,7 @@
-n.d(t, { A: () => V }), n(896048);
+n.d(t, {
+    A: () => V,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -36,6 +39,7 @@ var r = n(627968),
     k = n(980504),
     M = n(985018),
     U = n(252308);
+
 function F(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -61,6 +65,7 @@ function F(e) {
     }
     return e;
 }
+
 function B(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -80,6 +85,7 @@ function B(e, t) {
     );
 }
 let H = w.isPlatformEmbedded || "Safari" !== c().name;
+
 function V() {
     let e = (0, o.bG)([D.A], () => D.A.getProps().guild),
         { analyticsLocations: t } = (0, h.Ay)(x.A.GUILD_SETTINGS_SOUNDBOARD);
@@ -94,11 +100,14 @@ function V() {
                           variant: "heading-lg/semibold",
                           children: M.intl.string(M.t.OWQNYr),
                       }),
-                      (0, r.jsx)(X, { guild: e }),
+                      (0, r.jsx)(X, {
+                          guild: e,
+                      }),
                   ],
               }),
           });
 }
+
 function K(e) {
     let { children: t } = e;
     return (0, r.jsx)(g.Heading, {
@@ -108,6 +117,7 @@ function K(e) {
         children: t,
     });
 }
+
 function z(e) {
     let { currentTier: t, availableSounds: n, guildId: i } = e,
         l = S.A.getGuild(i),
@@ -122,7 +132,9 @@ function z(e) {
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(f.m, {
-                      text: M.intl.formatToPlainString(M.t.tuuJJT, { currentBoostLevel: t }),
+                      text: M.intl.formatToPlainString(M.t.tuuJJT, {
+                          currentBoostLevel: t,
+                      }),
                       children: (0, r.jsx)(g.DUT, {
                           className: U.c7,
                           onClick: () => {
@@ -228,20 +240,29 @@ let Y = (e) => {
             renderPopoutChildren: (t, n) =>
                 (0, r.jsx)(
                     "div",
-                    B(F({ ref: e }, n), {
-                        children: (0, r.jsx)(
-                            g.Button,
-                            B(F({}, t), {
-                                disabled: !0,
-                                variant: "primary",
-                                text: M.intl.string(M.t["/uNYPJ"]),
-                            }),
+                    B(
+                        F(
+                            {
+                                ref: e,
+                            },
+                            n,
                         ),
-                    }),
+                        {
+                            children: (0, r.jsx)(
+                                g.Button,
+                                B(F({}, t), {
+                                    disabled: !0,
+                                    variant: "primary",
+                                    text: M.intl.string(M.t["/uNYPJ"]),
+                                }),
+                            ),
+                        },
+                    ),
                 ),
             popoutTargetRef: e,
         });
     };
+
 function X(e) {
     let { guild: t } = e,
         [l, s] = (0, o.yK)([v.A], () => {
@@ -261,6 +282,7 @@ function X(e) {
     }, []);
     let b = i.useMemo(() => l.reduce((e, t) => ((e[t.soundId] = new Audio((0, A.A)(t.soundId))), e), {}), [l]),
         m = 0 === l.length && !s;
+
     function x(e) {
         var t;
         null == (t = c.current) || t.pause();
@@ -285,7 +307,13 @@ function X(e) {
               onClick: function () {
                   (0, g.mMO)(async () => {
                       let { default: e } = await Promise.all([n.e("40556"), n.e("61274")]).then(n.bind(n, 6503));
-                      return (n) => (0, r.jsx)(e, B(F({}, n), { guildId: t.id }));
+                      return (n) =>
+                          (0, r.jsx)(
+                              e,
+                              B(F({}, n), {
+                                  guildId: t.id,
+                              }),
+                          );
                   });
               },
               disabled: f <= 0 || !a,
@@ -328,7 +356,9 @@ function X(e) {
                   })
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, r.jsx)(g.cGx, { className: U.yF }),
+                          (0, r.jsx)(g.cGx, {
+                              className: U.yF,
+                          }),
                           (0, r.jsx)(g.Heading, {
                               className: U.jA,
                               variant: "heading-md/bold",
@@ -350,9 +380,15 @@ function X(e) {
                                   (0, r.jsxs)("div", {
                                       className: U.ZF,
                                       children: [
-                                          (0, r.jsx)(K, { children: M.intl.string(M.t.sMOuuS) }),
-                                          (0, r.jsx)(K, { children: M.intl.string(M.t.lLFvlT) }),
-                                          (0, r.jsx)(K, { children: M.intl.string(M.t["85qMS/"]) }),
+                                          (0, r.jsx)(K, {
+                                              children: M.intl.string(M.t.sMOuuS),
+                                          }),
+                                          (0, r.jsx)(K, {
+                                              children: M.intl.string(M.t.lLFvlT),
+                                          }),
+                                          (0, r.jsx)(K, {
+                                              children: M.intl.string(M.t["85qMS/"]),
+                                          }),
                                       ],
                                   }),
                                   l.map((e) =>
@@ -374,6 +410,7 @@ function X(e) {
         ],
     });
 }
+
 function J(e) {
     let { sound: t, isPlaying: l, onPlaySound: a, guild: c } = e,
         { soundId: d, name: f, user: p, userId: x, emojiId: j, emojiName: v } = t,
@@ -410,7 +447,9 @@ function J(e) {
         }, [E, c.id, A]),
         H = R.Ay.useUserTag(E);
     return (0, r.jsxs)("div", {
-        className: s()(U.nM, { [U.vu]: l }),
+        className: s()(U.nM, {
+            [U.vu]: l,
+        }),
         children: [
             P
                 ? (0, r.jsx)(m.A, {
@@ -495,8 +534,12 @@ function J(e) {
                               onClick: function (e) {
                                   e.stopPropagation(),
                                       (0, u.A)({
-                                          title: M.intl.formatToPlainString(M.t["PR/VbI"], { soundName: f }),
-                                          subtitle: M.intl.format(M.t["u6+CmN"], { soundName: f }),
+                                          title: M.intl.formatToPlainString(M.t["PR/VbI"], {
+                                              soundName: f,
+                                          }),
+                                          subtitle: M.intl.format(M.t["u6+CmN"], {
+                                              soundName: f,
+                                          }),
                                           confirmText: M.intl.string(M.t.oyYWHE),
                                           onConfirm: L,
                                       });

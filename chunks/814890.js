@@ -49,6 +49,7 @@ let h = new s.A("InteractionComponentUtils"),
             return null != (i = null == t ? void 0 : t.interactionError) ? i : g(e);
         }
     };
+
 function b(e) {
     var t;
     return null != (t = e.placeholder) ? t : _.intl.string(_.t.Otr6W2);
@@ -84,11 +85,13 @@ let y = (e) => {
             return !1;
     }
 };
+
 function O(e) {
     let t = new Map();
     for (let n of e) A(t, n);
     return t;
 }
+
 function A(e, t) {
     switch ((e.set(t.id, t), t.type)) {
         case a.I5.ACTION_ROW:
@@ -101,6 +104,7 @@ function A(e, t) {
             t.components.forEach((t) => A(e, t));
     }
 }
+
 function v(e, t) {
     var n, r, i;
     switch (e.type) {
@@ -113,6 +117,7 @@ function v(e, t) {
             return null != (i = e.components.find((e) => e.id === t)) ? i : null;
     }
 }
+
 function S(e) {
     let t = Array.from(O(e).values())
         .filter((e) => e.type === a.I5.TEXT_DISPLAY)
@@ -120,6 +125,7 @@ function S(e) {
         .join("\n");
     return "" !== t ? t : null;
 }
+
 function I(e, t) {
     function n(e) {
         let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
@@ -133,6 +139,7 @@ function I(e, t) {
     }
     return n(e);
 }
+
 function T(e) {
     switch (e.type) {
         case a.I5.ACTION_ROW:
@@ -166,6 +173,7 @@ function T(e) {
             return h.warn("getComponentChildren: Unknown component type", e.type), [];
     }
 }
+
 function C(e) {
     var t, n, i;
     return JSON.stringify({
@@ -174,6 +182,7 @@ function C(e) {
         uniqueId: null != (t = null == (n = (i = crypto).randomUUID) ? void 0 : n.call(i)) ? t : (0, r.A)(),
     });
 }
+
 function N(e) {
     try {
         let t = JSON.parse(e);
@@ -188,12 +197,15 @@ function N(e) {
         return null;
     }
 }
+
 function R(e) {
     return e.map((e, t) => w(e, [t])).filter((e) => null != e);
 }
+
 function w(e, t) {
     var n, r, s, o, c, p, _, g, E, b, O, A;
     if (!y(e.type)) return null;
+
     function v(e, n) {
         let r = w(e, [...t, n]);
         return null == r ? null : r;
@@ -462,6 +474,7 @@ function w(e, t) {
             return h.warn("transformComponent: Unknown component type", e.type), null;
     }
 }
+
 function P(e) {
     return (0, f.X1)(e.join(","));
 }

@@ -1,4 +1,7 @@
-n.d(t, { A: () => g }), n(65821);
+n.d(t, {
+    A: () => g,
+}),
+    n(65821);
 var r = n(627968),
     i = n(311907),
     a = n(397927),
@@ -8,6 +11,7 @@ var r = n(627968),
     c = n(544028),
     u = n(562153),
     d = n(899959);
+
 function f(e, t, n) {
     return (
         t in e
@@ -21,6 +25,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,6 +42,7 @@ function p(e) {
     }
     return e;
 }
+
 function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -49,6 +55,7 @@ function _(e, t) {
     }
     return n;
 }
+
 function h(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -60,6 +67,7 @@ function h(e, t) {
         e
     );
 }
+
 function m(e) {
     let { participants: t, channel: i } = e;
     return (0, r.jsx)(a.HOs, {
@@ -77,7 +85,13 @@ function m(e) {
                             let { default: t } = await Promise.all([n.e("97262"), n.e("32418"), n.e("8893")]).then(
                                 n.bind(n, 668569),
                             );
-                            return (n) => (0, r.jsx)(t, h(p({}, n), { user: e }));
+                            return (n) =>
+                                (0, r.jsx)(
+                                    t,
+                                    h(p({}, n), {
+                                        user: e,
+                                    }),
+                                );
                         });
                     },
                 },
@@ -86,6 +100,7 @@ function m(e) {
         ),
     });
 }
+
 function g(e) {
     let { children: t, participants: n, channel: s, onPopoutClosed: o, targetElementRef: u } = e,
         d = (0, i.bG)([c.A], () => c.A.theme),

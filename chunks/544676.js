@@ -1,4 +1,6 @@
-n.d(t, { default: () => I });
+n.d(t, {
+    default: () => I,
+});
 var i = n(627968),
     r = n(284009),
     s = n.n(r),
@@ -27,6 +29,7 @@ var i = n(627968),
     G = n(531335),
     x = n(652215),
     D = n(985018);
+
 function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -52,6 +55,7 @@ function M(e) {
     }
     return e;
 }
+
 function P(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -70,6 +74,7 @@ function P(e, t) {
         e
     );
 }
+
 function w(e) {
     let { guild: t, onSelect: r, hideSettings: c } = e,
         u = t.id,
@@ -98,16 +103,25 @@ function w(e) {
         V = (0, f.A)(t),
         B = (0, d.A)(t.id),
         X = (0, y.A)(t),
-        Y = (0, S.A)(t, { section: x.JJy.GUILD_LIST }),
+        Y = (0, S.A)(t, {
+            section: x.JJy.GUILD_LIST,
+        }),
         H = (0, p.A)(t.id),
         F = (0, N.A)(t.id),
         W = (0, E.A)(t),
         J = (0, g.os)("GuildContextMenu"),
         Q = (0, v.c)(t);
+
     function Z() {
         (0, a.mMO)(async () => {
             let { default: e } = await n.e("53485").then(n.bind(n, 20508));
-            return (n) => (0, i.jsx)(e, P(M({}, n), { guild: t }));
+            return (n) =>
+                (0, i.jsx)(
+                    e,
+                    P(M({}, n), {
+                        guild: t,
+                    }),
+                );
         });
     }
     return t.features.has(x.GuildFeatures.HUB)
@@ -126,7 +140,13 @@ function w(e) {
                               action: () =>
                                   (0, a.mMO)(async () => {
                                       let { default: e } = await n.e("62026").then(n.bind(n, 585265));
-                                      return (n) => (0, i.jsx)(e, P(M({}, n), { guild: t }));
+                                      return (n) =>
+                                          (0, i.jsx)(
+                                              e,
+                                              P(M({}, n), {
+                                                  guild: t,
+                                              }),
+                                          );
                                   }),
                           }),
                           C,
@@ -142,7 +162,9 @@ function w(e) {
                                 color: "danger",
                             }),
                         }),
-                  (0, i.jsx)(a.rXV, { children: X }),
+                  (0, i.jsx)(a.rXV, {
+                      children: X,
+                  }),
               ],
           })
         : (0, i.jsxs)(a.W1t, {
@@ -151,8 +173,12 @@ function w(e) {
               "aria-label": D.intl.string(D.t.HpQykc),
               onSelect: r,
               children: [
-                  (0, i.jsx)(a.rXV, { children: Y }),
-                  (0, i.jsx)(a.rXV, { children: I }),
+                  (0, i.jsx)(a.rXV, {
+                      children: Y,
+                  }),
+                  (0, i.jsx)(a.rXV, {
+                      children: I,
+                  }),
                   (0, i.jsxs)(a.rXV, {
                       children: [R, J || __OVERLAY__ ? null : k, J && !__OVERLAY__ ? F : null, T, H],
                   }),
@@ -167,7 +193,13 @@ function w(e) {
                                     action: () =>
                                         (0, a.mMO)(async () => {
                                             let { default: e } = await n.e("62026").then(n.bind(n, 585265));
-                                            return (n) => (0, i.jsx)(e, P(M({}, n), { guild: t }));
+                                            return (n) =>
+                                                (0, i.jsx)(
+                                                    e,
+                                                    P(M({}, n), {
+                                                        guild: t,
+                                                    }),
+                                                );
                                         }),
                                 }),
                           C,
@@ -188,11 +220,16 @@ function w(e) {
                               }),
                       ],
                   }),
-                  (0, i.jsx)(a.rXV, { children: Q }),
-                  (0, i.jsx)(a.rXV, { children: X }),
+                  (0, i.jsx)(a.rXV, {
+                      children: Q,
+                  }),
+                  (0, i.jsx)(a.rXV, {
+                      children: X,
+                  }),
               ],
           });
 }
+
 function I(e) {
     let { analyticsLocations: t } = (0, u.Ay)(c.A.CONTEXT_MENU);
     return (0, i.jsx)(u.f5, {

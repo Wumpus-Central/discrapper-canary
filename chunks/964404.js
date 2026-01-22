@@ -1,4 +1,6 @@
-n.d(t, { Ay: () => C });
+n.d(t, {
+    Ay: () => C,
+});
 var r,
     i = n(735438),
     a = n.n(i),
@@ -10,6 +12,7 @@ var c = n(185928),
     u = n(652215),
     d = n(698279),
     f = n(815968);
+
 function p(e, t, n) {
     return (
         t in e
@@ -23,6 +26,7 @@ function p(e, t, n) {
         e
     );
 }
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,26 +46,33 @@ function _(e) {
 let h = (window.innerWidth - u.MdR) / 2,
     m = "standard",
     g = null;
+
 function E() {
     return null == g && (g = Math.max((window.innerWidth - u.MdR) * 0.4, u.da6)), g;
 }
 let b = {};
+
 function y(e) {
     b = _({}, b, e.settings);
 }
+
 function O() {
     b = {
         useSystemTheme: b.useSystemTheme,
         darkSidebar: b.darkSidebar,
     };
 }
+
 function A() {
     null == b && (b = {});
 }
+
 function v() {}
+
 function S() {
     return (b.darkSidebar = !b.darkSidebar), !0;
 }
+
 function I() {
     var e;
     let t = s.Ay.PersistedStore.migrateAndReadStoreState("AccessibilityStore", []).state;

@@ -25,6 +25,7 @@ var r = n(627968),
     x = n(105530),
     E = n(806931),
     _ = n(750201);
+
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -50,6 +51,7 @@ function C(e) {
     }
     return e;
 }
+
 function S(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -116,13 +118,17 @@ let I = l.memo(function (e) {
                             (0, r.jsx)(f.E7M, {
                                 size: "md",
                                 color: "currentColor",
-                                className: a()(_.Kk, { [_.MD]: p }),
+                                className: a()(_.Kk, {
+                                    [_.MD]: p,
+                                }),
                             }),
                         (0, r.jsx)("img", {
                             src: null != (t = o.getAvatarURL(i.guild_id, 56, !1)) ? t : void 0,
                             alt: o.username,
                             "aria-label": o.username,
-                            className: a()(_.my, { [_.zj]: c || u }),
+                            className: a()(_.my, {
+                                [_.zj]: c || u,
+                            }),
                         }),
                     ],
                 }),
@@ -137,7 +143,10 @@ let I = l.memo(function (e) {
             ],
         });
     }),
-    T = () => (0, r.jsx)("div", { className: _.j8 }),
+    T = () =>
+        (0, r.jsx)("div", {
+            className: _.j8,
+        }),
     P = l.memo(function (e) {
         let { participant: t, channel: i } = e,
             { user: s, blocked: d } = t,
@@ -189,7 +198,9 @@ let I = l.memo(function (e) {
                                     }),
                                 );
                         },
-                        { context: T },
+                        {
+                            context: T,
+                        },
                     );
             },
             [s, x, T, v, i, I],

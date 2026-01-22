@@ -1,7 +1,11 @@
-n.d(t, { b: () => d }), n(311907);
+n.d(t, {
+    b: () => d,
+}),
+    n(311907);
 var r = n(945810);
 n(217222);
 var i = n(128319);
+
 function a(e, t, n) {
     return (
         t in e
@@ -15,6 +19,7 @@ function a(e, t, n) {
         e
     );
 }
+
 function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -31,6 +36,7 @@ function s(e) {
     }
     return e;
 }
+
 function o(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -43,6 +49,7 @@ function o(e, t) {
     }
     return n;
 }
+
 function l(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -54,15 +61,33 @@ function l(e, t) {
         e
     );
 }
-let c = { preferSystemEffects: !1 },
+let c = {
+        preferSystemEffects: !1,
+    },
     u = (0, r.mj)({
         name: "2025-12-windows-audio-effects",
         kind: "user",
         defaultConfig: c,
-        variations: { 1: l(s({}, c), { preferSystemEffects: !0 }) },
+        variations: {
+            1: l(s({}, c), {
+                preferSystemEffects: !0,
+            }),
+        },
     });
+
 function d(e) {
     let { location: t } = e,
-        { isInHoldout: n } = i.p.getCurrentConfig({ location: t }, { autoTrackExposure: !0 });
-    return n ? u.definition.defaultConfig : u.getConfig({ location: t });
+        { isInHoldout: n } = i.p.getCurrentConfig(
+            {
+                location: t,
+            },
+            {
+                autoTrackExposure: !0,
+            },
+        );
+    return n
+        ? u.definition.defaultConfig
+        : u.getConfig({
+              location: t,
+          });
 }

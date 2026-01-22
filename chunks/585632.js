@@ -1,4 +1,9 @@
-n.d(t, { A: () => b }), n(896048), n(228524), n(321073);
+n.d(t, {
+    A: () => b,
+}),
+    n(896048),
+    n(228524),
+    n(321073);
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -9,6 +14,7 @@ var i = n(397927),
     o = n(79143),
     d = n(2242),
     u = n(985018);
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,6 +40,7 @@ function f(e) {
     }
     return e;
 }
+
 function g(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -52,9 +59,11 @@ function g(e, t) {
         e
     );
 }
+
 function b() {
     let { editStateId: e, guildId: t } = (0, s.O)(),
         [n, b] = a.$O(e);
+
     function m(e, t) {
         let { name: r, description: i, emojiId: l, emojiName: s } = e,
             a = [...n],
@@ -96,7 +105,11 @@ function b() {
                 },
                 guildId: t,
             }),
-            n.length > 0 ? (0, r.jsx)(i.hKd, { size: 8 }) : null,
+            n.length > 0
+                ? (0, r.jsx)(i.hKd, {
+                      size: 8,
+                  })
+                : null,
             (0, r.jsx)(o.n, {
                 onClick: function () {
                     (0, i.qfG)((e) =>

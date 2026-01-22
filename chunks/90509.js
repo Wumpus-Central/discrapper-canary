@@ -1,9 +1,12 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
     l = n(422258),
     a = n(985018);
+
 function c(e) {
     return (0, r.jsx)(i.Drp, {
         id: "delete-channel",

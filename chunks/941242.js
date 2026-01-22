@@ -1,9 +1,12 @@
-Object.defineProperty(t, "__esModule", { value: !0 }),
+Object.defineProperty(t, "__esModule", {
+    value: !0,
+}),
     (t.FormatBuilder = void 0),
     (t.bindFormatValuesWithBuilder = l),
     (t.bindFormatValues = c);
 let r = n(450678),
     i = n(503574);
+
 function a(e) {
     return "$" === e[0];
 }
@@ -21,6 +24,7 @@ class o extends Error {
             (this.nodeType = n);
     }
 }
+
 function l(e) {
     var t;
     let {
@@ -142,7 +146,15 @@ function l(e) {
                         let n = `=${y}`;
                         return n in t
                             ? t[n]
-                            : null != (e = t[p.getPluralRules({ type: i }).select(y - (null != r ? r : 0))])
+                            : null !=
+                                (e =
+                                    t[
+                                        p
+                                            .getPluralRules({
+                                                type: i,
+                                            })
+                                            .select(y - (null != r ? r : 0))
+                                    ])
                               ? e
                               : t.other;
                     })();
@@ -162,6 +174,7 @@ function l(e) {
         }
     }
 }
+
 function c(e) {
     let {
             Builder: t,
@@ -174,7 +187,9 @@ function c(e) {
             currentPluralValue: c,
             keyPrefix: u,
         } = e,
-        d = new t({ keyPrefix: u });
+        d = new t({
+            keyPrefix: u,
+        });
     return (
         "string" == typeof r
             ? d.pushLiteralText(r)

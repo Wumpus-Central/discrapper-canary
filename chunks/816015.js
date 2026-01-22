@@ -1,4 +1,7 @@
-n.d(t, { A: () => b }), n(896048);
+n.d(t, {
+    A: () => b,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(960488),
@@ -12,6 +15,7 @@ var r = n(627968),
     f = n(998515),
     h = n(652215),
     A = n(58682);
+
 function g(e, t, n) {
     return (
         t in e
@@ -70,6 +74,8 @@ class m extends i.Component {
 let b = (0, o.A)(
     a.Ay.connectStores([u.A], (e) => {
         let { channel: t, inputSkuId: n } = e;
-        return { skuId: null != n ? n : u.A.getSkuIdForChannel(t.id) };
+        return {
+            skuId: null != n ? n : u.A.getSkuIdForChannel(t.id),
+        };
     })(m),
 );

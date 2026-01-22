@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(873298),
     i = n(775602),
     a = n(284016),
@@ -6,6 +8,7 @@ var r = n(873298),
     o = n(617617),
     l = n(652215),
     c = n(185928);
+
 function u(e, t) {
     var n, u, d;
     if (__OVERLAY__) return l.NJ8.DARK;

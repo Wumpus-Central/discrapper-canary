@@ -18,6 +18,7 @@ let o = function (e) {
         });
     },
     l = (e, t) => e.acked || (t !== r.xM && i.default.compare(t, e.id) >= 0);
+
 function c(e, t, n) {
     let r = i.default.fromTimestamp(new Date(t).getTime());
     return {
@@ -32,6 +33,7 @@ function c(e, t, n) {
         applicationId: n,
     };
 }
+
 function u(e, t, n) {
     let r = i.default.fromTimestamp(new Date(t).getTime());
     return {
@@ -46,6 +48,7 @@ function u(e, t, n) {
         applicationId: n,
     };
 }
+
 function d(e) {
     return {
         acked: !1,

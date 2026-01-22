@@ -20,12 +20,15 @@ var r = n(284009),
     f = n(499785),
     p = n(652215);
 let _ = new c.A("UserProfileModalActionCreators");
+
 function h() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         { withAnalyticsToken: t = !1 } = e;
     return s.Bo.get({
         url: p.Rsh.ME,
-        query: { with_analytics_token: t },
+        query: {
+            with_analytics_token: t,
+        },
         oldFormErrors: !0,
         rejectWithError: !1,
     }).then(
@@ -39,12 +42,15 @@ function h() {
         ),
     );
 }
+
 function m() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     return f.A.patch({
         url: p.Rsh.USER_AGREEMENTS,
-        trackedActionData: { event: a.D.USER_ACCEPT_AGREEMENTS },
+        trackedActionData: {
+            event: a.D.USER_ACCEPT_AGREEMENTS,
+        },
         body: {
             terms: e,
             privacy: t,
@@ -56,6 +62,7 @@ function m() {
         () => !1,
     );
 }
+
 function g(e, t) {
     let n = d.default.getCurrentUser();
     i()(null != n, "setFlag: user cannot be undefined");
@@ -63,10 +70,13 @@ function g(e, t) {
     return s.Bo.patch({
         url: p.Rsh.ME,
         oldFormErrors: !0,
-        body: { flags: r },
+        body: {
+            flags: r,
+        },
         rejectWithError: !1,
     });
 }
+
 function E(e) {
     let t = d.default.getUser(e);
     return null != t
@@ -85,6 +95,7 @@ function E(e) {
               ),
           );
 }
+
 function b(e) {
     return (
         o.h.dispatch({

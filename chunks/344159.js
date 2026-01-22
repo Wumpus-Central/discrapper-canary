@@ -10,6 +10,7 @@ var r = n(64700),
     l = n(927578),
     c = n(818348),
     u = n(985018);
+
 function d(e, t, n) {
     let i = {
             closeModal: t,
@@ -26,7 +27,9 @@ function d(e, t, n) {
                 null != e.paymentGateway &&
                 !n &&
                 (a.A.show({
-                    title: u.intl.formatToPlainString(u.t["6mIX6s"], { paymentGatewayName: c.qm[e.paymentGateway] }),
+                    title: u.intl.formatToPlainString(u.t["6mIX6s"], {
+                        paymentGatewayName: c.qm[e.paymentGateway],
+                    }),
                     body: u.intl.format(u.t.EOa8ei, {
                         paymentGatewayName: c.qm[e.paymentGateway],
                         subscriptionManagementLink: (0, l.tW)(e.paymentGateway, "SUBSCRIPTION_MANAGEMENT"),
@@ -37,6 +40,7 @@ function d(e, t, n) {
         }, [e]);
 }
 let f = [];
+
 function p(e, t) {
     let n = (0, i.bG)([s.A], () => (null != e ? s.A.get(e) : null)),
         a = (0, i.yK)([o.A], () => {

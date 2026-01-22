@@ -1,4 +1,6 @@
-n.d(t, { Y: () => P });
+n.d(t, {
+    Y: () => P,
+});
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -25,13 +27,18 @@ var r = n(627968),
     T = n(985018),
     C = n(702888);
 let N = 250;
+
 function R(e) {
     return null != e && "animated" in e;
 }
 let w = (e) => {
         let { inspectedEmoji: t, guild: n } = e,
             r = R(t);
-        return null != n && r ? T.intl.format(T.t.KFW2aY, { guildName: n.name }) : null;
+        return null != n && r
+            ? T.intl.format(T.t.KFW2aY, {
+                  guildName: n.name,
+              })
+            : null;
     },
     P = i.memo(function (e) {
         let t,

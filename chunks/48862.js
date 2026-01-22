@@ -1,4 +1,6 @@
-n.d(t, { A: () => A });
+n.d(t, {
+    A: () => A,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -15,6 +17,7 @@ var r = n(627968),
     m = n(652215),
     g = n(985018),
     E = n(133440);
+
 function b(e, t, n) {
     return (
         t in e
@@ -28,6 +31,7 @@ function b(e, t, n) {
         e
     );
 }
+
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -44,12 +48,23 @@ function y(e) {
     }
     return e;
 }
+
 function O() {
     (0, c.mMO)(async () => {
         let { default: e } = await n.e("66920").then(n.bind(n, 220763));
-        return (t) => (0, r.jsx)(e, y({ channel: null }, t));
+        return (t) =>
+            (0, r.jsx)(
+                e,
+                y(
+                    {
+                        channel: null,
+                    },
+                    t,
+                ),
+            );
     });
 }
+
 function A(e) {
     let { className: t, iconOnly: n } = e,
         a = (0, o.bG)([_.A, p.A], () => {
@@ -79,7 +94,9 @@ function A(e) {
                     (0, r.jsx)(c.Text, {
                         className: E.Qq,
                         variant: "text-sm/normal",
-                        children: g.intl.format(g.t.BNAIBU, { onLearnMore: O }),
+                        children: g.intl.format(g.t.BNAIBU, {
+                            onLearnMore: O,
+                        }),
                     }),
                 ],
             }),

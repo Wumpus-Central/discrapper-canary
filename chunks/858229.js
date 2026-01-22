@@ -1,10 +1,14 @@
-n.d(t, { A: () => o }), n(896048);
+n.d(t, {
+    A: () => o,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(397927),
     s = n(391958),
     a = n(985018),
     c = n(816925);
+
 function o(e) {
     let { onChange: t, initialValue: n, maxWordCount: o, collapsed: d = !1 } = e,
         [u, f] = i.useState(!d);

@@ -13,6 +13,7 @@ var r = n(64700),
     l = n(253932),
     c = n(287809),
     u = n(652215);
+
 function d(e, t, n) {
     return (
         t in e
@@ -26,6 +27,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -77,7 +79,9 @@ let p = (e) => {
     g = (e) => {
         let t = null != e ? e : l.qN.getSetting();
         return {
-            goreContentGuilds: p({ setting: null == t ? void 0 : t.goreContentGuilds }),
+            goreContentGuilds: p({
+                setting: null == t ? void 0 : t.goreContentGuilds,
+            }),
             goreContentNonFriendDm: p({
                 setting: null == t ? void 0 : t.goreContentNonFriendDm,
                 isDm: !0,

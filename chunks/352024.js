@@ -29,7 +29,9 @@ let l = null;
 try {
     let e = (0, o.v)();
     if (null == e) throw Error("Failed to create media audio context");
-    l = new AudioContext({ sampleRate: Math.min(e.sampleRate, 48000) });
+    l = new AudioContext({
+        sampleRate: Math.min(e.sampleRate, 48e3),
+    });
 } catch (e) {}
 async function f(e) {
     if (null == l) throw Error("Failed to create audio context");
@@ -89,13 +91,13 @@ async function h(e) {
             sampleRate: e.sampleRate,
             numberOfFrames: e.length,
             numberOfChannels: e.numberOfChannels,
-            timestamp: 1000 * e.duration * 1000,
+            timestamp: 1e3 * e.duration * 1e3,
             data: n,
         }),
         o = new AudioEncoder({
             output: function (n) {
                 r()(null != n.duration, "Chunk duration must not be null");
-                let a = (n.duration / 1000000) * e.sampleRate,
+                let a = (n.duration / 1e6) * e.sampleRate,
                     o = new Uint8Array(n.byteLength);
                 n.copyTo(o),
                     t.push({
@@ -124,7 +126,9 @@ async function h(e) {
                     channelMappingFamily: 0,
                 }),
             ],
-            { type: "audio/ogg" },
+            {
+                type: "audio/ogg",
+            },
         )
     );
 }
@@ -147,10 +151,14 @@ async function p(e, t) {
         }
         return h;
     })(await f(e), t);
-    return new File([await h(n)], "sound.ogg", { type: "audio/ogg" });
+    return new File([await h(n)], "sound.ogg", {
+        type: "audio/ogg",
+    });
 }
 async function g(e) {
-    let t = new File([e], "audio.mp4", { type: e.type }),
+    let t = new File([e], "audio.mp4", {
+            type: e.type,
+        }),
         n = await f(t);
     return await h(n);
 }

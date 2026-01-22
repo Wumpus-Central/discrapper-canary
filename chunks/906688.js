@@ -1,4 +1,6 @@
-n.d(t, { A: () => E });
+n.d(t, {
+    A: () => E,
+});
 var r = n(627968);
 n(64700);
 var i = n(827734),
@@ -8,6 +10,7 @@ var i = n(827734),
     l = n(682174),
     c = n(927018),
     u = n(715438);
+
 function d(e, t, n) {
     return (
         t in e
@@ -21,6 +24,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -50,6 +54,7 @@ let p = {
     h = 0.8,
     m = 0.4,
     g = 1;
+
 function E(e) {
     var t;
     let { achievementId: n, unlocked: i, size: d = s._3J.SIZE_40 } = e,
@@ -111,7 +116,15 @@ function E(e) {
                 (0, r.jsx)("div", {
                     className: u.dq,
                     style: N,
-                    children: (0, r.jsx)(l.A, f({ className: u.ox }, C)),
+                    children: (0, r.jsx)(
+                        l.A,
+                        f(
+                            {
+                                className: u.ox,
+                            },
+                            C,
+                        ),
+                    ),
                 }),
         ],
     });

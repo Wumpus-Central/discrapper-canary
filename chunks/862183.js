@@ -1,4 +1,7 @@
-n.d(t, { A: () => g }), n(228524);
+n.d(t, {
+    A: () => g,
+}),
+    n(228524);
 var r = n(627968),
     i = n(64700),
     a = n(397927),
@@ -11,6 +14,7 @@ var r = n(627968),
     f = n(448137),
     p = n(262547),
     _ = n(291071);
+
 function h(e, t, n) {
     return (
         t in e
@@ -24,6 +28,7 @@ function h(e, t, n) {
         e
     );
 }
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -40,6 +45,7 @@ function m(e) {
     }
     return e;
 }
+
 function g(e) {
     var t;
     let { command: n, application: h, onClick: g, query: E, searchResultsPosition: b } = e,
@@ -47,12 +53,32 @@ function g(e) {
             (e) => {
                 if ((0, l.$B)(h)) {
                     let t = h instanceof o.Ay ? h : o.Ay.createFromServer(h);
-                    (0, s.jA)(e, (e) => (0, r.jsx)(u.A, m({ application: t }, e)));
+                    (0, s.jA)(e, (e) =>
+                        (0, r.jsx)(
+                            u.A,
+                            m(
+                                {
+                                    application: t,
+                                },
+                                e,
+                            ),
+                        ),
+                    );
                 }
             },
             [h],
         ),
-        { iconURL: O, name: A, description: v } = i.useMemo(() => (0, l.X2)(h, { fakeAppIconURL: _ }), [h]),
+        {
+            iconURL: O,
+            name: A,
+            description: v,
+        } = i.useMemo(
+            () =>
+                (0, l.X2)(h, {
+                    fakeAppIconURL: _,
+                }),
+            [h],
+        ),
         S = i.useMemo(() => {
             var e;
             let t = null != (e = null == n ? void 0 : n.displayDescription) ? e : v;
@@ -105,7 +131,9 @@ function g(e) {
                           children: A,
                       })
                     : null,
-                (0, r.jsx)("div", { className: p.V1 }),
+                (0, r.jsx)("div", {
+                    className: p.V1,
+                }),
             ],
         }),
     });

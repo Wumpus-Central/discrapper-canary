@@ -1,4 +1,7 @@
-n.d(t, { A: () => m }), n(896048);
+n.d(t, {
+    A: () => m,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     s = n(311907),
@@ -12,6 +15,7 @@ var r = n(627968),
     f = n(714505),
     p = n(652215),
     g = n(985018);
+
 function m(e) {
     let { location: t } = e,
         [n, m] = i.useState(!1),
@@ -35,7 +39,9 @@ function m(e) {
                 title: g.intl.string(g.t["dAfGb+"]),
                 buttonText: g.intl.string(g.t["uJWIj/"]),
                 onButtonClick: E,
-                image: (0, r.jsx)(l.bqQ, { alt: g.intl.string(g.t["dAfGb+"]) }),
+                image: (0, r.jsx)(l.bqQ, {
+                    alt: g.intl.string(g.t["dAfGb+"]),
+                }),
             })
           : null != x
             ? (0, r.jsx)(c.A, {

@@ -1,4 +1,6 @@
-n.d(t, { A: () => j });
+n.d(t, {
+    A: () => j,
+});
 var l = n(627968),
     i = n(64700),
     a = n(503698),
@@ -14,12 +16,15 @@ var l = n(627968),
     g = n(333354),
     b = n(985018),
     p = n(276079);
+
 function _(e) {
     let { guildId: t, gameInstance: n, cost: i } = e;
     return (0, l.jsx)(u.un, {
         "aria-label": b.intl.string(g.default.TZsu1U),
         title: b.intl.string(g.default.TZsu1U),
-        body: b.intl.formatToPlainString(g.default["5HQUzD"], { boostCount: i }),
+        body: b.intl.formatToPlainString(g.default["5HQUzD"], {
+            boostCount: i,
+        }),
         children: (0, l.jsx)("div", {
             className: p.vI,
             children: (0, l.jsx)(o.Button, {
@@ -38,6 +43,7 @@ function _(e) {
         }),
     });
 }
+
 function j(e) {
     var t, n, a, u;
     let { guildId: f, gameInstance: j, onClick: x } = e,
@@ -60,7 +66,9 @@ function j(e) {
     return null == A
         ? null
         : (0, l.jsxs)(o.DUT, {
-              className: r()(p.LO, { [p.r9]: !O }),
+              className: r()(p.LO, {
+                  [p.r9]: !O,
+              }),
               onClick: O ? () => x(j) : void 0,
               "aria-disabled": !O,
               children: [
@@ -77,8 +85,12 @@ function j(e) {
                               children: j.name,
                           }),
                           y
-                              ? (0, l.jsx)(c.P5, { dateString: h.ends_at })
-                              : (0, l.jsx)(c.TG, { text: b.intl.string(g.default.FFLkmx) }),
+                              ? (0, l.jsx)(c.P5, {
+                                    dateString: h.ends_at,
+                                })
+                              : (0, l.jsx)(c.TG, {
+                                    text: b.intl.string(g.default.FFLkmx),
+                                }),
                       ],
                   }),
                   O &&

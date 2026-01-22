@@ -1,4 +1,7 @@
-n.d(t, { A: () => _ }), n(896048);
+n.d(t, {
+    A: () => _,
+}),
+    n(896048);
 var l,
     a,
     r = n(627968),
@@ -15,6 +18,7 @@ var l,
     f = n(652215),
     g = n(985018),
     x = n(881425);
+
 function v(e, t, n) {
     return (
         t in e
@@ -46,7 +50,13 @@ class j extends (l = i.PureComponent) {
                 paginationDotSelectedClassName: i,
                 paginationArrowIconType: s = "arrow",
             } = this.props,
-            o = c()(x.sb, { [x.JU]: n }, l);
+            o = c()(
+                x.sb,
+                {
+                    [x.JU]: n,
+                },
+                l,
+            );
         return (0, r.jsxs)("div", {
             className: c()(x.ne, this.props.className),
             children: [
@@ -67,7 +77,9 @@ class j extends (l = i.PureComponent) {
                             {
                                 onClick: () => this.handleDotClick(t),
                                 className: t === e ? c()(x.NU, i) : c()(x.Lw, a),
-                                "aria-label": g.intl.formatToPlainString(g.t["2SXOrM"], { pageNumber: t + 1 }),
+                                "aria-label": g.intl.formatToPlainString(g.t["2SXOrM"], {
+                                    pageNumber: t + 1,
+                                }),
                             },
                             "dot-".concat(t),
                         ),
@@ -103,7 +115,9 @@ class j extends (l = i.PureComponent) {
             });
     }
 }
-v(j, "defaultProps", { includeHitboxPadding: !0 });
+v(j, "defaultProps", {
+    includeHitboxPadding: !0,
+});
 class A extends (a = i.PureComponent) {
     componentDidMount() {
         h.h.subscribe("WINDOW_FOCUS", this.handleWindowFocusChange),
@@ -171,7 +185,9 @@ class A extends (a = i.PureComponent) {
                     onMouseLeave: this.handleMouseLeave,
                     children: [
                         (0, r.jsx)("div", {
-                            style: { aspectRatio: g },
+                            style: {
+                                aspectRatio: g,
+                            },
                             children: (0, r.jsx)(m.A, {
                                 className: c()(x.Dk, l),
                                 step: A,
@@ -210,7 +226,9 @@ class A extends (a = i.PureComponent) {
             v(this, "timer", new u.IX()),
             v(this, "handleWindowFocusChange", (e) => {
                 let { focused: t } = e;
-                this.setState({ paused: !t });
+                this.setState({
+                    paused: !t,
+                });
             }),
             v(this, "getCurrentDirection", () => this.state.direction),
             v(this, "nextItem", () => {
@@ -227,10 +245,14 @@ class A extends (a = i.PureComponent) {
                 this.changeItem(n, e - t);
             }),
             v(this, "handleMouseEnter", () => {
-                this.setState({ paused: !0 });
+                this.setState({
+                    paused: !0,
+                });
             }),
             v(this, "handleMouseLeave", () => {
-                this.setState({ paused: !1 });
+                this.setState({
+                    paused: !1,
+                });
             }),
             v(this, "handleIntentionalChange", (e, t, n) => {
                 let { items: l, onIntentionalChange: a } = this.props;
@@ -243,5 +265,7 @@ class A extends (a = i.PureComponent) {
             });
     }
 }
-v(A, "defaultProps", { aspectRatio: 16 / 9 });
+v(A, "defaultProps", {
+    aspectRatio: 16 / 9,
+});
 let _ = A;

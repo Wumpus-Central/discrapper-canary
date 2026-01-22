@@ -14,6 +14,7 @@ var r = n(627968),
     d = n(985018),
     f = n(603702),
     p = n(222872);
+
 function _(e, t, n) {
     return (
         t in e
@@ -27,6 +28,7 @@ function _(e, t, n) {
         e
     );
 }
+
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -43,19 +45,34 @@ function h(e) {
     }
     return e;
 }
+
 function m(e) {
     let { transitionState: t, onClose: n } = e,
         _ = (0, s.bG)([c.default], () => {
             var e;
             return null == (e = c.default.getCurrentUser()) ? void 0 : e.email;
         }),
-        [h, m] = i.useState({ status: "unknown" });
+        [h, m] = i.useState({
+            status: "unknown",
+        });
     i.useEffect(() => {
-        m({ status: "loading" }),
+        m({
+            status: "loading",
+        }),
             l.A.verifyResend().then(
-                () => m({ status: "success" }),
+                () =>
+                    m({
+                        status: "success",
+                    }),
                 (e) => {
-                    m({ status: "error" }), (0, u.RF)(e, { tags: { location: "QuestsRewardModalUnverified" } });
+                    m({
+                        status: "error",
+                    }),
+                        (0, u.RF)(e, {
+                            tags: {
+                                location: "QuestsRewardModalUnverified",
+                            },
+                        });
                 },
             );
     }, []);
@@ -111,6 +128,7 @@ function m(e) {
         ],
     });
 }
+
 function g() {
     (0, o.mMO)(async () => {
         let { QuestRewardModalUnverified: e } = await Promise.resolve().then(n.bind(n, 175248));

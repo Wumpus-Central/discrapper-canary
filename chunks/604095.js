@@ -22,12 +22,24 @@ async function r() {
         minimizeToTray: i,
     });
 }
+
 function u(t) {
-    s.setState({ openOnStartup: t }), l.Ay.send("TOGGLE_OPEN_ON_STARTUP", t);
+    s.setState({
+        openOnStartup: t,
+    }),
+        l.Ay.send("TOGGLE_OPEN_ON_STARTUP", t);
 }
+
 function a(t) {
-    s.setState({ startMinimized: t }), l.Ay.send("TOGGLE_START_MINIMIZED", t);
+    s.setState({
+        startMinimized: t,
+    }),
+        l.Ay.send("TOGGLE_START_MINIMIZED", t);
 }
+
 function o(t) {
-    s.setState({ minimizeToTray: t }), l.Ay.send("TOGGLE_MINIMIZE_TO_TRAY", t);
+    s.setState({
+        minimizeToTray: t,
+    }),
+        l.Ay.send("TOGGLE_MINIMIZE_TO_TRAY", t);
 }

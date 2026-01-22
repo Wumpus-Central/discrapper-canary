@@ -1,4 +1,6 @@
-n.d(t, { A: () => T });
+n.d(t, {
+    A: () => T,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -26,13 +28,16 @@ let I = "".concat(
     o.A.getArticleURL(v.MVz.VOICE_VIDEO_TROUBLESHOOTING),
     "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm",
 );
+
 function T() {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)(l.A, {
                 webSetting: A.H.VOICE_AND_VIDEO_VOICE,
                 children: [
-                    (0, r.jsx)(s.A, { sourcePage: "voice" }),
+                    (0, r.jsx)(s.A, {
+                        sourcePage: "voice",
+                    }),
                     (0, r.jsxs)(c.A, {
                         children: [
                             (0, r.jsx)(a.x, {
@@ -49,7 +54,9 @@ function T() {
                                     (0, r.jsx)(h.A, {}),
                                     (0, r.jsx)(i.Text, {
                                         variant: "text-sm/normal",
-                                        children: S.intl.format(S.t["V+B3FH"], { guideURL: I }),
+                                        children: S.intl.format(S.t["V+B3FH"], {
+                                            guideURL: I,
+                                        }),
                                     }),
                                 ],
                             }),

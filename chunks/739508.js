@@ -7,6 +7,7 @@ n.d(t, {
 var r = n(184015),
     i = n(728458),
     a = n(818348);
+
 function s(e, t, n) {
     return (
         t in e
@@ -20,6 +21,7 @@ function s(e, t, n) {
         e
     );
 }
+
 function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +38,7 @@ function o(e) {
     }
     return e;
 }
+
 function l(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -48,6 +51,7 @@ function l(e, t) {
     }
     return n;
 }
+
 function c(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -59,21 +63,46 @@ function c(e, t) {
         e
     );
 }
+
 function u(e, t) {
     let n = new Date();
-    return n.setMonth(e - 1), n.toLocaleString(t, { month: "short" });
+    return (
+        n.setMonth(e - 1),
+        n.toLocaleString(t, {
+            month: "short",
+        })
+    );
 }
 async function d(e) {
     let t = null;
     if (null != e && e.paymentGateway === a.kM.BRAINTREE) {
         let e = await (0, r.Z)();
-        null != e && (t = { braintree_device_data: e });
+        null != e &&
+            (t = {
+                braintree_device_data: e,
+            });
     }
     return t;
 }
+
 function f(e, t) {
-    i.A.captureException(e, c(o({}, t), { tags: c(o({}, null == t ? void 0 : t.tags), { app_context: "billing" }) }));
+    i.A.captureException(
+        e,
+        c(o({}, t), {
+            tags: c(o({}, null == t ? void 0 : t.tags), {
+                app_context: "billing",
+            }),
+        }),
+    );
 }
+
 function p(e, t) {
-    i.A.captureMessage(e, c(o({}, t), { tags: c(o({}, null == t ? void 0 : t.tags), { app_context: "billing" }) }));
+    i.A.captureMessage(
+        e,
+        c(o({}, t), {
+            tags: c(o({}, null == t ? void 0 : t.tags), {
+                app_context: "billing",
+            }),
+        }),
+    );
 }

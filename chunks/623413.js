@@ -1,4 +1,6 @@
-n.d(t, { A: () => O });
+n.d(t, {
+    A: () => O,
+});
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -31,7 +33,9 @@ let O = function (e) {
             (0, r.jsx)(p.A, {}),
             (0, r.jsx)("div", {
                 className: y.os,
-                style: { maxWidth: 168 * E },
+                style: {
+                    maxWidth: 168 * E,
+                },
                 children: _.slice(0, 5).map((e) =>
                     (0, r.jsx)(
                         f.Ay,
@@ -74,7 +78,9 @@ let O = function (e) {
                             disabled: !O,
                         }),
                     }),
-                    (0, r.jsx)(m.l, { channel: n }),
+                    (0, r.jsx)(m.l, {
+                        channel: n,
+                    }),
                 ],
             }),
         ],

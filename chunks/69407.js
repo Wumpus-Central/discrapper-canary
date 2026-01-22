@@ -21,6 +21,7 @@ var r = n(713402),
     m = n(446600),
     g = n(105530),
     E = n(905278);
+
 function b(e, t, n) {
     return (
         t in e
@@ -34,6 +35,7 @@ function b(e, t, n) {
         e
     );
 }
+
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -50,6 +52,7 @@ function y(e) {
     }
     return e;
 }
+
 function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -62,6 +65,7 @@ function O(e, t) {
     }
     return n;
 }
+
 function A(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -91,6 +95,7 @@ var v = (function (e) {
     S = (function (e) {
         return (e.VOICE = "VOICE"), (e.STREAM = "STREAM"), e;
     })({});
+
 function I(e) {
     var t;
     let { speaker: n, role: r, user: a, userNick: s, connectedOn: o, voiceState: l, type: c } = e,
@@ -108,14 +113,17 @@ function I(e) {
         .concat(o)
         .concat((0, i.A)(s, a));
 }
+
 function T(e) {
     let { user: t, voiceState: n } = e,
         r = n.requestToSpeakTimestamp;
     return null == r ? t.id : "".concat(Date.parse(r)).concat(t.id);
 }
+
 function C(e) {
     return e === g.zF.REQUESTED_TO_SPEAK || e === g.zF.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
 }
+
 function N(e) {
     let { speaker: t, role: n, rtsState: r, blocked: i, ignored: a, isFriend: s } = e,
         o = [];

@@ -1,9 +1,12 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968),
     i = n(732955),
     a = n(79545),
     s = n(884392),
     o = n(985018);
+
 function l(e) {
     let { taskType: t } = e;
     return (0, r.jsx)(i.$nd, {
@@ -13,10 +16,14 @@ function l(e) {
         text: o.intl.string(o.t.P84bAD),
     });
 }
+
 function c(e) {
     let { taskType: t } = e;
-    return (0, r.jsx)(l, { taskType: t });
+    return (0, r.jsx)(l, {
+        taskType: t,
+    });
 }
+
 function u(e) {
     let { taskType: t } = e;
     return (0, r.jsx)(i.$nd, {
@@ -26,6 +33,7 @@ function u(e) {
         text: o.intl.string(o.t.P84bAD),
     });
 }
+
 function d(e) {
     let { taskType: t } = e;
     return (0, r.jsx)(i.$nd, {
@@ -65,13 +73,21 @@ let f = function (e) {
                 analyticsCtxQuestContentPosition: _,
             });
         case a.U.ENROLLED:
-            return (0, r.jsx)(l, { taskType: g.type });
+            return (0, r.jsx)(l, {
+                taskType: g.type,
+            });
         case a.U.INCOMPLETE:
-            return (0, r.jsx)(c, { taskType: g.type });
+            return (0, r.jsx)(c, {
+                taskType: g.type,
+            });
         case a.U.COMPLETED:
-            return (0, r.jsx)(u, { taskType: g.type });
+            return (0, r.jsx)(u, {
+                taskType: g.type,
+            });
         case a.U.CLAIMED:
-            return (0, r.jsx)(d, { taskType: g.type });
+            return (0, r.jsx)(d, {
+                taskType: g.type,
+            });
         default:
             return (0, r.jsx)(i.$nd, {
                 variant: "primary",

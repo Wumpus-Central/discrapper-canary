@@ -1,7 +1,10 @@
-n.d(t, { r: () => s });
+n.d(t, {
+    r: () => s,
+});
 var r = n(627968);
 n(64700);
 var l = n(442433);
+
 function i(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -27,6 +30,7 @@ function i(e) {
     }
     return e;
 }
+
 function a(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -45,6 +49,7 @@ function a(e, t) {
         e
     );
 }
+
 function s(e, t, s, o, c) {
     let u = s.getGuildId();
     return null != u

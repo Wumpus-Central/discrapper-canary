@@ -6,6 +6,7 @@ n.d(t, {
 var r = n(926675),
     i = n(540185),
     a = n(735321);
+
 function s(e, t, n) {
     return (
         t in e
@@ -20,9 +21,11 @@ function s(e, t, n) {
     );
 }
 let o = [i.x.CURRENT_GAMES, i.x.FAVORITE_GAMES, i.x.WANT_TO_PLAY_GAMES, i.x.PLAYED_GAMES];
+
 function l(e) {
     return o.includes(e);
 }
+
 function c(e) {
     return e instanceof u;
 }
@@ -54,10 +57,14 @@ class u {
         return this.type;
     }
     getProfileAnalyticsOptions() {
-        return { widgetType: this.type };
+        return {
+            widgetType: this.type,
+        };
     }
     getProfileEditAnalyticsOptions() {
-        return { widgetEdited: this.type };
+        return {
+            widgetEdited: this.type,
+        };
     }
     constructor({ id: e, type: t, games: n }) {
         s(this, "id", void 0),

@@ -1,4 +1,6 @@
-Object.defineProperty(t, "__esModule", { value: !0 }),
+Object.defineProperty(t, "__esModule", {
+    value: !0,
+}),
     (t.ReactCSS = t.loop = t.handleActive = t.handleHover = t.hover = void 0);
 var n = u(r(991798)),
     o = u(r(597356)),
@@ -6,8 +8,13 @@ var n = u(r(991798)),
     i = u(r(195833)),
     l = u(r(12881)),
     s = u(r(938422));
+
 function u(e) {
-    return e && e.__esModule ? e : { default: e };
+    return e && e.__esModule
+        ? e
+        : {
+              default: e,
+          };
 }
 (t.hover = i.default), (t.handleHover = i.default), (t.handleActive = l.default), (t.loop = s.default);
 var c = (t.ReactCSS = function (e) {

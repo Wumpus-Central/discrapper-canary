@@ -1,4 +1,6 @@
-n.d(t, { A: () => S });
+n.d(t, {
+    A: () => S,
+});
 var a = n(627968),
     l = n(503698),
     i = n.n(l),
@@ -35,7 +37,10 @@ let _ = (e) => {
                         isCardHovered: n,
                     }),
                 }),
-                s && (0, a.jsx)(C, { hidden: n }),
+                s &&
+                    (0, a.jsx)(C, {
+                        hidden: n,
+                    }),
             ],
         });
     },
@@ -86,7 +91,9 @@ let _ = (e) => {
             color: c.LU0.colors.INTERACTIVE_TEXT_ACTIVE,
             width: 40,
             height: 40,
-            className: i()(y.zo, { [y.R]: t }),
+            className: i()(y.zo, {
+                [y.R]: t,
+            }),
         });
     },
     S = (e) => {

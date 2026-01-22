@@ -25,6 +25,7 @@ n(670412), n(351022);
 var l = n(324580),
     c = n(652215),
     u = n(985018);
+
 function d(e, t, n) {
     return (
         t in e
@@ -38,6 +39,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -54,6 +56,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -66,6 +69,7 @@ function p(e, t) {
     }
     return n;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -77,6 +81,7 @@ function _(e, t) {
         e
     );
 }
+
 function h(e) {
     switch (e) {
         case l.o.FEATURED:
@@ -95,6 +100,7 @@ function h(e) {
             return u.intl.string(u.t["q469/Z"]);
     }
 }
+
 function m(e) {
     switch (e) {
         case l.o.FEATURED:
@@ -115,6 +121,7 @@ function m(e) {
             throw Error("[getGlobalDiscoveryServerTabTitle] Unsupported tab: ".concat(e));
     }
 }
+
 function g(e) {
     switch (e) {
         case l.o.FEATURED:
@@ -135,6 +142,7 @@ function g(e) {
             throw Error("[getGlobalDiscoveryServerTabTitle] Unsupported tab: ".concat(e));
     }
 }
+
 function E(e) {
     switch (e) {
         case l.o.FEATURED:
@@ -153,6 +161,7 @@ function E(e) {
             return null;
     }
 }
+
 function b(e) {
     switch (e) {
         case l.o.FEATURED:
@@ -173,9 +182,11 @@ function b(e) {
             (0, s.xb)(e);
     }
 }
+
 function y(e) {
     return null == e || Date.now() - e > l.WV;
 }
+
 function O(e) {
     return {
         id: e.id,
@@ -194,6 +205,7 @@ function O(e) {
         emojiCount: e.emoji_count,
     };
 }
+
 function A(e) {
     return {
         id: e.id,
@@ -211,6 +223,7 @@ function A(e) {
         emojis: [],
     };
 }
+
 function v() {
     var e;
     let [t] = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [i.default],
@@ -220,7 +233,9 @@ function v() {
 }
 async function S(e) {
     let { loadId: t, guildId: n, index: r, categoryId: i, analyticsLocation: s, options: l } = e,
-        u = _(f({}, l), { loadId: t });
+        u = _(f({}, l), {
+            loadId: t,
+        });
     await o.Z2(n, s, u),
         a.default.track(c.HAw.GUILD_DISCOVERY_GUILD_SELECTED, {
             guild_id: n,
@@ -230,6 +245,7 @@ async function S(e) {
             location: s,
         });
 }
+
 function I() {
     return (0, r.A)().replace(/-/g, "");
 }

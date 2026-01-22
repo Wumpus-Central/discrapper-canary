@@ -1,5 +1,10 @@
-n.d(t, { A: () => i }), n(321073), n(896048);
+n.d(t, {
+    A: () => i,
+}),
+    n(321073),
+    n(896048);
 var r = n(205693);
+
 function i(e) {
     let t = !1;
     e.on(r.bg.Destroy, () => (t = !0));
@@ -21,8 +26,8 @@ function i(e) {
                     stats: t,
                 });
         }
-        e.emit(r.bg.ConnectionStats, a), setTimeout(n, 1000);
+        e.emit(r.bg.ConnectionStats, a), setTimeout(n, 1e3);
     };
-    setTimeout(n, 1000);
+    setTimeout(n, 1e3);
 }
 n(618792);

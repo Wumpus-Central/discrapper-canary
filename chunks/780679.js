@@ -1,10 +1,14 @@
-n.d(t, { A: () => o }), n(896048);
+n.d(t, {
+    A: () => o,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(397927),
     s = n(411335),
     a = n(652215),
     c = n(985018);
+
 function o(e) {
     let { rule: t, onChangeRule: n } = e,
         [o, d] = i.useState(t.name);
@@ -39,7 +43,10 @@ function o(e) {
                         }
                         return e;
                     })({}, t)),
-                    (i = i = { name: e }),
+                    (i = i =
+                        {
+                            name: e,
+                        }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
                         : (function (e, t) {

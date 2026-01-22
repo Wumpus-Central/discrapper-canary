@@ -1,4 +1,9 @@
-n.d(t, { A: () => V }), n(228524), n(896048), n(264879);
+n.d(t, {
+    A: () => V,
+}),
+    n(228524),
+    n(896048),
+    n(264879);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -26,6 +31,7 @@ var r = n(627968),
     C = n(294726),
     N = n(333354),
     R = n(826823);
+
 function w(e, t, n) {
     return (
         t in e
@@ -39,6 +45,7 @@ function w(e, t, n) {
         e
     );
 }
+
 function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -55,6 +62,7 @@ function P(e) {
     }
     return e;
 }
+
 function D(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -67,6 +75,7 @@ function D(e, t) {
     }
     return n;
 }
+
 function x(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -78,6 +87,7 @@ function x(e, t) {
         e
     );
 }
+
 function L(e) {
     let {
             guildId: t,
@@ -139,7 +149,9 @@ function L(e) {
         }, []),
         Z = (0, l.K)(X);
     return (0, r.jsxs)("div", {
-        className: s()(R.Nr, { [R.fM]: k }),
+        className: s()(R.Nr, {
+            [R.fM]: k,
+        }),
         onMouseEnter: () => V(!0),
         onMouseLeave: () => V(!1),
         children: [
@@ -161,7 +173,9 @@ function L(e) {
                 }),
             }),
             (0, r.jsxs)(o.animated.div, {
-                style: x(P({}, z), { transform: z.y.to((e) => "translateY(".concat(e, "px)")) }),
+                style: x(P({}, z), {
+                    transform: z.y.to((e) => "translateY(".concat(e, "px)")),
+                }),
                 className: R.Qs,
                 children: [
                     (0, r.jsxs)("div", {
@@ -194,7 +208,9 @@ function L(e) {
                                         variant: "text-sm/semibold",
                                         children: T.intl.formatToPlainString(
                                             null != g ? C.default["G/aTXi"] : C.default.r9pa9K,
-                                            { boostCount: h },
+                                            {
+                                                boostCount: h,
+                                            },
                                         ),
                                     }),
                                 ],
@@ -251,6 +267,7 @@ function L(e) {
         ],
     });
 }
+
 function j(e) {
     let { guildId: t, powerup: n, costDecorator: i, isNew: a, onClose: s } = e,
         o = (0, E.Ay)(t, n).type;

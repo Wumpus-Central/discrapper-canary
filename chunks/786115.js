@@ -1,11 +1,14 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(64700),
     i = n(110259),
     a = n(311907),
     s = n(139286),
     o = n(989837),
     l = n(520117);
-let c = 1000;
+let c = 1e3;
+
 function u(e) {
     let {
             applicationId: t,

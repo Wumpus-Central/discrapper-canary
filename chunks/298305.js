@@ -1,4 +1,6 @@
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -11,12 +13,15 @@ var i = n(311907),
     d = n(180391);
 let f = 1.5,
     p = 0.321;
+
 function _(e) {
     let { maxRewardImageSrc: t, claimableRewards: n, size: _, imageScaling: h = f } = e,
         m = (0, i.bG)([l.default], () => l.default.getCurrentUser()),
         g = (0, i.bG)([s.A], () => s.A.useReducedMotion),
         E = (0, a.FT9)(_),
-        b = { height: E * h };
+        b = {
+            height: E * h,
+        };
     return n.length > 0
         ? (0, r.jsx)("img", {
               alt: "",
@@ -36,7 +41,9 @@ function _(e) {
                       }),
                   2 === n.length &&
                       (0, r.jsx)("div", {
-                          style: { marginRight: -Math.round(E * p) },
+                          style: {
+                              marginRight: -Math.round(E * p),
+                          },
                           children: (0, r.jsx)(a.JsQ, {
                               "aria-label": null == m ? void 0 : m.username,
                               size: _,

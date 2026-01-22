@@ -1,4 +1,7 @@
-n.d(t, { A: () => D }), n(896048);
+n.d(t, {
+    A: () => D,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(735438),
@@ -136,7 +139,8 @@ let w = 15 * O.A.Millis.MINUTE,
               })
             : null;
     }),
-    R = a().throttle(() => g.u(), 300000);
+    R = a().throttle(() => g.u(), 3e5);
+
 function D() {
     let {
             nowPlayingCards: e,

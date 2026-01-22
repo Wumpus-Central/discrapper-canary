@@ -17,6 +17,7 @@ var r = n(214958),
     i = n.n(r),
     a = n(835245),
     s = n(383859);
+
 function o(e, t) {
     if (null == e) return {};
     var n,
@@ -33,6 +34,7 @@ function o(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function l(e, t) {
     if (null == e) return {};
     var n,
@@ -45,6 +47,7 @@ function l(e, t) {
 }
 let c = "https://discordapp.onelink.me",
     u = "Hs5r";
+
 function d() {
     var e, t;
     let n = ["WebView", "(iPhone|iPod|iPad)(?!.*Safari/)"],
@@ -53,9 +56,11 @@ function d() {
         s = (null === i() || void 0 === i() ? void 0 : i().name) === "Safari" && !a;
     return (null === i() || void 0 === i() || null == (t = i().os) ? void 0 : t.family) !== "iOS" || s;
 }
+
 function f() {
     return (0, a.A)();
 }
+
 function p(e) {
     if (!e.startsWith(c)) return null;
     try {
@@ -65,13 +70,16 @@ function p(e) {
         let r = decodeURIComponent(n),
             i = new URL(r).searchParams,
             a = t.get("pid"),
-            s = { utmSource: null != a ? a : void 0 };
+            s = {
+                utmSource: null != a ? a : void 0,
+            };
         for (let [e, t] of i.entries()) s[e] = t;
         return s;
     } catch (e) {
         return null;
     }
 }
+
 function _(e, t) {
     let { utmSource: n, androidFallbackLink: r, iosFallbackLink: i } = t,
         a = o(t, ["utmSource", "androidFallbackLink", "iosFallbackLink"]),

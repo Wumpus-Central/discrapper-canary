@@ -1,4 +1,6 @@
-n.d(t, { J: () => a });
+n.d(t, {
+    J: () => a,
+});
 let r = new Map(),
     i = new Map();
 class a {
@@ -12,7 +14,11 @@ class a {
         let a = this.locale + ":" + n,
             s = r.get(a);
         return (
-            s || ((s = new Intl.PluralRules(this.locale, { type: n })), r.set(a, s)),
+            s ||
+                ((s = new Intl.PluralRules(this.locale, {
+                    type: n,
+                })),
+                r.set(a, s)),
             "function" == typeof (i = t[s.select(e)] || t.other) ? i() : i
         );
     }

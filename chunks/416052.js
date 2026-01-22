@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var r,
     i = n(627968),
     a = n(64700),
@@ -7,6 +9,7 @@ var r,
     l = n(397927),
     c = n(957565),
     u = n(985018);
+
 function d(e, t, n) {
     return (
         t in e
@@ -20,6 +23,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +40,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -48,6 +53,7 @@ function p(e, t) {
     }
     return n;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -59,7 +65,7 @@ function _(e, t) {
         e
     );
 }
-let h = 1000;
+let h = 1e3;
 class m extends (r = a.PureComponent) {
     componentWillUnmount() {
         this._timeout.stop();
@@ -82,10 +88,20 @@ class m extends (r = a.PureComponent) {
         let { onCopy: t, delay: n = h } = this.props;
         (0, c.C)(
             e,
-            () => this.setState({ mode: l.e2O.Modes.SUCCESS }),
-            () => this.setState({ mode: l.e2O.Modes.ERROR }),
+            () =>
+                this.setState({
+                    mode: l.e2O.Modes.SUCCESS,
+                }),
+            () =>
+                this.setState({
+                    mode: l.e2O.Modes.ERROR,
+                }),
         ),
-            this._timeout.start(n, () => this.setState({ mode: l.e2O.Modes.DEFAULT })),
+            this._timeout.start(n, () =>
+                this.setState({
+                    mode: l.e2O.Modes.DEFAULT,
+                }),
+            ),
             null == t || t(e);
     }
     getVerticalButtonColor(e) {
@@ -101,10 +117,14 @@ class m extends (r = a.PureComponent) {
     constructor(e) {
         super(e),
             d(this, "_timeout", void 0),
-            (this.state = { mode: l.e2O.Modes.DEFAULT }),
+            (this.state = {
+                mode: l.e2O.Modes.DEFAULT,
+            }),
             (this._timeout = new s.Ep()),
             (this.handleCopy = this.handleCopy.bind(this));
     }
 }
-d(m, "defaultProps", { delay: h });
+d(m, "defaultProps", {
+    delay: h,
+});
 let g = m;

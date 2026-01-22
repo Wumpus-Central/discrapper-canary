@@ -1,4 +1,7 @@
-n.d(t, { A: () => f }), n(896048);
+n.d(t, {
+    A: () => f,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(453903),
@@ -6,6 +9,7 @@ var r = n(627968),
     s = n(421773),
     o = n(650583),
     c = n(342910);
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -31,6 +35,7 @@ function u(e) {
     }
     return e;
 }
+
 function d(e) {
     let { renderPopout: t, onMouseEnter: n, onMouseLeave: i, closePopout: a, isHovered: s } = e,
         o = (function (e, t) {
@@ -71,7 +76,14 @@ function d(e) {
         (0, r.jsx)("div", {
             onMouseEnter: n,
             onMouseLeave: i,
-            children: t(u({ closePopout: a }, o)),
+            children: t(
+                u(
+                    {
+                        closePopout: a,
+                    },
+                    o,
+                ),
+            ),
         })
     );
 }
@@ -88,12 +100,15 @@ let f = l.forwardRef(function (e, t) {
         } = e,
         [y, O] = l.useState(!1),
         { isHovered: j, setIsHovered: v, onMouseEnter: x, onMouseLeave: E, cancelTimers: _ } = (0, s.A)(200, 300);
+
     function C(e) {
         "focus" === e.type || y || x();
     }
+
     function S() {
         y || E();
     }
+
     function I(e) {
         _(), O(!y), y ? null == m || m() : null == g || g(), (!j || y) && e();
     }

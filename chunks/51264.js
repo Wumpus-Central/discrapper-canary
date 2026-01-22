@@ -1,4 +1,7 @@
-n.d(t, { A: () => g }), n(896048);
+n.d(t, {
+    A: () => g,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -41,14 +44,24 @@ let A = "isHideDevBanner",
         return null != l
             ? (0, r.jsxs)("div", {
                   className: a()(h.Wz, h.DM),
-                  children: [(0, r.jsx)(p.A, { className: h.Kk }), f.intl.string(f.t.Wj3LW4), (0, r.jsx)(m, {})],
+                  children: [
+                      (0, r.jsx)(p.A, {
+                          className: h.Kk,
+                      }),
+                      f.intl.string(f.t.Wj3LW4),
+                      (0, r.jsx)(m, {}),
+                  ],
               })
             : "staging" === window.GLOBAL_ENV.RELEASE_CHANNEL
               ? (0, r.jsxs)("div", {
                     className: a()(h.Wz, h.mr),
                     children: [
-                        (0, r.jsx)(p.A, { className: h.Kk }),
-                        f.intl.format(f.t.uyrfYF, { buildNumber: "488133" }),
+                        (0, r.jsx)(p.A, {
+                            className: h.Kk,
+                        }),
+                        f.intl.format(f.t.uyrfYF, {
+                            buildNumber: "488230",
+                        }),
                         (0, r.jsx)(m, {}),
                     ],
                 })

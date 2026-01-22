@@ -20,7 +20,7 @@ var r = n(627968),
     m = n(788868),
     g = n(985018),
     E = n(926701);
-let b = 1000,
+let b = 1e3,
     y = (e) => {
         let t,
             { step: n, onPurchaseComplete: l, onHandoffFailure: c } = e,
@@ -95,7 +95,9 @@ let b = 1000,
                         onClick: t,
                         children: g.intl.string(g.t["4Qvmmj"]),
                     }),
-                    (0, r.jsx)(c.A, { onClick: n }),
+                    (0, r.jsx)(c.A, {
+                        onClick: n,
+                    }),
                 ],
             }),
         });

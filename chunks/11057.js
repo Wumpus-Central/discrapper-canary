@@ -43,9 +43,12 @@ let c = (0, s.h)((e, t) => ({
             });
     },
     setLocaleData: (t) => {
-        e({ localeData: t });
+        e({
+            localeData: t,
+        });
     },
 }));
+
 function u(e) {
     return c.subscribe((t, n) => {
         null == n.inProgressLocale || null != t.inProgressLocale || (null == t.error && e(n.inProgressLocale));
@@ -88,10 +91,17 @@ async function p(e) {
     for (; i.length > 0; ) r.push(i.join("-")), i.pop();
     r.push("en-US"), n(989349).locale(r);
 }
+
 function _(e) {
     let { setTags: t } = n(728458).A;
-    return t({ locale: e }), Promise.resolve();
+    return (
+        t({
+            locale: e,
+        }),
+        Promise.resolve()
+    );
 }
+
 function h() {
     let e = c((e) => e.localeData);
     return null != e ? e : a.default;

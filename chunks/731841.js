@@ -12,13 +12,16 @@ var r = (function () {
         return n && e(t.prototype, n), r && e(t, r), t;
     };
 })();
+
 function i(e, t) {
     if (!(e instanceof t)) throw TypeError("Cannot call a class as a function");
 }
+
 function a(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return t && ("object" == typeof t || "function" == typeof t) ? t : e;
 }
+
 function s(e, t) {
     if ("function" != typeof t && null !== t)
         throw TypeError("Super expression must either be null or a function, not " + typeof t);
@@ -62,7 +65,10 @@ e.exports = (function (e) {
                     var t = this;
                     this._parentListener ||
                         (this._parentListener = this._parent.addListener(function () {
-                            for (var e in t._listeners) t._listeners[e]({ value: t.__getValue() });
+                            for (var e in t._listeners)
+                                t._listeners[e]({
+                                    value: t.__getValue(),
+                                });
                         }));
                     var n = u();
                     return (this._listeners[n] = e), n;

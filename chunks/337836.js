@@ -4,6 +4,7 @@ n.d(t, {
 });
 var r = n(627968),
     i = n(862019);
+
 function a(e, t, n) {
     return (
         t in e
@@ -17,6 +18,7 @@ function a(e, t, n) {
         e
     );
 }
+
 function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -33,6 +35,7 @@ function s(e) {
     }
     return e;
 }
+
 function o(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -45,6 +48,7 @@ function o(e, t) {
     }
     return n;
 }
+
 function l(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -56,6 +60,7 @@ function l(e, t) {
         e
     );
 }
+
 function c(e, t) {
     if (null == e) return {};
     var n,
@@ -72,6 +77,7 @@ function c(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function u(e, t) {
     if (null == e) return {};
     var n,
@@ -83,12 +89,21 @@ function u(e, t) {
     return i;
 }
 let d = "popover-portal";
+
 function f() {
-    return (0, r.jsx)("div", { id: d });
+    return (0, r.jsx)("div", {
+        id: d,
+    });
 }
+
 function p(e) {
     let { ownerDocument: t = document } = e,
         n = c(e, ["ownerDocument"]),
         a = t.getElementById(d);
-    return (0, r.jsx)(i.XF, l(s({}, n), { root: a }));
+    return (0, r.jsx)(
+        i.XF,
+        l(s({}, n), {
+            root: a,
+        }),
+    );
 }

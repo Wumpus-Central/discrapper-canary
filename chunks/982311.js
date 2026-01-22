@@ -1,4 +1,7 @@
-n.d(t, { A: () => m }), n(896048);
+n.d(t, {
+    A: () => m,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(158954),
@@ -11,6 +14,7 @@ var r = n(627968),
     f = n(264779),
     p = n(985018),
     _ = n(424019);
+
 function h(e) {
     let { onClose: t, transitionState: n } = e,
         i = () =>
@@ -31,7 +35,9 @@ function h(e) {
     return (0, r.jsx)(a.Modal, {
         title: "",
         size: "md",
-        input: (0, r.jsx)("div", { className: _.aR }),
+        input: (0, r.jsx)("div", {
+            className: _.aR,
+        }),
         onClose: async () => await t(),
         actions: [
             {
@@ -68,12 +74,17 @@ let m = function (e) {
             onClose: t,
             transitionState: E,
         });
-    if (null == m) return (0, r.jsx)(o.y$y, { className: _.Lq });
+    if (null == m)
+        return (0, r.jsx)(o.y$y, {
+            className: _.Lq,
+        });
     let v = () =>
         (0, r.jsxs)("div", {
             className: _.N1,
             children: [
-                (0, r.jsx)("div", { className: _.Qw }),
+                (0, r.jsx)("div", {
+                    className: _.Qw,
+                }),
                 (0, r.jsx)(o.Heading, {
                     variant: "heading-xl/semibold",
                     children: p.intl.string(p.t["23BfZh"]),
@@ -109,7 +120,9 @@ let m = function (e) {
         "aria-label": O,
         children: (0, r.jsxs)("div", {
             children: [
-                (0, r.jsx)(o.cGx, { className: _.M5 }),
+                (0, r.jsx)(o.cGx, {
+                    className: _.M5,
+                }),
                 (0, r.jsx)(a.D0$, {
                     label: p.intl.string(p.t.s9LFQh),
                     helperText: p.intl.string(p.t["F+nFTZ"]),
@@ -117,7 +130,7 @@ let m = function (e) {
                         value: m,
                         buttonColor: s.$n.Colors.BRAND,
                         buttonLook: s.$n.Looks.FILLED,
-                        delay: 1000,
+                        delay: 1e3,
                     }),
                 }),
             ],

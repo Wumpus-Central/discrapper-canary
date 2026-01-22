@@ -24,6 +24,7 @@ var r = n(64700),
     b = n(652215);
 let g = [],
     m = 15 * o.A.Millis.MINUTE;
+
 function A(e, t) {
     return (0, l.yK)([a.A, c.Ay, s.A, i.A], () => {
         let n = a.A.getGuild(e);
@@ -37,6 +38,7 @@ function A(e, t) {
               });
     }, [t, e]);
 }
+
 function y(e) {
     return (0, l.bG)([c.Ay, i.A, s.A], () => {
         let t = i.A.getChannel(e);
@@ -45,6 +47,7 @@ function y(e) {
         return n.length > 0 ? n[0] : null;
     }, [e]);
 }
+
 function O(e) {
     let t = (0, l.yK)([c.Ay], () => c.Ay.getGuildScheduledEventsForGuild(e), [e]);
     return r.useMemo(() => {
@@ -58,6 +61,7 @@ function O(e) {
         );
     }, [t]);
 }
+
 function j(e) {
     var t;
     let n = (0, l.yK)(
@@ -107,7 +111,10 @@ function j(e) {
                                   }
                                   return e;
                               })({}, e)),
-                              (r = r = { [t.id]: c.Ay.isInterestedInEventRecurrence(t.id, l) }),
+                              (r = r =
+                                  {
+                                      [t.id]: c.Ay.isInterestedInEventRecurrence(t.id, l),
+                                  }),
                               Object.getOwnPropertyDescriptors
                                   ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
                                   : (function (e, t) {
@@ -144,6 +151,7 @@ function j(e) {
                 };
         }
 }
+
 function v(e) {
     return (0, l.bG)(
         [c.Ay, i.A, s.A],
@@ -157,9 +165,11 @@ function v(e) {
         [e],
     );
 }
+
 function x(e) {
     return (0, l.bG)([c.Ay], () => c.Ay.getGuildScheduledEventsByIndex(c.ej.CHANNEL_EVENT_UPCOMING(e)), [e]);
 }
+
 function E(e) {
     return (0, l.bG)([i.A, c.Ay], () => {
         let t = c.Ay.getGuildScheduledEventsByIndex(c.ej.GUILD_EVENT_ACTIVE(e)).find(
@@ -168,6 +178,7 @@ function E(e) {
         return i.A.getChannel(null == t ? void 0 : t.channel_id);
     }, [e]);
 }
+
 function _(e) {
     let [t, n] = r.useState(() => Date.now());
     r.useEffect(() => {

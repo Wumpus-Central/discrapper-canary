@@ -30,6 +30,7 @@ var i = t(503698),
     N = t(488995),
     E = t(985018),
     _ = t(712601);
+
 function T(e) {
     var l, t;
     let i,
@@ -126,7 +127,9 @@ function T(e) {
                     (0, n.jsx)(a.m, {
                         __unsupportedReactNodeAsText: null == w ? void 0 : w.name,
                         children: (0, n.jsx)("img", {
-                            alt: E.intl.formatToPlainString(E.t.rtm15P, { name: null == w ? void 0 : w.name }),
+                            alt: E.intl.formatToPlainString(E.t.rtm15P, {
+                                name: null == w ? void 0 : w.name,
+                            }),
                             className: _.cS,
                             src: (0, o.Mw)(g)
                                 ? null == w
@@ -166,7 +169,9 @@ function T(e) {
                                 ? (0, n.jsx)(d.Text, {
                                       variant: "text-xs/normal",
                                       color: "text-default",
-                                      children: E.intl.format(E.t["9rfonh"], { date: L }),
+                                      children: E.intl.format(E.t["9rfonh"], {
+                                          date: L,
+                                      }),
                                   })
                                 : null,
                         ],
@@ -182,6 +187,7 @@ function T(e) {
         ],
     });
 }
+
 function P(e) {
     let { applicationRoleConnection: l, className: t, locale: i, onApplicationClicked: s, selectedGuildId: a } = e,
         o = (0, x.VW)(l, i),
@@ -191,7 +197,9 @@ function P(e) {
                     tab: N.GlobalDiscoveryTab.APPS,
                     applicationId: l.application.id,
                     newSessionState: {
-                        entrypoint: { name: h.sW.APPLICATION_DIRECTORY_URL },
+                        entrypoint: {
+                            name: h.sW.APPLICATION_DIRECTORY_URL,
+                        },
                         guildId: a,
                     },
                 });
@@ -267,6 +275,7 @@ function P(e) {
         ],
     });
 }
+
 function S(e) {
     let { connectedAccounts: l, locale: t, className: i, userId: s } = e,
         { theme: a } = (0, I.E)();

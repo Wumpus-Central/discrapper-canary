@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(627968),
     l = n(64700),
     i = n(397927),
@@ -7,6 +9,7 @@ var r = n(627968),
     s = n(636670),
     c = n(985018),
     d = n(6561);
+
 function u(e) {
     let { searchState: t } = e,
         n = l.useMemo(

@@ -1,4 +1,6 @@
-n.d(t, { A: () => y });
+n.d(t, {
+    A: () => y,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -13,6 +15,7 @@ var r = n(627968),
     _ = n(14532);
 let h = 10,
     m = 2;
+
 function g(e) {
     let { game: t, activityLevel: n, hideTooltip: i } = e,
         a = t.getIconURL(24),
@@ -71,6 +74,7 @@ function g(e) {
           })
         : O;
 }
+
 function E(e) {
     let { games: t, activity: n } = e;
     return (0, r.jsx)("div", {
@@ -97,6 +101,7 @@ function E(e) {
         ),
     });
 }
+
 function b(e) {
     let { game: t, activityLevel: n } = e;
     return (0, r.jsxs)("div", {
@@ -115,6 +120,7 @@ function b(e) {
         ],
     });
 }
+
 function y(e) {
     let { gamesToDisplay: t, lastGameToDisplay: n, remainingGames: a, activity: o } = e,
         u = i.useMemo(() => {
@@ -142,7 +148,9 @@ function y(e) {
                             src: e,
                             alt: n.name,
                         }),
-                        (0, r.jsx)("div", { className: _.Fg }),
+                        (0, r.jsx)("div", {
+                            className: _.Fg,
+                        }),
                         (0, r.jsx)("div", {
                             className: _.AZ,
                             children: (0, r.jsx)(c.Text, {

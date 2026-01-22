@@ -7,9 +7,11 @@
         n = "stycznia_lutego_marca_kwietnia_maja_czerwca_lipca_sierpnia_września_października_listopada_grudnia".split(
             "_",
         );
+
     function r(e) {
         return e % 10 < 5 && e % 10 > 1 && ~~(e / 10) % 10 != 1;
     }
+
     function i(e, t, n) {
         var i = e + " ";
         switch (n) {

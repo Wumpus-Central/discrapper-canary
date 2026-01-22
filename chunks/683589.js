@@ -1,4 +1,7 @@
-n.d(t, { A: () => v }), n(896048);
+n.d(t, {
+    A: () => v,
+}),
+    n(896048);
 var a,
     l = n(627968),
     i = n(64700),
@@ -12,6 +15,7 @@ var a,
     p = n(652215),
     h = n(985018),
     f = n(441609);
+
 function x(e, t, n) {
     return (
         t in e
@@ -62,7 +66,9 @@ class g extends (a = i.PureComponent) {
                 (0, l.jsxs)(c.BJc, {
                     gap: 16,
                     fullWidth: !1,
-                    className: s()(f.kL, { [f.Fr]: o.Fr }),
+                    className: s()(f.kL, {
+                        [f.Fr]: o.Fr,
+                    }),
                     align: "center",
                     direction: "vertical",
                     justify: "center",
@@ -73,7 +79,9 @@ class g extends (a = i.PureComponent) {
                             justify: "center",
                             gap: 16,
                             children: [
-                                (0, l.jsx)("div", { className: f.Sl }),
+                                (0, l.jsx)("div", {
+                                    className: f.Sl,
+                                }),
                                 (0, l.jsxs)(c.BJc, {
                                     className: f.FS,
                                     gap: 4,
@@ -87,7 +95,9 @@ class g extends (a = i.PureComponent) {
                                         }),
                                         (0, l.jsx)(c.Text, {
                                             variant: "text-md/normal",
-                                            children: h.intl.format(h.t["0rqMV5"], { helpCenterURL: b }),
+                                            children: h.intl.format(h.t["0rqMV5"], {
+                                                helpCenterURL: b,
+                                            }),
                                         }),
                                     ],
                                 }),
@@ -122,16 +132,20 @@ class g extends (a = i.PureComponent) {
                                 (0, l.jsx)(c.Text, {
                                     variant: "text-sm/semibold",
                                     className: f.qr,
-                                    children: h.intl.format(h.t.WL51ZR, { supportURL: u.A.getSubmitRequestURL() }),
+                                    children: h.intl.format(h.t.WL51ZR, {
+                                        supportURL: u.A.getSubmitRequestURL(),
+                                    }),
                                 }),
                                 (0, l.jsx)("div", {
                                     className: s()(f.qr, f.mf),
-                                    children: "\u2022",
+                                    children: "•",
                                 }),
                                 (0, l.jsx)(c.Text, {
                                     variant: "text-sm/semibold",
                                     className: f.qr,
-                                    children: h.intl.format(h.t.Hv7ztc, { logoutOnClick: this.props.onLogout }),
+                                    children: h.intl.format(h.t.Hv7ztc, {
+                                        logoutOnClick: this.props.onLogout,
+                                    }),
                                 }),
                             ],
                         }),

@@ -1,4 +1,6 @@
-s.d(a, { default: () => _ });
+s.d(a, {
+    default: () => _,
+});
 var c = s(627968);
 s(64700);
 var d = s(503698),
@@ -10,6 +12,7 @@ var d = s(503698),
     l = s(895600),
     r = s(985018),
     x = s(167451);
+
 function _(e) {
     let { transitionState: a, onClose: s, guildTemplate: d } = e,
         { form: _, preview: o, handleSubmit: p } = (0, n.A)(d, !1),

@@ -1,4 +1,8 @@
-n.d(t, { A: () => g }), n(896048), n(457529);
+n.d(t, {
+    A: () => g,
+}),
+    n(896048),
+    n(457529);
 var r = n(627968),
     l = n(64700),
     i = n(460648),
@@ -10,6 +14,7 @@ var r = n(627968),
     u = n(398450),
     f = n(652215),
     h = n(985018);
+
 function g(e) {
     let { mfaChallenge: t, finish: n, setSlide: g, onClose: p, headerAlignStart: m } = e,
         [b, j] = l.useState(!1),
@@ -35,7 +40,12 @@ function g(e) {
                 let n = await e;
                 await t(n);
             } catch (e) {
-                (0, o.Os)(e, { extra: { error_type: "webauthn_api_error" } }), S(h.intl.string(h.t.xSCvBf));
+                (0, o.Os)(e, {
+                    extra: {
+                        error_type: "webauthn_api_error",
+                    },
+                }),
+                    S(h.intl.string(h.t.xSCvBf));
             } finally {
                 j(!1);
             }
@@ -46,7 +56,12 @@ function g(e) {
                 onClose: p,
                 headerAlignStart: m,
             }),
-            null != y && (0, r.jsx)(u.A.SlideContent, { children: (0, r.jsx)(u.A.SlideError, { error: y }) }),
+            null != y &&
+                (0, r.jsx)(u.A.SlideContent, {
+                    children: (0, r.jsx)(u.A.SlideError, {
+                        error: y,
+                    }),
+                }),
             (0, r.jsx)(u.A.SlideFooter, {
                 mfaChallenge: t,
                 setSlide: g,

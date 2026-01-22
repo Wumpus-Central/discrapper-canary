@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var r = n(627968);
 n(64700);
 var l = n(311907),
@@ -13,6 +15,7 @@ var l = n(311907),
     p = n(985018),
     h = n(516261),
     b = n(206314);
+
 function g(e) {
     let { channel: t } = e,
         n = (0, s.Ay)(t, !0),
@@ -20,13 +23,22 @@ function g(e) {
     return (0, r.jsxs)(d.Ay, {
         channelId: t.id,
         children: [
-            (0, r.jsx)(d.WK, { channelType: t.type }),
-            (0, r.jsx)(d.cr, { children: p.intl.format(p.t.I3R7Vn, { channelName: n }) }),
+            (0, r.jsx)(d.WK, {
+                channelType: t.type,
+            }),
+            (0, r.jsx)(d.cr, {
+                children: p.intl.format(p.t.I3R7Vn, {
+                    channelName: n,
+                }),
+            }),
             (0, r.jsx)(d.j1, {
                 className: b.PT,
                 children: p.intl.format(p.t.pYMVRT, {
                     channelName: n,
-                    topicHook: () => o.A.parseTopic(t.topic, !0, { channelId: t.id }),
+                    topicHook: () =>
+                        o.A.parseTopic(t.topic, !0, {
+                            channelId: t.id,
+                        }),
                 }),
             }),
             g

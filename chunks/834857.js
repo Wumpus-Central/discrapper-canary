@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(627968);
 n(64700);
 var l = n(397927),
@@ -7,6 +9,7 @@ var l = n(397927),
     s = n(576705),
     o = n(652215),
     c = n(985018);
+
 function u(e, t, n, u) {
     let d = {
             streamUserId: n,
@@ -42,7 +45,12 @@ function u(e, t, n, u) {
                                 });
                         }
                         return e;
-                    })({ guild: t }, d),
+                    })(
+                        {
+                            guild: t,
+                        },
+                        d,
+                    ),
                 );
         };
     return null != u

@@ -1,4 +1,6 @@
-n.d(t, { A: () => ev });
+n.d(t, {
+    A: () => ev,
+});
 var r = n(627968),
     i = n(110259),
     l = n(554146),
@@ -70,6 +72,7 @@ var r = n(627968),
     ex = n(124759),
     eh = n(985018),
     ej = n(453263);
+
 function eO(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -95,6 +98,7 @@ function eO(e) {
     }
     return e;
 }
+
 function ey(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -211,7 +215,11 @@ let ev = {
                         element: W.W,
                     },
                     predicate: () => t.canManageRoles,
-                    icon: t.permissionMigrationAvailable ? (0, r.jsx)("div", { className: ej.Vx }) : void 0,
+                    icon: t.permissionMigrationAvailable
+                        ? (0, r.jsx)("div", {
+                              className: ej.Vx,
+                          })
+                        : void 0,
                 };
             case ep.BEX.EMOJI:
                 return {
@@ -243,7 +251,9 @@ let ev = {
                 return {
                     section: ep.BEX.GUILD_TEMPLATES,
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_TEMPLATE,
-                    label: (0, r.jsx)(ea.A, { showDirtyIndicator: t.showDirtyGuildTemplateIndicator }),
+                    label: (0, r.jsx)(ea.A, {
+                        showDirtyIndicator: t.showDirtyGuildTemplateIndicator,
+                    }),
                     ariaLabel: eh.intl.string(eh.t.KUw7Ss),
                     element: es.Ay,
                     notice: {
@@ -501,8 +511,12 @@ let ev = {
                             };
                         e.mfaEnabled
                             ? (0, s.A)({
-                                  title: eh.intl.formatToPlainString(eh.t.us7mC1, { name: i }),
-                                  subtitle: eh.intl.format(eh.t["Zuo+Vd"], { name: i }),
+                                  title: eh.intl.formatToPlainString(eh.t.us7mC1, {
+                                      name: i,
+                                  }),
+                                  subtitle: eh.intl.format(eh.t["Zuo+Vd"], {
+                                      name: i,
+                                  }),
                                   confirmText: eh.intl.string(eh.t.l3hWP6),
                                   onConfirm: l,
                               })

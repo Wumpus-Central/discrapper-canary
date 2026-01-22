@@ -1,4 +1,6 @@
-s.d(e, { default: () => j });
+s.d(e, {
+    default: () => j,
+});
 var a = s(627968),
     i = s(64700),
     n = s(397927),
@@ -10,6 +12,7 @@ var a = s(627968),
     o = s(652215),
     h = s(985018),
     m = s(51057);
+
 function j(t) {
     let { transitionState: e, onClose: s } = t,
         j = (0, d.GV)();
@@ -51,7 +54,9 @@ function j(t) {
                             children: [
                                 (0, a.jsxs)("li", {
                                     children: [
-                                        (0, a.jsx)(n.e7I, { shortcut: l.z.binds["0"] }),
+                                        (0, a.jsx)(n.e7I, {
+                                            shortcut: l.z.binds["0"],
+                                        }),
                                         (0, a.jsx)(n.Text, {
                                             variant: "text-md/normal",
                                             children: h.intl.string(h.t["43Qn2r"]),
@@ -60,7 +65,9 @@ function j(t) {
                                 }),
                                 (0, a.jsxs)("li", {
                                     children: [
-                                        (0, a.jsx)(n.e7I, { shortcut: r.R.binds["0"] }),
+                                        (0, a.jsx)(n.e7I, {
+                                            shortcut: r.R.binds["0"],
+                                        }),
                                         (0, a.jsx)(n.Text, {
                                             variant: "text-md/normal",
                                             children: h.intl.string(h.t.zJg4FY),
@@ -71,7 +78,9 @@ function j(t) {
                         }),
                         (0, a.jsx)(n.Text, {
                             variant: "text-md/normal",
-                            children: h.intl.format(h.t.EWFVSW, { link: c.A.getArticleURL(o.MVz.KEYBOARD_NAVIGATION) }),
+                            children: h.intl.format(h.t.EWFVSW, {
+                                link: c.A.getArticleURL(o.MVz.KEYBOARD_NAVIGATION),
+                            }),
                         }),
                     ],
                 }),

@@ -16,6 +16,7 @@ var i = n(503698),
     d = n(671816);
 let f = 48,
     p = 5;
+
 function _(e) {
     let {
         description: t,
@@ -90,7 +91,9 @@ function _(e) {
                         children: (0, r.jsx)(l.EYj, {
                             color: "interactive-text-default",
                             variant: "text-sm/medium",
-                            children: o.A.Messages.STOREFRONT_BENEFITS_SUMMARY.format({ count: E }),
+                            children: o.A.Messages.STOREFRONT_BENEFITS_SUMMARY.format({
+                                count: E,
+                            }),
                         }),
                     }),
                 null != g &&
@@ -129,6 +132,7 @@ function _(e) {
         }),
     });
 }
+
 function h(e) {
     let { icon: t, header: n, description: i } = e;
     return (0, r.jsxs)("div", {

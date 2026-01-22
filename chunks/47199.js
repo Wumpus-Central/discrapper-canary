@@ -1,4 +1,6 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -15,6 +17,7 @@ var r = n(627968),
     m = n(265565),
     g = n(796812),
     E = n(379979);
+
 function b(e) {
     let { applicationId: t, name: n, setPopoutRef: a, onClose: b, source: y } = e,
         O = (0, p.h)(t),

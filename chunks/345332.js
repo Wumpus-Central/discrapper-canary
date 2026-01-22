@@ -1,4 +1,6 @@
-r.d(t, { default: () => d });
+r.d(t, {
+    default: () => d,
+});
 var n = r(627968);
 r(64700);
 var o = r(417597),
@@ -13,6 +15,7 @@ var o = r(417597),
     u = r(652215),
     y = r(746080),
     f = r(985018);
+
 function d(e) {
     let { guild: t, onSelect: r } = e,
         d = (0, o.bG)([a.A], () => null != t && a.A.can(u.xBc.ADMINISTRATOR, t));

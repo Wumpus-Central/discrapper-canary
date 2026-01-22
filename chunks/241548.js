@@ -12,7 +12,9 @@ e.exports = function (e) {
         },
         contains: [
             e.C_BLOCK_COMMENT_MODE,
-            e.COMMENT(";", "$", { relevance: 0 }),
+            e.COMMENT(";", "$", {
+                relevance: 0,
+            }),
             e.C_NUMBER_MODE,
             e.BINARY_NUMBER_MODE,
             {

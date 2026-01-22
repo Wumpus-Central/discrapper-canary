@@ -13,6 +13,7 @@ var i = n(503698),
     l = n(397927),
     c = n(183555),
     u = n(973273);
+
 function d(e, t, n) {
     return (
         t in e
@@ -26,6 +27,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,6 +44,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -54,6 +57,7 @@ function p(e, t) {
     }
     return n;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -65,6 +69,7 @@ function _(e, t) {
         e
     );
 }
+
 function h(e, t) {
     if (null == e) return {};
     var n,
@@ -81,6 +86,7 @@ function h(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function m(e, t) {
     if (null == e) return {};
     var n,
@@ -91,13 +97,19 @@ function m(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function g(e) {
     let { action: t, onClick: n } = e,
         { trackUserProfileAction: r } = (0, c.NJ)();
     return (e) => {
-        null != t && r({ action: t }), null == n || n(e);
+        null != t &&
+            r({
+                action: t,
+            }),
+            null == n || n(e);
     };
 }
+
 function E(e) {
     let { action: t, onClick: n, variant: i = "secondary", size: a = "sm" } = e,
         s = h(e, ["action", "onClick", "variant", "size"]),
@@ -117,6 +129,7 @@ function E(e) {
         ),
     );
 }
+
 function b(e) {
     let {
             action: t,
@@ -167,6 +180,7 @@ function b(e) {
         ),
     });
 }
+
 function y(e) {
     let {
             icon: t,
@@ -212,7 +226,9 @@ function y(e) {
                 f(
                     {
                         innerRef: E,
-                        className: a()(u.X, { [u.r]: b }),
+                        className: a()(u.X, {
+                            [u.r]: b,
+                        }),
                         onClick: v,
                         "aria-label": null != d ? d : n,
                         "aria-disabled": b,

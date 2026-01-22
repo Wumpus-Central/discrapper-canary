@@ -1,7 +1,10 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(417597),
     i = n(734057),
     a = n(746080);
+
 function s(e) {
     let t = (0, r.bG)([i.A], () => {
         let t = i.A.getChannel(e);

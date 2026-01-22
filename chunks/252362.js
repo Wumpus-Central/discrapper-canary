@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968),
     i = n(64700),
     l = n(342494),
@@ -30,7 +32,9 @@ let h = (e) => {
             position: "right",
             align: "top",
             size: "md",
-            caretConfig: { align: "start" },
+            caretConfig: {
+                align: "start",
+            },
             title: t.title(),
             body: t.body(),
             graphic: {

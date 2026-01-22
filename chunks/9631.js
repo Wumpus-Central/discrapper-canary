@@ -4,12 +4,24 @@ n.d(t, {
 });
 var r = n(643479);
 let i = {
-        desc: { name: "ICC Description" },
-        cprt: { name: "ICC Copyright" },
-        dmdd: { name: "ICC Device Model Description" },
-        vued: { name: "ICC Viewing Conditions Description" },
-        dmnd: { name: "ICC Device Manufacturer for Display" },
-        tech: { name: "Technology" },
+        desc: {
+            name: "ICC Description",
+        },
+        cprt: {
+            name: "ICC Copyright",
+        },
+        dmdd: {
+            name: "ICC Device Model Description",
+        },
+        vued: {
+            name: "ICC Viewing Conditions Description",
+        },
+        dmnd: {
+            name: "ICC Device Manufacturer for Display",
+        },
+        tech: {
+            name: "Technology",
+        },
     },
     a = {
         4: {
@@ -111,6 +123,7 @@ let i = {
             value: (e, t) => (0, r.hT)(e, t, 4),
         },
     };
+
 function s(e, t) {
     return new Date(
         Date.UTC(
@@ -123,9 +136,11 @@ function s(e, t) {
         ),
     );
 }
+
 function o(e) {
     return String.fromCharCode.apply(null, new Uint8Array(e));
 }
+
 function l(e) {
     switch (e.toLowerCase()) {
         case "appl":

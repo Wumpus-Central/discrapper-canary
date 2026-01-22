@@ -16,7 +16,7 @@ var r = n(652215),
     i = n(985018);
 let a = 4320,
     s = 50,
-    o = 100000,
+    o = 1e5,
     l = 50,
     c = 25,
     u = {
@@ -38,6 +38,7 @@ var d = (function (e) {
         e
     );
 })({});
+
 function f() {
     return [
         {

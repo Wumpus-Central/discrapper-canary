@@ -1,4 +1,12 @@
-n.d(t, { A: () => E }), n(896048), n(680155), n(323874), n(14289), n(35956), n(747238);
+n.d(t, {
+    A: () => E,
+}),
+    n(896048),
+    n(680155),
+    n(323874),
+    n(14289),
+    n(35956),
+    n(747238);
 var l = n(627968),
     a = n(64700),
     r = n(311907),
@@ -31,11 +39,15 @@ let E = function (e) {
     a.useEffect(() => {
         if (null != t && null == R) {
             let e = "true" === new URLSearchParams(location.search).get("preview") || void 0;
-            d.Di(t, { noCache: e });
+            d.Di(t, {
+                noCache: e,
+            });
         }
     }, [t, R]),
         a.useEffect(() => {
-            d.xZ({ applicationId: t });
+            d.xZ({
+                applicationId: t,
+            });
         }, [t]),
         a.useEffect(() => () => P(!0), [P]);
     let L = null == R ? void 0 : R.storefront_available,
@@ -43,7 +55,12 @@ let E = function (e) {
         k = a.useCallback(
             (e) => {
                 var t;
-                null == (t = N.current) || t.scrollTo({ to: 0 }), w(y.GlobalDiscoveryAppsSections.ABOUT), n(e);
+                null == (t = N.current) ||
+                    t.scrollTo({
+                        to: 0,
+                    }),
+                    w(y.GlobalDiscoveryAppsSections.ABOUT),
+                    n(e);
             },
             [n],
         );
@@ -51,8 +68,16 @@ let E = function (e) {
         (null == R ? void 0 : R.storefront_available) && null != t && (0, i.F)(t);
     }, [null == R ? void 0 : R.storefront_available, t]);
     let M = (0, f.Bn)(),
-        U = (0, r.bG)([p.A], () => p.A.getFetchState({ applicationId: null == R ? void 0 : R.id })),
-        G = (0, r.bG)([p.A], () => p.A.getSimilarApplications({ applicationId: null == R ? void 0 : R.id })),
+        U = (0, r.bG)([p.A], () =>
+            p.A.getFetchState({
+                applicationId: null == R ? void 0 : R.id,
+            }),
+        ),
+        G = (0, r.bG)([p.A], () =>
+            p.A.getSimilarApplications({
+                applicationId: null == R ? void 0 : R.id,
+            }),
+        ),
         V = a.useMemo(() => (null == G ? void 0 : G.applications.slice(0, 3)), [G]),
         H = {
             displayedSimilarApplications: V,
@@ -91,9 +116,13 @@ let E = function (e) {
             if (null == R) return null;
             switch (D) {
                 case y.GlobalDiscoveryAppsSections.ABOUT:
-                    return (0, l.jsx)(x.A, { application: R });
+                    return (0, l.jsx)(x.A, {
+                        application: R,
+                    });
                 case y.GlobalDiscoveryAppsSections.STORE:
-                    return (0, l.jsx)(_.A, { application: R });
+                    return (0, l.jsx)(_.A, {
+                        application: R,
+                    });
             }
         }, [D, R]),
         z = a.useCallback(
@@ -119,11 +148,15 @@ let E = function (e) {
                     ? null == T || T === u.e.FETCHING
                         ? (0, l.jsx)("div", {
                               className: C.Dg,
-                              children: (0, l.jsx)(m.A, { loading: !0 }),
+                              children: (0, l.jsx)(m.A, {
+                                  loading: !0,
+                              }),
                           })
                         : (0, l.jsx)("div", {
                               className: C.Dg,
-                              children: (0, l.jsx)(b.A, { className: C.z3 }),
+                              children: (0, l.jsx)(b.A, {
+                                  className: C.z3,
+                              }),
                           })
                     : (0, l.jsxs)("div", {
                           className: C.nM,

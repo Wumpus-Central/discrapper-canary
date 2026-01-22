@@ -1,4 +1,6 @@
-t.d(l, { A: () => S });
+t.d(l, {
+    A: () => S,
+});
 var n = t(627968),
     a = t(64700),
     s = t(503698),
@@ -21,6 +23,7 @@ var n = t(627968),
     k = t(518477),
     v = t(985018),
     j = t(848464);
+
 function E(e) {
     let { content: l, onClick: t, ariaLabel: a, className: s } = e;
     return (0, n.jsx)(d.DUT, {
@@ -30,6 +33,7 @@ function E(e) {
         children: l,
     });
 }
+
 function S(e) {
     let { guildId: l, storefront: t, selectedPageIndex: s } = e,
         S = (0, d.Mwr)((0, o.Ay)()),
@@ -78,7 +82,9 @@ function S(e) {
                                 src: O,
                                 alt: t.title,
                             }),
-                        (0, n.jsx)(f.A.Title, { children: t.title }),
+                        (0, n.jsx)(f.A.Title, {
+                            children: t.title,
+                        }),
                     ],
                 }),
                 (0, n.jsx)("div", {
@@ -94,7 +100,9 @@ function S(e) {
                                     });
                                 },
                                 wrapperClassName: j.oB,
-                                className: i()(j.xT, { [j.ys]: s === t }),
+                                className: i()(j.xT, {
+                                    [j.ys]: s === t,
+                                }),
                                 children: (0, n.jsx)(d.EYj, {
                                     variant: "text-sm/medium",
                                     children: e.title,

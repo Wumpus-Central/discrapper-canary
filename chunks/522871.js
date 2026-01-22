@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(64700),
     i = n(172218),
     a = n(478437),
@@ -8,6 +10,7 @@ var r = n(64700),
     c = n(732071),
     u = n(652215);
 let d = 0;
+
 function f(e) {
     var t, n;
     let { message: f, channel: p, enabled: _ = !0 } = e,
@@ -45,7 +48,9 @@ function f(e) {
             [b, p.id, p.guild_id, y, O],
         ),
         v = l.A.useExperiment(
-            { location: "836a4b_1" },
+            {
+                location: "836a4b_1",
+            },
             {
                 disable: !E || !_,
                 autoTrackExposure: !0,

@@ -1,5 +1,8 @@
 let r, i, a;
-n.d(t, { A: () => S }), n(896048);
+n.d(t, {
+    A: () => S,
+}),
+    n(896048);
 var s,
     o = n(311907),
     l = n(73153),
@@ -10,6 +13,7 @@ var s,
     p = n(723702),
     _ = n(986120),
     h = n(652215);
+
 function m(e, t, n) {
     return (
         t in e
@@ -23,6 +27,7 @@ function m(e, t, n) {
         e
     );
 }
+
 function g() {
     let e = u.Ay.getRunningDiscordApplicationIds();
     for (let t of a.filter((t) => !e.includes(t))) {
@@ -36,11 +41,13 @@ function g() {
     }
     return (a = e), !1;
 }
+
 function E(e) {
     let { applicationId: t, branchId: n } = e,
         r = (0, f.gW)(t, n);
     i.add(r);
 }
+
 function b(e) {
     let { applicationId: t, branchId: n } = e,
         a = (0, f.gW)(t, n);
@@ -53,10 +60,12 @@ function b(e) {
         !0
     );
 }
+
 function y(e) {
     let { state: t } = e;
     for (let e of Object.keys(t)) r[e] = t[e];
 }
+
 function O(e) {
     let { applicationId: t, branchId: n, next: a, remote: s } = e,
         o = (0, f.gW)(t, n);
@@ -67,10 +76,14 @@ function O(e) {
     }),
         i.delete(o);
 }
+
 function A(e) {
     let { applicationId: t, branchId: n } = e,
         a = (0, f.gW)(t, n);
-    (r[a] = { type: h.VX0.ERROR }), i.delete(a);
+    (r[a] = {
+        type: h.VX0.ERROR,
+    }),
+        i.delete(a);
 }
 class v extends (s = o.Ay.Store) {
     initialize() {

@@ -1,10 +1,13 @@
-n.d(t, { k: () => _ });
+n.d(t, {
+    k: () => _,
+});
 var r = n(627968);
 n(64700);
 var i = n(224640),
     a = n(696208),
     s = n(430993),
     o = n(20742);
+
 function l(e, t, n) {
     return (
         t in e
@@ -18,6 +21,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,6 +38,7 @@ function c(e) {
     }
     return e;
 }
+
 function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -46,6 +51,7 @@ function u(e, t) {
     }
     return n;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -57,6 +63,7 @@ function d(e, t) {
         e
     );
 }
+
 function f(e, t) {
     if (null == e) return {};
     var n,
@@ -73,6 +80,7 @@ function f(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function p(e, t) {
     if (null == e) return {};
     var n,
@@ -83,6 +91,7 @@ function p(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function _(e) {
     let {
             size: t = "md",
@@ -119,7 +128,9 @@ function _(e) {
                     title: p,
                     subtitle: _,
                 }),
-                (0, r.jsx)(s.c, { children: g }),
+                (0, r.jsx)(s.c, {
+                    children: g,
+                }),
                 (0, r.jsx)(a.H, {
                     leading: h,
                     actions: m,

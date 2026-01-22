@@ -1,4 +1,6 @@
-n.d(t, { D: () => a });
+n.d(t, {
+    D: () => a,
+});
 let r = (e, t) => ({
         x: e.x - t.x,
         y: e.y - t.y,

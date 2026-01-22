@@ -1,4 +1,7 @@
-a.d(t, { default: () => h }), a(896048);
+a.d(t, {
+    default: () => h,
+}),
+    a(896048);
 var n = a(627968),
     s = a(64700),
     i = a(503698),
@@ -17,6 +20,7 @@ var n = a(627968),
     p = a(339984),
     N = a(985018),
     g = a(392491);
+
 function h(e) {
     let { transitionState: t, onClose: i, onComplete: h, uploadType: E, showUpsellHeader: y, analyticsPage: j } = e,
         [R, v] = s.useState(!1),
@@ -65,7 +69,9 @@ function h(e) {
                             })(
                                 {
                                     imageUri: s,
-                                    file: new File([r], "tenor.gif", { type: "image/gif" }),
+                                    file: new File([r], "tenor.gif", {
+                                        type: "image/gif",
+                                    }),
                                     onCrop: h,
                                     uploadType: E,
                                     showUpsellHeader: y,
@@ -74,14 +80,18 @@ function h(e) {
                             ),
                         );
                 },
-                { contextKey: I },
+                {
+                    contextKey: I,
+                },
             );
     }
     s.useEffect(() => {
         _.default.track(x.HAw.OPEN_MODAL, {
             type: x.JJy.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
             location_stack: L,
-            location: { page: j },
+            location: {
+                page: j,
+            },
         });
     }, [L, j]);
     let T = E === p.HL.AVATAR || E === p.HL.BANNER,
@@ -92,7 +102,9 @@ function h(e) {
             onClose: i,
             transitionState: t,
             children: [
-                (0, n.jsx)(r.rQ0, { title: N.intl.string(N.t["xsC+/y"]) }),
+                (0, n.jsx)(r.rQ0, {
+                    title: N.intl.string(N.t["xsC+/y"]),
+                }),
                 y &&
                     !w &&
                     (0, n.jsx)("div", {
@@ -108,12 +120,17 @@ function h(e) {
                     className: g.SD,
                     children: [
                         (0, n.jsx)(u.A, {
-                            className: l()(g.XC, { [g.bX]: R }),
+                            className: l()(g.XC, {
+                                [g.bX]: R,
+                            }),
                             onSelectGIF: S,
                             headingColor: "text-subtle",
                             hideFavorites: !0,
                         }),
-                        R && (0, n.jsx)(c.y$y, { className: g.u1 }),
+                        R &&
+                            (0, n.jsx)(c.y$y, {
+                                className: g.u1,
+                            }),
                         y &&
                             w &&
                             (0, n.jsx)(A.A, {

@@ -1,4 +1,6 @@
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -33,7 +35,9 @@ class p extends i.PureComponent {
                               (0, r.jsx)(s.Heading, {
                                   variant: l.length < 25 ? "heading-xl/bold" : "heading-lg/bold",
                                   className: f.y,
-                                  children: d.intl.format(d.t["ze/1yE"], { cashtag: l }),
+                                  children: d.intl.format(d.t["ze/1yE"], {
+                                      cashtag: l,
+                                  }),
                               }),
                               (0, r.jsx)(s.Text, {
                                   variant: "text-md/medium",

@@ -14,6 +14,7 @@ var r = n(665260),
     u = n(108959),
     d = n(5867),
     f = n(652215);
+
 function p(e) {
     var t;
     let { application: n, channelId: i } = e;
@@ -24,6 +25,7 @@ function p(e) {
             return f.MLl.CHANNEL_CALL_POPOUT;
     }
 }
+
 function _(e) {
     let { channelId: t, EmbeddedActivitiesStore: n, ApplicationStore: r } = e,
         i = n.getSelfEmbeddedActivityForChannel(t),
@@ -34,6 +36,7 @@ function _(e) {
             channelId: t,
         });
 }
+
 function h(e) {
     let { applicationId: t } = e,
         n = l.Ay.getCurrentEmbeddedActivity();
@@ -45,6 +48,7 @@ function h(e) {
             channelId: (0, c.H)(n.location),
         });
 }
+
 function m(e) {
     let { channelId: t } = e;
     return (0, i.bG)([s.A, l.Ay, a.A], () => {

@@ -1,4 +1,7 @@
-n.d(t, { A: () => E }), n(896048);
+n.d(t, {
+    A: () => E,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(735438),
@@ -14,6 +17,7 @@ var r = n(627968),
     A = n(901133),
     g = n(507133),
     m = n(985018);
+
 function b(e, t, n) {
     return (
         t in e
@@ -74,7 +78,10 @@ class _ extends i.PureComponent {
                                 }
                                 return e;
                             })({}, n)),
-                            (l = l = { user: t }),
+                            (l = l =
+                                {
+                                    user: t,
+                                }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
                                 : (function (e, t) {
@@ -96,7 +103,9 @@ class _ extends i.PureComponent {
                 let { party: e } = this.props;
                 return (0, r.jsx)(g.A, {
                     party: e,
-                    header: m.intl.formatToPlainString(m.t.I9et1z, { count: e.length }),
+                    header: m.intl.formatToPlainString(m.t.I9et1z, {
+                        count: e.length,
+                    }),
                 });
             });
     }

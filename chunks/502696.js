@@ -1,4 +1,6 @@
-n.d(t, { A: () => A });
+n.d(t, {
+    A: () => A,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -12,6 +14,7 @@ var i = n(397927),
     p = n(971203),
     f = n(652215),
     h = n(985018);
+
 function A(e) {
     let { party: t, close: n, onSelect: A } = e,
         g = (0, c.A)(t),
@@ -46,8 +49,12 @@ function A(e) {
                 (0, r.jsxs)(i.rXV, {
                     children: [m, b],
                 }),
-                (0, r.jsx)(i.rXV, { children: _ }),
-                (0, r.jsx)(i.rXV, { children: E }),
+                (0, r.jsx)(i.rXV, {
+                    children: _,
+                }),
+                (0, r.jsx)(i.rXV, {
+                    children: E,
+                }),
                 O,
             ],
         })

@@ -1,9 +1,11 @@
-t.d(a, { A: () => i });
+t.d(a, {
+    A: () => i,
+});
 var n = {
         lastWeek: "'el' eeee 'pasado a la' p",
         yesterday: "'ayer a la' p",
         today: "'hoy a la' p",
-        tomorrow: "'mañana a la' p",
+        tomorrow: "'ma\xf1ana a la' p",
         nextWeek: "eeee 'a la' p",
         other: "P",
     },
@@ -11,7 +13,7 @@ var n = {
         lastWeek: "'el' eeee 'pasado a las' p",
         yesterday: "'ayer a las' p",
         today: "'hoy a las' p",
-        tomorrow: "'mañana a las' p",
+        tomorrow: "'ma\xf1ana a las' p",
         nextWeek: "eeee 'a las' p",
         other: "P",
     };

@@ -1,4 +1,6 @@
-r.d(t, { A: () => d });
+r.d(t, {
+    A: () => d,
+});
 var n = r(627968);
 r(64700);
 var i = r(732955),
@@ -7,6 +9,7 @@ var i = r(732955),
     s = r(920814),
     c = r(985018),
     a = r(41715);
+
 function d() {
     let { selectedTab: e, isPhantomPreview: t, handlePreviewDismiss: r } = (0, l.k)();
     return t

@@ -19,6 +19,7 @@ var l = n(71393),
     d = n(147036),
     f = n(652215),
     p = n(985018);
+
 function _(e, t, n) {
     var r;
     let i = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
@@ -33,6 +34,7 @@ function _(e, t, n) {
         s.afkChannelId !== e.id
     );
 }
+
 function h(e) {
     switch (e) {
         case 0:
@@ -47,6 +49,7 @@ function h(e) {
             return p.intl.string(p.t["7Xq/nV"]);
     }
 }
+
 function m(e) {
     switch (e) {
         case 0:
@@ -61,6 +64,7 @@ function m(e) {
             return "".concat(p.intl.string(p.t["7Xq/nV"]), ": ").concat(p.intl.string(p.t["9C444m"]));
     }
 }
+
 function g(e, t, n, r, s) {
     let l;
     if (null == e) return [!1, 2];
@@ -73,6 +77,7 @@ function g(e, t, n, r, s) {
     let h = f && !u;
     return [!__OVERLAY__ && !p && !_ && (c || h), l];
 }
+
 function E(e) {
     return (0, r.yK)([u.A, l.A, c.A, s.default], () => g(e, u.A, l.A, c.A, s.default));
 }

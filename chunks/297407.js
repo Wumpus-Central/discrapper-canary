@@ -1,4 +1,6 @@
-l.d(t, { A: () => u });
+l.d(t, {
+    A: () => u,
+});
 var r = l(627968);
 l(64700);
 var n = l(158954),
@@ -6,6 +8,7 @@ var n = l(158954),
     s = l(915491),
     o = l(985018),
     a = l(542899);
+
 function u(e) {
     let { guildId: t } = e,
         l = (0, i.A)(t);
@@ -22,7 +25,15 @@ function u(e) {
                   (0, r.jsx)(n.IpV, {
                       className: a.k,
                       fade: !0,
-                      children: l.map((e, t) => (0, r.jsx)(s.A, { boost: e }, "boost-activity-".concat(t))),
+                      children: l.map((e, t) =>
+                          (0, r.jsx)(
+                              s.A,
+                              {
+                                  boost: e,
+                              },
+                              "boost-activity-".concat(t),
+                          ),
+                      ),
                   }),
               ],
           });

@@ -1,4 +1,6 @@
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});
 var i = n(627968);
 n(64700);
 var a = n(397927),
@@ -38,11 +40,18 @@ let r = {
                                     });
                             }
                             return e;
-                        })({ classificationId: e }, n),
+                        })(
+                            {
+                                classificationId: e,
+                            },
+                            n,
+                        ),
                     );
             });
     },
     close() {
-        l.h.dispatch({ type: "SAFETY_HUB_APPEAL_CLOSE" });
+        l.h.dispatch({
+            type: "SAFETY_HUB_APPEAL_CLOSE",
+        });
     },
 };

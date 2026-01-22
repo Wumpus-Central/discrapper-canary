@@ -1,4 +1,6 @@
-n.d(t, { A: () => N });
+n.d(t, {
+    A: () => N,
+});
 var r = n(627968),
     i = n(311907),
     l = n(397927),
@@ -61,7 +63,9 @@ let y = {
                             onClick: () =>
                                 (0, c.K)({
                                     guildId: t.id,
-                                    location: { section: h.JJy.GUILD_SETTINGS_STICKERS },
+                                    location: {
+                                        section: h.JJy.GUILD_SETTINGS_STICKERS,
+                                    },
                                 }),
                         }),
                     ],
@@ -79,11 +83,17 @@ let y = {
                 }),
                 (0, r.jsx)(l.Text, {
                     variant: "text-sm/normal",
-                    children: j.intl.format(j.t.hxLviw, { fileSize: (0, b.up)(524288, { useKibibytes: !0 }) }),
+                    children: j.intl.format(j.t.hxLviw, {
+                        fileSize: (0, b.up)(524288, {
+                            useKibibytes: !0,
+                        }),
+                    }),
                 }),
                 (0, r.jsx)(l.Text, {
                     variant: "text-sm/normal",
-                    children: j.intl.format(j.t.UBj0aX, { articleUrl: p.A.getArticleURL(h.MVz.STICKERS_UPLOAD) }),
+                    children: j.intl.format(j.t.UBj0aX, {
+                        articleUrl: p.A.getArticleURL(h.MVz.STICKERS_UPLOAD),
+                    }),
                 }),
             ],
         }),
@@ -100,8 +110,12 @@ let y = {
         return null == d || a === h.TVA.TIER_3 || c > 0
             ? null
             : (f > u
-                  ? ((t = j.intl.formatToPlainString(j.t.ZtAY1f, { level: d })),
-                    (n = j.intl.formatToPlainString(j.t["13hOWm"], { level: d })),
+                  ? ((t = j.intl.formatToPlainString(j.t.ZtAY1f, {
+                        level: d,
+                    })),
+                    (n = j.intl.formatToPlainString(j.t["13hOWm"], {
+                        level: d,
+                    })),
                     (i = h.ZSU.BOOST_UPSELL_BANNER_LOST_LEVEL))
                   : ((t = j.intl.string(j.t.zT9SxY)),
                     (n = j.intl.formatToPlainString(j.t.YaW9wI, {
@@ -149,9 +163,15 @@ let y = {
                                   (0, r.jsx)(A, {}),
                               ],
                           })
-                        : (0, r.jsx)(v, { guild: e }),
-                    (0, r.jsx)(l.cGx, { className: O.yF }),
-                    (0, r.jsx)(g.A, { guild: e }),
+                        : (0, r.jsx)(v, {
+                              guild: e,
+                          }),
+                    (0, r.jsx)(l.cGx, {
+                        className: O.yF,
+                    }),
+                    (0, r.jsx)(g.A, {
+                        guild: e,
+                    }),
                 ],
             }),
         });

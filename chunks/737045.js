@@ -34,6 +34,7 @@ var r = n(718574),
     })({});
 let d = 20,
     f = "channelPermissionSettingsAdvancedModeOn";
+
 function p(e, t, c) {
     let u = e.type;
     return {
@@ -352,13 +353,19 @@ function p(e, t, c) {
             description: (() => {
                 switch (u) {
                     case o.rbe.GUILD_CATEGORY:
-                        return l.intl.format(l.t["0kBp/0"], { helpCenterArticle: s.A.getArticleURL(o.MVz.SOUNDBOARD) });
+                        return l.intl.format(l.t["0kBp/0"], {
+                            helpCenterArticle: s.A.getArticleURL(o.MVz.SOUNDBOARD),
+                        });
                     case o.rbe.GUILD_TEXT:
                     case o.rbe.GUILD_FORUM:
                     case o.rbe.GUILD_MEDIA:
-                        return l.intl.format(l.t["6eYqU1"], { helpCenterArticle: s.A.getArticleURL(o.MVz.SOUNDBOARD) });
+                        return l.intl.format(l.t["6eYqU1"], {
+                            helpCenterArticle: s.A.getArticleURL(o.MVz.SOUNDBOARD),
+                        });
                     default:
-                        return l.intl.format(l.t.GEi6Ym, { helpCenterArticle: s.A.getArticleURL(o.MVz.SOUNDBOARD) });
+                        return l.intl.format(l.t.GEi6Ym, {
+                            helpCenterArticle: s.A.getArticleURL(o.MVz.SOUNDBOARD),
+                        });
                 }
             })(),
             flag: o.xBc.USE_SOUNDBOARD,
@@ -394,7 +401,9 @@ function p(e, t, c) {
                     onClick: () => {
                         {
                             let { openUserSettings: e } = n(840065);
-                            e(a.X.KEYBINDS_PANEL, { section: o.nc_.KEYBINDS });
+                            e(a.X.KEYBINDS_PANEL, {
+                                section: o.nc_.KEYBINDS,
+                            });
                         }
                     },
                 };

@@ -1,4 +1,6 @@
-n.d(t, { G: () => r });
+n.d(t, {
+    G: () => r,
+});
 var r = (function (e) {
     return (
         (e.RULE_NAME = "rule_name"),

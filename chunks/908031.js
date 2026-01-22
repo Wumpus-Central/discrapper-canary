@@ -1,4 +1,6 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 var r = n(658809),
     i = n(632434);
 class a {
@@ -26,7 +28,9 @@ class a {
                         let a = t.start.get("weekday") - n.getDay();
                         if (
                             (a <= 0 && (a += 7),
-                            (n = (0, i.Gw)(n, { day: a })),
+                            (n = (0, i.Gw)(n, {
+                                day: a,
+                            })),
                             (0, r.Hq)(t.start, n),
                             e.debug(() => {
                                 console.log(`${this.constructor.name} adjusted ${t} weekday (${t.start})`);
@@ -35,7 +39,9 @@ class a {
                         ) {
                             let a = t.end.get("weekday") - n.getDay();
                             a <= 0 && (a += 7),
-                                (n = (0, i.Gw)(n, { day: a })),
+                                (n = (0, i.Gw)(n, {
+                                    day: a,
+                                })),
                                 (0, r.Hq)(t.end, n),
                                 e.debug(() => {
                                     console.log(`${this.constructor.name} adjusted ${t} weekday (${t.end})`);

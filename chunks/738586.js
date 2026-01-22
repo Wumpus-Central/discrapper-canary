@@ -1,10 +1,15 @@
-n.d(t, { V: () => _ }), n(321073), n(896048);
+n.d(t, {
+    V: () => _,
+}),
+    n(321073),
+    n(896048);
 var r = n(607399),
     i = n(499979),
     a = n(626584),
     s = n(264644),
     o = n(927813),
     l = n(652215);
+
 function c(e, t, n) {
     return (
         t in e
@@ -28,7 +33,7 @@ class _ {
             -1 === this.prevFramesCodec[e] ||
             t < this.prevFramesCodec[e] ||
             n < this.prevTimestamp[e] ||
-            n > this.prevTimestamp[e] + 1000 * this.windowLength
+            n > this.prevTimestamp[e] + 1e3 * this.windowLength
         )
             return (this.prevFramesCodec[e] = t), (this.prevTimestamp[e] = n), (this.perUserFpsWindow[e] = []), NaN;
         if (n < this.prevTimestamp[e] + f) return NaN;
@@ -99,7 +104,7 @@ class _ {
         );
     }
     elapsedSeconds(e, t) {
-        return (e - t) / 1000;
+        return (e - t) / 1e3;
     }
     stateCleanupBeforeEnable(e) {
         this.logger.info("VideoHealthManager::stateCleanupBeforeEnable"),

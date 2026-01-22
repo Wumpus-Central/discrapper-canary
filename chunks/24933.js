@@ -1,4 +1,6 @@
-r.d(t, { A: () => b });
+r.d(t, {
+    A: () => b,
+});
 var n = r(627968);
 r(64700);
 var o = r(311907),
@@ -8,8 +10,11 @@ var o = r(311907),
     a = r(77735),
     c = r(509381),
     s = r(985018);
+
 function b(e) {
-    let { enabledInputProfiles: t } = (0, a.d)({ location: "useInputProfileItems" }),
+    let { enabledInputProfiles: t } = (0, a.d)({
+            location: "useInputProfileItems",
+        }),
         r = {
             [c.my.VOICE_ISOLATION]: s.intl.string(s.t.cjPbpT),
             [c.my.STUDIO]: s.intl.string(s.t.VZPR0R),
@@ -24,7 +29,10 @@ function b(e) {
                     group: "input-profiles",
                     label: r[t],
                     checked: t === (null != b ? b : c.my.CUSTOM),
-                    action: () => i.A.setActiveInputProfile(t, { analyticsLocations: e }),
+                    action: () =>
+                        i.A.setActiveInputProfile(t, {
+                            analyticsLocations: e,
+                        }),
                 },
                 t,
             ),

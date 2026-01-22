@@ -1,4 +1,7 @@
-l.d(t, { A: () => S }), l(896048);
+l.d(t, {
+    A: () => S,
+}),
+    l(896048);
 var n = l(627968),
     r = l(64700),
     i = l(503698),
@@ -46,6 +49,7 @@ let p = (e) => {
         ),
     });
 };
+
 function E(e) {
     let { onTabSelect: t, tabs: l, selectedTab: i } = e,
         a = r.useRef(null),
@@ -110,7 +114,9 @@ function E(e) {
                         id: "more",
                         clickableInnerRef: a,
                         color: "text-muted",
-                        className: s()(A.OS, { [A.wH]: x }),
+                        className: s()(A.OS, {
+                            [A.wH]: x,
+                        }),
                         "aria-label": v.intl.string(v.t["UKOtz+"]),
                         children: [
                             (0, n.jsx)(o.Text, {
@@ -146,13 +152,16 @@ function E(e) {
         },
     });
 }
+
 function S(e) {
     let t,
         { guildId: l, currentTab: i, onTabSelect: s } = e,
         [d, m] = r.useState(0),
         p = r.useRef(null),
         S = r.useRef(d),
-        T = (0, b.H)({ guildId: l }),
+        T = (0, b.H)({
+            guildId: l,
+        }),
         y =
             ((t = null != T ? T : 0),
             [
@@ -163,7 +172,11 @@ function S(e) {
                 {
                     id: g.D.PENDING,
                     label:
-                        t > 0 ? v.intl.formatToPlainString(v.t["Wo+zL0"], { count: t }) : v.intl.string(v.t["4eQVBO"]),
+                        t > 0
+                            ? v.intl.formatToPlainString(v.t["Wo+zL0"], {
+                                  count: t,
+                              })
+                            : v.intl.string(v.t["4eQVBO"]),
                 },
                 {
                     id: g.D.REJECTED,
@@ -185,7 +198,9 @@ function S(e) {
             containerWidth: d - 200,
         }),
         I = (0, a.bG)([h.Ay], () => null != h.Ay.getGuildSidebarState(l), [l]),
-        R = (0, j.R)({ guildId: l }),
+        R = (0, j.R)({
+            guildId: l,
+        }),
         D = r.useMemo(() => (i === g.D.ALL_MEMBERS ? I : null != R && null != R.user), [i, I, R]),
         P = r.useMemo(() => y.slice(0, _ + 1), [_, y]),
         C = r.useMemo(() => y.slice(_ + 1), [_, y]),
@@ -197,7 +212,9 @@ function S(e) {
         (0, u.g)(p, M, [D]),
         (0, n.jsxs)(n.Fragment, {
             children: [
-                (0, n.jsx)(f.A.Divider, { className: A.yF }),
+                (0, n.jsx)(f.A.Divider, {
+                    className: A.yF,
+                }),
                 (0, n.jsxs)("div", {
                     className: A.oB,
                     ref: p,

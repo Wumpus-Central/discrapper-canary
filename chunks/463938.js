@@ -1,4 +1,6 @@
-n.d(t, { j: () => A });
+n.d(t, {
+    j: () => A,
+});
 var r = n(627968),
     l = n(64700),
     i = n(837381),
@@ -13,6 +15,7 @@ var r = n(627968),
     h = n(746080),
     b = n(985018),
     g = n(949684);
+
 function m(e, t) {
     return (0, r.jsx)(
         o.Text,
@@ -73,7 +76,11 @@ let A = l.memo(function (e) {
                 (n = n =
                     {
                         role: "button",
-                        focusProps: { offset: { right: 4 } },
+                        focusProps: {
+                            offset: {
+                                right: 4,
+                            },
+                        },
                         className: g.G9,
                         onClick: function () {
                             (0, d.pX)(p.BVt.CHANNEL(A.id, h.VV.GUILD_HOME));

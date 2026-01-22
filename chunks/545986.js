@@ -46,6 +46,7 @@ var i = n(835245),
     w = n(652215),
     P = n(488995),
     D = n(985018);
+
 function x(e, t, n) {
     return (
         t in e
@@ -59,6 +60,7 @@ function x(e, t, n) {
         e
     );
 }
+
 function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -75,6 +77,7 @@ function L(e) {
     }
     return e;
 }
+
 function j(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -87,6 +90,7 @@ function j(e, t) {
     }
     return n;
 }
+
 function M(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -100,6 +104,7 @@ function M(e, t) {
 }
 let k = "in-app",
     U = "Discord Widget";
+
 function G(e) {
     let { quest: t, sourceQuestContent: i } = e;
     (0, o.mMO)(async () => {
@@ -114,6 +119,7 @@ function G(e) {
             );
     });
 }
+
 function V(e, t, i) {
     (0, o.mMO)(async () => {
         let { default: a } = await n.e("26747").then(n.bind(n, 529398));
@@ -128,6 +134,7 @@ function V(e, t, i) {
             );
     });
 }
+
 function F(e, t, i) {
     (0, o.mMO)(async () => {
         let { default: a } = await n.e("67426").then(n.bind(n, 268473));
@@ -142,6 +149,7 @@ function F(e, t, i) {
             );
     });
 }
+
 function B(e, t, i, a) {
     (0, o.mMO)(async () => {
         let { default: s } = await n.e("90948").then(n.bind(n, 651663));
@@ -157,6 +165,7 @@ function B(e, t, i, a) {
             );
     });
 }
+
 function H(e, t, i) {
     (0, o.mMO)(async () => {
         let { default: a } = await n.e("81169").then(n.bind(n, 124232));
@@ -171,6 +180,7 @@ function H(e, t, i) {
             );
     });
 }
+
 function Y(e, t) {
     (0, m.Y5)({
         questId: e.id,
@@ -192,6 +202,7 @@ function Y(e, t) {
                 );
         });
 }
+
 function W() {
     let {
         fromContent: e,
@@ -205,14 +216,22 @@ function W() {
         utmContentCurrent: Object.keys(E.uF).find((t) => E.uF[t] === e),
     });
     let r = null != t ? "#".concat(t) : "";
-    n && c.A.setState({ selectedTab: P.GlobalDiscoveryTab.QUESTS }),
+    n &&
+        c.A.setState({
+            selectedTab: P.GlobalDiscoveryTab.QUESTS,
+        }),
         (0, d.default)(),
         (0, u.pX)((n ? w.BVt.QUEST_HOME : w.BVt.QUEST_HOME_V2) + r);
 }
 let K = 0.2;
+
 function z(e) {
-    let t = (0, O.L)({ quest: e }),
-        n = { location: R.rE.QUESTS_BAR };
+    let t = (0, O.L)({
+            quest: e,
+        }),
+        n = {
+            location: R.rE.QUESTS_BAR,
+        };
     if (!(0, y.l)(n) || Math.random() > K) return;
     let r = (0, A.A)(e);
     t.log("Showing survey ".concat(r.id)),
@@ -221,9 +240,11 @@ function z(e) {
             survey: r,
         });
 }
+
 function q() {
     return Promise.all([n.e("35584"), n.e("23628"), n.e("29")]).then(n.bind(n, 717415));
 }
+
 function X(e) {
     var t;
     let {
@@ -281,6 +302,7 @@ function X(e) {
         },
     );
 }
+
 function Z(e) {
     var t;
     let n = null == (t = platform.os) ? void 0 : t.family,
@@ -297,6 +319,7 @@ function Z(e) {
     }
     return "discord://";
 }
+
 function Q(e) {
     let t = Z(e),
         n = (0, a.X7)(t);
@@ -314,6 +337,7 @@ function Q(e) {
                 });
         });
 }
+
 function $(e) {
     var t;
     let n = null == (t = platform.os) ? void 0 : t.family,
@@ -333,6 +357,7 @@ function $(e) {
     }
     return "discord://";
 }
+
 function J(e) {
     let t = $(e),
         n = (0, a.X7)(t);
@@ -350,10 +375,17 @@ function J(e) {
                 });
         });
 }
+
 function ee(e) {
     (0, o.mMO)(async () => {
-        let { default: t } = await Promise.all([n.e("43887"), n.e("77828")]).then(n.bind(n, 491390));
-        return (n) => (0, r.jsx)(t, M(L({}, n), { questId: e.id }));
+        let { default: t } = await Promise.all([n.e("14882"), n.e("77828")]).then(n.bind(n, 491390));
+        return (n) =>
+            (0, r.jsx)(
+                t,
+                M(L({}, n), {
+                    questId: e.id,
+                }),
+            );
     });
 }
 async function et(e, t) {
@@ -387,6 +419,7 @@ async function et(e, t) {
         case h.WM.PREVIOUS_IN_FLIGHT_REQUEST:
     }
 }
+
 function en(e) {
     if ((0, I.vA)(e)) return e.config.features.includes(R.Li.CLOUD_GAMING_ACTIVITY) ? o.hpF : o._xR;
 }

@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -11,6 +13,7 @@ var i = n(397927),
     d = n(652215),
     h = n(985018),
     f = n(140030);
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +39,7 @@ function p(e) {
     }
     return e;
 }
+
 function g(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -54,6 +58,7 @@ function g(e, t) {
         e
     );
 }
+
 function m(e) {
     let { invite: t, onAcceptInvite: n, disableUser: m = !1 } = e;
     if (null == t) return null;
@@ -100,8 +105,20 @@ function m(e) {
                       guild: A,
                       user: b || (0, c.PX)(t) ? E : null,
                   }),
-                  (0, c.PX)(t) ? null : (0, r.jsx)(c.ji, g(p({}, j), { showBigUserIcon: b })),
-                  (0, r.jsx)(c.TZ, g(p({}, j), { showBigUserIcon: b })),
+                  (0, c.PX)(t)
+                      ? null
+                      : (0, r.jsx)(
+                            c.ji,
+                            g(p({}, j), {
+                                showBigUserIcon: b,
+                            }),
+                        ),
+                  (0, r.jsx)(
+                      c.TZ,
+                      g(p({}, j), {
+                          showBigUserIcon: b,
+                      }),
+                  ),
                   (0, r.jsx)(c.IK, p({}, j)),
                   (0, r.jsx)("div", {
                       className: f.xG,

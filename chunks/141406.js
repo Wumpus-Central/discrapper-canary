@@ -1,9 +1,12 @@
-l.d(t, { A: () => a });
+l.d(t, {
+    A: () => a,
+});
 var r = l(64700),
     n = l(311907),
     i = l(403362),
     s = l(645619),
     o = l(904629);
+
 function a(e) {
     let t = (0, n.bG)([s.A], () => s.A.getStateForGuild(e));
     return r.useMemo(() => {

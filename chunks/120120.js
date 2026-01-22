@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var r = n(627968);
 n(64700);
 var i = n(417597),
@@ -12,6 +14,7 @@ var i = n(417597),
     f = n(652215),
     p = n(985018),
     _ = n(221110);
+
 function h(e) {
     let { guildId: t, user: n, username: o } = e,
         l = (0, i.bG)([s.A], () => !s.A.useReducedMotion),
@@ -24,9 +27,13 @@ function h(e) {
     return (0, r.jsxs)("div", {
         className: _.uE,
         role: "img",
-        "aria-label": p.intl.formatToPlainString(p.t["utf8+W"], { username: o }),
+        "aria-label": p.intl.formatToPlainString(p.t["utf8+W"], {
+            username: o,
+        }),
         children: [
-            (0, r.jsx)(d.A, { avatar: u }),
+            (0, r.jsx)(d.A, {
+                avatar: u,
+            }),
             (0, r.jsx)(a.Text, {
                 className: _.Bi,
                 tag: "p",
@@ -51,6 +58,7 @@ function h(e) {
         ],
     });
 }
+
 function m(e) {
     var t, i, a;
     let { channel: s, message: d, compact: _ } = e,

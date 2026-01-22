@@ -1,4 +1,8 @@
-n.d(t, { A: () => P }), n(896048), n(747238);
+n.d(t, {
+    A: () => P,
+}),
+    n(896048),
+    n(747238);
 var r,
     i = n(627968),
     a = n(64700),
@@ -20,6 +24,7 @@ var r,
     O = n(219887),
     A = n(985018),
     v = n(670566);
+
 function S(e, t, n) {
     return (
         t in e
@@ -33,6 +38,7 @@ function S(e, t, n) {
         e
     );
 }
+
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -49,6 +55,7 @@ function I(e) {
     }
     return e;
 }
+
 function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -61,6 +68,7 @@ function T(e, t) {
     }
     return n;
 }
+
 function C(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -233,7 +241,11 @@ class w extends (r = a.PureComponent) {
                                 : null,
                             (0, i.jsx)("div", {
                                 className: v.Sv,
-                                children: l ? A.intl.format(A.t.w9WkBl, { paypalURL: N }) : A.intl.string(A.t.VXndyr),
+                                children: l
+                                    ? A.intl.format(A.t.w9WkBl, {
+                                          paypalURL: N,
+                                      })
+                                    : A.intl.string(A.t.VXndyr),
                             }),
                         ],
                     }),
@@ -286,12 +298,20 @@ class w extends (r = a.PureComponent) {
                 this.setState({
                     billingAddress: e,
                     billingAddressValid: t,
-                    dirtyFields: C(I({}, this.state.dirtyFields), { billingAddress: n }),
+                    dirtyFields: C(I({}, this.state.dirtyFields), {
+                        billingAddress: n,
+                    }),
                 });
             }),
             S(this, "handleExpirationDateUpdate", (e, t) => {
                 let { expirationDate: n } = e;
-                if ((this.setState({ expirationValid: t }), null == n || "" === n)) return;
+                if (
+                    (this.setState({
+                        expirationValid: t,
+                    }),
+                    null == n || "" === n)
+                )
+                    return;
                 let [r, i] = n.split("/");
                 this.handleFieldChange(Number(r), "expiresMonth"),
                     this.handleFieldChange(
@@ -303,7 +323,9 @@ class w extends (r = a.PureComponent) {
                 null != t &&
                     this.setState({
                         [t]: e,
-                        dirtyFields: C(I({}, this.state.dirtyFields), { [t]: !0 }),
+                        dirtyFields: C(I({}, this.state.dirtyFields), {
+                            [t]: !0,
+                        }),
                     });
             });
         const { paymentSource: l, isDefault: c } = e,

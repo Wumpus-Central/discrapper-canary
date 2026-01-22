@@ -14,6 +14,7 @@ var r = n(627968),
     o = n(397927),
     d = n(242564),
     u = n(974911);
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -39,6 +40,7 @@ function f(e) {
     }
     return e;
 }
+
 function g(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -57,6 +59,7 @@ function g(e, t) {
         e
     );
 }
+
 function b(e, t) {
     let { expandableToggleColumnKey: n } = t,
         i = (0, d.IE)(
@@ -95,16 +98,21 @@ function b(e, t) {
                             children: (0, r.jsx)(o._BQ, {
                                 size: "md",
                                 color: "currentColor",
-                                className: s()(u.Rq, { [u.jH]: l }),
+                                className: s()(u.Rq, {
+                                    [u.jH]: l,
+                                }),
                             }),
                         }),
                     });
                 },
             };
-        })({ key: n }),
+        })({
+            key: n,
+        }),
         ...i,
     ];
 }
+
 function m(e) {
     let { renderExpandedContent: t } = e,
         n = (function (e, t) {
@@ -138,8 +146,11 @@ function m(e) {
                         !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
             return l;
         })(e, ["renderExpandedContent"]);
-    return g(f({}, (0, d.HA)(n)), { renderExpandedContent: t });
+    return g(f({}, (0, d.HA)(n)), {
+        renderExpandedContent: t,
+    });
 }
+
 function p(e, t) {
     let { generateExpandedRows: n } = t,
         r = (function () {

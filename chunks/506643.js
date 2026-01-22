@@ -1,7 +1,13 @@
-n.d(t, { A: () => l }), n(747238), n(896048), n(65821);
+n.d(t, {
+    A: () => l,
+}),
+    n(747238),
+    n(896048),
+    n(65821);
 var r = n(143236),
     i = n(118356),
     a = n(396574);
+
 function s(e, t, n) {
     return (
         t in e
@@ -118,7 +124,7 @@ class l extends r.EventEmitter {
         for (let e = 0; e < t.length; e++) {
             let n = t[e];
             if (/^a=mid:/.test(n)) {
-                null != this.bitrate && t.splice(e + 1, 0, "b=AS:".concat(Math.floor(this.bitrate / 1000)));
+                null != this.bitrate && t.splice(e + 1, 0, "b=AS:".concat(Math.floor(this.bitrate / 1e3)));
                 break;
             }
         }
@@ -168,7 +174,9 @@ class l extends r.EventEmitter {
                 this.emitTrack(e.streams[0].id, e.track);
             }),
             (this.bitrate = e);
-        const t = (this.pc = new RTCPeerConnection({ sdpSemantics: "plan-b" }));
+        const t = (this.pc = new RTCPeerConnection({
+            sdpSemantics: "plan-b",
+        }));
         a.LU
             ? ((t.onconnectionstatechange = this.handlePeerConnectionStateChange),
               (t.oniceconnectionstatechange = this.handlePeerConnectionStateChange))

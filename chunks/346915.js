@@ -1,4 +1,6 @@
-r.d(t, { N: () => o });
+r.d(t, {
+    N: () => o,
+});
 async function o({
     gif: e,
     x: t,

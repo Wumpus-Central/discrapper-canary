@@ -1,4 +1,6 @@
-n.d(t, { default: () => L });
+n.d(t, {
+    default: () => L,
+});
 var l = n(627968);
 n(64700);
 var i = n(397927),
@@ -63,7 +65,9 @@ let L = (0, o.A)(
                     guildId: n,
                     context: L,
                 }),
-                F = (0, g.A)({ user: t }),
+                F = (0, g.A)({
+                    user: t,
+                }),
                 K = (0, I.A)(t.id),
                 X = (0, M.A)(t.id),
                 Y = (0, c.A)({
@@ -81,9 +85,15 @@ let L = (0, o.A)(
                     guildId: n,
                 }),
                 J = (0, s.A)(null, t),
-                q = (0, b.A)({ user: t }),
-                Z = (0, f.A)({ user: t }),
-                z = (0, S.A)({ user: t }),
+                q = (0, b.A)({
+                    user: t,
+                }),
+                Z = (0, f.A)({
+                    user: t,
+                }),
+                z = (0, S.A)({
+                    user: t,
+                }),
                 $ = (0, p.A)({
                     user: t,
                     guildId: n,
@@ -114,22 +124,33 @@ let L = (0, o.A)(
                                 (0, l.jsxs)(i.rXV, {
                                     children: [a && G, d && R, B, V, a && k, a && F, w],
                                 }),
-                                o && (0, l.jsx)(i.rXV, { children: K }),
-                                (0, l.jsx)(i.rXV, { children: a && J }),
+                                o &&
+                                    (0, l.jsx)(i.rXV, {
+                                        children: K,
+                                    }),
+                                (0, l.jsx)(i.rXV, {
+                                    children: a && J,
+                                }),
                                 (0, l.jsxs)(i.rXV, {
                                     children: [o && X, a && Y, a && W, q, Z, z, H, a && Q, a && $],
                                 }),
-                                (0, l.jsx)(i.rXV, { children: ee }),
+                                (0, l.jsx)(i.rXV, {
+                                    children: ee,
+                                }),
                                 (0, l.jsxs)(i.rXV, {
                                     children: [et, en],
                                 }),
                             ],
                         }),
-                    (0, l.jsx)(i.rXV, { children: el }),
+                    (0, l.jsx)(i.rXV, {
+                        children: el,
+                    }),
                 ],
             });
         },
-        { object: T.ZSU.CONTEXT_MENU },
+        {
+            object: T.ZSU.CONTEXT_MENU,
+        },
     ),
     [d.A.CONTEXT_MENU, d.A.GUILD_USER_MENU],
 );

@@ -12,17 +12,21 @@ var r = n(406935),
     u = n(406535),
     d = n(652215),
     f = n(985018);
+
 function p() {
     let e = s.NO.useSetting(),
         t = s.Jr.useSetting();
     return e && ("0" === t || new Date(Number(t)).getTime() - new Date().getTime() > 0);
 }
+
 function _(e, t) {
     let n = s.NO.getSetting();
     o.wc.updateAsync(
         "notifications",
         (n) => {
-            (n.quietMode = r._t.create({ value: e })),
+            (n.quietMode = r._t.create({
+                value: e,
+            })),
                 (n.focusModeExpiresAtMs = e && null != t ? "".concat(Date.now() + t) : "0");
         },
         o.Sb.INFREQUENT_USER_ACTION,
@@ -41,7 +45,9 @@ function _(e, t) {
                 cancelText: f.intl.string(f.t.f3Pet9),
                 confirmText: f.intl.string(f.t.BddRzS),
                 onConfirm: () => {
-                    (0, a.A)({ nextStatus: d.clD.ONLINE });
+                    (0, a.A)({
+                        nextStatus: d.clD.ONLINE,
+                    });
                 },
             });
 }

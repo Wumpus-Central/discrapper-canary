@@ -1,4 +1,6 @@
-n.d(t, { A: () => A });
+n.d(t, {
+    A: () => A,
+});
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -14,6 +16,7 @@ var r = n(627968),
     b = n(985018),
     g = n(499711),
     m = n(206314);
+
 function A(e) {
     let { channel: t, connected: n, hovered: i, subtitle: A, onClick: y, showEmptyChannelTopic: O } = e,
         j = (0, s.bG)([d.A], () => d.A.getChannelStatus(t)),
@@ -39,7 +42,11 @@ function A(e) {
               children: (0, r.jsx)(c.Text, {
                   variant: "text-xs/medium",
                   className: a()(g.qS, m.PT),
-                  children: (0, r.jsx)(o.A, { children: f.A.parseVoiceChannelStatus(j, !0, { channelId: t.id }) }),
+                  children: (0, r.jsx)(o.A, {
+                      children: f.A.parseVoiceChannelStatus(j, !0, {
+                          channelId: t.id,
+                      }),
+                  }),
               }),
           })
         : n && x && (!E || i) && O
@@ -60,6 +67,8 @@ function A(e) {
                 ],
             })
           : E
-            ? (0, r.jsx)(o.A, { children: A })
+            ? (0, r.jsx)(o.A, {
+                  children: A,
+              })
             : null;
 }

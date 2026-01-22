@@ -17,6 +17,7 @@ var r = n(627968),
     p = n(187584),
     _ = n(764917),
     h = n(652215);
+
 function m(e) {
     if (null == e || null == u.A.emojiAnimationTriggers) return !1;
     for (let t of u.A.emojiAnimationTriggers) {
@@ -35,6 +36,7 @@ let g = i.createContext({
     triggerAnimation: () => {},
     untriggerAnimation: () => {},
 });
+
 function E(e) {
     let { children: t } = e,
         { triggerAnimation: n, untriggerAnimation: a } = i.useContext(g),
@@ -55,19 +57,32 @@ function E(e) {
         children: t,
     });
 }
+
 function b(e) {
     let { children: t } = e,
         n = d.A.useIsEligible(),
         a = i.useCallback((e, t) => {
             switch (t) {
                 case u.n.THROW_EMOJI:
-                    return (0, r.jsx)(_.V, { children: e });
+                    return (0, r.jsx)(_.V, {
+                        children: e,
+                    });
                 case u.n.SNOW:
-                    return (0, r.jsx)(p.i, { children: e });
+                    return (0, r.jsx)(p.i, {
+                        children: e,
+                    });
             }
         }, []);
-    return n && null != u.A.emojiAnimationType ? a((0, r.jsx)(E, { children: t }), u.A.emojiAnimationType) : t;
+    return n && null != u.A.emojiAnimationType
+        ? a(
+              (0, r.jsx)(E, {
+                  children: t,
+              }),
+              u.A.emojiAnimationType,
+          )
+        : t;
 }
+
 function y(e) {
     let { emojiRef: t, channelId: n, messageId: r, emojiName: s } = e,
         o = (0, a.bG)([c.A], () => c.A.getMessage(n, r)),
@@ -86,6 +101,7 @@ function y(e) {
         null
     );
 }
+
 function O(e) {
     let { channelId: t, messageId: n, emojiName: i, disable: o, emojiRef: c } = e,
         u = (0, a.bG)([s.A], () => s.A.useReducedMotion),

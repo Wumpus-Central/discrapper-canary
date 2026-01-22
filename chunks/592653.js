@@ -12,9 +12,13 @@ var r = n(735438),
     c = n(562153),
     u = n(639621),
     d = n(613057);
+
 function p() {
     let e = l.Ay.getCurrentEmbeddedActivity();
-    if (null == e) return { participants: [] };
+    if (null == e)
+        return {
+            participants: [],
+        };
     let t = (0, a.D)(e.location),
         n = (0, a.H)(e.location);
     return {
@@ -49,7 +53,10 @@ function p() {
                     }
                     return e;
                 })({}, (0, u.A)(l))),
-                (i = i = { nickname: null != a ? a : void 0 }),
+                (i = i =
+                    {
+                        nickname: null != a ? a : void 0,
+                    }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
                     : (function (e, t) {
@@ -67,7 +74,9 @@ function p() {
         }).filter(o.Vq),
     };
 }
-let f = { [d.sm.ANY]: [d.VH] },
+let f = {
+        [d.sm.ANY]: [d.VH],
+    },
     h = {
         scope: f,
         handler: () => (e) => {

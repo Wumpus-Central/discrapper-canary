@@ -1,6 +1,9 @@
-n.d(t, { E: () => a });
+n.d(t, {
+    E: () => a,
+});
 var r = n(64700),
     i = n(492313);
+
 function a(e) {
     let [t, n] = (0, i.P)(e.isExpanded, e.defaultExpanded || !1, e.onExpandedChange),
         a = (0, r.useCallback)(() => {

@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var l = n(627968),
     r = n(64700),
     i = n(284009),
@@ -10,6 +12,7 @@ var l = n(627968),
     d = n(909417),
     f = n(427160),
     p = n(304713);
+
 function b(e) {
     let { focused: t, channelId: n, streamerId: i, stream: u } = e,
         b = r.useRef(null),
@@ -41,13 +44,16 @@ function b(e) {
         }),
     });
 }
+
 function g(e) {
     let { isSharedCanvasEnabled: t } = u.A.useExperiment(
         {
             guildId: e.guildId,
             location: "d0de1c_1",
         },
-        { autoTrackExposure: !0 },
+        {
+            autoTrackExposure: !0,
+        },
     );
     return !t || e.hasScreenMessage
         ? null

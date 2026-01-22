@@ -1,4 +1,11 @@
-n.d(t, { A: () => eg }), n(896048), n(747238), n(733351), n(457529), n(65821);
+n.d(t, {
+    A: () => eg,
+}),
+    n(896048),
+    n(747238),
+    n(733351),
+    n(457529),
+    n(65821);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -47,6 +54,7 @@ var r = n(627968),
     q = n(254441),
     X = n(506823),
     Z = n(473169);
+
 function Q(e, t, n) {
     return (
         t in e
@@ -60,6 +68,7 @@ function Q(e, t, n) {
         e
     );
 }
+
 function $(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -76,6 +85,7 @@ function $(e) {
     }
     return e;
 }
+
 function J(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -88,6 +98,7 @@ function J(e, t) {
     }
     return n;
 }
+
 function ee(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -112,6 +123,7 @@ let et = ["discord_web", "discord_marketing", "discord_developers", "discord_ios
             label: "Commit SHA",
         },
     ];
+
 function er(e) {
     return "discord_ios" in e || "discord_android" in e;
 }
@@ -124,7 +136,9 @@ class ei extends i.Component {
             className: s()(q.oS, Z.SX, X.N, q.nM),
             children: [
                 (0, r.jsx)(y.A, {
-                    className: s()(q.lL, { [q.zi]: i }),
+                    className: s()(q.lL, {
+                        [q.zi]: i,
+                    }),
                     onClick: i ? void 0 : this.handleRemoveBuildOverride,
                 }),
                 (0, r.jsxs)(I.A, {
@@ -168,7 +182,9 @@ class ei extends i.Component {
                             className: q.AS,
                             children: [
                                 "This controls the build that will be served for the ",
-                                (0, r.jsx)("code", { children: e }),
+                                (0, r.jsx)("code", {
+                                    children: e,
+                                }),
                                 " project.",
                             ],
                         }),
@@ -183,7 +199,9 @@ class ei extends i.Component {
                 this.props.onBuildOverrideRemoved(this.props.project);
             }),
             Q(this, "handleOverrideIdChanged", (e) => {
-                this.props.onBuildOverrideUpdated(this.props.project, { id: e });
+                this.props.onBuildOverrideUpdated(this.props.project, {
+                    id: e,
+                });
             }),
             Q(this, "handleOverrideTypeChanged", (e) => {
                 this.props.onBuildOverrideUpdated(this.props.project, {
@@ -195,7 +213,9 @@ class ei extends i.Component {
 }
 class ea extends i.Component {
     async refreshBuildOverrides() {
-        this.setState({ loading: !0 });
+        this.setState({
+            loading: !0,
+        });
         let e = await (0, v.bD)();
         this.setState({
             loading: !1,
@@ -221,7 +241,9 @@ class ea extends i.Component {
         return (0, r.jsx)(h.ppr, {
             theme: G.A.theme,
             className: s()(Z.eT, Z.SX),
-            children: (0, r.jsx)(h.SGT, { children: "You have no build overrides configured." }),
+            children: (0, r.jsx)(h.SGT, {
+                children: "You have no build overrides configured.",
+            }),
         });
     }
     renderItems() {
@@ -292,7 +314,9 @@ class ea extends i.Component {
         let e,
             { loading: t, saving: n, buildOverrides: i } = this.state;
         e = t
-            ? (0, r.jsx)(h.y$y, { className: Z.QX })
+            ? (0, r.jsx)(h.y$y, {
+                  className: Z.QX,
+              })
             : null != i && 0 === Object.keys(i).length
               ? this.renderEmpty()
               : this.renderItems();
@@ -356,17 +380,26 @@ class ea extends i.Component {
                         id: "",
                     },
                 });
-                this.setState({ buildOverrides: t });
+                this.setState({
+                    buildOverrides: t,
+                });
             }),
             Q(this, "handleBuildOverrideUpdated", (e, t) => {
                 let { buildOverrides: n } = this.state,
                     r = $({}, null != n ? n[e] : {}, t),
-                    i = ee($({}, this.state.buildOverrides), { [e]: r });
-                this.setState({ buildOverrides: i });
+                    i = ee($({}, this.state.buildOverrides), {
+                        [e]: r,
+                    });
+                this.setState({
+                    buildOverrides: i,
+                });
             }),
             Q(this, "handleBuildOverrideRemoved", (e) => {
                 let t = $({}, this.state.buildOverrides);
-                delete t[e], this.setState({ buildOverrides: t });
+                delete t[e],
+                    this.setState({
+                        buildOverrides: t,
+                    });
             }),
             Q(this, "handleDiscardChanges", () => {
                 this.setState({
@@ -378,7 +411,9 @@ class ea extends i.Component {
             Q(this, "handleSaveChanges", async () => {
                 let { buildOverrides: e } = this.state;
                 if (null == e) return;
-                this.setState({ saving: !0 });
+                this.setState({
+                    saving: !0,
+                });
                 let t = await (0, A.Zk)(e);
                 if (200 === t.status) {
                     let e = t.body;
@@ -404,7 +439,14 @@ class ea extends i.Component {
             }),
             Q(this, "handleLinkGeneration", () => {
                 let { buildOverrides: e } = this.state;
-                (0, h.qfG)((t) => (0, r.jsx)(es, ee($({}, t), { buildOverrides: e })));
+                (0, h.qfG)((t) =>
+                    (0, r.jsx)(
+                        es,
+                        ee($({}, t), {
+                            buildOverrides: e,
+                        }),
+                    ),
+                );
             });
     }
 }
@@ -529,7 +571,9 @@ class es extends i.Component {
         return (0, r.jsx)(c.Modal, {
             title: "Generate Public Build Override Link",
             input: this.renderHelpMessage(),
-            actionBarInput: (0, r.jsx)(O.A, { value: n }),
+            actionBarInput: (0, r.jsx)(O.A, {
+                value: n,
+            }),
             transitionState: t,
             "aria-label": "Generate Public Build Override Link",
             actions: [
@@ -562,7 +606,9 @@ class es extends i.Component {
                 allowLoggedOut: !1,
             }),
             Q(this, "setUserEntryError", (e) => {
-                this.setState({ userIdEntryError: e });
+                this.setState({
+                    userIdEntryError: e,
+                });
             }),
             Q(this, "setStatusMessage", function (e) {
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
@@ -580,10 +626,14 @@ class es extends i.Component {
                 });
             }),
             Q(this, "setAllowedVersionError", (e) => {
-                this.setState({ allowedVersionEntryError: e });
+                this.setState({
+                    allowedVersionEntryError: e,
+                });
             }),
             Q(this, "handleAllowedVersionEntry", (e) => {
-                this.setState({ allowedVersionEntry: e });
+                this.setState({
+                    allowedVersionEntry: e,
+                });
             }),
             Q(this, "handleAllowedVersionEnter", (e) => {
                 e.charCode === K.Ks6.ENTER && this.handleAddAllowedVersion();
@@ -602,19 +652,31 @@ class es extends i.Component {
             }),
             Q(this, "handleRemoveAllowedVersion", (e) => {
                 let { allowedVersions: t } = this.state;
-                (t = t.filter((t) => t !== e)), this.setState({ allowedVersions: t });
+                (t = t.filter((t) => t !== e)),
+                    this.setState({
+                        allowedVersions: t,
+                    });
             }),
             Q(this, "handleAllowLoggedOut", (e) => {
-                this.setState({ allowLoggedOut: e });
+                this.setState({
+                    allowLoggedOut: e,
+                });
             }),
             Q(this, "handleExpirationChange", (e) => {
-                this.setState({ ttlSeconds: e });
+                this.setState({
+                    ttlSeconds: e,
+                });
             }),
             Q(this, "handleReleaseChannelChange", (e) => {
-                this.setState({ releaseChannel: e });
+                this.setState({
+                    releaseChannel: e,
+                });
             }),
             Q(this, "handleExperiments", (e) => {
-                if (0 === e.trim().length) return void this.setState({ experimentsError: void 0 });
+                if (0 === e.trim().length)
+                    return void this.setState({
+                        experimentsError: void 0,
+                    });
                 try {
                     let t = JSON.parse(e);
                     for (let e in t) {
@@ -628,7 +690,9 @@ class es extends i.Component {
                             });
                     }
                 } catch (e) {
-                    this.setState({ experimentsError: "Unable to parse experiments ".concat(e.message) });
+                    this.setState({
+                        experimentsError: "Unable to parse experiments ".concat(e.message),
+                    });
                     return;
                 }
                 this.setState({
@@ -655,7 +719,9 @@ class es extends i.Component {
                     t = await (0, A.SB)(e);
                 !1 !== t.error
                     ? this.setStatusMessage(JSON.stringify(t.error), 0)
-                    : (this.setState({ publicLink: t.url.toString() }),
+                    : (this.setState({
+                          publicLink: t.url.toString(),
+                      }),
                       0 === e.meta.user_ids.length &&
                           this.setStatusMessage(
                               "Warning! No users added to the whitelist! This link could be used by anyone to override their build.",
@@ -664,10 +730,29 @@ class es extends i.Component {
             });
     }
 }
+
 function eo() {
     let { horizontalSpacing: e, verticalSpacing: t, maxHorizontalSpacing: n, maxVerticalSpacing: a } = (0, T.O)(),
-        s = i.useMemo(() => Array.from({ length: n + 1 }, (e, t) => t), [n]),
-        o = i.useMemo(() => Array.from({ length: a + 1 }, (e, t) => t), [a]),
+        s = i.useMemo(
+            () =>
+                Array.from(
+                    {
+                        length: n + 1,
+                    },
+                    (e, t) => t,
+                ),
+            [n],
+        ),
+        o = i.useMemo(
+            () =>
+                Array.from(
+                    {
+                        length: a + 1,
+                    },
+                    (e, t) => t,
+                ),
+            [a],
+        ),
         { cssDebuggingEnabled: l, layoutDebuggingEnabled: c } = (0, d.cf)([L.default], () => ({
             cssDebuggingEnabled: L.default.cssDebuggingEnabled,
             layoutDebuggingEnabled: L.default.layoutDebuggingEnabled,
@@ -684,7 +769,10 @@ function eo() {
                     description: "Display raw colors as pink. Toggling this will refresh the browser.",
                     checked: l,
                     onChange: (e) => {
-                        (0, E.x)({ cssDebuggingEnabled: e }), setTimeout(() => location.reload(), 500);
+                        (0, E.x)({
+                            cssDebuggingEnabled: e,
+                        }),
+                            setTimeout(() => location.reload(), 500);
                     },
                 }),
             }),
@@ -695,7 +783,9 @@ function eo() {
                     description: "Renders a grid on top of the app to help debug layout alignment issues.",
                     checked: c,
                     onChange: (e) => {
-                        (0, E.x)({ layoutDebuggingEnabled: e });
+                        (0, E.x)({
+                            layoutDebuggingEnabled: e,
+                        });
                     },
                 }),
             }),
@@ -752,6 +842,7 @@ function eo() {
         ],
     });
 }
+
 function el() {
     let {
             isTracingRequests: e,
@@ -785,7 +876,10 @@ function el() {
                     label: "Enable Tracing Requests",
                     description: "Force trace all client requests with APM",
                     checked: e,
-                    onChange: (e) => (0, E.x)({ trace: e }),
+                    onChange: (e) =>
+                        (0, E.x)({
+                            trace: e,
+                        }),
                 }),
             }),
             (0, r.jsx)(x.x, {
@@ -794,7 +888,10 @@ function el() {
                     label: "Enable Forced Canary",
                     description: "Force all API requests to canary instances",
                     checked: t,
-                    onChange: (e) => (0, E.x)({ canary: e }),
+                    onChange: (e) =>
+                        (0, E.x)({
+                            canary: e,
+                        }),
                 }),
             }),
             (0, r.jsx)(x.x, {
@@ -812,7 +909,10 @@ function el() {
                     label: "Enable source maps to be loaded on this client",
                     description: "Only enable on devices you trust.",
                     checked: i,
-                    onChange: (e) => (0, E.x)({ sourceMapsEnabled: e }),
+                    onChange: (e) =>
+                        (0, E.x)({
+                            sourceMapsEnabled: e,
+                        }),
                 }),
             }),
             (0, r.jsx)(x.x, {
@@ -821,7 +921,10 @@ function el() {
                     label: "Enable idle status indicator",
                     description: "Displays a floating idle status indicator",
                     checked: a,
-                    onChange: (e) => (0, E.x)({ idleStatusIndicatorEnabled: e }),
+                    onChange: (e) =>
+                        (0, E.x)({
+                            idleStatusIndicatorEnabled: e,
+                        }),
                 }),
             }),
             (0, r.jsx)(x.x, {
@@ -831,7 +934,10 @@ function el() {
                     description:
                         "Runs Axe auditing for accessibility while using the app. Violations get logged to the console. Only available in development",
                     checked: n,
-                    onChange: (e) => (0, E.x)({ axeEnabled: e }),
+                    onChange: (e) =>
+                        (0, E.x)({
+                            axeEnabled: e,
+                        }),
                 }),
             }),
             (0, r.jsx)(x.x, {
@@ -841,7 +947,10 @@ function el() {
                     description:
                         "This is to enable viewing console logs for popout crashes. This may leave your app/popout in a weird state.",
                     checked: l,
-                    onChange: (e) => (0, E.x)({ preventPopoutClose: e }),
+                    onChange: (e) =>
+                        (0, E.x)({
+                            preventPopoutClose: e,
+                        }),
                 }),
             }),
             (0, r.jsx)(x.x, {
@@ -850,7 +959,10 @@ function el() {
                     label: "Enable Logging of Keyboard Mismatches",
                     description: "Logs mismatches in detected keyboard codes to the console",
                     checked: c,
-                    onChange: (e) => (0, E.x)({ logKeyboardMismatches: e }),
+                    onChange: (e) =>
+                        (0, E.x)({
+                            logKeyboardMismatches: e,
+                        }),
                 }),
             }),
             (0, r.jsx)(x.x, {
@@ -860,7 +972,10 @@ function el() {
                     description:
                         "Only show application collections (e.g. in App Directory, App Launcher in text) that have the 'preview' active state. This disables application collections cache, too, so you can see collections updates immediately.",
                     checked: s,
-                    onChange: (e) => (0, E.x)({ onlyShowPreviewAppCollections: e }),
+                    onChange: (e) =>
+                        (0, E.x)({
+                            onlyShowPreviewAppCollections: e,
+                        }),
                 }),
             }),
             (0, r.jsx)(x.x, {
@@ -870,7 +985,10 @@ function el() {
                     description:
                         "Disable application collections cache so that you can see updates to collections immediately.",
                     checked: o,
-                    onChange: (e) => (0, E.x)({ disableAppCollectionsCache: e }),
+                    onChange: (e) =>
+                        (0, E.x)({
+                            disableAppCollectionsCache: e,
+                        }),
                 }),
             }),
             (0, r.jsx)(x.x, {
@@ -884,13 +1002,16 @@ function el() {
                             reason: "disable-align-chat-input",
                             rating: e ? "yes" : "no",
                         }),
-                            (0, w.s)("go_back_to_regular_input", { enabled: e });
+                            (0, w.s)("go_back_to_regular_input", {
+                                enabled: e,
+                            });
                     },
                 }),
             }),
         ],
     });
 }
+
 function ec() {
     let {
         isLoggingGatewayEvents: e,
@@ -915,7 +1036,10 @@ function ec() {
                         description:
                             "Logs all incoming and outgoing gateway events to the developer console, enable verbose logging in the developer console to see! This includes all message content.",
                         checked: e,
-                        onChange: (e) => (0, E.x)({ logGatewayEvents: e }),
+                        onChange: (e) =>
+                            (0, E.x)({
+                                logGatewayEvents: e,
+                            }),
                     }),
                 }),
                 (0, r.jsx)(x.x, {
@@ -924,7 +1048,10 @@ function ec() {
                         label: "Enable Logging of Overlay RPC Events & Commands",
                         description: "Logs all overlay related RPC events. Super noisy if an overlay is connected",
                         checked: t,
-                        onChange: (e) => (0, E.x)({ logOverlayEvents: e }),
+                        onChange: (e) =>
+                            (0, E.x)({
+                                logOverlayEvents: e,
+                            }),
                     }),
                 }),
                 (0, r.jsx)(x.x, {
@@ -933,7 +1060,10 @@ function ec() {
                         label: "Enable Logging of Analytics Events",
                         description: "Logs all analytics events to the developer console",
                         checked: n,
-                        onChange: (e) => (0, E.x)({ logAnalyticsEvents: e }),
+                        onChange: (e) =>
+                            (0, E.x)({
+                                logAnalyticsEvents: e,
+                            }),
                     }),
                 }),
                 (0, r.jsx)(x.x, {
@@ -942,19 +1072,25 @@ function ec() {
                         label: "Enable standard analytics debugger view",
                         description: "Displays a floating debugger with viewed impressions",
                         checked: i,
-                        onChange: (e) => (0, E.x)({ analyticsDebuggerEnabled: e }),
+                        onChange: (e) =>
+                            (0, E.x)({
+                                analyticsDebuggerEnabled: e,
+                            }),
                     }),
                 }),
             ],
         }),
     });
 }
+
 function eu() {
     throw Error("Send help");
 }
+
 function ed(e) {
     U.Ay.triggerJSException(e);
 }
+
 function ef() {
     let [e, t] = i.useState(!1),
         n = () => {
@@ -1113,6 +1249,7 @@ function ef() {
               ],
           });
 }
+
 function ep() {
     let e = (0, d.bG)([j.Ay], () => j.Ay.getSurveyOverride()),
         [t, n] = i.useState(null != e ? e : ""),
@@ -1147,6 +1284,7 @@ function ep() {
         }),
     });
 }
+
 function e_() {
     var e;
     let t = (0, d.bG)([S.A], () => S.A.overrideId()),
@@ -1197,6 +1335,7 @@ function e_() {
         }),
     });
 }
+
 function eh() {
     return (0, r.jsx)(x.x, {
         setting: W.H.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE,
@@ -1206,6 +1345,7 @@ function eh() {
         }),
     });
 }
+
 function em() {
     return (0, r.jsxs)(h.BJc, {
         gap: 24,

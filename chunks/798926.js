@@ -8,5 +8,7 @@ r(
         forced: Object.defineProperties !== o,
         sham: !a,
     },
-    { defineProperties: o },
+    {
+        defineProperties: o,
+    },
 );

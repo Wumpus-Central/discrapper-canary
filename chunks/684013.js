@@ -1,4 +1,8 @@
-n.d(t, { A: () => S }), n(896048), n(65821);
+n.d(t, {
+    A: () => S,
+}),
+    n(896048),
+    n(65821);
 var r = n(835245),
     i = n(73153),
     a = n(815706),
@@ -14,6 +18,7 @@ var r = n(835245),
     h = n(9302),
     m = n(391973),
     g = n(652215);
+
 function E(e, t, n) {
     return (
         t in e
@@ -27,6 +32,7 @@ function E(e, t, n) {
         e
     );
 }
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -43,6 +49,7 @@ function b(e) {
     }
     return e;
 }
+
 function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -55,6 +62,7 @@ function y(e, t) {
     }
     return n;
 }
+
 function O(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -124,7 +132,9 @@ let A = new s.A("OverlayActionCreators"),
             });
         },
         clearTrackedPids() {
-            i.h.dispatch({ type: "OVERLAY_RENDER_DEBUG_CLEAR_TRACKED_PIDS" });
+            i.h.dispatch({
+                type: "OVERLAY_RENDER_DEBUG_CLEAR_TRACKED_PIDS",
+            });
         },
         setInstanceLocked(e) {
             __OVERLAY__
@@ -183,7 +193,11 @@ let A = new s.A("OverlayActionCreators"),
         setNotificationDisabledSetting(e, t) {
             let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
             return (
-                e === l.M.GAME_ACTIVITY && n && this.track(g.HAw.OVERLAY_GAME_INVITE_SETTINGS_UPDATED, { muted: t }),
+                e === l.M.GAME_ACTIVITY &&
+                    n &&
+                    this.track(g.HAw.OVERLAY_GAME_INVITE_SETTINGS_UPDATED, {
+                        muted: t,
+                    }),
                 i.h.dispatch({
                     type: "OVERLAY_SET_NOTIFICATION_DISABLED_SETTING",
                     setting: e,
@@ -217,11 +231,15 @@ let A = new s.A("OverlayActionCreators"),
             });
         },
         disableExternalLinkAlert() {
-            i.h.dispatch({ type: "OVERLAY_DISABLE_EXTERNAL_LINK_ALERT" });
+            i.h.dispatch({
+                type: "OVERLAY_DISABLE_EXTERNAL_LINK_ALERT",
+            });
         },
         startSession() {
             __OVERLAY__
-                ? i.h.dispatch({ type: "OVERLAY_START_SESSION" })
+                ? i.h.dispatch({
+                      type: "OVERLAY_START_SESSION",
+                  })
                 : A.error("Attempting to start an overlay session outside of the overlay context");
         },
         activateRegion(e) {
@@ -231,7 +249,9 @@ let A = new s.A("OverlayActionCreators"),
             });
         },
         deactivateAllRegions() {
-            i.h.dispatch({ type: "OVERLAY_DEACTIVATE_ALL_REGIONS" });
+            i.h.dispatch({
+                type: "OVERLAY_DEACTIVATE_ALL_REGIONS",
+            });
         },
         setPreviewInGameMode(e) {
             i.h.dispatch({
@@ -280,7 +300,9 @@ let A = new s.A("OverlayActionCreators"),
                 c = d.A.getWidgetDefaultSettings(g.uss.GUILDS),
                 u = d.A.getWidgetDefaultSettings(g.uss.TEXT);
             if (
-                ((0, o.xp)(g.uss.TEXT, { pinned: e }),
+                ((0, o.xp)(g.uss.TEXT, {
+                    pinned: e,
+                }),
                 0 === n.length || null == i || null == a || null == s || null == l || null == c || null == u)
             )
                 return;
@@ -327,11 +349,24 @@ let A = new s.A("OverlayActionCreators"),
             ) {
                 let e = "auto" === S.width ? l.minSize.width : S.width;
                 e -= c.minSize.width;
-                let [n, i] = (0, _.M4)(v, O(b({}, S), { width: c.minSize.width }), f),
-                    [a, s] = (0, _.n7)(v, O(b({}, S), { width: e }), f, {
-                        x: 10,
-                        y: 10,
-                    }),
+                let [n, i] = (0, _.M4)(
+                        v,
+                        O(b({}, S), {
+                            width: c.minSize.width,
+                        }),
+                        f,
+                    ),
+                    [a, s] = (0, _.n7)(
+                        v,
+                        O(b({}, S), {
+                            width: e,
+                        }),
+                        f,
+                        {
+                            x: 10,
+                            y: 10,
+                        },
+                    ),
                     o = d.A.getWidgetDefaultSettings(g.uss.TEXT);
                 if (null == o) throw Error("OverlayActionCreators.setPinChat: No config for TEXT exists");
                 (0, m.jn)(

@@ -397,7 +397,9 @@ class p extends s.G {
 let _ = new p();
 class h extends s.G {
     create(e) {
-        let t = { stickerIds: [] };
+        let t = {
+            stickerIds: [],
+        };
         return (
             globalThis.Object.defineProperty(t, a.$, {
                 enumerable: !1,
@@ -452,7 +454,9 @@ class h extends s.G {
 let m = new h();
 class g extends s.G {
     create(e) {
-        let t = { stickers: {} };
+        let t = {
+            stickers: {},
+        };
         return (
             globalThis.Object.defineProperty(t, a.$, {
                 enumerable: !1,
@@ -529,7 +533,9 @@ class g extends s.G {
 let E = new g();
 class b extends s.G {
     create(e) {
-        let t = { emojis: [] };
+        let t = {
+            emojis: [],
+        };
         return (
             globalThis.Object.defineProperty(t, a.$, {
                 enumerable: !1,
@@ -577,7 +583,9 @@ class b extends s.G {
 let y = new b();
 class O extends s.G {
     create(e) {
-        let t = { emojis: {} };
+        let t = {
+            emojis: {},
+        };
         return (
             globalThis.Object.defineProperty(t, a.$, {
                 enumerable: !1,
@@ -654,7 +662,9 @@ class O extends s.G {
 let A = new O();
 class v extends s.G {
     create(e) {
-        let t = { applicationCommands: {} };
+        let t = {
+            applicationCommands: {},
+        };
         return (
             globalThis.Object.defineProperty(t, a.$, {
                 enumerable: !1,
@@ -822,7 +832,9 @@ class I extends s.G {
 let T = new I();
 class C extends s.G {
     create(e) {
-        let t = { soundIds: [] };
+        let t = {
+            soundIds: [],
+        };
         return (
             globalThis.Object.defineProperty(t, a.$, {
                 enumerable: !1,
@@ -877,7 +889,9 @@ class C extends s.G {
 let N = new C();
 class R extends s.G {
     create(e) {
-        let t = { heardSounds: {} };
+        let t = {
+            heardSounds: {},
+        };
         return (
             globalThis.Object.defineProperty(t, a.$, {
                 enumerable: !1,
@@ -954,7 +968,9 @@ class R extends s.G {
 let w = new R();
 class P extends s.G {
     create(e) {
-        let t = { playedSounds: {} };
+        let t = {
+            playedSounds: {},
+        };
         return (
             globalThis.Object.defineProperty(t, a.$, {
                 enumerable: !1,
@@ -1031,7 +1047,9 @@ class P extends s.G {
 let D = new P();
 class x extends s.G {
     create(e) {
-        let t = { applications: {} };
+        let t = {
+            applications: {},
+        };
         return (
             globalThis.Object.defineProperty(t, a.$, {
                 enumerable: !1,
@@ -1108,7 +1126,9 @@ class x extends s.G {
 let L = new x();
 class j extends s.G {
     create(e) {
-        let t = { guildAndChannels: {} };
+        let t = {
+            guildAndChannels: {},
+        };
         return (
             globalThis.Object.defineProperty(t, a.$, {
                 enumerable: !1,

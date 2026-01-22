@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var r = n(627968);
 n(64700);
 var l = n(311907),
@@ -10,6 +12,7 @@ var l = n(311907),
     u = n(64071),
     d = n(652215),
     f = n(985018);
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,6 +38,7 @@ function p(e) {
     }
     return e;
 }
+
 function h(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -90,7 +94,10 @@ let b = [
         },
         {
             key: "INVITE_MEMBERS",
-            renderIcon: (e) => (0, r.jsx)(i.DpX, { className: e }),
+            renderIcon: (e) =>
+                (0, r.jsx)(i.DpX, {
+                    className: e,
+                }),
             getName: () => f.intl.string(f.t.MJQOuJ),
             handler: (e, t) =>
                 (0, i.mMO)(async () => {

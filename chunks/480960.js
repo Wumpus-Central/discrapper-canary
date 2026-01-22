@@ -4,6 +4,7 @@ n.d(t, {
 }),
     n(321073);
 var r = n(64700);
+
 function i(e) {
     let t = {};
     if (e) {
@@ -16,10 +17,12 @@ function i(e) {
     }
     return t;
 }
+
 function a() {
     let e,
         t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+
     function r(e) {
         return n.hasOwnProperty(e) ? n[e] : t[e];
     }

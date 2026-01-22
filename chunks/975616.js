@@ -1,4 +1,8 @@
-n.d(t, { e: () => R }), n(896048), n(321073);
+n.d(t, {
+    e: () => R,
+}),
+    n(896048),
+    n(321073);
 var r = n(627968),
     i = n(64700),
     a = n(932433),
@@ -24,6 +28,7 @@ var r = n(627968),
     I = n(611635),
     T = n(763600),
     C = n(985018);
+
 function N(e, t, n, r, s) {
     let o = i.useContext(p.A),
         l = i.useCallback(
@@ -44,7 +49,10 @@ function N(e, t, n, r, s) {
                     BILLING_TRIAL_FREE_TRIAL_TEXT: C.intl.string(C.t.IBYG5U),
                     MODAL_DONT_SHOW_AGAIN: C.intl.string(T.default.m3Vfcs),
                     LISTBOX_EMPTY_STATE: C.intl.string(T.default.db85vU),
-                    LISTBOX_EMPTY_STATE_WITH_QUERY: (e) => C.intl.formatToPlainString(T.default.bPKiId, { query: e }),
+                    LISTBOX_EMPTY_STATE_WITH_QUERY: (e) =>
+                        C.intl.formatToPlainString(T.default.bPKiId, {
+                            query: e,
+                        }),
                     KEY_CTRL_A11Y_LABEL: C.intl.string(C.t.jm6v8i),
                     KEY_CMD_A11Y_LABEL: C.intl.string(C.t.pYkiQq),
                     KEY_ALT_A11Y_LABEL: C.intl.string(C.t.R2n7d3),
@@ -80,7 +88,9 @@ function N(e, t, n, r, s) {
                 theme: e,
                 saturation: t,
                 defaultLayerContext: E.uY,
-                experiments: { enabledExperiments: n },
+                experiments: {
+                    enabledExperiments: n,
+                },
                 trackImpression: o,
                 isWindowFocused: () => r,
                 dynamicGraphicComponents: c.Q,
@@ -98,6 +108,7 @@ function N(e, t, n, r, s) {
         u
     );
 }
+
 function R(e) {
     let { windowKey: t, themeOverride: n, children: a } = e,
         s = null != t,
@@ -136,7 +147,14 @@ function R(e) {
                 highContrastMode: d.A.isHighContrastModeEnabled,
             };
         }),
-        G = f.z.useExperiment({ location: "RootThemeContextProvider" }, { autoTrackExposure: !0 }).enabled,
+        G = f.z.useExperiment(
+            {
+                location: "RootThemeContextProvider",
+            },
+            {
+                autoTrackExposure: !0,
+            },
+        ).enabled,
         V = (0, h.A)(C, __OVERLAY__ || T),
         F = 0;
     1 !== D && (F = (0, u.yVx)(F, u.ofu.REDUCE_SATURATION_ENABLED));
@@ -145,7 +163,9 @@ function R(e) {
         Y = (0, m.k5)("RootThemeContextProvider"),
         W = (0, m.lV)("RootThemeContextProvider"),
         K = (0, g.y)("RootThemeContextProvider"),
-        z = (0, _.m2)({ isPopoutWindow: s }),
+        z = (0, _.m2)({
+            isPopoutWindow: s,
+        }),
         q = N(
             E,
             D,

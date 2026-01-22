@@ -1,4 +1,8 @@
-n.d(t, { A: () => h }), n(896048), n(747238);
+n.d(t, {
+    A: () => h,
+}),
+    n(896048),
+    n(747238);
 var r = n(627968),
     l = n(64700),
     i = n(397927),
@@ -15,6 +19,7 @@ var r = n(627968),
     m = n(411335),
     y = n(985018),
     O = n(300328);
+
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -40,6 +45,7 @@ function A(e) {
     }
     return e;
 }
+
 function v(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -59,6 +65,7 @@ function v(e, t) {
     );
 }
 let j = m.uh.KEYWORD;
+
 function h(e, t) {
     let { perGuildMaxCount: n } = s.i$[j],
         { isLoading: h, saveRule: E, errorMessage: S } = (0, u.S)(),
@@ -171,7 +178,9 @@ function h(e, t) {
             })),
         (0, r.jsx)(i.Drp, {
             id: "guild-automod-add-selection",
-            label: y.intl.formatToPlainString(y.t.Kkjv1m, { keywordCount: G }),
+            label: y.intl.formatToPlainString(y.t.Kkjv1m, {
+                keywordCount: G,
+            }),
             onFocus: () => {
                 D || (I(!0), T());
             },

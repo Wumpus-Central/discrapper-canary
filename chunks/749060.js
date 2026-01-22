@@ -1,4 +1,7 @@
-n.d(t, { A: () => p }), n(896048);
+n.d(t, {
+    A: () => p,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(417597),
@@ -10,6 +13,7 @@ var r = n(627968),
     u = n(221950),
     C = n(985018),
     f = n(656930);
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,6 +39,7 @@ function b(e) {
     }
     return e;
 }
+
 function m(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -53,6 +58,7 @@ function m(e, t) {
         e
     );
 }
+
 function p(e) {
     let { guildId: t, onPageChange: n } = e,
         [p, j] = l.useTransition(),
@@ -69,7 +75,9 @@ function p(e) {
             [],
         ),
         O = new Intl.NumberFormat(C.intl.currentLocale).format(g),
-        v = C.intl.formatToPlainString(C.t["RNDnQ/"], { count: x ? "..." : O }),
+        v = C.intl.formatToPlainString(C.t["RNDnQ/"], {
+            count: x ? "..." : O,
+        }),
         H = g > h.pageSize || x,
         w = g > s.MO["0"];
     return (0, r.jsxs)("div", {
@@ -93,7 +101,12 @@ function p(e) {
                                   value: h.pageSize,
                                   onSelectionChange: (e) => {
                                       j(() => {
-                                          (0, u.Cw)(t, m(b({}, h), { pageSize: e }));
+                                          (0, u.Cw)(
+                                              t,
+                                              m(b({}, h), {
+                                                  pageSize: e,
+                                              }),
+                                          );
                                       });
                                   },
                               }),
@@ -112,7 +125,9 @@ function p(e) {
                     : (0, r.jsx)(a.Text, {
                           variant: "text-md/normal",
                           color: "text-muted",
-                          children: C.intl.format(C.t.GZpwME, { count: g }),
+                          children: C.intl.format(C.t.GZpwME, {
+                              count: g,
+                          }),
                       }),
             }),
             (0, r.jsx)("div", {
@@ -130,7 +145,12 @@ function p(e) {
                             null == n || n(e),
                                 requestIdleCallback(() => {
                                     j(() => {
-                                        (0, u.Cw)(t, m(b({}, h), { currentPage: e }));
+                                        (0, u.Cw)(
+                                            t,
+                                            m(b({}, h), {
+                                                currentPage: e,
+                                            }),
+                                        );
                                     });
                                 });
                         },

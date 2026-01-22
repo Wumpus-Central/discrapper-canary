@@ -1,4 +1,6 @@
-n.d(t, { A: () => O });
+n.d(t, {
+    A: () => O,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -17,11 +19,19 @@ var i = n(311907),
     g = n(147036),
     E = n(449054),
     b = n(652215);
+
 function y(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     if (null == e || null == t) return;
     let r = _.A.getGuild(e);
-    if ((null == r ? void 0 : r.joinedAt) == null) return void E.Z2(e, {}, { channelId: t });
+    if ((null == r ? void 0 : r.joinedAt) == null)
+        return void E.Z2(
+            e,
+            {},
+            {
+                channelId: t,
+            },
+        );
     let i = p.A.getChannel(t);
     if (null != i && (0, f.ay)(i.type)) {
         if (n) {
@@ -33,6 +43,7 @@ function y(e, t) {
     }
     (0, d.pX)(b.BVt.CHANNEL(e, t));
 }
+
 function O(e) {
     let { channel: t, onClick: n, beforeTransition: o, className: l, openChatWithoutConnecting: d } = e,
         f = (0, i.bG)([m.default, h.A], () => (null == t ? "" : (0, c.m1)(t, m.default, h.A)), [t]);

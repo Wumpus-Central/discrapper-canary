@@ -1,4 +1,6 @@
-n.d(t, { n: () => p });
+n.d(t, {
+    n: () => p,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -23,7 +25,11 @@ let d = (e) => {
                 applicationId: u.FYj,
             });
         return p || null == _
-            ? (0, r.jsx)("div", { children: (0, r.jsx)(i.y$y, { type: i.tVU.SPINNING_CIRCLE }) })
+            ? (0, r.jsx)("div", {
+                  children: (0, r.jsx)(i.y$y, {
+                      type: i.tVU.SPINNING_CIRCLE,
+                  }),
+              })
             : (0, r.jsx)(a.f5, {
                   value: o,
                   children: (0, r.jsx)(

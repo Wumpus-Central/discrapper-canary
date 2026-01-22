@@ -1,8 +1,11 @@
-n.d(t, { X: () => o });
+n.d(t, {
+    X: () => o,
+});
 var r = n(885714),
     i = n(64700),
     a = n(3388),
     s = n(959462);
+
 function o(e, t, n) {
     let { validationBehavior: o, focus: l } = e;
     (0, a.N)(() => {
@@ -59,6 +62,7 @@ function o(e, t, n) {
         );
     }, [n, p, _, f, o]);
 }
+
 function l(e) {
     let t = e.validity;
     return {
@@ -75,6 +79,7 @@ function l(e) {
         valid: t.valid,
     };
 }
+
 function c(e) {
     return {
         isInvalid: !e.validity.valid,
@@ -82,6 +87,7 @@ function c(e) {
         validationErrors: e.validationMessage ? [e.validationMessage] : [],
     };
 }
+
 function u(e) {
     for (let t = 0; t < e.elements.length; t++) {
         let n = e.elements[t];

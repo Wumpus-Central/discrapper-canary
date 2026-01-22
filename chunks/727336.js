@@ -20,7 +20,9 @@ var n = r(64700),
                             padding: "16px",
                             fontFamily: "Roboto",
                         },
-                        HEXwrap: { position: "relative" },
+                        HEXwrap: {
+                            position: "relative",
+                        },
                         HEXinput: {
                             width: "100%",
                             marginTop: "12px",
@@ -40,8 +42,12 @@ var n = r(64700),
                             color: "#999999",
                             textTransform: "capitalize",
                         },
-                        Hex: { style: {} },
-                        RGBwrap: { position: "relative" },
+                        Hex: {
+                            style: {},
+                        },
+                        RGBwrap: {
+                            position: "relative",
+                        },
                         RGBinput: {
                             width: "100%",
                             marginTop: "12px",
@@ -98,7 +104,9 @@ var n = r(64700),
         };
     return n.createElement(
         l.H1,
-        { styles: c },
+        {
+            styles: c,
+        },
         n.createElement(
             "div",
             {
@@ -123,7 +131,9 @@ var n = r(64700),
                 },
                 n.createElement(
                     "div",
-                    { style: d.third },
+                    {
+                        style: d.third,
+                    },
                     n.createElement(l.jc, {
                         style: {
                             wrap: d.RGBwrap,
@@ -137,7 +147,9 @@ var n = r(64700),
                 ),
                 n.createElement(
                     "div",
-                    { style: d.third },
+                    {
+                        style: d.third,
+                    },
                     n.createElement(l.jc, {
                         style: {
                             wrap: d.RGBwrap,
@@ -151,7 +163,9 @@ var n = r(64700),
                 ),
                 n.createElement(
                     "div",
-                    { style: d.third },
+                    {
+                        style: d.third,
+                    },
                     n.createElement(l.jc, {
                         style: {
                             wrap: d.RGBwrap,

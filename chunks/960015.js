@@ -1,9 +1,12 @@
-e.d(i, { default: () => d });
+e.d(i, {
+    default: () => d,
+});
 var n = e(627968),
     a = e(397927),
     s = e(442433),
     l = e(50268),
     r = e(985018);
+
 function d(t) {
     let { tag: i } = t;
     return (0, n.jsx)(a.W1t, {

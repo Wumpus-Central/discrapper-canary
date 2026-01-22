@@ -5,6 +5,7 @@ n.d(t, {
 var r = n(403362),
     i = n(488995),
     l = n(985018);
+
 function a(e) {
     switch (e) {
         case i.GlobalDiscoveryTab.SERVERS:
@@ -17,6 +18,7 @@ function a(e) {
             (0, r.xb)(e);
     }
 }
+
 function s(e) {
     if (e.startsWith("/discovery/applications")) return i.GlobalDiscoveryTab.APPS;
     switch (e) {

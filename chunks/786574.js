@@ -1,10 +1,17 @@
-n.d(t, { N: () => d }), n(896048), n(321073), n(733351), n(638769);
+n.d(t, {
+    N: () => d,
+}),
+    n(896048),
+    n(321073),
+    n(733351),
+    n(638769);
 var a = n(627968),
     l = n(64700),
     i = n(614820),
     r = n(397927),
     s = n(231643),
     o = n(890288);
+
 function c(e) {
     let { label: t } = e;
     return (0, a.jsx)("div", {
@@ -12,6 +19,7 @@ function c(e) {
         children: t,
     });
 }
+
 function d(e, t) {
     let [n, o] = l.useState(""),
         d = l.useMemo(() => {
@@ -125,7 +133,9 @@ function d(e, t) {
                             r.Drp,
                             {
                                 id: l,
-                                label: (0, a.jsx)(c, { label: i }),
+                                label: (0, a.jsx)(c, {
+                                    label: i,
+                                }),
                                 action: () => t(l),
                             },
                             l,
@@ -147,14 +157,18 @@ function d(e, t) {
                                           r.Drp,
                                           {
                                               id: "devtools-".concat(l),
-                                              label: (0, a.jsx)(c, { label: l }),
+                                              label: (0, a.jsx)(c, {
+                                                  label: l,
+                                              }),
                                               children: (0, a.jsx)(r.rXV, {
                                                   children: o.map((e) =>
                                                       (0, a.jsx)(
                                                           r.Drp,
                                                           {
                                                               id: "devtools-".concat(e.id),
-                                                              label: (0, a.jsx)(c, { label: e.name }),
+                                                              label: (0, a.jsx)(c, {
+                                                                  label: e.name,
+                                                              }),
                                                               action: () => t(e.id),
                                                           },
                                                           e.id,
@@ -175,7 +189,9 @@ function d(e, t) {
                                                       r.Drp,
                                                       {
                                                           id: "devtools-filtered-".concat(e.id),
-                                                          label: (0, a.jsx)(c, { label: e.name }),
+                                                          label: (0, a.jsx)(c, {
+                                                              label: e.name,
+                                                          }),
                                                           action: () => t(e.id),
                                                       },
                                                       e.id,

@@ -1,4 +1,8 @@
-n.r(t), n.d(t, { default: () => C }), n(896048);
+n.r(t),
+    n.d(t, {
+        default: () => C,
+    }),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -168,14 +172,23 @@ let y = [
             d = s(),
             p = a()(O.Kk, o);
         return (0, r.jsx)("li", {
-            className: a()(O.iD, { [O.vu]: l }),
+            className: a()(O.iD, {
+                [O.vu]: l,
+            }),
             onMouseEnter: () => i(u),
             children: (0, r.jsxs)("div", {
                 className: O.FG,
                 children: [
                     (0, r.jsxs)("div", {
                         className: O.aA,
-                        children: [(0, r.jsx)("div", { className: p }), (0, r.jsx)("div", { className: a()(O.vu, p) })],
+                        children: [
+                            (0, r.jsx)("div", {
+                                className: p,
+                            }),
+                            (0, r.jsx)("div", {
+                                className: a()(O.vu, p),
+                            }),
+                        ],
                     }),
                     (0, r.jsxs)("div", {
                         children: [
@@ -198,6 +211,7 @@ let y = [
             }),
         });
     };
+
 function C(e) {
     let { source: t, onClose: n, transitionState: l } = e,
         s = (0, d.bG)([g.default], () => g.default.getCurrentUser()),
@@ -227,6 +241,7 @@ function C(e) {
                 }
             })(),
         );
+
     function T(e, r) {
         (null != u.getToken() || null != b) &&
             m.default.track(_.HAw.DOWNLOAD_APP, {
@@ -239,6 +254,7 @@ function C(e) {
             }),
             v ? window.open(r, "_blank") : (n(), h.R());
     }
+
     function j(e) {
         N(e);
     }
@@ -246,7 +262,9 @@ function C(e) {
         i.useEffect(() => {
             m.default.track(_.HAw.OPEN_MODAL, {
                 type: "Download App",
-                source: { location: t },
+                source: {
+                    location: t,
+                },
             });
         }, [t]),
         (0, r.jsx)(p.aFV, {

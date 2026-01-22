@@ -7,6 +7,7 @@ n.d(t, {
 var r = n(627968),
     i = n(64700),
     a = n(121894);
+
 function s(e, t, n) {
     return (
         t in e
@@ -70,7 +71,9 @@ class c {
         if (this.registeredNodes.has(e))
             throw Error("ThoughtfullyAnimated.registeredNode: Unable to register an already registered node...");
         return (
-            this.registeredNodes.set(e, { updateState: t }),
+            this.registeredNodes.set(e, {
+                updateState: t,
+            }),
             null == (n = this.observer) || n.observe(e),
             () => {
                 this.unregisterNode(e);
@@ -108,7 +111,9 @@ class c {
                     });
                 });
             },
-            { threshold: l },
+            {
+                threshold: l,
+            },
         );
     }
 }
@@ -119,6 +124,7 @@ let u = i.createContext({
         registerRef: () => {},
     }),
 });
+
 function d(e) {
     let { children: t } = e,
         [n] = i.useState(() => {

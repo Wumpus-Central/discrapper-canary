@@ -1,4 +1,6 @@
-n.d(t, { A: () => S });
+n.d(t, {
+    A: () => S,
+});
 var r = n(627968),
     i = n(64700),
     a = n(397927),
@@ -18,6 +20,7 @@ var r = n(627968),
     b = n(247818),
     y = n(652215),
     O = n(794998);
+
 function A(e, t, n) {
     return (
         t in e
@@ -31,6 +34,7 @@ function A(e, t, n) {
         e
     );
 }
+
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -47,6 +51,7 @@ function v(e) {
     }
     return e;
 }
+
 function S(e) {
     let t = (0, m.jc)(),
         n = null == t ? void 0 : t.channelId,

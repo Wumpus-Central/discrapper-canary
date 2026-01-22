@@ -1,10 +1,13 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968),
     i = n(64700),
     a = n(397927),
     s = n(123791),
     o = n(627363),
     l = n(985018);
+
 function c(e, t, n) {
     return (
         t in e
@@ -18,6 +21,7 @@ function c(e, t, n) {
         e
     );
 }
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,6 +38,7 @@ function u(e) {
     }
     return e;
 }
+
 function d(e) {
     let { applicationId: t, guildId: n } = e,
         { data: i } = (0, o.YY)(t);
@@ -44,6 +49,7 @@ function d(e) {
               guildId: n,
           });
 }
+
 function f(e) {
     let { app: t, guildId: o } = e;
     (0, s.C)(t.id);
@@ -67,6 +73,8 @@ function f(e) {
         size: "sm",
         onClick: c,
         icon: a.Uzv,
-        text: l.intl.format(l.t.XDRjs5, { appName: t.name }),
+        text: l.intl.format(l.t.XDRjs5, {
+            appName: t.name,
+        }),
     });
 }

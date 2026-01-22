@@ -14,15 +14,19 @@ let l = function (t) {
         e = i.getGuild(t);
     return null != e && n.can(s.xBc.MANAGE_GUILD, e);
 };
+
 function S(t) {
     return null != t && l(t);
 }
+
 function o(t) {
     return l(t);
 }
+
 function a(t) {
     return (0, e.bG)([r.A, E.A], () => l(t, r.A, E.A), [t]);
 }
+
 function A(t) {
     return (0, e.bG)([r.A], () => {
         let i = r.A.getGuild(t);

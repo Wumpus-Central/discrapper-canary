@@ -1,4 +1,6 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var r = n(64700),
     i = n(621466),
     a = n(311907),
@@ -11,6 +13,7 @@ var r = n(64700),
     f = n(532624),
     p = n(350535),
     _ = n(650583);
+
 function h(e) {
     let t = e.ctrlKey || e.altKey || e.metaKey;
     e.key !== _.N$.Tab ||
@@ -19,6 +22,7 @@ function h(e) {
         (0, s.hasAnyModalOpen)() ||
         d.A.maybeShowKeyboardNavigationExplainerModal();
 }
+
 function m(e) {
     let t = p.Cy("shift"),
         n = p.Cy("tab");
@@ -34,6 +38,7 @@ function m(e) {
     }
     return null;
 }
+
 function g(e, t) {
     var n, r;
     let a = (0, i.Cw)(null == (r = (0, i.BF)(e)) ? void 0 : r.activeElement);
@@ -44,6 +49,7 @@ function g(e, t) {
         l.A.hasBind(null != (n = p.Qd(s[0])) ? n : "") ||
         ((0, c.uS)(), a && !t && e.preventDefault());
 }
+
 function E() {
     (0, c.Bm)();
 }

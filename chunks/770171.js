@@ -1,4 +1,7 @@
-n.d(t, { A: () => m }), n(896048);
+n.d(t, {
+    A: () => m,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(735438),
@@ -37,8 +40,12 @@ let f = 20,
                 () =>
                     n.map((e) =>
                         (0, o.Em)(e.categoryInfo)
-                            ? { isNitroLocked: e.categoryInfo.isNitroLocked }
-                            : { isNitroLocked: !1 },
+                            ? {
+                                  isNitroLocked: e.categoryInfo.isNitroLocked,
+                              }
+                            : {
+                                  isNitroLocked: !1,
+                              },
                     ),
                 [n],
             ),
@@ -146,6 +153,7 @@ let f = 20,
         leading: !1,
         trailing: !0,
     });
+
 function h(e) {
     let { listRef: t, searchQuery: n, nitroLockedSectionStates: r, scrollTop: i } = e;
     if (null == t.current) return;

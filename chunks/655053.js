@@ -1,8 +1,12 @@
-n.d(t, { i: () => o }), n(896048);
+n.d(t, {
+    i: () => o,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(683071),
     s = n(22789);
+
 function o(e) {
     let { message: t, type: n } = e,
         o = null == t || 0 === t.length || null == n,

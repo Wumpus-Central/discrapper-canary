@@ -1,5 +1,7 @@
 let s;
-a.d(t, { w: () => g });
+a.d(t, {
+    w: () => g,
+});
 var l,
     r = a(627968),
     n = a(64700),
@@ -14,6 +16,7 @@ var l,
     h = a(396574),
     b = a(855522),
     f = a(621647);
+
 function k(e, t, a) {
     return (
         t in e
@@ -275,7 +278,9 @@ class g extends (l = n.PureComponent) {
                               {
                                   className: f.route,
                                   eventName: I,
-                                  data: { linkClicked: e.tracking },
+                                  data: {
+                                      linkClicked: e.tracking,
+                                  },
                                   href: e.link,
                                   children: e.title,
                               },
@@ -291,7 +296,9 @@ class g extends (l = n.PureComponent) {
                                   children: (0, r.jsx)(s, {
                                       tag: "span",
                                       eventName: I,
-                                      data: { linkClicked: e.tracking },
+                                      data: {
+                                          linkClicked: e.tracking,
+                                      },
                                       children: e.title,
                                   }),
                               },
@@ -339,7 +346,9 @@ class g extends (l = n.PureComponent) {
                                             className: f.logo,
                                             href: p.Tk.INDEX,
                                             eventName: I,
-                                            data: { linkClicked: "logo" },
+                                            data: {
+                                                linkClicked: "logo",
+                                            },
                                             children: (0, r.jsx)("img", {
                                                 alt: b.A.Messages.NAVIGATION_HOME,
                                                 src: a(611411),
@@ -349,7 +358,9 @@ class g extends (l = n.PureComponent) {
                                     h,
                                 ],
                             }),
-                            (0, r.jsx)("div", { className: f.separator }),
+                            (0, r.jsx)("div", {
+                                className: f.separator,
+                            }),
                             (0, r.jsxs)("div", {
                                 className: f.joinDiscord,
                                 children: [
@@ -387,7 +398,9 @@ class g extends (l = n.PureComponent) {
             }),
             k(this, "ref", n.createRef()),
             k(this, "handleVisibility", (e) => {
-                this.setState({ animateBackground: e });
+                this.setState({
+                    animateBackground: e,
+                });
             }),
             null != e.locale && b.A.setLocale(e.locale),
             (s = (t) =>

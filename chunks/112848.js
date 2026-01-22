@@ -17,6 +17,7 @@ var r = n(989349),
     u = n(474090),
     d = n(416654),
     f = n(788868);
+
 function p(e, t, n) {
     return (
         t in e
@@ -30,6 +31,7 @@ function p(e, t, n) {
         e
     );
 }
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -46,6 +48,7 @@ function _(e) {
     }
     return e;
 }
+
 function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -58,6 +61,7 @@ function h(e, t) {
     }
     return n;
 }
+
 function m(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -72,6 +76,7 @@ function m(e, t) {
 var g = (function (e) {
     return (e.UPCOMING = "upcoming"), (e.EARNED = "earned"), e;
 })({});
+
 function E() {
     let e = (0, a.bG)([l.default], () => l.default.getCurrentUser()),
         t = (0, d.v)(null == e ? void 0 : e.id);
@@ -83,6 +88,7 @@ let b = (e) =>
         let t = o.A.getUserProfile(e);
         return null == t ? void 0 : t.premiumSince;
     });
+
 function y() {
     let e = (0, a.bG)([l.default], () => l.default.getCurrentUser()),
         t = (0, u.YE)(e, f.PremiumTypes.TIER_2),

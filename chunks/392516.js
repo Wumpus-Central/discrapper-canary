@@ -1,4 +1,7 @@
-r.d(t, { default: () => f }), r(896048);
+r.d(t, {
+    default: () => f,
+}),
+    r(896048);
 var n = r(627968),
     i = r(64700),
     a = r(732955),
@@ -12,6 +15,7 @@ var n = r(627968),
     p = r(652215),
     y = r(985018),
     O = r(220906);
+
 function f(e) {
     var t;
     let { transitionState: r, guild: f, user: g, ban: j, onClose: m } = e,
@@ -79,7 +83,9 @@ function f(e) {
             }
         }, [j.reason, f, k, m, g.id]);
     return (0, n.jsx)(a.aFV, {
-        title: b.Ay.getUserTag(g, { mode: "username" }),
+        title: b.Ay.getUserTag(g, {
+            mode: "username",
+        }),
         actions: [
             {
                 text: y.intl.string(y.t.UPcIa5),

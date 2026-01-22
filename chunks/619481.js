@@ -1,4 +1,7 @@
-l.d(t, { default: () => I }), l(896048);
+l.d(t, {
+    default: () => I,
+}),
+    l(896048);
 var n = l(627968),
     a = l(64700),
     s = l(110259),
@@ -28,6 +31,7 @@ var n = l(627968),
     T = l(927961),
     w = l(985018),
     D = l(753565);
+
 function I(e) {
     var t, l, I;
     let { transitionState: P, analyticsLocations: L, guildId: k, onClose: R } = e,
@@ -48,7 +52,9 @@ function I(e) {
             type: s.ImpressionTypes.POPOUT,
             name: s.ImpressionNames.DISPLAY_NAME_STYLES_MODAL,
         },
-        { trackOnInitialLoad: !0 },
+        {
+            trackOnInitialLoad: !0,
+        },
     );
     let { analyticsLocations: et } = (0, f.Ay)(L, u.A.EDIT_DISPLAY_NAME_STYLES_MODAL),
         el = a.useMemo(() => (V === r.z.GRADIENT ? $ : [Z]), [V, $, Z]),
@@ -90,7 +96,9 @@ function I(e) {
         : (0, n.jsx)(f.f5, {
               value: et,
               children: (0, n.jsx)(j.l.Provider, {
-                  value: { overrideSettings: !0 },
+                  value: {
+                      overrideSettings: !0,
+                  },
                   children: (0, n.jsxs)(d.EOs, {
                       "data-migration-pending": !0,
                       transitionState: P,
@@ -101,7 +109,9 @@ function I(e) {
                           (0, n.jsxs)(d.$mQ, {
                               "data-migration-pending": !0,
                               className: D.jE,
-                              style: { overflow: "hidden auto" },
+                              style: {
+                                  overflow: "hidden auto",
+                              },
                               children: [
                                   (0, n.jsxs)("div", {
                                       className: D.w1,

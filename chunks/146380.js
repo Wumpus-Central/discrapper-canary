@@ -1,1 +1,3 @@
-e.exports = { y: "_2c32b16ff7529c41" };
+e.exports = {
+    y: "_2c32b16ff7529c41",
+};

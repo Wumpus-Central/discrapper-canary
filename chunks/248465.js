@@ -81,6 +81,7 @@ var i = n(91871),
     ed = n(746080),
     ef = n(282435),
     ep = n(985018);
+
 function e_(e, t, n) {
     return (
         t in e
@@ -94,6 +95,7 @@ function e_(e, t, n) {
         e
     );
 }
+
 function eh(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -110,6 +112,7 @@ function eh(e) {
     }
     return e;
 }
+
 function em(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -122,6 +125,7 @@ function em(e, t) {
     }
     return n;
 }
+
 function eg(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -133,9 +137,14 @@ function eg(e, t) {
         e
     );
 }
-let eE = (0, c.y)(() => ({ options: [] }));
+let eE = (0, c.y)(() => ({
+    options: [],
+}));
+
 function eb(e) {
-    eE.setState({ options: e });
+    eE.setState({
+        options: e,
+    });
 }
 let ey = new m.A("AutocompleteUtils"),
     eO = 10,
@@ -152,7 +161,7 @@ let ey = new m.A("AutocompleteUtils"),
     eD = 6,
     ex = 8,
     eL = 1,
-    ej = 1000,
+    ej = 1e3,
     eM = 0.2,
     ek = 0.1,
     eU = 50,
@@ -164,11 +173,13 @@ let ey = new m.A("AutocompleteUtils"),
     eY = r.MENTION_GAME,
     eW = r.MENTION_TIMESTAMP,
     eK = r.LAUNCHABLE_APPLICATIONS;
+
 function ez() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
         t = arguments.length > 1 ? arguments[1] : void 0;
     return ej * e * (null != t ? t : 1);
 }
+
 function eq(e) {
     var t, n;
     let r = V.A.getFrequentlyWithoutFetchingLatest(),
@@ -211,9 +222,11 @@ function eq(e) {
     return s;
 }
 let eX = [F.I6, F.vM, ec.rbe.GUILD_CATEGORY];
+
 function eZ(e, t) {
     return e.split(/(?:,| )+/).every((e) => RegExp(ea.A.escape(e), "i").test(t));
 }
+
 function eQ(e, t) {
     let { exactQuery: n, containQuery: r, queryLower: i } = t,
         s = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
@@ -230,15 +243,18 @@ function eQ(e, t) {
     }
     return 0;
 }
+
 function e$(e) {
     return (null == e ? void 0 : e.joinedAt) != null && !e.isPending;
 }
+
 function eJ(e) {
     if (null == e) return [null, null];
     let t = (0, eo.sS)(e),
         n = (0, eo.S8)(t);
     return [t, n];
 }
+
 function e0(e) {
     let { query: t, members: n, limit: r, filter: i, allowSnowflake: s, boosters: o } = e,
         l = Q.default.getUsers(),
@@ -314,6 +330,7 @@ function e0(e) {
         p
     );
 }
+
 function e1(e) {
     switch (e) {
         case R.cG.STICKER_NAME:
@@ -329,17 +346,21 @@ function e1(e) {
             return 1;
     }
 }
+
 function e2(e) {
     return e === F.I6 || (e !== F.vM && !!(0, L.fT)(e));
 }
+
 function e3(e, t, n) {
     return (
         e === t || ((!!n || !!(0, L.zy)(t)) && (e === F.I6 ? (0, L.tr)(t) || (0, L.ay)(t) : e === F.vM && (0, L.ay)(t)))
     );
 }
+
 function e6(e, t) {
     return e === F.I6 && (0, L.ay)(t);
 }
+
 function e4(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = e
@@ -365,6 +386,7 @@ function e4(e) {
     }
     return n;
 }
+
 function e5(e, t, n) {
     let r = 0,
         i = null;
@@ -374,6 +396,7 @@ function e5(e, t, n) {
     }
     return null != i && (i.isFullMatch ? (t.length = 0) : t.splice(t.indexOf(i), 1)), r;
 }
+
 function e7(e, t) {
     if (null == e.guild_id) return;
     let n = t[e.guild_id];
@@ -383,6 +406,7 @@ function e7(e, t) {
     }
     return n;
 }
+
 function e8(e, t) {
     if (null == e.parent_id) return;
     let n = t[e.parent_id];
@@ -392,6 +416,7 @@ function e8(e, t) {
     }
     return n;
 }
+
 function e9(e, t) {
     let n = U.A.getChannel(e);
     return null == e || null == n
@@ -945,7 +970,10 @@ let te = (0, ee.L_)((e, t, n) => {
                             );
                         })
                         .value();
-                    (A = (0, l.Ht)(n, t, { keys: ["name"] }).slice(0, h - y)), (y += A.length);
+                    (A = (0, l.Ht)(n, t, {
+                        keys: ["name"],
+                    }).slice(0, h - y)),
+                        (y += A.length);
                 }
             }
             let v = [];
@@ -959,7 +987,9 @@ let te = (0, ee.L_)((e, t, n) => {
                     guildId: n.guild_id,
                     location: "mention autocomplete",
                 },
-                { autoTrackExposure: !0 },
+                {
+                    autoTrackExposure: !0,
+                },
             ).enabled;
             return (
                 r &&
@@ -970,7 +1000,9 @@ let te = (0, ee.L_)((e, t, n) => {
                     (y >= h && (v.length > 0 ? v.pop() : A.length > 0 ? A.pop() : E.length > 0 && E.pop()),
                     v.push(eY()),
                     (y += 1)),
-                _.A.getConfig({ location: "mention autocomplete" }).enabled &&
+                _.A.getConfig({
+                    location: "mention autocomplete",
+                }).enabled &&
                     u &&
                     null != eW &&
                     (((y < h || 0 === O.length) && a()(O, eW().test)) || O === eW().test) &&
@@ -995,7 +1027,11 @@ let te = (0, ee.L_)((e, t, n) => {
                     ? this.queryGuildUsers({
                           guildId: n,
                           query: t,
-                      }).map((e) => eg(eh({}, e), { status: z.A.getStatus(e.record.id) }))
+                      }).map((e) =>
+                          eg(eh({}, e), {
+                              status: z.A.getStatus(e.record.id),
+                          }),
+                      )
                     : [],
                 u = c.length,
                 d = t.toLowerCase(),
@@ -1111,7 +1147,12 @@ let te = (0, ee.L_)((e, t, n) => {
             let { query: t, channel: n, channelTypes: r, limit: i = ec.rs7, allowSnowflake: a } = e;
             if (null == n.guild_id) {
                 let e = [];
-                return (null == r || r.includes(n.type)) && e.push(n), { channels: e };
+                return (
+                    (null == r || r.includes(n.type)) && e.push(n),
+                    {
+                        channels: e,
+                    }
+                );
             }
             let s = [];
             for (let e of eX)
@@ -1136,7 +1177,9 @@ let te = (0, ee.L_)((e, t, n) => {
                     })
                     .sort(h.A)),
                 null != i && s.length > i && (s = s.slice(0, i)),
-                { channels: s.map((e) => e.record) }
+                {
+                    channels: s.map((e) => e.record),
+                }
             );
         },
         queryChoiceResults(e) {
@@ -1237,13 +1280,14 @@ let te = (0, ee.L_)((e, t, n) => {
             let t = E.Ay.getRunningVerifiedApplicationIds();
             null == $.A.lastFetched && u.X();
             let n = $.A.applicationStatistics;
+
             function r(r) {
                 let i = 0,
                     s = r.name.toLowerCase(),
                     o = e.toLowerCase();
                 return (
                     r.id === o
-                        ? (i += 1000)
+                        ? (i += 1e3)
                         : s === o
                           ? (i += 5)
                           : s.startsWith(o)

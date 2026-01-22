@@ -1,4 +1,8 @@
-n.d(t, { A: () => y }), n(228524), n(896048);
+n.d(t, {
+    A: () => y,
+}),
+    n(228524),
+    n(896048);
 var l = n(627968),
     r = n(64700),
     i = n(989349),
@@ -17,6 +21,7 @@ var l = n(627968),
     p = n(339984),
     f = n(985018),
     b = n(362561);
+
 function y(e) {
     let {
             guildEvent: t,
@@ -42,7 +47,11 @@ function y(e) {
         L = null != t && (0, g.Fd)(t),
         M = r.useMemo(() => {
             let e = (0, m.N5)(t);
-            return null != e ? e : { startDate: s()(k) };
+            return null != e
+                ? e
+                : {
+                      startDate: s()(k),
+                  };
         }, [t, k]),
         [U, z] = r.useState(() => (0, m.z7)(s()(k), G)),
         V = r.useRef(null);
@@ -53,7 +62,9 @@ function y(e) {
         }
     }, [C]);
     let F = (e) => {
-            E({ image: e });
+            E({
+                image: e,
+            });
         },
         B = (e, t) => {
             null == e || void 0 === t
@@ -114,7 +125,13 @@ function y(e) {
         children: [
             (0, l.jsx)("div", {
                 className: b.GU,
-                children: null != S && !L && (R > 0 || _ > 0) && (0, l.jsx)(d.Bw, { channelId: S }),
+                children:
+                    null != S &&
+                    !L &&
+                    (R > 0 || _ > 0) &&
+                    (0, l.jsx)(d.Bw, {
+                        channelId: S,
+                    }),
             }),
             (0, l.jsx)("div", {
                 className: b.Zd,
@@ -126,7 +143,9 @@ function y(e) {
                             required: !0,
                             error: null != H ? H : Y,
                             onChange: (e) => {
-                                E({ name: e });
+                                E({
+                                    name: e,
+                                });
                             },
                             placeholder: f.intl.string(f.t["6/yars"]),
                             maxLength: v.t_,
@@ -151,7 +170,11 @@ function y(e) {
                             },
                             onRecurrenceChange: (e) => {
                                 let t = M.startDate;
-                                null == t || (E({ recurrenceRule: (0, m.nG)(e, t) }), z(e));
+                                null == t ||
+                                    (E({
+                                        recurrenceRule: (0, m.nG)(e, t),
+                                    }),
+                                    z(e));
                             },
                             schedule: M,
                             recurrenceRule: G,
@@ -160,14 +183,18 @@ function y(e) {
                             disableStartDateTime: L,
                             guildId: y,
                         }),
-                        (0, l.jsx)(O, { error: N }),
+                        (0, l.jsx)(O, {
+                            error: N,
+                        }),
                         (0, l.jsx)(a.fs1, {
                             label: f.intl.string(f.t["+gRCC7"]),
                             error: X,
                             placeholder: f.intl.string(f.t["kWO/E8"]),
                             value: T,
                             onChange: (e) => {
-                                E({ description: e });
+                                E({
+                                    description: e,
+                                });
                             },
                             maxLength: v.IJ,
                             autosize: !0,
@@ -216,6 +243,7 @@ function y(e) {
         ],
     });
 }
+
 function O(e) {
     let { error: t } = e;
     return null == t

@@ -1,4 +1,6 @@
-r.d(t, { A: () => C });
+r.d(t, {
+    A: () => C,
+});
 var n = r(627968);
 r(64700);
 var o = r(110259),
@@ -24,6 +26,7 @@ var o = r(110259),
     w = r(731854),
     _ = r(985018),
     S = r(220636);
+
 function C(e) {
     let {
             appContext: t,
@@ -44,7 +47,9 @@ function C(e) {
     (0, b.A)({
         type: o.ImpressionTypes.MENU,
         name: o.ImpressionNames.AUDIO_DEVICE_MENU,
-        properties: { location_stack: L },
+        properties: {
+            location_stack: L,
+        },
     });
     let R = (0, P.A)(t),
         B = (0, p.H)({
@@ -97,7 +102,9 @@ function C(e) {
                                 control: () =>
                                     (0, n.jsx)(j.A, {
                                         notchBackground: j.V.BLACK,
-                                        location: { section: A.JJy.CONTEXT_MENU },
+                                        location: {
+                                            section: A.JJy.CONTEXT_MENU,
+                                        },
                                         meterOnly: !0,
                                         containerClassName: S.Eq,
                                         notchClassName: S.CO,
@@ -113,7 +120,10 @@ function C(e) {
                                   checked: Z === A.TBI.PUSH_TO_TALK,
                                   id: "input-mode",
                                   label: _.intl.string(_.t.Q8gkVL),
-                                  action: () => a.A.setMode(q, void 0, void 0, { analyticsLocations: L }),
+                                  action: () =>
+                                      a.A.setMode(q, void 0, void 0, {
+                                          analyticsLocations: L,
+                                      }),
                                   disabled: K === h.my.STUDIO,
                               })
                             : null,

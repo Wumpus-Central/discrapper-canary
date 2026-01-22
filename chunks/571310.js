@@ -5,7 +5,14 @@ e.exports = function (e) {
         },
         n = {
             className: "symbol",
-            variants: [{ begin: /[A-Z][a-zA-Z0-9_]*/ }, { begin: /_[A-Za-z0-9_]*/ }],
+            variants: [
+                {
+                    begin: /[A-Z][a-zA-Z0-9_]*/,
+                },
+                {
+                    begin: /_[A-Za-z0-9_]*/,
+                },
+            ],
             relevance: 0,
         },
         r = {
@@ -41,7 +48,9 @@ e.exports = function (e) {
             t,
             n,
             r,
-            { begin: /:-/ },
+            {
+                begin: /:-/,
+            },
             i,
             a,
             e.C_BLOCK_COMMENT_MODE,
@@ -57,7 +66,11 @@ e.exports = function (e) {
         (i.contains = c),
         {
             name: "Prolog",
-            contains: c.concat([{ begin: /\.$/ }]),
+            contains: c.concat([
+                {
+                    begin: /\.$/,
+                },
+            ]),
         }
     );
 };

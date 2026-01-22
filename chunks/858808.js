@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968);
 n(64700);
 var l = n(503698),
@@ -9,6 +11,7 @@ var l = n(503698),
     c = n(735321),
     u = n(985018),
     d = n(794118);
+
 function f(e) {
     let { game: t, widgetType: n, iconSize: l = "refresh_sm", className: f, buttonRef: p, onRemove: b } = e,
         { trackUserProfileEditAction: g } = (0, o.NJ)();

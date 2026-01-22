@@ -1,4 +1,6 @@
-a.d(t, { A: () => r });
+a.d(t, {
+    A: () => r,
+});
 var n = a(981737);
 let r = {
     ordinalNumber: function (e, t) {

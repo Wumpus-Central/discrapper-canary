@@ -6,6 +6,7 @@ n.d(t, {
 });
 var r = n(734057),
     i = n(988794);
+
 function a(e) {
     let t,
         { entity_type: n, channel_id: a } = e;
@@ -15,18 +16,22 @@ function a(e) {
     }
     return t;
 }
+
 function s(e, t) {
     let n = null;
     return e === i.Ps.EXTERNAL && null != t && "location" in t && (n = t.location), n;
 }
+
 function o(e) {
     let { entity_type: t, entity_metadata: n } = e;
     return s(t, n);
 }
+
 function l(e) {
     let { entityType: t, entityMetadata: n } = e;
     return s(t, n);
 }
+
 function c(e) {
     return e === i.Ps.VOICE || e === i.Ps.STAGE_INSTANCE ? i.om[e] : void 0;
 }

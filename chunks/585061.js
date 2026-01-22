@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var r = n(627968);
 n(64700);
 var i = n(582754),
@@ -12,6 +14,7 @@ var i = n(582754),
     f = n(778712),
     p = n(985018),
     _ = n(617705);
+
 function h(e, t, n) {
     return (
         t in e
@@ -25,6 +28,7 @@ function h(e, t, n) {
         e
     );
 }
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -74,9 +78,13 @@ let g = () => {
                   (0, r.jsx)(a.Text, {
                       variant: "text-xs/bold",
                       className: _.U_,
-                      children: p.intl.format(p.t.oxhCOl, { userName: E }),
+                      children: p.intl.format(p.t.oxhCOl, {
+                          userName: E,
+                      }),
                   }),
-                  (0, r.jsx)(b, { className: _.q3 }),
+                  (0, r.jsx)(b, {
+                      className: _.q3,
+                  }),
               ],
           });
 };

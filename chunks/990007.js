@@ -1,4 +1,15 @@
-n.d(t, { A: () => P }), n(747238), n(938796), n(896048), n(693327), n(554719), n(680155), n(323874), n(14289), n(35956);
+n.d(t, {
+    A: () => P,
+}),
+    n(747238),
+    n(938796),
+    n(896048),
+    n(693327),
+    n(554719),
+    n(680155),
+    n(323874),
+    n(14289),
+    n(35956);
 var r = n(488428),
     i = n(485845),
     l = n(179771),
@@ -21,6 +32,7 @@ var r = n(488428),
     y = n(636401),
     I = n(613057),
     v = n(652215);
+
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -46,6 +58,7 @@ function S(e) {
     }
     return e;
 }
+
 function C(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -65,7 +78,9 @@ function C(e, t) {
     );
 }
 let N = "CachedTokens",
-    T = { "1273616940451102832": new c.A(2, +E.A.Millis.MINUTE) };
+    T = {
+        "1273616940451102832": new c.A(2, +E.A.Millis.MINUTE),
+    };
 async function j(e, t, n) {
     let r,
         l,
@@ -91,11 +106,25 @@ async function j(e, t, n) {
             signal: k,
             isSocketRpcPrivateScope: U,
         } = e;
-    if (null == k ? void 0 : k.aborted) throw new y.A({ errorCode: v.Lw6.UNKNOWN_ERROR }, "Request aborted");
-    if (null == d) throw new y.A({ errorCode: v.Lw6.OAUTH2_ERROR }, "No Client ID provided");
+    if (null == k ? void 0 : k.aborted)
+        throw new y.A(
+            {
+                errorCode: v.Lw6.UNKNOWN_ERROR,
+            },
+            "Request aborted",
+        );
+    if (null == d)
+        throw new y.A(
+            {
+                errorCode: v.Lw6.OAUTH2_ERROR,
+            },
+            "No Client ID provided",
+        );
     if (!U && null != E)
         throw new y.A(
-            { errorCode: v.Lw6.OAUTH2_ERROR },
+            {
+                errorCode: v.Lw6.OAUTH2_ERROR,
+            },
             "Redirect URI cannot be used in the RPC OAuth2 Authorization flow",
         );
     let G = [];
@@ -103,7 +132,12 @@ async function j(e, t, n) {
         ("string" == typeof j ? (G = j.split(" ").filter((e) => e.length > 0)) : Array.isArray(j) && (G = j),
         null == _.default.getCurrentUser())
     )
-        throw new y.A({ errorCode: v.Lw6.OAUTH2_ERROR }, "Client is not logged in");
+        throw new y.A(
+            {
+                errorCode: v.Lw6.OAUTH2_ERROR,
+            },
+            "Client is not logged in",
+        );
     if (null != D) l = Number(D);
     else {
         let e = (e) => {
@@ -135,7 +169,9 @@ async function j(e, t, n) {
     } catch (t) {
         let { body: e } = t;
         throw new y.A(
-            { errorCode: v.Lw6.OAUTH2_ERROR },
+            {
+                errorCode: v.Lw6.OAUTH2_ERROR,
+            },
             "OAuth2 Authorization Error: ".concat((null == e ? void 0 : e.message) || "Unknown Error"),
         );
     }
@@ -158,7 +194,9 @@ async function j(e, t, n) {
         } catch (t) {
             let { body: e } = t;
             throw new y.A(
-                { errorCode: v.Lw6.OAUTH2_ERROR },
+                {
+                    errorCode: v.Lw6.OAUTH2_ERROR,
+                },
                 "OAuth2 Authorize Error: ".concat((null == e ? void 0 : e.message) || "Unknown Error"),
             );
         }
@@ -173,7 +211,12 @@ async function j(e, t, n) {
             (r = new Map()).set(o.integration_type, o),
         null != T[o.application.id] && (await T[o.application.id].process(), null == k ? void 0 : k.aborted))
     )
-        throw new y.A({ errorCode: v.Lw6.UNKNOWN_ERROR }, "Request aborted");
+        throw new y.A(
+            {
+                errorCode: v.Lw6.UNKNOWN_ERROR,
+            },
+            "Request aborted",
+        );
     return t({
         clientId: d,
         authorizations: r,
@@ -194,14 +237,29 @@ async function j(e, t, n) {
         signal: k,
     });
 }
+
 function x(e, t) {
-    if (e.authorization.accessToken) throw new y.A({ errorCode: v.Lw6.INVALID_COMMAND }, "Already authenticated");
-    if (e.authorization.authing) throw new y.A({ errorCode: v.Lw6.INVALID_COMMAND }, "Already authenticating");
+    if (e.authorization.accessToken)
+        throw new y.A(
+            {
+                errorCode: v.Lw6.INVALID_COMMAND,
+            },
+            "Already authenticated",
+        );
+    if (e.authorization.authing)
+        throw new y.A(
+            {
+                errorCode: v.Lw6.INVALID_COMMAND,
+            },
+            "Already authenticating",
+        );
     return (
         (e.authorization.authing = !0),
         o.Bo.get({
             url: v.Rsh.OAUTH2_CURRENT_AUTH,
-            headers: { Authorization: "Bearer ".concat(t) },
+            headers: {
+                Authorization: "Bearer ".concat(t),
+            },
             oldFormErrors: !0,
             rejectWithError: !1,
         })
@@ -211,12 +269,19 @@ function x(e, t) {
                     let { application: r, user: i, scopes: l, expires: a } = n.body;
                     if (e.application.id !== r.id)
                         throw new y.A(
-                            { errorCode: v.Lw6.INVALID_CLIENTID },
+                            {
+                                errorCode: v.Lw6.INVALID_CLIENTID,
+                            },
                             "Application does not match the connection's",
                         );
                     let s = _.default.getCurrentUser();
                     if (null == s || !i || s.id !== i.id)
-                        throw new y.A({ errorCode: v.Lw6.INVALID_TOKEN }, "Token does not match current user");
+                        throw new y.A(
+                            {
+                                errorCode: v.Lw6.INVALID_TOKEN,
+                            },
+                            "Token does not match current user",
+                        );
                     return (
                         (e.authorization.scopes = [...e.authorization.scopes, ...l, I.VH]),
                         (e.authorization.accessToken = t),
@@ -226,11 +291,18 @@ function x(e, t) {
                             socketId: e.id,
                             application: e.application,
                         }),
-                        C(S({}, n.body), { access_token: t })
+                        C(S({}, n.body), {
+                            access_token: t,
+                        })
                     );
                 },
                 () => {
-                    throw new y.A({ errorCode: v.Lw6.INVALID_TOKEN }, "Invalid access token: ".concat(t));
+                    throw new y.A(
+                        {
+                            errorCode: v.Lw6.INVALID_TOKEN,
+                        },
+                        "Invalid access token: ".concat(t),
+                    );
                 },
             )
             .catch((t) => {
@@ -238,6 +310,7 @@ function x(e, t) {
             })
     );
 }
+
 function P(e, t) {
     return {
         [v.e$_.AUTHENTICATE]: (0, u.T)(v.e$_.AUTHENTICATE, {
@@ -249,7 +322,13 @@ function P(e, t) {
                 } = n;
                 if (null == s && i.transport === I.z4.IPC) {
                     let n = i.application.id;
-                    if (null == n) throw new y.A({ errorCode: v.Lw6.INVALID_COMMAND }, "No application.");
+                    if (null == n)
+                        throw new y.A(
+                            {
+                                errorCode: v.Lw6.INVALID_COMMAND,
+                            },
+                            "No application.",
+                        );
                     let o = l.F.IDENTIFY,
                         c = () =>
                             j(
@@ -266,12 +345,19 @@ function P(e, t) {
                                 var t, l, a, s, o;
                                 let c;
                                 if (null == e)
-                                    throw new y.A({ errorCode: v.Lw6.UNKNOWN_ERROR }, "Unknown error occurred");
+                                    throw new y.A(
+                                        {
+                                            errorCode: v.Lw6.UNKNOWN_ERROR,
+                                        },
+                                        "Unknown error occurred",
+                                    );
                                 let u = e.split(/#|\?/),
                                     p = r.parse(u[u.length - 1]);
                                 if (null != p.error)
                                     throw new y.A(
-                                        { errorCode: v.Lw6.OAUTH2_ERROR },
+                                        {
+                                            errorCode: v.Lw6.OAUTH2_ERROR,
+                                        },
                                         "OAuth2 Error: "
                                             .concat(p.error, ": ")
                                             .concat(null != (t = p.error_description) ? t : "unknown error"),
@@ -305,7 +391,13 @@ function P(e, t) {
                           })
                         : c();
                 }
-                if (null == s) throw new y.A({ errorCode: v.Lw6.INVALID_TOKEN }, "No access token provided");
+                if (null == s)
+                    throw new y.A(
+                        {
+                            errorCode: v.Lw6.INVALID_TOKEN,
+                        },
+                        "No access token provided",
+                    );
                 return x(i, s);
             },
         }),
@@ -313,15 +405,34 @@ function P(e, t) {
             handler(n) {
                 let { socket: r, signal: i, args: l } = n,
                     a = l.client_id;
-                if (!a) throw new y.A({ errorCode: v.Lw6.INVALID_CLIENTID }, "No client id provided");
+                if (!a)
+                    throw new y.A(
+                        {
+                            errorCode: v.Lw6.INVALID_CLIENTID,
+                        },
+                        "No client id provided",
+                    );
                 if (null != r.authorization.accessToken)
-                    throw new y.A({ errorCode: v.Lw6.INVALID_COMMAND }, "Already authenticated");
-                if (r.authorization.authing) throw new y.A({ errorCode: v.Lw6.INVALID_COMMAND }, "Already authing");
+                    throw new y.A(
+                        {
+                            errorCode: v.Lw6.INVALID_COMMAND,
+                        },
+                        "Already authenticated",
+                    );
+                if (r.authorization.authing)
+                    throw new y.A(
+                        {
+                            errorCode: v.Lw6.INVALID_COMMAND,
+                        },
+                        "Already authing",
+                    );
                 if (((r.authorization.authing = !0), "token" === l.response_type))
                     throw (
                         ((r.authorization.authing = !1),
                         new y.A(
-                            { errorCode: v.Lw6.INVALID_COMMAND },
+                            {
+                                errorCode: v.Lw6.INVALID_COMMAND,
+                            },
                             'Authorization response_type "token" is not supported',
                         ))
                     );
@@ -329,7 +440,12 @@ function P(e, t) {
                 if (!s && r.application.id !== a)
                     throw (
                         ((r.authorization.authing = !1),
-                        new y.A({ errorCode: v.Lw6.INVALID_CLIENTID }, "Application does not match the connection's"))
+                        new y.A(
+                            {
+                                errorCode: v.Lw6.INVALID_CLIENTID,
+                            },
+                            "Application does not match the connection's",
+                        ))
                     );
                 let o = l.scopes || l.scope;
                 return (
@@ -345,7 +461,12 @@ function P(e, t) {
                     )
                         .then((e) => {
                             if (((r.authorization.authing = !1), null == e))
-                                throw new y.A({ errorCode: v.Lw6.UNKNOWN_ERROR }, "Unknown error occurred");
+                                throw new y.A(
+                                    {
+                                        errorCode: v.Lw6.UNKNOWN_ERROR,
+                                    },
+                                    "Unknown error occurred",
+                                );
                             let t = new URL(e),
                                 n = t.searchParams.get("code");
                             if (s)
@@ -358,16 +479,22 @@ function P(e, t) {
                                 var l;
                                 let e = null != (l = t.searchParams.get("error_description")) ? l : "unknown error";
                                 throw new y.A(
-                                    { errorCode: v.Lw6.OAUTH2_ERROR },
+                                    {
+                                        errorCode: v.Lw6.OAUTH2_ERROR,
+                                    },
                                     "OAuth2 Error: ".concat(i, ": ").concat(e),
                                 );
                             }
                             if (null == n)
                                 throw new y.A(
-                                    { errorCode: v.Lw6.OAUTH2_ERROR },
+                                    {
+                                        errorCode: v.Lw6.OAUTH2_ERROR,
+                                    },
                                     "OAuth2 Error: Unable to find auth code",
                                 );
-                            return { code: n };
+                            return {
+                                code: n,
+                            };
                         })
                         .catch((e) => {
                             throw ((r.authorization.authing = !1), e);

@@ -1,4 +1,7 @@
-n.d(t, { l: () => G }), n(896048);
+n.d(t, {
+    l: () => G,
+}),
+    n(896048);
 var r = n(64700),
     i = n(311907),
     a = n(308368),
@@ -35,6 +38,7 @@ var r = n(64700),
     M = n(652215),
     k = n(360469),
     U = n(985018);
+
 function G(e) {
     var t, n;
     let G,
@@ -130,7 +134,12 @@ function G(e) {
     let ed = !J || (Q && !el),
         ef = ed && (eu || et) && !q && !en;
     ed
-        ? eu || et || null == V || (G = U.intl.formatToPlainString(U.t.SqJBnN, { name: V.name }))
+        ? eu ||
+          et ||
+          null == V ||
+          (G = U.intl.formatToPlainString(U.t.SqJBnN, {
+              name: V.name,
+          }))
         : (G = U.intl.string(U.t["0OiwfH"]));
     let ep = null != (n = null == F ? void 0 : F.launchId) ? n : null == V ? void 0 : V.session_id,
         e_ = async (e, t) => {

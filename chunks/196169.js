@@ -1,4 +1,6 @@
-n.d(t, { A: () => N });
+n.d(t, {
+    A: () => N,
+});
 var r = n(627968);
 n(64700);
 var i = n(582754),
@@ -16,12 +18,16 @@ var i = n(582754),
     p = n(507910),
     x = n(763859),
     h = n(394854);
+
 function j(e) {
     return (0, i.Mw)(e) ? o.c8 : o.kK;
 }
+
 function O() {
     let e = (0, s.Ay)(),
-        t = { backgroundColor: (0, i.Mw)(e) ? "#2e3638" : "var(--background-base-low)" };
+        t = {
+            backgroundColor: (0, i.Mw)(e) ? "#2e3638" : "var(--background-base-low)",
+        };
     return (0, r.jsxs)("div", {
         className: o.fr,
         style: t,
@@ -33,7 +39,9 @@ function O() {
                         color: "text-default",
                         children: c.intl.string(c.t.TXPK7B),
                     }),
-                    (0, r.jsx)(l.hKd, { size: 8 }),
+                    (0, r.jsx)(l.hKd, {
+                        size: 8,
+                    }),
                     (0, r.jsx)(l.Heading, {
                         variant: "heading-md/bold",
                         className: j(e),
@@ -49,8 +57,10 @@ function O() {
         ],
     });
 }
+
 function y() {
     let e = (0, s.Ay)();
+
     function t(e) {
         var t, n;
         let { length: i, horizontal: l } = e;
@@ -81,8 +91,20 @@ function y() {
                             });
                     }
                     return e;
-                })({}, l ? { width: i } : { height: i })),
-                (n = n = { border: "1px solid #49494933" }),
+                })(
+                    {},
+                    l
+                        ? {
+                              width: i,
+                          }
+                        : {
+                              height: i,
+                          },
+                )),
+                (n = n =
+                    {
+                        border: "1px solid #49494933",
+                    }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                     : (function (e, t) {
@@ -105,7 +127,9 @@ function y() {
             (0, r.jsxs)("div", {
                 className: o.g0,
                 children: [
-                    (0, r.jsx)(t, { length: 24 }),
+                    (0, r.jsx)(t, {
+                        length: 24,
+                    }),
                     (0, r.jsx)("img", {
                         className: o.qj,
                         src: (0, i.Mw)(e) ? d : u,
@@ -120,7 +144,9 @@ function y() {
             (0, r.jsxs)("div", {
                 className: o.g0,
                 children: [
-                    (0, r.jsx)(t, { length: 24 }),
+                    (0, r.jsx)(t, {
+                        length: 24,
+                    }),
                     (0, r.jsx)("img", {
                         className: o.qj,
                         src: f,
@@ -131,7 +157,9 @@ function y() {
             (0, r.jsxs)("div", {
                 className: o.g0,
                 children: [
-                    (0, r.jsx)(t, { length: 12 }),
+                    (0, r.jsx)(t, {
+                        length: 12,
+                    }),
                     (0, r.jsx)("img", {
                         className: o.qj,
                         src: g,
@@ -146,7 +174,9 @@ function y() {
             (0, r.jsxs)("div", {
                 className: o.g0,
                 children: [
-                    (0, r.jsx)(t, { length: 12 }),
+                    (0, r.jsx)(t, {
+                        length: 12,
+                    }),
                     (0, r.jsx)("img", {
                         className: o.qj,
                         src: b,
@@ -157,6 +187,7 @@ function y() {
         ],
     });
 }
+
 function v() {
     return (0, r.jsxs)("div", {
         className: o.w2,
@@ -166,13 +197,18 @@ function v() {
                 color: "text-default",
                 children: c.intl.string(c.t["9CdmS8"]),
             }),
-            (0, r.jsx)(l.hKd, { size: 32 }),
+            (0, r.jsx)(l.hKd, {
+                size: 32,
+            }),
             (0, r.jsx)(O, {}),
-            (0, r.jsx)(l.hKd, { size: 24 }),
+            (0, r.jsx)(l.hKd, {
+                size: 24,
+            }),
             (0, r.jsx)(y, {}),
         ],
     });
 }
+
 function A() {
     return (0, r.jsxs)("div", {
         className: o.Og,
@@ -196,6 +232,7 @@ function A() {
         ],
     });
 }
+
 function E() {
     let e = (0, s.Ay)();
     return (0, r.jsxs)("div", {
@@ -227,6 +264,7 @@ function E() {
         ],
     });
 }
+
 function N() {
     return (0, r.jsxs)("div", {
         children: [
@@ -235,7 +273,9 @@ function N() {
                 color: "text-strong",
                 children: c.intl.string(c.t["1QHJaW"]),
             }),
-            (0, r.jsx)(l.hKd, { size: 24 }),
+            (0, r.jsx)(l.hKd, {
+                size: 24,
+            }),
             (0, r.jsxs)("div", {
                 className: o._$,
                 children: [(0, r.jsx)(v, {}), (0, r.jsx)(A, {}), (0, r.jsx)(E, {})],

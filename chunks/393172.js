@@ -41,6 +41,7 @@ var j = n(652215),
     M = n(731854),
     k = n(985018),
     U = n(585990);
+
 function G(e, t, n) {
     return (
         t in e
@@ -54,6 +55,7 @@ function G(e, t, n) {
         e
     );
 }
+
 function V(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -70,6 +72,7 @@ function V(e) {
     }
     return e;
 }
+
 function F(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -82,6 +85,7 @@ function F(e, t) {
     }
     return n;
 }
+
 function B(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -97,6 +101,7 @@ let H = (e) => {
     let t = (null != e ? e : 0) % R.A.DEFAULT_AVATARS.length;
     return R.A.DEFAULT_AVATARS[t];
 };
+
 function Y(e) {
     var t, n;
     let { hiddenVoiceStates: i, voiceStateMap: a, size: c, locked: u, flipped: f } = e,
@@ -139,6 +144,7 @@ function Y(e) {
         ],
     });
 }
+
 function W(e) {
     let [t, n] = e;
     return new Set(n);
@@ -252,6 +258,7 @@ let K = i.memo(function (e) {
           })
         : N();
 });
+
 function z(e, t) {
     let n = (0, o.bG)([O.A, y.A], () => y.A.getChannel(O.A.getVoiceChannelId())),
         [r] = (0, o.bG)(
@@ -318,6 +325,7 @@ function z(e, t) {
         }, [a, e, l, t]),
     ];
 }
+
 function q(e) {
     var t;
     let { isSettingsPreview: n } = e,
@@ -339,20 +347,28 @@ function q(e) {
         });
     return (0, r.jsx)(
         K,
-        B(V(B(V({}, _), { application: d }), e), {
-            overlayVoiceStates: s,
-            channel: i,
-            guildId: null == i ? void 0 : i.guild_id,
-            title: null != a ? a : "",
-            streamMetadata: l,
-            streamApplication:
-                null != (t = _.streamApplication)
-                    ? t
-                    : {
-                          id: null,
-                          name: null == l ? void 0 : l.sourceName,
-                      },
-            isSettingsPreview: n,
-        }),
+        B(
+            V(
+                B(V({}, _), {
+                    application: d,
+                }),
+                e,
+            ),
+            {
+                overlayVoiceStates: s,
+                channel: i,
+                guildId: null == i ? void 0 : i.guild_id,
+                title: null != a ? a : "",
+                streamMetadata: l,
+                streamApplication:
+                    null != (t = _.streamApplication)
+                        ? t
+                        : {
+                              id: null,
+                              name: null == l ? void 0 : l.sourceName,
+                          },
+                isSettingsPreview: n,
+            },
+        ),
     );
 }

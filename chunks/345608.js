@@ -1,6 +1,9 @@
-n.d(t, { o: () => g });
+n.d(t, {
+    o: () => g,
+});
 var r = n(12543),
     i = n(384623);
+
 function a(e) {
     return (a =
         "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
@@ -13,9 +16,11 @@ function a(e) {
                       : typeof e;
               })(e);
 }
+
 function s(e, t) {
     if (!(e instanceof t)) throw TypeError("Cannot call a class as a function");
 }
+
 function o(e, t) {
     for (var n = 0; n < t.length; n++) {
         var r = t[n];
@@ -25,9 +30,11 @@ function o(e, t) {
             Object.defineProperty(e, r.key, r);
     }
 }
+
 function l(e, t, n) {
     return t && o(e.prototype, t), n && o(e, n), e;
 }
+
 function c(e, t) {
     if ("function" != typeof t && null !== t) throw TypeError("Super expression must either be null or a function");
     (e.prototype = Object.create(t && t.prototype, {
@@ -39,6 +46,7 @@ function c(e, t) {
     })),
         t && u(e, t);
 }
+
 function u(e, t) {
     return (u =
         Object.setPrototypeOf ||
@@ -46,6 +54,7 @@ function u(e, t) {
             return (e.__proto__ = t), e;
         })(e, t);
 }
+
 function d(e) {
     var t = _();
     return function () {
@@ -54,13 +63,16 @@ function d(e) {
         return (n = t ? Reflect.construct(r, arguments, h(this).constructor) : r.apply(this, arguments)), f(this, n);
     };
 }
+
 function f(e, t) {
     return t && ("object" === a(t) || "function" == typeof t) ? t : p(e);
 }
+
 function p(e) {
     if (void 0 === e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return e;
 }
+
 function _() {
     if ("u" < typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
     if ("function" == typeof Proxy) return !0;
@@ -70,6 +82,7 @@ function _() {
         return !1;
     }
 }
+
 function h(e) {
     return (h = Object.setPrototypeOf
         ? Object.getPrototypeOf
@@ -77,6 +90,7 @@ function h(e) {
               return e.__proto__ || Object.getPrototypeOf(e);
           })(e);
 }
+
 function m(e, t, n) {
     return (
         t in e
@@ -93,6 +107,7 @@ function m(e, t, n) {
 var g = (function (e) {
     c(n, e);
     var t = d(n);
+
     function n() {
         var e;
         s(this, n);
@@ -110,7 +125,12 @@ var g = (function (e) {
             {
                 key: "set",
                 value: function (e, t, n) {
-                    return [new Date(n), { timestampIsSet: !0 }];
+                    return [
+                        new Date(n),
+                        {
+                            timestampIsSet: !0,
+                        },
+                    ];
                 },
             },
         ]),

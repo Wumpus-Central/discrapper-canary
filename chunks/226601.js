@@ -1,16 +1,22 @@
-n.d(t, { A: () => l });
+n.d(t, {
+    A: () => l,
+});
 var r = n(890167),
     i = n(668459),
     a = n(105423),
     s = n(643479),
     o = n(801765);
-let l = { read: u },
+let l = {
+        read: u,
+    },
     c = 16;
+
 function u(e, t, n) {
     let i = r.A.getByteOrder(e, t),
         s = (0, o.y)(e, a.dA, t, (0, o.x)(e, t, i), i, n);
     return d(e, t, s, i);
 }
+
 function d(e, t, n, r) {
     if (!n.MPEntry) return n;
     let a = [];
@@ -45,6 +51,7 @@ function d(e, t, n, r) {
     }
     return (n.Images = a), n;
 }
+
 function f(e, t, n, i) {
     if (i === r.A.LITTLE_ENDIAN) {
         let r = 0;
@@ -55,6 +62,7 @@ function f(e, t, n, i) {
     for (let r = 0; r < n; r++) a += e[t + r] << (8 * (n - 1 - r));
     return a;
 }
+
 function p(e) {
     let t = [(e >> 31) & 1, (e >> 30) & 1, (e >> 29) & 1],
         n = [];
@@ -68,6 +76,7 @@ function p(e) {
         }
     );
 }
+
 function _(e) {
     let t = (e >> 24) & 7;
     return {
@@ -75,8 +84,9 @@ function _(e) {
         description: 0 === t ? "JPEG" : "Unknown",
     };
 }
+
 function h(e) {
-    let t = 16777215 & e;
+    let t = 0xffffff & e;
     return {
         value: t,
         description:
@@ -91,9 +101,11 @@ function h(e) {
             }[t] || "Unknown",
     };
 }
+
 function m(e, t, n, r) {
     return g(e) ? 0 : f(t.value, e * c + 8, i.A.getTypeSize("LONG"), n) + r;
 }
+
 function g(e) {
     return 0 === e;
 }

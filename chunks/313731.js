@@ -1,8 +1,11 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(735438),
     i = n.n(r),
     l = n(636401),
     a = n(652215);
+
 function s(e, t, n) {
     return (
         t in e
@@ -19,7 +22,12 @@ function s(e, t, n) {
 class o {
     checkRpcVersion(e) {
         if (null == e || e > a.dL4 || e < 1)
-            throw new l.A({ closeCode: a.YI$.INVALID_VERSION }, "Invalid Version: ".concat(e));
+            throw new l.A(
+                {
+                    closeCode: a.YI$.INVALID_VERSION,
+                },
+                "Invalid Version: ".concat(e),
+            );
     }
     constructor(e, t, n) {
         s(this, "transport", void 0),

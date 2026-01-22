@@ -1,9 +1,12 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r,
     l = n(311907),
     i = n(73153),
     a = n(734057),
     s = n(746080);
+
 function o(e, t, n) {
     return (
         t in e
@@ -25,7 +28,9 @@ class d extends (r = l.Ay.PersistedStore) {
         this.waitFor(a.A), (c = null != (t = null == e ? void 0 : e.selectedResourceChannelIdByGuildId) ? t : {});
     }
     getState() {
-        return { selectedResourceChannelIdByGuildId: c };
+        return {
+            selectedResourceChannelIdByGuildId: c,
+        };
     }
     getSelectedResourceChannelId(e) {
         return null == e ? null : c[e];

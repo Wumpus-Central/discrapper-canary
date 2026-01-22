@@ -36,6 +36,7 @@ var l = n(627968),
     P = n(985018),
     D = n(677406);
 let k = ["embedded_background"];
+
 function L(e) {
     let { avatarSize: t, guildId: n, channelId: r, users: i } = e,
         a = null != t ? t : c._3J.SIZE_32,
@@ -67,6 +68,7 @@ function L(e) {
         },
     });
 }
+
 function M(e) {
     var t, n;
     let { participants: i, application: o, channel: b, width: m } = e,
@@ -128,7 +130,9 @@ function M(e) {
                               username: O,
                               count: y.length - 1,
                           })
-                        : P.intl.formatToPlainString(P.t["7Uuia2"], { username: O }),
+                        : P.intl.formatToPlainString(P.t["7Uuia2"], {
+                              username: O,
+                          }),
             }),
             (0, l.jsx)(c.Text, {
                 className: a()(D.wx, {
@@ -163,6 +167,7 @@ function M(e) {
         ],
     });
 }
+
 function U(e) {
     let { participant: t, width: n, selected: i, interactible: a, channel: o } = e,
         { analyticsLocations: c } = (0, x.Ay)(O.A.ACTIVITY_TILE),
@@ -217,7 +222,11 @@ function U(e) {
                             participants: t.participants,
                             application: p,
                         }),
-                    a || S ? null : (0, l.jsx)("div", { className: D.OB }),
+                    a || S
+                        ? null
+                        : (0, l.jsx)("div", {
+                              className: D.OB,
+                          }),
                 ],
             }),
         })

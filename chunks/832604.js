@@ -1,9 +1,15 @@
-n.d(t, { A: () => l }), n(896048);
+n.d(t, {
+    A: () => l,
+}),
+    n(896048);
 var r = n(64700),
     i = n(635377),
     a = n.n(i),
     s = n(306044);
-let o = new (a())({ max: 1000 });
+let o = new (a())({
+    max: 1e3,
+});
+
 function l(e, t) {
     let [n, i] = r.useState();
     return (

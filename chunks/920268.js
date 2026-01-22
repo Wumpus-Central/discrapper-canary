@@ -1,4 +1,6 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(136722),
     i = n(317525),
     a = n(71393),
@@ -12,6 +14,7 @@ let o = [
         s.rbe.PRIVATE_THREAD,
     ],
     l = r.kg(s.xBc.VIEW_CHANNEL, s.xBc.SEND_MESSAGES);
+
 function c(e) {
     if (null == e || !o.includes(e.type)) return [];
     let t = a.A.getGuild(e.guild_id);

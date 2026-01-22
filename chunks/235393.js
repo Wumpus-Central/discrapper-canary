@@ -1,4 +1,7 @@
-n.d(t, { A: () => f }), n(896048);
+n.d(t, {
+    A: () => f,
+}),
+    n(896048);
 var r = n(954571),
     i = n(998218),
     a = n(988102),
@@ -20,6 +23,7 @@ let l = [
     },
     (e) => (a.A.isDiscoveryLink(e) ? "Discord Discovery Link" : null),
 ];
+
 function c(e) {
     return null != e.guildId && null != e.channelId && null != e.messageId
         ? "Discord Message Link"
@@ -27,6 +31,7 @@ function c(e) {
           ? "Discord Channel Link"
           : "Unknown";
 }
+
 function u(e) {
     for (let t of l) {
         let n = t(e);
@@ -34,6 +39,7 @@ function u(e) {
     }
     return "Unknown";
 }
+
 function d(e, t) {
     return null == t && null == e ? "Unknown" : null == t ? u(e) : c(t);
 }

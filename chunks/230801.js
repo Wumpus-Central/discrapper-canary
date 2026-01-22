@@ -14,6 +14,7 @@ var a = n(421380),
     m = n(985018),
     p = n(308349);
 let C = 0.5 > Math.random();
+
 function g(t) {
     let { onClose: e, onBack: n, onCreationIntentChosen: g, hasFooter: _ = !0 } = t,
         L = (0, i.jsx)(a.$n, {
@@ -24,6 +25,7 @@ function g(t) {
             onClick: n,
             children: m.intl.string(m.t["13/7kX"]),
         });
+
     function u(t) {
         s.default.track(o.HAw.GUILD_CREATION_INTENT_SELECTED, {
             skipped: null == t,
@@ -96,7 +98,9 @@ function g(t) {
                             className: p.iv,
                             color: "text-default",
                             variant: "text-sm/normal",
-                            children: m.intl.format(m.t["SMc+Gz"], { onSkip: () => u(null) }),
+                            children: m.intl.format(m.t["SMc+Gz"], {
+                                onSkip: () => u(null),
+                            }),
                         }),
                     ],
                 }),
@@ -111,6 +115,7 @@ function g(t) {
         footer: L,
     };
 }
+
 function _(t) {
     let { content: e } = g(t);
     return e;

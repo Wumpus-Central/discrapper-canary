@@ -1,9 +1,11 @@
-n.d(t, { R: () => b });
+n.d(t, {
+    R: () => b,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
-    o = n(432022),
+    o = n(108531),
     l = n(508382),
     c = n(158954),
     u = n(502939),
@@ -15,6 +17,7 @@ var r = n(627968),
 let m = 11,
     g = ["left", "center", "right"],
     E = ["top", "center", "bottom"];
+
 function b(e) {
     let {
             isVisible: t,
@@ -49,12 +52,16 @@ function b(e) {
             },
             E = (0, r.jsxs)("div", {
                 id: O,
-                className: s()(h.YL, { [h.mj]: w }),
+                className: s()(h.YL, {
+                    [h.mj]: w,
+                }),
                 role: "tooltip",
                 "data-position": u,
                 "data-mana-component": "tooltip",
                 children: [
-                    (0, r.jsx)(f.z, { caretConfig: g }),
+                    (0, r.jsx)(f.z, {
+                        caretConfig: g,
+                    }),
                     (0, r.jsx)("div", {
                         className: h.rv,
                         children:

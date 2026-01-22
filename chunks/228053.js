@@ -1,4 +1,7 @@
-n.d(t, { A: () => j }), n(896048);
+n.d(t, {
+    A: () => j,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -24,6 +27,7 @@ var r = n(627968),
     S = n(518477),
     C = n(985018),
     N = n(30621);
+
 function T(e) {
     let { application: t, sku: n, handleOpenUserProfileModal: l, analyticsLocations: a } = e,
         o = i.useRef(null),
@@ -35,7 +39,11 @@ function T(e) {
                 if ((e.stopPropagation(), !_)) {
                     E(!0);
                     try {
-                        await m.A.addSkuToWishlist(n.id, p), null == l || l({ tabSection: S.RP.WISHLIST });
+                        await m.A.addSkuToWishlist(n.id, p),
+                            null == l ||
+                                l({
+                                    tabSection: S.RP.WISHLIST,
+                                });
                     } catch (e) {
                         (0, u.showToast)((0, u.createToast)(C.intl.string(C.t.F8FvUy), u.ToastType.FAILURE)),
                             s.ORC.announce(C.intl.string(C.t.F8FvUy));
@@ -49,7 +57,9 @@ function T(e) {
     return (0, r.jsx)(c.un, {
         title: C.intl.string(C.t["8DkMEQ"]),
         body: n.name,
-        asset: (0, r.jsx)(f.mW, { application: t }),
+        asset: (0, r.jsx)(f.mW, {
+            application: t,
+        }),
         assetSize: b.Q8,
         children: (0, r.jsxs)(s.sqX, {
             className: N.Nr,
@@ -71,7 +81,9 @@ function T(e) {
                 (g || _) &&
                     (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, r.jsx)("div", { className: N.p0 }),
+                            (0, r.jsx)("div", {
+                                className: N.p0,
+                            }),
                             (0, r.jsx)("div", {
                                 className: N.R$,
                                 children: _
@@ -87,6 +99,7 @@ function T(e) {
         }),
     });
 }
+
 function j(e) {
     let {
             wishlist: t,

@@ -4,7 +4,8 @@ n.d(t, {
     zf: () => o,
 });
 var i = n(588522);
-let a = 1000;
+let a = 1e3;
+
 function s() {
     return Date.now() / a;
 }
@@ -21,7 +22,7 @@ let o = (function () {
         r = "none";
         return;
     }
-    let t = 3600000,
+    let t = 36e5,
         n = e.now(),
         a = Date.now(),
         s = e.timeOrigin ? Math.abs(e.timeOrigin + n - a) : t,

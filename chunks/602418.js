@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var i = n(627968),
     r = n(64700),
     l = n(397927),
@@ -7,6 +9,7 @@ var i = n(627968),
     o = n(636547),
     c = n(985018),
     d = n(388568);
+
 function u(e) {
     let { applicationIcon: t, applicationName: n, canNavigate: u, guildId: b } = e,
         { results: f, query: p, setQuery: m, unfilteredCount: g } = (0, a._)();

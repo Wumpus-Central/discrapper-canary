@@ -52,6 +52,7 @@ var r = n(627968),
     W = n(788868),
     K = n(985018),
     z = n(767419);
+
 function q(e, t, n) {
     return (
         t in e
@@ -65,6 +66,7 @@ function q(e, t, n) {
         e
     );
 }
+
 function X(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -81,6 +83,7 @@ function X(e) {
     }
     return e;
 }
+
 function Z(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -93,6 +96,7 @@ function Z(e, t) {
     }
     return n;
 }
+
 function Q(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -143,7 +147,9 @@ let $ = 32,
                                               className: z.Gl,
                                               children: n,
                                           })
-                                        : (0, r.jsx)(u.A, { children: n }),
+                                        : (0, r.jsx)(u.A, {
+                                              children: n,
+                                          }),
                                 }),
                                 (0, r.jsx)(p.Text, {
                                     variant: "text-sm/normal",
@@ -197,12 +203,16 @@ let $ = 32,
                           children: (0, r.jsx)(p.Heading, {
                               className: z.J5,
                               variant: "heading-md/semibold",
-                              children: (0, r.jsx)(u.A, { children: l }),
+                              children: (0, r.jsx)(u.A, {
+                                  children: l,
+                              }),
                           }),
                       })
                     : (0, r.jsx)(p.Heading, {
                           variant: "heading-md/semibold",
-                          children: (0, r.jsx)(u.A, { children: l }),
+                          children: (0, r.jsx)(u.A, {
+                              children: l,
+                          }),
                       }),
             g = t.isDiscoverable() && null != t.presenceCount,
             E = () => {
@@ -212,9 +222,13 @@ let $ = 32,
                         (0, r.jsx)(p.Text, {
                             variant: "text-xs/normal",
                             color: "text-default",
-                            children: K.intl.format(K.t["LC+S+m"], { membersOnline: t.presenceCount }),
+                            children: K.intl.format(K.t["LC+S+m"], {
+                                membersOnline: t.presenceCount,
+                            }),
                         }),
-                        (0, r.jsx)("div", { className: z.zk }),
+                        (0, r.jsx)("div", {
+                            className: z.zk,
+                        }),
                         e
                             ? (0, r.jsx)(p.DUT, {
                                   className: z.Ki,
@@ -358,7 +372,9 @@ let $ = 32,
                     emoji_id: null != (a = null == x ? void 0 : x.id) ? a : null,
                 },
             },
-            { disableTrack: !et },
+            {
+                disableTrack: !et,
+            },
         );
         let el = L.A.getGuildId(),
             ec = (0, V.O)({
@@ -407,7 +423,9 @@ let $ = 32,
                             (null == I ? void 0 : I.id) != null &&
                                 _.A.transitionToGuildSync(
                                     I.id,
-                                    { sourceLocationStack: [m.A.GUILD_ROLE_SUBSCRIPTION_EMOJI_TEXT_POPOVER_UPSELL] },
+                                    {
+                                        sourceLocationStack: [m.A.GUILD_ROLE_SUBSCRIPTION_EMOJI_TEXT_POPOVER_UPSELL],
+                                    },
                                     Y.VV.ROLE_SUBSCRIPTIONS,
                                 );
                     },
@@ -419,7 +437,9 @@ let $ = 32,
                                   subscriptionTier: W.pe.TIER_2,
                                   size: f.$n.Sizes.SMALL,
                                   fullWidth: !0,
-                                  textOptions: { textOverride: ec.text },
+                                  textOptions: {
+                                      textOverride: ec.text,
+                                  },
                                   onSubscribeModalClose: (t) => (t ? e() : T()),
                                   postSuccessGuild: n && null != A ? A : void 0,
                                   premiumModalAnalyticsLocation: J,
@@ -456,7 +476,9 @@ let $ = 32,
                                     children: [
                                         (0, r.jsx)(p.Text, {
                                             variant: "text-md/semibold",
-                                            children: (0, r.jsx)(u.A, { children: c.name }),
+                                            children: (0, r.jsx)(u.A, {
+                                                children: c.name,
+                                            }),
                                         }),
                                         null != ed &&
                                             (0, r.jsx)(p.Text, {
@@ -509,7 +531,9 @@ let $ = 32,
                                     (0, r.jsx)(p.abt, {
                                         size: "md",
                                         color: "currentColor",
-                                        className: s()(z.ZB, { [z.cP]: !em }),
+                                        className: s()(z.ZB, {
+                                            [z.cP]: !em,
+                                        }),
                                     }),
                                 ],
                             }),
@@ -574,13 +598,21 @@ let $ = 32,
                     : c.map((e) =>
                           (0, r.jsx)(
                               d.m,
-                              Q(X({ text: e.require_colons ? ":".concat(e.name, ":") : e.name }, B.Uk), {
-                                  children: (0, r.jsx)(h.A, {
-                                      className: z.Th,
-                                      emojiId: e.id,
-                                      animated: e.animated,
-                                  }),
-                              }),
+                              Q(
+                                  X(
+                                      {
+                                          text: e.require_colons ? ":".concat(e.name, ":") : e.name,
+                                      },
+                                      B.Uk,
+                                  ),
+                                  {
+                                      children: (0, r.jsx)(h.A, {
+                                          className: z.Th,
+                                          emojiId: e.id,
+                                          animated: e.animated,
+                                      }),
+                                  },
+                              ),
                               e.id,
                           ),
                       ),
@@ -591,7 +623,9 @@ let $ = 32,
                           children: [
                               (0, r.jsx)(P.A, {
                                   subscriptionTier: W.pe.TIER_2,
-                                  textOptions: { textOverride: s.text },
+                                  textOptions: {
+                                      textOverride: s.text,
+                                  },
                                   className: z.lI,
                                   fullWidth: !0,
                                   onClick: () => o(),

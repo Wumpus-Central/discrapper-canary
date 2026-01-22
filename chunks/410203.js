@@ -1,5 +1,8 @@
-r.d(t, { A: () => n });
+r.d(t, {
+    A: () => n,
+});
 var a = r(943970);
+
 function n(e, t) {
     if (e) {
         if ("string" == typeof e) return (0, a.A)(e, t);

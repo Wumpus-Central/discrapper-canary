@@ -1,4 +1,7 @@
-n.d(t, { A: () => W }), n(896048);
+n.d(t, {
+    A: () => W,
+}),
+    n(896048);
 var r,
     i = n(448761),
     a = n(311907),
@@ -6,6 +9,7 @@ var r,
     o = n(287809),
     l = n(326084),
     c = n(652215);
+
 function u(e, t, n) {
     return (
         t in e
@@ -35,6 +39,7 @@ let d = 5,
     S = !1,
     I = !1,
     T = null;
+
 function C() {
     (f = null),
         (p = new Set()),
@@ -53,61 +58,76 @@ function C() {
         (_ = new Map());
 }
 let N = () => !0;
+
 function R(e) {
     let {} = e;
     (T = null), (h = !0);
 }
+
 function w(e) {
     let { referrals_remaining: t, sent_user_ids: n, refresh_at: r, recipient_status: i, has_eligible_friends: a } = e;
     (S = !0), (I = a), (h = !1), (f = t), (p = new Set(n)), (T = r), (_ = i);
 }
+
 function P(e) {
     let {} = e;
-    (S = !1), (I = !1), (T = null), (h = !1), (b += 1), (y = Date.now() + 1000 * Math.pow(2, b));
+    (S = !1), (I = !1), (T = null), (h = !1), (b += 1), (y = Date.now() + 1e3 * Math.pow(2, b));
 }
+
 function D(e) {
     let { userTrialOffer: t } = e;
     (0, l.xM)(), E.set(t.id, t), p.add(t.user_id);
 }
+
 function x(e) {
     let { userTrialOffers: t } = e;
     for (let e of ((0, l.xM)(), t)) E.set(e.id, e), p.add(e.user_id);
 }
+
 function L(e) {
     m.add(e);
 }
+
 function j(e) {
     let { userTrialOffer: t } = e;
     null != t && (m.delete(t.id), g.add(t.id), E.set(t.id, t));
 }
+
 function M(e) {
     let { userTrialOfferId: t } = e;
     m.delete(t), g.add(t);
 }
+
 function k(e) {
     let { message: t } = e;
     V(t);
 }
+
 function U(e) {
     let { messages: t } = e;
     t.forEach((e) => V(e));
 }
+
 function G(e) {
     let { userTrialOfferId: t } = e;
     h || (0, l.xM)(), m.has(t) || (L(t), s.h.wait(() => (0, l.kZ)(t).catch(c.FXj)));
 }
+
 function V(e) {
     let t = e.type === i.l.PREMIUM_REFERRAL ? e.content : null;
     if (null == t) return !1;
     g.has(t) || m.has(t) || (L(t), s.h.wait(() => (0, l.kZ)(t).catch(c.FXj)));
 }
+
 function F() {
     A = !0;
 }
+
 function B(e) {
     let { users: t, nextIndex: n } = e;
     (A = !1), (O = t), (v = n);
 }
+
 function H() {
     A = !1;
 }

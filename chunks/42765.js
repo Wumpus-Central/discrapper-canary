@@ -1,4 +1,7 @@
-n.d(t, { q: () => y }), n(667532);
+n.d(t, {
+    q: () => y,
+}),
+    n(667532);
 var r = n(627968);
 n(64700);
 var i = n(873298),
@@ -15,6 +18,7 @@ var i = n(873298),
     h = n(531525),
     m = n(985018),
     g = n(842130);
+
 function E(e, t, n) {
     return (
         t in e
@@ -28,6 +32,7 @@ function E(e, t, n) {
         e
     );
 }
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -44,6 +49,7 @@ function b(e) {
     }
     return e;
 }
+
 function y() {
     var e;
     let t = null == (e = (0, f.A)()) || e,
@@ -53,7 +59,9 @@ function y() {
         v = (e) => {
             let t = Object.values(e);
             (0, o.hK)() && t.includes(i.TO.SHOW)
-                ? a.A.showAgeVerificationGetStartedModal({ entryPoint: s.q1.SENSITIVE_MEDIA_FILTER_SETTINGS })
+                ? a.A.showAgeVerificationGetStartedModal({
+                      entryPoint: s.q1.SENSITIVE_MEDIA_FILTER_SETTINGS,
+                  })
                 : (0, l.qY)(e);
         },
         S = [
@@ -91,7 +99,10 @@ function y() {
                     {
                         title: m.intl.string(m.t["+uI23H"]),
                         value: O,
-                        onChange: (e) => v({ goreContentFriendDm: e }),
+                        onChange: (e) =>
+                            v({
+                                goreContentFriendDm: e,
+                            }),
                         options: S,
                     },
                     C,
@@ -103,7 +114,10 @@ function y() {
                     {
                         title: m.intl.string(m.t["Yh+HX1"]),
                         value: A,
-                        onChange: (e) => v({ goreContentNonFriendDm: e }),
+                        onChange: (e) =>
+                            v({
+                                goreContentNonFriendDm: e,
+                            }),
                         options: S,
                     },
                     C,
@@ -112,7 +126,10 @@ function y() {
             (0, r.jsx)(_.A, {
                 title: m.intl.string(m.t["FP+a42"]),
                 value: y,
-                onChange: (e) => v({ goreContentGuilds: e }),
+                onChange: (e) =>
+                    v({
+                        goreContentGuilds: e,
+                    }),
                 isDisabled: !t || E,
                 options: I,
                 tooltipText: n ? m.intl.string(g.default["6Af/cw"]) : void 0,

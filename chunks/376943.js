@@ -31,6 +31,7 @@ let l = Array.from(n(746080).qW)
     h = RegExp(
         "^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/channels/(\\d+)(?:/)(\\d+)(?:/threads/)(\\d+)(?:/)(\\d+)",
     );
+
 function m(e) {
     if (null == e) return null;
     let t = e.match(u);
@@ -57,8 +58,13 @@ function m(e) {
         };
     }
     let a = e.match(f);
-    return null != a && a.length > 1 ? { guildId: a[1] } : null;
+    return null != a && a.length > 1
+        ? {
+              guildId: a[1],
+          }
+        : null;
 }
+
 function g(e) {
     if (null == e) return null;
     let t = e.match(p);
@@ -70,9 +76,11 @@ function g(e) {
           }
         : null;
 }
+
 function E(e) {
     return !!e.isPrivate() || a.A.can(o.xBc.VIEW_CHANNEL, e);
 }
+
 function b(e) {
     let { guildId: t, channelId: n } = e;
     if (null == i.A.getGuild(t) && t !== o.ME) return !1;

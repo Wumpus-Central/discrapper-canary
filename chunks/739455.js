@@ -26,11 +26,13 @@ var r = n(975975),
     h = n(746080);
 i().shim();
 let m = {};
+
 function g(e) {
     let t = (0, a.bG)([l.A], () => l.A.getChannel(e)),
         n = (0, a.bG)([p.A], () => p.A.getChannel(e));
     return null != t ? t : n;
 }
+
 function E(e, t, n) {
     let r = (0, a.bG)([u.A], () => u.A.getSubscriptionListingsForGuild(e)),
         i = (0, d.y)((t) => t.editStateIdsForGroup[e]),
@@ -52,6 +54,7 @@ function E(e, t, n) {
     for (let e = f + 1; e < t.length && (c.has(t[e]) || p.push(t[e]), 3 !== p.length); e++);
     return p;
 }
+
 function b(e) {
     let t = d.y.getState().editStateIdsForGroup[e],
         n = d.y.getState().listings,
@@ -75,6 +78,7 @@ function b(e) {
     }
     return i;
 }
+
 function y(e) {
     let t = b(e);
     (m[e] = t),
@@ -86,6 +90,7 @@ function y(e) {
             });
         });
 }
+
 function O(e) {
     var t;
     (null != (t = m[e]) ? t : b(e)).forEach((e) => {
@@ -124,6 +129,7 @@ async function A(e, t) {
                 }
             });
 }
+
 function v(e, t) {
     var n, r;
     let i = d.y.getState().listings[e],
@@ -176,6 +182,7 @@ function v(e, t) {
         hasChangeFromTemplate: !1,
     };
 }
+
 function S(e) {
     return (0, f.X9)(e) && e.features.has(_.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED) && (0, c.D3)() && (0, c.TG)(e.id);
 }

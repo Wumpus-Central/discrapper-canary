@@ -1,4 +1,6 @@
-n.d(t, { A: () => H });
+n.d(t, {
+    A: () => H,
+});
 var r = n(627968),
     i = n(64700),
     a = n(735438),
@@ -32,6 +34,7 @@ var r = n(627968),
     x = n(985018),
     L = n(206314),
     j = n(377086);
+
 function M(e, t, n) {
     return (
         t in e
@@ -45,6 +48,7 @@ function M(e, t, n) {
         e
     );
 }
+
 function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -61,6 +65,7 @@ function k(e) {
     }
     return e;
 }
+
 function U(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -73,6 +78,7 @@ function U(e, t) {
     }
     return n;
 }
+
 function G(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -88,15 +94,20 @@ let V = (0, b.C)({
     kind: "user",
     id: "2021-07_role_popout",
     label: "Role Popout",
-    defaultConfig: { enabled: !1 },
+    defaultConfig: {
+        enabled: !1,
+    },
     treatments: [
         {
             id: 1,
             label: "Enable Popout",
-            config: { enabled: !0 },
+            config: {
+                enabled: !0,
+            },
         },
     ],
 });
+
 function F(e) {
     let { member: t, guildId: a, channelId: s, role: o } = e,
         c = i.useRef(null),
@@ -166,6 +177,7 @@ function F(e) {
               t.userId,
           );
 }
+
 function B(e) {
     let { popoutProps: t, roleId: n, guildId: a, channelId: o } = e,
         d = i.useRef(null);
@@ -257,6 +269,7 @@ function B(e) {
               ),
           });
 }
+
 function H(e) {
     let { roleId: t, channelId: n, roleName: a, guildId: s, children: c, inlinePreview: d = !1 } = e,
         { analyticsLocations: f } = (0, m.Ay)(h.A.ROLE_MENTION),
@@ -297,7 +310,14 @@ function H(e) {
                     },
                 ),
             ),
-        { enabled: w } = V.getCurrentConfig({ location: "2ec235_1" }, { autoTrackExposure: !1 });
+        { enabled: w } = V.getCurrentConfig(
+            {
+                location: "2ec235_1",
+            },
+            {
+                autoTrackExposure: !1,
+            },
+        );
     return !w || d || null == n || null == s || (null == t && "@everyone" !== a)
         ? (0, r.jsx)(m.f5, {
               value: f,

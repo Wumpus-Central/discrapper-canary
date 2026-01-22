@@ -7,5 +7,7 @@ r(
         name: "trimEnd",
         forced: void 0 !== i,
     },
-    { trimRight: i },
+    {
+        trimRight: i,
+    },
 );

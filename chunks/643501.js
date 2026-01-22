@@ -1,9 +1,13 @@
-n.d(t, { default: () => S }), n(896048);
+n.d(t, {
+    default: () => S,
+}),
+    n(896048);
 var r,
     i = n(311907),
     a = n(73153),
     s = n(528767),
     o = n(977997);
+
 function l(e, t, n) {
     return (
         t in e
@@ -23,13 +27,16 @@ let c = null,
     f = {},
     p = {},
     _ = new Set();
+
 function h(e) {
     let { sessionId: t } = e;
     (c = t), (u = null);
 }
+
 function m() {
     (c = null), (u = null);
 }
+
 function g(e) {
     let { sessionType: t, nonce: n, channelId: r, deviceId: i, commandId: a } = e;
     u = {
@@ -41,10 +48,12 @@ function g(e) {
         commandId: a,
     };
 }
+
 function E(e) {
     let { platform: t } = e;
     _.add(t);
 }
+
 function b(e) {
     let { platform: t, devices: n } = e;
     _.delete(t);
@@ -53,10 +62,12 @@ function b(e) {
     for (let e of n) (r[e.id] = e), p[t] === e.id && (i[t] = e.id);
     p = i;
 }
+
 function y(e) {
     let { platform: t } = e;
     _.delete(t);
 }
+
 function O(e) {
     let { platform: t, deviceId: n } = e;
     p[t] = n;
@@ -67,7 +78,9 @@ class v extends (r = i.Ay.DeviceSettingsStore) {
         null != e && (p = e.lastSelectedDeviceByPlatform), this.waitFor(s.A, o.A);
     }
     getUserAgnosticState() {
-        return { lastSelectedDeviceByPlatform: p };
+        return {
+            lastSelectedDeviceByPlatform: p,
+        };
     }
     getDevicesForPlatform(e) {
         var t;

@@ -1,7 +1,10 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(311907),
     l = n(517019),
     i = n(287809);
+
 function s(e) {
     let t = e.nsfw,
         n =

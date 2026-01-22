@@ -1,4 +1,6 @@
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -9,6 +11,7 @@ var i = n(503698),
     c = n(788868),
     u = n(985018),
     d = n(802937);
+
 function f(e) {
     return (0, r.jsxs)("div", {
         className: d.Bh,
@@ -36,15 +39,20 @@ function f(e) {
         ],
     });
 }
+
 function p(e) {
     let { showChargingUpState: t, rowValueText: n, endsAt: i, fractionalState: o, activationDate: l } = e,
         f = t ? u.intl.string(u.t["hT6i/0"]) : u.intl.string(u.t["3G0CTC"]),
         p = t
             ? void 0 === l
                 ? null
-                : u.intl.format(u.t["0Vwb/l"], { activateDate: l })
+                : u.intl.format(u.t["0Vwb/l"], {
+                      activateDate: l,
+                  })
             : o === c.xc.FP_SUB_PAUSED
-              ? u.intl.format(u.t.MMvaIG, { resumeDate: i.toDate() })
+              ? u.intl.format(u.t.MMvaIG, {
+                    resumeDate: i.toDate(),
+                })
               : null,
         _ = a()({
             [d.Hs]: t,
@@ -54,7 +62,9 @@ function p(e) {
             [d.CQ]: t,
             [d.ZM]: !t,
         }),
-        m = a()({ [d.EM]: !t });
+        m = a()({
+            [d.EM]: !t,
+        });
     return (0, r.jsxs)("div", {
         className: d.r6,
         children: [

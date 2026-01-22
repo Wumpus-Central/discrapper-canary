@@ -1,4 +1,6 @@
-n.d(t, { A: () => A });
+n.d(t, {
+    A: () => A,
+});
 var r = n(627968);
 n(64700);
 var l = n(417597),
@@ -13,6 +15,7 @@ var l = n(417597),
     p = n(431516),
     h = n(652215),
     b = n(985018);
+
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -38,6 +41,7 @@ function g(e) {
     }
     return e;
 }
+
 function m(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -56,6 +60,7 @@ function m(e, t) {
         e
     );
 }
+
 function A(e) {
     let t = (0, l.bG)([o.A], () => o.A.getChannelId() === e.id),
         A = (0, d.A)(),
@@ -105,10 +110,16 @@ function A(e) {
                                     })
                                   : l.type === h.fg2.XBOX
                                     ? (0, i.mMO)(async () => {
-                                          let { default: t } = await Promise.all([n.e("43887"), n.e("67670")]).then(
+                                          let { default: t } = await Promise.all([n.e("14882"), n.e("67670")]).then(
                                               n.bind(n, 188072),
                                           );
-                                          return (n) => (0, r.jsx)(t, m(g({}, n), { channel: e }));
+                                          return (n) =>
+                                              (0, r.jsx)(
+                                                  t,
+                                                  m(g({}, n), {
+                                                      channel: e,
+                                                  }),
+                                              );
                                       })
                                     : (l.type === h.fg2.PLAYSTATION || l.type === h.fg2.PLAYSTATION_STAGING) &&
                                       (0, i.mMO)(async () => {

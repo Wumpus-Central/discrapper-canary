@@ -1,4 +1,6 @@
-n.d(e, { A: () => y });
+n.d(e, {
+    A: () => y,
+});
 var s = n(627968),
     i = n(64700),
     l = n(503698),
@@ -22,6 +24,7 @@ var s = n(627968),
     j = n(431804),
     C = n(985018),
     L = n(691428);
+
 function p(t) {
     let { children: e } = t;
     return (0, s.jsx)("div", {
@@ -29,6 +32,7 @@ function p(t) {
         children: e,
     });
 }
+
 function N(t) {
     let { title: e, subTitle: n, buttonText: i, variant: l = "secondary", onPress: r, disabled: a } = t;
     return (0, s.jsxs)("div", {
@@ -59,6 +63,7 @@ function N(t) {
         ],
     });
 }
+
 function R(t) {
     let { title: e, subTitle: n, onPress: i } = t;
     return (0, s.jsxs)(c.DUT, {
@@ -114,7 +119,10 @@ let y = function (t) {
             (0, c.OoC)(h.V), Y(m.Wm.USER_SAFETY_TOOLS_BLOCK_CONFIRM);
         }, [Y]),
         P = i.useCallback(() => {
-            T.A.unblockUser(e, { location: h.Ht }), Y(m.Wm.USER_SAFETY_TOOLS_UNBLOCK);
+            T.A.unblockUser(e, {
+                location: h.Ht,
+            }),
+                Y(m.Wm.USER_SAFETY_TOOLS_UNBLOCK);
         }, [e, Y]),
         W = i.useCallback(() => {
             (0, c.OoC)(h.V), Y(m.Wm.USER_SAFETY_TOOLS_BLOCK_AND_REPORT_CONFIRM);
@@ -244,7 +252,12 @@ let y = function (t) {
                             });
                     }
                     return t;
-                })({ type: 0 }, y ? t : v ? n : e),
+                })(
+                    {
+                        type: 0,
+                    },
+                    y ? t : v ? n : e,
+                ),
             ];
         }, [y, v, L, Y]),
         D = i.useMemo(
@@ -293,9 +306,15 @@ let y = function (t) {
         };
     return (0, s.jsxs)(b.A, {
         children: [
-            (0, s.jsx)(p, { children: B.map((t) => w(t)) }),
-            (0, s.jsx)(p, { children: M.map((t) => w(t)) }),
-            (0, s.jsx)(p, { children: D.map((t) => w(t)) }),
+            (0, s.jsx)(p, {
+                children: B.map((t) => w(t)),
+            }),
+            (0, s.jsx)(p, {
+                children: M.map((t) => w(t)),
+            }),
+            (0, s.jsx)(p, {
+                children: D.map((t) => w(t)),
+            }),
         ],
     });
 };

@@ -1,8 +1,11 @@
-r.d(t, { Z: () => b });
+r.d(t, {
+    Z: () => b,
+});
 var n = r(627968),
     l = r(397927),
     o = r(933297),
     a = r(985018);
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
@@ -28,6 +31,7 @@ function c(e) {
     }
     return e;
 }
+
 function i(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -46,22 +50,35 @@ function i(e, t) {
         e
     );
 }
+
 function s(e) {
     let { useCount: t } = e,
         r = t();
-    return 0 === r ? null : (0, n.jsx)(l.hVq, { count: r });
+    return 0 === r
+        ? null
+        : (0, n.jsx)(l.hVq, {
+              count: r,
+          });
 }
+
 function u(e) {
     let { getDismissibleContentTypes: t, stronglyDiscouragedBadgeComponent: r, visibleContent: o, isSelected: c } = e,
         i = null == t ? void 0 : t(),
         s = null != o && i.includes(o) && !c,
-        u = null != r ? (0, n.jsx)(r, {}) : (0, n.jsx)(l.LpS, { text: a.intl.string(a.t.y2b7CA) });
+        u =
+            null != r
+                ? (0, n.jsx)(r, {})
+                : (0, n.jsx)(l.LpS, {
+                      text: a.intl.string(a.t.y2b7CA),
+                  });
     return s ? u : null;
 }
+
 function f(e) {
     let { useCustomDecoration: t, visibleContent: r, isSelected: n } = e;
     return t(r, n);
 }
+
 function b(e) {
     let { trailing: t, visibleContent: r, isSelected: l } = e;
     if (null == t) return null;

@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968);
 n(64700);
 var i = n(342952),
@@ -12,6 +14,7 @@ var i = n(342952),
     f = n(778712),
     p = n(252055);
 let _ = 3;
+
 function h(e) {
     let { user: t, onOpenProfile: n } = e,
         { mutualFriends: h, mutualGuilds: m } = (0, l.A)(t),

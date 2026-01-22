@@ -1,4 +1,7 @@
-n.d(t, { m: () => _ }), n(896048);
+n.d(t, {
+    m: () => _,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -23,6 +26,7 @@ let f = Object.freeze({
         center: c.pm,
         window_center: c.pm,
     });
+
 function _(e) {
     let { position: t, type: n, children: a } = e,
         { reducedMotion: d } = i.useContext(o.CZY),

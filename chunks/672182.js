@@ -1,4 +1,6 @@
-n.d(t, { A: () => O });
+n.d(t, {
+    A: () => O,
+});
 var r = n(627968),
     i = n(64700),
     a = n(319060),
@@ -21,11 +23,19 @@ let E = (0, d.xI)(a.A.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BA
             n = null;
         if ((!(0, _.FD)(e) && !(0, _.Xw)(e)) || (0, _.Xw)(e)) {
             let i = u.A.getGuild(e.guild_id);
-            null != i && ((t = m.intl.format(m.t.cZOkbs, { source: i.name })), (n = (0, r.jsx)(o.A, { guild: i })));
+            null != i &&
+                ((t = m.intl.format(m.t.cZOkbs, {
+                    source: i.name,
+                })),
+                (n = (0, r.jsx)(o.A, {
+                    guild: i,
+                })));
         } else if ((0, _.FD)(e)) {
             let i = f.A.getStickerPack(e.pack_id);
             null != i &&
-                ((t = m.intl.format(m.t.cZOkbs, { source: i.name })),
+                ((t = m.intl.format(m.t.cZOkbs, {
+                    source: i.name,
+                })),
                 (n = (0, r.jsx)(h.A, {
                     size: b,
                     sticker: (0, _.Id)(i),

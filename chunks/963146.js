@@ -1,10 +1,13 @@
-n.d(t, { A: () => l });
+n.d(t, {
+    A: () => l,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
     a = n.n(i),
     s = n(397927),
     o = n(690868);
+
 function l(e) {
     var t;
     let { name: n, className: i, state: l, isInline: c, onClick: u } = e,
@@ -18,7 +21,14 @@ function l(e) {
     let p = (0, r.jsx)(s.Text, {
         variant: c ? "text-md/normal" : "text-sm/normal",
         color: "text-strong",
-        className: a()(o.uK, { [o.mG]: c }, f, i),
+        className: a()(
+            o.uK,
+            {
+                [o.mG]: c,
+            },
+            f,
+            i,
+        ),
         children: d,
     });
     return null == u

@@ -1,9 +1,14 @@
-r.d(t, { A: () => j }), r(896048), r(747238), r(812715);
+r.d(t, {
+    A: () => j,
+}),
+    r(896048),
+    r(747238),
+    r(812715);
 var n = r(627968),
     i = r(64700),
     s = r(503698),
     a = r.n(s),
-    o = r(432022),
+    o = r(108531),
     l = r(417597),
     c = r(990078),
     u = r(397927),
@@ -37,7 +42,13 @@ let j = i.forwardRef(function (e, t) {
         { username: C, globalName: L } = j,
         M = i.useRef(null),
         D = i.useRef(null),
-        G = i.useMemo(() => r.merge({ discriminator: "0000" }), [r]),
+        G = i.useMemo(
+            () =>
+                r.merge({
+                    discriminator: "0000",
+                }),
+            [r],
+        ),
         [k, U] = (0, u.zhh)(() => ({
             opacity: 0,
             y: 5,
@@ -112,7 +123,9 @@ let j = i.forwardRef(function (e, t) {
                     )));
         }, [B, T, r, F]),
         (0, n.jsxs)("div", {
-            className: a()(v.d3, { [v.Sr]: T === y.iv.PREVIEW }),
+            className: a()(v.d3, {
+                [v.Sr]: T === y.iv.PREVIEW,
+            }),
             children: [
                 (0, n.jsxs)("div", {
                     className: v.Kq,
@@ -134,7 +147,9 @@ let j = i.forwardRef(function (e, t) {
                                 className: v.kB,
                                 children: (0, n.jsx)(c.m, {
                                     position: "top",
-                                    text: S.intl.formatToPlainString(S.t.bhrgkA, { legacyUsername: H }),
+                                    text: S.intl.formatToPlainString(S.t.bhrgkA, {
+                                        legacyUsername: H,
+                                    }),
                                     spacing: 12,
                                     children: (0, n.jsx)(u.MzZ, {
                                         children: (0, n.jsx)("img", {
@@ -164,7 +179,10 @@ let j = i.forwardRef(function (e, t) {
                                             value: null != L ? L : "",
                                             placeholder: E.Ay.getName(r),
                                             maxLength: 32,
-                                            onChange: (e) => x({ globalName: e }),
+                                            onChange: (e) =>
+                                                x({
+                                                    globalName: e,
+                                                }),
                                             onFocus: N,
                                             inputRef: D,
                                         }),
@@ -175,7 +193,10 @@ let j = i.forwardRef(function (e, t) {
                                             value: null != C ? C : "",
                                             placeholder: r.username,
                                             maxLength: 32,
-                                            onChange: (e) => x({ username: e.replace("@", "") }),
+                                            onChange: (e) =>
+                                                x({
+                                                    username: e.replace("@", ""),
+                                                }),
                                             onFocus: I,
                                             inputRef: M,
                                         }),
@@ -229,7 +250,9 @@ let j = i.forwardRef(function (e, t) {
                                 className: v.WI,
                                 color: "text-muted",
                                 variant: "text-sm/medium",
-                                children: S.intl.format(S.t["9rfonh"], { date: (0, p.b5)(r.id) }),
+                                children: S.intl.format(S.t["9rfonh"], {
+                                    date: (0, p.b5)(r.id),
+                                }),
                             }),
                         ],
                     }),

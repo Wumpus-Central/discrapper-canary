@@ -1,9 +1,11 @@
-n.d(t, { A: () => y });
+n.d(t, {
+    A: () => y,
+});
 var r = n(627968);
 n(64700);
 var l = n(503698),
     i = n.n(l),
-    a = n(432022),
+    a = n(108531),
     s = n(417597),
     o = n(397927),
     c = n(922529),
@@ -15,6 +17,7 @@ var l = n(503698),
     b = n(381941),
     g = n(985018),
     m = n(112178);
+
 function A(e) {
     let { summary: t, channel: n } = e,
         l = (0, s.bG)([f.A], () => f.A.summaryFeedback(t)),
@@ -30,10 +33,16 @@ function A(e) {
             null == l,
             {
                 enter: {
-                    from: { opacity: 0 },
-                    to: { opacity: 1 },
+                    from: {
+                        opacity: 0,
+                    },
+                    to: {
+                        opacity: 1,
+                    },
                 },
-                leave: { opacity: 0 },
+                leave: {
+                    opacity: 0,
+                },
                 config: {
                     mass: 1,
                     tension: 500,
@@ -80,6 +89,7 @@ function A(e) {
         ),
     });
 }
+
 function y(e) {
     var t, n;
     let l,

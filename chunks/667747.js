@@ -9,6 +9,7 @@ var r = n(308528),
     o = n(486020),
     l = n(652215),
     c = n(985018);
+
 function u(e, t, n) {
     a.default.showNotification(
         o.Ay.getUserAvatarURL(e),
@@ -24,6 +25,7 @@ function u(e, t, n) {
         },
     );
 }
+
 function d(e) {
     u(e, c.intl.string(c.t["t3+Af3"]), () => {
         {
@@ -33,11 +35,16 @@ function d(e) {
                 sourceAnalyticsLocations: [s.A.FRIEND_REQUEST_NOTIFICATION],
             });
         }
-        i.A.transitionToSection(l.m3P.PENDING, { explicit: !0 });
+        i.A.transitionToSection(l.m3P.PENDING, {
+            explicit: !0,
+        });
     });
 }
+
 function f(e) {
     u(e, c.intl.string(c.t.MYr3Ka), () => {
-        r.A.openPrivateChannel({ recipientIds: e.id });
+        r.A.openPrivateChannel({
+            recipientIds: e.id,
+        });
     });
 }

@@ -1,8 +1,12 @@
-n.d(t, { A: () => _ }), n(896048);
+n.d(t, {
+    A: () => _,
+}),
+    n(896048);
 var r = n(439372),
     i = n(967198),
     a = n(698441),
     s = n(496092);
+
 function o(e, t, n) {
     return (
         t in e
@@ -19,7 +23,7 @@ function o(e, t, n) {
 let l = {},
     c = new Set(),
     u = new Set(),
-    d = 1800000,
+    d = 18e5,
     f = async (e) => {
         if (!(0 === a.Ay.getGuildScheduledEventsForGuild(e).length || c.has(e)) && !u.has(e))
             try {

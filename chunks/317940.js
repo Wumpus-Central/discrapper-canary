@@ -1,4 +1,6 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(627968);
 n(64700);
 var i = n(158954),
@@ -6,6 +8,7 @@ var i = n(158954),
     l = n(397927),
     a = n(854378),
     o = n(819670);
+
 function c(e) {
     let { title: t, subtitle: n, buttonText: c, image: u, onButtonClick: d, loading: h } = e;
     return (0, r.jsx)(a.Ay, {
@@ -30,7 +33,10 @@ function c(e) {
                                         className: o.Sl,
                                         children: u,
                                     }),
-                                h && (0, r.jsx)(l.y$y, { type: l.y$y.Type.SPINNING_CIRCLE }),
+                                h &&
+                                    (0, r.jsx)(l.y$y, {
+                                        type: l.y$y.Type.SPINNING_CIRCLE,
+                                    }),
                                 (0, r.jsx)(i.DZT, {
                                     variant: "heading-xl/semibold",
                                     color: "text-strong",

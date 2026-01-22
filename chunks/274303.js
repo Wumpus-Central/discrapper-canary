@@ -10,6 +10,7 @@ var a,
     l = n(73153),
     c = n(111613),
     u = n(50502);
+
 function d(e, t, n) {
     return (
         t in e
@@ -23,6 +24,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -39,6 +41,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -51,6 +54,7 @@ function p(e, t) {
     }
     return n;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -68,6 +72,7 @@ var h = (function (e) {
 })({});
 let m = [],
     g = !1;
+
 function E(e) {
     let { user: t } = e;
     (r = t.id), (g = !1);
@@ -95,6 +100,7 @@ function E(e) {
                 y(t);
             });
 }
+
 function b(e) {
     (g = !!e.isSwitchingAccount),
         e.isSwitchingAccount ||
@@ -104,6 +110,7 @@ function b(e) {
             })),
         (r = null);
 }
+
 function y(e) {
     (m = m.filter((t) => {
         let { id: n } = t;
@@ -111,6 +118,7 @@ function y(e) {
     })),
         s.removeToken(e);
 }
+
 function O(e) {
     let { user: t } = e,
         n = m.slice(),
@@ -120,6 +128,7 @@ function O(e) {
         });
     null != r && ((r.avatar = t.avatar), (r.username = t.username), (r.discriminator = t.discriminator), (m = n));
 }
+
 function A(e, t) {
     let n = m.slice(),
         r = n.find((t) => {
@@ -128,22 +137,36 @@ function A(e, t) {
         });
     null != r && ((r.tokenStatus = t), (m = n));
 }
+
 function v(e) {
     let { from: t, to: n } = e;
     m = (0, c.E8)(m, t, n);
 }
+
 function S(e) {
     let { multiAccountMobileExperimentEnabled: t } = e;
     i = t;
 }
+
 function I(e) {
     let { userId: t, pushSyncToken: n } = e;
-    m = m.map((e) => (e.id === t ? _(f({}, e), { pushSyncToken: n }) : e));
+    m = m.map((e) =>
+        e.id === t
+            ? _(f({}, e), {
+                  pushSyncToken: n,
+              })
+            : e,
+    );
 }
+
 function T(e) {
     let { invalidPushSyncTokens: t } = e;
     m = m.map((e) =>
-        null != e.pushSyncToken && t.includes(e.pushSyncToken) ? _(f({}, e), { pushSyncToken: null }) : e,
+        null != e.pushSyncToken && t.includes(e.pushSyncToken)
+            ? _(f({}, e), {
+                  pushSyncToken: null,
+              })
+            : e,
     );
 }
 class C extends (a = o.Ay.PersistedStore) {
@@ -183,8 +206,14 @@ class C extends (a = o.Ay.PersistedStore) {
     get canUseMultiAccountNotifications() {
         return (
             this.getCanUseMultiAccountMobile() &&
-            u.w.getCurrentConfig({ location: "09e468_1" }, { autoTrackExposure: !1 })
-                .isMultiAccountMobileNotificationsEnabled
+            u.w.getCurrentConfig(
+                {
+                    location: "09e468_1",
+                },
+                {
+                    autoTrackExposure: !1,
+                },
+            ).isMultiAccountMobileNotificationsEnabled
         );
     }
     get isSwitchingAccount() {

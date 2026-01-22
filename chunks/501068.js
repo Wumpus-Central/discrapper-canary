@@ -1,4 +1,6 @@
-n.d(t, { p: () => s });
+n.d(t, {
+    p: () => s,
+});
 var a = n(627968);
 n(64700);
 var l = n(554146),
@@ -17,8 +19,12 @@ let s = (e) => {
                       children: "Shop Marketing",
                   }),
                   (0, a.jsx)("div", {
-                      style: { zIndex: 1 },
-                      children: (0, a.jsx)(r.A, { items: [n] }),
+                      style: {
+                          zIndex: 1,
+                      },
+                      children: (0, a.jsx)(r.A, {
+                          items: [n],
+                      }),
                   }),
               ],
           });

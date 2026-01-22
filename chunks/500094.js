@@ -1,4 +1,6 @@
-n.d(t, { A: () => l });
+n.d(t, {
+    A: () => l,
+});
 var r = n(600975),
     i = n(688151);
 let l = (0, r.C)({
@@ -6,12 +8,16 @@ let l = (0, r.C)({
     id: "2025-04_report_to_mod",
     label: "Report to moderator",
     commonTriggerPoint: i.$G.CONNECTION_OPEN,
-    defaultConfig: { enabled: !1 },
+    defaultConfig: {
+        enabled: !1,
+    },
     treatments: [
         {
             id: 1,
             label: "report to moderator triggering",
-            config: { enabled: !0 },
+            config: {
+                enabled: !0,
+            },
         },
     ],
 });

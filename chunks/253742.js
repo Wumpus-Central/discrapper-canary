@@ -1,4 +1,8 @@
-n.d(t, { A: () => L }), n(896048), n(321073);
+n.d(t, {
+    A: () => L,
+}),
+    n(896048),
+    n(321073);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -24,6 +28,7 @@ var r = n(627968),
     S = n(31408),
     C = n(985018),
     N = n(603108);
+
 function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -49,6 +54,7 @@ function T(e) {
     }
     return e;
 }
+
 function j(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -67,7 +73,9 @@ function j(e, t) {
         e
     );
 }
-let x = { offset: 2 },
+let x = {
+        offset: 2,
+    },
     P = {
         serverDeaf: {
             icon: c.TJE,
@@ -95,6 +103,7 @@ let x = { offset: 2 },
             getStatus: () => C.intl.string(C.t["9F+xJU"]),
         },
     };
+
 function w(e) {
     var t, l;
     let p = i.useRef(null),
@@ -136,6 +145,7 @@ function w(e) {
                       status: K(),
                   })
                 : H;
+
     function W(e) {
         null != V
             ? (0, u.L3)(e, async () => {
@@ -170,7 +180,9 @@ function w(e) {
                           j(T({}, t), {
                               user: w,
                               showMediaItems: !0,
-                              onInteraction: (0, b.s)("UserGenericContextMenu", h.A.RTC_PANEL, { targetUserId: w.id }),
+                              onInteraction: (0, b.s)("UserGenericContextMenu", h.A.RTC_PANEL, {
+                                  targetUserId: w.id,
+                              }),
                           }),
                       );
               });
@@ -205,11 +217,18 @@ function w(e) {
                         isShaking: G,
                         children: (0, r.jsx)("div", {
                             className: N.my,
-                            style: T({ backgroundImage: "url(".concat(B, ")") }, Q),
+                            style: T(
+                                {
+                                    backgroundImage: "url(".concat(B, ")"),
+                                },
+                                Q,
+                            ),
                             children:
                                 null != F
                                     ? (0, r.jsx)(F, {
-                                          className: a()(N.tr, { [N.qE]: Y }),
+                                          className: a()(N.tr, {
+                                              [N.qE]: Y,
+                                          }),
                                           color: "currentColor",
                                           size: "xs",
                                       })
@@ -220,6 +239,7 @@ function w(e) {
             }),
     });
 }
+
 function L(e) {
     let { voiceStates: t, channel: n, className: l } = e,
         [u, d] = i.useState(!1),
@@ -258,7 +278,10 @@ function L(e) {
             children: (0, r.jsx)(c.K0, {
                 "aria-label": E,
                 onClick: () => d(!u),
-                icon: () => (0, r.jsx)(_, { size: "md" }),
+                icon: () =>
+                    (0, r.jsx)(_, {
+                        size: "md",
+                    }),
                 variant: "icon-only",
                 size: "sm",
             }),

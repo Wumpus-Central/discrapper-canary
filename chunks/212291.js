@@ -1,4 +1,7 @@
-n.d(t, { s: () => l }), n(733351);
+n.d(t, {
+    s: () => l,
+}),
+    n(733351);
 var r = n(627968),
     i = n(359778),
     a = n(397927),
@@ -12,7 +15,11 @@ let l = {
             name: "FormNotice",
             component: function (e) {
                 let { type: t, title: n, body: i, hasButton: o } = e,
-                    l = o ? (0, r.jsx)(a.Button, { text: "Action" }) : void 0;
+                    l = o
+                        ? (0, r.jsx)(a.Button, {
+                              text: "Action",
+                          })
+                        : void 0;
                 return (0, r.jsx)(s.Nz, {
                     "data-migration-pending": !0,
                     type: t,

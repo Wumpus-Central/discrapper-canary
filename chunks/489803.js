@@ -1,11 +1,19 @@
-n.d(t, { v: () => l });
+n.d(t, {
+    v: () => l,
+});
 var r = n(562465),
     i = n(73153),
     a = n(524799),
     s = n(652215);
 let o = 20;
+
 function l(e) {
-    let { forceFetch: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { forceFetch: !1 },
+    let { forceFetch: t } =
+            arguments.length > 1 && void 0 !== arguments[1]
+                ? arguments[1]
+                : {
+                      forceFetch: !1,
+                  },
         n = t ? e : e.filter(a.A.canFetch);
     if (0 === n.length) return;
     i.h.dispatch({
@@ -16,7 +24,9 @@ function l(e) {
         try {
             let t = await r.Bo.get({
                 url: s.Rsh.APPLICATIONS_GAMES_SUPPLEMENTAL,
-                query: { application_ids: e },
+                query: {
+                    application_ids: e,
+                },
                 rejectWithError: !0,
             });
             i.h.dispatch({

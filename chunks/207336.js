@@ -1,9 +1,12 @@
-n.d(t, { A: () => N }), n(896048);
+n.d(t, {
+    A: () => N,
+}),
+    n(896048);
 var l = n(627968),
     r = n(64700),
     a = n(503698),
     i = n.n(a),
-    s = n(432022),
+    s = n(108531),
     c = n(311907),
     o = n(397927),
     d = n(517461),
@@ -209,6 +212,7 @@ let C = {
             ],
         });
     };
+
 function N(e) {
     let t,
         { guild: n } = e,
@@ -220,9 +224,15 @@ function N(e) {
                 transitions: (0, o.pnh)(e, {
                     keys: (e) => (e ? "shown" : "hidden"),
                     config: C,
-                    from: { opacity: 0 },
-                    enter: { opacity: 1 },
-                    leave: { opacity: 0 },
+                    from: {
+                        opacity: 0,
+                    },
+                    enter: {
+                        opacity: 1,
+                    },
+                    leave: {
+                        opacity: 0,
+                    },
                     unique: !0,
                 }),
                 setVisible: t,
@@ -231,10 +241,18 @@ function N(e) {
         g =
             ((t = null != u && u),
             (0, o.pnh)(t, {
-                from: { maxHeight: 0 },
-                enter: { maxHeight: 850 },
-                leave: { maxHeight: 0 },
-                config: { duration: 200 },
+                from: {
+                    maxHeight: 0,
+                },
+                enter: {
+                    maxHeight: 850,
+                },
+                leave: {
+                    maxHeight: 0,
+                },
+                config: {
+                    duration: 200,
+                },
             }));
     return (r.useEffect(() => {
         a && f(!1);
@@ -269,7 +287,7 @@ function N(e) {
                                             (0, l.jsx)(o.Text, {
                                                 variant: "text-sm/semibold",
                                                 color: "text-strong",
-                                                children: "\u2014",
+                                                children: "—",
                                             }),
                                             (0, l.jsx)(o.Heading, {
                                                 variant: "text-md/semibold",
@@ -293,8 +311,12 @@ function N(e) {
                                     ? (0, l.jsxs)(s.animated.div, {
                                           style: e,
                                           children: [
-                                              (0, l.jsx)("hr", { className: j.me }),
-                                              (0, l.jsx)(O, { guild: n }),
+                                              (0, l.jsx)("hr", {
+                                                  className: j.me,
+                                              }),
+                                              (0, l.jsx)(O, {
+                                                  guild: n,
+                                              }),
                                           ],
                                       })
                                     : null,

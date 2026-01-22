@@ -1,4 +1,7 @@
-n.d(t, { A: () => d }), n(896048);
+n.d(t, {
+    A: () => d,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(735438),
@@ -13,6 +16,7 @@ let u = {
     [c.d.SIDEBAR]: 13,
     [c.d.VIDEO_TILE_BACKGROUND]: 12,
 };
+
 function d(e) {
     let {
             displayProfile: t,

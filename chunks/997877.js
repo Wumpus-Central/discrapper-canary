@@ -1,4 +1,6 @@
-n.d(t, { x: () => q });
+n.d(t, {
+    x: () => q,
+});
 var r = n(627968),
     l = n(64700),
     a = n(503698),
@@ -31,6 +33,7 @@ var r = n(627968),
     k = n(790782),
     L = n(985018),
     _ = n(667052);
+
 function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -56,6 +59,7 @@ function R(e) {
     }
     return e;
 }
+
 function M(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -74,6 +78,7 @@ function M(e, t) {
         e
     );
 }
+
 function G(e, t) {
     if (null == e) return {};
     var n,
@@ -102,6 +107,7 @@ function G(e, t) {
             (r = n[l]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function I(e) {
     let {
             destination: t,
@@ -123,7 +129,9 @@ function I(e) {
         M(
             R(
                 {
-                    className: s()(_.HP, { [_.r9]: o }),
+                    className: s()(_.HP, {
+                        [_.r9]: o,
+                    }),
                     onClick: g,
                     "aria-selected": u,
                     "aria-setsize": b,
@@ -162,18 +170,23 @@ function I(e) {
                     }),
                     (0, r.jsx)("div", {
                         className: _.kv,
-                        children: (0, r.jsx)(d.P7L, { checked: u }),
+                        children: (0, r.jsx)(d.P7L, {
+                            checked: u,
+                        }),
                     }),
                 ],
             },
         ),
     );
 }
+
 function U(e) {
     let { user: t, subLabel: n } = e,
         l = G(e, ["user", "subLabel"]),
         a = N.Ay.useName(t),
-        s = N.Ay.useUserTag(t, { decoration: "never" }),
+        s = N.Ay.useUserTag(t, {
+            decoration: "never",
+        }),
         i = (0, o.bG)([T.A], () => T.A.getNickname(t.id)),
         u = (0, o.bG)([S.A], () => S.A.getStatus(t.id));
     return (0, r.jsx)(
@@ -190,6 +203,7 @@ function U(e) {
         }),
     );
 }
+
 function H(e) {
     let { channel: t, subLabel: n } = e,
         l = G(e, ["channel", "subLabel"]),
@@ -208,6 +222,7 @@ function H(e) {
         }),
     );
 }
+
 function V(e) {
     let { channel: t, subLabel: n } = e,
         l = G(e, ["channel", "subLabel"]),
@@ -241,7 +256,7 @@ function V(e) {
                                   className: _.Ql,
                                   variant: "text-xs/medium",
                                   color: "text-subtle",
-                                  children: "\u2022",
+                                  children: "•",
                               }),
                               (0, r.jsx)(d.Text, {
                                   variant: "text-xs/medium",
@@ -267,6 +282,7 @@ function V(e) {
         }),
     );
 }
+
 function q(e) {
     let { rowData: t, selectedDestinations: n, handleToggleDestination: a, disableSelection: s } = e,
         i = G(e, ["rowData", "selectedDestinations", "handleToggleDestination", "disableSelection"]),
@@ -301,7 +317,9 @@ function q(e) {
                             e.rateLimitPerUser > 0 &&
                             !(O.A.can(D.xBc.MANAGE_CHANNELS, e) || O.A.can(D.xBc.MANAGE_MESSAGES, e))
                         )
-                            return { label: L.intl.string(L.t.Icu3bf) };
+                            return {
+                                label: L.intl.string(L.t.Icu3bf),
+                            };
                     })(u),
                     b = f.includes(o),
                     m = {
@@ -315,11 +333,35 @@ function q(e) {
                         "aria-setsize": t.length,
                     };
                 return i === p.rD.USER
-                    ? (0, r.jsx)(U, R({ user: u }, m))
+                    ? (0, r.jsx)(
+                          U,
+                          R(
+                              {
+                                  user: u,
+                              },
+                              m,
+                          ),
+                      )
                     : i === p.rD.GROUP_DM
-                      ? (0, r.jsx)(H, R({ channel: u }, m))
+                      ? (0, r.jsx)(
+                            H,
+                            R(
+                                {
+                                    channel: u,
+                                },
+                                m,
+                            ),
+                        )
                       : i === p.rD.TEXT_CHANNEL || i === p.rD.VOICE_CHANNEL
-                        ? (0, r.jsx)(V, R({ channel: u }, m))
+                        ? (0, r.jsx)(
+                              V,
+                              R(
+                                  {
+                                      channel: u,
+                                  },
+                                  m,
+                              ),
+                          )
                         : void (0, C.xb)(i);
             },
             [s, a, t, f],

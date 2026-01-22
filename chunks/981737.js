@@ -13,4 +13,6 @@ function r(e) {
         return r[e.argumentCallback ? e.argumentCallback(t) : t];
     };
 }
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});

@@ -26,6 +26,7 @@ let r = new Map(),
             e(t, n, r)
         );
     };
+
 function a(e, t) {
     let n;
     try {
@@ -91,7 +92,9 @@ let s = (e) => (t) => {
                 i,
             );
         let p = () => {
-                let e = l.partialize({ ...r() });
+                let e = l.partialize({
+                    ...r(),
+                });
                 return f.setItem(l.name, {
                     state: e,
                     version: l.version,

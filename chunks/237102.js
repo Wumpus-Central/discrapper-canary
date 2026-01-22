@@ -12,8 +12,8 @@
             LTS: "HH:mm:ss",
             L: "YYYY-MM-DD",
             LL: "YYYY-يىلىM-ئاينىڭD-كۈنى",
-            LLL: "YYYY-يىلىM-ئاينىڭD-كۈنى\u060C HH:mm",
-            LLLL: "dddd\u060C YYYY-يىلىM-ئاينىڭD-كۈنى\u060C HH:mm",
+            LLL: "YYYY-يىلىM-ئاينىڭD-كۈنى، HH:mm",
+            LLLL: "dddd، YYYY-يىلىM-ئاينىڭD-كۈنى، HH:mm",
         },
         meridiemParse: /يېرىم كېچە|سەھەر|چۈشتىن بۇرۇن|چۈش|چۈشتىن كېيىن|كەچ/,
         meridiemHour: function (e, t) {
@@ -76,7 +76,7 @@
             return e.replace(/،/g, ",");
         },
         postformat: function (e) {
-            return e.replace(/,/g, "\u060C");
+            return e.replace(/,/g, "،");
         },
         week: {
             dow: 1,

@@ -1,7 +1,10 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r,
     i = n(311907),
     a = n(73153);
+
 function s(e, t, n) {
     return (
         t in e
@@ -15,7 +18,7 @@ function s(e, t, n) {
         e
     );
 }
-let o = 604800000,
+let o = 6048e5,
     l = {
         installedDiscordPrivateBrowsingPerk: !1,
         installedDate: null,
@@ -43,4 +46,6 @@ class u extends (r = i.Ay.PersistedStore) {
     }
 }
 s(u, "displayName", "PrivateBrowsingPerkSettingsStore"), s(u, "persistKey", "PrivateBrowsingPerkSettingsStore");
-let d = new u(a.h, { PRIVATE_BROWSING_PERK_SETTINGS_INSTALL_DISCORD: c });
+let d = new u(a.h, {
+    PRIVATE_BROWSING_PERK_SETTINGS_INSTALL_DISCORD: c,
+});

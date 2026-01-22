@@ -9,6 +9,7 @@ var l = n(503698),
     i = n.n(l),
     s = n(397927),
     a = n(385104);
+
 function o(e) {
     let { children: t } = e;
     return (0, r.jsx)("div", {
@@ -19,6 +20,7 @@ function o(e) {
         }),
     });
 }
+
 function u(e) {
     let {
         icon: t,
@@ -65,14 +67,18 @@ function u(e) {
                     (0, r.jsx)(s.Text, {
                         variant: "text-md/semibold",
                         color: "text-strong",
-                        className: i()({ [a.VA]: d }),
+                        className: i()({
+                            [a.VA]: d,
+                        }),
                         children: n,
                     }),
                     null != l &&
                         (0, r.jsx)(s.Text, {
                             variant: "text-xs/medium",
                             color: "text-subtle",
-                            className: i()({ [a.VA]: d }),
+                            className: i()({
+                                [a.VA]: d,
+                            }),
                             children: l,
                         }),
                 ],

@@ -1,7 +1,10 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(186306),
     i = n(711371);
-let a = 4000;
+let a = 4e3;
+
 function s(e, t) {
     let {
         apply: n,
@@ -12,6 +15,7 @@ function s(e, t) {
         insertText: d,
         onChange: f,
     } = e;
+
     function p(n) {
         let i = r.o.currentEntry(e);
         if ((null != i && (i.mergeable = !1), n >= e.history.stack.length)) return;
@@ -77,6 +81,7 @@ function s(e, t) {
         e
     );
 }
+
 function o(e, t, n) {
     let i,
         { selection: a } = e,
@@ -103,9 +108,11 @@ function o(e, t, n) {
     }
     o && l(s, i) ? r.o.insertOrMergeEntry(e, i, c) : r.o.insertEntry(e, i, c);
 }
+
 function l(e, t) {
     return !((null == e ? void 0 : e.type) !== t || Date.now() - e.createdAt >= a);
 }
+
 function c(e) {
     return {
         type: "other",

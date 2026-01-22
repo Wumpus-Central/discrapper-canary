@@ -10,6 +10,7 @@ var i = n(397927),
     o = n(842130),
     l = n(985018),
     c = n(241938);
+
 function u(e, t, n) {
     return (
         t in e
@@ -23,6 +24,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -39,6 +41,7 @@ function d(e) {
     }
     return e;
 }
+
 function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -51,6 +54,7 @@ function f(e, t) {
     }
     return n;
 }
+
 function p(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -80,7 +84,9 @@ let _ = s.Ay.getEnableHardwareAcceleration() ? i.JsQ : i.euF,
                     src: s,
                     avatarDecoration: c,
                     size: n,
-                    "aria-label": l.intl.formatToPlainString(o.default.kFj4h1, { name: t.username }),
+                    "aria-label": l.intl.formatToPlainString(o.default.kFj4h1, {
+                        name: t.username,
+                    }),
                 }),
             }),
         );
@@ -91,7 +97,15 @@ let _ = s.Ay.getEnableHardwareAcceleration() ? i.JsQ : i.euF,
             className: c.b,
             children: (0, r.jsxs)("div", {
                 className: c.M,
-                children: [(0, r.jsx)(h, { user: t }), i, (0, r.jsx)(h, { user: n })],
+                children: [
+                    (0, r.jsx)(h, {
+                        user: t,
+                    }),
+                    i,
+                    (0, r.jsx)(h, {
+                        user: n,
+                    }),
+                ],
             }),
         });
     };

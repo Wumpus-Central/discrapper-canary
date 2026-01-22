@@ -18,7 +18,9 @@ var r = n(284009),
 let f = async (e, t) => {
         if (null == t) throw Error("giftCode must be defined");
         if (null == e) throw Error("Recipient must be defined");
-        let n = await a.A.openPrivateChannel({ recipientIds: e.id }).then((e) => {
+        let n = await a.A.openPrivateChannel({
+                recipientIds: e.id,
+            }).then((e) => {
                 let t = l.A.getChannel(e);
                 if ((i()(null != t, "PrivateChannel is null"), null == t)) throw Error("Channel must be defined");
                 return t;

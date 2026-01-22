@@ -1,4 +1,7 @@
-n.d(t, { A: () => O }), n(896048);
+n.d(t, {
+    A: () => O,
+}),
+    n(896048);
 var r = n(627968);
 n(64700);
 var i = n(562465),
@@ -15,6 +18,7 @@ var i = n(562465),
     A = n(636401),
     g = n(613057),
     m = n(652215);
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -40,6 +44,7 @@ function b(e) {
     }
     return e;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -68,11 +73,29 @@ let E = 10 * f.A.Millis.SECOND,
                 try {
                     var o;
                     let e;
-                    if (null == i) throw new A.A({ errorCode: m.Lw6.INVALID_COMMAND }, "No application.");
+                    if (null == i)
+                        throw new A.A(
+                            {
+                                errorCode: m.Lw6.INVALID_COMMAND,
+                            },
+                            "No application.",
+                        );
                     let t = c.A.getApplication(i);
-                    if (null == t) throw new A.A({ errorCode: m.Lw6.INVALID_ENTITLEMENT }, "SKU does not exist.");
+                    if (null == t)
+                        throw new A.A(
+                            {
+                                errorCode: m.Lw6.INVALID_ENTITLEMENT,
+                            },
+                            "SKU does not exist.",
+                        );
                     let n = t.primarySkuId;
-                    if (null == n) throw new A.A({ errorCode: m.Lw6.INVALID_ENTITLEMENT }, "SKU does not exist.");
+                    if (null == n)
+                        throw new A.A(
+                            {
+                                errorCode: m.Lw6.INVALID_ENTITLEMENT,
+                            },
+                            "SKU does not exist.",
+                        );
                     return Promise.race([
                         ((o = t.id),
                         (e = d.A.isEntitledToSku(u.default.getCurrentUser(), n, o)),
@@ -83,12 +106,19 @@ let E = 10 * f.A.Millis.SECOND,
                               )).then((e) => {
                             if (!e)
                                 throw new A.A(
-                                    { errorCode: m.Lw6.INVALID_ENTITLEMENT },
+                                    {
+                                        errorCode: m.Lw6.INVALID_ENTITLEMENT,
+                                    },
                                     "User does not have entitlement.",
                                 );
                         }),
                         (0, l.BK)(E).then(() => {
-                            throw new A.A({ errorCode: m.Lw6.INVALID_ENTITLEMENT }, "Timed out fetching entitlement.");
+                            throw new A.A(
+                                {
+                                    errorCode: m.Lw6.INVALID_ENTITLEMENT,
+                                },
+                                "Timed out fetching entitlement.",
+                            );
                         }),
                     ]);
                 } catch (e) {
@@ -97,7 +127,13 @@ let E = 10 * f.A.Millis.SECOND,
                             (h.Ay.focus(null, !0),
                             (0, a.mMO)(async () => {
                                 let { default: e } = await n.e("26766").then(n.bind(n, 448701));
-                                return (t) => (0, r.jsx)(e, _(b({}, t), { applicationId: i }));
+                                return (t) =>
+                                    (0, r.jsx)(
+                                        e,
+                                        _(b({}, t), {
+                                            applicationId: i,
+                                        }),
+                                    );
                             })),
                         e)
                     );
@@ -109,10 +145,18 @@ let E = 10 * f.A.Millis.SECOND,
             handler(e) {
                 let { socket: t } = e,
                     l = t.application.id;
-                if (null == l) throw new A.A({ errorCode: m.Lw6.INVALID_COMMAND }, "No application.");
+                if (null == l)
+                    throw new A.A(
+                        {
+                            errorCode: m.Lw6.INVALID_COMMAND,
+                        },
+                        "No application.",
+                    );
                 return i.Bo.post({
                     url: m.Rsh.ENTITLEMENT_TICKET(l),
-                    body: { test_mode: p.A.inTestModeForApplication(l) || o.A.inDevModeForApplication(l) },
+                    body: {
+                        test_mode: p.A.inTestModeForApplication(l) || o.A.inDevModeForApplication(l),
+                    },
                     retries: 3,
                     oldFormErrors: !0,
                     rejectWithError: !1,
@@ -126,7 +170,13 @@ let E = 10 * f.A.Millis.SECOND,
                             (h.Ay.focus(null, !0),
                             (0, a.mMO)(async () => {
                                 let { default: e } = await n.e("26766").then(n.bind(n, 448701));
-                                return (t) => (0, r.jsx)(e, _(b({}, t), { applicationId: l }));
+                                return (t) =>
+                                    (0, r.jsx)(
+                                        e,
+                                        _(b({}, t), {
+                                            applicationId: l,
+                                        }),
+                                    );
                             }),
                             e)
                         );

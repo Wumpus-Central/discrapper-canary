@@ -1,7 +1,10 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r,
     i = n(311907),
     a = n(73153);
+
 function s(e, t, n) {
     return (
         t in e
@@ -17,6 +20,7 @@ function s(e, t, n) {
 }
 let o = null,
     l = !1;
+
 function c(e) {
     let { progress: t, total: n, name: r } = e;
     o = {
@@ -25,9 +29,11 @@ function c(e) {
         name: r,
     };
 }
+
 function u() {
     (o = null), (l = !1);
 }
+
 function d() {
     l = !0;
 }

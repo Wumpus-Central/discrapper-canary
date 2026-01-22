@@ -11,6 +11,7 @@ var r = n(311907),
     l = n(128319),
     c = n(929921),
     u = n(753070);
+
 function d(e, t, n) {
     return (
         t in e
@@ -24,6 +25,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -40,6 +42,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -52,6 +55,7 @@ function p(e, t) {
     }
     return n;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -85,18 +89,38 @@ let h = {
             }),
         },
     });
+
 function b(e) {
     let { location: t } = e,
-        { isInHoldout: n } = l.p.getCurrentConfig({ location: t }, { autoTrackExposure: !0 });
-    return n ? E.definition.defaultConfig : E.getConfig({ location: t });
+        { isInHoldout: n } = l.p.getCurrentConfig(
+            {
+                location: t,
+            },
+            {
+                autoTrackExposure: !0,
+            },
+        );
+    return n
+        ? E.definition.defaultConfig
+        : E.getConfig({
+              location: t,
+          });
 }
+
 function y(e) {
     let { location: t } = e;
-    return (0, r.bG)([o.A], () => b({ location: t }));
+    return (0, r.bG)([o.A], () =>
+        b({
+            location: t,
+        }),
+    );
 }
+
 function O() {
     var e;
-    let t = E.getConfig({ location: "maybeMigrateToAutoQuality" }).migrateAutoQuality,
+    let t = E.getConfig({
+            location: "maybeMigrateToAutoQuality",
+        }).migrateAutoQuality,
         n = Number(null != (e = i.w.get(m)) ? e : 0);
     if (!t || n >= g) return;
     let r = c.A.getState();

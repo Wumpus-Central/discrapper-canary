@@ -1,4 +1,6 @@
-n.d(t, { A: () => P });
+n.d(t, {
+    A: () => P,
+});
 var r = n(627968);
 n(64700);
 var l = n(503698),
@@ -25,6 +27,7 @@ var l = n(503698),
     _ = n(634654),
     C = n(985018),
     S = n(568187);
+
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -50,6 +53,7 @@ function I(e) {
     }
     return e;
 }
+
 function N(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -68,6 +72,7 @@ function N(e, t) {
         e
     );
 }
+
 function T(e) {
     let { guildId: t, selected: n, handleClick: l } = e,
         u = (0, h.YZ)(t, "guild_shop_channel_row"),
@@ -114,7 +119,9 @@ function T(e) {
                                 (0, m.Dr)(s.M.SERVER_SHOP_PHANTOM_PREVIEW),
                                 j.default.track(
                                     x.HAw.GUILD_SHOP_PREVIEW_CLICK,
-                                    N(I({}, (0, f.H$)(t)), { action_taken: _.hN.DISMISS_CHANNEL_ROW }),
+                                    N(I({}, (0, f.H$)(t)), {
+                                        action_taken: _.hN.DISMISS_CHANNEL_ROW,
+                                    }),
                                 ),
                                 !u || !E)
                             ) {
@@ -132,6 +139,7 @@ function T(e) {
         }),
     });
 }
+
 function P(e) {
     let { guild: t, selected: l } = e,
         i = (0, b.P)(t, "guild_shop_channel_row"),
@@ -159,7 +167,13 @@ function P(e) {
                   null != t &&
                       (0, u.L3)(e, async () => {
                           let { default: e } = await n.e("52565").then(n.bind(n, 345332));
-                          return (n) => (0, r.jsx)(e, N(I({}, n), { guild: t }));
+                          return (n) =>
+                              (0, r.jsx)(
+                                  e,
+                                  N(I({}, n), {
+                                      guild: t,
+                                  }),
+                              );
                       });
               },
           });

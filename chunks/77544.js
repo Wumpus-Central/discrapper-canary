@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var l = n(627968);
 n(64700);
 var i = n(311907),
@@ -7,6 +9,7 @@ var i = n(311907),
     o = n(290863),
     s = n(652215),
     d = n(985018);
+
 function u(e, t) {
     let n = (0, i.bG)([o.A], () => (0, a.A)(o.A.findActivity(e, (e) => e.type === s.$pd.STREAMING)), [e]);
     return null == n

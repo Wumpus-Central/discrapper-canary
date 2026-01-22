@@ -1,5 +1,8 @@
 let r, i;
-n.d(t, { Ay: () => G }), n(896048);
+n.d(t, {
+    Ay: () => G,
+}),
+    n(896048);
 var a,
     s = n(311907),
     o = n(73153),
@@ -9,6 +12,7 @@ var a,
     d = n(734057),
     f = n(927813),
     p = n(337591);
+
 function _(e, t, n) {
     return (
         t in e
@@ -22,6 +26,7 @@ function _(e, t, n) {
         e
     );
 }
+
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -38,6 +43,7 @@ function h(e) {
     }
     return e;
 }
+
 function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -50,6 +56,7 @@ function m(e, t) {
     }
     return n;
 }
+
 function g(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -67,6 +74,7 @@ let E = 5 * f.A.Millis.MINUTE,
     O = {},
     A = {},
     v = {};
+
 function S() {
     (y = {}),
         (O = {}),
@@ -77,6 +85,7 @@ function S() {
             for (let [t, n] of Object.entries(v)) e - n.insertedAt > b && delete v[t];
         }, E);
 }
+
 function I(e) {
     let { nonce: t, messageId: n, data: r, onCreate: i, onCancel: a, onSuccess: s, onFailure: o } = e;
     null != n && ((O[n] = t), (A[t] = n)),
@@ -89,6 +98,7 @@ function I(e) {
             onFailure: o,
         });
 }
+
 function T(e) {
     var t;
     let { nonce: n, interactionId: r } = e;
@@ -97,10 +107,12 @@ function T(e) {
     if (null == i || i.state !== p.m.QUEUED) return !1;
     (i.state = p.m.CREATED), null == (t = i.onCreate) || t.call(i, r);
 }
+
 function C(e) {
     let { nonce: t } = e;
     M(t);
 }
+
 function N(e) {
     let { message: t } = e;
     if (null == t.nonce) return !1;
@@ -111,6 +123,7 @@ function N(e) {
         null == (n = e.onSuccess) || n.call(e), k(t.nonce);
     }
 }
+
 function R(e) {
     var t;
     let { nonce: n, errorCode: r, errorMessage: i, status: a, reasonCode: s } = e;
@@ -126,26 +139,32 @@ function R(e) {
                   errorMessage: i,
               }));
 }
+
 function w(e) {
     let { channelId: t } = e;
     if (null == d.A.getChannel(t)) return !1;
     for (let [e, t] of Object.entries(y)) t.state === p.m.FAILED && k(e);
 }
+
 function P(e) {
     let { nonce: t } = e;
     M(t);
 }
+
 function D(e) {
     let { application: t, nonce: n } = e;
     (i = t.id), M(n);
 }
+
 function x() {
     (r = void 0), (i = void 0);
 }
+
 function L(e) {
     let { modalKey: t } = e;
     r = t;
 }
+
 function j(e) {
     let t,
         n,
@@ -160,6 +179,7 @@ function j(e) {
             null != t &&
             (k(s.nonce), null != t && "channelId" in n.data && l.A.deleteMessage(n.data.channelId, t, !0));
 }
+
 function M(e) {
     var t;
     if (null == e) return !1;
@@ -167,6 +187,7 @@ function M(e) {
     if (null == n) return !1;
     null == (t = n.onSuccess) || t.call(n), k(e);
 }
+
 function k(e) {
     if (null != v[e]) return void delete v[e];
     let t = y[e];

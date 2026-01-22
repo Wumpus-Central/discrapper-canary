@@ -1,4 +1,7 @@
-n.d(t, { A: () => h }), n(896048);
+n.d(t, {
+    A: () => h,
+}),
+    n(896048);
 var r = n(627968);
 n(64700);
 var i = n(843282),
@@ -6,6 +9,7 @@ var i = n(843282),
     s = n(397927),
     o = n(371509),
     l = n(721267);
+
 function c(e, t, n) {
     return (
         t in e
@@ -19,6 +23,7 @@ function c(e, t, n) {
         e
     );
 }
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,6 +40,7 @@ function u(e) {
     }
     return e;
 }
+
 function d(e, t) {
     if (null == e) return {};
     var n,
@@ -51,6 +57,7 @@ function d(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function f(e, t) {
     if (null == e) return {};
     var n,
@@ -61,6 +68,7 @@ function f(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function p(e) {
     let { title: t, value: n, onChange: a, options: c, isDisabled: u = !1 } = e;
     return (0, r.jsxs)("div", {
@@ -80,15 +88,21 @@ function p(e) {
                 onChange: (e) => a(e),
                 renderOptionValue: (e) => {
                     let [t] = e;
-                    return (0, r.jsx)(o.A, { option: t });
+                    return (0, r.jsx)(o.A, {
+                        option: t,
+                    });
                 },
-                renderOptionLabel: (e) => (0, r.jsx)(o.A, { option: e }),
+                renderOptionLabel: (e) =>
+                    (0, r.jsx)(o.A, {
+                        option: e,
+                    }),
                 isDisabled: u,
                 "data-migration-pending": !0,
             }),
         ],
     });
 }
+
 function _(e) {
     let { tooltipText: t } = e,
         n = d(e, ["tooltipText"]);
@@ -98,6 +112,7 @@ function _(e) {
         children: (0, r.jsx)(p, u({}, n)),
     });
 }
+
 function h(e) {
     return "tooltipText" in e && null != e.tooltipText ? (0, r.jsx)(_, u({}, e)) : (0, r.jsx)(p, u({}, e));
 }

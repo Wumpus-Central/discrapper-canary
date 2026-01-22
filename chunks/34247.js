@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var r = n(627968),
     l = n(64700),
     i = n(696292),
@@ -15,7 +17,9 @@ var r = n(627968),
 let g = l.forwardRef(function (e, t) {
     let { selected: n, onClick: g, questId: m, className: A } = e,
         y = l.useCallback(() => {
-            (0, s.WL)({ source: f.GlobalDiscoveryAnalyticsLocations.GUILDS_BAR_ICON });
+            (0, s.WL)({
+                source: f.GlobalDiscoveryAnalyticsLocations.GUILDS_BAR_ICON,
+            });
             let e = void 0 !== m ? f.GlobalDiscoveryTab.QUESTS : o.A.getField("selectedTab");
             switch (e) {
                 case f.GlobalDiscoveryTab.QUESTS:
@@ -34,12 +38,16 @@ let g = l.forwardRef(function (e, t) {
                     return (0, c.transitionToGlobalDiscovery)({
                         tab: f.GlobalDiscoveryTab.APPS,
                         newSessionState: {
-                            entrypoint: { name: u.sW.GLOBAL_DISCOVERY_BUTTON },
+                            entrypoint: {
+                                name: u.sW.GLOBAL_DISCOVERY_BUTTON,
+                            },
                             restorePreviousView: !0,
                         },
                     });
                 default:
-                    return (0, c.transitionToGlobalDiscovery)({ tab: e });
+                    return (0, c.transitionToGlobalDiscovery)({
+                        tab: e,
+                    });
             }
         }, [m]);
     return (0, r.jsx)(d.A, {

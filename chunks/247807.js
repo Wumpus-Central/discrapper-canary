@@ -1,4 +1,9 @@
-n.d(t, { A: () => C }), n(747238), n(812715), n(866193);
+n.d(t, {
+    A: () => C,
+}),
+    n(747238),
+    n(812715),
+    n(866193);
 var r = n(627968),
     i = n(64700),
     a = n(56121),
@@ -20,6 +25,7 @@ var r = n(627968),
     O = n(652215),
     A = n(272984),
     v = n(985018);
+
 function S(e) {
     if (e === a.j.WEEK) return v.t.SjOZfm;
 }
@@ -96,7 +102,15 @@ let I = (e, t, n, r) => {
                     subtitle: R,
                     badges: (0, r.jsx)(E.mG, {
                         location: E.N5.POPOUT,
-                        children: g.$u.map((e, t) => (0, r.jsx)(e, { entry: n }, t)),
+                        children: g.$u.map((e, t) =>
+                            (0, r.jsx)(
+                                e,
+                                {
+                                    entry: n,
+                                },
+                                t,
+                            ),
+                        ),
                     }),
                 }),
                 (0, r.jsx)(b.Eh, {

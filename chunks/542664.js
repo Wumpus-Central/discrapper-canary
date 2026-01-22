@@ -1,4 +1,14 @@
-n.d(t, { A: () => ei }), n(747238), n(812715), n(321073), n(866193), n(896048), n(733351), n(591487), n(727858);
+n.d(t, {
+    A: () => ei,
+}),
+    n(747238),
+    n(812715),
+    n(321073),
+    n(866193),
+    n(896048),
+    n(733351),
+    n(591487),
+    n(727858);
 var r = n(735438),
     i = n.n(r),
     a = n(280230),
@@ -29,6 +39,7 @@ var r = n(735438),
     w = n(652215),
     P = n(73510),
     D = n(985018);
+
 function x(e, t, n) {
     return (
         t in e
@@ -42,6 +53,7 @@ function x(e, t, n) {
         e
     );
 }
+
 function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -58,6 +70,7 @@ function L(e) {
     }
     return e;
 }
+
 function j(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -70,6 +83,7 @@ function j(e, t) {
     }
     return n;
 }
+
 function M(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -86,6 +100,7 @@ let k = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/,
     G = /^ *>>> ?/,
     V = /^ *> ?/gm,
     F = /^((?:https?|steam):\/\/[^\s<]+[^<.,:;"'\]\s])/;
+
 function B(e) {
     let t = (0, A.W1)(e[1]);
     if (null == t)
@@ -152,7 +167,9 @@ let H = (e) => {
             },
         }),
         link: A.Ay,
-        autolink: M(L({}, s().defaultRules.autolink), { parse: B }),
+        autolink: M(L({}, s().defaultRules.autolink), {
+            parse: B,
+        }),
         mailto: M(L({}, s().defaultRules.mailto), {
             match: s().inlineRegex(/^<([^\s<>@]+@[^\s<>@]+\.[^\s<>@]+)>/),
             requiredFirstCharacters: ["<"],
@@ -228,13 +245,15 @@ let H = (e) => {
             parse(e, t, n) {
                 let r = s().defaultRules.inlineCode.parse(e, t, n);
                 return !0 === n.parseInlineCodeChildContent
-                    ? M(L({}, r), { validationChildContent: t(r.content, n) })
+                    ? M(L({}, r), {
+                          validationChildContent: t(r.content, n),
+                      })
                     : r;
             },
         }),
         emoticon: {
             order: I.Ay.order,
-            requiredFirstCharacters: ["\xAF"],
+            requiredFirstCharacters: ["\xaf"],
             match: (e) => /^(¯\\_\(ツ\)_\/¯)/.exec(e),
             parse: (e) => ({
                 type: "text",
@@ -510,6 +529,7 @@ let H = (e) => {
                 let [, i, a] = e,
                     s = (0, C.Q)(i),
                     o = (0, C.f)(i, a, null == (r = Y(n)) ? void 0 : r.id);
+
                 function l(e) {
                     return null == e
                         ? null
@@ -521,7 +541,7 @@ let H = (e) => {
                           ];
                 }
                 return {
-                    content: l(s + (null != o ? " \u203A ".concat(o) : "")),
+                    content: l(s + (null != o ? " › ".concat(o) : "")),
                     mainContent: l(s),
                     itemContent: l(o),
                     itemId: a,
@@ -596,6 +616,7 @@ let H = (e) => {
     ]),
     J = i().omit(K, ["codeBlock", "blockQuote", "br"]),
     ee = i().omit(K, ["codeBlock", "br", "inlineCode"]);
+
 function et(e, t) {
     return 0 === e.length || 0 === t || "" === e.charAt(t - 1).trim();
 }
@@ -625,7 +646,9 @@ let en = 10,
                 parse(e, t, n) {
                     var r;
                     let i = null != (r = n.parseDepth) ? r : 0,
-                        a = M(L({}, n), { parseDepth: i + 1 }),
+                        a = M(L({}, n), {
+                            parseDepth: i + 1,
+                        }),
                         s = t(e[2], a),
                         o = t(e[3], a);
                     return [

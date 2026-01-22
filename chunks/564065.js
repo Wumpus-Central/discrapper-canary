@@ -28,7 +28,9 @@ e.exports = function (e) {
         },
         r = {
             match: [t, /(?=\()/],
-            scope: { 1: "keyword" },
+            scope: {
+                1: "keyword",
+            },
             contains: [n],
         };
     return (

@@ -1,4 +1,7 @@
-n.d(t, { A: () => _ }), n(896048);
+n.d(t, {
+    A: () => _,
+}),
+    n(896048);
 var i = n(627968),
     r = n(64700),
     s = n(311907),
@@ -19,6 +22,7 @@ var i = n(627968),
     O = n(985018),
     v = n(300597),
     E = n(473169);
+
 function x(e, t, n) {
     return (
         t in e
@@ -32,6 +36,7 @@ function x(e, t, n) {
         e
     );
 }
+
 function S() {
     let e = h.default.getNotificationPositionMode(),
         t = e !== m.G6Q.DISABLED,
@@ -197,7 +202,10 @@ class j extends r.PureComponent {
             children: [
                 (0, i.jsx)(l.z6M, {
                     label: O.intl.string(O.t.dnvZSg),
-                    onChange: (e) => this.handleChangeAvatarSizeMode({ value: e }),
+                    onChange: (e) =>
+                        this.handleChangeAvatarSizeMode({
+                            value: e,
+                        }),
                     options: [
                         {
                             value: m.OSZ.LARGE,
@@ -212,7 +220,10 @@ class j extends r.PureComponent {
                 }),
                 (0, i.jsx)(l.z6M, {
                     label: O.intl.string(O.t.J0dpcB),
-                    onChange: (e) => this.handleChangeDisplayNameMode({ value: e }),
+                    onChange: (e) =>
+                        this.handleChangeDisplayNameMode({
+                            value: e,
+                        }),
                     options: [
                         {
                             value: m.pwA.ALWAYS,
@@ -231,7 +242,10 @@ class j extends r.PureComponent {
                 }),
                 (0, i.jsx)(l.z6M, {
                     label: O.intl.string(O.t.swsWWC),
-                    onChange: (e) => this.handleChangeDisplayUserMode({ value: e }),
+                    onChange: (e) =>
+                        this.handleChangeDisplayUserMode({
+                            value: e,
+                        }),
                     options: [
                         {
                             value: m.f5z.ALWAYS,
@@ -300,9 +314,13 @@ class j extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            x(this, "state", { selectedSection: "GENERAL" }),
+            x(this, "state", {
+                selectedSection: "GENERAL",
+            }),
             x(this, "handleSelectSection", (e) => {
-                this.setState({ selectedSection: e });
+                this.setState({
+                    selectedSection: e,
+                });
             }),
             x(this, "handleToggleTextChatNotifications", () => {
                 o.A.setNotificationDisabledSetting(b.M.TEXT_CHAT, !this.props.textChatDisabled), S();
@@ -313,6 +331,7 @@ class j extends r.PureComponent {
             });
     }
 }
+
 function _(e) {
     let { onClose: t } = e,
         {
@@ -332,7 +351,9 @@ function _(e) {
             shouldShowKeybindIndicators: h.default.showKeybindIndicators,
             shouldShowInviteNotification: !y.A.isNotificationDisabled(A.KS.ActivityInvite),
         })),
-        u = (0, g.A)({ location: "Overlay Settings" });
+        u = (0, g.A)({
+            location: "Overlay Settings",
+        });
     return (0, i.jsx)(j, {
         onClose: t,
         avatarSizeMode: n,

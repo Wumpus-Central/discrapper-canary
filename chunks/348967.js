@@ -1,4 +1,5 @@
 var r = n(64700);
+
 function i(e) {
     var t = "https://react.dev/errors/" + e;
     if (1 < arguments.length) {
@@ -13,6 +14,7 @@ function i(e) {
         " for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
     );
 }
+
 function a() {}
 var s = {
         d: {
@@ -32,6 +34,7 @@ var s = {
         findDOMNode: null,
     },
     o = Symbol.for("react.portal");
+
 function l(e, t, n) {
     var r = 3 < arguments.length && void 0 !== arguments[3] ? arguments[3] : null;
     return {
@@ -43,6 +46,7 @@ function l(e, t, n) {
     };
 }
 var c = r.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
+
 function u(e, t) {
     return "font" === e ? "" : "string" == typeof t ? ("use-credentials" === t ? t : "") : void 0;
 }

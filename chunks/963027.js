@@ -10,12 +10,14 @@ var r = n(95701),
     o = n(47167),
     l = n(652215),
     c = n(985018);
+
 function u(e) {
     let { isSubscriptionGated: t, needSubscriptionToAccess: n } = e;
     if (t)
         if (n) return c.intl.string(c.t["oj+HOs"]);
         else return c.intl.string(c.t.xI3TQQ);
 }
+
 function d(e) {
     let t,
         {
@@ -45,9 +47,18 @@ function d(e) {
             t = d > 0 ? c.t.sDKIpm : s ? c.t.VM7z8f : c.t.WJ3MPt;
             break;
         case l.rbe.GUILD_VOICE:
-            let g = [c.intl.formatToPlainString(c.t.bkpadO, { channelName: m })];
+            let g = [
+                c.intl.formatToPlainString(c.t.bkpadO, {
+                    channelName: m,
+                }),
+            ];
             if (
-                (d > 0 && g.push(c.intl.formatToPlainString(c.t["3l1GOx"], { mentionCount: d })),
+                (d > 0 &&
+                    g.push(
+                        c.intl.formatToPlainString(c.t["3l1GOx"], {
+                            mentionCount: d,
+                        }),
+                    ),
                 s && g.push(c.intl.string(c.t.x5zAGZ)),
                 null != f)
             ) {
@@ -59,9 +70,19 @@ function d(e) {
                               limit: e,
                           }),
                       )
-                    : g.push(c.intl.formatToPlainString(c.t.GNIiAA, { userCount: f }));
+                    : g.push(
+                          c.intl.formatToPlainString(c.t.GNIiAA, {
+                              userCount: f,
+                          }),
+                      );
             }
-            null != p && p > 0 && g.push(c.intl.formatToPlainString(c.t.O6PLYd, { activitiesCount: p }));
+            null != p &&
+                p > 0 &&
+                g.push(
+                    c.intl.formatToPlainString(c.t.O6PLYd, {
+                        activitiesCount: p,
+                    }),
+                );
             let E = u({
                 isSubscriptionGated: _,
                 needSubscriptionToAccess: h,
@@ -95,6 +116,7 @@ function d(e) {
         });
     return null != y && b.push(y), b.join(", ");
 }
+
 function f(e) {
     switch (e) {
         case l.clD.ONLINE:
@@ -109,6 +131,7 @@ function f(e) {
             return "";
     }
 }
+
 function p(e) {
     let { channel: t, muted: n, userStatus: r } = e;
     if (!0 === n) return c.intl.string(c.t.C4zCMb);

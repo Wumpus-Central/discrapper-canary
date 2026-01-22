@@ -264,6 +264,7 @@ let a = {
         годиков: "year",
     },
     f = `(?:${(0, r.uJ)(c)}|[0-9]+|[0-9]+\\.[0-9]+|пол|несколько|пар(?:ы|у)|\\s{0,3})`;
+
 function p(e) {
     let t = e.toLowerCase();
     return void 0 !== c[t]
@@ -279,12 +280,14 @@ function p(e) {
                 : parseFloat(t);
 }
 let _ = `(?:${(0, r.uJ)(u)}|[0-9]{1,2}(?:го|ого|е|ое)?)`;
+
 function h(e) {
     let t = e.toLowerCase();
     return void 0 !== u[t] ? u[t] : parseInt(t);
 }
 let m = "(?:\\s+(?:году|года|год|г|г.))?",
     g = `(?:[1-9][0-9]{0,3}${m}\\s*(?:н.э.|до н.э.|н. э.|до н. э.)|[1-2][0-9]{3}${m}|[5-9][0-9]${m})`;
+
 function E(e) {
     if ((/(год|года|г|г.)/i.test(e) && (e = e.replace(/(год|года|г|г.)/i, "")), /(до н.э.|до н. э.)/i.test(e)))
         return -parseInt((e = e.replace(/(до н.э.|до н. э.)/i, "")));
@@ -295,6 +298,7 @@ function E(e) {
 let b = `(${f})\\s{0,3}(${(0, r.uJ)(d)})`,
     y = RegExp(b, "i"),
     O = (0, r.mb)("(?:(?:около|примерно)\\s{0,3})?", b);
+
 function A(e) {
     let t = {},
         n = e,
@@ -302,6 +306,7 @@ function A(e) {
     for (; r; ) v(t, r), (n = n.substring(r[0].length).trim()), (r = y.exec(n));
     return t;
 }
+
 function v(e, t) {
     let n = p(t[1]);
     e[d[t[2].toLowerCase()]] = n;

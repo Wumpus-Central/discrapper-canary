@@ -1,4 +1,8 @@
-n.d(t, { A: () => v }), n(896048), n(446912);
+n.d(t, {
+    A: () => v,
+}),
+    n(896048),
+    n(446912);
 var r,
     i = n(311907),
     a = n(73153),
@@ -6,6 +10,7 @@ var r,
     o = n(403362),
     l = n(93465),
     c = n(672396);
+
 function u(e, t, n) {
     return (
         t in e
@@ -19,6 +24,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,6 +41,7 @@ function d(e) {
     }
     return e;
 }
+
 function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -47,6 +54,7 @@ function f(e, t) {
     }
     return n;
 }
+
 function p(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -58,9 +66,11 @@ function p(e, t) {
         e
     );
 }
+
 function _() {
     return g();
 }
+
 function h() {
     return {
         gameSettings: {},
@@ -68,13 +78,21 @@ function h() {
     };
 }
 let m = h();
+
 function g() {
     m = h();
 }
+
 function E(e) {
     let { applicationId: t, enabled: n } = e;
-    return (m.gameSettings[t] = { limitedInteractionOverride: n }), !0;
+    return (
+        (m.gameSettings[t] = {
+            limitedInteractionOverride: n,
+        }),
+        !0
+    );
 }
+
 function b(e) {
     let { setting: t, disabled: n } = e;
     return (
@@ -83,6 +101,7 @@ function b(e) {
         !0
     );
 }
+
 function y(e) {
     switch (e) {
         case c.KS.TextChat:
@@ -114,6 +133,7 @@ function y(e) {
             (0, o.xb)(e);
     }
 }
+
 function O(e) {
     let { overlayNotificationSettings: t } = e;
     m.notificationSettings = new Set(t.notificationSettings);
@@ -126,7 +146,12 @@ function O(e) {
             .map((e) => {
                 var t;
                 let [n, r] = e;
-                return [n, { limitedInteractionOverride: null != (t = r.limitedInteractionOverride) ? t : void 0 }];
+                return [
+                    n,
+                    {
+                        limitedInteractionOverride: null != (t = r.limitedInteractionOverride) ? t : void 0,
+                    },
+                ];
             }),
     );
     m.gameSettings = d({}, m.gameSettings, n);
@@ -148,7 +173,12 @@ class A extends (r = i.Ay.PersistedStore) {
                 Object.entries(m.gameSettings).map((e) => {
                     var t;
                     let [n, r] = e;
-                    return [n, { limitedInteractionOverride: null != (t = r.limitedInteractionOverride) ? t : null }];
+                    return [
+                        n,
+                        {
+                            limitedInteractionOverride: null != (t = r.limitedInteractionOverride) ? t : null,
+                        },
+                    ];
                 }),
             ),
             notificationSettings: Array.from(m.notificationSettings),

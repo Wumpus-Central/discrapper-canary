@@ -1,4 +1,9 @@
-n.d(t, { A: () => R }), n(896048), n(638769), n(321073);
+n.d(t, {
+    A: () => R,
+}),
+    n(896048),
+    n(638769),
+    n(321073);
 var r,
     i = n(311907),
     a = n(73153),
@@ -7,6 +12,7 @@ var r,
     l = n(661191),
     c = n(652215),
     u = n(788868);
+
 function d(e, t, n) {
     return (
         t in e
@@ -26,6 +32,7 @@ let f = {},
     h = new Set(),
     m = {},
     g = {};
+
 function E(e) {
     let t = e.skuId;
     f[e.id] = e;
@@ -40,6 +47,7 @@ function E(e) {
     let i = p[t];
     null != i ? i.add(e.id) : (p[t] = new Set([e.id]));
 }
+
 function b() {
     [u.hd[u.gD.NONE_MONTH], u.hd[u.gD.NONE_YEAR], u.hd[u.gD.NONE_3_MONTH], u.hd[u.gD.NONE_6_MONTH]].forEach((e) =>
         E(
@@ -57,29 +65,36 @@ function b() {
         ),
     );
 }
+
 function y(e) {
     E(s.Ay.createFromServer(e));
 }
+
 function O(e) {
     let { skuId: t } = e;
     _.add(t);
 }
+
 function A(e) {
     let { skuId: t, subscriptionPlans: n } = e;
     (p[t] = new Set()), (g[t] = new Set()), n.forEach(y), _.delete(t), h.delete(t);
 }
+
 function v(e) {
     let { giftCode: t } = e;
     null != t.subscription_plan && y(t.subscription_plan);
 }
+
 function S(e) {
     let { skuId: t } = e;
     _.delete(t), h.delete(t);
 }
+
 function I(e) {
     let { entitlements: t } = e;
     for (let e of t) null != e.subscription_plan && y(e.subscription_plan);
 }
+
 function T() {
     (0, o.LP)(f), (0, o.LP)(p), _.clear(), h.clear(), (0, o.LP)(m), (0, o.LP)(g), b();
 }

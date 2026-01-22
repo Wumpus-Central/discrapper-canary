@@ -1,6 +1,12 @@
-n.d(t, { A: () => l }), n(896048), n(321073), n(264879);
+n.d(t, {
+    A: () => l,
+}),
+    n(896048),
+    n(321073),
+    n(264879);
 var r = n(439372),
     i = n(635731);
+
 function a(e, t, n) {
     return (
         t in e
@@ -14,7 +20,7 @@ function a(e, t, n) {
         e
     );
 }
-let s = 1000;
+let s = 1e3;
 class o extends r.A {
     constructor(...e) {
         super(...e),

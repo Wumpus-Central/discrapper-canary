@@ -1,4 +1,6 @@
-t(697509)(r, "__esModule", { value: !0 }),
+t(697509)(r, "__esModule", {
+    value: !0,
+}),
     (r.default = void 0),
     (r.default = {
         abstract: !1,
@@ -33,7 +35,9 @@ t(697509)(r, "__esModule", { value: !0 }),
         requireContextRole: [],
         requiredContextRole: [],
         requiredOwnedElements: [],
-        requiredProps: { "aria-valuenow": null },
+        requiredProps: {
+            "aria-valuenow": null,
+        },
         superClass: [
             ["roletype", "widget", "input"],
             ["roletype", "structure", "range"],

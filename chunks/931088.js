@@ -1,4 +1,7 @@
-n.d(t, { m: () => h }), n(896048);
+n.d(t, {
+    m: () => h,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(793574),
@@ -54,13 +57,13 @@ let h = (e) => {
                         new Promise((e, t) => {
                             setTimeout(() => {
                                 h ? t() : e();
-                            }, 1000);
+                            }, 1e3);
                         }),
                     applyOffer: () =>
                         new Promise((e, t) => {
                             setTimeout(() => {
                                 g ? t() : e();
-                            }, 1000);
+                            }, 1e3);
                         }),
                     pauseDuration: null,
                     setPauseDuration: () => {},

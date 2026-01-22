@@ -1,7 +1,11 @@
-n.r(t), n.d(t, { default: () => a });
+n.r(t),
+    n.d(t, {
+        default: () => a,
+    });
 var r = n(627968);
 n(64700);
 var i = n(397927);
+
 function a(e) {
     let { text: t } = e;
     return (0, r.jsx)("div", {

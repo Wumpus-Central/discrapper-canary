@@ -41,6 +41,7 @@ var r = n(889137),
     h = n(652215),
     m = n(788868),
     g = n(985018);
+
 function E(e, t, n) {
     return (
         t in e
@@ -54,6 +55,7 @@ function E(e, t, n) {
         e
     );
 }
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -99,6 +101,7 @@ var j = (function (e) {
 })({});
 let M = (e, t) => (i.Fr || i.v1 ? 0 : null != e || t ? 2 : 1),
     k = (e) => 0 !== M(e);
+
 function U(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         n = arguments.length > 2 ? arguments[2] : void 0;
@@ -107,6 +110,7 @@ function U(e) {
         .concat(null != t ? t : "", ":")
         .concat(null != n ? n : "");
 }
+
 function G(e) {
     let [t, n, r] = e.split(":");
     return {
@@ -115,6 +119,7 @@ function G(e) {
         giftStyle: "" !== r && null != r ? Number.parseInt(r) : void 0,
     };
 }
+
 function V(e) {
     return e.replace(/[^A-Za-z0-9]/g, "");
 }
@@ -134,6 +139,7 @@ let F = (e) => {
         for (; null != (t = I.exec(e)) && n.size < O; ) n.add(V(t[t.length - 1]));
         return Array.from(n);
     };
+
 function H() {
     let e,
         t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
@@ -170,7 +176,9 @@ async function Y(e) {
                     application_id: r.store_listing.sku.application_id,
                     store_title: r.store_listing.sku.name,
                 },
-                { flush: !0 },
+                {
+                    flush: !0,
+                },
             ),
             r
         );
@@ -184,9 +192,11 @@ async function Y(e) {
         );
     }
 }
+
 function W(e, t) {
     u.default.track(h.HAw.GIFT_CODE_COPIED, b({}, (0, o.A)(t, !1, !1), e.analyticsData));
 }
+
 function K(e, t, n) {
     let { error: r, accepted: i, accepting: a, opened: s, isCustomGift: o } = n;
     return null == r && (i || a || null == e)
@@ -197,21 +207,27 @@ function K(e, t, n) {
             : h.frR.OPEN
         : h.frR.ERROR;
 }
+
 function z(e, t, n) {
     switch (e) {
         case h.frR.ERROR:
             return g.intl.formatToMarkdownString(g.t.JUvC0s, {});
         case h.frR.SUCCESS:
             return t.isSubscription
-                ? g.intl.formatToPlainString(g.t["1C2BG/"], { skuName: n.name })
+                ? g.intl.formatToPlainString(g.t["1C2BG/"], {
+                      skuName: n.name,
+                  })
                 : g.intl.string(g.t["+BNMcF"]);
         case h.frR.CONFIRM:
         default:
             return t.isSubscription
-                ? g.intl.formatToPlainString(g.t["2VN4N9"], { skuName: n.name })
+                ? g.intl.formatToPlainString(g.t["2VN4N9"], {
+                      skuName: n.name,
+                  })
                 : g.intl.string(g.t.RmamAI);
     }
 }
+
 function q(e, t, n) {
     let { isCustomGift: r } = n;
     switch (e) {
@@ -230,6 +246,7 @@ function q(e, t, n) {
             return t.isSubscription ? g.intl.string(g.t.wQ1FHy) : g.intl.string(g.t.OgpR0c);
     }
 }
+
 function X(e) {
     return (0, r.YW)(e)
         .with(
@@ -237,31 +254,44 @@ function X(e) {
                 interval: m.WT.MONTH,
                 premiumSubscriptionType: m.PremiumTypes.TIER_2,
             },
-            () => g.intl.formatToPlainString(g.t["vFfV+J"], { timeInterval: g.intl.string(g.t.FPybU7) }),
+            () =>
+                g.intl.formatToPlainString(g.t["vFfV+J"], {
+                    timeInterval: g.intl.string(g.t.FPybU7),
+                }),
         )
         .with(
             {
                 interval: m.WT.YEAR,
                 premiumSubscriptionType: m.PremiumTypes.TIER_2,
             },
-            () => g.intl.formatToPlainString(g.t["vFfV+J"], { timeInterval: g.intl.string(g.t.tfqrhj) }),
+            () =>
+                g.intl.formatToPlainString(g.t["vFfV+J"], {
+                    timeInterval: g.intl.string(g.t.tfqrhj),
+                }),
         )
         .with(
             {
                 interval: m.WT.MONTH,
                 premiumSubscriptionType: m.PremiumTypes.TIER_1,
             },
-            () => g.intl.formatToPlainString(g.t.gjKbF4, { intervalCount: e.intervalCount }),
+            () =>
+                g.intl.formatToPlainString(g.t.gjKbF4, {
+                    intervalCount: e.intervalCount,
+                }),
         )
         .with(
             {
                 interval: m.WT.YEAR,
                 premiumSubscriptionType: m.PremiumTypes.TIER_1,
             },
-            () => g.intl.formatToPlainString(g.t.GIe7Bw, { intervalCount: e.intervalCount }),
+            () =>
+                g.intl.formatToPlainString(g.t.GIe7Bw, {
+                    intervalCount: e.intervalCount,
+                }),
         )
         .otherwise(() => g.intl.string(g.t["5ayf7w"]));
 }
+
 function Z(e) {
     let {
         step: t,
@@ -278,7 +308,9 @@ function Z(e) {
             return Q(r, i, a, s, o);
         case h.frR.SUCCESS:
             if (null != l) return X(l);
-            return g.intl.formatToPlainString(g.t["3CPsbo"], { skuName: n.name });
+            return g.intl.formatToPlainString(g.t["3CPsbo"], {
+                skuName: n.name,
+            });
         case h.frR.CONFIRM:
         default:
             if (null != l) {
@@ -288,20 +320,27 @@ function Z(e) {
                     intervalCount: l.intervalCount,
                 });
             }
-            return g.intl.formatToPlainString(g.t.l6Ea4Z, { skuName: n.name });
+            return g.intl.formatToPlainString(g.t.l6Ea4Z, {
+                skuName: n.name,
+            });
     }
 }
+
 function Q(e, t, n, r, i) {
     let a = n || r ? void 0 : e,
-        s = g.intl.format(g.t["5zyz9y"], { onGoToLibrary: i });
+        s = g.intl.format(g.t["5zyz9y"], {
+            onGoToLibrary: i,
+        });
     return null != a ? s : null == t ? null : et(t, c.default.getCurrentUser());
 }
+
 function $(e, t, n) {
     let r = t.applicationId,
         i = e.length > 0 ? e : [r],
         a = i.map((e) => n.getLibraryApplication(r, e, !0)).filter(d.Vq);
     return a.length === i.length ? a[0] : null;
 }
+
 function J(e) {
     let t = e.trim().split("/").pop().match(x);
     if (null == t) return null;
@@ -314,6 +353,7 @@ let ee = (e, t) =>
         let n = l.A.getGiftCode(e);
         return null == n || "" === n ? null : n;
     });
+
 function et(e, t) {
     switch (e.code) {
         case h.t02.INVALID_GIFT_SELF_REDEMPTION:

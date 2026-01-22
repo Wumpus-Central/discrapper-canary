@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var i = n(627968);
 n(64700);
 var r = n(311907),
@@ -9,6 +11,7 @@ var r = n(311907),
     c = n(477427),
     u = n(652215),
     d = n(985018);
+
 function g() {
     return [
         {
@@ -25,6 +28,7 @@ function g() {
         },
     ];
 }
+
 function p(e) {
     var t, p;
     let b = (function (e) {
@@ -47,6 +51,7 @@ function p(e) {
                 ),
                 h = A === u.guM.DISABLED,
                 O = (0, a.A)(e.id);
+
             function y(t, n) {
                 l.A.updateGuildNotificationSettings(e.id, t, n);
             }
@@ -61,7 +66,13 @@ function p(e) {
                                     group: "guild-notifications",
                                     id: "".concat(t),
                                     label: n,
-                                    action: () => y({ message_notifications: t }, c.G_.notifications(t)),
+                                    action: () =>
+                                        y(
+                                            {
+                                                message_notifications: t,
+                                            },
+                                            c.G_.notifications(t),
+                                        ),
                                     checked: t === b,
                                 },
                                 t,
@@ -73,20 +84,37 @@ function p(e) {
                             (0, i.jsx)(s.sLh, {
                                 id: "suppress-everyone",
                                 label: d.intl.format(d.t.OWiWAp, {}),
-                                action: () => y({ suppress_everyone: !t }, c.G_.suppressEveryone(!t)),
+                                action: () =>
+                                    y(
+                                        {
+                                            suppress_everyone: !t,
+                                        },
+                                        c.G_.suppressEveryone(!t),
+                                    ),
                                 checked: t,
                             }),
                             (0, i.jsx)(s.sLh, {
                                 id: "suppress-roles",
                                 label: d.intl.string(d.t["O/QdoD"]),
-                                action: () => y({ suppress_roles: !n }, c.G_.suppressRoles(!n)),
+                                action: () =>
+                                    y(
+                                        {
+                                            suppress_roles: !n,
+                                        },
+                                        c.G_.suppressRoles(!n),
+                                    ),
                                 checked: n,
                             }),
                             (0, i.jsx)(s.sLh, {
                                 id: "suppress-highlights",
                                 label: d.intl.string(d.t.gPuteJ),
                                 action: () => {
-                                    y({ notify_highlights: h ? u.guM.ENABLED : u.guM.DISABLED }, c.G_.highlights(h));
+                                    y(
+                                        {
+                                            notify_highlights: h ? u.guM.ENABLED : u.guM.DISABLED,
+                                        },
+                                        c.G_.highlights(h),
+                                    );
                                 },
                                 checked: h,
                             }),
@@ -97,7 +125,13 @@ function p(e) {
                         children: (0, i.jsx)(s.sLh, {
                             id: "mobile-push",
                             label: d.intl.string(d.t.h1DL66),
-                            action: () => y({ mobile_push: !p }, c.G_.mobilePush(!p)),
+                            action: () =>
+                                y(
+                                    {
+                                        mobile_push: !p,
+                                    },
+                                    c.G_.mobilePush(!p),
+                                ),
                             checked: p,
                         }),
                     }),
@@ -151,7 +185,10 @@ function p(e) {
                                   }
                                   return e;
                               })({}, n)),
-                              (s = s = { guildId: e.id }),
+                              (s = s =
+                                  {
+                                      guildId: e.id,
+                                  }),
                               Object.getOwnPropertyDescriptors
                                   ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(s))
                                   : (function (e, t) {

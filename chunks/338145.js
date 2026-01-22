@@ -1,4 +1,7 @@
-i.d(e, { w: () => O }), i(321073);
+i.d(e, {
+    w: () => O,
+}),
+    i(321073);
 var n = i(627968),
     l = i(64700),
     s = i(158954),
@@ -15,6 +18,7 @@ var n = i(627968),
     I = i(985018);
 let g = i(993830),
     c = i(413142);
+
 function N() {
     let t = (0, r.bG)([S.A], () => (0, s.qB1)(S.A.theme));
     return (0, n.jsx)("img", {
@@ -70,7 +74,9 @@ let O = (0, o.E2)(E.X.VOICE_NOISE_SUPPRESSION_SETTING, {
                 );
             }, [S, o]),
             O = S
-                ? I.intl.format(I.t["1q5aTp"], { helpArticle: A.A.getArticleURL(_.MVz.NOISE_SUPPRESSION) })
+                ? I.intl.format(I.t["1q5aTp"], {
+                      helpArticle: A.A.getArticleURL(_.MVz.NOISE_SUPPRESSION),
+                  })
                 : I.intl.string(I.t.OWKjw5);
         return (0, n.jsxs)(s.BJc, {
             direction: "vertical",

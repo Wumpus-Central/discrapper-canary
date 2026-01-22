@@ -26,7 +26,9 @@ let h = (e) => {
                 scaleFontToUserSetting: m = !1,
             } = e,
             { now: g } = (0, p.e)(u),
-            { enabled: E } = f.e.useConfig({ location: "active_timestamp" }),
+            { enabled: E } = f.e.useConfig({
+                location: "active_timestamp",
+            }),
             b = i.useMemo(() => (0, d.W6)(t, g), [t, g]),
             y = i.useRef(b),
             O = i.useRef(b);
@@ -66,7 +68,9 @@ let h = (e) => {
                       : g.created_at;
         return null != E
             ? (0, r.jsx)(h, {
-                  entry: { start: E },
+                  entry: {
+                      start: E,
+                  },
                   textColor: a,
                   hovered: s,
                   bold: f,

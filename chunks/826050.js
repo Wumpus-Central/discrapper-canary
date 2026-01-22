@@ -1,4 +1,7 @@
-n.d(t, { A: () => A }), n(896048);
+n.d(t, {
+    A: () => A,
+}),
+    n(896048);
 var r,
     l = n(627968),
     i = n(64700),
@@ -11,6 +14,7 @@ var r,
     f = n(652215),
     p = n(985018),
     h = n(792728);
+
 function b(e, t, n) {
     return (
         t in e
@@ -30,7 +34,10 @@ let g = {
 };
 class m extends (r = i.PureComponent) {
     componentDidMount() {
-        this.setState({ shown: !0 }), d._.subscribe(f.jej.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus);
+        this.setState({
+            shown: !0,
+        }),
+            d._.subscribe(f.jej.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus);
     }
     componentWillUnmount() {
         this.focusTimeout.stop(), d._.unsubscribe(f.jej.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus);
@@ -59,7 +66,12 @@ class m extends (r = i.PureComponent) {
                             });
                     }
                     return e;
-                })({ toValue: Math.min(e, 250) }, g),
+                })(
+                    {
+                        toValue: Math.min(e, 250),
+                    },
+                    g,
+                ),
             ).start();
     }
     renderArrowGroup(e) {
@@ -134,7 +146,9 @@ class m extends (r = i.PureComponent) {
                               outputRange: ["0px", "".concat(250, "px")],
                           }),
                       },
-                      { translateZ: 0 },
+                      {
+                          translateZ: 0,
+                      },
                   ],
               };
     }

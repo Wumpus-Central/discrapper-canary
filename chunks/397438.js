@@ -1,9 +1,13 @@
-n.d(t, { A: () => y }), n(896048);
+n.d(t, {
+    A: () => y,
+}),
+    n(896048);
 var r,
     i = n(311907),
     a = n(506774),
     s = n(73153),
     o = n(617617);
+
 function l(e, t, n) {
     return (
         t in e
@@ -17,6 +21,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,6 +40,7 @@ function c(e) {
 }
 let u = {},
     d = {};
+
 function f() {
     var e, t, n, r, i, a;
     let s = o.A.settings;
@@ -44,23 +50,29 @@ function f() {
         animateStickers: null == (a = s.textAndImages) || null == (i = a.animateStickers) ? void 0 : i.value,
     };
 }
+
 function p() {
     return (d = f()), !1;
 }
+
 function _() {
     u = {};
 }
+
 function h() {
     u = {};
 }
+
 function m(e) {
     let { settings: t } = e;
     u = c({}, u, t);
 }
+
 function g(e) {
     let { settings: t } = e;
     for (let e of t) delete u[e];
 }
+
 function E() {
     let e = f(),
         t = !1;

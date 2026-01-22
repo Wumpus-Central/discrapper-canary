@@ -1,4 +1,7 @@
-n.d(t, { A: () => F }), n(896048);
+n.d(t, {
+    A: () => F,
+}),
+    n(896048);
 var r,
     i = n(627968),
     a = n(64700),
@@ -27,6 +30,7 @@ var r,
     N = n(985018),
     R = n(166789),
     w = n(124953);
+
 function P(e, t, n) {
     return (
         t in e
@@ -40,6 +44,7 @@ function P(e, t, n) {
         e
     );
 }
+
 function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -56,6 +61,7 @@ function D(e) {
     }
     return e;
 }
+
 function x(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -68,6 +74,7 @@ function x(e, t) {
     }
     return n;
 }
+
 function L(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -79,6 +86,7 @@ function L(e, t) {
         e
     );
 }
+
 function j(e, t) {
     if (null == e) return {};
     var n,
@@ -95,6 +103,7 @@ function j(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function M(e, t) {
     if (null == e) return {};
     var n,
@@ -106,6 +115,7 @@ function M(e, t) {
     return i;
 }
 let k = 10;
+
 function U(e) {
     let { payments: t, locale: n, compactMode: r, numPages: s } = e,
         l = a.useRef(null),
@@ -114,7 +124,10 @@ function U(e) {
         m = t.slice(c * k, (c + 1) * k);
     a.useEffect(() => {
         var e;
-        null == (e = l.current) || e.scrollTo({ to: 0 });
+        null == (e = l.current) ||
+            e.scrollTo({
+                to: 0,
+            });
     }, [c]);
     let E = a.useCallback(
             (e) => {
@@ -187,7 +200,9 @@ class G extends (r = a.PureComponent) {
                 children: [
                     (0, i.jsx)("div", {
                         className: R.BF,
-                        children: N.intl.format(N.t["6mIX6s"], { paymentGatewayName: C.qm[e.paymentGateway] }),
+                        children: N.intl.format(N.t["6mIX6s"], {
+                            paymentGatewayName: C.qm[e.paymentGateway],
+                        }),
                     }),
                     (0, i.jsx)("div", {
                         className: R.Q2,
@@ -251,12 +266,14 @@ class G extends (r = a.PureComponent) {
         super(...e), P(this, "scrollerRef", a.createRef());
     }
 }
+
 function V(e) {
     var t;
     let n = e.skuId,
         r = null == (t = e.subscription) ? void 0 : t.items[0].planId;
     return !(null == n || null == r || Object.values(T.pe).includes(n) || (0, v.ys)(r));
 }
+
 function F(e) {
     let t = (0, d.bG)([y.A], () => y.A.getPayments()),
         n = (0, d.bG)([A.A], () => A.A.getPremiumTypeSubscription()),
@@ -299,4 +316,6 @@ function F(e) {
         )
     );
 }
-P(G, "defaultProps", { compactMode: !1 });
+P(G, "defaultProps", {
+    compactMode: !1,
+});

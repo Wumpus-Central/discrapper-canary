@@ -37,6 +37,7 @@ var r = n(627968),
     T = n(652215),
     C = n(985018),
     N = n(756302);
+
 function R(e, t, n) {
     return (
         t in e
@@ -50,6 +51,7 @@ function R(e, t, n) {
         e
     );
 }
+
 function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -66,6 +68,7 @@ function w(e) {
     }
     return e;
 }
+
 function P(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -78,6 +81,7 @@ function P(e, t) {
     }
     return n;
 }
+
 function D(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -89,6 +93,7 @@ function D(e, t) {
         e
     );
 }
+
 function x(e, t) {
     if (null == e) return {};
     var n,
@@ -105,6 +110,7 @@ function x(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function L(e, t) {
     if (null == e) return {};
     var n,
@@ -115,15 +121,20 @@ function L(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function j(e) {
     let { message: t, footer: n, headerClassName: i, showsCloseWindowText: a, spinner: o } = e;
     return (
-        (0, _.HU)({ location: C.intl.string(C.t["3S2494"]) }),
+        (0, _.HU)({
+            location: C.intl.string(C.t["3S2494"]),
+        }),
         (0, r.jsxs)("div", {
             className: N.iE,
             children: [
                 o ? (0, r.jsx)(f.y$y, {}) : null,
-                (0, r.jsx)("div", { className: s()(N.wx, i) }),
+                (0, r.jsx)("div", {
+                    className: s()(N.wx, i),
+                }),
                 (0, r.jsx)(f.Heading, {
                     variant: "heading-lg/bold",
                     className: N.Qq,
@@ -142,9 +153,16 @@ function j(e) {
         })
     );
 }
+
 function M(e) {
-    return (0, r.jsx)(j, D(w({}, e), { headerClassName: N.nQ }));
+    return (0, r.jsx)(
+        j,
+        D(w({}, e), {
+            headerClassName: N.nQ,
+        }),
+    );
 }
+
 function k(e) {
     let { guild: t, application: n } = e,
         a = x(e, ["guild", "application"]),
@@ -171,8 +189,12 @@ function k(e) {
                 (null == s || s(),
                 null != l && (0, m.pX)(""),
                 setImmediate(() => {
-                    v._.dispatchToLastSubscribed(T.jej.OPEN_APP_LAUNCHER, { applicationId: n.id }),
-                        O.default.track(T.HAw.OAUTH2_AUTHORIZE_SUCCESS_OPEN_APP_CLICKED, { application_id: n.id });
+                    v._.dispatchToLastSubscribed(T.jej.OPEN_APP_LAUNCHER, {
+                        applicationId: n.id,
+                    }),
+                        O.default.track(T.HAw.OAUTH2_AUTHORIZE_SUCCESS_OPEN_APP_CLICKED, {
+                            application_id: n.id,
+                        });
                 }));
         }, [null == n ? void 0 : n.id, s, l]),
         p = (0, u.bG)([y.A, E.A], () => E.A.getChannel(y.A.getChannelId())),
@@ -194,7 +216,9 @@ function k(e) {
                     text:
                         (null == t ? void 0 : t.name.length) > 30
                             ? C.intl.string(C.t.M35zFB)
-                            : C.intl.format(C.t.UdYYP3, { guildName: null == t ? void 0 : t.name }),
+                            : C.intl.format(C.t.UdYYP3, {
+                                  guildName: null == t ? void 0 : t.name,
+                              }),
                     onClick: o,
                 }),
             S &&
@@ -221,12 +245,15 @@ function k(e) {
         )
     );
 }
+
 function U(e) {
     let { guild: t, application: n } = e,
         a = x(e, ["guild", "application"]),
         s = C.intl.string(C.t.se5gLj);
     i.useEffect(() => {
-        O.default.track(T.HAw.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, { application_id: null == n ? void 0 : n.id });
+        O.default.track(T.HAw.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, {
+            application_id: null == n ? void 0 : n.id,
+        });
     }, [null == n ? void 0 : n.id]);
     let o = i.useMemo(
             () =>
@@ -236,7 +263,9 @@ function U(e) {
                               installedApplicationName: null == n ? void 0 : n.name,
                               guildName: null == t ? void 0 : t.name,
                           })
-                        : C.intl.format(C.t.vTVC5T, { installedApplicationName: null == n ? void 0 : n.name })
+                        : C.intl.format(C.t.vTVC5T, {
+                              installedApplicationName: null == n ? void 0 : n.name,
+                          })
                     : C.intl.string(C.t["Dp+rgP"]),
             [n, t],
         ),
@@ -256,15 +285,21 @@ function U(e) {
         ),
     );
 }
+
 function G(e) {
     let { application: t } = e,
         n = x(e, ["application"]),
         { onClose: a } = n;
     i.useEffect(() => {
-        O.default.track(T.HAw.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, { application_id: t.id });
+        O.default.track(T.HAw.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, {
+            application_id: t.id,
+        });
     }, [t.id]);
     let s = i.useCallback(() => {
-        null == a || a(), O.default.track(T.HAw.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, { application_id: t.id });
+        null == a || a(),
+            O.default.track(T.HAw.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, {
+                application_id: t.id,
+            });
     }, [a, t.id]);
     return (0, r.jsx)(
         I.f,
@@ -296,12 +331,16 @@ function G(e) {
                             (0, r.jsx)(f.Heading, {
                                 variant: "heading-xl/semibold",
                                 color: "text-strong",
-                                children: C.intl.format(C.t["1Q+p1k"], { appName: t.name }),
+                                children: C.intl.format(C.t["1Q+p1k"], {
+                                    appName: t.name,
+                                }),
                             }),
                             (0, r.jsx)(d.E, {
                                 variant: "text-md/normal",
                                 color: "text-muted",
-                                children: C.intl.format(C.t.Mr7x5U, { appName: t.name }),
+                                children: C.intl.format(C.t.Mr7x5U, {
+                                    appName: t.name,
+                                }),
                             }),
                         ],
                     }),
@@ -310,6 +349,7 @@ function G(e) {
         }),
     );
 }
+
 function V(e) {
     return (0, r.jsx)(
         I.f,
@@ -325,9 +365,16 @@ function V(e) {
         }),
     );
 }
+
 function F(e) {
-    return (0, r.jsx)(j, D(w({}, e), { headerClassName: N.gW }));
+    return (0, r.jsx)(
+        j,
+        D(w({}, e), {
+            headerClassName: N.gW,
+        }),
+    );
 }
+
 function B() {
     var e, t;
     let n = (0, l.zy)();
@@ -344,6 +391,7 @@ function B() {
         }),
     });
 }
+
 function H(e) {
     var t, n;
     let { location: a } = e;

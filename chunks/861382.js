@@ -1,10 +1,14 @@
-n.d(t, { A: () => b }), n(896048);
+n.d(t, {
+    A: () => b,
+}),
+    n(896048);
 var r,
     i = n(311907),
     a = n(73153),
     s = n(761640),
     o = n(309010),
     l = n(168186);
+
 function c(e, t, n) {
     return (
         t in e
@@ -18,6 +22,7 @@ function c(e, t, n) {
         e
     );
 }
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,9 +40,11 @@ function u(e) {
     return e;
 }
 let d = {};
+
 function f() {
     return (d = {}), !0;
 }
+
 function p(e) {
     return (
         e in d ||
@@ -53,6 +60,7 @@ function p(e) {
         d[e]
     );
 }
+
 function _(e) {
     var t;
     let {
@@ -104,6 +112,7 @@ function _(e) {
         !0
     );
 }
+
 function h(e) {
     var t, n;
     let { channelId: r, commandId: i } = e,
@@ -115,6 +124,7 @@ function h(e) {
         ((a.activeCommand = null), (a.activeOptionName = null), (a.preferredCommandId = i), (a.optionStates = {}), !0)
     );
 }
+
 function m(e) {
     let { channelId: t, changedOptionStates: n } = e,
         r = p(t),
@@ -154,6 +164,7 @@ function m(e) {
     }
     return (r.optionStates = i), !0;
 }
+
 function g(e) {
     let { channelId: t, preferredCommandId: n, command: r, section: i, location: a, changedOptionStates: s } = e,
         o = _({
@@ -183,7 +194,12 @@ class E extends (r = i.Ay.Store) {
                 if (null == e) return (d = {}), !0;
                 let t = s.Ay.getCurrentSidebarChannelId(e);
                 if (null != t && t in d) return !1;
-                d = e in d ? { [e]: d[e] } : {};
+                d =
+                    e in d
+                        ? {
+                              [e]: d[e],
+                          }
+                        : {};
             });
     }
     getActiveCommand(e) {

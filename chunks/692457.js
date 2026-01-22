@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(627968);
 n(64700);
 var l = n(311907),
@@ -8,6 +10,7 @@ var l = n(311907),
     c = n(961350),
     s = n(697470),
     d = n(985018);
+
 function u(e, t) {
     let n = (0, l.bG)([c.default], () => c.default.getId()),
         u = (0, a.Id)(t),

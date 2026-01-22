@@ -13,6 +13,7 @@ var r = n(136722),
     a = n(867051),
     s = n(176201),
     o = n(34457);
+
 function l(e, t, n) {
     return (
         t in e
@@ -26,6 +27,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,6 +44,7 @@ function c(e) {
     }
     return e;
 }
+
 function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -54,6 +57,7 @@ function u(e, t) {
     }
     return n;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -65,11 +69,13 @@ function d(e, t) {
         e
     );
 }
+
 function f(e, t) {
     let n = {};
     for (let r of t) n[r.id] = p(e, r);
     return n;
 }
+
 function p(e, t) {
     var n, a, o, l, c;
     return _({
@@ -93,9 +99,11 @@ function p(e, t) {
         version: t.version,
     });
 }
+
 function _(e) {
     return (0, a.yE)(o.xh, e);
 }
+
 function h(e, t) {
     var n, a, o, l, c;
     return _({
@@ -119,16 +127,20 @@ function h(e, t) {
         version: t.version,
     });
 }
+
 function m(e, t) {
     let n = {};
     for (let r in t) n[r] = h(e, t[r]);
     return n;
 }
+
 function g(e) {
     let t = {};
     for (let n in e) {
         let r = e[n];
-        t[n] = d(c({}, r), { permissions: r.permissions.toString() });
+        t[n] = d(c({}, r), {
+            permissions: r.permissions.toString(),
+        });
     }
     return t;
 }

@@ -1,4 +1,6 @@
-n.d(t, { default: () => J });
+n.d(t, {
+    default: () => J,
+});
 var i = n(627968);
 n(64700);
 var r = n(311907),
@@ -82,7 +84,9 @@ let J = (0, a.A)(
                     channelId: o.id,
                     context: a,
                 }),
-                er = (0, y.A)({ user: n }),
+                er = (0, y.A)({
+                    user: n,
+                }),
                 el = (0, B.A)(n.id),
                 es = (0, N.A)(n.id, o.id),
                 eo = (0, V.A)(n.id),
@@ -92,11 +96,19 @@ let J = (0, a.A)(
                     guildId: o.getGuildId(),
                 }),
                 ed = (0, M.A)(n.id, o.id),
-                ec = (0, L.A)({ user: n }),
+                ec = (0, L.A)({
+                    user: n,
+                }),
                 eu = (0, c.A)(null, n),
-                eA = (0, O.A)({ user: n }),
-                eb = (0, D.A)({ user: n }),
-                eg = (0, T.A)({ user: n }),
+                eA = (0, O.A)({
+                    user: n,
+                }),
+                eb = (0, D.A)({
+                    user: n,
+                }),
+                eg = (0, T.A)({
+                    user: n,
+                }),
                 ep = (0, P.A)({
                     user: n,
                     location: "GroupDMUserContextMenu",
@@ -136,16 +148,23 @@ let J = (0, a.A)(
                     !eI &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [
-                                (0, i.jsx)(l.rXV, { children: ex }),
+                                (0, i.jsx)(l.rXV, {
+                                    children: ex,
+                                }),
                                 (0, i.jsxs)(l.rXV, {
                                     children: [z && H, u && K, et, en, !eP && ee, z && ei, z && er, eh],
                                 }),
-                                X && (0, i.jsx)(l.rXV, { children: el }),
+                                X &&
+                                    (0, i.jsx)(l.rXV, {
+                                        children: el,
+                                    }),
                                 ew &&
                                     (0, i.jsxs)(l.rXV, {
                                         children: [!eP && es, eC],
                                     }),
-                                (0, i.jsx)(l.rXV, { children: z && eu }),
+                                (0, i.jsx)(l.rXV, {
+                                    children: z && eu,
+                                }),
                                 (0, i.jsxs)(l.rXV, {
                                     children: [
                                         X && eo,
@@ -167,11 +186,15 @@ let J = (0, a.A)(
                                     }),
                             ],
                         }),
-                    (0, i.jsx)(l.rXV, { children: em }),
+                    (0, i.jsx)(l.rXV, {
+                        children: em,
+                    }),
                 ],
             });
         },
-        { object: X.ZSU.CONTEXT_MENU },
+        {
+            object: X.ZSU.CONTEXT_MENU,
+        },
     ),
     [u.A.CONTEXT_MENU, u.A.GROUP_DM_USER_MENU],
 );

@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var r = n(627968);
 n(64700);
 var l = n(33851),
@@ -10,6 +12,7 @@ var l = n(33851),
     d = n(221950),
     u = n(487518),
     C = n(985018);
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,6 +38,7 @@ function f(e) {
     }
     return e;
 }
+
 function b(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -53,6 +57,7 @@ function b(e, t) {
         e
     );
 }
+
 function m(e) {
     let { guildId: t, onClose: n } = e,
         l = (0, s.bG)([c.A], () => c.A.getSearchStateByGuildId(t), [t], i()),

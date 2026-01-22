@@ -1,4 +1,6 @@
-n.d(t, { y: () => s });
+n.d(t, {
+    y: () => s,
+});
 var r = n(64700),
     i = n(600975),
     l = n(652215);
@@ -6,12 +8,16 @@ let a = (0, i.C)({
         kind: "guild",
         id: "2021-10_study_group",
         label: "Student hub study group",
-        defaultConfig: { enableStudyGroup: !1 },
+        defaultConfig: {
+            enableStudyGroup: !1,
+        },
         treatments: [
             {
                 id: 1,
                 label: "Enables study group sidebar",
-                config: { enableStudyGroup: !0 },
+                config: {
+                    enableStudyGroup: !0,
+                },
             },
         ],
     }),

@@ -1,4 +1,7 @@
-n.d(t, { A: () => g }), n(896048);
+n.d(t, {
+    A: () => g,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -6,6 +9,7 @@ var r = n(627968),
     o = n(397927),
     l = n(235986),
     c = n(784550);
+
 function u(e, t, n) {
     return (
         t in e
@@ -19,6 +23,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,6 +40,7 @@ function d(e) {
     }
     return e;
 }
+
 function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -47,6 +53,7 @@ function f(e, t) {
     }
     return n;
 }
+
 function p(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -58,6 +65,7 @@ function p(e, t) {
         e
     );
 }
+
 function _(e, t) {
     if (null == e) return {};
     var n,
@@ -74,6 +82,7 @@ function _(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function h(e, t) {
     if (null == e) return {};
     var n,
@@ -86,10 +95,16 @@ function h(e, t) {
 }
 class m extends i.PureComponent {
     componentDidUpdate(e) {
-        if (this.props.formError !== e.formError) this.setState({ changedSinceError: new Set() });
+        if (this.props.formError !== e.formError)
+            this.setState({
+                changedSinceError: new Set(),
+            });
         else if (null != this.props.formError) {
             let { changedSinceError: t } = this.state;
-            this.getChangedValues(e).forEach((e) => t.add(e)), this.setState({ changedSinceError: t });
+            this.getChangedValues(e).forEach((e) => t.add(e)),
+                this.setState({
+                    changedSinceError: t,
+                });
         }
     }
     getChangedValues(e) {
@@ -111,7 +126,9 @@ class m extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            u(this, "state", { changedSinceError: new Set() }),
+            u(this, "state", {
+                changedSinceError: new Set(),
+            }),
             u(this, "renderFormSection", (e) => {
                 let t = this.props,
                     { values: n, onFieldChange: i, onFieldFocus: a, onFieldBlur: l, layout: c } = t,

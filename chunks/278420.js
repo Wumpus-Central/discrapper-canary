@@ -1,7 +1,9 @@
 function r(e) {
     return e && "object" == typeof e && "default" in e ? e.default : e;
 }
-Object.defineProperty(t, "__esModule", { value: !0 });
+Object.defineProperty(t, "__esModule", {
+    value: !0,
+});
 var i = r(n(585458)),
     a = n(442696),
     s = n(340287),
@@ -11,6 +13,7 @@ var i = r(n(585458)),
     u = n(843455),
     d = r(n(678456)),
     f = /^--/;
+
 function p(e, t) {
     return null == t || "boolean" == typeof t || "" === t
         ? ""
@@ -19,6 +22,7 @@ function p(e, t) {
           : t + "px";
 }
 var _ = {};
+
 function h(e, t) {
     if (!e.nodeType || !e.setAttribute) return !1;
     var n = "filter" === e.nodeName || (e.parentNode && "filter" === e.parentNode.nodeName),

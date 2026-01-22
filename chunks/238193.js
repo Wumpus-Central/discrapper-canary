@@ -14,6 +14,7 @@ var a = n(110259),
     d = n(624622),
     u = n(652215),
     m = n(835002);
+
 function p(e, t) {
     var n;
     let a = d.A.getUser(t);
@@ -31,7 +32,9 @@ function p(e, t) {
 async function h(e, t) {
     return await o.A.get({
         url: u.Rsh.GENERATED_POOL_BY_ID(e),
-        trackedActionData: { event: a.NetworkActionNames.USER_LOGIN },
+        trackedActionData: {
+            event: a.NetworkActionNames.USER_LOGIN,
+        },
         rejectWithError: !1,
     })
         .then((e) => {
@@ -46,6 +49,7 @@ async function h(e, t) {
         })
         .catch(() => (r.A.showFailedToast(m.OB.GENERIC_ERROR), null));
 }
+
 function f(e) {
     l.h.dispatch({
         type: "GENERATED_POOL_REMOVE_FROM_LIST",

@@ -17,7 +17,7 @@ var r = n(589841),
         duplicates: "combine",
         ignoreQueryPrefix: !1,
         interpretNumericEntities: !1,
-        parameterLimit: 1000,
+        parameterLimit: 1e3,
         parseArrays: !0,
         plainObjects: !1,
         strictDepth: !1,
@@ -44,7 +44,9 @@ var r = n(589841),
     c = "utf8=%26%2310003%3B",
     u = "utf8=%E2%9C%93",
     d = function (e, t) {
-        var n = { __proto__: null },
+        var n = {
+                __proto__: null,
+            },
             d = t.ignoreQueryPrefix ? e.replace(/^\?/, "") : e;
         d = d.replace(/%5B/gi, "[").replace(/%5D/gi, "]");
         var f = t.parameterLimit === 1 / 0 ? void 0 : t.parameterLimit,
@@ -92,7 +94,11 @@ var r = n(589841),
             if ("[]" === d && n.parseArrays)
                 u = n.allowEmptyArrays && ("" === o || (n.strictNullHandling && null === o)) ? [] : r.combine([], o);
             else {
-                u = n.plainObjects ? { __proto__: null } : {};
+                u = n.plainObjects
+                    ? {
+                          __proto__: null,
+                      }
+                    : {};
                 var f = "[" === d.charAt(0) && "]" === d.charAt(d.length - 1) ? d.slice(1, -1) : d,
                     p = n.decodeDotInKeys ? f.replace(/%2E/g, ".") : f,
                     _ = parseInt(p, 10);
@@ -100,7 +106,9 @@ var r = n(589841),
                     ? !isNaN(_) && d !== p && String(_) === p && _ >= 0 && n.parseArrays && _ <= n.arrayLimit
                         ? ((u = [])[_] = o)
                         : "__proto__" !== p && (u[p] = o)
-                    : (u = { 0: o });
+                    : (u = {
+                          0: o,
+                      });
             }
             o = u;
         }
@@ -176,10 +184,19 @@ var r = n(589841),
     };
 e.exports = function (e, t) {
     var n = _(t);
-    if ("" === e || null == e) return n.plainObjects ? { __proto__: null } : {};
+    if ("" === e || null == e)
+        return n.plainObjects
+            ? {
+                  __proto__: null,
+              }
+            : {};
     for (
         var i = "string" == typeof e ? d(e, n) : e,
-            a = n.plainObjects ? { __proto__: null } : {},
+            a = n.plainObjects
+                ? {
+                      __proto__: null,
+                  }
+                : {},
             s = Object.keys(i),
             o = 0;
         o < s.length;

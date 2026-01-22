@@ -1,4 +1,6 @@
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});
 var r = {};
 r = {
     ascending: "ascendente",
@@ -9,5 +11,5 @@ r = {
     resizerDescription: "Prima Enter para iniciar o redimensionamento",
     select: "Selecionar",
     selectAll: "Selecionar tudo",
-    sortable: "Coluna ordenável",
+    sortable: "Coluna orden\xe1vel",
 };

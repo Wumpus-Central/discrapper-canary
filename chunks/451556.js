@@ -1,4 +1,6 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(627968);
 n(64700);
 var l = n(311907),
@@ -6,6 +8,7 @@ var l = n(311907),
     a = n(928658),
     s = n(734057),
     o = n(985018);
+
 function c(e, t) {
     let n = (0, l.bG)([s.A], () => s.A.getChannel(t)),
         c = null == n ? void 0 : n.getGuildId();

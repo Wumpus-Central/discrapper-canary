@@ -1,4 +1,7 @@
-n.d(t, { A: () => ec }), n(896048);
+n.d(t, {
+    A: () => ec,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -53,6 +56,7 @@ var r = n(627968),
     ee = n(985018),
     et = n(443416),
     en = n(638990);
+
 function er(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -78,6 +82,7 @@ function er(e) {
     }
     return e;
 }
+
 function ei(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -96,6 +101,7 @@ function ei(e, t) {
         e
     );
 }
+
 function el() {
     let e = i.useRef(null),
         t = (0, Y.W)(),
@@ -105,7 +111,9 @@ function el() {
         u = i.useCallback(() => {
             (0, p.showToast)((0, p.createToast)(ee.intl.string(ee.t["EDYbS+"]), p.ToastType.FAILURE));
         }, []),
-        { rejectAll: d } = (0, H.t)({ onError: u }),
+        { rejectAll: d } = (0, H.t)({
+            onError: u,
+        }),
         f = (0, m.A)("message-requests-list"),
         { channelId: h } = (0, F.N)(),
         g = i.useCallback(() => {
@@ -143,7 +151,9 @@ function el() {
                         className: et.Gf,
                         children: [
                             t > 0
-                                ? ee.intl.formatToPlainString(ee.t.rA4iWY, { count: t })
+                                ? ee.intl.formatToPlainString(ee.t.rA4iWY, {
+                                      count: t,
+                                  })
                                 : ee.intl.string(ee.t.flPU6g),
                             c && t > 0
                                 ? (0, r.jsxs)(r.Fragment, {
@@ -153,7 +163,7 @@ function el() {
                                               variant: "eyebrow",
                                               color: "text-default",
                                               tag: "span",
-                                              children: "\u2022",
+                                              children: "•",
                                           }),
                                           (0, r.jsx)(p.QWc, {
                                               onClick: g,
@@ -170,8 +180,14 @@ function el() {
                 ),
             [t, g, c],
         );
-    return (n.length !== t && S.A.increment({ name: o.K.MESSAGE_REQUEST_COUNT_DRIFT }), 0 === n.length)
-        ? (0, r.jsx)(W.A, { section: X.zz.REQUESTS })
+    return (n.length !== t &&
+        S.A.increment({
+            name: o.K.MESSAGE_REQUEST_COUNT_DRIFT,
+        }),
+    0 === n.length)
+        ? (0, r.jsx)(W.A, {
+              section: X.zz.REQUESTS,
+          })
         : (0, r.jsx)(s.hD, {
               navigator: f,
               children: (0, r.jsx)(s.PR, {
@@ -245,6 +261,7 @@ function el() {
               }),
           });
 }
+
 function ea(e) {
     let { pageWidth: t, onSidebarResize: n } = e,
         i = (0, c.bG)([R.Ay], () => R.Ay.getSidebarState(R.fe)),
@@ -338,6 +355,7 @@ let es = (e) => {
               },
           });
 };
+
 function eo(e) {
     let { section: t } = e;
     return t === X.zz.SPAM ? (0, r.jsx)(Q.A, {}) : (0, r.jsx)(el, {});
@@ -348,8 +366,12 @@ let ec = (0, h.A)(function (e) {
     (0, g.Ay)(() => {
         f.I(Z.BVt.MESSAGE_REQUESTS),
             (0, j.d)("message-requests"),
-            k.default.track(Z.HAw.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }),
-            S.A.increment({ name: o.K.MESSAGE_REQUEST_VIEW });
+            k.default.track(Z.HAw.MESSAGE_REQUESTS_VIEWED, {
+                num_message_requests: n,
+            }),
+            S.A.increment({
+                name: o.K.MESSAGE_REQUEST_VIEW,
+            });
     });
     let l = (0, c.bG)([x.A], () => x.A.theme),
         s = (0, z.I)(),
@@ -371,7 +393,9 @@ let ec = (0, h.A)(function (e) {
             I(e);
         };
     return (
-        (0, O.HU)({ location: ee.intl.string(ee.t.e7GWjQ) }),
+        (0, O.HU)({
+            location: ee.intl.string(ee.t.e7GWjQ),
+        }),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)("div", {
@@ -416,7 +440,9 @@ let ec = (0, h.A)(function (e) {
                                                     children:
                                                         0 === s
                                                             ? ee.intl.string(ee.t.ulKXHp)
-                                                            : ee.intl.formatToPlainString(ee.t["5jtrlZ"], { count: s }),
+                                                            : ee.intl.formatToPlainString(ee.t["5jtrlZ"], {
+                                                                  count: s,
+                                                              }),
                                                 }),
                                             ],
                                         }),
@@ -425,7 +451,9 @@ let ec = (0, h.A)(function (e) {
                         }),
                         (0, r.jsx)("div", {
                             className: en.Qs,
-                            children: (0, r.jsx)(eo, { section: y }),
+                            children: (0, r.jsx)(eo, {
+                                section: y,
+                            }),
                         }),
                     ],
                 }),

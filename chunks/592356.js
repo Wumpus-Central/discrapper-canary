@@ -16,6 +16,7 @@ var r = n(64700),
     u = n(916023),
     d = n(652215);
 let f = 6;
+
 function p(e) {
     return new s.A({
         sku_id: e.id,
@@ -24,6 +25,7 @@ function p(e) {
         sku: e,
     });
 }
+
 function _(e) {
     let { applicationId: t, numItems: n, userIds: a, isEligible: s, includeWishlists: o } = e,
         u = null == a ? void 0 : a.slice(0, l.g9),
@@ -58,11 +60,18 @@ function _(e) {
         }, [d, n])
     );
 }
+
 function h(e) {
     let { guildId: t, numItems: n, isEligible: a } = e,
         s = (0, i.bG)([c.A], () => (null != t ? c.A.getStorefrontData(t) : void 0));
     r.useEffect(() => {
-        a && null != t && null == c.A.getStorefrontData(t) && 0 !== n && (0, l.Rw)(t, { eager: !1 });
+        a &&
+            null != t &&
+            null == c.A.getStorefrontData(t) &&
+            0 !== n &&
+            (0, l.Rw)(t, {
+                eager: !1,
+            });
     }, [t, n, a]);
     let u = r.useMemo(() => {
             if (null == s || null == s.storefront || "loading" === s.state || "partially-fetched" === s.state)
@@ -95,6 +104,7 @@ function h(e) {
         skuIdToUserIdsReasons: {},
     };
 }
+
 function m(e) {
     let {
             guildId: t,
@@ -104,7 +114,9 @@ function m(e) {
             userIds: o,
             includeWishlists: l = !1,
         } = e,
-        c = (0, u.kt)({ location: i }),
+        c = (0, u.kt)({
+            location: i,
+        }),
         d = null != o && o.length > 0,
         [p, m] = r.useState(o);
     r.useEffect(() => {

@@ -13,9 +13,11 @@ var r = n(58149),
 n(661191), n(226139);
 var o = n(652215),
     l = n(985018);
+
 function c(e) {
     return e;
 }
+
 function u(e) {
     let {
             username: t,
@@ -33,6 +35,7 @@ function u(e) {
         });
     return l.intl.format(s, o);
 }
+
 function d(e) {
     let {
             username: t,
@@ -50,6 +53,7 @@ function d(e) {
         });
     return l.intl.formatToParts(s, o);
 }
+
 function f(e, t) {
     var n, r;
     let i = a.A.getGuild(e),
@@ -62,6 +66,7 @@ function f(e, t) {
         isRenewal: null != (r = null == t ? void 0 : t.is_renewal) && r,
     };
 }
+
 function p(e) {
     let {
             username: t,
@@ -83,6 +88,7 @@ function p(e) {
         },
     };
 }
+
 function _(e) {
     let t,
         {
@@ -105,9 +111,11 @@ function _(e) {
         })
     );
 }
+
 function h(e) {
     return (0, i.w)(e);
 }
+
 function m(e, t, n, i) {
     var a;
     r.Ay.trackWithMetadata(o.HAw.ROLE_SUBSCRIPTION_PURCHASE_SYSTEM_MESSAGE_CLICKED, {
@@ -118,6 +126,7 @@ function m(e, t, n, i) {
         role_subscription_listing_id: i,
     });
 }
+
 function g(e, t) {
     var n;
     return {

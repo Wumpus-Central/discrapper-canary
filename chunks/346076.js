@@ -1,4 +1,7 @@
-n.d(t, { A: () => f }), n(228524);
+n.d(t, {
+    A: () => f,
+}),
+    n(228524);
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -8,6 +11,7 @@ var i = n(397927),
     c = n(348437),
     o = n(80098),
     d = n(142699);
+
 function u(e) {
     let { imageSrc: t, description: n } = e;
     return (0, r.jsxs)("div", {
@@ -32,6 +36,7 @@ function u(e) {
         ],
     });
 }
+
 function f() {
     let e = [
         {
@@ -54,7 +59,9 @@ function f() {
                 color: "text-strong",
                 children: s.intl.string(s.t.R9rNIk),
             }),
-            (0, r.jsx)(i.hKd, { size: 24 }),
+            (0, r.jsx)(i.hKd, {
+                size: 24,
+            }),
             (0, r.jsx)("div", {
                 className: a.LL,
                 children: e.map((e) =>
@@ -68,11 +75,15 @@ function f() {
                     ),
                 ),
             }),
-            (0, r.jsx)(i.hKd, { size: 24 }),
+            (0, r.jsx)(i.hKd, {
+                size: 24,
+            }),
             (0, r.jsx)(i.Text, {
                 variant: "text-sm/normal",
                 color: "text-default",
-                children: s.intl.format(s.t.oxW30N, { creatorPortalUrl: l.nd }),
+                children: s.intl.format(s.t.oxW30N, {
+                    creatorPortalUrl: l.nd,
+                }),
             }),
         ],
     });

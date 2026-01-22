@@ -1,4 +1,6 @@
-n.d(t, { P: () => g });
+n.d(t, {
+    P: () => g,
+});
 var r = n(627968),
     i = n(64700),
     a = n(397927),
@@ -9,6 +11,7 @@ var r = n(627968),
     u = n(866485),
     d = n(981036),
     f = n(954848);
+
 function p(e, t, n) {
     return (
         t in e
@@ -22,6 +25,7 @@ function p(e, t, n) {
         e
     );
 }
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -64,7 +68,9 @@ let h = (e) => (0, r.jsx)(m, _({}, e)),
         return n
             ? (0, r.jsx)("div", {
                   className: f.D,
-                  children: (0, r.jsx)(a.y$y, { type: a.y$y.Type.WANDERING_CUBES }),
+                  children: (0, r.jsx)(a.y$y, {
+                      type: a.y$y.Type.WANDERING_CUBES,
+                  }),
               })
             : (0, r.jsxs)(r.Fragment, {
                   children: [
@@ -75,8 +81,16 @@ let h = (e) => (0, r.jsx)(m, _({}, e)),
                                   direction: "vertical",
                                   gap: 8,
                                   children: [
-                                      null != p ? (0, r.jsx)(d.Wg, { message: p }) : null,
-                                      null != h ? (0, r.jsx)(c.A, { message: h }) : null,
+                                      null != p
+                                          ? (0, r.jsx)(d.Wg, {
+                                                message: p,
+                                            })
+                                          : null,
+                                      null != h
+                                          ? (0, r.jsx)(c.A, {
+                                                message: h,
+                                            })
+                                          : null,
                                   ],
                               }),
                               (0, r.jsxs)("div", {

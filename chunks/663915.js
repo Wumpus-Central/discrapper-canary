@@ -1,4 +1,10 @@
-n.d(t, { A: () => m }), n(864466), n(443073), n(321073), n(896048);
+n.d(t, {
+    A: () => m,
+}),
+    n(864466),
+    n(443073),
+    n(321073),
+    n(896048);
 var l = n(64700),
     r = n(735438),
     i = n.n(r),
@@ -11,6 +17,7 @@ var l = n(64700),
     f = n(669953),
     b = n(591552),
     h = n(355097);
+
 function p(e) {
     c.h.dispatch({
         type: "CLEAR_PENDING_CHANNEL_AND_ROLE_UPDATES",
@@ -18,6 +25,7 @@ function p(e) {
     });
 }
 let g = {};
+
 function m(e) {
     let t = (0, s.bG)([b.A], () => {
         var t;
@@ -136,11 +144,21 @@ function m(e) {
                             {},
                             g.reduce((t, n) => {
                                 let l = o.Ay.getChannelIdFlags(e, n);
-                                return (t[n] = { flags: (0, a.lA)(l, h.vv.OPT_IN_ENABLED, !0) }), t;
+                                return (
+                                    (t[n] = {
+                                        flags: (0, a.lA)(l, h.vv.OPT_IN_ENABLED, !0),
+                                    }),
+                                    t
+                                );
                             }, {}),
                             m.reduce((t, n) => {
                                 let l = o.Ay.getChannelIdFlags(e, n);
-                                return (t[n] = { flags: (0, a.lA)(l, h.vv.OPT_IN_ENABLED, !1) }), t;
+                                return (
+                                    (t[n] = {
+                                        flags: (0, a.lA)(l, h.vv.OPT_IN_ENABLED, !1),
+                                    }),
+                                    t
+                                );
                             }, {}),
                         );
                     f.A.selectOption(e, t.id, n.id, l),

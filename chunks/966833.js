@@ -27,10 +27,12 @@ var i,
         (l.FAILED = "FAILED"),
         l);
 let S = {};
+
 function I(e) {
     let { channel: t } = e;
     delete S[t.id];
 }
+
 function N() {
     a().forEach(S, (e) => {
         e.items.forEach((e) => {

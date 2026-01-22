@@ -1,4 +1,7 @@
-n.d(t, { default: () => f }), n(896048);
+n.d(t, {
+    default: () => f,
+}),
+    n(896048);
 var r = n(627968),
     o = n(64700),
     l = n(158954),
@@ -80,14 +83,19 @@ let f = (e) => {
               })(
                   {
                       title: p.intl.string(p.t["0LZN5F"]),
-                      subtitle: p.intl.format(p.t["vA+uEs"], { channel: O }),
+                      subtitle: p.intl.format(p.t["vA+uEs"], {
+                          channel: O,
+                      }),
                       transitionState: y,
                       size: "md",
                       onClose: f,
                       actionBarInput: (0, r.jsx)(l.Sc0, {
                           checked: d,
                           onChange: (e) => {
-                              i.Ay.updatedUnsyncedSettings({ disableVoiceChannelChangeAlert: e }), g(e);
+                              i.Ay.updatedUnsyncedSettings({
+                                  disableVoiceChannelChangeAlert: e,
+                              }),
+                                  g(e);
                           },
                           label: p.intl.string(p.t["JdIQ/Y"]),
                       }),

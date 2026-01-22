@@ -1,4 +1,6 @@
-n.d(t, { A: () => C });
+n.d(t, {
+    A: () => C,
+});
 var r,
     i = n(812729),
     a = n.n(i),
@@ -16,6 +18,7 @@ var r,
     g = n(96566),
     E = n(516607),
     b = n(652215);
+
 function y(e, t, n) {
     return (
         t in e
@@ -30,6 +33,7 @@ function y(e, t, n) {
     );
 }
 let O = null;
+
 function A() {
     var e, t, n, r, i, a, s;
     let o = d.A.getVoiceChannelId();
@@ -64,16 +68,19 @@ function A() {
         },
     };
 }
+
 function v() {
     let e = A();
     return !a()(e, O) && ((O = e), !0);
 }
+
 function S(e) {
     let { voiceStates: t } = e;
     if (null == O) return;
     let n = (0, h.UW)(O);
     null != n && null != t.find((e) => e.channelId === n.channelId) && v();
 }
+
 function I(e) {
     var t, n, r;
     let { state: i } = e,

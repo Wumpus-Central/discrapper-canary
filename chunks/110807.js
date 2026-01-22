@@ -15,6 +15,7 @@ var r = n(469993),
 let { getSectionDefinition: f } = o.A,
     g = "HEADER",
     b = "DIVIDER";
+
 function m(e) {
     var t, n;
     let {
@@ -66,7 +67,10 @@ function m(e) {
                 }
                 return e;
             })({}, e)),
-            (n = n = { monetizationPredicate: E }),
+            (n = n =
+                {
+                    monetizationPredicate: E,
+                }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                 : (function (e, t) {
@@ -90,7 +94,9 @@ function m(e) {
         _.push(f(d.BEX.ENGAGEMENT, N)),
         _.push(f(d.BEX.BOOST_PERKS, N)),
         A &&
-            (_.push({ section: b }),
+            (_.push({
+                section: b,
+            }),
             _.push({
                 section: g,
                 label: u.intl.string(u.t.m6lkGy),
@@ -99,7 +105,9 @@ function m(e) {
             _.push(f(d.BEX.STICKERS, N)),
             _.push(f(d.BEX.SOUNDBOARD, N))),
         (m || x || j || v) &&
-            (_.push({ section: b }),
+            (_.push({
+                section: b,
+            }),
             _.push({
                 section: g,
                 label: u.intl.string(u.t.bMAKMK),
@@ -108,7 +116,9 @@ function m(e) {
             _.push(f(d.BEX.ROLES, N)),
             _.push(f(d.BEX.INVITES, N)),
             _.push(f(d.BEX.ACCESS, N))),
-        _.push({ section: b }),
+        _.push({
+            section: b,
+        }),
         _.push({
             section: g,
             label: u.intl.string(u.t.wF3KJy),
@@ -117,7 +127,9 @@ function m(e) {
         _.push(f(d.BEX.APP_DIRECTORY, N));
     let S = !o.features.has(d.GuildFeatures.COMMUNITY) && ((0, l.hX)(o.id) || (0, l.i_)(o.id));
     (m || p || h || S) &&
-        (_.push({ section: b }),
+        (_.push({
+            section: b,
+        }),
         _.push({
             section: g,
             label: u.intl.string(u.t["5tbTdV"]),
@@ -131,7 +143,9 @@ function m(e) {
         I = E();
     return (
         (m || T || I) &&
-            (_.push({ section: b }),
+            (_.push({
+                section: b,
+            }),
             _.push(f(d.BEX.COMMUNITY, N)),
             _.push(f(d.BEX.ONBOARDING, N)),
             _.push(f(d.BEX.ANALYTICS, N)),
@@ -140,10 +154,14 @@ function m(e) {
             _.push(f(d.BEX.ROLE_SUBSCRIPTIONS, N)),
             _.push(f(d.BEX.GUILD_PRODUCTS, N)),
             _.push(f(d.BEX.ROLE_SUBSCRIPTIONS_STORE_PAGE, N))),
-        _.push({ section: b }),
+        _.push({
+            section: b,
+        }),
         _.push(f(d.BEX.GUILD_TEMPLATES, N)),
         _.push(f(d.BEX.DELETE, N)),
         _.filter(c.Vq)
     );
 }
-let p = { generateSections: m };
+let p = {
+    generateSections: m,
+};

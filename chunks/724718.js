@@ -1,1 +1,3 @@
-e.exports = { t: "f716688df5cb1795" };
+e.exports = {
+    t: "f716688df5cb1795",
+};

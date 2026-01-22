@@ -1,4 +1,9 @@
-n.d(t, { A: () => N }), n(896048), n(733351), n(747238);
+n.d(t, {
+    A: () => N,
+}),
+    n(896048),
+    n(733351),
+    n(747238);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -15,6 +20,7 @@ var r = n(627968),
     g = n(985018),
     m = n(680982),
     b = n(473169);
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -40,6 +46,7 @@ function _(e) {
     }
     return e;
 }
+
 function E(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -68,12 +75,15 @@ let O = n(892799),
     I = (0, p.Ld)(),
     v = "".concat(I, "-decription"),
     S = "".concat(I, "-error");
+
 function C(e, t) {
     switch (t.type) {
         case "RESET":
             return y;
         case "SUCCESS":
-            return E(_({}, y), { success: t.text });
+            return E(_({}, y), {
+                success: t.text,
+            });
         case "HINT":
             return E(_({}, y), {
                 canSend: !0,
@@ -86,6 +96,7 @@ function C(e, t) {
             });
     }
 }
+
 function N(e) {
     let { placeholder: t = g.intl.string(g.t["Rn/sLl"]) } = e,
         n = i.useRef(null),
@@ -112,12 +123,16 @@ function N(e) {
                       })
                     : d.A.sendRequest({
                           discordTag: t,
-                          context: { location: "Add Friend" },
+                          context: {
+                              location: "Add Friend",
+                          },
                       }).then(
                           () =>
                               p({
                                   type: "SUCCESS",
-                                  text: g.intl.format(g.t.Rtl1Ep, { discordTag: t }),
+                                  text: g.intl.format(g.t.Rtl1Ep, {
+                                      discordTag: t,
+                                  }),
                               }),
                           (e) => {
                               var n;
@@ -177,7 +192,10 @@ function N(e) {
                                     }
                                 },
                                 onChange: (e) => {
-                                    if (e.length <= 0) return void p({ type: "RESET" });
+                                    if (e.length <= 0)
+                                        return void p({
+                                            type: "RESET",
+                                        });
                                     let t = "",
                                         [, n] = e.split("#");
                                     null != n && (t = e + h.RoK.slice(null != n ? n.length + 1 : 0)),

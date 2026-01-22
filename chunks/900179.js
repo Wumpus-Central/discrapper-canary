@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -8,6 +10,7 @@ var r = n(627968),
     c = n(94343),
     u = n(716804),
     d = n(892007);
+
 function f(e) {
     let {
             children: t,
@@ -55,7 +58,9 @@ function f(e) {
                                 }),
                         ],
                     }),
-                (0, r.jsx)(o.Fmo, { children: t }),
+                (0, r.jsx)(o.Fmo, {
+                    children: t,
+                }),
             ],
         })
     );

@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -9,6 +11,7 @@ var i = n(503698),
     c = n(985018),
     u = n(921033);
 let d = 1048576;
+
 function f(e) {
     switch (e) {
         case o.TVA.NONE:
@@ -69,20 +72,40 @@ let p = [
     {
         getPerkLabel: () => c.intl.string(c.t["/79IDj"]),
         getTier0Value: () =>
-            c.intl.formatToPlainString(c.t.w1gmLt, { bitrate: l.TG[o.TVA.NONE].limits.bitrate / 1000 }),
+            c.intl.formatToPlainString(c.t.w1gmLt, {
+                bitrate: l.TG[o.TVA.NONE].limits.bitrate / 1e3,
+            }),
         getTier1Value: () =>
-            c.intl.formatToPlainString(c.t.w1gmLt, { bitrate: l.TG[o.TVA.TIER_1].limits.bitrate / 1000 }),
+            c.intl.formatToPlainString(c.t.w1gmLt, {
+                bitrate: l.TG[o.TVA.TIER_1].limits.bitrate / 1e3,
+            }),
         getTier2Value: () =>
-            c.intl.formatToPlainString(c.t.w1gmLt, { bitrate: l.TG[o.TVA.TIER_2].limits.bitrate / 1000 }),
+            c.intl.formatToPlainString(c.t.w1gmLt, {
+                bitrate: l.TG[o.TVA.TIER_2].limits.bitrate / 1e3,
+            }),
         getTier3Value: () =>
-            c.intl.formatToPlainString(c.t.w1gmLt, { bitrate: l.TG[o.TVA.TIER_3].limits.bitrate / 1000 }),
+            c.intl.formatToPlainString(c.t.w1gmLt, {
+                bitrate: l.TG[o.TVA.TIER_3].limits.bitrate / 1e3,
+            }),
     },
     {
         getPerkLabel: () => c.intl.string(c.t.R1U2xC),
-        getTier0Value: () => c.intl.formatToPlainString(c.t.pIn7Af, { size: l.TG[o.TVA.NONE].limits.fileSize / d }),
-        getTier1Value: () => c.intl.formatToPlainString(c.t.pIn7Af, { size: l.TG[o.TVA.TIER_1].limits.fileSize / d }),
-        getTier2Value: () => c.intl.formatToPlainString(c.t.pIn7Af, { size: l.TG[o.TVA.TIER_2].limits.fileSize / d }),
-        getTier3Value: () => c.intl.formatToPlainString(c.t.pIn7Af, { size: l.TG[o.TVA.TIER_3].limits.fileSize / d }),
+        getTier0Value: () =>
+            c.intl.formatToPlainString(c.t.pIn7Af, {
+                size: l.TG[o.TVA.NONE].limits.fileSize / d,
+            }),
+        getTier1Value: () =>
+            c.intl.formatToPlainString(c.t.pIn7Af, {
+                size: l.TG[o.TVA.TIER_1].limits.fileSize / d,
+            }),
+        getTier2Value: () =>
+            c.intl.formatToPlainString(c.t.pIn7Af, {
+                size: l.TG[o.TVA.TIER_2].limits.fileSize / d,
+            }),
+        getTier3Value: () =>
+            c.intl.formatToPlainString(c.t.pIn7Af, {
+                size: l.TG[o.TVA.TIER_3].limits.fileSize / d,
+            }),
     },
     {
         getPerkLabel: () => c.intl.string(c.t.f6vfso),
@@ -127,6 +150,7 @@ let p = [
         getTier3Value: () => !0,
     },
 ];
+
 function _(e) {
     let { value: t, isBoosted: n = !1 } = e;
     return "boolean" == typeof t
@@ -147,6 +171,7 @@ function _(e) {
               children: t,
           });
 }
+
 function h(e) {
     let { currentTier: t } = e,
         n = f(t);
@@ -165,6 +190,7 @@ function h(e) {
               }),
           });
 }
+
 function m(e) {
     let { className: t, guild: n } = e;
     return (0, r.jsxs)("div", {
@@ -178,7 +204,10 @@ function m(e) {
             (0, r.jsxs)("div", {
                 className: u.wY,
                 children: [
-                    null != n && (0, r.jsx)(h, { currentTier: n.premiumTier }),
+                    null != n &&
+                        (0, r.jsx)(h, {
+                            currentTier: n.premiumTier,
+                        }),
                     (0, r.jsxs)("div", {
                         className: u.tp,
                         children: [
@@ -267,7 +296,9 @@ function m(e) {
                                 (0, r.jsxs)(
                                     "div",
                                     {
-                                        className: a()(u.nM, { [u.fW]: t === p.length - 1 }),
+                                        className: a()(u.nM, {
+                                            [u.fW]: t === p.length - 1,
+                                        }),
                                         children: [
                                             (0, r.jsx)("div", {
                                                 className: a()(u.Hn, u.DV),
@@ -279,7 +310,9 @@ function m(e) {
                                             }),
                                             (0, r.jsx)("div", {
                                                 className: a()(u.Hn, u.pU),
-                                                children: (0, r.jsx)(_, { value: e.getTier0Value() }),
+                                                children: (0, r.jsx)(_, {
+                                                    value: e.getTier0Value(),
+                                                }),
                                             }),
                                             (0, r.jsx)("div", {
                                                 className: a()(u.Hn, u.pU),

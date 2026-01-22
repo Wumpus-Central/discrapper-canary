@@ -1,4 +1,6 @@
-n.d(t, { default: () => h });
+n.d(t, {
+    default: () => h,
+});
 var l = n(627968),
     i = n(64700),
     a = n(158954),
@@ -55,7 +57,9 @@ let h = function (e) {
         onClose: h,
         title:
             (null == A ? void 0 : A.name) != null
-                ? v.intl.formatToPlainString(v.t["P+/gzA"], { guildName: A.name })
+                ? v.intl.formatToPlainString(v.t["P+/gzA"], {
+                      guildName: A.name,
+                  })
                 : v.intl.string(v.t.gBPcuP),
         actions: G,
         children:
@@ -68,7 +72,9 @@ let h = function (e) {
                               className: p.Wj,
                               children: v.intl.string(v.t.cf1psW),
                           }),
-                          (0, l.jsx)("span", { children: null == m ? void 0 : m.rejectionReason }),
+                          (0, l.jsx)("span", {
+                              children: null == m ? void 0 : m.rejectionReason,
+                          }),
                       ],
                   })
                 : null,

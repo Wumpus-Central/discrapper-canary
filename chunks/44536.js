@@ -1,4 +1,6 @@
-n.d(t, { default: () => w });
+n.d(t, {
+    default: () => w,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -74,7 +76,9 @@ let w = (0, a.A)(
                     },
                     "notifications",
                 ),
-                (0, r.jsx)(i.rXV, { children: k }),
+                (0, r.jsx)(i.rXV, {
+                    children: k,
+                }),
                 (0, r.jsxs)(
                     i.rXV,
                     {
@@ -82,7 +86,13 @@ let w = (0, a.A)(
                     },
                     "admin-actions",
                 ),
-                (0, r.jsx)(i.rXV, { children: R }, "developer-actions"),
+                (0, r.jsx)(
+                    i.rXV,
+                    {
+                        children: R,
+                    },
+                    "developer-actions",
+                ),
             ],
         });
     },

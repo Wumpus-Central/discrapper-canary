@@ -1,4 +1,6 @@
-r.d(t, { A: () => C });
+r.d(t, {
+    A: () => C,
+});
 var n = r(627968);
 r(64700);
 var i = r(300233),
@@ -11,6 +13,7 @@ var i = r(300233),
     u = r(250253),
     p = r(652215),
     f = r(235201);
+
 function b(e) {
     var t;
     let { guildId: r } = e,
@@ -26,7 +29,9 @@ function b(e) {
                       subscription: C,
                   })
                 : null,
-            (0, n.jsx)(a.A, { subscription: C }),
+            (0, n.jsx)(a.A, {
+                subscription: C,
+            }),
             (0, n.jsx)(d.A, {
                 guildId: r,
                 children: b.map((e) => {
@@ -46,11 +51,14 @@ function b(e) {
         ],
     });
 }
+
 function C(e) {
     let { guildId: t } = e;
     return (0, n.jsx)(i.H, {
         guildId: t,
         refetchOnMount: !0,
-        children: (0, n.jsx)(b, { guildId: t }),
+        children: (0, n.jsx)(b, {
+            guildId: t,
+        }),
     });
 }

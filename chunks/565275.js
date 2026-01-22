@@ -1,4 +1,6 @@
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var r = n(140851),
     i = n(821085),
     a = n(559374),
@@ -13,6 +15,7 @@ var r = n(140851),
         bottom: "auto",
         left: "auto",
     };
+
 function f(e, t) {
     var n = e.x,
         r = e.y,
@@ -22,6 +25,7 @@ function f(e, t) {
         y: (0, u.LI)(r * i) / i || 0,
     };
 }
+
 function p(e) {
     var t,
         n,
@@ -71,7 +75,12 @@ function p(e) {
                 (O -= (b && w === R && R.visualViewport ? R.visualViewport.width : w[D]) - c.width),
                 (O *= m ? 1 : -1));
     }
-    var x = Object.assign({ position: h }, g && d),
+    var x = Object.assign(
+            {
+                position: h,
+            },
+            g && d,
+        ),
         L =
             !0 === E
                 ? f(
@@ -146,7 +155,9 @@ let _ = {
                         }),
                     ),
                 )),
-            (t.attributes.popper = Object.assign({}, t.attributes.popper, { "data-popper-placement": t.placement }));
+            (t.attributes.popper = Object.assign({}, t.attributes.popper, {
+                "data-popper-placement": t.placement,
+            }));
     },
     data: {},
 };

@@ -13,6 +13,7 @@ var i = n(614792),
     a = n(287809),
     s = n(954571),
     o = n(652215);
+
 function l(e, t, n) {
     return (
         t in e
@@ -26,6 +27,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,6 +44,7 @@ function c(e) {
     }
     return e;
 }
+
 function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -54,6 +57,7 @@ function u(e, t) {
     }
     return n;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -65,6 +69,7 @@ function d(e, t) {
         e
     );
 }
+
 function f(e, t) {
     if (null == e) return {};
     var n,
@@ -81,6 +86,7 @@ function f(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function p(e, t) {
     if (null == e) return {};
     var n,
@@ -91,6 +97,7 @@ function p(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function _(e, t, n, a, l) {
     var u, f, p;
     let _ = h(t);
@@ -108,8 +115,12 @@ function _(e, t, n, a, l) {
         had_cache_at_startup: null != (f = e.analytics.hadCacheAtStartup) && f,
         used_cache_at_startup: null != (p = e.analytics.usedCacheAtStartup) && p,
     });
-    i.A.attachReadyPayloadProperties(m), s.default.track(o.HAw.READY_PAYLOAD_RECEIVED, m, { logEventProperties: !0 });
+    i.A.attachReadyPayloadProperties(m),
+        s.default.track(o.HAw.READY_PAYLOAD_RECEIVED, m, {
+            logEventProperties: !0,
+        });
 }
+
 function h(e) {
     let { _trace: t } = e,
         n = {};
@@ -118,15 +129,16 @@ function h(e) {
         null != e[0] &&
             "" !== e[0] &&
             e[0].startsWith("gateway-") &&
-            (n.identify_total_server_duration_ms = Math.floor(e[1].micros / 1000)),
+            (n.identify_total_server_duration_ms = Math.floor(e[1].micros / 1e3)),
             b(e, (e, t) => {
                 "start_session" === e
-                    ? (n.identify_api_duration_ms = Math.floor(t / 1000))
-                    : "guilds_connect" === e && (n.identify_guilds_duration_ms = Math.floor(t / 1000));
+                    ? (n.identify_api_duration_ms = Math.floor(t / 1e3))
+                    : "guilds_connect" === e && (n.identify_guilds_duration_ms = Math.floor(t / 1e3));
             });
     } catch (e) {}
     return n;
 }
+
 function m(e) {
     try {
         var t;
@@ -135,9 +147,11 @@ function m(e) {
     } catch (e) {}
     return null != e._trace ? e._trace.join(" -> ") : "???";
 }
+
 function g(e) {
     return null == e ? null : E(JSON.parse(e), "");
 }
+
 function E(e, t) {
     if (null == e) return "";
     let n = "";
@@ -145,10 +159,11 @@ function E(e, t) {
         (n += "\n"
             .concat(t)
             .concat(e[r], ": ")
-            .concat(e[r + 1].micros / 1000)),
+            .concat(e[r + 1].micros / 1e3)),
             (n += E(e[r + 1].calls, t + "|  "));
     return n;
 }
+
 function b(e, t) {
     if (null != e && e.length > 0)
         for (let n = 0; n < e.length; n += 2) {
@@ -157,6 +172,7 @@ function b(e, t) {
             t(r, i.micros), b(i.calls, t);
         }
 }
+
 function y(e) {
     let { guilds: t } = e,
         n = 0,
@@ -178,6 +194,7 @@ function y(e) {
         }
     );
 }
+
 function O(e) {
     var t, n;
     let r = Date.now(),
@@ -259,6 +276,7 @@ function O(e) {
         }
     );
 }
+
 function A(e) {
     return {
         connectTime: null != e ? e : 0,
@@ -271,6 +289,7 @@ function A(e) {
         lastUpdateTime: performance.now(),
     };
 }
+
 function v(e) {
     var t;
     (!(null == (t = a.default.getCurrentUser()) ? void 0 : t.isStaff()) && 0.5 > Math.random()) ||
@@ -285,6 +304,8 @@ function v(e) {
                 total_wait_time_ms: Math.floor(e.totalWaitTime),
                 total_dispatch_time_ms: Math.floor(e.dispatchTime),
             },
-            { logEventProperties: !0 },
+            {
+                logEventProperties: !0,
+            },
         );
 }

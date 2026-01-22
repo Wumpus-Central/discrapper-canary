@@ -15,6 +15,7 @@ var i = n(503698),
     o = n.n(s),
     l = n(397927),
     c = n(406590);
+
 function u(e, t, n) {
     return (
         t in e
@@ -28,6 +29,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -44,20 +46,26 @@ function d(e) {
     }
     return e;
 }
+
 function f(e) {
     return "".concat(e / 16, "rem");
 }
+
 function p() {
     return Array(o().random(3, 8))
         .fill(null)
         .map(() => o().random(30, 80));
 }
+
 function _() {
     return (0, r.jsx)("div", {
         className: c.my,
-        style: { opacity: 0.08 },
+        style: {
+            opacity: 0.08,
+        },
     });
 }
+
 function h(e) {
     let { width: t, height: n, opacity: i, className: s } = e,
         l = {
@@ -67,11 +75,14 @@ function h(e) {
     return (
         null != n && (l.height = f(n)),
         (0, r.jsx)("div", {
-            className: a()(s, { [c.av]: !0 }),
+            className: a()(s, {
+                [c.av]: !0,
+            }),
             style: l,
         })
     );
 }
+
 function m(e) {
     let t,
         {
@@ -152,7 +163,12 @@ function m(e) {
                         className: c.Dq,
                         children: (0, r.jsx)("div", {
                             className: c.oh,
-                            style: d({ opacity: 0.03 }, s),
+                            style: d(
+                                {
+                                    opacity: 0.03,
+                                },
+                                s,
+                            ),
                         }),
                     }),
             ],
@@ -164,6 +180,7 @@ let g = 44,
     b = 26,
     y = 26,
     O = 6;
+
 function A(e) {
     let { messages: t, groupSpacing: n = 0, compact: i = !1, attachmentSpecs: a, className: s } = e,
         l = null != a ? (a.last ? t - 1 : o().random(0, t - 1)) : -1,
@@ -182,7 +199,12 @@ function A(e) {
                         usernameOpacity: u,
                         groupStart: 0 === t,
                         attachmentSpecs: t === l ? a : void 0,
-                        style: 0 === t ? { marginTop: f(n) } : void 0,
+                        style:
+                            0 === t
+                                ? {
+                                      marginTop: f(n),
+                                  }
+                                : void 0,
                     },
                     t,
                 ),

@@ -17,6 +17,7 @@ var r = n(627968),
     m = n(539916),
     p = n(985018),
     x = n(902973);
+
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,6 +43,7 @@ function h(e) {
     }
     return e;
 }
+
 function j(e) {
     let { saveOnClose: t } = e,
         s = (0, l.bG)([d.A], () => d.A.getGuildId()),
@@ -70,7 +72,10 @@ function j(e) {
                     var t, n;
                     return (
                         (t = h({}, e)),
-                        (n = n = { id: (0, m.Sq)(e) }),
+                        (n = n =
+                            {
+                                id: (0, m.Sq)(e),
+                            }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                             : (function (e, t) {
@@ -196,12 +201,15 @@ function j(e) {
                     (0, r.jsx)(a.Text, {
                         variant: "text-sm/normal",
                         color: "text-muted",
-                        children: p.intl.format(p.t.Nc7guW, { max: m.pA }),
+                        children: p.intl.format(p.t.Nc7guW, {
+                            max: m.pA,
+                        }),
                     }),
             ],
         }),
     });
 }
+
 function O() {
     let e = (0, l.bG)([d.A], () => d.A.getGuildId()),
         t = (0, l.bG)([f.A], () => f.A.isSubmitting()),

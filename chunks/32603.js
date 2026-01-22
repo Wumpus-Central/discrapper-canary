@@ -57,6 +57,7 @@ var r = n(284009),
     G = n(652215),
     V = n(746080),
     F = n(818348);
+
 function B(e, t, n) {
     return (
         t in e
@@ -70,6 +71,7 @@ function B(e, t, n) {
         e
     );
 }
+
 function H(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -86,6 +88,7 @@ function H(e) {
     }
     return e;
 }
+
 function Y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -98,6 +101,7 @@ function Y(e, t) {
     }
     return n;
 }
+
 function W(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -585,7 +589,7 @@ class er {
                     .filter((e) => 4 === e.renderLevel)
                     .sortBy((e) => {
                         let { record: t } = e;
-                        return t.isGuildVocal() ? t.position + 10000 : t.position;
+                        return t.isGuildVocal() ? t.position + 1e4 : t.position;
                     })
                     .map((e) => e.id)
                     .value()),
@@ -785,7 +789,7 @@ class eo extends er {
                 (0, v.ig)(e.type) && !(0, v.fT)(e.type) && (this.channels[e.id] = new eg(this, e, n));
     }
 }
-B(eo, "MIN_READABLE_CHANNELS", 7), B(eo, "MAX_RECENT_CHANNELS", 10), B(eo, "MAX_TIMESTAMP_DELTA", 604800000);
+B(eo, "MIN_READABLE_CHANNELS", 7), B(eo, "MAX_RECENT_CHANNELS", 10), B(eo, "MAX_TIMESTAMP_DELTA", 6048e5);
 class el extends er {
     updateAllChannels(e) {
         let t = !1;
@@ -841,6 +845,7 @@ class el extends er {
                 .value());
     }
 }
+
 function ec(e, t) {
     if (e.record.type === G.rbe.GUILD_CATEGORY) return e.record.position;
     if (null != e.record.parent_id) {
@@ -1163,6 +1168,7 @@ class eE extends e_ {
         );
     }
 }
+
 function eb(e, t, n) {
     switch (e.type) {
         case G.rbe.GUILD_VOICE: {
@@ -1173,7 +1179,10 @@ function eb(e, t, n) {
                     name: r.name,
                 };
             let i = x.Ay.getVoiceStatesForChannel(e);
-            if (n && t && (0, M.t)(i)) return { type: "go-live" };
+            if (n && t && (0, M.t)(i))
+                return {
+                    type: "go-live",
+                };
             let a = c.A.getChannelStatus(e);
             if (null != a && a.length > 0)
                 return {
@@ -1206,6 +1215,7 @@ function eb(e, t, n) {
             return null;
     }
 }
+
 function ey(e, t, n, r, i) {
     let a = null != n && (n.id === e.id || r === e.id),
         o = null != n && n.isThread() && n.parent_id === e.id;
@@ -1223,12 +1233,15 @@ function ey(e, t, n, r, i) {
     }
     return [];
 }
+
 function eO() {
     return !1;
 }
+
 function eA(e, t) {
     return e.favoriteChannelIds.has(t.id) && (e.optInEnabled || eO());
 }
+
 function ev(e, t) {
     let { selectedChannel: n, activeJoinedRelevantThreads: r } = t;
     if (R.Ay.getMentionCount(e.id) > 0) return !0;
@@ -1239,6 +1252,7 @@ function ev(e, t) {
     else if (i.has(e.id)) return !0;
     return !1;
 }
+
 function eS(e, t, n) {
     let { selectedChannel: r, activeJoinedRelevantThreads: i } = n;
     if (
@@ -1266,6 +1280,7 @@ function eS(e, t, n) {
     return !!((a.has(t.id) && o.indexOf(t.id) < z) || R.Ay.hasRecentlyVisitedAndRead(t.id));
 }
 let eI = new Set(Object.values(U.n));
+
 function eT(e) {
     if (null == e) return null;
     if (eI.has(e)) return e;

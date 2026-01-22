@@ -1,7 +1,10 @@
-l.d(t, { K: () => a });
+l.d(t, {
+    K: () => a,
+});
 var n = l(64700),
     r = l(311907),
     s = l(4227);
+
 function a(e, t) {
     let l = n.useMemo(() => {
             var l;

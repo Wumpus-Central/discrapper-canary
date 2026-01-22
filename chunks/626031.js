@@ -1,9 +1,12 @@
-n.d(t, { A: () => S }), n(896048);
+n.d(t, {
+    A: () => S,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
-    o = n(432022),
+    o = n(108531),
     l = n(397927),
     c = n(475743),
     u = n(626584),
@@ -11,6 +14,7 @@ var r = n(627968),
     f = n(14115),
     p = n(115093),
     _ = n(467043);
+
 function h(e, t, n) {
     return (
         t in e
@@ -24,6 +28,7 @@ function h(e, t, n) {
         e
     );
 }
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -40,6 +45,7 @@ function m(e) {
     }
     return e;
 }
+
 function g(e, t) {
     if (null == e) return {};
     var n,
@@ -56,6 +62,7 @@ function g(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function E(e, t) {
     if (null == e) return {};
     var n,
@@ -72,7 +79,7 @@ let b = new u.A("BalanceCounter"),
     A = (e, t, n) => (null === n ? Math.max(e, t) : Math.max(t, n)),
     v = (e) => {
         var t, n;
-        let { value: a, onSetDigitCount: s, onValueChange: c, onValueReached: u, targetTotalCounterTime: d = 3000 } = e,
+        let { value: a, onSetDigitCount: s, onValueChange: c, onValueReached: u, targetTotalCounterTime: d = 3e3 } = e,
             [p, _] = (0, i.useState)(0),
             h = (0, i.useRef)(null),
             m = (0, i.useRef)(null);
@@ -93,7 +100,9 @@ let b = new u.A("BalanceCounter"),
             E = null != (t = h.current) ? t : g,
             { duration: A, delay: v } = (0, f.Y)(g - E, d),
             { number: S } = (0, l.zhh)({
-                from: { number: null != (n = h.current) ? n : g },
+                from: {
+                    number: null != (n = h.current) ? n : g,
+                },
                 number: g,
                 config: {
                     mass: 1,
@@ -118,7 +127,9 @@ let b = new u.A("BalanceCounter"),
             }),
             I = O(Math.max(null != a ? a : 0, S.get()));
         return (0, r.jsx)(o.animated.div, {
-            style: { width: "calc(".concat(I, "ch)") },
+            style: {
+                width: "calc(".concat(I, "ch)"),
+            },
             children: S.to((e) => "".concat(e.toFixed(0))),
         });
     },

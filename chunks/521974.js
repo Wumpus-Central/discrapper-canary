@@ -1,11 +1,14 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var l = n(627968),
     a = n(64700),
     r = n(503698),
     i = n.n(r),
     s = n(397927),
     c = n(488995),
-    o = n(510000);
+    o = n(51e4);
+
 function d(e) {
     let {
             state: t,
@@ -41,7 +44,9 @@ function d(e) {
               }),
           })
         : (0, l.jsx)("div", {
-              className: i()(o.ON, { [o.Nz]: t === c.GlobalDiscoverySearchBarState.FLOATING }),
+              className: i()(o.ON, {
+                  [o.Nz]: t === c.GlobalDiscoverySearchBarState.FLOATING,
+              }),
               children: (0, l.jsx)(s.IWV, {
                   size: "sm",
                   ref: b,

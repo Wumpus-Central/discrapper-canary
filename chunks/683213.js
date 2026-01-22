@@ -1,4 +1,8 @@
-n.d(t, { A: () => D }), n(321073), n(896048);
+n.d(t, {
+    A: () => D,
+}),
+    n(321073),
+    n(896048);
 var r = n(439372),
     i = n(571694),
     a = n(47167),
@@ -14,6 +18,7 @@ var r = n(439372),
     h = n(473903),
     m = n(765239),
     g = n(652215);
+
 function E(e, t, n) {
     return (
         t in e
@@ -27,33 +32,43 @@ function E(e, t, n) {
         e
     );
 }
+
 function b() {
     return m.A.getCurrentConfig(
-        { location: "NativeIntentsManager" },
+        {
+            location: "NativeIntentsManager",
+        },
         {
             autoTrackExposure: !0,
             disable: !h.A.hasSearch(),
         },
     ).searchEnabled;
 }
+
 function y() {
     return m.A.getCurrentConfig(
-        { location: "NativeIntentsManager" },
+        {
+            location: "NativeIntentsManager",
+        },
         {
             autoTrackExposure: !0,
             disable: !h.A.hasSearch(),
         },
     ).clearEnabled;
 }
+
 function O() {
     return m.A.getCurrentConfig(
-        { location: "NativeIntentsManager" },
+        {
+            location: "NativeIntentsManager",
+        },
         {
             autoTrackExposure: !0,
             disable: !h.A.hasUserActivity(),
         },
     ).activityEnabled;
 }
+
 function A(e) {
     var t;
     return (null == e || null == (t = e.startsWith) ? void 0 : t.call(e, "/"))
@@ -62,6 +77,7 @@ function A(e) {
           ? e
           : void 0;
 }
+
 function v(e, t) {
     var n;
     let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
@@ -93,6 +109,7 @@ function v(e, t) {
         isUpdate: r,
     };
 }
+
 function S(e) {
     return null != e
         ? A(
@@ -104,6 +121,7 @@ function S(e) {
           )
         : void 0;
 }
+
 function I(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = S(e),
@@ -132,6 +150,7 @@ function I(e) {
         isUpdate: t,
     };
 }
+
 function T(e) {
     let t = [];
     if (("" !== e.name && t.push(e.name), null != e.nicks && t.push(...Object.values(e.nicks)), e.type === g.rbe.DM)) {
@@ -147,6 +166,7 @@ function T(e) {
     }
     return t;
 }
+
 function C(e) {
     if (!O()) return;
     let t = null != e ? s.A.getChannel(e) : void 0;
@@ -168,6 +188,7 @@ function C(e) {
         };
     h.A.setActivity(f);
 }
+
 function N() {
     if (!b()) return;
     let e = o.A.getGuildsArray().map((e) => I(e)),
@@ -183,10 +204,12 @@ function N() {
     }),
         h.A.indexDomains(e);
 }
+
 function R(e) {
     let t = s.A.getDMChannelFromUserId(e);
     null != t && w([t]);
 }
+
 function w(e) {
     if (!b()) return;
     let t = [],

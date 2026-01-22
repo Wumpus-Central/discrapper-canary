@@ -1,5 +1,8 @@
-l.d(t, { A: () => n });
+l.d(t, {
+    A: () => n,
+});
 var r = l(827734);
+
 function n(e) {
     return e
         ? {

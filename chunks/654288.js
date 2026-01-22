@@ -1,4 +1,9 @@
-n.d(t, { A: () => I }), n(747238), n(812715), n(866193);
+n.d(t, {
+    A: () => I,
+}),
+    n(747238),
+    n(812715),
+    n(866193);
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -39,7 +44,9 @@ let v = (e, t, n) => {
     I = (e) => {
         let { channel: t, entry: n, onReaction: u, onVoiceChannelPreview: I } = e,
             T = (0, a.bG)([l.default], () => l.default.getUser(n.author_id)),
-            { largeImage: C } = (0, f.nO)({ entry: n }),
+            { largeImage: C } = (0, f.nO)({
+                entry: n,
+            }),
             { primaryColor: N, secondaryColor: R } = (0, m.A)(null == C ? void 0 : C.src),
             w = (0, a.bG)([o.default], () => o.default.locale),
             P = (0, h.A)(O.fg2.CRUNCHYROLL),
@@ -88,7 +95,15 @@ let v = (e, t, n) => {
                           }),
                           badges: (0, r.jsx)(E.mG, {
                               location: E.N5.POPOUT,
-                              children: g.R.map((e, t) => (0, r.jsx)(e, { entry: n }, t)),
+                              children: g.R.map((e, t) =>
+                                  (0, r.jsx)(
+                                      e,
+                                      {
+                                          entry: n,
+                                      },
+                                      t,
+                                  ),
+                              ),
                           }),
                           onClickTitle: L,
                           onClickThumbnail: L,

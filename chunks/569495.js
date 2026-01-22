@@ -1,4 +1,14 @@
-n.d(t, { A: () => T }), n(896048), n(693327), n(554719), n(680155), n(323874), n(14289), n(35956), n(747238);
+n.d(t, {
+    A: () => T,
+}),
+    n(896048),
+    n(693327),
+    n(554719),
+    n(680155),
+    n(323874),
+    n(14289),
+    n(35956),
+    n(747238);
 var l = n(627968),
     a = n(64700),
     r = n(503698),
@@ -25,6 +35,7 @@ var l = n(627968),
     C = n(688147);
 let E = "start_application_install",
     I = "launch_activity";
+
 function P(e) {
     let { renderDropdown: t, size: n } = e,
         r = a.useRef(null);
@@ -77,6 +88,7 @@ function P(e) {
             ),
     });
 }
+
 function N(e) {
     var t;
     let n,
@@ -108,7 +120,9 @@ function N(e) {
             {
                 onClickInstallApplication: a.useCallback(() => {
                     if (
-                        ((0, _.TR)(O.HAw.APP_DIRECTORY_INSTALL_CLICKED, { application_id: t.id }),
+                        ((0, _.TR)(O.HAw.APP_DIRECTORY_INSTALL_CLICKED, {
+                            application_id: t.id,
+                        }),
                         (s.Fr || s.v1) && null == t.custom_install_url)
                     ) {
                         let e = (0, A.Z)({
@@ -129,7 +143,9 @@ function N(e) {
                             source: "product_page",
                             device_platform: s.Fr ? "mobile_web" : "desktop_web",
                         }),
-                            (0, _.jL)({ [E]: "true" });
+                            (0, _.jL)({
+                                [E]: "true",
+                            });
                     }
                 }, [t, r, n]),
                 canInstall: a.useMemo(
@@ -159,6 +175,7 @@ function N(e) {
               disabled: !m,
           });
 }
+
 function R(e) {
     let { size: t, contentWidth: n, onClick: a, isSubmitting: r } = e;
     return "icon" === n
@@ -183,7 +200,9 @@ let T = a.forwardRef(function (e, t) {
         { analyticsLocations: s } = (0, u.Ay)(),
         h = a.useCallback(() => {
             let e;
-            (0, _.TR)(O.HAw.APP_DIRECTORY_APPLICATION_LINK_COPIED, { application_id: n.id }),
+            (0, _.TR)(O.HAw.APP_DIRECTORY_APPLICATION_LINK_COPIED, {
+                application_id: n.id,
+            }),
                 (0, j.C)(
                     ((e = n.id),
                     ""
@@ -231,7 +250,11 @@ let T = a.forwardRef(function (e, t) {
                                 action: v,
                             }),
                         }),
-                        null != A ? (0, l.jsx)(o.rXV, { children: A }) : null,
+                        null != A
+                            ? (0, l.jsx)(o.rXV, {
+                                  children: A,
+                              })
+                            : null,
                     ],
                 }),
             [A, v, h],
@@ -261,8 +284,15 @@ let T = a.forwardRef(function (e, t) {
             }, [u, i, r, h, m]);
             let b = a.useCallback(async () => {
                 if (null != r) {
-                    if (((0, _.TR)(O.HAw.APP_DIRECTORY_LAUNCH_CLICKED, { application_id: l }), !u))
-                        return void (0, _.jL)({ [I]: "true" });
+                    if (
+                        ((0, _.TR)(O.HAw.APP_DIRECTORY_LAUNCH_CLICKED, {
+                            application_id: l,
+                        }),
+                        !u)
+                    )
+                        return void (0, _.jL)({
+                            [I]: "true",
+                        });
                     await m();
                 }
             }, [l, r, u, m]);

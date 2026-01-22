@@ -1,9 +1,12 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(627968),
     i = n(158954),
     l = n(793943),
     a = n(58736),
     s = n(985018);
+
 function o(e) {
     let { className: t } = e,
         { activePanel: n } = (0, l.fy)(),

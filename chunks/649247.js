@@ -1,4 +1,7 @@
-n.d(t, { A: () => h }), n(896048);
+n.d(t, {
+    A: () => h,
+}),
+    n(896048);
 var r = n(311907),
     l = n(181079),
     i = n(734057),
@@ -9,6 +12,7 @@ var r = n(311907),
     u = n(63995),
     d = n(69407),
     f = n(652215);
+
 function p(e) {
     let { voiceState: t, userNick: n, user: r } = e,
         l = (0, a.hz)(t, n);
@@ -19,6 +23,7 @@ function p(e) {
         comparator: l,
     };
 }
+
 function h(e) {
     let [t] = (0, r.bG)(
         [u.A, i.A, l.A],

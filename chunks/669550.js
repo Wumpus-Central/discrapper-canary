@@ -12,6 +12,7 @@ var r = n(64700),
     l = n(236077),
     c = n(478686),
     u = n(124059);
+
 function d(e, t, n) {
     return (
         t in e
@@ -25,6 +26,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -41,6 +43,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -53,6 +56,7 @@ function p(e, t) {
     }
     return n;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -64,13 +68,20 @@ function _(e, t) {
         e
     );
 }
-let h = (0, i.D)(() => ({ enabled: !1 }));
+let h = (0, i.D)(() => ({
+    enabled: !1,
+}));
+
 function m(e) {
-    h.setState({ enabled: e });
+    h.setState({
+        enabled: e,
+    });
 }
+
 function g() {
     return h.useField("enabled");
 }
+
 function E(e, t) {
     let n = r.useMemo(() => (0, o.hl)(e), [e]),
         i = (0, a.PH)(),
@@ -97,13 +108,19 @@ function E(e, t) {
         return (
             (0, c.A)(n, m, r),
             {
-                node: null != (e = (0, c.A)(n, h, t)) ? e : _(f({}, n), { layout: [] }),
+                node:
+                    null != (e = (0, c.A)(n, h, t))
+                        ? e
+                        : _(f({}, n), {
+                              layout: [],
+                          }),
                 visibleDirectory: t,
                 accessibleDirectory: r,
             }
         );
     }, [h, m, n]);
 }
+
 function b(e, t, n) {
     let i = g(),
         a = (0, u.A)(e, t, {
@@ -119,6 +136,7 @@ function b(e, t, n) {
         s
     );
 }
+
 function y(e, t) {
     if (e.size !== t.size) return !0;
     for (let n of e) if (!t.has(n)) return !0;

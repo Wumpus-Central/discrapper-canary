@@ -1,11 +1,16 @@
-n.d(t, { A: () => ee }), n(321073), n(896048), n(228524);
+n.d(t, {
+    A: () => ee,
+}),
+    n(321073),
+    n(896048),
+    n(228524);
 var l = n(627968),
     r = n(64700),
     a = n(503698),
     i = n.n(a),
     s = n(989349),
     c = n.n(s),
-    o = n(432022),
+    o = n(108531),
     d = n(942381),
     u = n(136722),
     m = n(311907),
@@ -39,6 +44,7 @@ var l = n(627968),
     G = n(652215),
     z = n(985018),
     H = n(524445);
+
 function V(e, t, n) {
     return (
         t in e
@@ -52,6 +58,7 @@ function V(e, t, n) {
         e
     );
 }
+
 function B(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -68,6 +75,7 @@ function B(e) {
     }
     return e;
 }
+
 function K(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -96,11 +104,22 @@ let W = {
         borderRadius: 10,
     },
     J = (e) => {
-        (0, M.bh)({ onboardingCTA: e });
+        (0, M.bh)({
+            onboardingCTA: e,
+        });
     };
 class X {
     addStep(e) {
-        ++this.currentIndex, this.steps.push(B({ index: this.currentIndex }, e)), e.isDone && this.completedSteps++;
+        ++this.currentIndex,
+            this.steps.push(
+                B(
+                    {
+                        index: this.currentIndex,
+                    },
+                    e,
+                ),
+            ),
+            e.isDone && this.completedSteps++;
     }
     getSteps() {
         return this.steps;
@@ -116,7 +135,9 @@ let Q = (e) => {
         let { guild: t, roles: n } = e;
         return (0, l.jsx)("div", {
             className: H.Ei,
-            "aria-label": z.intl.formatToPlainString(z.t.PCs0oo, { numRoles: n.length }),
+            "aria-label": z.intl.formatToPlainString(z.t.PCs0oo, {
+                numRoles: n.length,
+            }),
             children: n.map((e) =>
                 (0, l.jsx)(
                     x.b_,
@@ -175,7 +196,9 @@ let Q = (e) => {
             { hasAnyThread: a, hasActiveThreads: s, channel: x } = e,
             { onboardingExpanded: V } = (0, U.kU)((e) => {
                 let { onboardingExpanded: t } = e;
-                return { onboardingExpanded: t };
+                return {
+                    onboardingExpanded: t,
+                };
             }, d.x),
             { tagFilter: ee } = (0, P.R)(x.id),
             et = (0, m.bG)([N.A], () => N.A.getGuild(x.getGuildId())),
@@ -186,19 +209,33 @@ let Q = (e) => {
                     transitions: (0, f.pnh)(e, {
                         keys: (e) => (e ? "shown" : "hidden"),
                         config: Y,
-                        from: { opacity: 0 },
-                        enter: { opacity: 1 },
-                        leave: { opacity: 0 },
+                        from: {
+                            opacity: 0,
+                        },
+                        enter: {
+                            opacity: 1,
+                        },
+                        leave: {
+                            opacity: 0,
+                        },
                         unique: !0,
                     }),
                     setVisible: t,
                 };
             })(),
             ea = (0, f.pnh)(V, {
-                from: { maxHeight: 0 },
-                enter: { maxHeight: 500 },
-                leave: { maxHeight: 0 },
-                config: { duration: 200 },
+                from: {
+                    maxHeight: 0,
+                },
+                enter: {
+                    maxHeight: 500,
+                },
+                leave: {
+                    maxHeight: 0,
+                },
+                config: {
+                    duration: 200,
+                },
             }),
             ei = r.useCallback((e) => {
                 var t;
@@ -338,7 +375,13 @@ let Q = (e) => {
                                             J(F._G.DEFAULT_REACTION),
                                                 (0, f.mMO)(async () => {
                                                     let { default: e } = await n.e("85157").then(n.bind(n, 939940));
-                                                    return (t) => (0, l.jsx)(e, K(B({}, t), { channel: h }));
+                                                    return (t) =>
+                                                        (0, l.jsx)(
+                                                            e,
+                                                            K(B({}, t), {
+                                                                channel: h,
+                                                            }),
+                                                        );
                                                 });
                                         },
                                         isDone: o,
@@ -360,7 +403,13 @@ let Q = (e) => {
                                                               let { default: e } = await n
                                                                   .e("7937")
                                                                   .then(n.bind(n, 420472));
-                                                              return (t) => (0, l.jsx)(e, K(B({}, t), { guildId: m }));
+                                                              return (t) =>
+                                                                  (0, l.jsx)(
+                                                                      e,
+                                                                      K(B({}, t), {
+                                                                          guildId: m,
+                                                                      }),
+                                                                  );
                                                           }));
                                                   },
                                               }),
@@ -441,15 +490,24 @@ let Q = (e) => {
               ? s || 0 !== ee.size
                   ? ee.size > 0
                       ? null
-                      : (0, l.jsx)(y.A, { guild: et })
+                      : (0, l.jsx)(y.A, {
+                            guild: et,
+                        })
                   : (0, l.jsxs)(l.Fragment, {
-                        children: [(0, l.jsx)(y.A, { guild: et }), (0, l.jsx)(A.D, {})],
+                        children: [
+                            (0, l.jsx)(y.A, {
+                                guild: et,
+                            }),
+                            (0, l.jsx)(A.D, {}),
+                        ],
                     })
               : em && en
                 ? ef
                     ? a
                         ? null
-                        : (0, l.jsx)(j.A, { channel: x })
+                        : (0, l.jsx)(j.A, {
+                              channel: x,
+                          })
                     : (0, l.jsx)(l.Fragment, {
                           children: el((e, t) =>
                               t
@@ -491,7 +549,9 @@ let Q = (e) => {
                                                                 expanded: V,
                                                                 onClick: () => eg(!V),
                                                             }),
-                                                            (0, l.jsx)(Z, { handleHide: es }),
+                                                            (0, l.jsx)(Z, {
+                                                                handleHide: es,
+                                                            }),
                                                         ],
                                                     }),
                                                 }),

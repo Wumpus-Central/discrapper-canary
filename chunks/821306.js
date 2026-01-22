@@ -1,4 +1,7 @@
-n.d(t, { A: () => p }), n(896048);
+n.d(t, {
+    A: () => p,
+}),
+    n(896048);
 var a = n(627968),
     l = n(64700),
     i = n(503698),
@@ -9,6 +12,7 @@ var a = n(627968),
     d = n(865116),
     u = n(759136),
     m = n(661251);
+
 function p(e) {
     let { devSettingsCategory: t } = e,
         n = (0, s.bG)([d.Ay], () => d.Ay.allByCategory(t), [t], s.My),

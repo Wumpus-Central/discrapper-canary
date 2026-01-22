@@ -1,4 +1,6 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var r = n(627968),
     l = n(64700),
     i = n(417597),
@@ -11,6 +13,7 @@ var r = n(627968),
     f = n(912276),
     p = n(60504),
     h = n(985018);
+
 function b(e) {
     let { channel: t } = e,
         n = (0, i.bG)([o.A], () => o.A.getDrawMode()),

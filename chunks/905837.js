@@ -1,5 +1,9 @@
-i.r(t), i.d(t, { default: () => a });
+i.r(t),
+    i.d(t, {
+        default: () => a,
+    });
 var l = i(69747);
+
 function r(e, t, i) {
     return (
         t in e
@@ -20,7 +24,7 @@ class n {
             ((this.isPolling = !0),
             (this.pollIntervalId = setInterval(() => {
                 this.poll();
-            }, 1000)));
+            }, 1e3)));
     }
     stop() {
         this.isPolling &&
@@ -29,7 +33,9 @@ class n {
             this.eventPoller.reset());
     }
     getState() {
-        return { isPolling: this.isPolling };
+        return {
+            isPolling: this.isPolling,
+        };
     }
     async poll() {
         await this.eventPoller.poll();

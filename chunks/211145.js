@@ -1,4 +1,6 @@
-s.d(t, { A: () => d });
+s.d(t, {
+    A: () => d,
+});
 var i = s(627968);
 s(64700);
 var a = s(503698),
@@ -6,6 +8,7 @@ var a = s(503698),
     r = s(397927),
     n = s(854627),
     C = s(391173);
+
 function d(e) {
     var t;
     let { user: s, checked: a, onChange: d, disabled: o } = e,
@@ -48,7 +51,9 @@ function d(e) {
                             return e;
                         })(
                             {
-                                className: l()({ [C.SU]: o }),
+                                className: l()({
+                                    [C.SU]: o,
+                                }),
                                 src: c,
                                 "aria-label": p,
                                 size: r._3J.SIZE_32,

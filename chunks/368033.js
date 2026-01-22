@@ -1,4 +1,6 @@
-r.d(t, { default: () => y });
+r.d(t, {
+    default: () => y,
+});
 var n = r(627968),
     o = r(64700),
     c = r(158954),
@@ -10,6 +12,7 @@ var n = r(627968),
     p = r(9302),
     f = r(652215),
     b = r(985018);
+
 function y(e) {
     var t, r;
     let { transitionState: y, onClose: O, contextKey: d } = e,

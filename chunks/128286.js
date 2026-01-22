@@ -1,4 +1,6 @@
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -7,6 +9,7 @@ var i = n(503698),
     o = n(709562),
     l = n(985018),
     c = n(932752);
+
 function u(e, t, n) {
     return (
         t in e
@@ -20,6 +23,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +40,7 @@ function d(e) {
     }
     return e;
 }
+
 function f(e, t) {
     if (null == e) return {};
     var n,
@@ -52,6 +57,7 @@ function f(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function p(e, t) {
     if (null == e) return {};
     var n,
@@ -62,6 +68,7 @@ function p(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function _(e) {
     let { popoutOpen: t, onClosePopout: n, onOpenPopout: i } = e,
         u = f(e, ["popoutOpen", "onClosePopout", "onOpenPopout"]),
@@ -73,7 +80,9 @@ function _(e) {
                 label: p,
                 onClick: t ? n : i,
                 iconComponent: s.tfB,
-                iconClassName: a()({ [c.r]: t }),
+                iconClassName: a()({
+                    [c.r]: t,
+                }),
             },
             u,
         ),

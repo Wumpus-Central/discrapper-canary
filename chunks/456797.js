@@ -8,6 +8,7 @@ function r(e, t, n) {
         view: window,
     });
 }
+
 function i(e, t, n) {
     let r = document.elementFromPoint(t, n);
     if (null == r) throw Error();

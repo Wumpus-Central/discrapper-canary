@@ -1,7 +1,14 @@
-n.d(t, { T: () => l }), n(321073), n(896048), n(638769), n(65821);
+n.d(t, {
+    T: () => l,
+}),
+    n(321073),
+    n(896048),
+    n(638769),
+    n(65821);
 var r = n(143236),
     i = n(118356),
     a = n(547830);
+
 function s(e, t, n) {
     return (
         t in e
@@ -41,7 +48,7 @@ class l extends r.EventEmitter {
         } finally {
             (n.totalTime = a.FO.now() - n.startTime),
                 this.persist && n.totalTime > 0 && this.logs.push(n),
-                this.logs.length > 1000 && this.logs.shift(),
+                this.logs.length > 1e3 && this.logs.shift(),
                 this.emit("log", e);
         }
         return n;

@@ -53,7 +53,9 @@ async function p(e) {
     try {
         let t = await i.Bo.get({
             url: o.Rsh.CREATOR_MONETIZATION_NAG_ACTIVATE_ELIGIBLITY,
-            query: { nag_guild_ids: e },
+            query: {
+                nag_guild_ids: e,
+            },
             rejectWithError: !0,
         });
         n.h.dispatch({
@@ -66,7 +68,9 @@ async function E(e, t) {
     let r = (
         await i.Bo.post({
             url: o.Rsh.CREATOR_MONETIZATION_OWNERSHIP_TRANSFER_ONBOARD(e),
-            body: { team_id: t },
+            body: {
+                team_id: t,
+            },
             rejectWithError: !1,
         })
     ).body;
@@ -79,12 +83,14 @@ async function E(e, t) {
         r
     );
 }
+
 function h(e) {
     return i.Bo.post({
         url: o.Rsh.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS(e),
         rejectWithError: !1,
     });
 }
+
 function O(e) {
     return i.Bo.post({
         url: o.Rsh.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_DEMONETIZED(e),

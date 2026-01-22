@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var l = n(627968);
 n(64700);
 var r = n(311907),
@@ -37,6 +39,7 @@ let d = () =>
             }),
         ],
     });
+
 function g(e) {
     let { onClick: t } = e;
     return (0, r.bG)([s.HP], () => !s.HP.hasHotspot(s._2.STAGE_CHANNEL_UPSELL))
@@ -63,7 +66,9 @@ function g(e) {
                                   (0, l.jsx)(i.Text, {
                                       color: "text-default",
                                       variant: "text-xs/normal",
-                                      children: o.intl.format(o.t.Vh7rP7, { suggestionsHook: d }),
+                                      children: o.intl.format(o.t.Vh7rP7, {
+                                          suggestionsHook: d,
+                                      }),
                                   }),
                               ],
                           }),

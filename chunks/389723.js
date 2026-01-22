@@ -28,6 +28,7 @@ var r = n(627968),
     S = n(985018),
     I = n(526008),
     T = n(100624);
+
 function C(e, t, n) {
     return (
         t in e
@@ -41,6 +42,7 @@ function C(e, t, n) {
         e
     );
 }
+
 function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -57,6 +59,7 @@ function N(e) {
     }
     return e;
 }
+
 function R(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -69,6 +72,7 @@ function R(e, t) {
     }
     return n;
 }
+
 function w(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -80,6 +84,7 @@ function w(e, t) {
         e
     );
 }
+
 function P(e, t) {
     if (null == e) return {};
     var n,
@@ -96,6 +101,7 @@ function P(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function D(e, t) {
     if (null == e) return {};
     var n,
@@ -106,7 +112,10 @@ function D(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
-let x = { keys: ["label"] };
+let x = {
+    keys: ["label"],
+};
+
 function L(e) {
     let { children: t, isCollapsible: n = !1, maxOptionsVisible: a = 5, isOpen: s, setIsOpen: l, options: c } = e,
         u = P(e, ["children", "isCollapsible", "maxOptionsVisible", "isOpen", "setIsOpen", "options"]),
@@ -213,21 +222,33 @@ function L(e) {
         children: t,
     });
 }
+
 function j(e) {
     let { ref: t } = e,
         n = P(e, ["ref"]),
         { fieldProps: a, props: s } = (0, c.n)(n),
         o = (0, m.rdh)(_.A.modules.select.MAX_WIDTH),
-        l = i.useMemo(() => ({ horizontalControlColumnWidth: "minmax(".concat(o, "px, auto)") }), [o]);
+        l = i.useMemo(
+            () => ({
+                horizontalControlColumnWidth: "minmax(".concat(o, "px, auto)"),
+            }),
+            [o],
+        );
     return (0, r.jsx)(
         c.D,
         w(N({}, a), {
             "data-mana-component": "combobox",
             layoutConfig: l,
-            children: (0, r.jsx)(M, w(N({}, s), { ref: t })),
+            children: (0, r.jsx)(
+                M,
+                w(N({}, s), {
+                    ref: t,
+                }),
+            ),
         }),
     );
 }
+
 function M(e) {
     let {
             id: t,
@@ -469,7 +490,9 @@ function M(e) {
                                 children: (0, r.jsx)(h.p, {
                                     ref: x,
                                     id: t,
-                                    className: s()(T.input, I.kk, { [I.kK]: "single" === U && X && !ea }),
+                                    className: s()(T.input, I.kk, {
+                                        [I.kK]: "single" === U && X && !ea,
+                                    }),
                                     autoFocus: n,
                                     placeholder: a,
                                     role: "combobox",
@@ -509,6 +532,7 @@ function M(e) {
         ],
     });
 }
+
 function k(e) {
     let { renderListItem: t, renderEmptyState: n, maxVisibleItems: a = 5 } = e,
         {

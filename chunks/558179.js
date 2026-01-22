@@ -1,4 +1,9 @@
-n.d(t, { A: () => N }), n(591487), n(727858), n(747238);
+n.d(t, {
+    A: () => N,
+}),
+    n(591487),
+    n(727858),
+    n(747238);
 var r,
     i,
     a = n(627968),
@@ -14,6 +19,7 @@ var r,
     h = n(49005),
     m = n(529223),
     g = n(829681);
+
 function E(e, t, n) {
     return (
         t in e
@@ -27,6 +33,7 @@ function E(e, t, n) {
         e
     );
 }
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -43,6 +50,7 @@ function b(e) {
     }
     return e;
 }
+
 function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -55,6 +63,7 @@ function y(e, t) {
     }
     return n;
 }
+
 function O(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -67,6 +76,7 @@ function O(e, t) {
     );
 }
 let A = new RegExp("https?://".concat(null != (r = window.GLOBAL_ENV.CDN_HOST) ? r : ""));
+
 function v(e) {
     return "string" == typeof e.content ? e.content : T(e.content);
 }
@@ -95,11 +105,30 @@ let S = O(b({}, u().defaultRules), {
                     n.key,
                 ),
         }),
-        strong: O(b({}, u().defaultRules.strong), { order: 6 }),
-        em: O(b({}, u().defaultRules.em), { order: 6 }),
-        u: O(b({}, u().defaultRules.u), { order: 5 }),
-        del: O(b({}, u().defaultRules.del), { order: 6 }),
-        link: O(b({}, p.Ay, (0, h.A)({ enableBuildOverrides: !1 })), { order: 6 }),
+        strong: O(b({}, u().defaultRules.strong), {
+            order: 6,
+        }),
+        em: O(b({}, u().defaultRules.em), {
+            order: 6,
+        }),
+        u: O(b({}, u().defaultRules.u), {
+            order: 5,
+        }),
+        del: O(b({}, u().defaultRules.del), {
+            order: 6,
+        }),
+        link: O(
+            b(
+                {},
+                p.Ay,
+                (0, h.A)({
+                    enableBuildOverrides: !1,
+                }),
+            ),
+            {
+                order: 6,
+            },
+        ),
         blockQuote: O(b({}, u().defaultRules.blockQuote), {
             react: (e, t, n) =>
                 (0, a.jsx)(
@@ -166,7 +195,9 @@ let S = O(b({}, u().defaultRules), {
                                           {
                                               children: (0, a.jsx)("code", {
                                                   className: l()(g.kw, "hljs", n.language),
-                                                  dangerouslySetInnerHTML: { __html: n.value },
+                                                  dangerouslySetInnerHTML: {
+                                                      __html: n.value,
+                                                  },
                                               }),
                                           },
                                           r.key,
@@ -184,7 +215,17 @@ let S = O(b({}, u().defaultRules), {
 class C extends (i = s.PureComponent) {
     render() {
         let { className: e, children: t, state: n, parser: r, output: i } = this.props,
-            s = i(r("".concat(t, "\n\n"), b({ inline: !1 }, n)));
+            s = i(
+                r(
+                    "".concat(t, "\n\n"),
+                    b(
+                        {
+                            inline: !1,
+                        },
+                        n,
+                    ),
+                ),
+            );
         return (0, a.jsx)("div", {
             className: l()(m.wD, e),
             children: s,

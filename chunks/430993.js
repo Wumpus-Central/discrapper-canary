@@ -16,6 +16,7 @@ var r = n(627968),
     f = n(599319),
     p = n(834730),
     _ = n(22789);
+
 function h(e, t, n) {
     return (
         t in e
@@ -29,6 +30,7 @@ function h(e, t, n) {
         e
     );
 }
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -45,6 +47,7 @@ function m(e) {
     }
     return e;
 }
+
 function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -57,6 +60,7 @@ function g(e, t) {
     }
     return n;
 }
+
 function E(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -68,9 +72,11 @@ function E(e, t) {
         e
     );
 }
+
 function b(e) {
     return i.Children.toArray(e).filter(Boolean).length > 0;
 }
+
 function y(e) {
     return "string" == typeof e
         ? (0, r.jsx)(p.E, {
@@ -80,6 +86,7 @@ function y(e) {
           })
         : e;
 }
+
 function O(e) {
     let { controls: t, children: n, listProps: i, onScroll: a, scrollerRef: s } = e;
     if (!b(n) && null == t && null == i) return null;
@@ -92,6 +99,7 @@ function O(e) {
         scrollerRef: s,
     });
 }
+
 function A(e) {
     var t, n;
     let { controls: a, children: o, listProps: p, onScroll: h, scrollerRef: g } = e,
@@ -141,10 +149,16 @@ function A(e) {
         }, [N]),
         (0, r.jsxs)(u.F, {
             children: [
-                (0, r.jsx)("div", { className: s()(_.bodySpacerTop, { [_.bodySpacerTopBorder]: O && null == a }) }),
+                (0, r.jsx)("div", {
+                    className: s()(_.bodySpacerTop, {
+                        [_.bodySpacerTopBorder]: O && null == a,
+                    }),
+                }),
                 null != a &&
                     (0, r.jsx)("header", {
-                        className: s()(_.bodyControls, { [_.bodyControlsWithFade]: b }),
+                        className: s()(_.bodyControls, {
+                            [_.bodyControlsWithFade]: b,
+                        }),
                         children: a,
                     }),
                 null != p
@@ -168,11 +182,17 @@ function A(e) {
                           disableFocusRingScope: !0,
                           children: (0, r.jsx)("main", {
                               ref: I,
-                              className: s()(_.bodyInner, { [_.bodyInnerShouldScroll]: O }),
+                              className: s()(_.bodyInner, {
+                                  [_.bodyInnerShouldScroll]: O,
+                              }),
                               children: o,
                           }),
                       }),
-                (0, r.jsx)("div", { className: s()(_.bodySpacerBottom, { [_.bodySpacerBottomBorder]: O }) }),
+                (0, r.jsx)("div", {
+                    className: s()(_.bodySpacerBottom, {
+                        [_.bodySpacerBottomBorder]: O,
+                    }),
+                }),
             ],
         })
     );

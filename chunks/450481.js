@@ -1,4 +1,7 @@
-n.d(e, { p: () => p }), n(896048);
+n.d(e, {
+    p: () => p,
+}),
+    n(896048);
 var i = n(64700),
     r = n(575593),
     l = n(631670),
@@ -24,7 +27,9 @@ let p = (t) => {
             let t = {};
             try {
                 if ((null != f && (t.avatarDecoration = f), null != b)) {
-                    let t = (0, a.yX)({ pendingProfileEffect: b });
+                    let t = (0, a.yX)({
+                        pendingProfileEffect: b,
+                    });
                     await (0, s.gi)(t);
                 }
                 null != y && (t.nameplate = y), Object.keys(t).length > 0 && (await (0, l.yu)(t));
@@ -39,7 +44,7 @@ let p = (t) => {
                     r(),
                         l(
                             i(A, e.MESSAGE, {
-                                duration: 6000,
+                                duration: 6e3,
                                 position: t.TOP,
                             }),
                         );

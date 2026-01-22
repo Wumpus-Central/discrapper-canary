@@ -1,4 +1,6 @@
-i.d(e, { T: () => T });
+i.d(e, {
+    T: () => T,
+});
 var n = i(704591),
     l = i(419954),
     s = i(954571),
@@ -13,9 +15,14 @@ let T = (0, l.zD)(u.X.CHAT_SOUNDMOJI_AUTOCOMPLETE, {
     setValue: (t) => {
         s.default.track(a.HAw.SOUNDMOJI_IN_AUTOCOMPLETE_TOGGLED, {
             checked: t,
-            location: { section: a.JJy.SETTINGS_TEXT_AND_IMAGES },
+            location: {
+                section: a.JJy.SETTINGS_TEXT_AND_IMAGES,
+            },
         }),
             r.eK.updateSetting(t);
     },
-    usePredicate: () => (0, n.AA)({ location: "SoundmojiAutocomplete" }),
+    usePredicate: () =>
+        (0, n.AA)({
+            location: "SoundmojiAutocomplete",
+        }),
 });

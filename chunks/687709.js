@@ -1,4 +1,8 @@
-n.d(t, { A: () => f }), n(134528), n(947204);
+n.d(t, {
+    A: () => f,
+}),
+    n(134528),
+    n(947204);
 var r = n(562465),
     l = n(73153),
     i = n(198982),
@@ -24,7 +28,9 @@ let d = {
                             case c.t02.TOO_MANY_PINS_IN_CHANNEL:
                                 (a = u.intl.string(u.t.HI88Q3)),
                                     (s = e.isPrivate()
-                                        ? u.intl.formatToPlainString(u.t.Q89oQU, { maxPins: c.KL3 })
+                                        ? u.intl.formatToPlainString(u.t.Q89oQU, {
+                                              maxPins: c.KL3,
+                                          })
                                         : u.intl.formatToPlainString(u.t.NnO1S5, {
                                               maxPins: c.KL3,
                                               channelName: l,

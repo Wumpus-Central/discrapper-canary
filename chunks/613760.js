@@ -1,4 +1,7 @@
-n.d(t, { A: () => E }), n(896048);
+n.d(t, {
+    A: () => E,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(172218),
@@ -14,6 +17,7 @@ var r = n(627968),
     h = n(652215),
     m = n(985018),
     g = n(616078);
+
 function E(e) {
     let { code: t, message: n } = e,
         [E, b, y] = (0, o.yK)(
@@ -59,12 +63,16 @@ function E(e) {
         ? (0, r.jsxs)(c.A, {
               containerRef: I,
               children: [
-                  (0, r.jsx)(c.A.Header, { text: m.intl.string(m.t.j4KtLa) }),
+                  (0, r.jsx)(c.A.Header, {
+                      text: m.intl.string(m.t.j4KtLa),
+                  }),
                   (0, r.jsx)(c.A.Body, {
                       children: (0, r.jsxs)("div", {
                           className: g.k,
                           children: [
-                              (0, r.jsx)(c.A.Icon, { expired: !0 }),
+                              (0, r.jsx)(c.A.Icon, {
+                                  expired: !0,
+                              }),
                               (0, r.jsx)(c.A.Info, {
                                   expired: !0,
                                   title: m.intl.string(m.t.NaQLEx),
@@ -79,8 +87,12 @@ function E(e) {
           ? (0, r.jsxs)(c.A, {
                 containerRef: I,
                 children: [
-                    (0, r.jsx)(c.A.Header, { text: m.intl.string(m.t.m9hXGR) }),
-                    (0, r.jsx)(c.A.Body, { resolving: !0 }),
+                    (0, r.jsx)(c.A.Header, {
+                        text: m.intl.string(m.t.m9hXGR),
+                    }),
+                    (0, r.jsx)(c.A.Body, {
+                        resolving: !0,
+                    }),
                 ],
             })
           : (0, r.jsx)(l.W, {

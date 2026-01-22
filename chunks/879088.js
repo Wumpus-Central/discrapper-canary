@@ -1,10 +1,12 @@
 var r = n(436167);
+
 function i() {
     var t,
         n,
         a = "function" == typeof Symbol ? Symbol : {},
         s = a.iterator || "@@iterator",
         o = a.toStringTag || "@@toStringTag";
+
     function l(e, i, a, s) {
         var o = Object.create((i && i.prototype instanceof u ? i : u).prototype);
         return (
@@ -28,6 +30,7 @@ function i() {
                                 return (a = e), (s = 0), (o = t), (f.n = n), c;
                             },
                         };
+
                     function p(e, r) {
                         for (s = e, o = r, n = 0; !d && l && !i && n < u.length; n++) {
                             var i,
@@ -81,8 +84,11 @@ function i() {
         );
     }
     var c = {};
+
     function u() {}
+
     function d() {}
+
     function f() {}
     n = Object.getPrototypeOf;
     var p =
@@ -96,6 +102,7 @@ function i() {
                       }),
                       n),
             ));
+
     function _(e) {
         return (
             Object.setPrototypeOf ? Object.setPrototypeOf(e, f) : ((e.__proto__ = f), r(e, o, "GeneratorFunction")),

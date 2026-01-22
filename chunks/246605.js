@@ -11,12 +11,14 @@ var r = n(110259),
     o = n(954571),
     l = n(499785),
     c = n(652215);
+
 function u(e) {
     a.h.dispatch({
         type: "SURVEY_OVERRIDE",
         id: e,
     });
 }
+
 function d(e, t) {
     a.h.dispatch({
         type: "SURVEY_HIDE",
@@ -28,8 +30,11 @@ function d(e, t) {
                   survey_id: e,
                   dismissed: t,
               })
-            : o.default.track(c.HAw.APP_NOTICE_PRIMARY_CTA_OPENED, { notice_type: c.kqX.SURVEY });
+            : o.default.track(c.HAw.APP_NOTICE_PRIMARY_CTA_OPENED, {
+                  notice_type: c.kqX.SURVEY,
+              });
 }
+
 function f(e, t) {
     var n = {};
     return (
@@ -43,7 +48,9 @@ function f(e, t) {
                 properties: (e) => {
                     var t;
                     let n = null == e || null == (t = e.body) ? void 0 : t.survey;
-                    return (0, i.e0)({ key: null == n ? void 0 : n.key });
+                    return (0, i.e0)({
+                        key: null == n ? void 0 : n.key,
+                    });
                 },
             },
             rejectWithError: !1,
@@ -64,6 +71,7 @@ function f(e, t) {
         )
     );
 }
+
 function p(e) {
     let t = s.Ay.getLastSeenTimestamp();
     if (null === t || (null != t && Date.now() - t >= s.bh))
@@ -76,7 +84,10 @@ function p(e) {
                 url: c.Rsh.USER_SURVEY_SEEN(e),
                 trackedActionData: {
                     event: r.NetworkActionNames.USER_SURVEY_SEEN,
-                    properties: (t) => (0, i.e0)({ key: e }),
+                    properties: (t) =>
+                        (0, i.e0)({
+                            key: e,
+                        }),
                 },
                 rejectWithError: !1,
             })

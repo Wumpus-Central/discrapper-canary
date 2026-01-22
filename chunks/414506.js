@@ -1,4 +1,6 @@
-n.d(t, { default: () => A });
+n.d(t, {
+    default: () => A,
+});
 var l = n(627968);
 n(64700);
 var r = n(397927),
@@ -25,10 +27,14 @@ let A = (0, u.A)(
                 },
                 "aria-label": _.intl.string(_.t.liqwPJ),
                 onSelect: u,
-                children: (0, l.jsx)(r.rXV, { children: O }),
+                children: (0, l.jsx)(r.rXV, {
+                    children: O,
+                }),
             });
         },
-        { object: s.ZSU.CONTEXT_MENU },
+        {
+            object: s.ZSU.CONTEXT_MENU,
+        },
     ),
     [c.A.CONTEXT_MENU, c.A.GUILD_MODERATION_USER_MENU],
 );

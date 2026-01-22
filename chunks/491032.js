@@ -1,4 +1,7 @@
-n.d(t, { A: () => f }), n(896048);
+n.d(t, {
+    A: () => f,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(397927),
@@ -6,6 +9,7 @@ var r = n(627968),
     a = n(754513),
     c = n(985018),
     o = n(410478);
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -31,6 +35,7 @@ function d(e) {
     }
     return e;
 }
+
 function u(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -49,6 +54,7 @@ function u(e, t) {
         e
     );
 }
+
 function f(e) {
     var t;
     let { rule: n, onChangeRule: f, collapsed: g = !1 } = e,
@@ -58,7 +64,13 @@ function f(e) {
         }, [b, m]),
         x = i.useCallback(
             (e) => {
-                f(u(d({}, n), { triggerMetadata: u(d({}, n.triggerMetadata), { regexPatterns: e }) }));
+                f(
+                    u(d({}, n), {
+                        triggerMetadata: u(d({}, n.triggerMetadata), {
+                            regexPatterns: e,
+                        }),
+                    }),
+                );
             },
             [f, n],
         );

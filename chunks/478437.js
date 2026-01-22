@@ -21,7 +21,7 @@ var r = (function (e) {
         (e[(e.GUILD_MEDIA = 16)] = "GUILD_MEDIA"),
         (e[(e.LOBBY = 17)] = "LOBBY"),
         (e[(e.DM_SDK = 18)] = "DM_SDK"),
-        (e[(e.UNKNOWN = 10000)] = "UNKNOWN"),
+        (e[(e.UNKNOWN = 1e4)] = "UNKNOWN"),
         e
     );
 })({});

@@ -1,5 +1,8 @@
 let r;
-n.d(t, { A: () => $ }), n(896048);
+n.d(t, {
+    A: () => $,
+}),
+    n(896048);
 var i,
     a = n(284009),
     s = n.n(a),
@@ -20,6 +23,7 @@ var i,
     O = n(383501),
     A = n(652215),
     v = n(502075);
+
 function S(e, t, n) {
     return (
         t in e
@@ -41,6 +45,7 @@ let I = {},
     w = {},
     P = A.SO9.THEATRE,
     D = {};
+
 function x(e, t, n, i) {
     return (
         s()(null != r, "Creating RTCConnection without session."),
@@ -55,17 +60,21 @@ function x(e, t, n, i) {
         })
     );
 }
+
 function L() {
     l().forEach(D, (e, t) => {
         e.destroy(e.isOwner ? "sender-disconnect" : "receiver-disconnect"), delete D[t], delete w[t];
     });
 }
+
 function j(e) {
     (r = e.sessionId), L();
 }
+
 function M() {
     (r = null), L();
 }
+
 function k(e) {
     var t, n;
     let {
@@ -114,6 +123,7 @@ function k(e) {
     } else null == (n = D[m]) || n.analyticsContext.updateStreamApplication(null);
     null != p ? (R[m] = p) : delete R[m];
 }
+
 function U(e) {
     let { appContext: t, streamKey: n } = e;
     (I[n] = {
@@ -128,6 +138,7 @@ function U(e) {
         (C[n] = null),
         delete R[n];
 }
+
 function G(e) {
     let { streamKey: t, rtcServerId: n, rtcChannelId: r, region: i, viewerIds: a } = e,
         s = D[t],
@@ -152,23 +163,27 @@ function G(e) {
             mediaEngineConnectionId: s.getMediaEngineConnectionId(),
         });
 }
+
 function V(e) {
     let t = D[e.streamKey];
     if (null == t) return !1;
     t.connect(e.endpoint, e.token);
 }
+
 function F(e) {
     let { connectionStats: t } = e;
     l().forEach(D, (e, n) => {
         e.updateStats(t);
     });
 }
+
 function B(e) {
     let { streamKey: t, viewerIds: n, paused: r } = e,
         i = D[t];
     if (null == i) return !1;
     null != n && i.analyticsContext.trackViewerCount(n.length), i.streamUpdate(r);
 }
+
 function H(e) {
     let { streamKey: t } = e,
         n = D[t];
@@ -180,13 +195,16 @@ function H(e) {
         n.destroy("stream-end"),
         delete D[t];
 }
+
 function Y(e) {
     let { layout: t } = e;
     (P = t), Object.values(D).forEach((e) => e.layoutChange(t));
 }
+
 function W() {
     return !0;
 }
+
 function K(e) {
     let { context: t, wants: n, userId: r, guildId: i, channelId: a } = e,
         s = (0, _._z)({
@@ -206,21 +224,25 @@ function K(e) {
         return !1;
     w[s] = performance.now();
 }
+
 function z(e) {
     return l().some(D, (t) => t === e.connection);
 }
+
 function q(e) {
     let { userId: t, context: n, quality: r } = e;
     l().forEach(D, (e) => {
         e.setSimulcastDebugOverride(t, n, r);
     });
 }
+
 function X(e) {
     let { streamId: t, dimensions: n, zoom: r } = e;
     l().forEach(D, (e) => {
         null == e || e.setVideoSize(t, n, r);
     });
 }
+
 function Z(e) {
     var t, n, r;
     if (null == e) return "unknown";

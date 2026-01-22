@@ -1,4 +1,6 @@
-n.d(t, { v: () => I });
+n.d(t, {
+    v: () => I,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -11,6 +13,7 @@ var r = n(627968),
     f = n(978495),
     p = n(818348),
     _ = n(506540);
+
 function h(e, t, n) {
     return (
         t in e
@@ -24,6 +27,7 @@ function h(e, t, n) {
         e
     );
 }
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -40,6 +44,7 @@ function m(e) {
     }
     return e;
 }
+
 function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -52,6 +57,7 @@ function g(e, t) {
     }
     return n;
 }
+
 function E(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -63,6 +69,7 @@ function E(e, t) {
         e
     );
 }
+
 function b(e, t) {
     if (null == e) return {};
     var n,
@@ -79,6 +86,7 @@ function b(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function y(e, t) {
     if (null == e) return {};
     var n,
@@ -89,6 +97,7 @@ function y(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function O(e) {
     let { src: t } = e;
     return (0, r.jsx)("img", {
@@ -98,6 +107,7 @@ function O(e) {
         draggable: !1,
     });
 }
+
 function A(e) {
     let { lottie: t, props: n } = e,
         { reducedMotion: a } = i.useContext(l.C);
@@ -114,6 +124,7 @@ function A(e) {
         ),
     );
 }
+
 function v(e) {
     let { rive: t, props: n } = e;
     return (0, r.jsx)(
@@ -130,6 +141,7 @@ function v(e) {
         ),
     );
 }
+
 function S(e) {
     let { ref: t, src: n, fallbackImageSrc: a, loop: s, loopAt: o = 0, playbackRate: c, isWindowFocused: u } = e,
         { reducedMotion: d } = i.useContext(l.C),
@@ -146,6 +158,7 @@ function S(e) {
                     e.removeEventListener("ended", t);
                 }
             );
+
         function t() {
             null != e && !0 === s && 0 !== o && ((e.currentTime = o), e.play());
         }
@@ -171,6 +184,7 @@ function S(e) {
               preload: "metadata",
           });
 }
+
 function I(e) {
     var t, n;
     let { aspectRatio: i = "16/9" } = e,
@@ -178,11 +192,18 @@ function I(e) {
         l = (0, u.G9)(),
         c = (0, o.R)(),
         p = null != (t = null == (n = l.isWindowFocused) ? void 0 : n.call(l)) ? t : c;
+
     function h() {
         if ((0, f.wu)(a)) return (0, r.jsx)(O, m({}, a));
         if ((0, f.al)(a)) return (0, r.jsx)(A, m({}, a));
         if ((0, f.$P)(a)) return (0, r.jsx)(v, m({}, a));
-        if ((0, f.cZ)(a)) return (0, r.jsx)(S, E(m({}, a), { isWindowFocused: p }));
+        if ((0, f.cZ)(a))
+            return (0, r.jsx)(
+                S,
+                E(m({}, a), {
+                    isWindowFocused: p,
+                }),
+            );
         if ((0, f.Kh)(a))
             return null == l.dynamicGraphicComponents
                 ? (console.warn("Dynamic graphic used but no dynamicGraphicComponents provided in ManaContext"), null)

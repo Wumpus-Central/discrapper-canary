@@ -15,6 +15,7 @@ let u = (0, a.D)(() => ({
     searchResults: c.R,
     hasSearchResults: !1,
 }));
+
 function d() {
     let e = o.A.useField("query"),
         t = (0, l.PH)(),
@@ -30,7 +31,10 @@ function d() {
         "" === e || e.length < 2 ? u.resetState() : a(e);
     }, [e, a]),
         (0, i.Ay)(() => () => {
-            u.resetState(), o.A.setState({ query: "" });
+            u.resetState(),
+                o.A.setState({
+                    query: "",
+                });
         });
     let c = u.useField("searchResults");
     return {

@@ -1,5 +1,8 @@
-n.d(t, { _: () => i });
+n.d(t, {
+    _: () => i,
+});
 var r = n(985018);
+
 function i(e) {
     switch (e.length) {
         case 0:

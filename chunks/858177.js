@@ -1,4 +1,8 @@
-n.d(t, { O: () => m }), n(321073), n(896048);
+n.d(t, {
+    O: () => m,
+}),
+    n(321073),
+    n(896048);
 var r = n(64700),
     i = n(735438),
     a = n.n(i),
@@ -6,6 +10,7 @@ var r = n(64700),
     o = n(451988),
     l = n(627363),
     c = n(587895);
+
 function u(e, t, n) {
     return (
         t in e
@@ -20,7 +25,7 @@ function u(e, t, n) {
     );
 }
 let d = 20,
-    f = 60000;
+    f = 6e4;
 class p {
     request(e) {
         if (this._pending.has(e)) return;
@@ -58,11 +63,13 @@ class p {
     }
 }
 let _ = new p();
+
 function h(e) {
     r.useEffect(() => {
         null != e && "" !== e && _.request(e);
     }, [e]);
 }
+
 function m(e) {
     return h(e), (0, s.bG)([c.A], () => (null != e && "" !== e ? c.A.getApplication(e) : null), [e]);
 }

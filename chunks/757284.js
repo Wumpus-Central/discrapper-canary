@@ -12,6 +12,7 @@ var r = n(627968),
     c = n(912687),
     u = n(397927),
     d = n(561498);
+
 function f(e, t, n) {
     return (
         t in e
@@ -25,6 +26,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -41,6 +43,7 @@ function p(e) {
     }
     return e;
 }
+
 function _(e) {
     let { id: t, title: n, titleDescriber: i, primaryText: a, subtext: s } = e;
     return (0, r.jsxs)(o.f, {
@@ -83,6 +86,7 @@ function _(e) {
         ],
     });
 }
+
 function h(e) {
     let { price: t, strikethrough: n = !0 } = e;
     return (0, r.jsx)(u.Text, {
@@ -93,6 +97,7 @@ function h(e) {
         children: t,
     });
 }
+
 function m(e) {
     let { className: t, selection: n, onChange: a, planOptions: o } = e,
         l = i.useCallback((e) => a([...e][0]), [a]);

@@ -1,4 +1,7 @@
-n.d(t, { A: () => y }), n(896048);
+n.d(t, {
+    A: () => y,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(91871),
@@ -17,6 +20,7 @@ var r = n(627968),
     g = n(985018),
     h = n(246542);
 let x = new Set();
+
 function y(e) {
     let { guildId: t } = e,
         n = (0, b.hs)(t),
@@ -25,7 +29,10 @@ function y(e) {
         y = (0, f.H)(t, x, !0),
         O = l.useCallback(
             (e) => {
-                (0, p.Ld)(t, { selectedRoleIds: e }), n(e);
+                (0, p.Ld)(t, {
+                    selectedRoleIds: e,
+                }),
+                    n(e);
             },
             [t, n],
         ),

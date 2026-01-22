@@ -3,6 +3,7 @@ let i = n(159093),
     a = n(17101),
     s = a.isObject,
     o = a.hasOwn;
+
 function l() {}
 (e.exports = l),
     (l.prototype.clearTimeout = function () {

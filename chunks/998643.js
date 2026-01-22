@@ -1,4 +1,9 @@
-n.r(t), n.d(t, { default: () => eC }), n(747238), n(896048);
+n.r(t),
+    n.d(t, {
+        default: () => eC,
+    }),
+    n(747238),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     s = n(492462),
@@ -56,6 +61,7 @@ var r = n(627968),
     er = n(652215);
 n(436317);
 var ei = n(172799);
+
 function es(e, t, n) {
     return (
         t in e
@@ -69,6 +75,7 @@ function es(e, t, n) {
         e
     );
 }
+
 function el(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -85,6 +92,7 @@ function el(e) {
     }
     return e;
 }
+
 function ea(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -160,7 +168,9 @@ class eT extends i.PureComponent {
                     invite_code: (0, S.m0)(e),
                     load_time: U.A.getTimeSinceNavigationStart(),
                 },
-                { flush: !0 },
+                {
+                    flush: !0,
+                },
             )),
             t && this.resolveInvite(),
             this.resolveGiftCode(),
@@ -184,7 +194,9 @@ class eT extends i.PureComponent {
             null != t &&
                 (0, k.RG)(t.id, ["embedded_splash"]).then((e) => {
                     let [t] = e;
-                    return this.setState({ backgroundId: t });
+                    return this.setState({
+                        backgroundId: t,
+                    });
                 });
         }
     }
@@ -203,7 +215,9 @@ class eT extends i.PureComponent {
                     guild_template_code: e,
                     load_time: U.A.getTimeSinceNavigationStart(),
                 },
-                { flush: !0 },
+                {
+                    flush: !0,
+                },
             ),
             j.A.resolveGuildTemplate(e),
             j.A.openNativeAppModal(e));
@@ -223,7 +237,13 @@ class eT extends i.PureComponent {
             children: [
                 (0, r.jsx)(m.A, {
                     path: er.BVt.LOGIN_HANDOFF,
-                    render: (e) => (0, r.jsx)(ec, ea(el({}, e), { redirectTo: t })),
+                    render: (e) =>
+                        (0, r.jsx)(
+                            ec,
+                            ea(el({}, e), {
+                                redirectTo: t,
+                            }),
+                        ),
                 }),
                 (0, r.jsx)(m.A, {
                     path: er.BVt.LOGIN_ONE_TIME,
@@ -232,16 +252,37 @@ class eT extends i.PureComponent {
                 (0, r.jsx)(m.A, {
                     impressionName: l.ImpressionNames.USER_LOGIN,
                     path: er.BVt.LOGIN,
-                    render: (e) => (0, r.jsx)(eo, ea(el({}, e), { redirectTo: t })),
+                    render: (e) =>
+                        (0, r.jsx)(
+                            eo,
+                            ea(el({}, e), {
+                                redirectTo: t,
+                            }),
+                        ),
                 }),
                 (0, r.jsx)(m.A, {
                     impressionName: l.ImpressionNames.USER_REGISTRATION,
                     path: er.BVt.REGISTER,
-                    render: (e) => (0, r.jsx)(ep, ea(el({}, e), { redirectTo: t })),
+                    render: (e) =>
+                        (0, r.jsx)(
+                            ep,
+                            ea(el({}, e), {
+                                redirectTo: t,
+                            }),
+                        ),
                 }),
                 (0, r.jsx)(m.A, {
                     path: er.BVt.GIFT_CODE_LOGIN(":giftCode"),
-                    render: (e) => (0, r.jsx)(eh, el({ login: !0 }, e)),
+                    render: (e) =>
+                        (0, r.jsx)(
+                            eh,
+                            el(
+                                {
+                                    login: !0,
+                                },
+                                e,
+                            ),
+                        ),
                 }),
                 (0, r.jsx)(m.A, {
                     path: er.BVt.GIFT_CODE(":giftCode"),
@@ -291,7 +332,13 @@ class eT extends i.PureComponent {
                             transitionTo: s,
                         } = e;
                         return a.Fr || a.v1
-                            ? (0, r.jsx)(z.A, { code: t }, t)
+                            ? (0, r.jsx)(
+                                  z.A,
+                                  {
+                                      code: t,
+                                  },
+                                  t,
+                              )
                             : (0, r.jsx)(ed, {
                                   code: t,
                                   location: i,
@@ -326,11 +373,29 @@ class eT extends i.PureComponent {
                 }),
                 (0, r.jsx)(m.A, {
                     path: er.BVt.REJECT_IP,
-                    render: (e) => (0, r.jsx)(e_, el({ source: er.BVt.REJECT_IP }, e)),
+                    render: (e) =>
+                        (0, r.jsx)(
+                            e_,
+                            el(
+                                {
+                                    source: er.BVt.REJECT_IP,
+                                },
+                                e,
+                            ),
+                        ),
                 }),
                 (0, r.jsx)(m.A, {
                     path: er.BVt.REJECT_MFA,
-                    render: (e) => (0, r.jsx)(e_, el({ source: er.BVt.REJECT_MFA }, e)),
+                    render: (e) =>
+                        (0, r.jsx)(
+                            e_,
+                            el(
+                                {
+                                    source: er.BVt.REJECT_MFA,
+                                },
+                                e,
+                            ),
+                        ),
                 }),
                 (0, r.jsx)(m.A, {
                     path: er.BVt.AUTHORIZE_PAYMENT,
@@ -338,7 +403,16 @@ class eT extends i.PureComponent {
                 }),
                 (0, r.jsx)(m.A, {
                     path: er.BVt.RESET,
-                    render: (e) => (0, r.jsx)(e_, el({ source: er.BVt.RESET }, e)),
+                    render: (e) =>
+                        (0, r.jsx)(
+                            e_,
+                            el(
+                                {
+                                    source: er.BVt.RESET,
+                                },
+                                e,
+                            ),
+                        ),
                 }),
                 (0, r.jsx)(m.A, {
                     path: er.BVt.PICK_GUILD_SETTINGS(":section?", ":subsection?"),
@@ -349,7 +423,13 @@ class eT extends i.PureComponent {
                     render: (e) => (0, r.jsx)(ey, el({}, e)),
                 }),
                 (0, r.jsx)(m.A, {
-                    path: er.BVt.CHANNEL(I.pv.guildId(), I.pv.channelId({ optional: !0 }), ":messageId?"),
+                    path: er.BVt.CHANNEL(
+                        I.pv.guildId(),
+                        I.pv.channelId({
+                            optional: !0,
+                        }),
+                        ":messageId?",
+                    ),
                     render: (e) => (0, r.jsx)(ej, el({}, e)),
                 }),
                 (0, r.jsx)(m.A, {

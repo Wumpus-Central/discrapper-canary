@@ -1,7 +1,10 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(627968),
     i = n(64700),
     a = n(764748);
+
 function s(e, t, n) {
     return (
         t in e
@@ -15,6 +18,7 @@ function s(e, t, n) {
         e
     );
 }
+
 function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -39,7 +43,15 @@ class l extends i.Component {
         this._ref = e;
     }
     render() {
-        return (0, r.jsx)(a.z, o({ ref: this.setRef }, this.props));
+        return (0, r.jsx)(
+            a.z,
+            o(
+                {
+                    ref: this.setRef,
+                },
+                this.props,
+            ),
+        );
     }
     constructor(e) {
         super(e), s(this, "_ref", i.createRef()), (this.setRef = this.setRef.bind(this));

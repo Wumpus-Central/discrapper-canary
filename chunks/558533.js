@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968),
     i = n(64700),
     a = n(694080),
@@ -12,7 +14,9 @@ let f = (e) => {
     let { entrypoint: t } = e,
         n = (0, o.V)(),
         f = (0, s.O)(),
-        p = (0, l.NF)({ trialOffer: n }),
+        p = (0, l.NF)({
+            trialOffer: n,
+        }),
         _ = (0, l.Tp)();
     return (i.useEffect(() => {
         !0 === p && (0, l.QG)(), !0 === _ && (0, l.ne)(), (null != n || null != f) && (0, a.u1)(n, f);

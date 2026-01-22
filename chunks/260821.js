@@ -62,6 +62,7 @@ var r,
     en = n(233080),
     er = n(710504),
     ei = n(494090);
+
 function ea(e, t, n) {
     return (
         t in e
@@ -75,6 +76,7 @@ function ea(e, t, n) {
         e
     );
 }
+
 function es(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -91,6 +93,7 @@ function es(e) {
     }
     return e;
 }
+
 function eo(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -103,6 +106,7 @@ function eo(e, t) {
     }
     return n;
 }
+
 function el(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -119,6 +123,7 @@ let ec = 12,
     ed = 300,
     ef = 500,
     ep = 750;
+
 function e_(e, t, n) {
     (0, h.qfG)((e) =>
         (0, i.jsx)(
@@ -130,6 +135,7 @@ function e_(e, t, n) {
         ),
     );
 }
+
 function eh(e, t, n) {
     return (n === W.v.BURST && t) || (n === W.v.NORMAL && e);
 }
@@ -185,7 +191,11 @@ class em extends (r = a.PureComponent) {
             { shouldShowTooltip: T, tooltipTextAria: C, reactionRef: N, tooltipPositionKey: w } = this.state,
             P = y ? er : en,
             D = {
-                transform: [{ scale: this.scale }],
+                transform: [
+                    {
+                        scale: this.scale,
+                    },
+                ],
                 opacity: this.opacity,
             },
             L = s ? r : n;
@@ -199,7 +209,9 @@ class em extends (r = a.PureComponent) {
             k = null != S && null != M,
             U = null == S;
         return (0, i.jsx)(h.YNO, {
-            targetElementRef: { current: N },
+            targetElementRef: {
+                current: N,
+            },
             shouldShow: T,
             "aria-label": null != C && C,
             renderPopout: this.renderTooltip,
@@ -235,8 +247,12 @@ class em extends (r = a.PureComponent) {
                                         "aria-pressed": this.isMe(),
                                         children: [
                                             (0, i.jsx)("div", {
-                                                className: o()({ [P.burstGlow]: s }),
-                                                style: { boxShadow: "0 0 16px ".concat(t) },
+                                                className: o()({
+                                                    [P.burstGlow]: s,
+                                                }),
+                                                style: {
+                                                    boxShadow: "0 0 16px ".concat(t),
+                                                },
                                             }),
                                             (0, i.jsxs)("div", {
                                                 children: [
@@ -264,7 +280,9 @@ class em extends (r = a.PureComponent) {
                                                           })
                                                         : null,
                                                     (0, i.jsx)(m.A, {
-                                                        className: o()({ [P.hideEmoji]: v }),
+                                                        className: o()({
+                                                            [P.hideEmoji]: v,
+                                                        }),
                                                         emojiId: c.id,
                                                         emojiName: c.name,
                                                         size: I,
@@ -359,9 +377,13 @@ class em extends (r = a.PureComponent) {
                                   messageId: t.id,
                                   emoji: n,
                                   location: p,
-                                  options: { burst: i },
+                                  options: {
+                                      burst: i,
+                                  },
                               })
-                            : (0, D.BB)(f, t.id, n, p, { burst: i }));
+                            : (0, D.BB)(f, t.id, n, p, {
+                                  burst: i,
+                              }));
             }),
             ea(this, "handleEnter", (e) => {
                 let {
@@ -409,8 +431,13 @@ class em extends (r = a.PureComponent) {
                     this.hideTimeout.start(200, this.hideTooltip, !1);
             }),
             ea(this, "hideTooltip", () => {
-                this.setState({ shouldShowTooltip: !1 }),
-                    this.hasShownTooltip && B.default.track($.HAw.CLOSE_POPOUT, { nonce: this.nonce });
+                this.setState({
+                    shouldShowTooltip: !1,
+                }),
+                    this.hasShownTooltip &&
+                        B.default.track($.HAw.CLOSE_POPOUT, {
+                            nonce: this.nonce,
+                        });
             }),
             ea(this, "isMe", () => {
                 let { me: e, me_burst: t, type: n } = this.props;
@@ -528,7 +555,9 @@ class em extends (r = a.PureComponent) {
                                               }),
                                               (0, i.jsx)(w.A, {
                                                   subscriptionTier: J.pe.TIER_2,
-                                                  textOptions: { textOverride: ee.intl.string(ee.t.mr4K7D) },
+                                                  textOptions: {
+                                                      textOverride: ee.intl.string(ee.t.mr4K7D),
+                                                  },
                                                   className: ei.Yq,
                                                   onClick: (e) => e.stopPropagation(),
                                               }),
@@ -589,7 +618,9 @@ class em extends (r = a.PureComponent) {
                       });
             }),
             ea(this, "refreshTooltipPositionKey", () => {
-                this.setState({ tooltipPositionKey: String(Date.now()) });
+                this.setState({
+                    tooltipPositionKey: String(Date.now()),
+                });
             }),
             ea(this, "handleShowVerificationGate", () => {
                 let { message: e, isPendingMember: t } = this.props;
@@ -599,7 +630,9 @@ class em extends (r = a.PureComponent) {
                 null != r && (0, C.Ze)(r.id);
             }),
             ea(this, "handleSetReactionRef", (e) => {
-                this.setState({ reactionRef: e });
+                this.setState({
+                    reactionRef: e,
+                });
             }),
             ea(this, "trackReactionTooltipViewed", () => {
                 let { emoji: e, message: t, type: n } = this.props,
@@ -635,7 +668,9 @@ class em extends (r = a.PureComponent) {
             });
     }
 }
-ea(em, "defaultProps", { emojiSizeTooltip: "jumbo" });
+ea(em, "defaultProps", {
+    emojiSizeTooltip: "jumbo",
+});
 let eg = a.memo((e) => {
         let { type: t, burst_colors: n, message: r, emoji: a } = e,
             s = t === W.v.BURST,
@@ -788,7 +823,9 @@ let eg = a.memo((e) => {
                         (0, i.jsx)(h.abt, {
                             size: "xs",
                             color: "currentColor",
-                            className: o()(et.Po, { [et.Kk]: !E }),
+                            className: o()(et.Po, {
+                                [et.Kk]: !E,
+                            }),
                         }),
                     ],
                 });
@@ -797,7 +834,9 @@ let eg = a.memo((e) => {
             M = () =>
                 (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, i.jsx)("div", { className: et.Hw }),
+                        (0, i.jsx)("div", {
+                            className: et.Hw,
+                        }),
                         null != D.emojiDescription &&
                             D.type !== K.u.UNAVAILABLE &&
                             (0, i.jsx)(h.Text, {
@@ -811,7 +850,9 @@ let eg = a.memo((e) => {
             children: [
                 j ? M() : L(),
                 y
-                    ? (0, i.jsx)(q.Y0, { className: et.eF })
+                    ? (0, i.jsx)(q.Y0, {
+                          className: et.eF,
+                      })
                     : j &&
                       (0, i.jsx)(eE, {
                           emojiId: n,

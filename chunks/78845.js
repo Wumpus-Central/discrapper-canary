@@ -39,12 +39,24 @@ e.exports = function (e) {
                 .join("|"),
         ),
         r = [
-            { begin: /\^{6}[0-9a-f]{6}/ },
-            { begin: /\^{5}[0-9a-f]{5}/ },
-            { begin: /\^{4}[0-9a-f]{4}/ },
-            { begin: /\^{3}[0-9a-f]{3}/ },
-            { begin: /\^{2}[0-9a-f]{2}/ },
-            { begin: /\^{2}[\u0000-\u007f]/ },
+            {
+                begin: /\^{6}[0-9a-f]{6}/,
+            },
+            {
+                begin: /\^{5}[0-9a-f]{5}/,
+            },
+            {
+                begin: /\^{4}[0-9a-f]{4}/,
+            },
+            {
+                begin: /\^{3}[0-9a-f]{3}/,
+            },
+            {
+                begin: /\^{2}[0-9a-f]{2}/,
+            },
+            {
+                begin: /\^{2}[\u0000-\u007f]/,
+            },
         ],
         i = [
             {
@@ -67,7 +79,14 @@ e.exports = function (e) {
                     {
                         endsParent: !0,
                         relevance: 0,
-                        variants: [{ begin: /[a-zA-Z@]+/ }, { begin: /[^a-zA-Z@]?/ }],
+                        variants: [
+                            {
+                                begin: /[a-zA-Z@]+/,
+                            },
+                            {
+                                begin: /[^a-zA-Z@]?/,
+                            },
+                        ],
                     },
                 ],
             },
@@ -76,7 +95,9 @@ e.exports = function (e) {
                 relevance: 0,
                 begin: /#+\d?/,
             },
-            { variants: r },
+            {
+                variants: r,
+            },
             {
                 className: "built_in",
                 relevance: 0,
@@ -88,7 +109,9 @@ e.exports = function (e) {
                 end: "$",
                 relevance: 10,
             },
-            e.COMMENT("%", "$", { relevance: 0 }),
+            e.COMMENT("%", "$", {
+                relevance: 0,
+            }),
         ],
         a = {
             begin: /\{/,
@@ -140,7 +163,7 @@ e.exports = function (e) {
         f = function (t, n) {
             return e.inherit(
                 {
-                    begin: "\\\\begin(?=[ \t]*(\\r?\\n[ \t]*)?\\{" + t + "\\})",
+                    begin: "\\\\begin(?=[ 	]*(\\r?\\n[ 	]*)?\\{" + t + "\\})",
                     keywords: {
                         $pattern: /\\[a-zA-Z]+/,
                         keyword: "\\begin",
@@ -191,8 +214,17 @@ e.exports = function (e) {
         name: "LaTeX",
         aliases: ["tex"],
         contains: [
-            ...["verb", "lstinline"].map((e) => d(e, { contains: [p()] })),
-            d("mint", u(l, { contains: [p()] })),
+            ...["verb", "lstinline"].map((e) =>
+                d(e, {
+                    contains: [p()],
+                }),
+            ),
+            d(
+                "mint",
+                u(l, {
+                    contains: [p()],
+                }),
+            ),
             d(
                 "mintinline",
                 u(l, {
@@ -202,8 +234,15 @@ e.exports = function (e) {
             d("url", {
                 contains: [h("link"), h("link")],
             }),
-            d("hyperref", { contains: [h("link")] }),
-            d("href", u(c, { contains: [h("link")] })),
+            d("hyperref", {
+                contains: [h("link")],
+            }),
+            d(
+                "href",
+                u(c, {
+                    contains: [h("link")],
+                }),
+            ),
             ...[].concat(
                 ...["", "\\*"].map((e) => [
                     f("verbatim" + e, _("verbatim" + e)),

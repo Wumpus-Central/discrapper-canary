@@ -1,4 +1,6 @@
-t.d(a, { A: () => o });
+t.d(a, {
+    A: () => o,
+});
 var n = {
     lessThanXSeconds: {
         one: "menos de un segundo",
@@ -26,8 +28,8 @@ var n = {
         other: "{{count}} horas",
     },
     xDays: {
-        one: "1 día",
-        other: "{{count}} días",
+        one: "1 d\xeda",
+        other: "{{count}} d\xedas",
     },
     aboutXWeeks: {
         one: "alrededor de 1 semana",
@@ -46,20 +48,20 @@ var n = {
         other: "{{count}} meses",
     },
     aboutXYears: {
-        one: "alrededor de 1 año",
-        other: "alrededor de {{count}} años",
+        one: "alrededor de 1 a\xf1o",
+        other: "alrededor de {{count}} a\xf1os",
     },
     xYears: {
-        one: "1 año",
-        other: "{{count}} años",
+        one: "1 a\xf1o",
+        other: "{{count}} a\xf1os",
     },
     overXYears: {
-        one: "más de 1 año",
-        other: "más de {{count}} años",
+        one: "m\xe1s de 1 a\xf1o",
+        other: "m\xe1s de {{count}} a\xf1os",
     },
     almostXYears: {
-        one: "casi 1 año",
-        other: "casi {{count}} años",
+        one: "casi 1 a\xf1o",
+        other: "casi {{count}} a\xf1os",
     },
 };
 let o = function (e, a, t) {

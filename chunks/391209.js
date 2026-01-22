@@ -1,4 +1,7 @@
-r.d(t, { default: () => I }), r(896048);
+r.d(t, {
+    default: () => I,
+}),
+    r(896048);
 var a = r(627968),
     n = r(64700),
     s = r(503698),
@@ -13,6 +16,7 @@ var a = r(627968),
     b = r(985018),
     m = r(750845),
     O = r(107836);
+
 function I(e) {
     var t, r;
     let { guildId: s, powerup: I, onClose: k } = e,
@@ -109,7 +113,9 @@ function I(e) {
                                             variant: "heading-xl/extrabold",
                                             children: I.title,
                                         }),
-                                        (0, a.jsx)(u.A, { powerup: I }),
+                                        (0, a.jsx)(u.A, {
+                                            powerup: I,
+                                        }),
                                         null != j &&
                                             (0, a.jsx)(o.Text, {
                                                 color: "text-feedback-critical",
@@ -117,7 +123,9 @@ function I(e) {
                                                 children: j,
                                             }),
                                         (0, a.jsxs)("div", {
-                                            className: c()(m.qr, { [m.r9]: E }),
+                                            className: c()(m.qr, {
+                                                [m.r9]: E,
+                                            }),
                                             children: [
                                                 !P &&
                                                     g &&

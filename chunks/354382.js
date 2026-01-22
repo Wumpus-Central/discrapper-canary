@@ -18,10 +18,10 @@ n.d(t, {
     vr: () => s,
     zO: () => a,
 });
-let i = (1000 / 60) * 3,
-    a = (1000 / 60) * 3,
-    s = 1000 / 60 / 8,
-    o = (1000 / 60) * 12;
+let i = (1e3 / 60) * 3,
+    a = (1e3 / 60) * 3,
+    s = 1e3 / 60 / 8,
+    o = (1e3 / 60) * 12;
 class l {
     timeRemaining() {
         let e = performance.now() - this._startMs;

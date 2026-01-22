@@ -1,7 +1,11 @@
-n.d(t, { A: () => a }), n(321073);
+n.d(t, {
+    A: () => a,
+}),
+    n(321073);
 var l = n(64700),
     r = n(417597),
     i = n(591552);
+
 function a(e) {
     let t = (0, r.yK)([i.A], () => i.A.getEnabledOnboardingPrompts(e));
     return l.useMemo(() => {

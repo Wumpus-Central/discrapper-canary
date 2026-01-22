@@ -1,4 +1,8 @@
-l.d(t, { E: () => x }), l(896048), l(638769);
+l.d(t, {
+    E: () => x,
+}),
+    l(896048),
+    l(638769);
 var n = l(627968),
     a = l(64700),
     r = l(735438),
@@ -13,6 +17,7 @@ var n = l(627968),
     p = l(429364),
     v = l(731854),
     f = l(845397);
+
 function b(e, t, l) {
     return (
         t in e
@@ -123,6 +128,7 @@ class j {
                 this.timeline.set(t.timestamp, this.getCurrentSnapshot());
     }
 }
+
 function x(e) {
     var t, l;
     let { clip: r, soundboardAudioEnabled: o, voiceAudioEnabled: h } = e,
@@ -136,7 +142,7 @@ function x(e) {
         k = y - r.length,
         N = a.useCallback(
             (e) => {
-                let t = 1000 * i().round(e, 3),
+                let t = 1e3 * i().round(e, 3),
                     l = C.getEventsAtTimestamp(k + t);
                 return {
                     speakingUserIds: i().sortBy(l.speakingUserIds),

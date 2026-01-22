@@ -1,10 +1,13 @@
-n.d(t, { A: () => S });
+n.d(t, {
+    A: () => S,
+});
 var r,
     i = n(735438),
     a = n.n(i),
     s = n(247775),
     o = n(311907),
     l = n(73153);
+
 function c(e, t, n) {
     return (
         t in e
@@ -26,31 +29,39 @@ let u = !1,
         viewNonce: "",
         regenerateNonce: "",
     };
+
 function h() {
     p = !0;
 }
+
 function m(e) {
     let { token: t, codes: n } = e;
     void 0 !== t && s.setToken(t), (d = n);
 }
+
 function g(e) {
     let { token: t } = e;
     s.setToken(t);
 }
+
 function E() {
     u = !0;
 }
+
 function b() {
     u = !1;
 }
+
 function y(e) {
     let { nonces: t } = e;
     _ = t;
 }
+
 function O(e) {
     let { codes: t, key: n } = e;
     (d = a().sortBy(t, "code")), (f = n);
 }
+
 function A() {
     d = [];
 }

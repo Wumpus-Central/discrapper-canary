@@ -11,10 +11,17 @@ var r = n(64700),
 let o = "data-jump-section",
     l = "global",
     c = r.createContext(l);
+
 function u() {
     let e = r.useContext(c);
-    return r.useMemo(() => ({ [o]: e }), [e]);
+    return r.useMemo(
+        () => ({
+            [o]: e,
+        }),
+        [e],
+    );
 }
+
 function d(e) {
     let t = u();
     return e.children(t);
@@ -54,6 +61,7 @@ async function f(e) {
                   from: f,
               })) || c.focus();
 }
+
 function p(e) {
     r.useEffect(() => {
         if (e)

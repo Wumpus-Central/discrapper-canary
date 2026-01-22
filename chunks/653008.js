@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -92,6 +94,7 @@ let p = l.memo(function (e) {
         renderTargetMessage: M,
     });
 });
+
 function h(e, t, n) {
     let { message: l, channel: i, compact: a } = e;
     return null != l.interaction && "" !== l.interaction.displayName

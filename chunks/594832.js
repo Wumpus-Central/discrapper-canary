@@ -41,6 +41,7 @@ var O = (function (e) {
     v = (function (e) {
         return (e.DM_SIDE_PANEL = "dm_side_panel"), (e.POPOUT = "popout"), (e.WISHLIST_BANNER = "wishlist_banner"), e;
     })({});
+
 function S(e) {
     let { wishlistId: t, userId: n, source: a = "user_profile" } = e,
         [s, o, l, u] = (0, i.yK)([_.A], () =>
@@ -66,9 +67,11 @@ function S(e) {
         }
     );
 }
+
 function I(e, t) {
     return (0, i.bG)([_.A], () => null != e && _.A.hasSkuId(e, t));
 }
+
 function T(e) {
     if (null == e.items || 0 === e.items.length) return null;
     let t = {
@@ -79,6 +82,7 @@ function T(e) {
     };
     return h.A.fromServer(t);
 }
+
 function C(e) {
     let [t, n] = r.useState([]),
         [i, s] = r.useState(!1);
@@ -109,6 +113,7 @@ function C(e) {
         }
     );
 }
+
 function N(e, t) {
     let n = e.slice(0, t),
         o = (0, i.bG)([s.A], () => n.some((e) => s.A.isFetchingProduct(e)));
@@ -121,9 +126,12 @@ function N(e, t) {
                     null != t || n || (0, a.Jp)(e);
                 }
         }, [n]),
-        { isFetching: o }
+        {
+            isFetching: o,
+        }
     );
 }
+
 function R() {
     let e = [];
     for (let t of g.PI) {
@@ -132,9 +140,12 @@ function R() {
     }
     return e;
 }
+
 function w(e) {
     let { giftRecipient: t, minNumItems: n, source: a } = e,
-        { defaultWishlistId: s } = (0, i.cf)([c.A], () => ({ defaultWishlistId: c.A.getFirstWishlistId(t.id) })),
+        { defaultWishlistId: s } = (0, i.cf)([c.A], () => ({
+            defaultWishlistId: c.A.getFirstWishlistId(t.id),
+        })),
         {
             wishlist: o,
             isFetching: l,
@@ -160,6 +171,7 @@ function w(e) {
         wishlistError: u,
     };
 }
+
 function P(e) {
     let {
         wishlist: t,
@@ -214,14 +226,19 @@ function P(e) {
         };
     }, [a, null == t ? void 0 : t.items, n, i, s]);
 }
+
 function D(e) {
     let { location: t, isGift: n, giftRecipient: a } = e,
         s = (0, l.c)({
             userId: null == a ? void 0 : a.id,
             location: t,
         }),
-        u = (0, o.xD)({ location: t }),
-        d = (0, o.OS)({ location: t }),
+        u = (0, o.xD)({
+            location: t,
+        }),
+        d = (0, o.OS)({
+            location: t,
+        }),
         f = (0, i.bG)([c.A], () => ((null == a ? void 0 : a.id) == null ? null : c.A.getFirstWishlistId(a.id))),
         { wishlist: p } = S({
             wishlistId: u && null != f && n && null != a ? f : null,
@@ -237,9 +254,11 @@ function D(e) {
         );
     }, [n, a, u, p, d, s]);
 }
+
 function x() {
     return L((0, i.bG)([d.default], () => d.default.getId()));
 }
+
 function L(e) {
     let t = (0, i.bG)([f.default], () => f.default.getUser(e)),
         { userProfile: n, wishlistId: a } = (0, i.cf)(

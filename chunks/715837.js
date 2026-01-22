@@ -1,4 +1,7 @@
-n.d(t, { A: () => m }), n(228524);
+n.d(t, {
+    A: () => m,
+}),
+    n(228524);
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -31,7 +34,9 @@ let m = (e) => {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)(f.A, {
-                title: A.intl.format(A.t["rm+ojA"], { serverName: m.name }),
+                title: A.intl.format(A.t["rm+ojA"], {
+                    serverName: m.name,
+                }),
                 description: null != O ? O : null,
                 coverImageAsset: null != (n = null == E ? void 0 : E.cover_image_asset) ? n : null,
                 guild: m,
@@ -43,7 +48,9 @@ let m = (e) => {
                               subscription: _,
                           })
                         : null,
-                    (0, r.jsx)(u.A, { subscription: _ }),
+                    (0, r.jsx)(u.A, {
+                        subscription: _,
+                    }),
                 ],
             }),
             (0, r.jsx)(i.Fmo, {

@@ -1,6 +1,8 @@
 t.a(e, async function (e, r) {
     try {
-        t.d(n, { qg: () => o.qg });
+        t.d(n, {
+            qg: () => o.qg,
+        });
         var i = t(190315),
             o = t(614442),
             u = e([i]);

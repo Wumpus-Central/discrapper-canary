@@ -1,10 +1,13 @@
-n.d(t, { R: () => o });
+n.d(t, {
+    R: () => o,
+});
 var r = n(627968),
     i = n(158954),
     l = n(890514),
     s = n(863598),
     a = n(985018),
     c = n(932249);
+
 function o(e) {
     let { canManageGuild: t, guild: n } = e;
     return (0, r.jsxs)("div", {

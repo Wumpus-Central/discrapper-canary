@@ -1,4 +1,7 @@
-n.d(t, { E: () => S }), n(896048);
+n.d(t, {
+    E: () => S,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -21,6 +24,7 @@ var r = n(627968),
     v = n(985018),
     x = n(889599),
     E = n(248789);
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -46,6 +50,7 @@ function _(e) {
     }
     return e;
 }
+
 function C(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -64,6 +69,7 @@ function C(e, t) {
         e
     );
 }
+
 function S(e) {
     let { hangStatusActivity: t, channel: n, userId: i, setPopoutRef: S } = e,
         I = l.useRef(null),
@@ -91,10 +97,18 @@ function S(e) {
                 (u.default.selectVoiceChannel(n.id),
                 p.default.track(
                     j.HAw.HANG_STATUS_CTA_CLICKED,
-                    C(_({ source: "HangStatusPopout" }, (0, m.A)(n.id)), {
-                        other_user_id: i,
-                        cta_type: "join",
-                    }),
+                    C(
+                        _(
+                            {
+                                source: "HangStatusPopout",
+                            },
+                            (0, m.A)(n.id),
+                        ),
+                        {
+                            other_user_id: i,
+                            cta_type: "join",
+                        },
+                    ),
                 ));
         }, [N, T, n.id, i]),
         R = l.useCallback(() => {
@@ -107,10 +121,18 @@ function S(e) {
                 } else (0, h.Iq)(e, !0);
                 p.default.track(
                     j.HAw.HANG_STATUS_CTA_CLICKED,
-                    C(_({ source: "HangStatusPopout" }, (0, m.A)(n.id)), {
-                        other_user_id: i,
-                        cta_type: "swipe",
-                    }),
+                    C(
+                        _(
+                            {
+                                source: "HangStatusPopout",
+                            },
+                            (0, m.A)(n.id),
+                        ),
+                        {
+                            other_user_id: i,
+                            cta_type: "swipe",
+                        },
+                    ),
                 );
             }
         }, [N, P, t, n.id, i]);

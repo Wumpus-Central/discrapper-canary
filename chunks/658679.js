@@ -19,6 +19,7 @@ var i = n(284009),
     h = n(652215),
     m = n(818348),
     g = n(985018);
+
 function E(e) {
     let {
         purchaseType: t,
@@ -50,9 +51,15 @@ function E(e) {
               : (0, f.ff)(null, n);
     return g.intl.string(g.t.YScQSF);
 }
+
 function b(e, t) {
-    null != e.current && (e.current.scrollIntoView({ behavior: "smooth" }), t());
+    null != e.current &&
+        (e.current.scrollIntoView({
+            behavior: "smooth",
+        }),
+        t());
 }
+
 function y(e) {
     var t;
     let {
@@ -142,7 +149,10 @@ function y(e) {
             onClick: D ? I : () => b(n, p),
             loading: m,
             iconPosition: "start",
-            icon: () => (0, r.jsx)(l.tvc, { color: "currentColor" }),
+            icon: () =>
+                (0, r.jsx)(l.tvc, {
+                    color: "currentColor",
+                }),
         });
     else if (!D)
         return (0, r.jsx)(o.m_, {

@@ -1,4 +1,6 @@
-n.d(t, { A: () => y });
+n.d(t, {
+    A: () => y,
+});
 var r = n(627968),
     i = n(64700),
     a = n(421380),
@@ -15,6 +17,7 @@ var r = n(627968),
     m = n(547568),
     g = n(896237),
     E = n(448085);
+
 function b(e) {
     switch (e) {
         case p.NJ8.DARK:
@@ -27,6 +30,7 @@ function b(e) {
             return g;
     }
 }
+
 function y(e) {
     let { user: t, showOverlay: n, children: g } = e,
         E = (0, o.Ay)(),
@@ -42,7 +46,9 @@ function y(e) {
         ? (0, r.jsxs)("div", {
               className: m.ry,
               children: [
-                  (0, r.jsx)("div", { children: g }),
+                  (0, r.jsx)("div", {
+                      children: g,
+                  }),
                   (0, r.jsxs)("div", {
                       className: m.Wc,
                       children: [

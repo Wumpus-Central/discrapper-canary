@@ -1,4 +1,7 @@
-n.d(t, { A: () => ea }), n(638769);
+n.d(t, {
+    A: () => ea,
+}),
+    n(638769);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -40,6 +43,7 @@ var r = n(627968),
     F = n(200700),
     B = n(985018),
     H = n(906135);
+
 function Y(e, t, n) {
     return (
         t in e
@@ -53,6 +57,7 @@ function Y(e, t, n) {
         e
     );
 }
+
 function W(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -69,6 +74,7 @@ function W(e) {
     }
     return e;
 }
+
 function K(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -81,6 +87,7 @@ function K(e, t) {
     }
     return n;
 }
+
 function z(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -92,6 +99,7 @@ function z(e, t) {
         e
     );
 }
+
 function q(e, t) {
     if (null == e) return {};
     var n,
@@ -108,6 +116,7 @@ function q(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function X(e, t) {
     if (null == e) return {};
     var n,
@@ -118,6 +127,7 @@ function X(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function Z(e, t) {
     let { popouts: n, selected: r, setPopout: a } = (0, j.A)(e.id, U.Fd),
         { usernameProfile: s, avatarProfile: o } = n,
@@ -144,6 +154,7 @@ function Z(e, t) {
         showUsernamePopout: s,
     };
 }
+
 function Q(e, t, n) {
     return i.useMemo(() => {
         if (null != t && null != n)
@@ -159,13 +170,17 @@ function Q(e, t, n) {
                 );
     }, [e, t, n]);
 }
+
 function $(e) {
     let { children: t, className: n, compact: i } = e;
     return (0, r.jsx)("div", {
-        className: s()(H.xQ, n, { [H.oE]: i }),
+        className: s()(H.xQ, n, {
+            [H.oE]: i,
+        }),
         children: t,
     });
 }
+
 function J(e) {
     let { children: t, className: n } = e;
     return (0, r.jsx)("div", {
@@ -173,6 +188,7 @@ function J(e) {
         children: t,
     });
 }
+
 function ee(e) {
     switch (e) {
         case g.G.DELETE_USER_MESSAGE:
@@ -197,6 +213,7 @@ function ee(e) {
             return null;
     }
 }
+
 function et(e, t, n) {
     var r;
     let i = null != (r = T.Ay.getNickname(n, null, t)) ? r : C.Ay.getUserTag(t),
@@ -226,6 +243,7 @@ function et(e, t, n) {
         return s;
     }
 }
+
 function en(e) {
     let { alertAction: t, guildId: n } = e,
         i = (0, u.bG)([I.default], () => I.default.getUser(t.actor), [t.actor]);
@@ -241,6 +259,7 @@ function en(e) {
         return null;
     }
 }
+
 function er(e) {
     let { alertActionsExecution: t, guildId: n } = e,
         i = Object.values(t.actions).sort((e, t) => (e.actionType < t.actionType ? 1 : -1));
@@ -315,6 +334,7 @@ let ei = i.memo(function (e) {
         children: (0, E.fu)(n, a, g, f, t),
     });
 });
+
 function ea(e) {
     var t;
     let { id: n, compact: a, message: o, channel: l } = e,
@@ -393,17 +413,27 @@ function ea(e) {
         onMouseEnter: v,
         onMouseLeave: I,
         children: (0, r.jsx)(k.A, {
-            className: s()(H.rs, { [H.oE]: a }),
-            iconNode: a ? null : (0, r.jsx)(M.l, { src: f }),
+            className: s()(H.rs, {
+                [H.oE]: a,
+            }),
+            iconNode: a
+                ? null
+                : (0, r.jsx)(M.l, {
+                      src: f,
+                  }),
             iconContainerClassName: H.zc,
             compact: a,
             children: (0, r.jsxs)("div", {
-                className: s()(H.Qs, { [H.oE]: a }),
+                className: s()(H.Qs, {
+                    [H.oE]: a,
+                }),
                 children: [
                     (0, r.jsx)(D.ix, {
                         message: o,
                         messageClassname: H.he,
-                        className: s()(H.QV, H.he, { [H.oE]: a }),
+                        className: s()(H.QV, H.he, {
+                            [H.oE]: a,
+                        }),
                         username: (0, r.jsxs)("div", {
                             className: H.he,
                             children: [
@@ -431,7 +461,9 @@ function ea(e) {
                         showTimestamp: !0,
                     }),
                     (0, r.jsx)("div", {
-                        className: s()(H.BK, { [H.oE]: a }),
+                        className: s()(H.BK, {
+                            [H.oE]: a,
+                        }),
                         children: (0, r.jsx)(
                             P.A,
                             z(W({}, R), {
@@ -458,9 +490,13 @@ function ea(e) {
                                                                 variant: "text-xs/medium",
                                                                 color: "text-muted",
                                                                 tag: "span",
-                                                                children: B.intl.format(B.t.SYIUTR, { keyword: et }),
+                                                                children: B.intl.format(B.t.SYIUTR, {
+                                                                    keyword: et,
+                                                                }),
                                                             }),
-                                                            (0, r.jsx)("div", { className: s()(H.Om, H.Gx) }),
+                                                            (0, r.jsx)("div", {
+                                                                className: s()(H.Om, H.Gx),
+                                                            }),
                                                         ],
                                                     }),
                                                 null != K &&
@@ -468,12 +504,16 @@ function ea(e) {
                                                         variant: "text-xs/medium",
                                                         color: "text-muted",
                                                         tag: "span",
-                                                        children: B.intl.format(B.t.ZoOyKB, { ruleName: K }),
+                                                        children: B.intl.format(B.t.ZoOyKB, {
+                                                            ruleName: K,
+                                                        }),
                                                     }),
                                                 null != eO &&
                                                     (0, r.jsxs)(r.Fragment, {
                                                         children: [
-                                                            (0, r.jsx)("div", { className: s()(H.Om, H.Gx) }),
+                                                            (0, r.jsx)("div", {
+                                                                className: s()(H.Om, H.Gx),
+                                                            }),
                                                             (0, r.jsx)(p.Text, {
                                                                 variant: "text-xs/medium",
                                                                 color: "text-muted",
@@ -488,7 +528,9 @@ function ea(e) {
                                                 null != ec &&
                                                     (0, r.jsxs)(r.Fragment, {
                                                         children: [
-                                                            (0, r.jsx)("div", { className: s()(H.Om, H.Gx) }),
+                                                            (0, r.jsx)("div", {
+                                                                className: s()(H.Om, H.Gx),
+                                                            }),
                                                             (0, r.jsx)(p.Text, {
                                                                 variant: "text-xs/medium",
                                                                 color: "text-muted",
@@ -525,7 +567,9 @@ function ea(e) {
                     (0, r.jsx)($, {
                         compact: a,
                         children: (0, r.jsxs)("div", {
-                            className: s()(H.Y4, H.UD, { [H.oE]: a }),
+                            className: s()(H.Y4, H.UD, {
+                                [H.oE]: a,
+                            }),
                             children: [
                                 (0, r.jsxs)("div", {
                                     className: H.AX,
@@ -547,7 +591,9 @@ function ea(e) {
                                 eI
                                     ? (0, r.jsxs)(r.Fragment, {
                                           children: [
-                                              (0, r.jsx)("div", { className: H.Om }),
+                                              (0, r.jsx)("div", {
+                                                  className: H.Om,
+                                              }),
                                               (0, r.jsx)("div", {
                                                   className: H.AX,
                                                   children: (0, r.jsx)(p.QWc, {
@@ -561,7 +607,9 @@ function ea(e) {
                                           ],
                                       })
                                     : null,
-                                (0, r.jsx)("div", { className: H.Om }),
+                                (0, r.jsx)("div", {
+                                    className: H.Om,
+                                }),
                                 (0, r.jsx)("div", {
                                     className: H.AX,
                                     children: (0, r.jsx)(p.QWc, {
@@ -575,7 +623,9 @@ function ea(e) {
                                 ev
                                     ? (0, r.jsxs)(r.Fragment, {
                                           children: [
-                                              (0, r.jsx)("div", { className: H.Om }),
+                                              (0, r.jsx)("div", {
+                                                  className: H.Om,
+                                              }),
                                               (0, r.jsx)("div", {
                                                   className: H.AX,
                                                   children: (0, r.jsx)(p.QWc, {

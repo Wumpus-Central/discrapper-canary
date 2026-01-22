@@ -1,4 +1,7 @@
-n.d(t, { A: () => x }), n(321073);
+n.d(t, {
+    A: () => x,
+}),
+    n(321073);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -24,6 +27,7 @@ var r = n(627968),
     S = n(652215),
     C = n(985018),
     N = n(281733);
+
 function T(e, t, n) {
     return (
         t in e
@@ -60,8 +64,16 @@ class j extends i.PureComponent {
                   }))
                 : t.hide !== r
                   ? (r ? this.clearProblemsTimeout() : this.setProblemsTimeout(),
-                    this.setState({ shouldRender: !0 }),
-                    setTimeout(() => this.setState({ shouldRender: !r }), 200))
+                    this.setState({
+                        shouldRender: !0,
+                    }),
+                    setTimeout(
+                        () =>
+                            this.setState({
+                                shouldRender: !r,
+                            }),
+                        200,
+                    ))
                   : t.problems !== i && i && p.A.checkIncidents();
     }
     componentWillUnmount() {
@@ -117,7 +129,9 @@ class j extends i.PureComponent {
                             ],
                         }),
                         (0, r.jsxs)("div", {
-                            className: a()(N.Bk, { [N.ly]: this.state.problems }),
+                            className: a()(N.Bk, {
+                                [N.ly]: this.state.problems,
+                            }),
                             children: [
                                 (0, r.jsx)("div", {
                                     className: N.u1,
@@ -142,7 +156,12 @@ class j extends i.PureComponent {
                                             className: N.gy,
                                             href: S.qF7.STATUS,
                                             target: "_blank",
-                                            children: [(0, r.jsx)(O.A, { className: N.Kk }), C.intl.string(C.t.AgXXyy)],
+                                            children: [
+                                                (0, r.jsx)(O.A, {
+                                                    className: N.Kk,
+                                                }),
+                                                C.intl.string(C.t.AgXXyy),
+                                            ],
                                         }),
                                     ],
                                 }),
@@ -242,7 +261,9 @@ class j extends i.PureComponent {
                         C.intl.string(C.t.iLTeF6),
                         C.intl.string(C.t.b3vSu7),
                         C.intl.string(C.t.f8ao58),
-                        C.intl.format(C.t["1v1h8o"], { asterisks: "**" }),
+                        C.intl.format(C.t["1v1h8o"], {
+                            asterisks: "**",
+                        }),
                         C.intl.format(C.t.MUlAVW, {
                             quickSwitcherHook: (e, t) =>
                                 (0, r.jsx)(
@@ -356,9 +377,11 @@ class j extends i.PureComponent {
                 })(),
             ),
             T(this, "handleReady", () => {
-                this.setState({ ready: !0 }),
+                this.setState({
+                    ready: !0,
+                }),
                     (0, y.isDesktop)() &&
-                        (I.Ay.send("UPDATED_QUOTES", ["Hold Tight \u2014 Loading Discord"]),
+                        (I.Ay.send("UPDATED_QUOTES", ["Hold Tight — Loading Discord"]),
                         I.Ay.send("UPDATE_OPEN_ON_STARTUP"));
             }),
             T(this, "setVideoRef", (e) => {
@@ -366,7 +389,13 @@ class j extends i.PureComponent {
             }),
             T(this, "setProblemsTimeout", () => {
                 null == this._problemsTimeout &&
-                    (this._problemsTimeout = setTimeout(() => this.setState({ problems: !0 }), 10000));
+                    (this._problemsTimeout = setTimeout(
+                        () =>
+                            this.setState({
+                                problems: !0,
+                            }),
+                        1e4,
+                    ));
             }),
             T(this, "clearProblemsTimeout", () => {
                 clearTimeout(this._problemsTimeout), (this._problemsTimeout = null);

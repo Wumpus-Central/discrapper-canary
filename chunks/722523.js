@@ -16,6 +16,7 @@ var l = n(503698),
     p = n(333354),
     h = n(985018),
     b = n(993747);
+
 function g() {
     return (g =
         Object.assign ||
@@ -27,6 +28,7 @@ function g() {
             return e;
         }).apply(this, arguments);
 }
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -52,6 +54,7 @@ function m(e) {
     }
     return e;
 }
+
 function A(e) {
     let { className: t, guildId: n, powerup: l, onClick: s } = e,
         o = (0, u.A)(n, l),
@@ -69,6 +72,7 @@ function A(e) {
         }),
     });
 }
+
 function y(e) {
     let { className: t, guildId: n, powerup: l } = e,
         s = (0, d.A)(n, l);
@@ -85,6 +89,7 @@ function y(e) {
         }),
     });
 }
+
 function O(e) {
     let { className: t, guildId: n, powerup: l, onError: a } = e,
         { showToggleButton: o, isPowerupActive: u } = (0, s.A)(n, l),
@@ -108,6 +113,7 @@ function O(e) {
         ],
     });
 }
+
 function j(e) {
     let {} = e,
         t = g({}, e);

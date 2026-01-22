@@ -1,5 +1,8 @@
-n.d(t, { j: () => i });
+n.d(t, {
+    j: () => i,
+});
 var r = n(926140);
+
 function i(e) {
     return {
         type: r.rD.HEADER,

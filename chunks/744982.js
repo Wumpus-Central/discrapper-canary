@@ -1,4 +1,9 @@
-n.d(t, { A: () => A }), n(747238), n(733351), n(812715);
+n.d(t, {
+    A: () => A,
+}),
+    n(747238),
+    n(733351),
+    n(812715);
 var r = n(155718),
     i = n(842209),
     a = n(210978),
@@ -13,6 +18,7 @@ var r = n(155718),
     _ = n(374803),
     h = n(114323),
     m = n(985018);
+
 function g(e, t, n) {
     return (
         t in e
@@ -26,6 +32,7 @@ function g(e, t, n) {
         e
     );
 }
+
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,6 +49,7 @@ function E(e) {
     }
     return e;
 }
+
 function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -54,6 +62,7 @@ function b(e, t) {
     }
     return n;
 }
+
 function y(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -65,6 +74,7 @@ function y(e, t) {
         e
     );
 }
+
 function O(e) {
     let t = f.z.exec(e);
     if (null != t) {
@@ -179,6 +189,10 @@ let A = y(E({}, h.A), {
                 guild: o,
                 location: s.Oh.SUGGESTION,
             });
-        return null == l ? null : y(E({}, l), { type: _.kc.COMMAND_SUGGESTION });
+        return null == l
+            ? null
+            : y(E({}, l), {
+                  type: _.kc.COMMAND_SUGGESTION,
+              });
     },
 });

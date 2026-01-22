@@ -1,13 +1,15 @@
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});
 var r = {};
 r = {
     ascending: "croissant",
     ascendingSort: (e) => `tri\xe9 en fonction de la colonne\xa0${e.columnName} par ordre croissant`,
     columnSize: (e) => `${e.value}\xa0pixels`,
-    descending: "décroissant",
+    descending: "d\xe9croissant",
     descendingSort: (e) => `tri\xe9 en fonction de la colonne\xa0${e.columnName} par ordre d\xe9croissant`,
-    resizerDescription: "Appuyez sur Entrée pour commencer le redimensionnement.",
-    select: "Sélectionner",
-    selectAll: "Sélectionner tout",
+    resizerDescription: "Appuyez sur Entr\xe9e pour commencer le redimensionnement.",
+    select: "S\xe9lectionner",
+    selectAll: "S\xe9lectionner tout",
     sortable: "colonne triable",
 };

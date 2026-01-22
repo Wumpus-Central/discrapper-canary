@@ -30,7 +30,9 @@ let s = (e, t) => {
         if (null != e) return "".concat(e, "?width=100&height=195");
     },
     l = () => {
-        let e = (0, i.A)({ forceFetch: !0 }),
+        let e = (0, i.A)({
+                forceFetch: !0,
+            }),
             t = (0, a.i$)(e.endsAt, "L");
         return {
             isLoading: !e.fetched,

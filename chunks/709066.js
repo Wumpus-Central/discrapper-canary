@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -56,7 +58,9 @@ let d = (e) => {
         }));
     let y = () =>
         (0, r.jsxs)("span", {
-            className: a()(i, g, p ? u.D0 : u.px, { [u.rV]: E }),
+            className: a()(i, g, p ? u.D0 : u.px, {
+                [u.rV]: E,
+            }),
             children: [
                 f ? null : b,
                 _,

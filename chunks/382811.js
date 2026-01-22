@@ -13,6 +13,7 @@ try {
 }
 for (var s = new r.Buf8(256), o = 0; o < 256; o++)
     s[o] = o >= 252 ? 6 : o >= 248 ? 5 : o >= 240 ? 4 : o >= 224 ? 3 : o >= 192 ? 2 : 1;
+
 function l(e, t) {
     if (t < 65534 && ((e.subarray && a) || (!e.subarray && i)))
         return String.fromCharCode.apply(null, r.shrinkBuf(e, t));

@@ -1,4 +1,7 @@
-n.d(t, { A: () => f }), n(896048);
+n.d(t, {
+    A: () => f,
+}),
+    n(896048);
 var r = n(64700),
     i = n(735438),
     a = n(311907),
@@ -13,6 +16,7 @@ let d = (0, i.debounce)((e) => {
         null == (t = e.current) || t.focus();
     }, 0);
 }, 50);
+
 function f(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : window,
         i = (0, a.bG)([o.A], () => o.A.keyboardModeEnabled),
@@ -22,6 +26,7 @@ function f(e, t) {
     return (
         r.useEffect(() => {
             if (t) return n.addEventListener("blur", e), () => n.removeEventListener("blur", e);
+
             function e() {
                 f && (h.dispatch(u.jej.POPOUT_CLOSE), c._.dispatch(u.jej.CONTEXT_MENU_CLOSE));
             }
@@ -31,6 +36,7 @@ function f(e, t) {
             if (i || !p || !t) return;
             let { current: a } = e,
                 s = f;
+
             function o(t) {
                 let n = t.relatedTarget;
                 setTimeout(() => {

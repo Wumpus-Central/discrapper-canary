@@ -1,4 +1,7 @@
-n.d(t, { A: () => v }), n(896048);
+n.d(t, {
+    A: () => v,
+}),
+    n(896048);
 var a = n(627968),
     l = n(64700),
     i = n(503698),
@@ -111,7 +114,9 @@ let f = [
                         ],
                     }),
                 }),
-                (0, a.jsx)(c.cGx, { gap: 4 }),
+                (0, a.jsx)(c.cGx, {
+                    gap: 4,
+                }),
             ],
         });
     },
@@ -159,7 +164,10 @@ let f = [
                                 l.Fragment,
                                 {
                                     children: [
-                                        0 !== n && (0, a.jsx)(c.cGx, { gap: 4 }),
+                                        0 !== n &&
+                                            (0, a.jsx)(c.cGx, {
+                                                gap: 4,
+                                            }),
                                         (0, a.jsx)(
                                             c.DUT,
                                             {
@@ -167,7 +175,9 @@ let f = [
                                                     n.stopPropagation(), (0, d.sl)(t.id, e.id);
                                                 },
                                                 "aria-disabled": g === e.id,
-                                                className: r()(h.vk, { [h.Pe]: g === e.id }),
+                                                className: r()(h.vk, {
+                                                    [h.Pe]: g === e.id,
+                                                }),
                                                 children: (0, a.jsxs)(
                                                     c.BJc,
                                                     {
@@ -175,7 +185,9 @@ let f = [
                                                         align: "center",
                                                         justify: "space-between",
                                                         gap: 8,
-                                                        padding: { right: 8 },
+                                                        padding: {
+                                                            right: 8,
+                                                        },
                                                         fullWidth: !1,
                                                         children: [
                                                             (0, a.jsxs)(c.BJc, {
@@ -183,7 +195,9 @@ let f = [
                                                                 align: "center",
                                                                 gap: 8,
                                                                 fullWidth: !1,
-                                                                className: r()({ [h.WP]: g === e.id }),
+                                                                className: r()({
+                                                                    [h.WP]: g === e.id,
+                                                                }),
                                                                 children: [
                                                                     (0, a.jsx)(s.UserIcon, {
                                                                         size: "custom",
@@ -248,6 +262,7 @@ let f = [
             }),
         });
     };
+
 function v() {
     let e = (0, o.yK)([u.A], () => {
         var e;
@@ -262,7 +277,18 @@ function v() {
             (0, a.jsx)(b, {}),
             (0, a.jsx)(c.HOs, {
                 className: h.Ik,
-                children: null == e ? void 0 : e.map((e) => (0, a.jsx)(g, { pool: e }, e.id)),
+                children:
+                    null == e
+                        ? void 0
+                        : e.map((e) =>
+                              (0, a.jsx)(
+                                  g,
+                                  {
+                                      pool: e,
+                                  },
+                                  e.id,
+                              ),
+                          ),
             }),
         ],
     });

@@ -1,4 +1,8 @@
-n.d(t, { Ay: () => V }), n(896048), n(492834);
+n.d(t, {
+    Ay: () => V,
+}),
+    n(896048),
+    n(492834);
 var r = n(627968),
     a = n(64700),
     l = n(503698),
@@ -30,6 +34,7 @@ var r = n(627968),
     C = n(294726),
     R = n(985018),
     M = n(748137);
+
 function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -55,6 +60,7 @@ function w(e) {
     }
     return e;
 }
+
 function k(e) {
     let { guildId: t, instance: n } = e,
         [l, i] = a.useState(!1),
@@ -72,6 +78,7 @@ function k(e) {
         onClick: s,
     });
 }
+
 function G(e) {
     return (0, r.jsx)(
         u.Button,
@@ -87,6 +94,7 @@ function G(e) {
         ),
     );
 }
+
 function D(e) {
     return (0, r.jsx)(
         u.Button,
@@ -100,6 +108,7 @@ function D(e) {
         ),
     );
 }
+
 function L(e) {
     return (0, r.jsx)(
         u.Button,
@@ -115,6 +124,7 @@ function L(e) {
         ),
     );
 }
+
 function U(e) {
     let { guildId: t } = e,
         [n, l] = a.useState(!1),
@@ -132,6 +142,7 @@ function U(e) {
         onClick: i,
     });
 }
+
 function B(e) {
     let { instance: t } = e,
         n = (0, E.A)(t.providerType, t.gameServerPanelUrl);
@@ -140,10 +151,14 @@ function B(e) {
         text: R.intl.string(C.default.bBkeMs),
         variant: "secondary",
         onClick: () => {
-            null != n && (0, v.h)({ href: n });
+            null != n &&
+                (0, v.h)({
+                    href: n,
+                });
         },
     });
 }
+
 function V(e) {
     let { guildId: t, instance: n } = e,
         l = (0, A.A)(n),
@@ -168,7 +183,10 @@ function V(e) {
         Y = (0, g.A)(t),
         Z = a.useCallback(() => {
             var e;
-            (0, h.f7)(t, n.id), (0, v.h)({ href: null != (e = n.gameServerPanelUrl) ? e : "" });
+            (0, h.f7)(t, n.id),
+                (0, v.h)({
+                    href: null != (e = n.gameServerPanelUrl) ? e : "",
+                });
         }, [n.gameServerPanelUrl, t, n.id]),
         Q = a.useMemo(() => {
             switch (n.status) {
@@ -191,7 +209,9 @@ function V(e) {
                 case s.M.STARTING:
                     return (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, r.jsx)(D, { onClick: W }),
+                            (0, r.jsx)(D, {
+                                onClick: W,
+                            }),
                             Y &&
                                 (0, r.jsx)(G, {
                                     onClick: Z,
@@ -202,7 +222,9 @@ function V(e) {
                 case s.M.STARTUP_FAILED:
                 case s.M.MISSING_STOCK:
                     return Y
-                        ? (0, r.jsx)(L, { onClick: Z })
+                        ? (0, r.jsx)(L, {
+                              onClick: Z,
+                          })
                         : (0, r.jsx)(D, {
                               onClick: W,
                               disabled: !0,
@@ -283,7 +305,7 @@ function V(e) {
                                     (0, r.jsx)(u.Text, {
                                         variant: "text-sm/medium",
                                         color: "text-muted",
-                                        children: [null == F ? void 0 : F.name, $].filter(j.Vq).join(" \u2022 "),
+                                        children: [null == F ? void 0 : F.name, $].filter(j.Vq).join(" • "),
                                     }),
                                 ],
                             }),
@@ -307,13 +329,13 @@ function V(e) {
                                                 .concat(
                                                     null != n.onlineConnectionsCount && n.onlineConnectionsCount >= 0
                                                         ? n.onlineConnectionsCount
-                                                        : "\u2014",
+                                                        : "—",
                                                     " / ",
                                                 )
                                                 .concat(
                                                     null != n.maxConnectionsCount && n.maxConnectionsCount >= 0
                                                         ? n.maxConnectionsCount
-                                                        : "\u2014",
+                                                        : "—",
                                                 ),
                                         }),
                                     ],
@@ -332,7 +354,7 @@ function V(e) {
                                                 null == l
                                                     ? (0, r.jsx)(u.Text, {
                                                           variant: "text-sm/medium",
-                                                          children: "\u2014",
+                                                          children: "—",
                                                       })
                                                     : V
                                                       ? (0, r.jsxs)(r.Fragment, {
@@ -346,8 +368,12 @@ function V(e) {
                                                                     "aria-label": R.intl.string(R.t.OpuAlK),
                                                                     onClick: z,
                                                                     children: H
-                                                                        ? (0, r.jsx)(u.A9s, { size: "sm" })
-                                                                        : (0, r.jsx)(u.TdU, { size: "sm" }),
+                                                                        ? (0, r.jsx)(u.A9s, {
+                                                                              size: "sm",
+                                                                          })
+                                                                        : (0, r.jsx)(u.TdU, {
+                                                                              size: "sm",
+                                                                          }),
                                                                 }),
                                                             ],
                                                         })
@@ -409,7 +435,7 @@ function V(e) {
                                                             case s.M.PROVIDER_ERRORED:
                                                                 return R.intl.string(C.default["6g/oji"]);
                                                             default:
-                                                                return "\u2014";
+                                                                return "—";
                                                         }
                                                     })(n.status),
                                                 }),
@@ -436,7 +462,7 @@ function V(e) {
                                         }),
                                         (0, r.jsx)(u.Text, {
                                             variant: "text-sm/medium",
-                                            children: null != n.regionName ? n.regionName : "\u2014",
+                                            children: null != n.regionName ? n.regionName : "—",
                                         }),
                                     ],
                                 }),
@@ -455,7 +481,9 @@ function V(e) {
                 }),
             (0, r.jsx)("div", {
                 className: M.imageBackground,
-                children: (0, r.jsx)(y.T, { imageUrl: null != K ? K : "" }),
+                children: (0, r.jsx)(y.T, {
+                    imageUrl: null != K ? K : "",
+                }),
             }),
         ],
     });

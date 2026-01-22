@@ -1,4 +1,6 @@
-i.d(t, { A: () => h });
+i.d(t, {
+    A: () => h,
+});
 var n = i(627968);
 i(64700);
 var s = i(503698),
@@ -13,7 +15,9 @@ let h = function (e) {
     let { user: t, hovered: i, subText: s, showAccountIdentifier: h, status: p, isMobile: d, className: m } = e,
         A = (0, a.bG)([u.A], () => u.A.getNickname(t.id));
     return (0, n.jsxs)("div", {
-        className: r()(c.eF, m, { [c.yo]: i }),
+        className: r()(c.eF, m, {
+            [c.yo]: i,
+        }),
         children: [
             (0, n.jsx)(l.A, {
                 user: t,
@@ -29,7 +33,9 @@ let h = function (e) {
                         user: t,
                         nick: A,
                         botClass: c.AO,
-                        className: r()(c.xK, { [c.ID]: t.hasUniqueUsername() }),
+                        className: r()(c.xK, {
+                            [c.ID]: t.hasUniqueUsername(),
+                        }),
                         usernameClass: c.Xh,
                         discriminatorClass: c.D2,
                         showAccountIdentifier: h,

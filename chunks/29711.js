@@ -1,4 +1,6 @@
-n.d(e, { A: () => E });
+n.d(e, {
+    A: () => E,
+});
 var a = n(627968),
     r = n(397927),
     i = n(230913),
@@ -7,6 +9,7 @@ var a = n(627968),
     o = n(87404),
     c = n(985018),
     u = n(222872);
+
 function E(t) {
     let { onNext: e, onClose: n, reason: E, onReasonChange: A, transitionState: _ } = t,
         C = o.FL.map((t) => ({
@@ -38,7 +41,10 @@ function E(t) {
             value: E,
             options: C,
             onChange: (t) => {
-                l.default.track(s.HAw.USER_ACCOUNT_EMAIL_CHANGE_REASON_SELECTED, { change_email_reason_enum: t }), A(t);
+                l.default.track(s.HAw.USER_ACCOUNT_EMAIL_CHANGE_REASON_SELECTED, {
+                    change_email_reason_enum: t,
+                }),
+                    A(t);
             },
         }),
     });

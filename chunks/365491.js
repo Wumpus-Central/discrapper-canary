@@ -13,6 +13,7 @@ var n = l(64700),
     i = l(124987),
     o = l(946716),
     c = l(856686);
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var l = null != arguments[t] ? arguments[t] : {},
@@ -38,6 +39,7 @@ function u(e) {
     }
     return e;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -56,6 +58,7 @@ function d(e, t) {
         e
     );
 }
+
 function f(e, t) {
     let l = new Set(e);
     return l.has(t) ? l.delete(t) : l.add(t), l;
@@ -166,10 +169,14 @@ let b = {
                     });
                 },
                 setQueryPageSize: (t) => {
-                    e({ queryPageSize: t });
+                    e({
+                        queryPageSize: t,
+                    });
                 },
                 setQueryPageOffset: (t) => {
-                    e({ queryPageOffset: t });
+                    e({
+                        queryPageOffset: t,
+                    });
                 },
                 setItemTypeFilter: (t) => {
                     e((e) => {
@@ -202,7 +209,9 @@ let b = {
                     );
                 },
                 setCurrentTab: (t) => {
-                    e({ currentTab: t });
+                    e({
+                        currentTab: t,
+                    });
                 },
             }),
         ),
@@ -265,13 +274,18 @@ let b = {
                 0 !== n.limit && r();
             };
             n(v(E.getState()));
-            let r = E.subscribe(v, n, { equalityFn: (e, t) => JSON.stringify(e) === JSON.stringify(t) }),
+            let r = E.subscribe(v, n, {
+                    equalityFn: (e, t) => JSON.stringify(e) === JSON.stringify(t),
+                }),
                 s = E.subscribe(
                     (e) => e.hasFilters(),
                     (e, t) => {
                         if (!e && t) {
                             let e = E.getState();
-                            e.userHasSelectedSort || E.setState({ sort: h(e) });
+                            e.userHasSelectedSort ||
+                                E.setState({
+                                    sort: h(e),
+                                });
                         }
                     },
                 );

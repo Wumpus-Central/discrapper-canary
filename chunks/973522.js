@@ -7,12 +7,15 @@ n.d(t, {
 var r = n(847521),
     i = n(760751),
     a = n(723702);
+
 function s(e) {
     return (e = e.toLowerCase()).endsWith("/") && (e = e.slice(0, -1)), e;
 }
+
 function o(e) {
     return s(e).split("/").slice(-2).join("/");
 }
+
 function l(e) {
     var t, n, a, s, l;
     if (null == e)
@@ -37,6 +40,7 @@ function l(e) {
         rawExePath: u,
     };
 }
+
 function c(e, t) {
     if (null == e || null == t) return !1;
     let n = s(e),

@@ -12,6 +12,7 @@ var r = n(64700),
     l = n(531685),
     c = n(365971),
     u = n(392164);
+
 function d(e, t, n) {
     return (
         t in e
@@ -117,15 +118,19 @@ class p {
     }
 }
 let _ = r.createContext(new p(!0));
+
 function h(e, t) {
     return t && e > 4 ? 0 : t ? Math.min(1 - e / 4, 1) : 1;
 }
+
 function m(e, t) {
     return t ? Math.min(1 - e / 4, 1) : 1;
 }
+
 function g(e, t, n) {
     return t && 0 !== e ? 20 * Math.max(e / 5, 0) : n;
 }
+
 function E(e, t) {
     return t && e > 0 ? 0 : 1;
 }
@@ -134,6 +139,7 @@ let b = {
     friction: 25,
     tension: 320,
 };
+
 function y(e, t, n) {
     let [a, d] = (0, i.zhh)(
             () => ({

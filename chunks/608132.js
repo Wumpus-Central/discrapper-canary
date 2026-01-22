@@ -1,7 +1,9 @@
 var r = n(658261),
     i = n(436167);
+
 function a(e, t) {
     var n;
+
     function s(n, i, a, o) {
         try {
             var l = e[n](i),

@@ -14,6 +14,7 @@ function r(e) {
     }
     return e;
 }
+
 function i(e, t, n) {
     return (
         t in e
@@ -32,6 +33,7 @@ var a = n(630678),
     o = n(797686),
     l = (0, s.Map)(),
     c = 0;
+
 function u(e, t) {
     console.warn("WARNING: " + e + ' will be deprecated soon!\nPlease use "' + t + '" instead.');
 }

@@ -1,4 +1,6 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var r = n(627968),
     l = n(64700),
     i = n(397927),
@@ -10,6 +12,7 @@ var r = n(627968),
     d = n(266713),
     f = n(985018),
     p = n(798521);
+
 function b() {
     let { trackUserProfileAction: e, trackUserProfileEditAction: t } = (0, o.NJ)(),
         b = l.useRef(!1),
@@ -17,10 +20,14 @@ function b() {
             suggestions: g,
             currentUser: m,
             isLoading: y,
-        } = (0, a.A)({ location: "UserProfileModalV2ApplicationWidgetsEmptyState" }),
+        } = (0, a.A)({
+            location: "UserProfileModalV2ApplicationWidgetsEmptyState",
+        }),
         O = null == g ? void 0 : g[0],
         j = l.useCallback(() => {
-            t({ action: "PRESS_ADD_WIDGET" }),
+            t({
+                action: "PRESS_ADD_WIDGET",
+            }),
                 (0, i.mMO)(
                     async () => {
                         let { default: e } = await n.e("87591").then(n.bind(n, 333114));
@@ -53,7 +60,10 @@ function b() {
                                     }
                                     return e;
                                 })({}, n)),
-                                (i = i = { trackUserProfileEditAction: t }),
+                                (i = i =
+                                    {
+                                        trackUserProfileEditAction: t,
+                                    }),
                                 Object.getOwnPropertyDescriptors
                                     ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(i))
                                     : (function (e, t) {
@@ -70,7 +80,9 @@ function b() {
                             );
                         };
                     },
-                    { stackingBehavior: "stack" },
+                    {
+                        stackingBehavior: "stack",
+                    },
                 );
         }, [t]);
     if (
@@ -103,7 +115,9 @@ function b() {
             (0, r.jsx)(i.Text, {
                 variant: "text-sm/normal",
                 color: "text-subtle",
-                children: f.intl.format(f.t.YnNFWa, { applicationName: O.application.name }),
+                children: f.intl.format(f.t.YnNFWa, {
+                    applicationName: O.application.name,
+                }),
             }),
         ],
     });
@@ -117,7 +131,9 @@ function b() {
                       gap: 16,
                       align: "center",
                       children: [
-                          (0, r.jsx)(i.hKd, { size: 32 }),
+                          (0, r.jsx)(i.hKd, {
+                              size: 32,
+                          }),
                           x,
                           (0, r.jsx)(c.A, {
                               user: m,
@@ -131,7 +147,9 @@ function b() {
                       gap: 32,
                       align: "center",
                       children: [
-                          (0, r.jsx)(i.hKd, { size: 128 }),
+                          (0, r.jsx)(i.hKd, {
+                              size: 128,
+                          }),
                           x,
                           (0, r.jsx)(i.Button, {
                               icon: i.j96,

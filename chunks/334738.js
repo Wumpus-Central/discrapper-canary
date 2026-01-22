@@ -18,6 +18,7 @@ var r = n(73153),
     l = n(287809),
     c = n(661191),
     u = n(652215);
+
 function d(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
@@ -32,6 +33,7 @@ function d(e, t) {
         location: t,
     });
 }
+
 function f(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
@@ -56,6 +58,7 @@ function f(e, t) {
     f))
         d(e, t, n, r);
 }
+
 function p(e, t) {
     e.isCategory()
         ? f(e.id, t, !0, !0)
@@ -63,6 +66,7 @@ function p(e, t) {
           ? d(e.id, t, !0, !0, c.default.fromTimestamp(Date.now()))
           : d(e.id, t, !0, !0);
 }
+
 function _(e, t) {
     r.h.dispatch({
         type: "BULK_ACK",
@@ -71,12 +75,14 @@ function _(e, t) {
         onFinished: t,
     });
 }
+
 function h(e) {
     r.h.dispatch({
         type: "CHANNEL_LOCAL_ACK",
         channelId: e,
     });
 }
+
 function m(e, t) {
     r.h.dispatch({
         type: "ENABLE_AUTOMATIC_ACK",
@@ -84,6 +90,7 @@ function m(e, t) {
         windowId: t,
     });
 }
+
 function g(e, t) {
     r.h.dispatch({
         type: "DISABLE_AUTOMATIC_ACK",
@@ -91,6 +98,7 @@ function g(e, t) {
         windowId: t,
     });
 }
+
 function E(e, t, n) {
     r.h.dispatch({
         type: "GUILD_FEATURE_ACK",
@@ -100,6 +108,7 @@ function E(e, t, n) {
         local: !1,
     });
 }
+
 function b(e, t) {
     var n;
     null != (null == (n = l.default.getCurrentUser()) ? void 0 : n.id) &&

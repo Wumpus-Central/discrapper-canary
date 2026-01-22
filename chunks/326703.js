@@ -1,4 +1,6 @@
-i.d(e, { default: () => d });
+i.d(e, {
+    default: () => d,
+});
 var s = i(627968);
 i(64700);
 var l = i(158954),
@@ -7,7 +9,9 @@ var l = i(158954),
     r = i(985018);
 let d = (t) => {
     let { onClose: e, guildId: i } = t,
-        d = r.intl.format(r.t.ZqkXsC, { helpdeskArticle: a.V }),
+        d = r.intl.format(r.t.ZqkXsC, {
+            helpdeskArticle: a.V,
+        }),
         c = n.A.getGuild(i);
     return (
         null != c &&

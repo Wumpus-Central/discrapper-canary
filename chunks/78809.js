@@ -1,3 +1,7 @@
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});
 var r = {};
-r = { Empty: "Vide" };
+r = {
+    Empty: "Vide",
+};

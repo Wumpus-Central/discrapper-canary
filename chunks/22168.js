@@ -1,4 +1,6 @@
-t(697509)(r, "__esModule", { value: !0 }),
+t(697509)(r, "__esModule", {
+    value: !0,
+}),
     (r.default = void 0),
     (r.default = {
         abstract: !1,
@@ -14,21 +16,33 @@ t(697509)(r, "__esModule", { value: !0 }),
         relatedConcepts: [
             {
                 concept: {
-                    attributes: [{ name: "href" }],
+                    attributes: [
+                        {
+                            name: "href",
+                        },
+                    ],
                     name: "a",
                 },
                 module: "HTML",
             },
             {
                 concept: {
-                    attributes: [{ name: "href" }],
+                    attributes: [
+                        {
+                            name: "href",
+                        },
+                    ],
                     name: "area",
                 },
                 module: "HTML",
             },
             {
                 concept: {
-                    attributes: [{ name: "href" }],
+                    attributes: [
+                        {
+                            name: "href",
+                        },
+                    ],
                     name: "link",
                 },
                 module: "HTML",

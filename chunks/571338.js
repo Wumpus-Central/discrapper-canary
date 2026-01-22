@@ -1,4 +1,7 @@
-n.d(t, { A: () => v }), n(896048);
+n.d(t, {
+    A: () => v,
+}),
+    n(896048);
 var l = n(627968),
     a = n(64700),
     r = n(503698),
@@ -11,6 +14,7 @@ var l = n(627968),
     p = n(488995),
     h = n(985018),
     m = n(402664);
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +40,7 @@ function b(e) {
     }
     return e;
 }
+
 function f(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -54,6 +59,7 @@ function f(e, t) {
         e
     );
 }
+
 function g(e) {
     let { id: t, label: n, selected: a, handleTransition: r } = e,
         s = (function (e, t) {
@@ -92,11 +98,14 @@ function g(e) {
         f(b({}, s), {
             onClick: () => r(t),
             wrapperClassName: m.Vn,
-            className: i()(m.Mf, { [m.wH]: a }),
+            className: i()(m.Mf, {
+                [m.wH]: a,
+            }),
             children: n,
         }),
     );
 }
+
 function x(e) {
     let { onTabSelect: t, tabs: n, selectedTab: r, selected: s } = e,
         o = a.useRef(null);
@@ -120,18 +129,27 @@ function x(e) {
                 f(b({}, e), {
                     ref: o,
                     wrapperClassName: m.Vn,
-                    className: i()(m.Mf, m.OS, { [m.wH]: s }),
+                    className: i()(m.Mf, m.OS, {
+                        [m.wH]: s,
+                    }),
                     id: p.GlobalDiscoverySharedTabId.MORE,
                     "aria-label": h.intl.string(h.t["UKOtz+"]),
                     children: [
                         h.intl.string(h.t["UKOtz+"]),
-                        n ? (0, l.jsx)(c.tN5, { size: "xs" }) : (0, l.jsx)(c.abt, { size: "xs" }),
+                        n
+                            ? (0, l.jsx)(c.tN5, {
+                                  size: "xs",
+                              })
+                            : (0, l.jsx)(c.abt, {
+                                  size: "xs",
+                              }),
                     ],
                 }),
             );
         },
     });
 }
+
 function v(e) {
     let { className: t, selectedTab: n, tabs: r, onTabSelect: c, onAvailableWidthChange: d } = e,
         [u, p] = a.useState(0),

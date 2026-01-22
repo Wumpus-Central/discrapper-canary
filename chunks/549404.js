@@ -1,4 +1,7 @@
-n.d(e, { default: () => w }), n(896048);
+n.d(e, {
+    default: () => w,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     s = n(284009),
@@ -17,6 +20,7 @@ var r = n(627968),
     m = n(652215),
     O = n(985018),
     j = n(624102);
+
 function x(t, e, n) {
     return (
         e in t
@@ -81,7 +85,12 @@ let C = (t) => {
                     });
             }
             return t;
-        })({ className: j.jx }, l)),
+        })(
+            {
+                className: j.jx,
+            },
+            l,
+        )),
         (n = n =
             {
                 children: [
@@ -96,7 +105,9 @@ let C = (t) => {
                               children: s,
                           })
                         : null,
-                    (0, r.jsx)("div", { children: o }),
+                    (0, r.jsx)("div", {
+                        children: o,
+                    }),
                 ],
             }),
         Object.getOwnPropertyDescriptors
@@ -123,7 +134,10 @@ class P extends i.PureComponent {
                 fileContents: this.getDownloadFileContents,
                 contentType: "text/plain",
                 fileName: "discord_backup_codes.txt",
-                onDownload: () => p.h.dispatch({ type: "MFA_SEEN_BACKUP_CODE_PROMPT" }),
+                onDownload: () =>
+                    p.h.dispatch({
+                        type: "MFA_SEEN_BACKUP_CODE_PROMPT",
+                    }),
                 children: (0, r.jsx)(d.Button, {
                     variant: "active",
                     size: "sm",
@@ -169,7 +183,9 @@ class P extends i.PureComponent {
             actions: [],
             children: [
                 this.renderPasskeyCTASection(),
-                (0, r.jsx)(d.cGx, { className: j.yF }),
+                (0, r.jsx)(d.cGx, {
+                    className: j.yF,
+                }),
                 this.renderBackupCodesSection(O.intl.format(O.t.M0Dogh, {})),
             ],
         });
@@ -196,7 +212,10 @@ class P extends i.PureComponent {
                           confirmText: O.intl.string(O.t.MwSEoz),
                           cancelText: O.intl.string(O.t["ETE/oC"]),
                           onConfirm: () => {
-                              p.h.dispatch({ type: "MFA_SEEN_BACKUP_CODE_PROMPT" }), e();
+                              p.h.dispatch({
+                                  type: "MFA_SEEN_BACKUP_CODE_PROMPT",
+                              }),
+                                  e();
                           },
                           children: t,
                       });
@@ -214,7 +233,9 @@ class P extends i.PureComponent {
                                 .concat(e ? "(".concat(O.intl.string(O.t["ycME+9"]), ")") : "");
                         })
                         .join("\r\n"),
-                    e = O.intl.formatToPlainString(O.t["uYWwh/"], { email: this.props.currentUser.email });
+                    e = O.intl.formatToPlainString(O.t["uYWwh/"], {
+                        email: this.props.currentUser.email,
+                    });
                 return "".concat(e, "\r\n\r\n").concat(t);
             });
     }

@@ -21,10 +21,18 @@ e.exports = function (e) {
             },
             e.APOS_STRING_MODE,
             e.QUOTE_STRING_MODE,
-            { begin: t.concat(/\?(::)?/, /([A-Z]\w*)/, /((::)[A-Z]\w*)*/) },
-            { begin: "->" },
-            { begin: "ok" },
-            { begin: "!" },
+            {
+                begin: t.concat(/\?(::)?/, /([A-Z]\w*)/, /((::)[A-Z]\w*)*/),
+            },
+            {
+                begin: "->",
+            },
+            {
+                begin: "ok",
+            },
+            {
+                begin: "!",
+            },
             {
                 begin: "(\\b[a-z'][a-zA-Z0-9_']*:[a-z'][a-zA-Z0-9_']*)|(\\b[a-z'][a-zA-Z0-9_']*)",
                 relevance: 0,

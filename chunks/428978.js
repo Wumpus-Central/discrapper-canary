@@ -12,6 +12,7 @@ var l = n(627968),
     s = n(625142),
     d = n(988794),
     u = n(985018);
+
 function o(e) {
     let {
             isActive: t,
@@ -51,7 +52,7 @@ function o(e) {
                         variant: "secondary",
                         icon: f ? c.A9s : c.qYV,
                         onClick: (e) => {
-                            null != t && t(e), b(!0), o.start(1000, () => b(!1));
+                            null != t && t(e), b(!0), o.start(1e3, () => b(!1));
                         },
                         disabled: f,
                         text: f ? u.intl.string(u.t.t5VZ88) : u.intl.string(u.t.WqhZss),
@@ -128,6 +129,7 @@ function o(e) {
         C
     );
 }
+
 function f(e) {
     let { onClick: t } = e;
     return (0, l.jsx)(c.K0, {

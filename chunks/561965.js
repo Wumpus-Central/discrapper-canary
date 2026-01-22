@@ -1,4 +1,9 @@
-l.d(t, { default: () => C }), l(896048), l(321073), l(733351);
+l.d(t, {
+    default: () => C,
+}),
+    l(896048),
+    l(321073),
+    l(733351);
 var n = l(627968),
     r = l(64700),
     i = l(989349),
@@ -20,6 +25,7 @@ var n = l(627968),
     R = l(652215),
     f = l(985018),
     _ = l(443161);
+
 function y(e) {
     let { index: t, query: l, handleQuerySelect: r, handleDateSelect: i, options: s, handleRemoveDateFilter: o } = e,
         u = a()(),
@@ -68,7 +74,9 @@ function y(e) {
                     o(t);
                 },
                 className: _.tL,
-                "aria-label": f.intl.formatToPlainString(f.t["2LwBlF"], { filterNumber: t + 1 }),
+                "aria-label": f.intl.formatToPlainString(f.t["2LwBlF"], {
+                    filterNumber: t + 1,
+                }),
                 children: (0, n.jsx)(d.ucK, {
                     size: "md",
                     color: "currentColor",
@@ -79,6 +87,7 @@ function y(e) {
         ],
     });
 }
+
 function x(e) {
     let {
             options: t,
@@ -135,6 +144,7 @@ function x(e) {
         ],
     });
 }
+
 function m(e) {
     let {
             label: t,
@@ -183,6 +193,7 @@ function m(e) {
         }),
     });
 }
+
 function b(e) {
     let {
         label: t,
@@ -221,6 +232,7 @@ function b(e) {
         }),
     });
 }
+
 function C(e) {
     let { transitionState: t, onClose: l, searchContext: i } = e,
         a = (0, h.GV)(),
@@ -412,7 +424,9 @@ function C(e) {
                     (0, n.jsx)(m, {
                         label: f.intl.string(f.t.Qz6eOR),
                         sublabel: f.intl.string(f.t["2JyXnO"]),
-                        textPlaceholder: f.intl.formatToPlainString(f.t["V4WMj/"], { username: c }),
+                        textPlaceholder: f.intl.formatToPlainString(f.t["V4WMj/"], {
+                            username: c,
+                        }),
                         value: D,
                         onChange: k,
                         onFocus: B,
@@ -428,7 +442,9 @@ function C(e) {
                     (0, n.jsx)(m, {
                         label: f.intl.string(f.t["kLrM/s"]),
                         sublabel: i.type === R.I4_.DMS ? f.intl.string(f.t["b+abYv"]) : f.intl.string(f.t.x8cC0z),
-                        textPlaceholder: f.intl.formatToPlainString(f.t.K4l507, { channelName: u }),
+                        textPlaceholder: f.intl.formatToPlainString(f.t.K4l507, {
+                            channelName: u,
+                        }),
                         value: ea,
                         onChange: es,
                         onFocus: ed,
@@ -457,7 +473,9 @@ function C(e) {
                     (0, n.jsx)(m, {
                         label: f.intl.string(f.t.HEBnRU),
                         sublabel: f.intl.string(f.t.PdfTqT),
-                        textPlaceholder: f.intl.formatToPlainString(f.t.zka3aJ, { username: c }),
+                        textPlaceholder: f.intl.formatToPlainString(f.t.zka3aJ, {
+                            username: c,
+                        }),
                         value: K,
                         onChange: z,
                         onFocus: G,

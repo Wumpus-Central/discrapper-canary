@@ -1,4 +1,7 @@
-n.d(t, { A: () => q }), n(896048);
+n.d(t, {
+    A: () => q,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -26,6 +29,7 @@ var r = n(627968),
     C = n(698279),
     N = n(985018),
     R = n(497481);
+
 function w(e, t, n) {
     return (
         t in e
@@ -39,6 +43,7 @@ function w(e, t, n) {
         e
     );
 }
+
 function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -55,6 +60,7 @@ function P(e) {
     }
     return e;
 }
+
 function D(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -67,6 +73,7 @@ function D(e, t) {
     }
     return n;
 }
+
 function x(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -91,6 +98,7 @@ let L = (0, y.xI)(d.A.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_SIZE),
     Y = H + (V + 2 * F),
     W = M + k + 2 * U,
     K = 7;
+
 function z(e) {
     let {
             activeIndex: t,
@@ -153,9 +161,19 @@ function z(e) {
               children: [
                   (0, r.jsx)(g.Q, {
                       guild: E,
-                      children: (0, r.jsx)("div", { children: y }),
+                      children: (0, r.jsx)("div", {
+                          children: y,
+                      }),
                   }),
-                  N ? (0, r.jsx)("hr", { className: R.ny }, "separator") : null,
+                  N
+                      ? (0, r.jsx)(
+                            "hr",
+                            {
+                                className: R.ny,
+                            },
+                            "separator",
+                        )
+                      : null,
               ],
           })
         : y;
@@ -275,7 +293,13 @@ let q = (e) => {
         ei = i.useMemo(
             () =>
                 function (e, t) {
-                    return (0, r.jsx)(i.Fragment, { children: t }, e);
+                    return (0, r.jsx)(
+                        i.Fragment,
+                        {
+                            children: t,
+                        },
+                        e,
+                    );
                 },
             [],
         ),
@@ -301,7 +325,9 @@ let q = (e) => {
                 {
                     "aria-hidden": !J,
                     "aria-label": N.intl.string(N.t.dT0ctw),
-                    className: s()(R.KB, { [R.h_]: !J }),
+                    className: s()(R.KB, {
+                        [R.h_]: !J,
+                    }),
                     tabIndex: J ? 0 : -1,
                     onClick: () => en(e),
                     children: (0, r.jsx)(f.nm2, {

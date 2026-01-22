@@ -1,8 +1,11 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(627968);
 n(64700);
 var l = n(397927),
     i = n(985018);
+
 function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -28,11 +31,21 @@ function a(e) {
     }
     return e;
 }
+
 function s() {
     function e() {
         (0, l.mMO)(async () => {
             let { default: e } = await Promise.all([n.e("56423"), n.e("25280")]).then(n.bind(n, 987482));
-            return (t) => (0, r.jsx)(e, a({ source: "Screenshare Unavailable" }, t));
+            return (t) =>
+                (0, r.jsx)(
+                    e,
+                    a(
+                        {
+                            source: "Screenshare Unavailable",
+                        },
+                        t,
+                    ),
+                );
         });
     }
     (0, l.mMO)(async () => {

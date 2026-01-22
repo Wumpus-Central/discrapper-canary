@@ -6,6 +6,7 @@ var r = n(311907),
     i = n(250105),
     a = n(217222),
     s = n(128319);
+
 function o(e, t, n) {
     return (
         t in e
@@ -19,6 +20,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,6 +37,7 @@ function l(e) {
     }
     return e;
 }
+
 function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -47,6 +50,7 @@ function c(e, t) {
     }
     return n;
 }
+
 function u(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -58,19 +62,42 @@ function u(e, t) {
         e
     );
 }
-let d = { defaultWatchMultipleStreams: !1 },
+let d = {
+        defaultWatchMultipleStreams: !1,
+    },
     f = (0, i.Ay)({
         name: "2025-08-go-live-default-multiwatch",
         kind: "user",
         defaultConfig: d,
-        variations: { 1: u(l({}, d), { defaultWatchMultipleStreams: !0 }) },
+        variations: {
+            1: u(l({}, d), {
+                defaultWatchMultipleStreams: !0,
+            }),
+        },
     });
+
 function p(e) {
     let { location: t } = e,
-        { isInHoldout: n } = s.p.getCurrentConfig({ location: t }, { autoTrackExposure: !0 });
-    return n ? f.definition.defaultConfig : f.getConfig({ location: t });
+        { isInHoldout: n } = s.p.getCurrentConfig(
+            {
+                location: t,
+            },
+            {
+                autoTrackExposure: !0,
+            },
+        );
+    return n
+        ? f.definition.defaultConfig
+        : f.getConfig({
+              location: t,
+          });
 }
+
 function _(e) {
     let { location: t } = e;
-    return (0, r.bG)([a.A], () => p({ location: t }));
+    return (0, r.bG)([a.A], () =>
+        p({
+            location: t,
+        }),
+    );
 }

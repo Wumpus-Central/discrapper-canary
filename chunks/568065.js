@@ -65,7 +65,9 @@ let y = () => ({
         },
         [l.GuildFeatures.AUDIO_BITRATE_128_KBPS]: {
             perkIcon: a.TP.AUDIO,
-            description: c.intl.formatToPlainString(c.t.zoT1ZE, { bitrate: o.TG[l.TVA.TIER_1].limits.bitrate / 1000 }),
+            description: c.intl.formatToPlainString(c.t.zoT1ZE, {
+                bitrate: o.TG[l.TVA.TIER_1].limits.bitrate / 1e3,
+            }),
         },
         [l.GuildFeatures.INVITE_SPLASH]: {
             perkIcon: a.TP.CUSTOMIZATION,
@@ -77,7 +79,9 @@ let y = () => ({
         },
         [l.GuildFeatures.AUDIO_BITRATE_256_KBPS]: {
             perkIcon: a.TP.AUDIO,
-            description: c.intl.formatToPlainString(c.t.zoT1ZE, { bitrate: o.TG[l.TVA.TIER_2].limits.bitrate / 1000 }),
+            description: c.intl.formatToPlainString(c.t.zoT1ZE, {
+                bitrate: o.TG[l.TVA.TIER_2].limits.bitrate / 1e3,
+            }),
         },
         [l.GuildFeatures.ROLE_ICONS]: {
             perkIcon: a.TP.CUSTOM_ROLE_ICON,
@@ -85,7 +89,9 @@ let y = () => ({
         },
         [l.GuildFeatures.MAX_FILE_SIZE_50_MB]: {
             perkIcon: a.TP.UPLOAD,
-            description: c.intl.formatToPlainString(c.t.aFRl53, { uploadSizeLimit: c.intl.string(c.t.M6qV8j) }),
+            description: c.intl.formatToPlainString(c.t.aFRl53, {
+                uploadSizeLimit: c.intl.string(c.t.M6qV8j),
+            }),
         },
         [l.GuildFeatures.BANNER]: {
             perkIcon: a.TP.CUSTOMIZATION,
@@ -97,7 +103,9 @@ let y = () => ({
         },
         [l.GuildFeatures.AUDIO_BITRATE_384_KBPS]: {
             perkIcon: a.TP.AUDIO,
-            description: c.intl.formatToPlainString(c.t.zoT1ZE, { bitrate: o.TG[l.TVA.TIER_3].limits.bitrate / 1000 }),
+            description: c.intl.formatToPlainString(c.t.zoT1ZE, {
+                bitrate: o.TG[l.TVA.TIER_3].limits.bitrate / 1e3,
+            }),
         },
         [l.GuildFeatures.VANITY_URL]: {
             perkIcon: a.TP.VANITY,
@@ -105,7 +113,9 @@ let y = () => ({
         },
         [l.GuildFeatures.MAX_FILE_SIZE_100_MB]: {
             perkIcon: a.TP.UPLOAD,
-            description: c.intl.formatToPlainString(c.t.aFRl53, { uploadSizeLimit: c.intl.string(c.t.yMOW8D) }),
+            description: c.intl.formatToPlainString(c.t.aFRl53, {
+                uploadSizeLimit: c.intl.string(c.t.yMOW8D),
+            }),
         },
     }),
     O = {
@@ -113,10 +123,18 @@ let y = () => ({
             boostPrice: 5,
             includedInLevel: l.TVA.TIER_3,
         },
-        [l.GuildFeatures.GUILD_TAGS]: { boostPrice: 3 },
-        [l.GuildFeatures.ENHANCED_ROLE_COLORS]: { boostPrice: 3 },
-        [l.GuildFeatures.GUILD_TAGS_BADGE_PACK_PETS]: { boostPrice: 3 },
-        [l.GuildFeatures.GUILD_TAGS_BADGE_PACK_FLEX]: { boostPrice: 5 },
+        [l.GuildFeatures.GUILD_TAGS]: {
+            boostPrice: 3,
+        },
+        [l.GuildFeatures.ENHANCED_ROLE_COLORS]: {
+            boostPrice: 3,
+        },
+        [l.GuildFeatures.GUILD_TAGS_BADGE_PACK_PETS]: {
+            boostPrice: 3,
+        },
+        [l.GuildFeatures.GUILD_TAGS_BADGE_PACK_FLEX]: {
+            boostPrice: 5,
+        },
     },
     A = {
         [l.GuildFeatures.GAME_SERVERS]: {
@@ -124,7 +142,9 @@ let y = () => ({
             isEnabled: (e) => (0, s.TS)(e, "GuildPowerupsConstants"),
         },
     },
-    v = { [r.FB]: l.TVA.TIER_3 };
+    v = {
+        [r.FB]: l.TVA.TIER_3,
+    };
 var S = (function (e) {
         return (
             (e.INACTIVE = "inactive"),

@@ -13,6 +13,7 @@ var r,
     d = n(353835),
     f = n(652215),
     p = n(381941);
+
 function _(e, t, n) {
     return (
         t in e
@@ -26,6 +27,7 @@ function _(e, t, n) {
         e
     );
 }
+
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,6 +44,7 @@ function h(e) {
     }
     return e;
 }
+
 function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -54,6 +57,7 @@ function m(e, t) {
     }
     return n;
 }
+
 function g(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -65,6 +69,7 @@ function g(e, t) {
         e
     );
 }
+
 function E(e, t) {
     if (null == e) return {};
     var n,
@@ -81,6 +86,7 @@ function E(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function b(e, t) {
     if (null == e) return {};
     var n,
@@ -131,18 +137,22 @@ let O = {
         20: "font-size-20",
         24: "font-size-24",
     };
+
 function S(e) {
     return f.hH7.FONT_SIZES.indexOf(e) >= 0 ? e : f.hH7.FONT_SIZE_DEFAULT;
 }
+
 function I(e) {
     let t = S(e.fontSize);
     if (t > f.hH7.FONT_SIZE_MAX || t < f.hH7.FONT_SIZE_MIN || A.fontSize === t) return !1;
     (A = h({}, A)).fontSize = t;
 }
+
 function T(e) {
     if (e.zoom < f.hH7.ZOOM_MIN || e.zoom > f.hH7.ZOOM_MAX || A.zoom === e.zoom) return !1;
     ((A = h({}, A)).zoom = e.zoom), d.A.setZoomFactor(A.zoom);
 }
+
 function C() {
     let e = A.fontSize !== f.hH7.FONT_SIZE_DEFAULT,
         t = A.zoom !== f.hH7.ZOOM_DEFAULT;
@@ -150,87 +160,138 @@ function C() {
     (A = h({}, A)).fontSize !== f.hH7.FONT_SIZE_DEFAULT && (A.fontSize = f.hH7.FONT_SIZE_DEFAULT),
         A.zoom !== f.hH7.ZOOM_DEFAULT && ((A.zoom = f.hH7.ZOOM_DEFAULT), d.A.setZoomFactor(A.zoom));
 }
+
 function N() {
     if (A.keyboardModeEnabled) return !1;
     (A = h({}, A)).keyboardModeEnabled = !0;
 }
+
 function R() {
     if (!A.keyboardModeEnabled) return !1;
     (A = h({}, A)).keyboardModeEnabled = !1;
 }
+
 function w() {
     (A = h({}, A)).colorblindMode = !A.colorblindMode;
 }
+
 function P() {
     (A = h({}, A)).lowContrastMode = !A.lowContrastMode;
 }
+
 function D(e) {
     A.syncForcedColors = e.syncForcedColors;
 }
+
 function x(e) {
     (A = h({}, A)).saturation = e.saturation;
 }
+
 function L() {
     (A = h({}, A)).desaturateUserColors = !A.desaturateUserColors;
 }
+
 function j(e) {
     A.roleStyle = e.roleStyle;
 }
+
 function M(e) {
     A.displayNameStylesEnabled = e.enabled;
 }
+
 function k() {
     (A = h({}, A)).submitButtonEnabled = !A.submitButtonEnabled;
 }
+
 function U() {
     (A = h({}, A)).syncProfileThemeWithUserTheme = !A.syncProfileThemeWithUserTheme;
 }
+
 function G(e) {
     if (A.systemPrefersReducedMotion === e.systemPrefersReducedMotion) return !1;
-    A = g(h({}, A), { systemPrefersReducedMotion: e.systemPrefersReducedMotion });
+    A = g(h({}, A), {
+        systemPrefersReducedMotion: e.systemPrefersReducedMotion,
+    });
 }
+
 function V(e) {
     if (A.systemPrefersCrossfades === e.systemPrefersCrossfades) return !1;
-    A = g(h({}, A), { systemPrefersCrossfades: e.systemPrefersCrossfades });
+    A = g(h({}, A), {
+        systemPrefersCrossfades: e.systemPrefersCrossfades,
+    });
 }
+
 function F(e) {
     if (A.prefersReducedMotion === e.prefersReducedMotion) return !1;
-    A = g(h({}, A), { prefersReducedMotion: e.prefersReducedMotion });
+    A = g(h({}, A), {
+        prefersReducedMotion: e.prefersReducedMotion,
+    });
 }
+
 function B(e) {
     if (A.systemPrefersContrast === e.systemPrefersContrast) return !1;
-    A = g(h({}, A), { systemPrefersContrast: e.systemPrefersContrast });
+    A = g(h({}, A), {
+        systemPrefersContrast: e.systemPrefersContrast,
+    });
 }
+
 function H(e) {
-    A = g(h({}, A), { alwaysShowLinkDecorations: e.alwaysShowLinkDecorations });
+    A = g(h({}, A), {
+        alwaysShowLinkDecorations: e.alwaysShowLinkDecorations,
+    });
 }
+
 function Y(e) {
-    A = g(h({}, A), { enableCustomCursor: e.enableCustomCursor });
+    A = g(h({}, A), {
+        enableCustomCursor: e.enableCustomCursor,
+    });
 }
+
 function W(e) {
     var t;
-    return (A = g(h({}, A), { systemForcedColors: null != (t = e.systemForcedColors) ? t : "none" })), !0;
+    return (
+        (A = g(h({}, A), {
+            systemForcedColors: null != (t = e.systemForcedColors) ? t : "none",
+        })),
+        !0
+    );
 }
+
 function K() {
     A.forcedColorsModalSeen = !0;
 }
+
 function z() {
-    A = g(h({}, A), { keyboardNavigationExplainerModalSeen: !0 });
+    A = g(h({}, A), {
+        keyboardNavigationExplainerModalSeen: !0,
+    });
 }
+
 function q(e) {
     let { messageGroupSpacing: t } = e;
-    A = g(h({}, A), { messageGroupSpacing: t });
+    A = g(h({}, A), {
+        messageGroupSpacing: t,
+    });
 }
+
 function X(e) {
     let { contrast: t } = e;
-    A = g(h({}, A), { contrast: t });
+    A = g(h({}, A), {
+        contrast: t,
+    });
 }
+
 function Z(e) {
     let { contrastMode: t } = e;
-    A = g(h({}, A), { contrastMode: t });
+    A = g(h({}, A), {
+        contrastMode: t,
+    });
 }
+
 function Q(e) {
-    A = g(h({}, A), { switchIconsEnabled: e.switchIconsEnabled });
+    A = g(h({}, A), {
+        switchIconsEnabled: e.switchIconsEnabled,
+    });
 }
 class $ extends (r = i.Ay.DeviceSettingsStore) {
     initialize(e) {
@@ -410,17 +471,31 @@ _($, "displayName", "AccessibilityStore"),
                 case 150:
                     r = 24;
             }
-            return g(h({}, n), { fontSize: r });
+            return g(h({}, n), {
+                fontSize: r,
+            });
         },
-        (e) => g(h({}, e), { darkSidebar: !1 }),
-        (e) => g(h({}, e), { messageGroupSpacing: null }),
+        (e) =>
+            g(h({}, e), {
+                darkSidebar: !1,
+            }),
+        (e) =>
+            g(h({}, e), {
+                messageGroupSpacing: null,
+            }),
         (e) =>
             g(h({}, e), {
                 systemPrefersReducedMotion: "no-preference",
                 prefersReducedMotion: "auto",
             }),
-        (e) => g(h({}, e), { alwaysShowLinkDecorations: e.saturation <= s.yv }),
-        (e) => g(h({}, e), { disableVoiceBackgrounds: !1 }),
+        (e) =>
+            g(h({}, e), {
+                alwaysShowLinkDecorations: e.saturation <= s.yv,
+            }),
+        (e) =>
+            g(h({}, e), {
+                disableVoiceBackgrounds: !1,
+            }),
         (e) => {
             try {
                 delete e.disableVoiceBackgrounds;
@@ -433,7 +508,10 @@ _($, "displayName", "AccessibilityStore"),
             } catch (e) {}
             return e;
         },
-        (e) => g(h({}, e), { enableCustomCursor: !0 }),
+        (e) =>
+            g(h({}, e), {
+                enableCustomCursor: !0,
+            }),
     ]);
 let J = new $(o.h, {
     ACCESSIBILITY_SET_FONT_SIZE: I,

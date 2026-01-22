@@ -1,4 +1,6 @@
-n.d(t, { A: () => y });
+n.d(t, {
+    A: () => y,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -38,10 +40,14 @@ let b = (e) => {
                                 "aria-hidden": !0,
                                 color: i ? void 0 : l.LU0.unsafe_rawColors.PREMIUM_TIER_2_PINK.css,
                             }),
-                            (0, r.jsx)(f.A.Title, { children: g.intl.string(g.t.Ipxkog) }),
+                            (0, r.jsx)(f.A.Title, {
+                                children: g.intl.string(g.t.Ipxkog),
+                            }),
                         ],
                     }),
             }),
         });
     },
-    y = s.Ay.connectStores([p.default], () => ({ user: p.default.getCurrentUser() }))((0, u.A)(b));
+    y = s.Ay.connectStores([p.default], () => ({
+        user: p.default.getCurrentUser(),
+    }))((0, u.A)(b));

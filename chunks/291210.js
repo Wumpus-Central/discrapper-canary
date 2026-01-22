@@ -29,7 +29,9 @@ e.exports = function (e) {
                 starts: {
                     className: "title",
                     end: "\\s*[\\$\\w_][\\w_-]*",
-                    starts: { end: "\\s*@?[\\w_][\\w_\\.:-]*" },
+                    starts: {
+                        end: "\\s*@?[\\w_][\\w_\\.:-]*",
+                    },
                 },
             },
             {

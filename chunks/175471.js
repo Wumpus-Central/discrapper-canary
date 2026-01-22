@@ -1,11 +1,15 @@
-n.d(t, { A: () => E }), n(896048), n(228524);
+n.d(t, {
+    A: () => E,
+}),
+    n(896048),
+    n(228524);
 var r,
     i,
     l = n(627968),
     s = n(64700),
     a = n(503698),
     c = n.n(a),
-    o = n(432022),
+    o = n(108531),
     d = n(311907),
     u = n(397927),
     f = n(474001),
@@ -46,7 +50,10 @@ let O = {
             }
             return e;
         })({}, O)),
-        (i = i = { clamp: !0 }),
+        (i = i =
+            {
+                clamp: !0,
+            }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
             : (function (e, t) {
@@ -60,6 +67,7 @@ let O = {
                   Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(i, e));
               }),
         r);
+
 function v(e) {
     let [t, n] = s.useState(0),
         { numUnlocked: r, numRequired: i } = e,
@@ -75,8 +83,12 @@ function v(e) {
     let m = b || g ? j.R : null,
         p = b ? f.A.Stages.FLYING : f.A.Stages.HOVERING;
     return (0, l.jsx)(u.c7X, {
-        from: { opacity: 0 },
-        to: { opacity: 1 },
+        from: {
+            opacity: 0,
+        },
+        to: {
+            opacity: 1,
+        },
         config: y,
         shouldAnimate: "animate-always",
         children: (e) =>
@@ -91,7 +103,9 @@ function v(e) {
                     }),
                     (0, l.jsx)("div", {
                         className: c()(j.Sb, m),
-                        children: h.intl.format(h.t.qV3Erl, { numLeft: i - r }),
+                        children: h.intl.format(h.t.qV3Erl, {
+                            numLeft: i - r,
+                        }),
                     }),
                     (0, l.jsx)(u.DUT, {
                         onClick: a,
@@ -106,6 +120,7 @@ function v(e) {
             }),
     });
 }
+
 function A(e) {
     let {
             withCardBody: t,
@@ -128,8 +143,12 @@ function A(e) {
             n && h(1);
         }, [n]),
         (0, l.jsx)(u.c7X, {
-            from: { unlockedTranslateY: 50 },
-            to: { unlockedTranslateY: 50 * (0 === x) },
+            from: {
+                unlockedTranslateY: 50,
+            },
+            to: {
+                unlockedTranslateY: 50 * (0 === x),
+            },
             config: O,
             children: (e) =>
                 (0, l.jsx)("div", {
@@ -148,10 +167,14 @@ function A(e) {
                             (0, l.jsx)(p.A, {
                                 tier: a.tier,
                                 color: "currentColor",
-                                className: c()(j.w5, { [j.AU]: !r }),
+                                className: c()(j.w5, {
+                                    [j.AU]: !r,
+                                }),
                             }),
                             (0, l.jsx)("div", {
-                                className: c()(j.TJ, { [j.bY]: r }),
+                                className: c()(j.TJ, {
+                                    [j.bY]: r,
+                                }),
                                 children: a.title,
                             }),
                             o
@@ -175,6 +198,7 @@ function A(e) {
         })
     );
 }
+
 function E(e) {
     let {
             children: t,
@@ -198,7 +222,9 @@ function E(e) {
     return (0, l.jsxs)(
         "div",
         {
-            className: c()(j.Zm, { [j.Ab]: a }),
+            className: c()(j.Zm, {
+                [j.Ab]: a,
+            }),
             children: [
                 (0, l.jsx)(A, {
                     subscriptionCount: n,
@@ -216,7 +242,9 @@ function E(e) {
                     isAnimatedTo: s,
                 }),
                 (0, l.jsx)("div", {
-                    className: c()({ [j.J8]: f }),
+                    className: c()({
+                        [j.J8]: f,
+                    }),
                     children:
                         null != t
                             ? t
@@ -286,12 +314,22 @@ function E(e) {
 }
 let N = (e) => {
         let { transform: t, hasAnimatedUnlocked: n, headerButton: r, subscriptionsRequired: i } = e;
-        return null !== r ? r : n ? (0, l.jsx)(_, { transform: t }) : (0, l.jsx)(S, { subscriptionsRequired: i });
+        return null !== r
+            ? r
+            : n
+              ? (0, l.jsx)(_, {
+                    transform: t,
+                })
+              : (0, l.jsx)(S, {
+                    subscriptionsRequired: i,
+                });
     },
     _ = (e) => {
         let { transform: t } = e;
         return (0, l.jsx)(o.animated.div, {
-            style: { transform: t },
+            style: {
+                transform: t,
+            },
             className: j.mM,
             children: h.intl.string(h.t.dNGM0v),
         });

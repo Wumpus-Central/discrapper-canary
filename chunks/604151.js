@@ -23,6 +23,7 @@ var r = n(627968),
     b = n(985018),
     y = n(193291);
 let O = 5;
+
 function A(e) {
     let { listType: t, numberOfUsers: n } = e,
         i = "blocked" === t;
@@ -45,14 +46,19 @@ function A(e) {
                         variant: "text-md/medium",
                         color: "text-default",
                         children: i
-                            ? b.intl.format(b.t["r91W/h"], { numberOfBlockedUsers: n })
-                            : b.intl.format(b.t.rXUeOl, { numberOfIgnoredUsers: n }),
+                            ? b.intl.format(b.t["r91W/h"], {
+                                  numberOfBlockedUsers: n,
+                              })
+                            : b.intl.format(b.t.rXUeOl, {
+                                  numberOfIgnoredUsers: n,
+                              }),
                     }),
                 ],
             }),
         ],
     });
 }
+
 function v(e) {
     var t;
     let { userId: n, last: a } = e,
@@ -72,7 +78,9 @@ function v(e) {
     return null == h
         ? null
         : (0, r.jsxs)("div", {
-              className: s()(y.nM, { [y.fW]: a }),
+              className: s()(y.nM, {
+                  [y.fW]: a,
+              }),
               children: [
                   (0, r.jsxs)("div", {
                       className: y.eF,
@@ -107,6 +115,7 @@ function v(e) {
               ],
           });
 }
+
 function S(e) {
     let { setting: t, userIds: n, listType: a } = e,
         [s, o] = i.useState(O),
@@ -155,6 +164,7 @@ function S(e) {
         }),
     });
 }
+
 function I() {
     let e = (0, o.yK)([f.A], () => f.A.getBlockedIDs());
     return (0, r.jsx)(S, {
@@ -163,6 +173,7 @@ function I() {
         listType: "blocked",
     });
 }
+
 function T() {
     let e = (0, o.yK)([f.A], () => f.A.getIgnoredIDs());
     return (0, r.jsx)(S, {
@@ -171,6 +182,7 @@ function T() {
         listType: "ignored",
     });
 }
+
 function C() {
     return (0, r.jsxs)(h.h, {
         setting: g.H.RESTRICTED_USERS,

@@ -1,4 +1,6 @@
-n.d(t, { A: () => T }),
+n.d(t, {
+    A: () => T,
+}),
     n(896048),
     n(747238),
     n(812715),
@@ -29,6 +31,7 @@ var a = n(627968),
     v = n(124733),
     j = n(865524),
     y = n(154878);
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -54,6 +57,7 @@ function _(e) {
     }
     return e;
 }
+
 function A(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -223,7 +227,11 @@ let C = {
                 let n = F(t);
                 null != n &&
                     (0, f.Mz)(n, (t) => {
-                        D((a) => A(_({}, a), { [e]: (0, f.GT)(t, n) }));
+                        D((a) =>
+                            A(_({}, a), {
+                                [e]: (0, f.GT)(t, n),
+                            }),
+                        );
                     });
             };
         l.useEffect(() => {
@@ -237,10 +245,20 @@ let C = {
                         let [t, n] = e;
                         if (null != n) {
                             if ("" !== n.src && null != n.src && ("" === n.base64 || null == n.base64))
-                                D((e) => A(_({}, e), { [t]: n }));
+                                D((e) =>
+                                    A(_({}, e), {
+                                        [t]: n,
+                                    }),
+                                );
                             else if ("" !== n.base64 && null != n.base64) {
                                 let e = (0, f.fB)(n.base64);
-                                (n.src = e), M.current.push(e), D((e) => A(_({}, e), { [t]: n }));
+                                (n.src = e),
+                                    M.current.push(e),
+                                    D((e) =>
+                                        A(_({}, e), {
+                                            [t]: n,
+                                        }),
+                                    );
                             }
                         }
                     });
@@ -280,7 +298,9 @@ let C = {
                   className: b.zr,
                   children: [
                       (0, a.jsxs)("div", {
-                          style: { display: "none" },
+                          style: {
+                              display: "none",
+                          },
                           children: [
                               (0, a.jsx)(u.A, {
                                   ref: (e) => {
@@ -333,7 +353,9 @@ let C = {
                                       j &&
                                           (0, a.jsx)("div", {
                                               className: b.KJ,
-                                              children: (0, a.jsx)(x.A, { config: G }),
+                                              children: (0, a.jsx)(x.A, {
+                                                  config: G,
+                                              }),
                                           }),
                                   ],
                               }),
@@ -530,7 +552,11 @@ let C = {
                                                               frame: n,
                                                               showDarkTheme: E,
                                                               onClear: () => {
-                                                                  D((e) => A(_({}, e), { [t]: null }));
+                                                                  D((e) =>
+                                                                      A(_({}, e), {
+                                                                          [t]: null,
+                                                                      }),
+                                                                  );
                                                               },
                                                           },
                                                           t,
@@ -585,7 +611,9 @@ let C = {
                                                           canUsePremiumCustomization: !0,
                                                           isTryItOut: !0,
                                                       }),
-                                                      (0, a.jsx)(x.A, { config: G }),
+                                                      (0, a.jsx)(x.A, {
+                                                          config: G,
+                                                      }),
                                                   ],
                                               }),
                                       }),
@@ -776,7 +804,9 @@ let C = {
                                                           ],
                                                       }),
                                                       (0, a.jsx)("div", {
-                                                          style: { display: "none" },
+                                                          style: {
+                                                              display: "none",
+                                                          },
                                                           children: (0, a.jsx)(u.A, {
                                                               ref: (e) => {
                                                                   O.current["randomized-".concat(t)] = e;

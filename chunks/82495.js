@@ -1,5 +1,8 @@
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 var r = n(64700);
+
 function i(e, t, n) {
     let i = r.useRef(e);
     return (

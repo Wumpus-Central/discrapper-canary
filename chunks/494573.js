@@ -1,4 +1,7 @@
-l.d(t, { A: () => y }), l(896048);
+l.d(t, {
+    A: () => y,
+}),
+    l(896048);
 var n = l(627968),
     r = l(64700),
     s = l(503698),
@@ -16,6 +19,7 @@ var n = l(627968),
     h = l(985018),
     E = l(78716),
     v = l(525037);
+
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var l = null != arguments[t] ? arguments[t] : {},
@@ -41,6 +45,7 @@ function A(e) {
     }
     return e;
 }
+
 function x(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -59,6 +64,7 @@ function x(e, t) {
         e
     );
 }
+
 function S(e) {
     let { tab: t, label: l, selected: r, handleTransition: s, hasSubmenu: i, showNewBadge: c } = e;
     return i
@@ -71,7 +77,9 @@ function S(e) {
         : (0, n.jsxs)(f.A.Title, {
               onClick: () => s(t),
               wrapperClassName: v.Vn,
-              className: a()(v.Mf, { [v.wH]: r }),
+              className: a()(v.Mf, {
+                  [v.wH]: r,
+              }),
               children: [
                   l,
                   c &&
@@ -82,6 +90,7 @@ function S(e) {
               ],
           });
 }
+
 function C(e) {
     let { tab: t, label: l, selected: s, handleTransition: i } = e,
         c = r.useRef(null),
@@ -131,7 +140,9 @@ function C(e) {
                         onClick: () => i(t),
                         onKeyDown: O,
                         wrapperClassName: v.Vn,
-                        className: a()(v.Mf, { [v.wH]: s }),
+                        className: a()(v.Mf, {
+                            [v.wH]: s,
+                        }),
                         children: (0, n.jsxs)("span", {
                             className: v.hP,
                             children: [
@@ -148,6 +159,7 @@ function C(e) {
         }),
     });
 }
+
 function O(e) {
     let { onTabSelect: t, tabs: l, selectedTab: s, selected: i, showOrbRentalNewBadge: c } = e,
         g = r.useRef(null),
@@ -199,11 +211,18 @@ function O(e) {
                         ref: g,
                         onKeyDown: y,
                         wrapperClassName: v.Vn,
-                        className: a()(v.Mf, v.OS, { [v.wH]: i }),
+                        className: a()(v.Mf, v.OS, {
+                            [v.wH]: i,
+                        }),
                         "aria-label": h.intl.string(h.t["UKOtz+"]),
                         children: (0, n.jsxs)("span", {
                             className: v.hP,
-                            children: [h.intl.string(h.t["UKOtz+"]), (0, n.jsx)(r, { size: "xs" })],
+                            children: [
+                                h.intl.string(h.t["UKOtz+"]),
+                                (0, n.jsx)(r, {
+                                    size: "xs",
+                                }),
+                            ],
                         }),
                     }),
                 );
@@ -211,10 +230,12 @@ function O(e) {
         }),
     });
 }
+
 function _(e, t, l) {
     var n;
     return e === l || (null != (n = t.hasSubmenu) && n && (0, m.dF)(l) && e === m.G2.CATALOG);
 }
+
 function y(e) {
     let { className: t, selectedTab: l, tabs: s, onTabSelect: o, showOrbRentalNewBadge: u } = e,
         [d, f] = r.useState(0),

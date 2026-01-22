@@ -1,4 +1,6 @@
-n.d(t, { A: () => N });
+n.d(t, {
+    A: () => N,
+});
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -24,6 +26,7 @@ var r = n(627968),
     I = n(168428),
     T = n(448894),
     C = n(652215);
+
 function N(e) {
     let { code: t, message: n, getAcceptInviteContext: N } = e,
         { invite: R, inviteError: w } = (0, a.cf)(

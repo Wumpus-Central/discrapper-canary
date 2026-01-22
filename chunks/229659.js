@@ -1,9 +1,13 @@
-n.d(t, { A: () => o }), n(896048);
+n.d(t, {
+    A: () => o,
+}),
+    n(896048);
 var l = n(627968),
     r = n(64700),
     i = n(502671),
     a = n(827734),
     s = n(397927);
+
 function o(e) {
     let t = (0, r.useRef)(null),
         [n, o] = (0, r.useState)(null),
@@ -20,7 +24,9 @@ function o(e) {
         (l.backgroundColor = u),
             (l.textColor = d),
             (l.gridColor = f),
-            (l.timeOptions = { timeStyle: "short" }),
+            (l.timeOptions = {
+                timeStyle: "short",
+            }),
             (l.fontFamily = "gg sans"),
             (l.fontSize = 11),
             c.setColor(p),
@@ -59,7 +65,10 @@ function o(e) {
                               }
                               return e;
                           })({}, e)),
-                          (n = n = { value: b(e.value) }),
+                          (n = n =
+                              {
+                                  value: b(e.value),
+                              }),
                           Object.getOwnPropertyDescriptors
                               ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                               : (function (e, t) {

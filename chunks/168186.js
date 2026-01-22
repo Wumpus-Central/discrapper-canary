@@ -38,6 +38,7 @@ var p = n(31717),
     h = n(73510),
     m = n(652215),
     g = n(818348);
+
 function E(e, t, n) {
     return (
         t in e
@@ -51,6 +52,7 @@ function E(e, t, n) {
         e
     );
 }
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -67,6 +69,7 @@ function b(e) {
     }
     return e;
 }
+
 function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -79,6 +82,7 @@ function y(e, t) {
     }
     return n;
 }
+
 function O(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -90,6 +94,7 @@ function O(e, t) {
         e
     );
 }
+
 function A(e) {
     var t, n, r;
     let i,
@@ -129,6 +134,7 @@ function A(e) {
         handler: a.handler,
     };
 }
+
 function v(e) {
     return null == e
         ? void 0
@@ -142,7 +148,9 @@ function v(e) {
                   displayDescription: null != (n = e.description_localized) ? n : e.description,
               });
               return e.type === u.n4.CHANNEL && "channel_types" in e
-                  ? O(b({}, r), { channelTypes: e.channel_types })
+                  ? O(b({}, r), {
+                        channelTypes: e.channel_types,
+                    })
                   : (e.type === u.n4.NUMBER || e.type === u.n4.INTEGER) && ("min_value" in e || "max_value" in e)
                     ? O(b({}, r), {
                           minValue: e.min_value,
@@ -156,14 +164,18 @@ function v(e) {
                       : r;
           });
 }
+
 function S(e) {
     return null == e
         ? void 0
         : e.map((e) => {
               var t;
-              return O(b({}, e), { displayName: null != (t = e.name_localized) ? t : e.name });
+              return O(b({}, e), {
+                  displayName: null != (t = e.name_localized) ? t : e.name,
+              });
           });
 }
+
 function I(e) {
     var t, n;
     let { rootCommand: r, command: i, applicationId: a, subCommandPath: s, useKeyedPermissions: o } = e;
@@ -243,6 +255,7 @@ function I(e) {
         l
     );
 }
+
 function T(e, t) {
     return l().flatMap(
         e,
@@ -258,9 +271,11 @@ function T(e, t) {
         ),
     );
 }
+
 function C(e) {
     return m.Ut1.test(e.trim());
 }
+
 function N(e, t, n, r) {
     let i = [];
     return (
@@ -270,6 +285,7 @@ function N(e, t, n, r) {
         i.slice(0, r)
     );
 }
+
 function R(e) {
     let t = e.type === u.n4.STRING,
         n = e.type === u.n4.CHANNEL,
@@ -286,10 +302,12 @@ function R(e) {
         canMentionOtherGlobals: t,
     };
 }
+
 function w(e) {
     return i()(e).subtract(1).toString();
 }
 let P = c.iu(0);
+
 function D(e) {
     let {
         PermissionStore: t,
@@ -308,6 +326,7 @@ function D(e) {
     let l = x(r, o, i);
     return ("boolean" != typeof l || !!l) && (null == s || (!c.aI(s, P) && t.can(s, n)));
 }
+
 function x(e, t, n) {
     let r = n[(0, f.Eu)(e.userId, _.RA.USER)];
     if (null != r) return r.permission;
@@ -320,6 +339,7 @@ function x(e, t, n) {
     let a = n[(0, f.Eu)(t, _.RA.ROLE)];
     return null != a ? a.permission : null;
 }
+
 function L(e) {
     switch (e) {
         case _.iw.CHAT:
@@ -342,12 +362,14 @@ function L(e) {
             return p.C.SlashCommand;
     }
 }
+
 function j(e) {
     if (null != e)
         if (e.id === h.Ik.BUILT_IN) return _.gK.BUILT_IN;
         else if (e.id === h.Ik.FRECENCY) return _.gK.FRECENCY;
         else return _.gK.APP;
 }
+
 function M(e, t, n) {
     var r, i;
     return {
@@ -359,6 +381,7 @@ function M(e, t, n) {
         isUserApp: null != t && t,
     };
 }
+
 function k(e) {
     let t = e.id,
         n = e.options,
@@ -373,6 +396,7 @@ function k(e) {
         }
     );
 }
+
 function U(e) {
     var t, n;
     let {
@@ -398,10 +422,12 @@ function U(e) {
         source: u,
     });
 }
+
 function G(e) {
     let t = e.interactionMetadata;
     return null == t ? null : "triggering_interaction_metadata" in t ? t.triggering_interaction_metadata : t;
 }
+
 function V(e, t) {
     var n;
     let r = null == (n = t.result) ? void 0 : n.sections;

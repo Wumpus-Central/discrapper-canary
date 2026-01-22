@@ -2,6 +2,7 @@ var t = "u" > typeof Element,
     n = "function" == typeof Map,
     r = "function" == typeof Set,
     i = "function" == typeof ArrayBuffer && !!ArrayBuffer.isView;
+
 function a(e, s) {
     if (e === s) return !0;
     if (e && s && "object" == typeof e && "object" == typeof s) {

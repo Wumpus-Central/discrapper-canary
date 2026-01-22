@@ -1,4 +1,11 @@
-n.d(t, { A: () => L }), n(591487), n(727858), n(747238), n(321073), n(896048);
+n.d(t, {
+    A: () => L,
+}),
+    n(591487),
+    n(727858),
+    n(747238),
+    n(321073),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -31,6 +38,7 @@ var r = n(627968),
     w = n(985018),
     R = n(545156);
 let D = RegExp("(.*)```(\\w+)\\n(.*)```(.*)", "s");
+
 function M() {
     let e = (0, i.bG)([v.A], () => v.A.hasCurrentUserSentMessageSinceAppStart()),
         t = [];
@@ -40,7 +48,9 @@ function M() {
         l.useEffect(
             () => () => {
                 n === a.M.ACTIVITIES_CHAT_MENU_NEW_BADGE &&
-                    (0, b.Dr)(a.M.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: T.i.TAKE_ACTION });
+                    (0, b.Dr)(a.M.ACTIVITIES_CHAT_MENU_NEW_BADGE, {
+                        dismissAction: T.i.TAKE_ACTION,
+                    });
             },
             [n],
         ),
@@ -58,6 +68,7 @@ function M() {
         })
     );
 }
+
 function L(e) {
     let {
             channel: t,
@@ -72,19 +83,27 @@ function L(e) {
             openClips: V,
         } = e,
         { analyticsLocations: F, newestAnalyticsLocation: H } = (0, d.Ay)(),
-        B = (0, A.s)({ channel: t }),
+        B = (0, A.s)({
+            channel: t,
+        }),
         K = (0, i.bG)([O.A], () => O.A.isInProgress());
+
     function W() {
         (0, j.Tv)(t, void 0, "Plus Button");
     }
+
     function z() {
         x.default.track(N.HAw.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), U("/", (0, S.x7)("/"));
     }
+
     function Y() {
         V();
     }
+
     function q() {
-        (0, b.Dr)(a.M.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: T.i.TAKE_ACTION }),
+        (0, b.Dr)(a.M.POLLS_CHAT_INPUT_COACHMARK, {
+            dismissAction: T.i.TAKE_ACTION,
+        }),
             (0, o.mMO)(
                 async () => {
                     let { default: e } = await n.e("52786").then(n.bind(n, 489449));
@@ -117,7 +136,10 @@ function L(e) {
                                 }
                                 return e;
                             })({}, n)),
-                            (i = i = { channel: t }),
+                            (i = i =
+                                {
+                                    channel: t,
+                                }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(i))
                                 : (function (e, t) {
@@ -134,9 +156,12 @@ function L(e) {
                         );
                     };
                 },
-                { modalKey: P.sm },
+                {
+                    modalKey: P.sm,
+                },
             );
     }
+
     function X() {
         x.default.track(N.HAw.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
             channel_type: t.type,
@@ -150,21 +175,41 @@ function L(e) {
                               type: "channel",
                               channel: t,
                           }
-                        : { type: "contextless" },
+                        : {
+                              type: "contextless",
+                          },
                 openInPopout: !1,
                 analyticsLocation: H,
             }),
-            (0, u.LV)({ guildId: t.guild_id });
+            (0, u.LV)({
+                guildId: t.guild_id,
+            });
     }
+
     function J() {
         let e = k,
             n = "txt",
             r = "",
             l = k.match(D);
         null != l && ((r = l[1]), (n = l[2]), (e = l[3]), (r += l[4])),
-            (0, C.R)([(0, _.VE)(new Blob([e], { type: "text/plain" }), "message.".concat(n), "text/plain")], t, G),
+            (0, C.R)(
+                [
+                    (0, _.VE)(
+                        new Blob([e], {
+                            type: "text/plain",
+                        }),
+                        "message.".concat(n),
+                        "text/plain",
+                    ),
+                ],
+                t,
+                G,
+            ),
             E._.dispatchToLastSubscribed(N.jej.CLEAR_TEXT),
-            "" !== r && E._.dispatchToLastSubscribed(N.jej.INSERT_TEXT, { plainText: r });
+            "" !== r &&
+                E._.dispatchToLastSubscribed(N.jej.INSERT_TEXT, {
+                    plainText: r,
+                });
     }
     return (
         l.useEffect(() => {
@@ -353,7 +398,10 @@ function L(e) {
                             {
                                 id: "scheduled_message",
                                 label: n,
-                                action: () => (0, A.e0)({ channel: t }),
+                                action: () =>
+                                    (0, A.e0)({
+                                        channel: t,
+                                    }),
                                 children: B,
                             },
                             "scheduled_message",
@@ -365,7 +413,11 @@ function L(e) {
                                 id: "summarize_thread",
                                 label: n,
                                 action: () => y.A.summarizeThread(t),
-                                icon: K ? (0, r.jsx)(o.y$y, { type: o.tVU.PULSING_ELLIPSIS }) : null,
+                                icon: K
+                                    ? (0, r.jsx)(o.y$y, {
+                                          type: o.tVU.PULSING_ELLIPSIS,
+                                      })
+                                    : null,
                                 disabled: K,
                                 children: K
                                     ? null

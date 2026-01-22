@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968),
     i = n(64700),
     l = n(884362),
@@ -45,7 +47,9 @@ let f = function (e) {
                 new Promise((e) => {
                     let t = I.current;
                     if (null == t) return e();
-                    t.scrollToTop({ callback: () => requestAnimationFrame(() => e()) });
+                    t.scrollToTop({
+                        callback: () => requestAnimationFrame(() => e()),
+                    });
                 }),
             [],
         ),
@@ -54,7 +58,9 @@ let f = function (e) {
                 new Promise((e) => {
                     let t = I.current;
                     if (null == t) return e();
-                    t.scrollToBottom({ callback: () => requestAnimationFrame(() => e()) });
+                    t.scrollToBottom({
+                        callback: () => requestAnimationFrame(() => e()),
+                    });
                 }),
             [],
         ),

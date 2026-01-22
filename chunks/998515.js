@@ -28,6 +28,7 @@ var r = n(627968),
     I = n(652215),
     v = n(985018),
     S = n(58682);
+
 function C(e, t, n) {
     return (
         t in e
@@ -45,8 +46,9 @@ let N = (0, g.Fe)({
     createPromise: () => Promise.all([n.e("19846"), n.e("41031")]).then(n.bind(n, 554238)),
     webpackId: 554238,
 });
+
 function T(e) {
-    return e < 1000 ? y.q.SMALL : y.q.LARGE;
+    return e < 1e3 ? y.q.SMALL : y.q.LARGE;
 }
 s.Ay.initialize();
 class j extends i.PureComponent {
@@ -70,8 +72,12 @@ class j extends i.PureComponent {
     renderCustomErrorMessage() {
         return (0, r.jsxs)("div", {
             children: [
-                (0, r.jsx)("p", { children: v.intl.string(v.t["1PZdF7"]) }),
-                (0, r.jsx)("p", { children: v.intl.string(v.t.CvQlAH) }),
+                (0, r.jsx)("p", {
+                    children: v.intl.string(v.t["1PZdF7"]),
+                }),
+                (0, r.jsx)("p", {
+                    children: v.intl.string(v.t.CvQlAH),
+                }),
             ],
         });
     }
@@ -146,7 +152,9 @@ class j extends i.PureComponent {
                             path: I.BVt.APPLICATION_STORE_LISTING_SKU(":skuId"),
                             render: this.renderStoreListing,
                         }),
-                        (0, r.jsx)(a.rd, { to: I.BVt.APP }),
+                        (0, r.jsx)(a.rd, {
+                            to: I.BVt.APP,
+                        }),
                     ],
                 }),
             );

@@ -1,4 +1,8 @@
-n.d(t, { A: () => R }), n(896048), n(321073);
+n.d(t, {
+    A: () => R,
+}),
+    n(896048),
+    n(321073);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -29,6 +33,7 @@ var r = n(627968),
     T = n(985018),
     P = n(439792),
     w = n(335419);
+
 function R(e) {
     var t, i;
     let a,
@@ -87,7 +92,9 @@ function R(e) {
             [w],
             s.My,
         ),
-        L = (0, h.m)({ location: "voice_channel_activities" });
+        L = (0, h.m)({
+            location: "voice_channel_activities",
+        });
     return M.length + S.length === 0
         ? null
         : (0, r.jsxs)(o.HOs, {
@@ -98,7 +105,9 @@ function R(e) {
                       isChannelSelected: x,
                       voiceStatesCount: null != (i = null == j ? void 0 : j.length) ? i : 0,
                   }),
-                  (0, r.jsx)("div", { className: P.zN }),
+                  (0, r.jsx)("div", {
+                      className: P.zN,
+                  }),
                   S.map((e, t) => {
                       var n;
                       return (0, r.jsx)(
@@ -151,7 +160,9 @@ function R(e) {
                   _ &&
                       (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)("div", { className: P.zN }),
+                              (0, r.jsx)("div", {
+                                  className: P.zN,
+                              }),
                               (0, r.jsx)("div", {
                                   className: P.Vo,
                                   children: (0, r.jsx)(o.Text, {
@@ -195,7 +206,10 @@ function R(e) {
                                                               }
                                                               return e;
                                                           })({}, t)),
-                                                          (l = l = { guild: m }),
+                                                          (l = l =
+                                                              {
+                                                                  guild: m,
+                                                              }),
                                                           Object.getOwnPropertyDescriptors
                                                               ? Object.defineProperties(
                                                                     n,
@@ -228,6 +242,7 @@ function R(e) {
               ],
           });
 }
+
 function D(e) {
     let { channel: t, isChannelSelected: n, voiceStatesCount: l } = e,
         i = (0, s.bG)([A.A], () => !A.A.can(I.xBc.CONNECT, t)),
@@ -244,14 +259,18 @@ function D(e) {
         : (0, r.jsxs)("div", {
               className: a()(P.oT, w.oT),
               children: [
-                  (0, r.jsx)(_.A, { channel: t }),
+                  (0, r.jsx)(_.A, {
+                      channel: t,
+                  }),
                   c
                       ? (0, r.jsx)(C.A, {
                             userCount: l,
                             video: o,
                             channel: t,
                         })
-                      : (0, r.jsx)(S.A, { userCount: l }),
+                      : (0, r.jsx)(S.A, {
+                            userCount: l,
+                        }),
               ],
           });
 }

@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var a = n(627968),
     l = n(64700),
     i = n(158954),
@@ -7,12 +9,14 @@ var a = n(627968),
     o = n(367727),
     c = n(594061),
     d = n(795695);
+
 function u() {
     return (0, a.jsx)(s.HOs, {
         className: d.kL,
         children: (0, a.jsx)(m, {}),
     });
 }
+
 function m() {
     let e = l.useCallback(() => {
             (0, c._N)(r.M.NITRO_TENURE_BADGE_LEVEL_UP);
@@ -28,12 +32,15 @@ function m() {
             }),
             (0, a.jsxs)("p", {
                 children: [
-                    "Level Up DC:\xA0",
+                    "Level Up DC:\xa0",
                     null != n &&
                         (0, a.jsxs)("b", {
                             children: ["Dismissed (", n.toLocaleDateString(), ")"],
                         }),
-                    null == n && (0, a.jsx)("b", { children: "Not Dismissed" }),
+                    null == n &&
+                        (0, a.jsx)("b", {
+                            children: "Not Dismissed",
+                        }),
                 ],
             }),
             (0, a.jsx)("div", {

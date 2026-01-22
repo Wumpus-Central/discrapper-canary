@@ -1,8 +1,11 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(627968),
     l = n(397927),
     i = n(985018),
     a = n(696778);
+
 function s(e) {
     let { onClick: t, expanded: n } = e;
     return (0, r.jsx)(l.DUT, {

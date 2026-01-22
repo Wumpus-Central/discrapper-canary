@@ -31,7 +31,9 @@ var _ = n(253120),
                     u = l.y;
                 void 0 !== c && void 0 !== u && ((i[s] = c), (a[s] = u));
             }
-            return y([n(e.x, i), n(e.y, a)], { stopTogether: !1 });
+            return y([n(e.x, i), n(e.y, a)], {
+                stopTogether: !1,
+            });
         }
         return null;
     },
@@ -61,7 +63,12 @@ var _ = n(253120),
                     }
                     e[t].start(r);
                 };
-                0 === e.length ? n && n({ finished: !0 }) : e[t].start(r);
+                0 === e.length
+                    ? n &&
+                      n({
+                          finished: !0,
+                      })
+                    : e[t].start(r);
             },
             stop: function () {
                 t < e.length && e[t].stop();
@@ -75,7 +82,10 @@ var _ = n(253120),
             a = {
                 start: function (t) {
                     if (n === e.length) {
-                        t && t({ finished: !0 });
+                        t &&
+                            t({
+                                finished: !0,
+                            });
                         return;
                     }
                     e.forEach(function (s, o) {
@@ -86,7 +96,11 @@ var _ = n(253120),
                             }
                             !s.finished && i && a.stop();
                         };
-                        s ? s.start(l) : l({ finished: !0 });
+                        s
+                            ? s.start(l)
+                            : l({
+                                  finished: !0,
+                              });
                     });
                 },
                 stop: function () {

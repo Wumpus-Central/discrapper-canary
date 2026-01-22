@@ -1,4 +1,6 @@
-n.d(t, { x: () => d });
+n.d(t, {
+    x: () => d,
+});
 var r = n(945810),
     l = n(71393),
     i = n(222823),
@@ -9,16 +11,25 @@ var r = n(945810),
 let u = (0, r.mj)({
     name: "2026-01-red-dot-navigate-to-mentions",
     kind: "user",
-    defaultConfig: { enableTracking: !1 },
-    variations: { 1: { enableTracking: !0 } },
+    defaultConfig: {
+        enableTracking: !1,
+    },
+    variations: {
+        1: {
+            enableTracking: !0,
+        },
+    },
 });
+
 function d(e, t) {
     if (!c.kvI.GUILD_TEXTUAL.has(e.type) || !t.ready) return;
     let n = a.default.getCurrentUser();
     if (null == n) return;
     let r = i.Ay.getMentionCount(e.id);
     if (r <= 0) return;
-    let { enableTracking: d } = u.getConfig({ location: "trackMentionsOnInitialUnreadChannelLoad" });
+    let { enableTracking: d } = u.getConfig({
+        location: "trackMentionsOnInitialUnreadChannelLoad",
+    });
     if (!d) return;
     let f = i.Ay.ackMessageId(e.id),
         p = null != f;

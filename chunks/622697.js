@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var a = n(627968),
     l = n(397927),
     i = n(736653),
@@ -6,6 +8,7 @@ var a = n(627968),
     s = n(270704),
     o = n(652215),
     c = n(566305);
+
 function d(e) {
     let { selected: t, onSelect: n } = e,
         d = (0, i.Ay)();
@@ -25,7 +28,9 @@ function d(e) {
                         r.S4,
                         {
                             onSelect: () => n(e),
-                            style: { background: l },
+                            style: {
+                                background: l,
+                            },
                             name: e.name,
                             isSelected: i,
                         },

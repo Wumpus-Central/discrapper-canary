@@ -1,10 +1,12 @@
 e.exports = function (e, t, r, i) {
     var a = this;
+
     function s(t) {
         return function () {
             (a.nextExpectedAction = t), ++a.sequenceLevels[e], a.resetSequenceTimer();
         };
     }
+
     function o(t) {
         a.fireCallback(r, t, e),
             "keyup" !== i && (a.ignoreNextKeyup = n(780594)(t)),

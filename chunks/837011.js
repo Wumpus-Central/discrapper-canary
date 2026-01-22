@@ -9,6 +9,7 @@ var r,
     a = n(73153),
     s = n(9994),
     o = n(652215);
+
 function l(e, t, n) {
     return (
         t in e
@@ -22,6 +23,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -38,6 +40,7 @@ function c(e) {
     }
     return e;
 }
+
 function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -50,6 +53,7 @@ function u(e, t) {
     }
     return n;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -72,11 +76,25 @@ let p = new Map(),
         isUpdating: !1,
         error: null,
     };
+
 function h(e) {
     let { guildId: t } = e,
         n = p.get(t);
-    null == n ? p.set(t, d(c({}, _), { fetchStatus: "FETCHING" })) : p.set(t, d(c({}, n), { fetchStatus: "FETCHING" }));
+    null == n
+        ? p.set(
+              t,
+              d(c({}, _), {
+                  fetchStatus: "FETCHING",
+              }),
+          )
+        : p.set(
+              t,
+              d(c({}, n), {
+                  fetchStatus: "FETCHING",
+              }),
+          );
 }
+
 function m(e) {
     let { guildId: t, profile: n } = e,
         r = p.get(t);
@@ -98,6 +116,7 @@ function m(e) {
               }),
           );
 }
+
 function g(e) {
     let { guildId: t, error: n } = e,
         r = p.get(t);
@@ -117,16 +136,35 @@ function g(e) {
               }),
           );
 }
+
 function E(e) {
     let { guildId: t } = e,
         n = p.get(t);
-    null == n ? p.set(t, d(c({}, _), { isUpdating: !0 })) : p.set(t, d(c({}, n), { isUpdating: !0 }));
+    null == n
+        ? p.set(
+              t,
+              d(c({}, _), {
+                  isUpdating: !0,
+              }),
+          )
+        : p.set(
+              t,
+              d(c({}, n), {
+                  isUpdating: !0,
+              }),
+          );
 }
+
 function b(e) {
     let { guildId: t, profile: n } = e,
         r = p.get(t);
     null == r
-        ? p.set(t, d(c({}, _), { profile: n }))
+        ? p.set(
+              t,
+              d(c({}, _), {
+                  profile: n,
+              }),
+          )
         : p.set(
               t,
               d(c({}, r), {
@@ -135,11 +173,17 @@ function b(e) {
               }),
           );
 }
+
 function y(e) {
     let { guildId: t, error: n } = e,
         r = p.get(t);
     null == r
-        ? p.set(t, d(c({}, _), { error: n }))
+        ? p.set(
+              t,
+              d(c({}, _), {
+                  error: n,
+              }),
+          )
         : p.set(
               t,
               d(c({}, r), {
@@ -148,6 +192,7 @@ function y(e) {
               }),
           );
 }
+
 function O(e) {
     let { guildId: t, visibility: n } = e,
         r = p.get(t),
@@ -158,10 +203,13 @@ function O(e) {
             t,
             d(c({}, r), {
                 isUpdating: !1,
-                profile: d(c({}, i), { visibility: n }),
+                profile: d(c({}, i), {
+                    visibility: n,
+                }),
             }),
         );
 }
+
 function A(e) {
     let { form: t, guildId: n } = e,
         r = null == t ? void 0 : t.profile;
@@ -185,6 +233,7 @@ function A(e) {
               }),
           );
 }
+
 function v(e) {
     let { invite: t } = e,
         { profile: n } = t;
@@ -209,14 +258,17 @@ function v(e) {
               }),
           );
 }
+
 function S(e) {
     let { channel: t } = e;
     t.type === o.rbe.GUILD_ANNOUNCEMENT && null != t.guild_id && p.delete(t.guild_id);
 }
+
 function I(e) {
     let { guildId: t, enabled: n } = e;
     null != t && n && p.delete(t);
 }
+
 function T(e) {
     var t, n, r;
     let { guild: i } = e,
@@ -228,7 +280,12 @@ function T(e) {
         description: null != (n = i.description) ? n : "",
         customBanner: null != (r = i.discovery_splash) ? r : null,
     });
-    p.set(i.id, d(c({}, a), { profile: s }));
+    p.set(
+        i.id,
+        d(c({}, a), {
+            profile: s,
+        }),
+    );
 }
 class C extends (r = i.Ay.Store) {
     getProfile(e) {

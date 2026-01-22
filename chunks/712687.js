@@ -1,9 +1,12 @@
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var r,
     i = n(311907),
     a = n(73153),
     s = n(203982),
     o = n(652215);
+
 function l(e, t, n) {
     return (
         t in e
@@ -19,10 +22,12 @@ function l(e, t, n) {
 }
 let c = null,
     u = 0;
+
 function d(e) {
     let { contextMenu: t } = e;
     u++, (c = t);
 }
+
 function f() {
     c = null;
 }

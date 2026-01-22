@@ -3,20 +3,29 @@ n.d(t, {
     mW: () => s,
 });
 var r = n(652215);
+
 function i(e) {
     return "Klipy" === e;
 }
+
 function a(e) {
     return i(e);
 }
+
 function s(e) {
     var t, n;
     if (!a(e.providerName)) return;
     let { thumbnail: r } = e;
     if (null != r) return null != (t = null != (n = r.proxyURL) ? n : r.url) ? t : r.uri;
 }
+
 function o(e, t, n) {
-    let i = null != t ? { [t]: 1 } : {},
+    let i =
+            null != t
+                ? {
+                      [t]: 1,
+                  }
+                : {},
         { offset: a, limit: s, results: o, totalResults: l } = null != n ? n : {};
     return {
         search_type: r.I4_.GIF,

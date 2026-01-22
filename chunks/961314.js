@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968);
 n(64700);
 var l = n(397927),
@@ -9,6 +11,7 @@ var l = n(397927),
     c = n(103355),
     u = n(985018),
     d = n(234944);
+
 function f(e) {
     let { guildEvent: t, recurrenceId: n } = e,
         f = (0, s.Ay)(t, n),
@@ -20,7 +23,9 @@ function f(e) {
             : null;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(i.Ay.Divider, { className: d.yF }),
+            (0, r.jsx)(i.Ay.Divider, {
+                className: d.yF,
+            }),
             (0, r.jsx)(c.L, {
                 startTime: f.startTime.toISOString(),
                 status: null != h ? h : t.status,

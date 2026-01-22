@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -17,6 +19,7 @@ let h = [
         extensions: ["gif"],
     },
 ];
+
 function m(e) {
     let {
             showRemoveAvatarButton: t,
@@ -52,7 +55,9 @@ function m(e) {
             className: _.NC,
             children: [
                 (0, r.jsx)(I, {
-                    className: s()({ [_.yj]: v }),
+                    className: s()({
+                        [_.yj]: v,
+                    }),
                     size: o.$n.Sizes.SMALL,
                     onClick: T,
                     children: null != g ? g : p.intl.string(p.t["4OynCD"]),

@@ -1,4 +1,6 @@
-n.d(t, { J: () => r });
+n.d(t, {
+    J: () => r,
+});
 var r = (function (e) {
     return (
         (e.MY_GAMES = "MY_GAMES"),

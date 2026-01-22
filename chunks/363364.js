@@ -44,7 +44,11 @@ e.exports = function () {
                 return l(e, t);
             },
             set: function (t, n) {
-                e || (e = { next: void 0 }), o(e, t, n);
+                e ||
+                    (e = {
+                        next: void 0,
+                    }),
+                    o(e, t, n);
             },
         };
     return t;

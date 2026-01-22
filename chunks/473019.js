@@ -1,8 +1,12 @@
-n.d(t, { A: () => u }), n(321073);
+n.d(t, {
+    A: () => u,
+}),
+    n(321073);
 var r,
     i = n(311907),
     l = n(73153),
     a = n(988794);
+
 function s(e, t, n) {
     return (
         t in e
@@ -16,7 +20,9 @@ function s(e, t, n) {
         e
     );
 }
-let o = { hiddenEventsAndStages: [] };
+let o = {
+    hiddenEventsAndStages: [],
+};
 class c extends (r = i.Ay.PersistedStore) {
     initialize(e) {
         null != e && null != e.hiddenEventsAndStages && (o = e);

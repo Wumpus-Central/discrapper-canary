@@ -1,4 +1,10 @@
-n.d(t, { A: () => A }), n(114821), n(339614), n(321073), n(896048);
+n.d(t, {
+    A: () => A,
+}),
+    n(114821),
+    n(339614),
+    n(321073),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(735438),
@@ -17,6 +23,7 @@ var r = n(627968),
     E = n(818348),
     b = n(343743);
 let y = 4;
+
 function O(e) {
     let t = (0, o.bG)([h.default], () => m.Ay.canUseSoundboardEverywhere(h.default.getCurrentUser())),
         n = (0, o.bG)([u.A], () => u.A.getSoundsForGuild(g.mV)),

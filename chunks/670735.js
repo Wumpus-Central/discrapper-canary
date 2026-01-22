@@ -1,4 +1,7 @@
-n.d(t, { A: () => R }), n(896048);
+n.d(t, {
+    A: () => R,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(735438),
@@ -21,6 +24,7 @@ var r = n(627968),
     A = n(652215),
     v = n(985018),
     S = n(502167);
+
 function I(e, t, n) {
     return (
         t in e
@@ -34,6 +38,7 @@ function I(e, t, n) {
         e
     );
 }
+
 function T() {
     let [e, t] = i.useState(!1);
     if (
@@ -78,7 +83,9 @@ let C = s().throttle(
         );
     },
     100,
-    { trailing: !1 },
+    {
+        trailing: !1,
+    },
 );
 class N extends i.PureComponent {
     componentDidCatch(e, t) {
@@ -91,7 +98,9 @@ class N extends i.PureComponent {
             info: t,
         });
         let r = (0, u.b)(),
-            i = b.A.captureCrash(e, { extra: t });
+            i = b.A.captureCrash(e, {
+                extra: t,
+            });
         E.default.track(A.HAw.APP_CRASHED, {
             path: n.pathname,
             extra: t,
@@ -124,8 +133,12 @@ class N extends i.PureComponent {
         if (null !== this.state.error) {
             let e = (0, r.jsxs)("div", {
                     children: [
-                        (0, r.jsx)("p", { children: v.intl.string(v.t.tx8CkI) }),
-                        (0, r.jsx)("p", { children: v.intl.string(v.t.CvQlAH) }),
+                        (0, r.jsx)("p", {
+                            children: v.intl.string(v.t.tx8CkI),
+                        }),
+                        (0, r.jsx)("p", {
+                            children: v.intl.string(v.t.CvQlAH),
+                        }),
                     ],
                 }),
                 n = (0, r.jsxs)(d.e2v, {

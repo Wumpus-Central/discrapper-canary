@@ -1,5 +1,8 @@
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 var r = n(64700);
+
 function i() {
     let e = (0, r.useRef)(new Map()),
         t = (0, r.useCallback)((t, n, r, i) => {

@@ -1,4 +1,9 @@
-n.d(t, { A: () => ej }), n(896048), n(638769), n(321073);
+n.d(t, {
+    A: () => ej,
+}),
+    n(896048),
+    n(638769),
+    n(321073);
 var r,
     i = n(681154),
     l = n(311907),
@@ -25,10 +30,11 @@ var r,
     C = n(335934),
     N = n(116127),
     T = n(596720),
-    j = n(449000),
+    j = n(449e3),
     x = n(859524),
     P = n(652215),
     w = n(424994);
+
 function L(e, t, n) {
     return (
         t in e
@@ -42,6 +48,7 @@ function L(e, t, n) {
         e
     );
 }
+
 function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -58,6 +65,7 @@ function R(e) {
     }
     return e;
 }
+
 function D(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -108,6 +116,7 @@ let M = +y.A.Millis.DAY,
     ed = !1,
     ep = 0,
     ef = 0;
+
 function eh(e, t) {
     if (Date.now() - V > 6 * y.A.Millis.HOUR) {
         let n = new Set(e.map((e) => e.id));
@@ -115,6 +124,7 @@ function eh(e, t) {
     }
     return !1;
 }
+
 function eA(e) {
     if (!N.A.filterStaffContent()) return !0;
     if ((0, x.xj)(e)) {
@@ -124,6 +134,7 @@ function eA(e) {
     }
     return !0;
 }
+
 function eg(e, t, n, r) {
     let i = e.filter((e) => e.type !== n);
     return (
@@ -133,6 +144,7 @@ function eg(e, t, n, r) {
         i
     );
 }
+
 function em() {
     if (
         ((en = en.filter((e) => e.type !== T.Mm.RECOMMENDED_GUILDS)),
@@ -156,6 +168,7 @@ function em() {
         en.splice(e, 0, r);
     } else en.splice(5, 0, r);
 }
+
 function eb() {
     let e = new Set();
     if (
@@ -176,6 +189,7 @@ function eb() {
                 (E.A.isBlockedOrIgnored(e.data.user_id) ? (z[e.id] = !0) : (K[e.id] = (0, x.YM)(e)));
     });
 }
+
 function e_(e) {
     var t, n, r;
     let l, a, u, p, f;
@@ -297,6 +311,7 @@ function e_(e) {
     }
     (ei = 0), en.length + er.length === 0 && (ed = !0), (0, x.kx)([...en, ...er], 0, T.w5), (eo = !1);
 }
+
 function eE(e) {
     let t = [],
         n = [],
@@ -314,6 +329,7 @@ function eE(e) {
         [[...r, ...n], t.sort((e, t) => (0, x.tI)(e.id, t.id))]
     );
 }
+
 function eO(e, t) {
     let n = [],
         r = new Set(U.map((e) => e.id));
@@ -324,18 +340,23 @@ function eO(e, t) {
             n.push(i);
     return n;
 }
+
 function ey(e, t) {
     return e.filter((e) => !(0, x.xj)(e) || e.data.channel_id !== t);
 }
+
 function eI(e, t) {
     (0, x.Wu)(t) === x.n$.MUTED && ((U = ey(U, e)), (en = ey(en, e)), (er = ey(er, e)), (B = ey(B, e)), (H = ey(H, e)));
 }
+
 function ev(e, t) {
     return e.filter((e) => !(0, x.xj)(e) || e.data.guild_id !== t);
 }
+
 function eS(e, t) {
     (0, x.Wu)(t) === x.n$.MUTED && ((U = ev(U, e)), (en = ev(en, e)), (er = ev(er, e)), (B = ev(B, e)), (H = ev(H, e)));
 }
+
 function eC(e) {
     let { type: t, messageId: n, userId: r, emoji: i, reactionType: l } = e,
         a = K[n];
@@ -345,6 +366,7 @@ function eC(e) {
         ? (a.message = a.message.addReaction(i, s, e.colors, l))
         : (a.message = a.message.removeReaction(i, s, l));
 }
+
 function eN(e) {
     let { channelId: t } = e,
         n = [],
@@ -531,7 +553,9 @@ let ej = new eT(a.h, {
             };
             if (
                 ((Y[t.message.id] = e),
-                (K[t.message.id] = D(R({}, e), { message: (0, p.rh)(t.message) })),
+                (K[t.message.id] = D(R({}, e), {
+                    message: (0, p.rh)(t.message),
+                })),
                 null == G && null == F)
             ) {
                 let [t, n] = eE((U = [e, ...U]));
@@ -641,7 +665,9 @@ let ej = new eT(a.h, {
             let r = m.A.getMessage(t.channel_id, t.message.id);
             if (null != r) {
                 let e = (0, x.Rh)(t, n);
-                K[t.message.id] = D(R({}, e), { message: r });
+                K[t.message.id] = D(R({}, e), {
+                    message: r,
+                });
             } else K[t.message.id] = (0, x.Rh)(t, n);
         }),
             l.forEach((e) => {
@@ -655,7 +681,9 @@ let ej = new eT(a.h, {
                     z[e.content_id] = !0;
                     return;
                 }
-                K[t.id] = D(R({}, n), { activity: t });
+                K[t.id] = D(R({}, n), {
+                    activity: t,
+                });
             }),
             a.forEach((e) => {
                 let t = d[e.content_id];
@@ -668,7 +696,9 @@ let ej = new eT(a.h, {
                     z[e.content_id] = !0;
                     return;
                 }
-                K[t.content_id] = D(R({}, n), { candidate: (0, x.GM)(t) });
+                K[t.content_id] = D(R({}, n), {
+                    candidate: (0, x.GM)(t),
+                });
             }),
             s === ei && (ei = o),
             ec.delete((0, x.Vq)(s, o));

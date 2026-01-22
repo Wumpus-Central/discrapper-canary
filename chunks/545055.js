@@ -1,6 +1,7 @@
 function r(e) {
     return "".concat(location.protocol).concat(window.GLOBAL_ENV.API_ENDPOINT, "/guilds/").concat(e, "/widget.json");
 }
+
 function i(e) {
     let t = "".concat(location.protocol).concat(window.GLOBAL_ENV.WIDGET_ENDPOINT, "?id=").concat(e, "&theme=dark");
     return '<iframe src="'.concat(

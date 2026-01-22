@@ -1,4 +1,6 @@
-i.d(e, { k: () => T });
+i.d(e, {
+    k: () => T,
+});
 var n = i(311907),
     l = i(274372),
     s = i(399925),
@@ -21,17 +23,23 @@ let T = (0, r.Hn)(u.X.CLIPS_FRAME_RATE, {
         {
             id: "15",
             value: a.kn.FPS_15,
-            label: o.intl.formatToPlainString(o.t.Qb44XH, { fps: a.kn.FPS_15 }),
+            label: o.intl.formatToPlainString(o.t.Qb44XH, {
+                fps: a.kn.FPS_15,
+            }),
         },
         {
             id: "30",
             value: a.kn.FPS_30,
-            label: o.intl.formatToPlainString(o.t.Qb44XH, { fps: a.kn.FPS_30 }),
+            label: o.intl.formatToPlainString(o.t.Qb44XH, {
+                fps: a.kn.FPS_30,
+            }),
         },
         {
             id: "60",
             value: a.kn.FPS_60,
-            label: o.intl.formatToPlainString(o.t.Qb44XH, { fps: a.kn.FPS_60 }),
+            label: o.intl.formatToPlainString(o.t.Qb44XH, {
+                fps: a.kn.FPS_60,
+            }),
         },
     ],
 });

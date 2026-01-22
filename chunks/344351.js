@@ -1,4 +1,6 @@
-n.d(t, { T: () => r });
+n.d(t, {
+    T: () => r,
+});
 var r = (function (e) {
     return (
         (e.GUILD_CHANNEL = "gc"),

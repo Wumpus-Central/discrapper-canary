@@ -1,4 +1,6 @@
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});
 let r = (0, n(600975).C)({
     kind: "guild",
     id: "2024-04_audio_short_circuit_guild",

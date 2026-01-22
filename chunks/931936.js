@@ -1,4 +1,6 @@
-l.d(t, { A: () => A });
+l.d(t, {
+    A: () => A,
+});
 var r = l(627968),
     n = l(158954),
     i = l(630117),
@@ -11,6 +13,7 @@ var r = l(627968),
     f = l(333354),
     p = l(985018),
     m = l(181978);
+
 function v(e) {
     let { text: t } = e;
     return (0, r.jsx)("div", {
@@ -21,6 +24,7 @@ function v(e) {
         }),
     });
 }
+
 function A(e) {
     let { guildId: t } = e,
         l = (0, o.A)(t),
@@ -36,7 +40,10 @@ function A(e) {
                       color: "text-subtle",
                       children: p.intl.string(f.default["3FRirU"]),
                   }),
-                  l.shouldShow && (0, r.jsx)(v, { text: l.text }),
+                  l.shouldShow &&
+                      (0, r.jsx)(v, {
+                          text: l.text,
+                      }),
                   A.shouldShow &&
                       (0, r.jsx)(d.A, {
                           guildId: t,
@@ -49,7 +56,10 @@ function A(e) {
                           notificationConfig: g.notificationConfig,
                           markAsDismissed: g.markAsDismissed,
                       }),
-                  x.shouldShow && (0, r.jsx)(a.A, { markAsDismissed: x.markAsDismissed }),
+                  x.shouldShow &&
+                      (0, r.jsx)(a.A, {
+                          markAsDismissed: x.markAsDismissed,
+                      }),
               ],
           })
         : null;

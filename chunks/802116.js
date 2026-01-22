@@ -1,4 +1,7 @@
-n.d(t, { i: () => _ }), n(896048);
+n.d(t, {
+    i: () => _,
+}),
+    n(896048);
 var r = n(735438),
     i = n.n(r),
     a = n(815807),
@@ -37,6 +40,7 @@ let f = 3,
             reactionTooltipN: d.t.dkieH5,
         },
     };
+
 function _(e, t) {
     var n, r;
     let _ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : u.v.NORMAL,

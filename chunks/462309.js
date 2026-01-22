@@ -1,4 +1,6 @@
-n.d(t, { L: () => O });
+n.d(t, {
+    L: () => O,
+});
 var r = n(627968),
     i = n(64700),
     a = n(284009),
@@ -16,9 +18,11 @@ var r = n(627968),
     g = n(788868),
     E = n(818348),
     b = n(629865);
+
 function y(e, t) {
     return e in t;
 }
+
 function O(e) {
     let { renderHeader: t, handleClose: n } = e,
         {

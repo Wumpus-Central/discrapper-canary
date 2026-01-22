@@ -1,4 +1,9 @@
-r.d(t, { CustomThemesShareModalWrapper: () => m }), r(896048), r(747238), r(812715);
+r.d(t, {
+    CustomThemesShareModalWrapper: () => m,
+}),
+    r(896048),
+    r(747238),
+    r(812715);
 var n = r(627968),
     a = r(64700),
     l = r(353640),
@@ -88,7 +93,11 @@ let m = (e) => {
     }, [T, R, P, S]);
     let H = a.useCallback(async () => {
         if (!C()) return Promise.reject();
-        await (0, h.N)(j, A, w), f.default.track(O.HAw.CUSTOM_THEME_SHARED, { num_destinations: j.length }), await r();
+        await (0, h.N)(j, A, w),
+            f.default.track(O.HAw.CUSTOM_THEME_SHARED, {
+                num_destinations: j.length,
+            }),
+            await r();
     }, [A, j, w, C, r]);
     return ((0, a.useEffect)(() => {
         v(H);

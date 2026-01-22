@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -9,6 +11,7 @@ var i = n(311907),
     c = n(824744),
     u = n(985018),
     d = n(867737);
+
 function f() {
     let { analyticsLocations: e } = (0, o.Ay)(),
         { inputVolume: t, outputVolume: n } = (0, i.cf)([l.A], () => ({
@@ -23,7 +26,10 @@ function f() {
                 children: (0, r.jsx)(a.Apm, {
                     label: u.intl.string(u.t.OX2Bnr),
                     initialValue: (0, c.M)(t),
-                    asValueChanges: (t) => s.A.setInputVolume((0, c.w)(t), { analyticsLocations: e }),
+                    asValueChanges: (t) =>
+                        s.A.setInputVolume((0, c.w)(t), {
+                            analyticsLocations: e,
+                        }),
                 }),
             }),
             (0, r.jsx)("div", {
@@ -33,7 +39,10 @@ function f() {
                     initialValue: (0, c.M)(n),
                     maxValue: 200,
                     onValueRender: (e) => "".concat(e.toFixed(0), "%"),
-                    asValueChanges: (t) => s.A.setOutputVolume((0, c.w)(t), { analyticsLocations: e }),
+                    asValueChanges: (t) =>
+                        s.A.setOutputVolume((0, c.w)(t), {
+                            analyticsLocations: e,
+                        }),
                 }),
             }),
         ],

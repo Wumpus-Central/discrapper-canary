@@ -1,4 +1,7 @@
-n.d(t, { A: () => _ }), n(896048);
+n.d(t, {
+    A: () => _,
+}),
+    n(896048);
 var a = n(627968),
     l = n(64700),
     i = n(397927),
@@ -17,6 +20,7 @@ var a = n(627968),
     g = n(985018),
     v = n(36303);
 let j = n(843020);
+
 function y(e) {
     let { task: t, handleSubmit: n, disabled: i } = e,
         [r, s] = l.useState(t),
@@ -117,14 +121,18 @@ let _ = function (e) {
                       entryPoint: s.q1.SAFETY_FLOWS,
                       onClose: x.tE,
                       onComplete: async () => {
-                          await E({ type: m.Ij.Empty });
+                          await E({
+                              type: m.Ij.Empty,
+                          });
                       },
                       dismissable: !1,
                   })
                 : (0, a.jsx)("div", {
                       className: v.nA,
                       children: h
-                          ? (0, a.jsx)(i.y$y, { type: i.y$y.Type.SPINNING_CIRCLE })
+                          ? (0, a.jsx)(i.y$y, {
+                                type: i.y$y.Type.SPINNING_CIRCLE,
+                            })
                           : (0, a.jsx)("div", {
                                 className: v.kL,
                                 children: (0, a.jsxs)(i.BJc, {

@@ -5,6 +5,7 @@ n.d(t, {
     n(65821);
 var r = n(627968),
     i = n(64700);
+
 function a(e, t) {
     if (null == e) return {};
     var n,
@@ -21,6 +22,7 @@ function a(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function s(e, t) {
     if (null == e) return {};
     var n,
@@ -32,11 +34,13 @@ function s(e, t) {
     return i;
 }
 let o = i.createContext(null);
+
 function l() {
     let e = i.useContext(o);
     if (null == e) throw Error("Could not find context for useMessageAccessoriesComponentContext.");
     return e;
 }
+
 function c(e) {
     let { children: t } = e,
         n = a(e, ["children"]);

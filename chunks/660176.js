@@ -1,4 +1,6 @@
-n.d(t, { A: () => z });
+n.d(t, {
+    A: () => z,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -31,6 +33,7 @@ var r = n(627968),
     D = n(705751),
     x = n(985018),
     L = n(234054);
+
 function j(e, t, n) {
     return (
         t in e
@@ -44,6 +47,7 @@ function j(e, t, n) {
         e
     );
 }
+
 function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -60,6 +64,7 @@ function M(e) {
     }
     return e;
 }
+
 function k(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -72,6 +77,7 @@ function k(e, t) {
     }
     return n;
 }
+
 function U(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -83,9 +89,13 @@ function U(e, t) {
         e
     );
 }
+
 function G() {
-    return (0, r.jsx)("div", { className: L.Om });
+    return (0, r.jsx)("div", {
+        className: L.Om,
+    });
 }
+
 function V(e) {
     let { message: t, compact: n } = e,
         { notificationType: i } = (0, g.Bk)(t);
@@ -107,11 +117,16 @@ function V(e) {
                 compact: n,
             });
         case c.W.INTERACTION_BLOCKED:
-            return (0, r.jsx)(B, { compact: n });
+            return (0, r.jsx)(B, {
+                compact: n,
+            });
         default:
-            return (0, r.jsx)(F, { compact: n });
+            return (0, r.jsx)(F, {
+                compact: n,
+            });
     }
 }
+
 function F(e) {
     let { compact: t } = e;
     return (0, r.jsx)(K, {
@@ -136,6 +151,7 @@ function F(e) {
         }),
     });
 }
+
 function B(e) {
     let { compact: t } = e;
     return (0, r.jsx)(K, {
@@ -160,6 +176,7 @@ function B(e) {
         }),
     });
 }
+
 function H(e) {
     var t;
     let { message: n, compact: a } = e,
@@ -269,6 +286,7 @@ function H(e) {
         }),
     });
 }
+
 function Y(e) {
     var t;
     let { message: n, compact: a } = e,
@@ -308,13 +326,17 @@ function Y(e) {
                     (0, r.jsx)(p.Text, {
                         variant: "text-xs/medium",
                         color: "text-default",
-                        children: x.intl.format(x.t["4ylIiu"], { joinCount: s }),
+                        children: x.intl.format(x.t["4ylIiu"], {
+                            joinCount: s,
+                        }),
                     }),
                 null != c &&
                     (0, r.jsx)(p.Text, {
                         variant: "text-xs/medium",
                         color: "text-default",
-                        children: x.intl.format(x.t["5C8Mh3"], { dmsSent: c }),
+                        children: x.intl.format(x.t["5C8Mh3"], {
+                            dmsSent: c,
+                        }),
                     }),
                 null != o &&
                     (0, r.jsxs)(i.Fragment, {
@@ -376,11 +398,13 @@ function Y(e) {
             : null,
     });
 }
+
 function W(e) {
     var t;
     let { message: n, compact: a } = e,
         s = null == (t = S.A.getBasicChannel(n.channel_id)) ? void 0 : t.guild_id,
         { raidDatetime: o, decisionId: c, suspiciousMentionActivityUntil: u } = (0, g.Bk)(n);
+
     function d() {
         null != s &&
             null != c &&
@@ -388,6 +412,7 @@ function W(e) {
                 (0, O.w)(u), (0, b.wu)(s);
             });
     }
+
     function _() {
         null != s && y.A.open(s, P.BEX.GUILD_AUTOMOD, void 0, P.nd0.AUTOMOD_MENTION_SPAM);
     }
@@ -449,10 +474,13 @@ function W(e) {
         }),
     });
 }
+
 function K(e) {
     let { compact: t, header: n, subheader: i, content: a, footerButtons: o } = e;
     return (0, r.jsxs)("div", {
-        className: s()(L.gD, { [L.oE]: t }),
+        className: s()(L.gD, {
+            [L.oE]: t,
+        }),
         children: [
             (0, r.jsxs)("div", {
                 className: L.Ux,
@@ -476,12 +504,15 @@ function K(e) {
             }),
             null != o &&
                 (0, r.jsx)("div", {
-                    className: s()(L.Y4, L.UX, { [L.oE]: t }),
+                    className: s()(L.Y4, L.UX, {
+                        [L.oE]: t,
+                    }),
                     children: o,
                 }),
         ],
     });
 }
+
 function z(e) {
     let { id: t, compact: n, message: i, channel: a } = e,
         {
@@ -494,17 +525,27 @@ function z(e) {
         onMouseEnter: l,
         onMouseLeave: u,
         children: (0, r.jsx)(w.A, {
-            className: s()(L.rs, { [L.oE]: n }),
-            iconNode: n ? null : (0, r.jsx)(R.l, { src: o }),
+            className: s()(L.rs, {
+                [L.oE]: n,
+            }),
+            iconNode: n
+                ? null
+                : (0, r.jsx)(R.l, {
+                      src: o,
+                  }),
             iconContainerClassName: L.zc,
             compact: n,
             children: (0, r.jsxs)("div", {
-                className: s()(L.Qs, { [L.oE]: n }),
+                className: s()(L.Qs, {
+                    [L.oE]: n,
+                }),
                 children: [
                     (0, r.jsx)(C.ix, {
                         message: i,
                         messageClassname: L.he,
-                        className: s()(L.QV, L.he, { [L.oE]: n }),
+                        className: s()(L.QV, L.he, {
+                            [L.oE]: n,
+                        }),
                         username: (0, r.jsxs)("div", {
                             className: L.he,
                             children: [
@@ -532,7 +573,9 @@ function z(e) {
                         compact: n,
                         showTimestamp: !0,
                     }),
-                    (0, r.jsx)("div", { className: L.BZ }),
+                    (0, r.jsx)("div", {
+                        className: L.BZ,
+                    }),
                     (0, r.jsx)(V, {
                         message: i,
                         compact: n,

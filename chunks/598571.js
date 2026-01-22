@@ -1,6 +1,9 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(937357),
     a = n(862699);
+
 function o() {
     return (o = r
         ? a(r).call(r)

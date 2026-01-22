@@ -35,6 +35,7 @@ var r = n(627968),
     D = n(266713),
     R = n(985018),
     C = n(368379);
+
 function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -60,6 +61,7 @@ function k(e) {
     }
     return e;
 }
+
 function G(e, t) {
     if (null == e) return {};
     var n,
@@ -88,20 +90,40 @@ function G(e, t) {
             (r = n[l]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
     return i;
 }
+
 function L(e) {
     let { widget: t } = e,
         n = G(e, ["widget"]);
     return t instanceof O.R
-        ? (0, r.jsx)(A.A, k({ widget: t }, n))
+        ? (0, r.jsx)(
+              A.A,
+              k(
+                  {
+                      widget: t,
+                  },
+                  n,
+              ),
+          )
         : t instanceof j.Yy
-          ? (0, r.jsx)(S.A, k({ widget: t }, n))
+          ? (0, r.jsx)(
+                S.A,
+                k(
+                    {
+                        widget: t,
+                    },
+                    n,
+                ),
+            )
           : null;
 }
+
 function U() {
     return (0, r.jsxs)("div", {
         className: C.mJ,
         children: [
-            (0, r.jsx)(o.mir, { size: "xs" }),
+            (0, r.jsx)(o.mir, {
+                size: "xs",
+            }),
             (0, r.jsx)(o.Text, {
                 "aria-label": R.intl.string(R.t["7blcz6"]),
                 variant: "text-xs/normal",
@@ -111,8 +133,15 @@ function U() {
         ],
     });
 }
+
 function M() {
-    let { isLoading: e, suggestions: t, currentUser: n } = (0, d.A)({ location: "ApplicationWidgetUpsell" });
+    let {
+        isLoading: e,
+        suggestions: t,
+        currentUser: n,
+    } = (0, d.A)({
+        location: "ApplicationWidgetUpsell",
+    });
     return e
         ? null
         : (0, r.jsx)(p.Ay, {
@@ -131,6 +160,7 @@ function M() {
               },
           });
 }
+
 function F(e) {
     let { user: t, guildId: n, channelId: i } = e,
         a = (0, v.A)(t.id),
@@ -145,7 +175,9 @@ function F(e) {
                 "GB" === e && n
             );
         })(),
-        p = (0, u.JY)({ location: "UserProfileModalV2Widgets" }),
+        p = (0, u.JY)({
+            location: "UserProfileModalV2Widgets",
+        }),
         h = 0 === a.length && o,
         A = l.useMemo(() => a.filter(j.fu), [a]),
         w = l.useMemo(() => a.filter((e) => e instanceof O.R), [a]);
@@ -165,7 +197,9 @@ function F(e) {
                 o &&
                     (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, r.jsx)(I.A, { className: C.cG }),
+                            (0, r.jsx)(I.A, {
+                                className: C.cG,
+                            }),
                             d && (0, r.jsx)(U, {}),
                             p && (0, r.jsx)(M, {}),
                         ],
@@ -188,19 +222,41 @@ function F(e) {
     if (h)
         if (p) return (0, r.jsx)(T.A, {});
         else return (0, r.jsx)(D.A, {});
-    return o ? (0, r.jsx)(P.D, { children: E() }) : E();
+    return o
+        ? (0, r.jsx)(P.D, {
+              children: E(),
+          })
+        : E();
 }
+
 function X(e) {
     let { user: t } = e,
         n = G(e, ["user"]),
         i = l.useRef(null);
-    (0, h.i)({ containerRef: i });
+    (0, h.i)({
+        containerRef: i,
+    });
     let s = (0, _.k)(t.id);
     return (0, r.jsxs)(N.K, {
         "data-scroller": !0,
         scrollerRef: i,
-        className: a()(C.XG, { [C.az]: s }),
+        className: a()(C.XG, {
+            [C.az]: s,
+        }),
         fade: !0,
-        children: [(0, r.jsx)(E.A, { scrollerRef: i }), (0, r.jsx)(F, k({ user: t }, n))],
+        children: [
+            (0, r.jsx)(E.A, {
+                scrollerRef: i,
+            }),
+            (0, r.jsx)(
+                F,
+                k(
+                    {
+                        user: t,
+                    },
+                    n,
+                ),
+            ),
+        ],
     });
 }

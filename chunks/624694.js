@@ -1,10 +1,15 @@
-n.d(t, { A: () => I }), n(896048), n(321073);
+n.d(t, {
+    A: () => I,
+}),
+    n(896048),
+    n(321073);
 var r,
     i = n(311907),
     a = n(73153),
     s = n(652896),
     o = n(961350),
     l = n(162605);
+
 function c(e, t, n) {
     return (
         t in e
@@ -23,9 +28,11 @@ let u = 30,
     f = {},
     p = {},
     _ = {};
+
 function h(e) {
     return "packetsSent" in e;
 }
+
 function m(e, t, n, r, i) {
     var a, s, o, l, c, u, d, f, p, _, m, g, E, b, y, O, A, v;
     let S = r.find((e) => "video" === e.type);
@@ -75,6 +82,7 @@ function m(e, t, n, r, i) {
         n
     );
 }
+
 function g(e, t, n, r) {
     var i, a;
     null == e[t] && (e[t] = {});
@@ -95,6 +103,7 @@ function g(e, t, n, r) {
             null == r ? void 0 : r.stats.rtp.inbound[o],
         );
 }
+
 function E(e) {
     let { connectionStats: t } = e,
         n = {};
@@ -111,20 +120,24 @@ function E(e) {
             g(p, i, e, t));
     }
 }
+
 function b(e, t) {
     var n, r;
     (null == (n = p[e]) ? void 0 : n[t]) != null && delete p[e][t],
         (null == (r = _[e]) ? void 0 : r[t]) != null && delete _[e][t];
 }
+
 function y(e) {
     let { mediaEngineConnectionId: t } = e;
     null != t && (delete f[t], delete p[t], delete _[t]);
 }
+
 function O(e) {
     let { userId: t, mediaEngineConnectionId: n } = e;
     if (null == n) return !1;
     b(n, t);
 }
+
 function A(e) {
     var t;
     let { streamKey: n, paused: r } = e;
@@ -133,6 +146,7 @@ function A(e) {
     if (null == i) return !1;
     b(i, (0, s.Iy)(n).ownerId);
 }
+
 function v(e, t) {
     if (null == e) return null;
     let n = f[e];

@@ -1,4 +1,6 @@
-t.d(n, { default: () => d });
+t.d(n, {
+    default: () => d,
+});
 var e = t(627968);
 t(64700);
 var o = t(397927),
@@ -7,6 +9,7 @@ var o = t(397927),
     c = t(837921),
     i = t(826308),
     s = t(985018);
+
 function d(l) {
     let { text: n, onSelect: t } = l,
         d = (0, i.A)(n);
@@ -17,7 +20,9 @@ function d(l) {
               "aria-label": s.intl.string(s.t.s285pq),
               onSelect: t,
               children: [
-                  (0, e.jsx)(o.rXV, { children: d }),
+                  (0, e.jsx)(o.rXV, {
+                      children: d,
+                  }),
                   (0, e.jsx)(o.rXV, {
                       children: (0, e.jsx)(o.Drp, {
                           id: "copy",

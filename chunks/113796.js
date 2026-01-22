@@ -1,10 +1,13 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
     a = n.n(i),
     s = n(253018),
     o = n(562650);
+
 function l(e, t, n) {
     return (
         t in e
@@ -18,6 +21,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,6 +38,7 @@ function c(e) {
     }
     return e;
 }
+
 function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -46,6 +51,7 @@ function u(e, t) {
     }
     return n;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -57,6 +63,7 @@ function d(e, t) {
         e
     );
 }
+
 function f(e, t) {
     let { attributes: n, children: i, element: a } = t;
     return "timestampMentionInput" === a.type
@@ -87,12 +94,12 @@ let p = (e) => {
                 (0, r.jsxs)("span", {
                     className: o.gA,
                     contentEditable: !1,
-                    children: ["@time", "\u200B"],
+                    children: ["@time", "​"],
                 }),
                 p,
                 (0, r.jsx)("span", {
                     contentEditable: !1,
-                    children: "\u200B",
+                    children: "​",
                 }),
             ],
         }),

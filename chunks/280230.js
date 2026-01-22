@@ -49,13 +49,7 @@
                     var i = [];
                     for (n = r = r || n; t; ) {
                         for (
-                            var l = null,
-                                c = null,
-                                u = null,
-                                f = -100000,
-                                p = 100000,
-                                _ = [s.get(t.charCodeAt(0)), o],
-                                h = 0;
+                            var l = null, c = null, u = null, f = -1e5, p = 1e5, _ = [s.get(t.charCodeAt(0)), o], h = 0;
                             h < _.length;
                             h++
                         ) {
@@ -186,7 +180,9 @@
             return (n.inline = r), i;
         },
         O = function (e, t, n) {
-            return { content: b(t, e[1], n) };
+            return {
+                content: b(t, e[1], n),
+            };
         },
         A = function () {
             return {};
@@ -327,7 +323,9 @@
                     };
                 },
                 react: function (e, t, n) {
-                    return u("h" + e.level, n.key, { children: t(e.content, n) });
+                    return u("h" + e.level, n.key, {
+                        children: t(e.content, n),
+                    });
                 },
                 html: function (e, t, n) {
                     return d("h" + e.level, t(e.content, n));
@@ -384,7 +382,9 @@
                 },
                 html: function (e, t, n) {
                     var r = e.lang ? "markdown-code-" + e.lang : void 0,
-                        i = d("code", m(e.content), { class: r });
+                        i = d("code", m(e.content), {
+                            class: r,
+                        });
                     return d("pre", i);
                 },
             },
@@ -405,10 +405,14 @@
                 order: G++,
                 match: o(/^( *>[^\n]+(\n[^\n]+)*\n*)+\n{2,}/),
                 parse: function (e, t, n) {
-                    return { content: t(e[0].replace(/^ *> ?/gm, ""), n) };
+                    return {
+                        content: t(e[0].replace(/^ *> ?/gm, ""), n),
+                    };
                 },
                 react: function (e, t, n) {
-                    return u("blockquote", n.key, { children: t(e.content, n) });
+                    return u("blockquote", n.key, {
+                        children: t(e.content, n),
+                    });
                 },
                 html: function (e, t, n) {
                     return d("blockquote", t(e.content, n));
@@ -454,7 +458,9 @@
                     return u(e.ordered ? "ol" : "ul", n.key, {
                         start: e.start,
                         children: e.items.map(function (e, r) {
-                            return u("li", "" + r, { children: t(e, n) });
+                            return u("li", "" + r, {
+                                children: t(e, n),
+                            });
                         }),
                     });
                 },
@@ -464,7 +470,9 @@
                             return d("li", t(e, n));
                         })
                         .join("");
-                    return d(e.ordered ? "ol" : "ul", r, { start: e.start });
+                    return d(e.ordered ? "ol" : "ul", r, {
+                        start: e.start,
+                    });
                 },
             },
             def: {
@@ -505,7 +513,11 @@
                 parse: x.parseTable,
                 react: function (e, t, n) {
                     var r = function (t) {
-                            return null == e.align[t] ? {} : { textAlign: e.align[t] };
+                            return null == e.align[t]
+                                ? {}
+                                : {
+                                      textAlign: e.align[t],
+                                  };
                         },
                         i = e.header.map(function (e, i) {
                             return u("th", "" + i, {
@@ -526,8 +538,14 @@
                         });
                     return u("table", n.key, {
                         children: [
-                            u("thead", "thead", { children: u("tr", null, { children: i }) }),
-                            u("tbody", "tbody", { children: a }),
+                            u("thead", "thead", {
+                                children: u("tr", null, {
+                                    children: i,
+                                }),
+                            }),
+                            u("tbody", "tbody", {
+                                children: a,
+                            }),
                         ],
                     });
                 },
@@ -547,7 +565,9 @@
                             .map(function (e) {
                                 var i = e
                                     .map(function (e, i) {
-                                        return d("td", t(e, n), { style: r(i) });
+                                        return d("td", t(e, n), {
+                                            style: r(i),
+                                        });
                                     })
                                     .join("");
                                 return d("tr", i);
@@ -581,7 +601,9 @@
                     });
                 },
                 html: function (e, t, n) {
-                    var r = { class: "paragraph" };
+                    var r = {
+                        class: "paragraph",
+                    };
                     return d("div", t(e.content, n), r);
                 },
             },
@@ -604,7 +626,9 @@
                     return t.inTable ? /^ *\| */.exec(e) : null;
                 },
                 parse: function () {
-                    return { type: "tableSeparator" };
+                    return {
+                        type: "tableSeparator",
+                    };
                 },
                 react: function () {
                     return " | ";
@@ -769,10 +793,14 @@
                     return e[0].length + 0.2;
                 },
                 parse: function (e, t, n) {
-                    return { content: t(e[2] || e[1], n) };
+                    return {
+                        content: t(e[2] || e[1], n),
+                    };
                 },
                 react: function (e, t, n) {
-                    return u("em", n.key, { children: t(e.content, n) });
+                    return u("em", n.key, {
+                        children: t(e.content, n),
+                    });
                 },
                 html: function (e, t, n) {
                     return d("em", t(e.content, n));
@@ -787,7 +815,9 @@
                 },
                 parse: O,
                 react: function (e, t, n) {
-                    return u("strong", n.key, { children: t(e.content, n) });
+                    return u("strong", n.key, {
+                        children: t(e.content, n),
+                    });
                 },
                 html: function (e, t, n) {
                     return d("strong", t(e.content, n));
@@ -802,7 +832,9 @@
                 },
                 parse: O,
                 react: function (e, t, n) {
-                    return u("u", n.key, { children: t(e.content, n) });
+                    return u("u", n.key, {
+                        children: t(e.content, n),
+                    });
                 },
                 html: function (e, t, n) {
                     return d("u", t(e.content, n));
@@ -814,7 +846,9 @@
                 match: s(/^~~(?=\S)((?:\\[\s\S]|~(?!~)|[^\s~]|\s(?!~~))+?)~~/),
                 parse: O,
                 react: function (e, t, n) {
-                    return u("del", n.key, { children: t(e.content, n) });
+                    return u("del", n.key, {
+                        children: t(e.content, n),
+                    });
                 },
                 html: function (e, t, n) {
                     return d("del", t(e.content, n));
@@ -825,10 +859,14 @@
                 requiredFirstCharacters: ["`"],
                 match: s(/^(`+)([\s\S]*?[^`])\1(?!`)/),
                 parse: function (e, t, n) {
-                    return { content: e[2].replace(N, "$1") };
+                    return {
+                        content: e[2].replace(N, "$1"),
+                    };
                 },
                 react: function (e, t, n) {
-                    return u("code", n.key, { children: e.content });
+                    return u("code", n.key, {
+                        children: e.content,
+                    });
                 },
                 html: function (e, t, n) {
                     return d("code", m(e.content));
@@ -850,7 +888,9 @@
                 order: G++,
                 match: l(/^[\s\S]+?(?=[^0-9A-Za-z\s\u00c0-\uffff]|\n\n| {2,}\n|\w+:\S|$)/),
                 parse: function (e, t, n) {
-                    return { content: e[0] };
+                    return {
+                        content: e[0],
+                    };
                 },
                 react: function (e, t, n) {
                     return e.content;

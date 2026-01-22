@@ -1,4 +1,6 @@
-r.d(t, { A: () => f });
+r.d(t, {
+    A: () => f,
+});
 var n = r(627968);
 r(64700);
 var o = r(417597),
@@ -8,6 +10,7 @@ var o = r(417597),
     a = r(954571),
     u = r(652215),
     s = r(985018);
+
 function f(e) {
     var t, r;
     let {
@@ -102,7 +105,9 @@ function f(e) {
                     }),
                         l.A.show({
                             title: s.intl.string(s.t.sUvCKU),
-                            body: s.intl.format(s.t["7KJnk0"], { skuName: O }),
+                            body: s.intl.format(s.t["7KJnk0"], {
+                                skuName: O,
+                            }),
                         });
                 },
                 transitionState: g,
@@ -110,7 +115,10 @@ function f(e) {
             },
             w,
         )),
-        (r = r = { children: p }),
+        (r = r =
+            {
+                children: p,
+            }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
             : (function (e, t) {

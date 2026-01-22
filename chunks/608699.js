@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(627968),
     i = n(607399),
     a = n(732955),
@@ -25,13 +27,23 @@ let p = (e) => {
                         variant: "secondary",
                         onClick: t,
                     }),
-                    (0, r.jsx)(s.hKd, { size: 10 }),
+                    (0, r.jsx)(s.hKd, {
+                        size: 10,
+                    }),
                     (0, r.jsx)(s.nVY, {
                         label: d.intl.string(d.t["KzCF/6"]),
                         description: d.intl.string(d.t["Y+ucR7"]),
                         children: (0, r.jsx)("div", {
                             className: f.A,
-                            children: n.map((e) => (0, r.jsx)(u.A, { subscription: e }, e.id)),
+                            children: n.map((e) =>
+                                (0, r.jsx)(
+                                    u.A,
+                                    {
+                                        subscription: e,
+                                    },
+                                    e.id,
+                                ),
+                            ),
                         }),
                     }),
                 ],

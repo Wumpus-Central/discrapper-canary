@@ -1,4 +1,6 @@
-n.d(t, { A: () => y });
+n.d(t, {
+    A: () => y,
+});
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -16,11 +18,19 @@ var r = n(627968),
     g = n(355097),
     E = n(531525),
     b = n(985018);
+
 function y() {
     let { analyticsLocations: e } = (0, o.Ay)(),
         t = (0, f.sw)(),
         n = (0, a.bG)([d.A], () => d.A.getSubsection()),
-        { enableAdvancedSignals: y } = f.L_.useExperiment({ location: "clips_settings" }, { autoTrackExposure: !1 });
+        { enableAdvancedSignals: y } = f.L_.useExperiment(
+            {
+                location: "clips_settings",
+            },
+            {
+                autoTrackExposure: !1,
+            },
+        );
     i.useEffect(() => {
         (0, l.Dr)(s.M.CLIPS_SETTINGS_BETA_TAG);
     });

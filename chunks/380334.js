@@ -1,4 +1,6 @@
-n.d(t, { T: () => b });
+n.d(t, {
+    T: () => b,
+});
 var l = n(627968);
 n(64700);
 var r = n(503698),
@@ -12,6 +14,7 @@ var r = n(503698),
     m = n(618148),
     h = n(910200);
 let g = 6 * c.A.Millis.SECOND;
+
 function f(e) {
     let { emoji: t, guildId: n } = e,
         r = (0, a.bG)([o.A], () => {
@@ -58,6 +61,7 @@ function f(e) {
         ],
     });
 }
+
 function b(e) {
     let { emoji: t, guildId: n } = e;
     (0, s.showToast)(

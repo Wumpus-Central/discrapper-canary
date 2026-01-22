@@ -1,4 +1,6 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var l = n(627968),
     r = n(64700),
     a = n(397927),
@@ -37,7 +39,10 @@ let c = (e) => {
                     }
                     return e;
                 })({}, i.A.defaultRules)),
-                (t = t = { link: s.B }),
+                (t = t =
+                    {
+                        link: s.B,
+                    }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
                     : (function (e, t) {

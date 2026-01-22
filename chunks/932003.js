@@ -1,4 +1,6 @@
-n.d(t, { b: () => f });
+n.d(t, {
+    b: () => f,
+});
 var r = n(627968),
     i = n(311907),
     a = n(397927),
@@ -8,13 +10,16 @@ var r = n(627968),
     c = n(810498),
     u = n(298305),
     d = n(708611);
+
 function f() {
     var e;
     let t = (0, i.bG)([s.A], () => s.A.useReducedMotion),
         { claimableRewards: n } = (0, o.Pv)(),
         f = (0, l.A)(),
         p = null == f ? void 0 : f.planSelection,
-        _ = (0, c.K5)(null == p ? void 0 : p.gradientConfig, { reverse: !0 }),
+        _ = (0, c.K5)(null == p ? void 0 : p.gradientConfig, {
+            reverse: !0,
+        }),
         h = null == p || null == (e = p.getBannerImageUrl) ? void 0 : e.call(p);
     return null == p || null == n || 0 === n.length
         ? null
@@ -25,7 +30,9 @@ function f() {
                   null != h &&
                       (0, r.jsx)("div", {
                           className: d._e,
-                          style: { backgroundImage: "url(".concat(h, ")") },
+                          style: {
+                              backgroundImage: "url(".concat(h, ")"),
+                          },
                       }),
                   (0, r.jsxs)("div", {
                       className: d.V_,

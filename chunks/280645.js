@@ -1,4 +1,8 @@
-t.d(l, { A: () => A }), t(638769), t(896048);
+t.d(l, {
+    A: () => A,
+}),
+    t(638769),
+    t(896048);
 var n = t(627968);
 t(64700);
 var i = t(311907),
@@ -13,6 +17,7 @@ var i = t(311907),
     p = t(518477),
     m = t(652215),
     x = t(985018);
+
 function A(e) {
     var l, t;
     let { userId: A, guildId: j } = e,
@@ -96,10 +101,14 @@ function A(e) {
                           guild: v,
                           roles: y,
                           onAddRole: () => {
-                              g({ action: "ADD_ROLE" });
+                              g({
+                                  action: "ADD_ROLE",
+                              });
                           },
                           onRemoveRole: () => {
-                              g({ action: "REMOVE_ROLE" });
+                              g({
+                                  action: "REMOVE_ROLE",
+                              });
                           },
                           allowEditing: !0,
                       }),

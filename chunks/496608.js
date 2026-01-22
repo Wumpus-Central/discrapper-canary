@@ -16,7 +16,10 @@ r(
                 r = i(
                     t,
                     function (e, r) {
-                        if (n(e, r, t)) return { value: e };
+                        if (n(e, r, t))
+                            return {
+                                value: e,
+                            };
                     },
                     !0,
                 );

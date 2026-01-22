@@ -1,9 +1,12 @@
-n.d(t, { N: () => o });
+n.d(t, {
+    N: () => o,
+});
 var r = n(627968);
 n(64700);
 var i = n(301677),
     a = n(565645),
     s = n(371794);
+
 function o(e, t) {
     if (null != t)
         switch (t.type) {
@@ -15,6 +18,8 @@ function o(e, t) {
                     className: "emoji",
                 });
             case i.A.EMOJI:
-                return (0, r.jsx)(a.A, { emojiName: t.emoji });
+                return (0, r.jsx)(a.A, {
+                    emojiName: t.emoji,
+                });
         }
 }

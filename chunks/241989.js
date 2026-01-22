@@ -15,6 +15,7 @@ var i = n(503698),
     o = n(756366),
     l = n(985018),
     c = n(559485);
+
 function u(e) {
     var t;
     let {
@@ -104,7 +105,13 @@ function u(e) {
                                         variant: "text-md/medium",
                                         color: "text-default",
                                         className: c.nw,
-                                        children: [null != _ && (0, r.jsx)(_, { size: "xs" }), p],
+                                        children: [
+                                            null != _ &&
+                                                (0, r.jsx)(_, {
+                                                    size: "xs",
+                                                }),
+                                            p,
+                                        ],
                                     }),
                                     null != h &&
                                         (0, r.jsx)(s.Text, {
@@ -122,6 +129,7 @@ function u(e) {
         ],
     });
 }
+
 function d(e) {
     let { color: t, Icon: n } = e;
     return (0, r.jsx)(s.hLv, {
@@ -133,30 +141,35 @@ function d(e) {
         }),
     });
 }
+
 function f() {
     return (0, r.jsx)(d, {
         color: "nitro-pink",
         Icon: s.tvc,
     });
 }
+
 function p() {
     return (0, r.jsx)(d, {
         color: "nitro-green",
         Icon: s.tvc,
     });
 }
+
 function _() {
     return (0, r.jsx)(d, {
         color: "pink",
         Icon: s._Jp,
     });
 }
+
 function h() {
     return (0, r.jsx)(s.k9F, {
         size: "lg",
         color: "var(--icon-muted)",
     });
 }
+
 function m() {
     return (0, r.jsx)("div", {
         className: c.CX,

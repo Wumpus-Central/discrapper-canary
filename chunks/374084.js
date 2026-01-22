@@ -40,6 +40,7 @@ let o = 7,
 var g = (function (e) {
     return (e[(e.VIEW = 0)] = "VIEW"), (e[(e.CHAT = 1)] = "CHAT"), e;
 })({});
+
 function E(e) {
     var t;
     return {
@@ -58,6 +59,7 @@ function E(e) {
         icon: null != (t = e.icon) ? t : null,
     };
 }
+
 function b(e) {
     var t, n;
     return {
@@ -75,6 +77,7 @@ function b(e) {
         icon: null != (n = e.icon) ? n : null,
     };
 }
+
 function y(e) {
     if (null == e) return null;
     let { welcome_message: t, new_member_actions: n, resource_channels: a, enabled: s } = e,
@@ -89,6 +92,7 @@ function y(e) {
         enabled: s,
     };
 }
+
 function O(e, t) {
     var n, a;
     if (null == t) return null;
@@ -142,12 +146,14 @@ let A = (e) => {
     for (let n in e.channel_actions) t[n] = e.channel_actions[n].completed;
     return t;
 };
+
 function v(e) {
     return (
         null == e ||
         ((null == e.message || !(e.message.length > 0)) && (null == e.authorIds || !(e.authorIds.length > 0)))
     );
 }
+
 function S(e) {
     return (
         null == e ||
@@ -156,6 +162,7 @@ function S(e) {
             (null == e.resourceChannels || !(e.resourceChannels.length > 0)))
     );
 }
+
 function I(e) {
     var t, n;
     if (null == e) return !1;
@@ -176,9 +183,11 @@ function I(e) {
         }
     return !0;
 }
+
 function T(e) {
     return e.type === s.rbe.GUILD_TEXT && !a.MJ(s.xBc.SEND_MESSAGES, e) && a.MJ(s.xBc.VIEW_CHANNEL, e);
 }
+
 function C(e) {
     switch (e.type) {
         case s.rbe.GUILD_TEXT:

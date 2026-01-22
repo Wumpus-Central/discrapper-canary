@@ -31,6 +31,7 @@ var r = n(627968),
     S = n(985018),
     C = n(702326),
     N = n(688963);
+
 function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -56,6 +57,7 @@ function T(e) {
     }
     return e;
 }
+
 function j(e, t) {
     (0, u.mMO)(async () => {
         let { default: i } = await n.e("80971").then(n.bind(n, 488358));
@@ -106,7 +108,9 @@ let x = function (e) {
         transitionState: l,
         title: S.intl.string(S.t.ghtnss),
         onClose: x,
-        subtitle: S.intl.format(S.t["Y+TsEV"], { helpdeskArticleUrl: y.A.getArticleURL(v.MVz.CONNECTION_DETAILS) }),
+        subtitle: S.intl.format(S.t["Y+TsEV"], {
+            helpdeskArticleUrl: y.A.getArticleURL(v.MVz.CONNECTION_DETAILS),
+        }),
         actions: [],
         children: (0, r.jsx)(u.BJc, {
             children: k.map((e) => {
@@ -226,7 +230,14 @@ let x = function (e) {
                                 showUserPopout: !1,
                                 guildId: t,
                                 users: s.map(() => null),
-                                renderUser: (e, t, n) => (0, r.jsx)(i.Fragment, { children: s[n] }, n),
+                                renderUser: (e, t, n) =>
+                                    (0, r.jsx)(
+                                        i.Fragment,
+                                        {
+                                            children: s[n],
+                                        },
+                                        n,
+                                    ),
                                 max: 3,
                             }),
                         ],

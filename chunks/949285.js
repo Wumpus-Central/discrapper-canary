@@ -1,4 +1,7 @@
-l.r(i), l.d(i, { default: () => n });
+l.r(i),
+    l.d(i, {
+        default: () => n,
+    });
 var t = l(372684),
     r = l(429195);
 class a {

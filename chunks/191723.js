@@ -1,4 +1,6 @@
-a.d(t, { A: () => n });
+a.d(t, {
+    A: () => n,
+});
 var i = a(303527);
 let n = {
     ordinalNumber: (0, a(722023).A)({

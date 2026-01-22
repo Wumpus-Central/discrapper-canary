@@ -1,6 +1,11 @@
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 var r = n(643479);
-let i = { read: a };
+let i = {
+    read: a,
+};
+
 function a(e) {
     return {
         "GIF Version": s(e),
@@ -11,6 +16,7 @@ function a(e) {
         "Color Resolution Depth": u(e),
     };
 }
+
 function s(e) {
     let t = 3,
         n = 3;
@@ -21,6 +27,7 @@ function s(e) {
         description: i,
     };
 }
+
 function o(e) {
     let t = 6;
     if (8 > e.byteLength) return;
@@ -30,6 +37,7 @@ function o(e) {
         description: `${n}px`,
     };
 }
+
 function l(e) {
     let t = 8;
     if (10 > e.byteLength) return;
@@ -39,6 +47,7 @@ function l(e) {
         description: `${n}px`,
     };
 }
+
 function c(e) {
     let t = 10;
     if (11 > e.byteLength) return;
@@ -48,6 +57,7 @@ function c(e) {
         description: 1 === n ? "Yes" : "No",
     };
 }
+
 function u(e) {
     let t = 10;
     if (11 > e.byteLength) return;
@@ -57,6 +67,7 @@ function u(e) {
         description: `${n} ${1 === n ? "bit" : "bits"}`,
     };
 }
+
 function d(e) {
     let t = 10;
     if (11 > e.byteLength) return;

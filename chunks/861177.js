@@ -1,4 +1,6 @@
-r.d(t, { default: () => O });
+r.d(t, {
+    default: () => O,
+});
 var n = r(627968);
 r(64700);
 var o = r(311907),
@@ -12,6 +14,7 @@ var o = r(311907),
     p = r(339984),
     y = r(985018),
     b = r(626072);
+
 function O(e) {
     let { onClose: t, source: r } = e,
         O = (function (e, t) {

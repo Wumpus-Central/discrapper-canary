@@ -5,7 +5,7 @@ n.d(t, {
     n(896048);
 var r = n(627968),
     i = n(64700),
-    a = n(432022),
+    a = n(108531),
     s = n(311907),
     o = n(397927),
     l = n(775602),
@@ -14,6 +14,7 @@ var r = n(627968),
 let d = 200,
     f = 20,
     p = 200;
+
 function _(e) {
     let { children: t, confettiTriggerRef: n, setConfettiCount: c, setShouldFireConfetti: f, tooltipProps: _ } = e,
         [h, m] = i.useState(0),
@@ -21,8 +22,12 @@ function _(e) {
         E = i.useRef(!0),
         b = (0, s.bG)([l.A], () => l.A.useReducedMotion),
         { scaleFactor: y } = (0, o.zhh)({
-            from: { scaleFactor: 1 },
-            to: { scaleFactor: 1 === h ? 0.9 : 2 === h ? 1.2 : 1 },
+            from: {
+                scaleFactor: 1,
+            },
+            to: {
+                scaleFactor: 1 === h ? 0.9 : 2 === h ? 1.2 : 1,
+            },
             config: {
                 tension: 380,
                 friction: 7,
@@ -38,7 +43,9 @@ function _(e) {
         ? t
         : (0, r.jsx)(a.animated.div, {
               className: u.WD,
-              style: { transform: y.to((e) => "scale(".concat(e, ")")) },
+              style: {
+                  transform: y.to((e) => "scale(".concat(e, ")")),
+              },
               children: (0, r.jsx)(o.DUT, {
                   className: u.hh,
                   onMouseDown: () => {

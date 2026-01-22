@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(627968),
     l = n(64700),
     o = n(435371),
@@ -10,6 +12,7 @@ var r = n(627968),
     d = n(814793),
     f = n(717415),
     m = n(985018);
+
 function p(e) {
     let { floatRight: t } = e,
         { quest: n, sourceQuestContent: p } = l.useContext(f.VideoQuestModalContext),
@@ -27,7 +30,9 @@ function p(e) {
         }, [v, E, n.id, p]);
     return E
         ? (0, r.jsx)("div", {
-              style: { marginLeft: t ? "auto" : void 0 },
+              style: {
+                  marginLeft: t ? "auto" : void 0,
+              },
               children: (0, r.jsx)(o.m_, {
                   text: m.intl.string(m.t.WmfZHZ),
                   children: (0, r.jsx)(i.K0, {

@@ -1,4 +1,6 @@
-n.d(t, { A: () => y });
+n.d(t, {
+    A: () => y,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -17,6 +19,7 @@ var i = n(311907),
     g = n(746080),
     E = n(486974),
     b = n(985018);
+
 function y(e) {
     let { user: t, guildId: n, channelId: y, onClose: O, appContext: A } = e,
         { newestAnalyticsLocation: v } = (0, s.Ay)(),

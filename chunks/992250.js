@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r,
     i,
     l = n(311907),
@@ -7,6 +9,7 @@ var r,
     o = n(287809),
     c = n(652215);
 let u = null;
+
 function d() {
     let e = o.default.getCurrentUser();
     if (null == e || e.mfaEnabled === u) return !1;

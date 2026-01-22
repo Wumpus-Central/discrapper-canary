@@ -1,8 +1,11 @@
 let r;
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var i,
     a = n(311907),
     s = n(73153);
+
 function o(e, t, n) {
     return (
         t in e
@@ -16,7 +19,10 @@ function o(e, t, n) {
         e
     );
 }
-let l = { lastGuildDismissedTime: {} };
+let l = {
+    lastGuildDismissedTime: {},
+};
+
 function c(e) {
     let { guildId: t } = e;
     r.lastGuildDismissedTime[t] = Date.now();
@@ -35,4 +41,6 @@ class u extends (i = a.Ay.DeviceSettingsStore) {
 }
 o(u, "displayName", "ApplicationSubscriptionChannelNoticeStore"),
     o(u, "persistKey", "ApplicationSubscriptionChannelNoticeStore");
-let d = new u(s.h, { APPLICATION_SUBSCRIPTIONS_CHANNEL_NOTICE_DISMISSED: c });
+let d = new u(s.h, {
+    APPLICATION_SUBSCRIPTIONS_CHANNEL_NOTICE_DISMISSED: c,
+});

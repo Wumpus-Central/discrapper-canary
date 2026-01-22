@@ -1,10 +1,13 @@
-n.d(e, { A: () => o });
+n.d(e, {
+    A: () => o,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
     l = n(253932),
     a = n(957565),
     c = n(985018);
+
 function o(t, e) {
     let n = e.primarySkuId,
         o = l.Q_.useSetting();

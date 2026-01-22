@@ -20,6 +20,7 @@ var f = n(675100),
     m = n(207054),
     g = n(517286),
     E = n(446770);
+
 function b(e, t, n) {
     return (
         t in e
@@ -33,6 +34,7 @@ function b(e, t, n) {
         e
     );
 }
+
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -107,7 +109,9 @@ let O = (e) => {
             }, [l, M, S, a, D, x, L, _.animationType, u, d]),
             (0, r.jsx)("div", {
                 ref: O,
-                className: s()(E.yC, { [E.yo]: l && c }),
+                className: s()(E.yC, {
+                    [E.yo]: l && c,
+                }),
                 "aria-label": N,
                 role: "img",
                 children: (0, r.jsx)("div", {
@@ -169,7 +173,9 @@ let O = (e) => {
             } = e,
             { reducedMotionSrc: c, thumbnailPreviewSrc: u, accessibilityLabel: d } = t;
         return (0, r.jsx)("div", {
-            className: s()(E.yC, { [E.yo]: o && l }),
+            className: s()(E.yC, {
+                [E.yo]: o && l,
+            }),
             "aria-label": d,
             role: "img",
             children: (0, r.jsx)("div", {
@@ -177,7 +183,9 @@ let O = (e) => {
                 children: (0, r.jsx)("img", {
                     src: n && !o ? u : c,
                     className: E.QZ,
-                    style: { top: 0 - i },
+                    style: {
+                        top: 0 - i,
+                    },
                     alt: "",
                     "aria-hidden": !0,
                 }),

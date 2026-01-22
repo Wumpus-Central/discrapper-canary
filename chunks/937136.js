@@ -11,7 +11,10 @@ function r(e, t, n) {
         e
     );
 }
-n.d(t, { p: () => i }), n(896048);
+n.d(t, {
+    p: () => i,
+}),
+    n(896048);
 class i {
     empty() {
         return 0 === this.pending.size && 0 === this.fetching.size;

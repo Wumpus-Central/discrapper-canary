@@ -1,4 +1,7 @@
-n.d(t, { Wo: () => j }), n(896048);
+n.d(t, {
+    Wo: () => j,
+}),
+    n(896048);
 var r = n(627968),
     i = n(342393),
     a = n(503698),
@@ -14,6 +17,7 @@ var r = n(627968),
     h = n(652215),
     m = n(434598),
     g = n(749226);
+
 function E(e, t, n) {
     return (
         t in e
@@ -27,6 +31,7 @@ function E(e, t, n) {
         e
     );
 }
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -43,6 +48,7 @@ function b(e) {
     }
     return e;
 }
+
 function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -55,6 +61,7 @@ function y(e, t) {
     }
     return n;
 }
+
 function O(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -145,7 +152,9 @@ let A = new u.A("PaymentElement.web.stories"),
             : (0, r.jsxs)("div", {
                   children: [
                       (0, r.jsx)("div", {
-                          style: { marginBottom: 16 },
+                          style: {
+                              marginBottom: 16,
+                          },
                           children: (0, r.jsx)(o.wx6, {
                               type: "info",
                               children:
@@ -158,7 +167,9 @@ let A = new u.A("PaymentElement.web.stories"),
                               (0, r.jsx)(_.p, {
                                   stepConfigs: [C(E)],
                                   children: (0, r.jsx)("div", {
-                                      className: s()(m.o6, { [m.X1]: "joined-payment-address-elements" === E }),
+                                      className: s()(m.o6, {
+                                          [m.X1]: "joined-payment-address-elements" === E,
+                                      }),
                                       children: (0, r.jsxs)(i.Elements, {
                                           stripe: y,
                                           options: b({}, I),
@@ -208,9 +219,27 @@ let A = new u.A("PaymentElement.web.stories"),
                   ],
               });
     },
-    w = (e) => (0, r.jsx)(R, O(b({}, e), { storyType: "joined-payment-address-elements" })),
-    P = (e) => (0, r.jsx)(R, O(b({}, e), { storyType: "stripe-payment-element" })),
-    D = (e) => (0, r.jsx)(R, O(b({}, e), { storyType: "stripe-address-element" })),
+    w = (e) =>
+        (0, r.jsx)(
+            R,
+            O(b({}, e), {
+                storyType: "joined-payment-address-elements",
+            }),
+        ),
+    P = (e) =>
+        (0, r.jsx)(
+            R,
+            O(b({}, e), {
+                storyType: "stripe-payment-element",
+            }),
+        ),
+    D = (e) =>
+        (0, r.jsx)(
+            R,
+            O(b({}, e), {
+                storyType: "stripe-address-element",
+            }),
+        ),
     x = {
         theme: {
             label: "Theme",

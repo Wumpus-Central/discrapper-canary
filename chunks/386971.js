@@ -1,4 +1,7 @@
-n.d(t, { mc: () => u }), n(228524);
+n.d(t, {
+    mc: () => u,
+}),
+    n(228524);
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -7,6 +10,7 @@ var i = n(503698),
     o = n(565645),
     l = n(3432),
     c = n(233883);
+
 function u(e) {
     let t,
         { applicationId: n, storeListingBenefits: i, skuBenefits: a, className: s } = e;
@@ -37,6 +41,7 @@ function u(e) {
         t
     );
 }
+
 function d(e) {
     let {
         benefit: t,
@@ -78,6 +83,7 @@ function d(e) {
         ],
     });
 }
+
 function f(e) {
     let {
         applicationId: t,

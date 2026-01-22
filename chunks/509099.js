@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var r = n(989349),
     i = n.n(r),
     l = n(554146),
@@ -25,10 +27,16 @@ let m = {
                     p = !(0, s.k8)(l.M.HUB_BACK_TO_SCHOOL_UPSELL);
                 !(r || t() || c || !p) &&
                     (0, h.a)() &&
-                    (h.A.trackExposure({ location: "8b792a_1" }), n(), (0, o.Vh)(l.M.HUB_BACK_TO_SCHOOL_UPSELL));
+                    (h.A.trackExposure({
+                        location: "8b792a_1",
+                    }),
+                    n(),
+                    (0, o.Vh)(l.M.HUB_BACK_TO_SCHOOL_UPSELL));
             });
     },
     hideHubUpsell() {
-        (0, s.Dr)(l.M.HUB_BACK_TO_SCHOOL_UPSELL, { dismissAction: g.i.AUTO });
+        (0, s.Dr)(l.M.HUB_BACK_TO_SCHOOL_UPSELL, {
+            dismissAction: g.i.AUTO,
+        });
     },
 };

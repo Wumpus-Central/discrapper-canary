@@ -1,5 +1,8 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(835245);
+
 function i(e, t, n) {
     return (
         t in e
@@ -13,6 +16,7 @@ function i(e, t, n) {
         e
     );
 }
+
 function a(e) {
     return {
         channelId: e,

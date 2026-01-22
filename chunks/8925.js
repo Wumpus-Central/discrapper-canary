@@ -17,6 +17,7 @@ var r = n(627968),
     _ = n(518477),
     h = n(985018),
     m = n(55837);
+
 function g(e, t, n) {
     return (
         t in e
@@ -30,6 +31,7 @@ function g(e, t, n) {
         e
     );
 }
+
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -46,6 +48,7 @@ function E(e) {
     }
     return e;
 }
+
 function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -58,6 +61,7 @@ function b(e, t) {
     }
     return n;
 }
+
 function y(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -81,6 +85,7 @@ let O = 2700,
         [_.dS.STATUS]: () => h.intl.string(h.t["C/vzS7"]),
         [_.dS.ACTIVITY]: () => h.intl.string(h.t.ObfsSj),
     };
+
 function I(e) {
     let {
             user: t,
@@ -100,10 +105,16 @@ function I(e) {
     let P = () => {
             w(O),
                 n === _.dS.AVATAR
-                    ? A({ action: "PRESS_REACT_AVATAR" })
+                    ? A({
+                          action: "PRESS_REACT_AVATAR",
+                      })
                     : n === _.dS.STATUS
-                      ? A({ action: "PRESS_REACT_CUSTOM_STATUS" })
-                      : A({ action: "PRESS_REACT_ACTIVITY" }),
+                      ? A({
+                            action: "PRESS_REACT_CUSTOM_STATUS",
+                        })
+                      : A({
+                            action: "PRESS_REACT_ACTIVITY",
+                        }),
                 null == R ||
                     R({
                         interactionType: _.AQ.REACT,
@@ -114,10 +125,16 @@ function I(e) {
         D = () => {
             w(O),
                 n === _.dS.AVATAR
-                    ? A({ action: "PRESS_REPLY_AVATAR" })
+                    ? A({
+                          action: "PRESS_REPLY_AVATAR",
+                      })
                     : n === _.dS.STATUS
-                      ? A({ action: "PRESS_REPLY_CUSTOM_STATUS" })
-                      : A({ action: "PRESS_REPLY_ACTIVITY" }),
+                      ? A({
+                            action: "PRESS_REPLY_CUSTOM_STATUS",
+                        })
+                      : A({
+                            action: "PRESS_REPLY_ACTIVITY",
+                        }),
                 null == R ||
                     R({
                         interactionType: _.AQ.REPLY,
@@ -183,15 +200,23 @@ function I(e) {
                           ariaHidden: !0,
                           children: (0, r.jsx)(
                               u.$n,
-                              y(E({ ref: T }, e), {
-                                  onClick: t,
-                                  className: m.x6,
-                                  "aria-label": h.intl.string(h.t["UKOtz+"]),
-                                  children: (0, r.jsx)(c.jNK, {
-                                      size: "xs",
-                                      className: m.Kk,
-                                  }),
-                              }),
+                              y(
+                                  E(
+                                      {
+                                          ref: T,
+                                      },
+                                      e,
+                                  ),
+                                  {
+                                      onClick: t,
+                                      className: m.x6,
+                                      "aria-label": h.intl.string(h.t["UKOtz+"]),
+                                      children: (0, r.jsx)(c.jNK, {
+                                          size: "xs",
+                                          className: m.Kk,
+                                      }),
+                                  },
+                              ),
                           ),
                       });
                   }),

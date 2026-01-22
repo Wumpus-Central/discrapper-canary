@@ -14,6 +14,7 @@ var r = n(383501),
     l = n(652215),
     c = n(737045),
     u = n(985018);
+
 function d(e, t, n, r) {
     let a = t[0],
         s = i.Ay.getName(e, n, a),
@@ -21,12 +22,15 @@ function d(e, t, n, r) {
     return 1 === o && null != a
         ? s
         : null == a
-          ? u.intl.formatToPlainString(u.t.chmM9N, { count: o })
+          ? u.intl.formatToPlainString(u.t.chmM9N, {
+                count: o,
+            })
           : u.intl.formatToPlainString(u.t.GhkJ21, {
                 name: s,
                 count: o - 1,
             });
 }
+
 function f(e, t) {
     switch (e) {
         case c.T6.OWNER:
@@ -40,6 +44,7 @@ function f(e, t) {
     }
     return null;
 }
+
 function p(e) {
     let t = s.A.getStageInstanceByChannel(e.id);
     return {
@@ -51,6 +56,7 @@ function p(e) {
         stage_instance_id: null == t ? void 0 : t.id,
     };
 }
+
 function _(e, t) {
     let n = (t) => i.Ay.getName(e.getGuildId(), e.id, t.user),
         r = new Set(),
@@ -61,7 +67,9 @@ function _(e, t) {
     return 0 === a.length
         ? u.intl.string(u.t.FUVhyC)
         : 1 === a.length
-          ? u.intl.formatToPlainString(u.t.EQwZlN, { a: n(a[0]) })
+          ? u.intl.formatToPlainString(u.t.EQwZlN, {
+                a: n(a[0]),
+            })
           : 2 === a.length
             ? u.intl.formatToPlainString(u.t.zBcKoA, {
                   a: n(a[0]),

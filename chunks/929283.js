@@ -1,4 +1,6 @@
-n.d(t, { i: () => E });
+n.d(t, {
+    i: () => E,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -10,6 +12,7 @@ var i = n(503698),
     u = n(837921),
     d = n(985018),
     f = n(610003);
+
 function p(e, t, n) {
     return (
         t in e
@@ -23,6 +26,7 @@ function p(e, t, n) {
         e
     );
 }
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -39,6 +43,7 @@ function _(e) {
     }
     return e;
 }
+
 function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -51,6 +56,7 @@ function h(e, t) {
     }
     return n;
 }
+
 function m(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -83,7 +89,9 @@ let g = u.Ay.getEnableHardwareAcceleration() ? o.JsQ : o.euF,
                 size: E,
                 onlyAnimateOnHoverOrFocus: !i,
             }),
-            A = d.intl.formatToPlainString(d.t.Do2lxE, { a11y_text: t.label });
+            A = d.intl.formatToPlainString(d.t.Do2lxE, {
+                a11y_text: t.label,
+            });
         return (0, r.jsx)(
             g,
             m(_({}, y), {

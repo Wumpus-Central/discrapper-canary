@@ -1,4 +1,6 @@
-r.d(t, { A: () => l });
+r.d(t, {
+    A: () => l,
+});
 var n = r(64700),
     o = r(205662),
     a = r(981735),
@@ -9,7 +11,9 @@ let l = function (e) {
         l = e.onSwatchHover,
         s = (0, o.default)({
             default: {
-                swatches: { marginRight: "-10px" },
+                swatches: {
+                    marginRight: "-10px",
+                },
                 swatch: {
                     width: "22px",
                     height: "22px",
@@ -18,12 +22,16 @@ let l = function (e) {
                     marginBottom: "10px",
                     borderRadius: "4px",
                 },
-                clear: { clear: "both" },
+                clear: {
+                    clear: "both",
+                },
             },
         });
     return n.createElement(
         "div",
-        { style: s.swatches },
+        {
+            style: s.swatches,
+        },
         (0, a.A)(t, function (e) {
             return n.createElement(i.rp, {
                 key: e,
@@ -31,9 +39,13 @@ let l = function (e) {
                 style: s.swatch,
                 onClick: r,
                 onHover: l,
-                focusStyle: { boxShadow: "0 0 4px " + e },
+                focusStyle: {
+                    boxShadow: "0 0 4px " + e,
+                },
             });
         }),
-        n.createElement("div", { style: s.clear }),
+        n.createElement("div", {
+            style: s.clear,
+        }),
     );
 };

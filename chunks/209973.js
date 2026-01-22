@@ -1,4 +1,6 @@
-n.d(t, { A: () => w });
+n.d(t, {
+    A: () => w,
+});
 var r = n(627968),
     i = n(64700),
     a = n(299619),
@@ -23,9 +25,10 @@ var r = n(627968),
     S = n(985018),
     I = n(308021),
     T = n(86369),
-    C = n(650000);
+    C = n(65e4);
 let N = 100,
     R = 1;
+
 function w() {
     let {
             voice: {
@@ -35,7 +38,9 @@ function w() {
             } = {
                 totalVoiceMinutes: 0,
                 totalVoiceMinutesPercentile: 0,
-                topMonth: { month: 0 },
+                topMonth: {
+                    month: 0,
+                },
             },
         } = (0, o.bG)([f.A], () => f.A.getCheckpointData()),
         { duration: w, unit: P } = (0, p.oO)(e),
@@ -113,12 +118,16 @@ function w() {
                                 ? (0, r.jsx)(y.A, {
                                       variant: "eyebrow",
                                       className: I.UP,
-                                      children: S.intl.format(v.default.Xu0QsX, { numHours: w }),
+                                      children: S.intl.format(v.default.Xu0QsX, {
+                                          numHours: w,
+                                      }),
                                   })
                                 : (0, r.jsx)(y.A, {
                                       variant: "eyebrow",
                                       className: I.UP,
-                                      children: S.intl.format(v.default.UZbUtl, { numMinutes: w }),
+                                      children: S.intl.format(v.default.UZbUtl, {
+                                          numMinutes: w,
+                                      }),
                                   }),
                         ],
                     }),
@@ -132,14 +141,30 @@ function w() {
                         children: F
                             ? S.intl.format(v.default["36PZwu"], {
                                   percent: 100 - t,
-                                  percentHook: (e, t) => (0, r.jsx)(m.A, { children: e }, t),
+                                  percentHook: (e, t) =>
+                                      (0, r.jsx)(
+                                          m.A,
+                                          {
+                                              children: e,
+                                          },
+                                          t,
+                                      ),
                               })
                             : S.intl.format(v.default.VaydtR, {
                                   month: V,
-                                  monthHook: (e, t) => (0, r.jsx)(m.A, { children: e }, t),
+                                  monthHook: (e, t) =>
+                                      (0, r.jsx)(
+                                          m.A,
+                                          {
+                                              children: e,
+                                          },
+                                          t,
+                                      ),
                               }),
                     }),
-                    (0, r.jsx)(g.e, { slide: A.P7.VOICE }),
+                    (0, r.jsx)(g.e, {
+                        slide: A.P7.VOICE,
+                    }),
                 ],
             }),
         ],

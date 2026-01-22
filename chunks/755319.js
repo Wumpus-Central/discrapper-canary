@@ -1,4 +1,6 @@
-i.d(t, { default: () => d });
+i.d(t, {
+    default: () => d,
+});
 var e = i(627968),
     a = i(64700),
     l = i(397927),
@@ -7,12 +9,17 @@ var e = i(627968),
     r = i(253932),
     c = i(957565),
     u = i(985018);
+
 function d(n) {
     let { splashUrl: t, onSelect: i } = n,
         d = r.Q_.useSetting(),
         { tidaWebformEnabled: p } = s.A.useExperiment(
-            { location: "GuildOnboardingSplashContextMenu" },
-            { autoTrackExposure: !1 },
+            {
+                location: "GuildOnboardingSplashContextMenu",
+            },
+            {
+                autoTrackExposure: !1,
+            },
         ),
         h = a.useCallback(() => {
             (0, c.C)(t);

@@ -1,4 +1,7 @@
-e.d(s, { default: () => m }), e(896048);
+e.d(s, {
+    default: () => m,
+}),
+    e(896048);
 var r = e(627968);
 e(64700);
 var i = e(158954),
@@ -8,6 +11,7 @@ var i = e(158954),
     c = e(985018),
     o = e(100670),
     d = e(485885);
+
 function x(t) {
     let { header: s, body: e } = t;
     return (0, r.jsxs)("div", {
@@ -25,7 +29,9 @@ function x(t) {
                         color: "text-default",
                         children: s,
                     }),
-                    (0, r.jsx)(n.hKd, { size: 4 }),
+                    (0, r.jsx)(n.hKd, {
+                        size: 4,
+                    }),
                     (0, r.jsx)(n.Text, {
                         variant: "text-sm/normal",
                         color: "text-muted",
@@ -36,6 +42,7 @@ function x(t) {
         ],
     });
 }
+
 function m(t) {
     let { guildId: s, demonetized: e, transitionState: o, onClose: d } = t,
         [m, { loading: h, error: u }] = (0, a.A)(e ? l.Y7 : l.KW),

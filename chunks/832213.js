@@ -11,7 +11,9 @@ function r(e, t, n) {
         e
     );
 }
-n.d(t, { D: () => i });
+n.d(t, {
+    D: () => i,
+});
 class i {
     getCPUCoreCount() {
         return this.cpuCoreCount;

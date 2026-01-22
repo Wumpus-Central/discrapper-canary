@@ -1,4 +1,7 @@
-n.d(t, { A: () => v }), n(896048);
+n.d(t, {
+    A: () => v,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(989349),
@@ -65,7 +68,9 @@ let O = "premiumRetentionEmojiPickerNotice",
                                 onClick: () => {
                                     (0, m.xf)(n),
                                         t(),
-                                        (0, p.openUserSettings)(f.X.NITRO_PANEL, { section: g.nc_.PREMIUM });
+                                        (0, p.openUserSettings)(f.X.NITRO_PANEL, {
+                                            section: g.nc_.PREMIUM,
+                                        });
                                 },
                                 children: b.intl.string(b.t.W3aavh),
                             }),

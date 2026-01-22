@@ -1,9 +1,14 @@
-n.d(t, { R: () => c }), n(321073), n(896048);
+n.d(t, {
+    R: () => c,
+}),
+    n(321073),
+    n(896048);
 var r = n(64700),
     i = n(311907),
     a = n(351906),
     s = n(822382),
     o = n(652215);
+
 function l(e) {
     let t = (0, i.bG)([a.A], () => a.A.hidePersonalInformation);
     return r.useMemo(() => {
@@ -22,6 +27,7 @@ function l(e) {
         );
     }, [t, e]);
 }
+
 function c(e) {
     let t = l(e);
     return r.useMemo(() => new Set(t), [t]);

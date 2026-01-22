@@ -1,4 +1,6 @@
-t.d(A, { A: () => s });
+t.d(A, {
+    A: () => s,
+});
 var r = t(627968);
 t(64700);
 var n = t(503698),
@@ -12,15 +14,21 @@ let s = function (e) {
         children: [
             (0, r.jsx)("div", {
                 className: i.wrapOne,
-                children: (0, r.jsx)("div", { className: l()(i.icon, i.one, a.$8[A[0]]) }),
+                children: (0, r.jsx)("div", {
+                    className: l()(i.icon, i.one, a.$8[A[0]]),
+                }),
             }),
             (0, r.jsx)("div", {
                 className: i.wrapThree,
-                children: (0, r.jsx)("div", { className: l()(i.icon, i.three, a.$8[A[2]]) }),
+                children: (0, r.jsx)("div", {
+                    className: l()(i.icon, i.three, a.$8[A[2]]),
+                }),
             }),
             (0, r.jsx)("div", {
                 className: i.wrapTwo,
-                children: (0, r.jsx)("div", { className: l()(i.icon, i.two, a.$8[A[1]]) }),
+                children: (0, r.jsx)("div", {
+                    className: l()(i.icon, i.two, a.$8[A[1]]),
+                }),
             }),
         ],
     });

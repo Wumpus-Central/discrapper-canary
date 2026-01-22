@@ -77,18 +77,24 @@ let s = [
             type: "image/webm",
         },
     ],
-    o = 524288000;
+    o = 524288e3;
+
 function l(e) {
     let { spoiler: t } = e;
     return t ? a._W : "";
 }
+
 function c(e) {
     var t;
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         a = arguments.length > 2 ? arguments[2] : void 0,
-        s = { id: null != (t = null == n ? void 0 : n.toString()) ? t : e.id };
+        s = {
+            id: null != (t = null == n ? void 0 : n.toString()) ? t : e.id,
+        };
     null != e.description && (s.description = e.description);
-    let o = l({ spoiler: e.spoiler });
+    let o = l({
+        spoiler: e.spoiler,
+    });
     return (
         (s.filename = "".concat(o).concat(null != a ? a : e.filename)),
         (s.uploaded_filename = e.uploadedFilename),
@@ -111,6 +117,7 @@ function c(e) {
         s
     );
 }
+
 function u(e) {
     let t = new XMLHttpRequest();
     return new Promise((n, r) => {
@@ -126,6 +133,7 @@ function u(e) {
             t.send();
     });
 }
+
 function d(e) {
     var t, n, r, i, a, o;
     let l,

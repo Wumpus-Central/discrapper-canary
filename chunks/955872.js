@@ -1,4 +1,7 @@
-n.d(t, { A: () => Y }), n(896048);
+n.d(t, {
+    A: () => Y,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(284009),
@@ -34,6 +37,7 @@ var r = n(627968),
     j = n(652215),
     M = n(985018),
     k = n(166378);
+
 function U(e, t, n) {
     return (
         t in e
@@ -47,6 +51,7 @@ function U(e, t, n) {
         e
     );
 }
+
 function G(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -63,6 +68,7 @@ function G(e) {
     }
     return e;
 }
+
 function V(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -75,6 +81,7 @@ function V(e, t) {
     }
     return n;
 }
+
 function F(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -86,6 +93,7 @@ function F(e, t) {
         e
     );
 }
+
 function B(e, t) {
     if (null == e) return {};
     var n,
@@ -102,6 +110,7 @@ function B(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function H(e, t) {
     if (null == e) return {};
     var n,
@@ -112,6 +121,7 @@ function H(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function Y() {
     var e;
     let t = (0, o.bG)([R.default], () => {
@@ -136,7 +146,9 @@ function Y() {
         { analyticsLocations: Z, newestAnalyticsLocation: Q } = (0, _.Ay)(p.A.USER_SETTINGS_USER_PROFILE);
     i.useEffect(() => () => u.h.wait(d.IM), []);
     let [$, J] = i.useState(!1),
-        { showRedesign: ee } = D.X.useExperiment({ location: "profile customization" }),
+        { showRedesign: ee } = D.X.useExperiment({
+            location: "profile customization",
+        }),
         et = !X,
         en = i.useRef(null);
     return n
@@ -158,7 +170,9 @@ function Y() {
                                   },
                                   Y,
                               ),
-                              { pendingAvatar: W },
+                              {
+                                  pendingAvatar: W,
+                              },
                           ),
                       ),
                       nameplatePreview: (0, r.jsx)(
@@ -199,7 +213,12 @@ function Y() {
                       (0, r.jsx)(E.d, {
                           className: k.E,
                           showUpsell: et && !$,
-                          text: M.intl.format(M.t.TmfgI2, { onClick: () => (0, b.K)({ analyticsSource: Q }) }),
+                          text: M.intl.format(M.t.TmfgI2, {
+                              onClick: () =>
+                                  (0, b.K)({
+                                      analyticsSource: Q,
+                                  }),
+                          }),
                           textVariant: "heading-md/medium",
                           button: (0, r.jsx)(c.Button, {
                               variant: "expressive",
@@ -210,7 +229,9 @@ function Y() {
                                   }),
                                       null == en ||
                                           null == (e = en.current) ||
-                                          e.scrollIntoView({ behavior: "smooth" });
+                                          e.scrollIntoView({
+                                              behavior: "smooth",
+                                          });
                               },
                               text: M.intl.string(M.t.uw9zI7),
                               icon: c.tvc,

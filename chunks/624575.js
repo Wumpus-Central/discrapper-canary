@@ -1,4 +1,7 @@
-n.d(t, { i: () => f }), n(896048);
+n.d(t, {
+    i: () => f,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(352404),
@@ -83,7 +86,9 @@ let f = {
                           type: "critical",
                           children: [
                               "This component is experimental and only available behind the ",
-                              (0, r.jsx)("code", { children: "2025-10-mana-date-inputs" }),
+                              (0, r.jsx)("code", {
+                                  children: "2025-10-mana-date-inputs",
+                              }),
                               " ",
                               "experiment. Do not use this in production yet.",
                           ],

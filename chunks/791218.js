@@ -1,1 +1,3 @@
-e.exports = { h: "b68b310c7171ce01" };
+e.exports = {
+    h: "b68b310c7171ce01",
+};

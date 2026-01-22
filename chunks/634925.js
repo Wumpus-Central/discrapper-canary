@@ -14,6 +14,7 @@ var r = l(627968),
     c = l(79275),
     f = l(224331),
     p = l(568065);
+
 function m(e) {
     let { guildId: t, powerup: l, className: n } = e,
         i = (0, a.Ay)(t, l),
@@ -26,6 +27,7 @@ function m(e) {
         className: n,
     });
 }
+
 function v(e) {
     var t;
     let { guildId: l, powerup: u, badge: m, className: v, onHover: A, children: g } = e,

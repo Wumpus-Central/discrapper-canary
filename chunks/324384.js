@@ -21,6 +21,7 @@ var r = n(627968),
     g = n(652215),
     E = n(985018),
     b = n(725682);
+
 function y(e, t, n) {
     return (
         t in e
@@ -34,6 +35,7 @@ function y(e, t, n) {
         e
     );
 }
+
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -50,6 +52,7 @@ function O(e) {
     }
     return e;
 }
+
 function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -62,6 +65,7 @@ function A(e, t) {
     }
     return n;
 }
+
 function v(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -143,7 +147,9 @@ let S = (e) => {
               })
             : (0, r.jsx)(p.U, {
                   sku: o,
-                  value: (0, r.jsx)(S, { orbAmount: t }),
+                  value: (0, r.jsx)(S, {
+                      orbAmount: t,
+                  }),
                   rentalDuration: i,
               });
     },
@@ -162,13 +168,18 @@ let S = (e) => {
                     (0, r.jsx)(a.Text, {
                         className: b.OL,
                         variant: "text-md/medium",
-                        children: (0, r.jsx)(S, { orbAmount: t }),
+                        children: (0, r.jsx)(S, {
+                            orbAmount: t,
+                        }),
                     }),
                 ],
             }),
         });
     },
-    N = () => (0, r.jsx)(d.A, { message: E.intl.format(E.t.fsOXXO, {}) }),
+    N = () =>
+        (0, r.jsx)(d.A, {
+            message: E.intl.format(E.t.fsOXXO, {}),
+        }),
     R = (e) => {
         let { skuId: t, orbPriceAmount: n, orbBalance: i, renderWithoutContainer: l, rentalDuration: c } = e,
             u = (0, r.jsxs)(r.Fragment, {
@@ -181,7 +192,9 @@ let S = (e) => {
                             rentalDuration: c,
                         }),
                     }),
-                    (0, r.jsx)(C, { orbBalance: i }),
+                    (0, r.jsx)(C, {
+                        orbBalance: i,
+                    }),
                     (0, r.jsx)(o.A, {
                         forceShow: !0,
                         onChange: g.tEg,

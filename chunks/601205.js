@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(761799),
     i = n(409437),
     a = n(706208),
@@ -9,7 +11,10 @@ var r = n(761799),
     u = n(195386),
     d = n(970667),
     f = n(643479);
-let p = { parseAppMarkers: _ };
+let p = {
+    parseAppMarkers: _,
+};
+
 function _(e, t) {
     if (r.A.USE_TIFF && i.A.isTiffFile(e)) return h(i.A.findTiffOffsets(), "tiff", "TIFF");
     if (r.A.USE_JPEG && a.A.isJpegFile(e)) return h(a.A.findJpegOffsets(e), "jpeg", "JPEG");
@@ -21,6 +26,7 @@ function _(e, t) {
     if (r.A.USE_XMP && d.A.isXMLFile(e)) return h(d.A.findOffsets(e), "xml", "XML");
     throw Error("Invalid image format");
 }
+
 function h(e, t, n) {
     return (0, f.dP)({}, e, {
         fileType: {

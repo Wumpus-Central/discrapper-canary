@@ -9,13 +9,15 @@ var i = n(397927),
     s = n(927018),
     o = n(249581),
     l = n(985018);
-let c = 6000;
+let c = 6e3;
+
 function u(e) {
     a.h.dispatch({
         type: "POGGERMODE_ACHIEVEMENT_UNLOCK",
         achievementId: e,
     });
 }
+
 function d(e, t) {
     let n = (0, s.vM)(e);
     null != n &&

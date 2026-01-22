@@ -1,6 +1,9 @@
-r.d(t, { i: () => o });
+r.d(t, {
+    i: () => o,
+});
 var n = r(321733),
     i = r(64700);
+
 function o(e) {
     var t = {};
     return (
@@ -41,7 +44,9 @@ function o(e) {
                                       a(r, e), a(t, e);
                                   },
                               })
-                            : (0, i.cloneElement)(e, { ref: t })
+                            : (0, i.cloneElement)(e, {
+                                  ref: t,
+                              })
                     );
                 };
                 t[r] = function () {
@@ -52,6 +57,7 @@ function o(e) {
         t
     );
 }
+
 function a(e, t) {
     "function" == typeof e ? e(t) : (e.current = t);
 }

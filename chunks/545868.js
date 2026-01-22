@@ -36,13 +36,17 @@ async function u(e) {
 async function d(e) {
     l.A.shouldFetch(e) && (await u(e));
 }
-let f = new (i())({ maxAge: 10000 });
+let f = new (i())({
+    maxAge: 1e4,
+});
+
 function p(e, t) {
     return a.Bo.get({
         url: c.Rsh.GUILD_ROLE_MEMBER_IDS(e, t),
         rejectWithError: !1,
     }).then((t) => (o.A.requestMembersById(e, t.body, !1), t.body.length));
 }
+
 function _(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
         r = "".concat(e, "-").concat(t);

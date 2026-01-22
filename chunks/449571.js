@@ -1,4 +1,7 @@
-n.d(t, { A: () => Y }), n(896048);
+n.d(t, {
+    A: () => Y,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -35,6 +38,7 @@ var r = n(627968),
     M = n(463967),
     k = n(319567),
     U = n(976092);
+
 function G(e, t, n) {
     return (
         t in e
@@ -48,6 +52,7 @@ function G(e, t, n) {
         e
     );
 }
+
 function V(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -64,6 +69,7 @@ function V(e) {
     }
     return e;
 }
+
 function F(e, t) {
     if (null == e) return {};
     var n,
@@ -80,6 +86,7 @@ function F(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function B(e, t) {
     if (null == e) return {};
     var n,
@@ -90,6 +97,7 @@ function B(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function H(e) {
     var t, n, a;
     let { channel: p, isLoading: _ } = e,
@@ -108,7 +116,9 @@ function H(e) {
                 isHidden: O.A.isEmbeddedActivityHidden(),
             };
         }),
-        X = (0, T.xi)({ channelId: null == p ? void 0 : p.id }),
+        X = (0, T.xi)({
+            channelId: null == p ? void 0 : p.id,
+        }),
         {
             activityParticipant: Z,
             selectedParticipant: Q,
@@ -134,6 +144,7 @@ function H(e) {
         er = J && (et || en) && null == z,
         ei = (!J || er) && !q,
         ea = ei && null != O.A.pipVideoWindow && null != O.A.pipActivityWindow;
+
     function es() {
         if (null != p) {
             var e;
@@ -150,9 +161,11 @@ function H(e) {
         }
         null == X && (0, f.bz)();
     }
+
     function eo() {
         G(!C);
     }
+
     function el(e) {
         var t;
         let { onActive: n, onForceIdle: i, idle: a, isActivityInTextChannel: s, users: o } = e;
@@ -242,7 +255,7 @@ function H(e) {
             (eu.guild_id = p.guild_id),
         (null == p ? void 0 : p.id) != null && (null == p ? void 0 : p.id) !== "" && (eu.channel_id = p.id),
         (0, r.jsx)(y.Ay, {
-            timeout: 2000,
+            timeout: 2e3,
             children: (e) => {
                 var t, n;
                 let { idle: i, onActive: a, onForceIdle: o } = e;
@@ -304,7 +317,9 @@ let Y = (e) => {
     let { channel: t } = e,
         n = F(e, ["channel"]),
         i = I.Ay.getCurrentEmbeddedActivity();
-    (0, C.A)({ connectedEmbeddedActivity: i });
+    (0, C.A)({
+        connectedEmbeddedActivity: i,
+    });
     let { analyticsLocations: a } = (0, _.Ay)(p.A.ACTIVITY_PIP),
         s = null == i;
     return (0, r.jsx)(_.f5, {

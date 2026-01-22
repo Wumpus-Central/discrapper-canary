@@ -1,1 +1,3 @@
-e.exports = { Z: "_8298020adc5288f3" };
+e.exports = {
+    Z: "_8298020adc5288f3",
+};

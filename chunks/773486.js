@@ -1,4 +1,8 @@
-r.d(t, { default: () => C }), r(896048), r(321073);
+r.d(t, {
+    default: () => C,
+}),
+    r(896048),
+    r(321073);
 var n = r(627968),
     s = r(64700),
     i = r(158954),
@@ -20,6 +24,7 @@ var n = r(627968),
     j = r(985018),
     _ = r(300296),
     v = r(788396);
+
 function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
@@ -45,6 +50,7 @@ function P(e) {
     }
     return e;
 }
+
 function I(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -63,6 +69,7 @@ function I(e, t) {
         e
     );
 }
+
 function x(e, t) {
     if (null == e) return {};
     var r,
@@ -220,7 +227,9 @@ let E = (e) => {
                         {
                             size: "sm",
                             title: j.intl.string(S.default.ONaJLH),
-                            subtitle: j.intl.format(S.default["0LHbPc"], { helpCenterLink: h.TE }),
+                            subtitle: j.intl.format(S.default["0LHbPc"], {
+                                helpCenterLink: h.TE,
+                            }),
                             onClose: o,
                             actions: [],
                         },
@@ -247,7 +256,10 @@ let E = (e) => {
                         }),
                         subtitle: j.intl.format(S.default.olkQkj, {
                             onClick: () => {
-                                t(), (0, u.openUserSettings)(o.X.SUBSCRIPTIONS_PANEL, { section: O.nc_.SUBSCRIPTIONS });
+                                t(),
+                                    (0, u.openUserSettings)(o.X.SUBSCRIPTIONS_PANEL, {
+                                        section: O.nc_.SUBSCRIPTIONS,
+                                    });
                             },
                         }),
                         onClose: t,
@@ -323,6 +335,11 @@ let E = (e) => {
                   }),
               )
             : 2 === a
-              ? (0, n.jsx)(w, I(P({}, r), { inviteUsersResult: i }))
+              ? (0, n.jsx)(
+                    w,
+                    I(P({}, r), {
+                        inviteUsersResult: i,
+                    }),
+                )
               : void 0;
     };

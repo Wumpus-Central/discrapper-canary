@@ -11,7 +11,10 @@ function r(e, t, n) {
         e
     );
 }
-n.d(t, { A: () => a }), n(321073);
+n.d(t, {
+    A: () => a,
+}),
+    n(321073);
 let i = 1 / 240;
 class a {
     to(e) {
@@ -101,10 +104,7 @@ class a {
                     return;
                 }
                 let s = e;
-                for (
-                    this.accumulator = Math.min((s - this.last) / 1000 + this.accumulator, 2);
-                    this.accumulator > i;
-                ) {
+                for (this.accumulator = Math.min((s - this.last) / 1e3 + this.accumulator, 2); this.accumulator > i; ) {
                     this.accumulator -= i;
                     let { vel: e, from: t, accel: n } = this.getUpdates(this.vel, this.from);
                     if (

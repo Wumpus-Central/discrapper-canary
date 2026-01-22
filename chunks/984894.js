@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -8,6 +10,7 @@ var i = n(311907),
     s = n(977997),
     d = n(652215),
     c = n(985018);
+
 function u(e, t) {
     let n = (0, i.bG)([o.A], () => e === o.A.getSelectedParticipantId(t), [t, e]);
     return (0, i.bG)([o.A, s.A], () => {

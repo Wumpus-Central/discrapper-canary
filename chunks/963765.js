@@ -1,4 +1,10 @@
-n.d(t, { default: () => R }), n(321073), n(228524), n(896048), n(492834);
+n.d(t, {
+    default: () => R,
+}),
+    n(321073),
+    n(228524),
+    n(896048),
+    n(492834);
 var l = n(627968),
     i = n(64700),
     r = n(110259),
@@ -22,6 +28,7 @@ var l = n(627968),
     y = n(818348),
     T = n(985018),
     I = n(205285);
+
 function R(e) {
     var t, n;
     let { guildId: R, transitionState: C, onSubmit: S, onClose: G } = e,
@@ -78,13 +85,20 @@ function R(e) {
                                 name: (0, l.jsxs)("div", {
                                     className: I.OA,
                                     children: [
-                                        (0, l.jsx)(t, { className: I.Kk }),
+                                        (0, l.jsx)(t, {
+                                            className: I.Kk,
+                                        }),
                                         (0, l.jsxs)("div", {
                                             children: [
                                                 (0, l.jsxs)(d.Text, {
                                                     variant: "text-md/normal",
                                                     color: "text-strong",
-                                                    children: [n, (0, l.jsx)(p.p, { isBeta: a })],
+                                                    children: [
+                                                        n,
+                                                        (0, l.jsx)(p.p, {
+                                                            isBeta: a,
+                                                        }),
+                                                    ],
                                                 }),
                                                 (0, l.jsx)(d.Text, {
                                                     variant: "text-xs/normal",

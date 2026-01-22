@@ -1,4 +1,9 @@
-n.d(t, { Ay: () => z }), n(896048), n(747238), n(65821);
+n.d(t, {
+    Ay: () => z,
+}),
+    n(896048),
+    n(747238),
+    n(65821);
 var r,
     i = n(627968),
     a = n(64700),
@@ -11,6 +16,7 @@ var r,
     f = n(832208),
     p = n(985018),
     _ = n(784550);
+
 function h(e, t, n) {
     return (
         t in e
@@ -24,6 +30,7 @@ function h(e, t, n) {
         e
     );
 }
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -40,6 +47,7 @@ function m(e) {
     }
     return e;
 }
+
 function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -52,6 +60,7 @@ function g(e, t) {
     }
     return n;
 }
+
 function E(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -63,6 +72,7 @@ function E(e, t) {
         e
     );
 }
+
 function b(e, t) {
     if (null == e) return {};
     var n,
@@ -79,6 +89,7 @@ function b(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function y(e, t) {
     if (null == e) return {};
     var n,
@@ -168,7 +179,15 @@ let O = "US",
         value: e.alpha2,
         label: e.name,
     })).filter((e) => "KP" !== e.value && "SY" !== e.value),
-    T = Object.freeze(I.reduce((e, t) => E(m({}, e), { [t.label.toLowerCase()]: t.value }), {})),
+    T = Object.freeze(
+        I.reduce(
+            (e, t) =>
+                E(m({}, e), {
+                    [t.label.toLowerCase()]: t.value,
+                }),
+            {},
+        ),
+    ),
     C = (0, u.Ld)(),
     N = (0, u.Ld)(),
     R = (0, u.Ld)(),
@@ -506,7 +525,11 @@ class K extends (r = a.PureComponent) {
             c = o
                 .map((e) => {
                     let t = e.map((e) => e(null != l ? l : "")).filter(d.Vq);
-                    return t.length > 0 ? { fields: t } : null;
+                    return t.length > 0
+                        ? {
+                              fields: t,
+                          }
+                        : null;
                 })
                 .filter(d.Vq);
         return (0, i.jsx)(f.A, {
@@ -537,15 +560,21 @@ class K extends (r = a.PureComponent) {
                 errors: {},
             }),
             h(this, "handleFieldBlur", () => {
-                this.setState({ errors: this.validateForm(!0) });
+                this.setState({
+                    errors: this.validateForm(!0),
+                });
             }),
             h(this, "handleFieldChange", (e, t) => {
                 if (null == t) return;
                 let { values: n, errors: r, dirtyFields: i } = this.state;
                 delete r[t],
                     this.setState({
-                        values: E(m({}, n), { [t]: e }),
-                        dirtyFields: E(m({}, i), { [t]: !0 }),
+                        values: E(m({}, n), {
+                            [t]: e,
+                        }),
+                        dirtyFields: E(m({}, i), {
+                            [t]: !0,
+                        }),
                         errors: r,
                     });
             });

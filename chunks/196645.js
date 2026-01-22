@@ -1,4 +1,7 @@
-n.d(e, { A: () => j }), n(896048);
+n.d(e, {
+    A: () => j,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(397927),
@@ -15,6 +18,7 @@ var r = n(627968),
     h = n(327337),
     g = n(985018),
     O = n(286965);
+
 function j(t) {
     let { senderId: e, channelId: n, hasReported: j, onReport: _, trackAnalyticsEvent: p } = t,
         v = (0, s.bG)([x.A], () => x.A.isBlocked(e)),
@@ -63,12 +67,16 @@ function j(t) {
                     onClick: () => {
                         b
                             ? (E(!1),
-                              l.A.unblockUser(e, { location: h.Ht }),
+                              l.A.unblockUser(e, {
+                                  location: h.Ht,
+                              }),
                               p(m.Wm.USER_TAKEOVER_MODAL_UNBLOCK),
                               u.A.showUnblockSuccessToast(e, n))
                             : (E(!0),
                               p(m.Wm.USER_TAKEOVER_MODAL_BLOCK),
-                              l.A.blockUser(e, { location: h.Ht }).then(() => {
+                              l.A.blockUser(e, {
+                                  location: h.Ht,
+                              }).then(() => {
                                   u.A.showBlockSuccessToast(e, n);
                               }));
                     },

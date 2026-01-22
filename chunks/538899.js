@@ -1,4 +1,8 @@
-n.d(t, { default: () => T }), n(896048), n(228524);
+n.d(t, {
+    default: () => T,
+}),
+    n(896048),
+    n(228524);
 var l = n(627968),
     a = n(64700),
     c = n(158954),
@@ -49,7 +53,9 @@ async function P(e) {
     try {
         await i.Bo.patch({
             url: O.Rsh.MESSAGE(c.id, g),
-            body: { attachments: w },
+            body: {
+                attachments: w,
+            },
             rejectWithError: !1,
         }),
             p(),
@@ -66,6 +72,7 @@ async function P(e) {
                 o.A.clearAll(c.id, h.C.ChannelMessage));
     }
 }
+
 function T(e) {
     var t;
     let { threadId: n, attachments: i, sendMessage: s, transitionState: o, onClose: f } = e,
@@ -89,12 +96,18 @@ function T(e) {
                 : null,
         [v, O] = a.useState(!1),
         T = a.useCallback(() => {
-            (0, A.jh)({ added: !1 }), s(), f();
+            (0, A.jh)({
+                added: !1,
+            }),
+                s(),
+                f();
         }, [s, f]),
         k = a.useCallback(() => {
             null != u &&
                 null != h &&
-                ((0, A.jh)({ added: !0 }),
+                ((0, A.jh)({
+                    added: !0,
+                }),
                 P({
                     thread: u,
                     attachments: i,

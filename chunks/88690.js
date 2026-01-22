@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -12,13 +14,16 @@ var i = n(311907),
     f = n(613844);
 let p = 387,
     _ = 218;
+
 function h() {
     let e = c.A.getCameraComponent(),
         t = (0, i.bG)([c.A], () => c.A.getVideoDeviceId()),
         n = u.A.useField("previewEnabled"),
         h = (0, i.bG)([c.A], () => c.A.isVideoAvailable());
     return ((0, o.l0)(() => {
-        u.A.setState({ previewEnabled: !1 });
+        u.A.setState({
+            previewEnabled: !1,
+        });
     }),
     n)
         ? (0, r.jsx)("div", {
@@ -43,7 +48,10 @@ function h() {
                   children: (0, r.jsx)(s.Button, {
                       variant: "primary",
                       text: d.intl.string(d.t.JIf4v7),
-                      onClick: () => u.A.setState({ previewEnabled: !0 }),
+                      onClick: () =>
+                          u.A.setState({
+                              previewEnabled: !0,
+                          }),
                       disabled: !h,
                   }),
               }),

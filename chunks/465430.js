@@ -1,4 +1,6 @@
-n.d(t, { Nz: () => m });
+n.d(t, {
+    Nz: () => m,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -8,6 +10,7 @@ var i = n(503698),
     l = n(244367),
     c = n(742158),
     u = n(512240);
+
 function d(e, t, n) {
     return (
         t in e
@@ -21,6 +24,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,6 +41,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e, t) {
     if (null == e) return {};
     var n,
@@ -53,6 +58,7 @@ function p(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function _(e, t) {
     if (null == e) return {};
     var n,
@@ -65,6 +71,7 @@ function _(e, t) {
 }
 s.Z.Types;
 let h = "right";
+
 function m(e) {
     let t,
         n,
@@ -115,12 +122,16 @@ function m(e) {
                         children: [
                             null != E && "" !== E
                                 ? (0, r.jsx)(c.z, {
-                                      className: a()(u.$G, { [u.vV]: v }),
+                                      className: a()(u.$G, {
+                                          [u.vV]: v,
+                                      }),
                                       children: E,
                                   })
                                 : null,
                             (0, r.jsx)(l.a, {
-                                className: a()(u.Vz, { [u.vV]: v }),
+                                className: a()(u.Vz, {
+                                    [u.vV]: v,
+                                }),
                                 children: b,
                             }),
                             n,

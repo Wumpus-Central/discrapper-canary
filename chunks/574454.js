@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r,
     i,
     s = n(635377),
@@ -14,18 +16,22 @@ let u = {
     d = {
         validations: new (l())({
             max: 100,
-            maxAge: 60000,
+            maxAge: 6e4,
         }),
         currentUsernameInvalid: !1,
         retryAfterTime: null,
         suggestions: {
             migration: {
-                suggestion: { username: void 0 },
+                suggestion: {
+                    username: void 0,
+                },
                 fetched: !1,
                 usernameSuggestionLoading: !1,
             },
             registration: {
-                suggestion: { username: void 0 },
+                suggestion: {
+                    username: void 0,
+                },
                 source: void 0,
                 fetched: !1,
             },
@@ -73,7 +79,9 @@ class h extends (i = a.Ay.Store) {
 let f = new h(o.h, {
     POMELO_ATTEMPT_SUCCESS: function (e) {
         let { username: t, taken: n } = e;
-        d.validations.set(t, { taken: n });
+        d.validations.set(t, {
+            taken: n,
+        });
     },
     POMELO_ATTEMPT_FAILURE: function (e) {
         let { username: t, error: n, statusCode: r, retryAfter: i } = e;
@@ -95,12 +103,16 @@ let f = new h(o.h, {
     },
     POMELO_SUGGESTIONS_RESET: function () {
         (d.suggestions.migration = {
-            suggestion: { username: void 0 },
+            suggestion: {
+                username: void 0,
+            },
             fetched: !1,
             usernameSuggestionLoading: !1,
         }),
             (d.suggestions.registration = {
-                suggestion: { username: void 0 },
+                suggestion: {
+                    username: void 0,
+                },
                 source: void 0,
                 fetched: !1,
             });
@@ -125,6 +137,9 @@ let f = new h(o.h, {
             source: n,
             fetched: !0,
         }),
-            (null == t ? void 0 : t.username) != null && d.validations.set(t.username, { taken: !1 });
+            (null == t ? void 0 : t.username) != null &&
+                d.validations.set(t.username, {
+                    taken: !1,
+                });
     },
 });

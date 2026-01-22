@@ -29,12 +29,15 @@ let h = 2097152,
         _.Am.GUILD_SUBSCRIPTION_UNAVAILABLE,
         _.Am.ONLY_GUILD_EMOJIS_ALLOWED,
     ]);
+
 function b(e) {
     return e.type === i.i.GUILD || null != e.guildId;
 }
+
 function y(e, t) {
     return null != e && null != t && (!b(e) || t === e.guildId);
 }
+
 function O(e) {
     let {
         emoji: t,
@@ -139,6 +142,7 @@ let A = {
 async function v(e) {
     return await u.A.getEmojiColors(e);
 }
+
 function S(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 32,
         { id: n, name: r, animated: i } = e;
@@ -150,6 +154,7 @@ function S(e) {
           })
         : u.A.getURL(r);
 }
+
 function I(e) {
     return "allNamesString" in e ? e.allNamesString : ":".concat(e.name, ":");
 }

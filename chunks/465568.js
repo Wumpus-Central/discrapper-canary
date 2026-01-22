@@ -1,8 +1,11 @@
-n.d(t, { D: () => c });
+n.d(t, {
+    D: () => c,
+});
 var r = n(652896),
     i = n(487329),
     a = n(601900),
     s = n(652215);
+
 function o(e, t, n) {
     return (
         t in e
@@ -16,6 +19,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,7 +41,14 @@ let c = {
         let { activeStreams: t } = e;
         return t
             .filter((e) => e.state === s.XYD.FAILED && null == e.errorCode)
-            .map((e) => l({ type: i.iy.STREAM_FAILED_TO_START }, (0, a.id)((0, r._z)(e))));
+            .map((e) =>
+                l(
+                    {
+                        type: i.iy.STREAM_FAILED_TO_START,
+                    },
+                    (0, a.id)((0, r._z)(e)),
+                ),
+            );
     },
     makeErrorContextKey: (e) => "".concat(e.streamKey, ":").concat(e.mediaSessionId),
 };

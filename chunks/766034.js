@@ -1,8 +1,13 @@
-n.d(t, { A: () => u }), n(446912), n(896048);
+n.d(t, {
+    A: () => u,
+}),
+    n(446912),
+    n(896048);
 var r = n(626584),
     i = n(71393),
     a = n(403362),
     s = n(723176);
+
 function o(e, t, n) {
     return (
         t in e
@@ -44,6 +49,7 @@ class c {
     handleGuildCreate(e, t) {
         let n = e.guild,
             r = e.guild.id;
+
         function i(e) {
             switch (e.op) {
                 case "full_sync":
@@ -77,7 +83,12 @@ class c {
         this.updateWith(e.guildId, [e.role]), this.commit(t);
     }
     handleGuildRoleDelete(e, t) {
-        this.updateWith(e.guildId, [{ version: e.version }]), this.commit(t);
+        this.updateWith(e.guildId, [
+            {
+                version: e.version,
+            },
+        ]),
+            this.commit(t);
     }
     handleGuildEmojisUpdate(e, t) {
         this.updateWith(e.guildId, e.emojis), this.commit(t);

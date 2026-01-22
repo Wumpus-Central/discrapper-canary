@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -12,14 +14,20 @@ var i = n(503698),
     p = n(544105),
     f = n(985018),
     h = n(839549);
+
 function A(e) {
     let { platform: t } = e;
     return t === p.f$.XBOX
-        ? (0, r.jsx)(u.A, { className: h.Kk })
+        ? (0, r.jsx)(u.A, {
+              className: h.Kk,
+          })
         : t === p.f$.PLAYSTATION
-          ? (0, r.jsx)(c.A, { className: h.Kk })
+          ? (0, r.jsx)(c.A, {
+                className: h.Kk,
+            })
           : null;
 }
+
 function g(e) {
     let { voiceState: t, awaitingRemoteSessionInfo: n } = e,
         i = null != n ? (0, d.X)(n.type) : null,
@@ -42,7 +50,9 @@ function g(e) {
     return (0, r.jsxs)("div", {
         className: l()(h.zr, g ? h.jI : h.aW),
         children: [
-            (0, r.jsx)(A, { platform: u }),
+            (0, r.jsx)(A, {
+                platform: u,
+            }),
             (0, r.jsx)(s.Text, {
                 color: g ? "text-strong" : "always-white",
                 variant: "text-xs/medium",

@@ -1,4 +1,6 @@
-n.d(t, { A: () => I });
+n.d(t, {
+    A: () => I,
+});
 var r = n(627968),
     i = n(64700),
     a = n(284009),
@@ -18,6 +20,7 @@ var r = n(627968),
     b = n(978551),
     y = n(100817),
     O = n(531525);
+
 function A(e, t, n) {
     return (
         t in e
@@ -31,6 +34,7 @@ function A(e, t, n) {
         e
     );
 }
+
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -60,7 +64,12 @@ class S extends i.PureComponent {
                 e.length > 0 &&
                     (0, r.jsxs)(l.BJc, {
                         gap: 16,
-                        children: [(0, r.jsx)(m.A, { backupCodes: e }), (0, r.jsx)(l.cGx, {})],
+                        children: [
+                            (0, r.jsx)(m.A, {
+                                backupCodes: e,
+                            }),
+                            (0, r.jsx)(l.cGx, {}),
+                        ],
                     }),
                 t &&
                     (0, r.jsx)(c.x, {
@@ -93,6 +102,7 @@ class S extends i.PureComponent {
             : (0, r.jsx)(b.A, {});
     }
 }
+
 function I(e) {
     let t = (0, o.bG)([p.default], () => p.default.getCurrentUser());
     s()(null != t, "TwoFactorAuth: currentUser cannot be undefined");
@@ -100,5 +110,14 @@ function I(e) {
         togglingSMS: f.A.togglingSMS,
         hasTOTPEnabled: d.default.hasTOTPEnabled(),
     }));
-    return (0, r.jsx)(S, v({ currentUser: t }, n, e));
+    return (0, r.jsx)(
+        S,
+        v(
+            {
+                currentUser: t,
+            },
+            n,
+            e,
+        ),
+    );
 }

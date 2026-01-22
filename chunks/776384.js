@@ -1,4 +1,7 @@
-n.d(t, { a: () => O }), n(896048);
+n.d(t, {
+    a: () => O,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(110259),
@@ -15,6 +18,7 @@ var r = n(627968),
     m = n(652215),
     g = n(985018),
     E = n(149650);
+
 function b(e) {
     let { channel: t, type: n } = e,
         r = (0, s.bG)([p.A], () => {
@@ -23,11 +27,16 @@ function b(e) {
             return null != (e = null == n ? void 0 : n.isForumLikeChannel()) && e;
         }),
         i = [h.oU.NORMAL, h.oU.SIDEBAR].includes(n);
-    return { shouldShow: t.isThread() && !r && i };
+    return {
+        shouldShow: t.isThread() && !r && i,
+    };
 }
+
 function y(e) {
     let { thread: t, pendingScheduledMessage: n } = e,
-        h = (0, d.Vp)({ location: "ThreadsAlsoSendToChannelArea" }),
+        h = (0, d.Vp)({
+            location: "ThreadsAlsoSendToChannelArea",
+        }),
         [b, y] = (0, s.yK)([p.A, f.A], () => [
             t.isThread() ? p.A.getChannel(t.parent_id) : null,
             f.A.getAlsoSendToChannel(t.id),
@@ -51,7 +60,9 @@ function y(e) {
             name: a.ImpressionNames.MESSAGE_ALSO_SEND_TO_CHANNEL,
             type: a.ImpressionTypes.VIEW,
         },
-        { disableTrack: null == b || !h.enabled },
+        {
+            disableTrack: null == b || !h.enabled,
+        },
         [b, h.enabled],
     );
     let A = null != n;
@@ -107,6 +118,7 @@ function y(e) {
         }),
     });
 }
+
 function O(e) {
     let { channel: t, type: n, pendingScheduledMessage: i } = e,
         { shouldShow: a } = b({

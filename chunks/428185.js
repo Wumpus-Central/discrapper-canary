@@ -1,4 +1,7 @@
-r.d(t, { default: () => s }), r(896048);
+r.d(t, {
+    default: () => s,
+}),
+    r(896048);
 var n = r(627968),
     o = r(64700),
     c = r(421380),
@@ -94,7 +97,9 @@ let s = function (e) {
             {
                 children: (0, n.jsx)(i.Text, {
                     variant: "text-sm/normal",
-                    children: p.intl.format(p.t["6l2osp"], { applicationName: b.name }),
+                    children: p.intl.format(p.t["6l2osp"], {
+                        applicationName: b.name,
+                    }),
                 }),
             }),
         Object.getOwnPropertyDescriptors

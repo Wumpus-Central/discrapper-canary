@@ -1,4 +1,8 @@
-r.d(t, { default: () => O }), r(896048), r(228524);
+r.d(t, {
+    default: () => O,
+}),
+    r(896048),
+    r(228524);
 var n = r(627968),
     a = r(64700),
     l = r(512750),
@@ -16,6 +20,7 @@ var n = r(627968),
     x = r(333354),
     g = r(985018),
     h = r(712957);
+
 function O(e) {
     var t, r;
     let { guildId: O, powerup: y } = e,
@@ -54,7 +59,9 @@ function O(e) {
         w = a.useMemo(() => {
             switch (y.skuId) {
                 case l.SL:
-                    return (0, n.jsx)(f.L, { guildId: O });
+                    return (0, n.jsx)(f.L, {
+                        guildId: O,
+                    });
                 case l.aN:
                     return (0, n.jsx)(f.T, {});
                 case l.FB:
@@ -117,7 +124,9 @@ function O(e) {
                                 children: [
                                     (0, n.jsx)(c.hLv, {
                                         className: h.UZ,
-                                        children: (0, n.jsx)(b.l, { powerup: y }),
+                                        children: (0, n.jsx)(b.l, {
+                                            powerup: y,
+                                        }),
                                     }),
                                     (0, n.jsxs)("div", {
                                         className: h.hQ,
@@ -139,7 +148,9 @@ function O(e) {
                                                         level: A.title,
                                                     }),
                                                 }),
-                                            (0, n.jsx)(p.F, { powerup: y }),
+                                            (0, n.jsx)(p.F, {
+                                                powerup: y,
+                                            }),
                                             null != _ &&
                                                 (0, n.jsx)(c.Text, {
                                                     className: h.z3,

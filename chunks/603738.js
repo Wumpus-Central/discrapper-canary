@@ -1,4 +1,8 @@
-a.d(t, { A: () => h }), a(896048), a(228524);
+a.d(t, {
+    A: () => h,
+}),
+    a(896048),
+    a(228524);
 var n = a(627968),
     l = a(64700),
     i = a(284009),
@@ -15,6 +19,7 @@ var n = a(627968),
     p = a(204925),
     E = a(985018),
     N = a(216344);
+
 function h(e) {
     let { onComplete: t, onClose: a } = e,
         [i, h] = l.useState(null),
@@ -72,7 +77,9 @@ function h(e) {
                       color: "text-default",
                       className: N.h_,
                       variant: "text-md/normal",
-                      children: E.intl.format(E.t.fa8kW1, { helpURL: _.A.getArticleURL(m.MVz.AGE_GATE) }),
+                      children: E.intl.format(E.t.fa8kW1, {
+                          helpURL: _.A.getArticleURL(m.MVz.AGE_GATE),
+                      }),
                   }),
                   (0, n.jsx)(d.wXn, {
                       theme: m.NJ8.LIGHT,

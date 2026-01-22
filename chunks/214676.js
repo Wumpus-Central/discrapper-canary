@@ -22,6 +22,7 @@ var n = r(627968),
     h = r(985018),
     O = r(273034),
     y = r(191017);
+
 function v() {
     var e;
     let [t, r] = a.useState(() => {
@@ -84,7 +85,10 @@ function v() {
                             }
                             return e;
                         })({}, t)),
-                        (a = a = { primary_color: e }),
+                        (a = a =
+                            {
+                                primary_color: e,
+                            }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(a))
                             : (function (e, t) {
@@ -111,6 +115,7 @@ function v() {
         ],
     });
 }
+
 function _(e) {
     let { guildId: t } = e,
         [r, l] = a.useState(g.bl.HEART),
@@ -130,7 +135,9 @@ function _(e) {
                 children: (0, n.jsx)(b.V, {
                     avatar: o.A,
                     username: "Roka",
-                    usernameStyle: { color: "var(--brand-400)" },
+                    usernameStyle: {
+                        color: "var(--brand-400)",
+                    },
                     message: h.intl.string(h.t["6OSasb"]),
                     decorations: (0, n.jsx)(f.M, {
                         guildId: t,

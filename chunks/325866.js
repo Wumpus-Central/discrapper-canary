@@ -1,7 +1,10 @@
-r.d(t, { A: () => p }), r(896048);
+r.d(t, {
+    A: () => p,
+}),
+    r(896048);
 var n = r(627968),
     i = r(64700),
-    s = r(432022),
+    s = r(108531),
     a = r(397927),
     o = r(950191),
     l = r(840065),
@@ -12,6 +15,7 @@ var n = r(627968),
     g = r(652215),
     f = r(985018),
     E = r(299043);
+
 function p(e) {
     var t, r;
     let { userRef: p, usernameSuggestionLoading: h = !1, oneClickFlow: O = !1 } = e,
@@ -62,7 +66,9 @@ function p(e) {
                     };
                 case m.iv.PREVIEW:
                     return {
-                        header: f.intl.formatToPlainString(f.t.XDHrcj, { displayName: t }),
+                        header: f.intl.formatToPlainString(f.t.XDHrcj, {
+                            displayName: t,
+                        }),
                         subtitle: f.intl.format(f.t.bWE0ZD, {
                             onClick: () => {
                                 r(), (0, l.openUserSettings)();
@@ -73,7 +79,9 @@ function p(e) {
                     return {
                         header: f.intl.string(f.t.F7T4db),
                         subtitle: f.intl.formatToPlainString(f.t.Z8F83a, {}),
-                        link: f.intl.format(f.t.i2vB8z, { helpdeskArticle: c.A.getArticleURL(g.MVz.POMELO_FAQ) }),
+                        link: f.intl.format(f.t.i2vB8z, {
+                            helpdeskArticle: c.A.getArticleURL(g.MVz.POMELO_FAQ),
+                        }),
                     };
                 default:
                     return {

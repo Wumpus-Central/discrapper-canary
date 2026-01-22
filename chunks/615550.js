@@ -28,6 +28,7 @@ var r = (function (e) {
             e
         );
     })({});
+
 function s(e) {
     return e.includes("LEGITIMATE_ACTIVITY")
         ? "LEGITIMATE_ACTIVITY"

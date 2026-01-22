@@ -1,1 +1,3 @@
-e.exports = { W: "_92ad4876ab6480f6" };
+e.exports = {
+    W: "_92ad4876ab6480f6",
+};

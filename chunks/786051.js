@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968),
     l = n(64700),
     i = n(607399),
@@ -26,7 +28,10 @@ let d = function (e) {
         } = e,
         x = (0, a.bG)([c.Ay], () => c.Ay.getState().isMembersOpen);
     if (i.Fr && x) return null;
-    if (null == t) return (0, r.jsx)(r.Fragment, { children: l.Children.only(O) });
+    if (null == t)
+        return (0, r.jsx)(r.Fragment, {
+            children: l.Children.only(O),
+        });
     let E = null;
     return (
         null != g

@@ -1,8 +1,11 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 var r = n(627968);
 n(64700);
 var l = n(397927),
     i = n(666384);
+
 function a(e) {
     let { userCount: t } = e;
     return (0, r.jsxs)("div", {

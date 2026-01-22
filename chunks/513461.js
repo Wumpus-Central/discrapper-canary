@@ -28,9 +28,11 @@ var r = (function (e) {
             e
         );
     })({});
+
 function s(e) {
     return null != e && "TERMS" === e.field_type;
 }
+
 function o(e) {
     return null != e && e.some((e) => !s(e));
 }

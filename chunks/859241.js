@@ -1,7 +1,11 @@
-n.d(t, { A: () => S }), n(896048);
+n.d(t, {
+    A: () => S,
+}),
+    n(896048);
 var r,
     i = n(311907),
     a = n(73153);
+
 function s(e, t, n) {
     return (
         t in e
@@ -22,6 +26,7 @@ let o = {},
     d = !1,
     f = null,
     p = null;
+
 function _(e) {
     let { guildId: t, appliedBoosts: n } = e;
     o[t] = {
@@ -29,34 +34,42 @@ function _(e) {
         lastFetchedAt: Date.now(),
     };
 }
+
 function h(e) {
     let { appliedGuildBoosts: t } = e;
     (u = !1), (c = t);
 }
+
 function m(e) {
     let { endsAt: t } = e;
     l = t;
 }
+
 function g() {
     d = !0;
 }
+
 function E(e) {
     let { appliedGuildBoost: t } = e,
         n = new Set(t.map((e) => e.id));
     (c = [...t, ...c.filter((e) => !n.has(e.id))]), (f = null), (d = !1);
 }
+
 function b(e) {
     let { error: t } = e;
     (d = !1), (f = t);
 }
+
 function y(e) {
     let { boostId: t } = e;
     (c = c.filter((e) => e.id !== t)), (d = !1);
 }
+
 function O(e) {
     let { error: t } = e;
     (d = !1), (p = t);
 }
+
 function A() {
     u = !0;
 }

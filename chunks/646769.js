@@ -10,6 +10,7 @@ var r = n(311907),
     s = n(594061),
     o = n(617617),
     l = n(355097);
+
 function c(e, t, n, i) {
     let { delay: a = l.Sb.INFREQUENT_USER_ACTION, comparator: c = (e, t) => e === t } =
             arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
@@ -32,6 +33,7 @@ function c(e, t, n, i) {
         useSetting: d,
     };
 }
+
 function u(e, t, n) {
     let s = () => {
         var r;
@@ -53,12 +55,19 @@ function u(e, t, n) {
                 ? e.updateSetting(r)
                 : (i.h.dispatch({
                       type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE",
-                      changes: { [t]: { settings: { [n]: r } } },
+                      changes: {
+                          [t]: {
+                              settings: {
+                                  [n]: r,
+                              },
+                          },
+                      },
                   }),
                   Promise.resolve()),
         ),
     };
 }
+
 function d(e, t, n, r) {
     let a = () => {
         var t;
@@ -83,6 +92,7 @@ function d(e, t, n, r) {
         ),
     };
 }
+
 function f(e) {
     let {
         baseSetting: t,
@@ -105,6 +115,7 @@ function f(e) {
         updateSetting: (e) => t.updateSetting(e),
     };
 }
+
 function p(e, t) {
     return function (n) {
         return "function" == typeof n ? t(n(e())) : t(n);

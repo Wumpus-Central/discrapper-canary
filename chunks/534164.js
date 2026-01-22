@@ -1,5 +1,8 @@
-i.d(o, { init: () => t });
+i.d(o, {
+    init: () => t,
+});
 var n = i(461789);
+
 function t() {
     window.DiscordDevSession = {
         start: s,
@@ -7,6 +10,7 @@ function t() {
         started: !1,
     };
 }
+
 function s() {
     null == window.GLOBAL_ENV.DEV_SESSION_KEY
         ? console.log("Meticulous token not found")
@@ -17,6 +21,7 @@ function s() {
           null != window.DiscordDevSession && (window.DiscordDevSession.started = !0),
           console.log("Meticulous session recording started"));
 }
+
 function r() {
     (0, n.B5)(), null != window.DiscordDevSession && (window.DiscordDevSession.started = !1);
 }

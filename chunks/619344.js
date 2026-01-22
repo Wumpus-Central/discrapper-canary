@@ -1,9 +1,12 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(627968);
 n(64700);
 var l = n(397927),
     i = n(709562),
     a = n(985018);
+
 function s(e) {
     let { popoutWindowAlwaysOnTop: t, onToggleStayOnTop: n } = e,
         s = (function (e, t) {

@@ -1,4 +1,6 @@
-n.d(i, { A: () => N });
+n.d(i, {
+    A: () => N,
+});
 var t = n(627968);
 n(64700);
 var a = n(503698),
@@ -12,6 +14,7 @@ var a = n(503698),
     m = n(504589),
     g = n(299916),
     p = n(83079);
+
 function N(e) {
     let { className: i, onNext: n, onClose: a } = e,
         N = (0, d.e)();

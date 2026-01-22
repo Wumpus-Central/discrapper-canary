@@ -1,1 +1,3 @@
-e.exports = { q: "f99f867a9ed382e5" };
+e.exports = {
+    q: "f99f867a9ed382e5",
+};

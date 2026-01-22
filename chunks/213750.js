@@ -1,4 +1,7 @@
-n.d(t, { i: () => Q }), n(896048);
+n.d(t, {
+    i: () => Q,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -32,6 +35,7 @@ var r = n(627968),
     L = n(49999),
     R = n(985018),
     D = n(134848);
+
 function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -57,6 +61,7 @@ function M(e) {
     }
     return e;
 }
+
 function k(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -75,6 +80,7 @@ function k(e, t) {
         e
     );
 }
+
 function U(e, t) {
     if (null == e) return {};
     var n,
@@ -109,7 +115,12 @@ let G = (e) => {
         return (0, r.jsx)("div", {
             className: D.newBadge,
             children: (0, r.jsx)(c.Exy, {
-                type: null != n && "" !== n ? { text: n } : "new",
+                type:
+                    null != n && "" !== n
+                        ? {
+                              text: n,
+                          }
+                        : "new",
                 variant: "expressive",
                 icon: i,
             }),
@@ -199,7 +210,13 @@ let G = (e) => {
             ],
         });
     },
-    H = (e) => (0, r.jsx)(B, k(M({}, e), { children: (0, r.jsx)(G, {}) })),
+    H = (e) =>
+        (0, r.jsx)(
+            B,
+            k(M({}, e), {
+                children: (0, r.jsx)(G, {}),
+            }),
+        ),
     F = i.memo(function (e) {
         var t;
         let { displayOptions: n, assetId: i, reducedMotion: l = !1 } = e,
@@ -317,7 +334,9 @@ let G = (e) => {
                                     },
                                     S,
                                 ),
-                                { icon: v.entryPointIcon },
+                                {
+                                    icon: v.entryPointIcon,
+                                },
                             ),
                             e,
                         ),
@@ -328,7 +347,9 @@ let G = (e) => {
                                 (0, r.jsx)("div", {
                                     ref: L,
                                     className: D.marketingButtonBackgroundNew,
-                                    style: { background: y },
+                                    style: {
+                                        background: y,
+                                    },
                                     children:
                                         null != O &&
                                         (0, r.jsx)("img", {
@@ -361,7 +382,13 @@ let G = (e) => {
                 return (0, r.jsxs)(f.Text, {
                     variant: "text-sm/medium",
                     className: D.marketingBadgeTooltipContent,
-                    children: [null != n && (0, r.jsx)(h.A, { emojiName: n }), t.title()],
+                    children: [
+                        null != n &&
+                            (0, r.jsx)(h.A, {
+                                emojiName: n,
+                            }),
+                        t.title(),
+                    ],
                 });
             }, [t]);
         return (0, r.jsx)(f.STz, {
@@ -426,7 +453,12 @@ let G = (e) => {
                                 (0, r.jsx)("div", {
                                     ref: u,
                                     className: D.marketingButtonBackgroundNew,
-                                    style: null != E ? { background: E } : void 0,
+                                    style:
+                                        null != E
+                                            ? {
+                                                  background: E,
+                                              }
+                                            : void 0,
                                     children:
                                         null != _ &&
                                         (0, r.jsx)("img", {
@@ -493,15 +525,43 @@ let G = (e) => {
         if (null != a)
             switch (a.type) {
                 case x.FF.TOOLTIP:
-                    return (0, r.jsx)(z, k(M({}, p), { displayOptions: a }));
+                    return (0, r.jsx)(
+                        z,
+                        k(M({}, p), {
+                            displayOptions: a,
+                        }),
+                    );
                 case x.FF.COACHTIP:
-                    return (0, r.jsx)(K, k(M({}, p), { displayOptions: a }));
+                    return (0, r.jsx)(
+                        K,
+                        k(M({}, p), {
+                            displayOptions: a,
+                        }),
+                    );
                 case x.FF.BADGE:
                     return (0, r.jsx)(H, M({}, p));
                 case x.FF.COACHMARK:
-                    return (0, r.jsx)(W, k(M({ dismissContent: s }, p), { displayOptions: a }));
+                    return (0, r.jsx)(
+                        W,
+                        k(
+                            M(
+                                {
+                                    dismissContent: s,
+                                },
+                                p,
+                            ),
+                            {
+                                displayOptions: a,
+                            },
+                        ),
+                    );
             }
         return c === d.M.WISHLIST_SHOP_BUTTON_POPOVER
-            ? (0, r.jsx)(q, k(M({}, p), { dismissContent: u }))
+            ? (0, r.jsx)(
+                  q,
+                  k(M({}, p), {
+                      dismissContent: u,
+                  }),
+              )
             : (0, r.jsx)(B, M({}, p));
     };

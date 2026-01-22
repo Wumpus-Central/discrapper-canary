@@ -17,6 +17,7 @@ var r = n(627968),
     _ = n(985018),
     h = n(679740),
     m = n(206314);
+
 function g(e, t) {
     return e.type === p.lAJ.VOICE_HANGOUT_INVITE
         ? ""
@@ -24,6 +25,7 @@ function g(e, t) {
           ? _.intl.string(_.t.JOtgSw)
           : t;
 }
+
 function E(e) {
     var t;
     let { className: n, message: a, children: o, content: c, onUpdate: _, contentRef: E, compact: b } = e,
@@ -35,7 +37,9 @@ function E(e) {
     i.useLayoutEffect(() => {
         S.current ? null != _ && _() : (S.current = !0);
     }, [_, a.content, c, v, o]);
-    let I = u._.useConfig({ location: "MessageContent" }).alignMessagesStart;
+    let I = u._.useConfig({
+        location: "MessageContent",
+    }).alignMessagesStart;
     return (0, r.jsxs)("div", {
         id: (0, d.CJ)(a),
         ref: E,
@@ -57,6 +61,7 @@ function E(e) {
         ],
     });
 }
+
 function b(e, t) {
     var n, r;
     let { message: i } = t,

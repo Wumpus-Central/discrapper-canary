@@ -1,4 +1,7 @@
-n.d(t, { A: () => E }), n(733351);
+n.d(t, {
+    A: () => E,
+}),
+    n(733351);
 var r = n(627968);
 n(64700);
 var l = n(503698),
@@ -19,6 +22,7 @@ var l = n(503698),
     A = n(985018),
     v = n(852620);
 let j = ["slight_smile", "frowning", "smile", "stuck_out_tongue", "wink"];
+
 function h(e) {
     let { emoji: t, isFocused: n } = e,
         { animated: l, src: o, surrogates: c } = t;
@@ -36,8 +40,12 @@ function h(e) {
             spacing: 16,
             forceOpen: n,
             children: (0, r.jsx)("div", {
-                "aria-label": A.intl.formatToPlainString(A.t["/iYSo6"], { emojiName: t.name }),
-                className: i()(v.x6, { [v.in]: n }),
+                "aria-label": A.intl.formatToPlainString(A.t["/iYSo6"], {
+                    emojiName: t.name,
+                }),
+                className: i()(v.x6, {
+                    [v.in]: n,
+                }),
                 children:
                     null == o || "" === o.trim()
                         ? (0, r.jsx)("span", {
@@ -53,6 +61,7 @@ function h(e) {
         })
     );
 }
+
 function E(e, t) {
     let n = (0, s.D6)(t.guild_id).filter((e) => {
         var n;

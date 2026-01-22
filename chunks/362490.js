@@ -20,6 +20,7 @@ var h = (function (e) {
     return (e.RPC = "rpc"), (e.WEB = "web"), e;
 })({});
 let m = ["rpc", "web"];
+
 function g(e) {
     var t, n, i, a, s, o;
     let l = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
@@ -54,9 +55,11 @@ function g(e) {
             : void 0,
     };
 }
+
 function E(e) {
     return s.A.listenIsSubscribed(e);
 }
+
 function b(e, t) {
     var n;
     let u = (0, i.A)(null != (n = null == t ? void 0 : t.allowedFlows) ? n : m),
@@ -82,7 +85,9 @@ function b(e, t) {
                             type: "rpc",
                             initiate(t) {
                                 var n;
-                                let r = c.A.getConfig({ location: "useStartAuthorize" }).enabled;
+                                let r = c.A.getConfig({
+                                    location: "useStartAuthorize",
+                                }).enabled;
                                 s.A.dispatchToSubscriptions(_, (t) => t.socket.application.id === e.application.id, {}),
                                     null == (n = t.onConfirm) || n.call(t),
                                     r &&
@@ -99,7 +104,9 @@ function b(e, t) {
                     t.push({
                         type: "web",
                         initiate(t) {
-                            let r = c.A.getConfig({ location: "useStartAuthorize" }).enabled;
+                            let r = c.A.getConfig({
+                                location: "useStartAuthorize",
+                            }).enabled;
                             (0, l.h)({
                                 href: n,
                                 onConfirm: () => {
@@ -125,6 +132,7 @@ function b(e, t) {
         [d, u],
     );
 }
+
 function y(e, t) {
     let n = b(
         r.useMemo(() => (null != e ? [e] : []), [e]),

@@ -1,4 +1,6 @@
-t.d(e, { default: () => b });
+t.d(e, {
+    default: () => b,
+});
 var r = t(627968);
 t(64700);
 var a = t(397927),
@@ -38,7 +40,9 @@ let b = (0, l.A)(
                               }),
                     ],
                 }),
-                (0, r.jsx)(a.rXV, { children: s }),
+                (0, r.jsx)(a.rXV, {
+                    children: s,
+                }),
             ],
         });
     },

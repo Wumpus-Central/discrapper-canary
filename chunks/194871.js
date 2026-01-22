@@ -1,4 +1,9 @@
-n.d(t, { A: () => J }), n(896048), n(65821), n(142703);
+n.d(t, {
+    A: () => J,
+}),
+    n(896048),
+    n(65821),
+    n(142703);
 var r,
     i = n(735438),
     a = n.n(i),
@@ -16,6 +21,7 @@ var r,
     g = n(966846),
     E = n(775228),
     b = n(652215);
+
 function y(e, t, n) {
     return (
         t in e
@@ -29,6 +35,7 @@ function y(e, t, n) {
         e
     );
 }
+
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -45,6 +52,7 @@ function O(e) {
     }
     return e;
 }
+
 function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -57,6 +65,7 @@ function A(e, t) {
     }
     return n;
 }
+
 function v(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -82,12 +91,15 @@ let S = 200,
     j = [],
     M = [],
     k = !1;
+
 function U() {
     w = !1;
 }
+
 function G(e, t) {
     return t.some((t) => t.platforms.includes(e));
 }
+
 function V(e) {
     let {
             build_id: t,
@@ -207,21 +219,25 @@ function V(e) {
     }
     throw Error("Invalid Dispatch State. state=".concat(e.state.type));
 }
+
 function F(e) {
     return e.type === b.WTw.INSTALLING || e.type === b.WTw.UPDATING || e.type === b.WTw.REPAIRING
         ? e.networkProgress
         : null;
 }
+
 function B(e) {
     return e.type === b.WTw.INSTALLING || e.type === b.WTw.UPDATING || e.type === b.WTw.REPAIRING
         ? e.diskProgress
         : null;
 }
+
 function H(e) {
     return e.type === b.WTw.INSTALLING || e.type === b.WTw.UPDATING || e.type === b.WTw.REPAIRING
         ? e.readerProgress
         : null;
 }
+
 function Y(e) {
     j = (j = [
         {
@@ -231,6 +247,7 @@ function Y(e) {
         ...j,
     ]).slice(0, I);
 }
+
 function W(e) {
     let t = Date.now(),
         n = t - T;
@@ -247,6 +264,7 @@ function W(e) {
             return t >= n;
         });
 }
+
 function K(e) {
     M = (M = [
         {
@@ -259,11 +277,13 @@ function K(e) {
 let z = a().throttle(Y, S),
     q = a().throttle(W, S),
     X = a().throttle(K, S);
+
 function Z(e, t, n) {
     let r = n(C[t]),
         i = n(e[t]);
     return null != r && null != i && 0 !== r ? Math.max(i - r, 0) : 0;
 }
+
 function Q(e) {
     let { state: t } = e;
     w = !0;

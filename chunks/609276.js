@@ -1,9 +1,13 @@
 let r, i, l;
-n.d(t, { A: () => p }), n(896048);
+n.d(t, {
+    A: () => p,
+}),
+    n(896048);
 var a,
     s,
     o = n(311907),
     c = n(73153);
+
 function u() {
     (i = {}), (r = {}), (l = new Set());
 }
@@ -14,7 +18,7 @@ class d extends (a = o.Ay.Store) {
     }
     shouldFetchStatisticsForApplication(e) {
         let t = i[e];
-        return !l.has(e) && (null == t || Date.now() - t > 3600000);
+        return !l.has(e) && (null == t || Date.now() - t > 36e5);
     }
 }
 (s = "displayName") in d

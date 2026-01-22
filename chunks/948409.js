@@ -1,4 +1,9 @@
-n.d(t, { F: () => C }), n(65821), n(896048), n(747238);
+n.d(t, {
+    F: () => C,
+}),
+    n(65821),
+    n(896048),
+    n(747238);
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -34,21 +39,26 @@ async function A(e) {
     ).body;
 }
 async function v(e, t) {
-    let n = { billing_facet: { payment_source_id: t } };
+    let n = {
+        billing_facet: {
+            payment_source_id: t,
+        },
+    };
     await s.Bo.patch({
         url: g.Rsh.ORDER_UPDATE(e),
         body: n,
         rejectWithError: !0,
     });
 }
+
 function S(e, t, n, r) {
     var i;
     let a = e.billing_facet,
         s = null == a || null == (i = a.order_signing_deferral_context) ? void 0 : i.payment_redirect_context,
         o = null == s ? void 0 : s.redirect_url;
     null != o && window.open(o);
-    let l = 3000,
-        c = 30000,
+    let l = 3e3,
+        c = 3e4,
         u = Date.now(),
         d = null,
         f = () => {
@@ -107,6 +117,7 @@ function S(e, t, n, r) {
         n("Failed to start polling order status!\nOrder ID: ".concat(t, "\nError: ").concat(r));
     });
 }
+
 function I(e, t, n, r) {
     (async () => {
         var i, a, s, o;
@@ -121,7 +132,9 @@ function I(e, t, n, r) {
             if (null == c) throw Error("Stripe not loaded");
             let u = l.client_secret;
             if (null == u || "" === u) throw Error("No client secret found in 3DS context");
-            let { error: d, paymentIntent: f } = await c.confirmCardPayment(u, { payment_method: l.payment_method_id });
+            let { error: d, paymentIntent: f } = await c.confirmCardPayment(u, {
+                payment_method: l.payment_method_id,
+            });
             if (null != d) throw Error("3DS authentication failed: ".concat(d.message));
             if (null == f) throw Error("No payment intent returned from 3DS authentication");
             let p = null != (i = null != (a = e.id) ? a : t) ? i : "Unknown";
@@ -133,6 +146,7 @@ function I(e, t, n, r) {
         }
     })();
 }
+
 function T() {
     let [e, t] = i.useState(!1),
         [n, s] = i.useState(!1),
@@ -227,7 +241,7 @@ function T() {
                     return;
                 }
                 let t = e.errors[0];
-                1000 === t
+                1e3 === t
                     ? (_(
                           "Order signing in progress!\nOrder ID: ".concat(
                               m,
@@ -271,7 +285,9 @@ function T() {
                         label: "Configuration",
                         children: [
                             (0, r.jsx)("div", {
-                                style: { marginBottom: "16px" },
+                                style: {
+                                    marginBottom: "16px",
+                                },
                                 children: (0, r.jsx)(l.l6P, {
                                     selectionMode: "single",
                                     value: T,
@@ -291,7 +307,9 @@ function T() {
                                 }),
                             }),
                             (0, r.jsxs)("div", {
-                                style: { marginBottom: "16px" },
+                                style: {
+                                    marginBottom: "16px",
+                                },
                                 children: [
                                     (0, r.jsx)(l.l6P, {
                                         selectionMode: "single",

@@ -1,11 +1,17 @@
 var n;
+
 function r(e) {
     for (let t = 0; t < e.length; t++) e[t] = a(e[t]);
     return !0;
 }
+
 function i(e) {
     let [t, i, a, s, o] = e;
-    for (let e in a) r(a[e]), (a[e] = { value: a[e] });
+    for (let e in a)
+        r(a[e]),
+            (a[e] = {
+                value: a[e],
+            });
     return t === n.Plural
         ? {
               type: t,
@@ -21,6 +27,7 @@ function i(e) {
               offset: s,
           };
 }
+
 function a(e) {
     if ("string" == typeof e)
         return {
@@ -64,6 +71,7 @@ function a(e) {
             throw Error(`FormatJS keyless JSON encountered an unknown type: ${a}`);
     }
 }
+
 function s(e) {
     return "string" == typeof e
         ? a(e)
@@ -75,6 +83,7 @@ function s(e) {
               ? (r(e), e)
               : a(e);
 }
+
 function o(e) {
     if (Array.isArray(e)) return e.map((e) => o(e));
     switch (e.type) {
@@ -102,10 +111,13 @@ function o(e) {
             return [e.type, e.value, o(e.children), o(e.control)];
     }
 }
+
 function l(e) {
     return "string" == typeof e || (!!Array.isArray(e) && (Array.isArray(e[0]) || "string" == typeof e[0]));
 }
-Object.defineProperty(t, "__esModule", { value: !0 }),
+Object.defineProperty(t, "__esModule", {
+    value: !0,
+}),
     (t.FORMAT_JS_POUND = t.FormatJsNodeType = void 0),
     (t.hydrateFormatJsAst = s),
     (t.compressFormatJsToAst = o),
@@ -121,4 +133,6 @@ Object.defineProperty(t, "__esModule", { value: !0 }),
             (e[(e.Pound = 7)] = "Pound"),
             (e[(e.Tag = 8)] = "Tag");
     })(n || (t.FormatJsNodeType = n = {})),
-    (t.FORMAT_JS_POUND = Object.freeze({ type: 7 }));
+    (t.FORMAT_JS_POUND = Object.freeze({
+        type: 7,
+    }));

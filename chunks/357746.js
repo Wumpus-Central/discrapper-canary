@@ -1,4 +1,7 @@
-n.d(t, { A: () => E }), n(896048);
+n.d(t, {
+    A: () => E,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -17,6 +20,7 @@ var r = n(627968),
     A = n(333354),
     y = n(985018),
     O = n(408392);
+
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,6 +46,7 @@ function j(e) {
     }
     return e;
 }
+
 function v(e) {
     let { indicator: t } = e;
     if (null == t) return null;
@@ -187,17 +192,23 @@ let x = {
                                 sceneSegments: x,
                                 importData: () => n.e("67807").then(n.t.bind(n, 217762, 19)),
                                 onScenePlay: R,
-                                rendererSettings: { preserveAspectRatio: "xMidYMid slice" },
+                                rendererSettings: {
+                                    preserveAspectRatio: "xMidYMid slice",
+                                },
                             }),
                         }),
                     text: (0, r.jsx)("span", {
-                        className: a()({ [O.A7]: (null == E ? void 0 : E.showUnread) === !0 }),
+                        className: a()({
+                            [O.A7]: (null == E ? void 0 : E.showUnread) === !0,
+                        }),
                         children: y.intl.string(A.default.yv3DJJ),
                     }),
                     selected: i,
                     onClick: _,
                     showUnread: (null == E ? void 0 : E.showUnread) === !0,
-                    trailing: (0, r.jsx)(v, { indicator: null == E ? void 0 : E.indicator }),
+                    trailing: (0, r.jsx)(v, {
+                        indicator: null == E ? void 0 : E.indicator,
+                    }),
                 }),
                 T(),
             ],

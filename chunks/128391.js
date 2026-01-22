@@ -11,6 +11,7 @@ function r(e, t, n) {
         e
     );
 }
+
 function i(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -27,6 +28,7 @@ function i(e) {
     }
     return e;
 }
+
 function a(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -39,6 +41,7 @@ function a(e, t) {
     }
     return n;
 }
+
 function s(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -50,32 +53,40 @@ function s(e, t) {
         e
     );
 }
+
 function o(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         { onBeforeBatch: r } = n,
         a = new Set();
+
     function o(e) {
         null != e.channel_id && a.has(e.channel_id) && t(e);
     }
+
     function l() {
         a.clear();
     }
+
     function c(e) {
         let { channelId: t } = e;
         null != t && a.add(t);
     }
+
     function u(e) {
         let { message: t } = e;
         null != t.channel_id && a.has(t.channel_id) && (null == r || r(), o(t));
     }
+
     function d(e) {
         let { channelId: t, messages: n } = e;
         a.add(t), null == r || r(), n.forEach((e) => o(e));
     }
+
     function f(e) {
         let { messages: n } = e;
         null == r || r(), n.forEach((e) => t(e));
     }
+
     function p(e) {
         let { pins: n } = e;
         null == r || r(),
@@ -84,6 +95,7 @@ function o(e, t) {
                 return t(n);
             });
     }
+
     function _(e) {
         let { data: n } = e;
         null == r || r(),
@@ -113,4 +125,7 @@ function o(e, t) {
         },
     });
 }
-n.d(t, { A: () => o }), n(896048);
+n.d(t, {
+    A: () => o,
+}),
+    n(896048);

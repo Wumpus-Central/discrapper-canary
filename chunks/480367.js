@@ -1,4 +1,6 @@
-n.d(t, { D: () => d });
+n.d(t, {
+    D: () => d,
+});
 var r = n(56636),
     i = n(90727),
     a = n(222367),
@@ -6,6 +8,7 @@ var r = n(56636),
     o = n(211169),
     l = n(201348),
     c = n(727049);
+
 function u(e) {
     var t = this;
     return function (n) {
@@ -70,7 +73,13 @@ var d = (function (e) {
         (t.prototype.valueOf = function () {
             var e = [];
             return (
-                !this._rrule.length && this._dtstart && (e = e.concat((0, c.F)({ dtstart: this._dtstart }))),
+                !this._rrule.length &&
+                    this._dtstart &&
+                    (e = e.concat(
+                        (0, c.F)({
+                            dtstart: this._dtstart,
+                        }),
+                    )),
                 this._rrule.forEach(function (t) {
                     e = e.concat(t.toString().split("\n"));
                 }),
@@ -116,14 +125,17 @@ var d = (function (e) {
         t
     );
 })(i.p3);
+
 function f(e, t) {
     if (!(e instanceof i.p3)) throw TypeError(String(e) + " is not RRule instance");
     (0, s.mK)(t.map(String), String(e)) || t.push(e);
 }
+
 function p(e, t) {
     if (!(e instanceof Date)) throw TypeError(String(e) + " is not Date instance");
     (0, s.mK)(t.map(Number), Number(e)) || (t.push(e), (0, a.di)(t));
 }
+
 function _(e, t, n) {
     var r = !n || "UTC" === n.toUpperCase(),
         i = r ? "".concat(e, ":") : "".concat(e, ";TZID=").concat(n, ":"),

@@ -1,4 +1,6 @@
-n.d(t, { V: () => a });
+n.d(t, {
+    V: () => a,
+});
 let r = new Set(["Arab", "Syrc", "Samr", "Mand", "Thaa", "Mend", "Nkoo", "Adlm", "Rohg", "Hebr"]),
     i = new Set([
         "ae",
@@ -21,6 +23,7 @@ let r = new Set(["Arab", "Syrc", "Samr", "Mand", "Thaa", "Mend", "Nkoo", "Adlm",
         "ur",
         "yi",
     ]);
+
 function a(e) {
     if (Intl.Locale) {
         let t = new Intl.Locale(e).maximize(),

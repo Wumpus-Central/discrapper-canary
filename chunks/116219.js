@@ -1,4 +1,7 @@
-n.d(t, { A: () => h }), n(321073);
+n.d(t, {
+    A: () => h,
+}),
+    n(321073);
 var l = n(627968),
     a = n(64700),
     r = n(230109),
@@ -25,8 +28,8 @@ let h = function (e) {
             let e = [];
             return (
                 (0, s.b7)(t) && e.push(u.intl.string(u.t.LO4f0P)),
-                (0, s.K4)(t) && (0 !== e.length && e.push("\u2022"), e.push(u.intl.string(u.t["8z5B2U"]))),
-                (0, s.ME)(t) && (0 !== e.length && e.push("\u2022"), e.push(u.intl.string(u.t["5khEk8"]))),
+                (0, s.K4)(t) && (0 !== e.length && e.push("•"), e.push(u.intl.string(u.t["8z5B2U"]))),
+                (0, s.ME)(t) && (0 !== e.length && e.push("•"), e.push(u.intl.string(u.t["5khEk8"]))),
                 e
             );
         }, [t]);
@@ -39,7 +42,9 @@ let h = function (e) {
             }),
             (0, l.jsx)("div", {
                 className: p.H,
-                style: { height: 52 },
+                style: {
+                    height: 52,
+                },
                 children: (0, l.jsx)("img", {
                     src: m,
                     alt: "",

@@ -1,7 +1,11 @@
-a.d(t, { A: () => i }), a(896048);
+a.d(t, {
+    A: () => i,
+}),
+    a(896048);
 var s,
     l = a(627968),
     r = a(64700);
+
 function n(e, t, a) {
     return (
         t in e

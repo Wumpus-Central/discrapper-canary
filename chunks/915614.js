@@ -21,6 +21,7 @@ var r = n(627968),
     E = n(686189),
     b = n(985253),
     y = n(166212);
+
 function O(e, t, n) {
     return (
         t in e
@@ -34,6 +35,7 @@ function O(e, t, n) {
         e
     );
 }
+
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -50,6 +52,7 @@ function A(e) {
     }
     return e;
 }
+
 function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -62,6 +65,7 @@ function v(e, t) {
     }
     return n;
 }
+
 function S(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -73,6 +77,7 @@ function S(e, t) {
         e
     );
 }
+
 function I(e, t) {
     if (null == e) return {};
     var n,
@@ -89,6 +94,7 @@ function I(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function T(e, t) {
     if (null == e) return {};
     var n,
@@ -103,6 +109,7 @@ let C = (e) => {
     let { size: t, stroke: n } = (0, u.KjH)(e);
     return t / 2 + n;
 };
+
 function N(e) {
     var t;
     let {
@@ -183,13 +190,19 @@ function N(e) {
                             backgroundImage: null != U ? "url(".concat(U, ")") : void 0,
                             backgroundColor: "COMPLETE" !== G ? c.A.unsafe_rawColors.PRIMARY_800.css : H,
                         },
-                        children: !k && (0, g.o4)(U) && (0, r.jsx)(_.A, { className: y.pH }),
+                        children:
+                            !k &&
+                            (0, g.o4)(U) &&
+                            (0, r.jsx)(_.A, {
+                                className: y.pH,
+                            }),
                     }),
                 ],
             }),
         ],
     });
 }
+
 function R(e) {
     let { themeType: t, displayProfile: n, canUsePremiumProfileCustomization: i = !1 } = e,
         a = I(e, ["themeType", "displayProfile", "canUsePremiumProfileCustomization"]),

@@ -1,4 +1,8 @@
-n.d(t, { A: () => _ }), n(896048), n(321073);
+n.d(t, {
+    A: () => _,
+}),
+    n(896048),
+    n(321073);
 var r = n(143236),
     i = n(933958),
     l = n(969151),
@@ -10,6 +14,7 @@ var r = n(143236),
     d = n(629471),
     p = n(613057),
     f = n(652215);
+
 function h(e, t, n) {
     return (
         t in e
@@ -36,16 +41,39 @@ class _ extends r.EventEmitter {
         let [i, l] = n;
         switch (i) {
             case u.A.HANDSHAKE:
-                if (null != e) throw new c.A({ closeCode: f.YI$.CLOSE_UNSUPPORTED }, "Already connected");
+                if (null != e)
+                    throw new c.A(
+                        {
+                            closeCode: f.YI$.CLOSE_UNSUPPORTED,
+                        },
+                        "Already connected",
+                    );
                 return this.handleHandshake(t, l, r);
             case u.A.FRAME:
-                if (null == e) throw new c.A({ closeCode: f.YI$.CLOSE_UNSUPPORTED }, "Not connected");
+                if (null == e)
+                    throw new c.A(
+                        {
+                            closeCode: f.YI$.CLOSE_UNSUPPORTED,
+                        },
+                        "Not connected",
+                    );
                 return this.handleFrame(t, e, l);
             case u.A.CLOSE:
-                if (null == e) throw new c.A({ closeCode: f.YI$.CLOSE_UNSUPPORTED }, "Not connected");
+                if (null == e)
+                    throw new c.A(
+                        {
+                            closeCode: f.YI$.CLOSE_UNSUPPORTED,
+                        },
+                        "Not connected",
+                    );
                 return this.handleClose(e, l);
             default:
-                throw new c.A({ closeCode: f.YI$.CLOSE_UNSUPPORTED }, "Invalid opcode");
+                throw new c.A(
+                    {
+                        closeCode: f.YI$.CLOSE_UNSUPPORTED,
+                    },
+                    "Invalid opcode",
+                );
         }
     }
     constructor(e, t, r, o) {
@@ -138,11 +166,22 @@ class _ extends r.EventEmitter {
             h(this, "handleFrame", (e, t, n) => {
                 var r;
                 let i;
-                if (e !== t.origin) throw new c.A({ closeCode: f.YI$.INVALID_ORIGIN }, "Origin has changed");
+                if (e !== t.origin)
+                    throw new c.A(
+                        {
+                            closeCode: f.YI$.INVALID_ORIGIN,
+                        },
+                        "Origin has changed",
+                    );
                 try {
                     i = "string" == typeof n ? JSON.parse(n) : n;
                 } catch (e) {
-                    throw new c.A({ closeCode: f.YI$.CLOSE_UNSUPPORTED }, "Payload not recognized encoding");
+                    throw new c.A(
+                        {
+                            closeCode: f.YI$.CLOSE_UNSUPPORTED,
+                        },
+                        "Payload not recognized encoding",
+                    );
                 }
                 null == (r = this.onFrameHandled) || r.call(this, i, this.logger, t), this.emit("request", t, i);
             }),
@@ -164,13 +203,23 @@ class _ extends r.EventEmitter {
                             }),
                     );
                 } catch (e) {
-                    throw new c.A({ closeCode: f.YI$.CLOSE_UNSUPPORTED }, e.message);
+                    throw new c.A(
+                        {
+                            closeCode: f.YI$.CLOSE_UNSUPPORTED,
+                        },
+                        e.message,
+                    );
                 }
                 let s = t.frame_id;
                 if (!m.has(s))
                     throw (
                         (this.logger.error("Unrecognized frame ID ".concat(s)),
-                        new c.A({ closeCode: f.YI$.CLOSE_UNSUPPORTED }, "Unrecognized frame ID ".concat(s)))
+                        new c.A(
+                            {
+                                closeCode: f.YI$.CLOSE_UNSUPPORTED,
+                            },
+                            "Unrecognized frame ID ".concat(s),
+                        ))
                     );
                 null != t.sdk_version &&
                     a.default.track(f.HAw.ACTIVITY_HANDSHAKE, {
@@ -196,7 +245,12 @@ class _ extends r.EventEmitter {
                     if ((await this.validateSocketClient(i, e, t.client_id), !m.has(s)))
                         throw (
                             (this.logger.error("Frame ID ".concat(s, " no longer exists")),
-                            new c.A({ closeCode: f.YI$.CLOSE_UNSUPPORTED }, "Unrecognized frame ID ".concat(s)))
+                            new c.A(
+                                {
+                                    closeCode: f.YI$.CLOSE_UNSUPPORTED,
+                                },
+                                "Unrecognized frame ID ".concat(s),
+                            ))
                         );
                     g.set(e, i),
                         m.delete(s),
@@ -220,7 +274,12 @@ class _ extends r.EventEmitter {
                             }),
                     );
                 } catch (e) {
-                    throw new c.A({ closeCode: f.YI$.CLOSE_UNSUPPORTED }, e.message);
+                    throw new c.A(
+                        {
+                            closeCode: f.YI$.CLOSE_UNSUPPORTED,
+                        },
+                        e.message,
+                    );
                 }
                 this.disconnectSocket(e, t);
             }),

@@ -1,4 +1,9 @@
-t.r(r), t.d(r, { default: () => m }), t(65821), t(747238);
+t.r(r),
+    t.d(r, {
+        default: () => m,
+    }),
+    t(65821),
+    t(747238);
 var n = t(627968);
 t(64700);
 var o = t(284009),
@@ -23,7 +28,9 @@ async function g(e, r, t, n) {
     var o, l, c, i, p;
     let d = null;
     try {
-        let { body: e } = await s.A.authorize(n, { twoWayLinkType: u.I.WEB });
+        let { body: e } = await s.A.authorize(n, {
+            twoWayLinkType: u.I.WEB,
+        });
         d = e.url;
     } catch (e) {
         throw Error(
@@ -51,6 +58,7 @@ async function g(e, r, t, n) {
         );
     }
 }
+
 function j(e) {
     var r, t;
     let { platformType: o } = e;
@@ -108,7 +116,12 @@ function j(e) {
                         });
                 }
                 return e;
-            })({ transitionState: A.ip.ENTERED }, a)),
+            })(
+                {
+                    transitionState: A.ip.ENTERED,
+                },
+                a,
+            )),
             (t = t =
                 {
                     showLogout: !0,
@@ -136,5 +149,9 @@ let m = (0, d.C)(function (e) {
         { client_id: o = "" } = l.parse(window.location.search),
         a = t === v.fg2.PLAYSTATION && o === i.i.PLAYSTATION_APPLICATION_ID,
         c = t === v.fg2.PLAYSTATION_STAGING && o === i.i.PLAYSTATION_STAGING_APPLICATION_ID;
-    return a || c ? (0, n.jsx)(j, { platformType: t }) : null;
+    return a || c
+        ? (0, n.jsx)(j, {
+              platformType: t,
+          })
+        : null;
 });

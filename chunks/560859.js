@@ -1,4 +1,6 @@
-n.d(t, { A: () => A });
+n.d(t, {
+    A: () => A,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -18,6 +20,7 @@ var r = n(627968),
     b = n(996988),
     y = n(985018),
     O = n(413535);
+
 function A(e) {
     let { voiceChannel: t, onAction: n, onClose: a } = e,
         { themeType: A } = (0, m.E)(),
@@ -26,7 +29,12 @@ function A(e) {
         I = (0, u.Ay)(t, !0),
         T = (0, o.bG)([f.A], () => f.A.getChannelStatus(t)),
         C = i.useMemo(
-            () => (null == T || "" === T ? null : p.A.parseVoiceChannelStatus(T, !0, { channelId: t.id })),
+            () =>
+                null == T || "" === T
+                    ? null
+                    : p.A.parseVoiceChannelStatus(T, !0, {
+                          channelId: t.id,
+                      }),
             [T, t.id],
         );
     i.useEffect(() => {
@@ -39,7 +47,9 @@ function A(e) {
     }, [C, t.id, t.guild_id, v]);
     let N = (e) => {
         e.stopPropagation(),
-            n({ action: "PRESS_VOICE_CHANNEL_STATUS" }),
+            n({
+                action: "PRESS_VOICE_CHANNEL_STATUS",
+            }),
             A === b.d.POPOUT && (null == a || a()),
             (0, d.A)({
                 channel: t,

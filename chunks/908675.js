@@ -1,4 +1,7 @@
-n.d(t, { A: () => m }), n(896048);
+n.d(t, {
+    A: () => m,
+}),
+    n(896048);
 var l = n(627968),
     r = n(64700),
     a = n(503698),
@@ -8,6 +11,7 @@ var l = n(627968),
     c = n(957565),
     d = n(985018),
     u = n(38776);
+
 function m(e) {
     let {
             element: {
@@ -33,7 +37,9 @@ function m(e) {
                   }),
                   (0, l.jsx)("div", {
                       children: (0, l.jsxs)("div", {
-                          className: i()(u.GH, { [u.pG]: b }),
+                          className: i()(u.GH, {
+                              [u.pG]: b,
+                          }),
                           children: [
                               (0, l.jsx)(s.Text, {
                                   variant: "text-md/normal",

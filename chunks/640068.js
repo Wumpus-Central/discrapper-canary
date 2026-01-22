@@ -1,4 +1,11 @@
-n.d(t, { A: () => S }), n(896048), n(228524), n(457529), n(321073), n(638769);
+n.d(t, {
+    A: () => S,
+}),
+    n(896048),
+    n(228524),
+    n(457529),
+    n(321073),
+    n(638769);
 var r = n(627968),
     i = n(64700),
     a = n(735438),
@@ -18,6 +25,7 @@ var r = n(627968),
     b = n(222735),
     y = n(688151),
     O = n(612422);
+
 function A(e, t, n) {
     return (
         t in e
@@ -31,6 +39,7 @@ function A(e, t, n) {
         e
     );
 }
+
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -47,6 +56,7 @@ function v(e) {
     }
     return e;
 }
+
 function S() {
     let { experiments: e, overridesInfo: t } = (0, p.op)(),
         { experiments: n, overridesInfo: a } = (0, h.hI)(),
@@ -87,6 +97,7 @@ function S() {
         ],
     });
 }
+
 function I(e) {
     let { experiment: t, experimentId: n, overrideInfo: a, defaultOpen: p } = e,
         [h, g] = i.useState(p),
@@ -141,7 +152,9 @@ function I(e) {
                                     E.p5 &&
                                         (0, r.jsx)(l.DUT, {
                                             onClick: N,
-                                            children: (0, r.jsx)(l.qYV, { size: "xs" }),
+                                            children: (0, r.jsx)(l.qYV, {
+                                                size: "xs",
+                                            }),
                                         }),
                                 ],
                             }),
@@ -239,15 +252,18 @@ function I(e) {
                           className: O.id,
                           children: (0, r.jsx)(l.QWc, {
                               variant: "secondary",
-                              text: "More Details \xBB",
+                              text: "More Details \xbb",
                               onClick: () => A(!0),
                           }),
                       }),
-                (0, r.jsx)(l.cGx, { className: O.yF }),
+                (0, r.jsx)(l.cGx, {
+                    className: O.yF,
+                }),
             ],
         })
     );
 }
+
 function T(e) {
     let { experiment: t, experimentId: n, overrideInfo: a } = e,
         [c, u] = i.useState(null != a),
@@ -293,7 +309,9 @@ function T(e) {
                 children: [
                     (0, r.jsxs)("div", {
                         children: [
-                            (0, r.jsx)("span", { children: t.title }),
+                            (0, r.jsx)("span", {
+                                children: t.title,
+                            }),
                             (0, r.jsx)(l.Text, {
                                 color: "text-muted",
                                 variant: "text-sm/normal",
@@ -384,11 +402,13 @@ function T(e) {
                             className: O.id,
                             children: (0, r.jsx)(l.QWc, {
                                 variant: "secondary",
-                                text: "More Details \xBB",
+                                text: "More Details \xbb",
                                 onClick: () => _(!0),
                             }),
                         }),
-                  (0, r.jsx)(l.cGx, { className: O.yF }),
+                  (0, r.jsx)(l.cGx, {
+                      className: O.yF,
+                  }),
               ],
           })
         : (0, r.jsx)("div", {

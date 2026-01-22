@@ -17,5 +17,7 @@ let i = (e) => {
         });
     },
     s = () => {
-        r.h.dispatch({ type: "RESET_PREVIEW_CLIENT_THEME" });
+        r.h.dispatch({
+            type: "RESET_PREVIEW_CLIENT_THEME",
+        });
     };

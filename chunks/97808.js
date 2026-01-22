@@ -10,7 +10,7 @@ var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
-    o = n(432022),
+    o = n(108531),
     l = n(158954),
     c = n(863610),
     u = n(935154),
@@ -23,6 +23,7 @@ var r = n(627968),
     g = n(778712),
     E = n(985018),
     b = n(920466);
+
 function y(e, t, n) {
     return (
         t in e
@@ -36,6 +37,7 @@ function y(e, t, n) {
         e
     );
 }
+
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -52,6 +54,7 @@ function O(e) {
     }
     return e;
 }
+
 function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -64,6 +67,7 @@ function A(e, t) {
     }
     return n;
 }
+
 function v(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -75,6 +79,7 @@ function v(e, t) {
         e
     );
 }
+
 function S(e, t) {
     if (null == e) return {};
     var n,
@@ -91,6 +96,7 @@ function S(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function I(e, t) {
     if (null == e) return {};
     var n,
@@ -105,9 +111,11 @@ let T = {
     tension: 1200,
     friction: 70,
 };
+
 function C() {
     return document.hasFocus();
 }
+
 function N(e) {
     let { size: t, isMobile: n, isTyping: i } = e,
         a = S(e, ["size", "isMobile", "isTyping"]),
@@ -132,6 +140,7 @@ function N(e) {
         ),
     );
 }
+
 function R(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     return null != t
@@ -141,6 +150,7 @@ function R(e, t) {
           })
         : e;
 }
+
 function w(e, t, n, r) {
     if (null == e) return null;
     if (r)
@@ -225,6 +235,7 @@ function w(e, t, n, r) {
     }
     return null;
 }
+
 function P(e, t, n, r) {
     if (null == e) return p.hW.AVATAR_DEFAULT;
     if (r)
@@ -314,6 +325,7 @@ function P(e, t, n, r) {
             .concat(n ? "true" : "false"),
     );
 }
+
 function D(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         i = (0, u.i0)(e.status, t, n, r),
@@ -323,6 +335,7 @@ function D(e, t, n) {
         y: e.size - i.height - e.offset,
     });
 }
+
 function x(e, t, n) {
     let { size: r, status: i, stroke: a, offset: s } = e,
         o = n ? i * g.x : i,
@@ -336,6 +349,7 @@ function x(e, t, n) {
         avatarCutoutRadius: t ? (c + 2 * a) * g.hn : (i + 2 * a) / 2,
     };
 }
+
 function L(e, t, n, i) {
     let a = D(n, i, t, !1),
         s = (0, u.yi)(i, e);
@@ -343,7 +357,9 @@ function L(e, t, n, i) {
         let t = a.height / 2 + n.stroke,
             i = a.x + n.status / 2;
         return (0, r.jsx)("circle", {
-            style: { opacity: s },
+            style: {
+                opacity: s,
+            },
             fill: e,
             r: t,
             cx: i,
@@ -358,7 +374,9 @@ function L(e, t, n, i) {
         fill: e,
         height: o,
         width: l,
-        style: { opacity: s },
+        style: {
+            opacity: s,
+        },
         x: c,
         y: d,
         rx: n.stroke,
@@ -368,6 +386,7 @@ let j = {
     "\uD83D\uDD25":
         "M3 14a9 9 0 1 0 18 0c0-2.63-.61-5.22-1.79-7.58L18.2 4.38a.7.7 0 0 0-1.3.18l-.78 3.9a.66.66 0 0 1-1.27.11L12.22 1.6a.9.9 0 0 0-1.48-.33l-4.2 4.2A12.07 12.07 0 0 0 3 14Zm9.26-.84a.57.57 0 0 0-1-.23L9.6 15a3.08 3.08 0 1 0 5.12.48c-.14-.26-.5-.28-.71-.06L13 16.5l-.74-3.34Z",
 };
+
 function M(e, t, n, i, a) {
     let s = j[i];
     if (null != s) {
@@ -398,6 +417,7 @@ function M(e, t, n, i, a) {
         fill: "black",
     });
 }
+
 function k(e, t, n, i) {
     let { status: a, isMobile: s, isTyping: o } = n,
         l = t.size - t.status - t.offset,
@@ -428,6 +448,7 @@ function k(e, t, n, i) {
         ],
     });
 }
+
 function U(e, t) {
     let n = e.size - e.status - e.offset,
         i = e.offset;
@@ -447,6 +468,7 @@ function U(e, t) {
         }),
     });
 }
+
 function G(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
@@ -503,6 +525,7 @@ function G(e) {
               children: h,
           });
 }
+
 function V(e) {
     let { status: t, isMobile: n, isTyping: r, size: i } = e,
         a = n && !r && t === h.clD.ONLINE,
@@ -520,6 +543,7 @@ function V(e) {
         }),
     );
 }
+
 function F(e) {
     let {
             children: t,
@@ -633,6 +657,7 @@ let B = i.forwardRef((e, t) => {
         n,
     );
 });
+
 function H(e) {
     let {
             src: t,
@@ -755,10 +780,12 @@ function H(e) {
         }),
     );
 }
+
 function Y(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
     return 5 - (n && !r ? 0 : 0.5 * e) + 1.5 * t;
 }
+
 function W(e, t, n) {
     let r = e.status * t,
         i = null != n ? (r * g.x - r) / 2 : 0,
@@ -769,6 +796,7 @@ function W(e, t, n) {
         c = Math.round((o / t) * 100) / 100;
     return "translate(".concat(l, ", ").concat(c, ")");
 }
+
 function K(e) {
     let {
             fromIsMobile: t = !0,
@@ -802,7 +830,9 @@ function K(e) {
         ee = i.useId(),
         [et] = i.useState(() =>
             O(
-                { fill: a },
+                {
+                    fill: a,
+                },
                 V({
                     size: I,
                     status: n,
@@ -814,7 +844,9 @@ function K(e) {
         en = i.useMemo(
             () =>
                 O(
-                    { fill: $ },
+                    {
+                        fill: $,
+                    },
                     V({
                         size: I,
                         status: w,
@@ -861,8 +893,22 @@ function K(e) {
                     friction: 20,
                     clamp: !0,
                 },
-                from: { scale: 1 },
-                to: z ? [{ scale: 0.8 }, { scale: 1.1 }, { scale: 1 }] : [],
+                from: {
+                    scale: 1,
+                },
+                to: z
+                    ? [
+                          {
+                              scale: 0.8,
+                          },
+                          {
+                              scale: 1.1,
+                          },
+                          {
+                              scale: 1,
+                          },
+                      ]
+                    : [],
             },
             C() ? "animate-always" : "animate-never",
             [z, w],
@@ -978,6 +1024,7 @@ function K(e) {
         }),
     );
 }
+
 function z(e, t, n, r, i) {
     return null != n && null != t && (!!e || t !== n || (t === h.clD.ONLINE && r !== i));
 }

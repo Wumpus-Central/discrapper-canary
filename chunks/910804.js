@@ -15,6 +15,7 @@ var i = n(503698),
     o = n(138869),
     l = n(386971),
     c = n(775486);
+
 function u(e, t, n) {
     return (
         t in e
@@ -28,6 +29,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -44,6 +46,7 @@ function d(e) {
     }
     return e;
 }
+
 function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -56,6 +59,7 @@ function f(e, t) {
     }
     return n;
 }
+
 function p(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -67,6 +71,7 @@ function p(e, t) {
         e
     );
 }
+
 function _(e, t) {
     if (null == e) return {};
     var n,
@@ -83,6 +88,7 @@ function _(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function h(e, t) {
     if (null == e) return {};
     var n,
@@ -123,32 +129,45 @@ let m = (e) => {
                     },
                     o,
                 ),
-                { children: t },
+                {
+                    children: t,
+                },
             ),
         );
     };
+
 function E() {
-    return (0, r.jsx)("hr", { className: c.yF });
+    return (0, r.jsx)("hr", {
+        className: c.yF,
+    });
 }
 let b = (e) => {
         let { className: t, title: n, description: i } = e,
             a = _(e, ["className", "title", "description"]);
         return (0, r.jsxs)(
             "div",
-            p(d({ className: t }, a), {
-                children: [
-                    (0, r.jsx)(s.Heading, {
-                        variant: "heading-md/bold",
-                        color: "text-strong",
-                        children: n,
-                    }),
-                    (0, r.jsx)(s.Heading, {
-                        variant: "heading-sm/normal",
-                        color: "text-default",
-                        children: i,
-                    }),
-                ],
-            }),
+            p(
+                d(
+                    {
+                        className: t,
+                    },
+                    a,
+                ),
+                {
+                    children: [
+                        (0, r.jsx)(s.Heading, {
+                            variant: "heading-md/bold",
+                            color: "text-strong",
+                            children: n,
+                        }),
+                        (0, r.jsx)(s.Heading, {
+                            variant: "heading-sm/normal",
+                            color: "text-default",
+                            children: i,
+                        }),
+                    ],
+                },
+            ),
         );
     },
     y = (e) => {
@@ -156,18 +175,39 @@ let b = (e) => {
             o = _(e, ["applicationId", "storeListingBenefits", "skuBenefits", "className"]);
         return (0, r.jsx)(
             "div",
-            p(d({ className: a()(c.iq, s) }, o), {
-                children: (0, r.jsx)(l.mc, {
-                    applicationId: t,
-                    storeListingBenefits: n,
-                    skuBenefits: i,
-                    className: c.gX,
-                }),
-            }),
+            p(
+                d(
+                    {
+                        className: a()(c.iq, s),
+                    },
+                    o,
+                ),
+                {
+                    children: (0, r.jsx)(l.mc, {
+                        applicationId: t,
+                        storeListingBenefits: n,
+                        skuBenefits: i,
+                        className: c.gX,
+                    }),
+                },
+            ),
         );
     },
     O = (e) => {
         let { children: t, className: n } = e,
             i = _(e, ["children", "className"]);
-        return (0, r.jsx)("div", p(d({ className: a()(c.kL, n) }, i), { children: t }));
+        return (0, r.jsx)(
+            "div",
+            p(
+                d(
+                    {
+                        className: a()(c.kL, n),
+                    },
+                    i,
+                ),
+                {
+                    children: t,
+                },
+            ),
+        );
     };

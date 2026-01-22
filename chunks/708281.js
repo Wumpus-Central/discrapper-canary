@@ -1,4 +1,8 @@
-n.d(t, { N: () => b }), n(896048), n(65821);
+n.d(t, {
+    N: () => b,
+}),
+    n(896048),
+    n(65821);
 var r = n(627968),
     i = n(64700),
     a = n(158954),
@@ -9,6 +13,7 @@ var r = n(627968),
     u = n(954571),
     d = n(652215),
     f = n(985018);
+
 function p(e, t, n) {
     return (
         t in e
@@ -22,6 +27,7 @@ function p(e, t, n) {
         e
     );
 }
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -38,6 +44,7 @@ function _(e) {
     }
     return e;
 }
+
 function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -50,6 +57,7 @@ function h(e, t) {
     }
     return n;
 }
+
 function m(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -61,11 +69,14 @@ function m(e, t) {
         e
     );
 }
+
 function g(e) {
     let { token: t, onClose: n } = e,
         [a, s] = i.useState("loading");
     i.useEffect(() => {
-        u.default.track(d.HAw.ONE_TIME_LOGIN_MODAL_OPENED, { has_token: null != t });
+        u.default.track(d.HAw.ONE_TIME_LOGIN_MODAL_OPENED, {
+            has_token: null != t,
+        });
     }, [t]);
     let p = i.useCallback(async () => {
         try {
@@ -79,7 +90,9 @@ function g(e) {
                 return;
             }
             s("loading"),
-                u.default.track(d.HAw.ONE_TIME_LOGIN_ATTEMPTED, { source: "web_modal" }),
+                u.default.track(d.HAw.ONE_TIME_LOGIN_ATTEMPTED, {
+                    source: "web_modal",
+                }),
                 await o.A.oneTimeLogin(t),
                 s("success"),
                 u.default.track(d.HAw.LOGIN_SUCCESSFUL, {
@@ -100,7 +113,10 @@ function g(e) {
         p();
     }, [p]);
     let _ = i.useCallback(() => {
-        u.default.track(d.HAw.ONE_TIME_LOGIN_MODAL_CANCEL_CLICKED, { current_state: a }), null == n || n();
+        u.default.track(d.HAw.ONE_TIME_LOGIN_MODAL_CANCEL_CLICKED, {
+            current_state: a,
+        }),
+            null == n || n();
     }, [n, a]);
     switch (
         (i.useEffect(() => {
@@ -129,6 +145,7 @@ function g(e) {
             return {};
     }
 }
+
 function E(e) {
     let { title: t, subtitle: n, body: i, actions: s } = g(e);
     return (0, r.jsxs)(
@@ -144,7 +161,9 @@ function E(e) {
                     title: null != t ? t : "",
                     subtitle: n,
                 }),
-                (0, r.jsx)(a.cwr, { children: i }),
+                (0, r.jsx)(a.cwr, {
+                    children: i,
+                }),
                 (0, r.jsx)(a.H7u, {
                     actions: null != s ? s : [],
                     actionsFullWidth: !0,
@@ -153,6 +172,7 @@ function E(e) {
         }),
     );
 }
+
 function b(e) {
     (0, s.mMO)(() => Promise.resolve((t) => (0, r.jsx)(E, _({}, t, e))));
 }

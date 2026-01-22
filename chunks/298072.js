@@ -9,7 +9,12 @@ var r = n(942381),
     a = n(311907),
     s = n(4227),
     o = n(841702);
-let c = (0, i.h)(() => ({ selectionStates: new Map() }), r.x),
+let c = (0, i.h)(
+        () => ({
+            selectionStates: new Map(),
+        }),
+        r.x,
+    ),
     u = (e) => {
         var t, n;
         (0, o.b5)();
@@ -34,7 +39,12 @@ let c = (0, i.h)(() => ({ selectionStates: new Map() }), r.x),
     d = (e, t) => {
         c.setState((n) => {
             var r, i, l;
-            let a = null != (r = n.selectionStates.get(e.storeListingId)) ? r : { selectedVariantIndex: 0 };
+            let a =
+                null != (r = n.selectionStates.get(e.storeListingId))
+                    ? r
+                    : {
+                          selectedVariantIndex: 0,
+                      };
             return {
                 selectionStates: new Map(n.selectionStates).set(
                     e.storeListingId,
@@ -63,7 +73,10 @@ let c = (0, i.h)(() => ({ selectionStates: new Map() }), r.x),
                         }
                         return e;
                     })({}, a)),
-                    (l = l = { selectedVariantIndex: t }),
+                    (l = l =
+                        {
+                            selectedVariantIndex: t,
+                        }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
                         : (function (e, t) {

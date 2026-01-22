@@ -1,4 +1,7 @@
-n.d(t, { A: () => f }), n(896048);
+n.d(t, {
+    A: () => f,
+}),
+    n(896048);
 var a = n(627968),
     l = n(64700),
     i = n(503698),
@@ -23,6 +26,7 @@ let p = [
         "virtual-currency": d.B,
         nitro: c.$,
     };
+
 function f() {
     let [e, t] = l.useState("virtual-currency"),
         n = l.useMemo(() => h[e], [e]);

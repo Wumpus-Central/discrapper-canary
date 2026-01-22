@@ -1,10 +1,14 @@
-n.d(t, { A: () => d }), n(65821);
+n.d(t, {
+    A: () => d,
+}),
+    n(65821);
 var r,
     i = n(627968),
     l = n(64700),
     a = n(503698),
     s = n.n(a),
     o = n(397086);
+
 function c(e, t, n) {
     return (
         t in e
@@ -20,7 +24,13 @@ function c(e, t, n) {
 }
 class u extends (r = l.PureComponent) {
     componentDidUpdate(e) {
-        e.src !== this.props.src && this.setState({ loaded: !1 }, () => this.initialize());
+        e.src !== this.props.src &&
+            this.setState(
+                {
+                    loaded: !1,
+                },
+                () => this.initialize(),
+            );
     }
     initialize() {
         let e;
@@ -30,7 +40,10 @@ class u extends (r = l.PureComponent) {
             let r = new Image();
             (r.src = e), (r.onload = () => t(r)), (r.onerror = (e) => n(e));
         })).then(() => {
-            this.unmounting || this.setState({ loaded: !0 });
+            this.unmounting ||
+                this.setState({
+                    loaded: !0,
+                });
         });
     }
     componentWillUnmount() {
@@ -78,7 +91,9 @@ class u extends (r = l.PureComponent) {
                       }),
                 e),
             children: (0, i.jsx)("img", {
-                className: s()(o.S, f, { [o.K]: h }),
+                className: s()(o.S, f, {
+                    [o.K]: h,
+                }),
                 width: a,
                 height: u,
                 src: r,
@@ -88,7 +103,12 @@ class u extends (r = l.PureComponent) {
         });
     }
     constructor(e) {
-        super(e), c(this, "unmounting", !1), c(this, "state", { loaded: !1 }), this.initialize();
+        super(e),
+            c(this, "unmounting", !1),
+            c(this, "state", {
+                loaded: !1,
+            }),
+            this.initialize();
     }
 }
 c(u, "defaultProps", {

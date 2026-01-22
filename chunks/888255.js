@@ -1,4 +1,8 @@
-n.d(t, { $: () => A }), n(321073), n(896048);
+n.d(t, {
+    $: () => A,
+}),
+    n(321073),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -8,6 +12,7 @@ var r = n(627968),
     c = n(426333),
     u = n(842867),
     d = n(219293);
+
 function f(e, t, n) {
     return (
         t in e
@@ -21,6 +26,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,6 +43,7 @@ function p(e) {
     }
     return e;
 }
+
 function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -49,6 +56,7 @@ function _(e, t) {
     }
     return n;
 }
+
 function h(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -60,6 +68,7 @@ function h(e, t) {
         e
     );
 }
+
 function m(e, t) {
     if (null == e) return {};
     var n,
@@ -76,6 +85,7 @@ function m(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function g(e, t) {
     if (null == e) return {};
     var n,
@@ -86,6 +96,7 @@ function g(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function E(e) {
     let t = i.useRef(e);
     return (
@@ -95,6 +106,7 @@ function E(e) {
         i.useCallback(() => t.current, [])
     );
 }
+
 function b(e) {
     let t = i.useRef(e);
     return (
@@ -113,6 +125,7 @@ function b(e) {
         }, [])
     );
 }
+
 function y(e) {
     let {
             renderSection: t,
@@ -129,7 +142,9 @@ function y(e) {
                 "div",
                 {
                     "aria-hidden": !0,
-                    style: { height: d },
+                    style: {
+                        height: d,
+                    },
                 },
                 "---list-spacer-top",
             ),
@@ -137,7 +152,17 @@ function y(e) {
         p = [],
         _ = 0;
     if (
-        (!0 === o && null != s && f.push((0, r.jsx)(i.Fragment, { children: s() }, "---sticky-header")),
+        (!0 === o &&
+            null != s &&
+            f.push(
+                (0, r.jsx)(
+                    i.Fragment,
+                    {
+                        children: s(),
+                    },
+                    "---sticky-header",
+                ),
+            ),
         u.forEach((e) => {
             var r, i;
             switch (
@@ -167,10 +192,12 @@ function y(e) {
     }
     return l()(f);
 }
+
 function O(e) {
     let { renderSidebar: t, sidebarHeight: n, isSidebarVisible: r, isListVisible: i } = e;
     return null == n || null == t ? null : t(i, r);
 }
+
 function A(e, t, n, a) {
     let o = (0, u.dG)(e),
         l = new Map(),
@@ -385,7 +412,9 @@ function A(e, t, n, a) {
                                         "aria-label": Z,
                                         "aria-multiselectable": Q,
                                         "aria-orientation": $,
-                                        style: { height: ed },
+                                        style: {
+                                            height: ed,
+                                        },
                                         className: s()(d.Qs, J),
                                         ref: ei,
                                         children: (0, r.jsx)(c.xp, {

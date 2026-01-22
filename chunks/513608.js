@@ -1,4 +1,6 @@
-r.d(t, { A: () => i });
+r.d(t, {
+    A: () => i,
+});
 var n = r(64700),
     o = r(205662),
     a = r(708005);
@@ -22,13 +24,19 @@ let i = (0, o.handleHover)(function (e) {
                         fontSize: "0",
                     },
                 },
-                hover: { swatch: s },
+                hover: {
+                    swatch: s,
+                },
             },
-            { hover: t },
+            {
+                hover: t,
+            },
         );
     return n.createElement(
         "div",
-        { style: u.swatch },
+        {
+            style: u.swatch,
+        },
         n.createElement(a.rp, {
             color: r,
             onClick: i,

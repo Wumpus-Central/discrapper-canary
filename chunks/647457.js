@@ -1,4 +1,7 @@
-n.d(t, { A: () => _ }), n(65821);
+n.d(t, {
+    A: () => _,
+}),
+    n(65821);
 var r = n(143236),
     i = n(118356),
     a = n(277738),
@@ -7,6 +10,7 @@ var r = n(143236),
     l = n(956446),
     c = n(731854),
     u = n(818348);
+
 function d(e, t, n) {
     return (
         t in e
@@ -90,9 +94,14 @@ class _ extends r.EventEmitter {
                 noiseSuppression: this.noiseSuppression,
                 autoGainControl: this.automaticGainControl,
             };
-        e.some((e) => e.id === this.sourceId) && (t.deviceId = { exact: this.sourceId });
+        e.some((e) => e.id === this.sourceId) &&
+            (t.deviceId = {
+                exact: this.sourceId,
+            });
         try {
-            let e = await p.acquire({ audio: t });
+            let e = await p.acquire({
+                audio: t,
+            });
             if (this.destroyed) throw (p.release(e), Error("AudioInput: Already destroyed"));
             if (this._noiseCancellation)
                 try {

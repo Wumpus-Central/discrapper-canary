@@ -10,7 +10,10 @@ function n(e) {
                       : typeof e;
               })(e);
 }
-r.d(t, { c: () => o });
+r.d(t, {
+    c: () => o,
+});
+
 function i(e, t, r) {
     return (
         t in e
@@ -26,6 +29,7 @@ function i(e, t, r) {
 }
 var o = (function () {
     var e;
+
     function t(e, r, n) {
         if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
         i(this, "spec", void 0),

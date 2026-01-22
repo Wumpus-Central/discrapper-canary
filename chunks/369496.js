@@ -23,9 +23,11 @@ var r = n(115943),
     a = n(270704);
 n(818348);
 var s = n(985018);
+
 function o(e) {
     return e.name !== a.KO && (e.name !== a.AK || (l(e.darkBackground) && l(e.lightBackground)));
 }
+
 function l(e) {
     return /^#([0-9a-fA-F]{6})$/.test(e);
 }
@@ -33,6 +35,7 @@ let c = (e) => {
     var t;
     return null != (t = a.fc[e]) ? t : a.Wj;
 };
+
 function u(e) {
     let t = i().decode(e),
         n = i().toRGBA8(t)[0],
@@ -42,6 +45,7 @@ function u(e) {
         s = new ImageData(new Uint8ClampedArray(n), t.width, t.height);
     return a.putImageData(s, 0, 0), r.toDataURL("image/png");
 }
+
 function d() {
     return {
         mallow: {

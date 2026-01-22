@@ -1,4 +1,6 @@
-n.d(t, { A: () => j });
+n.d(t, {
+    A: () => j,
+});
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -48,7 +50,10 @@ let j = (0, a.A)((e) => {
             [n, j],
         ),
         U = (0, i.bG)([o.A], () => o.A.getVoiceParticipantsHidden(C.id), [C.id]);
-    if ((null == L ? void 0 : L.channelId) === C.id) return (0, r.jsx)(h.A, { height: w });
+    if ((null == L ? void 0 : L.channelId) === C.id)
+        return (0, r.jsx)(h.A, {
+            height: w,
+        });
     if ((null == C ? void 0 : C.isGuildVocalOrThread()) && !N)
         return (0, r.jsx)(p.A, {
             channel: C,

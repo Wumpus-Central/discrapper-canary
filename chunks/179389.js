@@ -17,6 +17,7 @@ var l = n(627968),
     p = n(371794),
     h = n(985018),
     m = n(663533);
+
 function b(e, t, n) {
     return (
         t in e
@@ -30,6 +31,7 @@ function b(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -46,6 +48,7 @@ function f(e) {
     }
     return e;
 }
+
 function g(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -116,7 +119,9 @@ class _ extends a.PureComponent {
     componentDidMount() {
         if (null != this._container) {
             let { height: e } = this._container.getBoundingClientRect();
-            this.setState({ collapsable: e > 400 });
+            this.setState({
+                collapsable: e > 400,
+            });
         }
     }
     render() {
@@ -126,7 +131,9 @@ class _ extends a.PureComponent {
             className: a,
             children: [
                 (0, l.jsx)("div", {
-                    className: i()({ [m.yZ]: c && s }),
+                    className: i()({
+                        [m.yZ]: c && s,
+                    }),
                     children: (0, l.jsxs)("div", {
                         ref: this.setContentContainerRef,
                         children: [
@@ -166,7 +173,9 @@ class _ extends a.PureComponent {
             }),
             b(this, "_container", void 0),
             b(this, "handleToggleCollapse", () => {
-                this.setState({ collapsed: !this.state.collapsed });
+                this.setState({
+                    collapsed: !this.state.collapsed,
+                });
             }),
             b(this, "setContentContainerRef", (e) => {
                 this._container = e;

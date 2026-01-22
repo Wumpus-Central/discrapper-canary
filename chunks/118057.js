@@ -1,9 +1,14 @@
-n.d(t, { A: () => p }), n(896048), n(747238);
+n.d(t, {
+    A: () => p,
+}),
+    n(896048),
+    n(747238);
 var r = n(64700),
     i = n(788413),
     a = n(741918),
     s = n(602034);
 let o = [a.D$.TAB];
+
 function l(e) {
     switch (e.key) {
         case a.D$.ENTER:
@@ -24,15 +29,19 @@ function l(e) {
             return a.X2.NAVIGATE_INLINE_END;
     }
 }
+
 function c(e, t, n) {
     return null != t && null != n ? "#".concat((0, s.Aq)(e, t, n)) : "[data-ref-id=".concat(e, "]");
 }
+
 function u(e) {
     return document.querySelector(e);
 }
+
 function d(e) {
     return (null == e ? void 0 : e.ownerDocument.activeElement) === e;
 }
+
 function f(e) {
     let {
             navId: t,
@@ -148,13 +157,17 @@ function f(e) {
                         0 !== n.length &&
                             (0 !== f || 0 !== p || t !== a.X2.NAVIGATE_LEFT) &&
                             (e.preventDefault(), e.stopPropagation()),
-                            g({ type: t });
+                            g({
+                                type: t,
+                            });
                         return;
                     case a.X2.SELECT_FOCUSED_ITEM:
                         if ((y && !d(v)) || e.repeat) return;
                         e.preventDefault(),
                             e.stopPropagation(),
-                            g({ type: t }),
+                            g({
+                                type: t,
+                            }),
                             null != _ ? _(f, p, e) : null != v && v.click();
                 }
             },
@@ -220,6 +233,7 @@ function f(e) {
         [g, F, B, H],
     );
 }
+
 function p(e) {
     let {
             navId: t,

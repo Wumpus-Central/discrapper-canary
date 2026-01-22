@@ -1,9 +1,12 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(961350),
     l = n(63995),
     i = n(69407),
     a = n(312006),
     s = n(446600);
+
 function o(e) {
     if (!e.isGuildStageVoice() || !s.A.isLive(e.id)) return !1;
     let t = r.default.getId();

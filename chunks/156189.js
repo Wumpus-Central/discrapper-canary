@@ -1,4 +1,7 @@
-t.d(e, { default: () => u }), t(896048);
+t.d(e, {
+    default: () => u,
+}),
+    t(896048);
 var n = t(627968),
     c = t(64700),
     l = t(732955),
@@ -8,6 +11,7 @@ var n = t(627968),
     d = t(652215),
     f = t(670455),
     o = t(985018);
+
 function u(a) {
     let { onClose: e, transitionState: u } = a,
         [b, m] = c.useState(null);
@@ -27,7 +31,9 @@ function u(a) {
                     onChangeRating: function (a) {
                         m(a),
                             null != a &&
-                                ((0, s.A)({ rating: a }),
+                                ((0, s.A)({
+                                    rating: a,
+                                }),
                                 e(),
                                 (0, i.mMO)(async () => {
                                     let { default: a } = await t.e("37836").then(t.bind(t, 845671));
@@ -58,14 +64,21 @@ function u(a) {
                                                         });
                                                 }
                                                 return a;
-                                            })({ body: o.intl.string(o.t.IuPjpE) }, e),
+                                            })(
+                                                {
+                                                    body: o.intl.string(o.t.IuPjpE),
+                                                },
+                                                e,
+                                            ),
                                         );
                                 }));
                     },
                 }),
                 (0, n.jsx)(i.Text, {
                     variant: "text-md/normal",
-                    children: o.intl.format(o.t.zru1K0, { safetyCenterUrl: d.X7G.SAFETY_CENTER }),
+                    children: o.intl.format(o.t.zru1K0, {
+                        safetyCenterUrl: d.X7G.SAFETY_CENTER,
+                    }),
                 }),
             ],
         }),

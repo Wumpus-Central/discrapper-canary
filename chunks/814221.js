@@ -1,14 +1,19 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(627968),
     l = n(64700),
     i = n(397927),
     a = n(183555),
     s = n(985018),
     o = n(352705);
+
 function c() {
     let { trackUserProfileEditAction: e } = (0, a.NJ)(),
         t = l.useCallback(() => {
-            e({ action: "PRESS_ADD_WIDGET" }),
+            e({
+                action: "PRESS_ADD_WIDGET",
+            }),
                 (0, i.mMO)(
                     async () => {
                         let { default: t } = await n.e("87591").then(n.bind(n, 333114));
@@ -41,7 +46,10 @@ function c() {
                                     }
                                     return e;
                                 })({}, n)),
-                                (i = i = { trackUserProfileEditAction: e }),
+                                (i = i =
+                                    {
+                                        trackUserProfileEditAction: e,
+                                    }),
                                 Object.getOwnPropertyDescriptors
                                     ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(i))
                                     : (function (e, t) {
@@ -58,7 +66,9 @@ function c() {
                             );
                         };
                     },
-                    { stackingBehavior: "stack" },
+                    {
+                        stackingBehavior: "stack",
+                    },
                 );
         }, [e]);
     return (0, r.jsxs)(i.DUT, {

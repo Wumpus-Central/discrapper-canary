@@ -1,4 +1,7 @@
-n.d(t, { A: () => f }), n(896048);
+n.d(t, {
+    A: () => f,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -7,10 +10,13 @@ var r = n(627968),
     o = n(567305),
     c = n(985018),
     u = n(801985);
+
 function d(e) {
     let { text: t, hasScrolled: n } = e;
     return (0, r.jsxs)("div", {
-        className: a()(u.kL, { [u.sz]: n }),
+        className: a()(u.kL, {
+            [u.sz]: n,
+        }),
         children: [
             (0, r.jsx)("div", {
                 className: u.lm,
@@ -21,10 +27,13 @@ function d(e) {
                     children: t,
                 }),
             }),
-            (0, r.jsx)("div", { className: u._p }),
+            (0, r.jsx)("div", {
+                className: u._p,
+            }),
         ],
     });
 }
+
 function f(e) {
     let [t, n] = l.useState(),
         [i, a] = l.useState(),

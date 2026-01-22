@@ -1,4 +1,7 @@
-n.d(t, { A: () => E }), n(321073);
+n.d(t, {
+    A: () => E,
+}),
+    n(321073);
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -15,6 +18,7 @@ var i = n(311907),
     h = n(185928),
     m = n(652215),
     g = n(985018);
+
 function E() {
     let e = _.hH.useSetting(),
         { analyticsLocations: t } = (0, u.Ay)(),
@@ -41,7 +45,9 @@ function E() {
                         analyticsLocations: t,
                         themeName: "default ".concat(e),
                     }),
-                        (0, o.u_)({ theme: e });
+                        (0, o.u_)({
+                            theme: e,
+                        });
                 },
             }),
         A = [

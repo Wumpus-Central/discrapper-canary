@@ -1,4 +1,7 @@
-n.d(t, { A: () => g }), n(896048);
+n.d(t, {
+    A: () => g,
+}),
+    n(896048);
 var r = n(448761),
     i = n(843472),
     a = n(439372),
@@ -11,6 +14,7 @@ var r = n(448761),
     f = n(233993),
     p = n(744216),
     _ = n(652215);
+
 function h(e, t, n) {
     return (
         t in e
@@ -48,7 +52,10 @@ class m extends a.A {
         });
     }
     constructor(...e) {
-        super(...e), h(this, "actions", { VOICE_STATE_UPDATES: this.handleVoiceStateUpdates });
+        super(...e),
+            h(this, "actions", {
+                VOICE_STATE_UPDATES: this.handleVoiceStateUpdates,
+            });
     }
 }
 let g = new m();

@@ -1,4 +1,8 @@
-n.d(t, { A: () => j }), n(896048), n(321073);
+n.d(t, {
+    A: () => j,
+}),
+    n(896048),
+    n(321073);
 var r,
     i = n(989349),
     a = n.n(i),
@@ -15,6 +19,7 @@ var r,
     m = n(543465),
     g = n(287809),
     E = n(661191);
+
 function b(e, t, n) {
     return (
         t in e
@@ -37,9 +42,11 @@ let y = (e) => {
         return t ? [] : [n ? "FAVORITE" : "DEFAULT"];
     },
     A = new o.J(O, y);
+
 function v() {
     A.clear();
 }
+
 function S(e) {
     var t, n;
     let r = null != (t = null != (n = h.Ay.lastMessageId(e.id)) ? n : e.lastMessageId) ? t : e.id,
@@ -51,6 +58,7 @@ function S(e) {
     }
     return r;
 }
+
 function I(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S(e);
     return {
@@ -60,37 +68,44 @@ function I(e) {
         isRequest: u.A.isMessageRequest(e.id) || d.A.isSpam(e.id),
     };
 }
+
 function T() {
     A.clear(),
         Object.values(p.A.getMutablePrivateChannels()).forEach((e) => {
             A.set(e.id, I(e));
         });
 }
+
 function C(e) {
     let { channel: t } = e;
     if (!(0, f.Gw)(t.type) || t.id === c.E) return !1;
     A.set(t.id, I(t));
 }
+
 function N(e) {
     let { channels: t } = e;
     t.forEach((e) => {
         ((0, f.Gw)(e.type) || A.has(e.id)) && A.set(e.id, I(e));
     });
 }
+
 function R(e) {
     let { channel: t } = e;
     return A.delete(t.id);
 }
+
 function w(e) {
     let { channelId: t, message: n } = e;
     if (!A.has(t)) return !1;
     let r = p.A.getChannel(t);
     return null != r && A.set(t, I(r, n.id));
 }
+
 function P(e) {
     let t = e.guild.id;
     return A.delete(t);
 }
+
 function D() {
     let e = p.A.getMutablePrivateChannels();
     for (let t in e) A.set(t, I(e[t]));

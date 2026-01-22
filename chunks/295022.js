@@ -1,4 +1,6 @@
-a.d(t, { A: () => n });
+a.d(t, {
+    A: () => n,
+});
 var i = {
     lessThanXSeconds: {
         one: "λιγότερο από ένα δευτερόλεπτο",

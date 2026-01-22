@@ -1,4 +1,7 @@
-n.d(t, { A: () => eh }), n(896048);
+n.d(t, {
+    A: () => eh,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(942381),
@@ -37,6 +40,7 @@ var r = n(627968),
     U = n(985018),
     G = n(780465),
     V = n(911385);
+
 function F(e, t, n) {
     return (
         t in e
@@ -50,6 +54,7 @@ function F(e, t, n) {
         e
     );
 }
+
 function B(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -66,6 +71,7 @@ function B(e) {
     }
     return e;
 }
+
 function H(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -78,6 +84,7 @@ function H(e, t) {
     }
     return n;
 }
+
 function Y(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -161,7 +168,9 @@ let W = (0, S.xI)(o.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                             ? (0, C.vr)(o.id)
                             : ((0, N.Dt)({
                                   sticker: o,
-                                  location: Y(B({}, l), { object: M.ZSU.STICKER }),
+                                  location: Y(B({}, l), {
+                                      object: M.ZSU.STICKER,
+                                  }),
                               }),
                               (0, C.uK)(o.id))
                         : t(e);
@@ -229,7 +238,17 @@ let W = (0, S.xI)(o.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 },
                 [m, o, c, d, f, p, h, N, L, n, S, I, C],
             ),
-            Y = i.useCallback((e, t) => (0, r.jsx)("div", { children: t }, e), []),
+            Y = i.useCallback(
+                (e, t) =>
+                    (0, r.jsx)(
+                        "div",
+                        {
+                            children: t,
+                        },
+                        e,
+                    ),
+                [],
+            ),
             z = i.useCallback(
                 function (e) {
                     let { isStickerPack: n = !0 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
@@ -279,13 +298,18 @@ let W = (0, S.xI)(o.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                 b.A,
                                 {
                                     className: G.jH,
-                                    "aria-label": U.intl.formatToPlainString(U.t["7lLCjZ"], { categoryName: n.name }),
+                                    "aria-label": U.intl.formatToPlainString(U.t["7lLCjZ"], {
+                                        categoryName: n.name,
+                                    }),
                                     icon: (0, r.jsx)(l.Gg5, {
                                         size: "xs",
                                         color: "currentColor",
                                     }),
                                     isCollapsed: t.has(n.id),
-                                    onClick: () => z(n.id, { isStickerPack: !1 }),
+                                    onClick: () =>
+                                        z(n.id, {
+                                            isStickerPack: !1,
+                                        }),
                                     children: n.name,
                                 },
                                 "header-".concat(n.id),
@@ -295,13 +319,18 @@ let W = (0, S.xI)(o.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                 b.A,
                                 {
                                     className: G.jH,
-                                    "aria-label": U.intl.formatToPlainString(U.t["7lLCjZ"], { categoryName: n.name }),
+                                    "aria-label": U.intl.formatToPlainString(U.t["7lLCjZ"], {
+                                        categoryName: n.name,
+                                    }),
                                     icon: (0, r.jsx)(l.O4, {
                                         size: "xs",
                                         color: "currentColor",
                                     }),
                                     isCollapsed: t.has(n.id),
-                                    onClick: () => z(n.id, { isStickerPack: !1 }),
+                                    onClick: () =>
+                                        z(n.id, {
+                                            isStickerPack: !1,
+                                        }),
                                     children: n.name,
                                 },
                                 "header-".concat(n.id),
@@ -314,7 +343,9 @@ let W = (0, S.xI)(o.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                 b.A,
                                 {
                                     className: G.jH,
-                                    "aria-label": U.intl.formatToPlainString(U.t["7lLCjZ"], { categoryName: e.name }),
+                                    "aria-label": U.intl.formatToPlainString(U.t["7lLCjZ"], {
+                                        categoryName: e.name,
+                                    }),
                                     icon: (0, r.jsx)(_.A, {
                                         guild: e,
                                         height: 16,
@@ -334,7 +365,9 @@ let W = (0, S.xI)(o.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                 b.A,
                                 {
                                     className: G.jH,
-                                    "aria-label": U.intl.formatToPlainString(U.t["7lLCjZ"], { categoryName: e.name }),
+                                    "aria-label": U.intl.formatToPlainString(U.t["7lLCjZ"], {
+                                        categoryName: e.name,
+                                    }),
                                     icon: (0, r.jsx)(D.A, {
                                         disableAnimation: !0,
                                         size: ec,
@@ -508,7 +541,9 @@ let W = (0, S.xI)(o.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                   message: U.intl.string(U.t["zc+LQd"]),
                                   className: G.__invalid_noSearchResultsContainer,
                                   noResultsImageURL: V,
-                                  suggestions: (0, r.jsx)(ef, { onSuggestionClick: (e) => (0, m.Ri)(e, !0) }),
+                                  suggestions: (0, r.jsx)(ef, {
+                                      onSuggestionClick: (e) => (0, m.Ri)(e, !0),
+                                  }),
                               })
                             : (0, r.jsx)(p.A, {
                                   role: "none presentation",
@@ -526,7 +561,9 @@ let W = (0, S.xI)(o.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                   stickyHeaders: !0,
                                   ref: C,
                               }),
-                        (0, r.jsx)(L.A, { stickersGrid: S }),
+                        (0, r.jsx)(L.A, {
+                            stickersGrid: S,
+                        }),
                     ],
                 }),
             })

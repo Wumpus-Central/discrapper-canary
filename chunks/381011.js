@@ -1,4 +1,6 @@
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});
 var r = {};
 r = {
     dateRange: (e) => `${e.startDate} \u{81F3} ${e.endDate}`,

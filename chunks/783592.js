@@ -1,4 +1,6 @@
-n.d(t, { A: () => v });
+n.d(t, {
+    A: () => v,
+});
 var r,
     i = n(311907),
     l = n(73153),
@@ -7,6 +9,7 @@ var r,
     a = n(290863),
     u = n(287809),
     c = n(652215);
+
 function d(e, t, n) {
     return (
         t in e
@@ -20,6 +23,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +40,7 @@ function p(e) {
     }
     return e;
 }
+
 function g(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -57,6 +62,7 @@ function g(e, t) {
 let f = !1,
     h = {},
     m = {};
+
 function O(e) {
     let t = !1;
     return (
@@ -66,6 +72,7 @@ function O(e) {
         t
     );
 }
+
 function E(e) {
     let t = m[e];
     if (null == t) return !1;
@@ -77,6 +84,7 @@ function E(e) {
         !0
     );
 }
+
 function A(e) {
     let { user: t, activities: n } = e;
     if (null == t) return !1;
@@ -98,7 +106,11 @@ function A(e) {
                         startedPlaying: o,
                     };
                 return (
-                    (h = g(p({}, h), { [i]: g(p({}, h[i]), { [a.userId]: a }) })),
+                    (h = g(p({}, h), {
+                        [i]: g(p({}, h[i]), {
+                            [a.userId]: a,
+                        }),
+                    })),
                     (m = g(p({}, m), {
                         [a.userId]: {
                             gameId: i,
@@ -112,6 +124,7 @@ function A(e) {
         i
     );
 }
+
 function y() {
     let e,
         t = !1;

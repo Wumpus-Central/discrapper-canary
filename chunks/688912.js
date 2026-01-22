@@ -1,4 +1,6 @@
-n.d(t, { Z: () => d });
+n.d(t, {
+    Z: () => d,
+});
 var r = n(627968);
 n(64700);
 var i = n(873298),
@@ -8,6 +10,7 @@ var i = n(873298),
     l = n(171316),
     c = n(500470),
     u = n(985018);
+
 function d() {
     let e = (0, c.k)(),
         t = (0, l.xs)(),
@@ -32,13 +35,19 @@ function d() {
             (0, r.jsx)(s.A, {
                 title: u.intl.string(u.t["+uI23H"]),
                 value: f,
-                onChange: (e) => d({ explicitContentFriendDm: e }),
+                onChange: (e) =>
+                    d({
+                        explicitContentFriendDm: e,
+                    }),
                 options: n,
             }),
             (0, r.jsx)(s.A, {
                 title: u.intl.string(u.t["Yh+HX1"]),
                 value: p,
-                onChange: (e) => d({ explicitContentNonFriendDm: e }),
+                onChange: (e) =>
+                    d({
+                        explicitContentNonFriendDm: e,
+                    }),
                 options: n,
             }),
         ],

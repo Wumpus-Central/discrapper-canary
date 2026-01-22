@@ -1,4 +1,6 @@
-n.d(t, { A: () => d }),
+n.d(t, {
+    A: () => d,
+}),
     n(896048),
     n(693327),
     n(554719),
@@ -10,6 +12,7 @@ n.d(t, { A: () => d }),
     n(508300),
     n(650828);
 var r = n(64700);
+
 function i(e, t, n) {
     return (
         t in e
@@ -23,6 +26,7 @@ function i(e, t, n) {
         e
     );
 }
+
 function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -39,6 +43,7 @@ function a(e) {
     }
     return e;
 }
+
 function s(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -51,6 +56,7 @@ function s(e, t) {
     }
     return n;
 }
+
 function o(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -63,7 +69,9 @@ function o(e, t) {
     );
 }
 async function l(e, t) {
-    let n = await fetch(e, { signal: t }),
+    let n = await fetch(e, {
+            signal: t,
+        }),
         r = await n.blob();
     null == t || t.throwIfAborted();
     let i = URL.createObjectURL(r);
@@ -80,7 +88,9 @@ async function l(e, t) {
                             () => {
                                 n(new DOMException("Aborted", "AbortError"));
                             },
-                            { once: !0 },
+                            {
+                                once: !0,
+                            },
                         );
                 }),
             ]),
@@ -90,9 +100,11 @@ async function l(e, t) {
         throw (URL.revokeObjectURL(i), e);
     }
 }
+
 function c(e) {
     URL.revokeObjectURL(e);
 }
+
 function u(e) {
     for (let t of e.values()) if (2 !== t) return !1;
     return !0;
@@ -139,7 +151,11 @@ let d = (e, t) => {
                         if (t.signal.aborted) return;
                         m.current.set(e.src, 2),
                             g.current.set(e.src, r.src),
-                            f((t) => o(a({}, t), { [e.src]: r })),
+                            f((t) =>
+                                o(a({}, t), {
+                                    [e.src]: r,
+                                }),
+                            ),
                             u(m.current) && (s(!0), (n.current = 2));
                     } catch (e) {}
             });

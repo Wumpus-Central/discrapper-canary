@@ -1,10 +1,13 @@
-r.d(t, { J: () => u });
+r.d(t, {
+    J: () => u,
+});
 var n = r(64700),
     l = r(417597),
     o = r(256311),
     i = r(773669),
     c = r(883600),
     a = r(559868);
+
 function s(e, t) {
     let {
         changelog: r,
@@ -43,6 +46,7 @@ function s(e, t) {
                 loaded: i !== a._f.NOT_LOADED,
             };
 }
+
 function u() {
     let e = (0, l.bG)([i.default], () => i.default.locale),
         t = (0, l.bG)([c.A], () => c.A.latestChangelogId()),

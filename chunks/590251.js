@@ -1,10 +1,13 @@
-n.d(t, { a: () => f });
+n.d(t, {
+    a: () => f,
+});
 var r,
     i = n(627968),
     a = n(64700),
     s = n(503698),
     o = n.n(s),
     l = n(332099);
+
 function c(e, t, n) {
     return (
         t in e
@@ -80,4 +83,7 @@ class f extends (r = a.Component) {
         });
     }
 }
-c(f, "StrokeSizes", u), c(f, "defaultProps", { strokeSize: u.MEDIUM });
+c(f, "StrokeSizes", u),
+    c(f, "defaultProps", {
+        strokeSize: u.MEDIUM,
+    });

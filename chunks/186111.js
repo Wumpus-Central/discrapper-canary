@@ -1,7 +1,11 @@
-n.d(t, { A: () => f }), n(896048);
+n.d(t, {
+    A: () => f,
+}),
+    n(896048);
 var r,
     i = n(311907),
     a = n(73153);
+
 function s(e, t, n) {
     return (
         t in e
@@ -16,15 +20,18 @@ function s(e, t, n) {
     );
 }
 let o = [];
+
 function l(e) {
     let { component: t } = e;
     if (o.indexOf(t) >= 0) return !1;
     o = [...o, t];
 }
+
 function c() {
     if (0 === o.length) return !1;
     o = o.slice(0, -1);
 }
+
 function u() {
     o = [];
 }

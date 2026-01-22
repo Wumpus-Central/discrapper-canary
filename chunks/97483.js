@@ -4,7 +4,7 @@ n.d(t, {
     xJ: () => s,
 });
 var r = n(652215);
-let i = 3000;
+let i = 3e3;
 var a = (function (e) {
         return (
             (e.MESSAGE = "message"),

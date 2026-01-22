@@ -1,4 +1,6 @@
-a.d(i, { SocialLayerStorefrontItemClaimedSuccessfullyModal: () => C });
+a.d(i, {
+    SocialLayerStorefrontItemClaimedSuccessfullyModal: () => C,
+});
 var n = a(627968),
     e = a(64700),
     l = a(158954),
@@ -17,6 +19,7 @@ var n = a(627968),
     j = a(652215),
     b = a(985018),
     h = a(778560);
+
 function C(t) {
     let { transitionState: i, onClose: a, sku: C, application: k, analyticsLocations: T } = t,
         S = (0, p.j)(k),
@@ -63,7 +66,9 @@ function C(t) {
                 application_id: a,
                 is_gift: !1,
             }),
-                E({ analyticsLocations: t });
+                E({
+                    analyticsLocations: t,
+                });
         }, [E]),
         w = e.useCallback(() => {
             let { analyticsLocations: t, skuId: i } = O.current;
@@ -97,7 +102,9 @@ function C(t) {
         return (0, n.jsx)(l.dWK, {
             transitionState: i,
             onClose: a,
-            children: (0, n.jsx)(l.cwr, { children: (0, n.jsx)(r.y$y, {}) }),
+            children: (0, n.jsx)(l.cwr, {
+                children: (0, n.jsx)(r.y$y, {}),
+            }),
         });
     if (N) {
         let t =
@@ -154,7 +161,9 @@ function C(t) {
             hasAlreadyLinked: N,
             canStartAuthorization: L,
             primaryCTAButtonProps: t,
-            bodyText: b.intl.formatToPlainString(b.t.Qmkje8, { applicationName: k.name }),
+            bodyText: b.intl.formatToPlainString(b.t.Qmkje8, {
+                applicationName: k.name,
+            }),
             title: b.intl.string(b.t.GPAtvf),
         });
     }

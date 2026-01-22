@@ -1,7 +1,11 @@
-n.d(t, { A: () => o }), n(938796);
+n.d(t, {
+    A: () => o,
+}),
+    n(938796);
 var r = n(843472),
     l = n(545152),
     i = n(381941);
+
 function o(e, t, n) {
     var o, a;
     let c = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
@@ -51,7 +55,10 @@ function o(e, t, n) {
             },
             c,
         )),
-        (a = a = { location: i.Hx.RETRY }),
+        (a = a =
+            {
+                location: i.Hx.RETRY,
+            }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(a))
             : (function (e, t) {

@@ -1,4 +1,6 @@
-n.d(t, { T: () => r });
+n.d(t, {
+    T: () => r,
+});
 let r = {
     none: 0,
     xs: 4,
@@ -7,5 +9,5 @@ let r = {
     lg: 16,
     xl: 24,
     xxl: 32,
-    round: 2147483647,
+    round: 0x7fffffff,
 };

@@ -1,4 +1,6 @@
-n.d(e, { u: () => l });
+n.d(e, {
+    u: () => l,
+});
 var a = n(87404),
     r = n(985018);
 let i = {
@@ -7,6 +9,7 @@ let i = {
     [a.Q9.NEW_EMAIL]: () => r.intl.string(r.t.oOqQjw),
     [a.Q9.SOMETHING_ELSE]: () => r.intl.string(r.t.p38n1b),
 };
+
 function l(t) {
     return i[t]();
 }

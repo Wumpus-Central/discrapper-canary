@@ -7,5 +7,7 @@ r(
         bind: !0,
         forced: a.setTimeout !== o,
     },
-    { setTimeout: o },
+    {
+        setTimeout: o,
+    },
 );

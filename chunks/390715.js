@@ -1,10 +1,13 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(627968);
 n(64700);
 var i = n(53594),
     l = n(767822),
     s = n(692467),
     a = n(690420);
+
 function c(e) {
     let { guildId: t, rules: n, triggerType: c, initWithEdit: o } = e,
         { perGuildMaxCount: d } = i.i$[c],

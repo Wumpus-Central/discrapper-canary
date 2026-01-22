@@ -18,6 +18,7 @@ let o = new a.Vy("LibDaveManager"),
             o.info("DAVE loaded");
         },
     };
+
 function f() {
     return (
         ("Firefox" !== i().name || !(s.It < 142)) &&
@@ -26,9 +27,11 @@ function f() {
         ("transform" in RTCRtpSender.prototype || "createEncodedStreams" in RTCRtpSender.prototype)
     );
 }
+
 function p() {
     return "object" == typeof WebAssembly;
 }
+
 function _() {
     return null != l
         ? l
@@ -50,6 +53,7 @@ function _() {
                   });
           }));
 }
+
 function h() {
     if (null == c) throw Error("DAVE module not loaded");
     return null == u && (u = new c.TransientKeys()), u;

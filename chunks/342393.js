@@ -13,6 +13,7 @@
         }
         return n;
     }
+
     function r(e) {
         for (var t = 1; t < arguments.length; t++) {
             var r = null != arguments[t] ? arguments[t] : {};
@@ -28,6 +29,7 @@
         }
         return e;
     }
+
     function i(e) {
         return (i =
             "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
@@ -40,6 +42,7 @@
                           : typeof e;
                   })(e);
     }
+
     function a(e, t, n) {
         return (
             t in e
@@ -53,6 +56,7 @@
             e
         );
     }
+
     function s(e, t) {
         if (null == e) return {};
         var n,
@@ -62,6 +66,7 @@
         for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
         return i;
     }
+
     function o(e, t) {
         if (null == e) return {};
         var n,
@@ -74,12 +79,15 @@
         }
         return i;
     }
+
     function l(e, t) {
         return c(e) || u(e, t) || d(e, t) || p();
     }
+
     function c(e) {
         if (Array.isArray(e)) return e;
     }
+
     function u(e, t) {
         var n,
             r,
@@ -102,6 +110,7 @@
             return a;
         }
     }
+
     function d(e, t) {
         if (e) {
             if ("string" == typeof e) return f(e, t);
@@ -111,16 +120,19 @@
             if ("Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return f(e, t);
         }
     }
+
     function f(e, t) {
         (null == t || t > e.length) && (t = e.length);
         for (var n = 0, r = Array(t); n < t; n++) r[n] = e[n];
         return r;
     }
+
     function p() {
         throw TypeError(
             "Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
         );
     }
+
     function _(e) {
         return e && e.__esModule && Object.prototype.hasOwnProperty.call(e, "default") ? e.default : e;
     }
@@ -128,7 +140,10 @@
         m,
         g,
         E,
-        b = { exports: {} };
+        b = {
+            exports: {},
+        };
+
     function y() {
         return m ? h : ((m = 1), (h = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"));
     }
@@ -136,7 +151,9 @@
         if (E) return g;
         E = 1;
         var e = y();
+
         function t() {}
+
         function n() {}
         return (
             (n.resetWarningCache = t),
@@ -149,6 +166,7 @@
                         throw ((o.name = "Invariant Violation"), o);
                     }
                 }
+
                 function i() {
                     return r;
                 }
@@ -288,7 +306,9 @@
                 };
             var n = P(e, t);
             return null === n
-                ? { tag: "empty" }
+                ? {
+                      tag: "empty",
+                  }
                 : {
                       tag: "sync",
                       stripe: n,
@@ -395,7 +415,13 @@
                     },
                     [o.stripe],
                 ),
-                t.createElement(L.Provider, { value: o }, i)
+                t.createElement(
+                    L.Provider,
+                    {
+                        value: o,
+                    },
+                    i,
+                )
             );
         };
     M.propTypes = {
@@ -411,7 +437,9 @@
         G = function (e) {
             return (0, e.children)(k("mounts <ElementsConsumer>"));
         };
-    G.propTypes = { children: O.func.isRequired };
+    G.propTypes = {
+        children: O.func.isRequired,
+    };
     var V = ["on", "session"],
         F = t.createContext(null);
     F.displayName = "CheckoutSdkContext";
@@ -538,7 +566,19 @@
                 [d.checkoutSdk, o],
             );
             return d.checkoutSdk
-                ? t.createElement(F.Provider, { value: d }, t.createElement(H.Provider, { value: E }, i))
+                ? t.createElement(
+                      F.Provider,
+                      {
+                          value: d,
+                      },
+                      t.createElement(
+                          H.Provider,
+                          {
+                              value: E,
+                          },
+                          i,
+                      ),
+                  )
                 : null;
         };
     K.propTypes = {
@@ -751,7 +791,12 @@
                 ),
                 s = t.useRef(null),
                 o = t.useRef(null),
-                c = l(t.useState({ embeddedCheckout: null }), 2),
+                c = l(
+                    t.useState({
+                        embeddedCheckout: null,
+                    }),
+                    2,
+                ),
                 u = c[0],
                 d = c[1];
             t.useEffect(
@@ -762,7 +807,9 @@
                                 s.current ||
                                 ((o.current = e),
                                 (s.current = o.current.initEmbeddedCheckout(r).then(function (e) {
-                                    d({ embeddedCheckout: e });
+                                    d({
+                                        embeddedCheckout: e,
+                                    });
                                 })));
                         };
                         "async" === a.tag && !o.current && (r.clientSecret || r.fetchClientSecret)
@@ -847,7 +894,13 @@
                     },
                     [p, r],
                 ),
-                t.createElement(ee.Provider, { value: u }, i)
+                t.createElement(
+                    ee.Provider,
+                    {
+                        value: u,
+                    },
+                    i,
+                )
             );
         },
         ei = function (e) {

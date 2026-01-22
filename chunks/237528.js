@@ -1,4 +1,6 @@
-n.d(t, { v: () => c });
+n.d(t, {
+    v: () => c,
+});
 var r = n(627968),
     i = n(503698),
     a = n.n(i),
@@ -30,6 +32,7 @@ let l = {
     grayMedium: "gray-medium",
     grayDark: "gray-dark",
 };
+
 function c(e) {
     let { text: t, variant: n = "grayLight" } = e,
         i = l[n];

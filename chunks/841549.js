@@ -8,6 +8,7 @@ n.d(t, {
 var r = n(627968);
 n(64700);
 var i = n(442433);
+
 function a(e, t, n) {
     return (
         t in e
@@ -21,6 +22,7 @@ function a(e, t, n) {
         e
     );
 }
+
 function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,6 +39,7 @@ function s(e) {
     }
     return e;
 }
+
 function o(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -49,6 +52,7 @@ function o(e, t) {
     }
     return n;
 }
+
 function l(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -60,6 +64,7 @@ function l(e, t) {
         e
     );
 }
+
 function c(e, t) {
     if (null == e) return {};
     var n,
@@ -76,6 +81,7 @@ function c(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function u(e, t) {
     if (null == e) return {};
     var n,
@@ -86,6 +92,7 @@ function u(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function d(e, t, a) {
     a.isGroupDM()
         ? (0, i.L3)(e, async () => {
@@ -150,9 +157,16 @@ function d(e, t, a) {
                   let { default: e } = await Promise.all([n.e("97262"), n.e("32418"), n.e("8893")]).then(
                       n.bind(n, 668569),
                   );
-                  return (n) => (0, r.jsx)(e, l(s({}, n), { user: t }));
+                  return (n) =>
+                      (0, r.jsx)(
+                          e,
+                          l(s({}, n), {
+                              user: t,
+                          }),
+                      );
               });
 }
+
 function f(e, t) {
     let { user: a, channel: o, moderationAlertId: u, guildId: d } = t,
         f = c(t, ["user", "channel", "moderationAlertId", "guildId"]);
@@ -177,6 +191,7 @@ function f(e, t) {
                 );
         });
 }
+
 function p(e, t) {
     let { user: a, guildId: o, analyticsLocations: c, onCloseContextMenu: u, isViewOnly: d } = t;
     (0, i.L3)(e, async () => {
@@ -194,10 +209,17 @@ function p(e, t) {
             );
     });
 }
+
 function _(e, t, a) {
     null != a &&
         (0, i.L3)(e, async () => {
             let { default: e } = await n.e("77759").then(n.bind(n, 331458));
-            return (t) => (0, r.jsx)(e, l(s({}, t), { guildId: a }));
+            return (t) =>
+                (0, r.jsx)(
+                    e,
+                    l(s({}, t), {
+                        guildId: a,
+                    }),
+                );
         });
 }

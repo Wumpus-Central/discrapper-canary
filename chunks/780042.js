@@ -1,9 +1,12 @@
-n.d(t, { A: () => O }), n(896048);
+n.d(t, {
+    A: () => O,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
-    o = n(432022),
+    o = n(108531),
     l = n(311907),
     c = n(554146),
     u = n(459192),
@@ -21,6 +24,7 @@ let b = {
         friction: 70,
     },
     y = 20;
+
 function O(e) {
     let { checked: t, onClick: n, id: a = "burst-reaction-toggle-button" } = e,
         O = (0, l.bG)([f.A], () => f.A.useReducedMotion),
@@ -30,10 +34,15 @@ function O(e) {
         [T, C] = i.useState(!1),
         [N, R] = (0, d.zhh)(() => ({})),
         w = (0, o.animated)(d.it9);
+
     function P() {
         R({
-            from: { rotate: t ? "360deg" : "0deg" },
-            to: { rotate: t ? "0deg" : "360deg" },
+            from: {
+                rotate: t ? "360deg" : "0deg",
+            },
+            to: {
+                rotate: t ? "0deg" : "360deg",
+            },
             config: b,
         }),
             null == n || n(),
@@ -67,7 +76,9 @@ function O(e) {
                 }),
                 (0, r.jsxs)("label", {
                     htmlFor: a,
-                    className: s()(E.Pf, { [E.wM]: t }),
+                    className: s()(E.Pf, {
+                        [E.wM]: t,
+                    }),
                     children: [
                         (0, r.jsx)(w, {
                             style: O ? void 0 : N,

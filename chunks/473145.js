@@ -89,6 +89,7 @@ let O = [_.TVA.NONE, _.TVA.TIER_1, _.TVA.TIER_2, _.TVA.TIER_3],
         let t = O[O.indexOf(e) - 1];
         return m.y7[e] - m.y7[t];
     };
+
 function C(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { useLevels: n = !0 } = t;
@@ -105,6 +106,7 @@ function C(e) {
             throw Error("Not a valid tier type");
     }
 }
+
 function N(e) {
     switch (e) {
         case _.TVA.NONE:
@@ -138,19 +140,23 @@ let R = i().memoize((e) =>
                 : e === _.TVA.TIER_3
                   ? _.AnalyticsObjectTypes.TIER_3
                   : null;
+
 function P(e) {
     var t;
     let n = null == (t = c.A.getGuild(e)) ? void 0 : t.premiumTier;
     return null != n ? n : _.TVA.NONE;
 }
+
 function D(e, t) {
     return null == t || (null != e && e >= t);
 }
+
 function x(e) {
     return i()
         .values(e)
         .filter((e) => e.isAvailable());
 }
+
 function L(e) {
     let { fractionalState: t } = e,
         n = f.A.getPremiumTypeSubscription(),
@@ -161,7 +167,9 @@ function L(e) {
         o = i.length > 0;
     if (a && t === m.xc.NONE && !o) return E.intl.string(E.t.mOWsF1);
     if (null == r ? void 0 : r.isPremiumGroupMember())
-        return E.intl.formatToPlainString(b.default["5xN/C1"], { premiumGroupProductName: (0, g.DP)() });
+        return E.intl.formatToPlainString(b.default["5xN/C1"], {
+            premiumGroupProductName: (0, g.DP)(),
+        });
     let { numAvailableGuildBoostSlots: l, numCanceledGuildBoostSlots: c } = Object.values(d.A.boostSlots).reduce(
         (e, t) => (F(t) && e.numCanceledGuildBoostSlots++, t.isAvailable() && e.numAvailableGuildBoostSlots++, e),
         {
@@ -194,6 +202,7 @@ let j = [
         nextTier: _.TVA.TIER_2,
     },
 ];
+
 function M(e, t) {
     let n = I(t),
         r = O.indexOf(t);
@@ -203,31 +212,38 @@ function M(e, t) {
         s = S(t);
     return Math.max(0, n - e.slice(a, s).length);
 }
+
 function k(e, t, n) {
     return -1 === O.indexOf(n) ? 0 : Math.max(0, U(e) - t.length);
 }
+
 function U(e) {
     var t, n;
     let r = m.OW + (null != (t = null == (n = e.premiumFeatures) ? void 0 : n.additionalSoundSlots) ? t : 0);
     return Math.max(e.features.has(_.GuildFeatures.MORE_SOUNDBOARD) ? m.xs : m.OW, r);
 }
+
 function G(e) {
     var t, n;
     let r = h.Xn + (null != (t = null == (n = e.premiumFeatures) ? void 0 : n.additionalEmojiSlots) ? t : 0);
     return Math.max(e.features.has(_.GuildFeatures.MORE_EMOJI) ? h.EQ : h.Xn, r);
 }
+
 function V(e, t) {
     let n = (0, o.Z)(e.id).available;
     return Math.max(0, _.M2T[t] - n);
 }
+
 function F(e) {
     var t;
     return (null == (t = e.subscription) ? void 0 : t.status) === _.Dmq.CANCELED || e.canceled;
 }
+
 function B(e) {
     var t;
     return null != (t = A.find((t) => e >= _.M2T[t])) ? t : _.TVA.NONE;
 }
+
 function H(e) {
     var t;
     return null != (t = O.find((t) => e < _.M2T[t])) ? t : _.TVA.TIER_3;
@@ -238,6 +254,7 @@ let Y = {
     [_.TVA.TIER_2]: 2 / 3,
     [_.TVA.TIER_3]: 1,
 };
+
 function W(e) {
     let t = (0, l.G)(e.id),
         n = B(t),

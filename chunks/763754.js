@@ -17,10 +17,12 @@ var r = n(284009),
     d = n(994500),
     f = n(287809),
     p = n(427262);
+
 function _(e, t) {
     let n = h(e);
     return i()(null != n, "Result cannot be null because the message is not null"), null != t ? t : n;
 }
+
 function h(e) {
     var t;
     let n = (0, a.bG)([o.A], () => (null == e ? null : o.A.getChannel(e.channel_id))),
@@ -50,14 +52,17 @@ function h(e) {
               displayNameStyles: A,
           });
 }
+
 function m(e) {
     let t = o.A.getChannel(e.channel_id);
     return b(e.author, t);
 }
+
 function g(e, t) {
     let n = E(e, t);
     return i()(null != n, "Result cannot be null because user and channel are not null"), n;
 }
+
 function E(e, t) {
     let n = null == e ? void 0 : e.id,
         r = null == t ? void 0 : t.guild_id,
@@ -78,6 +83,7 @@ function E(e, t) {
         displayNameStyles: null == e ? void 0 : e.displayNameStyles,
     });
 }
+
 function b(e, t) {
     let n = null == e ? void 0 : e.id,
         r = null == t ? void 0 : t.guild_id,
@@ -95,6 +101,7 @@ function b(e, t) {
         displayNameStyles: null == e ? void 0 : e.displayNameStyles,
     });
 }
+
 function y(e) {
     var t, n;
     let {

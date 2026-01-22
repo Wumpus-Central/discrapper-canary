@@ -1,9 +1,13 @@
-n.d(t, { A: () => b }), n(896048);
+n.d(t, {
+    A: () => b,
+}),
+    n(896048);
 var r,
     i = n(735438),
     a = n.n(i),
     s = n(311907),
     o = n(73153);
+
 function l(e, t, n) {
     return (
         t in e
@@ -17,6 +21,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -33,6 +38,7 @@ function c(e) {
     }
     return e;
 }
+
 function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -45,6 +51,7 @@ function u(e, t) {
     }
     return n;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -58,14 +65,21 @@ function d(e, t) {
 }
 let f = {},
     p = {};
+
 function _(e) {
     let { applicationId: t } = e;
-    f = d(c({}, f), { [t]: 1 });
+    f = d(c({}, f), {
+        [t]: 1,
+    });
 }
+
 function h(e) {
     let { applicationId: t } = e;
-    f = d(c({}, f), { [t]: 2 });
+    f = d(c({}, f), {
+        [t]: 2,
+    });
 }
+
 function m(e) {
     let { applicationId: t, assets: n } = e;
     if (null != n) {
@@ -76,6 +90,7 @@ function m(e) {
         };
     } else delete p[t];
 }
+
 function g(e) {
     let { assets: t } = e,
         n = c({}, f);

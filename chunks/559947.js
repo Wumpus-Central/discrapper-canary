@@ -1,4 +1,8 @@
-t.d(A, { default: () => _ }), t(896048), t(228524);
+t.d(A, {
+    default: () => _,
+}),
+    t(896048),
+    t(228524);
 var r = t(627968),
     n = t(64700),
     l = t(503698),
@@ -40,6 +44,7 @@ var r = t(627968),
     D = t(705751),
     R = t(985018),
     L = t(294851);
+
 function G(e) {
     for (var A = 1; A < arguments.length; A++) {
         var t = null != arguments[A] ? arguments[A] : {},
@@ -68,12 +73,15 @@ function G(e) {
 let k = (0, b.Ld)(),
     E = (0, b.Ld)(),
     B = (0, b.Ld)();
+
 function Y(e) {
     let { text: A, onChange: t, value: n, disabled: l, warning: i } = e,
         s = (0, b.GV)(),
         o = l ? "text-muted" : "text-default";
     return (0, r.jsxs)("label", {
-        className: a()(L.$4, { [L.r9]: l }),
+        className: a()(L.$4, {
+            [L.r9]: l,
+        }),
         htmlFor: s,
         children: [
             (0, r.jsx)(f.Text, {
@@ -100,12 +108,14 @@ function Y(e) {
         ],
     });
 }
+
 function H(e, A) {
     return e.filter((e) => {
         let { value: t, label: r } = e;
         return t.toString().includes(A) || r.includes(A);
     });
 }
+
 function M(e) {
     let { guildId: A, selectedPriceTier: t, setPriceTier: l, label: a, errorMessage: i } = e,
         { priceTiers: s } = (0, v._)(A, w.L_o.GUILD_PRODUCTS),
@@ -131,12 +141,20 @@ function M(e) {
         required: !0,
     });
 }
+
 function J(e) {
     var A, t, l, a, i, b, v, C, H, J, $, ee;
     let { guildId: eA, productId: et, transitionState: er, onClose: en } = e,
         [el, ea] = n.useState(et),
         ei = (0, o.bG)([P.A], () => (null == el ? null : P.A.getGuildProduct(el)), [el]),
-        es = (0, o.bG)([P.A], () => P.A.getGuildProductsForGuild(eA, { publishedOnly: !0 }).length, [eA]),
+        es = (0, o.bG)(
+            [P.A],
+            () =>
+                P.A.getGuildProductsForGuild(eA, {
+                    publishedOnly: !0,
+                }).length,
+            [eA],
+        ),
         eo = (null == ei ? void 0 : ei.published) === !0,
         { application: ed } = (0, m.A)(eA, D.S7.GUILD_ROLE_SUBSCRIPTIONS),
         ec = N.D["0"],
@@ -277,7 +295,9 @@ function J(e) {
         );
     }, [eA, e6, el]);
     let e3 = async (e) => {
-        let A = (0, K.ig)({ newRoleParams: eL });
+        let A = (0, K.ig)({
+            newRoleParams: eL,
+        });
         if ((eK(A), null != A)) return;
         let t = await eW(e);
         if ((ey(!1), null != t)) {
@@ -446,7 +466,9 @@ function J(e) {
                             ],
                         }),
                     }),
-                    (0, r.jsx)("div", { className: L.cD }),
+                    (0, r.jsx)("div", {
+                        className: L.cD,
+                    }),
                     (0, r.jsx)(f.IpV, {
                         children: (0, r.jsxs)("div", {
                             className: L.mA,
@@ -456,7 +478,9 @@ function J(e) {
                                     disabledTooltip: eo
                                         ? R.intl.string(R.t["0NQ00t"])
                                         : es >= 50
-                                          ? R.intl.format(R.t.IqWPVt, { maxProducts: 50 })
+                                          ? R.intl.format(R.t.IqWPVt, {
+                                                maxProducts: 50,
+                                            })
                                           : R.intl.string(R.t["Ax89/c"]),
                                     published: eo,
                                     onClick: () => {
@@ -465,7 +489,10 @@ function J(e) {
                                             eM(eo ? "unpublish" : "publish"),
                                             e3(
                                                 ((e = G({}, eJ)),
-                                                (A = A = { published: !eo }),
+                                                (A = A =
+                                                    {
+                                                        published: !eo,
+                                                    }),
                                                 Object.getOwnPropertyDescriptors
                                                     ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(A))
                                                     : (function (e, A) {
@@ -487,20 +514,26 @@ function J(e) {
                                     },
                                     submitting: ew,
                                 }),
-                                (0, r.jsx)("div", { className: L.AC }),
+                                (0, r.jsx)("div", {
+                                    className: L.AC,
+                                }),
                                 (0, r.jsx)(f.Heading, {
                                     variant: "text-xs/bold",
                                     color: "text-default",
                                     className: L.B9,
                                     children: R.intl.string(R.t["6I7nQT"]),
                                 }),
-                                (0, r.jsx)(f.hKd, { size: 4 }),
+                                (0, r.jsx)(f.hKd, {
+                                    size: 4,
+                                }),
                                 (0, r.jsx)(f.Text, {
                                     variant: "text-xs/normal",
                                     color: "text-muted",
                                     children: R.intl.string(R.t.Oq4dfU),
                                 }),
-                                (0, r.jsx)(f.hKd, { size: 16 }),
+                                (0, r.jsx)(f.hKd, {
+                                    size: 16,
+                                }),
                                 (0, r.jsx)(T.A, {
                                     imageUrl: ej,
                                     name: "" === em ? R.intl.string(R.t.EmqIwl) : em,
@@ -508,7 +541,9 @@ function J(e) {
                                     formattedPrice: eN,
                                     role: eE,
                                     productType: eB,
-                                    ctaComponent: (0, r.jsx)(f.Button, { text: R.intl.string(R.t.xUi3BL) }),
+                                    ctaComponent: (0, r.jsx)(f.Button, {
+                                        text: R.intl.string(R.t.xUi3BL),
+                                    }),
                                     cardWidth: 340,
                                     thumbnailHeight: 190,
                                 }),
@@ -593,6 +628,7 @@ function J(e) {
         ],
     });
 }
+
 function _(e) {
     var A;
     return (0, r.jsx)(y.R, {

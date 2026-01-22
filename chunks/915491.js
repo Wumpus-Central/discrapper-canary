@@ -1,4 +1,6 @@
-l.d(t, { A: () => p });
+l.d(t, {
+    A: () => p,
+});
 var r = l(627968);
 l(64700);
 var n = l(158954),
@@ -10,6 +12,7 @@ var n = l(158954),
     d = l(333354),
     c = l(985018),
     f = l(445735);
+
 function p(e) {
     let { boost: t } = e,
         { timestamp: l, username: p, roleColor: m, roleColorStrings: v } = (0, a.U)(t),
@@ -33,7 +36,7 @@ function p(e) {
                             text: p,
                             shouldShow: !0,
                             asContainer: !0,
-                            delay: 1000,
+                            delay: 1e3,
                             children: (0, r.jsx)(s.gyj, {
                                 className: f.IP,
                                 variant: "text-md/semibold",

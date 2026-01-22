@@ -55,8 +55,13 @@ let y = {
     },
     O = function (e) {
         let { ambient: t = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return null != e ? A(e, { ambient: t }) : null;
+        return null != e
+            ? A(e, {
+                  ambient: t,
+              })
+            : null;
     };
+
 function A(e) {
     let { ambient: t = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         n = y[e];

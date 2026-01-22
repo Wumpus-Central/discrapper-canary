@@ -1,4 +1,6 @@
-n.d(t, { A: () => x });
+n.d(t, {
+    A: () => x,
+});
 var r = n(627968),
     i = n(64700),
     l = n(284009),
@@ -13,6 +15,7 @@ var r = n(627968),
     b = n(963175),
     m = n(985018),
     p = n(691814);
+
 function x(e) {
     var t;
     let { onDeleteEditState: l } = e,

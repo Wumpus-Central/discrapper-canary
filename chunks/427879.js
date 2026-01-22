@@ -9,7 +9,9 @@ function t(e, t) {
                 s: a,
                 n: function () {
                     return i >= e.length
-                        ? { done: !0 }
+                        ? {
+                              done: !0,
+                          }
                         : {
                               done: !1,
                               value: e[i++],
@@ -48,6 +50,7 @@ function t(e, t) {
         },
     };
 }
+
 function n(e, t) {
     if (e) {
         if ("string" == typeof e) return r(e, t);
@@ -57,11 +60,13 @@ function n(e, t) {
         if ("Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return r(e, t);
     }
 }
+
 function r(e, t) {
     (null == t || t > e.length) && (t = e.length);
     for (var n = 0, r = Array(t); n < t; n++) r[n] = e[n];
     return r;
 }
+
 function i() {
     this._defaults = [];
 }

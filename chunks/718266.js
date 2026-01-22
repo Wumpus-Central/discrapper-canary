@@ -9,6 +9,7 @@ n(64700);
 var i = n(632656),
     a = n(998218),
     s = n(652176);
+
 function o(e, t, n) {
     return (
         t in e
@@ -22,6 +23,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -38,6 +40,7 @@ function l(e) {
     }
     return e;
 }
+
 function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -50,6 +53,7 @@ function c(e, t) {
     }
     return n;
 }
+
 function u(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -61,6 +65,7 @@ function u(e, t) {
         e
     );
 }
+
 function d(e) {
     let t = e.item.originalItem.media;
     return (0, r.jsx)(i.m, {
@@ -73,6 +78,7 @@ function d(e) {
         mediaLayoutType: e.mediaLayoutType,
     });
 }
+
 function f(e) {
     let t = e.item.originalItem.media;
     return (0, s.LL)(
@@ -84,12 +90,15 @@ function f(e) {
             placeholderVersion: t.placeholderVersion,
             contentType: t.contentType,
             originalContentType: t.originalContentType,
-            sourceMetadata: { message: e.message },
+            sourceMetadata: {
+                message: e.message,
+            },
             analyticsSource: "renderImageComponentForGalleryItem",
             srcIsAnimated: e.item.srcIsAnimated,
         }),
     );
 }
+
 function p(e) {
     let t = e.item.originalItem.media,
         n = a.A.toURLSafe(t.proxyUrl);
@@ -103,7 +112,9 @@ function p(e) {
                   src: t.proxyUrl,
                   placeholder: t.placeholder,
                   placeholderVersion: t.placeholderVersion,
-                  sourceMetadata: { message: e.message },
+                  sourceMetadata: {
+                      message: e.message,
+                  },
               }),
           ));
 }

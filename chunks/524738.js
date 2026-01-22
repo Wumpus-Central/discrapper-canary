@@ -34,10 +34,18 @@ let d = (e) => {
                 _(null != (n = t.find((t) => t.setting === e)) ? n : t[0]), null == c || c(e);
             };
         return (0, r.jsxs)("div", {
-            className: s()(u.P5, { [u.Vd]: "vertical" === d }),
+            className: s()(u.P5, {
+                [u.Vd]: "vertical" === d,
+            }),
             children: [
                 (0, r.jsx)(o.VQ0, {
-                    className: s()(u.$H, { [u.Vd]: "vertical" === d }, a),
+                    className: s()(
+                        u.$H,
+                        {
+                            [u.Vd]: "vertical" === d,
+                        },
+                        a,
+                    ),
                     selectedItem: p.setting,
                     onItemSelect: m,
                     orientation: d,
@@ -62,7 +70,9 @@ let d = (e) => {
                 (0, r.jsx)(o.VQ0.Panel, {
                     id: p.setting,
                     "aria-labelledby": p.title,
-                    className: s()(u.NM, n, { [u.Vd]: "vertical" === d }),
+                    className: s()(u.NM, n, {
+                        [u.Vd]: "vertical" === d,
+                    }),
                     children: h,
                 }),
             ],

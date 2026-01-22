@@ -1,4 +1,6 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -6,17 +8,20 @@ var i = n(311907),
     a = n(616075),
     c = n(816662),
     o = n(395504),
-    u = n(543465),
-    s = n(652215),
+    s = n(543465),
+    u = n(652215),
     d = n(985018);
+
 function b(e) {
     let { isFavoritesPerk: t } = (0, a.l)("useChannelOptInItems"),
         n = (0, o.jN)(e.guild_id),
-        b = (0, i.bG)([u.Ay], () => u.Ay.isChannelOptedIn(e.guild_id, e.id)),
-        p = (0, i.bG)([u.Ay], () => null != e.parent_id && u.Ay.isChannelOptedIn(e.guild_id, e.parent_id)),
-        O = (0, i.bG)([u.Ay], () => u.Ay.isFavorite(e.guild_id, e.id)),
+        b = (0, i.bG)([s.Ay], () => s.Ay.isChannelOptedIn(e.guild_id, e.id)),
+        p = (0, i.bG)([s.Ay], () => null != e.parent_id && s.Ay.isChannelOptedIn(e.guild_id, e.parent_id)),
+        O = (0, i.bG)([s.Ay], () => s.Ay.isFavorite(e.guild_id, e.id)),
         y = () => {
-            (0, c.AC)(e.guild_id, e.id, !b, { section: s.JJy.CONTEXT_MENU });
+            (0, c.AC)(e.guild_id, e.id, !b, {
+                section: u.JJy.CONTEXT_MENU,
+            });
         };
     if (!n || e.isThread()) return null;
     if (e.isCategory())
@@ -33,7 +38,9 @@ function b(e) {
                 id: "opt-in-favorite-channel",
                 label: t ? g : f,
                 action: () => {
-                    (0, c.jA)(e.guild_id, e.id, !O, { section: s.JJy.CONTEXT_MENU });
+                    (0, c.jA)(e.guild_id, e.id, !O, {
+                        section: u.JJy.CONTEXT_MENU,
+                    });
                 },
             }),
             p
@@ -43,7 +50,9 @@ function b(e) {
                       action: () =>
                           void (
                               null != e.parent_id &&
-                              (0, c.AC)(e.guild_id, e.parent_id, !1, { section: s.JJy.CONTEXT_MENU })
+                              (0, c.AC)(e.guild_id, e.parent_id, !1, {
+                                  section: u.JJy.CONTEXT_MENU,
+                              })
                           ),
                   })
                 : (0, r.jsx)(l.Drp, {

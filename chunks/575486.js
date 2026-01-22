@@ -20,6 +20,7 @@ var r = n(627968),
     g = n(574842),
     E = n(482361),
     b = n(378496);
+
 function y(e, t, n) {
     return (
         t in e
@@ -33,6 +34,7 @@ function y(e, t, n) {
         e
     );
 }
+
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -49,6 +51,7 @@ function O(e) {
     }
     return e;
 }
+
 function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -61,6 +64,7 @@ function A(e, t) {
     }
     return n;
 }
+
 function v(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -208,8 +212,12 @@ class S extends i.PureComponent {
                                     className: s()(b.Mp, S(n)),
                                     children: [
                                         A(n),
-                                        (0, r.jsx)("div", { className: s()(b.r6, S(n)) }),
-                                        (0, r.jsx)("div", { className: s()(b.CY, S(n)) }),
+                                        (0, r.jsx)("div", {
+                                            className: s()(b.r6, S(n)),
+                                        }),
+                                        (0, r.jsx)("div", {
+                                            className: s()(b.CY, S(n)),
+                                        }),
                                     ],
                                 }),
                             }),

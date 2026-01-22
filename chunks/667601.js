@@ -16,7 +16,11 @@ e.exports = function (e) {
             className: "string",
             begin: '"|\\|',
             end: '"|$',
-            contains: [{ begin: '""' }],
+            contains: [
+                {
+                    begin: '""',
+                },
+            ],
         },
         u = {
             begin: "'",
@@ -87,7 +91,9 @@ e.exports = function (e) {
                         f,
                     ],
                 },
-                e.inherit(e.TITLE_MODE, { begin: t }),
+                e.inherit(e.TITLE_MODE, {
+                    begin: t,
+                }),
             ],
         };
     return {

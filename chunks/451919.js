@@ -8,7 +8,8 @@ var r = n(495756),
     a = n(696451),
     s = n(71393),
     o = n(90165);
-let l = 5184000000;
+let l = 5184e6;
+
 function c(e) {
     var t, n;
     let { message: r, userId: i, suppressEveryone: a = !1, suppressRoles: s = !1 } = e;
@@ -23,6 +24,7 @@ function c(e) {
         suppressRoles: s,
     });
 }
+
 function u(e) {
     var t, n, r, i, a, s;
     let { rawMessage: o, userId: l, suppressEveryone: c = !1, suppressRoles: u = !1 } = e;
@@ -37,6 +39,7 @@ function u(e) {
         suppressRoles: u,
     });
 }
+
 function d(e) {
     let {
         userId: t,

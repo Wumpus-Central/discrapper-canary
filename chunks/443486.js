@@ -1,4 +1,6 @@
-n.d(t, { A: () => E });
+n.d(t, {
+    A: () => E,
+});
 var r = n(627968),
     i = n(64700),
     a = n(397927),
@@ -14,6 +16,7 @@ var r = n(627968),
     h = n(652215),
     m = n(985018),
     g = n(935606);
+
 function E(e) {
     let { setSearchQuery: t, searchContext: n, mode: E } = e,
         b = (0, o.R)(n);
@@ -80,8 +83,12 @@ function E(e) {
                         color: "currentColor",
                         className: g.Fx,
                     }),
-                    label: (0, r.jsx)(u.bg, { label: o }),
-                    sublabel: (0, r.jsx)(u.bj, { searchTokenType: h }),
+                    label: (0, r.jsx)(u.bg, {
+                        label: o,
+                    }),
+                    sublabel: (0, r.jsx)(u.bj, {
+                        searchTokenType: h,
+                    }),
                     onSelect: m,
                 });
             });

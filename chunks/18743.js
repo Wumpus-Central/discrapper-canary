@@ -1,9 +1,12 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 var r = n(627968);
 n(64700);
 var i = n(990078),
     l = n(397927),
     s = n(796416);
+
 function a(e) {
     let { label: t, sublabel: n, value: a, additionalContent: c, tooltip: o } = e;
     return (0, r.jsxs)("div", {

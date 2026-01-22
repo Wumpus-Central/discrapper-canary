@@ -1,4 +1,6 @@
-n.d(t, { A: () => O });
+n.d(t, {
+    A: () => O,
+});
 var r = n(627968);
 n(64700);
 var i = n(158954),
@@ -12,6 +14,7 @@ var i = n(158954),
     f = n(544105),
     p = n(652215),
     _ = n(985018);
+
 function h(e, t, n) {
     return (
         t in e
@@ -25,6 +28,7 @@ function h(e, t, n) {
         e
     );
 }
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -41,6 +45,7 @@ function m(e) {
     }
     return e;
 }
+
 function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -53,6 +58,7 @@ function g(e, t) {
     }
     return n;
 }
+
 function E(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -97,7 +103,9 @@ let b = "game_console_alert_modal",
                               );
                       (0, s.hasModalOpen)(y)
                           ? (0, s.updateModal)(y, (e) => o(e))
-                          : (0, s.openModalLazy)(async () => (e) => o(e), { modalKey: y });
+                          : (0, s.openModalLazy)(async () => (e) => o(e), {
+                                modalKey: y,
+                            });
                   });
         },
         showSelfDismissableAlert(e) {
@@ -107,9 +115,12 @@ let b = "game_console_alert_modal",
                     errorCodeMessage: a,
                     dismissCallback: () => (0, s.closeModal)(b),
                 });
+
             function h() {
                 null != l &&
-                    ((0, o.A)({ platformType: l }),
+                    ((0, o.A)({
+                        platformType: l,
+                    }),
                     u.default.track(p.HAw.ACCOUNT_LINK_STEP, {
                         previous_step: f.yM,
                         current_step: "desktop oauth",
@@ -132,6 +143,8 @@ let b = "game_console_alert_modal",
                 );
             (0, s.hasModalOpen)(b)
                 ? (0, s.updateModal)(b, (e) => g(e))
-                : (0, s.openModalLazy)(async () => (e) => g(e), { modalKey: b });
+                : (0, s.openModalLazy)(async () => (e) => g(e), {
+                      modalKey: b,
+                  });
         },
     };

@@ -1,11 +1,15 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(530560),
     i = n(374372),
     a = n(615339),
     s = n(632434);
+
 function o(e) {
     return null != e.text.match(/\s+(prima|dal)$/i);
 }
+
 function l(e) {
     return null != e.text.match(/\s+(dopo|dal|fino)$/i);
 }

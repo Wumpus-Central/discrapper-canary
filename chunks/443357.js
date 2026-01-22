@@ -1,4 +1,6 @@
-n.d(t, { q: () => d });
+n.d(t, {
+    q: () => d,
+});
 var r = n(627968);
 n(64700);
 var i = n(873298),
@@ -8,6 +10,7 @@ var i = n(873298),
     l = n(171316),
     c = n(500470),
     u = n(985018);
+
 function d() {
     let e = (0, c.k)(),
         t = (0, l.gr)();
@@ -32,13 +35,19 @@ function d() {
             (0, r.jsx)(s.A, {
                 title: u.intl.string(u.t["+uI23H"]),
                 value: n,
-                onChange: (e) => f({ goreContentFriendDm: e }),
+                onChange: (e) =>
+                    f({
+                        goreContentFriendDm: e,
+                    }),
                 options: p,
             }),
             (0, r.jsx)(s.A, {
                 title: u.intl.string(u.t["Yh+HX1"]),
                 value: d,
-                onChange: (e) => f({ goreContentNonFriendDm: e }),
+                onChange: (e) =>
+                    f({
+                        goreContentNonFriendDm: e,
+                    }),
                 options: p,
             }),
         ],

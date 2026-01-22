@@ -9,6 +9,7 @@ var r = n(439372),
     s = n(837921),
     o = n(970061),
     l = n(652215);
+
 function c(e, t, n) {
     return (
         t in e
@@ -30,10 +31,15 @@ async function u() {
 class d extends r.A {
     async handlePostConnectionOpen() {
         let e = await u();
-        i.default.track(l.HAw.NOTIFICATION_PERMISSION_STATUS, { os_enabled: e });
+        i.default.track(l.HAw.NOTIFICATION_PERMISSION_STATUS, {
+            os_enabled: e,
+        });
     }
     constructor(...e) {
-        super(...e), c(this, "actions", { POST_CONNECTION_OPEN: this.handlePostConnectionOpen });
+        super(...e),
+            c(this, "actions", {
+                POST_CONNECTION_OPEN: this.handlePostConnectionOpen,
+            });
     }
 }
 let f = new d();

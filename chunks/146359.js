@@ -1,4 +1,6 @@
-n.d(t, { A: () => j });
+n.d(t, {
+    A: () => j,
+});
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -13,6 +15,7 @@ var r = n(627968),
     g = n(576705),
     O = n(287809),
     f = n(985018);
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -38,6 +41,7 @@ function p(e) {
     }
     return e;
 }
+
 function m(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -56,8 +60,14 @@ function m(e, t) {
         e
     );
 }
+
 function j(e, t, j) {
-    let h = l.useMemo(() => ({ [t]: [e.id] }), [t, e.id]);
+    let h = l.useMemo(
+        () => ({
+            [t]: [e.id],
+        }),
+        [t, e.id],
+    );
     (0, o.E)(h, "useThreadAdminActionItems"), (0, i.bG)([g.A], () => g.A.getGuildVersion(t), [t]);
     let y = (0, i.bG)([A.A], () => A.A.getChannel(j)),
         E = (0, i.bG)([b.A], () => b.A.getGuild(t), [t]),
@@ -73,8 +83,12 @@ function j(e, t, j) {
                     ? (0, r.jsx)(a.Drp, {
                           id: "remove",
                           label: y.isForumPost()
-                              ? f.intl.formatToPlainString(f.t.v2KNNx, { user: e.username })
-                              : f.intl.formatToPlainString(f.t["27xWaT"], { user: e.username }),
+                              ? f.intl.formatToPlainString(f.t.v2KNNx, {
+                                    user: e.username,
+                                })
+                              : f.intl.formatToPlainString(f.t["27xWaT"], {
+                                    user: e.username,
+                                }),
                           color: "danger",
                           action: () => c.A.removeMember(y.id, e.id, "Context Menu"),
                       })
@@ -83,8 +97,12 @@ function j(e, t, j) {
                     ? (0, r.jsx)(a.Drp, {
                           id: "kick",
                           label: v
-                              ? f.intl.formatToPlainString(f.t["1Ie87p"], { user: e.username })
-                              : f.intl.formatToPlainString(f.t["9l/iTS"], { user: e.username }),
+                              ? f.intl.formatToPlainString(f.t["1Ie87p"], {
+                                    user: e.username,
+                                })
+                              : f.intl.formatToPlainString(f.t["9l/iTS"], {
+                                    user: e.username,
+                                }),
                           color: "danger",
                           action: () =>
                               (0, a.mMO)(async () => {
@@ -104,8 +122,12 @@ function j(e, t, j) {
                     ? (0, r.jsx)(a.Drp, {
                           id: "ban",
                           label: v
-                              ? f.intl.formatToPlainString(f.t.i62APf, { user: e.username })
-                              : f.intl.formatToPlainString(f.t.WnpUBi, { user: e.username }),
+                              ? f.intl.formatToPlainString(f.t.i62APf, {
+                                    user: e.username,
+                                })
+                              : f.intl.formatToPlainString(f.t.WnpUBi, {
+                                    user: e.username,
+                                }),
                           color: "danger",
                           action: () =>
                               (0, a.mMO)(async () => {

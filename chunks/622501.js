@@ -1,4 +1,6 @@
-t.d(n, { A: () => j });
+t.d(n, {
+    A: () => j,
+});
 var l = t(627968),
     i = t(64700),
     r = t(503698),
@@ -23,6 +25,7 @@ var l = t(627968),
     I = t(788868),
     O = t(985018),
     M = t(993605);
+
 function h(e) {
     let { shouldUpsellFromNoneTier: n } = e,
         t = (0, a.bG)([A.default], () => A.default.locale);
@@ -32,13 +35,17 @@ function h(e) {
             (0, l.jsx)(P.A, {
                 icon: u._Jp,
                 iconClassName: M.pl,
-                description: O.intl.formatToPlainString(O.t.sQBgs2, { numFreeGuildSubscriptions: I.M4 }),
+                description: O.intl.formatToPlainString(O.t.sQBgs2, {
+                    numFreeGuildSubscriptions: I.M4,
+                }),
                 color: u.LU0.unsafe_rawColors.GUILD_BOOSTING_PINK.css,
             }),
             (0, l.jsx)(P.A, {
                 icon: u._Jp,
                 iconClassName: M.pl,
-                description: O.intl.formatToPlainString(O.t["1A6vXi"], { percent: (0, f.l9)(t, I.oX / 100) }),
+                description: O.intl.formatToPlainString(O.t["1A6vXi"], {
+                    percent: (0, f.l9)(t, I.oX / 100),
+                }),
                 color: u.LU0.unsafe_rawColors.GUILD_BOOSTING_PINK.css,
             }),
             n
@@ -61,6 +68,7 @@ function h(e) {
         ],
     });
 }
+
 function j(e) {
     var n;
     let {
@@ -100,16 +108,27 @@ function j(e) {
                             onClick: r,
                             className: M.b,
                         }),
-                        U && (0, l.jsx)(b.Vq, { className: M.Fg }),
-                        (0, l.jsx)("div", { className: s()(M.Tn, { [M.NH]: U }) }),
+                        U &&
+                            (0, l.jsx)(b.Vq, {
+                                className: M.Fg,
+                            }),
+                        (0, l.jsx)("div", {
+                            className: s()(M.Tn, {
+                                [M.NH]: U,
+                            }),
+                        }),
                         (0, l.jsx)("div", {
                             className: M.G3,
                             children:
                                 null != G
                                     ? O.intl.string(O.t.AoSzEr)
-                                    : O.intl.format(O.t["7vePZb"], { monthlyPrice: v }),
+                                    : O.intl.format(O.t["7vePZb"], {
+                                          monthlyPrice: v,
+                                      }),
                         }),
-                        (0, l.jsx)(h, { shouldUpsellFromNoneTier: R }),
+                        (0, l.jsx)(h, {
+                            shouldUpsellFromNoneTier: R,
+                        }),
                     ],
                 }),
                 (0, l.jsxs)(u.jlY, {
@@ -167,7 +186,10 @@ function j(e) {
                                                         }
                                                         return e;
                                                     })({}, f)),
-                                                    (n = n = { section: N.JJy.PREMIUM_GUILD_PURCHASE_MODAL }),
+                                                    (n = n =
+                                                        {
+                                                            section: N.JJy.PREMIUM_GUILD_PURCHASE_MODAL,
+                                                        }),
                                                     Object.getOwnPropertyDescriptors
                                                         ? Object.defineProperties(
                                                               e,

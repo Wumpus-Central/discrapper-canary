@@ -1,10 +1,13 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(64700),
     i = n(262828),
     l = n(105917),
     s = n(969379),
     a = n(705751),
     c = n(311750);
+
 function o(e) {
     var t;
     let { application: n, loading: o } = (0, i.A)(e, a.S7.GUILD_ROLE_SUBSCRIPTIONS),

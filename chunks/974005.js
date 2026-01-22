@@ -1,4 +1,6 @@
-n.d(t, { A: () => D });
+n.d(t, {
+    A: () => D,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -19,6 +21,7 @@ var r = n(627968),
     y = n(11297),
     O = n(115292),
     A = n(799919);
+
 function v(e, t, n) {
     return (
         t in e
@@ -32,6 +35,7 @@ function v(e, t, n) {
         e
     );
 }
+
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -48,6 +52,7 @@ function S(e) {
     }
     return e;
 }
+
 function I(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -60,6 +65,7 @@ function I(e, t) {
     }
     return n;
 }
+
 function T(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -81,7 +87,9 @@ let C = (e) => {
                           color: o.A.colors.TEXT_STRONG,
                           "aria-hidden": !0,
                       }),
-                      (0, r.jsx)(l.AC4, { children: b.intl.string(b.t["tq+6t/"]) }),
+                      (0, r.jsx)(l.AC4, {
+                          children: b.intl.string(b.t["tq+6t/"]),
+                      }),
                   ],
               })
             : (0, r.jsxs)(r.Fragment, {
@@ -91,7 +99,9 @@ let C = (e) => {
                           color: o.A.colors.TEXT_STRONG,
                           "aria-hidden": !0,
                       }),
-                      (0, r.jsx)(l.AC4, { children: b.intl.string(b.t.l4qZrp) }),
+                      (0, r.jsx)(l.AC4, {
+                          children: b.intl.string(b.t.l4qZrp),
+                      }),
                   ],
               });
     },
@@ -116,7 +126,9 @@ let C = (e) => {
                                   variant: "text-md/medium",
                                   children: n.text,
                               })
-                            : (0, r.jsx)(C, { includes: !!n.includes }),
+                            : (0, r.jsx)(C, {
+                                  includes: !!n.includes,
+                              }),
                 }),
                 (0, r.jsx)("td", {
                     className: y.Hn,
@@ -126,7 +138,9 @@ let C = (e) => {
                                   variant: "text-md/medium",
                                   children: i.text,
                               })
-                            : (0, r.jsx)(C, { includes: !!i.includes }),
+                            : (0, r.jsx)(C, {
+                                  includes: !!i.includes,
+                              }),
                 }),
             ],
         });
@@ -159,7 +173,9 @@ let C = (e) => {
                 (0, r.jsxs)("div", {
                     className: y.KS,
                     children: [
-                        (0, r.jsx)(l.tvc, { colorClass: y.oG }),
+                        (0, r.jsx)(l.tvc, {
+                            colorClass: y.oG,
+                        }),
                         (0, r.jsx)(l.Heading, {
                             variant: "heading-sm/semibold",
                             children: i,
@@ -252,7 +268,9 @@ let C = (e) => {
                                 }),
                                 children: [
                                     !k && n,
-                                    (0, r.jsx)("div", { className: y.xQ }),
+                                    (0, r.jsx)("div", {
+                                        className: y.xQ,
+                                    }),
                                     (0, r.jsxs)("div", {
                                         className: y.wN,
                                         children: [
@@ -279,7 +297,14 @@ let C = (e) => {
                                         shouldUseDiscountPrice: w,
                                         tier2DiscountedPriceString: x,
                                     }),
-                                    M.map((e) => (0, i.createElement)(R, T(S({}, e), { key: e.id }))),
+                                    M.map((e) =>
+                                        (0, i.createElement)(
+                                            R,
+                                            T(S({}, e), {
+                                                key: e.id,
+                                            }),
+                                        ),
+                                    ),
                                 ],
                             }),
                         ],

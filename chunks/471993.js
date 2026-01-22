@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -10,6 +12,7 @@ var i = n(397927),
     u = n(287809),
     d = n(723702),
     f = n(753070);
+
 function p(e, t, n) {
     return (
         t in e
@@ -23,6 +26,7 @@ function p(e, t, n) {
         e
     );
 }
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -39,6 +43,7 @@ function _(e) {
     }
     return e;
 }
+
 function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -51,6 +56,7 @@ function h(e, t) {
     }
     return n;
 }
+
 function m(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -62,11 +68,18 @@ function m(e, t) {
         e
     );
 }
+
 function g(e, t, p) {
     if (d.isPlatformEmbedded)
         (0, i.mMO)(async () => {
             let { default: e } = await Promise.all([n.e("96811"), n.e("14476")]).then(n.bind(n, 648230));
-            return (t) => (0, r.jsx)(e, m(_({}, t), { analyticsLocations: p }));
+            return (t) =>
+                (0, r.jsx)(
+                    e,
+                    m(_({}, t), {
+                        analyticsLocations: p,
+                    }),
+                );
         });
     else {
         var h;

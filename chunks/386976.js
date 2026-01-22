@@ -1,4 +1,7 @@
-n.d(t, { op: () => f }), n(896048);
+n.d(t, {
+    op: () => f,
+}),
+    n(896048);
 var r = n(64700),
     i = n(311907),
     a = n(949355),
@@ -6,6 +9,7 @@ var r = n(64700),
     o = n(620233),
     l = n(217222),
     c = n(375441);
+
 function u(e, t) {
     let n = {};
     for (let [t, r] of Object.entries(e))
@@ -40,6 +44,7 @@ function u(e, t) {
             });
     return n;
 }
+
 function d(e) {
     let t = {};
     for (let [n, r] of Object.entries(e))
@@ -50,6 +55,7 @@ function d(e) {
         };
     return t;
 }
+
 function f() {
     (0, r.useEffect)(() => {
         (0, o.sD)(a.Um.APP);

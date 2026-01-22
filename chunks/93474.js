@@ -1,4 +1,6 @@
-n.d(t, { A: () => P });
+n.d(t, {
+    A: () => P,
+});
 var r,
     i = n(311907),
     a = n(73153),
@@ -10,6 +12,7 @@ var r,
     d = n(753738),
     f = n(785823),
     p = n(652215);
+
 function _(e, t, n) {
     return (
         t in e
@@ -41,17 +44,21 @@ let h = {},
     O = (e) => {
         null != h[e] && delete h[e], m++;
     };
+
 function A(e) {
     return 0 !== Object.keys(h).length && ((h = {}), m++, !0);
 }
+
 function v(e) {
     let { messageData: t, errorResponseBody: n } = e;
     return b(t, n), !0;
 }
+
 function S(e) {
     let { messageId: t } = e;
     return O(t), !0;
 }
+
 function I(e) {
     let { response: t } = e;
     if ((null == t ? void 0 : t.body) == null || t.body.code === p.t02.AUTOMOD_MESSAGE_BLOCKED) return !1;
@@ -59,6 +66,7 @@ function I(e) {
     if (null == n) return !1;
     O(n);
 }
+
 function T(e) {
     let { guildId: t, decisionId: n, suspiciousMentionActivityUntil: r } = e;
     return (
@@ -70,16 +78,19 @@ function T(e) {
         !0
     );
 }
+
 function C(e) {
     let { guildId: t } = e;
     return delete g[t], !0;
 }
+
 function N(e) {
     let { guildId: t, message: n } = e;
     if (null == t || n.type !== p.lAJ.AUTO_MODERATION_ACTION) return !1;
     let r = (0, o.rh)(n);
     return !!(0, f.ER)(r) && !!(0, f.de)(r) && ((E[t] = r.id), !0);
 }
+
 function R(e) {
     var t;
     let { channelId: n, messages: r } = e,

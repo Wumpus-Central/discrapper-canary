@@ -1,4 +1,8 @@
-n.d(t, { A: () => F }), n(896048), n(65821);
+n.d(t, {
+    A: () => F,
+}),
+    n(896048),
+    n(65821);
 var r,
     l = n(627968),
     i = n(64700),
@@ -32,6 +36,7 @@ var r,
     R = n(652215),
     D = n(985018),
     M = n(454198);
+
 function L(e, t, n) {
     return (
         t in e
@@ -45,6 +50,7 @@ function L(e, t, n) {
         e
     );
 }
+
 function G(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -61,6 +67,7 @@ function G(e) {
     }
     return e;
 }
+
 function k(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -267,7 +274,9 @@ class V extends (r = i.Component) {
             r = null != e ? this.props.privateChannelIds.indexOf(e) : -1,
             l = 0;
         r < 0 || null == e
-            ? this._list.scrollTo({ to: l })
+            ? this._list.scrollTo({
+                  to: l,
+              })
             : ((l += 44 * (r + n) + t),
               this._list.scrollIntoViewRect({
                   start: Math.max(l - 8, 0),
@@ -482,7 +491,9 @@ class V extends (r = i.Component) {
             });
     }
 }
-L(V, "defaultProps", { padding: 8 });
+L(V, "defaultProps", {
+    padding: 8,
+});
 let F = (e) => {
     let { density: t } = (0, f.wRf)(),
         { version: n, theme: r, children: a, listScrollerRef: s } = e,
@@ -516,7 +527,9 @@ let F = (e) => {
                                 var t;
                                 return null == (t = document.querySelector(e))
                                     ? void 0
-                                    : t.focus({ preventScroll: !0 });
+                                    : t.focus({
+                                          preventScroll: !0,
+                                      });
                             });
                         },
                     });
@@ -528,7 +541,9 @@ let F = (e) => {
                 new Promise((e) => {
                     let t = R.current;
                     if (null == t) return e();
-                    t.scrollToTop({ callback: () => requestAnimationFrame(() => e()) });
+                    t.scrollToTop({
+                        callback: () => requestAnimationFrame(() => e()),
+                    });
                 }),
             [R],
         ),

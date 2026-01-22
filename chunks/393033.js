@@ -22,9 +22,11 @@ var r = n(989349),
     u = n(652215),
     d = n(381941),
     f = n(985018);
+
 function p(e) {
     return i()().to(i()(e));
 }
+
 function _(e) {
     var t, n;
     return (0, s.u)(e.filename) || (0, s.AE)(e.filename)
@@ -33,6 +35,7 @@ function _(e) {
           ? n
           : "";
 }
+
 function h(e) {
     var t, n, r, i;
     if (null == e.fields) return;
@@ -48,6 +51,7 @@ function h(e) {
         classification_id: a[c.g0.CLASSIFICATION_ID],
     };
 }
+
 function m(e) {
     return e.type !== l.Xo.MESSAGE || ("" === e.content && 0 === e.attachments.length);
 }
@@ -64,10 +68,12 @@ let g = (e) =>
             : 1 === e.length
               ? e.toUpperCase()
               : "".concat(e.charAt(0).toUpperCase()).concat(e.slice(1));
+
 function b(e) {
     return null != e && null != e.guild_metadata;
 }
 let y = (e) => (e === u.t02.DSA_APPEAL_REQUEST_DEFLECTION ? f.intl.string(f.t["0qyXXH"]) : f.intl.string(f.t.aPmsx3));
+
 function O(e) {
     let t = e.max_expiration_time;
     if (null == t) return null;
@@ -78,6 +84,7 @@ function O(e) {
     }
 }
 let A = () => null != (0, a.bG)([o.default], () => o.default.getSuspendedUserToken());
+
 function v() {
     return null != o.default.getSuspendedUserToken();
 }

@@ -1,4 +1,7 @@
-n.d(t, { A: () => h }), n(228524);
+n.d(t, {
+    A: () => h,
+}),
+    n(228524);
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -13,6 +16,7 @@ var i = n(397927),
     g = n(874864),
     b = n(985018),
     m = n(636997);
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -38,6 +42,7 @@ function p(e) {
     }
     return e;
 }
+
 function x(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -64,7 +69,9 @@ let h = function (e) {
         A = (e) => {
             v ||
                 ((0, l.zV)(f.HAw.PREMIUM_GUILD_PROMOTION_OPENED, {
-                    location: x(p({}, e), { section: f.JJy.CUSTOM_ROLE_ICONS_TOOLTIP }),
+                    location: x(p({}, e), {
+                        section: f.JJy.CUSTOM_ROLE_ICONS_TOOLTIP,
+                    }),
                     guild_id: null == t ? void 0 : t.id,
                     location_stack: y,
                 }),
@@ -96,7 +103,12 @@ let h = function (e) {
         children: [
             (0, r.jsxs)(i.zEo, {
                 className: m.Hc,
-                children: [(0, r.jsx)("div", { children: b.intl.string(b.t.B9grJw) }), E],
+                children: [
+                    (0, r.jsx)("div", {
+                        children: b.intl.string(b.t.B9grJw),
+                    }),
+                    E,
+                ],
             }),
             (0, r.jsx)(i.ayl, {
                 className: m.h_,
@@ -139,7 +151,9 @@ let h = function (e) {
                                               }),
                                           );
                                   })
-                                : A({ object: f.ZSU.UPLOAD_IMAGE }),
+                                : A({
+                                      object: f.ZSU.UPLOAD_IMAGE,
+                                  }),
                         variant: "primary",
                         disabled: h,
                         text: b.intl.string(b.t.mD1oGB),

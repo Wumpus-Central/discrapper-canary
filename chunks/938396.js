@@ -1,4 +1,6 @@
-n.d(t, { A: () => R });
+n.d(t, {
+    A: () => R,
+});
 var r = n(627968),
     i = n(64700),
     a = n(892227),
@@ -52,6 +54,7 @@ let C = () => {
         });
     },
     N = 4100;
+
 function R(e) {
     let { targetElementRef: t, shouldShow: n, onRequestClose: S, ctaText: I, ctaOnClick: R } = e,
         w = (0, s.bG)([u.A], () => u.A.useReducedMotion),
@@ -110,7 +113,9 @@ function R(e) {
             (0, r.jsxs)("div", {
                 className: v.Qs,
                 children: [
-                    (0, r.jsx)(l.q, { onClick: S }),
+                    (0, r.jsx)(l.q, {
+                        onClick: S,
+                    }),
                     (0, r.jsxs)("div", {
                         className: v.hQ,
                         children: [

@@ -1,4 +1,6 @@
-n.d(t, { A: () => P });
+n.d(t, {
+    A: () => P,
+});
 var r = n(627968);
 n(64700);
 var l = n(934551),
@@ -28,6 +30,7 @@ var l = n(934551),
     I = n(996988),
     N = n(985018),
     T = n(673721);
+
 function P(e) {
     let { user: t, currentUser: n, displayProfile: P, channel: w, isHoveringOrFocusing: R, onOpenProfile: D } = e,
         { relationshipType: M, originApplicationId: L } = (0, i.cf)([u.A], () => ({
@@ -35,7 +38,9 @@ function P(e) {
             originApplicationId: u.A.getOriginApplicationId(t.id),
         })),
         G = (0, s.fi)(t.id),
-        k = (0, o.q)({ userId: t.id }),
+        k = (0, o.q)({
+            userId: t.id,
+        }),
         U = (0, i.bG)([d.A], () => d.A.hidePersonalInformation),
         V = (0, i.bG)([p.A], () => {
             var e;
@@ -44,7 +49,9 @@ function P(e) {
     return (0, r.jsxs)("div", {
         className: T.rf,
         children: [
-            (0, r.jsx)(m.A, { userId: t.id }),
+            (0, r.jsx)(m.A, {
+                userId: t.id,
+            }),
             (0, r.jsx)(_.A, {
                 user: t,
                 guildId: w.guild_id,
@@ -85,7 +92,9 @@ function P(e) {
                     e.applicationId,
                 ),
             ),
-            (0, r.jsx)(j.A, { user: t }),
+            (0, r.jsx)(j.A, {
+                user: t,
+            }),
             t.isProvisional &&
                 (0, r.jsx)(E.A.Overlay, {
                     children: (0, r.jsx)(v.A, {
@@ -95,7 +104,9 @@ function P(e) {
                             color: a.A.colors.TEXT_STRONG,
                         }),
                         headingColor: "text-strong",
-                        children: (0, r.jsx)(c.T, { userId: t.id }),
+                        children: (0, r.jsx)(c.T, {
+                            userId: t.id,
+                        }),
                     }),
                 }),
             (0, r.jsx)(x.A, {
@@ -129,12 +140,16 @@ function P(e) {
                         (0, r.jsx)(v.A, {
                             heading: N.intl.string(N.t["Uv/eTx"]),
                             headingColor: "text-strong",
-                            children: (0, r.jsx)(A.A, { applicationIds: k }),
+                            children: (0, r.jsx)(A.A, {
+                                applicationIds: k,
+                            }),
                         }),
                     (0, r.jsx)(v.A, {
                         heading: t.bot ? N.intl.string(N.t["A//N4k"]) : N.intl.string(N.t.a6XYD9),
                         headingColor: "text-strong",
-                        children: (0, r.jsx)(O.A, { userId: t.id }),
+                        children: (0, r.jsx)(O.A, {
+                            userId: t.id,
+                        }),
                     }),
                 ],
             }),

@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -16,7 +18,9 @@ var i = n(503698),
     m = n(182645);
 let g = (e) => {
     let { className: t, location: n, analyticsLocation: i } = e,
-        g = (0, c.A)({ location: "GiftNitro" }),
+        g = (0, c.A)({
+            location: "GiftNitro",
+        }),
         { analyticsLocations: E } = (0, l.Ay)(n);
     return g
         ? (0, r.jsx)(l.f5, {

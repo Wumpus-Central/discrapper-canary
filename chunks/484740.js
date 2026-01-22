@@ -1,4 +1,7 @@
-n.d(t, { A: () => p }), n(321073);
+n.d(t, {
+    A: () => p,
+}),
+    n(321073);
 var i = n(627968);
 n(64700);
 var r = n(311907),
@@ -11,6 +14,7 @@ var r = n(311907),
     u = n(576705),
     b = n(292024),
     f = n(985018);
+
 function p(e, t) {
     var n;
     let p = (0, r.bG)([u.A], () => {
@@ -44,7 +48,9 @@ function p(e, t) {
                             action: () => {
                                 s.A.show({
                                     title: f.intl.string(f.t.YWISbQ),
-                                    body: f.intl.format(f.t["9+nrUS"], { name: t.name }),
+                                    body: f.intl.format(f.t["9+nrUS"], {
+                                        name: t.name,
+                                    }),
                                     cancelText: f.intl.string(f.t["ETE/oC"]),
                                     onConfirm: async () => {
                                         x && (await (0, o.qK)(e.id, t.id, [])), a.A.deleteRole(e.id, t.id);

@@ -1,4 +1,7 @@
-r.d(t, { PremiumResubscribeModal: () => O }), r(896048);
+r.d(t, {
+    PremiumResubscribeModal: () => O,
+}),
+    r(896048);
 var a = r(627968),
     n = r(64700),
     c = r(284009),
@@ -14,6 +17,7 @@ var a = r(627968),
     _ = r(232392),
     m = r(190269),
     y = r(788868);
+
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
@@ -39,6 +43,7 @@ function g(e) {
     }
     return e;
 }
+
 function x(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -68,11 +73,26 @@ let O = (e) => {
         v = n.useCallback(() => {
             switch (C) {
                 case _.g.CONFIRM:
-                    return (0, a.jsx)(p.m, x(g({}, e), { setStep: h }));
+                    return (0, a.jsx)(
+                        p.m,
+                        x(g({}, e), {
+                            setStep: h,
+                        }),
+                    );
                 case _.g.SUCCESS:
-                    return (0, a.jsx)(m.B, x(g({}, e), { premiumType: S }));
+                    return (0, a.jsx)(
+                        m.B,
+                        x(g({}, e), {
+                            premiumType: S,
+                        }),
+                    );
                 default:
-                    return (0, a.jsx)(p.m, x(g({}, e), { setStep: h }));
+                    return (0, a.jsx)(
+                        p.m,
+                        x(g({}, e), {
+                            setStep: h,
+                        }),
+                    );
             }
         }, [C, e, S]);
     return (0, a.jsx)(o.f5, {

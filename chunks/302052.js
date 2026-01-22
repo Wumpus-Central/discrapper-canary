@@ -7,11 +7,18 @@ e.exports = function (e) {
                 begin: /\$noop\(/,
                 end: /\)/,
                 contains: [
-                    { begin: /\\[()]/ },
+                    {
+                        begin: /\\[()]/,
+                    },
                     {
                         begin: /\(/,
                         end: /\)/,
-                        contains: [{ begin: /\\[()]/ }, "self"],
+                        contains: [
+                            {
+                                begin: /\\[()]/,
+                            },
+                            "self",
+                        ],
                     },
                 ],
                 relevance: 10,

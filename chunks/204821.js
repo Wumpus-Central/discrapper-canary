@@ -1,4 +1,6 @@
-n.d(t, { p: () => a });
+n.d(t, {
+    p: () => a,
+});
 let a = {
     bottom: 40,
     left: 32,

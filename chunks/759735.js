@@ -27,6 +27,7 @@ var r = n(602137),
     g = n(652215),
     E = n(746080),
     b = n(37411);
+
 function y(e, t, n) {
     return (
         t in e
@@ -40,6 +41,7 @@ function y(e, t, n) {
         e
     );
 }
+
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -56,6 +58,7 @@ function O(e) {
     }
     return e;
 }
+
 function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -68,6 +71,7 @@ function A(e, t) {
     }
     return n;
 }
+
 function v(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -79,9 +83,11 @@ function v(e, t) {
         e
     );
 }
+
 function S(e) {
     return m.A.getForumChannelSessionId(e);
 }
+
 function I(e) {
     switch (e) {
         case r.T.CREATION_DATE:
@@ -92,9 +98,11 @@ function I(e) {
             throw Error("Unexpected sort order ".concat(e));
     }
 }
+
 function T(e) {
     return d.A.getUploads(e, c.C.FirstThreadMessage).length;
 }
+
 function C(e) {
     var t, n;
     let r = l.A.getChannel(e);
@@ -106,21 +114,26 @@ function C(e) {
         o = new Set(a.map((e) => e.id));
     return Array.from(s).filter((e) => o.has(e));
 }
+
 function N(e, t) {
     return Object.keys(i.A.getThreadsForParent(e, t)).length;
 }
+
 function R(e) {
     let { loaded: t, firstMessage: n } = p.A.getMessage(e);
     return t ? n : null;
 }
+
 function w(e) {
     let t = R(e);
     return null == t ? 0 : t.reactions.length;
 }
+
 function P(e) {
     let t = R(e);
     return null == t ? 0 : t.reactions.reduce((e, t) => e + t.count, 0);
 }
+
 function D(e) {
     var t, n;
     let r = l.A.getChannel(e);
@@ -131,6 +144,7 @@ function D(e) {
     let s = new Set(a.map((e) => e.id));
     return null != (t = null == (n = r.appliedTags) ? void 0 : n.filter((e) => s.has(e))) ? t : [];
 }
+
 function x(e) {
     let t = R(e);
     return null == t
@@ -140,6 +154,7 @@ function x(e) {
               return null != (t = e.content_type) ? t : "unknown";
           });
 }
+
 function L(e) {
     var t, n, r, i;
     let { channelId: a, sessionId: s } = e,
@@ -164,6 +179,7 @@ function L(e) {
           }
         : null;
 }
+
 function j(e) {
     var t, n, r, i, c, u, d;
     let { channelId: p, sessionId: _ } = e,

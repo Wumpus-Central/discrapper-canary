@@ -1,9 +1,12 @@
-n.d(t, { A: () => E });
+n.d(t, {
+    A: () => E,
+});
 var r,
     i = n(311907),
     a = n(506774),
     s = n(73153),
     o = n(785796);
+
 function l(e, t, n) {
     return (
         t in e
@@ -21,15 +24,19 @@ let c = "MaintenanceStore",
     u = null,
     d = null,
     f = null;
+
 function p() {
     (u = null), o.A.checkScheduledMaintenances();
 }
+
 function _(e) {
     u = e.incident;
 }
+
 function h(e) {
     d = e.maintenance;
 }
+
 function m() {
     if (null == d) return !1;
     (f = d.id), a.w.set(c, f);

@@ -44,6 +44,7 @@ var P = n(655237),
     D = n(652215),
     k = n(37411),
     L = n(985018);
+
 function M(e, t, n) {
     let l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
     if (t.hasFlag(D.nhx.SPAMMER) || n.isManaged()) return !1;
@@ -57,6 +58,7 @@ function M(e, t, n) {
         (!l.ignoreNoMessagesSetting && j.Ay.allowNoMessages(n))
     );
 }
+
 function U(e, t) {
     var n, r;
     let a = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
@@ -119,6 +121,7 @@ function U(e, t) {
         });
     }
 }
+
 function V(e, t) {
     var n;
     if (S.A.getChannelId(N.A.getGuildId()) !== t) return !1;
@@ -139,6 +142,7 @@ function V(e, t) {
         j.Ay.allowNoMessages(l)
     );
 }
+
 function F(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
         l = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
@@ -164,6 +168,7 @@ let G = (e, t, n) =>
         .concat((0, a.az)(e, !0), " (")
         .concat((0, a.az)((0, s.m1)(t, T.default, x.A, !0), !0))
         .concat(null != n ? ", ".concat((0, a.az)((0, s.m1)(n, T.default, x.A), !0)) : "", ")");
+
 function H(e, t, n, l) {
     switch (e.type) {
         case D.rbe.GUILD_ANNOUNCEMENT:
@@ -176,6 +181,7 @@ function H(e, t, n, l) {
             return l;
     }
 }
+
 function B(e, t, n) {
     let i,
         a = I.Ay.getName(e.getGuildId(), e.id, n),
@@ -223,11 +229,21 @@ function B(e, t, n) {
                   : "";
     else if (null != t.activity && t.activity.type === D.xL.LISTEN) {
         let t = H(e, L.t.SaDdmN, L.t.qsODhp, L.t.WeiMTW);
-        i = L.intl.formatToPlainString(t, { user: a });
-    } else if (null != m && m.length > 0) i = L.intl.formatToPlainString(L.t.zY4v1B, { stickerName: m[0].name });
+        i = L.intl.formatToPlainString(t, {
+            user: a,
+        });
+    } else if (null != m && m.length > 0)
+        i = L.intl.formatToPlainString(L.t.zY4v1B, {
+            stickerName: m[0].name,
+        });
     else if (t.type === D.lAJ.PREMIUM_REFERRAL)
-        i = L.intl.formatToPlainString(L.t.lieTqU, { username: R.Ay.getName(n) });
-    else if (null != t.poll) i = L.intl.formatToPlainString(L.t.ImizdM, { question: t.poll.question.text });
+        i = L.intl.formatToPlainString(L.t.lieTqU, {
+            username: R.Ay.getName(n),
+        });
+    else if (null != t.poll)
+        i = L.intl.formatToPlainString(L.t.ImizdM, {
+            question: t.poll.question.text,
+        });
     else if (t.type === D.lAJ.POLL_RESULT) {
         var A, y, _;
         let e =
@@ -235,7 +251,9 @@ function B(e, t, n) {
                     ? void 0
                     : A.find((e) => ("name" in e ? e.name : e.rawName) === "poll_question_text"),
             n = null != e ? ("value" in e ? e.value : e.rawValue) : "";
-        i = L.intl.formatToPlainString(L.t["9WrecI"], { question: n });
+        i = L.intl.formatToPlainString(L.t["9WrecI"], {
+            question: n,
+        });
     } else if (null != t.components && t.components.length > 0 && t.components[0].type === r.I5.CHECKPOINT_CARD)
         i = L.intl.string(L.t.HWnMTQ);
     else if (
@@ -263,7 +281,9 @@ function B(e, t, n) {
                 if ((0, l.Lt)(null != (t = e.flags) ? t : 0, D.pr7.IS_VOICE_MESSAGE)) return L.intl.string(L.t.slFYgi);
                 if (void 0 !== e.attachments && e.attachments.length > 0) {
                     let t = (0, p.A)(e.attachments[0]);
-                    return L.intl.formatToPlainString(L.t["51OkwL"], { filename: t });
+                    return L.intl.formatToPlainString(L.t["51OkwL"], {
+                        filename: t,
+                    });
                 }
                 return "";
             })(t)),

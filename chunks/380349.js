@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(211401),
     i = n(500049),
     a = n(429913),
@@ -6,6 +8,7 @@ var r = n(211401),
     o = n(583846),
     l = n(360469),
     c = n(985018);
+
 function u(e) {
     let { entry: t } = e,
         n = (0, a.h)(t.extra.application_id),
@@ -14,9 +17,13 @@ function u(e) {
         f = (0, o.Hd)(t) ? c.t.vPg1JT : c.t.rPqqts,
         p = {
             onClick: () => {
-                r.R(i.s4.TEXT, s.oU.NORMAL, { applicationId: t.extra.application_id });
+                r.R(i.s4.TEXT, s.oU.NORMAL, {
+                    applicationId: t.extra.application_id,
+                });
             },
-            ariaDescription: c.intl.formatToPlainString(c.t.NTHttN, { title: d }),
+            ariaDescription: c.intl.formatToPlainString(c.t.NTHttN, {
+                title: d,
+            }),
         };
     return {
         thumbnailUrl: u,

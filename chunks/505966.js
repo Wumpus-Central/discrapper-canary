@@ -1,10 +1,14 @@
-n.d(t, { A: () => c }), n(733351);
+n.d(t, {
+    A: () => c,
+}),
+    n(733351);
 var l = n(989349),
     r = n.n(l),
     i = n(9448),
     s = n(974930),
     a = n(988794),
     o = n(985018);
+
 function c(e, t) {
     return {
         entity: (function (e) {

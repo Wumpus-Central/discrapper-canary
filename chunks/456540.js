@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -8,6 +10,7 @@ var i = n(397927),
     o = n(652215),
     c = n(355097),
     u = n(985018);
+
 function d(e) {
     let { subscription: t } = e;
     return null == t
@@ -15,7 +18,9 @@ function d(e) {
         : t.status === o.Dmq.PAST_DUE
           ? (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, r.jsx)(i.hKd, { size: 16 }),
+                    (0, r.jsx)(i.hKd, {
+                        size: 16,
+                    }),
                     (0, r.jsx)(s.A, {
                         message: u.intl.string(u.t.eSuJE2),
                         ctaMessage: u.intl.string(u.t.RXsxqb),

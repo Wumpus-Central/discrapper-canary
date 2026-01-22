@@ -1,12 +1,21 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(960488),
     i = n(265690),
     a = n(121894),
     s = n(463347),
     o = n(652215);
+
 function l(e) {
     let t = (0, r.B6)(null != e ? e : "", {
-        path: o.BVt.CHANNEL(s.pv.guildId(), s.pv.channelId({ optional: !0 }), ":messageId?"),
+        path: o.BVt.CHANNEL(
+            s.pv.guildId(),
+            s.pv.channelId({
+                optional: !0,
+            }),
+            ":messageId?",
+        ),
     });
     if (null != t) {
         let { guildId: e, channelId: n } = t.params;
@@ -15,7 +24,9 @@ function l(e) {
             channelId: null != n ? n : null,
         };
     }
-    let n = (0, r.B6)(null != e ? e : "", { path: o.BVt.GUILD_BOOSTING_MARKETING(s.pv.guildId()) });
+    let n = (0, r.B6)(null != e ? e : "", {
+        path: o.BVt.GUILD_BOOSTING_MARKETING(s.pv.guildId()),
+    });
     return null != n
         ? {
               guildId: n.params.guildId,

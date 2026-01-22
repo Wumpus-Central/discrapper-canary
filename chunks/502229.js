@@ -14,6 +14,7 @@ var i = n(397927),
     d = n(775602),
     f = n(652215),
     p = n(185928);
+
 function _(e, t, n) {
     return (
         t in e
@@ -27,6 +28,7 @@ function _(e, t, n) {
         e
     );
 }
+
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -50,10 +52,12 @@ let m = window.matchMedia("(prefers-reduced-motion: reduce)"),
     y = window.matchMedia("(prefers-color-scheme: light)"),
     O = window.matchMedia("(forced-colors: active)"),
     A = 5;
+
 function v() {
     let e = o.default.getCurrentUser();
-    return null == e || Date.now() - e.createdAt < 86400000;
+    return null == e || Date.now() - e.createdAt < 864e5;
 }
+
 function S() {
     return "windows" === (0, c.getOS)();
 }
@@ -72,10 +76,14 @@ let I = {
     init() {
         this.initBasic(),
             a.h.subscribe("ACCESSIBILITY_COLORBLIND_TOGGLE", () => {
-                l.default.track(f.HAw.LOCAL_SETTINGS_UPDATED, { colorblind_enabled: d.A.colorblindMode });
+                l.default.track(f.HAw.LOCAL_SETTINGS_UPDATED, {
+                    colorblind_enabled: d.A.colorblindMode,
+                });
             }),
             a.h.subscribe("ACCESSIBILITY_SET_SATURATION", (e) => {
-                l.default.track(f.HAw.LOCAL_SETTINGS_UPDATED, { saturation_level: e.saturation });
+                l.default.track(f.HAw.LOCAL_SETTINGS_UPDATED, {
+                    saturation_level: e.saturation,
+                });
             });
     },
     maybeShowKeyboardNavigationExplainerModal() {

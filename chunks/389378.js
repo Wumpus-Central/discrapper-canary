@@ -1,11 +1,13 @@
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 var r = n(985971);
 class i extends r.B {
     primaryPrefix() {
         return "(?:(?:om)\\s*)?";
     }
     followingPhase() {
-        return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|om|\\?)\\s*";
+        return "\\s*(?:\\-|\\–|\\~|\\〜|om|\\?)\\s*";
     }
     primarySuffix() {
         return "(?:\\s*(?:uur))?(?!/)(?=\\W|$)";

@@ -19,6 +19,7 @@ var r = n(627968),
 let h = p.o2.STANDARD_BOX,
     m,
     [g, E, b] = (0, c.A)();
+
 function y(e) {
     let {
             isGift: t = !1,

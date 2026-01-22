@@ -1,4 +1,6 @@
-n.d(t, { i: () => O });
+n.d(t, {
+    i: () => O,
+});
 var r,
     i,
     a = n(627968),
@@ -10,6 +12,7 @@ var r,
     d = n(892547),
     f = n(882530),
     p = n(343154);
+
 function _(e, t, n) {
     return (
         t in e
@@ -23,6 +26,7 @@ function _(e, t, n) {
         e
     );
 }
+
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -39,6 +43,7 @@ function h(e) {
     }
     return e;
 }
+
 function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -51,6 +56,7 @@ function m(e, t) {
     }
     return n;
 }
+
 function g(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -62,7 +68,10 @@ function g(e, t) {
         e
     );
 }
-let E = () => (0, a.jsx)(c.cGx, { className: p.yF }),
+let E = () =>
+        (0, a.jsx)(c.cGx, {
+            className: p.yF,
+        }),
     b = (e) => {
         let { children: t } = e;
         return (0, a.jsx)("div", {
@@ -72,10 +81,17 @@ let E = () => (0, a.jsx)(c.cGx, { className: p.yF }),
     };
 class y extends (r = s.PureComponent) {
     render() {
-        return (0, a.jsx)(d.I, g(h({}, this.props), { size: "sm" }));
+        return (0, a.jsx)(
+            d.I,
+            g(h({}, this.props), {
+                size: "sm",
+            }),
+        );
     }
 }
-_(y, "defaultProps", { autoFocus: !0 });
+_(y, "defaultProps", {
+    autoFocus: !0,
+});
 class O extends (i = s.PureComponent) {
     render() {
         let { className: e, children: t } = this.props;

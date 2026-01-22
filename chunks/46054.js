@@ -1,10 +1,14 @@
-n.d(t, { A: () => R }), n(896048);
+n.d(t, {
+    A: () => R,
+}),
+    n(896048);
 var r = n(735438),
     i = n.n(r),
     a = n(436857),
     s = n(999443),
     o = n(542664),
     l = n(551965);
+
 function c(e, t, n) {
     return (
         t in e
@@ -18,6 +22,7 @@ function c(e, t, n) {
         e
     );
 }
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,6 +39,7 @@ function u(e) {
     }
     return e;
 }
+
 function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -46,6 +52,7 @@ function d(e, t) {
     }
     return n;
 }
+
 function f(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -60,21 +67,47 @@ function f(e, t) {
 let p = null;
 p = n(937767).A;
 let _ = ["url", "autolink", "link", "mailto", "tel"];
+
 function h(e, t) {
     let n = {};
-    return null != e.mention && null != p && (n = { mention: p }), (0, l.A)([e, ...t, n]);
+    return (
+        null != e.mention &&
+            null != p &&
+            (n = {
+                mention: p,
+            }),
+        (0, l.A)([e, ...t, n])
+    );
 }
 let m = {
         enableBuildOverrides: !1,
         enableEmojiClick: !0,
     },
-    g = h(o.A.RULES, [(0, s.A)({ enableBuildOverrides: !0 })]),
+    g = h(o.A.RULES, [
+        (0, s.A)({
+            enableBuildOverrides: !0,
+        }),
+    ]),
     E = i().omit(h(o.A.RULES, [(0, s.A)(m)]), "paragraph", "newline"),
     b = h(o.A.CHANNEL_TOPIC_RULES, [
-        (0, s.A)(f(u({}, m), { emojiTooltipPosition: "bottom" })),
-        { codeBlock: { react: o.A.RULES.text.react } },
+        (0, s.A)(
+            f(u({}, m), {
+                emojiTooltipPosition: "bottom",
+            }),
+        ),
+        {
+            codeBlock: {
+                react: o.A.RULES.text.react,
+            },
+        },
     ]),
-    y = h(o.A.VOICE_CHANNEL_STATUS_RULES, [(0, s.A)(f(u({}, m), { enableEmojiClick: !1 }))]),
+    y = h(o.A.VOICE_CHANNEL_STATUS_RULES, [
+        (0, s.A)(
+            f(u({}, m), {
+                enableEmojiClick: !1,
+            }),
+        ),
+    ]),
     O = h(o.A.EMBED_TITLE_RULES, [(0, s.A)(m)]),
     A = i().omit(h(o.A.EMBED_TITLE_RULES, [(0, s.A)(m)]), _),
     v = h(o.A.INLINE_REPLY_RULES, [(0, s.A)(m)]),
@@ -94,7 +127,9 @@ let m = {
         "subtext",
         ..._,
     ),
-    N = { text: o.A.RULES.text },
+    N = {
+        text: o.A.RULES.text,
+    },
     R = {
         combineAndInjectMentionRule: h,
         createReactRules: s.A,
@@ -106,7 +141,18 @@ let m = {
         astParserFor: a.X,
         reactParserFor: a.aV,
         parse: a.aV(g),
-        parseTopic: (e, t, n, r) => a.aV(b)(e, t, u({ allowLinks: !0 }, n), r),
+        parseTopic: (e, t, n, r) =>
+            a.aV(b)(
+                e,
+                t,
+                u(
+                    {
+                        allowLinks: !0,
+                    },
+                    n,
+                ),
+                r,
+            ),
         parseVoiceChannelStatus: a.aV(y),
         parseEmbedTitle: a.aV(O),
         parseEmbedTitleWithoutLinks: a.aV(A),

@@ -1,4 +1,7 @@
-n.d(t, { A: () => O }), n(896048);
+n.d(t, {
+    A: () => O,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -25,6 +28,7 @@ let E = () => [
         var e;
         return null != (e = l().sample(E())) ? e : m.intl.string(m.t["EgWTY+"]);
     };
+
 function y(e) {
     let { id: t, className: n, onSelect: a, isSelected: o = !1, tabIndex: l, children: p, locked: m = !1 } = e,
         [E, y] = i.useState((0, _.gG)(t).name),
@@ -40,7 +44,13 @@ function y(e) {
                     "aria-label": E,
                     "aria-checked": o,
                     tabIndex: null != l ? l : o ? 0 : -1,
-                    className: s()(g.Ni, { [g.wH]: o }, n),
+                    className: s()(
+                        g.Ni,
+                        {
+                            [g.wH]: o,
+                        },
+                        n,
+                    ),
                     onClick: o ? h.tEg : () => (null == a ? void 0 : a(t)),
                     children: p,
                 }),
@@ -57,6 +67,7 @@ function y(e) {
         }),
     });
 }
+
 function O(e) {
     let { icon: t, isSelected: n, disabled: i, tabIndex: a, onSelect: s, locked: o } = e;
     return (0, r.jsx)(y, {

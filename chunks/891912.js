@@ -63,6 +63,7 @@ var r = n(627968),
     ee = n(259878),
     et = n(206314),
     en = n(473169);
+
 function er(e, t, n) {
     return (
         t in e
@@ -76,6 +77,7 @@ function er(e, t, n) {
         e
     );
 }
+
 function ei(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -92,6 +94,7 @@ function ei(e) {
     }
     return e;
 }
+
 function ea(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -104,6 +107,7 @@ function ea(e, t) {
     }
     return n;
 }
+
 function es(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -115,7 +119,10 @@ function es(e, t) {
         e
     );
 }
-let eo = h.Ay.connectStores([B.A], () => ({ theme: B.A.theme }))(E.ppr);
+let eo = h.Ay.connectStores([B.A], () => ({
+    theme: B.A.theme,
+}))(E.ppr);
+
 function el(e) {
     let { className: t, text: n } = e;
     return (0, r.jsxs)("div", {
@@ -145,20 +152,30 @@ let ec = (e) => {
                         className: ee.PR,
                     });
                 case m.mo.DISPLAYS_ADVERTISEMENTS:
-                    return (0, r.jsx)(E.JD7, { className: ee.PR });
+                    return (0, r.jsx)(E.JD7, {
+                        className: ee.PR,
+                    });
                 default:
-                    return (0, r.jsx)(E.mir, { className: ee.PR });
+                    return (0, r.jsx)(E.mir, {
+                        className: ee.PR,
+                    });
             }
         }, [t]);
     },
     eu = (e, t) => {
         let n = J.intl.string(J.t["DT39A+"]),
-            i = J.intl.formatToPlainString(J.t.QWGvxA, { applicationName: e.name }),
+            i = J.intl.formatToPlainString(J.t.QWGvxA, {
+                applicationName: e.name,
+            }),
             a = null;
         return (
             (0, C.A)(e) &&
-                ((n = J.intl.formatToPlainString(J.t["paC+US"], { applicationName: e.name })),
-                (i = J.intl.formatToPlainString(J.t.inM1Yt, { applicationName: e.name })),
+                ((n = J.intl.formatToPlainString(J.t["paC+US"], {
+                    applicationName: e.name,
+                })),
+                (i = J.intl.formatToPlainString(J.t.inM1Yt, {
+                    applicationName: e.name,
+                })),
                 (a = (0, r.jsx)(z.A, {
                     look: z.k.WARNING,
                     children: J.intl.string(J.t.LY35Zy),
@@ -167,7 +184,11 @@ let ec = (e) => {
                 (a = (0, r.jsxs)(r.Fragment, {
                     children: [
                         a,
-                        (0, r.jsx)(z.A, { children: J.intl.format(J.t.KRnERi, { applicationName: e.name }) }),
+                        (0, r.jsx)(z.A, {
+                            children: J.intl.format(J.t.KRnERi, {
+                                applicationName: e.name,
+                            }),
+                        }),
                     ],
                 })),
             (0, E.qfG)((e) =>
@@ -249,7 +270,11 @@ let ec = (e) => {
                           ? (0, r.jsxs)("div", {
                                 className: ee.Fb,
                                 children: [
-                                    null != t.terms_of_service_url ? (0, r.jsx)("div", { className: ee.yF }) : null,
+                                    null != t.terms_of_service_url
+                                        ? (0, r.jsx)("div", {
+                                              className: ee.yF,
+                                          })
+                                        : null,
                                     (0, r.jsxs)(E.MzZ, {
                                         onClick: a,
                                         className: ee.Fb,
@@ -297,7 +322,9 @@ let ec = (e) => {
                     ? void 0
                     : e.allowMobilePush;
             }, [b]),
-            x = I.v.useExperiment({ location: "oauth2_authorize" }),
+            x = I.v.useExperiment({
+                location: "oauth2_authorize",
+            }),
             j = a.bot,
             U = (0, h.bG)([L.A], () => L.A.getDMFromUserId(null == j ? void 0 : j.id)),
             { appDMChannelMuteConfig: F, dmChannelMuted: B } = (0, h.cf)([M.Ay], () =>
@@ -330,7 +357,9 @@ let ec = (e) => {
                                         {
                                             className: ee.EK,
                                             children: [
-                                                (0, r.jsx)("i", { className: ee.dv }),
+                                                (0, r.jsx)("i", {
+                                                    className: ee.dv,
+                                                }),
                                                 (0, r.jsx)(E.Text, {
                                                     variant: "text-sm/normal",
                                                     children: e,
@@ -350,7 +379,9 @@ let ec = (e) => {
                                                     {
                                                         className: ee.EK,
                                                         children: [
-                                                            (0, r.jsx)(ec, { disclosure: t }),
+                                                            (0, r.jsx)(ec, {
+                                                                disclosure: t,
+                                                            }),
                                                             (0, r.jsx)(E.Text, {
                                                                 variant: "text-sm/normal",
                                                                 children: i,
@@ -394,7 +425,9 @@ let ec = (e) => {
                                             variant: "text-sm/normal",
                                             color: "text-subtle",
                                             className: s()(ee.vo, ee.k8),
-                                            children: J.intl.format(J.t.nZOS8j, { numPermissions: e.length }),
+                                            children: J.intl.format(J.t.nZOS8j, {
+                                                numPermissions: e.length,
+                                            }),
                                         }),
                                 ],
                             });
@@ -488,7 +521,9 @@ let ec = (e) => {
                                 (0, r.jsx)(E.Text, {
                                     variant: "text-sm/normal",
                                     color: "text-default",
-                                    children: J.intl.format(J.t.yOApCK, { date: n }),
+                                    children: J.intl.format(J.t.yOApCK, {
+                                        date: n,
+                                    }),
                                 }),
                             ],
                         }),
@@ -506,9 +541,15 @@ let ec = (e) => {
                     (t) => {
                         b in t.appSettings
                             ? null == t.appSettings[b].appDmSettings
-                                ? (t.appSettings[b].appDmSettings = g.Po.create({ allowMobilePush: e }))
+                                ? (t.appSettings[b].appDmSettings = g.Po.create({
+                                      allowMobilePush: e,
+                                  }))
                                 : (t.appSettings[b].appDmSettings.allowMobilePush = e)
-                            : (t.appSettings[b] = g._o.create({ appDmSettings: g.Po.create({ allowMobilePush: e }) }));
+                            : (t.appSettings[b] = g._o.create({
+                                  appDmSettings: g.Po.create({
+                                      allowMobilePush: e,
+                                  }),
+                              }));
                     },
                     Y.Sb.INFREQUENT_USER_ACTION,
                 ),
@@ -523,7 +564,15 @@ let ec = (e) => {
                 let e = U;
                 null == e && (e = await y.A.ensurePrivateChannel(j.id)),
                     B
-                        ? O.A.updateAppDMOverrideSettings(null, e, a.id, { muted: !1 }, G.fd.Unmuted)
+                        ? O.A.updateAppDMOverrideSettings(
+                              null,
+                              e,
+                              a.id,
+                              {
+                                  muted: !1,
+                              },
+                              G.fd.Unmuted,
+                          )
                         : (0, E.mMO)(async () => {
                               let { default: t } = await n.e("78560").then(n.bind(n, 123939));
                               return (n) =>
@@ -597,7 +646,9 @@ let ec = (e) => {
                         eE
                             ? (0, r.jsx)(el, {
                                   className: ee.UW,
-                                  text: J.intl.format(J.t.j4B7EW, { applicationName: a.name }),
+                                  text: J.intl.format(J.t.j4B7EW, {
+                                      applicationName: a.name,
+                                  }),
                               })
                             : eg
                               ? (0, r.jsx)(el, {
@@ -633,7 +684,9 @@ let ec = (e) => {
             }),
         });
     },
-    ep = (0, d.v)(() => ({ searchQuery: "" })),
+    ep = (0, d.v)(() => ({
+        searchQuery: "",
+    })),
     e_ = () => {
         let { fetchState: e, appAuthTokens: t } = (0, h.cf)([x.default], () => ({
                 fetchState: x.default.getFetchState(),
@@ -655,7 +708,10 @@ let ec = (e) => {
                     });
             },
             u = ep((e) => e.searchQuery),
-            d = (e) => ep.setState({ searchQuery: e }),
+            d = (e) =>
+                ep.setState({
+                    searchQuery: e,
+                }),
             f = (e) => {
                 d(e);
             },
@@ -747,7 +803,9 @@ let ec = (e) => {
         }, []),
         i.useEffect(
             () => () => {
-                ep.setState({ searchQuery: "" });
+                ep.setState({
+                    searchQuery: "",
+                });
             },
             [],
         ),

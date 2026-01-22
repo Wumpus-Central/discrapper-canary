@@ -1,7 +1,11 @@
-n.d(t, { A: () => s }), n(321073);
+n.d(t, {
+    A: () => s,
+}),
+    n(321073);
 var r = n(311907),
     i = n(719718),
     a = n(532294);
+
 function s() {
     var e, t, n, s, o, l, c;
     let u = (0, r.bG)([i.A], () => i.A.getCheckpointData()),

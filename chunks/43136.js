@@ -28,6 +28,7 @@ var r = n(627968),
     v = n(235665),
     S = n(985018),
     I = n(425666);
+
 function T(e) {
     let { onClick: t } = e;
     return (0, r.jsxs)(l.DUT, {
@@ -50,6 +51,7 @@ function T(e) {
         ],
     });
 }
+
 function C(e) {
     return (0, o.cf)([h.Ay, m.default], () => {
         var t, n;
@@ -62,6 +64,7 @@ function C(e) {
         };
     }, [e]);
 }
+
 function N(e) {
     let { coverImageAsset: t, isPreview: n = !1 } = e,
         i = _.kt.useSetting(),
@@ -94,13 +97,17 @@ function N(e) {
                   }),
     });
 }
+
 function R(e) {
     var t, n;
     let { guild: a, subscriptionsSettings: s } = e,
         o = a.id,
         { nickname: d, nickcolor: p } = C(o),
         { isTruncated: _, ExpandableTextContainer: h } = (0, y.e)(),
-        m = () => (0, v.A)({ guildId: o }),
+        m = () =>
+            (0, v.A)({
+                guildId: o,
+            }),
         g = (null != (t = null == s || null == (n = s.description) ? void 0 : n.trim().length) ? t : 0) > 0,
         [E, b] = i.useState(1),
         R = (0, c.A)("(max-width: 1439px)"),
@@ -109,11 +116,14 @@ function R(e) {
         x = (e) => {
             null != e && e.clientHeight > 30 && b(2);
         };
+
     function L(e, t) {
         return (0, r.jsx)(
             "span",
             {
-                style: { color: p },
+                style: {
+                    color: p,
+                },
                 children: e,
             },
             t,
@@ -132,7 +142,14 @@ function R(e) {
                   }),
                   _ &&
                       (0, r.jsxs)(r.Fragment, {
-                          children: [(0, r.jsx)(l.hKd, { size: 4 }), (0, r.jsx)(T, { onClick: m })],
+                          children: [
+                              (0, r.jsx)(l.hKd, {
+                                  size: 4,
+                              }),
+                              (0, r.jsx)(T, {
+                                  onClick: m,
+                              }),
+                          ],
                       }),
               ],
           })
@@ -171,10 +188,14 @@ function R(e) {
                                     lineClamp: 2,
                                     children: P
                                         ? S.intl.string(S.t.rtgp7q)
-                                        : S.intl.formatToPlainString(S.t.NZeik9, { guildName: a.name }),
+                                        : S.intl.formatToPlainString(S.t.NZeik9, {
+                                              guildName: a.name,
+                                          }),
                                 }),
                             }),
-                            (0, r.jsx)(l.hKd, { size: 8 }),
+                            (0, r.jsx)(l.hKd, {
+                                size: 8,
+                            }),
                             (0, r.jsx)(l.Text, {
                                 variant: "text-md/normal",
                                 color: "text-default",
@@ -183,7 +204,9 @@ function R(e) {
                                     usernameHook: L,
                                 }),
                             }),
-                            (0, r.jsx)(l.hKd, { size: 9 }),
+                            (0, r.jsx)(l.hKd, {
+                                size: 9,
+                            }),
                             j,
                         ],
                     }),

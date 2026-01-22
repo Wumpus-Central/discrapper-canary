@@ -1,7 +1,10 @@
-n.d(t, { cf: () => d });
+n.d(t, {
+    cf: () => d,
+});
 var r = n(626584);
 n(585211);
 var i = n(824606);
+
 function a(e, t, n) {
     return (
         t in e
@@ -15,6 +18,7 @@ function a(e, t, n) {
         e
     );
 }
+
 function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -31,6 +35,7 @@ function s(e) {
     }
     return e;
 }
+
 function o(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -43,6 +48,7 @@ function o(e, t) {
     }
     return n;
 }
+
 function l(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -56,9 +62,12 @@ function l(e, t) {
 }
 let c = new r.A("GifProviderConfig"),
     u = "tenor";
+
 function d() {
     try {
-        return i.q.getConfig({ location: "gif_picker" }).provider;
+        return i.q.getConfig({
+            location: "gif_picker",
+        }).provider;
     } catch (e) {
         return c.warn("Error getting provider for API request:", e), u;
     }

@@ -20,9 +20,11 @@ let a = l.createContext({
         throw Error("useTabBarState must be used within TabBarContextProvider");
     },
 });
+
 function c() {
     return l.useContext(a);
 }
+
 function o(e) {
     let { initialTab: t, children: n } = e,
         [r, s] = l.useState(t);

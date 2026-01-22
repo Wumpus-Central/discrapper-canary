@@ -1,7 +1,10 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 var r = n(627968);
 n(64700);
 var i = n(540239);
+
 function a(e) {
     let { disabled: t, deviceId: n, width: a, height: s } = e;
     return t

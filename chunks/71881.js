@@ -6,7 +6,9 @@ e.exports = function (e) {
                     begin: "\\$\\(" + e.UNDERSCORE_IDENT_RE + "\\)",
                     contains: [e.BACKSLASH_ESCAPE],
                 },
-                { begin: /\$[@%<?\^\+\*]/ },
+                {
+                    begin: /\$[@%<?\^\+\*]/,
+                },
             ],
         },
         n = {
@@ -25,7 +27,9 @@ e.exports = function (e) {
             },
             contains: [t, n],
         },
-        i = { begin: "^" + e.UNDERSCORE_IDENT_RE + "\\s*(?=[:+?]?=)" },
+        i = {
+            begin: "^" + e.UNDERSCORE_IDENT_RE + "\\s*(?=[:+?]?=)",
+        },
         a = {
             className: "meta",
             begin: /^\.PHONY:/,

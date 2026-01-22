@@ -1,4 +1,7 @@
-n.d(t, { A: () => p }), n(65821);
+n.d(t, {
+    A: () => p,
+}),
+    n(65821);
 var r = n(110259),
     i = n(933681),
     a = n(73153),
@@ -60,7 +63,14 @@ let p = {
         }).then(
             (e) => (
                 o.Ay.isOptInEnabled(t) &&
-                    u.A.updateChannelOverrideSettings(t, e.body.id, { flags: f.vv.OPT_IN_ENABLED }, l.fd.OptedIn),
+                    u.A.updateChannelOverrideSettings(
+                        t,
+                        e.body.id,
+                        {
+                            flags: f.vv.OPT_IN_ENABLED,
+                        },
+                        l.fd.OptedIn,
+                    ),
                 s.A.checkGuildTemplateDirty(t),
                 e
             ),

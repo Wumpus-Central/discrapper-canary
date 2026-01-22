@@ -1,4 +1,7 @@
-n.d(t, { A: () => y }), n(896048);
+n.d(t, {
+    A: () => y,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -34,7 +37,7 @@ let y = l.memo(function (e) {
             (o.ORC.announce(A.intl.string(A.t.acsXuG)),
             setTimeout(() => {
                 (0, u.xi)(t.id, [j.id]);
-            }, 5000),
+            }, 5e3),
             (0, h.QF)({
                 channelId: t.id,
                 senderId: t.getRecipientId(),
@@ -47,7 +50,7 @@ let y = l.memo(function (e) {
                 (o.ORC.announce(A.intl.string(A.t["1dxCqG"])),
                 setTimeout(() => {
                     (0, u.bg)(t.id);
-                }, 5000));
+                }, 5e3));
     }, [t, j, y, O]),
         (0, c.Ay)(() => {
             null != y &&
@@ -84,7 +87,9 @@ let y = l.memo(function (e) {
                             });
                         };
                     },
-                    { modalKey: m.V },
+                    {
+                        modalKey: m.V,
+                    },
                 ),
                 (0, h._$)({
                     channelId: t.id,

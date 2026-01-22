@@ -16,23 +16,28 @@ var r = n(58149),
     o = n(203982),
     l = n(652215);
 n(985018);
-let c = 86400000 * l.n83;
+let c = 864e5 * l.n83;
+
 function u() {
     let e = i.$s.getSetting();
     return 0 === a.A.totalUnavailableGuilds && (e = e.filter((e) => null != s.A.getGuild(e))), new Set(e);
 }
+
 function d() {
     let e = i.Zr.getSetting();
     return 0 === a.A.totalUnavailableGuilds && (e = e.filter((e) => null != s.A.getGuild(e))), new Set(e);
 }
+
 function f() {
     let e = i.JG.getSetting();
     return 0 === a.A.totalUnavailableGuilds && (e = e.filter((e) => null != s.A.getGuild(e))), new Set(e);
 }
+
 function p() {
     let e = i.pE.getSetting();
     return 0 === a.A.totalUnavailableGuilds && (e = e.filter((e) => null != s.A.getGuild(e))), new Set(e);
 }
+
 function _(e) {
     return (e & l.yKI) === l.yKI
         ? {
@@ -46,9 +51,11 @@ function _(e) {
               mutualGuilds: (e & l.dzt.MUTUAL_GUILDS) === l.dzt.MUTUAL_GUILDS,
           };
 }
+
 function h(e, t) {
     return !!(!t.verified || t.isStaff()) || (null != e && c > Date.now() - new Date(e.created_at).getTime());
 }
+
 function m(e) {
     let { destinationPane: t, originPane: n, source: i, subsection: a, locationStack: s, applicationId: o } = e;
     r.Ay.trackWithMetadata(l.HAw.SETTINGS_PANE_VIEWED, {
@@ -61,6 +68,7 @@ function m(e) {
         application_id: o,
     });
 }
+
 function g(e) {
     o._.dispatch(l.jej.SHAKE_SETTINGS_MODAL, e);
 }

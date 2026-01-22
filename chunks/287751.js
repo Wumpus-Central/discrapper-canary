@@ -1,4 +1,6 @@
-n.d(i, { A: () => a });
+n.d(i, {
+    A: () => a,
+});
 var o = {
     lessThanXSeconds: {
         one: {
@@ -19,9 +21,9 @@ var o = {
         other: "{{count}} sekund",
     },
     halfAMinute: {
-        one: "pół minuty",
-        twoFour: "pół minuty",
-        other: "pół minuty",
+        one: "p\xf3ł minuty",
+        twoFour: "p\xf3ł minuty",
+        other: "p\xf3ł minuty",
     },
     lessThanXMinutes: {
         one: {
@@ -109,6 +111,7 @@ var o = {
         other: "prawie {{count}} lat",
     },
 };
+
 function t(e, i, n) {
     var o = (function (e, i) {
         if (1 === i) return e.one;

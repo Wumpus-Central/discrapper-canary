@@ -64,16 +64,24 @@ var s = a.Map,
                     });
                 }),
                 o(t.getNextSiblingKey(), i, function (e) {
-                    return e.merge({ prevSibling: t.getPrevSiblingKey() });
+                    return e.merge({
+                        prevSibling: t.getPrevSiblingKey(),
+                    });
                 }),
                 o(t.getPrevSiblingKey(), i, function (e) {
-                    return e.merge({ nextSibling: u(e, i, r) });
+                    return e.merge({
+                        nextSibling: u(e, i, r),
+                    });
                 }),
                 o(n.getNextSiblingKey(), i, function (e) {
-                    return e.merge({ prevSibling: d(e, i, r) });
+                    return e.merge({
+                        prevSibling: d(e, i, r),
+                    });
                 }),
                 o(n.getPrevSiblingKey(), i, function (e) {
-                    return e.merge({ nextSibling: n.getNextSiblingKey() });
+                    return e.merge({
+                        nextSibling: n.getNextSiblingKey(),
+                    });
                 }),
                 l(n.getKey(), r).forEach(function (e) {
                     o(e, i, function (e) {
@@ -101,24 +109,32 @@ var s = a.Map,
             ) {
                 var a = t.getPrevSiblingKey();
                 o(n.getKey(), i, function (e) {
-                    return e.merge({ prevSibling: a });
+                    return e.merge({
+                        prevSibling: a,
+                    });
                 }),
                     o(a, i, function (e) {
-                        return e.merge({ nextSibling: n.getKey() });
+                        return e.merge({
+                            nextSibling: n.getKey(),
+                        });
                     });
                 var s = a ? e.get(a) : null,
                     f = s ? s.getParentKey() : null;
                 if (
                     (t.getChildKeys().forEach(function (e) {
                         o(e, i, function (e) {
-                            return e.merge({ parent: f });
+                            return e.merge({
+                                parent: f,
+                            });
                         });
                     }),
                     null != f)
                 ) {
                     var p = e.get(f);
                     o(f, i, function (e) {
-                        return e.merge({ children: p.getChildKeys().concat(t.getChildKeys()) });
+                        return e.merge({
+                            children: p.getChildKeys().concat(t.getChildKeys()),
+                        });
                     });
                 }
                 o(
@@ -127,7 +143,9 @@ var s = a.Map,
                     }),
                     i,
                     function (e) {
-                        return e.merge({ nextSibling: t.getNextSiblingKey() });
+                        return e.merge({
+                            nextSibling: t.getNextSiblingKey(),
+                        });
                     },
                 );
             }

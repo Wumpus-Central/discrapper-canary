@@ -1,4 +1,7 @@
-n.d(t, { A: () => L }), n(896048);
+n.d(t, {
+    A: () => L,
+}),
+    n(896048);
 var r,
     i = n(448761),
     a = n(311907),
@@ -7,6 +10,7 @@ var r,
     l = n(677185),
     c = n(88001),
     u = n(652215);
+
 function d(e, t, n) {
     return (
         t in e
@@ -20,6 +24,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +41,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -48,6 +54,7 @@ function p(e, t) {
     }
     return n;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -62,12 +69,15 @@ function _(e, t) {
 let h = new Map(),
     m = !1,
     g = !1;
+
 function E() {
     (h = new Map()), (m = !1), (g = !1);
 }
+
 function b() {
     g = !0;
 }
+
 function y(e) {
     let { invites: t } = e;
     for (let e of ((g = !1), (m = !0), t))
@@ -77,9 +87,11 @@ function y(e) {
             errorStatus: null,
         });
 }
+
 function O() {
     g = !1;
 }
+
 function A(e) {
     let { subscriptionGroupMemberId: t } = e;
     h.set(t, {
@@ -88,9 +100,11 @@ function A(e) {
         errorStatus: null,
     });
 }
+
 function v(e) {
     return null != e.removed_at ? c.xI.REMOVED : null != e.accepted_at ? c.xI.ACCEPTED : c.xI.PENDING;
 }
+
 function S(e) {
     let { subscriptionGroupMemberId: t, invite: n } = e;
     h.set(t, {
@@ -99,6 +113,7 @@ function S(e) {
         errorStatus: null,
     });
 }
+
 function I(e) {
     let { subscriptionGroupMemberId: t, status: n } = e,
         r = 404 === n ? c.xI.NOT_FOUND : c.xI.ERROR;
@@ -108,26 +123,33 @@ function I(e) {
         errorStatus: n,
     });
 }
+
 function T(e) {
     let { subscriptionGroupMemberId: t } = e,
         n = h.get(t);
     if ((null == n ? void 0 : n.invite) == null) return !1;
     h.set(t, {
         state: c.xI.ACCEPTED,
-        invite: _(f({}, n.invite), { accepted_at: new Date().toISOString() }),
+        invite: _(f({}, n.invite), {
+            accepted_at: new Date().toISOString(),
+        }),
         errorStatus: null,
     });
 }
+
 function C(e) {
     let { subscriptionGroupMemberId: t } = e,
         n = h.get(t);
     if ((null == n ? void 0 : n.invite) == null) return !1;
     h.set(t, {
         state: c.xI.PENDING,
-        invite: _(f({}, n.invite), { accepted_at: null }),
+        invite: _(f({}, n.invite), {
+            accepted_at: null,
+        }),
         errorStatus: null,
     });
 }
+
 function N(e) {
     let { subscriptionGroupMemberId: t } = e;
     if (null == t) return !1;
@@ -135,10 +157,13 @@ function N(e) {
     if ((null == n ? void 0 : n.invite) == null) return !1;
     h.set(t, {
         state: c.xI.REMOVED,
-        invite: _(f({}, n.invite), { removed_at: new Date().toISOString() }),
+        invite: _(f({}, n.invite), {
+            removed_at: new Date().toISOString(),
+        }),
         errorStatus: null,
     });
 }
+
 function R(e) {
     let { subscriptionGroupMemberId: t, errorCode: n } = e;
     if (null == t) return !1;
@@ -148,25 +173,32 @@ function R(e) {
         (n === c.Hy.BILLING_SUBSCRIPTION_GROUP_INVITE_ALREADY_ACCEPTED
             ? (h.set(t, {
                   state: c.xI.ACCEPTED,
-                  invite: _(f({}, r.invite), { accepted_at: new Date().toISOString() }),
+                  invite: _(f({}, r.invite), {
+                      accepted_at: new Date().toISOString(),
+                  }),
                   errorStatus: null,
               }),
               !0)
             : void h.set(t, {
                   state: c.xI.PENDING,
-                  invite: _(f({}, r.invite), { removed_at: null }),
+                  invite: _(f({}, r.invite), {
+                      removed_at: null,
+                  }),
                   errorStatus: null,
               }))
     );
 }
+
 function w(e) {
     let { message: t } = e;
     return D(t);
 }
+
 function P(e) {
     let { messages: t } = e;
     return t.map((e) => D(e)).some(Boolean);
 }
+
 function D(e) {
     if (e.type !== i.l.PREMIUM_GROUP_INVITE) return !1;
     let t = e.content;

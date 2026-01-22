@@ -1,4 +1,7 @@
-n.d(t, { Z: () => v }), n(321073);
+n.d(t, {
+    Z: () => v,
+}),
+    n(321073);
 var r = n(627968),
     i = n(64700),
     a = n(284009),
@@ -24,7 +27,9 @@ let A = (e) => {
             ? null
             : (0, r.jsx)("div", {
                   className: O.i,
-                  children: (0, r.jsx)(h._, { userDiscountOffer: t }),
+                  children: (0, r.jsx)(h._, {
+                      userDiscountOffer: t,
+                  }),
               });
     },
     v = () => {
@@ -57,7 +62,11 @@ let A = (e) => {
             });
         let C = (0, f.Zb)(v),
             N = C ? y.intl.string(b.default.z2vO3h) : y.intl.string(y.t.PWq8TL),
-            R = C ? y.intl.formatToPlainString(b.default.stVlc6, { cooldownMonths: E.wl }) : y.intl.string(y.t.SOC4ML),
+            R = C
+                ? y.intl.formatToPlainString(b.default.stVlc6, {
+                      cooldownMonths: E.wl,
+                  })
+                : y.intl.string(y.t.SOC4ML),
             w = [];
         return (
             null != h
@@ -82,7 +91,11 @@ let A = (e) => {
                 title: N,
                 subtitle: R,
                 actions: w,
-                preview: null !== h && (0, r.jsx)(A, { churnUserDiscountOffer: h }),
+                preview:
+                    null !== h &&
+                    (0, r.jsx)(A, {
+                        churnUserDiscountOffer: h,
+                    }),
                 onClose: async () => t(),
                 children: (0, r.jsx)(_.l, {
                     currentUser: S,

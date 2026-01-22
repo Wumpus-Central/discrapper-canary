@@ -31,6 +31,7 @@ var r = n(627968),
     I = n(818348),
     T = n(985018),
     C = n(94576);
+
 function N(e, t, n) {
     return (
         t in e
@@ -44,6 +45,7 @@ function N(e, t, n) {
         e
     );
 }
+
 function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -60,6 +62,7 @@ function R(e) {
     }
     return e;
 }
+
 function w(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -72,6 +75,7 @@ function w(e, t) {
     }
     return n;
 }
+
 function P(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -88,6 +92,7 @@ let D = (0, m.D)(() => ({
     selectedStory: null,
     controlsLayout: "right",
 }));
+
 function x() {
     let e = (0, b.A)(),
         t = (0, E.A)(),
@@ -104,21 +109,30 @@ function x() {
                                 id: "controls-right",
                                 group: "controls-layout",
                                 label: "Right Side",
-                                action: () => D.setState({ controlsLayout: "right" }),
+                                action: () =>
+                                    D.setState({
+                                        controlsLayout: "right",
+                                    }),
                                 checked: "right" === a,
                             }),
                             (0, r.jsx)(u.iD, {
                                 id: "controls-bottom",
                                 group: "controls-layout",
                                 label: "Bottom",
-                                action: () => D.setState({ controlsLayout: "bottom" }),
+                                action: () =>
+                                    D.setState({
+                                        controlsLayout: "bottom",
+                                    }),
                                 checked: "bottom" === a,
                             }),
                             (0, r.jsx)(u.iD, {
                                 id: "controls-hidden",
                                 group: "controls-layout",
                                 label: "Hidden",
-                                action: () => D.setState({ controlsLayout: "hidden" }),
+                                action: () =>
+                                    D.setState({
+                                        controlsLayout: "hidden",
+                                    }),
                                 checked: "hidden" === a,
                             }),
                         ],
@@ -151,6 +165,7 @@ function x() {
         ],
     });
 }
+
 function L() {
     let e = i.useRef(null);
     return (0, r.jsx)(f.Y, {
@@ -173,11 +188,14 @@ function L() {
                         },
                         t,
                     ),
-                    { buttonRef: e },
+                    {
+                        buttonRef: e,
+                    },
                 ),
             ),
     });
 }
+
 function j(e) {
     var t;
     let { configs: n } = e,
@@ -213,7 +231,9 @@ function j(e) {
             });
         },
         T = (e) => {
-            D.setState({ selectedStory: e });
+            D.setState({
+                selectedStory: e,
+            });
         },
         N = null != (t = null == E ? void 0 : E.name) ? t : "Design System",
         R = null == y ? void 0 : y.name,
@@ -258,19 +278,31 @@ function j(e) {
                     (0, r.jsxs)(g.Ay, {
                         className: C.wx,
                         children: [
-                            null != N ? (0, r.jsx)(g.Ay.Title, { children: N }) : null,
+                            null != N
+                                ? (0, r.jsx)(g.Ay.Title, {
+                                      children: N,
+                                  })
+                                : null,
                             null != R
                                 ? (0, r.jsxs)(r.Fragment, {
                                       children: [
-                                          null != N ? (0, r.jsx)(g.Ay.Caret, { className: C.zN }) : null,
-                                          (0, r.jsx)(g.Ay.Title, { children: R }),
+                                          null != N
+                                              ? (0, r.jsx)(g.Ay.Caret, {
+                                                    className: C.zN,
+                                                })
+                                              : null,
+                                          (0, r.jsx)(g.Ay.Title, {
+                                              children: R,
+                                          }),
                                       ],
                                   })
                                 : null,
                             (null == y ? void 0 : y.docs) != null
                                 ? (0, r.jsxs)(r.Fragment, {
                                       children: [
-                                          (0, r.jsx)(g.Ay.Divider, { className: C.zN }),
+                                          (0, r.jsx)(g.Ay.Divider, {
+                                              className: C.zN,
+                                          }),
                                           (0, r.jsx)(g.Ay.Title, {
                                               children: (0, r.jsx)(o.Anchor, {
                                                   href: y.docs,

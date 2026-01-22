@@ -1,4 +1,7 @@
-r.d(t, { default: () => R }), r(896048);
+r.d(t, {
+    default: () => R,
+}),
+    r(896048);
 var n = r(627968),
     i = r(64700),
     s = r(284009),
@@ -26,6 +29,7 @@ var n = r(627968),
     N = r(652215),
     I = r(985018),
     T = r(176115);
+
 function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
@@ -51,6 +55,7 @@ function P(e) {
     }
     return e;
 }
+
 function R(e) {
     let t,
         { source: r, transitionState: s, onClose: R, oneClickFlow: C = !1 } = e,
@@ -66,7 +71,7 @@ function R(e) {
             let e = E.default.getCurrentUser();
             return a()(null != e, "PomeloModal: user cannot be undefined"), e;
         }),
-        { usernameSuggestion: $, usernameSuggestionLoading: X } = (0, S.G)(C ? 2000 : void 0);
+        { usernameSuggestion: $, usernameSuggestionLoading: X } = (0, S.G)(C ? 2e3 : void 0);
     i.useEffect(() => {
         F === _.iv.EDIT_USERNAME && W(!0),
             p.default.track(N.HAw.POMELO_EDIT_STEP_VIEWED, {
@@ -83,7 +88,10 @@ function R(e) {
                     var t, r;
                     return (
                         (t = P({}, e)),
-                        (r = r = { username: $ }),
+                        (r = r =
+                            {
+                                username: $,
+                            }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
                             : (function (e, t) {
@@ -131,7 +139,9 @@ function R(e) {
                     slideId: x.E.SUGGESTIONS,
                     footerButtons: [F === _.iv.PREVIEW ? "GOT_IT" : "UPDATE"],
                 },
-                { slideId: x.E.FINISH_LATER },
+                {
+                    slideId: x.E.FINISH_LATER,
+                },
             ],
             [F],
         ),
@@ -152,7 +162,12 @@ function R(e) {
             }
             if (h.Ay.getGlobalName(Y) === Z.globalName) return void B(_.iv.EDIT_USERNAME);
             try {
-                U(null), G(!0), await (0, m.gt)({ global_name: Z.globalName }), B(_.iv.EDIT_USERNAME);
+                U(null),
+                    G(!0),
+                    await (0, m.gt)({
+                        global_name: Z.globalName,
+                    }),
+                    B(_.iv.EDIT_USERNAME);
             } catch (t) {
                 let e = new g.A(t).getAnyErrorMessage();
                 p.default.track(N.HAw.POMELO_ERRORS, {
@@ -169,7 +184,12 @@ function R(e) {
             try {
                 U(null),
                     G(!0),
-                    await O.A.createPomelo({ username: (0, b.h_)(Z.username) }, C),
+                    await O.A.createPomelo(
+                        {
+                            username: (0, b.h_)(Z.username),
+                        },
+                        C,
+                    ),
                     await (0, d.eO)(Y.id),
                     B(_.iv.PREVIEW);
             } catch (r) {
@@ -253,7 +273,9 @@ function R(e) {
         !H &&
             null == k &&
             (F === _.iv.EDIT_USERNAME
-                ? (t = I.intl.formatToPlainString(I.t.AJh8BR, { source: Y.username }))
+                ? (t = I.intl.formatToPlainString(I.t.AJh8BR, {
+                      source: Y.username,
+                  }))
                 : F === _.iv.SUGGESTION && (X || null != $) && (t = I.intl.string(I.t["i/2SgP"]))),
         (0, n.jsxs)(u.EOs, {
             "data-migration-pending": !0,
@@ -296,7 +318,9 @@ function R(e) {
                         children: [
                             (0, n.jsx)(u.q7S, {
                                 id: x.E.INFO,
-                                children: (0, n.jsx)(j.A, { user: Y }),
+                                children: (0, n.jsx)(j.A, {
+                                    user: Y,
+                                }),
                             }),
                             (0, n.jsx)(u.q7S, {
                                 id: x.E.EDIT_SCREEN,
@@ -315,7 +339,9 @@ function R(e) {
                             }),
                             (0, n.jsx)(u.q7S, {
                                 id: x.E.FINISH_LATER,
-                                children: (0, n.jsx)(A.A, { onClose: R }),
+                                children: (0, n.jsx)(A.A, {
+                                    onClose: R,
+                                }),
                             }),
                             (0, n.jsx)(u.q7S, {
                                 id: x.E.SUGGESTIONS,

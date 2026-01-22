@@ -1,4 +1,8 @@
-n.d(t, { A: () => u }), n(228524), n(896048);
+n.d(t, {
+    A: () => u,
+}),
+    n(228524),
+    n(896048);
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -7,6 +11,7 @@ var i = n(397927),
     s = n(218394),
     o = n(258335),
     c = n(249850);
+
 function u(e) {
     let { coverImageAsset: t, title: n, guild: u, description: d, children: p } = e,
         f = a.kt.useSetting(),

@@ -1,4 +1,7 @@
-n.d(t, { A: () => f }), n(321073);
+n.d(t, {
+    A: () => f,
+}),
+    n(321073);
 var r = n(627968);
 n(64700);
 var i = n(179771),
@@ -9,6 +12,7 @@ var i = n(179771),
     c = n(652215),
     u = n(985018),
     d = n(968363);
+
 function f(e) {
     let t,
         { application: n, accountScopes: a } = e,
@@ -20,13 +24,19 @@ function f(e) {
                     applicationName: n.name,
                     learnMoreURL: l.A.getArticleURL(c.MVz.SOCIAL_LAYER_CONNECTIONS),
                 })
-              : u.intl.format(u.t.DfBeUq, { learnMoreURL: l.A.getArticleURL(c.MVz.SOCIAL_LAYER_CONNECTIONS) })),
+              : u.intl.format(u.t.DfBeUq, {
+                    learnMoreURL: l.A.getArticleURL(c.MVz.SOCIAL_LAYER_CONNECTIONS),
+                })),
           f.push(
               {
                   icon: s.$yI,
                   text: _
-                      ? u.intl.formatToPlainString(u.t.z9peav, { maxFriends: c.$4X })
-                      : u.intl.formatToPlainString(u.t.WNKzo9, { maxFriends: c.$4X }),
+                      ? u.intl.formatToPlainString(u.t.z9peav, {
+                            maxFriends: c.$4X,
+                        })
+                      : u.intl.formatToPlainString(u.t.WNKzo9, {
+                            maxFriends: c.$4X,
+                        }),
               },
               {
                   icon: s.SYr,
@@ -47,13 +57,19 @@ function f(e) {
                     applicationName: n.name,
                     learnMoreURL: l.A.getArticleURL(c.MVz.SOCIAL_LAYER_CONNECTIONS),
                 })
-              : u.intl.format(u.t.DfBeUq, { learnMoreURL: l.A.getArticleURL(c.MVz.SOCIAL_LAYER_CONNECTIONS) })),
+              : u.intl.format(u.t.DfBeUq, {
+                    learnMoreURL: l.A.getArticleURL(c.MVz.SOCIAL_LAYER_CONNECTIONS),
+                })),
           f.push(
               {
                   icon: s.$yI,
                   text: _
-                      ? u.intl.formatToPlainString(u.t.z9peav, { maxFriends: c.$4X })
-                      : u.intl.formatToPlainString(u.t.WNKzo9, { maxFriends: c.$4X }),
+                      ? u.intl.formatToPlainString(u.t.z9peav, {
+                            maxFriends: c.$4X,
+                        })
+                      : u.intl.formatToPlainString(u.t.WNKzo9, {
+                            maxFriends: c.$4X,
+                        }),
               },
               {
                   icon: s._xR,
@@ -90,6 +106,7 @@ function f(e) {
               ],
           });
 }
+
 function p(e) {
     let { icon: t, text: n } = e;
     return (0, r.jsxs)("div", {

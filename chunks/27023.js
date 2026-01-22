@@ -23,12 +23,14 @@ var l = n(627968),
     j = n(294726),
     x = n(985018);
 let [E, h] = (0, o.A)();
+
 function y(e) {
     var t;
     return null == e || null == (t = e.plans[Math.floor(((null == e ? void 0 : e.plans.length) - 1) / 2)])
         ? void 0
         : t.id;
 }
+
 function A(e) {
     var t, n, o, h, A, S, O, k, I, N, P, C, w, G;
     let T,

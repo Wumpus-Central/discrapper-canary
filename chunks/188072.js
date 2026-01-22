@@ -1,4 +1,6 @@
-r.d(t, { default: () => y });
+r.d(t, {
+    default: () => y,
+});
 var n = r(627968),
     s = r(64700),
     a = r(158954),
@@ -14,6 +16,7 @@ var n = r(627968),
     m = r(652215),
     g = r(985018),
     h = r(536518);
+
 function x(e) {
     let { step: t, instructions: r } = e;
     return (0, n.jsxs)("div", {
@@ -36,10 +39,13 @@ function x(e) {
         ],
     });
 }
+
 function y(e) {
     let { channel: t, transitionState: r, onClose: y } = e,
         O = (0, i.bG)([d.default], () => null != d.default.getRemoteSessionId()),
-        j = (0, u.A)(t, { forQRCode: !0 });
+        j = (0, u.A)(t, {
+            forQRCode: !0,
+        });
     return (
         s.useEffect(() => {
             O && y();
@@ -63,7 +69,12 @@ function y(e) {
                                 variant: "text-lg/semibold",
                                 color: "text-strong",
                                 className: h.RA,
-                                children: [(0, n.jsx)(c.A, { className: h.Fp }), g.intl.string(g.t.ZNlYbK)],
+                                children: [
+                                    (0, n.jsx)(c.A, {
+                                        className: h.Fp,
+                                    }),
+                                    g.intl.string(g.t.ZNlYbK),
+                                ],
                             }),
                             (0, n.jsx)(x, {
                                 step: 1,

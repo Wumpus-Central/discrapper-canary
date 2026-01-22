@@ -1,4 +1,7 @@
-n.d(t, { A: () => S }), n(896048);
+n.d(t, {
+    A: () => S,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -19,6 +22,7 @@ var r = n(627968),
     O = n(652215),
     y = n(985018),
     v = n(862238);
+
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -44,6 +48,7 @@ function A(e) {
     }
     return e;
 }
+
 function E(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -63,6 +68,7 @@ function E(e, t) {
     );
 }
 let N = "guild-role-subscription-tier-template-selector";
+
 function _(e) {
     let { guildId: t, priceTiers: l, groupListingId: p } = e,
         _ = (0, m.cY)(p),
@@ -71,7 +77,9 @@ function _(e) {
             addNewEditStateId: T,
             addNewEditStateFromTemplate: I,
             removeEditStateId: C,
-        } = h.d0(p, t, { includeSoftDeleted: !0 }),
+        } = h.d0(p, t, {
+            includeSoftDeleted: !0,
+        }),
         [P, w] = i.useState({}),
         R = i.useMemo(() => {
             let e = S.map((e) => {
@@ -103,7 +111,9 @@ function _(e) {
                                       }),
                                   );
                           },
-                          { modalKey: N },
+                          {
+                              modalKey: N,
+                          },
                       )
                     : T();
         }, [t, I, T, l, G, D]),
@@ -138,7 +148,14 @@ function _(e) {
                                     onDeleteEditState: () => C(e),
                                     onBeforeDispatchNewListing: (t) => {
                                         var n;
-                                        return (n = t.id), void w((t) => E(A({}, t), { [n]: e }));
+                                        return (
+                                            (n = t.id),
+                                            void w((t) =>
+                                                E(A({}, t), {
+                                                    [n]: e,
+                                                }),
+                                            )
+                                        );
                                     },
                                     onAfterDispatchNewListing: () => C(e),
                                 },
@@ -147,7 +164,9 @@ function _(e) {
                         ),
                         (0, r.jsxs)(u.DUT, {
                             onClick: U ? void 0 : L,
-                            className: s()(v.l2, { [v.r9]: U }),
+                            className: s()(v.l2, {
+                                [v.r9]: U,
+                            }),
                             "aria-disabled": U,
                             children: [
                                 (0, r.jsx)(u.U1e, {
@@ -167,12 +186,19 @@ function _(e) {
                 (0, r.jsx)(o.F, {
                     component: "div",
                     className: v.se,
-                    children: k && (0, r.jsx)(u.FQk, { children: (0, r.jsx)(d.A, { onReset: M }) }),
+                    children:
+                        k &&
+                        (0, r.jsx)(u.FQk, {
+                            children: (0, r.jsx)(d.A, {
+                                onReset: M,
+                            }),
+                        }),
                 }),
             ],
         })
     );
 }
+
 function S(e) {
     let { guildId: t } = e,
         { priceTiers: n } = ((e) => {
@@ -196,7 +222,9 @@ function S(e) {
         a = l.map((e) => e.id);
     return (0, r.jsx)(u.D0$, {
         label: y.intl.string(y.t["72+Sos"]),
-        description: y.intl.format(y.t.nHRSvM, { maxTiers: s }),
+        description: y.intl.format(y.t.nHRSvM, {
+            maxTiers: s,
+        }),
         children: (0, r.jsx)(_, {
             priceTiers: n,
             guildId: t,

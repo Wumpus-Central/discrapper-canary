@@ -1,4 +1,7 @@
-Object.defineProperty(t, "__esModule", { value: !0 }), (t.InternalIntlMessage = void 0);
+Object.defineProperty(t, "__esModule", {
+    value: !0,
+}),
+    (t.InternalIntlMessage = void 0);
 let r = n(503574);
 class i {
     constructor(e, t) {
@@ -6,10 +9,13 @@ class i {
     }
     reserialize() {
         if ("string" == typeof this.ast) return this.ast;
-        let e = { value: "" };
+        let e = {
+            value: "",
+        };
         return a(this.ast, e), e.value;
     }
 }
+
 function a(e, t) {
     for (let n of e) {
         if ("string" == typeof n) {
@@ -51,6 +57,7 @@ function a(e, t) {
         }
     }
 }
+
 function s(e, t) {
     switch (e[1]) {
         case "$b":

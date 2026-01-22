@@ -1,4 +1,6 @@
-n.d(t, { A: () => y });
+n.d(t, {
+    A: () => y,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -13,6 +15,7 @@ var i = n(311907),
     p = n(993401),
     _ = n(652215),
     h = n(985018);
+
 function m(e, t, n) {
     return (
         t in e
@@ -26,6 +29,7 @@ function m(e, t, n) {
         e
     );
 }
+
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,6 +46,7 @@ function g(e) {
     }
     return e;
 }
+
 function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -54,6 +59,7 @@ function E(e, t) {
     }
     return n;
 }
+
 function b(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -65,6 +71,7 @@ function b(e, t) {
         e
     );
 }
+
 function y(e) {
     let { user: t, activity: n, onAction: m, onClose: E } = e,
         { newestAnalyticsLocation: y } = (0, s.Ay)(),
@@ -80,7 +87,10 @@ function y(e) {
               fullWidth: !0,
               onClick: (e) => {
                   e.stopPropagation(),
-                      null == m || m({ action: "PRESS_HANG_STATUS_BUTTON" }),
+                      null == m ||
+                          m({
+                              action: "PRESS_HANG_STATUS_BUTTON",
+                          }),
                       a.default.selectVoiceChannel(O.id),
                       (0, l.iN)(O.id),
                       f.default.track(

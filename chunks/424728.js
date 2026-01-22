@@ -1,4 +1,6 @@
-n.d(t, { l: () => w });
+n.d(t, {
+    l: () => w,
+});
 var r = n(537569),
     i = n(99066),
     l = n(126904),
@@ -58,4 +60,6 @@ let P = [
         b.o,
         o.Kf,
     ],
-    w = new j.E(P, x.$G.CONNECTION_OPEN, { location: "app open" });
+    w = new j.E(P, x.$G.CONNECTION_OPEN, {
+        location: "app open",
+    });

@@ -1,7 +1,10 @@
-r.d(e, { default: () => o });
+r.d(e, {
+    default: () => o,
+});
 var n = r(627968),
     i = r(158954),
     c = r(985018);
+
 function o(t) {
     return (0, n.jsx)(
         i.Modal,

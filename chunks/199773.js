@@ -1,4 +1,7 @@
-n.d(t, { A: () => T }), n(896048);
+n.d(t, {
+    A: () => T,
+}),
+    n(896048);
 var r,
     i = n(311907),
     a = n(73153),
@@ -6,6 +9,7 @@ var r,
     o = n(787925),
     l = n(256787),
     c = n(652215);
+
 function u(e, t, n) {
     return (
         t in e
@@ -19,6 +23,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,6 +40,7 @@ function d(e) {
     }
     return e;
 }
+
 function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -47,6 +53,7 @@ function f(e, t) {
     }
     return n;
 }
+
 function p(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -70,6 +77,7 @@ let _ = "daily_cap",
         lastDCDismissed: null,
         seenForGuildId: new Map(),
     };
+
 function g() {
     m = p(d({}, m), {
         dismissibleContentSeenDuringSession: new Set(),
@@ -77,18 +85,22 @@ function g() {
         seenForGuildId: new Map(),
     });
 }
+
 function E(e) {
     let { value: t } = e;
     m.dailyCapOverridden = t;
 }
+
 function b(e) {
     let { value: t } = e;
     m.newUserMinAgeRequiredOverridden = t;
 }
+
 function y(e, t) {
     let n = m.seenForGuildId.get(t);
     return null != n && n.has(e);
 }
+
 function O(e) {
     let { dismissibleContent: t, guildId: n } = e,
         r = new Date();
@@ -115,14 +127,17 @@ function O(e) {
         }
     }
 }
+
 function A(e) {
     let { dismissibleContent: t } = e;
     (m.lastDCDismissed = t), m.renderedAtTimestamps.delete(t);
 }
+
 function v(e) {
     let { dismissibleContent: t } = e;
     m.lastDCDismissed = null != t ? t : null;
 }
+
 function S() {
     (m.dailyCapPeriodStart = null),
         (m.numberOfDCsShownToday = 0),

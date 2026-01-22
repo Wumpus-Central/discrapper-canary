@@ -1,4 +1,6 @@
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});
 let r = (0, n(600975).C)({
     kind: "user",
     id: "2023-05_overlay_hook_crash_detection",

@@ -24,6 +24,7 @@ var r = n(627968),
     y = n(966851),
     v = n(927573),
     A = n(652215);
+
 function E(e) {
     b.A.selectRole(e);
 }
@@ -48,6 +49,7 @@ let N = () => {
         onReset: p.Ts,
     });
 };
+
 function _(e) {
     let { refToScroller: t } = e,
         { guild: n, roles: l } = (0, a.cf)(

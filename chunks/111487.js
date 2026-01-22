@@ -12,6 +12,7 @@ let o = {
     MEDIUM: s.Y,
     LARGE: s.as,
 };
+
 function l(e) {
     let { emojiId: t, emojiName: n, defaultComponent: s, size: l = o.MEDIUM } = e,
         { customEmoji: c, unicodeEmoji: u } = (0, a.A)(t, n);

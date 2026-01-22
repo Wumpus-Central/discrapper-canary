@@ -1,9 +1,12 @@
-n.d(t, { P: () => o });
+n.d(t, {
+    P: () => o,
+});
 var r = n(627968);
 n(64700);
 var i = n(460890),
     a = n(568385),
     s = n(27192);
+
 function o(e) {
     let { checked: t, disabled: n, size: o } = e;
     return (0, i.y6)("CheckboxIndicator")

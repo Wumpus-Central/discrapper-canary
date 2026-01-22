@@ -33,6 +33,7 @@ var r = n(627968),
     R = n(652215),
     w = n(985018),
     P = n(456665);
+
 function D(e, t, n) {
     return (
         t in e
@@ -46,6 +47,7 @@ function D(e, t, n) {
         e
     );
 }
+
 function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -62,6 +64,7 @@ function x(e) {
     }
     return e;
 }
+
 function L(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -74,6 +77,7 @@ function L(e, t) {
     }
     return n;
 }
+
 function j(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -85,6 +89,7 @@ function j(e, t) {
         e
     );
 }
+
 function M(e, t) {
     if (null == e) return {};
     var n,
@@ -101,6 +106,7 @@ function M(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function k(e, t) {
     if (null == e) return {};
     var n,
@@ -112,6 +118,7 @@ function k(e, t) {
     return i;
 }
 let U = d.A.unsafe_rawColors.PRIMARY_300;
+
 function G(e) {
     var t, n;
     let { role: i, guildId: a, trailing: o, itemRef: l, labelId: c, className: d, style: _ } = e,
@@ -164,11 +171,27 @@ function G(e) {
                     children: i.name,
                 }),
             }),
-            null != h ? (0, r.jsx)(O.A, j(x({ className: P.UT }, h), { enableTooltip: !1 })) : null,
+            null != h
+                ? (0, r.jsx)(
+                      O.A,
+                      j(
+                          x(
+                              {
+                                  className: P.UT,
+                              },
+                              h,
+                          ),
+                          {
+                              enableTooltip: !1,
+                          },
+                      ),
+                  )
+                : null,
             o,
         ],
     });
 }
+
 function V(e) {
     let { role: t, canRemove: n, onRemoveRole: a, onContextMenu: s } = e,
         o = M(e, ["role", "canRemove", "onRemoveRole", "onContextMenu"]),
@@ -188,7 +211,9 @@ function V(e) {
                   spacing: 4,
                   ariaHidden: !0,
                   children: (0, r.jsx)(p.DUT, {
-                      "aria-label": w.intl.formatToPlainString(w.t.QrxwhY, { roleName: t.name }),
+                      "aria-label": w.intl.formatToPlainString(w.t.QrxwhY, {
+                          roleName: t.name,
+                      }),
                       onClick: h,
                       className: P.DT,
                       tabIndex: u,
@@ -223,6 +248,7 @@ function V(e) {
         ),
     });
 }
+
 function F(e) {
     let { roleCount: t, children: n } = e,
         a = i.useMemo(() => "roles-".concat((0, o.A)()), []),
@@ -233,7 +259,9 @@ function F(e) {
             scrollToEnd: R.js$,
             wrap: !0,
         }),
-        u = w.intl.formatToPlainString(w.t.PCs0oo, { numRoles: t });
+        u = w.intl.formatToPlainString(w.t.PCs0oo, {
+            numRoles: t,
+        });
     return (0, r.jsx)(l.hD, {
         navigator: s,
         children: (0, r.jsx)(l.PR, {
@@ -253,6 +281,7 @@ function F(e) {
         }),
     });
 }
+
 function B(e) {
     var t;
     let { userId: n, guild: a, showLabel: o = !1, onAddRole: l, buttonRef: c } = e,
@@ -300,7 +329,9 @@ function B(e) {
                             {
                                 innerRef: O,
                                 "aria-label": w.intl.string(w.t.e3Wlyw),
-                                className: s()(P.c9, { [P.MS]: o }),
+                                className: s()(P.c9, {
+                                    [P.MS]: o,
+                                }),
                             },
                             e,
                         ),
@@ -323,6 +354,7 @@ function B(e) {
             }),
     });
 }
+
 function H(e) {
     let { userId: t, guild: n, roles: r, allowEditing: a, readOnly: s } = e,
         o = (0, u.bG)([T.default], () => T.default.getCurrentUser()),
@@ -352,6 +384,7 @@ function H(e) {
         hasDeveloperContextMenu: p,
     };
 }
+
 function Y(e, t, n) {
     return i.useCallback(
         (r) => {
@@ -366,6 +399,7 @@ function Y(e, t, n) {
         [n, t, e],
     );
 }
+
 function W() {
     return i.useCallback((e, t) => {
         (0, _.L3)(e, async () => {
@@ -381,6 +415,7 @@ function W() {
         });
     }, []);
 }
+
 function K(e) {
     let {
             userId: t,
@@ -461,10 +496,15 @@ function K(e) {
                     }),
           });
 }
+
 function z(e) {
     let { isExpanded: t, overflowCount: n, onClick: i, buttonRef: a } = e,
         o = t ? w.intl.string(w.t.XnXtCt) : w.intl.string(w.t.DY6n4q),
-        l = t ? w.intl.string(w.t.XnXtCt) : w.intl.formatToPlainString(w.t.zr0Y5R, { numberOfItems: n });
+        l = t
+            ? w.intl.string(w.t.XnXtCt)
+            : w.intl.formatToPlainString(w.t.zr0Y5R, {
+                  numberOfItems: n,
+              });
     return (0, r.jsx)(f.m_, {
         text: o,
         ariaHidden: !0,
@@ -472,7 +512,9 @@ function z(e) {
             innerRef: a,
             "aria-label": l,
             onClick: i,
-            className: s()(P.s6, { [P.X1]: !t }),
+            className: s()(P.s6, {
+                [P.X1]: !t,
+            }),
             children: t
                 ? (0, r.jsx)(p.n2b, {
                       size: "xs",
@@ -494,6 +536,7 @@ let q = 4,
         let { width: t } = e.getBoundingClientRect();
         return t > 0 ? t + q : 0;
     };
+
 function $(e) {
     let {
             userId: t,
@@ -601,7 +644,9 @@ function $(e) {
                                         onRemoveRole: h ? b : void 0,
                                         itemRef: (t) => A(e.id, t),
                                         onContextMenu: m ? (t) => y(t, e.id) : void 0,
-                                        style: { maxWidth: C || t !== v.length - 1 ? X : I },
+                                        style: {
+                                            maxWidth: C || t !== v.length - 1 ? X : I,
+                                        },
                                     },
                                     e.id,
                                 ),
@@ -623,7 +668,9 @@ function $(e) {
                                                 itemRef: (t) => A(e.id, t),
                                                 role: e,
                                                 guildId: n.id,
-                                                style: { maxWidth: C || t !== v.length - 1 ? X : I },
+                                                style: {
+                                                    maxWidth: C || t !== v.length - 1 ? X : I,
+                                                },
                                             }),
                                         },
                                         e.id,

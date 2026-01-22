@@ -14,6 +14,7 @@ function r(e) {
     }
     return e;
 }
+
 function i(e, t, n) {
     return (
         t in e
@@ -101,6 +102,7 @@ var a = n(630332),
                 );
             });
         var e = t.prototype;
+
         function t(e) {
             i(this, "_immutable", void 0), (this._immutable = e);
         }
@@ -142,7 +144,9 @@ var a = n(630332),
                 return this.getImmutable().get("inlineStyleOverride");
             }),
             (t.setInlineStyleOverride = function (e, n) {
-                return t.set(e, { inlineStyleOverride: n });
+                return t.set(e, {
+                    inlineStyleOverride: n,
+                });
             }),
             (e.getCurrentInlineStyle = function () {
                 var e = this.getInlineStyleOverride();
@@ -270,6 +274,7 @@ var a = n(630332),
             t
         );
     })();
+
 function h(e, t, n) {
     return _.set(e, {
         selection: t,
@@ -278,6 +283,7 @@ function h(e, t, n) {
         inlineStyleOverride: null,
     });
 }
+
 function m(e, t) {
     return e
         .getBlockMap()
@@ -286,6 +292,7 @@ function m(e, t) {
         })
         .toOrderedMap();
 }
+
 function g(e, t, n, r) {
     var i = e.getCurrentContent().set("entityMap", n),
         s = i.getBlockMap();
@@ -303,6 +310,7 @@ function g(e, t, n, r) {
                 }),
         );
 }
+
 function E(e, t, n, r, i) {
     return n.merge(
         t
@@ -315,24 +323,28 @@ function E(e, t, n, r, i) {
             }),
     );
 }
+
 function b(e, t) {
     return (
         t !== e.getLastChangeType() ||
         ("insert-characters" !== t && "backspace-character" !== t && "delete-character" !== t)
     );
 }
+
 function y(e, t) {
     var n = t.getStartKey(),
         r = t.getStartOffset(),
         i = e.getBlockForKey(n);
     return r > 0 ? i.getInlineStyleAt(r - 1) : i.getLength() ? i.getInlineStyleAt(0) : A(e, n);
 }
+
 function O(e, t) {
     var n = t.getStartKey(),
         r = t.getStartOffset(),
         i = e.getBlockForKey(n);
     return r < i.getLength() ? i.getInlineStyleAt(r) : r > 0 ? i.getInlineStyleAt(r - 1) : A(e, n);
 }
+
 function A(e, t) {
     var n = e
         .getBlockMap()

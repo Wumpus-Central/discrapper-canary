@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var l = n(627968),
     i = n(64700),
     s = n(158954),
@@ -8,6 +10,7 @@ var l = n(627968),
     d = n(946116),
     o = n(985018),
     u = n(76616);
+
 function x(e) {
     let { guildTemplate: t, onClick: n, autoFocus: s } = e,
         a = i.useCallback(() => {
@@ -20,6 +23,7 @@ function x(e) {
         autoFocus: s,
     });
 }
+
 function m(e) {
     var t, n;
     let { onBack: i, onChooseTemplate: r, directoryGuildName: c } = e,
@@ -27,7 +31,9 @@ function m(e) {
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsx)(s.rQ0, {
-                title: o.intl.formatToPlainString(o.t.T7aLYT, { guildName: c }),
+                title: o.intl.formatToPlainString(o.t.T7aLYT, {
+                    guildName: c,
+                }),
                 subtitle: o.intl.string(o.t["RA+St6"]),
             }),
             (0, l.jsx)(s.cwr, {
@@ -63,7 +69,10 @@ function m(e) {
                                         }
                                         return e;
                                     })({}, m[d.Y1.CREATE])),
-                                    (n = n = { label: o.intl.string(o.t.WqJbLi) }),
+                                    (n = n =
+                                        {
+                                            label: o.intl.string(o.t.WqJbLi),
+                                        }),
                                     Object.getOwnPropertyDescriptors
                                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                                         : (function (e, t) {

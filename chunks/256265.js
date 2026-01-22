@@ -27,20 +27,24 @@ var r = n(64700),
     h = n(661191),
     m = n(998218),
     g = n(652215);
+
 function E(e) {
     if (null == e) return !1;
     let { filename: t, height: n, width: r } = e;
     return (0, l.u)(t) && null != n && n > 0 && null != r && r > 0;
 }
+
 function b(e) {
     return null != e && null != e && (0, l.AE)(e.filename) && null != e.proxy_url;
 }
+
 function y(e) {
     return E(e) || b(e);
 }
 var O = (function (e) {
     return (e.EMBED = "embed"), (e.ATTACHMENT = "attachment"), (e.COMPONENT = "component"), e;
 })({});
+
 function A(e) {
     var t, n;
     let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u.X6.getSetting();
@@ -97,9 +101,11 @@ function A(e) {
               })
               .filter(_.Vq);
 }
+
 function v(e) {
     return A(e, u.X6.useSetting());
 }
+
 function S(e, t) {
     var n, r;
     let a = u.hD.useSetting(),
@@ -136,6 +142,7 @@ function S(e, t) {
               .filter(_.Vq)
         : [];
 }
+
 function I(e) {
     let t = u.hD.useSetting();
     if (null == e) return [];
@@ -158,6 +165,7 @@ function I(e) {
               .filter(_.Vq)
         : [];
 }
+
 function T(e, t) {
     var n, r, a;
     let s = (0, o.FE)(e);
@@ -177,6 +185,7 @@ function T(e, t) {
               srcUnfurledMediaItem: e,
           };
 }
+
 function C(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         i = N(e, n);
@@ -189,9 +198,11 @@ function C(e, t) {
         }
     }, [t, i]);
 }
+
 function N(e, t) {
     return [...v(e), ...S(e, t), ...I(e)];
 }
+
 function R(e, t) {
     var n, r, i;
     let a = v(e),
@@ -199,12 +210,14 @@ function R(e, t) {
         o = I(e);
     return null != (n = null != (r = null != (i = a[0]) ? i : s[0]) ? r : o[0]) ? n : null;
 }
+
 function w(e, t) {
     let n = v(e),
         r = S(e, t),
         i = I(e);
     return null == n[0] && null == i[0] && null != r[0];
 }
+
 function P(e, t) {
     var n;
     let r = d.A.getChannel(t);
@@ -220,6 +233,7 @@ function P(e, t) {
         (0 === i.attachments.length || null == i.attachments.find((e) => E(e) || b(e)))
     );
 }
+
 function D(e) {
     return e.reduce(
         (e, t) => ({

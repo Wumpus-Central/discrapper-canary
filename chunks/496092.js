@@ -1,4 +1,8 @@
-n.d(t, { A: () => h }), n(747238), n(228524);
+n.d(t, {
+    A: () => h,
+}),
+    n(747238),
+    n(228524);
 var r = n(562465),
     i = n(73153),
     a = n(956793),
@@ -15,13 +19,17 @@ let h = {
     startEvent: (e, t) =>
         r.Bo.patch({
             url: _.Rsh.GUILD_EVENT(t, e),
-            body: { status: p.XG.ACTIVE },
+            body: {
+                status: p.XG.ACTIVE,
+            },
             rejectWithError: !1,
         }),
     endEvent: (e, t) =>
         r.Bo.patch({
             url: _.Rsh.GUILD_EVENT(t, e),
-            body: { status: p.XG.COMPLETED },
+            body: {
+                status: p.XG.COMPLETED,
+            },
             rejectWithError: !1,
         }),
     joinVoiceEvent(e, t) {
@@ -99,7 +107,9 @@ let h = {
     async fetchGuildEventUserCounts(e, t, n) {
         let a = {
                 url: _.Rsh.GUILD_EVENT_USER_COUNTS(e, t),
-                query: { guild_scheduled_event_exception_ids: n },
+                query: {
+                    guild_scheduled_event_exception_ids: n,
+                },
                 rejectWithError: !1,
             },
             {
@@ -122,7 +132,9 @@ let h = {
     cancelGuildEvent: (e, t) =>
         r.Bo.patch({
             url: _.Rsh.GUILD_EVENT(t, e),
-            body: { status: p.XG.CANCELED },
+            body: {
+                status: p.XG.CANCELED,
+            },
             rejectWithError: !1,
         }),
     deleteGuildEvent: (e, t) =>
@@ -133,7 +145,9 @@ let h = {
     async getGuildEventsForCurrentUser(e) {
         let { body: t } = await r.Bo.get({
             url: _.Rsh.USER_GUILD_EVENTS,
-            query: { guild_ids: [e] },
+            query: {
+                guild_ids: [e],
+            },
             rejectWithError: !1,
         });
         i.h.dispatch({
@@ -156,7 +170,9 @@ let h = {
                 }),
                 await r.Bo.put({
                     url: _.Rsh.USER_GUILD_EVENT(n, e, t),
-                    body: { response: a },
+                    body: {
+                        response: a,
+                    },
                     rejectWithError: !1,
                 })
             );

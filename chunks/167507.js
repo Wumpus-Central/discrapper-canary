@@ -1,4 +1,6 @@
-t.d(n, { N: () => p });
+t.d(n, {
+    N: () => p,
+});
 var r = t(627968),
     l = t(64700),
     c = t(397927),
@@ -11,6 +13,7 @@ var r = t(627968),
     h = t(403362),
     m = t(62849),
     j = t(800344);
+
 function p(e) {
     let { type: n, value: t, children: l } = e;
     switch (n) {
@@ -18,7 +21,9 @@ function p(e) {
             return (0, r.jsx)(i.A, {
                 title: t.title,
                 href: t.url,
-                children: (0, r.jsx)("span", { children: l }),
+                children: (0, r.jsx)("span", {
+                    children: l,
+                }),
             });
         case "mention":
             switch (t.type) {
@@ -52,6 +57,7 @@ function p(e) {
             (0, h.xb)(n);
     }
 }
+
 function f(e) {
     let { domain: n, ephemeral: i, channelId: h, attachmentId: m, name: p } = e,
         f = "https://"

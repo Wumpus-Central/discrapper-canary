@@ -94,6 +94,7 @@ let b = {
             value: s.j.PREMIUM_TIER_2_3_DAY,
         },
     ];
+
 function j() {
     let [e, t] = l.useState(!1),
         [n, i] = l.useState(s.j.PREMIUM_TIER_2_1_HOUR),
@@ -124,7 +125,9 @@ function j() {
                         className: f.dL,
                         children: [
                             (0, a.jsx)(c.Text, {
-                                style: { marginBottom: "8px" },
+                                style: {
+                                    marginBottom: "8px",
+                                },
                                 variant: "text-lg/bold",
                                 children: "Manage Fractional Nitro",
                             }),
@@ -138,18 +141,24 @@ function j() {
                                             children: "Info",
                                         }),
                                     }),
-                                    (0, a.jsx)(d.A, { direction: e ? d.A.Directions.UP : d.A.Directions.DOWN }),
+                                    (0, a.jsx)(d.A, {
+                                        direction: e ? d.A.Directions.UP : d.A.Directions.DOWN,
+                                    }),
                                 ],
                             }),
                         ],
                     }),
                     e &&
                         (0, a.jsxs)("div", {
-                            style: { margin: "8px 0" },
+                            style: {
+                                margin: "8px 0",
+                            },
                             children: [
                                 (0, a.jsx)(c.Text, {
                                     variant: "text-md/normal",
-                                    style: { fontStyle: "italic" },
+                                    style: {
+                                        fontStyle: "italic",
+                                    },
                                     color: "text-muted",
                                     children:
                                         "Subscriptions paused by Fractional Nitro do not automatically resume in local or staging environments. Subscription has to be resumed manually via Admin.",
@@ -157,7 +166,9 @@ function j() {
                                 (0, a.jsx)("br", {}),
                                 (0, a.jsx)(c.Text, {
                                     variant: "text-md/normal",
-                                    style: { fontStyle: "italic" },
+                                    style: {
+                                        fontStyle: "italic",
+                                    },
                                     color: "text-muted",
                                     children:
                                         "Entitlement fulfillment tasks do not run automatically in local environments. This task is required to handle the scheduled unfulfillment of Fractional Nitro after it's time has elapsed.",
@@ -165,7 +176,9 @@ function j() {
                             ],
                         }),
                     (0, a.jsxs)("section", {
-                        style: { marginBottom: "8px" },
+                        style: {
+                            marginBottom: "8px",
+                        },
                         className: r()([h.uW, f.Uo]),
                         children: [
                             (0, a.jsx)(c.l6P, {
@@ -187,11 +200,15 @@ function j() {
                         className: h.uW,
                         children: [
                             (0, a.jsxs)("div", {
-                                style: { flexWrap: "wrap" },
+                                style: {
+                                    flexWrap: "wrap",
+                                },
                                 className: f.dL,
                                 children: [
                                     (0, a.jsx)(c.Text, {
-                                        style: { marginBottom: "8px" },
+                                        style: {
+                                            marginBottom: "8px",
+                                        },
                                         variant: "text-lg/semibold",
                                         children: "Entitlements",
                                     }),
@@ -235,7 +252,9 @@ function j() {
                                 (0, a.jsxs)("div", {
                                     children: [
                                         (0, a.jsx)(c.Text, {
-                                            style: { marginTop: "15px" },
+                                            style: {
+                                                marginTop: "15px",
+                                            },
                                             variant: "text-md/bold",
                                             children: "Active premium",
                                         }),
@@ -258,12 +277,22 @@ function j() {
                                 (0, a.jsxs)("div", {
                                     children: [
                                         (0, a.jsx)(c.Text, {
-                                            style: { marginTop: "15px" },
+                                            style: {
+                                                marginTop: "15px",
+                                            },
                                             variant: "text-md/bold",
                                             children: "Unconsumed Fractional Premium",
                                         }),
                                         (0, a.jsx)("div", {
-                                            children: j.map((e) => (0, a.jsx)(g, { entitlement: e }, e.id)),
+                                            children: j.map((e) =>
+                                                (0, a.jsx)(
+                                                    g,
+                                                    {
+                                                        entitlement: e,
+                                                    },
+                                                    e.id,
+                                                ),
+                                            ),
                                         }),
                                     ],
                                 }),

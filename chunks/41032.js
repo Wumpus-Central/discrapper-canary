@@ -1,8 +1,11 @@
-i.d(e, { z: () => l });
+i.d(e, {
+    z: () => l,
+});
 var a = i(627968);
 i(64700);
 var n = i(158954),
     s = i(486318);
+
 function l(t) {
     let { sku: e, title: i } = t;
     return (0, a.jsx)(n.rQ0, {

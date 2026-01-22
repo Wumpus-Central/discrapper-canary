@@ -1,7 +1,10 @@
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 var r = n(627968);
 n(64700);
 var l = n(820284);
+
 function i(e, t) {
     return function (n) {
         return (0, r.jsx)(l.A, {

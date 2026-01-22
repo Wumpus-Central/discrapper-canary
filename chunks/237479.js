@@ -8,11 +8,14 @@ t.default = (function () {
             (this.column = a),
             (this.name = "SyntaxError");
     }
+
     function t(t) {
         var n,
             r = arguments.length > 1 ? arguments[1] : {},
             i = {},
-            a = { start: eP },
+            a = {
+                start: eP,
+            },
             s = eP,
             o = function (e) {
                 return {
@@ -206,8 +209,8 @@ t.default = (function () {
             er = /^[^{}\\\0-\x1F \t\n\r]/,
             ei = {
                 type: "class",
-                value: "[^{}\\\\\\0-\\x1F\x7F \\t\\n\\r]",
-                description: "[^{}\\\\\\0-\\x1F\x7F \\t\\n\\r]",
+                value: "[^{}\\\\\\0-\\x1F\x7f \\t\\n\\r]",
+                description: "[^{}\\\\\\0-\\x1F\x7f \\t\\n\\r]",
             },
             ea = "\\\\",
             es = {
@@ -272,6 +275,7 @@ t.default = (function () {
             if (!(r.startRule in a)) throw Error("Can't start parsing from rule \"" + r.startRule + '".');
             s = a[r.startRule];
         }
+
         function eN(e) {
             function n(e, n, r) {
                 var i, a;
@@ -296,9 +300,11 @@ t.default = (function () {
                 eS
             );
         }
+
         function eR(e) {
             eO < eI || (eO > eI && ((eI = eO), (eT = [])), eT.push(e));
         }
+
         function ew(n, r, i) {
             function a(e) {
                 var t = 1;
@@ -310,6 +316,7 @@ t.default = (function () {
                 )
                     e[t - 1] === e[t] ? e.splice(t, 1) : t++;
             }
+
             function s(e, t) {
                 function n(e) {
                     function t(e) {
@@ -351,18 +358,22 @@ t.default = (function () {
                 l = i < t.length ? t.charAt(i) : null;
             return null !== r && a(r), new e(null !== n ? n : s(r, l), r, l, i, o.line, o.column);
         }
+
         function eP() {
             return eD();
         }
+
         function eD() {
             var e, t, n;
             for (e = eO, t = [], n = ex(); n !== i; ) t.push(n), (n = ex());
             return t !== i && ((eA = e), (t = o(t))), (e = t);
         }
+
         function ex() {
             var e;
             return (e = ej()) === i && (e = ek()), e;
         }
+
         function eL() {
             var e, n, r, a, s, o;
             if (
@@ -385,10 +396,12 @@ t.default = (function () {
                 e
             );
         }
+
         function ej() {
             var e, t;
             return (e = eO), (t = eL()) !== i && ((eA = e), (t = u(t))), (e = t);
         }
+
         function eM() {
             var e, n, r;
             if ((e = eQ()) === i) {
@@ -405,6 +418,7 @@ t.default = (function () {
             }
             return e;
         }
+
         function ek() {
             var e, n, r, a, s, o, c;
             return (
@@ -423,10 +437,12 @@ t.default = (function () {
                 e
             );
         }
+
         function eU() {
             var e;
             return (e = eG()) === i && (e = eV()) === i && (e = eF()) === i && (e = eB()), e;
         }
+
         function eG() {
             var e, n, r, a, s, o;
             return (
@@ -445,6 +461,7 @@ t.default = (function () {
                 e
             );
         }
+
         function eV() {
             var e, n, r, a;
             return (
@@ -457,6 +474,7 @@ t.default = (function () {
                 e
             );
         }
+
         function eF() {
             var e, n, r, a;
             return (
@@ -469,6 +487,7 @@ t.default = (function () {
                 e
             );
         }
+
         function eB() {
             var e, n, r, a, s;
             if (((e = eO), t.substr(eO, 6) === L ? ((n = L), (eO += 6)) : ((n = i), 0 === eC && eR(j)), n !== i))
@@ -484,6 +503,7 @@ t.default = (function () {
             else (eO = e), (e = l);
             return e;
         }
+
         function eH() {
             var e, n, r, a;
             return (
@@ -496,6 +516,7 @@ t.default = (function () {
                 e
             );
         }
+
         function eY() {
             var e, n, r, a, s, o;
             return (
@@ -510,6 +531,7 @@ t.default = (function () {
                 e
             );
         }
+
         function eW() {
             var e, n, r;
             return (
@@ -519,6 +541,7 @@ t.default = (function () {
                 e
             );
         }
+
         function eK() {
             var e, t, n, r;
             if (((e = eO), (t = eW()) === i && (t = h), t !== i))
@@ -530,6 +553,7 @@ t.default = (function () {
             else (eO = e), (e = l);
             return e;
         }
+
         function ez() {
             var e, n;
             if (
@@ -543,19 +567,23 @@ t.default = (function () {
             else e = l;
             return eC--, e === i && ((n = i), 0 === eC && eR(Y)), e;
         }
+
         function eq() {
             var e, n, r;
             for (eC++, e = eO, n = [], r = ez(); r !== i; ) n.push(r), (r = ez());
             return n !== i && (n = t.substring(e, eO)), (e = n), eC--, e === i && ((n = i), 0 === eC && eR(z)), e;
         }
+
         function eX() {
             var e;
             return q.test(t.charAt(eO)) ? ((e = t.charAt(eO)), eO++) : ((e = i), 0 === eC && eR(X)), e;
         }
+
         function eZ() {
             var e;
             return Z.test(t.charAt(eO)) ? ((e = t.charAt(eO)), eO++) : ((e = i), 0 === eC && eR(Q)), e;
         }
+
         function eQ() {
             var e, n, r, a, s, o;
             if (((e = eO), 48 === t.charCodeAt(eO) ? ((n = $), eO++) : ((n = i), 0 === eC && eR(J)), n === i)) {
@@ -572,6 +600,7 @@ t.default = (function () {
             }
             return n !== i && ((eA = e), (n = en(n))), (e = n);
         }
+
         function e$() {
             var e, n, r, a, s, o, c, u;
             return (
@@ -607,6 +636,7 @@ t.default = (function () {
                 e
             );
         }
+
         function eJ() {
             var e, t, n;
             if (((e = eO), (t = []), (n = e$()) !== i)) for (; n !== i; ) t.push(n), (n = e$());

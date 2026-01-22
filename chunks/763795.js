@@ -1,4 +1,6 @@
-n.d(t, { A: () => O });
+n.d(t, {
+    A: () => O,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -16,6 +18,7 @@ var i = n(503698),
     m = n(788868),
     g = n(985018),
     E = n(456919);
+
 function b(e, t) {
     let n = f.Ay.getDefaultPrice(e),
         { intervalType: r } = f.Ay.getInterval(e),
@@ -23,9 +26,13 @@ function b(e, t) {
     if (t) return i;
     switch (r) {
         case m.WT.MONTH:
-            return g.intl.formatToPlainString(g.t.AbOLNu, { price: i });
+            return g.intl.formatToPlainString(g.t.AbOLNu, {
+                price: i,
+            });
         case m.WT.YEAR:
-            return g.intl.formatToPlainString(g.t["rS8FA+"], { price: i });
+            return g.intl.formatToPlainString(g.t["rS8FA+"], {
+                price: i,
+            });
     }
 }
 let y = (e) => {
@@ -35,13 +42,17 @@ let y = (e) => {
             l = g.intl.string(g.t.IBYG5U);
         return (
             void 0 !== n
-                ? (l = g.intl.formatToPlainString(g.t.iiLbvu, { percent: n }))
+                ? (l = g.intl.formatToPlainString(g.t.iiLbvu, {
+                      percent: n,
+                  }))
                 : o && (l = g.intl.string(g.t.gtNqJQ)),
             (0, r.jsx)("div", {
                 className: E.TX,
                 children: (0, r.jsx)(s.Text, {
                     variant: "text-xs/bold",
-                    className: a()(E.El, { [E.LD]: t }),
+                    className: a()(E.El, {
+                        [E.LD]: t,
+                    }),
                     children: l,
                 }),
             })
@@ -77,7 +88,10 @@ let y = (e) => {
                 S,
             ),
             children: [
-                (I || T) && (0, r.jsx)(d.A, { className: E.N8 }),
+                (I || T) &&
+                    (0, r.jsx)(d.A, {
+                        className: E.N8,
+                    }),
                 g(),
                 (0, r.jsxs)(o.A, {
                     align: o.A.Align.START,
@@ -86,7 +100,11 @@ let y = (e) => {
                     children: [
                         (0, r.jsxs)("div", {
                             children: [
-                                (0, r.jsx)(n, { className: a()(E.nr, { [E.w6]: !C }) }),
+                                (0, r.jsx)(n, {
+                                    className: a()(E.nr, {
+                                        [E.w6]: !C,
+                                    }),
+                                }),
                                 (I || T) &&
                                     (0, r.jsx)(y, {
                                         isTier0: v === m.PremiumTypes.TIER_0,

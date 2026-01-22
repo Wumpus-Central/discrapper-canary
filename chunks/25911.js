@@ -1,9 +1,11 @@
 function l(e, t, n) {
     return (n.y - e.y) * (t.x - e.x) > (t.y - e.y) * (n.x - e.x);
 }
+
 function r(e, t, n, r) {
     return l(e, n, r) !== l(t, n, r) && l(e, t, n) !== l(e, t, r);
 }
+
 function i(e, t, n) {
     let l = Math.sqrt(Math.pow(e.x - t.x, 2) + Math.pow(e.y - t.y, 2));
     return {
@@ -11,6 +13,7 @@ function i(e, t, n) {
         y: t.y + ((t.y - e.y) / l) * n,
     };
 }
+
 function a(e, t, n) {
     let l = {
             x: n.x,

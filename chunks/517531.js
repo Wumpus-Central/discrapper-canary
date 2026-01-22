@@ -9,5 +9,7 @@ n(
             return 0 === t.size;
         }),
     },
-    { difference: o },
+    {
+        difference: o,
+    },
 );

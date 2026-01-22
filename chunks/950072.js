@@ -10,6 +10,7 @@ var l = n(627968),
     o = n(775602),
     c = n(967144),
     u = n(818348);
+
 function E(e) {
     var t;
     let { role: n, guildId: r } = e,
@@ -31,12 +32,18 @@ function E(e) {
                 colors: s,
             });
 }
+
 function d(e) {
     var t;
     let { guildId: n, role: a, className: o, canRemove: c = !1, onRemove: E = u.tE } = e,
         d = (0, i.rdh)(i.LU0.unsafe_rawColors.PRIMARY_300).hex(),
         _ = null != (t = null == a ? void 0 : a.colorString) ? t : d,
-        g = r.useMemo(() => ({ backgroundColor: "".concat(_, "27") }), [_]);
+        g = r.useMemo(
+            () => ({
+                backgroundColor: "".concat(_, "27"),
+            }),
+            [_],
+        );
     return null == a
         ? null
         : (0, l.jsx)(i.DUT, {

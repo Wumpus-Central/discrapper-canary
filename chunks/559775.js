@@ -1,4 +1,7 @@
-n.d(t, { A: () => A }), n(896048);
+n.d(t, {
+    A: () => A,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -13,6 +16,7 @@ var r = n(627968),
     _ = n(698279),
     h = n(985018),
     m = n(111314);
+
 function g(e, t, n) {
     return (
         t in e
@@ -26,6 +30,7 @@ function g(e, t, n) {
         e
     );
 }
+
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,6 +47,7 @@ function E(e) {
     }
     return e;
 }
+
 function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -54,6 +60,7 @@ function b(e, t) {
     }
     return n;
 }
+
 function y(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -65,6 +72,7 @@ function y(e, t) {
         e
     );
 }
+
 function O(e, t) {
     let { disabled: n, type: a, channel: g } = e,
         [b, O, A, v] = (0, d.RQ)((e) => [e.activeView, e.pickerId, e.activeChannelId, e.activeViewType], o.x),
@@ -87,22 +95,30 @@ function O(e, t) {
                   keyboardShortcut: P,
                   children: (0, r.jsx)(
                       p.A,
-                      y(E({ className: s()(m.x6, m.KE) }, R), {
-                          onClick: () => {
-                              C(), w();
+                      y(
+                          E(
+                              {
+                                  className: s()(m.x6, m.KE),
+                              },
+                              R,
+                          ),
+                          {
+                              onClick: () => {
+                                  C(), w();
+                              },
+                              isActive: I,
+                              "aria-label": h.intl.string(h.t.rZpidU),
+                              "aria-expanded": I,
+                              "aria-haspopup": "dialog",
+                              "aria-controls": O,
+                              sparkle: S,
+                              notification: T ? p.V.UPDATE : null,
+                              children: (0, r.jsx)(N, {
+                                  size: "refresh_sm",
+                                  color: "currentColor",
+                              }),
                           },
-                          isActive: I,
-                          "aria-label": h.intl.string(h.t.rZpidU),
-                          "aria-expanded": I,
-                          "aria-haspopup": "dialog",
-                          "aria-controls": O,
-                          sparkle: S,
-                          notification: T ? p.V.UPDATE : null,
-                          children: (0, r.jsx)(N, {
-                              size: "refresh_sm",
-                              color: "currentColor",
-                          }),
-                      }),
+                      ),
                   ),
               }),
           });

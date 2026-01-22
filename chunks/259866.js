@@ -15,15 +15,18 @@ var r = n(627968),
     u = n(655943),
     f = n(539916),
     g = n(985018);
+
 function b(e, t) {
     let n = (0, l.yK)([u.A], () => (0, o.G4)(e, t, u.A.editedOnboardingPrompts));
     return [(0, l.yK)([u.A], () => (0, o.G4)(e, t, u.A.editedOnboardingPrompts, o.VU)), n];
 }
+
 function m(e) {
     let t = (0, l.bG)([c.A], () => c.A.isAdvancedMode(e)),
         [n] = [(0, l.yK)([c.A], () => (0, o.G4)(e, c.A.getDefaultChannelIds(e), c.A.getOnboardingPrompts(e), o.VU))];
     return !!t && n.length >= f.Kd;
 }
+
 function p(e) {
     let { guildId: t, className: n } = e,
         o = (0, l.bG)([c.A], () => c.A.isAdvancedMode(t)),

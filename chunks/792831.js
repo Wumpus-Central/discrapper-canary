@@ -1,10 +1,14 @@
-n.d(t, { A: () => g }), n(65821);
+n.d(t, {
+    A: () => g,
+}),
+    n(65821);
 var r = n(627968);
 n(64700);
 var i = n(503698),
     a = n.n(i),
     s = n(953727),
     o = n(106199);
+
 function l(e, t, n) {
     return (
         t in e
@@ -18,6 +22,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,6 +39,7 @@ function c(e) {
     }
     return e;
 }
+
 function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -46,6 +52,7 @@ function u(e, t) {
     }
     return n;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -57,6 +64,7 @@ function d(e, t) {
         e
     );
 }
+
 function f(e, t) {
     if (null == e) return {};
     var n,
@@ -73,6 +81,7 @@ function f(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function p(e, t) {
     if (null == e) return {};
     var n,
@@ -94,6 +103,7 @@ var _ = (function (e) {
         e
     );
 })({});
+
 function h(e) {
     switch (e) {
         case "LEFT":
@@ -131,7 +141,11 @@ let m = (e) => {
             className: a()(u, h(o)),
             viewBox: "0 0 24 24",
             children: [
-                null != p ? (0, r.jsx)("title", { children: p }) : null,
+                null != p
+                    ? (0, r.jsx)("title", {
+                          children: p,
+                      })
+                    : null,
                 (0, r.jsx)("polygon", {
                     className: l,
                     fill: i,

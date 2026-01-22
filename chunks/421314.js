@@ -8,6 +8,7 @@ var r = n(397927),
     a = n(339143),
     s = n(80569),
     o = n(608640);
+
 function l() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     if (!(0, a.W)()) {
@@ -40,7 +41,9 @@ async function c(e) {
               : e.animated
                 ? "image/gif"
                 : "image/png");
-    let s = new File([r], "".concat(e.name, ".").concat(a.split("/")[1]), { type: a });
+    let s = new File([r], "".concat(e.name, ".").concat(a.split("/")[1]), {
+        type: a,
+    });
     return {
         data: await new Promise((e, t) => {
             let n = new FileReader();

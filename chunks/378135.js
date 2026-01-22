@@ -9,9 +9,11 @@ var r = n(64700),
     s = n(287809),
     o = n(816733),
     l = n(927578);
+
 function c(e) {
     return null != e && null != e.expires_at && Date.now() > Date.parse(e.expires_at);
 }
+
 function u(e) {
     let t = (0, i.bG)([o.A], () => o.A.getUserTrialOffer(e)),
         [n, u] = r.useState(c(t)),

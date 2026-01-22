@@ -1,4 +1,8 @@
-n.d(t, { A: () => E }), n(896048), n(733351);
+n.d(t, {
+    A: () => E,
+}),
+    n(896048),
+    n(733351);
 var r = n(735438),
     i = n.n(r),
     a = n(73153),
@@ -8,6 +12,7 @@ var r = n(735438),
     c = n(23667),
     u = n(956467),
     d = n(652215);
+
 function f(e, t, n) {
     return (
         t in e
@@ -21,6 +26,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,6 +43,7 @@ function p(e) {
     }
     return e;
 }
+
 function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -49,6 +56,7 @@ function _(e, t) {
     }
     return n;
 }
+
 function h(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -60,11 +68,13 @@ function h(e, t) {
         e
     );
 }
+
 function m(e) {
     if (!Array.isArray(e.pinned)) return;
     let t = e.pinned.some((e) => !0 === e);
     e.pinned = t;
 }
+
 function g(e) {
     return e === d.YYv ? null : e;
 }
@@ -168,7 +178,9 @@ let E = {
                 onFetchStart: u,
             } = e,
             d = (0, l._o)(n),
-            f = h(p({}, (0, l.Zf)(d), (0, l.nm)(i)), { offset: r.offset }),
+            f = h(p({}, (0, l.Zf)(d), (0, l.nm)(i)), {
+                offset: r.offset,
+            }),
             _ = (0, l.mt)(t);
         null != _ && (0, l.L5)(f, _), o && (f.search_everywhere = !0);
         let m = (0, l.bS)(t),
@@ -225,10 +237,14 @@ let E = {
             );
     },
     clearSearchRecentMessages: function () {
-        a.h.dispatch({ type: "SEARCH_RECENT_MESSAGES_CLEAR" });
+        a.h.dispatch({
+            type: "SEARCH_RECENT_MESSAGES_CLEAR",
+        });
     },
     clearAllSearchMesssages: function () {
-        a.h.dispatch({ type: "SEARCH_MESSAGES_CLEAR_ALL" });
+        a.h.dispatch({
+            type: "SEARCH_MESSAGES_CLEAR_ALL",
+        });
     },
     clearSearchMessages: function (e) {
         a.h.dispatch({
@@ -253,6 +269,8 @@ let E = {
             });
     },
     markSearchTokensRefreshed: function () {
-        a.h.dispatch({ type: "SEARCH_TOKENS_REFRESHED" });
+        a.h.dispatch({
+            type: "SEARCH_TOKENS_REFRESHED",
+        });
     },
 };

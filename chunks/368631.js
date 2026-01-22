@@ -105,9 +105,13 @@ let eU = () => [
         let e = eU(),
             [t] = (0, O.kn)(e);
         return t === a.M.CLIENT_THEMES_SETTINGS_BADGE || t === a.M.DEKSTOP_CUSTOM_APP_ICON_BADGE
-            ? (0, r.jsx)(l.JIr, { text: eD.intl.string(eD.t.y2b7CA) })
+            ? (0, r.jsx)(l.JIr, {
+                  text: eD.intl.string(eD.t.y2b7CA),
+              })
             : t === a.M.CLIENT_THEMES_APPEARANCE_SETTINGS_NEW_BADGE
-              ? (0, r.jsx)(l.LpS, { text: eD.intl.string(eD.t.y2b7CA) })
+              ? (0, r.jsx)(l.LpS, {
+                    text: eD.intl.string(eD.t.y2b7CA),
+                })
               : null;
     },
     eV = () => {
@@ -118,14 +122,17 @@ let eU = () => [
         let e = eV(),
             [t] = (0, O.kn)(e);
         return t === a.M.DISPLAY_NAME_STYLES_NEW_BADGE || t === a.M.WIDGETS_USER_SETTINGS_NEW_BADGE
-            ? (0, r.jsx)(l.LpS, { text: eD.intl.string(eD.t.y2b7CA) })
+            ? (0, r.jsx)(l.LpS, {
+                  text: eD.intl.string(eD.t.y2b7CA),
+              })
             : null;
     },
     eB = () => {
         let e = [];
         return (
-            L.S.getConfig({ location: "SettingsRendererConfig" }).enabled &&
-                e.push(a.M.NITRO_PRIVACY_PERK_NEW_BADGE_V2),
+            L.S.getConfig({
+                location: "SettingsRendererConfig",
+            }).enabled && e.push(a.M.NITRO_PRIVACY_PERK_NEW_BADGE_V2),
             e
         );
     },
@@ -133,7 +140,9 @@ let eU = () => [
         let e = eB(),
             [t] = (0, O.kn)(e);
         return a.M.NITRO_PRIVACY_PERK_NEW_BADGE_V2 === t
-            ? (0, r.jsx)(l.LpS, { text: eD.intl.string(eD.t.y2b7CA) })
+            ? (0, r.jsx)(l.LpS, {
+                  text: eD.intl.string(eD.t.y2b7CA),
+              })
             : null;
     },
     eY = eO.A,
@@ -602,7 +611,9 @@ let eU = () => [
                 element: eg.Ay,
                 newIndicatorDismissibleContentTypes: [a.M.AUTH_SESSIONS_NEW],
                 impressionName: i.ImpressionNames.USER_SETTINGS_SESSIONS,
-                impressionProperties: { source: null == eW ? void 0 : eW.source },
+                impressionProperties: {
+                    source: null == eW ? void 0 : eW.source,
+                },
             },
             [eN.H.CONNECTIONS]: {
                 section: ew.nc_.CONNECTIONS,
@@ -611,7 +622,9 @@ let eU = () => [
                 ariaLabel: eD.intl.string(eD.t["3fe7U5"]),
                 element: ei.Ay,
                 impressionName: i.ImpressionNames.USER_SETTINGS_CONNECTIONS,
-                impressionProperties: { source: null == eW ? void 0 : eW.source },
+                impressionProperties: {
+                    source: null == eW ? void 0 : eW.source,
+                },
                 newIndicatorDismissibleContentTypes: [a.M.NEW_CRUNCHYROLL_CONNECTION],
                 url: ew.BVt.SETTINGS("connections"),
             },
@@ -1017,7 +1030,9 @@ let eU = () => [
                 ],
                 parent: eN.H.VOICE_AND_VIDEO_VOICE,
                 predicate: () => {
-                    let { enabledInputProfiles: e } = (0, q._)({ location: "SettingsRendererConfig" });
+                    let { enabledInputProfiles: e } = (0, q._)({
+                        location: "SettingsRendererConfig",
+                    });
                     return e.length > 0;
                 },
             },
@@ -1313,13 +1328,19 @@ let eU = () => [
                 section: ew.nc_.TEXT,
                 searchableTitles: [eD.intl.string(eD.t.EHlAMc)],
                 parent: eN.H.CHAT,
-                predicate: () => (0, D.AA)({ location: "SettingsRendererConfig" }),
+                predicate: () =>
+                    (0, D.AA)({
+                        location: "SettingsRendererConfig",
+                    }),
             },
             [eN.H.CHAT_SOUNDMOJI_AUTOCOMPLETE]: {
                 section: ew.nc_.TEXT,
                 searchableTitles: [eD.intl.string(eD.t["CtYr+U"])],
                 parent: eN.H.CHAT_SOUNDMOJI,
-                predicate: () => (0, D.AA)({ location: "SettingsRendererConfig" }),
+                predicate: () =>
+                    (0, D.AA)({
+                        location: "SettingsRendererConfig",
+                    }),
             },
             [eN.H.CHAT_TEXT_BOX]: {
                 section: ew.nc_.TEXT,
@@ -1350,7 +1371,10 @@ let eU = () => [
                 section: ew.nc_.TEXT,
                 searchableTitles: [eD.intl.string(eD.t.OAOUoQ)],
                 parent: eN.H.CHAT,
-                predicate: () => I.t.getConfig({ location: "SettingsRendererConfig" }).showMessagePreviews,
+                predicate: () =>
+                    I.t.getConfig({
+                        location: "SettingsRendererConfig",
+                    }).showMessagePreviews,
             },
             [eN.H.CHAT_MENTION_SUGGESTIONS]: {
                 section: ew.nc_.TEXT,
@@ -1494,7 +1518,10 @@ let eU = () => [
                 section: ew.nc_.NOTIFICATIONS,
                 searchableTitles: [eD.intl.string(eL.default["3TO4/r"])],
                 parent: eN.H.NOTIFICATIONS,
-                predicate: () => (0, A.Vn)({ location: "SettingsRendererConfig" }),
+                predicate: () =>
+                    (0, A.Vn)({
+                        location: "SettingsRendererConfig",
+                    }),
             },
             [eN.H.NOTIFICATIONS_PROFILE_UPDATES]: {
                 section: ew.nc_.NOTIFICATIONS,
@@ -1626,7 +1653,10 @@ let eU = () => [
                 section: ew.nc_.PRIVATE_BROWSING,
                 label: eD.intl.string(eM.default.bU5ANm),
                 searchableTitles: [eD.intl.string(eM.default.SsTtq3)],
-                predicate: () => L.S.getConfig({ location: "SettingsRendererConfig" }).enabled,
+                predicate: () =>
+                    L.S.getConfig({
+                        location: "SettingsRendererConfig",
+                    }).enabled,
                 newIndicator: (0, r.jsx)(eH, {}),
                 newIndicatorDismissibleContentTypes: eB(),
                 url: ew.BVt.SETTINGS("private-browsing"),

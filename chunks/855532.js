@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -7,6 +9,7 @@ var i = n(397927),
     o = n(763754),
     l = n(888675),
     c = n(985018);
+
 function u(e) {
     let { message: t, usernameHook: n, compact: u } = e,
         d = (0, o.Ay)(t),

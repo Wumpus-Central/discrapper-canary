@@ -1,4 +1,7 @@
-n.d(t, { A: () => N }), n(896048);
+n.d(t, {
+    A: () => N,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -24,6 +27,7 @@ var r = n(627968),
 let I = 292,
     T = 36,
     C = 48;
+
 function N(e) {
     let { invite: t, isMemberOfGuild: n, message: a, onTransitionToInviteChannel: c, onAcceptInstantInvite: d } = e,
         f = i.useRef(null),
@@ -54,7 +58,9 @@ function N(e) {
     return null == x
         ? (0, r.jsx)(O.A, {})
         : (0, r.jsxs)(l.sqX, {
-              className: s()(S.Gg, { [S.vk]: N && _ }),
+              className: s()(S.Gg, {
+                  [S.vk]: N && _,
+              }),
               onClick: L,
               style: M,
               "aria-label": v.intl.string(v.t.dcl9MQ),
@@ -67,8 +73,12 @@ function N(e) {
                               profile: x,
                               className: S.vK,
                           }),
-                          (0, r.jsx)(E.CG, { profile: x }),
-                          (0, r.jsx)(g.A, { profile: x }),
+                          (0, r.jsx)(E.CG, {
+                              profile: x,
+                          }),
+                          (0, r.jsx)(g.A, {
+                              profile: x,
+                          }),
                           (0, r.jsx)(h.P, {
                               profile: x,
                               className: S.rb,
@@ -93,11 +103,19 @@ function N(e) {
                         })
                       : null,
                   (0, r.jsxs)("div", {
-                      className: s()(S.qr, { [S.iK]: N }),
+                      className: s()(S.qr, {
+                          [S.iK]: N,
+                      }),
                       children: [
-                          N && _ ? (0, r.jsx)("div", { className: S.D7 }) : null,
+                          N && _
+                              ? (0, r.jsx)("div", {
+                                    className: S.D7,
+                                })
+                              : null,
                           (0, r.jsx)("div", {
-                              className: s()(S.z8, { [S.it]: N && _ }),
+                              className: s()(S.z8, {
+                                  [S.it]: N && _,
+                              }),
                               children: (0, r.jsx)("div", {
                                   className: S.UD,
                                   children: (0, r.jsx)(R, {
@@ -116,6 +134,7 @@ function N(e) {
               ],
           });
 }
+
 function R(e) {
     let {
             invite: t,

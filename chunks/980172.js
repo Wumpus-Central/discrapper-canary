@@ -1,4 +1,7 @@
-n.d(t, { A: () => el }), n(896048);
+n.d(t, {
+    A: () => el,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -45,6 +48,7 @@ var r = n(627968),
     K = n(789622),
     z = n(985018),
     q = n(240342);
+
 function X(e, t, n) {
     return (
         t in e
@@ -58,6 +62,7 @@ function X(e, t, n) {
         e
     );
 }
+
 function Z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -74,6 +79,7 @@ function Z(e) {
     }
     return e;
 }
+
 function Q(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -86,6 +92,7 @@ function Q(e, t) {
     }
     return n;
 }
+
 function $(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -98,9 +105,13 @@ function $(e, t) {
     );
 }
 let J = k.Ay.getEnableHardwareAcceleration() ? f.JsQ : f.euF;
+
 function ee() {
-    (0, B.openUserSettings)(V.X.PROFILE_PANEL, { section: Y.nc_.PROFILE_CUSTOMIZATION });
+    (0, B.openUserSettings)(V.X.PROFILE_PANEL, {
+        section: Y.nc_.PROFILE_CUSTOMIZATION,
+    });
 }
+
 function et(e) {
     var t, a;
     let { className: o, user: l } = e,
@@ -193,7 +204,16 @@ function et(e) {
                             (0, f.mMO)(async () => {
                                 if (_) {
                                     let { default: e } = await n.e("54160").then(n.bind(n, 914131));
-                                    return (t) => (0, r.jsx)(e, Z({ source: K.gg.USER_SETTINGS_EDIT }, t));
+                                    return (t) =>
+                                        (0, r.jsx)(
+                                            e,
+                                            Z(
+                                                {
+                                                    source: K.gg.USER_SETTINGS_EDIT,
+                                                },
+                                                t,
+                                            ),
+                                        );
                                 }
                                 {
                                     let { default: e } = await n.e("27533").then(n.bind(n, 993468));
@@ -206,6 +226,7 @@ function et(e) {
         ],
     });
 }
+
 function en(e) {
     var t, n;
     let { user: a, className: o } = e,
@@ -273,6 +294,7 @@ function en(e) {
         })
     );
 }
+
 function er(e) {
     let { text: t, censor: n, revealLabel: a, hideLabel: s } = e,
         [o, l] = i.useState(!1),
@@ -291,6 +313,7 @@ function er(e) {
         ],
     });
 }
+
 function ei(e) {
     let t,
         { className: i, user: a } = e;
@@ -368,6 +391,7 @@ function ei(e) {
         ],
     });
 }
+
 function ea(e) {
     let t,
         { className: i, user: a } = e;
@@ -375,15 +399,28 @@ function ea(e) {
     let { phone: o, email: l } = a,
         c = null != o,
         u = null != l;
+
     function d() {
         (0, f.mMO)(
             async () => {
                 let { default: e } = await Promise.resolve().then(n.bind(n, 615715));
-                return (t) => (0, r.jsx)(e, Z({ reason: O.d.USER_SETTINGS_UPDATE }, t));
+                return (t) =>
+                    (0, r.jsx)(
+                        e,
+                        Z(
+                            {
+                                reason: O.d.USER_SETTINGS_UPDATE,
+                            },
+                            t,
+                        ),
+                    );
             },
-            { modalKey: W.V },
+            {
+                modalKey: W.V,
+            },
         );
     }
+
     function p() {
         (0, f.qfG)((e) =>
             (0, r.jsx)(
@@ -461,6 +498,7 @@ function ea(e) {
         })
     );
 }
+
 function es(e) {
     let { user: t } = e,
         n = (0, E.A)({
@@ -499,6 +537,7 @@ function es(e) {
           })
         : null;
 }
+
 function eo(e) {
     let { className: t } = e,
         n = (0, m.b8)(),
@@ -540,12 +579,16 @@ function eo(e) {
                         size: "sm",
                         text: a ? z.intl.string(z.t.KPGVWl) : z.intl.string(z.t.yNGjyK),
                         "aria-label": a ? z.intl.string(z.t.KPGVWl) : z.intl.string(z.t.yNGjyK),
-                        onClick: () => _.A.showAgeVerificationGetStartedModal({ entryPoint: h.q1.ACCOUNT_AGE_GROUP }),
+                        onClick: () =>
+                            _.A.showAgeVerificationGetStartedModal({
+                                entryPoint: h.q1.ACCOUNT_AGE_GROUP,
+                            }),
                     }),
                 }),
         ],
     });
 }
+
 function el() {
     var e;
     let t = (0, c.bG)([L.default], () => {
@@ -600,7 +643,9 @@ function el() {
                                         discriminatorClass: q.D2,
                                         displayNameStylesType: b.G.STATIC,
                                     }),
-                                    (0, r.jsx)(es, { user: t }),
+                                    (0, r.jsx)(es, {
+                                        user: t,
+                                    }),
                                 ],
                             }),
                             (0, r.jsx)(w.A, {
@@ -641,7 +686,9 @@ function el() {
                             }),
                             (0, r.jsx)(I.x, {
                                 setting: H.H.ACCOUNT_USERNAME,
-                                children: (0, r.jsx)(et, { user: t }),
+                                children: (0, r.jsx)(et, {
+                                    user: t,
+                                }),
                             }),
                             (0, r.jsx)(I.x, {
                                 setting: H.H.ACCOUNT_EMAIL,
@@ -660,7 +707,9 @@ function el() {
                             g &&
                                 (0, r.jsx)(I.x, {
                                     setting: H.H.ACCOUNT_AGE_GROUP,
-                                    children: (0, r.jsx)(eo, { className: q.Zr }),
+                                    children: (0, r.jsx)(eo, {
+                                        className: q.Zr,
+                                    }),
                                 }),
                         ],
                     }),

@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r,
     l,
     i = n(311907),
@@ -7,9 +9,11 @@ var r,
 let o = {},
     c = !1,
     u = null;
+
 function d(e) {
     e in o && delete o[e];
 }
+
 function f() {
     if (!c && s.A.isConnected()) {
         let e = s.A.getChannelId();

@@ -19,6 +19,7 @@ var i = n(627968),
     A = n(790782),
     S = n(355097),
     f = n(985018);
+
 function N(t) {
     let e = E(t);
     return t.type === _.rbe.GUILD_VOICE
@@ -29,6 +30,7 @@ function N(t) {
               children: e,
           });
 }
+
 function E(t) {
     let e = (0, o.bH)(t),
         n = (0, o.UD)(t),
@@ -128,13 +130,16 @@ function E(t) {
               ],
           });
 }
+
 function h(t, e) {
     let { notification: n, unread: r } = (0, o.bH)(t),
         l = (t) => {
             t(), e();
         },
         u = (e) => {
-            let n = { message_notifications: e };
+            let n = {
+                message_notifications: e,
+            };
             e === _.orn.ALL_MESSAGES &&
                 r !== A.e.ALL_MESSAGES &&
                 (n.flags = (0, d.mD)(c.Ay.getChannelIdFlags(t.guild_id, t.id), S.vv.UNREADS_ALL_MESSAGES)),

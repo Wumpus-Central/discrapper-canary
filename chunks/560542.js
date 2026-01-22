@@ -1,5 +1,9 @@
-n.d(t, { A: () => s }), n(896048);
+n.d(t, {
+    A: () => s,
+}),
+    n(896048);
 var r = n(723176);
+
 function i(e, t, n) {
     return (
         t in e
@@ -20,17 +24,28 @@ class a {
     }
     handleConnectionOpen(e, t) {
         let { guilds: n } = e,
-            i = n.filter((e) => e.unableToSyncDeletes).map((e) => ({ id: e.id }));
+            i = n
+                .filter((e) => e.unableToSyncDeletes)
+                .map((e) => ({
+                    id: e.id,
+                }));
         i.length > 0 && r.A.guildsRequiringDeletedIdsSyncTransaction(t).putAll(i);
     }
     handleBackgroundSync(e, t) {
         let { guilds: n } = e,
-            i = n.filter((e) => "partial" === e.data_mode && e.unable_to_sync_deletes).map((e) => ({ id: e.id }));
+            i = n
+                .filter((e) => "partial" === e.data_mode && e.unable_to_sync_deletes)
+                .map((e) => ({
+                    id: e.id,
+                }));
         i.length > 0 && r.A.guildsRequiringDeletedIdsSyncTransaction(t).putAll(i);
     }
     handleGuildCreate(e, t) {
         let { guild: n } = e;
-        n.unableToSyncDeletes && r.A.guildsRequiringDeletedIdsSyncTransaction(t).put({ id: n.id });
+        n.unableToSyncDeletes &&
+            r.A.guildsRequiringDeletedIdsSyncTransaction(t).put({
+                id: n.id,
+            });
     }
     handleDeletedEntityIds(e, t) {
         r.A.guildsRequiringDeletedIdsSyncTransaction(t).delete(e.guild_id);

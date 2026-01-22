@@ -16,7 +16,17 @@ var r = n(404312),
         }
     },
     l = function (e, t) {
-        for (var n = t && t.plainObjects ? { __proto__: null } : {}, r = 0; r < e.length; ++r)
+        for (
+            var n =
+                    t && t.plainObjects
+                        ? {
+                              __proto__: null,
+                          }
+                        : {},
+                r = 0;
+            r < e.length;
+            ++r
+        )
             void 0 !== e[r] && (n[r] = e[r]);
         return n;
     },
@@ -60,7 +70,9 @@ e.exports = {
         for (
             var t = [
                     {
-                        obj: { o: e },
+                        obj: {
+                            o: e,
+                        },
                         prop: "o",
                     },
                 ],

@@ -23,6 +23,7 @@ let f = (e) => {
         children: t,
     });
 };
+
 function p(e) {
     let { image: t } = e;
     return null == t
@@ -41,8 +42,12 @@ let _ = (e) => {
         [g] = l.A_(t);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(f, { listingName: h }),
-            (0, r.jsx)(p, { image: m }),
+            (0, r.jsx)(f, {
+                listingName: h,
+            }),
+            (0, r.jsx)(p, {
+                image: m,
+            }),
             !n &&
                 (0, r.jsx)("div", {
                     className: d.U0,

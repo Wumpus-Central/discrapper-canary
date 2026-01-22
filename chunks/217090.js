@@ -1,9 +1,12 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(735438),
     i = n.n(r),
     l = n(179771),
     a = n(613057),
     s = n(652215);
+
 function o(e, t) {
     return {
         [s.ZE4.VOICE_SETTINGS_UPDATE]: {

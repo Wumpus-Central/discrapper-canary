@@ -28,6 +28,7 @@ var r = n(627968),
     b = (function (e) {
         return (e[(e.BOT = 0)] = "BOT"), (e[(e.ACTIVITY = 1)] = "ACTIVITY"), e;
     })({});
+
 function y(e) {
     var t, n, r, i;
     return {
@@ -43,12 +44,18 @@ function y(e) {
         isDeadEnd: null != (i = null == e ? void 0 : e.isDeadEnd) && i,
     };
 }
+
 function O(e) {
     let { onClick: t, children: n, className: i } = e;
     return null != t
         ? (0, r.jsx)(c.DUT, {
               onClick: t,
-              className: s()({ [E.or]: null != t }, i),
+              className: s()(
+                  {
+                      [E.or]: null != t,
+                  },
+                  i,
+              ),
               children: n,
           })
         : (0, r.jsx)("div", {
@@ -56,6 +63,7 @@ function O(e) {
               children: n,
           });
 }
+
 function A(e) {
     let {
         title: t,
@@ -141,13 +149,17 @@ function A(e) {
             k &&
                 (0, r.jsxs)(O, {
                     onClick: H,
-                    className: s()(E.cy, U, { [E.wk]: M }),
+                    className: s()(E.cy, U, {
+                        [E.wk]: M,
+                    }),
                     children: [
                         M &&
                             (F
                                 ? (0, r.jsx)("div", {
                                       className: E.O9,
-                                      style: { backgroundImage: "url(".concat(b, ")") },
+                                      style: {
+                                          backgroundImage: "url(".concat(b, ")"),
+                                      },
                                   })
                                 : (0, r.jsx)(o.A, {
                                       ref: G,
@@ -160,13 +172,17 @@ function A(e) {
                         j &&
                             (0, r.jsx)("div", {
                                 className: E.LR,
-                                style: { backgroundImage: "url(".concat(m, ")") },
+                                style: {
+                                    backgroundImage: "url(".concat(m, ")"),
+                                },
                                 onTransitionEnd: V,
                             }),
                     ],
                 }),
             (0, r.jsxs)("div", {
-                style: { background: P },
+                style: {
+                    background: P,
+                },
                 children: [
                     (0, r.jsxs)("div", {
                         className: E.hQ,
@@ -180,12 +196,16 @@ function A(e) {
                                 }),
                             (0, r.jsxs)(O, {
                                 onClick: B,
-                                className: s()(E.FG, { [E.ry]: null != B }),
+                                className: s()(E.FG, {
+                                    [E.ry]: null != B,
+                                }),
                                 children: [
                                     null != v &&
                                         (0, r.jsx)("div", {
                                             className: E._8,
-                                            style: { backgroundImage: "url(".concat(v, ")") },
+                                            style: {
+                                                backgroundImage: "url(".concat(v, ")"),
+                                            },
                                         }),
                                     (0, r.jsxs)("div", {
                                         className: E.Qs,

@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var r = n(627968);
 n(64700);
 var i = n(110259),
@@ -14,12 +16,15 @@ var i = n(110259),
     _ = n(985018),
     h = n(996554),
     m = n(114149);
+
 function g() {
     let { analyticsLocations: e } = (0, o.Ay)();
     (0, l.A)({
         name: i.ImpressionNames.CUSTOM_THEMES_APPEARANCE_SETTINGS_BANNER,
         type: i.ImpressionTypes.VIEW,
-        properties: { location_stack: e },
+        properties: {
+            location_stack: e,
+        },
     });
     let t = (0, u.X)(
             {
@@ -29,7 +34,11 @@ function g() {
             p.default.CARxAC,
         ),
         n = () => {
-            (0, f.b0)(f.G8.APPEARANCE_SETTINGS), (0, c.nf)(c.HP.CUSTOM_THEME, { from: c.xv.SETTING }), (0, d.default)();
+            (0, f.b0)(f.G8.APPEARANCE_SETTINGS),
+                (0, c.nf)(c.HP.CUSTOM_THEME, {
+                    from: c.xv.SETTING,
+                }),
+                (0, d.default)();
         };
     return (0, r.jsxs)("div", {
         className: h.kL,

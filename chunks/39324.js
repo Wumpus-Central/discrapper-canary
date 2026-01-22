@@ -1,4 +1,6 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(353640),
     l = n(849077);
 let i = {
@@ -46,7 +48,10 @@ let i = {
                             }
                             return e;
                         })({}, e.messageCategoryOpenStates)),
-                        (r = r = { [t]: !e.messageCategoryOpenStates[t] }),
+                        (r = r =
+                            {
+                                [t]: !e.messageCategoryOpenStates[t],
+                            }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
                             : (function (e, t) {
@@ -64,6 +69,8 @@ let i = {
             });
         },
         setOpenStateFromUnreads: (t) => {
-            e({ messageCategoryOpenStates: t ? a : i });
+            e({
+                messageCategoryOpenStates: t ? a : i,
+            });
         },
     }));

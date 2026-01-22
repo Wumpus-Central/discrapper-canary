@@ -1,7 +1,11 @@
-n.d(t, { X: () => l }), n(896048);
+n.d(t, {
+    X: () => l,
+}),
+    n(896048);
 var r = n(64700);
+
 function l(e) {
-    let { slideCount: t, intervalMs: n = 3000 } = e,
+    let { slideCount: t, intervalMs: n = 3e3 } = e,
         [l, a] = (0, r.useState)(0),
         [i, s] = (0, r.useState)(!1),
         c = (0, r.useCallback)(

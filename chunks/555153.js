@@ -1,4 +1,7 @@
-n.d(t, { A: () => d }), n(896048);
+n.d(t, {
+    A: () => d,
+}),
+    n(896048);
 var i = n(627968),
     r = n(64700),
     l = n(554146),
@@ -7,6 +10,7 @@ var i = n(627968),
     s = n(49999),
     c = n(985018),
     u = n(477545);
+
 function d(e) {
     let { locked: t } = e,
         [n, d] = (0, o.kn)(t ? [] : [l.M.OVERLAY_OOP_WELCOME_BACKGROUND_NUX], void 0, !0);

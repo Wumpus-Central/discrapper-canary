@@ -25,6 +25,7 @@ var r = n(64700),
     E = n(403362),
     b = n(652215),
     y = n(985018);
+
 function O(e) {
     let t = e.map(c._g).find(E.Vq),
         n = (0, a.bG)([p.A], () => p.A.getChannel(t), [t]);
@@ -39,13 +40,16 @@ function O(e) {
         [n],
     );
 }
+
 function A(e, t) {
     let n = u.A.getStickerById(e.id);
     return null != n && !!(0, d.Xw)(n) && (n.guild_id !== t.guild_id || void 0);
 }
+
 function v(e) {
     return e.components.length > 0 && e.components[0].type === s.I5.CHECKPOINT_CARD;
 }
+
 function S(e, t, n, r) {
     let i = n instanceof f.YB;
     if (null != r) {
@@ -56,20 +60,27 @@ function S(e, t, n, r) {
     let a = v(e),
         s = e.messageSnapshots.length > 0 && v(e.messageSnapshots[0].message);
     if (null != t || a) {
-        if ((0, o.Gc)(t) && !(i && (0, o.Gc)(n))) return { label: y.intl.string(y.t.KgPx1D) };
+        if ((0, o.Gc)(t) && !(i && (0, o.Gc)(n)))
+            return {
+                label: y.intl.string(y.t.KgPx1D),
+            };
         if (i && (0, f.zy)(n.type)) {
             if (
                 (e.attachments.length > 0 || e.messageSnapshots.some((e) => e.message.attachments.length > 0)) &&
                 !_.A.can(b.xBc.ATTACH_FILES, n)
             )
-                return { label: y.intl.string(y.t.P7yvbm) };
+                return {
+                    label: y.intl.string(y.t.P7yvbm),
+                };
             if (
                 ((e.embeds.length > 0 || e.messageSnapshots.some((e) => e.message.embeds.length > 0)) &&
                     !(0, g.fS)(n, _.A) &&
                     !(0, g.ax)(e)) ||
                 ((a || s) && !(0, g.fS)(n, _.A))
             )
-                return { label: y.intl.string(y.t.Wr4RIX) };
+                return {
+                    label: y.intl.string(y.t.Wr4RIX),
+                };
             let t = [
                 ...(0, d.o6)(e),
                 ...e.messageSnapshots.flatMap((e) => {
@@ -78,22 +89,28 @@ function S(e, t, n, r) {
                 }),
             ];
             if (t.length > 0 && !_.A.can(b.xBc.USE_EXTERNAL_STICKERS, n) && t.some((e) => A(e, n)))
-                return { label: y.intl.string(y.t["0Yyrua"]) };
+                return {
+                    label: y.intl.string(y.t["0Yyrua"]),
+                };
             if (
                 (e.hasFlag(b.pr7.IS_VOICE_MESSAGE) ||
                     e.messageSnapshots.some((e) => e.message.hasFlag(b.pr7.IS_VOICE_MESSAGE))) &&
                 !_.A.can(b.xBc.SEND_VOICE_MESSAGES, n)
             )
-                return { label: y.intl.string(y.t.quj4DY) };
+                return {
+                    label: y.intl.string(y.t.quj4DY),
+                };
         }
     }
 }
+
 function I(e, t) {
     return (
         !!(null != e.rateLimitPerUser && e.rateLimitPerUser > 0) &&
         !(t.can(b.xBc.MANAGE_CHANNELS, e) || t.can(b.xBc.MANAGE_MESSAGES, e))
     );
 }
+
 function T(e) {
     let t = (0, a.yK)(
         [p.A, _.A],

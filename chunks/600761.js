@@ -1,7 +1,10 @@
-n.d(t, { i: () => a });
+n.d(t, {
+    i: () => a,
+});
 var r = n(64700),
     l = n(688807),
     i = n(397927);
+
 function a(e) {
     let { containerRef: t, itemType: n = "WIDGET", edgeDistance: a = 130, maxSpeed: s = 1700, power: o = 2.2 } = e,
         c = (0, r.useRef)(null),
@@ -50,7 +53,7 @@ function a(e) {
                     u.current = n;
                     return;
                 }
-                let l = Math.min(32, 0 !== u.current ? n - u.current : 16) / 1000;
+                let l = Math.min(32, 0 !== u.current ? n - u.current : 16) / 1e3;
                 u.current = n;
                 let { top: i, bottom: p } = d.current,
                     b = r.y,

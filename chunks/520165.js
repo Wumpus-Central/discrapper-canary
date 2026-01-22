@@ -1,4 +1,7 @@
-n.d(t, { A: () => b }), n(896048);
+n.d(t, {
+    A: () => b,
+}),
+    n(896048);
 var r = n(15285),
     i = n(652896),
     a = n(616356),
@@ -13,6 +16,7 @@ var r = n(15285),
     _ = n(696016),
     h = n(652215),
     m = n(985018);
+
 function g(e) {
     if (null != e)
         return {
@@ -28,6 +32,7 @@ function g(e) {
                     : void 0,
         };
 }
+
 function E(e) {
     var t, n, d;
     if (null != e) {
@@ -67,6 +72,7 @@ function E(e) {
         isVoiceOnly: O,
     };
 }
+
 function b(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "manual",
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : p.nQ.CLIP,

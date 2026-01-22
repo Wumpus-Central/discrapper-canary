@@ -1,4 +1,6 @@
-n.d(t, { A: () => A });
+n.d(t, {
+    A: () => A,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -12,6 +14,7 @@ var i = n(503698),
     p = n(49999),
     f = n(985018),
     h = n(786983);
+
 function A(e) {
     let { className: t, markAsDismissed: n } = e;
     return (0, r.jsxs)(o.A, {
@@ -26,7 +29,9 @@ function A(e) {
                 variant: "text-sm/normal",
                 children: f.intl.format(f.t.NkFrzN, {
                     onPrivacyClick: () => {
-                        (0, u.openUserSettings)(c.X.DATA_AND_PRIVACY_PANEL, { section: d.nc_.DATA_AND_PRIVACY });
+                        (0, u.openUserSettings)(c.X.DATA_AND_PRIVACY_PANEL, {
+                            section: d.nc_.DATA_AND_PRIVACY,
+                        });
                     },
                 }),
             }),

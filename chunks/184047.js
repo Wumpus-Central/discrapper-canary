@@ -1,5 +1,8 @@
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 var r = n(627968);
+
 function i(e) {
     let { className: t, style: n } = e;
     return (0, r.jsxs)("svg", {
@@ -182,7 +185,9 @@ function i(e) {
             }),
             (0, r.jsx)("mask", {
                 id: "mask0_2655_14279",
-                style: { maskType: "alpha" },
+                style: {
+                    maskType: "alpha",
+                },
                 maskUnits: "userSpaceOnUse",
                 x: "29",
                 y: "29",

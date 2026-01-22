@@ -32,6 +32,7 @@ var r = n(627968),
     N = n(652215);
 n(436317);
 var R = n(396574);
+
 function w(e, t, n) {
     return (
         t in e
@@ -45,6 +46,7 @@ function w(e, t, n) {
         e
     );
 }
+
 function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -61,6 +63,7 @@ function P(e) {
     }
     return e;
 }
+
 function D(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -73,6 +76,7 @@ function D(e, t) {
     }
     return n;
 }
+
 function x(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -126,7 +130,7 @@ let L = (0, h.Fe)({
         name: "LinkAuthorize",
     }),
     B = (0, h.Fe)({
-        createPromise: () => Promise.all([n.e("43887"), n.e("16864")]).then(n.bind(n, 60883)),
+        createPromise: () => Promise.all([n.e("14882"), n.e("16864")]).then(n.bind(n, 60883)),
         webpackId: 60883,
         name: "ActivateDevice",
     }),
@@ -185,7 +189,7 @@ let L = (0, h.Fe)({
     Y = (0, h.Fe)({
         createPromise: () =>
             Promise.all([
-                n.e("43887"),
+                n.e("14882"),
                 n.e("88890"),
                 n.e("79023"),
                 n.e("7726"),
@@ -283,6 +287,7 @@ let L = (0, h.Fe)({
         N.BVt.GIFT_CODE_LOGIN(":giftCode"),
         N.BVt.GUILD_TEMPLATE_LOGIN(":guildTemplateCode"),
     ]);
+
 function er(e, t) {
     return t ? e.filter((e) => !en.has(e)) : e;
 }
@@ -348,7 +353,9 @@ class ei extends i.Component {
                                         from: N.BVt.GIFT_CODE(""),
                                         to: N.BVt.LOGIN,
                                     }),
-                                    (0, r.jsx)(s.qh, { render: et }),
+                                    (0, r.jsx)(s.qh, {
+                                        render: et,
+                                    }),
                                 ],
                             })
                           : (0, r.jsxs)(s.dO, {
@@ -395,7 +402,9 @@ class ei extends i.Component {
                                         : (0, r.jsx)(s.qh, {
                                               path: N.BVt.CHANNEL(
                                                   y.pv.guildId(),
-                                                  y.pv.channelId({ optional: !0 }),
+                                                  y.pv.channelId({
+                                                      optional: !0,
+                                                  }),
                                                   ":messageId?",
                                               ),
                                               component: Y,
@@ -418,7 +427,9 @@ class ei extends i.Component {
                                         impressionName: o.ImpressionNames.QUESTS_LANDING_PAGE,
                                         impressionProperties: (e) => {
                                             let { computedMatch: t } = e;
-                                            return { quest_id: t.params.questId };
+                                            return {
+                                                quest_id: t.params.questId,
+                                            };
                                         },
                                     }),
                                     (0, r.jsx)(_.A, {
@@ -521,7 +532,9 @@ class ei extends i.Component {
                                     }),
                                     (0, r.jsx)(s.rd, {
                                         from: N.BVt.CONNECT_AUTHORIZE,
-                                        to: x(P({}, location), { pathname: N.BVt.OAUTH2_AUTHORIZE }),
+                                        to: x(P({}, location), {
+                                            pathname: N.BVt.OAUTH2_AUTHORIZE,
+                                        }),
                                     }),
                                     (0, r.jsx)(s.qh, {
                                         path: [
@@ -550,14 +563,20 @@ class ei extends i.Component {
                                               path: [N.BVt.GLOBAL_DISCOVERY_APPS],
                                               component: ee,
                                           }),
-                                    (0, r.jsx)(s.qh, { render: et }),
+                                    (0, r.jsx)(s.qh, {
+                                        render: et,
+                                    }),
                                     (0, r.jsx)(s.rd, {
                                         from: N.BVt.ACCOUNT_REVERT(""),
                                         to: N.BVt.LOGIN,
                                     }),
                                 ],
                             })
-                      : (0, r.jsx)(s.dO, { children: (0, r.jsx)(_.A, { component: L }) })),
+                      : (0, r.jsx)(s.dO, {
+                            children: (0, r.jsx)(_.A, {
+                                component: L,
+                            }),
+                        })),
             (0, r.jsxs)(m.A, {
                 skipsSettingDefaultPageTitle: i,
                 children: [
@@ -570,13 +589,25 @@ class ei extends i.Component {
         );
     }
 }
+
 function ea() {
     let { pathname: e } = (0, s.zy)();
-    return null != (0, s.B6)(e, { path: N.BVt.APPLICATION_DIRECTORY });
+    return (
+        null !=
+        (0, s.B6)(e, {
+            path: N.BVt.APPLICATION_DIRECTORY,
+        })
+    );
 }
+
 function es(e) {
     let t = ea();
-    return (0, r.jsx)(ei, x(P({}, e), { skipsSettingDefaultPageTitle: t }));
+    return (0, r.jsx)(
+        ei,
+        x(P({}, e), {
+            skipsSettingDefaultPageTitle: t,
+        }),
+    );
 }
 let eo = d.Ay.connectStores(
     [A.default, g.A],
@@ -584,5 +615,7 @@ let eo = d.Ay.connectStores(
         isAuthenticated: A.default.isAuthenticated(),
         migrationStatus: g.A.getMigrationStatus(),
     }),
-    { forwardRef: !0 },
+    {
+        forwardRef: !0,
+    },
 )(es);

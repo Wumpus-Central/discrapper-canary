@@ -1,4 +1,6 @@
-t.d(a, { default: () => s });
+t.d(a, {
+    default: () => s,
+});
 var n = t(627968),
     r = t(64700),
     d = t(397927),
@@ -9,12 +11,15 @@ var n = t(627968),
     o = t(14594),
     i = t(652215),
     u = t(985018);
+
 function s(e) {
     let { onClose: a, transitionState: s } = e,
         p = (0, f.A)(o.jZ),
         g = r.useMemo(() => p.map((e) => e.value), [p]);
     r.useEffect(() => {
-        b.default.track(i.HAw.OPEN_MODAL, { type: "Ignore User Feedback" });
+        b.default.track(i.HAw.OPEN_MODAL, {
+            type: "Ignore User Feedback",
+        });
     }, []);
     let h = r.useCallback((e) => {
         var a;
@@ -51,7 +56,12 @@ function s(e) {
                                         });
                                 }
                                 return e;
-                            })({ body: u.intl.string(u.t["d9+vQ8"]) }, a),
+                            })(
+                                {
+                                    body: u.intl.string(u.t["d9+vQ8"]),
+                                },
+                                a,
+                            ),
                         );
                 });
     }, []);

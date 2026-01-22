@@ -14,6 +14,7 @@ var r = n(284009),
     d = n(652215),
     f = n(601107),
     p = n(788868);
+
 function _(e, t, n) {
     return (
         t in e
@@ -27,6 +28,7 @@ function _(e, t, n) {
         e
     );
 }
+
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -43,6 +45,7 @@ function h(e) {
     }
     return e;
 }
+
 function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -55,6 +58,7 @@ function m(e, t) {
     }
     return n;
 }
+
 function g(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -66,6 +70,7 @@ function g(e, t) {
         e
     );
 }
+
 function E(e) {
     return {
         id: e.id,
@@ -110,7 +115,11 @@ class b extends a.A {
                         price: e.price,
                         userId: e.user_id,
                     },
-                    null != e.latest_invoice ? { latestInvoice: u.A.createInvoiceFromServer(e.latest_invoice) } : {},
+                    null != e.latest_invoice
+                        ? {
+                              latestInvoice: u.A.createInvoiceFromServer(e.latest_invoice),
+                          }
+                        : {},
                 ),
                 {
                     eligiblePaymentGateways: null != (t = e.eligible_payment_gateways) ? t : null,

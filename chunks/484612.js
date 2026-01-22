@@ -1,4 +1,6 @@
-l.d(t, { A: () => D }),
+l.d(t, {
+    A: () => D,
+}),
     l(321073),
     l(896048),
     l(114821),
@@ -45,6 +47,7 @@ var r = l(627968),
     C = l(333354),
     G = l(985018),
     R = l(377514);
+
 function D(e) {
     let { guildId: t, powerupListingId: i } = e;
     (0, h.A)(t);
@@ -160,7 +163,9 @@ function D(e) {
                               icon: u._Jp,
                               "aria-label": "",
                           }),
-                          (0, r.jsx)(f.A.Title, { children: G.intl.string(C.default.yv3DJJ) }),
+                          (0, r.jsx)(f.A.Title, {
+                              children: G.intl.string(C.default.yv3DJJ),
+                          }),
                       ],
                   }),
                   (0, r.jsxs)("div", {
@@ -207,7 +212,9 @@ function D(e) {
                                               }),
                                               (0, r.jsx)(a, {
                                                   orientation: "horizontal",
-                                                  className: s()(R.qJ, R.kn, { [R.dU]: l === T.o9.LEVEL }),
+                                                  className: s()(R.qJ, R.kn, {
+                                                      [R.dU]: l === T.o9.LEVEL,
+                                                  }),
                                                   fade: !0,
                                                   children: n.map((e, l) => {
                                                       switch (e.type) {
@@ -246,7 +253,9 @@ function D(e) {
                                                           case "gameServer":
                                                               return (0, r.jsx)(
                                                                   v.A,
-                                                                  { guildId: t },
+                                                                  {
+                                                                      guildId: t,
+                                                                  },
                                                                   "powerup-game-server",
                                                               );
                                                       }
@@ -261,8 +270,16 @@ function D(e) {
                           (0, r.jsxs)("div", {
                               className: R.so,
                               children: [
-                                  V ? (0, r.jsx)(I.A, { guildId: t }) : (0, r.jsx)(S.A, { guildId: t }),
-                                  (0, r.jsx)(w.A, { guildId: t }),
+                                  V
+                                      ? (0, r.jsx)(I.A, {
+                                            guildId: t,
+                                        })
+                                      : (0, r.jsx)(S.A, {
+                                            guildId: t,
+                                        }),
+                                  (0, r.jsx)(w.A, {
+                                      guildId: t,
+                                  }),
                               ],
                           }),
                       ],

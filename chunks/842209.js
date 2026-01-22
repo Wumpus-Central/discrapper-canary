@@ -21,6 +21,7 @@ var r = n(64700),
     d = n(168186),
     f = n(73510),
     p = n(652215);
+
 function _(e, t, n) {
     return (
         t in e
@@ -34,6 +35,7 @@ function _(e, t, n) {
         e
     );
 }
+
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -50,6 +52,7 @@ function h(e) {
     }
     return e;
 }
+
 function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -62,6 +65,7 @@ function m(e, t) {
     }
     return n;
 }
+
 function g(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -73,6 +77,7 @@ function g(e, t) {
         e
     );
 }
+
 function E(e, t, n) {
     var r, i, a, s;
     if (null == t)
@@ -111,6 +116,7 @@ function E(e, t, n) {
         command: void 0,
     };
 }
+
 function b(e, t) {
     var n, r, i;
     if (null == t) return;
@@ -131,6 +137,7 @@ function b(e, t) {
           })
         : void 0;
 }
+
 function y(e, t, n) {
     var r, i, a, s, o, c, u, d;
     let f = l.Ay.getUserState(),
@@ -150,6 +157,7 @@ function y(e, t, n) {
                   : u[n];
     return null == h ? void 0 : h.descriptor;
 }
+
 function O(e, t, n) {
     let r = l.Ay.query(
         e,
@@ -167,11 +175,13 @@ function O(e, t, n) {
         sections: r.descriptors,
     };
 }
+
 function A(e) {
     let t = l.Ay.getUserState(),
         n = l.Ay.getContextState(e);
     return [null == t ? void 0 : t.result, null == n ? void 0 : n.result];
 }
+
 function v(e) {
     let { context: t, filters: n, options: s, allowFetch: c } = e,
         u = "channel" === t.type ? t.channel.guild_id : null,
@@ -181,7 +191,14 @@ function v(e) {
             commands: m,
             sectionedCommands: E,
             loading: b,
-        } = (0, l.XC)(t, d, n, g(h({}, s), { allowFetch: c })),
+        } = (0, l.XC)(
+            t,
+            d,
+            n,
+            g(h({}, s), {
+                allowFetch: c,
+            }),
+        ),
         [y, O] = r.useState(null),
         A = r.useMemo(() => {
             var e;
@@ -231,6 +248,7 @@ function v(e) {
         return e;
     }, [b, m, _, E, y, A]);
 }
+
 function S(e, t, n) {
     var r;
     let { descriptors: i, commands: a, loading: s } = l.Ay.query(e, t, n),
@@ -240,6 +258,7 @@ function S(e, t, n) {
         sections: s && 0 === i.length ? [o.gZ[f.Ik.BUILT_IN]] : i,
     };
 }
+
 function I(e, t) {
     let n = (0, l.A4)(!0, !0),
         i = (0, l.SD)(e, !0, !0);
@@ -263,6 +282,7 @@ function I(e, t) {
         };
     }, [i.result, n.result, t]);
 }
+
 function T(e, t, n) {
     let i = (0, l.A4)(!0, !0),
         a = (0, l.SD)(e, !0, !0);
@@ -296,11 +316,13 @@ let C = {
     type: u.Hf.APPLICATION,
     name: "",
 };
+
 function N(e, t) {
     let n = [];
     for (let r = 0; r < e; r++) n.push(R(r, t));
     return n;
 }
+
 function R(e, t) {
     return {
         type: t,

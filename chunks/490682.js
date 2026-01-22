@@ -1,6 +1,11 @@
-n.d(t, { A: () => c }), n(896048), n(321073);
+n.d(t, {
+    A: () => c,
+}),
+    n(896048),
+    n(321073);
 var r = n(22098),
     i = n(711371);
+
 function a(e, t, n) {
     return (
         t in e
@@ -14,6 +19,7 @@ function a(e, t, n) {
         e
     );
 }
+
 function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -32,6 +38,7 @@ function s(e) {
 }
 let o = new Set(["line", "blockQuote"]),
     l = [];
+
 function c(e, t, n) {
     if (i.VW.areStylesDisabled(e)) return [];
     let [a, c] = t;

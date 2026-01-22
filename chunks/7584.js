@@ -16,6 +16,7 @@ var r = n(735438),
     a = n(838677),
     s = n(690521),
     o = n(770335);
+
 function l(e, t, n) {
     return (
         t in e
@@ -49,10 +50,12 @@ let c = null,
         numDiversitySprites: A,
         numNonDiversitySprites: v,
     } = n(13474);
+
 function S(e) {
     let t = y[e];
     return null == t ? null : E[t];
 }
+
 function I(e) {
     let t = O[e];
     return null == t ? null : E[t];
@@ -144,30 +147,37 @@ class T {
             }
     }
 }
+
 function C(e) {
     let t = u.get(e);
     if (null != t) return t;
     let n = new T(e);
     return u.set(e, n), n;
 }
+
 function N(e) {
     let t = a.A.convert.toCodePoint(e);
     return null != t ? t : "";
 }
+
 function R(e) {
     c = null != e && "" !== e ? e : null;
 }
+
 function w() {
     return c;
 }
+
 function P() {
     return Object.keys(b);
 }
+
 function D(e) {
     let t = S(e);
     return null != t ? C(t) : null;
 }
 let x = new Map();
+
 function L(e) {
     let t = x.get(e);
     if (null == t) {
@@ -176,12 +186,15 @@ function L(e) {
     }
     return t;
 }
+
 function j(e) {
     return m.test(e);
 }
+
 function M(e) {
     return e.replace(p, (e, t) => Y(t, e));
 }
+
 function k(e) {
     var t;
     let n = null == (t = I(e)) ? void 0 : t.names[0];
@@ -199,6 +212,7 @@ function k(e) {
 let U = String.fromCodePoint(917631),
     G = String.fromCodePoint(127988),
     V = RegExp("^[\\u{E0061}-\\u{E007A}]$", "u");
+
 function F(e, t) {
     var n;
     if (!0 !== t && !j(e))
@@ -235,11 +249,13 @@ function F(e, t) {
     }
     return null != r && "" !== r && i.push(k(r)), i;
 }
+
 function B(e) {
     return F(e)
         .map((e) => ("text" === e.type ? e.text : e.emojiName))
         .join("");
 }
+
 function H(e) {
     if (!j(e)) return null;
     let t = F(e, !0)
@@ -247,11 +263,13 @@ function H(e) {
         .join("");
     return t === e ? null : t;
 }
+
 function Y(e) {
     var t, n;
     let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
     return null != (t = null == (n = S(e)) ? void 0 : n.surrogates) ? t : r;
 }
+
 function W(e) {
     var t, n;
     let r = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
@@ -259,6 +277,7 @@ function W(e) {
         a = null != (t = null == (n = I(e)) ? void 0 : n.names[0]) ? t : i;
     return r ? ":".concat(a, ":") : a;
 }
+
 function K(e) {
     return D(
         W(

@@ -87,6 +87,7 @@ var eg = n(985018),
     eE = n(202942),
     eb = n(130324),
     ey = n(966040);
+
 function eO(e, t, n) {
     return (
         t in e
@@ -100,6 +101,7 @@ function eO(e, t, n) {
         e
     );
 }
+
 function eA(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -116,6 +118,7 @@ function eA(e) {
     }
     return e;
 }
+
 function ev(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -128,6 +131,7 @@ function ev(e, t) {
     }
     return n;
 }
+
 function eS(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -139,6 +143,7 @@ function eS(e, t) {
         e
     );
 }
+
 function eI(e, t) {
     if (null == e) return {};
     var n,
@@ -155,6 +160,7 @@ function eI(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function eT(e, t) {
     if (null == e) return {};
     var n,
@@ -171,10 +177,12 @@ let eC = eL(null),
     ew = 1,
     eP = 25,
     eD = [0, 5, 10, 15, 20, 25];
+
 function ex() {
     let e = eL(eC);
     f().isEqual(e, eC) || (eo.default.track(e_.HAw.OVERLAY_SETTINGS_UPDATED, e), (eC = e));
 }
+
 function eL(e) {
     var t;
     let n = es.default.getNotificationPositionMode(),
@@ -192,6 +200,7 @@ function eL(e) {
         old_enabled: null != (t = null == e ? void 0 : e.enabled) ? t : ea.default.enabled,
     };
 }
+
 function ej(e) {
     let {
         header: t,
@@ -263,6 +272,7 @@ function ej(e) {
         ],
     });
 }
+
 function eM(e) {
     let { children: t, className: n, onExpand: a } = e,
         o = eI(e, ["children", "className", "onExpand"]),
@@ -323,6 +333,7 @@ let ek = new Set([
     eU = (e) => {
         e.preventDefault(), e.stopPropagation();
     };
+
 function eG() {
     var e, t, n;
     let { runningGame: a, runningGameApplication: s } = (0, R.A)(),
@@ -510,6 +521,7 @@ function eG() {
                                 return eg.intl.string(eg.t.bJXH2v);
                         }
                     }
+
                     function i(e, t) {
                         return (0, r.jsx)(
                             m.Text,
@@ -616,7 +628,9 @@ function eG() {
                                 size: "xxs",
                                 color: ea,
                             })
-                          : (0, r.jsx)("div", { className: eE.W4 }),
+                          : (0, r.jsx)("div", {
+                                className: eE.W4,
+                            }),
                       (0, r.jsx)(m.Text, {
                           variant: "text-xs/semibold",
                           color: ei,
@@ -661,7 +675,9 @@ function eG() {
                                           : M(e, x.OverlayToggledClientSettingType.OOP_GAME);
                                   },
                               }),
-                              (0, r.jsx)("div", { className: eE.Kz }),
+                              (0, r.jsx)("div", {
+                                  className: eE.Kz,
+                              }),
                           ],
                       }),
                   }),
@@ -681,13 +697,16 @@ function eG() {
                                           : M(e, x.OverlayToggledClientSettingType.LEGACY_GAME);
                                   },
                               }),
-                              (0, r.jsx)("div", { className: eE.Kz }),
+                              (0, r.jsx)("div", {
+                                  className: eE.Kz,
+                              }),
                           ],
                       }),
                   }),
               ],
           });
 }
+
 function eV(e) {
     let { game: t, gameApplication: n } = e,
         a = i.useMemo(() => (null == t ? null : "pid" in t ? t.pid : null), [t]),
@@ -698,6 +717,7 @@ function eV(e) {
         size: P.M.SMALL,
     });
 }
+
 function eF(e) {
     let {
             rawGame: t,
@@ -736,11 +756,14 @@ function eF(e) {
                     disabled: a,
                     onChange: (e) => g(e),
                 }),
-                (0, r.jsx)("div", { className: eE.Kz }),
+                (0, r.jsx)("div", {
+                    className: eE.Kz,
+                }),
             ],
         }),
     });
 }
+
 function eB() {
     let [e, t] = i.useState(!1),
         { legacyEnabled: n, oopEnabled: a } = (0, p.cf)([U.default], () => U.default.getGlobalEnabledStatus()),
@@ -780,7 +803,10 @@ function eB() {
                           disabled: l,
                           onChange: (e) => c(e),
                       }),
-                      em.OX && (0, r.jsx)("div", { className: eE.Kz }),
+                      em.OX &&
+                          (0, r.jsx)("div", {
+                              className: eE.Kz,
+                          }),
                   ],
               }),
           })
@@ -822,7 +848,11 @@ function eB() {
                                       return t;
                                   },
                                   onChange: u,
-                                  ariaLabel: eg.intl.format(eg.t.hvPYsF, { gameName: e.name }).toString(),
+                                  ariaLabel: eg.intl
+                                      .format(eg.t.hvPYsF, {
+                                          gameName: e.name,
+                                      })
+                                      .toString(),
                               },
                               e.id,
                           ),
@@ -831,6 +861,7 @@ function eB() {
               ],
           });
 }
+
 function eH() {
     let [e, t] = i.useState(!1),
         { oopEnabled: n, legacyEnabled: a } = (0, p.cf)([U.default], () => U.default.getGlobalEnabledStatus()),
@@ -867,7 +898,10 @@ function eH() {
                           disabled: s,
                           onChange: (e) => c(e),
                       }),
-                      em.OX && (0, r.jsx)("div", { className: eE.Kz }),
+                      em.OX &&
+                          (0, r.jsx)("div", {
+                              className: eE.Kz,
+                          }),
                   ],
               }),
           })
@@ -909,7 +943,11 @@ function eH() {
                                       return t;
                                   },
                                   onChange: u,
-                                  ariaLabel: eg.intl.format(eg.t.nByTd3, { gameName: e.name }).toString(),
+                                  ariaLabel: eg.intl
+                                      .format(eg.t.nByTd3, {
+                                          gameName: e.name,
+                                      })
+                                      .toString(),
                               },
                               e.id,
                           ),
@@ -918,6 +956,7 @@ function eH() {
               ],
           });
 }
+
 function eY() {
     return (0, M.X4)(S.A.USER_SETTINGS)
         ? (0, r.jsx)(ej, {
@@ -934,6 +973,7 @@ function eY() {
           })
         : null;
 }
+
 function eW(e) {
     var t;
     let { isLegacySettings: n = !1 } = e,
@@ -944,8 +984,14 @@ function eW(e) {
         c = (0, X.NP)(),
         d = null != l && l.elevated && o && !c,
         f = !(0, ei.DV)(null != (t = null == i ? void 0 : i.shortcut) ? t : []);
+
     function _(e) {
-        u()(null != i, "Keybind should never be undefined"), E.A.setKeybind(eS(eA({}, i), { shortcut: e }));
+        u()(null != i, "Keybind should never be undefined"),
+            E.A.setKeybind(
+                eS(eA({}, i), {
+                    shortcut: e,
+                }),
+            );
     }
     return (0, r.jsx)("div", {
         className: eE.hc,
@@ -988,6 +1034,7 @@ function eW(e) {
         }),
     });
 }
+
 function eK(e) {
     return [
         {
@@ -1034,6 +1081,7 @@ function eK(e) {
         .filter((e) => !1 !== e)
         .filter(Boolean);
 }
+
 function ez() {
     let { enabled: e } = (0, M.QC)("OverlayV3StreamWatchNudge"),
         t = eK(e),
@@ -1082,15 +1130,17 @@ function ez() {
         ],
     });
 }
+
 function eq(e) {
     let t = eX(e.username);
     return (t.user = e), t;
 }
+
 function eX(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        i = "456" + Math.floor(1000000 * Math.random());
+        i = "456" + Math.floor(1e6 * Math.random());
     return {
         voiceState: new J.A({
             channelId: "123",
@@ -1128,6 +1178,7 @@ function eX(e) {
         _isPlaceholder: !0,
     };
 }
+
 function eZ() {
     return (0, Q.createChannelRecord)({
         id: "123",
@@ -1136,6 +1187,7 @@ function eZ() {
         guild_id: "456",
     });
 }
+
 function eQ(e) {
     var t, n;
     let { isLegacySettings: a = !1 } = e,
@@ -1196,7 +1248,9 @@ function eQ(e) {
                         (0, r.jsxs)("div", {
                             className: eE.R$,
                             children: [
-                                (0, r.jsx)(z.Pl, { children: eg.intl.string(eg.t.KNJ6Vq) }),
+                                (0, r.jsx)(z.Pl, {
+                                    children: eg.intl.string(eg.t.KNJ6Vq),
+                                }),
                                 (0, r.jsx)(z.CS, {}),
                                 (0, r.jsx)(z.O0, {
                                     id: null != (t = null == f ? void 0 : f.id) ? t : "voice-widget",
@@ -1215,6 +1269,7 @@ function eQ(e) {
               children: E,
           });
 }
+
 function e$() {
     var e, t;
     let {
@@ -1233,11 +1288,16 @@ function e$() {
             return null != t && (0, W.ZO)(t) ? t : null;
         }),
         o = null != (e = null == s || null == (t = s.meta) ? void 0 : t.voiceStatesMaxShown) ? e : 8;
+
     function l(e) {
         null != s &&
             (e < ew
-                ? (0, b.cC)(s.id, { voiceStatesMaxShown: -1 })
-                : (0, b.cC)(s.id, { voiceStatesMaxShown: Math.floor(e) }));
+                ? (0, b.cC)(s.id, {
+                      voiceStatesMaxShown: -1,
+                  })
+                : (0, b.cC)(s.id, {
+                      voiceStatesMaxShown: Math.floor(e),
+                  }));
     }
     return (0, r.jsxs)("div", {
         className: eE.ri,
@@ -1285,7 +1345,9 @@ function e$() {
                 selectionMode: "single",
                 fullWidth: !0,
             }),
-            (0, r.jsx)(eQ, { isLegacySettings: !0 }),
+            (0, r.jsx)(eQ, {
+                isLegacySettings: !0,
+            }),
             (0, r.jsx)(m.l6P, {
                 label: eg.intl.string(eg.t.swsWWC),
                 options: [
@@ -1315,14 +1377,19 @@ function e$() {
                     maxValue: eP,
                     onValueChange: l,
                     markers: eD,
-                    barStyles: { background: m.LU0.colors.BACKGROUND_MOD_STRONG.css },
-                    fillStyles: { background: m.LU0.colors.BACKGROUND_BRAND.css },
+                    barStyles: {
+                        background: m.LU0.colors.BACKGROUND_MOD_STRONG.css,
+                    },
+                    fillStyles: {
+                        background: m.LU0.colors.BACKGROUND_BRAND.css,
+                    },
                     onMarkerRender: (e) => (e < ew ? eg.intl.string(eg.t.nrUzFL) : "".concat(Math.floor(e))),
                 }),
             }),
         ],
     });
 }
+
 function eJ(e) {
     let { showDivider: t = !1 } = e,
         [n, i] = (0, C.kn)([_.M.OVERLAY_OOP_SETTINGS_NUX], void 0, !0),
@@ -1377,30 +1444,41 @@ function eJ(e) {
                           onClick: () => a(),
                       }),
                   }),
-                  t ? (0, r.jsx)("div", { className: eE.$x }) : null,
+                  t
+                      ? (0, r.jsx)("div", {
+                            className: eE.$x,
+                        })
+                      : null,
               ],
           });
 }
+
 function e0(e) {
     let { runningGame: t, runningGameApplication: n } = e,
         a = null == n ? void 0 : n.id,
         s = (0, p.bG)([V.A], () => V.A.isLimitedInteractionOverrideEnabled(a), [a]),
         o = i.useMemo(() => null != t && (0, G.qJ)(t.pid), [t]),
-        l = (0, k.A)({ location: "overlay_user_settings" }),
+        l = (0, k.A)({
+            location: "overlay_user_settings",
+        }),
         { disableClickableRegions: c, shouldShowKeybindIndicators: u } = (0, p.cf)([es.default], () => ({
             disableClickableRegions: es.default.disableClickableRegions,
             shouldShowKeybindIndicators: es.default.showKeybindIndicators,
         }));
+
     function d() {
         y.A.setDisableClickableRegions(!c);
     }
+
     function f(e) {
         null != n && (0, H.x8)(n.id, e);
     }
     return (0, r.jsxs)("div", {
         className: eE.U$,
         children: [
-            (0, r.jsx)(eW, { isLegacySettings: !0 }),
+            (0, r.jsx)(eW, {
+                isLegacySettings: !0,
+            }),
             l &&
                 (0, r.jsx)(m.dOG, {
                     label: eg.intl.string(eg.t.XZTl9r),
@@ -1458,6 +1536,7 @@ function e0(e) {
         ],
     });
 }
+
 function e1() {
     let { runningGame: e, runningGameApplication: t } = (0, R.A)(),
         n = (0, p.bG)([er.default], () => er.default.getCurrentUser());
@@ -1472,7 +1551,9 @@ function e1() {
                   (0, r.jsxs)(ep.A, {
                       title: eg.intl.string(eg.t["9cb1Uz"]),
                       children: [
-                          (0, r.jsx)(eJ, { showDivider: !0 }),
+                          (0, r.jsx)(eJ, {
+                              showDivider: !0,
+                          }),
                           (0, r.jsxs)("div", {
                               className: eE.U$,
                               children: [
@@ -1482,7 +1563,9 @@ function e1() {
                                   (0, r.jsx)(eY, {}),
                               ],
                           }),
-                          (0, r.jsx)("div", { className: eE.Ri }),
+                          (0, r.jsx)("div", {
+                              className: eE.Ri,
+                          }),
                       ],
                   }),
                   (0, r.jsxs)("div", {
@@ -1491,12 +1574,19 @@ function e1() {
                               runningGame: e,
                               runningGameApplication: t,
                           }),
-                          (0, r.jsx)("div", { className: eE.Ri }),
+                          (0, r.jsx)("div", {
+                              className: eE.Ri,
+                          }),
                       ],
                   }),
                   (0, r.jsxs)(m.D0$, {
                       label: eg.intl.string(eg.t.r1TZfh),
-                      children: [(0, r.jsx)(e$, {}), (0, r.jsx)("div", { className: eE.Ri })],
+                      children: [
+                          (0, r.jsx)(e$, {}),
+                          (0, r.jsx)("div", {
+                              className: eE.Ri,
+                          }),
+                      ],
                   }),
                   (0, r.jsx)(ez, {}),
               ],

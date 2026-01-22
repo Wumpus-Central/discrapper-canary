@@ -1,4 +1,7 @@
-n.d(t, { v: () => f }), n(896048);
+n.d(t, {
+    v: () => f,
+}),
+    n(896048);
 var r = n(627968),
     i = n(554146),
     a = n(342494),
@@ -8,9 +11,17 @@ var r = n(627968),
     c = n(985018),
     u = n(936037);
 let d = i.M.FOR_LATER_POPOUT_COACHMARK;
+
 function f(e) {
     let { location: t, targetElementRef: n } = e,
-        { enabled: i, inInbox: f } = o.A.useExperiment({ location: "ForLaterCoachmarkWeb" }, { autoTrackExposure: !1 }),
+        { enabled: i, inInbox: f } = o.A.useExperiment(
+            {
+                location: "ForLaterCoachmarkWeb",
+            },
+            {
+                autoTrackExposure: !1,
+            },
+        ),
         p = t === (f ? "inbox-button" : "bookmarks-button"),
         _ = i && p ? [d] : [],
         [h, m] = (0, s.kn)(_, void 0);
@@ -22,7 +33,9 @@ function f(e) {
               position: "bottom",
               align: "right",
               shouldShow: !0,
-              caretConfig: { align: "end" },
+              caretConfig: {
+                  align: "end",
+              },
               onRequestClose: () => m(l.i.USER_DISMISS),
               title: c.intl.string(c.t.qPbFK2),
               body: c.intl.string(c.t.URrJq1),

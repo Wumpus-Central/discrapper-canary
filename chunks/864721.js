@@ -1,4 +1,8 @@
-n.d(t, { A: () => h }), n(864466), n(443073);
+n.d(t, {
+    A: () => h,
+}),
+    n(864466),
+    n(443073);
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -11,6 +15,7 @@ var i = n(503698),
     d = n(647053),
     f = n(985018),
     p = n(406421);
+
 function _(e) {
     let { text: t, error: n, isFake: i } = e;
     return (0, r.jsxs)("div", {
@@ -47,6 +52,7 @@ function _(e) {
         ],
     });
 }
+
 function h(e) {
     var t;
     let {
@@ -69,7 +75,9 @@ function h(e) {
             (0, r.jsx)(c.Heading, {
                 variant: "heading-sm/normal",
                 className: p.a9,
-                children: f.intl.format(O, { application: null != (t = null == n ? void 0 : n.name) ? t : "" }),
+                children: f.intl.format(O, {
+                    application: null != (t = null == n ? void 0 : n.name) ? t : "",
+                }),
             }),
             i
                 .map((e) =>
@@ -86,7 +94,10 @@ function h(e) {
                     }),
                 )
                 .flat(),
-            A && (0, r.jsx)(_, { text: f.intl.string(f.t.Ls2XRq) }),
+            A &&
+                (0, r.jsx)(_, {
+                    text: f.intl.string(f.t.Ls2XRq),
+                }),
             (0, r.jsx)(_, {
                 text: y,
                 isFake: !0,

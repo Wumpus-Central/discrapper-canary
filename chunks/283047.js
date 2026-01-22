@@ -1,8 +1,15 @@
-n.d(t, { A: () => m }), n(205816), n(321073), n(638769), n(896048);
+n.d(t, {
+    A: () => m,
+}),
+    n(205816),
+    n(321073),
+    n(638769),
+    n(896048);
 var r = n(735438),
     i = n.n(r),
     a = n(989349),
     s = n.n(a);
+
 function o(e, t, n) {
     return (
         t in e
@@ -16,6 +23,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -32,6 +40,7 @@ function l(e) {
     }
     return e;
 }
+
 function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -44,6 +53,7 @@ function c(e, t) {
     }
     return n;
 }
+
 function u(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -66,11 +76,17 @@ let d = 10,
     };
 class h {
     overwriteHistory(e, t) {
-        (this.usageHistory = i().mapValues(null != e ? e : {}, (e) => u(l({}, e), { frecency: -1 }))),
+        (this.usageHistory = i().mapValues(null != e ? e : {}, (e) =>
+            u(l({}, e), {
+                frecency: -1,
+            }),
+        )),
             null == t ||
                 t.forEach((e) => {
                     let { key: t, timestamp: n } = e;
-                    return this.track(t, { timestamp: n });
+                    return this.track(t, {
+                        timestamp: n,
+                    });
                 }),
             this.markDirty();
     }

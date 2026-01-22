@@ -1,4 +1,6 @@
-n.d(t, { A: () => j });
+n.d(t, {
+    A: () => j,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -24,6 +26,7 @@ var r = n(627968),
     I = n(234957),
     T = n(652215),
     C = n(119907);
+
 function N(e, t, n) {
     return (
         t in e
@@ -37,6 +40,7 @@ function N(e, t, n) {
         e
     );
 }
+
 function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -53,6 +57,7 @@ function R(e) {
     }
     return e;
 }
+
 function w(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -65,6 +70,7 @@ function w(e, t) {
     }
     return n;
 }
+
 function P(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -76,6 +82,7 @@ function P(e, t) {
         e
     );
 }
+
 function D(e, t) {
     if (null == e) return {};
     var n,
@@ -92,6 +99,7 @@ function D(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function x(e, t) {
     if (null == e) return {};
     var n,
@@ -102,6 +110,7 @@ function x(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function L(e) {
     var t, n;
     let {
@@ -186,7 +195,11 @@ function L(e) {
                 ),
                 childrenAccessories: e.hideAccessories ? void 0 : (0, y.J)(e, K, z),
                 childrenMessageContent: (0, O.A)(e, W),
-                childrenSystemMessage: (0, v.A)(P(R({}, e), { disableInteraction: B })),
+                childrenSystemMessage: (0, v.A)(
+                    P(R({}, e), {
+                        disableInteraction: B,
+                    }),
+                ),
                 onContextMenu: w,
                 onClick: x,
                 hasThread: G && null != $ && i.hasFlag(T.pr7.HAS_THREAD),

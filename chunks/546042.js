@@ -48,6 +48,7 @@ var H = n(652215),
     Y = n(788868),
     W = n(985018),
     K = n(898772);
+
 function z(e, t, n) {
     return (
         t in e
@@ -61,6 +62,7 @@ function z(e, t, n) {
         e
     );
 }
+
 function q(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -77,6 +79,7 @@ function q(e) {
     }
     return e;
 }
+
 function X(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -89,6 +92,7 @@ function X(e, t) {
     }
     return n;
 }
+
 function Z(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -102,6 +106,7 @@ function Z(e, t) {
 }
 let Q = 2,
     $ = "billing";
+
 function J(e) {
     let {
             analyticsDataOverride: t,
@@ -254,7 +259,9 @@ function J(e) {
                     payment_source_type: null == e2 ? void 0 : e2.type,
                 }),
             );
-            let { enabled: n } = b.u.getConfig({ location: "PaymentModal emitPaymentFlowSuccess" });
+            let { enabled: n } = b.u.getConfig({
+                location: "PaymentModal emitPaymentFlowSuccess",
+            });
             eK && null != ez && null != a && n && (0, O.W)(a) && (0, y.Yd)(ez.id);
         }, [e0, eX, eq, ez, eK, eZ, ex.startTime, e2, a]),
         e4 = i.useMemo(() => () => (null == F ? void 0 : F(eO === j.h.COMPLETED, ev)), [F, eO, ev]),
@@ -329,7 +336,9 @@ function J(e) {
         intensity: Q,
         children: (0, r.jsx)(c.EOs, {
             "data-migration-pending": !0,
-            className: s()(K.zr, eB, { [K.wf]: null != e9 }),
+            className: s()(K.zr, eB, {
+                [K.wf]: null != e9,
+            }),
             transitionState: N,
             hideShadow: eh,
             returnRef: em,
@@ -349,6 +358,7 @@ function J(e) {
         }),
     });
 }
+
 function ee(e) {
     let {
             subscriptionTier: t,
@@ -391,7 +401,11 @@ function ee(e) {
             hasFetchedSubscriptionPlans: h,
             currencyLoading: g,
         },
-        { tags: { app_context: $ } },
+        {
+            tags: {
+                app_context: $,
+            },
+        },
     ),
     i.useEffect(() => {
         if ((R || (0, d.LM)(Y.tv), T || f)) return;
@@ -419,6 +433,8 @@ function ee(e) {
     T)
         ? (0, r.jsx)(F.A, {})
         : f
-          ? (0, r.jsx)(m.oO, { onClose: o })
+          ? (0, r.jsx)(m.oO, {
+                onClose: o,
+            })
           : null;
 }

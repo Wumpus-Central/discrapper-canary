@@ -9,6 +9,7 @@ let i = (e) => {
         guildId: e,
     });
 };
+
 function a(e) {
     r.h.dispatch({
         type: "EMOJI_INTERACTION_INITIATED",

@@ -1,4 +1,6 @@
-n.d(t, { U: () => m });
+n.d(t, {
+    U: () => m,
+});
 var r = n(313961),
     i = n(652896),
     a = n(616356),
@@ -9,6 +11,7 @@ var r = n(313961),
     u = n(601900),
     d = n(548370),
     f = n(652215);
+
 function p(e, t, n) {
     return (
         t in e
@@ -22,6 +25,7 @@ function p(e, t, n) {
         e
     );
 }
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -58,7 +62,14 @@ let h = 20 * o.A.Millis.SECOND,
             return null == E
                 ? null
                 : g.short.frameRate < (0, d.s1)(E.maxFrameRate) || g.long.frameRate < (0, d.s1)(E.maxFrameRate)
-                  ? [_({ type: c.iy.STREAM_SEND_LOW_FPS }, (0, u.id)((0, i._z)(e)))]
+                  ? [
+                        _(
+                            {
+                                type: c.iy.STREAM_SEND_LOW_FPS,
+                            },
+                            (0, u.id)((0, i._z)(e)),
+                        ),
+                    ]
                   : null;
         },
         makeErrorContextKey: (e) => "".concat(e.streamKey, ":").concat(e.mediaSessionId),

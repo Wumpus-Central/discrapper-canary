@@ -14,8 +14,10 @@ function r(e, t) {
         Math.ceil(
             (Date.UTC(e, Math.floor((c + u - 7 * d + 114) / 31) - 1, ((c + u - 7 * d + 114) % 31) + 1 + t) -
                 Date.UTC(e, 0, 1)) /
-                86400000,
+                864e5,
         ),
     ];
 }
-n.d(t, { H: () => r });
+n.d(t, {
+    H: () => r,
+});

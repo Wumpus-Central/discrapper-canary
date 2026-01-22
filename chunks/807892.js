@@ -1,4 +1,6 @@
-n.d(t, { A: () => P });
+n.d(t, {
+    A: () => P,
+});
 var r = n(627968),
     i = n(64700),
     a = n(284009),
@@ -23,6 +25,7 @@ var r = n(627968),
     S = n(753070),
     I = n(985018),
     T = n(203194);
+
 function C(e, t, n) {
     return (
         t in e
@@ -36,6 +39,7 @@ function C(e, t, n) {
         e
     );
 }
+
 function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -52,6 +56,7 @@ function N(e) {
     }
     return e;
 }
+
 function R(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -64,6 +69,7 @@ function R(e, t) {
     }
     return n;
 }
+
 function w(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -75,6 +81,7 @@ function w(e, t) {
         e
     );
 }
+
 function P() {
     let e = (0, y.XT)(),
         t = (0, y.Et)(),
@@ -85,8 +92,12 @@ function P() {
         x = (0, o.bG)([_.Ay], () => _.Ay.getKeybindForAction(v.hCu.SAVE_SCREENSHOT, !0)),
         L = (0, b.A)(p.A),
         { showClipsHeaderEntrypoint: j } = m.L_.useExperiment(
-            { location: "clips_recording_settings" },
-            { autoTrackExposure: !1 },
+            {
+                location: "clips_recording_settings",
+            },
+            {
+                autoTrackExposure: !1,
+            },
         ),
         M = (0, m.BW)();
     s()(null != D, "Save clip keybind unset"), s()(null != x, "Save screenshot keybind unset");
@@ -96,17 +107,23 @@ function P() {
                 {
                     id: "30sec",
                     value: A.LX.SECONDS_30,
-                    label: I.intl.formatToPlainString(I.t["bTFv/3"], { count: 30 }),
+                    label: I.intl.formatToPlainString(I.t["bTFv/3"], {
+                        count: 30,
+                    }),
                 },
                 {
                     id: "1min",
                     value: A.LX.MINUTES_1,
-                    label: I.intl.formatToPlainString(I.t.ICo9Nk, { count: 1 }),
+                    label: I.intl.formatToPlainString(I.t.ICo9Nk, {
+                        count: 1,
+                    }),
                 },
                 {
                     id: "2min",
                     value: A.LX.MINUTES_2,
-                    label: I.intl.formatToPlainString(I.t.ICo9Nk, { count: 2 }),
+                    label: I.intl.formatToPlainString(I.t.ICo9Nk, {
+                        count: 2,
+                    }),
                 },
             ],
             [k],
@@ -116,22 +133,30 @@ function P() {
                 {
                     id: "480p",
                     value: S.on.RESOLUTION_480,
-                    label: I.intl.formatToPlainString(I.t.TEOC0I, { resolution: S.on.RESOLUTION_480 }),
+                    label: I.intl.formatToPlainString(I.t.TEOC0I, {
+                        resolution: S.on.RESOLUTION_480,
+                    }),
                 },
                 {
                     id: "720p",
                     value: S.on.RESOLUTION_720,
-                    label: I.intl.formatToPlainString(I.t.TEOC0I, { resolution: S.on.RESOLUTION_720 }),
+                    label: I.intl.formatToPlainString(I.t.TEOC0I, {
+                        resolution: S.on.RESOLUTION_720,
+                    }),
                 },
                 {
                     id: "1080p",
                     value: S.on.RESOLUTION_1080,
-                    label: I.intl.formatToPlainString(I.t.TEOC0I, { resolution: S.on.RESOLUTION_1080 }),
+                    label: I.intl.formatToPlainString(I.t.TEOC0I, {
+                        resolution: S.on.RESOLUTION_1080,
+                    }),
                 },
                 {
                     id: "1440p",
                     value: S.on.RESOLUTION_1440,
-                    label: I.intl.formatToPlainString(I.t.TEOC0I, { resolution: S.on.RESOLUTION_1440 }),
+                    label: I.intl.formatToPlainString(I.t.TEOC0I, {
+                        resolution: S.on.RESOLUTION_1440,
+                    }),
                 },
                 {
                     id: "source",
@@ -146,36 +171,52 @@ function P() {
                 {
                     id: "15fps",
                     value: S.kn.FPS_15,
-                    label: I.intl.formatToPlainString(I.t.Qb44XH, { fps: S.kn.FPS_15 }),
+                    label: I.intl.formatToPlainString(I.t.Qb44XH, {
+                        fps: S.kn.FPS_15,
+                    }),
                 },
                 {
                     id: "30fps",
                     value: S.kn.FPS_30,
-                    label: I.intl.formatToPlainString(I.t.Qb44XH, { fps: S.kn.FPS_30 }),
+                    label: I.intl.formatToPlainString(I.t.Qb44XH, {
+                        fps: S.kn.FPS_30,
+                    }),
                 },
                 {
                     id: "60fps",
                     value: S.kn.FPS_60,
-                    label: I.intl.formatToPlainString(I.t.Qb44XH, { fps: S.kn.FPS_60 }),
+                    label: I.intl.formatToPlainString(I.t.Qb44XH, {
+                        fps: S.kn.FPS_60,
+                    }),
                 },
             ],
             [k],
         ),
         F = i.useCallback(
             (e) => {
-                c.A.setKeybind(w(N({}, D), { shortcut: e }));
+                c.A.setKeybind(
+                    w(N({}, D), {
+                        shortcut: e,
+                    }),
+                );
             },
             [D],
         ),
         B = i.useCallback(
             (e) => {
-                c.A.setKeybind(w(N({}, x), { shortcut: e }));
+                c.A.setKeybind(
+                    w(N({}, x), {
+                        shortcut: e,
+                    }),
+                );
             },
             [x],
         );
     return (0, r.jsxs)(l.nVY, {
         children: [
-            (0, r.jsx)(f.A, { children: I.intl.string(I.t["Z+MfqT"]) }),
+            (0, r.jsx)(f.A, {
+                children: I.intl.string(I.t["Z+MfqT"]),
+            }),
             P === E.k9.BELOW_MINIMUM
                 ? (0, r.jsx)(f.A, {
                       look: f.k.WARNING,

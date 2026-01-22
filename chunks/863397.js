@@ -1,4 +1,6 @@
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});
 var r = {};
 r = {
     ascending: "crescente",
@@ -6,8 +8,8 @@ r = {
     columnSize: (e) => `${e.value} pixels`,
     descending: "decrescente",
     descendingSort: (e) => `classificado pela coluna ${e.columnName} em ordem decrescente`,
-    resizerDescription: "Pressione Enter para começar a redimensionar",
+    resizerDescription: "Pressione Enter para come\xe7ar a redimensionar",
     select: "Selecionar",
     selectAll: "Selecionar tudo",
-    sortable: "coluna classificável",
+    sortable: "coluna classific\xe1vel",
 };

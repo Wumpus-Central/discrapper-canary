@@ -14,7 +14,12 @@ e.exports = function (e) {
         };
     Object.assign(n, {
         className: "variable",
-        variants: [{ begin: t.concat(/\$[\w\d#@][\w\d_]*/, "(?![\\w\\d])(?![$])") }, r],
+        variants: [
+            {
+                begin: t.concat(/\$[\w\d#@][\w\d_]*/, "(?![\\w\\d])(?![$])"),
+            },
+            r,
+        ],
     });
     let i = {
             className: "subst",
@@ -24,7 +29,9 @@ e.exports = function (e) {
         },
         a = e.inherit(e.COMMENT(), {
             match: [/(^|\s)/, /#.*$/],
-            scope: { 2: "comment" },
+            scope: {
+                2: "comment",
+            },
         }),
         s = {
             begin: /<<-?\s*(?=\w+)/,
@@ -45,13 +52,17 @@ e.exports = function (e) {
             contains: [e.BACKSLASH_ESCAPE, n, i],
         };
     i.contains.push(o);
-    let l = { match: /\\"/ },
+    let l = {
+            match: /\\"/,
+        },
         c = {
             className: "string",
             begin: /'/,
             end: /'/,
         },
-        u = { match: /\\'/ },
+        u = {
+            match: /\\'/,
+        },
         d = {
             begin: /\$?\(\(/,
             end: /\)\)/,
@@ -73,10 +84,16 @@ e.exports = function (e) {
             className: "function",
             begin: /\w[\w\d_]*\s*\(\s*\)\s*\{/,
             returnBegin: !0,
-            contains: [e.inherit(e.TITLE_MODE, { begin: /\w[\w\d_]*/ })],
+            contains: [
+                e.inherit(e.TITLE_MODE, {
+                    begin: /\w[\w\d_]*/,
+                }),
+            ],
             relevance: 0,
         },
-        h = { match: /(\/[a-z._-]+)+/ };
+        h = {
+            match: /(\/[a-z._-]+)+/,
+        };
     return {
         name: "Bash",
         aliases: ["sh", "zsh"],

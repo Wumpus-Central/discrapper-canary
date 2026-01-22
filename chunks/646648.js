@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var r = n(627968);
 n(64700);
 var i = n(990078),
@@ -13,6 +15,7 @@ var i = n(990078),
     p = n(996988),
     _ = n(985018),
     h = n(380297);
+
 function m(e) {
     var t, n, m, g, E;
     let { user: b, activity: y, onAction: O } = e,
@@ -21,10 +24,20 @@ function m(e) {
         S = (0, l.J$)(y, b);
     if (!(0, o.A)(y) || (!(0, s.A)(y, f.jUm.PLAY) && !(0, s.A)(y, f.jUm.SYNC))) return null;
     let I = (e) => {
-            null == e || e.stopPropagation(), null == O || O({ action: "PRESS_PLAY_ON_SPOTIFY_BUTTON" }), v.onClick();
+            null == e || e.stopPropagation(),
+                null == O ||
+                    O({
+                        action: "PRESS_PLAY_ON_SPOTIFY_BUTTON",
+                    }),
+                v.onClick();
         },
         T = (e) => {
-            e.stopPropagation(), null == O || O({ action: "PRESS_LISTEN_ALONG_ON_SPOTIFY_BUTTON" }), S.onClick();
+            e.stopPropagation(),
+                null == O ||
+                    O({
+                        action: "PRESS_LISTEN_ALONG_ON_SPOTIFY_BUTTON",
+                    }),
+                S.onClick();
         };
     return A === p.d.MODAL_V2
         ? (0, r.jsxs)(r.Fragment, {

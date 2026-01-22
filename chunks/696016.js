@@ -66,7 +66,7 @@ let c = "alt+c",
     S = 100,
     I = (e) => "Clip - ".concat(new Date(e).toLocaleString()),
     T = 15,
-    C = 30000,
+    C = 3e4,
     N = 30,
     R = 10;
 i.A.Millis.DAY;

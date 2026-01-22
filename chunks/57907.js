@@ -1,4 +1,7 @@
-i.d(n, { A: () => A }), i(896048);
+i.d(n, {
+    A: () => A,
+}),
+    i(896048);
 var e = i(627968);
 i(64700);
 var r = i(989349),
@@ -10,11 +13,15 @@ var r = i(989349),
     u = i(867455),
     c = i(995102),
     h = i(985018);
+
 function A(t) {
     let [n, i, r] = (0, a.yK)([o.A], () => [o.A.isMuted(t.id), o.A.getMuteConfig(t.id), o.A.hasJoined(t.id)]),
         A = (0, s.M)(i);
+
     function g(n) {
-        u.A.setNotificationSettings(t, { muted: n });
+        u.A.setNotificationSettings(t, {
+            muted: n,
+        });
     }
     return r
         ? n

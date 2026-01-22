@@ -1,4 +1,6 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var i = n(627968);
 n(64700);
 var r = n(397927),
@@ -11,6 +13,7 @@ var r = n(397927),
     d = n(652215),
     g = n(488995),
     p = n(985018);
+
 function b(e) {
     let t = (0, u.aL)(),
         n = (0, o.A)(e);
@@ -48,7 +51,9 @@ function b(e) {
                                     tab: g.GlobalDiscoveryTab.APPS,
                                     newSessionState: {
                                         guildId: e.id,
-                                        entrypoint: { name: l.sW.GUILD_HEADER_POPOUT },
+                                        entrypoint: {
+                                            name: l.sW.GUILD_HEADER_POPOUT,
+                                        },
                                     },
                                 });
                             },

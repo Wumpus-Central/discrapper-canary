@@ -1,8 +1,11 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r,
     i = n(311907),
     a = n(73153),
     s = n(235079);
+
 function o(e, t, n) {
     return (
         t in e
@@ -20,6 +23,7 @@ let l = {
     soundpack: s.i.CLASSIC,
     lastSoundpackExperimentId: null,
 };
+
 function c(e) {
     let { soundpack: t, forExperimentId: n } = e;
     l = {
@@ -42,4 +46,6 @@ class u extends (r = i.Ay.PersistedStore) {
     }
 }
 o(u, "displayName", "SoundpackStore"), o(u, "persistKey", "SoundpackStore");
-let d = new u(a.h, { SET_SOUNDPACK: c });
+let d = new u(a.h, {
+    SET_SOUNDPACK: c,
+});

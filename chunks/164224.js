@@ -1,6 +1,12 @@
 e.exports = function (e) {
     let t = e.regex,
-        n = e.COMMENT("//", "$", { contains: [{ begin: /\\\n/ }] }),
+        n = e.COMMENT("//", "$", {
+            contains: [
+                {
+                    begin: /\\\n/,
+                },
+            ],
+        }),
         r = "decltype\\(auto\\)",
         i = "[a-zA-Z_]\\w*::",
         a = "<[^<>]+>",
@@ -54,7 +60,9 @@ e.exports = function (e) {
                     begin: /\\\n/,
                     relevance: 0,
                 },
-                e.inherit(c, { className: "string" }),
+                e.inherit(c, {
+                    className: "string",
+                }),
                 {
                     className: "string",
                     begin: /<.*?>/,
@@ -450,7 +458,9 @@ e.exports = function (e) {
         aliases: ["cc", "c++", "h++", "hpp", "hh", "hxx", "cxx"],
         keywords: _,
         illegal: "</",
-        classNameAliases: { "function.dispatch": "built_in" },
+        classNameAliases: {
+            "function.dispatch": "built_in",
+        },
         contains: [].concat(g, E, h, m, [
             d,
             {

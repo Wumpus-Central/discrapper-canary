@@ -146,6 +146,7 @@ e.exports = (function () {
                                                     "Super expression must either be null or a function, not " +
                                                         typeof e,
                                                 );
+
                                             function t() {
                                                 if (!(this instanceof t))
                                                     throw TypeError("Cannot call a class as a function");
@@ -165,7 +166,9 @@ e.exports = (function () {
                                                     l.base && n(a, f),
                                                     (a._type = l.name),
                                                     l.language &&
-                                                        ((a._settings = a._settings || { language: {} }),
+                                                        ((a._settings = a._settings || {
+                                                            language: {},
+                                                        }),
                                                         (a._settings.language = o.applyToDefaults(
                                                             a._settings.language,
                                                             ((r = {}),
@@ -227,7 +230,9 @@ e.exports = (function () {
                                                           value: e,
                                                           errors: o,
                                                       }
-                                                    : { value: o };
+                                                    : {
+                                                          value: o,
+                                                      };
                                             }),
                                         l.pre &&
                                             (h.prototype._base = function (e, t, r) {
@@ -242,7 +247,9 @@ e.exports = (function () {
                                                           value: e,
                                                           errors: o,
                                                       }
-                                                    : { value: o };
+                                                    : {
+                                                          value: o,
+                                                      };
                                             }),
                                         l.rules)
                                     )
@@ -475,7 +482,9 @@ e.exports = (function () {
                             return t.merge(i, r, !1, !1), u.restore(i, r, s), i;
                         }),
                         (t.deepEqual = function (r, n, i, s) {
-                            i = i || { prototype: !0 };
+                            i = i || {
+                                prototype: !0,
+                            };
                             var a = void 0 === r ? "undefined" : o(r);
                             if (a !== (void 0 === n ? "undefined" : o(n))) return !1;
                             if ("object" !== a || null === r || null === n)
@@ -618,7 +627,10 @@ e.exports = (function () {
                         }),
                         (t.reach = function (e, r, n) {
                             if (!1 === r || null == r) return e;
-                            "string" == typeof (n = n || {}) && (n = { separator: n });
+                            "string" == typeof (n = n || {}) &&
+                                (n = {
+                                    separator: n,
+                                });
                             for (var i = r.split(n.separator || "."), s = e, a = 0; a < i.length; ++a) {
                                 var c = i[a];
                                 if (
@@ -700,8 +712,8 @@ e.exports = (function () {
                         (t.abort = function (e, r) {
                             if ("test" === n.env.NODE_ENV || !0 === t.abortThrow) throw Error(e || "Unknown error");
                             var o = "";
-                            r || (o = t.displayStack(1).join("\n\t")),
-                                console.log("ABORT: " + e + "\n\t" + o),
+                            r || (o = t.displayStack(1).join("\n	")),
+                                console.log("ABORT: " + e + "\n	" + o),
                                 n.exit(1);
                         }),
                         (t.assert = function (e) {
@@ -740,7 +752,7 @@ e.exports = (function () {
                         }),
                         (t.Bench.now = function () {
                             var e = n.hrtime();
-                            return 1000 * e[0] + e[1] / 1000000;
+                            return 1e3 * e[0] + e[1] / 1e6;
                         }),
                         (t.escapeRegex = function (e) {
                             return e.replace(/[\^\$\.\*\+\-\?\=\!\:\|\\\/\(\)\[\]\{\}\,]/g, "\\$&");
@@ -846,9 +858,11 @@ e.exports = (function () {
                     var n = r(4),
                         o = r(5),
                         i = r(6);
+
                     function s() {
-                        return c.TYPED_ARRAY_SUPPORT ? 2147483647 : 1073741823;
+                        return c.TYPED_ARRAY_SUPPORT ? 0x7fffffff : 0x3fffffff;
                     }
+
                     function a(e, t) {
                         if (s() < t) throw RangeError("Invalid typed array length");
                         return (
@@ -858,6 +872,7 @@ e.exports = (function () {
                             e
                         );
                     }
+
                     function c(e, t, r) {
                         if (!c.TYPED_ARRAY_SUPPORT && !(this instanceof c)) return new c(e, t, r);
                         if ("number" == typeof e) {
@@ -867,6 +882,7 @@ e.exports = (function () {
                         }
                         return u(this, e, t, r);
                     }
+
                     function u(e, t, r, n) {
                         if ("number" == typeof t) throw TypeError('"value" argument must not be a number');
                         return "u" > typeof ArrayBuffer && t instanceof ArrayBuffer
@@ -915,21 +931,25 @@ e.exports = (function () {
                                     );
                                 })(e, t);
                     }
+
                     function l(e) {
                         if ("number" != typeof e) throw TypeError('"size" argument must be a number');
                         if (e < 0) throw RangeError('"size" argument must not be negative');
                     }
+
                     function f(e, t) {
                         if ((l(t), (e = a(e, t < 0 ? 0 : 0 | h(t))), !c.TYPED_ARRAY_SUPPORT))
                             for (var r = 0; r < t; ++r) e[r] = 0;
                         return e;
                     }
+
                     function p(e, t) {
                         var r = t.length < 0 ? 0 : 0 | h(t.length);
                         e = a(e, r);
                         for (var n = 0; n < r; n += 1) e[n] = 255 & t[n];
                         return e;
                     }
+
                     function h(e) {
                         if (e >= s())
                             throw RangeError(
@@ -937,6 +957,7 @@ e.exports = (function () {
                             );
                         return 0 | e;
                     }
+
                     function d(e, t) {
                         if (c.isBuffer(e)) return e.length;
                         if (
@@ -972,6 +993,7 @@ e.exports = (function () {
                                     (t = ("" + t).toLowerCase()), (n = !0);
                             }
                     }
+
                     function g(e, t, r) {
                         var o,
                             i,
@@ -1035,18 +1057,20 @@ e.exports = (function () {
                                     (e = (e + "").toLowerCase()), (a = !0);
                             }
                     }
+
                     function y(e, t, r) {
                         var n = e[t];
                         (e[t] = e[r]), (e[r] = n);
                     }
+
                     function v(e, t, r, n, o) {
                         if (0 === e.length) return -1;
                         if (
                             ("string" == typeof r
                                 ? ((n = r), (r = 0))
-                                : r > 2147483647
-                                  ? (r = 2147483647)
-                                  : r < -2147483648 && (r = -2147483648),
+                                : r > 0x7fffffff
+                                  ? (r = 0x7fffffff)
+                                  : r < -0x80000000 && (r = -0x80000000),
                             isNaN((r *= 1)) && (r = o ? 0 : e.length - 1),
                             r < 0 && (r = e.length + r),
                             r >= e.length)
@@ -1068,6 +1092,7 @@ e.exports = (function () {
                         }
                         throw TypeError("val must be string, number or Buffer");
                     }
+
                     function m(e, t, r, n, o) {
                         var i,
                             s = 1,
@@ -1083,6 +1108,7 @@ e.exports = (function () {
                             if (e.length < 2 || t.length < 2) return -1;
                             (s = 2), (a /= 2), (c /= 2), (r /= 2);
                         }
+
                         function u(e, t) {
                             return 1 === s ? e[t] : e.readUInt16BE(t * s);
                         }
@@ -1285,6 +1311,7 @@ e.exports = (function () {
                         (c.prototype.lastIndexOf = function (e, t, r) {
                             return v(this, e, t, r, !1);
                         });
+
                     function b(e, t, r) {
                         r = Math.min(e.length, r);
                         for (var n = [], o = t; o < r; ) {
@@ -1340,38 +1367,45 @@ e.exports = (function () {
                             d += String.fromCharCode.apply(String, p.slice(g, (g += 4096)));
                         return d;
                     }
+
                     function _(e, t, r) {
                         if (e % 1 != 0 || e < 0) throw RangeError("offset is not uint");
                         if (e + t > r) throw RangeError("Trying to access beyond buffer length");
                     }
+
                     function w(e, t, r, n, o, i) {
                         if (!c.isBuffer(e)) throw TypeError('"buffer" argument must be a Buffer instance');
                         if (t > o || t < i) throw RangeError('"value" argument is out of bounds');
                         if (r + n > e.length) throw RangeError("Index out of range");
                     }
+
                     function E(e, t, r, n) {
                         t < 0 && (t = 65535 + t + 1);
                         for (var o = 0, i = Math.min(e.length - r, 2); o < i; ++o)
                             e[r + o] = (t & (255 << (8 * (n ? o : 1 - o)))) >>> ((n ? o : 1 - o) * 8);
                     }
+
                     function x(e, t, r, n) {
-                        t < 0 && (t = 4294967295 + t + 1);
+                        t < 0 && (t = 0xffffffff + t + 1);
                         for (var o = 0, i = Math.min(e.length - r, 4); o < i; ++o)
                             e[r + o] = (t >>> ((n ? o : 3 - o) * 8)) & 255;
                     }
+
                     function j(e, t, r, n, o, i) {
                         if (r + n > e.length || r < 0) throw RangeError("Index out of range");
                     }
+
                     function O(e, t, r, n, i) {
                         return (
-                            i || j(e, t, r, 4, 3.4028234663852886e38, -3.4028234663852886e38),
+                            i || j(e, t, r, 4, 34028234663852886e22, -34028234663852886e22),
                             o.write(e, t, r, n, 23, 4),
                             r + 4
                         );
                     }
+
                     function k(e, t, r, n, i) {
                         return (
-                            i || j(e, t, r, 8, 1.7976931348623157e308, -1.7976931348623157e308),
+                            i || j(e, t, r, 8, 17976931348623157e292, -17976931348623157e292),
                             o.write(e, t, r, n, 52, 8),
                             r + 8
                         );
@@ -1493,13 +1527,13 @@ e.exports = (function () {
                         (c.prototype.readUInt32LE = function (e, t) {
                             return (
                                 t || _(e, 4, this.length),
-                                (this[e] | (this[e + 1] << 8) | (this[e + 2] << 16)) + 16777216 * this[e + 3]
+                                (this[e] | (this[e + 1] << 8) | (this[e + 2] << 16)) + 0x1000000 * this[e + 3]
                             );
                         }),
                         (c.prototype.readUInt32BE = function (e, t) {
                             return (
                                 t || _(e, 4, this.length),
-                                16777216 * this[e] + ((this[e + 1] << 16) | (this[e + 2] << 8) | this[e + 3])
+                                0x1000000 * this[e] + ((this[e + 1] << 16) | (this[e + 2] << 8) | this[e + 3])
                             );
                         }),
                         (c.prototype.readIntLE = function (e, t, r) {
@@ -1518,12 +1552,12 @@ e.exports = (function () {
                         (c.prototype.readInt16LE = function (e, t) {
                             t || _(e, 2, this.length);
                             var r = this[e] | (this[e + 1] << 8);
-                            return 32768 & r ? 4294901760 | r : r;
+                            return 32768 & r ? 0xffff0000 | r : r;
                         }),
                         (c.prototype.readInt16BE = function (e, t) {
                             t || _(e, 2, this.length);
                             var r = this[e + 1] | (this[e] << 8);
-                            return 32768 & r ? 4294901760 | r : r;
+                            return 32768 & r ? 0xffff0000 | r : r;
                         }),
                         (c.prototype.readInt32LE = function (e, t) {
                             return (
@@ -1605,7 +1639,7 @@ e.exports = (function () {
                             return (
                                 (e *= 1),
                                 (t |= 0),
-                                r || w(this, e, t, 4, 4294967295, 0),
+                                r || w(this, e, t, 4, 0xffffffff, 0),
                                 c.TYPED_ARRAY_SUPPORT
                                     ? ((this[t + 3] = e >>> 24),
                                       (this[t + 2] = e >>> 16),
@@ -1619,7 +1653,7 @@ e.exports = (function () {
                             return (
                                 (e *= 1),
                                 (t |= 0),
-                                r || w(this, e, t, 4, 4294967295, 0),
+                                r || w(this, e, t, 4, 0xffffffff, 0),
                                 c.TYPED_ARRAY_SUPPORT
                                     ? ((this[t] = e >>> 24),
                                       (this[t + 1] = e >>> 16),
@@ -1692,7 +1726,7 @@ e.exports = (function () {
                             return (
                                 (e *= 1),
                                 (t |= 0),
-                                r || w(this, e, t, 4, 2147483647, -2147483648),
+                                r || w(this, e, t, 4, 0x7fffffff, -0x80000000),
                                 c.TYPED_ARRAY_SUPPORT
                                     ? ((this[t] = 255 & e),
                                       (this[t + 1] = e >>> 8),
@@ -1706,8 +1740,8 @@ e.exports = (function () {
                             return (
                                 (e *= 1),
                                 (t |= 0),
-                                r || w(this, e, t, 4, 2147483647, -2147483648),
-                                e < 0 && (e = 4294967295 + e + 1),
+                                r || w(this, e, t, 4, 0x7fffffff, -0x80000000),
+                                e < 0 && (e = 0xffffffff + e + 1),
                                 c.TYPED_ARRAY_SUPPORT
                                     ? ((this[t] = e >>> 24),
                                       (this[t + 1] = e >>> 16),
@@ -1746,7 +1780,7 @@ e.exports = (function () {
                             var o,
                                 i = n - r;
                             if (this === e && r < t && t < n) for (o = i - 1; o >= 0; --o) e[o + t] = this[o + r];
-                            else if (i < 1000 || !c.TYPED_ARRAY_SUPPORT) for (o = 0; o < i; ++o) e[o + t] = this[o + r];
+                            else if (i < 1e3 || !c.TYPED_ARRAY_SUPPORT) for (o = 0; o < i; ++o) e[o + t] = this[o + r];
                             else Uint8Array.prototype.set.call(e, this.subarray(r, r + i), t);
                             return i;
                         }),
@@ -1782,6 +1816,7 @@ e.exports = (function () {
                             return this;
                         });
                     var S = /[^+\/0-9A-Za-z-_]/g;
+
                     function A(e, t) {
                         t = t || 1 / 0;
                         for (var r, n = e.length, o = null, i = [], s = 0; s < n; ++s) {
@@ -1816,10 +1851,12 @@ e.exports = (function () {
                         }
                         return i;
                     }
+
                     function T(e) {
                         for (var t = [], r = 0; r < e.length; ++r) t.push(255 & e.charCodeAt(r));
                         return t;
                     }
+
                     function P(e) {
                         return n.toByteArray(
                             (function (e) {
@@ -1834,6 +1871,7 @@ e.exports = (function () {
                             })(e),
                         );
                     }
+
                     function R(e, t, r, n) {
                         for (var o = 0; o < n && !(o + r >= t.length) && !(o >= e.length); ++o) t[o + r] = e[o];
                         return o;
@@ -1916,6 +1954,7 @@ e.exports = (function () {
                     ++s
                 )
                     (r[s] = i[s]), (n[i.charCodeAt(s)] = s);
+
                 function c(e) {
                     var t = e.length;
                     if (t % 4 > 0) throw Error("Invalid string. Length must be a multiple of 4");
@@ -1954,7 +1993,7 @@ e.exports = (function () {
                             u = 8 * i - o - 1,
                             l = (1 << u) - 1,
                             f = l >> 1,
-                            p = 5.960464477539062e-8 * (23 === o),
+                            p = 5960464477539062e-23 * (23 === o),
                             h = n ? 0 : i - 1,
                             d = n ? 1 : -1,
                             g = +(t < 0 || (0 === t && 1 / t < 0));
@@ -1990,9 +2029,11 @@ e.exports = (function () {
                     n,
                     o,
                     i = (e.exports = {});
+
                 function s() {
                     throw Error("setTimeout has not been defined");
                 }
+
                 function a() {
                     throw Error("clearTimeout has not been defined");
                 }
@@ -2006,6 +2047,7 @@ e.exports = (function () {
                 } catch (e) {
                     n = a;
                 }
+
                 function c(e) {
                     if (r === setTimeout) return setTimeout(e, 0);
                     if ((r === s || !r) && setTimeout) return (r = setTimeout), setTimeout(e, 0);
@@ -2022,9 +2064,11 @@ e.exports = (function () {
                 var u = [],
                     l = !1,
                     f = -1;
+
                 function p() {
                     l && o && ((l = !1), o.length ? (u = o.concat(u)) : (f = -1), u.length && h());
                 }
+
                 function h() {
                     if (!l) {
                         var e = c(p);
@@ -2050,9 +2094,11 @@ e.exports = (function () {
                             })(e);
                     }
                 }
+
                 function d(e, t) {
                     (this.fun = e), (this.array = t);
                 }
+
                 function g() {}
                 (i.nextTick = function (e) {
                     var t = Array(arguments.length - 1);
@@ -2107,6 +2153,7 @@ e.exports = (function () {
                         o = function (e) {
                             return n.exec(e).slice(1);
                         };
+
                     function i(e, t) {
                         if (e.filter) return e.filter(t);
                         for (var r = [], n = 0; n < e.length; n++) t(e[n], n, e) && r.push(e[n]);
@@ -2258,6 +2305,7 @@ e.exports = (function () {
                             };
                         });
                     var s = {};
+
                     function a(e, r) {
                         var n = {
                             seen: [],
@@ -2275,13 +2323,16 @@ e.exports = (function () {
                             l(n, e, n.depth)
                         );
                     }
+
                     function c(e, t) {
                         var r = a.styles[t];
-                        return r ? "\x1B[" + a.colors[r][0] + "m" + e + "\x1B[" + a.colors[r][1] + "m" : e;
+                        return r ? "\x1b[" + a.colors[r][0] + "m" + e + "\x1b[" + a.colors[r][1] + "m" : e;
                     }
+
                     function u(e, t) {
                         return e;
                     }
+
                     function l(e, r, n) {
                         if (
                             e.customInspect &&
@@ -2383,13 +2434,17 @@ e.exports = (function () {
                                 : s[0] + i + " " + o.join(", ") + " " + s[1]
                         );
                     }
+
                     function f(e) {
                         return "[" + Error.prototype.toString.call(e) + "]";
                     }
+
                     function p(e, t, r, n, o, i) {
                         var s, a, c;
                         if (
-                            ((c = Object.getOwnPropertyDescriptor(t, o) || { value: t[o] }).get
+                            ((c = Object.getOwnPropertyDescriptor(t, o) || {
+                                value: t[o],
+                            }).get
                                 ? (a = c.set
                                       ? e.stylize("[Getter/Setter]", "special")
                                       : e.stylize("[Getter]", "special"))
@@ -2427,42 +2482,55 @@ e.exports = (function () {
                         }
                         return s + ": " + a;
                     }
+
                     function h(e) {
                         return Array.isArray(e);
                     }
+
                     function d(e) {
                         return "boolean" == typeof e;
                     }
+
                     function g(e) {
                         return null === e;
                     }
+
                     function y(e) {
                         return "number" == typeof e;
                     }
+
                     function v(e) {
                         return "string" == typeof e;
                     }
+
                     function m(e) {
                         return void 0 === e;
                     }
+
                     function b(e) {
                         return _(e) && "[object RegExp]" === j(e);
                     }
+
                     function _(e) {
                         return "object" == typeof e && null !== e;
                     }
+
                     function w(e) {
                         return _(e) && "[object Date]" === j(e);
                     }
+
                     function E(e) {
                         return _(e) && ("[object Error]" === j(e) || e instanceof Error);
                     }
+
                     function x(e) {
                         return "function" == typeof e;
                     }
+
                     function j(e) {
                         return Object.prototype.toString.call(e);
                     }
+
                     function O(e) {
                         return e < 10 ? "0" + e.toString(10) : e.toString(10);
                     }
@@ -2532,6 +2600,7 @@ e.exports = (function () {
                         }),
                         (t.isBuffer = r(11));
                     var k = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
                     function S(e, t) {
                         return Object.prototype.hasOwnProperty.call(e, t);
                     }
@@ -2682,7 +2751,9 @@ e.exports = (function () {
                     a = r(16),
                     c = null,
                     u = null,
-                    l = { Set: r(18) };
+                    l = {
+                        Set: r(18),
+                    };
                 (l.defaults = {
                     abortEarly: !0,
                     convert: !0,
@@ -2949,7 +3020,9 @@ e.exports = (function () {
                                         });
                                     return (
                                         (a._flags.presence = "ignore"),
-                                        (a._settings = l.concatSettings(a._settings, { baseType: this })),
+                                        (a._settings = l.concatSettings(a._settings, {
+                                            baseType: this,
+                                        })),
                                         a
                                     );
                                 }),
@@ -3090,7 +3163,11 @@ e.exports = (function () {
                                         (u.push(
                                             this.createError(
                                                 "any.allowOnly",
-                                                { valids: this._valids.values({ stripUndefined: !0 }) },
+                                                {
+                                                    valids: this._valids.values({
+                                                        stripUndefined: !0,
+                                                    }),
+                                                },
                                                 t,
                                                 r,
                                             ),
@@ -3125,7 +3202,9 @@ e.exports = (function () {
                                 }),
                                 (e.prototype.describe = function () {
                                     var e = this,
-                                        t = { type: this._type },
+                                        t = {
+                                            type: this._type,
+                                        },
                                         r = Object.keys(this._flags);
                                     if (r.length)
                                         if (
@@ -3166,7 +3245,9 @@ e.exports = (function () {
                                         (t.rules = []);
                                     for (var c = 0; c < this._tests.length; ++c) {
                                         var u = this._tests[c],
-                                            l = { name: u.name };
+                                            l = {
+                                                name: u.name,
+                                            };
                                         void 0 !== u.arg && (l.arg = s.isRef(u.arg) ? u.arg.toString() : u.arg);
                                         var f = u.options;
                                         if (f) {
@@ -3400,9 +3481,9 @@ e.exports = (function () {
                         };
                     }),
                     (s.annotate = function (e) {
-                        var t = e ? "" : "\x1B[31m",
-                            r = e ? "" : "\x1B[41m",
-                            i = e ? "" : "\x1B[0m";
+                        var t = e ? "" : "\x1b[31m",
+                            r = e ? "" : "\x1b[41m",
+                            i = e ? "" : "\x1b[0m";
                         if ("object" !== n(this._object)) return this.details[0].message;
                         for (var a = o.clone(this._object || {}), c = {}, u = this.details.length - 1; u >= 0; --u)
                             for (
@@ -3462,7 +3543,9 @@ e.exports = (function () {
                 t.errors = {
                     root: "value",
                     key: '"{{!key}}" ',
-                    messages: { wrapArrays: !0 },
+                    messages: {
+                        wrapArrays: !0,
+                    },
                     any: {
                         unknown: "is not allowed",
                         invalid: "contains an invalid value",
@@ -3471,7 +3554,9 @@ e.exports = (function () {
                         allowOnly: "must be one of {{valids}}",
                         default: "threw an error when running default method",
                     },
-                    alternatives: { base: "not matching any of the allowed alternatives" },
+                    alternatives: {
+                        base: "not matching any of the allowed alternatives",
+                    },
                     array: {
                         base: "must be an array",
                         includes: "at position {{pos}} does not match any of the allowed types",
@@ -3492,7 +3577,9 @@ e.exports = (function () {
                         sparse: "must not be a sparse array",
                         unique: "position {{pos}} contains a duplicate value",
                     },
-                    boolean: { base: "must be a boolean" },
+                    boolean: {
+                        base: "must be a boolean",
+                    },
                     binary: {
                         base: "must be a buffer or a string",
                         min: "must be at least {{limit}} bytes",
@@ -3752,6 +3839,7 @@ e.exports = (function () {
                     (a.Date = (function (e) {
                         if ("function" != typeof e && null !== e)
                             throw TypeError("Super expression must either be null or a function, not " + typeof e);
+
                         function t() {
                             if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
                             var r = (function (e, t) {
@@ -3832,7 +3920,7 @@ e.exports = (function () {
                                 var t = ["javascript", "unix"];
                                 s.assert(-1 !== t.indexOf(e), '"type" must be one of "' + t.join('", "') + '"');
                                 var r = this.clone();
-                                return (r._flags.timestamp = e), (r._flags.multiplier = "unix" === e ? 1000 : 1), r;
+                                return (r._flags.timestamp = e), (r._flags.multiplier = "unix" === e ? 1e3 : 1), r;
                             }),
                             (t.prototype._isIsoDate = function (e) {
                                 return a.isoDate.test(e);
@@ -3852,12 +3940,26 @@ e.exports = (function () {
                                     if (n) u = Date.now();
                                     else if (o) {
                                         if (!(u = a.Date.toDate(r(s.reference || s.parent, c))))
-                                            return this.createError("date.ref", { ref: r.key }, s, c);
+                                            return this.createError(
+                                                "date.ref",
+                                                {
+                                                    ref: r.key,
+                                                },
+                                                s,
+                                                c,
+                                            );
                                         u = u.getTime();
                                     } else u = r.getTime();
                                     return t(i.getTime(), u)
                                         ? i
-                                        : this.createError("date." + e, { limit: new Date(u) }, s, c);
+                                        : this.createError(
+                                              "date." + e,
+                                              {
+                                                  limit: new Date(u),
+                                              },
+                                              s,
+                                              c,
+                                          );
                                 })
                             );
                         };
@@ -3900,6 +4002,7 @@ e.exports = (function () {
                     (p.String = (function (e) {
                         if ("function" != typeof e && null !== e)
                             throw TypeError("Super expression must either be null or a function, not " + typeof e);
+
                         function t() {
                             if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
                             var r = (function (e, t) {
@@ -3957,7 +4060,14 @@ e.exports = (function () {
                                     errors:
                                         "string" == typeof e
                                             ? null
-                                            : this.createError("string.base", { value: e }, t, r),
+                                            : this.createError(
+                                                  "string.base",
+                                                  {
+                                                      value: e,
+                                                  },
+                                                  t,
+                                                  r,
+                                              ),
                                 };
                             }),
                             (t.prototype.insensitive = function () {
@@ -3972,12 +4082,21 @@ e.exports = (function () {
                                     }
                                     return o % 10 == 0 && o > 0
                                         ? e
-                                        : this.createError("string.creditCard", { value: e }, t, r);
+                                        : this.createError(
+                                              "string.creditCard",
+                                              {
+                                                  value: e,
+                                              },
+                                              t,
+                                              r,
+                                          );
                                 });
                             }),
                             (t.prototype.regex = function (e, t) {
                                 i.assert(e instanceof RegExp, "pattern must be a RegExp");
-                                var r = { pattern: new RegExp(e.source, e.ignoreCase ? "i" : void 0) };
+                                var r = {
+                                    pattern: new RegExp(e.source, e.ignoreCase ? "i" : void 0),
+                                };
                                 "string" == typeof t
                                     ? (r.name = t)
                                     : (void 0 === t ? "undefined" : n(t)) === "object" &&
@@ -4002,12 +4121,28 @@ e.exports = (function () {
                                 return this._test("alphanum", void 0, function (e, t, r) {
                                     return /^[a-zA-Z0-9]+$/.test(e)
                                         ? e
-                                        : this.createError("string.alphanum", { value: e }, t, r);
+                                        : this.createError(
+                                              "string.alphanum",
+                                              {
+                                                  value: e,
+                                              },
+                                              t,
+                                              r,
+                                          );
                                 });
                             }),
                             (t.prototype.token = function () {
                                 return this._test("token", void 0, function (e, t, r) {
-                                    return /^\w+$/.test(e) ? e : this.createError("string.token", { value: e }, t, r);
+                                    return /^\w+$/.test(e)
+                                        ? e
+                                        : this.createError(
+                                              "string.token",
+                                              {
+                                                  value: e,
+                                              },
+                                              t,
+                                              r,
+                                          );
                                 });
                             }),
                             (t.prototype.email = function (e) {
@@ -4038,7 +4173,14 @@ e.exports = (function () {
                                             var o = s.validate(t, e);
                                             if (!0 === o || 0 === o) return t;
                                         } catch (e) {}
-                                        return this.createError("string.email", { value: t }, r, n);
+                                        return this.createError(
+                                            "string.email",
+                                            {
+                                                value: t,
+                                            },
+                                            r,
+                                            n,
+                                        );
                                     })
                                 );
                             }),
@@ -4159,7 +4301,14 @@ e.exports = (function () {
                                         return s.test(e)
                                             ? e
                                             : o
-                                              ? this.createError("string.uriRelativeOnly", { value: e }, r, n)
+                                              ? this.createError(
+                                                    "string.uriRelativeOnly",
+                                                    {
+                                                        value: e,
+                                                    },
+                                                    r,
+                                                    n,
+                                                )
                                               : t
                                                 ? this.createError(
                                                       "string.uriCustomScheme",
@@ -4170,13 +4319,29 @@ e.exports = (function () {
                                                       r,
                                                       n,
                                                   )
-                                                : this.createError("string.uri", { value: e }, r, n);
+                                                : this.createError(
+                                                      "string.uri",
+                                                      {
+                                                          value: e,
+                                                      },
+                                                      r,
+                                                      n,
+                                                  );
                                     })
                                 );
                             }),
                             (t.prototype.isoDate = function () {
                                 return this._test("isoDate", void 0, function (e, t, r) {
-                                    return u._isIsoDate(e) ? e : this.createError("string.isoDate", { value: e }, t, r);
+                                    return u._isIsoDate(e)
+                                        ? e
+                                        : this.createError(
+                                              "string.isoDate",
+                                              {
+                                                  value: e,
+                                              },
+                                              t,
+                                              r,
+                                          );
                                 });
                             }),
                             (t.prototype.guid = function (e) {
@@ -4236,19 +4401,44 @@ e.exports = (function () {
                                             }) &&
                                                 /[89AB]/i.test(s[8][0])))
                                         ? e
-                                        : this.createError("string.guid", { value: e }, o, i);
+                                        : this.createError(
+                                              "string.guid",
+                                              {
+                                                  value: e,
+                                              },
+                                              o,
+                                              i,
+                                          );
                                 });
                             }),
                             (t.prototype.hex = function () {
                                 var e = /^[a-f0-9]+$/i;
                                 return this._test("hex", e, function (t, r, n) {
-                                    return e.test(t) ? t : this.createError("string.hex", { value: t }, r, n);
+                                    return e.test(t)
+                                        ? t
+                                        : this.createError(
+                                              "string.hex",
+                                              {
+                                                  value: t,
+                                              },
+                                              r,
+                                              n,
+                                          );
                                 });
                             }),
                             (t.prototype.base64 = function () {
                                 var e = /^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/;
                                 return this._test("base64", e, function (t, r, n) {
-                                    return e.test(t) ? t : this.createError("string.base64", { value: t }, r, n);
+                                    return e.test(t)
+                                        ? t
+                                        : this.createError(
+                                              "string.base64",
+                                              {
+                                                  value: t,
+                                              },
+                                              r,
+                                              n,
+                                          );
                                 });
                             }),
                             (t.prototype.hostname = function () {
@@ -4257,14 +4447,28 @@ e.exports = (function () {
                                 return this._test("hostname", void 0, function (t, r, n) {
                                     return (t.length <= 255 && e.test(t)) || o.isIPv6(t)
                                         ? t
-                                        : this.createError("string.hostname", { value: t }, r, n);
+                                        : this.createError(
+                                              "string.hostname",
+                                              {
+                                                  value: t,
+                                              },
+                                              r,
+                                              n,
+                                          );
                                 });
                             }),
                             (t.prototype.lowercase = function () {
                                 var e = this._test("lowercase", void 0, function (e, t, r) {
                                     return r.convert || e === e.toLocaleLowerCase()
                                         ? e
-                                        : this.createError("string.lowercase", { value: e }, t, r);
+                                        : this.createError(
+                                              "string.lowercase",
+                                              {
+                                                  value: e,
+                                              },
+                                              t,
+                                              r,
+                                          );
                                 });
                                 return (e._flags.case = "lower"), e;
                             }),
@@ -4272,7 +4476,14 @@ e.exports = (function () {
                                 var e = this._test("uppercase", void 0, function (e, t, r) {
                                     return r.convert || e === e.toLocaleUpperCase()
                                         ? e
-                                        : this.createError("string.uppercase", { value: e }, t, r);
+                                        : this.createError(
+                                              "string.uppercase",
+                                              {
+                                                  value: e,
+                                              },
+                                              t,
+                                              r,
+                                          );
                                 });
                                 return (e._flags.case = "upper"), e;
                             }),
@@ -4280,7 +4491,14 @@ e.exports = (function () {
                                 var e = this._test("trim", void 0, function (e, t, r) {
                                     return r.convert || e === e.trim()
                                         ? e
-                                        : this.createError("string.trim", { value: e }, t, r);
+                                        : this.createError(
+                                              "string.trim",
+                                              {
+                                                  value: e,
+                                              },
+                                              t,
+                                              r,
+                                          );
                                 });
                                 return (e._flags.trim = !0), e;
                             }),
@@ -4318,7 +4536,14 @@ e.exports = (function () {
                                         var u = void 0;
                                         if (s) {
                                             if (((u = n(a.reference || a.parent, c)), !i.isInteger(u)))
-                                                return this.createError("string.ref", { ref: n.key }, a, c);
+                                                return this.createError(
+                                                    "string.ref",
+                                                    {
+                                                        ref: n.key,
+                                                    },
+                                                    a,
+                                                    c,
+                                                );
                                         } else u = n;
                                         return r(t, u, o)
                                             ? t
@@ -4585,7 +4810,7 @@ e.exports = (function () {
                                                         break;
                                                     }
                                                 case " ":
-                                                case "\t":
+                                                case "	":
                                                     0 === v
                                                         ? l(0 === y ? i.diagnoses.cfwsFWS : i.diagnoses.deprecatedFWS)
                                                         : (w = !0),
@@ -4681,7 +4906,7 @@ e.exports = (function () {
                                                         break;
                                                     }
                                                 case " ":
-                                                case "\t":
+                                                case "	":
                                                     0 === v
                                                         ? l(
                                                               0 === y
@@ -4780,7 +5005,7 @@ e.exports = (function () {
                                                         break;
                                                     }
                                                 case " ":
-                                                case "\t":
+                                                case "	":
                                                     l(i.diagnoses.cfwsFWS),
                                                         f.stack.push(f.now),
                                                         (f.now = i.components.contextFWS),
@@ -4809,7 +5034,7 @@ e.exports = (function () {
                                                         l(i.diagnoses.errCRNoLF);
                                                         break;
                                                     }
-                                                case "\t":
+                                                case "	":
                                                     (h.local += " "),
                                                         (d[y] += " "),
                                                         ++v,
@@ -4875,7 +5100,7 @@ e.exports = (function () {
                                                         break;
                                                     }
                                                 case " ":
-                                                case "\t":
+                                                case "	":
                                                     l(i.diagnoses.cfwsFWS),
                                                         f.stack.push(f.now),
                                                         (f.now = i.components.contextFWS),
@@ -4900,7 +5125,7 @@ e.exports = (function () {
                                                     (E === ++j || "\n" !== e[j]) && l(i.diagnoses.errCRNoLF);
                                                     break;
                                                 case " ":
-                                                case "\t":
+                                                case "	":
                                                     break;
                                                 default:
                                                     "\r" === p && l(i.diagnoses.errFWSCRLFEnd),
@@ -4998,7 +5223,9 @@ e.exports = (function () {
                 };
             },
             function (e, t) {
-                var r = { rfc3986: {} };
+                var r = {
+                    rfc3986: {},
+                };
                 (r.generate = function () {
                     var e = "[0-9]",
                         t = "a-zA-Z";
@@ -5101,10 +5328,13 @@ e.exports = (function () {
                 var n = r(14),
                     o = r(15),
                     i = r(2),
-                    s = { precisionRx: /(?:\.(\d+))?(?:[eE]([+-]?\d+))?$/ };
+                    s = {
+                        precisionRx: /(?:\.(\d+))?(?:[eE]([+-]?\d+))?$/,
+                    };
                 (s.Number = (function (e) {
                     if ("function" != typeof e && null !== e)
                         throw TypeError("Super expression must either be null or a function, not " + typeof e);
+
                     function t() {
                         if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
                         var r = (function (e, t) {
@@ -5157,7 +5387,14 @@ e.exports = (function () {
                                 this._test("multiple", e, function (r, n, o) {
                                     var i = t ? e(n.reference || n.parent, o) : e;
                                     return t && ("number" != typeof i || !isFinite(i))
-                                        ? this.createError("number.ref", { ref: e.key }, n, o)
+                                        ? this.createError(
+                                              "number.ref",
+                                              {
+                                                  ref: e.key,
+                                              },
+                                              n,
+                                              o,
+                                          )
                                         : r % i == 0
                                           ? r
                                           : this.createError(
@@ -5174,17 +5411,44 @@ e.exports = (function () {
                         }),
                         (t.prototype.integer = function () {
                             return this._test("integer", void 0, function (e, t, r) {
-                                return i.isInteger(e) ? e : this.createError("number.integer", { value: e }, t, r);
+                                return i.isInteger(e)
+                                    ? e
+                                    : this.createError(
+                                          "number.integer",
+                                          {
+                                              value: e,
+                                          },
+                                          t,
+                                          r,
+                                      );
                             });
                         }),
                         (t.prototype.negative = function () {
                             return this._test("negative", void 0, function (e, t, r) {
-                                return e < 0 ? e : this.createError("number.negative", { value: e }, t, r);
+                                return e < 0
+                                    ? e
+                                    : this.createError(
+                                          "number.negative",
+                                          {
+                                              value: e,
+                                          },
+                                          t,
+                                          r,
+                                      );
                             });
                         }),
                         (t.prototype.positive = function () {
                             return this._test("positive", void 0, function (e, t, r) {
-                                return e > 0 ? e : this.createError("number.positive", { value: e }, t, r);
+                                return e > 0
+                                    ? e
+                                    : this.createError(
+                                          "number.positive",
+                                          {
+                                              value: e,
+                                          },
+                                          t,
+                                          r,
+                                      );
                             });
                         }),
                         (t.prototype.precision = function (e) {
@@ -5219,7 +5483,14 @@ e.exports = (function () {
                                     var a = void 0;
                                     if (n) {
                                         if (!("number" == typeof (a = r(i.reference || i.parent, s)) && !isNaN(a)))
-                                            return this.createError("number.ref", { ref: r.key }, i, s);
+                                            return this.createError(
+                                                "number.ref",
+                                                {
+                                                    ref: r.key,
+                                                },
+                                                i,
+                                                s,
+                                            );
                                     } else a = r;
                                     return t(o, a)
                                         ? o
@@ -5253,10 +5524,13 @@ e.exports = (function () {
             function (e, t, r) {
                 var n = r(14),
                     o = r(2),
-                    i = { Set: r(18) };
+                    i = {
+                        Set: r(18),
+                    };
                 (i.Boolean = (function (e) {
                     if ("function" != typeof e && null !== e)
                         throw TypeError("Super expression must either be null or a function, not " + typeof e);
+
                     function t() {
                         if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
                         var r = (function (e, t) {
@@ -5291,7 +5565,9 @@ e.exports = (function () {
                                       }
                                   })(t, e)),
                         (t.prototype._base = function (e, t, r) {
-                            var n = { value: e };
+                            var n = {
+                                value: e,
+                            };
                             return (
                                 (n.value =
                                     !!this._inner.truthySet.has(e, null, null, this._flags.insensitive) ||
@@ -5366,6 +5642,7 @@ e.exports = (function () {
                 (c.Alternatives = (function (e) {
                     if ("function" != typeof e && null !== e)
                         throw TypeError("Super expression must either be null or a function, not " + typeof e);
+
                     function t() {
                         if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
                         var r = (function (e, t) {
@@ -5415,7 +5692,9 @@ e.exports = (function () {
                                 if (!u.errors) return u;
                                 n = n.concat(u.errors);
                             }
-                            return { errors: n.length ? n : this.createError("alternatives.base", null, t, r) };
+                            return {
+                                errors: n.length ? n : this.createError("alternatives.base", null, t, r),
+                            };
                         }),
                         (t.prototype.try = function () {
                             var e = o.flatten(Array.prototype.slice.call(arguments));
@@ -5423,7 +5702,9 @@ e.exports = (function () {
                             for (var t = this.clone(), r = 0; r < e.length; ++r) {
                                 var n = s.schema(e[r]);
                                 n._refs.length && (t._refs = t._refs.concat(n._refs)),
-                                    t._inner.matches.push({ schema: n });
+                                    t._inner.matches.push({
+                                        schema: n,
+                                    });
                             }
                             return t;
                         }),
@@ -5507,6 +5788,7 @@ e.exports = (function () {
                 (l.Object = (function (e) {
                     if ("function" != typeof e && null !== e)
                         throw TypeError("Super expression must either be null or a function, not " + typeof e);
+
                     function t() {
                         if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
                         var r = (function (e, t) {
@@ -5714,7 +5996,9 @@ e.exports = (function () {
                                         s.push(
                                             this.createError(
                                                 "object.allowUnknown",
-                                                { child: L },
+                                                {
+                                                    child: L,
+                                                },
                                                 {
                                                     key: L,
                                                     path: t.path + (t.path ? "." : "") + L,
@@ -5796,7 +6080,14 @@ e.exports = (function () {
                                 this._test("length", e, function (t, r, n) {
                                     return Object.keys(t).length === e
                                         ? t
-                                        : this.createError("object.length", { limit: e }, r, n);
+                                        : this.createError(
+                                              "object.length",
+                                              {
+                                                  limit: e,
+                                              },
+                                              r,
+                                              n,
+                                          );
                                 })
                             );
                         }),
@@ -5804,7 +6095,16 @@ e.exports = (function () {
                             return (
                                 o.assert(o.isInteger(e) && e >= 0, "n must be a positive integer"),
                                 this._test("arity", e, function (t, r, n) {
-                                    return t.length === e ? t : this.createError("function.arity", { n: e }, r, n);
+                                    return t.length === e
+                                        ? t
+                                        : this.createError(
+                                              "function.arity",
+                                              {
+                                                  n: e,
+                                              },
+                                              r,
+                                              n,
+                                          );
                                 })
                             );
                         }),
@@ -5812,7 +6112,16 @@ e.exports = (function () {
                             return (
                                 o.assert(o.isInteger(e) && e > 0, "n must be a strict positive integer"),
                                 this._test("minArity", e, function (t, r, n) {
-                                    return t.length >= e ? t : this.createError("function.minArity", { n: e }, r, n);
+                                    return t.length >= e
+                                        ? t
+                                        : this.createError(
+                                              "function.minArity",
+                                              {
+                                                  n: e,
+                                              },
+                                              r,
+                                              n,
+                                          );
                                 })
                             );
                         }),
@@ -5820,7 +6129,16 @@ e.exports = (function () {
                             return (
                                 o.assert(o.isInteger(e) && e >= 0, "n must be a positive integer"),
                                 this._test("maxArity", e, function (t, r, n) {
-                                    return t.length <= e ? t : this.createError("function.maxArity", { n: e }, r, n);
+                                    return t.length <= e
+                                        ? t
+                                        : this.createError(
+                                              "function.maxArity",
+                                              {
+                                                  n: e,
+                                              },
+                                              r,
+                                              n,
+                                          );
                                 })
                             );
                         }),
@@ -5830,7 +6148,14 @@ e.exports = (function () {
                                 this._test("min", e, function (t, r, n) {
                                     return Object.keys(t).length >= e
                                         ? t
-                                        : this.createError("object.min", { limit: e }, r, n);
+                                        : this.createError(
+                                              "object.min",
+                                              {
+                                                  limit: e,
+                                              },
+                                              r,
+                                              n,
+                                          );
                                 })
                             );
                         }),
@@ -5840,7 +6165,14 @@ e.exports = (function () {
                                 this._test("max", e, function (t, r, n) {
                                     return Object.keys(t).length <= e
                                         ? t
-                                        : this.createError("object.max", { limit: e }, r, n);
+                                        : this.createError(
+                                              "object.max",
+                                              {
+                                                  limit: e,
+                                              },
+                                              r,
+                                              n,
+                                          );
                                 })
                             );
                         }),
@@ -6041,7 +6373,16 @@ e.exports = (function () {
                                 ctor: e,
                             };
                             return this._test("type", r, function (t, n, o) {
-                                return t instanceof e ? t : this.createError("object.type", { type: r.name }, n, o);
+                                return t instanceof e
+                                    ? t
+                                    : this.createError(
+                                          "object.type",
+                                          {
+                                              type: r.name,
+                                          },
+                                          n,
+                                          o,
+                                      );
                             });
                         }),
                         (t.prototype.ref = function () {
@@ -6078,7 +6419,14 @@ e.exports = (function () {
                         for (var i = 0; i < t.length; ++i) {
                             var s = t[i];
                             if (!Object.prototype.hasOwnProperty.call(r, s) || void 0 === r[s])
-                                return this.createError("object.with", { peer: s }, n, o);
+                                return this.createError(
+                                    "object.with",
+                                    {
+                                        peer: s,
+                                    },
+                                    n,
+                                    o,
+                                );
                         }
                         return e;
                     }),
@@ -6087,7 +6435,14 @@ e.exports = (function () {
                         for (var i = 0; i < t.length; ++i) {
                             var s = t[i];
                             if (Object.prototype.hasOwnProperty.call(r, s) && void 0 !== r[s])
-                                return this.createError("object.without", { peer: s }, n, o);
+                                return this.createError(
+                                    "object.without",
+                                    {
+                                        peer: s,
+                                    },
+                                    n,
+                                    o,
+                                );
                         }
                         return e;
                     }),
@@ -6099,15 +6454,36 @@ e.exports = (function () {
                         return 1 === i.length
                             ? e
                             : 0 === i.length
-                              ? this.createError("object.missing", { peers: t }, n, o)
-                              : this.createError("object.xor", { peers: t }, n, o);
+                              ? this.createError(
+                                    "object.missing",
+                                    {
+                                        peers: t,
+                                    },
+                                    n,
+                                    o,
+                                )
+                              : this.createError(
+                                    "object.xor",
+                                    {
+                                        peers: t,
+                                    },
+                                    n,
+                                    o,
+                                );
                     }),
                     (l.or = function (e, t, r, n, o) {
                         for (var i = 0; i < t.length; ++i) {
                             var s = t[i];
                             if (Object.prototype.hasOwnProperty.call(r, s) && void 0 !== r[s]) return e;
                         }
-                        return this.createError("object.missing", { peers: t }, n, o);
+                        return this.createError(
+                            "object.missing",
+                            {
+                                peers: t,
+                            },
+                            n,
+                            o,
+                        );
                     }),
                     (l.and = function (e, t, r, n, o) {
                         for (var i = [], s = [], a = t.length, c = 0; c < a; ++c) {
@@ -6303,6 +6679,7 @@ e.exports = (function () {
                 (i.Lazy = (function (e) {
                     if ("function" != typeof e && null !== e)
                         throw TypeError("Super expression must either be null or a function, not " + typeof e);
+
                     function t() {
                         if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
                         var r = (function (e, t) {
@@ -6331,7 +6708,9 @@ e.exports = (function () {
                                       }
                                   })(t, e)),
                         (t.prototype._base = function (e, t, r) {
-                            var o = { value: e },
+                            var o = {
+                                    value: e,
+                                },
                                 i = this._flags.lazy;
                             if (!i) return (o.errors = this.createError("lazy.base", null, t, r)), o;
                             var s = i();
@@ -6374,6 +6753,7 @@ e.exports = (function () {
                     (a.Array = (function (e) {
                         if ("function" != typeof e && null !== e)
                             throw TypeError("Super expression must either be null or a function, not " + typeof e);
+
                         function t() {
                             if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
                             var r = (function (e, t) {
@@ -6412,7 +6792,9 @@ e.exports = (function () {
                                           }
                                       })(t, e)),
                             (t.prototype._base = function (e, t, r) {
-                                var n = { value: e };
+                                var n = {
+                                    value: e,
+                                };
                                 "string" == typeof e && r.convert && a.safeParse(e, n);
                                 var o = Array.isArray(n.value),
                                     i = o;
@@ -6877,7 +7259,9 @@ e.exports = (function () {
                                         : e.push(
                                               this.createError(
                                                   "array.includesRequiredKnowns",
-                                                  { knownMisses: o },
+                                                  {
+                                                      knownMisses: o,
+                                                  },
                                                   {
                                                       key: r.key,
                                                       path: r.path,
@@ -6888,7 +7272,9 @@ e.exports = (function () {
                                     : e.push(
                                           this.createError(
                                               "array.includesRequiredUnknowns",
-                                              { unknownMisses: i },
+                                              {
+                                                  unknownMisses: i,
+                                              },
                                               {
                                                   key: r.key,
                                                   path: r.path,
@@ -6921,6 +7307,7 @@ e.exports = (function () {
                     (i.Binary = (function (e) {
                         if ("function" != typeof e && null !== e)
                             throw TypeError("Super expression must either be null or a function, not " + typeof e);
+
                         function r() {
                             if (!(this instanceof r)) throw TypeError("Cannot call a class as a function");
                             var t = (function (e, t) {
@@ -6950,7 +7337,9 @@ e.exports = (function () {
                                           }
                                       })(r, e)),
                             (r.prototype._base = function (e, r, n) {
-                                var o = { value: e };
+                                var o = {
+                                    value: e,
+                                };
                                 if ("string" == typeof e && n.convert)
                                     try {
                                         o.value = new t(e, this._flags.encoding);
@@ -7073,7 +7462,9 @@ e.exports = (function () {
                     _shrinkwrap: null,
                     _spec: "joi@10.0.5",
                     _where: "/Users/jeff/projects/joi-browser",
-                    bugs: { url: "https://github.com/hapijs/joi/issues" },
+                    bugs: {
+                        url: "https://github.com/hapijs/joi/issues",
+                    },
                     dependencies: {
                         hoek: "4.x.x",
                         isemail: "2.x.x",
@@ -7091,7 +7482,9 @@ e.exports = (function () {
                         shasum: "2e43af9bf24d2d5745852e9ab968c85be357bd6a",
                         tarball: "https://registry.npmjs.org/joi/-/joi-10.0.5.tgz",
                     },
-                    engines: { node: ">=4.0.0" },
+                    engines: {
+                        node: ">=4.0.0",
+                    },
                     gitHead: "abfe727885af779a676e6a205ee15cdc8b435691",
                     homepage: "https://github.com/hapijs/joi",
                     keywords: ["hapi", "schema", "validation"],
@@ -7126,6 +7519,7 @@ e.exports = (function () {
             },
         ],
         t = {};
+
     function r(n) {
         if (t[n]) return t[n].exports;
         var o = (t[n] = {

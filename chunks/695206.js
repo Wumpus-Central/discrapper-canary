@@ -1,4 +1,7 @@
-n.d(t, { A: () => v }), n(801541);
+n.d(t, {
+    A: () => v,
+}),
+    n(801541);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -12,6 +15,7 @@ var r = n(627968),
     p = n(789646),
     _ = n(431174),
     h = n(744180);
+
 function m(e, t, n) {
     return (
         t in e
@@ -25,6 +29,7 @@ function m(e, t, n) {
         e
     );
 }
+
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -41,6 +46,7 @@ function g(e) {
     }
     return e;
 }
+
 function E(e) {
     let { media: t } = e;
     return (0, r.jsx)(c.Heading, {
@@ -50,6 +56,7 @@ function E(e) {
         children: t.text,
     });
 }
+
 function b(e) {
     let { buttonLabel: t, secondaryLabel: n, handleClick: i, isInteractive: a, className: o } = e;
     return (0, r.jsxs)("div", {
@@ -78,6 +85,7 @@ function b(e) {
         ],
     });
 }
+
 function y(e, t) {
     let n = {
         answers: t.answers,
@@ -94,6 +102,7 @@ function y(e, t) {
         .with(l.Z.IMAGE_ONLY_ANSWERS, () => (0, r.jsx)(d.A, g({}, n)))
         .otherwise(() => null);
 }
+
 function O(e) {
     let { action: t, channelId: n, messageId: a, isInteractive: s, className: o } = e,
         { actionButtonRef: l, manageFocusOnAction: d } = (0, p.Mg)(),
@@ -137,6 +146,7 @@ function O(e) {
                   className: o,
               });
 }
+
 function A(e) {
     let { message: t, poll: n, className: i } = e,
         a = (0, f.hd)(n.containerStyle),
@@ -150,7 +160,9 @@ function A(e) {
                       (0, r.jsxs)("div", {
                           className: h.wx,
                           children: [
-                              (0, r.jsx)(E, { media: n.question }),
+                              (0, r.jsx)(E, {
+                                  media: n.question,
+                              }),
                               null != n.promptLabel &&
                                   (0, r.jsx)(c.Text, {
                                       variant: "text-sm/normal",
@@ -189,6 +201,7 @@ function A(e) {
               }),
           });
 }
+
 function v(e) {
     let { message: t, poll: n, className: i } = e;
     return (0, r.jsx)(f.y5, {

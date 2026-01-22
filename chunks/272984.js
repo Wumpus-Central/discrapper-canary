@@ -15,6 +15,7 @@ var r = n(573648),
 let s = "spotify",
     o = "spotify:",
     l = r.A.get(a.fg2.SPOTIFY).name;
+
 function c(e) {
     return null != e && e.startsWith(o);
 }
@@ -75,6 +76,7 @@ let f = ["open.spotify.com", "www.spotify.com"],
             : "https://itunes.apple.com/us/app/spotify-music/id324684580?mt=8",
         IOS_APP_STORE: "https://itunes.apple.com/us/app/spotify-music/id324684580?mt=8",
     });
+
 function m(e) {
     if ("string" != typeof e) return null;
     switch (e) {

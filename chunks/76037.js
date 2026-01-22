@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var a = n(627968),
     l = n(397927),
     i = n(940540),
@@ -6,6 +8,7 @@ var a = n(627968),
     s = n(453675),
     o = n(683110),
     c = n(520657);
+
 function d() {
     return (0, a.jsxs)(l.IpV, {
         className: c.nd,

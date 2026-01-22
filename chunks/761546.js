@@ -1,10 +1,13 @@
-n.d(t, { A: () => l });
+n.d(t, {
+    A: () => l,
+});
 var r = n(627968);
 n(64700);
 var i = n(172218),
     a = n(397927),
     s = n(437290),
     o = n(892448);
+
 function l(e) {
     let {
             users: t,
@@ -54,7 +57,9 @@ function l(e) {
                       ),
                   ),
                   c && (0, r.jsx)(a.y$y, {}),
-                  (0, r.jsx)("div", { ref: h }),
+                  (0, r.jsx)("div", {
+                      ref: h,
+                  }),
               ],
           });
 }

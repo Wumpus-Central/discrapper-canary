@@ -1,10 +1,15 @@
-n.d(t, { A: () => f }), n(938796), n(896048);
+n.d(t, {
+    A: () => f,
+}),
+    n(938796),
+    n(896048);
 var r = n(821418),
     i = n(665260),
     a = n(439372),
     s = n(224536),
     o = n(610101),
     l = n(652215);
+
 function c(e, t, n) {
     return (
         t in e
@@ -18,6 +23,7 @@ function c(e, t, n) {
         e
     );
 }
+
 function u(e) {
     var t, n;
     let { guild: a } = e.invite,
@@ -32,7 +38,10 @@ function u(e) {
 }
 class d extends a.A {
     constructor(...e) {
-        super(...e), c(this, "actions", { INVITE_ACCEPT_SUCCESS: u });
+        super(...e),
+            c(this, "actions", {
+                INVITE_ACCEPT_SUCCESS: u,
+            });
     }
 }
 let f = new d();

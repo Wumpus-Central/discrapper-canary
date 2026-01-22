@@ -143,7 +143,9 @@ e.exports = function (e) {
             built_in: r.concat(i),
         },
         l = "[A-Za-z$_](?:-[0-9A-Za-z$_]|[0-9A-Za-z$_])*",
-        c = e.inherit(e.TITLE_MODE, { begin: l }),
+        c = e.inherit(e.TITLE_MODE, {
+            begin: l,
+        }),
         u = {
             className: "subst",
             begin: /#\{/,
@@ -205,10 +207,14 @@ e.exports = function (e) {
                         end: "//[gim]*",
                         contains: [u, e.HASH_COMMENT_MODE],
                     },
-                    { begin: /\/(?![ *])(\\.|[^\\\n])*?\/[gim]*(?=\W)/ },
+                    {
+                        begin: /\/(?![ *])(\\.|[^\\\n])*?\/[gim]*(?=\W)/,
+                    },
                 ],
             },
-            { begin: "@" + l },
+            {
+                begin: "@" + l,
+            },
             {
                 begin: "``",
                 end: "``",
@@ -231,7 +237,9 @@ e.exports = function (e) {
                 },
             ],
         },
-        _ = { begin: "(#=>|=>|\\|>>|-?->|!->)" },
+        _ = {
+            begin: "(#=>|=>|\\|>>|-?->|!->)",
+        },
         h = {
             variants: [
                 {

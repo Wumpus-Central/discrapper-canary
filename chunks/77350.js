@@ -41,9 +41,20 @@ let s = (e, t) => {
     A = /\.(mp4|webm|mov)$/i,
     v = /\.(riv)$/i,
     S = (0, r.isIOS)() ? y : (0, r.isAndroid)() ? O : A,
-    I = (e) => (0, a.D)() && i.A.getConfig({ location: "isWebPlayerVideoUrl" }).enabled && s(e, b),
+    I = (e) =>
+        (0, a.D)() &&
+        i.A.getConfig({
+            location: "isWebPlayerVideoUrl",
+        }).enabled &&
+        s(e, b),
     T = (e) => s(e, S) || I(e),
-    C = (e) => null != e && (0, a.D)() && i.A.getConfig({ location: "isWebPlayerVideoFile" }).enabled && b.test(e),
+    C = (e) =>
+        null != e &&
+        (0, a.D)() &&
+        i.A.getConfig({
+            location: "isWebPlayerVideoFile",
+        }).enabled &&
+        b.test(e),
     N = (e) => null != e && (S.test(e) || C(e)),
     R = (e) => null != e && v.test(e),
     w = (e) => o(e, "video");

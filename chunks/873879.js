@@ -1,8 +1,16 @@
-n.d(t, { A: () => S }), n(591487), n(727858), n(747238), n(812715), n(866193);
+n.d(t, {
+    A: () => S,
+}),
+    n(591487),
+    n(727858),
+    n(747238),
+    n(812715),
+    n(866193);
 var r = n(284009),
     i = n.n(r),
     a = n(280230),
     s = n.n(a);
+
 function o(e, t, n) {
     return (
         t in e
@@ -16,6 +24,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -32,6 +41,7 @@ function l(e) {
     }
     return e;
 }
+
 function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -44,6 +54,7 @@ function c(e, t) {
     }
     return n;
 }
+
 function u(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -66,7 +77,7 @@ let d = /\n{2,}$/,
     b = /^[ \t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]+$/,
     y = 10,
     O = 1,
-    A = 1000000000,
+    A = 1e9,
     v = (e) =>
         e.map((e) => ("text" === e.type && null != e.content && (e.content = e.content.replace(/\n+\s*$/, "")), e)),
     S = u(l({}, s().defaultRules.list), {
@@ -106,7 +117,14 @@ let d = /\n{2,}$/,
                     (n._list = !0),
                         (n._listLevel = (null != f ? f : 0) + 1),
                         o ? ((n.inline = !1), (i = a.replace(g, "\n\n"))) : ((n.inline = !0), (i = a.replace(g, "")));
-                    let p = v(t(i, u(l({}, n), { allowHeading: !1 })));
+                    let p = v(
+                        t(
+                            i,
+                            u(l({}, n), {
+                                allowHeading: !1,
+                            }),
+                        ),
+                    );
                     return (n.inline = c), (n._list = d), (n._listLevel = f), p;
                 }),
             };

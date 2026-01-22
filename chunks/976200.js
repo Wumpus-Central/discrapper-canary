@@ -1,4 +1,8 @@
-n.d(t, { A: () => v }), n(321073), n(896048);
+n.d(t, {
+    A: () => v,
+}),
+    n(321073),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -12,12 +16,15 @@ var r = n(627968),
     p = n(661191),
     _ = n(985018),
     h = n(199326);
+
 function m(e) {
     let { imageClass: t, children: n, error: i } = e;
     return (0, r.jsxs)("div", {
         className: h.Qs,
         children: [
-            (0, r.jsx)("div", { className: s()(h.Sl, t) }),
+            (0, r.jsx)("div", {
+                className: s()(h.Sl, t),
+            }),
             n,
             (0, r.jsx)(c.F, {
                 children:
@@ -60,6 +67,7 @@ let g = (e) => {
               ],
           });
 };
+
 function E(e) {
     let { imageClass: t, blurb: n, guild: i, warning: a, error: s, slotCount: o = 1, canceledCount: l = 0 } = e;
     return (0, r.jsxs)(m, {
@@ -79,10 +87,15 @@ function E(e) {
                 variant: "text-md/normal",
                 children: a,
             }),
-            l > 0 ? (0, r.jsx)(g, { canceledCount: l }) : null,
+            l > 0
+                ? (0, r.jsx)(g, {
+                      canceledCount: l,
+                  })
+                : null,
         ],
     });
 }
+
 function b(e) {
     var t, n;
     let { imageClass: a, blurb: s, fromGuilds: o, toGuild: l, error: c, slotCount: f = 1, canceledCount: E = 0 } = e,
@@ -103,7 +116,9 @@ function b(e) {
             (0, r.jsx)(u.Text, {
                 variant: "text-xs/bold",
                 className: h._N,
-                children: _.intl.format(_.t["5zQYEz"], { guildCount: null != y ? y : 0 }),
+                children: _.intl.format(_.t["5zQYEz"], {
+                    guildCount: null != y ? y : 0,
+                }),
             }),
             null != O
                 ? p.default.keys(O).map((e) =>
@@ -121,7 +136,9 @@ function b(e) {
             (0, r.jsx)(u.Text, {
                 variant: "text-xs/normal",
                 className: h._N,
-                children: _.intl.format(_.t.ct6oxD, { slotCount: f }),
+                children: _.intl.format(_.t.ct6oxD, {
+                    slotCount: f,
+                }),
             }),
             (0, r.jsx)("div", {
                 className: h.Vh,
@@ -131,10 +148,15 @@ function b(e) {
                     subscriptionChange: null != o ? o.length : 1,
                 }),
             }),
-            E > 0 ? (0, r.jsx)(g, { canceledCount: E }) : null,
+            E > 0
+                ? (0, r.jsx)(g, {
+                      canceledCount: E,
+                  })
+                : null,
         ],
     });
 }
+
 function y(e) {
     let { confirmation: t, confirmationLabel: n, isModifyingSubscription: i, onConfirm: a, onCancel: s } = e;
     return (0, r.jsx)("div", {
@@ -159,6 +181,7 @@ function y(e) {
         }),
     });
 }
+
 function O(e, t, n, r, i) {
     return [
         {
@@ -225,8 +248,12 @@ let A = (e) => {
         onClose: n,
         size: "sm",
         children: [
-            (0, r.jsx)(o.rQ0, { title: i }),
-            (0, r.jsx)(o.cwr, { children: I() }),
+            (0, r.jsx)(o.rQ0, {
+                title: i,
+            }),
+            (0, r.jsx)(o.cwr, {
+                children: I(),
+            }),
             (0, r.jsx)(o.H7u, {
                 actions: S,
                 actionsFullWidth: !1,

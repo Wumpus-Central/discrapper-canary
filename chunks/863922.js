@@ -88,6 +88,7 @@ async function O(e) {
             receivedAt: Date.now(),
         });
 }
+
 function A(e, t) {
     l.h.dispatch({
         type: "SET_HIGHLIGHTED_SUMMARY",
@@ -95,9 +96,13 @@ function A(e, t) {
         summaryId: null != t ? t : null,
     });
 }
+
 function v() {
-    l.h.dispatch({ type: "TOGGLE_TOPICS_BAR" });
+    l.h.dispatch({
+        type: "TOGGLE_TOPICS_BAR",
+    });
 }
+
 function S(e, t) {
     null != e && null != t && y(e, t),
         l.h.dispatch({
@@ -106,6 +111,7 @@ function S(e, t) {
             summaryId: null != t ? t : null,
         });
 }
+
 function I(e, t) {
     l.h.dispatch({
         type: "UPDATE_VISIBLE_MESSAGES",
@@ -113,6 +119,7 @@ function I(e, t) {
         bottomVisibleMessage: null != t ? t : null,
     });
 }
+
 function T(e, t) {
     l.h.dispatch({
         type: "SET_SUMMARY_FEEDBACK",
@@ -184,7 +191,9 @@ async function N(e) {
     try {
         n = await o.Bo.post({
             url: h.BVt.USER_SUMMARIES,
-            body: { channel_ids: e },
+            body: {
+                channel_ids: e,
+            },
             rejectWithError: !1,
         });
     } catch (e) {
@@ -196,10 +205,13 @@ async function N(e) {
         requestedAt: a,
         receivedAt: Date.now(),
         summaries: s,
-        requestArgs: { channelIds: e },
+        requestArgs: {
+            channelIds: e,
+        },
         error: t,
     });
 }
+
 function R() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
         t = (0, s.bG)([d.A], () => d.A.isConnected()),

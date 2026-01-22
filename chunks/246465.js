@@ -1,4 +1,7 @@
-n.d(t, { A: () => d }), n(896048);
+n.d(t, {
+    A: () => d,
+}),
+    n(896048);
 var r = n(64700),
     l = n(771253),
     o = n(412703),
@@ -7,6 +10,7 @@ var r = n(64700),
     a = n(717415),
     c = n(652215);
 let u = new Set([c.NKC.FIVE_G, c.NKC.FOUR_G, c.NKC.UNKNOWN]);
+
 function d(e, t, n) {
     var c;
     let { quest: d } = r.useContext(a.VideoQuestModalContext),
@@ -30,12 +34,10 @@ function d(e, t, n) {
         ),
         h = r.useMemo(() => (null != g ? (0, s.tW)(d, g, void 0, !1) : null), [d, g]),
         b = () => {
-            null != p.current &&
-                800000 !== p.current.config.minAutoBitrate &&
-                (p.current.config.minAutoBitrate = 800000);
+            null != p.current && 8e5 !== p.current.config.minAutoBitrate && (p.current.config.minAutoBitrate = 8e5);
         },
         y = r.useCallback(() => {
-            null != p.current && (p.current.config.minAutoBitrate = 800000);
+            null != p.current && (p.current.config.minAutoBitrate = 8e5);
         }, []);
     return (
         r.useEffect(() => {

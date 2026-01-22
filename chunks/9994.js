@@ -11,6 +11,7 @@ var r = n(508675),
     i = n(7584),
     a = n(403362),
     s = n(348943);
+
 function o(e) {
     let { guildId: t, emojiId: n, emojiName: a } = e,
         s = r.o2.get(t);
@@ -20,7 +21,10 @@ function o(e) {
         else return null;
     return null != a ? i.Ay.getByName(a) : null;
 }
-let l = { label: "" };
+let l = {
+    label: "",
+};
+
 function c(e, t) {
     let n = [, , , , ,].fill(l);
     for (let i of t) {
@@ -42,6 +46,7 @@ function c(e, t) {
     }
     return n;
 }
+
 function u(e) {
     return null == e
         ? {}
@@ -56,9 +61,11 @@ function u(e) {
               );
           }, {});
 }
+
 function d(e) {
     return null == e || "" === e ? null : e;
 }
+
 function f(e) {
     var t, n, r, i;
     return {
@@ -84,6 +91,7 @@ function f(e) {
         premiumTier: e.premium_tier,
     };
 }
+
 function p(e) {
     let t = {};
     return (
@@ -116,6 +124,7 @@ function p(e) {
         t
     );
 }
+
 function _(e) {
     return e.reduce(
         (e, t) => (
@@ -128,6 +137,7 @@ function _(e) {
         {},
     );
 }
+
 function h(e) {
     var t, n, r, i, a, o;
     let { guild: l, profile: c } = e,

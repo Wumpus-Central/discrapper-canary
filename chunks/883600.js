@@ -1,4 +1,7 @@
-n.d(t, { A: () => w }), n(896048);
+n.d(t, {
+    A: () => w,
+}),
+    n(896048);
 var r,
     i = n(311907),
     a = n(506774),
@@ -7,6 +10,7 @@ var r,
     l = n(253932),
     c = n(617617),
     u = n(559868);
+
 function d(e, t, n) {
     return (
         t in e
@@ -29,20 +33,24 @@ let f = {},
     E = null,
     b = null,
     y = new Set();
+
 function O(e) {
     let { key: t } = e;
     if (y.has(t)) return !1;
     (y = new Set(y)).add(t);
 }
+
 function A(e) {
     let { key: t } = e;
     if (!y.has(t)) return !1;
     (y = new Set(y)).delete(t);
 }
+
 function v(e) {
     let { config: t, latestChangelogId: n } = e;
     (_ = n), (m = t);
 }
+
 function S(e) {
     let { id: t, changelog: n } = e;
     null == f[t] && (f[t] = {}),
@@ -57,19 +65,23 @@ function S(e) {
         null == p[t] && (p[t] = {}),
         (p[t][n.locale] = u._f.LOADED_SUCCESS);
 }
+
 function I(e) {
     let { id: t, locale: n } = e;
     if (null != f[t] && null != f[t][n]) return !1;
     null == p[t] && (p[t] = {}), (p[t][n] = u._f.LOADED_FAILURE);
 }
+
 function T(e) {
     let { id: t } = e;
     h = t;
 }
+
 function C(e) {
     let { changelogDate: t } = e;
     (b = new Date(t)), a.w.set(g, t);
 }
+
 function N() {
     E = l.pK.getSetting();
 }

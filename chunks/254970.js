@@ -1,8 +1,11 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var l = n(64700),
     r = n(835245),
     i = n(318937);
 let a = () => {};
+
 function s(e, t, n) {
     let s = l.useRef((0, r.A)()),
         o = l.useRef(Date.now()),

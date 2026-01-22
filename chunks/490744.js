@@ -68,7 +68,9 @@ let h = (e) => {
                               application: a,
                               asset: t,
                           }),
-                          (0, r.jsx)(c.kj, { children: s }),
+                          (0, r.jsx)(c.kj, {
+                              children: s,
+                          }),
                           (0, r.jsx)(c.ri, {}),
                           (0, r.jsx)(c.Mx, {
                               title: o,
@@ -83,6 +85,7 @@ let h = (e) => {
                   }),
               });
     };
+
 function g(e) {
     let { tierName: t, onConfirm: n, subscription: a } = e;
     return (0, r.jsxs)("div", {
@@ -98,13 +101,17 @@ function g(e) {
                 className: f.i1,
                 variant: "heading-xl/extrabold",
                 color: "text-strong",
-                children: d.intl.format(d.t.wLFT6z, { tier: t }),
+                children: d.intl.format(d.t.wLFT6z, {
+                    tier: t,
+                }),
             }),
             (0, r.jsx)(i.Text, {
                 className: f.sT,
                 variant: "text-md/medium",
                 color: "text-default",
-                children: d.intl.format(d.t.OsAK9h, { timestamp: null == a ? void 0 : a.currentPeriodEnd }),
+                children: d.intl.format(d.t.OsAK9h, {
+                    timestamp: null == a ? void 0 : a.currentPeriodEnd,
+                }),
             }),
             (0, r.jsx)(l.UX, {
                 children: (0, r.jsx)(o.A, {

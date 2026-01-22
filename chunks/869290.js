@@ -1,10 +1,13 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968);
 n(64700);
 var i = n(506774),
     a = n(397927),
     s = n(386936),
     o = n(364496);
+
 function l(e, t, n) {
     return (
         t in e
@@ -18,6 +21,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,6 +38,7 @@ function c(e) {
     }
     return e;
 }
+
 function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -46,6 +51,7 @@ function u(e, t) {
     }
     return n;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -65,7 +71,13 @@ let f = {
             ? (i.w.set(o.J, l),
               (0, a.mMO)(async () => {
                   let { default: t } = await n.e("62684").then(n.bind(n, 228855));
-                  return (n) => (0, r.jsx)(t, d(c({}, n), { guildId: e }));
+                  return (n) =>
+                      (0, r.jsx)(
+                          t,
+                          d(c({}, n), {
+                              guildId: e,
+                          }),
+                      );
               }))
             : (0, s.$)(s.s.SUPPRESSED_BY_COOLDOWN, e);
     },

@@ -73,6 +73,7 @@ var r = n(110259),
     et = n(49999),
     en = n(172799),
     er = n(985018);
+
 function ei(e, t, n) {
     return (
         t in e
@@ -86,6 +87,7 @@ function ei(e, t, n) {
         e
     );
 }
+
 function ea(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -102,6 +104,7 @@ function ea(e) {
     }
     return e;
 }
+
 function es(e) {
     let t = B.Ay.getSelfEmbeddedActivityForLocation(e);
     null != t &&
@@ -141,7 +144,12 @@ async function eo(e) {
             let { close: e } = n(574172);
             e(J.MLl.ACTIVITY_POPOUT);
         }
-        if ((0, Z.y)({ applicationId: s })) return !0;
+        if (
+            (0, Z.y)({
+                applicationId: s,
+            })
+        )
+            return !0;
         l.h.dispatch({
             type: "EMBEDDED_ACTIVITY_LAUNCH_START",
             nonce: D,
@@ -243,6 +251,7 @@ async function eo(e) {
     }
     return !0;
 }
+
 function el(e, t) {
     let n = (null == t ? void 0 : t.type) === J.rbe.GUILD_VOICE,
         r = b.A.getApplication(e),
@@ -281,7 +290,9 @@ async function ec(e) {
                 type: "channel",
                 channelId: r,
             })),
-            await (0, m.Zn)({ type: "user" });
+            await (0, m.Zn)({
+                type: "user",
+            });
         let e = x.A.getChannel(r),
             { isAuthorized: n } = await (0, y.q)({
                 applicationId: t,
@@ -373,7 +384,9 @@ async function ec(e) {
                 }),
             });
         }),
-        { result: "success" }
+        {
+            result: "success",
+        }
     );
 }
 async function eu(e) {
@@ -496,12 +509,15 @@ async function eu(e) {
                   m,
               ),
           ),
-          { result: "success" })
+          {
+              result: "success",
+          })
         : {
               result: "failure",
               reason: 0,
           };
 }
+
 function ed(e) {
     let { location: t, applicationId: n, showFeedback: r = !0 } = e,
         i = B.Ay.getSelfEmbeddedActivityForLocation(t);
@@ -528,10 +544,14 @@ function ed(e) {
 }
 async function ef() {
     try {
-        l.h.dispatch({ type: "DEVELOPER_ACTIVITY_SHELF_FETCH_START" });
+        l.h.dispatch({
+            type: "DEVELOPER_ACTIVITY_SHELF_FETCH_START",
+        });
         let e = await s.Bo.get({
                 url: J.Rsh.APPLICATIONS_WITH_ASSETS,
-                query: { with_team_applications: !0 },
+                query: {
+                    with_team_applications: !0,
+                },
                 oldFormErrors: !0,
                 rejectWithError: !0,
             }),
@@ -547,13 +567,22 @@ async function ef() {
                 applications: t,
             });
     } catch (e) {
-        l.h.dispatch({ type: "DEVELOPER_ACTIVITY_SHELF_FETCH_FAIL" });
+        l.h.dispatch({
+            type: "DEVELOPER_ACTIVITY_SHELF_FETCH_FAIL",
+        });
     }
 }
 async function ep(e, t, n) {
     try {
-        l.h.dispatch({ type: "UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_START" });
-        let r = null != t ? { channel_id: t } : void 0,
+        l.h.dispatch({
+            type: "UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_START",
+        });
+        let r =
+                null != t
+                    ? {
+                          channel_id: t,
+                      }
+                    : void 0,
             i = await s.Bo.post({
                 url: J.Rsh.APPLICATION_UPLOAD_ATTACHMENT(e),
                 query: r,
@@ -573,7 +602,12 @@ async function ep(e, t, n) {
             i.body.attachment
         );
     } catch (e) {
-        return l.h.dispatch({ type: "UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_FAIL" }), new _.A(e);
+        return (
+            l.h.dispatch({
+                type: "UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_FAIL",
+            }),
+            new _.A(e)
+        );
     }
 }
 let e_ = (e, t, n) => {
@@ -609,13 +643,20 @@ async function eh(e) {
             type: "EMBEDDED_ACTIVITY_FETCH_SHELF",
             guildId: s,
         });
-        let e = void 0 !== s && "" !== s ? { guild_id: s } : void 0,
+        let e =
+                void 0 !== s && "" !== s
+                    ? {
+                          guild_id: s,
+                      }
+                    : void 0,
             t = await V.A.get({
                 url: J.Rsh.ACTIVITY_SHELF,
                 query: e,
                 trackedActionData: {
                     event: r.NetworkActionNames.EMBEDDED_ACTIVITIES_FETCH_SHELF,
-                    properties: { guild_id: s },
+                    properties: {
+                        guild_id: s,
+                    },
                 },
                 retries: 0,
                 oldFormErrors: !0,
@@ -684,9 +725,12 @@ async function eg(e) {
         null != s && (t = C.Ay.parse(n, s).content), p.A.sendInvite(e, o.code, i, a, t);
     });
 }
+
 function eE() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : et.i.INDIRECT_ACTION;
-    (0, v.$l)(o.M.ACTIVITIES_VOICE_LAUNCHER_BADGE, Math.floor(new Date().getTime() / 1000), { dismissAction: e });
+    (0, v.$l)(o.M.ACTIVITIES_VOICE_LAUNCHER_BADGE, Math.floor(new Date().getTime() / 1e3), {
+        dismissAction: e,
+    });
 }
 async function eb(e) {
     let t = J.Rsh.ACTIVITY_TEST_MODE(e);
@@ -703,20 +747,26 @@ async function eb(e) {
         return !1;
     }
 }
+
 function ey(e) {
     l.h.dispatch({
         type: "EMBEDDED_ACTIVITY_SET_PANEL_MODE",
         activityPanelMode: e,
     });
 }
+
 function eO(e) {
     l.h.dispatch({
         type: "EMBEDDED_ACTIVITY_SET_FOCUSED_LAYOUT",
         focusedActivityLayout: e,
     });
 }
+
 function eA() {
-    ey($.Gd.ACTIVITY_POPOUT_WINDOW), l.h.dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" });
+    ey($.Gd.ACTIVITY_POPOUT_WINDOW),
+        l.h.dispatch({
+            type: "ACTIVITY_POPOUT_WINDOW_OPEN",
+        });
 }
 async function ev(e, t) {
     let n = {};

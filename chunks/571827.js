@@ -1,26 +1,29 @@
-l.d(t, { A: () => m });
-var n = l(627968);
-l(64700);
-var r = l(575593),
-    i = l(397927),
-    s = l(688810),
-    a = l(404374),
-    c = l(788868),
-    o = l(985018),
-    u = l(682655);
+r.d(t, {
+    A: () => m,
+});
+var n = r(627968);
+r(64700);
+var l = r(575593),
+    i = r(397927),
+    a = r(688810),
+    s = r(404374),
+    c = r(788868),
+    o = r(985018),
+    u = r(682655);
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var l = null != arguments[t] ? arguments[t] : {},
-            n = Object.keys(l);
+        var r = null != arguments[t] ? arguments[t] : {},
+            n = Object.keys(r);
         "function" == typeof Object.getOwnPropertySymbols &&
             (n = n.concat(
-                Object.getOwnPropertySymbols(l).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(l, e).enumerable;
+                Object.getOwnPropertySymbols(r).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
                 }),
             )),
             n.forEach(function (t) {
                 var n;
-                (n = l[t]),
+                (n = r[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: n,
@@ -33,15 +36,16 @@ function d(e) {
     }
     return e;
 }
+
 function m(e) {
     let { itemType: t, onClose: m } = e,
-        { newestAnalyticsLocation: p } = (0, s.Ay)(),
+        { newestAnalyticsLocation: p } = (0, a.Ay)(),
         x =
-            t === r.R.AVATAR_DECORATION
+            t === l.R.AVATAR_DECORATION
                 ? c.e.AVATAR_DECORATION_MODAL_UPSELL
-                : t === r.R.PROFILE_EFFECT
+                : t === l.R.PROFILE_EFFECT
                   ? c.e.PROFILE_EFFECT_MODAL_UPSELL
-                  : t === r.R.NAMEPLATE
+                  : t === l.R.NAMEPLATE
                     ? c.e.NAMEPLATE_MODAL_UPSELL
                     : null;
     return null == x
@@ -52,7 +56,7 @@ function m(e) {
                   (0, n.jsx)(i.tvc, {
                       className: u.ax,
                       size: "md",
-                      color: a.k0.PREMIUM_TIER_2,
+                      color: s.k0.PREMIUM_TIER_2,
                   }),
                   (0, n.jsx)(i.Text, {
                       className: u.cf,
@@ -62,7 +66,7 @@ function m(e) {
                               ? o.intl.format(o.t["aFR/EI"], {
                                     onClick: () => {
                                         (0, i.mMO)(async () => {
-                                            let { default: e } = await l.e("64864").then(l.bind(l, 948265));
+                                            let { default: e } = await r.e("64864").then(r.bind(r, 948265));
                                             return (t) =>
                                                 (0, n.jsx)(
                                                     e,
@@ -85,7 +89,7 @@ function m(e) {
                                 ? o.intl.format(o.t.eWNONM, {
                                       onClick: () => {
                                           (0, i.mMO)(async () => {
-                                              let { default: e } = await l.e("64864").then(l.bind(l, 948265));
+                                              let { default: e } = await r.e("64864").then(r.bind(r, 948265));
                                               return (t) =>
                                                   (0, n.jsx)(
                                                       e,
@@ -108,7 +112,7 @@ function m(e) {
                                   ? o.intl.format(o.t.G6b8TF, {
                                         onClick: () => {
                                             (0, i.mMO)(async () => {
-                                                let { default: e } = await l.e("64864").then(l.bind(l, 948265));
+                                                let { default: e } = await r.e("64864").then(r.bind(r, 948265));
                                                 return (t) =>
                                                     (0, n.jsx)(
                                                         e,

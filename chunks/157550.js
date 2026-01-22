@@ -1,6 +1,10 @@
-n.d(t, { A: () => g }), n(896048);
+n.d(t, {
+    A: () => g,
+}),
+    n(896048);
 var r = n(734057),
     i = n(536802);
+
 function a(e, t, n) {
     return (
         t in e
@@ -17,9 +21,11 @@ function a(e, t, n) {
 let s = new Set(),
     o = new Set(),
     l = !1;
+
 function c(e) {
     return e.isSpam;
 }
+
 function u(e) {
     let t = !1;
     return (
@@ -29,6 +35,7 @@ function u(e) {
         t
     );
 }
+
 function d() {
     s.clear(),
         o.clear(),
@@ -37,18 +44,22 @@ function d() {
         }),
         (l = !0);
 }
+
 function f(e) {
     let { channelId: t } = e;
     o.add(t);
 }
+
 function p(e) {
     let { channel: t } = e;
     return u(t);
 }
+
 function _(e) {
     let { channels: t } = e;
     for (let e of t) u(e);
 }
+
 function h(e) {
     let { channel: t } = e,
         n = !1;

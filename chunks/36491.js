@@ -7,6 +7,7 @@ var r = n(562465),
     i = n(73153),
     a = n(198982),
     s = n(652215);
+
 function o(e) {
     i.h.dispatch({
         type: "DISMISS_MEDIA_POST_SHARE_PROMPT",
@@ -42,7 +43,9 @@ async function c(e) {
         return (
             await r.Bo.post({
                 url: s.Rsh.UNFURL_EMBED_URLS,
-                body: { urls: e },
+                body: {
+                    urls: e,
+                },
                 rejectWithError: !1,
             })
         ).body;

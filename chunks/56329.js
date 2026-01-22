@@ -4,6 +4,7 @@ n.d(t, {
 });
 var r = n(56636),
     i = n(370330);
+
 function a(e) {
     if (0 === e.length) throw Error("Number skeleton cannot be empty");
     for (
@@ -27,6 +28,7 @@ function a(e) {
     }
     return n;
 }
+
 function s(e) {
     return e.replace(/^(.*?)-/, "");
 }
@@ -34,6 +36,7 @@ var o = /^\.(?:(0+)(\*)?|(#+)|(0+)(#+))$/g,
     l = /^(@+)?(\+|#+)?[rs]?$/g,
     c = /(\*)(0+)|(#+)(0+)|(0+)/g,
     u = /^(0+)$/;
+
 function d(e) {
     var t = {};
     return (
@@ -56,16 +59,23 @@ function d(e) {
         t
     );
 }
+
 function f(e) {
     switch (e) {
         case "sign-auto":
-            return { signDisplay: "auto" };
+            return {
+                signDisplay: "auto",
+            };
         case "sign-accounting":
         case "()":
-            return { currencySign: "accounting" };
+            return {
+                currencySign: "accounting",
+            };
         case "sign-always":
         case "+!":
-            return { signDisplay: "always" };
+            return {
+                signDisplay: "always",
+            };
         case "sign-accounting-always":
         case "()!":
             return {
@@ -74,7 +84,9 @@ function f(e) {
             };
         case "sign-except-zero":
         case "+?":
-            return { signDisplay: "exceptZero" };
+            return {
+                signDisplay: "exceptZero",
+            };
         case "sign-accounting-except-zero":
         case "()?":
             return {
@@ -83,15 +95,25 @@ function f(e) {
             };
         case "sign-never":
         case "+_":
-            return { signDisplay: "never" };
+            return {
+                signDisplay: "never",
+            };
     }
 }
+
 function p(e) {
     var t;
     if (
         ("E" === e[0] && "E" === e[1]
-            ? ((t = { notation: "engineering" }), (e = e.slice(2)))
-            : "E" === e[0] && ((t = { notation: "scientific" }), (e = e.slice(1))),
+            ? ((t = {
+                  notation: "engineering",
+              }),
+              (e = e.slice(2)))
+            : "E" === e[0] &&
+              ((t = {
+                  notation: "scientific",
+              }),
+              (e = e.slice(1))),
         t)
     ) {
         var n = e.slice(0, 2);
@@ -106,11 +128,13 @@ function p(e) {
     }
     return t;
 }
+
 function _(e) {
     var t = {},
         n = f(e);
     return n || t;
 }
+
 function h(e) {
     for (var t = {}, n = 0, i = e; n < i.length; n++) {
         var a = i[n];
@@ -147,7 +171,9 @@ function h(e) {
                 continue;
             case "scientific":
                 t = (0, r.Cl)(
-                    (0, r.Cl)((0, r.Cl)({}, t), { notation: "scientific" }),
+                    (0, r.Cl)((0, r.Cl)({}, t), {
+                        notation: "scientific",
+                    }),
                     a.options.reduce(function (e, t) {
                         return (0, r.Cl)((0, r.Cl)({}, e), _(t));
                     }, {}),
@@ -155,7 +181,9 @@ function h(e) {
                 continue;
             case "engineering":
                 t = (0, r.Cl)(
-                    (0, r.Cl)((0, r.Cl)({}, t), { notation: "engineering" }),
+                    (0, r.Cl)((0, r.Cl)({}, t), {
+                        notation: "engineering",
+                    }),
                     a.options.reduce(function (e, t) {
                         return (0, r.Cl)((0, r.Cl)({}, e), _(t));
                     }, {}),
@@ -230,7 +258,9 @@ function h(e) {
             });
             var h = a.options[0];
             "w" === h
-                ? (t = (0, r.Cl)((0, r.Cl)({}, t), { trailingZeroDisplay: "stripIfInteger" }))
+                ? (t = (0, r.Cl)((0, r.Cl)({}, t), {
+                      trailingZeroDisplay: "stripIfInteger",
+                  }))
                 : h && (t = (0, r.Cl)((0, r.Cl)({}, t), d(h)));
             continue;
         }

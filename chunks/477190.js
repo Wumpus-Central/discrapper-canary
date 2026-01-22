@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => s,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -6,10 +8,11 @@ var i = n(311907),
     a = n(576705),
     c = n(652215),
     o = n(985018);
-function u(e, t) {
-    let u = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : e.type,
-        s = (0, i.bG)([a.A], () => a.A.can(c.xBc.MANAGE_CHANNELS, e), [e]);
-    if (__OVERLAY__ || !s) return null;
+
+function s(e, t) {
+    let s = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : e.type,
+        u = (0, i.bG)([a.A], () => a.A.can(c.xBc.MANAGE_CHANNELS, e), [e]);
+    if (__OVERLAY__ || !u) return null;
     let d = () => {
         (0, l.mMO)(async () => {
             let { default: t } = await Promise.all([n.e("72271"), n.e("64233"), n.e("7211")]).then(n.bind(n, 409200));
@@ -44,7 +47,7 @@ function u(e, t) {
                     })({}, n)),
                     (l = l =
                         {
-                            channelType: u,
+                            channelType: s,
                             guildId: e.guild_id,
                             categoryId: e.parent_id,
                         }),
@@ -65,7 +68,7 @@ function u(e, t) {
             };
         });
     };
-    switch (u) {
+    switch (s) {
         case c.rbe.GUILD_TEXT:
             return (0, r.jsx)(l.Drp, {
                 id: "create-text-channel",

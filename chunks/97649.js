@@ -1,4 +1,9 @@
-r.r(t), r.d(t, { default: () => f }), r(747238), r(812715);
+r.r(t),
+    r.d(t, {
+        default: () => f,
+    }),
+    r(747238),
+    r(812715);
 var n = r(627968),
     c = r(64700),
     l = r(492462),
@@ -7,6 +12,7 @@ var n = r(627968),
     i = r(77468),
     u = r(556074),
     s = r(652215);
+
 function d(e) {
     let { platformType: t } = e,
         r = (0, a.W6)();
@@ -29,7 +35,9 @@ function d(e) {
                       },
                   );
         }, [r, t]),
-        (0, n.jsx)(u.VerifyAccountLoading, { platformType: t })
+        (0, n.jsx)(u.VerifyAccountLoading, {
+            platformType: t,
+        })
     );
 }
 let f = function (e) {
@@ -38,6 +46,8 @@ let f = function (e) {
         { two_way_link_type: c } = l.parse(window.location.search);
     return [s.fg2.XBOX, s.fg2.PLAYSTATION_STAGING, s.fg2.PLAYSTATION, s.fg2.CRUNCHYROLL].includes(r) &&
         c === o.I.DESKTOP
-        ? (0, n.jsx)(d, { platformType: r })
+        ? (0, n.jsx)(d, {
+              platformType: r,
+          })
         : null;
 };

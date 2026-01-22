@@ -1,4 +1,6 @@
-n.d(t, { I: () => s });
+n.d(t, {
+    I: () => s,
+});
 var r = n(562465),
     i = n(73153),
     a = n(652215);
@@ -18,6 +20,8 @@ let s = () =>
             });
         },
         () => {
-            i.h.dispatch({ type: "LOAD_GUILD_AFFINITIES_FAILURE" });
+            i.h.dispatch({
+                type: "LOAD_GUILD_AFFINITIES_FAILURE",
+            });
         },
     );

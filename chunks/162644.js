@@ -1,4 +1,6 @@
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});
 var r = {};
 r = {
     dateRange: (e) => `De la ${e.startDate} p\xe2n\u{103} la ${e.endDate}`,
@@ -7,10 +9,10 @@ r = {
     maximumDate: "Ultima dată disponibilă",
     minimumDate: "Prima dată disponibilă",
     next: "Următorul",
-    previous: "Înainte",
+    previous: "\xcenainte",
     selectedDateDescription: (e) => `Dat\u{103} selectat\u{103}: ${e.date}`,
     selectedRangeDescription: (e) => `Interval selectat: ${e.dateRange}`,
-    startRangeSelectionPrompt: "Apăsaţi pentru a începe selecţia razei pentru dată",
+    startRangeSelectionPrompt: "Apăsaţi pentru a \xeencepe selecţia razei pentru dată",
     todayDate: (e) => `Ast\u{103}zi, ${e.date}`,
     todayDateSelected: (e) => `Azi, ${e.date} selectat\u{103}`,
 };

@@ -1,6 +1,11 @@
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 var r = n(668459);
-let i = { read: a };
+let i = {
+    read: a,
+};
+
 function a(e, t) {
     let n = s(e, t),
         r = f(e, t, n),
@@ -20,9 +25,11 @@ function a(e, t) {
     for (let e in a) void 0 === a[e] && delete a[e];
     return a;
 }
+
 function s(e, t) {
     return r.A.getShortAt(e, t);
 }
+
 function o(e, t, n) {
     let i = 7;
     if (9 > n) return;
@@ -33,6 +40,7 @@ function o(e, t, n) {
         description: a + "." + s,
     };
 }
+
 function l(e, t, n) {
     let i = 9;
     if (10 > n) return;
@@ -42,9 +50,11 @@ function l(e, t, n) {
         description: c(a),
     };
 }
+
 function c(e) {
     return 0 === e ? "None" : 1 === e ? "inches" : 2 === e ? "cm" : "Unknown";
 }
+
 function u(e, t, n) {
     let i = 10;
     if (12 > n) return;
@@ -54,6 +64,7 @@ function u(e, t, n) {
         description: "" + a,
     };
 }
+
 function d(e, t, n) {
     let i = 12;
     if (14 > n) return;
@@ -63,6 +74,7 @@ function d(e, t, n) {
         description: "" + a,
     };
 }
+
 function f(e, t, n) {
     let i = 14;
     if (15 > n) return;
@@ -72,6 +84,7 @@ function f(e, t, n) {
         description: `${a}px`,
     };
 }
+
 function p(e, t, n) {
     let i = 15;
     if (16 > n) return;
@@ -81,6 +94,7 @@ function p(e, t, n) {
         description: `${a}px`,
     };
 }
+
 function _(e, t, n, r) {
     let i = 16;
     if (0 !== n && !(i + n > r))

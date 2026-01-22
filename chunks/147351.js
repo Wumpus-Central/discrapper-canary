@@ -1,4 +1,6 @@
-n.d(t, { A: () => N });
+n.d(t, {
+    A: () => N,
+});
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -15,6 +17,7 @@ var r = n(627968),
     m = n(460350),
     g = n(652215),
     E = n(48447);
+
 function b(e, t, n) {
     return (
         t in e
@@ -28,6 +31,7 @@ function b(e, t, n) {
         e
     );
 }
+
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -44,6 +48,7 @@ function y(e) {
     }
     return e;
 }
+
 function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -56,6 +61,7 @@ function O(e, t) {
     }
     return n;
 }
+
 function A(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -67,6 +73,7 @@ function A(e, t) {
         e
     );
 }
+
 function v(e) {
     let { channel: t, message: n, currentUser: r } = e;
     return (0, a.bG)([f.A, d.Ay], () => {
@@ -80,11 +87,13 @@ function v(e) {
         return s && !a && !o && !l;
     });
 }
+
 function S(e) {
     let { assets: t, currentUser: n, message: r } = e,
         i = (h.default.extractTimestamp(n.id) + h.default.extractTimestamp(r.id)) % t.length;
     return t[i];
 }
+
 function I(e) {
     let { channel: t, message: n, sticker: r } = e,
         i = {
@@ -95,10 +104,18 @@ function I(e) {
         };
     o.A.sendGreetMessage(t.id, r.id, o.A.getSendMessageOptionsForReply(i));
 }
+
 function T(e) {
     let { sticker: t, event: n, eventProperties: r } = e;
-    null != n && _.default.track(n, A(y({}, r), { sticker_id: t.id }));
+    null != n &&
+        _.default.track(
+            n,
+            A(y({}, r), {
+                sticker_id: t.id,
+            }),
+        );
 }
+
 function C(e) {
     let { currentUser: t, channel: n, message: a, buttonLabels: o, stickers: u, event: d, eventProperties: f } = e,
         p = i.useMemo(
@@ -148,6 +165,7 @@ function C(e) {
         variant: "secondary",
     });
 }
+
 function N(e) {
     let { channel: t, message: n, buttonLabels: i, stickers: a, event: s, eventProperties: o } = e,
         l = p.default.getCurrentUser(),

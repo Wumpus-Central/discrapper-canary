@@ -1,4 +1,6 @@
-i.d(e, { m: () => d });
+i.d(e, {
+    m: () => d,
+});
 var a = i(627968);
 i(64700);
 var n = i(158954),
@@ -7,6 +9,7 @@ var n = i(158954),
     r = i(41032),
     c = i(985018),
     o = i(23337);
+
 function d(t) {
     let {
         sku: e,
@@ -58,7 +61,9 @@ function d(t) {
                             children: (0, a.jsx)(s.Text, {
                                 variant: "text-xs/normal",
                                 color: "text-subtle",
-                                children: c.intl.formatToPlainString(c.t.TTj7ME, { numDays: 14 }),
+                                children: c.intl.formatToPlainString(c.t.TTj7ME, {
+                                    numDays: 14,
+                                }),
                             }),
                         }),
                 ],
@@ -70,6 +75,7 @@ function d(t) {
         ],
     });
 }
+
 function u(t) {
     let { isConnected: e, application: i } = t;
     return e

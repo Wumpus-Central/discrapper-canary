@@ -1,5 +1,8 @@
-n.d(t, { V: () => i });
+n.d(t, {
+    V: () => i,
+});
 var r = n(15285);
+
 function i() {
     let e = r.Ay.getCurrentGameForAnalytics();
     return {

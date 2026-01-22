@@ -26,12 +26,20 @@ var r = n(412703),
     p = n(654487),
     _ = n(652215),
     h = n(985018);
+
 function m(e) {
-    let t = (0, f.t)({ quest: e }) || (0, f.fE)({ quest: e }),
+    let t =
+            (0, f.t)({
+                quest: e,
+            }) ||
+            (0, f.fE)({
+                quest: e,
+            }),
         n = (0, f.uD)(e),
         r = [];
     return t && r.push(p.fO.DESKTOP), n && r.push(p.fO.CONSOLE), r;
 }
+
 function g(e) {
     let t = Object.keys(e.config.taskConfigV2.tasks),
         n = [];
@@ -45,14 +53,17 @@ function g(e) {
         }
     return n;
 }
+
 function E(e) {
     let t = (0, f.vv)(e),
         n = (0, f.vl)(e);
     return t || n;
 }
+
 function b(e) {
     return "xbox" === e.connected_account_type ? _.fg2.XBOX : _.fg2.PLAYSTATION;
 }
+
 function y(e, t) {
     let { platformType: n, quest: r } = e;
     (0, u.Y5)({
@@ -67,9 +78,11 @@ function y(e, t) {
             location: t.ctaContent,
         });
 }
+
 function O(e) {
     return b(e) === _.fg2.XBOX ? h.t["mytEv+"] : h.t.iDiwby;
 }
+
 function A(e) {
     var t, n;
     let r = e.config.ctaConfig;
@@ -82,6 +95,7 @@ function A(e) {
             ? "https://play.google.com/store/apps/details?id=".concat(r.android.androidAppId)
             : null;
 }
+
 function v(e, t) {
     let n = (0, d.Jx)(e.config),
         r = A(e);
@@ -97,12 +111,16 @@ function v(e, t) {
         l._.dispatch(_.jej.QUEST_GAME_LINK_OPENED),
         (0, a.A)(n);
 }
+
 function S() {
     {
         let { openUserSettings: e } = n(840065);
-        e(o.X.CONNECTIONS_PANEL, { section: _.nc_.CONNECTIONS });
+        e(o.X.CONNECTIONS_PANEL, {
+            section: _.nc_.CONNECTIONS,
+        });
     }
 }
+
 function I(e, t) {
     let { quest: n } = e;
     (0, u.Y5)({
@@ -115,6 +133,7 @@ function I(e, t) {
     }),
         S();
 }
+
 function T(e, t) {
     let { quest: n } = e;
     (0, u.Y5)({
@@ -127,10 +146,16 @@ function T(e, t) {
         sourceQuestContent: t.sourceQuestContent,
     });
     let r = g(n);
-    if (1 === r.length) return (0, s.A)({ platformType: r.at(0) });
+    if (1 === r.length)
+        return (0, s.A)({
+            platformType: r.at(0),
+        });
     i.h.dispatch({
         type: "CONNECTIONS_GRID_MODAL_SHOW",
-        onComplete: (e) => (0, s.A)({ platformType: e }),
+        onComplete: (e) =>
+            (0, s.A)({
+                platformType: e,
+            }),
         includedPlatformTypes: new Set(r),
     });
 }

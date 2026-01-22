@@ -12,9 +12,11 @@ var r = n(310784),
     o = n(582754);
 n(325335);
 var l = n(652215);
+
 function c(e) {
     return null == e ? null : (0, s.OK)(e) > 0.5 ? l.NJ8.DARK : l.NJ8.LIGHT;
 }
+
 function u(e, t, n) {
     let r = n / 100,
         i = 1 - r;

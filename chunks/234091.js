@@ -1,4 +1,6 @@
-n.d(t, { A: () => I });
+n.d(t, {
+    A: () => I,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -21,6 +23,7 @@ var r = n(627968),
     A = n(985018),
     v = n(48187);
 let S = 80;
+
 function I(e) {
     var t, n, a;
     let { className: I, onClose: T } = e;
@@ -30,7 +33,9 @@ function I(e) {
     i.useEffect(() => {
         _.default.track(y.HAw.PREMIUM_UPSELL_VIEWED, {
             type: O.e.EMPTY_STICKER_PICKER_UPSELL,
-            source: { section: y.JJy.EMPTY_STICKER_PICKER_UPSELL },
+            source: {
+                section: y.JJy.EMPTY_STICKER_PICKER_UPSELL,
+            },
             location_stack: C,
         });
     }, [C]);
@@ -39,7 +44,9 @@ function I(e) {
         P = null != R || null != w,
         D = (null == R || null == (n = R.subscription_trial) ? void 0 : n.sku_id) === O.pe.TIER_0;
     return (0, r.jsxs)("div", {
-        className: s()(v.p$, I, { [v.Hz]: P }),
+        className: s()(v.p$, I, {
+            [v.Hz]: P,
+        }),
         children: [
             P
                 ? (0, r.jsx)(p.Ay, {

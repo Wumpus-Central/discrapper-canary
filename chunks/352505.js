@@ -7,12 +7,16 @@ let i = (0, r.C)({
         kind: "user",
         id: "2025-06_game_mentions_user",
         label: "Game Mentions - User",
-        defaultConfig: { enabled: !1 },
+        defaultConfig: {
+            enabled: !1,
+        },
         treatments: [
             {
                 id: 1,
                 label: "Enable Game Mentions",
-                config: { enabled: !0 },
+                config: {
+                    enabled: !0,
+                },
             },
         ],
     }),
@@ -20,12 +24,16 @@ let i = (0, r.C)({
         kind: "guild",
         id: "2025-06_game_mentions",
         label: "Game Mentions - Guild",
-        defaultConfig: { enabled: !1 },
+        defaultConfig: {
+            enabled: !1,
+        },
         treatments: [
             {
                 id: 1,
                 label: "Enable Game Mentions",
-                config: { enabled: !0 },
+                config: {
+                    enabled: !0,
+                },
             },
         ],
     });

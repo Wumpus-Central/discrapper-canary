@@ -1,5 +1,8 @@
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 var r = n(652215);
+
 function i(e, t) {
     let n,
         i = window.GLOBAL_ENV.CDN_HOST,

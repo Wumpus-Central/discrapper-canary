@@ -8,6 +8,7 @@ let r = {
     second: 0,
     millisecond: 0,
 };
+
 function i(e, t) {
     let n = new Date(e);
     if (
@@ -65,7 +66,7 @@ function i(e, t) {
         let e = Math.floor(t.second);
         n.setSeconds(n.getSeconds() + e);
         let r = t.second - e;
-        r > 0 && ((t.millisecond = t?.millisecond ?? 0), (t.millisecond += Math.round(1000 * r)));
+        r > 0 && ((t.millisecond = t?.millisecond ?? 0), (t.millisecond += Math.round(1e3 * r)));
     }
     if ("millisecond" in t) {
         let e = Math.floor(t.millisecond);
@@ -73,6 +74,7 @@ function i(e, t) {
     }
     return n;
 }
+
 function a(e) {
     let t = {};
     for (let n in e) t[n] = -e[n];

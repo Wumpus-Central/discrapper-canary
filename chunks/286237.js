@@ -10,9 +10,11 @@ var r = n(812729),
     o = n(429913),
     l = n(616356),
     c = n(15285);
+
 function u(e, t) {
     return null != e && null != e.id ? e.id : null != t && null != t.id ? t.id : void 0;
 }
+
 function d() {
     let e = l.A.getStreamerActiveStreamMetadata(),
         t = c.Ay.getVisibleGame(),
@@ -24,6 +26,7 @@ function d() {
         runningGameApplication: null != i ? i : void 0,
     };
 }
+
 function f() {
     let e = (0, a.bG)([l.A], () => l.A.getStreamerActiveStreamMetadata()),
         t = (0, a.bG)(

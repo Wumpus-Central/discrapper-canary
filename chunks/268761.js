@@ -8,6 +8,7 @@ n(989349);
 var a = n(927813),
     s = n(37411),
     o = n(985018);
+
 function l() {
     return [
         {
@@ -32,6 +33,7 @@ function l() {
         },
     ];
 }
+
 function c(e, t) {
     var n;
     return null != (n = null != t ? t : null == e ? void 0 : e.defaultAutoArchiveDuration) ? n : s.cM;

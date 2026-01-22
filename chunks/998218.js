@@ -1,4 +1,6 @@
-n.d(t, { A: () => L }),
+n.d(t, {
+    A: () => L,
+}),
     n(896048),
     n(591487),
     n(727858),
@@ -52,19 +54,24 @@ let d = /(?:^|\.)(?:discordapp|discord|discordmerch)\.com$/i,
         window.GLOBAL_ENV.GIFT_CODE_HOST,
         window.GLOBAL_ENV.GUILD_TEMPLATE_HOST,
     ]);
+
 function S(e, t) {
     return null != e && null != t && e !== t;
 }
+
 function I(e) {
     return v.has(e.toLowerCase());
 }
+
 function T(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return null != e && (d.test(e) || (t && I(e)));
 }
+
 function C(e) {
     return null != e && "discord:" === e;
 }
+
 function N(e) {
     if (null == e) return !1;
     let t = c.A.toURLSafe(e);
@@ -75,6 +82,7 @@ function N(e) {
             f.test(t.hostname))
     );
 }
+
 function R(e, t, n) {
     if (!S(t, n) || null == e) return !1;
     let r = c.A.toURLSafe(e);
@@ -84,14 +92,17 @@ function R(e, t, n) {
             p.test(r.hostname))
     );
 }
+
 function w(e) {
     if (null == e) return !1;
     let t = c.A.toURLSafe(e);
     return null != t && _.has(t.hostname);
 }
+
 function P(e, t, n) {
     return !!(N(e) || R(e, t, n) || w(e));
 }
+
 function D(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     if (null != e) {
@@ -101,6 +112,7 @@ function D(e) {
     }
     return !1;
 }
+
 function x(e) {
     return null != e && C(o.parse(e).protocol);
 }
@@ -146,7 +158,10 @@ let L = {
             pathname: e,
             query: s().pickBy(t),
         }),
-    formatSearch: (e) => o.format({ query: s().pickBy(e) }),
+    formatSearch: (e) =>
+        o.format({
+            query: s().pickBy(e),
+        }),
     safeParseWithQuery(e) {
         try {
             return o.parse(e, !0);

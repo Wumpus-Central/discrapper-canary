@@ -10,7 +10,9 @@ let s = (0, i.C)({
         kind: "user",
         id: "2022-02_multi_month_plans",
         label: "Multi Month Plans",
-        defaultConfig: { newPlans: [] },
+        defaultConfig: {
+            newPlans: [],
+        },
         treatments: [
             {
                 id: 1,
@@ -22,11 +24,14 @@ let s = (0, i.C)({
             {
                 id: 2,
                 label: "3 Month Plan Only",
-                config: { newPlans: [a.gD.PREMIUM_3_MONTH_TIER_2] },
+                config: {
+                    newPlans: [a.gD.PREMIUM_3_MONTH_TIER_2],
+                },
             },
         ],
     }),
     o = new Set([r.d.US, r.d.CA]);
+
 function l(e) {
     return null == e || o.has(e.country);
 }

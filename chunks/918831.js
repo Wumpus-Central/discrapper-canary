@@ -1,7 +1,10 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(361926),
     i = n(207371),
     a = n(177640);
+
 function s(e) {
     let { context: t, application: n, botUserId: s } = e,
         o = (0, i.e)(n),

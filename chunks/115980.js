@@ -26,15 +26,20 @@ var r = n(627968),
     A = n(652215),
     v = n(985018),
     S = n(231182);
+
 function I() {
     return (0, r.jsx)("div", {
         className: S.oE,
         children: (0, r.jsx)(s.y$y, {}),
     });
 }
+
 function T() {
-    (0, y.openUserSettings)(b.X.GIFT_PANEL, { section: A.nc_.INVENTORY });
+    (0, y.openUserSettings)(b.X.GIFT_PANEL, {
+        section: A.nc_.INVENTORY,
+    });
 }
+
 function C(e) {
     let { showHeader: t = !1 } = e,
         n = (0, a.bG)([h.A], () => h.A.isSyncing),
@@ -59,26 +64,38 @@ function C(e) {
               submitting: p,
           });
 }
+
 function N(e) {
     let { className: t } = e;
     return (0, r.jsx)(s.po8, {
         messageType: s.YCn.INFO,
         className: t,
-        children: v.intl.format(v.t["8b+FXG"], { onClick: T }),
+        children: v.intl.format(v.t["8b+FXG"], {
+            onClick: T,
+        }),
     });
 }
+
 function R() {
     let e = (0, a.bG)([E.default], () => E.default.locale);
     return (0, r.jsxs)(r.Fragment, {
-        children: [(0, r.jsx)(d.kb, {}), (0, r.jsx)(c.A, { locale: e })],
+        children: [
+            (0, r.jsx)(d.kb, {}),
+            (0, r.jsx)(c.A, {
+                locale: e,
+            }),
+        ],
     });
 }
+
 function w() {
     return (0, r.jsxs)("div", {
         children: [
             (0, r.jsx)(f.x, {
                 setting: O.H.BILLING_PAYMENT_METHODS,
-                children: (0, r.jsx)(C, { showHeader: !0 }),
+                children: (0, r.jsx)(C, {
+                    showHeader: !0,
+                }),
             }),
             (0, r.jsx)(f.x, {
                 setting: O.H.BILLING_TRANSACTION_HISTORY,
@@ -96,10 +113,13 @@ function w() {
                     }),
                 }),
             }),
-            (0, r.jsx)(N, { className: S.Dt }),
+            (0, r.jsx)(N, {
+                className: S.Dt,
+            }),
         ],
     });
 }
+
 function P() {
     let e = (0, a.bG)([_.default], () => null != _.default.getCurrentUser()),
         t = (0, a.bG)([p.A], () => p.A.enabled);

@@ -1,4 +1,7 @@
-n.d(t, { A: () => E }), n(896048);
+n.d(t, {
+    A: () => E,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -25,7 +28,9 @@ let x = (e) => {
             [p, x] = l.useState(!1),
             E = l.useCallback(
                 (e) => {
-                    d.Ay.update(t.id, { seat: e });
+                    d.Ay.update(t.id, {
+                        seat: e,
+                    });
                 },
                 [t.id],
             ),
@@ -142,7 +147,11 @@ let x = (e) => {
                                     x: (e.pageX - r.x - R.x) / N,
                                     y: (e.pageY - r.y - R.y) / N,
                                 };
-                            !1 !== M && n - M > 250 && d.Ay.update(t.id, { position: l });
+                            !1 !== M &&
+                                n - M > 250 &&
+                                d.Ay.update(t.id, {
+                                    position: l,
+                                });
                         }
                         L(!1);
                     }
@@ -179,7 +188,9 @@ let x = (e) => {
                         className: a()(v.nM, v.vf),
                         children: [
                             (0, r.jsxs)("div", {
-                                className: a()(v.nM, { [v.R]: n }),
+                                className: a()(v.nM, {
+                                    [v.R]: n,
+                                }),
                                 children: [
                                     (0, r.jsx)("div", {
                                         ref: W,
@@ -210,7 +221,9 @@ let x = (e) => {
                                 showChat: null != _ && _,
                             }),
                             (0, r.jsxs)("div", {
-                                className: a()(v.nM, { [v.R]: n }),
+                                className: a()(v.nM, {
+                                    [v.R]: n,
+                                }),
                                 children: [
                                     (0, r.jsx)(o.K0, {
                                         variant: "icon-only",
@@ -252,7 +265,9 @@ let x = (e) => {
                     }),
                     (0, r.jsx)(m.A, {}),
                     (0, r.jsx)("div", {
-                        className: a()(v.Lw, { [v.FD]: p }),
+                        className: a()(v.Lw, {
+                            [v.FD]: p,
+                        }),
                         children: (0, r.jsx)("div", {
                             className: v.dH,
                             children: (0, r.jsx)(o.Text, {
@@ -266,7 +281,9 @@ let x = (e) => {
         });
     },
     E = (e) => {
-        let t = f.s.useConfig({ location: "Haven" }).enabled,
+        let t = f.s.useConfig({
+                location: "Haven",
+            }).enabled,
             n = (0, s.bG)([p.A], () => p.A.isUserConnected(e.channel.id));
         return (l.useEffect(() => {
             !t || n || d.Ay.connect(e.channel.id);

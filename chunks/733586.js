@@ -1,4 +1,7 @@
-n.d(t, { A: () => f }), n(896048);
+n.d(t, {
+    A: () => f,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -6,9 +9,11 @@ var r = n(627968),
     s = n(962125),
     o = n(591329);
 let c = 16 / 9;
+
 function u(e, t) {
     return Math.max(1, Math.floor((t - e) / (8 + e)) + 1);
 }
+
 function d(e, t, n) {
     let r = t - e;
     for (; r > 0; ) {
@@ -18,6 +23,7 @@ function d(e, t, n) {
     }
     return e;
 }
+
 function f(e) {
     var t;
     let { className: n, children: i, keyExtractor: f, paddingTop: p = 0, paddingBottom: h = 0 } = e,
@@ -67,7 +73,9 @@ function f(e) {
                             rows: f,
                         });
                     return {
-                        tileStyle: { width: b },
+                        tileStyle: {
+                            width: b,
+                        },
                         tileWidth: b,
                         rows: p,
                         columns: h,

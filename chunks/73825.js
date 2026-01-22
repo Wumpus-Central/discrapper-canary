@@ -48,12 +48,17 @@ async function d(e, t, n, u, d) {
         throw ((t.message = "Failed to fetch subscription plans for SKU ".concat(e)), t);
     }
 }
+
 function f(e, t) {
     return Promise.all(e.filter((e) => e !== u.pe.NONE).map((e) => d(e, t)));
 }
+
 function p(e, t, n) {
     return Promise.all(u.oz.filter((e) => e !== u.pe.NONE).map((r) => d(r, e, t, void 0, n)));
 }
+
 function _() {
-    i.h.dispatch({ type: "SUBSCRIPTION_PLANS_RESET" });
+    i.h.dispatch({
+        type: "SUBSCRIPTION_PLANS_RESET",
+    });
 }

@@ -1,8 +1,12 @@
-n.d(t, { t: () => d }), n(638769);
+n.d(t, {
+    t: () => d,
+}),
+    n(638769);
 var r = n(64700),
     i = n(311907),
     a = n(10716),
     s = n(360469);
+
 function o(e, t, n) {
     return (
         t in e
@@ -16,6 +20,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -32,6 +37,7 @@ function l(e) {
     }
     return e;
 }
+
 function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -44,6 +50,7 @@ function c(e, t) {
     }
     return n;
 }
+
 function u(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -71,7 +78,9 @@ let d = () => {
                 ? n
                       .map((e) => ({
                           application: e,
-                          activity: u(l({}, s.Gl, e.embeddedActivityConfig), { application_id: e.id }),
+                          activity: u(l({}, s.Gl, e.embeddedActivityConfig), {
+                              application_id: e.id,
+                          }),
                       }))
                       .sort((e, n) => {
                           let r = t[e.application.id],

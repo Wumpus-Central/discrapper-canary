@@ -9,7 +9,9 @@ var r = n(398590),
 let o = () => {
         {
             let { openUserSettings: e } = n(840065);
-            e(a.X.NITRO_PANEL, { section: s.nc_.PREMIUM });
+            e(a.X.NITRO_PANEL, {
+                section: s.nc_.PREMIUM,
+            });
         }
     },
     l = (e) => {

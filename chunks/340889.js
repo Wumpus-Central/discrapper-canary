@@ -1,4 +1,6 @@
-i.d(e, { U: () => o });
+i.d(e, {
+    U: () => o,
+});
 var n = i(311907),
     l = i(55619),
     s = i(419954),
@@ -15,6 +17,8 @@ let o = (0, s.zD)(u.X.STREAMING_STREAMER_MODE, {
         });
     },
     setValue: function (t) {
-        l.A.update({ enabled: t });
+        l.A.update({
+            enabled: t,
+        });
     },
 });

@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var r = n(627968);
 n(64700);
 var s = n(397927),
@@ -11,6 +13,7 @@ var s = n(397927),
     f = n(985018),
     b = n(552762),
     u = n(326513);
+
 function p() {
     return (0, r.jsxs)("div", {
         className: b.rV,
@@ -56,6 +59,7 @@ function p() {
         ],
     });
 }
+
 function g(e) {
     let { onClose: t } = e;
     return (0, r.jsx)(c.b, {

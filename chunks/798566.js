@@ -21,6 +21,7 @@ var l = n(70298),
     d = n(362474),
     f = n(71931),
     p = n(368849);
+
 function _(e, t, n) {
     return (
         t in e
@@ -34,6 +35,7 @@ function _(e, t, n) {
         e
     );
 }
+
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -50,6 +52,7 @@ function h(e) {
     }
     return e;
 }
+
 function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -62,6 +65,7 @@ function m(e, t) {
     }
     return n;
 }
+
 function g(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -125,6 +129,7 @@ if (null != y) {
             ? (r.os_sdk_version = null == i ? void 0 : i.split(".")[0])
             : "win32" === n && (r.os_sdk_version = null == i ? void 0 : i.split(".")[2]);
 }
+
 function O() {
     let { userAgent: e } = window.navigator;
     if (/Windows/i.test(e)) return /Phone/.test(e) ? "Windows Mobile" : "Windows";
@@ -136,12 +141,14 @@ function O() {
     else if (/Linux/i.test(e)) return "Linux";
     else return "";
 }
+
 function A(e, t) {
     if (null == e) return "";
     t = t.replace(/[[]/, "\\[").replace(/[\]]/, "\\]");
     let n = new RegExp("[\\?&]".concat(t, "=([^&#]*)")).exec(e);
     return null === n || ("string" != typeof n[1] && n[1].length) ? "" : decodeURIComponent(n[1]).replace(/\+/g, " ");
 }
+
 function v() {
     let e = document.referrer;
     return 0 === e.search("https?://(.*)google.([^/?]*)")
@@ -154,6 +161,7 @@ function v() {
               ? "duckduckgo"
               : null;
 }
+
 function S() {
     let e = {},
         t = document.referrer,
@@ -166,6 +174,7 @@ function S() {
     }
     return e;
 }
+
 function I() {
     let { userAgent: e, vendor: t = "" } = window.navigator,
         { opera: n } = window;
@@ -186,6 +195,7 @@ function I() {
     else if (/Gecko/.test(e)) return "Mozilla";
     else return "";
 }
+
 function T() {
     let { userAgent: e } = window.navigator;
     if (/(BlackBerry|PlayBook|BB10)/i.test(e)) return "BlackBerry";
@@ -195,16 +205,19 @@ function T() {
     if (/iPad/.test(e)) return "iPad";
     else return "";
 }
+
 function C() {
     let e = document.referrer.split("/");
     return e.length >= 3 ? e[2] : "";
 }
+
 function N() {
     try {
         if (__OVERLAY__) return "OVERLAY";
     } catch (e) {}
     return null;
 }
+
 function R() {
     let e = {};
     return (
@@ -216,6 +229,7 @@ function R() {
         e
     );
 }
+
 function w() {
     var e, t;
     return g(
@@ -233,6 +247,7 @@ function w() {
     );
 }
 let P = "utm_source utm_medium utm_campaign utm_content utm_term".split(" ");
+
 function D(e) {
     let t = {};
     return (
@@ -243,14 +258,17 @@ function D(e) {
         t
     );
 }
+
 function x() {
     let e = {};
     return (e.referrer = document.referrer), (e.referring_domain = C()), (e = h({}, e, D(window.location.href), S()));
 }
+
 function L(e, t) {
     let n = {};
     return Object.keys(e).map((r) => (n["".concat(r).concat(t)] = e[r])), n;
 }
+
 function j() {
     let e = u.w.get(E);
     null == e && ((e = R()), u.w.set(E, e));
@@ -265,12 +283,15 @@ if (null == r)
     } catch (e) {
         r = {};
     }
+
 function M(e) {
     (r = h({}, r, e)), (i = (0, p.q)(r));
 }
+
 function k() {
     return r;
 }
+
 function U() {
     return i;
 }
@@ -280,7 +301,7 @@ M(
         let n = {},
             r = window.GLOBAL_ENV.RELEASE_CHANNEL;
         r && (null == n.release_channel || "" === n.release_channel) && (n.release_channel = r.split("-")[0]);
-        let i = parseInt("488133", 10);
+        let i = parseInt("488230", 10);
         isNaN(i) || (n.client_build_number = i);
         let a = null == y || null == (e = (t = y.remoteApp).getBuildNumber) ? void 0 : e.call(t);
         return (

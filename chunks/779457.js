@@ -1,4 +1,7 @@
-n.d(e, { default: () => C }), n(896048);
+n.d(e, {
+    default: () => C,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     a = n(503698),
@@ -24,6 +27,7 @@ var r = n(627968),
     N = n(179499),
     K = n(985018),
     P = n(560381);
+
 function w(t) {
     let { guildProductListing: e, guildId: n, skuPricePreview: l } = t,
         a = (0, y.z)(e),
@@ -48,7 +52,9 @@ function w(t) {
                             color: "text-strong",
                             children: e.name,
                         }),
-                        (0, r.jsx)(m.hKd, { size: 4 }),
+                        (0, r.jsx)(m.hKd, {
+                            size: 4,
+                        }),
                         (0, r.jsxs)("div", {
                             children: [
                                 (0, r.jsx)(m.Text, {
@@ -75,7 +81,9 @@ function w(t) {
                             color: "text-strong",
                             children: i,
                         }),
-                        (0, r.jsx)(m.hKd, { size: 4 }),
+                        (0, r.jsx)(m.hKd, {
+                            size: 4,
+                        }),
                         (0, r.jsx)(m.Text, {
                             variant: "text-xs/normal",
                             color: "text-muted",
@@ -87,6 +95,7 @@ function w(t) {
         })
     );
 }
+
 function T(t) {
     var e;
     let { guildProductListing: n, guildId: l } = t,
@@ -101,11 +110,21 @@ function T(t) {
         : (0, r.jsx)(z.A, {
               label: K.intl.string(K.t.HOkHPB),
               children: (0, r.jsxs)("div", {
-                  className: i()(P.KK, { [P.Oy]: s }),
+                  className: i()(P.KK, {
+                      [P.Oy]: s,
+                  }),
                   children: [
                       (0, r.jsx)("div", {
                           className: P.yO,
-                          children: a.map((t) => (0, r.jsx)(O.A, { attachment: t }, t.id)),
+                          children: a.map((t) =>
+                              (0, r.jsx)(
+                                  O.A,
+                                  {
+                                      attachment: t,
+                                  },
+                                  t.id,
+                              ),
+                          ),
                       }),
                       (0, r.jsx)("div", {
                           children: (0, r.jsx)(
@@ -141,15 +160,19 @@ function T(t) {
               }),
           });
 }
+
 function _(t) {
     let { role: e } = t;
     return null == e
         ? null
         : (0, r.jsx)(z.A, {
               label: K.intl.string(K.t.gWBNet),
-              children: (0, r.jsx)(A.A, { role: e }),
+              children: (0, r.jsx)(A.A, {
+                  role: e,
+              }),
           });
 }
+
 function k(t) {
     return (0, r.jsx)(m.Text, {
         tag: "span",
@@ -158,6 +181,7 @@ function k(t) {
         children: t,
     });
 }
+
 function C(t) {
     var e;
     let { onClose: n, transitionState: a, guildProductListingId: i, guildId: s, skuPricePreview: x } = t,
@@ -209,21 +233,31 @@ function C(t) {
                                   : "",
                           ],
                       }),
-                      (0, r.jsx)(m.hKd, { size: 12 }),
+                      (0, r.jsx)(m.hKd, {
+                          size: 12,
+                      }),
                       (0, r.jsx)(m.Text, {
                           variant: "text-md/normal",
                           color: "text-default",
                           children: K.intl.string(K.t["9S3QHF"]),
                       }),
-                      (0, r.jsx)(m.hKd, { size: 24 }),
+                      (0, r.jsx)(m.hKd, {
+                          size: 24,
+                      }),
                       (0, r.jsx)(w, {
                           guildProductListing: h,
                           guildId: s,
                           skuPricePreview: x,
                       }),
-                      (0, r.jsx)(m.hKd, { size: 32 }),
-                      (0, r.jsx)("div", { className: P.yF }),
-                      (0, r.jsx)(m.hKd, { size: 32 }),
+                      (0, r.jsx)(m.hKd, {
+                          size: 32,
+                      }),
+                      (0, r.jsx)("div", {
+                          className: P.yF,
+                      }),
+                      (0, r.jsx)(m.hKd, {
+                          size: 32,
+                      }),
                       (0, r.jsxs)("ul", {
                           className: P.iq,
                           children: [
@@ -231,7 +265,9 @@ function C(t) {
                                   guildProductListing: h,
                                   guildId: s,
                               }),
-                              (0, r.jsx)(_, { role: z }),
+                              (0, r.jsx)(_, {
+                                  role: z,
+                              }),
                           ],
                       }),
                   ],

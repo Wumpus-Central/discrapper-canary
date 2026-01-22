@@ -1,4 +1,6 @@
-n.d(t, { A: () => j });
+n.d(t, {
+    A: () => j,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -22,6 +24,7 @@ var r = n(627968),
     v = n(652215),
     S = n(985018),
     I = n(106967);
+
 function T(e, t, n) {
     return (
         t in e
@@ -35,6 +38,7 @@ function T(e, t, n) {
         e
     );
 }
+
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -51,6 +55,7 @@ function C(e) {
     }
     return e;
 }
+
 function N(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -63,6 +68,7 @@ function N(e, t) {
     }
     return n;
 }
+
 function R(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -74,6 +80,7 @@ function R(e, t) {
         e
     );
 }
+
 function w(e, t) {
     if (null == e) return {};
     var n,
@@ -90,6 +97,7 @@ function w(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function P(e, t) {
     if (null == e) return {};
     var n,
@@ -151,6 +159,7 @@ let D = {
     },
     [y._.NONE]: {},
 };
+
 function x(e) {
     let { guildTraits: t } = e;
     return (0, r.jsxs)("div", {
@@ -176,12 +185,15 @@ function x(e) {
                 children: (0, r.jsx)(u.Text, {
                     variant: "text-xs/semibold",
                     color: "always-white",
-                    children: S.intl.format(S.t["dR/SVH"], { count: t.premiumSubscriberCount }),
+                    children: S.intl.format(S.t["dR/SVH"], {
+                        count: t.premiumSubscriberCount,
+                    }),
                 }),
             }),
         ],
     });
 }
+
 function L(e) {
     let { badgeType: t, guildTraits: n } = e,
         { tooltipTitle: i, tooltipSubtitle: a, tooltipDescription: s } = (0, A.V)(t, n.visibility);
@@ -211,10 +223,15 @@ function L(e) {
                         : null,
                 ],
             }),
-            n.premium ? (0, r.jsx)(x, { guildTraits: n }) : null,
+            n.premium
+                ? (0, r.jsx)(x, {
+                      guildTraits: n,
+                  })
+                : null,
         ],
     });
 }
+
 function j(e) {
     var t;
     let n,

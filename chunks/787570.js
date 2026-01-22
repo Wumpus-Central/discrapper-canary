@@ -1,7 +1,10 @@
-i.d(e, { default: () => o });
+i.d(e, {
+    default: () => o,
+});
 var n = i(284009),
     r = i.n(n),
     a = i(659694);
+
 function s(t, e, i) {
     return (
         e in t
@@ -112,7 +115,7 @@ class o {
             (this.dropped = !1),
             (this.currentFrame = 0),
             (this.currentFrameTime = 0),
-            (this.frameDuration = 1000),
+            (this.frameDuration = 1e3),
             (this.animate = l),
             (this.visible = o),
             (this.requestAnimationFrameId = null),
@@ -126,7 +129,7 @@ class o {
                         (this.dropped
                             ? a.A.drop(this.key)
                             : ((this.animation = t),
-                              (this.frameDuration = 1000 / t.frameRate),
+                              (this.frameDuration = 1e3 / t.frameRate),
                               this.scheduleOrCancelTick()));
                 })
                 .catch((t) => {

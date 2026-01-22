@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -8,6 +10,7 @@ var i = n(311907),
     l = n(430452),
     c = n(985018),
     u = n(809119);
+
 function d(e, t, n) {
     return (
         t in e
@@ -21,6 +24,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,6 +41,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -49,6 +54,7 @@ function p(e, t) {
     }
     return n;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -60,6 +66,7 @@ function _(e, t) {
         e
     );
 }
+
 function h(e, t) {
     let d = (0, a.k34)(),
         { videoEnabled: p, hasVideoDevice: h } = (0, i.cf)([l.A], () => ({
@@ -68,11 +75,18 @@ function h(e, t) {
         })),
         m = (0, i.bG)([o.default], () => o.default.getId() === e),
         g = (0, s.A)();
+
     function E() {
         (0, a.mMO)(
             async () => {
                 let { default: e } = await n.e("10534").then(n.bind(n, 308229));
-                return (t) => (0, r.jsx)(e, _(f({}, t), { videoEnabled: p }));
+                return (t) =>
+                    (0, r.jsx)(
+                        e,
+                        _(f({}, t), {
+                            videoEnabled: p,
+                        }),
+                    );
             },
             {
                 modalKey: "camera-preview",

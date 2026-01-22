@@ -1,4 +1,10 @@
-n.d(t, { wG: () => E }), n(896048), n(747238), n(812715), n(321073);
+n.d(t, {
+    wG: () => E,
+}),
+    n(896048),
+    n(747238),
+    n(812715),
+    n(321073);
 var l = n(735438),
     r = n.n(l);
 n(309613);
@@ -38,18 +44,23 @@ let i = new Set([
     "will",
     "with",
 ]);
+
 function s(e) {
     return e.replace(/('|\u2019|\uFF07)(s|S)$/, "");
 }
+
 function o(e) {
     return e.toLowerCase();
 }
+
 function c(e) {
     return i.has(e);
 }
+
 function u(e) {
     return 0 === e.length;
 }
+
 function E(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = e.length >= 3 && e.length <= 12 && t,

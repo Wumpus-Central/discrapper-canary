@@ -1,4 +1,8 @@
-l.d(t, { A: () => E }), l(896048), l(667532);
+l.d(t, {
+    A: () => E,
+}),
+    l(896048),
+    l(667532);
 var n = l(64700),
     r = l(735438),
     s = l.n(r),
@@ -14,6 +18,7 @@ var n = l(64700),
     p = l(623373),
     m = l(652215),
     h = l(985018);
+
 function E(e) {
     let { sortedSkuIds: t, isPremiumUser: l, prioritizeUserDiscounts: r, orbsSupportedOnly: E } = e,
         v = (0, i.bG)([o.A], () => o.A.hasConsented(m.YAq.PERSONALIZATION)),

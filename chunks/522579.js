@@ -22,7 +22,7 @@ var t =
                 },
                 u = "application/octet-stream",
                 d = 0,
-                f = 40000,
+                f = 4e4,
                 p = function (e) {
                     setTimeout(function () {
                         "string" == typeof e ? n().revokeObjectURL(e) : e.remove();
@@ -41,7 +41,9 @@ var t =
                 },
                 h = function (e) {
                     return /^\s*(?:text\/\S*|application\/xml|\S*\/\S*\+xml)\s*;.*charset\s*=\s*utf-8/i.test(e.type)
-                        ? new Blob(["ï\xBB\xBF", e], { type: e.type })
+                        ? new Blob(["\xef\xbb\xbf", e], {
+                              type: e.type,
+                          })
                         : e;
                 },
                 m = function (t, c, f) {
@@ -140,7 +142,9 @@ var t =
                                           };
                                           e.getFile(
                                               c,
-                                              { create: !1 },
+                                              {
+                                                  create: !1,
+                                              },
                                               v(function (e) {
                                                   e.remove(), n();
                                               }),

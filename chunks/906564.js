@@ -15,6 +15,7 @@ var r = n(989349),
     f = n(569717),
     p = n(652215),
     g = n(204925);
+
 function m(e) {
     var t, n;
     let { invite: r = null, giftCodeSKUId: i = null } = e;
@@ -99,6 +100,7 @@ function m(e) {
         t),
     );
 }
+
 function A(e) {
     let {
         email: t,
@@ -114,7 +116,12 @@ function A(e) {
         promoEmailConsent: j = null,
         usedUsernameSuggestion: y = null,
     } = e;
-    if ((l.h.dispatch({ type: "REGISTER" }), null != E)) {
+    if (
+        (l.h.dispatch({
+            type: "REGISTER",
+        }),
+        null != E)
+    ) {
         let e;
         (0, f.A)(E, p.JJy.REGISTER),
             d.default.track(p.HAw.AGE_GATE_ACTION, {

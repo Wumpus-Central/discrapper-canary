@@ -3,4 +3,6 @@ function r(e, t) {
     for (var n in t) Object.prototype.hasOwnProperty.call(t, n) && (e[n] = t[n]);
     return e;
 }
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});

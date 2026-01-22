@@ -8,6 +8,7 @@ n.d(t, {
 var r = n(99478),
     i = n(526531);
 let a = 1721426;
+
 function s(e, t, n, r) {
     let i = (t = l(e, t)) - 1,
         s = -2;
@@ -22,12 +23,15 @@ function s(e, t, n, r) {
             Math.floor((367 * n - 362) / 12 + s + r)
     );
 }
+
 function o(e) {
     return e % 4 == 0 && (e % 100 != 0 || e % 400 == 0);
 }
+
 function l(e, t) {
     return "BC" === e ? 1 - t : t;
 }
+
 function c(e) {
     let t = "AD";
     return e <= 0 && ((t = "BC"), (e = 1 - e)), [t, e];

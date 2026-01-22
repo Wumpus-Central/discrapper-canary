@@ -1,6 +1,7 @@
 var t = Object.getOwnPropertySymbols,
     n = Object.prototype.hasOwnProperty,
     r = Object.prototype.propertyIsEnumerable;
+
 function i(e) {
     if (null == e) throw TypeError("Object.assign cannot be called with null or undefined");
     return Object(e);

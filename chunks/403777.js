@@ -13,6 +13,7 @@ var i = n(397927),
     c = n(958805),
     u = n(61881),
     d = n(652215);
+
 function f(e, t, n) {
     return (
         t in e
@@ -26,6 +27,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,6 +44,7 @@ function p(e) {
     }
     return e;
 }
+
 function _(e, t) {
     if (null == e) return {};
     var n,
@@ -58,6 +61,7 @@ function _(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function h(e, t) {
     if (null == e) return {};
     var n,
@@ -69,6 +73,7 @@ function h(e, t) {
     return i;
 }
 let m = new Set();
+
 function g(e, t) {
     return "USER_PROFILE_MODAL_KEY:".concat(e, ":").concat(null == t ? "" : t);
 }
@@ -146,6 +151,7 @@ async function E(e) {
         ),
     );
 }
+
 function b() {
     if (0 !== m.size) {
         for (let e of m) (0, i.OoC)(e);

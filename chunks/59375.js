@@ -1,43 +1,48 @@
-n.d(e, { A: () => i });
+n.d(t, {
+    A: () => s,
+});
 var r = n(627968);
 n(64700);
-var l = n(397927),
-    a = n(407943);
-function i(t) {
-    var e;
-    let { attachment: n } = t,
-        i = Math.round(((null != (e = n.size) ? e : 0) / 1024 / 1024) * 100) / 100;
+var a = n(397927),
+    l = n(407943);
+
+function s(e) {
+    var t;
+    let { attachment: n } = e,
+        s = Math.round(((null != (t = n.size) ? t : 0) / 1024 / 1024) * 100) / 100;
     return (0, r.jsxs)("div", {
-        className: a.kL,
+        className: l.kL,
         children: [
-            (0, r.jsx)(l.DF1, {
+            (0, r.jsx)(a.DF1, {
                 size: "xs",
                 color: "currentColor",
-                className: a.Yg,
+                className: l.Yg,
             }),
-            (0, r.jsx)(l.hKd, {
+            (0, r.jsx)(a.hKd, {
                 size: 8,
                 horizontal: !0,
             }),
-            (0, r.jsx)(l.Text, {
+            (0, r.jsx)(a.Text, {
                 variant: "text-sm/normal",
                 color: "text-default",
-                className: a.Md,
+                className: l.Md,
                 children: n.filename,
             }),
-            (0, r.jsx)(l.hKd, {
+            (0, r.jsx)(a.hKd, {
                 size: 8,
                 horizontal: !0,
             }),
-            (0, r.jsx)("div", { className: a.Om }),
-            (0, r.jsx)(l.hKd, {
+            (0, r.jsx)("div", {
+                className: l.Om,
+            }),
+            (0, r.jsx)(a.hKd, {
                 size: 8,
                 horizontal: !0,
             }),
-            (0, r.jsxs)(l.Text, {
+            (0, r.jsxs)(a.Text, {
                 variant: "text-sm/normal",
                 color: "text-muted",
-                children: [i, "MB"],
+                children: [s, "MB"],
             }),
         ],
     });

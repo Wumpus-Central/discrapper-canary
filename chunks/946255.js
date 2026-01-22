@@ -1,6 +1,9 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 var r = n(954571),
     i = n(652215);
+
 function a(e) {
     let {
         type: t,

@@ -11,17 +11,20 @@ var r = n(988665),
     a = n(771650),
     s = n(652215),
     o = n(985018);
+
 function l(e) {
     return (0, i._o)(e).map((e, t, n) =>
         s.l90.test(e.type) || (0, i.Zh)(e, n[t + 1]) ? e : new r.ou(e.getFullMatch(), r.dL),
     );
 }
+
 function c(e, t) {
     return {
         type: e,
         data: t,
     };
 }
+
 function u(e) {
     switch (e) {
         case s.x2k.HISTORY:
@@ -38,6 +41,7 @@ function u(e) {
             return "";
     }
 }
+
 function d(e) {
     let { modeType: t, result: n, group: r } = e,
         { text: o, channel: l, group: c } = n,
@@ -52,6 +56,7 @@ function d(e) {
     }
     return u;
 }
+
 function f(e) {
     let { navId: t, index: n, selected: r } = e;
     return {

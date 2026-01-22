@@ -1,4 +1,7 @@
-n.d(t, { A: () => g }), n(896048);
+n.d(t, {
+    A: () => g,
+}),
+    n(896048);
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -13,6 +16,7 @@ var i = n(311907),
     f = n(652215),
     h = n(985018);
 let A = new Set(["ko", "ja"]);
+
 function g(e) {
     let { className: t, focusSectionProps: n } = e,
         g = (0, i.bG)([o.default], () => o.default.getCurrentUser()),
@@ -52,7 +56,10 @@ function g(e) {
                 {
                     color: b ? l.A.unsafe_rawColors.GREEN_360.css : "currentColor",
                     className: t,
-                    onClick: () => c.default.track(f.HAw.HELP_CLICKED, { highlighted: b }),
+                    onClick: () =>
+                        c.default.track(f.HAw.HELP_CLICKED, {
+                            highlighted: b,
+                        }),
                     icon: a.cBN,
                     tooltipPosition: A.has(m) ? "left" : void 0,
                     tooltip: h.intl.string(h.t["cqEoj/"]),

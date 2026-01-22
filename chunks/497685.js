@@ -34,6 +34,7 @@ var r = n(735438),
     b = n(652215),
     y = n(355097),
     O = n(985018);
+
 function A(e, t, n) {
     return (
         t in e
@@ -47,6 +48,7 @@ function A(e, t, n) {
         e
     );
 }
+
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -63,6 +65,7 @@ function v(e) {
     }
     return e;
 }
+
 function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -75,6 +78,7 @@ function S(e, t) {
     }
     return n;
 }
+
 function I(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -86,6 +90,7 @@ function I(e, t) {
         e
     );
 }
+
 function T(e, t) {
     if (null == e) return {};
     var n,
@@ -102,6 +107,7 @@ function T(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function C(e, t) {
     if (null == e) return {};
     var n,
@@ -120,8 +126,14 @@ let N = 250,
     x = ".webp",
     L = ".avif",
     j = ".gif";
+
 function M(e) {
-    let t = null != e ? { [e]: 1 } : {};
+    let t =
+        null != e
+            ? {
+                  [e]: 1,
+              }
+            : {};
     c.Ay.trackWithMetadata(b.HAw.SEARCH_STARTED, {
         search_type: b.I4_.GIF,
         load_id: _.A.getAnalyticsID(),
@@ -130,6 +142,7 @@ function M(e) {
         gif_provider: (0, u.cf)(),
     });
 }
+
 function k(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : void 0,
         [r = {}] = [n],
@@ -140,10 +153,27 @@ function k(e, t) {
             limit: null,
             totalResults: e.length,
         },
-        o = (0, m.QL)(_.A.getAnalyticsID(), t, I(v({}, s, a), { results: e.length })),
-        l = null == i ? {} : { load_duration_ms: Date.now() - i };
-    c.Ay.trackWithMetadata(b.HAw.SEARCH_RESULT_VIEWED, I(v({}, o, l), { gif_provider: (0, u.cf)() }));
+        o = (0, m.QL)(
+            _.A.getAnalyticsID(),
+            t,
+            I(v({}, s, a), {
+                results: e.length,
+            }),
+        ),
+        l =
+            null == i
+                ? {}
+                : {
+                      load_duration_ms: Date.now() - i,
+                  };
+    c.Ay.trackWithMetadata(
+        b.HAw.SEARCH_RESULT_VIEWED,
+        I(v({}, o, l), {
+            gif_provider: (0, u.cf)(),
+        }),
+    );
 }
+
 function U(e, t, n) {
     let r = Date.now();
     M(t),
@@ -179,6 +209,7 @@ function U(e, t, n) {
         );
 }
 let G = i().debounce(U, N);
+
 function V(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = arguments.length > 3 ? arguments[3] : void 0;
@@ -190,6 +221,7 @@ function V(e, t) {
           }),
           n ? U(e, t, r) : G(e, t, r));
 }
+
 function F(e) {
     "" !== e &&
         null != e &&
@@ -212,12 +244,14 @@ function F(e) {
             });
         });
 }
+
 function B() {
     l.h.dispatch({
         type: "GIF_PICKER_QUERY",
         query: "",
     });
 }
+
 function H(e) {
     let { type: t, index: n, offset: r, limit: i, results: a, totalResults: o, query: l, gifId: d } = e,
         f = (0, m.QL)(_.A.getAnalyticsID(), t, {
@@ -250,6 +284,7 @@ function H(e) {
         });
     }
 }
+
 function Y() {
     let e = (0, a.A)().replace(R, "");
     c.Ay.trackWithMetadata(b.HAw.SEARCH_OPENED, {
@@ -263,6 +298,7 @@ function Y() {
             });
         });
 }
+
 function W() {
     s.Bo.get({
         url: b.Rsh.GIFS_TRENDING,
@@ -283,6 +319,7 @@ function W() {
         });
     });
 }
+
 function K(e) {
     let t = Date.now();
     M(b.dD.TRENDING_GIFS),
@@ -309,27 +346,34 @@ function K(e) {
                     });
             },
             () => {
-                l.h.dispatch({ type: "GIF_PICKER_QUERY_FAILURE" });
+                l.h.dispatch({
+                    type: "GIF_PICKER_QUERY_FAILURE",
+                });
             },
         );
 }
+
 function z(e) {
     let t = g.A.toURLSafe(e);
     return null == t ? e : (0, d.fr)(t) ? (0, d.w6)(t).toString() : e;
 }
+
 function q(e) {
     let t = g.A.toURLSafe(e.src);
     return null != t && ((0, d.BX)(t) || (0, d.fr)(t));
 }
+
 function X(e) {
     return q(e) && null != e.gifSrc ? e.gifSrc : e.src;
 }
+
 function Z(e) {
     let t = g.A.toURLSafe(e);
     if (null == t) return !1;
     let n = t.pathname.toLowerCase();
     return n.endsWith(x) || n.endsWith(L) || n.endsWith(j);
 }
+
 function Q(e) {
     let t = g.A.toURLSafe(e);
     if (null == t) return e;
@@ -339,6 +383,7 @@ function Q(e) {
         a = n.endsWith(j);
     return r || i || a ? ((i || a) && t.searchParams.set(w, D), t.searchParams.set(P, "true"), t.toString()) : e;
 }
+
 function $(e) {
     p.bW.updateAsync(
         "favoriteGifs",
@@ -365,17 +410,23 @@ function $(e) {
                     !1
                 );
             let u = i().size(t.gifs);
-            u > 2 && (t.hideTooltip = !0), h.default.track(b.HAw.GIF_FAVORITED, { total_num_favorited: u });
+            u > 2 && (t.hideTooltip = !0),
+                h.default.track(b.HAw.GIF_FAVORITED, {
+                    total_num_favorited: u,
+                });
         },
         y.Sb.INFREQUENT_USER_ACTION,
     );
 }
+
 function J(e) {
     p.bW.updateAsync(
         "favoriteGifs",
         (t) => {
             e in t.gifs ? delete t.gifs[e] : delete t.gifs[z(e)],
-                h.default.track(b.HAw.GIF_UNFAVORITED, { total_num_favorited: i().size(t.gifs) });
+                h.default.track(b.HAw.GIF_UNFAVORITED, {
+                    total_num_favorited: i().size(t.gifs),
+                });
         },
         y.Sb.INFREQUENT_USER_ACTION,
     );

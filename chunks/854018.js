@@ -1,10 +1,13 @@
-r.d(t, { A: () => d });
+r.d(t, {
+    A: () => d,
+});
 var n = r(627968);
 r(64700);
 var i = r(827734),
     o = r(582754),
     l = r(736653),
     s = r(953727);
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
@@ -30,6 +33,7 @@ function c(e) {
     }
     return e;
 }
+
 function a(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -48,6 +52,7 @@ function a(e, t) {
         e
     );
 }
+
 function d(e) {
     let { width: t = 160, height: r = 210, color: d = i.A.unsafe_rawColors.WHITE.css } = e,
         u = (function (e, t) {

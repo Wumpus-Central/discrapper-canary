@@ -1,10 +1,13 @@
-t.d(A, { Z: () => s });
+t.d(A, {
+    Z: () => s,
+});
 var r = t(627968);
 t(64700);
 var n = t(192308),
     l = t(575077),
     a = t(652215),
     i = t(985018);
+
 function s(e, A, s) {
     var o, d;
     switch (e.code) {
@@ -47,7 +50,12 @@ function s(e, A, s) {
                                     });
                             }
                             return e;
-                        })({ guildId: A }, t),
+                        })(
+                            {
+                                guildId: A,
+                            },
+                            t,
+                        ),
                     );
             });
             break;
@@ -56,7 +64,12 @@ function s(e, A, s) {
             break;
         case a.t02.CREATOR_MONETIZATION_PAYMENT_ACCOUNT_VERIFICATION_REQUIRED:
             let c, u;
-            null != s ? ((c = i.t.j2VMk6), (u = { url: a.X7G.DEVELOPER_PORTAL_PAYOUT_SETTINGS(s) })) : (c = i.t.ZVV1gg),
+            null != s
+                ? ((c = i.t.j2VMk6),
+                  (u = {
+                      url: a.X7G.DEVELOPER_PORTAL_PAYOUT_SETTINGS(s),
+                  }))
+                : (c = i.t.ZVV1gg),
                 (0, l.p)(i.intl.string(i.t["+CT/gV"]), c, u);
             break;
         default:

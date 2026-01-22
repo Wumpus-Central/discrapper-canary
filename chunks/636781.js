@@ -1,7 +1,9 @@
-n.d(t, { A: () => A });
+n.d(t, {
+    A: () => A,
+});
 var r = n(627968);
 n(64700);
-var i = n(432022),
+var i = n(108531),
     l = n(311907),
     a = n(397927),
     s = n(450510),
@@ -11,6 +13,7 @@ var i = n(432022),
     d = n(215307),
     p = n(48686),
     f = n(652215);
+
 function h(e) {
     let { channel: t, guild: n } = e,
         o = (0, l.bG)([s.HP], () => s.HP.hasHotspot(s._2.HUB_STUDY_ROOM_NOTICE)),
@@ -28,7 +31,7 @@ function h(e) {
                   guild: n,
               })
             : (0, r.jsx)(d.A, {
-                  name: "\uD83D\uDCDA\u2615 ".concat(t.name),
+                  name: "\uD83D\uDCDA☕ ".concat(t.name),
                   channel: t,
               }),
     });

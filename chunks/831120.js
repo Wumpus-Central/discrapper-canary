@@ -1,8 +1,11 @@
-r.d(t, { default: () => i });
+r.d(t, {
+    default: () => i,
+});
 var n = r(627968);
 r(64700);
 var o = r(158954),
     l = r(985018);
+
 function i(e) {
     let { onConfirmUninstall: t, game: r } = e,
         i = (function (e, t) {
@@ -64,8 +67,12 @@ function i(e) {
             return e;
         })(
             {
-                title: l.intl.formatToPlainString(l.t["f/BAbC"], { gameName: r.name }),
-                subtitle: l.intl.format(l.t["FP+NKV"], { gameName: r.name }),
+                title: l.intl.formatToPlainString(l.t["f/BAbC"], {
+                    gameName: r.name,
+                }),
+                subtitle: l.intl.format(l.t["FP+NKV"], {
+                    gameName: r.name,
+                }),
                 confirmText: l.intl.string(l.t.RVy6Vl),
                 cancelText: l.intl.string(l.t["96dwMR"]),
                 onConfirm: t,

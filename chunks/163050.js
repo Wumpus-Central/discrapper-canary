@@ -1,4 +1,7 @@
-r.d(t, { A: () => P }), r(747238);
+r.d(t, {
+    A: () => P,
+}),
+    r(747238);
 var n,
     s = r(627968),
     i = r(64700),
@@ -22,6 +25,7 @@ var n,
     S = r(652215),
     v = r(985018),
     A = r(473169);
+
 function E(e, t, r) {
     return (
         t in e
@@ -55,7 +59,9 @@ class x extends (n = i.PureComponent) {
                     src: null == o ? r(79418) : r(579656),
                     className: A.SX,
                 }),
-                (0, s.jsx)(m.hE, { children: v.intl.string(v.t["1LV6Kq"]) }),
+                (0, s.jsx)(m.hE, {
+                    children: v.intl.string(v.t["1LV6Kq"]),
+                }),
                 (0, s.jsxs)(m.eB, {
                     className: A.QX,
                     children: [
@@ -64,7 +70,10 @@ class x extends (n = i.PureComponent) {
                             className: A.SX,
                             name: "password",
                             value: e,
-                            onChange: (e) => this.setState({ password: e }),
+                            onChange: (e) =>
+                                this.setState({
+                                    password: e,
+                                }),
                             error: o,
                             type: "password",
                             autoComplete: "new-password",
@@ -100,7 +109,9 @@ class x extends (n = i.PureComponent) {
                 return this.handleTokenSubmitMFAv2(t, r);
             };
         return (0, s.jsx)(m.Ay, {
-            style: { padding: 0 },
+            style: {
+                padding: 0,
+            },
             theme: r,
             className: n,
             children: (0, s.jsx)(O.t, {
@@ -110,7 +121,9 @@ class x extends (n = i.PureComponent) {
                     methods: t,
                 },
                 onEarlyClose: () => {
-                    h.h.dispatch({ type: "LOGIN_RESET" });
+                    h.h.dispatch({
+                        type: "LOGIN_RESET",
+                    });
                 },
                 width: null != i ? i : 480,
             }),
@@ -153,13 +166,21 @@ class x extends (n = i.PureComponent) {
                 let { location: t, onLoginSuccess: r, source: n, resetToken: s } = this.props,
                     { password: i, error: a } = this.state;
                 if ((e.preventDefault(), 0 === i.length)) {
-                    this.setState({ error: v.intl.string(v.t.R98xD5) }), C._.dispatch(S.jej.WAVE_EMPHASIZE);
+                    this.setState({
+                        error: v.intl.string(v.t.R98xD5),
+                    }),
+                        C._.dispatch(S.jej.WAVE_EMPHASIZE);
                     return;
                 }
-                null != a && this.setState({ error: null });
+                null != a &&
+                    this.setState({
+                        error: null,
+                    });
                 let l = s;
                 if ((null != t && (l = (0, f.A)(t)), null != l)) {
-                    this.setState({ working: !0 });
+                    this.setState({
+                        working: !0,
+                    });
                     try {
                         let {
                             result: e,
@@ -187,19 +208,36 @@ class x extends (n = i.PureComponent) {
                                 }),
                                 this.handlePasswordChangeSuccess());
                     } catch (e) {
-                        this.setState({ apiErrors: (0, y.p)(e) });
+                        this.setState({
+                            apiErrors: (0, y.p)(e),
+                        });
                     }
-                    this.setState({ working: !1 });
+                    this.setState({
+                        working: !1,
+                    });
                 }
             }),
             E(this, "handleTokenSubmitMFAv2", async (e, t) => {
                 let { location: r, mfaTicket: n, onLoginSuccess: s, resetToken: i, source: a } = this.props,
                     { password: l } = this.state;
-                if (0 === l.length) return h.h.dispatch({ type: "LOGIN_RESET" }), Promise.reject();
+                if (0 === l.length)
+                    return (
+                        h.h.dispatch({
+                            type: "LOGIN_RESET",
+                        }),
+                        Promise.reject()
+                    );
                 let o = i;
                 if ((null != r && (o = (0, f.A)(r)), null == o))
-                    return h.h.dispatch({ type: "LOGIN_RESET" }), Promise.reject();
-                this.setState({ working: !0 });
+                    return (
+                        h.h.dispatch({
+                            type: "LOGIN_RESET",
+                        }),
+                        Promise.reject()
+                    );
+                this.setState({
+                    working: !0,
+                });
                 try {
                     let r = await p.A.resetPasswordMFAv2({
                         method: e,
@@ -216,16 +254,25 @@ class x extends (n = i.PureComponent) {
                     }),
                         this.handlePasswordChangeSuccess();
                 } finally {
-                    this.setState({ working: !1 });
+                    this.setState({
+                        working: !1,
+                    });
                 }
             }),
             E(this, "handlePasswordChangeSuccess", () => {
                 let { replaceWith: e } = this.props;
-                c.v1 || c.Fr ? this.setState({ success: !0 }) : e(S.BVt.APP);
+                c.v1 || c.Fr
+                    ? this.setState({
+                          success: !0,
+                      })
+                    : e(S.BVt.APP);
             }),
             E(this, "handleGoToLogin", () => {
                 let { transitionTo: e } = this.props;
-                p.A.loginReset(), e(S.BVt.LOGIN, { source: "reset_password" });
+                p.A.loginReset(),
+                    e(S.BVt.LOGIN, {
+                        source: "reset_password",
+                    });
             }),
             E(this, "handleOpenApp", () => {
                 (0, g.A)("password_reset");

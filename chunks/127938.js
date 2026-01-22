@@ -1,4 +1,6 @@
-a.d(t, { A: () => b });
+a.d(t, {
+    A: () => b,
+});
 var c = a(627968),
     n = a(64700),
     l = a(311907),
@@ -7,6 +9,7 @@ var c = a(627968),
     o = a(91242),
     i = a(193855),
     f = a(360469);
+
 function b() {
     let e = (0, l.bG)([o.A], () => o.A.getConnectedFrame()),
         t = (0, l.bG)(
@@ -16,7 +19,9 @@ function b() {
         ),
         a = n.useCallback((e) => {
             let { application: t } = e;
-            return (0, c.jsx)(i.A, { applicationId: t.id });
+            return (0, c.jsx)(i.A, {
+                applicationId: t.id,
+            });
         }, []),
         b = n.useCallback(
             (t) => {

@@ -1,7 +1,10 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(626584),
     i = n(723176),
     a = n(194188);
+
 function s(e, t, n) {
     return (
         t in e
@@ -41,7 +44,9 @@ class l {
         (this.hasSuccessfullyConnected = !0),
             i.A.cacheTransaction(e).put("hello", "\uD83D\uDC4B"),
             i.A.cacheTransaction(e).put(a.WL, 3),
-            i.A.forceResyncVersionTransaction(e).put(a.pE, { version: a.NI });
+            i.A.forceResyncVersionTransaction(e).put(a.pE, {
+                version: a.NI,
+            });
     }
     resetInMemoryState() {
         this.hasSuccessfullyConnected = !1;

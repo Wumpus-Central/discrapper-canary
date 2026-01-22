@@ -10,6 +10,7 @@ var r,
     c = n(615300),
     o = n(73939),
     d = n(209349);
+
 function u(e, t, n) {
     return (
         t in e
@@ -23,6 +24,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -50,7 +52,15 @@ class m extends l.PureComponent {
         var t, n;
         null == (t = (n = this.props).onAnimationStart) || t.call(n),
             this._animated.setValue(-this.props.direction),
-            c.A.spring(this._animated, f({ toValue: 0 }, b)).start(() => {
+            c.A.spring(
+                this._animated,
+                f(
+                    {
+                        toValue: 0,
+                    },
+                    b,
+                ),
+            ).start(() => {
                 var t, n;
                 e(), null == (t = (n = this.props).onAnimationEnd) || t.call(n);
             });
@@ -59,7 +69,15 @@ class m extends l.PureComponent {
         this._animated.setValue(0);
     }
     componentWillLeave(e) {
-        c.A.spring(this._animated, f({ toValue: this.props.direction }, b)).start(e);
+        c.A.spring(
+            this._animated,
+            f(
+                {
+                    toValue: this.props.direction,
+                },
+                b,
+            ),
+        ).start(e);
     }
     getStyle() {
         return c.A.accelerate({

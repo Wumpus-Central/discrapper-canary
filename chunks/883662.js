@@ -1,4 +1,7 @@
-r.d(t, { A: () => y }), r(896048);
+r.d(t, {
+    A: () => y,
+}),
+    r(896048);
 var n = r(627968),
     l = r(64700),
     o = r(311907),
@@ -9,6 +12,7 @@ var n = r(627968),
     u = r(203982),
     f = r(418829),
     b = r(652215);
+
 function y(e) {
     var t, r;
     let {
@@ -75,7 +79,7 @@ function y(e) {
                     (S(!0),
                     w(null != t ? t : 1.4),
                     clearTimeout(A.current),
-                    (A.current = setTimeout(() => S(!1), null != r ? r : 1000)));
+                    (A.current = setTimeout(() => S(!1), null != r ? r : 1e3)));
             };
             return (
                 u._.subscribe(b.jej.SHAKE_SETTINGS_MODAL, e),

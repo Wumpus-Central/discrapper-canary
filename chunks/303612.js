@@ -8,6 +8,7 @@ var i = n(23339),
     l = n(319060),
     s = n(492749),
     a = n(234914);
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -33,6 +34,7 @@ function c(e) {
     }
     return e;
 }
+
 function o(e, t) {
     if (null == e) return {};
     var n,
@@ -62,6 +64,7 @@ function o(e, t) {
     return l;
 }
 let d = (0, i.xI)(l.A.ASPECT_STABLE_IMAGE_CONTAINER_PADDING);
+
 function u(e) {
     let { listing: t, imageSize: n, alt: i } = e,
         l = o(e, ["listing", "imageSize", "alt"]),
@@ -77,12 +80,15 @@ function u(e) {
         ),
     );
 }
+
 function f(e) {
     let { listing: t, aspectRatio: n = 16 / 9, height: i } = e,
         l = o(e, ["listing", "aspectRatio", "height"]),
         u = (i - 2 * d) * n,
         f = (0, s.R)(t, u),
-        g = (0, s.R)(t, u, { shouldAnimate: !1 });
+        g = (0, s.R)(t, u, {
+            shouldAnimate: !1,
+        });
     return (0, r.jsx)(
         a.A,
         c(

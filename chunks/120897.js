@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -8,6 +10,7 @@ var i = n(397927),
     l = n(531525),
     c = n(652215),
     u = n(985018);
+
 function d() {
     let e = o.bm.useSetting();
     return (0, r.jsx)(a.x, {
@@ -17,7 +20,10 @@ function d() {
             description: u.intl.string(u.t.WNbX4O),
             checked: e,
             onChange: (e) => {
-                o.bm.updateSetting(e), s.default.track(c.HAw.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: e });
+                o.bm.updateSetting(e),
+                    s.default.track(c.HAw.UPDATE_USER_SETTINGS_LOCAL, {
+                        always_preview_video: e,
+                    });
             },
         }),
     });

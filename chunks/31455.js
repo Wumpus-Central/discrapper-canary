@@ -9,6 +9,7 @@ var r,
     s = n(156898),
     o = n(67480),
     l = n(328968);
+
 function c(e, t, n) {
     return (
         t in e
@@ -37,14 +38,17 @@ let p = new s.A({
     subscriptions: [],
     otps: [],
 });
+
 function _(e) {
     let { applicationId: t, layout: n } = e;
     u.set(t, s.A.createFromServer(n)), d.delete(t);
 }
+
 function h(e) {
     let { applicationId: t } = e;
     d.set(t, 3);
 }
+
 function m(e) {
     let { applicationId: t } = e;
     d.set(t, 1);

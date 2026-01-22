@@ -1,4 +1,9 @@
-n.d(t, { A: () => p }), n(896048), n(114821), n(339614);
+n.d(t, {
+    A: () => p,
+}),
+    n(896048),
+    n(114821),
+    n(339614);
 var r = n(64700),
     l = n(540185),
     i = n(417597),
@@ -9,6 +14,7 @@ var r = n(64700),
     u = n(289173),
     d = n(667049),
     f = n(229231);
+
 function p(e) {
     let t = (0, i.bG)([s.default], () => s.default.getCurrentUser()),
         n = (0, d.A)(null == t ? void 0 : t.id),
@@ -20,7 +26,14 @@ function p(e) {
             n === l.x.APPLICATION
                 ? null == p
                     ? []
-                    : p.filter((t) => !e.has(t.applicationId)).map((e) => new c.R({ applicationId: e.applicationId }))
+                    : p
+                          .filter((t) => !e.has(t.applicationId))
+                          .map(
+                              (e) =>
+                                  new c.R({
+                                      applicationId: e.applicationId,
+                                  }),
+                          )
                 : (0, u.hL)(n)
                   ? t.has(n)
                       ? []

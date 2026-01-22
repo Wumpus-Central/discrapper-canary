@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -14,6 +16,7 @@ var i = n(503698),
     _ = n(705751),
     h = n(985018),
     m = n(234054);
+
 function g(e) {
     var t;
     let { message: n, compact: i, usernameHook: g, channel: E } = e,
@@ -28,17 +31,27 @@ function g(e) {
         onMouseEnter: v,
         onMouseLeave: S,
         children: (0, r.jsx)(p.A, {
-            className: a()(m.rs, { [m.oE]: i }),
-            iconNode: i ? null : (0, r.jsx)(f.l, { src: A }),
+            className: a()(m.rs, {
+                [m.oE]: i,
+            }),
+            iconNode: i
+                ? null
+                : (0, r.jsx)(f.l, {
+                      src: A,
+                  }),
             iconContainerClassName: m.zc,
             compact: i,
             children: (0, r.jsxs)("div", {
-                className: a()(m.Qs, { [m.oE]: i }),
+                className: a()(m.Qs, {
+                    [m.oE]: i,
+                }),
                 children: [
                     (0, r.jsx)(d.ix, {
                         message: n,
                         messageClassname: m.he,
-                        className: a()(m.QV, m.he, { [m.oE]: i }),
+                        className: a()(m.QV, m.he, {
+                            [m.oE]: i,
+                        }),
                         username: (0, r.jsxs)("div", {
                             className: m.he,
                             children: [
@@ -59,7 +72,9 @@ function g(e) {
                         showTimestamp: !0,
                     }),
                     (0, r.jsx)("div", {
-                        className: a()(m.__invalid_messageContent, { [m.oE]: i }),
+                        className: a()(m.__invalid_messageContent, {
+                            [m.oE]: i,
+                        }),
                         children: h.intl.format(h.t.W0UBI3, {
                             username: y.nick,
                             usernameHook: O,

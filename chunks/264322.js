@@ -48,6 +48,7 @@ var r,
     P = n(46477),
     D = n(73510),
     x = n(652215);
+
 function L(e, t, n) {
     return (
         t in e
@@ -61,6 +62,7 @@ function L(e, t, n) {
         e
     );
 }
+
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -77,6 +79,7 @@ function j(e) {
     }
     return e;
 }
+
 function M(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -89,6 +92,7 @@ function M(e, t) {
     }
     return n;
 }
+
 function k(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -112,7 +116,9 @@ let U = new p.A("ApplicationCommandIndexStore"),
     }),
     H = Object.freeze({
         serverVersion: F,
-        fetchState: { fetching: !1 },
+        fetchState: {
+            fetching: !1,
+        },
         result: {
             sections: {},
             sectionIdsByBotId: {},
@@ -121,15 +127,18 @@ let U = new p.A("ApplicationCommandIndexStore"),
     }),
     Y = Object.freeze({
         serverVersion: V,
-        fetchState: { fetching: !1 },
+        fetchState: {
+            fetching: !1,
+        },
     }),
-    W = 5000,
+    W = 5e3,
     K = {
         sensitivity: "accent",
         numeric: !0,
     },
     z = !1,
     q = [];
+
 function X(e) {
     switch (e.type) {
         case "guild":
@@ -142,6 +151,7 @@ function X(e) {
             return e.applicationId;
     }
 }
+
 function Z(e, t) {
     let n,
         r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
@@ -154,7 +164,9 @@ function Z(e, t) {
               (n = j(
                   {
                       serverVersion: V,
-                      fetchState: { fetching: !1 },
+                      fetchState: {
+                          fetching: !1,
+                      },
                   },
                   t,
               )),
@@ -165,23 +177,28 @@ function Z(e, t) {
         a
     );
 }
+
 function Q(e) {
     let t = X(e),
         n = eh.indices[t];
     (null == n ? void 0 : n.fetchState.fetching) && n.fetchState.abort.abort(), delete eh.indices[t];
 }
+
 function $() {
     for (let e of Object.values(eh.indices)) e.fetchState.fetching && e.fetchState.abort.abort();
     eh.indices = {};
 }
+
 function J() {
     for (let e of q) ei(e);
     q = [];
 }
+
 function ee() {
     for (let e of Object.values(eh.indices)) e.serverVersion = V;
     J(), (z = !0);
 }
+
 function et(e) {
     var t;
     let { target: n } = e,
@@ -217,6 +234,7 @@ async function er(e) {
     ),
         await (0, T.E)(e, t).then(n.resolve).catch(n.reject);
 }
+
 function ei(e) {
     var t, n;
     let r = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
@@ -263,11 +281,14 @@ function ei(e) {
                 sectionIdsByBotId: l,
                 version: d,
             },
-            fetchState: { fetching: !1 },
+            fetchState: {
+                fetching: !1,
+            },
         },
         r,
     );
 }
+
 function ea(e) {
     let { target: t } = e;
     Z(t, {
@@ -277,6 +298,7 @@ function ea(e) {
         },
     });
 }
+
 function es(e) {
     var t;
     let { guildId: n, version: r } = e,
@@ -285,7 +307,9 @@ function es(e) {
                 type: "guild",
                 guildId: n,
             },
-            { serverVersion: null != r ? r : V },
+            {
+                serverVersion: null != r ? r : V,
+            },
         ),
         a = null == i || null == (t = i.result) ? void 0 : t.sectionIdsByBotId;
     if (null != a)
@@ -297,10 +321,13 @@ function es(e) {
                         type: "channel",
                         channelId: t,
                     },
-                    { serverVersion: V },
+                    {
+                        serverVersion: V,
+                    },
                 );
         }
 }
+
 function eo(e, t) {
     var n;
     let r = X({
@@ -319,12 +346,19 @@ function eo(e, t) {
             let o = i.sections[r];
             s()(null != o, "Bot has no matching index section"),
                 s()(null != o.descriptor.application, "Bot's index section has no application info");
-            let l = (0, R.bq)(k(j({}, o.descriptor.application), { bot: t }), !1, n);
+            let l = (0, R.bq)(
+                k(j({}, o.descriptor.application), {
+                    bot: t,
+                }),
+                !1,
+                n,
+            );
             (o.descriptor = j({}, o.descriptor, l)), (a = !0);
         }),
         a
     );
 }
+
 function el(e) {
     let { applicationId: t, channelId: n, guildId: r } = e;
     eh.hasContextStateApplication({
@@ -342,18 +376,31 @@ function el(e) {
                       type: "channel",
                       channelId: n,
                   },
-            { serverVersion: V },
+            {
+                serverVersion: V,
+            },
         ),
-        eh.hasUserStateApplication(t) && Z({ type: "user" }, { serverVersion: V }),
+        eh.hasUserStateApplication(t) &&
+            Z(
+                {
+                    type: "user",
+                },
+                {
+                    serverVersion: V,
+                },
+            ),
         eh.hasApplicationState(t) &&
             Z(
                 {
                     type: "application",
                     applicationId: t,
                 },
-                { serverVersion: V },
+                {
+                    serverVersion: V,
+                },
             );
 }
+
 function ec(e) {
     let { channel: t } = e;
     Q({
@@ -361,6 +408,7 @@ function ec(e) {
         channelId: t.id,
     });
 }
+
 function eu(e) {
     let { guild: t } = e;
     Q({
@@ -368,15 +416,25 @@ function eu(e) {
         guildId: t.id,
     });
 }
+
 function ed() {
-    Z({ type: "user" }, { serverVersion: V });
+    Z(
+        {
+            type: "user",
+        },
+        {
+            serverVersion: V,
+        },
+    );
 }
+
 function ef(e) {
     let { chunks: t } = e,
         n = !1;
     for (let e of t) n = eo(e.guildId, e.members) || n;
     return n;
 }
+
 function ep() {
     let e = h.default.locale;
     return (
@@ -467,7 +525,11 @@ class e_ extends (r = l.Ay.Store) {
                               channelId: r.id,
                           }),
                     (d = !0))),
-            eR(a) && ((0, T.$)({ type: "user" }), (d = !0)),
+            eR(a) &&
+                ((0, T.$)({
+                    type: "user",
+                }),
+                (d = !0)),
             eR(s) &&
                 null != n.applicationId &&
                 ((0, T.$)({
@@ -500,8 +562,12 @@ class e_ extends (r = l.Ay.Store) {
                           channel: n,
                           type: "channel",
                       }
-                    : { type: "contextless" },
-                { commandTypes: [d.kc.CHAT] },
+                    : {
+                          type: "contextless",
+                      },
+                {
+                    commandTypes: [d.kc.CHAT],
+                },
                 {
                     placeholderCount: 5,
                     scoreMethod: C.M.COMMAND_ONLY,
@@ -535,6 +601,7 @@ let eh = new e_(c.h, {
         GUILD_MEMBERS_CHUNK_BATCH: ef,
     }),
     em = eh;
+
 function eg(e, t, n) {
     let [r, a] = i.useState(!0),
         s = (0, l.cf)([eh], () => ("channel" === e.type ? eh.getContextState(e) : eh.getUserState()));
@@ -542,7 +609,11 @@ function eg(e, t, n) {
         i.useEffect(() => {
             if (r) {
                 if ("contextless" === e.type) {
-                    n && eR(s) && (0, T.$)({ type: "user" });
+                    n &&
+                        eR(s) &&
+                        (0, T.$)({
+                            type: "user",
+                        });
                     return;
                 }
                 n &&
@@ -568,6 +639,7 @@ function eg(e, t, n) {
         s
     );
 }
+
 function eE(e, t) {
     let [n, r] = i.useState(!0),
         a = (0, l.cf)([eh], () => {
@@ -593,16 +665,25 @@ function eE(e, t) {
         a
     );
 }
+
 function eb(e, t) {
     let [n, r] = i.useState(!0),
         a = (0, l.cf)([eh], () => eh.getUserState());
     return (
         i.useEffect(() => {
-            n && (t && eR(a) && e && (0, T.$)({ type: "user" }), r(!1));
+            n &&
+                (t &&
+                    eR(a) &&
+                    e &&
+                    (0, T.$)({
+                        type: "user",
+                    }),
+                r(!1));
         }, [a, t, e, n]),
         a
     );
 }
+
 function ey(e, t) {
     let [n, r] = i.useState(!0),
         a = (0, l.bG)([eh], () => eh.getApplicationState(e));
@@ -618,12 +699,15 @@ function ey(e, t) {
             r(!1));
     }, [t, e, a, n]);
 }
+
 function eO() {
     return (0, l.bG)([eh], () => eh.getApplicationStates());
 }
+
 function eA() {
     return (0, l.bG)([eh], () => eh.applicationIndicesVersion);
 }
+
 function ev(e, t, n, r) {
     let { descriptors: a, commands: s, sectionedCommands: o, loading: l } = eI(e, n, r),
         c = i.useMemo(
@@ -683,6 +767,7 @@ let eS = Object.freeze({
         useScore: !0,
     },
 });
+
 function eI(e, t, n) {
     let r = "channel" === e.type ? e.channel : void 0,
         a = (0, w.MW)(r, t.commandTypes),
@@ -730,6 +815,7 @@ function eI(e, t, n) {
         )
     );
 }
+
 function eT(e) {
     var t, n, r, i, a, o, l;
     let {
@@ -830,7 +916,13 @@ function eT(e) {
         let e = eC(v.gZ[D.Ik.BUILT_IN], P, !0, !0, L);
         null != e && x.push(e);
     }
-    let F = x.flatMap((e) => e.data.map((t) => k(j({}, t), { section: e.section })));
+    let F = x.flatMap((e) =>
+        e.data.map((t) =>
+            k(j({}, t), {
+                section: e.section,
+            }),
+        ),
+    );
     if (O === C.M.COMMAND_ONLY || O === C.M.COMMAND_OR_APPLICATION) {
         let e = c.context,
             t = y.A.getGuild(null == c || null == (l = c.context) ? void 0 : l.guild_id);
@@ -867,6 +959,7 @@ function eT(e) {
             (null != E && (null == (a = p.get(E)) ? void 0 : a.fetchState.fetching) === !0),
     };
 }
+
 function eC(e, t, n, r, i) {
     let a,
         {
@@ -897,6 +990,7 @@ function eC(e, t, n, r, i) {
           })
         : null;
 }
+
 function eN(e) {
     var t;
     return (
@@ -904,15 +998,18 @@ function eN(e) {
         (e.type === x.rbe.DM && (null == (t = O.default.getUser(e.getRecipientId())) ? void 0 : t.bot) === !0)
     );
 }
+
 function eR(e) {
     return (
         !!ew(e) && !e.fetchState.fetching && (null == e.fetchState.retryAfter || Date.now() >= e.fetchState.retryAfter)
     );
 }
+
 function ew(e) {
     var t;
     return (null == (t = e.result) ? void 0 : t.version) !== e.serverVersion;
 }
+
 function eP(e) {
     return {
         description: e.description,
@@ -923,6 +1020,7 @@ function eP(e) {
         flags: e.flags,
     };
 }
+
 function eD(e, t) {
     var n, r, i, a, s;
     let o = k(j({}, e), {
@@ -938,6 +1036,7 @@ function eD(e, t) {
         o
     );
 }
+
 function ex(e) {
     var t, n, r, i;
     let a = k(j({}, e), {
@@ -952,11 +1051,15 @@ function ex(e) {
         a
     );
 }
+
 function eL(e) {
     var t;
-    let n = k(j({}, e), { name: null != (t = e.name_default) ? t : e.name });
+    let n = k(j({}, e), {
+        name: null != (t = e.name_default) ? t : e.name,
+    });
     return e.name !== e.name_default && (n.name_localized = e.name), n;
 }
+
 function ej(e, t) {
     let n = [];
     if (
@@ -983,6 +1086,7 @@ function ej(e, t) {
             });
     return n;
 }
+
 function eM(e, t, n, r, i) {
     let a,
         s = [];
@@ -1002,10 +1106,16 @@ function eM(e, t, n, r, i) {
         let n;
         (i === C.M.COMMAND_ONLY || i === C.M.COMMAND_OR_APPLICATION) && (n = ek(t, e, c, u)),
             (void 0 === n || (void 0 !== a && a < n)) && (n = a),
-            void 0 !== n && s.push(k(j({}, t), { score: n }));
+            void 0 !== n &&
+                s.push(
+                    k(j({}, t), {
+                        score: n,
+                    }),
+                );
     }
     return s;
 }
+
 function ek(e, t, n, r) {
     var i;
     let a = e.untranslatedName.toLocaleLowerCase(),
@@ -1036,12 +1146,15 @@ function ek(e, t, n, r) {
         c = e.displayDescription.toLocaleLowerCase();
     if (l.includes(t) || c.includes(t)) return 7;
 }
+
 function eU(e, t) {
     return eh.collator.compare(e, t);
 }
+
 function eG(e, t) {
     return eU(e, t);
 }
+
 function eV(e, t) {
     var n, r, i, a, s, o;
     let l, c;

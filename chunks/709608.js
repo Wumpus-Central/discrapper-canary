@@ -1,33 +1,38 @@
 !(function (e, t) {
     t(n(989349));
 })(0, function (e) {
-    var t = "január_február_marec_apríl_máj_jún_júl_august_september_október_november_december".split("_"),
-        n = "jan_feb_mar_apr_máj_jún_júl_aug_sep_okt_nov_dec".split("_");
+    var t =
+            "janu\xe1r_febru\xe1r_marec_apr\xedl_m\xe1j_j\xfan_j\xfal_august_september_okt\xf3ber_november_december".split(
+                "_",
+            ),
+        n = "jan_feb_mar_apr_m\xe1j_j\xfan_j\xfal_aug_sep_okt_nov_dec".split("_");
+
     function r(e) {
         return e > 1 && e < 5;
     }
+
     function i(e, t, n, i) {
         var a = e + " ";
         switch (n) {
             case "s":
-                return t || i ? "pár sekúnd" : "pár sekundami";
+                return t || i ? "p\xe1r sek\xfand" : "p\xe1r sekundami";
             case "ss":
-                if (t || i) return a + (r(e) ? "sekundy" : "sekúnd");
+                if (t || i) return a + (r(e) ? "sekundy" : "sek\xfand");
                 return a + "sekundami";
             case "m":
-                return t ? "minúta" : i ? "minútu" : "minútou";
+                return t ? "min\xfata" : i ? "min\xfatu" : "min\xfatou";
             case "mm":
-                if (t || i) return a + (r(e) ? "minúty" : "minút");
-                return a + "minútami";
+                if (t || i) return a + (r(e) ? "min\xfaty" : "min\xfat");
+                return a + "min\xfatami";
             case "h":
                 return t ? "hodina" : i ? "hodinu" : "hodinou";
             case "hh":
-                if (t || i) return a + (r(e) ? "hodiny" : "hodín");
+                if (t || i) return a + (r(e) ? "hodiny" : "hod\xedn");
                 return a + "hodinami";
             case "d":
                 return t || i ? "deň" : "dňom";
             case "dd":
-                if (t || i) return a + (r(e) ? "dni" : "dní");
+                if (t || i) return a + (r(e) ? "dni" : "dn\xed");
                 return a + "dňami";
             case "M":
                 return t || i ? "mesiac" : "mesiacom";
@@ -79,16 +84,16 @@
             lastWeek: function () {
                 switch (this.day()) {
                     case 0:
-                        return "[minulú nedeľu o] LT";
+                        return "[minul\xfa nedeľu o] LT";
                     case 1:
                     case 2:
                     case 4:
                     case 5:
-                        return "[minulý] dddd [o] LT";
+                        return "[minul\xfd] dddd [o] LT";
                     case 3:
-                        return "[minulú stredu o] LT";
+                        return "[minul\xfa stredu o] LT";
                     case 6:
-                        return "[minulú sobotu o] LT";
+                        return "[minul\xfa sobotu o] LT";
                 }
             },
             sameElse: "L",

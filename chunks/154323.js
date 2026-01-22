@@ -1,7 +1,11 @@
-n.d(t, { A: () => d }), n(896048);
+n.d(t, {
+    A: () => d,
+}),
+    n(896048);
 var r,
     i = n(311907),
     a = n(73153);
+
 function s(e, t, n) {
     return (
         t in e
@@ -36,12 +40,15 @@ let o = {
             "Show user profile account popout upsell (reset WISHLIST_USER_PROFILE_ACCOUNT_POPOUT_UPSELL DCF as well)",
     },
     l = {};
+
 function c(e) {
     !1 === e.value ? delete l[e.toggle] : (l[e.toggle] = e.value);
 }
 class u extends (r = i.Ay.DeviceSettingsStore) {
     getUserAgnosticState() {
-        return { toggleStates: l };
+        return {
+            toggleStates: l,
+        };
     }
     initialize(e) {
         for (var t in o) {
@@ -66,4 +73,6 @@ class u extends (r = i.Ay.DeviceSettingsStore) {
     }
 }
 s(u, "displayName", "DevToolsDesignTogglesStore"), s(u, "persistKey", "DevToolsDesignTogglesStore");
-let d = new u(a.h, { DEV_TOOLS_DESIGN_TOGGLE_WEB_SET: c });
+let d = new u(a.h, {
+    DEV_TOOLS_DESIGN_TOGGLE_WEB_SET: c,
+});

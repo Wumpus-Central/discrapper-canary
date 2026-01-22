@@ -1,7 +1,10 @@
-n.d(t, { A: () => h }), n(896048);
+n.d(t, {
+    A: () => h,
+}),
+    n(896048);
 var l = n(627968),
     r = n(64700),
-    i = n(432022),
+    i = n(108531),
     a = n(311907),
     s = n(397927),
     o = n(565645),
@@ -13,6 +16,7 @@ let p = 6 * u.A.Millis.SECOND,
     b = 2 * u.A.Millis.SECOND,
     g = 2 * u.A.Millis.SECOND,
     m = (e) => "scale(".concat(1 - -(e / 120), ") rotate(").concat(e, "deg)");
+
 function h(e) {
     let { userId: t, voiceChannelEffect: n, onComplete: u } = e,
         { emoji: h, sentAt: A } = n,
@@ -20,9 +24,15 @@ function h(e) {
         [_, E] = r.useState(!0),
         v = !y,
         O = (0, s.pnh)(_, {
-            from: { rotate: -120 },
-            enter: { rotate: 0 },
-            leave: { rotate: -120 },
+            from: {
+                rotate: -120,
+            },
+            enter: {
+                rotate: 0,
+            },
+            leave: {
+                rotate: -120,
+            },
             config: i.config.default,
             onRest: (e, t) => {
                 let { phase: n } = t;
@@ -54,7 +64,9 @@ function h(e) {
                   t &&
                   (0, l.jsx)(i.animated.div, {
                       className: f._,
-                      style: { transform: r.to(m) },
+                      style: {
+                          transform: r.to(m),
+                      },
                       children: (0, l.jsx)(o.A, {
                           className: f.F,
                           emojiId: h.id,

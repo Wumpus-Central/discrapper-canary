@@ -1,4 +1,6 @@
-n.d(t, { A: () => A });
+n.d(t, {
+    A: () => A,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -18,6 +20,7 @@ var i = n(503698),
     E = n(788868),
     b = n(985018),
     y = n(26212);
+
 function O(e) {
     var t;
     let { defaultPriceString: n, subscriptionPlan: i, discountOffer: a } = e,
@@ -30,6 +33,7 @@ function O(e) {
         }),
     });
 }
+
 function A(e) {
     let {
             isGift: t,

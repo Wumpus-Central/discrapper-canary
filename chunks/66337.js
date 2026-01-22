@@ -1,4 +1,6 @@
-t.d(e, { A: () => b });
+t.d(e, {
+    A: () => b,
+});
 var i = t(627968);
 t(64700);
 var o = t(397927),
@@ -8,6 +10,7 @@ var o = t(397927),
     d = t(985018),
     l = t(506542),
     c = t(465429);
+
 function C() {
     return (0, i.jsx)("div", {
         className: l.__invalid_getCrunchyrollApp,
@@ -24,6 +27,7 @@ function C() {
         }),
     });
 }
+
 function b(n) {
     let { onClose: e } = n;
     return (0, i.jsx)(s.b, {

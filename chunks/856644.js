@@ -25,7 +25,8 @@ var r = n(64700),
     b = n(927573),
     m = n(652215);
 let p = 50,
-    x = 1000;
+    x = 1e3;
+
 function h(e, t) {
     let n = (0, s.yK)([a.Ay], () => {
             let n = a.Ay.getMembers(e);
@@ -62,6 +63,7 @@ function h(e, t) {
         return t;
     }, [n, i, e]);
 }
+
 function j(e, t, n) {
     let i = r.useRef(n);
     return (
@@ -77,19 +79,25 @@ function j(e, t, n) {
         )
     );
 }
+
 function O(e, t) {
     let n = r.useRef(!1);
     r.useEffect(() => {
         u.A.requestMembers(e, t, 200),
             "" === t ||
                 n.current ||
-                (o.default.track(m.HAw.SEARCH_STARTED, { search_type: "Role Members" }), (n.current = !0));
+                (o.default.track(m.HAw.SEARCH_STARTED, {
+                    search_type: "Role Members",
+                }),
+                (n.current = !0));
     }, [e, t]);
 }
+
 function y(e, t) {
     let n = e.trim().toLowerCase();
     return t.id === n || l()(n, t.name.toLowerCase()) || l()(n, t.userTag.toLowerCase());
 }
+
 function v(e) {
     switch (e) {
         case b.T$.MEMBERS:
@@ -104,6 +112,7 @@ function v(e) {
             (0, d.xb)(e);
     }
 }
+
 function A(e, t) {
     return "" === t || e.name.toLowerCase().includes(t.toLowerCase());
 }

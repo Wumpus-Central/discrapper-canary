@@ -1,9 +1,12 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
     l = n(51183),
     a = n(444435);
+
 function s(e) {
     var t, n;
     let { item: s } = e;

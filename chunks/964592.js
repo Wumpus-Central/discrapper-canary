@@ -1,4 +1,6 @@
-r.d(t, { A: () => b });
+r.d(t, {
+    A: () => b,
+});
 var n = r(627968);
 r(64700);
 var o = r(311907),
@@ -8,6 +10,7 @@ var o = r(311907),
     a = r(824744),
     c = r(723702),
     s = r(985018);
+
 function b(e) {
     let t = (0, o.bG)([l.A], () => (0, a.M)(l.A.getOutputVolume()));
     return (0, n.jsx)(u.aK1, {
@@ -47,7 +50,10 @@ function b(e) {
                         ref: o,
                         value: t,
                         maxValue: c.isPlatformEmbedded ? 200 : 100,
-                        onChange: (t) => i.A.setOutputVolume((0, a.w)(t), { analyticsLocations: e }),
+                        onChange: (t) =>
+                            i.A.setOutputVolume((0, a.w)(t), {
+                                analyticsLocations: e,
+                            }),
                         "aria-label": s.intl.string(s.t.eATD2B),
                     }),
                 Object.getOwnPropertyDescriptors

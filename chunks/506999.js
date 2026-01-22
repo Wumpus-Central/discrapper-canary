@@ -1,4 +1,6 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -28,7 +30,9 @@ let s = (e) => {
                 className: a.__invalid_description,
                 children: t ? l.intl.string(l.t.FZ2J3Y) : l.intl.string(l.t.TvHcv6),
             }),
-            (0, r.jsx)("div", { className: a.rQ }),
+            (0, r.jsx)("div", {
+                className: a.rQ,
+            }),
             (0, r.jsx)(i.Button, {
                 fullWidth: !0,
                 variant: t ? "secondary" : "active",

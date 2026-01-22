@@ -1,4 +1,6 @@
-n.d(t, { G: () => p });
+n.d(t, {
+    G: () => p,
+});
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -12,6 +14,7 @@ var r = n(627968),
     g = n(652215),
     b = n(985018),
     m = n(662413);
+
 function p(e) {
     let { activeType: t, onTypePicked: n, guild: l } = e,
         p = l.features.has(g.GuildFeatures.COMMUNITY),

@@ -1,26 +1,29 @@
-c.d(e, { default: () => o });
-var f = c(627968),
-    b = c(64700),
-    d = c(158954),
-    _ = c(707539),
-    t = c(617011),
-    s = c(985018),
-    n = c(515470);
-function o(a) {
-    let { channel: e, onClose: c, transitionState: o } = a;
+s.d(t, {
+    default: () => d,
+});
+var a = s(627968),
+    n = s(64700),
+    c = s(158954),
+    i = s(707539),
+    l = s(617011),
+    o = s(985018),
+    r = s(515470);
+
+function d(e) {
+    let { channel: t, onClose: s, transitionState: d } = e;
     return (
-        b.useEffect(() => {
-            (0, _.D3)();
+        n.useEffect(() => {
+            (0, i.D3)();
         }, []),
-        (0, f.jsx)(d.dWK, {
-            transitionState: o,
-            "aria-label": s.intl.string(s.t.B2panI),
+        (0, a.jsx)(c.dWK, {
+            transitionState: d,
+            "aria-label": o.intl.string(o.t.B2panI),
             size: "lg",
-            onClose: c,
-            children: (0, f.jsx)(t.A, {
-                className: n.T,
-                channel: e,
-                onClose: c,
+            onClose: s,
+            children: (0, a.jsx)(l.A, {
+                className: r.T,
+                channel: t,
+                onClose: s,
                 context: "modal",
             }),
         })

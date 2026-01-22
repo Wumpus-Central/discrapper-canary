@@ -1,4 +1,8 @@
-n.d(t, { default: () => f }), n(896048), n(667532);
+n.d(t, {
+    default: () => f,
+}),
+    n(896048),
+    n(667532);
 var i = n(627968),
     s = n(64700),
     a = n(397927),
@@ -13,6 +17,7 @@ var i = n(627968),
     h = n(652215),
     g = n(985018),
     x = n(441805);
+
 function f(e) {
     var t, n;
     let f,
@@ -37,9 +42,13 @@ function f(e) {
                 f && k
                     ? g.intl.string(g.t["0dP7Fk"])
                     : f
-                      ? g.intl.formatToPlainString(g.t.OpIG9d, { n: t })
+                      ? g.intl.formatToPlainString(g.t.OpIG9d, {
+                            n: t,
+                        })
                       : k
-                        ? g.intl.formatToPlainString(g.t["D+V4jI"], { n: n })
+                        ? g.intl.formatToPlainString(g.t["D+V4jI"], {
+                              n: n,
+                          })
                         : null),
             infoRows: ((e) => {
                 let { channelId: t, blockedUserIds: n, ignoredUserIds: s } = e,

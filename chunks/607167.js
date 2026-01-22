@@ -107,8 +107,8 @@ if (s) {
         b && E(V) !== F && b(V, F);
     var ei = new G(new k(2)),
         ea = i(V.setInt8);
-    ei.setInt8(0, 2147483648),
-        ei.setInt8(1, 2147483649),
+    ei.setInt8(0, 0x80000000),
+        ei.setInt8(1, 0x80000001),
         (ei.getInt8(0) || !ei.getInt8(1)) &&
             u(
                 V,
@@ -120,7 +120,9 @@ if (s) {
                         ea(this, e, (t << 24) >> 24);
                     },
                 },
-                { unsafe: !0 },
+                {
+                    unsafe: !0,
+                },
             );
 } else
     (U = (k = function (e) {

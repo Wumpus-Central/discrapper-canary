@@ -1,4 +1,7 @@
-n.d(t, { A: () => o }), n(747238);
+n.d(t, {
+    A: () => o,
+}),
+    n(747238);
 var r = n(110259),
     i = n(933681),
     s = n(73153),
@@ -18,7 +21,12 @@ let o = {
                     var t;
                     let n = !1,
                         r = null == e || null == (t = e.body) ? void 0 : t.email_domain;
-                    return null != r && (n = -1 !== r.split(".").indexOf("edu")), (0, i.e0)({ is_edu_email: n });
+                    return (
+                        null != r && (n = -1 !== r.split(".").indexOf("edu")),
+                        (0, i.e0)({
+                            is_edu_email: n,
+                        })
+                    );
                 },
             },
             rejectWithError: !1,
@@ -38,7 +46,9 @@ let o = {
                     properties: (e) => {
                         var t;
                         let n = null == e || null == (t = e.body) ? void 0 : t.has_matching_guild;
-                        return (0, i.e0)({ has_matching_guild: n });
+                        return (0, i.e0)({
+                            has_matching_guild: n,
+                        });
                     },
                 },
                 rejectWithError: !1,
@@ -53,8 +63,12 @@ let o = {
                     (t = (
                         await l.A.post({
                             url: a.Rsh.HUB_EMAIL_VERIFY,
-                            body: { token: e },
-                            trackedActionData: { event: r.NetworkActionNames.HUB_EMAIL_VERIFY },
+                            body: {
+                                token: e,
+                            },
+                            trackedActionData: {
+                                event: r.NetworkActionNames.HUB_EMAIL_VERIFY,
+                            },
                             rejectWithError: !1,
                         })
                     ).body.guild)
@@ -82,7 +96,9 @@ let o = {
                             guild_id: t,
                             email: n,
                         },
-                        trackedActionData: { event: r.NetworkActionNames.HUB_EMAIL_VERIFY },
+                        trackedActionData: {
+                            event: r.NetworkActionNames.HUB_EMAIL_VERIFY,
+                        },
                         rejectWithError: !1,
                     }),
                     c = null == (i = o.body.guild) ? void 0 : i.id;

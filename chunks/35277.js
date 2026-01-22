@@ -1,8 +1,16 @@
-n.d(t, { b: () => c }), n(134528), n(947204), n(264879), n(896048), n(747238);
+n.d(t, {
+    b: () => c,
+}),
+    n(134528),
+    n(947204),
+    n(264879),
+    n(896048),
+    n(747238);
 var r = n(719442),
     i = n(317681),
     a = n(711371),
     s = n(551483);
+
 function o(e, t, n) {
     return (
         t in e
@@ -16,6 +24,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -131,7 +140,9 @@ let c = (function (e, t) {
                     at: n,
                     voids: !0,
                 }),
-                r.gB.insertText(e, t, { at: c }),
+                r.gB.insertText(e, t, {
+                    at: c,
+                }),
                 (c = null != c ? c : a.VW.start(e, [])),
                 (u = null != u ? u : a.VW.end(e, [])),
                 d(e, s, c, u, u);
@@ -148,10 +159,33 @@ let c = (function (e, t) {
                 at: n,
                 voids: !0,
             }),
-                0 === s.offset && r.gB.insertNodes(e, [{ text: "" }], { at: s.path }),
-                r.gB.insertNodes(e, [t], { at: s }),
+                0 === s.offset &&
+                    r.gB.insertNodes(
+                        e,
+                        [
+                            {
+                                text: "",
+                            },
+                        ],
+                        {
+                            at: s.path,
+                        },
+                    ),
+                r.gB.insertNodes(e, [t], {
+                    at: s,
+                }),
                 (a.VW.hasPath(e, l.path) && a.l5.isText(a.VW.node(e, l.path)[0])) ||
-                    r.gB.insertNodes(e, [{ text: "" }], { at: l.path }),
+                    r.gB.insertNodes(
+                        e,
+                        [
+                            {
+                                text: "",
+                            },
+                        ],
+                        {
+                            at: l.path,
+                        },
+                    ),
                 d(e, i, s, l, l);
         },
         textToInline(e, t, n) {
@@ -167,8 +201,21 @@ let c = (function (e, t) {
                 at: n,
                 voids: !0,
             }),
-                0 === o.offset && r.gB.insertNodes(e, [{ text: "" }], { at: o.path }),
-                r.gB.insertNodes(e, [t], { at: o }),
+                0 === o.offset &&
+                    r.gB.insertNodes(
+                        e,
+                        [
+                            {
+                                text: "",
+                            },
+                        ],
+                        {
+                            at: o.path,
+                        },
+                    ),
+                r.gB.insertNodes(e, [t], {
+                    at: o,
+                }),
                 d(e, i, o, c, c);
         },
         voidToText(e, t, n) {
@@ -183,7 +230,9 @@ let c = (function (e, t) {
                 at: n,
                 voids: !0,
             }),
-                r.gB.insertText(e, t, { at: o }),
+                r.gB.insertText(e, t, {
+                    at: o,
+                }),
                 d(e, s, o, o, l);
         },
         removeInline(e, t) {
@@ -250,7 +299,11 @@ let c = (function (e, t) {
                         optionName: t.name,
                         optionDisplayName: t.displayName,
                         optionType: t.type,
-                        children: [{ text: "" }],
+                        children: [
+                            {
+                                text: "",
+                            },
+                        ],
                     },
                 ]);
         },
@@ -260,7 +313,10 @@ let c = (function (e, t) {
             if (null == l) return;
             let c = l.focus;
             if (a.ZF.isExpanded(l)) {
-                if (void 0 === o && "character" === i) return void r.gB.collapse(e, { edge: s ? "start" : "end" });
+                if (void 0 === o && "character" === i)
+                    return void r.gB.collapse(e, {
+                        edge: s ? "start" : "end",
+                    });
                 "focus" !== o && (c = "line" === i || s ? a.ZF.start(l) : a.ZF.end(l));
             }
             let u = (s ? a.VW.before : a.VW.after)(e, c, {
@@ -271,7 +327,9 @@ let c = (function (e, t) {
                 r.gB.setSelection(
                     e,
                     "focus" === o
-                        ? { focus: u }
+                        ? {
+                              focus: u,
+                          }
                         : {
                               anchor: u,
                               focus: u,
@@ -280,6 +338,7 @@ let c = (function (e, t) {
         },
     },
 );
+
 function u(e, t, n, r, i) {
     switch (t) {
         case "start":
@@ -291,6 +350,7 @@ function u(e, t, n, r, i) {
     }
     return e;
 }
+
 function d(e, t, n, r, i) {
     var a, s;
     if (null == t.anchor && null == t.focus) return;

@@ -14,6 +14,7 @@ var i = n(503698),
     d = n(451772),
     f = n(822768),
     p = n(185014);
+
 function _(e, t, n) {
     return (
         t in e
@@ -27,6 +28,7 @@ function _(e, t, n) {
         e
     );
 }
+
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -89,7 +91,9 @@ let m = {
                       g &&
                           (0, r.jsx)(s.A, {
                               className: p.Ki,
-                              style: { transform: "translate(779px, 1009px)" },
+                              style: {
+                                  transform: "translate(779px, 1009px)",
+                              },
                               src: A.ambience.river.animated,
                               autoPlay: !0,
                               controls: !1,
@@ -136,7 +140,9 @@ let m = {
                               children: [
                                   (0, r.jsx)(s.A, {
                                       className: p.Ki,
-                                      style: { transform: "translate(1014px, 773px)" },
+                                      style: {
+                                          transform: "translate(1014px, 773px)",
+                                      },
                                       src: A.ambience.fire.animated,
                                       autoPlay: !0,
                                       controls: !1,
@@ -151,7 +157,9 @@ let m = {
                                   }),
                                   (0, r.jsx)(s.A, {
                                       className: p.Ki,
-                                      style: { transform: "translate(0, 1216px)" },
+                                      style: {
+                                          transform: "translate(0, 1216px)",
+                                      },
                                       src: A.ambience.foliage_front.animated,
                                       autoPlay: !0,
                                       controls: !1,
@@ -159,7 +167,10 @@ let m = {
                                   }),
                               ],
                           }),
-                      O && (0, r.jsx)("div", { className: p.ps }),
+                      O &&
+                          (0, r.jsx)("div", {
+                              className: p.ps,
+                          }),
                   ],
               });
     };

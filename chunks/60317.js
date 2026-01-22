@@ -43,6 +43,7 @@ let c = 7.5,
                     });
             }),
     );
+
 function p(e, t, n, r) {
     let { emojiSize: a, key: o, messageId: l } = null != r ? r : {},
         c = null != a ? 2 * a : void 0,

@@ -1,10 +1,13 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(627968),
     i = n(311907),
     a = n(397927),
     s = n(253932),
     o = n(994500),
     l = n(985018);
+
 function c(e) {
     let { userId: t, onClick: n } = e;
     if (!(0, i.bG)([o.A], () => o.A.isIgnored(t))) return null;

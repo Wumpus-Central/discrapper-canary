@@ -1,4 +1,6 @@
-n.d(t, { $: () => r });
+n.d(t, {
+    $: () => r,
+});
 var r = (function (e) {
     return (
         (e[(e.PROMOTED = 1)] = "PROMOTED"),

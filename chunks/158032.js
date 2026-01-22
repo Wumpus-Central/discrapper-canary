@@ -26,7 +26,9 @@ async function u(e) {
         expectedInvoicePrice: d,
         expectedRenewalPrice: f,
     } = e;
-    a.h.dispatch({ type: "PREMIUM_PAYMENT_SUBSCRIBE_START" });
+    a.h.dispatch({
+        type: "PREMIUM_PAYMENT_SUBSCRIBE_START",
+    });
     try {
         let e = await l.Ky({
             items: [
@@ -87,7 +89,9 @@ async function d(e, t, n, r, u, d) {
                 u,
                 d,
             ),
-            a.h.dispatch({ type: "PREMIUM_PAYMENT_UPDATE_SUCCESS" });
+            a.h.dispatch({
+                type: "PREMIUM_PAYMENT_UPDATE_SUCCESS",
+            });
     } catch (e) {
         throw (
             (a.h.dispatch({
@@ -102,7 +106,9 @@ async function f(e, t, n) {
     try {
         await l.nV(
             e,
-            { status: c.Dmq.ACTIVE },
+            {
+                status: c.Dmq.ACTIVE,
+            },
             {
                 amount: 0,
                 currency: e.currency,
@@ -117,7 +123,10 @@ async function f(e, t, n) {
 }
 async function p(e, t, n, r, i) {
     try {
-        await l.r6(e, t, n, r, i), a.h.dispatch({ type: "PREMIUM_PAYMENT_UPDATE_SUCCESS" });
+        await l.r6(e, t, n, r, i),
+            a.h.dispatch({
+                type: "PREMIUM_PAYMENT_UPDATE_SUCCESS",
+            });
     } catch (e) {
         throw (
             (a.h.dispatch({
@@ -130,7 +139,10 @@ async function p(e, t, n, r, i) {
 }
 async function _(e, t, n, r, i, s) {
     try {
-        await l.uK(e, t, n, r, i, s), a.h.dispatch({ type: "PREMIUM_PAYMENT_UPDATE_SUCCESS" });
+        await l.uK(e, t, n, r, i, s),
+            a.h.dispatch({
+                type: "PREMIUM_PAYMENT_UPDATE_SUCCESS",
+            });
     } catch (e) {
         throw (
             (a.h.dispatch({
@@ -141,6 +153,9 @@ async function _(e, t, n, r, i, s) {
         );
     }
 }
+
 function h() {
-    a.h.dispatch({ type: "PREMIUM_PAYMENT_ERROR_CLEAR" });
+    a.h.dispatch({
+        type: "PREMIUM_PAYMENT_ERROR_CLEAR",
+    });
 }

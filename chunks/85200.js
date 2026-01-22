@@ -1,4 +1,7 @@
-n.d(t, { A: () => h }), n(896048);
+n.d(t, {
+    A: () => h,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -11,6 +14,7 @@ var r = n(627968),
     f = n(985018),
     p = n(637462);
 let _ = c.isWindows() ? ["BTHENUM", "BTHHFENUM"] : [];
+
 function h() {
     var e, t;
     let { canSetInputDevice: n, canSetOutputDevice: c } = (0, a.cf)([l.A], () => ({
@@ -19,8 +23,12 @@ function h() {
         })),
         h = (0, o.x5)(d.oh.AUDIO_INPUT),
         m = (0, o.x5)(d.oh.AUDIO_OUTPUT),
-        [g, E] = (0, o.tR)(d.oh.AUDIO_INPUT, { location: "UserSettingsDevices" }),
-        [b, y] = (0, o.tR)(d.oh.AUDIO_OUTPUT, { location: "UserSettingsDevices" }),
+        [g, E] = (0, o.tR)(d.oh.AUDIO_INPUT, {
+            location: "UserSettingsDevices",
+        }),
+        [b, y] = (0, o.tR)(d.oh.AUDIO_OUTPUT, {
+            location: "UserSettingsDevices",
+        }),
         O = g.concat(E),
         A = b.concat(y),
         v = i.useMemo(() => {

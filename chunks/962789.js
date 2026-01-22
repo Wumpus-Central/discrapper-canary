@@ -25,6 +25,7 @@ var r = n(627968),
     O = n(419205);
 let A = 3,
     v = 3;
+
 function S(e) {
     let { applications: t } = e,
         n = i.useMemo(() => t.sort((e, t) => u.default.compare(t.id, e.id)), [t]),
@@ -47,7 +48,9 @@ function S(e) {
                                   tag: "span",
                                   variant: "text-sm/medium",
                                   color: "text-muted",
-                                  children: y.intl.format(y.t["EADv+4"], { count: i }),
+                                  children: y.intl.format(y.t["EADv+4"], {
+                                      count: i,
+                                  }),
                               },
                               t,
                           ),
@@ -100,7 +103,9 @@ function S(e) {
             );
         }, [n]),
         d = () => {
-            (0, _.openUserSettings)(f.X.AUTHORIZED_APPS_PANEL, { section: b.nc_.AUTHORIZED_APPS });
+            (0, _.openUserSettings)(f.X.AUTHORIZED_APPS_PANEL, {
+                section: b.nc_.AUTHORIZED_APPS,
+            });
         };
     return (0, r.jsxs)("div", {
         className: O.wx,
@@ -131,7 +136,9 @@ function S(e) {
                     }),
                 ],
             }),
-            (0, r.jsx)("div", { className: O.yF }),
+            (0, r.jsx)("div", {
+                className: O.yF,
+            }),
             (0, r.jsx)("div", {
                 className: O.lJ,
                 children: c,
@@ -139,18 +146,22 @@ function S(e) {
         ],
     });
 }
+
 function I() {
     let e = d.Zk.useSetting();
     return (0, r.jsx)(m.h, {
         setting: E.H.PRIVACY_AND_SAFETY_ALLOW_GAME_FRIEND_DMS,
         children: (0, r.jsx)(g.Ay, {
             title: y.intl.string(y.t.XpBObB),
-            note: y.intl.format(y.t.oZsHTD, { helpdeskArticle: c.A.getArticleURL(b.MVz.SLAYER_GAME_FRIENDS) }),
+            note: y.intl.format(y.t.oZsHTD, {
+                helpdeskArticle: c.A.getArticleURL(b.MVz.SLAYER_GAME_FRIENDS),
+            }),
             value: e,
             onChange: d.Zk.updateSetting,
         }),
     });
 }
+
 function T() {
     let e = d.TA.useSetting(),
         t = e === a.fL.SLAYER_SDK_RECEIVE_IN_GAME_DMS_UNSET ? a.fL.SLAYER_SDK_RECEIVE_IN_GAME_DMS_ALL : e,
@@ -183,6 +194,7 @@ function T() {
         ],
     });
 }
+
 function C() {
     return (0, r.jsxs)("div", {
         className: O.do,
@@ -203,14 +215,25 @@ function C() {
         ],
     });
 }
+
 function N(e) {
     let { applications: t } = e;
-    return t.length > 0 ? (0, r.jsx)(S, { applications: t }) : (0, r.jsx)(C, {});
+    return t.length > 0
+        ? (0, r.jsx)(S, {
+              applications: t,
+          })
+        : (0, r.jsx)(C, {});
 }
+
 function R() {
     let { showLoadingIndicator: e, slayerSdkApplications: t } = (0, p.A)(!0);
-    return e ? (0, r.jsx)(o.y$y, {}) : (0, r.jsx)(N, { applications: t });
+    return e
+        ? (0, r.jsx)(o.y$y, {})
+        : (0, r.jsx)(N, {
+              applications: t,
+          });
 }
+
 function w() {
     let { showLoadingIndicator: e, slayerSdkApplications: t } = (0, p.A)(!0);
     return (0, r.jsx)(h.A, {
@@ -218,10 +241,18 @@ function w() {
             ? (0, r.jsx)(o.y$y, {})
             : (0, r.jsxs)(r.Fragment, {
                   children: [
-                      (0, r.jsx)(N, { applications: t }),
+                      (0, r.jsx)(N, {
+                          applications: t,
+                      }),
                       t.length > 0 &&
                           (0, r.jsxs)(r.Fragment, {
-                              children: [(0, r.jsx)(I, {}), (0, r.jsx)("div", { className: O.yF }), (0, r.jsx)(T, {})],
+                              children: [
+                                  (0, r.jsx)(I, {}),
+                                  (0, r.jsx)("div", {
+                                      className: O.yF,
+                                  }),
+                                  (0, r.jsx)(T, {}),
+                              ],
                           }),
                   ],
               }),

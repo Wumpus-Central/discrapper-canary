@@ -26,6 +26,7 @@ var r = n(284009),
     A = n(37411),
     v = n(652215),
     S = n(746080);
+
 function I(e, t, n) {
     if (!(0, p.C$)(e.id)) return void (0, d.E)();
     f.Uw.dispatch(v.jej.POPOUT_CLOSE);
@@ -35,7 +36,11 @@ function I(e, t, n) {
             type: "SIDEBAR_CLOSE",
             baseChannelId: e.parent_id,
         }),
-            null != n ? (0, h.N9)(e, { source: n }) : (0, h.iN)(e.id);
+            null != n
+                ? (0, h.N9)(e, {
+                      source: n,
+                  })
+                : (0, h.iN)(e.id);
         return;
     }
     i()(null != e.parent_id, "all threads must have parents");
@@ -45,19 +50,30 @@ function I(e, t, n) {
             type: "SIDEBAR_CLOSE",
             baseChannelId: e.parent_id,
         }),
-            null != n ? (0, h.N9)(e, { source: n }) : (0, h.iN)(e.id);
+            null != n
+                ? (0, h.N9)(e, {
+                      source: n,
+                  })
+                : (0, h.iN)(e.id);
         return;
     }
     let l = b.A.getChannelId();
     e.parent_id === l || (0, S.mP)(l) || (0, h.iN)(e.parent_id),
         (0, _.pX)(
             v.BVt.CHANNEL_THREAD_VIEW((0, u.j)(e), (0, S.mP)(l) ? S.VV.GUILD_HOME : e.parent_id, e.id),
-            e.isForumPost() ? { source: A.H9.FORUM } : void 0,
+            e.isForumPost()
+                ? {
+                      source: A.H9.FORUM,
+                  }
+                : void 0,
         ),
         setTimeout(() => {
-            O._.dispatch(v.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: e.id });
+            O._.dispatch(v.jej.FOCUS_CHANNEL_TEXT_AREA, {
+                channelId: e.id,
+            });
         }, 0);
 }
+
 function T(e, t, n) {
     if (
         (i()(!e.isForumLikeChannel(), "cannot open thread creation sidebar in forums"),
@@ -83,6 +99,7 @@ function T(e, t, n) {
         });
     }, 0);
 }
+
 function C(e, t) {
     (0, _.pX)(v.BVt.CHANNEL(e, (0, S.mP)(t) ? S.VV.GUILD_HOME : t)),
         o.h.dispatch({
@@ -90,6 +107,7 @@ function C(e, t) {
             baseChannelId: t,
         });
 }
+
 function N(e) {
     o.h.dispatch({
         type: "SIDEBAR_CLOSE",

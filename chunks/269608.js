@@ -1,1 +1,3 @@
-e.exports = { g: "cab7040e0e505529" };
+e.exports = {
+    g: "cab7040e0e505529",
+};

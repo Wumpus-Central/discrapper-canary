@@ -5,6 +5,7 @@ n.d(t, {
 var r = n(627968),
     i = n(64700),
     a = n(461782);
+
 function s(e) {
     let { onPreventIdle: t, onAllowIdle: n, onActive: r } = i.useContext(a.k3);
     return {
@@ -17,6 +18,7 @@ function s(e) {
         onActive: r,
     };
 }
+
 function o(e) {
     let { children: t, className: n } = e,
         { onForceIdle: o, onActive: l } = i.useContext(a.k3),

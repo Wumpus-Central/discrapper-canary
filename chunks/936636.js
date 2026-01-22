@@ -1,4 +1,8 @@
-n.d(t, { A: () => p }), n(896048), n(321073);
+n.d(t, {
+    A: () => p,
+}),
+    n(896048),
+    n(321073);
 var l = n(627968),
     r = n(64700),
     i = n(503698),
@@ -8,6 +12,7 @@ var l = n(627968),
     c = n(990078),
     d = n(985018),
     u = n(851822);
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,6 +39,7 @@ function m(e) {
     return e;
 }
 let f = [s.Y.DESKTOP, s.Y.XBOX, s.Y.PLAYSTATION, s.Y.NINTENDO];
+
 function x(e) {
     let { platform: t } = e,
         n = (function (e, t) {
@@ -69,22 +75,57 @@ function x(e) {
         })(e, ["platform"]);
     switch (t) {
         case s.Y.DESKTOP:
-            return (0, l.jsx)(o.ScreenIcon, m({ size: "xs" }, n));
+            return (0, l.jsx)(
+                o.ScreenIcon,
+                m(
+                    {
+                        size: "xs",
+                    },
+                    n,
+                ),
+            );
         case s.Y.XBOX:
-            return (0, l.jsx)(o.XboxNeutralIcon, m({ size: "xs" }, n));
+            return (0, l.jsx)(
+                o.XboxNeutralIcon,
+                m(
+                    {
+                        size: "xs",
+                    },
+                    n,
+                ),
+            );
         case s.Y.PLAYSTATION:
-            return (0, l.jsx)(o.PlaystationNeutralIcon, m({ size: "xs" }, n));
+            return (0, l.jsx)(
+                o.PlaystationNeutralIcon,
+                m(
+                    {
+                        size: "xs",
+                    },
+                    n,
+                ),
+            );
         case s.Y.NINTENDO:
-            return (0, l.jsx)(o.NintendoSwitchNeutralIcon, m({ size: "xs" }, n));
+            return (0, l.jsx)(
+                o.NintendoSwitchNeutralIcon,
+                m(
+                    {
+                        size: "xs",
+                    },
+                    n,
+                ),
+            );
         default:
             return null;
     }
 }
+
 function b(e) {
     let { platforms: t } = e;
     return (0, l.jsx)("div", {
         className: a()(u.nM, u.Lc),
-        style: { alignItems: "center" },
+        style: {
+            alignItems: "center",
+        },
         children: t.map((e) =>
             (0, l.jsx)(
                 c.m,
@@ -103,13 +144,16 @@ function b(e) {
                                 return null;
                         }
                     })(e),
-                    children: (0, l.jsx)(x, { platform: e }),
+                    children: (0, l.jsx)(x, {
+                        platform: e,
+                    }),
                 },
                 e,
             ),
         ),
     });
 }
+
 function p(e) {
     let { detectedGame: t, className: n } = e,
         i = r.useMemo(() => {
@@ -124,6 +168,10 @@ function p(e) {
         ? null
         : (0, l.jsx)("div", {
               className: a()(u.fi, u.iH, n),
-              children: i.length > 0 && (0, l.jsx)(b, { platforms: i }),
+              children:
+                  i.length > 0 &&
+                  (0, l.jsx)(b, {
+                      platforms: i,
+                  }),
           });
 }

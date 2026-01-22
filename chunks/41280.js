@@ -1,11 +1,14 @@
-n.d(t, { A: () => f }), n(896048);
+n.d(t, {
+    A: () => f,
+}),
+    n(896048);
 var a = n(627968),
     l = n(64700),
     i = n(503698),
     r = n.n(i),
     s = n(735438),
     o = n.n(s),
-    c = n(432022),
+    c = n(108531),
     d = n(311907),
     u = n(397927),
     m = n(775602),
@@ -15,6 +18,7 @@ let h = {
     tension: 550,
     friction: 140,
 };
+
 function f(e) {
     let { className: t, pageMultiplier: n } = e,
         i = (0, d.bG)([m.A], () => m.A.useReducedMotion),

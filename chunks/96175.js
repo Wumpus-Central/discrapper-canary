@@ -6,9 +6,11 @@ n.d(t, {
 }),
     n(896048);
 var r = n(41984);
+
 function i(e) {
     return e;
 }
+
 function a(e) {
     switch (e) {
         case "click":
@@ -24,6 +26,7 @@ function a(e) {
             return "mousemove";
     }
 }
+
 function s() {
     return {
         popoutOpened: !1,

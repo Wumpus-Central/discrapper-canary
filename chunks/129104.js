@@ -1,4 +1,6 @@
-n.d(t, { R: () => m });
+n.d(t, {
+    R: () => m,
+});
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -13,6 +15,7 @@ var r = n(627968),
     h = n(652215),
     b = n(307731),
     g = n(680930);
+
 function m(e) {
     let {
             customStatusEmoji: t,

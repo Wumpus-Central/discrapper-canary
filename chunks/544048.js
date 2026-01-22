@@ -1,4 +1,7 @@
-n.d(t, { t: () => b }), n(896048);
+n.d(t, {
+    t: () => b,
+}),
+    n(896048);
 var r,
     i = n(627968),
     a = n(64700),
@@ -8,6 +11,7 @@ var r,
     c = n(844222),
     u = n(460890),
     d = n(317534);
+
 function f(e, t, n) {
     return (
         t in e
@@ -21,6 +25,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,6 +42,7 @@ function p(e) {
     }
     return e;
 }
+
 function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -49,6 +55,7 @@ function _(e, t) {
     }
     return n;
 }
+
 function h(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -60,6 +67,7 @@ function h(e, t) {
         e
     );
 }
+
 function m(e, t) {
     if (null == e) return {};
     var n,
@@ -76,6 +84,7 @@ function m(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function g(e, t) {
     if (null == e) return {};
     var n,
@@ -197,5 +206,10 @@ let b = (e) => {
             isWindowFocused: null != (t = null == o ? void 0 : o()) ? t : d,
             useReducedMotion: _,
         });
-    return (0, i.jsx)(E, h(p({}, g), { ref: n }));
+    return (0, i.jsx)(
+        E,
+        h(p({}, g), {
+            ref: n,
+        }),
+    );
 };

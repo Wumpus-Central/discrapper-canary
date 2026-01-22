@@ -1,4 +1,6 @@
-n.d(t, { A: () => C });
+n.d(t, {
+    A: () => C,
+});
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -18,6 +20,7 @@ var r = n(627968),
     y = n(652215),
     O = n(985018),
     j = n(790687);
+
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -43,6 +46,7 @@ function v(e) {
     }
     return e;
 }
+
 function x(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -61,6 +65,7 @@ function x(e, t) {
         e
     );
 }
+
 function E(e) {
     var t, i, f;
     let { userId: A, channel: y } = e,
@@ -69,6 +74,7 @@ function E(e) {
         _ = (0, s.bG)([g.default], () => g.default.getUser(A)),
         C = (0, s.bG)([b.Ay], () => (null != A ? b.Ay.getMember(y.guild_id, A) : null)),
         S = (0, p.gn)(y.guild_id, null != A ? A : void 0, null != (t = null == C ? void 0 : C.colorStrings) ? t : null);
+
     function I(e) {
         if (null == _) return null;
         (0, c.L3)(e, async () => {
@@ -120,11 +126,16 @@ function E(e) {
               }),
           });
 }
+
 function _(e) {
     let { channel: t } = e,
         { threadMetadata: n } = t;
     return null == n
-        ? (0, r.jsx)("div", { style: { marginTop: -8 } })
+        ? (0, r.jsx)("div", {
+              style: {
+                  marginTop: -8,
+              },
+          })
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(o.Text, {
@@ -155,6 +166,7 @@ function _(e) {
               ],
           });
 }
+
 function C(e) {
     var t;
     let { channel: n } = e,
@@ -164,10 +176,16 @@ function C(e) {
         children: [
             (0, r.jsx)("div", {
                 className: j.P0,
-                children: (0, r.jsx)(l, { className: j.Kk }),
+                children: (0, r.jsx)(l, {
+                    className: j.Kk,
+                }),
             }),
-            (0, r.jsx)(A.cr, { children: n.name }),
-            (0, r.jsx)(_, { channel: n }),
+            (0, r.jsx)(A.cr, {
+                children: n.name,
+            }),
+            (0, r.jsx)(_, {
+                channel: n,
+            }),
         ],
     });
 }

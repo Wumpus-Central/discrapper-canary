@@ -1,4 +1,7 @@
-i.d(e, { default: () => h }), i(896048);
+i.d(e, {
+    default: () => h,
+}),
+    i(896048);
 var n = i(627968),
     a = i(64700),
     l = i(158954),
@@ -10,6 +13,7 @@ var n = i(627968),
     u = i(652215),
     p = i(842130),
     f = i(985018);
+
 function h(t) {
     let { transitionState: e, onClose: i } = t,
         [h, x] = a.useState(!1),

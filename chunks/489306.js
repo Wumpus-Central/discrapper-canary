@@ -29,6 +29,7 @@ var r = n(64700),
     E = n(568065),
     _ = n(652215),
     C = n(49999);
+
 function S(e) {
     let t = (0, i.bG)([b.A], () => b.A.getNotificationStateForGuild(e), [e]),
         n = (0, i.bG)([g.A], () => g.A.getStateForGuild(e)),
@@ -57,7 +58,9 @@ function S(e) {
                     b = l - p;
                 return h || u
                     ? {
-                          indicator: { type: m.cD.WARNING },
+                          indicator: {
+                              type: m.cD.WARNING,
+                          },
                           showUnread: !0,
                       }
                     : l !== p && b > 0
@@ -300,6 +303,7 @@ function S(e) {
             popout: S,
         };
 }
+
 function I(e) {
     let t = (0, i.bG)([g.A], () => g.A.getStateForGuild(e)),
         n = S(e);

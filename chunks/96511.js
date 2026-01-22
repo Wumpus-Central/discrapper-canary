@@ -1,4 +1,7 @@
-n.d(t, { A: () => b }), n(747238);
+n.d(t, {
+    A: () => b,
+}),
+    n(747238);
 var r = n(284009),
     l = n.n(r),
     i = n(698441),
@@ -10,6 +13,7 @@ var r = n(284009),
     d = n(322387),
     f = n(652215),
     p = n(985018);
+
 function h(e) {
     let { username: t, applicationId: n, renderApplication: r, withApplication: l, withDefault: i } = e;
     return null != n
@@ -17,8 +21,11 @@ function h(e) {
               username: t,
               applicationName: () => r(n),
           })
-        : p.intl.format(i, { username: t });
+        : p.intl.format(i, {
+              username: t,
+          });
 }
+
 function b(e) {
     var t, n, r, b, g, m, A, y, O, j, v, x, E, _, C;
     let { item: S, renderApplication: I } = e,

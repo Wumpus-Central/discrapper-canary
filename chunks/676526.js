@@ -1,4 +1,6 @@
-n.d(t, { h: () => x });
+n.d(t, {
+    h: () => x,
+});
 var r = n(627968);
 n(64700);
 var l = n(503698),
@@ -16,6 +18,7 @@ var l = n(503698),
     m = n(985018),
     y = n(461349),
     O = n(616060);
+
 function j(e) {
     let { index: t, widgetType: n, game: l, coverImageUrl: i, gameName: a, children: s } = e,
         { manageFocusOnReorder: d } = (0, u.r)();
@@ -28,7 +31,9 @@ function j(e) {
             imageSrc: i,
             gameName: a,
         },
-        "aria-label": m.intl.formatToPlainString(m.t["0dR3gw"], { positionNumber: t + 1 }),
+        "aria-label": m.intl.formatToPlainString(m.t["0dR3gw"], {
+            positionNumber: t + 1,
+        }),
         onReorder: (e, t) => (0, o.Un)(n, e, t),
         onEnd: () => d(l.applicationId),
         className: O.kL,
@@ -41,6 +46,7 @@ function j(e) {
         }),
     });
 }
+
 function x(e) {
     let {
             game: t,
@@ -59,7 +65,9 @@ function x(e) {
         T = s.default.getCurrentUser(),
         _ = (null == T ? void 0 : T.id) === n,
         N = !x && _,
-        { isDragging: D } = (0, a.V)((e) => ({ isDragging: e.isDragging() })),
+        { isDragging: D } = (0, a.V)((e) => ({
+            isDragging: e.isDragging(),
+        })),
         R = () =>
             (0, r.jsxs)(r.Fragment, {
                 children: [
@@ -97,7 +105,9 @@ function x(e) {
                 ],
             });
     return P
-        ? (0, r.jsx)("div", { className: y.mD })
+        ? (0, r.jsx)("div", {
+              className: y.mD,
+          })
         : N
           ? (0, r.jsx)(j, {
                 widgetType: l,

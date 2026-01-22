@@ -1,8 +1,13 @@
-n.d(t, { A: () => g }), n(896048), n(446912);
+n.d(t, {
+    A: () => g,
+}),
+    n(896048),
+    n(446912);
 var r,
     l = n(311907),
     i = n(73153),
     o = n(967198);
+
 function a(e, t, n) {
     return (
         t in e
@@ -18,7 +23,10 @@ function a(e, t, n) {
 }
 let c = null,
     s = null,
-    d = { reportedMessages: {} };
+    d = {
+        reportedMessages: {},
+    };
+
 function u() {
     let e = o.A.getLastSelectedGuildId();
     e !== c && ((s = null), (c = null != e ? e : null));
@@ -54,7 +62,9 @@ a(f, "displayName", "ReportToModStore"),
     a(f, "migrations", [
         (e) => {
             var t;
-            return { reportedMessages: null != (t = null == e ? void 0 : e.reportedMessages) ? t : {} };
+            return {
+                reportedMessages: null != (t = null == e ? void 0 : e.reportedMessages) ? t : {},
+            };
         },
     ]);
 let g = new f(i.h, {

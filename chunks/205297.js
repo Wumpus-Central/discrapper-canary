@@ -15,6 +15,7 @@ var r,
     f = n(652215),
     p = n(806931),
     _ = n(315253);
+
 function h(e, t, n) {
     return (
         t in e
@@ -28,6 +29,7 @@ function h(e, t, n) {
         e
     );
 }
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -61,10 +63,12 @@ let g = 200,
         [f.CUs.BOTTOM_LEFT]: c.R.HORIZONTAL_RIGHT,
         [f.CUs.BOTTOM_RIGHT]: c.R.HORIZONTAL_LEFT,
     };
+
 function S(e, t) {
     let n = Math.round(e / E) * E;
     return (0, l.clamp)(n, t.minWidth, t.maxWidth);
 }
+
 function I(e) {
     let { resizableNode: t, onResize: n, onResizeEnd: r, resizeConfig: s, position: l } = e,
         u = (0, c.A)({
@@ -267,7 +271,9 @@ class T extends (r = a.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            h(this, "state", { isResizing: !1 }),
+            h(this, "state", {
+                isResizing: !1,
+            }),
             h(this, "_draggable", void 0),
             h(this, "_innerDivRef", a.createRef()),
             h(this, "_resizeObserver", void 0),
@@ -301,13 +307,22 @@ class T extends (r = a.PureComponent) {
                 this._draggable = e;
             }),
             h(this, "handleResize", (e) => {
-                (this._width = e), this.state.isResizing || this.setState({ isResizing: !0 });
+                (this._width = e),
+                    this.state.isResizing ||
+                        this.setState({
+                            isResizing: !0,
+                        });
             }),
             h(this, "handleResizeEnd", (e) => {
                 let { onResize: t, resizeConfig: n } = this.props;
                 if (null == n) return;
                 let r = S(e, n);
-                (this._width = r), null == t || t(r), this.setState({ isResizing: !1 }), this.ensureWidth();
+                (this._width = r),
+                    null == t || t(r),
+                    this.setState({
+                        isResizing: !1,
+                    }),
+                    this.ensureWidth();
             }),
             h(this, "handleDragStart", (e, t) => {
                 var n, r;
@@ -386,7 +401,16 @@ let C = (e) => {
                               if (e.id !== t.id && e.component !== f.o1q.ACTIVITY && e.component !== f.o1q.FRAME)
                                   return null;
                               let n = "string" == typeof e.component ? h[e.component] : e.component;
-                              return (0, i.jsx)(n, m({ width: r }, e.props), e.id);
+                              return (0, i.jsx)(
+                                  n,
+                                  m(
+                                      {
+                                          width: r,
+                                      },
+                                      e.props,
+                                  ),
+                                  e.id,
+                              );
                           }),
                 [n, t, r, h],
             ),
@@ -399,10 +423,20 @@ let C = (e) => {
             P = a.useMemo(() => n.some((e) => e.component === f.o1q.ACTIVITY), [n]),
             D = a.useMemo(() => n.some((e) => e.component === f.o1q.FRAME), [n]);
         return null == t
-            ? (0, i.jsx)(d.Ay, { children: (0, i.jsx)("div", { className: _._I }) })
+            ? (0, i.jsx)(d.Ay, {
+                  children: (0, i.jsx)("div", {
+                      className: _._I,
+                  }),
+              })
             : (0, i.jsx)(d.Ay, {
                   children: (0, i.jsx)("div", {
-                      className: o()(_._I, { [_.cB]: I }, v),
+                      className: o()(
+                          _._I,
+                          {
+                              [_.cB]: I,
+                          },
+                          v,
+                      ),
                       children: (0, i.jsx)(T, {
                           appContext: g,
                           position: t.position,

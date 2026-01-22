@@ -1,4 +1,7 @@
-n.d(t, { A: () => _ }), n(896048);
+n.d(t, {
+    A: () => _,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(311907),
@@ -37,13 +40,13 @@ class b extends i.PureComponent {
         this._doneTimer.stop();
     }
     setRecentlySyncedTimeout() {
-        this._doneTimer.start(2000, () => this.forceUpdate());
+        this._doneTimer.start(2e3, () => this.forceUpdate());
     }
     getIsRecentlySynced() {
         let { cloudSyncState: e } = this.props;
         if (null != e && e.type === p.VX0.DONE) {
             let t = e.timestamp;
-            return null != t && Date.now() - t <= 2000;
+            return null != t && Date.now() - t <= 2e3;
         }
         return !1;
     }
@@ -77,13 +80,20 @@ class b extends i.PureComponent {
     }
     render() {
         let { cloudSyncState: e, libraryApplication: t, className: n } = this.props,
-            i = null == e ? { type: p.VX0.DONE } : e,
+            i =
+                null == e
+                    ? {
+                          type: p.VX0.DONE,
+                      }
+                    : e,
             l = this.getIsRecentlySynced();
         (g.has(i.type) || l) && (t.id, this.getStop(i, l));
         let a = l ? A : m[i.type];
         return (0, r.jsx)(s.m, {
             text: this.getTooltip(i, l),
-            children: (0, r.jsx)(a, { className: n }),
+            children: (0, r.jsx)(a, {
+                className: n,
+            }),
         });
     }
     constructor(...e) {
@@ -102,5 +112,7 @@ class b extends i.PureComponent {
 }
 let _ = l.Ay.connectStores([c.A], (e) => {
     let { libraryApplication: t } = e;
-    return { cloudSyncState: c.A.getState(t.id, t.branchId) };
+    return {
+        cloudSyncState: c.A.getState(t.id, t.branchId),
+    };
 })(b);

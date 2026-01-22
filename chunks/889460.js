@@ -1,4 +1,8 @@
-n.d(t, { A: () => N }), n(321073), n(896048);
+n.d(t, {
+    A: () => N,
+}),
+    n(321073),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -16,6 +20,7 @@ var r = n(627968),
     g = n(287809),
     E = n(652215),
     b = n(985018);
+
 function y(e, t, n) {
     return (
         t in e
@@ -29,6 +34,7 @@ function y(e, t, n) {
         e
     );
 }
+
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -45,6 +51,7 @@ function O(e) {
     }
     return e;
 }
+
 function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -57,6 +64,7 @@ function A(e, t) {
     }
     return n;
 }
+
 function v(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -71,11 +79,16 @@ function v(e, t) {
 let S = "max_uses",
     I = "User Invite Context Menu",
     T = "context_menu";
+
 function C(e, t) {
     o.A.ensurePrivateChannel(e).then((e) => {
-        null != d.A.getChannel(e) && c.A.sendInvite(e, t, T, { source: E.PE1.GUILD_CONTEXT_MENU });
+        null != d.A.getChannel(e) &&
+            c.A.sendInvite(e, t, T, {
+                source: E.PE1.GUILD_CONTEXT_MENU,
+            });
     });
 }
+
 function N(e) {
     let { user: t, guildId: n, onAction: o } = e,
         c = (0, a.bG)([g.default], () => g.default.getCurrentUser(), []),
@@ -91,10 +104,18 @@ function N(e) {
             );
         }, [n]),
         [y, A] = i.useState({});
+
     function T(e, t) {
         let n = f.Ay.getDefaultChannel(e.id, !0, E.xBc.CREATE_INSTANT_INVITE);
         if (null != n) {
-            if ((A(v(O({}, y), { [e.id]: !0 })), !_.A.can(E.xBc.CREATE_INSTANT_INVITE, e) && null != e.vanityURLCode))
+            if (
+                (A(
+                    v(O({}, y), {
+                        [e.id]: !0,
+                    }),
+                ),
+                !_.A.can(E.xBc.CREATE_INSTANT_INVITE, e) && null != e.vanityURLCode)
+            )
                 return void C(t, e.vanityURLCode);
             l.Ay.createInvite(
                 n.id,

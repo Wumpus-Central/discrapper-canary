@@ -13,16 +13,24 @@ var s = n(954571),
 n(701884);
 var l = n(652215);
 let c = () => {
-    r.h.dispatch({ type: "CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN" }),
+    r.h.dispatch({
+        type: "CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN",
+    }),
         s.default.track(l.HAw.MEMBERLIST_CONTENT_FEED_HIDDEN, {
             channel_id: i.A.getChannelId(),
             guild_id: a.A.getGuildId(),
             hidden: o.A.hidden,
         });
 };
+
 function u() {
-    r.h.dispatch({ type: "GAME_PROFILE_OPEN" });
+    r.h.dispatch({
+        type: "GAME_PROFILE_OPEN",
+    });
 }
+
 function d() {
-    r.h.dispatch({ type: "CONTENT_INVENTORY_CLEAR_DELETE_HISTORY_ERROR" });
+    r.h.dispatch({
+        type: "CONTENT_INVENTORY_CLEAR_DELETE_HISTORY_ERROR",
+    });
 }

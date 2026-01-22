@@ -1,7 +1,10 @@
-t.d(l, { A: () => eo }), t(896048);
+t.d(l, {
+    A: () => eo,
+}),
+    t(896048);
 var n = t(627968),
     i = t(64700),
-    r = t(432022),
+    r = t(108531),
     s = t(311907),
     a = t(397927),
     o = t(80682),
@@ -58,6 +61,7 @@ var n = t(627968),
     er = t(996988),
     es = t(985018),
     ea = t(661388);
+
 function eo(e) {
     var l, t;
     let {
@@ -92,7 +96,9 @@ function eo(e) {
         eE = i.useRef(null),
         e_ = (0, f.M)(eE),
         [eT, eP] = i.useState(!1),
-        { defaultWishlistId: eS } = (0, s.cf)([E.A], () => ({ defaultWishlistId: E.A.getFirstWishlistId(eo.id) }));
+        { defaultWishlistId: eS } = (0, s.cf)([E.A], () => ({
+            defaultWishlistId: E.A.getFirstWishlistId(eo.id),
+        }));
     (0, g.fw)({
         wishlistId: eS,
         userId: eo.id,
@@ -100,9 +106,19 @@ function eo(e) {
     let eC = (0, C.fC)(),
         eL = (0, a.zhh)({
             opacity: +(null != eC.interactionType),
-            config: { duration: 150 },
+            config: {
+                duration: 150,
+            },
         }),
-        eD = i.useMemo(() => (null != ec ? { [ec]: [eo.id] } : {}), [ec, eo.id]);
+        eD = i.useMemo(
+            () =>
+                null != ec
+                    ? {
+                          [ec]: [eo.id],
+                      }
+                    : {},
+            [ec, eo.id],
+        );
     (0, o.E)(eD, "UserProfileModalV2");
     let eR = (0, _.Ay)(eo.id, eb ? ec : void 0),
         ew = y.Ay.useName(null == eR ? void 0 : eR.guildId, eu, eo),
@@ -118,25 +134,31 @@ function eo(e) {
                       canAnimate: !1,
                       size: 1024,
                   }),
-        eF = (0, p.h)({ location: "UserProfileModalV2" }),
+        eF = (0, p.h)({
+            location: "UserProfileModalV2",
+        }),
         eV = i.useMemo(() => (null != eh ? eh : (0, m.A)()), [eh]),
         eB = (0, et.A)({
             user: eo,
             currentUser: ed,
         }),
-        eW = (0, A.q)({ userId: eo.id }),
+        eW = (0, A.q)({
+            userId: eo.id,
+        }),
         eK = (0, x.fi)(eo.id),
         ez = (0, P.A)(eo.id),
         eH = (0, T.A)(eo.id),
         eY = (0, u.GV)(),
-        eJ = es.intl.format(es.t.KRe1Fk, { name: ew });
+        eJ = es.intl.format(es.t.KRe1Fk, {
+            name: ew,
+        });
     return (
         i.useEffect(() => {
             let e = () => {
                 eP(!0),
                     setTimeout(() => {
                         eP(!1);
-                    }, 1000);
+                    }, 1e3);
             };
             return (
                 I._.subscribe(ei.jej.SHAKE_PROFILE_MODAL, e),
@@ -214,7 +236,9 @@ function eo(e) {
                                                     null != ek &&
                                                         (0, n.jsx)("div", {
                                                             className: ea.iL,
-                                                            style: { backgroundImage: "url(".concat(ek, ")") },
+                                                            style: {
+                                                                backgroundImage: "url(".concat(ek, ")"),
+                                                            },
                                                         }),
                                                     null != eC.interactionType &&
                                                         (0, n.jsx)(r.animated.div, {
@@ -267,7 +291,9 @@ function eo(e) {
                                                                 fade: !0,
                                                                 className: ea.kI,
                                                                 children: [
-                                                                    (0, n.jsx)(M.A, { userId: eo.id }),
+                                                                    (0, n.jsx)(M.A, {
+                                                                        userId: eo.id,
+                                                                    }),
                                                                     (0, n.jsx)(K.A, {
                                                                         user: eo,
                                                                         guildId:
@@ -421,7 +447,9 @@ function eo(e) {
                                                                                 className: ea.kG,
                                                                             }),
                                                                         }),
-                                                                    (0, n.jsx)(Q.A, { userId: eo.id }),
+                                                                    (0, n.jsx)(Q.A, {
+                                                                        userId: eo.id,
+                                                                    }),
                                                                 ],
                                                             }),
                                                             (null == eR ? void 0 : eR.profileEffect) != null &&

@@ -1,4 +1,6 @@
-n.d(t, { A: () => I });
+n.d(t, {
+    A: () => I,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -15,6 +17,7 @@ var r = n(627968),
     m = n(652215),
     g = n(996988),
     E = n(346170);
+
 function b(e, t, n) {
     return (
         t in e
@@ -28,6 +31,7 @@ function b(e, t, n) {
         e
     );
 }
+
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -44,6 +48,7 @@ function y(e) {
     }
     return e;
 }
+
 function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -56,6 +61,7 @@ function O(e, t) {
     }
     return n;
 }
+
 function A(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -67,6 +73,7 @@ function A(e, t) {
         e
     );
 }
+
 function v(e, t) {
     if (null == e) return {};
     var n,
@@ -83,6 +90,7 @@ function v(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function S(e, t) {
     if (null == e) return {};
     var n,
@@ -138,10 +146,14 @@ let I = function (e) {
                 D,
             ),
         ),
-        F = A(y({}, I), { backgroundColor: L });
+        F = A(y({}, I), {
+            backgroundColor: L,
+        });
     return (0, r.jsx)("div", {
         style: G ? y({}, I, k) : y({}, F),
-        className: s()(E.T, { [U]: G }),
+        className: s()(E.T, {
+            [U]: G,
+        }),
         children: w
             ? (0, r.jsx)(u.A, {
                   shouldAnimate: P,

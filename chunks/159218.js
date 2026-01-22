@@ -1,9 +1,12 @@
-n.d(t, { A: () => G }), n(896048);
+n.d(t, {
+    A: () => G,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
-    o = n(432022),
+    o = n(108531),
     l = n(311907),
     c = n(451988),
     u = n(397927),
@@ -25,6 +28,7 @@ var r = n(627968),
 n(745541);
 var T = n(985018),
     C = n(178740);
+
 function N(e, t, n) {
     return (
         t in e
@@ -38,6 +42,7 @@ function N(e, t, n) {
         e
     );
 }
+
 function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -54,6 +59,7 @@ function R(e) {
     }
     return e;
 }
+
 function w(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -66,6 +72,7 @@ function w(e, t) {
     }
     return n;
 }
+
 function P(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -77,6 +84,7 @@ function P(e, t) {
         e
     );
 }
+
 function D(e, t) {
     if (null == e) return {};
     var n,
@@ -93,6 +101,7 @@ function D(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function x(e, t) {
     if (null == e) return {};
     var n,
@@ -103,6 +112,7 @@ function x(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function L(e) {
     let { children: t, className: n } = e;
     return (0, r.jsx)("div", {
@@ -122,7 +132,9 @@ let j = i.forwardRef(function (e, t) {
             { analyticsLocations: l } = (0, _.Ay)(),
             { trackUserProfileAction: c } = (0, y.NJ)(),
             d = () => {
-                c({ action: "PRESS_ADD_CUSTOM_STATUS" }),
+                c({
+                    action: "PRESS_ADD_CUSTOM_STATUS",
+                }),
                     null == i || i(),
                     (0, u.mMO)(async () => {
                         let { default: e } = await n.e("41091").then(n.bind(n, 431374));
@@ -154,7 +166,9 @@ let j = i.forwardRef(function (e, t) {
             });
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(L, { children: p }),
+                (0, r.jsx)(L, {
+                    children: p,
+                }),
                 (0, r.jsx)("div", {
                     className: s()(C.kL, C.LL),
                     ref: t,
@@ -163,7 +177,9 @@ let j = i.forwardRef(function (e, t) {
                         "aria-label": T.intl.string(T.t["zrpF/b"]),
                         "aria-describedby": o,
                         onClick: d,
-                        focusProps: { ringClassName: C.hN },
+                        focusProps: {
+                            ringClassName: C.hN,
+                        },
                         children: (0, r.jsxs)("span", {
                             className: s()(C.vW, C.vk),
                             children: [
@@ -203,7 +219,9 @@ let j = i.forwardRef(function (e, t) {
             } = e,
             S = (0, O.NR)(),
             { trackUserProfileAction: N } = (0, y.NJ)(),
-            R = (0, m.h)({ location: "CustomStatusBubble" }),
+            R = (0, m.h)({
+                location: "CustomStatusBubble",
+            }),
             w = 1.25 * (null != p),
             P = 36 + w,
             D = 144 + w,
@@ -237,7 +255,9 @@ let j = i.forwardRef(function (e, t) {
             W(t > e),
                 (k.current = e),
                 (U.current = t),
-                Z({ maxHeight: "".concat(Math.min(B ? k.current : U.current, B ? P : D), "px") });
+                Z({
+                    maxHeight: "".concat(Math.min(B ? k.current : U.current, B ? P : D), "px"),
+                });
         }, [K, _, p, Z, B, P, D]);
         let Q = (e) => {
                 Y &&
@@ -302,7 +322,9 @@ let j = i.forwardRef(function (e, t) {
                     className: C.vW,
                     children: (0, r.jsxs)(o.animated.div, {
                         style: X,
-                        className: s()(C.Qs, { [C.m2]: !B }),
+                        className: s()(C.Qs, {
+                            [C.m2]: !B,
+                        }),
                         children: [$, et],
                     }),
                 }),
@@ -318,7 +340,10 @@ let j = i.forwardRef(function (e, t) {
                           ref: x,
                           className: s()(C.kL, g),
                           onMouseEnter: () => {
-                              N({ action: "HOVER_CUSTOM_STATUS" }), Q(!0);
+                              N({
+                                  action: "HOVER_CUSTOM_STATUS",
+                              }),
+                                  Q(!0);
                           },
                           onMouseLeave: () => {
                               Q(!1);
@@ -357,7 +382,11 @@ let j = i.forwardRef(function (e, t) {
                               (null == (t = x.current) ? void 0 : t.contains(e.relatedTarget)) || (b(!1), Q(!1));
                           },
                           onMouseEnter: () => {
-                              N({ action: "HOVER_CUSTOM_STATUS" }), b(!0), Q(!0);
+                              N({
+                                  action: "HOVER_CUSTOM_STATUS",
+                              }),
+                                  b(!0),
+                                  Q(!0);
                           },
                           onMouseLeave: () => {
                               b(!1), Q(!1);
@@ -404,6 +433,7 @@ let j = i.forwardRef(function (e, t) {
             }),
         );
     });
+
 function U(e) {
     let { emoji: t, text: n, user: a, guildId: s, channelId: o, themeType: l } = e,
         c = D(e, ["emoji", "text", "user", "guildId", "channelId", "themeType"]),

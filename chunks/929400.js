@@ -1,4 +1,8 @@
-n.d(t, { default: () => eq }), n(896048), n(228524);
+n.d(t, {
+    default: () => eq,
+}),
+    n(896048),
+    n(228524);
 var r = n(627968),
     l = n(64700),
     a = n(503698),
@@ -84,6 +88,7 @@ var r = n(627968),
     eT = n(818348),
     eC = n(985018),
     ek = n(484978);
+
 function ew(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -109,6 +114,7 @@ function ew(e) {
     }
     return e;
 }
+
 function eL(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -277,7 +283,9 @@ let eD = (e) => {
             eA = l.useMemo(() => (0, K.fT)(k, _), [k, _]),
             eN = (0, e_.dH)(k),
             ew = (0, ey.X)(k),
-            { enabled: eL } = (0, L.Z)({ location: "collectibles_shop_product_details_modal" }),
+            { enabled: eL } = (0, L.Z)({
+                location: "collectibles_shop_product_details_modal",
+            }),
             eD = (0, W.r)(k, !1, A),
             eB = (0, eO.V_)(t),
             eG = null != eB,
@@ -310,7 +318,9 @@ let eD = (e) => {
                 children: [
                     (0, r.jsx)("div", {
                         className: ek.gn,
-                        children: (0, r.jsx)(ea.A, { category: a }),
+                        children: (0, r.jsx)(ea.A, {
+                            category: a,
+                        }),
                     }),
                     (0, r.jsx)(eU, {
                         product: null != C ? C : k,
@@ -337,7 +347,9 @@ let eD = (e) => {
                                         variant: "text-sm/normal",
                                         children: eD,
                                     }),
-                                    (0, r.jsx)(eM, { skuId: k.skuId }),
+                                    (0, r.jsx)(eM, {
+                                        skuId: k.skuId,
+                                    }),
                                     B.isPurchased || B.isPartiallyOwnedBundle
                                         ? (0, r.jsx)(ee.c, {
                                               className: ek.On,
@@ -371,7 +383,11 @@ let eD = (e) => {
                                                           nitroIconSize: "xs",
                                                           discountOfferAmount: eB,
                                                       }),
-                                                      _ || eG ? null : (0, r.jsx)(ec.A, { product: k }),
+                                                      _ || eG
+                                                          ? null
+                                                          : (0, r.jsx)(ec.A, {
+                                                                product: k,
+                                                            }),
                                                   ],
                                               }),
                                 ],
@@ -410,7 +426,9 @@ let eD = (e) => {
                                             (0, r.jsx)(P.A, {
                                                 subscriptionTier: eS.pe.TIER_2,
                                                 fullWidth: !0,
-                                                textOptions: { textOverride: e },
+                                                textOptions: {
+                                                    textOverride: e,
+                                                },
                                                 onClick: eo.M,
                                                 onSubscribeModalClose: () => {
                                                     (0, eo.t)({
@@ -829,7 +847,10 @@ let eD = (e) => {
                                 interactive: !1,
                             }),
                         ),
-                        p && (0, r.jsx)(ez, { user: n }),
+                        p &&
+                            (0, r.jsx)(ez, {
+                                user: n,
+                            }),
                     ],
                 }),
             y = (e) =>
@@ -893,7 +914,9 @@ let eD = (e) => {
                         },
                     ),
                 );
-            })({ author: t });
+            })({
+                author: t,
+            });
         return (0, r.jsx)("div", {
             role: "img",
             "aria-label": eC.intl.string(eC.t["TN+ZvB"]),
@@ -980,7 +1003,7 @@ let eD = (e) => {
             L = l.useMemo(() => ((0, K.aw)(R) ? R.items.length : 0), [R]),
             { activeSlide: B, isTransitioning: G } = (0, $.X)({
                 slideCount: L,
-                intervalMs: 5000,
+                intervalMs: 5e3,
             });
         return null == O
             ? null
@@ -1019,13 +1042,17 @@ let eD = (e) => {
                                                 ? ek.Jq
                                                 : ek.eF,
                                       ),
-                                      style: { backgroundImage: "url(".concat(P, ")") },
+                                      style: {
+                                          backgroundImage: "url(".concat(P, ")"),
+                                      },
                                       children: [
                                           (0, eP.pQ)(a.skuId)
                                               ? a.skuId === eP.Dp.ORB_PROFILE_BADGE
                                                   ? S || T
                                                       ? null
-                                                      : (0, r.jsx)(em.z, { user: O })
+                                                      : (0, r.jsx)(em.z, {
+                                                            user: O,
+                                                        })
                                                   : a.skuId === d.j.PREMIUM_TIER_2_3_DAY
                                                     ? (0, r.jsx)(eu.I, {})
                                                     : (0, r.jsx)(ep.B, {
@@ -1087,7 +1114,9 @@ let eD = (e) => {
                                                       }),
                                                   }),
                                                   (null == C ? void 0 : C.expiresAt) != null &&
-                                                      (0, r.jsx)(en.e, { endDate: C.expiresAt }),
+                                                      (0, r.jsx)(en.e, {
+                                                          endDate: C.expiresAt,
+                                                      }),
                                               ],
                                           }),
                                       ],

@@ -1,9 +1,12 @@
-n.d(t, { default: () => s });
+n.d(t, {
+    default: () => s,
+});
 var r = n(627968);
 n(64700);
 var l = n(158954),
     i = n(47167),
     a = n(985018);
+
 function s(e) {
     let { channel: t, category: n } = e,
         s = (function (e, t) {

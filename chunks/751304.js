@@ -1,4 +1,6 @@
-n.d(t, { A: () => N });
+n.d(t, {
+    A: () => N,
+});
 var a = n(627968),
     l = n(64700),
     i = n(503698),
@@ -71,7 +73,9 @@ let E = l.memo(function (e) {
                 ref: ee,
                 onClick: null != P ? P : ea,
                 "aria-label": Z,
-                className: r()(W, O.ty, { [O.yo]: et }),
+                className: r()(W, O.ty, {
+                    [O.yo]: et,
+                }),
                 onFocus: () => (null == U ? void 0 : U(t.skuId)),
                 onBlur: () => (null == B ? void 0 : B(t.skuId)),
                 onMouseEnter: () => (null == M ? void 0 : M(t.skuId)),
@@ -80,7 +84,9 @@ let E = l.memo(function (e) {
                     className: O.qt,
                     children: [
                         (0, a.jsx)("div", {
-                            className: r()(O.Dq, { [O.$r]: !i || er || eo }),
+                            className: r()(O.Dq, {
+                                [O.$r]: !i || er || eo,
+                            }),
                             children: (0, a.jsx)(x.A, {
                                 skuId: t.skuId,
                                 isCardHovered: et,
@@ -107,7 +113,9 @@ let E = l.memo(function (e) {
                         es &&
                             (0, a.jsxs)(a.Fragment, {
                                 children: [
-                                    (0, a.jsx)("div", { className: O.wY }),
+                                    (0, a.jsx)("div", {
+                                        className: O.wY,
+                                    }),
                                     (0, a.jsxs)("div", {
                                         className: O.xQ,
                                         children: [
@@ -246,6 +254,11 @@ let E = l.memo(function (e) {
                               });
                       }
                       return e;
-                  })({ product: l }, n),
+                  })(
+                      {
+                          product: l,
+                      },
+                      n,
+                  ),
               );
     };

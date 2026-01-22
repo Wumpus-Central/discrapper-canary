@@ -1,5 +1,7 @@
 let r;
-n.d(t, { A: () => k });
+n.d(t, {
+    A: () => k,
+});
 var i,
     a = n(177029),
     s = n.n(a),
@@ -11,6 +13,7 @@ var i,
     f = n(73153),
     p = n(671759),
     _ = n(172799);
+
 function h(e, t, n) {
     return (
         t in e
@@ -31,13 +34,16 @@ let m = {},
     y = !1,
     O = !1,
     A = !1;
+
 function v() {
     (m = {}), (g = {}), (E = {}), (b = {}), (r = null), (O = !1), (A = !1), (y = !1);
 }
+
 function S(e) {
     let { channel: t } = e;
     delete m[t.id], delete g[t.id], delete E[t.id];
 }
+
 function I(e) {
     let { channelId: t, invite: n } = e,
         r = p.A.createFromServer(n);
@@ -47,23 +53,28 @@ function I(e) {
           ? (null == E[t] && (E[t] = {}), (E[t][r.targetApplication.id] = r))
           : (m[t] = r);
 }
+
 function T(e) {
     let { channelId: t } = e;
     m[t] = null;
 }
+
 function C(e) {
     let { channelId: t } = e;
     m[t] = null;
 }
+
 function N(e) {
     var t;
     (b[e.invite.code] = p.A.createFromServer(e.invite)),
         (r = null != (t = s()(l()(u()(Object.values(b), "createdAt")))) ? t : null),
         (A = !1);
 }
+
 function R() {
     A = !1;
 }
+
 function w(e) {
     var t;
     null != e.invites &&
@@ -73,15 +84,19 @@ function w(e) {
         (r = null != (t = s()(l()(u()(Object.values(b), "createdAt")))) ? t : null),
         (O = !1);
 }
+
 function P() {
     O = !0;
 }
+
 function D() {
     A = !0;
 }
+
 function x() {
     y = !0;
 }
+
 function L(e) {
     var t;
     (b = {}),
@@ -91,6 +106,7 @@ function L(e) {
         (r = null != (t = s()(l()(u()(Object.values(b), "createdAt")))) ? t : null),
         (y = !1);
 }
+
 function j(e) {
     delete m[e.channelId];
 }

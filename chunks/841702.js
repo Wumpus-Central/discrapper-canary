@@ -14,6 +14,7 @@ var r = n(64700),
     l = n(4227),
     c = n(233525),
     u = n(315949);
+
 function d(e, t, n) {
     return (
         t in e
@@ -27,6 +28,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -43,6 +45,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -55,6 +58,7 @@ function p(e, t) {
     }
     return n;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -66,6 +70,7 @@ function _(e, t) {
         e
     );
 }
+
 function h() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     (0, c.n)("useFetchPurchases");
@@ -93,7 +98,12 @@ function h() {
             E.current = u;
         }, [u]),
         (0, r.useEffect)(() => {
-            !t || E.current || (!0 === e && m.current && null == g.current) || (0, o.gB)({ variantsReturnStyle: n });
+            !t ||
+                E.current ||
+                (!0 === e && m.current && null == g.current) ||
+                (0, o.gB)({
+                    variantsReturnStyle: n,
+                });
         }, [e, n, t]),
         {
             isClaiming: d,
@@ -112,6 +122,7 @@ let m = () => h(!0),
             { purchases: n } = h(t);
         return null != e ? n.get(e) : void 0;
     };
+
 function E(e, t) {
     let n = null == e ? void 0 : e.paymentGateway,
         {
@@ -150,4 +161,9 @@ function E(e, t) {
         hasPreviouslyFetched: p,
     };
 }
-let b = (e) => E(_(f({}, null != e ? e : {}), { stalePurchasesOK: !0 }));
+let b = (e) =>
+    E(
+        _(f({}, null != e ? e : {}), {
+            stalePurchasesOK: !0,
+        }),
+    );

@@ -1,16 +1,21 @@
-n.d(t, { Ay: () => u }), n(896048);
+n.d(t, {
+    Ay: () => u,
+}),
+    n(896048);
 var r = n(64700),
     i = n(52724),
     a = n(461771),
     s = n(963400),
     o = n(741918),
     l = n(602034);
+
 function c(e, t) {
     var n;
     return Array.from(
         (null != (n = t.current) ? n : document).querySelectorAll("[".concat(l.eM, '^="').concat(e, '"]')),
     );
 }
+
 function u(e) {
     let {
             id: t,
@@ -32,10 +37,12 @@ function u(e) {
         v = r.useRef(!1),
         S = r.useRef(null),
         I = r.useRef(u);
+
     function T(e) {
         var t;
         return (null != (t = S.current) ? t : document).querySelector(e);
     }
+
     function C(e) {
         var t;
         null == (t = T(e)) || t.focus();
@@ -89,7 +96,9 @@ function u(e) {
                     e.addEventListener("focusin", n),
                     e.addEventListener("focusout", r),
                     e.addEventListener("focus", i),
-                    e.addEventListener("scroll", a, { passive: !0 }),
+                    e.addEventListener("scroll", a, {
+                        passive: !0,
+                    }),
                     () => {
                         e.removeEventListener("focusin", n),
                             e.removeEventListener("focusout", r),
@@ -97,9 +106,11 @@ function u(e) {
                             e.removeEventListener("scroll", a);
                     }
                 );
+
             function n() {
                 x(!0);
             }
+
             function r(e) {
                 e.currentTarget.contains(e.relatedTarget) ||
                     (x(!1),
@@ -123,6 +134,7 @@ function u(e) {
                 let r = await (0, s.$b)(e, c(t, S));
                 null !== r && w(r);
             }
+
             function a() {
                 v.current = !0;
             }

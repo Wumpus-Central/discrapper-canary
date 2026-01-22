@@ -1,4 +1,7 @@
-n.d(t, { A: () => O }), n(896048);
+n.d(t, {
+    A: () => O,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(554146),
@@ -17,6 +20,7 @@ var r = n(627968),
     E = n(985018),
     b = n(927961),
     y = n(109046);
+
 function O(e) {
     let { user: t, guildId: n, className: O } = e,
         A = p.Ay.canUsePremiumProfileCustomization(t),

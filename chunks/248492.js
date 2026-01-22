@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var l = n(627968),
     r = n(64700),
     a = n(311907),
@@ -19,7 +21,9 @@ let f = (e) => {
         { name: v } = f,
         h = (0, a.bG)([m.default], () => m.default.getNewestTokenForApplication(f.id)),
         j = null != (t = f.getIconURL(40)) ? t : g,
-        _ = (0, d.A)({ application: f }),
+        _ = (0, d.A)({
+            application: f,
+        }),
         A = r.useRef(!1);
     r.useEffect(() => {
         A.current || (o.A.fetch(), (A.current = !0));

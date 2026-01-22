@@ -1,4 +1,7 @@
-n.d(t, { A: () => g }), n(65821);
+n.d(t, {
+    A: () => g,
+}),
+    n(65821);
 var r,
     i = n(627968);
 n(64700);
@@ -11,7 +14,9 @@ var l = n(503698),
     d = n(985018),
     p = n(208744),
     f = (((r = f || {})[(r.STAFF_NOTES = 1)] = "STAFF_NOTES"), r);
-let h = s.Ay.connectStores([u.A], () => ({ animate: u.A.isFocused() }))((e) => {
+let h = s.Ay.connectStores([u.A], () => ({
+        animate: u.A.isFocused(),
+    }))((e) => {
         let { user: t, className: n, animate: r } = e;
         return (0, i.jsxs)("div", {
             className: a()(p.g7, n),

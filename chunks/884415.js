@@ -1,8 +1,11 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 var r = n(627968);
 n(64700);
 var l = n(405018),
     i = n(697415);
+
 function a(e) {
     let { channel: t, video: n, userCount: a } = e,
         { limit: s } = (0, l.A)(t),

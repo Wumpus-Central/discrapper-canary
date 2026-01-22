@@ -11,21 +11,26 @@ function r(e, t, n) {
         e
     );
 }
+
 function i(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        n = 2166136261,
+        n = 0x811c9dc5,
         r = e.length;
     n ^= t;
-    for (var i = 0; i < r; i++) n = Math.imul(n ^ e.charCodeAt(i), 16777619);
+    for (var i = 0; i < r; i++) n = Math.imul(n ^ e.charCodeAt(i), 0x1000193);
     return n >>> 0;
 }
+
 function a(e, t, n, r) {
     for (let a = 0; a < t; ++a) r[a] = i(e, n[a]);
 }
+
 function s(e) {
     return e <= 0 ? 1 : (e--, (e |= e >> 1), (e |= e >> 2), (e |= e >> 4), (e |= e >> 8), (e |= e >> 16), ++e);
 }
-n.d(t, { M: () => o }),
+n.d(t, {
+    M: () => o,
+}),
     n(65821),
     n(927092),
     n(212978),

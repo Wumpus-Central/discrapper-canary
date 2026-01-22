@@ -2,9 +2,11 @@ function r(e) {
     if (void 0 === e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return e;
 }
+
 function i(e, t) {
     (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
 }
+
 function a(e, t, n) {
     return (
         t in e
@@ -23,6 +25,7 @@ var s = n(64700),
     l = n(797686),
     c = n(494277),
     u = o.isBrowser("IE <= 11");
+
 function d(e) {
     return u ? "\n" === e.textContent : "BR" === e.tagName;
 }

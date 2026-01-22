@@ -122,4 +122,4 @@ let R = {
 var L = (function (e) {
     return (e.NORMAL = "normal"), (e.FULL_SCREEN = "full-screen"), e;
 })({});
-let j = 21600000;
+let j = 216e5;

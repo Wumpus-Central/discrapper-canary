@@ -1,4 +1,6 @@
-n.d(t, { A: () => R });
+n.d(t, {
+    A: () => R,
+});
 var r = n(627968);
 n(64700);
 var l = n(503698),
@@ -34,12 +36,15 @@ let P = {
     left: -4,
     right: -4,
 };
+
 function w(e) {
     let { channelState: t, toggle: n, getNumUnreadChannels: l } = e;
     return (0, r.jsx)(c.m_, {
         text: N.intl.string(N.t.iTcuma),
         children: (0, r.jsx)(u.DUT, {
-            className: i()(T.cS, { [T.yZ]: null == t ? void 0 : t.collapsed }),
+            className: i()(T.cS, {
+                [T.yZ]: null == t ? void 0 : t.collapsed,
+            }),
             onClick: function () {
                 var e;
                 null != t &&
@@ -59,6 +64,7 @@ function w(e) {
         }),
     });
 }
+
 function R(e) {
     var t, n;
     let {
@@ -101,7 +107,14 @@ function R(e) {
                         });
                 }
                 return e;
-            })({ className: i()(T.ZO, { [T.b4]: g }) }, b)),
+            })(
+                {
+                    className: i()(T.ZO, {
+                        [T.b4]: g,
+                    }),
+                },
+                b,
+            )),
             (n = n =
                 {
                     tabIndex: 0,
@@ -148,6 +161,7 @@ function R(e) {
         ),
     });
 }
+
 function D(e) {
     let { channel: t, gotoChannel: n } = e;
     return t.isPrivate()
@@ -160,6 +174,7 @@ function D(e) {
               gotoChannel: n,
           });
 }
+
 function M(e) {
     let { channel: t, gotoChannel: n } = e,
         l = (0, s.bG)([C.default], () => (t.isDM() ? C.default.getUser(t.getRecipientId()) : null)),
@@ -175,6 +190,7 @@ function M(e) {
         }),
     });
 }
+
 function L(e) {
     let { channel: t, gotoChannel: n } = e,
         l = (0, s.bG)([x.A], () => x.A.getGuild(t.guild_id));
@@ -190,6 +206,7 @@ function L(e) {
               tabIndex: -1,
           });
 }
+
 function G(e) {
     let { channel: t, gotoChannel: n, mentionCount: l } = e,
         a = (0, s.bG)([x.A], () => x.A.getGuild(t.guild_id)),
@@ -197,16 +214,15 @@ function G(e) {
         d = (0, s.bG)([_.Ay], () => _.Ay.getIsMentionLowImportance(t.id)),
         f = (0, A.gU)(t, a),
         p = (0, m.Ay)(t, !1),
-        h =
-            null == c
-                ? null == a
-                    ? void 0
-                    : a.name
-                : "".concat(null == a ? void 0 : a.name, " \u203A ").concat(c.name),
+        h = null == c ? (null == a ? void 0 : a.name) : "".concat(null == a ? void 0 : a.name, " › ").concat(c.name),
         b = t.isMultiUserDM()
-            ? N.intl.formatToPlainString(N.t.CxSA5N, { members: t.recipients.length + 1 })
+            ? N.intl.formatToPlainString(N.t.CxSA5N, {
+                  members: t.recipients.length + 1,
+              })
             : t.isPrivate()
-              ? (0, r.jsx)(k, { channel: t })
+              ? (0, r.jsx)(k, {
+                    channel: t,
+                })
               : (0, r.jsx)(u.DUT, {
                     className: i()(T.W$, T.J5),
                     onClick: n,
@@ -258,6 +274,7 @@ function G(e) {
         ],
     });
 }
+
 function k(e) {
     let { channel: t } = e,
         {
@@ -274,8 +291,12 @@ function k(e) {
                 applicationStream: null != e ? j.A.getAnyStreamForUser(e.id) : null,
             };
         }),
-        { voiceActivityStatusEnabled: o } = (0, d.G)({ location: "RecentsChannelHeader" }),
-        { voiceChannel: c } = (0, p.A)({ userId: null == n ? void 0 : n.id }),
+        { voiceActivityStatusEnabled: o } = (0, d.G)({
+            location: "RecentsChannelHeader",
+        }),
+        { voiceChannel: c } = (0, p.A)({
+            userId: null == n ? void 0 : n.id,
+        }),
         u = o ? c : void 0;
     return (0, f.A)({
         activities: i,

@@ -34,8 +34,8 @@ var r = n(735438),
     p = n(985018);
 let _ = 365,
     h = 366,
-    m = "ddd MMM Do \xB7 LT",
-    g = "ddd MMM Do, YYYY \xB7 LT",
+    m = "ddd MMM Do \xb7 LT",
+    g = "ddd MMM Do, YYYY \xb7 LT",
     E = "LT",
     b = 4,
     y = [s.p3.MO.weekday, s.p3.TU.weekday, s.p3.WE.weekday, s.p3.TH.weekday, s.p3.FR.weekday],
@@ -54,6 +54,7 @@ let _ = 365,
         s.p3.SA.weekday,
     ],
     C = new Set([0, 6]);
+
 function N(e) {
     var t;
     let n = e.toDate(),
@@ -68,12 +69,16 @@ function N(e) {
             {
                 id: "weekly",
                 value: d.z.WEEKLY,
-                label: p.intl.formatToPlainString(p.t["B8/yfp"], { weekday: i }),
+                label: p.intl.formatToPlainString(p.t["B8/yfp"], {
+                    weekday: i,
+                }),
             },
             {
                 id: "biweekly",
                 value: d.z.BIWEEKLY,
-                label: p.intl.formatToPlainString(p.t["z+aIuX"], { weekday: i }),
+                label: p.intl.formatToPlainString(p.t["z+aIuX"], {
+                    weekday: i,
+                }),
             },
             {
                 id: "monthly",
@@ -120,6 +125,7 @@ let R = () => {
         let n = (0, l.m_)(e.toDate(), t.toDate());
         return n > 1 || n < 0 ? w(e, t) : (0, l.i$)(e, e.localeData().calendar(n < 1 ? "sameDay" : "nextDay", e, t));
     };
+
 function D(e, t, n) {
     null == n && (n = a()());
     let r = a()(e),
@@ -134,9 +140,11 @@ function D(e, t, n) {
         diffMinutes: r.diff(n, "minutes"),
     };
 }
+
 function x(e) {
     return new s.Bw(T[e]);
 }
+
 function L(e, t) {
     let n;
     return (
@@ -149,6 +157,7 @@ function L(e, t) {
         n
     );
 }
+
 function j(e, t) {
     let n = U(t),
         r = a()(u.default.extractTimestamp(e)),
@@ -158,6 +167,7 @@ function j(e, t) {
         endDate: i,
     };
 }
+
 function M(e, t) {
     var n;
     if (null == t) return e;
@@ -167,18 +177,23 @@ function M(e, t) {
         endDate: null != r ? a()(r) : void 0,
     };
 }
+
 function k(e) {
     return L(e.scheduledStartTime, e.scheduledEndTime);
 }
+
 function U(e) {
     return L(e.scheduled_start_time, e.scheduled_end_time);
 }
+
 function G(e, t) {
     return null == e || null == t ? null == e && null == t : e.isSame(t);
 }
+
 function V(e, t) {
     return null == e || null == t ? null == e && null == t : G(e.startDate, t.startDate) && G(e.endDate, t.endDate);
 }
+
 function F(e) {
     var t;
     let n = null != e.byWeekday ? [...e.byWeekday] : null,
@@ -199,6 +214,7 @@ function F(e) {
         })
     );
 }
+
 function B(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         i = n > new Date() ? n : new Date(),
@@ -207,14 +223,17 @@ function B(e, t, n) {
     let s = t.between(i, a, !0, (t, n) => n < e + 1);
     return r && s.length > 0 && n.getTime() === s[0].getTime() ? s.slice(1) : s.slice(0, e);
 }
+
 function H(e) {
     return null == e.recurrence_rule ? null : new Date(e.scheduled_start_time);
 }
+
 function Y(e) {
     if (null == e) return null;
     let t = H(e);
     return null != t ? u.default.fromTimestamp(Math.floor(t.getTime() / c.A.Millis.SECOND) * c.A.Millis.SECOND) : null;
 }
+
 function W(e, t) {
     if (null == t || null == e) return !1;
     let n = new Date(e.start),
@@ -234,16 +253,19 @@ function W(e, t) {
             return !0;
     }
 }
+
 function K(e) {
     let t = x(e.toDate().getDay()),
         n = x(e.toDate().getUTCDay());
     return n.weekday - t.weekday > 0 ? A : n.weekday - t.weekday < 0 ? O : y;
 }
+
 function z(e) {
     let t = x(e.toDate().getDay()),
         n = x(e.toDate().getUTCDay());
     return n.weekday - t.weekday > 0 ? I : n.weekday - t.weekday < 0 ? S : v;
 }
+
 function q(e, t) {
     let n = K(t),
         r = z(t),
@@ -289,6 +311,7 @@ function q(e, t) {
             });
     }
 }
+
 function X(e, t) {
     let n = q(e, t);
     if (null == n) return null;
@@ -324,6 +347,7 @@ function X(e, t) {
         count: f,
     };
 }
+
 function Z(e, t) {
     if (null == t) return d.z.NONE;
     let n = F(t);
@@ -343,6 +367,7 @@ function Z(e, t) {
             return d.z.NONE;
     }
 }
+
 function Q(e, t) {
     return (
         (null == e ? void 0 : e.scheduled_start_time) !== t.scheduledStartTime ||
@@ -350,6 +375,7 @@ function Q(e, t) {
         !(0, r.isEqual)(e.recurrence_rule, t.recurrenceRule)
     );
 }
+
 function $(e, t, n) {
     return (null == e ? void 0 : e.is_canceled)
         ? f.XG.CANCELED

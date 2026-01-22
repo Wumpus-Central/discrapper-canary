@@ -1,4 +1,8 @@
-n.d(t, { q: () => s }), n(896048), n(321073);
+n.d(t, {
+    q: () => s,
+}),
+    n(896048),
+    n(321073);
 var r = n(64700),
     l = n(429913),
     i = n(322387);
@@ -8,6 +12,7 @@ let a = new Set([
     i.Uo.INCOMING_FRIEND_REQUESTS,
     i.Uo.INCOMING_FRIEND_REQUESTS_ACCEPTED,
 ]);
+
 function s(e) {
     let t = r.useMemo(() => {
         let t = new Set(),

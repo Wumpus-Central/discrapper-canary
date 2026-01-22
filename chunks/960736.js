@@ -16,6 +16,7 @@ var r = n(353640),
     i = n(873298),
     l = n(253932),
     o = n(287809);
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -41,6 +42,7 @@ function u(e) {
     }
     return e;
 }
+
 function c(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -63,6 +65,7 @@ let d = {
     nickname: void 0,
     dmsAllowed: !l.Zt.getSetting(),
 };
+
 function s(e) {
     let t = l._Z.getSetting();
     return t !== i.Qd.ACTIVITY_STATUS_ON && (t !== i.Qd.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS || null == e || !(e > 200));

@@ -1,4 +1,7 @@
-n.d(t, { $: () => l }), n(896048);
+n.d(t, {
+    $: () => l,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(732955),
@@ -44,7 +47,7 @@ let l = {
                                     id: "edit",
                                     label: "Edit Message",
                                     icon: p ? s.R2l : void 0,
-                                    hint: _ ? "\u2318E" : void 0,
+                                    hint: _ ? "⌘E" : void 0,
                                     action: () => {},
                                 }),
                                 (0, r.jsx)(s.Drp, {
@@ -52,7 +55,9 @@ let l = {
                                     label: "Pin Message",
                                     icon: p ? s.tsw : void 0,
                                     subtext: h ? "Pin this message to the channel" : void 0,
-                                    hint: (0, r.jsx)(s.y$y, { type: s.y$y.Type.PULSING_ELLIPSIS }),
+                                    hint: (0, r.jsx)(s.y$y, {
+                                        type: s.y$y.Type.PULSING_ELLIPSIS,
+                                    }),
                                     action: () => {},
                                 }),
                                 (0, r.jsx)(s.Drp, {

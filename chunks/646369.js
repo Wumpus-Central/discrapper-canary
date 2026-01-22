@@ -1,4 +1,12 @@
-n.d(t, { A: () => D }), n(896048), n(65821), n(457529), n(638769), n(747238), n(321073);
+n.d(t, {
+    A: () => D,
+}),
+    n(896048),
+    n(65821),
+    n(457529),
+    n(638769),
+    n(747238),
+    n(321073);
 var r = n(119479),
     i = n.n(r),
     a = n(415955),
@@ -19,6 +27,7 @@ var _ = n(466376),
     b = n(807908),
     y = n(731854),
     O = n(713754);
+
 function A(e, t, n) {
     return (
         t in e
@@ -32,6 +41,7 @@ function A(e, t, n) {
         e
     );
 }
+
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -48,6 +58,7 @@ function v(e) {
     }
     return e;
 }
+
 function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -60,6 +71,7 @@ function S(e, t) {
     }
     return n;
 }
+
 function I(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -75,9 +87,11 @@ let T = 50,
     C = 0.9,
     N = 0.1,
     R = 0;
+
 function w(e) {
     return (null != e ? e : O.Hz) / O.Hz;
 }
+
 function P(e) {
     return null != e && 0 !== e ? e + 1 : 0;
 }
@@ -146,7 +160,7 @@ class D extends p.A {
                     type: y.mI.AUDIO,
                     ssrc: this.audioSSRC,
                     rid: "",
-                    maxBitrate: 64000,
+                    maxBitrate: 64e3,
                     soundshare: this.context === O.x.STREAM,
                 },
                 ...this.videoStreamParameters,
@@ -390,7 +404,7 @@ class D extends p.A {
                                   ),
                               );
                   }),
-                  1000,
+                  1e3,
               ).catch((e) => {
                   if (!(e instanceof d.TimeoutError)) throw e;
               });
@@ -503,13 +517,21 @@ class D extends p.A {
             }));
     }
     setViewerSideClip(e) {
-        this.context === O.x.STREAM && this.conn.setTransportOptions({ enableViewerSideClip: e });
+        this.context === O.x.STREAM &&
+            this.conn.setTransportOptions({
+                enableViewerSideClip: e,
+            });
     }
     setRemoteAudioHistory(e) {
-        this.conn.setTransportOptions({ remoteAudioHistoryMs: e });
+        this.conn.setTransportOptions({
+            remoteAudioHistoryMs: e,
+        });
     }
     setQualityDecoupling(e) {
-        this.context === O.x.STREAM && this.conn.setTransportOptions({ enableQualityDecoupling: e });
+        this.context === O.x.STREAM &&
+            this.conn.setTransportOptions({
+                enableQualityDecoupling: e,
+            });
     }
     getLocalVolume(e) {
         let t = this.localVolumes[e];
@@ -550,7 +572,10 @@ class D extends p.A {
         if (this.voiceBitrate === e) return;
         this.voiceBitrate = e;
         let t = this.voiceBitrate;
-        this.soundshareActive && (t = Math.max(O.kO, t)), this.conn.setTransportOptions({ encodingVoiceBitRate: t });
+        this.soundshareActive && (t = Math.max(O.kO, t)),
+            this.conn.setTransportOptions({
+                encodingVoiceBitRate: t,
+            });
     }
     setCameraBitRate(e, t, n) {
         null != n || null != t
@@ -567,10 +592,16 @@ class D extends p.A {
                 });
     }
     setEchoCancellation(e) {
-        (this.echoCancellation = e), (0, E.lE)().setTransportOptions({ echoCancellation: this.echoCancellation });
+        (this.echoCancellation = e),
+            (0, E.lE)().setTransportOptions({
+                echoCancellation: this.echoCancellation,
+            });
     }
     setNoiseSuppression(e) {
-        (this.noiseSuppression = e), (0, E.lE)().setTransportOptions({ noiseSuppression: this.noiseSuppression });
+        (this.noiseSuppression = e),
+            (0, E.lE)().setTransportOptions({
+                noiseSuppression: this.noiseSuppression,
+            });
     }
     setAutomaticGainControl(e) {
         (this.automaticGainControl = e),
@@ -580,7 +611,10 @@ class D extends p.A {
             });
     }
     setNoiseCancellation(e) {
-        (this.noiseCancellation = e), (0, E.lE)().setTransportOptions({ noiseCancellation: this.noiseCancellation });
+        (this.noiseCancellation = e),
+            (0, E.lE)().setTransportOptions({
+                noiseCancellation: this.noiseCancellation,
+            });
     }
     setNoiseCancellationDuringProcessing(e) {
         (this.noiseCancellationDuringProcessing = e),
@@ -595,7 +629,10 @@ class D extends p.A {
             });
     }
     setVADAfterWebrtc(e) {
-        (this.vadAfterWebrtc = e), (0, E.lE)().setTransportOptions({ vadAfterWebrtc: this.vadAfterWebrtc });
+        (this.vadAfterWebrtc = e),
+            (0, E.lE)().setTransportOptions({
+                vadAfterWebrtc: this.vadAfterWebrtc,
+            });
     }
     getNoiseCancellation() {
         return this.noiseCancellation;
@@ -606,13 +643,20 @@ class D extends p.A {
     setVoiceFilterId(e) {
         (this.voiceFilterId = e),
             this.emit(h.yq.VoiceFilterChanged, e),
-            (0, E.lE)().setTransportOptions({ voiceFilters: null != this.voiceFilterId });
+            (0, E.lE)().setTransportOptions({
+                voiceFilters: null != this.voiceFilterId,
+            });
     }
     setQoS(e) {
-        (this.qos = e), this.conn.setTransportOptions({ qos: this.qos });
+        (this.qos = e),
+            this.conn.setTransportOptions({
+                qos: this.qos,
+            });
     }
     setSoundshareDiscardRearChannels(e) {
-        this.conn.setTransportOptions({ soundshareDiscardRearChannels: e });
+        this.conn.setTransportOptions({
+            soundshareDiscardRearChannels: e,
+        });
     }
     setInputMode(e, t) {
         switch (((this.inputMode = e), e)) {
@@ -662,7 +706,10 @@ class D extends p.A {
             });
     }
     setReconnectInterval(e) {
-        (this.reconnectInterval = e), this.conn.setTransportOptions({ reconnectInterval: this.reconnectInterval });
+        (this.reconnectInterval = e),
+            this.conn.setTransportOptions({
+                reconnectInterval: this.reconnectInterval,
+            });
     }
     setKeyframeInterval(e) {
         (this.keyframeInterval = e),
@@ -673,11 +720,15 @@ class D extends p.A {
     }
     setVideoQualityMeasurement(e) {
         (this.videoQualityMeasurement = e),
-            this.conn.setTransportOptions({ videoQualityMeasurement: this.videoQualityMeasurement });
+            this.conn.setTransportOptions({
+                videoQualityMeasurement: this.videoQualityMeasurement,
+            });
     }
     setVideoEncoderExperiments(e) {
         (this.videoEncoderExperiments = e),
-            this.conn.setTransportOptions({ videoEncoderExperiments: this.videoEncoderExperiments });
+            this.conn.setTransportOptions({
+                videoEncoderExperiments: this.videoEncoderExperiments,
+            });
     }
     setVideoBroadcast(e) {
         this.selfVideo !== e && ((this.selfVideo = e), this.applyVideoTransportOptions());
@@ -861,7 +912,9 @@ class D extends p.A {
         null == (t = (n = this.conn).stopSamplesLocalPlayback) || t.call(n, e);
     }
     setBandwidthEstimationExperiments(e) {
-        this.conn.setTransportOptions({ bandwidthEstimationExperiments: e });
+        this.conn.setTransportOptions({
+            bandwidthEstimationExperiments: e,
+        });
     }
     updateVideoQualityCore(e, t) {
         this.videoSupported && (this.destroyed || this.conn.setTransportOptions(e));
@@ -874,7 +927,9 @@ class D extends p.A {
                 let i = [];
                 l()(this.videoStreamParameters[r], e[r]) ||
                     ((this.videoStreamParameters[r] = v({}, e[r])), i.push(v({}, e[r]))),
-                    this.conn.setTransportOptions({ streamParameters: i });
+                    this.conn.setTransportOptions({
+                        streamParameters: i,
+                    });
             }
             t();
         });
@@ -931,7 +986,9 @@ class D extends p.A {
                     vadDuringPreProcess: this.vadDuringPreProcess,
                 };
             case O.TB.PUSH_TO_TALK:
-                return { pttReleaseDelay: this.pttReleaseDelay };
+                return {
+                    pttReleaseDelay: this.pttReleaseDelay,
+                };
             default:
                 throw Error("Unknown Input Mode: ".concat(this.inputMode));
         }
@@ -969,10 +1026,10 @@ class D extends p.A {
                 type:
                     null != (r = null == (s = this.codecs.find((t) => t.name === e)) ? void 0 : s.payloadType) ? r : 0,
                 name: e,
-                freq: 48000,
+                freq: 48e3,
                 pacsize: 960,
                 channels: 1,
-                rate: 64000,
+                rate: 64e3,
             },
             l = this.codecs
                 .filter((e) => "audio" === e.type)
@@ -981,9 +1038,11 @@ class D extends p.A {
                     return {
                         type: null != (t = null == e ? void 0 : e.payloadType) ? t : 0,
                         name: e.name,
-                        freq: 48000,
+                        freq: 48e3,
                         channels: 2,
-                        params: { stereo: "1" },
+                        params: {
+                            stereo: "1",
+                        },
                     };
                 });
         n === O.x.STREAM && (o.channels = 2);
@@ -1013,7 +1072,9 @@ class D extends p.A {
                 this.experimentFlags.has(y.fd.USE_H264_MF_DECODER) && (n.params["h264-mf"] = "1"),
                 c.push(n),
                 s.name === t &&
-                    ((u = I(v({}, n), { params: this.getCodecParams(s.name, !1) })),
+                    ((u = I(v({}, n), {
+                        params: this.getCodecParams(s.name, !1),
+                    })),
                     this.experimentFlags.has(y.fd.VIDEOTOOLBOX_RATE_CONTROL) &&
                         (u.params["fixed-rate-presentation-timestamps"] = "1"),
                     this.experimentFlags.has(y.fd.LOW_LATENCY_RATE_CONTROL) &&
@@ -1159,7 +1220,9 @@ class D extends p.A {
             A(this, "soundshareSentSpeakingEvent", !1),
             A(this, "echoCancellation", !0),
             A(this, "noiseSuppression", !0),
-            A(this, "automaticGainControl", { enabled: !0 }),
+            A(this, "automaticGainControl", {
+                enabled: !0,
+            }),
             A(this, "noiseCancellation", !1),
             A(this, "noiseCancellationDuringProcessing", !1),
             A(this, "noiseCancellationAfterProcessing", !1),
@@ -1172,7 +1235,7 @@ class D extends p.A {
             A(this, "conn", void 0),
             A(this, "minimumJitterBufferLevel", 0),
             A(this, "postponeDecodeLevel", 100),
-            A(this, "reconnectInterval", 60000),
+            A(this, "reconnectInterval", 6e4),
             A(this, "keyframeInterval", 0),
             A(this, "clipsKeyFrameInterval", 0),
             A(this, "videoQualityMeasurement", ""),
@@ -1212,7 +1275,7 @@ class D extends p.A {
                 this.emit(h.yq.Ping, e);
             }),
             A(this, "handlePingTimeout", (e, t, n, r) => {
-                this.emit(h.yq.PingTimeout, n, r > 0 ? r : 4000);
+                this.emit(h.yq.PingTimeout, n, r > 0 ? r : 4e3);
             }),
             A(this, "handleVideoEncoderFallback", (e) => {
                 this.videoEncoderFallbackPending ||
@@ -1308,7 +1371,9 @@ class D extends p.A {
             A(this, "handleSoundshare", (e) => {
                 e &&
                     ((this.soundshareActive = !0),
-                    this.conn.setTransportOptions({ encodingVoiceBitRate: Math.max(O.kO, this.voiceBitrate) }),
+                    this.conn.setTransportOptions({
+                        encodingVoiceBitRate: Math.max(O.kO, this.voiceBitrate),
+                    }),
                     this.emit(h.yq.SoundshareAttached));
             }),
             A(this, "handleSoundshareFailed", (e, t, n) => {
@@ -1320,7 +1385,10 @@ class D extends p.A {
             }),
             A(this, "handleSoundshareEnded", () => {
                 (this.soundshareActive = !1),
-                    this.destroyed || this.conn.setTransportOptions({ encodingVoiceBitRate: this.voiceBitrate });
+                    this.destroyed ||
+                        this.conn.setTransportOptions({
+                            encodingVoiceBitRate: this.voiceBitrate,
+                        });
             }),
             A(this, "handleNewListenerNative", (e) => {
                 e === h.yq.ConnectionStateChange && this.emit(e, this.connectionState);

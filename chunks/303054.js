@@ -1,10 +1,13 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var a = n(627968),
     l = n(64700),
     i = n(503698),
     r = n.n(i),
     s = n(397927),
     o = n(661251);
+
 function c(e) {
     let { columns: t, data: n, className: i, rowClassName: c, onClickRow: d, selectedRowKey: u, rowHeight: m = 40 } = e,
         p = l.useMemo(

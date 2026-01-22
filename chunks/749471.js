@@ -1,4 +1,9 @@
-n.d(t, { A: () => R }), n(321073), n(896048), n(667532);
+n.d(t, {
+    A: () => R,
+}),
+    n(321073),
+    n(896048),
+    n(667532);
 var i = n(627968);
 n(64700);
 var r = n(503698),
@@ -28,6 +33,7 @@ var r = n(503698),
     w = n(985018),
     T = n(879716),
     C = n(573823);
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -53,6 +59,7 @@ function _(e) {
     }
     return e;
 }
+
 function P(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -71,6 +78,7 @@ function P(e, t) {
         e
     );
 }
+
 function D(e) {
     let { game: t } = e,
         n = (0, h.h)(t.id);
@@ -81,6 +89,7 @@ function D(e) {
               size: 40,
           });
 }
+
 function R(e, t) {
     if (E.A.isNotificationDisabled(x.KS.WelcomeNudge)) return null;
     let { enabled: r } = (0, y.o0)("welcomeNotification"),
@@ -158,7 +167,9 @@ function R(e, t) {
                                                   }),
                                               );
                                       },
-                                      { contextKey: I.KX },
+                                      {
+                                          contextKey: I.KX,
+                                      },
                                   );
                           };
                 r
@@ -226,7 +237,9 @@ function R(e, t) {
             : w.intl.string(w.t.KWDIrh),
         U =
             null != e
-                ? (0, i.jsx)(D, { game: e })
+                ? (0, i.jsx)(D, {
+                      game: e,
+                  })
                 : (0, i.jsx)("img", {
                       src: n(513653),
                       className: T.Kk,

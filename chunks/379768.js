@@ -1,4 +1,7 @@
-n.d(t, { A: () => R }), n(896048);
+n.d(t, {
+    A: () => R,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -29,6 +32,7 @@ var r = n(627968),
     T = n(985018),
     P = n(391514),
     w = n(206314);
+
 function R(e) {
     let { channel: t } = e,
         [n, i] = l.useState(!1),
@@ -46,7 +50,9 @@ function R(e) {
                     .filter((e) => {
                         if (null == R) return !1;
                         let n = _.aH({
-                            forceRoles: { [e.id]: e },
+                            forceRoles: {
+                                [e.id]: e,
+                            },
                             context: t,
                         });
                         return c.X8(n, c.kg(N.xBc.ADMINISTRATOR, N.xBc.VIEW_CHANNEL));
@@ -84,12 +90,19 @@ function R(e) {
                 locked: !0,
                 channelType: t.type,
             }),
-            (0, r.jsx)(S.cr, { children: T.intl.format(T.t.I3R7Vn, { channelName: s }) }),
+            (0, r.jsx)(S.cr, {
+                children: T.intl.format(T.t.I3R7Vn, {
+                    channelName: s,
+                }),
+            }),
             (0, r.jsx)(S.j1, {
                 className: w.PT,
                 children: T.intl.format(T.t.QuwqjG, {
                     channelName: s,
-                    topicHook: () => y.A.parseTopic(t.topic, !0, { channelId: t.id }),
+                    topicHook: () =>
+                        y.A.parseTopic(t.topic, !0, {
+                            channelId: t.id,
+                        }),
                 }),
             }),
             U
@@ -142,7 +155,7 @@ function R(e) {
                                     variant: "text-md/normal",
                                     children: n,
                                 }),
-                                "\xA0",
+                                "\xa0",
                                 (0, r.jsx)(f.Text, {
                                     tag: "span",
                                     variant: "text-md/normal",
@@ -160,7 +173,9 @@ function R(e) {
                             ? (0, r.jsx)(
                                   I.A,
                                   {
-                                      className: a()(P.JC, { [P.HV]: n === G.length - 1 }),
+                                      className: a()(P.JC, {
+                                          [P.HV]: n === G.length - 1,
+                                      }),
                                       roleName: e.name,
                                       roleColor: s,
                                       disabled: !U,
@@ -174,7 +189,9 @@ function R(e) {
                             : (0, r.jsx)(
                                   m.A,
                                   {
-                                      className: a()(P.JC, { [P.HV]: n === G.length - 1 }),
+                                      className: a()(P.JC, {
+                                          [P.HV]: n === G.length - 1,
+                                      }),
                                       roleName: e.name,
                                       roleColor: s,
                                       verified: o,

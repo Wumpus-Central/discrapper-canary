@@ -1,4 +1,6 @@
-r.d(t, { A: () => i });
+r.d(t, {
+    A: () => i,
+});
 var n = r(64700),
     o = r(205662),
     a = r(708005);
@@ -37,7 +39,9 @@ let i = function (e) {
                     color: "#333",
                     height: "16px",
                 },
-                HEXlabel: { display: "none" },
+                HEXlabel: {
+                    display: "none",
+                },
                 RGBwrap: {
                     flex: "3",
                     position: "relative",
@@ -89,7 +93,9 @@ let i = function (e) {
             style: l.fields,
             className: "flexbox-fix",
         },
-        n.createElement("div", { style: l.active }),
+        n.createElement("div", {
+            style: l.active,
+        }),
         n.createElement(a.jc, {
             style: {
                 wrap: l.HEXwrap,

@@ -3,24 +3,26 @@
 })(0, function (e) {
     function t(e, t, n, r) {
         var i = {
-            s: ["mõne sekundi", "mõni sekund", "paar sekundit"],
+            s: ["m\xf5ne sekundi", "m\xf5ni sekund", "paar sekundit"],
             ss: [e + "sekundi", e + "sekundit"],
-            m: ["ühe minuti", "üks minut"],
+            m: ["\xfche minuti", "\xfcks minut"],
             mm: [e + " minuti", e + " minutit"],
-            h: ["ühe tunni", "tund aega", "üks tund"],
+            h: ["\xfche tunni", "tund aega", "\xfcks tund"],
             hh: [e + " tunni", e + " tundi"],
-            d: ["ühe päeva", "üks päev"],
-            M: ["kuu aja", "kuu aega", "üks kuu"],
+            d: ["\xfche p\xe4eva", "\xfcks p\xe4ev"],
+            M: ["kuu aja", "kuu aega", "\xfcks kuu"],
             MM: [e + " kuu", e + " kuud"],
-            y: ["ühe aasta", "aasta", "üks aasta"],
+            y: ["\xfche aasta", "aasta", "\xfcks aasta"],
             yy: [e + " aasta", e + " aastat"],
         };
         return t ? (i[n][2] ? i[n][2] : i[n][1]) : r ? i[n][0] : i[n][1];
     }
     return e.defineLocale("et", {
-        months: "jaanuar_veebruar_märts_aprill_mai_juuni_juuli_august_september_oktoober_november_detsember".split("_"),
-        monthsShort: "jaan_veebr_märts_apr_mai_juuni_juuli_aug_sept_okt_nov_dets".split("_"),
-        weekdays: "pühapäev_esmaspäev_teisipäev_kolmapäev_neljapäev_reede_laupäev".split("_"),
+        months: "jaanuar_veebruar_m\xe4rts_aprill_mai_juuni_juuli_august_september_oktoober_november_detsember".split(
+            "_",
+        ),
+        monthsShort: "jaan_veebr_m\xe4rts_apr_mai_juuni_juuli_aug_sept_okt_nov_dets".split("_"),
+        weekdays: "p\xfchap\xe4ev_esmasp\xe4ev_teisip\xe4ev_kolmap\xe4ev_neljap\xe4ev_reede_laup\xe4ev".split("_"),
         weekdaysShort: "P_E_T_K_N_R_L".split("_"),
         weekdaysMin: "P_E_T_K_N_R_L".split("_"),
         longDateFormat: {
@@ -32,15 +34,15 @@
             LLLL: "dddd, D. MMMM YYYY H:mm",
         },
         calendar: {
-            sameDay: "[Täna,] LT",
+            sameDay: "[T\xe4na,] LT",
             nextDay: "[Homme,] LT",
-            nextWeek: "[Järgmine] dddd LT",
+            nextWeek: "[J\xe4rgmine] dddd LT",
             lastDay: "[Eile,] LT",
             lastWeek: "[Eelmine] dddd LT",
             sameElse: "L",
         },
         relativeTime: {
-            future: "%s pärast",
+            future: "%s p\xe4rast",
             past: "%s tagasi",
             s: t,
             ss: t,
@@ -49,7 +51,7 @@
             h: t,
             hh: t,
             d: t,
-            dd: "%d päeva",
+            dd: "%d p\xe4eva",
             M: t,
             MM: t,
             y: t,

@@ -17,6 +17,7 @@ var r = n(323125),
     l = n(652215);
 let c = "10000",
     u = "10000";
+
 function d() {
     var e, t, n;
     let r = o.A.getChannelId(),
@@ -27,10 +28,13 @@ function d() {
         channel_type: null != (n = null == i ? void 0 : i.type) ? n : l.rbe.UNKNOWN,
     };
 }
+
 function f(e) {
     return i.Bo.post({
         url: l.Rsh.OAUTH2_WHITELIST_ACCEPT,
-        query: { token: e },
+        query: {
+            token: e,
+        },
         oldFormErrors: !0,
         rejectWithError: !1,
     });
@@ -73,7 +77,9 @@ async function p(e) {
                 authorize: t,
                 integration_type: h,
                 location_context: d(),
-                dm_settings: { allow_mobile_push: null == g ? void 0 : g.allowMobilePush },
+                dm_settings: {
+                    allow_mobile_push: null == g ? void 0 : g.allowMobilePush,
+                },
             },
             oldFormErrors: !0,
             rejectWithError: !1,
@@ -117,19 +123,24 @@ async function _(e) {
 async function h(e) {
     let { body: t } = await i.Bo.get({
         url: l.Rsh.OAUTH2_AUTHORIZE_WEBHOOK_CHANNELS,
-        query: { guild_id: e },
+        query: {
+            guild_id: e,
+        },
         oldFormErrors: !0,
         rejectWithError: !1,
     });
     return t;
 }
+
 function m(e, t) {
     a.A.logout(t, (0, r.T2)(e.pathname + e.search, !1));
 }
 async function g(e) {
     return await i.Bo.post({
         url: l.Rsh.OAUTH2_DEVICE_VERIFY,
-        body: { user_code: e },
+        body: {
+            user_code: e,
+        },
         rejectWithError: !1,
     });
 }

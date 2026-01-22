@@ -34,6 +34,7 @@ var d = t(627968),
 t(703552), t(921955);
 let S = !_.isPlatformEmbedded && !1,
     P = new s.A("AppOverlay");
+
 function j(e, a) {
     return new Promise((t, d) => {
         let c = Date.now();
@@ -58,12 +59,12 @@ function j(e, a) {
                 t(), clearInterval(a.current);
                 return;
             }
-            Date.now() - c > 120000 && (d(Error("Timed out waiting for CSS to load")), clearInterval(a.current));
+            Date.now() - c > 12e4 && (d(Error("Timed out waiting for CSS to load")), clearInterval(a.current));
         }, 200);
     });
 }
 async function C(e, a) {
-    let t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1000,
+    let t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1e3,
         d = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 3;
     if (_.isPlatformEmbedded) {
         try {
@@ -86,9 +87,11 @@ async function C(e, a) {
             }
     }
 }
+
 function D() {
     n.A.setFocusedPID(m.DEV_PID, null);
 }
+
 function V() {
     n.A.setFocusedPID(null, null);
 }

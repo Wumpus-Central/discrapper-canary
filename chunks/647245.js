@@ -7,6 +7,7 @@ n.d(t, {
 var r = n(698351),
     i = n(86675),
     a = n(97191);
+
 function s(e, t, n) {
     return (
         t in e
@@ -22,12 +23,15 @@ function s(e, t, n) {
 }
 let o = [" ", "Enter"],
     l = ["Escape"];
+
 function c(e) {
     e.preventDefault(), e.stopImmediatePropagation();
 }
+
 function u(e, t) {
     return t.includes(e.key);
 }
+
 function d(e) {
     var t;
     let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
@@ -36,6 +40,7 @@ function d(e) {
         ((null == (t = e.key) ? void 0 : t.toLowerCase()) === "d" && (e.metaKey || e.ctrlKey) && !e.altKey)
     );
 }
+
 function f(e) {
     if (null == e)
         return {
@@ -61,13 +66,17 @@ class p {
         (p.isSetUp = !0),
             (this._handlingFirstEvent = !0),
             null == (e = this.context.window) ||
-                e.addEventListener("keydown", this.handleGlobalKeyDown, { capture: !0 });
+                e.addEventListener("keydown", this.handleGlobalKeyDown, {
+                    capture: !0,
+                });
     }
     teardown() {
         var e;
         (p.isSetUp = !1),
             null == (e = this.context.window) ||
-                e.removeEventListener("keydown", this.handleGlobalKeyDown, { capture: !0 }),
+                e.removeEventListener("keydown", this.handleGlobalKeyDown, {
+                    capture: !0,
+                }),
             this.endDrag();
     }
     setDndMode(e) {

@@ -1,5 +1,8 @@
-n.d(t, { d: () => i });
+n.d(t, {
+    d: () => i,
+});
 var r = n(339975);
+
 function i(e) {
     return {
         keyboardProps: e.isDisabled

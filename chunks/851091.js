@@ -1,4 +1,6 @@
-n.d(t, { A: () => x });
+n.d(t, {
+    A: () => x,
+});
 var l = n(627968);
 n(64700);
 var i = n(284009),
@@ -9,6 +11,7 @@ var i = n(284009),
     d = n(976860),
     o = n(985018),
     u = n(100135);
+
 function x(e) {
     let { directoryGuildName: t, guildToAdd: n, isExistingGuildFlow: i, onClose: x } = e;
     return (
@@ -33,8 +36,12 @@ function x(e) {
                                 color: "text-default",
                                 variant: "text-md/normal",
                                 children: i
-                                    ? o.intl.formatToPlainString(o.t.R7Pqn5, { guildName: t })
-                                    : o.intl.formatToPlainString(o.t.eIxPSv, { guildName: t }),
+                                    ? o.intl.formatToPlainString(o.t.R7Pqn5, {
+                                          guildName: t,
+                                      })
+                                    : o.intl.formatToPlainString(o.t.eIxPSv, {
+                                          guildName: t,
+                                      }),
                             }),
                         ],
                     }),

@@ -16,6 +16,7 @@ var n = l(735438),
     u = l(652215),
     d = l(716829),
     O = l(985018);
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var l = null != arguments[t] ? arguments[t] : {},
@@ -41,6 +42,7 @@ function b(e) {
     }
     return e;
 }
+
 function o(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -68,14 +70,22 @@ let c = (e, t) => {
     }
     return l;
 };
+
 function f(e) {
     let { feedbackType: t, location: l } = e;
     r.default.track(u.HAw.USER_SETTINGS_IN_APP_FEEDBACK_OPTED_OUT, {
         feedback_type: s.MW[t],
         opted_out_until: s.fs,
     }),
-        i.Yt.updateSetting((e) => o(b({}, e), { [t]: o(b({}, e[t]), { optOutExpiryTime: s.fs }) }));
+        i.Yt.updateSetting((e) =>
+            o(b({}, e), {
+                [t]: o(b({}, e[t]), {
+                    optOutExpiryTime: s.fs,
+                }),
+            }),
+        );
 }
+
 function v(e) {
     return e
         .filter((e) => {
@@ -119,6 +129,7 @@ function v(e) {
             })(e, ["disabled"]);
         });
 }
+
 function E() {
     return v([
         {
@@ -153,6 +164,7 @@ function E() {
         },
     ]);
 }
+
 function g(e) {
     let { isMobile: t } = e;
     return v([
@@ -224,6 +236,7 @@ function g(e) {
         },
     ]);
 }
+
 function p() {
     return v([
         {
@@ -258,6 +271,7 @@ function p() {
         },
     ]);
 }
+
 function h(e) {
     let { isStreamer: t } = e;
     return v([
@@ -377,6 +391,7 @@ function h(e) {
         },
     ]);
 }
+
 function j() {
     return v([
         {

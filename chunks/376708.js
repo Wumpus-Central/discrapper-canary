@@ -24,6 +24,7 @@ n(287809), n(488926);
 var d = n(628691),
     f = n(272720),
     p = n(56595);
+
 function _(e) {
     if (!(0, d.UN)(e.author)) return !1;
     let t = l.A.getChannel(e.channel_id);
@@ -34,32 +35,41 @@ function _(e) {
         i = (0, f.A)(n);
     return r && null != i;
 }
+
 function h(e) {
     return b(l.A.getChannel(e));
 }
+
 function m(e) {
     return g(l.A.getChannel(e));
 }
+
 function g(e) {
     return null != e && e.isModeratorReportChannel() && e.isForumChannel();
 }
+
 function E(e) {
     return null != e && e.isModeratorReportChannel() && e.isForumPost();
 }
+
 function b(e) {
     return null != e && (g(e) || E(e));
 }
+
 function y(e) {
     if (null == e || !(0, o.L)() || !h(e)) return !0;
     let { loaded: t, firstMessage: n } = s.A.getMessage(e);
     return !t || null == n || !(0, i.y5)(n, r.LO.EXPLICIT);
 }
+
 function O(e, t) {
     return !!e.isFirstMessageInForumPost(t) && !!e.isSystemDM() && E(t);
 }
+
 function A(e) {
     return e.sort((e, t) => (e.id == a.b.MULTIPLE_REPORTS ? -1 : +(t.id == a.b.MULTIPLE_REPORTS)));
 }
+
 function v(e, t) {
     var n, r, i;
     let a = l.A.getChannel(e);

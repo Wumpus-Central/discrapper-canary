@@ -1,4 +1,6 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -6,6 +8,7 @@ var i = n(503698),
     s = n(397927),
     a = n(985018),
     c = n(257554);
+
 function o(e) {
     let {
         className: t,
@@ -27,14 +30,18 @@ function o(e) {
                       color: "currentColor",
                       width: 24,
                       height: 24,
-                      className: l()(c.nu, { [c.i0]: u }),
+                      className: l()(c.nu, {
+                          [c.i0]: u,
+                      }),
                   })
                 : (0, r.jsx)(s.R2l, {
                       size: "custom",
                       color: "currentColor",
                       width: 24,
                       height: 24,
-                      className: l()(c.Vi, { [c.i0]: u }),
+                      className: l()(c.Vi, {
+                          [c.i0]: u,
+                      }),
                   }),
             (0, r.jsxs)("div", {
                 className: c.A5,

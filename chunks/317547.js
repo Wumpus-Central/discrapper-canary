@@ -60,7 +60,9 @@ let E = (e) => {
         let { listingId: n } = e,
             i = (0, o.bG)([m.A], () => m.A.getSubscriptionListing(n)),
             l = null != (t = null == i ? void 0 : i.name) ? t : "[".concat(v.intl.string(v.t["4tEmXR"]), "]");
-        return (0, r.jsx)(E, { children: l });
+        return (0, r.jsx)(E, {
+            children: l,
+        });
     },
     I = (e) => {
         let { children: t } = e;
@@ -118,7 +120,9 @@ let E = (e) => {
                     children: (0, r.jsx)(u._BQ, {
                         size: "md",
                         color: "currentColor",
-                        className: s()(A.Rq, { [A.jH]: l }),
+                        className: s()(A.Rq, {
+                            [A.jH]: l,
+                        }),
                     }),
                 });
             },
@@ -129,8 +133,26 @@ let E = (e) => {
             renderHeader: () => v.intl.string(v.t.fThnXa),
             render(e, t) {
                 let { expandedRows: n } = t,
-                    i = [(0, r.jsx)(S, { children: e.periodStartingAt }, e.key)];
-                if (n.has(e.key)) for (let t in e.ppgs) i.push((0, r.jsx)(T, { listingId: t }, t));
+                    i = [
+                        (0, r.jsx)(
+                            S,
+                            {
+                                children: e.periodStartingAt,
+                            },
+                            e.key,
+                        ),
+                    ];
+                if (n.has(e.key))
+                    for (let t in e.ppgs)
+                        i.push(
+                            (0, r.jsx)(
+                                T,
+                                {
+                                    listingId: t,
+                                },
+                                t,
+                            ),
+                        );
                 return i;
             },
         },
@@ -140,11 +162,27 @@ let E = (e) => {
             renderHeader: () => (0, r.jsx)(C, {}),
             render(e, t) {
                 let { expandedRows: n } = t,
-                    i = [(0, r.jsx)(N, { children: e.amount }, e.key)];
+                    i = [
+                        (0, r.jsx)(
+                            N,
+                            {
+                                children: e.amount,
+                            },
+                            e.key,
+                        ),
+                    ];
                 if (n.has(e.key))
                     for (let t in e.ppgs) {
                         let n = e.ppgs[t];
-                        i.push((0, r.jsx)(N, { children: null == n ? void 0 : n.amount }, t));
+                        i.push(
+                            (0, r.jsx)(
+                                N,
+                                {
+                                    children: null == n ? void 0 : n.amount,
+                                },
+                                t,
+                            ),
+                        );
                     }
                 return i;
             },
@@ -164,9 +202,13 @@ let E = (e) => {
                                 return (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         null != s
-                                            ? v.intl.formatToPlainString(v.t.I6YOjS, { payoutDate: s })
+                                            ? v.intl.formatToPlainString(v.t.I6YOjS, {
+                                                  payoutDate: s,
+                                              })
                                             : v.intl.string(v.t.G5ATX6),
-                                        (0, r.jsx)(h.A, { className: A.$A }),
+                                        (0, r.jsx)(h.A, {
+                                            className: A.$A,
+                                        }),
                                     ],
                                 });
                             case y.U1.CANCELED:
@@ -193,7 +235,12 @@ let E = (e) => {
                                         ],
                                     });
                                 return (0, r.jsxs)(r.Fragment, {
-                                    children: [v.intl.string(v.t.OtZ5kz), (0, r.jsx)(j.A, { className: A.tK })],
+                                    children: [
+                                        v.intl.string(v.t.OtZ5kz),
+                                        (0, r.jsx)(j.A, {
+                                            className: A.tK,
+                                        }),
+                                    ],
                                 });
                         }
                         switch (t) {
@@ -208,9 +255,13 @@ let E = (e) => {
                                 return (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         null != s
-                                            ? v.intl.formatToPlainString(v.t.I6YOjS, { payoutDate: s })
+                                            ? v.intl.formatToPlainString(v.t.I6YOjS, {
+                                                  payoutDate: s,
+                                              })
                                             : v.intl.string(v.t.ubdQTt),
-                                        (0, r.jsx)(h.A, { className: A.$A }),
+                                        (0, r.jsx)(h.A, {
+                                            className: A.$A,
+                                        }),
                                     ],
                                 });
                             case y.bp.PAID:

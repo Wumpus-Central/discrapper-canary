@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968),
     i = n(64700),
     l = n(342494),
@@ -9,6 +11,7 @@ var r = n(627968),
     u = n(652215),
     d = n(49999),
     p = n(985018);
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,6 +37,7 @@ function f(e) {
     }
     return e;
 }
+
 function h(e) {
     let { guildId: t, markAsDismissed: h, renderTargetElement: A } = e,
         g = {
@@ -83,7 +87,9 @@ function h(e) {
                 title: p.intl.string(p.t.fW7UqM),
                 body: p.intl.string(p.t["yQ0X+T"]),
                 position: "bottom",
-                caretConfig: { align: "center" },
+                caretConfig: {
+                    align: "center",
+                },
                 assetUrl: "https://cdn.discordapp.com/assets/media_channel/media_channel_upsell_demo.mp4",
                 action: g,
                 textLink: {

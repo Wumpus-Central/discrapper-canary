@@ -1,9 +1,12 @@
-n.d(t, { A: () => X }), n(896048);
+n.d(t, {
+    A: () => X,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
     a = n.n(i),
-    s = n(432022),
+    s = n(108531),
     o = n(837381),
     c = n(311907),
     u = n(397927),
@@ -40,6 +43,7 @@ var r = n(627968),
     F = n(652215),
     H = n(985018),
     B = n(478186);
+
 function K(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -65,6 +69,7 @@ function K(e) {
     }
     return e;
 }
+
 function W(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -83,6 +88,7 @@ function W(e, t) {
         e
     );
 }
+
 function z(e, t) {
     if (null == e) return {};
     var n,
@@ -205,7 +211,10 @@ let Y = (0, s.animated)(u.fKU),
                     jumpToPresent: () => {
                         if (j.hasPresent()) {
                             var e;
-                            null == (e = ee.ref.current) || e.scrollToBottom({ animate: !h.A.useReducedMotion });
+                            null == (e = ee.ref.current) ||
+                                e.scrollToBottom({
+                                    animate: !h.A.useReducedMotion,
+                                });
                         } else d.A.jumpToPresent(O.id, F.EMb);
                     },
                     jumpBarClassName: X,
@@ -217,11 +226,19 @@ let Y = (0, s.animated)(u.fKU),
                 }, [i])),
                 (f = l.useCallback(() => {
                     var e;
-                    return null == (e = i.current) ? void 0 : e.scrollPageUp({ animate: !h.A.useReducedMotion });
+                    return null == (e = i.current)
+                        ? void 0
+                        : e.scrollPageUp({
+                              animate: !h.A.useReducedMotion,
+                          });
                 }, [i])),
                 (b = l.useCallback(() => {
                     var e;
-                    return null == (e = i.current) ? void 0 : e.scrollPageDown({ animate: !h.A.useReducedMotion });
+                    return null == (e = i.current)
+                        ? void 0
+                        : e.scrollPageDown({
+                              animate: !h.A.useReducedMotion,
+                          });
                 }, [i])),
                 (0, R.Vo)({
                     event: F.jej.SCROLLTO_PRESENT,
@@ -327,7 +344,11 @@ let Y = (0, s.animated)(u.fKU),
                                     },
                                 ),
                             ),
-                            ep ? null : (0, r.jsx)("div", { className: eh }),
+                            ep
+                                ? null
+                                : (0, r.jsx)("div", {
+                                      className: eh,
+                                  }),
                             ei,
                         ],
                     }),
@@ -416,7 +437,14 @@ let Y = (0, s.animated)(u.fKU),
                         var t;
                         return null != (t = T.Ay.getOldestUnreadMessageId(e.id)) ? t : null;
                     }, [e.id]),
-                    { enabled: o } = A.A.useExperiment({ location: "41de6d_1" }, { autoTrackExposure: !1 }),
+                    { enabled: o } = A.A.useExperiment(
+                        {
+                            location: "41de6d_1",
+                        },
+                        {
+                            autoTrackExposure: !1,
+                        },
+                    ),
                     u =
                         null !=
                             (t =

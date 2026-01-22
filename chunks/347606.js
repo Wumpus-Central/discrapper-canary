@@ -1,4 +1,7 @@
-n.d(t, { A: () => p }), n(896048);
+n.d(t, {
+    A: () => p,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -9,6 +12,7 @@ var r = n(627968),
     u = n(963935),
     d = n(894858),
     f = n(270952);
+
 function p(e) {
     let { node: t, children: n } = e,
         a = i.useRef(!1),
@@ -39,7 +43,9 @@ function p(e) {
                                     behavior: n ? "smooth" : "auto",
                                     block: i,
                                 }),
-                                d.A.setState({ navTransition: void 0 }),
+                                d.A.setState({
+                                    navTransition: void 0,
+                                }),
                                 a.current && _(!1);
                         }));
                 },

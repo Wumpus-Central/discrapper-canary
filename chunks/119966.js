@@ -11,7 +11,10 @@ function r(e, t, n) {
         e
     );
 }
-n.d(t, { G: () => i }), n(65821);
+n.d(t, {
+    G: () => i,
+}),
+    n(65821);
 class i extends Error {
     constructor(e, t) {
         super(t),

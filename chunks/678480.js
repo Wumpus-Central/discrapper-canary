@@ -1,4 +1,7 @@
-n.d(t, { E: () => h }), n(65821);
+n.d(t, {
+    E: () => h,
+}),
+    n(65821);
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -24,6 +27,7 @@ let p = {
         getLabel: () => d.intl.string(d.t.tcawo3),
     },
 };
+
 function _(e) {
     let { operatingSystem: t, className: n } = e,
         i = p[t];
@@ -31,7 +35,9 @@ function _(e) {
     let a = i.icon;
     return (0, r.jsx)(s.m, {
         text: i.getLabel(),
-        children: (0, r.jsx)(a, { className: n }),
+        children: (0, r.jsx)(a, {
+            className: n,
+        }),
     });
 }
 let h = (e) => {

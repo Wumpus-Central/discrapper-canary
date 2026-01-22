@@ -1,4 +1,8 @@
-n.d(t, { A: () => j }), n(896048), n(938796);
+n.d(t, {
+    A: () => j,
+}),
+    n(896048),
+    n(938796);
 var r,
     i = n(735438),
     a = n.n(i),
@@ -7,6 +11,7 @@ var r,
     l = n(544743),
     c = n(95701),
     u = n(961350);
+
 function d(e, t, n) {
     return (
         t in e
@@ -20,6 +25,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +42,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -48,6 +55,7 @@ function p(e, t) {
     }
     return n;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -62,16 +70,19 @@ function _(e, t) {
 let h = {},
     m = new l.Ay(),
     g = new Set();
+
 function E(e) {
     h = a()(h)
         .reject((t) => t.guildId === e)
         .keyBy("threadId")
         .value();
 }
+
 function b(e) {
     var t;
     null == (t = e.threads) || t.forEach(y);
 }
+
 function y(e) {
     c.A_.has(e.type) &&
         null != e.member &&
@@ -85,6 +96,7 @@ function y(e) {
         }),
         O(e.id));
 }
+
 function O(e) {
     let t = h[e];
     m.clearTimer(e),
@@ -95,6 +107,7 @@ function O(e) {
               }) && ((h[e].muted = !1), (g = new Set(g)).delete(e)))
             : (g = new Set(g)).delete(e);
 }
+
 function A(e) {
     m.reset(),
         (g = new Set()),
@@ -103,25 +116,34 @@ function A(e) {
             b(e);
         });
 }
+
 function v(e) {
     let { joinedThreads: t } = e;
     h = a()(t)
-        .map((e) => _(f({}, e), { joinTimestamp: new Date(e.joinTimestamp) }))
+        .map((e) =>
+            _(f({}, e), {
+                joinTimestamp: new Date(e.joinTimestamp),
+            }),
+        )
         .keyBy("threadId")
         .value();
 }
+
 function S(e) {
     let { guild: t } = e;
     E(t.id), b(t);
 }
+
 function I(e) {
     let { guild: t } = e;
     E(t.id);
 }
+
 function T(e) {
     let { channel: t } = e;
     y(t);
 }
+
 function C(e) {
     let { guildId: t, members: n } = e;
     null != t &&
@@ -138,6 +160,7 @@ function C(e) {
                 O(e.id);
         });
 }
+
 function N(e) {
     let { guildId: t, data: n } = e;
     null != t &&
@@ -156,11 +179,13 @@ function N(e) {
             });
         });
 }
+
 function R(e) {
     let { channel: t } = e;
     if (!(t.id in h)) return !1;
     (h = f({}, h)), delete h[t.id];
 }
+
 function w(e) {
     if (u.default.getId() !== e.userId) return !1;
     (h[e.id] = {
@@ -173,6 +198,7 @@ function w(e) {
     }),
         O(e.id);
 }
+
 function P(e) {
     let { id: t, userId: n, guildId: r, isJoining: i } = e;
     if (u.default.getId() !== n || null === r) return !1;
@@ -182,11 +208,14 @@ function P(e) {
               guildId: r,
               flags: 0,
               muted: !0,
-              muteConfig: { end_time: void 0 },
+              muteConfig: {
+                  end_time: void 0,
+              },
               joinTimestamp: new Date(),
           })
         : delete h[t];
 }
+
 function D(e) {
     var t, n;
     let r = !1;

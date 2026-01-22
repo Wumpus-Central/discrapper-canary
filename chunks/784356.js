@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -30,7 +32,9 @@ let d = (e) => {
         T = null != v;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)("div", { className: a()(u.Iv, u.Gz) }),
+            (0, r.jsx)("div", {
+                className: a()(u.Iv, u.Gz),
+            }),
             (0, r.jsx)(c.A, {
                 title: d,
                 shouldShowElement: S,

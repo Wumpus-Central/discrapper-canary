@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968);
 n(64700);
 var i = n(421380),
@@ -26,7 +28,12 @@ let d = (e) => {
         },
         children: (0, r.jsxs)("div", {
             className: u.zB,
-            children: [c.intl.string(c.t["37C26f"]), (0, r.jsx)(a._BQ, { color: "currentColor" })],
+            children: [
+                c.intl.string(c.t["37C26f"]),
+                (0, r.jsx)(a._BQ, {
+                    color: "currentColor",
+                }),
+            ],
         }),
     });
 };

@@ -17,6 +17,7 @@ var r = n(64700),
     p = n(597758),
     _ = n(412260),
     h = n(788868);
+
 function m(e, t, n, a) {
     let s = (0, i.yK)([_.A], () => _.A.outboundPromotions),
         o = (0, i.bG)([_.A], () => _.A.consumedInboundPromotionId);
@@ -25,6 +26,7 @@ function m(e, t, n, a) {
         [s, o, n, e, t, a],
     );
 }
+
 function g() {
     let e = (0, i.bG)([_.A], () => _.A.lastFetchedActivePromotions),
         t = (0, i.bG)([s.default], () => s.default.getCurrentUser()),
@@ -49,7 +51,9 @@ function g() {
         S = l.Ay.isPremiumExactly(t, h.PremiumTypes.TIER_2),
         I =
             d.m.useExperiment(
-                { location: "useOutboundPromotions" },
+                {
+                    location: "useOutboundPromotions",
+                },
                 {
                     autoTrackExposure: !1,
                     disable: S,
@@ -98,6 +102,7 @@ function g() {
         addClaimedOutboundPromotionCode: v,
     };
 }
+
 function E() {
     let e = (0, i.bG)([_.A], () => _.A.lastSeenOutboundPromotionStartDate),
         t = m(
@@ -119,6 +124,9 @@ function E() {
         )
         .filter((e) => (0, f.OP)(e));
 }
+
 function b() {
-    return { promotion: (0, i.bG)([_.A], () => _.A.bogoPromotion) };
+    return {
+        promotion: (0, i.bG)([_.A], () => _.A.bogoPromotion),
+    };
 }

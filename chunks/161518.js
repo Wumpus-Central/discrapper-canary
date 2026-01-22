@@ -1,8 +1,13 @@
-n.d(t, { A: () => p }), n(896048), n(321073);
+n.d(t, {
+    A: () => p,
+}),
+    n(896048),
+    n(321073);
 var r,
     i = n(357758),
     a = n(311907),
     s = n(73153);
+
 function o(e, t, n) {
     return (
         t in e
@@ -18,6 +23,7 @@ function o(e, t, n) {
 }
 let l = new Map(),
     c = new Map();
+
 function u(e, t) {
     return e.type === t;
 }
@@ -40,6 +46,7 @@ class d extends (r = a.Ay.Store) {
         return t;
     }
 }
+
 function f(e) {
     let { activeErrors: t } = e;
     if (__OVERLAY__ || !(t instanceof Map)) return;
@@ -54,4 +61,6 @@ function f(e) {
         }
 }
 o(d, "displayName", "AVErrorStore");
-let p = new d(s.h, { ACTIVE_AV_ERRORS_CHANGED: f });
+let p = new d(s.h, {
+    ACTIVE_AV_ERRORS_CHANGED: f,
+});

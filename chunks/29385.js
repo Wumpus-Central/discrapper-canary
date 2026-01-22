@@ -9,10 +9,12 @@ var r = n(414501),
     d = n(809206),
     f = n(4323),
     p = n(101813);
+
 function _(e, t, n) {
     var r = s.replaceWithFragment(e.getCurrentContent(), e.getSelection(), t);
     return l.push(e, r.set("entityMap", n), "insert-fragment");
 }
+
 function h(e, t) {
     return (
         e.length === t.size &&

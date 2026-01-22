@@ -1,4 +1,7 @@
-l.d(i, { default: () => k }), l(896048);
+l.d(i, {
+    default: () => k,
+}),
+    l(896048);
 var n = l(627968),
     e = l(64700),
     r = l(158954),
@@ -16,6 +19,7 @@ var n = l(627968),
     N = l(652215),
     O = l(340837),
     h = l(985018);
+
 function k(t) {
     var i;
     let { onClose: l, transitionState: k, guildId: p } = t,
@@ -30,9 +34,16 @@ function k(t) {
             analyticsLocations: I,
         }),
         S = D.has(O.D.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME)
-            ? h.intl.formatToPlainString(h.t.Oh20JS, { guildName: C })
-            : h.intl.formatToPlainString(h.t["+VAZ/Z"], { guildName: C });
-    R || (S = h.intl.formatToPlainString(h.t.tcrtME, { guildName: C }));
+            ? h.intl.formatToPlainString(h.t.Oh20JS, {
+                  guildName: C,
+              })
+            : h.intl.formatToPlainString(h.t["+VAZ/Z"], {
+                  guildName: C,
+              });
+    R ||
+        (S = h.intl.formatToPlainString(h.t.tcrtME, {
+            guildName: C,
+        }));
     let U = R ? h.intl.string(h.t.Viksoo) : h.intl.string(h.t.WikgZ1);
     return ((0, o.Ay)(() => {
         c.default.track(N.HAw.OPEN_MODAL, {

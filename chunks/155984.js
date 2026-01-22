@@ -1,4 +1,6 @@
-n.d(t, { l: () => f });
+n.d(t, {
+    l: () => f,
+});
 var r = n(989349),
     i = n.n(r),
     a = n(311907),
@@ -8,6 +10,7 @@ var r = n(989349),
     c = n(927578),
     u = n(652215),
     d = n(818348);
+
 function f() {
     let e = (0, a.bG)([l.A], () => l.A.getPremiumTypeSubscription()),
         t = (0, a.bG)([o.A], () =>

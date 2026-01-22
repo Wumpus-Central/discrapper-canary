@@ -1,4 +1,6 @@
-r.d(t, { default: () => f });
+r.d(t, {
+    default: () => f,
+});
 var n = r(627968);
 r(64700);
 var o = r(523527),
@@ -9,6 +11,7 @@ var o = r(523527),
     i = r(652215),
     b = r(985018),
     u = r(677706);
+
 function f(e) {
     let { onClose: t } = e,
         f = (function (e, t) {

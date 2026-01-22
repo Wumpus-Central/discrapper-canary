@@ -1,4 +1,6 @@
-r.d(t, { A: () => f });
+r.d(t, {
+    A: () => f,
+});
 var a = r(1139),
     n = r(106526),
     s = r(64700),
@@ -6,6 +8,7 @@ var a = r(1139),
     i = r.n(o),
     c = r(431384),
     l = ["data"];
+
 function u(e) {
     var t = Object.getOwnPropertyNames(e).length;
     return "".concat(t, " ").concat(1 !== t ? "keys" : "key");

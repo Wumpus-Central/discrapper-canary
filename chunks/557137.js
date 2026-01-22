@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968);
 n(64700);
 var l = n(503698),
@@ -8,6 +10,7 @@ var l = n(503698),
     o = n(961350),
     c = n(296227),
     u = n(582153);
+
 function d(e) {
     let {
         userId: t,
@@ -48,6 +51,7 @@ function d(e) {
         ],
     });
 }
+
 function f(e) {
     let { widget: t, actionButtons: n, disabledInteraction: l, userId: i } = e,
         s = (0, a.bG)([o.default], () => o.default.getId());

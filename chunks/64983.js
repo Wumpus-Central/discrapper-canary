@@ -1,4 +1,6 @@
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var r = n(627968),
     i = n(64700),
     l = n(735438),
@@ -12,6 +14,7 @@ var r = n(627968),
     f = n(652215),
     h = n(985018),
     A = n(978927);
+
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -89,7 +92,10 @@ let m = a().debounce(c.Ay.trackWithMetadata, 500),
                     ? null
                     : (0, r.jsx)(o.DUT, {
                           onClick: () => {
-                              c.Ay.trackWithMetadata(f.HAw.CHANNEL_NOTICE_CLOSED, { notice_type: d }), null == E || E();
+                              c.Ay.trackWithMetadata(f.HAw.CHANNEL_NOTICE_CLOSED, {
+                                  notice_type: d,
+                              }),
+                                  null == E || E();
                           },
                           className: A.VN,
                           "aria-label": h.intl.string(h.t.WAI6xu),

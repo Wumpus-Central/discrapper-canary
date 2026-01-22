@@ -42,6 +42,7 @@ let C = (e) => {
         "aria-label": x.intl.string(x.t.lqaIxI),
     });
 };
+
 function M(e) {
     let { cardSize: t = P.Y.MEDIUM } = e,
         r = i.useRef(null),
@@ -59,12 +60,15 @@ function M(e) {
                 className: R.ho,
                 children: (0, n.jsx)("div", {
                     className: R._P,
-                    children: (0, n.jsx)(C, { size: d._3J.SIZE_80 }),
+                    children: (0, n.jsx)(C, {
+                        size: d._3J.SIZE_80,
+                    }),
                 }),
             }),
         }),
     });
 }
+
 function T(e) {
     let { item: t, cardSize: r = P.Y.SMALL, remainingCount: l, onClick: s, renderItemPreview: u } = e,
         c = i.useRef(null),
@@ -78,7 +82,9 @@ function T(e) {
             tag: "div",
             innerRef: a,
             onClick: s,
-            className: o()(R.Nr, R.xJ, { [R.IU]: r === P.Y.SMALL }),
+            className: o()(R.Nr, R.xJ, {
+                [R.IU]: r === P.Y.SMALL,
+            }),
             children: (0, n.jsxs)("div", {
                 className: o()(R.ho, R.jP),
                 children: [
@@ -88,7 +94,9 @@ function T(e) {
                         children: (0, n.jsx)(d.Text, {
                             variant: "text-md/medium",
                             color: "always-white",
-                            children: x.intl.format(x.t.F6iMs4, { count: l }),
+                            children: x.intl.format(x.t.F6iMs4, {
+                                count: l,
+                            }),
                         }),
                     }),
                 ],
@@ -96,6 +104,7 @@ function T(e) {
         }),
     });
 }
+
 function N(e) {
     var t, r;
     let {
@@ -157,15 +166,24 @@ function N(e) {
         B = W || !0 === U.isOwned,
         V = null != U.bundleItems && U.bundleItems.length > 0,
         Z = (() => {
-            if (V) return x.intl.formatToPlainString(x.t["/l2CAE"], { itemName: U.skuName });
+            if (V)
+                return x.intl.formatToPlainString(x.t["/l2CAE"], {
+                    itemName: U.skuName,
+                });
             let e = U.collectiblesItem.type;
             switch (e) {
                 case u.R.AVATAR_DECORATION:
-                    return x.intl.formatToPlainString(x.t.IQQYef, { itemName: U.skuName });
+                    return x.intl.formatToPlainString(x.t.IQQYef, {
+                        itemName: U.skuName,
+                    });
                 case u.R.PROFILE_EFFECT:
-                    return x.intl.formatToPlainString(x.t["x/MGWy"], { itemName: U.skuName });
+                    return x.intl.formatToPlainString(x.t["x/MGWy"], {
+                        itemName: U.skuName,
+                    });
                 case u.R.NAMEPLATE:
-                    return x.intl.formatToPlainString(x.t.eVNt6E, { itemName: U.skuName });
+                    return x.intl.formatToPlainString(x.t.eVNt6E, {
+                        itemName: U.skuName,
+                    });
                 default:
                     (0, L.xb)(e);
             }
@@ -184,7 +202,9 @@ function N(e) {
                             (0, g.t)({
                                 product: e,
                                 category: r,
-                                shouldCheckoutWithOrbs: (0, h.Ak)({ product: e }),
+                                shouldCheckoutWithOrbs: (0, h.Ak)({
+                                    product: e,
+                                }),
                                 analyticsLocations: D,
                                 analyticsSource: f.A.USER_PROFILE_WISHLIST,
                                 returnRef: void 0,
@@ -237,7 +257,9 @@ function N(e) {
         ),
         X = i.useCallback(() => {
             if (V) {
-                let e = { items: U.bundleItems };
+                let e = {
+                    items: U.bundleItems,
+                };
                 return (0, n.jsx)("div", {
                     className: R.hT,
                     children: (0, n.jsx)(O.X, {

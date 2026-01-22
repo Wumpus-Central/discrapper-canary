@@ -1,4 +1,7 @@
-s.d(t, { A: () => w }), s(896048);
+s.d(t, {
+    A: () => w,
+}),
+    s(896048);
 var i = s(627968);
 s(64700);
 var a = s(503698),
@@ -64,7 +67,9 @@ let S = (e) => {
                         return e;
                     })(
                         {
-                            imageClassName: l()({ [A.jN]: h }),
+                            imageClassName: l()({
+                                [A.jN]: h,
+                            }),
                             src: r,
                             "aria-label": C,
                             size: c._3J.SIZE_56,
@@ -86,7 +91,9 @@ let S = (e) => {
                                       (0, i.jsx)(c.Text, {
                                           variant: "text-md/medium",
                                           className: A.nT,
-                                          children: b.intl.format(b.t.RO3T4B, { userName: C }),
+                                          children: b.intl.format(b.t.RO3T4B, {
+                                              userName: C,
+                                          }),
                                       }),
                                   ],
                               })
@@ -100,7 +107,9 @@ let S = (e) => {
                                           return (
                                               (e = t.id),
                                               void (u.A.hasLayers() && (0, p.jH)(),
-                                              x.A.openPrivateChannel({ recipientIds: e }),
+                                              x.A.openPrivateChannel({
+                                                  recipientIds: e,
+                                              }),
                                               a())
                                           );
                                       },
@@ -143,7 +152,10 @@ let S = (e) => {
             p = b.intl.string(b.t.Pcb7KF),
             f = [...s.values()].filter((e) => e === m.o.SUCCESS).length;
         return (
-            r > 0 && (p = b.intl.formatToPlainString(b.t.iWtOfC, { numReferrals: f })),
+            r > 0 &&
+                (p = b.intl.formatToPlainString(b.t.iWtOfC, {
+                    numReferrals: f,
+                })),
             0 === f && (p = b.intl.string(b.t["7VBEue"])),
             (0, i.jsxs)("div", {
                 className: A.Jc,
@@ -157,7 +169,9 @@ let S = (e) => {
                             height: 20,
                         }),
                     }),
-                    (0, i.jsx)(x, { className: A.nr }),
+                    (0, i.jsx)(x, {
+                        className: A.nr,
+                    }),
                     (0, i.jsx)(c.Heading, {
                         variant: "heading-lg/bold",
                         className: A.R_,

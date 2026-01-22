@@ -1,8 +1,11 @@
-n.d(t, { a: () => o });
+n.d(t, {
+    a: () => o,
+});
 var r = n(64700),
     i = n(954571),
     a = n(652215);
-let s = 1000;
+let s = 1e3;
+
 function o(e, t, n, o) {
     let l = r.useRef(null),
         c = r.useRef(t),
@@ -57,6 +60,8 @@ function o(e, t, n, o) {
             },
             [],
         ),
-        { handleCardVisibilityChange: f }
+        {
+            handleCardVisibilityChange: f,
+        }
     );
 }

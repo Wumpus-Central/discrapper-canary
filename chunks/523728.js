@@ -1,6 +1,9 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 var r = n(652215),
     i = n(985018);
+
 function a(e) {
     if (null == e) return null;
     switch (e.type) {

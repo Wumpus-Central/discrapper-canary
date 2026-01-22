@@ -1,4 +1,6 @@
-r.d(t, { Z: () => n });
+r.d(t, {
+    Z: () => n,
+});
 var n = function (e, t, r, n, o) {
     var a = o.clientWidth,
         i = o.clientHeight,

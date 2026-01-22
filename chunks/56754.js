@@ -1,6 +1,10 @@
-n.d(t, { L: () => a }), n(896048);
+n.d(t, {
+    L: () => a,
+}),
+    n(896048);
 var r = n(311907),
     i = n(469778);
+
 function a(e) {
     return (0, r.bG)([i.A], () => {
         let t = i.A.getForSku(e);

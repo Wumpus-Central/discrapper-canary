@@ -1,4 +1,8 @@
-a.r(t), a.d(t, { default: () => C }), a(896048);
+a.r(t),
+    a.d(t, {
+        default: () => C,
+    }),
+    a(896048);
 var s = a(627968),
     l = a(64700),
     n = a(735438),
@@ -15,6 +19,7 @@ var s = a(627968),
     b = a(808728),
     v = a(985018),
     g = a(533578);
+
 function N(e) {
     var t, a, n;
     let { onClose: i, handleReviewPermissions: c, transitionState: d } = e,
@@ -60,7 +65,9 @@ function N(e) {
                         (0, s.jsx)(o.Text, {
                             variant: "text-md/normal",
                             color: "text-muted",
-                            children: v.intl.format(v.t["8JzOBn"], { emphasisHook: m }),
+                            children: v.intl.format(v.t["8JzOBn"], {
+                                emphasisHook: m,
+                            }),
                         }),
                     ],
                 }),
@@ -76,7 +83,9 @@ function N(e) {
                         (0, s.jsx)(o.Text, {
                             variant: "text-md/normal",
                             color: "text-muted",
-                            children: v.intl.format(v.t.UcGDkt, { emphasisHook: m }),
+                            children: v.intl.format(v.t.UcGDkt, {
+                                emphasisHook: m,
+                            }),
                         }),
                     ],
                 }),
@@ -92,7 +101,9 @@ function N(e) {
                         (0, s.jsx)(o.Text, {
                             variant: "text-md/normal",
                             color: "text-muted",
-                            children: v.intl.format(v.t.kALJ5q, { emphasisHook: m }),
+                            children: v.intl.format(v.t.kALJ5q, {
+                                emphasisHook: m,
+                            }),
                         }),
                     ],
                 }),
@@ -100,6 +111,7 @@ function N(e) {
         }),
     });
 }
+
 function f(e) {
     var t;
     let { channel: a, selected: n, onChange: i } = e,
@@ -132,11 +144,14 @@ function f(e) {
             }),
             (0, s.jsx)("div", {
                 className: g.Mv,
-                children: (0, s.jsx)(o.P7L, { checked: n }),
+                children: (0, s.jsx)(o.P7L, {
+                    checked: n,
+                }),
             }),
         ],
     });
 }
+
 function C(e) {
     let { transitionState: t, onClose: a, guildId: n, startingChannelId: x } = e,
         u = (0, c.yK)([b.Ay], () => {
@@ -204,7 +219,9 @@ function C(e) {
                           className: g.ko,
                           variant: "text-xs/semibold",
                           color: "text-muted",
-                          children: v.intl.format(v.t.rrYCq2, { count: u.length }),
+                          children: v.intl.format(v.t.rrYCq2, {
+                              count: u.length,
+                          }),
                       }),
                       (0, s.jsx)("div", {
                           className: g.L7,

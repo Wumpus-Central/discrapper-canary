@@ -48,6 +48,7 @@ var h = (function (e) {
         e
     );
 })({});
+
 function m(e, t, n) {
     let r = O(e, t, n),
         i = A(t),
@@ -58,6 +59,7 @@ function m(e, t, n) {
         isAnimated: a,
     };
 }
+
 function g(e, t) {
     return null != e ? e : t;
 }
@@ -87,6 +89,7 @@ let E = {
         property: "transcript",
     },
 };
+
 function b(e, t, n, a) {
     let s,
         l = !1,
@@ -173,13 +176,17 @@ function b(e, t, n, a) {
             (s = o), (c = !0);
         }
     }
-    let p = m(e.id, s, { theme: l ? n : void 0 });
+    let p = m(e.id, s, {
+        theme: l ? n : void 0,
+    });
     return c && null == p.mimetype ? null : p;
 }
+
 function y(e) {
     var t;
     return null != (t = e.split("?", 1).at(0)) ? t : e;
 }
+
 function O(e, t, n) {
     if (t.startsWith("blob:")) return y(t);
     let r = l.CI;
@@ -191,6 +198,7 @@ function O(e, t, n) {
               .concat((null == n ? void 0 : n.theme) != null ? "/".concat(n.theme) : "", "/")
               .concat(t);
 }
+
 function A(e) {
     var t, n, r;
     if (e.startsWith("blob:")) {
@@ -225,9 +233,11 @@ function A(e) {
             return null;
     }
 }
+
 function v(e) {
     return Math.min(Math.ceil(e), c.uJv);
 }
+
 function S(e, t) {
     let n = (0, s.A)();
     return n < f
@@ -240,6 +250,7 @@ function S(e, t) {
               height: t * n,
           };
 }
+
 function I(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
     if (e.startsWith("blob:")) return e;
@@ -251,6 +262,7 @@ function I(e) {
           null != t.height && n.searchParams.append("height", "".concat(v(t.height))),
           n.toString());
 }
+
 function T(e, t) {
     if (e.startsWith("blob:")) return e;
     let n = a.A.toURLSafe(e);

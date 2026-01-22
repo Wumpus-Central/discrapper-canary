@@ -1,4 +1,6 @@
-n.d(t, { T: () => A });
+n.d(t, {
+    T: () => A,
+});
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -23,7 +25,9 @@ let A = (e) => {
         n = (0, c.Cp)(),
         A = (0, a.bG)([p.default], () => h.Ay.isPremiumExactly(p.default.getCurrentUser(), b.PremiumTypes.TIER_2)),
         { enabled: v } = l.m.useExperiment(
-            { location: "OutboundPromotionNotice" },
+            {
+                location: "OutboundPromotionNotice",
+            },
             {
                 autoTrackExposure: !1,
                 disable: A,
@@ -31,7 +35,9 @@ let A = (e) => {
         ),
         S = i.useCallback(() => {
             _.default.track(E.HAw.OUTBOUND_PROMOTION_NOTICE_CLICKED),
-                (0, f.openUserSettings)(d.X.GIFT_PANEL, { section: E.nc_.INVENTORY }),
+                (0, f.openUserSettings)(d.X.GIFT_PANEL, {
+                    section: E.nc_.INVENTORY,
+                }),
                 u.Ay.dismissOutboundPromotionNotice();
         }, []);
     if (null == n) return null;
@@ -63,7 +69,9 @@ let A = (e) => {
     return (0, r.jsx)(m.YS, {
         contentType: t,
         newSnowflakeId: n,
-        timeRecurringConfig: { cooldownDurationMs: 0 },
+        timeRecurringConfig: {
+            cooldownDurationMs: 0,
+        },
         groupName: g.m.NOTICE_BAR,
         bypassAutoDismiss: !0,
         children: (e) => {

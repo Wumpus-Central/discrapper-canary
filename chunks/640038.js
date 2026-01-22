@@ -1,12 +1,16 @@
-t.d(r, { a: () => d });
+t.d(r, {
+    a: () => d,
+});
 var a = t(566515),
     l = t(659609),
     o = t(101603);
+
 function s(e, r) {
     if (!(0, o.vq)(e)) return !1;
     if ("range" === r) return (0, o.NU)(e, ["meter", "progressbar", "scrollbar", "slider", "spinbutton"]);
     throw TypeError("No knowledge about abstract role '".concat(r, "'. This is likely a bug :("));
 }
+
 function n(e, r) {
     var t = (0, a.A)(e.querySelectorAll(r));
     return (
@@ -16,10 +20,12 @@ function n(e, r) {
         t
     );
 }
+
 function i(e) {
     var r = e.getPropertyValue("content");
     return /^["'].*["']$/.test(r) ? r.slice(1, -1) : "";
 }
+
 function u(e) {
     var r = (0, o.Jk)(e);
     return (
@@ -32,6 +38,7 @@ function u(e) {
         "textarea" === r
     );
 }
+
 function d(e) {
     var r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         t = new l.A(),
@@ -53,6 +60,7 @@ function d(e) {
             var a = h(e, r);
             return d.set(e, a), a;
         };
+
     function x(e, r) {
         var t,
             l = "";
@@ -82,10 +90,12 @@ function d(e) {
         }
         return l.trim();
     }
+
     function y(e, r) {
         var a = e.getAttributeNode(r);
         return null === a || t.has(a) || "" === a.value.trim() ? null : (t.add(a), a.value);
     }
+
     function R(e, r) {
         if (t.has(e)) return "";
         if (

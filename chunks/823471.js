@@ -1,4 +1,7 @@
-n.d(t, { A: () => w }), n(896048);
+n.d(t, {
+    A: () => w,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(397927),
@@ -24,6 +27,7 @@ var r = n(627968),
     _ = n(747926),
     C = n(652215),
     S = n(985018);
+
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -49,6 +53,7 @@ function I(e) {
     }
     return e;
 }
+
 function N(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -67,10 +72,12 @@ function N(e, t) {
         e
     );
 }
+
 function T(e) {
     let { channel: t } = e,
         [n, a] = l.useState(!1),
         s = l.useRef(null);
+
     function o() {
         a((e) => !e);
     }
@@ -84,7 +91,12 @@ function T(e) {
         autoInvert: !1,
         onRequestClose: () => a(!1),
         renderPopout: function (e) {
-            return (0, r.jsx)(P, N(I({}, e), { channel: t }));
+            return (0, r.jsx)(
+                P,
+                N(I({}, e), {
+                    channel: t,
+                }),
+            );
         },
         children: (e, t) => {
             let { isShown: n } = t;
@@ -102,6 +114,7 @@ function T(e) {
         },
     });
 }
+
 function P(e) {
     let { channel: t, closePopout: n, onSelect: l } = e,
         y = (0, c.A)(t, "Sidebar Overflow"),
@@ -120,6 +133,7 @@ function P(e) {
         }),
         D = (0, m.A)(t),
         M = (0, f.A)(t);
+
     function L() {
         (0, j.iN)(t.id);
     }
@@ -154,8 +168,10 @@ function P(e) {
                         action: function () {
                             L(),
                                 setTimeout(() => {
-                                    v._.dispatch(C.jej.FOCUS_SEARCH, { prefillCurrentChannel: !1 });
-                                }, 2000);
+                                    v._.dispatch(C.jej.FOCUS_SEARCH, {
+                                        prefillCurrentChannel: !1,
+                                    });
+                                }, 2e3);
                         },
                     }),
                     (0, r.jsx)(i.Drp, {
@@ -177,13 +193,24 @@ function P(e) {
         ],
     });
 }
+
 function w(e) {
     let { channel: t, baseChannelId: n } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            t.isForumPost() ? null : (0, r.jsx)(E.A, { channel: t }),
-            t.isModeratorReportChannel() ? (0, r.jsx)(x.A, { channel: t }) : null,
-            (0, r.jsx)(T, { channel: t }),
+            t.isForumPost()
+                ? null
+                : (0, r.jsx)(E.A, {
+                      channel: t,
+                  }),
+            t.isModeratorReportChannel()
+                ? (0, r.jsx)(x.A, {
+                      channel: t,
+                  })
+                : null,
+            (0, r.jsx)(T, {
+                channel: t,
+            }),
             (0, r.jsx)(O.Ay.Icon, {
                 icon: i.PGe,
                 tooltip: S.intl.string(S.t.cpT0Cq),

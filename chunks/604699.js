@@ -3,7 +3,14 @@ e.exports = function (e) {
         n = {
             className: "number",
             relevance: 0,
-            variants: [{ begin: /([+-]+)?[\d]+_[\d_]+/ }, { begin: e.NUMBER_RE }],
+            variants: [
+                {
+                    begin: /([+-]+)?[\d]+_[\d_]+/,
+                },
+                {
+                    begin: e.NUMBER_RE,
+                },
+            ],
         },
         r = e.COMMENT();
     r.variants = [
@@ -18,7 +25,14 @@ e.exports = function (e) {
     ];
     let i = {
             className: "variable",
-            variants: [{ begin: /\$[\w\d"][\w\d_]*/ }, { begin: /\$\{(.*?)\}/ }],
+            variants: [
+                {
+                    begin: /\$[\w\d"][\w\d_]*/,
+                },
+                {
+                    begin: /\$\{(.*?)\}/,
+                },
+            ],
         },
         a = {
             className: "literal",

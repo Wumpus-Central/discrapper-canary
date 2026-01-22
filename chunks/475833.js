@@ -1,4 +1,6 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -8,9 +10,18 @@ var i = n(503698),
     l = n(585665);
 let c = (e) => {
     let { user: t, fill: n, hideUserTag: i } = e,
-        c = "\xA0(@".concat(o.Ay.getUserTag(t, { decoration: "never" }), ")");
+        c = "\xa0(@".concat(
+            o.Ay.getUserTag(t, {
+                decoration: "never",
+            }),
+            ")",
+        );
     return (0, r.jsxs)(s.Text, {
-        className: a()([{ [l.GS]: n }]),
+        className: a()([
+            {
+                [l.GS]: n,
+            },
+        ]),
         variant: "text-md/medium",
         children: [
             (0, r.jsx)("span", {

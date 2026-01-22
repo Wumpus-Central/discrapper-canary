@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var r = n(627968);
 n(64700);
 var l = n(311907),
@@ -10,6 +12,7 @@ var l = n(311907),
     u = n(622249),
     d = n(676526),
     f = n(192);
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,6 +38,7 @@ function p(e) {
     }
     return e;
 }
+
 function b(e) {
     let { games: t } = e,
         n = (function (e, t) {
@@ -86,6 +90,7 @@ function b(e) {
             ),
     });
 }
+
 function g(e) {
     var t, n;
     let { userId: s, widgetType: d, disableInteraction: g, games: m } = e,
@@ -100,7 +105,10 @@ function g(e) {
                 (0, r.jsx)(
                     b,
                     ((t = p({}, e)),
-                    (n = n = { games: v }),
+                    (n = n =
+                        {
+                            games: v,
+                        }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                         : (function (e, t) {

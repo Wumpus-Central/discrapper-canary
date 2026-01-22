@@ -1,4 +1,7 @@
-n.d(t, { A: () => j }), n(896048);
+n.d(t, {
+    A: () => j,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -20,6 +23,7 @@ var r = n(627968),
     O = n(638897),
     A = n(5867),
     v = n(130139);
+
 function S(e, t, n) {
     return (
         t in e
@@ -33,6 +37,7 @@ function S(e, t, n) {
         e
     );
 }
+
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -49,6 +54,7 @@ function I(e) {
     }
     return e;
 }
+
 function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -61,6 +67,7 @@ function T(e, t) {
     }
     return n;
 }
+
 function C(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -72,6 +79,7 @@ function C(e, t) {
         e
     );
 }
+
 function N(e, t) {
     if (null == e) return {};
     var n,
@@ -88,6 +96,7 @@ function N(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function R(e, t) {
     if (null == e) return {};
     var n,
@@ -112,7 +121,13 @@ let w = 490,
                 return null != (e = E.A.getGuild(G.guild_id)) ? e : null;
             }, [G.guild_id]),
             z = i.useRef(null),
-            [q, X, Z] = (0, O.A)(C(I({}, e), { guild: K }), t, z),
+            [q, X, Z] = (0, O.A)(
+                C(I({}, e), {
+                    guild: K,
+                }),
+                t,
+                z,
+            ),
             Q = (null == (S = V.autocomplete) ? void 0 : S.forceChatLayer) ? g.Ay : m.Ay,
             $ = (0, p.aI)(q.selectedIndex);
         (0, _.gf)(W, q.isVisible, $);
@@ -211,7 +226,9 @@ let w = 490,
                                 ),
                                 {
                                     className: v.XG,
-                                    style: { maxHeight: ei },
+                                    style: {
+                                        maxHeight: ei,
+                                    },
                                     role: "listbox",
                                     "aria-labelledby": (0, p.Sz)(W),
                                     children: en,

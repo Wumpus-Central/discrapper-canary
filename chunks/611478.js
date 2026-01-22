@@ -1,4 +1,7 @@
-i.d(e, { P: () => I }), i(321073);
+i.d(e, {
+    P: () => I,
+}),
+    i(321073);
 var n = i(627968),
     l = i(311907),
     s = i(772786),
@@ -38,10 +41,15 @@ let _ = (0, u.E2)(T.X.ACCOUNT_PROFILE_SETTING, {
             return (0, n.jsxs)(n.Fragment, {
                 children: [
                     t && (0, n.jsx)(A.A, {}),
-                    null != e && (0, n.jsx)(S.A, { currentUser: e }),
+                    null != e &&
+                        (0, n.jsx)(S.A, {
+                            currentUser: e,
+                        }),
                     (0, n.jsx)(E.A, {}),
                 ],
             });
         },
     }),
-    I = (0, u.zZ)(T.X.ACCOUNT_PROFILE_CATEGORY, { buildLayout: () => [_] });
+    I = (0, u.zZ)(T.X.ACCOUNT_PROFILE_CATEGORY, {
+        buildLayout: () => [_],
+    });

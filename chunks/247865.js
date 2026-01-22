@@ -1,4 +1,6 @@
-i.d(e, { k: () => T });
+i.d(e, {
+    k: () => T,
+});
 var n = i(793574),
     l = i(419954),
     s = i(954571),
@@ -13,7 +15,9 @@ let T = (0, l.zD)(u.X.CHAT_STICKERS_AUTOCOMPLETE, {
     setValue: (t) => {
         s.default.track(a.HAw.STICKERS_IN_AUTOCOMPLETE_TOGGLED, {
             enabled: t,
-            location: { section: a.JJy.SETTINGS_TEXT_AND_IMAGES },
+            location: {
+                section: a.JJy.SETTINGS_TEXT_AND_IMAGES,
+            },
             location_stack: [n.A.TEXT_AND_IMAGES],
         }),
             r.ML.updateSetting(t);

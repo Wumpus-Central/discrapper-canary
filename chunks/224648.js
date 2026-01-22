@@ -13,6 +13,7 @@ var r = n(64700),
     c = n(63995),
     u = n(113783),
     d = n(69407);
+
 function f(e) {
     let t = (0, u.zy)(e, d.ip.AUDIENCE),
         [n, l] = r.useState(!1);
@@ -20,9 +21,10 @@ function f(e) {
         r.useEffect(() => {
             t > 100 ? l(!0) : t < 75 && l(!1);
         }, [t]),
-        5000 * !!n
+        5e3 * !!n
     );
 }
+
 function p(e, t, n) {
     let u,
         f,

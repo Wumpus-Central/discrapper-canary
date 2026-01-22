@@ -1,4 +1,8 @@
-n.d(t, { A: () => d }), n(747238), n(812715);
+n.d(t, {
+    A: () => d,
+}),
+    n(747238),
+    n(812715);
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -7,10 +11,12 @@ var i = n(503698),
     o = n(644119),
     l = n(272984),
     c = n(802571);
+
 function u(e) {
     let t = /intl-[^/]+\//;
     return e.replace(t, "");
 }
+
 function d(e) {
     let {
         className: t,

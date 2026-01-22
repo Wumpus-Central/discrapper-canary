@@ -1,4 +1,6 @@
-n.d(t, { A: () => S });
+n.d(t, {
+    A: () => S,
+});
 var r = n(627968),
     i = n(64700),
     a = n(607399),
@@ -15,6 +17,7 @@ var r = n(627968),
     m = n(287809),
     g = n(562153),
     E = n(427262);
+
 function b(e, t, n) {
     return (
         t in e
@@ -28,6 +31,7 @@ function b(e, t, n) {
         e
     );
 }
+
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -44,6 +48,7 @@ function y(e) {
     }
     return e;
 }
+
 function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -56,6 +61,7 @@ function O(e, t) {
     }
     return n;
 }
+
 function A(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -67,17 +73,26 @@ function A(e, t) {
         e
     );
 }
+
 function v(e) {
     let { userId: t, className: a, children: s } = e,
         l = i.useCallback(() => {
-            (0, u.K)({ kind: "user" });
+            (0, u.K)({
+                kind: "user",
+            });
         }, []),
         c = i.useCallback(
             (e) => {
                 null != t &&
                     (0, o.L3)(e, async () => {
                         let { default: e } = await n.e("60829").then(n.bind(n, 446828));
-                        return (n) => (0, r.jsx)(e, A(y({}, n), { userId: t }));
+                        return (n) =>
+                            (0, r.jsx)(
+                                e,
+                                A(y({}, n), {
+                                    userId: t,
+                                }),
+                            );
                     });
             },
             [t],
@@ -89,6 +104,7 @@ function v(e) {
         children: s,
     });
 }
+
 function S(e) {
     let {
             className: t,
@@ -150,7 +166,9 @@ function S(e) {
                     },
                     e,
                 ),
-                { children: "@".concat(null != L ? L : x) },
+                {
+                    children: "@".concat(null != L ? L : x),
+                },
             ),
         );
     return I

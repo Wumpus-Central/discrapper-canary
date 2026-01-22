@@ -1,4 +1,6 @@
-n.d(t, { A: () => N });
+n.d(t, {
+    A: () => N,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -25,13 +27,16 @@ var i = n(503698),
     I = n(996988),
     T = n(985018),
     C = n(380297);
+
 function N(e) {
     let { user: t, currentUser: n, voiceChannel: i, className: N, onClose: R } = e,
         { themeType: w } = (0, g.E)(),
         { analyticsLocations: P } = (0, u.Ay)(c.A.USER_PROFILE_VOICE_ACTIVITY_CARD),
         D = (0, h.A)({
             display: "voice",
-            activity: { type: "VOICE" },
+            activity: {
+                type: "VOICE",
+            },
             voiceChannelId: i.id,
             user: t,
             analyticsLocations: P,
@@ -43,13 +48,17 @@ function N(e) {
         L = (0, s.bG)([f.A], () => f.A.getGuild(i.guild_id)),
         j = (0, _.A)(i),
         M = (0, d.Ay)(i),
-        { channelStatusEnabled: k } = (0, p.e)({ location: "UserProfileVoiceActivityCard" }),
+        { channelStatusEnabled: k } = (0, p.e)({
+            location: "UserProfileVoiceActivityCard",
+        }),
         U = () => {
             if (t.id !== n.id) return null;
             let e = i.isDM() || i.isGroupDM() ? T.intl.string(T.t["+DsWbX"]) : T.intl.string(T.t.xOVEjc);
             return (0, r.jsx)(o.m, {
                 text: e,
-                children: (0, r.jsx)(l.mir, { size: "xxs" }),
+                children: (0, r.jsx)(l.mir, {
+                    size: "xxs",
+                }),
             });
         },
         G = () =>

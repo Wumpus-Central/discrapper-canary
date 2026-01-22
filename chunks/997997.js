@@ -13,6 +13,7 @@ var r = n(954571),
             e
         );
     })({});
+
 function s(e, t, n) {
     r.default.track(i.HAw.STOREFRONT_COPY_LINK_CLICKED, {
         application_id: e,

@@ -1,22 +1,29 @@
 function i(a) {
     return a.replace(/sekuntia?/, "sekunnin");
 }
+
 function u(a) {
     return a.replace(/minuuttia?/, "minuutin");
 }
+
 function n(a) {
     return a.replace(/tuntia?/, "tunnin");
 }
+
 function r(a) {
     return a.replace(/(viikko|viikkoa)/, "viikon");
 }
+
 function o(a) {
     return a.replace(/(kuukausi|kuukautta)/, "kuukauden");
 }
+
 function l(a) {
     return a.replace(/(vuosi|vuotta)/, "vuoden");
 }
-t.d(e, { A: () => k });
+t.d(e, {
+    A: () => k,
+});
 var s = {
     lessThanXSeconds: {
         one: "alle sekunti",
@@ -56,10 +63,10 @@ var s = {
         futureTense: n,
     },
     xDays: {
-        one: "päivä",
-        other: "{{count}} päivää",
+        one: "p\xe4iv\xe4",
+        other: "{{count}} p\xe4iv\xe4\xe4",
         futureTense: function (a) {
-            return a.replace(/päivää?/, "päivän");
+            return a.replace(/päivää?/, "p\xe4iv\xe4n");
         },
     },
     aboutXWeeks: {
@@ -98,8 +105,8 @@ var s = {
         futureTense: l,
     },
     almostXYears: {
-        one: "lähes vuosi",
-        other: "lähes {{count}} vuotta",
+        one: "l\xe4hes vuosi",
+        other: "l\xe4hes {{count}} vuotta",
         futureTense: l,
     },
 };

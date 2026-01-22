@@ -1,4 +1,8 @@
-i.d(t, { default: () => N }), i(896048), i(667532);
+i.d(t, {
+    default: () => N,
+}),
+    i(896048),
+    i(667532);
 var n = i(627968);
 i(64700);
 var s = i(110259),
@@ -14,6 +18,7 @@ var s = i(110259),
     g = i(652215),
     f = i(985018),
     h = i(441805);
+
 function N(e) {
     var t, i;
     let N,
@@ -37,9 +42,13 @@ function N(e) {
                   N && x
                       ? f.intl.string(f.t["X/iIjg"])
                       : N
-                        ? f.intl.formatToPlainString(f.t.WgQ12s, { n: t })
+                        ? f.intl.formatToPlainString(f.t.WgQ12s, {
+                              n: t,
+                          })
                         : x
-                          ? f.intl.formatToPlainString(f.t.bwibp1, { n: i })
+                          ? f.intl.formatToPlainString(f.t.bwibp1, {
+                                n: i,
+                            })
                           : null),
               infoRows: ((e) => {
                   let { channelId: t, blockedUsers: i, ignoredUsers: s } = e,

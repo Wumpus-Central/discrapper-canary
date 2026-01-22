@@ -1,17 +1,28 @@
-n.d(t, { C: () => o });
+n.d(t, {
+    C: () => o,
+});
 var r = n(627968);
 n(64700);
 var i = n(961350),
     l = n(612181),
     a = n(642277),
     s = n(652215);
+
 function o(e, t) {
     var n, o;
-    let c = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : { passProps: !0 };
+    let c =
+        arguments.length > 2 && void 0 !== arguments[2]
+            ? arguments[2]
+            : {
+                  passProps: !0,
+              };
+
     function u(n) {
         return !(0, l.wR)() && i.default.getLoginStatus() !== s.aUe.LOGGING_IN && i.default.allowLogoutRedirect()
             ? null != t
-                ? (0, r.jsx)(t, { renderRedirect: (0, r.jsx)(a.A, {}) })
+                ? (0, r.jsx)(t, {
+                      renderRedirect: (0, r.jsx)(a.A, {}),
+                  })
                 : (0, r.jsx)(a.A, {})
             : (0, r.jsx)(
                   e,

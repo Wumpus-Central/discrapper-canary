@@ -11,6 +11,7 @@ var r,
     s = n(734057),
     o = n(134861),
     l = n(320501);
+
 function c(e, t, n) {
     return (
         t in e
@@ -32,12 +33,15 @@ let d = new Map(),
     p = [],
     _ = "NOT_FETCHED",
     h = new Map();
+
 function m() {
     (_ = "FETCHING"), h.clear();
 }
+
 function g(e) {
     h.set(e.applicationId, "FETCHING");
 }
+
 function E(e) {
     h.set(e.applicationId, "FETCHED"),
         e.tokens.forEach((e) => {
@@ -47,6 +51,7 @@ function E(e) {
                 null == e.application.parent_id && p.push(e);
         });
 }
+
 function b(e) {
     (_ = "FETCHED"),
         h.clear(),
@@ -56,6 +61,7 @@ function b(e) {
             return null == t.parent_id;
         }));
 }
+
 function y(e) {
     let { id: t, application: n, scopes: r } = e,
         i = d.get(n.id);
@@ -75,6 +81,7 @@ function y(e) {
     };
     d.set(a.application.id, a), (f = [...f, a]), null == a.application.parent_id && (p = [...p, a]);
 }
+
 function O(e) {
     let { id: t, applicationId: n } = e,
         r = d.get(n);

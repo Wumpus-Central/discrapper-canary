@@ -1,4 +1,9 @@
-n.d(t, { A: () => y }), n(264879), n(896048), n(321073);
+n.d(t, {
+    A: () => y,
+}),
+    n(264879),
+    n(896048),
+    n(321073);
 var r,
     l = n(627968),
     i = n(64700),
@@ -10,6 +15,7 @@ var r,
     d = n(52133),
     f = n(397927),
     p = n(473134);
+
 function h(e, t, n) {
     return (
         t in e
@@ -23,6 +29,7 @@ function h(e, t, n) {
         e
     );
 }
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -63,20 +70,38 @@ class m extends i.Component {
         let { translateY: e } = this.state;
         (null != this._timeout && clearTimeout(this._timeout), this.props.animate)
             ? (this._timeout = setTimeout(() => {
-                  u.A.spring(e, b({ toValue: 0 }, g)).start();
+                  u.A.spring(
+                      e,
+                      b(
+                          {
+                              toValue: 0,
+                          },
+                          g,
+                      ),
+                  ).start();
               }, 100))
             : e.setValue(0);
     }
     animateOut() {
         let { translateY: e } = this.state;
         (null != this._timeout && clearTimeout(this._timeout), this.props.animate)
-            ? u.A.spring(e, b({ toValue: 1 }, g)).start()
+            ? u.A.spring(
+                  e,
+                  b(
+                      {
+                          toValue: 1,
+                      },
+                      g,
+                  ),
+              ).start()
             : e.setValue(1);
     }
     render() {
         let { className: e, text: t, hide: n, onClick: r } = this.props;
         return (0, l.jsx)(u.A.div, {
-            className: s()(p.M0, e, { [p.R]: n }),
+            className: s()(p.M0, e, {
+                [p.R]: n,
+            }),
             onClick: r,
             style: this.getAnimatedStyle(),
             "aria-hidden": n,

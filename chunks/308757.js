@@ -1,1 +1,3 @@
-e.exports = { q: "_609dede626424093" };
+e.exports = {
+    q: "_609dede626424093",
+};

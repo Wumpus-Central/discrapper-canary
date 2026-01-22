@@ -1,4 +1,6 @@
-l.d(t, { A: () => f });
+l.d(t, {
+    A: () => f,
+});
 var n = l(627968),
     r = l(64700),
     s = l(503698),
@@ -8,6 +10,7 @@ var n = l(627968),
     c = l(758836),
     u = l(985018),
     d = l(816917);
+
 function f(e) {
     let { handleTransition: t, onClose: l } = e,
         s = (0, o.y)("CollectiblesIndexPageContextMenu"),
@@ -37,10 +40,14 @@ function f(e) {
             [],
         );
     return (0, n.jsx)("div", {
-        className: a()({ [d.T3]: s }),
+        className: a()({
+            [d.T3]: s,
+        }),
         children: (0, n.jsx)(i.W1t, {
             navId: "collectibles-index-page-menu",
-            className: a()({ [d.T3]: s }),
+            className: a()({
+                [d.T3]: s,
+            }),
             onClose: l,
             "aria-label": u.intl.string(u.t.xFcotU),
             onSelect: () => {},

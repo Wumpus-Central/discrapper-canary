@@ -1,4 +1,6 @@
-n.d(t, { default: () => y });
+n.d(t, {
+    default: () => y,
+});
 var r = n(627968);
 n(64700);
 var c = n(397927),
@@ -30,12 +32,18 @@ let y = (0, l.A)(
             "aria-label": f.intl.string(f.t.Xm41aV),
             onSelect: l,
             children: [
-                (0, r.jsx)(c.rXV, { children: o }),
+                (0, r.jsx)(c.rXV, {
+                    children: o,
+                }),
                 (0, r.jsxs)(c.rXV, {
                     children: [y, d, j],
                 }),
-                (0, r.jsx)(c.rXV, { children: A }),
-                (0, r.jsx)(c.rXV, { children: g }),
+                (0, r.jsx)(c.rXV, {
+                    children: A,
+                }),
+                (0, r.jsx)(c.rXV, {
+                    children: g,
+                }),
             ],
         });
     },

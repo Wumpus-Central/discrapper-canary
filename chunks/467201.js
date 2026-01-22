@@ -1,4 +1,6 @@
-n.d(t, { A: () => O });
+n.d(t, {
+    A: () => O,
+});
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -43,7 +45,9 @@ class E extends i.Component {
                                   "div",
                                   {
                                       className: _.zA,
-                                      children: (0, r.jsx)(o.A, { reason: e }),
+                                      children: (0, r.jsx)(o.A, {
+                                          reason: e,
+                                      }),
                                   },
                                   e.type,
                               ),

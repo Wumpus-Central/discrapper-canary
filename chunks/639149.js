@@ -1,4 +1,7 @@
-n.d(t, { A: () => c }), n(801541);
+n.d(t, {
+    A: () => c,
+}),
+    n(801541);
 var r = n(627968);
 n(64700);
 var i = n(889137),
@@ -6,6 +9,7 @@ var i = n(889137),
     s = n(166532),
     o = n(985018),
     l = n(818413);
+
 function c(e) {
     let { step: t, onClose: n, isGift: c } = e,
         u = (0, i.YW)(t)

@@ -1,8 +1,11 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(487329),
     i = n(562153),
     a = n(652215),
     s = n(985018);
+
 function o(e, t, n, o) {
     if (e.state === a.XYD.RECONNECTING) {
         var l;
@@ -10,7 +13,9 @@ function o(e, t, n, o) {
         return {
             mainText: s.intl.string(s.t["pdFFK+"]),
             supportingText: s.intl.string(s.t["+PuO2N"]),
-            errorCodeText: s.intl.formatToPlainString(s.t.ejOT95, { errorCode: e }),
+            errorCodeText: s.intl.formatToPlainString(s.t.ejOT95, {
+                errorCode: e,
+            }),
         };
     }
     return e.state === a.XYD.PAUSED

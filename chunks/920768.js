@@ -1,13 +1,17 @@
-r.d(t, { A: () => h }), r(896048);
+r.d(t, {
+    A: () => h,
+}),
+    r(896048);
 var n = r(627968),
     s = r(64700),
     i = r(503698),
     a = r.n(i),
-    l = r(432022),
+    l = r(108531),
     o = r(397927),
     c = r(557722),
     u = r(219716),
     d = r(484410);
+
 function h(e) {
     let { show: t, alpha2: r, countryCode: i } = e,
         h = s.useRef(null),
@@ -43,7 +47,9 @@ function h(e) {
         children: (e) => {
             var s, c;
             return (0, n.jsx)("div", {
-                className: a()(d.nw, { [d.R]: !(t || m) }),
+                className: a()(d.nw, {
+                    [d.R]: !(t || m),
+                }),
                 ref: h,
                 children: (0, n.jsx)(l.animated.div, {
                     className: d.kL,
@@ -98,7 +104,9 @@ function h(e) {
                                       }),
                                 s),
                             ),
-                            (0, n.jsx)("div", { className: d.me }),
+                            (0, n.jsx)("div", {
+                                className: d.me,
+                            }),
                         ],
                     }),
                 }),

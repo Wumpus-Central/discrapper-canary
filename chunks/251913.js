@@ -14,6 +14,7 @@ var r = n(64700),
     d = (function (e) {
         return (e[(e.PENDING = 1)] = "PENDING"), (e[(e.ERROR = 2)] = "ERROR"), (e[(e.NONE = 3)] = "NONE"), e;
     })({});
+
 function f(e, t, n, i) {
     let a = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
         s = arguments.length > 5 ? arguments[5] : void 0;
@@ -27,7 +28,8 @@ function f(e, t, n, i) {
                       : 3 === t && (a ? (null != s ? s() : n(l.pn.REVIEW)) : (i(c.h.COMPLETED), n(l.pn.CONFIRM)))));
     }, [e, t, n, i, a, s]);
 }
-let p = 5000;
+let p = 5e3;
+
 function _(e) {
     let t = (0, i.bG)([u.A], () => u.A.awaitingPaymentId),
         n = (0, i.bG)([o.A], () => o.A.isConnected()),

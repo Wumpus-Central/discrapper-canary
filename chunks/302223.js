@@ -1,10 +1,13 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var a = n(627968);
 n(64700);
 var l = n(503698),
     i = n.n(l),
     r = n(51183),
     s = n(802455);
+
 function o(e) {
     let {
         activity: t,
@@ -28,7 +31,15 @@ function o(e) {
                 ? null
                 : (0, a.jsx)(r.A, {
                       emoji: f,
-                      className: i()(s.Z, l, null != d ? { [d]: null == x || "" === x } : null),
+                      className: i()(
+                          s.Z,
+                          l,
+                          null != d
+                              ? {
+                                    [d]: null == x || "" === x,
+                                }
+                              : null,
+                      ),
                       animate: u,
                       hideTooltip: m,
                   }),

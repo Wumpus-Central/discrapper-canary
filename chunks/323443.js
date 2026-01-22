@@ -18,22 +18,27 @@ var r = n(686956),
     _ = n(943525),
     h = n(233993),
     m = n(766219);
+
 function g(e, t) {
     return !!d.A.can(h.Gk, e) && (!p.j6(e.id) || t === e.id || (p.W0(e, () => y(e, !0)), !1));
 }
+
 function E(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     return new Promise(async (i) => {
         let a = c.A.getChannel(t);
         if (null != a) return b(a, n), i(a);
         await (0, o.A)([e]),
-            await r.A.joinGuild(e, { lurker: !0 }),
+            await r.A.joinGuild(e, {
+                lurker: !0,
+            }),
             u.A.addConditionalChangeListener(() => {
                 let e = c.A.getChannel(t);
                 return null == e || (b(e), m.A.initialize(), i(e), !1);
             });
     });
 }
+
 function b(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = f.A.getVoiceChannelId();
@@ -43,8 +48,15 @@ function b(e) {
     )
         return !1;
     let r = l.A.getAllApplicationStreamsForChannel(e.id);
-    return r.length > 0 && (0, a.A9)(r[0], { noFocus: !1 }), !0;
+    return (
+        r.length > 0 &&
+            (0, a.A9)(r[0], {
+                noFocus: !1,
+            }),
+        !0
+    );
 }
+
 function y(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
@@ -52,6 +64,7 @@ function y(e) {
         i = f.A.getVoiceChannelId();
     (!r && i !== e.id && (0, s.H)(e) && p.E9(e, () => y(e, t, n, !0))) || (b(e, t) && O(e, i));
 }
+
 function O(e, t) {
     p.jA(e, t);
 }

@@ -33,15 +33,28 @@ e.exports = function (e) {
             },
             {
                 className: "number",
-                variants: [{ begin: "0x[0-9a-f]+" }, { begin: "\\b-?\\d+" }],
+                variants: [
+                    {
+                        begin: "0x[0-9a-f]+",
+                    },
+                    {
+                        begin: "\\b-?\\d+",
+                    },
+                ],
                 relevance: 0,
             },
             {
                 className: "symbol",
                 variants: [
-                    { begin: "^\\s*[a-z_\\.\\$][a-z0-9_\\.\\$]+:" },
-                    { begin: "^\\s*[0-9]+:" },
-                    { begin: "[0-9]+[bf]" },
+                    {
+                        begin: "^\\s*[a-z_\\.\\$][a-z0-9_\\.\\$]+:",
+                    },
+                    {
+                        begin: "^\\s*[0-9]+:",
+                    },
+                    {
+                        begin: "[0-9]+[bf]",
+                    },
                 ],
                 relevance: 0,
             },

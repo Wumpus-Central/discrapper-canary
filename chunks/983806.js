@@ -1,4 +1,7 @@
-n.d(t, { b: () => b }), n(896048);
+n.d(t, {
+    b: () => b,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -37,7 +40,9 @@ let E = () => {
         return 0 === e.length
             ? null
             : (0, r.jsx)("div", {
-                  className: s()(g.Gq, { [g.wS]: e.length > 1 }),
+                  className: s()(g.Gq, {
+                      [g.wS]: e.length > 1,
+                  }),
                   children:
                       e.length > 1
                           ? (0, r.jsx)(o.Pw, {

@@ -1,4 +1,6 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(587895),
     i = n(337095),
     a = n(611010),
@@ -10,7 +12,9 @@ async function c(e, t) {
     let c = r.A.getApplication(e);
     if (u(c)) return c;
     let d = null == (n = s.A.getChannel(t)) ? void 0 : n.guild_id,
-        { activityConfigs: f, applications: p } = await (0, o.LV)({ guildId: d }),
+        { activityConfigs: f, applications: p } = await (0, o.LV)({
+            guildId: d,
+        }),
         _ = (0, l.A)({
             applicationId: e,
             activityConfigs: f,
@@ -22,6 +26,7 @@ async function c(e, t) {
         return a.Ay.createFromServer(t);
     }
 }
+
 function u(e) {
     return null != e && null != e.embeddedActivityConfig;
 }

@@ -18,6 +18,7 @@ var r,
     h = n(967198),
     m = n(287809),
     g = n(652215);
+
 function E(e, t, n) {
     return (
         t in e
@@ -31,6 +32,7 @@ function E(e, t, n) {
         e
     );
 }
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -47,6 +49,7 @@ function b(e) {
     }
     return e;
 }
+
 function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -59,6 +62,7 @@ function y(e, t) {
     }
     return n;
 }
+
 function O(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -100,15 +104,19 @@ var D = (function (e) {
     );
 })(D || {});
 let x = new Set(Object.values(D));
+
 function L() {
     return null == v.lastFetched || Date.now() - v.lastFetched >= R;
 }
+
 function j() {
     !N && (L() || null != v.surveyOverride) && ((N = !0), (0, u.BC)(v.surveyOverride, !0));
 }
+
 function M(e) {
     return U(e) && k(e);
 }
+
 function k(e) {
     let { guild_requirements: t = [], guild_size: n = [null, null], guild_permissions: r = [] } = e;
     if (0 === t.length) return !0;
@@ -152,13 +160,16 @@ function k(e) {
     }
     return !!i && !!a;
 }
+
 function U(e) {
     return !0;
 }
+
 function G(e) {
     let t = l.w.get(g.gT8);
     return null == t || a()().diff(t, "day") < e;
 }
+
 function V(e) {
     let { survey: t, isActionTriggered: n } = e;
     (N = !1),
@@ -172,26 +183,33 @@ function V(e) {
     let s = !1;
     C = i && a && !s ? t : null;
 }
+
 function F(e) {
     let { id: t } = e;
     (v.surveyOverride = t), null != t && delete v.hiddenSurveys[t], (0, u.BC)(v.surveyOverride, !0);
 }
+
 function B() {
     S = !0;
 }
+
 function H() {
     I = !0;
 }
+
 function Y(e) {
     let { key: t } = e;
     (v.hiddenSurveys[t] = !0), (C = null), (T = null != T ? T : {}), delete T[t];
 }
+
 function W() {
     v.hiddenSurveys = {};
 }
+
 function K(e) {
     return !!M(e) || ((C = null), !1);
 }
+
 function z() {
     let e = Object.values((T = null != T ? T : {}))[0];
     return null != e && M(e)
@@ -201,10 +219,12 @@ function z() {
           })
         : null != C && void (C = null);
 }
+
 function q() {
     if (null != C && K(C)) return !1;
     z();
 }
+
 function X() {
     v.lastSeen = Date.now();
 }
@@ -245,11 +265,15 @@ E(Z, "displayName", "SurveyStore"),
         },
         (e) => {
             var t;
-            return O(b({}, e), { lastSeen: null != (t = e.lastSeen) ? t : null });
+            return O(b({}, e), {
+                lastSeen: null != (t = e.lastSeen) ? t : null,
+            });
         },
         (e) => {
             var t;
-            return O(b({}, e), { hiddenSurveys: null != (t = e.hiddenSurveys) ? t : {} });
+            return O(b({}, e), {
+                hiddenSurveys: null != (t = e.hiddenSurveys) ? t : {},
+            });
         },
     ]);
 let Q = new Z(c.h, {

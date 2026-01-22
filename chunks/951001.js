@@ -1,4 +1,6 @@
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 var r = n(73153);
 let i = {
     updateChannelDimensions(e, t, n, i, a) {

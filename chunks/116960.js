@@ -1,7 +1,10 @@
-r.d(t, { default: () => o });
+r.d(t, {
+    default: () => o,
+});
 var n = r(627968);
 r(64700);
 var c = r(192308);
+
 function o(e) {
     (0, c.openModalLazy)(async () => {
         let { default: t } = await r.e("94743").then(r.bind(r, 326703));
@@ -34,7 +37,10 @@ function o(e) {
                     }
                     return e;
                 })({}, r)),
-                (o = o = { guildId: e }),
+                (o = o =
+                    {
+                        guildId: e,
+                    }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(c, Object.getOwnPropertyDescriptors(o))
                     : (function (e, t) {

@@ -22,6 +22,7 @@ var r = n(311907),
             e
         );
     })({});
+
 function f(e) {
     let {
         guild: t,
@@ -42,6 +43,7 @@ function f(e) {
             (!!t.features.has(u.GuildFeatures.COMMUNITY) && (!!i || !!a) && n && s))
     );
 }
+
 function p(e) {
     if (e.guild.features.has(u.GuildFeatures.CREATOR_MONETIZABLE_DISABLED)) return 0;
     if (f(e)) return 3;
@@ -55,9 +57,11 @@ function p(e) {
     } = e;
     return n && !r && i ? 1 : n && i && (a || s) && !t.features.has(u.GuildFeatures.COMMUNITY) ? 2 : 0;
 }
+
 function _(e) {
     return 0 !== p(e);
 }
+
 function h(e) {
     let t = (0, c.HT)(null == e ? void 0 : e.id),
         n = (0, i.ME)(e),
@@ -82,9 +86,11 @@ function h(e) {
               shouldRestrictUpdatingRoleSubscriptionSettings: _,
           });
 }
+
 function m(e) {
     return (0, r.bG)([o.A], () => g(e), [e]);
 }
+
 function g(e) {
     return null != e && o.A.can(u.xBc.ADMINISTRATOR, e);
 }

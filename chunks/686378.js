@@ -1,4 +1,6 @@
-n.d(t, { A: () => O });
+n.d(t, {
+    A: () => O,
+});
 var l = n(627968),
     r = n(64700),
     a = n(503698),
@@ -16,6 +18,7 @@ var l = n(627968),
     f = n(652215),
     h = n(985018),
     I = n(438536);
+
 function O(e) {
     let { member: t } = e,
         n = (0, s.bG)([g.A], () => g.A.getGuild(t.guildId)),

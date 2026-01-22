@@ -7,6 +7,7 @@ n.d(t, {
     n(747238);
 var r = n(280230),
     i = n.n(r);
+
 function a(e, t, n) {
     return (
         t in e
@@ -20,6 +21,7 @@ function a(e, t, n) {
         e
     );
 }
+
 function s(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -62,5 +64,7 @@ let o = /^[\s\S]+?(?=[^0-9A-Za-z\s\u00c0-\uffff]|\n\n| {2,}\n|\w+:\S|[0-9]+\.|$)
             }
             return e;
         })({}, i().defaultRules.text),
-        { match: (0, r.anyScopeRegex)(o) },
+        {
+            match: (0, r.anyScopeRegex)(o),
+        },
     );

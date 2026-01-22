@@ -1,4 +1,6 @@
-n.d(t, { A: () => j });
+n.d(t, {
+    A: () => j,
+});
 var r = n(627968),
     i = n(64700),
     l = n(607399),
@@ -24,6 +26,7 @@ var r = n(627968),
     S = n(746080),
     C = n(985018),
     N = n(169194);
+
 function T(e) {
     let { guildId: t } = e,
         n = (0, a.bG)([g.A], () => g.A.getGuild(t), [t]),
@@ -50,7 +53,9 @@ function T(e) {
         l.Fr && M)
     ) {
         let e = null == n ? y.b.NOT_GUILD_MEMBER : y.b.GUILD_NOT_ELIGIBLE;
-        return (0, r.jsx)(y.k, { errorType: e });
+        return (0, r.jsx)(y.k, {
+            errorType: e,
+        });
     }
     return (0, r.jsxs)("div", {
         className: N.kL,
@@ -63,10 +68,14 @@ function T(e) {
                         icon: (0, s.kHD)(E.A),
                         "aria-hidden": !0,
                     }),
-                    (0, r.jsx)(A.A.Title, { children: C.intl.string(C.t["KzCF/6"]) }),
+                    (0, r.jsx)(A.A.Title, {
+                        children: C.intl.string(C.t["KzCF/6"]),
+                    }),
                 ],
             }),
-            (0, r.jsx)("div", { id: v.K }),
+            (0, r.jsx)("div", {
+                id: v.K,
+            }),
             (0, r.jsx)("div", {
                 className: N.Qs,
                 children: j
@@ -74,7 +83,11 @@ function T(e) {
                           className: N.XG,
                           children: (0, r.jsx)("div", {
                               className: N.gT,
-                              children: D ? (0, r.jsx)(s.y$y, {}) : (0, r.jsx)(O.A, { guild: n }),
+                              children: D
+                                  ? (0, r.jsx)(s.y$y, {})
+                                  : (0, r.jsx)(O.A, {
+                                        guild: n,
+                                    }),
                           }),
                       })
                     : (0, r.jsx)(I.A, {}),
@@ -82,11 +95,14 @@ function T(e) {
         ],
     });
 }
+
 function j(e) {
     let { guildId: t } = e;
     return (0, r.jsx)(b.H, {
         guildId: t,
         refetchOnMount: !0,
-        children: (0, r.jsx)(T, { guildId: t }),
+        children: (0, r.jsx)(T, {
+            guildId: t,
+        }),
     });
 }

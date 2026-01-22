@@ -1,4 +1,7 @@
-n.d(t, { A: () => v }), n(896048);
+n.d(t, {
+    A: () => v,
+}),
+    n(896048);
 var r = n(311907),
     i = n(73153),
     a = n(626584),
@@ -9,6 +12,7 @@ var r = n(311907),
     u = n(544180),
     d = n(954571),
     f = n(652215);
+
 function p(e, t, n) {
     return (
         t in e
@@ -22,6 +26,7 @@ function p(e, t, n) {
         e
     );
 }
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -38,6 +43,7 @@ function _(e) {
     }
     return e;
 }
+
 function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -50,6 +56,7 @@ function h(e, t) {
     }
     return n;
 }
+
 function m(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -62,9 +69,11 @@ function m(e, t) {
     );
 }
 let g = new a.A("MessageRoundtripTrackerStore");
+
 function E(e) {
     return null != e.apiResponseTimestamp && null != e.gatewaySeenTimestamp;
 }
+
 function b(e) {
     let t = l.A.getBasicChannel(e.channelId);
     if (null == t)
@@ -88,10 +97,13 @@ function b(e) {
                 mobile_network_type: u.A.getType(),
                 num_attachments: e.attachmentCount,
             }),
-            null != i && { mobile_signal_strength_level: i },
+            null != i && {
+                mobile_signal_strength_level: i,
+            },
         ),
     );
 }
+
 function y(e) {
     let { optimistic: t, message: n } = e,
         r = n.nonce;
@@ -118,19 +130,23 @@ class O extends r.Ay.Store {
             setTimeout(() => {
                 let e = this.pendingMessages.get(t);
                 null != e && (b(e), this.pendingMessages.delete(t));
-            }, 30000);
+            }, 3e4);
     }
     recordMessageSendApiResponse(e) {
         let t = this.pendingMessages.get(e);
         if (null != t) {
-            let n = m(_({}, t), { apiResponseTimestamp: Date.now() });
+            let n = m(_({}, t), {
+                apiResponseTimestamp: Date.now(),
+            });
             E(n) ? (b(n), this.pendingMessages.delete(e)) : this.pendingMessages.set(e, n);
         }
     }
     recordGatewayResponse(e) {
         let t = this.pendingMessages.get(e);
         if (null != t) {
-            let n = m(_({}, t), { gatewaySeenTimestamp: Date.now() });
+            let n = m(_({}, t), {
+                gatewaySeenTimestamp: Date.now(),
+            });
             E(n) ? (b(n), this.pendingMessages.delete(e)) : this.pendingMessages.set(e, n);
         }
     }
@@ -138,5 +154,7 @@ class O extends r.Ay.Store {
         super(...e), p(this, "pendingMessages", new Map());
     }
 }
-let A = new O(i.h, { MESSAGE_CREATE: y }),
+let A = new O(i.h, {
+        MESSAGE_CREATE: y,
+    }),
     v = A;

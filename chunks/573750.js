@@ -1,11 +1,13 @@
 var r = n(949542),
     i = n(256937);
+
 function a(e, t, n, r) {
     if (e === n) return !0;
     if (!n.startsWith(e)) return !1;
     var a = n.slice(e.length);
     return !!t && ((a = r ? r(a) : a), i.contains(a, t));
 }
+
 function s(e) {
     return "Windows" === r.platformName ? e.replace(/^\s*NT/, "") : e;
 }

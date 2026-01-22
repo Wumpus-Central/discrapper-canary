@@ -1,4 +1,6 @@
-n.d(t, { l: () => O });
+n.d(t, {
+    l: () => O,
+});
 var a = n(627968),
     l = n(64700),
     i = n(732955),
@@ -32,12 +34,16 @@ let O = (e) => {
             isWeb: T,
             connectionStatus: I,
         } = (0, v.lV)(),
-        { enabled: w } = b.S.useConfig({ location: "private_browsing_perk_settings_page" }),
+        { enabled: w } = b.S.useConfig({
+            location: "private_browsing_perk_settings_page",
+        }),
         k = (0, l.useCallback)(() => {
             (0, c.A)(j.BVt.NITRO_HOME), t();
         }, [t]),
         P = (0, l.useCallback)(() => {
-            (0, p.openUserSettings)(m.X.PRIVATE_BROWSING_PANEL, { section: j.nc_.PRIVATE_BROWSING });
+            (0, p.openUserSettings)(m.X.PRIVATE_BROWSING_PANEL, {
+                section: j.nc_.PRIVATE_BROWSING,
+            });
         }, []),
         R = [x.l7.CONNECTED].includes(I),
         D = N && w && ![x.Lk.ZERO_TRUST, x.Lk.ERROR].includes(O) && !T && (!n || E),
@@ -66,7 +72,9 @@ let O = (e) => {
                 return (0, a.jsx)(i.EYj, {
                     variant: "text-sm/normal",
                     color: "text-subtle",
-                    children: A.intl.format(_.default.UDPKcX, { helpdeskArticle: f.V }),
+                    children: A.intl.format(_.default.UDPKcX, {
+                        helpdeskArticle: f.V,
+                    }),
                 });
             switch (O) {
                 case x.Lk.INSTALLED:
@@ -110,7 +118,9 @@ let O = (e) => {
         ? (0, a.jsxs)("div", {
               className: C.kL,
               children: [
-                  (0, a.jsx)(g.q, { className: C.aZ }),
+                  (0, a.jsx)(g.q, {
+                      className: C.aZ,
+                  }),
                   (0, a.jsxs)("div", {
                       className: C.hQ,
                       children: [
@@ -145,7 +155,9 @@ let O = (e) => {
                                       buttonTextOverride: A.intl.string(A.t["8x0jKT"]),
                                       subscriptionTier: y.pe.TIER_2,
                                       size: "sm",
-                                      premiumModalAnalyticsLocation: { page: s.A.MASKED_LINK },
+                                      premiumModalAnalyticsLocation: {
+                                          page: s.A.MASKED_LINK,
+                                      },
                                   }),
                               }),
                       ],

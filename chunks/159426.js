@@ -1,5 +1,8 @@
-n.d(t, { m: () => s });
+n.d(t, {
+    m: () => s,
+});
 var l = n(600975);
+
 function r(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -25,6 +28,7 @@ function r(e) {
     }
     return e;
 }
+
 function i(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -58,7 +62,9 @@ let a = {
             {
                 id: 1,
                 label: "VC Status Icons",
-                config: i(r({}, a), { enableVCStatusIcons: !0 }),
+                config: i(r({}, a), {
+                    enableVCStatusIcons: !0,
+                }),
             },
             {
                 id: 2,

@@ -8,5 +8,7 @@ r(
         enumerable: !0,
         forced: i.clearImmediate !== a,
     },
-    { clearImmediate: a },
+    {
+        clearImmediate: a,
+    },
 );

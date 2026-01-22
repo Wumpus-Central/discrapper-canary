@@ -7,7 +7,9 @@ e.exports = function () {
     return (
         a(
             Promise,
-            { allSettled: e },
+            {
+                allSettled: e,
+            },
             {
                 allSettled: function () {
                     return Promise.allSettled !== e;

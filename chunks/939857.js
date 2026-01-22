@@ -5,6 +5,7 @@ var r,
     o = n.n(s),
     l = n(397927),
     c = n(900729);
+
 function u(e, t, n) {
     return (
         t in e
@@ -18,6 +19,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,6 +36,7 @@ function d(e) {
     }
     return e;
 }
+
 function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -46,6 +49,7 @@ function f(e, t) {
     }
     return n;
 }
+
 function p(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -57,6 +61,7 @@ function p(e, t) {
         e
     );
 }
+
 function _(e, t) {
     if (null == e) return {};
     var n,
@@ -73,6 +78,7 @@ function _(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function h(e, t) {
     if (null == e) return {};
     var n,
@@ -94,7 +100,15 @@ class g extends (r = a.PureComponent) {
         if (null == e) return;
         let { scrollTop: t } = e.getScrollerState(),
             { hideSeparator: n } = this.state;
-        0 !== t || n ? t > 0 && n && this.setState({ hideSeparator: !1 }) : this.setState({ hideSeparator: !0 });
+        0 !== t || n
+            ? t > 0 &&
+              n &&
+              this.setState({
+                  hideSeparator: !1,
+              })
+            : this.setState({
+                  hideSeparator: !0,
+              });
     }
     getScroller() {
         return this._scroller;
@@ -110,7 +124,9 @@ class g extends (r = a.PureComponent) {
                           onResize: this.handleScroll,
                       })
                     : t.type === l.rQ0 && e
-                      ? a.cloneElement(t, { separator: !1 })
+                      ? a.cloneElement(t, {
+                            separator: !1,
+                        })
                       : t
                 : t,
         );
@@ -121,7 +137,19 @@ class g extends (r = a.PureComponent) {
             l = _(e, ["className", "children", "tag", "size", "fullscreenOnMobile"]);
         return (0, i.jsx)(
             r,
-            p(d({ className: o()(c.yl, t, a, { [c.z]: s }) }, l), { children: this.renderChildren() }),
+            p(
+                d(
+                    {
+                        className: o()(c.yl, t, a, {
+                            [c.z]: s,
+                        }),
+                    },
+                    l,
+                ),
+                {
+                    children: this.renderChildren(),
+                },
+            ),
         );
     }
     constructor(e) {
@@ -135,7 +163,9 @@ class g extends (r = a.PureComponent) {
                 let { onScroll: t } = this.props;
                 null == t || t(e);
             }),
-            (this.state = { hideSeparator: !1 });
+            (this.state = {
+                hideSeparator: !1,
+            });
     }
 }
 u(g, "Header", l.rQ0),

@@ -1,9 +1,13 @@
-n.d(t, { z: () => o }), n(896048);
+n.d(t, {
+    z: () => o,
+}),
+    n(896048);
 var l = n(260509),
     i = n(34457),
     r = n(98318),
     u = n(855918),
     a = n(652215);
+
 function o(e, t, n) {
     let o = new Set();
     for (let e of Object.keys(n.permissionOverwrites)) {

@@ -4,20 +4,25 @@ var r = n(797686),
     s = 56320,
     o = 57343,
     l = /[\uD800-\uDFFF]/;
+
 function c(e) {
     return i <= e && e <= o;
 }
+
 function u(e) {
     return l.test(e);
 }
+
 function d(e, t) {
     return 1 + c(e.charCodeAt(t));
 }
+
 function f(e) {
     if (!u(e)) return e.length;
     for (var t = 0, n = 0; n < e.length; n += d(e, n)) t++;
     return t;
 }
+
 function p(e, t, n) {
     if (((t = t || 0), (n = void 0 === n ? 1 / 0 : n || 0), !u(e))) return e.substr(t, n);
     var r = e.length;

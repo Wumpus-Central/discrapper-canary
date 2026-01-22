@@ -1,4 +1,6 @@
-n.d(e, { default: () => N });
+n.d(e, {
+    default: () => N,
+});
 var r = n(627968),
     i = n(64700),
     o = n(110259),
@@ -17,6 +19,7 @@ var r = n(627968),
     x = n(652215),
     b = n(985018),
     y = n(107724);
+
 function I(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
@@ -42,6 +45,7 @@ function I(t) {
     }
     return t;
 }
+
 function E(t, e) {
     return (
         (e = null != e ? e : {}),
@@ -60,6 +64,7 @@ function E(t, e) {
         t
     );
 }
+
 function h(t) {
     let { user: e, onBlock: n, onIgnore: i, location: o, disallowIgnore: c, guildId: d, channelId: h } = t,
         N = (0, l.bG)([f.A], () => f.A.isIgnored(e.id));
@@ -88,7 +93,9 @@ function h(t) {
                             (0, r.jsx)(s.Heading, {
                                 variant: "heading-xl/bold",
                                 color: "text-strong",
-                                children: b.intl.format(b.t.CIbzHR, { username: m.Ay.getName(d, h, e) }),
+                                children: b.intl.format(b.t.CIbzHR, {
+                                    username: m.Ay.getName(d, h, e),
+                                }),
                             }),
                             (0, r.jsx)(s.Text, {
                                 variant: "text-md/medium",
@@ -147,6 +154,7 @@ function h(t) {
         ],
     });
 }
+
 function N(t) {
     let {
             user: e,
@@ -215,12 +223,16 @@ function N(t) {
                         },
                         onConfirm: () => {
                             null == n || n(),
-                                c.A.blockUser(e.id, { location: u }).then(() => {
+                                c.A.blockUser(e.id, {
+                                    location: u,
+                                }).then(() => {
                                     O.default.track(x.HAw.BLOCK_USER_CONFIRMED),
                                         d.A.showBlockSuccessToast(e.id, null != m ? m : void 0);
                                 });
                         },
-                        impression: { impressionName: o.ImpressionNames.BLOCK_USER_CONFIRMATION },
+                        impression: {
+                            impressionName: o.ImpressionNames.BLOCK_USER_CONFIRMATION,
+                        },
                     },
                     g,
                 ),

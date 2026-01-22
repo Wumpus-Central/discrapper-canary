@@ -26,6 +26,7 @@ var r = n(627968),
         return (e.POPULAR = "popular"), (e.WISHLIST = "wishlist"), (e.NO_ICON = "no_icon"), e;
     })({});
 let v = 3;
+
 function S(e) {
     let {
             variant: t,

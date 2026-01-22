@@ -1,4 +1,6 @@
-n.d(t, { A: () => A });
+n.d(t, {
+    A: () => A,
+});
 var r = n(627968),
     i = n(64700),
     l = n(342494),
@@ -11,6 +13,7 @@ var r = n(627968),
     p = n(49370),
     f = n(985018),
     h = n(880055);
+
 function A(e) {
     let { targetElementRef: t, dismissPopover: n, children: A } = e,
         { orbsRewardAmount: g } = (0, c.uX)("PremiumOrbRewardsOrbDropPopover"),
@@ -31,10 +34,14 @@ function A(e) {
             alignmentStrategy: "edge",
             align: "top",
             position: "right",
-            caretConfig: { align: "start" },
+            caretConfig: {
+                align: "start",
+            },
             size: "md",
             title: f.intl.string(p.default["78+gLr"]),
-            body: f.intl.formatToPlainString(p.default.Ry1TXC, { orbsCount: g }),
+            body: f.intl.formatToPlainString(p.default.Ry1TXC, {
+                orbsCount: g,
+            }),
             actions: [
                 {
                     text: f.intl.string(f.t.RzWDqY),
@@ -49,6 +56,11 @@ function A(e) {
             },
         });
     return (0, r.jsxs)(r.Fragment, {
-        children: [(0, r.jsx)("div", { children: A }), b],
+        children: [
+            (0, r.jsx)("div", {
+                children: A,
+            }),
+            b,
+        ],
     });
 }

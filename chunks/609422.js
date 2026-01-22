@@ -1,4 +1,7 @@
-e.d(n, { default: () => o }), e(896048);
+e.d(n, {
+    default: () => o,
+}),
+    e(896048);
 var i = e(627968),
     a = e(64700),
     l = e(158954),
@@ -6,6 +9,7 @@ var i = e(627968),
     r = e(49229),
     u = e(427262),
     c = e(985018);
+
 function o(t) {
     let { user: n, nickname: e, transitionState: o, onClose: d } = t,
         [p, h] = a.useState(!1),

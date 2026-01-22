@@ -1,4 +1,7 @@
-n.d(t, { A: () => g }), n(446912);
+n.d(t, {
+    A: () => g,
+}),
+    n(446912);
 var r = n(64700),
     i = n(205338),
     a = n(87075),
@@ -8,6 +11,7 @@ var r = n(64700),
     c = n(403362),
     u = n(789069),
     d = n(385771);
+
 function f(e, t, n) {
     return (
         t in e
@@ -21,6 +25,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,6 +42,7 @@ function p(e) {
     }
     return e;
 }
+
 function _(e, t, n) {
     var r, i, a;
     let s =
@@ -84,6 +90,7 @@ let h = {
               };
     },
 };
+
 function m(e, t, n, r) {
     let i = t.getIconURL(16);
     if (null == i) return null;
@@ -101,6 +108,7 @@ function m(e, t, n, r) {
               a,
           );
 }
+
 function g(e, t) {
     let n = (0, s.A)(t.map((e) => e.applicationId)),
         { data: i } = (0, l.FY)(),

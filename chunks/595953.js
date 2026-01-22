@@ -1,4 +1,7 @@
-n.d(t, { A: () => S }), n(896048);
+n.d(t, {
+    A: () => S,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -14,6 +17,7 @@ var r = n(627968),
     h = n(69217),
     m = n(985018),
     g = n(443669);
+
 function E(e, t, n) {
     return (
         t in e
@@ -27,6 +31,7 @@ function E(e, t, n) {
         e
     );
 }
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -43,6 +48,7 @@ function b(e) {
     }
     return e;
 }
+
 function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -55,6 +61,7 @@ function y(e, t) {
     }
     return n;
 }
+
 function O(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -66,12 +73,14 @@ function O(e, t) {
         e
     );
 }
+
 function A(e) {
     let { onSelect: t } = e,
         [n, s] = i.useState(!1),
         l = (0, a.bG)([c.default], () => c.default.getCurrentUser()),
         d = u.Ay.canUseCustomCallSounds(l),
         f = i.useRef(null);
+
     function E(e) {
         d && (s(!1), null == t || t(e));
     }
@@ -113,6 +122,7 @@ function A(e) {
             ),
     });
 }
+
 function v(e) {
     let { sound: t } = e,
         { previewSound: n } = (0, f.A)(t, null),
@@ -133,6 +143,7 @@ function v(e) {
         }),
     });
 }
+
 function S(e) {
     let { sound: t, isGlobal: n, onSelect: i } = e,
         a = null != t,
@@ -146,6 +157,7 @@ function S(e) {
                 tag: "span",
                 children: e,
             });
+
     function p() {
         return null == t
             ? m.intl.string(m.t.PoWNfe)
@@ -175,7 +187,9 @@ function S(e) {
                         children: p(),
                     }),
                     a
-                        ? (0, r.jsx)(v, { sound: t })
+                        ? (0, r.jsx)(v, {
+                              sound: t,
+                          })
                         : (0, r.jsx)(o.HKD, {
                               size: "md",
                               color: "currentColor",
@@ -186,7 +200,9 @@ function S(e) {
             (0, r.jsxs)("div", {
                 className: g.kL,
                 children: [
-                    (0, r.jsx)(A, { onSelect: i }),
+                    (0, r.jsx)(A, {
+                        onSelect: i,
+                    }),
                     a &&
                         !n &&
                         (0, r.jsx)(h.dT, {

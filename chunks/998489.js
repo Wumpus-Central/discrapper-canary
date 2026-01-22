@@ -1,4 +1,14 @@
-n.d(t, { A: () => p }), n(896048), n(693327), n(554719), n(680155), n(323874), n(14289), n(35956), n(733351);
+n.d(t, {
+    A: () => p,
+}),
+    n(896048),
+    n(693327),
+    n(554719),
+    n(680155),
+    n(323874),
+    n(14289),
+    n(35956),
+    n(733351);
 var r = n(64700),
     l = n(966974),
     a = n(608461),
@@ -9,6 +19,7 @@ var r = n(64700),
     u = n(969632),
     f = n(412136),
     d = n(985018);
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,6 +45,7 @@ function b(e) {
     }
     return e;
 }
+
 function m(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -52,6 +64,7 @@ function m(e, t) {
         e
     );
 }
+
 function p(e, t, n, p) {
     var O, j;
     let y = e.id,
@@ -88,13 +101,23 @@ function p(e, t, n, p) {
             }),
                 v((e) => {
                     let r = [...e];
-                    return (r[n] = m(b({}, r[n]), { text: t })), r;
+                    return (
+                        (r[n] = m(b({}, r[n]), {
+                            text: t,
+                        })),
+                        r
+                    );
                 });
         }, []),
         F = r.useCallback((e, t) => {
             v((n) => {
                 let r = [...n];
-                return (r[t] = m(b({}, r[t]), { image: e })), r;
+                return (
+                    (r[t] = m(b({}, r[t]), {
+                        image: e,
+                    })),
+                    r
+                );
             });
         }, []),
         B = r.useCallback(
@@ -142,7 +165,12 @@ function p(e, t, n, p) {
         V = r.useCallback((e) => {
             v((t) => {
                 let n = [...t];
-                return (n[e] = m(b({}, n[e]), { image: void 0 })), n;
+                return (
+                    (n[e] = m(b({}, n[e]), {
+                        image: void 0,
+                    })),
+                    n
+                );
             });
         }, []),
         H = r.useCallback(() => {
@@ -229,6 +257,7 @@ function p(e, t, n, p) {
         setShouldFocusOnInvalidField: D,
     };
 }
+
 function g(e, t) {
     return {
         mediaAttachmentState: {

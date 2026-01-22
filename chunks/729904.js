@@ -1,4 +1,9 @@
-n.d(t, { A: () => O }), n(65821), n(896048), n(667532);
+n.d(t, {
+    A: () => O,
+}),
+    n(65821),
+    n(896048),
+    n(667532);
 var r,
     i = n(960488),
     a = n(311907),
@@ -6,6 +11,7 @@ var r,
     o = n(626584),
     l = n(463347),
     c = n(652215);
+
 function u(e, t, n) {
     return (
         t in e
@@ -22,9 +28,28 @@ function u(e, t, n) {
 let d = new o.A("BackForwardNavStore"),
     f = 20,
     p = [
-        c.BVt.CHANNEL_THREAD_VIEW(l.pv.guildId(), l.pv.channelId({ optional: !0 }), ":threadId", ":messageId?"),
-        c.BVt.CHANNEL(l.pv.guildId(), l.pv.channelId({ optional: !0 }), ":messageId?"),
-        c.BVt.VOICE_CHAT_CHANNEL_PARTIAL(l.pv.guildId(), l.pv.channelId({ optional: !0 }), ":messageId?"),
+        c.BVt.CHANNEL_THREAD_VIEW(
+            l.pv.guildId(),
+            l.pv.channelId({
+                optional: !0,
+            }),
+            ":threadId",
+            ":messageId?",
+        ),
+        c.BVt.CHANNEL(
+            l.pv.guildId(),
+            l.pv.channelId({
+                optional: !0,
+            }),
+            ":messageId?",
+        ),
+        c.BVt.VOICE_CHAT_CHANNEL_PARTIAL(
+            l.pv.guildId(),
+            l.pv.channelId({
+                optional: !0,
+            }),
+            ":messageId?",
+        ),
         c.BVt.CHANNELS_GAME_SHOP(l.pv.guildId(), ":pageIndex", ":skuId?", ":slug?"),
         c.BVt.NOTIFICATIONS,
         c.BVt.FRIENDS,
@@ -42,6 +67,7 @@ let d = new o.A("BackForwardNavStore"),
     ],
     _ = [],
     h = 0;
+
 function m(e, t) {
     if (t < 0 || t >= e.length) throw RangeError("index out of bounds");
     let n = 0,
@@ -49,6 +75,7 @@ function m(e, t) {
     for (; n < r; ) ([e[n], e[r]] = [e[r], e[n]]), n++, r--;
     return e;
 }
+
 function g(e) {
     let { path: t, isReplace: n } = e,
         r = (0, i.B6)(t, p);
@@ -74,9 +101,11 @@ function g(e) {
         params: r.params,
     });
 }
+
 function E(e) {
     h < _.length - 1 && h++;
 }
+
 function b(e) {
     h > 0 && h--;
 }

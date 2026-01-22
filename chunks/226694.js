@@ -28,6 +28,7 @@ var r = n(627968),
     E = n(985018),
     _ = n(856528),
     C = n(166382);
+
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -53,6 +54,7 @@ function S(e) {
     }
     return e;
 }
+
 function I(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -90,13 +92,16 @@ let N = l.memo(function (e) {
         ],
     });
 });
+
 function T(e) {
     let { entry: t } = e,
         [i, s] = l.useState(!1),
         u = l.useRef(null),
         { canEdit: d } = (0, j.A)(t);
     return (0, r.jsx)("div", {
-        className: a()(_.fc, { [_.QX]: i }),
+        className: a()(_.fc, {
+            [_.QX]: i,
+        }),
         children: (0, r.jsxs)(p.Ay, {
             children: [
                 d
@@ -106,7 +111,13 @@ function T(e) {
                               onClick: () => {
                                   (0, c.mMO)(async () => {
                                       let { default: e } = await n.e("88869").then(n.bind(n, 201700));
-                                      return (n) => (0, r.jsx)(e, I(S({}, n), { entry: t }));
+                                      return (n) =>
+                                          (0, r.jsx)(
+                                              e,
+                                              I(S({}, n), {
+                                                  entry: t,
+                                              }),
+                                          );
                                   });
                               },
                               "aria-label": E.intl.string(E.t.XnuOvN),
@@ -195,7 +206,11 @@ let P = l.memo(function (e) {
         j = async () => {
             o(!0);
             try {
-                p ? (0, m.u)(i.guildId) : await d.A.joinGuild(i.guildId, { source: x.Q4z.DIRECTORY_ENTRY });
+                p
+                    ? (0, m.u)(i.guildId)
+                    : await d.A.joinGuild(i.guildId, {
+                          source: x.Q4z.DIRECTORY_ENTRY,
+                      });
             } finally {
                 o(!1);
             }
@@ -222,7 +237,13 @@ let P = l.memo(function (e) {
             onContextMenu: (e) => {
                 (0, u.L3)(e, async () => {
                     let { default: e } = await Promise.resolve().then(n.bind(n, 283354));
-                    return (t) => (0, r.jsx)(e, I(S({}, t), { entry: i }));
+                    return (t) =>
+                        (0, r.jsx)(
+                            e,
+                            I(S({}, t), {
+                                entry: i,
+                            }),
+                        );
                 });
             },
             children: [
@@ -290,7 +311,9 @@ let P = l.memo(function (e) {
                                     (0, r.jsxs)("div", {
                                         className: _.Kl,
                                         children: [
-                                            (0, r.jsx)("div", { className: _.JX }),
+                                            (0, r.jsx)("div", {
+                                                className: _.JX,
+                                            }),
                                             (0, r.jsx)(c.Text, {
                                                 variant: "text-xs/normal",
                                                 color: "text-default",
@@ -304,7 +327,9 @@ let P = l.memo(function (e) {
                                     (0, r.jsxs)("div", {
                                         className: _.Kl,
                                         children: [
-                                            (0, r.jsx)("div", { className: _.Li }),
+                                            (0, r.jsx)("div", {
+                                                className: _.Li,
+                                            }),
                                             (0, r.jsx)(c.Text, {
                                                 variant: "text-xs/normal",
                                                 color: "text-default",
@@ -328,7 +353,9 @@ let P = l.memo(function (e) {
                         }),
                     ],
                 }),
-                (0, r.jsx)(T, { entry: i }),
+                (0, r.jsx)(T, {
+                    entry: i,
+                }),
             ],
         })
     );

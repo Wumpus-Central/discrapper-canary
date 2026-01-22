@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var l = n(627968),
     i = n(281445),
     a = n(158954),
@@ -10,6 +12,7 @@ var l = n(627968),
     c = n(288948),
     m = n(391637),
     v = n(588979);
+
 function f() {
     let e = (0, r.Ay)();
     return (0, l.jsx)(a.EYj, {
@@ -24,6 +27,7 @@ function f() {
         }),
     });
 }
+
 function g() {
     let { gameProvider: e } = (0, s.bv)();
     return e === i.X.SHOCKBYTE ? (0, l.jsx)(f, {}) : null;

@@ -49,7 +49,9 @@ let b = [_.iq, _.Zc, _.Xy, _.$X, _.tR, _.K7, _.fg, _.sp, _.MK],
                                             channelId: n.id,
                                             guildId: n.guild_id,
                                         }),
-                                        (0, r.jsx)(h.ZB, { children: t.extra.game_name }),
+                                        (0, r.jsx)(h.ZB, {
+                                            children: t.extra.game_name,
+                                        }),
                                         (0, r.jsx)(_.mG, {
                                             location: _.N5.CARD,
                                             children: b.map((e, n) =>

@@ -1,7 +1,10 @@
-n.d(t, { y: () => s });
+n.d(t, {
+    y: () => s,
+});
 var r = n(959462),
     i = n(3388),
     a = n(64700);
+
 function s(e) {
     let [t, n] = (0, a.useState)(e),
         s = (0, a.useRef)(null),

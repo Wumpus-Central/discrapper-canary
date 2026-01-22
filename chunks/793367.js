@@ -13,6 +13,7 @@ var r = n(353640),
     i = n(121894),
     a = n(954571),
     s = n(652215);
+
 function o(e, t, n) {
     return (
         t in e
@@ -26,6 +27,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,6 +44,7 @@ function l(e) {
     }
     return e;
 }
+
 function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -54,6 +57,7 @@ function c(e, t) {
     }
     return n;
 }
+
 function u(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -94,9 +98,11 @@ let f = {
         incrementableActions: Object.fromEntries(Object.values(d).map((e) => [e, 0])),
     },
     p = (0, r.v)(() => f);
+
 function _(e) {
     (0, i.r)(() => p.setState(l({}, f, e)));
 }
+
 function h() {
     let e = p.getState();
     a.default.track(
@@ -115,16 +121,23 @@ function h() {
     ),
         (0, i.r)(() => p.setState(l({}, f)));
 }
+
 function m(e) {
     (0, i.r)(() => {
         p.setState((t) => ({
-            incrementableActions: u(l({}, t.incrementableActions), { [e]: t.incrementableActions[e] + 1 }),
+            incrementableActions: u(l({}, t.incrementableActions), {
+                [e]: t.incrementableActions[e] + 1,
+            }),
         }));
     });
 }
+
 function g() {
-    return { channel_id: p.getState().channelId };
+    return {
+        channel_id: p.getState().channelId,
+    };
 }
+
 function E(e, t) {
     a.default.track(
         s.HAw.MEDIA_VIEWER_IMAGE_SAVED,
@@ -137,6 +150,7 @@ function E(e, t) {
         ),
     );
 }
+
 function b(e, t) {
     a.default.track(
         s.HAw.MEDIA_VIEWER_IMAGE_COPIED,
@@ -149,6 +163,7 @@ function b(e, t) {
         ),
     );
 }
+
 function y(e, t) {
     a.default.track(
         s.HAw.MEDIA_VIEWER_LINK_COPIED,
@@ -161,6 +176,15 @@ function y(e, t) {
         ),
     );
 }
+
 function O(e) {
-    a.default.track(s.HAw.MEDIA_VIEWER_LINK_OPENED, l({ href: e }, g()));
+    a.default.track(
+        s.HAw.MEDIA_VIEWER_LINK_OPENED,
+        l(
+            {
+                href: e,
+            },
+            g(),
+        ),
+    );
 }

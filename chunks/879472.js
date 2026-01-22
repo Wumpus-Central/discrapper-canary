@@ -1,4 +1,6 @@
-n.d(t, { w: () => m });
+n.d(t, {
+    w: () => m,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -10,6 +12,7 @@ var r = n(627968),
     d = n(713517),
     f = n(690521),
     p = n(328370);
+
 function _(e) {
     let { emoji: t, shouldAnimate: n } = e;
     if (null == t) return null;
@@ -22,6 +25,7 @@ function _(e) {
         shouldAnimate: n,
     });
 }
+
 function h(e) {
     let { trait: t, ellipsize: n } = e,
         a = i.useRef(null),
@@ -31,7 +35,9 @@ function h(e) {
         ? null
         : (0, r.jsxs)("div", {
               ref: a,
-              className: s()(p.Bj, { [p.mc]: n }),
+              className: s()(p.Bj, {
+                  [p.mc]: n,
+              }),
               children: [
                   (0, r.jsx)(_, {
                       emoji: t.emoji,
@@ -47,6 +53,7 @@ function h(e) {
               ],
           });
 }
+
 function m(e) {
     let { items: t } = e,
         n = i.useCallback(
@@ -55,7 +62,9 @@ function m(e) {
                     ? (0, r.jsx)(
                           "div",
                           {
-                              className: s()(p.Bj, { [p.mc]: t.ellipsize }),
+                              className: s()(p.Bj, {
+                                  [p.mc]: t.ellipsize,
+                              }),
                               children: (0, r.jsx)(l.Text, {
                                   tag: "span",
                                   variant: "text-sm/normal",
@@ -75,8 +84,20 @@ function m(e) {
                       ),
             [],
         ),
-        a = i.useCallback((e) => n(e, { ellipsize: !0 }), [n]),
-        o = i.useCallback((e) => n(e, { ellipsize: !1 }), [n]),
+        a = i.useCallback(
+            (e) =>
+                n(e, {
+                    ellipsize: !0,
+                }),
+            [n],
+        ),
+        o = i.useCallback(
+            (e) =>
+                n(e, {
+                    ellipsize: !1,
+                }),
+            [n],
+        ),
         c = i.useCallback(
             (e) =>
                 (0, r.jsx)(l.g2v, {

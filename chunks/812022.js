@@ -18,6 +18,7 @@ let m = [
         "https://cdn.discordapp.com/bad-domains/hashes.json",
     ],
     g = new f.n();
+
 function E(e) {
     let t = new URLSearchParams();
     t.append("query", '@http.x_client_trace_id:"'.concat(e, '"')), t.append("showAllSpans", "true");
@@ -25,6 +26,7 @@ function E(e) {
     return null == n ? null : n.toString();
 }
 let b = /\/api(\/v\d+)?\/science/;
+
 function y(e) {
     let t = 10;
     return e
@@ -34,6 +36,7 @@ function y(e) {
         )
         .join(",");
 }
+
 function O(e) {
     try {
         let t = new URL(e).pathname;
@@ -42,6 +45,7 @@ function O(e) {
         return b.test(e);
     }
 }
+
 function A(e, t) {
     return !1;
 }
@@ -119,7 +123,7 @@ function A(e, t) {
                     let n = "[FILTERED]";
                     if (m.includes(e.url)) {
                         var r, i;
-                        n = null == (i = e.xhr) || null == (r = i.responseText) ? void 0 : r.slice(0, 1000);
+                        n = null == (i = e.xhr) || null == (r = i.responseText) ? void 0 : r.slice(0, 1e3);
                     }
                     u.A.addBreadcrumb({
                         category: "superagent",
@@ -144,7 +148,9 @@ function A(e, t) {
                   })
                   .then((e) => {
                       let { captcha_key: n, captcha_rqtoken: r, captcha_session_id: i } = e,
-                          a = { "X-Captcha-Key": n };
+                          a = {
+                              "X-Captcha-Key": n,
+                          };
                       null != r && (a["X-Captcha-Rqtoken"] = r), null != i && (a["X-Captcha-Session-Id"] = i), t(a);
                   })
                   .catch(r),

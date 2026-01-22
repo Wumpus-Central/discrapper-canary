@@ -1,4 +1,6 @@
-n.d(t, { E: () => r });
+n.d(t, {
+    E: () => r,
+});
 var r = (function (e) {
     return (
         (e.GENERIC_SUBSCRIPTION = "api_generic_subscription"),

@@ -1,4 +1,7 @@
-n.d(t, { A: () => d }), n(896048);
+n.d(t, {
+    A: () => d,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(397927),
@@ -6,7 +9,8 @@ var r = n(627968),
     s = n(486020),
     o = n(188275),
     c = n(985018),
-    u = n(416000);
+    u = n(416e3);
+
 function d(e) {
     let { title: t, handleOpenCollectiblesShop: n, handleOpenGameShop: d, socialLayerStorefrontApplicationId: f } = e,
         p = l.useRef(null),

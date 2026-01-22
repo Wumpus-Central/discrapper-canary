@@ -1,8 +1,11 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(77729),
     i = n(626584),
     a = n(832213),
     s = n(837921);
+
 function o(e, t, n) {
     return (
         t in e
@@ -22,6 +25,7 @@ class c extends a.D {
         var e, t;
         let n = null === r.A || void 0 === r.A || null == (e = r.A.processUtils) ? void 0 : e.setMemoryInformation;
         if (null == n) return void l.log("setMemoryInformation not available.");
+
         function i(e) {
             return Math.ceil(e / 1024);
         }
@@ -34,7 +38,7 @@ class c extends a.D {
                     memoryUsageKB: null != (t = this.lastMemoryUsageKB) ? t : 0,
                     usedJSHeapSizeKB: i(a),
                 });
-            }, 10000);
+            }, 1e4);
     }
     getProcessUptime() {
         var e, t;

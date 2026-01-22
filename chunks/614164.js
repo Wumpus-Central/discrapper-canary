@@ -1,4 +1,10 @@
-n.d(t, { A: () => I }), n(896048), n(321073), n(864466), n(443073);
+n.d(t, {
+    A: () => I,
+}),
+    n(896048),
+    n(321073),
+    n(864466),
+    n(443073);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -22,6 +28,7 @@ var r = n(627968),
     A = n(985018),
     E = n(750730),
     N = n(261223);
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -47,6 +54,7 @@ function _(e) {
     }
     return e;
 }
+
 function S(e, t) {
     return t !== f.jO.AND
         ? Object.values(c().groupBy(e, (e) => "".concat(e.connectionType, ":").concat(e.applicationId)))
@@ -54,6 +62,7 @@ function S(e, t) {
           ? []
           : [[...e]];
 }
+
 function T(e) {
     let { handleAddVerificationClicked: t, locked: n } = e;
     return (0, r.jsxs)("div", {
@@ -82,6 +91,7 @@ function T(e) {
         ],
     });
 }
+
 function I(e) {
     let { guild: t, role: n, locked: l, setSelectedSection: a, integrations: c } = e,
         { headerHeight: I, headerRef: C } = (0, x.A)(0),
@@ -97,6 +107,7 @@ function I(e) {
         G = D.length > 1 ? f.jO.OR : f.jO.AND,
         L = i.useMemo(() => (G === f.jO.OR ? D.flat() : null != D && D.length > 0 ? D[0] : []), [G, D]),
         k = i.useMemo(() => new Set(L.map((e) => e.connectionType)), [L]);
+
     function M(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
             r = [...L];
@@ -109,6 +120,7 @@ function I(e) {
         }),
             (0, m.pn)(n.id, S(r, G));
     }
+
     function U() {
         u.h.dispatch({
             type: "CONNECTIONS_GRID_MODAL_SHOW",
@@ -281,13 +293,17 @@ function I(e) {
     }
     return (0, r.jsx)(d.GtU, {
         className: E.XG,
-        style: { scrollPaddingTop: I },
+        style: {
+            scrollPaddingTop: I,
+        },
         onScroll: w,
         children: (0, r.jsxs)("div", {
             className: N.Q,
             children: [
                 (0, r.jsx)("div", {
-                    className: s()(N.wx, N.ln, { [N.l6]: !P }),
+                    className: s()(N.wx, N.ln, {
+                        [N.l6]: !P,
+                    }),
                     ref: C,
                     children: (0, r.jsx)(j.A, {
                         guild: t,

@@ -1,4 +1,8 @@
-n.d(t, { A: () => T }), n(896048), n(228524);
+n.d(t, {
+    A: () => T,
+}),
+    n(896048),
+    n(228524);
 var r = n(627968),
     i = n(64700),
     l = n(284009),
@@ -24,6 +28,7 @@ var r = n(627968),
     N = n(985018),
     _ = n(941769);
 let S = (0, h.xI)(f.A.GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_OVERVIEW_SETTINGS_MAX_WIDTH);
+
 function T(e) {
     var t;
     let { guild: n, isGuildProducts: l = !1 } = e,
@@ -43,6 +48,7 @@ function T(e) {
         { loading: M, error: U, updateSubscriptionsSettings: F } = (0, j.KE)(),
         { imageCTA: B, imageAriaLabel: H, setFilename: V } = (0, y.A)(null == f ? void 0 : f.cover_image_asset),
         K = (0, b.GV)();
+
     function z(e, t) {
         s()(null != e, "Null value not allowed"), null != t && V(t.name), R(e);
     }
@@ -97,7 +103,9 @@ function T(e) {
                             type: "critical",
                             children: U.getAnyErrorMessage(),
                         }),
-                        (0, r.jsx)(g.hKd, { size: 16 }),
+                        (0, r.jsx)(g.hKd, {
+                            size: 16,
+                        }),
                     ],
                 }),
             l
@@ -134,7 +142,9 @@ function T(e) {
                                   },
                               ],
                           }),
-                          (0, r.jsx)(g.cGx, { className: _.yF }),
+                          (0, r.jsx)(g.cGx, {
+                              className: _.yF,
+                          }),
                       ],
                   }),
             (0, r.jsx)(g.fs1, {
@@ -147,7 +157,9 @@ function T(e) {
                 "aria-labelledby": K,
                 disabled: X,
             }),
-            (0, r.jsx)(g.cGx, { className: _.yF }),
+            (0, r.jsx)(g.cGx, {
+                className: _.yF,
+            }),
             (0, r.jsxs)(g.D0$, {
                 label: N.intl.string(N.t["0kpTpM"]),
                 description: N.intl.string(N.t.i2rCwT),
@@ -179,7 +191,9 @@ function T(e) {
             l
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, r.jsx)(g.cGx, { className: _.yF }),
+                          (0, r.jsx)(g.cGx, {
+                              className: _.yF,
+                          }),
                           (0, r.jsx)(g.l6P, {
                               label: N.intl.string(N.t.aaZ9pE),
                               description: N.intl.string(N.t.TILN8u),
@@ -196,7 +210,9 @@ function T(e) {
             Z.length > 0 &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, r.jsx)(g.cGx, { className: _.yF }),
+                        (0, r.jsx)(g.cGx, {
+                            className: _.yF,
+                        }),
                         (0, r.jsx)(g.l6P, {
                             label: N.intl.string(N.t["+dtmw+"]),
                             description: N.intl.string(N.t.n8WSWJ),

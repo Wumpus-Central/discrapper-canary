@@ -1,4 +1,7 @@
-n.d(t, { A: () => G }), n(896048);
+n.d(t, {
+    A: () => G,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -27,6 +30,7 @@ var r = n(627968),
     I = n(818348),
     N = n(985018),
     T = n(684205);
+
 function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -52,6 +56,7 @@ function P(e) {
     }
     return e;
 }
+
 function w(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -79,14 +84,18 @@ let R = l.memo(function (e) {
             });
         return (0, r.jsxs)(g.Ay, {
             toolbar: l,
-            className: a()(T.N1, { [T.X_]: n }),
+            className: a()(T.N1, {
+                [T.X_]: n,
+            }),
             children: [
                 (0, r.jsx)(g.Ay.Icon, {
                     icon: d.E7M,
                     disabled: !0,
                     "aria-label": N.intl.string(N.t.TYZgzW),
                 }),
-                (0, r.jsx)(g.Ay.Title, { children: N.intl.string(N.t.TYZgzW) }),
+                (0, r.jsx)(g.Ay.Title, {
+                    children: N.intl.string(N.t.TYZgzW),
+                }),
             ],
         });
     }),
@@ -97,7 +106,7 @@ let R = l.memo(function (e) {
             [O, x] = l.useState(s);
         (0, h.Ay)(() => {
             if (!O) return;
-            let e = setTimeout(() => x(!1), 1000);
+            let e = setTimeout(() => x(!1), 1e3);
             return () => clearTimeout(e);
         });
         let C = i.getGuildId();
@@ -112,7 +121,12 @@ let R = l.memo(function (e) {
                 null == R ? void 0 : R.userId,
                 null != (t = null == R ? void 0 : R.colorStrings) ? t : null,
             ),
-            M = l.useMemo(() => ({ [C]: [a.user.id] }), [C, a.user.id]);
+            M = l.useMemo(
+                () => ({
+                    [C]: [a.user.id],
+                }),
+                [C, a.user.id],
+            );
         (0, b.E)(M, "RequestToSpeakSidebar");
         let L = a.rtsState === _.zF.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK,
             G = (e) => {
@@ -254,6 +268,7 @@ let R = l.memo(function (e) {
             ],
         });
     });
+
 function G(e) {
     let { channel: t, toggleRequestToSpeakSidebar: n, chatOpen: l } = e,
         i = (0, x.J2)(t.id),
@@ -262,7 +277,9 @@ function G(e) {
             Math.max(1, i.length),
         ];
     return (0, r.jsxs)("div", {
-        className: a()(T.kL, { [T.X_]: l }),
+        className: a()(T.kL, {
+            [T.X_]: l,
+        }),
         children: [
             (0, r.jsx)(R, {
                 toggleRequestToSpeakSidebar: n,
@@ -288,7 +305,13 @@ function G(e) {
                     let { section: n, row: l } = e;
                     switch (n) {
                         case 0:
-                            return (0, r.jsx)(M, { channel: t }, "rts-toggle");
+                            return (0, r.jsx)(
+                                M,
+                                {
+                                    channel: t,
+                                },
+                                "rts-toggle",
+                            );
                         case 1: {
                             if (0 === i.length) return (0, r.jsx)(L, {}, "participants-empty");
                             let e = i[l];
@@ -316,7 +339,9 @@ function G(e) {
                                   color: "text-default",
                                   children:
                                       i.length > 0
-                                          ? N.intl.formatToPlainString(N.t["5z7q5a"], { numHands: i.length })
+                                          ? N.intl.formatToPlainString(N.t["5z7q5a"], {
+                                                numHands: i.length,
+                                            })
                                           : N.intl.string(N.t.TYZgzW),
                               },
                               "participants-section",

@@ -1,4 +1,7 @@
-n.d(t, { A: () => c }), n(228524);
+n.d(t, {
+    A: () => c,
+}),
+    n(228524);
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -26,7 +29,9 @@ let c = (e) => {
                     (0, r.jsx)(s.Heading, {
                         variant: "heading-md/bold",
                         className: l.wx,
-                        children: (0, r.jsx)(s.Fmo, { children: i }),
+                        children: (0, r.jsx)(s.Fmo, {
+                            children: i,
+                        }),
                     }),
                     (0, r.jsx)(s.Text, {
                         variant: "text-sm/medium",

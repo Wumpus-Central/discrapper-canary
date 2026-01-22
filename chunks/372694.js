@@ -1,4 +1,6 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var l = n(627968),
     a = n(64700),
     r = n(158954),
@@ -11,6 +13,7 @@ var l = n(627968),
     p = n(985018),
     h = n(504724),
     m = n(500226);
+
 function b(e) {
     let { application: t, carouselItems: n } = e,
         b = (0, i.bG)([d.A], () => d.A.isFocused()),
@@ -64,7 +67,7 @@ function b(e) {
               className: h.D,
               themedPagination: !0,
               items: n,
-              autoplayInterval: 8000,
+              autoplayInterval: 8e3,
               paused: !b,
               videoAutoPlay: !0,
               onCurrentItemClick: g,

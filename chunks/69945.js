@@ -1,10 +1,13 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(734057),
     i = n(576705),
     a = n(287809),
     s = n(927578),
     o = n(980504),
     l = n(818348);
+
 function c(e, t, n) {
     let c = r.A.getChannel(n);
     if (

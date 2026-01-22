@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -6,6 +8,7 @@ var r = n(627968),
     o = n(974875),
     l = n(900819),
     c = n(985018);
+
 function u(e) {
     let { messageId: t, channelId: n } = e,
         u = (0, a.bG)([l.A], () => l.A.canSubmitFpReport(t)),

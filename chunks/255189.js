@@ -1,4 +1,6 @@
-r.d(t, { default: () => y });
+r.d(t, {
+    default: () => y,
+});
 var n = r(627968),
     a = r(64700),
     o = r(397927),
@@ -10,6 +12,7 @@ var n = r(627968),
     b = r(652215),
     i = r(670455),
     p = r(985018);
+
 function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +39,7 @@ function s(e) {
     return e;
 }
 let O = [d.G.OTHER];
+
 function y(e) {
     let { reportId: t, reportType: y } = e,
         g = (function (e, t) {
@@ -106,7 +110,16 @@ function y(e) {
                                 null != c &&
                                 (0, o.mMO)(async () => {
                                     let { default: e } = await r.e("37836").then(r.bind(r, 845671));
-                                    return (t) => (0, n.jsx)(e, s({ body: p.intl.string(p.t["d9+vQ8"]) }, t));
+                                    return (t) =>
+                                        (0, n.jsx)(
+                                            e,
+                                            s(
+                                                {
+                                                    body: p.intl.string(p.t["d9+vQ8"]),
+                                                },
+                                                t,
+                                            ),
+                                        );
                                 });
                     },
                     otherKey: d.G.OTHER,

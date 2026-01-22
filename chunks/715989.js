@@ -1,4 +1,6 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 var r = n(627968),
     l = n(837921),
     i = n(651761);
@@ -8,11 +10,21 @@ let a = l.Ay.getEnableHardwareAcceleration()
               children: (0, r.jsxs)("div", {
                   className: i.pm,
                   children: [
-                      (0, r.jsx)("div", { className: i.M }),
-                      (0, r.jsx)("div", { className: i.CB }),
-                      (0, r.jsx)("div", { className: i.d4 }),
-                      (0, r.jsx)("div", { className: i.Vh }),
-                      (0, r.jsx)("div", { className: i.KF }),
+                      (0, r.jsx)("div", {
+                          className: i.M,
+                      }),
+                      (0, r.jsx)("div", {
+                          className: i.CB,
+                      }),
+                      (0, r.jsx)("div", {
+                          className: i.d4,
+                      }),
+                      (0, r.jsx)("div", {
+                          className: i.Vh,
+                      }),
+                      (0, r.jsx)("div", {
+                          className: i.KF,
+                      }),
                   ],
               }),
           });

@@ -1,4 +1,6 @@
-e.d(t, { default: () => m });
+e.d(t, {
+    default: () => m,
+});
 var l = e(627968),
     i = e(189213),
     n = e(397927),
@@ -11,6 +13,7 @@ var l = e(627968),
     h = e(985018),
     u = e(620944),
     x = e(206314);
+
 function m(a) {
     var t, e;
     let { channel: m, guild: b, onClose: v, transitionState: f } = a,
@@ -34,13 +37,17 @@ function m(a) {
                 selectable: !0,
                 variant: "text-md/normal",
                 className: x.PT,
-                children: o.A.parseTopic(m.topic, !0, { channelId: m.id }),
+                children: o.A.parseTopic(m.topic, !0, {
+                    channelId: m.id,
+                }),
             }),
             null != k
                 ? (0, l.jsxs)("div", {
                       className: u.a6,
                       children: [
-                          (0, l.jsx)(n.fNY, { className: u.NB }),
+                          (0, l.jsx)(n.fNY, {
+                              className: u.NB,
+                          }),
                           (0, l.jsx)(n.Text, {
                               variant: "text-sm/normal",
                               color: "text-default",

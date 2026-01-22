@@ -1,4 +1,7 @@
-n.d(t, { A: () => m }), n(896048);
+n.d(t, {
+    A: () => m,
+}),
+    n(896048);
 var r = n(827343),
     i = n(439372),
     a = n(49463),
@@ -8,6 +11,7 @@ var r = n(827343),
     c = n(383501),
     u = n(504292),
     d = n(996744);
+
 function f(e, t, n) {
     return (
         t in e
@@ -21,18 +25,26 @@ function f(e, t, n) {
         e
     );
 }
+
 function p() {
     return (0, d.Lb)({
         location: "VoiceFilterLoopbackManager",
         autoTrackExposure: !1,
     });
 }
+
 function _() {
     if (!p() || !l.A.getVoiceFilterPlaybackEnabled() || !c.A.isConnected() || null == l.A.getActiveVoiceFilter())
         return !1;
     let e = c.A.getChannelId(),
         t = null != e ? o.A.getChannel(e) : null,
-        { mute: n, selfMute: r, suppress: i } = (0, s.k)({ channel: t });
+        {
+            mute: n,
+            selfMute: r,
+            suppress: i,
+        } = (0, s.k)({
+            channel: t,
+        });
     return !(n || r || i);
 }
 class h extends i.A {

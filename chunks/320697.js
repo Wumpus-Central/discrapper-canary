@@ -1,4 +1,12 @@
-n.d(t, { A: () => eb }), n(114821), n(339614), n(321073), n(896048), n(638769), n(839272);
+n.d(t, {
+    A: () => eb,
+}),
+    n(114821),
+    n(339614),
+    n(321073),
+    n(896048),
+    n(638769),
+    n(839272);
 var r,
     i = n(284009),
     a = n.n(i),
@@ -26,6 +34,7 @@ var r,
     C = n(849077),
     N = n(652215),
     R = n(37411);
+
 function w(e, t, n) {
     return (
         t in e
@@ -52,6 +61,7 @@ let P = {},
     F = null,
     B = null,
     H = !0;
+
 function Y() {
     let e = y.Ay.getFlattenedGuildIds().flatMap((e) => g.Ay.getSelectableChannelIds(e)),
         t = d.A.getAllActiveJoinedThreads(),
@@ -92,6 +102,7 @@ function Y() {
             },
         );
 }
+
 function W(e) {
     var t;
     if (!E.A.isReady(e)) return;
@@ -107,6 +118,7 @@ function W(e) {
             r
         );
 }
+
 function K() {
     if (null == D) {
         G = v.default.fromTimestamp(Date.now());
@@ -121,6 +133,7 @@ function K() {
     }
     G = "0";
 }
+
 function z() {
     let { notifyingChannelIds: e, staleChannelIds: t } = Y();
     (D = e), (x = t), a()(null != D, "notifyingChannelIds should not be null");
@@ -146,6 +159,7 @@ function z() {
         }
     L.updateChannelIds(D), K();
 }
+
 function q() {
     (P = {}),
         (D = null),
@@ -160,6 +174,7 @@ function q() {
         (B = null),
         (F = null);
 }
+
 function X() {
     var e, t, n;
     for (let e of (z(), null != D ? D : [])) {
@@ -183,17 +198,21 @@ function X() {
         }),
     );
 }
+
 function Z() {
     q(), X();
 }
+
 function Q() {
     q();
 }
+
 function $(e) {
     if (e instanceof h.Ay) return e;
     let t = E.A.getMessage(e.channel_id, e.id);
     return null != t ? t : (0, c.rh)(e);
 }
+
 function J(e) {
     var t, n, r;
     let { channelId: i, message: a } = e;
@@ -219,6 +238,7 @@ function J(e) {
         message: o,
     });
 }
+
 function ee(e) {
     let { channelId: t } = e;
     if (!(null == D ? void 0 : D.includes(t))) return !1;
@@ -227,6 +247,7 @@ function ee(e) {
     let r = n.length >= C.EM || (n.hasFetched && !n.hasMoreBefore);
     P[t].loadState !== C.Ve.LOADED && (P[t].loadState = r ? C.Ve.LOADED : C.Ve.LOADED_UNREAD), K();
 }
+
 function et(e) {
     let { messages: t } = e;
     if (0 === t.length) return !1;
@@ -245,21 +266,26 @@ function et(e) {
         }),
     );
 }
+
 function en(e) {
     let { id: t } = e;
     return L.deleteMessages([t]);
 }
+
 function er(e) {
     let { ids: t } = e;
     return L.deleteMessages(t);
 }
+
 function ei() {
     j = !0;
 }
+
 function ea(e) {
     let { preload: t, hasMoreToLoad: n, analyticsPayload: r } = e;
     (j = !1), t ? (U = !0) : (null != n && (V = n), (k = !0)), (B = null != r ? r : null);
 }
+
 function es(e) {
     var t;
     let { preload: n } = e;
@@ -279,12 +305,16 @@ function es(e) {
         V
     );
 }
+
 function eo() {
     (j = !1), (B = null), (M = !0);
 }
+
 function el(e) {
     let { messageId: t, channelId: n, isUnread: r } = e,
-        i = (0, S.GE)({ location: "handleInboxItemClick" }).notificationCenterVariant;
+        i = (0, S.GE)({
+            location: "handleInboxItemClick",
+        }).notificationCenterVariant;
     F =
         r && i === S.U5.SIDEBAR
             ? {
@@ -293,6 +323,7 @@ function el(e) {
               }
             : null;
 }
+
 function ec(e) {
     let { channelId: t, messageId: n } = e;
     (0, I.zo)(
@@ -303,23 +334,28 @@ function ec(e) {
         F,
     ) && (F = null);
 }
+
 function eu() {
     M = !1;
 }
+
 function ed() {
     F = null;
 }
+
 function ef(e) {
     let { channel: t } = e;
     if (O.Ay.allowNoMessages(t)) return !1;
     Z();
 }
+
 function ep(e) {
     var t;
     let { userId: n } = e;
     if (n !== (null == (t = A.default.getCurrentUser()) ? void 0 : t.id)) return !1;
     Z();
 }
+
 function e_(e) {
     var t;
     let { id: n, addedMembers: r, removedMemberIds: i } = e,
@@ -331,16 +367,19 @@ function e_(e) {
     }
     return null != i && !!i.includes(a) && void Z();
 }
+
 function eh(e) {
     let { channel: t } = e;
     if (!L.getMessages().some((e) => e.channelId === t.id)) return !1;
     Z();
 }
+
 function em(e) {
     let { guild: t } = e;
     if (!L.getMessages().some((e) => e.guildId === t.id)) return !1;
     Z();
 }
+
 function eg(e) {
     let { navOnClick: t } = e;
     H = null == t || t;
@@ -351,7 +390,9 @@ class eE extends (r = s.Ay.Store) {
     }
     canLoadMore(e) {
         let { preload: t } = e;
-        return es({ preload: t });
+        return es({
+            preload: t,
+        });
     }
     getInboxMessages() {
         return L.getMessages();
@@ -387,7 +428,9 @@ class eE extends (r = s.Ay.Store) {
         return B;
     }
     getDevOverrides() {
-        return { navOnClick: H };
+        return {
+            navOnClick: H,
+        };
     }
 }
 w(eE, "displayName", "NotificationsInboxStore");

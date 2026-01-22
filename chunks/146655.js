@@ -1,4 +1,7 @@
-n.d(t, { A: () => y }), n(896048);
+n.d(t, {
+    A: () => y,
+}),
+    n(896048);
 var r = n(64700),
     i = n(735438),
     a = n(311907),
@@ -16,8 +19,11 @@ var r = n(64700),
     g = n(652215);
 let E = [],
     b = [];
+
 function y(e) {
-    let { recentActivityTabEnabled: t } = (0, m.s)({ location: "useUserProfileActivity" }),
+    let { recentActivityTabEnabled: t } = (0, m.s)({
+            location: "useUserProfileActivity",
+        }),
         n = (0, a.bG)([f.default], () => f.default.getId() === e),
         y = (0, s.A)(e),
         O = (0, a.bG)([_.A], () => _.A.getActivities(e)),

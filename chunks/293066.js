@@ -1,8 +1,12 @@
 let r;
-n.d(t, { A: () => h }), n(321073);
+n.d(t, {
+    A: () => h,
+}),
+    n(321073);
 var i,
     a = n(311907),
     s = n(73153);
+
 function o(e, t, n) {
     return (
         t in e
@@ -16,6 +20,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -32,6 +37,7 @@ function l(e) {
     }
     return e;
 }
+
 function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -44,6 +50,7 @@ function c(e, t) {
     }
     return n;
 }
+
 function u(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -59,9 +66,11 @@ let d = {
     hasAcceptedStoreTerms: !1,
     hasAcceptedEulaIds: [],
 };
+
 function f() {
     r.hasAcceptedStoreTerms = !0;
 }
+
 function p(e) {
     let { eulaId: t } = e;
     if (r.hasAcceptedEulaIds.includes(t)) return !1;
@@ -83,7 +92,14 @@ class _ extends (i = a.Ay.PersistedStore) {
 }
 o(_, "displayName", "ApplicationStoreUserSettingsStore"),
     o(_, "persistKey", "ApplicationStoreUserSettingsStore"),
-    o(_, "migrations", [(e) => (null == e.hasAcceptedEulaIds ? u(l({}, e), { hasAcceptedEulaIds: [] }) : e)]);
+    o(_, "migrations", [
+        (e) =>
+            null == e.hasAcceptedEulaIds
+                ? u(l({}, e), {
+                      hasAcceptedEulaIds: [],
+                  })
+                : e,
+    ]);
 let h = new _(s.h, {
     APPLICATION_STORE_ACCEPT_STORE_TERMS: f,
     APPLICATION_STORE_ACCEPT_EULA: p,

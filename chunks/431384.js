@@ -1,4 +1,6 @@
-r.d(t, { A: () => O });
+r.d(t, {
+    A: () => O,
+});
 var a = r(26412),
     n = r(658),
     s = r(527758),
@@ -15,6 +17,7 @@ var a = r(26412),
     y = r(770237),
     g = r(380883),
     v = r(257341);
+
 function m(e, t) {
     var r = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -27,6 +30,7 @@ function m(e, t) {
     }
     return r;
 }
+
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {};
@@ -42,8 +46,11 @@ function A(e) {
     }
     return e;
 }
+
 function w(e) {
-    return { expanded: !e.isCircular && e.shouldExpandNode(e.keyPath, e.data, e.level) };
+    return {
+        expanded: !e.isCircular && e.shouldExpandNode(e.keyPath, e.data, e.level),
+    };
 }
 var O = (function (e) {
     (0, o.A)(d, e);
@@ -66,13 +73,17 @@ var O = (function (e) {
                     (0, i.A)(this, e)
                 );
             });
+
     function d(e) {
         var t;
         return (
             (0, a.A)(this, d),
             (t = r.call(this, e)),
             (0, l.A)((0, s.A)(t), "handleClick", function () {
-                t.props.expandable && t.setState({ expanded: !t.state.expanded });
+                t.props.expandable &&
+                    t.setState({
+                        expanded: !t.state.expanded,
+                    });
             }),
             (t.state = w(e)),
             t
@@ -165,7 +176,15 @@ var O = (function (e) {
                                           }),
                                           h
                                       );
-                                  })(A(A({}, this.props), {}, { level: this.props.level + 1 }))
+                                  })(
+                                      A(
+                                          A({}, this.props),
+                                          {},
+                                          {
+                                              level: this.props.level + 1,
+                                          },
+                                      ),
+                                  )
                                 : null,
                         O = t(a, n, f.createElement("span", i("nestedNodeItemType", m), r), o(n, c), l),
                         k = [l, a, m, h];

@@ -1,4 +1,6 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(627968);
 n(64700);
 var i = n(990078),
@@ -14,11 +16,15 @@ let s = Math.ceil(2 * Math.PI * 20),
             p = Math.max(0, Math.min(1, d / u)),
             f = "".concat(Math.floor(100 * p), "%");
         return (0, r.jsx)(i.m, {
-            text: l.intl.formatToPlainString(l.t["2eoRMh"], { used: f }),
+            text: l.intl.formatToPlainString(l.t["2eoRMh"], {
+                used: f,
+            }),
             children: (0, r.jsxs)("div", {
                 className: a.iE,
                 role: "progressbar",
-                "aria-label": l.intl.formatToPlainString(l.t["2eoRMh"], { used: f }),
+                "aria-label": l.intl.formatToPlainString(l.t["2eoRMh"], {
+                    used: f,
+                }),
                 children: [
                     (0, r.jsxs)("svg", {
                         viewBox: "25 25 50 50",

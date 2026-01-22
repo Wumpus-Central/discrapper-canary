@@ -5,6 +5,7 @@ n.d(t, {
 });
 var r = n(317097),
     i = n(652215);
+
 function a(e) {
     return {
         primaryColor: 0 === e.primary_color ? i.TpD : (0, r.Hl)(e.primary_color),
@@ -12,6 +13,7 @@ function a(e) {
         tertiaryColor: null == e.tertiary_color ? null : (0, r.Hl)(e.tertiary_color),
     };
 }
+
 function s(e) {
     return (
         null != e &&
@@ -20,6 +22,7 @@ function s(e) {
         null != e.colorStrings.secondaryColor
     );
 }
+
 function o(e) {
     let t = 0 === e.color,
         n =

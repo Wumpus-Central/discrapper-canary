@@ -1,4 +1,6 @@
-n.d(t, { default: () => I });
+n.d(t, {
+    default: () => I,
+});
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -112,21 +114,31 @@ let I = (0, c.A)(
                                 V &&
                                     (0, r.jsxs)(r.Fragment, {
                                         children: [
-                                            (0, r.jsx)(a.rXV, { children: X }),
+                                            (0, r.jsx)(a.rXV, {
+                                                children: X,
+                                            }),
                                             (0, r.jsxs)(a.rXV, {
                                                 children: [q, Q],
                                             }),
                                         ],
                                     }),
                                 null != D ? Z : null,
-                                w && null != $ ? (0, r.jsx)(a.rXV, { children: $ }) : null,
+                                w && null != $
+                                    ? (0, r.jsx)(a.rXV, {
+                                          children: $,
+                                      })
+                                    : null,
                             ],
                         }),
-                    (0, r.jsx)(a.rXV, { children: z }),
+                    (0, r.jsx)(a.rXV, {
+                        children: z,
+                    }),
                 ],
             });
         },
-        { object: P.ZSU.CONTEXT_MENU },
+        {
+            object: P.ZSU.CONTEXT_MENU,
+        },
     ),
     [d.A.CONTEXT_MENU, d.A.GUILD_MODERATION_USER_MENU],
 );

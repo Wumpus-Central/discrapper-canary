@@ -1,4 +1,9 @@
-s.d(t, { Ay: () => k }), s(896048), s(228524), s(321073);
+s.d(t, {
+    Ay: () => k,
+}),
+    s(896048),
+    s(228524),
+    s(321073);
 var i = s(627968),
     a = s(64700),
     l = s(503698),
@@ -24,6 +29,7 @@ var i = s(627968),
     A = s(556011),
     S = s(469961),
     w = s(172944);
+
 function O(e) {
     let { numOfSelectedUsers: t, anySelected: s } = e,
         a = (0, g.A)({
@@ -35,7 +41,9 @@ function O(e) {
             (0, i.jsxs)("div", {
                 className: v.DD,
                 children: [
-                    (0, i.jsx)(M, { className: v.oc }),
+                    (0, i.jsx)(M, {
+                        className: v.oc,
+                    }),
                     (0, i.jsx)(x.Heading, {
                         variant: "heading-xl/bold",
                         children: y.intl.string(y.t.Lm2nFc),
@@ -51,6 +59,7 @@ function O(e) {
         ],
     });
 }
+
 function N() {
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -70,6 +79,7 @@ function N() {
         ],
     });
 }
+
 function F() {
     return (0, i.jsx)("div", {
         className: v.JM,
@@ -80,6 +90,7 @@ function F() {
         }),
     });
 }
+
 function E(e) {
     let { onClose: t } = e;
     return (0, i.jsxs)("div", {
@@ -126,6 +137,7 @@ function E(e) {
         ],
     });
 }
+
 function U(e) {
     let { onShare: t } = e,
         s = (0, c.bG)([_.A], () => _.A.getRecipientStatus()),
@@ -153,7 +165,9 @@ function U(e) {
                         (0, i.jsxs)("div", {
                             className: v.DD,
                             children: [
-                                (0, i.jsx)(M, { className: v.oc }),
+                                (0, i.jsx)(M, {
+                                    className: v.oc,
+                                }),
                                 (0, i.jsx)(x.Heading, {
                                     variant: "heading-xl/bold",
                                     children: y.intl.string(y.t.SY9tyI),
@@ -206,6 +220,7 @@ function U(e) {
         })
     );
 }
+
 function M(e) {
     let { className: t } = e;
     return "light" === (0, c.bG)([f.A], () => f.A.theme)
@@ -244,8 +259,14 @@ let k = function (e) {
     let G = (0, d.K)((e) => {
         e && !k && w();
     });
-    if (M) return (0, i.jsx)(E, { onClose: t });
-    if (0 === l) return (0, i.jsx)(U, { onShare: s });
+    if (M)
+        return (0, i.jsx)(E, {
+            onClose: t,
+        });
+    if (0 === l)
+        return (0, i.jsx)(U, {
+            onShare: s,
+        });
     let D = f.length > 0 && 0 === S.length;
     return (0, i.jsxs)("div", {
         children: [
@@ -313,7 +334,9 @@ let k = function (e) {
                               ),
                           ),
                           k && (0, i.jsx)(x.y$y, {}),
-                          (0, i.jsx)("div", { ref: G }),
+                          (0, i.jsx)("div", {
+                              ref: G,
+                          }),
                       ],
                   }),
             (0, i.jsx)("div", {

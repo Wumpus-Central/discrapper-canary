@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968);
 n(64700);
 var i = n(681154),
@@ -8,6 +10,7 @@ var i = n(681154),
     o = n(287809),
     c = n(985018),
     u = n(707934);
+
 function d(e) {
     let { item: t } = e,
         n = "contentInventory" === t.data.kind ? t.data.content : null,

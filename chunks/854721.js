@@ -1,4 +1,8 @@
-t.r(l), t.d(l, { default: () => T }), t(747238);
+t.r(l),
+    t.d(l, {
+        default: () => T,
+    }),
+    t(747238);
 var n = t(627968),
     a = t(64700),
     s = t(503698),
@@ -25,6 +29,7 @@ var n = t(627968),
     S = t(542533),
     N = t(652215),
     L = t(332217);
+
 function R(e) {
     let { storefront: l, guildId: t, selectedPageIndex: s, selectedSku: i } = e,
         d = (0, m.jM)(),
@@ -74,6 +79,7 @@ function R(e) {
         })
     );
 }
+
 function T(e) {
     var l, t, s, g, k;
     let { match: j } = e,
@@ -113,7 +119,16 @@ function T(e) {
         null != E && (0, b.SP)(E, Y, null != N ? N : null);
     }, [E, Y, N]),
     a.useEffect(() => {
-        null == E || null == y || (null == x.A.getGuild(E) && (0, A.Z2)(E, {}, { shouldNavigate: !1 }));
+        null == E ||
+            null == y ||
+            (null == x.A.getGuild(E) &&
+                (0, A.Z2)(
+                    E,
+                    {},
+                    {
+                        shouldNavigate: !1,
+                    },
+                ));
     }, [E, y]),
     null == E || (null == C ? void 0 : C.storefront) == null)
         ? (0, n.jsx)("div", {

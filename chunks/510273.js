@@ -1,9 +1,13 @@
-r.r(t), r.d(t, { default: () => N }), r(896048);
+r.r(t),
+    r.d(t, {
+        default: () => N,
+    }),
+    r(896048);
 var n = r(627968),
     i = r(64700),
     s = r(284009),
     a = r.n(s),
-    l = r(432022),
+    l = r(108531),
     o = r(575593),
     c = r(334279),
     u = r(417597),
@@ -21,6 +25,7 @@ var n = r(627968),
     x = r(743102),
     P = r(497451),
     w = r(241988);
+
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
@@ -54,7 +59,9 @@ let S = (e) => {
                 return a()(null != e, "User cannot be undefined"), e;
             }),
             b = Object.values(c.j).includes(t.skuId),
-            E = (0, p.A)({ location: "CollectiblesProductPreview" });
+            E = (0, p.A)({
+                location: "CollectiblesProductPreview",
+            });
         if (t.type === o.R.PROFILE_EFFECT)
             return (0, n.jsx)("div", {
                 className: v.NM,
@@ -97,14 +104,18 @@ let S = (e) => {
                     return (0, n.jsx)("img", {
                         src: E ? w : P,
                         alt: O.intl.string(O.t.t0xkSB),
-                        style: { width: "100%" },
+                        style: {
+                            width: "100%",
+                        },
                     });
                 else
                     return (0, n.jsx)("img", {
                         src: x,
                         alt: O.intl.string(O.t.g5W1g8),
                     });
-            return (0, n.jsx)(m.B, { product: t });
+            return (0, n.jsx)(m.B, {
+                product: t,
+            });
         }
         return null;
     },
@@ -120,7 +131,9 @@ let S = (e) => {
                     transform: "translateX(50%)",
                     right: "50%",
                 },
-                config: { duration: 1550 },
+                config: {
+                    duration: 1550,
+                },
                 onRest: () => setTimeout(() => a(!0), 100),
             }),
             c = (0, d.zhh)({
@@ -132,7 +145,9 @@ let S = (e) => {
                     transform: "translateX(50%)",
                     right: "50%",
                 },
-                config: { duration: 1550 },
+                config: {
+                    duration: 1550,
+                },
                 reverse: s,
             }),
             u = (0, d.zhh)(
@@ -147,7 +162,9 @@ let S = (e) => {
                         right: "50%",
                         opacity: 0,
                     },
-                    config: { duration: 300 },
+                    config: {
+                        duration: 300,
+                    },
                     delay: 600,
                 },
                 "animate-always",
@@ -172,6 +189,7 @@ let S = (e) => {
             ],
         });
     };
+
 function N(e) {
     var t, r;
     let i = (0, b.K9)(e.product.categorySkuId);
@@ -179,7 +197,10 @@ function N(e) {
         ? (0, n.jsx)(
               k,
               ((t = E({}, e)),
-              (r = r = { displayOptions: i }),
+              (r = r =
+                  {
+                      displayOptions: i,
+                  }),
               Object.getOwnPropertyDescriptors
                   ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
                   : (function (e, t) {

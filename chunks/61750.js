@@ -1,8 +1,11 @@
-n.d(t, { A: () => l });
+n.d(t, {
+    A: () => l,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
     a = n(758836);
+
 function s(e, t, n) {
     return (
         t in e
@@ -16,6 +19,7 @@ function s(e, t, n) {
         e
     );
 }
+
 function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -86,6 +90,8 @@ let l = (e) => {
                     ),
                 );
         },
-        { onCloseCallback: d },
+        {
+            onCloseCallback: d,
+        },
     );
 };

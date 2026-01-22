@@ -13,6 +13,7 @@ var r = n(562465),
     s = n(871123),
     o = n(832163),
     l = n(652215);
+
 function c(e, t, n) {
     return (
         t in e
@@ -26,6 +27,7 @@ function c(e, t, n) {
         e
     );
 }
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,6 +44,7 @@ function u(e) {
     }
     return e;
 }
+
 function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -54,6 +57,7 @@ function d(e, t) {
     }
     return n;
 }
+
 function f(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -146,6 +150,7 @@ async function E(e, t) {
         });
     }
 }
+
 function b(e, t, n) {
     i.h.dispatch({
         type: "SET_SOCIAL_LAYER_STOREFRONT_STATE",
@@ -180,10 +185,18 @@ async function y(e) {
                 o = (0, s.ty)(e.body);
             return (
                 i.h.dispatch(
-                    f(u({ type: "SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_FETCH_SUCCESS" }, o), {
-                        userIds: n,
-                        numItemsRequested: a,
-                    }),
+                    f(
+                        u(
+                            {
+                                type: "SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_FETCH_SUCCESS",
+                            },
+                            o,
+                        ),
+                        {
+                            userIds: n,
+                            numItemsRequested: a,
+                        },
+                    ),
                 ),
                 o
             );

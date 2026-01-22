@@ -1,4 +1,6 @@
-n.d(t, { q: () => s });
+n.d(t, {
+    q: () => s,
+});
 var r = n(846293),
     i = n(142120),
     l = n(970163),
@@ -16,5 +18,8 @@ async function s(e) {
     )
         return;
     let { default: o } = await Promise.resolve().then(n.bind(n, 967305));
-    await o({ guildId: s.guild.id }), r.Ay.transitionToInvite(s, void 0, !0);
+    await o({
+        guildId: s.guild.id,
+    }),
+        r.Ay.transitionToInvite(s, void 0, !0);
 }

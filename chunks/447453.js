@@ -1,15 +1,18 @@
-n.d(t, { S: () => _ });
+n.d(t, {
+    S: () => _,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
-    o = n(432022),
+    o = n(108531),
     l = n(311907),
     c = n(397927),
     u = n(775602),
     d = n(425763),
     f = n(985018),
     p = n(14949);
+
 function _(e) {
     let { className: t } = e,
         n = [
@@ -76,7 +79,11 @@ function _(e) {
                                               e,
                                           ),
                                       ),
-                                      t < n.length - 1 ? (0, r.jsx)("span", { className: p.me }) : null,
+                                      t < n.length - 1
+                                          ? (0, r.jsx)("span", {
+                                                className: p.me,
+                                            })
+                                          : null,
                                   ],
                               },
                               s,

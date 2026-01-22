@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var a = n(627968),
     l = n(64700),
     i = n(503698),
@@ -10,6 +12,7 @@ var a = n(627968),
     u = n(963713),
     m = n(985018),
     p = n(729836);
+
 function h() {
     let { quest: e, onCtxMenuOpen: t, onCtxMenuClose: n, onCtxMenuSelect: i } = l.useContext(u.T),
         h = (0, c.S5)(e.config.expiresAt);
@@ -19,7 +22,9 @@ function h() {
             (0, a.jsx)(s.Text, {
                 variant: "text-xxs/medium",
                 className: r()(p.Uu, p.TK),
-                children: m.intl.format(m.t["pX+fmn"], { expirationDate: h }),
+                children: m.intl.format(m.t["pX+fmn"], {
+                    expirationDate: h,
+                }),
             }),
             (0, a.jsx)(d.C, {
                 onOpen: t,

@@ -15,6 +15,7 @@ var r = n(64700),
     s = n(904813),
     c = n(411335),
     E = n(652215);
+
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -40,6 +41,7 @@ function A(e) {
     }
     return e;
 }
+
 function g(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -74,7 +76,11 @@ let S = {},
                 d = f ? O.map((e) => (e.id === u ? n : e)) : [...O, n];
             (0, a.r)(() => {
                 e({
-                    rules: g(A({}, c), { [i]: g(A({}, E), { [o]: d }) }),
+                    rules: g(A({}, c), {
+                        [i]: g(A({}, E), {
+                            [o]: d,
+                        }),
+                    }),
                     error: null,
                 });
             });
@@ -90,7 +96,9 @@ let S = {},
                 }, {});
             (0, a.r)(() => {
                 e({
-                    rules: g(A({}, l), { [r]: u }),
+                    rules: g(A({}, l), {
+                        [r]: u,
+                    }),
                     error: null,
                 });
             });
@@ -98,7 +106,7 @@ let S = {},
         syncRules: async (n) => {
             var r, l;
             let i;
-            if (((i = Date.now()), i - (null != (r = S[n]) ? r : 0) > 20000)) {
+            if (((i = Date.now()), i - (null != (r = S[n]) ? r : 0) > 2e4)) {
                 S[n] = Date.now();
                 try {
                     let r,
@@ -121,14 +129,18 @@ let S = {},
                         u = t().rules;
                     (0, a.r)(() => {
                         e({
-                            rules: g(A({}, u), { [n]: i }),
+                            rules: g(A({}, u), {
+                                [n]: i,
+                            }),
                             error: null,
                         });
                     });
                 } catch (n) {
                     let t = new u.LG(n);
                     (0, a.r)(() => {
-                        e({ error: t });
+                        e({
+                            error: t,
+                        });
                     });
                 }
             }
@@ -138,6 +150,7 @@ let S = {},
         var n, r;
         return (null != (n = null == (r = f.getState().rules[e]) ? void 0 : r[t]) ? n : []).length;
     };
+
 function d(e) {
     let [t, n] = r.useState(!1),
         [i, a] = f((e) => [e.syncRules, e.fetching], l.x);
@@ -153,6 +166,7 @@ function d(e) {
         }, [e, a, i]),
     ];
 }
+
 function p(e) {
     let [t, n] = d(e);
     return (
@@ -164,6 +178,7 @@ function p(e) {
         [t, n]
     );
 }
+
 function h(e) {
     return f((t) => {
         var n;

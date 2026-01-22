@@ -6,6 +6,7 @@ n.d(t, {
 var r = n(156872),
     i = n(636014),
     a = 1;
+
 function s(e) {
     var t = e.nodeType === a ? e : e.parentElement;
     if (!t) return null;
@@ -16,16 +17,19 @@ function s(e) {
         y: r,
     };
 }
+
 function o(e) {
     return {
         x: e.clientX,
         y: e.clientY,
     };
 }
+
 function l(e) {
     var t;
     return "IMG" === e.nodeName && ((0, r.g)() || !(null != (t = document.documentElement) && t.contains(e)));
 }
+
 function c(e, t, n, i) {
     var a = e ? t.width : n,
         s = e ? t.height : i;
@@ -37,6 +41,7 @@ function c(e, t, n, i) {
         }
     );
 }
+
 function u(e, t, n, a, o) {
     var u = l(t),
         d = s(u ? e : t),

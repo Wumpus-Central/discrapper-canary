@@ -1,4 +1,6 @@
-n.d(t, { Ts: () => E });
+n.d(t, {
+    Ts: () => E,
+});
 var r = n(141931),
     i = n(506774),
     a = n(430452),
@@ -8,6 +10,7 @@ var r = n(141931),
     c = n(837921),
     u = n(98919),
     d = n(652215);
+
 function f(e, t, n) {
     return (
         t in e
@@ -21,6 +24,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -39,6 +43,7 @@ function p(e) {
 }
 let _ = window.DiscordNative,
     h = "".concat(d.HAw.APP_NATIVE_CRASH, "Storage");
+
 function m(e) {
     var t, n, r, i;
     return {
@@ -49,6 +54,7 @@ function m(e) {
         child_process_crash_exit_code: null != (r = e.exitCode) ? r : null,
     };
 }
+
 function g(e, t) {
     let n = m(t);
     o.default.track(d.HAw.APP_NATIVE_CRASH, n);
@@ -63,9 +69,12 @@ async function E() {
         { didCrashReporterSeeCrash: r, didCrashOrUncleanExit: a } = b(i.w.get(h, {}), n),
         s = O(r, a, n);
     o.default.track(d.HAw.APP_NATIVE_CRASH, s),
-        i.w.set(h, { lastId: null == n ? void 0 : n.id }),
-        a && setTimeout(async () => await y(), 10000);
+        i.w.set(h, {
+            lastId: null == n ? void 0 : n.id,
+        }),
+        a && setTimeout(async () => await y(), 1e4);
 }
+
 function b(e, t) {
     var n;
     let r = (null == e ? void 0 : e.lastId) !== (null == t ? void 0 : t.id) && (null == t ? void 0 : t.id) != null,
@@ -87,11 +96,14 @@ async function y() {
             console.log("Failed to upload debug files");
         }
 }
+
 function O(e, t, n) {
     var i, a, s, o, l, c, u, d, f, _, h, m, g, E, b, y, O, A, v;
+
     function S(e) {
         return (null == n ? void 0 : n.storedInformation) != null && 1 === n.storedInformation[e];
     }
+
     function I(e) {
         return (null == n ? void 0 : n.storedInformation) == null || null == n.storedInformation[e]
             ? null

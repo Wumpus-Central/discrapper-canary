@@ -1,4 +1,8 @@
-l.d(t, { A: () => D }), l(896048), l(492834);
+l.d(t, {
+    A: () => D,
+}),
+    l(896048),
+    l(492834);
 var n = l(627968),
     r = l(64700),
     s = l(311907),
@@ -63,7 +67,9 @@ let T = (e) => {
                     color: "text-default",
                     children: F.intl.string(F.t["SPlaR/"]),
                 }),
-                (0, n.jsx)("hr", { className: P.yF }),
+                (0, n.jsx)("hr", {
+                    className: P.yF,
+                }),
                 (0, n.jsx)("div", {
                     className: P.kz,
                     children: (0, n.jsx)(a.ksK, {
@@ -101,7 +107,9 @@ let T = (e) => {
                     id: t,
                     variant: "heading-xl/semibold",
                     className: P.wx,
-                    children: F.intl.format(F.t.v01XgL, { email: l }),
+                    children: F.intl.format(F.t.v01XgL, {
+                        email: l,
+                    }),
                 }),
                 (0, n.jsx)(a.Text, {
                     variant: "text-sm/normal",
@@ -150,7 +158,11 @@ let T = (e) => {
                     id: l,
                     variant: "heading-xxl/normal",
                     className: P.wx,
-                    children: o ? F.intl.format(F.t.cgX47Z, { guildName: i }) : F.intl.string(F.t.DrEEC8),
+                    children: o
+                        ? F.intl.format(F.t.cgX47Z, {
+                              guildName: i,
+                          })
+                        : F.intl.string(F.t.DrEEC8),
                 }),
                 (0, n.jsx)(a.Text, {
                     variant: "text-sm/normal",
@@ -305,7 +317,9 @@ let T = (e) => {
                                   }
                                   return e;
                               })({}, null != w ? w : C.U)),
-                              (t = { formFields: K }),
+                              (t = {
+                                  formFields: K,
+                              }),
                               (t = null != t ? t : {}),
                               Object.getOwnPropertyDescriptors
                                   ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
@@ -339,7 +353,9 @@ let T = (e) => {
                     className: P.uC,
                     children: [
                         (0, n.jsx)("div", {
-                            style: { background: eE ? e_ : eN },
+                            style: {
+                                background: eE ? e_ : eN,
+                            },
                             className: P.nL,
                         }),
                         eE

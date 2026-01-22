@@ -1,4 +1,8 @@
-n.d(t, { t: () => b }), n(65821), n(896048);
+n.d(t, {
+    t: () => b,
+}),
+    n(65821),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(123292),
@@ -8,6 +12,7 @@ var r = n(627968),
     c = n(430993),
     u = n(20742),
     d = n(655053);
+
 function f(e, t, n) {
     return (
         t in e
@@ -21,6 +26,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,6 +43,7 @@ function p(e) {
     }
     return e;
 }
+
 function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -49,6 +56,7 @@ function _(e, t) {
     }
     return n;
 }
+
 function h(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -60,6 +68,7 @@ function h(e, t) {
         e
     );
 }
+
 function m(e, t) {
     if (null == e) return {};
     var n,
@@ -76,6 +85,7 @@ function m(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function g(e, t) {
     if (null == e) return {};
     var n,
@@ -87,6 +97,7 @@ function g(e, t) {
     return i;
 }
 let E = i.createContext(null);
+
 function b(e) {
     var t, n, f;
     let { steps: _, currentStepKey: g, numberedSteps: b, onStepChange: y, onComplete: O } = e,
@@ -141,7 +152,15 @@ function b(e) {
             variant: "secondary",
             onClick: S,
         },
-        U = I.hideBackButton || N ? void 0 : (0, r.jsx)(a.Q, h(p({}, j, I.backButtonProps), { onClick: x })),
+        U =
+            I.hideBackButton || N
+                ? void 0
+                : (0, r.jsx)(
+                      a.Q,
+                      h(p({}, j, I.backButtonProps), {
+                          onClick: x,
+                      }),
+                  ),
         G = I.modalProps,
         V = "graphic" in G ? G : null;
     return (0, r.jsx)(E.Provider, {
@@ -173,7 +192,9 @@ function b(e) {
                             (0, r.jsx)(
                                 "div",
                                 {
-                                    style: { display: e.stepKey === g ? void 0 : "none" },
+                                    style: {
+                                        display: e.stepKey === g ? void 0 : "none",
+                                    },
                                     children: (0, r.jsx)(c.c, {
                                         controls: null == t ? void 0 : t.input,
                                         listProps: null == t ? void 0 : t.listProps,

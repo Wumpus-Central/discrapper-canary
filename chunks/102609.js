@@ -10,6 +10,7 @@ var r = n(73153),
     i = n(49463),
     a = n(688151);
 let s = !1;
+
 function o(e, t, n) {
     if (s) {
         var o, l;
@@ -36,6 +37,7 @@ function o(e, t, n) {
         exposureType: null == n ? void 0 : n.exposureType,
     });
 }
+
 function l(e) {
     let { id: t, title: n, description: r, buckets: s, commonTriggerPoint: o } = e;
     return (
@@ -47,9 +49,12 @@ function l(e) {
             buckets: s,
             commonTriggerPoint: o,
         }),
-        { id: t }
+        {
+            id: t,
+        }
     );
 }
+
 function c(e) {
     let { id: t, title: n, description: r, buckets: s, commonTriggerPoint: o } = e;
     return (
@@ -61,12 +66,15 @@ function c(e) {
             buckets: s,
             commonTriggerPoint: o,
         }),
-        { id: t }
+        {
+            id: t,
+        }
     );
 }
 var u = (function (e) {
     return (e.LEGACY = "legacy"), (e.APEX = "apex"), e;
 })({});
+
 function d(e, t, n) {
     "legacy" === e
         ? r.h.dispatch({

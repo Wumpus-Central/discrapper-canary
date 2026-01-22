@@ -1,4 +1,7 @@
-a.d(t, { i: () => h }), a(896048);
+a.d(t, {
+    i: () => h,
+}),
+    a(896048);
 var s = a(627968),
     l = a(64700),
     r = a(503698),
@@ -11,6 +14,7 @@ var s = a(627968),
     N = a(563853),
     A = a(510057);
 let p = u.sE.MAIN_NAVIGATION_MENU;
+
 function h(e) {
     let {
             className: t,
@@ -40,7 +44,9 @@ function h(e) {
                         tag: "div",
                         eventName: p,
                         className: A.headerLogo,
-                        data: { linkClicked: "logo" },
+                        data: {
+                            linkClicked: "logo",
+                        },
                         children: (0, s.jsx)(o.A, {
                             avoidRouter: h,
                             className: A.logoWrapper,
@@ -58,7 +64,9 @@ function h(e) {
                         tag: "div",
                         className: A.hamburgerButton,
                         eventName: p,
-                        data: { linkClicked: "mobile-menu" },
+                        data: {
+                            linkClicked: "mobile-menu",
+                        },
                         children: (0, s.jsx)(i._, {
                             open: I,
                             "aria-haspopup": "true",
@@ -78,7 +86,9 @@ function h(e) {
                                 isMobile: !0,
                                 isVisible: I,
                             }),
-                            (0, s.jsx)(c.B, { onChange: r }),
+                            (0, s.jsx)(c.B, {
+                                onChange: r,
+                            }),
                         ],
                     }),
                 ],

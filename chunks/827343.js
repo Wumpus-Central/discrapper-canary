@@ -1,4 +1,6 @@
-n.d(t, { A: () => L });
+n.d(t, {
+    A: () => L,
+});
 var r = n(111956),
     i = n.n(r),
     a = n(73153),
@@ -18,6 +20,7 @@ var r = n(111956),
     b = n(652215),
     y = n(257645),
     O = n(731854);
+
 function A(e, t, n) {
     return (
         t in e
@@ -31,6 +34,7 @@ function A(e, t, n) {
         e
     );
 }
+
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -48,13 +52,16 @@ function v(e) {
     return e;
 }
 let S = new s.A("AudioActionCreators");
+
 function I() {
     (0, o.Ak)("mention3", void 0, void 0, void 0, y.a.VOICE);
 }
+
 function T() {
     let e = p.A.getInputDevices()[p.A.getInputDeviceId()];
     return null != e ? e.name : "";
 }
+
 function C(e, t, n, r) {
     let { location: i, analyticsLocations: a } = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
     if (t === n) return;
@@ -450,7 +457,10 @@ let N = i()((e, t, n) => {
                 }));
         },
         reset() {
-            P() || a.h.dispatch({ type: "AUDIO_RESET" });
+            P() ||
+                a.h.dispatch({
+                    type: "AUDIO_RESET",
+                });
         },
         setSilenceWarning(e) {
             P() ||

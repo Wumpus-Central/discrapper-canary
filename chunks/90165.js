@@ -1,10 +1,13 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var r,
     i = n(311907),
     a = n(73153),
     s = n(661439),
     o = n(352505),
     l = n(652215);
+
 function c(e, t, n) {
     return (
         t in e
@@ -20,14 +23,19 @@ function c(e, t, n) {
 }
 let u = {},
     d = null,
-    f = 86400000,
-    p = 3600000;
+    f = 864e5,
+    p = 36e5;
+
 function _() {
-    o.m.getCurrentConfig({ location: "LibraryApplicationStatisticsStore.handleConnectionOpen" }).enabled && (0, s.X)();
+    o.m.getCurrentConfig({
+        location: "LibraryApplicationStatisticsStore.handleConnectionOpen",
+    }).enabled && (0, s.X)();
 }
+
 function h() {
     (u = {}), (d = null);
 }
+
 function m(e) {
     let { statistics: t } = e;
     t.forEach((e) => {
@@ -35,6 +43,7 @@ function m(e) {
     }),
         (d = Date.now());
 }
+
 function g(e) {
     let { duration: t, applicationId: n, distributor: r } = e,
         i = u[n],
@@ -80,7 +89,7 @@ class E extends (r = i.Ay.Store) {
             n = 0;
         if (null != t) {
             let e = Math.floor((Date.now() - new Date(t.last_played_at).getTime()) / f),
-                r = Math.floor((1000 * t.total_duration) / p);
+                r = Math.floor((1e3 * t.total_duration) / p);
             0 === e
                 ? (n += 50)
                 : e >= 1 && e < 2

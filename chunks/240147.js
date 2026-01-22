@@ -1,9 +1,14 @@
-n.d(t, { A: () => a }), n(896048);
+n.d(t, {
+    A: () => a,
+}),
+    n(896048);
 var r = n(64700);
+
 function i(e, t) {
     let n = e.getBoundingClientRect();
     return Math.min(1, Math.max(0, (t.clientX - n.left) / n.width));
 }
+
 function a(e) {
     let { ref: t, onDrag: n, onDragStart: a, onDragEnd: s } = e,
         [o, l] = r.useState(!1);
@@ -17,9 +22,11 @@ function a(e) {
                         window.removeEventListener("mouseup", e), window.removeEventListener("mousemove", r);
                     }
                 );
+
             function e() {
                 null == s || s(), l(!1);
             }
+
             function r(e) {
                 let r = t.current;
                 null != r && (null == n || n(i(r, e)));

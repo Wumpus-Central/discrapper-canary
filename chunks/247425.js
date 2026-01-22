@@ -1,4 +1,6 @@
-n.d(t, { A: () => S });
+n.d(t, {
+    A: () => S,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -36,6 +38,7 @@ let S = function (e) {
             [T, n.id],
         ),
         w = (0, _.A)(e.guild.id).total;
+
     function P() {
         (0, p.A)({
             initialPlanId: null,
@@ -50,6 +53,7 @@ let S = function (e) {
             onClose: (e) => e && t(),
         });
     }
+
     function D() {
         (0, p.A)({
             initialPlanId: null,
@@ -87,12 +91,16 @@ let S = function (e) {
                         children: [
                             (0, r.jsx)(u._Jp, {
                                 color: w > 0 ? u.LU0.unsafe_rawColors.GUILD_BOOSTING_PINK : "currentColor",
-                                className: s()(v.Me, { [v.S3]: w > 0 }),
+                                className: s()(v.Me, {
+                                    [v.S3]: w > 0,
+                                }),
                             }),
                             (0, r.jsx)(u.Text, {
                                 className: v.n,
                                 variant: "text-md/bold",
-                                children: A.intl.format(A.t["pob/cL"], { subscriptions: w }),
+                                children: A.intl.format(A.t["pob/cL"], {
+                                    subscriptions: w,
+                                }),
                             }),
                         ],
                     }),
@@ -100,12 +108,18 @@ let S = function (e) {
                         ? (0, r.jsx)(u.Text, {
                               className: v.EV,
                               variant: "text-sm/normal",
-                              children: A.intl.format(A.t.Jeto2u, { numSubscriptions: R }),
+                              children: A.intl.format(A.t.Jeto2u, {
+                                  numSubscriptions: R,
+                              }),
                           })
                         : null,
                 ],
             }),
-            C ? (0, r.jsx)(h.A, { alwaysWhite: !0 }) : null,
+            C
+                ? (0, r.jsx)(h.A, {
+                      alwaysWhite: !0,
+                  })
+                : null,
             (0, r.jsxs)("div", {
                 className: v.Sq,
                 children: [

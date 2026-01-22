@@ -4,9 +4,11 @@ n.d(t, {
 });
 var r = n(11541);
 let i = {};
+
 function a(e) {
     return null == i[e] && (i[e] = {}), i[e];
 }
+
 function s(e, t) {
     if (0 === t.length) return !1;
     let n = a(e);

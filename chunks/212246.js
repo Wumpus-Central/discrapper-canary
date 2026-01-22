@@ -8,6 +8,7 @@ function n(e, t, r) {
         },
     ];
 }
+
 function i(e, t, r) {
     var n = r.getRegistry(),
         i = n.addSource(e, t);

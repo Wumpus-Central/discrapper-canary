@@ -1,4 +1,7 @@
-n.d(t, { A: () => _ }), n(896048);
+n.d(t, {
+    A: () => _,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(837381),
@@ -20,6 +23,7 @@ n(445368);
 var O = n(652215),
     j = n(790782),
     v = n(626600);
+
 function x() {
     let e = (0, a.bG)([h.default], () => h.default.getCurrentUser());
     return (0, a.bG)(
@@ -27,6 +31,7 @@ function x() {
         () => (null == e ? void 0 : e.id) != null && f.Ay.getMentionCount(e.id, j.P.NOTIFICATION_CENTER) > 0,
     );
 }
+
 function E(e) {
     var t, n;
     let { onClick: d, selectedOverride: f = !1, popoutProps: h, ref: A } = e,
@@ -34,16 +39,22 @@ function E(e) {
         [E, _] = l.useState(!1),
         C = (0, g.lI)(),
         S = f || C,
-        { notificationCenterVariant: I } = (0, b.X8)({ location: "NotificationsInboxButtonInner" }),
+        { notificationCenterVariant: I } = (0, b.X8)({
+            location: "NotificationsInboxButtonInner",
+        }),
         {
             badge: N,
             badgeDimensions: T,
             unreadChannelsCount: P,
         } = (function (e) {
-            let { notificationCenterVariant: t } = (0, b.X8)({ location: "NotificationsInboxButtonInner" }),
+            let { notificationCenterVariant: t } = (0, b.X8)({
+                    location: "NotificationsInboxButtonInner",
+                }),
                 { unreadChannelIds: n } = (0, g.U4)(),
                 l = x(),
-                { badge: i, dimensions: a } = (0, m.ux)({ isSelected: e });
+                { badge: i, dimensions: a } = (0, m.ux)({
+                    isSelected: e,
+                });
             return t === b.U5.LEGACY
                 ? {
                       badge: l
@@ -149,13 +160,18 @@ function E(e) {
         ],
     });
 }
+
 function _() {
     let e = l.useRef(null),
-        { notificationCenterVariant: t } = (0, b.X8)({ location: "NotificationsInboxButton" }),
+        { notificationCenterVariant: t } = (0, b.X8)({
+            location: "NotificationsInboxButton",
+        }),
         n = x(),
         i = (0, m.HN)();
     return t === b.U5.SIDEBAR
-        ? (0, r.jsx)(E, { onClick: i })
+        ? (0, r.jsx)(E, {
+              onClick: i,
+          })
         : t === b.U5.POPOUT
           ? (0, r.jsx)(A.A, {
                 targetElementRef: e,
@@ -174,7 +190,9 @@ function _() {
           : t === b.U5.LEGACY
             ? (0, r.jsx)(d.C, {
                   spacing: 0,
-                  badgeState: { badgeForYou: n },
+                  badgeState: {
+                      badgeForYou: n,
+                  },
                   targetElementRef: e,
                   popoutPosition: "right",
                   popoutAlign: "top",

@@ -1,11 +1,15 @@
 let r, i;
-n.d(t, { A: () => S }), n(65821);
+n.d(t, {
+    A: () => S,
+}),
+    n(65821);
 var a,
     s = n(311907),
     o = n(562465),
     l = n(73153),
     c = n(723702),
     u = n(652215);
+
 function d(e, t, n) {
     return (
         t in e
@@ -22,18 +26,22 @@ function d(e, t, n) {
 let f = null,
     p = null,
     _ = null;
+
 function h(e) {
     let { client: t } = e;
     f = t;
 }
+
 function m(e) {
     let { paypalClient: t } = e;
     p = t;
 }
+
 function g(e) {
     let { venmoClient: t } = e;
     _ = t;
 }
+
 function E(e) {
     let { paymentSourceType: t, state: n, path: i, query: a } = e;
     if (t !== u.hes.PAYPAL || n !== r) return;
@@ -44,13 +52,16 @@ function E(e) {
             queryItems: a,
         });
 }
+
 function b(e) {
     let { paymentSourceType: t, state: n } = e;
     t === u.hes.PAYPAL && (r = n);
 }
+
 function y() {
     p = null;
 }
+
 function O() {
     _ = null;
 }

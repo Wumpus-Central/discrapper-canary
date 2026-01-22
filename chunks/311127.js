@@ -1,4 +1,8 @@
-n.d(t, { A: () => T }), n(896048), n(321073);
+n.d(t, {
+    A: () => T,
+}),
+    n(896048),
+    n(321073);
 var r = n(627968),
     i = n(64700),
     a = n(136722),
@@ -20,6 +24,7 @@ var r = n(627968),
     O = n(652215),
     A = n(985018),
     v = n(110927);
+
 function S(e, t, n) {
     return (
         t in e
@@ -33,6 +38,7 @@ function S(e, t, n) {
         e
     );
 }
+
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -49,6 +55,7 @@ function I(e) {
     }
     return e;
 }
+
 function T(e) {
     let { guildId: t } = e,
         n = (0, s.bG)([h.default], () => h.default.getCurrentUser()),
@@ -143,7 +150,9 @@ function T(e) {
                           autoFocus: !0,
                           placeholder: A.intl.string(A.t.Sojqsr),
                       }),
-                      (0, r.jsx)(o.X2, { renderListItem: (e) => (0, r.jsx)(l.c, I({}, e)) }),
+                      (0, r.jsx)(o.X2, {
+                          renderListItem: (e) => (0, r.jsx)(l.c, I({}, e)),
+                      }),
                   ],
               }),
           })
@@ -152,6 +161,7 @@ function T(e) {
               children: A.intl.string(A.t.MNSTbY),
           });
 }
+
 function C(e) {
     return () => {
         var t;

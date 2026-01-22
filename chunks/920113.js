@@ -1,4 +1,7 @@
-n.d(t, { A: () => C }), n(896048);
+n.d(t, {
+    A: () => C,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -37,7 +40,9 @@ let C = (0, d.A)(function (e) {
     let l = (0, o.bG)([g.A], () => g.A.theme),
         d = (0, o.bG)([b.A], () => b.A.isRefreshing()),
         C = i.useRef(null);
-    (0, f.HU)({ location: I.intl.string(I.t["jnXV/V"]) });
+    (0, f.HU)({
+        location: I.intl.string(I.t["jnXV/V"]),
+    });
     let [N, T] = i.useState(!1);
     i.useEffect(() => {
         let e = (e) => {
@@ -61,7 +66,9 @@ let C = (0, d.A)(function (e) {
         );
     }, []);
     let j = (0, E.E)(),
-        x = m.E2.useExperiment({ location: "icymi page" }).enabled,
+        x = m.E2.useExperiment({
+            location: "icymi page",
+        }).enabled,
         P = i.useCallback(
             async (e) => {
                 e.metaKey && x
@@ -92,7 +99,9 @@ let C = (0, d.A)(function (e) {
                                       icon: c.gXB,
                                       "aria-hidden": !0,
                                   }),
-                                  (0, r.jsx)(h.A.Title, { children: I.intl.string(I.t["jnXV/V"]) }),
+                                  (0, r.jsx)(h.A.Title, {
+                                      children: I.intl.string(I.t["jnXV/V"]),
+                                  }),
                                   (0, r.jsx)(h.A.Title, {
                                       children: (0, r.jsx)("p", {
                                           className: v.HH,
@@ -105,7 +114,9 @@ let C = (0, d.A)(function (e) {
                   (0, r.jsx)("div", {
                       ref: C,
                       className: a()(S.Qs, v.Qs),
-                      children: (0, r.jsx)(O.A, { scrollContainerRef: C }),
+                      children: (0, r.jsx)(O.A, {
+                          scrollContainerRef: C,
+                      }),
                   }),
               ],
           })

@@ -1,4 +1,6 @@
-n.d(t, { c: () => d });
+n.d(t, {
+    c: () => d,
+});
 var r = n(735438),
     i = n.n(r),
     l = n(189081),
@@ -15,7 +17,13 @@ let d = {
                 args: { pid: t },
                 socket: n,
             } = e;
-            if ("number" != typeof t || t < 10) throw new o.A({ errorCode: u.Lw6.INVALID_EVENT }, "Invalid pid");
+            if ("number" != typeof t || t < 10)
+                throw new o.A(
+                    {
+                        errorCode: u.Lw6.INVALID_EVENT,
+                    },
+                    "Invalid pid",
+                );
             return (e) => {
                 let { prevState: r, dispatch: o } = e,
                     c = a.default.enabled,

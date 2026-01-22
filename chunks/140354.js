@@ -1,4 +1,6 @@
-n.d(t, { A: () => O });
+n.d(t, {
+    A: () => O,
+});
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -17,6 +19,7 @@ var r = n(627968),
     b = n(985018),
     _ = n(666088),
     E = n(22004);
+
 function O(e) {
     let { guildId: t, channelId: n } = e,
         { ref: l, width: O, height: y } = (0, c.Ay)(),
@@ -42,7 +45,9 @@ function O(e) {
         ),
         C = (0, d.S)(S);
     return (0, r.jsxs)("div", {
-        className: a()(_.kf, E.iW, { [E.Me]: null == S }),
+        className: a()(_.kf, E.iW, {
+            [E.Me]: null == S,
+        }),
         ref: l,
         children: [
             null != S
@@ -64,7 +69,10 @@ function O(e) {
                             .concat((0, A.cb)(C, 1), " 100%)"),
                     },
                 }),
-            null != S && (0, r.jsx)("div", { className: E.D7 }),
+            null != S &&
+                (0, r.jsx)("div", {
+                    className: E.D7,
+                }),
             (0, r.jsxs)("div", {
                 className: a()(_.Cj, _.Vw),
                 children: [

@@ -1,4 +1,7 @@
-n.d(t, { A: () => f }), n(896048);
+n.d(t, {
+    A: () => f,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -7,6 +10,7 @@ var r = n(627968),
     o = n(397927),
     c = n(315502),
     u = n(545290);
+
 function d(e) {
     let { width: t = 24, height: n = 24, isBadged: i = !1, isTyping: a = !1 } = e,
         [c] = l.useState(() => (0, s.A)());
@@ -56,6 +60,7 @@ function d(e) {
         ],
     });
 }
+
 function f(e) {
     var t;
     let { className: n, unreadCount: l, mentionCount: i, isTyping: s, canBadge: o } = e,

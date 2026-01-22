@@ -1,4 +1,7 @@
-n.d(t, { A: () => x }), n(896048);
+n.d(t, {
+    A: () => x,
+}),
+    n(896048);
 var l = n(627968),
     r = n(64700),
     i = n(575593),
@@ -18,6 +21,7 @@ var l = n(627968),
     v = n(482132),
     b = n(758836),
     O = n(401506);
+
 function x(e) {
     let { reward: t, purchase: n, onClose: x } = e,
         P = (0, s.bG)([h.default], () => h.default.getCurrentUser()),

@@ -37,6 +37,7 @@ var r = n(627968),
     L = n(652215),
     j = n(985018),
     M = n(422344);
+
 function k(e, t, n) {
     return (
         t in e
@@ -50,6 +51,7 @@ function k(e, t, n) {
         e
     );
 }
+
 function U(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -66,6 +68,7 @@ function U(e) {
     }
     return e;
 }
+
 function G(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -78,6 +81,7 @@ function G(e, t) {
     }
     return n;
 }
+
 function V(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -89,6 +93,7 @@ function V(e, t) {
         e
     );
 }
+
 function F(e, t) {
     if (null == e) return {};
     var n,
@@ -105,6 +110,7 @@ function F(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function B(e, t) {
     if (null == e) return {};
     var n,
@@ -121,6 +127,7 @@ let H = {
         right: -12,
     },
 };
+
 function Y(e) {
     let { closePopout: t } = e;
     return (0, r.jsx)(_.lGe, {
@@ -132,11 +139,14 @@ function Y(e) {
                     icon: _.cFy,
                     title: j.intl.string(j.t["2pAkDA"]),
                 }),
-                (0, r.jsx)(W, { closePopout: t }),
+                (0, r.jsx)(W, {
+                    closePopout: t,
+                }),
             ],
         }),
     });
 }
+
 function W(e) {
     let { closePopout: t } = e,
         n = (0, w.A)();
@@ -159,6 +169,7 @@ function W(e) {
               closePopout: t,
           });
 }
+
 function K(e) {
     let { onOpen: t, onClose: n, children: a, popoutPosition: s, popoutAlign: o } = e,
         [l, c] = i.useState(!1),
@@ -174,8 +185,11 @@ function K(e) {
         [f],
     );
     let h = (0, p.bG)([N.A], () => N.A.hasOverdueReminder(), []);
+
     function m() {
-        return (0, r.jsx)(Y, { closePopout: d });
+        return (0, r.jsx)(Y, {
+            closePopout: d,
+        });
     }
     return (0, r.jsx)(_.YNO, {
         targetElementRef: u,
@@ -193,6 +207,7 @@ function K(e) {
         },
     });
 }
+
 function z(e) {
     let { savedMessageKeys: t, closePopout: n } = e,
         a = i.useRef(null),
@@ -246,6 +261,7 @@ function z(e) {
         })
     );
 }
+
 function q(e) {
     let { savedMessage: t, closePopout: n, throttledNow: a } = e,
         o = (0, C.vr)(t),
@@ -285,7 +301,9 @@ function q(e) {
                             throttledNow: a,
                         })
                       : null,
-                  (0, r.jsx)(P.A, { channel: o }),
+                  (0, r.jsx)(P.A, {
+                      channel: o,
+                  }),
                   (0, r.jsx)(
                       E.A,
                       {
@@ -339,6 +357,7 @@ function q(e) {
               ],
           });
 }
+
 function X(e) {
     let { savedMessageKey: t, closePopout: n, throttledNow: i } = e,
         a = (0, p.bG)([N.A], () => N.A.getSavedMessage(t.channelId, t.messageId));
@@ -350,6 +369,7 @@ function X(e) {
               throttledNow: i,
           });
 }
+
 function Z(e) {
     let { savedMessage: t, jumpToMessage: i } = e;
     return (l()(null != t.message, "Saved message must be cached for For Later action buttons"),

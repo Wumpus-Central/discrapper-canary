@@ -1,4 +1,7 @@
-n.d(t, { A: () => v }), n(896048);
+n.d(t, {
+    A: () => v,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -15,6 +18,7 @@ var r = n(627968),
     p = n(539916),
     x = n(985018),
     h = n(42483);
+
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -40,6 +44,7 @@ function j(e) {
     }
     return e;
 }
+
 function O(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -58,6 +63,7 @@ function O(e, t) {
         e
     );
 }
+
 function y(e) {
     let { guild: t, prejoinOnly: n, postjoinOnly: l } = e,
         o = (0, a.bG)([b.A], () => b.A.editedOnboardingPrompts),
@@ -115,7 +121,9 @@ function y(e) {
                     ? null
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)("div", { className: h.yF }),
+                              (0, r.jsx)("div", {
+                                  className: h.yF,
+                              }),
                               (0, r.jsx)(c.Heading, {
                                   variant: "heading-md/bold",
                                   children: x.intl.string(x.t.tjrGcb),
@@ -132,6 +140,7 @@ function y(e) {
         })
     );
 }
+
 function v(e) {
     let { guildId: t, prejoinOnly: n, postjoinOnly: i, includeCount: l, singleColumn: s } = e,
         d = (0, a.bG)([f.A], () => f.A.getGuild(t)),
@@ -158,7 +167,11 @@ function v(e) {
             handleDragComplete: T,
         } = (0, u.A)(N, (e) => {
             let t = e.findIndex((e) => "separator" === e.id),
-                n = e.slice(0, t).map((e) => O(j({}, e.data), { inOnboarding: !0 })),
+                n = e.slice(0, t).map((e) =>
+                    O(j({}, e.data), {
+                        inOnboarding: !0,
+                    }),
+                ),
                 r = e.slice(t + 1).map((e) =>
                     O(j({}, e.data), {
                         inOnboarding: !1,
@@ -168,7 +181,9 @@ function v(e) {
             n.length > p.D1
                 ? o.A.show({
                       title: x.intl.string(x.t.Cxtq5x),
-                      body: x.intl.formatToPlainString(x.t["pkbZ+U"], { numQuestions: p.D1 }),
+                      body: x.intl.formatToPlainString(x.t["pkbZ+U"], {
+                          numQuestions: p.D1,
+                      }),
                   })
                 : (0, g.WC)(d, [...n, ...r]);
         });

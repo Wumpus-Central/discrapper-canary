@@ -6,6 +6,7 @@ var r = n(925847),
     i = n(954571),
     a = n(927578),
     s = n(652215);
+
 function o(e, t, n) {
     return (
         t in e
@@ -19,6 +20,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,6 +37,7 @@ function l(e) {
     }
     return e;
 }
+
 function c(e) {
     var t;
     return {
@@ -45,6 +48,7 @@ function c(e) {
         subscription_status: e.status,
     };
 }
+
 function u(e, t, n) {
     let a = null != n ? n : (0, r.A)();
     i.default.track(

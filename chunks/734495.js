@@ -1,4 +1,6 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(627968);
 n(64700);
 var l = n(397927),
@@ -6,6 +8,7 @@ var l = n(397927),
     o = n(383233),
     a = n(957565),
     c = n(985018);
+
 function s(e) {
     if (!a.p5) return null;
     let t = e.getContentMessage(),

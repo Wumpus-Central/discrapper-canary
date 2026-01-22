@@ -1,8 +1,12 @@
-n.d(t, { A: () => c }), n(896048);
+n.d(t, {
+    A: () => c,
+}),
+    n(896048);
 var r = n(439372),
     i = n(734057),
     a = n(473503),
     s = n(746080);
+
 function o(e, t, n) {
     return (
         t in e
@@ -24,7 +28,10 @@ class l extends r.A {
         null != n && n.isForumLikeChannel() && (0, a.kB)(n);
     }
     constructor(...e) {
-        super(...e), o(this, "actions", { CHANNEL_PRELOAD: this.handleChannelPreload });
+        super(...e),
+            o(this, "actions", {
+                CHANNEL_PRELOAD: this.handleChannelPreload,
+            });
     }
 }
 let c = new l();

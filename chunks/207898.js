@@ -50,6 +50,7 @@ e.exports = function (e, r) {
         u
     );
 };
+
 function t(e, t, r) {
     for (var a = 0; a < r.length; a++) e.setUint8(t + a, r.charCodeAt(a));
 }

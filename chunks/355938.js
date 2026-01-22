@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(627968);
 n(64700);
 var i = n(435371),
@@ -6,6 +8,7 @@ var i = n(435371),
     s = n(769015),
     o = n(985018),
     l = n(999584);
+
 function c(e) {
     let { application: t, children: n } = e;
     return (0, r.jsx)(i.un, {
@@ -13,7 +16,9 @@ function c(e) {
             size: s.M.MEDIUM_LARGE,
             game: t,
         }),
-        body: o.intl.format(o.t.J3s8JP, { applicationName: t.name }),
+        body: o.intl.format(o.t.J3s8JP, {
+            applicationName: t.name,
+        }),
         position: "top",
         asContainer: !0,
         "aria-label": o.intl.string(o.t["5nMcv1"]),
@@ -23,6 +28,7 @@ function c(e) {
         }),
     });
 }
+
 function u(e) {
     let { application: t, compact: n, children: i } = e;
     return (0, r.jsxs)(c, {

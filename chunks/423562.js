@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -8,6 +10,7 @@ var i = n(311907),
     l = n(475815),
     c = n(709562),
     u = n(985018);
+
 function d(e, t, n) {
     return (
         t in e
@@ -21,6 +24,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,6 +41,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e, t) {
     if (null == e) return {};
     var n,
@@ -53,6 +58,7 @@ function p(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function _(e, t) {
     if (null == e) return {};
     var n,
@@ -63,6 +69,7 @@ function _(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function h(e) {
     let { enabled: t } = e,
         n = p(e, ["enabled"]),
@@ -81,5 +88,7 @@ function h(e) {
 }
 let m = i.Ay.connectStores([o.A, s.A], (e) => {
     let { node: t, guestWindow: n } = e;
-    return { enabled: (0, l._U)(t, null == n ? void 0 : n.document) };
+    return {
+        enabled: (0, l._U)(t, null == n ? void 0 : n.document),
+    };
 })(h);

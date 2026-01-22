@@ -1,4 +1,7 @@
-n.d(t, { A: () => v }), n(747238);
+n.d(t, {
+    A: () => v,
+}),
+    n(747238);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -16,6 +19,7 @@ var r = n(627968),
     x = n(282435),
     h = n(985018),
     j = n(168938);
+
 function O(e) {
     let { profile: t, canManageGuild: n, handleClick: i, hasCustomBanner: l } = e,
         a = (0, d.b2)(),
@@ -32,12 +36,21 @@ function O(e) {
             tabIndex: n ? 0 : -1,
             "aria-label": h.intl.string(h.t.W4Nd7Q),
             onClick: n ? i : void 0,
-            style: { background: (0, d.n6)(u) },
-            className: s()(j.DB, { [j.r9]: !n }),
-            children: (0, r.jsx)("div", { className: s()({ [j.z2]: !l && null == t.brandColorPrimary }) }),
+            style: {
+                background: (0, d.n6)(u),
+            },
+            className: s()(j.DB, {
+                [j.r9]: !n,
+            }),
+            children: (0, r.jsx)("div", {
+                className: s()({
+                    [j.z2]: !l && null == t.brandColorPrimary,
+                }),
+            }),
         }),
     });
 }
+
 function y(e) {
     let { isDiscoverable: t, profile: n, onCustomBannerChange: l, canManageGuild: a } = e,
         c = null != n.customBanner,
@@ -61,18 +74,26 @@ function y(e) {
                   alt: "",
                   "aria-hidden": !0,
               })
-            : (0, r.jsx)(o.kpT, { size: "md" });
+            : (0, r.jsx)(o.kpT, {
+                  size: "md",
+              });
     return (0, r.jsx)("div", {
         className: j.sK,
         children: (0, r.jsx)(o.vN3, {
             within: !0,
             children: (0, r.jsx)("div", {
-                className: s()(j.K7, { [j.e7]: c }),
+                className: s()(j.K7, {
+                    [j.e7]: c,
+                }),
                 children: (0, r.jsxs)("div", {
-                    className: s()(j.vw, { [j.r9]: !a }),
+                    className: s()(j.vw, {
+                        [j.r9]: !a,
+                    }),
                     children: [
                         f,
-                        (0, r.jsx)("div", { className: j.Lw }),
+                        (0, r.jsx)("div", {
+                            className: j.Lw,
+                        }),
                         (0, r.jsx)(o.R2l, {
                             size: "custom",
                             className: j.QY,
@@ -92,6 +113,7 @@ function y(e) {
         }),
     });
 }
+
 function v(e) {
     var t;
     let { profile: n, onCustomBannerChange: l, canManageGuild: u } = e,
@@ -131,9 +153,17 @@ function v(e) {
                                 tabIndex: u ? 0 : -1,
                                 "aria-label": t,
                                 onClick: u ? A(n) : void 0,
-                                style: { background: (0, d.n6)(n) },
-                                className: s()(j.DB, { [j.r9]: !u }),
-                                children: (0, r.jsx)("div", { className: s()({ [j.z2]: E(n) }) }),
+                                style: {
+                                    background: (0, d.n6)(n),
+                                },
+                                className: s()(j.DB, {
+                                    [j.r9]: !u,
+                                }),
+                                children: (0, r.jsx)("div", {
+                                    className: s()({
+                                        [j.z2]: E(n),
+                                    }),
+                                }),
                             }),
                         },
                         t,

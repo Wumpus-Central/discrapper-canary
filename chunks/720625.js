@@ -3,12 +3,9 @@
 })(0, function (e) {
     return e.defineLocale("he", {
         months: "ינואר_פברואר_מרץ_אפריל_מאי_יוני_יולי_אוגוסט_ספטמבר_אוקטובר_נובמבר_דצמבר".split("_"),
-        monthsShort:
-            "ינו\u05F3_פבר\u05F3_מרץ_אפר\u05F3_מאי_יוני_יולי_אוג\u05F3_ספט\u05F3_אוק\u05F3_נוב\u05F3_דצמ\u05F3".split(
-                "_",
-            ),
+        monthsShort: "ינו׳_פבר׳_מרץ_אפר׳_מאי_יוני_יולי_אוג׳_ספט׳_אוק׳_נוב׳_דצמ׳".split("_"),
         weekdays: "ראשון_שני_שלישי_רביעי_חמישי_שישי_שבת".split("_"),
-        weekdaysShort: "א\u05F3_ב\u05F3_ג\u05F3_ד\u05F3_ה\u05F3_ו\u05F3_ש\u05F3".split("_"),
+        weekdaysShort: "א׳_ב׳_ג׳_ד׳_ה׳_ו׳_ש׳".split("_"),
         weekdaysMin: "א_ב_ג_ד_ה_ו_ש".split("_"),
         longDateFormat: {
             LT: "HH:mm",
@@ -23,10 +20,10 @@
             llll: "ddd, D MMM YYYY HH:mm",
         },
         calendar: {
-            sameDay: "[היום ב\u05BE]LT",
-            nextDay: "[מחר ב\u05BE]LT",
+            sameDay: "[היום ב־]LT",
+            nextDay: "[מחר ב־]LT",
             nextWeek: "dddd [בשעה] LT",
-            lastDay: "[אתמול ב\u05BE]LT",
+            lastDay: "[אתמול ב־]LT",
             lastWeek: "[ביום] dddd [האחרון בשעה] LT",
             sameElse: "L",
         },

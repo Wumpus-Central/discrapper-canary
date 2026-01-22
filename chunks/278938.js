@@ -1,4 +1,6 @@
-n.d(t, { F: () => h });
+n.d(t, {
+    F: () => h,
+});
 var r = n(627968);
 n(64700);
 var i = n(934551),
@@ -12,6 +14,7 @@ var i = n(934551),
     f = n(985018),
     p = n(792352);
 let _ = (e, t) => (e === t ? p.H : void 0);
+
 function h() {
     let e = (0, a.bG)([o.A], () => o.A.theme),
         t = (0, s.Mwr)(e) ? u.NJ.DARK : u.NJ.LIGHT,

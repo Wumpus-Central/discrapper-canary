@@ -1,4 +1,6 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -44,7 +46,10 @@ let g = [
             key: "subscribers",
             cellClassName: l()(u.wC, f.WI),
             renderHeader: () => d.intl.string(d.t.zu8go1),
-            render: (e) => (0, r.jsx)(o.MD, { children: e.roleMemberCount }),
+            render: (e) =>
+                (0, r.jsx)(o.MD, {
+                    children: e.roleMemberCount,
+                }),
         },
         {
             key: "price",
@@ -54,7 +59,9 @@ let g = [
                 let { subscriptionListing: t } = e,
                     n = null == t ? void 0 : t.subscription_plans[0],
                     i = null == n ? void 0 : n.price;
-                return (0, r.jsx)(o.Kh, { children: i });
+                return (0, r.jsx)(o.Kh, {
+                    children: i,
+                });
             },
         },
     ],

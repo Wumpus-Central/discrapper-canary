@@ -166,7 +166,9 @@ e.exports = function (e) {
         illegal: "</",
         contains: [
             e.C_LINE_COMMENT_MODE,
-            e.COMMENT("/\\*", "\\*/", { contains: ["self"] }),
+            e.COMMENT("/\\*", "\\*/", {
+                contains: ["self"],
+            }),
             e.inherit(e.QUOTE_STRING_MODE, {
                 begin: /b?"/,
                 illegal: null,
@@ -178,7 +180,9 @@ e.exports = function (e) {
             {
                 scope: "string",
                 variants: [
-                    { begin: /b?r(#*)"(.|\n)*?"\1(?!#)/ },
+                    {
+                        begin: /b?r(#*)"(.|\n)*?"\1(?!#)/,
+                    },
                     {
                         begin: /b?'/,
                         end: /'/,
@@ -194,10 +198,18 @@ e.exports = function (e) {
             {
                 className: "number",
                 variants: [
-                    { begin: "\\b0b([01_]+)" + s },
-                    { begin: "\\b0o([0-7_]+)" + s },
-                    { begin: "\\b0x([A-Fa-f0-9_]+)" + s },
-                    { begin: "\\b(\\d[\\d_]*(\\.[0-9_]+)?([eE][+-]?[0-9_]+)?)" + s },
+                    {
+                        begin: "\\b0b([01_]+)" + s,
+                    },
+                    {
+                        begin: "\\b0o([0-7_]+)" + s,
+                    },
+                    {
+                        begin: "\\b0x([A-Fa-f0-9_]+)" + s,
+                    },
+                    {
+                        begin: "\\b(\\d[\\d_]*(\\.[0-9_]+)?([eE][+-]?[0-9_]+)?)" + s,
+                    },
                 ],
                 relevance: 0,
             },

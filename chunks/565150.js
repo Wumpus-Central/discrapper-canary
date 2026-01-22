@@ -11,6 +11,7 @@ var r = n(143236),
     s = n(835245),
     o = n(453771),
     l = n(292348);
+
 function c(e, t, n) {
     return (
         t in e
@@ -27,6 +28,7 @@ function c(e, t, n) {
 var u = (function (e) {
     return (e[(e.REACT_NATIVE = 0)] = "REACT_NATIVE"), (e[(e.WEB = 1)] = "WEB"), e;
 })({});
+
 function d(e) {
     return void 0 !== e.isVideo && void 0 !== e.isImage;
 }

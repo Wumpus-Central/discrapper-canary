@@ -1,4 +1,6 @@
-n.d(t, { A: () => y });
+n.d(t, {
+    A: () => y,
+});
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -171,7 +173,9 @@ let y = function (e) {
                             (0, r.jsx)(o.Text, {
                                 variant: "text-xs/medium",
                                 color: "text-default",
-                                children: j.intl.format(j.t.Ngk8Nr, { channelName: w.name }),
+                                children: j.intl.format(j.t.Ngk8Nr, {
+                                    channelName: w.name,
+                                }),
                             }),
                         ],
                     }),

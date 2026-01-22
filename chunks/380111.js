@@ -1,6 +1,9 @@
-i.d(e, { A: () => h });
+i.d(e, {
+    A: () => h,
+});
 var s = i(364298),
     n = i(852431);
+
 function r(t, e, i) {
     return (
         e in t
@@ -41,8 +44,8 @@ let a = ["#7d8187", "#18191c", "#8fa2df", "#4f545c"],
                 r(this, "depth", (0, s.R)(1, 4)),
                 r(this, "positionMultiplier", this.depth / 4),
                 r(this, "color", a[4 - this.depth]),
-                r(this, "offscreenX", 1000 + this.size),
-                r(this, "offscreenY", 1000 + this.size),
+                r(this, "offscreenX", 1e3 + this.size),
+                r(this, "offscreenY", 1e3 + this.size),
                 r(this, "x", (0, s.R)(-this.size, this.offscreenX)),
                 r(this, "y", (0, s.R)(-this.size, this.offscreenY));
         }

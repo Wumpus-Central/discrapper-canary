@@ -21,6 +21,7 @@ var n = r(627968),
     j = r(874124),
     m = r(753070),
     g = r(765682);
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
@@ -46,6 +47,7 @@ function b(e) {
     }
     return e;
 }
+
 function v(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -87,15 +89,22 @@ let y = {
     A = l.createContext(() => {
         throw Error("Using uninitialized GoLiveModalContextDispatch");
     });
+
 function _(e, t) {
     var r, n, l;
     switch (t.type) {
         case "set_mute_audio":
-            return v(b({}, e), { muteStreamAudio: t.value });
+            return v(b({}, e), {
+                muteStreamAudio: t.value,
+            });
         case "set_notify_friends":
-            return v(b({}, e), { notifyFriends: t.value });
+            return v(b({}, e), {
+                notifyFriends: t.value,
+            });
         case "set_has_permission":
-            return v(b({}, e), { hasPermission: t.value });
+            return v(b({}, e), {
+                hasPermission: t.value,
+            });
         case "set_source_candidates":
             return v(b({}, e), {
                 screenSources: t.screenSources,
@@ -104,7 +113,9 @@ function _(e, t) {
                 fetchingSources: !1,
             });
         case "set_preset":
-            return v(b({}, e), { preset: t.preset });
+            return v(b({}, e), {
+                preset: t.preset,
+            });
         case "set_source_type":
             let s = {
                 sourceType: t.sourceType,
@@ -119,16 +130,26 @@ function _(e, t) {
                 b({}, e, s)
             );
         case "set_native_source_type":
-            return v(b({}, e), { nativeSourceType: t.sourceType });
+            return v(b({}, e), {
+                nativeSourceType: t.sourceType,
+            });
         case "set_resolution":
-            return v(b({}, e), { resolution: t.resolution });
+            return v(b({}, e), {
+                resolution: t.resolution,
+            });
         case "set_fps":
-            return v(b({}, e), { fps: t.fps });
+            return v(b({}, e), {
+                fps: t.fps,
+            });
         case "set_hide_preview":
-            return v(b({}, e), { hidePreview: t.hidePreview });
+            return v(b({}, e), {
+                hidePreview: t.hidePreview,
+            });
         case "set_selected_source": {
             let l = t.source,
-                s = v(b({}, e), { selectedSource: l }),
+                s = v(b({}, e), {
+                    selectedSource: l,
+                }),
                 o = null == l ? void 0 : l.name;
             if (null != l && (null == (r = l.id) ? void 0 : r.startsWith(c.fS.CAMERA)) && null != o) {
                 let e = i().maxBy(Object.values(p.A.getInputDevices()), (e) => (0, a.default)(o, e.name));
@@ -137,15 +158,22 @@ function _(e, t) {
             return s;
         }
         case "set_audio_source":
-            return v(b({}, e), { audioSourceId: null != (l = t.audioSourceId) ? l : p.A.getInputDeviceId() });
+            return v(b({}, e), {
+                audioSourceId: null != (l = t.audioSourceId) ? l : p.A.getInputDeviceId(),
+            });
         case "set_selected_channel":
-            return v(b({}, e), { selectedChannel: t.channelId });
+            return v(b({}, e), {
+                selectedChannel: t.channelId,
+            });
         case "set_discord_source_id":
-            return v(b({}, e), { discordSourceId: t.sourceId });
+            return v(b({}, e), {
+                discordSourceId: t.sourceId,
+            });
         default:
             return e;
     }
 }
+
 function O(e) {
     let { dispatch: t, state: r, children: l } = e;
     return (0, n.jsx)(A.Provider, {
@@ -156,9 +184,12 @@ function O(e) {
         }),
     });
 }
+
 function C(e, t, r) {
     var n, s;
-    let { defaultAutoQuality: i, allowAutoQuality: a } = (0, x.X5)({ location: "useCreateGoLiveModalState" }),
+    let { defaultAutoQuality: i, allowAutoQuality: a } = (0, x.X5)({
+            location: "useCreateGoLiveModalState",
+        }),
         { preset: c, resolution: S, fps: A, soundshareEnabled: O } = (0, o.cf)([h.A], () => h.A.getState());
     i && (c = m.jQ.PRESET_AUTO);
     let C = (0, o.bG)([p.A], () => p.A.getInputDeviceId()),
@@ -183,7 +214,9 @@ function C(e, t, r) {
     return (
         l.useEffect(() => {
             var e, t;
-            f.A.hasPermission(g.iL.SCREEN_RECORDING, { showAuthorizationError: !1 }).then((e) =>
+            f.A.hasPermission(g.iL.SCREEN_RECORDING, {
+                showAuthorizationError: !1,
+            }).then((e) =>
                 I({
                     type: "set_has_permission",
                     value: e,
@@ -203,6 +236,7 @@ function C(e, t, r) {
         }
     );
 }
+
 function w() {
     return [l.useContext(S), l.useContext(A)];
 }

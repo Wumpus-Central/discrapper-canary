@@ -11,6 +11,7 @@ var r = n(562465),
     a = n(509929),
     s = n(565150);
 let o = 50;
+
 function l(e, t) {
     if (t.id === e.uri || (null != t.id && t.id === e.id)) return !0;
     if (t.item.platform === s.xz.REACT_NATIVE) {
@@ -24,6 +25,7 @@ function l(e, t) {
     }
     return !1;
 }
+
 function c(e, t) {
     return 0 === t ? 0 : Math.min(Math.floor((e / t) * 100), 100);
 }
@@ -38,6 +40,7 @@ class u {
         );
     }
 }
+
 function d(e) {
     return e.platform === s.xz.REACT_NATIVE && null != e.uri && (0, a.a$)(e.uri) && (0, i.xd)();
 }

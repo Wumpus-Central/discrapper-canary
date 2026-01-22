@@ -1,4 +1,6 @@
-r.d(t, { A: () => a });
+r.d(t, {
+    A: () => a,
+});
 var n = r(446003),
     o = r(656855);
 let a = function (e, t, r) {

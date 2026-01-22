@@ -1,4 +1,7 @@
-n.d(t, { A: () => u }), n(896048);
+n.d(t, {
+    A: () => u,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -6,6 +9,7 @@ var r = n(627968),
     s = n(397927),
     o = n(183555),
     c = n(752458);
+
 function u(e) {
     let { section: t, header: n, items: i, listClassName: u, onExpand: d } = e,
         { trackUserProfileAction: f } = (0, o.NJ)(),
@@ -32,9 +36,11 @@ function u(e) {
                     (0, r.jsxs)(s.Heading, {
                         variant: "text-sm/medium",
                         color: "text-default",
-                        children: [n, " \u2014 ", i.length],
+                        children: [n, " — ", i.length],
                     }),
-                    (0, r.jsx)(g, { size: "md" }),
+                    (0, r.jsx)(g, {
+                        size: "md",
+                    }),
                 ],
             }),
             i.length > 0 &&

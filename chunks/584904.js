@@ -1,4 +1,7 @@
-n.d(t, { A: () => v }), n(896048);
+n.d(t, {
+    A: () => v,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -13,6 +16,7 @@ var r = n(627968),
     _ = n(996988),
     h = n(985018),
     m = n(380297);
+
 function g(e, t, n) {
     return (
         t in e
@@ -26,6 +30,7 @@ function g(e, t, n) {
         e
     );
 }
+
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,6 +47,7 @@ function E(e) {
     }
     return e;
 }
+
 function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -54,6 +60,7 @@ function b(e, t) {
     }
     return n;
 }
+
 function y(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -65,6 +72,7 @@ function y(e, t) {
         e
     );
 }
+
 function O(e, t) {
     if (null == e) return {};
     var n,
@@ -81,6 +89,7 @@ function O(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function A(e, t) {
     if (null == e) return {};
     var n,
@@ -129,7 +138,9 @@ let v = i.forwardRef(function (e, t) {
                           },
                           T,
                       ),
-                      { children: a },
+                      {
+                          children: a,
+                      },
                   ),
               ),
           })
@@ -138,9 +149,14 @@ let v = i.forwardRef(function (e, t) {
               children: (0, r.jsx)(o.sqX, {
                   className: m.OV,
                   "aria-label": h.intl.string(h.t.pD1L1u),
-                  focusProps: { ringTarget: C },
+                  focusProps: {
+                      ringTarget: C,
+                  },
                   onClick: () => {
-                      null == A || A({ action: "PRESS_CARD" }),
+                      null == A ||
+                          A({
+                              action: "PRESS_CARD",
+                          }),
                           (0, u.openUserProfileModal)(
                               E(
                                   {
@@ -163,7 +179,9 @@ let v = i.forwardRef(function (e, t) {
                               },
                               T,
                           ),
-                          { children: a },
+                          {
+                              children: a,
+                          },
                       ),
                   ),
               }),

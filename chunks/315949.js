@@ -1,6 +1,9 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 var r = n(354328),
     i = n(747198);
+
 function a(e, t) {
     let n = null == e ? void 0 : e.paymentGateway,
         a = (0, r.A)("shop_disable_cache"),

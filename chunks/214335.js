@@ -1,8 +1,16 @@
-n.d(t, { A: () => s }), n(896048);
+n.d(t, {
+    A: () => s,
+}),
+    n(896048);
 var r = n(299855),
     i = n.n(r),
     l = n(723702);
-let a = { [l.PlatformTypes.WINDOWS]: { nvidia: "<=537.58.0 || >=546.31" } };
+let a = {
+    [l.PlatformTypes.WINDOWS]: {
+        nvidia: "<=537.58.0 || >=546.31",
+    },
+};
+
 function s(e) {
     let t = a[(0, l.getPlatform)()];
     if (null == t) return !1;

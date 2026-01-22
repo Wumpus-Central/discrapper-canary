@@ -1,4 +1,9 @@
-n.d(t, { A: () => m }), n(638769), n(321073), n(896048);
+n.d(t, {
+    A: () => m,
+}),
+    n(638769),
+    n(321073),
+    n(896048);
 var r = n(627968);
 n(64700);
 var a = n(735438),
@@ -20,9 +25,13 @@ let u = {
     audioChannels: 9,
     sampleRate: 10,
 };
+
 function m(e) {
     let { clips: t } = e;
-    if (null == t) return (0, r.jsx)(l.y$y, { type: l.y$y.Type.SPINNING_CIRCLE });
+    if (null == t)
+        return (0, r.jsx)(l.y$y, {
+            type: l.y$y.Type.SPINNING_CIRCLE,
+        });
     let n = i().map(t, (e, t) => {
         if (void 0 !== e && "buffers" !== t)
             return (0, r.jsx)(
@@ -40,7 +49,7 @@ function m(e) {
                 o.q7,
                 {
                     label: "Frames Per Second",
-                    value: t.recentEncodedFrames / (t.recentDurationMs / 1000),
+                    value: t.recentEncodedFrames / (t.recentDurationMs / 1e3),
                 },
                 "framerate",
             ),

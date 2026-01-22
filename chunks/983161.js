@@ -1,4 +1,8 @@
-l.d(n, { default: () => p }), l(896048), l(228524);
+l.d(n, {
+    default: () => p,
+}),
+    l(896048),
+    l(228524);
 var t = l(627968),
     a = l(64700),
     i = l(91871),
@@ -17,6 +21,7 @@ var t = l(627968),
     C = l(721228),
     b = l(985018),
     f = l(43079);
+
 function k(e, n, l, t) {
     return {
         channelId: e,
@@ -26,6 +31,7 @@ function k(e, n, l, t) {
         icon: null != t ? t : null,
     };
 }
+
 function p(e) {
     var n, l;
     let { transitionState: i, onClose: p, resourceChannel: N, guildId: A, onSave: H, onDelete: S, onIconUpload: I } = e,
@@ -155,7 +161,9 @@ function p(e) {
                     }),
                 ],
             }),
-            (0, t.jsx)("div", { className: f.me }),
+            (0, t.jsx)("div", {
+                className: f.me,
+            }),
             (0, t.jsxs)("div", {
                 className: f.eH,
                 children: [
@@ -172,7 +180,9 @@ function p(e) {
                     }),
                 ],
             }),
-            (0, t.jsx)("div", { className: f.me }),
+            (0, t.jsx)("div", {
+                className: f.me,
+            }),
             (0, t.jsxs)("div", {
                 className: f.eH,
                 children: [
@@ -189,7 +199,9 @@ function p(e) {
                     }),
                 ],
             }),
-            (0, t.jsx)("div", { className: f.me }),
+            (0, t.jsx)("div", {
+                className: f.me,
+            }),
             (0, t.jsxs)("div", {
                 className: f.kE,
                 children: [

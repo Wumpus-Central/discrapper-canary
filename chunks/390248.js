@@ -63,6 +63,7 @@ var g = (function (e) {
             e
         );
     })({});
+
 function b(e) {
     let { action: t, channelId: n, messageId: r, context: i } = e;
     if (null == n || null == r) return;
@@ -79,13 +80,15 @@ function b(e) {
 var y = (function (e) {
     return (e.UPDATE = "update"), (e.TIMEOUT = "timeout"), e;
 })({});
+
 function O(e, t) {
-    let n = Math.min(Math.floor((Date.now() - e) / 1000), 3);
+    let n = Math.min(Math.floor((Date.now() - e) / 1e3), 3);
     s.A.increment({
         name: i.K.EXPLICIT_MEDIA_SCAN_CLIENT_TIMING,
         tags: ["timingBucket:".concat(n), "source:".concat(t), "metricVersion:".concat(m)],
     });
 }
+
 function A(e) {
     var t, n, r, a;
     let { channelId: o, messageId: c, attachmentIds: p, embedIds: _ } = e;
@@ -111,11 +114,14 @@ function A(e) {
             tags: ["metricVersion:".concat(m)],
         }),
         s.A.distribution(
-            { name: i.K.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT_DISTRIBUTION },
+            {
+                name: i.K.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT_DISTRIBUTION,
+            },
             (null != (r = null == p ? void 0 : p.length) ? r : 0) +
                 (null != (a = null == _ ? void 0 : _.length) ? a : 0),
         );
 }
+
 function v(e) {
     let {
         channelId: t,
@@ -135,8 +141,15 @@ function v(e) {
         num_of_embeds_pending_scan: o,
     });
     let c = r + o;
-    c > 0 && s.A.distribution({ name: i.K.EXPLICIT_MEDIA_PENDING_MESSAGE_LOADED_V2 }, c);
+    c > 0 &&
+        s.A.distribution(
+            {
+                name: i.K.EXPLICIT_MEDIA_PENDING_MESSAGE_LOADED_V2,
+            },
+            c,
+        );
 }
+
 function S(e) {
     let {
             messageId: t,
@@ -173,6 +186,7 @@ function S(e) {
         has_redactable_self_harm: m,
     });
 }
+
 function I(e) {
     let {
         messageId: t,
@@ -195,6 +209,7 @@ function I(e) {
         num_of_explicit_embeds: s,
     });
 }
+
 function T(e) {
     let { attachments: t, embeds: n } = C(e),
         r = N(e);
@@ -204,12 +219,14 @@ function T(e) {
         messageSnapshots: r,
     });
 }
+
 function C(e) {
     return {
         attachments: e.attachments.map((e) => ((e.content_scan_version = -1), e)),
         embeds: e.embeds.map((e) => ((e.contentScanVersion = -1), e)),
     };
 }
+
 function N(e) {
     let { messageSnapshots: t } = e;
     return null == t || 0 === t.length
@@ -222,11 +239,14 @@ function N(e) {
                       attachments: n,
                       embeds: r,
                   })),
-                  (e = e.merge({ message: t }))
+                  (e = e.merge({
+                      message: t,
+                  }))
               );
           });
 }
 let R = (e, t) => null != e && null != t && (e <= _._L || t <= _.jd);
+
 function w() {
     let e = (0, o.d6)(r.t.SENSITIVE_CONTENT_SHOW_SETTING),
         t = (0, c.o)("explicit_media_redaction_utils"),
@@ -234,6 +254,7 @@ function w() {
         i = (0, a.p9)();
     return n && i;
 }
+
 function P() {
     let e = (0, o.aX)(r.t.SENSITIVE_CONTENT_SHOW_SETTING),
         t = (0, c.j)("explicit_media_redaction_utils"),
@@ -241,13 +262,19 @@ function P() {
         i = (0, a.i2)();
     return n && i;
 }
+
 function D(e) {
     return !!P() && null != e && p.tY.has(e);
 }
+
 function x(e) {
     let { obscure: t } = e;
-    (0, a.$8)() && d.default.track(h.HAw.EXPLICIT_MEDIA_OBSCURITY_TOGGLE_V2, { toggle_direction: t ? "hide" : "show" });
+    (0, a.$8)() &&
+        d.default.track(h.HAw.EXPLICIT_MEDIA_OBSCURITY_TOGGLE_V2, {
+            toggle_direction: t ? "hide" : "show",
+        });
 }
+
 function L(e) {
     var t;
     return null == (t = e.message_snapshots)

@@ -1,6 +1,9 @@
-n.d(t, { v: () => a });
+n.d(t, {
+    v: () => a,
+});
 var r = n(97352),
     i = n(83617);
+
 function a(e, t) {
     var n;
     let a = r.A.get(null != (n = e.premiumPlanIdFromItems) ? n : "");

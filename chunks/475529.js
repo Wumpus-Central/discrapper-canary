@@ -1,10 +1,14 @@
-n.d(t, { J: () => c }), n(747238);
+n.d(t, {
+    J: () => c,
+}),
+    n(747238);
 var r = n(64700),
     i = n(960488),
     l = n(403362),
     a = n(631001),
     s = n(890687),
     o = n(985018);
+
 function c(e) {
     let { withClaimedQuestsTab: t = !0 } = e,
         n = a.A.useField("tab"),

@@ -38,10 +38,18 @@ var n = r(64700),
                                 borderRadius: "2px 2px 0 0",
                                 overflow: "hidden",
                             },
-                            Saturation: { radius: "2px 2px 0 0" },
-                            body: { padding: "16px 16px 12px" },
-                            controls: { display: "flex" },
-                            color: { width: "32px" },
+                            Saturation: {
+                                radius: "2px 2px 0 0",
+                            },
+                            body: {
+                                padding: "16px 16px 12px",
+                            },
+                            controls: {
+                                display: "flex",
+                            },
+                            color: {
+                                width: "32px",
+                            },
                             swatch: {
                                 marginTop: "6px",
                                 width: "16px",
@@ -57,23 +65,35 @@ var n = r(64700),
                                 background: "rgba(" + a.r + ", " + a.g + ", " + a.b + ", " + a.a + ")",
                                 zIndex: "2",
                             },
-                            toggles: { flex: "1" },
+                            toggles: {
+                                flex: "1",
+                            },
                             hue: {
                                 height: "10px",
                                 position: "relative",
                                 marginBottom: "8px",
                             },
-                            Hue: { radius: "2px" },
+                            Hue: {
+                                radius: "2px",
+                            },
                             alpha: {
                                 height: "10px",
                                 position: "relative",
                             },
-                            Alpha: { radius: "2px" },
+                            Alpha: {
+                                radius: "2px",
+                            },
                         },
                         disableAlpha: {
-                            color: { width: "22px" },
-                            alpha: { display: "none" },
-                            hue: { marginBottom: "0px" },
+                            color: {
+                                width: "22px",
+                            },
+                            alpha: {
+                                display: "none",
+                            },
+                            hue: {
+                                marginBottom: "0px",
+                            },
                             swatch: {
                                 width: "10px",
                                 height: "10px",
@@ -83,7 +103,9 @@ var n = r(64700),
                     },
                     void 0 === v ? {} : v,
                 ),
-                { disableAlpha: o },
+                {
+                    disableAlpha: o,
+                },
             );
         return n.createElement(
             "div",
@@ -93,7 +115,9 @@ var n = r(64700),
             },
             n.createElement(
                 "div",
-                { style: y.saturation },
+                {
+                    style: y.saturation,
+                },
                 n.createElement(s.VI, {
                     style: y.Saturation,
                     hsl: d,
@@ -104,7 +128,9 @@ var n = r(64700),
             ),
             n.createElement(
                 "div",
-                { style: y.body },
+                {
+                    style: y.body,
+                },
                 n.createElement(
                     "div",
                     {
@@ -113,20 +139,32 @@ var n = r(64700),
                     },
                     n.createElement(
                         "div",
-                        { style: y.color },
+                        {
+                            style: y.color,
+                        },
                         n.createElement(
                             "div",
-                            { style: y.swatch },
-                            n.createElement("div", { style: y.active }),
-                            n.createElement(s.xu, { renderers: b }),
+                            {
+                                style: y.swatch,
+                            },
+                            n.createElement("div", {
+                                style: y.active,
+                            }),
+                            n.createElement(s.xu, {
+                                renderers: b,
+                            }),
                         ),
                     ),
                     n.createElement(
                         "div",
-                        { style: y.toggles },
+                        {
+                            style: y.toggles,
+                        },
                         n.createElement(
                             "div",
-                            { style: y.hue },
+                            {
+                                style: y.hue,
+                            },
                             n.createElement(s.RG, {
                                 style: y.Hue,
                                 hsl: d,
@@ -136,7 +174,9 @@ var n = r(64700),
                         ),
                         n.createElement(
                             "div",
-                            { style: y.alpha },
+                            {
+                                style: y.alpha,
+                            },
                             n.createElement(s.ry, {
                                 style: y.Alpha,
                                 rgb: a,

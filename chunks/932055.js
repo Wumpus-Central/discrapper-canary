@@ -11,11 +11,18 @@ var n = i(311907),
     a = i(803224),
     o = i(780964),
     T = i(985018);
-let A = (0, s.D)(() => ({ currentPlayingSound: null }));
+let A = (0, s.D)(() => ({
+    currentPlayingSound: null,
+}));
+
 function S() {
     let t = A.getField("currentPlayingSound");
-    null == t || t.stop(), A.setState({ currentPlayingSound: null });
+    null == t || t.stop(),
+        A.setState({
+            currentPlayingSound: null,
+        });
 }
+
 function E(t) {
     return (0, r.zD)("".concat(o.X.SOUNDS_LIST_ITEM_PREFIX).concat(t.sound), {
         useTitle: t.useTitle,
@@ -28,7 +35,9 @@ function E(t) {
                         (e = t.sound),
                         null == (i = A.getField("currentPlayingSound")) || i.stop(),
                         (n = (0, u.Ak)(e)),
-                        void A.setState({ currentPlayingSound: n })
+                        void A.setState({
+                            currentPlayingSound: n,
+                        })
                     );
                 },
             }),

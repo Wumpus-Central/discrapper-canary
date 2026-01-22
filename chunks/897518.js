@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(284009),
     i = n.n(r),
     a = n(417597),
@@ -8,6 +10,7 @@ var r = n(284009),
     c = n(935453),
     u = n(179499),
     d = n(985018);
+
 function f(e) {
     let { guildId: t, guildProductListingId: n, sourceAnalyticsLocations: r } = e,
         f = (0, a.bG)([l.A], () => l.A.getGuildProduct(n)),

@@ -46,7 +46,9 @@ var n = r(64700),
                                 justifyContent: "center",
                                 position: "relative",
                             },
-                            body: { padding: "10px" },
+                            body: {
+                                padding: "10px",
+                            },
                             label: {
                                 fontSize: "18px",
                                 color: s.OB(o),
@@ -76,11 +78,17 @@ var n = r(64700),
                                 boxSizing: "border-box",
                             },
                         },
-                        "hide-triangle": { triangle: { display: "none" } },
+                        "hide-triangle": {
+                            triangle: {
+                                display: "none",
+                            },
+                        },
                     },
                     void 0 === f ? {} : f,
                 ),
-                { "hide-triangle": "hide" === d },
+                {
+                    "hide-triangle": "hide" === d,
+                },
             );
         return n.createElement(
             "div",
@@ -88,23 +96,40 @@ var n = r(64700),
                 style: g.card,
                 className: "block-picker " + (void 0 === h ? "" : h),
             },
-            n.createElement("div", { style: g.triangle }),
+            n.createElement("div", {
+                style: g.triangle,
+            }),
             n.createElement(
                 "div",
-                { style: g.head },
-                b && n.createElement(u.xu, { borderRadius: "6px 6px 0 0" }),
-                n.createElement("div", { style: g.label }, o),
+                {
+                    style: g.head,
+                },
+                b &&
+                    n.createElement(u.xu, {
+                        borderRadius: "6px 6px 0 0",
+                    }),
+                n.createElement(
+                    "div",
+                    {
+                        style: g.label,
+                    },
+                    o,
+                ),
             ),
             n.createElement(
                 "div",
-                { style: g.body },
+                {
+                    style: g.body,
+                },
                 n.createElement(c.A, {
                     colors: a,
                     onClick: v,
                     onSwatchHover: r,
                 }),
                 n.createElement(u.jc, {
-                    style: { input: g.input },
+                    style: {
+                        input: g.input,
+                    },
                     value: o,
                     onChange: v,
                 }),

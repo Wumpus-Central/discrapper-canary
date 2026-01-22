@@ -1,9 +1,12 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(627968);
 n(64700);
 var i = n(990078),
     a = n(397927),
     s = n(785620);
+
 function o(e) {
     let { onClick: t, Icon: n, "aria-label": o } = e,
         l = (0, a.rdh)(a.LU0.colors.CONTENT_INVENTORY_OVERLAY_TEXT_PRIMARY),

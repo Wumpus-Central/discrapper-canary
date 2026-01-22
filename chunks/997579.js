@@ -1,8 +1,11 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(827734),
     i = n(775602),
     a = n(353835),
     s = n(723702);
+
 function o(e) {
     if (!__OVERLAY__ && s.isPlatformEmbedded)
         try {

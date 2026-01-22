@@ -16,26 +16,33 @@ var r = n(562465),
     l = n(652215),
     c = n(985018);
 let u = {};
+
 function d(e, t) {
     return e + t;
 }
+
 function f(e, t) {
     return t.map((t) => d(e, t));
 }
+
 function p(e) {
     return e.split("-")[1];
 }
+
 function _(e) {
     return e.filter((e) => u[e] <= 1).map(p);
 }
+
 function h(e, t) {
     e.forEach((e) => {
         u[e] = t;
     });
 }
+
 function m(e, t, n) {
     u[d(e, t)] = n;
 }
+
 function g(e, t) {
     t.forEach((t) => m(e, t, 3));
 }
@@ -68,7 +75,10 @@ let b = function (e) {
             case 5:
                 return c.intl.string(c.t["/3vIRd"]);
             case 6:
-                if (null != t && !n) return c.intl.formatToPlainString(c.t.EIUjRy, { vanityUrl: t });
+                if (null != t && !n)
+                    return c.intl.formatToPlainString(c.t.EIUjRy, {
+                        vanityUrl: t,
+                    });
                 return c.intl.string(c.t.dGiD1O);
             case 7:
                 return c.intl.string(c.t.vdu7oS);
@@ -95,6 +105,7 @@ let b = function (e) {
             ? "url('".concat((0, i.Mw)(n) ? t.icon.darkSVG : t.icon.lightSVG, "')")
             : null;
     };
+
 function A(e) {
     return {
         userId: e.user_id,
@@ -112,7 +123,9 @@ async function v(e, t) {
     try {
         let t = await r.Bo.post({
             url: l.Rsh.MEMBER_SAFETY_SUPPLEMENTAL(e),
-            body: { user_ids: i },
+            body: {
+                user_ids: i,
+            },
             rejectWithError: !0,
         });
         if (!Array.isArray(t.body)) return h(n, 0), [];

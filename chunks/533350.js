@@ -1,4 +1,7 @@
-n.d(t, { A: () => y }), n(228524);
+n.d(t, {
+    A: () => y,
+}),
+    n(228524);
 var r = n(627968);
 n(64700);
 var i = n(158954),
@@ -54,7 +57,9 @@ let y = function () {
                                       canManageGuild: n,
                                       features: t.features,
                                   }),
-                                  (0, r.jsx)("div", { className: O.yF }),
+                                  (0, r.jsx)("div", {
+                                      className: O.yF,
+                                  }),
                               ],
                           }),
                       (0, r.jsx)(p.h, {
@@ -64,7 +69,9 @@ let y = function () {
                       void 0 !== y &&
                           (0, r.jsxs)(r.Fragment, {
                               children: [
-                                  (0, r.jsx)("div", { className: O.yF }),
+                                  (0, r.jsx)("div", {
+                                      className: O.yF,
+                                  }),
                                   (0, r.jsx)(f.l, {
                                       isInventoryFeedEnabled: y,
                                       canManageGuild: n,
@@ -72,20 +79,31 @@ let y = function () {
                                   }),
                               ],
                           }),
-                      (0, r.jsx)("div", { className: O.yF }),
+                      (0, r.jsx)("div", {
+                          className: O.yF,
+                      }),
                       (0, r.jsx)(g.P, {
                           guildId: t.id,
                           defaultSettings: t.defaultMessageNotifications,
                           canManageGuild: n,
                       }),
-                      (0, r.jsx)("div", { className: O.yF }),
+                      (0, r.jsx)("div", {
+                          className: O.yF,
+                      }),
                       (0, r.jsx)(b.R, {
                           canManageGuild: n,
                           guild: t,
                       }),
                       !0 === n &&
                           (0, r.jsxs)(r.Fragment, {
-                              children: [(0, r.jsx)("div", { className: O.yF }), (0, r.jsx)(x.E, { guildId: t.id })],
+                              children: [
+                                  (0, r.jsx)("div", {
+                                      className: O.yF,
+                                  }),
+                                  (0, r.jsx)(x.E, {
+                                      guildId: t.id,
+                                  }),
+                              ],
                           }),
                   ],
               }),

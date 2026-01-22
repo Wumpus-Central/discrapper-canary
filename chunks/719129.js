@@ -16,6 +16,7 @@ var r = n(73153),
     d = n(837921),
     f = n(241696),
     p = n(652215);
+
 function _(e, t, n) {
     return (
         t in e
@@ -29,6 +30,7 @@ function _(e, t, n) {
         e
     );
 }
+
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -45,6 +47,7 @@ function h(e) {
     }
     return e;
 }
+
 function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -57,6 +60,7 @@ function m(e, t) {
     }
     return n;
 }
+
 function g(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -74,6 +78,7 @@ let E = {
     ptb: [1, 0, 1005, 2],
     stable: [1, 0, 9001, 2],
 };
+
 function b() {
     var e;
     return !(null === d.Ay || void 0 === d.Ay || null == (e = d.Ay.isModuleVersionAtLeast)
@@ -91,15 +96,24 @@ async function O() {
 async function A() {
     return null != y ? y : (y = await O());
 }
+
 function v(e) {
     if (null == e.setFlags) return;
     let t = 0,
-        n = f.A.getCurrentConfig({ location: "edd7d3_1" }, { autoTrackExposure: !1 });
+        n = f.A.getCurrentConfig(
+            {
+                location: "edd7d3_1",
+            },
+            {
+                autoTrackExposure: !1,
+            },
+        );
     n.enableCrashReporting && (console.log("Hook: Enabling crash reporting."), (t |= 1));
     let r = l.default.getCurrentUser();
     null != r && (r.isStaff() || n.enableCrashTrigger) && (console.log("Hook: Enabling crash trigger."), (t |= 2)),
         e.setFlags(t);
 }
+
 function S(e, t) {
     return O().then((n) => {
         var l;
@@ -124,22 +138,26 @@ function S(e, t) {
                         n ? o() : o((e = null != e ? e : "Unknown hook error"));
                 },
                 _ = s.Ay.getOverlayOptionsForPID(e),
-                m = g(h({}, a.gH, _), { elevate: s.Ay.shouldElevateProcessForPID(e) });
+                m = g(h({}, a.gH, _), {
+                    elevate: s.Ay.shouldElevateProcessForPID(e),
+                });
             null == m.allowHook || m.allowHook
                 ? ((f = setTimeout(() => {
                       n.cancelAttachToProcess(e), l("Timed out waiting for hook response", !1);
-                  }, 120000)),
+                  }, 12e4)),
                   n.attachToProcess(e, m, l),
                   r.h.wait(() => i.A.clearElevatedProcess()))
                 : o("Hook is disabled for this game");
         });
     });
 }
+
 function I(e) {
     return O().then((t) => {
         t.cancelAttachToProcess(e);
     });
 }
+
 function T() {
     return A()
         .then((e) => (null != e.findSteamProcess ? e.findSteamProcess() : null))

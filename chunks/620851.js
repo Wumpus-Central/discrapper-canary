@@ -1,11 +1,15 @@
-n.d(t, { A: () => m }), n(896048), n(65821);
+n.d(t, {
+    A: () => m,
+}),
+    n(896048),
+    n(65821);
 var i = n(627968),
     r = n(64700),
     l = n(503698),
     a = n.n(l),
     o = n(812729),
     s = n.n(o),
-    c = n(432022),
+    c = n(108531),
     u = n(397927),
     d = n(259788),
     p = n(302614),
@@ -16,6 +20,7 @@ let f = {
     friction: 60,
     clamp: !0,
 };
+
 function m(e) {
     let { locked: t, pinned: n } = e,
         [l, o] = r.useState(0),
@@ -60,11 +65,17 @@ function m(e) {
     let I = () => {
             o(Date.now()), v((e) => e + 1);
         },
-        N = l > 0 && m - l < 1000,
+        N = l > 0 && m - l < 1e3,
         w = (0, u.pnh)(y > 0 && y < m && m - y < b, {
-            from: { opacity: 0 },
-            enter: { opacity: 1 },
-            leave: { opacity: 0 },
+            from: {
+                opacity: 0,
+            },
+            enter: {
+                opacity: 1,
+            },
+            leave: {
+                opacity: 0,
+            },
             config: f,
         }),
         [T, C] = r.useState(!1);

@@ -1,4 +1,12 @@
-n.d(t, { Vq: () => y }), n(321073), n(228524), n(747238), n(812715), n(866193), n(284009);
+n.d(t, {
+    Vq: () => y,
+}),
+    n(321073),
+    n(228524),
+    n(747238),
+    n(812715),
+    n(866193),
+    n(284009);
 var r = n(989349),
     i = n.n(r),
     a = n(379834);
@@ -16,6 +24,7 @@ n(176563);
 var f = n(365170),
     p = n(241678),
     _ = n(985018);
+
 function h(e, t, n) {
     return (
         t in e
@@ -29,6 +38,7 @@ function h(e, t, n) {
         e
     );
 }
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -47,10 +57,18 @@ function m(e) {
 }
 let g = (e, t) =>
         m(
-            { AvatarImage1: e[0] },
-            null != e[1] && { AvatarImage2: e[1] },
-            null != e[2] && { AvatarImage3: e[2] },
-            null != t && { ApplicationImage: t },
+            {
+                AvatarImage1: e[0],
+            },
+            null != e[1] && {
+                AvatarImage2: e[1],
+            },
+            null != e[2] && {
+                AvatarImage3: e[2],
+            },
+            null != t && {
+                ApplicationImage: t,
+            },
         ),
     E = (e, t) => {
         let n = [
@@ -76,7 +94,9 @@ let g = (e, t) =>
             let t = (0, d.iy)(e);
             n.push({
                 iconPath: p.Jd,
-                text: _.intl.formatToPlainString(_.t["Klie/P"], { days: t }),
+                text: _.intl.formatToPlainString(_.t["Klie/P"], {
+                    days: t,
+                }),
             });
         }
         (0, d.CZ)(e) === a.m.GLOBAL &&
@@ -103,11 +123,13 @@ let g = (e, t) =>
         if ((0, d.uw)(e)) {
             let t = (0, d.ty)(e);
             if (null != t) {
-                let e = _.intl.formatToPlainString(_.t.C0AxoR, { hours: Math.round(t / c.A.Seconds.HOUR) });
+                let e = _.intl.formatToPlainString(_.t.C0AxoR, {
+                    hours: Math.round(t / c.A.Seconds.HOUR),
+                });
                 return [
                     {
                         iconPath: p.pc,
-                        text: "".concat(_.intl.string(_.t["/50eHi"]), " \u2014 ").concat(e),
+                        text: "".concat(_.intl.string(_.t["/50eHi"]), " — ").concat(e),
                     },
                 ];
             }

@@ -1,4 +1,9 @@
-n.d(t, { A: () => N }), n(896048), n(747238), n(812715);
+n.d(t, {
+    A: () => N,
+}),
+    n(896048),
+    n(747238),
+    n(812715);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -20,11 +25,13 @@ var r = n(627968),
     O = n(985018),
     A = n(97051);
 let v = i.lazy(() => n.e("94436").then(n.bind(n, 660207)));
+
 function S(e) {
     let t = (b.CA.indexOf(e) + 1) % b.CA.length,
         n = b.CA[t];
     (0, u.Y)(n, d.k0.VOICE_MESSAGE);
 }
+
 function I(e) {
     let { played: t, duration: n, currentTime: i } = e,
         a = null == n ? "--:--" : t ? (0, p.rB)(Math.ceil(n - i)) : (0, p.rB)(Math.ceil(n));
@@ -35,9 +42,11 @@ function I(e) {
         children: a,
     });
 }
+
 function T(e, t, n) {
     i.useEffect(() => {
         let r;
+
         function i() {
             let a = e.current;
             null == a || (n(a.currentTime), t && (r = requestAnimationFrame(i)));
@@ -50,16 +59,20 @@ function T(e, t, n) {
         );
     }, [e, t, n]);
 }
+
 function C(e, t, n) {
     i.useEffect(() => {
         if (t)
             return (
-                h._.dispatch(y.jej.VOICE_MESSAGE_PLAYBACK_STARTED, { src: e }),
+                h._.dispatch(y.jej.VOICE_MESSAGE_PLAYBACK_STARTED, {
+                    src: e,
+                }),
                 h._.subscribe(y.jej.VOICE_MESSAGE_PLAYBACK_STARTED, r),
                 () => {
                     h._.unsubscribe(y.jej.VOICE_MESSAGE_PLAYBACK_STARTED, r);
                 }
             );
+
         function r(t) {
             let { src: r } = t;
             e !== r && n(!1);
@@ -201,7 +214,7 @@ let N = i.memo(function (e) {
                 } else {
                     let e = performance.now(),
                         r = eh.current,
-                        i = null != r ? (e - r) / 1000 : 0;
+                        i = null != r ? (e - r) / 1e3 : 0;
                     null == n || n(t, i), ea(t), (eh.current = null);
                 }
         }, [W, n, F, ea]),
@@ -209,7 +222,9 @@ let N = i.memo(function (e) {
         C(n, W, K);
     let eE = W ? l.E$n : l.udU,
         eb = W ? O.intl.string(O.t.ZcgDJX) : O.intl.string(O.t.RscU7I),
-        ey = O.intl.formatToPlainString(O.t.LgCPMt, { playbackRate: M }),
+        ey = O.intl.formatToPlainString(O.t.LgCPMt, {
+            playbackRate: M,
+        }),
         eO = "".concat(M.toString().replace(/^0/, ""), "X");
     t =
         "Safari" === platform.name
@@ -240,16 +255,24 @@ let N = i.memo(function (e) {
                   volume: J,
                   playbackRate: M,
                   playing: W && !z,
-                  children: (0, r.jsx)("source", { src: n }),
+                  children: (0, r.jsx)("source", {
+                      src: n,
+                  }),
               });
     let eA = (0, o.bG)([c.A], () => c.A.useReducedMotion);
     return (0, r.jsxs)("div", {
-        className: s()(A.kL, { [A.he]: W }),
+        className: s()(A.kL, {
+            [A.he]: W,
+        }),
         onMouseEnter: er,
         children: [
             (0, r.jsx)("div", {
                 className: A.Kl,
-                children: (0, r.jsx)("div", { className: s()(A.fq, { [A.VN]: eA }) }),
+                children: (0, r.jsx)("div", {
+                    className: s()(A.fq, {
+                        [A.VN]: eA,
+                    }),
+                }),
             }),
             (0, r.jsx)(l.DUT, {
                 className: A.k0,

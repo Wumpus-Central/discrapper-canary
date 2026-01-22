@@ -1,4 +1,6 @@
-n.d(t, { x: () => r });
+n.d(t, {
+    x: () => r,
+});
 let r = {
     facebook: {
         presentation: "Facebook",

@@ -1,4 +1,6 @@
-r.d(t, { q: () => b });
+r.d(t, {
+    q: () => b,
+});
 var n = r(627968);
 r(64700);
 var s = r(503698),
@@ -20,7 +22,9 @@ let b = (e) => {
         m = u.Ay.getName(t),
         y = !r;
     return (0, n.jsxs)("div", {
-        className: i()(p.nM, { [p.z3]: y }),
+        className: i()(p.nM, {
+            [p.z3]: y,
+        }),
         children: [
             (0, n.jsx)(
                 l.euF,
@@ -71,7 +75,9 @@ let b = (e) => {
                             variant: "text-xs/normal",
                             color: "text-strong",
                             className: p.kc,
-                            children: f.intl.format(d.default["Y/oMwY"], { userName: m }),
+                            children: f.intl.format(d.default["Y/oMwY"], {
+                                userName: m,
+                            }),
                         }),
                 ],
             }),
@@ -83,7 +89,14 @@ let b = (e) => {
                     icon: l.oyn,
                     onClick: () => {
                         var e;
-                        return (e = t.id), void ((0, o.default)(), a.A.openPrivateChannel({ recipientIds: e }), s());
+                        return (
+                            (e = t.id),
+                            void ((0, o.default)(),
+                            a.A.openPrivateChannel({
+                                recipientIds: e,
+                            }),
+                            s())
+                        );
                     },
                 }),
         ],

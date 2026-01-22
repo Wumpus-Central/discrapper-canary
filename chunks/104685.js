@@ -1,4 +1,7 @@
-n.d(t, { A: () => f }), n(896048);
+n.d(t, {
+    A: () => f,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(417597),
@@ -8,6 +11,7 @@ var r = n(627968),
     o = n(652215),
     d = n(985018),
     u = n(993013);
+
 function f(e) {
     let { guild: t } = e,
         n = (0, l.bG)([c.A], () => null != t && c.A.can(o.xBc.MANAGE_GUILD, t), [t]),

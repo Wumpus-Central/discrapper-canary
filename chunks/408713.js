@@ -4,6 +4,7 @@ function r(e) {
     let n = null == (t = window.navigator.userAgentData) ? void 0 : t.brands;
     return (Array.isArray(n) && n.some((t) => e.test(t.brand))) || e.test(window.navigator.userAgent);
 }
+
 function i(e) {
     var t;
     return (
@@ -12,6 +13,7 @@ function i(e) {
         e.test((null == (t = window.navigator.userAgentData) ? void 0 : t.platform) || window.navigator.platform)
     );
 }
+
 function a(e) {
     let t = null;
     return () => (null == t && (t = e()), t);

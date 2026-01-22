@@ -1,4 +1,5 @@
 var r = n(89738);
+
 function i() {
     (this.protocol = null),
         (this.slashes = null),
@@ -16,7 +17,7 @@ function i() {
 var a = /^([a-z0-9.+-]+:)/i,
     s = /:[0-9]*$/,
     o = /^(\/\/?(?!\/)[^?\s]*)(\?[^\s]*)?$/,
-    l = ["'"].concat(["{", "}", "|", "\\", "^", "`"].concat(["<", ">", '"', "`", " ", "\r", "\n", "\t"])),
+    l = ["'"].concat(["{", "}", "|", "\\", "^", "`"].concat(["<", ">", '"', "`", " ", "\r", "\n", "	"])),
     c = ["%", "/", "?", ";", "#"].concat(l),
     u = ["/", "?", "#"],
     d = 255,
@@ -43,17 +44,21 @@ var a = /^([a-z0-9.+-]+:)/i,
         "file:": !0,
     },
     g = n(591560);
+
 function E(e, t, n) {
     if (e && "object" == typeof e && e instanceof i) return e;
     var r = new i();
     return r.parse(e, t, n), r;
 }
+
 function b(e) {
     return ("string" == typeof e && (e = E(e)), e instanceof i) ? e.format() : i.prototype.format.call(e);
 }
+
 function y(e, t) {
     return E(e, !1, !0).resolve(t);
 }
+
 function O(e, t) {
     return e ? E(e, !1, !0).resolveObject(t) : t;
 }

@@ -1,4 +1,6 @@
-e.d(a, { default: () => u });
+e.d(a, {
+    default: () => u,
+});
 var r = e(627968);
 e(64700);
 var i = e(397927),
@@ -7,6 +9,7 @@ var i = e(397927),
     s = e(9302);
 e(644434);
 var o = e(985018);
+
 function u(t) {
     let { onSelect: a, layoutId: e = s.OVERLAY_LAYOUT_ID, version: u } = t;
     return (0, r.jsx)(i.W1t, {

@@ -5,6 +5,7 @@ n.d(t, {
 var r = n(311907),
     i = n(164956),
     a = n(652215);
+
 function s(e) {
     return (
         (0, r.bG)([i.A], () => {
@@ -15,6 +16,7 @@ function s(e) {
         }) || (null == e ? void 0 : e.features.has(a.GuildFeatures.GUILD_ONBOARDING_HAS_PROMPTS))
     );
 }
+
 function o(e) {
     if (null == e) return !1;
     let t = i.A.isFullServerPreview(e.id),

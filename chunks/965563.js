@@ -1,4 +1,7 @@
-n.d(t, { A: () => y }), n(667532);
+n.d(t, {
+    A: () => y,
+}),
+    n(667532);
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -11,6 +14,7 @@ var r = n(627968),
     f = n(303351),
     p = n(985018),
     _ = n(208227);
+
 function h(e, t, n) {
     return (
         t in e
@@ -24,6 +28,7 @@ function h(e, t, n) {
         e
     );
 }
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -40,6 +45,7 @@ function m(e) {
     }
     return e;
 }
+
 function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -52,6 +58,7 @@ function g(e, t) {
     }
     return n;
 }
+
 function E(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -67,6 +74,7 @@ let b = {
     label: () => p.intl.string(p.t["32u1Dx"]),
     value: d.YG,
 };
+
 function y() {
     let { selectedGuildId: e, setSelectedGuildId: t } = (0, d.xk)(),
         n = (0, a.bG)([c.Ay], () => c.Ay.getFlattenedGuildIds()),

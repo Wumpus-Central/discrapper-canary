@@ -21,6 +21,7 @@ var i = n(627968),
     f = n(737045),
     O = n(985018),
     A = n(138695);
+
 function C(e, t) {
     return {
         id: e,
@@ -29,6 +30,7 @@ function C(e, t) {
         allow: m.QY,
     };
 }
+
 function E(e) {
     var t, n;
     let { channelId: b, onClose: E } = e,
@@ -158,7 +160,9 @@ function E(e) {
                                     variant: "text-sm/normal",
                                     children: O.intl.string(O.t.f7VbhF),
                                 }),
-                            (0, i.jsx)(h.A.SearchBox, { placeholderText: O.intl.string(O.t.iezLLn) }),
+                            (0, i.jsx)(h.A.SearchBox, {
+                                placeholderText: O.intl.string(O.t.iezLLn),
+                            }),
                             (0, i.jsx)(a.Text, {
                                 className: A.W$,
                                 variant: "text-xs/normal",

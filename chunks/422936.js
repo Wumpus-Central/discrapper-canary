@@ -1,7 +1,10 @@
-n.d(t, { O: () => s });
+n.d(t, {
+    O: () => s,
+});
 var r = n(816733),
     i = n(432779),
     a = n(788868);
+
 function s() {
     var e, t, n;
     let s = r.A.canFractionalPremiumUserUseOffer(),

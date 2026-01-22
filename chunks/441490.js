@@ -1,5 +1,8 @@
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 var r = n(627968);
+
 function i(e) {
     var t, n;
     return (0, r.jsxs)(
@@ -58,7 +61,9 @@ function i(e) {
                             y2: "2.1675",
                             gradientUnits: "userSpaceOnUse",
                             children: [
-                                (0, r.jsx)("stop", { stopColor: "#8547C6" }),
+                                (0, r.jsx)("stop", {
+                                    stopColor: "#8547C6",
+                                }),
                                 (0, r.jsx)("stop", {
                                     offset: "0.52899",
                                     stopColor: "#B845C1",

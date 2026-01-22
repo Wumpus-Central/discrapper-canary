@@ -14,6 +14,7 @@ function r(e) {
     }
     return e;
 }
+
 function i(e, t, n) {
     return (
         t in e
@@ -48,7 +49,9 @@ var a = n(68055),
         if (e instanceof a) return void n.push(d(e, t));
         e instanceof s || u(!1);
         var o = e.getParentKey(),
-            l = (i[e.getKey()] = r({}, d(e, t), { children: [] }));
+            l = (i[e.getKey()] = r({}, d(e, t), {
+                children: [],
+            }));
         o ? i[o].children.push(l) : n.push(l);
     },
     p = function (e, t) {

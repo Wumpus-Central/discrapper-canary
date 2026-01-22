@@ -1,4 +1,6 @@
-i.d(e, { u: () => E });
+i.d(e, {
+    u: () => E,
+});
 var n = i(935649),
     l = i(847599),
     s = i(36149),
@@ -22,7 +24,9 @@ let E = (0, u.zD)(T.X.CONTENT_AND_SOCIAL_AGE_RESTRICTED_DM_SETTING, {
     },
     setValue: (t) => {
         (0, r.p5)() && t
-            ? n.A.showAgeVerificationGetStartedModal({ entryPoint: l.q1.AGE_RESTRICTED_DM_COMMANDS_SETTINGS })
+            ? n.A.showAgeVerificationGetStartedModal({
+                  entryPoint: l.q1.AGE_RESTRICTED_DM_COMMANDS_SETTINGS,
+              })
             : o.Qe.updateSetting(t);
     },
 });

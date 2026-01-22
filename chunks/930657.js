@@ -1,4 +1,7 @@
-n.d(t, { A: () => O }), n(896048);
+n.d(t, {
+    A: () => O,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(311907),
@@ -16,6 +19,7 @@ var r = n(627968),
     x = n(652215),
     h = n(985018),
     j = n(844089);
+
 function O(e) {
     let { priceTiers: t } = e,
         { editStateId: n } = (0, g.O)(),
@@ -42,6 +46,7 @@ function O(e) {
                 ? e
                 : [];
         }, [t]);
+
     function R(e, t) {
         null != t && P(t.name), T(e);
     }

@@ -1,4 +1,6 @@
-n.d(t, { z: () => r });
+n.d(t, {
+    z: () => r,
+});
 let r = {
     RawColors: {
         APPLICATION_SUBSCRIPTION_END: "#0177a4",

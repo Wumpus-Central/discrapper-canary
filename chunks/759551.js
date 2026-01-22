@@ -1,4 +1,6 @@
-r.d(t, { A: () => l });
+r.d(t, {
+    A: () => l,
+});
 var n = r(64700),
     o = r(205662),
     a = r(981735),
@@ -20,7 +22,9 @@ let l = function (e) {
         });
     return n.createElement(
         "div",
-        { style: u.group },
+        {
+            style: u.group,
+        },
         (0, a.A)(l, function (e, o) {
             return n.createElement(i.A, {
                 key: e,

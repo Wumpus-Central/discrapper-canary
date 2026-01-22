@@ -1,4 +1,6 @@
-i.d(e, { w: () => S });
+i.d(e, {
+    w: () => S,
+});
 var n = i(311907),
     l = i(955572),
     s = i(775602),
@@ -14,7 +16,9 @@ let S = (0, a.zD)(o.X.DISPLAY_NAME_STYLES, {
         let { analyticsLocations: t } = (0, r.Ay)();
         return T.intl.format(A.default.L8U56h, {
             onClickOpenModal() {
-                (0, u.L)({ analyticsLocations: t });
+                (0, u.L)({
+                    analyticsLocations: t,
+                });
             },
         });
     },

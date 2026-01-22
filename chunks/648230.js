@@ -1,4 +1,7 @@
-r.d(t, { default: () => Q }), r(896048);
+r.d(t, {
+    default: () => Q,
+}),
+    r(896048);
 var n = r(627968),
     l = r(64700),
     s = r(503698),
@@ -43,6 +46,7 @@ var n = r(627968),
     V = r(191850),
     z = r(985018),
     W = r(580340);
+
 function Q(e) {
     var t;
     let { onClose: r, transitionState: s, sourcePID: a, analyticsLocations: Q = [], selectSource: q = !0 } = e,
@@ -118,7 +122,11 @@ function Q(e) {
             [r, et, J],
         );
     async function eh(e) {
-        (await (0, m.A)({ channelId: e })) && null != K && eu(K);
+        (await (0, m.A)({
+            channelId: e,
+        })) &&
+            null != K &&
+            eu(K);
     }
     let ep = l.useCallback(() => {
         var e;
@@ -186,7 +194,9 @@ function Q(e) {
                                         className: W.Qs,
                                         children:
                                             X && ef !== d.fS.CAMERA
-                                                ? (0, n.jsx)(D.A, { onSourceSelect: ep })
+                                                ? (0, n.jsx)(D.A, {
+                                                      onSourceSelect: ep,
+                                                  })
                                                 : (0, n.jsx)(U.A, {
                                                       onClick: function (e) {
                                                           var t;
@@ -211,7 +221,10 @@ function Q(e) {
                                     (0, n.jsxs)("div", {
                                         className: W.gt,
                                         children: [
-                                            el && (0, n.jsx)(G.A, { onClose: r }),
+                                            el &&
+                                                (0, n.jsx)(G.A, {
+                                                    onClose: r,
+                                                }),
                                             (eo || ec) &&
                                                 (0, n.jsx)(h.Button, {
                                                     variant: "primary",
@@ -234,7 +247,9 @@ function Q(e) {
                                                         (eo && !es && "" === et.nativeSourceType) ||
                                                         (ec && null == et.selectedSource),
                                                 }),
-                                            (0, n.jsx)(L.A, { align: "right" }),
+                                            (0, n.jsx)(L.A, {
+                                                align: "right",
+                                            }),
                                         ],
                                     }),
                                 ],
@@ -242,7 +257,9 @@ function Q(e) {
                             el &&
                                 (0, n.jsx)("div", {
                                     className: W.rO,
-                                    children: (0, n.jsx)(k.A, { onClose: r }),
+                                    children: (0, n.jsx)(k.A, {
+                                        onClose: r,
+                                    }),
                                 }),
                         ],
                     }),

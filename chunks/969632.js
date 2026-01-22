@@ -33,6 +33,7 @@ var r = n(735438),
     E = n(412136),
     b = n(652215),
     y = n(985018);
+
 function O(e, t, n) {
     return (
         t in e
@@ -46,6 +47,7 @@ function O(e, t, n) {
         e
     );
 }
+
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -62,6 +64,7 @@ function A(e) {
     }
     return e;
 }
+
 function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -74,6 +77,7 @@ function v(e, t) {
     }
     return n;
 }
+
 function S(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -85,6 +89,7 @@ function S(e, t) {
         e
     );
 }
+
 function I() {
     return {
         text: void 0,
@@ -92,17 +97,21 @@ function I() {
         localCreationAnswerId: T(),
     };
 }
+
 function T() {
     return (0, a.A)();
 }
+
 function C(e) {
     let t = /\b[a-f\d]{8}-(?:[a-f\d]{4}-){3}[a-f\d]{12}-\b/i;
     return e.replace(t, "");
 }
+
 function N(e) {
     for (let t of e.reactions) if (null == t.me_vote) return !0;
     return !1;
 }
+
 function R(e) {
     return (0, o.bG)(
         [_.A],
@@ -113,22 +122,27 @@ function R(e) {
             (!!e.isPrivate() || (_.A.can(b.xBc.SEND_MESSAGES, e) && _.A.can(b.xBc.SEND_POLLS, e))),
     );
 }
+
 function w(e, t) {
     return 0 === e.length && null == t.find((e) => P(e));
 }
+
 function P(e) {
     var t;
     let n = null == (t = e.text) ? void 0 : t.trim();
     return null != n && n.length > 0;
 }
+
 function D(e) {
     var t;
     let n = null == (t = e.text) ? void 0 : t.trim();
     return null != e.image && (null == n || 0 === n.length);
 }
+
 function x(e) {
     return new Date(Date.now() + e * m.A.Millis.HOUR).toISOString();
 }
+
 function L(e) {
     var t;
     if (null == e) return;
@@ -158,6 +172,7 @@ function L(e) {
         answers: n,
     });
 }
+
 function j(e, t) {
     var n, r, i, a;
     let o =
@@ -172,6 +187,7 @@ function j(e, t) {
             : "";
     return null != t ? (0, s.EJ)(o, t) : o;
 }
+
 function M(e) {
     let t = (0, u.p_)(e),
         n = j(e, E.TU);
@@ -180,12 +196,14 @@ function M(e) {
         title: n,
     });
 }
+
 function k(e) {
     return e.reduce((e, t) => {
         var n, r;
         return e + (null != (n = null == (r = t.count_details) ? void 0 : r.vote) ? n : 0);
     }, 0);
 }
+
 function U(e, t) {
     var n;
     let r = {
@@ -203,6 +221,7 @@ function U(e, t) {
         .map((e) => g.Ay.getName(l, null == o ? void 0 : o.id, e))
         .value();
 }
+
 function G(e, t) {
     let n = Math.max(0, t - e.length);
     if (1 === e.length)
@@ -225,7 +244,9 @@ function G(e, t) {
                 b: e[1],
             });
     return 3 !== e.length
-        ? y.intl.formatToPlainString(y.t.yVX6kE, { n: n })
+        ? y.intl.formatToPlainString(y.t.yVX6kE, {
+              n: n,
+          })
         : n > 0
           ? y.intl.formatToPlainString(y.t["ThXp+N"], {
                 a: e[0],
@@ -239,6 +260,7 @@ function G(e, t) {
                 c: e[2],
             });
 }
+
 function V(e, t, n) {
     var r, i;
     let a = p.A.getMessage(t, e);

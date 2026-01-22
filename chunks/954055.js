@@ -80,12 +80,16 @@ var r = n(387739),
         },
         setBlockData: function (e, t, n) {
             return f(e, t, function (e) {
-                return e.merge({ data: n });
+                return e.merge({
+                    data: n,
+                });
             });
         },
         mergeBlockData: function (e, t, n) {
             return f(e, t, function (e) {
-                return e.merge({ data: e.getData().merge(n) });
+                return e.merge({
+                    data: e.getData().merge(n),
+                });
             });
         },
         applyEntity: function (e, t, n) {

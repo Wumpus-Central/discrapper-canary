@@ -1,4 +1,6 @@
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});
 var l = n(839214);
 let a = Object.freeze({
         query: "",

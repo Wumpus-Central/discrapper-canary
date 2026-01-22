@@ -1,4 +1,7 @@
-n.d(t, { A: () => p }), n(747238);
+n.d(t, {
+    A: () => p,
+}),
+    n(747238);
 var l = n(627968),
     r = n(64700),
     i = n(503698),
@@ -14,6 +17,7 @@ var l = n(627968),
     h = n(562153),
     N = n(427262),
     I = n(680235);
+
 function p(e) {
     var t, n;
     let i,
@@ -31,7 +35,10 @@ function p(e) {
         c.A.requestMembersById(p, T);
     }, [p, T]),
         r.useEffect(() => {
-            null != _ && (0, m.A)(_.id, _.getAvatarURL(p, 48), { guildId: p });
+            null != _ &&
+                (0, m.A)(_.id, _.getAvatarURL(p, 48), {
+                    guildId: p,
+                });
         }, [_, p]);
     let b = h.Ay.useName(p, null, _),
         v = (0, N.tx)(j);
@@ -40,7 +47,9 @@ function p(e) {
     return (0, l.jsxs)(o.ZpM, {
         className: s()(I.fr, S),
         children: [
-            (0, l.jsx)("div", { className: I.oJ }),
+            (0, l.jsx)("div", {
+                className: I.oJ,
+            }),
             A
                 ? (0, l.jsx)(o.euF, {
                       src: _.getAvatarURL(p, 48),
@@ -54,7 +63,9 @@ function p(e) {
                       className: I.my,
                       "aria-label": _.username,
                   }),
-            (0, l.jsx)("div", { className: I.uh }),
+            (0, l.jsx)("div", {
+                className: I.uh,
+            }),
             (0, l.jsxs)("div", {
                 className: I.H0,
                 children: [

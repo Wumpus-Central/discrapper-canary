@@ -1,4 +1,6 @@
-t(697509)(r, "__esModule", { value: !0 }),
+t(697509)(r, "__esModule", {
+    value: !0,
+}),
     (r.default = void 0),
     (r.default = {
         abstract: !1,
@@ -16,19 +18,27 @@ t(697509)(r, "__esModule", { value: !0 }),
         },
         relatedConcepts: [
             {
-                concept: { name: "MENU_ITEM" },
+                concept: {
+                    name: "MENU_ITEM",
+                },
                 module: "JAPI",
             },
             {
-                concept: { name: "listitem" },
+                concept: {
+                    name: "listitem",
+                },
                 module: "ARIA",
             },
             {
-                concept: { name: "menuitem" },
+                concept: {
+                    name: "menuitem",
+                },
                 module: "HTML",
             },
             {
-                concept: { name: "option" },
+                concept: {
+                    name: "option",
+                },
                 module: "ARIA",
             },
         ],

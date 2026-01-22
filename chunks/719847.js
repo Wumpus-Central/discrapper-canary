@@ -1,4 +1,7 @@
-e.d(a, { default: () => v }), e(896048);
+e.d(a, {
+    default: () => v,
+}),
+    e(896048);
 var s = e(627968),
     i = e(64700),
     c = e(991660),
@@ -18,16 +21,29 @@ var s = e(627968),
     j = e(985018),
     m = e(801059),
     A = e(22789);
+
 function v(t) {
     let { onClose: a, transitionState: e, appId: v, guildId: C } = t,
         y = (0, r.bG)([d.A], () => d.A.getApplication(v), [v]),
-        [T, g] = i.useState(() => (d.A.isFetchingApplication(v) ? { status: 1 } : { status: 0 }));
+        [T, g] = i.useState(() =>
+            d.A.isFetchingApplication(v)
+                ? {
+                      status: 1,
+                  }
+                : {
+                      status: 0,
+                  },
+        );
     i.useEffect(() => {
         0 === T.status &&
-            (g({ status: 1 }),
+            (g({
+                status: 1,
+            }),
             o.Ay.fetchApplication(v)
                 .then(() => {
-                    g({ status: 2 });
+                    g({
+                        status: 2,
+                    });
                 })
                 .catch((t) => {
                     g({
@@ -38,7 +54,9 @@ function v(t) {
     }, [v, T.status]);
     let { subscriptions: E, otps: O } = (0, b.C)(v);
     if (null == y) return null;
-    let P = j.intl.formatToPlainString(j.t.XDRjs5, { appName: y.name }),
+    let P = j.intl.formatToPlainString(j.t.XDRjs5, {
+            appName: y.name,
+        }),
         U = (0, s.jsx)("div", {
             className: m.K,
             children: (0, s.jsx)(p.h, {}),
@@ -46,7 +64,10 @@ function v(t) {
         k = f.p5
             ? (0, s.jsx)(n.K0, {
                   "aria-label": j.intl.string(j.t.WqhZss),
-                  icon: () => (0, s.jsx)(n.qYV, { size: "sm" }),
+                  icon: () =>
+                      (0, s.jsx)(n.qYV, {
+                          size: "sm",
+                      }),
                   onClick: () => {
                       let t = ""
                           .concat(location.protocol, "//")

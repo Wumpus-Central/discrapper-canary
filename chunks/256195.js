@@ -1,4 +1,6 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -16,10 +18,13 @@ var i = n(503698),
 let m = 175,
     g = 195,
     E = n(913516);
+
 function b(e) {
     let { participant: t, width: n, noArt: i = !1, selected: b = !1 } = e,
         y = n < g,
-        { defaultWatchMultipleStreams: O } = (0, u.W)({ location: "StreamHidden" }),
+        { defaultWatchMultipleStreams: O } = (0, u.W)({
+            location: "StreamHidden",
+        }),
         A = (0, s.bG)([d.A, f.default], () =>
             d.A.getAllActiveStreams().some((e) => {
                 let { ownerId: t } = e;
@@ -38,7 +43,9 @@ function b(e) {
             description: b
                 ? null
                 : (0, r.jsxs)("div", {
-                      className: a()(h.t2, { [h.y8]: !y }),
+                      className: a()(h.t2, {
+                          [h.y8]: !y,
+                      }),
                       children: [
                           (0, r.jsx)("div", {
                               className: h.lO,
@@ -59,7 +66,10 @@ function b(e) {
                                             icon: l.vAm,
                                             "aria-label": _.intl.string(_.t.wCrzut),
                                             onClick: (e) => {
-                                                e.stopPropagation(), (0, c.A9)(t.stream, { forceMultiple: !0 });
+                                                e.stopPropagation(),
+                                                    (0, c.A9)(t.stream, {
+                                                        forceMultiple: !0,
+                                                    });
                                             },
                                         }),
                                     }),

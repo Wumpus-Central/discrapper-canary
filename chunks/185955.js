@@ -1,4 +1,8 @@
-n.d(t, { A: () => O }), n(896048), n(321073);
+n.d(t, {
+    A: () => O,
+}),
+    n(896048),
+    n(321073);
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -100,7 +104,11 @@ let y = (0, l.Ld)(),
             N = i.useCallback(
                 (e) => {
                     let t = e[0];
-                    return null == t ? null : (0, r.jsx)(r.Fragment, { children: I(t) });
+                    return null == t
+                        ? null
+                        : (0, r.jsx)(r.Fragment, {
+                              children: I(t),
+                          });
                 },
                 [I],
             ),

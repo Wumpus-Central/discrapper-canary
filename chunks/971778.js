@@ -15,6 +15,7 @@ var r,
     c = n(626584),
     u = n(736666),
     d = n(805026);
+
 function f(e, t, n) {
     return (
         t in e
@@ -28,6 +29,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -44,6 +46,7 @@ function p(e) {
     }
     return e;
 }
+
 function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -56,6 +59,7 @@ function _(e, t) {
     }
     return n;
 }
+
 function h(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -88,12 +92,15 @@ let g = new c.A("VoiceFilterStore"),
         error: null,
     },
     b = null;
+
 function y() {
     return (null === l.A || void 0 === l.A ? void 0 : l.A.remoteApp.getVersion()) === "0.0.0";
 }
+
 function O(e) {
     return e.available ? 0 : e.temporarilyAvailable ? 1 : 2;
 }
+
 function A(e) {
     if (null != e) {
         let t = new Date(),
@@ -117,6 +124,7 @@ function A(e) {
         catalogUpdateTime: void 0,
     };
 }
+
 function v(e) {
     null == E.limitedTimeVoices
         ? g.warn("No limited time voices available to update")
@@ -125,6 +133,7 @@ function v(e) {
           (E.limitedTimeVoices.next_set_end = (0, i.default)(e, 2).toISOString()),
           N());
 }
+
 function S(e) {
     return Object.entries(e)
         .sort((e, t) => O(e[1]) - O(t[1]))
@@ -133,6 +142,7 @@ function S(e) {
             return t;
         });
 }
+
 function I(e) {
     let { catalog: t, initialModelState: n } = e,
         r = y();
@@ -162,6 +172,7 @@ function I(e) {
                 ? (E.modelState = n)
                 : g.warn("Attempted to replace existing model state with initial model state"));
 }
+
 function T() {
     E.catalogFetchFailed = !0;
 }
@@ -230,6 +241,7 @@ class C extends (r = s.Ay.Store) {
         return b;
     }
 }
+
 function N() {
     let e = A(E.limitedTimeVoices);
     (E.catalogUpdateTime = e.catalogUpdateTime),
@@ -238,6 +250,7 @@ function N() {
         }),
         (E.sortedVoiceFilters = S(E.voiceFilters));
 }
+
 function R(e) {
     let { modelId: t } = e;
     E.modelState[t] = h(p({}, E.modelState[t]), {
@@ -245,6 +258,7 @@ function R(e) {
         downloadedBytes: 0,
     });
 }
+
 function w(e) {
     let { modelId: t, downloadedBytes: n, totalBytes: r } = e;
     E.modelState[t] = h(p({}, E.modelState[t]), {
@@ -252,13 +266,17 @@ function w(e) {
         totalBytes: r,
     });
 }
+
 function P(e) {
     var t;
     let { modelId: n, error: r } = e;
     (null == (t = E.modelState[n]) ? void 0 : t.status) !== u.u.DOWNLOADED &&
-        ((E.modelState[n] = h(p({}, E.modelState[n]), { status: u.u.MISSING })),
+        ((E.modelState[n] = h(p({}, E.modelState[n]), {
+            status: u.u.MISSING,
+        })),
         "USER_CANCELED_DOWNLOAD" in (null != r ? r : {}) || (E.error = "ERROR_DOWNLOADING_DEPENDENCY"));
 }
+
 function D(e) {
     let { modelId: t } = e;
     E.modelState[t] = h(p({}, E.modelState[t]), {
@@ -266,19 +284,24 @@ function D(e) {
         downloadedBytes: void 0,
     });
 }
+
 function x(e) {
     let { timeInSeconds: t } = e;
     v((0, a.A)(new Date(), t));
 }
+
 function L(e) {
     E.nativeVoiceFilterModuleState = e.state;
 }
+
 function j() {
     E.error = "ERROR_ACTIVATING_VOICE_FILTER";
 }
+
 function M() {
     E.error = null;
 }
+
 function k() {
     b = Date.now();
 }

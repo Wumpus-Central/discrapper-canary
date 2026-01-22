@@ -1,4 +1,7 @@
-t.d(n, { default: () => b }), t(896048);
+t.d(n, {
+    default: () => b,
+}),
+    t(896048);
 var l = t(627968);
 t(64700);
 var i = t(793574),
@@ -10,6 +13,7 @@ var i = t(793574),
     d = t(721252),
     u = t(674223),
     p = t(818348);
+
 function f(e) {
     let { onClose: n, onComplete: t, transitionState: i, applicationId: a, analyticsLocationObject: s, skuId: d } = e,
         {} = (0, c.P5)(),
@@ -25,6 +29,7 @@ function f(e) {
         transitionState: i,
     });
 }
+
 function b(e) {
     let { loadId: n, applicationId: t, skuId: o, analyticsLocations: b, isGift: g = !1 } = e,
         { analyticsLocations: j } = (0, r.Ay)(b, i.A.PREMIUM_PAYMENT_MODAL);

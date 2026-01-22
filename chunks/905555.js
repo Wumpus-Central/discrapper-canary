@@ -18,8 +18,9 @@ async function u() {
     let t = new Promise((e) => {
         setTimeout(() => {
             e();
-        }, 5000);
+        }, 5e3);
     });
+
     function n() {
         null == s.A.getWindow(l.f) && (null == e || e());
     }
@@ -33,7 +34,7 @@ async function u() {
     }
     null != s.A.getWindow(l.f) && c.error("Previous overlay popout was not destroyed after 5 seconds!");
 }
-let d = 1000;
+let d = 1e3;
 async function f() {
     let e,
         t = o.A.isModuleLoaded,
@@ -43,8 +44,9 @@ async function f() {
     let r = new Promise((e) => {
         setTimeout(() => {
             e();
-        }, 5000);
+        }, 5e3);
     });
+
     function s() {
         null == e || e();
     }

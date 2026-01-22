@@ -1,4 +1,10 @@
-n.d(t, { A: () => $ }), n(896048), n(65821), n(321073), n(667532);
+n.d(t, {
+    A: () => $,
+}),
+    n(896048),
+    n(65821),
+    n(321073),
+    n(667532);
 var r,
     i = n(735438),
     a = n.n(i),
@@ -15,6 +21,7 @@ var r,
     m = n(194871),
     g = n(652215),
     E = n(613057);
+
 function b(e, t, n) {
     return (
         t in e
@@ -39,6 +46,7 @@ let y = [E.Hi.AUTHENTICATION_FAILED, E.Hi.NOT_ENTITLED],
     N = new Map(),
     R = !1,
     w = null;
+
 function P() {
     let e = {
         queue: A,
@@ -47,12 +55,14 @@ function P() {
     };
     o.w.set(O, e);
 }
+
 function D(e, t) {
     return (
         (null != I && I.applicationId === e && I.branchId === t) ||
         (null != T && T.applicationId === e && T.branchId === t)
     );
 }
+
 function x() {
     let e = A[0];
     if (null != e) {
@@ -66,10 +76,12 @@ function x() {
         }
     }
 }
+
 function L(e, t) {
     let n = (0, p.gW)(e, t);
     return A.findIndex((e) => e.comboId === n);
 }
+
 function j(e, t, n, r) {
     let i = (0, p.gW)(e, t),
         a = {
@@ -83,6 +95,7 @@ function j(e, t, n, r) {
         !n && S && _.A.resume(),
         P();
 }
+
 function M(e, t) {
     let n = (0, p.gW)(e, t),
         r = v.indexOf(n);
@@ -90,37 +103,45 @@ function M(e, t) {
     let i = L(e, t);
     -1 !== i && (A.splice(i, 1), P()), x();
 }
+
 function k(e) {
     let { applicationId: t, branchId: n } = e;
     N.set((0, p.gW)(t, n), "Install"), j(t, n, !1, "Patch");
 }
+
 function U(e) {
     F(e), H(e);
 }
+
 function G(e) {
     let { applicationId: t, branchId: n } = e;
     N.set((0, p.gW)(t, n), "Repair"), j(t, n, !1, "Repair");
 }
+
 function V(e) {
     let { applicationId: t, branchId: n, automatic: r } = e;
     j(t, n, r, "Patch");
 }
+
 function F(e) {
     let { applicationId: t, branchId: n } = e;
     M(t, n);
 }
+
 function B(e) {
     let { applicationId: t, branchId: n } = e,
         r = L(t, n);
     if (r < 1) return !1;
     A.splice(0, 0, A.splice(r, 1)[0]), x(), S && _.A.resume(), P();
 }
+
 function H(e) {
     let { applicationId: t, branchId: n } = e,
         r = (0, p.gW)(t, n),
         i = v.indexOf(r);
     -1 !== i && v.splice(i, 1);
 }
+
 function Y(e) {
     let { state: t } = e;
     !C && ((C = !0), x(), S || _.A.resume());
@@ -158,11 +179,13 @@ function Y(e) {
         x(),
         (r || n !== S) && P();
 }
+
 function W() {
     let e = d.default.getToken(),
         t = d.default.getId();
     null != e && _.A.setCredentials(t, e);
 }
+
 function K(e) {
     let { error: t } = e,
         { code: n } = t;
@@ -177,17 +200,21 @@ function K(e) {
         }
     }
 }
+
 function z() {
     for (let e of u.Ay.getRunningDiscordApplicationIds()) c.ZT(e, e);
     let e = u.Ay.getVisibleGame();
     return S || null == e || e.pid === w || c.v7(), (w = null == e ? null : e.pid), !1;
 }
+
 function q() {
     (0, h.isDesktop)() && W();
 }
+
 function X() {
     o.w.remove(O), (0, h.isDesktop)() && _.A.pause();
 }
+
 function Z(e) {
     return e.map((e) =>
         "string" == typeof e

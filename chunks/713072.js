@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968);
 n(64700);
 var i = n(627794),
@@ -7,6 +9,7 @@ var i = n(627794),
     a = n(934660),
     c = n(122247),
     o = n(516582);
+
 function d(e) {
     let { rule: t, isLoading: n, onChangeRule: d } = e;
     return null == t

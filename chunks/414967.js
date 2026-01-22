@@ -1,4 +1,7 @@
-n.d(t, { A: () => L }), n(896048);
+n.d(t, {
+    A: () => L,
+}),
+    n(896048);
 var r = n(627968);
 n(64700);
 var i = n(607399),
@@ -27,6 +30,7 @@ var i = n(607399),
     N = n(93751),
     T = n(979080),
     j = n(788868);
+
 function x(e, t, n) {
     return (
         t in e
@@ -107,7 +111,9 @@ class w extends c.A {
                                         properties: a,
                                     });
                             },
-                            { modalKey: P },
+                            {
+                                modalKey: P,
+                            },
                         ),
                         !0)
                     );
@@ -124,15 +130,31 @@ class w extends c.A {
                     .map((e) => h.A.getUserDiscountOffer(e))
                     .filter((e) => null != e && !(0, d.w)(e))
                     .shift();
-                if (null != t) return { userDiscountOffer: t };
+                if (null != t)
+                    return {
+                        userDiscountOffer: t,
+                    };
                 let n = (0, _.qD)();
-                return null != n ? { userTrialOffer: n } : {};
+                return null != n
+                    ? {
+                          userTrialOffer: n,
+                      }
+                    : {};
             }),
             x(this, "mayShowAnnouncementModal", async () => {
                 if ((await (0, b.hb)(), g.P.isDisallowPopupsSet())) return;
                 let e = this.getOfferFromStore(),
-                    t = y.A.getCurrentConfig({ location: "announcementManager" }, { autoTrackExposure: !1 }).enabled,
-                    n = (0, O.r)({ location: "mayShowAnnouncementModal" }),
+                    t = y.A.getCurrentConfig(
+                        {
+                            location: "announcementManager",
+                        },
+                        {
+                            autoTrackExposure: !1,
+                        },
+                    ).enabled,
+                    n = (0, O.r)({
+                        location: "mayShowAnnouncementModal",
+                    }),
                     r = (0, u.k8)(a.M.Q2_2025_MARKETING_MOMENT_FOLLOW_UP_MODAL),
                     l = f.default.getCurrentUser();
                 if (
@@ -141,7 +163,9 @@ class w extends c.A {
                         (0, s.ueM)() ||
                         (0, A.TW)(l) ||
                         ((await (0, E.m)(e.userTrialOffer)) &&
-                            (0, N.A)({ upsellType: j.e.REVERSE_TRIAL_FOLLOWUP_UPSELL })),
+                            (0, N.A)({
+                                upsellType: j.e.REVERSE_TRIAL_FOLLOWUP_UPSELL,
+                            })),
                     (null == l || l.verified) && !(0, s.ueM)() && !i.Fr && !n)
                 ) {
                     for (let t of await (0, I._C)(e))

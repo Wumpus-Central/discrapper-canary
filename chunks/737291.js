@@ -1,6 +1,6 @@
 !(function (t) {
     var n,
-        r = 1000000000,
+        r = 1e9,
         i = {
             precision: 20,
             rounding: 4,
@@ -15,11 +15,12 @@
         c = Math.floor,
         u = Math.pow,
         d = /^(\d+(\.\d*)?|\.\d+)(e[+-]?\d+)?$/i,
-        f = 10000000,
+        f = 1e7,
         p = 7,
-        _ = 9007199254740991,
+        _ = 0x1fffffffffffff,
         h = c(1286742750677284.5),
         m = {};
+
     function g(e, t) {
         var n,
             r,
@@ -47,9 +48,11 @@
         for (n && (c.unshift(n), ++i), l = c.length; 0 == c[--l]; ) c.pop();
         return (t.d = c), (t.e = i), a ? C(t, _) : t;
     }
+
     function E(e, t, n) {
         if (e !== ~~e || e < t || e > n) throw Error(o + e);
     }
+
     function b(e) {
         var t,
             n,
@@ -396,6 +399,7 @@
             for (e = e.slice(); i--; ) (n = e[i] * t + r), (e[i] = (n % f) | 0), (r = (n / f) | 0);
             return r && e.unshift(r), e;
         }
+
         function t(e, t, n, r) {
             var i, a;
             if (n != r) a = n > r ? 1 : -1;
@@ -407,6 +411,7 @@
                     }
             return a;
         }
+
         function n(e, t, n) {
             for (var r = 0; n--; ) (e[n] -= r), (r = +(e[n] < t[n])), (e[n] = r * f + e[n] - t[n]);
             for (; !e[0] && e.length > 1; ) e.shift();
@@ -475,6 +480,7 @@
             return g[0] || g.shift(), (m.e = c), C(m, o ? a + A(m) + 1 : a);
         };
     })();
+
     function O(e, t) {
         var r,
             i,
@@ -501,18 +507,22 @@
             s = o;
         }
     }
+
     function A(e) {
         for (var t = e.e * p, n = e.d[0]; n >= 10; n /= 10) t++;
         return t;
     }
+
     function v(e, t, n) {
         if (t > e.LN10.sd()) throw ((a = !0), n && (e.precision = n), Error(s + "LN10 precision limit exceeded"));
         return C(new e(e.LN10), t);
     }
+
     function S(e) {
         for (var t = ""; e--; ) t += "0";
         return t;
     }
+
     function I(e, t) {
         var r,
             i,
@@ -532,7 +542,7 @@
         if (m.s < 1) throw Error(s + (m.s ? "NaN" : "-Infinity"));
         if (m.eq(n)) return new E(0);
         if ((null == t ? ((a = !1), (f = O)) : (f = t), m.eq(10))) return null == t && (a = !0), v(E, f);
-        if (((E.precision = f += h), (i = (r = b(g)).charAt(0)), !(1500000000000000 > Math.abs((l = A(m))))))
+        if (((E.precision = f += h), (i = (r = b(g)).charAt(0)), !(15e14 > Math.abs((l = A(m))))))
             return (
                 (d = v(E, f + 2, O).times(l + "")),
                 (m = I(new E(i + "." + r.slice(1)), f - h).plus(d)),
@@ -559,6 +569,7 @@
             (u = d), (o += 2);
         }
     }
+
     function T(e, t) {
         var n, r, i;
         for (
@@ -581,6 +592,7 @@
         } else (e.s = 0), (e.e = 0), (e.d = [0]);
         return e;
     }
+
     function C(e, t, n) {
         var r,
             i,
@@ -643,6 +655,7 @@
         if (a && (e.e > h || e.e < -h)) throw Error(l + A(e));
         return e;
     }
+
     function N(e, t) {
         var n,
             r,
@@ -687,6 +700,7 @@
         for (; 0 === c[0]; c.shift()) --r;
         return c[0] ? ((t.d = c), (t.e = r), a ? C(t, m) : t) : new h(0);
     }
+
     function R(e, t, n) {
         var r,
             i = A(e),
@@ -707,11 +721,14 @@
             e.s < 0 ? "-" + a : a
         );
     }
+
     function w(e, t) {
         if (e.length > t) return (e.length = t), !0;
     }
+
     function P(e) {
         var t, n, r;
+
         function i(e) {
             var t = this;
             if (!(t instanceof i)) return new i(e);
@@ -727,7 +744,7 @@
                     (t.s = 0), (t.e = 0), (t.d = [0]);
                     return;
                 }
-                if (e === ~~e && e < 10000000) {
+                if (e === ~~e && e < 1e7) {
                     (t.e = 0), (t.d = [e]);
                     return;
                 }
@@ -757,6 +774,7 @@
                 e.hasOwnProperty((n = r[t++])) || (e[n] = this[n]);
         return i.config(e), i;
     }
+
     function D(e) {
         if (!e || "object" != typeof e) throw Error(s + "Object expected");
         var t,

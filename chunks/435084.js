@@ -1,4 +1,6 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -10,6 +12,7 @@ var r = n(627968),
     d = n(187508),
     f = n(652215),
     p = n(985018);
+
 function h(e) {
     let { closePopout: t, onSelect: n } = e,
         l = (0, i.bG)([c.A, u.A], () => c.A.getChannel(u.A.getChannelId())),
@@ -35,7 +38,9 @@ function h(e) {
                 id: "Everyone",
                 label: p.intl.string(p.t.cdyUsV),
                 action: function () {
-                    o.A.setGuildFilter({ everyoneFilter: !a });
+                    o.A.setGuildFilter({
+                        everyoneFilter: !a,
+                    });
                 },
                 checked: a,
             }),
@@ -43,7 +48,9 @@ function h(e) {
                 id: "Roles",
                 label: p.intl.string(p.t.lZejCq),
                 action: function () {
-                    o.A.setGuildFilter({ roleFilter: !h });
+                    o.A.setGuildFilter({
+                        roleFilter: !h,
+                    });
                 },
                 checked: h,
             }),
@@ -62,6 +69,7 @@ function h(e) {
         ],
     });
 }
+
 function b() {
     let e = l.useRef(null);
     return (0, r.jsx)(s.YNO, {
@@ -71,7 +79,9 @@ function b() {
         position: "bottom",
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, r.jsx)(h, { closePopout: t });
+            return (0, r.jsx)(h, {
+                closePopout: t,
+            });
         },
         children: (t) => {
             let { onClick: n } = t;

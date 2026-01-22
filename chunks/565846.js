@@ -1,4 +1,7 @@
-i.d(n, { A: () => v }), i(896048);
+i.d(n, {
+    A: () => v,
+}),
+    i(896048);
 var e = i(627968);
 i(64700);
 var r = i(311907),
@@ -13,6 +16,7 @@ var r = i(311907),
 i(253913);
 var A = i(985018),
     g = i(559728);
+
 function b(t) {
     let { tag: n } = t,
         { name: i, emojiId: l, emojiName: a } = n,
@@ -31,6 +35,7 @@ function b(t) {
         ],
     });
 }
+
 function v(t) {
     let n = (0, r.bG)([h.A], () => h.A.getChannel(t), [t]),
         i = (0, c.NI)(n),
@@ -58,7 +63,9 @@ function v(t) {
                       l.sLh,
                       {
                           id: t.id,
-                          label: (0, e.jsx)(b, { tag: t }),
+                          label: (0, e.jsx)(b, {
+                              tag: t,
+                          }),
                           disabled: v && !i,
                           action: () =>
                               ((t) => {

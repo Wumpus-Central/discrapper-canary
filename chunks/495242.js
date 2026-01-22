@@ -1,4 +1,6 @@
-n.d(t, { Z: () => h });
+n.d(t, {
+    Z: () => h,
+});
 var a = n(627968);
 n(64700);
 var l = n(397927),
@@ -9,6 +11,7 @@ var l = n(397927),
     c = n(652215),
     d = n(985018),
     u = n(805180);
+
 function m(e) {
     let { text: t, quest: n, sourceQuestContent: d } = e,
         m = (0, s.Ut)();
@@ -21,7 +24,9 @@ function m(e) {
                 questContentCTA: s.Cy.VIEW_CONSOLE_CONNECTIONS_LINK,
                 sourceQuestContent: d,
             }),
-                (0, r.openUserSettings)(i.X.CONNECTIONS_PANEL, { section: c.nc_.CONNECTIONS });
+                (0, r.openUserSettings)(i.X.CONNECTIONS_PANEL, {
+                    section: c.nc_.CONNECTIONS,
+                });
         },
         children: (0, a.jsx)(l.Text, {
             "aria-label": t,
@@ -31,6 +36,7 @@ function m(e) {
         }),
     });
 }
+
 function p(e) {
     let { xboxAndPlaystationAccounts: t, quest: n, sourceQuestContent: l } = e;
     return t.length > 0
@@ -41,6 +47,7 @@ function p(e) {
           })
         : null;
 }
+
 function h(e) {
     return (0, a.jsxs)(a.Fragment, {
         children: [

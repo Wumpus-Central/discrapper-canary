@@ -1,4 +1,7 @@
-n.d(t, { A: () => h }), n(896048);
+n.d(t, {
+    A: () => h,
+}),
+    n(896048);
 var r,
     i,
     l = n(311907),
@@ -7,10 +10,12 @@ var r,
     o = n(71393),
     c = n(652215);
 let u = !1;
+
 function d(e) {
     let t = o.A.getGuild(e);
     return null != t && !!t.features.has(c.GuildFeatures.HUB) && ((u = !0), !0);
 }
+
 function p() {
     return !0;
 }

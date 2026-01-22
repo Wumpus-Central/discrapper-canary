@@ -1,9 +1,18 @@
-n.d(t, { A: () => o }), n(896048), n(680155), n(323874), n(14289), n(35956);
+n.d(t, {
+    A: () => o,
+}),
+    n(896048),
+    n(680155),
+    n(323874),
+    n(14289),
+    n(35956);
 var r = n(877227),
     i = n(839214),
     l = n(890687),
     a = n(652215);
-let s = Object.freeze({ tab: l.NC.ALL }),
+let s = Object.freeze({
+        tab: l.NC.ALL,
+    }),
     o = (0, i.D)((e) => {
         var t, n;
         return (
@@ -37,11 +46,17 @@ let s = Object.freeze({ tab: l.NC.ALL }),
                     initializeFromUrl: (t, n) => {
                         let r = new URLSearchParams(t).get(l.L1.TAB);
                         (r !== l.NC.PREVIEW_TOOL || n) && null != r && Object.values(l.NC).includes(r)
-                            ? e({ tab: r })
-                            : e({ tab: l.NC.ALL });
+                            ? e({
+                                  tab: r,
+                              })
+                            : e({
+                                  tab: l.NC.ALL,
+                              });
                     },
                     setTab: (t) => {
-                        e({ tab: t });
+                        e({
+                            tab: t,
+                        });
                         let n = new URLSearchParams();
                         n.set(l.L1.TAB, t);
                         let i = "".concat(a.BVt.QUEST_HOME_V2, "?").concat(n.toString());

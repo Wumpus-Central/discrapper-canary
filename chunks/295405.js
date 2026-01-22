@@ -1,8 +1,12 @@
-n.d(t, { A: () => b }), n(896048);
+n.d(t, {
+    A: () => b,
+}),
+    n(896048);
 var r,
     i = n(311907),
     a = n(73153),
     s = n(202613);
+
 function o(e, t, n) {
     return (
         t in e
@@ -16,6 +20,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -32,6 +37,7 @@ function l(e) {
     }
     return e;
 }
+
 function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -44,6 +50,7 @@ function c(e, t) {
     }
     return n;
 }
+
 function u(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -58,15 +65,21 @@ function u(e, t) {
 let d = {},
     f = null,
     p = !1;
+
 function _(e) {
     let { paymentSources: t } = e;
     for (let e of ((d = {}), (f = null), t)) (d[e.id] = s.Ay.createFromServer(e)), e.default && (f = e.id);
     null == f && t.length > 0 && (f = t[0].id), (p = !0);
 }
+
 function h(e) {
     let { paymentSource: t } = e;
-    (d = u(l({}, d), { [t.id]: t })), (t.isDefault || 1 === Object.keys(d).length) && (f = t.id);
+    (d = u(l({}, d), {
+        [t.id]: t,
+    })),
+        (t.isDefault || 1 === Object.keys(d).length) && (f = t.id);
 }
+
 function m(e) {
     let { id: t } = e;
     if (((d = l({}, d)), delete d[t], f === t)) {
@@ -74,6 +87,7 @@ function m(e) {
         f = 0 === e.length ? null : e[0];
     }
 }
+
 function g() {
     (d = {}), (f = null), (p = !1);
 }

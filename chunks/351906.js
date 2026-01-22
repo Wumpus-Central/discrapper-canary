@@ -1,10 +1,13 @@
-n.d(t, { A: () => O });
+n.d(t, {
+    A: () => O,
+});
 var r,
     i = n(311907),
     a = n(73153),
     s = n(954571),
     o = n(961350),
     l = n(652215);
+
 function c(e, t, n) {
     return (
         t in e
@@ -18,6 +21,7 @@ function c(e, t, n) {
         e
     );
 }
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,6 +38,7 @@ function u(e) {
     }
     return e;
 }
+
 function d(e, t) {
     s.default.track(l.HAw.STREAMER_MODE_TOGGLE, {
         enabled: e,
@@ -51,16 +56,20 @@ let f = {
     },
     p = {},
     _ = u({}, f);
+
 function h(e) {
     let t = p[e];
     return null == t && (t = p[e] = u({}, f)), t;
 }
+
 function m(e) {
     e.isSwitchingAccount || (p = {});
 }
+
 function g(e) {
     e.userId in p && delete p[e.userId];
 }
+
 function E(e) {
     let t = u({}, _);
     return (
@@ -86,6 +95,7 @@ function E(e) {
         !0
     );
 }
+
 function b(e) {
     if (!_.autoToggle) return !1;
     {
@@ -134,7 +144,11 @@ c(y, "displayName", "StreamerModeStore"),
     c(y, "migrations", [
         (e) => {
             let t = o.default.getId();
-            return null == e || null == t ? {} : { [t]: u({}, e) };
+            return null == e || null == t
+                ? {}
+                : {
+                      [t]: u({}, e),
+                  };
         },
     ]);
 let O = new y(a.h, {

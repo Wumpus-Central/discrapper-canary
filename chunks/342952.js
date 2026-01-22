@@ -17,6 +17,7 @@ var r = n(627968),
     _ = n(427262),
     h = n(985018),
     m = n(232358);
+
 function g(e, t, n) {
     return (
         t in e
@@ -30,6 +31,7 @@ function g(e, t, n) {
         e
     );
 }
+
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -46,6 +48,7 @@ function E(e) {
     }
     return e;
 }
+
 function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -58,6 +61,7 @@ function b(e, t) {
     }
     return n;
 }
+
 function y(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -69,6 +73,7 @@ function y(e, t) {
         e
     );
 }
+
 function O(e, t) {
     if (null == e) return {};
     var n,
@@ -85,6 +90,7 @@ function O(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function A(e, t) {
     if (null == e) return {};
     var n,
@@ -95,6 +101,7 @@ function A(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function v() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u._3J.SIZE_24;
     switch (e) {
@@ -107,6 +114,7 @@ function v() {
             return m.q1;
     }
 }
+
 function S() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u._3J.SIZE_24;
     switch (e) {
@@ -118,6 +126,7 @@ function S() {
             return "text-xs/medium";
     }
 }
+
 function I(e) {
     let {
             users: t,
@@ -172,6 +181,7 @@ function I(e) {
         children: b,
     });
 }
+
 function T(e) {
     let { count: t, textVariant: n, color: i = "interactive-text-default", size: a = u._3J.SIZE_24, className: o } = e,
         l = v(a),
@@ -181,7 +191,11 @@ function T(e) {
         color: i,
         className: s()(m.ju, l, o),
         children: [
-            (0, r.jsx)(u.AC4, { children: h.intl.formatToPlainString(h.t.RGr9tj, { count: t }) }),
+            (0, r.jsx)(u.AC4, {
+                children: h.intl.formatToPlainString(h.t.RGr9tj, {
+                    count: t,
+                }),
+            }),
             (0, r.jsx)("span", {
                 "aria-hidden": !0,
                 children: t > 99 ? ">99" : "+".concat(t),
@@ -189,6 +203,7 @@ function T(e) {
         ],
     });
 }
+
 function C(e) {
     let {
             users: t,
@@ -226,6 +241,7 @@ function C(e) {
               ],
           });
 }
+
 function N(e) {
     let { className: t, "aria-label": n, "aria-labelledby": i, "aria-hidden": a } = e,
         o = O(e, ["className", "aria-label", "aria-labelledby", "aria-hidden"]);
@@ -238,6 +254,7 @@ function N(e) {
         children: (0, r.jsx)(C, E({}, o)),
     });
 }
+
 function R(e) {
     let {
             users: t,
@@ -304,7 +321,9 @@ function R(e) {
                                                     }),
                                                 );
                                         },
-                                        { onClose: () => j(!1) },
+                                        {
+                                            onClose: () => j(!1),
+                                        },
                                     ),
                             },
                             e.id,
@@ -332,7 +351,9 @@ function R(e) {
                                       onClick: (e) => {
                                           null == C || C(e), j(!0);
                                       },
-                                      "aria-label": h.intl.formatToPlainString(h.t.R8Z8Qr, { count: U }),
+                                      "aria-label": h.intl.formatToPlainString(h.t.R8Z8Qr, {
+                                          count: U,
+                                      }),
                                       children: (0, r.jsx)(T, {
                                           count: U,
                                           textVariant: g,

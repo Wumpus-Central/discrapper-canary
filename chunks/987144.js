@@ -1,4 +1,9 @@
-n.d(t, { g: () => A }), n(321073), n(848778), n(896048);
+n.d(t, {
+    g: () => A,
+}),
+    n(321073),
+    n(848778),
+    n(896048);
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -12,6 +17,7 @@ var i = n(397927),
     f = n(473145),
     p = n(212637),
     _ = n(652215);
+
 function h(e, t, n) {
     return (
         t in e
@@ -25,6 +31,7 @@ function h(e, t, n) {
         e
     );
 }
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -41,6 +48,7 @@ function m(e) {
     }
     return e;
 }
+
 function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -53,6 +61,7 @@ function g(e, t) {
     }
     return n;
 }
+
 function E(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -64,6 +73,7 @@ function E(e, t) {
         e
     );
 }
+
 function b(e, t) {
     if (null == e) return {};
     var n,
@@ -80,6 +90,7 @@ function b(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function y(e, t) {
     if (null == e) return {};
     var n,
@@ -119,10 +130,17 @@ async function A(e) {
                 return (t) => {
                     let { onClose: n } = t,
                         i = b(t, ["onClose"]);
-                    return (0, r.jsx)(e, E(m({}, i), { onClose: n }));
+                    return (0, r.jsx)(
+                        e,
+                        E(m({}, i), {
+                            onClose: n,
+                        }),
+                    );
                 };
             },
-            { contextKey: x },
+            {
+                contextKey: x,
+            },
         );
     let j = [];
     u.A.isLoadedForPremiumSKUs() || j.push((0, o.zS)()),

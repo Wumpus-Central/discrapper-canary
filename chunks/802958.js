@@ -1,4 +1,7 @@
-n.d(t, { A: () => D }), n(896048);
+n.d(t, {
+    A: () => D,
+}),
+    n(896048);
 var r,
     i = n(735438),
     a = n.n(i),
@@ -6,6 +9,7 @@ var r,
     o = n(73153),
     l = n(95701),
     c = n(734057);
+
 function u(e, t, n) {
     return (
         t in e
@@ -19,6 +23,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,16 +41,20 @@ function d(e) {
     return e;
 }
 let f = {};
+
 function p(e) {
     f = a().omitBy(f, (t) => t.guildId === e);
 }
+
 function _(e) {
     f = a().omitBy(f, (t) => t.parentId === e);
 }
+
 function h(e) {
     var t;
     null == (t = e.threads) || t.forEach(g);
 }
+
 function m(e) {
     if (!(e.id in f)) {
         var t, n;
@@ -58,52 +67,64 @@ function m(e) {
     }
     return f[e.id];
 }
+
 function g(e) {
     if (!l.A_.has(e.type)) return !1;
     let t = m(e);
     null != e.memberCount && (t.memberCount = e.memberCount),
         null != e.memberIdsPreview && (t.memberIdsPreview = e.memberIdsPreview);
 }
+
 function E(e) {
     (f = {}), e.guilds.forEach(h);
 }
+
 function b(e) {
     let { threadMembers: t } = e;
     f = d({}, t);
 }
+
 function y(e) {
     let { guild: t } = e;
     h(t);
 }
+
 function O(e) {
     let { guild: t } = e;
     p(t.id);
 }
+
 function A(e) {
     let { channel: t } = e;
     return g(t);
 }
+
 function v(e) {
     let { threads: t } = e;
     t.forEach(g);
 }
+
 function S(e) {
     let { threads: t } = e;
     t.forEach(R);
 }
+
 function I(e) {
     let { channel: t } = e;
     _(t.id);
 }
+
 function T(e) {
     let { channel: t } = e;
     delete f[t.id];
 }
+
 function C(e) {
     let t = !1;
     for (let n of e.messages) t = R(n.thread) || t;
     return t;
 }
+
 function N(e) {
     let { data: t } = e,
         n = !1;
@@ -122,6 +143,7 @@ function N(e) {
         n
     );
 }
+
 function R(e) {
     if (null != e && !(e.id in f)) {
         let t = c.A.getChannel(e.id);
@@ -129,6 +151,7 @@ function R(e) {
     }
     return !1;
 }
+
 function w(e) {
     let t = f[e.id];
     if (null == t) return !1;

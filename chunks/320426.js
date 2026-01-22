@@ -1,4 +1,7 @@
-r.d(t, { A: () => A }), r(896048);
+r.d(t, {
+    A: () => A,
+}),
+    r(896048);
 var i = r(64700),
     n = r(417597),
     a = r(562465),
@@ -10,6 +13,7 @@ var i = r(64700),
     u = r(927813),
     _ = r(381616),
     p = r(652215);
+
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
@@ -35,6 +39,7 @@ function E(e) {
     }
     return e;
 }
+
 function h(e, t) {
     return (
         (t = null != t ? t : {}),

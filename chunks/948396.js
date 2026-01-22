@@ -1,4 +1,6 @@
-r.d(t, { A: () => l });
+r.d(t, {
+    A: () => l,
+});
 var n = r(443997),
     o = "object" == typeof exports && exports && !exports.nodeType && exports,
     a = o && "object" == typeof module && module && !module.nodeType && module,

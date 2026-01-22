@@ -1,4 +1,9 @@
-n.d(t, { j: () => S }), n(896048), n(114821), n(339614);
+n.d(t, {
+    j: () => S,
+}),
+    n(896048),
+    n(114821),
+    n(339614);
 var l = n(627968),
     r = n(64700),
     i = n(284009),
@@ -20,6 +25,7 @@ var l = n(627968),
     O = n(482132),
     x = n(652215),
     P = n(907);
+
 function S(e) {
     var t, n, i, S, E, T;
     let { handleStepChange: I, handleClose: A } = e,
@@ -76,7 +82,10 @@ function S(e) {
                           }
                           return e;
                       })({}, e.variants[n])),
-                      (l = l = { name: e.name }),
+                      (l = l =
+                          {
+                              name: e.name,
+                          }),
                       Object.getOwnPropertyDescriptors
                           ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(l))
                           : (function (e, t) {

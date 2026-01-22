@@ -1,4 +1,8 @@
-n.d(t, { A: () => el }), n(896048), n(65821);
+n.d(t, {
+    A: () => el,
+}),
+    n(896048),
+    n(65821);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -49,6 +53,7 @@ var r = n(627968),
     J = n(349828),
     Q = n(985018),
     Z = n(728444);
+
 function $(e, t, n) {
     return (
         t in e
@@ -62,6 +67,7 @@ function $(e, t, n) {
         e
     );
 }
+
 function ee(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -78,6 +84,7 @@ function ee(e) {
     }
     return e;
 }
+
 function et(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -192,7 +199,14 @@ class en extends B.Ay {
                 children: [
                     I &&
                         (0, r.jsxs)(r.Fragment, {
-                            children: [(0, r.jsx)("div", { className: Z.UQ }), (0, r.jsx)("div", { className: Z.l0 })],
+                            children: [
+                                (0, r.jsx)("div", {
+                                    className: Z.UQ,
+                                }),
+                                (0, r.jsx)("div", {
+                                    className: Z.l0,
+                                }),
+                            ],
                         }),
                     (0, r.jsx)("div", {
                         onMouseEnter: this.handleMouseEnter,
@@ -209,7 +223,9 @@ class en extends B.Ay {
                                     children: (0, r.jsxs)(W.Ay, {
                                         ref: this.channelItemRef,
                                         className: Z.Ki,
-                                        iconClassName: a()({ [Z.Gj]: v || S || w }),
+                                        iconClassName: a()({
+                                            [Z.Gj]: v || S || w,
+                                        }),
                                         hasActiveEvent: v,
                                         channel: e,
                                         selected: !_ && t,
@@ -290,7 +306,9 @@ class en extends B.Ay {
             $(this, "channelItemRef", l.createRef()),
             $(this, "activitiesHideTimeout", new o.Ep()),
             $(this, "closeGuildVerificationPopout", () => {
-                this.setState({ shouldShowGuildVerificationPopout: !1 });
+                this.setState({
+                    shouldShowGuildVerificationPopout: !1,
+                });
             }),
             $(this, "handleVoiceConnect", () => {
                 let {
@@ -302,7 +320,10 @@ class en extends B.Ay {
                     enableOpenTIVForPing: i,
                     mentionCount: a,
                 } = this.props;
-                r && this.setState({ shouldShowGuildVerificationPopout: !0 });
+                r &&
+                    this.setState({
+                        shouldShowGuildVerificationPopout: !0,
+                    });
                 let s = i && a > 0;
                 s && d.A.updateChatOpen(n.id, !0),
                     v.A.handleVoiceConnect({
@@ -350,7 +371,10 @@ class en extends B.Ay {
                 );
             }),
             $(this, "closePopout", () => {
-                this.activitiesHideTimeout.stop(), this.setState({ shouldShowActivities: !1 });
+                this.activitiesHideTimeout.stop(),
+                    this.setState({
+                        shouldShowActivities: !1,
+                    });
             }),
             $(this, "handleClick", () => {
                 let { channel: e } = this.props,
@@ -359,7 +383,11 @@ class en extends B.Ay {
             }),
             $(this, "handleVoiceStatusClick", (e) => {
                 let { connected: t, channel: n } = this.props;
-                t && (e.stopPropagation(), (0, g.A)({ channel: n }));
+                t &&
+                    (e.stopPropagation(),
+                    (0, g.A)({
+                        channel: n,
+                    }));
             }),
             $(this, "renderPopout", () => {
                 let { channel: e, voiceStates: t, sorting: n, isUserOver: l, selected: i, guild: a } = this.props,
@@ -410,6 +438,7 @@ class en extends B.Ay {
     }
 }
 let er = (0, p.a)((0, h.F)(en));
+
 function el(e) {
     let {
             guild: t,
@@ -458,7 +487,9 @@ function el(e) {
                 guildId: n.guild_id,
                 location: "VoiceChannel",
             },
-            { autoTrackExposure: !1 },
+            {
+                autoTrackExposure: !1,
+            },
         ),
         { enableHighlight: L, enableWaveformIcon: H } = (0, m.b)(t.id, "VoiceChannel"),
         B = null != c && c.length > 0,

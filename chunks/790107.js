@@ -1,4 +1,9 @@
-n.d(t, { c: () => f }), n(747238), n(896048), n(457529);
+n.d(t, {
+    c: () => f,
+}),
+    n(747238),
+    n(896048),
+    n(457529);
 var r = n(562465),
     i = n(198982),
     a = n(626584),
@@ -7,6 +12,7 @@ var r = n(562465),
     l = n(77729),
     c = n(652215);
 let u = new a.A("uploadRtcLogFiles");
+
 function d(e, t) {
     let n = t.split("."),
         r = n.length > 1 ? n.pop() : "",

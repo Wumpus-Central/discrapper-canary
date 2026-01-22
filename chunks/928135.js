@@ -1,4 +1,6 @@
-r.d(t, { A: () => s });
+r.d(t, {
+    A: () => s,
+});
 var n = r(64700),
     o = r(205662),
     a = r(26802),
@@ -16,6 +18,7 @@ var n = r(64700),
             return r && e(t.prototype, r), n && e(t, n), t;
         };
     })();
+
 function l(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return t && ("object" == typeof t || "function" == typeof t) ? t : e;
@@ -23,6 +26,7 @@ function l(e, t) {
 let s = (function (e) {
     if ("function" != typeof e && null !== e)
         throw TypeError("Super expression must either be null or a function, not " + typeof e);
+
     function t() {
         if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
         for (var e, r, n, o = arguments.length, i = Array(o), s = 0; s < o; s++) i[s] = arguments[s];
@@ -108,11 +112,15 @@ let s = (function (e) {
                                     },
                                 },
                             },
-                            { vertical: "vertical" === r },
+                            {
+                                vertical: "vertical" === r,
+                            },
                         );
                     return n.createElement(
                         "div",
-                        { style: a.hue },
+                        {
+                            style: a.hue,
+                        },
                         n.createElement(
                             "div",
                             {
@@ -132,10 +140,14 @@ let s = (function (e) {
                             ),
                             n.createElement(
                                 "div",
-                                { style: a.pointer },
+                                {
+                                    style: a.pointer,
+                                },
                                 this.props.pointer
                                     ? n.createElement(this.props.pointer, this.props)
-                                    : n.createElement("div", { style: a.slider }),
+                                    : n.createElement("div", {
+                                          style: a.slider,
+                                      }),
                             ),
                         ),
                     );

@@ -34,6 +34,7 @@ var r = n(627968),
     N = n(654288),
     R = n(299846),
     w = n(424994);
+
 function P(e, t, n) {
     return (
         t in e
@@ -47,6 +48,7 @@ function P(e, t, n) {
         e
     );
 }
+
 function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -63,6 +65,7 @@ function D(e) {
     }
     return e;
 }
+
 function x(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -75,6 +78,7 @@ function x(e, t) {
     }
     return n;
 }
+
 function L(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -86,6 +90,7 @@ function L(e, t) {
         e
     );
 }
+
 function j(e, t) {
     if (null == e) return {};
     var n,
@@ -102,6 +107,7 @@ function j(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function M(e, t) {
     if (null == e) return {};
     var n,
@@ -113,7 +119,8 @@ function M(e, t) {
     return i;
 }
 let k = 72,
-    U = 2000;
+    U = 2e3;
+
 function G(e) {
     return (null == e ? void 0 : e.type) === p.S9.CONTENT_INVENTORY ? k : 0;
 }
@@ -122,17 +129,47 @@ let V = (e) => {
             n = j(e, ["entry"]);
         switch (t.content_type) {
             case l.I.PLAYED_GAME:
-                return (0, r.jsx)(E.A, L(D({}, n), { entry: t }));
+                return (0, r.jsx)(
+                    E.A,
+                    L(D({}, n), {
+                        entry: t,
+                    }),
+                );
             case l.I.WATCHED_MEDIA:
-                return (0, r.jsx)(C.A, L(D({}, n), { entry: t }));
+                return (0, r.jsx)(
+                    C.A,
+                    L(D({}, n), {
+                        entry: t,
+                    }),
+                );
             case l.I.TOP_GAME:
-                return (0, r.jsx)(I.Ay, L(D({}, n), { entry: t }));
+                return (0, r.jsx)(
+                    I.Ay,
+                    L(D({}, n), {
+                        entry: t,
+                    }),
+                );
             case l.I.TOP_ARTIST:
-                return (0, r.jsx)(v.Ay, L(D({}, n), { entry: t }));
+                return (0, r.jsx)(
+                    v.Ay,
+                    L(D({}, n), {
+                        entry: t,
+                    }),
+                );
             case l.I.LISTENED_SESSION:
-                return (0, r.jsx)(O.Ay, L(D({}, n), { entry: t }));
+                return (0, r.jsx)(
+                    O.Ay,
+                    L(D({}, n), {
+                        entry: t,
+                    }),
+                );
             case l.I.LAUNCHED_ACTIVITY:
-                return (0, r.jsx)(m.A, L(D({}, n), { entry: t }));
+                return (0, r.jsx)(
+                    m.A,
+                    L(D({}, n), {
+                        entry: t,
+                    }),
+                );
             default:
                 return null;
         }
@@ -180,17 +217,47 @@ let V = (e) => {
             n = j(e, ["entry"]);
         switch (t.content_type) {
             case l.I.PLAYED_GAME:
-                return (0, r.jsx)(b.A, L(D({}, n), { entry: t }));
+                return (0, r.jsx)(
+                    b.A,
+                    L(D({}, n), {
+                        entry: t,
+                    }),
+                );
             case l.I.WATCHED_MEDIA:
-                return (0, r.jsx)(N.A, L(D({}, n), { entry: t }));
+                return (0, r.jsx)(
+                    N.A,
+                    L(D({}, n), {
+                        entry: t,
+                    }),
+                );
             case l.I.TOP_GAME:
-                return (0, r.jsx)(T.A, L(D({}, n), { entry: t }));
+                return (0, r.jsx)(
+                    T.A,
+                    L(D({}, n), {
+                        entry: t,
+                    }),
+                );
             case l.I.TOP_ARTIST:
-                return (0, r.jsx)(S.A, L(D({}, n), { entry: t }));
+                return (0, r.jsx)(
+                    S.A,
+                    L(D({}, n), {
+                        entry: t,
+                    }),
+                );
             case l.I.LISTENED_SESSION:
-                return (0, r.jsx)(A.A, L(D({}, n), { entry: t }));
+                return (0, r.jsx)(
+                    A.A,
+                    L(D({}, n), {
+                        entry: t,
+                    }),
+                );
             case l.I.LAUNCHED_ACTIVITY:
-                return (0, r.jsx)(g.Ay, L(D({}, n), { entry: t }));
+                return (0, r.jsx)(
+                    g.Ay,
+                    L(D({}, n), {
+                        entry: t,
+                    }),
+                );
             default:
                 return null;
         }
@@ -272,7 +339,13 @@ let V = (e) => {
             };
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                b && (0, r.jsx)(F, L(D({}, p), { targetElementRef: m })),
+                b &&
+                    (0, r.jsx)(
+                        F,
+                        L(D({}, p), {
+                            targetElementRef: m,
+                        }),
+                    ),
                 (0, r.jsx)("div", {
                     ref: l,
                     onMouseEnter: () => {

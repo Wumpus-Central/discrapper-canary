@@ -1,7 +1,11 @@
-r.d(t, { K: () => i }), r(65821);
+r.d(t, {
+    K: () => i,
+}),
+    r(65821);
 var n = r(753070),
     l = r(191850),
     s = r(985018);
+
 function i(e) {
     switch (e) {
         case n.jQ.PRESET_CUSTOM:

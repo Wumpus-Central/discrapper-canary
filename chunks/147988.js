@@ -1,4 +1,6 @@
-n.d(t, { t: () => g });
+n.d(t, {
+    t: () => g,
+});
 var r = n(627968),
     i = n(64700),
     l = n(311907),
@@ -9,6 +11,7 @@ var r = n(627968),
     d = n(716610),
     u = n(985018),
     f = n(840966);
+
 function g(e) {
     let { fetchDiscoveryData: t, settingsView: n, requireTerms: g, rules: b } = e,
         m = (0, l.bG)([a.A], () => a.A.getProps().guild);

@@ -1,4 +1,6 @@
-r.d(e, { default: () => d });
+r.d(e, {
+    default: () => d,
+});
 var n = r(627968),
     l = r(23339),
     o = r(158954),
@@ -9,6 +11,7 @@ var n = r(627968),
     c = r(652215),
     u = r(294726),
     f = r(985018);
+
 function d(t) {
     let { provider: e, onAccept: r } = t,
         d = (function (t, e) {
@@ -46,7 +49,10 @@ function d(t) {
         title: f.intl.string(u.default.ny8Szd),
         subtitle: f.intl.format(u.default.D3STVx, {
             provider: (0, l.$G)(e),
-            providerUrl: () => (0, a.h)({ href: s.eh[e] }),
+            providerUrl: () =>
+                (0, a.h)({
+                    href: s.eh[e],
+                }),
             helpCenterUrl: i.A.getArticleURL(c.MVz.GAME_SERVER_HOSTING),
         }),
         size: "md",

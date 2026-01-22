@@ -1,6 +1,9 @@
 var a,
     l = t(828066);
-t(697509)(r, "__esModule", { value: !0 }), (r.default = void 0);
+t(697509)(r, "__esModule", {
+    value: !0,
+}),
+    (r.default = void 0);
 var o = l(t(736883)),
     s = l(t(945836)),
     n = l(t(290845)),
@@ -15,6 +18,7 @@ var o = l(t(736883)),
     v = l(t(340350)),
     h = l(t(782065)),
     C = l(t(466721));
+
 function q(e, r) {
     if (void 0 === i.default || null == (0, n.default)(e)) {
         if (
@@ -38,7 +42,9 @@ function q(e, r) {
                 s: a,
                 n: function () {
                     return t >= e.length
-                        ? { done: !0 }
+                        ? {
+                              done: !0,
+                          }
                         : {
                               done: !1,
                               value: e[t++],
@@ -78,6 +84,7 @@ function q(e, r) {
         },
     };
 }
+
 function P(e, r) {
     (null == r || r > e.length) && (r = e.length);
     for (var t = 0, a = Array(r); t < r; t++) a[t] = e[t];

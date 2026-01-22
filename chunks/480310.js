@@ -1,4 +1,7 @@
-n.d(t, { A: () => G }), n(896048);
+n.d(t, {
+    A: () => G,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -29,9 +32,10 @@ var r = n(627968),
     w = n(985018),
     P = n(308021),
     D = n(922848);
-let x = 1000,
+let x = 1e3,
     L = 50,
     j = 250;
+
 function M(e) {
     let { primaryColor: t } = e;
     return (0, r.jsxs)("div", {
@@ -63,10 +67,13 @@ function M(e) {
                 className: D.VA,
                 children: w.intl.string(R.default.sEPtGY),
             }),
-            (0, r.jsx)(S.e, { slide: N.P7.FRIENDS }),
+            (0, r.jsx)(S.e, {
+                slide: N.P7.FRIENDS,
+            }),
         ],
     });
 }
+
 function k() {
     return (0, r.jsx)("div", {
         className: D.Qs,
@@ -76,6 +83,7 @@ function k() {
         }),
     });
 }
+
 function U(e) {
     var t;
     let { primaryColor: n, sidekick: i } = e,
@@ -126,7 +134,9 @@ function U(e) {
                                 variant: "eyebrow",
                                 children:
                                     a === d.pJ.HOURS
-                                        ? w.intl.format(R.default.Xu0QsX, { numHours: o })
+                                        ? w.intl.format(R.default.Xu0QsX, {
+                                              numHours: o,
+                                          })
                                         : w.intl.string(R.default.RmVTph),
                             }),
                             (0, r.jsx)(C.A, {
@@ -142,6 +152,7 @@ function U(e) {
         ],
     });
 }
+
 function G(e) {
     var t, n, a;
     let { step: s, onNextStep: o, onPreviousStep: l } = e,
@@ -240,7 +251,9 @@ function G(e) {
                     children: [
                         (0, r.jsx)(f.q7S, {
                             id: N.Wf.FRIENDS_INTRO,
-                            children: (0, r.jsx)(M, { primaryColor: b }),
+                            children: (0, r.jsx)(M, {
+                                primaryColor: b,
+                            }),
                         }),
                         (0, r.jsx)(f.q7S, {
                             id: N.Wf.FRIENDS_TRANSITION,
@@ -259,6 +272,7 @@ function G(e) {
         ],
     });
 }
+
 function V() {
     var e;
     let t = (0, i.useMemo)(() => (0, N.qk)(), []),
@@ -300,7 +314,9 @@ function V() {
                   (0, r.jsx)(f.Text, {
                       variant: "text-sm/semibold",
                       className: D.L8,
-                      style: { backgroundColor: a },
+                      style: {
+                          backgroundColor: a,
+                      },
                       children: w.intl.string(R.default["//ZYM/"]),
                   }),
                   (0, r.jsx)("textarea", {
@@ -321,7 +337,9 @@ function V() {
                           (0, r.jsx)(c.DUT, {
                               onClick: k,
                               "aria-disabled": T,
-                              className: s()(P.vk, { [D.r9]: T }),
+                              className: s()(P.vk, {
+                                  [D.r9]: T,
+                              }),
                               children: (0, r.jsx)(c.jGc, {
                                   color: a,
                                   colorClass: P.d7,
@@ -330,7 +348,9 @@ function V() {
                           (0, r.jsx)(c.DUT, {
                               onClick: G,
                               "aria-disabled": T || x,
-                              className: s()(P.vk, { [D.r9]: T || x }),
+                              className: s()(P.vk, {
+                                  [D.r9]: T || x,
+                              }),
                               children: (0, r.jsx)(c.lX7, {
                                   color: a,
                                   colorClass: P.d7,

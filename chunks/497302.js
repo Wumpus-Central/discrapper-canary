@@ -1,4 +1,7 @@
-n.d(t, { A: () => b }), n(228524);
+n.d(t, {
+    A: () => b,
+}),
+    n(228524);
 var r = n(627968),
     i = n(64700),
     l = n(311907),
@@ -14,6 +17,7 @@ var r = n(627968),
     A = n(71393),
     g = n(985018),
     m = n(659088);
+
 function b(e) {
     var t, n;
     let { eventId: b } = e,
@@ -28,7 +32,9 @@ function b(e) {
         { startDateTimeString: N } = i.useMemo(
             () =>
                 I
-                    ? { startDateTimeString: g.intl.string(g.t.TxqPQR) }
+                    ? {
+                          startDateTimeString: g.intl.string(g.t.TxqPQR),
+                      }
                     : (0, f.CC)(null != C ? C : new Date().toISOString()),
             [C, I],
         ),
@@ -58,9 +64,13 @@ function b(e) {
                     variant: "text-md/normal",
                     color: "text-subtle",
                     className: m.tj,
-                    children: (0, c.l)(null != (n = _.description) ? n : "", !0, { guildId: E.id }),
+                    children: (0, c.l)(null != (n = _.description) ? n : "", !0, {
+                        guildId: E.id,
+                    }),
                 }),
-            (0, r.jsx)("hr", { className: m.Yl }),
+            (0, r.jsx)("hr", {
+                className: m.Yl,
+            }),
             (0, r.jsxs)("div", {
                 className: m.oo,
                 children: [
@@ -74,7 +84,9 @@ function b(e) {
                             (0, r.jsx)(a.Text, {
                                 variant: "text-xs/normal",
                                 color: "text-muted",
-                                children: g.intl.format(g.t["+DLsD8"], { count: S }),
+                                children: g.intl.format(g.t["+DLsD8"], {
+                                    count: S,
+                                }),
                             }),
                         ],
                     }),

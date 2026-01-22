@@ -1,4 +1,6 @@
-a.d(t, { A: () => A });
+a.d(t, {
+    A: () => A,
+});
 var s = a(627968),
     l = a(64700),
     r = a(134402),
@@ -9,9 +11,12 @@ var s = a(627968),
     d = a(563853),
     u = a(138649);
 let N = c.sE.MAIN_NAVIGATION_MENU;
+
 function A(e) {
     let { TrackClick: t, title: a, links: A, onClose: p, onOpen: h, isOpen: b = !1, isMobile: f, avoidRouter: k } = e,
-        I = (0, n.dI)({ history: (0, r.W6)() }),
+        I = (0, n.dI)({
+            history: (0, r.W6)(),
+        }),
         O = l.useId(),
         m = () => p(),
         g = () => h(a),
@@ -30,7 +35,9 @@ function A(e) {
                                         children: (0, s.jsx)(t, {
                                             eventName: N,
                                             className: u.qz,
-                                            data: { linkClicked: "mobile-".concat(e.linkClicked) },
+                                            data: {
+                                                linkClicked: "mobile-".concat(e.linkClicked),
+                                            },
                                             rel: "me",
                                             href: e.route,
                                             children: e.title,
@@ -50,7 +57,9 @@ function A(e) {
                                                 className: u.qz,
                                                 tag: "span",
                                                 eventName: N,
-                                                data: { linkClicked: "mobile-".concat(e.linkClicked) },
+                                                data: {
+                                                    linkClicked: "mobile-".concat(e.linkClicked),
+                                                },
                                                 children: e.title,
                                             }),
                                         }),

@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(627968);
 n(64700);
 var l = n(398590),
@@ -10,6 +12,7 @@ var l = n(398590),
     u = n(782505),
     d = n(515054),
     f = n(828151);
+
 function p(e) {
     let { user: t, onClose: n } = e,
         { trackUserProfileAction: p } = (0, s.NJ)(),
@@ -19,7 +22,9 @@ function p(e) {
         fade: !0,
         children:
             null == b && g
-                ? Array.from({ length: 10 }).map((e, t) =>
+                ? Array.from({
+                      length: 10,
+                  }).map((e, t) =>
                       (0, r.jsxs)(
                           "div",
                           {
@@ -50,7 +55,12 @@ function p(e) {
                                     guild: i,
                                     nick: s,
                                     onSelect: () => {
-                                        p({ action: "PRESS_MUTUAL_GUILD" }), (0, a.u)(i.id), n(), (0, l.jH)();
+                                        p({
+                                            action: "PRESS_MUTUAL_GUILD",
+                                        }),
+                                            (0, a.u)(i.id),
+                                            n(),
+                                            (0, l.jH)();
                                     },
                                 },
                                 i.id,

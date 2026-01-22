@@ -1,4 +1,7 @@
-n.d(t, { A: () => j }), n(896048);
+n.d(t, {
+    A: () => j,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(311907),
@@ -23,9 +26,11 @@ var r = n(627968),
     v = n(946960),
     S = n(49999);
 let C = new Set([a.M.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION, a.M.CHANNEL_NOTICE_GUILD_BANNER]);
+
 function N(e) {
     e.stopPropagation();
 }
+
 function T(e) {
     var t;
     let { guild: n } = e,
@@ -99,19 +104,37 @@ let j = (e) => {
     let { guild: t } = e;
     switch ((0, I.A)(t)) {
         case I.G.ENABLE_PUBLIC_GUILD:
-            return (0, r.jsx)(m.A, { guild: t });
+            return (0, r.jsx)(m.A, {
+                guild: t,
+            });
         case I.G.MAX_MEMBER_COUNT:
-            return (0, r.jsx)(O.A, { guild: t });
+            return (0, r.jsx)(O.A, {
+                guild: t,
+            });
         case I.G.GUILD_LIVE_CHANNEL:
-            return (0, r.jsx)(p.Ay, { guild: t });
+            return (0, r.jsx)(p.Ay, {
+                guild: t,
+            });
         case I.G.GUILD_MFA_WARNING:
-            return (0, r.jsx)(_.A, { guild: t });
+            return (0, r.jsx)(_.A, {
+                guild: t,
+            });
         case I.G.COMMANDS_MIGRATION:
-            return (0, r.jsx)(A.A, { guild: t });
+            return (0, r.jsx)(A.A, {
+                guild: t,
+            });
         case I.G.APPLICATION_SUBSCRIPTION_EXPIRATION:
-            return (0, r.jsx)(g.A, { guild: t });
+            return (0, r.jsx)(g.A, {
+                guild: t,
+            });
         case I.G.HUB_STUDY_ROOM:
-            return (0, r.jsx)(h.A, { guild: t });
+            return (0, r.jsx)(h.A, {
+                guild: t,
+            });
     }
-    return b.P.isDisallowPopupsSet() ? null : (0, r.jsx)(T, { guild: e.guild });
+    return b.P.isDisallowPopupsSet()
+        ? null
+        : (0, r.jsx)(T, {
+              guild: e.guild,
+          });
 };

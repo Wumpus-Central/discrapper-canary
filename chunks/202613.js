@@ -25,6 +25,7 @@ var r = n(665260),
     a = n(596334),
     s = n(403362),
     o = n(652215);
+
 function l(e, t, n) {
     return (
         t in e
@@ -38,6 +39,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -54,6 +56,7 @@ function c(e) {
     }
     return e;
 }
+
 function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -66,6 +69,7 @@ function u(e, t) {
     }
     return n;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -110,12 +114,24 @@ class f extends i.A {
                     }),
                 );
             case o.hes.PAYPAL:
-                return new _(d(c({}, r), { email: e.email }));
+                return new _(
+                    d(c({}, r), {
+                        email: e.email,
+                    }),
+                );
             case o.hes.VENMO:
-                return new S(d(c({}, r), { username: e.username }));
+                return new S(
+                    d(c({}, r), {
+                        username: e.username,
+                    }),
+                );
             case o.hes.SEPA_DEBIT:
             case o.hes.SOFORT:
-                return new h(d(c({}, r), { email: e.email }));
+                return new h(
+                    d(c({}, r), {
+                        email: e.email,
+                    }),
+                );
             case o.hes.GIROPAY:
                 return new m(c({}, r));
             case o.hes.PRZELEWY24:
@@ -126,7 +142,11 @@ class f extends i.A {
                     }),
                 );
             case o.hes.EPS:
-                return new E(d(c({}, r), { bank: e.bank }));
+                return new E(
+                    d(c({}, r), {
+                        bank: e.bank,
+                    }),
+                );
             case o.hes.PAYSAFE_CARD:
                 return new y(c({}, r));
             case o.hes.GCASH:
@@ -142,9 +162,17 @@ class f extends i.A {
             case o.hes.BANCONTACT:
                 return new C(c({}, r));
             case o.hes.IDEAL:
-                return new b(d(c({}, r), { bank: e.bank }));
+                return new b(
+                    d(c({}, r), {
+                        bank: e.bank,
+                    }),
+                );
             case o.hes.CASH_APP:
-                return new N(d(c({}, r), { username: e.username }));
+                return new N(
+                    d(c({}, r), {
+                        username: e.username,
+                    }),
+                );
             default:
                 (0, s.xb)(e);
         }
@@ -196,7 +224,9 @@ class f extends i.A {
         return null != this.country && "" !== this.country ? this.country : this.billingAddress.country;
     }
     canRedeemTrial() {
-        let { enabled: e } = a.A.getCurrentConfig({ location: "3a6d55_1" });
+        let { enabled: e } = a.A.getCurrentConfig({
+            location: "3a6d55_1",
+        });
         return this.paymentGateway === o.kM_.ADYEN && this.type === o.hes.CASH_APP ? e : !o.OLI.has(this.type);
     }
     constructor(e) {

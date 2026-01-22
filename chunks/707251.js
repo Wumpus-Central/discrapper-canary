@@ -1,4 +1,6 @@
-n.d(t, { A: () => k });
+n.d(t, {
+    A: () => k,
+});
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -33,6 +35,7 @@ var r = n(627968),
     D = n(788868),
     M = n(985018),
     L = n(20531);
+
 function G(e) {
     let { channel: t, toggleRequestToSpeakSidebar: n, showRequestToSpeakSidebar: l } = e,
         { analyticsLocations: i, newestAnalyticsLocation: o } = (0, f.Ay)(d.A.VOICE_CHANNEL_HEADER),
@@ -46,12 +49,20 @@ function G(e) {
         ),
         A = (0, I.Ni)(t.id),
         y = (0, C.zy)(t.id, S.ip.REQUESTED_TO_SPEAK_ONLY),
-        { hasParticipantsPanel: O } = (0, h.A)({ location: "StageChannelCallHeader" }),
+        { hasParticipantsPanel: O } = (0, h.A)({
+            location: "StageChannelCallHeader",
+        }),
         x = O && g;
     return (0, r.jsxs)(f.f5, {
         value: i,
         children: [
-            (0, r.jsx)(m.A, { channelId: t.id }, "clips-enabled-indicator"),
+            (0, r.jsx)(
+                m.A,
+                {
+                    channelId: t.id,
+                },
+                "clips-enabled-indicator",
+            ),
             !l && A
                 ? (0, r.jsx)("div", {
                       className: L.x6,
@@ -72,7 +83,9 @@ function G(e) {
                 (0, r.jsx)(
                     v.A,
                     {
-                        className: a()(L.x6, { [L.vc]: c }),
+                        className: a()(L.x6, {
+                            [L.vc]: c,
+                        }),
                         onClick: () => {
                             l && n(), u.A.toggleParticipantsList(t.id, !g);
                         },
@@ -81,7 +94,9 @@ function G(e) {
                 ),
             !c &&
                 (0, r.jsx)("div", {
-                    className: a()(L.x6, { [L.vc]: x || l }),
+                    className: a()(L.x6, {
+                        [L.vc]: x || l,
+                    }),
                     children: (0, r.jsx)(j.V, {
                         channelId: t.id,
                         showRequestToSpeakSidebar: l,
@@ -92,6 +107,7 @@ function G(e) {
         ],
     });
 }
+
 function k(e) {
     var t;
     let { channel: n, toggleRequestToSpeakSidebar: i, showRequestToSpeakSidebar: d } = e,
@@ -162,7 +178,9 @@ function k(e) {
                         wrapperClassName: L.KD,
                         children: null != (t = null == p ? void 0 : p.topic) ? t : f,
                     }),
-                    (0, r.jsx)(y.Ay.Divider, { className: L.yF }),
+                    (0, r.jsx)(y.Ay.Divider, {
+                        className: L.yF,
+                    }),
                     (0, r.jsxs)(y.Ay.Title, {
                         children: [
                             (0, r.jsx)(c.cNw, {
@@ -173,7 +191,9 @@ function k(e) {
                                 variant: "text-sm/normal",
                                 color: "text-muted",
                                 className: L.N_,
-                                children: M.intl.format(M.t.chmM9N, { count: h }),
+                                children: M.intl.format(M.t.chmM9N, {
+                                    count: h,
+                                }),
                             }),
                             (0, r.jsx)(c.nFg, {
                                 size: "xs",
@@ -184,7 +204,9 @@ function k(e) {
                                 variant: "text-sm/normal",
                                 color: "text-muted",
                                 className: L.N_,
-                                children: M.intl.format(M.t["+v2pN2"], { count: b }),
+                                children: M.intl.format(M.t["+v2pN2"], {
+                                    count: b,
+                                }),
                             }),
                         ],
                     }),
@@ -231,7 +253,9 @@ function k(e) {
                                                 onClick: () => {
                                                     (0, A.K)({
                                                         guildId: n.guild_id,
-                                                        location: { section: R.JJy.STAGE_VIDEO_LIMIT },
+                                                        location: {
+                                                            section: R.JJy.STAGE_VIDEO_LIMIT,
+                                                        },
                                                     }),
                                                         _.default.track(R.HAw.BOOSTING_UPSELL_CLICKED, {
                                                             guild_id: n.guild_id,
@@ -258,6 +282,7 @@ function k(e) {
           })
         : H;
 }
+
 function U() {
     return (0, r.jsxs)("svg", {
         width: "36",
@@ -292,7 +317,9 @@ function U() {
                         y2: "-1.45185",
                         gradientUnits: "userSpaceOnUse",
                         children: [
-                            (0, r.jsx)("stop", { stopColor: "#3E70DD" }),
+                            (0, r.jsx)("stop", {
+                                stopColor: "#3E70DD",
+                            }),
                             (0, r.jsx)("stop", {
                                 offset: "1",
                                 stopColor: "#B377F3",

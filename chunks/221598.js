@@ -1,4 +1,6 @@
-n.d(t, { A: () => l });
+n.d(t, {
+    A: () => l,
+});
 var r = n(73153);
 let l = {
     setCallChatToastsEnabled(e, t) {

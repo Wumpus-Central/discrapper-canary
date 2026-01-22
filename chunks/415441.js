@@ -1,4 +1,6 @@
-n.d(t, { N: () => p });
+n.d(t, {
+    N: () => p,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -9,6 +11,7 @@ var r = n(627968),
     u = n(579473),
     d = n(985018),
     f = n(545965);
+
 function p(e) {
     var t, n, a;
     let { showVideo: p, imageAsset: _, videoAsset: h, imageSize: m, onLoadComplete: g, assetRef: E } = e,
@@ -49,7 +52,9 @@ function p(e) {
                     preload: "auto",
                     poster: S,
                     playsInline: !0,
-                    className: s()(h.className, f.Ki, { [f.R]: !p }),
+                    className: s()(h.className, f.Ki, {
+                        [f.R]: !p,
+                    }),
                     controls: !1,
                     onProgress: g,
                     ref: E,

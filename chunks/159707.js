@@ -1,4 +1,7 @@
-r.d(t, { default: () => L }), r(896048);
+r.d(t, {
+    default: () => L,
+}),
+    r(896048);
 var n = r(627968),
     i = r(64700),
     a = r(284009),
@@ -26,6 +29,7 @@ var n = r(627968),
     E = r(49402),
     T = r(27753),
     U = r(136300);
+
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
@@ -51,6 +55,7 @@ function v(e) {
     }
     return e;
 }
+
 function w(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -69,6 +74,7 @@ function w(e, t) {
         e
     );
 }
+
 function C(e, t) {
     if (null == e) return {};
     var r,
@@ -106,6 +112,7 @@ let R = {
     [I.Hy.BILLING_SUBSCRIPTION_GROUP_USER_ON_GIFT_SUBSCRIPTION]: 6,
     [I.Hy.BILLING_SUBSCRIPTION_GROUP_USER_INVALID_SUBSCRIPTION]: 7,
 };
+
 function A(e) {
     let { onClose: t, isExistingSub: r, premiumGroupPrimaryName: i, currentUser: a } = e,
         s = C(e, ["onClose", "isExistingSub", "premiumGroupPrimaryName", "currentUser"]),
@@ -119,7 +126,9 @@ function A(e) {
                 children: (0, n.jsxs)("div", {
                     className: h.hQ,
                     children: [
-                        (0, n.jsx)("div", { className: h.ZB }),
+                        (0, n.jsx)("div", {
+                            className: h.ZB,
+                        }),
                         (0, n.jsx)(o.DZT, {
                             className: h.wx,
                             variant: "display-md",
@@ -141,7 +150,9 @@ function A(e) {
                                           autoPlay: !0,
                                           loop: !0,
                                           className: h.d9,
-                                          children: (0, n.jsx)("source", { src: d }),
+                                          children: (0, n.jsx)("source", {
+                                              src: d,
+                                          }),
                                       }),
                                 (0, n.jsx)(m.A, {
                                     user: a,
@@ -181,6 +192,7 @@ function A(e) {
         }),
     );
 }
+
 function G(e) {
     let {
             setModalState: t,
@@ -291,6 +303,7 @@ function G(e) {
         }),
     );
 }
+
 function k(e) {
     let t,
         r,
@@ -299,42 +312,64 @@ function k(e) {
         l = (0, I.DP)();
     switch (i) {
         case 1:
-            (t = N.intl.formatToPlainString(x.default["wMo6/n"], { premiumGroupProductName: l })),
+            (t = N.intl.formatToPlainString(x.default["wMo6/n"], {
+                premiumGroupProductName: l,
+            })),
                 (r = N.intl.formatToPlainString(x.default.C08r8L, {
                     premiumGroupProductName: l,
                     cooldownMonths: I.wl,
                 }));
             break;
         case 2:
-            (t = N.intl.formatToPlainString(x.default["Um4ml+"], { premiumGroupProductName: l })),
+            (t = N.intl.formatToPlainString(x.default["Um4ml+"], {
+                premiumGroupProductName: l,
+            })),
                 (r = N.intl.string(x.default.Fm8iss));
             break;
         case 3:
             (t = N.intl.string(x.default.yGTLxP)),
-                (r = N.intl.formatToPlainString(x.default["7/qtoL"], { premiumGroupProductName: l }));
+                (r = N.intl.formatToPlainString(x.default["7/qtoL"], {
+                    premiumGroupProductName: l,
+                }));
             break;
         case 4:
-            (t = N.intl.formatToPlainString(x.default["S+UfpQ"], { premiumGroupProductName: l })),
+            (t = N.intl.formatToPlainString(x.default["S+UfpQ"], {
+                premiumGroupProductName: l,
+            })),
                 (r = N.intl.formatToPlainString(x.default.AKYhx6, {
                     premiumGroupProductName: l,
                     countryName: (0, I.mU)(),
                 }));
             break;
         case 5:
-            (t = N.intl.formatToPlainString(x.default.anKEqI, { premiumGroupProductName: l })),
-                (r = N.intl.formatToPlainString(x.default["67BbUf"], { premiumGroupProductName: l }));
+            (t = N.intl.formatToPlainString(x.default.anKEqI, {
+                premiumGroupProductName: l,
+            })),
+                (r = N.intl.formatToPlainString(x.default["67BbUf"], {
+                    premiumGroupProductName: l,
+                }));
             break;
         case 6:
-            (t = N.intl.formatToPlainString(x.default.VH7zHG, { premiumGroupProductName: l })),
+            (t = N.intl.formatToPlainString(x.default.VH7zHG, {
+                premiumGroupProductName: l,
+            })),
                 (r = N.intl.string(x.default.s47Jqb));
             break;
         case 7:
-            (t = N.intl.formatToPlainString(x.default.agSoQJ, { premiumGroupProductName: l })),
-                (r = N.intl.formatToPlainString(x.default.YhJsq4, { premiumGroupProductName: l }));
+            (t = N.intl.formatToPlainString(x.default.agSoQJ, {
+                premiumGroupProductName: l,
+            })),
+                (r = N.intl.formatToPlainString(x.default.YhJsq4, {
+                    premiumGroupProductName: l,
+                }));
             break;
         default:
-            (t = N.intl.formatToPlainString(x.default["Kpg/uU"], { premiumGroupProductName: l })),
-                (r = N.intl.formatToPlainString(x.default.GrEzlX, { premiumGroupProductName: l }));
+            (t = N.intl.formatToPlainString(x.default["Kpg/uU"], {
+                premiumGroupProductName: l,
+            })),
+                (r = N.intl.formatToPlainString(x.default.GrEzlX, {
+                    premiumGroupProductName: l,
+                }));
     }
     return (0, n.jsx)(
         o.Modal,
@@ -358,6 +393,7 @@ function k(e) {
         ),
     );
 }
+
 function L(e) {
     let { premiumGroupSubscriptionId: t, premiumGroupInviteId: r, isExistingSub: a, premiumGroupPrimaryName: o } = e,
         c = C(e, ["premiumGroupSubscriptionId", "premiumGroupInviteId", "isExistingSub", "premiumGroupPrimaryName"]),
@@ -395,7 +431,15 @@ function L(e) {
             );
             break;
         case 2:
-            _ = (0, n.jsx)(k, v({ error: f }, c));
+            _ = (0, n.jsx)(
+                k,
+                v(
+                    {
+                        error: f,
+                    },
+                    c,
+                ),
+            );
     }
     return (0, n.jsx)(b.A, {
         isConfirmationStep: 1 === u,

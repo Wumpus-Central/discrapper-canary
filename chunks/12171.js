@@ -1,4 +1,8 @@
-n.d(t, { A: () => g }), n(896048), n(747238);
+n.d(t, {
+    A: () => g,
+}),
+    n(896048),
+    n(747238);
 var a = n(627968),
     l = n(64700),
     i = n(417597),
@@ -1358,6 +1362,7 @@ let h = [
             country: "US",
         },
     };
+
 function g() {
     let [e, t] = l.useState("US"),
         [n, c] = l.useState(null),
@@ -1403,7 +1408,9 @@ function g() {
                 className: u.l$,
                 children: [
                     (0, a.jsxs)(s.Text, {
-                        style: { marginBottom: "16px" },
+                        style: {
+                            marginBottom: "16px",
+                        },
                         variant: "text-lg/bold",
                         children: [" ", "Manage Payment Sources", " "],
                     }),
@@ -1498,12 +1505,21 @@ function g() {
                         variant: "text-md/normal",
                         children: "Existing Payment Sources",
                     }),
-                    O.map((e) => (0, a.jsx)(v, { paymentSource: e }, e.id)),
+                    O.map((e) =>
+                        (0, a.jsx)(
+                            v,
+                            {
+                                paymentSource: e,
+                            },
+                            e.id,
+                        ),
+                    ),
                 ],
             }),
         })
     );
 }
+
 function v(e) {
     let { paymentSource: t } = e;
     return (0, a.jsxs)("div", {

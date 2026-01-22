@@ -29,6 +29,7 @@ var l,
     N = n(985018),
     E = n(340500),
     T = (((l = {})[(l.BANNER = 0)] = "BANNER"), (l[(l.THUMBNAIL = 1)] = "THUMBNAIL"), l);
+
 function D(e) {
     let { channel: t, onClick: n } = e,
         { canManageAllEvents: l } = (0, b.nr)(t),
@@ -71,6 +72,7 @@ function D(e) {
         }),
     });
 }
+
 function w(e) {
     let { channel: t, onJoinClick: n, handleLocationClick: l, location: i, isExternal: c } = e;
     return null != t
@@ -97,6 +99,7 @@ function w(e) {
               ],
           });
 }
+
 function S(e) {
     let {
             channel: t,
@@ -135,7 +138,11 @@ function S(e) {
         fullWidth: !1,
         size: "sm",
         children: [
-            null != d ? (0, a.jsx)(g.jD, { onClick: d }) : null,
+            null != d
+                ? (0, a.jsx)(g.jD, {
+                      onClick: d,
+                  })
+                : null,
             null == p
                 ? void 0
                 : p.map((e, t) =>
@@ -172,6 +179,7 @@ function S(e) {
         ],
     });
 }
+
 function G(e) {
     let {
             className: t,
@@ -230,9 +238,14 @@ function G(e) {
         ),
         children: [
             (0, a.jsxs)("div", {
-                className: r()(E.Ms, { [E.AD]: F }),
+                className: r()(E.Ms, {
+                    [E.AD]: F,
+                }),
                 children: [
-                    0 === o && (0, a.jsx)(p.A, { source: f }),
+                    0 === o &&
+                        (0, a.jsx)(p.A, {
+                            source: f,
+                        }),
                     (0, a.jsx)(j.Ay, {
                         creator: i,
                         name: c,
@@ -255,7 +268,9 @@ function G(e) {
                             speakerCount: k,
                             className: E.YK,
                         }),
-                    (0, a.jsx)("hr", { className: E.yF }),
+                    (0, a.jsx)("hr", {
+                        className: E.yF,
+                    }),
                     !W &&
                         C.Tn.has(K.entity_type) &&
                         (0, a.jsx)(h.A, {
@@ -295,7 +310,10 @@ function G(e) {
                             }),
                         ],
                     }),
-                    F && (0, a.jsx)("hr", { className: E.yF }),
+                    F &&
+                        (0, a.jsx)("hr", {
+                            className: E.yF,
+                        }),
                 ],
             }),
             F &&

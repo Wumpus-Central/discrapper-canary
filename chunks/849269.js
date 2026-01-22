@@ -32,6 +32,7 @@ var r = n(665260),
         return (e[(e.START = 0)] = "START"), (e[(e.JOIN = 1)] = "JOIN"), (e[(e.LEAVE = 2)] = "LEAVE"), e;
     })({});
 let S = 250;
+
 function I(e) {
     let {
             activityItem: t,
@@ -89,6 +90,7 @@ function I(e) {
         staffReleasePhase: P,
     };
 }
+
 function T(e, t) {
     var n;
     let i = null != (n = e.flags) ? n : 0;
@@ -96,12 +98,15 @@ function T(e, t) {
     let a = t.client_platform_config[(0, m.A)((0, u.getOS)())].release_phase;
     return O.qG.includes(a) ? a.replace("_", " ").replace(/(^\w|\s\w)/g, (e) => e.toUpperCase()) : void 0;
 }
+
 function C(e) {
     let { context: t, applicationId: n, fetchesApplication: r = !0 } = e,
         i = 0,
         a = "channel" === t.type ? t.channel : void 0,
         s = (0, E.A)(),
-        l = (0, b.A)({ fetchesApplication: r }),
+        l = (0, b.A)({
+            fetchesApplication: r,
+        }),
         c = (0, o.h)(n, r),
         u = (0, _.Ay)(a).find((e) => {
             let { embeddedActivity: t } = e;
@@ -111,6 +116,7 @@ function C(e) {
     let d = (0, h.H)(null == s ? void 0 : s.location);
     return null != a && d === a.id && (null == l ? void 0 : l.id) === c.id ? (i = 2) : null != u && (i = 1), i;
 }
+
 function N(e) {
     var t;
     let {
@@ -140,14 +146,23 @@ function N(e) {
         R = (0, c.e)(n);
     if (null == n)
         return () => {
-            null == _ || _({ applicationId: "" });
+            null == _ ||
+                _({
+                    applicationId: "",
+                });
         };
     switch (I) {
         case 0:
             return async () => {
                 if (R) {
                     try {
-                        await l.A.launchFrame({ applicationId: S }), null == _ || _({ applicationId: S });
+                        await l.A.launchFrame({
+                            applicationId: S,
+                        }),
+                            null == _ ||
+                                _({
+                                    applicationId: S,
+                                });
                     } catch (e) {}
                     return;
                 }
@@ -173,7 +188,15 @@ function N(e) {
                     customId: O,
                     referrerId: A,
                     onConfirmActivityLaunchChecksAlertOpen: v,
-                }).then((e) => e && (null == _ ? void 0 : _({ applicationId: S })));
+                }).then(
+                    (e) =>
+                        e &&
+                        (null == _
+                            ? void 0
+                            : _({
+                                  applicationId: S,
+                              })),
+                );
             };
         case 1:
             return async () => {
@@ -188,7 +211,15 @@ function N(e) {
                         source: b,
                         customId: O,
                         referrerId: A,
-                    }).then((e) => e && (null == _ ? void 0 : _({ applicationId: S }))));
+                    }).then(
+                        (e) =>
+                            e &&
+                            (null == _
+                                ? void 0
+                                : _({
+                                      applicationId: S,
+                                  })),
+                    ));
             };
         case 2:
             return () => {
@@ -198,7 +229,10 @@ function N(e) {
                             location: N.location,
                             applicationId: S,
                         }),
-                    null == _ || _({ applicationId: S }));
+                    null == _ ||
+                        _({
+                            applicationId: S,
+                        }));
             };
     }
 }

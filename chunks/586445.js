@@ -1,4 +1,6 @@
-n.d(t, { V: () => u });
+n.d(t, {
+    V: () => u,
+});
 var r = n(627968),
     l = n(64700),
     a = n(397927),
@@ -7,10 +9,13 @@ var r = n(627968),
     c = n(758836),
     o = n(652215),
     d = n(985018);
+
 function u(e) {
     let { skuId: t, tab: n } = e,
         u = l.useCallback(() => {
-            i.default.track(o.HAw.COLLECTIBLES_SHARE_LINK_BUTTON_CLICKED, { sku_id: t });
+            i.default.track(o.HAw.COLLECTIBLES_SHARE_LINK_BUTTON_CLICKED, {
+                sku_id: t,
+            });
             let e = ""
                 .concat(location.protocol, "//")
                 .concat(location.host)

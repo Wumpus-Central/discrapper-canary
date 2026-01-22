@@ -1,4 +1,8 @@
-n.d(t, { A: () => D }), n(896048), n(938796);
+n.d(t, {
+    A: () => D,
+}),
+    n(896048),
+    n(938796);
 var r = n(627968),
     l = n(64700),
     i = n(665260),
@@ -24,6 +28,7 @@ var r = n(627968),
     S = n(200700),
     M = n(340837),
     P = n(985018);
+
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -49,6 +54,7 @@ function C(e) {
     }
     return e;
 }
+
 function I(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -67,8 +73,14 @@ function I(e, t) {
         e
     );
 }
+
 function D(e, t, D, x, T) {
-    let N = l.useMemo(() => ({ [t]: [e.id] }), [t, e.id]),
+    let N = l.useMemo(
+            () => ({
+                [t]: [e.id],
+            }),
+            [t, e.id],
+        ),
         w = null != x ? [x] : [];
     (0, s.E)(N, "useAdminActionItems"), (0, a.bG)([E.A], () => E.A.getGuildVersion(t), [t]);
     let G = (0, a.bG)([p.A], () => p.A.getGuild(t), [t]),
@@ -109,9 +121,17 @@ function D(e, t, D, x, T) {
         }),
         Z = (0, A.A)(t, e.id),
         $ =
-            null != Y && null != D && E.A.canWithPartialContext(h.xBc.VIEW_CHANNEL, { channelId: Y }) && !U
+            null != Y &&
+            null != D &&
+            E.A.canWithPartialContext(h.xBc.VIEW_CHANNEL, {
+                channelId: Y,
+            }) &&
+            !U
                 ? [
-                      (!k || (k && !H)) && E.A.canWithPartialContext(h.xBc.MUTE_MEMBERS, { channelId: D })
+                      (!k || (k && !H)) &&
+                      E.A.canWithPartialContext(h.xBc.MUTE_MEMBERS, {
+                          channelId: D,
+                      })
                           ? (0, r.jsx)(
                                 o.sLh,
                                 {
@@ -126,7 +146,10 @@ function D(e, t, D, x, T) {
                                 "voice-mute",
                             )
                           : null,
-                      (!k || (k && !H)) && E.A.canWithPartialContext(h.xBc.DEAFEN_MEMBERS, { channelId: D })
+                      (!k || (k && !H)) &&
+                      E.A.canWithPartialContext(h.xBc.DEAFEN_MEMBERS, {
+                          channelId: D,
+                      })
                           ? (0, r.jsx)(
                                 o.sLh,
                                 {
@@ -139,7 +162,11 @@ function D(e, t, D, x, T) {
                                 "voice-deafen",
                             )
                           : null,
-                      !R && null != G && E.A.canWithPartialContext(h.xBc.MOVE_MEMBERS, { channelId: D })
+                      !R &&
+                      null != G &&
+                      E.A.canWithPartialContext(h.xBc.MOVE_MEMBERS, {
+                          channelId: D,
+                      })
                           ? (0, r.jsx)(
                                 o.Drp,
                                 {
@@ -240,7 +267,9 @@ function D(e, t, D, x, T) {
                                 o.Drp,
                                 {
                                     id: "removetimeout",
-                                    label: P.intl.formatToPlainString(P.t.csKeta, { user: e.username }),
+                                    label: P.intl.formatToPlainString(P.t.csKeta, {
+                                        user: e.username,
+                                    }),
                                     color: "danger",
                                     action: () => {
                                         (0, d.Y)({
@@ -256,7 +285,9 @@ function D(e, t, D, x, T) {
                                 o.Drp,
                                 {
                                     id: "timeout",
-                                    label: P.intl.formatToPlainString(P.t.OhsOy0, { user: e.username }),
+                                    label: P.intl.formatToPlainString(P.t.OhsOy0, {
+                                        user: e.username,
+                                    }),
                                     color: "danger",
                                     action: (n) => {
                                         if (n.ctrlKey || n.metaKey) return q(n, t, e.id);
@@ -275,7 +306,9 @@ function D(e, t, D, x, T) {
                             o.Drp,
                             {
                                 id: "kick",
-                                label: P.intl.formatToPlainString(P.t["9l/iTS"], { user: e.username }),
+                                label: P.intl.formatToPlainString(P.t["9l/iTS"], {
+                                    user: e.username,
+                                }),
                                 color: "danger",
                                 action: () =>
                                     (0, o.mMO)(async () => {
@@ -299,7 +332,9 @@ function D(e, t, D, x, T) {
                             o.Drp,
                             {
                                 id: "ban",
-                                label: P.intl.formatToPlainString(P.t.WnpUBi, { user: e.username }),
+                                label: P.intl.formatToPlainString(P.t.WnpUBi, {
+                                    user: e.username,
+                                }),
                                 color: "danger",
                                 action: () =>
                                     (0, o.mMO)(async () => {

@@ -29,6 +29,7 @@ var r,
     A = n(287809),
     v = n(652215),
     S = n(985018);
+
 function I(e, t, n) {
     return (
         t in e
@@ -42,6 +43,7 @@ function I(e, t, n) {
         e
     );
 }
+
 function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -58,6 +60,7 @@ function T(e) {
     }
     return e;
 }
+
 function C(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -70,6 +73,7 @@ function C(e, t) {
     }
     return n;
 }
+
 function N(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -94,6 +98,7 @@ var P = (function (e) {
         e
     );
 })({});
+
 function D(e, t, n, r) {
     switch (t) {
         case v.clD.ONLINE:
@@ -129,6 +134,7 @@ function D(e, t, n, r) {
             };
     }
 }
+
 function x(e, t, n) {
     let r = n === _.default.getId(),
         i = y.A.isMobileOnline(n),
@@ -138,19 +144,29 @@ function x(e, t, n) {
         l = A.default.getUser(n);
     return null == l
         ? null
-        : N(T({ type: "MEMBER" }, g.Ay.getMember(e, n)), {
-              user: l,
-              status: a,
-              activities: s,
-              applicationStream: o,
-              isOwner: t === n,
-              isMobileOnline: i,
-          });
+        : N(
+              T(
+                  {
+                      type: "MEMBER",
+                  },
+                  g.Ay.getMember(e, n),
+              ),
+              {
+                  user: l,
+                  status: a,
+                  activities: s,
+                  applicationStream: o,
+                  isOwner: t === n,
+                  isMobileOnline: i,
+              },
+          );
 }
+
 function L(e) {
     let t = h.A.getChannel(e);
     return null == t ? R : null == t.memberListId ? j(t) : t.memberListId;
 }
+
 function j(e) {
     return f.Ib(v.xBc.VIEW_CHANNEL, e)
         ? R
@@ -294,6 +310,7 @@ class k {
     }
 }
 let U = new k();
+
 function G(e) {
     let t = U.get(e.guildId, e.id);
     e.ops.forEach((e) => {
@@ -316,30 +333,36 @@ function G(e) {
     }),
         t.setGroups(e.groups);
 }
+
 function V() {
     U.reset();
 }
+
 function F(e) {
     let { guild: t } = e;
     U.forEach(t.id, (e) => {
         e.updateOwnerId() && e.rebuildMembers();
     });
 }
+
 function B(e) {
     let { guild: t } = e;
     U.delete(t.id);
 }
+
 function H(e) {
     let { guildId: t, role: n } = e;
     U.forEach(t, (e) => {
         e.rebuildGroup(n.id), e.rebuildMembers();
     });
 }
+
 function Y(e) {
     let { guildId: t, user: n } = e;
     U.forEach(t, (e) => e.rebuildMember(n.id));
 }
 let W = [];
+
 function K() {
     let e = p.A.getAllApplicationStreams(),
         t = W.concat(e);
@@ -348,10 +371,12 @@ function K() {
             U.forEach(null, (t) => t.rebuildMember(e.ownerId));
         });
 }
+
 function z() {
     let e = _.default.getId();
     U.forEach(null, (t) => t.rebuildMember(e));
 }
+
 function q() {
     return !0;
 }

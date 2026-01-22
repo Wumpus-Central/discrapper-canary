@@ -1,4 +1,6 @@
-r.d(t, { default: () => s });
+r.d(t, {
+    default: () => s,
+});
 var n = r(627968);
 r(64700);
 var o = r(158954),
@@ -7,6 +9,7 @@ var o = r(158954),
     i = r(47167),
     a = r(734057),
     p = r(985018);
+
 function s(e) {
     var t, r;
     let { onConfirm: s, channelId: u } = e,
@@ -87,7 +90,12 @@ function s(e) {
                 ],
                 children: (0, n.jsx)(l.Text, {
                     variant: "text-sm/normal",
-                    children: null != f ? p.intl.format(p.t["1KT3Fp"], { channelName: y }) : p.intl.string(p.t.VOPUVy),
+                    children:
+                        null != f
+                            ? p.intl.format(p.t["1KT3Fp"], {
+                                  channelName: y,
+                              })
+                            : p.intl.string(p.t.VOPUVy),
                 }),
             }),
         Object.getOwnPropertyDescriptors

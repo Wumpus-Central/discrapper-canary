@@ -1,8 +1,12 @@
-i.d(e, { A: () => d }), i(747238);
+i.d(e, {
+    A: () => d,
+}),
+    i(747238);
 var s = i(627968),
     n = i(64700),
     r = i(960488),
     a = i(73939);
+
 function h(t) {
     for (var e = 1; e < arguments.length; e++) {
         var i = null != arguments[e] ? arguments[e] : {},
@@ -28,6 +32,7 @@ function h(t) {
     }
     return t;
 }
+
 function l(t, e) {
     return (
         (e = null != e ? e : {}),
@@ -46,6 +51,7 @@ function l(t, e) {
         t
     );
 }
+
 function o(t, e) {
     if (null == t) return {};
     var i,
@@ -88,7 +94,16 @@ class c extends n.Component {
                         { component: s, render: a } = e,
                         u = o(e, ["component", "render"]),
                         p = u.path || u.from;
-                    null != (f = null != p ? (0, r.B6)(i.pathname, l(h({}, u), { path: p })) : null) &&
+                    null !=
+                        (f =
+                            null != p
+                                ? (0, r.B6)(
+                                      i.pathname,
+                                      l(h({}, u), {
+                                          path: p,
+                                      }),
+                                  )
+                                : null) &&
                         ((u = l(h({}, u), {
                             key: p,
                             location: i,
@@ -99,7 +114,12 @@ class c extends n.Component {
                         null != s ? (m = n.createElement(s, u)) : null != a && (m = a(u)));
                 }
             }),
-            (0, s.jsx)(a.F, l(h({}, p), { children: m }))
+            (0, s.jsx)(
+                a.F,
+                l(h({}, p), {
+                    children: m,
+                }),
+            )
         );
     }
 }

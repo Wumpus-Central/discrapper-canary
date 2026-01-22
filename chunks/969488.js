@@ -1,4 +1,8 @@
-n.d(t, { f: () => w }), n(733351), n(228524);
+n.d(t, {
+    f: () => w,
+}),
+    n(733351),
+    n(228524);
 var l = n(627968),
     r = n(64700),
     a = n(503698),
@@ -30,6 +34,7 @@ let T = [
         },
     ],
     _ = (0, p.Ld)();
+
 function E(e) {
     let { mediaAttachments: t, containerWidth: n, containerHeight: r } = e,
         a = (0, A.eX)({
@@ -68,7 +73,9 @@ let w = (e) => {
     let { parentChannel: a } = e,
         { textAreaState: s } = (0, y.kU)((e) => {
             let { textAreaState: t } = e;
-            return { textAreaState: t };
+            return {
+                textAreaState: t,
+            };
         }, o.x),
         p = (0, d.bG)([f.A], () => f.A.keyboardModeEnabled),
         j = (0, O.A)(a, null == (t = s.textValue) ? void 0 : t.trim()),
@@ -180,7 +187,9 @@ let w = (e) => {
                               containerHeight: R.height,
                           }),
                           (0, l.jsxs)("div", {
-                              className: i()(S.On, { [S.bP]: (null == j ? void 0 : j.length) > 2 }),
+                              className: i()(S.On, {
+                                  [S.bP]: (null == j ? void 0 : j.length) > 2,
+                              }),
                               children: [
                                   (0, l.jsx)(m.Text, {
                                       variant: "text-xs/medium",

@@ -15,12 +15,14 @@ var r = n(587895),
     c = n(360469);
 let u = (e) => e.application_id === c.$W || e.platform === l.yTV.XBOX,
     d = (e) => e.platform === l.yTV.PS4 || e.platform === l.yTV.PS5;
+
 function f(e, t) {
     let n = (0, a.F9)(t);
     if (null == n) return !1;
     let i = r.A.getApplication(n);
     return null != i && e === i.name.toLowerCase();
 }
+
 function p(e, t) {
     return (
         null != e &&
@@ -30,13 +32,16 @@ function p(e, t) {
               (null != e.application_id && h(e.application_id, t)))
     );
 }
+
 function _(e, t) {
     for (let [n, r] of e) if (p(t, r) && !(0, i.Ic)(r)) return r;
 }
+
 function h(e, t) {
     let n = (0, a._3)(t);
     return null != n && n.some((t) => t === e);
 }
+
 function m(e, t) {
     let n;
     for (let [r, a] of e)
@@ -46,6 +51,7 @@ function m(e, t) {
         }
     return n;
 }
+
 function g(e, t) {
     if (null == t || null == e) return null;
     for (let n of t) {
@@ -54,6 +60,7 @@ function g(e, t) {
     }
     return null;
 }
+
 function E(e, t) {
     return null == t
         ? []

@@ -1,4 +1,6 @@
-n.d(t, { r: () => u });
+n.d(t, {
+    r: () => u,
+});
 var r = n(311907),
     l = n(380335),
     i = n(74114),
@@ -6,6 +8,7 @@ var r = n(311907),
     s = n(994500),
     o = n(287809),
     c = n(652215);
+
 function u(e) {
     let t = e.isDM() && !e.isSystemDM() && !e.rawRecipients.some((e) => e.bot),
         n = t ? e.getRecipientId() : null,

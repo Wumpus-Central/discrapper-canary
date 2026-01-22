@@ -1,7 +1,10 @@
-n.d(t, { w: () => s });
+n.d(t, {
+    w: () => s,
+});
 var r = n(627968);
 n(64700);
 var i = n(512950);
+
 function a(e) {
     switch (e) {
         case "critical":
@@ -14,6 +17,7 @@ function a(e) {
             return i.Y.POSITIVE;
     }
 }
+
 function s(e) {
     let { type: t, hidden: n, children: s } = e;
     return (0, r.jsx)(i.p, {

@@ -7,7 +7,7 @@ var r = n(627968);
 n(64700);
 var i = n(503698),
     a = n.n(i),
-    s = n(432022),
+    s = n(108531),
     o = n(435371),
     l = n(397927),
     c = n(688810),
@@ -21,6 +21,7 @@ var i = n(503698),
     g = n(985018),
     E = n(333354),
     b = n(195450);
+
 function y(e, t, n) {
     return (
         t in e
@@ -34,6 +35,7 @@ function y(e, t, n) {
         e
     );
 }
+
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -50,6 +52,7 @@ function O(e) {
     }
     return e;
 }
+
 function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -62,6 +65,7 @@ function A(e, t) {
     }
     return n;
 }
+
 function v(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -73,6 +77,7 @@ function v(e, t) {
         e
     );
 }
+
 function S(e) {
     switch (e) {
         case h.TVA.TIER_3:
@@ -113,8 +118,12 @@ let I = {
             k = L && C === i.premiumTier,
             U = i.premiumTier < C && R >= D,
             { scaleFactor: G } = (0, l.zhh)({
-                from: { scaleFactor: 0 },
-                to: { scaleFactor: N >= C || (y && N + 1 === C) || (y && -1 === N && C === h.TVA.NONE) ? 1 : 0 },
+                from: {
+                    scaleFactor: 0,
+                },
+                to: {
+                    scaleFactor: N >= C || (y && N + 1 === C) || (y && -1 === N && C === h.TVA.NONE) ? 1 : 0,
+                },
                 config: {
                     tension: 360,
                     friction: 12,
@@ -124,7 +133,9 @@ let I = {
                 children: [
                     (0, r.jsx)(s.animated.div, {
                         className: b.sO,
-                        style: { transform: G.to((e) => "translate(-50%, -50%) scale(".concat(e, ")")) },
+                        style: {
+                            transform: G.to((e) => "translate(-50%, -50%) scale(".concat(e, ")")),
+                        },
                     }),
                     C !== h.TVA.NONE
                         ? U
@@ -141,6 +152,7 @@ let I = {
                         : void 0,
                 ],
             });
+
         function F() {
             !L ||
                 U ||
@@ -158,14 +170,28 @@ let I = {
         }
         let B = !j && P.fractionalState === m.xc.NONE,
             H = B ? l.DUT : "div",
-            Y = B ? { onClick: F } : {},
+            Y = B
+                ? {
+                      onClick: F,
+                  }
+                : {},
             W = j
-                ? g.intl.formatToPlainString(g.t["1o48ki"], { tierName: (0, f.gb)(C, { useLevels: !1 }) })
+                ? g.intl.formatToPlainString(g.t["1o48ki"], {
+                      tierName: (0, f.gb)(C, {
+                          useLevels: !1,
+                      }),
+                  })
                 : U
-                  ? g.intl.formatToPlainString(E.default["9CtPjt"], { perk: (0, f.gb)(C, { useLevels: !1 }) })
+                  ? g.intl.formatToPlainString(E.default["9CtPjt"], {
+                        perk: (0, f.gb)(C, {
+                            useLevels: !1,
+                        }),
+                    })
                   : g.intl.formatToPlainString(g.t.r6NN6Q, {
                         numBoostsRequired: x,
-                        tierName: (0, f.gb)(C, { useLevels: !1 }),
+                        tierName: (0, f.gb)(C, {
+                            useLevels: !1,
+                        }),
                     }),
             K = (0, r.jsxs)(
                 H,
@@ -178,13 +204,18 @@ let I = {
                                 [b.uZ]: M,
                                 [b.Ue]: k,
                             }),
-                            style: { left: "".concat(100 * I[C], "%") },
+                            style: {
+                                left: "".concat(100 * I[C], "%"),
+                            },
                         },
                         Y,
                     ),
                     {
                         children: [
-                            !j && (0, r.jsx)("div", { className: b.cj }),
+                            !j &&
+                                (0, r.jsx)("div", {
+                                    className: b.cj,
+                                }),
                             j && C === h.TVA.TIER_3
                                 ? (0, r.jsx)(_.H, {
                                       confettiTriggerRef: n,

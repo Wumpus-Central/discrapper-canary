@@ -17,9 +17,11 @@ var r = n(7584),
     o = n(652215),
     l = n(406535),
     c = n(985018);
+
 function u(e) {
     return null == e.id ? r.Ay.convertSurrogateToName(e.name) : ":".concat(e.name, ":");
 }
+
 function d(e, t, n, r) {
     var i, a, s;
     let o;
@@ -32,6 +34,7 @@ function d(e, t, n, r) {
         })
     );
 }
+
 function f(e) {
     var t, n, r;
     return {
@@ -40,6 +43,7 @@ function f(e) {
         animated: !!e.animated,
     };
 }
+
 function p(e, t) {
     if (null != t.id) {
         let n = null != e.id ? "".concat(e.id) : e.id;
@@ -47,6 +51,7 @@ function p(e, t) {
     }
     return null == e.id && t.name === e.name;
 }
+
 function _(e) {
     return e.isThread()
         ? o.JJy.THREAD_TEXT_AREA
@@ -56,11 +61,13 @@ function _(e) {
             ? o.JJy.TEXT_IN_VOICE
             : o.JJy.CHANNEL_TEXT_AREA;
 }
+
 function h(e) {
     let { userId: t, optimistic: n } = e,
         r = a.default.getId() === t;
     return !n || !!r;
 }
+
 function m(e, t) {
     i.Zp.updateSetting(e),
         s.default.track(o.HAw.NOTIFICATION_SETTINGS_UPDATED, {

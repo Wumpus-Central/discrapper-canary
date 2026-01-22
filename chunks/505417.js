@@ -1,5 +1,8 @@
-n.d(t, { l: () => i });
+n.d(t, {
+    l: () => i,
+});
 var r = n(985018);
+
 function i(e) {
     let { isVoiceChannel: t, isHubGuild: n, isOwnInvite: i, isGuest: a, isStage: s, isStream: o } = e;
     if (t)

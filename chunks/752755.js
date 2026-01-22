@@ -5,6 +5,7 @@ n.d(t, {
 var r,
     i = n(311907),
     a = n(73153);
+
 function s(e, t, n) {
     return (
         t in e
@@ -18,6 +19,7 @@ function s(e, t, n) {
         e
     );
 }
+
 function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,6 +36,7 @@ function o(e) {
     }
     return e;
 }
+
 function l(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -46,6 +49,7 @@ function l(e, t) {
     }
     return n;
 }
+
 function c(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -68,21 +72,29 @@ var u = (function (e) {
 })({});
 let d = {},
     f = {};
+
 function p() {
     (d = {}), (f = {});
 }
+
 function _(e) {
     let { threadId: t } = e;
     f[t] = 1;
 }
+
 function h(e) {
     let { threadId: t, mediaPostEmbed: n } = e;
-    (d = c(o({}, d), { [t]: n })), (f[t] = 2);
+    (d = c(o({}, d), {
+        [t]: n,
+    })),
+        (f[t] = 2);
 }
+
 function m(e) {
     let { threadId: t } = e;
     f[t] = 3;
 }
+
 function g(e) {
     e.isSwitchingAccount || ((d = {}), (f = {}));
 }

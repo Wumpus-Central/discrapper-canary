@@ -1,11 +1,14 @@
 let r, i;
-n.d(t, { A: () => O });
+n.d(t, {
+    A: () => O,
+});
 var a,
     s = n(311907),
     o = n(506774),
     l = n(73153),
     c = n(734057),
     u = n(71393);
+
 function d(e, t, n) {
     return (
         t in e
@@ -23,12 +26,15 @@ let f = "hideSuppressWarning",
     p = !1,
     _ = !0,
     h = !1;
+
 function m(e) {
     (r = e.sessionId), (p = !1);
 }
+
 function g() {
     (r = null), (i = null), (_ = !0);
 }
+
 function E(e) {
     let { voiceStates: t } = e;
     return t.reduce(
@@ -42,6 +48,7 @@ function E(e) {
         !1,
     );
 }
+
 function b(e) {
     let { forever: t } = e;
     (_ = !0), t && ((h = !0), o.w.set(f, h));

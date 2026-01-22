@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var i = n(308368),
     r = n(684013),
     l = n(334738),
@@ -8,6 +10,7 @@ var i = n(308368),
     c = n(672396),
     u = n(652215),
     d = n(985018);
+
 function p(e, t, n, p) {
     if (a.A.isNotificationDisabled(c.KS.ActivityInvite)) return null;
     let h = t.username,

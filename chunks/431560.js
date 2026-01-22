@@ -11,7 +11,9 @@ function r(e, t, n) {
         e
     );
 }
-n.d(t, { Z: () => i });
+n.d(t, {
+    Z: () => i,
+});
 class i {
     setTtl(e) {
         this.ttlMs = e;

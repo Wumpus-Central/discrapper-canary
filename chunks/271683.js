@@ -1,7 +1,10 @@
-n.d(t, { A: () => l });
+n.d(t, {
+    A: () => l,
+});
 var r = n(627968),
     i = n(397927),
     a = n(136523);
+
 function s(e, t, n) {
     return (
         t in e
@@ -15,6 +18,7 @@ function s(e, t, n) {
         e
     );
 }
+
 function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -31,6 +35,7 @@ function o(e) {
     }
     return e;
 }
+
 function l(e) {
     let { channel: t, sourceAnalyticsLocations: s } = e;
     (0, i.mMO)(
@@ -48,6 +53,8 @@ function l(e) {
                     ),
                 );
         },
-        { modalKey: a.m },
+        {
+            modalKey: a.m,
+        },
     );
 }

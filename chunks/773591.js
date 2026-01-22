@@ -1,4 +1,7 @@
-l.d(t, { A: () => R }), l(896048);
+l.d(t, {
+    A: () => R,
+}),
+    l(896048);
 var n = l(627968),
     r = l(64700),
     s = l(575593),
@@ -29,6 +32,7 @@ var n = l(627968),
     I = l(632728),
     N = l(368146),
     k = l(536003);
+
 function R(e) {
     var t;
     let { isFetchingCategories: l, scrollerRef: R, tab: P } = e,
@@ -96,7 +100,9 @@ function R(e) {
         : (0, n.jsxs)(n.Fragment, {
               children: [
                   (0, n.jsx)("div", {
-                      style: { backgroundImage: "url(".concat(W, ")") },
+                      style: {
+                          backgroundImage: "url(".concat(W, ")"),
+                      },
                       className: O.cI,
                       children: (0, n.jsx)(o.Heading, {
                           variant: "heading-xxl/extrabold",
@@ -111,7 +117,9 @@ function R(e) {
                               : (0, n.jsx)(
                                     f.R9,
                                     {
-                                        newValue: { tilePosition: t },
+                                        newValue: {
+                                            tilePosition: t,
+                                        },
                                         children: (0, n.jsx)(
                                             E.A,
                                             {
@@ -145,7 +153,11 @@ function R(e) {
                                           page_type: P,
                                       }),
                                           U(e),
-                                          null == R || null == (t = R.current) || t.scrollToTop({ animate: !0 });
+                                          null == R ||
+                                              null == (t = R.current) ||
+                                              t.scrollToTop({
+                                                  animate: !0,
+                                              });
                                   },
                                   disablePaginationGap: !0,
                               }),

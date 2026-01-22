@@ -1,4 +1,7 @@
-n.d(t, { A: () => G }), n(896048);
+n.d(t, {
+    A: () => G,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -36,7 +39,11 @@ var r = n(627968),
     k = n(288894);
 let U = (e) => {
         let { inOfferExperience: t } = e;
-        return t ? (0, r.jsx)(C.A, { lifted: t }) : null;
+        return t
+            ? (0, r.jsx)(C.A, {
+                  lifted: t,
+              })
+            : null;
     },
     G = () => {
         var e, t;
@@ -98,7 +105,9 @@ let U = (e) => {
                                   subscriptionTier: D.pe.TIER_2,
                                   className: j.Ph,
                                   hasActivePromotion: ei,
-                                  textOptions: { textClassName: j.Ac },
+                                  textOptions: {
+                                      textClassName: j.Ac,
+                                  },
                                   buttonShineClassName: j.Qr,
                               }),
                 }),
@@ -110,11 +119,17 @@ let U = (e) => {
             children: [
                 (0, r.jsx)(T.A, {
                     premiumSubscription: Z,
-                    className: s()(M.R3, { [M.aZ]: en }),
+                    className: s()(M.R3, {
+                        [M.aZ]: en,
+                    }),
                 }),
-                (0, r.jsx)(U, { inOfferExperience: en }),
+                (0, r.jsx)(U, {
+                    inOfferExperience: en,
+                }),
                 (0, r.jsxs)("div", {
-                    className: s()({ [M.V1]: !en }),
+                    className: s()({
+                        [M.V1]: !en,
+                    }),
                     children: [
                         null != ea &&
                             (0, r.jsx)(S.c, {
@@ -141,7 +156,9 @@ let U = (e) => {
                     ],
                 }),
                 eo,
-                (0, r.jsx)(R.A, { className: M.B_ }),
+                (0, r.jsx)(R.A, {
+                    className: M.B_,
+                }),
                 (0, r.jsx)("div", {
                     className: M.aC,
                     children: (0, r.jsx)(P.A, {
@@ -149,7 +166,9 @@ let U = (e) => {
                         hideCTAs: !0,
                     }),
                 }),
-                (0, r.jsx)("div", { className: M.hz }),
+                (0, r.jsx)("div", {
+                    className: M.hz,
+                }),
                 (0, r.jsx)(w.A, {
                     isVisible: z && q,
                     subscriptionTier: J,
@@ -161,7 +180,9 @@ let U = (e) => {
                     onChange: (e) => {
                         e &&
                             !W &&
-                            (g.default.track(x.HAw.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: es }),
+                            (g.default.track(x.HAw.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+                                location_stack: es,
+                            }),
                             K(!0));
                     },
                     children: (0, r.jsx)("div", {

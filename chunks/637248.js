@@ -30,9 +30,11 @@ var l = n(64700),
     S = n(281405),
     p = n(790782),
     b = n(985018);
+
 function G(e, t) {
     e.index = t;
 }
+
 function R(e, t, n, r) {
     r = r.toLowerCase();
     let i = (0, _.d)(e),
@@ -61,6 +63,7 @@ function R(e, t, n, r) {
         );
     }, [t, n, s, r]);
 }
+
 function D(e) {
     let t = e.getSections(!1);
     if (t[g.PU] > 0)
@@ -80,6 +83,7 @@ function D(e) {
         }
     return null;
 }
+
 function L(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
     (0, A.y)(e, t),
@@ -92,6 +96,7 @@ function L(e, t) {
         ),
         null != n && (0, T.pX)(N.BVt.CHANNEL(e, n));
 }
+
 function x(e, t, n, l) {
     let r = (0, d.JZ)(c.M.CHANNEL_BROWSER_NUX),
         a = (0, o.cf)([f.A], () => {
@@ -123,6 +128,7 @@ function x(e, t, n, l) {
         i
     );
 }
+
 function C(e) {
     var t, n;
     let l = (0, o.bG)([h.A], () => h.A.getCategories(e)),
@@ -132,6 +138,7 @@ function C(e) {
     let i = l[null != (t = null == (n = a.channel) ? void 0 : n.id) ? t : "null"];
     return null == i ? 0 : 0 === i.length ? a.index + 2 - r : i[i.length - 1].index + 2 - r;
 }
+
 function M(e) {
     var t;
     return b.intl.formatToPlainString(b.t["8N0BHR"], {

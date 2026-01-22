@@ -1,4 +1,6 @@
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var r = n(627968),
     l = n(64700),
     i = n(158954),
@@ -20,6 +22,7 @@ var r = n(627968),
     j = n(985018),
     v = n(226632),
     x = n(724693);
+
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -45,6 +48,7 @@ function E(e) {
     }
     return e;
 }
+
 function _(e) {
     let { user: t, channel: n, onHide: _ } = e,
         C = (0, b.Ay)(t.id),
@@ -86,7 +90,9 @@ function _(e) {
                                     (0, r.jsxs)("div", {
                                         className: v.N1,
                                         children: [
-                                            (0, r.jsx)(g.A, { user: t }),
+                                            (0, r.jsx)(g.A, {
+                                                user: t,
+                                            }),
                                             (0, r.jsx)(s.Heading, {
                                                 variant: "heading-lg/bold",
                                                 children: j.intl.string(j.t.b33pLD),

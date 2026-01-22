@@ -23,6 +23,7 @@ var s = (function (e) {
         e
     );
 })({});
+
 function o(e) {
     switch (e) {
         case "News Nudge":

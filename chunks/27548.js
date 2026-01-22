@@ -1,7 +1,11 @@
-n.d(t, { qA: () => s }), n(734057);
+n.d(t, {
+    qA: () => s,
+}),
+    n(734057);
 var r = n(498642),
     i = n(652215);
-let a = 10000;
+let a = 1e4;
+
 function s(e) {
     var t;
     let n = null != (t = r.A.getMemberCount(null == e ? void 0 : e.guild_id)) ? t : 0;

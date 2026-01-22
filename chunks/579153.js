@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968),
     l = n(64700),
     i = n(397927),
@@ -23,7 +25,9 @@ let h = (e) => {
                     onClose: l,
                     channel: t,
                     remoteMode: n,
-                    onInteraction: (0, c.s)("MoreSettingsMenu", h, { entrypoint: f.GK.THREE_DOT }),
+                    onInteraction: (0, c.s)("MoreSettingsMenu", h, {
+                        entrypoint: f.GK.THREE_DOT,
+                    }),
                 }),
             });
         },

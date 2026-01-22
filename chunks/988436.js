@@ -26,6 +26,7 @@ var a = n(627968),
     A = n(818348),
     C = n(985018),
     S = n(868566);
+
 function O(e) {
     var t;
     let { quest: n, errorHints: i, transitionState: y, onClose: O, sourceQuestContent: N } = e,
@@ -68,7 +69,9 @@ function O(e) {
                 onClick: () =>
                     void (O(),
                     (0, v.b6)(
-                        { quest: n },
+                        {
+                            quest: n,
+                        },
                         {
                             content: x.uF.CONNECTIONS_MODAL,
                             ctaContent: h.Cy.VIEW_CONSOLE_CONNECTIONS_LINK,
@@ -95,7 +98,9 @@ function O(e) {
                             children: C.intl.string(C.t["+/hZM/"]),
                         }),
                         (0, a.jsxs)(u.DUT, {
-                            className: r()(S.Tm, { [S.r9]: F }),
+                            className: r()(S.Tm, {
+                                [S.r9]: F,
+                            }),
                             onClick: G,
                             children: [
                                 D.render(),
@@ -113,11 +118,15 @@ function O(e) {
                     className: S.ei,
                     children: [
                         (0, a.jsx)(E, {
-                            icon: (0, a.jsx)(u.kN9, { size: "sm" }),
+                            icon: (0, a.jsx)(u.kN9, {
+                                size: "sm",
+                            }),
                             text: C.intl.string(C.t.br3uIi),
                         }),
                         (0, a.jsx)(E, {
-                            icon: (0, a.jsx)(u._xR, { size: "sm" }),
+                            icon: (0, a.jsx)(u._xR, {
+                                size: "sm",
+                            }),
                             text: C.intl.string(C.t.XF4wuA),
                             errors: L ? void 0 : M.map((e) => e.message),
                             gameTile: L
@@ -151,6 +160,7 @@ function O(e) {
         }),
     });
 }
+
 function E(e) {
     let { icon: t, text: n, errors: l = [], gameTile: i } = e,
         s = l.length > 0,
@@ -159,7 +169,9 @@ function E(e) {
         className: S.dJ,
         children: [
             (0, a.jsxs)("div", {
-                className: r()(S.w_, { [S.qu]: s }),
+                className: r()(S.w_, {
+                    [S.qu]: s,
+                }),
                 children: [
                     (0, a.jsxs)("div", {
                         className: S.d3,
@@ -215,6 +227,7 @@ function E(e) {
         ],
     });
 }
+
 function N(e) {
     (0, u.mMO)(async () => {
         let { default: t } = await Promise.resolve().then(n.bind(n, 988436));

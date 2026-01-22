@@ -21,4 +21,7 @@ var r =
         function (e, t) {
             for (var n in e) "default" === n || Object.prototype.hasOwnProperty.call(t, n) || r(t, e, n);
         };
-Object.defineProperty(t, "__esModule", { value: !0 }), i(n(555923), t);
+Object.defineProperty(t, "__esModule", {
+    value: !0,
+}),
+    i(n(555923), t);

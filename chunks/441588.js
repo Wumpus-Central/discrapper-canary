@@ -1,8 +1,12 @@
-d.r(o), d.d(o, { default: () => s });
+d.r(o),
+    d.d(o, {
+        default: () => s,
+    });
 var e = d(627968);
 d(64700);
 var l = d(397927),
     r = d(772958);
+
 function s() {
     return (
         (0, r.ur)(document.body),

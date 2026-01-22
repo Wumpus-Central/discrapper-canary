@@ -78,7 +78,9 @@ async function d(e, t) {
     try {
         let n = await r.Bo.patch({
             url: l.Rsh.SCHEDULED_MESSAGE(e),
-            body: { scheduled_timestamp: t },
+            body: {
+                scheduled_timestamp: t,
+            },
             rejectWithError: !0,
         });
         if (!n.ok) throw Error("Failed to update scheduled message");
@@ -142,7 +144,9 @@ async function p() {
     return e.body.map(o.Lg);
 }
 async function _() {
-    i.h.dispatch({ type: "FETCH_SCHEDULED_MESSAGES" });
+    i.h.dispatch({
+        type: "FETCH_SCHEDULED_MESSAGES",
+    });
     try {
         let e = await p();
         o.dx.info("Fetched scheduled messages", e),
@@ -158,6 +162,7 @@ async function _() {
             });
     }
 }
+
 function h(e) {
     let { channelId: t, scheduledTimestamp: n } = e;
     i.h.dispatch({
@@ -166,6 +171,7 @@ function h(e) {
         scheduledTimestamp: n,
     });
 }
+
 function m(e) {
     i.h.dispatch({
         type: "DELETE_PENDING_SCHEDULED_MESSAGE",

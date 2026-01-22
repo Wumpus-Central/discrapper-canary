@@ -25,6 +25,7 @@ var r = n(64700),
     O = n(615807),
     A = n(652215),
     v = n(985018);
+
 function S(e, t, n) {
     return (
         t in e
@@ -38,6 +39,7 @@ function S(e, t, n) {
         e
     );
 }
+
 function I(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -77,12 +79,18 @@ let T = (function (e, t) {
             }
             return e;
         })({}, h.A.RULES.commandMention),
-        { parse: (e, t, n) => ({ content: h.A.RULES.commandMention.parse(e, t, n).content }) },
+        {
+            parse: (e, t, n) => ({
+                content: h.A.RULES.commandMention.parse(e, t, n).content,
+            }),
+        },
     ),
     C = a().pick(
         (0, m.A)([
             h.A.RULES,
-            { commandMention: T },
+            {
+                commandMention: T,
+            },
             (0, _.A)({
                 enableBuildOverrides: !1,
                 enableEmojiClick: !1,
@@ -106,6 +114,7 @@ let T = (function (e, t) {
         ],
     ),
     N = o.aV(C);
+
 function R(e) {
     let {
             context: t,
@@ -174,6 +183,7 @@ function R(e) {
         }
     );
 }
+
 function w(e, t) {
     let n = b.A.entrypoint(),
         a = r.useMemo(
@@ -197,6 +207,9 @@ function w(e, t) {
         null != e && a(e, n);
     }, [e, t, n, a]);
 }
+
 function P(e) {
-    g._.dispatchToLastSubscribed(A.jej.OPEN_APP_LAUNCHER, { applicationId: e });
+    g._.dispatchToLastSubscribed(A.jej.OPEN_APP_LAUNCHER, {
+        applicationId: e,
+    });
 }

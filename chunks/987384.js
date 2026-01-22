@@ -98,6 +98,7 @@ async function h(e) {
             backgroundOption: e,
         });
 }
+
 function m(e) {
     s.A.isSupported() &&
         i.h.dispatch({
@@ -105,9 +106,16 @@ function m(e) {
             settings: e,
         });
 }
+
 function g() {
-    s.A.isSupported() && i.h.dispatch({ type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_START" });
+    s.A.isSupported() &&
+        i.h.dispatch({
+            type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_START",
+        });
 }
+
 function E() {
-    i.h.dispatch({ type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_ERROR" });
+    i.h.dispatch({
+        type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_ERROR",
+    });
 }

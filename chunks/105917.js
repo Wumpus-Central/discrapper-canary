@@ -15,6 +15,7 @@ let r = (e) => {
         periodEndDate: null == r ? void 0 : r.period_ending_at,
     };
 };
+
 function i(e) {
     let t,
         n,
@@ -29,6 +30,7 @@ function i(e) {
         }
     );
 }
+
 function l(e, t) {
     let n, r, i, l;
     return (

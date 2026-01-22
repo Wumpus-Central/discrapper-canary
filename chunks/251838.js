@@ -1,4 +1,7 @@
-n.d(t, { y: () => u }), n(896048);
+n.d(t, {
+    y: () => u,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(357758),
@@ -7,6 +10,7 @@ var r = n(627968),
     c = n(997509),
     o = n(555337),
     d = n(927573);
+
 function u() {
     let { guild: e, originalGuild: t, submitting: n, errors: u } = (0, s.cf)([o.A], () => o.A.getProps()),
         f = i.useMemo(() => (0, d.$s)(u), [u]),

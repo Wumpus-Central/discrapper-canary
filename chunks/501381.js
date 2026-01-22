@@ -1,4 +1,6 @@
-n.d(t, { o: () => d });
+n.d(t, {
+    o: () => d,
+});
 var r = n(627968),
     i = n(64700),
     l = n(158954),
@@ -6,6 +8,7 @@ var r = n(627968),
     a = n(415951),
     c = n(985018),
     o = n(796333);
+
 function d(e) {
     let { guildId: t } = e,
         n = i.useCallback(() => {

@@ -52,7 +52,7 @@
             return e.replace(/،/g, ",");
         },
         postformat: function (e) {
-            return e.replace(/,/g, "\u060C");
+            return e.replace(/,/g, "،");
         },
         week: {
             dow: 7,

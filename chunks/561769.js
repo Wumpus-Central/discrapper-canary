@@ -22,10 +22,14 @@ var r = n(64700),
     p = n(940622),
     _ = n(758836),
     h = n(652215);
-let m = r.createContext({ flattenProductVariants: !1 });
+let m = r.createContext({
+    flattenProductVariants: !1,
+});
+
 function g() {
     return r.useContext(m).flattenProductVariants;
 }
+
 function E() {
     return r.useContext(m).rentalDuration;
 }
@@ -68,7 +72,9 @@ let O = (e, t, n) => (r) => {
         return r.useCallback(
             (t) => (r) => {
                 if (null == h) return;
-                let a = (0, f.Ak)({ product: e });
+                let a = (0, f.Ak)({
+                    product: e,
+                });
                 (m.current = r.currentTarget),
                     null == n || n(),
                     (0, d.t)({

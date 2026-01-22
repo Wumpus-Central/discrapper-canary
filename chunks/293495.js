@@ -12,9 +12,11 @@ var r = n(73153),
     u = n(91242),
     d = n(652215);
 let p = null;
+
 function f(e) {
     return "framepip:".concat(e.applicationId);
 }
+
 function h() {
     let e = u.A.getConnectedFrame();
     if (null == e) {
@@ -29,6 +31,7 @@ function h() {
     }
     return r.h.wait(() => i.ho(t, d.o1q.FRAME, {})), void (p = t);
 }
+
 function A() {
     let e;
     if (

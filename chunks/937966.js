@@ -1,4 +1,6 @@
-i.d(e, { _: () => E });
+i.d(e, {
+    _: () => E,
+});
 var n = i(311907),
     l = i(290595),
     s = i(171316),
@@ -12,7 +14,9 @@ var n = i(311907),
 let E = (0, r.zD)(o.X.DATA_USAGE_PERSONALIZATION_SETTING, {
     useTitle: () => S.intl.string(S.t.MNKzyg),
     useSubtitle: () =>
-        S.intl.format(S.t["eQL/Mr"], { helpdeskArticle: a.A.getArticleURL(A.MVz.DATA_USED_FOR_RECOMMENDED) }),
+        S.intl.format(S.t["eQL/Mr"], {
+            helpdeskArticle: a.A.getArticleURL(A.MVz.DATA_USED_FOR_RECOMMENDED),
+        }),
     useValue: function () {
         return (0, n.bG)([u.A], () => u.A.hasConsented(A.YAq.PERSONALIZATION));
     },

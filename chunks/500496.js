@@ -1,4 +1,7 @@
-n.d(t, { A: () => g }), n(938796);
+n.d(t, {
+    A: () => g,
+}),
+    n(938796);
 var r = n(665260),
     i = n(173618),
     a = n(274372),
@@ -12,6 +15,7 @@ var r = n(665260),
     p = n(430452),
     _ = n(873985),
     h = n(652215);
+
 function m(e, t, n) {
     return (
         t in e
@@ -45,8 +49,12 @@ class g extends i.A {
             g = (0, o.Ao)() && (null == (n = l.Ay.getVisibleGame()) ? void 0 : n.windowHandle) != null;
         i = (0, r.lA)(i, h.Ajs.CLIPS_ENABLED, m || g);
         let { enableViewerClipping: E } = c.A.getCurrentConfig(
-                { location: "computeVoiceFlags" },
-                { autoTrackExposure: !1 },
+                {
+                    location: "computeVoiceFlags",
+                },
+                {
+                    autoTrackExposure: !1,
+                },
             ),
             b = E && _ && a.A.getSettings().viewerClipsEnabled;
         return (0, r.lA)(i, h.Ajs.ALLOW_ANY_VIEWER_CLIPS, b);

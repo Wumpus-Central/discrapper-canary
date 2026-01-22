@@ -1,4 +1,7 @@
-n.d(t, { A: () => w }), n(896048);
+n.d(t, {
+    A: () => w,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -26,6 +29,7 @@ var r = n(627968),
     C = n(999784),
     N = n(652215),
     R = n(789129);
+
 function w(e) {
     let {
             premiumSubscription: t,
@@ -193,7 +197,9 @@ function w(e) {
                   eU
                       ? (0, r.jsx)("div", {
                             className: R.a,
-                            children: (0, r.jsx)(h.A, { onClick: a }),
+                            children: (0, r.jsx)(h.A, {
+                                onClick: a,
+                            }),
                         })
                       : null,
               ],

@@ -1,4 +1,8 @@
-n.d(t, { A: () => N }), n(896048), n(638769);
+n.d(t, {
+    A: () => N,
+}),
+    n(896048),
+    n(638769);
 var a = n(627968),
     l = n(64700),
     i = n(503698),
@@ -75,7 +79,9 @@ let O = [
                                     icon: p.Uy2,
                                     tooltip: t,
                                 }),
-                                (0, a.jsx)(f.Ay.Title, { children: t }),
+                                (0, a.jsx)(f.Ay.Title, {
+                                    children: t,
+                                }),
                             ],
                         }),
                         (0, a.jsxs)(v.OA, {
@@ -92,35 +98,51 @@ let O = [
                                 "guild" === n.type &&
                                     (0, a.jsx)(v.mA, {
                                         name: "Guild ID",
-                                        children: (0, a.jsx)("code", { children: n.guildId }),
+                                        children: (0, a.jsx)("code", {
+                                            children: n.guildId,
+                                        }),
                                     }),
                                 (0, a.jsx)(v.mA, {
                                     name: "Bucket",
-                                    children: (0, a.jsx)("code", { children: n.bucket }),
+                                    children: (0, a.jsx)("code", {
+                                        children: n.bucket,
+                                    }),
                                 }),
                                 (0, a.jsx)(v.mA, {
                                     name: "Revision",
-                                    children: (0, a.jsx)("code", { children: n.revision }),
+                                    children: (0, a.jsx)("code", {
+                                        children: n.revision,
+                                    }),
                                 }),
                                 (0, a.jsx)(v.mA, {
                                     name: "Override",
-                                    children: (0, a.jsx)(v.HY, { value: n.override }),
+                                    children: (0, a.jsx)(v.HY, {
+                                        value: n.override,
+                                    }),
                                 }),
                                 (0, a.jsx)(v.mA, {
                                     name: "Exposure type",
-                                    children: (0, a.jsx)("code", { children: l }),
+                                    children: (0, a.jsx)("code", {
+                                        children: l,
+                                    }),
                                 }),
                                 (0, a.jsx)(v.mA, {
                                     name: "Excluded",
-                                    children: (0, a.jsx)(v.HY, { value: i }),
+                                    children: (0, a.jsx)(v.HY, {
+                                        value: i,
+                                    }),
                                 }),
                                 (0, a.jsx)(v.mA, {
                                     name: "Previously tracked",
-                                    children: (0, a.jsx)(v.HY, { value: c }),
+                                    children: (0, a.jsx)(v.HY, {
+                                        value: c,
+                                    }),
                                 }),
                                 (0, a.jsx)(v.mA, {
                                     name: "Location",
-                                    children: (0, a.jsx)("code", { children: o }),
+                                    children: (0, a.jsx)("code", {
+                                        children: o,
+                                    }),
                                 }),
                             ],
                         }),
@@ -129,6 +151,7 @@ let O = [
             },
         },
     ];
+
 function N() {
     let [e, t] = l.useState(""),
         n = l.useRef(null),
@@ -142,7 +165,12 @@ function N() {
         ),
         [c, d] = l.useState(void 0),
         f = s.find((e) => e.key === c),
-        { TabBar: x, renderSelectedTab: v } = (0, _.Ay)({ tabs: E }, []),
+        { TabBar: x, renderSelectedTab: v } = (0, _.Ay)(
+            {
+                tabs: E,
+            },
+            [],
+        ),
         N = (0, u.bG)([b.A], () => b.A.trackTriggers),
         T = l.useCallback((e) => {
             h.h.dispatch({
@@ -195,7 +223,12 @@ function N() {
                     className: C.rf,
                     minHeight: 100,
                     initialHeight: null != n.current ? n.current.clientHeight / 2 : 300,
-                    children: [(0, a.jsx)(x, {}), v({ loggedTrigger: f })],
+                    children: [
+                        (0, a.jsx)(x, {}),
+                        v({
+                            loggedTrigger: f,
+                        }),
+                    ],
                 }),
         ],
     });

@@ -13,6 +13,7 @@ let c = "data-grid-item-id",
     o = "data-grid-section",
     d = "data-grid-prev-section-boundary",
     u = new Set([i.D$.UP, i.D$.DOWN, i.D$.LEFT, i.D$.RIGHT]);
+
 function m(e) {
     let { section: t, column: n, row: l } = e,
         r = "[".concat(o, '="').concat(t, '"]'),
@@ -20,6 +21,7 @@ function m(e) {
         i = "[".concat("aria-rowindex", '="').concat(l, '"]');
     return "".concat(r).concat(a).concat(i);
 }
+
 function h(e) {
     let { id: t, isEnabled: n, setFocus: l } = e,
         o = r.useRef(null),
@@ -66,7 +68,9 @@ function h(e) {
                     e.addEventListener("focusin", n),
                     e.addEventListener("focusout", l),
                     e.addEventListener("focus", r),
-                    e.addEventListener("scroll", a, { passive: !0 }),
+                    e.addEventListener("scroll", a, {
+                        passive: !0,
+                    }),
                     () => {
                         e.removeEventListener("focusin", n),
                             e.removeEventListener("focusout", l),
@@ -74,9 +78,11 @@ function h(e) {
                             e.removeEventListener("scroll", a);
                     }
                 );
+
             function n() {
                 y(!0);
             }
+
             function l(e) {
                 e.currentTarget.contains(e.relatedTarget) ||
                     (y(!1),
@@ -85,10 +91,12 @@ function h(e) {
                         null !== e && null == x((0, s.Mz)(e, c)) && p((0, s.Mz)(t, "data-grid-id"));
                     }));
             }
+
             function r() {
                 let e = f.current;
                 if (A.current || null == e) return;
             }
+
             function a() {
                 h.current = !0;
             }
@@ -235,6 +243,7 @@ let f = {
         setFocus() {},
     }),
     x = r.createContext(f);
+
 function b(e) {
     let { id: t, section: n, row: l, column: i, boundaries: u } = e,
         [m, h] = r.useState(0 === l && 0 === i ? 0 : -1),
@@ -260,6 +269,7 @@ function b(e) {
         }
     );
 }
+
 function p(e) {
     let { children: t, navigator: n } = e,
         {

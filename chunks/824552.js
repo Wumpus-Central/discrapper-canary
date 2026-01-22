@@ -1,10 +1,14 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(562465),
     i = n(73153),
     a = n(652215);
 let s = {
     fetch() {
-        i.h.dispatch({ type: "USER_AUTHORIZED_APPS_REQUEST" }),
+        i.h.dispatch({
+            type: "USER_AUTHORIZED_APPS_REQUEST",
+        }),
             r.Bo.get({
                 url: a.Rsh.OAUTH2_TOKENS,
                 oldFormErrors: !0,

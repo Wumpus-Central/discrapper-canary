@@ -9,9 +9,11 @@ var r = n(954055),
     d = "'",
     f = "/",
     p = a.isBrowser("Firefox");
+
 function _(e) {
     return p && (e == d || e == f);
 }
+
 function h(e, t, n, a, s) {
     var o = r.replaceText(e.getCurrentContent(), e.getSelection(), t, n, a);
     return i.push(e, o, "insert-characters", s);
@@ -59,10 +61,16 @@ e.exports = function (e, t) {
                 });
         }
         if ((m || (m = _(r)), m || (m = c(p.getDirectionMap()).get(f) !== c(n.getDirectionMap()).get(f)), m)) {
-            t.preventDefault(), (p = i.set(p, { forceSelection: !0 })), e.update(p);
+            t.preventDefault(),
+                (p = i.set(p, {
+                    forceSelection: !0,
+                })),
+                e.update(p);
             return;
         }
-        (p = i.set(p, { nativelyRenderedContent: p.getCurrentContent() })),
+        (p = i.set(p, {
+            nativelyRenderedContent: p.getCurrentContent(),
+        })),
             (e._pendingStateFromBeforeInput = p),
             u(function () {
                 void 0 !== e._pendingStateFromBeforeInput &&

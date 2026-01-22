@@ -1,6 +1,9 @@
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 var r = n(803306),
     l = n(622543);
+
 function i(e, t) {
     if (l.A.isFetchingFriends(e)) return;
     let n = l.A.getMutualFriendsCount(e);

@@ -1,1 +1,3 @@
-e.exports = { S: "f9154460616fac11" };
+e.exports = {
+    S: "f9154460616fac11",
+};

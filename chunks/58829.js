@@ -1,4 +1,7 @@
-n.d(e, { default: () => x }), n(228524);
+n.d(e, {
+    default: () => x,
+}),
+    n(228524);
 var t = n(627968);
 n(64700);
 var i = n(284009),
@@ -10,6 +13,7 @@ var i = n(284009),
     o = n(681819),
     u = n(985018),
     p = n(971705);
+
 function f(l) {
     let { onComplete: e, excludedPlatformTypes: n, includedPlatformTypes: i } = l,
         a = (0, o.gn)();
@@ -31,6 +35,7 @@ function f(l) {
             ),
     });
 }
+
 function m(l) {
     let { integrations: e, onCompleteApplication: n } = l;
     if (null == e || null == n) return null;
@@ -94,6 +99,7 @@ function m(l) {
               ],
           });
 }
+
 function x(l) {
     let {
         transitionState: e,

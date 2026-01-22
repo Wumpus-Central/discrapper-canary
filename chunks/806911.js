@@ -1,4 +1,7 @@
-n.d(t, { A: () => ep }), n(896048);
+n.d(t, {
+    A: () => ep,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(284009),
@@ -58,6 +61,7 @@ var r = n(627968),
     ea = n(806931),
     es = n(612071),
     eo = n(976092);
+
 function el(e, t, n) {
     return (
         t in e
@@ -71,6 +75,7 @@ function el(e, t, n) {
         e
     );
 }
+
 function ec(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -87,6 +92,7 @@ function ec(e) {
     }
     return e;
 }
+
 function eu(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -99,6 +105,7 @@ function eu(e, t) {
     }
     return n;
 }
+
 function ed(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -143,11 +150,27 @@ class ef extends i.PureComponent {
     }
     componentDidMount() {
         let { channel: e } = this.props;
-        q.default.track(ei.HAw.VIDEO_LAYOUT_TOGGLED, ec({ video_layout: "pip" }, (0, E.QS)(e.id)));
+        q.default.track(
+            ei.HAw.VIDEO_LAYOUT_TOGGLED,
+            ec(
+                {
+                    video_layout: "pip",
+                },
+                (0, E.QS)(e.id),
+            ),
+        );
     }
     componentWillUnmount() {
         let { channel: e } = this.props;
-        q.default.track(ei.HAw.VIDEO_LAYOUT_TOGGLED, ec({ video_layout: b.A.getLayout(e.id) }, (0, E.QS)(e.id)));
+        q.default.track(
+            ei.HAw.VIDEO_LAYOUT_TOGGLED,
+            ec(
+                {
+                    video_layout: b.A.getLayout(e.id),
+                },
+                (0, E.QS)(e.id),
+            ),
+        );
     }
     renderStreamState() {
         let e = this.activeStreamForSelectedParticipant,
@@ -189,7 +212,9 @@ class ef extends i.PureComponent {
                     width: n,
                 });
             case i:
-                return (0, r.jsx)(et.A, { width: n });
+                return (0, r.jsx)(et.A, {
+                    width: n,
+                });
         }
         return null;
     }
@@ -258,7 +283,9 @@ class ef extends i.PureComponent {
                                 },
                                 e,
                             ),
-                            { children: u },
+                            {
+                                children: u,
+                            },
                         ),
                     );
                 },
@@ -267,7 +294,9 @@ class ef extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            el(this, "state", { screensharePopoutOpen: !1 }),
+            el(this, "state", {
+                screensharePopoutOpen: !1,
+            }),
             el(this, "_ref", i.createRef()),
             el(this, "handleVideo", (e) => {
                 f.A.setVideoEnabled(e);
@@ -376,6 +405,7 @@ class ef extends i.PureComponent {
             });
     }
 }
+
 function ep(e) {
     let { channel: t, width: n } = e,
         i = (0, c.bG)([W.A], () => W.A.getSpeaker(t.id)),

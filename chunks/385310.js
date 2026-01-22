@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968),
     i = n(64700),
     l = n(311907),
@@ -28,7 +30,7 @@ let f = (e) => {
         null == b && null != m && o.A.fetchJoinRequestCooldown(m.id);
     }, [b, m]);
     let O = (null != b ? b : 0) > 0,
-        y = O && null != b ? Math.ceil((1000 * b - Date.now()) / 86400000) : 0;
+        y = O && null != b ? Math.ceil((1e3 * b - Date.now()) / 864e5) : 0;
     return (0, r.jsxs)("div", {
         className: p.EL,
         children: [
@@ -48,7 +50,9 @@ let f = (e) => {
                         color: "text-strong",
                         children:
                             (null == m ? void 0 : m.name) != null
-                                ? d.intl.formatToPlainString(d.t["P+/gzA"], { guildName: m.name })
+                                ? d.intl.formatToPlainString(d.t["P+/gzA"], {
+                                      guildName: m.name,
+                                  })
                                 : d.intl.string(d.t.gBPcuP),
                     }),
                     null != g && "" !== g
@@ -60,7 +64,9 @@ let f = (e) => {
                                       className: p.Wj,
                                       children: d.intl.string(d.t.cf1psW),
                                   }),
-                                  (0, r.jsx)("span", { children: g }),
+                                  (0, r.jsx)("span", {
+                                      children: g,
+                                  }),
                               ],
                           })
                         : null,
@@ -72,8 +78,16 @@ let f = (e) => {
                     _ || E
                         ? (0, r.jsx)(a.m, {
                               asContainer: !0,
-                              text: O ? d.intl.formatToPlainString(d.t.A0f0P7, { days: y }) : null,
-                              "aria-label": O ? d.intl.formatToPlainString(d.t.A0f0P7, { days: y }) : void 0,
+                              text: O
+                                  ? d.intl.formatToPlainString(d.t.A0f0P7, {
+                                        days: y,
+                                    })
+                                  : null,
+                              "aria-label": O
+                                  ? d.intl.formatToPlainString(d.t.A0f0P7, {
+                                        days: y,
+                                    })
+                                  : void 0,
                               children: (0, r.jsx)(s.Button, {
                                   onClick: f,
                                   variant: "secondary",

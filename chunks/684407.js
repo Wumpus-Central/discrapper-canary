@@ -12,10 +12,12 @@ let s = {},
     u = !1,
     E = !1,
     d = !1;
+
 function _(e) {
     let { guild: t } = e.invite;
     return (null == t ? void 0 : t.welcome_screen) != null && ((o[t.id] = t.welcome_screen), !0);
 }
+
 function g(e) {
     let { welcomeScreen: t, guildId: n } = e;
     o[n] = null != t ? t : s;

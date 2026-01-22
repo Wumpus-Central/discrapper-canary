@@ -1,14 +1,18 @@
 function n(e) {
     return e.every((e) => "number" == typeof e && !isNaN(e));
 }
+
 function r(e, t) {
     let n = t.indexOf(".");
     return n > -1 ? r(e[t.slice(0, n)], t.slice(n + 1)) : e[t];
 }
+
 function i(e) {
     return e.every((e) => "number" == typeof e);
 }
-Object.defineProperty(t, "__esModule", { value: !0 }),
+Object.defineProperty(t, "__esModule", {
+    value: !0,
+}),
     (t.isHeicSignatureIncluded =
         t.isAvifStringIncluded =
         t.isFileContaineJfiforExifHeader =

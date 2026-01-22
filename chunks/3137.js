@@ -1,9 +1,12 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var r,
     i = n(735438),
     a = n(311907),
     s = n(73153),
     o = n(31408);
+
 function l(e, t, n) {
     return (
         t in e
@@ -17,6 +20,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -59,10 +63,12 @@ let u = !1,
         warningSeen: !1,
     },
     f = (0, i.cloneDeep)(d);
+
 function p(e) {
     let { settings: t } = e;
     f = c({}, f, t);
 }
+
 function _() {
     u = !0;
 }

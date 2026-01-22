@@ -14,6 +14,7 @@ var r = n(735438),
     d = n(969043);
 n(246943);
 var f = n(652215);
+
 function p(e, t, n) {
     return (
         t in e
@@ -78,9 +79,11 @@ class g {
 }
 let E = new g(),
     b = null;
+
 function y(e, t) {
     return !e && null == t;
 }
+
 function O(e) {
     let { loaded: t, firstMessage: n } = (0, a.cf)([d.A], () => d.A.getMessage(e.id)),
         r = (0, a.bG)([l.A], () => l.A.getChannel(e.parent_id));
@@ -92,6 +95,7 @@ function O(e) {
         }
     );
 }
+
 function A(e, t) {
     let n = !1;
     t.forEach((t) => {
@@ -100,9 +104,11 @@ function A(e, t) {
     }),
         n && null == b && (b = setTimeout(I, 0));
 }
+
 function v(e) {
     A(e, (0, u.S)(e.id).slice(0, _));
 }
+
 function S(e, t) {
     if (E.hasRequested(e.id, t)) return;
     let n = (0, u.S)(e.id),
@@ -128,7 +134,9 @@ async function T(e) {
             body: { threads: i },
         } = await s.Bo.post({
             url: f.Rsh.FORUM_POSTS(e),
-            body: { thread_ids: t },
+            body: {
+                thread_ids: t,
+            },
             rejectWithError: !0,
         });
         o.h.dispatch({

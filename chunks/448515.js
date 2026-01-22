@@ -1,4 +1,10 @@
-n.d(t, { A: () => X }), n(321073), n(896048), n(938796), n(65821);
+n.d(t, {
+    A: () => X,
+}),
+    n(321073),
+    n(896048),
+    n(938796),
+    n(65821);
 var r = n(735438),
     i = n.n(r);
 n(237751);
@@ -31,6 +37,7 @@ var a = n(311907),
     P = n(121254),
     D = n(877166),
     x = n(531013);
+
 function L(e, t, n) {
     return (
         t in e
@@ -44,6 +51,7 @@ function L(e, t, n) {
         e
     );
 }
+
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -60,6 +68,7 @@ function j(e) {
     }
     return e;
 }
+
 function M(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -72,6 +81,7 @@ function M(e, t) {
     }
     return n;
 }
+
 function k(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -83,6 +93,7 @@ function k(e, t) {
         e
     );
 }
+
 function U(e, t) {
     if (null == e) return {};
     var n,
@@ -99,6 +110,7 @@ function U(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function G(e, t) {
     if (null == e) return {};
     var n,
@@ -110,12 +122,19 @@ function G(e, t) {
     return i;
 }
 let V = new d.A("ConnectionStore");
+
 function F(e) {
     return e.map((e) => {
         var t;
         let n = null == (t = e.timestamps) ? void 0 : t.end,
             r = e.created_at;
-        return null != n && null != r ? k(j({}, e), { timestamps: k(j({}, e.timestamps), { isCountDown: n > r }) }) : e;
+        return null != n && null != r
+            ? k(j({}, e), {
+                  timestamps: k(j({}, e.timestamps), {
+                      isCountDown: n > r,
+                  }),
+              })
+            : e;
     });
 }
 let B = new D.A(
@@ -199,6 +218,7 @@ let B = new D.A(
         (e) => "PRESENCE_UPDATE" !== e && "GUILD_MEMBERS_CHUNK" !== e,
     ),
     K = {};
+
 function z(e, t) {
     for (let n of e)
         K[n] = {
@@ -206,6 +226,7 @@ function z(e, t) {
             dispatch: t,
         };
 }
+
 function q(e, t, n) {
     for (let r of e)
         K[r] = {
@@ -213,9 +234,11 @@ function q(e, t, n) {
             dispatch: n,
         };
 }
+
 function X(e) {
     return K[e];
 }
+
 function Z(e) {
     let t = [];
     for (let i of e) {
@@ -243,6 +266,7 @@ function Z(e) {
         voiceStates: t,
     });
 }
+
 function Q(e) {
     s.h.dispatch(e).catch((t) =>
         x.sZ.resetSocketOnDispatchError({
@@ -251,6 +275,7 @@ function Q(e) {
         }),
     );
 }
+
 function $(e, t, n) {
     var r, a, s, o;
     let {
@@ -300,6 +325,7 @@ function $(e, t, n) {
             displayNameStyles: v,
         });
 }
+
 function J(e) {
     let { member: t, mentions: n, author: r, guild_id: i } = e;
     null != t && null != i && $(i, r, t),
@@ -311,6 +337,7 @@ function J(e) {
                 }
             });
 }
+
 function ee(e) {
     return e.map((e) => {
         var t, n;
@@ -325,6 +352,7 @@ function ee(e) {
         };
     });
 }
+
 function et(e) {
     let {
         guildId: t,
@@ -442,7 +470,13 @@ q(
                     x.Xo.update();
             });
         }),
-            setTimeout(() => Q({ type: "POST_CONNECTION_OPEN" }), 2000);
+            setTimeout(
+                () =>
+                    Q({
+                        type: "POST_CONNECTION_OPEN",
+                    }),
+                2e3,
+            );
     }),
     q(
         ["READY"],
@@ -468,7 +502,9 @@ q(
         },
         (e, t, n) => {
             e.user.bot
-                ? Q({ type: "LOGOUT" })
+                ? Q({
+                      type: "LOGOUT",
+                  })
                 : E.A.ready.measure(() => {
                       a.Ay.Emitter.batched(() => {
                           let t = (e = E.A.hydrateReady.measure(() =>
@@ -516,7 +552,9 @@ q(
                                   userSettingsProto: s,
                                   apiCodeVersion: e.api_code_version,
                                   auth: e.auth,
-                                  notificationSettings: { flags: e.notification_settings.flags },
+                                  notificationSettings: {
+                                      flags: e.notification_settings.flags,
+                                  },
                                   geoRestrictedGuilds: a,
                                   explicitContentScanVersion: e.explicit_content_scan_version,
                                   failedStates: e.failed_states,
@@ -563,7 +601,11 @@ q(
         });
     }),
     z(["RESUMED"], () => {
-        x.OV.forceUpdate(), x.Xo.forceUpdate(), Q({ type: "CONNECTION_RESUMED" });
+        x.OV.forceUpdate(),
+            x.Xo.forceUpdate(),
+            Q({
+                type: "CONNECTION_RESUMED",
+            });
     }),
     z(["TYPING_START"], (e) => {
         null != e.member && $(e.guild_id, e.member.user, e.member),
@@ -1100,7 +1142,9 @@ q(
         });
     }),
     z(["USER_CONNECTIONS_UPDATE"], () => {
-        Q({ type: "USER_CONNECTIONS_UPDATE" });
+        Q({
+            type: "USER_CONNECTIONS_UPDATE",
+        });
     }),
     z(["USER_REQUIRED_ACTION_UPDATE"], (e) => {
         Q({
@@ -1109,7 +1153,14 @@ q(
         });
     }),
     z(["USER_NOTE_UPDATE"], (e) => {
-        Q(j({ type: "USER_NOTE_UPDATE" }, e));
+        Q(
+            j(
+                {
+                    type: "USER_NOTE_UPDATE",
+                },
+                e,
+            ),
+        );
     }),
     z(["RELATIONSHIP_ADD"], (e) => {
         Q({
@@ -1914,7 +1965,14 @@ q(
         });
     }),
     z(["DELETED_ENTITY_IDS"], (e) => {
-        Q(j({ type: "DELETED_ENTITY_IDS" }, e));
+        Q(
+            j(
+                {
+                    type: "DELETED_ENTITY_IDS",
+                },
+                e,
+            ),
+        );
     }),
     q(
         ["CHANNEL_SYNC"],
@@ -2015,11 +2073,20 @@ q(
     z(["NOTIFICATION_SETTINGS_UPDATE"], (e) => {
         Q({
             type: "NOTIFICATION_SETTINGS_UPDATE",
-            settings: { flags: e.flags },
+            settings: {
+                flags: e.flags,
+            },
         });
     }),
     z(["CONVERSATION_SUMMARY_UPDATE"], (e) => {
-        Q(j({ type: "CONVERSATION_SUMMARY_UPDATE" }, e));
+        Q(
+            j(
+                {
+                    type: "CONVERSATION_SUMMARY_UPDATE",
+                },
+                e,
+            ),
+        );
     }),
     z(["PREMIUM_MARKETING_PREVIEW"], (e) => {
         Q({

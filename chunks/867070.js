@@ -8,5 +8,7 @@ r(
         name: "trimStart",
         forced: "".trimStart !== i,
     },
-    { trimStart: i },
+    {
+        trimStart: i,
+    },
 );

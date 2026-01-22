@@ -1,4 +1,6 @@
-l.d(t, { K: () => r });
+l.d(t, {
+    K: () => r,
+});
 var n,
     r =
         (((n = {}).ANIME = "COLLECTIBLES_THEME_ANIME"),

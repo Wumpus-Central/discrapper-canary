@@ -15,12 +15,14 @@ let o = 0,
     p = 1,
     _ = 0.5,
     h = "inset 0 0 0 2px var(--yellow-360), inset 0 0 0 3px var(--background-base-lower)";
+
 function m(e, t) {
     return _ + (t - _) / (1 + Math.exp(-u * (e - d)));
 }
 var g = (function (e) {
     return (e.BOTH = "BOTH"), (e.INSET_ONLY = "INSET_ONLY"), (e.OUTSET_ONLY = "OUTSET_ONLY"), e;
 })({});
+
 function E(e) {
     let {
             isSpeaking: t,

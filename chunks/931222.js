@@ -1,10 +1,16 @@
-n.d(t, { L: () => c }), n(896048), n(321073), n(667532);
+n.d(t, {
+    L: () => c,
+}),
+    n(896048),
+    n(321073),
+    n(667532);
 var r = n(64700),
     i = n(311907),
     l = n(499118),
     a = n(351022),
     s = n(282026),
     o = n(324580);
+
 function c() {
     let e = s.A.useField("fetchedQuery"),
         t = s.A.useField("resultsInitialCategoryId"),

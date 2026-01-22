@@ -37,7 +37,9 @@ async function d() {
             await r.Bo.get({
                 url: c.Rsh.USER_APPLIED_GUILD_BOOSTS,
                 oldFormErrors: !0,
-                query: { paused: e },
+                query: {
+                    paused: e,
+                },
                 rejectWithError: !0,
             })
         ).body.map((e) => s.A.createFromServer(e));
@@ -50,7 +52,9 @@ async function d() {
     );
 }
 async function f() {
-    i.h.dispatch({ type: "GUILD_BOOST_SLOTS_FETCH" });
+    i.h.dispatch({
+        type: "GUILD_BOOST_SLOTS_FETCH",
+    });
     let e = (
         await r.Bo.get({
             url: c.Rsh.USER_GUILD_BOOST_SLOTS,
@@ -68,7 +72,9 @@ async function f() {
 }
 async function p(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-    i.h.dispatch({ type: "GUILD_APPLY_BOOST_START" });
+    i.h.dispatch({
+        type: "GUILD_APPLY_BOOST_START",
+    });
     try {
         let a = await r.Bo.put({
                 url: c.Rsh.APPLIED_GUILD_BOOSTS_FOR_GUILD(e),
@@ -100,7 +106,9 @@ async function p(e, t) {
     }
 }
 async function _(e, t) {
-    i.h.dispatch({ type: "GUILD_UNAPPLY_BOOST_START" });
+    i.h.dispatch({
+        type: "GUILD_UNAPPLY_BOOST_START",
+    });
     try {
         await r.Bo.del({
             url: c.Rsh.APPLIED_GUILD_BOOST(e, t),

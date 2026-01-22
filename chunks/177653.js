@@ -1,4 +1,7 @@
-n.d(t, { A: () => O }), n(896048);
+n.d(t, {
+    A: () => O,
+}),
+    n(896048);
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -17,6 +20,7 @@ var i = n(503698),
     g = n(652215),
     E = n(985018),
     b = n(802937);
+
 function y(e) {
     let t,
         { user: n, planId: i, count: s, userPremiumSubscription: o, unconsumedFractionalPremiumUnits: u = [] } = e,
@@ -50,7 +54,9 @@ function y(e) {
                 children: [
                     (0, r.jsx)(c.Heading, {
                         variant: "heading-md/semibold",
-                        children: E.intl.format(E.t.LzobT9, { planName: O }),
+                        children: E.intl.format(E.t.LzobT9, {
+                            planName: O,
+                        }),
                     }),
                     n.hasFreePremium() || (null != o && o.isPurchasedExternally)
                         ? null
@@ -60,15 +66,21 @@ function y(e) {
                               color: "text-default",
                               children:
                                   y && null != o
-                                      ? E.intl.formatToPlainString(E.t["5CNRRA"], { date: null != t ? t : 0 })
-                                      : E.intl.formatToPlainString(E.t.eNXZ5O, { planName: O }),
+                                      ? E.intl.formatToPlainString(E.t["5CNRRA"], {
+                                            date: null != t ? t : 0,
+                                        })
+                                      : E.intl.formatToPlainString(E.t.eNXZ5O, {
+                                            planName: O,
+                                        }),
                           }),
                 ],
             }),
             (0, r.jsx)(c.Text, {
                 className: b.PJ,
                 variant: "text-md/semibold",
-                children: E.intl.format(E.t["ess/xl"], { count: s }),
+                children: E.intl.format(E.t["ess/xl"], {
+                    count: s,
+                }),
             }),
         ],
     });

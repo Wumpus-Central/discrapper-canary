@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var r = n(627968),
     i = n(64700),
     l = n(311907),
@@ -8,6 +10,7 @@ var r = n(627968),
     o = n(339984),
     d = n(985018),
     u = n(577332);
+
 function f(e) {
     let { profile: t, handleIconChange: l, canManageGuild: c } = e,
         f = i.useCallback(() => {
@@ -101,6 +104,7 @@ function f(e) {
         ],
     });
 }
+
 function g(e) {
     let { profile: t, canManageGuild: n, onIconChange: i } = e,
         a = (0, l.bG)([c.A], () => c.A.getError("icon"));

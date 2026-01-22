@@ -16,6 +16,7 @@ var r = n(627968),
     p = n(350535),
     _ = n(985018),
     h = n(181204);
+
 function m(e, t, n) {
     return (
         t in e
@@ -68,7 +69,9 @@ class b extends i.PureComponent {
                     onClick: this.handleClick,
                     onMouseDown: this.handleMouseDown,
                     ref: this._containerRef,
-                    className: s()(h.Qm, E[t], { [h.Qz]: i }),
+                    className: s()(h.Qm, E[t], {
+                        [h.Qz]: i,
+                    }),
                     children: (0, r.jsxs)(f.A, {
                         className: h.Pp,
                         children: [

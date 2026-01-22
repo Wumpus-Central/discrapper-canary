@@ -1,9 +1,12 @@
-n.d(t, { h: () => f });
+n.d(t, {
+    h: () => f,
+});
 var r = n(232582),
     i = n(532794),
     a = n(976860),
     s = n(788868),
     o = n(652215);
+
 function l(e, t, n) {
     return (
         t in e
@@ -17,6 +20,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -33,6 +37,7 @@ function c(e) {
     }
     return e;
 }
+
 function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -45,6 +50,7 @@ function u(e, t) {
     }
     return n;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -56,6 +62,7 @@ function d(e, t) {
         e
     );
 }
+
 function f(e) {
     let { buttonAction: t, analyticsLocations: n = [], analyticsLocation: l, onClose: u } = e;
     switch (t) {
@@ -77,7 +84,10 @@ function f(e) {
                     },
                 });
         case r.dz.OPEN_PLAN_SELECTION_MODAL:
-            return () => (0, i.A)({ analyticsLocations: n });
+            return () =>
+                (0, i.A)({
+                    analyticsLocations: n,
+                });
         case r.dz.OPEN_TIER_2_PAYMENT_MODAL:
         case r.dz.OPEN_TIER_2_PAYMENT_MODAL_CUSTOM_CONFIRMATION_FOOTER:
         default:

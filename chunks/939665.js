@@ -1,4 +1,7 @@
-n.d(t, { Z: () => L }), n(896048);
+n.d(t, {
+    Z: () => L,
+}),
+    n(896048);
 var l = n(627968),
     r = n(64700),
     i = n(284009),
@@ -33,6 +36,7 @@ var l = n(627968),
     N = n(788868),
     R = n(985018),
     D = n(495989);
+
 function L(e) {
     var t, n, i;
     let { handleStepChange: L, initialPlanId: U, planGroup: G, subscriptionTier: H, trialId: B, handleClose: F } = e,
@@ -57,7 +61,14 @@ function L(e) {
         eo = (null == (i = (0, m.A)()) ? void 0 : i.planSelectionBanner) != null,
         eu = el && ea && null != es && es.length > 0 && eo,
         ec = (0, A.W)(K, V),
-        { newPlans: ed } = d.Ay.useExperiment({ location: "d17fd6_3" }, { autoTrackExposure: !1 }),
+        { newPlans: ed } = d.Ay.useExperiment(
+            {
+                location: "d17fd6_3",
+            },
+            {
+                autoTrackExposure: !1,
+            },
+        ),
         ep = (0, a.bG)([y.default], () => y.default.getCurrentUser()),
         em =
             !el &&
@@ -110,7 +121,11 @@ function L(e) {
                 proratedInvoiceError: ex,
                 isEligibleForOffer: ef,
             },
-            { tags: { app_context: "billing" } },
+            {
+                tags: {
+                    app_context: "billing",
+                },
+            },
         );
     let eP = null != (n = null == ex ? void 0 : ex.message) ? n : R.intl.string(R.t.R0RpRX),
         eS = ef && null == ex,
@@ -121,11 +136,19 @@ function L(e) {
           s()(eg.length > 0, "Premium plan options should be set"),
           (0, l.jsxs)(l.Fragment, {
               children: [
-                  (0, l.jsx)(k.Z, { giftMessage: ei }),
-                  !(el && (0, v.Ik)(er)) && (0, l.jsx)(E.A, { isEligibleForTrial: ee }),
+                  (0, l.jsx)(k.Z, {
+                      giftMessage: ei,
+                  }),
+                  !(el && (0, v.Ik)(er)) &&
+                      (0, l.jsx)(E.A, {
+                          isEligibleForTrial: ee,
+                      }),
                   (0, l.jsxs)(I.dZ, {
                       children: [
-                          eS && (0, l.jsx)("hr", { className: D.T }),
+                          eS &&
+                              (0, l.jsx)("hr", {
+                                  className: D.T,
+                              }),
                           (0, l.jsx)(C.P, {
                               planSkuId: null == ey ? void 0 : ey.skuId,
                               referralTrialOfferId: en,
@@ -150,7 +173,9 @@ function L(e) {
                           eS &&
                               (0, l.jsxs)(l.Fragment, {
                                   children: [
-                                      (0, l.jsx)("hr", { className: D.I }),
+                                      (0, l.jsx)("hr", {
+                                          className: D.I,
+                                      }),
                                       (0, l.jsx)(o.Text, {
                                           variant: "text-xs/normal",
                                           children: R.intl.format(R.t.BHtnqA, {

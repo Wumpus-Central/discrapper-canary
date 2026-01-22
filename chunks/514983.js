@@ -1,8 +1,15 @@
-n.d(t, { A: () => E }), n(896048), n(228524), n(733351), n(321073);
+n.d(t, {
+    A: () => E,
+}),
+    n(896048),
+    n(228524),
+    n(733351),
+    n(321073);
 var r = n(810531),
     i = n(952526),
     a = n(927813),
     s = n(842086);
+
 function o(e, t, n) {
     return (
         t in e
@@ -21,6 +28,7 @@ let l = new Map(),
     u = !1,
     d = null,
     f = a.A.Millis.HOUR;
+
 function p(e) {
     return {
         id: e.id,
@@ -33,11 +41,13 @@ function p(e) {
         [r.L]: "PackSticker",
     };
 }
+
 function _(e) {
     let t = {};
     for (let n of e) t[n.id] = p(n);
     return t;
 }
+
 function h(e, t) {
     let n = [];
     return (
@@ -98,6 +108,7 @@ class m extends i.U {
             );
     }
 }
+
 function g(e, t, n) {
     l.set(e.id, e), n && c.set(e.id, e), t.setPartition(e.id, _(e.stickers));
 }

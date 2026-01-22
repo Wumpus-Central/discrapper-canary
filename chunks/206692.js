@@ -6,6 +6,7 @@ n.d(t, {
     n(896048);
 let r = new WeakMap(),
     i = new WeakMap();
+
 function a(e, t) {
     e.forEach((e) => {
         var n;
@@ -13,15 +14,18 @@ function a(e, t) {
         null != r && r.call(null, e);
     });
 }
+
 function s(e) {
     let t = r.get(e);
     return null == t && ((t = new IntersectionObserver(a, e)), r.set(e, t), i.set(t, new WeakMap())), t;
 }
+
 function o(e, t, n) {
     var r;
     let a = null != (r = i.get(e)) ? r : new WeakMap();
     a.has(t) || e.observe(t), a.set(t, n), i.set(e, a);
 }
+
 function l(e, t) {
     var n;
     let r = null != (n = i.get(e)) ? n : new WeakMap();

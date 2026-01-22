@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968),
     i = n(64700),
     l = n(397927),
@@ -8,6 +10,7 @@ var r = n(627968),
     c = n(954571),
     u = n(652215),
     d = n(985018);
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -33,6 +36,7 @@ function p(e) {
     }
     return e;
 }
+
 function f(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         { priorityMembers: n, partiedMembers: f } = e,
@@ -47,7 +51,9 @@ function f(e) {
         ? (0, r.jsx)(l.Drp, {
               id: "message",
               action: function () {
-                  a.A.openPrivateChannel({ recipientIds: A }).then((t) => {
+                  a.A.openPrivateChannel({
+                      recipientIds: A,
+                  }).then((t) => {
                       var n, r;
                       return s.Ay.trackWithMetadata(
                           u.HAw.ACTIVITY_FEED_DM_VISITED,
@@ -55,7 +61,10 @@ function f(e) {
                               {
                                   source:
                                       ((n = p({}, h.location)),
-                                      (r = r = { object: u.ZSU.LIST_ITEM }),
+                                      (r = r =
+                                          {
+                                              object: u.ZSU.LIST_ITEM,
+                                          }),
                                       Object.getOwnPropertyDescriptors
                                           ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
                                           : (function (e, t) {

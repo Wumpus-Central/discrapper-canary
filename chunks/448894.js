@@ -1,4 +1,6 @@
-n.d(t, { A: () => v });
+n.d(t, {
+    A: () => v,
+});
 var r = n(627968),
     i = n(64700),
     a = n(284009),
@@ -19,6 +21,7 @@ var r = n(627968),
     y = n(172799),
     O = n(985018),
     A = n(563111);
+
 function v(e) {
     let t,
         n,
@@ -78,18 +81,32 @@ function v(e) {
         B = g.Ay.getName(M),
         H = "active";
     V && !L
-        ? (n = k ? O.intl.string(O.t.oBLoZJ) : O.intl.formatToPlainString(O.t["0QJmA+"], { name: B }))
+        ? (n = k
+              ? O.intl.string(O.t.oBLoZJ)
+              : O.intl.formatToPlainString(O.t["0QJmA+"], {
+                    name: B,
+                }))
         : ((t = O.intl.string(O.t.I6JG46)),
           (H = "active"),
           x && ((t = O.intl.string(O.t.Q1W99y)), (H = "secondary")),
-          (n = k ? O.intl.string(O.t["4hyaHu"]) : O.intl.formatToPlainString(O.t.QmlLEq, { name: B })));
+          (n = k
+              ? O.intl.string(O.t["4hyaHu"])
+              : O.intl.formatToPlainString(O.t.QmlLEq, {
+                    name: B,
+                })));
     let Y =
         R === S.id && null != F
-            ? (0, r.jsx)(f.A.Channel, { channel: F })
-            : O.intl.formatToPlainString(O.t.u0vaDE, { guildName: S.name });
+            ? (0, r.jsx)(f.A.Channel, {
+                  channel: F,
+              })
+            : O.intl.formatToPlainString(O.t.u0vaDE, {
+                  guildName: S.name,
+              });
     return (0, r.jsxs)(f.A, {
         children: [
-            (0, r.jsx)(f.A.Header, { text: O.intl.string(O.t["wS+5Wb"]) }),
+            (0, r.jsx)(f.A.Header, {
+                text: O.intl.string(O.t["wS+5Wb"]),
+            }),
             (0, r.jsxs)(f.A.Body, {
                 children: [
                     (0, r.jsxs)("div", {

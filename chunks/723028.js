@@ -1,4 +1,6 @@
-l.d(t, { default: () => m });
+l.d(t, {
+    default: () => m,
+});
 var n = l(627968);
 l(64700);
 var a = l(110259),
@@ -9,6 +11,7 @@ var a = l(110259),
     u = l(309777),
     c = l(429364),
     d = l(327742);
+
 function m(e) {
     let { clip: t, channelId: l, transitionState: m, onClose: h } = e,
         { analyticsLocations: p } = (0, s.Ay)(i.A.CLIPS_EDITOR);
@@ -17,7 +20,11 @@ function m(e) {
         children: (0, n.jsx)(r.N, {
             onClose: h,
             transitionState: m,
-            trackingProps: { impression: { impressionName: a.ImpressionNames.CLIP_EDITOR_VIEWED } },
+            trackingProps: {
+                impression: {
+                    impressionName: a.ImpressionNames.CLIP_EDITOR_VIEWED,
+                },
+            },
             children: (0, n.jsx)("div", {
                 className: d.jT,
                 children: (0, n.jsxs)(c.p, {

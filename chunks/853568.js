@@ -91,7 +91,9 @@ e.exports = function (e) {
                 className: "meta",
                 beginKeywords: "import include",
                 end: /;/,
-                keywords: { keyword: "import include" },
+                keywords: {
+                    keyword: "import include",
+                },
             },
             {
                 beginKeywords: "function",
@@ -99,7 +101,9 @@ e.exports = function (e) {
                 excludeEnd: !0,
                 illegal: /\S/,
                 contains: [
-                    e.inherit(e.TITLE_MODE, { className: "title.function" }),
+                    e.inherit(e.TITLE_MODE, {
+                        className: "title.function",
+                    }),
                     {
                         className: "params",
                         begin: /\(/,
@@ -112,7 +116,9 @@ e.exports = function (e) {
                             a,
                         ],
                     },
-                    { begin: t.concat(/:\s*/, i) },
+                    {
+                        begin: t.concat(/:\s*/, i),
+                    },
                 ],
             },
             e.METHOD_GUARD,

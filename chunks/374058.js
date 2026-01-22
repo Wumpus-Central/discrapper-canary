@@ -1,4 +1,8 @@
-n.d(t, { A: () => D }), n(896048), n(457529);
+n.d(t, {
+    A: () => D,
+}),
+    n(896048),
+    n(457529);
 var a = n(627968),
     l = n(64700),
     i = n(503698),
@@ -42,20 +46,24 @@ let N = [
         },
     },
 ];
+
 function T(e) {
     let { children: t } = e;
     return (0, a.jsx)(u.IpV, {
         className: O._D,
-        children: (0, a.jsx)("dl", { children: t }),
+        children: (0, a.jsx)("dl", {
+            children: t,
+        }),
     });
 }
+
 function I(e) {
     let { name: t, children: n, copyValue: i } = e,
         [r, s] = l.useState(!1);
     return (
         l.useEffect(() => {
             if (r) {
-                let e = setTimeout(() => s(!1), 1000);
+                let e = setTimeout(() => s(!1), 1e3);
                 return () => clearTimeout(e);
             }
         }, [r]),
@@ -66,7 +74,9 @@ function I(e) {
                     className: O.m2,
                     children: t,
                 }),
-                (0, a.jsx)("dd", { children: n }),
+                (0, a.jsx)("dd", {
+                    children: n,
+                }),
                 (0, a.jsx)(u.DUT, {
                     tag: "span",
                     className: O.nH,
@@ -193,12 +203,16 @@ let w = new Set(["client_performance_cpu", "client_performance_memory"]),
                                     (0, a.jsx)(y.mA, {
                                         name: "User",
                                         copyValue: d.id,
-                                        children: (0, a.jsx)(m.A, { user: d }),
+                                        children: (0, a.jsx)(m.A, {
+                                            user: d,
+                                        }),
                                     }),
                                 (0, a.jsx)(y.mA, {
                                     name: "Fingerprint",
                                     copyValue: i,
-                                    children: (0, a.jsx)("code", { children: i }),
+                                    children: (0, a.jsx)("code", {
+                                        children: i,
+                                    }),
                                 }),
                             ],
                         }),
@@ -233,10 +247,14 @@ let w = new Set(["client_performance_cpu", "client_performance_memory"]),
                                                 I,
                                                 {
                                                     name: "".concat(n, ":"),
-                                                    copyValue: { [n]: l || null },
+                                                    copyValue: {
+                                                        [n]: l || null,
+                                                    },
                                                     children:
                                                         null != l
-                                                            ? (0, a.jsx)("code", { children: JSON.stringify(l) })
+                                                            ? (0, a.jsx)("code", {
+                                                                  children: JSON.stringify(l),
+                                                              })
                                                             : (0, a.jsx)("code", {
                                                                   className: O.HO,
                                                                   children: "null",
@@ -250,7 +268,9 @@ let w = new Set(["client_performance_cpu", "client_performance_memory"]),
                                                     I,
                                                     {
                                                         name: "".concat(n, "_avg:"),
-                                                        copyValue: { [n]: l || null },
+                                                        copyValue: {
+                                                            [n]: l || null,
+                                                        },
                                                         children: (0, a.jsxs)("code", {
                                                             children: [i.average.toFixed(3), " (", i.count, ")"],
                                                         }),
@@ -304,6 +324,7 @@ let w = new Set(["client_performance_cpu", "client_performance_memory"]),
         },
         throttleMs: 100,
     };
+
 function D() {
     let e = l.useRef(null),
         [t, n] = l.useState(""),
@@ -320,7 +341,12 @@ function D() {
         }),
         [b, g] = l.useState(void 0),
         y = x.find((e) => e.key === b),
-        { TabBar: T, renderSelectedTab: I } = (0, C.Ay)({ tabs: k }, []);
+        { TabBar: T, renderSelectedTab: I } = (0, C.Ay)(
+            {
+                tabs: k,
+            },
+            [],
+        );
     return (0, a.jsxs)("div", {
         ref: e,
         className: r()(E.nd, O.nd),
@@ -342,7 +368,9 @@ function D() {
                             }),
                         }),
                     }),
-                    (0, a.jsx)("div", { className: O.Bi }),
+                    (0, a.jsx)("div", {
+                        className: O.Bi,
+                    }),
                     (0, a.jsx)("div", {
                         className: O.uW,
                         children: Object.entries(P).map((e) => {

@@ -1,4 +1,6 @@
-n.d(t, { A: () => y });
+n.d(t, {
+    A: () => y,
+});
 var r = n(627968),
     l = n(64700),
     i = n(735438),
@@ -45,7 +47,9 @@ let y = l.memo(function (e) {
             guildId: t.guild_id,
             location: "63250c_1",
         },
-        { autoTrackExposure: !1 },
+        {
+            autoTrackExposure: !1,
+        },
     ).enabled &&
         !n &&
         !i &&

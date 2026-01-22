@@ -1,6 +1,9 @@
-n.d(t, { my: () => a });
+n.d(t, {
+    my: () => a,
+});
 var r = n(919015),
     i = n(478681);
+
 function a(e, t, n) {
     try {
         Object.defineProperty(e, t, {
@@ -12,6 +15,7 @@ function a(e, t, n) {
         r.T && i.vF.log(`Failed to add non-enumerable property "${t}" to object`, e);
     }
 }
+
 function s(e) {
     try {
         return isElement(e) ? htmlTreeAsString(e) : Object.prototype.toString.call(e);
@@ -19,6 +23,7 @@ function s(e) {
         return "<unknown>";
     }
 }
+
 function o(e) {
     if ("object" != typeof e || null === e) return {};
     {
@@ -27,6 +32,7 @@ function o(e) {
         return t;
     }
 }
+
 function l(e) {
     if (!isPlainObject(e)) return !1;
     try {

@@ -1,8 +1,11 @@
-t.d(l, { b: () => r });
+t.d(l, {
+    b: () => r,
+});
 var n = t(64700),
     a = t(59520),
     s = t(954571),
     i = t(652215);
+
 function d(e, l, t, n) {
     let { scrollTop: a = 0, scrollOffset: i = 0, scrollHeight: d = 0, scrollWidth: r = 0 } = n;
     if (d > 0) {
@@ -36,7 +39,9 @@ let r = (e, l, t) => {
     n.useEffect(() => {
         s.current = l;
     }, [l]);
-    let r = (0, a.I)(d, 5000, [], { trailing: !0 });
+    let r = (0, a.I)(d, 5e3, [], {
+        trailing: !0,
+    });
     return {
         handleScroll: n.useCallback(() => {
             if (null != e.current) {

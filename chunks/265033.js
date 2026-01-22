@@ -8,5 +8,12 @@ var n = e(583296).IteratorPrototype,
     };
 t.exports = function (t, r, e, a) {
     var f = r + " Iterator";
-    return (t.prototype = o(n, { next: s(+!a, e) })), i(t, f, !1, !0), (u[f] = c), t;
+    return (
+        (t.prototype = o(n, {
+            next: s(+!a, e),
+        })),
+        i(t, f, !1, !0),
+        (u[f] = c),
+        t
+    );
 };

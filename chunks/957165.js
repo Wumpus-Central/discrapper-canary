@@ -9,5 +9,7 @@ r(
             return !Object.getOwnPropertyNames(1);
         }),
     },
-    { getOwnPropertyNames: o },
+    {
+        getOwnPropertyNames: o,
+    },
 );

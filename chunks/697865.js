@@ -1,4 +1,6 @@
-l.d(t, { A: () => N });
+l.d(t, {
+    A: () => N,
+});
 var r = l(627968),
     n = l(503698),
     i = l.n(n),
@@ -24,6 +26,7 @@ var r = l(627968),
     I = l(520277),
     S = l(445826);
 let w = j.Ay.getEnableHardwareAcceleration() ? u.JsQ : d.A;
+
 function N(e) {
     var t, l;
     let { guildId: n } = e,

@@ -1,4 +1,14 @@
-n.d(t, { A: () => H }), n(114821), n(339614), n(896048), n(638769), n(733351), n(321073), n(864466), n(443073);
+n.d(t, {
+    A: () => H,
+}),
+    n(114821),
+    n(339614),
+    n(896048),
+    n(638769),
+    n(733351),
+    n(321073),
+    n(864466),
+    n(443073);
 var i = n(627968),
     r = n(64700),
     l = n(503698),
@@ -173,7 +183,9 @@ let P = (e) => [
                   children: [
                       (0, i.jsx)("div", {
                           className: _._N,
-                          children: (0, i.jsx)(k, { channel: m }),
+                          children: (0, i.jsx)(k, {
+                              channel: m,
+                          }),
                       }),
                       (0, i.jsxs)("div", {
                           className: _.rg,
@@ -256,7 +268,11 @@ let P = (e) => [
                 (0, i.jsxs)(m, {
                     className: _.o5,
                     children: [
-                        o && 0 === n.length && (0, i.jsx)(V, { emptyText: C.intl.string(C.t.nxSS03) }),
+                        o &&
+                            0 === n.length &&
+                            (0, i.jsx)(V, {
+                                emptyText: C.intl.string(C.t.nxSS03),
+                            }),
                         n.map((e) =>
                             (0, i.jsx)(
                                 M,
@@ -279,6 +295,7 @@ let P = (e) => [
             ],
         });
     });
+
 function z(e) {
     let t,
         n,
@@ -369,11 +386,15 @@ function z(e) {
                       }),
               ],
           })
-        : (0, i.jsx)(V, { emptyText: C.intl.string(C.t["3ET7Ay"]) });
+        : (0, i.jsx)(V, {
+              emptyText: C.intl.string(C.t["3ET7Ay"]),
+          });
 }
+
 function G(e) {
     e.stopPropagation();
 }
+
 function H(e) {
     var t, n;
     let { currentVoiceChannel: l, onClose: a, onSelect: s } = e,
@@ -429,7 +450,9 @@ function H(e) {
     );
     let y = "" !== d.trim(),
         O = h.length > 20,
-        E = { count: O ? 20 : h.length },
+        E = {
+            count: O ? 20 : h.length,
+        },
         j = r.useMemo(
             () => ({
                 onMouseDown: G,
@@ -466,7 +489,12 @@ function H(e) {
                     });
             }
             return e;
-        })({ className: _.Dz }, j)),
+        })(
+            {
+                className: _.Dz,
+            },
+            j,
+        )),
         (n = n =
             {
                 children: [
@@ -483,7 +511,9 @@ function H(e) {
                             onChange: (e) => {
                                 p(e);
                             },
-                            inputProps: { "aria-label": C.intl.string(C.t.UyA6ST) },
+                            inputProps: {
+                                "aria-label": C.intl.string(C.t.UyA6ST),
+                            },
                         }),
                     }),
                     y

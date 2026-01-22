@@ -1,9 +1,13 @@
-n.d(t, { l: () => x }), n(896048), n(228524);
+n.d(t, {
+    l: () => x,
+}),
+    n(896048),
+    n(228524);
 var l = n(627968),
     r = n(64700),
     i = n(503698),
     a = n.n(i),
-    s = n(432022),
+    s = n(108531),
     o = n(311907),
     c = n(435371),
     u = n(397927),
@@ -20,19 +24,20 @@ let _ = (e) => 1 - Math.pow(1 - e, 4),
     E = {
         mass: 1,
         friction: 64,
-        tension: 1000,
+        tension: 1e3,
         clamp: !0,
     },
     v = {
         mass: 1,
         friction: 64,
-        tension: 1000,
+        tension: 1e3,
     },
     O = {
         mass: 1,
         friction: 35,
-        tension: 1000,
+        tension: 1e3,
     };
+
 function x(e) {
     var t;
     let {} = e,
@@ -303,10 +308,14 @@ function x(e) {
                             className: y._o,
                             style: V[0],
                             children: (0, l.jsx)(u.DUT, {
-                                className: a()(y.x6, { [y.v3]: N }),
+                                className: a()(y.x6, {
+                                    [y.v3]: N,
+                                }),
                                 "aria-label": H,
                                 "aria-hidden": D,
-                                focusProps: { enabled: P },
+                                focusProps: {
+                                    enabled: P,
+                                },
                                 tabIndex: P ? 0 : -1,
                                 onClick: () => S(),
                                 children: (0, l.jsx)(C, {
@@ -327,7 +336,9 @@ function x(e) {
                             children: (0, l.jsx)(u.DUT, {
                                 className: y.x6,
                                 "aria-hidden": D,
-                                focusProps: { enabled: P },
+                                focusProps: {
+                                    enabled: P,
+                                },
                                 tabIndex: P ? 0 : -1,
                                 onClick: j,
                                 children: (0, l.jsx)(u.aXh, {

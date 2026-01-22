@@ -1,9 +1,12 @@
-t.d(A, { p: () => i });
+t.d(A, {
+    p: () => i,
+});
 var r = t(627968);
 t(64700);
 var n = t(397927),
     l = t(426043),
     a = t(985018);
+
 function i(e, A) {
     let t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
     (0, l.A)({
@@ -43,7 +46,9 @@ function i(e, A) {
                                   (0, r.jsx)(n.Text, {
                                       variant: "text-md/normal",
                                       color: "text-default",
-                                      style: { display: "inline" },
+                                      style: {
+                                          display: "inline",
+                                      },
                                       children: e,
                                   }),
                           },

@@ -1,4 +1,7 @@
-n.d(t, { A: () => I }), n(896048);
+n.d(t, {
+    A: () => I,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(735438),
@@ -22,6 +25,7 @@ var r = n(627968),
     x = n(977997),
     E = n(747926),
     _ = n(985018);
+
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -47,6 +51,7 @@ function C(e) {
     }
     return e;
 }
+
 function S(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -65,10 +70,12 @@ function S(e, t) {
         e
     );
 }
+
 function I(e) {
     let { channel: t } = e,
         [n, i] = l.useState(!1),
         a = l.useRef(null);
+
     function s() {
         i((e) => !e);
     }
@@ -82,7 +89,12 @@ function I(e) {
         autoInvert: !1,
         onRequestClose: () => i(!1),
         renderPopout: function (e) {
-            return (0, r.jsx)(N, S(C({}, e), { channel: t }));
+            return (0, r.jsx)(
+                N,
+                S(C({}, e), {
+                    channel: t,
+                }),
+            );
         },
         children: (e, t) => {
             let { isShown: n } = t;
@@ -100,6 +112,7 @@ function I(e) {
         },
     });
 }
+
 function N(e) {
     let { channel: t, closePopout: n, onSelect: l } = e,
         i = (0, c.A)(t),

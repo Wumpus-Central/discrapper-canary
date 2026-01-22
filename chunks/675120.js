@@ -1,4 +1,6 @@
-n.d(t, { v: () => r });
+n.d(t, {
+    v: () => r,
+});
 var a = n(627968);
 n(64700);
 var l = n(732955),
@@ -10,7 +12,10 @@ let r = (e) => {
         : (0, a.jsxs)("footer", {
               className: i.q,
               children: [
-                  null != n && (0, a.jsx)("div", { children: n }),
+                  null != n &&
+                      (0, a.jsx)("div", {
+                          children: n,
+                      }),
                   (0, a.jsx)(l.e2v, {
                       className: i.G,
                       justify: "end",

@@ -7,6 +7,7 @@ var r,
     i = n(311907),
     a = n(73153),
     s = n(611010);
+
 function o(e, t, n) {
     return (
         t in e
@@ -20,6 +21,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +38,7 @@ function l(e) {
     }
     return e;
 }
+
 function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -48,6 +51,7 @@ function c(e, t) {
     }
     return n;
 }
+
 function u(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -66,19 +70,35 @@ let f = {},
     p = {},
     _ = new Set(),
     h = {};
+
 function m(e) {
     let { applicationId: t } = e;
-    p = u(l({}, p), { [t]: 0 });
+    p = u(l({}, p), {
+        [t]: 0,
+    });
 }
+
 function g(e) {
     let { application: t } = e;
-    (f = u(l({}, f), { [t.id]: t })), (p = u(l({}, p), { [t.id]: 1 }));
+    (f = u(l({}, f), {
+        [t.id]: t,
+    })),
+        (p = u(l({}, p), {
+            [t.id]: 1,
+        }));
     let n = Date.now();
-    (h = u(l({}, h), { [t.id]: n })), _.has(t.id) && (_.delete(t.id), (_ = new Set(_)));
+    (h = u(l({}, h), {
+        [t.id]: n,
+    })),
+        _.has(t.id) && (_.delete(t.id), (_ = new Set(_)));
 }
+
 function E(e) {
     let { applicationId: t, isInvalidApplication: n } = e;
-    (p = u(l({}, p), { [t]: 2 })), n && (_.add(t), (_ = new Set(_)));
+    (p = u(l({}, p), {
+        [t]: 2,
+    })),
+        n && (_.add(t), (_ = new Set(_)));
 }
 class b extends (r = i.Ay.Store) {
     getApplication(e) {

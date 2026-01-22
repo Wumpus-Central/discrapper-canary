@@ -1,4 +1,7 @@
-n.d(t, { A: () => w }), n(896048);
+n.d(t, {
+    A: () => w,
+}),
+    n(896048);
 var r,
     i = n(311907),
     a = n(73153),
@@ -6,6 +9,7 @@ var r,
     o = n(573648),
     l = n(806374),
     c = n(860689);
+
 function u(e, t, n) {
     return (
         t in e
@@ -19,6 +23,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,6 +40,7 @@ function d(e) {
     }
     return e;
 }
+
 function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -47,6 +53,7 @@ function f(e, t) {
     }
     return n;
 }
+
 function p(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -71,9 +78,11 @@ let _ = new Set([n(652215).fg2.CONTACTS]),
             (g = e.filter((e) => _.has(e.type))),
             (h = !1);
     };
+
 function v(e) {
     A(e.connectedAccounts.map((e) => new l.A(e)));
 }
+
 function S(e) {
     e.local && null != e.accounts
         ? A(
@@ -82,7 +91,13 @@ function S(e) {
                       new l.A(
                           p(d({}, e), {
                               integrations: e.integrations.map((e) =>
-                                  p(d({}, e), { guild: (0, c.yF)(p(d({}, e.guild), { features: [] })) }),
+                                  p(d({}, e), {
+                                      guild: (0, c.yF)(
+                                          p(d({}, e.guild), {
+                                              features: [],
+                                          }),
+                                      ),
+                                  }),
                               ),
                           }),
                       ),
@@ -90,18 +105,22 @@ function S(e) {
           )
         : s.A.fetch();
 }
+
 function I(e) {
     E[e.integrationId] = e.joining;
 }
+
 function T(e) {
     O[e.integrationId] = void 0 !== e.error ? e.error : "";
 }
+
 function C(e) {
     let { platformType: t, id: n, revoked: r, accessToken: i } = e,
         a = m.find((e) => e.id === n && e.type === t);
     if (null == a) return !1;
     null != r && (a.revoked = r), null != i && (a.accessToken = i);
 }
+
 function N(e) {
     let { code: t, state: n, openid_params: r, provider: i } = e;
     s.A.callback(i, {

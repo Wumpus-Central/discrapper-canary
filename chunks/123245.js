@@ -1,6 +1,9 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(143733),
     a = n(509643);
+
 function o(e) {
     return (o =
         "function" == typeof r && "symbol" == typeof a

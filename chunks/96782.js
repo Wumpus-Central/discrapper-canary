@@ -32,6 +32,7 @@ var r = n(627968),
     S = n(985018),
     I = n(422436),
     T = n(295260);
+
 function C(e, t, n) {
     return (
         t in e
@@ -45,6 +46,7 @@ function C(e, t, n) {
         e
     );
 }
+
 function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -61,6 +63,7 @@ function N(e) {
     }
     return e;
 }
+
 function R(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -73,6 +76,7 @@ function R(e, t) {
     }
     return n;
 }
+
 function w(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -84,6 +88,7 @@ function w(e, t) {
         e
     );
 }
+
 function P(e, t) {
     if (null == e) return {};
     var n,
@@ -100,6 +105,7 @@ function P(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function D(e, t) {
     if (null == e) return {};
     var n,
@@ -112,9 +118,11 @@ function D(e, t) {
 }
 let x = 200,
     L = 50;
+
 function j(e) {
     return "IMAGE" === e || "VIDEO" === e;
 }
+
 function M(e, t) {
     var n;
     return {
@@ -146,7 +154,9 @@ let k = (e) => {
                     text: S.intl.string(S.t["/XT3ij"]),
                     children: (0, r.jsx)(c.DUT, {
                         className: s()(T.HF, I.GC),
-                        focusProps: { offset: 2 },
+                        focusProps: {
+                            offset: 2,
+                        },
                         onClick: a,
                         "aria-label": S.intl.string(S.t["0+xZH0"]),
                         children: (0, r.jsx)(c.ucK, {
@@ -171,7 +181,9 @@ let k = (e) => {
                             rel: "noreferrer noopener",
                             className: T.HF,
                             iconClassName: I.qG,
-                            focusProps: { offset: 2 },
+                            focusProps: {
+                                offset: 2,
+                            },
                             href: n,
                             mimeType: t,
                         }),
@@ -185,7 +197,9 @@ let k = (e) => {
             _ > 0 &&
                 m.length > 0 &&
                 (0, r.jsx)("div", {
-                    className: s()(T.aq, { [T.XE]: !f }),
+                    className: s()(T.aq, {
+                        [T.XE]: !f,
+                    }),
                     children: m.slice(g),
                 }),
             (0, r.jsx)("div", {
@@ -195,6 +209,7 @@ let k = (e) => {
         ],
     });
 };
+
 function U(e) {
     let {
             message: t,
@@ -272,7 +287,11 @@ function U(e) {
                 o &&
                 (0, r.jsx)(c.DUT, {
                     className: K ? I.yR : I.Yg,
-                    focusProps: { offset: { bottom: 4 } },
+                    focusProps: {
+                        offset: {
+                            bottom: 4,
+                        },
+                    },
                     onClick: () => l(n),
                     "aria-label": S.intl.string(S.t["0+xZH0"]),
                     children: (0, r.jsx)(c.PGe, {
@@ -336,7 +355,9 @@ function U(e) {
                 renderAdjacentContent: ei,
                 naturalWidth: Y,
                 naturalHeight: W,
-                className: s()(R, { [I.yq]: U }),
+                className: s()(R, {
+                    [I.yq]: U,
+                }),
                 playable: D,
                 responsive: !0,
                 mediaLayoutType: L,
@@ -395,6 +416,7 @@ function U(e) {
             return null;
     }
 }
+
 function G(e, t, n) {
     if (!t) return;
     let r = e.width;
@@ -407,11 +429,19 @@ function G(e, t, n) {
         });
         r = t;
     }
-    return w(N({}, n !== A.dG.MOSAIC && { maxWidth: null != r ? r : "400px" }), {
-        width: "100%",
-        height: "100%",
-        justifySelf: "auto",
-    });
+    return w(
+        N(
+            {},
+            n !== A.dG.MOSAIC && {
+                maxWidth: null != r ? r : "400px",
+            },
+        ),
+        {
+            width: "100%",
+            height: "100%",
+            justifySelf: "auto",
+        },
+    );
 }
 let V = function (e) {
     let {
@@ -502,7 +532,9 @@ let V = function (e) {
                       isSingleMosaicItem: u,
                       obscured: S,
                       containerStyles: G(n, M, c),
-                      obscurityControlClassName: s()({ [I.yi]: "VIDEO" === y && u && !S && F }),
+                      obscurityControlClassName: s()({
+                          [I.yi]: "VIDEO" === y && u && !S && F,
+                      }),
                       onToggleObscurity: () => T((e) => !e),
                       children: (e) => W(e),
                   })

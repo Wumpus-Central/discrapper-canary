@@ -1,4 +1,6 @@
-a.d(i, { A: () => n });
+a.d(i, {
+    A: () => n,
+});
 var t = a(981737);
 let n = {
     ordinalNumber: function (e, i) {
@@ -7,22 +9,27 @@ let n = {
             n = null == i ? void 0 : i.unit;
         return 0 === t
             ? "0"
-            : ((a = 1 === t ? (n && ["year", "week", "hour", "minute", "second"].includes(n) ? "ère" : "er") : "ème"),
+            : ((a =
+                  1 === t
+                      ? n && ["year", "week", "hour", "minute", "second"].includes(n)
+                          ? "\xe8re"
+                          : "er"
+                      : "\xe8me"),
               t + a);
     },
     era: (0, t.A)({
         values: {
             narrow: ["av. J.-C", "ap. J.-C"],
             abbreviated: ["av. J.-C", "ap. J.-C"],
-            wide: ["avant Jésus-Christ", "après Jésus-Christ"],
+            wide: ["avant J\xe9sus-Christ", "apr\xe8s J\xe9sus-Christ"],
         },
         defaultWidth: "wide",
     }),
     quarter: (0, t.A)({
         values: {
             narrow: ["T1", "T2", "T3", "T4"],
-            abbreviated: ["1er trim.", "2ème trim.", "3ème trim.", "4ème trim."],
-            wide: ["1er trimestre", "2ème trimestre", "3ème trimestre", "4ème trimestre"],
+            abbreviated: ["1er trim.", "2\xe8me trim.", "3\xe8me trim.", "4\xe8me trim."],
+            wide: ["1er trimestre", "2\xe8me trimestre", "3\xe8me trimestre", "4\xe8me trimestre"],
         },
         defaultWidth: "wide",
         argumentCallback: function (e) {
@@ -34,31 +41,31 @@ let n = {
             narrow: ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"],
             abbreviated: [
                 "janv.",
-                "févr.",
+                "f\xe9vr.",
                 "mars",
                 "avr.",
                 "mai",
                 "juin",
                 "juil.",
-                "août",
+                "ao\xfbt",
                 "sept.",
                 "oct.",
                 "nov.",
-                "déc.",
+                "d\xe9c.",
             ],
             wide: [
                 "janvier",
-                "février",
+                "f\xe9vrier",
                 "mars",
                 "avril",
                 "mai",
                 "juin",
                 "juillet",
-                "août",
+                "ao\xfbt",
                 "septembre",
                 "octobre",
                 "novembre",
-                "décembre",
+                "d\xe9cembre",
             ],
         },
         defaultWidth: "wide",
@@ -90,7 +97,7 @@ let n = {
                 midnight: "minuit",
                 noon: "midi",
                 morning: "matin",
-                afternoon: "après-midi",
+                afternoon: "apr\xe8s-midi",
                 evening: "soir",
                 night: "matin",
             },
@@ -100,7 +107,7 @@ let n = {
                 midnight: "minuit",
                 noon: "midi",
                 morning: "du matin",
-                afternoon: "de l\u2019après-midi",
+                afternoon: "de l’apr\xe8s-midi",
                 evening: "du soir",
                 night: "du matin",
             },

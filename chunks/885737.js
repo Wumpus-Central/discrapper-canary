@@ -1,4 +1,7 @@
-n.d(i, { A: () => u }), n(228524);
+n.d(i, {
+    A: () => u,
+}),
+    n(228524);
 var t = n(627968);
 n(64700);
 var a = n(503698),
@@ -13,6 +16,7 @@ var a = n(503698),
     g = n(239093),
     p = n(985018),
     N = n(299916);
+
 function u(e) {
     var i, n;
     let {
@@ -63,7 +67,10 @@ function u(e) {
                 className: s()(N.jE, !L && N.bQ, _),
                 paddingFix: !1,
                 children: [
-                    L && (0, t.jsx)(m.U, { flaggedContent: null != (n = a.flagged_content) ? n : [] }),
+                    L &&
+                        (0, t.jsx)(m.U, {
+                            flaggedContent: null != (n = a.flagged_content) ? n : [],
+                        }),
                     (0, t.jsx)(l.Text, {
                         className: N.l8,
                         color: "text-default",

@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968);
 n(64700);
 var l = n(311907),
@@ -11,10 +13,17 @@ var l = n(311907),
     d = n(576705),
     A = n(652215),
     b = n(985018);
+
 function f(e, t) {
-    let n = (0, l.bG)([d.A], () => null != e && d.A.canWithPartialContext(A.xBc.MANAGE_MESSAGES, { channelId: e }), [
-            e,
-        ]),
+    let n = (0, l.bG)(
+            [d.A],
+            () =>
+                null != e &&
+                d.A.canWithPartialContext(A.xBc.MANAGE_MESSAGES, {
+                    channelId: e,
+                }),
+            [e],
+        ),
         f = (0, l.bG)([c.A], () => c.A.getChannel(e), [e]),
         O = (0, l.bG)([s.A], () => (null != e && null != t ? s.A.getMessage(e, t) : null)),
         g = (0, o.kZ)(null != O ? O : null);

@@ -1,4 +1,7 @@
-n.d(t, { A: () => d }), n(321073);
+n.d(t, {
+    A: () => d,
+}),
+    n(321073);
 var r = n(627968);
 n(64700);
 var i = n(861382),
@@ -6,7 +9,12 @@ var i = n(861382),
     s = n(634788),
     o = n(374803),
     l = n(985018);
-let c = { results: { commandOptions: [] } };
+let c = {
+    results: {
+        commandOptions: [],
+    },
+};
+
 function u(e) {
     return "".concat(e.displayName, ":");
 }
@@ -22,7 +30,13 @@ let d = {
                 var t;
                 return e.displayName.startsWith(n) && !(null == (t = o[e.name]) ? void 0 : t.hasValue);
             });
-        return 0 === l.length ? c : { results: { commandOptions: l } };
+        return 0 === l.length
+            ? c
+            : {
+                  results: {
+                      commandOptions: l,
+                  },
+              };
     },
     renderResults(e) {
         let {
@@ -89,6 +103,11 @@ let d = {
                 options: r,
             } = e,
             i = t[n];
-        return r.insertText(u(i)), { type: o.kc.COMMAND_OPTION };
+        return (
+            r.insertText(u(i)),
+            {
+                type: o.kc.COMMAND_OPTION,
+            }
+        );
     },
 };

@@ -1,4 +1,7 @@
-n.d(t, { A: () => A }), n(896048);
+n.d(t, {
+    A: () => A,
+}),
+    n(896048);
 var r,
     l,
     i = n(478437),
@@ -10,12 +13,15 @@ var r,
     d = n(661470);
 let f = new Set(),
     p = {};
+
 function h(e) {
     return new Date(e * u.A.Millis.SECOND).getTime();
 }
+
 function b() {
     f.clear();
 }
+
 function g(e) {
     f.delete(e.guild.id);
 }

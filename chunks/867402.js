@@ -1,4 +1,7 @@
-n.d(t, { A: () => U }), n(747238);
+n.d(t, {
+    A: () => U,
+}),
+    n(747238);
 var r = n(280230),
     i = n.n(r),
     a = n(717125),
@@ -17,6 +20,7 @@ var r = n(280230),
     E = n(704726),
     b = n(652215),
     y = n(985018);
+
 function O(e, t, n) {
     return (
         t in e
@@ -30,6 +34,7 @@ function O(e, t, n) {
         e
     );
 }
+
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -46,6 +51,7 @@ function A(e) {
     }
     return e;
 }
+
 function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -58,6 +64,7 @@ function v(e, t) {
     }
     return n;
 }
+
 function S(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -73,6 +80,7 @@ let I = (e) => {
     let t = c.A.getChannel(e);
     return null == t ? void 0 : t.getGuildId();
 };
+
 function T(e) {
     return {
         type: "guild",
@@ -85,6 +93,7 @@ function T(e) {
         }),
     };
 }
+
 function C(e, t) {
     let n,
         r = D((0, m.EJ)(e.name, 32));
@@ -103,6 +112,7 @@ function C(e, t) {
         iconType: e.iconType,
     };
 }
+
 function N(e, t) {
     let n = {
         type: "channel",
@@ -119,6 +129,7 @@ function N(e, t) {
         content: [n],
     };
 }
+
 function R(e) {
     return {
         type: "channel",
@@ -126,6 +137,7 @@ function R(e) {
         iconType: e ? "post" : "message",
     };
 }
+
 function w(e, t) {
     var n;
     let r = c.A.getChannel(e),
@@ -164,6 +176,7 @@ function w(e, t) {
           }
         : null;
 }
+
 function P(e) {
     return {
         type: "link",
@@ -177,15 +190,18 @@ function P(e) {
         title: void 0,
     };
 }
+
 function D(e) {
     return {
         type: "text",
         content: e,
     };
 }
+
 function x(e) {
     return null != e ? P(e) : D("#".concat(y.intl.string(y.t.J90oLW)));
 }
+
 function L() {
     return C(
         {
@@ -196,6 +212,7 @@ function L() {
         "italics",
     );
 }
+
 function j(e, t, n, r, i) {
     let a = u.A.getGuild(e),
         s = (null == a ? void 0 : a.id) === r;
@@ -209,6 +226,7 @@ function j(e, t, n, r, i) {
         content: [L()],
     };
 }
+
 function M(e, t, n, r) {
     let i = T(e),
         a = C(t),
@@ -252,6 +270,7 @@ function M(e, t, n, r) {
                   content: [a],
               };
 }
+
 function k(e, t, n, r) {
     if (!e.canViewChannel) return N(e, t);
     if (!e.isMentionable) return D("#".concat(e.name));

@@ -1,5 +1,10 @@
 let r, i;
-n.r(t), n.d(t, { default: () => Q }), n(321073), n(896048);
+n.r(t),
+    n.d(t, {
+        default: () => Q,
+    }),
+    n(321073),
+    n(896048);
 var a,
     s = n(735438),
     o = n.n(s),
@@ -10,6 +15,7 @@ var a,
     f = n(718116),
     p = n(555337),
     _ = n(652215);
+
 function h(e, t, n) {
     return (
         t in e
@@ -23,6 +29,7 @@ function h(e, t, n) {
         e
     );
 }
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -50,6 +57,7 @@ let g = [],
     I = {},
     T = !1,
     C = null;
+
 function N(e) {
     let { section: t } = e;
     if (t !== _.BEX.INTEGRATIONS) return !1;
@@ -58,10 +66,12 @@ function N(e) {
         null != e && (u.A.fetchForGuild(e), (A = !0)), w(!1);
     }
 }
+
 function R(e) {
     let { section: t, sectionId: n } = e;
     (i = t), (C = n);
 }
+
 function w(e) {
     if (null != (r = p.A.getProps().guild) && d.A.can(_.xBc.MANAGE_GUILD, r)) {
         let e = p.A.getProps().integrations;
@@ -77,6 +87,7 @@ function w(e) {
     }
     (b = null), (S = _.XlH.OPEN), (I = {}), (T = !1);
 }
+
 function P() {
     (r = null), (g = []), (E = []), (b = null), (y = null), (O = null), (S = _.XlH.CLOSED), (T = !1);
 }
@@ -85,6 +96,7 @@ let D = o().debounce(() => {
         (null != y ? o().isEqual(y, z(y.id)) && (T = !1) : null != O && o().isEqual(O, q(O.id)) && (T = !1),
         T || Z.emitChange());
 }, 500);
+
 function x(e) {
     let { settings: t } = e;
     if (null == y) return !1;
@@ -100,6 +112,7 @@ function x(e) {
             ((y.expire_grace_period = t.expireGracePeriod), (T = !0)),
         T && D();
 }
+
 function L(e) {
     let { settings: t } = e;
     if (null == O) return !1;
@@ -109,14 +122,17 @@ function L(e) {
         null != t.channelId && O.channel_id !== t.channelId && ((O.channel_id = t.channelId), (T = !0)),
         T && D();
 }
+
 function j() {
     (S = _.XlH.SUBMITTING), (I = {});
 }
+
 function M(e) {
     var t;
     if (S !== _.XlH.SUBMITTING) return !1;
     (S = _.XlH.OPEN), (I = null != (t = e.errors) ? t : {});
 }
+
 function k(e) {
     let { guildId: t, integrations: n } = e;
     if (null == r || t !== r.id || S === _.XlH.SUBMITTING) return !1;
@@ -147,6 +163,7 @@ function k(e) {
     }
     (g = [...g]), D();
 }
+
 function U(e) {
     let { guildId: t, channelId: n, webhooks: i } = e;
     if (((A = !1), null != r && t === r.id && null != i && S !== _.XlH.SUBMITTING)) {
@@ -171,45 +188,55 @@ function U(e) {
         (E = [...E]), D();
     }
 }
+
 function G(e) {
     let { commandId: t } = e;
     (b = t), (y = null), (O = null), (I = {}), (T = !0);
 }
+
 function V(e) {
     let { commandId: t } = e;
     if (null == b || b !== t) return !1;
     (b = null), (I = {}), (T = !1);
 }
+
 function F(e) {
     let { integrationId: t } = e,
         n = z(t);
     if (null == n) return !1;
     (y = n), (b = null), (O = null), (I = {}), (T = !1);
 }
+
 function B() {
     (y = null), (I = {}), (T = !1);
 }
+
 function H(e) {
     let { webhookId: t } = e,
         n = q(t);
     if (null == n) return !1;
     (O = n), (b = null), (y = null), (I = {}), (T = !1);
 }
+
 function Y() {
     (O = null), (I = {}), (T = !1);
 }
+
 function W() {
     return w(!1);
 }
+
 function K() {
     return w(!0);
 }
+
 function z(e) {
     return g.find((t) => {
         let { id: n } = t;
         return n === e;
     });
 }
+
 function q(e) {
     return E.find((t) => {
         let { id: n } = t;

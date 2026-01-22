@@ -13,7 +13,7 @@ var r = n(627968),
     c = n.n(a),
     o = n(735438),
     d = n.n(o),
-    u = n(432022),
+    u = n(108531),
     f = n(835245),
     g = n(311907),
     b = n(990078),
@@ -47,6 +47,7 @@ var r = n(627968),
     H = n(985018),
     V = n(602217),
     K = n(506823);
+
 function z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -72,7 +73,7 @@ function z(e) {
     }
     return e;
 }
-let Y = d().throttle(x.dZ, 1000),
+let Y = d().throttle(x.dZ, 1e3),
     W = (e) => {
         var t, n;
         let { guildId: l, emoji: a, onEdit: c, editingDisabled: o = !1, isNewlyAdded: d = !1 } = e,
@@ -84,8 +85,12 @@ let Y = d().throttle(x.dZ, 1000),
             }),
             [O] = (0, m.zhh)(
                 () => ({
-                    from: { scale: 2 },
-                    to: { scale: 1 },
+                    from: {
+                        scale: 2,
+                    },
+                    to: {
+                        scale: 1,
+                    },
                     config: {
                         mass: 10,
                         tension: 1500,
@@ -96,8 +101,12 @@ let Y = d().throttle(x.dZ, 1000),
             ),
             [y] = (0, m.zhh)(
                 () => ({
-                    from: { opacity: 0 },
-                    to: { opacity: 1 },
+                    from: {
+                        opacity: 0,
+                    },
+                    to: {
+                        opacity: 1,
+                    },
                     config: {
                         duration: 200,
                         clamp: !0,
@@ -115,10 +124,15 @@ let Y = d().throttle(x.dZ, 1000),
                     children: (0, r.jsx)(b.m, {
                         text: a.available ? null : H.intl.string(H.t.KUzI73),
                         children: (0, r.jsx)(u.animated.div, {
-                            className: s()(V.mp, { [V.Zw]: !a.available }),
+                            className: s()(V.mp, {
+                                [V.Zw]: !a.available,
+                            }),
                             style:
                                 ((t = z({}, d ? O : {}, d ? y : {})),
-                                (n = n = { backgroundImage: "url(".concat(j, ")") }),
+                                (n = n =
+                                    {
+                                        backgroundImage: "url(".concat(j, ")"),
+                                    }),
                                 Object.getOwnPropertyDescriptors
                                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                                     : (function (e, t) {
@@ -140,7 +154,9 @@ let Y = d().throttle(x.dZ, 1000),
                     children: (0, r.jsx)("div", {
                         className: V.Yf,
                         children: (0, r.jsx)(h.A, {
-                            className: s()({ [V.XH]: o }),
+                            className: s()({
+                                [V.XH]: o,
+                            }),
                             disabled: o,
                             minLen: 1,
                             maxLen: B.zj,
@@ -284,7 +300,9 @@ let Y = d().throttle(x.dZ, 1000),
             s = Math.max(n - i, 0);
         return (0, r.jsx)(m.nVY, {
             label: t,
-            description: H.intl.format(H.t.sgL8sI, { count: s }),
+            description: H.intl.format(H.t.sgL8sI, {
+                count: s,
+            }),
             children: l,
         });
     },
@@ -296,7 +314,9 @@ let Y = d().throttle(x.dZ, 1000),
         return 0 === t.length
             ? (0, r.jsx)(m.ppr, {
                   theme: d,
-                  children: (0, r.jsx)(m.SGT, { children: H.intl.string(H.t.SpxYoT) }),
+                  children: (0, r.jsx)(m.SGT, {
+                      children: H.intl.string(H.t.SpxYoT),
+                  }),
               })
             : (0, r.jsxs)("div", {
                   role: "table",
@@ -371,11 +391,17 @@ let Y = d().throttle(x.dZ, 1000),
         return null == u || d === F.TVA.TIER_3 || o > 0
             ? null
             : (o > c
-                  ? ((t = H.intl.formatToPlainString(H.t.j0UH0m, { level: u })),
-                    (n = H.intl.formatToPlainString(H.t.VQeyK6, { level: u })),
+                  ? ((t = H.intl.formatToPlainString(H.t.j0UH0m, {
+                        level: u,
+                    })),
+                    (n = H.intl.formatToPlainString(H.t.VQeyK6, {
+                        level: u,
+                    })),
                     (i = F.ZSU.BOOST_UPSELL_BANNER_LOST_LEVEL))
                   : ((t = H.intl.string(H.t.zT9SxY)),
-                    (n = H.intl.formatToPlainString(H.t.dBZ1RU, { level: u })),
+                    (n = H.intl.formatToPlainString(H.t.dBZ1RU, {
+                        level: u,
+                    })),
                     (i = F.ZSU.BOOST_UPSELL_BANNER_SLOTS_FULL)),
               (0, r.jsx)(S.A, {
                   header: t,
@@ -411,7 +437,9 @@ let Y = d().throttle(x.dZ, 1000),
                 totalStaticEmoji: G,
                 animatedEmoji: B,
                 totalAnimatedEmoji: K,
-            } = (0, N.v)({ guild: l }),
+            } = (0, N.v)({
+                guild: l,
+            }),
             [W, J] = i.useState(null);
         i.useEffect(() => {
             x && et();
@@ -463,7 +491,9 @@ let Y = d().throttle(x.dZ, 1000),
                     guildId: l.id,
                     uploadId: s,
                     hideErrorModal: !0,
-                    analyticsLocation: { page: F.liQ.GUILD_SETTINGS },
+                    analyticsLocation: {
+                        page: F.liQ.GUILD_SETTINGS,
+                    },
                 });
                 if ("object" != typeof r || !("id" in r)) return r;
                 U.X({
@@ -490,7 +520,16 @@ let Y = d().throttle(x.dZ, 1000),
             en = async (e) => {
                 I.current = await (0, m.mMO)(async () => {
                     let { default: t } = await n.e("17259").then(n.bind(n, 897126));
-                    return (n) => (0, r.jsx)(t, z({ processFiles: () => ee(e) }, n));
+                    return (n) =>
+                        (0, r.jsx)(
+                            t,
+                            z(
+                                {
+                                    processFiles: () => ee(e),
+                                },
+                                n,
+                            ),
+                        );
                 });
             },
             er = i.useCallback(
@@ -502,7 +541,9 @@ let Y = d().throttle(x.dZ, 1000),
                             image: r,
                         },
                         guildId: l.id,
-                        analyticsLocation: { page: F.liQ.GUILD_SETTINGS },
+                        analyticsLocation: {
+                            page: F.liQ.GUILD_SETTINGS,
+                        },
                     }),
                         (t.current += 1);
                 },
@@ -530,7 +571,9 @@ let Y = d().throttle(x.dZ, 1000),
                                 }),
                                 (0, r.jsx)(m.Text, {
                                     variant: "text-md/normal",
-                                    children: H.intl.format(H.t.TA1BR0, { count: w }),
+                                    children: H.intl.format(H.t.TA1BR0, {
+                                        count: w,
+                                    }),
                                 }),
                             ],
                         }),
@@ -589,7 +632,10 @@ let Y = d().throttle(x.dZ, 1000),
                             animatedEmoji: B,
                             guild: l,
                             theme: o,
-                            onEdit: (e) => q({ emoji: e }),
+                            onEdit: (e) =>
+                                q({
+                                    emoji: e,
+                                }),
                             newlyAddedEmojiIds: Z,
                         }),
                     ],

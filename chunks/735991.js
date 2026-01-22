@@ -48,6 +48,7 @@ var r = n(487899),
     O = n(73510),
     A = n(381941),
     v = n(985018);
+
 function S(e, t, n) {
     return (
         t in e
@@ -61,6 +62,7 @@ function S(e, t, n) {
         e
     );
 }
+
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -77,6 +79,7 @@ function I(e) {
     }
     return e;
 }
+
 function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -89,6 +92,7 @@ function T(e, t) {
     }
     return n;
 }
+
 function C(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -100,6 +104,7 @@ function C(e, t) {
         e
     );
 }
+
 function N(e, t) {
     if (null == e) return {};
     var n,
@@ -116,6 +121,7 @@ function N(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function R(e, t) {
     if (null == e) return {};
     var n,
@@ -126,28 +132,37 @@ function R(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
-let w = { id: O.Ik.BUILT_IN };
+let w = {
+    id: O.Ik.BUILT_IN,
+};
+
 function P(e) {
     return e.id !== O.Ik.BUILT_IN;
 }
+
 function D(e) {
     return P(e) ? e.name : v.intl.string(v.t.UB2gG2);
 }
+
 function x(e) {
     return P(e) ? e.description : v.intl.string(v.t.X9fusn);
 }
+
 function L(e) {
     var t;
     return P(e) && (0, i.Lt)(null != (t = e.flags) ? t : 0, y.gfo.EMBEDDED);
 }
+
 function j(e) {
     var t;
     return P(e) && (0, i.Lt)(null != (t = e.flags) ? t : 0, y.gfo.PARTNER);
 }
+
 function M(e) {
     var t;
     return P(e) && (0, i.Lt)(null != (t = e.flags) ? t : 0, y.gfo.PROMOTED);
 }
+
 function k(e) {
     let t = G(e),
         n = null == t ? void 0 : t.client_platform_config[(0, l.A)((0, g.getOS)())],
@@ -163,6 +178,7 @@ function k(e) {
     }
     return o.Hr.NONE;
 }
+
 function U(e) {
     switch (k(e)) {
         case o.Hr.NEW:
@@ -173,9 +189,11 @@ function U(e) {
             return "";
     }
 }
+
 function G(e) {
     return P(e) && L(e) ? (e instanceof h.Ay ? e.embeddedActivityConfig : e.embedded_activity_config) : null;
 }
+
 function V(e) {
     let {
             command: t,
@@ -203,7 +221,9 @@ function V(e) {
                     var e;
                     let t = _.Ay.parse(d, a.content);
                     (t.tts = null != (e = a.tts) && e),
-                        s.A.sendMessage(r.channel.id, t, !0, { location: A.Hx.APP_COMMAND });
+                        s.A.sendMessage(r.channel.id, t, !0, {
+                            location: A.Hx.APP_COMMAND,
+                        });
                 }
             } catch (e) {
                 throw (
@@ -219,6 +239,7 @@ function V(e) {
         };
     return p();
 }
+
 function F(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { fakeAppIconURL: n } = t,
@@ -240,27 +261,38 @@ function F(e) {
               description: v.intl.string(v.t.X9fusn),
           };
 }
+
 function B(e) {
     return !!P(e) && (e instanceof h.Ay ? e.isMonetized : e.is_monetized);
 }
+
 function H(e) {
     let t = G(e);
     return null != t && t.displays_advertisements;
 }
+
 function Y(e) {
     return e === b.s4.TEXT;
 }
+
 function W(e) {
     return null == e ? "" : (e.charAt(0).toLocaleUpperCase() + e.slice(1)).replaceAll("_", " ");
 }
+
 function K(e) {
     let t = [];
     for (let n of e) {
         let e = n.application_directory_collection_items.filter((e) => e.type === r.L.APPLICATION && L(e.application));
-        0 !== e.length && t.push(C(I({}, n), { application_directory_collection_items: e }));
+        0 !== e.length &&
+            t.push(
+                C(I({}, n), {
+                    application_directory_collection_items: e,
+                }),
+            );
     }
     return t;
 }
+
 function z(e) {
     return {
         applicationId: e.id,
@@ -269,6 +301,7 @@ function z(e) {
         integrationTypesConfig: e.integrationTypesConfig,
     };
 }
+
 function q(e) {
     return e instanceof h.Ay
         ? {
@@ -284,6 +317,7 @@ function q(e) {
               integrationTypesConfig: e.integration_types_config,
           };
 }
+
 function X(e, t) {
     let n = null != t ? c.Ay.getGuildState(t) : null,
         r = null != n && (0, d.gI)(e.id, n);

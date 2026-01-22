@@ -9,4 +9,6 @@ function r() {
               return e;
           }).apply(null, arguments);
 }
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});

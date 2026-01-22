@@ -1,4 +1,7 @@
-n.d(t, { A: () => g }), n(896048);
+n.d(t, {
+    A: () => g,
+}),
+    n(896048);
 var r = n(311907),
     i = n(73153),
     a = n(994500),
@@ -7,9 +10,11 @@ var r = n(311907),
 let l = {},
     c = {},
     u = new Set();
+
 function d() {
     (l = {}), (c = {});
 }
+
 function f() {
     d();
     let e = s.A.getAllVoiceStates(),
@@ -18,11 +23,13 @@ function f() {
         for (let e of Object.values(n)) null != e.channelId && (t = h(e.channelId, e.userId) || t);
     return t;
 }
+
 function p(e) {
     let { relationship: t } = e,
         n = s.A.getVoiceStateForUser(t.id);
     return null != n && null != n.channelId && h(n.channelId, t.id);
 }
+
 function _(e) {
     let { voiceStates: t } = e,
         n = !1;
@@ -38,6 +45,7 @@ function _(e) {
         n
     );
 }
+
 function h(e, t) {
     let n = !1,
         r = !1,

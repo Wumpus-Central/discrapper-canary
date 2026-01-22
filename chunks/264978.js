@@ -28,8 +28,12 @@ var n = r(64700),
                                 height: r,
                                 overflowY: "scroll",
                             },
-                            body: { padding: "16px 0 6px 16px" },
-                            clear: { clear: "both" },
+                            body: {
+                                padding: "16px 0 6px 16px",
+                            },
+                            clear: {
+                                clear: "both",
+                            },
                         },
                     },
                     void 0 === f ? {} : f,
@@ -55,10 +59,14 @@ var n = r(64700),
                 null,
                 n.createElement(
                     "div",
-                    { style: b.overflow },
+                    {
+                        style: b.overflow,
+                    },
                     n.createElement(
                         "div",
-                        { style: b.body },
+                        {
+                            style: b.body,
+                        },
                         (0, l.A)(u, function (e) {
                             return n.createElement(p.A, {
                                 key: e.toString(),
@@ -68,7 +76,9 @@ var n = r(64700),
                                 onSwatchHover: a,
                             });
                         }),
-                        n.createElement("div", { style: b.clear }),
+                        n.createElement("div", {
+                            style: b.clear,
+                        }),
                     ),
                 ),
             ),

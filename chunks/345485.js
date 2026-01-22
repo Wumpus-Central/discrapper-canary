@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var r = n(627968);
 n(64700);
 var i = n(110259),
@@ -13,6 +15,7 @@ var i = n(110259),
     f = n(49999),
     h = n(985018),
     A = n(330766);
+
 function g(e) {
     let { guildId: t, markAsDismissed: n, targetElementRef: g } = e,
         m = (0, l.bG)([u.A, d.default], () => {
@@ -48,7 +51,9 @@ function g(e) {
             ],
             onRequestClose: () => n(f.i.USER_DISMISS),
             position: "bottom",
-            caretConfig: { align: "center" },
+            caretConfig: {
+                align: "center",
+            },
         })
     );
 }

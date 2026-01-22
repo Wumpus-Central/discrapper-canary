@@ -1,4 +1,6 @@
-t.d(l, { A: () => p });
+t.d(l, {
+    A: () => p,
+});
 var n = t(627968),
     i = t(397927),
     r = t(688810),
@@ -7,6 +9,7 @@ var n = t(627968),
     o = t(657331),
     d = t(950191),
     c = t(985018);
+
 function u(e) {
     for (var l = 1; l < arguments.length; l++) {
         var t = null != arguments[l] ? arguments[l] : {},
@@ -32,6 +35,7 @@ function u(e) {
     }
     return e;
 }
+
 function f(e, l) {
     return (
         (l = null != l ? l : {}),
@@ -50,6 +54,7 @@ function f(e, l) {
         e
     );
 }
+
 function p(e) {
     let { user: l, guildId: t, channelId: p, displayProfile: m, onClose: x } = e,
         { analyticsLocations: A, sourceAnalyticsLocations: j } = (0, r.Ay)(),
@@ -61,7 +66,9 @@ function p(e) {
           ? (0, n.jsx)(i.Drp, {
                 id: "view-main-profile",
                 label: c.intl.string(c.t.GISTta),
-                subtext: c.intl.formatToPlainString(c.t["mn/nW2"], { displayName: s.Ay.getName(void 0, void 0, l) }),
+                subtext: c.intl.formatToPlainString(c.t["mn/nW2"], {
+                    displayName: s.Ay.getName(void 0, void 0, l),
+                }),
                 action: () => {
                     null == x || x(),
                         (0, o.openUserProfileModal)(
@@ -93,7 +100,9 @@ function p(e) {
           : (0, n.jsx)(i.Drp, {
                 id: "view-server-profile",
                 label: c.intl.string(c.t.DisZzB),
-                subtext: c.intl.formatToPlainString(c.t["mn/nW2"], { displayName: s.Ay.getName(t, p, l) }),
+                subtext: c.intl.formatToPlainString(c.t["mn/nW2"], {
+                    displayName: s.Ay.getName(t, p, l),
+                }),
                 action: () => {
                     null == x || x(),
                         (0, o.openUserProfileModal)(

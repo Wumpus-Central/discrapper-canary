@@ -1,4 +1,8 @@
-n.d(t, { A: () => u }), n(114821), n(339614);
+n.d(t, {
+    A: () => u,
+}),
+    n(114821),
+    n(339614);
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -7,6 +11,7 @@ var i = n(503698),
     o = n(156312),
     l = n(166532),
     c = n(329268);
+
 function u(e) {
     let { className: t, isEligibleForTrial: n = !1 } = e,
         {

@@ -1,4 +1,7 @@
-l.d(t, { A: () => O }), l(896048);
+l.d(t, {
+    A: () => O,
+}),
+    l(896048);
 var n = l(627968),
     r = l(64700),
     s = l(172218),
@@ -18,6 +21,7 @@ var n = l(627968),
     v = l(940622),
     A = l(758836),
     x = l(157884);
+
 function S(e) {
     let { category: t } = e,
         l = (0, a.bG)([o.default], () => o.default.getCurrentUser()),
@@ -33,7 +37,9 @@ function S(e) {
                   (0, n.jsx)(
                       c.R9,
                       {
-                          newValue: { tilePosition: t },
+                          newValue: {
+                              tilePosition: t,
+                          },
                           children: (0, n.jsx)(
                               p.A,
                               {
@@ -49,6 +55,7 @@ function S(e) {
               ),
           });
 }
+
 function C(e) {
     let { category: t } = e,
         [l, a] = r.useState(!1),
@@ -58,9 +65,17 @@ function C(e) {
     return (0, n.jsxs)("div", {
         className: x.EF,
         ref: i,
-        children: [(0, n.jsx)(b.A, { category: t }), (0, n.jsx)(S, { category: t })],
+        children: [
+            (0, n.jsx)(b.A, {
+                category: t,
+            }),
+            (0, n.jsx)(S, {
+                category: t,
+            }),
+        ],
     });
 }
+
 function O(e) {
     var t;
     let { sortedCategories: l, setCategoryRef: s, currentPage: a, handlePageChange: o, initialCategoryId: u } = e,
@@ -125,8 +140,12 @@ function O(e) {
                           {
                               ref: (t) => s(e.skuId, t),
                               children: (0, n.jsx)(c.R9, {
-                                  newValue: { categoryPosition: t },
-                                  children: (0, n.jsx)(C, { category: e }),
+                                  newValue: {
+                                      categoryPosition: t,
+                                  },
+                                  children: (0, n.jsx)(C, {
+                                      category: e,
+                                  }),
                               }),
                           },
                           e.skuId,

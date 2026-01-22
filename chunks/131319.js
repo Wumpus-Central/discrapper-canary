@@ -1,7 +1,10 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r,
     i = n(311907),
     a = n(73153);
+
 function s(e, t, n) {
     return (
         t in e
@@ -16,6 +19,7 @@ function s(e, t, n) {
     );
 }
 let o = n(731854).PR;
+
 function l(e) {
     o = e.bitrate;
 }
@@ -25,4 +29,6 @@ class c extends (r = i.Ay.Store) {
     }
 }
 s(c, "displayName", "BitRateStore");
-let u = new c(a.h, { SET_CHANNEL_BITRATE: l });
+let u = new c(a.h, {
+    SET_CHANNEL_BITRATE: l,
+});

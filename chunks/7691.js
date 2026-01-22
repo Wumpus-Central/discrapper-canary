@@ -1,4 +1,8 @@
-n.d(t, { A: () => S }), n(896048), n(775443);
+n.d(t, {
+    A: () => S,
+}),
+    n(896048),
+    n(775443);
 var r = n(627968),
     i = n(64700),
     a = n(397927),
@@ -13,6 +17,7 @@ var r = n(627968),
     _ = n(60809),
     h = n(652215),
     m = n(732679);
+
 function g(e, t, n) {
     return (
         t in e
@@ -26,6 +31,7 @@ function g(e, t, n) {
         e
     );
 }
+
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,6 +48,7 @@ function E(e) {
     }
     return e;
 }
+
 function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -54,6 +61,7 @@ function b(e, t) {
     }
     return n;
 }
+
 function y(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -69,7 +77,10 @@ let O = {
         width: 500,
         height: _.$V,
     },
-    A = { height: _.$V };
+    A = {
+        height: _.$V,
+    };
+
 function v(e, t) {
     let { context: n, entrypoint: a, initHistory: u } = e,
         { analyticsLocations: d } = (0, l.Ay)(s.A.APP_LAUNCHER);
@@ -111,9 +122,18 @@ function v(e, t) {
     );
 }
 let S = i.memo(i.forwardRef(v));
+
 function I(e) {
     let { initHistory: t, children: n } = e,
-        [a, s] = i.useState(null != t ? t : [{ type: u.Wy.HOME }]),
+        [a, s] = i.useState(
+            null != t
+                ? t
+                : [
+                      {
+                          type: u.Wy.HOME,
+                      },
+                  ],
+        ),
         [o, l] = i.useState({}),
         c = a[a.length - 1],
         [d, f] = i.useState(!1),
@@ -123,7 +143,13 @@ function I(e) {
         _ = i.useCallback(() => {
             let e = null;
             s((t) => (t.length <= 1 ? t : ((e = t[t.length - 1]), t.slice(0, -1)))),
-                l((t) => (null == e ? t : y(E({}, t), { [e.type]: e })));
+                l((t) =>
+                    null == e
+                        ? t
+                        : y(E({}, t), {
+                              [e.type]: e,
+                          }),
+                );
         }, []),
         h = i.useCallback(
             (e) => {
@@ -146,6 +172,7 @@ function I(e) {
         children: n,
     });
 }
+
 function T(e) {
     let { context: t, entrypoint: n } = e,
         [s, o] = i.useState(""),
@@ -215,6 +242,7 @@ function T(e) {
         ],
     });
 }
+
 function C(e) {
     let [t, n] = i.useState(null),
         [r, a] = i.useState(!1),
@@ -232,6 +260,7 @@ function C(e) {
                         t.removeEventListener("scroll", e, !1);
                     }
                 );
+
             function e() {
                 null == t || ((s.current = t.scrollTop), a(t.scrollHeight - (t.scrollTop + t.clientHeight) < 340));
             }

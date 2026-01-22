@@ -1,4 +1,7 @@
-n.d(t, { getApplicationPaymentSteps: () => m }), n(896048);
+n.d(t, {
+    getApplicationPaymentSteps: () => m,
+}),
+    n(896048);
 var r = n(627968);
 n(64700);
 var i = n(166532),
@@ -9,6 +12,7 @@ var i = n(166532),
     c = n(155301),
     u = n(758655),
     d = n(985018);
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,6 +38,7 @@ function p(e) {
     }
     return e;
 }
+
 function m(e) {
     let { guildId: t, showBenefitsFirst: n } = e;
     return [
@@ -54,7 +59,9 @@ function m(e) {
         {
             key: i.pn.BENEFITS,
             renderStep: (e) => (0, r.jsx)(s.A, p({}, e)),
-            options: { useBreadcrumbLabel: () => d.intl.string(d.t["5LD2+B"]) },
+            options: {
+                useBreadcrumbLabel: () => d.intl.string(d.t["5LD2+B"]),
+            },
         },
         {
             key: i.pn.ADD_PAYMENT_STEPS,
@@ -82,7 +89,9 @@ function m(e) {
                     t),
                 );
             },
-            options: { renderHeader: !0 },
+            options: {
+                renderHeader: !0,
+            },
         },
         ...a.hh,
         {
@@ -105,7 +114,16 @@ function m(e) {
         },
         {
             key: i.pn.CONFIRM,
-            renderStep: (e) => (0, r.jsx)(o.A, p({ showBenefits: !n }, e)),
+            renderStep: (e) =>
+                (0, r.jsx)(
+                    o.A,
+                    p(
+                        {
+                            showBenefits: !n,
+                        },
+                        e,
+                    ),
+                ),
         },
     ];
 }

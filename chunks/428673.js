@@ -1,4 +1,6 @@
-n.d(t, { L: () => c });
+n.d(t, {
+    L: () => c,
+});
 var r = n(467276),
     i = n(65412),
     a = n(124651),
@@ -43,7 +45,11 @@ class c {
                     throw Error(
                         `Multiple members of the oneof group "${l.oneof}" of ${this.info.typeName} are present in JSON.`,
                     );
-                i.push(l.oneof), (e = t[l.oneof] = { oneofKind: c });
+                i.push(l.oneof),
+                    (e = t[l.oneof] =
+                        {
+                            oneofKind: c,
+                        });
             } else e = t;
             if ("map" == l.kind) {
                 if (null === o) continue;

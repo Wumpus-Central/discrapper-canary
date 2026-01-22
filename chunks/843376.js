@@ -1,4 +1,6 @@
-n.d(t, { i: () => h });
+n.d(t, {
+    i: () => h,
+});
 var r = n(627968),
     i = n(110259),
     s = n(397927),
@@ -6,6 +8,7 @@ var r = n(627968),
     a = n(928658),
     o = n(369053),
     c = n(985018);
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -31,6 +34,7 @@ function u(e) {
     }
     return e;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -49,6 +53,7 @@ function d(e, t) {
         e
     );
 }
+
 function h(e, t) {
     let h = (h) => {
         let f = async () => {
@@ -78,11 +83,15 @@ function h(e, t) {
                                 onSuccess: g,
                                 headerText: c.intl.string(c.t.H3Q7U8),
                                 confirmButtonText: c.intl.string(c.t["13ofGu"]),
-                                impression: { impressionName: i.ImpressionNames.URF_CONFIRM_EMAIL_CODE },
+                                impression: {
+                                    impressionName: i.ImpressionNames.URF_CONFIRM_EMAIL_CODE,
+                                },
                             }),
                         );
                 },
-                { onCloseCallback: t },
+                {
+                    onCloseCallback: t,
+                },
             );
     };
     return () => {
@@ -101,7 +110,9 @@ function h(e, t) {
                             }),
                         );
                 },
-                { onCloseCallback: t },
+                {
+                    onCloseCallback: t,
+                },
             );
     };
 }

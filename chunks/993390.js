@@ -1,4 +1,6 @@
-e.d(s, { default: () => u });
+e.d(s, {
+    default: () => u,
+});
 var a = e(627968);
 e(64700);
 var i = e(735438),

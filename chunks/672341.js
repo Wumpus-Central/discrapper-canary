@@ -1,4 +1,9 @@
-n.d(t, { A: () => et }), n(321073), n(896048), n(667532);
+n.d(t, {
+    A: () => et,
+}),
+    n(321073),
+    n(896048),
+    n(667532);
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -48,6 +53,7 @@ var r = n(627968),
     X = n(652215),
     J = n(327337),
     Q = n(985018);
+
 function Z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -73,6 +79,7 @@ function Z(e) {
     }
     return e;
 }
+
 function $(e) {
     return null != e && e.type === X.TZK.MESSAGE && e.content.id === e.groupId;
 }
@@ -99,6 +106,7 @@ let ee = l.memo(function (e) {
         }),
     });
 });
+
 function et(e) {
     var t, n;
     let l,
@@ -150,7 +158,12 @@ function et(e) {
                     });
             return null;
         })(U, null != (t = null != ey ? ey : eO) ? t : ej),
-        eE = U.isForumPost() && !eg ? (0, r.jsx)(b.A, { postId: U.id }) : null,
+        eE =
+            U.isForumPost() && !eg
+                ? (0, r.jsx)(b.A, {
+                      postId: U.id,
+                  })
+                : null,
         e_ = (0, m.A)(U.id),
         eC = (0, A.W1)(U);
     (0, z.A)();
@@ -282,7 +295,19 @@ function et(e) {
                 ),
             );
         let { useReducedMotion: e } = c.A;
-        ((e && eh()) || !e) && eI.unshift((0, r.jsx)(K.Ay, Z({ compact: el }, eo), "has-more"));
+        ((e && eh()) || !e) &&
+            eI.unshift(
+                (0, r.jsx)(
+                    K.Ay,
+                    Z(
+                        {
+                            compact: el,
+                        },
+                        eo,
+                    ),
+                    "has-more",
+                ),
+            );
     }
     if (
         ((et.hasMoreBefore && null == ec) ||
@@ -296,8 +321,27 @@ function et(e) {
                     "empty-message",
                 ),
             ),
-        et.hasMoreAfter && eI.push((0, r.jsx)(K.Ay, Z({ compact: el }, eo), "has-more-after")),
-        !eu && eb && eh() && eI.push((0, r.jsx)(W.A, { channel: U })),
+        et.hasMoreAfter &&
+            eI.push(
+                (0, r.jsx)(
+                    K.Ay,
+                    Z(
+                        {
+                            compact: el,
+                        },
+                        eo,
+                    ),
+                    "has-more-after",
+                ),
+            ),
+        !eu &&
+            eb &&
+            eh() &&
+            eI.push(
+                (0, r.jsx)(W.A, {
+                    channel: U,
+                }),
+            ),
         en > 0 && er && eh())
     ) {
         let e,
@@ -324,7 +368,9 @@ function et(e) {
                 (0, o.pk)(U))
             ) {
                 let n = eA
-                    ? Q.intl.format(t, { count: en })
+                    ? Q.intl.format(t, {
+                          count: en,
+                      })
                     : Q.intl.format(e, {
                           count: en,
                           timestamp: i,
@@ -337,7 +383,9 @@ function et(e) {
                                       (0, r.jsx)(a.Text, {
                                           variant: "text-sm/medium",
                                           color: "currentColor",
-                                          children: Q.intl.format(t, { count: en }),
+                                          children: Q.intl.format(t, {
+                                              count: en,
+                                          }),
                                       }),
                                       (0, r.jsx)(g.A, {
                                           style: {
@@ -350,7 +398,9 @@ function et(e) {
                                       (0, r.jsx)(a.Text, {
                                           variant: "text-sm/medium",
                                           color: "currentColor",
-                                          children: Q.intl.format(Q.t.CBftDc, { count: s }),
+                                          children: Q.intl.format(Q.t.CBftDc, {
+                                              count: s,
+                                          }),
                                       }),
                                   ],
                               })
@@ -378,7 +428,9 @@ function et(e) {
                                           (0, r.jsx)(a.Text, {
                                               variant: "text-sm/medium",
                                               color: "currentColor",
-                                              children: Q.intl.format(t, { count: en }),
+                                              children: Q.intl.format(t, {
+                                                  count: en,
+                                              }),
                                           }),
                                           (0, r.jsx)(g.A, {
                                               style: {
@@ -391,7 +443,9 @@ function et(e) {
                                           (0, r.jsx)(a.Text, {
                                               variant: "text-sm/medium",
                                               color: "currentColor",
-                                              children: Q.intl.format(Q.t.CBftDc, { count: s }),
+                                              children: Q.intl.format(Q.t.CBftDc, {
+                                                  count: s,
+                                              }),
                                           }),
                                       ],
                                   })
@@ -447,7 +501,9 @@ function et(e) {
         let { jumpReturnTargetId: e } = et;
         p =
             et.loadingMore && et.jumpedToPresent
-                ? (0, r.jsx)(B.Ab, { className: ef })
+                ? (0, r.jsx)(B.Ab, {
+                      className: ef,
+                  })
                 : null != e
                   ? (0, r.jsx)(B.Ab, {
                         type: B.ks.REPLY,

@@ -1,4 +1,7 @@
-n.d(t, { A: () => d }), n(896048);
+n.d(t, {
+    A: () => d,
+}),
+    n(896048);
 var r = n(64700),
     i = n(989349),
     a = n.n(i),
@@ -12,15 +15,16 @@ let c = [
         [21 * o.A.Seconds.HOUR, 5 * o.A.Seconds.MINUTE],
     ],
     u = 2 * o.A.Seconds.HOUR;
+
 function d(e) {
     let t = (0, s.A)();
     return (r.useEffect(() => {
         if ("R" !== e.format) return;
-        let n = 1000 * u,
+        let n = 1e3 * u,
             r = Math.abs(e.parsed.diff(a()()));
         for (let [e, t] of c)
-            if (r < 1000 * e) {
-                n = 1000 * t;
+            if (r < 1e3 * e) {
+                n = 1e3 * t;
                 break;
             }
         let i = setInterval(() => {

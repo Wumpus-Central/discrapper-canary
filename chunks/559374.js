@@ -6,4 +6,6 @@ function r(e) {
     }
     return e;
 }
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});

@@ -1,4 +1,8 @@
-n.r(t), n.d(t, { default: () => N }), n(896048);
+n.r(t),
+    n.d(t, {
+        default: () => N,
+    }),
+    n(896048);
 var r = n(627968),
     a = n(64700),
     l = n(934551),
@@ -21,6 +25,7 @@ var r = n(627968),
     O = n(294726),
     S = n(985018),
     _ = n(715896);
+
 function N(e) {
     let { guildId: t } = e;
     (0, m.tR)(t), (0, h.A)(t);
@@ -64,13 +69,17 @@ function N(e) {
                             icon: l.GameControllerIcon,
                             "aria-label": "",
                         }),
-                        (0, r.jsx)(o.Ay.Title, { children: S.intl.string(O.default.vCzwM7) }),
+                        (0, r.jsx)(o.Ay.Title, {
+                            children: S.intl.string(O.default.vCzwM7),
+                        }),
                         (0, r.jsx)(s.LpS, {
                             disableColor: !0,
                             text: S.intl.string(S.t.oW0eUd),
                             className: _.qS,
                         }),
-                        (0, r.jsx)(o.Ay.Divider, { className: _.yF }),
+                        (0, r.jsx)(o.Ay.Divider, {
+                            className: _.yF,
+                        }),
                         (0, r.jsx)(s.Text, {
                             variant: "text-sm/normal",
                             color: "text-muted",
@@ -98,16 +107,27 @@ function N(e) {
                                       (0, r.jsx)(s.IpV, {
                                           children: (0, r.jsxs)("div", {
                                               className: _.Y_,
-                                              children: [E, I && (0, r.jsx)(v.A, { guildId: t })],
+                                              children: [
+                                                  E,
+                                                  I &&
+                                                      (0, r.jsx)(v.A, {
+                                                          guildId: t,
+                                                      }),
+                                              ],
                                           }),
                                       }),
                                   ],
                               })
                             : (0, r.jsx)("div", {
                                   className: _.dc,
-                                  children: (0, r.jsx)(s.y$y, { type: s.tVU.SPINNING_CIRCLE }),
+                                  children: (0, r.jsx)(s.y$y, {
+                                      type: s.tVU.SPINNING_CIRCLE,
+                                  }),
                               }),
-                        N && (0, r.jsx)(p.A, { guildId: t }),
+                        N &&
+                            (0, r.jsx)(p.A, {
+                                guildId: t,
+                            }),
                     ],
                 }),
             ],

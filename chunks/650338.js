@@ -20,6 +20,7 @@ var r = n(64700),
     p = n(788868),
     _ = n(731854),
     h = n(985018);
+
 function m(e) {
     if (null == e) return;
     let t = e.maxResolution.type === _.ei.SOURCE ? f.on.RESOLUTION_SOURCE : e.maxResolution.height,
@@ -29,25 +30,35 @@ function m(e) {
         null == f.ZV.find((e) => e.resolution === n && e.fps !== f.kn.FPS_5 && !E(e))
     );
 }
+
 function g(e) {
     if (null == e) return;
     let t = (0, f.AC)(e.maxFrameRate);
     return null == f.ZV.find((e) => e.fps === t && !E(e));
 }
+
 function E(e) {
     return null != e.quality || null != e.guildPremiumTier;
 }
+
 function b(e, t, n) {
     return f.ZV.find((r) => (null == r.preset || r.preset === e) && r.resolution === t && r.fps === n);
 }
+
 function y(e) {
     return e.type === _.ei.SOURCE
         ? h.intl.string(h.t.XjXqzh)
-        : h.intl.formatToPlainString(h.t.TEOC0I, { resolution: e.height });
+        : h.intl.formatToPlainString(h.t.TEOC0I, {
+              resolution: e.height,
+          });
 }
+
 function O(e) {
-    return h.intl.formatToPlainString(h.t.Qb44XH, { fps: e });
+    return h.intl.formatToPlainString(h.t.Qb44XH, {
+        fps: e,
+    });
 }
+
 function A(e) {
     return null == e.maxResolution || null == e.maxFrameRate
         ? null
@@ -56,6 +67,7 @@ function A(e) {
               maxResolution: e.maxResolution,
           };
 }
+
 function v(e) {
     let t = (0, i.cf)([a.A], () => a.A.getState()),
         n = (0, i.bG)([s.default], () => s.default.getId());
@@ -74,6 +86,7 @@ function v(e) {
         [n, e, t],
     );
 }
+
 function S(e, t, n) {
     let r = b(e, t, n),
         i = c.default.getCurrentUser(),

@@ -1,4 +1,8 @@
-n.d(t, { A: () => C }), n(896048), n(638769);
+n.d(t, {
+    A: () => C,
+}),
+    n(896048),
+    n(638769);
 var r = n(627968),
     l = n(64700),
     i = n(735438),
@@ -22,6 +26,7 @@ var r = n(627968),
     x = n(985018),
     E = n(877409);
 let _ = "vc-gifting-".concat((0, a.A)());
+
 function C(e) {
     var t;
     let { isHovered: n, closePopout: a, onMouseEnter: C, onMouseLeave: S, channel: I } = e;
@@ -134,7 +139,12 @@ function C(e) {
                         }),
                         (0, r.jsx)("div", {
                             className: E.Xb,
-                            children: "loading" === R || 0 === D.length ? (0, r.jsx)(s.y$y, { className: E.Lq }) : L,
+                            children:
+                                "loading" === R || 0 === D.length
+                                    ? (0, r.jsx)(s.y$y, {
+                                          className: E.Lq,
+                                      })
+                                    : L,
                         }),
                     ],
                 }),

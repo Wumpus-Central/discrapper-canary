@@ -1,4 +1,7 @@
-n.d(t, { A: () => g }), n(896048);
+n.d(t, {
+    A: () => g,
+}),
+    n(896048);
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -9,6 +12,7 @@ var i = n(503698),
     c = n(953727),
     u = n(795269),
     d = n(248201);
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +40,7 @@ function p(e) {
 }
 let f = "premium_tier_gradient",
     h = "smaller_sparkle_gradient";
+
 function A(e) {
     var t, n;
     let { width: i = 14, height: l = 15, color: a = "white", foreground: s } = e,
@@ -113,7 +118,9 @@ function A(e) {
                         y2: "8.58386",
                         gradientUnits: "userSpaceOnUse",
                         children: [
-                            (0, r.jsx)("stop", { stopColor: "#8547C6" }),
+                            (0, r.jsx)("stop", {
+                                stopColor: "#8547C6",
+                            }),
                             (0, r.jsx)("stop", {
                                 offset: "0.52899",
                                 stopColor: "#B845C1",
@@ -145,6 +152,7 @@ function A(e) {
         t),
     );
 }
+
 function g(e) {
     let { className: t, startsAt: n, endsAt: i, messageStyle: c, upperCase: p, showSparkles: g } = e,
         [m] = (0, o.Bo)(a.M.FRACTIONAL_NITRO_DURATION_LEFT_PILL, {

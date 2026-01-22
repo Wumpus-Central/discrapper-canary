@@ -8,19 +8,28 @@ var a = n(64700),
     l = n(397927),
     i = n(736653),
     r = n(890687);
+
 function s() {
-    let [{ spring: e }, t] = (0, l.zhh)(() => ({ spring: 0 }), "animate-always");
+    let [{ spring: e }, t] = (0, l.zhh)(
+        () => ({
+            spring: 0,
+        }),
+        "animate-always",
+    );
     return {
         completionSpring: e,
         startCompletionAnimation: a.useCallback(() => {
-            t({ spring: 1 }),
+            t({
+                spring: 1,
+            }),
                 t({
                     spring: 0,
-                    delay: 2000,
+                    delay: 2e3,
                 });
         }, [t]),
     };
 }
+
 function o(e, t) {
     var n;
     let a = (0, r.Vn)(e),
@@ -38,6 +47,7 @@ let c = () => {
     let e = document.body.style.getPropertyValue("--custom-guild-sidebar-width").slice(0, -2);
     return parseInt("" !== e ? e : "375");
 };
+
 function d() {
     return {
         label: !(function () {

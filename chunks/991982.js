@@ -5,6 +5,7 @@ n.d(t, {
 var l = n(627968);
 n(64700);
 var r = n(397927);
+
 function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -30,6 +31,7 @@ function a(e) {
     }
     return e;
 }
+
 function i(e) {
     let { guildId: t, userId: i, anaylticsLocations: s, modReportId: o } = e;
     (0, r.mMO)(async () => {
@@ -49,6 +51,7 @@ function i(e) {
             );
     });
 }
+
 function s(e) {
     let { guildId: t, userId: i, anaylticsLocations: s } = e;
     (0, r.mMO)(async () => {

@@ -1,4 +1,7 @@
-n.d(t, { A: () => R }), n(896048);
+n.d(t, {
+    A: () => R,
+}),
+    n(896048);
 var l = n(627968),
     r = n(64700),
     a = n(503698),
@@ -23,6 +26,7 @@ var l = n(627968),
     p = n(652215),
     b = n(438536),
     G = n(618695);
+
 function R(e) {
     var t, n;
     let { userId: a, guildId: R, location: D, className: L, onNavigate: x } = e,
@@ -90,7 +94,10 @@ function R(e) {
                         }
                         return e;
                     })({}, j)),
-                    (n = n = { offset: 25 * e }),
+                    (n = n =
+                        {
+                            offset: 25 * e,
+                        }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                         : (function (e, t) {

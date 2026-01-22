@@ -55,7 +55,7 @@ var r = n(557939),
     en = l("".slice),
     er = l(/./.exec),
     ei = /\+/g,
-    ea = "\uFFFD",
+    ea = "�",
     es = /^[0-9a-f]+$/i,
     eo = function (e, t) {
         var n = en(e, t, t + 2);
@@ -329,16 +329,22 @@ if (
                 return new eh(this, "entries");
             },
         },
-        { enumerable: !0 },
+        {
+            enumerable: !0,
+        },
     ),
-    d(eE, x, eE.entries, { name: "entries" }),
+    d(eE, x, eE.entries, {
+        name: "entries",
+    }),
     d(
         eE,
         "toString",
         function () {
             return k(this).serialize();
         },
-        { enumerable: !0 },
+        {
+            enumerable: !0,
+        },
     ),
     c &&
         f(eE, "size", {
@@ -355,7 +361,9 @@ if (
             constructor: !0,
             forced: !u,
         },
-        { URLSearchParams: eg },
+        {
+            URLSearchParams: eg,
+        },
     ),
     !u && E(F))
 ) {
@@ -406,7 +414,9 @@ if (
                     dontCallGetSet: !0,
                     forced: !0,
                 },
-                { Request: eA },
+                {
+                    Request: eA,
+                },
             );
     }
 }

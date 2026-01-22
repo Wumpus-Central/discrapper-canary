@@ -1,4 +1,7 @@
-s.d(t, { default: () => c }), s(896048);
+s.d(t, {
+    default: () => c,
+}),
+    s(896048);
 var a = s(627968),
     i = s(64700),
     n = s(827734),
@@ -6,6 +9,7 @@ var a = s(627968),
     r = s(21161),
     u = s(985018),
     d = s(375554);
+
 function c(e) {
     let { onClose: t, initialPercent: s, numActions: c } = e,
         [l, p] = i.useState(s),
@@ -33,7 +37,7 @@ function c(e) {
                         25,
                     );
                 }, 700),
-                setTimeout(t, 2000);
+                setTimeout(t, 2e3);
         }, [x, t]),
         (0, a.jsxs)("div", {
             children: [
@@ -41,7 +45,9 @@ function c(e) {
                     className: d.R,
                     variant: "heading-xl/semibold",
                     color: "text-strong",
-                    children: u.intl.format(u.t.pGj5u2, { count: c }),
+                    children: u.intl.format(u.t.pGj5u2, {
+                        count: c,
+                    }),
                 }),
                 (0, a.jsx)(o.kej, {
                     foregroundGradientColor: [n.A.unsafe_rawColors.GREEN_300.css, n.A.unsafe_rawColors.GREEN_230.css],

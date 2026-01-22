@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -10,9 +12,17 @@ var i = n(311907),
     u = n(915618),
     d = n(399925),
     f = n(985018);
+
 function p() {
     let e = o.Q$.useSetting(),
-        { enableViewerClipping: t } = s.A.useExperiment({ location: "Clips Settings" }, { autoTrackExposure: !1 }),
+        { enableViewerClipping: t } = s.A.useExperiment(
+            {
+                location: "Clips Settings",
+            },
+            {
+                autoTrackExposure: !1,
+            },
+        ),
         { viewerClipsEnabled: n } = (0, i.cf)([c.A], () => c.A.getSettings()),
         p = (0, u.A)(l.A);
     return (0, r.jsxs)(a.lVW, {
@@ -21,7 +31,10 @@ function p() {
                 label: f.intl.string(f.t.AGDDkH),
                 description: f.intl.string(f.t["wW9/zQ"]),
                 checked: e,
-                onChange: (e) => d.eQ({ allowVoiceRecording: e }),
+                onChange: (e) =>
+                    d.eQ({
+                        allowVoiceRecording: e,
+                    }),
             }),
             t &&
                 p &&

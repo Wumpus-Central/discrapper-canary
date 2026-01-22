@@ -1,4 +1,7 @@
-n.d(t, { A: () => E }), n(896048);
+n.d(t, {
+    A: () => E,
+}),
+    n(896048);
 var r = n(627968);
 n(64700);
 var i = n(284009),
@@ -14,6 +17,7 @@ var i = n(284009),
     _ = n(652215),
     h = n(985018),
     m = n(700896);
+
 function g(e) {
     let t,
         { subscription: n, withOverheadSeparator: i } = e,
@@ -67,6 +71,7 @@ function g(e) {
         })
     );
 }
+
 function E(e) {
     let { subscription: t, withOverheadSeparator: n } = e;
     return t.status === _.Dmq.CANCELED || t.isPurchasedExternally

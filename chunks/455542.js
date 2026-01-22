@@ -1,4 +1,6 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var l = n(627968),
     a = n(64700),
     r = n(397927),
@@ -6,6 +8,7 @@ var l = n(627968),
 n(827669);
 var s = n(985018),
     c = n(380964);
+
 function o(e) {
     let { application: t } = e,
         n = a.useMemo(() => {

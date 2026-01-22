@@ -1,4 +1,7 @@
-n.d(t, { R: () => p }), n(896048);
+n.d(t, {
+    R: () => p,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(397927),
@@ -7,6 +10,7 @@ var r = n(627968),
     o = n(641616),
     c = n(616621),
     u = n(58736);
+
 function d(e) {
     let { onClose: t } = e,
         n = (0, o.x)(),
@@ -27,6 +31,7 @@ function d(e) {
         ],
     });
 }
+
 function p(e) {
     let { className: t, focusSectionProps: n } = e,
         [s, o] = i.useState(!1),
@@ -52,7 +57,10 @@ function p(e) {
             autoInvert: !1,
             onRequestOpen: () => o(!0),
             onRequestClose: () => o(!1),
-            renderPopout: () => (0, r.jsx)(d, { onClose: () => o(!1) }),
+            renderPopout: () =>
+                (0, r.jsx)(d, {
+                    onClose: () => o(!1),
+                }),
             children: (e, i) => {
                 let { isShown: s } = i;
                 return (0, r.jsx)(

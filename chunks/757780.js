@@ -1,6 +1,10 @@
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 var r = n(265690);
-let l = { isSorting: !1 },
+let l = {
+        isSorting: !1,
+    },
     i = (0, r.h)()((e, t) => {
         var n, r;
         return (
@@ -31,8 +35,14 @@ let l = { isSorting: !1 },
             })({}, l)),
             (r = r =
                 {
-                    startSorting: () => e({ isSorting: !0 }),
-                    stopSorting: () => e({ isSorting: !1 }),
+                    startSorting: () =>
+                        e({
+                            isSorting: !0,
+                        }),
+                    stopSorting: () =>
+                        e({
+                            isSorting: !1,
+                        }),
                 }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))

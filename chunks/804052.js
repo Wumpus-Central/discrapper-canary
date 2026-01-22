@@ -1,4 +1,7 @@
-n.d(t, { A: () => h }), n(228524);
+n.d(t, {
+    A: () => h,
+}),
+    n(228524);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -48,14 +51,18 @@ class h extends i.Component {
         if (e.type === c.g_B.RECENT_RELEASE_DATE)
             return (0, r.jsx)(f, {
                 className: t,
-                circle: (0, r.jsx)(p, { IconComponent: s.CTc }),
+                circle: (0, r.jsx)(p, {
+                    IconComponent: s.CTc,
+                }),
                 smallHeader: u.intl.string(u.t.u81aYY),
                 text: (0, o.i$)(e.releaseDate, "LL"),
             });
         if (e.type === c.g_B.RELEASE_DATE)
             return (0, r.jsx)(f, {
                 className: t,
-                circle: (0, r.jsx)(p, { IconComponent: s.CTc }),
+                circle: (0, r.jsx)(p, {
+                    IconComponent: s.CTc,
+                }),
                 smallHeader: u.intl.string(u.t.qpwaNY),
                 text: (0, o.i$)(e.releaseDate, "LL"),
             });
@@ -81,7 +88,9 @@ class h extends i.Component {
                 });
         return e.type === c.g_B.FLAVOR_TEXT
             ? (0, r.jsx)(f, {
-                  circle: (0, r.jsx)(p, { IconComponent: s.A9s }),
+                  circle: (0, r.jsx)(p, {
+                      IconComponent: s.A9s,
+                  }),
                   text: e.flavorText,
                   className: t,
               })

@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(367513),
     i = n(587895),
     a = n(568598),
@@ -11,6 +13,7 @@ var r = n(367513),
     f = n(108959),
     p = n(5867),
     _ = n(652215);
+
 function h(e, t) {
     let n = c.Ay.getSelfEmbeddedActivityForLocation(t);
     if (null == n) return;

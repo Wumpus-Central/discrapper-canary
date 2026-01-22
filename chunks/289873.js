@@ -9,6 +9,7 @@ var r = n(627968),
     o = n(844222),
     l = n(460890),
     c = n(423161);
+
 function u(e, t, n) {
     return (
         t in e
@@ -22,6 +23,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -38,6 +40,7 @@ function d(e) {
     }
     return e;
 }
+
 function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -50,6 +53,7 @@ function f(e, t) {
     }
     return n;
 }
+
 function p(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -61,6 +65,7 @@ function p(e, t) {
         e
     );
 }
+
 function _(e, t) {
     if (null == e) return {};
     var n,
@@ -77,6 +82,7 @@ function _(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function h(e, t) {
     if (null == e) return {};
     var n,
@@ -98,6 +104,7 @@ var m = (function (e) {
         e
     );
 })({});
+
 function g(e) {
     switch (e) {
         case "wanderingCubes":
@@ -107,6 +114,7 @@ function g(e) {
             return e;
     }
 }
+
 function E(e) {
     var t;
     let { type: n = "wanderingCubes", animated: a = !0, className: u, itemClassName: f } = e,
@@ -121,7 +129,9 @@ function E(e) {
             p(
                 d(
                     {
-                        className: s()(c.spinner, c[b], u, { [c.stopAnimation]: !a }),
+                        className: s()(c.spinner, c[b], u, {
+                            [c.stopAnimation]: !a,
+                        }),
                         role: "img",
                     },
                     h,
@@ -169,7 +179,9 @@ function E(e) {
         p(
             d(
                 {
-                    className: s()(c.spinner, u, { [c.stopAnimation]: !a }),
+                    className: s()(c.spinner, u, {
+                        [c.stopAnimation]: !a,
+                    }),
                     role: "img",
                     "aria-label": y,
                 },
@@ -179,9 +191,17 @@ function E(e) {
                 children: (0, r.jsxs)("span", {
                     className: s()(c.inner, c[b]),
                     children: [
-                        (0, r.jsx)("span", { className: O }),
-                        (0, r.jsx)("span", { className: O }),
-                        "pulsingEllipsis" === b || "lowMotion" === b ? (0, r.jsx)("span", { className: O }) : null,
+                        (0, r.jsx)("span", {
+                            className: O,
+                        }),
+                        (0, r.jsx)("span", {
+                            className: O,
+                        }),
+                        "pulsingEllipsis" === b || "lowMotion" === b
+                            ? (0, r.jsx)("span", {
+                                  className: O,
+                              })
+                            : null,
                     ],
                 }),
             },

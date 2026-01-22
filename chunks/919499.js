@@ -1,10 +1,13 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(64700),
     i = n(861382),
     a = n(35277),
     s = n(407315),
     o = n(113001),
     l = n(652215);
+
 function c(e) {
     let {
         editor: t,
@@ -31,10 +34,22 @@ function c(e) {
                         if (g(1)) return void e.preventDefault();
                         break;
                     case l.Ks6.P:
-                        if ((0, o.j)(e, { ctrl: !0 }) && g(-1)) return void e.preventDefault();
+                        if (
+                            (0, o.j)(e, {
+                                ctrl: !0,
+                            }) &&
+                            g(-1)
+                        )
+                            return void e.preventDefault();
                         break;
                     case l.Ks6.N:
-                        if ((0, o.j)(e, { ctrl: !0 }) && g(1)) return void e.preventDefault();
+                        if (
+                            (0, o.j)(e, {
+                                ctrl: !0,
+                            }) &&
+                            g(1)
+                        )
+                            return void e.preventDefault();
                         break;
                     case l.Ks6.ESCAPE:
                         null == m || m();

@@ -847,7 +847,9 @@ e.exports = function (e) {
             excludeEnd: !0,
         },
         l.IMPORTANT,
-        { beginKeywords: "and not" },
+        {
+            beginKeywords: "and not",
+        },
         l.FUNCTION_DISPATCH,
     );
     let E = p.concat({
@@ -858,7 +860,11 @@ e.exports = function (e) {
         b = {
             beginKeywords: "when",
             endsWithParent: !0,
-            contains: [{ beginKeywords: "and not" }].concat(p),
+            contains: [
+                {
+                    beginKeywords: "and not",
+                },
+            ].concat(p),
         },
         y = {
             begin: d + "\\s*:",
@@ -866,7 +872,9 @@ e.exports = function (e) {
             end: /[;}]/,
             relevance: 0,
             contains: [
-                { begin: /-(webkit|moz|ms|o)-/ },
+                {
+                    begin: /-(webkit|moz|ms|o)-/,
+                },
                 l.CSS_VARIABLE,
                 {
                     className: "attribute",
@@ -899,7 +907,9 @@ e.exports = function (e) {
                     begin: "@" + u + "\\s*:",
                     relevance: 15,
                 },
-                { begin: "@" + u },
+                {
+                    begin: "@" + u,
+                },
             ],
             starts: {
                 end: "[;}]",
@@ -952,7 +962,9 @@ e.exports = function (e) {
                     relevance: 0,
                     contains: E,
                 },
-                { begin: "!important" },
+                {
+                    begin: "!important",
+                },
                 l.FUNCTION_DISPATCH,
             ],
         },

@@ -1,4 +1,8 @@
-n.d(t, { A: () => S }), n(747238), n(896048);
+n.d(t, {
+    A: () => S,
+}),
+    n(747238),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(481613),
@@ -17,6 +21,7 @@ var r = n(627968),
     E = n(721668),
     b = n(652215),
     y = n(985018);
+
 function O(e, t, n) {
     return (
         t in e
@@ -30,6 +35,7 @@ function O(e, t, n) {
         e
     );
 }
+
 function A() {
     let e = window.require("electron").remote.getCurrentWindow();
     (g.Ay.minimize = () => e.minimize()),
@@ -38,7 +44,9 @@ function A() {
         }),
         (g.Ay.close = () => e.close());
 }
-let v = l.Ay.connectStores([p.A], () => ({ focused: p.A.isFocused() }))(f.A);
+let v = l.Ay.connectStores([p.A], () => ({
+    focused: p.A.isFocused(),
+}))(f.A);
 class S extends i.PureComponent {
     getPlatform() {
         var e;
@@ -68,8 +76,14 @@ class S extends i.PureComponent {
         });
         return (0, r.jsxs)(i.Fragment, {
             children: [
-                (0, r.jsx)(o.mg, { children: (0, r.jsx)("html", { className: (0, u.mo9)(b.NJ8.DARK) }) }),
-                (0, r.jsx)(v, { type: this.getPlatform() }),
+                (0, r.jsx)(o.mg, {
+                    children: (0, r.jsx)("html", {
+                        className: (0, u.mo9)(b.NJ8.DARK),
+                    }),
+                }),
+                (0, r.jsx)(v, {
+                    type: this.getPlatform(),
+                }),
                 (0, r.jsx)(E.A, {
                     title: y.intl.string(y.t["3h+n+8"]),
                     note: e,

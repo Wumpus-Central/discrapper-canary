@@ -11,6 +11,7 @@ function r(e, t, n) {
         e
     );
 }
+
 function i(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -49,14 +50,17 @@ var a = (function (e) {
     s = (function (e) {
         return (e.Info = "info"), (e.Error = "error"), (e.Warning = "warn"), e;
     })({});
+
 function o(e, t) {
     return e.name === t;
 }
+
 function l(e) {
     let t = "nativeId" in e,
         n = "pid" in e;
     return !t && !n;
 }
+
 function c(e) {
     return {
         timestamp: e.timestamp,
@@ -66,6 +70,7 @@ function c(e) {
         pid: e.pid,
     };
 }
+
 function u(e, t) {
     var n, r, a, s;
     let o = e.reduce((e, t) => ((e[t.timestamp] = t.data), e), {});
@@ -76,9 +81,11 @@ function u(e, t) {
         batchedData: i({}, null != (s = null == t ? void 0 : t.batchedData) ? s : {}, o),
     };
 }
+
 function d(e) {
     return "".concat(e.type, "-").concat(e.pid, "-").concat(e.name);
 }
+
 function f(e, t) {
     let n = e.map(c),
         r = null != t ? n.filter(t) : n,

@@ -44,11 +44,15 @@ let _ = (0, p.createContext)({}),
         d && (C ? (C = `${C} ${T}`) : h["aria-label"] && (C = `${I} ${T}`));
         let N = (0, p.useRef)(d);
         (0, p.useEffect)(() => {
-            let e = { "aria-labelledby": C || I };
+            let e = {
+                "aria-labelledby": C || I,
+            };
             !N.current && b && d ? (0, a.iP)(e, "assertive") : N.current && b && !d && (0, a.iP)(e, "assertive"),
                 (N.current = d);
         }, [d, b, C, I]);
-        let R = (0, f.$)(e, { global: !0 });
+        let R = (0, f.$)(e, {
+            global: !0,
+        });
         return (
             delete R.onClick,
             p.createElement(
@@ -68,10 +72,19 @@ let _ = (0, p.createContext)({}),
                     "data-pending": d || void 0,
                     "data-focus-visible": y || void 0,
                 },
-                p.createElement(i.K.Provider, { value: { id: T } }, S.children),
+                p.createElement(
+                    i.K.Provider,
+                    {
+                        value: {
+                            id: T,
+                        },
+                    },
+                    S.children,
+                ),
             )
         );
     });
+
 function m(e, t) {
     if (t) {
         for (let t in e) t.startsWith("on") && !(t.includes("Focus") || t.includes("Blur")) && (e[t] = void 0);

@@ -1,4 +1,10 @@
-n.d(t, { U: () => b }), n(228524), n(896048), n(321073), n(65821);
+n.d(t, {
+    U: () => b,
+}),
+    n(228524),
+    n(896048),
+    n(321073),
+    n(65821);
 var r = n(284009),
     i = n.n(r),
     a = n(311907),
@@ -7,6 +13,7 @@ var r = n(284009),
     l = n(867051),
     c = n(403362),
     u = n(747465);
+
 function d(e, t, n) {
     return (
         t in e
@@ -30,6 +37,7 @@ let f = new s.Vy("KkvStore"),
         version: -1,
     }),
     g = Object.hasOwnProperty;
+
 function E(e, t) {
     if (e === t) return !0;
     let n = Object.keys(e),
@@ -276,7 +284,9 @@ class b extends a.il {
                     if (null == i) {
                         (r = "function" == typeof r ? r(void 0) : r),
                             (this.state.root[e] = {
-                                root: { [n]: r },
+                                root: {
+                                    [n]: r,
+                                },
                                 derived: {
                                     length: 1,
                                     memoized: {},

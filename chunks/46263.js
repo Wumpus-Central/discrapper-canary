@@ -11,7 +11,10 @@ function r(e, t, n) {
         e
     );
 }
-n.d(t, { J: () => i }), n(896048);
+n.d(t, {
+    J: () => i,
+}),
+    n(896048);
 class i {
     update(e) {
         for (let t in e.rtp.inbound)
@@ -62,10 +65,12 @@ var a = (function (e) {
     );
 })(a || {});
 let s = {
-    0: { multiplier: 1 },
+    0: {
+        multiplier: 1,
+    },
     1: {
         postfix: "_in_ms",
-        multiplier: 1000,
+        multiplier: 1e3,
     },
     2: {
         bitrate: !0,

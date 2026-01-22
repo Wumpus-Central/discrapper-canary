@@ -8,5 +8,7 @@ r(
         name: "trimEnd",
         forced: "".trimEnd !== i,
     },
-    { trimEnd: i },
+    {
+        trimEnd: i,
+    },
 );

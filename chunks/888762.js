@@ -1,4 +1,7 @@
-n.d(e, { default: () => b }), n(747238);
+n.d(e, {
+    default: () => b,
+}),
+    n(747238);
 var a = n(627968),
     i = n(64700),
     r = n(158954),
@@ -8,6 +11,7 @@ var a = n(627968),
     l = n(927421),
     d = n(985018),
     u = n(290844);
+
 function b(t) {
     let { guildId: e, channel: b, keybind: h, transitionState: p, onClose: f } = t,
         y = i.useCallback(async () => {

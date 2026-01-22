@@ -1,4 +1,8 @@
-n.d(t, { A: () => v }), n(747238), n(733351);
+n.d(t, {
+    A: () => v,
+}),
+    n(747238),
+    n(733351);
 var r = n(627968),
     i = n(64700),
     a = n(735438),
@@ -24,6 +28,7 @@ let y = {
         isLoading: !1,
     },
 };
+
 function O(e, t, n) {
     var r, i;
     let a;
@@ -37,6 +42,7 @@ function O(e, t, n) {
         }
     );
 }
+
 function A(e) {
     return e.meta.url;
 }
@@ -130,7 +136,9 @@ let v = {
                 i.Fragment,
                 {
                     children: [
-                        (0, r.jsx)(p.Ay.Title, { title: l }),
+                        (0, r.jsx)(p.Ay.Title, {
+                            title: l,
+                        }),
                         e
                             ? (0, r.jsx)(_.A, {
                                   className: b.os,
@@ -152,7 +160,10 @@ let v = {
             channel: s,
             guild: o,
         } = e;
-        if (null == t) return { type: null };
+        if (null == t)
+            return {
+                type: null,
+            };
         let c = n[r];
         if (
             (i === m.lg.INSERT ? a.replaceText(A(c)) : a.sendMessage(A(c)),
@@ -181,6 +192,8 @@ let v = {
                     source: d.A.getSource(s.id),
                 }));
         }
-        return { type: m.kc.GIF };
+        return {
+            type: m.kc.GIF,
+        };
     },
 };

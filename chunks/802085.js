@@ -1,4 +1,6 @@
-n.d(t, { A: () => C });
+n.d(t, {
+    A: () => C,
+});
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -26,7 +28,9 @@ let _ = l.memo(function (e) {
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)("div", {
-                    className: a()(v.K1, { [v.oE]: l }),
+                    className: a()(v.K1, {
+                        [v.oE]: l,
+                    }),
                     children: [
                         (0, r.jsx)("div", {
                             className: v.Oz,
@@ -47,7 +51,9 @@ let _ = l.memo(function (e) {
                     ],
                 }),
                 (0, r.jsx)("div", {
-                    className: a()(v.ah, { [v.oE]: l }),
+                    className: a()(v.ah, {
+                        [v.oE]: l,
+                    }),
                     children: (0, r.jsx)(g.A, {
                         message: t,
                         onDeleteMessage: i,

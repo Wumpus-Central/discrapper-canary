@@ -1,4 +1,6 @@
-n.d(t, { A: () => y });
+n.d(t, {
+    A: () => y,
+});
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -38,7 +40,9 @@ let y = i.memo(function (e) {
                           formatInline: !0,
                           noStyleAndInteraction: !0,
                       })
-                    : { content: null },
+                    : {
+                          content: null,
+                      },
             [y],
         ),
         T = null;

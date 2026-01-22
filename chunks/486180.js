@@ -1,4 +1,6 @@
-n.d(t, { A: () => y });
+n.d(t, {
+    A: () => y,
+});
 var r,
     a,
     l = n(627968),
@@ -42,7 +44,10 @@ let h =
         }
         return e;
     })({}, j.ZN)),
-    (a = a = { initialStep: j.HS.SERVER_SETTINGS }),
+    (a = a =
+        {
+            initialStep: j.HS.SERVER_SETTINGS,
+        }),
     Object.getOwnPropertyDescriptors
         ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(a))
         : (function (e, t) {
@@ -56,6 +61,7 @@ let h =
               Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(a, e));
           }),
     r);
+
 function y(e) {
     let { guildId: t } = e;
     i.useEffect(() => {

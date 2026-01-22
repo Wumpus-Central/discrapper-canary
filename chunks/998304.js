@@ -23,6 +23,7 @@ var r = n(310784),
 n(626584);
 var a = n(325335),
     s = n(985018);
+
 function o(e, t, n) {
     return (
         t in e
@@ -36,6 +37,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -52,6 +54,7 @@ function l(e) {
     }
     return e;
 }
+
 function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -64,6 +67,7 @@ function c(e, t) {
     }
     return n;
 }
+
 function u(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -75,6 +79,7 @@ function u(e, t) {
         e
     );
 }
+
 function d(e, t) {
     let n, r, i, a;
     if (7 === e.length) return e + ((255 * t) | 0).toString(16).padStart(2, "0").toUpperCase();
@@ -118,6 +123,7 @@ function d(e, t) {
             throw Error("Invalid hex color format");
     }
 }
+
 function f(e) {
     let [t, n, r] = i()(e).rgb();
     return {
@@ -126,6 +132,7 @@ function f(e) {
         b: r,
     };
 }
+
 function p(e) {
     let [t, n, r, a] = i()(e).rgba();
     return {
@@ -135,6 +142,7 @@ function p(e) {
         a,
     };
 }
+
 function _(e, t) {
     let { r: n, g: r, b: i, a } = p(e);
     return "rgba("
@@ -143,10 +151,12 @@ function _(e, t) {
         .concat(i, ", ")
         .concat(null != t ? t : a, ")");
 }
+
 function h(e, t) {
     let { r: n, g: r, b: i } = f(e);
     return "rgba(".concat(n, ", ").concat(r, ", ").concat(i, ", ").concat(t, ")");
 }
+
 function m(e, t, n) {
     let r = Math.min((e /= 255), (t /= 255), (n /= 255)),
         i = Math.max(e, t, n),
@@ -166,9 +176,11 @@ function m(e, t, n) {
         }
     );
 }
+
 function g(e, t, n) {
-    return "#" + (16777216 + (e << 16) + (t << 8) + n).toString(16).slice(1);
+    return "#" + (0x1000000 + (e << 16) + (t << 8) + n).toString(16).slice(1);
 }
+
 function E(e, t, n) {
     let r = (t * Math.min((n /= 100), 1 - n)) / 100,
         i = (t) => {
@@ -179,6 +191,7 @@ function E(e, t, n) {
         };
     return "#".concat(i(0)).concat(i(8)).concat(i(4));
 }
+
 function b(e) {
     let t, n, r, i, a;
     var s = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(e);
@@ -210,6 +223,7 @@ function b(e) {
         }
     );
 }
+
 function y(e, t, n) {
     return f(E(e, t, n));
 }
@@ -240,7 +254,9 @@ u(
             "#99aab5": () => s.intl.string(s.t["/po5rJ"]),
         },
     ),
-    { "#5865f2": () => s.intl.string(s.t["Cn/LJ4"]) },
+    {
+        "#5865f2": () => s.intl.string(s.t["Cn/LJ4"]),
+    },
 );
 let O = 30,
     A = 80,
@@ -248,6 +264,7 @@ let O = 30,
     S = 30,
     I = 40,
     T = 15;
+
 function C(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3,
         n = [],
@@ -264,6 +281,7 @@ function C(e) {
     }
     return n;
 }
+
 function N(e, t, n) {
     let r,
         i,
@@ -292,6 +310,7 @@ function N(e, t, n) {
         alpha: 1,
     };
 }
+
 function R(e, t, n) {
     let r, i, s;
     if (((e /= 360), 0 === t)) r = i = s = n;
@@ -311,6 +330,7 @@ function R(e, t, n) {
     }
     return new a.A(Math.round(255 * r), Math.round(255 * i), Math.round(255 * s), 1);
 }
+
 function w(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = N(e.red, e.green, e.blue);
@@ -321,6 +341,7 @@ function w(e, t) {
         R(r.hue, r.saturation, r.lightness)
     );
 }
+
 function P(e) {
     let { foreground: t, background: n, ratio: r = 5, saturationFactor: a = 1 } = e;
     a < 1 && ((t = t.set("hsl.s", t.get("hsl.s") * a)), (n = n.set("hsl.s", n.get("hsl.s") * a)));
@@ -337,6 +358,7 @@ function P(e) {
     }
     return t.alpha(1);
 }
+
 function D(e) {
     return e
         .slice(0, 3)
@@ -356,11 +378,13 @@ function D(e) {
         })
         .sort(x)[0].hex;
 }
+
 function x(e, t) {
     let n = e.hsv,
         r = t.hsv;
     return r.s + r.v - (n.s + n.v);
 }
+
 function L(e) {
     var t;
     let { colorRGB: n, saturationFactor: r = 1 } = e;
@@ -374,6 +398,7 @@ function L(e) {
           ? void 0
           : t.toHexString();
 }
+
 function j(e, t, n) {
     let r = parseInt(e.substring(1, 3), 16),
         i = parseInt(e.substring(3, 5), 16),

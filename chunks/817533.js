@@ -1,9 +1,12 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
     a = n(775602),
     s = n(463469);
+
 function o(e) {
     let { guildId: t, user: n, className: o } = e,
         l = (0, i.bG)([a.A], () => !a.A.useReducedMotion),

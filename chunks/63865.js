@@ -1,4 +1,7 @@
-n.d(t, { default: () => h }), n(228524);
+n.d(t, {
+    default: () => h,
+}),
+    n(228524);
 var a = n(627968),
     l = n(64700),
     s = n(731738),
@@ -14,6 +17,7 @@ var a = n(627968),
     m = n(652215),
     p = n(985018),
     T = n(546);
+
 function h(e) {
     let {
             transitionState: t,
@@ -35,7 +39,9 @@ function h(e) {
                 senderId: v,
                 warningType: null == E ? void 0 : E.type,
             }),
-                d.A.increment({ name: s.K.SAFETY_WARNING_MODAL_VIEW });
+                d.A.increment({
+                    name: s.K.SAFETY_WARNING_MODAL_VIEW,
+                });
         }, [h, g, v, E]),
         (0, a.jsx)(i.ExpressiveModal, {
             onClose: n,
@@ -53,7 +59,12 @@ function h(e) {
                 children: [
                     (0, a.jsxs)(r.BJc, {
                         gap: 8,
-                        children: [(0, a.jsx)(o.q, { children: j }), null != A ? A : null],
+                        children: [
+                            (0, a.jsx)(o.q, {
+                                children: j,
+                            }),
+                            null != A ? A : null,
+                        ],
                     }),
                     (0, a.jsxs)(r.BJc, {
                         gap: 4,
@@ -63,7 +74,9 @@ function h(e) {
                                 color: "text-default",
                                 children: p.intl.string(p.t.K5FKtc),
                             }),
-                            (0, a.jsx)(f.Y0, { children: N }),
+                            (0, a.jsx)(f.Y0, {
+                                children: N,
+                            }),
                         ],
                     }),
                     (0, a.jsx)(_.A, {

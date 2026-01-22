@@ -1,8 +1,12 @@
-n.d(t, { A: () => A }), n(896048);
+n.d(t, {
+    A: () => A,
+}),
+    n(896048);
 var r,
     i = n(311907),
     a = n(73153),
     s = n(921242);
+
 function o(e, t, n) {
     return (
         t in e
@@ -19,6 +23,7 @@ function o(e, t, n) {
 let l = 0.05,
     c = new Map(),
     u = !1;
+
 function d(e) {
     var t;
     let n =
@@ -35,39 +40,48 @@ function d(e) {
               };
     return c.set(e, n), n;
 }
+
 function f(e, t) {
     let n = c.get(e);
     return null == n ? null : t(n);
 }
+
 function p(e) {
     let { id: t, editorState: n } = e;
     d(t).editorState = n;
 }
+
 function _(e) {
     let { id: t } = e;
     d(t);
 }
+
 function h(e) {
     let { id: t } = e;
     return c.delete(t);
 }
+
 function m(e) {
     let { id: t, showBlocked: n } = e;
     d(t).showBlockedResults = n;
 }
+
 function g(e) {
     let { id: t } = e;
     d(t).showNoResultsAlt = Math.random() < l;
 }
+
 function E(e) {
     let { id: t, queryString: n, query: r, offset: i } = e,
         a = d(t);
     (a.searchResultsQueryString = n), (a.searchResultsQuery = r), (a.searchResultsOffset = null != i ? i : 0);
 }
+
 function b(e) {
     let { id: t, searchMode: n } = e;
     d(t).searchMode = n;
 }
+
 function y() {
     u = !0;
 }

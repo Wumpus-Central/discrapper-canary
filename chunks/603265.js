@@ -1,9 +1,12 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(636401),
     i = n(440454),
     l = n(313731),
     a = n(613057),
     s = n(652215);
+
 function o(e, t, n) {
     return (
         t in e
@@ -56,8 +59,19 @@ class c extends l.A {
             o(this, "closed", void 0),
             -1 === ["etf", "json"].indexOf(l))
         )
-            throw new r.A({ closeCode: s.YI$.INVALID_ENCODING }, "Invalid Encoding: ".concat(l));
-        if ("etf" === l) throw new r.A({ closeCode: s.YI$.INVALID_ENCODING }, "Erlpack cannot be used on this client");
+            throw new r.A(
+                {
+                    closeCode: s.YI$.INVALID_ENCODING,
+                },
+                "Invalid Encoding: ".concat(l),
+            );
+        if ("etf" === l)
+            throw new r.A(
+                {
+                    closeCode: s.YI$.INVALID_ENCODING,
+                },
+                "Erlpack cannot be used on this client",
+            );
         (this.origin = e),
             (this.postMessageToRPCClient = t),
             (this.frameId = n),

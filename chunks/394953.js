@@ -25,6 +25,7 @@ var h = n(661191),
     m = n(320697),
     g = n(849077),
     E = n(652215);
+
 function b(e) {
     let { messageId: t, channelId: n, guildId: r, ReadStateStore_: i = _.Ay, GuildStore_: a = p.A } = e;
     if (!i.hasUnread(n)) return !1;
@@ -37,15 +38,18 @@ function b(e) {
     }
     return h.default.compare(t, o) > 0;
 }
+
 function y(e) {
     let { id: t } = e,
         n = (0, r.default)(new Date(), h.default.extractTimestamp(t));
     return 0 === n ? g.Ur.TODAY : 1 === n ? g.Ur.YESTERDAY : g.Ur.OLDER;
 }
+
 function O() {
     let { pathname: e } = (0, i.zy)();
     return e.startsWith(E.BVt.CHANNEL(E.gNP));
 }
+
 function A(e) {
     {
         let { openUserSettings: t } = n(840065);
@@ -55,6 +59,7 @@ function A(e) {
         });
     }
 }
+
 function v() {
     let e = (0, a.yK)([m.A], () => {
             var e;
@@ -93,11 +98,15 @@ function v() {
         unreadChannelIds: t,
     };
 }
+
 function S() {
-    let { enabled: e, inInbox: t } = o.A.useExperiment({ location: "NotificationsInboxUtils" }),
+    let { enabled: e, inInbox: t } = o.A.useExperiment({
+            location: "NotificationsInboxUtils",
+        }),
         n = (0, a.bG)([l.A], () => l.A.getSavedMessageCount());
     return e && t && (n > 0 || (0, c.A)());
 }
+
 function I(e, t) {
     return null != t && e.channelId === t.channelId && h.default.compare(e.id, t.messageId) >= 0;
 }

@@ -1,4 +1,7 @@
-e.d(n, { default: () => g }), e(896048);
+e.d(n, {
+    default: () => g,
+}),
+    e(896048);
 var l = e(627968),
     a = e(64700),
     i = e(158954),
@@ -15,6 +18,7 @@ var l = e(627968),
     v = e(652215),
     y = e(985018),
     b = e(330432);
+
 function g(t) {
     var n, e;
     let { guildId: g, userId: C, anaylticsLocations: w, transitionState: x, onClose: A } = t,
@@ -86,7 +90,9 @@ function g(t) {
               children: (0, l.jsx)(r.Text, {
                   variant: "text-md/normal",
                   color: "interactive-text-default",
-                  children: y.intl.format(y.t.KtENkK, { link: m.MO }),
+                  children: y.intl.format(y.t.KtENkK, {
+                      link: m.MO,
+                  }),
               }),
           });
 }

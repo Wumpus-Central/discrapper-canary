@@ -1,10 +1,13 @@
-l.d(t, { A: () => u });
+l.d(t, {
+    A: () => u,
+});
 var r = l(64700),
     n = l(311907),
     i = l(859241),
     s = l(864310),
     o = l(333354),
     a = l(985018);
+
 function u(e, t) {
     let { spent: l } = (0, s.A)(e),
         u = (0, n.bG)([i.A], () => i.A.getAppliedGuildBoostsForGuild(e), [e]),

@@ -1,4 +1,7 @@
-n.d(t, { v: () => h }), n(896048);
+n.d(t, {
+    v: () => h,
+}),
+    n(896048);
 var a = n(627968),
     l = n(64700),
     i = n(503698),
@@ -14,7 +17,9 @@ let m = [
             name: "Privacy Perk Components",
         },
     ],
-    p = { private_browsing_perk: c.p },
+    p = {
+        private_browsing_perk: c.p,
+    },
     h = () => {
         let [e, t] = l.useState("private_browsing_perk"),
             n = l.useMemo(() => p[e], [e]);

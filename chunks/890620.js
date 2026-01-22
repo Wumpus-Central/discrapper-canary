@@ -13,8 +13,17 @@ let o = Object.freeze({
     }),
     l = (0, r.v)((e) => o),
     c = (e) => {
-        (0, i.r)(() => l.setState({ hasUnsubmittedChanges: e }));
+        (0, i.r)(() =>
+            l.setState({
+                hasUnsubmittedChanges: e,
+            }),
+        );
     },
     u = (e) => {
-        (0, i.r)(() => l.setState({ shouldShowWarning: e })), e && a._.dispatch(s.jej.EMPHASIZE_NOTICE);
+        (0, i.r)(() =>
+            l.setState({
+                shouldShowWarning: e,
+            }),
+        ),
+            e && a._.dispatch(s.jej.EMPHASIZE_NOTICE);
     };

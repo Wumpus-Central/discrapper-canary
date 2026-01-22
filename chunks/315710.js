@@ -5,6 +5,7 @@ n.d(t, {
 var r = n(64700),
     i = n(668447),
     a = n(844222);
+
 function s(e, t, n) {
     return (
         t in e
@@ -18,6 +19,7 @@ function s(e, t, n) {
         e
     );
 }
+
 function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,6 +36,7 @@ function o(e) {
     }
     return e;
 }
+
 function l(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -46,6 +49,7 @@ function l(e, t) {
     }
     return n;
 }
+
 function c(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -57,6 +61,7 @@ function c(e, t) {
         e
     );
 }
+
 function u(e) {
     var t;
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
@@ -80,7 +85,13 @@ function u(e) {
         }),
     );
 }
+
 function d(e) {
     let { keyboardModeEnabled: t } = e;
-    return u(e.containerRef, { keyboardModeEnabled: t }), e.children;
+    return (
+        u(e.containerRef, {
+            keyboardModeEnabled: t,
+        }),
+        e.children
+    );
 }

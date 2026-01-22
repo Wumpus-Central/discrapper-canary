@@ -21,7 +21,7 @@ var r = n(284009),
     c = n(776231),
     u = n(652215);
 let d = "mp",
-    f = 3600000,
+    f = 36e5,
     p = "https://i.scdn.co/image/",
     _ = (e, t, n) =>
         "https://static-cdn.jtvnw.net/previews-ttv/live_user_".concat(e, "-").concat(t, "x").concat(n, ".jpg"),
@@ -64,6 +64,7 @@ let d = "mp",
         },
     },
     b = {};
+
 function y(e) {
     return Date.now() - e > f;
 }
@@ -82,14 +83,17 @@ async function O(e) {
         o.A.getApplicationAssets(e)
     );
 }
+
 function A(e) {
     let t = o.A.getApplicationAssets(e);
     return null == t || y(t.lastUpdated) ? O(e) : Promise.resolve(t);
 }
+
 function v(e, t) {
     let n = E[e].serialize(t);
     return n ? "".concat(e, ":").concat(n.toString()) : null;
 }
+
 function S(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "png";
     if (null != t && t.includes(":")) {
@@ -129,12 +133,15 @@ async function T(e, t) {
     if (0 === n.length) return;
     let { body: r } = await a.Bo.post({
         url: u.Rsh.APPLICATION_EXTERNAL_ASSETS(e),
-        body: { urls: n },
+        body: {
+            urls: n,
+        },
         oldFormErrors: !0,
         rejectWithError: !1,
     });
     for (let { url: e, external_asset_path: t } of r) b[e] = t;
 }
+
 function C(e, t) {
     let n = 0;
     if (
@@ -149,6 +156,7 @@ function C(e, t) {
         }
     return n === e.length;
 }
+
 function N(e, t, n, r) {
     let i = !1;
     for (let a = 0; a < e.length; a++) {

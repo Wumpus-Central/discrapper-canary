@@ -1,5 +1,8 @@
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 var r = n(652215);
+
 function i(e) {
     let { CDN_HOST: t, PROJECT_ENV: n } = window.GLOBAL_ENV;
     return "development" !== n

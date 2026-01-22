@@ -1,4 +1,6 @@
-n.d(t, { default: () => p });
+n.d(t, {
+    default: () => p,
+});
 var a = n(627968);
 n(64700);
 var i = n(110259),
@@ -11,6 +13,7 @@ var i = n(110259),
     u = n(670455),
     b = n(985018),
     f = n(716829);
+
 function p(e) {
     let { onClose: t, transitionState: p, analyticsData: _ } = e,
         m = b.intl.string(b.t.Ss6tlb),
@@ -36,7 +39,9 @@ function p(e) {
             value: u.Eq.AUDIO,
             label: b.intl.string(f.default.PL2l6A),
             problemsHeader: b.intl.string(b.t.FJmoxF),
-            problemOptions: (0, l.Op)({ isMobile: !1 }),
+            problemOptions: (0, l.Op)({
+                isMobile: !1,
+            }),
             freeformConfig: {
                 value: u.X.FREEFORM,
                 label: b.intl.string(b.t.emlT91),
@@ -116,7 +121,12 @@ function p(e) {
                                                 });
                                         }
                                         return e;
-                                    })({ body: b.intl.string(b.t["d9+vQ8"]) }, t),
+                                    })(
+                                        {
+                                            body: b.intl.string(b.t["d9+vQ8"]),
+                                        },
+                                        t,
+                                    ),
                                 );
                         }));
         },

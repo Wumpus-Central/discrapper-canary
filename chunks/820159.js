@@ -1,4 +1,7 @@
-n.d(t, { A: () => A }), n(896048);
+n.d(t, {
+    A: () => A,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -14,6 +17,7 @@ var r = n(627968),
     h = n(711371),
     m = n(985018),
     g = n(562650);
+
 function E(e, t, n) {
     return (
         t in e
@@ -27,6 +31,7 @@ function E(e, t, n) {
         e
     );
 }
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -43,6 +48,7 @@ function b(e) {
     }
     return e;
 }
+
 function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -55,6 +61,7 @@ function y(e, t) {
     }
     return n;
 }
+
 function O(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -66,6 +73,7 @@ function O(e, t) {
         e
     );
 }
+
 function A(e, t, n) {
     let { attributes: i, children: a, element: s } = t;
     switch (s.type) {
@@ -83,11 +91,29 @@ function A(e, t, n) {
                 let e;
                 (e =
                     c > 0
-                        ? m.intl.formatToPlainString(m.t.BP8N0K, { count: l })
-                        : m.intl.formatToPlainString(m.t.lziVC9, { count: l })),
+                        ? m.intl.formatToPlainString(m.t.BP8N0K, {
+                              count: l,
+                          })
+                        : m.intl.formatToPlainString(m.t.lziVC9, {
+                              count: l,
+                          })),
                     (f["data-trailing-placeholder"] = e);
             }
-            return (0, r.jsx)("div", O(b({ className: g.uB }, i, f), { children: a }));
+            return (0, r.jsx)(
+                "div",
+                O(
+                    b(
+                        {
+                            className: g.uB,
+                        },
+                        i,
+                        f,
+                    ),
+                    {
+                        children: a,
+                    },
+                ),
+            );
         case "applicationCommandOption":
             return (0, r.jsx)(v, {
                 attributes: i,
@@ -160,12 +186,12 @@ let v = (e) => {
                         className: g.gA,
                         contentEditable: !1,
                         onClick: w,
-                        children: [a.optionDisplayName, "\u200B"],
+                        children: [a.optionDisplayName, "​"],
                     }),
                     t,
                     (0, r.jsx)("span", {
                         contentEditable: !1,
-                        children: "\u200B",
+                        children: "​",
                     }),
                 ],
             }),

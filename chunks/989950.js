@@ -1,10 +1,14 @@
-n.d(t, { A: () => g }), n(896048);
+n.d(t, {
+    A: () => g,
+}),
+    n(896048);
 var r = n(311907),
     i = n(35033),
     a = n(73153),
     s = n(626584),
     o = n(961350),
     l = n(652309);
+
 function c(e, t, n) {
     return (
         t in e
@@ -42,9 +46,7 @@ class f extends r.Ay.Store {
             return u.verbose("Not opening database because caches have been manually cleared."), null;
         if (null != e && !this.databases.has(e)) {
             let t = h(e);
-            u.verbose("added database (".concat(e, " \u2192 ").concat(t, ")")),
-                this.databases.set(e, t),
-                this.emitChange();
+            u.verbose("added database (".concat(e, " → ").concat(t, ")")), this.databases.set(e, t), this.emitChange();
         }
         return this.database(e);
     }
@@ -90,9 +92,9 @@ class f extends r.Ay.Store {
         if (null != e) {
             let t = await m(e);
             null == t || this.databases.has(e)
-                ? (u.verbose("discarding speculative database (".concat(e, " \u2192 ").concat(t, ")")),
+                ? (u.verbose("discarding speculative database (".concat(e, " → ").concat(t, ")")),
                   null == t || t.close())
-                : (u.verbose("added speculative database (".concat(e, " \u2192 ").concat(t, ")")),
+                : (u.verbose("added speculative database (".concat(e, " → ").concat(t, ")")),
                   this.databases.set(e, t),
                   this.emitChange());
         }
@@ -113,6 +115,7 @@ class f extends r.Ay.Store {
             c(this, "preventWritingCachesAgainThisSession", !1);
     }
 }
+
 function p(e, t) {
     for (let n = 0; n < e; n++)
         try {
@@ -122,16 +125,22 @@ function p(e, t) {
         }
     return null;
 }
+
 function _(e) {
     return "@account.".concat(e);
 }
+
 function h(e) {
     if (d) {
         let t = 50,
             n = _(e);
         return (
             u.verbose("synchronously opening ".concat(n)),
-            p(t, () => i.Wm.openSyncUnsafe(n, { invalidateDisabledHandles: !0 }))
+            p(t, () =>
+                i.Wm.openSyncUnsafe(n, {
+                    invalidateDisabledHandles: !0,
+                }),
+            )
         );
     }
     return null;

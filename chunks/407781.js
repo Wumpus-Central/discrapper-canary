@@ -1,4 +1,7 @@
-n.d(t, { A: () => f }), n(457529);
+n.d(t, {
+    A: () => f,
+}),
+    n(457529);
 var r = n(627968),
     i = n(64700),
     a = n(735438),
@@ -14,6 +17,7 @@ let d = async (e) => {
         u = JSON.parse(JSON.stringify(null != r && r < o.length ? o[r] : (0, a.sample)(o)));
     return (u.assets[0].p = s ? await (0, l.tm)(i) : i), u;
 };
+
 function f(e) {
     let { containerDimensions: t, effect: n, onComplete: a } = e,
         s = i.useRef(null);
@@ -30,7 +34,9 @@ function f(e) {
                             loop: !1,
                             autoplay: !0,
                             animationData: t,
-                            rendererSettings: { preserveAspectRatio: "xMidYMax slice" },
+                            rendererSettings: {
+                                preserveAspectRatio: "xMidYMax slice",
+                            },
                         })),
                             n.animationType === c.B.PREMIUM && e.setSpeed(0.8),
                             e.addEventListener("complete", () => (null == a ? void 0 : a(n.id)));

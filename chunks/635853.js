@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -7,6 +9,7 @@ var i = n(397927),
     o = n(649640),
     l = n(985018),
     c = n(838934);
+
 function u(e) {
     let { name: t, onRetry: n } = e,
         u = (0, o.b2)(),
@@ -17,7 +20,9 @@ function u(e) {
         children: [
             (0, r.jsx)("div", {
                 className: c.vK,
-                style: { background: d },
+                style: {
+                    background: d,
+                },
             }),
             (0, r.jsx)("div", {
                 className: c.H,

@@ -1,4 +1,8 @@
-n.d(t, { Q: () => h }), n(896048), n(65821);
+n.d(t, {
+    Q: () => h,
+}),
+    n(896048),
+    n(65821);
 var r = n(64700),
     i = n(311907),
     a = n(562465),
@@ -11,13 +15,16 @@ var r = n(64700),
     f = n(211287),
     p = n(652215),
     _ = n(985018);
+
 function h(e) {
     let [t, n] = (0, r.useState)(""),
         [h, m] = (0, r.useState)([]),
         [g, E] = (0, r.useState)(null),
         [b, y] = (0, r.useState)(!1),
         O = (0, r.useRef)(null),
-        { enabled: A } = f.A.useConfig({ location: "orb_checkout_modal" }),
+        { enabled: A } = f.A.useConfig({
+            location: "orb_checkout_modal",
+        }),
         v = (0, i.bG)([c.A], () => c.A.isCreatingOrder),
         S = (0, i.bG)([c.A], () => c.A.currentOrder);
     (0, r.useEffect)(() => {
@@ -63,7 +70,7 @@ function h(e) {
                         let e = i;
                         if (e.errors && e.errors.length > 0) {
                             let t = e.errors;
-                            if (t.includes(2000)) {
+                            if (t.includes(2e3)) {
                                 let e = new s.Ay("Insufficient balance");
                                 throw ((e.code = s.tG.VIRTUAL_CURRENCY_INSUFFICIENT_BALANCE), e);
                             }

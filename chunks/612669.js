@@ -38,24 +38,36 @@ let m = (e, t) => {
             });
             switch (l) {
                 case f.xI.ACCEPTED:
-                    (t = h.intl.formatToPlainString(_.default["5uwv8J"], { premiumGroupProductName: u })),
-                        (n = h.intl.formatToPlainString(_.default["W7e/z1"], { receiverName: e }));
+                    (t = h.intl.formatToPlainString(_.default["5uwv8J"], {
+                        premiumGroupProductName: u,
+                    })),
+                        (n = h.intl.formatToPlainString(_.default["W7e/z1"], {
+                            receiverName: e,
+                        }));
                     break;
                 case f.xI.REMOVED:
                 case f.xI.NOT_FOUND:
                 case f.xI.ERROR:
-                    (t = h.intl.formatToPlainString(_.default.YLvraS, { premiumGroupProductName: u })),
+                    (t = h.intl.formatToPlainString(_.default.YLvraS, {
+                        premiumGroupProductName: u,
+                    })),
                         (n = h.intl.format(_.default.BHxlIR, {
                             premiumGroupProductName: u,
                             onClick: () => {
-                                (0, a.openUserSettings)(i.X.SUBSCRIPTIONS_PANEL, { section: p.nc_.SUBSCRIPTIONS });
+                                (0, a.openUserSettings)(i.X.SUBSCRIPTIONS_PANEL, {
+                                    section: p.nc_.SUBSCRIPTIONS,
+                                });
                             },
                         }));
                     break;
                 case f.xI.PENDING:
                 default:
-                    (t = h.intl.formatToPlainString(_.default["5uwv8J"], { premiumGroupProductName: u })),
-                        (n = h.intl.formatToPlainString(_.default["AmE0B/"], { receiverName: e }));
+                    (t = h.intl.formatToPlainString(_.default["5uwv8J"], {
+                        premiumGroupProductName: u,
+                    })),
+                        (n = h.intl.formatToPlainString(_.default["AmE0B/"], {
+                            receiverName: e,
+                        }));
             }
             return {
                 message: o,
@@ -73,13 +85,19 @@ let m = (e, t) => {
             switch (l) {
                 case f.xI.ACCEPTED:
                     (t = h.intl.string(_.default.ssge1y)),
-                        (n = h.intl.formatToPlainString(_.default.fTAcw3, { senderName: e }));
+                        (n = h.intl.formatToPlainString(_.default.fTAcw3, {
+                            senderName: e,
+                        }));
                     break;
                 case f.xI.REMOVED:
                 case f.xI.NOT_FOUND:
                 case f.xI.ERROR:
-                    (t = h.intl.formatToPlainString(_.default["AmLUw+"], { premiumGroupProductName: u })),
-                        (n = h.intl.formatToPlainString(_.default["7XAuyg"], { premiumGroupProductName: u }));
+                    (t = h.intl.formatToPlainString(_.default["AmLUw+"], {
+                        premiumGroupProductName: u,
+                    })),
+                        (n = h.intl.formatToPlainString(_.default["7XAuyg"], {
+                            premiumGroupProductName: u,
+                        }));
                     break;
                 case f.xI.PENDING:
                 default:
@@ -98,7 +116,9 @@ let m = (e, t) => {
     },
     E = () => {
         var e;
-        let t = (0, u.A)({ location: "PremiumGroupPurchase" }),
+        let t = (0, u.A)({
+                location: "PremiumGroupPurchase",
+            }),
             n = (0, r.bG)([o.A], () => o.A.getPremiumSubscription()),
             i = (0, r.bG)([s.default], () => s.default.getCurrentUser());
         return (
@@ -108,7 +128,9 @@ let m = (e, t) => {
         );
     },
     b = () => {
-        let e = (0, u.A)({ location: "PremiumGroupPurchase" }),
+        let e = (0, u.A)({
+                location: "PremiumGroupPurchase",
+            }),
             t = E(),
             n = (0, r.bG)([s.default], () => s.default.getCurrentUser());
         return !!e && !!t && (null == n || !n.isPremiumWithPremiumGroup());

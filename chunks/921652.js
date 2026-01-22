@@ -18,10 +18,12 @@ let p = (0, a.v)(() => ({
     particles: {},
     lastSpawned: {},
 }));
+
 function b(e, t) {
     var n;
     r()(null != (n = p.getState().particles[e.id]) ? n : {}).forEach(t);
 }
+
 function g(e) {
     var t, n, l, a;
     let g,
@@ -93,7 +95,7 @@ function g(e) {
                 (e.globalAlpha = n.opacity), e.drawImage(t, l / 2 + r, l / 2 + i, l, l);
             })(A, N, e),
         ),
-        h.lastUpdatedAt + 5000 < Date.now() && (0, o.RB)(x, h),
+        h.lastUpdatedAt + 5e3 < Date.now() && (0, o.RB)(x, h),
         h.state !== u.B.STOP ||
             Object.keys(null != (a = p.getState().particles[h.id]) ? a : {}).length > 0 ||
             S.push(h),

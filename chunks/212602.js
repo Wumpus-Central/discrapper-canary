@@ -1,4 +1,7 @@
-l.d(t, { A: () => v }), l(638769);
+l.d(t, {
+    A: () => v,
+}),
+    l(638769);
 var n = l(627968),
     r = l(64700),
     s = l(503698),
@@ -97,7 +100,9 @@ let v = () => {
         ),
         _ = S(e);
     return (0, n.jsx)("div", {
-        className: a()(h.k, { [E.T3]: v }),
+        className: a()(h.k, {
+            [E.T3]: v,
+        }),
         children: (0, n.jsx)(c.l6P, {
             label: m.intl.string(m.t.uaX705),
             hideLabel: !0,

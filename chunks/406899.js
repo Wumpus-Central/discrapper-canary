@@ -1,4 +1,7 @@
-a.r(r), a.d(r, { default: () => t });
+a.r(r),
+    a.d(r, {
+        default: () => t,
+    });
 var t = {
     payButton: "Πληρωμή",
     "payButton.redirecting": "Ανακατεύθυνση...",
@@ -159,7 +162,7 @@ var t = {
     qrCodeOrApp: "ή",
     "paypal.processingPayment": "Επεξεργασία πληρωμής...",
     generateQRCode: "Δημιουργία κωδικού QR",
-    "await.waitForConfirmation": "Αναμονή για επιβεβαίωση\u2026",
+    "await.waitForConfirmation": "Αναμονή για επιβεβαίωση…",
     "mbway.confirmPayment": "Επιβεβαιώστε την πληρωμή στην εφαρμογή MB WAY",
     "shopperEmail.invalid": "Μη έγκυρη διεύθυνση email",
     "dateOfBirth.format": "ΗΗ/ΜΜ/ΕΕΕΕ",

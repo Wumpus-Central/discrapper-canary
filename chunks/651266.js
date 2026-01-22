@@ -1,10 +1,12 @@
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});
 var r = {};
 r = {
     dateRange: (e) => `${e.startDate} a ${e.endDate}`,
     dateSelected: (e) => `${e.date} seleccionado`,
     finishRangeSelectionPrompt: "Haga clic para terminar de seleccionar rango de fechas",
-    maximumDate: "Última fecha disponible",
+    maximumDate: "\xdaltima fecha disponible",
     minimumDate: "Primera fecha disponible",
     next: "Siguiente",
     previous: "Anterior",

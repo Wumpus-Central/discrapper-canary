@@ -13,12 +13,14 @@ let s = {
     [a.v1.FILTER]: r.d,
     [a.v1.ANSWER]: r.F,
 };
+
 function o(e, t, n, r) {
     t.findEntityRanges((t) => {
         let n = t.getEntity();
         return null !== n && e.getEntity(n).getType() === r;
     }, n);
 }
+
 function l() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         t = [];
@@ -33,6 +35,7 @@ function l() {
         t
     );
 }
+
 function c(e, t) {
     let { focusOffset: n, anchorOffset: r } = t.getSelection();
     return (0, i.zZ)(e, n, r);

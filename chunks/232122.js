@@ -1,4 +1,7 @@
-n.d(t, { A: () => p }), n(896048);
+n.d(t, {
+    A: () => p,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -15,7 +18,10 @@ let f = [
     },
     {
         getQuestion: () => u.intl.string(u.t.ai4ym2),
-        getAnswer: () => u.intl.format(u.t["8zlqlD"], { helpCenterUrl: l.A.getArticleURL(c.MVz.GUILD_BOOSTING_FAQ) }),
+        getAnswer: () =>
+            u.intl.format(u.t["8zlqlD"], {
+                helpCenterUrl: l.A.getArticleURL(c.MVz.GUILD_BOOSTING_FAQ),
+            }),
     },
     {
         getQuestion: () => u.intl.string(u.t.kMVGsC),
@@ -46,6 +52,7 @@ let f = [
         getAnswer: () => u.intl.string(u.t.Aje8Pb),
     },
 ];
+
 function p(e) {
     let { className: t } = e,
         [n, a] = i.useState(null),
@@ -58,7 +65,9 @@ function p(e) {
                 variant: "heading-xxl/semibold",
                 children: u.intl.string(u.t.HPJ6Nj),
             }),
-            (0, r.jsx)(o.hKd, { size: 32 }),
+            (0, r.jsx)(o.hKd, {
+                size: 32,
+            }),
             (0, r.jsx)("ul", {
                 className: d.p_,
                 children: f.map((e, t) => {
@@ -69,7 +78,9 @@ function p(e) {
                         o.DUT,
                         {
                             tag: "li",
-                            className: s()(d.Aw, { [d.$K]: i }),
+                            className: s()(d.Aw, {
+                                [d.$K]: i,
+                            }),
                             onClick: () => a((e) => (e === t ? null : t)),
                             onMouseEnter: () => c(t),
                             onMouseLeave: () => c(null),
@@ -88,7 +99,9 @@ function p(e) {
                                             size: "sm",
                                             color: o.LU0.colors.INTERACTIVE_ICON_DEFAULT,
                                             className: d.q4,
-                                            style: { transform: i ? "rotate(180deg)" : "rotate(0deg)" },
+                                            style: {
+                                                transform: i ? "rotate(180deg)" : "rotate(0deg)",
+                                            },
                                         }),
                                     ],
                                 }),

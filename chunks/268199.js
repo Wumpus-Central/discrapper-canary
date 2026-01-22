@@ -11,6 +11,7 @@ var l = n(503698),
     o = n(397927),
     c = n(985018),
     d = n(734591);
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +37,7 @@ function u(e) {
     }
     return e;
 }
+
 function b(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -56,6 +58,7 @@ function b(e, t) {
 }
 var f = (((i = {}).DENY = "DENY"), (i.PASSTHROUGH = "PASSTHROUGH"), (i.ALLOW = "ALLOW"), i);
 let p = Object.keys(f);
+
 function m(e) {
     let { value: t = "PASSTHROUGH", onChange: n, labelledBy: i, disabled: l = !1, id: o } = e,
         c = (0, s._u)({
@@ -100,7 +103,9 @@ function m(e) {
         b(
             u(
                 {
-                    className: a()(d.Os, { [d.r9]: l }),
+                    className: a()(d.Os, {
+                        [d.r9]: l,
+                    }),
                     ref: f,
                     id: o,
                 },
@@ -124,6 +129,7 @@ function m(e) {
         ),
     );
 }
+
 function g(e) {
     let t,
         n,
@@ -148,7 +154,9 @@ function g(e) {
         b(
             u(
                 {
-                    className: a()(d.AS, n, { [d.wH]: p }),
+                    className: a()(d.AS, n, {
+                        [d.wH]: p,
+                    }),
                     onClick: () => f(l),
                 },
                 m,

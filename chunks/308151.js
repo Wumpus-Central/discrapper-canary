@@ -1,6 +1,10 @@
-n.d(t, { A: () => a }), n(228524);
+n.d(t, {
+    A: () => a,
+}),
+    n(228524);
 var r = n(64700);
 let i = Symbol();
+
 function a(e, t) {
     let n = r.useRef(i),
         a = r.useRef(t);

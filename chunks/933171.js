@@ -1,4 +1,7 @@
-n.d(t, { A: () => v }), n(228524);
+n.d(t, {
+    A: () => v,
+}),
+    n(228524);
 var l = n(627968);
 n(64700);
 var a = n(503698),
@@ -16,6 +19,7 @@ var a = n(503698),
     f = n(906987),
     g = n(937495),
     x = n(517061);
+
 function v(e) {
     let { guild: t, className: n, onClick: a } = e,
         v = (0, s.Ay)(),
@@ -114,7 +118,9 @@ function v(e) {
                                 (0, l.jsx)(i.Text, {
                                     variant: "text-xs/normal",
                                     color: "text-default",
-                                    children: b.intl.format(b.t.zRl6XR, { count: t.approximate_member_count }),
+                                    children: b.intl.format(b.t.zRl6XR, {
+                                        count: t.approximate_member_count,
+                                    }),
                                 }),
                             ],
                         }),

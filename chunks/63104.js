@@ -1,4 +1,7 @@
-n.d(t, { A: () => m }), n(896048);
+n.d(t, {
+    A: () => m,
+}),
+    n(896048);
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -13,6 +16,7 @@ var i = n(503698),
 let p = l.A.unsafe_rawColors.PRIMARY_300,
     _ = l.A.unsafe_rawColors.WHITE,
     h = l.A.unsafe_rawColors.PRIMARY_630;
+
 function m(e) {
     let { color: t, size: n, forcedIconColor: i, className: l, iconClassName: m } = e,
         [g, E] = (0, o.yK)([u.A], () => [u.A.desaturateUserColors, u.A.saturation]),
@@ -44,7 +48,9 @@ function m(e) {
             className: a()(f.w, m),
             width: n - 2 * I,
             height: n - 2 * I,
-            style: { margin: I },
+            style: {
+                margin: I,
+            },
         }),
     });
 }

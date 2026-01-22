@@ -1,9 +1,12 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(627968);
 n(64700);
 var l = n(435546),
     i = n(466853),
     a = n(294868);
+
 function s(e) {
     var t, n;
     let { user: s, widget: o, guildId: c, channelId: u, disableInteraction: d } = e,
@@ -84,7 +87,9 @@ function s(e) {
                               channelId: u,
                               disableInteraction: d,
                           })
-                        : (0, r.jsx)(l.A, { widget: o }),
+                        : (0, r.jsx)(l.A, {
+                              widget: o,
+                          }),
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

@@ -1,9 +1,12 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(627968);
 n(64700);
 var i = n(594808),
     a = n(207963),
     s = n(100558);
+
 function o(e) {
     let { components: t, renderComponents: n } = e,
         { message: o } = (0, a.jc)();

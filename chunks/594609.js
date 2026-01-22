@@ -1,10 +1,14 @@
-n.d(t, { h: () => f }), n(896048);
+n.d(t, {
+    h: () => f,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(158954),
     s = n(397927),
     o = n(827343),
     l = n(985018);
+
 function c(e, t, n) {
     return (
         t in e
@@ -18,6 +22,7 @@ function c(e, t, n) {
         e
     );
 }
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,6 +39,7 @@ function u(e) {
     }
     return e;
 }
+
 function d(e) {
     let [t, n] = i.useState(!1);
     return (0, r.jsx)(
@@ -63,6 +69,7 @@ function d(e) {
         ),
     );
 }
+
 function f() {
     (0, s.qfG)((e) => (0, r.jsx)(d, u({}, e)));
 }

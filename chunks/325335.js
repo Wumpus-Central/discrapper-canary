@@ -11,6 +11,7 @@ function r(e, t, n) {
         e
     );
 }
+
 function i(e, t, n) {
     if (/%$/.test(t)) return 3 === n ? parseFloat(t) / 100 : (255 * parseFloat(t)) / 100;
     if ("h" === e[n]) {
@@ -19,6 +20,7 @@ function i(e, t, n) {
     }
     return parseFloat(t);
 }
+
 function a(e) {
     let t,
         { hue: n, saturation: r, lightness: i, alpha: a } = e,
@@ -44,6 +46,7 @@ function a(e) {
         alpha: a,
     };
 }
+
 function s(e) {
     let { red: t, green: n, blue: r, alpha: i } = e,
         a = t / 255,
@@ -79,7 +82,13 @@ function s(e) {
         alpha: i,
     };
 }
-n.d(t, { A: () => c }), n(747238), n(812715), n(896048), n(733351);
+n.d(t, {
+    A: () => c,
+}),
+    n(747238),
+    n(812715),
+    n(896048),
+    n(733351);
 let o = /^#[0-9a-f]{3,8}$/i,
     l = /^((?:rgb|hsl)a?)\s*\(([^)]*)\)/i;
 class c {

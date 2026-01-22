@@ -11,6 +11,7 @@ var r = n(627968),
     c = n(652215),
     o = n(874864),
     d = n(196647);
+
 function u(e) {
     let {
             guild: t,
@@ -43,6 +44,7 @@ function u(e) {
         onClick: b,
     });
 }
+
 function f(e) {
     let { guild: t } = e;
     return (0, r.jsx)(u, {
@@ -53,6 +55,7 @@ function f(e) {
         getPerks: o.QR,
     });
 }
+
 function g(e) {
     let { guild: t } = e;
     return (0, r.jsx)(u, {
@@ -63,6 +66,7 @@ function g(e) {
         getPerks: o.Lp,
     });
 }
+
 function b(e) {
     let { guild: t } = e;
     return (0, r.jsx)(u, {

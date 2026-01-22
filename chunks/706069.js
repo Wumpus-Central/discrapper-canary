@@ -1,4 +1,7 @@
-n.d(t, { A: () => M }), n(228524);
+n.d(t, {
+    A: () => M,
+}),
+    n(228524);
 var i = n(627968),
     a = n(64700),
     l = n(503698),
@@ -23,6 +26,7 @@ var i = n(627968),
     O = n(652215),
     v = n(985018),
     T = n(976213);
+
 function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -48,6 +52,7 @@ function w(e) {
     }
     return e;
 }
+
 function P(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -71,13 +76,30 @@ let C = (e) => {
             l = a.useMemo(() => {
                 let e = {
                     classification_type: t,
-                    classificationHook: (e, t) => (0, i.jsx)("strong", { children: e }, t),
+                    classificationHook: (e, t) =>
+                        (0, i.jsx)(
+                            "strong",
+                            {
+                                children: e,
+                            },
+                            t,
+                        ),
                 };
                 return null == n
                     ? v.intl.format(v.t.HpvELh, e)
                     : (null == n ? void 0 : n.member_type) === h.Z9.OWNER
-                      ? v.intl.format(v.t.X1ngSd, P(w({}, e), { guildName: null == n ? void 0 : n.name }))
-                      : v.intl.format(v.t.rmpEPD, P(w({}, e), { guildName: null == n ? void 0 : n.name }));
+                      ? v.intl.format(
+                            v.t.X1ngSd,
+                            P(w({}, e), {
+                                guildName: null == n ? void 0 : n.name,
+                            }),
+                        )
+                      : v.intl.format(
+                            v.t.rmpEPD,
+                            P(w({}, e), {
+                                guildName: null == n ? void 0 : n.name,
+                            }),
+                        );
             }, [t, n]);
         return (0, i.jsx)(c.Heading, {
             variant: "heading-xl/normal",
@@ -99,7 +121,15 @@ let C = (e) => {
                       (0, i.jsxs)("ul", {
                           className: T.nq,
                           children: [
-                              t.map((e) => (0, i.jsx)(N, { action: e }, e.id)),
+                              t.map((e) =>
+                                  (0, i.jsx)(
+                                      N,
+                                      {
+                                          action: e,
+                                      },
+                                      e.id,
+                                  ),
+                              ),
                               null != n
                                   ? (0, i.jsx)(
                                         "li",
@@ -110,7 +140,9 @@ let C = (e) => {
                                                 variant: "heading-md/normal",
                                                 color: "text-default",
                                                 children: v.intl.format(v.t.TByIjT, {
-                                                    expirationDate: n.toLocaleDateString(a, { dateStyle: "medium" }),
+                                                    expirationDate: n.toLocaleDateString(a, {
+                                                        dateStyle: "medium",
+                                                    }),
                                                 }),
                                             }),
                                         },
@@ -160,7 +192,9 @@ let C = (e) => {
                     className: T.wC,
                     children: (0, i.jsx)(c.Text, {
                         variant: "text-md/normal",
-                        children: v.intl.format(v.t.zxUdpj, { classificationDescription: t }),
+                        children: v.intl.format(v.t.zxUdpj, {
+                            classificationDescription: t,
+                        }),
                     }),
                 }),
                 (0, i.jsx)("div", {
@@ -303,7 +337,9 @@ let C = (e) => {
                         (0, i.jsxs)("div", {
                             className: r()(T.rf, T.uW),
                             children: [
-                                (0, i.jsx)(j.U, { flaggedContent: null != (t = p.flagged_content) ? t : [] }),
+                                (0, i.jsx)(j.U, {
+                                    flaggedContent: null != (t = p.flagged_content) ? t : [],
+                                }),
                                 (0, i.jsx)(S, {
                                     actions: p.actions,
                                     classificationExpiration: (0, b.UI)(p),
@@ -330,7 +366,9 @@ let C = (e) => {
                                                     : H
                                                       ? f.A.open(n, c)
                                                       : w &&
-                                                        (u.A.increment({ name: o.K.APPEAL_INGESTION_VIEW }),
+                                                        (u.A.increment({
+                                                            name: o.K.APPEAL_INGESTION_VIEW,
+                                                        }),
                                                         E.A.open(n));
                                         },
                                         isAppealEligible: w || H,

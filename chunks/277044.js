@@ -1,4 +1,9 @@
-n.d(t, { A: () => C }), n(896048), n(492834), n(228524);
+n.d(t, {
+    A: () => C,
+}),
+    n(896048),
+    n(492834),
+    n(228524);
 var r = n(627968),
     i = n(64700),
     a = n(158954),
@@ -22,6 +27,7 @@ var r = n(627968),
     v = n(980504),
     S = n(985018),
     I = n(331129);
+
 function T(e) {
     let { discoverableGuildId: t, closePopout: n, buttonType: a } = e,
         s = i.useCallback(async () => {
@@ -34,12 +40,16 @@ function T(e) {
         ? (0, r.jsx)(E.A, {
               fullWidth: !0,
               showGradient: !0,
-              premiumModalAnalyticsLocation: { section: A.JJy.PREMIUM_SOUNDMOJI_GUILD_INFO_POPOUT },
+              premiumModalAnalyticsLocation: {
+                  section: A.JJy.PREMIUM_SOUNDMOJI_GUILD_INFO_POPOUT,
+              },
               subscriptionTier: O.pe.TIER_2,
               size: l.$n.Sizes.SMALL,
               color: l.$n.Colors.CUSTOM,
               onClick: n,
-              textOptions: { textOverride: S.intl.string(S.t.pj0XBN) },
+              textOptions: {
+                  textOverride: S.intl.string(S.t.pj0XBN),
+              },
           })
         : a === y.E.JOIN_GUILD
           ? (0, r.jsx)(c.Button, {
@@ -51,13 +61,16 @@ function T(e) {
             })
           : null;
 }
+
 function C(e) {
     let { sound: t, channel: n, closePopout: l, refreshPosition: u } = e,
         E = t.guildId === v.mV,
         O = (0, s.bG)([g.A], () => g.A.getGuild(t.guildId)),
         A = !E && null != O,
         [C, N] = i.useState(),
-        R = (0, b.tj)({ location: "SoundmojiGuildInfo" }),
+        R = (0, b.tj)({
+            location: "SoundmojiGuildInfo",
+        }),
         w = E || A || null != C || !R,
         [P, D] = i.useState(!w);
     i.useEffect(() => {

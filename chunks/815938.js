@@ -1,4 +1,6 @@
-i.d(a, { A: () => n });
+i.d(a, {
+    A: () => n,
+});
 var t = {
     lessThanXSeconds: {
         one: "meno di un secondo",
@@ -54,8 +56,8 @@ var t = {
         other: "{{count}} anni",
     },
     overXYears: {
-        one: "più di un anno",
-        other: "più di {{count}} anni",
+        one: "pi\xf9 di un anno",
+        other: "pi\xf9 di {{count}} anni",
     },
     almostXYears: {
         one: "quasi un anno",

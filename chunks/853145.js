@@ -1,10 +1,14 @@
-n.d(t, { A: () => C }), n(896048);
+n.d(t, {
+    A: () => C,
+}),
+    n(896048);
 var r,
     i = n(311907),
     a = n(73153),
     s = n(734057),
     o = n(320501),
     l = n(661191);
+
 function c(e, t, n) {
     return (
         t in e
@@ -18,6 +22,7 @@ function c(e, t, n) {
         e
     );
 }
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,6 +39,7 @@ function u(e) {
     }
     return e;
 }
+
 function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -46,6 +52,7 @@ function d(e, t) {
     }
     return n;
 }
+
 function f(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -60,6 +67,7 @@ function f(e, t) {
 let p = {},
     _ = {},
     h = {};
+
 function m(e) {
     let { channel: t, message: n, shouldMention: r = !0, showMentionToggle: i = !0, source: a } = e;
     (p[t.id] = {
@@ -70,6 +78,7 @@ function m(e) {
     }),
         (h[t.id] = a);
 }
+
 function g(e) {
     let { channel: t, messageId: n, shouldMention: r = !0, showMentionToggle: i = !0 } = e;
     _[t.id] = {
@@ -79,14 +88,24 @@ function g(e) {
         showMentionToggle: i,
     };
 }
+
 function E(e) {
     let { channelId: t, shouldMention: n } = e;
-    t in p && (p[t] = f(u({}, p[t]), { shouldMention: n })), t in _ && (_[t] = f(u({}, _[t]), { shouldMention: n }));
+    t in p &&
+        (p[t] = f(u({}, p[t]), {
+            shouldMention: n,
+        })),
+        t in _ &&
+            (_[t] = f(u({}, _[t]), {
+                shouldMention: n,
+            }));
 }
+
 function b(e) {
     let { channelId: t } = e;
     delete p[t], delete _[t];
 }
+
 function y(e) {
     var t, n, r;
     let { id: i, channelId: a } = e;
@@ -96,6 +115,7 @@ function y(e) {
         delete _[a], delete h[a];
     }
 }
+
 function O(e) {
     if (null == e) return !1;
     let t = _[e];
@@ -111,19 +131,23 @@ function O(e) {
     }),
         delete _[e];
 }
+
 function A(e) {
     let { channelId: t } = e;
     O(t);
 }
+
 function v(e) {
     let { channelId: t } = e;
     O(t);
 }
+
 function S() {
     l.default.keys(_).forEach((e) => {
         null == s.A.getChannel(e) && delete _[e];
     });
 }
+
 function I() {
     (p = {}), (_ = {}), (h = {});
 }

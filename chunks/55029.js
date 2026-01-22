@@ -1,8 +1,11 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(311907),
     i = n(628965),
     a = n(152056),
     s = n(360619);
+
 function o(e, t) {
     let n = (0, s.AC)(t),
         o = a.A.useField("query"),

@@ -6,10 +6,12 @@ var r = n(734057),
     i = n(576705),
     a = n(309010),
     s = n(652215);
+
 function o() {
     let e = a.A.getVoiceChannelId();
     return l(r.A.getChannel(e));
 }
+
 function l(e) {
     if (null == e) return !1;
     if (s.kvI.CALLABLE.has(e.type)) return !0;

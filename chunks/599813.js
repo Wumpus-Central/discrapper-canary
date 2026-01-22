@@ -1,4 +1,6 @@
-n.d(t, { c: () => v });
+n.d(t, {
+    c: () => v,
+});
 var l = n(627968),
     r = n(64700),
     i = n(91871),
@@ -18,6 +20,7 @@ var l = n(627968),
     y = n(32425);
 let _ = [51],
     E = [A.t.OpqAok];
+
 function v(e) {
     let { columns: t, handleScroll: n, voiceListRef: r, showSectionHeaders: i = !1, query: a } = e,
         s = x(),
@@ -68,7 +71,9 @@ function v(e) {
                     (0, l.jsx)(u.Text, {
                         variant: "text-sm/normal",
                         color: "text-muted",
-                        children: A.intl.format(A.t["5afO9U"], { onClick: j ? m.st : m.md }),
+                        children: A.intl.format(A.t["5afO9U"], {
+                            onClick: j ? m.st : m.md,
+                        }),
                     }),
                 ],
             })
@@ -128,6 +133,7 @@ function v(e) {
                   sectionFooterHeight: 40 * !v,
               });
 }
+
 function O(e) {
     let { children: t } = e,
         n = r.useRef(null);

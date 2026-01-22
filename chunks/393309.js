@@ -48,17 +48,21 @@ var r = n(64700),
             e
         );
     })({});
+
 function x(e) {
     let t = (0, T.n)(e);
     return (0, T.Tb)(e) ? (t ? 2 : 3) : 1;
 }
+
 function L(e, t) {
     var n;
     return 3 === t || (null != (n = e.isPrivate) && n);
 }
+
 function j(e, t) {
     return e.length > t ? e.substring(0, t) + "..." : e;
 }
+
 function M(e, t) {
     var n, r, i, a, s, o, l;
     let c = null == t ? null : y.A.getMessage(e.id, t),
@@ -88,6 +92,7 @@ function M(e, t) {
         return j(i, 40);
     }
 }
+
 function k(e) {
     let {
         parentChannel: t,
@@ -138,6 +143,7 @@ function k(e) {
         [t, n, i, c, s, o, d, f],
     );
 }
+
 function U(e, t, n, r, i) {
     return F(e, [], void 0, () =>
         a.Bo.post({
@@ -152,6 +158,7 @@ function U(e, t, n, r, i) {
         }),
     );
 }
+
 function G(e) {
     let { parentChannel: t, name: n, appliedTags: s, analyticsLocations: o, onThreadCreated: c, upload: d } = e;
     return r.useCallback(
@@ -212,10 +219,17 @@ function G(e) {
         [t, n, s, c, o, d],
     );
 }
+
 function V(e, t, n, r, i) {
     if (null != i && null != r && r.length > 0) i(e, r, t, n);
-    else if (null != n && n.length > 0) return c.A.sendStickers(e.id, n, t, { location: w.Hx.THREAD_CREATION });
-    else return c.A.sendMessage(e.id, h.Ay.parse(e, t), void 0, { location: w.Hx.THREAD_CREATION });
+    else if (null != n && n.length > 0)
+        return c.A.sendStickers(e.id, n, t, {
+            location: w.Hx.THREAD_CREATION,
+        });
+    else
+        return c.A.sendMessage(e.id, h.Ay.parse(e, t), void 0, {
+            location: w.Hx.THREAD_CREATION,
+        });
 }
 async function F(e, t, n, r) {
     let i,

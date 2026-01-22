@@ -1,4 +1,6 @@
-n.d(t, { L: () => u });
+n.d(t, {
+    L: () => u,
+});
 var l = n(942381),
     i = n(265690),
     a = n(121894),
@@ -30,9 +32,14 @@ let s = (0, i.h)((e) => ({
     },
     maxVolume: 1,
     setMaxVolume: (t) => {
-        (0, a.r)(() => e({ maxVolume: t }));
+        (0, a.r)(() =>
+            e({
+                maxVolume: t,
+            }),
+        );
     },
 }));
+
 function u() {
     return s(
         (e) => ({

@@ -1,6 +1,9 @@
-n.d(t, { Q: () => a });
+n.d(t, {
+    Q: () => a,
+});
 var r = n(652215),
     i = n(985018);
+
 function a(e) {
     let {
             enabled: t,
@@ -26,7 +29,9 @@ function a(e) {
                 ? l >= r.uaN
                     ? i.intl.string(i.t["j6h0/8"])
                     : i.intl.string(i.t["jlZ+0h"])
-                : i.intl.formatToPlainString(i.t.x9mtl4, { limit: l })),
+                : i.intl.formatToPlainString(i.t.x9mtl4, {
+                      limit: l,
+                  })),
         u
     );
 }

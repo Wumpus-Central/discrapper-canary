@@ -1,4 +1,6 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var l = n(627968);
 n(64700);
 var a = n(503698),
@@ -18,7 +20,9 @@ let c = function (e) {
                 i.VQ0.Item,
                 {
                     id: n,
-                    className: r()(s.V, { [s.r]: 0 === t }),
+                    className: r()(s.V, {
+                        [s.r]: 0 === t,
+                    }),
                     "aria-label": a,
                     children: null != c && c > 0 ? "".concat(a, " (").concat(c, ")") : a,
                 },

@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var l = n(627968),
     r = n(64700),
     a = n(417597),
@@ -14,6 +16,7 @@ var l = n(627968),
     A = n(652215),
     T = n(985018),
     f = n(438536);
+
 function h(e) {
     let { member: t } = e,
         n = (0, a.bG)([E.A], () => E.A.getGuild(t.guildId), [t.guildId]),

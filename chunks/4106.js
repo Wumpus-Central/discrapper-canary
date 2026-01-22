@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(562465),
     i = n(73153),
     l = n(253932),
@@ -6,6 +8,7 @@ var r = n(562465),
     s = n(335934),
     o = n(859524),
     c = n(652215);
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -74,7 +77,9 @@ let d = {
                 let l = Date.now(),
                     a = await r.Bo.get({
                         url: c.Rsh.GRAVITY_ITEMS_DEHYDRATED,
-                        query: { refresh: n },
+                        query: {
+                            refresh: n,
+                        },
                         rejectWithError: !1,
                     });
                 await i.h.dispatch({
@@ -236,7 +241,9 @@ let d = {
             }
     },
     reloadICYMITab() {
-        i.h.dispatch({ type: "RELOAD_ICYMI" });
+        i.h.dispatch({
+            type: "RELOAD_ICYMI",
+        });
     },
     loadHydratedAttempt(e) {
         i.h.dispatch({
@@ -245,10 +252,14 @@ let d = {
         });
     },
     openICYMITab() {
-        i.h.dispatch({ type: "ICYMI_TAB_OPENED" });
+        i.h.dispatch({
+            type: "ICYMI_TAB_OPENED",
+        });
     },
     closeICYMITab() {
-        i.h.dispatch({ type: "ICYMI_TAB_CLOSED" });
+        i.h.dispatch({
+            type: "ICYMI_TAB_CLOSED",
+        });
     },
     startItemsDwell(e) {
         i.h.dispatch({
@@ -278,9 +289,18 @@ let d = {
             type: "SET_ICYMI_FILTERS",
             filters: e,
         }),
-    giveFeedback: () => i.h.dispatch({ type: "ICYMI_FEEDBACK_GIVEN" }),
-    clearReadStates: () => i.h.dispatch({ type: "CLEAR_ICYMI_READ_STATES" }),
-    addedRecommendedGuild: () => i.h.dispatch({ type: "ICYMI_JOINED_RECOMMENDED_GUILD" }),
+    giveFeedback: () =>
+        i.h.dispatch({
+            type: "ICYMI_FEEDBACK_GIVEN",
+        }),
+    clearReadStates: () =>
+        i.h.dispatch({
+            type: "CLEAR_ICYMI_READ_STATES",
+        }),
+    addedRecommendedGuild: () =>
+        i.h.dispatch({
+            type: "ICYMI_JOINED_RECOMMENDED_GUILD",
+        }),
     setVideosMuted(e) {
         i.h.dispatch({
             type: "ICYMI_SET_VIDEOS_MUTED",
@@ -316,12 +336,33 @@ let d = {
         });
     },
     feedItemActioned(e) {
-        i.h.dispatch(u({ type: "ICYMI_FEED_ITEM_ACTIONED" }, e));
+        i.h.dispatch(
+            u(
+                {
+                    type: "ICYMI_FEED_ITEM_ACTIONED",
+                },
+                e,
+            ),
+        );
     },
     feedFilterActioned(e) {
-        i.h.dispatch(u({ type: "ICYMI_FEED_FILTER_ACTIONED" }, e));
+        i.h.dispatch(
+            u(
+                {
+                    type: "ICYMI_FEED_FILTER_ACTIONED",
+                },
+                e,
+            ),
+        );
     },
     feedPageActioned(e) {
-        i.h.dispatch(u({ type: "ICYMI_FEED_PAGE_ACTIONED" }, e));
+        i.h.dispatch(
+            u(
+                {
+                    type: "ICYMI_FEED_PAGE_ACTIONED",
+                },
+                e,
+            ),
+        );
     },
 };

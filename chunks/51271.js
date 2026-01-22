@@ -8,6 +8,7 @@ var r = n(961350),
     i = n(696451),
     a = n(954571),
     s = n(652215);
+
 function o(e) {
     let { guildId: t, applicationUserId: n, applicationStatus: i } = e;
     a.default.track(s.HAw.GUILD_MEMBER_APPLICATION_VIEWED, {
@@ -17,6 +18,7 @@ function o(e) {
         application_status: i,
     });
 }
+
 function l(e) {
     let { guildId: t, actionType: n, applicationUserId: i } = e;
     a.default.track(s.HAw.GUILD_MEMBER_APPLICATION_ACTION, {
@@ -26,6 +28,7 @@ function l(e) {
         viewing_user_id: r.default.getId(),
     });
 }
+
 function c(e) {
     var t;
     let { guildId: n, messageId: o, channelId: l, joinRequestStatus: c, joinRequestUserId: u } = e,
@@ -41,6 +44,9 @@ function c(e) {
         join_request_user_id: u,
     });
 }
+
 function u(e) {
-    a.default.track(s.HAw.MEMBER_VERIFICATION_APPLICATION_VIEWED, { guild_id: e });
+    a.default.track(s.HAw.MEMBER_VERIFICATION_APPLICATION_VIEWED, {
+        guild_id: e,
+    });
 }

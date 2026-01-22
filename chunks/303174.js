@@ -1,4 +1,7 @@
-n.r(s), n.d(s, { default: () => g });
+n.r(s),
+    n.d(s, {
+        default: () => g,
+    });
 var t = n(627968);
 n(64700);
 var r = n(311907),
@@ -11,6 +14,7 @@ var r = n(311907),
     u = n(652215),
     h = n(985018),
     p = n(90344);
+
 function N() {
     return (0, t.jsxs)(a.$Td, {
         color: a.Hv$.DANGER,
@@ -34,6 +38,7 @@ function N() {
         ],
     });
 }
+
 function x(e) {
     let {} = e,
         s = (0, r.bG)([d.A], () => d.A.getAgeCheckStatus());
@@ -42,7 +47,9 @@ function x(e) {
         : s === o.qN.SUCCESS
           ? (0, t.jsx)(a.po8, {
                 messageType: a.YCn.POSITIVE,
-                children: h.intl.format(h.t.maZDL6, { login: "/login" }),
+                children: h.intl.format(h.t.maZDL6, {
+                    login: "/login",
+                }),
             })
           : s === o.qN.ERROR
             ? (0, t.jsx)(a.po8, {
@@ -59,16 +66,20 @@ function x(e) {
                     children: h.intl.string(h.t["nhhy/R"]),
                 });
 }
+
 function R() {
     return (0, t.jsxs)("div", {
         className: p.$$,
         children: [(0, t.jsx)(x, {}), (0, t.jsx)(c.A, {})],
     });
 }
+
 function g() {
     return (
         null == (0, r.bG)([l.default], () => l.default.getSuspendedUserToken()) &&
-            (0, i.pX)(u.BVt.LOGIN, { source: "suspended_user_safety_hub_page" }),
+            (0, i.pX)(u.BVt.LOGIN, {
+                source: "suspended_user_safety_hub_page",
+            }),
         (0, t.jsxs)("div", {
             className: p.kL,
             children: [(0, t.jsx)(N, {}), (0, t.jsx)(R, {})],

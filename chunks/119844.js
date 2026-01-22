@@ -1,4 +1,6 @@
-n.d(t, { d: () => o });
+n.d(t, {
+    d: () => o,
+});
 var r = n(82180),
     i = n(679314),
     a = n(123789);
@@ -6,6 +8,7 @@ let s = {
     writeUnknownFields: !0,
     writerFactory: () => new l(),
 };
+
 function o(e) {
     return e ? Object.assign(Object.assign({}, s), e) : s;
 }

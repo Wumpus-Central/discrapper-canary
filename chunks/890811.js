@@ -1,4 +1,7 @@
-n.d(i, { A: () => h }), n(896048);
+n.d(i, {
+    A: () => h,
+}),
+    n(896048);
 var t = n(627968),
     a = n(64700),
     s = n(503698),
@@ -14,6 +17,7 @@ var t = n(627968),
     N = n(985018),
     u = n(249942),
     A = n(299916);
+
 function h(e) {
     let { className: i, isDsaEligible: n = !1, onClose: s, onNext: h, onBack: j } = e,
         _ = (0, g.y5)(),

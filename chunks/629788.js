@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968);
 n(64700);
 var o = n(311907),
@@ -10,6 +12,7 @@ var o = n(311907),
     s = n(536432),
     d = n(980504),
     b = n(985018);
+
 function f(e, t) {
     let { analyticsLocations: n } = (0, l.Ay)(),
         f = (0, o.bG)([a.default], () => a.default.getCurrentUser()),

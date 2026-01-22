@@ -1,12 +1,14 @@
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 let r = Object.freeze({
         HALF_SECOND: 500,
-        SECOND: 1000,
-        MINUTE: 60000,
-        HOUR: 3600000,
-        DAY: 86400000,
-        WEEK: 604800000,
-        DAYS_30: 2592000000,
+        SECOND: 1e3,
+        MINUTE: 6e4,
+        HOUR: 36e5,
+        DAY: 864e5,
+        WEEK: 6048e5,
+        DAYS_30: 2592e6,
     }),
     i = {
         Millis: r,
@@ -16,7 +18,7 @@ let r = Object.freeze({
             HOUR: 3600,
             DAY: 86400,
             WEEK: 604800,
-            DAYS_30: 2592000,
+            DAYS_30: 2592e3,
         }),
         Minutes: Object.freeze({
             MINUTE: 1,

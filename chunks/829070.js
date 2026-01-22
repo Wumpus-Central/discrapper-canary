@@ -1,4 +1,6 @@
-n.d(t, { a: () => r });
+n.d(t, {
+    a: () => r,
+});
 class r {
     call() {
         try {

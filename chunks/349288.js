@@ -1,4 +1,8 @@
-n.r(t), n.d(t, { Anchor: () => g }), n(65821);
+n.r(t),
+    n.d(t, {
+        Anchor: () => g,
+    }),
+    n(65821);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -7,6 +11,7 @@ var r = n(627968),
     l = n(158954),
     c = n(752239),
     u = n(820162);
+
 function d(e, t, n) {
     return (
         t in e
@@ -20,6 +25,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +42,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -48,6 +55,7 @@ function p(e, t) {
     }
     return n;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -59,6 +67,7 @@ function _(e, t) {
         e
     );
 }
+
 function h(e, t) {
     if (null == e) return {};
     var n,
@@ -75,6 +84,7 @@ function h(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function m(e, t) {
     if (null == e) return {};
     var n,
@@ -85,6 +95,7 @@ function m(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function g(e) {
     let {
             href: t,
@@ -115,7 +126,13 @@ function g(e) {
     null != t && null == n && (n = c.V.getDefaultLinkInterceptor(t));
     let v = i.useContext(l.gmh),
         S = {
-            className: s()(u.Y, { [u.D]: g }, a),
+            className: s()(
+                u.Y,
+                {
+                    [u.D]: g,
+                },
+                a,
+            ),
             href: t,
             onClick: n,
             rel: null != p ? p : void 0,
@@ -128,12 +145,21 @@ function g(e) {
     null != n)
         ? (0, r.jsx)(
               l.DUT,
-              _(f({ tag: "a" }, A, S), {
-                  onClick: n,
-                  focusProps: y,
-                  innerRef: O,
-                  children: d,
-              }),
+              _(
+                  f(
+                      {
+                          tag: "a",
+                      },
+                      A,
+                      S,
+                  ),
+                  {
+                      onClick: n,
+                      focusProps: y,
+                      innerRef: O,
+                      children: d,
+                  },
+              ),
           )
         : (0, r.jsx)(
               l.vN3,

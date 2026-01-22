@@ -1,4 +1,8 @@
-n.d(t, { default: () => eo }), n(896048), n(457529);
+n.d(t, {
+    default: () => eo,
+}),
+    n(896048),
+    n(457529);
 var l = n(627968),
     r = n(64700),
     i = n(503698),
@@ -48,6 +52,7 @@ var l = n(627968),
     J = n(424994),
     Z = n(985018),
     $ = n(851822);
+
 function Q(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -77,7 +82,9 @@ let q = () =>
         (0, l.jsxs)("div", {
             className: $.uv,
             children: [
-                (0, l.jsx)(x.Y3C, { size: "xxs" }),
+                (0, l.jsx)(x.Y3C, {
+                    size: "xxs",
+                }),
                 (0, l.jsx)(x.Text, {
                     variant: "text-sm/normal",
                     color: "text-muted",
@@ -86,6 +93,7 @@ let q = () =>
             ],
         }),
     ee = r.createContext(void 0);
+
 function et(e) {
     var t;
     let { detectedGame: n, application: i, entries: s } = e,
@@ -121,7 +129,9 @@ function et(e) {
         children: [
             (0, l.jsx)("div", {
                 className: $.is,
-                style: { backgroundImage: 'url("'.concat(d, '")') },
+                style: {
+                    backgroundImage: 'url("'.concat(d, '")'),
+                },
             }),
             (0, l.jsxs)("div", {
                 className: a()($.Qs, $.fi, $.iH, $.Se),
@@ -160,7 +170,9 @@ function et(e) {
                                                 className: $.Gt,
                                                 src: m,
                                                 height: 16,
-                                                alt: Z.intl.formatToPlainString(Z.t["nh+jWk"], { game: g }),
+                                                alt: Z.intl.formatToPlainString(Z.t["nh+jWk"], {
+                                                    game: g,
+                                                }),
                                             }),
                                         (0, l.jsx)(x.Text, {
                                             variant: "text-sm/semibold",
@@ -178,7 +190,7 @@ function et(e) {
                                                 children: [
                                                     (0, l.jsx)(x.Text, {
                                                         variant: "text-sm/medium",
-                                                        children: " \xB7 ",
+                                                        children: " \xb7 ",
                                                     }),
                                                     (0, l.jsx)(q, {}),
                                                 ],
@@ -193,6 +205,7 @@ function et(e) {
         ],
     });
 }
+
 function en(e) {
     var t;
     let {
@@ -229,13 +242,16 @@ function en(e) {
         ],
     });
 }
+
 function el(e) {
     let { onClose: t, onCloudPlayClick: n, analyticsLocations: r } = e;
     return (
         (0, v.A)({
             name: c.ImpressionNames.CLOUD_PLAY_CTA,
             type: c.ImpressionTypes.VIEW,
-            properties: { location_stack: r },
+            properties: {
+                location_stack: r,
+            },
         }),
         (0, l.jsx)(f.m, {
             text: Z.intl.string(Z.t.JVwWva),
@@ -252,6 +268,7 @@ function el(e) {
         })
     );
 }
+
 function er(e) {
     let {
             detectedGame: t,
@@ -321,16 +338,21 @@ function er(e) {
                         detectedGame: t,
                         trackClick: s,
                     }),
-                    (0, l.jsx)(K.A, { detectedGame: t }),
+                    (0, l.jsx)(K.A, {
+                        detectedGame: t,
+                    }),
                     (0, l.jsx)(x.Text, {
                         variant: "text-xxs/normal",
-                        children: Z.intl.format(Z.t.pch2Jw, { igdbLink: J.s8 }),
+                        children: Z.intl.format(Z.t.pch2Jw, {
+                            igdbLink: J.s8,
+                        }),
                     }),
                 ],
             }),
         ],
     });
 }
+
 function ei(e) {
     var t;
     let {
@@ -381,7 +403,9 @@ function ei(e) {
     r.useEffect(() => {
         g.startsWith("en") ||
             (null == T ? void 0 : T.summaryLocalized) != null ||
-            b.A.getDetectableGamesSupplemental([n], { forceFetch: !0 });
+            b.A.getDetectableGamesSupplemental([n], {
+                forceFetch: !0,
+            });
     }, [n, null == T ? void 0 : T.summaryLocalized, g]),
     r.useEffect(() => {
         (async () => {
@@ -470,6 +494,7 @@ function ei(e) {
               }),
           });
 }
+
 function ea(e) {
     let { applicationId: t, transitionState: n } = e,
         { clientThemesClassName: r } = (0, O.Ay)(),
@@ -483,11 +508,19 @@ function ea(e) {
               size: x.rIJ.DYNAMIC,
               className: r,
               parentComponent: "GameProfileModal",
-              children: [(0, l.jsx)(d.I, { gameId: a.applicationId }), (0, l.jsx)(es, {})],
+              children: [
+                  (0, l.jsx)(d.I, {
+                      gameId: a.applicationId,
+                  }),
+                  (0, l.jsx)(es, {}),
+              ],
           });
 }
+
 function es() {
-    let { enabled: e, canToggle: t } = L.z.useConfig({ location: "GameProfileModal" }),
+    let { enabled: e, canToggle: t } = L.z.useConfig({
+            location: "GameProfileModal",
+        }),
         n = r.useContext(ee);
     return null != n && e && t
         ? (0, l.jsx)("div", {
@@ -506,10 +539,14 @@ function es() {
         : null;
 }
 let eo = function (e) {
-    let { enabled: t } = L.z.useConfig({ location: "GameProfileModal" }),
+    let { enabled: t } = L.z.useConfig({
+            location: "GameProfileModal",
+        }),
         [n, i] = r.useState(t);
     return (0, l.jsx)(ee.Provider, {
-        value: { setIsShowingGameProfileV2: i },
+        value: {
+            setIsShowingGameProfileV2: i,
+        },
         children: n ? (0, l.jsx)(ea, Q({}, e)) : (0, l.jsx)(ei, Q({}, e)),
     });
 };

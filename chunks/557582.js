@@ -23,6 +23,7 @@ var i = n(503698),
     E = n(103355),
     b = n(985018),
     y = n(680028);
+
 function O(e) {
     let { className: t, creator: n, guildId: i, isNew: m, guildEvent: g, eventPreview: O, recurrenceId: A } = e,
         v = (0, p.A)(i, g.id, A),
@@ -49,10 +50,14 @@ function O(e) {
                 guildEventId: g.id,
                 recurrenceId: A,
             }),
-            (0, r.jsx)("div", { className: y.jH }),
+            (0, r.jsx)("div", {
+                className: y.jH,
+            }),
             null != n &&
                 (0, r.jsx)(o.m, {
-                    text: b.intl.formatToPlainString(b.t["+3iypQ"], { username: null != I ? I : u.Ay.getName(n) }),
+                    text: b.intl.formatToPlainString(b.t["+3iypQ"], {
+                        username: null != I ? I : u.Ay.getName(n),
+                    }),
                     children: (0, r.jsx)(l.euF, {
                         src: n.getAvatarURL(i, 20),
                         size: l._3J.SIZE_20,
@@ -61,7 +66,9 @@ function O(e) {
                     }),
                 }),
             (0, r.jsx)(o.m, {
-                text: b.intl.formatToPlainString(b.t["+DLsD8"], { count: v }),
+                text: b.intl.formatToPlainString(b.t["+DLsD8"], {
+                    count: v,
+                }),
                 children: (0, r.jsxs)("div", {
                     className: y.T_,
                     children: [
@@ -81,6 +88,7 @@ function O(e) {
         ],
     });
 }
+
 function A(e) {
     let {
         headerVariant: t = "heading-lg/medium",
@@ -92,10 +100,14 @@ function A(e) {
         imageSource: u,
     } = e;
     return (0, r.jsxs)("div", {
-        className: a()({ [y.dT]: null != u }),
+        className: a()({
+            [y.dT]: null != u,
+        }),
         children: [
             (0, r.jsxs)("div", {
-                className: a()({ [y.FD]: null != u }),
+                className: a()({
+                    [y.FD]: null != u,
+                }),
                 children: [
                     (0, r.jsx)(l.Heading, {
                         variant: t,
@@ -123,6 +135,7 @@ function A(e) {
         ],
     });
 }
+
 function v(e) {
     let {
         headerVariant: t,

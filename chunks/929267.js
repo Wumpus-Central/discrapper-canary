@@ -11,6 +11,7 @@ var r = n(961350),
     o = n(974930),
     l = n(988794),
     c = n(985018);
+
 function u(e, t) {
     let n = r.default.getId();
     return i.Ay.getRsvp(e, t, n);
@@ -18,6 +19,7 @@ function u(e, t) {
 var d = (function (e) {
     return (e[(e.SERIES = 0)] = "SERIES"), (e[(e.RECURRENCE = 1)] = "RECURRENCE"), e;
 })({});
+
 function f() {
     return [
         {
@@ -30,6 +32,7 @@ function f() {
         },
     ];
 }
+
 function p(e) {
     let { eventId: t, recurrenceId: n, guildId: r, updateRsvp: c, openRsvpPicker: d, onRsvp: f } = e,
         p = i.Ay.getGuildScheduledEvent(t);

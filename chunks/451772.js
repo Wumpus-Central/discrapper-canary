@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -31,8 +33,12 @@ let u = 5500,
                           e.preventDefault(), e.stopPropagation(), _(t);
                       }
                     : void 0,
-            className: s()(c.am, { [c.Sf]: null != n }),
-            style: { transform: "translate(".concat(a, "px, ").concat(f, "px)") },
+            className: s()(c.am, {
+                [c.Sf]: null != n,
+            }),
+            style: {
+                transform: "translate(".concat(a, "px, ").concat(f, "px)"),
+            },
             children: (0, r.jsxs)("div", {
                 className: c.LU,
                 children: [
@@ -40,7 +46,9 @@ let u = 5500,
                         null != m &&
                         (0, r.jsx)("img", {
                             className: s()(c.Sl, c.r7),
-                            style: { transform: "translate(".concat(m.x, "px, ").concat(m.y, "px)") },
+                            style: {
+                                transform: "translate(".concat(m.x, "px, ").concat(m.y, "px)"),
+                            },
                             src: null == E ? void 0 : E.shadow,
                             alt: "",
                         }),
@@ -51,7 +59,9 @@ let u = 5500,
                                 [c.Sf]: null != n,
                                 [c.cb]: h,
                             }),
-                            style: { animationDelay: "".concat(u + d * t, "ms") },
+                            style: {
+                                animationDelay: "".concat(u + d * t, "ms"),
+                            },
                             src: null == E ? void 0 : E.seat,
                             alt: "",
                         }),

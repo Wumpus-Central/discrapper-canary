@@ -7,6 +7,7 @@ var r,
     a = n.n(i),
     s = n(311907),
     o = n(73153);
+
 function l(e, t, n) {
     return (
         t in e
@@ -20,6 +21,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +38,7 @@ function c(e) {
     }
     return e;
 }
+
 function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -48,6 +51,7 @@ function u(e, t) {
     }
     return n;
 }
+
 function d(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -66,10 +70,12 @@ let p = [],
     _ = {},
     h = {},
     m = {};
+
 function g(e) {
     let { surface: t, activeState: n } = e;
     return "surface:".concat(t, " activeState:").concat(n);
 }
+
 function E(e) {
     let { surface: t, activeState: n } = e;
     h = d(c({}, h), {
@@ -79,12 +85,15 @@ function E(e) {
         })]: 0,
     });
 }
+
 function b(e) {
     return a().sortBy(e, ["position", "id"]);
 }
+
 function y(e) {
     return a().sortBy(e, ["position", "id"]);
 }
+
 function O(e) {
     let { collections: t, surface: n, activeState: r } = e,
         i = g({
@@ -94,10 +103,18 @@ function O(e) {
         a = b(
             t.map((e) => ((e.application_directory_collection_items = y(e.application_directory_collection_items)), e)),
         );
-    (_ = d(c({}, _), { [i]: a })), (h = d(c({}, h), { [i]: 1 }));
+    (_ = d(c({}, _), {
+        [i]: a,
+    })),
+        (h = d(c({}, h), {
+            [i]: 1,
+        }));
     let s = Date.now();
-    m = d(c({}, m), { [i]: s });
+    m = d(c({}, m), {
+        [i]: s,
+    });
 }
+
 function A(e) {
     let { surface: t, activeState: n } = e;
     h = d(c({}, h), {

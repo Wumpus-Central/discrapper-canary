@@ -8,6 +8,7 @@ var r = n(64700),
     i = n(829219),
     s = n(216456),
     c = n(341915);
+
 function l(e) {
     let { isClaimingReward: t, isFetchingRewardCode: n, questContent: a, quest: s, rewardCode: l, preview: o } = e,
         [d, u] = r.useState(!1),
@@ -48,6 +49,7 @@ function l(e) {
         }
     );
 }
+
 function o(e) {
     let { quest: t, redemptionLink: n, questContent: i, questContentPosition: c, sourceQuestContent: l } = e,
         o = (0, s.Ut)();

@@ -1,8 +1,11 @@
-n.d(t, { j: () => l });
+n.d(t, {
+    j: () => l,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
     a = n(559868);
+
 function s(e, t, n) {
     return (
         t in e
@@ -16,6 +19,7 @@ function s(e, t, n) {
         e
     );
 }
+
 function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -32,6 +36,7 @@ function o(e) {
     }
     return e;
 }
+
 function l() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     (!e && (0, i.ueM)()) ||
@@ -40,6 +45,8 @@ function l() {
                 let { default: e } = await n.e("50737").then(n.bind(n, 88872));
                 return (t) => (0, r.jsx)(e, o({}, t));
             },
-            { modalKey: a.lb },
+            {
+                modalKey: a.lb,
+            },
         );
 }

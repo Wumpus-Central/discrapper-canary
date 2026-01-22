@@ -1,4 +1,7 @@
-e.r(s), e.d(s, { default: () => u });
+e.r(s),
+    e.d(s, {
+        default: () => u,
+    });
 var c = e(627968),
     r = e(64700),
     d = e(311907),
@@ -23,9 +26,15 @@ let u = r.memo(function (a) {
             (0, c.jsxs)("div", {
                 className: p.I5,
                 children: [
-                    (0, c.jsx)("div", { className: p.pw }),
-                    (0, c.jsx)("div", { className: p.pw }),
-                    (0, c.jsx)("div", { className: p.pw }),
+                    (0, c.jsx)("div", {
+                        className: p.pw,
+                    }),
+                    (0, c.jsx)("div", {
+                        className: p.pw,
+                    }),
+                    (0, c.jsx)("div", {
+                        className: p.pw,
+                    }),
                 ],
             }),
             (0, c.jsx)(l.euF, {

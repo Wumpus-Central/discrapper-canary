@@ -1,8 +1,11 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(311907),
     i = n(517164),
     a = n(99753),
     s = n(424994);
+
 function o(e) {
     let { activity: t, user: n } = e,
         o = (0, r.bG)([a.A], () => {

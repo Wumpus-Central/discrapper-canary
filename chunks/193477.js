@@ -1,4 +1,7 @@
-n.d(t, { A: () => _ }), n(896048);
+n.d(t, {
+    A: () => _,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(417597),
@@ -21,6 +24,7 @@ var r = n(627968),
     v = n(467069),
     A = n(544351),
     E = n(361776);
+
 function N(e) {
     let { guild: t, saveOnClose: n } = e,
         [o, d] = i.useState("new"),
@@ -67,9 +71,13 @@ function N(e) {
                     }),
                     (0, r.jsx)("div", {
                         className: O.uW,
-                        children: (0, r.jsx)(h.A, { guildId: t.id }),
+                        children: (0, r.jsx)(h.A, {
+                            guildId: t.id,
+                        }),
                     }),
-                    (0, r.jsx)("div", { className: O.DY }),
+                    (0, r.jsx)("div", {
+                        className: O.DY,
+                    }),
                     (0, r.jsx)(a.Heading, {
                         className: O.wx,
                         variant: "heading-lg/extrabold",
@@ -87,8 +95,12 @@ function N(e) {
                         className: O.uW,
                         children: (0, r.jsx)(b.A, {}),
                     }),
-                    (0, r.jsx)(g.A, { guildId: t.id }),
-                    (0, r.jsx)("div", { className: O.DY }),
+                    (0, r.jsx)(g.A, {
+                        guildId: t.id,
+                    }),
+                    (0, r.jsx)("div", {
+                        className: O.DY,
+                    }),
                     (0, r.jsx)(a.Heading, {
                         className: O.wx,
                         variant: "heading-lg/extrabold",
@@ -135,10 +147,21 @@ function N(e) {
                     }),
                     (0, r.jsxs)("div", {
                         className: O.uW,
-                        children: [(0, r.jsx)(x.A, { guildId: t.id }), (0, r.jsx)(p.A, { guildId: t.id })],
+                        children: [
+                            (0, r.jsx)(x.A, {
+                                guildId: t.id,
+                            }),
+                            (0, r.jsx)(p.A, {
+                                guildId: t.id,
+                            }),
+                        ],
                     }),
-                    (0, r.jsx)("div", { className: O.DY }),
-                    (0, r.jsx)(m.A, { guild: t }),
+                    (0, r.jsx)("div", {
+                        className: O.DY,
+                    }),
+                    (0, r.jsx)(m.A, {
+                        guild: t,
+                    }),
                 ],
             }),
             (0, r.jsxs)("div", {
@@ -168,6 +191,7 @@ function N(e) {
         ],
     });
 }
+
 function _(e) {
     let { saveOnClose: t } = e,
         n = (0, l.bG)([d.A, o.A], () => {

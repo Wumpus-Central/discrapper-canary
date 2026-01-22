@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(627968),
     i = n(64700),
     a = n(397927),
@@ -6,9 +8,12 @@ var r = n(627968),
     o = n(4103),
     l = n(652215),
     c = n(985018);
+
 function u(e) {
     let { user: t, analyticsLocations: n, confettiEnabled: u = !0 } = e,
-        { giftButtonRef: d, handleMouseEnter: f } = (0, o.A)({ enabled: u }),
+        { giftButtonRef: d, handleMouseEnter: f } = (0, o.A)({
+            enabled: u,
+        }),
         p = i.useCallback(() => {
             (0, s.A)({
                 giftRecipient: t,

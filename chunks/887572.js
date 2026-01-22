@@ -1,4 +1,6 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 var r = n(322811),
     i = n(985971);
 class a extends i.B {
@@ -6,7 +8,7 @@ class a extends i.B {
         super(e);
     }
     followingPhase() {
-        return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|to|\\?)\\s*";
+        return "\\s*(?:\\-|\\–|\\~|\\〜|to|\\?)\\s*";
     }
     primaryPrefix() {
         return "(?:(?:alle|dalle)\\s*)??";

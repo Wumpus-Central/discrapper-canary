@@ -1,4 +1,7 @@
-n.d(t, { A: () => m }), n(896048);
+n.d(t, {
+    A: () => m,
+}),
+    n(896048);
 var l = n(627968),
     i = n(64700),
     a = n(397927),
@@ -32,7 +35,9 @@ let m = i.memo(function (e) {
                                         (x.currentTime = 0),
                                         x.play(),
                                         h(!0),
-                                        x.addEventListener("ended", () => h(!1), { once: !0 }))
+                                        x.addEventListener("ended", () => h(!1), {
+                                            once: !0,
+                                        }))
                                       : (x.pause(), h(!1)));
                           },
                     className: f.Rr,

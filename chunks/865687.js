@@ -1,1 +1,3 @@
-e.exports = { $: "_283d83a9fabbec52" };
+e.exports = {
+    $: "_283d83a9fabbec52",
+};

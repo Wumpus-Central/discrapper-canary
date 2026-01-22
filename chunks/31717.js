@@ -14,6 +14,7 @@ var r,
     u = n(961350),
     d = n(734057),
     f = n(919638);
+
 function p(e, t, n) {
     return (
         t in e
@@ -27,6 +28,7 @@ function p(e, t, n) {
         e
     );
 }
+
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -43,6 +45,7 @@ function _(e) {
     }
     return e;
 }
+
 function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -55,6 +58,7 @@ function h(e, t) {
     }
     return n;
 }
+
 function m(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -81,13 +85,16 @@ var E = (function (e) {
     );
 })({});
 let b = {};
+
 function y(e) {
     return e.length > g && (e = e.substr(0, g)), e;
 }
+
 function O(e) {
     let t = b[e];
     return null == t && (t = b[e] = {}), t;
 }
+
 function A(e) {
     let { type: t, channelId: n, draft: r, draftType: i } = e,
         a = d.A.getChannel(n);
@@ -106,18 +113,33 @@ function A(e) {
     } else I(n, i);
     return "DRAFT_SAVE" === t;
 }
+
 function v(e) {
     let { channelId: t, draftType: n } = e;
     return I(t, n);
 }
+
 function S(e) {
     let { channelId: t, draft: n } = e,
         r = u.default.getId();
     if (null == r) return;
     let i = O(r),
         a = i[t];
-    null == a && (a = i[t] = {}), (a[1] = m(_({ timestamp: Date.now() }, a[1], n), { parentChannelId: t }));
+    null == a && (a = i[t] = {}),
+        (a[1] = m(
+            _(
+                {
+                    timestamp: Date.now(),
+                },
+                a[1],
+                n,
+            ),
+            {
+                parentChannelId: t,
+            },
+        ));
 }
+
 function I(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : u.default.getId();
     if (null == n) return !1;
@@ -126,19 +148,23 @@ function I(e, t) {
     if (null == i) return !1;
     delete i[t], a().isEmpty(i) && delete r[e];
 }
+
 function T() {
     let e = u.default.getId();
     if (null == e || f.A.totalUnavailableGuilds > 0) return;
     let t = O(e);
     for (let e in t) null == d.A.getChannel(e) && delete t[e];
 }
+
 function C() {
     let e = u.default.getId();
     return e in b || (b[e] = {}), T(), !1;
 }
+
 function N() {
     return T(), !1;
 }
+
 function R(e) {
     let {
             channel: { id: t },
@@ -148,6 +174,7 @@ function R(e) {
     let r = O(n);
     return delete r[t], !1;
 }
+
 function w(e) {
     let { channel: t } = e,
         n = u.default.getId();
@@ -173,12 +200,15 @@ function w(e) {
             I(t.parent_id, 2);
     }
 }
+
 function P(e) {
     e.isSwitchingAccount || (b = {});
 }
+
 function D(e) {
     e.userId in b && delete b[e.userId];
 }
+
 function x() {
     for (let [e, t] of c.default.entries(b))
         for (let [n, r] of c.default.entries(t)) {
@@ -247,7 +277,11 @@ p(L, "displayName", "DraftStore"),
     p(L, "migrations", [
         (e) => {
             if (null == e) return {};
-            for (let t in e) "timestamp" in e[t] && (e[t] = { 0: e[t] });
+            for (let t in e)
+                "timestamp" in e[t] &&
+                    (e[t] = {
+                        0: e[t],
+                    });
             return e;
         },
         (e) => {

@@ -30,6 +30,7 @@ let i = {
     },
     o = (0, r.createContext)({}),
     l = "__formValidationState" + Date.now();
+
 function c(e) {
     if (e[l]) {
         let {
@@ -49,6 +50,7 @@ function c(e) {
     }
     return u(e);
 }
+
 function u(e) {
     let {
         isInvalid: t,
@@ -104,9 +106,11 @@ function u(e) {
         }
     );
 }
+
 function d(e) {
     return e ? (Array.isArray(e) ? e : [e]) : [];
 }
+
 function f(e, t) {
     if ("function" == typeof e) {
         let n = e(t);
@@ -114,6 +118,7 @@ function f(e, t) {
     }
     return [];
 }
+
 function p(e) {
     return e.length
         ? {
@@ -123,6 +128,7 @@ function p(e) {
           }
         : null;
 }
+
 function _(e, t) {
     return (
         e === t ||
@@ -134,10 +140,13 @@ function _(e, t) {
             Object.entries(e.validationDetails).every(([e, n]) => t.validationDetails[e] === n))
     );
 }
+
 function h(...e) {
     let t = new Set(),
         n = !1,
-        r = { ...i };
+        r = {
+            ...i,
+        };
     for (let i of e) {
         var a, s;
         for (let e of i.validationErrors) t.add(e);

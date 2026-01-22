@@ -1,4 +1,7 @@
-n.d(t, { A: () => u }), n(896048);
+n.d(t, {
+    A: () => u,
+}),
+    n(896048);
 var l = n(627968),
     r = n(64700),
     i = n(397927),
@@ -7,6 +10,7 @@ var l = n(627968),
     o = n(985018),
     c = n(851822),
     d = n(351886);
+
 function u(e) {
     let { detectedGame: t, trackAction: n } = e,
         u = r.useRef(null),
@@ -24,6 +28,7 @@ function u(e) {
             ];
         }, [t.artwork, t.screenshots]),
         f = m.length > 2;
+
     function x(e) {
         if (null == u.current) return;
         let t = u.current.getScrollerState().scrollLeft;
@@ -70,7 +75,9 @@ function u(e) {
                                           children: (0, l.jsx)("img", {
                                               src: e.url,
                                               className: d.Zm,
-                                              alt: o.intl.formatToPlainString(o.t.COYYrn, { game: name }),
+                                              alt: o.intl.formatToPlainString(o.t.COYYrn, {
+                                                  game: name,
+                                              }),
                                           }),
                                       },
                                       t,
@@ -81,7 +88,9 @@ function u(e) {
                               (0, l.jsxs)("div", {
                                   className: d.NA,
                                   children: [
-                                      (0, l.jsx)("div", { className: d.EJ }),
+                                      (0, l.jsx)("div", {
+                                          className: d.EJ,
+                                      }),
                                       (0, l.jsx)(i.DUT, {
                                           className: d.G9,
                                           onClick: () => x(-1),
@@ -90,7 +99,9 @@ function u(e) {
                                               color: "currentColor",
                                           }),
                                       }),
-                                      (0, l.jsx)("div", { className: d.Pj }),
+                                      (0, l.jsx)("div", {
+                                          className: d.Pj,
+                                      }),
                                       (0, l.jsx)(i.DUT, {
                                           className: d.G9,
                                           onClick: () => x(1),

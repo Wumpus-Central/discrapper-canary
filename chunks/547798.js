@@ -1,4 +1,6 @@
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var a = n(627968);
 n(64700);
 var l = n(503698),
@@ -19,6 +21,7 @@ var l = n(503698),
     v = n(431804),
     j = n(229988),
     y = n(473169);
+
 function _() {
     let e = b.default.getCurrentUser(),
         t = null == e ? void 0 : e.isStaff(),
@@ -35,7 +38,10 @@ function _() {
                     variant: "primary",
                     size: "sm",
                     text: "Launch Vibing Wumpus",
-                    onClick: () => (0, p.A)({ source: v.y.KEYBIND }),
+                    onClick: () =>
+                        (0, p.A)({
+                            source: v.y.KEYBIND,
+                        }),
                 }),
             }),
             (0, a.jsx)("div", {
@@ -93,7 +99,9 @@ function _() {
                                             ),
                                         );
                                 },
-                                { modalKey: g.V },
+                                {
+                                    modalKey: g.V,
+                                },
                             )
                         );
                     },

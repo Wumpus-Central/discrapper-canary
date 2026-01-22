@@ -1,8 +1,13 @@
-n.d(t, { A: () => u }), n(896048), n(446912);
+n.d(t, {
+    A: () => u,
+}),
+    n(896048),
+    n(446912);
 var a,
     l = n(311907),
     i = n(73153),
     r = n(427157);
+
 function s(e, t, n) {
     return (
         t in e
@@ -20,6 +25,7 @@ let o = {
     pools: null,
     users: null,
 };
+
 function c(e) {
     null == o.users && (o.users = new Map()), o.users.set(e.id, new r.A(e));
 }

@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -7,6 +9,7 @@ var i = n(397927),
     o = n(834981),
     l = n(475833),
     c = n(694164);
+
 function u(e, t, n) {
     return (
         t in e
@@ -20,6 +23,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +40,7 @@ function d(e) {
     }
     return e;
 }
+
 function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -48,6 +53,7 @@ function f(e, t) {
     }
     return n;
 }
+
 function p(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -60,6 +66,7 @@ function p(e, t) {
     );
 }
 let _ = s.Ay.getEnableHardwareAcceleration() ? i.JsQ : i.euF;
+
 function h(e) {
     let { otherUser: t, status: n } = e,
         s = (0, o.XC)(t.id, n),
@@ -91,7 +98,9 @@ function h(e) {
                 children: [
                     (0, r.jsx)("div", {
                         className: c.Vx,
-                        children: (0, r.jsx)(l.A, { user: t }),
+                        children: (0, r.jsx)(l.A, {
+                            user: t,
+                        }),
                     }),
                     (0, r.jsx)(i.Text, {
                         color: "text-muted",

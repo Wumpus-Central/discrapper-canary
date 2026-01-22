@@ -1,7 +1,10 @@
-n.d(t, { Q: () => s });
+n.d(t, {
+    Q: () => s,
+});
 var r = n(64700),
     i = n(166532),
     a = n(293700);
+
 function s(e, t, n) {
     r.useEffect(() => {
         null != e && e !== i.pn.AWAITING_PURCHASE_TOKEN_AUTH && t === a.C.PENDING

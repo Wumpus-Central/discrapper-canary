@@ -1,4 +1,7 @@
-e.d(n, { default: () => S }), e(896048);
+e.d(n, {
+    default: () => S,
+}),
+    e(896048);
 var l = e(627968),
     i = e(64700),
     r = e(158954),
@@ -43,6 +46,7 @@ let h = (t) => {
         selectionMode: "single",
     });
 };
+
 function S(t) {
     let { action: n, triggerType: e, guildId: s, isEdit: c, onEditChannel: d, onClose: o, transitionState: S } = t,
         [_, C] = i.useState(n.metadata.channelId),

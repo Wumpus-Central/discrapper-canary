@@ -1,4 +1,7 @@
-n.d(t, { A: () => d }), n(896048);
+n.d(t, {
+    A: () => d,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     s = n(830215),
@@ -7,6 +10,7 @@ var r = n(627968),
     o = n(210714),
     c = n(985018),
     u = n(473169);
+
 function d(e) {
     let { location: t } = e,
         [d, h] = i.useState("submitting");
@@ -60,6 +64,11 @@ function d(e) {
                 ],
             })
           : (0, r.jsxs)(a.Ay, {
-                children: [(0, r.jsx)(a.CK, {}), (0, r.jsx)(a.hE, { children: c.intl.string(c.t.T3vC7n) })],
+                children: [
+                    (0, r.jsx)(a.CK, {}),
+                    (0, r.jsx)(a.hE, {
+                        children: c.intl.string(c.t.T3vC7n),
+                    }),
+                ],
             });
 }

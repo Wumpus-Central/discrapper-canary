@@ -18,21 +18,25 @@ let c = "png",
     f = "localhost",
     p = "3000",
     _ = "http://localhost:4000";
+
 function h(e) {
     return !((0, a.NO)(e) || (0, r.XD)(e));
 }
+
 function m(e, t, n) {
     let r = l.Ay.canSaveImage(e, null != n ? n : t),
         i = o.A.isDiscordAssetUrl(e, t, n),
         a = h(e);
     return r && i && a;
 }
+
 function g(e, t, n) {
     let r = l.Ay.canCopyImage(e),
         i = o.A.isDiscordAssetUrl(e, t, n),
         a = h(e);
     return r && i && a;
 }
+
 function E(e, t) {
     if ((0, s.iT)()) return null != e ? e : t;
     if (null != e) {
@@ -41,6 +45,7 @@ function E(e, t) {
     }
     return t;
 }
+
 function b(e, t, n, r) {
     let i = o.A.toURLSafe(e);
     if (null == i || i.host === d) return e;

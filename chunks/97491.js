@@ -1,4 +1,7 @@
-r.r(t), r.d(t, { default: () => a });
+r.r(t),
+    r.d(t, {
+        default: () => a,
+    });
 var n = r(627968);
 r(64700);
 var o = r(384904),
@@ -8,6 +11,7 @@ var o = r(384904),
     u = r(156312),
     i = r(546042),
     f = r(652215);
+
 function a(e) {
     var t, r;
     let { onClose: a, onComplete: b, forcesTransitionToGuild: s } = e,

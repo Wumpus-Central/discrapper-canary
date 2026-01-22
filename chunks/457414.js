@@ -1,4 +1,6 @@
-l.d(t, { A: () => f });
+l.d(t, {
+    A: () => f,
+});
 var n = l(627968);
 l(64700);
 var r = l(172218),
@@ -8,6 +10,7 @@ var r = l(172218),
     o = l(815280),
     c = l(985018),
     u = l(922868);
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var l = null != arguments[t] ? arguments[t] : {},
@@ -43,7 +46,12 @@ let f = (e) => {
             null != l,
         ),
         { bannerUrl: b, bannerAnimatedUrl: g } = (0, i.qY)(t),
-        p = null != t.textColor ? { color: t.textColor } : void 0,
+        p =
+            null != t.textColor
+                ? {
+                      color: t.textColor,
+                  }
+                : void 0,
         m = null != t.body && "" !== t.body,
         h = null != t.helpCenterUrl && "" !== t.helpCenterUrl;
     return (0, n.jsxs)("div", {

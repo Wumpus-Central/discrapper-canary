@@ -1,4 +1,4 @@
-let t = 2147483647,
+let t = 0x7fffffff,
     n = 36,
     r = 1,
     i = 26,
@@ -18,20 +18,24 @@ let t = 2147483647,
     _ = 35,
     h = Math.floor,
     m = String.fromCharCode;
+
 function g(e) {
     throw RangeError(p[e]);
 }
+
 function E(e, t) {
     let n = [],
         r = e.length;
     for (; r--; ) n[r] = t(e[r]);
     return n;
 }
+
 function b(e, t) {
     let n = e.split("@"),
         r = "";
     return n.length > 1 && ((r = n[0] + "@"), (e = n[1])), r + E((e = e.replace(f, ".")).split("."), t).join(".");
 }
+
 function y(e) {
     let t = [],
         n = 0,

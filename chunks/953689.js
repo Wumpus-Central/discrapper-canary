@@ -1,4 +1,7 @@
-n.d(t, { A: () => y }), n(896048);
+n.d(t, {
+    A: () => y,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -13,6 +16,7 @@ var r = n(627968),
     _ = n(652215),
     h = n(985018),
     m = n(252101);
+
 function g(e, t, n) {
     return (
         t in e
@@ -26,6 +30,7 @@ function g(e, t, n) {
         e
     );
 }
+
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -86,14 +91,26 @@ class b extends i.Component {
                       null != e && (a || !i)
                           ? (0, r.jsx)(u.Checkbox, {
                                 checked: I,
-                                onChange: (e) => this.setState({ hasAcceptedEULA: e }),
+                                onChange: (e) =>
+                                    this.setState({
+                                        hasAcceptedEULA: e,
+                                    }),
                                 disabled: o,
                                 label: h.intl.format(h.t.IodJKT, {
                                     applicationName: t,
                                     onClick: (t) => {
                                         (0, u.mMO)(async () => {
                                             let { default: t } = await n.e("35641").then(n.bind(n, 698336));
-                                            return (n) => (0, r.jsx)(t, E({ eulaId: e }, n));
+                                            return (n) =>
+                                                (0, r.jsx)(
+                                                    t,
+                                                    E(
+                                                        {
+                                                            eulaId: e,
+                                                        },
+                                                        n,
+                                                    ),
+                                                );
                                         }),
                                             t.preventDefault();
                                     },
@@ -112,7 +129,10 @@ class b extends i.Component {
                                 children: [
                                     (0, r.jsx)(u.Checkbox, {
                                         checked: T,
-                                        onChange: (e) => this.setState({ hasAcceptedWithdrawalWaiver: e }),
+                                        onChange: (e) =>
+                                            this.setState({
+                                                hasAcceptedWithdrawalWaiver: e,
+                                            }),
                                         disabled: o,
                                         label: h.intl.string(h.t["DFCVN+"]),
                                     }),
@@ -183,5 +203,7 @@ class b extends i.Component {
 }
 let y = c.Ay.connectStores([d.A], (e) => {
     let { eulaId: t } = e;
-    return { hasPreviouslyAcceptedEULA: null != t && d.A.hasAcceptedEULA(t) };
+    return {
+        hasPreviouslyAcceptedEULA: null != t && d.A.hasAcceptedEULA(t),
+    };
 })(b);

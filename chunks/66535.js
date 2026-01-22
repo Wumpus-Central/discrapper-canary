@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var l = n(627968),
     r = n(64700),
     a = n(311907),
@@ -20,7 +22,9 @@ let h = (e) => {
         n = (0, o.Ay)(t),
         h = (0, a.bG)([x.A], () => x.A.getChannel(t.channel_id)),
         j = r.useMemo(() => (0, s.A)(t), [t]),
-        { content: _ } = (0, b.A)(j, { hideSimpleEmbedContent: !1 }),
+        { content: _ } = (0, b.A)(j, {
+            hideSimpleEmbedContent: !1,
+        }),
         A = p.hH.useSetting(),
         y = r.useCallback(() => {
             let { leadingIcon: e, trailingIcon: n } = (0, m.o)(t, _, !1, !1, "", {

@@ -1,4 +1,14 @@
-n.d(t, { A: () => w }), n(896048), n(65821), n(693327), n(554719), n(680155), n(323874), n(14289), n(35956);
+n.d(t, {
+    A: () => w,
+}),
+    n(896048),
+    n(65821),
+    n(693327),
+    n(554719),
+    n(680155),
+    n(323874),
+    n(14289),
+    n(35956);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -23,6 +33,7 @@ var r = n(627968),
     v = n(49999),
     S = n(985018),
     C = n(530811);
+
 function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -48,6 +59,7 @@ function N(e) {
     }
     return e;
 }
+
 function T(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -77,7 +89,9 @@ let j = [],
     P = (e) => {
         let { header: t, subHeader: n, imageSrc: i, tagText: l, wideStyle: s } = e;
         return (0, r.jsxs)("div", {
-            className: a()(C.Vr, { [C.tF]: s }),
+            className: a()(C.Vr, {
+                [C.tF]: s,
+            }),
             children: [
                 null != l
                     ? (0, r.jsx)(x, {
@@ -87,7 +101,9 @@ let j = [],
                     : null,
                 (0, r.jsx)("img", {
                     alt: "",
-                    className: a()(C._n, { [C.tF]: s }),
+                    className: a()(C._n, {
+                        [C.tF]: s,
+                    }),
                     src: i,
                 }),
                 (0, r.jsxs)("div", {
@@ -108,6 +124,7 @@ let j = [],
             ],
         });
     };
+
 function w(e) {
     let {
             componentId: t,
@@ -142,6 +159,7 @@ function w(e) {
         eo = i.useRef(en),
         [ec, eu] = i.useState(j),
         ed = i.useRef(!1);
+
     function ep() {
         let e = Date.now(),
             t = e - ei.current,
@@ -170,9 +188,13 @@ function w(e) {
                                   let t = await fetch(e.src);
                                   if (!t.ok) throw Error("Failed to fetch the subtitle file ".concat(e.src));
                                   let n = await t.text(),
-                                      r = new Blob([n], { type: "text/vtt" }),
+                                      r = new Blob([n], {
+                                          type: "text/vtt",
+                                      }),
                                       i = URL.createObjectURL(r);
-                                  return T(N({}, e), { src: i });
+                                  return T(N({}, e), {
+                                      src: i,
+                                  });
                               });
                     eu(await Promise.all(t));
                 } catch (e) {
@@ -199,11 +221,11 @@ function w(e) {
                     let [e, t] = ep();
                     O.default.track(I.HAw.CHANGE_LOG_VIDEO_PLAYED, {
                         change_log_id: V,
-                        seconds_played: Math.round(e / 1000),
+                        seconds_played: Math.round(e / 1e3),
                     }),
                         O.default.track(I.HAw.CHANGE_LOG_VIDEO_UNMUTE, {
                             change_log_id: V,
-                            seconds_unmuted: Math.round(t / 1000),
+                            seconds_unmuted: Math.round(t / 1e3),
                         });
                 }
             },
@@ -213,13 +235,17 @@ function w(e) {
             (0, _.Vh)(u.M.PREMIUM_MARKETING_MOMENT_ANNOUNCEMENT_UPSELL);
             let e = Date.now();
             return (
-                O.default.track(I.HAw.CHANGE_LOG_OPENED, { change_log_id: V }),
+                O.default.track(I.HAw.CHANGE_LOG_OPENED, {
+                    change_log_id: V,
+                }),
                 () => {
                     O.default.track(I.HAw.CHANGE_LOG_CLOSED, {
                         change_log_id: V,
-                        seconds_open: Math.round((Date.now() - e) / 1000),
+                        seconds_open: Math.round((Date.now() - e) / 1e3),
                     }),
-                        (0, _.qr)(u.M.PREMIUM_MARKETING_MOMENT_ANNOUNCEMENT_UPSELL, n, { dismissAction: v.i.DISMISS });
+                        (0, _.qr)(u.M.PREMIUM_MARKETING_MOMENT_ANNOUNCEMENT_UPSELL, n, {
+                            dismissAction: v.i.DISMISS,
+                        });
                 }
             );
         }, [V, n]),
@@ -255,7 +281,9 @@ function w(e) {
                                       src: w.src,
                                       poster: w.poster,
                                       onPlay: (e) => {
-                                          O.default.track(I.HAw.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: V }),
+                                          O.default.track(I.HAw.CHANGE_LOG_VIDEO_INTERACTED, {
+                                              change_log_id: V,
+                                          }),
                                               Q(Date.now()),
                                               et(!0),
                                               er(e.currentTarget.muted);
@@ -304,7 +332,9 @@ function w(e) {
                                         renderImageComponent: E.LL,
                                         renderLinkComponent: E.bU,
                                         onPlay: () => {
-                                            O.default.track(I.HAw.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: V });
+                                            O.default.track(I.HAw.CHANGE_LOG_VIDEO_INTERACTED, {
+                                                change_log_id: V,
+                                            });
                                         },
                                     })
                                   : "image" === w.type
@@ -334,11 +364,15 @@ function w(e) {
                                 }),
                             G.length > 0 &&
                                 (0, r.jsx)("div", {
-                                    className: a()(C.IS, { [C.tF]: z }),
+                                    className: a()(C.IS, {
+                                        [C.tF]: z,
+                                    }),
                                     children: G.map((e, t) =>
                                         (0, r.jsx)(
                                             P,
-                                            T(N({}, e), { wideStyle: z }),
+                                            T(N({}, e), {
+                                                wideStyle: z,
+                                            }),
                                             "".concat(e.header, "_").concat(t),
                                         ),
                                     ),

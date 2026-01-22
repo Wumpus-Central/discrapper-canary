@@ -40,7 +40,7 @@ let a = {
         märz: 3,
         maerz: 3,
         mär: 3,
-        "mär.": 3,
+        "m\xe4r.": 3,
         mrz: 3,
         "mrz.": 3,
         april: 4,
@@ -124,6 +124,7 @@ let a = {
         jahres: "year",
     },
     c = `(?:${(0, r.uJ)(o)}|[0-9]+|[0-9]+\\.[0-9]+|halb?|halbe?|einigen?|wenigen?|mehreren?)`;
+
 function u(e) {
     let t = e.toLowerCase();
     if (void 0 !== o[t]) return o[t];
@@ -136,6 +137,7 @@ function u(e) {
 }
 let d =
     "(?:[0-9]{1,4}(?:\\s*[vn]\\.?\\s*(?:C(?:hr)?|(?:u\\.?|d\\.?(?:\\s*g\\.?)?)?\\s*Z)\\.?|\\s*(?:u\\.?|d\\.?(?:\\s*g\\.)?)\\s*Z\\.?)?)";
+
 function f(e) {
     if (/v/i.test(e)) return -parseInt(e.replace(/[^0-9]+/gi, ""));
     if (/n/i.test(e) || /z/i.test(e)) return parseInt(e.replace(/[^0-9]+/gi, ""));
@@ -145,6 +147,7 @@ function f(e) {
 let p = `(${c})\\s{0,5}(${(0, r.uJ)(l)})\\s{0,5}`,
     _ = RegExp(p, "i"),
     h = (0, r.mb)("", p);
+
 function m(e) {
     let t = {},
         n = e,
@@ -152,6 +155,7 @@ function m(e) {
     for (; r; ) g(t, r), (n = n.substring(r[0].length)), (r = _.exec(n));
     return t;
 }
+
 function g(e, t) {
     let n = u(t[1]);
     e[l[t[2].toLowerCase()]] = n;

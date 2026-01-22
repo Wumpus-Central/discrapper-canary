@@ -1,4 +1,6 @@
-r.d(t, { A: () => a });
+r.d(t, {
+    A: () => a,
+});
 var n = r(64700),
     o = r(205662);
 let a = function (e) {
@@ -23,9 +25,15 @@ let a = function (e) {
                         cursor: "pointer",
                     },
                 },
-                active: { button: { boxShadow: "0 0 0 1px #878787" } },
+                active: {
+                    button: {
+                        boxShadow: "0 0 0 1px #878787",
+                    },
+                },
             },
-            { active: i },
+            {
+                active: i,
+            },
         );
     return n.createElement(
         "div",

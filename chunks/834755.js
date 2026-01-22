@@ -1,4 +1,7 @@
-n.d(t, { A: () => $ }), n(896048);
+n.d(t, {
+    A: () => $,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -38,6 +41,7 @@ var r = n(627968),
     G = n(823894),
     V = n(985018),
     F = n(228539);
+
 function B(e, t, n) {
     return (
         t in e
@@ -51,6 +55,7 @@ function B(e, t, n) {
         e
     );
 }
+
 function H(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -67,6 +72,7 @@ function H(e) {
     }
     return e;
 }
+
 function Y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -79,6 +85,7 @@ function Y(e, t) {
     }
     return n;
 }
+
 function W(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -90,6 +97,7 @@ function W(e, t) {
         e
     );
 }
+
 function K(e, t) {
     if (null == e) return {};
     var n,
@@ -106,6 +114,7 @@ function K(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function z(e, t) {
     if (null == e) return {};
     var n,
@@ -140,7 +149,9 @@ let q = 498 + k.as.MEDIUM,
                             (0, x.U)(i);
                     },
                     "aria-current": t ? "page" : void 0,
-                    className: s()(n, F.oi, F.pc, { [F.Mv]: t }),
+                    className: s()(n, F.oi, F.pc, {
+                        [F.Mv]: t,
+                    }),
                 },
             ),
         );
@@ -164,7 +175,9 @@ let q = 498 + k.as.MEDIUM,
                 (e) => {
                     let t = e >= s ? L.wp.MAX : e <= 498 ? L.wp.MIN : e;
                     null == t && null != n.current && (n.current.style.width = ""),
-                        h.Ay.updatedUnsyncedSettings({ expressionPickerWidth: t }),
+                        h.Ay.updatedUnsyncedSettings({
+                            expressionPickerWidth: t,
+                        }),
                         u(t);
                 },
                 [n, s],
@@ -203,6 +216,7 @@ let q = 498 + k.as.MEDIUM,
             }
         );
     };
+
 function Q(e) {
     var t, n, a, o;
     let {
@@ -233,11 +247,15 @@ function Q(e) {
         el = (0, C.ZO)(W),
         { renderWindow: ec, windowDispatch: eu } = i.useContext(S.Ay),
         ed = (0, d.bG)([N.A], () => !N.A.hasLoadedStickerPacks),
-        ef = (0, I.tj)({ location: "expression_picker" }),
+        ef = (0, I.tj)({
+            location: "expression_picker",
+        }),
         ep = (0, d.bG)([P.A], () => P.A.isOpen()),
         e_ = null != ee,
         eh = (0, p.useIsModalAtTop)(null != ee ? ee : ""),
-        { reorderExpressionPickerTabs: em } = b.C.useConfig({ location: "expression_picker" }),
+        { reorderExpressionPickerTabs: em } = b.C.useConfig({
+            location: "expression_picker",
+        }),
         eg = (null == (t = K.gifs) ? void 0 : t.allowSending) && !c.Fr && null != w,
         eE = (null == (n = K.stickers) ? void 0 : n.allowSending) && null != H,
         eb = !(null == (a = K.expressionPicker) ? void 0 : a.onlyEmojis) && (eg || eE),
@@ -370,7 +388,9 @@ function Q(e) {
                 var t;
                 let { isPositioned: n } = e;
                 return (0, r.jsx)("section", {
-                    className: s()(F.V6, { [F.D0]: !eb }),
+                    className: s()(F.V6, {
+                        [F.D0]: !eb,
+                    }),
                     ref: et,
                     role: "dialog",
                     "aria-label": V.intl.string(V.t.Utlwvi),
@@ -386,7 +406,9 @@ function Q(e) {
                                   (0, r.jsx)("div", {
                                       className: F.Di,
                                       onMouseDown: es,
-                                      style: { [eR]: -2 },
+                                      style: {
+                                          [eR]: -2,
+                                      },
                                   }),
                                   (0, r.jsxs)("div", {
                                       className: F.FG,

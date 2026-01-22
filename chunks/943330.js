@@ -1,6 +1,9 @@
-n.d(t, { L: () => r });
+n.d(t, {
+    L: () => r,
+});
 var i = n(927813),
     s = n(985018);
+
 function r(e) {
     if (e >= i.A.Seconds.HOUR) {
         let t = Math.floor(e / i.A.Seconds.HOUR),
@@ -12,7 +15,10 @@ function r(e) {
             seconds: r,
         });
     }
-    if (!(e >= 60)) return s.intl.formatToPlainString(s.t.IWntYg, { seconds: e });
+    if (!(e >= 60))
+        return s.intl.formatToPlainString(s.t.IWntYg, {
+            seconds: e,
+        });
     {
         let t = Math.floor(e / 60);
         return s.intl.formatToPlainString(s.t.sY3wlG, {

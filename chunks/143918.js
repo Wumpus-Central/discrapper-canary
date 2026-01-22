@@ -15,8 +15,12 @@ e.exports = function (e) {
             begin: "[-+]?\\d+(\\.\\d+)?",
             relevance: 0,
         },
-        s = e.inherit(e.QUOTE_STRING_MODE, { illegal: null }),
-        o = e.COMMENT(";", "$", { relevance: 0 }),
+        s = e.inherit(e.QUOTE_STRING_MODE, {
+            illegal: null,
+        }),
+        o = e.COMMENT(";", "$", {
+            relevance: 0,
+        }),
         l = {
             className: "literal",
             begin: /\b([Tt]rue|[Ff]alse|nil|None)\b/,

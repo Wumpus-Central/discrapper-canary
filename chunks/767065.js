@@ -1,4 +1,12 @@
-n.d(t, { A: () => eR }), n(747238), n(321073), n(896048), n(457529), n(65821), n(492834);
+n.d(t, {
+    A: () => eR,
+}),
+    n(747238),
+    n(321073),
+    n(896048),
+    n(457529),
+    n(65821),
+    n(492834);
 var r = n(824120),
     i = n.n(r),
     a = n(111956),
@@ -61,6 +69,7 @@ var r = n(824120),
     el = n(652215),
     ec = n(731854),
     eu = n(985018);
+
 function ed(e, t, n) {
     return (
         t in e
@@ -74,6 +83,7 @@ function ed(e, t, n) {
         e
     );
 }
+
 function ef(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -90,6 +100,7 @@ function ef(e) {
     }
     return e;
 }
+
 function ep(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -102,6 +113,7 @@ function ep(e, t) {
     }
     return n;
 }
+
 function e_(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -122,16 +134,23 @@ let eh = /^https/.test("https:") ? "wss:" : "ws:",
     eO = 5,
     eA = "1",
     ev = 0;
+
 function eS(e) {
     return e;
 }
 let eI = 0,
     eT = [],
     eC = 50;
+
 function eN() {
     let e = [],
         t = (0, _.tB)();
-    for (let n of eT) e.push(e_(ef({}, n), { t: t - n.t }));
+    for (let n of eT)
+        e.push(
+            e_(ef({}, n), {
+                t: t - n.t,
+            }),
+        );
     return JSON.stringify(e);
 }
 class eR extends f.A {
@@ -257,7 +276,9 @@ class eR extends f.A {
             W.A.removeOnlineCallback(this._handleNetworkOnline),
             W.A.removeOfflineCallback(this._handleNetworkOffline),
             (0, K.isDesktop)() && (null == (s = (o = this).powerMonitorListener) || s.call(o)),
-            this.recordEvent({ c: 1 }),
+            this.recordEvent({
+                c: 1,
+            }),
             eo.X.off(eo.N.IncomingVideoEnabledChanged, this.incomingVideoEnabledChanged),
             eo.X.off(eo.N.WindowVisibilityChanged, this.windowVisibilityChanged),
             this._backoff.cancel(),
@@ -341,7 +362,7 @@ class eR extends f.A {
         return e > 0 ? e : 0;
     }
     getDurationSeconds() {
-        return this.getDuration() / 1000;
+        return this.getDuration() / 1e3;
     }
     getVoiceFilterSpeakingDurationMs() {
         return null == this._voiceDuration ? null : this._voiceDuration.getVoiceFilterSpeakingDurationMs();
@@ -462,7 +483,9 @@ class eR extends f.A {
         this.joinVoiceId = null;
     }
     setNextChannelId(e) {
-        this.recordEvent({ c: 9 });
+        this.recordEvent({
+            c: 9,
+        });
         let t = k.A.getChannel(this.channelId),
             n = null == t ? void 0 : t.type;
         this.logger.info("Updating channel: ".concat(e, "(").concat(n, ")")),
@@ -502,13 +525,23 @@ class eR extends f.A {
             null != e && t.push(e);
         }
         this.context === ec.x.DEFAULT && (0, I.I)("RtcConnection").enabled && t.push("audio_transport_cc");
-        let { enabled: n } = (0, y.r)({ location: "_chooseExperiments" });
+        let { enabled: n } = (0, y.r)({
+            location: "_chooseExperiments",
+        });
         n && t.push("should_analyze_user_voice_volume"),
             t.push("keyframe_on_join"),
-            P.A.getCurrentConfig({ location: "_chooseExperiments" }, { autoTrackExposure: !0 }).enabled &&
-                t.push("network_aware_socket");
+            P.A.getCurrentConfig(
+                {
+                    location: "_chooseExperiments",
+                },
+                {
+                    autoTrackExposure: !0,
+                },
+            ).enabled && t.push("network_aware_socket");
         let r = C.A.getCurrentConfig(
-            { location: "_chooseExperiments" },
+            {
+                location: "_chooseExperiments",
+            },
             {
                 disable: !(0, K.isWindows)(),
                 autoTrackExposure: !0,
@@ -580,7 +613,7 @@ class eR extends f.A {
             this.logger.warn(
                 "Disconnect was not clean! reason="
                     .concat(r, ". Reconnecting in ")
-                    .concat((e / 1000).toFixed(2), " seconds."),
+                    .concat((e / 1e3).toFixed(2), " seconds."),
             );
         }
         if (this.state !== el.S7L.DISCONNECTED) {
@@ -608,7 +641,9 @@ class eR extends f.A {
                                         e.getNetworkStats(),
                                         e.getCodecUsageStats("sender", this.userId),
                                     ),
-                                    { device_performance_class: (0, v.A)() },
+                                    {
+                                        device_performance_class: (0, v.A)(),
+                                    },
                                 ),
                             );
                     });
@@ -617,7 +652,9 @@ class eR extends f.A {
                         t.camera_enabled_duration > 0 &&
                         H.default.track(
                             el.HAw.VIDEO_CALL_ENDED,
-                            e_(ef({}, t), { media_session_id: this.getMediaSessionId() }),
+                            e_(ef({}, t), {
+                                media_session_id: this.getMediaSessionId(),
+                            }),
                         );
                 }
                 e.getInboundParticipants().forEach((t) => {
@@ -755,7 +792,9 @@ class eR extends f.A {
                     var e, t;
                     return null != (e = await (null == (t = this._systemResources) ? void 0 : t.getBatteryLevelStats()))
                         ? e
-                        : { batteryUsageRounded: null };
+                        : {
+                              batteryUsageRounded: null,
+                          };
                 })(),
                 L.A.getKrispModel(),
                 U.A.getKrispEnableStats() ? U.A.getMediaEngine().getNoiseCancellationStats() : Promise.resolve(null),
@@ -808,7 +847,9 @@ class eR extends f.A {
             let e = this._connection;
             (this._connection = null), e.destroy(this.reconnecting);
         }
-        this.setState(el.S7L.DISCONNECTED, { willReconnect: C });
+        this.setState(el.S7L.DISCONNECTED, {
+            willReconnect: C,
+        });
     }
     _handleResuming(e) {
         var t, n;
@@ -869,7 +910,10 @@ class eR extends f.A {
                 this.userId === e && this.sendSpeaking(t, n), this.emit(Q.q.Speaking, eS(e), t);
             }),
             f.on(p.yq.ToggleMuteFromNative, () => {
-                this.context === ec.x.DEFAULT && g.A.toggleSelfMute({ playSoundEffect: !1 });
+                this.context === ec.x.DEFAULT &&
+                    g.A.toggleSelfMute({
+                        playSoundEffect: !1,
+                    });
             }),
             f.on(p.yq.NativeMuteChanged, (e) => {
                 this.context === ec.x.DEFAULT && b.A.nativeMuteChanged(e);
@@ -925,7 +969,7 @@ class eR extends f.A {
                     (this._voiceQualityPeriodicStatsSequenceId = 0),
                     (this._voiceQualityPeriodicStatsInterval = setInterval(
                         this._handleVoiceQualityPeriodicsStats,
-                        300000,
+                        3e5,
                     )),
                     (this._systemResponsiveness = new en.A(f)),
                     this._systemResponsiveness.start(),
@@ -965,7 +1009,9 @@ class eR extends f.A {
                         n,
                     ),
                 ),
-                    e.updateSession({ codecs: t });
+                    e.updateSession({
+                        codecs: t,
+                    });
             }),
             f.on(p.yq.VideoDecoderFallback, (t) => {
                 let n = k.A.getChannel(this.channelId),
@@ -987,7 +1033,9 @@ class eR extends f.A {
                         i,
                     ),
                 ),
-                    e.updateSession({ codecs: t });
+                    e.updateSession({
+                        codecs: t,
+                    });
             }),
             f.on(p.yq.Error, (t) => {
                 if (e !== this._socket) return;
@@ -1480,7 +1528,9 @@ class eR extends f.A {
     _storeSecureFrameNextTransitionData(e) {
         return (
             null == this._secureFramesNextTransitionState &&
-                (this._secureFramesNextTransitionState = { creationTime: (0, _.tB)() }),
+                (this._secureFramesNextTransitionState = {
+                    creationTime: (0, _.tB)(),
+                }),
             (this._secureFramesNextTransitionState = ef({}, this._secureFramesNextTransitionState, e))
         );
     }
@@ -1511,7 +1561,9 @@ class eR extends f.A {
                       initFinishedTime: (0, _.tB)(),
                       protocolVersion: e,
                   }),
-                  this.recordEvent({ c: 10 }))
+                  this.recordEvent({
+                      c: 10,
+                  }))
                 : null == (n = this._connection) ||
                   n.prepareSecureFramesTransition(ev, e, () => {
                       let t = !1;
@@ -1574,7 +1626,11 @@ class eR extends f.A {
         let r = e.toString();
         null == (n = this._connection) || n.prepareSecureFramesEpoch(r, t, this.trueChannelId),
             r === eA &&
-                ((this._mlsInitReceivedTime = (0, _.tB)()), this._sendMLSKeyPackage(), this.recordEvent({ c: 10 }));
+                ((this._mlsInitReceivedTime = (0, _.tB)()),
+                this._sendMLSKeyPackage(),
+                this.recordEvent({
+                    c: 10,
+                }));
     }
     _sendMLSKeyPackage() {
         var e;
@@ -1590,7 +1646,9 @@ class eR extends f.A {
             var t;
             this.logger.info("Sending DAVE protocol ready for transition ID ".concat(e)),
                 null == (t = this._socket) || t.secureFramesReadyForTransition(e),
-                this._storeSecureFrameTransitionData(e, { readyTime: (0, _.tB)() });
+                this._storeSecureFrameTransitionData(e, {
+                    readyTime: (0, _.tB)(),
+                });
         }
     }
     _handleSecureFramesExecuteTransition(e) {
@@ -1893,7 +1951,9 @@ class eR extends f.A {
             ed(this, "_lastSentSSRC", void 0),
             ed(this, "powerMonitorListener", void 0),
             ed(this, "reconnect", () => {
-                this.recordEvent({ c: 7 });
+                this.recordEvent({
+                    c: 7,
+                });
                 let e = this._socket;
                 null != e &&
                     (this._connected && (this._connectStartTime = (0, _.tB)()),
@@ -1908,17 +1968,17 @@ class eR extends f.A {
             }),
             ed(this, "_alertMLSFailureDebouced", s()(this._alertMLSFailure, 100)),
             ed(this, "_handleNetworkOnline", () => {
-                this.expeditedHeartbeat(5000, "network detected online.");
+                this.expeditedHeartbeat(5e3, "network detected online.");
             }),
             ed(this, "_handleNetworkOffline", () => {
-                this.expeditedHeartbeat(15000, "network detected offline.", !1);
+                this.expeditedHeartbeat(15e3, "network detected offline.", !1);
             }),
             ed(this, "_handleNoRoute", () => {
                 var e;
                 null == (e = this._socket) || e.noRoute();
             }),
             ed(this, "_handlePowerResume", () => {
-                this.expeditedHeartbeat(5000, "power monitor resumed");
+                this.expeditedHeartbeat(5e3, "power monitor resumed");
             }),
             ed(this, "_handleVoiceQualityPeriodicsStats", () => {
                 if (null != this._voiceQuality) {
@@ -1994,7 +2054,9 @@ class eR extends f.A {
                 null == (t = this._videoQuality) || t.setWindowOcclusionState(!e);
             }),
             (this.context = i),
-            this.recordEvent({ c: 0 }),
+            this.recordEvent({
+                c: 0,
+            }),
             (this._fetchAsyncResourcesPromise = U.A.fetchAsyncResources().catch((e) => {
                 z.A.captureException(e);
             })),
@@ -2019,7 +2081,7 @@ class eR extends f.A {
             (this.state = el.S7L.AWAITING_ENDPOINT),
             (this.stateHistory = new $.M(this.state)),
             (this._socket = null),
-            (this._backoff = new u.A(1000, 10000)),
+            (this._backoff = new u.A(1e3, 1e4)),
             (this._destroyed = !1),
             (this._pings = []),
             (this._pingBadCount = 0),

@@ -1,4 +1,6 @@
-r.d(e, { default: () => m });
+r.d(e, {
+    default: () => m,
+});
 var i = r(627968);
 r(64700);
 var s = r(158954),
@@ -9,6 +11,7 @@ var s = r(158954),
     a = r(857266),
     d = r(985018),
     x = r(461162);
+
 function m(t) {
     let { transitionState: e, onClose: r } = t;
     return (0, i.jsx)(s.Modal, {
@@ -17,9 +20,12 @@ function m(t) {
         subtitle: d.intl.string(d.t.WKxo8n),
         actions: [],
         onClose: r,
-        children: (0, i.jsx)(u, { onClose: r }),
+        children: (0, i.jsx)(u, {
+            onClose: r,
+        }),
     });
 }
+
 function u(t) {
     let { onClose: e } = t,
         r = [

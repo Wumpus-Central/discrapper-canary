@@ -127,7 +127,12 @@ e.exports = function (e) {
                 relevance: 0,
                 keywords: "class interface",
                 illegal: /[:"\[\]]/,
-                contains: [{ beginKeywords: "extends implements" }, e.UNDERSCORE_TITLE_MODE],
+                contains: [
+                    {
+                        beginKeywords: "extends implements",
+                    },
+                    e.UNDERSCORE_TITLE_MODE,
+                ],
             },
             {
                 beginKeywords: "pointcut after before around throwing returning",

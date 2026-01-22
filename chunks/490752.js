@@ -1,4 +1,6 @@
-n.d(t, { A: () => y });
+n.d(t, {
+    A: () => y,
+});
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -14,6 +16,7 @@ var r = n(627968),
     h = n(622543),
     m = n(993401),
     g = n(985018);
+
 function E(e, t, n) {
     return (
         t in e
@@ -27,6 +30,7 @@ function E(e, t, n) {
         e
     );
 }
+
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -43,6 +47,7 @@ function b(e) {
     }
     return e;
 }
+
 function y(e) {
     let { user: t, guildId: n, viewProfileItem: E } = e,
         y = i.useRef(null),
@@ -128,7 +133,15 @@ function y(e) {
                       onSelect: void 0,
                       onClose: t,
                       "aria-label": g.intl.string(g.t.AXIHpV),
-                      children: w.map((e, t) => (0, r.jsx)(s.rXV, { children: e.map((e) => e) }, t)),
+                      children: w.map((e, t) =>
+                          (0, r.jsx)(
+                              s.rXV,
+                              {
+                                  children: e.map((e) => e),
+                              },
+                              t,
+                          ),
+                      ),
                   });
               },
               children: (e) =>

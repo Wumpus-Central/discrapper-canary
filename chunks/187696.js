@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968);
 n(64700);
 var i = n(901517),
@@ -10,8 +12,12 @@ var i = n(901517),
     u = n(893750);
 let d = function (e) {
     let { hovered: t, activities: n, applicationStream: d, status: p, user: f, userIgnored: h } = e,
-        { voiceActivityStatusEnabled: A } = (0, i.G)({ location: "StatusText" }),
-        { voiceChannel: g } = (0, a.A)({ userId: null == f ? void 0 : f.id }),
+        { voiceActivityStatusEnabled: A } = (0, i.G)({
+            location: "StatusText",
+        }),
+        { voiceChannel: g } = (0, a.A)({
+            userId: null == f ? void 0 : f.id,
+        }),
         m = A ? g : void 0;
     return h
         ? (0, r.jsx)("div", {

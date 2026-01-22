@@ -1,4 +1,8 @@
-r.d(t, { default: () => f }), r(228524), r(896048);
+r.d(t, {
+    default: () => f,
+}),
+    r(228524),
+    r(896048);
 var n = r(627968),
     o = r(64700),
     l = r(106778),
@@ -8,6 +12,7 @@ var n = r(627968),
     s = r(524246),
     u = r(14368),
     p = r(413526);
+
 function f(e) {
     var t, r;
     let { title: f, description: b, image: d, button: y } = e,

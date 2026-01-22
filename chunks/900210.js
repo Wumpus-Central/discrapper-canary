@@ -7,6 +7,7 @@ n.d(t, {
 var r,
     i = n(311907),
     a = n(73153);
+
 function s(e, t, n) {
     return (
         t in e
@@ -72,7 +73,12 @@ let l = 5,
                 "EXTERNAL" === o &&
                 null != h &&
                 ("function" == typeof h.destroy && h.destroy(), null == (r = d[i]) || delete r[c], (m = void 0)),
-            null == m && (null != u[i] ? (u[i][c] = o) : (u[i] = { [c]: o })));
+            null == m &&
+                (null != u[i]
+                    ? (u[i][c] = o)
+                    : (u[i] = {
+                          [c]: o,
+                      })));
     },
     h = (e) => {
         var t;

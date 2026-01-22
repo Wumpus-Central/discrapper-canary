@@ -1,4 +1,7 @@
-n.d(t, { A: () => T }), n(896048);
+n.d(t, {
+    A: () => T,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -120,7 +123,12 @@ let T = (0, i.memo)(function (e) {
                                 });
                         }
                         return e;
-                    })({ quest_id: P.id }, ea),
+                    })(
+                        {
+                            quest_id: P.id,
+                        },
+                        ea,
+                    ),
                 );
         },
         eo = () => {
@@ -144,7 +152,9 @@ let T = (0, i.memo)(function (e) {
                   onBlur: eo,
                   onMouseEnter: es,
                   onMouseLeave: eo,
-                  className: a()(N.kL, { [N.yo]: w }),
+                  className: a()(N.kL, {
+                      [N.yo]: w,
+                  }),
                   children: [
                       null != B &&
                           Q &&
@@ -152,7 +162,9 @@ let T = (0, i.memo)(function (e) {
                           (0, r.jsx)("div", {
                               ref: V,
                               className: N.FX,
-                              style: { top: R },
+                              style: {
+                                  top: R,
+                              },
                               children: (0, r.jsx)(h.A, {
                                   avatarDecorationOverride: J,
                                   user: B,
@@ -161,7 +173,9 @@ let T = (0, i.memo)(function (e) {
                               }),
                           }),
                       q
-                          ? (0, r.jsx)(y.A, { className: N.Sl })
+                          ? (0, r.jsx)(y.A, {
+                                className: N.Sl,
+                            })
                           : X
                             ? (0, r.jsx)(I.A, {
                                   className: N.Sl,
@@ -193,9 +207,13 @@ let T = (0, i.memo)(function (e) {
                       (0, r.jsx)("div", {
                           ref: G,
                           className: N.r$,
-                          style: { transform: "translateY(-".concat(en, "px)") },
+                          style: {
+                              transform: "translateY(-".concat(en, "px)"),
+                          },
                           children: (0, r.jsx)(v.Ay, {
-                              logotypeClassName: a()(N.wm, { [N.A0]: ee }),
+                              logotypeClassName: a()(N.wm, {
+                                  [N.A0]: ee,
+                              }),
                               quest: P,
                               withGameTile: !1,
                           }),
@@ -208,12 +226,16 @@ let T = (0, i.memo)(function (e) {
                                   className: N.DD,
                                   variant: "heading-md/semibold",
                                   color: "always-white",
-                                  children: C.intl.format(C.t.EAYZAr, { questName: P.config.messages.questName }),
+                                  children: C.intl.format(C.t.EAYZAr, {
+                                      questName: P.config.messages.questName,
+                                  }),
                               }),
                               (0, r.jsx)(d.Text, {
                                   variant: "text-sm/medium",
                                   color: $ ? "text-muted" : "always-white",
-                                  style: { opacity: $ ? 1 : 0.75 },
+                                  style: {
+                                      opacity: $ ? 1 : 0.75,
+                                  },
                                   children: C.intl.format(C.t["kXVcV+"], {
                                       reward: W.name,
                                       claimedDate: K,

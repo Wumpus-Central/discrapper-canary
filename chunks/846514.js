@@ -13,10 +13,12 @@ function r(e, t, n) {
 }
 var i = n(116740).List,
     a = ".";
+
 function s(e, t, n) {
     for (var r = t; r < n; r++) if (null != e[r]) return !1;
     return !0;
 }
+
 function o(e, t, n, r) {
     for (var i = t; i < n; i++) e[i] = r;
 }

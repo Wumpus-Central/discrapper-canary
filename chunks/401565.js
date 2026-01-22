@@ -1,4 +1,7 @@
-n.d(t, { A: () => g }), n(896048);
+n.d(t, {
+    A: () => g,
+}),
+    n(896048);
 var r,
     l = n(311907),
     i = n(73153),
@@ -6,6 +9,7 @@ var r,
     s = n(287809),
     o = n(380335),
     c = n(157550);
+
 function u(e, t, n) {
     return (
         t in e
@@ -21,9 +25,11 @@ function u(e, t, n) {
 }
 let d = {},
     f = new Set();
+
 function p(e) {
     return o.A.isMessageRequest(e) || c.A.isSpam(e);
 }
+
 function h(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     if (!p(e) || (null != t && e !== (null == t ? void 0 : t.channel_id))) return;
@@ -97,7 +103,10 @@ let g = new b(i.h, {
                 }
                 return e;
             })({}, l)),
-            (n = n = { message: (0, a.IU)(l.message, e.message) }),
+            (n = n =
+                {
+                    message: (0, a.IU)(l.message, e.message),
+                }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                 : (function (e, t) {

@@ -1,4 +1,6 @@
-n.d(t, { q: () => d });
+n.d(t, {
+    q: () => d,
+});
 var r = n(485845),
     i = n(58149),
     a = n(200330),
@@ -17,7 +19,9 @@ async function d(e) {
             commandIntegrationTypes: _,
         })
     )
-        return Promise.resolve({ isAuthorized: !0 });
+        return Promise.resolve({
+            isAuthorized: !0,
+        });
     let m = l.A.getApplication(f);
     if (null == m) {
         let e = await (0, o.TA)(f);
@@ -55,12 +59,18 @@ async function d(e) {
                                       section_name: h.sectionName,
                                       source: h.entrypoint,
                                   }),
-                              e({ isAuthorized: !0 }))
-                            : e({ isAuthorized: !1 });
+                              e({
+                                  isAuthorized: !0,
+                              }))
+                            : e({
+                                  isAuthorized: !1,
+                              });
                     },
                 },
                 () => {
-                    e({ isAuthorized: !1 });
+                    e({
+                        isAuthorized: !1,
+                    });
                 },
             );
         })

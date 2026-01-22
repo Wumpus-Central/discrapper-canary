@@ -7,10 +7,11 @@ var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
-    o = n(432022),
+    o = n(108531),
     l = n(397927),
     c = n(611635),
     u = n(680256);
+
 function d(e, t, n) {
     return (
         t in e
@@ -24,6 +25,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -40,6 +42,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -52,6 +55,7 @@ function p(e, t) {
     }
     return n;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -63,8 +67,9 @@ function _(e, t) {
         e
     );
 }
+
 function h() {
-    return new Promise((e) => setTimeout(e, 1000));
+    return new Promise((e) => setTimeout(e, 1e3));
 }
 let m = 0.25,
     g = 4,
@@ -77,16 +82,29 @@ let m = 0.25,
             mass: 1,
         },
         unique: !0,
-        initial: { dotPosition: 1 },
-        from: { dotPosition: 0 },
-        enter: { dotPosition: 1 },
-        leave: { dotPosition: 0 },
+        initial: {
+            dotPosition: 1,
+        },
+        from: {
+            dotPosition: 0,
+        },
+        enter: {
+            dotPosition: 1,
+        },
+        leave: {
+            dotPosition: 0,
+        },
     },
     O = {
-        config: { duration: 2400 },
-        from: { dotCycle: 2.8 },
+        config: {
+            duration: 2400,
+        },
+        from: {
+            dotCycle: 2.8,
+        },
         reset: !0,
     };
+
 function A(e) {
     let t = e % 2;
     return t > 1 ? 1 - (t - 1) : t;
@@ -152,7 +170,9 @@ let v = i.memo(function (e) {
             { focused: m } = (0, c.xb)();
         return (0, l.pnh)(
             a,
-            _(f({}, y), { key: (e) => (e ? "true" : "false") }),
+            _(f({}, y), {
+                key: (e) => (e ? "true" : "false"),
+            }),
             m ? "animate-always" : "animate-never",
         )((e, a, l) => {
             let { dotPosition: c } = e,
@@ -169,7 +189,9 @@ let v = i.memo(function (e) {
                           height: 2 * t,
                           className: s()(p, u.r, d ? u.S : null),
                           children: (0, r.jsx)(o.animated.g, {
-                              style: { opacity: c.to((e) => Math.min(1, Math.max(e, 0))) },
+                              style: {
+                                  opacity: c.to((e) => Math.min(1, Math.max(e, 0))),
+                              },
                               children: (0, r.jsx)(v, {
                                   dotRadius: t,
                                   dotPosition: c,

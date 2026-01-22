@@ -1,4 +1,6 @@
-n.d(t, { A: () => y });
+n.d(t, {
+    A: () => y,
+});
 var a = n(627968);
 n(64700);
 var l = n(503698),
@@ -58,7 +60,9 @@ let j = (e) => {
                 w =
                     null != S
                         ? S > 1
-                            ? g.intl.formatToPlainString(g.t.Io7ozn, { days: S })
+                            ? g.intl.formatToPlainString(g.t.Io7ozn, {
+                                  days: S,
+                              })
                             : g.intl.string(g.t.Bc13HF)
                         : g.intl.string(g.t["h/uBCR"]);
                 break;

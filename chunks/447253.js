@@ -1,4 +1,7 @@
-n.d(t, { A: () => g }), n(896048);
+n.d(t, {
+    A: () => g,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -10,6 +13,7 @@ var r = n(627968),
     d = n(65611),
     f = n(985018),
     p = n(211170);
+
 function h(e) {
     let { guildId: t, animate: n } = e,
         l = (0, s.bG)([u.A], () => u.A.getGuild(t), [t]),
@@ -17,7 +21,9 @@ function h(e) {
     return null == l
         ? (0, r.jsx)("div", {
               className: a()(p.VL, p.zU),
-              children: (0, r.jsx)(o.EpV, { color: "currentColor" }),
+              children: (0, r.jsx)(o.EpV, {
+                  color: "currentColor",
+              }),
           })
         : (0, r.jsx)(c.A, {
               guild: l,
@@ -29,6 +35,7 @@ function h(e) {
               tabIndex: -1,
           });
 }
+
 function b(e) {
     let { folderNode: t, hovered: n, sorting: l } = e,
         { children: i } = t,
@@ -68,6 +75,7 @@ function b(e) {
         children: [!s && c, u],
     });
 }
+
 function g(e) {
     var t, n;
     let {
@@ -170,7 +178,9 @@ function g(e) {
                     onMouseLeave: P,
                     onKeyDown: v,
                     onFocus: E,
-                    focusProps: { enabled: !1 },
+                    focusProps: {
+                        enabled: !1,
+                    },
                 },
                 _,
             )),
@@ -193,7 +203,9 @@ function g(e) {
                             isFolder: !0,
                             upperBadge: w,
                             lowerBadge: R,
-                            lowerBadgeSize: { width: (0, o.o6S)(u) },
+                            lowerBadgeSize: {
+                                width: (0, o.o6S)(u),
+                            },
                             children: (0, r.jsx)("div", {
                                 className: p.vA,
                                 children:

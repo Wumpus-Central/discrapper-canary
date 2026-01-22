@@ -1,4 +1,7 @@
-n.d(t, { B: () => _ }), n(896048);
+n.d(t, {
+    B: () => _,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(417597),
@@ -10,6 +13,7 @@ var r = n(627968),
     d = n(49420),
     f = n(534479),
     p = n(652215);
+
 function _(e) {
     let { handleStepChange: t, handleClose: n } = e,
         {
@@ -43,8 +47,12 @@ function _(e) {
     A)
         ? (0, r.jsx)(f.A, {})
         : _
-          ? (0, r.jsx)(s.oO, { onClose: n })
+          ? (0, r.jsx)(s.oO, {
+                onClose: n,
+            })
           : null != I
-            ? (0, r.jsx)(d.A, { onClose: n })
+            ? (0, r.jsx)(d.A, {
+                  onClose: n,
+              })
             : null;
 }

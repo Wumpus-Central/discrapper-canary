@@ -4,24 +4,43 @@ var t = "[0-9](_*[0-9])*",
     i = {
         className: "number",
         variants: [
-            { begin: `(\\b(${t})((${n})|\\.)?|(${n}))[eE][+-]?(${t})[fFdD]?\\b` },
-            { begin: `\\b(${t})((${n})[fFdD]?\\b|\\.([fFdD]\\b)?)` },
-            { begin: `(${n})[fFdD]?\\b` },
-            { begin: `\\b(${t})[fFdD]\\b` },
-            { begin: `\\b0[xX]((${r})\\.?|(${r})?\\.(${r}))[pP][+-]?(${t})[fFdD]?\\b` },
-            { begin: "\\b(0|[1-9](_*[0-9])*)[lL]?\\b" },
-            { begin: `\\b0[xX](${r})[lL]?\\b` },
-            { begin: "\\b0(_*[0-7])*[lL]?\\b" },
-            { begin: "\\b0[bB][01](_*[01])*[lL]?\\b" },
+            {
+                begin: `(\\b(${t})((${n})|\\.)?|(${n}))[eE][+-]?(${t})[fFdD]?\\b`,
+            },
+            {
+                begin: `\\b(${t})((${n})[fFdD]?\\b|\\.([fFdD]\\b)?)`,
+            },
+            {
+                begin: `(${n})[fFdD]?\\b`,
+            },
+            {
+                begin: `\\b(${t})[fFdD]\\b`,
+            },
+            {
+                begin: `\\b0[xX]((${r})\\.?|(${r})?\\.(${r}))[pP][+-]?(${t})[fFdD]?\\b`,
+            },
+            {
+                begin: "\\b(0|[1-9](_*[0-9])*)[lL]?\\b",
+            },
+            {
+                begin: `\\b0[xX](${r})[lL]?\\b`,
+            },
+            {
+                begin: "\\b0(_*[0-7])*[lL]?\\b",
+            },
+            {
+                begin: "\\b0[bB][01](_*[01])*[lL]?\\b",
+            },
         ],
         relevance: 0,
     };
+
 function a(e, t, n) {
     return -1 === n ? "" : e.replace(t, (r) => a(e, t, n - 1));
 }
 e.exports = function (e) {
     let t = e.regex,
-        n = "[À-ʸa-zA-Z_$][À-ʸa-zA-Z_$0-9]*",
+        n = "[\xc0-ʸa-zA-Z_$][\xc0-ʸa-zA-Z_$0-9]*",
         r = n + a("(?:<" + n + "~~~(?:\\s*,\\s*" + n + "~~~)*>)?", /~~~/g, 2),
         s = {
             keyword: [
@@ -161,7 +180,9 @@ e.exports = function (e) {
             },
             {
                 begin: ["(?:" + r + "\\s+)", e.UNDERSCORE_IDENT_RE, /\s*(?=\()/],
-                className: { 2: "title.function" },
+                className: {
+                    2: "title.function",
+                },
                 keywords: s,
                 contains: [
                     {

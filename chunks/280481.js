@@ -1,4 +1,6 @@
-r.d(t, { A: () => o });
+r.d(t, {
+    A: () => o,
+});
 var n = r(627968);
 r(64700);
 var l = r(397927),
@@ -6,6 +8,7 @@ var l = r(397927),
     i = r(688810),
     a = r(213279),
     c = r(357281);
+
 function o(e) {
     let { onClose: t } = e,
         { analyticsLocations: r } = (0, i.Ay)(s.A.GO_LIVE_MODAL_V2);

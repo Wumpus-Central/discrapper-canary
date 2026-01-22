@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968),
     i = n(351405),
     a = n(793574),
@@ -7,6 +9,7 @@ var r = n(627968),
     l = n(611010),
     c = n(443795),
     u = n(272984);
+
 function d(e) {
     return null != e.application
         ? l.Ay.createFromServer(e.application)

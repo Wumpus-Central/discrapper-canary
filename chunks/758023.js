@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -105,7 +107,9 @@ let h = function (e) {
                                   size: "md",
                                   color: "currentColor",
                               }),
-                              (0, r.jsx)(o.AC4, { children: p.intl.string(p.t.bt75uw) }),
+                              (0, r.jsx)(o.AC4, {
+                                  children: p.intl.string(p.t.bt75uw),
+                              }),
                           ],
                       }),
                   }),

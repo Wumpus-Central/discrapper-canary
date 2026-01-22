@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r,
     l,
     i = n(311907),
@@ -6,6 +8,7 @@ var r,
     s = n(857071);
 let o = null,
     c = null;
+
 function u() {
     let e = s.A.mostRecentLurkedGuildId();
     null != e ? ((o = e), (c = null)) : ((c = null != o ? o : null), (o = null));

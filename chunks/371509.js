@@ -1,10 +1,13 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(627968),
     i = n(64700),
     a = n(934551),
     s = n(873298),
     o = n(397927),
     l = n(308757);
+
 function c(e) {
     let { redactionType: t, label: n } = e,
         c = i.useMemo(() => {

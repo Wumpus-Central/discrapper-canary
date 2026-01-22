@@ -1,4 +1,6 @@
-n.d(t, { A: () => y });
+n.d(t, {
+    A: () => y,
+});
 var r = n(627968);
 n(64700);
 var l = n(311907),
@@ -15,6 +17,7 @@ var l = n(311907),
     g = n(354583),
     O = n(418208),
     p = n(985018);
+
 function y(e) {
     var t;
     let n = (0, g.A)(),
@@ -31,7 +34,9 @@ function y(e) {
     let D = () => {
         if (v) {
             if ((0, O.Cf)(n.id))
-                return void a.A.showAgeVerificationGetStartedModal({ entryPoint: o.q1.STAGE_CHANNEL_RAISE_HAND });
+                return void a.A.showAgeVerificationGetStartedModal({
+                    entryPoint: o.q1.STAGE_CHANNEL_RAISE_HAND,
+                });
             (0, d.e7)(n, !1);
         } else (0, d.SA)(n, e.id);
     };

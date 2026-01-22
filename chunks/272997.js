@@ -1,4 +1,6 @@
-n.d(t, { k: () => p });
+n.d(t, {
+    k: () => p,
+});
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -9,6 +11,7 @@ var r = n(627968),
     u = n(69555),
     d = n(266069),
     f = n(709889);
+
 function p(e) {
     var t;
     let { guildId: n, onSetActivityStatus: p } = e,

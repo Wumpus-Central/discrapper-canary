@@ -1,4 +1,6 @@
-n.d(t, { A: () => x });
+n.d(t, {
+    A: () => x,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -14,6 +16,7 @@ var i = n(503698),
     b = n(992711),
     m = n(985018),
     p = n(945586);
+
 function x(e) {
     let { guild: t, scrollToQuestions: n } = e,
         i = (0, s.bG)([g.A], () => g.A.editedDefaultChannelIds),
@@ -30,11 +33,18 @@ function x(e) {
             }),
             (0, r.jsxs)("div", {
                 className: p.o5,
-                children: [(0, r.jsx)(O, {}), 0 === l.length && (0, r.jsx)(h, {}), (0, r.jsx)(j, { channels: l })],
+                children: [
+                    (0, r.jsx)(O, {}),
+                    0 === l.length && (0, r.jsx)(h, {}),
+                    (0, r.jsx)(j, {
+                        channels: l,
+                    }),
+                ],
             }),
         ],
     });
 }
+
 function h() {
     return (0, r.jsxs)("div", {
         className: p.p$,
@@ -55,17 +65,36 @@ function h() {
         ],
     });
 }
+
 function j(e) {
     let { channels: t } = e;
     return (0, r.jsx)(r.Fragment, {
         children: t.map((e) =>
-            e.isCategory() ? (0, r.jsx)(y, { label: e.name }, e.id) : (0, r.jsx)(v, { channel: e }, e.id),
+            e.isCategory()
+                ? (0, r.jsx)(
+                      y,
+                      {
+                          label: e.name,
+                      },
+                      e.id,
+                  )
+                : (0, r.jsx)(
+                      v,
+                      {
+                          channel: e,
+                      },
+                      e.id,
+                  ),
         ),
     });
 }
+
 function O() {
-    return (0, r.jsx)("div", { className: p.yF });
+    return (0, r.jsx)("div", {
+        className: p.yF,
+    });
 }
+
 function y(e) {
     let { label: t } = e;
     return (0, r.jsxs)("div", {
@@ -86,6 +115,7 @@ function y(e) {
         ],
     });
 }
+
 function v(e) {
     var t;
     let { channel: n } = e,
@@ -106,7 +136,11 @@ function v(e) {
                 lineClamp: 1,
                 children: n.name,
             }),
-            (0, r.jsx)("div", { className: l()({ [p.al]: i }) }),
+            (0, r.jsx)("div", {
+                className: l()({
+                    [p.al]: i,
+                }),
+            }),
         ],
     });
 }

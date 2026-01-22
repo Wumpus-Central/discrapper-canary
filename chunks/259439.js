@@ -1,4 +1,9 @@
-n.d(t, { A: () => O }), n(896048), n(747238), n(812715);
+n.d(t, {
+    A: () => O,
+}),
+    n(896048),
+    n(747238),
+    n(812715);
 var r,
     i,
     a = n(311907),
@@ -7,6 +12,7 @@ var r,
     l = n(998218),
     c = n(155078),
     u = n(272984);
+
 function d(e, t, n) {
     return (
         t in e
@@ -24,6 +30,7 @@ let f = "MaskedLinkStore",
     p = new Set(),
     _ = new Set(),
     h = null == (r = window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT) ? void 0 : r.replace("//", "");
+
 function m(e) {
     let t = (0, c.E)(e);
     switch (t) {
@@ -37,10 +44,12 @@ function m(e) {
             return u.UN.includes(t) || l.A.isDiscordHostname(t) || p.has(t);
     }
 }
+
 function g(e) {
     let t = (0, c.J)(e);
     return _.has(t);
 }
+
 function E(e) {
     let { url: t } = e;
     if (m(t)) return !1;
@@ -50,6 +59,7 @@ function E(e) {
             trustedProtocols: _,
         });
 }
+
 function b(e) {
     let { url: t } = e;
     if (g(t)) return !1;

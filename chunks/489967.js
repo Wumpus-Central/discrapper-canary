@@ -1,4 +1,7 @@
-n.d(t, { A: () => p }), n(896048);
+n.d(t, {
+    A: () => p,
+}),
+    n(896048);
 var a = n(627968),
     l = n(64700),
     i = n(311907),
@@ -12,28 +15,29 @@ let m = [
     {
         id: "seconds",
         label: "second(s)",
-        value: 1000,
+        value: 1e3,
     },
     {
         id: "minutes",
         label: "minute(s)",
-        value: 60000,
+        value: 6e4,
     },
     {
         id: "hours",
         label: "hour(s)",
-        value: 3600000,
+        value: 36e5,
     },
     {
         id: "days",
         label: "day(s)",
-        value: 86400000,
+        value: 864e5,
     },
 ];
+
 function p() {
     let [e, t] = l.useState(null),
         [n, p] = l.useState(0),
-        [h, f] = l.useState(1000),
+        [h, f] = l.useState(1e3),
         [x, b] = l.useState(0),
         g = (0, i.bG)([c.A], () => {
             var t;
@@ -75,19 +79,19 @@ function p() {
                                     }),
                                     (0, a.jsx)(r.Text, {
                                         variant: "text-sm/normal",
-                                        children: "".concat(g.cooldown / 1000, " second(s) or"),
+                                        children: "".concat(g.cooldown / 1e3, " second(s) or"),
                                     }),
                                     (0, a.jsx)(r.Text, {
                                         variant: "text-sm/normal",
-                                        children: "".concat(g.cooldown / 60000, " minute(s) or"),
+                                        children: "".concat(g.cooldown / 6e4, " minute(s) or"),
                                     }),
                                     (0, a.jsx)(r.Text, {
                                         variant: "text-sm/normal",
-                                        children: "".concat(g.cooldown / 3600000, " hour(s) or"),
+                                        children: "".concat(g.cooldown / 36e5, " hour(s) or"),
                                     }),
                                     (0, a.jsx)(r.Text, {
                                         variant: "text-sm/normal",
-                                        children: "".concat(g.cooldown / 86400000, " day(s)"),
+                                        children: "".concat(g.cooldown / 864e5, " day(s)"),
                                     }),
                                 ],
                             }),

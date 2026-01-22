@@ -14,6 +14,7 @@ var i,
     d = n(5463),
     u = n(652215),
     h = n(850103);
+
 function p(e, t, n) {
     return (
         t in e
@@ -27,6 +28,7 @@ function p(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -43,6 +45,7 @@ function f(e) {
     }
     return e;
 }
+
 function b(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -82,6 +85,7 @@ let y = new Set([
     "RESIZE_SOUTH_WEST",
     "RESIZE_SOUTH_EAST",
 ]);
+
 function A(e, t, n) {
     let { width: i, height: r } = e;
     return {
@@ -89,6 +93,7 @@ function A(e, t, n) {
         height: "auto" === r ? "auto" : Math.max(n, r),
     };
 }
+
 function m(e) {
     let { top: t, left: n, bottom: i, right: r } = e;
     return (
@@ -104,9 +109,11 @@ function m(e) {
         }
     );
 }
+
 function O(e) {
     return "auto" === e || null == e ? "auto" : "".concat(e, "px");
 }
+
 function v(e, t) {
     let n = 0;
     return {
@@ -114,6 +121,7 @@ function v(e, t) {
         height: "auto" === t.height ? (null != e ? e.clientHeight : 0) : t.height,
     };
 }
+
 function E(e, t) {
     let { top: n, left: i, bottom: r, right: s } = t;
     switch (e) {
@@ -211,7 +219,11 @@ class x extends (i = l.Component) {
             ),
             O = u ? (0, d.h1)(m) : E("RESIZE_SOUTH_EAST", m);
         this.setDOMPositions(O),
-            f || (null != a && a(), this.setState({ operationStarted: !0 })),
+            f ||
+                (null != a && a(),
+                this.setState({
+                    operationStarted: !0,
+                })),
             null != c && c(i, "MOVE", this.anchor, this.size);
     }
     handleResizeMove(e, t) {
@@ -257,7 +269,11 @@ class x extends (i = l.Component) {
                     width: f,
                     height: b,
                 }),
-                u || (null != a && a(), this.setState({ operationStarted: !0 })),
+                u ||
+                    (null != a && a(),
+                    this.setState({
+                        operationStarted: !0,
+                    })),
                 null != c && c(n, d, this.anchor, this.size);
         }
     }
@@ -291,11 +307,15 @@ class x extends (i = l.Component) {
                     ? (0, s.jsxs)(l.Fragment, {
                           children: [
                               (0, s.jsx)("div", {
-                                  className: a()(h.M$, { [h.An]: n }),
+                                  className: a()(h.M$, {
+                                      [h.An]: n,
+                                  }),
                                   onMouseDown: (e) => this.handleResizeMouseDown(e, "RESIZE_NORTH"),
                               }),
                               (0, s.jsx)("div", {
-                                  className: a()(h.Q8, { [h.An]: n }),
+                                  className: a()(h.Q8, {
+                                      [h.An]: n,
+                                  }),
                                   onMouseDown: (e) => this.handleResizeMouseDown(e, "RESIZE_SOUTH"),
                               }),
                           ],
@@ -305,11 +325,15 @@ class x extends (i = l.Component) {
                     ? (0, s.jsxs)(l.Fragment, {
                           children: [
                               (0, s.jsx)("div", {
-                                  className: a()(h.cz, { [h.zC]: n }),
+                                  className: a()(h.cz, {
+                                      [h.zC]: n,
+                                  }),
                                   onMouseDown: (e) => this.handleResizeMouseDown(e, "RESIZE_EAST"),
                               }),
                               (0, s.jsx)("div", {
-                                  className: a()(h._J, { [h.zC]: n }),
+                                  className: a()(h._J, {
+                                      [h.zC]: n,
+                                  }),
                                   onMouseDown: (e) => this.handleResizeMouseDown(e, "RESIZE_WEST"),
                               }),
                           ],
@@ -319,19 +343,27 @@ class x extends (i = l.Component) {
                     ? (0, s.jsxs)(l.Fragment, {
                           children: [
                               (0, s.jsx)("div", {
-                                  className: a()(h.DS, { [h.Ke]: n }),
+                                  className: a()(h.DS, {
+                                      [h.Ke]: n,
+                                  }),
                                   onMouseDown: (e) => this.handleResizeMouseDown(e, "RESIZE_NORTH_WEST"),
                               }),
                               (0, s.jsx)("div", {
-                                  className: a()(h.Bc, { [h.UJ]: n }),
+                                  className: a()(h.Bc, {
+                                      [h.UJ]: n,
+                                  }),
                                   onMouseDown: (e) => this.handleResizeMouseDown(e, "RESIZE_NORTH_EAST"),
                               }),
                               (0, s.jsx)("div", {
-                                  className: a()(h.rL, { [h.UJ]: n }),
+                                  className: a()(h.rL, {
+                                      [h.UJ]: n,
+                                  }),
                                   onMouseDown: (e) => this.handleResizeMouseDown(e, "RESIZE_SOUTH_WEST"),
                               }),
                               (0, s.jsx)("div", {
-                                  className: a()(h.Rl, { [h.Ke]: n }),
+                                  className: a()(h.Rl, {
+                                      [h.Ke]: n,
+                                  }),
                                   onMouseDown: (e) => this.handleResizeMouseDown(e, "RESIZE_SOUTH_EAST"),
                               }),
                           ],
@@ -349,7 +381,22 @@ class x extends (i = l.Component) {
         } = this;
         return (0, s.jsxs)("div", {
             ref: this.ref,
-            style: f({}, o, l, r, null != c ? { zIndex: 1000 } : void 0, t ? { visibility: "hidden" } : void 0),
+            style: f(
+                {},
+                o,
+                l,
+                r,
+                null != c
+                    ? {
+                          zIndex: 1e3,
+                      }
+                    : void 0,
+                t
+                    ? {
+                          visibility: "hidden",
+                      }
+                    : void 0,
+            ),
             className: a()({
                 [h.iE]: !0,
                 [h.MQ]: d,

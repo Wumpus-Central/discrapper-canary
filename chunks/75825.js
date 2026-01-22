@@ -1,4 +1,8 @@
-n.d(t, { A: () => u }), n(896048), n(65821);
+n.d(t, {
+    A: () => u,
+}),
+    n(896048),
+    n(65821);
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -6,6 +10,7 @@ var r = n(627968),
     o = n(775602),
     l = n(920569),
     c = n(788868);
+
 function u(e) {
     let { giftStyle: t, className: n, shouldAnimate: u = !0, defaultAnimationState: d, idleAnimationState: f } = e,
         p = (0, a.bG)([o.A], () => o.A.useReducedMotion),

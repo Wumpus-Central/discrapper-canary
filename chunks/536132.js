@@ -1,4 +1,6 @@
-r.d(t, { A: () => s });
+r.d(t, {
+    A: () => s,
+});
 var n = r(700272),
     o = Object.prototype,
     a = o.hasOwnProperty,

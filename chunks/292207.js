@@ -35,7 +35,14 @@ e.exports = function (e) {
                         contains: [
                             {
                                 scope: "variable",
-                                variants: [{ match: n }, { match: /`(?:\\.|[^`\\])+`/ }],
+                                variants: [
+                                    {
+                                        match: n,
+                                    },
+                                    {
+                                        match: /`(?:\\.|[^`\\])+`/,
+                                    },
+                                ],
                                 endsParent: !0,
                             },
                         ],
@@ -116,19 +123,30 @@ e.exports = function (e) {
                         match: [a, r],
                     },
                     {
-                        scope: { 2: "number" },
+                        scope: {
+                            2: "number",
+                        },
                         match: [/[^a-zA-Z0-9._]|^/, r],
                     },
                 ],
             },
             {
-                scope: { 3: "operator" },
+                scope: {
+                    3: "operator",
+                },
                 match: [n, /\s+/, /<-/, /\s+/],
             },
             {
                 scope: "operator",
                 relevance: 0,
-                variants: [{ match: i }, { match: /%[^%]*%/ }],
+                variants: [
+                    {
+                        match: i,
+                    },
+                    {
+                        match: /%[^%]*%/,
+                    },
+                ],
             },
             {
                 scope: "punctuation",
@@ -138,7 +156,11 @@ e.exports = function (e) {
             {
                 begin: "`",
                 end: "`",
-                contains: [{ begin: /\\./ }],
+                contains: [
+                    {
+                        begin: /\\./,
+                    },
+                ],
             },
         ],
     };

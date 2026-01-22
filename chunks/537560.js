@@ -1,4 +1,6 @@
-r.d(t, { default: () => a });
+r.d(t, {
+    default: () => a,
+});
 var n = r(627968),
     l = r(64700),
     o = r(158954),
@@ -83,7 +85,9 @@ let a = (e) => {
         })(
             {
                 title: c.intl.string(c.t.aCAiGl),
-                subtitle: c.intl.format(c.t["4cJV9S"], { serverName: t }),
+                subtitle: c.intl.format(c.t["4cJV9S"], {
+                    serverName: t,
+                }),
                 actions: p,
                 onClose: a,
             },

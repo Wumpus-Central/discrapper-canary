@@ -1,13 +1,16 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968);
 n(64700);
 var l = n(503698),
     i = n.n(l),
-    a = n(432022),
+    a = n(108531),
     s = n(827734),
     o = n(397927),
     c = n(263063),
     u = n(211170);
+
 function d(e) {
     let { guild: t, show: n, active: l, onAnimationStart: d, onAnimationRest: f } = e,
         p = {},
@@ -21,7 +24,9 @@ function d(e) {
         from: p,
         enter: h,
         leave: p,
-        config: { duration: 100 },
+        config: {
+            duration: 100,
+        },
         onStart: d,
         onRest: f,
     });
@@ -35,7 +40,9 @@ function d(e) {
                         className: u.qc,
                         children: (0, r.jsx)("div", {
                             className: i()(u.MJ, u.L0),
-                            style: { margin: 0 },
+                            style: {
+                                margin: 0,
+                            },
                             children: (0, r.jsx)(a.animated.div, {
                                 className: u.NG,
                                 style: e,

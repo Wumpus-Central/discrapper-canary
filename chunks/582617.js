@@ -1,4 +1,7 @@
-n.d(t, { n: () => p }), n(896048);
+n.d(t, {
+    n: () => p,
+}),
+    n(896048);
 var l = n(627968),
     r = n(64700),
     i = n(503698),
@@ -15,6 +18,7 @@ var l = n(627968),
     b = n(818348),
     j = n(985018),
     x = n(583905);
+
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -279,10 +283,16 @@ let O = new m.A("ImageEditor"),
                 em();
             }, [em]);
         return (
-            r.useImperativeHandle(t, () => ({ reset: em })),
+            r.useImperativeHandle(t, () => ({
+                reset: em,
+            })),
             (0, l.jsxs)("div", {
-                className: a()(x.j0, { [x.Id]: z }),
-                style: { "--custom-image-editor-size": "".concat(288, "px") },
+                className: a()(x.j0, {
+                    [x.Id]: z,
+                }),
+                style: {
+                    "--custom-image-editor-size": "".concat(288, "px"),
+                },
                 children: [
                     (0, l.jsxs)("div", {
                         className: x.oW,
@@ -457,6 +467,7 @@ let O = new m.A("ImageEditor"),
             }
         );
     };
+
 function I(e, t, n) {
     let { width: l, height: r } = S(e, t),
         i = Math.abs(288 - l) / 2,

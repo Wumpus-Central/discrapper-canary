@@ -67,7 +67,9 @@ t(927092),
                     let a = Math.max(...n, 0.001);
                     return n.map((e) => e / a);
                 })(o, t);
-            self.postMessage({ waveform: n });
+            self.postMessage({
+                waveform: n,
+            });
         } catch (r) {
             let e = {
                 waveform: [],

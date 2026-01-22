@@ -11,27 +11,34 @@ function r(e, t, n) {
         e
     );
 }
+
 function i(e, t, n) {
     a(e, t), t.set(e, n);
 }
+
 function a(e, t) {
     if (t.has(e)) throw TypeError("Cannot initialize the same private elements twice on an object");
 }
+
 function s(e, t) {
     var n = c(e, t, "get");
     return o(e, n);
 }
+
 function o(e, t) {
     return t.get ? t.get.call(e) : t.value;
 }
+
 function l(e, t, n) {
     var r = c(e, t, "set");
     return u(e, r, n), n;
 }
+
 function c(e, t, n) {
     if (!t.has(e)) throw TypeError("attempted to " + n + " private field on non-instance");
     return t.get(e);
 }
+
 function u(e, t, n) {
     if (t.set) t.set.call(e, n);
     else {
@@ -39,7 +46,9 @@ function u(e, t, n) {
         t.value = n;
     }
 }
-n.d(t, { V: () => f });
+n.d(t, {
+    V: () => f,
+});
 var d = new WeakMap();
 class f {
     constructor() {

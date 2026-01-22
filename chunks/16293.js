@@ -1,4 +1,6 @@
-n.d(t, { A: () => N });
+n.d(t, {
+    A: () => N,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -22,6 +24,7 @@ var r = n(627968),
     v = n(985018),
     S = n(308021),
     I = n(80577);
+
 function T(e) {
     let { guild: t, checkpointGuild: n, primaryColor: i } = e,
         a = (0, y.vy)(),
@@ -52,7 +55,9 @@ function T(e) {
                     }),
                     (0, r.jsx)("div", {
                         className: I.Tm,
-                        style: { backgroundColor: i },
+                        style: {
+                            backgroundColor: i,
+                        },
                         children: (0, r.jsx)(b.A, {
                             variant: "text-lg/normal",
                             className: S.sH,
@@ -81,7 +86,9 @@ function T(e) {
                                         variant: "eyebrow",
                                         children:
                                             o === c.pJ.HOURS
-                                                ? v.intl.format(A.default.Xu0QsX, { numHours: l })
+                                                ? v.intl.format(A.default.Xu0QsX, {
+                                                      numHours: l,
+                                                  })
                                                 : v.intl.string(A.default.RmVTph),
                                     }),
                                     (0, r.jsx)(b.A, {
@@ -99,6 +106,7 @@ function T(e) {
         t.id,
     );
 }
+
 function C(e) {
     let { guild: t, rank: n, primaryColor: i } = e,
         a = (0, y.vy)();
@@ -128,7 +136,9 @@ function C(e) {
                     }),
                     (0, r.jsx)("div", {
                         className: I.Tm,
-                        style: { backgroundColor: i },
+                        style: {
+                            backgroundColor: i,
+                        },
                         children: (0, r.jsxs)(b.A, {
                             variant: "text-lg/normal",
                             className: S.sH,
@@ -141,10 +151,15 @@ function C(e) {
         t.id,
     );
 }
+
 function N() {
     let e = (0, i.useContext)(p.P),
         t = (0, u.rdh)(e.primaryColor).hex(),
-        { guilds: { guilds: n } = { guilds: [] } } = (0, l.bG)([_.A], () => _.A.getCheckpointData()),
+        {
+            guilds: { guilds: n } = {
+                guilds: [],
+            },
+        } = (0, l.bG)([_.A], () => _.A.getCheckpointData()),
         a = (0, i.useMemo)(
             () =>
                 n
@@ -198,7 +213,9 @@ function N() {
                                     className: I.VA,
                                     children: v.intl.string(A.default.Q0EMOP),
                                 }),
-                                (0, r.jsx)(g.e, { slide: O.P7.GUILDS }),
+                                (0, r.jsx)(g.e, {
+                                    slide: O.P7.GUILDS,
+                                }),
                             ],
                         }),
                     ],

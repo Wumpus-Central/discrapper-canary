@@ -1,4 +1,7 @@
-s.r(r), s.d(r, { default: () => g });
+s.r(r),
+    s.d(r, {
+        default: () => g,
+    });
 var t = s(627968),
     o = s(64700),
     i = s(503698),
@@ -53,7 +56,9 @@ class x extends o.Component {
             (0, t.jsxs)("li", {
                 className: p.browserItem,
                 children: [
-                    (0, t.jsx)("div", { className: a()(p.browserItemText, p.browser, p[f[r]]) }),
+                    (0, t.jsx)("div", {
+                        className: a()(p.browserItemText, p.browser, p[f[r]]),
+                    }),
                     (0, t.jsx)("div", {
                         className: p.browserItemText,
                         children: s(),
@@ -71,7 +76,15 @@ class u extends o.Component {
         });
     }
     render() {
-        let e = h.map((e) => (0, t.jsx)(x, { browser: e }, e.id));
+        let e = h.map((e) =>
+            (0, t.jsx)(
+                x,
+                {
+                    browser: e,
+                },
+                e.id,
+            ),
+        );
         return (0, t.jsx)("div", {
             className: p.unsupportedBrowser,
             children: (0, t.jsxs)("div", {

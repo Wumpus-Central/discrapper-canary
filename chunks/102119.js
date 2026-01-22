@@ -1,4 +1,6 @@
-n.d(t, { A: () => j });
+n.d(t, {
+    A: () => j,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -72,7 +74,9 @@ let D = () => {
                             variant: "heading-lg/extrabold",
                             children: w.intl.string(w.t["hb/wE0"]),
                         }),
-                        (0, r.jsx)(E.A, { className: P.PC }),
+                        (0, r.jsx)(E.A, {
+                            className: P.PC,
+                        }),
                     ],
                 }),
             ],
@@ -85,7 +89,10 @@ let D = () => {
                 null == n || n(N.i.DISMISS),
                     (0, h.Jp)(),
                     (0, S.U)(),
-                    t || (0, y.openUserSettings)(b.X.APPEARANCE_PANEL, { section: C.nc_.APPEARANCE });
+                    t ||
+                        (0, y.openUserSettings)(b.X.APPEARANCE_PANEL, {
+                            section: C.nc_.APPEARANCE,
+                        });
             };
         return (0, r.jsxs)("div", {
             className: P.N3,
@@ -100,6 +107,7 @@ let D = () => {
             ],
         });
     };
+
 function j(e) {
     let { isCoachmark: t, markAsDismissed: n } = e,
         { analyticsLocations: a } = (0, _.Ay)(p.A.APP_ICON_EDITOR),
@@ -130,7 +138,9 @@ function j(e) {
                   "data-app-right-panel": !0,
                   children: (0, r.jsxs)(u.Fmo, {
                       children: [
-                          (0, r.jsx)(x, { markAsDismissed: n }),
+                          (0, r.jsx)(x, {
+                              markAsDismissed: n,
+                          }),
                           (0, r.jsx)(u.HOs, {
                               className: P.sV,
                               children: (0, r.jsx)(T.A, {

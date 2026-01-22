@@ -30,6 +30,7 @@ let A = {
     page: m.liQ.USER_SETTINGS,
     section: m.JJy.SETTINGS_VOICE_AND_VIDEO,
 };
+
 function v(e) {
     let t = e.currentTarget;
     d.default.track(m.HAw.NOISE_CANCELLATION_LINK_CLICKED, {
@@ -41,6 +42,7 @@ function v(e) {
         },
     });
 }
+
 function S() {
     let e = (0, i.bG)([p.A], () => p.A.theme),
         {
@@ -109,6 +111,7 @@ function S() {
         })
     );
 }
+
 function I() {
     let {
             inputMode: e,
@@ -172,7 +175,10 @@ function I() {
                     label: g.intl.string(g.t.BbESsg),
                     description: g.intl.string(g.t.LoOB1F),
                     checked: f,
-                    onChange: (t) => o.A.setMode(e, { vadUseKrisp: t }),
+                    onChange: (t) =>
+                        o.A.setMode(e, {
+                            vadUseKrisp: t,
+                        }),
                     disabled: !A,
                 }),
             }),

@@ -1,4 +1,6 @@
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 var r = n(116657);
 let i = {
     "tiff:Orientation": (e) =>
@@ -48,15 +50,19 @@ let i = {
     "exif:ShutterSpeedValue": (e) => a(r.A.ShutterSpeedValue, e),
     "exif:WhiteBalance": (e) => r.A.WhiteBalance(parseInt(e, 10)),
 };
+
 function a(e, t) {
     return o(t) ? e(t.split("/")) : t;
 }
+
 function s(e) {
     return "0x" === e.substring(0, 2) ? parseInt(e.substring(2), 16) : parseInt(e, 10);
 }
+
 function o(e) {
     return /^-?\d+\/-?\d+$/.test(e);
 }
+
 function l(e) {
     let [t, n] = e.split(",");
     if (void 0 !== t && void 0 !== n) {

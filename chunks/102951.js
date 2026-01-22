@@ -1,6 +1,9 @@
-n.d(t, { J: () => a });
+n.d(t, {
+    J: () => a,
+});
 var r = n(922590),
     i = n(652215);
+
 function a(e) {
     let { userId: t } = e,
         n = (0, r.f1)(t);

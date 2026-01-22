@@ -1,4 +1,6 @@
-n.d(t, { l: () => r });
+n.d(t, {
+    l: () => r,
+});
 let r = {
     allowList: !0,
     allowHeading: !0,

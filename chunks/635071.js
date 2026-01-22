@@ -28,6 +28,7 @@ var r = n(627968),
     T = n(560936),
     C = n(743981),
     N = n(679740);
+
 function R(e, t, n) {
     return (
         t in e
@@ -41,6 +42,7 @@ function R(e, t, n) {
         e
     );
 }
+
 function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -57,6 +59,7 @@ function w(e) {
     }
     return e;
 }
+
 function P(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -69,6 +72,7 @@ function P(e, t) {
     }
     return n;
 }
+
 function D(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -80,6 +84,7 @@ function D(e, t) {
         e
     );
 }
+
 function x(e, t) {
     if (null == e) return {};
     var n,
@@ -96,6 +101,7 @@ function x(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function L(e, t) {
     if (null == e) return {};
     var n,
@@ -109,6 +115,7 @@ function L(e, t) {
 var j = (function (e) {
     return (e[(e.SYSTEM_TAG = 0)] = "SYSTEM_TAG"), (e[(e.BADGES = 1)] = "BADGES"), e;
 })({});
+
 function M(e) {
     var t;
     let {
@@ -139,7 +146,9 @@ function M(e) {
         er = (0, l.bG)([f.A], () => f.A.roleStyle),
         ei = "username" === er,
         ea = "dot" === er,
-        es = (0, g.a)({ displayNameStyles: en }),
+        es = (0, g.a)({
+            displayNameStyles: en,
+        }),
         eo = (0, l.bG)([v.A], () =>
             null == n.guildId || null == n.colorRoleId ? null : v.A.getRole(n.guildId, n.colorRoleId),
         ),
@@ -169,7 +178,11 @@ function M(e) {
                         textDecorationColor: null != (e = null == ee ? void 0 : ee.primaryColor) ? e : void 0,
                     });
                 }
-                return null != J ? { color: J } : void 0;
+                return null != J
+                    ? {
+                          color: J,
+                      }
+                    : void 0;
             }
         },
         eE = (0, u.CR)(Q + $),
@@ -242,7 +255,9 @@ function M(e) {
                                               n,
                                               eb,
                                           ),
-                                          { className: s()(eb.className, N.vk, G) },
+                                          {
+                                              className: s()(eb.className, N.vk, G),
+                                          },
                                       ),
                                   ),
                                   ey,
@@ -251,7 +266,15 @@ function M(e) {
                       },
                   })
                 : (0, r.jsxs)(r.Fragment, {
-                      children: [(0, r.jsx)(d.DUT, D(w({}, eb), { className: s()(eb.className, G) })), ey],
+                      children: [
+                          (0, r.jsx)(
+                              d.DUT,
+                              D(w({}, eb), {
+                                  className: s()(eb.className, G),
+                              }),
+                          ),
+                          ey,
+                      ],
                   }),
         ev = null != Y ? Y[0] : null,
         eS = null != Y ? Y[1] : null;

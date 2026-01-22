@@ -1,4 +1,7 @@
-n.d(t, { A: () => _ }), n(896048);
+n.d(t, {
+    A: () => _,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -7,6 +10,7 @@ var r = n(627968),
     l = n(9045),
     c = n(944766),
     u = n(489990);
+
 function d(e, t, n) {
     return (
         t in e
@@ -20,6 +24,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -52,7 +57,9 @@ let p = 1080,
                 return e;
             }, [n.position, m, g, y]);
         return (0, r.jsx)("div", {
-            className: s()(u.Wp, { [u.lv]: E }),
+            className: s()(u.Wp, {
+                [u.lv]: E,
+            }),
             style: {
                 transform: "translate3d(".concat(O, "px, ").concat(A, "px, 0)"),
                 zIndex: A,

@@ -1,4 +1,9 @@
-n.d(t, { A: () => v }), n(896048), n(638769), n(321073);
+n.d(t, {
+    A: () => v,
+}),
+    n(896048),
+    n(638769),
+    n(321073);
 var l = n(627968),
     r = n(64700),
     i = n(110259),
@@ -18,6 +23,7 @@ var l = n(627968),
     y = n(69217),
     _ = n(980504),
     E = n(342129);
+
 function v(e) {
     let {
             guildId: t,
@@ -82,7 +88,9 @@ function v(e) {
                     media_session_id: P,
                 },
             },
-            { disableTrack: !S },
+            {
+                disableTrack: !S,
+            },
         );
     let L = r.useCallback((e) => {
             (I.current = e), R(null == e ? void 0 : e.soundId);

@@ -27,7 +27,10 @@ n.d(t, {
     A: () => a,
     x: () => i,
 });
-let l = (0, n(839214).D)(() => ({ channelDrafts: {} }));
+let l = (0, n(839214).D)(() => ({
+    channelDrafts: {},
+}));
+
 function i(e, t) {
     l.setState((n) => {
         var l, i;

@@ -8,7 +8,7 @@ var r,
     l = n(64700),
     s = n(503698),
     a = n.n(s),
-    c = n(432022),
+    c = n(108531),
     o = n(835245),
     d = n(435371),
     u = n(319060),
@@ -18,6 +18,7 @@ var r,
     m = n(333354),
     p = n(985018),
     x = n(576943);
+
 function h(e, t, n) {
     return (
         t in e
@@ -80,7 +81,9 @@ class E extends (r = l.Component) {
         return this.getTierDisabled(e)
             ? {
                   title: null,
-                  body: p.intl.formatToPlainString(m.default["9CtPjt"], { perk: e.name }),
+                  body: p.intl.formatToPlainString(m.default["9CtPjt"], {
+                      perk: e.name,
+                  }),
               }
             : {
                   title: e.name,
@@ -106,8 +109,12 @@ class E extends (r = l.Component) {
         return (0, i.jsx)(
             f.c7X,
             {
-                from: { scale: 1 },
-                to: { scale: h ? 1.625 : 1 },
+                from: {
+                    scale: 1,
+                },
+                to: {
+                    scale: h ? 1.625 : 1,
+                },
                 config: A,
                 children: (t) => {
                     var n, l, s;
@@ -176,8 +183,12 @@ class E extends (r = l.Component) {
                     fill: "currentColor",
                 }),
                 (0, i.jsx)(f.c7X, {
-                    from: { height: 0 },
-                    to: { height: n },
+                    from: {
+                        height: 0,
+                    },
+                    to: {
+                        height: n,
+                    },
                     config: v,
                     delay: r ? 0 : this.props.initialAnimationDelay,
                     onChange: this.handleForegroundFrame,
@@ -198,7 +209,9 @@ class E extends (r = l.Component) {
             r = this.getTotalHeight();
         return (0, i.jsxs)("div", {
             className: a()(e, x.hr),
-            style: { height: r },
+            style: {
+                height: r,
+            },
             children: [
                 (0, i.jsxs)("svg", {
                     viewBox: "0 0 ".concat(O, " ").concat(r),
@@ -225,15 +238,23 @@ class E extends (r = l.Component) {
                     let s = n[e],
                         a = l === e;
                     if (t + 20 >= s.y && r >= s.numRequired) {
-                        a || (this.setState({ tierMarkerActive: e }), null != i && i(s));
+                        a ||
+                            (this.setState({
+                                tierMarkerActive: e,
+                            }),
+                            null != i && i(s));
                         return;
                     }
                 }
             }),
             h(this, "handleFinishedInitialAnimation", () => {
-                this.setState({ finishedInitialAnimation: !0 });
+                this.setState({
+                    finishedInitialAnimation: !0,
+                });
             });
     }
 }
-h(E, "defaultProps", { initialAnimationDelay: 0 });
+h(E, "defaultProps", {
+    initialAnimationDelay: 0,
+});
 let N = E;

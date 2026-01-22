@@ -17,6 +17,7 @@ var r = n(627968),
     d = n(519412),
     f = n(985018),
     p = n(75717);
+
 function _(e, t, n) {
     return (
         t in e
@@ -30,6 +31,7 @@ function _(e, t, n) {
         e
     );
 }
+
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -55,12 +57,16 @@ let m = (e) => {
             g = (0, u.$3)(t),
             [E, b] = i.useState(!1);
         return (0, r.jsxs)("div", {
-            className: s()(p.kL, { [p.RE]: null != o }),
+            className: s()(p.kL, {
+                [p.RE]: null != o,
+            }),
             onMouseEnter: () => b(!0),
             onMouseLeave: () => b(!1),
             children: [
                 (0, r.jsxs)("div", {
-                    className: s()(p.TT, { [p.zj]: d }),
+                    className: s()(p.TT, {
+                        [p.zj]: d,
+                    }),
                     children: [
                         (0, r.jsx)(
                             l.euF,
@@ -88,7 +94,7 @@ let m = (e) => {
                                 children: [
                                     (0, r.jsx)("span", {
                                         className: p.me,
-                                        children: "\xB7",
+                                        children: "\xb7",
                                     }),
                                     a,
                                 ],
@@ -152,7 +158,9 @@ let m = (e) => {
         let { onInvite: t, canInvite: n } = e,
             [a, c] = i.useState(!1);
         return (0, r.jsxs)("div", {
-            className: s()(p.kL, { [p.RE]: n }),
+            className: s()(p.kL, {
+                [p.RE]: n,
+            }),
             onMouseEnter: () => c(!0),
             onMouseLeave: () => c(!1),
             children: [

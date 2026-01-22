@@ -1,8 +1,12 @@
-n.r(t), n.d(t, { default: () => o });
+n.r(t),
+    n.d(t, {
+        default: () => o,
+    });
 var r = n(29583),
     i = n(998280),
     a = n(618027),
     s = n(98430);
+
 function o(e, t) {
     (0, a.A)(1, arguments);
     var n,

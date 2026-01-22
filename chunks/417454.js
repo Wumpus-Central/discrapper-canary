@@ -40,6 +40,7 @@ var r = n(627968),
     j = n(652215),
     M = n(985018),
     k = n(702632);
+
 function U(e, t, n) {
     return (
         t in e
@@ -53,6 +54,7 @@ function U(e, t, n) {
         e
     );
 }
+
 function G(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -69,6 +71,7 @@ function G(e) {
     }
     return e;
 }
+
 function V(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -81,6 +84,7 @@ function V(e, t) {
     }
     return n;
 }
+
 function F(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -92,6 +96,7 @@ function F(e, t) {
         e
     );
 }
+
 function B(e, t) {
     if (null == e) return {};
     var n,
@@ -108,6 +113,7 @@ function B(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function H(e, t) {
     if (null == e) return {};
     var n,
@@ -121,6 +127,7 @@ function H(e, t) {
 let Y = 30,
     W = 4,
     K = () => Promise.resolve();
+
 function z(e) {
     let { userRoleIds: t, position: n } = e,
         i = B(e, ["userRoleIds", "position"]),
@@ -134,7 +141,9 @@ function z(e) {
         children: [
             (0, r.jsx)("div", {
                 className: k.rF,
-                children: (0, r.jsx)("div", { className: k.QG }),
+                children: (0, r.jsx)("div", {
+                    className: k.QG,
+                }),
             }),
             (0, r.jsxs)(O.A, {
                 className: k.q0,
@@ -148,7 +157,9 @@ function z(e) {
                     (0, r.jsx)("div", {
                         className: k.VT,
                         id: a,
-                        children: M.intl.format(M.t.PCs0oo, { numRoles: t.length }),
+                        children: M.intl.format(M.t.PCs0oo, {
+                            numRoles: t.length,
+                        }),
                     }),
                 ],
             }),
@@ -231,7 +242,12 @@ let q = i.forwardRef(function (e, t) {
                 }));
     let z = i.useMemo(() => {
         var t;
-        return G({ borderColor: S ? void 0 : Y }, null != (t = e.style) ? t : {});
+        return G(
+            {
+                borderColor: S ? void 0 : Y,
+            },
+            null != (t = e.style) ? t : {},
+        );
     }, [Y, S, e.style]);
     return (0, r.jsx)(h.vN3, {
         children: (0, r.jsxs)(
@@ -255,9 +271,13 @@ let q = i.forwardRef(function (e, t) {
                             className: s()(d && k.jH, k.j1),
                             onClick: d ? O : void 0,
                             tabIndex: d ? w : -1,
-                            focusProps: { focusClassName: k.vZ },
+                            focusProps: {
+                                focusClassName: k.vZ,
+                            },
                             "aria-hidden": !d,
-                            "aria-label": M.intl.formatToPlainString(M.t.QrxwhY, { roleName: E.name }),
+                            "aria-label": M.intl.formatToPlainString(M.t.QrxwhY, {
+                                roleName: E.name,
+                            }),
                             children: [
                                 c,
                                 d
@@ -270,7 +290,22 @@ let q = i.forwardRef(function (e, t) {
                                     : null,
                             ],
                         }),
-                        null != D ? (0, r.jsx)(T.A, F(G({ className: k.UT }, D), { enableTooltip: !1 })) : null,
+                        null != D
+                            ? (0, r.jsx)(
+                                  T.A,
+                                  F(
+                                      G(
+                                          {
+                                              className: k.UT,
+                                          },
+                                          D,
+                                      ),
+                                      {
+                                          enableTooltip: !1,
+                                      },
+                                  ),
+                              )
+                            : null,
                         (0, r.jsx)("div", {
                             "aria-hidden": !0,
                             className: k.S3,
@@ -286,6 +321,7 @@ let q = i.forwardRef(function (e, t) {
         ),
     });
 });
+
 function X(e) {
     let { user: t, numRolesHidden: n, roleClassName: a } = e,
         o = (0, u.rm)("overflow-more-roles-".concat(t.id)),
@@ -294,7 +330,12 @@ function X(e) {
         targetElementRef: l,
         renderPopout: (t) => {
             let { position: n } = t;
-            return (0, r.jsx)(z, F(G({}, e), { position: null != n ? n : "top" }));
+            return (0, r.jsx)(
+                z,
+                F(G({}, e), {
+                    position: null != n ? n : "top",
+                }),
+            );
         },
         position: "top",
         align: "center",
@@ -302,11 +343,30 @@ function X(e) {
             (0, r.jsx)(h.vN3, {
                 children: (0, r.jsx)(
                     "button",
-                    F(G(F(G({ ref: l }, e), { className: s()(k.lv, a) }), o), { children: "+".concat(n) }),
+                    F(
+                        G(
+                            F(
+                                G(
+                                    {
+                                        ref: l,
+                                    },
+                                    e,
+                                ),
+                                {
+                                    className: s()(k.lv, a),
+                                },
+                            ),
+                            o,
+                        ),
+                        {
+                            children: "+".concat(n),
+                        },
+                    ),
                 ),
             }),
     });
 }
+
 function Z(e) {
     let t = i.useRef(null),
         { guild: n, user: a, handleAddRole: o, roleClassName: l, addButtonClassName: c, addButtonIconClassName: d } = e,
@@ -336,11 +396,19 @@ function Z(e) {
                     "button",
                     F(
                         G(
-                            F(G({ ref: t }, e), {
-                                className: s()(k.c9, l, c),
-                                "aria-label": M.intl.string(M.t.e3Wlyw),
-                                type: "button",
-                            }),
+                            F(
+                                G(
+                                    {
+                                        ref: t,
+                                    },
+                                    e,
+                                ),
+                                {
+                                    className: s()(k.c9, l, c),
+                                    "aria-label": M.intl.string(M.t.e3Wlyw),
+                                    type: "button",
+                                },
+                            ),
                             f,
                         ),
                         {
@@ -356,6 +424,7 @@ function Z(e) {
             }),
     });
 }
+
 function Q(e) {
     let t,
         {
@@ -370,6 +439,7 @@ function Q(e) {
             disableBorderColor: b,
         } = e,
         y = i.useRef({});
+
     function O(e, t) {
         null != t ? (y.current[e] = t) : delete y.current[e];
     }
@@ -443,8 +513,19 @@ function Q(e) {
         });
     return (
         null != I && 0 !== w
-            ? (t = (0, r.jsx)(X, F(G({}, e), { numRolesHidden: w })))
-            : V && (t = (0, r.jsx)(Z, F(G({}, e), { handleAddRole: v }))),
+            ? (t = (0, r.jsx)(
+                  X,
+                  F(G({}, e), {
+                      numRolesHidden: w,
+                  }),
+              ))
+            : V &&
+              (t = (0, r.jsx)(
+                  Z,
+                  F(G({}, e), {
+                      handleAddRole: v,
+                  }),
+              )),
         (0, r.jsx)(u.hD, {
             navigator: Q,
             children: (0, r.jsx)(u.PR, {
@@ -457,7 +538,9 @@ function Q(e) {
                             G(
                                 {
                                     className: s()(k.zr, h),
-                                    "aria-label": M.intl.formatToPlainString(M.t.PCs0oo, { numRoles: o.length }),
+                                    "aria-label": M.intl.formatToPlainString(M.t.PCs0oo, {
+                                        numRoles: o.length,
+                                    }),
                                     ref: n,
                                 },
                                 i,
@@ -473,6 +556,7 @@ function Q(e) {
     );
 }
 let $ = (0, E.A)(Q);
+
 function J(e) {
     return (
         (0, p.bG)([D.A], () => {

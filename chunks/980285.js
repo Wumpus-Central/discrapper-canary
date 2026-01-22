@@ -1,9 +1,11 @@
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});
 var r = {};
 r = {
     calendar: "לוח שנה",
     day: "יום",
-    dayPeriod: "לפנה\u05F4צ/אחה\u05F4צ",
+    dayPeriod: "לפנה״צ/אחה״צ",
     endDate: "תאריך סיום",
     era: "תקופה",
     hour: "שעה",

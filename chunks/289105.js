@@ -1,4 +1,6 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(627968);
 n(64700);
 var l = n(827734),
@@ -11,6 +13,8 @@ let c = () =>
         text: s.intl.string(s.t.GMZqSi),
         children: (0, r.jsx)("div", {
             className: o.k,
-            children: (0, r.jsx)(a.A, { color: l.A.unsafe_rawColors.WHITE.css }),
+            children: (0, r.jsx)(a.A, {
+                color: l.A.unsafe_rawColors.WHITE.css,
+            }),
         }),
     });

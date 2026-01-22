@@ -1,4 +1,7 @@
-n.d(t, { A: () => f }), n(896048);
+n.d(t, {
+    A: () => f,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(397927),
@@ -6,6 +9,7 @@ var r = n(627968),
     o = n(207963),
     l = n(969508),
     c = n(717820);
+
 function u(e, t, n) {
     return (
         t in e
@@ -19,6 +23,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,6 +40,7 @@ function d(e) {
     }
     return e;
 }
+
 function f(e) {
     let t,
         { type: n, style: u, label: f, placeholder: p, minLength: _, maxLength: h, required: m, value: g } = e,
@@ -76,7 +82,15 @@ function f(e) {
             t = (0, r.jsx)(a.ksK, d({}, S));
             break;
         case s.qz.PARAGRAPH:
-            t = (0, r.jsx)(a.fs1, d({ autosize: !0 }, S));
+            t = (0, r.jsx)(
+                a.fs1,
+                d(
+                    {
+                        autosize: !0,
+                    },
+                    S,
+                ),
+            );
     }
     return null != f
         ? (0, r.jsx)(a.eIh, {

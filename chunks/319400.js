@@ -23,12 +23,14 @@ let i = 50035,
 var s = (function (e) {
     return (e.HCAPTCHA = "hcaptcha"), (e.RECAPTCHA = "recaptcha"), (e.RECAPTCHA_ENTERPRISE = "recaptcha_enterprise"), e;
 })({});
+
 function o(e) {
     return e.map((e) => ({
         code: "UNKNOWN",
         message: e,
     }));
 }
+
 function l(e) {
     let t = {};
     for (let [n, r] of Object.entries(e)) {
@@ -41,13 +43,17 @@ function l(e) {
     }
     return t;
 }
+
 function c(e, t) {
     if ("string" == typeof e)
         return {
             message: e,
             code: t,
         };
-    if (null == e.body) return { status: e.status };
+    if (null == e.body)
+        return {
+            status: e.status,
+        };
     let n = e.body;
     return null == e.body.message ||
         Array.isArray(e.body.message) ||

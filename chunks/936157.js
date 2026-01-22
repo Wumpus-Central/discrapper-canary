@@ -1,7 +1,10 @@
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 var r = n(424528),
     a = n(308192),
     o = n(633248);
+
 function i(e, t) {
     if (e) {
         if ("string" == typeof e) return (0, o.A)(e, t);

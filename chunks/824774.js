@@ -1,4 +1,7 @@
-n.d(t, { default: () => S }), n(896048);
+n.d(t, {
+    default: () => S,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     a = n(158954),
@@ -20,6 +23,7 @@ var r = n(627968),
     A = n(985018),
     v = n(667052),
     O = n(119390);
+
 function S(e) {
     let {
             applicationId: t,
@@ -92,11 +96,15 @@ function S(e) {
                     (await Promise.all(e.map(f.pk))).filter(h.Vq).forEach(async (e) => {
                         let n = p.A.getChannel(e);
                         null != n &&
-                            (await u.A.sendMessage(e, d.Ay.parse(n, t), !1, { location: j.Hx.ACTIVITY_SHARE }));
+                            (await u.A.sendMessage(e, d.Ay.parse(n, t), !1, {
+                                location: j.Hx.ACTIVITY_SHARE,
+                            }));
                     }),
                     (0, i.showToast)(
                         (0, i.createToast)(
-                            A.intl.formatToPlainString(A.t.jQULqL, { applicationName: N.name }),
+                            A.intl.formatToPlainString(A.t.jQULqL, {
+                                applicationName: N.name,
+                            }),
                             i.ToastType.SUCCESS,
                         ),
                     ),

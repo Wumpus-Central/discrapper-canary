@@ -1,4 +1,6 @@
-n.d(t, { b: () => r });
+n.d(t, {
+    b: () => r,
+});
 let r = {
     binds: ["shift+f10"],
     comboKeysBindGlobal: !0,

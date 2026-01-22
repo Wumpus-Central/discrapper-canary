@@ -1,4 +1,6 @@
-n.d(t, { _: () => A });
+n.d(t, {
+    _: () => A,
+});
 var l = n(627968),
     r = n(64700),
     i = n(284009),
@@ -23,6 +25,7 @@ var l = n(627968),
     S = n(921925),
     E = n(652215),
     T = n(49999);
+
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -48,6 +51,7 @@ function I(e) {
     }
     return e;
 }
+
 function A(e) {
     let t,
         {
@@ -106,7 +110,10 @@ function A(e) {
                         return (0, l.jsx)(
                             e,
                             ((n = I({}, t)),
-                            (r = r = { subscription: H }),
+                            (r = r =
+                                {
+                                    subscription: H,
+                                }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
                                 : (function (e, t) {
@@ -132,13 +139,23 @@ function A(e) {
         );
     }, [W, H]),
         r.useEffect(() => {
-            !z || null == V || null == K || Y || Z || (0, j.Ik)(V) || Q({ onSubscriptionConfirmation: k });
+            !z ||
+                null == V ||
+                null == K ||
+                Y ||
+                Z ||
+                (0, j.Ik)(V) ||
+                Q({
+                    onSubscriptionConfirmation: k,
+                });
         }, [Q, z, V, K, Y, Z, k]),
         r.useEffect(() => {
             null != ee &&
                 null != ee.reminderNotice &&
                 $ &&
-                (0, c.$l)(a.M.GIFTING_PROMOTION_REMINDER, (0, m.p)(), { dismissAction: T.i.INDIRECT_ACTION });
+                (0, c.$l)(a.M.GIFTING_PROMOTION_REMINDER, (0, m.p)(), {
+                    dismissAction: T.i.INDIRECT_ACTION,
+                });
         }, [ee, $]);
     let es = null != M ? f.Rs.DEEPLINK_TO_DESKTOP_APP : void 0;
     if (null != w) t = w(L, ei, H);
@@ -150,7 +167,9 @@ function A(e) {
     else {
         let e =
             B.current === L.id
-                ? { postSuccessGuild: _ }
+                ? {
+                      postSuccessGuild: _,
+                  }
                 : {
                       followupSKUInfo: C,
                       startingPremiumSubscriptionPlanId: B.current,

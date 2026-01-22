@@ -8,7 +8,7 @@ var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
-    o = n(432022),
+    o = n(108531),
     l = n(615300),
     c = n(397927),
     u = n(475743),
@@ -19,6 +19,7 @@ let p = {
         easing: l.A.Easing.bezier(0.4, 0, 0, 1),
     },
     _ = i.createContext(null);
+
 function h(e) {
     let { activeSlide: t, children: n, className: a, slideClassName: l } = e,
         h = (0, u.A)(t),

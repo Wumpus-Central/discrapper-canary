@@ -1,8 +1,13 @@
-n.d(t, { A: () => i }), n(896048);
+n.d(t, {
+    A: () => i,
+}),
+    n(896048);
 var r = n(73153);
 let i = {
     setEnabled(e) {
-        this.update({ enabled: e });
+        this.update({
+            enabled: e,
+        });
     },
     update(e) {
         for (let t of Object.keys(e))

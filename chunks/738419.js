@@ -28,41 +28,68 @@ var r = n(64700),
     })({});
 let c = "manual",
     u = () => {
-        (c = "manual"), a.default.track(s.HAw.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: "hex_input" });
+        (c = "manual"),
+            a.default.track(s.HAw.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, {
+                control_name: "hex_input",
+            });
     },
     d = () => {
-        (c = "manual"), a.default.track(s.HAw.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: "color_picker" });
+        (c = "manual"),
+            a.default.track(s.HAw.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, {
+                control_name: "color_picker",
+            });
     },
     f = () => {
-        a.default.track(s.HAw.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: "eye_dropper" });
+        a.default.track(s.HAw.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, {
+            control_name: "eye_dropper",
+        });
     },
     p = () => {
-        (c = "manual"), a.default.track(s.HAw.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: "add_color" });
+        (c = "manual"),
+            a.default.track(s.HAw.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, {
+                control_name: "add_color",
+            });
     },
     _ = () => {
-        (c = "manual"), a.default.track(s.HAw.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: "remove_color" });
+        (c = "manual"),
+            a.default.track(s.HAw.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, {
+                control_name: "remove_color",
+            });
     },
     h = () => {
-        a.default.track(s.HAw.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: "color_selected" });
+        a.default.track(s.HAw.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, {
+            control_name: "color_selected",
+        });
     },
     m = () => {
         (c = "manual"),
-            a.default.track(s.HAw.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: "gradient_direction_input" });
+            a.default.track(s.HAw.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, {
+                control_name: "gradient_direction_input",
+            });
     },
     g = () => {
         (c = "manual"),
-            a.default.track(s.HAw.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: "gradient_direction" });
+            a.default.track(s.HAw.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, {
+                control_name: "gradient_direction",
+            });
     },
     E = () => {
         (c = "manual"),
-            a.default.track(s.HAw.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: "color_intensity_input" });
+            a.default.track(s.HAw.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, {
+                control_name: "color_intensity_input",
+            });
     },
     b = () => {
         (c = "manual"),
-            a.default.track(s.HAw.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: "color_intensity" });
+            a.default.track(s.HAw.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, {
+                control_name: "color_intensity",
+            });
     },
     y = () => {
-        (c = "manual"), a.default.track(s.HAw.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: "base_theme" });
+        (c = "manual"),
+            a.default.track(s.HAw.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, {
+                control_name: "base_theme",
+            });
     },
     O = () => {
         (c = "surprise_me"), a.default.track(s.HAw.CUSTOM_THEMES_SURPRISE_BUTTON_CLICKED, {});
@@ -74,7 +101,9 @@ let c = "manual",
         a.default.track(s.HAw.CUSTOM_THEMES_BACK_BUTTON_CLICKED, {});
     },
     S = (e) => {
-        a.default.track(s.HAw.CUSTOM_THEMES_BANNER_CLICKED, { banner_location: e });
+        a.default.track(s.HAw.CUSTOM_THEMES_BANNER_CLICKED, {
+            banner_location: e,
+        });
     },
     I = (e, t, n, r, i) => {
         a.default.track(s.HAw.CUSTOM_THEMES_UPDATED, {

@@ -1,4 +1,6 @@
-n.d(t, { A: () => A });
+n.d(t, {
+    A: () => A,
+});
 var l = n(627968),
     i = n(64700),
     r = n(503698),
@@ -15,6 +17,7 @@ n(253913);
 var f = n(652215),
     p = n(985018),
     b = n(57046);
+
 function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -40,6 +43,7 @@ function x(e) {
     }
     return e;
 }
+
 function j(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -58,6 +62,7 @@ function j(e, t) {
         e
     );
 }
+
 function A(e) {
     let { channel: t } = e,
         r = (0, a.bG)([g.A], () => g.A.can(f.xBc.MANAGE_CHANNELS, t), [t]),
@@ -102,7 +107,9 @@ function A(e) {
             handleDragReset: C,
             handleDragComplete: N,
         } = (0, h.A)(t.availableTags, (e) => {
-            (0, d.fy)({ availableTags: e });
+            (0, d.fy)({
+                availableTags: e,
+            });
         });
     return (0, l.jsxs)("div", {
         className: b._A,
@@ -127,7 +134,9 @@ function A(e) {
             m
                 ? (0, l.jsx)(c.DUT, {
                       onClick: A,
-                      className: s()(b.JE, { [b.r9]: !r || u }),
+                      className: s()(b.JE, {
+                          [b.r9]: !r || u,
+                      }),
                       children: (0, l.jsx)(c.j96, {
                           size: "custom",
                           "aria-label": p.intl.string(p.t["/jubeD"]),
@@ -145,6 +154,7 @@ function A(e) {
         ],
     });
 }
+
 function y(e) {
     let {
             tag: t,
@@ -182,7 +192,9 @@ function y(e) {
         children: (0, l.jsx)(m.A, {
             tag: t,
             disabled: !i,
-            ariaLabel: p.intl.formatToPlainString(p.t.jhSvB9, { name: t.name }),
+            ariaLabel: p.intl.formatToPlainString(p.t.jhSvB9, {
+                name: t.name,
+            }),
             onClick: i ? () => r(t) : void 0,
         }),
     });

@@ -1,5 +1,9 @@
-n.d(t, { A: () => p }), n(321073);
+n.d(t, {
+    A: () => p,
+}),
+    n(321073);
 var r = n(752163);
+
 function i(e, t, n) {
     return (
         t in e
@@ -13,6 +17,7 @@ function i(e, t, n) {
         e
     );
 }
+
 function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -29,9 +34,11 @@ function a(e) {
     }
     return e;
 }
+
 function s(e) {
     return e / 32768;
 }
+
 function o(e) {
     var t, n, r, i, a, s, o, l, c, u, d, f, p, _, h, m, g, E, b, y, O;
     let A =
@@ -51,6 +58,7 @@ function o(e) {
         A
     );
 }
+
 function l(e) {
     var t, n, r, i, a, s, o;
     let l = null != (t = null == e ? void 0 : e.packets) ? t : 0;
@@ -61,23 +69,26 @@ function l(e) {
         l
     );
 }
+
 function c(e) {
     return null != e
         ? {
-              last: Math.round(1000 * e.last),
-              mean: Math.round(1000 * e.mean),
-              p75: Math.round(1000 * e.p75),
-              p95: Math.round(1000 * e.p95),
-              p99: Math.round(1000 * e.p99),
-              max: Math.round(1000 * e.max),
+              last: Math.round(1e3 * e.last),
+              mean: Math.round(1e3 * e.mean),
+              p75: Math.round(1e3 * e.p75),
+              p95: Math.round(1e3 * e.p95),
+              p99: Math.round(1e3 * e.p99),
+              max: Math.round(1e3 * e.max),
           }
         : null;
 }
+
 function u(e) {
     let t = {};
     for (let n in e) t[n] = c(e[n]);
     return t;
 }
+
 function d(e, t) {
     var n, i, a, s, c, u, d, f, p, _, h, m, g, E, b, y, O, A, v, S, I, T, C, N, R, w, P, D;
     let x = e.substreams.find((e) => !e.isRTX && !e.isFlexFEC);
@@ -150,6 +161,7 @@ function d(e, t) {
         videoEntropy: null == (D = x.encoderQualityStats) ? void 0 : D.interFrameEntropy,
     };
 }
+
 function f(e, t, n, i) {
     var s, c;
     let d = o(e.rtpStats),
@@ -218,6 +230,7 @@ function f(e, t, n, i) {
             : {},
     );
 }
+
 function p(e, t, n, i) {
     var l, c, p, _, h;
     let m = null,

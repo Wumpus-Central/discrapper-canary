@@ -1,9 +1,12 @@
-n.d(t, { A: () => j }), n(896048);
+n.d(t, {
+    A: () => j,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(735438),
     s = n.n(a),
-    o = n(432022),
+    o = n(108531),
     l = n(258873),
     c = n(622242),
     u = n(731738),
@@ -26,6 +29,7 @@ var r = n(627968),
     C = n(652215),
     N = n(985018),
     R = n(209943);
+
 function w(e, t, n) {
     return (
         t in e
@@ -50,9 +54,12 @@ let P = s().throttle(
             );
         },
         100,
-        { trailing: !1 },
+        {
+            trailing: !1,
+        },
     ),
     D = 10 * y.A.Millis.SECOND;
+
 function x(e) {
     var t, n;
     let { error: a, onLock: s, onReload: l, onDisable: c, onCrashDisabled: u } = e,
@@ -64,7 +71,9 @@ function x(e) {
     (0, h.Ay)(
         () => (
             (m.current = setTimeout(w, D)),
-            _.A.track(C.HAw.NOTIFICATION_VIEWED, { notif_type: T.KS.OverlayCrashed }),
+            _.A.track(C.HAw.NOTIFICATION_VIEWED, {
+                notif_type: T.KS.OverlayCrashed,
+            }),
             () => {
                 null != m.current && clearTimeout(m.current);
             }
@@ -129,7 +138,9 @@ function x(e) {
                                   color: "text-subtle",
                                   children: (0, r.jsx)("code", {
                                       className: R.aY,
-                                      children: (0, r.jsx)("pre", { children: a.stack }),
+                                      children: (0, r.jsx)("pre", {
+                                          children: a.stack,
+                                      }),
                                   }),
                               }),
                           ],
@@ -205,7 +216,10 @@ class L extends i.PureComponent {
                           onLock: () => {
                               var e;
                               let t = null != (e = this.pid) ? e : S.A.getTargetPID();
-                              _.A.setInputLocked(!0, t), this.setState({ showError: !1 });
+                              _.A.setInputLocked(!0, t),
+                                  this.setState({
+                                      showError: !1,
+                                  });
                           },
                           onDisable: () => {
                               let e = S.A.getFocusedRunningGame();
@@ -215,10 +229,15 @@ class L extends i.PureComponent {
                               var e;
                               let t = null != (e = this.pid) ? e : S.A.getTargetPID();
                               _.A.updateOverlayState(t, A.AR.OVERLAY_CRASHED_DISABLED, "OOPOverlayErrorBoundary"),
-                                  this.setState({ showError: !1 });
+                                  this.setState({
+                                      showError: !1,
+                                  });
                           },
                           onReload: () => {
-                              _.A.setReloadOverlay(S.A.getTargetPID()), this.setState({ showError: !1 });
+                              _.A.setReloadOverlay(S.A.getTargetPID()),
+                                  this.setState({
+                                      showError: !1,
+                                  });
                           },
                       }),
                   })

@@ -1,21 +1,23 @@
-i.d(n, { A: () => a });
+i.d(n, {
+    A: () => a,
+});
 var e = {
     lessThanXSeconds: {
-        one: "dưới 1 giây",
-        other: "dưới {{count}} giây",
+        one: "dưới 1 gi\xe2y",
+        other: "dưới {{count}} gi\xe2y",
     },
     xSeconds: {
-        one: "1 giây",
-        other: "{{count}} giây",
+        one: "1 gi\xe2y",
+        other: "{{count}} gi\xe2y",
     },
-    halfAMinute: "nửa phút",
+    halfAMinute: "nửa ph\xfat",
     lessThanXMinutes: {
-        one: "dưới 1 phút",
-        other: "dưới {{count}} phút",
+        one: "dưới 1 ph\xfat",
+        other: "dưới {{count}} ph\xfat",
     },
     xMinutes: {
-        one: "1 phút",
-        other: "{{count}} phút",
+        one: "1 ph\xfat",
+        other: "{{count}} ph\xfat",
     },
     aboutXHours: {
         one: "khoảng 1 giờ",
@@ -26,8 +28,8 @@ var e = {
         other: "{{count}} giờ",
     },
     xDays: {
-        one: "1 ngày",
-        other: "{{count}} ngày",
+        one: "1 ng\xe0y",
+        other: "{{count}} ng\xe0y",
     },
     aboutXWeeks: {
         one: "khoảng 1 tuần",
@@ -38,12 +40,12 @@ var e = {
         other: "{{count}} tuần",
     },
     aboutXMonths: {
-        one: "khoảng 1 tháng",
-        other: "khoảng {{count}} tháng",
+        one: "khoảng 1 th\xe1ng",
+        other: "khoảng {{count}} th\xe1ng",
     },
     xMonths: {
-        one: "1 tháng",
-        other: "{{count}} tháng",
+        one: "1 th\xe1ng",
+        other: "{{count}} th\xe1ng",
     },
     aboutXYears: {
         one: "khoảng 1 năm",

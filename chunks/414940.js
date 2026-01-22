@@ -1,9 +1,14 @@
-n.d(t, { A: () => l }), n(896048), n(747238);
+n.d(t, {
+    A: () => l,
+}),
+    n(896048),
+    n(747238);
 var r = n(186306),
     i = n(35277),
     a = n(711371),
     s = n(407315);
 let o = new Set(["line", "blockQuote"]);
+
 function l(e) {
     let { deleteBackward: t, deleteFragment: n, insertBreak: s, onChange: o } = e;
     (e.deleteBackward = (n) => {
@@ -11,7 +16,15 @@ function l(e) {
         if ((null == r ? void 0 : r[0].type) === "blockQuote") {
             let t = a.ZF.toPoint(e.selection);
             if (null != t && a.PW.isFirstChild(r[1], t.path) && 0 === t.offset)
-                return void i.b.setNodes(e, { type: "line" }, { at: r[1] });
+                return void i.b.setNodes(
+                    e,
+                    {
+                        type: "line",
+                    },
+                    {
+                        at: r[1],
+                    },
+                );
         }
         t(n);
     }),
@@ -25,10 +38,26 @@ function l(e) {
                 r.o.withSingleEntry(e, () => {
                     (null == c ? void 0 : c[0].type) === "blockQuote" &&
                         a.Kh.isAtStart(s, c) &&
-                        i.b.setNodes(e, { type: "line" }, { at: l }),
+                        i.b.setNodes(
+                            e,
+                            {
+                                type: "line",
+                            },
+                            {
+                                at: l,
+                            },
+                        ),
                         (null == d ? void 0 : d[0].type) === "blockQuote" &&
                             a.Kh.isAtEnd(o, d) &&
-                            i.b.setNodes(e, { type: "line" }, { at: u }),
+                            i.b.setNodes(
+                                e,
+                                {
+                                    type: "line",
+                                },
+                                {
+                                    at: u,
+                                },
+                            ),
                         n(t);
                 });
                 return;
@@ -65,6 +94,7 @@ function l(e) {
         e
     );
 }
+
 function c(e) {
     let t = !1;
     for (let l of a.VW.blocks(e)) {
@@ -76,7 +106,18 @@ function c(e) {
         };
         if ((0, s.W)(e, d)) {
             "blockQuote" === c.type &&
-                (i.b.setNodes(e, { type: "line" }, { at: u }), i.b.insertText(e, "> ", { at: d }));
+                (i.b.setNodes(
+                    e,
+                    {
+                        type: "line",
+                    },
+                    {
+                        at: u,
+                    },
+                ),
+                i.b.insertText(e, "> ", {
+                    at: d,
+                }));
             continue;
         }
         if ("blockQuote" === c.type || a.VW.areStylesDisabled(e)) continue;
@@ -84,7 +125,19 @@ function c(e) {
         if (!a.l5.isText(f)) continue;
         let p = f.text.match(/^\s*>>> /),
             _ = f.text.match(/^\s*> /);
-        if ((null != _ || null != p || t) && (i.b.setNodes(e, { type: "blockQuote" }, { at: u }), !t)) {
+        if (
+            (null != _ || null != p || t) &&
+            (i.b.setNodes(
+                e,
+                {
+                    type: "blockQuote",
+                },
+                {
+                    at: u,
+                },
+            ),
+            !t)
+        ) {
             var n, r;
             let s =
                     null != (n = null != (r = null == _ ? void 0 : _[0].length) ? r : null == p ? void 0 : p[0].length)
@@ -107,14 +160,29 @@ function c(e) {
         }
     }
 }
+
 function u(e, t, n) {
     if (!a.VW.isEmpty(e, t[0])) return !1;
-    let r = a.VW.previous(e, { at: t[1] });
+    let r = a.VW.previous(e, {
+        at: t[1],
+    });
     return (
         null != r &&
         !!a.AS.isType(r[0], "blockQuote") &&
         !!a.VW.isEmpty(e, r[0]) &&
         !!a.Kh.isAtStart(n, t) &&
-        (i.b.setNodes(e, { type: "line" }, { at: t[1] }), i.b.removeNodes(e, { at: r[1] }), !0)
+        (i.b.setNodes(
+            e,
+            {
+                type: "line",
+            },
+            {
+                at: t[1],
+            },
+        ),
+        i.b.removeNodes(e, {
+            at: r[1],
+        }),
+        !0)
     );
 }

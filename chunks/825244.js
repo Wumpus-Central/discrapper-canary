@@ -32,6 +32,7 @@ var r = n(627968),
     I = n(936649),
     N = n(985018),
     T = n(286062);
+
 function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -57,6 +58,7 @@ function P(e) {
     }
     return e;
 }
+
 function w(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -75,16 +77,19 @@ function w(e, t) {
         e
     );
 }
+
 function R(e) {
     let { className: t, iconUrl: n, icon: i, header: s, completed: o, onClick: c } = e,
         [d, p] = l.useState(!1),
         h = (0, f.A)(o);
     return (
         l.useEffect(() => {
-            null != h && o !== h && (p(!0), setTimeout(() => p(!1), 1000));
+            null != h && o !== h && (p(!0), setTimeout(() => p(!1), 1e3));
         }, [o, h]),
         (0, r.jsxs)(u.DUT, {
-            className: a()(t, T.Nr, { [T.so]: o }),
+            className: a()(t, T.Nr, {
+                [T.so]: o,
+            }),
             onClick: c,
             children: [
                 null != i
@@ -104,7 +109,9 @@ function R(e) {
                     ? (0, r.jsx)(u.A9s, {
                           size: "md",
                           color: "currentColor",
-                          className: a()(T.AI, { [T.i0]: d }),
+                          className: a()(T.AI, {
+                              [T.i0]: d,
+                          }),
                       })
                     : (0, r.jsx)(j.A, {
                           className: T.UE,
@@ -114,6 +121,7 @@ function R(e) {
         })
     );
 }
+
 function D(e) {
     let t,
         i,
@@ -156,7 +164,9 @@ function D(e) {
                                 w(P({}, t), {
                                     guild: G,
                                     source: S.PE1.CHANNEL_WELCOME,
-                                    analyticsLocation: { section: S.JJy.CHANNEL_WELCOME_CTA },
+                                    analyticsLocation: {
+                                        section: S.JJy.CHANNEL_WELCOME_CTA,
+                                    },
                                 }),
                             );
                     });
@@ -176,7 +186,10 @@ function D(e) {
                 setup_type: I.XT.CHANNEL_WELCOME,
                 action: I.AG.PERSONALIZE_SERVER,
             }),
-                null != G && b.A.open(G.id, (0, m.x)(), { section: S.JJy.CHANNEL_WELCOME_CTA });
+                null != G &&
+                    b.A.open(G.id, (0, m.x)(), {
+                        section: S.JJy.CHANNEL_WELCOME_CTA,
+                    });
         }, [G])),
         {
             handleInvite: t,
@@ -189,7 +202,16 @@ function D(e) {
                 }),
                     (0, u.mMO)(async () => {
                         let { default: e } = await Promise.all([n.e("56423"), n.e("25280")]).then(n.bind(n, 987482));
-                        return (t) => (0, r.jsx)(e, P({ source: S.JJy.CHANNEL_WELCOME_CTA }, t));
+                        return (t) =>
+                            (0, r.jsx)(
+                                e,
+                                P(
+                                    {
+                                        source: S.JJy.CHANNEL_WELCOME_CTA,
+                                    },
+                                    t,
+                                ),
+                            );
                     });
             }, []),
             handleAddApplication: l.useCallback(() => {
@@ -204,9 +226,17 @@ function D(e) {
                             var n;
                             return (0, r.jsx)(
                                 e,
-                                w(P({ guildId: null != (n = G.id) ? n : "" }, t), {
-                                    analyticsType: c.M.APP_DIRECTORY_SERVER_SETUP_UPSELL_MODAL,
-                                }),
+                                w(
+                                    P(
+                                        {
+                                            guildId: null != (n = G.id) ? n : "",
+                                        },
+                                        t,
+                                    ),
+                                    {
+                                        analyticsType: c.M.APP_DIRECTORY_SERVER_SETUP_UPSELL_MODAL,
+                                    },
+                                ),
                             );
                         };
                     }));
@@ -288,7 +318,11 @@ function D(e) {
                     s.A.div,
                     {
                         className: T.cW,
-                        style: Z ? { opacity: ee[el.length] } : {},
+                        style: Z
+                            ? {
+                                  opacity: ee[el.length],
+                              }
+                            : {},
                         children: (0, r.jsx)(R, {
                             iconUrl: u.zNk,
                             header: N.intl.string(N.t.q9n0Ta),
@@ -305,7 +339,11 @@ function D(e) {
                     s.A.div,
                     {
                         className: T.cW,
-                        style: Z ? { opacity: ee[el.length] } : {},
+                        style: Z
+                            ? {
+                                  opacity: ee[el.length],
+                              }
+                            : {},
                         children: (0, r.jsx)(R, {
                             iconUrl: u.nIm,
                             header: N.intl.string(N.t.c5kxPh),
@@ -322,7 +360,11 @@ function D(e) {
                     s.A.div,
                     {
                         className: T.cW,
-                        style: Z ? { opacity: ee[el.length] } : {},
+                        style: Z
+                            ? {
+                                  opacity: ee[el.length],
+                              }
+                            : {},
                         children: (0, r.jsx)(R, {
                             iconUrl: u.Tj_,
                             header: N.intl.string(N.t["SoP7+l"]),
@@ -339,7 +381,11 @@ function D(e) {
                     s.A.div,
                     {
                         className: T.cW,
-                        style: Z ? { opacity: ee[el.length] } : {},
+                        style: Z
+                            ? {
+                                  opacity: ee[el.length],
+                              }
+                            : {},
                         children: (0, r.jsx)(R, {
                             iconUrl: u.Gl0,
                             header: N.intl.string(N.t.pGVNI9),
@@ -355,7 +401,11 @@ function D(e) {
                 s.A.div,
                 {
                     className: T.cW,
-                    style: Z ? { opacity: ee[el.length] } : {},
+                    style: Z
+                        ? {
+                              opacity: ee[el.length],
+                          }
+                        : {},
                     children: (0, r.jsx)(R, {
                         iconUrl: u.UJP,
                         header: N.intl.string(N.t.IhHDEO),
@@ -385,7 +435,9 @@ function D(e) {
                             (0, r.jsx)(u.Heading, {
                                 className: T.ud,
                                 variant: "heading-xxl/medium",
-                                children: N.intl.format(N.t.rkHVKf, { guildName: G.name }),
+                                children: N.intl.format(N.t.rkHVKf, {
+                                    guildName: G.name,
+                                }),
                             }),
                             (0, r.jsxs)(u.Text, {
                                 color: "text-default",
@@ -394,7 +446,15 @@ function D(e) {
                                     [T.lg]: 0 === el.length,
                                 }),
                                 variant: "text-sm/normal",
-                                children: [ei, " ", el.length > 0 ? N.intl.format(N.t.UOtD32, { guideURL: ea }) : null],
+                                children: [
+                                    ei,
+                                    " ",
+                                    el.length > 0
+                                        ? N.intl.format(N.t.UOtD32, {
+                                              guideURL: ea,
+                                          })
+                                        : null,
+                                ],
                             }),
                         ],
                     }),

@@ -1,4 +1,8 @@
-r.r(t), r.d(t, { default: () => g }), r(896048);
+r.r(t),
+    r.d(t, {
+        default: () => g,
+    }),
+    r(896048);
 var n = r(627968),
     a = r(64700),
     l = r(503698),
@@ -10,6 +14,7 @@ var n = r(627968),
     u = r(985018),
     b = r(333354),
     f = r(873790);
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
@@ -35,6 +40,7 @@ function p(e) {
     }
     return e;
 }
+
 function m(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -92,10 +98,14 @@ let j = (e) => {
         return (0, n.jsx)(
             "div",
             m(p({}, l), {
-                className: s()("left" === t ? f.Zv : f.Un, i ? f.xA : f.fQ, { [f.r9]: a }),
+                className: s()("left" === t ? f.Zv : f.Un, i ? f.xA : f.fQ, {
+                    [f.r9]: a,
+                }),
                 children: (0, n.jsx)("div", {
                     className: f.Ol,
-                    style: { background: (0, c.Hl)(r) },
+                    style: {
+                        background: (0, c.Hl)(r),
+                    },
                     children: (0, n.jsx)(o.dDg, {
                         size: "custom",
                         colorClass: i ? f.wW : f.yD,
@@ -154,6 +164,7 @@ let j = (e) => {
             }),
         });
     };
+
 function g(e) {
     let {
             defaultColor: t,
@@ -211,7 +222,11 @@ function g(e) {
             [y],
         ),
         z = a.useCallback((e, t) => {
-            T((r) => m(p({}, r), { [e]: t }));
+            T((r) =>
+                m(p({}, r), {
+                    [e]: t,
+                }),
+            );
         }, []),
         B = a.useCallback(() => {
             var e, t, r, a, l;
@@ -326,7 +341,9 @@ function g(e) {
                     : (0, n.jsx)(i.m, {
                           text: u.intl.string(u.t.bBvAEH),
                           position: "bottom",
-                          children: (0, n.jsx)("div", { children: t }),
+                          children: (0, n.jsx)("div", {
+                              children: t,
+                          }),
                       });
             },
             [g],

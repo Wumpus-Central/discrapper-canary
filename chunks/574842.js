@@ -1,4 +1,8 @@
-n.d(t, { F: () => f }), n(747238), n(812715);
+n.d(t, {
+    F: () => f,
+}),
+    n(747238),
+    n(812715);
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -11,13 +15,24 @@ let u = () =>
         (0, r.jsx)(r.Fragment, {
             children: l.intl.format(l.t.ymkBti, {
                 shareIcon: l.intl.string(l.t.VINpSK),
-                shareIconHook: () => (0, r.jsx)(a.DpX, { className: c.Kk }, "icon"),
+                shareIconHook: () =>
+                    (0, r.jsx)(
+                        a.DpX,
+                        {
+                            className: c.Kk,
+                        },
+                        "icon",
+                    ),
             }),
         }),
     d = () => {
         let e = (0, i.bG)([s.A, o.A], () => s.A.getGuild(o.A.getGuildId()), []),
             t = null == e ? void 0 : e.name;
-        return (0, r.jsx)(r.Fragment, { children: l.intl.format(l.t.oQuG3K, { serverName: t }) });
+        return (0, r.jsx)(r.Fragment, {
+            children: l.intl.format(l.t.oQuG3K, {
+                serverName: t,
+            }),
+        });
     },
     f = (e) => {
         var t, n;

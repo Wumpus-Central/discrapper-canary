@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var a = n(627968);
 n(64700);
 var l = n(311907),
@@ -58,6 +60,7 @@ let u = [
         },
     },
 ];
+
 function m() {
     let e = (0, l.yK)([r.A, s.default], () =>
         r.A.getUserAffinities().map((e) => {

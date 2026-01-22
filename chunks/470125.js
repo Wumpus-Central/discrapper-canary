@@ -72,8 +72,12 @@ for (var i in o)
             l = o[i].labels;
         delete o[i].channels,
             delete o[i].labels,
-            Object.defineProperty(o[i], "channels", { value: c }),
-            Object.defineProperty(o[i], "labels", { value: l });
+            Object.defineProperty(o[i], "channels", {
+                value: c,
+            }),
+            Object.defineProperty(o[i], "labels", {
+                value: l,
+            });
     }
 (o.rgb.hsl = function (e) {
     var t,

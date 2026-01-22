@@ -1,4 +1,6 @@
-a.d(e, { A: () => x });
+a.d(e, {
+    A: () => x,
+});
 var n = a(985018),
     r = a(639460),
     s = a(976319),
@@ -10,6 +12,7 @@ var n = a(985018),
     g = a(403845),
     m = a(654587),
     u = a(188613);
+
 function x(t) {
     return [
         {
@@ -24,7 +27,9 @@ function x(t) {
                     title: n.intl.string(n.t.g1hPkw),
                     messageCount: 8,
                     reactionCount: 0,
-                    activeAgo: n.intl.formatToPlainString(n.t.N9M4N1, { count: 10 }),
+                    activeAgo: n.intl.formatToPlainString(n.t.N9M4N1, {
+                        count: 10,
+                    }),
                     attachment: r,
                 },
                 {
@@ -36,7 +41,9 @@ function x(t) {
                     title: n.intl.string(n.t["5GM0TY"]),
                     messageCount: 17,
                     reactionCount: 11,
-                    activeAgo: n.intl.formatToPlainString(n.t.N9M4N1, { count: 24 }),
+                    activeAgo: n.intl.formatToPlainString(n.t.N9M4N1, {
+                        count: 24,
+                    }),
                 },
                 {
                     user: {
@@ -47,7 +54,9 @@ function x(t) {
                     title: n.intl.string(n.t["2LpQS8"]),
                     messageCount: 18,
                     reactionCount: 15,
-                    activeAgo: n.intl.formatToPlainString(n.t.N9M4N1, { count: 40 }),
+                    activeAgo: n.intl.formatToPlainString(n.t.N9M4N1, {
+                        count: 40,
+                    }),
                 },
                 {
                     user: {
@@ -58,7 +67,9 @@ function x(t) {
                     title: n.intl.string(n.t.gFI7Lw),
                     messageCount: 2,
                     reactionCount: 0,
-                    activeAgo: n.intl.formatToPlainString(n.t.p0KedC, { count: 1 }),
+                    activeAgo: n.intl.formatToPlainString(n.t.p0KedC, {
+                        count: 1,
+                    }),
                     attachment: s,
                 },
             ],
@@ -105,7 +116,9 @@ function x(t) {
                     title: n.intl.string(n.t.aOyKZ9),
                     messageCount: 8,
                     reactionCount: 11,
-                    activeAgo: n.intl.formatToPlainString(n.t.N9M4N1, { count: 10 }),
+                    activeAgo: n.intl.formatToPlainString(n.t.N9M4N1, {
+                        count: 10,
+                    }),
                     attachment: i,
                 },
                 {
@@ -117,7 +130,9 @@ function x(t) {
                     title: n.intl.string(n.t.EQIrvX),
                     messageCount: 24,
                     reactionCount: 0,
-                    activeAgo: n.intl.formatToPlainString(n.t.N9M4N1, { count: 24 }),
+                    activeAgo: n.intl.formatToPlainString(n.t.N9M4N1, {
+                        count: 24,
+                    }),
                 },
                 {
                     user: {
@@ -128,7 +143,9 @@ function x(t) {
                     title: n.intl.string(n.t.f9n6Ue),
                     messageCount: 15,
                     reactionCount: 17,
-                    activeAgo: n.intl.formatToPlainString(n.t.N9M4N1, { count: 40 }),
+                    activeAgo: n.intl.formatToPlainString(n.t.N9M4N1, {
+                        count: 40,
+                    }),
                 },
                 {
                     user: {
@@ -139,7 +156,9 @@ function x(t) {
                     title: n.intl.string(n.t.lCjd1A),
                     messageCount: 2,
                     reactionCount: 0,
-                    activeAgo: n.intl.formatToPlainString(n.t.p0KedC, { count: 1 }),
+                    activeAgo: n.intl.formatToPlainString(n.t.p0KedC, {
+                        count: 1,
+                    }),
                     attachment: l,
                 },
             ],
@@ -186,7 +205,9 @@ function x(t) {
                     title: n.intl.string(n.t.to6uUe),
                     messageCount: 11,
                     reactionCount: 17,
-                    activeAgo: n.intl.formatToPlainString(n.t.N9M4N1, { count: 10 }),
+                    activeAgo: n.intl.formatToPlainString(n.t.N9M4N1, {
+                        count: 10,
+                    }),
                     attachment: c,
                 },
                 {
@@ -198,7 +219,9 @@ function x(t) {
                     title: n.intl.string(n.t.dsQXOj),
                     messageCount: 24,
                     reactionCount: 0,
-                    activeAgo: n.intl.formatToPlainString(n.t.N9M4N1, { count: 24 }),
+                    activeAgo: n.intl.formatToPlainString(n.t.N9M4N1, {
+                        count: 24,
+                    }),
                 },
                 {
                     user: {
@@ -209,7 +232,9 @@ function x(t) {
                     title: n.intl.string(n.t["XL/bba"]),
                     messageCount: 18,
                     reactionCount: 15,
-                    activeAgo: n.intl.formatToPlainString(n.t.N9M4N1, { count: 40 }),
+                    activeAgo: n.intl.formatToPlainString(n.t.N9M4N1, {
+                        count: 40,
+                    }),
                 },
                 {
                     user: {
@@ -220,7 +245,9 @@ function x(t) {
                     title: n.intl.string(n.t.XSYHP3),
                     messageCount: 2,
                     reactionCount: 0,
-                    activeAgo: n.intl.formatToPlainString(n.t.p0KedC, { count: 1 }),
+                    activeAgo: n.intl.formatToPlainString(n.t.p0KedC, {
+                        count: 1,
+                    }),
                     attachment: o,
                 },
             ],

@@ -1,7 +1,10 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r,
     i = n(311907),
     a = n(73153);
+
 function s(e, t, n) {
     return (
         t in e
@@ -17,14 +20,27 @@ function s(e, t, n) {
 }
 let o = 0,
     l = {};
+
 function c(e) {
-    return (l[e.guildId] = { type: "loading" }), !1;
+    return (
+        (l[e.guildId] = {
+            type: "loading",
+        }),
+        !1
+    );
 }
+
 function u(e) {
     (l[e.guildId] = e.guildInfo), o++;
 }
+
 function d(e) {
-    return (l[e.guildId] = { type: "failed" }), !1;
+    return (
+        (l[e.guildId] = {
+            type: "failed",
+        }),
+        !1
+    );
 }
 class f extends (r = i.Ay.Store) {
     getGuild(e) {

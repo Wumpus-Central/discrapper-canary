@@ -14,6 +14,7 @@ var r = n(64700),
     l = n(403362),
     c = n(933958),
     u = n(969151);
+
 function d(e, t, n) {
     return (
         t in e
@@ -27,6 +28,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -43,6 +45,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -55,6 +58,7 @@ function p(e, t) {
     }
     return n;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -66,6 +70,7 @@ function _(e, t) {
         e
     );
 }
+
 function h(e, t) {
     return g(
         (0, i.yK)([c.Ay], () =>
@@ -74,6 +79,7 @@ function h(e, t) {
         t,
     );
 }
+
 function m(e) {
     let t = g((0, i.bG)([c.Ay], () => (null != e ? c.Ay.getEmbeddedActivitiesForGuild(e) : c.Am)));
     return r.useMemo(() => {
@@ -90,6 +96,7 @@ function m(e) {
         );
     }, [t]);
 }
+
 function g(e, t) {
     let n = e.map((e) => e.applicationId),
         s = (0, a.A)(n),
@@ -130,6 +137,7 @@ function g(e, t) {
         );
     }, [e, s, u, t]);
 }
+
 function E(e) {
     return (0, i.bG)(
         [s.A],
@@ -147,7 +155,9 @@ function E(e) {
                     );
                     t.set(
                         null == e || null == (n = e.application) ? void 0 : n.id,
-                        _(f({}, e), { presenceActivity: r }),
+                        _(f({}, e), {
+                            presenceActivity: r,
+                        }),
                     );
                 }),
                 t

@@ -1,4 +1,8 @@
-n.d(t, { A: () => K }), n(896048), n(801541);
+n.d(t, {
+    A: () => K,
+}),
+    n(896048),
+    n(801541);
 var a = n(627968),
     l = n(64700),
     i = n(284009),
@@ -30,6 +34,7 @@ var a = n(627968),
     w = n(545986),
     k = n(927813),
     P = n(350246);
+
 function R(e, t, n) {
     return (
         t in e
@@ -43,6 +48,7 @@ function R(e, t, n) {
         e
     );
 }
+
 function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -59,6 +65,7 @@ function D(e) {
     }
     return e;
 }
+
 function M(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -80,6 +87,7 @@ function M(e, t) {
 let L = ["png", "gif", "webp"],
     U = [...L, "jpg", "jpeg"],
     B = Array.from(new Set([...U, "gif", "mp4", "webm"]));
+
 function G() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         { streamProgressSeconds: t = 0, completedAt: n = null, enrolledAt: a = null, claimedAt: l = null } = e;
@@ -169,11 +177,16 @@ let F = "1193992107035983872",
         userStatus: null,
         targetedContent: [],
     };
+
 function H() {
     var e, t, i, d, u, R;
     let [F, H] = l.useState(V),
         W = l.useCallback((e) => {
-            H(M(D({}, e), { preview: !0 }));
+            H(
+                M(D({}, e), {
+                    preview: !0,
+                }),
+            );
         }, []),
         [K, z] = l.useState(I.b.UNENROLLED),
         [q, Q] = l.useState(!1),
@@ -182,8 +195,14 @@ function H() {
         Z =
             ((R = F.config),
             (0, s.YW)(R)
-                .with({ configVersion: 2 }, (e) => e.rewardsConfig.rewards)
+                .with(
+                    {
+                        configVersion: 2,
+                    },
+                    (e) => e.rewardsConfig.rewards,
+                )
                 .exhaustive());
+
     function ee(e, t) {
         if (
             "hero" === e ||
@@ -198,14 +217,25 @@ function H() {
                 M(D({}, F), {
                     config:
                         ((n = F.config),
-                        (a = { [e]: t }),
+                        (a = {
+                            [e]: t,
+                        }),
                         (0, s.YW)(n)
-                            .with({ configVersion: 2 }, (e) => M(D({}, e), { assets: D({}, e.assets, a) }))
+                            .with(
+                                {
+                                    configVersion: 2,
+                                },
+                                (e) =>
+                                    M(D({}, e), {
+                                        assets: D({}, e.assets, a),
+                                    }),
+                            )
                             .exhaustive()),
                 }),
             );
         }
     }
+
     function et(e, t) {
         let n = F.config.taskConfigV2.tasks,
             a = n[o.n.WATCH_VIDEO];
@@ -213,13 +243,19 @@ function H() {
         let l = D({}, a.assets);
         switch (e) {
             case "videoPlayerVideo":
-                l.video = { url: t };
+                l.video = {
+                    url: t,
+                };
                 break;
             case "videoPlayerVideoLowRes":
-                l.videoLowRes = { url: t };
+                l.videoLowRes = {
+                    url: t,
+                };
                 break;
             case "videoPlayerThumbnail":
-                l.video = M(D({}, l.video), { thumbnail: t });
+                l.video = M(D({}, l.video), {
+                    thumbnail: t,
+                });
                 break;
             default:
                 return;
@@ -228,12 +264,17 @@ function H() {
             M(D({}, F), {
                 config: M(D({}, F.config), {
                     taskConfigV2: M(D({}, F.config.taskConfigV2), {
-                        tasks: M(D({}, n), { [o.n.WATCH_VIDEO]: M(D({}, a), { assets: l }) }),
+                        tasks: M(D({}, n), {
+                            [o.n.WATCH_VIDEO]: M(D({}, a), {
+                                assets: l,
+                            }),
+                        }),
                     }),
                 }),
             }),
         );
     }
+
     function en(e, t) {
         if ("questName" === e || "gameTitle" === e || "gamePublisher" === e) {
             var n, a;
@@ -241,14 +282,25 @@ function H() {
                 M(D({}, F), {
                     config:
                         ((n = F.config),
-                        (a = { [e]: t }),
+                        (a = {
+                            [e]: t,
+                        }),
                         (0, s.YW)(n)
-                            .with({ configVersion: 2 }, (e) => M(D({}, e), { messages: D({}, e.messages, a) }))
+                            .with(
+                                {
+                                    configVersion: 2,
+                                },
+                                (e) =>
+                                    M(D({}, e), {
+                                        messages: D({}, e.messages, a),
+                                    }),
+                            )
                             .exhaustive()),
                 }),
             );
         }
     }
+
     function ea(e, t, n) {
         if ("name" === e || "nameWithArticle" === e) {
             var a, l;
@@ -256,25 +308,45 @@ function H() {
                 M(D({}, F), {
                     config:
                         ((a = F.config),
-                        (l = { [e]: t }),
+                        (l = {
+                            [e]: t,
+                        }),
                         (0, s.YW)(a)
-                            .with({ configVersion: 2 }, (e) =>
-                                M(D({}, e), {
-                                    rewardsConfig: M(D({}, e.rewardsConfig), {
-                                        rewards: e.rewardsConfig.rewards.map((e, t) =>
-                                            t === n ? M(D({}, e), { messages: D({}, e.messages, l) }) : e,
-                                        ),
+                            .with(
+                                {
+                                    configVersion: 2,
+                                },
+                                (e) =>
+                                    M(D({}, e), {
+                                        rewardsConfig: M(D({}, e.rewardsConfig), {
+                                            rewards: e.rewardsConfig.rewards.map((e, t) =>
+                                                t === n
+                                                    ? M(D({}, e), {
+                                                          messages: D({}, e.messages, l),
+                                                      })
+                                                    : e,
+                                            ),
+                                        }),
                                     }),
-                                }),
                             )
                             .exhaustive()),
                 }),
             );
         }
     }
+
     function el(e, t) {
-        W(M(D({}, F), { config: M(D({}, F.config), { colors: M(D({}, F.config.colors), { [e]: t }) }) }));
+        W(
+            M(D({}, F), {
+                config: M(D({}, F.config), {
+                    colors: M(D({}, F.config.colors), {
+                        [e]: t,
+                    }),
+                }),
+            }),
+        );
     }
+
     function ei() {
         (0, h.tU)(F.config) && (0, w.hJ)(F, p.uF.GIFT_INVENTORY_FOR_YOU, p.uF.INTERNAL_PREVIEW_TOOL, !0);
     }
@@ -334,7 +406,13 @@ function H() {
                     taskDuration: er,
                     taskConfigV2: F.config.taskConfigV2,
                     onSelect: function (e) {
-                        W(M(D({}, F), { config: M(D({}, F.config), { taskConfigV2: e }) }));
+                        W(
+                            M(D({}, F), {
+                                config: M(D({}, F.config), {
+                                    taskConfigV2: e,
+                                }),
+                            }),
+                        );
                     },
                 }),
             }),
@@ -372,12 +450,18 @@ function H() {
                                 let n = F.config.taskConfigV2.tasks,
                                     a = n[o.n.WATCH_VIDEO];
                                 if (null == a) return;
-                                let l = M(D({}, a.messages), { [e]: t });
+                                let l = M(D({}, a.messages), {
+                                    [e]: t,
+                                });
                                 W(
                                     M(D({}, F), {
                                         config: M(D({}, F.config), {
                                             taskConfigV2: M(D({}, F.config.taskConfigV2), {
-                                                tasks: M(D({}, n), { [o.n.WATCH_VIDEO]: M(D({}, a), { messages: l }) }),
+                                                tasks: M(D({}, n), {
+                                                    [o.n.WATCH_VIDEO]: M(D({}, a), {
+                                                        messages: l,
+                                                    }),
+                                                }),
                                             }),
                                         }),
                                     }),
@@ -503,24 +587,34 @@ function H() {
                                                                 config:
                                                                     ((a = F.config),
                                                                     (0, s.YW)(a)
-                                                                        .with({ configVersion: 2 }, (e) =>
-                                                                            M(D({}, e), {
-                                                                                rewardsConfig: M(
-                                                                                    D({}, e.rewardsConfig),
-                                                                                    {
-                                                                                        rewards:
-                                                                                            e.rewardsConfig.rewards.map(
-                                                                                                (e, a) =>
-                                                                                                    a === n
-                                                                                                        ? M(D({}, e), {
-                                                                                                              asset: t,
-                                                                                                              skuId: "",
-                                                                                                          })
-                                                                                                        : e,
-                                                                                            ),
-                                                                                    },
-                                                                                ),
-                                                                            }),
+                                                                        .with(
+                                                                            {
+                                                                                configVersion: 2,
+                                                                            },
+                                                                            (e) =>
+                                                                                M(D({}, e), {
+                                                                                    rewardsConfig: M(
+                                                                                        D({}, e.rewardsConfig),
+                                                                                        {
+                                                                                            rewards:
+                                                                                                e.rewardsConfig.rewards.map(
+                                                                                                    (e, a) =>
+                                                                                                        a === n
+                                                                                                            ? M(
+                                                                                                                  D(
+                                                                                                                      {},
+                                                                                                                      e,
+                                                                                                                  ),
+                                                                                                                  {
+                                                                                                                      asset: t,
+                                                                                                                      skuId: "",
+                                                                                                                  },
+                                                                                                              )
+                                                                                                            : e,
+                                                                                                ),
+                                                                                        },
+                                                                                    ),
+                                                                                }),
                                                                         )
                                                                         .exhaustive()),
                                                             }),
@@ -562,7 +656,9 @@ function H() {
                 children: [
                     (0, a.jsxs)("div", {
                         className: P.OA,
-                        style: { marginBottom: 0 },
+                        style: {
+                            marginBottom: 0,
+                        },
                         children: [
                             (0, a.jsx)(A.A, {
                                 title: "Primary",
@@ -586,10 +682,20 @@ function H() {
                         onChange: function (e) {
                             switch ((z(e), e)) {
                                 case I.b.UNENROLLED:
-                                    W(M(D({}, F), { userStatus: null }));
+                                    W(
+                                        M(D({}, F), {
+                                            userStatus: null,
+                                        }),
+                                    );
                                     break;
                                 case I.b.ENROLLED:
-                                    W(M(D({}, F), { userStatus: G({ enrolledAt: new Date().toISOString() }) }));
+                                    W(
+                                        M(D({}, F), {
+                                            userStatus: G({
+                                                enrolledAt: new Date().toISOString(),
+                                            }),
+                                        }),
+                                    );
                                     break;
                                 case I.b.COMPLETED_25:
                                     W(
@@ -679,7 +785,11 @@ function H() {
                                             isPreview: !0,
                                             source: "preview",
                                             questId: "0",
-                                            children: (0, a.jsx)(g.A, { children: (0, a.jsx)(b.Y, { quest: F }) }),
+                                            children: (0, a.jsx)(g.A, {
+                                                children: (0, a.jsx)(b.Y, {
+                                                    quest: F,
+                                                }),
+                                            }),
                                         }),
                                     }),
                                 ],
@@ -758,7 +868,9 @@ function H() {
                                 children: "Quest Card Embed",
                             }),
                             Y
-                                ? (0, a.jsx)(j.l, { questId: F.id })
+                                ? (0, a.jsx)(j.l, {
+                                      questId: F.id,
+                                  })
                                 : (0, a.jsx)(
                                       y.R,
                                       {
@@ -823,7 +935,9 @@ function H() {
 }
 class W extends l.Component {
     componentDidCatch(e) {
-        this.setState({ error: e });
+        this.setState({
+            error: e,
+        });
     }
     render() {
         let { error: e, renderKey: t } = this.state;
@@ -831,7 +945,9 @@ class W extends l.Component {
             ? (0, a.jsxs)("div", {
                   className: P.TA,
                   children: [
-                      (0, a.jsx)(m.EpV, { className: P.Yw }),
+                      (0, a.jsx)(m.EpV, {
+                          className: P.Yw,
+                      }),
                       (0, a.jsx)(m.Heading, {
                           variant: "heading-lg/semibold",
                           children: "Something broke in the Quest preview tool :(",

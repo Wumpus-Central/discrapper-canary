@@ -1,4 +1,6 @@
-n.d(t, { e: () => o });
+n.d(t, {
+    e: () => o,
+});
 var r = n(627968),
     i = n(64700),
     a = n(459793),
@@ -12,6 +14,8 @@ let o = (e) => {
         l || o.current || (c(n), (o.current = !0));
     }, [l, c, n]),
     l)
-        ? (0, r.jsx)(a.oO, { onClose: u })
+        ? (0, r.jsx)(a.oO, {
+              onClose: u,
+          })
         : null;
 };

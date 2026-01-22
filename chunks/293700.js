@@ -7,6 +7,7 @@ var r,
     a = n(73153),
     s = n(136857),
     o = n(142120);
+
 function l(e, t, n) {
     return (
         t in e
@@ -32,14 +33,17 @@ var c = (function (e) {
 let u = 0,
     d = null,
     f = null;
+
 function p(e) {
     let { error: t } = e,
         n = t instanceof s.Ay ? t : new s.Ay(t);
     o.A.isConnected() && n.code === s.Ay.ErrorCodes.PURCHASE_TOKEN_AUTHORIZATION_REQUIRED && (u = 1);
 }
+
 function _(e) {
     (u = 2), (d = e.purchaseTokenHash), (f = e.expiresAt);
 }
+
 function h() {
     (u = 0), (d = null), (f = null);
 }

@@ -1,5 +1,8 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(652215);
+
 function i(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -25,6 +28,7 @@ function i(e) {
     }
     return e;
 }
+
 function l(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -44,6 +48,7 @@ function l(e, t) {
     );
 }
 let a = "<removed>";
+
 function s(e) {
     var t, n;
     let s = i({}, e);
@@ -54,7 +59,11 @@ function s(e) {
                 switch (e.cmd) {
                     case r.e$_.AUTHENTICATE:
                     case r.e$_.GET_PROVIDER_ACCESS_TOKEN:
-                        return l(i({}, e), { args: l(i({}, e.args), { access_token: a }) });
+                        return l(i({}, e), {
+                            args: l(i({}, e.args), {
+                                access_token: a,
+                            }),
+                        });
                     default:
                         return i({}, e);
                 }
@@ -65,7 +74,11 @@ function s(e) {
                 switch (e.cmd) {
                     case r.e$_.AUTHENTICATE:
                     case r.e$_.GET_PROVIDER_ACCESS_TOKEN:
-                        return l(i({}, e), { data: l(i({}, e.data), { access_token: a }) });
+                        return l(i({}, e), {
+                            data: l(i({}, e.data), {
+                                access_token: a,
+                            }),
+                        });
                     default:
                         return i({}, e);
                 }

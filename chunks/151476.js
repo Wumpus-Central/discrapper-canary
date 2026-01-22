@@ -1,9 +1,13 @@
-n.d(t, { A: () => l }), n(896048);
+n.d(t, {
+    A: () => l,
+}),
+    n(896048);
 var r = n(735438),
     i = n.n(r),
     a = n(311907),
     s = n(430452),
     o = n(731854);
+
 function l() {
     let { enabled: e, cameraUnavailable: t } = (0, a.cf)([s.A], () => {
         var e, t;

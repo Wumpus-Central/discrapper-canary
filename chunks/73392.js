@@ -19,6 +19,7 @@ let u = {
     [a.x.SINISTRE]: c.yH,
     [a.x.ZILLA_SLAB]: c.FR,
 };
+
 function d(e) {
     var t;
     return {
@@ -26,9 +27,20 @@ function d(e) {
         className: null != (t = u[e]) ? t : "",
     };
 }
+
 function f(e) {
     let { displayNameStyles: t } = e;
-    if (!(0, l.W)({ location: "useDisplayNameStylesFont" }) || null == t) return "";
+    if (
+        !(0, l.W)({
+            location: "useDisplayNameStylesFont",
+        }) ||
+        null == t
+    )
+        return "";
     let n = d(t.fontId);
-    return "" === n.className ? "" : i()(c.zt, n.className, { [c.VM]: (0, s.nr)() });
+    return "" === n.className
+        ? ""
+        : i()(c.zt, n.className, {
+              [c.VM]: (0, s.nr)(),
+          });
 }

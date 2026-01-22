@@ -1,6 +1,9 @@
 t.a(e, async function (e, r) {
     try {
-        t.r(n), t.d(n, { default: () => w });
+        t.r(n),
+            t.d(n, {
+                default: () => w,
+            });
         var l = t(627968),
             c = t(64700),
             a = t(223535),
@@ -45,6 +48,7 @@ t.a(e, async function (e, r) {
             spoiler: b.d,
             timestamp: I.D,
         };
+
         function w(e) {
             let { content: n } = e;
             return (0, l.jsx)(i.tH, {
@@ -61,6 +65,7 @@ t.a(e, async function (e, r) {
                 }),
             });
         }
+
         function P(e) {
             let { content: n, error: t } = e;
             return (
@@ -69,7 +74,9 @@ t.a(e, async function (e, r) {
                 }, [t]),
                 (0, l.jsxs)(l.Fragment, {
                     children: [
-                        (0, l.jsx)("span", { children: n }),
+                        (0, l.jsx)("span", {
+                            children: n,
+                        }),
                         (0, l.jsxs)(s.Text, {
                             variant: "text-md/normal",
                             color: "text-feedback-critical",

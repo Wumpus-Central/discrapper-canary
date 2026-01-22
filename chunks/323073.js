@@ -36,6 +36,7 @@ var r = n(687123),
     g = n(204925),
     E = n(652215),
     b = n(985018);
+
 function y(e) {
     return {
         description: e ? b.intl.string(b.t["lSgO/q"]) : b.intl.string(b.t.SxY4IW),
@@ -45,24 +46,29 @@ function y(e) {
 let O = new Date("06/16/2020"),
     A = [E.ftr.AGE_RESTRICTED, E.ftr.EXPLICIT],
     v = new Set([g.w_.NSFW_SERVER, g.w_.NSFW_SERVER_INVITE, g.w_.NSFW_SERVER_INVITE_EMBED]);
+
 function S() {
     let e = p.default.getCurrentUser();
     return null != e && h.default.extractTimestamp(e.id) > O.getTime() && null == e.nsfwAllowed;
 }
+
 function I(e) {
     return A.includes(e.nsfwLevel);
 }
+
 function T() {
     let e = (0, l.o)("age-gate-utils"),
         t = (0, s.p9)();
     return ((0, o.d6)(r.t.AGE_GATED_SPACES) || e) && t;
 }
+
 function C() {
     let e = (0, o.aX)(r.t.AGE_GATED_SPACES),
         t = (0, l.j)("age-gate-utils"),
         n = (0, s.i2)();
     return (e || t) && n;
 }
+
 function N(e) {
     let t = (0, s.b8)(),
         n = (0, c.wh)(e),
@@ -102,6 +108,7 @@ function N(e) {
                 modalType: a.A5.NSFW_CHANNEL_VERIFIED,
             };
 }
+
 function R(e) {
     let t = (0, s.b8)(),
         n = C(),
@@ -134,7 +141,9 @@ function R(e) {
           : a && r && !n
             ? {
                   verifyTitle: b.intl.string(b.t["H0SG/g"]),
-                  verifyGateDescription: b.intl.format(b.t["6++3cX"], { helpURL: _.A.getArticleURL(E.MVz.AGE_GATE) }),
+                  verifyGateDescription: b.intl.format(b.t["6++3cX"], {
+                      helpURL: _.A.getArticleURL(E.MVz.AGE_GATE),
+                  }),
                   verifyAgreementButtonText: null,
               }
             : {
@@ -157,6 +166,7 @@ let w = () => {
     D = (e) => !!w() && null != e && G(u.A.getChannel(e)),
     x = (e) => T() && D(e),
     L = (e) => !!x(e) && ((0, m.yO)(g.w_.NSFW_VOICE_CHANNEL), !0);
+
 function j(e, t, n) {
     if (P(e)) {
         let e = null != n && v.has(n) ? n : g.w_.NSFW_SERVER;
@@ -177,6 +187,7 @@ let M = (e) => null != e && (e.isNSFW() || (0, c.wh)(f.A.getGuild(e.guild_id))),
         let n = (null == (t = p.default.getCurrentUser()) ? void 0 : t.nsfwAllowed) === !0;
         return M(e) && !n;
     };
+
 function G(e) {
     var t;
     if (null == e) return !1;
@@ -191,6 +202,7 @@ function G(e) {
         g = f.A.getGuild(m);
     return null != g && (0, c.wh)(g) && h;
 }
+
 function V(e) {
     let t = (0, s.i2)(),
         n = (0, i.bG)([d.A], () => d.A.didAgree(null == e ? void 0 : e.guild_id)),
@@ -206,16 +218,19 @@ function V(e) {
         E = !(n && !a) || g;
     return null != e && ((!!e.isNSFW() && !!E) || (null != m && !!(0, c.wh)(m) && !!E));
 }
+
 function F() {
     let e = p.default.getCurrentUser();
     return null != e && null == e.nsfwAllowed;
 }
+
 function B() {
     let e = (0, o.d6)(r.t.COMMANDS_TOGGLE),
         t = (0, l.o)("age-gate-utils") || e,
         n = (0, s.p9)();
     return t && n;
 }
+
 function H() {
     let e = (0, o.aX)(r.t.COMMANDS_TOGGLE),
         t = (0, l.j)("age-gate-utils") || e,

@@ -1,4 +1,6 @@
-n.d(t, { A: () => u });
+n.d(t, {
+    A: () => u,
+});
 var r = n(627968),
     i = n(158954),
     a = n(199966),
@@ -6,6 +8,7 @@ var r = n(627968),
     o = n(894858),
     l = n(590089),
     c = n(191563);
+
 function u(e) {
     var t, n, u, d;
     let { node: f } = e,
@@ -25,9 +28,14 @@ function u(e) {
             null != y &&
             (0, r.jsx)("div", {
                 className: c.z,
-                children: (0, r.jsx)(y, { color: "currentColor" }),
+                children: (0, r.jsx)(y, {
+                    color: "currentColor",
+                }),
             }),
         primaryTrailingElement: (0, r.jsx)(i.uhT, {}),
-        onClick: () => o.A.setState({ requestedTargetKey: p }),
+        onClick: () =>
+            o.A.setState({
+                requestedTargetKey: p,
+            }),
     });
 }

@@ -1,8 +1,11 @@
-n.d(t, { W: () => o });
+n.d(t, {
+    W: () => o,
+});
 var r = n(64700),
     i = n(311907),
     a = n(786953),
     s = n(505274);
+
 function o() {
     let {
         balance: e,

@@ -19,4 +19,6 @@ function r(e) {
         gameConfig: e.game_config,
     };
 }
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});

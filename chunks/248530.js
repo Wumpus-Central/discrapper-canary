@@ -1,4 +1,8 @@
-n.d(t, { L: () => p }), n(896048), n(264879);
+n.d(t, {
+    L: () => p,
+}),
+    n(896048),
+    n(264879);
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -7,6 +11,7 @@ var i = n(503698),
     o = n.n(s),
     l = n(827734),
     c = n(500804);
+
 function u(e, t, n) {
     return (
         t in e
@@ -20,6 +25,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -39,6 +45,7 @@ function d(e) {
 var f = (function (e) {
     return (e.XSMALL = "xsmall"), (e.SMALL = "small"), (e.LARGE = "large"), e;
 })(f || {});
+
 function p(e) {
     let {
             className: t,
@@ -54,12 +61,18 @@ function p(e) {
                     [s, o] = e;
                 return (
                     (n = Array.isArray(o)
-                        ? { background: "linear-gradient(to right, ".concat(o[0], ", ").concat(o[1], ")") }
-                        : { backgroundColor: o }),
+                        ? {
+                              background: "linear-gradient(to right, ".concat(o[0], ", ").concat(o[1], ")"),
+                          }
+                        : {
+                              backgroundColor: o,
+                          }),
                     (0, r.jsx)(
                         "div",
                         {
-                            className: a()(c.progressBar, c[i], { [c.animating]: f }),
+                            className: a()(c.progressBar, c[i], {
+                                [c.animating]: f,
+                            }),
                             style: d(
                                 {
                                     transform: "translate3d(".concat(
@@ -77,7 +90,9 @@ function p(e) {
             .reverse();
     return (0, r.jsx)("div", {
         className: a()(t, c.progress, c[i]),
-        style: { backgroundColor: u },
+        style: {
+            backgroundColor: u,
+        },
         children: p,
     });
 }

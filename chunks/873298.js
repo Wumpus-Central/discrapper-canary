@@ -623,7 +623,9 @@ class x extends s.G {
 let L = new x();
 class j extends s.G {
     create(e) {
-        let t = { guilds: {} };
+        let t = {
+            guilds: {},
+        };
         return (
             globalThis.Object.defineProperty(t, a.$, {
                 enumerable: !1,
@@ -1110,7 +1112,9 @@ class F extends s.G {
 let B = new F();
 class H extends s.G {
     create(e) {
-        let t = { collapsedInInbox: !1 };
+        let t = {
+            collapsedInInbox: !1,
+        };
         return (
             globalThis.Object.defineProperty(t, a.$, {
                 enumerable: !1,
@@ -1565,7 +1569,9 @@ class Q extends s.G {
 let $ = new Q();
 class J extends s.G {
     create(e) {
-        let t = { useBlur: !1 };
+        let t = {
+            useBlur: !1,
+        };
         return (
             globalThis.Object.defineProperty(t, a.$, {
                 enumerable: !1,
@@ -1612,7 +1618,11 @@ class J extends s.G {
 let ee = new J();
 class et extends s.G {
     create(e) {
-        let t = { videoBackgroundFilterDesktop: { oneofKind: void 0 } };
+        let t = {
+            videoBackgroundFilterDesktop: {
+                oneofKind: void 0,
+            },
+        };
         return (
             globalThis.Object.defineProperty(t, a.$, {
                 enumerable: !1,
@@ -3404,7 +3414,9 @@ class eb extends s.G {
 let ey = new eb();
 class eO extends s.G {
     create(e) {
-        let t = { statusExpiresAtMs: "0" };
+        let t = {
+            statusExpiresAtMs: "0",
+        };
         return (
             globalThis.Object.defineProperty(t, a.$, {
                 enumerable: !1,
@@ -4151,7 +4163,9 @@ class ej extends s.G {
 let eM = new ej();
 class ek extends s.G {
     create(e) {
-        let t = { guildIds: [] };
+        let t = {
+            guildIds: [],
+        };
         return (
             globalThis.Object.defineProperty(t, a.$, {
                 enumerable: !1,
@@ -4672,7 +4686,9 @@ class ez extends s.G {
 let eq = new ez();
 class eX extends s.G {
     create(e) {
-        let t = { volume: 0 };
+        let t = {
+            volume: 0,
+        };
         return (
             globalThis.Object.defineProperty(t, a.$, {
                 enumerable: !1,
@@ -4993,7 +5009,9 @@ class e3 extends s.G {
 let e6 = new e3();
 class e4 extends s.G {
     create(e) {
-        let t = { currentTab: 0 };
+        let t = {
+            currentTab: 0,
+        };
         return (
             globalThis.Object.defineProperty(t, a.$, {
                 enumerable: !1,
@@ -5040,7 +5058,9 @@ class e4 extends s.G {
 let e5 = new e4();
 class e7 extends s.G {
     create(e) {
-        let t = { feedGeneratedAt: "0" };
+        let t = {
+            feedGeneratedAt: "0",
+        };
         return (
             globalThis.Object.defineProperty(t, a.$, {
                 enumerable: !1,
@@ -5087,7 +5107,9 @@ class e7 extends s.G {
 let e8 = new e7();
 class e9 extends s.G {
     create(e) {
-        let t = { appSettings: {} };
+        let t = {
+            appSettings: {},
+        };
         return (
             globalThis.Object.defineProperty(t, a.$, {
                 enumerable: !1,
@@ -5225,7 +5247,9 @@ class tt extends s.G {
 let tn = new tt();
 class tr extends s.G {
     create(e) {
-        let t = { allowMobilePush: !1 };
+        let t = {
+            allowMobilePush: !1,
+        };
         return (
             globalThis.Object.defineProperty(t, a.$, {
                 enumerable: !1,
@@ -5272,7 +5296,9 @@ class tr extends s.G {
 let ti = new tr();
 class ta extends s.G {
     create(e) {
-        let t = { disableApplicationActivitySharing: !1 };
+        let t = {
+            disableApplicationActivitySharing: !1,
+        };
         return (
             globalThis.Object.defineProperty(t, a.$, {
                 enumerable: !1,
@@ -5319,7 +5345,9 @@ class ta extends s.G {
 let ts = new ta();
 class to extends s.G {
     create(e) {
-        let t = { alwaysDeliver: !1 };
+        let t = {
+            alwaysDeliver: !1,
+        };
         return (
             globalThis.Object.defineProperty(t, a.$, {
                 enumerable: !1,
@@ -5509,7 +5537,9 @@ class td extends s.G {
 let tf = new td();
 class tp extends s.G {
     create(e) {
-        let t = { inAppFeedbackStates: {} };
+        let t = {
+            inAppFeedbackStates: {},
+        };
         return (
             globalThis.Object.defineProperty(t, a.$, {
                 enumerable: !1,

@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968),
     i = n(64700),
     a = n(990078),
@@ -7,6 +9,7 @@ var r = n(627968),
     l = n(50268),
     c = n(67518),
     u = n(985018);
+
 function d(e, t, n) {
     return (
         t in e
@@ -20,6 +23,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +40,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -48,6 +53,7 @@ function p(e, t) {
     }
     return n;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -59,6 +65,7 @@ function _(e, t) {
         e
     );
 }
+
 function h(e) {
     let { applicationId: t, className: n } = e,
         d = i.useRef(null),
@@ -84,7 +91,14 @@ function h(e) {
                       "aria-label": u.intl.string(u.t.PNeFgW),
                       onSelect: () => {},
                       children: (0, r.jsxs)(r.Fragment, {
-                          children: [(0, r.jsx)(s.rXV, { children: p }), (0, r.jsx)(s.rXV, { children: h })],
+                          children: [
+                              (0, r.jsx)(s.rXV, {
+                                  children: p,
+                              }),
+                              (0, r.jsx)(s.rXV, {
+                                  children: h,
+                              }),
+                          ],
                       }),
                   });
               },

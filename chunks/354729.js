@@ -53,7 +53,11 @@ var r,
     g = null,
     E = function (e) {
         return function (t) {
-            e(Error("Failed to load Stripe.js", { cause: t }));
+            e(
+                Error("Failed to load Stripe.js", {
+                    cause: t,
+                }),
+            );
         };
     },
     b = function (e, t) {

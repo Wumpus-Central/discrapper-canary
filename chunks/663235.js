@@ -1,4 +1,7 @@
-n.d(t, { A: () => D }), n(321073);
+n.d(t, {
+    A: () => D,
+}),
+    n(321073);
 var r = n(627968),
     i = n(64700),
     a = n(158954),
@@ -26,6 +29,7 @@ var r = n(627968),
     C = n(756362),
     N = n(626715),
     R = n(427401);
+
 function w(e, t, n) {
     return (
         t in e
@@ -39,6 +43,7 @@ function w(e, t, n) {
         e
     );
 }
+
 function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -55,6 +60,7 @@ function P(e) {
     }
     return e;
 }
+
 function D(e) {
     let { checkpointData: t } = e,
         {
@@ -82,10 +88,14 @@ function D(e) {
         B = (0, _.OW)(n),
         H = f.f[n],
         Y = (0, c.rdh)(H.primaryColor).hex(),
-        W = (0, c.rdh)(H.secondaryColor).hex({ opacity: 0.2 }),
+        W = (0, c.rdh)(H.secondaryColor).hex({
+            opacity: 0.2,
+        }),
         K = (0, s.bG)([b.A], () => b.A.getGuild(null == M ? void 0 : M.guildId)),
         z = (0, A.jc)(),
-        { enabled: q } = p.w.useConfig({ location: "message_component" }),
+        { enabled: q } = p.w.useConfig({
+            location: "message_component",
+        }),
         X = new Intl.NumberFormat(S.intl.currentLocale, {
             notation: "compact",
             compactDisplay: "short",
@@ -103,7 +113,9 @@ function D(e) {
             y.default.track(
                 v.HAw.CHECKPOINT_CARD_CLICKED,
                 P(
-                    { other_user_id: null == z || null == (t = z.message) ? void 0 : t.author.id },
+                    {
+                        other_user_id: null == z || null == (t = z.message) ? void 0 : t.author.id,
+                    },
                     (0, d.dI)(n),
                     (0, d.H$)(null == n ? void 0 : n.guild_id),
                 ),
@@ -112,7 +124,9 @@ function D(e) {
         };
     return (0, r.jsxs)("div", {
         className: T.kL,
-        style: { backgroundColor: Y },
+        style: {
+            backgroundColor: Y,
+        },
         children: [
             (0, r.jsxs)("div", {
                 className: T.Nr,
@@ -121,7 +135,9 @@ function D(e) {
                         src: B,
                         alt: "",
                         className: T.LY,
-                        style: { backgroundColor: Y },
+                        style: {
+                            backgroundColor: Y,
+                        },
                     }),
                     (0, r.jsxs)("div", {
                         className: T.M1,
@@ -281,7 +297,9 @@ function D(e) {
             }),
             (0, r.jsxs)("div", {
                 className: T.qr,
-                style: { backgroundColor: W },
+                style: {
+                    backgroundColor: W,
+                },
                 children: [
                     (0, r.jsx)(a.DZT, {
                         variant: "display-sm",
@@ -313,7 +331,9 @@ function D(e) {
             }),
             (0, r.jsxs)("div", {
                 className: T.hC,
-                style: { backgroundColor: Y },
+                style: {
+                    backgroundColor: Y,
+                },
                 children: [
                     (0, r.jsx)("div", {
                         className: T.TO,
@@ -325,7 +345,9 @@ function D(e) {
                                     src: e,
                                     width: 4,
                                     alt: "",
-                                    style: { opacity: t >= Z ? 0.3 : 1 },
+                                    style: {
+                                        opacity: t >= Z ? 0.3 : 1,
+                                    },
                                 },
                                 t,
                             ),

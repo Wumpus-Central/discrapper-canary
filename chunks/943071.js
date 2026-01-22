@@ -1,4 +1,6 @@
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 var l = n(627968);
 n(64700);
 var r = n(492917),
@@ -9,6 +11,8 @@ let i = (e) => {
         ? null
         : (0, l.jsx)("div", {
               className: a.t,
-              children: (0, l.jsx)(r.Mwn, { alt: "" }),
+              children: (0, l.jsx)(r.Mwn, {
+                  alt: "",
+              }),
           });
 };

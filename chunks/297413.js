@@ -1,4 +1,6 @@
-n.d(t, { A: () => v });
+n.d(t, {
+    A: () => v,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -14,6 +16,7 @@ var i = n(503698),
     _ = n(427262),
     h = n(985018),
     m = n(479117);
+
 function g(e, t, n) {
     return (
         t in e
@@ -27,6 +30,7 @@ function g(e, t, n) {
         e
     );
 }
+
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -43,6 +47,7 @@ function E(e) {
     }
     return e;
 }
+
 function b(e, t) {
     if (null == e) return {};
     var n,
@@ -59,6 +64,7 @@ function b(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function y(e, t) {
     if (null == e) return {};
     var n,
@@ -69,6 +75,7 @@ function y(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function O(e) {
     return e.isSystemUser() ? f.v.SYSTEM_DM : e.bot ? f.v.BOT : null;
 }
@@ -86,9 +93,17 @@ let A = (e) => {
                 displayNameStyles: E,
                 displayNameStylesType: b,
             } = e,
-            y = (0, c.W)({ location: "DiscordTag" });
+            y = (0, c.W)({
+                location: "DiscordTag",
+            });
         return (0, r.jsxs)("div", {
-            className: a()(m.pq, { [m.e8]: y && null != E }, f),
+            className: a()(
+                m.pq,
+                {
+                    [m.e8]: y && null != E,
+                },
+                f,
+            ),
             children: [
                 (0, r.jsx)(o.m, {
                     text: h.intl.string(h.t.Br1ls3),
@@ -153,7 +168,12 @@ let A = (e) => {
             C = i ? v : null != n ? n : T,
             N = t.hasUniqueUsername() || l;
         if (N || C !== v) {
-            let e = C === v && N && i ? _.Ay.getUserTag(t, { forcePomelo: l }) : C,
+            let e =
+                    C === v && N && i
+                        ? _.Ay.getUserTag(t, {
+                              forcePomelo: l,
+                          })
+                        : C,
                 n = a && e !== "@".concat(v) ? _.Ay.getUserTag(t) : void 0;
             return (0, r.jsx)(
                 A,

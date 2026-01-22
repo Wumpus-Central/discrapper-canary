@@ -1,4 +1,7 @@
-n.d(t, { S: () => u }), n(896048);
+n.d(t, {
+    S: () => u,
+}),
+    n(896048);
 var l = n(64700),
     a = n(311907),
     r = n(620140),
@@ -7,6 +10,7 @@ var l = n(64700),
     c = n(310419),
     o = n(656106),
     d = n(652215);
+
 function u(e) {
     let t = (0, a.bG)([i.A], () => i.A.getCategories()),
         n = (0, r.A)(),
@@ -33,7 +37,9 @@ function u(e) {
                         category_id: Number(t.id),
                         current_page: null == p ? void 0 : p.type,
                     }),
-                    (0, o.kq)({ categoryId: e }));
+                    (0, o.kq)({
+                        categoryId: e,
+                    }));
             },
             [null == p ? void 0 : p.type, u],
         ),

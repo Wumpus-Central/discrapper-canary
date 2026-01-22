@@ -1,4 +1,7 @@
-n.d(t, { A: () => _ }), n(896048);
+n.d(t, {
+    A: () => _,
+}),
+    n(896048);
 var r = n(64700),
     i = n(311907),
     a = n(775602),
@@ -13,6 +16,7 @@ let f = Object.keys(u.jB),
         let t = null == e ? f : f.filter((t) => t !== e);
         return t[Math.floor(Math.random() * t.length)];
     };
+
 function _() {
     let e = (0, i.bG)([a.A], () => a.A.useReducedMotion),
         [t, n] = (0, r.useState)(p()),
@@ -44,7 +48,10 @@ function _() {
     }, [f, _, g, m]);
     let E = (0, r.useCallback)(() => {
         let e = p(t);
-        n(e), c.default.track(d.HAw.TRY_IT_OUT_PRESET_SHUFFLED, { preset: e });
+        n(e),
+            c.default.track(d.HAw.TRY_IT_OUT_PRESET_SHUFFLED, {
+                preset: e,
+            });
     }, [t]);
     return {
         preset: t,

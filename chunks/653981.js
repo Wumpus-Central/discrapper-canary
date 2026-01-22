@@ -1,4 +1,8 @@
-n.d(e, { default: () => L }), n(896048), n(321073);
+n.d(e, {
+    default: () => L,
+}),
+    n(896048),
+    n(321073);
 var i = n(627968),
     o = n(64700),
     a = n(136722),
@@ -19,6 +23,7 @@ var i = n(627968),
     m = n(124759),
     T = n(985018),
     f = n(763481);
+
 function y(t) {
     let { guild: e } = t,
         n = (0, s.bG)([S.A], () => S.A.getEveryoneRole(e));
@@ -43,6 +48,7 @@ function y(t) {
     });
 }
 let x = (t) => (t.toString() === O.xBc.MENTION_EVERYONE.toString() ? T.intl.string(T.t.yCpsQw) : (0, E.hx)(t));
+
 function b(t) {
     let { permissions: e, step: n } = t;
     return 2 === n
@@ -64,7 +70,9 @@ function b(t) {
                               {
                                   className: f.ce,
                                   children: [
-                                      (0, i.jsx)("div", { className: 0 === n ? f.I0 : f.dT }),
+                                      (0, i.jsx)("div", {
+                                          className: 0 === n ? f.I0 : f.dT,
+                                      }),
                                       (0, i.jsx)(_.Text, {
                                           variant: "text-sm/normal",
                                           color: "text-default",
@@ -79,6 +87,7 @@ function b(t) {
               ],
           });
 }
+
 function C(t) {
     let { permissions: e, step: n } = t;
     return 0 === e.length && 2 !== n
@@ -101,7 +110,9 @@ function C(t) {
                               {
                                   className: f.ce,
                                   children: [
-                                      (0, i.jsx)("div", { className: f.xE }),
+                                      (0, i.jsx)("div", {
+                                          className: f.xE,
+                                      }),
                                       (0, i.jsx)(_.Text, {
                                           variant: "text-sm/normal",
                                           color: "text-muted",
@@ -116,6 +127,7 @@ function C(t) {
               ],
           }));
 }
+
 function R(t) {
     let { permissions: e, step: n } = t,
         { enabledPermissions: o, disabledPermissions: a } = e;
@@ -137,6 +149,7 @@ function R(t) {
               ],
           });
 }
+
 function g(t) {
     let { guild: e, permissions: n, step: o, canEveryoneModerate: a, isDefaultNotificationsAllMessages: s } = t;
     return (0, i.jsxs)(i.Fragment, {
@@ -183,7 +196,9 @@ function g(t) {
                               variant: "text-md/normal",
                               children: T.intl.string(T.t.LfeFFr),
                           }),
-                          (0, i.jsx)(y, { guild: e }),
+                          (0, i.jsx)(y, {
+                              guild: e,
+                          }),
                       ],
                   })
                 : null,
@@ -194,6 +209,7 @@ function g(t) {
         ],
     });
 }
+
 function L(t) {
     let { guild: e, canEveryoneModerate: n, isDefaultNotificationsAllMessages: s, transitionState: l, onClose: c } = t,
         [_, E] = o.useState(0),
@@ -243,7 +259,10 @@ function L(t) {
                         }
                         return t;
                     })({}, o)),
-                    (i = i = { permissions: r }),
+                    (i = i =
+                        {
+                            permissions: r,
+                        }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(i))
                         : (function (t, e) {
@@ -259,8 +278,12 @@ function L(t) {
                     t),
                 ])),
                 s &&
-                    (p.A.updateGuild({ defaultMessageNotifications: O.orn.ONLY_MENTIONS }),
-                    p.A.saveGuild(e.id, { defaultMessageNotifications: O.orn.ONLY_MENTIONS }));
+                    (p.A.updateGuild({
+                        defaultMessageNotifications: O.orn.ONLY_MENTIONS,
+                    }),
+                    p.A.saveGuild(e.id, {
+                        defaultMessageNotifications: O.orn.ONLY_MENTIONS,
+                    }));
         },
         x = [
             ...(0 === _
@@ -289,7 +312,7 @@ function L(t) {
                             h.i.PRIMARY,
                         )),
                         0 === _
-                            ? (E(1), setTimeout(() => E(2), 3000))
+                            ? (E(1), setTimeout(() => E(2), 3e3))
                             : 2 === _ &&
                               (y(),
                               c(),

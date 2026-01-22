@@ -29,6 +29,7 @@ var m = n(845625),
     g = n(615550),
     E = n(652215),
     b = n(985018);
+
 function y(e, t, n) {
     return (
         t in e
@@ -42,6 +43,7 @@ function y(e, t, n) {
         e
     );
 }
+
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -58,6 +60,7 @@ function O(e) {
     }
     return e;
 }
+
 function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -70,6 +73,7 @@ function A(e, t) {
     }
     return n;
 }
+
 function v(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -81,9 +85,11 @@ function v(e, t) {
         e
     );
 }
+
 function S(e) {
     return e.type === E.lAJ.AUTO_MODERATION_ACTION;
 }
+
 function I(e) {
     var t;
     return null == (t = e.embeds)
@@ -93,12 +99,15 @@ function I(e) {
               return t === E.Auw.AUTO_MODERATION_NOTIFICATION;
           });
 }
+
 function T(e) {
     return e.type === E.Auw.AUTO_MODERATION_NOTIFICATION;
 }
+
 function C(e) {
     return e.type === E.Auw.AUTO_MODERATION_MESSAGE;
 }
+
 function N(e, t) {
     var n, r, i, a, s;
     let [o] = null != (n = e.embeds) ? n : [];
@@ -125,31 +134,38 @@ function N(e, t) {
                 : a.rawValue;
     }
 }
+
 function R(e) {
     var t, n;
     let [r] = null != (t = e.embeds) ? t : [];
     return null != (n = null == r ? void 0 : r.rawDescription) ? n : "";
 }
+
 function w(e) {
     let t = N(e, l.G.DECISION_OUTCOME);
     if (null != t) return t;
 }
+
 function P(e) {
     let t = N(e, l.G.QUARANTINE_USER);
     if (null != t) return t;
 }
+
 function D(e) {
     let t = N(e, l.G.QUARANTINE_USER_ACTION);
     if (null != t) return t;
 }
+
 function x(e) {
     let t = N(e, l.G.BLOCK_PROFILE_UPDATE_TYPE);
     if (null != t) return t;
 }
+
 function L(e) {
     let t = N(e, l.G.QUARANTINE_EVENT);
     if (null != t) return t;
 }
+
 function j(e, t, n) {
     switch (t) {
         case d.t.BLOCK_PROFILE_UPDATE:
@@ -159,6 +175,7 @@ function j(e, t, n) {
         case d.t.BLOCK_GUEST_JOIN:
             return i();
     }
+
     function r(e) {
         switch (e) {
             case a.d.NICKNAME_UPDATE:
@@ -169,9 +186,11 @@ function j(e, t, n) {
                 return;
         }
     }
+
     function i() {
         return b.intl.string(b.t.MrYeyS);
     }
+
     function s(e) {
         switch (e) {
             case u.c.MESSAGE_SEND:
@@ -187,6 +206,7 @@ function j(e, t, n) {
         }
     }
 }
+
 function M(e, t) {
     var n;
     return t
@@ -195,6 +215,7 @@ function M(e, t) {
             : b.intl.string(b.t.J90oLW)
         : b.intl.string(b.t["/YzI63"]);
 }
+
 function k(e, t, n) {
     let r = N(e, l.G.VOICE_CHANNEL_STATUS_OUTCOME);
     if (null == r) return null;
@@ -204,6 +225,7 @@ function k(e, t, n) {
         channelHook: n,
     });
 }
+
 function U(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : E.FXj,
         r = arguments.length > 3 ? arguments[3] : void 0,
@@ -261,6 +283,7 @@ function U(e, t) {
                   channelHook: y,
               });
 }
+
 function G(e) {
     switch (e) {
         case f.d.NICKNAME:
@@ -275,9 +298,11 @@ function G(e) {
             return b.intl.string(b.t.pJQVnr);
     }
 }
+
 function V(e) {
     return null == e ? null : e;
 }
+
 function F(e) {
     var t;
     let n = N(e, c.E.NOTIFICATION_TYPE),
@@ -299,6 +324,7 @@ function F(e) {
         suspiciousMentionActivityUntil: null != u ? new Date(u) : void 0,
     };
 }
+
 function B(e) {
     let t = N(e, l.G.CHANNEL_ID),
         n = N(e, l.G.ALERT_ACTIONS_EXECUTION),
@@ -322,16 +348,21 @@ function B(e) {
         alertActionsExecution: null != r ? r : void 0,
     };
 }
+
 function H(e) {
     let t = i.useMemo(() => B(e), [e]),
         n = (0, p.bG)([_.A], () => _.A.getChannel(t.embedChannelId), [t.embedChannelId]);
-    return v(O({}, t), { embedChannel: n });
+    return v(O({}, t), {
+        embedChannel: n,
+    });
 }
+
 function Y(e) {
     if (null == e) return null;
     let { alertActionsExecution: t } = B(e);
     return null != t ? t : null;
 }
+
 function W(e) {
     if (null == e) return b.intl.string(b.t.Gh3A0O);
     switch (e) {
@@ -345,6 +376,7 @@ function W(e) {
             return b.intl.string(b.t.GPg6JM);
     }
 }
+
 function K(e) {
     return N(e, c.E.ACTION_BY_USER_ID);
 }

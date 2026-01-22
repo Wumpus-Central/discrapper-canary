@@ -18,6 +18,7 @@ var a = n(503698),
     _ = n(287809),
     h = n(985018),
     m = n(785263);
+
 function g(e, t, n) {
     return (
         t in e
@@ -71,7 +72,9 @@ let y = new b(c.h, {}),
                 }),
                 (0, i.jsx)("div", {
                     className: m.o1,
-                    children: (0, i.jsx)(u.x, { onClick: A }),
+                    children: (0, i.jsx)(u.x, {
+                        onClick: A,
+                    }),
                 }),
             ],
         });

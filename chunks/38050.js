@@ -1,8 +1,11 @@
-n.d(t, { n: () => f });
+n.d(t, {
+    n: () => f,
+});
 var r = n(353640),
     i = n(499867),
     a = n(998740),
     s = n(572808);
+
 function o(e, t, n) {
     return (
         t in e
@@ -16,6 +19,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -32,6 +36,7 @@ function l(e) {
     }
     return e;
 }
+
 function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -44,6 +49,7 @@ function c(e, t) {
     }
     return n;
 }
+
 function u(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -68,28 +74,48 @@ let d = 0.2,
                     environment: d,
                     campfire: d,
                 },
-                setSongIndex: (t) => e({ songIndex: t }),
+                setSongIndex: (t) =>
+                    e({
+                        songIndex: t,
+                    }),
                 setGenre: (t) =>
                     e({
                         genre: t,
                         songIndex: 0,
                     }),
-                setPlayRadio: (t) => e({ playRadio: t }),
-                setGlobalMute: (t) => e({ globalMute: t }),
-                setVolume: (t, n) => e((e) => ({ volumes: u(l({}, e.volumes), { [t]: n }) })),
+                setPlayRadio: (t) =>
+                    e({
+                        playRadio: t,
+                    }),
+                setGlobalMute: (t) =>
+                    e({
+                        globalMute: t,
+                    }),
+                setVolume: (t, n) =>
+                    e((e) => ({
+                        volumes: u(l({}, e.volumes), {
+                            [t]: n,
+                        }),
+                    })),
                 playNextSong: () => {
                     let n = t(),
                         r = a.A.getSongs(n.genre);
                     if (null == r) return;
                     let i = r.length;
-                    0 === i || e({ songIndex: (n.songIndex + 1) % i });
+                    0 === i ||
+                        e({
+                            songIndex: (n.songIndex + 1) % i,
+                        });
                 },
                 playPrevSong: () => {
                     let n = t(),
                         r = a.A.getSongs(n.genre);
                     if (null == r) return;
                     let i = r.length;
-                    0 === i || e({ songIndex: n.songIndex - 1 >= 0 ? n.songIndex - 1 : i - 1 });
+                    0 === i ||
+                        e({
+                            songIndex: n.songIndex - 1 >= 0 ? n.songIndex - 1 : i - 1,
+                        });
                 },
                 resetPlayback: () =>
                     e({

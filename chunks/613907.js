@@ -1,4 +1,8 @@
-n.d(t, { A: () => x }), n(896048), n(264879);
+n.d(t, {
+    A: () => x,
+}),
+    n(896048),
+    n(264879);
 var r = n(627968),
     l = n(64700),
     i = n(735438),
@@ -19,6 +23,7 @@ var r = n(627968),
     O = n(985018),
     j = n(455683);
 let v = "749054660769218631";
+
 function x(e) {
     var t;
     let { channel: n } = e,
@@ -50,7 +55,9 @@ function x(e) {
                     e.ok || 429 !== e.status || x(O.intl.string(O.t.Whhv4w));
                 }
         }, [n.id, n.type, i]),
-        N = O.intl.formatToPlainString(O.t.m0zYbV, { username: C }),
+        N = O.intl.formatToPlainString(O.t.m0zYbV, {
+            username: C,
+        }),
         T =
             null != i && "" !== i
                 ? (0, r.jsx)(o.Text, {

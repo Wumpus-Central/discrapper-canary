@@ -1,4 +1,6 @@
-n.d(t, { A: () => V });
+n.d(t, {
+    A: () => V,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -23,6 +25,7 @@ var r = n(627968),
     S = n(979653),
     I = n(255631),
     T = n(193023);
+
 function C(e, t, n) {
     return (
         t in e
@@ -36,6 +39,7 @@ function C(e, t, n) {
         e
     );
 }
+
 function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -52,6 +56,7 @@ function N(e) {
     }
     return e;
 }
+
 function R(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -64,6 +69,7 @@ function R(e, t) {
     }
     return n;
 }
+
 function w(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -119,7 +125,9 @@ let P = () =>
                           className: n ? A.M0 : A.PE,
                           "aria-hidden": !0,
                       }),
-                      (0, r.jsx)(c.AC4, { children: O.intl.string(O.t["tq+6t/"]) }),
+                      (0, r.jsx)(c.AC4, {
+                          children: O.intl.string(O.t["tq+6t/"]),
+                      }),
                   ],
               })
             : (0, r.jsxs)(r.Fragment, {
@@ -130,25 +138,33 @@ let P = () =>
                           className: A.ut,
                           "aria-hidden": !0,
                       }),
-                      (0, r.jsx)(c.AC4, { children: O.intl.string(O.t.l4qZrp) }),
+                      (0, r.jsx)(c.AC4, {
+                          children: O.intl.string(O.t.l4qZrp),
+                      }),
                   ],
               });
     },
     j = (e) => {
         let { label: t, tier0ColumnData: n, tier2ColumnData: i, withBottomMargin: a } = e;
         return (0, r.jsxs)("tr", {
-            className: s()(A.nM, A.YI, { [A.ML]: a }),
+            className: s()(A.nM, A.YI, {
+                [A.ML]: a,
+            }),
             children: [
                 (0, r.jsx)("th", {
                     scope: "row",
                     className: A.nx,
-                    children: (0, r.jsx)(x, { text: t }),
+                    children: (0, r.jsx)(x, {
+                        text: t,
+                    }),
                 }),
                 (0, r.jsx)("td", {
                     className: A.Hn,
                     children:
                         null != n.text
-                            ? (0, r.jsx)(x, { text: n.text })
+                            ? (0, r.jsx)(x, {
+                                  text: n.text,
+                              })
                             : (0, r.jsx)(L, {
                                   isIncluded: !!n.includes,
                                   isTier0: !0,
@@ -157,7 +173,13 @@ let P = () =>
                 (0, r.jsx)("td", {
                     className: A.Hn,
                     children:
-                        null != i.text ? (0, r.jsx)(x, { text: i.text }) : (0, r.jsx)(L, { isIncluded: !!i.includes }),
+                        null != i.text
+                            ? (0, r.jsx)(x, {
+                                  text: i.text,
+                              })
+                            : (0, r.jsx)(L, {
+                                  isIncluded: !!i.includes,
+                              }),
                 }),
             ],
         });
@@ -181,7 +203,15 @@ let P = () =>
                         (0, r.jsx)("td", {}),
                     ],
                 }),
-                n.map((e, t) => (0, r.jsx)(j, w(N({}, e), { withBottomMargin: t === n.length - 1 }), e.id)),
+                n.map((e, t) =>
+                    (0, r.jsx)(
+                        j,
+                        w(N({}, e), {
+                            withBottomMargin: t === n.length - 1,
+                        }),
+                        e.id,
+                    ),
+                ),
             ],
         });
     },
@@ -214,12 +244,16 @@ let P = () =>
                     (0, r.jsx)("th", {
                         scope: "col",
                         className: A.e4,
-                        children: (0, r.jsx)(k, { premiumType: y.PremiumTypes.TIER_0 }),
+                        children: (0, r.jsx)(k, {
+                            premiumType: y.PremiumTypes.TIER_0,
+                        }),
                     }),
                     (0, r.jsx)("th", {
                         scope: "col",
                         className: s()(A.e4, A.Y9),
-                        children: (0, r.jsx)(k, { premiumType: y.PremiumTypes.TIER_2 }),
+                        children: (0, r.jsx)(k, {
+                            premiumType: y.PremiumTypes.TIER_2,
+                        }),
                     }),
                 ],
             }),
@@ -244,11 +278,15 @@ let P = () =>
                 }),
                 (0, r.jsx)("td", {
                     className: A.Hn,
-                    children: (0, r.jsx)(x, { text: h.Ay.formatPriceString(t, y.WT.MONTH) }),
+                    children: (0, r.jsx)(x, {
+                        text: h.Ay.formatPriceString(t, y.WT.MONTH),
+                    }),
                 }),
                 (0, r.jsx)("td", {
                     className: A.Hn,
-                    children: (0, r.jsx)(x, { text: i ? a : h.Ay.formatPriceString(n, y.WT.MONTH) }),
+                    children: (0, r.jsx)(x, {
+                        text: i ? a : h.Ay.formatPriceString(n, y.WT.MONTH),
+                    }),
                 }),
             ],
         });
@@ -312,7 +350,14 @@ let P = () =>
                                             shouldUseDiscountPrice: R,
                                             tier2DiscountedPriceString: L,
                                         }),
-                                        V.map((e) => (0, i.createElement)(M, w(N({}, e), { key: e.id }))),
+                                        V.map((e) =>
+                                            (0, i.createElement)(
+                                                M,
+                                                w(N({}, e), {
+                                                    key: e.id,
+                                                }),
+                                            ),
+                                        ),
                                     ],
                                 }),
                             ],

@@ -1,10 +1,13 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
     o = n(98115),
     l = n(556309);
+
 function c(e, t, n) {
     return (
         t in e
@@ -18,6 +21,7 @@ function c(e, t, n) {
         e
     );
 }
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,6 +38,7 @@ function u(e) {
     }
     return e;
 }
+
 function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -46,6 +51,7 @@ function d(e, t) {
     }
     return n;
 }
+
 function f(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -57,6 +63,7 @@ function f(e, t) {
         e
     );
 }
+
 function p(e, t) {
     if (null == e) return {};
     var n,
@@ -73,6 +80,7 @@ function p(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function _(e, t) {
     if (null == e) return {};
     var n,
@@ -83,6 +91,7 @@ function _(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function h(e) {
     let { children: t, size: n = 16, className: a, flowerStarClassName: c } = e,
         d = p(e, ["children", "size", "className", "flowerStarClassName"]),
@@ -96,9 +105,16 @@ function h(e) {
         className: s()(l.jH, a),
         style: h,
         children: [
-            (0, r.jsx)(o.A, f(u({}, d), { className: s()(c, l.mP) })),
+            (0, r.jsx)(
+                o.A,
+                f(u({}, d), {
+                    className: s()(c, l.mP),
+                }),
+            ),
             (0, r.jsx)("div", {
-                className: s()(l.sn, { [l.Qu]: m }),
+                className: s()(l.sn, {
+                    [l.Qu]: m,
+                }),
                 children: _,
             }),
         ],

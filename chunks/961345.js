@@ -1,4 +1,7 @@
-n.r(t), n.d(t, { default: () => b });
+n.r(t),
+    n.d(t, {
+        default: () => b,
+    });
 var r = n(804552),
     i = n(128170),
     a = n(29583),
@@ -15,6 +18,7 @@ var r = n(804552),
     m = /^'([^]*?)'?$/,
     g = /''/g,
     E = /[a-zA-Z]/;
+
 function b(e, t, n) {
     (0, d.A)(2, arguments);
     var m,
@@ -118,6 +122,7 @@ function b(e, t, n) {
         })
         .join("");
 }
+
 function y(e) {
     var t = e.match(m);
     return t ? t[1].replace(g, "'") : e;

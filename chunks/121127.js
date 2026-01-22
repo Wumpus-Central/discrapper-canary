@@ -1,4 +1,6 @@
-n.d(t, { A: () => v });
+n.d(t, {
+    A: () => v,
+});
 var r = n(627968),
     l = n(64700),
     i = n(311907),
@@ -18,6 +20,7 @@ var r = n(627968),
     E = n(746080),
     j = n(486974),
     m = n(985018);
+
 function v(e) {
     let { userId: t, guildId: n, channelId: v, location: _, onAction: h, appContext: S } = e,
         M = l.useContext(y.AnalyticsContext),

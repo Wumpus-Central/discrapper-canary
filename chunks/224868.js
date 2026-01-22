@@ -17,6 +17,7 @@ var r = n(47167),
     p = n(248465),
     _ = n(661191),
     h = n(408018);
+
 function m(e, t, n, r) {
     let { allowUsers: i = !0, allowRoles: a = !0 } = null != r ? r : {};
     switch (e[0]) {
@@ -29,10 +30,12 @@ function m(e, t, n, r) {
     }
     return null;
 }
+
 function g(e, t, n, r) {
     let i = m(e, t, n, r);
     return null == i ? null : (0, h.QR)(i);
 }
+
 function E(e, t, n, r, i) {
     let [a, s] = e.slice(1).split("#", 2),
         l = null != t ? d.A.getGuild(t) : null;
@@ -42,7 +45,11 @@ function E(e, t, n, r, i) {
                 return {
                     type: "roleMention",
                     roleId: e.id,
-                    children: [{ text: "" }],
+                    children: [
+                        {
+                            text: "",
+                        },
+                    ],
                 };
     }
     if (r) {
@@ -60,20 +67,30 @@ function E(e, t, n, r, i) {
             .filter((e) => void 0 !== e && b(a, s, e));
         if (1 === r.length) {
             let e = r[0];
-            if (b(a, s, e, { requireExact: !0 }))
+            if (
+                b(a, s, e, {
+                    requireExact: !0,
+                })
+            )
                 return {
                     type: "userMention",
                     userId: e.id,
-                    children: [{ text: "" }],
+                    children: [
+                        {
+                            text: "",
+                        },
+                    ],
                 };
         }
     }
     return null;
 }
+
 function b(e, t, n) {
     let { requireExact: r = !1 } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
     return null != n && (r ? n.username === e : n.username.startsWith(e)) && n.discriminator === (null != t ? t : "0");
 }
+
 function y(e, t) {
     let n;
     if (null == t) return null;
@@ -84,7 +101,11 @@ function y(e, t) {
             return {
                 type: "channelMention",
                 channelId: e,
-                children: [{ text: "" }],
+                children: [
+                    {
+                        text: "",
+                    },
+                ],
             };
     for (let e of p.L3)
         if (e !== l.I6) {
@@ -93,7 +114,11 @@ function y(e, t) {
                     return {
                         type: "channelMention",
                         channelId: r.id,
-                        children: [{ text: "" }],
+                        children: [
+                            {
+                                text: "",
+                            },
+                        ],
                     };
         }
     let a = s.A.getActiveJoinedThreadsForGuild(t);
@@ -104,11 +129,16 @@ function y(e, t) {
                 return {
                     type: "channelMention",
                     channelId: r.id,
-                    children: [{ text: "" }],
+                    children: [
+                        {
+                            text: "",
+                        },
+                    ],
                 };
         }
     return null;
 }
+
 function O(e, t) {
     let n = a.Ay.EMOJI_NAME_RE.exec(e);
     if (null == n) return null;
@@ -124,7 +154,11 @@ function O(e, t) {
                 animated: !0 === e.animated,
                 jumboable: !1,
             },
-            children: [{ text: "" }],
+            children: [
+                {
+                    text: "",
+                },
+            ],
         };
     }
     return null;

@@ -1,4 +1,8 @@
-n.d(t, { A: () => C }), n(896048), n(321073);
+n.d(t, {
+    A: () => C,
+}),
+    n(896048),
+    n(321073);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -16,9 +20,11 @@ var r = n(627968),
     g = n(652215),
     E = n(985018),
     b = n(596475);
+
 function y(e, t) {
     return null != t && null != t.discord_web && e.id === t.discord_web.id && e.type === t.discord_web.type;
 }
+
 function O(e) {
     let { url: t } = e,
         [n, a] = i.useState(!1),
@@ -26,7 +32,7 @@ function O(e) {
         l = i.useCallback(() => {
             n ||
                 (0, p.C)(t, () => {
-                    a(!0), (o.current = setTimeout(() => a(!1), 2000));
+                    a(!0), (o.current = setTimeout(() => a(!1), 2e3));
                 });
         }, [t, n]);
     return (
@@ -47,17 +53,28 @@ function O(e) {
             : null
     );
 }
+
 function A() {
     return (0, r.jsxs)(i.Fragment, {
         children: [
             (0, r.jsxs)("div", {
                 className: b.NT,
-                children: [(0, r.jsx)("div", { className: s()(b.Pz, b.w9) }), (0, r.jsx)("div", { className: b.Pz })],
+                children: [
+                    (0, r.jsx)("div", {
+                        className: s()(b.Pz, b.w9),
+                    }),
+                    (0, r.jsx)("div", {
+                        className: b.Pz,
+                    }),
+                ],
             }),
-            (0, r.jsx)("div", { className: b.MM }),
+            (0, r.jsx)("div", {
+                className: b.MM,
+            }),
         ],
     });
 }
+
 function v(e) {
     let {
         subHead: t,
@@ -95,6 +112,7 @@ function v(e) {
         ],
     });
 }
+
 function S(e) {
     let t,
         n,
@@ -135,6 +153,7 @@ function S(e) {
         submitting: c,
     });
 }
+
 function I(e) {
     return v({
         subHead: E.intl.string(E.t.ODXApH),
@@ -144,6 +163,7 @@ function I(e) {
         disabled: !0,
     });
 }
+
 function T(e, t, n) {
     return (0, r.jsxs)(c.Text, {
         variant: "text-xs/normal",
@@ -153,7 +173,9 @@ function T(e, t, n) {
                 className: b.DD,
                 children:
                     null != e && null != e.releaseChannel
-                        ? E.intl.formatToPlainString(E.t.bFj63b, { releaseChannel: e.releaseChannel })
+                        ? E.intl.formatToPlainString(E.t.bFj63b, {
+                              releaseChannel: e.releaseChannel,
+                          })
                         : E.intl.string(E.t.Wj3LW4),
             }),
             (0, r.jsx)(c.MzZ, {
@@ -166,7 +188,11 @@ function T(e, t, n) {
                     className: b.G,
                 }),
             }),
-            n ? null : (0, r.jsx)(O, { url: t }),
+            n
+                ? null
+                : (0, r.jsx)(O, {
+                      url: t,
+                  }),
         ],
     });
 }
@@ -186,7 +212,9 @@ let C = (e) => {
             (0, r.jsxs)("div", {
                 className: b.Qs,
                 children: [
-                    (0, r.jsx)(f.A, { className: b.Kk }),
+                    (0, r.jsx)(f.A, {
+                        className: b.Kk,
+                    }),
                     t
                         ? A()
                         : S({

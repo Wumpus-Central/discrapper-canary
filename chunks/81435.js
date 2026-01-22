@@ -1,4 +1,6 @@
-n.d(t, { A: () => Y });
+n.d(t, {
+    A: () => Y,
+});
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -37,6 +39,7 @@ var r = n(627968),
     k = n(228160),
     U = n(985018),
     V = n(471135);
+
 function F(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -62,6 +65,7 @@ function F(e) {
     }
     return e;
 }
+
 function H(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -80,6 +84,7 @@ function H(e, t) {
         e
     );
 }
+
 function B(e) {
     let { message: t, channel: n, focusProps: i, isSelected: s, isUnread: o, groupedMessages: f } = e,
         p = n.type === G.rbe.UNKNOWN ? d.N$i : (0, b.gU)(n, null),
@@ -123,7 +128,11 @@ function B(e) {
                     onMouseEnter: E.onMouseEnter,
                     className: V.zC,
                     children: [
-                        o && !s && (0, r.jsx)("div", { className: V.Zm }),
+                        o &&
+                            !s &&
+                            (0, r.jsx)("div", {
+                                className: V.Zm,
+                            }),
                         (0, r.jsx)(d.BJc, {
                             align: "start",
                             style: {
@@ -150,7 +159,9 @@ function B(e) {
                         }),
                         (0, r.jsxs)(d.BJc, {
                             gap: 0,
-                            style: { minWidth: 0 },
+                            style: {
+                                minWidth: 0,
+                            },
                             children: [
                                 (0, r.jsxs)(d.BJc, {
                                     direction: "horizontal",
@@ -167,8 +178,12 @@ function B(e) {
                                                   children: [
                                                       (0, r.jsx)("div", {
                                                           className: V.Xh,
-                                                          style: { color: null != O ? O : void 0 },
-                                                          children: (0, r.jsx)(u.A, { children: P }),
+                                                          style: {
+                                                              color: null != O ? O : void 0,
+                                                          },
+                                                          children: (0, r.jsx)(u.A, {
+                                                              children: P,
+                                                          }),
                                                       }),
                                                       I,
                                                   ],
@@ -176,7 +191,9 @@ function B(e) {
                                             : (0, r.jsx)(u.A, {
                                                   children: (0, r.jsx)(d.Heading, {
                                                       variant: "text-md/semibold",
-                                                      style: { color: null != O ? O : void 0 },
+                                                      style: {
+                                                          color: null != O ? O : void 0,
+                                                      },
                                                       className: V.Xh,
                                                       children: m.name,
                                                   }),
@@ -185,7 +202,9 @@ function B(e) {
                                             direction: "horizontal",
                                             gap: 4,
                                             align: "center",
-                                            style: { width: "fit-content" },
+                                            style: {
+                                                width: "fit-content",
+                                            },
                                             children: [
                                                 (0, r.jsx)(M.A, {
                                                     message: t,
@@ -197,7 +216,9 @@ function B(e) {
                                                           className: V.WK,
                                                           count: 1,
                                                       })
-                                                    : (0, r.jsx)(W, { message: t }),
+                                                    : (0, r.jsx)(W, {
+                                                          message: t,
+                                                      }),
                                             ],
                                         }),
                                     ],
@@ -224,7 +245,7 @@ function B(e) {
                                                 [V.gy]: o,
                                                 [V.wH]: s,
                                             }),
-                                            children: [g, !C && " \xB7 ".concat(y)],
+                                            children: [g, !C && " \xb7 ".concat(y)],
                                         }),
                                     ],
                                 }),
@@ -242,7 +263,9 @@ function B(e) {
                                             marginTop: 4,
                                             marginBottom: 4,
                                         },
-                                        children: (0, r.jsx)(K, { overflowMessages: f }),
+                                        children: (0, r.jsx)(K, {
+                                            overflowMessages: f,
+                                        }),
                                     }),
                             ],
                         }),
@@ -252,6 +275,7 @@ function B(e) {
         )
     );
 }
+
 function K(e) {
     let { overflowMessages: t } = e,
         n = (0, s.uniqBy)(
@@ -271,11 +295,14 @@ function K(e) {
             (0, r.jsx)(d.Text, {
                 variant: "text-sm/medium",
                 className: V.gD,
-                children: U.intl.formatToPlainString(k.default.NzUuLD, { count: t.length }),
+                children: U.intl.formatToPlainString(k.default.NzUuLD, {
+                    count: t.length,
+                }),
             }),
         ],
     });
 }
+
 function W(e) {
     let { message: t } = e,
         n = (0, E.jb)(t.timestamp.getTime());
@@ -287,6 +314,7 @@ function W(e) {
         children: n,
     });
 }
+
 function z(e) {
     let { message: t, channel: n, isUnread: i, isSelected: s } = e,
         { previewContent: o, Icon: c } = (function (e) {
@@ -337,11 +365,15 @@ function z(e) {
                                     : c
                                       ? U.intl.string(U.t.p0oZmy)
                                       : u > 1
-                                        ? U.intl.formatToPlainString(U.t.rtfTKp, { count: u })
+                                        ? U.intl.formatToPlainString(U.t.rtfTKp, {
+                                              count: u,
+                                          })
                                         : 1 === u
                                           ? U.intl.string(U.t.tCcq5p)
                                           : p
-                                            ? U.intl.format(U.t.zY4v1B, { stickerName: t.stickerItems[0].name })
+                                            ? U.intl.format(U.t.zY4v1B, {
+                                                  stickerName: t.stickerItems[0].name,
+                                              })
                                             : A
                                               ? U.intl.string(U.t.slFYgi)
                                               : O
@@ -421,7 +453,9 @@ let Y = (0, l.memo)(
                 var t;
                 return e.isMenuOpenForMessage(null != (t = null == p ? void 0 : p.id) ? t : null);
             }),
-            { notificationCenterVariant: A } = (0, P.X8)({ location: "NotificationsInboxMessageUnit" }),
+            { notificationCenterVariant: A } = (0, P.X8)({
+                location: "NotificationsInboxMessageUnit",
+            }),
             y = l.useMemo(
                 () => "".concat(null == p ? void 0 : p.author.username, ": ").concat(null == g ? void 0 : g.name),
                 [null == p ? void 0 : p.author.username, null == g ? void 0 : g.name],
@@ -455,9 +489,17 @@ let Y = (0, l.memo)(
                               e,
                               async () => {
                                   let { default: e } = await n.e("48118").then(n.bind(n, 594005));
-                                  return (t) => (0, r.jsx)(e, H(F({}, t), { channel: g }));
+                                  return (t) =>
+                                      (0, r.jsx)(
+                                          e,
+                                          H(F({}, t), {
+                                              channel: g,
+                                          }),
+                                      );
                               },
-                              { disableClickTrap: !0 },
+                              {
+                                  disableClickTrap: !0,
+                              },
                           );
                   },
                   children: (0, r.jsx)(B, {

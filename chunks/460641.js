@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var i = n(627968),
     r = n(582754),
     l = n(397927),
@@ -11,6 +13,7 @@ var i = n(627968),
     b = n(436057),
     f = n(734087),
     p = n(609621);
+
 function m(e) {
     var t;
     let n,
@@ -20,9 +23,13 @@ function m(e) {
         children: [
             (0, i.jsx)(l.Text, {
                 variant: "text-sm/normal",
-                children: u.intl.format(u.t["5u+aV1"], { helpdeskArticle: o.A.getArticleURL(d.MVz.CHANNEL_FOLLOWING) }),
+                children: u.intl.format(u.t["5u+aV1"], {
+                    helpdeskArticle: o.A.getArticleURL(d.MVz.CHANNEL_FOLLOWING),
+                }),
             }),
-            (0, i.jsx)(l.cGx, { className: b.zN }),
+            (0, i.jsx)(l.cGx, {
+                className: b.zN,
+            }),
             m.length > 0
                 ? (0, i.jsx)(c.A, {
                       webhooks: m,

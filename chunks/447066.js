@@ -1,4 +1,7 @@
-n.d(t, { A: () => d }), n(228524);
+n.d(t, {
+    A: () => d,
+}),
+    n(228524);
 var i = n(627968);
 n(64700);
 var r = n(503698),
@@ -7,6 +10,7 @@ var r = n(503698),
     s = n(397927),
     o = n(985018),
     c = n(571316);
+
 function d(e) {
     let {
         name: t,
@@ -50,7 +54,9 @@ function d(e) {
                                             color: "currentColor",
                                         })),
                           (0, i.jsx)("div", {
-                              style: { backgroundColor: n },
+                              style: {
+                                  backgroundColor: n,
+                              },
                               className: l()(c.P0, a),
                               children: s,
                           })

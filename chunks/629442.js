@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968),
     i = n(64700),
     a = n(136722),
@@ -7,6 +9,7 @@ var r = n(627968),
     l = n(376092),
     c = n(985018),
     u = n(967984);
+
 function d(e) {
     let { application: t, permissions: n, deniedPermissions: d, onPermissionsChange: f, guild: p } = e,
         _ = i.useMemo(() => a.B8(p.permissions), [p.permissions]);
@@ -85,7 +88,9 @@ function d(e) {
                           (0, r.jsx)(s.E, {
                               variant: "text-sm/medium",
                               color: "text-default",
-                              children: c.intl.format(c.t.fsOkF4, { applicationName: t.name }),
+                              children: c.intl.format(c.t.fsOkF4, {
+                                  applicationName: t.name,
+                              }),
                           }),
                           (0, r.jsx)("ul", {
                               className: u.RH,

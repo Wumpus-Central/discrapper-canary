@@ -1,4 +1,9 @@
-n.d(t, { A: () => f }), n(591487), n(727858), n(747238);
+n.d(t, {
+    A: () => f,
+}),
+    n(591487),
+    n(727858),
+    n(747238);
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -8,6 +13,7 @@ var i = n(503698),
 let l = RegExp("^music\\.amazon\\.(?:com|co\\.uk|de|co\\.jp|es|fr|it|com\\.au|in|ca|com\\.mx|com\\.br)"),
     c = 500,
     u = 400;
+
 function d(e) {
     let t = null,
         n = null,
@@ -19,6 +25,7 @@ function d(e) {
     }
     return null != r && l.test(null != t ? t : "") && null != n ? r : null;
 }
+
 function f(e) {
     let {
         className: t,

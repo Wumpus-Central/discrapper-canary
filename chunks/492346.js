@@ -4,5 +4,7 @@ e(834647)(
         stat: !0,
         name: "isRegisteredSymbol",
     },
-    { isRegistered: e(94551) },
+    {
+        isRegistered: e(94551),
+    },
 );

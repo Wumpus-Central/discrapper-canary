@@ -1,4 +1,6 @@
-i.d(e, { default: () => f });
+i.d(e, {
+    default: () => f,
+});
 var n = i(627968),
     a = i(64700),
     c = i(311907),
@@ -8,6 +10,7 @@ var n = i(627968),
     r = i(592598),
     u = i(672396),
     d = i(985018);
+
 function f(t) {
     let { onSelect: e, onClose: i } = t,
         f = (0, c.bG)([r.A], () => r.A.isNotificationDisabled(u.KS.TextChat)),

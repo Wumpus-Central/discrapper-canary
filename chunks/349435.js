@@ -7,6 +7,7 @@ n.d(t, {
 var r = n(311907),
     i = n(73153),
     a = n(734057);
+
 function s(e, t, n) {
     return (
         t in e
@@ -20,6 +21,7 @@ function s(e, t, n) {
         e
     );
 }
+
 function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +38,7 @@ function o(e) {
     }
     return e;
 }
+
 function l(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -48,6 +51,7 @@ function l(e, t) {
     }
     return n;
 }
+
 function c(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -75,9 +79,11 @@ var d = (function (e) {
 let p = [],
     _ = {},
     h = new Set();
+
 function m(e) {
     return 2 === e.type || 3 === e.type;
 }
+
 function g(e) {
     let { safetyWarnings: t } = e;
     null != t &&
@@ -85,45 +91,73 @@ function g(e) {
         t.some((e) => m(e) && null != e.dismiss_timestamp && !T(e.dismiss_timestamp)) ? h.add(e.id) : h.delete(e.id)),
         null == t && (null != _[e.id] && delete _[e.id], h.delete(e.id));
 }
+
 function E(e) {
     g(e.channel);
 }
+
 function b(e) {
     e.channels.forEach((e) => {
         g(e);
     });
 }
+
 function y(e) {
     let { channel: t } = e;
     null != _[t.id] && delete _[t.id], h.delete(t.id);
 }
+
 function O(e) {
     let { channelId: t, warningId: n, feedbackType: r } = e,
         i = _[t];
-    null != i && (_[t] = i.map((e) => (e.id === n ? c(o({}, e), { feedback_type: r }) : e)));
+    null != i &&
+        (_[t] = i.map((e) =>
+            e.id === n
+                ? c(o({}, e), {
+                      feedback_type: r,
+                  })
+                : e,
+        ));
 }
+
 function A(e) {
     let { channelId: t } = e,
         n = _[t];
-    h.delete(t), null != n && (_[t] = n.map((e) => c(o({}, e), { dismiss_timestamp: void 0 })));
+    h.delete(t),
+        null != n &&
+            (_[t] = n.map((e) =>
+                c(o({}, e), {
+                    dismiss_timestamp: void 0,
+                }),
+            ));
 }
+
 function v(e) {
     let { channelId: t, warningIds: n } = e,
         r = _[t];
     if (null == r) return;
     let i = new Date().toISOString();
-    _[t] = r.map((e) => (n.includes(e.id) ? c(o({}, e), { dismiss_timestamp: i }) : e));
+    _[t] = r.map((e) =>
+        n.includes(e.id)
+            ? c(o({}, e), {
+                  dismiss_timestamp: i,
+              })
+            : e,
+    );
 }
+
 function S(e) {
     let { channelId: t } = e;
     h.add(t);
 }
+
 function I() {
     (_ = {}),
         Object.values(a.A.getMutablePrivateChannels()).forEach((e) => {
             g(e);
         });
 }
+
 function T(e) {
     return new Date(e).getTime() > Date.now() - u;
 }

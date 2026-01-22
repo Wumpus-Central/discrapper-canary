@@ -1,9 +1,12 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var r,
     i = n(133977),
     l = n.n(i),
     s = n(311907),
     a = n(73153);
+
 function c(e, t, n) {
     return (
         t in e
@@ -20,6 +23,7 @@ function c(e, t, n) {
 let o = ["pct_retained", "new_members", "visitors", "communicators"],
     d = {},
     u = null;
+
 function f(e) {
     let { guildId: t, stats: n } = e;
     u = null;
@@ -51,6 +55,7 @@ function f(e) {
             return e;
         })({}, i, r, d[t]));
 }
+
 function g(e) {
     let { error: t } = e;
     u = t.code;

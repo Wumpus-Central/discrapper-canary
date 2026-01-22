@@ -1,5 +1,8 @@
-n.d(t, { _: () => c });
+n.d(t, {
+    _: () => c,
+});
 var r = n(600975);
+
 function i(e, t, n) {
     return (
         t in e
@@ -13,6 +16,7 @@ function i(e, t, n) {
         e
     );
 }
+
 function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -29,6 +33,7 @@ function a(e) {
     }
     return e;
 }
+
 function s(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -41,6 +46,7 @@ function s(e, t) {
     }
     return n;
 }
+
 function o(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -52,7 +58,9 @@ function o(e, t) {
         e
     );
 }
-let l = { allowBVC: !1 },
+let l = {
+        allowBVC: !1,
+    },
     c = (0, r.C)({
         kind: "user",
         id: "2025-07_krisp_background_voice_cancellation",
@@ -62,7 +70,9 @@ let l = { allowBVC: !1 },
             {
                 id: 1,
                 label: "Use BVC for allowed devices",
-                config: o(a({}, l), { allowBVC: !0 }),
+                config: o(a({}, l), {
+                    allowBVC: !0,
+                }),
             },
         ],
     });

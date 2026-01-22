@@ -1,4 +1,6 @@
-n.d(t, { A: () => ee }),
+n.d(t, {
+    A: () => ee,
+}),
     n(321073),
     n(228524),
     n(896048),
@@ -15,7 +17,7 @@ var r = n(627968),
     a = n.n(i),
     s = n(284009),
     o = n.n(s),
-    c = n(432022),
+    c = n(108531),
     u = n(835245),
     d = n(311907),
     f = n(827734),
@@ -58,6 +60,7 @@ var Y = n(478644),
     q = n(985018),
     X = n(401376),
     J = n(111314);
+
 function Q(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -83,6 +86,7 @@ function Q(e) {
     }
     return e;
 }
+
 function Z(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -101,6 +105,7 @@ function Z(e, t) {
         e
     );
 }
+
 function $(e, t, n) {
     let r = e.startsWith("attachment://"),
         l = e;
@@ -359,7 +364,10 @@ let ee = l.memo(
                     null == (e = M.A.getUploads(k.id, K.drafts.type).find((e) => e.filename === eE.name))
                         ? void 0
                         : e.id;
-                null != t && b.A.remove(k.id, t, R.C.ChannelMessage), (0, x.x)(k.id, { heroFile: null });
+                null != t && b.A.remove(k.id, t, R.C.ChannelMessage),
+                    (0, x.x)(k.id, {
+                        heroFile: null,
+                    });
             }, [k.id, eE, K.drafts.type]);
         return (0, r.jsx)(E.Sv, {
             value: eW,
@@ -374,7 +382,9 @@ let ee = l.memo(
                             (0, r.jsx)("div", {
                                 ref: eP,
                                 onScroll: e$,
-                                className: a()(J.Ui, { [J.k6]: !ey }),
+                                className: a()(J.Ui, {
+                                    [J.k6]: !ey,
+                                }),
                                 children: (0, r.jsxs)("div", {
                                     className: a()(J.vW, X.vW),
                                     children: [
@@ -399,7 +409,9 @@ let ee = l.memo(
                                                             : (0, r.jsx)(el, {
                                                                   channel: k,
                                                                   onImageUploaded: (e) =>
-                                                                      (0, x.x)(k.id, { heroFile: e }),
+                                                                      (0, x.x)(k.id, {
+                                                                          heroFile: e,
+                                                                      }),
                                                                   onFocus: () => ti(!0),
                                                               }),
                                                         (0, r.jsx)("input", {
@@ -409,7 +421,10 @@ let ee = l.memo(
                                                             className: X.hz,
                                                             placeholder: q.intl.string(q.t.Z8fYjO),
                                                             value: ex,
-                                                            onChange: (e) => (0, x.x)(k.id, { title: e.target.value }),
+                                                            onChange: (e) =>
+                                                                (0, x.x)(k.id, {
+                                                                    title: e.target.value,
+                                                                }),
                                                         }),
                                                     ],
                                                 }),
@@ -474,14 +489,18 @@ let ee = l.memo(
                                     ],
                                 }),
                             }),
-                            (0, r.jsx)("div", { className: X.yF }),
+                            (0, r.jsx)("div", {
+                                className: X.yF,
+                            }),
                             (0, r.jsxs)("div", {
                                 className: X.qr,
                                 children: [
                                     (0, r.jsxs)("div", {
                                         className: X.j4,
                                         children: [
-                                            (0, r.jsx)(er, { channel: k }),
+                                            (0, r.jsx)(er, {
+                                                channel: k,
+                                            }),
                                             (0, r.jsx)(H.A, {
                                                 type: V.oU.CREATE_ANNOUNCEMENT_POST,
                                                 disabled: eL,
@@ -605,6 +624,7 @@ let ee = l.memo(
         });
     }),
 );
+
 function et(e) {
     var t, n;
     let { channelId: l, canCreateThread: i } = e,
@@ -623,7 +643,9 @@ function et(e) {
                 checked: i && s,
                 disabled: !i,
                 action: () => {
-                    (0, x.x)(l, { createThread: !s });
+                    (0, x.x)(l, {
+                        createThread: !s,
+                    });
                 },
             }),
             (0, r.jsx)(h.sLh, {
@@ -631,12 +653,15 @@ function et(e) {
                 label: q.intl.string(q.t.MFGE51),
                 checked: o,
                 action: () => {
-                    (0, x.x)(l, { publish: !o });
+                    (0, x.x)(l, {
+                        publish: !o,
+                    });
                 },
             }),
         ],
     });
 }
+
 function en(e) {
     let { file: t, onRemoveHeroImage: n } = e,
         [i, a] = l.useState();
@@ -684,6 +709,7 @@ function en(e) {
               ],
           });
 }
+
 function er(e) {
     let { channel: t } = e;
     return (0, r.jsx)(S.A, {
@@ -707,6 +733,7 @@ function er(e) {
         }),
     });
 }
+
 function el(e) {
     let { channel: t, onImageUploaded: n, onFocus: i } = e,
         a = l.useRef(null),

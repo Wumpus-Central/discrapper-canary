@@ -6,9 +6,11 @@ var r = n(720757),
     i = n(961350),
     a = n(403362),
     s = n(217222);
+
 function o(e) {
     return (0, r.A)(e, s.A, l);
 }
+
 function l(e, t) {
     switch (e) {
         case "guild":

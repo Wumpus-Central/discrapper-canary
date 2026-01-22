@@ -1,4 +1,6 @@
-n.d(t, { w: () => r });
+n.d(t, {
+    w: () => r,
+});
 var r = (function (e) {
     return (
         (e.ANIMATED_EMOJIS = "animatedEmojis"),

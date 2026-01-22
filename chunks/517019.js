@@ -1,9 +1,12 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r,
     i = n(311907),
     a = n(506774),
     s = n(73153),
     o = n(323073);
+
 function l(e, t, n) {
     return (
         t in e
@@ -19,6 +22,7 @@ function l(e, t, n) {
 }
 let c = "GuildNSFWAgreeStore",
     u = {};
+
 function d(e) {
     let { guildId: t } = e;
     (u[t] = !0), a.w.set(c, u);
@@ -33,4 +37,6 @@ class f extends (r = i.Ay.Store) {
     }
 }
 l(f, "displayName", "GuildNSFWAgreeStore");
-let p = new f(s.h, { GUILD_NSFW_AGREE: d });
+let p = new f(s.h, {
+    GUILD_NSFW_AGREE: d,
+});

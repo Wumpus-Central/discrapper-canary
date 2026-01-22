@@ -11,7 +11,9 @@ function r(e, t, n) {
         e
     );
 }
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 class i {
     constructor(e, t) {
         r(this, "skuId", void 0), r(this, "skuFeatures", void 0), (this.skuId = e), (this.skuFeatures = t);

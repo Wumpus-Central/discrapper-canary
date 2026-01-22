@@ -1,4 +1,6 @@
-n.d(t, { yo: () => a });
+n.d(t, {
+    yo: () => a,
+});
 class r {
     *[Symbol.iterator]() {
         let e = this.firstChild;

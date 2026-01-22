@@ -6,5 +6,7 @@ n(834647)(
         name: "upsert",
         forced: !0,
     },
-    { updateOrInsert: n(608039) },
+    {
+        updateOrInsert: n(608039),
+    },
 );

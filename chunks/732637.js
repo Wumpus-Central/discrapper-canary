@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var l = n(627968),
     r = n(64700),
     i = n(311907),
@@ -17,6 +19,7 @@ let m = (e, t) => {
         (0, s.I_)(e, t);
     });
 };
+
 function h(e) {
     let t,
         { embedId: n, className: a, style: s } = e,

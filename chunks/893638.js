@@ -1,4 +1,6 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var r = n(627968),
     i = n(64700),
     l = n(990078),
@@ -98,7 +100,9 @@ let A = [
             children: [
                 (0, r.jsx)(l.m, {
                     text: i,
-                    children: (0, r.jsx)(t, { className: h.AD }),
+                    children: (0, r.jsx)(t, {
+                        className: h.AD,
+                    }),
                 }),
                 (0, r.jsx)("span", {
                     className: h.oo,
@@ -134,7 +138,12 @@ class m extends i.PureComponent {
             ? null
             : (0, r.jsxs)("div", {
                   className: h.qT,
-                  children: [(0, r.jsx)(s.A, { children: f.intl.string(f.t.XXENra) }), t],
+                  children: [
+                      (0, r.jsx)(s.A, {
+                          children: f.intl.string(f.t.XXENra),
+                      }),
+                      t,
+                  ],
               });
     }
 }

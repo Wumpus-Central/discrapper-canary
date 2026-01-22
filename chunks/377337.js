@@ -1,4 +1,7 @@
-n.d(t, { A: () => x }), n(896048);
+n.d(t, {
+    A: () => x,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(735438),
@@ -10,6 +13,7 @@ var r = n(627968),
     u = n(298818),
     f = n(985018),
     g = n(258761);
+
 function b(e) {
     let { gameApplicationIds: t, handleChange: n, disabled: i } = e,
         { options: l, matchSorterOptions: s } = (0, c.R)();
@@ -24,6 +28,7 @@ function b(e) {
         matchSorterOptions: s,
     });
 }
+
 function m(e) {
     let { gameApplicationIds: t, onRemoveGame: n, disabled: i } = e;
     return 0 === t.length
@@ -45,6 +50,7 @@ function m(e) {
           });
 }
 let p = [];
+
 function x(e) {
     var t;
     let { profile: n, canManageGuild: l } = e,
@@ -52,14 +58,18 @@ function x(e) {
         d = null != (t = null == n ? void 0 : n.gameApplicationIds) ? t : p,
         g = i.useCallback(
             (e) => {
-                o.A.updateGuildProfile(c, { gameApplicationIds: e });
+                o.A.updateGuildProfile(c, {
+                    gameApplicationIds: e,
+                });
             },
             [c],
         ),
         x = i.useCallback(
             (e) => {
                 let t = d.filter((t) => t !== e);
-                o.A.updateGuildProfile(c, { gameApplicationIds: t });
+                o.A.updateGuildProfile(c, {
+                    gameApplicationIds: t,
+                });
             },
             [c, d],
         ),

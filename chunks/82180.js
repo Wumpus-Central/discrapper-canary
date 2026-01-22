@@ -20,6 +20,7 @@ let i = (function () {
           }
         : void 0;
 })();
+
 function a(e) {
     if (!e)
         throw Error(
@@ -27,7 +28,7 @@ function a(e) {
         );
 }
 let s = /^-?[0-9]+$/,
-    o = 4294967296;
+    o = 0x100000000;
 class l {
     constructor(e, t) {
         (this.lo = 0 | e), (this.hi = 0 | t);
@@ -115,7 +116,7 @@ class u extends l {
         throw Error("unknown value " + typeof e);
     }
     isNegative() {
-        return (2147483648 & this.hi) != 0;
+        return (0x80000000 & this.hi) != 0;
     }
     negate() {
         let e = ~this.hi,

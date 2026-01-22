@@ -11,6 +11,7 @@ var r = n(627968),
     o = n(543594),
     c = n(328968),
     u = n(985018);
+
 function d(e, t, n) {
     return (
         t in e
@@ -102,7 +103,10 @@ class f extends i.PureComponent {
                       },
                       p,
                   )),
-                  (t = t = { children: u.intl.string(u.t.hElye1) }),
+                  (t = t =
+                      {
+                          children: u.intl.string(u.t.hElye1),
+                      }),
                   Object.getOwnPropertyDescriptors
                       ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
                       : (function (e, t) {

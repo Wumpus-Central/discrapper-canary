@@ -1,10 +1,13 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
     l = n.n(i),
     s = n(397927),
     a = n(690450);
+
 function c(e) {
     var t, n;
     let { checked: i, onChange: c, disabled: o, className: d, tooltipProps: u } = e,

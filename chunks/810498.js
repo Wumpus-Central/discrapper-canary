@@ -19,6 +19,7 @@ var i = n(841702);
 n(412260);
 var a = n(552736),
     s = n(788868);
+
 function o() {
     let [e, t] = r.useState(),
         n = (0, a.A)(),
@@ -37,27 +38,33 @@ function o() {
         null != e ? e : void 0
     );
 }
+
 function l() {
     var e;
     let t = (0, a.A)();
     return null != (e = null == t ? void 0 : t.variants) ? e : void 0;
 }
+
 function c(e) {
     let t = new Map();
     return e.forEach((e) => t.set(e.skuId, e.assetId)), t;
 }
+
 function u(e, t, n) {
     let r = f(e),
         i = null != n && n.length >= 1;
     return t && r && i;
 }
+
 function d(e, t, n) {
     let r = f(e);
     return null != n && 1 === n.length && r && t;
 }
+
 function f(e) {
     return [s.gD.PREMIUM_YEAR_TIER_2, s.gD.PREMIUM_MONTH_TIER_2].includes(null == e ? void 0 : e.id);
 }
+
 function p(e, t) {
     if (null == e) return;
     let { reverse: n = !1, colorStops: r, defaultAngle: i = 78.98 } = null != t ? t : {},
@@ -65,8 +72,11 @@ function p(e, t) {
         s = Array.isArray(e) || null == e.angle ? i : e.angle;
     n && (s = (s + 180) % 360);
     let o = null != r ? a.map((e, t) => "".concat(e, " ").concat(r[t], "%")).join(", ") : a.join(", ");
-    return { background: "linear-gradient(".concat(s, "deg, ").concat(o, ")") };
+    return {
+        background: "linear-gradient(".concat(s, "deg, ").concat(o, ")"),
+    };
 }
+
 function _(e) {
     if (null != e)
         return {
@@ -76,6 +86,7 @@ function _(e) {
             backgroundRepeat: "no-repeat",
         };
 }
+
 function h(e, t, n) {
     if (null != e && null != t) {
         var r, i;

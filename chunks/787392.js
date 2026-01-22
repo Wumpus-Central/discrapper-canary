@@ -1,4 +1,6 @@
-n.d(t, { A: () => h }),
+n.d(t, {
+    A: () => h,
+}),
     n(927092),
     n(212978),
     n(201528),
@@ -17,6 +19,7 @@ var r,
     a = n(149597),
     s = n(73153),
     o = n(661191);
+
 function l(e, t, n) {
     return (
         t in e
@@ -31,17 +34,20 @@ function l(e, t, n) {
     );
 }
 let c = {};
+
 function u(e) {
     var t;
     let n = null != (t = c[e]) ? t : {};
     return (c[e] = n), n;
 }
+
 function d(e) {
     let { userId: t, key: n } = e,
         r = u(t),
         i = new Uint8Array(n);
     r[(0, a.uo)(i)] = Date.now();
 }
+
 function f(e) {
     let { userId: t, serializedKey: n } = e,
         r = c[t];
@@ -50,6 +56,7 @@ function f(e) {
         a = !1;
     return 0 === Object.keys(r).length && (delete c[t], (a = !0)), i || a;
 }
+
 function p(e) {
     let { userId: t } = e;
     return null != c[t] && delete c[t];
@@ -60,7 +67,9 @@ class _ extends (r = i.Ay.PersistedStore) {
         c = null != (t = null == e ? void 0 : e.users) ? t : {};
     }
     getState() {
-        return { users: c };
+        return {
+            users: c,
+        };
     }
     getKeyTrustedAt(e, t) {
         var n;

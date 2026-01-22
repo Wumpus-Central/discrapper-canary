@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r,
     i = n(627968),
     a = n(64700),
@@ -6,6 +8,7 @@ var r,
     o = n(615300),
     l = n(621466),
     c = n(652215);
+
 function u(e, t, n) {
     return (
         t in e
@@ -19,6 +22,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -191,7 +195,9 @@ class _ extends (r = a.PureComponent) {
                             !1,
                         ),
                         (0, s.flushSync)(() => {
-                            this.setState({ dragging: o }),
+                            this.setState({
+                                dragging: o,
+                            }),
                                 a || null == t || t(e.clientX, e.clientY),
                                 null == n || n(e.clientX, e.clientY);
                         }));
@@ -200,7 +206,9 @@ class _ extends (r = a.PureComponent) {
                 this._removeListeners(),
                     this.state.dragging &&
                         (0, s.flushSync)(() => {
-                            this.setState({ dragging: !1 });
+                            this.setState({
+                                dragging: !1,
+                            });
                             let { onDragEnd: t } = this.props;
                             null == t || t(e.clientX, e.clientY);
                         });

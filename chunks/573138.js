@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -7,6 +9,7 @@ var r = n(627968),
     l = n(854987),
     c = n(398225),
     u = n(256024);
+
 function d(e) {
     let { children: t, noPadding: n = !1, centered: a = !0, verticalFlow: d = !1, className: f } = e,
         p = i.useContext(l.P),
@@ -24,7 +27,9 @@ function d(e) {
                 },
                 f,
             ),
-            style: { color: _ },
+            style: {
+                color: _,
+            },
             children: t,
         }),
     });

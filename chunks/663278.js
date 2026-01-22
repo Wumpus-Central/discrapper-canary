@@ -12,6 +12,7 @@ var r,
         (r[(r.SERIOUS = 2)] = "SERIOUS"),
         (r[(r.CRITICAL = 3)] = "CRITICAL"),
         r);
+
 function s() {
     var e = l.A.getRawThermalState();
     if (null == e) return -1;

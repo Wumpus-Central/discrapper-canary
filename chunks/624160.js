@@ -1,4 +1,6 @@
-n.d(t, { A: () => E });
+n.d(t, {
+    A: () => E,
+});
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -62,6 +64,7 @@ let _ = {
         },
     },
 };
+
 function E(e) {
     let t,
         { widget: n, onAddWidget: l, size: s = "default", loading: c = !1, trackUserProfileEditAction: d } = e,
@@ -95,7 +98,12 @@ function E(e) {
                                 });
                         }
                         return e;
-                    })({ action: "WIDGET_ADDED" }, n.getProfileEditAnalyticsOptions()),
+                    })(
+                        {
+                            action: "WIDGET_ADDED",
+                        },
+                        n.getProfileEditAnalyticsOptions(),
+                    ),
                 ),
                 (0, f.XA)(g.jM.WIDGET_ADDED),
                 null == l || l());

@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var r = n(627968),
     i = n(397927),
     l = n(241124),
@@ -30,7 +32,9 @@ let p = function (e) {
                                 children: (0, r.jsx)(l.jY, {
                                     source: "preview",
                                     questId: t.id,
-                                    children: (0, r.jsx)(a.Y, { quest: t }),
+                                    children: (0, r.jsx)(a.Y, {
+                                        quest: t,
+                                    }),
                                 }),
                             }),
                         }),

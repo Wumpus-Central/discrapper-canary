@@ -43,6 +43,7 @@ var r = n(627968),
             e
         );
     })({});
+
 function M(e) {
     let {
             containerContext: t,
@@ -83,7 +84,9 @@ function M(e) {
             var e;
             return null != (e = (0, g.LE)(q, I.pe.TIER_2)) ? e : C.intl.string(C.t.pj0XBN);
         }, [q]),
-        Z = (0, b.A)({ location: "PremiumUpsellPickerOverlay" }),
+        Z = (0, b.A)({
+            location: "PremiumUpsellPickerOverlay",
+        }),
         Q = (0, v.A)(I.pe.TIER_2);
     if (Z) {
         let e;
@@ -119,9 +122,16 @@ function M(e) {
                                                 loopAt: 5,
                                             }),
                                         }),
-                                        null != Q && (0, r.jsx)(o.E, { type: { text: Q } }),
+                                        null != Q &&
+                                            (0, r.jsx)(o.E, {
+                                                type: {
+                                                    text: Q,
+                                                },
+                                            }),
                                         (0, r.jsx)(u.Heading, {
-                                            className: s()(N.DD, { [N.GU]: null != Q }),
+                                            className: s()(N.DD, {
+                                                [N.GU]: null != Q,
+                                            }),
                                             variant: "heading-xl/bold",
                                             color: "text-strong",
                                             children: a,
@@ -192,11 +202,16 @@ function M(e) {
                                 alt: "Nitro Perk",
                             }),
                             (0, r.jsx)(u.Heading, {
-                                className: s()(R.DD, { [R.$z]: !W }),
+                                className: s()(R.DD, {
+                                    [R.$z]: !W,
+                                }),
                                 variant: "heading-xl/bold",
                                 children: a,
                             }),
-                            W && (0, r.jsx)(S.A, { affinities: H }),
+                            W &&
+                                (0, r.jsx)(S.A, {
+                                    affinities: H,
+                                }),
                             (0, r.jsx)(u.Text, {
                                 variant: "text-sm/medium",
                                 className: R.rf,
@@ -228,7 +243,9 @@ function M(e) {
                                 onClick: () => {
                                     G();
                                 },
-                                textOptions: { textOverride: X() },
+                                textOptions: {
+                                    textOverride: X(),
+                                },
                             }),
                         ],
                     }),

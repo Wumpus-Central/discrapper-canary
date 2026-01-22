@@ -1,10 +1,14 @@
-n.d(t, { V: () => d }), n(65821);
+n.d(t, {
+    V: () => d,
+}),
+    n(65821);
 var r = n(954571),
     i = n(988276),
     a = n(277682),
     s = n(765682),
     o = n(652215),
     l = n(985018);
+
 function c(e, t, n) {
     return (
         t in e
@@ -18,6 +22,7 @@ function c(e, t, n) {
         e
     );
 }
+
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -38,7 +43,9 @@ class d {
     async requestAuthorization(e, t, n) {
         if ("function" != typeof t)
             throw Error("requestAuthorization: Was provided with not a function for ".concat(e, "."));
-        r.default.track(o.HAw.PERMISSIONS_REQUESTED, { type: e });
+        r.default.track(o.HAw.PERMISSIONS_REQUESTED, {
+            type: e,
+        });
         let a = await t(),
             l = a === s.F5.AUTHORIZED || a === s.F5.LIMITED,
             c = l ? s.hL.ACCEPTED : s.hL.DENIED;
@@ -70,7 +77,9 @@ class d {
             });
     }
     static defaultNativePermissionsRequestOptions(e) {
-        let t = { showAuthorizationError: !0 };
+        let t = {
+            showAuthorizationError: !0,
+        };
         return null == e ? t : u({}, t, e);
     }
     constructor() {

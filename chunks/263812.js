@@ -2,7 +2,11 @@ e.exports = function (e) {
     let t = "('|\\.')+",
         n = {
             relevance: 0,
-            contains: [{ begin: t }],
+            contains: [
+                {
+                    begin: t,
+                },
+            ],
         };
     return {
         name: "Matlab",
@@ -55,7 +59,11 @@ e.exports = function (e) {
                 className: "string",
                 begin: "'",
                 end: "'",
-                contains: [{ begin: "''" }],
+                contains: [
+                    {
+                        begin: "''",
+                    },
+                ],
             },
             {
                 begin: /\]|\}|\)/,
@@ -66,7 +74,11 @@ e.exports = function (e) {
                 className: "string",
                 begin: '"',
                 end: '"',
-                contains: [{ begin: '""' }],
+                contains: [
+                    {
+                        begin: '""',
+                    },
+                ],
                 starts: n,
             },
             e.COMMENT("^\\s*%\\{\\s*$", "^\\s*%\\}\\s*$"),

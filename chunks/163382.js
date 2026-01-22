@@ -1,8 +1,13 @@
-n.d(t, { A: () => a }), n(896048), n(321073);
+n.d(t, {
+    A: () => a,
+}),
+    n(896048),
+    n(321073);
 var l = n(64700),
     r = n(311907),
     s = n(698441),
     i = n(988794);
+
 function a(e, t) {
     let n = (0, r.yK)([s.Ay], () => Object.values(s.Ay.getUsersForGuildEvent(e, null)), [e]),
         a = (0, r.yK)([s.Ay], () => Object.values(s.Ay.getUsersForGuildEvent(e, t)), [e, t]);

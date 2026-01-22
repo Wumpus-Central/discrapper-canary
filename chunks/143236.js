@@ -6,6 +6,7 @@ var t,
             : function (e, t, n) {
                   return Function.prototype.apply.call(e, t, n);
               };
+
 function i(e) {
     console && console.warn && console.warn(e);
 }
@@ -24,6 +25,7 @@ var a =
     function (e) {
         return e != e;
     };
+
 function s() {
     s.init.call(this);
 }
@@ -34,13 +36,16 @@ function s() {
     (s.prototype._eventsCount = 0),
     (s.prototype._maxListeners = void 0);
 var o = 10;
+
 function l(e) {
     if ("function" != typeof e)
         throw TypeError('The "listener" argument must be of type Function. Received type ' + typeof e);
 }
+
 function c(e) {
     return void 0 === e._maxListeners ? s.defaultMaxListeners : e._maxListeners;
 }
+
 function u(e, t, n, r) {
     if (
         (l(n),
@@ -70,12 +75,14 @@ function u(e, t, n, r) {
     }
     return e;
 }
+
 function d() {
     if (!this.fired)
         return (this.target.removeListener(this.type, this.wrapFn), (this.fired = !0), 0 == arguments.length)
             ? this.listener.call(this.target)
             : this.listener.apply(this.target, arguments);
 }
+
 function f(e, t, n) {
     var r = {
             fired: !1,
@@ -87,12 +94,14 @@ function f(e, t, n) {
         i = d.bind(r);
     return (i.listener = n), (r.wrapFn = i), i;
 }
+
 function p(e, t, n) {
     var r = e._events;
     if (void 0 === r) return [];
     var i = r[t];
     return void 0 === i ? [] : "function" == typeof i ? (n ? [i.listener || i] : [i]) : n ? g(i) : h(i, i.length);
 }
+
 function _(e) {
     var t = this._events;
     if (void 0 !== t) {
@@ -102,32 +111,45 @@ function _(e) {
     }
     return 0;
 }
+
 function h(e, t) {
     for (var n = Array(t), r = 0; r < t; ++r) n[r] = e[r];
     return n;
 }
+
 function m(e, t) {
     for (; t + 1 < e.length; t++) e[t] = e[t + 1];
     e.pop();
 }
+
 function g(e) {
     for (var t = Array(e.length), n = 0; n < t.length; ++n) t[n] = e[n].listener || e[n];
     return t;
 }
+
 function E(e, t) {
     return new Promise(function (n, r) {
         function i(n) {
             e.removeListener(t, a), r(n);
         }
+
         function a() {
             "function" == typeof e.removeListener && e.removeListener("error", i), n([].slice.call(arguments));
         }
-        y(e, t, a, { once: !0 }), "error" !== t && b(e, i, { once: !0 });
+        y(e, t, a, {
+            once: !0,
+        }),
+            "error" !== t &&
+                b(e, i, {
+                    once: !0,
+                });
     });
 }
+
 function b(e, t, n) {
     "function" == typeof e.on && y(e, "error", t, n);
 }
+
 function y(e, t, n, r) {
     if ("function" == typeof e.on) r.once ? e.once(t, n) : e.on(t, n);
     else if ("function" == typeof e.addEventListener)

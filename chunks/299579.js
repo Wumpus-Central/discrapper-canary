@@ -1,4 +1,8 @@
-n.d(t, { A: () => j }), n(896048), n(65821);
+n.d(t, {
+    A: () => j,
+}),
+    n(896048),
+    n(65821);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -38,13 +42,22 @@ let S = Object.freeze({
         object: I.ZSU.CARD,
         section: I.JJy.DISCOVER_SEARCH,
     },
-    T = o().throttle(f.Cf, 1000, {
+    T = o().throttle(f.Cf, 1e3, {
         leading: !1,
         trailing: !0,
     });
+
 function j(e) {
     let { loadId: t, onGuildCardSeen: n, onGuildCardClick: l } = e,
-        { guildIds: o, loading: f, searchResultsQuery: I, loadMore: j, searchCategoryId: x } = (0, m.I)({ loadId: t }),
+        {
+            guildIds: o,
+            loading: f,
+            searchResultsQuery: I,
+            loadMore: j,
+            searchCategoryId: x,
+        } = (0, m.I)({
+            loadId: t,
+        }),
         P = 0 === o.length && !f,
         w = i.useContext(d.AnalyticsContext),
         [L, R] = i.useState((0, g.YP)()),
@@ -98,20 +111,40 @@ function j(e) {
                                     paddingLeft: n.left,
                                     width: n.width - 16,
                                 },
-                                className: a()(v.R_, { [v.Ze]: !D }),
+                                className: a()(v.R_, {
+                                    [v.Ze]: !D,
+                                }),
                                 children: [
                                     !D &&
                                         (0, r.jsxs)("div", {
                                             className: v.eW,
-                                            children: [(0, r.jsx)(_.A, { loadId: t }), (0, r.jsx)(O.A, { loadId: t })],
+                                            children: [
+                                                (0, r.jsx)(_.A, {
+                                                    loadId: t,
+                                                }),
+                                                (0, r.jsx)(O.A, {
+                                                    loadId: t,
+                                                }),
+                                            ],
                                         }),
-                                    P && (0, r.jsx)(E.A, { loadId: t }),
+                                    P &&
+                                        (0, r.jsx)(E.A, {
+                                            loadId: t,
+                                        }),
                                 ],
                             },
                             i,
                         );
                     case 1:
-                        return (0, r.jsx)(c.y$y, { className: a()(v.u1, { [v.qx]: D }) }, i);
+                        return (0, r.jsx)(
+                            c.y$y,
+                            {
+                                className: a()(v.u1, {
+                                    [v.qx]: D,
+                                }),
+                            },
+                            i,
+                        );
                 }
             },
             [P, D, t],
@@ -158,7 +191,10 @@ function j(e) {
                 var i, a;
                 await l(e, t, n, r);
                 let s = null == (a = B.current) || null == (i = a.getScrollerState()) ? void 0 : i.scrollTop;
-                null != s && A.A.setState({ scrollPosition: s });
+                null != s &&
+                    A.A.setState({
+                        scrollPosition: s,
+                    });
             },
             [l],
         ),
@@ -188,7 +224,10 @@ function j(e) {
         return () => {
             var t;
             let n = null == e || null == (t = e.getScrollerState()) ? void 0 : t.scrollTop;
-            null != n && A.A.setState({ scrollPosition: n });
+            null != n &&
+                A.A.setState({
+                    scrollPosition: n,
+                });
         };
     }, []),
         i.useLayoutEffect(() => {
@@ -201,7 +240,9 @@ function j(e) {
                             to: e,
                             animate: !1,
                             callback: () => {
-                                A.A.setState({ scrollPosition: null });
+                                A.A.setState({
+                                    scrollPosition: null,
+                                });
                             },
                         });
                 });
@@ -217,7 +258,9 @@ function j(e) {
                         t.scrollHeight - n < 240 && j();
                     },
                     100,
-                    { leading: !0 },
+                    {
+                        leading: !0,
+                    },
                 ),
             [j],
         ),
@@ -243,15 +286,21 @@ function j(e) {
                 D
                     ? (0, r.jsx)("div", {
                           className: v.pz,
-                          style: { height: e },
+                          style: {
+                              height: e,
+                          },
                           children: (0, r.jsxs)("div", {
                               className: v.wp,
                               children: [
                                   (0, r.jsx)("div", {
                                       className: v.jp,
-                                      children: (0, r.jsx)(O.A, { loadId: t }),
+                                      children: (0, r.jsx)(O.A, {
+                                          loadId: t,
+                                      }),
                                   }),
-                                  (0, r.jsx)(b.A, { loadId: t }),
+                                  (0, r.jsx)(b.A, {
+                                      loadId: t,
+                                  }),
                               ],
                           }),
                       })

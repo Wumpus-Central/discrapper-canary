@@ -1,4 +1,6 @@
-n.d(t, { y: () => x });
+n.d(t, {
+    y: () => x,
+});
 var a = n(627968),
     l = n(64700),
     i = n(517846),
@@ -16,7 +18,9 @@ let x = (e) => {
     let { targetElementRef: t, markAsDismissed: n } = e,
         x = (0, s.L)(),
         b = (0, l.useCallback)(() => {
-            (0, d.openUserSettings)(c.X.PRIVATE_BROWSING_PANEL, { section: u.nc_.PRIVATE_BROWSING });
+            (0, d.openUserSettings)(c.X.PRIVATE_BROWSING_PANEL, {
+                section: u.nc_.PRIVATE_BROWSING,
+            });
         }, []);
     return (0, a.jsx)(r.AM, {
         badge: {
@@ -27,7 +31,9 @@ let x = (e) => {
             type: "image",
             src: f,
         },
-        caretConfig: { align: "start" },
+        caretConfig: {
+            align: "start",
+        },
         align: "left",
         position: "top",
         size: "lg",

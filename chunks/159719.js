@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var r = n(627968),
     i = n(311907),
     l = n(397927),
@@ -9,6 +11,7 @@ var r = n(627968),
     d = n(557300),
     u = n(534875),
     f = n(985018);
+
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,6 +37,7 @@ function g(e) {
     }
     return e;
 }
+
 function b(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -52,6 +56,7 @@ function b(e, t) {
         e
     );
 }
+
 function m(e) {
     let { guild: t } = e,
         m = (0, i.bG)([s.A], () => s.A.isUploadingEmoji()),
@@ -61,9 +66,13 @@ function m(e) {
     return (0, r.jsxs)(l.D0$, {
         label: f.intl.string(f.t["LDT0Q/"]),
         disabled: h,
-        description: f.intl.format(f.t.H9Jxp6, { maxSlots: (0, d.A)(t) }),
+        description: f.intl.format(f.t.H9Jxp6, {
+            maxSlots: (0, d.A)(t),
+        }),
         children: [
-            (0, r.jsx)(l.hKd, { size: 16 }),
+            (0, r.jsx)(l.hKd, {
+                size: 16,
+            }),
             (0, r.jsx)(c.A, {
                 onChange: (e, i) => {
                     null != e &&
@@ -87,7 +96,9 @@ function m(e) {
                 text: f.intl.string(f.t.AuPtov),
                 loading: m,
             }),
-            (0, r.jsx)(l.hKd, { size: 24 }),
+            (0, r.jsx)(l.hKd, {
+                size: 24,
+            }),
             (0, r.jsx)(a.Bt, {
                 title: f.intl.string(f.t.lu1ZQ2),
                 maxSlots: (0, d.A)(t),

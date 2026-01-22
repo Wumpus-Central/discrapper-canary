@@ -19,9 +19,11 @@ var r = n(503698),
     p = n(985018),
     g = n(932726),
     m = n(529732);
+
 function x(e) {
     return (0, f.Xn)(e) ? 250 : 152;
 }
+
 function A(e) {
     let { guild: t } = e,
         n = (0, f.Xn)(t.id),
@@ -48,13 +50,18 @@ function A(e) {
                           (0, l.jsx)(s.Button, {
                               variant: "overlay-primary",
                               onClick: () => {
-                                  o.A.open(t.id, b.BEX.ONBOARDING), (0, c.Dr)(x, { dismissAction: h.i.PRIMARY });
+                                  o.A.open(t.id, b.BEX.ONBOARDING),
+                                      (0, c.Dr)(x, {
+                                          dismissAction: h.i.PRIMARY,
+                                      });
                               },
                               text: p.intl.string(p.t["+OtO4e"]),
                           }),
                       ],
                   }),
-                  (0, l.jsx)(u.M, { isTooltip: !0 }),
+                  (0, l.jsx)(u.M, {
+                      isTooltip: !0,
+                  }),
               ],
           })
         : (0, l.jsxs)("div", {
@@ -91,12 +98,16 @@ function A(e) {
               ],
           });
     return (0, l.jsxs)("div", {
-        className: i()(g.kL, { [g.xY]: n }),
+        className: i()(g.kL, {
+            [g.xY]: n,
+        }),
         children: [
             (0, l.jsx)(s.DUT, {
                 className: g.b,
                 onClick: () => {
-                    (0, c.Dr)(x, { dismissAction: h.i.DISMISS });
+                    (0, c.Dr)(x, {
+                        dismissAction: h.i.DISMISS,
+                    });
                 },
                 children: (0, l.jsx)(s.PGe, {
                     size: "md",

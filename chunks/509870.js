@@ -1,4 +1,6 @@
-s.d(t, { A: () => C });
+s.d(t, {
+    A: () => C,
+});
 var i = s(284009),
     a = s.n(i),
     l = s(311907),
@@ -15,7 +17,13 @@ let C = (e) => {
           ? 1 === C
               ? n.intl.string(n.t.UfPk1t)
               : C > 0
-                ? n.intl.formatToPlainString(n.t.hZnIz4, { numFriends: C })
-                : n.intl.formatToPlainString(n.t["3PJw6c"], { numReferrals: i })
-          : n.intl.formatToPlainString(n.t.GcKM5Z, { numReferrals: i });
+                ? n.intl.formatToPlainString(n.t.hZnIz4, {
+                      numFriends: C,
+                  })
+                : n.intl.formatToPlainString(n.t["3PJw6c"], {
+                      numReferrals: i,
+                  })
+          : n.intl.formatToPlainString(n.t.GcKM5Z, {
+                numReferrals: i,
+            });
 };

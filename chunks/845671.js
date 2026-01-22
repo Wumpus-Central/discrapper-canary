@@ -1,8 +1,11 @@
-n.d(r, { default: () => s });
+n.d(r, {
+    default: () => s,
+});
 var i = n(627968);
 n(64700);
 var e = n(397927),
     a = n(985018);
+
 function s(t) {
     let { onClose: r, transitionState: n, body: s } = t;
     return (0, i.jsxs)(e.EOs, {

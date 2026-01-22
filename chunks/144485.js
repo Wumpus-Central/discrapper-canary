@@ -1,10 +1,14 @@
-n.d(t, { A: () => u }), n(65821);
+n.d(t, {
+    A: () => u,
+}),
+    n(65821);
 var r = n(627968);
 n(64700);
 var i = n(314116),
     a = n(397927),
     s = n(652215),
     o = n(985018);
+
 function l(e, t, n) {
     return (
         t in e
@@ -18,6 +22,7 @@ function l(e, t, n) {
         e
     );
 }
+
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -68,7 +73,9 @@ let u = {
                             ),
                         );
                 },
-                { contextKey: o === s.BRT.POPOUT ? a.KX8 : a.SYi },
+                {
+                    contextKey: o === s.BRT.POPOUT ? a.KX8 : a.SYi,
+                },
             );
     },
     openSecureFramesUpdateConfirmation: function (e) {

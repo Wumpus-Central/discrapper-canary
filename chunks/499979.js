@@ -14,6 +14,7 @@ n.d(t, {
 var r = n(682572),
     i = n.n(r),
     a = n(547830);
+
 function s(e, t, n) {
     return (
         t in e
@@ -43,16 +44,16 @@ class c {
     constructor(e, t, n, r) {
         s(this, "milliseconds", 0),
             s(this, "asMilliseconds", () => this.milliseconds),
-            s(this, "asSeconds", () => this.milliseconds / 1000),
-            s(this, "asMinutes", () => this.milliseconds / 1000 / 60),
-            s(this, "asHours", () => this.milliseconds / 1000 / 60 / 60),
+            s(this, "asSeconds", () => this.milliseconds / 1e3),
+            s(this, "asMinutes", () => this.milliseconds / 1e3 / 60),
+            s(this, "asHours", () => this.milliseconds / 1e3 / 60 / 60),
             s(this, "add", (e) => c.fromMilliseconds(this.milliseconds + e.milliseconds)),
             s(this, "subtract", (e) => c.fromMilliseconds(this.milliseconds - e.milliseconds)),
             s(this, "subtractOrZero", (e) => c.fromMilliseconds(Math.max(this.milliseconds - e.milliseconds, 0))),
             (this.milliseconds += r || 0),
-            (this.milliseconds += 1000 * (n || 0)),
-            (this.milliseconds += 1000 * (t || 0) * 60),
-            (this.milliseconds += 1000 * (e || 0) * 3600);
+            (this.milliseconds += 1e3 * (n || 0)),
+            (this.milliseconds += 1e3 * (t || 0) * 60),
+            (this.milliseconds += 1e3 * (e || 0) * 3600);
     }
 }
 s(c, "fromMilliseconds", (e) => new c(0, 0, 0, e)),
@@ -154,6 +155,7 @@ class f {
         s(this, "timeout", void 0), s(this, "watch", void 0), (this.timeout = e), (this.watch = new u());
     }
 }
+
 function p(e) {
     let t = "number" == typeof e ? e : e.asMilliseconds();
     return new Promise((e) => {
@@ -173,6 +175,7 @@ var _ = (function (e) {
         e
     );
 })({});
+
 function h(e, t) {
     switch (t) {
         case "NONE":
@@ -227,6 +230,7 @@ let m = [
         max: 1 / 0,
     },
 ];
+
 function g(e, t) {
     let n = m.findIndex((t) => {
             let { max: n, unit: r } = t;
@@ -247,6 +251,7 @@ function g(e, t) {
     });
     return null != a ? a.unit : null;
 }
+
 function E(e, t) {
     if (null == e)
         return {

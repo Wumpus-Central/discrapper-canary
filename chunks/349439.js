@@ -34,7 +34,9 @@ let f = 40,
         let t = e.items[0];
         return (0, a.T)(t)
             ? (0, l.F_)({
-                  avatarDecoration: { asset: t.asset },
+                  avatarDecoration: {
+                      asset: t.asset,
+                  },
                   size: f,
                   canAnimate: !0,
               })

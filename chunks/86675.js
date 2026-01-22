@@ -11,7 +11,9 @@ function r(e, t, n) {
         e
     );
 }
-n.d(t, { A: () => i });
+n.d(t, {
+    A: () => i,
+});
 class i {
     createDragPreview(e) {
         if (null == this.container || null == this.svg || null == this.foreignObject) return;

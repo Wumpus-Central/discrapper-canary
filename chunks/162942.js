@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var a = n(627968),
     l = n(64700),
     i = n(687173),
@@ -9,6 +11,7 @@ var a = n(627968),
     d = n(49999),
     u = n(985018),
     m = n(210400);
+
 function p(e) {
     var t, n;
     let { handleOpenUserProfileModal: p, markAsDismissed: h } = e,
@@ -56,7 +59,11 @@ function p(e) {
             [],
         ),
         g = l.useCallback(() => {
-            h(d.i.TAKE_ACTION), x({ action: "PRESS_ADD_WIDGET" }), p();
+            h(d.i.TAKE_ACTION),
+                x({
+                    action: "PRESS_ADD_WIDGET",
+                }),
+                p();
         }, [p, h, x]);
     return (0, a.jsx)(
         i.A,

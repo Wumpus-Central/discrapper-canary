@@ -7,9 +7,15 @@ e.exports = function (e) {
         },
         r = {
             variants: [
-                e.COMMENT("!", "$", { relevance: 0 }),
-                e.COMMENT("^C[ ]", "$", { relevance: 0 }),
-                e.COMMENT("^C$", "$", { relevance: 0 }),
+                e.COMMENT("!", "$", {
+                    relevance: 0,
+                }),
+                e.COMMENT("^C[ ]", "$", {
+                    relevance: 0,
+                }),
+                e.COMMENT("^C$", "$", {
+                    relevance: 0,
+                }),
             ],
         },
         i = /(_[a-z_\d]+)?/,
@@ -17,9 +23,15 @@ e.exports = function (e) {
         s = {
             className: "number",
             variants: [
-                { begin: t.concat(/\b\d+/, /\.(\d*)/, a, i) },
-                { begin: t.concat(/\b\d+/, a, i) },
-                { begin: t.concat(/\.\d+/, a, i) },
+                {
+                    begin: t.concat(/\b\d+/, /\.(\d*)/, a, i),
+                },
+                {
+                    begin: t.concat(/\b\d+/, a, i),
+                },
+                {
+                    begin: t.concat(/\.\d+/, a, i),
+                },
             ],
             relevance: 0,
         },

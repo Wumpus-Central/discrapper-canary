@@ -9,9 +9,9 @@ var r = n(562465),
     s = n(927813),
     o = n(403362),
     l = n(652215);
-let c = 5000,
+let c = 5e3,
     u = 3,
-    d = 1000,
+    d = 1e3,
     f = 1001,
     p = 1002;
 async function _(e, t) {
@@ -35,7 +35,9 @@ async function _(e, t) {
     let g = async (t) =>
             _ >= u
                 ? (m.push(p),
-                  b({ error: !0 }),
+                  b({
+                      error: !0,
+                  }),
                   i.h.dispatch({
                       type: "APPLICATION_COMMAND_INDEX_FETCH_FAILURE",
                       target: e,
@@ -52,7 +54,9 @@ async function _(e, t) {
                 (t) =>
                     202 === t.status
                         ? (m.push(202), g(c))
-                        : (b({ error: !1 }),
+                        : (b({
+                              error: !1,
+                          }),
                           i.h.dispatch({
                               type: "APPLICATION_COMMAND_INDEX_FETCH_SUCCESS",
                               target: e,
@@ -61,13 +65,18 @@ async function _(e, t) {
                 (n) => {
                     var r;
                     if (t.signal.aborted) {
-                        m.push(f), b({ error: !0 });
+                        m.push(f),
+                            b({
+                                error: !0,
+                            });
                         return;
                     }
                     return 429 === n.status
                         ? (m.push(429), g(n.body.retry_after * s.A.Millis.SECOND))
                         : (m.push(null != (r = n.status) ? r : d),
-                          b({ error: !0 }),
+                          b({
+                              error: !0,
+                          }),
                           i.h.dispatch({
                               type: "APPLICATION_COMMAND_INDEX_FETCH_FAILURE",
                               target: e,
@@ -93,6 +102,7 @@ async function _(e, t) {
         };
     await E();
 }
+
 function h(e) {
     switch (e.type) {
         case "channel":
@@ -107,6 +117,7 @@ function h(e) {
             (0, o.xb)(e);
     }
 }
+
 function m(e) {
     i.h.dispatch({
         type: "APPLICATION_COMMAND_INDEX_FETCH_REQUEST",

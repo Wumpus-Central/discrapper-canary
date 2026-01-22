@@ -1,4 +1,7 @@
-r.d(t, { default: () => P }), r(896048);
+r.d(t, {
+    default: () => P,
+}),
+    r(896048);
 var n = r(627968),
     i = r(64700),
     o = r(158954),
@@ -13,6 +16,7 @@ var n = r(627968),
     f = r(652215),
     O = r(519412),
     y = r(985018);
+
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
@@ -109,7 +113,9 @@ let P = (e) => {
                               text: y.intl.string(O.default["+YO9kw"]),
                               variant: "secondary",
                               onClick: () => {
-                                  (0, a.openUserSettings)(s.X.SUBSCRIPTIONS_PANEL, { section: f.nc_.SUBSCRIPTIONS }),
+                                  (0, a.openUserSettings)(s.X.SUBSCRIPTIONS_PANEL, {
+                                      section: f.nc_.SUBSCRIPTIONS,
+                                  }),
                                       m();
                               },
                           },

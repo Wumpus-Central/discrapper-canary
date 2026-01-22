@@ -1,8 +1,12 @@
-n.d(t, { A: () => a }), n(65821);
+n.d(t, {
+    A: () => a,
+}),
+    n(65821);
 var r = n(627968);
 n(64700);
 var i = n(397927),
     l = n(652215);
+
 function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -28,6 +32,7 @@ function s(e) {
     }
     return e;
 }
+
 function a(e) {
     let { tier: t } = e,
         n = (function (e, t) {

@@ -1,4 +1,6 @@
-n.d(t, { A: () => N });
+n.d(t, {
+    A: () => N,
+});
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -21,6 +23,7 @@ var i = n(311907),
     O = n(768349),
     A = n(426127),
     v = n(985018);
+
 function S(e, t, n) {
     return (
         t in e
@@ -34,6 +37,7 @@ function S(e, t, n) {
         e
     );
 }
+
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -50,6 +54,7 @@ function I(e) {
     }
     return e;
 }
+
 function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -62,6 +67,7 @@ function T(e, t) {
     }
     return n;
 }
+
 function C(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -73,6 +79,7 @@ function C(e, t) {
         e
     );
 }
+
 function N(e) {
     let { currentUserId: t, message: S, application: T, channel: N, analyticsLocations: R, onView: w } = e,
         { staticBannerSrc: P, videoBannerSrc: D, bannerAspectRatio: x } = (0, d.f)(T),
@@ -91,7 +98,9 @@ function N(e) {
         M = (0, i.bG)([_.A], () => _.A.getCurrentUserActiveStream()),
         k = (0, i.bG)([m.A], () => m.A.getChannelId()),
         U = b.default.extractTimestamp(S.id) + y.M < Date.now(),
-        G = (0, r.jsx)(r.Fragment, { children: (0, s.Wf)(S, N, t) }),
+        G = (0, r.jsx)(r.Fragment, {
+            children: (0, s.Wf)(S, N, t),
+        }),
         { analyticsLocations: V } = (0, l.Ay)(R, o.A.REQUEST_TO_STREAM_INVITE_EMBED),
         F = v.intl.string(A.default["5+172e"]),
         B = !1;
@@ -128,7 +137,13 @@ function N(e) {
                                                     n.e("96811"),
                                                     n.e("14476"),
                                                 ]).then(n.bind(n, 648230));
-                                                return (t) => (0, r.jsx)(e, C(I({}, t), { analyticsLocations: V }));
+                                                return (t) =>
+                                                    (0, r.jsx)(
+                                                        e,
+                                                        C(I({}, t), {
+                                                            analyticsLocations: V,
+                                                        }),
+                                                    );
                                             }));
                               },
                           },

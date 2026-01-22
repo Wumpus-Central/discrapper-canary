@@ -1,4 +1,7 @@
-n.d(t, { N: () => u }), n(228524);
+n.d(t, {
+    N: () => u,
+}),
+    n(228524);
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -43,11 +46,15 @@ let u = (e) => {
                             (0, r.jsxs)("div", {
                                 className: c.aH,
                                 children: [
-                                    (0, r.jsx)("div", { className: c.Om }),
+                                    (0, r.jsx)("div", {
+                                        className: c.Om,
+                                    }),
                                     null != n && n > 0
                                         ? (0, r.jsx)(i.Text, {
                                               variant: "text-sm/normal",
-                                              children: o.intl.format(o.t["LC+S+m"], { membersOnline: n }),
+                                              children: o.intl.format(o.t["LC+S+m"], {
+                                                  membersOnline: n,
+                                              }),
                                           })
                                         : null,
                                 ],

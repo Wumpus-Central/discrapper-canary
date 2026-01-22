@@ -1,4 +1,7 @@
-n.d(t, { A: () => I }), n(896048);
+n.d(t, {
+    A: () => I,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -21,6 +24,7 @@ var r = n(627968),
     A = n(291071);
 let v = 2048,
     S = 84;
+
 function I(e) {
     var t;
     let { context: n, application: l, sectionName: c } = e,
@@ -51,7 +55,9 @@ function I(e) {
             fade: !0,
             ref: R,
             role: "region",
-            "aria-label": y.intl.formatToPlainString(y.t["4OP4Uk"], { applicationName: x }),
+            "aria-label": y.intl.formatToPlainString(y.t["4OP4Uk"], {
+                applicationName: x,
+            }),
             children: [
                 (0, r.jsx)(g.A, {
                     application: C,
@@ -66,7 +72,9 @@ function I(e) {
                         src: D,
                         className: O.Z,
                     }),
-                (0, r.jsx)(s.A, { size: 54 }),
+                (0, r.jsx)(s.A, {
+                    size: 54,
+                }),
                 (0, r.jsx)(N, {
                     context: n,
                     application: C,
@@ -86,6 +94,7 @@ function I(e) {
         })
     );
 }
+
 function T(e) {
     let { context: t, application: n, sectionName: i, hasCommands: a } = e,
         s = (0, c.A)({

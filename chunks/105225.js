@@ -10,7 +10,7 @@ var r = n(627968),
     a = n.n(i),
     s = n(284009),
     o = n.n(s),
-    c = n(432022),
+    c = n(108531),
     u = n(311907),
     d = n(554146),
     f = n(397927),
@@ -77,6 +77,7 @@ var r = n(627968),
     ey = n(806931),
     eO = n(49999),
     ej = n(913957);
+
 function ev() {
     return (ev =
         Object.assign ||
@@ -88,6 +89,7 @@ function ev() {
             return e;
         }).apply(this, arguments);
 }
+
 function ex(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -113,6 +115,7 @@ function ex(e) {
     }
     return e;
 }
+
 function eE(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -131,11 +134,13 @@ function eE(e, t) {
         e
     );
 }
+
 function e_(e, t) {
     if (er.A.isVideoEnabled() === e) return;
     let n = () => p.A.setVideoEnabled(e);
     (0, S.X)(O.A.VOICE_CONTROL_TRAY, S.O.CAMERA, e), e ? (0, em.A)(n, t) : n();
 }
+
 function eC(e) {
     let { channel: t, currentUser: n, exitFullScreen: i, canGoLive: a, hasPermission: s, disabled: o } = e,
         { parentAnalyticsLocation: c, analyticsLocations: p } = (0, j.Ay)(),
@@ -209,7 +214,12 @@ function eC(e) {
                         return (0, r.jsx)("div", {
                             ref: A,
                             children: ((e, t) => {
-                                let n = null != e ? e : { onClick: void 0 },
+                                let n =
+                                        null != e
+                                            ? e
+                                            : {
+                                                  onClick: void 0,
+                                              },
                                     { onClick: l } = n,
                                     i = (function (e, t) {
                                         if (null == e) return {};
@@ -278,6 +288,7 @@ function eC(e) {
         ],
     });
 }
+
 function eS(e) {
     let { channel: t, idle: n, whichPopoutIsOpen: l, setWhichPopoutIsOpen: i } = e,
         a = t.getGuildId();
@@ -329,7 +340,7 @@ let eI = l.memo(function (e) {
                 transform: p && !d.enabled ? "scale(0.7)" : "scale(1)",
                 config: {
                     mass: 2,
-                    tension: p ? 600 : 1000,
+                    tension: p ? 600 : 1e3,
                     friction: 45,
                     precision: 0.01,
                     clamp: p,
@@ -426,6 +437,7 @@ let eI = l.memo(function (e) {
         },
     });
 });
+
 function eN(e) {
     let { channel: t, cameraUnavailable: n, hasCameraPermission: i, currentUser: a } = e,
         s = (0, k.Us)(),
@@ -475,8 +487,11 @@ function eN(e) {
         ],
     });
 }
+
 function eT(e) {
-    return (0, I.s)(e, O.A.VOICE_CONTROL_TRAY, { entrypoint: ey.GK.CARET });
+    return (0, I.s)(e, O.A.VOICE_CONTROL_TRAY, {
+        entrypoint: ey.GK.CARET,
+    });
 }
 let eP = function (e) {
     var t;
@@ -490,7 +505,9 @@ let eP = function (e) {
         { cameraUnavailable: v, enabled: S } = (0, ea.A)(),
         I = (0, eo.A)(n),
         { suppress: N, selfMute: w, mute: D } = (0, ec.A)(n),
-        { canGoLive: M } = (0, u.cf)([er.A], () => ({ canGoLive: (0, R.A)(er.A) })),
+        { canGoLive: M } = (0, u.cf)([er.A], () => ({
+            canGoLive: (0, R.A)(er.A),
+        })),
         L = (0, P.A)(),
         U = (0, u.bG)([T.default], () => null != T.default.getAwaitingRemoteSessionInfo()),
         V = null != L,
@@ -541,7 +558,9 @@ let eP = function (e) {
                   children: [
                       (0, r.jsx)("div", {
                           className: ej.rt,
-                          children: (0, r.jsx)(G.A, { channelId: n.id }),
+                          children: (0, r.jsx)(G.A, {
+                              channelId: n.id,
+                          }),
                       }),
                       (0, r.jsxs)("div", {
                           ref: p,

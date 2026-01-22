@@ -1,4 +1,6 @@
-n.d(t, { A: () => g });
+n.d(t, {
+    A: () => g,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -11,6 +13,7 @@ var i = n(503698),
     d = n(985018),
     h = n(497039),
     f = n(473169);
+
 function p(e) {
     let { children: t } = e;
     return (0, r.jsx)("li", {
@@ -22,6 +25,7 @@ function p(e) {
         }),
     });
 }
+
 function g(e) {
     let { setSlide: t, transitionTo: i } = e;
     return (0, r.jsxs)("div", {
@@ -41,19 +45,31 @@ function g(e) {
             (0, r.jsxs)(a.eB, {
                 className: s()(f.SX, f.QX),
                 children: [
-                    (0, r.jsx)(l.Text, { variant: "text-sm/normal" }),
+                    (0, r.jsx)(l.Text, {
+                        variant: "text-sm/normal",
+                    }),
                     (0, r.jsxs)("ul", {
                         className: h.qI,
                         children: [
-                            (0, r.jsx)(p, { children: d.intl.string(d.t.Gj1Zry) }),
+                            (0, r.jsx)(p, {
+                                children: d.intl.string(d.t.Gj1Zry),
+                            }),
                             (0, r.jsx)(o.A, {}),
-                            (0, r.jsx)(p, { children: d.intl.string(d.t["8C6t3B"]) }),
+                            (0, r.jsx)(p, {
+                                children: d.intl.string(d.t["8C6t3B"]),
+                            }),
                             (0, r.jsx)(o.A, {}),
-                            (0, r.jsx)(p, { children: d.intl.string(d.t.mToZMA) }),
+                            (0, r.jsx)(p, {
+                                children: d.intl.string(d.t.mToZMA),
+                            }),
                             (0, r.jsx)(o.A, {}),
-                            (0, r.jsx)(p, { children: d.intl.string(d.t.TPEvkc) }),
+                            (0, r.jsx)(p, {
+                                children: d.intl.string(d.t.TPEvkc),
+                            }),
                             (0, r.jsx)(o.A, {}),
-                            (0, r.jsx)(p, { children: d.intl.string(d.t.H8Y1Ln) }),
+                            (0, r.jsx)(p, {
+                                children: d.intl.string(d.t.H8Y1Ln),
+                            }),
                         ],
                     }),
                 ],
@@ -70,7 +86,10 @@ function g(e) {
                     (0, r.jsx)(l.Button, {
                         text: d.intl.string(d.t["B/yHcQ"]),
                         variant: "secondary",
-                        onClick: () => i(u.BVt.LOGIN, { source: "account_revert" }),
+                        onClick: () =>
+                            i(u.BVt.LOGIN, {
+                                source: "account_revert",
+                            }),
                     }),
                 ],
             }),

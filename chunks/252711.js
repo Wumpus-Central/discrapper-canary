@@ -1,9 +1,11 @@
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
     a = n.n(i),
-    s = n(432022),
+    s = n(108531),
     o = n(421380),
     l = n(397927),
     c = n(736653),
@@ -21,7 +23,9 @@ let _ = function (e) {
                 friction: 12,
             },
         }),
-        m = { section: f.JJy.MARKETING_FLOATING_CTA },
+        m = {
+            section: f.JJy.MARKETING_FLOATING_CTA,
+        },
         g = (0, c.Ay)(),
         E = (0, l.Mwr)(g);
     return (0, r.jsx)(s.animated.div, {
@@ -35,7 +39,9 @@ let _ = function (e) {
             children: [
                 (0, r.jsx)(d.A, {
                     color: E ? o.XD.BRAND_INVERTED : void 0,
-                    className: a()(p.x6, { [p.Ph]: E }),
+                    className: a()(p.x6, {
+                        [p.Ph]: E,
+                    }),
                     subscriptionTier: n,
                     premiumModalAnalyticsLocation: m,
                     isPersistentCTA: !0,

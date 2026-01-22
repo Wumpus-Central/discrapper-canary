@@ -1,8 +1,11 @@
-n.d(t, { A: () => s });
+n.d(t, {
+    A: () => s,
+});
 var r = n(627968);
 n(64700);
 var l = n(397927),
     i = n(568065);
+
 function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -28,6 +31,7 @@ function a(e) {
     }
     return e;
 }
+
 function s(e, t) {
     (0, l.mMO)(
         async () => {
@@ -61,6 +65,8 @@ function s(e, t) {
                 }
             }
         },
-        { modalKey: i.Fq },
+        {
+            modalKey: i.Fq,
+        },
     );
 }

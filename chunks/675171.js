@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(417597),
     l = n(933958),
     i = n(969151),
@@ -15,6 +17,7 @@ let u = "no_text_activity",
         [c.Gd.PIP]: [o.i.NEW_MESSAGES, o.i.OPT_IN_CHANNEL, o.i.SUMMARIES],
         [c.Gd.ACTIVITY_POPOUT_WINDOW]: [o.i.NEW_MESSAGES, o.i.OPT_IN_CHANNEL, o.i.SUMMARIES],
     };
+
 function f() {
     let e = (0, r.bG)([l.Ay], () => l.Ay.getCurrentEmbeddedActivity()),
         t = (0, r.bG)([l.Ay], () => l.Ay.getActivityPanelMode()),

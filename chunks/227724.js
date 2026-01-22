@@ -1,4 +1,6 @@
-n.d(t, { k: () => u });
+n.d(t, {
+    k: () => u,
+});
 var r = n(627968),
     i = n(397927),
     a = n(994500),
@@ -6,6 +8,7 @@ var r = n(627968),
     o = n(64175),
     l = n(652215);
 let c = "blocked_user_joined_voice_channel_modal";
+
 function u(e, t) {
     let u = a.A.isBlocked(t);
     (0, i.mMO)(

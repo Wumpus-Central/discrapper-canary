@@ -59,6 +59,7 @@ var r,
             t
         );
     };
+
 function h(e) {
     var t = {};
     for (var n in e) void 0 !== e[n] && (t[n] = e[n]);

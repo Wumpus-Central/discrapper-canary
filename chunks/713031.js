@@ -1,4 +1,7 @@
-n.d(t, { A: () => g }), n(896048);
+n.d(t, {
+    A: () => g,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -13,6 +16,7 @@ var r = n(627968),
     _ = n(652215),
     h = n(985018),
     m = n(842130);
+
 function g() {
     let e = (0, a.cf)([l.A], () => l.A.hasConsented(_.YAq.PERSONALIZATION)),
         [t, n] = i.useState(e),
@@ -38,7 +42,9 @@ function g() {
         setting: p.H.PRIVACY_DATA_PERSONALIZE_V2,
         children: (0, r.jsx)(d.Ay, {
             title: h.intl.string(h.t.MNKzyg),
-            note: h.intl.format(h.t["eQL/Mr"], { helpdeskArticle: c.A.getArticleURL(_.MVz.DATA_USED_FOR_RECOMMENDED) }),
+            note: h.intl.format(h.t["eQL/Mr"], {
+                helpdeskArticle: c.A.getArticleURL(_.MVz.DATA_USED_FOR_RECOMMENDED),
+            }),
             value: t,
             onChange: E,
             disabled: g,

@@ -1,4 +1,7 @@
-s.d(t, { default: () => p }), s(896048);
+s.d(t, {
+    default: () => p,
+}),
+    s(896048);
 var i = s(627968),
     a = s(64700),
     l = s(397927),
@@ -21,7 +24,9 @@ let p = (e) => {
             t = (0, i.jsx)(o.Ay, {
                 onShare: async (e) => {
                     try {
-                        C.default.track(x.HAw.REFERRAL_PROGRAM_SHARE_CTA_CLICKED, { location_stack: L });
+                        C.default.track(x.HAw.REFERRAL_PROGRAM_SHARE_CTA_CLICKED, {
+                            location_stack: L,
+                        });
                         let t = await (0, d.xm)(e.map((e) => e.id));
                         u(2), _(new Set(e)), g(t);
                     } catch (e) {}

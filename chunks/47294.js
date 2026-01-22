@@ -1,4 +1,7 @@
-n.d(t, { A: () => g }), n(896048);
+n.d(t, {
+    A: () => g,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(158954),
@@ -6,6 +9,7 @@ var r = n(627968),
     o = n(817281),
     l = n(964404),
     c = n(985018);
+
 function u(e, t, n) {
     return (
         t in e
@@ -19,6 +23,7 @@ function u(e, t, n) {
         e
     );
 }
+
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,6 +40,7 @@ function d(e) {
     }
     return e;
 }
+
 function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -47,6 +53,7 @@ function f(e, t) {
     }
     return n;
 }
+
 function p(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -58,6 +65,7 @@ function p(e, t) {
         e
     );
 }
+
 function _(e, t) {
     if (null == e) return {};
     var n,
@@ -74,6 +82,7 @@ function _(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function h(e, t) {
     if (null == e) return {};
     var n,
@@ -84,12 +93,15 @@ function h(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
+
 function m(e) {
     let { onConfirm: t, onCancel: n } = e,
         l = _(e, ["onConfirm", "onCancel"]),
         [u, f] = i.useState(!1);
     i.useEffect(() => {
-        o.Ay.updatedUnsyncedSettings({ disableEmbeddedActivityPopOutAlert: u });
+        o.Ay.updatedUnsyncedSettings({
+            disableEmbeddedActivityPopOutAlert: u,
+        });
     }, [u]);
     let h = () => {
             null == n || n(), l.onClose();
@@ -123,6 +135,7 @@ function m(e) {
         }),
     );
 }
+
 function g(e) {
     let { onConfirm: t, onCancel: n, usesPopoutContext: i = !1 } = e;
     l.Ay.disableEmbeddedActivityPopOutAlert

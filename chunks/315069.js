@@ -11,6 +11,7 @@ function r(e, t, n) {
         e
     );
 }
+
 function i(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -27,6 +28,7 @@ function i(e) {
     }
     return e;
 }
+
 function a(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -39,6 +41,7 @@ function a(e, t) {
     }
     return n;
 }
+
 function s(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -50,7 +53,10 @@ function s(e, t) {
         e
     );
 }
-n.d(t, { A: () => o }), n(896048);
+n.d(t, {
+    A: () => o,
+}),
+    n(896048);
 class o {
     toJS() {
         return i({}, this);
@@ -61,7 +67,11 @@ class o {
         return t instanceof Date && r instanceof Date && t.getTime() === r.getTime()
             ? this
             : r !== t
-              ? new this.constructor(s(i({}, this), { [e]: t }))
+              ? new this.constructor(
+                    s(i({}, this), {
+                        [e]: t,
+                    }),
+                )
               : this;
     }
     merge(e) {

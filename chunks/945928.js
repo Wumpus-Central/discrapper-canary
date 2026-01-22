@@ -1,4 +1,6 @@
-i.d(e, { Q: () => b });
+i.d(e, {
+    Q: () => b,
+});
 var n = i(64700),
     l = i(311907),
     s = i(827343),
@@ -22,7 +24,9 @@ var n = i(64700),
 let R = (0, u.Qx)(A.X.VOICE_INPUT_PROFILE_SETTING, {
         useTitle: () => L.intl.string(L.t.LM3U3k),
         usePredicate: function () {
-            let { enabledInputProfiles: t } = (0, S._)({ location: "SettingsRendererConfig" });
+            let { enabledInputProfiles: t } = (0, S._)({
+                location: "SettingsRendererConfig",
+            });
             return t.length > 0;
         },
         useSearchTerms: () => [L.intl.string(L.t.nuFtHH), L.intl.string(L.t.VZPR0R), L.intl.string(L.t.cjPbpT)],
@@ -34,10 +38,14 @@ let R = (0, u.Qx)(A.X.VOICE_INPUT_PROFILE_SETTING, {
         },
         setValue: function (t) {
             let e = [r.A.USER_SETTINGS_VOICE_AND_VIDEO];
-            s.A.setActiveInputProfile(t, { analyticsLocations: e });
+            s.A.setActiveInputProfile(t, {
+                analyticsLocations: e,
+            });
         },
         useOptions: function () {
-            let { enabledInputProfiles: t } = (0, S.d)({ location: "InputProfileCategory" });
+            let { enabledInputProfiles: t } = (0, S.d)({
+                location: "InputProfileCategory",
+            });
             return [
                 {
                     value: C.my.VOICE_ISOLATION,

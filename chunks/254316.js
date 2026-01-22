@@ -1,4 +1,8 @@
-n.r(t), n.d(t, { default: () => E }), n(896048);
+n.r(t),
+    n.d(t, {
+        default: () => E,
+    }),
+    n(896048);
 var i = n(627968),
     r = n(64700),
     a = n(960488),
@@ -10,6 +14,7 @@ var i = n(627968),
     c = n(976860),
     S = n(71393),
     b = n(652215);
+
 function E(e) {
     let { guildId: t } = e,
         n = (0, o.bG)([S.A], () => S.A.getGuild(t)),
@@ -18,7 +23,7 @@ function E(e) {
         let e = setTimeout(() => {
             null == n &&
                 (0, c.pX)(b.BVt.PICK_GUILD_SETTINGS("role-subscriptions", void 0, "server-subscriptions-onboarding"));
-        }, 3000);
+        }, 3e3);
         return () => clearTimeout(e);
     }, [n]),
     r.useEffect(() => {
@@ -37,5 +42,7 @@ function E(e) {
               },
               children: (0, i.jsx)(s.y$y, {}),
           })
-        : (0, i.jsx)(a.rd, { to: b.BVt.CHANNEL(t) });
+        : (0, i.jsx)(a.rd, {
+              to: b.BVt.CHANNEL(t),
+          });
 }

@@ -1,4 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, {
+    A: () => f,
+});
 var r = n(627968),
     i = n(64700),
     a = n(397927),
@@ -8,6 +10,7 @@ var r = n(627968),
     c = n(698723),
     u = n(531525),
     d = n(985018);
+
 function f() {
     let e = l.uh.useSetting(),
         { analyticsLocations: t } = (0, s.Ay)(),

@@ -1,4 +1,7 @@
-s.d(e, { default: () => p }), s(896048);
+s.d(e, {
+    default: () => p,
+}),
+    s(896048);
 var a = s(627968),
     n = s(64700),
     i = s(110259),
@@ -7,6 +10,7 @@ var a = s(627968),
     o = s(181658),
     c = s(985018),
     u = s(222872);
+
 function p(t) {
     let {
             transitionState: e,

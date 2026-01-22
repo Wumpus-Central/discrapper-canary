@@ -11,7 +11,7 @@ n.d(t, {
     n(896048);
 var r = n(627968),
     i = n(64700),
-    a = n(432022),
+    a = n(108531),
     s = n(311907),
     o = n(397927),
     l = n(59520);
@@ -39,6 +39,7 @@ var c = n(87719),
     R = n(545986),
     w = n(654487),
     P = n(985018);
+
 function D(e) {
     let { quest: t, questContent: n, questContentPosition: r, questContentRowIndex: a, sourceQuestContent: o } = e,
         l = (0, s.bG)([u.default], () => u.default.getCurrentUser()),
@@ -80,8 +81,12 @@ let x = (e) => {
             u = (e) => {
                 (c.current = !0),
                     l({
-                        from: { rotate: "0deg" },
-                        to: { rotate: "360deg" },
+                        from: {
+                            rotate: "0deg",
+                        },
+                        to: {
+                            rotate: "360deg",
+                        },
                         config: {
                             tension: 750,
                             mass: 5,
@@ -128,6 +133,7 @@ let x = (e) => {
             children: i,
         });
     };
+
 function j(e) {
     return e.config.features.includes(w.Li.START_QUEST_CTA)
         ? (0, I.vl)(e)
@@ -149,6 +155,7 @@ function j(e) {
               questContentCTA: p.Cy.ACCEPT_QUEST,
           };
 }
+
 function M(e) {
     var t;
     let {
@@ -169,7 +176,9 @@ function M(e) {
             questContentRowIndex: o,
             sourceQuestContent: d,
         }),
-        m = (0, b.RR)({ quest: n }),
+        m = (0, b.RR)({
+            quest: n,
+        }),
         g = (0, b.fc)(n),
         E = null == (t = (0, _.vU)()) ? void 0 : t.getId(),
         { launchInGameActivity: y } = (0, b.zW)(n),
@@ -235,7 +244,9 @@ function M(e) {
                         tooltipText: null,
                         onClick: () =>
                             (0, v.se)(
-                                { quest: n },
+                                {
+                                    quest: n,
+                                },
                                 {
                                     content: a,
                                     ctaContent: p.Cy.CONNECT_CONSOLE,
@@ -296,8 +307,11 @@ function M(e) {
         }
     }, [r, c, m, l, h, n, a, s, o, E, g, u, y, d, O]);
 }
+
 function k() {
-    let { enableNewRequestBehavior: e } = g.A.useConfig({ location: "useQuestBarQuest" }),
+    let { enableNewRequestBehavior: e } = g.A.useConfig({
+            location: "useQuestBarQuest",
+        }),
         t = (0, y.A)(m.yW.DESKTOP_ACCOUNT_PANEL_AREA),
         n = (0, s.bG)([h.A], () => {
             var e, t;
@@ -311,12 +325,17 @@ function k() {
         });
     return e ? t : n;
 }
+
 function U(e) {
     var t;
     let { location: n, quest: r } = e,
-        i = (0, E.H)({ location: n }),
+        i = (0, E.H)({
+            location: n,
+        }),
         a = (0, b.LS)(r),
-        { premiumSubscription: o } = (0, s.cf)([d.A], () => ({ premiumSubscription: d.A.getPremiumSubscription() })),
+        { premiumSubscription: o } = (0, s.cf)([d.A], () => ({
+            premiumSubscription: d.A.getPremiumSubscription(),
+        })),
         l = (0, s.bG)([h.A], () => null != h.A.questDeliveryOverride);
     if (null == r)
         return {
@@ -355,6 +374,7 @@ function U(e) {
                   reason: "quest_not_eligible_for_quests",
               };
 }
+
 function G(e) {
     let { location: t } = e,
         { isQuestBarVisible: n } = U({
@@ -374,6 +394,7 @@ let V = {
     leading: !0,
     trailing: !1,
 };
+
 function F(e) {
     let { isShareable: t, questId: n, trackingCtx: r } = e;
     return (0, l.I)(
@@ -382,7 +403,7 @@ function F(e) {
                 ((0, O.Xm)(n, r),
                 (0, o.showToast)((0, o.createToast)(P.intl.string(P.t["+5kSoW"]), o.ToastType.SUCCESS)));
         }, [t, n, r]),
-        3000,
+        3e3,
         [],
         V,
     );

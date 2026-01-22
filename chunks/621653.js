@@ -1,8 +1,13 @@
-l.d(t, { g: () => i }), l(896048), l(321073);
+l.d(t, {
+    g: () => i,
+}),
+    l(896048),
+    l(321073);
 var n = l(64700),
     r = l(417597),
     s = l(73153),
     a = l(248352);
+
 function i() {
     let e = n.useRef(new Map()),
         t = (0, r.bG)([a.A], () => a.A.getUserDiscounts());

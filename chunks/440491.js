@@ -16,7 +16,8 @@ n.d(t, {
 });
 var r = n(376472),
     i = n(142922);
-let a = 3600000;
+let a = 36e5;
+
 function s(e, t) {
     let n = e.copy(),
         r = "hour" in n ? b(n, t) : 0;
@@ -45,36 +46,44 @@ function s(e, t) {
         n
     );
 }
+
 function o(e, t) {
     var n, r;
     (null == (n = (r = e.calendar).isInverseEra) ? void 0 : n.call(r, e)) && (t = -t), (e.year += t);
 }
+
 function l(e) {
     for (; e.month < 1; ) o(e, -1), (e.month += e.calendar.getMonthsInYear(e));
     let t = 0;
     for (; e.month > (t = e.calendar.getMonthsInYear(e)); ) (e.month -= t), o(e, 1);
 }
+
 function c(e) {
     for (; e.day < 1; ) e.month--, l(e), (e.day += e.calendar.getDaysInMonth(e));
     for (; e.day > e.calendar.getDaysInMonth(e); ) (e.day -= e.calendar.getDaysInMonth(e)), e.month++, l(e);
 }
+
 function u(e) {
     (e.month = Math.max(1, Math.min(e.calendar.getMonthsInYear(e), e.month))),
         (e.day = Math.max(1, Math.min(e.calendar.getDaysInMonth(e), e.day)));
 }
+
 function d(e) {
     e.calendar.constrainDate && e.calendar.constrainDate(e),
         (e.year = Math.max(1, Math.min(e.calendar.getYearsInEra(e), e.year))),
         u(e);
 }
+
 function f(e) {
     let t = {};
     for (let n in e) "number" == typeof e[n] && (t[n] = -e[n]);
     return t;
 }
+
 function p(e, t) {
     return s(e, f(t));
 }
+
 function _(e, t) {
     let n = e.copy();
     return (
@@ -86,6 +95,7 @@ function _(e, t) {
         n
     );
 }
+
 function h(e, t) {
     let n = e.copy();
     return (
@@ -97,9 +107,10 @@ function h(e, t) {
         n
     );
 }
+
 function m(e) {
-    (e.second += Math.floor(e.millisecond / 1000)),
-        (e.millisecond = E(e.millisecond, 1000)),
+    (e.second += Math.floor(e.millisecond / 1e3)),
+        (e.millisecond = E(e.millisecond, 1e3)),
         (e.minute += Math.floor(e.second / 60)),
         (e.second = E(e.second, 60)),
         (e.hour += Math.floor(e.minute / 60)),
@@ -107,16 +118,19 @@ function m(e) {
     let t = Math.floor(e.hour / 24);
     return (e.hour = E(e.hour, 24)), t;
 }
+
 function g(e) {
-    (e.millisecond = Math.max(0, Math.min(e.millisecond, 1000))),
+    (e.millisecond = Math.max(0, Math.min(e.millisecond, 1e3))),
         (e.second = Math.max(0, Math.min(e.second, 59))),
         (e.minute = Math.max(0, Math.min(e.minute, 59))),
         (e.hour = Math.max(0, Math.min(e.hour, 23)));
 }
+
 function E(e, t) {
     let n = e % t;
     return n < 0 && (n += t), n;
 }
+
 function b(e, t) {
     return (
         (e.hour += t.hours || 0),
@@ -126,13 +140,16 @@ function b(e, t) {
         m(e)
     );
 }
+
 function y(e, t) {
     let n = e.copy();
     return b(n, t), n;
 }
+
 function O(e, t) {
     return y(e, f(t));
 }
+
 function A(e, t, n, r) {
     let i = e.copy();
     switch (t) {
@@ -161,6 +178,7 @@ function A(e, t, n, r) {
     }
     return e.calendar.balanceDate && e.calendar.balanceDate(i), d(i), i;
 }
+
 function v(e, t, n, r) {
     let i = e.copy();
     switch (t) {
@@ -189,6 +207,7 @@ function v(e, t, n, r) {
     }
     return i;
 }
+
 function S(e, t, n, r, i = !1) {
     if (i) {
         (e += Math.sign(t)) < n && (e = r);
@@ -197,6 +216,7 @@ function S(e, t, n, r, i = !1) {
     } else (e += t) < n ? (e = r - (n - e - 1)) : e > r && (e = n + (e - r - 1));
     return e;
 }
+
 function I(e, t) {
     let n;
     if (
@@ -214,15 +234,17 @@ function I(e, t) {
         n = (0, r.Tr)(i, e.timeZone);
     } else n = (0, r.oU)(e) - e.offset;
     (n += t.milliseconds || 0),
-        (n += 1000 * (t.seconds || 0)),
-        (n += 60000 * (t.minutes || 0)),
-        (n += 3600000 * (t.hours || 0));
+        (n += 1e3 * (t.seconds || 0)),
+        (n += 6e4 * (t.minutes || 0)),
+        (n += 36e5 * (t.hours || 0));
     let i = (0, r.Yd)(n, e.timeZone);
     return (0, r.yP)(i, e.calendar);
 }
+
 function T(e, t) {
     return I(e, f(t));
 }
+
 function C(e, t, n, s) {
     switch (t) {
         case "hour": {
@@ -233,11 +255,21 @@ function C(e, t, n, s) {
                 (t = 12 * !!n), (o = n ? 23 : 11);
             }
             let l = (0, r.tR)(e),
-                c = (0, r.yP)(h(l, { hour: t }), new (0, i.FG)()),
+                c = (0, r.yP)(
+                    h(l, {
+                        hour: t,
+                    }),
+                    new (0, i.FG)(),
+                ),
                 u = [(0, r.Tr)(c, e.timeZone, "earlier"), (0, r.Tr)(c, e.timeZone, "later")].filter(
                     (t) => (0, r.Yd)(t, e.timeZone).day === c.day,
                 )[0],
-                d = (0, r.yP)(h(l, { hour: o }), new (0, i.FG)()),
+                d = (0, r.yP)(
+                    h(l, {
+                        hour: o,
+                    }),
+                    new (0, i.FG)(),
+                ),
                 f = [(0, r.Tr)(d, e.timeZone, "earlier"), (0, r.Tr)(d, e.timeZone, "later")]
                     .filter((t) => (0, r.Yd)(t, e.timeZone).day === d.day)
                     .pop(),
@@ -265,6 +297,7 @@ function C(e, t, n, s) {
             throw Error("Unsupported field " + t);
     }
 }
+
 function N(e, t, n) {
     let i = (0, r.tR)(e),
         a = h(_(i, t), t);

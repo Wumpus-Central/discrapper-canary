@@ -1,4 +1,6 @@
-r.d(t, { A: () => b });
+r.d(t, {
+    A: () => b,
+});
 var n = r(627968),
     o = r(64700),
     i = r(816885),
@@ -8,6 +10,7 @@ var n = r(627968),
     u = r(201672),
     d = r(833871),
     p = r.n(d);
+
 function f(e) {
     return (f =
         "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
@@ -20,11 +23,13 @@ function f(e) {
                       : typeof e;
               })(e);
 }
+
 function l(e, t) {
     (null == t || t > e.length) && (t = e.length);
     for (var r = 0, n = Array(t); r < t; r++) n[r] = e[r];
     return n;
 }
+
 function h(e, t) {
     return (h =
         Object.setPrototypeOf ||
@@ -32,10 +37,12 @@ function h(e, t) {
             return (e.__proto__ = t), e;
         })(e, t);
 }
+
 function v(e) {
     if (void 0 === e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return e;
 }
+
 function y(e) {
     return (y = Object.setPrototypeOf
         ? Object.getPrototypeOf
@@ -43,6 +50,7 @@ function y(e) {
               return e.__proto__ || Object.getPrototypeOf(e);
           })(e);
 }
+
 function g(e, t, r) {
     return (
         t in e
@@ -56,6 +64,7 @@ function g(e, t, r) {
         e
     );
 }
+
 function b(e) {
     var t = e.DecoratedComponent,
         r = e.createHandler,
@@ -104,6 +113,7 @@ function b(e) {
                             })(this, e)
                         );
                     });
+
             function O(e) {
                 var t;
                 if (!(this instanceof O)) throw TypeError("Cannot call a class as a function");
@@ -252,9 +262,9 @@ function b(e) {
                                 (this.handlerId = n),
                                     this.handlerMonitor.receiveHandlerId(n),
                                     this.handlerConnector.receiveHandlerId(n);
-                                var i = this.manager
-                                    .getMonitor()
-                                    .subscribeToStateChange(this.handleChange, { handlerIds: [n] });
+                                var i = this.manager.getMonitor().subscribeToStateChange(this.handleChange, {
+                                    handlerIds: [n],
+                                });
                                 this.disposable.setDisposable(new c.ke(new c.jG(i), new c.jG(o)));
                             }
                         },

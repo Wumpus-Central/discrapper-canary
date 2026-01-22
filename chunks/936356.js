@@ -1,4 +1,7 @@
-n.d(t, { A: () => d }), n(896048);
+n.d(t, {
+    A: () => d,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(397927),
@@ -32,7 +35,10 @@ let d = function (e) {
                             i.Fragment,
                             {
                                 children: [
-                                    t > 0 && (0, r.jsx)("hr", { className: u.B }),
+                                    t > 0 &&
+                                        (0, r.jsx)("hr", {
+                                            className: u.B,
+                                        }),
                                     (0, r.jsx)(o.q, {
                                         id: a,
                                         children: e.heading,
@@ -48,7 +54,9 @@ let d = function (e) {
                             t,
                         );
                     }),
-                    (0, r.jsx)("hr", { className: u.B }),
+                    (0, r.jsx)("hr", {
+                        className: u.B,
+                    }),
                     (0, r.jsx)("div", {
                         className: u.W,
                         children: (0, r.jsx)(l.Button, {
@@ -97,7 +105,9 @@ let d = function (e) {
                     {
                         buttonRef: t,
                         size: "sm",
-                        text: c.intl.formatToPlainString(c.t.CEfkXl, { numSelectedFilters: n.length }),
+                        text: c.intl.formatToPlainString(c.t.CEfkXl, {
+                            numSelectedFilters: n.length,
+                        }),
                         icon: l.RgP,
                         iconPosition: "end",
                         variant: "secondary",

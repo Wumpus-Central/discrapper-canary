@@ -11,8 +11,18 @@ var r = n(608299),
 async function o(e, t, n) {
     let r = (0, i.$P)(t, n),
         l = await fetch(n);
-    return c(e, t, new File([await l.blob()], r, { type: "image/gif" })), n;
+    return (
+        c(
+            e,
+            t,
+            new File([await l.blob()], r, {
+                type: "image/gif",
+            }),
+        ),
+        n
+    );
 }
+
 function c(e, t, n) {
     let i = {
         id: t,

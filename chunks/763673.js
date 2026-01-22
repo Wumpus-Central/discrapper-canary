@@ -1,10 +1,13 @@
-n.d(t, { r: () => c });
+n.d(t, {
+    r: () => c,
+});
 var r = n(64700),
     i = n(311907),
     a = n(775602),
     s = n(289397),
     o = n(723702),
     l = n(581057);
+
 function c(e) {
     let { getImgCache: t } = (0, l.TW)(),
         n = (0, i.bG)([a.A], () => a.A.useReducedMotion);

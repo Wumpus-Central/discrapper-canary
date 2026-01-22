@@ -1,4 +1,6 @@
-n.d(t, { P: () => l });
+n.d(t, {
+    P: () => l,
+});
 let r = (0, n(945810).mj)({
     name: "2025-11-message-context-menu",
     kind: "user",
@@ -25,8 +27,11 @@ let r = (0, n(945810).mj)({
         },
     },
 });
+
 function l(e) {
-    let t = r.useConfig({ location: e });
+    let t = r.useConfig({
+        location: e,
+    });
     return {
         forceIconsLeft: t.forceIconsLeft,
         reorderMessageMenuItems: t.reorderMessageMenuItems,

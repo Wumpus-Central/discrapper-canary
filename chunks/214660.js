@@ -40,10 +40,14 @@ let y = (e) => {
               : j
                 ? ((C = g.intl.string(g.t.vdSOpz)), (S = g.intl.string(g.t.lm1UKt)))
                 : E
-                  ? ((C = g.intl.formatToPlainString(g.t.v1ktYb, { min: h.$8o.MEMBER_AGE })),
+                  ? ((C = g.intl.formatToPlainString(g.t.v1ktYb, {
+                        min: h.$8o.MEMBER_AGE,
+                    })),
                     (S = g.intl.string(g.t.BddRzS)))
                   : x &&
-                    ((C = g.intl.formatToPlainString(g.t.sncw41, { min: h.$8o.ACCOUNT_AGE })),
+                    ((C = g.intl.formatToPlainString(g.t.sncw41, {
+                        min: h.$8o.ACCOUNT_AGE,
+                    })),
                     (S = g.intl.string(g.t.BddRzS)))),
     null == _ || null == C)
         ? null
@@ -129,10 +133,17 @@ let y = (e) => {
                                                                                     });
                                                                             }
                                                                             return e;
-                                                                        })({ reason: d.d.GUILD_PHONE_REQUIRED }, t),
+                                                                        })(
+                                                                            {
+                                                                                reason: d.d.GUILD_PHONE_REQUIRED,
+                                                                            },
+                                                                            t,
+                                                                        ),
                                                                     );
                                                             },
-                                                            { modalKey: b.V },
+                                                            {
+                                                                modalKey: b.V,
+                                                            },
                                                         );
                                                     else if (j) {
                                                         var e;

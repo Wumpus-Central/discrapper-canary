@@ -1,4 +1,6 @@
-n.d(t, { A: () => p });
+n.d(t, {
+    A: () => p,
+});
 var l = n(627968),
     a = n(64700),
     r = n(397927),
@@ -8,6 +10,7 @@ var l = n(627968),
     o = n(652215),
     d = n(985018),
     u = n(101386);
+
 function p(e) {
     let { application: t, className: n } = e,
         p = a.useCallback((e) => {
@@ -16,7 +19,9 @@ function p(e) {
                 category_id: e.id,
                 current_page: s.ev.APPLICATION,
             }),
-                (0, c.JX)({ categoryId: e.id });
+                (0, c.JX)({
+                    categoryId: e.id,
+                });
         }, []);
     return null == t.categories || 0 === t.categories.length
         ? null

@@ -10,7 +10,8 @@ var r = n(838677),
     a = n(998304),
     s = n(515718),
     o = n(791059);
-let l = new Set(["\u2122", "\u2122️", "\xA9", "\xA9️", "\xAE", "\xAE️"]);
+let l = new Set(["™", "™️", "\xa9", "\xa9️", "\xae", "\xae️"]);
+
 function c(e) {
     if (l.has(e)) return "";
     try {
@@ -20,9 +21,11 @@ function c(e) {
         return console.warn(t, "no emoji for", e), "";
     }
 }
+
 function u(e) {
     return e;
 }
+
 function d(e) {
     let { palette: t, shouldProcessMobileColors: n = !1 } = e;
     return t;
@@ -46,6 +49,7 @@ async function f(e) {
               return (0, a.Ob)(t, n, r);
           });
 }
+
 function p(e) {
     let { channelId: t, messageId: n, emoji: r } = e;
 }

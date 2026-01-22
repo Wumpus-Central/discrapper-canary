@@ -1,5 +1,7 @@
 n.r(r),
-    n.d(r, { default: () => t }),
+    n.d(r, {
+        default: () => t,
+    }),
     n(896048),
     n(693327),
     n(554719),
@@ -58,7 +60,9 @@ let t = async function () {
         ).href;
     } catch (e) {}
     r = async (e) => {
-        var r = await fetch(e, { credentials: "same-origin" });
+        var r = await fetch(e, {
+            credentials: "same-origin",
+        });
         if (r.ok) return r.arrayBuffer();
         throw Error(r.status + " : " + r.url);
     };
@@ -66,6 +70,7 @@ let t = async function () {
         _ = console.error.bind(console),
         I = !1,
         W = !1;
+
     function E() {
         var r = w.buffer;
         (e.HEAP8 = u = new Int8Array(r)),
@@ -79,6 +84,7 @@ let t = async function () {
             (b = new BigInt64Array(r)),
             new BigUint64Array(r);
     }
+
     function R(r) {
         null == (n = e.onAbort) || n.call(e, r),
             _((r = "Aborted(" + r + ")")),
@@ -109,7 +115,9 @@ let t = async function () {
     async function C(e, r, n) {
         if (!e)
             try {
-                var t = fetch(r, { credentials: "same-origin" });
+                var t = fetch(r, {
+                    credentials: "same-origin",
+                });
                 return await WebAssembly.instantiateStreaming(t, n);
             } catch (e) {
                 _("wasm streaming compile failed: ".concat(e)), _("falling back to ArrayBuffer instantiation");
@@ -150,7 +158,9 @@ let t = async function () {
                 A
             );
         }
-        var t = { a: J };
+        var t = {
+            a: J,
+        };
         return e.instantiateWasm
             ? new Promise((n, i) => {
                   e.instantiateWasm(t, (e, t) => {
@@ -377,10 +387,10 @@ let t = async function () {
     var J = {
         c: (e) => {
             var r = c.length;
-            if ((e >>>= 0) > 2147483648) return !1;
+            if ((e >>>= 0) > 0x80000000) return !1;
             for (var n = 1; n <= 4; n *= 2) {
                 var t = r * (1 + 0.2 / n);
-                if (((t = Math.min(t, e + 100663296)), G(Math.min(2147483648, M(Math.max(e, t), 65536))))) return !0;
+                if (((t = Math.min(t, e + 0x6000000)), G(Math.min(0x80000000, M(Math.max(e, t), 65536))))) return !0;
             }
             return !1;
         },
@@ -398,6 +408,7 @@ let t = async function () {
     };
     if (((A = await F()), e.preRun))
         for ("function" == typeof e.preRun && (e.preRun = [e.preRun]); e.preRun.length; ) T(e.preRun.shift());
+
     function K() {
         var r;
         if (((e.calledRun = !0), !I)) {

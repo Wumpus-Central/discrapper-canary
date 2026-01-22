@@ -1,4 +1,8 @@
-n.d(t, { A: () => C }), n(65821), n(896048);
+n.d(t, {
+    A: () => C,
+}),
+    n(65821),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -17,6 +21,7 @@ var r = n(627968),
     A = n(652215),
     y = n(790782),
     O = n(728444);
+
 function j(e, t, n) {
     return (
         t in e
@@ -30,6 +35,7 @@ function j(e, t, n) {
         e
     );
 }
+
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -46,6 +52,7 @@ function v(e) {
     }
     return e;
 }
+
 function x(e, t) {
     let n = t.getGuildId();
     if (null == n) throw Error("TextChannel, preloadChannel: Channel does not have a guildId");
@@ -62,7 +69,9 @@ class E extends g.Ay {
                 canReorderChannel: s,
             } = this.props,
             o = (0, r.jsx)("li", {
-                className: a()(this.getClassName(), { [O.r9]: this.isDisabled() }),
+                className: a()(this.getClassName(), {
+                    [O.r9]: this.isDisabled(),
+                }),
                 "data-dnd-name": e.name,
                 children: (0, r.jsxs)(m.Ay, {
                     className: O.Ki,
@@ -72,7 +81,9 @@ class E extends g.Ay {
                     onMouseDown: x,
                     onContextMenu: this.handleContextMenu,
                     connectDragPreview: s ? i : null,
-                    "aria-label": (0, d.Ay)({ channel: e }),
+                    "aria-label": (0, d.Ay)({
+                        channel: e,
+                    }),
                     resolvedUnreadSetting: y.e.ONLY_MENTIONS,
                     children: [this.renderInviteButton(), this.renderEditButton()],
                 }),

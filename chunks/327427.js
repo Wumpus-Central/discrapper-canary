@@ -1,4 +1,6 @@
-n.d(t, { A: () => A });
+n.d(t, {
+    A: () => A,
+});
 var r = n(627968),
     i = n(397927),
     l = n(501592),
@@ -16,11 +18,14 @@ var r = n(627968),
     x = n(652215),
     h = n(985018),
     j = n(367571);
+
 function O(e) {
     let { payoutsByPeriod: t, team: n } = e,
         l = (0, o.gN)()
             ? null
-            : h.intl.format(h.t.d1sCiW, { url: null != n ? x.X7G.DEVELOPER_PORTAL_PAYOUT_SETTINGS(n.id) : null });
+            : h.intl.format(h.t.d1sCiW, {
+                  url: null != n ? x.X7G.DEVELOPER_PORTAL_PAYOUT_SETTINGS(n.id) : null,
+              });
     return 0 === t.length
         ? (0, r.jsxs)(i.Text, {
               variant: "text-sm/medium",
@@ -32,14 +37,21 @@ function O(e) {
                       variant: "text-sm/medium",
                       children: [h.intl.string(h.t["9Ub4KY"]), " ", l],
                   }),
-                  (0, r.jsx)(i.hKd, { size: 16 }),
-                  (0, r.jsx)(g.Ay, { payoutsByPeriod: t }),
+                  (0, r.jsx)(i.hKd, {
+                      size: 16,
+                  }),
+                  (0, r.jsx)(g.Ay, {
+                      payoutsByPeriod: t,
+                  }),
               ],
           });
 }
+
 function y(e) {
     let { guildId: t, totalPayoutsForPeriod: n } = e,
-        i = (0, c.uP)(t, { includeSoftDeleted: !0 });
+        i = (0, c.uP)(t, {
+            includeSoftDeleted: !0,
+        });
     return null == n && 0 === i.length
         ? null
         : (0, r.jsx)(f.A, {
@@ -66,14 +78,18 @@ let v = (e) => {
                                       insightsURL: x.X7G.DEVELOPER_PORTAL_GUILD_ANALYTICS_ROLE_SUBSCRIPTION(a),
                                   }),
                               }),
-                              (0, r.jsx)(i.hKd, { size: 32 }),
+                              (0, r.jsx)(i.hKd, {
+                                  size: 32,
+                              }),
                           ],
                       }),
                   (0, r.jsxs)(i.nVY, {
                       label: h.intl.string(h.t.ofmOzb),
                       className: j.gy,
                       children: [
-                          (0, r.jsx)(i.hKd, { size: 8 }),
+                          (0, r.jsx)(i.hKd, {
+                              size: 8,
+                          }),
                           (0, r.jsxs)("div", {
                               className: j.Zs,
                               children: [
@@ -99,7 +115,9 @@ let v = (e) => {
                                               }),
                                           ],
                                       }),
-                                      additionalContent: (0, r.jsx)(b.u, { value: E.subscriberChange }),
+                                      additionalContent: (0, r.jsx)(b.u, {
+                                          value: E.subscriberChange,
+                                      }),
                                   }),
                               ],
                           }),
@@ -137,6 +155,7 @@ let v = (e) => {
               ],
           });
 };
+
 function A(e) {
     return (0, r.jsx)(a.H, {
         guildId: e.guildId,

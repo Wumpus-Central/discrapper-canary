@@ -1,4 +1,8 @@
-n.d(t, { A: () => v }), n(896048), n(492834);
+n.d(t, {
+    A: () => v,
+}),
+    n(896048),
+    n(492834);
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -17,6 +21,7 @@ var r = n(627968),
     E = n(783419),
     b = n(985018),
     y = n(410280);
+
 function O(e) {
     var t;
     let { account: n, refreshed: s, handleRefresh: l } = e,
@@ -62,7 +67,9 @@ function O(e) {
                 {
                     variant: "text-xs/normal",
                     color: "text-default",
-                    children: b.intl.format(b.t.Up2ni7, { helpdeskUrl: m.A.getArticleURL(g.MVz.CONNECTION_DETAILS) }),
+                    children: b.intl.format(b.t.Up2ni7, {
+                        helpdeskUrl: m.A.getArticleURL(g.MVz.CONNECTION_DETAILS),
+                    }),
                 },
                 "label",
             )),
@@ -76,17 +83,30 @@ function O(e) {
                     ? void 0
                     : A.map((e, t) =>
                           (0, r.jsxs)(r.Fragment, {
-                              children: [e, t < A.length - 1 ? (0, r.jsx)("span", { className: y.Om }) : null],
+                              children: [
+                                  e,
+                                  t < A.length - 1
+                                      ? (0, r.jsx)("span", {
+                                            className: y.Om,
+                                        })
+                                      : null,
+                              ],
                           }),
                       ),
-                null != A && A.length > 0 && null != v ? (0, r.jsx)("div", { className: y.Om }) : null,
+                null != A && A.length > 0 && null != v
+                    ? (0, r.jsx)("div", {
+                          className: y.Om,
+                      })
+                    : null,
                 null != v
                     ? (0, r.jsx)(
                           o.Text,
                           {
                               variant: "text-xs/normal",
                               color: "text-default",
-                              children: b.intl.format(b.t["9rfonh"], { date: v }),
+                              children: b.intl.format(b.t["9rfonh"], {
+                                  date: v,
+                              }),
                           },
                           "member-since",
                       )
@@ -111,11 +131,13 @@ function O(e) {
         })
     );
 }
+
 function A(e) {
     let { account: t, handleRefresh: n, refreshedAccountIds: a } = e,
         [d, p] = i.useState(t.visibility),
         [_, h] = i.useState(t.metadataVisibility),
         m = (0, c.Ay)();
+
     function g(e) {
         let { verified: n } = t,
             r = +!!e;
@@ -129,6 +151,7 @@ function A(e) {
         }
         p(r), l.A.setVisibility(t.type, t.id, r);
     }
+
     function E(e) {
         let { verified: n } = t,
             r = +!!e;
@@ -190,6 +213,7 @@ function A(e) {
         ],
     });
 }
+
 function v() {
     let e = (0, a.bG)([h.A], () => h.A.getAccounts()),
         t = i.useMemo(() => e.filter((e) => u.A.isSupported(e.type)), [e]),

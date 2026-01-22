@@ -17,6 +17,7 @@ var i = n(873298),
     p = n(985018),
     _ = n(536482),
     h = n(208746);
+
 function m() {
     let e = c.tz.useSetting();
     return (0, r.jsxs)("div", {
@@ -45,6 +46,7 @@ function m() {
         ],
     });
 }
+
 function g(e) {
     let { className: t } = e;
     return (0, r.jsxs)(u.A, {
@@ -52,15 +54,22 @@ function g(e) {
         title: p.intl.string(p.t.Cq98yL),
         children: [
             (0, r.jsx)(y, {}),
-            (0, r.jsx)(a.cGx, { gap: 32 }),
+            (0, r.jsx)(a.cGx, {
+                gap: 32,
+            }),
             (0, r.jsx)(E, {}),
-            (0, r.jsx)(a.cGx, { gap: 32 }),
+            (0, r.jsx)(a.cGx, {
+                gap: 32,
+            }),
             (0, r.jsx)(b, {}),
-            (0, r.jsx)(a.cGx, { gap: 32 }),
+            (0, r.jsx)(a.cGx, {
+                gap: 32,
+            }),
             (0, r.jsx)(O, {}),
         ],
     });
 }
+
 function E() {
     let e = c._Z.useSetting(),
         t = (e) => {
@@ -94,6 +103,7 @@ function E() {
         ],
     });
 }
+
 function b() {
     let e = c.e.useSetting(),
         t = c.UM.useSetting();
@@ -120,6 +130,7 @@ function b() {
         }),
     });
 }
+
 function y() {
     let e = c.tz.useSetting(),
         t = l.isPlatformEmbedded ? p.intl.string(_.default.UQ9RHJ) : p.intl.string(p.t.oKqC4t);
@@ -128,7 +139,9 @@ function y() {
         children: (0, r.jsxs)(a.BJc, {
             gap: 32,
             children: [
-                (0, r.jsx)("div", { children: p.intl.string(_.default.t2YsrV) }),
+                (0, r.jsx)("div", {
+                    children: p.intl.string(_.default.t2YsrV),
+                }),
                 (0, r.jsx)(a.dOG, {
                     label: p.intl.string(_.default.WhdCGP),
                     description: t,
@@ -140,6 +153,7 @@ function y() {
         }),
     });
 }
+
 function O() {
     return (0, r.jsx)(o.x, {
         setting: d.H.ACTIVITY_PRIVACY_TOS,

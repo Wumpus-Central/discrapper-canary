@@ -1,4 +1,8 @@
-n.d(t, { A: () => h }), n(228524), n(896048);
+n.d(t, {
+    A: () => h,
+}),
+    n(228524),
+    n(896048);
 var l = n(627968),
     r = n(64700),
     a = n(311907),
@@ -14,6 +18,7 @@ var l = n(627968),
     x = n(652215),
     g = n(985018),
     f = n(71561);
+
 function v(e) {
     let { title: t, description: n, onButtonClick: a, trackSettingsUpsellsAction: i } = e,
         [o, d] = r.useState(!1);
@@ -32,6 +37,7 @@ function v(e) {
         })
     );
 }
+
 function h(e) {
     let { settingsUpsells: t, channelId: n, onModalClose: r, reportId: s, reportType: c, reportSubType: h } = e,
         j = (0, a.bG)([m.A], () => m.A.getChannel(n)),
@@ -66,7 +72,9 @@ function h(e) {
                   (0, l.jsx)(i.QWc, {
                       text: g.intl.string(g.t.olebGx),
                       onClick: () => {
-                          (0, u.openUserSettings)(d.X.CONTENT_AND_SOCIAL_PANEL, { section: x.nc_.CONTENT_AND_SOCIAL }),
+                          (0, u.openUserSettings)(d.X.CONTENT_AND_SOCIAL_PANEL, {
+                              section: x.nc_.CONTENT_AND_SOCIAL,
+                          }),
                               r(),
                               o.Ay.trackWithMetadata(x.HAw.IAR_SETTINGS_UPSELLS_ACTION, {
                                   report_id: s,

@@ -1,4 +1,7 @@
-n.d(t, { F: () => a }), n(228524);
+n.d(t, {
+    F: () => a,
+}),
+    n(228524);
 var r = n(627968);
 n(64700);
 var i = n(106236);
@@ -20,7 +23,15 @@ let a = {
                         label: u,
                         description: d,
                     } = e,
-                    f = s > 0 ? Array.from({ length: s }, (e, r) => Math.floor(t + (r / (s - 1)) * (n - t))) : void 0;
+                    f =
+                        s > 0
+                            ? Array.from(
+                                  {
+                                      length: s,
+                                  },
+                                  (e, r) => Math.floor(t + (r / (s - 1)) * (n - t)),
+                              )
+                            : void 0;
                 return (0, r.jsx)(
                     i.A,
                     {

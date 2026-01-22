@@ -1,4 +1,6 @@
-n.d(t, { A: () => b });
+n.d(t, {
+    A: () => b,
+});
 var i = n(627968);
 n(64700);
 var r = n(684013),
@@ -19,6 +21,7 @@ var r = n(684013),
     O = n(672396),
     E = n(652215),
     v = n(985018);
+
 function b(e, t, n, b) {
     var S;
     if (h.A.isNotificationDisabled(O.KS.TextChat)) return (0, c.Ak)(u.cH, u.pD), null;

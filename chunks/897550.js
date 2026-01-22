@@ -1,4 +1,8 @@
-n.d(t, { A: () => E }), n(733351), n(896048);
+n.d(t, {
+    A: () => E,
+}),
+    n(733351),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -42,7 +46,11 @@ class _ extends i.PureComponent {
         let { systemRequirements: n } = e,
             { selectedOperatingSystem: r } = t,
             i = Object.keys(n);
-        return i.includes(r) ? null : { selectedOperatingSystem: i[0] };
+        return i.includes(r)
+            ? null
+            : {
+                  selectedOperatingSystem: i[0],
+              };
     }
     renderTabs() {
         let { pageSize: e, systemRequirements: t } = this.props,
@@ -53,7 +61,9 @@ class _ extends i.PureComponent {
             : (0, r.jsxs)(c.A, {
                   className: g.vR,
                   children: [
-                      (0, r.jsx)("div", { className: g.me }),
+                      (0, r.jsx)("div", {
+                          className: g.me,
+                      }),
                       i.map((t) =>
                           (0, r.jsx)(
                               b,
@@ -94,7 +104,9 @@ class _ extends i.PureComponent {
                 value:
                     null != e.ram
                         ? A.intl.formatToPlainString(A.t.RNRSl6, {
-                              size: (0, u.Xq)(1000 * e.ram, { showDecimalForGB: !1 }),
+                              size: (0, u.Xq)(1e3 * e.ram, {
+                                  showDecimalForGB: !1,
+                              }),
                           })
                         : null,
             },
@@ -104,7 +116,12 @@ class _ extends i.PureComponent {
             },
             {
                 key: A.intl.string(A.t["L+x5wB"]),
-                value: null != e.disk ? (0, u.Xq)(1000 * e.disk, { showDecimalForGB: !1 }) : null,
+                value:
+                    null != e.disk
+                        ? (0, u.Xq)(1e3 * e.disk, {
+                              showDecimalForGB: !1,
+                          })
+                        : null,
             },
             {
                 key: A.intl.string(A.t["Ghp2/B"]),
@@ -163,7 +180,13 @@ class _ extends i.PureComponent {
     render() {
         return (0, r.jsxs)("div", {
             className: this.props.className,
-            children: [(0, r.jsx)(o.A, { children: A.intl.string(A.t.IkOAol) }), this.renderTabs(), this.renderBody()],
+            children: [
+                (0, r.jsx)(o.A, {
+                    children: A.intl.string(A.t.IkOAol),
+                }),
+                this.renderTabs(),
+                this.renderBody(),
+            ],
         });
     }
     constructor(e) {
@@ -178,13 +201,17 @@ class _ extends i.PureComponent {
                       })
                     : (e[t] = n);
             })(this, "handleSelectOperatingSystem", (e) => {
-                this.setState({ selectedOperatingSystem: e });
+                this.setState({
+                    selectedOperatingSystem: e,
+                });
             });
         const t = (0, p.getPlatform)(),
             n = Object.keys(e.systemRequirements);
         let r = n[0];
         for (const e of n) m[e] === t && (r = e);
-        this.state = { selectedOperatingSystem: r };
+        this.state = {
+            selectedOperatingSystem: r,
+        };
     }
 }
 let E = _;

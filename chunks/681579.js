@@ -5,6 +5,7 @@ n.d(t, {
     n(896048);
 var l = n(73153),
     i = n(219271);
+
 function s(e) {
     let { omitUserIds: t, guild: n, channel: s, applicationId: r, inviteTargetType: a } = e;
     return (0, i.u)().then(() => {
@@ -18,6 +19,7 @@ function s(e) {
         });
     });
 }
+
 function r(e) {
     l.h.dispatch({
         type: "INVITE_SUGGESTIONS_SEARCH",

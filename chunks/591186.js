@@ -1,8 +1,12 @@
-n.d(t, { A: () => c }), n(896048);
+n.d(t, {
+    A: () => c,
+}),
+    n(896048);
 var r = n(735438),
     i = n.n(r),
     a = n(205693),
     s = n(687658);
+
 function o(e, t, n) {
     return (
         t in e
@@ -16,7 +20,7 @@ function o(e, t, n) {
         e
     );
 }
-let l = 1000;
+let l = 1e3;
 class c {
     start() {
         this.connection.on(a.yq.Stats, this.sampleStats);

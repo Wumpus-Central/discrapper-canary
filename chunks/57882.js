@@ -20,15 +20,24 @@ var r = n(64700),
     h = n(379043),
     m = n(979143);
 let g = [i.pJ.HOURS, i.pJ.MINUTES];
+
 function E(e) {
     let { unit: t, time: n } = (0, i.$l)(e, g),
         r = (0, a.i)();
-    if (null == n) return s.intl.formatToPlainString(r.minutes, { minutes: 0 });
+    if (null == n)
+        return s.intl.formatToPlainString(r.minutes, {
+            minutes: 0,
+        });
     let o = Math.round(n);
     return t === i.pJ.HOURS
-        ? s.intl.formatToPlainString(r.hours, { hours: o })
-        : s.intl.formatToPlainString(r.minutes, { minutes: o });
+        ? s.intl.formatToPlainString(r.hours, {
+              hours: o,
+          })
+        : s.intl.formatToPlainString(r.minutes, {
+              minutes: o,
+          });
 }
+
 function b(e) {
     let { unit: t, time: n } = (0, i.$l)(e, g);
     return {
@@ -36,6 +45,7 @@ function b(e) {
         unit: t,
     };
 }
+
 function y(e) {
     switch (e) {
         case 0:
@@ -60,14 +70,22 @@ function y(e) {
             return c.A;
     }
 }
+
 function O(e, t) {
     return {
         monthName: (0, r.useMemo)(() => {
             let n = new Date();
-            return n.setDate(1), n.setMonth(e - 1), n.toLocaleString(t, { month: "long" });
+            return (
+                n.setDate(1),
+                n.setMonth(e - 1),
+                n.toLocaleString(t, {
+                    month: "long",
+                })
+            );
         }, [e, t]),
     };
 }
+
 function A(e) {
     return Math.min(Math.max(Math.round(e / 10), 1), 9);
 }

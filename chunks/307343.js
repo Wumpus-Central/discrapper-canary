@@ -1,4 +1,6 @@
-n.d(t, { A: () => _ });
+n.d(t, {
+    A: () => _,
+});
 var r = n(1139),
     i = n(299146),
     a = n(47312);
@@ -124,5 +126,8 @@ var s = n(427778),
             t
         );
     })(l.Component);
-(p.defaultProps = { classNames: "" }), (p.propTypes = {});
+(p.defaultProps = {
+    classNames: "",
+}),
+    (p.propTypes = {});
 let _ = p;

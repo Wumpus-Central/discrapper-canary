@@ -1,4 +1,7 @@
-n.d(t, { A: () => O }), n(896048);
+n.d(t, {
+    A: () => O,
+}),
+    n(896048);
 var a = n(627968),
     l = n(64700),
     i = n(503698),
@@ -20,6 +23,7 @@ var a = n(627968),
     y = n(716371),
     _ = n(701940),
     A = n(661251);
+
 function C() {
     var e;
     let t = (0, c.yK)([g.A], () => g.A.getSortedChannels()[1]),
@@ -74,9 +78,12 @@ function C() {
         ],
     });
 }
+
 function S() {
     let e = l.useCallback(() => {
-        u.A.openPrivateChannel({ recipientIds: [y.K] });
+        u.A.openPrivateChannel({
+            recipientIds: [y.K],
+        });
     }, []);
     return (0, a.jsx)(d.Button, {
         variant: "primary",
@@ -85,6 +92,7 @@ function S() {
         onClick: e,
     });
 }
+
 function O() {
     let e = (0, c.bG)([j.Ay], () => j.Ay.allByCategory(j.xW.MESSAGING), [], c.My).map((e) => {
         let [t, n, { label: l }] = e;
@@ -103,9 +111,13 @@ function O() {
         className: r()(A.nd, _.nd),
         children: [
             e,
-            (0, a.jsx)("div", { className: _.yF }),
+            (0, a.jsx)("div", {
+                className: _.yF,
+            }),
             (0, a.jsx)(C, {}),
-            (0, a.jsx)("div", { className: _.yF }),
+            (0, a.jsx)("div", {
+                className: _.yF,
+            }),
             (0, a.jsx)(S, {}),
         ],
     });

@@ -33,9 +33,9 @@
         monthsParse: r,
         longMonthsParse: r,
         shortMonthsParse: r,
-        weekdays: "domingo_lunes_martes_miércoles_jueves_viernes_sábado".split("_"),
-        weekdaysShort: "dom._lun._mar._mié._jue._vie._sáb.".split("_"),
-        weekdaysMin: "do_lu_ma_mi_ju_vi_sá".split("_"),
+        weekdays: "domingo_lunes_martes_mi\xe9rcoles_jueves_viernes_s\xe1bado".split("_"),
+        weekdaysShort: "dom._lun._mar._mi\xe9._jue._vie._s\xe1b.".split("_"),
+        weekdaysMin: "do_lu_ma_mi_ju_vi_s\xe1".split("_"),
         weekdaysParseExact: !0,
         longDateFormat: {
             LT: "H:mm",
@@ -50,7 +50,7 @@
                 return "[hoy a la" + (1 !== this.hours() ? "s" : "") + "] LT";
             },
             nextDay: function () {
-                return "[mañana a la" + (1 !== this.hours() ? "s" : "") + "] LT";
+                return "[ma\xf1ana a la" + (1 !== this.hours() ? "s" : "") + "] LT";
             },
             nextWeek: function () {
                 return "dddd [a la" + (1 !== this.hours() ? "s" : "") + "] LT";
@@ -72,15 +72,15 @@
             mm: "%d minutos",
             h: "una hora",
             hh: "%d horas",
-            d: "un día",
-            dd: "%d días",
+            d: "un d\xeda",
+            dd: "%d d\xedas",
             M: "un mes",
             MM: "%d meses",
-            y: "un año",
-            yy: "%d años",
+            y: "un a\xf1o",
+            yy: "%d a\xf1os",
         },
         dayOfMonthOrdinalParse: /\d{1,2}º/,
-        ordinal: "%dº",
+        ordinal: "%d\xba",
         week: {
             dow: 1,
             doy: 4,

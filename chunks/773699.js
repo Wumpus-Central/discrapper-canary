@@ -1,4 +1,7 @@
-n.d(t, { A: () => v }), n(896048);
+n.d(t, {
+    A: () => v,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(284009),
@@ -35,7 +38,9 @@ let v = (e) => {
             }),
             [v],
         ),
-        { newUIEnabled: D, searchEnabled: k } = h.A.useConfig({ location: "useAppsCommandItems" }),
+        { newUIEnabled: D, searchEnabled: k } = h.A.useConfig({
+            location: "useAppsCommandItems",
+        }),
         [V, R] = l.useState(""),
         L = "" !== V,
         {
@@ -62,7 +67,9 @@ let v = (e) => {
                 T.forEach((t) => {
                     e[t.id] = t;
                 }),
-                { sections: e }
+                {
+                    sections: e,
+                }
             );
         }, [T]),
         G = l.useRef(U);
@@ -116,7 +123,11 @@ let v = (e) => {
                     c.rXV,
                     {
                         label: j.intl.string(j.t.V0w2ap),
-                        children: n.map((e) => N(e, { showAppIcon: !0 })),
+                        children: n.map((e) =>
+                            N(e, {
+                                showAppIcon: !0,
+                            }),
+                        ),
                     },
                     t.id,
                 );
@@ -143,7 +154,11 @@ let v = (e) => {
                                           selectable: !1,
                                       })
                                 : void 0,
-                        children: n.map((e) => N(e, { showAppIcon: !1 })),
+                        children: n.map((e) =>
+                            N(e, {
+                                showAppIcon: !1,
+                            }),
+                        ),
                     },
                     t.id,
                 );
@@ -240,7 +255,15 @@ let v = (e) => {
         else if (D)
             if (L)
                 t = (0, r.jsxs)(r.Fragment, {
-                    children: [B, (0, r.jsx)(c.bXX, {}), F.map((e) => N(e, { showAppIcon: !0 }))],
+                    children: [
+                        B,
+                        (0, r.jsx)(c.bXX, {}),
+                        F.map((e) =>
+                            N(e, {
+                                showAppIcon: !0,
+                            }),
+                        ),
+                    ],
                 });
             else {
                 let e = M.find((e) => {
@@ -262,7 +285,12 @@ let v = (e) => {
                     ],
                 });
             }
-        else t = F.map((e) => N(e, { showAppIcon: !0 }));
+        else
+            t = F.map((e) =>
+                N(e, {
+                    showAppIcon: !0,
+                }),
+            );
         null != C &&
             C.length > 0 &&
             (t = (0, r.jsxs)(r.Fragment, {

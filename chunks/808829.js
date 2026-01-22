@@ -1,5 +1,8 @@
-n.d(t, { P: () => i });
+n.d(t, {
+    P: () => i,
+});
 var r = n(985018);
+
 function i(e) {
     let { application: t, username: n, usernameOnClick: i } = e;
     return null != t

@@ -1,4 +1,7 @@
-n.d(t, { default: () => j }), n(896048);
+n.d(t, {
+    default: () => j,
+}),
+    n(896048);
 var s = n(627968),
     i = n(64700),
     a = n(397927),
@@ -11,6 +14,7 @@ var s = n(627968),
     m = n(654487),
     x = n(985018),
     f = n(322956);
+
 function h(e) {
     let { quest: t, rewardName: n, location: i, sourceQuestContent: r } = e;
     return (0, s.jsxs)("div", {
@@ -39,7 +43,9 @@ function h(e) {
                     (0, s.jsx)(a.Text, {
                         variant: "text-sm/medium",
                         color: "text-subtle",
-                        children: x.intl.format(x.t["v1u/zq"], { rewardName: n }),
+                        children: x.intl.format(x.t["v1u/zq"], {
+                            rewardName: n,
+                        }),
                     }),
                 ],
             }),
@@ -53,6 +59,7 @@ function h(e) {
         ],
     });
 }
+
 function j(e) {
     var t, n;
     let { initialQuest: a, onClose: d, transitionState: x, location: f, sourceQuestContent: j } = e,

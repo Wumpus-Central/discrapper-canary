@@ -25,6 +25,7 @@ var r = n(627968),
     O = n(284683),
     A = n(634654),
     v = n(652215);
+
 function S(e, t, n) {
     return (
         t in e
@@ -38,6 +39,7 @@ function S(e, t, n) {
         e
     );
 }
+
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -55,10 +57,12 @@ function I(e) {
     return e;
 }
 let T = i.createContext(void 0);
+
 function C() {
     let e = i.useContext(T);
     return s()(null != e, "must use useGuildShopDisplayContext within a GuildShopDisplayContextProvider"), e;
 }
+
 function N(e) {
     var t;
     let { children: n, initialTab: a, guildId: s } = e,

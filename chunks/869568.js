@@ -1,4 +1,9 @@
-n.d(t, { Ay: () => M }), n(733351), n(638769), n(896048);
+n.d(t, {
+    Ay: () => M,
+}),
+    n(733351),
+    n(638769),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -27,6 +32,7 @@ var r = n(627968),
     T = n(985018),
     I = n(727938),
     C = n(261223);
+
 function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -52,6 +58,7 @@ function P(e) {
     }
     return e;
 }
+
 function w(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -98,10 +105,17 @@ async function R(e, t, n) {
         );
     }
 }
+
 function D(e) {
     let { member: t, guildId: l, roleId: c, locked: f } = e,
         b = i.useRef(null),
-        m = i.useMemo(() => ({ [l]: [t.id] }), [l, t.id]);
+        m = i.useMemo(
+            () => ({
+                [l]: [t.id],
+            }),
+            [l, t.id],
+        );
+
     function h(e) {
         if ((e.stopPropagation(), !f)) {
             let n;
@@ -141,6 +155,7 @@ function D(e) {
                 );
         }
     }
+
     function j(e) {
         let i = x.default.getUser(t.id);
         null != i &&
@@ -191,7 +206,9 @@ function D(e) {
                                         text: f ? T.intl.string(T.t.wkrQaK) : T.intl.string(T.t["7sFNfW"]),
                                         position: "top",
                                         children: (0, r.jsx)(d.DUT, {
-                                            className: s()(I.DT, { [I.li]: f }),
+                                            className: s()(I.DT, {
+                                                [I.li]: f,
+                                            }),
                                             onClick: h,
                                             children: (0, r.jsx)(d.aXh, {
                                                 size: "xs",
@@ -207,6 +224,7 @@ function D(e) {
         })
     );
 }
+
 function G(e) {
     let { handleAddClick: t, locked: n } = e;
     return (0, r.jsx)("div", {
@@ -241,6 +259,7 @@ function G(e) {
         }),
     });
 }
+
 function L(e) {
     let {
             guildId: t,
@@ -263,8 +282,19 @@ function L(e) {
             className: I.p_,
             sections: [Math.max(p.length, 1)],
             sectionHeight: s,
-            renderSection: () => (0, r.jsx)("div", { style: { height: s } }, "section"),
-            style: { scrollPaddingTop: s },
+            renderSection: () =>
+                (0, r.jsx)(
+                    "div",
+                    {
+                        style: {
+                            height: s,
+                        },
+                    },
+                    "section",
+                ),
+            style: {
+                scrollPaddingTop: s,
+            },
             rowHeight: 40,
             renderRow: function (e) {
                 let { row: i } = e;
@@ -293,6 +323,7 @@ function L(e) {
         }),
     });
 }
+
 function k(e) {
     let { query: t, setQuery: n, locked: i, handleAddClick: l } = e;
     return (0, r.jsxs)("div", {
@@ -315,6 +346,7 @@ function k(e) {
         ],
     });
 }
+
 function M(e) {
     let { guild: t, role: l, locked: a, setSelectedSection: o } = e,
         [u, f] = i.useState(""),
@@ -354,7 +386,9 @@ function M(e) {
                 children: (0, r.jsx)("div", {
                     className: C.Q,
                     children: (0, r.jsxs)("div", {
-                        className: s()(C.wx, { [C.l6]: !m }),
+                        className: s()(C.wx, {
+                            [C.l6]: !m,
+                        }),
                         children: [
                             (0, r.jsx)(E.A, {
                                 guild: t,

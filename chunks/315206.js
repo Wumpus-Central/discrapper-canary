@@ -21,26 +21,36 @@ var i = n(73153),
     E = n(594007),
     b = n(227042),
     y = n(652215);
+
 function O(e, t) {
     if ((0, h.f)() || u.A.isOpen(t)) return !1;
     if (null != r) {
         let e = r;
         i.h.wait(() => a.VN(e));
     }
-    i.h.wait(() => a.ho(t, y.o1q.ACTIVITY, { channel: e })), (r = t);
+    i.h.wait(() =>
+        a.ho(t, y.o1q.ACTIVITY, {
+            channel: e,
+        }),
+    ),
+        (r = t);
 }
+
 function A() {
     let e = r;
     null != e && u.A.isOpen(e) && (i.h.wait(() => a.VN(e)), (r = null));
 }
+
 function v(e) {
     let t = null != e ? e : r;
     null != t && u.A.isOpen(t) && i.h.wait(() => a.jD(t));
 }
+
 function S(e) {
     let t = null != e ? e : r;
     null != t && u.A.isOpen(t) && i.h.wait(() => a.WU(t));
 }
+
 function I() {
     let e = m.Ay.getConnectedActivityLocation(),
         t = null != e ? m.Ay.getSelfEmbeddedActivityForLocation(e) : null,
@@ -48,6 +58,7 @@ function I() {
         r = l.A.getChannel(n);
     return null == t || null == r ? A() : O(r, (0, E.A)(t.location.id, t.applicationId));
 }
+
 function T() {
     return (0, b.A)({
         LayerStore: c.A,

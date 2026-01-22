@@ -1,4 +1,10 @@
-n.d(t, { A: () => y }), n(896048), n(321073), n(65821), n(667532);
+n.d(t, {
+    A: () => y,
+}),
+    n(896048),
+    n(321073),
+    n(65821),
+    n(667532);
 var r = n(311907),
     i = n(626584),
     a = n(877166),
@@ -7,6 +13,7 @@ var r = n(311907),
     l = n(932170),
     c = n(936674),
     u = n(354382);
+
 function d(e, t, n) {
     return (
         t in e
@@ -41,11 +48,13 @@ let f = new i.A("GatewaySocket"),
         "SESSIONS_REPLACE",
     ]),
     g = {};
+
 function E(e, t) {
     var n;
     let [r, i] = null != (n = g[e]) ? n : [0, 0];
     g[e] = [(r * i + t) / (i + 1), i + 1];
 }
+
 function b(e, t, n) {
     var r;
     if (null == n) return !1;

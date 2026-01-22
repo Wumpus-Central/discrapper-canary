@@ -1,8 +1,11 @@
-n.d(t, { y: () => o });
+n.d(t, {
+    y: () => o,
+});
 var r = n(564949),
     i = n(138026),
     a = n(74172),
     s = n(64700);
+
 function o(e) {
     let { selectionManager: t, collection: n, disabledKeys: o, ref: l, keyboardDelegate: c, layoutDelegate: u } = e,
         d = (0, a.Q)({
@@ -29,5 +32,7 @@ function o(e) {
             selectionManager: t,
             keyboardDelegate: p,
         });
-    return { listProps: _ };
+    return {
+        listProps: _,
+    };
 }

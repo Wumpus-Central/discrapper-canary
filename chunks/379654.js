@@ -1,4 +1,8 @@
-n.d(t, { A: () => g }), n(321073), n(896048);
+n.d(t, {
+    A: () => g,
+}),
+    n(321073),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(688810),
@@ -11,6 +15,7 @@ var r = n(627968),
     f = n(783256),
     p = n(518477),
     _ = n(985018);
+
 function h(e, t, n) {
     return (
         t in e
@@ -24,6 +29,7 @@ function h(e, t, n) {
         e
     );
 }
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -40,6 +46,7 @@ function m(e) {
     }
     return e;
 }
+
 function g(e) {
     let { user: t, widgets: n = [], onOpenUserProfileModal: h } = e,
         g = i.useMemo(() => n.filter((e) => e instanceof l.R), [n]),
@@ -47,7 +54,10 @@ function g(e) {
         { trackUserProfileAction: b } = (0, o.NJ)(),
         y = (0, s.A)(t.id, g),
         O = i.useCallback(() => {
-            null == h || h({ tabSection: p.RP.WIDGETS });
+            null == h ||
+                h({
+                    tabSection: p.RP.WIDGETS,
+                });
         }, [h]),
         A = i.useCallback(
             (e) => {

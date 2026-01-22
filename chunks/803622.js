@@ -1,4 +1,6 @@
-n.d(t, { A: () => R });
+n.d(t, {
+    A: () => R,
+});
 var r = n(627968),
     l = n(64700),
     i = n(503698),
@@ -97,7 +99,9 @@ let T = (e) => {
                           children: (0, r.jsx)(c.Text, {
                               className: N.tE,
                               variant: "text-sm/normal",
-                              children: I.intl.format(I.t.eE3oep, { count: i.length }),
+                              children: I.intl.format(I.t.eE3oep, {
+                                  count: i.length,
+                              }),
                           }),
                       }),
                   ],
@@ -110,14 +114,18 @@ let T = (e) => {
             s = () => {
                 u.A.addRelationship({
                     userId: l,
-                    context: { location: C.liQ.DM_CHANNEL },
+                    context: {
+                        location: C.liQ.DM_CHANNEL,
+                    },
                 });
             },
             o = (0, r.jsx)(c.Button, {
                 size: "sm",
                 variant: "secondary",
                 onClick: () => {
-                    u.A.blockUser(l, { location: C.liQ.DM_CHANNEL });
+                    u.A.blockUser(l, {
+                        location: C.liQ.DM_CHANNEL,
+                    });
                 },
                 text: I.intl.string(I.t.l4Emac),
             }),
@@ -144,7 +152,9 @@ let T = (e) => {
                             size: "sm",
                             variant: "secondary",
                             onClick: () => {
-                                u.A.removeFriend(l, { location: C.liQ.DM_CHANNEL });
+                                u.A.removeFriend(l, {
+                                    location: C.liQ.DM_CHANNEL,
+                                });
                             },
                             text: I.intl.string(I.t.cvSt1J),
                         }),
@@ -156,7 +166,9 @@ let T = (e) => {
                     size: "sm",
                     variant: "secondary",
                     onClick: () => {
-                        u.A.unblockUser(l, { location: C.liQ.DM_CHANNEL });
+                        u.A.unblockUser(l, {
+                            location: C.liQ.DM_CHANNEL,
+                        });
                     },
                     text: I.intl.string(I.t.XyHpKH),
                 });
@@ -173,7 +185,9 @@ let T = (e) => {
                             size: "sm",
                             variant: "secondary",
                             onClick: () => {
-                                u.A.cancelFriendRequest(l, { location: C.liQ.DM_CHANNEL });
+                                u.A.cancelFriendRequest(l, {
+                                    location: C.liQ.DM_CHANNEL,
+                                });
                             },
                             text: I.intl.string(I.t.rQSndv),
                         }),
@@ -259,7 +273,9 @@ let T = (e) => {
                                   channelId: n.id,
                                   otherUserId: t,
                               }),
-                              (0, r.jsx)(m.A, { channel: n }),
+                              (0, r.jsx)(m.A, {
+                                  channel: n,
+                              }),
                           ],
                       })
                     : (0, r.jsxs)("div", {
@@ -296,7 +312,10 @@ let T = (e) => {
                         channelId: n.id,
                     }),
                 }),
-                !b && (0, r.jsx)("div", { className: N.yF }),
+                !b &&
+                    (0, r.jsx)("div", {
+                        className: N.yF,
+                    }),
                 (0, r.jsxs)("div", {
                     className: a()(N.mG, N.LV),
                     children: [y, A],

@@ -1,4 +1,7 @@
-n.d(t, { $: () => p }), n(896048);
+n.d(t, {
+    $: () => p,
+}),
+    n(896048);
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -19,11 +22,15 @@ let p = (e) => {
     return (0, r.jsxs)("div", {
         className: f.kL,
         children: [
-            (0, r.jsx)(u.o7, { image: g }),
+            (0, r.jsx)(u.o7, {
+                image: g,
+            }),
             (0, r.jsxs)("div", {
                 className: f.nj,
                 children: [
-                    (0, r.jsx)(u.e6, { listingName: m }),
+                    (0, r.jsx)(u.e6, {
+                        listingName: m,
+                    }),
                     (0, r.jsxs)("div", {
                         className: f.VS,
                         children: [

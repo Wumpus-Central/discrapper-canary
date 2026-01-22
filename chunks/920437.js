@@ -1,4 +1,7 @@
-n.d(t, { A: () => q }), n(896048);
+n.d(t, {
+    A: () => q,
+}),
+    n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(284009),
@@ -40,6 +43,7 @@ var r = n(627968),
     F = n(53516),
     H = n(985018),
     B = n(32385);
+
 function K(e, t, n) {
     return (
         t in e
@@ -53,6 +57,7 @@ function K(e, t, n) {
         e
     );
 }
+
 function W(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -69,6 +74,7 @@ function W(e) {
     }
     return e;
 }
+
 function z(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -98,7 +104,9 @@ class Y extends l.PureComponent {
             e.shouldShowLurkerModeSuccessPopout ||
             !t ||
             null == n ||
-            this.setState({ shouldShowLurkerModeSuccessPopout: !0 });
+            this.setState({
+                shouldShowLurkerModeSuccessPopout: !0,
+            });
     }
     render() {
         let {
@@ -129,9 +137,11 @@ class Y extends l.PureComponent {
                 useReducedMotion: m,
             };
         if (e && !p) {
-            if (((_.message = H.intl.string(H.t.Hl0Mqh)), null != h && h >= 1000)) {
-                let e = 1000 * Math.floor(h / 1000);
-                _.subtitle = H.intl.formatToPlainString(H.t.C5bgrC, { count: e.toLocaleString() });
+            if (((_.message = H.intl.string(H.t.Hl0Mqh)), null != h && h >= 1e3)) {
+                let e = 1e3 * Math.floor(h / 1e3);
+                _.subtitle = H.intl.formatToPlainString(H.t.C5bgrC, {
+                    count: e.toLocaleString(),
+                });
             }
             (_.buttonText = H.intl.string(H.t["3aOv+h"])),
                 (_.onButtonClick = this.handleFollowAnnouncement),
@@ -171,15 +181,21 @@ class Y extends l.PureComponent {
                     (_.buttonText = H.intl.string(H.t.lm1UKt)),
                     (_.onButtonClick = this.handleResendVerification))
                   : a
-                    ? ((_.message = H.intl.formatToPlainString(H.t.IH7RMF, { min: U.$8o.MEMBER_AGE })),
+                    ? ((_.message = H.intl.formatToPlainString(H.t.IH7RMF, {
+                          min: U.$8o.MEMBER_AGE,
+                      })),
                       (_.countdown = s))
                     : o &&
-                      ((_.message = H.intl.formatToPlainString(H.t["2JA2GH"], { min: U.$8o.ACCOUNT_AGE })),
+                      ((_.message = H.intl.formatToPlainString(H.t["2JA2GH"], {
+                          min: U.$8o.ACCOUNT_AGE,
+                      })),
                       (_.countdown = c));
         else {
             var C;
             (_.imageSrc = null != (C = v.getIconURL(V.iu.SMALL)) ? C : void 0),
-                (_.message = H.intl.format(H.t.EvDn1D, { name: v.name })),
+                (_.message = H.intl.format(H.t.EvDn1D, {
+                    name: v.name,
+                })),
                 null != v.connectionEntrypointUrl &&
                     ((_.buttonText = H.intl.string(H.t.S0W8Z5)),
                     (_.onButtonClick = () => {
@@ -191,7 +207,10 @@ class Y extends l.PureComponent {
             position: "top",
             align: "left",
             shouldShow: E,
-            onRequestClose: () => this.setState({ shouldShowLurkerModeSuccessPopout: !1 }),
+            onRequestClose: () =>
+                this.setState({
+                    shouldShowLurkerModeSuccessPopout: !1,
+                }),
             renderPopout: this.renderSuccessPopout,
             children: (e) =>
                 (0, r.jsx)(
@@ -210,11 +229,19 @@ class Y extends l.PureComponent {
                                           children: (e) =>
                                               (0, r.jsx)(
                                                   u.DUT,
-                                                  z(W({ innerRef: this.upsellTargetRef }, e), {
-                                                      className: B._,
-                                                      onClick: this.handleTextAreaClick,
-                                                      children: f,
-                                                  }),
+                                                  z(
+                                                      W(
+                                                          {
+                                                              innerRef: this.upsellTargetRef,
+                                                          },
+                                                          e,
+                                                      ),
+                                                      {
+                                                          className: B._,
+                                                          onClick: this.handleTextAreaClick,
+                                                          children: f,
+                                                      },
+                                                  ),
                                               ),
                                       })
                                     : f,
@@ -260,7 +287,16 @@ class Y extends l.PureComponent {
                 null != e &&
                     (0, u.mMO)(async () => {
                         let { default: t } = await n.e("37548").then(n.bind(n, 856103));
-                        return (n) => (0, r.jsx)(t, W({ guildId: e.id }, n));
+                        return (n) =>
+                            (0, r.jsx)(
+                                t,
+                                W(
+                                    {
+                                        guildId: e.id,
+                                    },
+                                    n,
+                                ),
+                            );
                     });
             }),
             K(this, "handleShowMemberVerification", () => {
@@ -274,9 +310,20 @@ class Y extends l.PureComponent {
                 (0, u.mMO)(
                     async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 615715));
-                        return (t) => (0, r.jsx)(e, W({ reason: S.d.GUILD_PHONE_REQUIRED }, t));
+                        return (t) =>
+                            (0, r.jsx)(
+                                e,
+                                W(
+                                    {
+                                        reason: S.d.GUILD_PHONE_REQUIRED,
+                                    },
+                                    t,
+                                ),
+                            );
                     },
-                    { modalKey: F.V },
+                    {
+                        modalKey: F.V,
+                    },
                 );
             }),
             K(this, "handleResendVerification", () => {
@@ -286,34 +333,58 @@ class Y extends l.PureComponent {
                 null != t &&
                     (0, o.A)({
                         title: H.intl.string(H.t.LykQYk),
-                        subtitle: H.intl.format(H.t.azKEPy, { email: t }),
+                        subtitle: H.intl.format(H.t.azKEPy, {
+                            email: t,
+                        }),
                     });
             }),
             K(this, "handleTextAreaClick", () => {
                 let { showLurkerModeUpsellPopout: e } = this.props;
-                this.setState({ shouldShowLurkerModeUpsellPopout: e });
+                this.setState({
+                    shouldShowLurkerModeUpsellPopout: e,
+                });
             }),
             K(this, "handleJoinServer", async () => {
-                this.setState({ submitting: !0 });
+                this.setState({
+                    submitting: !0,
+                });
                 let e = this.props.channel.getGuildId();
                 try {
-                    await p.A.joinGuild(e, { source: U.Q4z.CHAT_INPUT_BLOCKER });
+                    await p.A.joinGuild(e, {
+                        source: U.Q4z.CHAT_INPUT_BLOCKER,
+                    });
                 } catch (e) {
-                    this.setState({ submitting: !1 });
+                    this.setState({
+                        submitting: !1,
+                    });
                 }
             }),
             K(this, "handleGoBack", () => {
-                this.setState({ submitting: !0 }), (0, I.JK)().goBack();
+                this.setState({
+                    submitting: !0,
+                }),
+                    (0, I.JK)().goBack();
             }),
             K(this, "handleFollowAnnouncement", () => {
                 let { channel: e } = this.props;
                 (0, u.mMO)(async () => {
                     let { default: t } = await n.e("66464").then(n.bind(n, 464035));
-                    return (n) => (0, r.jsx)(t, W({ channel: e }, n));
+                    return (n) =>
+                        (0, r.jsx)(
+                            t,
+                            W(
+                                {
+                                    channel: e,
+                                },
+                                n,
+                            ),
+                        );
                 });
             }),
             K(this, "closeLurkerModeUpsellPopout", () => {
-                this.setState({ shouldShowLurkerModeUpsellPopout: !1 });
+                this.setState({
+                    shouldShowLurkerModeUpsellPopout: !1,
+                });
             }),
             K(this, "renderLurkerModeUpsellPopout", () => {
                 let { guild: e } = this.props;
@@ -347,6 +418,7 @@ class Y extends l.PureComponent {
             });
     }
 }
+
 function q(e) {
     var t, n;
     let { channel: l, children: i } = e,

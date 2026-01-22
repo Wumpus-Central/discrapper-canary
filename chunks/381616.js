@@ -1,8 +1,13 @@
 let i;
-r.d(t, { A: () => _ }), r(896048), r(321073);
+r.d(t, {
+    A: () => _,
+}),
+    r(896048),
+    r(321073);
 var n,
     a = r(311907),
     o = r(73153);
+
 function s(e, t, r) {
     return (
         t in e
@@ -16,7 +21,9 @@ function s(e, t, r) {
         e
     );
 }
-let l = { guildNoticeDismissed: [] },
+let l = {
+        guildNoticeDismissed: [],
+    },
     c = new Map(),
     d = new Set();
 class u extends (n = a.Ay.PersistedStore) {

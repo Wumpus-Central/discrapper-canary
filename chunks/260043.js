@@ -1,4 +1,6 @@
-n.d(t, { u: () => d });
+n.d(t, {
+    u: () => d,
+});
 var r = n(99478),
     i = n(142922);
 let a = [
@@ -16,6 +18,7 @@ let a = [
     ],
     o = [1867, 1911, 1925, 1988, 2018],
     l = ["meiji", "taisho", "showa", "heisei", "reiwa"];
+
 function c(e) {
     let t = a.findIndex(
         ([t, n, r]) =>
@@ -23,6 +26,7 @@ function c(e) {
     );
     return -1 === t ? a.length - 1 : 0 === t ? 0 : t - 1;
 }
+
 function u(e) {
     let t = o[l.indexOf(e.era)];
     if (!t) throw Error("Unknown era: " + e.era);
@@ -82,6 +86,7 @@ class d extends i.FG {
         super(...e), (this.identifier = "japanese");
     }
 }
+
 function f(e) {
     if (1 === e.year) return a[l.indexOf(e.era)];
 }

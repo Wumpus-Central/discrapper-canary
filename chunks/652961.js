@@ -6,6 +6,7 @@ var r = n(311907),
     i = n(397438),
     a = n(815968),
     s = n(985018);
+
 function o(e) {
     switch (e) {
         case a._A.REDUCED_MOTION:
@@ -16,6 +17,7 @@ function o(e) {
             return;
     }
 }
+
 function l(e) {
     return (0, r.bG)([i.A], () => o(i.A.getAppliedOverrideReasonKey(e)));
 }

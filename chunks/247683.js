@@ -25,6 +25,7 @@ var r = n(627968),
     O = n(652215),
     A = n(985018),
     v = n(432391);
+
 function S(e, t, n) {
     return (
         t in e
@@ -38,6 +39,7 @@ function S(e, t, n) {
         e
     );
 }
+
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -57,18 +59,23 @@ function I(e) {
 let T = [d.A.unsafe_rawColors.PREMIUM_TIER_1_PURPLE.css, d.A.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css, "#929AFA"],
     C = 220,
     N = 1220,
-    R = Array.from({ length: 16 }).map((e, t) => ({
+    R = Array.from({
+        length: 16,
+    }).map((e, t) => ({
         id: "".concat(t),
         height: Math.floor(100 * Math.random()) + 120,
     }));
+
 function w(e) {
     var t;
     return null != (t = e.id) ? t : e.src;
 }
+
 function P(e, t) {
     let n = R[t];
     return null == n ? 0 : n.height;
 }
+
 function D(e, t, n, i) {
     if (!(e > 0))
         return null == R[t]
@@ -77,27 +84,37 @@ function D(e, t, n, i) {
                   "div",
                   {
                       className: v.qf,
-                      style: I({ animationDelay: "".concat(75 * t, "ms") }, n),
+                      style: I(
+                          {
+                              animationDelay: "".concat(75 * t, "ms"),
+                          },
+                          n,
+                      ),
                   },
                   i,
               );
 }
+
 function x(e, t) {
     var n, r;
     return e > 0 ? "" : null != (n = null == (r = R[t]) ? void 0 : r.id) ? n : "";
 }
+
 function L(e) {
     return e === u.TL.VIDEO;
 }
+
 function j(e) {
     return (
         ((0, g.BX)(e) || (0, g.fr)(e)) &&
         (e.pathname.toLowerCase().endsWith(".webp") || e.pathname.toLowerCase().endsWith(".avif"))
     );
 }
+
 function M(e) {
     return ((0, g.BX)(e) || (0, g.fr)(e)) && e.pathname.toLowerCase().endsWith(".gif");
 }
+
 function k(e) {
     let t = b.A.toURLSafe(e),
         n = null != t && M(t);
@@ -165,7 +182,12 @@ class U extends i.PureComponent {
             "data-focused": a,
             "data-selected": s,
             onClick: this.handleClick,
-            style: I({ backgroundColor: l ? void 0 : o }, i),
+            style: I(
+                {
+                    backgroundColor: l ? void 0 : o,
+                },
+                i,
+            ),
             children: [L(n) ? null : this.renderGIF(), null != t ? t(e) : null],
         });
     }
@@ -176,7 +198,10 @@ class U extends i.PureComponent {
             S(this, "_image", null),
             S(this, "_mounted", !0),
             S(this, "handleCanPlay", () => {
-                this._mounted && this.setState({ loaded: !0 });
+                this._mounted &&
+                    this.setState({
+                        loaded: !0,
+                    });
             }),
             S(this, "handleClick", () => {
                 let { onClick: e, item: t, index: n } = this.props;
@@ -189,14 +214,21 @@ class U extends i.PureComponent {
         }),
             L(t) ||
                 ((this._image = r.getElement()),
-                (this._image.onload = () => this.setState({ loaded: !0 })),
+                (this._image.onload = () =>
+                    this.setState({
+                        loaded: !0,
+                    })),
                 (this._image.src = e.src));
     }
 }
 class G extends i.PureComponent {
     componentDidMount() {
         let { resultType: e, data: t } = this.props;
-        e === O.dD.FAVORITES && ((0, p.Qh)(O.dD.FAVORITES), (0, p.H9)(t, O.dD.FAVORITES, { limit: null }));
+        e === O.dD.FAVORITES &&
+            ((0, p.Qh)(O.dD.FAVORITES),
+            (0, p.H9)(t, O.dD.FAVORITES, {
+                limit: null,
+            }));
     }
     selectItem(e, t) {
         let { onSelectGIF: n, resultType: r, data: i, resultQuery: a } = this.props;
@@ -237,7 +269,9 @@ class G extends i.PureComponent {
                               }),
                           ],
                       })
-                    : (0, r.jsx)("div", { className: v.Hc }),
+                    : (0, r.jsx)("div", {
+                          className: v.Hc,
+                      }),
         });
     }
     renderEmptyFavorites() {
@@ -250,12 +284,28 @@ class G extends i.PureComponent {
                     this.renderEmptyFavorite(A.intl.string(A.t["3gyw4Z"]), !0),
                     this.renderEmptyFavorite(A.intl.string(A.t.yThUi4)),
                     this.renderEmptyFavorite(A.intl.string(A.t.MeP0SF)),
-                    Array.from({ length: 15 }).map((e, t) =>
-                        (0, r.jsx)(i.Fragment, { children: this.renderEmptyFavorite() }, t),
+                    Array.from({
+                        length: 15,
+                    }).map((e, t) =>
+                        (0, r.jsx)(
+                            i.Fragment,
+                            {
+                                children: this.renderEmptyFavorite(),
+                            },
+                            t,
+                        ),
                     ),
                     this.renderEmptyFavorite(A.intl.string(A.t["5u99Xb"])),
-                    Array.from({ length: 16 }).map((e, t) =>
-                        (0, r.jsx)(i.Fragment, { children: this.renderEmptyFavorite() }, t),
+                    Array.from({
+                        length: 16,
+                    }).map((e, t) =>
+                        (0, r.jsx)(
+                            i.Fragment,
+                            {
+                                children: this.renderEmptyFavorite(),
+                            },
+                            t,
+                        ),
                     ),
                     this.renderEmptyFavorite(A.intl.string(A.t.o6CLL4)),
                 ],
@@ -291,7 +341,9 @@ class G extends i.PureComponent {
         super(...e),
             S(this, "_masonryRef", i.createRef()),
             S(this, "prevResultQuery", null),
-            S(this, "state", { focusedId: null }),
+            S(this, "state", {
+                focusedId: null,
+            }),
             S(this, "handleFocus", (e) => {
                 let { current: t } = this._masonryRef;
                 if (null == t) return;
@@ -301,7 +353,9 @@ class G extends i.PureComponent {
                         start: n.top - 10,
                         end: n.top + n.height + 10,
                     }),
-                    this.setState({ focusedId: e }));
+                    this.setState({
+                        focusedId: e,
+                    }));
             }),
             S(this, "handleSelect", (e) => {
                 let t,
@@ -335,7 +389,16 @@ class G extends i.PureComponent {
                         src: o.src,
                         coords: n,
                         onClick: this.handleClickItem,
-                        renderExtras: () => (0, r.jsx)(E.A, I({ className: v.uJ }, o)),
+                        renderExtras: () =>
+                            (0, r.jsx)(
+                                E.A,
+                                I(
+                                    {
+                                        className: v.uJ,
+                                    },
+                                    o,
+                                ),
+                            ),
                         focused: w(o) === a,
                         imagePool: this.props.imagePool,
                         videoPool: this.props.videoPool,
@@ -444,6 +507,7 @@ class G extends i.PureComponent {
             });
     }
 }
+
 function V() {
     let { renderWindow: e } = i.useContext(m.Ay),
         t = e.document,

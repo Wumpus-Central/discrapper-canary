@@ -16,6 +16,7 @@ var a = n(427157);
 n(309010);
 var s = n(728458),
     o = n(652215);
+
 function l(e, t, n) {
     return (
         t in e
@@ -30,7 +31,7 @@ function l(e, t, n) {
     );
 }
 let c = 10,
-    u = 600000;
+    u = 6e5;
 var d = (function (e) {
         return (
             (e[(e.REDEEMED = 1)] = "REDEEMED"),
@@ -88,7 +89,9 @@ async function h(e, t, n) {
     return _.set(i, u), u;
 }
 let m = () => (
-    i.h.dispatch({ type: "BILLING_REFERRALS_REMAINING_FETCH_START" }),
+    i.h.dispatch({
+        type: "BILLING_REFERRALS_REMAINING_FETCH_START",
+    }),
     r.Bo.get({
         url: o.Rsh.GET_REFERRALS_REMAINING,
         oldFormErrors: !0,
@@ -113,7 +116,10 @@ let m = () => (
             });
         },
         (e) => {
-            (null == e ? void 0 : e.status) !== 404 && i.h.dispatch({ type: "BILLING_REFERRALS_REMAINING_FETCH_FAIL" });
+            (null == e ? void 0 : e.status) !== 404 &&
+                i.h.dispatch({
+                    type: "BILLING_REFERRALS_REMAINING_FETCH_FAIL",
+                });
         },
     )
 );
@@ -165,7 +171,9 @@ async function E(e) {
                 type: "BILLING_REFERRAL_RESOLVE_SUCCESS",
                 userTrialOffer: n,
             }),
-            { userTrialOffer: n }
+            {
+                userTrialOffer: n,
+            }
         );
     } catch (t) {
         i.h.dispatch({

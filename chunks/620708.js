@@ -17,7 +17,9 @@ let p = [u.Y8],
     _ = [a.j.WEEK],
     h = (e) => {
         let { entry: t, channel: n, selected: i } = e,
-            { largeImage: a } = (0, o.nO)({ entry: t }),
+            { largeImage: a } = (0, o.nO)({
+                entry: t,
+            }),
             h = (0, c.TQ)(t);
         return null != h && (0, s.S1)(h, _)
             ? (0, r.jsxs)(d.Zp, {
@@ -30,10 +32,20 @@ let p = [u.Y8],
                                   channelId: n.id,
                                   guildId: n.guild_id,
                               }),
-                              (0, r.jsx)(d.ZB, { children: t.extra.artist.name }),
+                              (0, r.jsx)(d.ZB, {
+                                  children: t.extra.artist.name,
+                              }),
                               (0, r.jsx)(u.mG, {
                                   location: u.N5.CARD,
-                                  children: p.map((e, n) => (0, r.jsx)(e, { entry: t }, n)),
+                                  children: p.map((e, n) =>
+                                      (0, r.jsx)(
+                                          e,
+                                          {
+                                              entry: t,
+                                          },
+                                          n,
+                                      ),
+                                  ),
                               }),
                           ],
                       }),

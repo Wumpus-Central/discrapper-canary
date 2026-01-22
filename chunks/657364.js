@@ -1,4 +1,8 @@
-n.d(t, { A: () => O }), n(896048), n(492834);
+n.d(t, {
+    A: () => O,
+}),
+    n(896048),
+    n(492834);
 var r = n(627968),
     i = n(64700),
     a = n(989349),
@@ -27,6 +31,7 @@ let y = (e) => {
             });
     });
 };
+
 function O() {
     let e = (0, o.bG)([u.default], () => u.default.getCurrentUser()),
         { currentHarvestType: t, awaitingInitialRequest: n } = (0, o.cf)([_.A], () => ({
@@ -78,7 +83,9 @@ function O() {
         children: [
             (0, r.jsx)(h._, {
                 header: E.intl.string(E.t.XAHCgJ),
-                description: E.intl.format(E.t.P3kNfr, { helpdeskArticle: d.A.getArticleURL(g.MVz.GDPR_REQUEST_DATA) }),
+                description: E.intl.format(E.t.P3kNfr, {
+                    helpdeskArticle: d.A.getArticleURL(g.MVz.GDPR_REQUEST_DATA),
+                }),
             }),
             S
                 ? (0, r.jsx)(l.ZpM, {

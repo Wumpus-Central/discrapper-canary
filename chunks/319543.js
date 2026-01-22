@@ -16,12 +16,14 @@ var n = t(284009),
     u = t(652215),
     g = t(985018),
     f = t(463091);
+
 function p() {
     return {
         name: "",
         color: u.TGz,
     };
 }
+
 function m(e) {
     let A,
         { onRemove: t, role: n } = e;
@@ -39,12 +41,15 @@ function m(e) {
               ],
               onRemove: t,
           })
-        : ((A = (0, r.jsx)(o.y$y, { type: o.y$y.Type.PULSING_ELLIPSIS })),
+        : ((A = (0, r.jsx)(o.y$y, {
+              type: o.y$y.Type.PULSING_ELLIPSIS,
+          })),
           (0, r.jsx)("div", {
               className: f.qo,
               children: A,
           }));
 }
+
 function b() {
     return (0, r.jsx)(o.EpV, {
         size: "xs",
@@ -52,6 +57,7 @@ function b() {
         className: f.QW,
     });
 }
+
 function v(e) {
     let { roleName: A } = e;
     return (0, r.jsxs)(r.Fragment, {
@@ -115,6 +121,7 @@ function v(e) {
         ],
     });
 }
+
 function q(e) {
     let { newRoleParams: A, setNewRoleParams: n, guildId: a, productId: u, listingRoleId: f, error: p } = e,
         b = (0, i.bG)([d.A], () => (null != f ? d.A.getRole(a, f) : void 0));
@@ -184,7 +191,9 @@ function q(e) {
                                             })(
                                                 {
                                                     title: g.intl.string(g.t.Y3Hi3R),
-                                                    body: (0, r.jsx)(v, { roleName: n }),
+                                                    body: (0, r.jsx)(v, {
+                                                        roleName: n,
+                                                    }),
                                                     cta: g.intl.string(g.t.VawZVx),
                                                     closeLabel: g.intl.string(g.t["6y+3Bw"]),
                                                     onConfirm: A,

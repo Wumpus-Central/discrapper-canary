@@ -1,4 +1,6 @@
-t.d(l, { A: () => h });
+t.d(l, {
+    A: () => h,
+});
 var n = t(627968);
 t(64700);
 var i = t(311907),
@@ -15,6 +17,7 @@ var i = t(311907),
     x = t(518477),
     A = t(985018),
     j = t(195723);
+
 function h(e) {
     let { user: l, displayProfile: t, guildId: h, onClose: g } = e,
         v = (0, i.bG)([o.A], () => {
@@ -54,7 +57,9 @@ function h(e) {
                     tooltipDelay: x.In,
                 }),
             }),
-            (0, n.jsx)(m.A, { userId: l.id }),
+            (0, n.jsx)(m.A, {
+                userId: l.id,
+            }),
         ],
     });
 }

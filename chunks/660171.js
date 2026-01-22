@@ -1,4 +1,6 @@
-n.d(t, { A: () => v });
+n.d(t, {
+    A: () => v,
+});
 var r = n(64700),
     l = n(771253),
     o = n(731738),
@@ -9,6 +11,7 @@ var r = n(64700),
     u = n(753386),
     d = n(261331),
     f = n(652215);
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,6 +37,7 @@ function m(e) {
     }
     return e;
 }
+
 function p(e) {
     return null == e.current || e.current.currentLevel < 0 || e.current.levels.length <= e.current.currentLevel
         ? {
@@ -47,6 +51,7 @@ function p(e) {
               hls_segment_res_height: e.current.levels[e.current.currentLevel].height,
           };
 }
+
 function v(e) {
     let {
             videoRef: t,

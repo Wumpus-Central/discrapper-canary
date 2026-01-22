@@ -173,13 +173,17 @@ e.exports = function (e) {
                 className: "meta",
                 begin: /#\s*[a-z]+\b/,
                 end: /$/,
-                keywords: { keyword: "if else elif endif define undef warning error line pragma ifdef ifndef include" },
+                keywords: {
+                    keyword: "if else elif endif define undef warning error line pragma ifdef ifndef include",
+                },
                 contains: [
                     {
                         begin: /\\\n/,
                         relevance: 0,
                     },
-                    e.inherit(e.QUOTE_STRING_MODE, { className: "string" }),
+                    e.inherit(e.QUOTE_STRING_MODE, {
+                        className: "string",
+                    }),
                     {
                         className: "string",
                         begin: /<.*?>/,

@@ -1,4 +1,7 @@
-Object.defineProperty(t, "__esModule", { value: !0 }), (t.IntlManager = t.DEFAULT_LOCALE = void 0);
+Object.defineProperty(t, "__esModule", {
+    value: !0,
+}),
+    (t.IntlManager = t.DEFAULT_LOCALE = void 0);
 let r = n(964558),
     i = n(941242),
     a = n(157014);

@@ -1,7 +1,11 @@
 e.exports = function (e) {
     let t = {
             className: "subst",
-            variants: [{ begin: "\\$[A-Za-z0-9_]+" }],
+            variants: [
+                {
+                    begin: "\\$[A-Za-z0-9_]+",
+                },
+            ],
         },
         n = {
             className: "subst",
@@ -17,8 +21,12 @@ e.exports = function (e) {
             className: "number",
             relevance: 0,
             variants: [
-                { match: /\b[0-9][0-9_]*(\.[0-9][0-9_]*)?([eE][+-]?[0-9][0-9_]*)?\b/ },
-                { match: /\b0[xX][0-9A-Fa-f][0-9A-Fa-f_]*\b/ },
+                {
+                    match: /\b[0-9][0-9_]*(\.[0-9][0-9_]*)?([eE][+-]?[0-9][0-9_]*)?\b/,
+                },
+                {
+                    match: /\b0[xX][0-9A-Fa-f][0-9A-Fa-f_]*\b/,
+                },
             ],
         },
         i = {
@@ -204,14 +212,21 @@ e.exports = function (e) {
                 beginKeywords: "class interface",
                 end: /\{/,
                 excludeEnd: !0,
-                contains: [{ beginKeywords: "extends implements" }, e.UNDERSCORE_TITLE_MODE],
+                contains: [
+                    {
+                        beginKeywords: "extends implements",
+                    },
+                    e.UNDERSCORE_TITLE_MODE,
+                ],
             },
             r,
             {
                 className: "meta",
                 begin: "@[A-Za-z]+",
             },
-            { begin: "=>" },
+            {
+                begin: "=>",
+            },
         ],
     };
 };

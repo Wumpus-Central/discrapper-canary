@@ -1,9 +1,11 @@
-n.d(t, { A: () => r });
+n.d(t, {
+    A: () => r,
+});
 var r = {};
 r = {
     calendar: "Kalender",
     day: "Tag",
-    dayPeriod: "Tageshälfte",
+    dayPeriod: "Tagesh\xe4lfte",
     endDate: "Enddatum",
     era: "Epoche",
     hour: "Stunde",

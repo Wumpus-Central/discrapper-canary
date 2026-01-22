@@ -62,6 +62,7 @@ var r = n(627968),
     er = n(652215),
     el = n(985018),
     ei = n(45119);
+
 function es(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -87,6 +88,7 @@ function es(e) {
     }
     return e;
 }
+
 function ea(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -105,6 +107,7 @@ function ea(e, t) {
         e
     );
 }
+
 function eo(e, t) {
     if (null == e) return {};
     var n,
@@ -170,11 +173,15 @@ let eu = en.Ay.getEnableHardwareAcceleration() ? g.JsQ : g.euF,
                     },
                     children: (0, r.jsx)("div", {
                         ref: a,
-                        className: s()({ [ei.PJ]: null != t }),
+                        className: s()({
+                            [ei.PJ]: null != t,
+                        }),
                         children: (0, r.jsx)(n, {
                             size: "sm",
                             color: "currentColor",
-                            className: s()(ei.ut, { [ei.Uq]: null != t }),
+                            className: s()(ei.ut, {
+                                [ei.Uq]: null != t,
+                            }),
                         }),
                     }),
                 },
@@ -233,17 +240,30 @@ let eu = en.Ay.getEnableHardwareAcceleration() ? g.JsQ : g.euF,
                 "listItemRef",
             ]);
         return (0, r.jsx)(P.A, {
-            className: s()(ei.Ix, { [ei.Ij]: m.Fr }, f),
+            className: s()(
+                ei.Ix,
+                {
+                    [ei.Ij]: m.Fr,
+                },
+                f,
+            ),
             onClick: p,
             role: y,
-            focusProps: es({ within: !0 }, ec),
+            focusProps: es(
+                {
+                    within: !0,
+                },
+                ec,
+            ),
             "aria-posinset": b,
             "aria-setsize": A,
             ref: x,
             children: (0, r.jsx)(g.HG8, {
                 as: "div",
                 selected: n,
-                className: s()(a, ei.bG, ei.$J, { [ei.Q2]: n }),
+                className: s()(a, ei.bG, ei.$J, {
+                    [ei.Q2]: n,
+                }),
                 children: (0, r.jsxs)(
                     c.N_,
                     ea(
@@ -277,6 +297,7 @@ let eu = en.Ay.getEnableHardwareAcceleration() ? g.JsQ : g.euF,
             }),
         });
     };
+
 function eg(e) {
     let {
             channel: t,
@@ -327,10 +348,14 @@ function eg(e) {
         })),
         eQ = (0, C.Ay)(t),
         eF = (0, f.bG)([R.A], () => R.A.isFavorite(t.id)),
-        { showMessagePreviews: eH, prioritizeOverStatus: eq } = G.t.useConfig({ location: "PrivateChannel" }),
+        { showMessagePreviews: eH, prioritizeOverStatus: eq } = G.t.useConfig({
+            location: "PrivateChannel",
+        }),
         eV = (0, f.bG)([J.A], () => J.A.hidePersonalInformation),
         eB = (0, k.r)(t.guild_id),
-        ez = (0, V.e)({ timestamp: et.default.extractTimestamp(null != eG ? eG : t.id) }),
+        ez = (0, V.e)({
+            timestamp: et.default.extractTimestamp(null != eG ? eG : t.id),
+        }),
         eK = l.useRef(null),
         eW = null != W && (i || eg || ev),
         eY = () => {
@@ -421,11 +446,19 @@ function eg(e) {
         },
         e6 = (e) => {
             e.preventDefault(), e.stopPropagation();
-            let l = el.intl.formatToPlainString(el.t.hJ5Ap4, { name: eQ }),
-                i = el.intl.format(el.t.SSIVOu, { name: eQ });
+            let l = el.intl.formatToPlainString(el.t.hJ5Ap4, {
+                    name: eQ,
+                }),
+                i = el.intl.format(el.t.SSIVOu, {
+                    name: eQ,
+                });
             t.isManaged() &&
-                ((l = el.intl.formatToPlainString(el.t.hVGjEW, { name: eQ })),
-                (i = el.intl.format(el.t.IK1Qvs, { name: eQ }))),
+                ((l = el.intl.formatToPlainString(el.t.hVGjEW, {
+                    name: eQ,
+                })),
+                (i = el.intl.format(el.t.IK1Qvs, {
+                    name: eQ,
+                }))),
                 (0, g.mMO)(async () => {
                     let { default: e } = await n.e("37803").then(n.bind(n, 148166));
                     return (t) =>
@@ -458,13 +491,18 @@ function eg(e) {
                           userId: null == o ? void 0 : o.id,
                           inline: !0,
                           disableGuildProfile: !0,
-                          className: s()(ei.fc, { [ei.Y_]: eU }),
+                          className: s()(ei.fc, {
+                              [ei.Y_]: eU,
+                          }),
                       }),
                   ],
               })
             : e7,
         e4 = l.useRef(null),
-        e5 = (0, I.W)({ location: "PrivateChannel" }) && (null == o ? void 0 : o.displayNameStyles) != null,
+        e5 =
+            (0, I.W)({
+                location: "PrivateChannel",
+            }) && (null == o ? void 0 : o.displayNameStyles) != null,
         e8 = [
             (0, T.Ay)({
                 channel: t,
@@ -526,9 +564,17 @@ function eg(e) {
                 "aria-setsize": ey,
                 "aria-posinset": en,
                 children: [
-                    ek ? (0, r.jsx)("div", { className: s()(ei.dM, { [ei.SU]: eU }) }) : null,
+                    ek
+                        ? (0, r.jsx)("div", {
+                              className: s()(ei.dM, {
+                                  [ei.SU]: eU,
+                              }),
+                          })
+                        : null,
                     (0, r.jsxs)(g.HG8, {
-                        className: s()(ei.bG, { [ei.Q2]: i || ev }),
+                        className: s()(ei.bG, {
+                            [ei.Q2]: i || ev,
+                        }),
                         as: "div",
                         onClick: e2,
                         muted: eU,
@@ -662,7 +708,9 @@ function eg(e) {
                                             }),
                                             nameClassName: ei.Xh,
                                             name: (0, r.jsx)(y.A, {
-                                                className: s()(ei.uN, { [ei.e8]: e5 }),
+                                                className: s()(ei.uN, {
+                                                    [ei.e8]: e5,
+                                                }),
                                                 children: e3,
                                             }),
                                             decorators: t.isSystemDM()
@@ -679,7 +727,9 @@ function eg(e) {
                                 ),
                             ),
                             (0, r.jsxs)("div", {
-                                className: s()(ei._q, { [ei.EY]: eW && !eH }),
+                                className: s()(ei._q, {
+                                    [ei.EY]: eW && !eH,
+                                }),
                                 children: [
                                     !eH && te,
                                     (0, r.jsx)(ed, {
@@ -720,9 +770,15 @@ let eb =
                           isMobile: null != s && W.A.isMobileOnline(s),
                       };
                   }, [t, s]),
-                  { voiceActivityStatusEnabled: o } = (0, v.G)({ location: "PrivateChannel" }),
-                  { voiceChannel: u } = (0, E.A)({ userId: s }),
-                  c = (0, Q.r)({ user: i }),
+                  { voiceActivityStatusEnabled: o } = (0, v.G)({
+                      location: "PrivateChannel",
+                  }),
+                  { voiceChannel: u } = (0, E.A)({
+                      userId: s,
+                  }),
+                  c = (0, Q.r)({
+                      user: i,
+                  }),
                   d = (0, f.bG)(
                       [ee.default, $.A],
                       () =>
@@ -734,8 +790,12 @@ let eb =
                               : null != i && $.A.isTyping(t.id, t.getRecipientId()),
                       [t, i],
                   ),
-                  { showMessagePreviews: p } = G.t.useConfig({ location: "PrivateChannel" }),
-                  m = (0, k.A)(t, { disabled: !p });
+                  { showMessagePreviews: p } = G.t.useConfig({
+                      location: "PrivateChannel",
+                  }),
+                  m = (0, k.A)(t, {
+                      disabled: !p,
+                  });
               return t.isMultiUserDM()
                   ? (0, r.jsx)(
                         eg,

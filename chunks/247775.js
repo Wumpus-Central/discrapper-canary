@@ -17,6 +17,7 @@ var a = n(506774),
     s = n(818348);
 let o = "dQw4w9WgXcQ:",
     l = "__analytics__";
+
 function c(e) {
     return [...e].reduce((e, t) => {
         let [n, r] = t;
@@ -31,6 +32,7 @@ let f = !1,
     _ = {},
     h = !1,
     m = !1;
+
 function g() {
     if (h) {
         a.w.remove(s.il), a.w.remove(s.zy);
@@ -38,6 +40,7 @@ function g() {
     }
     null != i ? a.w.set(s.il, i) : a.w.remove(s.il), a.w.set(s.zy, _);
 }
+
 function E(e) {
     return null == e || 0 === e.length
         ? {
@@ -54,11 +57,13 @@ function E(e) {
                 wasEncrypted: !1,
             };
 }
+
 function b(e) {
     return (null == u ? void 0 : u.isEncryptionAvailable()) && !e.startsWith(o)
         ? "".concat(o).concat(u.encryptString(e))
         : e;
 }
+
 function y() {
     if (m) return;
     (i = a.w.get(s.il)), (_ = a.w.get(s.zy) || {});
@@ -79,34 +84,44 @@ function y() {
         )),
         (m = !0);
 }
+
 function O() {
     return A(l);
 }
+
 function A(e) {
     return (y(), null != e) ? p[e] : r;
 }
+
 function v(e) {
     null == e ? N(l) : I(e, l);
 }
+
 function S(e, t) {
     null == e ? N(t) : ((r = e), I(e, t));
 }
+
 function I(e, t) {
     null != t && (p[t] = e), f ? w() : ((i = r), (_ = p), g());
 }
+
 function T() {
     h || ((h = !0), g());
 }
+
 function C() {
     h && ((h = !1), g());
 }
+
 function N(e) {
     let t = r;
     return null != e && ((t = p[e]), delete p[e], delete _[e]), t === r && ((r = null), (i = null)), g(), null != t;
 }
+
 function R() {
     return N(l);
 }
+
 function w() {
     (null == u ? void 0 : u.isEncryptionAvailable())
         ? (null != r && (i = b(r)),

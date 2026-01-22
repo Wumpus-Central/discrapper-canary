@@ -1,4 +1,6 @@
-r.d(t, { A: () => c });
+r.d(t, {
+    A: () => c,
+});
 var n = r(627968);
 r(64700);
 var l = r(158954),
@@ -69,7 +71,9 @@ let c = (e) => {
         (r = r =
             {
                 title: a.intl.string(a.t.OaloU5),
-                subtitle: a.intl.format(a.t.Rs7MXJ, { school: c }),
+                subtitle: a.intl.format(a.t.Rs7MXJ, {
+                    school: c,
+                }),
                 actions: [],
                 children: (0, n.jsx)(i.QWc, {
                     variant: "primary",

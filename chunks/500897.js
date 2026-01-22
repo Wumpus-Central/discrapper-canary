@@ -1,4 +1,7 @@
-n.d(t, { A: () => d }), n(896048);
+n.d(t, {
+    A: () => d,
+}),
+    n(896048);
 var r = n(64700),
     a = n(857250),
     l = n(397927),
@@ -6,6 +9,7 @@ var r = n(64700),
     s = n(927813),
     c = n(397400),
     o = n(985018);
+
 function d(e, t, n, d) {
     let u = r.useRef(null),
         [f, b] = r.useState(!1);

@@ -1,4 +1,7 @@
-n.d(t, { A: () => D }), n(896048);
+n.d(t, {
+    A: () => D,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -19,6 +22,7 @@ var r = n(627968),
     y = n(652215),
     O = n(985018),
     A = n(664445);
+
 function v(e, t, n) {
     return (
         t in e
@@ -32,6 +36,7 @@ function v(e, t, n) {
         e
     );
 }
+
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -48,6 +53,7 @@ function S(e) {
     }
     return e;
 }
+
 function I(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -60,6 +66,7 @@ function I(e, t) {
     }
     return n;
 }
+
 function T(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -71,6 +78,7 @@ function T(e, t) {
         e
     );
 }
+
 function C(e, t) {
     if (null == e) return {};
     var n,
@@ -87,6 +95,7 @@ function C(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function N(e, t) {
     if (null == e) return {};
     var n,
@@ -184,7 +193,16 @@ let R = (0, l.xI)(A.__invalid_stickerPickerPreviewDimensions),
                                         let { default: t } = await Promise.all([n.e("29143"), n.e("97010")]).then(
                                             n.bind(n, 445002),
                                         );
-                                        return (n) => (0, r.jsx)(t, S({ guildId: e.guild_id }, n));
+                                        return (n) =>
+                                            (0, r.jsx)(
+                                                t,
+                                                S(
+                                                    {
+                                                        guildId: e.guild_id,
+                                                    },
+                                                    n,
+                                                ),
+                                            );
                                     }));
                             },
                             U = null != (d = null == l ? void 0 : l(e.columnIndex, M)) ? d : {},
@@ -197,7 +215,9 @@ let R = (0, l.xI)(A.__invalid_stickerPickerPreviewDimensions),
                                     T(S({}, $), {
                                         children: (0, r.jsxs)(c.DUT, {
                                             "aria-label": e.name,
-                                            className: s()(A.wP, k, { [A.Kj]: f }),
+                                            className: s()(A.wP, k, {
+                                                [A.Kj]: f,
+                                            }),
                                             innerRef: G,
                                             tabIndex: z,
                                             onFocus: null != q ? q : R,
@@ -205,7 +225,10 @@ let R = (0, l.xI)(A.__invalid_stickerPickerPreviewDimensions),
                                             onClick: w,
                                             style: X,
                                             children: [
-                                                !B && (0, r.jsx)("div", { className: A.fw }),
+                                                !B &&
+                                                    (0, r.jsx)("div", {
+                                                        className: A.fw,
+                                                    }),
                                                 (0, r.jsx)("div", {
                                                     className: A.P0,
                                                     children: (0, r.jsx)(c.j96, {
@@ -234,7 +257,9 @@ let R = (0, l.xI)(A.__invalid_stickerPickerPreviewDimensions),
                                     };
                                 return (0, i.createElement)(
                                     "div",
-                                    T(S({}, $), { key: e.sticker.id }),
+                                    T(S({}, $), {
+                                        key: e.sticker.id,
+                                    }),
                                     (0, r.jsxs)(c.DUT, {
                                         className: s()(A.yI, k, {
                                             [A.PV]: f,
@@ -252,11 +277,16 @@ let R = (0, l.xI)(A.__invalid_stickerPickerPreviewDimensions),
                                         "data-name": e.sticker.name,
                                         "data-format-type": e.sticker.format_type,
                                         children: [
-                                            (0, r.jsx)(c.AC4, { children: (0, E.h)(e.sticker) }),
+                                            (0, r.jsx)(c.AC4, {
+                                                children: (0, E.h)(e.sticker),
+                                            }),
                                             (0, r.jsxs)("div", {
                                                 "aria-hidden": !0,
                                                 children: [
-                                                    !B && (0, r.jsx)("div", { className: A.fw }),
+                                                    !B &&
+                                                        (0, r.jsx)("div", {
+                                                            className: A.fw,
+                                                        }),
                                                     (0, r.jsx)(E.A, {
                                                         className: s()(A.SI, {
                                                             [A.ot]:
@@ -275,7 +305,11 @@ let R = (0, l.xI)(A.__invalid_stickerPickerPreviewDimensions),
                                                         sticker: e.sticker,
                                                         size: V,
                                                     }),
-                                                    o ? (0, r.jsx)(b.A, { size: 20 }) : null,
+                                                    o
+                                                        ? (0, r.jsx)(b.A, {
+                                                              size: 20,
+                                                          })
+                                                        : null,
                                                 ],
                                             }),
                                         ],

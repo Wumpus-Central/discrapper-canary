@@ -1,4 +1,10 @@
-n.d(t, { A: () => C }), n(896048), n(733351), n(228524), n(321073);
+n.d(t, {
+    A: () => C,
+}),
+    n(896048),
+    n(733351),
+    n(228524),
+    n(321073);
 var r = n(627968),
     i = n(64700),
     l = n(735438),
@@ -20,6 +26,7 @@ var r = n(627968),
     y = n(652215),
     v = n(985018),
     A = n(220906);
+
 function E(e, t, n) {
     return (
         t in e
@@ -33,6 +40,7 @@ function E(e, t, n) {
         e
     );
 }
+
 function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -49,6 +57,7 @@ function N(e) {
     }
     return e;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -120,7 +129,13 @@ class S extends i.PureComponent {
             E(this, "handleContextMenu", (e) => {
                 (0, o.L3)(e, async () => {
                     let { default: e } = await n.e("12123").then(n.bind(n, 263702));
-                    return (t) => (0, r.jsx)(e, _(N({}, t), { user: this.props.user }));
+                    return (t) =>
+                        (0, r.jsx)(
+                            e,
+                            _(N({}, t), {
+                                user: this.props.user,
+                            }),
+                        );
                 });
             });
     }
@@ -173,6 +188,7 @@ let T = i.forwardRef(function (e, t) {
         ref: t,
     });
 });
+
 function I(e) {
     let { guildId: t, storedSearchQuery: n } = e,
         [l, s] = i.useState(null != n ? n : ""),
@@ -218,7 +234,9 @@ function I(e) {
                 children: (0, r.jsx)(c.Text, {
                     variant: "text-sm/normal",
                     className: A.h_,
-                    children: v.intl.format(v.t.JcZ36i, { onModerationClick: u }),
+                    children: v.intl.format(v.t.JcZ36i, {
+                        onModerationClick: u,
+                    }),
                 }),
             }),
             (0, r.jsxs)("div", {
@@ -248,6 +266,7 @@ function I(e) {
         ],
     });
 }
+
 function C() {
     var e, t;
     let { guild: o, searchQuery: g } = (0, a.bG)([h.A], () => h.A.getProps(), [], l.isEqual),
@@ -291,18 +310,24 @@ function C() {
         ),
         G = i.useMemo(() => D(E, g, S), [E, D, g, S]),
         L = null != E,
-        k = G.length % 1000 == 0 && G.length > 0 && L,
+        k = G.length % 1e3 == 0 && G.length > 0 && L,
         M = 0 === G.length,
         [U, F] = i.useState({
             currentPage: 1,
             pageSize: 100,
         });
     i.useEffect(() => {
-        O && 1 !== U.currentPage && F((e) => _(N({}, e), { currentPage: 1 }));
+        O &&
+            1 !== U.currentPage &&
+            F((e) =>
+                _(N({}, e), {
+                    currentPage: 1,
+                }),
+            );
     }, [O, U.currentPage]);
     let B = i.useCallback(
             (e) => {
-                d.A.fetchGuildBansBatch(P, 1000, e);
+                d.A.fetchGuildBansBatch(P, 1e3, e);
             },
             [P],
         ),
@@ -316,7 +341,12 @@ function C() {
                         !x &&
                         ((K.current = null != (n = null == (r = G[G.length - 1]) ? void 0 : r.id) ? n : null),
                         B(K.current)),
-                    (null != H[e - 1] || k) && F((t) => _(N({}, t), { currentPage: e }));
+                    (null != H[e - 1] || k) &&
+                        F((t) =>
+                            _(N({}, t), {
+                                currentPage: e,
+                            }),
+                        );
             },
             [U.pageSize, G, k, H, B, x],
         ),
@@ -361,7 +391,9 @@ function C() {
                                       }),
                                       (0, r.jsx)(c.SGT, {
                                           note: v.intl.string(v.t.zfCsAw),
-                                          style: { maxWidth: 300 },
+                                          style: {
+                                              maxWidth: 300,
+                                          },
                                           children: v.intl.string(v.t.ZEiY1D),
                                       }),
                                   ],

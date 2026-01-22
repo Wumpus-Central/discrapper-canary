@@ -1,4 +1,6 @@
-n.d(t, { T: () => d });
+n.d(t, {
+    T: () => d,
+});
 var r = n(627968),
     i = n(64700),
     l = n(311907),
@@ -6,6 +8,7 @@ var r = n(627968),
     a = n(260509),
     c = n(287809),
     o = n(652215);
+
 function d(e) {
     let t =
             (null == e ? void 0 : e.features.has(o.GuildFeatures.CREATOR_MONETIZABLE_PENDING_NEW_OWNER_ONBOARDING)) ===

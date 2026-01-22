@@ -1,4 +1,6 @@
-n.d(t, { A: () => d });
+n.d(t, {
+    A: () => d,
+});
 var r = n(298362),
     i = n(476858),
     a = n(355418),
@@ -26,7 +28,7 @@ class d extends a.c {
         return (
             "pasado" == d
                 ? (f = "this")
-                : "próximo" == d || "proximo" == d
+                : "pr\xf3ximo" == d || "proximo" == d
                   ? (f = "next")
                   : "este" == d && (f = "this"),
             (0, s.Y5)(e.reference, i, f)

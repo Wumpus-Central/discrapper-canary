@@ -1,4 +1,7 @@
-Object.defineProperty(t, "__esModule", { value: !0 }), (t.Saturation = void 0);
+Object.defineProperty(t, "__esModule", {
+    value: !0,
+}),
+    (t.Saturation = void 0);
 var n = (function () {
         function e(e, t) {
             for (var r = 0; r < t.length; r++) {
@@ -23,12 +26,18 @@ var n = (function () {
         if (null != e) for (var r in e) Object.prototype.hasOwnProperty.call(e, r) && (t[r] = e[r]);
         return (t.default = e), t;
     })(r(401919));
+
 function u(e) {
-    return e && e.__esModule ? e : { default: e };
+    return e && e.__esModule
+        ? e
+        : {
+              default: e,
+          };
 }
 var c = (t.Saturation = (function (e) {
     if ("function" != typeof e && null !== e)
         throw TypeError("Super expression must either be null or a function, not " + typeof e);
+
     function t(e) {
         if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
         var r = (function (e, t) {
@@ -137,7 +146,9 @@ var c = (t.Saturation = (function (e) {
                                     circle: s,
                                 },
                             },
-                            { custom: !!this.props.style },
+                            {
+                                custom: !!this.props.style,
+                            },
                         );
                     return a.default.createElement(
                         "div",
@@ -167,10 +178,14 @@ var c = (t.Saturation = (function (e) {
                             }),
                             a.default.createElement(
                                 "div",
-                                { style: u.pointer },
+                                {
+                                    style: u.pointer,
+                                },
                                 this.props.pointer
                                     ? a.default.createElement(this.props.pointer, this.props)
-                                    : a.default.createElement("div", { style: u.circle }),
+                                    : a.default.createElement("div", {
+                                          style: u.circle,
+                                      }),
                             ),
                         ),
                     );

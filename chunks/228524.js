@@ -40,6 +40,8 @@ if (i && l(p) && (!("description" in _) || void 0 !== p().description)) {
                 constructor: !0,
                 forced: !0,
             },
-            { Symbol: m },
+            {
+                Symbol: m,
+            },
         );
 }

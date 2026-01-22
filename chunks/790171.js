@@ -1,4 +1,6 @@
-n.d(t, { o: () => i });
+n.d(t, {
+    o: () => i,
+});
 var r = n(652215);
 let i = [
     r.HAw.START_SPEAKING,

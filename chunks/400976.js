@@ -31,6 +31,7 @@ var r = n(267721),
     f = n(118356),
     p = n(731854),
     _ = n(396574);
+
 function h(e, t, n) {
     return (
         t in e
@@ -44,6 +45,7 @@ function h(e, t, n) {
         e
     );
 }
+
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -68,6 +70,7 @@ var b = (function (e) {
     );
 })({});
 let y = "UDP/TLS/RTP/SAVPF";
+
 function O(e) {
     switch (e) {
         case "recvonly":
@@ -80,6 +83,7 @@ function O(e) {
             return "inactive";
     }
 }
+
 function A(e, t, n) {
     let r = "".concat(e, "-").concat(t),
         i = "".concat(n).concat(r);
@@ -106,6 +110,7 @@ function A(e, t, n) {
         },
     ];
 }
+
 function v(e) {
     return d.write({
         version: 0,
@@ -138,6 +143,7 @@ function v(e) {
         media: e,
     });
 }
+
 function S(e) {
     let {
         mid: t,
@@ -237,7 +243,7 @@ function S(e) {
                 codec: o,
                 encoding: 2,
                 payload: l,
-                rate: 48000,
+                rate: 48e3,
             }),
                 o === p.UK.OPUS &&
                     A.fmtp.push({
@@ -258,7 +264,7 @@ function S(e) {
                 A.rtp.push({
                     codec: o,
                     payload: l,
-                    rate: 90000,
+                    rate: 9e4,
                 });
             let S = "x-google-max-bitrate=".concat(c);
             o === p.UK.H264
@@ -296,7 +302,7 @@ function S(e) {
                     (A.rtp.push({
                         codec: "rtx",
                         payload: E,
-                        rate: 90000,
+                        rate: 9e4,
                     }),
                     A.fmtp.push({
                         config: "apt=".concat(l),
@@ -306,6 +312,7 @@ function S(e) {
     }
     return A;
 }
+
 function I(e) {
     let {
             type: t,
@@ -404,6 +411,7 @@ function I(e) {
         sdp: v(_),
     });
 }
+
 function T(e) {
     let {
             type: t,
@@ -457,6 +465,7 @@ function T(e) {
         })
     );
 }
+
 function C(e, t, n, r, i) {
     let a = e.find((e) => e.codec === r);
     if (null == a) return null;
@@ -474,6 +483,7 @@ function C(e, t, n, r, i) {
         rtxPayloadType: o,
     };
 }
+
 function N(e, t) {
     let n = d.parse(e).media.reduce(
         (e, n) => {
@@ -522,6 +532,7 @@ function N(e, t) {
     );
     return (n.codecs = l()(n.codecs, s())), n;
 }
+
 function R(e, t) {
     var n;
     let { codecs: r } = N(e, t),
@@ -538,6 +549,7 @@ function R(e, t) {
         codecs: r,
     };
 }
+
 function w(e) {
     if (!e.includes("a=fingerprint")) return E.error("Remote SDP does not include fingerprint!"), !1;
     if (!e.includes("a=ice-ufrag")) return E.error("Remote SDP does not include ICE user name!"), !1;
@@ -551,6 +563,7 @@ function w(e) {
         .trim();
     return !(t.split(" ").length < 3) || (E.error("Incorrect c-line: ".concat(t)), !1);
 }
+
 function P(e) {
     return [...new Set(e.split(/\r\n/).filter((e) => e.startsWith("a=extmap:")))].map((e) => {
         let t = e.split(" ");

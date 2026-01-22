@@ -26,6 +26,7 @@ async function a(e, t) {
         }),
     ).then(() => n);
 }
+
 function s(e) {
     if (null == e) return [];
     let t = [],
@@ -119,6 +120,7 @@ async function o(e, t) {
         )
     );
 }
+
 function l(e) {
     return e
         .filter((e) => e.type === CSSRule.FONT_FACE_RULE)

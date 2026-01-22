@@ -18,7 +18,8 @@ var r = n(238136),
     p = n(489414);
 n(322980);
 let _ = 15,
-    h = 1000;
+    h = 1e3;
+
 function m(e, t, n) {
     let r = a.A.getChannel(n);
     if (null == r) return [];
@@ -53,6 +54,7 @@ function m(e, t, n) {
         })),
     ];
 }
+
 function g(e, t, n) {
     let r = a.A.getChannel(t);
     return null == r
@@ -68,6 +70,7 @@ function g(e, t, n) {
               label: e.name,
           }));
 }
+
 function E(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
     if (null == e) return;

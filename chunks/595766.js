@@ -1,8 +1,12 @@
-n.d(t, { x: () => d }), n(896048);
+n.d(t, {
+    x: () => d,
+}),
+    n(896048);
 var r = n(141468),
     i = n(383233),
     a = n(222823),
     s = n(661191);
+
 function o(e, t, n) {
     return (
         t in e
@@ -16,6 +20,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -32,6 +37,7 @@ function l(e) {
     }
     return e;
 }
+
 function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -44,6 +50,7 @@ function c(e, t) {
     }
     return n;
 }
+
 function u(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -64,7 +71,13 @@ class d {
         return null == n
             ? -1 / 0
             : n.generation !== t && null != n.message && n.message.id === a.Ay.lastMessageId(e)
-              ? (this.messages.set(e, u(l({}, n), { generation: t })), t)
+              ? (this.messages.set(
+                    e,
+                    u(l({}, n), {
+                        generation: t,
+                    }),
+                ),
+                t)
               : n.generation;
     }
     messageId(e) {
@@ -104,7 +117,12 @@ class d {
             a = this.messages.get(n);
         if ((null == a || null == (t = a.message) ? void 0 : t.id) !== e.id) return;
         let s = a.message instanceof i.Ay ? (0, r.IU)(a.message, e) : (0, r.SP)(a.message, e);
-        this.messages.set(n, u(l({}, a), { message: s }));
+        this.messages.set(
+            n,
+            u(l({}, a), {
+                message: s,
+            }),
+        );
     }
     delete(e) {
         this.messages.delete(e);
@@ -113,6 +131,7 @@ class d {
         o(this, "localNeeded", !0), o(this, "messages", new Map());
     }
 }
+
 function f(e, t) {
     return null == t || s.default.compare(e, t) > 0;
 }

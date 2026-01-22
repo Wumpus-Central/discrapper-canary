@@ -20,6 +20,7 @@ var r = n(562465),
     i = n(198982),
     a = n(652215),
     s = n(818348);
+
 function o(e, t, n) {
     return (
         t in e
@@ -33,6 +34,7 @@ function o(e, t, n) {
         e
     );
 }
+
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -49,6 +51,7 @@ function l(e) {
     }
     return e;
 }
+
 function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -61,6 +64,7 @@ function c(e, t) {
     }
     return n;
 }
+
 function u(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -72,6 +76,7 @@ function u(e, t) {
         e
     );
 }
+
 function d(e, t) {
     if (null == e) return {};
     var n,
@@ -88,6 +93,7 @@ function d(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function f(e, t) {
     if (null == e) return {};
     var n,
@@ -118,7 +124,9 @@ let p = async (e, t) => {
             return (
                 await r.Bo.post({
                     url: a.Rsh.GUILD_ROLE_SUBSCRIPTION_LISTINGS(e, t),
-                    body: u(l({}, o), { price_tier: s }),
+                    body: u(l({}, o), {
+                        price_tier: s,
+                    }),
                     rejectWithError: !1,
                 })
             ).body;
@@ -133,7 +141,9 @@ let p = async (e, t) => {
             return (
                 await r.Bo.patch({
                     url: a.Rsh.GUILD_ROLE_SUBSCRIPTION_LISTINGS(e, t, n),
-                    body: u(l({}, c), { price_tier: o }),
+                    body: u(l({}, c), {
+                        price_tier: o,
+                    }),
                     rejectWithError: !1,
                 })
             ).body;
@@ -142,7 +152,12 @@ let p = async (e, t) => {
         }
     },
     m = async function (e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { includeSoftDeleted: !1 },
+        let t =
+                arguments.length > 1 && void 0 !== arguments[1]
+                    ? arguments[1]
+                    : {
+                          includeSoftDeleted: !1,
+                      },
             n = {
                 include_soft_deleted: t.includeSoftDeleted,
                 country_code: t.countryCode,

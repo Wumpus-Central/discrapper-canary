@@ -1,4 +1,11 @@
-r.d(t, { A: () => T }), r(747238), r(321073), r(896048), r(638769), r(839272);
+r.d(t, {
+    A: () => T,
+}),
+    r(747238),
+    r(321073),
+    r(896048),
+    r(638769),
+    r(839272);
 var n = r(627968),
     l = r(64700),
     s = r(503698),
@@ -26,6 +33,7 @@ var n = r(627968),
     w = r(191850),
     E = r(985018),
     N = r(374166);
+
 function I(e) {
     let { result: t, onSelectChannel: r } = e,
         l = (0, a.bG)([b.A], () => b.A.getGuild(t.record.guild_id)),
@@ -78,9 +86,18 @@ function I(e) {
         ],
     });
 }
+
 function T(e) {
     let { onSelectChannel: t, className: r } = e,
-        { search: s, query: c, results: x } = (0, h.A)({ searchOptions: { frecencyBoosters: !0 } }),
+        {
+            search: s,
+            query: c,
+            results: x,
+        } = (0, h.A)({
+            searchOptions: {
+                frecencyBoosters: !0,
+            },
+        }),
         S = (0, a.yK)([y.A, g.Ay, j.A, b.A, v.A], () => {
             let e = [],
                 t = y.A.getGuildId();
@@ -171,6 +188,7 @@ function T(e) {
         ],
     });
 }
+
 function R() {
     return (0, n.jsxs)("div", {
         className: N.p$,

@@ -10,6 +10,7 @@ var r = n(311907),
     o = n(287809),
     l = n(488926),
     c = n(652215);
+
 function u(e, t) {
     let [n, r, u] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [o.default, a.A, s.A],
         d = r.getGuild(e),
@@ -28,6 +29,7 @@ function u(e, t) {
         ) && u.canManageUser(c.xBc.MODERATE_MEMBERS, f, d)
     );
 }
+
 function d(e, t) {
     return (0, r.bG)([o.default, a.A, s.A], () => u(e, t, [o.default, a.A, s.A]), [e, t]);
 }

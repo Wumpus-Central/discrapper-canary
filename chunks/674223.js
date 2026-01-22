@@ -1,4 +1,6 @@
-t.d(n, { K_: () => O });
+t.d(n, {
+    K_: () => O,
+});
 var l = t(627968);
 t(64700);
 var i = t(311907),
@@ -55,6 +57,7 @@ let O = {
         useBreadcrumbLabel: () => x.intl.string(x.t["W685+b"]),
     },
 };
+
 function P(e) {
     let { onStepChange: n, onBackClick: t, showBackButton: i = !1, disabled: a = !1, loading: c = !1 } = e,
         { hasPaymentSources: s } = (0, j.P5)(),
@@ -67,10 +70,15 @@ function P(e) {
                 loading: c,
                 text: x.intl.string(x.t.XiOHRX),
             }),
-            i ? (0, l.jsx)(d.A, { onClick: t }) : null,
+            i
+                ? (0, l.jsx)(d.A, {
+                      onClick: t,
+                  })
+                : null,
         ],
     });
 }
+
 function A(e) {
     var n;
     let { handleStepChange: t, handleClose: d } = e,

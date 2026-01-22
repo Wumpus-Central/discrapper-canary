@@ -1,9 +1,12 @@
-n.d(t, { a: () => Y }), n(896048);
+n.d(t, {
+    a: () => Y,
+}),
+    n(896048);
 var l = n(627968),
     r = n(64700),
     i = n(503698),
     a = n.n(i),
-    s = n(432022),
+    s = n(108531),
     o = n(311907),
     c = n(397927),
     u = n(964486),
@@ -38,6 +41,7 @@ var l = n(627968),
     V = n(734317),
     F = n(985018),
     G = n(632998);
+
 function H(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -63,6 +67,7 @@ function H(e) {
     }
     return e;
 }
+
 function B(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -81,6 +86,7 @@ function B(e, t) {
         e
     );
 }
+
 function Y(e) {
     let { onSettingsButtonClick: t, wide: n, showOutputDevices: i = !1, showSearchBar: Y = !0 } = e,
         [W, z] = r.useState(""),
@@ -137,7 +143,9 @@ function Y(e) {
     (0, u.Ay)(() => {
         (0, T.md)(),
             er && (0, S.tB)(),
-            v.default.track(k.HAw.VOICE_FILTER_PICKER_OPENED, { active_voice_filter_id: null != el ? el : null });
+            v.default.track(k.HAw.VOICE_FILTER_PICKER_OPENED, {
+                active_voice_filter_id: null != el ? el : null,
+            });
     });
     let ec = r.useCallback(() => z(""), [z]),
         eu = r.useRef(null),
@@ -150,13 +158,17 @@ function Y(e) {
                 [G.U]: n,
                 [G.Fd]: !ed,
             }),
-            style: { height: 500 },
+            style: {
+                height: 500,
+            },
             children: [
                 ed &&
                     (0, l.jsx)("div", {
                         className: G.Di,
                         onMouseDown: J,
-                        children: (0, l.jsx)("div", { className: G.YC }),
+                        children: (0, l.jsx)("div", {
+                            className: G.YC,
+                        }),
                     }),
                 Y &&
                     (0, l.jsx)(c.IWV, {
@@ -179,7 +191,9 @@ function Y(e) {
                 }),
                 !q &&
                     (0, l.jsxs)(s.animated.div, {
-                        style: B(H({}, es), { display: es.opacity.to((e) => (0 === e ? "none" : "block")) }),
+                        style: B(H({}, es), {
+                            display: es.opacity.to((e) => (0 === e ? "none" : "block")),
+                        }),
                         className: G.Wv,
                         children: [
                             null != Q &&
@@ -204,7 +218,9 @@ function Y(e) {
                                             onClick: () => (0, y.n)(),
                                         }),
                                         button: F.intl.string(F.t.cRCCJ3),
-                                        buttonAnalyticsObject: { section: k.JJy.VOICE_FILTERS_FLOATING_UPSELL },
+                                        buttonAnalyticsObject: {
+                                            section: k.JJy.VOICE_FILTERS_FLOATING_UPSELL,
+                                        },
                                         position: "inline",
                                         className: G.UX,
                                     }),
@@ -216,7 +232,9 @@ function Y(e) {
                 (0, l.jsx)(I.m, {}),
                 (0, l.jsx)(R.l, {}),
                 (0, l.jsxs)("div", {
-                    className: a()(G.N$, { [G.rd]: null != el }),
+                    className: a()(G.N$, {
+                        [G.rd]: null != el,
+                    }),
                     children: [
                         (0, l.jsx)(h.U, {
                             deviceType: U.oh.AUDIO_INPUT,
@@ -247,24 +265,34 @@ function Y(e) {
                                     renderOutputDevices: i,
                                     renderOutputVolume: i,
                                     onClose: t,
-                                    onInteraction: (0, g.s)("AudioDeviceMenu", X, { entrypoint: L.GK.THREE_DOT }),
+                                    onInteraction: (0, g.s)("AudioDeviceMenu", X, {
+                                        entrypoint: L.GK.THREE_DOT,
+                                    }),
                                     minimal: !0,
                                 }),
                             children: (e) =>
                                 (0, l.jsx)(
                                     c.K0,
-                                    B(H({ variant: "secondary" }, e), {
-                                        buttonRef: eu,
-                                        icon: c.FHP,
-                                        onClick: (t) => {
-                                            var n;
-                                            v.default.track(k.HAw.VOICE_FILTER_VOICE_SETTINGS_CLICKED, {
-                                                active_voice_filter_id: null != el ? el : null,
-                                            }),
-                                                null == (n = e.onClick) || n.call(e, t);
+                                    B(
+                                        H(
+                                            {
+                                                variant: "secondary",
+                                            },
+                                            e,
+                                        ),
+                                        {
+                                            buttonRef: eu,
+                                            icon: c.FHP,
+                                            onClick: (t) => {
+                                                var n;
+                                                v.default.track(k.HAw.VOICE_FILTER_VOICE_SETTINGS_CLICKED, {
+                                                    active_voice_filter_id: null != el ? el : null,
+                                                }),
+                                                    null == (n = e.onClick) || n.call(e, t);
+                                            },
+                                            "aria-label": F.intl.string(F.t["ClGM/G"]),
                                         },
-                                        "aria-label": F.intl.string(F.t["ClGM/G"]),
-                                    }),
+                                    ),
                                 ),
                         }),
                     ],

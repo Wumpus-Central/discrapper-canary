@@ -1,4 +1,6 @@
-r.d(t, { _: () => c }),
+r.d(t, {
+    _: () => c,
+}),
     r(896048),
     r(927092),
     r(212978),
@@ -17,6 +19,7 @@ var a = r(64700),
     i = r(346915),
     o = r(100846);
 let l = new n.A("useAnimatedImageCheck");
+
 function c(e) {
     let t = "image/gif" === e.type,
         r = "image/webp" === e.type,

@@ -1,4 +1,7 @@
-n.d(t, { j: () => y }), n(321073);
+n.d(t, {
+    j: () => y,
+}),
+    n(321073);
 var a = n(627968);
 n(64700);
 var l = n(311907),
@@ -18,6 +21,7 @@ var l = n(311907),
     g = n(652215),
     v = n(985018),
     j = n(877347);
+
 function y(e) {
     let t = (0, l.bG)([u.default], () => u.default.getCurrentUser()),
         n = (0, l.bG)([d.A], () => d.A.hidePersonalInformation),
@@ -91,7 +95,9 @@ function y(e) {
                             var n;
                             (n = r.id) !== (null == t ? void 0 : t.id) &&
                                 (m.default.track(g.HAw.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
-                                    location: { section: g.JJy.USER_PROFILE },
+                                    location: {
+                                        section: g.JJy.USER_PROFILE,
+                                    },
                                 }),
                                 h.Mx(n));
                         }

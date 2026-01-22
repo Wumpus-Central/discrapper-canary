@@ -130,7 +130,9 @@ e.exports = function (e) {
             relevance: 0,
             match: /\b[A-Z]+[a-z]+([A-Z]+[a-z]+)*/,
             scope: "title.class",
-            keywords: { _: s },
+            keywords: {
+                _: s,
+            },
         },
         m = e.C_NUMBER_MODE,
         g = {
@@ -165,10 +167,18 @@ e.exports = function (e) {
                 {
                     scope: "char.escape",
                     variants: [
-                        { match: /\\\\|\\["0%abefnrtv]/ },
-                        { match: /\\x[0-9A-F]{2}/ },
-                        { match: /\\u[0-9A-F]{4}/ },
-                        { match: /\\U[0-9A-F]{8}/ },
+                        {
+                            match: /\\\\|\\["0%abefnrtv]/,
+                        },
+                        {
+                            match: /\\x[0-9A-F]{2}/,
+                        },
+                        {
+                            match: /\\u[0-9A-F]{4}/,
+                        },
+                        {
+                            match: /\\U[0-9A-F]{8}/,
+                        },
                     ],
                 },
             ],
@@ -186,7 +196,9 @@ e.exports = function (e) {
                 {
                     begin: [/#!?/, /[A-Za-z_]+(?=\()/],
                     beginScope: {},
-                    keywords: { literal: i },
+                    keywords: {
+                        literal: i,
+                    },
                     contains: [],
                     end: /\)/,
                 },

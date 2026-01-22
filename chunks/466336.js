@@ -1,4 +1,6 @@
-n.d(t, { V: () => p });
+n.d(t, {
+    V: () => p,
+});
 var r = n(627968);
 n(64700);
 var i = n(342494),
@@ -28,7 +30,9 @@ let p = (e) => {
         align: "top",
         position: "right",
         gradientColor: "nitro-pink",
-        caretConfig: { align: "start" },
+        caretConfig: {
+            align: "start",
+        },
         actions: [
             {
                 text: u.intl.string(u.t.t2N81y),

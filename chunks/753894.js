@@ -68,10 +68,18 @@ let v = (e) => {
     S = () =>
         (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(f.p, { className: A.zd }),
-                (0, r.jsx)(f.p, { className: A.G }),
-                (0, r.jsx)(f.p, { className: A.zy }),
-                (0, r.jsx)(f.p, { className: A.GX }),
+                (0, r.jsx)(f.p, {
+                    className: A.zd,
+                }),
+                (0, r.jsx)(f.p, {
+                    className: A.G,
+                }),
+                (0, r.jsx)(f.p, {
+                    className: A.zy,
+                }),
+                (0, r.jsx)(f.p, {
+                    className: A.GX,
+                }),
             ],
         }),
     I = (e, t) => {
@@ -135,6 +143,7 @@ let v = (e) => {
             }),
         });
     };
+
 function T(e) {
     let { variant: t = "text-lg/normal", withBottomMargin: n = !0, isApplicationHome: i } = e,
         a = (0, y.N)();
@@ -145,7 +154,9 @@ function T(e) {
             [A.If]: n,
             [A.jn]: i,
         }),
-        children: O.intl.format(O.t.kt9wxs, { cheapestMonthlyPrice: a }),
+        children: O.intl.format(O.t.kt9wxs, {
+            cheapestMonthlyPrice: a,
+        }),
     });
 }
 let C = i.forwardRef(I);

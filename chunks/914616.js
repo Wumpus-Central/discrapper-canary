@@ -14,16 +14,18 @@ var r = n(735438),
     f = n(194486),
     p = n(652215),
     _ = n(980504);
+
 function h(e) {
     let t = new AbortController(),
         n = (0, r.throttle)((n) => {
             c.A.getVoiceChannelId() !== e && t.abort();
-        }, 1000);
+        }, 1e3);
     return {
         abortController: t,
         onRequestProgress: n,
     };
 }
+
 function m(e, t, n) {
     var r;
     let { abortController: s, onRequestProgress: c } = h(e),
@@ -43,6 +45,7 @@ function m(e, t, n) {
     }),
         (0, l.A)([a.A.CHANNEL_CALL], n, t, o.ib.ENTRY);
 }
+
 function g(e, t, n, r, a) {
     var c;
     let u = null != t.emojiId ? s.Ay.getCustomEmojiById(t.emojiId) : null,

@@ -1,4 +1,8 @@
-a.d(e, { default: () => b }), a(896048), a(321073);
+a.d(e, {
+    default: () => b,
+}),
+    a(896048),
+    a(321073);
 var n = a(627968),
     r = a(64700),
     s = a(158954),
@@ -13,6 +17,7 @@ var n = a(627968),
     x = a(49999),
     f = a(985018),
     p = a(864562);
+
 function b(t) {
     let { guildId: e, shouldUpsellCreation: b, transitionState: h, onClose: j } = t,
         v = (0, i.bG)([c.A], () => c.A.getGuild(e), [e]),
@@ -116,7 +121,10 @@ function b(t) {
                             selectedItem: O,
                             type: "top",
                             onItemSelect: (t) => {
-                                P(t), (0, d.Bd)({ forumDemoId: t });
+                                P(t),
+                                    (0, d.Bd)({
+                                        forumDemoId: t,
+                                    });
                             },
                             className: p._,
                             children: N.map((t, e) =>
@@ -130,7 +138,9 @@ function b(t) {
                                 ),
                             ),
                         }),
-                        (0, n.jsx)(g.A, { id: O }),
+                        (0, n.jsx)(g.A, {
+                            id: O,
+                        }),
                     ],
                 }),
                 y &&

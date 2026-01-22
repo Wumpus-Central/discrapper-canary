@@ -14,6 +14,7 @@ let l = "14",
     d = "4D",
     f = "66",
     p = "80";
+
 function _(e) {
     let t = (0, i.Ay)(),
         [n, a] = (0, r.useState)({});
@@ -31,6 +32,7 @@ function _(e) {
         n
     );
 }
+
 function h(e, t, n, s, o) {
     let l = (0, i.Ay)(),
         c = (0, r.useMemo)(
@@ -46,12 +48,21 @@ function h(e, t, n, s, o) {
                       }),
             [t, n, s, l, o],
         ),
-        [u, d] = (0, r.useState)(null != c ? { background: c } : {}),
+        [u, d] = (0, r.useState)(
+            null != c
+                ? {
+                      background: c,
+                  }
+                : {},
+        ),
         f = o === a.u.MEMBER_LIST;
     return (
         (0, r.useEffect)(() => {
             if (null == c) return;
-            if (null == e || null == e.current) return void d({ background: c });
+            if (null == e || null == e.current)
+                return void d({
+                    background: c,
+                });
             let t = new ResizeObserver((e) => {
                 let t = e[0].contentRect.width + (f ? 10 : -5),
                     n = t,
@@ -68,6 +79,7 @@ function h(e, t, n, s, o) {
         u
     );
 }
+
 function m(e) {
     let { palette: t, theme: n, hover: r, selected: i, placement: _ } = e;
     if (!(0, s.wT)(t)) return;

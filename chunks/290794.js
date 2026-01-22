@@ -8,11 +8,13 @@ n.d(t, {
 var r = n(627968),
     i = n(64700);
 let a = i.createContext(void 0);
+
 function s() {
     let e = i.useContext(a);
     if (null == e) throw Error("No PollContextProvider found");
     return e;
 }
+
 function o(e) {
     let { children: t, message: n, poll: s } = e,
         o = i.useMemo(
@@ -27,13 +29,16 @@ function o(e) {
         children: t,
     });
 }
+
 function l() {
     let { poll: e } = s();
     return e.resources;
 }
+
 function c(e) {
     return l().styles[e];
 }
+
 function u() {
     let { message: e } = s(),
         t = e.getChannelId();

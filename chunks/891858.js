@@ -1,4 +1,7 @@
-n.d(t, { A: () => T }), n(896048);
+n.d(t, {
+    A: () => T,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -57,18 +60,24 @@ let T = (e) => {
         ref: R,
         children: (0, r.jsx)(c.hLv, {
             color: "nitro-pink",
-            className: s()(S.kL, S.Gd, { [S.fv]: !N }),
+            className: s()(S.kL, S.Gd, {
+                [S.fv]: !N,
+            }),
             children: (0, r.jsxs)(f.f5, {
                 value: D,
                 children: [
                     N
-                        ? (0, r.jsx)(g.A, { onBackClick: G })
+                        ? (0, r.jsx)(g.A, {
+                              onBackClick: G,
+                          })
                         : (0, r.jsx)(m.A, {
                               className: S.v1,
                               onBackClick: G,
                           }),
                     (0, r.jsxs)("div", {
-                        className: s()(S.fi, { [S._9]: N }),
+                        className: s()(S.fi, {
+                            [S._9]: N,
+                        }),
                         children: [
                             (0, r.jsx)(c.Heading, {
                                 variant: "heading-xxl/extrabold",
@@ -126,13 +135,17 @@ let T = (e) => {
                             }),
                         ],
                     }),
-                    (0, r.jsx)("div", { className: S.hz }),
+                    (0, r.jsx)("div", {
+                        className: S.hz,
+                    }),
                     (0, r.jsx)(l.L, {
                         innerRef: w,
                         onChange: (e) => {
                             e &&
                                 !x &&
-                                (_.default.track(A.HAw.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: D }),
+                                (_.default.track(A.HAw.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+                                    location_stack: D,
+                                }),
                                 L(!0));
                         },
                         children: (0, r.jsx)("div", {

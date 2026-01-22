@@ -1,4 +1,8 @@
-r.r(t), r.d(t, { default: () => j }), r(896048);
+r.r(t),
+    r.d(t, {
+        default: () => j,
+    }),
+    r(896048);
 var n = r(627968),
     l = r(64700),
     u = r(158954),
@@ -21,6 +25,7 @@ r(603266);
 var S = r(652215),
     _ = r(985018),
     C = r(42768);
+
 function T(e) {
     let { badgeText: t, badgeColor: r } = e,
         u = l.useRef(t),
@@ -30,6 +35,7 @@ function T(e) {
         color: a.current,
     });
 }
+
 function j(e) {
     var t, r;
     let { transitionState: j, userId: N, channelId: h, onClose: R } = e,
@@ -39,7 +45,9 @@ function j(e) {
             return null == (e = c.A.getChannel(h)) ? void 0 : e.getGuildId();
         }),
         I = o.Ay.useName(w, null, v),
-        { fingerprint: x, userKey: U } = (0, p.R)({ userId: N }),
+        { fingerprint: x, userKey: U } = (0, p.R)({
+            userId: N,
+        }),
         F = (0, A.z)({
             fingerprintBase64: x,
             chunkSize: 5,
@@ -61,7 +69,13 @@ function j(e) {
         nickname: I,
         onAlertOpen: R,
     });
-    let { isCurrentUserKeyPersistent: D, isOtherUserKeyPersistent: M, loading: V } = (0, b.q)({ userId: N }),
+    let {
+            isCurrentUserKeyPersistent: D,
+            isOtherUserKeyPersistent: M,
+            loading: V,
+        } = (0, b.q)({
+            userId: N,
+        }),
         G = l.useCallback(() => {
             null != U && ((0, d.bk)(N, U, M, h, S.ThZ.E2EE_USER_VERIFY_MODAL), R());
         }, [U, N, M, h, R]),
@@ -97,7 +111,9 @@ function j(e) {
     let H = {
             transitionState: j,
             title: _.intl.string(_.t["/WPGnF"]),
-            subtitle: _.intl.format(_.t.oc2kce, { username: I }),
+            subtitle: _.intl.format(_.t.oc2kce, {
+                username: I,
+            }),
         },
         q = (0, n.jsxs)(n.Fragment, {
             children: [
@@ -108,7 +124,9 @@ function j(e) {
                             (0, n.jsx)(i.po8, {
                                 messageType: i.YCn.INFO,
                                 className: C.Ht,
-                                children: _.intl.format(_.t.uZDkz0, { count: z }),
+                                children: _.intl.format(_.t.uZDkz0, {
+                                    count: z,
+                                }),
                             }),
                         (0, n.jsxs)("div", {
                             className: C.wx,
@@ -191,7 +209,12 @@ function j(e) {
                     });
             }
             return e;
-        })({ onClose: R }, H)),
+        })(
+            {
+                onClose: R,
+            },
+            H,
+        )),
         (r = r =
             {
                 actions: [J, Z],

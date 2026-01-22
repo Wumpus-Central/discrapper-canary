@@ -1,6 +1,9 @@
-n.d(t, { Y: () => a });
+n.d(t, {
+    Y: () => a,
+});
 var r = n(954571),
     i = n(652215);
+
 function a(e) {
     let { pageType: t, sectionType: n, ctaObject: a } = e;
     r.default.track(i.HAw.ORBS_ENTRYPOINT_CLICKED, {

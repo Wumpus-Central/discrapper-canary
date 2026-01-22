@@ -1,6 +1,10 @@
-n.d(t, { Co: () => i }), n(417597);
+n.d(t, {
+    Co: () => i,
+}),
+    n(417597);
 var r = n(734057),
     l = n(661191);
+
 function i(e, t) {
     if (e !== l.default.castChannelIdAsMessageId(t)) return !1;
     let n = r.A.getChannel(t);

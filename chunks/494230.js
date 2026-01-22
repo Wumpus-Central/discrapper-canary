@@ -214,6 +214,7 @@ let q = (e) => {
         }
     );
 };
+
 function X(e) {
     var t;
     let {
@@ -314,7 +315,9 @@ function X(e) {
             premiumBrandRefreshBackgroundClassName: eI,
         }),
         eD = c.M.EEA_COUNTRIES.has(T.A.ipCountryCodeWithFallback),
-        ex = K.intl.formatToPlainString(K.t["sBpy9/"], { planName: ep.name });
+        ex = K.intl.formatToPlainString(K.t["sBpy9/"], {
+            planName: ep.name,
+        });
     eh && !ev
         ? (ex = K.intl.string(K.t.J5a0eb))
         : eh && ev
@@ -326,7 +329,9 @@ function X(e) {
         : (0, r.jsxs)("div", {
               className: z.Du,
               children: [
-                  (0, r.jsx)(k.j, { paymentRestrictionBannerType: eL }),
+                  (0, r.jsx)(k.j, {
+                      paymentRestrictionBannerType: eL,
+                  }),
                   null != I &&
                       (0, r.jsxs)("div", {
                           className: z.Je,
@@ -387,7 +392,9 @@ function X(e) {
                           variant: "heading-md/normal",
                           color: "always-white",
                           className: z.KB,
-                          children: K.intl.format(K.t["7ZS2m1"], { trialEnd: null == Z ? void 0 : Z.currentPeriodEnd }),
+                          children: K.intl.format(K.t["7ZS2m1"], {
+                              trialEnd: null == Z ? void 0 : Z.currentPeriodEnd,
+                          }),
                       }),
                   !G &&
                       "" !== ex &&
@@ -406,7 +413,9 @@ function X(e) {
                                   shouldAnimate: !0,
                                   className: z.Os,
                               }),
-                              (0, r.jsx)(V.Z, { giftRecipient: et }),
+                              (0, r.jsx)(V.Z, {
+                                  giftRecipient: et,
+                              }),
                           ],
                       }),
                   eP,
@@ -429,12 +438,16 @@ function X(e) {
                               hidePersonalInformation: ee,
                               isTrial: G,
                               paymentGatewayRestrictions: eu,
-                              className: s()({ [z.E4]: eS }),
+                              className: s()({
+                                  [z.E4]: eS,
+                              }),
                           }),
                           eN && null == ec
                               ? (0, r.jsx)("div", {
                                     className: z.QN,
-                                    children: K.intl.format(K.t["2wPRSF"], { months: eR.length }),
+                                    children: K.intl.format(K.t["2wPRSF"], {
+                                        months: eR.length,
+                                    }),
                                 })
                               : null,
                           B

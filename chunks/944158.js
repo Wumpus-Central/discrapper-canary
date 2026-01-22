@@ -1,4 +1,6 @@
-n.d(t, { A: () => m });
+n.d(t, {
+    A: () => m,
+});
 var a = n(627968),
     l = n(64700),
     i = n(158954),
@@ -12,6 +14,7 @@ let u = (0, s.D)(() => ({
     section: d.nc_.ACCOUNT,
     subsection: void 0,
 }));
+
 function m() {
     let e = u.useField("setting"),
         t = u.useField("section"),
@@ -47,21 +50,30 @@ function m() {
                 label: "Setting (Redesign)",
                 placeholder: "Select a setting",
                 value: e,
-                onSelectionChange: (e) => u.setState({ setting: e }),
+                onSelectionChange: (e) =>
+                    u.setState({
+                        setting: e,
+                    }),
                 options: m,
                 selectionMode: "single",
             }),
             (0, a.jsx)(r.ZiE, {
                 label: "Setting Section (Legacy)",
                 value: t,
-                onSelectionChange: (e) => u.setState({ section: e }),
+                onSelectionChange: (e) =>
+                    u.setState({
+                        section: e,
+                    }),
                 options: p,
                 selectionMode: "single",
             }),
             (0, a.jsx)(r.ksK, {
                 label: "Setting Subsection (Legacy)",
                 placeholder: "Type a subsection...",
-                onChange: (e) => u.setState({ subsection: e }),
+                onChange: (e) =>
+                    u.setState({
+                        subsection: e,
+                    }),
             }),
             (0, a.jsx)(i.$nd, {
                 variant: "primary",

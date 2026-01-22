@@ -48,7 +48,9 @@ let f = [],
                 }));
         }, [d, e, n, t, s, l]);
         let _ = (0, a.A)(p);
-        return { listingsLoaded: f === u.e.FETCHED && !0 !== _ };
+        return {
+            listingsLoaded: f === u.e.FETCHED && !0 !== _,
+        };
     },
     _ = function (e) {
         let { includeSoftDeleted: t = !1, includeUnpublished: n = !0 } =
@@ -109,7 +111,9 @@ let f = [],
                             n(!1);
                         }));
             }, [t, s]),
-            { loading: t }
+            {
+                loading: t,
+            }
         );
     },
     b = () => {
@@ -154,7 +158,9 @@ let f = [],
                             guildId: n,
                             groupListingId: r,
                             listingId: a,
-                            data: { published: !0 },
+                            data: {
+                                published: !0,
+                            },
                         }),
                         !0
                     );

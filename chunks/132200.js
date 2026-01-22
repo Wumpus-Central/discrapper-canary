@@ -1,4 +1,6 @@
-n.d(t, { A: () => a });
+n.d(t, {
+    A: () => a,
+});
 var r = n(355418),
     i = n(996483);
 class a extends r.c {
@@ -13,7 +15,7 @@ class a extends r.c {
                 return i.tB(e.reference);
             case "hoy":
                 return i.Ec(e.reference);
-            case "mañana":
+            case "ma\xf1ana":
                 return i.uf(e.reference);
             case "ayer":
                 return i.jI(e.reference);

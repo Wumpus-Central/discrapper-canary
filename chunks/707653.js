@@ -1,4 +1,6 @@
-i.d(n, { A: () => o });
+i.d(n, {
+    A: () => o,
+});
 var e = i(627968);
 i(64700);
 var r = i(397927),
@@ -6,6 +8,7 @@ var r = i(397927),
     a = i(406704),
     d = i(652215),
     s = i(985018);
+
 function o(t) {
     var n, i;
     if (!(0, a.H_)(t) || t.type !== d.rbe.PRIVATE_THREAD) return null;

@@ -1,8 +1,11 @@
-n.d(t, { i: () => d });
+n.d(t, {
+    i: () => d,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
     a = n(851907);
+
 function s(e, t, n) {
     return (
         t in e
@@ -16,6 +19,7 @@ function s(e, t, n) {
         e
     );
 }
+
 function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -32,6 +36,7 @@ function o(e) {
     }
     return e;
 }
+
 function l(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -44,6 +49,7 @@ function l(e, t) {
     }
     return n;
 }
+
 function c(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -56,6 +62,7 @@ function c(e, t) {
     );
 }
 let u = "activity-age-gate";
+
 function d(e) {
     let { application: t, channelId: s, onAgree: l, onDisagree: d } = e,
         f =

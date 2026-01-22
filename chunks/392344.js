@@ -1,4 +1,6 @@
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () => o,
+});
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -17,7 +19,9 @@ let o = function (e) {
                     variant: "heading-md/semibold",
                     children: a.intl.string(a.t.L2mlUb),
                 }),
-                (0, r.jsx)(l.A, { quest: t }),
+                (0, r.jsx)(l.A, {
+                    quest: t,
+                }),
             ],
         }),
     });

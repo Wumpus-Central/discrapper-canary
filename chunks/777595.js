@@ -1,4 +1,6 @@
-n.d(t, { e: () => g });
+n.d(t, {
+    e: () => g,
+});
 var r = n(627968),
     i = n(64700),
     a = n(835245),
@@ -8,6 +10,7 @@ var r = n(627968),
     c = n(735305),
     u = n(412463),
     d = n(652215);
+
 function f(e, t, n) {
     return (
         t in e
@@ -21,6 +24,7 @@ function f(e, t, n) {
         e
     );
 }
+
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,6 +41,7 @@ function p(e) {
     }
     return e;
 }
+
 function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -49,6 +54,7 @@ function _(e, t) {
     }
     return n;
 }
+
 function h(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -71,7 +77,9 @@ let m = [
                         onReturn: () => {},
                     }),
                 ),
-            options: { renderHeader: !0 },
+            options: {
+                renderHeader: !0,
+            },
         },
         {
             key: l.pn.REVIEW,
@@ -111,7 +119,9 @@ let m = [
                     renderHeader: () => null,
                     onClose: c,
                     onComplete: () => {},
-                    paymentContextOverrides: { paymentElementsEnabled: t },
+                    paymentContextOverrides: {
+                        paymentElementsEnabled: t,
+                    },
                 },
                 "".concat(l, "-").concat(t),
             );

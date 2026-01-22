@@ -1,4 +1,8 @@
-n.d(t, { A: () => h }), n(896048), n(321073);
+n.d(t, {
+    A: () => h,
+}),
+    n(896048),
+    n(321073);
 var r = n(311907),
     l = n(570209),
     i = n(457699),
@@ -10,9 +14,12 @@ var r = n(311907),
     d = n(822382),
     f = n(65600);
 let p = [];
+
 function h(e) {
     let { searchContext: t } = e,
-        n = a.m.useExperiment({ location: "useMessageRenderedContent" }).enabled,
+        n = a.m.useExperiment({
+            location: "useMessageRenderedContent",
+        }).enabled,
         h = (0, r.bG)(
             [f.A, u.A, i.A],
             () => {

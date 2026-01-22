@@ -1,4 +1,6 @@
-r.d(t, { A: () => o });
+r.d(t, {
+    A: () => o,
+});
 var n = r(46938);
 let o = function (e, t, r) {
     "__proto__" == t && n.A

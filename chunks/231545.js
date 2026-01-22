@@ -1,4 +1,8 @@
-n.d(t, { A: () => f }), n(896048), n(747238);
+n.d(t, {
+    A: () => f,
+}),
+    n(896048),
+    n(747238);
 var a = n(627968);
 n(64700);
 var l = n(92653),
@@ -16,6 +20,7 @@ let d = {
     base0B: i.A.colors.TEXT_FEEDBACK_WARNING.css,
     base0D: i.A.colors.TEXT_BRAND.css,
 };
+
 function u(e) {
     let t = {};
     for (let [n, a] of Object.entries(e)) t[n] = a;
@@ -23,6 +28,7 @@ function u(e) {
 }
 let m = u(d),
     p = u(d);
+
 function h(e) {
     return o.AKn.test(e)
         ? (0, a.jsx)(s.Ay, {
@@ -31,6 +37,7 @@ function h(e) {
           })
         : e;
 }
+
 function f(e) {
     let { data: t } = e,
         n = (0, r.Ay)();

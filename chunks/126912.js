@@ -1,4 +1,8 @@
-n.d(t, { A: () => b }), n(747238), n(896048);
+n.d(t, {
+    A: () => b,
+}),
+    n(747238),
+    n(896048);
 var r,
     i = n(627968),
     s = n(64700),
@@ -15,6 +19,7 @@ var r,
     m = n(431144),
     A = n(985018),
     x = n(473169);
+
 function _(e, t, n) {
     return (
         t in e
@@ -65,18 +70,24 @@ class E extends (r = s.PureComponent) {
             (0, h.d)("disable_email_notifications");
     }
     renderBusy() {
-        return (0, i.jsx)(d.Ay, { children: (0, i.jsx)(d.CK, {}) });
+        return (0, i.jsx)(d.Ay, {
+            children: (0, i.jsx)(d.CK, {}),
+        });
     }
     renderCategorySuccess(e, t) {
         let { defaultRoute: n, transitionTo: r } = this.props,
-            s = A.intl.formatToPlainString(A.t.YDAohB, { category: t });
+            s = A.intl.formatToPlainString(A.t.YDAohB, {
+                category: t,
+            });
         return (0, i.jsxs)(d.Ay, {
             children: [
                 (0, i.jsx)(d.hE, {
                     className: x.QB,
                     children: A.intl.string(A.t.f6rdLg),
                 }),
-                (0, i.jsx)(d.tK, { children: s }),
+                (0, i.jsx)(d.tK, {
+                    children: s,
+                }),
                 (0, i.jsx)("div", {
                     className: x.QX,
                     children: (0, i.jsx)(c.Button, {
@@ -114,7 +125,9 @@ class E extends (r = s.PureComponent) {
                     className: x.QB,
                     children: A.intl.string(A.t["6U6OMQ"]),
                 }),
-                (0, i.jsx)(d.tK, { children: A.intl.string(A.t["yaDJ4/"]) }),
+                (0, i.jsx)(d.tK, {
+                    children: A.intl.string(A.t["yaDJ4/"]),
+                }),
                 (0, i.jsx)("div", {
                     className: x.eT,
                     children: (0, i.jsx)(c.Button, {
@@ -138,7 +151,9 @@ class E extends (r = s.PureComponent) {
                     className: x.QB,
                     children: A.intl.string(A.t.ox9hIS),
                 }),
-                (0, i.jsx)(d.tK, { children: A.intl.string(A.t["/dcuR5"]) }),
+                (0, i.jsx)(d.tK, {
+                    children: A.intl.string(A.t["/dcuR5"]),
+                }),
                 (0, i.jsx)("div", {
                     className: x.eT,
                     children: (0, i.jsx)(c.Button, {
@@ -164,5 +179,9 @@ class E extends (r = s.PureComponent) {
             });
     }
 }
-_(E, "defaultProps", { transitionTo: (e) => n.g.location.assign(e) });
-let b = a.Ay.connectStores([p.A], () => ({ defaultRoute: p.A.defaultRoute }))(E);
+_(E, "defaultProps", {
+    transitionTo: (e) => n.g.location.assign(e),
+});
+let b = a.Ay.connectStores([p.A], () => ({
+    defaultRoute: p.A.defaultRoute,
+}))(E);

@@ -33,6 +33,7 @@ let c = ["sessionshare.sp-int.playstation.com", "session-share.playstation.com"]
         }
         return null;
     };
+
 function m(e) {
     var t;
     let n = e.embed.url,

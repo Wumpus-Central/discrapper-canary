@@ -13,6 +13,7 @@ var i = n(503698),
     l = n(953727),
     c = n(788868),
     u = n(806678);
+
 function d(e, t, n) {
     return (
         t in e
@@ -26,6 +27,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,6 +44,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -54,6 +57,7 @@ function p(e, t) {
     }
     return n;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -65,6 +69,7 @@ function _(e, t) {
         e
     );
 }
+
 function h(e, t) {
     if (null == e) return {};
     var n,
@@ -81,6 +86,7 @@ function h(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+
 function m(e, t) {
     if (null == e) return {};
     var n,
@@ -93,6 +99,7 @@ function m(e, t) {
 }
 let g = "premium_new_tier_2_gradient",
     E = "premium_old_tier_2_gradient";
+
 function b(e) {
     let { tier: t = c.PremiumTypes.TIER_2 } = e,
         n = (0, o.Ay)(),
@@ -108,16 +115,27 @@ function b(e) {
                                 [u.WJ]: t === c.PremiumTypes.TIER_2,
                             }),
                         }),
-                        (0, r.jsx)(y, { foreground: u.iM }),
+                        (0, r.jsx)(y, {
+                            foreground: u.iM,
+                        }),
                     ],
                 }),
-            (0, r.jsx)(y, { foreground: u.bP }),
-            (0, r.jsx)(y, { foreground: u.ir }),
-            (0, r.jsx)(y, { foreground: u.b4 }),
-            (0, r.jsx)(y, { foreground: u.iG }),
+            (0, r.jsx)(y, {
+                foreground: u.bP,
+            }),
+            (0, r.jsx)(y, {
+                foreground: u.ir,
+            }),
+            (0, r.jsx)(y, {
+                foreground: u.b4,
+            }),
+            (0, r.jsx)(y, {
+                foreground: u.iG,
+            }),
         ],
     });
 }
+
 function y(e) {
     let { width: t = 14, height: n = 13, color: i = "white", foreground: a } = e,
         s = h(e, ["width", "height", "color", "foreground"]);

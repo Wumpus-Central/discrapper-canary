@@ -1,4 +1,6 @@
-n.d(t, { A: () => h });
+n.d(t, {
+    A: () => h,
+});
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -10,6 +12,7 @@ var r = n(627968),
     d = n(431144),
     f = n(531525),
     p = n(985018);
+
 function _(e) {
     let { label: t, onChange: n, enabled: i, subLabel: a } = e;
     return (0, r.jsx)(s.dOG, {
@@ -19,6 +22,7 @@ function _(e) {
         description: a,
     });
 }
+
 function h() {
     let e = (0, a.bG)([l.A], () => l.A.getSubsection()),
         t = i.useRef(null),
@@ -31,6 +35,7 @@ function h() {
         }
     }, [h, t, e]);
     let m = d.Zk.reduce((e, t) => e || !!n[t], !1);
+
     function g(e, t) {
         (0, c.CA)(e, t);
     }
@@ -45,7 +50,9 @@ function h() {
         ? (0, r.jsxs)(o.x, {
               setting: f.H.NOTIFICATIONS_EMAILS,
               children: [
-                  (0, r.jsx)("div", { ref: t }),
+                  (0, r.jsx)("div", {
+                      ref: t,
+                  }),
                   (0, r.jsxs)(s.nVY, {
                       label: p.intl.string(p.t.TPchzM),
                       children: [

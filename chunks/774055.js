@@ -2562,7 +2562,9 @@ e.exports = function (e) {
                     begin: /\\\n/,
                     relevance: 0,
                 },
-                e.inherit(r, { className: "string" }),
+                e.inherit(r, {
+                    className: "string",
+                }),
                 {
                     begin: /<[^\n>]*>/,
                     end: /$/,

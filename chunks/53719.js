@@ -1,4 +1,6 @@
-n.d(t, { A: () => c });
+n.d(t, {
+    A: () => c,
+});
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -6,6 +8,7 @@ var i = n(503698),
     s = n(990078),
     o = n(397927),
     l = n(290223);
+
 function c(e) {
     let { icon: t, tooltip: n, onClick: i, className: c } = e,
         u = (e) => {

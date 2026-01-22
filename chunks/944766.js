@@ -1,4 +1,11 @@
-n.d(t, { A: () => g }), n(896048), n(864466), n(443073), n(114821), n(339614);
+n.d(t, {
+    A: () => g,
+}),
+    n(896048),
+    n(864466),
+    n(443073),
+    n(114821),
+    n(339614);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -11,7 +18,7 @@ var r = n(627968),
     f = n(9045),
     p = n(806931),
     _ = n(447196);
-let h = 13000,
+let h = 13e3,
     m = (e, t) => e.type === p.lp.USER && e.speaking && e.user.id !== t,
     g = (e) => {
         let {
@@ -123,10 +130,14 @@ let h = 13000,
                     (null == R ? void 0 : R.decoration) != null &&
                         (0, r.jsx)(l.A, {
                             src: R.decoration[0],
-                            className: s()(_.GG, { [_.UU]: b }),
+                            className: s()(_.GG, {
+                                [_.UU]: b,
+                            }),
                             autoPlay: O,
                             loop: O,
-                            style: { width: S.width },
+                            style: {
+                                width: S.width,
+                            },
                         }),
                     (0, r.jsx)("div", {
                         ref: A,
@@ -139,7 +150,9 @@ let h = 13000,
                                         width: S.width,
                                     },
                                     src: e,
-                                    className: s()(_.GG, { [_.UU]: b }),
+                                    className: s()(_.GG, {
+                                        [_.UU]: b,
+                                    }),
                                     onEnded: () => {
                                         var t, n;
                                         if (
@@ -149,7 +162,7 @@ let h = 13000,
                                             N(u.f.HEAD_TURN_BACK);
                                             let e = setTimeout(() => {
                                                 j(!1), v.current.delete(e);
-                                            }, 2000);
+                                            }, 2e3);
                                             v.current.add(e);
                                         } else
                                             C === u.f.HEAD_TURN_BACK &&

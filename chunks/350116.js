@@ -1,4 +1,7 @@
-n.d(e, { default: () => S }), n(896048);
+n.d(e, {
+    default: () => S,
+}),
+    n(896048);
 var a = n(627968),
     r = n(64700),
     i = n(311907),
@@ -14,6 +17,7 @@ var a = n(627968),
     d = n(355097),
     g = n(652215),
     N = n(87404);
+
 function S(t) {
     let { transitionState: e, onClose: n } = t,
         S = (0, i.bG)([s.default], () => s.default.getCurrentUser());
@@ -44,7 +48,9 @@ function S(t) {
         case d.ko.CHANGE_EMAIL_REASONS:
             return (0, a.jsx)(c.A, {
                 onNext: () => (
-                    o.default.track(g.HAw.USER_ACCOUNT_EMAIL_CHANGE_REASON_CONTINUE, { change_email_reason_enum: M }),
+                    o.default.track(g.HAw.USER_ACCOUNT_EMAIL_CHANGE_REASON_CONTINUE, {
+                        change_email_reason_enum: M,
+                    }),
                     null != M && N.qr.has(M) ? x(d.ko.CHANGE_EMAIL_WARNING) : x(d.ko.EMAIL_AND_PASSWORD)
                 ),
                 transitionState: e,
@@ -55,7 +61,9 @@ function S(t) {
         case d.ko.CHANGE_EMAIL_WARNING:
             return (0, a.jsx)(C.A, {
                 onNext: () => {
-                    o.default.track(g.HAw.USER_ACCOUNT_EMAIL_CHANGE_WARNING_CONTINUE, { change_email_reason_enum: M }),
+                    o.default.track(g.HAw.USER_ACCOUNT_EMAIL_CHANGE_WARNING_CONTINUE, {
+                        change_email_reason_enum: M,
+                    }),
                         x(d.ko.EMAIL_AND_PASSWORD);
                 },
                 onClose: n,
@@ -68,7 +76,9 @@ function S(t) {
                     ? () => x(null != M && N.qr.has(M) ? d.ko.CHANGE_EMAIL_WARNING : d.ko.CHANGE_EMAIL_REASONS)
                     : null,
                 onNext: (t) => {
-                    o.default.track(g.HAw.USER_ACCOUNT_EMAIL_CHANGE_SAVE_NEW_EMAIL, { change_email_reason_enum: M }),
+                    o.default.track(g.HAw.USER_ACCOUNT_EMAIL_CHANGE_SAVE_NEW_EMAIL, {
+                        change_email_reason_enum: M,
+                    }),
                         R(t),
                         x(d.ko.COMPLETE);
                 },

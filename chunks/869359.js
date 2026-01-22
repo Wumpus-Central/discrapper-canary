@@ -1,4 +1,7 @@
-n.d(t, { A: () => b }), n(896048);
+n.d(t, {
+    A: () => b,
+}),
+    n(896048);
 var r = n(789999),
     i = n(69114),
     a = n(322683),
@@ -7,6 +10,7 @@ var r = n(789999),
     l = n(859703),
     c = n(302654),
     u = n(652215);
+
 function d(e, t, n) {
     return (
         t in e
@@ -20,6 +24,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +41,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -48,6 +54,7 @@ function p(e, t) {
     }
     return n;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -60,6 +67,7 @@ function _(e, t) {
     );
 }
 let h = 0.1;
+
 function m(e, t) {
     let n = (e) => (null == e ? "null" : null == e.questId ? "no_serve" : "quest"),
         r = n(e),
@@ -70,6 +78,7 @@ function m(e, t) {
           ? "same_quest"
           : "different_quest";
 }
+
 function g(e, t, n) {
     var l, c, d, p, m;
     if (Math.random() > h) return;
@@ -85,7 +94,9 @@ function g(e, t, n) {
                     api_latency_ms: g,
                     mobile_network_type: s.A.getType(),
                 }),
-                null != E && { mobile_signal_strength_level: E },
+                null != E && {
+                    mobile_signal_strength_level: E,
+                },
             ),
             {
                 caller_source: e.callerSource,
@@ -107,7 +118,9 @@ class E {
     recordQuestRequestAttempt(e, t) {
         var n;
         let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-            { enableNewRequestBehavior: i } = c.A.getConfig({ location: "recordQuestRequestAttempt" }),
+            { enableNewRequestBehavior: i } = c.A.getConfig({
+                location: "recordQuestRequestAttempt",
+            }),
             a = i && null != r && null != (n = l.A.questAdDecisionByPlacement.get(r)) ? n : null,
             s = {
                 initialSendTimestamp: Date.now(),
@@ -123,7 +136,7 @@ class E {
             setTimeout(() => {
                 let t = this.pendingRequests.get(e);
                 null != t && (g(t, "timeout", null), this.pendingRequests.delete(e));
-            }, 30000);
+            }, 3e4);
     }
     recordQuestRequestApiResponse(e, t) {
         let { wasSuccessful: n, adRequestId: r = null, currentQuestId: i = null, currentFetchedAt: a = null } = t,
@@ -131,7 +144,9 @@ class E {
         if (null != s) {
             let t,
                 o,
-                { enableNewRequestBehavior: l } = c.A.getConfig({ location: "recordQuestRequestApiResponse" });
+                { enableNewRequestBehavior: l } = c.A.getConfig({
+                    location: "recordQuestRequestApiResponse",
+                });
             if (l) {
                 let e =
                     null !== a
@@ -139,7 +154,12 @@ class E {
                               questId: i,
                               fetchedAt: a,
                               ttlMillis: 0,
-                              adDecisionData: null != r ? { decision_id: r } : void 0,
+                              adDecisionData:
+                                  null != r
+                                      ? {
+                                            decision_id: r,
+                                        }
+                                      : void 0,
                           }
                         : null;
                 (t = m(s.previousAdDecision, e)), (o = a);

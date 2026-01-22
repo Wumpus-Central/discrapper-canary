@@ -1,12 +1,16 @@
-n.d(t, { A: () => g }), n(896048);
+n.d(t, {
+    A: () => g,
+}),
+    n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
-    o = n(432022),
+    o = n(108531),
     l = n(397927),
     c = n(180022),
     u = n(663244);
+
 function d(e, t, n) {
     return (
         t in e
@@ -20,6 +24,7 @@ function d(e, t, n) {
         e
     );
 }
+
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,6 +41,7 @@ function f(e) {
     }
     return e;
 }
+
 function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -48,6 +54,7 @@ function p(e, t) {
     }
     return n;
 }
+
 function _(e, t) {
     return (
         (t = null != t ? t : {}),
@@ -88,7 +95,12 @@ let h = 910,
             v = () => {
                 g((e) => (e >= y - E ? 0 : e + 1));
             },
-            S = i.useCallback((e) => ({ x: (e - p) * 100 }), [p]),
+            S = i.useCallback(
+                (e) => ({
+                    x: (e - p) * 100,
+                }),
+                [p],
+            ),
             [I, T] = (0, l.mX6)(t.length, S);
         return (
             i.useEffect(() => {
@@ -125,7 +137,9 @@ let h = 910,
                                         },
                                         children: (0, r.jsx)(
                                             c.A,
-                                            _(f({}, t[n]), { cardType: a }),
+                                            _(f({}, t[n]), {
+                                                cardType: a,
+                                            }),
                                             "".concat(t[n].name, "_").concat(n, "_perks_card"),
                                         ),
                                     },
@@ -149,7 +163,9 @@ let h = 910,
                                     if (!(t > y - E))
                                         return (0, r.jsx)(
                                             "div",
-                                            { className: t === p ? u.fc : u.Om },
+                                            {
+                                                className: t === p ? u.fc : u.Om,
+                                            },
                                             "progress_bar_dot_".concat(t),
                                         );
                                 }),

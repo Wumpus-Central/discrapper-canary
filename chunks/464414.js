@@ -1,4 +1,6 @@
-a.d(t, { Xg: () => o });
+a.d(t, {
+    Xg: () => o,
+});
 let o = [
     ["Speech-Emotion-Classification.onnx", "5e29cab15162f74f42c1afc3d5577497861758c7acd6e4da3d1f70977bd9e1b7"],
     ["melspectrogram.onnx", "ba2b0e0f8b7b875369a2c89cb13360ff53bac436f2895cced9f479fa65eb176f"],

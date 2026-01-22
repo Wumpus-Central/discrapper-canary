@@ -1,5 +1,7 @@
 n.r(t),
-    n.d(t, { default: () => Y }),
+    n.d(t, {
+        default: () => Y,
+    }),
     n(896048),
     n(693327),
     n(554719),
@@ -84,6 +86,7 @@ let H = {
     skipExtensionCheck: void 0,
     analyticsLocations: [],
 };
+
 function Y(e) {
     var t;
     let { skipExtensionCheck: a, analyticsLocations: o } =
@@ -173,7 +176,9 @@ function Y(e) {
                 let e = null == a || null == (n = a.bot) ? void 0 : n.id;
                 return (
                     null != e &&
-                    (s.A.openPrivateChannel({ recipientIds: e })
+                    (s.A.openPrivateChannel({
+                        recipientIds: e,
+                    })
                         .then(async (e) => {
                             let { customId: t } = await (0, u.d9)(
                                 r,
@@ -225,7 +230,14 @@ function Y(e) {
                 !0
             );
         };
-    if (null != R && R.type === m.I.QUESTS_EMBED && (0, v.s)({ location: V.rE.EMBED_MOBILE }) && !(0, M.I)())
+    if (
+        null != R &&
+        R.type === m.I.QUESTS_EMBED &&
+        (0, v.s)({
+            location: V.rE.EMBED_MOBILE,
+        }) &&
+        !(0, M.I)()
+    )
         return (e) => {
             var t, r, a;
             let s, o;
@@ -307,7 +319,9 @@ function Y(e) {
                 null == e || e.preventDefault(),
                 null != R &&
                     R.type === m.I.APP_OAUTH2_LINK &&
-                    f.Ay.trackWithMetadata(G.HAw.APP_OAUTH2_LINK_EMBED_URL_CLICKED, { application_id: i.clientId }),
+                    f.Ay.trackWithMetadata(G.HAw.APP_OAUTH2_LINK_EMBED_URL_CLICKED, {
+                        application_id: i.clientId,
+                    }),
                 r(i),
                 !0
             );
@@ -319,7 +333,13 @@ function Y(e) {
             let t = x.A.getGuildId();
             null != K.guildId && "" !== K.guildId && K.guildId !== t && (0, A.A)(G.BVt.CHANNEL(K.guildId));
             let n = b.Ay.getGuildScheduledEvent(K.guildEventId);
-            return null != n && (0, E.uR)({ eventId: n.id }), !0;
+            return (
+                null != n &&
+                    (0, E.uR)({
+                        eventId: n.id,
+                    }),
+                !0
+            );
         };
     if (W && (null == L ? void 0 : L.startsWith("/settings/"))) {
         let { default: e } = n(849823),
@@ -343,12 +363,23 @@ function Y(e) {
         return (e) => (null == e || e.preventDefault(), t(r, i), !0);
     }
     return W && (null == L ? void 0 : L.startsWith("/discovery/quests"))
-        ? (e) => (null == e || e.preventDefault(), (0, I.navigateToQuestHome)({ fromContent: i.u.QUEST_BADGE }), !0)
+        ? (e) => (
+              null == e || e.preventDefault(),
+              (0, I.navigateToQuestHome)({
+                  fromContent: i.u.QUEST_BADGE,
+              }),
+              !0
+          )
         : W && (null == L ? void 0 : L.startsWith("/quest-home"))
           ? (e) => (null == e || e.preventDefault(), (0, T.pX)(G.BVt.QUEST_HOME_V2 + (null != F ? F : "")), !0)
           : W && (null == L ? void 0 : L.startsWith("/quest-preview"))
             ? (e) => {
-                  if ((null == e || e.preventDefault(), (0, S.U)({ location: V.rE.NAVIGATE_TO_QUEST_HOME_UTIL })))
+                  if (
+                      (null == e || e.preventDefault(),
+                      (0, S.U)({
+                          location: V.rE.NAVIGATE_TO_QUEST_HOME_UTIL,
+                      }))
+                  )
                       return (
                           (0, T.pX)(G.BVt.QUEST_HOME_V2 + "?tab=preview_tool&quest_id=".concat(L.split("/").at(-1))), !0
                       );
@@ -361,7 +392,9 @@ function Y(e) {
                         .then((e) => {
                             let { transitionToGlobalDiscovery: t } = e,
                                 { GlobalDiscoveryTab: r } = n(488995);
-                            t({ tab: r.SERVERS });
+                            t({
+                                tab: r.SERVERS,
+                            });
                         }),
                     !0
                 )

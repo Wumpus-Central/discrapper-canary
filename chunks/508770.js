@@ -22,9 +22,15 @@ let c = (e, t) => {
             return e.text;
     }
 };
+
 function u(e) {
-    return "string" == typeof e || e.hasOwnProperty("text") ? { type: e } : e;
+    return "string" == typeof e || e.hasOwnProperty("text")
+        ? {
+              type: e,
+          }
+        : e;
 }
+
 function d(e) {
     let { type: t, variant: n = "default", icon: i } = e,
         { i18n: u } = (0, s.G9)();

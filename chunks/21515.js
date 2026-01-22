@@ -29,7 +29,11 @@ async function u(e) {
                 showFeedback: !1,
             });
         let s = l.A.getConnectedFrame();
-        null != s && s.applicationId !== t && (0, c.A)().leaveFrame({ applicationId: s.applicationId }),
+        null != s &&
+            s.applicationId !== t &&
+            (0, c.A)().leaveFrame({
+                applicationId: s.applicationId,
+            }),
             r.h.dispatch({
                 type: "FRAME_LAUNCH",
                 applicationId: t,
@@ -49,6 +53,7 @@ async function u(e) {
         );
     }
 }
+
 function d(e) {
     let { applicationId: t } = e;
     r.h.dispatch({
@@ -56,6 +61,7 @@ function d(e) {
         applicationId: t,
     });
 }
+
 function f(e) {
     let { applicationId: t, layoutMode: n } = e;
     r.h.dispatch({
@@ -64,6 +70,7 @@ function f(e) {
         layoutMode: n,
     });
 }
+
 function p(e) {
     r.h.dispatch({
         type: "FRAME_SET_PANEL_MODE",
